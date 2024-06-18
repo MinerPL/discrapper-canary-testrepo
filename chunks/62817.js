@@ -1,30 +1,30 @@
 "use strict";
-n.r(t), n("47120"), n("177593");
-var i, r, s, a, o = n("442837"),
-  l = n("570140"),
-  u = n("375954");
-let d = Object.freeze([]),
-  _ = {},
+n(47120), n(177593);
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(375954);
+let _ = Object.freeze([]),
+  d = {},
   c = {},
   E = {},
   I = {},
   T = {};
 
-function f(e, t) {}
+function h(e, t) {}
 
 function S() {
   T = {}
 }
 
-function h(e, t) {
-  let n = _[e];
-  return null != n && (_[e] = n.filter(e => e.id !== t), delete c[t], delete E[t], n.length !== _[e].length)
+function f(e, t) {
+  let n = d[e];
+  return null != n && (d[e] = n.filter(e => e.id !== t), delete c[t], delete E[t], n.length !== d[e].length)
 }
 
-function A(e, t) {
-  let n = _[e];
+function N(e, t) {
+  let n = d[e];
   if (null == n) return !1;
-  _[e] = n.map(e => e.id === t.id ? {
+  d[e] = n.map(e => e.id === t.id ? {
     ...e,
     ...t
   } : e);
@@ -34,13 +34,13 @@ function A(e, t) {
     ...t
   })
 }
-class m extends(i = o.default.Store) {
+class A extends(i = a.ZP.Store) {
   initialize() {
-    this.waitFor(u.default)
+    this.waitFor(u.Z)
   }
   getFiles(e) {
     var t;
-    return null !== (t = _[e]) && void 0 !== t ? t : d
+    return null !== (t = d[e]) && void 0 !== t ? t : _
   }
   getMessageForFile(e) {
     return E[e]
@@ -52,12 +52,12 @@ class m extends(i = o.default.Store) {
     if (null != e) return T[e]
   }
 }
-a = "UploadStore", (s = "displayName") in(r = m) ? Object.defineProperty(r, s, {
-  value: a,
+o = "UploadStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new m(l.default, {
+}) : r[s] = o, t.Z = new A(l.Z, {
   CONNECTION_OPEN: function() {
     T = {}
   },
@@ -73,43 +73,43 @@ a = "UploadStore", (s = "displayName") in(r = m) ? Object.defineProperty(r, s, {
       message: s
     } = e;
     if (r._aborted || r._errored) return;
-    let a = null !== (t = _[n]) && void 0 !== t ? t : d;
-    c[i.id] = r, _[n] = [...a, i], E[i.id] = s;
+    let o = null !== (t = d[n]) && void 0 !== t ? t : _;
+    c[i.id] = r, d[n] = [...o, i], E[i.id] = s;
     let {
-      items: o
+      items: a
     } = i;
-    null != o && (I[s.id] = {
+    null != a && (I[s.id] = {
       ...i,
-      items: o
-    }), s.nonce
+      items: a
+    }), h(s.nonce, i)
   },
   UPLOAD_COMPRESSION_PROGRESS: function(e) {
     let {
       channelId: t,
       file: n
     } = e;
-    A(t, n)
+    N(t, n)
   },
   UPLOAD_PROGRESS: function(e) {
     let {
       channelId: t,
       file: n
     } = e;
-    A(t, n)
+    N(t, n)
   },
   UPLOAD_COMPLETE: function(e) {
     let {
       channelId: t,
       file: n
     } = e;
-    return h(t, n.id)
+    return f(t, n.id)
   },
   UPLOAD_FAIL: function(e) {
     let {
       channelId: t,
       file: n
     } = e;
-    return h(t, n.id)
+    return f(t, n.id)
   },
   UPLOAD_CANCEL_REQUEST: function(e) {
     let {
@@ -134,7 +134,7 @@ a = "UploadStore", (s = "displayName") in(r = m) ? Object.defineProperty(r, s, {
       channelId: t,
       file: n
     } = e, i = E[n.id];
-    null != i && i.nonce, A(t, n)
+    null != i && h(i.nonce, n), N(t, n)
   },
   UPLOAD_RESTORE_FAILED_UPLOAD: function(e) {
     let {

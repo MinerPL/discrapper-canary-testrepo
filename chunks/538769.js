@@ -1,8 +1,8 @@
 "use strict";
-var e = n("294377"),
-  o = n("735471"),
-  i = n("875604"),
-  u = n("756234"),
+var e = n(294377),
+  o = n(735471),
+  i = n(875604),
+  u = n(756234),
   s = Object;
 t.exports = u ? function(t) {
   return "symbol" == typeof t

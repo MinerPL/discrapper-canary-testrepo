@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  isIarMessageDislikeEnabled: function() {
+n.d(t, {
+  p: function() {
     return r
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-04_iar_message_dislike",
   label: "IAR Message Dislike",

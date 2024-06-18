@@ -1,39 +1,39 @@
 "use strict";
-n.r(t), n.d(t, {
-  CAN_SET_DEVICES: function() {
-    return r
-  },
-  CAN_SET_OUTPUT_DEVICES: function() {
-    return s
-  },
-  getAudioInputDevices: function() {
+n.d(t, {
+  HS: function() {
     return d
   },
-  getAudioOutputDevices: function() {
+  Hg: function() {
     return _
   },
-  getDevices: function() {
+  PW: function() {
     return E
   },
-  getVideoInputDevices: function() {
+  S5: function() {
+    return r
+  },
+  ZA: function() {
+    return s
+  },
+  l0: function() {
     return c
   }
-}), n("177593"), n("653041");
-var i = n("65154");
+}), n(177593), n(653041);
+var i = n(65154);
 let r = null != navigator.mediaDevices && null != navigator.mediaDevices.enumerateDevices,
   s = r && "setSinkId" in HTMLAudioElement.prototype;
 
-function a(e) {
+function o(e) {
   return {
-    id: i.DEFAULT_DEVICE_ID,
+    id: i.w5,
     type: e,
     index: 0,
     name: "Default"
   }
 }
 
-function o() {
-  return [a(i.DeviceTypes.AUDIO_INPUT), a(i.DeviceTypes.AUDIO_OUTPUT), a(i.DeviceTypes.VIDEO_INPUT)]
+function a() {
+  return [o(i.h7.AUDIO_INPUT), o(i.h7.AUDIO_OUTPUT), o(i.h7.VIDEO_INPUT)]
 }
 
 function l(e, t) {
@@ -47,9 +47,9 @@ function u() {
       r = 0;
     return e.filter(e => {
       switch (e.kind) {
-        case i.DeviceTypes.AUDIO_INPUT:
-        case i.DeviceTypes.AUDIO_OUTPUT:
-        case i.DeviceTypes.VIDEO_INPUT:
+        case i.h7.AUDIO_INPUT:
+        case i.h7.AUDIO_OUTPUT:
+        case i.h7.VIDEO_INPUT:
           return !0;
         default:
           return !1
@@ -57,13 +57,13 @@ function u() {
     }).map(e => {
       let s;
       switch (e.kind) {
-        case i.DeviceTypes.AUDIO_INPUT:
+        case i.h7.AUDIO_INPUT:
           s = t++;
           break;
-        case i.DeviceTypes.AUDIO_OUTPUT:
+        case i.h7.AUDIO_OUTPUT:
           s = n++;
           break;
-        case i.DeviceTypes.VIDEO_INPUT:
+        case i.h7.VIDEO_INPUT:
         default:
           s = r++
       }
@@ -74,20 +74,20 @@ function u() {
         name: null != e.label && "" !== e.label ? e.label : 0 === s ? "Default" : "Device ".concat(s)
       }
     })
-  }).then(e => (!s && (e = e.filter(e => e.type !== i.DeviceTypes.AUDIO_OUTPUT)).push(a(i.DeviceTypes.AUDIO_OUTPUT)), e)).catch(o) : new Promise(e => {
-    setImmediate(() => e(o()))
+  }).then(e => (!s && (e = e.filter(e => e.type !== i.h7.AUDIO_OUTPUT)).push(o(i.h7.AUDIO_OUTPUT)), e)).catch(a) : new Promise(e => {
+    setImmediate(() => e(a()))
   })
 }
-async function d() {
-  return l(await u(), i.DeviceTypes.AUDIO_INPUT)
-}
 async function _() {
-  return l(await u(), i.DeviceTypes.AUDIO_OUTPUT)
+  return l(await u(), i.h7.AUDIO_INPUT)
+}
+async function d() {
+  return l(await u(), i.h7.AUDIO_OUTPUT)
 }
 async function c() {
-  return l(await u(), i.DeviceTypes.VIDEO_INPUT)
+  return l(await u(), i.h7.VIDEO_INPUT)
 }
 async function E() {
   let e = await u();
-  return [l(e, i.DeviceTypes.AUDIO_INPUT), l(e, i.DeviceTypes.AUDIO_OUTPUT), l(e, i.DeviceTypes.VIDEO_INPUT)]
+  return [l(e, i.h7.AUDIO_INPUT), l(e, i.h7.AUDIO_OUTPUT), l(e, i.h7.VIDEO_INPUT)]
 }

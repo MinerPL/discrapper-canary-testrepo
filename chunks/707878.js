@@ -1,52 +1,52 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("735250"),
-  a = n("470079"),
-  l = n("442837"),
-  s = n("481060"),
-  o = n("13245"),
-  r = n("237997"),
-  d = n("153124"),
-  u = n("766032"),
-  c = n("987650"),
-  f = n("981631"),
-  h = n("689938"),
-  p = n("993384");
-let g = Object.values(c.OpacityBounds).map(e => 100 * e),
-  m = (0, d.uid)();
-class E extends a.PureComponent {
+n(47120);
+var i = n(735250),
+  s = n(470079),
+  l = n(442837),
+  a = n(481060),
+  o = n(13245),
+  r = n(237997),
+  d = n(153124),
+  c = n(766032),
+  u = n(987650),
+  h = n(981631),
+  p = n(689938),
+  f = n(696756);
+let E = Object.values(u.wF).map(e => 100 * e),
+  Z = (0, d.hQ)();
+class g extends s.PureComponent {
   handleUpdateBackgroundOpacity(e) {
-    o.default.setTextWidgetOpacity((0, u.default)(e / 100)), o.default.track(f.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, {
+    o.Z.setTextWidgetOpacity((0, c.Z)(e / 100)), o.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, {
       text_opacity_slider: e
     })
   }
   handlePreviewBackgroundOpacity(e) {
-    o.default.setTextWidgetOpacity((0, u.default)(e / 100))
+    o.Z.setTextWidgetOpacity((0, c.Z)(e / 100))
   }
   render() {
     return (0, i.jsxs)("div", {
-      className: p.container,
-      children: [(0, i.jsx)(s.FormTitle, {
-        id: m,
-        tag: s.FormTitleTags.H5,
-        className: p.title,
-        children: h.default.Messages.FORM_LABEL_OVERLAY_CHAT_OPACITY
+      className: f.container,
+      children: [(0, i.jsx)(a.FormTitle, {
+        id: Z,
+        tag: a.FormTitleTags.H5,
+        className: f.title,
+        children: p.Z.Messages.FORM_LABEL_OVERLAY_CHAT_OPACITY
       }), (0, i.jsx)("div", {
-        className: p.sliderContainer,
-        children: (0, i.jsx)(s.Slider, {
+        className: f.sliderContainer,
+        children: (0, i.jsx)(a.Slider, {
           mini: !0,
           initialValue: this.initialValue,
           defaultValue: this.initialValue,
-          minValue: g[0],
-          maxValue: g[g.length - 1],
+          minValue: E[0],
+          maxValue: E[E.length - 1],
           handleSize: 10,
           onValueChange: this.handleUpdateBackgroundOpacity,
           asValueChanges: this.handlePreviewBackgroundOpacity,
-          markers: g,
-          onMarkerRender: f.NOOP,
+          markers: E,
+          onMarkerRender: h.dG4,
           equidistant: !0,
           stickToMarkers: !0,
-          "aria-labelledby": m
+          "aria-labelledby": Z
         })
       })]
     })
@@ -61,6 +61,6 @@ class E extends a.PureComponent {
     }) : t[n] = i
   }
 }
-t.default = l.default.connectStores([r.default], () => ({
-  opacity: r.default.getTextWidgetOpacity()
-}))(E)
+t.Z = l.ZP.connectStores([r.Z], () => ({
+  opacity: r.Z.getTextWidgetOpacity()
+}))(g)

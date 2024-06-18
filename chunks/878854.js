@@ -7,8 +7,8 @@ function r(e, t, n) {
     t.value = n
   }
 }
-n.r(t), n.d(t, {
-  _class_apply_descriptor_set: function() {
+n.d(t, {
+  y: function() {
     return r
   }
 })

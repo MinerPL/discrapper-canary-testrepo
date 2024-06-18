@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
-  MinuteParser: function() {
+n.d(t, {
+  A: function() {
     return f
   }
 });
-var r = n("717029"),
-  i = n("25487"),
-  a = n("846042");
+var r = n(717029),
+  i = n(25487),
+  a = n(846042);
 
 function o(e) {
   return (o = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
@@ -69,13 +69,10 @@ var f = function(e) {
     }
   }(), function() {
     var e, r = l(t);
-    if (n) {
-      var i = l(this).constructor;
-      e = Reflect.construct(r, arguments, i)
-    } else e = r.apply(this, arguments);
-    return function(e, t) {
-      return t && ("object" === o(t) || "function" == typeof t) ? t : c(e)
-    }(this, e)
+    return e = n ? Reflect.construct(r, arguments, l(this).constructor) : r.apply(this, arguments),
+      function(e, t) {
+        return t && ("object" === o(t) || "function" == typeof t) ? t : c(e)
+      }(this, e)
   });
 
   function m() {
@@ -91,13 +88,13 @@ var f = function(e) {
     value: function(e, t, n) {
       switch (t) {
         case "m":
-          return (0, a.parseNumericPattern)(i.numericPatterns.minute, e);
+          return (0, a.ie)(i.z.minute, e);
         case "mo":
           return n.ordinalNumber(e, {
             unit: "minute"
           });
         default:
-          return (0, a.parseNDigits)(t.length, e)
+          return (0, a.ZL)(t.length, e)
       }
     }
   }, {
@@ -110,5 +107,5 @@ var f = function(e) {
     value: function(e, t, n) {
       return e.setUTCMinutes(n, 0, 0), e
     }
-  }], s(r.prototype, f), p && s(r, p), m
-}(r.Parser)
+  }], s(r.prototype, f), m
+}(r._)

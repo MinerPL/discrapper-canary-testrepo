@@ -1,6 +1,6 @@
 "use strict";
-var n = r("470079"),
-  i = r("606166"),
+var n = r(470079),
+  i = r(606166),
   o = function(t) {
     function e() {
       return t.apply(this, arguments) || this

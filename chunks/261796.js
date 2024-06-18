@@ -1,6 +1,5 @@
 "use strict";
-r.r(t);
-t.default = function() {
+t.Z = function() {
   return {
     onProcessStyle: function(e, t) {
       return "composes" in e ? (! function e(t, r) {

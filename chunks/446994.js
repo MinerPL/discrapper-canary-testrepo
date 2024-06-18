@@ -454,314 +454,316 @@ i = globalThis, r = function() {
               }
             }()
           }, function(e, t, i) {
-            window,
-            e.exports = function(e) {
-              var t = {};
+            var r;
+            window, r = function() {
+              return function(e) {
+                var t = {};
 
-              function i(r) {
-                if (t[r]) return t[r].exports;
-                var o = t[r] = {
-                  i: r,
-                  l: !1,
-                  exports: {}
-                };
-                return e[r].call(o.exports, o, o.exports, i), o.l = !0, o.exports
-              }
-              return i.m = e, i.c = t, i.d = function(e, t, r) {
-                i.o(e, t) || Object.defineProperty(e, t, {
-                  enumerable: !0,
-                  get: r
-                })
-              }, i.r = function(e) {
-                "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
-                  value: "Module"
-                }), Object.defineProperty(e, "__esModule", {
-                  value: !0
-                })
-              }, i.t = function(e, t) {
-                if (1 & t && (e = i(e)), 8 & t || 4 & t && "object" == typeof e && e && e.__esModule) return e;
-                var r = Object.create(null);
-                if (i.r(r), Object.defineProperty(r, "default", {
-                    enumerable: !0,
-                    value: e
-                  }), 2 & t && "string" != typeof e)
-                  for (var o in e) i.d(r, o, (function(t) {
-                    return e[t]
-                  }).bind(null, o));
-                return r
-              }, i.n = function(e) {
-                var t = e && e.__esModule ? function() {
-                  return e.default
-                } : function() {
-                  return e
-                };
-                return i.d(t, "a", t), t
-              }, i.o = function(e, t) {
-                return Object.prototype.hasOwnProperty.call(e, t)
-              }, i.p = "", i(i.s = 1)
-            }([function(e, t) {
-              e.exports = {
-                float_array: function(e) {
-                  return new Float32Array(e)
-                },
-                blit: function(e, t, i, r, o) {
-                  i.set(e.subarray(t, t + o), r)
+                function i(r) {
+                  if (t[r]) return t[r].exports;
+                  var o = t[r] = {
+                    i: r,
+                    l: !1,
+                    exports: {}
+                  };
+                  return e[r].call(o.exports, o, o.exports, i), o.l = !0, o.exports
                 }
-              }
-            }, function(e, t, i) {
-              var r, o;
-              r = i(0), o = i(2), e.exports = function(e) {
-                var t = (e = e || {}).sampleRate || 44100,
-                  i = e.wsizeLog || 11,
-                  n = e.tempo || 1,
-                  a = (e.numChannels, Math.pow(2, 50 / 1200) - 1),
-                  s = 1 << i,
-                  u = o(i),
-                  d = 1 << i - 2;
-                d -= d % 100;
-                for (var c = r.float_array(s + d + 5), h = r.float_array(s + d + 5), f = d, l = d, _ = r.float_array(s), p = 0; p < s; p++) _[p] = .5 * (1 - Math.cos(2 * Math.PI * p / s));
-                var m = 1 + (s >> 1),
-                  V = r.float_array(m),
-                  v = r.float_array(m),
-                  g = r.float_array(m),
-                  y = r.float_array(m),
-                  b = r.float_array(m),
-                  T = r.float_array(m),
-                  A = 1 + (m >> 1),
-                  k = [0, 0],
-                  E = [],
-                  P = [],
-                  w = [],
-                  x = [];
-                for (p = 0; p < 2; p++) E.push(r.float_array(A)), P.push(r.float_array(A)), w.push(r.float_array(A)), x.push(r.float_array(m));
-                var R = r.float_array(A),
-                  F = r.float_array(A),
-                  O = 0,
-                  S = 0,
-                  C = [{
-                    in_time: 0,
-                    out_time: 0,
-                    tempo: n
-                  }],
-                  D = 0,
-                  M = 0,
-                  B = 1,
-                  I = 0,
-                  j = 0,
-                  L = 0,
-                  U = 0,
-                  G = {
-                    mapOutputToInputTime: function(e) {
-                      for (var t = C.length - 1; e < C[t].out_time && t > 0;) t--;
-                      var i = C[t];
-                      return i.in_time + i.tempo * (e - i.out_time)
-                    },
-                    flush: function(e) {
-                      I = 0, k = [0, 0], M = 0, U = 0, L = 0;
-                      for (var t = 0; t < 2; t++)
-                        for (var i = 0; i < m; i++) x[t][i] = 0;
-                      for (t = 0; t < c.length; t++) c[t] = 0;
-                      for (t = 0; t < h.length; t++) h[t] = 0;
-                      if (e) {
-                        S = Math.max(0, S - e), O = G.mapOutputToInputTime(S);
-                        for (var r = C.length - 1; S <= C[r].out_time && r >= 0;) C.pop(), r--;
-                        C.push({
+                return i.m = e, i.c = t, i.d = function(e, t, r) {
+                  i.o(e, t) || Object.defineProperty(e, t, {
+                    enumerable: !0,
+                    get: r
+                  })
+                }, i.r = function(e) {
+                  "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+                    value: "Module"
+                  }), Object.defineProperty(e, "__esModule", {
+                    value: !0
+                  })
+                }, i.t = function(e, t) {
+                  if (1 & t && (e = i(e)), 8 & t || 4 & t && "object" == typeof e && e && e.__esModule) return e;
+                  var r = Object.create(null);
+                  if (i.r(r), Object.defineProperty(r, "default", {
+                      enumerable: !0,
+                      value: e
+                    }), 2 & t && "string" != typeof e)
+                    for (var o in e) i.d(r, o, (function(t) {
+                      return e[t]
+                    }).bind(null, o));
+                  return r
+                }, i.n = function(e) {
+                  var t = e && e.__esModule ? function() {
+                    return e.default
+                  } : function() {
+                    return e
+                  };
+                  return i.d(t, "a", t), t
+                }, i.o = function(e, t) {
+                  return Object.prototype.hasOwnProperty.call(e, t)
+                }, i.p = "", i(i.s = 1)
+              }([function(e, t) {
+                e.exports = {
+                  float_array: function(e) {
+                    return new Float32Array(e)
+                  },
+                  blit: function(e, t, i, r, o) {
+                    i.set(e.subarray(t, t + o), r)
+                  }
+                }
+              }, function(e, t, i) {
+                var r, o;
+                r = i(0), o = i(2), e.exports = function(e) {
+                  var t = (e = e || {}).sampleRate || 44100,
+                    i = e.wsizeLog || 11,
+                    n = e.tempo || 1,
+                    a = (e.numChannels, Math.pow(2, 50 / 1200) - 1),
+                    s = 1 << i,
+                    u = o(i),
+                    d = 1 << i - 2;
+                  d -= d % 100;
+                  for (var c = r.float_array(s + d + 5), h = r.float_array(s + d + 5), f = d, l = d, _ = r.float_array(s), p = 0; p < s; p++) _[p] = .5 * (1 - Math.cos(2 * Math.PI * p / s));
+                  var m = 1 + (s >> 1),
+                    V = r.float_array(m),
+                    v = r.float_array(m),
+                    g = r.float_array(m),
+                    y = r.float_array(m),
+                    b = r.float_array(m),
+                    T = r.float_array(m),
+                    A = 1 + (m >> 1),
+                    k = [0, 0],
+                    E = [],
+                    P = [],
+                    w = [],
+                    x = [];
+                  for (p = 0; p < 2; p++) E.push(r.float_array(A)), P.push(r.float_array(A)), w.push(r.float_array(A)), x.push(r.float_array(m));
+                  var R = r.float_array(A),
+                    F = r.float_array(A),
+                    O = 0,
+                    S = 0,
+                    C = [{
+                      in_time: 0,
+                      out_time: 0,
+                      tempo: n
+                    }],
+                    D = 0,
+                    M = 0,
+                    B = 1,
+                    I = 0,
+                    j = 0,
+                    L = 0,
+                    U = 0,
+                    G = {
+                      mapOutputToInputTime: function(e) {
+                        for (var t = C.length - 1; e < C[t].out_time && t > 0;) t--;
+                        var i = C[t];
+                        return i.in_time + i.tempo * (e - i.out_time)
+                      },
+                      flush: function(e) {
+                        I = 0, k = [0, 0], M = 0, U = 0, L = 0;
+                        for (var t = 0; t < 2; t++)
+                          for (var i = 0; i < m; i++) x[t][i] = 0;
+                        for (t = 0; t < c.length; t++) c[t] = 0;
+                        for (t = 0; t < h.length; t++) h[t] = 0;
+                        if (e) {
+                          S = Math.max(0, S - e), O = G.mapOutputToInputTime(S);
+                          for (var r = C.length - 1; S <= C[r].out_time && r >= 0;) C.pop(), r--;
+                          C.push({
+                            in_time: O,
+                            out_time: S,
+                            tempo: n
+                          })
+                        }
+                      },
+                      getTempo: function() {
+                        return n
+                      },
+                      setTempo: function(e) {
+                        f = l = d, e >= 1 ? l = Math.round(f / e) : f = Math.round(l * e), j = (1 / e - 1 * l / f) * f, B = function(e, t) {
+                          for (var i = e.length / t | 0, r = 0, o = 0; o < i; o++) r += e[o * t];
+                          return .9 / r
+                        }(_, l), n = e;
+                        var t = C[C.length - 1];
+                        t.out_time == S ? t.tempo = e : C.push({
                           in_time: O,
                           out_time: S,
-                          tempo: n
+                          tempo: e
                         })
                       }
+                    };
+                  G.flush(0), G.setTempo(n);
+                  var W = function(e, t, i) {
+                      var r = Math.floor(i),
+                        o = r % 2 == 1 ? -1 : 1;
+                      return Math.atan2(o * (t[r] - t[r + 1]), o * (e[r] - e[r + 1]))
                     },
-                    getTempo: function() {
-                      return n
+                    N = function(e, t, i, r, o) {
+                      var n, a = 2 * Math.PI / s * .5 * (r + t) * f;
+                      return ((n = e - i - a) - 2 * Math.PI * Math.round(n / (2 * Math.PI)) + a) * o
                     },
-                    setTempo: function(e) {
-                      f = l = d, e >= 1 ? l = Math.round(f / e) : f = Math.round(l * e), j = (1 / e - 1 * l / f) * f, B = function(e, t) {
-                        for (var i = e.length / t | 0, r = 0, o = 0; o < i; o++) r += e[o * t];
-                        return .9 / r
-                      }(_, l), n = e;
-                      var t = C[C.length - 1];
-                      t.out_time == S ? t.tempo = e : C.push({
-                        in_time: O,
-                        out_time: S,
-                        tempo: e
-                      })
-                    }
-                  };
-                G.flush(0), G.setTempo(n);
-                var W = function(e, t, i) {
-                    var r = Math.floor(i),
-                      o = r % 2 == 1 ? -1 : 1;
-                    return Math.atan2(o * (t[r] - t[r + 1]), o * (e[r] - e[r + 1]))
-                  },
-                  N = function(e, t, i, r, o) {
-                    var n, a = 2 * Math.PI / s * .5 * (r + t) * f;
-                    return ((n = e - i - a) - 2 * Math.PI * Math.round(n / (2 * Math.PI)) + a) * o
-                  },
-                  X = function(e, t, i, r, o, n) {
-                    for (var u = e % 2, d = 1 - u, c = x[d], h = k[d], f = E[d], l = P[d], _ = w[d], p = x[u], m = 1; m < p.length; m++) p[m] = t[m] * t[m] + i[m] * i[m];
-                    var V = E[u],
-                      v = k[u] = function(e, t) {
-                        for (var i = 0, r = 0; r < e.length; r++) e[r] > i && (i = e[r]);
-                        var o = 1e-8 * i,
-                          n = 1,
-                          s = 1;
-                        for (t[0] = 1, r = 2; r < e.length; r++) {
-                          var u = r * a;
-                          if (e[r] > o && e[r] > e[r - 1] && e[r] >= e[r + 1]) {
-                            var d = r + (e[r - 1] - e[r + 1]) / (2 * (e[r - 1] - 2 * e[r] + e[r + 1]));
-                            d - t[n - 1] > u ? (t[n++] = d, s = r) : e[r] > e[s] && (t[n - 1] = d, s = r)
+                    X = function(e, t, i, r, o, n) {
+                      for (var u = e % 2, d = 1 - u, c = x[d], h = k[d], f = E[d], l = P[d], _ = w[d], p = x[u], m = 1; m < p.length; m++) p[m] = t[m] * t[m] + i[m] * i[m];
+                      var V = E[u],
+                        v = k[u] = function(e, t) {
+                          for (var i = 0, r = 0; r < e.length; r++) e[r] > i && (i = e[r]);
+                          var o = 1e-8 * i,
+                            n = 1,
+                            s = 1;
+                          for (t[0] = 1, r = 2; r < e.length; r++) {
+                            var u = r * a;
+                            if (e[r] > o && e[r] > e[r - 1] && e[r] >= e[r + 1]) {
+                              var d = r + (e[r - 1] - e[r + 1]) / (2 * (e[r - 1] - 2 * e[r] + e[r + 1]));
+                              d - t[n - 1] > u ? (t[n++] = d, s = r) : e[r] > e[s] && (t[n - 1] = d, s = r)
+                            }
                           }
+                          return n
+                        }(p, V),
+                        g = P[u],
+                        y = w[u];
+                      if (0 != e && 0 != v) {
+                        var b = 0;
+                        for (L = 0; L < v; L++) {
+                          for (U = V[L]; V[L] > f[b] && b != h;) ++b;
+                          var T = b;
+                          b > 0 && U - f[b - 1] < f[b] - U && (T = b - 1);
+                          var A = U * a;
+                          if (Math.abs(f[T] - U) < A && c[Math.round(f[T])] > .1 * p[Math.round(U)]) {
+                            var O = W(t, i, U),
+                              S = l[T] + _[T] + N(O, U, l[T], f[T], n) - O;
+                            g[L] = O, y[L] = S, R[L] = Math.cos(S), F[L] = Math.sin(S)
+                          } else g[L] = W(t, i, U), y[L] = 0, R[L] = 1, F[L] = 0
                         }
-                        return n
-                      }(p, V),
-                      g = P[u],
-                      y = w[u];
-                    if (0 != e && 0 != v) {
-                      var b = 0;
-                      for (L = 0; L < v; L++) {
-                        for (U = V[L]; V[L] > f[b] && b != h;) ++b;
-                        var T = b;
-                        b > 0 && U - f[b - 1] < f[b] - U && (T = b - 1);
-                        var A = U * a;
-                        if (Math.abs(f[T] - U) < A && c[Math.round(f[T])] > .1 * p[Math.round(U)]) {
-                          var O = W(t, i, U),
-                            S = l[T] + _[T] + N(O, U, l[T], f[T], n) - O;
-                          g[L] = O, y[L] = S, R[L] = Math.cos(S), F[L] = Math.sin(S)
-                        } else g[L] = W(t, i, U), y[L] = 0, R[L] = 1, F[L] = 0
+                        V[v] = 2 * s;
+                        var C = V[T = 0],
+                          D = V[T + 1],
+                          M = R[T],
+                          B = F[T];
+                        for (m = 1; m < t.length - 1; m++) {
+                          m >= C && m - C > D - m && (C = V[++T], D = V[T + 1], M = R[T], B = F[T]);
+                          var I = t[m] * M - i[m] * B,
+                            j = t[m] * B + i[m] * M;
+                          t[m] = I, i[m] = j
+                        }
+                      } else
+                        for (var L = 0; L < v; L++) {
+                          var U = V[L];
+                          l[L] = _[L] = W(t, i, U)
+                        }
+                    },
+                    H = function() {
+                      var e = 0 | (I += 2 * j);
+                      I -= e;
+                      for (var t = 0; t < s; t++) u.m_re[t] = _[t] * c[t], u.m_im[t] = _[t] * c[f + t];
+                      r.blit(c, 2 * f, c, 0, s - f), u.inplace(!1), u.unpack(V, v, g, y), X(D, V, v, 0, 0, 1 * l / f), X(D + 1, g, y, 0, 0, 1 * (l + e) / f), r.blit(g, 0, b, 0, m), r.blit(y, 0, T, 0, m), u.repack(V, v, g, y), u.inplace(!0);
+                      var i = h.length;
+                      for (r.blit(h, M, h, 0, i - M), t = i - M; t < i; t++) h[t] = 0;
+                      var o = 0,
+                        n = B;
+                      for (t = 0; t < l; t++) Math.abs(2 * u.m_re[t]) > o && (o = Math.abs(2 * u.m_re[t]));
+                      for (t = 0; t < s - l; t++) Math.abs(u.m_re[t + l + e] + u.m_im[t]) > o && (o = Math.abs(u.m_re[t + l + e] + u.m_im[t]));
+                      for (t = s - l; t < s; t++) Math.abs(2 * u.m_im[t]) > o && (o = Math.abs(2 * u.m_im[t]));
+                      var a = 1 / Math.floor(1 * s / (2 * l));
+                      for (n * o > a && (n = a / o), t = 0; t < s; t++) h[t] += n * u.m_re[t], h[t + l + e] += n * u.m_im[t];
+                      return D += 2, M = 2 * l + e
+                    };
+                  return G.process = function(e) {
+                    var i = e[0].length,
+                      o = e[0];
+                    if (e.length > 1) {
+                      o = r.float_array(e[0].length);
+                      for (var a = 1 / e.length, u = 0; u < e.length; u++)
+                        for (var d = 0; d < i; d++) o[d] += a * e[u][d]
+                    }
+                    if (1 == n) {
+                      if (U + L > 0) {
+                        var _ = U + L + i,
+                          p = [];
+                        for (u = 0; u < e.length; u++) {
+                          var m = r.float_array(_);
+                          r.blit(h, 0, m, 0, U), r.blit(c, 0, m, U, L), r.blit(e[u], 0, m, U + L, i), p.push(m)
+                        }
+                        G.flush(0), i = _, e = p
                       }
-                      V[v] = 2 * s;
-                      var C = V[T = 0],
-                        D = V[T + 1],
-                        M = R[T],
-                        B = F[T];
-                      for (m = 1; m < t.length - 1; m++) {
-                        m >= C && m - C > D - m && (C = V[++T], D = V[T + 1], M = R[T], B = F[T]);
-                        var I = t[m] * M - i[m] * B,
-                          j = t[m] * B + i[m] * M;
-                        t[m] = I, i[m] = j
+                      return O += i / t, S += i / t, e
+                    }
+                    var V = 2 * Math.floor(Math.max(0, L + i - (s - f)) / (2 * f)),
+                      v = U + l * V + Math.floor(I + j * V);
+                    U > v && (v = U);
+                    var g = r.float_array(v);
+                    r.blit(h, 0, g, 0, U);
+                    for (var y = 0, b = U, T = 0, A = 0;;) {
+                      var k = s + f - L;
+                      if (y + k > i) {
+                        r.blit(o, y, c, L, i - y), L += i - y, y = i;
+                        break
                       }
-                    } else
-                      for (var L = 0; L < v; L++) {
-                        var U = V[L];
-                        l[L] = _[L] = W(t, i, U)
+                      k <= 0 ? L -= 2 * f : (r.blit(o, y, c, L, k), y += k, L = s - f), A = H(), O += 2 * f / t, S += A / t, (T = b + A - v) < 0 && (T = 0), r.blit(h, 0, g, b, A - T), b += A
+                    }
+                    r.blit(h, A - T, h, 0, T), U = T;
+                    var E = [];
+                    for (u = 0; u < e.length; u++) E.push(g);
+                    return E
+                  }, G
+                }
+              }, function(e, t, i) {
+                "use strict";
+                var r = i(0);
+                e.exports = function(e) {
+                  for (var t = 1 << e, i = {
+                      m_logN: e,
+                      m_N: t,
+                      m_invN: 1 / t,
+                      m_re: r.float_array(t),
+                      m_im: r.float_array(t),
+                      m_revTgt: Array(t)
+                    }, o = 0; o < t; o++) {
+                    for (var n = o, a = 0, s = 0; s < e; s++) a <<= 1, a |= 1 & n, n >>= 1;
+                    i.m_revTgt[o] = a
+                  }
+                  i.twiddleRe = r.float_array(i.m_logN), i.twiddleIm = r.float_array(i.m_logN);
+                  for (var u = 1, d = 0; d < i.m_logN; d++) {
+                    var c = 2 * u * Math.PI * i.m_invN;
+                    i.twiddleRe[d] = Math.cos(c), i.twiddleIm[d] = Math.sin(c), u <<= 1
+                  }
+                  i.inplace = function(e) {
+                    var t = i.m_re,
+                      r = i.m_im,
+                      o = i.m_N,
+                      n = i.m_logN,
+                      a = o >> 1,
+                      s = o >> 1,
+                      u = o;
+                    if (e)
+                      for (var d = 1 / o, c = 0; c < o; c++) t[c] *= d, r[c] *= d;
+                    for (var h = 0; h < n; h++) {
+                      var f = i.twiddleRe[h],
+                        l = i.twiddleIm[h];
+                      e || (l *= -1);
+                      for (var _ = 0; _ < o;) {
+                        for (var p = _, m = _ + s, V = 1, v = 0, g = 0; g < a; g++) {
+                          var y = t[p],
+                            b = r[p],
+                            T = t[m],
+                            A = r[m];
+                          t[p] = y + T, r[p] = b + A, T = y - T, A = b - A, t[m] = T * V - A * v, r[m] = T * v + A * V, p++, m++;
+                          var k = V;
+                          V = V * f - v * l, v = k * l + v * f
+                        }
+                        _ += u
                       }
-                  },
-                  H = function() {
-                    var e = 0 | (I += 2 * j);
-                    I -= e;
-                    for (var t = 0; t < s; t++) u.m_re[t] = _[t] * c[t], u.m_im[t] = _[t] * c[f + t];
-                    r.blit(c, 2 * f, c, 0, s - f), u.inplace(!1), u.unpack(V, v, g, y), X(D, V, v, 0, 0, 1 * l / f), X(D + 1, g, y, 0, 0, 1 * (l + e) / f), r.blit(g, 0, b, 0, m), r.blit(y, 0, T, 0, m), u.repack(V, v, g, y), u.inplace(!0);
-                    var i = h.length;
-                    for (r.blit(h, M, h, 0, i - M), t = i - M; t < i; t++) h[t] = 0;
-                    var o = 0,
-                      n = B;
-                    for (t = 0; t < l; t++) Math.abs(2 * u.m_re[t]) > o && (o = Math.abs(2 * u.m_re[t]));
-                    for (t = 0; t < s - l; t++) Math.abs(u.m_re[t + l + e] + u.m_im[t]) > o && (o = Math.abs(u.m_re[t + l + e] + u.m_im[t]));
-                    for (t = s - l; t < s; t++) Math.abs(2 * u.m_im[t]) > o && (o = Math.abs(2 * u.m_im[t]));
-                    var a = 1 / Math.floor(1 * s / (2 * l));
-                    for (n * o > a && (n = a / o), t = 0; t < s; t++) h[t] += n * u.m_re[t], h[t + l + e] += n * u.m_im[t];
-                    return D += 2, M = 2 * l + e
+                      a >>= 1, s >>= 1, u >>= 1
+                    }
+                    for (var E, P, w = i.m_revTgt, x = 0; x < o; x++) w[x] > x && (P = t[E = w[x]], t[E] = t[x], t[x] = P, P = r[E], r[E] = r[x], r[x] = P)
                   };
-                return G.process = function(e) {
-                  var i = e[0].length,
-                    o = e[0];
-                  if (e.length > 1) {
-                    o = r.float_array(e[0].length);
-                    for (var a = 1 / e.length, u = 0; u < e.length; u++)
-                      for (var d = 0; d < i; d++) o[d] += a * e[u][d]
-                  }
-                  if (1 == n) {
-                    if (U + L > 0) {
-                      var _ = U + L + i,
-                        p = [];
-                      for (u = 0; u < e.length; u++) {
-                        var m = r.float_array(_);
-                        r.blit(h, 0, m, 0, U), r.blit(c, 0, m, U, L), r.blit(e[u], 0, m, U + L, i), p.push(m)
-                      }
-                      G.flush(0), i = _, e = p
-                    }
-                    return O += i / t, S += i / t, e
-                  }
-                  var V = 2 * Math.floor(Math.max(0, L + i - (s - f)) / (2 * f)),
-                    v = U + l * V + Math.floor(I + j * V);
-                  U > v && (v = U);
-                  var g = r.float_array(v);
-                  r.blit(h, 0, g, 0, U);
-                  for (var y = 0, b = U, T = 0, A = 0;;) {
-                    var k = s + f - L;
-                    if (y + k > i) {
-                      r.blit(o, y, c, L, i - y), L += i - y, y = i;
-                      break
-                    }
-                    k <= 0 ? L -= 2 * f : (r.blit(o, y, c, L, k), y += k, L = s - f), A = H(), O += 2 * f / t, S += A / t, (T = b + A - v) < 0 && (T = 0), r.blit(h, 0, g, b, A - T), b += A
-                  }
-                  r.blit(h, A - T, h, 0, T), U = T;
-                  var E = [];
-                  for (u = 0; u < e.length; u++) E.push(g);
-                  return E
-                }, G
-              }
-            }, function(e, t, i) {
-              "use strict";
-              var r = i(0);
-              e.exports = function(e) {
-                for (var t = 1 << e, i = {
-                    m_logN: e,
-                    m_N: t,
-                    m_invN: 1 / t,
-                    m_re: r.float_array(t),
-                    m_im: r.float_array(t),
-                    m_revTgt: Array(t)
-                  }, o = 0; o < t; o++) {
-                  for (var n = o, a = 0, s = 0; s < e; s++) a <<= 1, a |= 1 & n, n >>= 1;
-                  i.m_revTgt[o] = a
+                  var h = t >> 1;
+                  return i.unpack = function(e, r, o, n) {
+                    e[0] = i.m_re[0], o[0] = i.m_im[0], r[0] = n[0] = 0, e[h] = i.m_re[h], o[h] = i.m_im[h], r[h] = n[h] = 0;
+                    for (var a = 1; a < h; a++) e[a] = (i.m_re[a] + i.m_re[t - a]) / 2, r[a] = (i.m_im[a] - i.m_im[t - a]) / 2, o[a] = (i.m_im[a] + i.m_im[t - a]) / 2, n[a] = (-i.m_re[a] + i.m_re[t - a]) / 2
+                  }, i.repack = function(e, r, o, n) {
+                    i.m_re[0] = e[0], i.m_im[0] = o[0], i.m_re[h] = e[h], i.m_im[h] = o[h];
+                    for (var a = 1; a < h; a++) i.m_re[a] = e[a] - n[a], i.m_im[a] = r[a] + o[a], i.m_re[t - a] = e[a] + n[a], i.m_im[t - a] = -r[a] + o[a]
+                  }, i
                 }
-                i.twiddleRe = r.float_array(i.m_logN), i.twiddleIm = r.float_array(i.m_logN);
-                for (var u = 1, d = 0; d < i.m_logN; d++) {
-                  var c = 2 * u * Math.PI * i.m_invN;
-                  i.twiddleRe[d] = Math.cos(c), i.twiddleIm[d] = Math.sin(c), u <<= 1
-                }
-                i.inplace = function(e) {
-                  var t = i.m_re,
-                    r = i.m_im,
-                    o = i.m_N,
-                    n = i.m_logN,
-                    a = o >> 1,
-                    s = o >> 1,
-                    u = o;
-                  if (e)
-                    for (var d = 1 / o, c = 0; c < o; c++) t[c] *= d, r[c] *= d;
-                  for (var h = 0; h < n; h++) {
-                    var f = i.twiddleRe[h],
-                      l = i.twiddleIm[h];
-                    e || (l *= -1);
-                    for (var _ = 0; _ < o;) {
-                      for (var p = _, m = _ + s, V = 1, v = 0, g = 0; g < a; g++) {
-                        var y = t[p],
-                          b = r[p],
-                          T = t[m],
-                          A = r[m];
-                        t[p] = y + T, r[p] = b + A, T = y - T, A = b - A, t[m] = T * V - A * v, r[m] = T * v + A * V, p++, m++;
-                        var k = V;
-                        V = V * f - v * l, v = k * l + v * f
-                      }
-                      _ += u
-                    }
-                    a >>= 1, s >>= 1, u >>= 1
-                  }
-                  for (var E, P, w = i.m_revTgt, x = 0; x < o; x++) w[x] > x && (P = t[E = w[x]], t[E] = t[x], t[x] = P, P = r[E], r[E] = r[x], r[x] = P)
-                };
-                var h = t >> 1;
-                return i.unpack = function(e, r, o, n) {
-                  e[0] = i.m_re[0], o[0] = i.m_im[0], r[0] = n[0] = 0, e[h] = i.m_re[h], o[h] = i.m_im[h], r[h] = n[h] = 0;
-                  for (var a = 1; a < h; a++) e[a] = (i.m_re[a] + i.m_re[t - a]) / 2, r[a] = (i.m_im[a] - i.m_im[t - a]) / 2, o[a] = (i.m_im[a] + i.m_im[t - a]) / 2, n[a] = (-i.m_re[a] + i.m_re[t - a]) / 2
-                }, i.repack = function(e, r, o, n) {
-                  i.m_re[0] = e[0], i.m_im[0] = o[0], i.m_re[h] = e[h], i.m_im[h] = o[h];
-                  for (var a = 1; a < h; a++) i.m_re[a] = e[a] - n[a], i.m_im[a] = r[a] + o[a], i.m_re[t - a] = e[a] + n[a], i.m_im[t - a] = -r[a] + o[a]
-                }, i
-              }
-            }])
+              }])
+            }, e.exports = r()
           }])
         },
         893: (e, t, i) => {
@@ -884,11 +886,7 @@ i = globalThis, r = function() {
                 }
               }(), function() {
                 var e, r = (0, u.default)(t);
-                if (i) {
-                  var o = (0, u.default)(this).constructor;
-                  e = Reflect.construct(r, arguments, o)
-                } else e = r.apply(this, arguments);
-                return (0, s.default)(this, e)
+                return e = i ? Reflect.construct(r, arguments, (0, u.default)(this).constructor) : r.apply(this, arguments), (0, s.default)(this, e)
               });
 
               function d() {
@@ -946,11 +944,7 @@ i = globalThis, r = function() {
                 }
               }(), function() {
                 var e, r = (0, u.default)(t);
-                if (i) {
-                  var o = (0, u.default)(this).constructor;
-                  e = Reflect.construct(r, arguments, o)
-                } else e = r.apply(this, arguments);
-                return (0, s.default)(this, e)
+                return e = i ? Reflect.construct(r, arguments, (0, u.default)(this).constructor) : r.apply(this, arguments), (0, s.default)(this, e)
               });
 
               function d() {
@@ -1122,11 +1116,7 @@ i = globalThis, r = function() {
                 }
               }(), function() {
                 var e, r = (0, d.default)(t);
-                if (i) {
-                  var o = (0, d.default)(this).constructor;
-                  e = Reflect.construct(r, arguments, o)
-                } else e = r.apply(this, arguments);
-                return (0, u.default)(this, e)
+                return e = i ? Reflect.construct(r, arguments, (0, d.default)(this).constructor) : r.apply(this, arguments), (0, u.default)(this, e)
               });
 
               function c() {
@@ -1345,11 +1335,7 @@ i = globalThis, r = function() {
               }
             }(), function() {
               var e, r = (0, d.default)(t);
-              if (i) {
-                var o = (0, d.default)(this).constructor;
-                e = Reflect.construct(r, arguments, o)
-              } else e = r.apply(this, arguments);
-              return (0, u.default)(this, e)
+              return e = i ? Reflect.construct(r, arguments, (0, d.default)(this).constructor) : r.apply(this, arguments), (0, u.default)(this, e)
             });
 
             function c(e) {
@@ -2519,7 +2505,7 @@ i = globalThis, r = function() {
                           if (!i) {
                             if (Array.isArray(e) || (i = function(e, t) {
                                 if (e) {
-                                  if ("string" == typeof e) return s(e, t);
+                                  if ("string" == typeof e) return s(e, void 0);
                                   var i = Object.prototype.toString.call(e).slice(8, -1);
                                   if ("Object" === i && e.constructor && (i = e.constructor.name), "Map" === i || "Set" === i) return Array.from(e);
                                   if ("Arguments" === i || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(i)) return s(e, t)
@@ -3186,11 +3172,12 @@ i = globalThis, r = function() {
                   h = t.next,
                   f = t.eof,
                   l = t.empty,
-                  _ = t.timestamp,
-                  p = void 0 === _ ? Date.now() : _;
+                  _ = void 0 === l ? !(r || n) : l,
+                  p = t.timestamp,
+                  m = void 0 === p ? Date.now() : p;
                 (function(e, t) {
                   if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-                })(this, e), this.start = s, this.end = d, this.prev = void 0 === c ? null : c, this.next = void 0 === h ? null : h, this.eof = void 0 !== f && f, this.empty = void 0 === l ? !(r || n) : l, this.timestamp = p, this.buffer = r, this.string = n, Object.defineProperty(this, "length", {
+                })(this, e), this.start = s, this.end = d, this.prev = void 0 === c ? null : c, this.next = void 0 === h ? null : h, this.eof = void 0 !== f && f, this.empty = _, this.timestamp = m, this.buffer = r, this.string = n, Object.defineProperty(this, "length", {
                   get: function() {
                     return this.end - this.start
                   }

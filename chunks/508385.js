@@ -1,4 +1,4 @@
-var r = n("575270").RBTree;
+var r = n(575270).RBTree;
 
 function i(e, t, n) {
   this.discrete = !1 === e, this.delta = e || .01, this.K = void 0 === t ? 25 : t, this.CX = void 0 === n ? 1.1 : n, this.centroids = new r(a), this.nreset = 0, this.reset()
@@ -34,7 +34,7 @@ i.prototype.reset = function() {
   e = Array.isArray(e) ? e : [e];
   for (var t = 0; t < e.length; t++) this._digest(e[t].mean, e[t].n)
 }, i.prototype._cumulate = function(e) {
-  if (this.n !== this.last_cumulate && (e || !this.CX || !(this.CX > this.n / this.last_cumulate))) {
+  if (this.n !== this.last_cumulate && (!!e || !this.CX || !(this.CX > this.n / this.last_cumulate))) {
     var t = 0;
     this.centroids.each(function(e) {
       e.mean_cumn = t + e.n / 2, t = e.cumn = t + e.n
@@ -114,7 +114,7 @@ i.prototype.reset = function() {
       i = n[1];
     if (i === r || null === r || null === i) return (r || i).mean;
     if (!this.discrete) return r.mean + (t - r.mean_cumn) * (i.mean - r.mean) / (i.mean_cumn - r.mean_cumn);
-    else if (t <= r.cumn) return r.mean;
+    if (t <= r.cumn) return r.mean;
     else return i.mean
   }
 };

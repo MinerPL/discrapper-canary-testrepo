@@ -1,14 +1,14 @@
 "use strict";
-var r = n("444675"),
+var r = n(444675),
   i = Object.keys || function(e) {
     var t = [];
     for (var n in e) t.push(n);
     return t
   };
 e.exports = l;
-var a = n("555170"),
-  o = n("833327");
-n("689118")(l, a);
+var a = n(555170),
+  o = n(833327);
+n(689118)(l, a);
 for (var s = i(o.prototype), u = 0; u < s.length; u++) {
   var c = s[u];
   !l.prototype[c] && (l.prototype[c] = o.prototype[c])
@@ -47,6 +47,6 @@ Object.defineProperty(l.prototype, "writableHighWaterMark", {
     return void 0 !== this._readableState && void 0 !== this._writableState && this._readableState.destroyed && this._writableState.destroyed
   },
   set: function(e) {
-    void 0 !== this._readableState && void 0 !== this._writableState && (this._readableState.destroyed = e, this._writableState.destroyed = e)
+    if (void 0 !== this._readableState && void 0 !== this._writableState) this._readableState.destroyed = e, this._writableState.destroyed = e
   }
 })

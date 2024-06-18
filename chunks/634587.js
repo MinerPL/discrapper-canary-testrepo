@@ -1,5 +1,5 @@
 "use strict";
-var r, i = n("444675");
+var r, i = n(444675);
 
 function a(e, t, n) {
   return (t = function(e) {
@@ -21,7 +21,7 @@ function a(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-var o = n("133495"),
+var o = n(133495),
   s = Symbol("lastResolve"),
   u = Symbol("lastReject"),
   c = Symbol("error"),

@@ -1,90 +1,90 @@
 "use strict";
-a.r(t), a.d(t, {
-  default: function() {
-    return S
+n.d(t, {
+  Z: function() {
+    return N
   }
 });
-var s = a("735250");
-a("470079");
-var n = a("803997"),
-  l = a.n(n),
-  r = a("481060"),
-  i = a("465670"),
-  o = a("68972"),
-  d = a("507893"),
-  u = a("228392"),
-  c = a("404616"),
-  m = a("710352"),
-  h = a("921944"),
-  f = a("689938"),
-  g = a("258148"),
-  x = a("836974"),
-  C = a("426863"),
-  _ = a("504764");
+var s = n(735250);
+n(470079);
+var l = n(120356),
+  a = n.n(l),
+  i = n(481060),
+  r = n(465670),
+  o = n(68972),
+  c = n(507893),
+  d = n(228392),
+  u = n(404616),
+  h = n(710352),
+  m = n(921944),
+  g = n(689938),
+  x = n(993772),
+  _ = n(385092),
+  f = n(861186),
+  E = n(504764);
 
-function S(e) {
+function N(e) {
   let {
     onDismiss: t
   } = e;
-  return (0, s.jsxs)(r.Clickable, {
+  return (0, s.jsxs)(i.Clickable, {
     onClick: () => {
-      open(m.COMMUNITY_PORTAL_FORUM_PAGE), (0, u.trackForumHelperCardClicked)({
+      open(h.V8), (0, d.GX)({
         readGuideCta: !0
       })
     },
-    className: l()(C.container, x.container, g.mainCard),
+    className: a()(f.container, _.container, x.mainCard),
     children: [(0, s.jsxs)("div", {
-      className: x.inline,
+      className: _.inline,
       children: [(0, s.jsxs)("div", {
-        className: x.author,
-        children: [(0, s.jsx)(o.default, {
-          className: x.discordIcon
-        }), (0, s.jsx)(r.Text, {
+        className: _.author,
+        children: [(0, s.jsx)(o.Z, {
+          className: _.discordIcon
+        }), (0, s.jsx)(i.Text, {
           variant: "text-sm/semibold",
           color: "header-primary",
-          children: f.default.Messages.DISCORD_NAME
+          children: g.Z.Messages.DISCORD_NAME
         }), (0, s.jsxs)("div", {
-          className: x.notice,
-          children: [(0, s.jsx)(d.default, {
-            className: x.infoIcon
-          }), (0, s.jsx)(r.Text, {
+          className: _.notice,
+          children: [(0, s.jsx)(c.Z, {
+            className: _.infoIcon
+          }), (0, s.jsx)(i.Text, {
             variant: "text-sm/normal",
             color: "header-secondary",
-            children: f.default.Messages.FORUM_HELPER_CARD_NOTICE
+            children: g.Z.Messages.FORUM_HELPER_CARD_NOTICE
           })]
         })]
-      }), (0, s.jsx)(r.Clickable, {
+      }), (0, s.jsx)(i.Clickable, {
         onClick: e => {
-          e.stopPropagation(), t(h.ContentDismissActionType.DISMISS), (0, u.trackForumHelperCardClicked)({
+          e.stopPropagation(), t(m.L.DISMISS), (0, d.GX)({
             readGuideCta: !1
           })
         },
-        children: (0, s.jsx)(i.default, {
-          className: x.closeIcon,
+        children: (0, s.jsx)(r.Z, {
+          className: _.closeIcon,
           width: 16,
           height: 16
         })
       })]
     }), (0, s.jsx)("hr", {
-      className: x.separator
+      className: _.separator
     }), (0, s.jsxs)("div", {
-      className: x.inline,
+      className: _.inline,
       children: [(0, s.jsxs)("div", {
-        children: [(0, s.jsx)(r.Heading, {
-          className: l()(C.__invalid_channelName, x.title),
+        children: [(0, s.jsx)(i.Heading, {
+          className: a()(f.__invalid_channelName, _.title),
           variant: "heading-lg/semibold",
           color: "header-primary",
-          children: f.default.Messages.FORUM_HELPER_CARD_TITLE
-        }), (0, s.jsx)(r.Text, {
+          children: g.Z.Messages.FORUM_HELPER_CARD_TITLE
+        }), (0, s.jsx)(i.Text, {
           variant: "text-sm/normal",
           color: "header-secondary",
-          children: f.default.Messages.FORUM_HELPER_CARD_BODY
+          children: g.Z.Messages.FORUM_HELPER_CARD_BODY
         })]
       }), (0, s.jsx)("img", {
-        src: _,
-        alt: f.default.Messages.FORUM_HELPER_CARD_ALT_TEXT,
-        width: c.MAX_THUMBNAIL_WIDTH,
-        height: c.MAX_THUMBNAIL_WIDTH
+        src: E,
+        alt: g.Z.Messages.FORUM_HELPER_CARD_ALT_TEXT,
+        width: u.TJ,
+        height: u.TJ
       })]
     })]
   })

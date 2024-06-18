@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
-  getSystemAnalyticsInfo: function() {
-    return f
+n.d(t, {
+  q: function() {
+    return h
   }
-}), n("47120");
-var i, r = n("442837"),
-  s = n("570140"),
-  a = n("626135"),
-  o = n("358085"),
-  l = n("998502"),
-  u = n("828695");
+}), n(47120);
+var i, r = n(442837),
+  s = n(570140),
+  o = n(353926),
+  a = n(626135),
+  l = n(358085),
+  u = n(998502);
 
-function d(e, t, n) {
+function _(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -19,39 +19,39 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let _ = {
+let d = {
   hashes: {}
 };
 async function c() {
-  if (!o.isPlatformEmbedded || !(0, o.isWindows)()) return [];
-  await l.default.ensureModule("discord_media");
-  let e = l.default.requireModule("discord_media");
+  if (!l.isPlatformEmbedded || !(0, l.isWindows)()) return [];
+  await u.ZP.ensureModule("discord_media");
+  let e = u.ZP.requireModule("discord_media");
   return await e.getSystemAnalyticsBlob() || []
 }
 async function E() {
   try {
-    let e = (await c()).filter(e => _.hashes[e.name] !== e.hash);
+    let e = (await c()).filter(e => d.hashes[e.name] !== e.hash);
     for (let {
         name: t,
         hash: n,
         data: i
       }
-      of e) a.default.track(t, i), (_ = {
+      of e) a.default.track(t, i), (d = {
       hashes: {
-        ..._.hashes
+        ...d.hashes
       }
     }).hashes[t] = n;
     e.length > 0 && T.emitChange()
   } catch (e) {}
 }
-class I extends(i = r.default.PersistedStore) {
+class I extends(i = r.ZP.PersistedStore) {
   initialize(e) {
-    _ = null != e && "object" == typeof e.hashes ? e : {
+    d = null != e && "object" == typeof e.hashes ? e : {
       hashes: {}
-    }, this.waitFor(u.default)
+    }, this.waitFor(o.Z)
   }
   getState() {
-    return _
+    return d
   }
   async info() {
     try {
@@ -61,13 +61,13 @@ class I extends(i = r.default.PersistedStore) {
     } catch (e) {}
   }
 }
-d(I, "displayName", "SystemAnalyticsStore"), d(I, "persistKey", "SystemAnalyticsStore");
-let T = new I(s.default, {
+_(I, "displayName", "SystemAnalyticsStore"), _(I, "persistKey", "SystemAnalyticsStore");
+let T = new I(s.Z, {
   START_SESSION: function() {
     return E(), !1
   }
 });
 
-function f() {
+function h() {
   return T.info()
 }

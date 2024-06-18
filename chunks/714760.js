@@ -1,6 +1,6 @@
 "use strict";
-var r = n("570596");
+var r = n(570596);
 e.exports = function(e, t, n) {
-  for (var a, o, i = n ? e : e.iterator, l = e.next; !(a = r(l, i)).done;)
-    if (void 0 !== (o = t(a.value))) return o
+  for (var o, a, i = n ? e : e.iterator, s = e.next; !(o = r(s, i)).done;)
+    if (void 0 !== (a = t(o.value))) return a
 }

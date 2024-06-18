@@ -1,38 +1,40 @@
 "use strict";
-n.r(e), n.d(e, {
-  getEnvelopeEndpointWithUrlEncodedAuth: function() {
+n.d(e, {
+  U: function() {
     return a
   },
-  getReportDialogEndpoint: function() {
+  h: function() {
     return o
   }
 });
-var r = n("648238");
+var r = n(442853),
+  i = n(177668);
 
-function i(t) {
+function s(t) {
   let e = t.protocol ? `${t.protocol}:` : "",
     n = t.port ? `:${t.port}` : "";
   return `${e}//${t.host}${n}${t.path?`/${t.path}`:""}/api/`
 }
 
 function a(t, e = {}) {
-  var n, a, o;
-  let s = "string" == typeof e ? e : e.tunnel,
+  var n, i, a;
+  let o = "string" == typeof e ? e : e.tunnel,
     u = "string" != typeof e && e._metadata ? e._metadata.sdk : void 0;
-  return s || `${n=t,`${i(n)}${n.projectId}/envelope/`}?${a=t,o=u,(0,r.urlEncode)({sentry_key:a.publicKey,sentry_version:"7",...o&&{sentry_client:`${o.name}/${o.version}`}})}`
+  return o || `${n=t,`${s(n)}${n.projectId}/envelope/`}?${i=t,a=u,(0,r._j)({sentry_key:i.publicKey,sentry_version:"7",...a&&{sentry_client:`${a.name}/${a.version}`}})}`
 }
 
 function o(t, e) {
-  let n = (0, r.makeDsn)(t);
+  let n = (0, i.vK)(t);
   if (!n) return "";
-  let a = `${i(n)}embed/error-page/`,
-    o = `dsn=${(0,r.dsnToString)(n)}`;
-  for (let t in e)
-    if ("dsn" !== t) {
+  let r = `${s(n)}embed/error-page/`,
+    a = `dsn=${(0,i.RA)(n)}`;
+  for (let t in e) {
+    if ("dsn" !== t)
       if ("user" === t) {
         let t = e.user;
         if (!t) continue;
-        t.name && (o += `&name=${encodeURIComponent(t.name)}`), t.email && (o += `&email=${encodeURIComponent(t.email)}`)
-      } else o += `&${encodeURIComponent(t)}=${encodeURIComponent(e[t])}`
-    } return `${a}?${o}`
+        t.name && (a += `&name=${encodeURIComponent(t.name)}`), t.email && (a += `&email=${encodeURIComponent(t.email)}`)
+      } else a += `&${encodeURIComponent(t)}=${encodeURIComponent(e[t])}`
+  }
+  return `${r}?${a}`
 }

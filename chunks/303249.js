@@ -1,5 +1,5 @@
-var a = t("46818").default,
-  o = t("767567");
+var a = t(46818).default,
+  o = t(767567);
 e.exports = function(e) {
   var r = o(e, "string");
   return "symbol" === a(r) ? r : String(r)

@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
-  DEFAULT_RANGES: function() {
+n.d(t, {
+  KV: function() {
     return u
   },
-  MINIMUM_RANGE: function() {
-    return l
+  ZP: function() {
+    return d
   },
-  default: function() {
-    return _
+  dj: function() {
+    return l
   }
 });
-var i = n("392711"),
+var i = n(392711),
   r = n.n(i),
-  s = n("31775"),
-  a = n.n(s);
+  s = n(31775),
+  o = n.n(s);
 
-function o(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -28,22 +28,22 @@ let l = 100,
     [0, 99]
   ];
 
-function d(e) {
+function _(e) {
   let t = {};
   return e.forEach((e, n) => {
     t[n] = e
   }), t
 }
-class _ {
+class d {
   reset() {
     this._subscriptions = {}
   }
   get(e) {
-    return d(this._get(e))
+    return _(this._get(e))
   }
   _get(e) {
     var t;
-    return null !== (t = this._subscriptions[e]) && void 0 !== t ? t : new(a())({
+    return null !== (t = this._subscriptions[e]) && void 0 !== t ? t : new(o())({
       max: 5
     })
   }
@@ -52,9 +52,9 @@ class _ {
   }
   subscribe(e, t, n) {
     let i = this._get(e);
-    return !r().isEqual(i.get(t), n) && (i.set(t, n), this._subscriptions[e] = i, this._onChange(e, d(i)), !0)
+    return !r().isEqual(i.get(t), n) && (i.set(t, n), this._subscriptions[e] = i, this._onChange(e, _(i)), !0)
   }
   constructor(e) {
-    o(this, "_subscriptions", {}), o(this, "_onChange", void 0), this._onChange = e
+    a(this, "_subscriptions", {}), a(this, "_onChange", void 0), this._onChange = e
   }
 }

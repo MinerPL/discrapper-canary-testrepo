@@ -31,9 +31,9 @@ n.r(t), n.d(t, {
     return p
   }
 });
-var r, i, a = n("19784"),
-  o = n("217348"),
-  s = new a.FrameLoop,
+var r, i, a = n(19784),
+  o = n(217348),
+  s = new a.V,
   u = function() {
     return performance.now()
   },
@@ -45,7 +45,7 @@ var r, i, a = n("19784"),
   f = function(e) {
     return e()
   },
-  p = o.noop,
+  p = o.ZT,
   h = function(e) {
     var t;
     return i = (t = Object.assign({

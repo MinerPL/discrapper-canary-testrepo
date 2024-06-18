@@ -202,18 +202,18 @@ r = this, i = function(e, t) {
       }
     },
     w = function(e) {
-      e && e._registerWrapper && e.registerAppInfo && (e._registerWrapper({
+      if (!!e && !!e._registerWrapper && !!e.registerAppInfo) e._registerWrapper({
         name: "react-stripe-js",
         version: "2.7.0"
       }), e.registerAppInfo({
         name: "react-stripe-js",
         version: "2.7.0",
         url: "https://stripe.com/docs/stripe-js/react"
-      }))
+      })
     },
-    T = t.createContext(null);
-  T.displayName = "ElementsContext";
-  var C = function(e, t) {
+    C = t.createContext(null);
+  C.displayName = "ElementsContext";
+  var T = function(e, t) {
       if (!e) throw Error("Could not find Elements context; You need to wrap the part of your app that ".concat(t, " in an <Elements> provider."));
       return e
     },
@@ -255,13 +255,13 @@ r = this, i = function(e, t) {
       }, [l, n]);
       var d = g(r);
       return t.useEffect(function() {
-        if (u.elements) {
+        if (!!u.elements) {
           var e = y(r, d, ["clientSecret", "fonts"]);
           e && u.elements.update(e)
         }
       }, [r, d, u.elements]), t.useEffect(function() {
         w(u.stripe)
-      }, [u.stripe]), t.createElement(T.Provider, {
+      }, [u.stripe]), t.createElement(C.Provider, {
         value: u
       }, i)
     };
@@ -269,13 +269,13 @@ r = this, i = function(e, t) {
     stripe: h.any,
     options: h.object
   };
-  var O = function(e) {
-      return C(t.useContext(T), e)
+  var M = function(e) {
+      return T(t.useContext(C), e)
     },
-    M = function(e) {
-      return (0, e.children)(O("mounts <ElementsConsumer>"))
+    O = function(e) {
+      return (0, e.children)(M("mounts <ElementsConsumer>"))
     };
-  M.propTypes = {
+  O.propTypes = {
     children: h.func.isRequired
   };
   var A = ["on", "session"],
@@ -355,7 +355,7 @@ r = this, i = function(e, t) {
       }, [m, n]);
       var b = g(r);
       t.useEffect(function() {
-        if (d.customCheckoutSdk) {
+        if (!!d.customCheckoutSdk) {
           r.clientSecret && !_(b) && !v(r.clientSecret, b.clientSecret) && console.warn("Unsupported prop change: options.client_secret is not a mutable property.");
           var e, t, n = null == b ? void 0 : null === (e = b.elementsOptions) || void 0 === e ? void 0 : e.appearance,
             i = null == r ? void 0 : null === (t = r.elementsOptions) || void 0 === t ? void 0 : t.appearance;
@@ -382,11 +382,11 @@ r = this, i = function(e, t) {
   };
   var P = function(e) {
       var n = t.useContext(k),
-        r = t.useContext(T);
+        r = t.useContext(C);
       if (n && r) throw Error("You cannot wrap the part of your app that ".concat(e, " in both <CustomCheckoutProvider> and <Elements> providers."));
-      return n ? R(n, e) : C(r, e)
+      return n ? R(n, e) : T(r, e)
     },
-    F = function(e, n) {
+    B = function(e, n) {
       var r, i = "".concat((r = e).charAt(0).toUpperCase() + r.slice(1), "Element"),
         a = n ? function(e) {
           P("mounts <".concat(i, ">"));
@@ -413,26 +413,26 @@ r = this, i = function(e, t) {
             S = n.onConfirm,
             x = n.onCancel,
             w = n.onShippingAddressChange,
-            T = n.onShippingRateChange,
-            C = P("mounts <".concat(i, ">")),
-            D = "elements" in C ? C.elements : null,
-            O = "customCheckoutSdk" in C ? C.customCheckoutSdk : null,
-            M = o(t.useState(null), 2),
-            A = M[0],
-            k = M[1],
+            C = n.onShippingRateChange,
+            T = P("mounts <".concat(i, ">")),
+            D = "elements" in T ? T.elements : null,
+            M = "customCheckoutSdk" in T ? T.customCheckoutSdk : null,
+            O = o(t.useState(null), 2),
+            A = O[0],
+            k = O[1],
             R = t.useRef(null),
             N = t.useRef(null);
-          m(A, "blur", l), m(A, "focus", d), m(A, "escape", h), m(A, "click", _), m(A, "loaderror", b), m(A, "loaderstart", v), m(A, "networkschange", E), m(A, "confirm", S), m(A, "cancel", x), m(A, "shippingaddresschange", w), m(A, "shippingratechange", T), m(A, "change", p), f && (r = "expressCheckout" === e ? f : function() {
+          m(A, "blur", l), m(A, "focus", d), m(A, "escape", h), m(A, "click", _), m(A, "loaderror", b), m(A, "loaderstart", v), m(A, "networkschange", E), m(A, "confirm", S), m(A, "cancel", x), m(A, "shippingaddresschange", w), m(A, "shippingratechange", C), m(A, "change", p), f && (r = "expressCheckout" === e ? f : function() {
             f(A)
           }), m(A, "ready", r), t.useLayoutEffect(function() {
-            if (null === R.current && null !== N.current && (D || O)) {
+            if (null === R.current && null !== N.current && (D || M)) {
               var t = null;
-              O ? t = O.createElement(e, c) : D && (t = D.create(e, c)), R.current = t, k(t), t && t.mount(N.current)
+              M ? t = M.createElement(e, c) : D && (t = D.create(e, c)), R.current = t, k(t), t && t.mount(N.current)
             }
-          }, [D, O, c]);
+          }, [D, M, c]);
           var I = g(c);
           return t.useEffect(function() {
-            if (R.current) {
+            if (!!R.current) {
               var e = y(c, I, ["paymentRequest"]);
               e && R.current.update(e)
             }
@@ -467,25 +467,25 @@ r = this, i = function(e, t) {
         options: h.object
       }, a.displayName = i, a.__elementType = e, a
     },
-    B = "undefined" == typeof window,
+    F = "undefined" == typeof window,
     U = t.createContext(null);
   U.displayName = "EmbeddedCheckoutProviderContext";
-  var Y = function() {
+  var j = function() {
       var e = t.useContext(U);
       if (!e) throw Error("<EmbeddedCheckout> must be used within <EmbeddedCheckoutProvider>");
       return e
     },
-    j = B ? function(e) {
+    Y = F ? function(e) {
       var n = e.id,
         r = e.className;
-      return Y(), t.createElement("div", {
+      return j(), t.createElement("div", {
         id: n,
         className: r
       })
     } : function(e) {
       var n = e.id,
         r = e.className,
-        i = Y().embeddedCheckout,
+        i = j().embeddedCheckout,
         a = t.useRef(!1),
         o = t.useRef(null);
       return t.useLayoutEffect(function() {
@@ -501,26 +501,26 @@ r = this, i = function(e, t) {
         className: r
       })
     },
-    z = F("auBankAccount", B),
-    H = F("card", B),
-    G = F("cardNumber", B),
-    V = F("cardExpiry", B),
-    $ = F("cardCvc", B),
-    W = F("fpxBank", B),
-    K = F("iban", B),
-    q = F("idealBank", B),
-    Q = F("p24Bank", B),
-    Z = F("epsBank", B),
-    X = F("payment", B),
-    J = F("expressCheckout", B),
-    ee = F("paymentRequestButton", B),
-    et = F("linkAuthentication", B),
-    en = F("address", B),
-    er = F("shippingAddress", B),
-    ei = F("paymentMethodMessaging", B),
-    ea = F("affirmMessage", B),
-    eo = F("afterpayClearpayMessage", B);
-  e.AddressElement = en, e.AffirmMessageElement = ea, e.AfterpayClearpayMessageElement = eo, e.AuBankAccountElement = z, e.CardCvcElement = $, e.CardElement = H, e.CardExpiryElement = V, e.CardNumberElement = G, e.CustomCheckoutProvider = L, e.Elements = D, e.ElementsConsumer = M, e.EmbeddedCheckout = j, e.EmbeddedCheckoutProvider = function(e) {
+    z = B("auBankAccount", F),
+    H = B("card", F),
+    G = B("cardNumber", F),
+    V = B("cardExpiry", F),
+    $ = B("cardCvc", F),
+    Z = B("fpxBank", F),
+    K = B("iban", F),
+    W = B("idealBank", F),
+    q = B("p24Bank", F),
+    Q = B("epsBank", F),
+    X = B("payment", F),
+    J = B("expressCheckout", F),
+    ee = B("paymentRequestButton", F),
+    et = B("linkAuthentication", F),
+    en = B("address", F),
+    er = B("shippingAddress", F),
+    ei = B("paymentMethodMessaging", F),
+    ea = B("affirmMessage", F),
+    eo = B("afterpayClearpayMessage", F);
+  e.AddressElement = en, e.AffirmMessageElement = ea, e.AfterpayClearpayMessageElement = eo, e.AuBankAccountElement = z, e.CardCvcElement = $, e.CardElement = H, e.CardExpiryElement = V, e.CardNumberElement = G, e.CustomCheckoutProvider = L, e.Elements = D, e.ElementsConsumer = O, e.EmbeddedCheckout = Y, e.EmbeddedCheckoutProvider = function(e) {
     var n = e.stripe,
       r = e.options,
       i = e.children,
@@ -572,14 +572,14 @@ r = this, i = function(e, t) {
     }, [p, r]), t.createElement(U.Provider, {
       value: l
     }, i)
-  }, e.EpsBankElement = Z, e.ExpressCheckoutElement = J, e.FpxBankElement = W, e.IbanElement = K, e.IdealBankElement = q, e.LinkAuthenticationElement = et, e.P24BankElement = Q, e.PaymentElement = X, e.PaymentMethodMessagingElement = ei, e.PaymentRequestButtonElement = ee, e.ShippingAddressElement = er, e.useCustomCheckout = function() {
+  }, e.EpsBankElement = Q, e.ExpressCheckoutElement = J, e.FpxBankElement = Z, e.IbanElement = K, e.IdealBankElement = W, e.LinkAuthenticationElement = et, e.P24BankElement = q, e.PaymentElement = X, e.PaymentMethodMessagingElement = ei, e.PaymentRequestButtonElement = ee, e.ShippingAddressElement = er, e.useCustomCheckout = function() {
     e = "calls useCustomCheckout()", R(t.useContext(k), e);
     var e, n = t.useContext(N);
     if (!n) throw Error("Could not find CustomCheckout Context; You need to wrap the part of your app that calls useCustomCheckout() in an <CustomCheckoutProvider> provider.");
     return n
   }, e.useElements = function() {
-    return O("calls useElements()").elements
+    return M("calls useElements()").elements
   }, e.useStripe = function() {
     return P("calls useStripe()").stripe
   }
-}, "object" == typeof t ? i(t, n("470079")) : "function" == typeof define && define.amd ? define(["exports", "react"], i) : i((r = "undefined" != typeof globalThis ? globalThis : r || self).ReactStripe = {}, r.React)
+}, "object" == typeof t ? i(t, n(470079)) : "function" == typeof define && define.amd ? define(["exports", "react"], i) : i((r = "undefined" != typeof globalThis ? globalThis : r || self).ReactStripe = {}, r.React)

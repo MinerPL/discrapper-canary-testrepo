@@ -1,52 +1,52 @@
 "use strict";
-n.r(t), n.d(t, {
-  APPLICATION_COMMAND_PERMISSIONS_LIMIT: function() {
-    return E
+n.d(t, {
+  Fu: function() {
+    return h
   },
-  APPLICATION_USER_INSTALL_BETA_USER_LIMIT: function() {
-    return S
-  },
-  AUTOCOMPLETE_OPTION_DEBOUNCE_TIME: function() {
-    return f
-  },
-  BOOLEAN_CHOICES: function() {
-    return u
-  },
-  BuiltInSectionId: function() {
-    return r
-  },
-  CONTEXT_MENU_COMMANDS_QUERY_LIMIT: function() {
-    return T
-  },
-  DISCOVERY_COMMANDS_FRECENCY_LIMIT: function() {
-    return _
-  },
-  DISCOVERY_COMMANDS_QUERY_LIMIT: function() {
-    return d
-  },
-  FALSE_OPTION_NAME: function() {
+  Lu: function() {
     return l
   },
-  MAX_SUBCOMMAND_LEVEL: function() {
+  Vd: function() {
     return I
   },
-  SUB_COMMAND_KEY_SEPARATOR: function() {
+  WO: function() {
+    return a
+  },
+  _n: function() {
+    return E
+  },
+  ak: function() {
+    return u
+  },
+  al: function() {
+    return f
+  },
+  bi: function() {
+    return r
+  },
+  hz: function() {
+    return d
+  },
+  lr: function() {
+    return T
+  },
+  oQ: function() {
     return c
   },
-  TRUE_OPTION_NAME: function() {
-    return o
+  tn: function() {
+    return _
   },
-  getValidationErrorText: function() {
-    return h
+  um: function() {
+    return S
   }
 });
-var i, r, s = n("911969"),
-  a = n("689938");
-let o = "True",
+var i, r, s = n(911969),
+  o = n(689938);
+let a = "True",
   l = "False",
   u = [{
-    name: o,
-    displayName: o,
+    name: a,
+    displayName: a,
     value: "true"
   }, {
     name: l,
@@ -54,34 +54,34 @@ let o = "True",
     value: "false"
   }];
 (i = r || (r = {})).BUILT_IN = "-1", i.FRECENCY = "-2";
-let d = 10,
-  _ = 5,
+let _ = 10,
+  d = 5,
   c = "\0",
   E = 100,
   I = 3,
   T = 10,
-  f = 500;
+  h = 500;
 Object.freeze([]), Object.freeze([]);
-let S = 25;
+let S = 200;
 
-function h(e) {
-  if (null != e.choices) return a.default.Messages.COMMAND_VALIDATION_CHOICE_ERROR;
+function f(e) {
+  if (null != e.choices) return o.Z.Messages.COMMAND_VALIDATION_CHOICE_ERROR;
   switch (e.type) {
-    case s.ApplicationCommandOptionType.BOOLEAN:
-      return a.default.Messages.COMMAND_VALIDATION_BOOLEAN_ERROR;
-    case s.ApplicationCommandOptionType.CHANNEL:
-      return a.default.Messages.COMMAND_VALIDATION_CHANNEL_ERROR;
-    case s.ApplicationCommandOptionType.INTEGER:
-      return a.default.Messages.COMMAND_VALIDATION_INTEGER_ERROR;
-    case s.ApplicationCommandOptionType.NUMBER:
-      return a.default.Messages.COMMAND_VALIDATION_NUMBER_ERROR;
-    case s.ApplicationCommandOptionType.ROLE:
-      return a.default.Messages.COMMAND_VALIDATION_ROLE_ERROR;
-    case s.ApplicationCommandOptionType.USER:
-      return a.default.Messages.COMMAND_VALIDATION_USER_ERROR;
-    case s.ApplicationCommandOptionType.MENTIONABLE:
-      return a.default.Messages.COMMAND_VALIDATION_MENTIONABLE_ERROR;
+    case s.jw.BOOLEAN:
+      return o.Z.Messages.COMMAND_VALIDATION_BOOLEAN_ERROR;
+    case s.jw.CHANNEL:
+      return o.Z.Messages.COMMAND_VALIDATION_CHANNEL_ERROR;
+    case s.jw.INTEGER:
+      return o.Z.Messages.COMMAND_VALIDATION_INTEGER_ERROR;
+    case s.jw.NUMBER:
+      return o.Z.Messages.COMMAND_VALIDATION_NUMBER_ERROR;
+    case s.jw.ROLE:
+      return o.Z.Messages.COMMAND_VALIDATION_ROLE_ERROR;
+    case s.jw.USER:
+      return o.Z.Messages.COMMAND_VALIDATION_USER_ERROR;
+    case s.jw.MENTIONABLE:
+      return o.Z.Messages.COMMAND_VALIDATION_MENTIONABLE_ERROR;
     default:
-      return a.default.Messages.COMMAND_VALIDATION_GENERAL_ERROR
+      return o.Z.Messages.COMMAND_VALIDATION_GENERAL_ERROR
   }
 }

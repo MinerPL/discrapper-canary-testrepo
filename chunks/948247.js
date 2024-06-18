@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   Manager: function() {
-    return i.Manager
+    return i.dK
   },
   Popper: function() {
-    return r.Popper
+    return r.r
   },
   Reference: function() {
-    return a.Reference
+    return a.s
   },
   usePopper: function() {
-    return o.usePopper
+    return o.D
   }
 });
-var r = n("90078"),
-  i = n("234366"),
-  a = n("943754"),
-  o = n("566833")
+var r = n(90078),
+  i = n(234366),
+  a = n(943754),
+  o = n(566833)

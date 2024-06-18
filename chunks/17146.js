@@ -3,18 +3,18 @@
 function r(e, t) {
   if (!e) throw Error(t)
 }
-n.r(t), n.d(t, {
-  assert: function() {
-    return r
-  },
-  assertFloat32: function() {
+n.d(t, {
+  E_: function() {
     return o
   },
-  assertInt32: function() {
-    return i
-  },
-  assertUInt32: function() {
+  fp: function() {
     return a
+  },
+  hu: function() {
+    return r
+  },
+  ug: function() {
+    return i
   }
 });
 

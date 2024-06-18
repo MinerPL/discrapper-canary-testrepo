@@ -1,45 +1,45 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("735250"),
-  l = n("470079"),
-  r = n("481060"),
-  s = n("904245"),
-  i = n("367907"),
-  d = n("592125"),
-  o = n("496675"),
-  u = n("981631"),
-  c = n("689938"),
-  m = n("303936");
-t.default = e => {
+n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(481060),
+  o = n(904245),
+  a = n(367907),
+  l = n(592125),
+  u = n(496675),
+  _ = n(981631),
+  d = n(689938),
+  c = n(566580);
+t.Z = e => {
   let {
     message: t,
     reportId: n
-  } = e, [_, f] = l.useState(!1), E = l.useCallback(() => {
-    f(!0), i.default.trackWithMetadata(u.AnalyticEvents.IAR_DELETE_MESSAGE_BUTTON_CLICKED, {
+  } = e, [E, I] = r.useState(!1), T = r.useCallback(() => {
+    I(!0), a.ZP.trackWithMetadata(_.rMx.IAR_DELETE_MESSAGE_BUTTON_CLICKED, {
       report_id: n
-    }), s.default.deleteMessage(t.getChannelId(), t.id)
-  }, [t, n]), h = l.useMemo(() => {
-    let e = d.default.getChannel(t.getChannelId());
-    return null != e && e.type !== u.ChannelTypes.DM && e.type !== u.ChannelTypes.GROUP_DM && o.default.canWithPartialContext(u.Permissions.MANAGE_MESSAGES, {
+    }), o.Z.deleteMessage(t.getChannelId(), t.id)
+  }, [t, n]), h = r.useMemo(() => {
+    let e = l.Z.getChannel(t.getChannelId());
+    return null != e && e.type !== _.d4z.DM && e.type !== _.d4z.GROUP_DM && u.Z.canWithPartialContext(_.Plq.MANAGE_MESSAGES, {
       channelId: e.id
     })
   }, [t]);
-  return null != t && h ? (0, a.jsx)("div", {
-    className: m.container,
-    children: (0, a.jsxs)("div", {
-      className: m.messageContainer,
-      children: [(0, a.jsx)("div", {
-        className: m.description,
-        children: (0, a.jsx)(r.Text, {
+  return null != t && h ? (0, i.jsx)("div", {
+    className: c.container,
+    children: (0, i.jsxs)("div", {
+      className: c.messageContainer,
+      children: [(0, i.jsx)("div", {
+        className: c.description,
+        children: (0, i.jsx)(s.Text, {
           variant: "text-sm/normal",
-          children: c.default.Messages.MOBILE_REPORTS_DELETE_MESSAGE_ELEMENT_DESCRIPTION
+          children: d.Z.Messages.MOBILE_REPORTS_DELETE_MESSAGE_ELEMENT_DESCRIPTION
         })
-      }), (0, a.jsx)(r.Button, {
-        onClick: () => E(),
-        disabled: _,
-        size: r.Button.Sizes.SMALL,
-        color: r.Button.Colors.RED,
-        children: _ ? c.default.Messages.DELETED : c.default.Messages.DELETE
+      }), (0, i.jsx)(s.Button, {
+        onClick: () => T(),
+        disabled: E,
+        size: s.Button.Sizes.SMALL,
+        color: s.Button.Colors.RED,
+        children: E ? d.Z.Messages.DELETED : d.Z.Messages.DELETE
       })]
     })
   }) : null

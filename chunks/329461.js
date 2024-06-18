@@ -1,64 +1,64 @@
 "use strict";
-n.r(t), n("47120");
-var i, r, s, a, o = n("442837"),
-  l = n("570140"),
-  u = n("70956");
-let d = [],
-  _ = new Set,
+n(47120);
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(70956);
+let _ = [],
+  d = new Set,
   c = 0;
-class E extends(i = o.default.Store) {
+class E extends(i = a.ZP.Store) {
   initialize() {
     setInterval(() => {
       this.emitChange()
-    }, 1 * u.default.Millis.MINUTE)
+    }, 1 * u.Z.Millis.MINUTE)
   }
   getMessageReminders() {
-    return d
+    return _
   }
   isMessageReminder(e) {
-    let t = d.find(t => t.messageId === e);
+    let t = _.find(t => t.messageId === e);
     return null != t && !t.complete
   }
   getOverdueMessageReminderCount() {
-    return d.filter(e => null == e.dueAt || new Date > e.dueAt).length
+    return _.filter(e => null == e.dueAt || new Date > e.dueAt).length
   }
   recentlyFetched() {
-    return new Date().getTime() - c < 1 * u.default.Millis.MINUTE
+    return new Date().getTime() - c < 1 * u.Z.Millis.MINUTE
   }
   hasSentNotification(e) {
-    return _.has(e)
+    return d.has(e)
   }
   getState() {
     return {
-      messages: d
+      messages: _
     }
   }
 }
-a = "MessageRemindersStore", (s = "displayName") in(r = E) ? Object.defineProperty(r, s, {
-  value: a,
+o = "MessageRemindersStore", (s = "displayName") in(r = E) ? Object.defineProperty(r, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new E(l.default, {
+}) : r[s] = o, t.Z = new E(l.Z, {
   SAVED_MESSAGES_UPDATE: function(e) {
     let {
       messages: t
     } = e;
-    c = new Date().getTime(), d = t.map(e => ({
+    c = new Date().getTime(), _ = t.map(e => ({
       ...e,
       complete: !1
     })), t.forEach(e => {
-      null != e.dueAt && e.dueAt > new Date && _.delete(e.messageId), null != e.dueAt && e.dueAt < new Date && _.add(e.messageId)
+      null != e.dueAt && e.dueAt > new Date && d.delete(e.messageId), null != e.dueAt && e.dueAt < new Date && d.add(e.messageId)
     })
   },
   MESSAGE_REMINDER_TOGGLE: function(e) {
     let {
       messageId: t,
       complete: n
-    } = e, i = d.findIndex(e => e.messageId === t);
+    } = e, i = _.findIndex(e => e.messageId === t);
     if (-1 === i) return !1;
-    d[i] = {
-      ...d[i],
+    _[i] = {
+      ..._[i],
       complete: n
     }
   },
@@ -66,6 +66,6 @@ a = "MessageRemindersStore", (s = "displayName") in(r = E) ? Object.defineProper
     let {
       messageId: t
     } = e;
-    _.add(t)
+    d.add(t)
   }
 })

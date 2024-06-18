@@ -1,9 +1,9 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return l
   }
-}), n("47120"), n("653041");
+}), n(47120), n(653041);
 let i = {
     1: "bold",
     4: "underline"
@@ -28,15 +28,15 @@ let i = {
     46: "cyan",
     47: "white"
   },
-  a = /\x1B\[(\d+(?:[:;]\d+)*)m/,
-  o = new RegExp("(?=".concat(a.source, ")"));
+  o = /\x1B\[(\d+(?:[:;]\d+)*)m/,
+  a = new RegExp("(?=".concat(o.source, ")"));
 
 function l() {
   let e = [...u("foreground", r, ["38", "39"], !0), ...u("background", s, ["48", "49"], !0), ...u("style", i, [], !1), {
     className: "ansi-control-sequence",
-    begin: a,
+    begin: o,
     starts: {
-      end: o,
+      end: a,
       endsParent: !0
     }
   }];
@@ -44,7 +44,7 @@ function l() {
     for (let t = 0; t < e.length; t++) e[t].contains = e.slice(t + 1)
   }(e), {
     contains: [{
-      begin: o,
+      begin: a,
       contains: e
     }]
   }
@@ -53,15 +53,15 @@ function l() {
 function u(e, t, n, i) {
   let r = ["0", ...n];
   return i && r.push(...Object.keys(t)), Object.entries(t).map(t => {
-    var n, i, s, a;
+    var n, i, s, o;
     let [l, u] = t;
-    return n = e, i = u, s = l, a = r, {
+    return n = e, i = u, s = l, o = r, {
       className: "ansi-".concat(n, "-").concat(i),
       endsParent: !0,
-      begin: o,
+      begin: a,
       "on:begin": (e, t) => {
         let n = e[1].split(";");
-        for (let e of (void 0 === t.data.isOn && (t.data.isOn = !1), n)) e === s ? t.data.isOn = !0 : a.includes(e) && (t.data.isOn = !1);
+        for (let e of (void 0 === t.data.isOn && (t.data.isOn = !1), n)) e === s ? t.data.isOn = !0 : o.includes(e) && (t.data.isOn = !1);
         !t.data.isOn && t.ignoreMatch()
       }
     }

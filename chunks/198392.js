@@ -1,7 +1,7 @@
 "use strict";
-var n = r("8235"),
-  i = r("392919"),
-  o = r("304611"),
+var n = r(8235),
+  i = r(392919),
+  o = r(304611),
   a = RegExp("\r\n", "g"),
   u = {
     "text/rtf": 1,

@@ -1,11 +1,10 @@
 "use strict";
-n.r(t);
-var i = n("544891"),
-  r = n("981631");
-t.default = {
+var i = n(544891),
+  r = n(981631);
+t.Z = {
   updateNote(e, t) {
-    i.HTTP.put({
-      url: r.Endpoints.NOTE(e),
+    i.tn.put({
+      url: r.ANM.NOTE(e),
       body: {
         note: t
       },

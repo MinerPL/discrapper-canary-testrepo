@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("348326"),
-  r = n("710845"),
-  s = n("38618"),
-  a = n("592125"),
-  o = n("287328"),
-  l = n("59480"),
-  u = n("40455"),
-  d = n("989263"),
-  _ = n("513418");
+n(47120);
+var i = n(348326),
+  r = n(710845),
+  s = n(38618),
+  o = n(592125),
+  a = n(287328),
+  l = n(59480),
+  u = n(40455),
+  _ = n(989263),
+  d = n(513418);
 
 function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -18,10 +18,10 @@ function c(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let E = new r.default("Messages");
+let E = new r.Z("Messages");
 class I {
   static computeUsersAndMembers(e) {
-    (0, _.requireSortedDescending)(e);
+    (0, d.Z)(e);
     let t = new Map,
       n = new Map;
     for (let i of e) this.addIntoMap(t, i.users, e => e.id), this.addIntoMap(n, i.members, e => e.userId);
@@ -43,36 +43,36 @@ class I {
     }
   }
 }
-t.default = new class e {
+t.ZP = new class e {
   async startupLoad(e, t, n, i) {
-    let r = o.default.messages(e);
+    let r = a.Z.messages(e);
     return new I(await r.getLatest(t, n, i))
   }
   async load(e, t, n) {
-    let i = a.default.getBasicChannel(t);
-    if (null == t || null == i || !(0, d.isReadableChannel)(i)) return new I([]);
+    let i = o.Z.getBasicChannel(t);
+    if (null == t || null == i || !(0, _.v)(i)) return new I([]);
     {
-      let r = o.default.messages(e);
+      let r = a.Z.messages(e);
       return new I(await r.getLatest(i.guild_id, t, n))
     }
   }
   handleMessageCreate(e, t) {
-    !e.optimistic && !e.isPushNotification && null == e.sendMessageOptions && (0, d.isReadableChannelId)(e.channelId) && this.upsertOne(e.guildId, e.channelId, e.message, t)
+    if (!e.optimistic && !e.isPushNotification && null == e.sendMessageOptions)(0, _.$)(e.channelId) && this.upsertOne(e.guildId, e.channelId, e.message, t)
   }
   handleMessageUpdate(e, t) {
-    if (null != e.message.id && null != e.message.channel_id)(0, d.isReadableChannelId)(e.message.channel_id) && (function(e) {
+    if (null != e.message.id && null != e.message.channel_id && !!(0, _.$)(e.message.channel_id))(function(e) {
       return null != e.author && null != e.content && null != e.mentions && null != e.timestamp
-    }(e.message) ? this.upsertOne(e.guildId, e.message.channel_id, e.message, t) : this.updateOne(e.guildId, e.message.channel_id, e.message, t))
+    })(e.message) ? this.upsertOne(e.guildId, e.message.channel_id, e.message, t) : this.updateOne(e.guildId, e.message.channel_id, e.message, t)
   }
   handleMessagePreviewsLoaded(e, t) {
-    for (let n of e.messages)(0, d.isReadableChannelId)(n.channel_id) && this.insertStale(e.guildId, n.channel_id, n, t)
+    for (let n of e.messages)(0, _.$)(n.channel_id) && this.insertStale(e.guildId, n.channel_id, n, t)
   }
   handleLoadMessagesSuccess(e, t) {
-    let n = a.default.getBasicChannel(e.channelId);
-    null != n && (0, d.isReadableChannelId)(e.channelId) && this.upsertMany(n.guild_id, e.channelId, e.messages, t)
+    let n = o.Z.getBasicChannel(e.channelId);
+    null != n && (0, _.$)(e.channelId) && this.upsertMany(n.guild_id, e.channelId, e.messages, t)
   }
   handleMessageDelete(e, t) {
-    null != e.id && this.deleteOne(e.guildId, e.channelId, e.id, t)
+    if (null != e.id) this.deleteOne(e.guildId, e.channelId, e.id, t)
   }
   handleMessageDeleteBulk(e, t) {
     for (let n of e.ids) this.deleteOne(e.guildId, e.channelId, n, t)
@@ -85,42 +85,42 @@ t.default = new class e {
   }
   resetInMemoryState() {}
   insertStale(e, t, n, r) {
-    let a = o.default.messagesTransaction(r),
-      u = s.default.lastTimeConnectedChanged();
-    a.put(e, t, l.KvMessage.fromMessage(e, t, n, u), i.ConflictOptions.Skip)
+    let o = a.Z.messagesTransaction(r),
+      u = s.Z.lastTimeConnectedChanged();
+    o.put(e, t, l.a.fromMessage(e, t, n, u), i.Sn.Skip)
   }
   upsertOne(e, t, n, r) {
-    let a = o.default.messagesTransaction(r),
-      d = s.default.lastTimeConnectedChanged();
-    a.put(e, t, l.KvMessage.fromMessage(e, t, n, d), i.ConflictOptions.Replace), a.trimChannel(e, t, u.default.saveLimit(t))
+    let o = a.Z.messagesTransaction(r),
+      _ = s.Z.lastTimeConnectedChanged();
+    o.put(e, t, l.a.fromMessage(e, t, n, _), i.Sn.Replace), o.trimChannel(e, t, u.ZP.saveLimit(t))
   }
   upsertMany(e, t, n, i) {
-    let r = o.default.messagesTransaction(i),
-      a = s.default.lastTimeConnectedChanged();
-    for (let i of n) r.put(e, t, l.KvMessage.fromMessage(e, t, i, a));
-    r.trimChannel(e, t, u.default.saveLimit(t))
+    let r = a.Z.messagesTransaction(i),
+      o = s.Z.lastTimeConnectedChanged();
+    for (let i of n) r.put(e, t, l.a.fromMessage(e, t, i, o));
+    r.trimChannel(e, t, u.ZP.saveLimit(t))
   }
   async updateOne(e, t, n, i) {
     if (null == n.id) {
       E.warn("updateOne: message.id is null; cannot update a message if we do not know its id.");
       return
     }
-    let r = o.default.messages(i.database),
-      a = await r.get(e, t, n.id),
-      u = s.default.lastTimeConnectedChanged();
-    null != a && r.put(e, t, l.KvMessage.fromMessage(e, t, {
-      ...a.message,
+    let r = a.Z.messages(i.database),
+      o = await r.get(e, t, n.id),
+      u = s.Z.lastTimeConnectedChanged();
+    null != o && r.put(e, t, l.a.fromMessage(e, t, {
+      ...o.message,
       ...n
     }, u))
   }
   deleteOne(e, t, n, i) {
-    o.default.messagesTransaction(i).deleteMessage(e, t, n)
+    a.Z.messagesTransaction(i).deleteMessage(e, t, n)
   }
   deleteChannel(e, t, n) {
-    o.default.messagesTransaction(n).deleteChannel(e, t)
+    a.Z.messagesTransaction(n).deleteChannel(e, t)
   }
   deleteGuild(e, t) {
-    o.default.messagesTransaction(t).deleteGuild(e)
+    a.Z.messagesTransaction(t).deleteGuild(e)
   }
   constructor() {
     c(this, "actions", {

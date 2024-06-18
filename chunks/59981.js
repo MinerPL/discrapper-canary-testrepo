@@ -84,4 +84,4 @@ r = this, i = function(e) {
       else return "rati"
     }
   })
-}, "object" == typeof t ? i(n("913527")) : "function" == typeof define && define.amd ? define(["../moment"], i) : i(r.moment)
+}, "object" == typeof t ? i(n(913527)) : "function" == typeof define && define.amd ? define(["../moment"], i) : i(r.moment)

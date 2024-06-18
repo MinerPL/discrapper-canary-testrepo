@@ -1,14 +1,13 @@
 "use strict";
-n.r(t);
-var i, r, a, s = n("735250"),
-  o = n("470079"),
-  l = n("120356"),
+var i, r, s, o = n(735250),
+  a = n(470079),
+  l = n(120356),
   u = n.n(l),
-  d = n("481060"),
-  _ = n("381238"),
-  c = n("779863"),
-  E = n("806519"),
-  I = n("52244");
+  _ = n(481060),
+  d = n(381238),
+  c = n(779863),
+  E = n(806519),
+  I = n(52244);
 
 function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -18,13 +17,13 @@ function T(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(i = r || (r = {}))[i.OUTGOING = 0] = "OUTGOING", i[i.INCOMING = 1] = "INCOMING";
-class f extends(a = o.PureComponent) {
+class h extends(s = a.PureComponent) {
   renderStatus() {
     let {
       muted: e,
       deafen: t
-    } = this.props, n = t ? _.default : c.default;
-    return e || t ? (0, s.jsx)(n, {
+    } = this.props, n = t ? d.Z : c.Z;
+    return e || t ? (0, o.jsx)(n, {
       className: I.status
     }, "status") : null
   }
@@ -32,7 +31,7 @@ class f extends(a = o.PureComponent) {
     let {
       speaking: e
     } = this.props;
-    return (0, s.jsx)("div", {
+    return (0, o.jsx)("div", {
       className: u()(I.border, {
         [I.speaking]: e
       })
@@ -44,11 +43,11 @@ class f extends(a = o.PureComponent) {
       speaking: t,
       deafen: n
     } = this.props;
-    return e && t ? (0, s.jsxs)(s.Fragment, {
+    return e && t ? (0, o.jsxs)(o.Fragment, {
       children: [this.renderBorder(), this.renderStatus()]
-    }) : e || n ? (0, s.jsx)(s.Fragment, {
+    }) : e || n ? (0, o.jsx)(o.Fragment, {
       children: this.renderStatus()
-    }) : (0, s.jsx)(s.Fragment, {
+    }) : (0, o.jsx)(o.Fragment, {
       children: this.renderBorder()
     })
   }
@@ -59,11 +58,11 @@ class f extends(a = o.PureComponent) {
       ringing: n,
       ringingType: i,
       avatarClassName: r,
-      muted: a,
-      deafen: o,
+      muted: s,
+      deafen: a,
       size: l,
-      renderIcon: _
-    } = this.props, c = (0, d.getAvatarSize)(l), T = (0, s.jsx)("img", {
+      renderIcon: d
+    } = this.props, c = (0, _.getAvatarSize)(l), T = (0, o.jsx)("img", {
       src: e,
       alt: " ",
       className: u()(I.voiceAvatar, r, {
@@ -71,15 +70,15 @@ class f extends(a = o.PureComponent) {
       })
     });
     if (t) return T;
-    let f = E.MaskIDs.AVATAR_DEFAULT;
-    return null != _ ? f = l === d.AvatarSizes.SIZE_32 ? E.MaskIDs.AVATAR_CALL_ICON_32 : E.MaskIDs.AVATAR_CALL_ICON : (a || o) && (f = E.MaskIDs.AVATAR_VOICE_CALL_80), (0, s.jsxs)("div", {
+    let h = E.QS.AVATAR_DEFAULT;
+    return null != d ? h = l === _.AvatarSizes.SIZE_32 ? E.QS.AVATAR_CALL_ICON_32 : E.QS.AVATAR_CALL_ICON : (s || a) && (h = E.QS.AVATAR_VOICE_CALL_80), (0, o.jsxs)("div", {
       className: I.callAvatarMaskContainer,
-      children: [(0, s.jsxs)(E.default, {
+      children: [(0, o.jsxs)(E.ZP, {
         className: I.callAvatarMask,
         width: c,
         height: c,
-        mask: f,
-        children: [null == _ ? void 0 : _(), T]
+        mask: h,
+        children: [null == d ? void 0 : d(), T]
       }), this.renderMask()]
     })
   }
@@ -90,18 +89,18 @@ class f extends(a = o.PureComponent) {
       style: n,
       onContextMenu: i,
       className: r,
-      ringingType: a,
-      ringing: o
+      ringingType: s,
+      ringing: a
     } = this.props, l = u()(I.wrapper, {
       [I.clickable]: null != t,
-      [I.ringingOutgoing]: o && 0 === a,
-      [I.ringingIncoming]: o && 1 === a
-    }, r), _ = (0, d.getAvatarSize)(e), c = {
-      height: _,
-      width: _,
+      [I.ringingOutgoing]: a && 0 === s,
+      [I.ringingIncoming]: a && 1 === s
+    }, r), d = (0, _.getAvatarSize)(e), c = {
+      height: d,
+      width: d,
       ...n
     };
-    return (0, s.jsx)("div", {
+    return (0, o.jsx)("div", {
       style: c,
       onContextMenu: i,
       className: l,
@@ -109,8 +108,8 @@ class f extends(a = o.PureComponent) {
     })
   }
 }
-T(f, "defaultProps", {
-  size: d.AvatarSizes.SIZE_80,
+T(h, "defaultProps", {
+  size: _.AvatarSizes.SIZE_80,
   ringingType: 0,
   speaking: !1,
   soundsharing: !1,
@@ -121,4 +120,4 @@ T(f, "defaultProps", {
   mirror: !1,
   disabled: !1,
   paused: !1
-}), T(f, "RingingType", r), t.default = f
+}), T(h, "RingingType", r), t.Z = h

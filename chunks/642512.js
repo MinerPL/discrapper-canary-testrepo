@@ -1,10 +1,10 @@
 "use strict";
-var n = r("381538"),
-  i = r("185330"),
-  o = r("470079"),
-  a = r("581079"),
-  u = r("45623"),
-  s = r("907949").setDraftEditorSelection,
+var n = r(381538),
+  i = r(185330),
+  o = r(470079),
+  a = r(581079),
+  u = r(45623),
+  s = r(907949).setDraftEditorSelection,
   c = function(t) {
     function e() {
       for (var e, r, n, i, o = arguments.length, a = Array(o), u = 0; u < o; u++) a[u] = arguments[u];
@@ -22,19 +22,18 @@ var n = r("381538"),
     var r, c, l = e.prototype;
     return l._setSelection = function() {
       var t, e = this.props.selection;
-      if (null != e && !!e.getHasFocus()) {
-        var r = this.props,
-          n = r.block,
-          i = r.start,
-          o = r.text,
-          c = n.getKey(),
-          l = i + o.length;
-        if (e.hasEdgeWithin(c, i, l)) {
-          var f = this.leaf;
-          f || a(!1);
-          var p = f.firstChild;
-          p || a(!1), p.nodeType === Node.TEXT_NODE ? t = p : u(p) ? t = f : (t = p.firstChild) || a(!1), s(e, t, c, i, l)
-        }
+      if (null == e || !e.getHasFocus()) return;
+      var r = this.props,
+        n = r.block,
+        i = r.start,
+        o = r.text,
+        c = n.getKey(),
+        l = i + o.length;
+      if (!!e.hasEdgeWithin(c, i, l)) {
+        var f = this.leaf;
+        f || a(!1);
+        var p = f.firstChild;
+        p || a(!1), p.nodeType === Node.TEXT_NODE ? t = p : u(p) ? t = f : (t = p.firstChild) || a(!1), s(e, t, c, i, l)
       }
     }, l.shouldComponentUpdate = function(t) {
       var e = this.leaf;

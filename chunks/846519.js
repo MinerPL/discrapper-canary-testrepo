@@ -8,26 +8,26 @@ function i(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-n.r(t), n.d(t, {
-  DelayedCall: function() {
-    return s
-  },
-  Interval: function() {
+n.d(t, {
+  GR: function() {
     return a
   },
-  Timeout: function() {
+  V7: function() {
     return r
   },
-  timeoutPromise: function() {
+  Xp: function() {
     return o
+  },
+  sW: function() {
+    return s
   }
 });
 class r {
   start(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-    (!this.isStarted() || n) && (this.stop(), this._ref = window.setTimeout(() => {
+    if (!this.isStarted() || !!n) this.stop(), this._ref = window.setTimeout(() => {
       this._ref = null, t()
-    }, e))
+    }, e)
   }
   stop() {
     null != this._ref && (clearTimeout(this._ref), this._ref = null)
@@ -57,7 +57,7 @@ class s {
     i(this, "_timeout", void 0), i(this, "_delay", void 0), i(this, "_handler", void 0), this._delay = e, this._handler = t, this._timeout = new r
   }
 }
-class a {
+class o {
   start(e, t) {
     this.stop(), this._ref = window.setInterval(t, e)
   }
@@ -72,7 +72,7 @@ class a {
   }
 }
 
-function o(e) {
+function a(e) {
   return new Promise(t => {
     setTimeout(() => t(), e)
   })

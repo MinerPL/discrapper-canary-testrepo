@@ -1,49 +1,90 @@
 "use strict";
-n.r(t), n.d(t, {
-  useHandleClaimQuestsReward: function() {
-    return c
+n.d(t, {
+  g2: function() {
+    return S
   },
-  useHasLaunchedGame: function() {
-    return E
+  hf: function() {
+    return T
+  },
+  tP: function() {
+    return h
   }
-});
-var i = n("470079"),
-  r = n("442837"),
-  a = n("594190"),
-  s = n("594174"),
-  o = n("617136"),
-  l = n("918701"),
-  u = n("920916"),
-  d = n("669041"),
-  _ = n("341907");
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(920906),
+  o = n(442837),
+  a = n(594190),
+  l = n(594174),
+  u = n(869472),
+  _ = n(617136),
+  d = n(918701),
+  c = n(920916),
+  E = n(669041),
+  I = n(341907);
 
-function c(e) {
+function T(e) {
   let {
     quest: t,
     location: n,
-    questContentPosition: a
-  } = e, c = (0, r.useStateFromStores)([s.default], () => {
+    questContentPosition: i
+  } = e, s = (0, o.e7)([l.default], () => {
     var e;
-    return null === (e = s.default.getCurrentUser()) || void 0 === e ? void 0 : e.verified
+    return null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.verified
   });
-  return i.useCallback(() => {
-    null != t && ((0, o.trackQuestContentClicked)({
+  return r.useCallback(() => {
+    null != t && ((0, _._3)({
       questId: t.id,
       questContent: n,
-      questContentCTA: o.QuestContentCTA.CLAIM_REWARD,
-      questContentPosition: a
-    }), c ? (0, l.hasQuestCollectibleRewards)(t.config) ? (0, u.openCollectibleRewardModal)(t, n) : (0, _.openQuestsRewardCodeModal)({
+      questContentCTA: _.jZ.CLAIM_REWARD,
+      questContentPosition: i
+    }), s ? (0, d.Xv)(t.config) ? (0, c.openCollectibleRewardModal)(t, n) : (0, I.h)({
       questId: t.id,
       location: n,
-      questContentPosition: a
-    }) : (0, d.openRewardModalUnverified)())
-  }, [t, n, a, c])
+      questContentPosition: i
+    }) : (0, E.openRewardModalUnverified)())
+  }, [t, n, i, s])
 }
 
-function E(e) {
+function h(e) {
   var t;
-  let n = (0, r.useStateFromStoresArray)([a.default], () => a.default.getGamesSeen(!1)).find(t => (null == t ? void 0 : t.id) === e);
+  let n = (0, o.Wu)([a.ZP], () => a.ZP.getGamesSeen(!1)).find(t => (null == t ? void 0 : t.id) === e);
   if (null == n) return !1;
   let i = Date.now() - 2592e7;
   return i <= (null !== (t = n.lastLaunched) && void 0 !== t ? t : 0)
+}
+let S = e => {
+  let {
+    useReducedMotion: t,
+    className: n,
+    size: o = 16
+  } = e, [a, l] = (0, s.useSpring)(() => ({})), _ = r.useRef(!1), d = (0, s.animated)(u.Z);
+  return {
+    render: () => (0, i.jsx)(d, {
+      className: n,
+      style: t ? void 0 : a,
+      height: o,
+      width: o
+    }),
+    startAnimation: () => {
+      _.current = !0, l({
+        from: {
+          rotate: "0deg"
+        },
+        to: {
+          rotate: "360deg"
+        },
+        config: {
+          tension: 750,
+          mass: 5,
+          friction: 100
+        },
+        loop: () => _,
+        immediate: t
+      })
+    },
+    stopAnimation: () => {
+      _.current = !1
+    }
+  }
 }

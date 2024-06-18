@@ -1,5 +1,5 @@
 "use strict";
-var n = r("158225");
+var n = r(158225);
 t.exports = function(t, e) {
   var r = e.ownerDocument.defaultView.getSelection();
   return 0 === r.rangeCount ? {

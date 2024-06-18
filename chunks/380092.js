@@ -1,4 +1,4 @@
-var r = n("559969");
+var r = n(559969);
 e.exports = function(e, t) {
   var n = this.__data__,
     i = r(n, e);

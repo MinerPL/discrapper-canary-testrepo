@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  useShopBundleEnabled: function() {
+n.d(t, {
+  e: function() {
     return r
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
     kind: "user",
     id: "2024-05_collectibles_shop_bundle",
     label: "Collectibles Shop Bundle",

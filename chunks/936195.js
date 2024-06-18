@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return l
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("481060");
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(481060);
 
-function a(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -16,7 +16,7 @@ function a(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class o extends r.PureComponent {
+class a extends r.PureComponent {
   render() {
     let {
       text: e,
@@ -32,7 +32,7 @@ class o extends r.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), a(this, "handleClick", () => {
+    super(...e), o(this, "handleClick", () => {
       let {
         onClick: e,
         index: t
@@ -46,7 +46,7 @@ class l extends r.PureComponent {
     let e = this.props.artists.split(";");
     if (!this.props.canOpen) return e.join(", ");
     let t = e.length - 1;
-    return e.map((e, n) => (0, i.jsx)(o, {
+    return e.map((e, n) => (0, i.jsx)(a, {
       text: e,
       index: n,
       lastItem: n === t,
@@ -55,7 +55,7 @@ class l extends r.PureComponent {
     }, "spotify-artist-".concat(n)))
   }
   constructor(...e) {
-    super(...e), a(this, "handleOpenSpotifyArtist", e => {
+    super(...e), o(this, "handleOpenSpotifyArtist", e => {
       let {
         onOpenSpotifyArtist: t
       } = this.props;

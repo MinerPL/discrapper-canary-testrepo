@@ -1,5 +1,5 @@
 "use strict";
-r("42547");
+r(42547);
 t.exports = function(t, e) {
   var r = t.getSelection(),
     n = t.getCurrentContent(),

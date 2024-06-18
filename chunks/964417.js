@@ -1,5 +1,5 @@
-var r = n("650359"),
-  i = n("546745");
+var r = n(650359),
+  i = n(546745);
 e.exports = function(e, t, n) {
   if (i()) return Reflect.construct.apply(null, arguments);
   var a = [null];

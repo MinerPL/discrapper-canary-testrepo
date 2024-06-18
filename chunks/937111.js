@@ -1,19 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
-  joinRequestFromServer: function() {
-    return T
+n.d(t, {
+  j: function() {
+    return h
   }
 });
-var i, r, a, s, o = n("442837"),
-  l = n("570140"),
-  u = n("601964"),
-  d = n("594174"),
-  _ = n("881952");
-let c = {},
-  E = !1,
-  I = {};
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(601964),
+  _ = n(594174),
+  d = n(881952);
+let c = !1,
+  E = {},
+  I = !1,
+  T = {};
 
-function T(e) {
+function h(e) {
   return {
     joinRequestId: e.join_request_id,
     guildId: e.guild_id,
@@ -30,80 +31,83 @@ function T(e) {
   }
 }
 
-function f(e) {
+function S(e) {
   let {
     guildId: t,
     request: n
   } = e;
   if (null == n) return;
-  let i = T(n),
-    r = d.default.getCurrentUser();
+  let i = h(n),
+    r = _.default.getCurrentUser();
   if (null != r && i.userId !== r.id) return !1;
-  (0, _.isApprovedAndAcked)(i) ? delete c[t]: c[t] = i
+  (0, d.d3)(i) ? delete E[t]: E[t] = i
 }
-class S extends(s = o.default.Store) {
+class f extends(o = a.ZP.Store) {
   getRequest(e) {
-    return c[e]
+    return E[e]
   }
   computeGuildIds() {
-    return Object.values(c).map(e => null == e ? void 0 : e.guildId).filter(e => null != e)
+    return Object.values(E).map(e => null == e ? void 0 : e.guildId).filter(e => null != e)
   }
   getJoinRequestGuild(e) {
-    return null != I[e] ? new u.default(I[e]) : null
+    return null != T[e] ? new u.ZP(T[e]) : null
   }
   get hasFetchedRequestToJoinGuilds() {
-    return E
+    return I
+  }
+  hasJoinRequestCoackmark() {
+    return c
   }
 }
-a = "UserGuildJoinRequestStore", (r = "displayName") in(i = S) ? Object.defineProperty(i, r, {
-  value: a,
+s = "UserGuildJoinRequestStore", (r = "displayName") in(i = f) ? Object.defineProperty(i, r, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = a, t.default = new S(l.default, {
+}) : i[r] = s, t.Z = new f(l.Z, {
   CONNECTION_OPEN: function(e) {
     let {
       guildJoinRequests: t
     } = e;
-    E = !1, I = {}, c = {}, t.forEach(e => {
+    I = !1, T = {}, E = {}, t.forEach(e => {
       let {
         guild_id: t
       } = e;
-      null != t && (c[t] = T(e))
+      null != t && (E[t] = h(e))
     })
   },
-  GUILD_JOIN_REQUEST_UPDATE: f,
-  GUILD_JOIN_REQUEST_CREATE: f,
+  GUILD_JOIN_REQUEST_UPDATE: S,
+  GUILD_JOIN_REQUEST_CREATE: S,
   USER_GUILD_JOIN_REQUEST_UPDATE: function(e) {
     let {
       request: t,
       guildId: n
     } = e;
     if (null == t) {
-      delete c[n];
+      delete E[n];
       return
     }
-    let i = T(t);
-    (0, _.isApprovedAndAcked)(i) ? delete c[n]: c[n] = i
+    let i = h(t);
+    (0, d.d3)(i) ? delete E[n]: E[n] = i
   },
   GUILD_DELETE: function(e) {
     let {
       guild: t
     } = e;
-    delete c[t.id]
+    delete E[t.id]
   },
   USER_JOIN_REQUEST_GUILDS_FETCH: function(e) {
     let {
       guilds: t
     } = e;
-    E = !0, t.forEach(e => {
+    I = !0, t.forEach(e => {
       let {
         id: t,
         name: n,
         features: i,
         icon: r
       } = e;
-      I[t] = {
+      T[t] = {
         id: t,
         name: n,
         features: i,
@@ -121,13 +125,13 @@ a = "UserGuildJoinRequestStore", (r = "displayName") in(i = S) ? Object.definePr
         id: e,
         name: i,
         icon: r,
-        features: a
+        features: s
       } = t.guild;
-      I[n] = {
+      T[n] = {
         id: e,
         name: i,
         icon: r,
-        features: null != a ? a : []
+        features: null != s ? s : []
       }
     }
   },
@@ -142,18 +146,18 @@ a = "UserGuildJoinRequestStore", (r = "displayName") in(i = S) ? Object.definePr
       let {
         guild_id: e
       } = i;
-      c[e] = T(i);
+      E[e] = h(i);
       let {
         id: t,
         name: r,
-        icon: a,
-        features: s
+        icon: s,
+        features: o
       } = n;
-      I[t] = {
+      T[t] = {
         id: t,
         name: r,
-        icon: a,
-        features: null != s ? s : []
+        icon: s,
+        features: null != o ? o : []
       }
     }
   },
@@ -161,6 +165,12 @@ a = "UserGuildJoinRequestStore", (r = "displayName") in(i = S) ? Object.definePr
     let {
       guildId: t
     } = e;
-    delete c[t]
+    delete E[t]
+  },
+  USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW: function() {
+    c = !0
+  },
+  USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR: function() {
+    c = !1
   }
 })

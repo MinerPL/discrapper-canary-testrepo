@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  Parser: function() {
+n.d(t, {
+  _: function() {
     return a
   }
 });
-var r = n("608297");
+var r = n(608297);
 
 function i(e, t) {
   for (var n = 0; n < t.length; n++) {
@@ -25,7 +25,7 @@ var a = function() {
     value: function(e, t, n, i) {
       var a = this.parse(e, t, n, i);
       return a ? {
-        setter: new r.ValueSetter(a.value, this.validate, this.set, this.priority, this.subPriority),
+        setter: new r.gr(a.value, this.validate, this.set, this.priority, this.subPriority),
         rest: a.rest
       } : null
     }
@@ -34,5 +34,5 @@ var a = function() {
     value: function(e, t, n) {
       return !0
     }
-  }], i(e.prototype, t), n && i(e, n), a
+  }], i(e.prototype, t), a
 }()

@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  DragSourceMonitorImpl: function() {
-    return u
+n.d(t, {
+  p: function() {
+    return c
   }
 });
-var r = n("573654");
+var r = n(573654);
 
 function i(e, t) {
   for (var n = 0; n < t.length; n++) {
@@ -13,7 +13,7 @@ function i(e, t) {
   }
 }
 
-function a(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -21,17 +21,17 @@ function a(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-var o = !1,
-  s = !1,
-  u = function() {
+var u = !1,
+  a = !1,
+  c = function() {
     var e, t, n;
 
-    function u(e) {
+    function c(e) {
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-      }(this, u), a(this, "internalMonitor", void 0), a(this, "sourceId", null), this.internalMonitor = e.getMonitor()
+      }(this, c), o(this, "internalMonitor", void 0), o(this, "sourceId", null), this.internalMonitor = e.getMonitor()
     }
-    return e = u, t = [{
+    return e = c, t = [{
       key: "receiveHandlerId",
       value: function(e) {
         this.sourceId = e
@@ -44,22 +44,22 @@ var o = !1,
     }, {
       key: "canDrag",
       value: function() {
-        (0, r.invariant)(!o, "You may not call monitor.canDrag() inside your canDrag() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source-monitor");
+        (0, r.k)(!u, "You may not call monitor.canDrag() inside your canDrag() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source-monitor");
         try {
-          return o = !0, this.internalMonitor.canDragSource(this.sourceId)
+          return u = !0, this.internalMonitor.canDragSource(this.sourceId)
         } finally {
-          o = !1
+          u = !1
         }
       }
     }, {
       key: "isDragging",
       value: function() {
         if (!this.sourceId) return !1;
-        (0, r.invariant)(!s, "You may not call monitor.isDragging() inside your isDragging() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source-monitor");
+        (0, r.k)(!a, "You may not call monitor.isDragging() inside your isDragging() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source-monitor");
         try {
-          return s = !0, this.internalMonitor.isDraggingSource(this.sourceId)
+          return a = !0, this.internalMonitor.isDraggingSource(this.sourceId)
         } finally {
-          s = !1
+          a = !1
         }
       }
     }, {
@@ -152,5 +152,5 @@ var o = !1,
       value: function() {
         return this.internalMonitor.getDifferenceFromInitialOffset()
       }
-    }], i(e.prototype, t), n && i(e, n), u
+    }], i(e.prototype, t), c
   }()

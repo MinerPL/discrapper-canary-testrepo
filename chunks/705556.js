@@ -1,54 +1,66 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return I
+n.d(t, {
+  Z: function() {
+    return h
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("442837"),
-  a = n("481060"),
-  s = n("300284"),
-  o = n("314897"),
-  l = n("430824"),
-  u = n("185403"),
-  d = n("785717"),
-  _ = n("841040"),
-  c = n("993409"),
-  E = n("689938");
+var i = n(735250);
+n(470079);
+var r = n(442837),
+  s = n(481060),
+  o = n(300284),
+  a = n(314897),
+  l = n(430824),
+  u = n(185403),
+  _ = n(877485),
+  d = n(785717),
+  c = n(841040),
+  E = n(993409),
+  I = n(228168),
+  T = n(689938);
 
-function I(e) {
+function h(e) {
   let {
     user: t,
     guildId: n,
-    onClose: I
-  } = e, T = (0, r.useStateFromStores)([o.default], () => o.default.getId() === t.id), f = (0, r.useStateFromStores)([l.default], () => null != n ? l.default.getGuild(n) : null), {
-    trackUserProfileAction: S
-  } = (0, d.useUserProfileAnalyticsContext)(), h = (0, s.default)();
-  return T ? null == f ? (0, i.jsx)(c.default, {
-    icon: u.default,
-    text: E.default.Messages.EDIT_PROFILE,
+    profileType: h,
+    onClose: S
+  } = e, f = (0, r.e7)([a.default], () => a.default.getId() === t.id), N = (0, r.e7)([l.Z], () => null != n ? l.Z.getGuild(n) : null), {
+    originalFriendingEnabled: A
+  } = (0, _.V)({
+    location: "UserProfileEditMenuButton"
+  }), {
+    trackUserProfileAction: m
+  } = (0, d.KZ)(), O = (0, o.Z)(), R = A && h === I.y0.FULL_SIZE ? void 0 : u.Z;
+  return f ? null == N ? (0, i.jsx)(E.Z, {
+    variant: "text",
+    icon: R,
+    text: T.Z.Messages.EDIT_PROFILE,
+    autoFocus: !0,
+    fullWidth: !0,
     onClick: () => {
-      S({
+      m({
         action: "EDIT_PROFILE"
-      }), null == I || I(), h()
+      }), null == S || S(), O()
     }
-  }) : (0, i.jsx)(a.Popout, {
+  }) : (0, i.jsx)(s.Popout, {
     renderPopout: e => {
       let {
         closePopout: t
       } = e;
-      return (0, i.jsx)(_.default, {
-        guild: f,
+      return (0, i.jsx)(c.Z, {
+        guild: N,
         onClose: () => {
-          t(), null == I || I()
+          t(), null == S || S()
         }
       })
     },
-    children: e => (0, i.jsx)(c.default, {
-      icon: u.default,
-      text: E.default.Messages.EDIT_PROFILE,
+    children: e => (0, i.jsx)(E.Z, {
+      variant: "text",
+      icon: R,
+      text: T.Z.Messages.EDIT_PROFILE,
       autoFocus: !0,
+      fullWidth: !0,
       ...e
     })
   }) : null

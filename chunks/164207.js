@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  PromotionPreviewExperiment: function() {
+n.d(t, {
+  t: function() {
     return i
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2021-06_preview_promotions",
   label: "Promotions Preview",

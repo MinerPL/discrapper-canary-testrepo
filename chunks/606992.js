@@ -1,28 +1,28 @@
 "use strict";
-n.r(t), n.d(t, {
-  useChannelAutocompleteLayerPosition: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return o
   }
-}), n("47120");
-var i = n("470079"),
-  r = n("40851"),
-  s = n("590921");
+}), n(47120);
+var i = n(470079),
+  r = n(40851),
+  s = n(590921);
 
-function a(e) {
+function o(e) {
   let {
     editorHeight: t,
     type: n,
-    state: a,
-    isInPopoutExperiment: o = !1
-  } = e, [l, u] = i.useState(void 0), d = null == a ? void 0 : a.query, _ = null == a ? void 0 : a.isVisible, {
+    state: o,
+    isInPopoutExperiment: a = !1
+  } = e, [l, u] = i.useState(void 0), _ = null == o ? void 0 : o.query, d = null == o ? void 0 : o.isVisible, {
     renderWindow: c
-  } = i.useContext(r.default), E = i.useCallback(() => {
+  } = i.useContext(r.ZP), E = i.useCallback(() => {
     var e, t, i, r;
-    if (null != a && (null == d || !_)) {
+    if (null != o && (null == _ || !d)) {
       u(void 0);
       return
     }
-    if ((null == d ? void 0 : d.type) === s.AutocompleteOptionTypes.GIFS || null != n && !o && !(null === (e = n.autocomplete) || void 0 === e ? void 0 : e.alwaysUseLayer)) {
+    if ((null == _ ? void 0 : _.type) === s.eq.GIFS || null != n && !a && !(null === (e = n.autocomplete) || void 0 === e ? void 0 : e.alwaysUseLayer)) {
       u(null);
       return
     }
@@ -40,15 +40,15 @@ function a(e) {
         T = null !== (r = null == (I = I.previousSibling) ? void 0 : null === (i = I.nodeValue) || void 0 === i ? void 0 : i.length) && void 0 !== r ? r : 0;
         continue
       }
-      null != d && (T >= d.queryText.length ? T -= d.queryText.length : T = 0);
+      null != _ && (T >= _.queryText.length ? T -= _.queryText.length : T = 0);
       break
     }
     if (null == I) return;
-    let f = c.document.createRange();
-    f.setStart(I, T), f.setEnd(I, T);
-    let S = f.getBoundingClientRect();
-    (null == S ? void 0 : S.height) !== 0 && u(null != S ? S : null)
-  }, [o, c.document, a, _, d, n]);
+    let h = c.document.createRange();
+    h.setStart(I, T), h.setEnd(I, T);
+    let S = h.getBoundingClientRect();
+    if ((null == S ? void 0 : S.height) !== 0) u(null != S ? S : null)
+  }, [a, c.document, o, d, _, n]);
   return i.useEffect(() => (c.document.addEventListener("selectionchange", E), () => c.document.removeEventListener("selectionchange", E)), [c.document, E]), i.useEffect(() => {
     E()
   }, [E, t]), l

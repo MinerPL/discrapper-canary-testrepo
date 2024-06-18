@@ -1,9 +1,9 @@
-var r = n("585559"),
-  i = n("771378"),
-  a = n("778247"),
-  o = n("780177"),
-  s = n("585754"),
-  u = n("957578").Buffer;
+var r = n(585559),
+  i = n(771378),
+  a = n(778247),
+  o = n(780177),
+  s = n(585754),
+  u = n(957578).Buffer;
 
 function c(e) {
   "object" == typeof e && !u.isBuffer(e) && (t = e.passphrase, e = e.key), "string" == typeof e && (e = u.from(e));

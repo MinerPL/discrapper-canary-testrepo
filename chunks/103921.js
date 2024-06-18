@@ -1,10 +1,10 @@
 "use strict";
-a.r(t), a.d(t, {
-  useIsForumPostPreviewEnabled: function() {
-    return n
+n.d(t, {
+  C: function() {
+    return l
   }
 });
-let s = (0, a("818083").createExperiment)({
+let s = (0, n(818083).B)({
   kind: "user",
   id: "2023-10_forum_post_preview",
   label: "Enable preview of Forum post content before creation",
@@ -20,7 +20,7 @@ let s = (0, a("818083").createExperiment)({
   }]
 });
 
-function n() {
+function l() {
   let {
     isEnabled: e
   } = s.useExperiment({

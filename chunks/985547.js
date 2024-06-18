@@ -1,8 +1,8 @@
 "use strict";
-var r = n("970661"),
-  i = n("854160"),
-  a = n("896933"),
-  o = n("983584");
+var r = n(970661),
+  i = n(854160),
+  a = n(896933),
+  o = n(983584);
 
 function s(e, t, n) {
   var r = "string" == typeof e ? s.__parse(e) : e;
@@ -113,7 +113,9 @@ t.default = s, i.defineProperty(s, "formats", {
   return u
 }, s.prototype._mergeFormats = function(e, t) {
   var n, a, o = {};
-  for (n in e) r.hop.call(e, n) && (o[n] = a = i.objCreate(e[n]), t && r.hop.call(t, n) && r.extend(a, t[n]));
+  for (n in e) {
+    if (!!r.hop.call(e, n)) o[n] = a = i.objCreate(e[n]), t && r.hop.call(t, n) && r.extend(a, t[n])
+  }
   return o
 }, s.prototype._resolveLocale = function(e) {
   "string" == typeof e && (e = [e]), e = (e || []).concat(s.defaultLocale);

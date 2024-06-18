@@ -1,8 +1,7 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-t.default = e => {
+var i = n(735250);
+n(470079);
+t.Z = e => {
   let {
     fill: t,
     className: n

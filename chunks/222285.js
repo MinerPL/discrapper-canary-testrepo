@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  isElement: function() {
-    return a
-  },
-  isHidden: function() {
-    return i
-  },
-  isReplacedElement: function() {
+n.d(t, {
+  jD: function() {
     return o
   },
-  isSVG: function() {
+  kK: function() {
+    return a
+  },
+  xj: function() {
+    return i
+  },
+  zd: function() {
     return r
   }
 });

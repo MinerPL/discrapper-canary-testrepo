@@ -1,25 +1,25 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return o
+n.d(t, {
+  Z: function() {
+    return l
   }
-}), n("47120");
-var a = n("392711"),
-  l = n.n(a),
-  s = n("442837"),
-  i = n("131951"),
-  r = n("65154");
+}), n(47120);
+var i = n(392711),
+  r = n.n(i),
+  s = n(442837),
+  o = n(131951),
+  a = n(65154);
 
-function o() {
+function l() {
   let {
     enabled: e,
     cameraUnavailable: t
-  } = (0, s.useStateFromStoresObject)([i.default], () => {
+  } = (0, s.cj)([o.Z], () => {
     var e, t;
-    let n = null === (t = null === (e = l()(i.default.getVideoDevices()).values().first()) || void 0 === e ? void 0 : e.disabled) || void 0 === t || t;
+    let n = null === (t = null === (e = r()(o.Z.getVideoDevices()).values().first()) || void 0 === e ? void 0 : e.disabled) || void 0 === t || t;
     return {
-      enabled: i.default.isVideoEnabled(),
-      cameraUnavailable: n || !i.default.supports(r.Features.VIDEO)
+      enabled: o.Z.isVideoEnabled(),
+      cameraUnavailable: n || !o.Z.supports(a.AN.VIDEO)
     }
   });
   return {

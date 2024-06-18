@@ -1,32 +1,31 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var l = n("481060"),
-  r = n("759231"),
-  s = n("689938"),
-  i = n("400537");
-t.default = e => {
+var i = n(735250);
+n(470079);
+var r = n(481060),
+  s = n(759231),
+  o = n(689938),
+  a = n(166400);
+t.Z = e => {
   let {
     errorMessage: t,
     onClose: n
   } = e;
-  return null == t || "" === t ? null : (0, a.jsxs)("div", {
-    className: i.errorContainer,
-    children: [(0, a.jsx)(r.default, {
+  return null == t || "" === t ? null : (0, i.jsxs)("div", {
+    className: a.errorContainer,
+    children: [(0, i.jsx)(s.Z, {
       width: 20,
       height: 20,
-      className: i.errorIcon
-    }), (0, a.jsx)(l.Text, {
-      className: i.errorText,
+      className: a.errorIcon
+    }), (0, i.jsx)(r.Text, {
+      className: a.errorText,
       variant: "text-sm/normal",
       children: t
-    }), (0, a.jsx)(l.Clickable, {
+    }), (0, i.jsx)(r.Clickable, {
       onClick: () => {
         n()
       },
-      "aria-label": s.default.Messages.DISMISS,
-      className: i.closeIcon
+      "aria-label": o.Z.Messages.DISMISS,
+      className: a.closeIcon
     })]
   })
 }

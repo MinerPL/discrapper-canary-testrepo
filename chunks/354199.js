@@ -1,8 +1,8 @@
-var r = n("754675"),
-  i = n("39493"),
-  a = n("855543"),
-  o = n("143866"),
-  s = n("142670");
+var r = n(754675),
+  i = n(39493),
+  a = n(855543),
+  o = n(143866),
+  s = n(142670);
 e.exports = function(e, t, n) {
   var u = e.constructor;
   switch (t) {

@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  Runtime: function() {
+n.d(t, {
+  r: function() {
     return u
   }
-}), n("653041"), n("47120"), n("411104");
-var i = n("259443"),
-  r = n("198584"),
-  s = n("444675");
+}), n(653041), n(47120), n(411104);
+var i = n(259443),
+  r = n(198584),
+  s = n(444675);
 
-function a(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -16,8 +16,8 @@ function a(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let o = "1" === s.env.KV_STORAGE_LOGGING,
-  l = new i.Logger("Runtime");
+let a = "1" === s.env.KV_STORAGE_LOGGING,
+  l = new i.Y("Runtime");
 class u {
   static nextId() {
     return ++this.counter
@@ -76,14 +76,14 @@ class u {
     }
   }
   static initialize() {
-    !this.initialized && (r.KV_RAW.setCallbacks({
+    if (!this.initialized) r.d.setCallbacks({
       status: e => this.onStatus(e),
       response: (e, t) => this.onResponse(e, t)
-    }), o && (this.addCompletionCallback(e => {
+    }), a && (this.addCompletionCallback(e => {
       let t = e.ok ? "completed" : "failed",
         n = ["".concat(e.timings.execution.toFixed(3), "ms execution"), "".concat(e.timings.materialization.toFixed(3), "ms js materialization"), "".concat(e.timings.ccTotal.toFixed(3), "ms cc completion"), "".concat(e.timings.jsTotal.toFixed(3), "ms js reception")].join(", ");
       l.info("".concat(e.tag, " (#").concat(e.id, ") ").concat(t, " in ").concat(e.timings.ccTotal.toFixed(3), "ms (").concat(n, ")."))
-    }), this.addDatabaseStateCallback((e, t) => l.info("".concat(e, " (state: ").concat(t, ")")))), this.initialized = !0)
+    }), this.addDatabaseStateCallback((e, t) => l.info("".concat(e, " (state: ").concat(t, ")")))), this.initialized = !0
   }
 }
-a(u, "counter", 0), a(u, "pending", new Map), a(u, "initialized", !1), a(u, "dbStateCallbacks", []), a(u, "completionCallbacks", [])
+o(u, "counter", 0), o(u, "pending", new Map), o(u, "initialized", !1), o(u, "dbStateCallbacks", []), o(u, "completionCallbacks", [])

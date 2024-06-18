@@ -1,16 +1,14 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("844303"),
-  i = r("13942"),
-  l = r("464854");
-t.default = function(e) {
+var r = n(470079),
+  i = n(844303),
+  a = n(13942),
+  o = n(464854);
+t.Z = function(e) {
   var t = e.onChange,
-    r = e.rgb,
-    n = e.hsv,
+    n = e.rgb,
+    s = e.hsv,
     u = e.hex,
-    s = (0, o.default)({
+    c = (0, i.default)({
       default: {
         fields: {
           paddingTop: "5px",
@@ -81,98 +79,98 @@ t.default = function(e) {
         }
       }
     }),
-    f = function(e, a) {
-      e["#"] ? i.isValidHex(e["#"]) && t({
+    l = function(e, r) {
+      e["#"] ? a.FX(e["#"]) && t({
         hex: e["#"],
         source: "hex"
-      }, a) : e.r || e.g || e.b ? t({
-        r: e.r || r.r,
-        g: e.g || r.g,
-        b: e.b || r.b,
+      }, r) : e.r || e.g || e.b ? t({
+        r: e.r || n.r,
+        g: e.g || n.g,
+        b: e.b || n.b,
         source: "rgb"
-      }, a) : (e.h || e.s || e.v) && t({
-        h: e.h || n.h,
-        s: e.s || n.s,
-        v: e.v || n.v,
+      }, r) : (e.h || e.s || e.v) && t({
+        h: e.h || s.h,
+        s: e.s || s.s,
+        v: e.v || s.v,
         source: "hsv"
-      }, a)
+      }, r)
     };
-  return a().createElement("div", {
-    style: s.fields
-  }, a().createElement(l.EditableInput, {
+  return r.createElement("div", {
+    style: c.fields
+  }, r.createElement(o.Vm, {
     style: {
-      wrap: s.RGBwrap,
-      input: s.RGBinput,
-      label: s.RGBlabel
+      wrap: c.RGBwrap,
+      input: c.RGBinput,
+      label: c.RGBlabel
     },
     label: "h",
-    value: Math.round(n.h),
-    onChange: f
-  }), a().createElement(l.EditableInput, {
+    value: Math.round(s.h),
+    onChange: l
+  }), r.createElement(o.Vm, {
     style: {
-      wrap: s.RGBwrap,
-      input: s.RGBinput,
-      label: s.RGBlabel
+      wrap: c.RGBwrap,
+      input: c.RGBinput,
+      label: c.RGBlabel
     },
     label: "s",
-    value: Math.round(100 * n.s),
-    onChange: f
-  }), a().createElement(l.EditableInput, {
+    value: Math.round(100 * s.s),
+    onChange: l
+  }), r.createElement(o.Vm, {
     style: {
-      wrap: s.RGBwrap,
-      input: s.RGBinput,
-      label: s.RGBlabel
+      wrap: c.RGBwrap,
+      input: c.RGBinput,
+      label: c.RGBlabel
     },
     label: "v",
-    value: Math.round(100 * n.v),
-    onChange: f
-  }), a().createElement("div", {
-    style: s.divider
-  }), a().createElement(l.EditableInput, {
+    value: Math.round(100 * s.v),
+    onChange: l
+  }), r.createElement("div", {
+    style: c.divider
+  }), r.createElement(o.Vm, {
     style: {
-      wrap: s.RGBwrap,
-      input: s.RGBinput,
-      label: s.RGBlabel
+      wrap: c.RGBwrap,
+      input: c.RGBinput,
+      label: c.RGBlabel
     },
     label: "r",
-    value: r.r,
-    onChange: f
-  }), a().createElement(l.EditableInput, {
+    value: n.r,
+    onChange: l
+  }), r.createElement(o.Vm, {
     style: {
-      wrap: s.RGBwrap,
-      input: s.RGBinput,
-      label: s.RGBlabel
+      wrap: c.RGBwrap,
+      input: c.RGBinput,
+      label: c.RGBlabel
     },
     label: "g",
-    value: r.g,
-    onChange: f
-  }), a().createElement(l.EditableInput, {
+    value: n.g,
+    onChange: l
+  }), r.createElement(o.Vm, {
     style: {
-      wrap: s.RGBwrap,
-      input: s.RGBinput,
-      label: s.RGBlabel
+      wrap: c.RGBwrap,
+      input: c.RGBinput,
+      label: c.RGBlabel
     },
     label: "b",
-    value: r.b,
-    onChange: f
-  }), a().createElement("div", {
-    style: s.divider
-  }), a().createElement(l.EditableInput, {
+    value: n.b,
+    onChange: l
+  }), r.createElement("div", {
+    style: c.divider
+  }), r.createElement(o.Vm, {
     style: {
-      wrap: s.HEXwrap,
-      input: s.HEXinput,
-      label: s.HEXlabel
+      wrap: c.HEXwrap,
+      input: c.HEXinput,
+      label: c.HEXlabel
     },
     label: "#",
     value: u.replace("#", ""),
-    onChange: f
-  }), a().createElement("div", {
-    style: s.fieldSymbols
-  }, a().createElement("div", {
-    style: s.symbol
-  }, "\xb0"), a().createElement("div", {
-    style: s.symbol
-  }, "%"), a().createElement("div", {
-    style: s.symbol
+    onChange: l
+  }), r.createElement("div", {
+    style: c.fieldSymbols
+  }, r.createElement("div", {
+    style: c.symbol
+  }, "\xb0"), r.createElement("div", {
+    style: c.symbol
+  }, "%"), r.createElement("div", {
+    style: c.symbol
   }, "%")))
 }

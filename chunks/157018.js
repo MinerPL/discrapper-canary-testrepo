@@ -1,42 +1,42 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return c
+t.d(s, {
+  Z: function() {
+    return u
   }
 });
-var a = s("201895"),
-  l = s("933557"),
-  n = s("592125"),
-  i = s("699516"),
-  r = s("594174"),
-  o = s("293810"),
-  d = s("981631"),
-  u = s("689938");
+var n = t(201895),
+  i = t(933557),
+  l = t(592125),
+  a = t(699516),
+  r = t(594174),
+  o = t(293810),
+  c = t(981631),
+  d = t(689938);
 
-function c(e) {
+function u(e) {
   switch (e.ref_type) {
-    case o.GuildRoleSubscriptionBenefitTypes.CHANNEL: {
-      let t = n.default.getChannel(e.ref_id);
-      return null != t ? function(e) {
-        let t = (0, l.computeChannelName)(e, r.default, i.default);
+    case o.Qs.CHANNEL: {
+      let s = l.Z.getChannel(e.ref_id);
+      return null != s ? function(e) {
+        let s = (0, i.F6)(e, r.default, a.Z);
         switch (e.type) {
-          case d.ChannelTypes.GUILD_VOICE:
-            return u.default.Messages.GUILD_SIDEBAR_VOICE_CHANNEL_A11Y_LABEL.format({
-              channelName: t
+          case c.d4z.GUILD_VOICE:
+            return d.Z.Messages.GUILD_SIDEBAR_VOICE_CHANNEL_A11Y_LABEL.format({
+              channelName: s
             });
-          case d.ChannelTypes.GUILD_STAGE_VOICE:
-            return u.default.Messages.GUILD_SIDEBAR_STAGE_CHANNEL_A11Y_LABEL.format({
-              channelName: t
+          case c.d4z.GUILD_STAGE_VOICE:
+            return d.Z.Messages.GUILD_SIDEBAR_STAGE_CHANNEL_A11Y_LABEL.format({
+              channelName: s
             });
           default:
-            return (0, a.default)({
+            return (0, n.ZP)({
               channel: e
             })
         }
-      }(t) : ""
+      }(s) : ""
     }
-    case o.GuildRoleSubscriptionBenefitTypes.INTANGIBLE:
-      var t;
-      return null !== (t = e.name) && void 0 !== t ? t : ""
+    case o.Qs.INTANGIBLE:
+      var s;
+      return null !== (s = e.name) && void 0 !== s ? s : ""
   }
 }

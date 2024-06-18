@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  Table: function() {
-    return l
-  },
-  TableTransaction: function() {
+n.d(t, {
+  E: function() {
     return u
+  },
+  i: function() {
+    return l
   }
-}), n("411104");
-var i = n("503461"),
-  r = n("218521");
+}), n(411104);
+var i = n(503461),
+  r = n(218521);
 
 function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -19,16 +19,16 @@ function s(e, t, n) {
   }) : e[t] = n, e
 }
 
-function a(e, t) {
+function o(e, t) {
   return 0 === t.length ? e : {
-    key: (0, r.combineKey)(t, e.key),
+    key: (0, r.m)(t, e.key),
     data: e.data,
     generation: e.generation
   }
 }
 
-function o(e, t) {
-  return 0 === t.length ? e : e.map(e => a(e, t))
+function a(e, t) {
+  return 0 === t.length ? e : e.map(e => o(e, t))
 }
 class l {
   close() {
@@ -46,14 +46,14 @@ class l {
     return this.database.execute({
       type: "kv.get_many",
       table: this.tableId,
-      key: (0, r.combineKeyPrefix)(this.prefix, e),
+      key: (0, r.d)(this.prefix, e),
       ordering: null == t ? void 0 : t.ordering,
       limit: null == t ? void 0 : t.limit
     }, this.defaultDebugTag)
   }
   getRange(e, t, n) {
-    let i = (0, r.combineKey)(this.prefix, e),
-      s = (0, r.combineKey)(this.prefix, t);
+    let i = (0, r.m)(this.prefix, e),
+      s = (0, r.m)(this.prefix, t);
     return this.database.execute({
       type: "kv.get_range",
       table: this.tableId,
@@ -67,7 +67,7 @@ class l {
     return this.database.execute({
       type: "kv.get_kv_entries",
       table: this.tableId,
-      key: (0, r.combineKeyPrefix)(this.prefix, e)
+      key: (0, r.d)(this.prefix, e)
     }, this.defaultDebugTag)
   }
   getMapEntries() {
@@ -75,7 +75,7 @@ class l {
     return this.database.execute({
       type: "kv.get_map_entries",
       table: this.tableId,
-      key: (0, r.combineKeyPrefix)(this.prefix, e)
+      key: (0, r.d)(this.prefix, e)
     }, this.defaultDebugTag)
   }
   getChildIds() {
@@ -83,7 +83,7 @@ class l {
     return this.database.execute({
       type: "kv.get_child_ids",
       table: this.tableId,
-      key: (0, r.combineKeyPrefix)(this.prefix, e)
+      key: (0, r.d)(this.prefix, e)
     }, this.defaultDebugTag)
   }
   getParentId() {
@@ -91,25 +91,25 @@ class l {
     return this.database.execute({
       type: "kv.get_parent_id",
       table: this.tableId,
-      key: (0, r.combineKey)(this.prefix, e)
+      key: (0, r.m)(this.prefix, e)
     }, this.defaultDebugTag)
   }
   put(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.ConflictOptions.Replace;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.Sn.Replace;
     return this.database.execute({
       type: "kv.put_one",
       table: this.tableId,
-      cell: a(e, this.prefix),
-      overwrite: t === i.ConflictOptions.Replace
+      cell: o(e, this.prefix),
+      overwrite: t === i.Sn.Replace
     }, this.defaultDebugTag)
   }
   putAll(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.ConflictOptions.Replace;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.Sn.Replace;
     return this.database.execute({
       type: "kv.put_many",
       table: this.tableId,
-      cells: o(e, this.prefix),
-      overwrite: t === i.ConflictOptions.Replace
+      cells: a(e, this.prefix),
+      overwrite: t === i.Sn.Replace
     }, this.defaultDebugTag)
   }
   replaceAll(e) {
@@ -122,12 +122,12 @@ class l {
     return this.database.execute({
       type: "kv.delete_many",
       table: this.tableId,
-      key: (0, r.combineKeyPrefix)(this.prefix, e)
+      key: (0, r.d)(this.prefix, e)
     }, this.defaultDebugTag)
   }
   deleteRange(e, t) {
-    let n = (0, r.combineKey)(this.prefix, e),
-      i = (0, r.combineKey)(this.prefix, t);
+    let n = (0, r.m)(this.prefix, e),
+      i = (0, r.m)(this.prefix, t);
     return this.database.execute({
       type: "kv.delete_range",
       table: this.tableId,
@@ -141,7 +141,7 @@ class l {
     return this.database.execute({
       type: "kv.delete_generation",
       table: this.tableId,
-      key: (0, r.combineKeyPrefix)(this.prefix, e),
+      key: (0, r.d)(this.prefix, e),
       generation: n,
       comparer: t
     }, this.defaultDebugTag)
@@ -158,7 +158,7 @@ class l {
     return this.database.executeSync({
       type: "kv.get_many",
       table: this.tableId,
-      key: (0, r.combineKeyPrefix)(this.prefix, e),
+      key: (0, r.d)(this.prefix, e),
       ordering: null == t ? void 0 : t.ordering,
       limit: null == t ? void 0 : t.limit
     })
@@ -168,7 +168,7 @@ class l {
     return this.database.executeSync({
       type: "kv.get_map_entries",
       table: this.tableId,
-      key: (0, r.combineKeyPrefix)(this.prefix, e)
+      key: (0, r.d)(this.prefix, e)
     })
   }
   constructor(e, t, n, i) {
@@ -186,21 +186,21 @@ class u {
     return new u(e, t, n)
   }
   put(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.ConflictOptions.Replace;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.Sn.Replace;
     this.transaction.add({
       type: "kv.put_one",
       table: this.tableId,
-      cell: a(e, this.prefix),
-      overwrite: t === i.ConflictOptions.Replace
+      cell: o(e, this.prefix),
+      overwrite: t === i.Sn.Replace
     })
   }
   putAll(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.ConflictOptions.Replace;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.Sn.Replace;
     this.transaction.add({
       type: "kv.put_many",
       table: this.tableId,
-      cells: o(e, this.prefix),
-      overwrite: t === i.ConflictOptions.Replace
+      cells: a(e, this.prefix),
+      overwrite: t === i.Sn.Replace
     })
   }
   replaceAll(e) {
@@ -211,12 +211,12 @@ class u {
     this.transaction.add({
       type: "kv.delete_many",
       table: this.tableId,
-      key: (0, r.combineKeyPrefix)(this.prefix, e)
+      key: (0, r.d)(this.prefix, e)
     })
   }
   deleteRange(e, t) {
-    let n = (0, r.combineKey)(this.prefix, e),
-      i = (0, r.combineKey)(this.prefix, t);
+    let n = (0, r.m)(this.prefix, e),
+      i = (0, r.m)(this.prefix, t);
     this.transaction.add({
       type: "kv.delete_range",
       table: this.tableId,
@@ -230,7 +230,7 @@ class u {
     this.transaction.add({
       type: "kv.delete_generation",
       table: this.tableId,
-      key: (0, r.combineKeyPrefix)(this.prefix, e),
+      key: (0, r.d)(this.prefix, e),
       generation: n,
       comparer: t
     })
@@ -250,7 +250,7 @@ class u {
         this.transaction.add({
           type: "messages.trim_channel",
           table: this.tableId,
-          key: (0, r.combineKey)(this.prefix, e),
+          key: (0, r.m)(this.prefix, e),
           limit: t
         })
       },

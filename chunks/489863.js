@@ -1,38 +1,38 @@
 "use strict";
-n.r(t), n.d(t, {
-  acceptWhitelist: function() {
-    return o
-  },
-  authorize: function() {
+n.d(t, {
+  Iq: function() {
     return l
   },
-  fetchAuthorization: function() {
-    return u
-  },
-  fetchChannels: function() {
-    return d
-  },
-  finishUserCode: function() {
-    return E
-  },
-  finishUserCodeTwoWayLinkError: function() {
-    return I
-  },
-  logoutWithRedirect: function() {
+  UR: function() {
     return _
   },
-  verifyUserCode: function() {
+  Ww: function() {
+    return u
+  },
+  c$: function() {
+    return d
+  },
+  g: function() {
+    return a
+  },
+  i2: function() {
+    return I
+  },
+  tR: function() {
+    return E
+  },
+  tV: function() {
     return c
   }
 });
-var i = n("860911"),
-  r = n("544891"),
-  a = n("893776"),
-  s = n("981631");
+var i = n(860911),
+  r = n(544891),
+  s = n(893776),
+  o = n(981631);
 
-function o(e) {
-  return r.HTTP.post({
-    url: s.Endpoints.OAUTH2_WHITELIST_ACCEPT,
+function a(e) {
+  return r.tn.post({
+    url: o.ANM.OAUTH2_WHITELIST_ACCEPT,
     query: {
       token: e
     },
@@ -44,34 +44,34 @@ async function l(e) {
     authorize: t,
     clientId: n,
     scopes: i,
-    responseType: a,
-    redirectUri: o,
+    responseType: s,
+    redirectUri: a,
     codeChallenge: l,
     codeChallengeMethod: u,
-    state: d,
-    permissions: _,
+    state: _,
+    permissions: d,
     guildId: c,
     channelId: E,
     integrationType: I,
     nonce: T
   } = e;
-  return (await r.HTTP.post({
-    url: s.Endpoints.OAUTH2_AUTHORIZE,
+  return (await r.tn.post({
+    url: o.ANM.OAUTH2_AUTHORIZE,
     query: {
       client_id: n,
-      response_type: a,
-      redirect_uri: o,
+      response_type: s,
+      redirect_uri: a,
       code_challenge: l,
       code_challenge_method: u,
       scope: i.join(" "),
-      state: d,
+      state: _,
       nonce: T
     },
     body: {
       guild_id: c,
       webhook_channel_id: null != c && null != E ? E : void 0,
       channel_id: null == c && null != E ? E : void 0,
-      permissions: _,
+      permissions: d,
       authorize: t,
       integration_type: I
     },
@@ -83,35 +83,35 @@ async function u(e) {
     clientId: t,
     scopes: n,
     responseType: i,
-    redirectUri: a,
-    codeChallenge: o,
+    redirectUri: s,
+    codeChallenge: a,
     codeChallengeMethod: l,
     state: u,
-    integrationType: d,
-    nonce: _
+    integrationType: _,
+    nonce: d
   } = e;
-  return (await r.HTTP.get({
-    url: s.Endpoints.OAUTH2_AUTHORIZE,
+  return (await r.tn.get({
+    url: o.ANM.OAUTH2_AUTHORIZE,
     query: {
       client_id: t,
       response_type: i,
-      redirect_uri: a,
-      code_challenge: o,
+      redirect_uri: s,
+      code_challenge: a,
       code_challenge_method: l,
       scope: n.join(" "),
       state: u,
-      integration_type: d,
-      nonce: _
+      integration_type: _,
+      nonce: d
     },
     retries: 3,
     oldFormErrors: !0
   })).body
 }
-async function d(e) {
+async function _(e) {
   let {
     body: t
-  } = await r.HTTP.get({
-    url: s.Endpoints.OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS,
+  } = await r.tn.get({
+    url: o.ANM.OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS,
     query: {
       guild_id: e
     },
@@ -120,20 +120,20 @@ async function d(e) {
   return t
 }
 
-function _(e) {
-  a.default.logout((0, i.getLoginPath)(e.pathname + e.search, !1))
+function d(e) {
+  s.Z.logout((0, i.U)(e.pathname + e.search, !1))
 }
 async function c(e) {
-  return await r.HTTP.post({
-    url: s.Endpoints.OAUTH2_DEVICE_VERIFY,
+  return await r.tn.post({
+    url: o.ANM.OAUTH2_DEVICE_VERIFY,
     body: {
       user_code: e
     }
   })
 }
 async function E(e, t) {
-  return await r.HTTP.post({
-    url: s.Endpoints.OAUTH2_DEVICE_FINISH,
+  return await r.tn.post({
+    url: o.ANM.OAUTH2_DEVICE_FINISH,
     body: {
       user_code: e,
       result: t
@@ -141,8 +141,8 @@ async function E(e, t) {
   })
 }
 async function I(e, t, n) {
-  return await r.HTTP.post({
-    url: s.Endpoints.OAUTH2_DEVICE_FINISH,
+  return await r.tn.post({
+    url: o.ANM.OAUTH2_DEVICE_FINISH,
     body: {
       user_code: e,
       result: "two_way_link_error",

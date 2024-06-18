@@ -5,11 +5,11 @@ function s() {
   if (null == i) throw Error("Native dependencies have not been injected.")
 }
 
-function a(e) {
+function o(e) {
   i = e
 }
 
-function o() {
+function a() {
   return s(), i.supported()
 }
 
@@ -21,23 +21,23 @@ function u(e) {
   s(), i.setProcessPriority(e)
 }
 
-function d() {
+function _() {
   return s(), null != r ? r : r = i.getVoiceEngine()
 }
-n.r(t), n.d(t, {
-  getVoiceEngine: function() {
-    return d
-  },
-  inject: function() {
+n.d(t, {
+  Zh: function() {
     return a
   },
-  setProcessPriority: function() {
-    return u
+  eJ: function() {
+    return l
   },
-  supported: function() {
+  f3: function() {
     return o
   },
-  supportsFeature: function() {
-    return l
+  p8: function() {
+    return u
+  },
+  zS: function() {
+    return _
   }
-}), n("411104")
+}), n(411104)

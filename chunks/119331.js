@@ -1,75 +1,75 @@
 "use strict";
-s.r(t), s.d(t, {
-  getPerkIcon: function() {
-    return N
+t.d(s, {
+  t: function() {
+    return h
   }
-}), s("411104");
-var a = s("803997"),
-  l = s.n(a),
-  n = s("263704"),
-  i = s("642113"),
-  r = s("242315"),
-  o = s("115102"),
-  d = s("241820"),
-  u = s("536952"),
-  c = s("503705"),
-  E = s("170039"),
-  _ = s("898140"),
-  I = s("68736"),
-  T = s("761374"),
-  S = s("363138"),
-  f = s("267642"),
-  m = s("599083");
+}), t(411104);
+var n = t(120356),
+  i = t.n(n),
+  l = t(263704),
+  a = t(642113),
+  r = t(242315),
+  o = t(115102),
+  c = t(241820),
+  d = t(536952),
+  u = t(503705),
+  E = t(170039),
+  _ = t(898140),
+  I = t(68736),
+  T = t(761374),
+  N = t(363138),
+  m = t(267642),
+  S = t(426305);
 
-function N(e, t) {
-  if (t) return {
-    icon: n.default,
-    className: m.unlocked
+function h(e, s) {
+  if (s) return {
+    icon: l.Z,
+    className: S.unlocked
   };
   switch (e) {
-    case f.PerkIcons.EMOJI:
+    case m.Ro.EMOJI:
       return {
-        icon: i.default, className: l()(m.icon, m.emoji)
+        icon: a.Z, className: i()(S.icon, S.emoji)
       };
-    case f.PerkIcons.AUDIO:
+    case m.Ro.AUDIO:
       return {
-        icon: r.default, className: l()(m.icon, m.audio)
+        icon: r.Z, className: i()(S.icon, S.audio)
       };
-    case f.PerkIcons.ANIMATED:
+    case m.Ro.ANIMATED:
       return {
-        icon: o.default, className: l()(m.icon, m.animated)
+        icon: o.Z, className: i()(S.icon, S.animated)
       };
-    case f.PerkIcons.CUSTOMIZATION:
+    case m.Ro.CUSTOMIZATION:
       return {
-        icon: u.default, className: l()(m.icon, m.customization)
+        icon: d.Z, className: i()(S.icon, S.customization)
       };
-    case f.PerkIcons.UPLOAD:
+    case m.Ro.UPLOAD:
       return {
-        icon: S.default, className: l()(m.icon, m.upload)
+        icon: N.Z, className: i()(S.icon, S.upload)
       };
-    case f.PerkIcons.VANITY:
+    case m.Ro.VANITY:
       return {
-        icon: _.default, className: l()(m.icon, m.vanity)
+        icon: _.Z, className: i()(S.icon, S.vanity)
       };
-    case f.PerkIcons.STREAM:
+    case m.Ro.STREAM:
       return {
-        icon: T.default, className: l()(m.icon, m.stream)
+        icon: T.Z, className: i()(S.icon, S.stream)
       };
-    case f.PerkIcons.STICKER:
+    case m.Ro.STICKER:
       return {
-        icon: I.default, className: l()(m.icon, m.sticker)
+        icon: I.Z, className: i()(S.icon, S.sticker)
       };
-    case f.PerkIcons.CUSTOM_ROLE_ICON:
+    case m.Ro.CUSTOM_ROLE_ICON:
       return {
-        icon: d.default, className: l()(m.icon, m.customRoleIcon)
+        icon: c.Z, className: i()(S.icon, S.customRoleIcon)
       };
-    case f.PerkIcons.STAGE_VIDEO:
+    case m.Ro.STAGE_VIDEO:
       return {
-        icon: E.default, className: l()(m.icon, m.stage)
+        icon: E.Z, className: i()(S.icon, S.stage)
       };
-    case f.PerkIcons.SOUNDBOARD:
+    case m.Ro.SOUNDBOARD:
       return {
-        icon: c.default, className: l()(m.icon, m.soundboard)
+        icon: u.Z, className: i()(S.icon, S.soundboard)
       }
   }
   throw Error("Unexpected perk icon ".concat(e))

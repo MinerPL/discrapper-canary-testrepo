@@ -33,7 +33,7 @@ e.exports = function(e) {
       }, ...r]
     },
     s = {
-      match: [/OBJECT/, /\s+/, t.either(...["Table", "Form", "Report", "Dataport", "Codeunit", "XMLport", "MenuSuite", "Page", "Query"]), /\s+/, /\d+/, /\s+(?=[^\s])/, /.*/, /$/],
+      match: [/OBJECT/, /\s+/, t.either("Table", "Form", "Report", "Dataport", "Codeunit", "XMLport", "MenuSuite", "Page", "Query"), /\s+/, /\d+/, /\s+(?=[^\s])/, /.*/, /$/],
       relevance: 3,
       scope: {
         1: "keyword",

@@ -1,23 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
-  cache: function() {
+n.d(t, {
+  Fs: function() {
     return s
   },
-  calculateBoxSize: function() {
+  Y9: function() {
     return m
   },
-  calculateBoxSizes: function() {
+  uP: function() {
     return h
   }
 });
-var r = n("644387"),
-  i = n("582661"),
-  a = n("383466"),
-  o = n("559972"),
+var r = n(644387),
+  i = n(582661),
+  a = n(383466),
+  o = n(559972),
   s = new Map,
   u = /auto|scroll/,
   c = /^tb|vertical/,
-  l = /msie|trident/i.test(o.global.navigator && o.global.navigator.userAgent),
+  l = /msie|trident/i.test(o.C.navigator && o.C.navigator.userAgent),
   d = function(e) {
     return parseFloat(e || "0")
   },
@@ -31,13 +31,13 @@ var r = n("644387"),
     devicePixelContentBoxSize: f(),
     borderBoxSize: f(),
     contentBoxSize: f(),
-    contentRect: new i.DOMRectReadOnly(0, 0, 0, 0)
+    contentRect: new i.N(0, 0, 0, 0)
   }),
   h = function(e) {
     if (s.has(e)) return s.get(e);
-    if ((0, a.isHidden)(e)) return s.set(e, p), p;
+    if ((0, a.xj)(e)) return s.set(e, p), p;
     var t = getComputedStyle(e),
-      n = (0, a.isSVG)(e) && e.ownerSVGElement && e.getBBox(),
+      n = (0, a.zd)(e) && e.ownerSVGElement && e.getBBox(),
       r = !l && "border-box" === t.boxSizing,
       o = c.test(t.writingMode || ""),
       h = !n && u.test(t.overflowY || ""),
@@ -51,20 +51,20 @@ var r = n("644387"),
       S = n ? 0 : d(t.borderBottomWidth),
       x = n ? 0 : d(t.borderLeftWidth),
       w = v + _,
-      T = g + b,
-      C = x + E,
+      C = g + b,
+      T = x + E,
       D = y + S,
-      O = m ? e.offsetHeight - D - e.clientHeight : 0,
-      M = h ? e.offsetWidth - C - e.clientWidth : 0,
-      A = n ? n.width : d(t.width) - (r ? w + C : 0) - M,
-      k = n ? n.height : d(t.height) - (r ? T + D : 0) - O,
-      R = A + w + M + C,
-      N = k + T + O + D,
+      M = m ? e.offsetHeight - D - e.clientHeight : 0,
+      O = h ? e.offsetWidth - T - e.clientWidth : 0,
+      A = n ? n.width : d(t.width) - (r ? w + T : 0) - O,
+      k = n ? n.height : d(t.height) - (r ? C + D : 0) - M,
+      R = A + w + O + T,
+      N = k + C + M + D,
       I = Object.freeze({
         devicePixelContentBoxSize: f(Math.round(A * devicePixelRatio), Math.round(k * devicePixelRatio), o),
         borderBoxSize: f(R, N, o),
         contentBoxSize: f(A, k, o),
-        contentRect: new i.DOMRectReadOnly(v, g, A, k)
+        contentRect: new i.N(v, g, A, k)
       });
     return s.set(e, I), I
   },
@@ -74,9 +74,9 @@ var r = n("644387"),
       a = n.contentBoxSize,
       o = n.devicePixelContentBoxSize;
     switch (t) {
-      case r.ResizeObserverBoxOptions.DEVICE_PIXEL_CONTENT_BOX:
+      case r.z.DEVICE_PIXEL_CONTENT_BOX:
         return o;
-      case r.ResizeObserverBoxOptions.BORDER_BOX:
+      case r.z.BORDER_BOX:
         return i;
       default:
         return a

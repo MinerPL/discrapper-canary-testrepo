@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
-  GuildMemberSafetyMembers: function() {
-    return A
-  },
-  MemberSafetySecondaryIndex: function() {
+n.d(t, {
+  R_: function() {
     return i
+  },
+  cm: function() {
+    return N
   }
-}), n("653041"), n("47120");
-var i, r, s = n("498607"),
-  a = n.n(s),
-  o = n("759174"),
-  l = n("493892"),
-  u = n("594174"),
-  d = n("815790"),
-  _ = n("588215"),
-  c = n("44715"),
-  E = n("331551");
+}), n(653041), n(47120);
+var i, r, s = n(498607),
+  o = n.n(s),
+  a = n(759174),
+  l = n(493892),
+  u = n(594174),
+  _ = n(815790),
+  d = n(588215),
+  c = n(44715),
+  E = n(331551);
 
 function I(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function I(e, t, n) {
 }
 let T = Date.now();
 
-function f(e) {
+function h(e) {
   let t = [e.isCurrentGuildMemberByTimestamp ? "CURRENT_GUILD_MEMBER" : "NEW_GUILD_MEMBER"];
   return e.isIncludedInSearchResults && t.push("INCLUDED_IN_SEARCH_RESULTS"), t
 }
@@ -36,12 +36,12 @@ function S(e) {
   return e.sort
 }
 
-function h() {
-  return new o.SecondaryIndexMap(f, S)
+function f() {
+  return new a.h(h, S)
 }(r = i || (i = {})).NEW_GUILD_MEMBER = "NEW_GUILD_MEMBER", r.CURRENT_GUILD_MEMBER = "CURRENT_GUILD_MEMBER", r.INCLUDED_IN_SEARCH_RESULTS = "INCLUDED_IN_SEARCH_RESULTS";
-class A {
+class N {
   reset() {
-    this._membersMap.clear(), this._membersMap = h(), this.resetNewMemberTimestamp()
+    this._membersMap.clear(), this._membersMap = f(), this.resetNewMemberTimestamp()
   }
   resetNewMemberTimestamp() {
     this.newMemberTimestamp = Date.now()
@@ -49,11 +49,11 @@ class A {
   enhanceNewMember(e, t) {
     var n;
     let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-      r = (0, d.getJoinedAtTimestamp)(e.joinedAt),
+      r = (0, _.Dw)(e.joinedAt),
       {
         hasUnusualDmActivity: s,
-        hasUnusualAccountActivity: a,
-        sourceInviteCode: o,
+        hasUnusualAccountActivity: o,
+        sourceInviteCode: a,
         joinSourceType: l,
         inviterId: c,
         integrationType: I
@@ -61,8 +61,8 @@ class A {
       T = u.default.getUser(e.userId);
     return {
       hasUnusualDmActivity: s,
-      hasUnusualAccountActivity: a,
-      sourceInviteCode: o,
+      hasUnusualAccountActivity: o,
+      sourceInviteCode: a,
       joinSourceType: l,
       inviterId: c,
       integrationType: I,
@@ -70,7 +70,7 @@ class A {
       isCurrentGuildMemberByTimestamp: r <= this.newMemberTimestamp,
       isIncludedInSearchResults: !1,
       user: T,
-      sort: (0, E.getSortValueForMember)(e, null !== (n = t.selectedSort) && void 0 !== n ? n : _.OrderBy.ORDER_BY_UNSPECIFIED),
+      sort: (0, E.b)(e, null !== (n = t.selectedSort) && void 0 !== n ? n : d.d$.ORDER_BY_UNSPECIFIED),
       joinedAtTimestamp: r,
       ...i
     }
@@ -80,16 +80,16 @@ class A {
     let {
       sourceInviteCode: r,
       joinSourceType: s,
-      inviterId: a,
-      integrationType: o
-    } = null !== (n = (0, c.getMemberSupplementalByGuildId)(this.guildId)[e]) && void 0 !== n ? n : {};
+      inviterId: o,
+      integrationType: a
+    } = null !== (n = (0, c.W2)(this.guildId)[e]) && void 0 !== n ? n : {};
     return {
       sourceInviteCode: null != r ? r : null,
       joinSourceType: null != s ? s : null,
-      inviterId: null != a ? a : null,
-      integrationType: null != o ? o : null,
-      hasUnusualDmActivity: null != (i = t) && new Date(i).getTime() >= T - _.UNUSUAL_DM_COMPARISON_DELTA,
-      hasUnusualAccountActivity: (0, l.isSpammer)(e)
+      inviterId: null != o ? o : null,
+      integrationType: null != a ? a : null,
+      hasUnusualDmActivity: null != (i = t) && new Date(i).getTime() >= T - d.rL,
+      hasUnusualAccountActivity: (0, l.He)(e)
     }
   }
   createMember(e) {
@@ -106,17 +106,17 @@ class A {
       },
       s = !1,
       {
-        sourceInviteCode: o,
+        sourceInviteCode: a,
         hasUnusualDmActivity: l,
         hasUnusualAccountActivity: u,
-        joinSourceType: d,
-        inviterId: _,
+        joinSourceType: _,
+        inviterId: d,
         integrationType: c
       } = this._computeMemberSupplementals(i.userId, null !== (n = r.unusualDMActivityUntil) && void 0 !== n ? n : i.unusualDMActivityUntil);
-    for (let e in i.sourceInviteCode !== o && (r.sourceInviteCode = o), i.hasUnusualDmActivity !== l && (r.hasUnusualDmActivity = l), i.hasUnusualAccountActivity !== u && (r.hasUnusualAccountActivity = u), i.joinSourceType !== d && (r.joinSourceType = d), i.inviterId !== _ && (r.inviterId = _), i.integrationType !== c && (r.integrationType = c), r) {
+    for (let e in i.sourceInviteCode !== a && (r.sourceInviteCode = a), i.hasUnusualDmActivity !== l && (r.hasUnusualDmActivity = l), i.hasUnusualAccountActivity !== u && (r.hasUnusualAccountActivity = u), i.joinSourceType !== _ && (r.joinSourceType = _), i.inviterId !== d && (r.inviterId = d), i.integrationType !== c && (r.integrationType = c), r) {
       let t = r[e],
         n = i[e];
-      !a()(t, n) && (i[e] = t, s = !0)
+      !o()(t, n) && (i[e] = t, s = !0)
     }
     return this._membersMap.set(i.userId, i) || s
   }
@@ -136,6 +136,6 @@ class A {
     return this._membersMap.version
   }
   constructor(e) {
-    I(this, "guildId", void 0), I(this, "_membersMap", void 0), I(this, "newMemberTimestamp", Date.now()), this.guildId = e, this._membersMap = h()
+    I(this, "guildId", void 0), I(this, "_membersMap", void 0), I(this, "newMemberTimestamp", Date.now()), this.guildId = e, this._membersMap = f()
   }
 }

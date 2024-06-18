@@ -1,81 +1,84 @@
 "use strict";
-n.r(t), n.d(t, {
-  NEW_MEMBER_ACTION_MAX: function() {
-    return E
-  },
-  NEW_MEMBER_ACTION_TITLE_MAX_LENGTH: function() {
-    return c
-  },
-  NEW_MEMBER_ACTION_TITLE_MIN_LENGTH: function() {
-    return _
-  },
-  NewMemberActionTypes: function() {
-    return r
-  },
-  RESOURCE_CHANNEL_DESCRIPTION_MAX_LENGTH: function() {
-    return f
-  },
-  RESOURCE_CHANNEL_MAX: function() {
-    return S
-  },
-  RESOURCE_CHANNEL_TITLE_MAX_LENGTH: function() {
-    return T
-  },
-  RESOURCE_CHANNEL_TITLE_MIN_LENGTH: function() {
-    return I
-  },
-  WELCOME_MESSAGE_MAX_LENGTH: function() {
-    return d
-  },
-  WELCOME_MESSAGE_MIN_LENGTH: function() {
-    return u
-  },
-  actionsFromServer: function() {
-    return O
-  },
-  isChannelValidForNewMemberAction: function() {
-    return L
-  },
-  isChannelValidForResourceChannel: function() {
-    return g
-  },
-  isSettingsEmpty: function() {
+n.d(t, {
+  HH: function() {
     return R
   },
-  isSettingsValid: function() {
-    return C
+  O9: function() {
+    return T
   },
-  isWelcomeMessageEmpty: function() {
-    return p
+  Vu: function() {
+    return f
   },
-  newMemberActionFromServer: function() {
-    return h
+  W4: function() {
+    return c
   },
-  resourceChannelFromServer: function() {
+  Wz: function() {
+    return E
+  },
+  Z3: function() {
+    return I
+  },
+  ZR: function() {
+    return d
+  },
+  am: function() {
+    return S
+  },
+  av: function() {
+    return g
+  },
+  cq: function() {
     return A
   },
-  settingsFromServer: function() {
+  j: function() {
+    return o
+  },
+  k3: function() {
+    return v
+  },
+  kb: function() {
+    return D
+  },
+  n: function() {
+    return h
+  },
+  oi: function() {
+    return s
+  },
+  pw: function() {
+    return p
+  },
+  rk: function() {
+    return C
+  },
+  tB: function() {
+    return O
+  },
+  uo: function() {
+    return L
+  },
+  vD: function() {
     return m
   },
-  settingsToServer: function() {
+  x3: function() {
     return N
   }
 });
-var i, r, s = n("592125"),
-  a = n("823379"),
-  o = n("700785"),
-  l = n("981631");
-let u = 7,
-  d = 300,
-  _ = 7,
-  c = 60,
-  E = 5,
-  I = 1,
-  T = 30,
+var i, r, s, o, a = n(592125),
+  l = n(823379),
+  u = n(700785),
+  _ = n(981631);
+let d = 7,
+  c = 300,
+  E = 7,
+  I = 60,
+  T = 5,
+  h = 1,
+  S = 30,
   f = 200,
-  S = 7;
+  N = 7;
 
-function h(e) {
+function A(e) {
   var t;
   return {
     channelId: e.channel_id,
@@ -91,7 +94,7 @@ function h(e) {
   }
 }
 
-function A(e) {
+function m(e) {
   var t, n;
   return {
     channelId: e.channel_id,
@@ -106,38 +109,38 @@ function A(e) {
   }
 }
 
-function m(e) {
+function O(e) {
   if (null == e) return null;
   let {
     welcome_message: t,
     new_member_actions: n,
     resource_channels: i,
     enabled: r
-  } = e, o = {
+  } = e, s = {
     authorIds: t.author_ids,
     message: t.message
-  }, l = n.filter(e => (0, a.isNotNullish)(s.default.getChannel(e.channel_id))).map(h);
+  }, o = n.filter(e => (0, l.lm)(a.Z.getChannel(e.channel_id))).map(A);
   return {
-    welcomeMessage: o,
-    newMemberActions: l,
-    resourceChannels: i.filter(e => (0, a.isNotNullish)(s.default.getChannel(e.channel_id))).map(A),
+    welcomeMessage: s,
+    newMemberActions: o,
+    resourceChannels: i.filter(e => (0, l.lm)(a.Z.getChannel(e.channel_id))).map(m),
     enabled: r
   }
 }
 
-function N(e, t) {
+function R(e, t) {
   var n, i;
   if (null == t) return null;
   let {
     welcomeMessage: r,
-    newMemberActions: o,
-    resourceChannels: l,
+    newMemberActions: s,
+    resourceChannels: o,
     enabled: u
-  } = t, d = {
+  } = t, _ = {
     author_ids: null !== (n = null == r ? void 0 : r.authorIds) && void 0 !== n ? n : [],
     message: null !== (i = null == r ? void 0 : r.message) && void 0 !== i ? i : ""
-  }, _ = (null != o ? o : []).filter(e => (0, a.isNotNullish)(s.default.getChannel(e.channelId))).map(e => {
-    var t, n, i, r, s, a, o;
+  }, d = (null != s ? s : []).filter(e => (0, l.lm)(a.Z.getChannel(e.channelId))).map(e => {
+    var t, n, i, r, s, o, a;
     return {
       channel_id: e.channelId,
       action_type: e.actionType,
@@ -146,17 +149,17 @@ function N(e, t) {
       emoji: {
         id: null !== (r = null === (t = e.emoji) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : void 0,
         name: null !== (s = null === (n = e.emoji) || void 0 === n ? void 0 : n.name) && void 0 !== s ? s : void 0,
-        animated: null !== (a = null === (i = e.emoji) || void 0 === i ? void 0 : i.animated) && void 0 !== a ? a : void 0
+        animated: null !== (o = null === (i = e.emoji) || void 0 === i ? void 0 : i.animated) && void 0 !== o ? o : void 0
       },
-      icon: null !== (o = e.icon) && void 0 !== o ? o : void 0
+      icon: null !== (a = e.icon) && void 0 !== a ? a : void 0
     }
   });
   return {
     guild_id: e,
-    welcome_message: d,
-    new_member_actions: _,
-    resource_channels: (null != l ? l : []).filter(e => (0, a.isNotNullish)(s.default.getChannel(e.channelId))).map(e => {
-      var t, n, i, r, s, a, o;
+    welcome_message: _,
+    new_member_actions: d,
+    resource_channels: (null != o ? o : []).filter(e => (0, l.lm)(a.Z.getChannel(e.channelId))).map(e => {
+      var t, n, i, r, s, o, a;
       return {
         channel_id: e.channelId,
         title: e.title,
@@ -164,15 +167,15 @@ function N(e, t) {
         emoji: {
           id: null !== (r = null === (t = e.emoji) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : void 0,
           name: null !== (s = null === (n = e.emoji) || void 0 === n ? void 0 : n.name) && void 0 !== s ? s : void 0,
-          animated: null !== (a = null === (i = e.emoji) || void 0 === i ? void 0 : i.animated) && void 0 !== a ? a : void 0
+          animated: null !== (o = null === (i = e.emoji) || void 0 === i ? void 0 : i.animated) && void 0 !== o ? o : void 0
         },
-        icon: null !== (o = e.icon) && void 0 !== o ? o : void 0
+        icon: null !== (a = e.icon) && void 0 !== a ? a : void 0
       }
     }),
     enabled: u
   }
-}(i = r || (r = {}))[i.VIEW = 0] = "VIEW", i[i.CHAT = 1] = "CHAT";
-let O = e => {
+}(i = s || (s = {}))[i.VIEW = 0] = "VIEW", i[i.CHAT = 1] = "CHAT";
+let C = e => {
   if (null == e) return null;
   let t = {};
   for (let n in e.channel_actions) t[n] = e.channel_actions[n].completed;
@@ -183,27 +186,27 @@ function p(e) {
   return null == e || (null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)) && !0
 }
 
-function R(e) {
+function g(e) {
   return null == e || !!p(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)) && !0
 }
 
-function C(e) {
-  var t, n;
-  return null != e && (!!R(e) || (null === (t = e.welcomeMessage) || void 0 === t ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < u) && (null === (n = e.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < 3) && !0)
-}
-
-function g(e) {
-  return e.type === l.ChannelTypes.GUILD_TEXT && !o.canEveryoneRole(l.Permissions.SEND_MESSAGES, e) && o.canEveryoneRole(l.Permissions.VIEW_CHANNEL, e)
-}
-
 function L(e) {
+  var t, n;
+  return null != e && (!!g(e) || (null === (t = e.welcomeMessage) || void 0 === t ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < d) && (null === (n = e.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < 3) && !0)
+}
+
+function v(e) {
+  return e.type === _.d4z.GUILD_TEXT && !u.Uu(_.Plq.SEND_MESSAGES, e) && u.Uu(_.Plq.VIEW_CHANNEL, e)
+}
+
+function D(e) {
   switch (e.type) {
-    case l.ChannelTypes.GUILD_TEXT:
-    case l.ChannelTypes.GUILD_ANNOUNCEMENT:
-    case l.ChannelTypes.GUILD_FORUM:
-    case l.ChannelTypes.GUILD_MEDIA:
-      return o.canEveryoneRole(l.Permissions.VIEW_CHANNEL, e);
+    case _.d4z.GUILD_TEXT:
+    case _.d4z.GUILD_ANNOUNCEMENT:
+    case _.d4z.GUILD_FORUM:
+    case _.d4z.GUILD_MEDIA:
+      return u.Uu(_.Plq.VIEW_CHANNEL, e);
     default:
       return !1
   }
-}
+}(r = o || (o = {}))[r.DEFAULT = 0] = "DEFAULT", r[r.TODO = 1] = "TODO", r[r.RESOURCE = 2] = "RESOURCE"

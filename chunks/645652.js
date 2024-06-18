@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return l
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("120356"),
-  a = n.n(r),
-  s = n("819758"),
-  o = n("710898");
+var i = n(735250);
+n(470079);
+var r = n(120356),
+  s = n.n(r),
+  o = n(819758),
+  a = n(108671);
 
 function l(e) {
   let {
@@ -19,16 +19,16 @@ function l(e) {
     hideStars: l
   } = e;
   return (0, i.jsxs)("span", {
-    className: a()(o.container, t, {
-      [o.containerColored]: r
+    className: s()(a.container, t, {
+      [a.containerColored]: r
     }),
     children: [n, l ? null : (0, i.jsxs)(i.Fragment, {
-      children: [(0, i.jsx)(s.default, {
-        foreground: o.sparkleStarTopRight
-      }), (0, i.jsx)(s.default, {
-        foreground: o.sparkleStarRight
-      }), (0, i.jsx)(s.default, {
-        foreground: o.sparkleStarBottomLeft
+      children: [(0, i.jsx)(o.Z, {
+        foreground: a.sparkleStarTopRight
+      }), (0, i.jsx)(o.Z, {
+        foreground: a.sparkleStarRight
+      }), (0, i.jsx)(o.Z, {
+        foreground: a.sparkleStarBottomLeft
       })]
     })]
   })

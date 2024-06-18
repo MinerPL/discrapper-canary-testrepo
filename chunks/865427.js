@@ -1,60 +1,60 @@
 "use strict";
-n.r(t), n.d(t, {
-  APP_VERSION: function() {
-    return d
-  },
-  getAPIEndpoint: function() {
-    return _
-  },
-  getBuildOverride: function() {
+n.d(t, {
+  Ce: function() {
     return c
   },
-  getBuildOverrideExperiments: function() {
-    return T
+  Ji: function() {
+    return _
   },
-  getBuildOverrideMeta: function() {
-    return E
-  },
-  isBuildOverrideLink: function() {
+  _G: function() {
     return S
   },
-  isManualBuildOverrideLink: function() {
-    return A
+  _I: function() {
+    return E
   },
-  probablyHasBuildOverride: function() {
+  _S: function() {
+    return T
+  },
+  fD: function() {
     return I
   },
-  validateURL: function() {
-    return p
+  mG: function() {
+    return N
+  },
+  pU: function() {
+    return d
+  },
+  r4: function() {
+    return O
   }
-}), n("642549"), n("47120");
-var i = n("973361"),
-  r = n("729594"),
-  a = n("544891"),
-  s = n("358085"),
-  o = n("591759"),
-  l = n("908442");
-n("981631");
+}), n(642549), n(47120);
+var i = n(973361),
+  r = n(729594),
+  s = n(544891),
+  o = n(358085),
+  a = n(591759),
+  l = n(908442);
+n(981631);
 let u = void 0,
-  d = (0, s.isAndroid)() ? u.Version.split(" - ")[0] : (0, s.isIOS)() ? u.Version : void 0;
+  _ = (0, o.isAndroid)() ? u.Version.split(" - ")[0] : (0, o.isIOS)() ? u.Version : void 0;
 
-function _(e) {
+function d(e) {
   return "".concat(location.protocol, "//").concat(location.host).concat(e)
 }
 
 function c() {
-  let e = o.default.safeParseWithQuery(_("/__development/build_overrides"));
-  return null == e ? Promise.resolve(null) : (e.search = null, d && (e.query.version = d), a.HTTP.get({
+  let e = a.Z.safeParseWithQuery(d("/__development/build_overrides"));
+  return null == e ? Promise.resolve(null) : (e.search = null, _ && (e.query.version = _), s.tn.get({
     url: r.format(e),
     oldFormErrors: !0
   }).then(e => e.body || null, () => null))
 }
 
 function E(e) {
-  if (A(e)) return Promise.resolve(function(e) {
-    let t = e.match(h);
+  if (N(e)) return Promise.resolve(function(e) {
+    let t = e.match(f);
     if (null == t || 2 !== t.length) return null;
-    let n = (0, s.getNativePlatform)(),
+    let n = (0, o.getNativePlatform)(),
       i = t[1];
     return {
       targetBuildOverride: {
@@ -67,21 +67,21 @@ function E(e) {
       expiresAt: "Mon, 1 Jan 2038 00:00:00 GMT"
     }
   }(e));
-  let t = o.default.safeParseWithQuery(e);
-  return null == t ? Promise.resolve(null) : (t.search = null, t.query.meta = "true", d && (t.query.version = d), t.host = window.location.host, a.HTTP.get({
+  let t = a.Z.safeParseWithQuery(e);
+  return null == t ? Promise.resolve(null) : (t.search = null, t.query.meta = "true", _ && (t.query.version = _), t.host = window.location.host, s.tn.get({
     url: r.format(t),
     oldFormErrors: !0
   }).then(e => e.body || null, () => null))
 }
 
 function I() {
-  return -1 !== window.document.cookie.indexOf("".concat(l.BUILD_OVERRIDE_COOKIE_NAME, "="))
+  return -1 !== window.document.cookie.indexOf("".concat(l.ZF, "="))
 }
 
 function T() {
   try {
     var e;
-    let t = i.parse(window.document.cookie)[l.BUILD_OVERRIDE_COOKIE_NAME];
+    let t = i.parse(window.document.cookie)[l.ZF];
     if (null == t) return {};
     let n = JSON.parse(atob(t.substring(t.indexOf(".") + 1)));
     return null !== (e = n.$meta.experiments) && void 0 !== e ? e : {}
@@ -89,26 +89,26 @@ function T() {
     return {}
   }
 }
-let f = RegExp("^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link?[\\S]+$", "i");
+let h = RegExp("^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link?[\\S]+$", "i");
 
 function S(e) {
-  return null != e && f.test(e)
-}
-let h = RegExp("^dev://branch/([\\w-./]+)$", "i");
-
-function A(e) {
   return null != e && h.test(e)
 }
-let m = new Set(["canary.discord.com", "ptb.discord.com", "discord.com", "canary.discordapp.com", "ptb.discordapp.com", "discordapp.com"]),
-  N = new Set(["/__development/link", "/__development/link/"]);
+let f = RegExp("^dev://branch/([\\w-./]+)$", "i");
 
-function p(e) {
-  if (A(e)) return {
+function N(e) {
+  return null != e && f.test(e)
+}
+let A = new Set(["canary.discord.com", "ptb.discord.com", "discord.com", "canary.discordapp.com", "ptb.discordapp.com", "discordapp.com"]),
+  m = new Set(["/__development/link", "/__development/link/"]);
+
+function O(e) {
+  if (N(e)) return {
     payload: null,
     url: e
   };
-  let t = o.default.safeParseWithQuery(e);
-  if (null == t || !m.has(t.hostname) || !("s" in t.query) || !N.has(t.pathname)) return null;
+  let t = a.Z.safeParseWithQuery(e);
+  if (null == t || !A.has(t.hostname) || !("s" in t.query) || !m.has(t.pathname)) return null;
   for (let e in t.query) "s" !== e && delete t.query[e];
   return {
     payload: t.query.s,

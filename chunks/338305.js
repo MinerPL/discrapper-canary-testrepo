@@ -1,24 +1,24 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return l
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("922770"),
-  s = n("466377"),
-  a = n("689938"),
-  o = n("462278");
+var i = n(735250);
+n(470079);
+var r = n(922770),
+  s = n(466377),
+  o = n(689938),
+  a = n(721790);
 
 function l(e) {
-  return (0, i.jsx)(s.ModalRoot, {
+  return (0, i.jsx)(s.Y0, {
     ...e,
-    "aria-label": a.default.Messages.LOADING,
-    size: s.ModalSize.SMALL,
+    "aria-label": o.Z.Messages.LOADING,
+    size: s.Cg.SMALL,
     children: (0, i.jsx)("div", {
-      className: o.spinnerContainer,
-      children: (0, i.jsx)(r.Spinner, {})
+      className: a.spinnerContainer,
+      children: (0, i.jsx)(r.$, {})
     })
   })
 }

@@ -3,8 +3,8 @@
 function r(e) {
   return e ? (e.nodeName || "").toLowerCase() : null
 }
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 })

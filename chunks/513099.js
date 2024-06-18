@@ -1,85 +1,90 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return p
+n.d(t, {
+  Z: function() {
+    return C
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  a = n("442837"),
-  s = n("481060"),
-  o = n("420660"),
-  l = n("233440"),
-  u = n("199902"),
-  d = n("158776"),
-  _ = n("74538"),
-  c = n("998502"),
-  E = n("785717"),
-  I = n("204197"),
-  T = n("652853"),
-  f = n("228168"),
-  S = n("981631"),
-  h = n("474936"),
-  A = n("579935");
-let m = s.AvatarSizes.SIZE_80,
-  N = c.default.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
+var i = n(735250),
+  r = n(470079),
+  s = n(442837),
+  o = n(481060),
+  a = n(420660),
+  l = n(100527),
+  u = n(906732),
+  _ = n(233440),
+  d = n(199902),
+  c = n(158776),
+  E = n(74538),
+  I = n(998502),
+  T = n(785717),
+  h = n(204197),
+  S = n(652853),
+  f = n(228168),
+  N = n(981631),
+  A = n(474936),
+  m = n(579935);
+let O = o.AvatarSizes.SIZE_80,
+  R = I.ZP.getEnableHardwareAcceleration() ? o.AnimatedAvatar : o.Avatar;
 
-function p(e) {
+function C(e) {
   let {
     user: t,
     displayProfile: n,
-    guildId: c,
-    channelId: p,
-    animateOnHover: O,
-    onOpenProfile: C
+    guildId: I,
+    channelId: C,
+    animateOnHover: p,
+    onOpenProfile: g
   } = e, {
-    theme: R
-  } = (0, T.useUserProfileThemeContext)(), {
-    trackUserProfileAction: g
-  } = (0, E.useUserProfileAnalyticsContext)(), L = _.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, h.PremiumTypes.TIER_2), v = r.useMemo(() => (0, l.shouldDisableUserPresenceInChannel)(t, p), [t, p]), {
-    status: D,
-    isMobileOnline: M
-  } = (0, a.useStateFromStoresObject)([u.default, d.default], () => {
-    let e = null != u.default.getAnyStreamForUser(t.id),
-      n = d.default.findActivity(t.id, t => {
+    theme: L
+  } = (0, S.z)(), {
+    analyticsLocations: v
+  } = (0, u.ZP)(l.Z.AVATAR), {
+    trackUserProfileAction: D
+  } = (0, T.KZ)(), M = E.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, A.p9.TIER_2), P = r.useMemo(() => (0, _.W)(t, C), [t, C]), {
+    status: y,
+    isMobileOnline: U
+  } = (0, s.cj)([d.Z, c.Z], () => {
+    let e = null != d.Z.getAnyStreamForUser(t.id),
+      n = c.Z.findActivity(t.id, t => {
         let {
           type: n
         } = t;
-        return e ? n === S.ActivityTypes.PLAYING : n !== S.ActivityTypes.CUSTOM_STATUS
+        return e ? n === N.IIU.PLAYING : n !== N.IIU.CUSTOM_STATUS
       });
     return {
-      status: (0, o.default)(n) ? S.StatusTypes.STREAMING : d.default.getStatus(t.id),
-      isMobileOnline: d.default.isMobileOnline(t.id)
+      status: (0, a.Z)(n) ? N.Skl.STREAMING : c.Z.getStatus(t.id),
+      isMobileOnline: c.Z.isMobileOnline(t.id)
     }
   }), {
-    avatarDecorationSrc: y,
-    avatarSrc: P,
-    eventHandlers: U
-  } = (0, I.default)({
+    avatarDecorationSrc: b,
+    avatarSrc: G,
+    eventHandlers: w
+  } = (0, h.Z)({
     user: t,
-    guildId: c,
-    size: m,
-    animateOnHover: O
+    guildId: I,
+    size: O,
+    animateOnHover: p
   });
-  return (0, i.jsx)(s.Clickable, {
-    ...U,
-    className: A.clickable,
-    onClick: null == C ? void 0 : () => {
-      g({
-        action: "PRESS_VIEW_PROFILE"
-      }), null == C || C()
+  return (0, i.jsx)(o.Clickable, {
+    ...w,
+    className: m.clickable,
+    onClick: null == g ? void 0 : () => {
+      D({
+        action: "PRESS_VIEW_PROFILE",
+        analyticsLocations: v
+      }), null == g || g()
     },
-    children: (0, i.jsx)(N, {
-      src: P,
-      avatarDecoration: y,
-      size: m,
+    children: (0, i.jsx)(R, {
+      src: G,
+      avatarDecoration: b,
+      size: O,
       "aria-label": t.username,
-      imageClassName: null != C ? A.overlay : void 0,
-      status: v ? S.StatusTypes.UNKNOWN : D,
-      statusBackdropColor: L && !v ? (0, s.getStatusBackdropColor)(R) : void 0,
-      isMobile: M,
+      imageClassName: null != g ? m.overlay : void 0,
+      status: P ? N.Skl.UNKNOWN : y,
+      statusBackdropColor: M && !P ? (0, o.getStatusBackdropColor)(L) : void 0,
+      isMobile: U,
       statusTooltip: !0,
-      statusTooltipDelay: f.USER_PROFILE_TOOLTIP_DELAY
+      statusTooltipDelay: f.vB
     })
   })
 }

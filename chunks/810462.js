@@ -1,27 +1,27 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("143927"),
-  a = n("260866"),
-  o = n("461745"),
-  l = n("806966"),
-  u = n("28546"),
-  d = n("275558");
-let _ = r.forwardRef(function(e, t) {
+n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(143927),
+  o = n(260866),
+  a = n(461745),
+  l = n(806966),
+  u = n(28546),
+  _ = n(494064);
+let d = r.forwardRef(function(e, t) {
   let {
     store: n,
-    hasSendableExpressions: _,
+    hasSendableExpressions: d,
     onKeyDown: c,
     gridNavigatorId: E,
     expressionsListRef: I,
     defaultSearchPlaceholder: T,
-    emptySearchPlaceholder: f
-  } = e, S = r.useRef(null), [h, A] = (0, u.useExpressionPickerStore)(e => [e.searchQuery, e.isSearchSuggestion], s.default), m = n.useStore(e => e.searchPlaceholder), N = n.useStore(e => e.inspectedExpressionPosition, s.default), O = r.useCallback(e => {
+    emptySearchPlaceholder: h
+  } = e, S = r.useRef(null), [f, N] = (0, u.Iu)(e => [e.searchQuery, e.isSearchSuggestion], s.Z), A = n.useStore(e => e.searchPlaceholder), m = n.useStore(e => e.inspectedExpressionPosition, s.Z), O = r.useCallback(e => {
     var t;
-    n.setActiveCategoryIndex("" === e ? 0 : l.INACTIVE_CATEGORY_INDEX), n.setInspectedExpressionPosition(0, 0), n.setSearchPlaceholder(null), (0, u.setSearchQuery)(e), null === (t = I.current) || void 0 === t || t.scrollTo(0)
-  }, [I, n]), p = r.useCallback(() => {
-    (0, u.setSearchQuery)("")
+    n.setActiveCategoryIndex("" === e ? 0 : l.c), n.setInspectedExpressionPosition(0, 0), n.setSearchPlaceholder(null), (0, u.ql)(e), null === (t = I.current) || void 0 === t || t.scrollTo(0)
+  }, [I, n]), R = r.useCallback(() => {
+    (0, u.ql)("")
   }, []);
   return r.useImperativeHandle(t, () => ({
     focus: () => {
@@ -29,32 +29,32 @@ let _ = r.forwardRef(function(e, t) {
       return null === (e = S.current) || void 0 === e ? void 0 : e.focus()
     }
   })), r.useLayoutEffect(() => {
-    if (A) {
+    if (N) {
       var e;
       null === (e = S.current) || void 0 === e || e.focus()
     }
-  }, [A]), (0, i.jsx)("div", {
-    className: d.wrapper,
-    children: (0, i.jsx)(o.default, {
-      autoFocus: _,
-      disabled: !_,
-      query: h,
+  }, [N]), (0, i.jsx)("div", {
+    className: _.wrapper,
+    children: (0, i.jsx)(a.ZP, {
+      autoFocus: d,
+      disabled: !d,
+      query: f,
       ref: S,
-      size: o.default.Sizes.MEDIUM,
-      placeholder: null != m ? m : _ || null == f ? T : f,
-      onClear: p,
+      size: a.ZP.Sizes.MEDIUM,
+      placeholder: null != A ? A : d || null == h ? T : h,
+      onClear: R,
       onKeyDown: c,
       onQueryChange: O,
-      className: d.__invalid_searchBar,
+      className: _.__invalid_searchBar,
       preventEscapePropagation: !1,
       useKeyboardNavigation: !1,
       inputProps: {
         "aria-haspopup": "grid",
         "aria-controls": E,
         "aria-expanded": !0,
-        "aria-activedescendant": (0, a.makeGridId)(E, N.columnIndex, N.rowIndex)
+        "aria-activedescendant": (0, o.NE)(E, m.columnIndex, m.rowIndex)
       }
     })
   })
 });
-t.default = _
+t.Z = d

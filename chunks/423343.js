@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  StateHistory: function() {
+n.d(t, {
+  K: function() {
     return u
   }
-}), n("653041");
-var i = n("392711"),
+}), n(653041);
+var i = n(392711),
   r = n.n(i),
-  s = n("379649"),
-  a = n("126168"),
-  o = n("981631");
+  s = n(379649),
+  o = n(126168),
+  a = n(981631);
 
 function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -25,27 +25,27 @@ class u {
   update(e) {
     this.current !== e && (this.current = e, this.history.push({
       state: e,
-      startTime: (0, s.now)()
+      startTime: (0, s.zO)()
     }))
   }
   getVoiceConnectionSuccessStats() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, s.now)(),
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, s.zO)(),
       t = this.getStateDurations(e),
       n = e => r().sumBy(t, t => t.state === e ? t.durationMs : 0);
     return {
-      state_awaiting_endpoint_ms: n(o.RTCConnectionStates.AWAITING_ENDPOINT),
-      state_authenticating_ms: n(o.RTCConnectionStates.AUTHENTICATING),
-      state_connecting_ms: n(o.RTCConnectionStates.CONNECTING),
-      state_disconnected_ms: n(o.RTCConnectionStates.DISCONNECTED),
-      state_ice_checking_ms: n(o.RTCConnectionStates.ICE_CHECKING),
-      state_no_route_ms: n(o.RTCConnectionStates.NO_ROUTE),
-      state_rtc_connecting_ms: n(o.RTCConnectionStates.RTC_CONNECTING),
-      state_rtc_disconnected_ms: n(o.RTCConnectionStates.RTC_DISCONNECTED)
+      state_awaiting_endpoint_ms: n(a.hes.AWAITING_ENDPOINT),
+      state_authenticating_ms: n(a.hes.AUTHENTICATING),
+      state_connecting_ms: n(a.hes.CONNECTING),
+      state_disconnected_ms: n(a.hes.DISCONNECTED),
+      state_ice_checking_ms: n(a.hes.ICE_CHECKING),
+      state_no_route_ms: n(a.hes.NO_ROUTE),
+      state_rtc_connecting_ms: n(a.hes.RTC_CONNECTING),
+      state_rtc_disconnected_ms: n(a.hes.RTC_DISCONNECTED)
     }
   }
   getStateDurations(e) {
     if (0 === this.history.length) return [];
-    let t = (0, a.default)(this.history, (e, t) => ({
+    let t = (0, o.Z)(this.history, (e, t) => ({
       state: e.state,
       durationMs: t.startTime - e.startTime
     }));

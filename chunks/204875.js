@@ -1,30 +1,30 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return i
+t.d(s, {
+  Z: function() {
+    return a
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("481060"),
-  n = s("790752");
+var n = t(735250);
+t(470079);
+var i = t(481060),
+  l = t(108319);
 
-function i(e) {
+function a(e) {
   let {
-    children: t,
-    disabled: s,
-    disabledTooltip: i,
+    children: s,
+    disabled: t,
+    disabledTooltip: a,
     id: r,
     ...o
   } = e;
-  return (0, a.jsx)(l.TooltipContainer, {
-    text: s ? i : null,
-    children: (0, a.jsx)(l.TabBar.Item, {
-      className: n.tabBarItem,
+  return (0, n.jsx)(i.TooltipContainer, {
+    text: t ? a : null,
+    children: (0, n.jsx)(i.TabBar.Item, {
+      className: l.tabBarItem,
       id: r,
-      disabled: s,
+      disabled: t,
       ...o,
-      children: t
+      children: s
     })
   })
 }

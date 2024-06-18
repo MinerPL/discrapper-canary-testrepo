@@ -1,116 +1,124 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
-  o = n("924826"),
-  l = n("442837"),
-  u = n("481060"),
-  d = n("30465"),
-  _ = n("430824"),
-  c = n("156361"),
-  E = n("153124"),
-  I = n("153850"),
-  T = n("482207"),
-  f = n("436896"),
-  S = n("590921"),
-  h = n("606992"),
-  A = n("51062"),
-  m = n("364993");
-t.default = r.forwardRef(function(e, t) {
-  var n, a, N, p, O;
+n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(91192),
+  l = n(442837),
+  u = n(481060),
+  _ = n(867176),
+  d = n(317381),
+  c = n(30465),
+  E = n(430824),
+  I = n(156361),
+  T = n(153124),
+  h = n(153850),
+  S = n(482207),
+  f = n(436896),
+  N = n(590921),
+  A = n(606992),
+  m = n(51062),
+  O = n(918559),
+  R = n(583901);
+t.Z = r.forwardRef(function(e, t) {
+  var n, s, C, p, g;
   let {
-    channel: R,
-    type: C,
-    editorHeight: g,
-    onVisibilityChange: L
-  } = e, v = (0, E.useUID)(), D = (0, l.useStateFromStores)([_.default], () => {
+    channel: L,
+    type: v,
+    editorHeight: D,
+    onVisibilityChange: M
+  } = e, P = (0, T.Dt)(), y = (0, l.e7)([E.Z], () => {
     var e;
-    return null !== (e = _.default.getGuild(R.guild_id)) && void 0 !== e ? e : null
-  }, [R.guild_id]), M = r.useRef(), [y, P, U] = (0, A.default)({
+    return null !== (e = E.Z.getGuild(L.guild_id)) && void 0 !== e ? e : null
+  }, [L.guild_id]), U = r.useRef(), [b, G, w] = (0, m.Z)({
     ...e,
-    guild: D
-  }, t, M), b = (null === (n = C.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? T.default : I.default, G = (0, c.getAutocompleteRowId)(y.selectedIndex);
-  (0, d.useChannelEditorPopup)(v, y.isVisible, G), f.default.trackExposure({
+    guild: y
+  }, t, U), k = (null === (n = v.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? S.ZP : h.ZP, B = (0, I.DJ)(b.selectedIndex);
+  (0, c.KR)(P, b.isVisible, B), f.Z.trackExposure({
     location: "6e9811_1"
   });
   let {
-    usePopoutAutocomplete: w
-  } = f.default.useExperiment({
+    usePopoutAutocomplete: x
+  } = f.Z.useExperiment({
     location: "6e9811_2"
   }, {
     autoTrackExposure: !1
-  }), B = (0, h.useChannelAutocompleteLayerPosition)({
-    editorHeight: g,
-    type: C,
-    state: y,
-    isInPopoutExperiment: w
-  }), k = r.useMemo(() => null == B ? "" : String(Date.now()), [null == B ? void 0 : B.top, null == B ? void 0 : B.left, null == B ? void 0 : B.bottom, null == B ? void 0 : B.right]);
+  }), V = (0, A.Z)({
+    editorHeight: D,
+    type: v,
+    state: b,
+    isInPopoutExperiment: x
+  }), Z = (0, l.e7)([d.ZP], () => {
+    let e = d.ZP.getSelfEmbeddedActivityForChannel(L.id),
+      t = d.ZP.getActivityPanelMode();
+    return (0, _.l5)(L) && null != e && e.channelId === L.id && t === O.Ez.PANEL
+  }, [L]), H = r.useMemo(() => null == V ? "" : String(Date.now()), [null == V ? void 0 : V.top, null == V ? void 0 : V.left, null == V ? void 0 : V.bottom, null == V ? void 0 : V.right]);
   if (r.useEffect(() => {
-      L(y.isVisible)
-    }, [L, y.isVisible]), !y.isVisible || null == y.query || void 0 === B) return null;
-  let V = null !== (a = y.query.typeInfo.renderResults({
-    results: y.query.results,
-    selectedIndex: y.selectedIndex,
-    channel: R,
-    guild: D,
-    query: y.query.queryText,
-    options: y.query.options,
-    onHover: e => P.onResultHover(e),
-    onClick: e => P.onResultClick(e)
-  })) && void 0 !== a ? a : null;
-  if (null == V) return null;
-  let x = {
-      [m.autocompleteAttached]: null == B,
-      [m.autocompletePopout]: null != B,
-      [m.bottom]: null == B && "bottom" === e.position
+      M(b.isVisible)
+    }, [M, b.isVisible]), !b.isVisible || null == b.query || void 0 === V) return null;
+  let F = null !== (s = b.query.typeInfo.renderResults({
+    results: b.query.results,
+    selectedIndex: b.selectedIndex,
+    channel: L,
+    guild: y,
+    query: b.query.queryText,
+    options: b.query.options,
+    onHover: e => G.onResultHover(e),
+    onClick: e => G.onResultClick(e)
+  })) && void 0 !== s ? s : null;
+  if (null == F) return null;
+  let Y = {
+      [R.autocompleteAttached]: null == V,
+      [R.autocompletePopout]: null != V,
+      [R.bottom]: null == V && "bottom" === e.position,
+      [R.autocompleteTop]: Z
     },
-    F = 490;
-  null != B && (F = (null === (N = C.autocomplete) || void 0 === N ? void 0 : N.small) ? 200 : (null === (p = y.query) || void 0 === p ? void 0 : p.type) === S.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), F = Math.min(window.innerHeight - 175, F);
-  let H = (0, i.jsx)(c.default, {
-    id: v,
-    className: s()(m.autocomplete, x),
-    innerClassName: m.autocompleteInner,
+    j = 490;
+  null != V && (j = (null === (C = v.autocomplete) || void 0 === C ? void 0 : C.small) ? 200 : (null === (p = b.query) || void 0 === p ? void 0 : p.type) === N.eq.EMOJIS_AND_STICKERS ? 490 : 245), j = Math.min(window.innerHeight - 175, j);
+  let W = (0, i.jsx)(I.ZP, {
+    id: P,
+    className: o()(R.autocomplete, Y),
+    innerClassName: R.autocompleteInner,
     onMouseDown: e => e.preventDefault(),
-    children: (0, i.jsx)(o.ListNavigatorProvider, {
-      navigator: U,
-      children: (0, i.jsx)(o.ListNavigatorContainer, {
+    children: (0, i.jsx)(a.bG, {
+      navigator: w,
+      children: (0, i.jsx)(a.SJ, {
         children: e => {
           let {
             ref: t,
             ...n
           } = e;
           return (0, i.jsx)(u.AdvancedScrollerThin, {
-            id: v,
+            id: P,
             ref: e => {
               var n;
-              t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null, M.current = e
+              t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null, U.current = e
             },
             ...n,
-            className: m.scroller,
+            className: R.scroller,
             style: {
-              maxHeight: F
+              maxHeight: j
             },
             role: "listbox",
-            "aria-labelledby": (0, c.getAutocompleteTitleId)(v),
-            children: V
+            "aria-labelledby": (0, I.rp)(P),
+            children: F
           })
         }
       })
     })
   });
-  return null != B ? (0, i.jsx)(b, {
+  return null != V ? (0, i.jsx)(k, {
     children: (0, i.jsx)(u.ReferencePositionLayer, {
       targetRef: e.targetRef,
-      overrideTargetRect: B,
-      positionKey: k,
-      position: null !== (O = e.position) && void 0 !== O ? O : "top",
+      overrideTargetRect: V,
+      positionKey: H,
+      position: null !== (g = e.position) && void 0 !== g ? g : "top",
       align: "left",
       spacing: 8,
       autoInvert: !0,
       nudgeAlignIntoViewport: !0,
-      children: () => H
+      children: () => W
     })
-  }) : H
+  }) : W
 })

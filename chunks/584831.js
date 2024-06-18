@@ -1,42 +1,42 @@
 "use strict";
-var r, a, o, i, l, u = n("668530"),
-  s = n("476508"),
-  c = n("65007").f,
-  d = n("62691").set,
-  f = n("6938"),
-  p = n("378636"),
-  h = n("192006"),
-  m = n("325435"),
-  y = n("42433"),
-  v = u.MutationObserver || u.WebKitMutationObserver,
-  g = u.document,
-  b = u.process,
-  _ = u.Promise,
-  k = c(u, "queueMicrotask"),
+var r, o, a, i, s, c = n(668530),
+  l = n(476508),
+  u = n(65007).f,
+  d = n(62691).set,
+  p = n(6938),
+  h = n(378636),
+  f = n(192006),
+  m = n(325435),
+  y = n(42433),
+  v = c.MutationObserver || c.WebKitMutationObserver,
+  g = c.document,
+  b = c.process,
+  _ = c.Promise,
+  k = u(c, "queueMicrotask"),
   C = k && k.value;
 if (!C) {
-  var w = new f,
-    S = function() {
+  var Z = new p,
+    w = function() {
       var e, t;
-      for (y && (e = b.domain) && e.exit(); t = w.get();) try {
+      for (y && (e = b.domain) && e.exit(); t = Z.get();) try {
         t()
       } catch (e) {
-        throw w.head && r(), e
+        throw Z.head && r(), e
       }
       e && e.enter()
     };
-  p || y || m || !v || !g ? !h && _ && _.resolve ? ((i = _.resolve(void 0)).constructor = _, l = s(i.then, i), r = function() {
-    l(S)
+  h || y || m || !v || !g ? !f && _ && _.resolve ? ((i = _.resolve(void 0)).constructor = _, s = l(i.then, i), r = function() {
+    s(w)
   }) : y ? r = function() {
-    b.nextTick(S)
-  } : (d = s(d, u), r = function() {
-    d(S)
-  }) : (a = !0, o = g.createTextNode(""), new v(S).observe(o, {
+    b.nextTick(w)
+  } : (d = l(d, c), r = function() {
+    d(w)
+  }) : (o = !0, a = g.createTextNode(""), new v(w).observe(a, {
     characterData: !0
   }), r = function() {
-    o.data = a = !a
+    a.data = o = !o
   }), C = function(e) {
-    !w.head && r(), w.add(e)
+    !Z.head && r(), Z.add(e)
   }
 }
 e.exports = C

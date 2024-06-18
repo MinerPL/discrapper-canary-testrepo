@@ -1,9 +1,9 @@
 "use strict";
-var e = n("327192"),
-  o = n("141603"),
-  i = n("875604"),
-  u = n("570138");
-n("63972");
+var e = n(327192),
+  o = n(141603),
+  i = n(875604),
+  u = n(570138);
+n(63972);
 var s = Array.prototype,
   c = {
     DOMTokenList: !0,

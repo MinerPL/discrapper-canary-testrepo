@@ -1,38 +1,37 @@
 "use strict";
-r.r(t);
-var n = r("467360"),
-  a = r("483266"),
-  o = r("862195"),
-  i = r("24002"),
-  l = r("178683"),
-  u = r("176338"),
-  s = r("526389"),
-  f = "[object Map]",
-  c = "[object Promise]",
-  d = "[object Set]",
+var r = n(467360),
+  i = n(483266),
+  a = n(862195),
+  o = n(24002),
+  s = n(178683),
+  u = n(176338),
+  c = n(526389),
+  l = "[object Map]",
+  d = "[object Promise]",
+  f = "[object Set]",
   p = "[object WeakMap]",
   h = "[object DataView]",
-  b = (0, s.default)(n.default),
-  v = (0, s.default)(a.default),
-  g = (0, s.default)(o.default),
-  x = (0, s.default)(i.default),
-  y = (0, s.default)(l.default),
-  m = u.default;
-(n.default && m(new n.default(new ArrayBuffer(1))) != h || a.default && m(new a.default) != f || o.default && m(o.default.resolve()) != c || i.default && m(new i.default) != d || l.default && m(new l.default) != p) && (m = function(e) {
-  var t = (0, u.default)(e),
-    r = "[object Object]" == t ? e.constructor : void 0,
-    n = r ? (0, s.default)(r) : "";
-  if (n) switch (n) {
-    case b:
+  m = (0, c.Z)(r.Z),
+  g = (0, c.Z)(i.Z),
+  _ = (0, c.Z)(a.Z),
+  b = (0, c.Z)(o.Z),
+  v = (0, c.Z)(s.Z),
+  y = u.Z;
+(r.Z && y(new r.Z(new ArrayBuffer(1))) != h || i.Z && y(new i.Z) != l || a.Z && y(a.Z.resolve()) != d || o.Z && y(new o.Z) != f || s.Z && y(new s.Z) != p) && (y = function(e) {
+  var t = (0, u.Z)(e),
+    n = "[object Object]" == t ? e.constructor : void 0,
+    r = n ? (0, c.Z)(n) : "";
+  if (r) switch (r) {
+    case m:
       return h;
-    case v:
-      return f;
     case g:
-      return c;
-    case x:
+      return l;
+    case _:
       return d;
-    case y:
+    case b:
+      return f;
+    case v:
       return p
   }
   return t
-}), t.default = m
+}), t.Z = y

@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return E
   }
-}), n("47120");
-var i, r = n("735250"),
-  s = n("470079"),
-  a = n("803997"),
-  o = n.n(a),
-  l = n("748780"),
-  u = n("481060"),
-  d = n("981631"),
-  _ = n("750765");
+}), n(47120);
+var i, r = n(735250),
+  s = n(470079),
+  o = n(120356),
+  a = n.n(o),
+  l = n(748780),
+  u = n(481060),
+  _ = n(981631),
+  d = n(265835);
 
 function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -47,17 +47,17 @@ class E extends(i = s.Component) {
     }
   }
   render() {
-    return (0, r.jsx)(l.default.a, {
-      href: d.Routes.INDEX,
+    return (0, r.jsx)(l.Z.a, {
+      href: _.Z5c.INDEX,
       target: "_blank",
       rel: "noopener",
-      className: o()(_.logo, this.props.className),
+      className: a()(d.logo, this.props.className),
       style: this.getAnimatedStyle()
     })
   }
   constructor(...e) {
-    super(...e), c(this, "anim", new l.default.Value(0)), c(this, "animate", e => {
-      l.default.spring(this.anim, {
+    super(...e), c(this, "anim", new l.Z.Value(0)), c(this, "animate", e => {
+      l.Z.spring(this.anim, {
         toValue: e,
         friction: 10,
         tension: 100

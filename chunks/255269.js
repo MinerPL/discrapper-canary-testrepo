@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
-}), n("399606"), n("695346"), n("496675");
-var i = n("981631");
+}), n(399606), n(695346), n(496675);
+var i = n(981631);
 
 function r(e, t) {
   switch (e) {
-    case i.SpoilerRenderSetting.ALWAYS:
+    case i.A2N.ALWAYS:
       return !0;
-    case i.SpoilerRenderSetting.IF_MODERATOR:
+    case i.A2N.IF_MODERATOR:
       return t;
-    case i.SpoilerRenderSetting.ON_CLICK:
+    case i.A2N.ON_CLICK:
     default:
       return !1
   }

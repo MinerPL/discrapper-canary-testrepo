@@ -1,10 +1,9 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("960259"),
-  s = n("321096");
-t.default = (0, r.replaceIcon)(function(e) {
+var i = n(735250);
+n(470079);
+var r = n(960259),
+  s = n(321096);
+t.Z = (0, r.hN)(function(e) {
   return (0, i.jsx)("svg", {
     ...e,
     xmlns: "http://www.w3.org/2000/svg",
@@ -21,4 +20,4 @@ t.default = (0, r.replaceIcon)(function(e) {
       })]
     })
   })
-}, s.StaffBadgeIcon)
+}, s.Y)

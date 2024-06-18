@@ -1,43 +1,43 @@
 "use strict";
 let i;
-n.r(t), n("757143");
-var r = n("302454"),
-  a = n.n(r),
-  s = n("800927"),
-  o = n("945884"),
-  l = n("594199");
-let u = a().defaultRules.lheading,
-  d = a().defaultRules.heading,
-  _ = a().defaultRules.link,
-  c = a().defaultRules.image,
-  E = a().defaultRules.list,
-  I = a().defaultRules.blockQuote,
-  T = a().defaultRules.paragraph,
-  f = /\{(.+?)}/,
+n(757143);
+var r = n(302454),
+  s = n.n(r),
+  o = n(800927),
+  a = n(945884),
+  l = n(594199);
+let u = s().defaultRules.lheading,
+  _ = s().defaultRules.heading,
+  d = s().defaultRules.link,
+  c = s().defaultRules.image,
+  E = s().defaultRules.list,
+  I = s().defaultRules.blockQuote,
+  T = s().defaultRules.paragraph,
+  h = /\{(.+?)}/,
   S = /^\$(\w+?)\$/;
-i = n("235375");
-let h = e => {
+i = n(235375);
+let f = e => {
     let {
       transformUpperCase: t = !1
     } = e;
     return (e, n, i) => {
-      let r = f.exec(e[1]),
-        s = e[1].replace(f, "");
-      return t && (s = s.toUpperCase()), {
+      let r = h.exec(e[1]),
+        o = e[1].replace(h, "");
+      return t && (o = o.toUpperCase()), {
         className: null != r ? r[1] : null,
         level: "=" === e[2] ? 1 : 2,
-        content: a().parseInline(n, s, i)
+        content: s().parseInline(n, o, i)
       }
     }
   },
-  A = e => ({
+  N = e => ({
     ...i.baseRules,
     image: {
       ...c,
       ..."function" == typeof i.customRules.image ? i.customRules.image(e) : i.customRules.image
     },
     link: {
-      ..._,
+      ...d,
       ..."function" == typeof i.customRules.link ? i.customRules.link(e) : i.customRules.link
     },
     list: {
@@ -45,7 +45,7 @@ let h = e => {
       ..."function" == typeof i.customRules.list ? i.customRules.list(e) : i.customRules.list
     },
     interpolation: {
-      order: l.default.order,
+      order: l.ZP.order,
       match: e => S.exec(e),
       parse(e, t, n) {
         let i = n.interpolations[e[1]];
@@ -61,13 +61,13 @@ let h = e => {
     },
     lheading: {
       ...u,
-      parse: h({
+      parse: f({
         transformUpperCase: !0
       }),
       ..."function" == typeof i.customRules.lheading ? i.customRules.lheading(e) : i.customRules.lheading
     },
     heading: {
-      ...d,
+      ..._,
       ..."function" == typeof i.customRules.heading ? i.customRules.heading(e) : i.customRules.heading
     },
     blockQuote: {
@@ -79,33 +79,33 @@ let h = e => {
       ..."function" == typeof i.customRules.paragraph ? i.customRules.paragraph(e) : i.customRules.paragraph
     }
   }),
-  m = e => ({
+  A = e => ({
     lheading: {
       ...u,
-      parse: h({
+      parse: f({
         transformUpperCase: !1
       }),
       ..."function" == typeof i.customRules.lheading ? i.customRules.lheading(e) : i.customRules.lheading
     }
   }),
-  N = e => ({
-    ...A(e),
+  m = e => ({
+    ...N(e),
     newline: {
-      ...a().defaultRules.newline
+      ...s().defaultRules.newline
     },
-    text: l.default,
-    list: s.default,
-    subtext: o.default
+    text: l.ZP,
+    list: o.Z,
+    subtext: a.Z
   });
-t.default = {
+t.Z = {
   getDefaultRules: e => ({
-    ...A(e)
+    ...N(e)
   }),
   getSpecialRules: e => ({
-    ...A(e),
-    ...m(e)
+    ...N(e),
+    ...A(e)
   }),
   getMessageRules: e => ({
-    ...N(e)
+    ...m(e)
   })
 }

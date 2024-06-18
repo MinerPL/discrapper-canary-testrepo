@@ -1,30 +1,30 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
+t.d(s, {
+  Z: function() {
     return r
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("481060"),
-  n = s("759231"),
-  i = s("286085");
+var n = t(735250);
+t(470079);
+var i = t(481060),
+  l = t(759231),
+  a = t(618963);
 
 function r(e) {
   let {
-    children: t
+    children: s
   } = e;
-  return (0, a.jsx)("div", {
-    className: i.container,
-    children: (0, a.jsx)(l.Text, {
+  return (0, n.jsx)("div", {
+    className: a.container,
+    children: (0, n.jsx)(i.Text, {
       variant: "text-sm/normal",
       color: "text-normal",
-      className: i.text,
-      children: (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(n.default, {
-          className: i.noticeIcon,
+      className: a.text,
+      children: (0, n.jsxs)(n.Fragment, {
+        children: [(0, n.jsx)(l.Z, {
+          className: a.noticeIcon,
           "aria-hidden": !0
-        }), t]
+        }), s]
       })
     })
   })

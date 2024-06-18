@@ -1,15 +1,15 @@
 "use strict";
-n.r(e), n.d(e, {
-  BrowserProfilingIntegration: function() {
-    return o
+n.d(e, {
+  _: function() {
+    return a
   }
 });
-var r = n("648238"),
-  i = n("65534"),
-  a = n("450436");
-class o {
+var r = n(529866),
+  i = n(65534),
+  s = n(450436);
+class a {
   constructor() {
-    o.prototype.__init.call(this), o.prototype.__init2.call(this)
+    a.prototype.__init.call(this), a.prototype.__init2.call(this)
   }
   __init() {
     this.name = "BrowserProfilingIntegration"
@@ -21,29 +21,29 @@ class o {
     this.getCurrentHub = e;
     let n = this.getCurrentHub().getClient();
     n && "function" == typeof n.on ? (n.on("startTransaction", t => {
-      (0, i.wrapTransactionWithProfiling)(t)
+      (0, i.sA)(t)
     }), n.on("beforeEnvelope", t => {
-      if (!a.PROFILE_MAP.size) return;
-      let e = (0, a.findProfiledTransactionsFromEnvelope)(t);
+      if (!s.wh.size) return;
+      let e = (0, s.AJ)(t);
       if (!e.length) return;
       let n = [];
       for (let t of e) {
         let e = t && t.contexts,
           i = e && e.profile && e.profile.profile_id;
         if (!i) {
-          ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.log("[Profiling] cannot find profile for a transaction without a profile context");
+          ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.kg.log("[Profiling] cannot find profile for a transaction without a profile context");
           continue
         }
         e && e.profile && delete e.profile;
-        let o = a.PROFILE_MAP.get(i);
-        if (!o) {
-          ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.log(`[Profiling] Could not retrieve profile for transaction: ${i}`);
+        let a = s.wh.get(i);
+        if (!a) {
+          ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.kg.log(`[Profiling] Could not retrieve profile for transaction: ${i}`);
           continue
         }
-        a.PROFILE_MAP.delete(i);
-        let s = (0, a.createProfilingEvent)(i, o, t);
-        s && n.push(s)
-      }(0, a.addProfilesToEnvelope)(t, n)
-    })) : r.logger.warn("[Profiling] Client does not support hooks, profiling will be disabled")
+        s.wh.delete(i);
+        let o = (0, s.nm)(i, a, t);
+        o && n.push(o)
+      }(0, s.db)(t, n)
+    })) : r.kg.warn("[Profiling] Client does not support hooks, profiling will be disabled")
   }
 }

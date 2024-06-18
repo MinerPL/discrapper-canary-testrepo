@@ -1,27 +1,27 @@
 "use strict";
-n.r(t), n.d(t, {
-  getStreamerActivity: function() {
-    return l
+n.d(t, {
+  Cf: function() {
+    return d
   },
-  getStreamerApplication: function() {
+  L2: function() {
     return u
   },
-  useGetStreamApplication: function() {
-    return _
+  Um: function() {
+    return l
   }
 });
-var i = n("442837"),
-  r = n("902704"),
-  s = n("158776"),
-  a = n("981631");
+var i = n(442837),
+  r = n(902704),
+  s = n(158776),
+  o = n(981631);
 
-function o(e) {
-  return e.type === a.ActivityTypes.PLAYING
+function a(e) {
+  return e.type === o.IIU.PLAYING
 }
 
 function l(e, t) {
   var n;
-  return null != e ? (n = e.ownerId, t.findActivity(n, o)) : null
+  return null != e ? (n = e.ownerId, t.findActivity(n, a)) : null
 }
 
 function u(e, t) {
@@ -33,10 +33,10 @@ function u(e, t) {
   }
 }
 
-function d(e, t) {
-  return e === t || null != e && null != t && (0, r.default)(e, t)
+function _(e, t) {
+  return e === t || null != e && null != t && (0, r.Z)(e, t)
 }
 
-function _(e) {
-  return (0, i.useStateFromStores)([s.default], () => u(e, s.default), [e], d)
+function d(e) {
+  return (0, i.e7)([s.Z], () => u(e, s.Z), [e], _)
 }

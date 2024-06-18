@@ -1,4 +1,4 @@
-var r = n("660326");
+var r = n(660326);
 
 function i(e, t) {
   if ("function" != typeof e || null != t && "function" != typeof t) throw TypeError("Expected a function");

@@ -1,8 +1,7 @@
 "use strict";
-n.r(t);
-var r = n("126387"),
-  i = n("740078");
-t.default = {
+var r = n(126387),
+  i = n(740078);
+t.Z = {
   name: "offset",
   enabled: !0,
   phase: "main",
@@ -13,11 +12,11 @@ t.default = {
       a = e.name,
       o = n.offset,
       s = void 0 === o ? [0, 0] : o,
-      u = i.placements.reduce(function(e, n) {
+      u = i.Ct.reduce(function(e, n) {
         var a, o, u, c, l, d, f, p;
-        return e[n] = (a = n, o = t.rects, u = s, c = (0, r.default)(a), l = [(0, i.left), (0, i.top)].indexOf(c) >= 0 ? -1 : 1, f = (d = "function" == typeof u ? u(Object.assign({}, o, {
+        return e[n] = (a = n, o = t.rects, u = s, c = (0, r.Z)(a), l = [i.t$, i.we].indexOf(c) >= 0 ? -1 : 1, f = (d = "function" == typeof u ? u(Object.assign({}, o, {
           placement: a
-        })) : u)[0], p = d[1], f = f || 0, p = (p || 0) * l, [(0, i.left), (0, i.right)].indexOf(c) >= 0 ? {
+        })) : u)[0], p = d[1], f = f || 0, p = (p || 0) * l, [i.t$, i.F2].indexOf(c) >= 0 ? {
           x: p,
           y: f
         } : {

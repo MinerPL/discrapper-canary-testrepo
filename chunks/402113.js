@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return l
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("566620"),
-  s = n("87086"),
-  a = n("871499"),
-  o = n("689938");
+var i = n(735250);
+n(470079);
+var r = n(566620),
+  s = n(87086),
+  o = n(871499),
+  a = n(689938);
 
 function l(e) {
   let {
@@ -17,16 +17,16 @@ function l(e) {
     applicationId: n,
     centerButton: l = !1,
     ...u
-  } = e, d = l ? a.CenterControlButton : a.default;
-  return (0, i.jsx)(d, {
+  } = e, _ = l ? o.d : o.Z;
+  return (0, i.jsx)(_, {
     ...u,
     onClick: () => {
-      (0, r.stopEmbeddedActivity)({
+      (0, r.mW)({
         channelId: t,
         applicationId: n
       })
     },
-    iconComponent: s.default,
-    label: o.default.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY
+    iconComponent: s.Z,
+    label: a.Z.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY
   })
 }

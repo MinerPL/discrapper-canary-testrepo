@@ -1,23 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
-  CreatorMonetizationCountryAllowlistExperiment: function() {
-    return r
-  },
-  CreatorMonetizationNagActivateExperiment: function() {
-    return l
-  },
-  CreatorMonetizationOnboardingWaitlistExperiment: function() {
+n.d(t, {
+  AC: function() {
     return o
   },
-  CreatorMonetizationRavenOnboardingGuildExperiment: function() {
-    return s
-  },
-  CreatorMonetizationRavenOnboardingUserExperiment: function() {
+  IW: function() {
     return a
+  },
+  aC: function() {
+    return l
+  },
+  bT: function() {
+    return r
+  },
+  z: function() {
+    return s
   }
 });
-var i = n("818083");
-let r = (0, i.createExperiment)({
+var i = n(818083);
+let r = (0, i.B)({
     kind: "user",
     id: "2022-04_creator_monetization_country_allowlist",
     label: "Creator Monetization Available in Country",
@@ -32,7 +32,7 @@ let r = (0, i.createExperiment)({
       }
     }]
   }),
-  s = (0, i.createExperiment)({
+  s = (0, i.B)({
     kind: "guild",
     id: "2022-09_creator_monetization_raven",
     label: "Creator Monetization Onboarding v2",
@@ -47,7 +47,7 @@ let r = (0, i.createExperiment)({
       }
     }]
   }),
-  a = (0, i.createExperiment)({
+  o = (0, i.B)({
     kind: "user",
     id: "2022-09_creator_monetization_raven_users",
     label: "Creator Monetization Onboarding v2 Users",
@@ -62,7 +62,7 @@ let r = (0, i.createExperiment)({
       }
     }]
   }),
-  o = (0, i.createExperiment)({
+  a = (0, i.B)({
     kind: "guild",
     id: "2022-11_creator_monetization_onboarding_waitlist",
     label: "Creator Monetization Onboarding Waitlist",
@@ -77,7 +77,7 @@ let r = (0, i.createExperiment)({
       }
     }]
   }),
-  l = (0, i.createExperiment)({
+  l = (0, i.B)({
     kind: "user",
     id: "2023-01_creator_monetization_nag_activate_users",
     label: "Creator Monetization Nag Activate Users",

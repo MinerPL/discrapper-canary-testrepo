@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return I
   }
 });
-var i = n("594190"),
-  r = n("569545"),
-  s = n("199902"),
-  a = n("314897"),
-  o = n("158776"),
-  l = n("19780"),
-  u = n("979651"),
-  d = n("709054"),
-  _ = n("356659"),
-  c = n("981631"),
-  E = n("689938");
+var i = n(594190),
+  r = n(569545),
+  s = n(199902),
+  o = n(314897),
+  a = n(158776),
+  l = n(19780),
+  u = n(979651),
+  _ = n(709054),
+  d = n(356659),
+  c = n(981631),
+  E = n(689938);
 
 function I(e) {
   let {
@@ -25,27 +25,27 @@ function I(e) {
     if (null != e) {
       let {
         ownerId: t
-      } = r.decodeStreamKey(e);
-      if (t !== a.default.getId()) {
-        let e = o.default.getActivities(t).find(e => e.type === c.ActivityTypes.PLAYING);
+      } = r.my(e);
+      if (t !== o.default.getId()) {
+        let e = a.Z.getActivities(t).find(e => e.type === c.IIU.PLAYING);
         return {
           sourceName: null == e ? void 0 : e.name,
           sourceApplicationId: null == e ? void 0 : e.application_id
         }
       }
     }
-    let l = s.default.getStreamerActiveStreamMetadata(),
+    let l = s.Z.getStreamerActiveStreamMetadata(),
       u = null == l ? void 0 : l.pid,
-      d = null != l ? null != u ? i.default.getGameForPID(u) : null : i.default.getVisibleGame();
+      _ = null != l ? null != u ? i.ZP.getGameForPID(u) : null : i.ZP.getVisibleGame();
     return {
-      sourceName: null !== (t = null == l ? void 0 : l.sourceName) && void 0 !== t ? t : null == d ? void 0 : d.name,
-      sourceApplicationId: null !== (n = null == l ? void 0 : l.id) && void 0 !== n ? n : null == d ? void 0 : d.id
+      sourceName: null !== (t = null == l ? void 0 : l.sourceName) && void 0 !== t ? t : null == _ ? void 0 : _.name,
+      sourceApplicationId: null !== (n = null == l ? void 0 : l.id) && void 0 !== n ? n : null == _ ? void 0 : _.id
     }
-  }(e), I = l.default.getChannelId(), T = [a.default.getId()];
-  return null != I && (T = Object.keys(u.default.getVoiceStatesForChannel(I))), {
-    id: d.default.fromTimestamp(Date.now()),
-    version: _.CURRENT_CLIP_METADATA_VERSION,
-    applicationName: null != t ? t : E.default.Messages.CLIPS_UNKNOWN_SOURCE,
+  }(e), I = l.Z.getChannelId(), T = [o.default.getId()];
+  return null != I && (T = Object.keys(u.Z.getVoiceStatesForChannel(I))), {
+    id: _.default.fromTimestamp(Date.now()),
+    version: d.Bg,
+    applicationName: null != t ? t : E.Z.Messages.CLIPS_UNKNOWN_SOURCE,
     applicationId: n,
     users: T,
     clipMethod: "manual",

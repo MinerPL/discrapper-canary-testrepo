@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return i
   }
 });
-var r = n("874900");
+var r = n(874900);
 
 function i(e) {
-  var t = (0, r.default)(e),
+  var t = (0, r.Z)(e),
     n = t.overflow,
     i = t.overflowX,
     a = t.overflowY;

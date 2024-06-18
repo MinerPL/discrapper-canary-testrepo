@@ -1,30 +1,30 @@
 "use strict";
-n.r(t), n.d(t, {
-  reflectionScalarDefault: function() {
+n.d(t, {
+  N: function() {
     return o
   }
 });
-var r = n("36056"),
-  i = n("929412"),
-  a = n("69122");
+var r = n(36056),
+  i = n(929412),
+  a = n(69122);
 
-function o(e, t = r.LongType.STRING) {
+function o(e, t = r.pz.STRING) {
   switch (e) {
-    case r.ScalarType.BOOL:
+    case r.wx.BOOL:
       return !1;
-    case r.ScalarType.UINT64:
-    case r.ScalarType.FIXED64:
-      return (0, i.reflectionLongConvert)(a.PbULong.ZERO, t);
-    case r.ScalarType.INT64:
-    case r.ScalarType.SFIXED64:
-    case r.ScalarType.SINT64:
-      return (0, i.reflectionLongConvert)(a.PbLong.ZERO, t);
-    case r.ScalarType.DOUBLE:
-    case r.ScalarType.FLOAT:
+    case r.wx.UINT64:
+    case r.wx.FIXED64:
+      return (0, i._)(a.p.ZERO, t);
+    case r.wx.INT64:
+    case r.wx.SFIXED64:
+    case r.wx.SINT64:
+      return (0, i._)(a.M.ZERO, t);
+    case r.wx.DOUBLE:
+    case r.wx.FLOAT:
       return 0;
-    case r.ScalarType.BYTES:
+    case r.wx.BYTES:
       return new Uint8Array(0);
-    case r.ScalarType.STRING:
+    case r.wx.STRING:
       return "";
     default:
       return 0

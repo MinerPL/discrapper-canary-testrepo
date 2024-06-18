@@ -1,14 +1,14 @@
 "use strict";
-l.r(t), l.d(t, {
-  default: function() {
-    return n
+n.d(t, {
+  Z: function() {
+    return a
   }
-}), l("47120");
-var a = l("451467"),
-  s = l("37113");
+}), n(47120);
+var l = n(451467),
+  s = n(37113);
 
-function n(e, t, l) {
-  for (let n of s.ApplicationStreamPresetValues[e])
-    if ((0, a.default)(e, n.resolution, n.fps, t, l)) return [n.resolution, n.fps];
+function a(e, t, n) {
+  for (let a of s.no[e])
+    if ((0, l.Z)(e, a.resolution, a.fps, t, n)) return [a.resolution, a.fps];
   return null
 }

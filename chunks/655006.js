@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  RaidAlertExperiment: function() {
+n.d(t, {
+  l: function() {
     return i
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "guild",
   id: "2022-10_guild_raid_messaging",
   label: "Raid Alerts",

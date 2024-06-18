@@ -1,64 +1,64 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return _
+n.d(t, {
+  Z: function() {
+    return d
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("481060"),
-  a = n("842146"),
-  s = n("293177"),
-  o = n("349407"),
-  l = n("49012"),
-  u = n("202120"),
-  d = n("981631");
+var i = n(735250);
+n(470079);
+var r = n(481060),
+  s = n(842146),
+  o = n(293177),
+  a = n(349407),
+  l = n(49012),
+  u = n(202120),
+  _ = n(981631);
 
-function _(e) {
+function d(e) {
   let {
     platformType: t,
-    location: _,
+    location: d,
     overrideUrl: c,
     successRedirect: E
   } = e;
-  if (t === d.PlatformTypes.LEAGUE_OF_LEGENDS && (t = d.PlatformTypes.RIOT_GAMES), t === d.PlatformTypes.CRUNCHYROLL) {
-    a.showModal([null != _ ? _ : "unknown"]);
+  if (t === _.ABu.LEAGUE_OF_LEGENDS && (t = _.ABu.RIOT_GAMES), t === _.ABu.CRUNCHYROLL) {
+    s.K([null != d ? d : "unknown"]);
     return
   }
-  if (t === d.PlatformTypes.XBOX) {
-    o.showModal([null != _ ? _ : "unknown"]);
+  if (t === _.ABu.XBOX) {
+    a.K([null != d ? d : "unknown"]);
     return
   }
-  if (t === d.PlatformTypes.PLAYSTATION || t === d.PlatformTypes.PLAYSTATION_STAGING) {
-    s.showModal([null != _ ? _ : "unknown"], t);
+  if (t === _.ABu.PLAYSTATION || t === _.ABu.PLAYSTATION_STAGING) {
+    o.K([null != d ? d : "unknown"], t);
     return
   }
-  if (t === d.PlatformTypes.DOMAIN) {
+  if (t === _.ABu.DOMAIN) {
     (0, r.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("49237"), n.e("99387"), n.e("64941")]).then(n.bind(n, "414402"));
+      } = await Promise.all([n.e("99387"), n.e("64941")]).then(n.bind(n, 414402));
       return t => (0, i.jsx)(e, {
-        analyticsLocation: [null != _ ? _ : "unknown"],
+        analyticsLocation: [null != d ? d : "unknown"],
         ...t
       })
     });
     return
   }
   if (null != c) {
-    (0, l.handleClick)({
+    (0, l.q)({
       shouldConfirm: !0,
       href: c,
       onConfirm: () => {
-        (0, u.openProviderAuthorize)(t, {
-          location: _,
+        (0, u.H)(t, {
+          location: d,
           successRedirect: E
         }, c)
       }
     });
     return
-  }(0, u.openProviderAuthorize)(t, {
-    location: _,
+  }(0, u.H)(t, {
+    location: d,
     successRedirect: E
   })
 }

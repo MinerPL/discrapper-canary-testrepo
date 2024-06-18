@@ -10,8 +10,8 @@ function i(e, t) {
   }
   return n
 }
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return i
   }
-}), n("653041")
+}), n(653041)

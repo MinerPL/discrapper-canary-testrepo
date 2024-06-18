@@ -1,5 +1,5 @@
 "use strict";
-r("42547");
+r(42547);
 t.exports = function(t, e) {
   var r, n = t.getSelection(),
     i = n.getStartKey(),

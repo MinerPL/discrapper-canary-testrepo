@@ -1,8 +1,8 @@
 "use strict";
-var e = n("570596"),
-  o = n("294377"),
-  i = n("360518"),
-  u = n("691244");
+var e = n(570596),
+  o = n(294377),
+  i = n(360518),
+  u = n(691244);
 t.exports = function() {
   var t = o("Symbol"),
     r = t && t.prototype,

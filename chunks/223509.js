@@ -1,9 +1,9 @@
 "use strict";
-var r, i, a = n("754793"),
-  o = n("660694"),
-  s = n("899203"),
-  u = n("755448"),
-  c = n("77239");
+var r, i, a = n(754793),
+  o = n(660694),
+  s = n(899203),
+  u = n(755448),
+  c = n(77239);
 
 function l(e) {
   return (e >>> 24 & 255) + (e >>> 8 & 65280) + ((65280 & e) << 8) + ((255 & e) << 24)
@@ -41,9 +41,9 @@ function _(e, t, n, r) {
 t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit = function(e) {
   return m(e, 15)
 }, t.inflateInit2 = m, t.inflate = function(e, t) {
-  var n, d, f, p, h, m, b, v, y, E, S, x, w, T, C, D, O, M, A, k, R, N, I, L, P = 0,
-    F = new a.Buf8(4),
-    B = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
+  var n, d, f, p, h, m, b, v, y, E, S, x, w, C, T, D, M, O, A, k, R, N, I, L, P = 0,
+    B = new a.Buf8(4),
+    F = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
   if (!e || !e.state || !e.output || !e.input && 0 !== e.avail_in) return -2;
   12 === (n = e.state).mode && (n.mode = 13), h = e.next_out, f = e.output, b = e.avail_out, p = e.next_in, d = e.input, m = e.avail_in, v = n.hold, y = n.bits, E = m, S = b, N = 0;
   n: for (;;) switch (n.mode) {
@@ -57,7 +57,7 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
         m--, v += d[p++] << y, y += 8
       }
       if (2 & n.wrap && 35615 === v) {
-        n.check = 0, F[0] = 255 & v, F[1] = v >>> 8 & 255, n.check = s(n.check, F, 2, 0), v = 0, y = 0, n.mode = 2;
+        n.check = 0, B[0] = 255 & v, B[1] = v >>> 8 & 255, n.check = s(n.check, B, 2, 0), v = 0, y = 0, n.mode = 2;
         break
       }
       if (n.flags = 0, n.head && (n.head.done = !1), !(1 & n.wrap) || (((255 & v) << 8) + (v >> 8)) % 31) {
@@ -88,26 +88,26 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
         e.msg = "unknown header flags set", n.mode = 30;
         break
       }
-      n.head && (n.head.text = v >> 8 & 1), 512 & n.flags && (F[0] = 255 & v, F[1] = v >>> 8 & 255, n.check = s(n.check, F, 2, 0)), v = 0, y = 0, n.mode = 3;
+      n.head && (n.head.text = v >> 8 & 1), 512 & n.flags && (B[0] = 255 & v, B[1] = v >>> 8 & 255, n.check = s(n.check, B, 2, 0)), v = 0, y = 0, n.mode = 3;
     case 3:
       for (; y < 32;) {
         if (0 === m) break n;
         m--, v += d[p++] << y, y += 8
       }
-      n.head && (n.head.time = v), 512 & n.flags && (F[0] = 255 & v, F[1] = v >>> 8 & 255, F[2] = v >>> 16 & 255, F[3] = v >>> 24 & 255, n.check = s(n.check, F, 4, 0)), v = 0, y = 0, n.mode = 4;
+      n.head && (n.head.time = v), 512 & n.flags && (B[0] = 255 & v, B[1] = v >>> 8 & 255, B[2] = v >>> 16 & 255, B[3] = v >>> 24 & 255, n.check = s(n.check, B, 4, 0)), v = 0, y = 0, n.mode = 4;
     case 4:
       for (; y < 16;) {
         if (0 === m) break n;
         m--, v += d[p++] << y, y += 8
       }
-      n.head && (n.head.xflags = 255 & v, n.head.os = v >> 8), 512 & n.flags && (F[0] = 255 & v, F[1] = v >>> 8 & 255, n.check = s(n.check, F, 2, 0)), v = 0, y = 0, n.mode = 5;
+      n.head && (n.head.xflags = 255 & v, n.head.os = v >> 8), 512 & n.flags && (B[0] = 255 & v, B[1] = v >>> 8 & 255, n.check = s(n.check, B, 2, 0)), v = 0, y = 0, n.mode = 5;
     case 5:
       if (1024 & n.flags) {
         for (; y < 16;) {
           if (0 === m) break n;
           m--, v += d[p++] << y, y += 8
         }
-        n.length = v, n.head && (n.head.extra_len = v), 512 & n.flags && (F[0] = 255 & v, F[1] = v >>> 8 & 255, n.check = s(n.check, F, 2, 0)), v = 0, y = 0
+        n.length = v, n.head && (n.head.extra_len = v), 512 & n.flags && (B[0] = 255 & v, B[1] = v >>> 8 & 255, n.check = s(n.check, B, 2, 0)), v = 0, y = 0
       } else n.head && (n.head.extra = null);
       n.mode = 6;
     case 6:
@@ -232,9 +232,9 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
           if (0 === m) break n;
           m--, v += d[p++] << y, y += 8
         }
-        n.lens[B[n.have++]] = 7 & v, v >>>= 3, y -= 3
+        n.lens[F[n.have++]] = 7 & v, v >>>= 3, y -= 3
       }
-      for (; n.have < 19;) n.lens[B[n.have++]] = 0;
+      for (; n.have < 19;) n.lens[F[n.have++]] = 0;
       if (n.lencode = n.lendyn, n.lenbits = 7, I = {
           bits: n.lenbits
         }, N = c(0, n.lens, 0, 19, n.lencode, 0, n.work, I), n.lenbits = I.bits, N) {
@@ -244,35 +244,35 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
       n.have = 0, n.mode = 19;
     case 19:
       for (; n.have < n.nlen + n.ndist;) {
-        for (; C = (P = n.lencode[v & (1 << n.lenbits) - 1]) >>> 24, D = P >>> 16 & 255, O = 65535 & P, !(C <= y);) {
+        for (; T = (P = n.lencode[v & (1 << n.lenbits) - 1]) >>> 24, D = P >>> 16 & 255, M = 65535 & P, !(T <= y);) {
           ;
           if (0 === m) break n;
           m--, v += d[p++] << y, y += 8
         }
-        if (O < 16) v >>>= C, y -= C, n.lens[n.have++] = O;
+        if (M < 16) v >>>= T, y -= T, n.lens[n.have++] = M;
         else {
-          if (16 === O) {
-            for (L = C + 2; y < L;) {
+          if (16 === M) {
+            for (L = T + 2; y < L;) {
               if (0 === m) break n;
               m--, v += d[p++] << y, y += 8
             }
-            if (v >>>= C, y -= C, 0 === n.have) {
+            if (v >>>= T, y -= T, 0 === n.have) {
               e.msg = "invalid bit length repeat", n.mode = 30;
               break
             }
             R = n.lens[n.have - 1], x = 3 + (3 & v), v >>>= 2, y -= 2
-          } else if (17 === O) {
-            for (L = C + 3; y < L;) {
+          } else if (17 === M) {
+            for (L = T + 3; y < L;) {
               if (0 === m) break n;
               m--, v += d[p++] << y, y += 8
             }
-            v >>>= C, y -= C, R = 0, x = 3 + (7 & v), v >>>= 3, y -= 3
+            v >>>= T, y -= T, R = 0, x = 3 + (7 & v), v >>>= 3, y -= 3
           } else {
-            for (L = C + 7; y < L;) {
+            for (L = T + 7; y < L;) {
               if (0 === m) break n;
               m--, v += d[p++] << y, y += 8
             }
-            v >>>= C, y -= C, R = 0, x = 11 + (127 & v), v >>>= 7, y -= 7
+            v >>>= T, y -= T, R = 0, x = 11 + (127 & v), v >>>= 7, y -= 7
           }
           if (n.have + x > n.nlen + n.ndist) {
             e.msg = "invalid bit length repeat", n.mode = 30;
@@ -306,20 +306,20 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
         e.next_out = h, e.avail_out = b, e.next_in = p, e.avail_in = m, n.hold = v, n.bits = y, u(e, S), h = e.next_out, f = e.output, b = e.avail_out, p = e.next_in, d = e.input, m = e.avail_in, v = n.hold, y = n.bits, 12 === n.mode && (n.back = -1);
         break
       }
-      for (n.back = 0; C = (P = n.lencode[v & (1 << n.lenbits) - 1]) >>> 24, D = P >>> 16 & 255, O = 65535 & P, !(C <= y);) {
+      for (n.back = 0; T = (P = n.lencode[v & (1 << n.lenbits) - 1]) >>> 24, D = P >>> 16 & 255, M = 65535 & P, !(T <= y);) {
         ;
         if (0 === m) break n;
         m--, v += d[p++] << y, y += 8
       }
       if (D && (240 & D) == 0) {
-        for (M = C, A = D, k = O; C = (P = n.lencode[k + ((v & (1 << M + A) - 1) >> M)]) >>> 24, D = P >>> 16 & 255, O = 65535 & P, !(M + C <= y);) {
+        for (O = T, A = D, k = M; T = (P = n.lencode[k + ((v & (1 << O + A) - 1) >> O)]) >>> 24, D = P >>> 16 & 255, M = 65535 & P, !(O + T <= y);) {
           ;
           if (0 === m) break n;
           m--, v += d[p++] << y, y += 8
         }
-        v >>>= M, y -= M, n.back += M
+        v >>>= O, y -= O, n.back += O
       }
-      if (v >>>= C, y -= C, n.back += C, n.length = O, 0 === D) {
+      if (v >>>= T, y -= T, n.back += T, n.length = M, 0 === D) {
         n.mode = 26;
         break
       }
@@ -342,24 +342,24 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
       }
       n.was = n.length, n.mode = 23;
     case 23:
-      for (; C = (P = n.distcode[v & (1 << n.distbits) - 1]) >>> 24, D = P >>> 16 & 255, O = 65535 & P, !(C <= y);) {
+      for (; T = (P = n.distcode[v & (1 << n.distbits) - 1]) >>> 24, D = P >>> 16 & 255, M = 65535 & P, !(T <= y);) {
         ;
         if (0 === m) break n;
         m--, v += d[p++] << y, y += 8
       }
       if ((240 & D) == 0) {
-        for (M = C, A = D, k = O; C = (P = n.distcode[k + ((v & (1 << M + A) - 1) >> M)]) >>> 24, D = P >>> 16 & 255, O = 65535 & P, !(M + C <= y);) {
+        for (O = T, A = D, k = M; T = (P = n.distcode[k + ((v & (1 << O + A) - 1) >> O)]) >>> 24, D = P >>> 16 & 255, M = 65535 & P, !(O + T <= y);) {
           ;
           if (0 === m) break n;
           m--, v += d[p++] << y, y += 8
         }
-        v >>>= M, y -= M, n.back += M
+        v >>>= O, y -= O, n.back += O
       }
-      if (v >>>= C, y -= C, n.back += C, 64 & D) {
+      if (v >>>= T, y -= T, n.back += T, 64 & D) {
         e.msg = "invalid distance code", n.mode = 30;
         break
       }
-      n.offset = O, n.extra = 15 & D, n.mode = 24;
+      n.offset = M, n.extra = 15 & D, n.mode = 24;
     case 24:
       if (n.extra) {
         for (L = n.extra; y < L;) {
@@ -380,10 +380,10 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
           e.msg = "invalid distance too far back", n.mode = 30;
           break
         }
-        x > n.wnext ? (x -= n.wnext, w = n.wsize - x) : w = n.wnext - x, x > n.length && (x = n.length), T = n.window
-      } else T = f, w = h - n.offset, x = n.length;
+        x > n.wnext ? (x -= n.wnext, w = n.wsize - x) : w = n.wnext - x, x > n.length && (x = n.length), C = n.window
+      } else C = f, w = h - n.offset, x = n.length;
       x > b && (x = b), b -= x, n.length -= x;
-      do f[h++] = T[w++]; while (--x);
+      do f[h++] = C[w++]; while (--x);
       0 === n.length && (n.mode = 21);
       break;
     case 26:

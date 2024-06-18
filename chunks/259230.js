@@ -1,8 +1,8 @@
 "use strict";
-var r = n("936940"),
-  i = n("641236"),
-  a = n("325008"),
-  o = n("992051"),
+var r = n(936940),
+  i = n(641236),
+  a = n(325008),
+  o = n(992051),
   s = i("iterator");
 e.exports = !r(function() {
   var e = new URL("b?a=1&b=2&c=3", "http://a"),

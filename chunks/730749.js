@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return o
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("626135");
+var i = n(735250),
+  r = n(470079),
+  s = n(626135);
 
-function a(e) {
+function o(e) {
   var t;
   let n = r.forwardRef((t, n) => (0, i.jsx)(s.AnalyticsContext.Consumer, {
     children: r => (0, i.jsx)(e, {

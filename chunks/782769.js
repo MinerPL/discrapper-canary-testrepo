@@ -1,22 +1,22 @@
 "use strict";
-n.r(t), n.d(t, {
-  getIsActivitiesEnabledForCurrentPlatform: function() {
-    return a
+n.d(t, {
+  a: function() {
+    return o
   },
-  useIsActivitiesEnabledForCurrentPlatform: function() {
+  z: function() {
     return s
   }
 });
-var i = n("873546");
+var i = n(873546);
 
 function r() {
-  return !i.isMobile && !i.isTablet && !0
+  return !i.tq && !i.Em && !0
 }
 
 function s(e) {
   return r()
 }
 
-function a(e) {
+function o(e) {
   return r()
 }

@@ -1,67 +1,67 @@
 "use strict";
-s.r(t), s("627494"), s("757143");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("120356"),
-  i = s.n(n),
-  r = s("913527"),
-  o = s.n(r),
-  d = s("924826"),
-  u = s("481060"),
-  c = s("100527"),
-  E = s("933557"),
-  _ = s("484459"),
-  I = s("103575"),
-  T = s("387667"),
-  S = s("699516"),
-  f = s("594174"),
-  m = s("259580"),
-  N = s("154921"),
-  g = s("934415"),
-  h = s("51144"),
-  C = s("884737"),
-  R = s("981631"),
-  x = s("655379");
+t(627494), t(757143);
+var n = t(735250),
+  i = t(470079),
+  l = t(120356),
+  a = t.n(l),
+  r = t(913527),
+  o = t.n(r),
+  c = t(91192),
+  d = t(481060),
+  u = t(100527),
+  E = t(933557),
+  _ = t(484459),
+  I = t(103575),
+  T = t(387667),
+  N = t(699516),
+  m = t(594174),
+  S = t(259580),
+  h = t(154921),
+  g = t(934415),
+  x = t(51144),
+  C = t(884737),
+  R = t(981631),
+  L = t(848051);
 
-function L(e, t) {
-  let s = C.NotRenderedChanges[e.targetType];
-  return null != s && !0 === s[t.key]
+function O(e, s) {
+  let t = C.vc[e.targetType];
+  return null != t && !0 === t[s.key]
 }
-class O extends l.PureComponent {
+class A extends i.PureComponent {
   render() {
     let {
       user: e,
-      hideDiscriminator: t,
-      onContextMenu: s,
-      guildId: l
+      hideDiscriminator: s,
+      onContextMenu: t,
+      guildId: i
     } = this.props;
-    return (0, a.jsx)(u.Popout, {
-      preload: () => (0, _.maybeFetchUserProfileForPopout)(e.id, e.getAvatarURL(l, 80), {
-        guildId: l
+    return (0, n.jsx)(d.Popout, {
+      preload: () => (0, _.W)(e.id, e.getAvatarURL(i, 80), {
+        guildId: i
       }),
-      renderPopout: t => (0, a.jsx)(I.default, {
-        ...t,
+      renderPopout: s => (0, n.jsx)(I.Z, {
+        ...s,
         location: "GuildSettingsAuditLogEntry",
         userId: e.id,
-        guildId: l,
-        newAnalyticsLocations: [c.default.USERNAME]
+        guildId: i,
+        newAnalyticsLocations: [u.Z.USERNAME]
       }),
-      children: l => (0, a.jsx)(u.Clickable, {
-        ...l,
+      children: i => (0, n.jsx)(d.Clickable, {
+        ...i,
         onClick: e => {
-          e.stopPropagation(), l.onClick(e)
+          e.stopPropagation(), i.onClick(e)
         },
-        onContextMenu: s,
-        className: x.userHook,
-        children: (0, a.jsxs)("div", {
-          className: x.username,
-          children: [(0, a.jsx)(u.Text, {
+        onContextMenu: t,
+        className: L.userHook,
+        children: (0, n.jsxs)("div", {
+          className: L.username,
+          children: [(0, n.jsx)(d.Text, {
             variant: "text-sm/normal",
-            children: h.default.getUserTag(e, {
+            children: x.ZP.getUserTag(e, {
               mode: "username",
-              identifiable: t ? "never" : "always"
+              identifiable: s ? "never" : "always"
             })
-          }), !t && !e.isPomelo() && (0, a.jsxs)(u.Text, {
+          }), !s && !e.isPomelo() && (0, n.jsxs)(d.Text, {
             variant: "text-sm/normal",
             children: ["#", e.discriminator]
           })]
@@ -70,86 +70,86 @@ class O extends l.PureComponent {
     })
   }
 }
-class A extends l.PureComponent {
+class p extends i.PureComponent {
   hasChangesToRender() {
     let {
       log: e
     } = this.props, {
-      changes: t
+      changes: s
     } = e;
-    return (e.actionType !== R.AuditLogActionTypes.DELETE || e.action === R.AuditLogActions.MEMBER_BAN_ADD || e.action === R.AuditLogActions.MEMBER_KICK || e.action === R.AuditLogActions.MEMBER_PRUNE) && null != t && t.some(t => !L(e, t))
+    return (e.actionType !== R.vB8.DELETE || e.action === R.rsA.MEMBER_BAN_ADD || e.action === R.rsA.MEMBER_KICK || e.action === R.rsA.MEMBER_PRUNE) && null != s && s.some(s => !O(e, s))
   }
   getActionTypeColor(e) {
     switch (e) {
-      case R.AuditLogActionTypes.CREATE:
-        return N.default.Colors.STATUS_GREEN;
-      case R.AuditLogActionTypes.DELETE:
-        return N.default.Colors.STATUS_RED;
+      case R.vB8.CREATE:
+        return h.Z.Colors.STATUS_GREEN;
+      case R.vB8.DELETE:
+        return h.Z.Colors.STATUS_RED;
       default:
-        return N.default.Colors.STATUS_YELLOW
+        return h.Z.Colors.STATUS_YELLOW
     }
   }
   getRowAccentColor() {
     let {
       log: e
     } = this.props;
-    if (e.action === R.AuditLogActions.MEMBER_BAN_ADD) return x.accentRed
+    if (e.action === R.rsA.MEMBER_BAN_ADD) return L.accentRed
   }
   renderTitle() {
     let {
       log: e,
-      guildId: t,
-      onUserContextMenu: s,
-      onTargetContextMenu: l,
-      onChannelContextMenu: n
+      guildId: s,
+      onUserContextMenu: t,
+      onTargetContextMenu: i,
+      onChannelContextMenu: l
     } = this.props, {
-      user: i,
+      user: a,
       target: r,
       options: o
-    } = e, d = C.getChangeTitle(e), c = C.getStringForBanReason(e);
-    return null != d ? (0, a.jsx)(u.Text, {
-      className: x.overflowEllipsis,
+    } = e, c = C.N5(e), u = C.of(e);
+    return null != c ? (0, n.jsx)(d.Text, {
+      className: L.overflowEllipsis,
       variant: "text-sm/normal",
-      children: d.format({
-        user: i,
+      children: c.format({
+        user: a,
         target: r,
-        reason: c,
-        userHook: (l, n) => (0, a.jsx)(O, {
-          guildId: t,
+        reason: u,
+        userHook: (i, l) => (0, n.jsx)(A, {
+          guildId: s,
           user: e.user,
-          onContextMenu: s,
+          onContextMenu: t,
           hideDiscriminator: !0
-        }, n),
-        targetHook: (s, n) => e.targetType === R.AuditLogTargetTypes.USER ? (0, a.jsx)(O, {
-          guildId: t,
+        }, l),
+        targetHook: (t, l) => e.targetType === R.KFR.USER ? (0, n.jsx)(A, {
+          guildId: s,
           user: e.target,
-          onContextMenu: l,
+          onContextMenu: i,
           hideDiscriminator: !1
-        }, n) : (0, a.jsx)("span", {
-          onContextMenu: l,
-          children: s
-        }, n),
+        }, l) : (0, n.jsx)("span", {
+          onContextMenu: i,
+          children: t
+        }, l),
         count: o.count,
-        channel: o.channel ? "string" == typeof o.channel ? o.channel : (0, E.computeChannelName)(o.channel, f.default, S.default, !0) : null,
-        channelHook: (e, t) => (0, a.jsx)("span", {
-          onContextMenu: n,
+        channel: o.channel ? "string" == typeof o.channel ? o.channel : (0, E.F6)(o.channel, m.default, N.Z, !0) : null,
+        channelHook: (e, s) => (0, n.jsx)("span", {
+          onContextMenu: l,
           children: e
-        }, t)
+        }, s)
       })
     }) : null
   }
   renderRoleUpdate(e) {
     let {
-      newValue: t
+      newValue: s
     } = e;
-    return Array.isArray(t) ? t.map(e => (0, a.jsxs)("div", {
-      className: x.subListItem,
-      children: [(0, a.jsx)(u.Text, {
-        className: x.bullet,
+    return Array.isArray(s) ? s.map(e => (0, n.jsxs)("div", {
+      className: L.subListItem,
+      children: [(0, n.jsx)(d.Text, {
+        className: L.bullet,
         color: "text-muted",
         variant: "text-sm/normal",
         children: "•"
-      }), (0, a.jsx)(u.Text, {
+      }), (0, n.jsx)(d.Text, {
         variant: "text-xs/normal",
         color: "text-normal",
         children: e.name
@@ -158,145 +158,145 @@ class A extends l.PureComponent {
   }
   renderPermissionUpdate(e) {
     let {
-      newValue: t
+      newValue: s
     } = e;
-    return Array.isArray(t) ? t.map(e => {
-      if (null != C.getStringForPermission(e, this.props.log)) return (0, a.jsxs)("div", {
-        className: x.subListItem,
-        children: [(0, a.jsx)(u.Text, {
-          className: x.bullet,
+    return Array.isArray(s) ? s.map(e => {
+      if (null != C.hQ(e, this.props.log)) return (0, n.jsxs)("div", {
+        className: L.subListItem,
+        children: [(0, n.jsx)(d.Text, {
+          className: L.bullet,
           color: "text-muted",
           variant: "text-sm/normal",
           children: "•"
-        }), (0, a.jsx)(u.Text, {
+        }), (0, n.jsx)(d.Text, {
           variant: "text-xs/normal",
           color: "text-normal",
-          children: C.getStringForPermission(e, this.props.log)
+          children: C.hQ(e, this.props.log)
         })]
       }, e)
     }) : null
   }
   renderChangeDetails(e) {
     let {
-      log: t,
-      onContentClick: s
+      log: s,
+      onContentClick: t
     } = this.props;
-    if (null == t.changes) return null;
-    let l = 0,
-      n = t.changes.map((s, n) => {
+    if (null == s.changes) return null;
+    let i = 0,
+      l = s.changes.map((t, l) => {
         let {
-          oldValue: i,
+          oldValue: a,
           newValue: r
-        } = s, d = null;
-        if (t.action === R.AuditLogActions.MEMBER_ROLE_UPDATE ? d = this.renderRoleUpdate(s) : (t.targetType === R.AuditLogTargetTypes.ROLE || t.action === R.AuditLogActions.CHANNEL_OVERWRITE_CREATE || t.action === R.AuditLogActions.CHANNEL_OVERWRITE_UPDATE) && (d = this.renderPermissionUpdate(s)), (t.action === R.AuditLogActions.CHANNEL_UPDATE || t.action === R.AuditLogActions.CHANNEL_CREATE) && s.key === R.AuditLogChangeKeys.TYPE && (null != i && (i = (0, g.channelTypeString)({
-            type: i
-          })), null != r && (r = (0, g.channelTypeString)({
+        } = t, c = null;
+        if (s.action === R.rsA.MEMBER_ROLE_UPDATE ? c = this.renderRoleUpdate(t) : (s.targetType === R.KFR.ROLE || s.action === R.rsA.CHANNEL_OVERWRITE_CREATE || s.action === R.rsA.CHANNEL_OVERWRITE_UPDATE) && (c = this.renderPermissionUpdate(t)), (s.action === R.rsA.CHANNEL_UPDATE || s.action === R.rsA.CHANNEL_CREATE) && t.key === R.zUn.TYPE && (null != a && (a = (0, g.a5)({
+            type: a
+          })), null != r && (r = (0, g.a5)({
             type: r
-          }))), t.action === R.AuditLogActions.MEMBER_UPDATE && s.key === R.AuditLogChangeKeys.COMMUNICATION_DISABLED_UNTIL) {
+          }))), s.action === R.rsA.MEMBER_UPDATE && t.key === R.zUn.COMMUNICATION_DISABLED_UNTIL) {
           if (null == (r = o()(r)) || !r.isValid()) return null;
           r = r.calendar()
         }
-        let c = e[s.key];
-        if (L(t, s)) return null;
-        if ("function" == typeof c && (c = c(s)), null != c && "object" == typeof c) {
-          if (null == c.format) {
-            let e = c[s.newValue];
-            null == e && null != c[C.DEFAULT_FOR_STRINGS_KEY] ? c = c[C.DEFAULT_FOR_STRINGS_KEY] : null != e && (c = e)
+        let u = e[t.key];
+        if (O(s, t)) return null;
+        if ("function" == typeof u && (u = u(t)), null != u && "object" == typeof u) {
+          if (null == u.format) {
+            let e = u[t.newValue];
+            null == e && null != u[C.Et] ? u = u[C.Et] : null != e && (u = e)
           }
-          if (null != c && null != c.format) {
+          if (null != u && null != u.format) {
             var E, _;
-            c = c.format({
-              user: t.user,
-              target: t.target,
-              oldValue: i,
+            u = u.format({
+              user: s.user,
+              target: s.target,
+              oldValue: a,
               newValue: r,
               count: Array.isArray(r) ? r.length : null,
-              subtarget: null !== (_ = null !== (E = t.options.subtarget) && void 0 !== E ? E : s.subtarget) && void 0 !== _ ? _ : null,
-              newColorHook: (e, t) => (0, a.jsx)("div", {
-                className: x.colorHook,
+              subtarget: null !== (_ = null !== (E = s.options.subtarget) && void 0 !== E ? E : t.subtarget) && void 0 !== _ ? _ : null,
+              newColorHook: (e, s) => (0, n.jsx)("div", {
+                className: L.colorHook,
                 style: {
-                  backgroundColor: s.newValue
+                  backgroundColor: t.newValue
                 }
-              }, t),
-              oldColorHook: (e, t) => (0, a.jsx)("div", {
-                className: x.colorHook,
+              }, s),
+              oldColorHook: (e, s) => (0, n.jsx)("div", {
+                className: L.colorHook,
                 style: {
-                  backgroundColor: s.oldValue
+                  backgroundColor: t.oldValue
                 }
-              }, t)
+              }, s)
             })
           }
         }
-        return null == c ? (console.warn("No change string for", s), null) : "" === c ? null : (l++, (0, a.jsxs)("div", {
-          className: x.detail,
-          children: [(0, a.jsxs)("div", {
-            className: x.prefix,
-            children: [(0, a.jsx)(u.Text, {
+        return null == u ? (console.warn("No change string for", t), null) : "" === u ? null : (i++, (0, n.jsxs)("div", {
+          className: L.detail,
+          children: [(0, n.jsxs)("div", {
+            className: L.prefix,
+            children: [(0, n.jsx)(d.Text, {
               variant: "text-xs/semibold",
               color: "text-muted",
-              children: l < 10 ? "0".concat(l) : l
-            }), (0, a.jsx)(u.Text, {
+              children: i < 10 ? "0".concat(i) : i
+            }), (0, n.jsx)(d.Text, {
               variant: "text-xs/semibold",
               color: "text-muted",
-              className: x.dash,
+              className: L.dash,
               children: "—"
             })]
-          }), (0, a.jsxs)("div", {
-            className: x.change,
-            children: [null != d ? (0, a.jsx)(u.Text, {
-              className: x.changeStr,
+          }), (0, n.jsxs)("div", {
+            className: L.change,
+            children: [null != c ? (0, n.jsx)(d.Text, {
+              className: L.changeStr,
               variant: "text-xs/normal",
-              children: c.concat(":")
-            }) : (0, a.jsx)(u.Text, {
-              className: x.changeStr,
+              children: u.concat(":")
+            }) : (0, n.jsx)(d.Text, {
+              className: L.changeStr,
+              variant: "text-xs/normal",
+              children: u
+            }), null != c ? (0, n.jsx)(d.Text, {
               variant: "text-xs/normal",
               children: c
-            }), null != d ? (0, a.jsx)(u.Text, {
-              variant: "text-xs/normal",
-              children: d
             }) : null]
           })]
-        }, n))
+        }, l))
       });
-    return (0, a.jsx)(u.Clickable, {
-      onClick: s,
-      className: x.changeDetails,
-      children: n
+    return (0, n.jsx)(d.Clickable, {
+      onClick: t,
+      className: L.changeDetails,
+      children: l
     })
   }
   renderChangeSummary() {
     let {
       expanded: e,
-      log: t
+      log: s
     } = this.props;
-    if (e) switch (t.targetType) {
-      case R.AuditLogTargetTypes.GUILD:
-        return this.renderChangeDetails(C.GuildChangeStrings());
-      case R.AuditLogTargetTypes.CHANNEL:
-      case R.AuditLogTargetTypes.CHANNEL_OVERWRITE:
-        return this.renderChangeDetails(C.ChannelChangeStrings());
-      case R.AuditLogTargetTypes.USER:
-        return this.renderChangeDetails(C.UserChangeStrings());
-      case R.AuditLogTargetTypes.ROLE:
-        return this.renderChangeDetails(C.RoleChangeStrings());
-      case R.AuditLogTargetTypes.INVITE:
-        return this.renderChangeDetails(C.InviteChangeStrings());
-      case R.AuditLogTargetTypes.WEBHOOK:
-        return this.renderChangeDetails(C.WebhookChangeStrings());
-      case R.AuditLogTargetTypes.EMOJI:
-        return this.renderChangeDetails(C.EmojiChangeStrings());
-      case R.AuditLogTargetTypes.STICKER:
-        return this.renderChangeDetails(C.StickerChangeStrings());
-      case R.AuditLogTargetTypes.INTEGRATION:
-        return this.renderChangeDetails(C.IntegrationChangeStrings());
-      case R.AuditLogTargetTypes.STAGE_INSTANCE:
-        return this.renderChangeDetails(C.StageInstanceChangeStrings());
-      case R.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT:
-        return this.renderChangeDetails(C.GuildScheduledEventChangeStrings());
-      case R.AuditLogTargetTypes.THREAD:
-        return this.renderChangeDetails(C.ThreadChangeStrings());
-      case R.AuditLogTargetTypes.APPLICATION_COMMAND:
-        return this.renderChangeDetails(C.CommandPermissionChangeStrings(t.changes))
+    if (e) switch (s.targetType) {
+      case R.KFR.GUILD:
+        return this.renderChangeDetails(C.pY());
+      case R.KFR.CHANNEL:
+      case R.KFR.CHANNEL_OVERWRITE:
+        return this.renderChangeDetails(C.ML());
+      case R.KFR.USER:
+        return this.renderChangeDetails(C.lU());
+      case R.KFR.ROLE:
+        return this.renderChangeDetails(C.HE());
+      case R.KFR.INVITE:
+        return this.renderChangeDetails(C.HN());
+      case R.KFR.WEBHOOK:
+        return this.renderChangeDetails(C.lR());
+      case R.KFR.EMOJI:
+        return this.renderChangeDetails(C.N$());
+      case R.KFR.STICKER:
+        return this.renderChangeDetails(C.Bq());
+      case R.KFR.INTEGRATION:
+        return this.renderChangeDetails(C.K());
+      case R.KFR.STAGE_INSTANCE:
+        return this.renderChangeDetails(C.C2());
+      case R.KFR.GUILD_SCHEDULED_EVENT:
+        return this.renderChangeDetails(C.uB());
+      case R.KFR.THREAD:
+        return this.renderChangeDetails(C.pA());
+      case R.KFR.APPLICATION_COMMAND:
+        return this.renderChangeDetails(C.vm(s.changes))
     }
     return null
   }
@@ -306,83 +306,83 @@ class A extends l.PureComponent {
   renderActionTag() {
     let {
       log: e
-    } = this.props, t = (0, T.getTargetType)(e.action);
-    if (null != t) return (0, a.jsx)("div", {
-      className: x.tag,
-      children: (0, a.jsx)(u.Text, {
+    } = this.props, s = (0, T.p5)(e.action);
+    if (null != s) return (0, n.jsx)("div", {
+      className: L.tag,
+      children: (0, n.jsx)(d.Text, {
         variant: "text-xs/normal",
-        className: x.tagString,
-        children: this.formatActionTagName(t)
+        className: L.tagString,
+        children: this.formatActionTagName(s)
       })
     })
   }
   render() {
     let e;
     let {
-      log: t,
-      className: s,
-      expanded: l,
-      onHeaderClick: n,
+      log: s,
+      className: t,
+      expanded: i,
+      onHeaderClick: l,
       guildId: r
-    } = this.props, o = t.user;
+    } = this.props, o = s.user;
     if (null == o) return null;
     let E = this.hasChangesToRender(),
-      T = x.headerDefault;
-    l ? T = x.headerExpanded : E && (T = x.headerClickable);
-    let S = t.timestampStart.calendar(),
-      f = t.timestampEnd.calendar();
-    e = S === f ? (0, a.jsx)(u.Text, {
-      className: x.timestamp,
+      T = L.headerDefault;
+    i ? T = L.headerExpanded : E && (T = L.headerClickable);
+    let N = s.timestampStart.calendar(),
+      m = s.timestampEnd.calendar();
+    e = N === m ? (0, n.jsx)(d.Text, {
+      className: L.timestamp,
       variant: "text-xs/normal",
-      children: "• ".concat(S)
-    }) : (0, a.jsx)(u.Text, {
-      className: x.timestamp,
+      children: "• ".concat(N)
+    }) : (0, n.jsx)(d.Text, {
+      className: L.timestamp,
       variant: "text-xs/normal",
-      children: "• ".concat(S, "—").concat(f)
+      children: "• ".concat(N, "—").concat(m)
     });
-    let N = E ? n : R.NOOP;
-    return (0, a.jsx)(d.ListNavigatorItem, {
-      id: t.id,
-      children: n => (0, a.jsxs)("div", {
-        className: i()(this.getRowAccentColor(), x.auditLog, s),
-        children: [(0, a.jsxs)(u.Clickable, {
+    let h = E ? l : R.dG4;
+    return (0, n.jsx)(c.mh, {
+      id: s.id,
+      children: l => (0, n.jsxs)("div", {
+        className: a()(this.getRowAccentColor(), L.auditLog, t),
+        children: [(0, n.jsxs)(d.Clickable, {
           className: T,
-          "aria-expanded": l,
-          onClick: N,
-          ...n,
-          children: [(0, a.jsx)(u.Popout, {
-            preload: () => (0, _.maybeFetchUserProfileForPopout)(t.userId, o.getAvatarURL(r, 80), {
+          "aria-expanded": i,
+          onClick: h,
+          ...l,
+          children: [(0, n.jsx)(d.Popout, {
+            preload: () => (0, _.W)(s.userId, o.getAvatarURL(r, 80), {
               guildId: r
             }),
-            renderPopout: e => (0, a.jsx)(I.default, {
+            renderPopout: e => (0, n.jsx)(I.Z, {
               ...e,
               location: "GuildSettingsAuditLogEntry",
-              userId: t.userId,
+              userId: s.userId,
               guildId: r,
-              newAnalyticsLocations: [c.default.AVATAR]
+              newAnalyticsLocations: [u.Z.AVATAR]
             }),
-            children: e => (0, a.jsx)(u.Avatar, {
+            children: e => (0, n.jsx)(d.Avatar, {
               ...e,
-              onClick: t => {
-                t.stopPropagation(), e.onClick(t)
+              onClick: s => {
+                s.stopPropagation(), e.onClick(s)
               },
               src: o.getAvatarURL(r, 40),
               "aria-hidden": !0,
-              size: u.AvatarSizes.SIZE_40
+              size: d.AvatarSizes.SIZE_40
             })
-          }), (0, a.jsxs)("div", {
-            className: x.timeWrap,
-            children: [(0, a.jsx)("div", {
-              className: x.title,
+          }), (0, n.jsxs)("div", {
+            className: L.timeWrap,
+            children: [(0, n.jsx)("div", {
+              className: L.title,
               children: this.renderTitle()
-            }), (0, a.jsxs)("div", {
-              className: x.meta,
+            }), (0, n.jsxs)("div", {
+              className: L.meta,
               children: [this.renderActionTag(), e]
             })]
-          }), E ? (0, a.jsx)(m.default, {
-            className: x.expand,
-            foreground: x.expandForeground,
-            expanded: l,
+          }), E ? (0, n.jsx)(S.Z, {
+            className: L.expand,
+            foreground: L.expandForeground,
+            expanded: i,
             "aria-hidden": !0
           }) : null]
         }), this.renderChangeSummary()]
@@ -390,4 +390,4 @@ class A extends l.PureComponent {
     })
   }
 }
-t.default = A
+s.Z = p

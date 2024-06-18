@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  inDesktopNotificationCenterExperiment: function() {
-    return a
+n.d(t, {
+  Fl: function() {
+    return o
   },
-  useInDesktopNotificationCenterExperiment: function() {
+  sv: function() {
     return s
   }
 });
-var i = n("470079");
-let r = (0, n("818083").createExperiment)({
+var i = n(470079);
+let r = (0, n(818083).B)({
     kind: "user",
     id: "2022-11_desktop_notification_center",
     label: "Desktop notification center",
@@ -37,7 +37,7 @@ let r = (0, n("818083").createExperiment)({
       })
     }, []), e
   },
-  a = () => {
+  o = () => {
     let {
       enabled: e
     } = r.getCurrentConfig({

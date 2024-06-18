@@ -1,9 +1,8 @@
 "use strict";
-r.r(t);
-var n = r("176338"),
-  a = r("675717");
-t.default = function(e) {
-  if (!(0, a.default)(e)) return !1;
-  var t = (0, n.default)(e);
+var r = n(176338),
+  i = n(675717);
+t.Z = function(e) {
+  if (!(0, i.Z)(e)) return !1;
+  var t = (0, r.Z)(e);
   return "[object Function]" == t || "[object GeneratorFunction]" == t || "[object AsyncFunction]" == t || "[object Proxy]" == t
 }

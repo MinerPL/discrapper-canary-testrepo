@@ -1,9 +1,9 @@
 "use strict";
-var r = n("690244"),
-  i = n("834889"),
-  a = n("134533")(),
-  o = n("49662"),
-  s = n("815329"),
+var r = n(690244),
+  i = n(834889),
+  a = n(134533)(),
+  o = n(49662),
+  s = n(815329),
   u = r("%Math.floor%");
 e.exports = function(e, t) {
   if ("function" != typeof e) throw new s("`fn` is not a function");

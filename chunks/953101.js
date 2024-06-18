@@ -1,9 +1,9 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
-}), n("47120");
+}), n(47120);
 let i = ["allow-pointer-lock", "allow-scripts", "allow-same-origin", "allow-forms"];
 
 function r(e) {

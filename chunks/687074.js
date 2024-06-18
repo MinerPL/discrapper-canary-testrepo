@@ -1,6 +1,6 @@
-var r = n("815869");
-t.exports = function(t, e) {
-  var n = this.__data__,
-    i = r(n, t);
-  return i < 0 ? (++this.size, n.push([t, e])) : n[i][1] = e, this
+var n = e(815869);
+t.exports = function(t, r) {
+  var e = this.__data__,
+    o = n(e, t);
+  return o < 0 ? (++this.size, e.push([t, r])) : e[o][1] = r, this
 }

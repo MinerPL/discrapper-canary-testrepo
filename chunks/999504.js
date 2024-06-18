@@ -51,7 +51,7 @@ var E = Array.isArray,
     __source: !0
   };
 
-function T(e, t, r) {
+function C(e, t, r) {
   var i, a = {},
     o = null,
     s = null;
@@ -75,12 +75,12 @@ function T(e, t, r) {
   }
 }
 
-function C(e) {
+function T(e) {
   return "object" == typeof e && null !== e && e.$$typeof === n
 }
 var D = /\/+/g;
 
-function O(e, t) {
+function M(e, t) {
   var n, r;
   return "object" == typeof e && null !== e && null != e.key ? (n = "" + e.key, r = {
     "=": "=0",
@@ -90,7 +90,7 @@ function O(e, t) {
   })) : t.toString(36)
 }
 
-function M(e, t, i) {
+function O(e, t, i) {
   if (null == e) return e;
   var a = [],
     o = 0;
@@ -113,9 +113,9 @@ function M(e, t, i) {
     }
     if (f) {
       ;
-      return s = s(f = t), t = "" === o ? "." + O(f, 0) : o, E(s) ? (a = "", null != t && (a = t.replace(D, "$&/") + "/"), e(s, i, a, "", function(e) {
+      return s = s(f = t), t = "" === o ? "." + M(f, 0) : o, E(s) ? (a = "", null != t && (a = t.replace(D, "$&/") + "/"), e(s, i, a, "", function(e) {
         return e
-      })) : null != s && (C(s) && (u = s, c = a + (!s.key || f && f.key === s.key ? "" : ("" + s.key).replace(D, "$&/") + "/") + t, s = {
+      })) : null != s && (T(s) && (u = s, c = a + (!s.key || f && f.key === s.key ? "" : ("" + s.key).replace(D, "$&/") + "/") + t, s = {
         $$typeof: n,
         type: u.type,
         key: c,
@@ -126,12 +126,12 @@ function M(e, t, i) {
     }
     if (f = 0, o = "" === o ? "." : o + ":", E(t))
       for (var h = 0; h < t.length; h++) {
-        var m = o + O(d = t[h], h);
+        var m = o + M(d = t[h], h);
         f += e(d, i, a, m, s)
       } else {
         ;
         if ("function" == typeof(m = null === (l = t) || "object" != typeof l ? null : "function" == typeof(l = p && l[p] || l["@@iterator"]) ? l : null))
-          for (t = m.call(t), h = 0; !(d = t.next()).done;) m = o + O(d = d.value, h++), f += e(d, i, a, m, s);
+          for (t = m.call(t), h = 0; !(d = t.next()).done;) m = o + M(d = d.value, h++), f += e(d, i, a, m, s);
         else if ("object" === d) throw Error("Objects are not valid as a React child (found: " + ("[object Object]" === (i = String(t)) ? "object with keys {" + Object.keys(t).join(", ") + "}" : i) + "). If you meant to render a collection of children, use an array instead.")
       }
     return f
@@ -159,25 +159,25 @@ var k = {
     transition: null
   };
 t.Children = {
-  map: M,
+  map: O,
   forEach: function(e, t, n) {
-    M(e, function() {
+    O(e, function() {
       t.apply(this, arguments)
     }, n)
   },
   count: function(e) {
     var t = 0;
-    return M(e, function() {
+    return O(e, function() {
       t++
     }), t
   },
   toArray: function(e) {
-    return M(e, function(e) {
+    return O(e, function(e) {
       return e
     }) || []
   },
   only: function(e) {
-    if (!C(e)) throw Error("React.Children.only expected to receive a single React element child.");
+    if (!T(e)) throw Error("React.Children.only expected to receive a single React element child.");
     return e
   }
 }, t.Component = _, t.Fragment = i, t.Profiler = o, t.PureComponent = v, t.StrictMode = a, t.Suspense = l, t.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = {
@@ -223,8 +223,8 @@ t.Children = {
     $$typeof: s,
     _context: e
   }, e.Consumer = e
-}, t.createElement = T, t.createFactory = function(e) {
-  var t = T.bind(null, e);
+}, t.createElement = C, t.createFactory = function(e) {
+  var t = C.bind(null, e);
   return t.type = e, t
 }, t.createRef = function() {
   return {
@@ -235,7 +235,7 @@ t.Children = {
     $$typeof: c,
     render: e
   }
-}, t.isValidElement = C, t.lazy = function(e) {
+}, t.isValidElement = T, t.lazy = function(e) {
   return {
     $$typeof: f,
     _payload: {

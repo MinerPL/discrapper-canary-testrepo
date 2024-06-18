@@ -1,40 +1,40 @@
 "use strict";
-n.r(t), n.d(t, {
-  DEFAULT_OPACITY: function() {
-    return S
+n.d(t, {
+  wB: function() {
+    return m
   }
-}), n("411104");
-var i, a, l, s, o = n("735250"),
-  r = n("470079"),
-  d = n("120356"),
-  u = n.n(d),
-  c = n("877921"),
-  f = n.n(c),
-  h = n("481060"),
-  p = n("981631"),
-  g = n("744537"),
-  m = n("961047");
-let E = p.OverlayWidgetTypes.DEFAULT,
-  S = 1,
-  v = r.createContext({
-    type: E,
-    opacity: S
+}), n(411104);
+var i, s, l, a, o = n(735250),
+  r = n(470079),
+  d = n(120356),
+  c = n.n(d),
+  u = n(877921),
+  h = n.n(u),
+  p = n(481060),
+  f = n(981631),
+  E = n(744537),
+  Z = n(961047);
+let g = f.t_t.DEFAULT,
+  m = 1,
+  _ = r.createContext({
+    type: g,
+    opacity: m
   }),
-  y = r.createContext(void 0),
-  O = e => {
+  I = r.createContext(void 0),
+  S = e => {
     let {
       children: t,
       className: n,
       ...i
     } = e;
-    return (0, o.jsx)(v.Consumer, {
+    return (0, o.jsx)(_.Consumer, {
       children: e => {
         let {
-          type: a
+          type: s
         } = e;
-        return (0, o.jsx)(y.Consumer, {
+        return (0, o.jsx)(I.Consumer, {
           children: e => (0, o.jsx)("div", {
-            className: u()(n, g.bar, g[f()(a)]),
+            className: c()(n, E.bar, E[h()(s)]),
             style: e,
             ...i,
             children: t
@@ -43,22 +43,22 @@ let E = p.OverlayWidgetTypes.DEFAULT,
       }
     })
   };
-class C extends(i = r.PureComponent) {
+class v extends(i = r.PureComponent) {
   render() {
     let {
       disableScroll: e,
       children: t,
       className: n
     } = this.props;
-    return (0, o.jsx)(y.Consumer, {
-      children: i => (0, o.jsx)(v.Consumer, {
-        children: a => {
-          let l = u()(g.body, g[f()(a.type)], n);
+    return (0, o.jsx)(I.Consumer, {
+      children: i => (0, o.jsx)(_.Consumer, {
+        children: s => {
+          let l = c()(E.body, E[h()(s.type)], n);
           return e ? (0, o.jsx)("div", {
             className: l,
             style: i,
             children: t
-          }) : (0, o.jsx)(h.Scroller, {
+          }) : (0, o.jsx)(p.Scroller, {
             fade: !0,
             className: l,
             children: t
@@ -68,124 +68,124 @@ class C extends(i = r.PureComponent) {
     })
   }
 }
-s = {
+a = {
   disableScroll: !1
-}, (l = "defaultProps") in(a = C) ? Object.defineProperty(a, l, {
-  value: s,
+}, (l = "defaultProps") in(s = v) ? Object.defineProperty(s, l, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = s;
-let T = e => {
+}) : s[l] = a;
+let C = e => {
     let {
-      type: t = E,
+      type: t = g,
       width: n,
       height: i,
-      children: a,
+      children: s,
       className: l,
-      opacity: s = S,
+      opacity: a = m,
       onClick: r
     } = e;
-    return (0, o.jsx)(v.Provider, {
+    return (0, o.jsx)(_.Provider, {
       value: {
         type: t,
-        opacity: s
+        opacity: a
       },
       children: (0, o.jsx)("div", {
-        className: u()(g.widget, g[f()(t)], l),
+        className: c()(E.widget, E[h()(t)], l),
         style: {
           width: n,
           height: i
         },
         onClick: r,
-        children: a
+        children: s
       })
     })
   },
-  N = e => {
+  x = e => {
     let {
       children: t,
       className: n,
       dynamicSize: i = !1
     } = e;
-    return (0, o.jsx)(y.Consumer, {
+    return (0, o.jsx)(I.Consumer, {
       children: e => (0, o.jsx)("div", {
-        className: u()(g.content, n, {
-          [g.staticSize]: !i
+        className: c()(E.content, n, {
+          [E.staticSize]: !i
         }),
         style: e,
         children: t
       })
     })
   };
-T.Background = e => {
+C.Background = e => {
   let {
     children: t,
     opacityOverride: n
   } = e;
   if (null == t) return null;
-  let i = [O, C, N];
-  return (0, o.jsx)(v.Consumer, {
+  let i = [S, v, x];
+  return (0, o.jsx)(_.Consumer, {
     children: e => {
       let {
-        opacity: a
+        opacity: s
       } = e, l = {
-        backgroundColor: "rgba(54, 57, 63, ".concat("" + (null != n ? n : a), ")")
+        backgroundColor: "rgba(54, 57, 63, ".concat("" + (null != n ? n : s), ")")
       };
       if ("string" == typeof t.type) return r.cloneElement(t, {
         style: l
       });
+      if (i.includes(t.type)) return (0, o.jsx)(I.Provider, {
+        value: l,
+        children: t
+      });
       {
-        if (i.includes(t.type)) return (0, o.jsx)(y.Provider, {
-          value: l,
-          children: t
-        });
         let e = t.type.displayName;
         throw Error("Widget.Background cannot be wrapped around ".concat(e, ". Pass a DOM node or one of ").concat(i.map(e => "Widget." + e.name).join(",")))
       }
     }
   })
-}, T.Body = C, T.Content = N, T.Icon = e => {
+}, C.Body = v, C.Content = x, C.Icon = e => {
   let {
     icon: t,
     label: n,
     onClick: i,
-    isActive: a,
+    isActive: s,
     tooltipPosition: l = "top",
-    size: s = 20,
+    size: a = 20,
     isTutorial: r = !1
   } = e;
-  return (0, o.jsx)(h.Tooltip, {
+  return (0, o.jsx)(p.Tooltip, {
     text: r ? (0, o.jsx)("div", {
-      className: g.tutorialTip,
+      className: E.tutorialTip,
       children: n
     }) : n,
     "aria-label": n,
     position: l,
     forceOpen: r,
-    color: r ? h.Tooltip.Colors.BRAND : h.Tooltip.Colors.BLACK,
+    color: r ? p.Tooltip.Colors.BRAND : p.Tooltip.Colors.BLACK,
     children: e => {
       let {
         onMouseEnter: l,
         onMouseLeave: r
       } = e;
-      return (0, o.jsx)(h.Button, {
-        look: h.Button.Looks.BLANK,
-        size: h.Button.Sizes.NONE,
+      return (0, o.jsx)(p.Button, {
+        look: p.Button.Looks.BLANK,
+        size: p.Button.Sizes.NONE,
         onClick: i,
         onMouseEnter: l,
         onMouseLeave: r,
-        className: u()(g.icon, {
-          [g.toggledIconOn]: a
+        className: c()(E.icon, {
+          [E.toggledIconOn]: s
         }),
-        innerClassName: m.flexCenter,
+        innerClassName: Z.flexCenter,
         "aria-label": n,
         children: (0, o.jsx)(t, {
-          width: s,
-          height: s,
+          width: a,
+          height: a,
           role: "img"
         })
       })
     }
   })
-}, T.Bar = O, t.default = T
+}, C.Bar = S, t.ZP = C

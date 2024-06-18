@@ -1,8 +1,8 @@
 "use strict";
-var n = r("310176"),
-  i = r("379846"),
-  o = r("624001"),
-  a = r("467159"),
+var n = r(310176),
+  i = r(379846),
+  o = r(624001),
+  a = r(467159),
   u = null;
 t.exports = {
   cut: function(t) {

@@ -1,49 +1,49 @@
 "use strict";
-n.r(t), n.d(t, {
-  auto: function() {
-    return s
-  },
-  basePlacements: function() {
-    return u
-  },
-  bottom: function() {
-    return i
-  },
-  clippingParents: function() {
-    return d
-  },
-  end: function() {
-    return l
-  },
-  left: function() {
-    return o
-  },
-  modifierPhases: function() {
-    return _
-  },
-  placements: function() {
-    return g
-  },
-  popper: function() {
-    return p
-  },
-  reference: function() {
-    return h
-  },
-  right: function() {
-    return a
-  },
-  start: function() {
+n.d(t, {
+  BL: function() {
     return c
   },
-  top: function() {
-    return r
+  Ct: function() {
+    return g
   },
-  variationPlacements: function() {
+  F2: function() {
+    return a
+  },
+  I: function() {
+    return i
+  },
+  Pj: function() {
+    return f
+  },
+  YP: function() {
+    return h
+  },
+  bw: function() {
     return m
   },
-  viewport: function() {
-    return f
+  d7: function() {
+    return s
+  },
+  k5: function() {
+    return p
+  },
+  mv: function() {
+    return u
+  },
+  t$: function() {
+    return o
+  },
+  ut: function() {
+    return l
+  },
+  we: function() {
+    return r
+  },
+  xs: function() {
+    return _
+  },
+  zV: function() {
+    return d
   }
 });
 var r = "top",

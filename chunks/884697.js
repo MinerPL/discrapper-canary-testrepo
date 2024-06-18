@@ -1,118 +1,148 @@
 "use strict";
-n.r(t), n.d(t, {
-  extractPriceByPurchaseTypes: function() {
-    return I
+n.d(t, {
+  BH: function() {
+    return S
   },
-  getAvatarDecorations: function() {
+  Cs: function() {
     return N
   },
-  getCollectiblesAssetURL: function() {
-    return p
+  G1: function() {
+    return d
   },
-  getDaysRemaining: function() {
-    return v
+  IC: function() {
+    return M
   },
-  getFormattedPriceForCollectiblesProduct: function() {
+  OT: function() {
+    return y
+  },
+  XM: function() {
     return E
   },
-  getLogoSize: function() {
+  XS: function() {
     return L
   },
-  getProductsFromCategories: function() {
-    return f
+  Yq: function() {
+    return U
   },
-  getProfileEffectsFromCategories: function() {
-    return R
-  },
-  getProfileEffectsFromPurchases: function() {
-    return O
-  },
-  groupProfileEffects: function() {
-    return C
-  },
-  isCollectiblesGiftCode: function() {
+  aj: function() {
     return g
   },
-  isFreeCollectiblesProduct: function() {
-    return T
+  bl: function() {
+    return v
   },
-  isPremiumCollectiblesProduct: function() {
-    return _
+  f_: function() {
+    return h
   },
-  isPremiumCollectiblesPurchase: function() {
+  iC: function() {
+    return C
+  },
+  mO: function() {
+    return D
+  },
+  qS: function() {
     return c
   },
-  isProductNew: function() {
-    return D
+  ql: function() {
+    return T
+  },
+  rN: function() {
+    return f
+  },
+  uV: function() {
+    return p
+  },
+  x6: function() {
+    return b
   }
-}), n("47120");
-var i = n("392711"),
-  r = n("979554"),
-  a = n("134432"),
-  s = n("937615"),
-  o = n("922347"),
-  l = n("212161"),
-  u = n("215023"),
-  d = n("981631");
-let _ = e => (null == e ? void 0 : e.premiumType) != null,
-  c = e => (null == e ? void 0 : e.purchaseType) === d.EntitlementTypes.PREMIUM_PURCHASE,
+}), n(724458), n(47120);
+var i = n(392711),
+  r = n(979554),
+  s = n(134432),
+  o = n(937615),
+  a = n(922347),
+  l = n(212161),
+  u = n(215023),
+  _ = n(981631);
+let d = e => (null == e ? void 0 : e.premiumType) != null,
+  c = e => (null == e ? void 0 : e.purchaseType) === _.qc2.PREMIUM_PURCHASE,
   E = (e, t, n) => {
     let i;
-    let r = I(e, i = n ? t ? d.PriceSetAssignmentPurchaseTypes.MOBILE_PREMIUM_TIER_2 : d.PriceSetAssignmentPurchaseTypes.MOBILE : t ? d.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2 : d.PriceSetAssignmentPurchaseTypes.DEFAULT);
-    return null == r ? "" : (0, s.formatPrice)(null == r ? void 0 : r.amount, null == r ? void 0 : r.currency)
+    let r = T(e, i = n ? t ? _.tuJ.MOBILE_PREMIUM_TIER_2 : _.tuJ.MOBILE : t ? _.tuJ.PREMIUM_TIER_2 : _.tuJ.DEFAULT);
+    return null == r ? "" : (0, o.T4)(null == r ? void 0 : r.amount, null == r ? void 0 : r.currency)
   },
-  I = (e, t) => {
+  I = e => {
+    let t = e.bundledProducts;
+    return null == t ? 0 : t.reduce((e, t) => {
+      var n;
+      let i = T(t, _.tuJ.DEFAULT);
+      return e + (null !== (n = null == i ? void 0 : i.amount) && void 0 !== n ? n : 0)
+    }, 0)
+  },
+  T = (e, t) => {
     var n, i, r;
-    let a = null !== (r = e.prices[t]) && void 0 !== r ? r : null;
-    return null == a ? null : null === (i = a.countryPrices) || void 0 === i ? void 0 : null === (n = i.prices) || void 0 === n ? void 0 : n[0]
+    let s = null !== (r = e.prices[t]) && void 0 !== r ? r : null;
+    return null == s ? null : null === (i = s.countryPrices) || void 0 === i ? void 0 : null === (n = i.prices) || void 0 === n ? void 0 : n[0]
   },
-  T = e => {
-    var t;
-    return (null === (t = I(e, d.PriceSetAssignmentPurchaseTypes.DEFAULT)) || void 0 === t ? void 0 : t.amount) === 0
+  h = 12633 == n.j ? {
+    original: -1,
+    discountPercentage: -1
+  } : null,
+  S = (e, t) => {
+    let n = I(e);
+    if (n <= 0) return h;
+    let i = T(e, t ? _.tuJ.PREMIUM_TIER_2 : _.tuJ.DEFAULT);
+    return null == i ? h : {
+      original: n,
+      discountPercentage: Math.floor((n - i.amount) / n * 100)
+    }
   },
   f = e => {
+    var t;
+    return (null === (t = T(e, _.tuJ.DEFAULT)) || void 0 === t ? void 0 : t.amount) === 0
+  },
+  N = e => {
     let t = (0, i.flatMap)([...e.values()], "products");
     return (0, i.uniqBy)(t, "storeListingId")
   },
-  S = (e, t) => {
-    if (t === r.CollectiblesItemType.AVATAR_DECORATION) {
-      let t = (0, i.flatMap)([...e.values()], "items").filter(o.isAvatarDecorationRecord);
+  A = (e, t) => {
+    if (t === r.Z.AVATAR_DECORATION) {
+      let t = (0, i.flatMap)([...e.values()], "items").filter(a.M);
       return (0, i.uniqBy)(t, "id")
     }
-    if (t === r.CollectiblesItemType.PROFILE_EFFECT) {
-      let t = (0, i.flatMap)([...e.values()], "items").filter(l.isProfileEffectRecord);
+    if (t === r.Z.PROFILE_EFFECT) {
+      let t = (0, i.flatMap)([...e.values()], "items").filter(l.H);
       return (0, i.uniqBy)(t, "id")
     }
   },
-  h = (e, t) => {
-    let n = f(e);
-    if (t === r.CollectiblesItemType.AVATAR_DECORATION) {
-      let e = (0, i.flatMap)(n, "items").filter(o.isAvatarDecorationRecord);
+  m = (e, t) => {
+    let n = N(e);
+    if (t === r.Z.AVATAR_DECORATION) {
+      let e = (0, i.flatMap)(n, "items").filter(a.M);
       return (0, i.uniqBy)(e, "id")
     }
-    if (t === r.CollectiblesItemType.PROFILE_EFFECT) {
-      let e = (0, i.flatMap)(n, "items").filter(l.isProfileEffectRecord);
+    if (t === r.Z.PROFILE_EFFECT) {
+      let e = (0, i.flatMap)(n, "items").filter(l.H);
       return (0, i.uniqBy)(e, "id")
     }
   },
-  A = e => S(e, r.CollectiblesItemType.AVATAR_DECORATION),
-  m = e => h(e, r.CollectiblesItemType.AVATAR_DECORATION),
-  N = (e, t) => (0, i.uniqBy)([...A(e), ...m(t)], "id"),
+  O = e => A(e, r.Z.AVATAR_DECORATION),
+  R = e => m(e, r.Z.AVATAR_DECORATION),
+  C = (e, t) => (0, i.uniqBy)([...O(e), ...R(t)], "id"),
   p = (e, t) => {
     var n;
     let {
       CDN_HOST: i,
       API_ENDPOINT: r
-    } = window.GLOBAL_ENV, s = (0, a.getBestMediaProxySize)(t.size * (0, a.getDevicePixelRatio)()), o = null !== (n = null == t ? void 0 : t.format) && void 0 !== n ? n : "png";
-    if (null != i) return "".concat(location.protocol, "//").concat(i, "/app-assets/").concat(d.COLLECTIBLES_APPLICATION_ID, "/").concat(e, ".").concat(o, "?size=").concat(s);
-    let l = d.Endpoints.APPLICATION_ASSET(d.COLLECTIBLES_APPLICATION_ID, e, o);
-    return "".concat(location.protocol).concat(r).concat(l, "?size=").concat(s)
+    } = window.GLOBAL_ENV, o = (0, s.oO)(t.size * (0, s.x_)()), a = null !== (n = null == t ? void 0 : t.format) && void 0 !== n ? n : "png";
+    if (null != i) return "".concat(location.protocol, "//").concat(i, "/app-assets/").concat(_.XAJ, "/").concat(e, ".").concat(a, "?size=").concat(o);
+    let l = _.ANM.APPLICATION_ASSET(_.XAJ, e, a);
+    return "".concat(location.protocol).concat(r).concat(l, "?size=").concat(o)
   },
-  O = e => S(e, r.CollectiblesItemType.PROFILE_EFFECT),
-  R = e => h(e, r.CollectiblesItemType.PROFILE_EFFECT),
-  C = (e, t) => {
-    let n = O(t),
-      i = R(e).filter(e => {
+  g = e => A(e, r.Z.PROFILE_EFFECT),
+  L = e => m(e, r.Z.PROFILE_EFFECT),
+  v = (e, t) => {
+    let n = g(t),
+      i = L(e).filter(e => {
         let {
           id: t
         } = e;
@@ -123,14 +153,16 @@ let _ = e => (null == e ? void 0 : e.premiumType) != null,
       shopPreviews: i
     }
   },
-  g = e => e.applicationId === d.COLLECTIBLES_APPLICATION_ID,
-  L = e => 3.8 * e,
-  v = e => {
+  D = e => e.applicationId === _.XAJ,
+  M = e => 3.8 * e,
+  P = 12633 == n.j ? 864e5 : null,
+  y = e => {
     let t = new Date,
       n = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate());
-    return Math.floor((Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()) - n) / 864e5)
+    return Math.floor((Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()) - n) / P)
   },
-  D = e => {
-    let t = u.SHOP_CARD_PER_PRODUCT_NEW_BADGE_EXPIRY_SETTINGS[e];
+  U = e => {
+    let t = u.yf[e];
     return null != t && new Date().getTime() < t
-  }
+  },
+  b = e => (null == e ? void 0 : e.type) === r.Z.BUNDLE

@@ -1,58 +1,57 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("803997"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("681429"),
-  o = n("527166");
+  o = n(674298),
+  a = n(928217);
 let l = Object.freeze({
-    STANDARD: a.colorStandard,
-    MUTED: a.colorMuted,
-    ERROR: a.colorError,
-    BRAND: a.colorBrand,
-    LINK: a.colorLink,
-    HEADER_PRIMARY: a.colorHeaderPrimary,
-    HEADER_SECONDARY: a.colorHeaderSecondary,
-    STATUS_YELLOW: a.colorStatusYellow,
-    STATUS_GREEN: a.colorStatusGreen,
-    STATUS_RED: a.colorStatusRed,
-    INTERACTIVE_ACTIVE: a.colorInteractiveActive,
-    INTERACTIVE_NORMAL: a.colorInteractiveNormal,
-    ALWAYS_WHITE: a.colorWhite,
+    STANDARD: o.colorStandard,
+    MUTED: o.colorMuted,
+    ERROR: o.colorError,
+    BRAND: o.colorBrand,
+    LINK: o.colorLink,
+    HEADER_PRIMARY: o.colorHeaderPrimary,
+    HEADER_SECONDARY: o.colorHeaderSecondary,
+    STATUS_YELLOW: o.colorStatusYellow,
+    STATUS_GREEN: o.colorStatusGreen,
+    STATUS_RED: o.colorStatusRed,
+    INTERACTIVE_ACTIVE: o.colorInteractiveActive,
+    INTERACTIVE_NORMAL: o.colorInteractiveNormal,
+    ALWAYS_WHITE: o.colorWhite,
     CUSTOM: null
   }),
   u = Object.freeze({
-    SIZE_10: o.size10,
-    SIZE_12: o.size12,
-    SIZE_14: o.size14,
-    SIZE_16: o.size16,
-    SIZE_20: o.size20,
-    SIZE_24: o.size24,
-    SIZE_32: o.size32
+    SIZE_10: a.size10,
+    SIZE_12: a.size12,
+    SIZE_14: a.size14,
+    SIZE_16: a.size16,
+    SIZE_20: a.size20,
+    SIZE_24: a.size24,
+    SIZE_32: a.size32
   }),
-  d = e => {
+  _ = e => {
     let {
       className: t,
       color: n = l.STANDARD,
       size: r = u.SIZE_14,
-      tag: o = "div",
-      selectable: d = !1,
-      strong: _ = !1,
+      tag: a = "div",
+      selectable: _ = !1,
+      strong: d = !1,
       children: c,
       style: E,
       "aria-label": I,
       ...T
     } = e;
-    return (0, i.jsx)(o, {
+    return (0, i.jsx)(a, {
       "aria-label": I,
       className: s()(n, r, t, {
-        [a.selectable]: d,
-        [a.strong]: _
+        [o.selectable]: _,
+        [o.strong]: d
       }),
       style: E,
       ...T,
       children: c
     })
   };
-d.Colors = l, d.Sizes = u, t.default = d
+_.Colors = l, _.Sizes = u, t.Z = _

@@ -1,12 +1,10 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("287328");
-t.default = new class e {
+n(47120);
+var i = n(287328);
+t.Z = new class e {
   async getAll() {
-    let e = i.default.guildsRequiringDeletedIdsSync();
-    if (null == e) return new Set;
-    let t = await e.getMany();
-    return new Set(t.map(e => e.id))
+    let e = i.Z.guildsRequiringDeletedIdsSync();
+    return null == e ? new Set : new Set((await e.getMany()).map(e => e.id))
   }
   handleConnectionOpen(e, t) {
     let {
@@ -14,7 +12,7 @@ t.default = new class e {
     } = e, r = n.filter(e => e.unableToSyncDeletes).map(e => ({
       id: e.id
     }));
-    r.length > 0 && i.default.guildsRequiringDeletedIdsSyncTransaction(t).putAll(r)
+    r.length > 0 && i.Z.guildsRequiringDeletedIdsSyncTransaction(t).putAll(r)
   }
   handleBackgroundSync(e, t) {
     let {
@@ -22,18 +20,18 @@ t.default = new class e {
     } = e, r = n.filter(e => "partial" === e.data_mode && e.unableToSyncDeletes).map(e => ({
       id: e.id
     }));
-    r.length > 0 && i.default.guildsRequiringDeletedIdsSyncTransaction(t).putAll(r)
+    r.length > 0 && i.Z.guildsRequiringDeletedIdsSyncTransaction(t).putAll(r)
   }
   handleGuildCreate(e, t) {
     let {
       guild: n
     } = e;
-    n.unableToSyncDeletes && i.default.guildsRequiringDeletedIdsSyncTransaction(t).put({
+    n.unableToSyncDeletes && i.Z.guildsRequiringDeletedIdsSyncTransaction(t).put({
       id: n.id
     })
   }
   handleDeletedEntityIds(e, t) {
-    i.default.guildsRequiringDeletedIdsSyncTransaction(t).delete(e.guild_id)
+    i.Z.guildsRequiringDeletedIdsSyncTransaction(t).delete(e.guild_id)
   }
   resetInMemoryState() {}
   constructor() {

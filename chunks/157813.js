@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return T
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
-  o = n("475179"),
-  l = n("605403"),
-  u = n("158010"),
-  d = n("871499"),
-  _ = n("689938"),
-  c = n("297430");
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(475179),
+  l = n(605403),
+  u = n(158010),
+  _ = n(871499),
+  d = n(689938),
+  c = n(868889);
 
 function E(e) {
   let {
@@ -22,10 +22,10 @@ function E(e) {
   } = e;
   return (0, i.jsxs)("div", {
     className: c.iconContainer,
-    children: [(0, i.jsx)(l.default, {
-      className: a()(n ? c.upCaret : c.leftCaret, t)
-    }), (0, i.jsx)(u.default, {
-      className: a()(c.members, t)
+    children: [(0, i.jsx)(l.Z, {
+      className: o()(n ? c.upCaret : c.leftCaret, t)
+    }), (0, i.jsx)(u.Z, {
+      className: o()(c.members, t)
     })]
   })
 }
@@ -37,10 +37,10 @@ function I(e) {
   } = e;
   return (0, i.jsxs)("div", {
     className: c.iconContainer,
-    children: [(0, i.jsx)(l.default, {
-      className: a()(n ? c.downCaret : c.rightCaret, t)
-    }), n && (0, i.jsx)(u.default, {
-      className: a()(c.members, t)
+    children: [(0, i.jsx)(l.Z, {
+      className: o()(n ? c.downCaret : c.rightCaret, t)
+    }), n && (0, i.jsx)(u.Z, {
+      className: o()(c.members, t)
     })]
   })
 }
@@ -64,11 +64,11 @@ function T(e) {
       isVertical: l
     })
   }, [s, l]);
-  return (0, i.jsx)(d.default, {
-    label: s ? _.default.Messages.VIDEO_CALL_HIDE_MEMBERS : _.default.Messages.VIDEO_CALL_SHOW_MEMBERS,
-    className: a()(c.participantsButton, n),
+  return (0, i.jsx)(_.Z, {
+    label: s ? d.Z.Messages.VIDEO_CALL_HIDE_MEMBERS : d.Z.Messages.VIDEO_CALL_SHOW_MEMBERS,
+    className: o()(c.participantsButton, n),
     onClick: function() {
-      o.default.toggleParticipants(t, !s)
+      a.Z.toggleParticipants(t, !s)
     },
     iconComponent: T,
     shouldShowTooltip: !u

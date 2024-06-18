@@ -1,25 +1,25 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
+t.d(s, {
+  Z: function() {
     return o
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("442837"),
-  n = s("246946"),
-  i = s("999382"),
-  r = s("270394");
+var n = t(735250);
+t(470079);
+var i = t(442837),
+  l = t(246946),
+  a = t(999382),
+  r = t(270394);
 
 function o() {
-  let e = (0, l.useStateFromStores)([n.default], () => n.default.hideInstantInvites),
+  let e = (0, i.e7)([l.Z], () => l.Z.hideInstantInvites),
     {
-      invites: t,
-      guild: s
-    } = (0, l.useStateFromStoresObject)([i.default], () => i.default.getProps(), []);
-  return (0, a.jsx)(r.default, {
-    invites: t,
-    guild: s,
+      invites: s,
+      guild: t
+    } = (0, i.cj)([a.Z], () => a.Z.getProps(), []);
+  return (0, n.jsx)(r.Z, {
+    invites: s,
+    guild: t,
     showChannel: !0,
     hide: e
   })

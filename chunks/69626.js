@@ -1,115 +1,115 @@
 "use strict";
-n.r(t), n.d(t, {
-  CommandClickable: function() {
-    return C
-  },
-  default: function() {
+n.d(t, {
+  ZP: function() {
     return g
+  },
+  wz: function() {
+    return p
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  a = n("442837"),
-  s = n("481060"),
-  o = n("555573"),
-  l = n("10718"),
-  u = n("895924"),
-  d = n("665906"),
-  _ = n("695346"),
-  c = n("592125"),
-  E = n("703558"),
-  I = n("496675"),
-  T = n("944486"),
-  f = n("797053"),
-  S = n("585483"),
-  h = n("981631"),
-  A = n("689079"),
-  m = n("665692"),
-  N = n("689938"),
-  p = n("204104");
+var i = n(735250),
+  r = n(470079),
+  s = n(442837),
+  o = n(481060),
+  a = n(555573),
+  l = n(10718),
+  u = n(895924),
+  _ = n(665906),
+  d = n(695346),
+  c = n(592125),
+  E = n(703558),
+  I = n(496675),
+  T = n(944486),
+  h = n(797053),
+  S = n(585483),
+  f = n(981631),
+  N = n(689079),
+  A = n(665692),
+  m = n(689938),
+  O = n(471898);
 
-function O(e, t, n, r) {
+function R(e, t, n, r) {
   if (null == e) return;
-  let a = () => {
-    let i = c.default.getChannel(e);
+  let s = () => {
+    let i = c.Z.getChannel(e);
     if (null == i) return;
     let {
-      command: a,
-      application: s
-    } = l.getCachedCommand(i, n);
-    if (null != a && a.name === t) {
-      var d, _;
-      S.ComponentDispatch.dispatch(h.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+      command: s,
+      application: o
+    } = l.Xq(i, n);
+    if (null != s && s.name === t) {
+      var _, d;
+      S.S.dispatch(f.CkL.FOCUS_CHANNEL_TEXT_AREA, {
         channelId: e
       });
-      let t = null != s ? {
-        type: u.ApplicationCommandSectionType.APPLICATION,
-        id: s.id,
-        icon: null !== (_ = null == s ? void 0 : null === (d = s.bot) || void 0 === d ? void 0 : d.username) && void 0 !== _ ? _ : s.icon,
-        name: s.name,
-        application: s
+      let t = null != o ? {
+        type: u.Qi.APPLICATION,
+        id: o.id,
+        icon: null !== (d = null == o ? void 0 : null === (_ = o.bot) || void 0 === _ ? void 0 : _.username) && void 0 !== d ? d : o.icon,
+        name: o.name,
+        application: o
       } : null;
-      o.setActiveCommand({
+      a.Po({
         channelId: e,
         command: null,
         section: null
-      }), o.setActiveCommand({
+      }), a.Po({
         channelId: e,
-        command: a,
+        command: s,
         section: t,
         location: r
       })
     }
   };
-  "" !== E.default.getDraft(e, E.DraftType.ChannelMessage) ? (0, s.openModal)(t => (0, i.jsx)(s.ConfirmModal, {
-    header: N.default.Messages.APPLICATION_COMMAND_MENTION_CONFIRM_HEADER,
-    confirmText: N.default.Messages.CLEAR,
-    cancelText: N.default.Messages.CANCEL,
-    onConfirm: () => a(),
-    confirmButtonColor: s.Button.Colors.BRAND,
+  "" !== E.Z.getDraft(e, E.d.ChannelMessage) ? (0, o.openModal)(t => (0, i.jsx)(o.ConfirmModal, {
+    header: m.Z.Messages.APPLICATION_COMMAND_MENTION_CONFIRM_HEADER,
+    confirmText: m.Z.Messages.CLEAR,
+    cancelText: m.Z.Messages.CANCEL,
+    onConfirm: () => s(),
+    confirmButtonColor: o.Button.Colors.BRAND,
     onCloseCallback: () => {
-      S.ComponentDispatch.dispatch(h.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+      S.S.dispatch(f.CkL.FOCUS_CHANNEL_TEXT_AREA, {
         channelId: e
       })
     },
     ...t,
-    children: (0, i.jsx)(s.Text, {
+    children: (0, i.jsx)(o.Text, {
       variant: "text-md/normal",
-      children: N.default.Messages.APPLICATION_COMMAND_MENTION_CONFIRM_BODY
+      children: m.Z.Messages.APPLICATION_COMMAND_MENTION_CONFIRM_BODY
     })
-  })) : a()
+  })) : s()
 }
 
-function R(e) {
+function C(e) {
   var t;
   let {
     node: n,
-    output: o,
+    output: a,
     state: E
-  } = e, S = (0, a.useStateFromStores)([c.default, T.default], () => {
+  } = e, S = (0, s.e7)([c.Z, T.Z], () => {
     var e;
-    return c.default.getChannel(null !== (e = n.channelId) && void 0 !== e ? e : T.default.getChannelId())
+    return c.Z.getChannel(null !== (e = n.channelId) && void 0 !== e ? e : T.Z.getChannelId())
   }, [n.channelId]), {
-    hasSendMessagePerm: N,
-    hasUseAppCommandsPerm: p
-  } = (0, a.useStateFromStoresObject)([I.default], () => {
-    let e = I.default.can(h.Permissions.SEND_MESSAGES, S);
+    hasSendMessagePerm: m,
+    hasUseAppCommandsPerm: O
+  } = (0, s.cj)([I.Z], () => {
+    let e = I.Z.can(f.Plq.SEND_MESSAGES, S);
     return {
       hasSendMessagePerm: e,
-      hasUseAppCommandsPerm: I.default.can(h.Permissions.USE_APPLICATION_COMMANDS, S)
+      hasUseAppCommandsPerm: I.Z.can(f.Plq.USE_APPLICATION_COMMANDS, S)
     }
   }), {
-    command: R
-  } = l.useCommand(S, null !== (t = n.commandKey) && void 0 !== t ? t : ""), C = _.UseLegacyChatInput.useSetting(), g = r.useMemo(() => {
-    if (null == R || null == S || R.name !== n.commandName || C) return !1;
+    command: C
+  } = l.YZ(S, null !== (t = n.commandKey) && void 0 !== t ? t : ""), p = d.dN.useSetting(), g = r.useMemo(() => {
+    if (null == C || null == S || C.name !== n.commandName || p) return !1;
     let e = S.isPrivate();
-    if ((0, d.computeIsReadOnlyThread)(S) || !e && !N) return !1;
-    let t = (null == R ? void 0 : R.applicationId) === A.BuiltInSectionId.BUILT_IN;
-    return !!e || !!t || !!p || !1
-  }, [S, R, N, p, n.commandName, C]), L = r.useCallback(e => {
-    null == e || e.stopPropagation(), null != S && null != n.commandName && null != n.commandKey && O(S.id, n.commandName, n.commandKey, u.ApplicationCommandTriggerLocations.MENTION)
+    if ((0, _.xl)(S) || !e && !m) return !1;
+    let t = (null == C ? void 0 : C.applicationId) === N.bi.BUILT_IN;
+    return !!e || !!t || !!O || !1
+  }, [S, C, m, O, n.commandName, p]), L = r.useCallback(e => {
+    null == e || e.stopPropagation(), null != S && null != n.commandName && null != n.commandKey && R(S.id, n.commandName, n.commandKey, u.Vh.MENTION)
   }, [S, n.commandKey, n.commandName]);
-  return g ? (0, i.jsx)(s.Tooltip, {
+  return g ? (0, i.jsx)(o.Tooltip, {
     text: n.output,
     position: "top",
     children: e => {
@@ -117,41 +117,41 @@ function R(e) {
         onMouseEnter: t,
         onMouseLeave: r
       } = e;
-      return (0, i.jsxs)(f.default, {
+      return (0, i.jsxs)(h.Z, {
         role: "link",
         onClick: L,
         onMouseEnter: t,
         onMouseLeave: r,
-        children: [m.COMMAND_SENTINEL, o(n.content, E)]
+        children: [A.GI, a(n.content, E)]
       }, E.key)
     }
   }, E.key) : (0, i.jsxs)("span", {
-    children: [m.COMMAND_SENTINEL, o(n.content, E)]
+    children: [A.GI, a(n.content, E)]
   })
 }
 
-function C(e) {
+function p(e) {
   let {
     commandId: t,
     commandName: n,
     commandDescription: r,
-    onClick: o
-  } = e, l = (0, a.useStateFromStores)([T.default], () => T.default.getChannelId()), d = e => {
-    null == e || e.stopPropagation(), O(l, n, t, u.ApplicationCommandTriggerLocations.POPULAR_COMMANDS), null == o || o(t)
+    onClick: a
+  } = e, l = (0, s.e7)([T.Z], () => T.Z.getChannelId()), _ = e => {
+    null == e || e.stopPropagation(), R(l, n, t, u.Vh.POPULAR_COMMANDS), null == a || a(t)
   };
-  return (0, i.jsx)(s.Tooltip, {
+  return (0, i.jsx)(o.Tooltip, {
     text: r,
     position: "top",
-    tooltipContentClassName: p.tooltip,
+    tooltipContentClassName: O.tooltip,
     children: e => {
       let {
         onMouseEnter: t,
         onMouseLeave: r
       } = e;
-      return (0, i.jsxs)(s.Button, {
-        color: s.ButtonColors.PRIMARY,
-        size: s.ButtonSizes.ICON,
-        onClick: d,
+      return (0, i.jsxs)(o.Button, {
+        color: o.ButtonColors.PRIMARY,
+        size: o.ButtonSizes.ICON,
+        onClick: _,
         onMouseEnter: t,
         onMouseLeave: r,
         children: ["/", n]
@@ -162,7 +162,7 @@ function C(e) {
 
 function g(e) {
   return {
-    react: (e, t, n) => (0, i.jsx)(R, {
+    react: (e, t, n) => (0, i.jsx)(C, {
       node: e,
       output: t,
       state: n

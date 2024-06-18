@@ -52,5 +52,5 @@ var r = function() {
         return this._children
       }
     }]), t
-  }(n("968598"));
+  }(n(968598));
 e.exports = i

@@ -1,39 +1,39 @@
 "use strict";
-s.r(t), s.d(t, {
-  GuildSettingsMembersRow: function() {
-    return S
+t.d(s, {
+  $: function() {
+    return N
   },
-  default: function() {
-    return f
+  Z: function() {
+    return m
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("392711"),
-  n = s("442837"),
-  i = s("481060"),
-  r = s("241559"),
-  o = s("527379"),
-  d = s("313364"),
-  u = s("441957"),
-  c = s("434404"),
-  E = s("999382"),
-  _ = s("981631"),
-  I = s("689938"),
-  T = s("983551");
+var n = t(735250);
+t(470079);
+var i = t(392711),
+  l = t(442837),
+  a = t(481060),
+  r = t(241559),
+  o = t(527379),
+  c = t(313364),
+  d = t(441957),
+  u = t(434404),
+  E = t(999382),
+  _ = t(981631),
+  I = t(689938),
+  T = t(126197);
 
-function S() {
+function N() {
   var e;
-  let t = (0, n.useStateFromStores)([E.default], () => E.default.getProps().guild, []),
-    s = null !== (e = null == t ? void 0 : t.isCommunity()) && void 0 !== e && e;
-  return (0, a.jsxs)(i.Clickable, {
+  let s = (0, l.e7)([E.Z], () => E.Z.getProps().guild, []),
+    t = null !== (e = null == s ? void 0 : s.isCommunity()) && void 0 !== e && e;
+  return (0, n.jsxs)(a.Clickable, {
     onClick: e => {
-      null != t && (s ? (e.preventDefault(), c.default.close(), (0, o.goToMemberSafetyDashboard)(t.id)) : c.default.open(t.id, _.GuildSettingsSections.MEMBERS))
+      if (null != s) t ? (e.preventDefault(), u.Z.close(), (0, o._X)(s.id)) : u.Z.open(s.id, _.pNK.MEMBERS)
     },
     className: T.rowContainer,
-    children: [(0, a.jsx)("div", {
-      children: I.default.Messages.MEMBERS
-    }), s && (0, a.jsx)(u.default, {
+    children: [(0, n.jsx)("div", {
+      children: I.Z.Messages.MEMBERS
+    }), t && (0, n.jsx)(d.Z, {
       className: T.linkIcon,
       width: 16,
       height: 16
@@ -41,12 +41,12 @@ function S() {
   })
 }
 
-function f() {
+function m() {
   var e;
   let {
-    guild: t
-  } = (0, n.useStateFromStores)([E.default], () => E.default.getProps(), [], l.isEqual), s = null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : _.EMPTY_STRING_SNOWFLAKE_ID;
-  return (0, r.useCanAccessMemberSafetyPage)(s) ? (0, a.jsx)(d.default, {
-    guildId: s
+    guild: s
+  } = (0, l.e7)([E.Z], () => E.Z.getProps(), [], i.isEqual), t = null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : _.lds;
+  return (0, r.n2)(t) ? (0, n.jsx)(c.Z, {
+    guildId: t
   }) : null
 }

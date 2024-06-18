@@ -6,8 +6,8 @@ function r() {
     return e.brand + "/" + e.version
   }).join(" ") : navigator.userAgent
 }
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 })

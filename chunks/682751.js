@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-var r = n("799761"),
+var r = n(799761),
   i = {
     ordinalNumber: function(e, t) {
       var n = Number(e),
@@ -15,7 +14,7 @@ var r = n("799761"),
       }
       return n + "th"
     },
-    era: (0, r.default)({
+    era: (0, r.Z)({
       values: {
         narrow: ["B", "A"],
         abbreviated: ["BC", "AD"],
@@ -23,7 +22,7 @@ var r = n("799761"),
       },
       defaultWidth: "wide"
     }),
-    quarter: (0, r.default)({
+    quarter: (0, r.Z)({
       values: {
         narrow: ["1", "2", "3", "4"],
         abbreviated: ["Q1", "Q2", "Q3", "Q4"],
@@ -34,7 +33,7 @@ var r = n("799761"),
         return e - 1
       }
     }),
-    month: (0, r.default)({
+    month: (0, r.Z)({
       values: {
         narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"],
         abbreviated: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
@@ -42,7 +41,7 @@ var r = n("799761"),
       },
       defaultWidth: "wide"
     }),
-    day: (0, r.default)({
+    day: (0, r.Z)({
       values: {
         narrow: ["S", "M", "T", "W", "T", "F", "S"],
         short: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
@@ -51,7 +50,7 @@ var r = n("799761"),
       },
       defaultWidth: "wide"
     }),
-    dayPeriod: (0, r.default)({
+    dayPeriod: (0, r.Z)({
       values: {
         narrow: {
           am: "a",
@@ -120,4 +119,4 @@ var r = n("799761"),
       defaultFormattingWidth: "wide"
     })
   };
-t.default = i
+t.Z = i

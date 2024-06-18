@@ -1,33 +1,33 @@
 "use strict";
 let i;
-n.r(t), n.d(t, {
-  clearVoiceChannelEffectForUser: function() {
-    return h
+n.d(t, {
+  H: function() {
+    return f
   }
-}), n("47120"), n("733860");
-var r, s, a, o, l = n("392711"),
-  u = n("442837"),
-  d = n("780384"),
-  _ = n("570140"),
-  c = n("70956"),
-  E = n("963838"),
-  I = n("354459");
+}), n(47120), n(733860);
+var r, s, o, a, l = n(392711),
+  u = n(442837),
+  _ = n(780384),
+  d = n(570140),
+  c = n(70956),
+  E = n(963838),
+  I = n(354459);
 let T = [],
-  f = {},
+  h = {},
   S = [],
-  h = e => {
-    null != e && _.default.dispatch({
+  f = e => {
+    null != e && d.Z.dispatch({
       type: "VOICE_CHANNEL_EFFECT_CLEAR",
       userId: e
     })
   },
-  A = [],
-  m = 10 * c.default.Millis.SECOND,
-  N = (0, l.debounce)(() => {
-    let e = (0, E.getEffectAnnouncement)(S);
-    d.AccessibilityAnnouncer.announce(e, "polite"), S = []
+  N = [],
+  A = 10 * c.Z.Millis.SECOND,
+  m = (0, l.debounce)(() => {
+    let e = (0, E.cX)(S);
+    _.uv.announce(e, "polite"), S = []
   }, 500);
-class O extends(r = u.default.Store) {
+class O extends(r = u.ZP.Store) {
   get recentlyUsedEmojis() {
     return T
   }
@@ -38,26 +38,26 @@ class O extends(r = u.default.Store) {
     return i
   }
   getEffectForUserId(e) {
-    return f[e]
+    return h[e]
   }
 }
-o = "VoiceChannelEffectsStore", (a = "displayName") in(s = O) ? Object.defineProperty(s, a, {
-  value: o,
+a = "VoiceChannelEffectsStore", (o = "displayName") in(s = O) ? Object.defineProperty(s, o, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = o, t.default = new O(_.default, {
+}) : s[o] = a, t.Z = new O(d.Z, {
   VOICE_CHANNEL_EFFECT_CLEAR: e => {
     let {
       userId: t
     } = e;
-    null != f[t] && delete f[t]
+    null != h[t] && delete h[t]
   },
   VOICE_CHANNEL_EFFECT_RECENT_EMOJI: e => {
     let {
       emoji: t
     } = e;
-    null != t && (T.unshift(t), (T = (0, l.uniqBy)(T, "name")).length > I.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT + 1 && T.pop())
+    if (null != t) T.unshift(t), (T = (0, l.uniqBy)(T, "name")).length > I.e5 + 1 && T.pop()
   },
   VOICE_CHANNEL_EFFECT_SEND: e => {
     let {
@@ -65,21 +65,21 @@ o = "VoiceChannelEffectsStore", (a = "displayName") in(s = O) ? Object.definePro
       userId: n,
       animationType: i
     } = e;
-    null != t && null != i && (f[n] = {
+    null != t && null != i && (h[n] = {
       emoji: t,
       sentAt: Date.now(),
       animationType: i
     }, S = [...S, {
       emojiName: t.name,
       userId: n
-    }], N())
+    }], m())
   },
   VOICE_CHANNEL_EFFECT_SENT_LOCAL: () => {
     let e = new Date;
-    if ((A = [e, ...A].slice(0, 20)).length >= 20) {
-      let t = A[A.length - 1],
+    if ((N = [e, ...N].slice(0, 20)).length >= 20) {
+      let t = N[N.length - 1],
         n = e.getTime() - t.getTime();
-      n < m && (i = new Date(e.getTime() + m - n))
+      n < A && (i = new Date(e.getTime() + A - n))
     }
   },
   VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: e => {

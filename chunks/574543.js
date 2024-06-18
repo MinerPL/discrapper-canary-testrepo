@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  reduce: function() {
+n.d(t, {
+  u: function() {
     return d
   }
 });
-var r = n("141725"),
-  i = n("830651"),
-  a = n("164441"),
-  o = n("35066"),
-  s = n("43266"),
-  u = n("144459");
+var r = n(141725),
+  i = n(830651),
+  a = n(164441),
+  o = n(35066),
+  s = n(43266),
+  u = n(144459);
 
 function c(e, t) {
   var n = Object.keys(e);
@@ -45,15 +45,15 @@ function d() {
   var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
     t = arguments.length > 1 ? arguments[1] : void 0;
   return {
-    dirtyHandlerIds: (0, o.reduce)(e.dirtyHandlerIds, {
+    dirtyHandlerIds: (0, o.u)(e.dirtyHandlerIds, {
       type: t.type,
       payload: l(l({}, t.payload), {}, {
-        prevTargetIds: (0, u.get)(e, "dragOperation.targetIds", [])
+        prevTargetIds: (0, u.U2)(e, "dragOperation.targetIds", [])
       })
     }),
-    dragOffset: (0, r.reduce)(e.dragOffset, t),
-    refCount: (0, a.reduce)(e.refCount, t),
-    dragOperation: (0, i.reduce)(e.dragOperation, t),
-    stateId: (0, s.reduce)(e.stateId)
+    dragOffset: (0, r.u)(e.dragOffset, t),
+    refCount: (0, a.u)(e.refCount, t),
+    dragOperation: (0, i.u)(e.dragOperation, t),
+    stateId: (0, s.u)(e.stateId)
   }
 }

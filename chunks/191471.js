@@ -1,36 +1,32 @@
 "use strict";
-n.r(t), n.d(t, {
-  openReportRaidModal: function() {
+t.d(s, {
+  J: function() {
     return a
   },
-  openSafetyChannelSetupModal: function() {
-    return i
+  K: function() {
+    return r
   }
 });
-var u = n("735250");
-n("470079");
-var l = n("481060");
+var n = t(735250);
+t(470079);
+var i = t(481060),
+  l = t(866266);
 
 function a(e) {
-  (0, l.openModalLazy)(async () => {
+  (0, i.openModalLazy)(async () => {
     let {
-      default: t
-    } = await Promise.all([n.e("99387"), n.e("9354")]).then(n.bind(n, "461533"));
-    return n => (0, u.jsx)(t, {
-      ...n,
+      default: s
+    } = await Promise.all([t.e("99387"), t.e("9354")]).then(t.bind(t, 461533));
+    return t => (0, n.jsx)(s, {
+      ...t,
       guildId: e
     })
   })
 }
 
-function i(e) {
-  (0, l.openModalLazy)(async () => {
-    let {
-      default: t
-    } = await Promise.all([n.e("99387"), n.e("31270")]).then(n.bind(n, "866266"));
-    return n => (0, u.jsx)(t, {
-      ...n,
-      guildId: e
-    })
-  })
+function r(e) {
+  (0, i.openModalLazy)(async () => s => (0, n.jsx)(l.Z, {
+    ...s,
+    guildId: e
+  }))
 }

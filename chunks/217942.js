@@ -84,7 +84,7 @@ var t = {
   },
   easeInOutElastic: function(e, t, n, r) {
     var i, a, o, s = n - t;
-    return (o = 1.70158, a = 0, i = s, 0 === e) ? t : 2 == (e /= r / 2) ? t + s : (!a && (a = .3 * 1.5 * r), i < Math.abs(s) ? (i = s, o = a / 4) : o = a / (2 * Math.PI) * Math.asin(s / i), e < 1) ? -(i * Math.pow(2, 10 * (e -= 1)) * Math.sin(2 * Math.PI * (e * r - o) / a) * .5) + t : i * Math.pow(2, -10 * (e -= 1)) * Math.sin(2 * Math.PI * (e * r - o) / a) * .5 + s + t
+    return (o = 1.70158, a = 0, i = s, 0 === e) ? t : 2 == (e /= r / 2) ? t + s : (!a && (a = .3 * 1.5 * r), i < Math.abs(s) ? (i = s, o = a / 4) : o = a / (2 * Math.PI) * Math.asin(s / i), e < 1) ? -.5 * (i * Math.pow(2, 10 * (e -= 1)) * Math.sin(2 * Math.PI * (e * r - o) / a)) + t : i * Math.pow(2, -10 * (e -= 1)) * Math.sin(2 * Math.PI * (e * r - o) / a) * .5 + s + t
   },
   easeInBack: function(e, t, n, r, i) {
     return void 0 === i && (i = 1.70158), (n - t) * (e /= r) * e * ((i + 1) * e - i) + t

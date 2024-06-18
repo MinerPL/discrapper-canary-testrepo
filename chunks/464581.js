@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return s
   }
 });
-var i = n("470079"),
-  r = n("887490");
+var i = n(470079),
+  r = n(887490);
 
 function s(e, t, n) {
   let s = i.useCallback(e => {
@@ -14,14 +14,14 @@ function s(e, t, n) {
       let i = n(e);
       return i && (e.preventDefault(), e.stopPropagation()), i
     }, [t, n]),
-    a = i.useCallback(t => {
+    o = i.useCallback(t => {
       let {
         event: n
       } = t;
-      !s(n) && (n.preventDefault(), n.stopPropagation(), null != n.clipboardData && (e.insertData(n.clipboardData), r.EditorUtils.focus(e)))
+      !s(n) && (n.preventDefault(), n.stopPropagation(), null != n.clipboardData && (e.insertData(n.clipboardData), r.bN.focus(e)))
     }, [e, s]);
   return {
     handlePaste: s,
-    handleGlobalPaste: a
+    handleGlobalPaste: o
   }
 }

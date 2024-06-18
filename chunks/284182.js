@@ -1,54 +1,54 @@
 "use strict";
-a.r(t), a.d(t, {
-  default: function() {
-    return h
+n.d(t, {
+  Z: function() {
+    return m
   }
 });
-var s = a("735250");
-a("470079");
-var n = a("399606"),
-  l = a("481060"),
-  r = a("541716"),
-  i = a("859235"),
-  o = a("898463"),
-  d = a("76451"),
-  u = a("117530"),
-  c = a("689938"),
-  m = a("435819");
+var s = n(735250);
+n(470079);
+var l = n(399606),
+  a = n(481060),
+  i = n(541716),
+  r = n(859235),
+  o = n(898463),
+  c = n(76451),
+  d = n(117530),
+  u = n(689938),
+  h = n(994346);
 
-function h(e) {
+function m(e) {
   let {
     parentChannel: t
-  } = e, a = (0, n.useStateFromStoresArray)([u.default], () => {
-    let e = u.default.getUploads(t.id, r.ChatInputTypes.CREATE_FORUM_POST.drafts.type);
+  } = e, n = (0, l.Wu)([d.Z], () => {
+    let e = d.Z.getUploads(t.id, i.I.CREATE_FORUM_POST.drafts.type);
     return null == e ? void 0 : e.filter(e => !0 !== e.isThumbnail)
   });
   return (0, s.jsxs)("div", {
-    className: m.container,
-    children: [(0, s.jsx)(l.Text, {
+    className: h.container,
+    children: [(0, s.jsx)(a.Text, {
       variant: "text-md/semibold",
       color: "text-muted",
-      children: c.default.Messages.MEDIA_CHANNEL_ATTACHMENTS_SECTION_TITLE
-    }), (0, s.jsx)(l.Text, {
+      children: u.Z.Messages.MEDIA_CHANNEL_ATTACHMENTS_SECTION_TITLE
+    }), (0, s.jsx)(a.Text, {
       variant: "text-sm/normal",
       color: "text-muted",
-      children: c.default.Messages.MEDIA_CHANNEL_ATTACHMENTS_SECTION_DESCRIPTION
+      children: u.Z.Messages.MEDIA_CHANNEL_ATTACHMENTS_SECTION_DESCRIPTION
     }), (0, s.jsx)("div", {
-      children: (0, s.jsx)(l.ScrollerThin, {
-        className: m.uploadsContainer,
+      children: (0, s.jsx)(a.ScrollerThin, {
+        className: h.uploadsContainer,
         orientation: "horizontal",
         paddingFix: !1,
         fade: !0,
         children: (0, s.jsxs)("div", {
-          className: m.uploads,
-          children: [a.map(e => (0, s.jsx)(o.default, {
+          className: h.uploads,
+          children: [n.map(e => (0, s.jsx)(o.Z, {
             channelId: t.id,
-            draftType: r.ChatInputTypes.CREATE_FORUM_POST.drafts.type,
+            draftType: i.I.CREATE_FORUM_POST.drafts.type,
             upload: e,
             keyboardModeEnabled: !0,
             hideFileName: !0,
-            size: i.AttachmentListItemSizes.SMALL
-          }, e.id)), (0, s.jsx)(d.ComposerUploadButton, {
+            size: r.q.SMALL
+          }, e.id)), (0, s.jsx)(c._, {
             channelId: t.id
           })]
         })

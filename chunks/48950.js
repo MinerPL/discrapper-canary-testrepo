@@ -1,36 +1,40 @@
 "use strict";
-n.r(e), n.d(e, {
-  Span: function() {
-    return a
+n.d(e, {
+  Dr: function() {
+    return l
   },
-  SpanRecorder: function() {
-    return i
+  Zd: function() {
+    return c
   },
-  spanStatusfromHttpCode: function() {
-    return o
+  gB: function() {
+    return u
   }
 });
-var r = n("648238");
-class i {
+var r = n(862315),
+  i = n(868145),
+  s = n(529866),
+  a = n(874230),
+  o = n(442853);
+class u {
   __init() {
     this.spans = []
   }
   constructor(t = 1e3) {
-    i.prototype.__init.call(this), this._maxlen = t
+    u.prototype.__init.call(this), this._maxlen = t
   }
   add(t) {
     this.spans.length > this._maxlen ? t.spanRecorder = void 0 : this.spans.push(t)
   }
 }
-class a {
+class l {
   __init2() {
-    this.traceId = (0, r.uuid4)()
+    this.traceId = (0, r.DM)()
   }
   __init3() {
-    this.spanId = (0, r.uuid4)().substring(16)
+    this.spanId = (0, r.DM)().substring(16)
   }
   __init4() {
-    this.startTimestamp = (0, r.timestampInSeconds)()
+    this.startTimestamp = (0, i.ph)()
   }
   __init5() {
     this.tags = {}
@@ -42,11 +46,11 @@ class a {
     this.instrumenter = "sentry"
   }
   constructor(t) {
-    if (a.prototype.__init2.call(this), a.prototype.__init3.call(this), a.prototype.__init4.call(this), a.prototype.__init5.call(this), a.prototype.__init6.call(this), a.prototype.__init7.call(this), !t) return this;
+    if (l.prototype.__init2.call(this), l.prototype.__init3.call(this), l.prototype.__init4.call(this), l.prototype.__init5.call(this), l.prototype.__init6.call(this), l.prototype.__init7.call(this), !t) return this;
     t.traceId && (this.traceId = t.traceId), t.spanId && (this.spanId = t.spanId), t.parentSpanId && (this.parentSpanId = t.parentSpanId), "sampled" in t && (this.sampled = t.sampled), t.op && (this.op = t.op), t.description && (this.description = t.description), t.data && (this.data = t.data), t.tags && (this.tags = t.tags), t.status && (this.status = t.status), t.startTimestamp && (this.startTimestamp = t.startTimestamp), t.endTimestamp && (this.endTimestamp = t.endTimestamp), t.instrumenter && (this.instrumenter = t.instrumenter)
   }
   startChild(t) {
-    let e = new a({
+    let e = new l({
       ...t,
       parentSpanId: this.spanId,
       sampled: this.sampled,
@@ -54,12 +58,12 @@ class a {
     });
     if (e.spanRecorder = this.spanRecorder, e.spanRecorder && e.spanRecorder.add(e), e.transaction = this.transaction, ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && e.transaction) {
       let n = t && t.op || "< unknown op >",
-        i = e.transaction.name || "< unknown name >",
-        a = e.transaction.spanId,
-        o = `[Tracing] Starting '${n}' span on transaction '${i}' (${a}).`;
+        r = e.transaction.name || "< unknown name >",
+        i = e.transaction.spanId,
+        a = `[Tracing] Starting '${n}' span on transaction '${r}' (${i}).`;
       e.transaction.metadata.spanMetadata[e.spanId] = {
-        logMessage: o
-      }, r.logger.log(o)
+        logMessage: a
+      }, s.kg.log(a)
     }
     return e
   }
@@ -80,7 +84,7 @@ class a {
   }
   setHttpStatus(t) {
     this.setTag("http.status_code", String(t)), this.setData("http.response.status_code", t);
-    let e = o(t);
+    let e = c(t);
     return "unknown_error" !== e && this.setStatus(e), this
   }
   isSuccess() {
@@ -91,15 +95,15 @@ class a {
       let {
         logMessage: t
       } = this.transaction.metadata.spanMetadata[this.spanId];
-      t && r.logger.log(t.replace("Starting", "Finishing"))
+      t && s.kg.log(t.replace("Starting", "Finishing"))
     }
-    this.endTimestamp = "number" == typeof t ? t : (0, r.timestampInSeconds)()
+    this.endTimestamp = "number" == typeof t ? t : (0, i.ph)()
   }
   toTraceparent() {
-    return (0, r.generateSentryTraceHeader)(this.traceId, this.spanId, this.sampled)
+    return (0, a.$p)(this.traceId, this.spanId, this.sampled)
   }
   toContext() {
-    return (0, r.dropUndefinedKeys)({
+    return (0, o.Jr)({
       data: this.data,
       description: this.description,
       endTimestamp: this.endTimestamp,
@@ -117,7 +121,7 @@ class a {
     return this.data = t.data || {}, this.description = t.description, this.endTimestamp = t.endTimestamp, this.op = t.op, this.parentSpanId = t.parentSpanId, this.sampled = t.sampled, this.spanId = t.spanId || this.spanId, this.startTimestamp = t.startTimestamp || this.startTimestamp, this.status = t.status, this.tags = t.tags || {}, this.traceId = t.traceId || this.traceId, this
   }
   getTraceContext() {
-    return (0, r.dropUndefinedKeys)({
+    return (0, o.Jr)({
       data: Object.keys(this.data).length > 0 ? this.data : void 0,
       description: this.description,
       op: this.op,
@@ -129,7 +133,7 @@ class a {
     })
   }
   toJSON() {
-    return (0, r.dropUndefinedKeys)({
+    return (0, o.Jr)({
       data: Object.keys(this.data).length > 0 ? this.data : void 0,
       description: this.description,
       op: this.op,
@@ -144,7 +148,7 @@ class a {
   }
 }
 
-function o(t) {
+function c(t) {
   if (t < 400 && t >= 100) return "ok";
   if (t >= 400 && t < 500) switch (t) {
     case 401:

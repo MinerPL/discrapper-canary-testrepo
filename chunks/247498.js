@@ -1,7 +1,7 @@
 "use strict";
-var r = n("578805"),
+var r = n(578805),
   i = TypeError,
-  a = n("126417");
+  a = n(126417);
 e.exports = function(e) {
   var t = r(e);
   if (!t) throw new i("non-iterable value provided");

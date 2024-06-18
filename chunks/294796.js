@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
-  useDragLayer: function() {
+n.d(t, {
+  f: function() {
     return s
   }
 });
-var r = n("470079"),
-  i = n("209851"),
-  a = n("601640");
+var r = n(470079),
+  i = n(209851),
+  a = n(601640);
 
 function o(e, t) {
   (null == t || t > e.length) && (t = e.length);
@@ -15,10 +15,10 @@ function o(e, t) {
 }
 
 function s(e) {
-  var t, n, s = (0, i.useDragDropManager)().getMonitor();
+  var t, n, s = (0, i.N)().getMonitor();
   var u = (n = 2, function(e) {
       if (Array.isArray(e)) return e
-    }(t = (0, a.useCollector)(s, e)) || function(e, t) {
+    }(t = (0, a.r)(s, e)) || function(e, t) {
       var n, r, i = null == e ? null : "undefined" != typeof Symbol && e[Symbol.iterator] || e["@@iterator"];
       if (null != i) {
         var a = [],
@@ -37,7 +37,7 @@ function s(e) {
         }
         return a
       }
-    }(t, n) || function(e, t) {
+    }(t, 2) || function(e, t) {
       if (e) {
         if ("string" == typeof e) return o(e, t);
         var n = Object.prototype.toString.call(e).slice(8, -1);

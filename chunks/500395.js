@@ -1,88 +1,87 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return S
+t.d(s, {
+  Z: function() {
+    return T
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("990547"),
-  n = s("481060"),
-  i = s("213609"),
-  r = s("787051"),
-  o = s("682864"),
-  d = s("696936"),
-  u = s("539290"),
-  c = s("975464"),
-  E = s("689938"),
-  _ = s("856788"),
-  I = s("270395");
+var n = t(735250);
+t(470079);
+var i = t(990547),
+  l = t(481060),
+  a = t(213609),
+  r = t(787051),
+  o = t(696936),
+  c = t(539290),
+  d = t(975464),
+  u = t(689938),
+  E = t(856788),
+  _ = t(270395);
 
-function T(e) {
+function I(e) {
   let {
-    config: t
+    config: s
   } = e, {
-    noticeText: s,
-    ctaLabel: l,
-    ctaClickable: i,
+    noticeText: t,
+    ctaLabel: i,
+    ctaClickable: a,
     onCtaClicked: r
-  } = t;
-  return (0, a.jsxs)("div", {
-    className: _.__invalid_ctaContainer,
-    children: [(0, a.jsx)("img", {
-      className: _.__invalid_heroBanner,
-      src: I,
-      alt: E.default.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_HERO_BANNER_ALT
-    }), (0, a.jsxs)("div", {
-      className: _.__invalid_ctaContent,
-      children: [(0, a.jsx)(n.Heading, {
+  } = s;
+  return (0, n.jsxs)("div", {
+    className: E.__invalid_ctaContainer,
+    children: [(0, n.jsx)("img", {
+      className: E.__invalid_heroBanner,
+      src: _,
+      alt: u.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_HERO_BANNER_ALT
+    }), (0, n.jsxs)("div", {
+      className: E.__invalid_ctaContent,
+      children: [(0, n.jsx)(l.Heading, {
         variant: "heading-xl/semibold",
         color: "header-primary",
-        children: E.default.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_DESKTOP_V2_TITLE
-      }), (0, a.jsx)(o.default, {
+        children: u.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_DESKTOP_V2_TITLE
+      }), (0, n.jsx)(l.Spacer, {
         size: 12
-      }), (0, a.jsx)(n.Text, {
+      }), (0, n.jsx)(l.Text, {
         variant: "text-md/normal",
         color: "header-secondary",
-        children: E.default.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_V2_SUBTITLE
-      }), (0, a.jsx)(o.default, {
+        children: u.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_V2_SUBTITLE
+      }), (0, n.jsx)(l.Spacer, {
         size: 24
-      }), (0, a.jsx)(u.default, {
-        className: _.waitlist,
-        color: d.MessageBlockColors.BROWN,
-        buttonPosition: u.WarningBlockButtonPosition.RIGHT,
-        notice: s,
-        ctaLabel: l,
-        ctaDisabled: !i,
-        ctaClassName: _.waitlistCtaButton,
+      }), (0, n.jsx)(c.Z, {
+        className: E.waitlist,
+        color: o.W.BROWN,
+        buttonPosition: c.E.RIGHT,
+        notice: t,
+        ctaLabel: i,
+        ctaDisabled: !a,
+        ctaClassName: E.waitlistCtaButton,
         onClick: r
       })]
     })]
   })
 }
 
-function S(e) {
+function T(e) {
   let {
-    guild: t,
-    config: s
+    guild: s,
+    config: t
   } = e, {
     isLoading: o,
-    error: d,
+    error: c,
     creatorMonetizationOnboardingMarketing: u
-  } = (0, r.default)(t.id);
-  return ((0, i.default)({
-    type: l.ImpressionTypes.PANE,
-    name: l.ImpressionNames.ENABLE_CREATOR_MONETIZATION_WAITLIST_LANDING,
+  } = (0, r.Z)(s.id);
+  return ((0, a.Z)({
+    type: i.ImpressionTypes.PANE,
+    name: i.ImpressionNames.ENABLE_CREATOR_MONETIZATION_WAITLIST_LANDING,
     properties: {
-      guild_id: t.id
+      guild_id: s.id
     }
-  }), o) ? (0, a.jsx)(n.Spinner, {}) : (0, a.jsxs)("div", {
-    className: _.__invalid_container,
-    children: [(0, a.jsx)(T, {
-      config: s
-    }), (0, a.jsx)(c.MarketingSections, {
+  }), o) ? (0, n.jsx)(l.Spinner, {}) : (0, n.jsxs)("div", {
+    className: E.__invalid_container,
+    children: [(0, n.jsx)(I, {
+      config: t
+    }), (0, n.jsx)(d.C, {
       onboardingMarketing: u,
-      onboardingMarketingError: d
+      onboardingMarketingError: c
     })]
   })
 }

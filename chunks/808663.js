@@ -1,6 +1,6 @@
 "use strict";
-n.r(t), n("653041");
-t.default = new class e {
+n(653041);
+t.Z = new class e {
   enqueue(e) {
     this.queue.push(e)
   }

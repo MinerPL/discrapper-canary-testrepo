@@ -1,22 +1,20 @@
 "use strict";
-n.r(t);
-var r = n("781212"),
-  i = n("599295"),
-  a = n("919499"),
-  o = n("15393");
-n("476400");
-var s = n("470079"),
-  u = n.n(s),
-  c = n("717588"),
-  l = n("46121"),
-  d = Object.values || function(e) {
+var r = n(781212),
+  i = n(599295),
+  a = n(919499),
+  o = n(15393);
+n(476400);
+var s = n(470079),
+  u = n(717588),
+  c = n(46121),
+  l = Object.values || function(e) {
     return Object.keys(e).map(function(t) {
       return e[t]
     })
   },
-  f = function(e) {
+  d = function(e) {
     function t(t, n) {
-      var r, i = (r = e.call(this, t, n) || this).handleExited.bind((0, o.default)((0, o.default)(r)));
+      var r, i = (r = e.call(this, t, n) || this).handleExited.bind((0, o.Z)((0, o.Z)(r)));
       return r.state = {
         contextValue: {
           isMounting: !0
@@ -24,7 +22,7 @@ var s = n("470079"),
         handleExited: i,
         firstRender: !0
       }, r
-    }(0, a.default)(t, e);
+    }(0, a.Z)(t, e);
     var n = t.prototype;
     return n.componentDidMount = function() {
       this.mounted = !0, this.setState({
@@ -38,13 +36,13 @@ var s = n("470079"),
       var n = t.children,
         r = t.handleExited;
       return {
-        children: t.firstRender ? (0, l.getInitialChildMapping)(e, r) : (0, l.getNextChildMapping)(e, n, r),
+        children: t.firstRender ? (0, c.Kg)(e, r) : (0, c.Rp)(e, n, r),
         firstRender: !1
       }
     }, n.handleExited = function(e, t) {
-      var n = (0, l.getChildMapping)(this.props.children);
+      var n = (0, c.n)(this.props.children);
       !(e.key in n) && (e.props.onExited && e.props.onExited(t), this.mounted && this.setState(function(t) {
-        var n = (0, i.default)({}, t.children);
+        var n = (0, i.Z)({}, t.children);
         return delete n[e.key], {
           children: n
         }
@@ -53,19 +51,19 @@ var s = n("470079"),
       var e = this.props,
         t = e.component,
         n = e.childFactory,
-        i = (0, r.default)(e, ["component", "childFactory"]),
+        i = (0, r.Z)(e, ["component", "childFactory"]),
         a = this.state.contextValue,
-        o = d(this.state.children).map(n);
-      return (delete i.appear, delete i.enter, delete i.exit, null === t) ? u().createElement(c.default.Provider, {
+        o = l(this.state.children).map(n);
+      return (delete i.appear, delete i.enter, delete i.exit, null === t) ? s.createElement(u.Z.Provider, {
         value: a
-      }, o) : u().createElement(c.default.Provider, {
+      }, o) : s.createElement(u.Z.Provider, {
         value: a
-      }, u().createElement(t, i, o))
+      }, s.createElement(t, i, o))
     }, t
-  }(u().Component);
-f.propTypes = {}, f.defaultProps = {
+  }(s.Component);
+d.propTypes = {}, d.defaultProps = {
   component: "div",
   childFactory: function(e) {
     return e
   }
-}, t.default = f
+}, t.Z = d

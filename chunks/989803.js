@@ -1,6 +1,6 @@
 "use strict";
-var e = n("875604"),
-  o = n("955161"),
+var e = n(875604),
+  o = n(955161),
   i = Array.prototype;
 t.exports = function(t) {
   var r = t.find;

@@ -1,5 +1,5 @@
 "use strict";
-var e = n("936940");
+var e = n(936940);
 t.exports = !e(function() {
   return 7 !== Object.defineProperty({}, 1, {
     get: function() {

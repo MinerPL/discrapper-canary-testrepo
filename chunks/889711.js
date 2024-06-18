@@ -8,17 +8,17 @@ function r(e, t) {
   e.observe(t)
 }
 
-function a(e, t) {
+function s(e, t) {
   e.unobserve(t)
 }
-n.r(t), n.d(t, {
-  getResizeObserver: function() {
-    return i
+n.d(t, {
+  UC: function() {
+    return s
   },
-  unwatch: function() {
-    return a
-  },
-  watch: function() {
+  YP: function() {
     return r
+  },
+  pP: function() {
+    return i
   }
 })

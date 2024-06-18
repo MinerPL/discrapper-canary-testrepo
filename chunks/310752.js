@@ -1,32 +1,31 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("803997"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("731994"),
-  o = n("294575");
-t.default = function(e) {
+  o = n(731994),
+  a = n(239792);
+t.Z = function(e) {
   let {
     icons: t,
     className: n
   } = e;
   return (0, i.jsxs)("div", {
-    className: s()(o.icons, n),
+    className: s()(a.icons, n),
     children: [(0, i.jsx)("div", {
-      className: o.wrapOne,
+      className: a.wrapOne,
       children: (0, i.jsx)("div", {
-        className: s()(o.icon, o.one, a.FileUploadIconClassNames[t[0]])
+        className: s()(a.icon, a.one, o.bd[t[0]])
       })
     }), (0, i.jsx)("div", {
-      className: o.wrapThree,
+      className: a.wrapThree,
       children: (0, i.jsx)("div", {
-        className: s()(o.icon, o.three, a.FileUploadIconClassNames[t[2]])
+        className: s()(a.icon, a.three, o.bd[t[2]])
       })
     }), (0, i.jsx)("div", {
-      className: o.wrapTwo,
+      className: a.wrapTwo,
       children: (0, i.jsx)("div", {
-        className: s()(o.icon, o.two, a.FileUploadIconClassNames[t[1]])
+        className: s()(a.icon, a.two, o.bd[t[1]])
       })
     })]
   })

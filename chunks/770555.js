@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   id: "2023-11_adyen_auth_without_capture",
   label: "Adyen auth without capture rollout",
   kind: "user",
@@ -15,4 +14,4 @@ let i = (0, n("818083").createExperiment)({
     }
   }]
 });
-t.default = i
+t.Z = i

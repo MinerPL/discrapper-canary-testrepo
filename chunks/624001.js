@@ -1,6 +1,6 @@
 "use strict";
-var n = r("381165"),
-  i = r("351612");
+var n = r(381165),
+  i = r(351612);
 t.exports = function(t, e) {
   var r = e.getStartKey(),
     o = e.getStartOffset(),

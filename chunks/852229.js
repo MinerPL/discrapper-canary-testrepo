@@ -10,8 +10,8 @@ function i(e) {
   let s = document.execCommand("copy");
   return t.removeChild(r), s
 }
-n.r(t), n.d(t, {
-  copy: function() {
+n.d(t, {
+  J: function() {
     return i
   }
-}), n("411104")
+}), n(411104)

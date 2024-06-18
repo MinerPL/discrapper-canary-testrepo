@@ -1,77 +1,78 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return E
+n.d(t, {
+  Z: function() {
+    return I
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("442837"),
-  a = n("717881"),
-  s = n("906732"),
-  o = n("199902"),
-  l = n("158776"),
-  u = n("785717"),
-  d = n("221292"),
-  _ = n("981631"),
-  c = n("10268");
+var i = n(735250);
+n(470079);
+var r = n(442837),
+  s = n(717881),
+  o = n(906732),
+  a = n(199902),
+  l = n(158776),
+  u = n(594174),
+  _ = n(785717),
+  d = n(221292),
+  c = n(981631),
+  E = n(10268);
 
-function E(e) {
+function I(e) {
   let {
     user: t,
     guild: n,
-    channelId: E,
-    onClose: I
+    channelId: I,
+    onClose: T
   } = e, {
-    analyticsLocations: T,
-    newestAnalyticsLocation: f
-  } = (0, s.default)(), {
-    trackUserProfileAction: S,
-    ...h
-  } = (0, u.useUserProfileAnalyticsContext)(), {
-    isApplicationStreaming: A,
-    activity: m
-  } = (0, r.useStateFromStoresObject)([o.default, l.default], () => {
-    let e = null != o.default.getAnyStreamForUser(t.id);
+    analyticsLocations: h,
+    newestAnalyticsLocation: S
+  } = (0, o.ZP)(), {
+    trackUserProfileAction: f,
+    ...N
+  } = (0, _.KZ)(), A = (0, r.e7)([u.default], () => u.default.getCurrentUser()), {
+    isApplicationStreaming: m,
+    activity: O
+  } = (0, r.cj)([a.Z, l.Z], () => {
+    let e = null != a.Z.getAnyStreamForUser(t.id);
     return {
       isApplicationStreaming: e,
-      activity: e ? l.default.findActivity(t.id, e => {
+      activity: e ? l.Z.findActivity(t.id, e => {
         let {
           type: t
         } = e;
-        return t === _.ActivityTypes.PLAYING
-      }) : l.default.findActivity(t.id, e => {
+        return t === c.IIU.PLAYING
+      }) : l.Z.findActivity(t.id, e => {
         let {
           type: t
         } = e;
-        return t !== _.ActivityTypes.CUSTOM_STATUS
+        return t !== c.IIU.CUSTOM_STATUS
       })
     }
   });
-  return (0, i.jsx)(a.default, {
-    type: a.UserActivityTypes.BITE_SIZE_POPOUT,
-    activity: m,
-    className: c.activity,
-    source: f,
+  return (0, i.jsx)(s.Z, {
+    type: s.P.BITE_SIZE_POPOUT,
+    activity: O,
+    className: E.activity,
+    source: S,
     user: t,
     guildId: null == n ? void 0 : n.id,
-    channelId: E,
-    onOpenGameProfile: I,
+    channelId: I,
+    onOpenGameProfile: T,
     onAction: () => {
-      S({
+      f({
         action: "JOIN_ACTIVITY"
-      }), (0, d.trackUserProfileActivityJoined)({
-        activityType: A ? _.ActivityTypes.STREAMING : null == m ? void 0 : m.type,
-        activityName: null == m ? void 0 : m.name,
-        activityPlatform: null == m ? void 0 : m.platform,
-        activitySessionId: null == m ? void 0 : m.session_id,
-        applicationId: null == m ? void 0 : m.application_id,
-        analyticsLocations: T,
-        ...h
-      }), null == I || I()
+      }), (0, d.Ac)({
+        activityType: m ? c.IIU.STREAMING : null == O ? void 0 : O.type,
+        activityName: null == O ? void 0 : O.name,
+        activityPlatform: null == O ? void 0 : O.platform,
+        activitySessionId: null == O ? void 0 : O.session_id,
+        applicationId: null == O ? void 0 : O.application_id,
+        analyticsLocations: h,
+        ...N
+      }), null == T || T()
     },
-    actionColor: c.buttonColor,
-    hideHeader: !0,
+    showActions: t.id !== (null == A ? void 0 : A.id),
+    actionColor: E.buttonColor,
     showChannelDetails: !0
   })
 }

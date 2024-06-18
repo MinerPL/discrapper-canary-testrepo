@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n("653041");
-var i, r = n("392711"),
+n(653041);
+var i, r = n(392711),
   s = n.n(r),
-  a = n("442837"),
-  o = n("570140"),
-  l = n("704907"),
-  u = n("581883"),
-  d = n("70956"),
-  _ = n("926491"),
-  c = n("526761");
+  o = n(442837),
+  a = n(570140),
+  l = n(704907),
+  u = n(581883),
+  _ = n(70956),
+  d = n(926491),
+  c = n(526761);
 
 function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -21,36 +21,36 @@ function E(e, t, n) {
 let I = {
   pendingUsages: []
 };
-d.default.Millis.DAY;
-let T = new l.default({
+_.Z.Millis.DAY;
+let T = new l.Z({
     computeBonus: () => 100,
     computeWeight: e => {
       let t = 0;
       return e <= 3 ? t = 100 : e <= 15 ? t = 70 : e <= 30 ? t = 50 : e <= 45 ? t = 30 : e <= 80 && (t = 10), t
     },
-    lookupKey: e => _.default.getStickerById(e),
+    lookupKey: e => d.Z.getStickerById(e),
     afterCompute: () => {},
     numFrequentlyItems: 20
   }),
-  f = () => {
-    _.default.isLoaded && T.compute()
+  h = () => {
+    d.Z.isLoaded && T.compute()
   },
   S = () => {
-    f()
+    h()
   };
 
-function h() {
+function f() {
   var e;
-  let t = null === (e = u.default.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
+  let t = null === (e = u.Z.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
   if (null == t) return !1;
   T.overwriteHistory(s().mapValues(t, e => ({
     ...e,
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
   })), I.pendingUsages)
 }
-class A extends(i = a.default.PersistedStore) {
+class N extends(i = o.ZP.PersistedStore) {
   initialize(e) {
-    this.waitFor(_.default), null != e && (I = e), this.syncWith([_.default], S), this.syncWith([u.default], h)
+    this.waitFor(d.Z), null != e && (I = e), this.syncWith([d.Z], S), this.syncWith([u.Z], f)
   }
   getState() {
     return I
@@ -62,7 +62,7 @@ class A extends(i = a.default.PersistedStore) {
     return T
   }
 }
-E(A, "displayName", "StickersPersistedStore"), E(A, "persistKey", "StickersPersistedStoreV2"), t.default = new A(o.default, {
+E(N, "displayName", "StickersPersistedStore"), E(N, "persistKey", "StickersPersistedStoreV2"), t.Z = new N(a.Z, {
   STICKER_TRACK_USAGE: e => {
     let {
       stickerIds: t
@@ -72,7 +72,7 @@ E(A, "displayName", "StickersPersistedStore"), E(A, "persistKey", "StickersPersi
         key: e,
         timestamp: Date.now()
       })
-    }), f()
+    }), h()
   },
   USER_SETTINGS_PROTO_UPDATE: function(e) {
     let {
@@ -81,7 +81,7 @@ E(A, "displayName", "StickersPersistedStore"), E(A, "persistKey", "StickersPersi
       },
       wasSaved: n
     } = e;
-    if (t !== c.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+    if (t !== c.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
     I.pendingUsages = []
   }
 })

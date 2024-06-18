@@ -1,6 +1,6 @@
 "use strict";
-n.r(t), n.d(t, {
-  freeze: function() {
+n.d(t, {
+  v: function() {
     return r
   }
 });

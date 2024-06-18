@@ -4,11 +4,11 @@ n.r(t), n.d(t, {
     return p
   }
 });
-var r, i = n("109393"),
-  a = n("414776"),
-  o = n("707506"),
-  s = n("566867"),
-  u = n("239189"),
+var r, i = n(109393),
+  a = n(414776),
+  o = n(707506),
+  s = n(566867),
+  u = n(239189),
   c = /[+\-]?(?:0|[1-9]\d*)(?:\.\d*)?(?:[eE][+\-]?\d+)?/g,
   l = /(#(?:[0-9a-f]{2}){2,4}|(#[0-9a-f]{3})|(rgb|hsl)a?\((-?\d+%?[,\s]+){2,3}\s*[\d\.]+%?\))/gi,
   d = /rgba\(([0-9\.-]+), ([0-9\.-]+), ([0-9\.-]+), ([0-9\.-]+)\)/gi,
@@ -18,7 +18,7 @@ var r, i = n("109393"),
   p = function(e) {
     !r && (r = u.colorNames ? RegExp("(" + Object.keys(u.colorNames).join("|") + ")", "g") : /^\b$/);
     var t = e.output.map(function(e) {
-        return (0, a.getFluidValue)(e).replace(l, s.colorToRgba).replace(r, s.colorToRgba)
+        return (0, a.je)(e).replace(l, s.c).replace(r, s.c)
       }),
       n = t.map(function(e) {
         return e.match(c).map(Number)
@@ -29,7 +29,7 @@ var r, i = n("109393"),
           return e[t]
         })
       }).map(function(t) {
-        return (0, o.createInterpolator)((0, i.__assign)((0, i.__assign)({}, e), {
+        return (0, o.m)((0, i.pi)((0, i.pi)({}, e), {
           output: t
         }))
       });

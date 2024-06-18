@@ -1,34 +1,34 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return d
+n.d(t, {
+  Z: function() {
+    return _
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("442837"),
-  a = n("231757"),
-  s = n("553795"),
-  o = n("915863"),
-  l = n("689938"),
-  u = n("346452");
+var i = n(735250);
+n(470079);
+var r = n(442837),
+  s = n(231757),
+  o = n(553795),
+  a = n(915863),
+  l = n(689938),
+  u = n(605690);
 
-function d(e) {
+function _(e) {
   let {
     platform: t,
     color: n,
-    look: d,
-    onAction: _
+    look: _,
+    onAction: d
   } = e;
-  return (0, r.useStateFromStores)([s.default], () => s.default.getAccounts().some(e => e.type === t.type)) ? null : (0, i.jsx)(o.default, {
+  return (0, r.e7)([o.Z], () => o.Z.getAccounts().some(e => e.type === t.type)) ? null : (0, i.jsx)(a.Z, {
     onClick: () => {
-      null == _ || _(), (0, a.default)({
+      null == d || d(), (0, s.Z)({
         platformType: t.type,
         location: "Activity Action"
       })
     },
     color: n,
-    look: d,
+    look: _,
     fullWidth: !0,
     children: (0, i.jsxs)("div", {
       className: u.flex,
@@ -36,7 +36,7 @@ function d(e) {
         alt: "",
         className: u.platformIcon,
         src: t.icon.whiteSVG
-      }), l.default.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
+      }), l.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
         platform: t.name
       })]
     })

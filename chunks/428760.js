@@ -1,55 +1,55 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return c
+t.d(s, {
+  Z: function() {
+    return u
   }
 });
-var a = s("735250"),
-  l = s("470079"),
-  n = s("120356"),
-  i = s.n(n),
-  r = s("481060"),
-  o = s("730671"),
-  d = s("689938"),
-  u = s("594757");
+var n = t(735250),
+  i = t(470079),
+  l = t(120356),
+  a = t.n(l),
+  r = t(481060),
+  o = t(730671),
+  c = t(689938),
+  d = t(594757);
 
-function c(e) {
+function u(e) {
   let {
-    onChangeText: t,
-    maxWordCount: s,
-    className: n,
-    textAreaClassName: c,
+    onChangeText: s,
+    maxWordCount: t,
+    className: l,
+    textAreaClassName: u,
     subtitleText: E,
     initialValue: _
-  } = e, I = l.useMemo(() => null != _ ? _ : [], [_]), {
+  } = e, I = i.useMemo(() => null != _ ? _ : [], [_]), {
     value: T,
-    onChange: S,
-    errorMessage: f
-  } = (0, o.default)(t, _, s);
-  return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsxs)("div", {
-      className: i()(u.keywordsContainer, n),
-      children: [(0, a.jsx)(r.TextAreaAutosize, {
-        className: i()(u.keywordsTextArea, c),
+    onChange: N,
+    errorMessage: m
+  } = (0, o.Z)(s, _, t);
+  return (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsxs)("div", {
+      className: a()(d.keywordsContainer, l),
+      children: [(0, n.jsx)(r.TextAreaAutosize, {
+        className: a()(d.keywordsTextArea, u),
         value: T,
-        onChange: S,
-        placeholder: d.default.Messages.GUILD_AUTOMOD_KEYWORDS_PLACEHOLDER
-      }), (0, a.jsx)(r.Text, {
-        className: u.keywordsCounter,
+        onChange: N,
+        placeholder: c.Z.Messages.GUILD_AUTOMOD_KEYWORDS_PLACEHOLDER
+      }), (0, n.jsx)(r.Text, {
+        className: d.keywordsCounter,
         variant: "text-xs/normal",
         color: "text-muted",
-        children: "".concat(I.length, " / ").concat(s)
+        children: "".concat(I.length, " / ").concat(t)
       })]
-    }), null != f ? (0, a.jsx)(r.Text, {
-      className: i()(u.paddingTop, u.errorText),
+    }), null != m ? (0, n.jsx)(r.Text, {
+      className: a()(d.paddingTop, d.errorText),
       variant: "text-xs/medium",
       color: "text-danger",
-      children: f
-    }) : (0, a.jsx)(r.Text, {
-      className: u.paddingTop,
+      children: m
+    }) : (0, n.jsx)(r.Text, {
+      className: d.paddingTop,
       variant: "text-xs/normal",
       color: "header-secondary",
-      children: null != E ? E : d.default.Messages.GUILD_AUTOMOD_KEYWORD_ENTRY_HINT
+      children: null != E ? E : c.Z.Messages.GUILD_AUTOMOD_KEYWORD_ENTRY_HINT
     })]
   })
 }

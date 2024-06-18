@@ -1,6 +1,5 @@
 "use strict";
-s.r(t);
-let a = (0, s("818083").createExperiment)({
+let n = (0, t(818083).B)({
   kind: "user",
   id: "2020-12_guild_delete_feedback",
   label: "Guild Delete Feedback experiment",
@@ -15,4 +14,4 @@ let a = (0, s("818083").createExperiment)({
     }
   }]
 });
-t.default = a
+s.Z = n

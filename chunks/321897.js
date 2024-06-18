@@ -1,7 +1,7 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return a
+n.d(t, {
+  ZP: function() {
+    return o
   }
 });
 let i = Object.freeze({
@@ -16,7 +16,7 @@ let i = Object.freeze({
     overflow: "auto"
   });
 
-function a(e) {
+function o(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "vertical",
     n = "vertical" === t ? i : "horizontal" === t ? r : s;
   return null != e ? {

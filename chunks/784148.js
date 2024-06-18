@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return o
   }
 });
-var r = n("195802");
+var r = n(195802);
 
-function a(e, t) {
-  for (; !Object.prototype.hasOwnProperty.call(e, t) && null !== (e = (0, r.default)(e)););
+function o(e, t) {
+  for (; !Object.prototype.hasOwnProperty.call(e, t) && null !== (e = (0, r.Z)(e)););
   return e
 }

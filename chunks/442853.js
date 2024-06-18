@@ -1,35 +1,35 @@
 "use strict";
-n.r(e), n.d(e, {
-  addNonEnumerableProperty: function() {
-    return s
-  },
-  convertToPlainObject: function() {
-    return d
-  },
-  dropUndefinedKeys: function() {
-    return _
-  },
-  extractExceptionKeysForMessage: function() {
-    return h
-  },
-  fill: function() {
-    return o
-  },
-  getOriginalFunction: function() {
-    return c
-  },
-  markFunctionWrapped: function() {
+n.d(e, {
+  $Q: function() {
     return u
   },
-  urlEncode: function() {
+  HK: function() {
     return l
+  },
+  Jr: function() {
+    return p
+  },
+  Sh: function() {
+    return d
+  },
+  _j: function() {
+    return c
+  },
+  hl: function() {
+    return a
+  },
+  xp: function() {
+    return o
+  },
+  zf: function() {
+    return f
   }
 });
-var r = n("829919"),
-  i = n("46834"),
-  a = n("336344");
+var r = n(829919),
+  i = n(46834),
+  s = n(336344);
 
-function o(t, e, n) {
+function a(t, e, n) {
   if (!(e in t)) return;
   let r = t[e],
     i = n(r);
@@ -39,7 +39,7 @@ function o(t, e, n) {
   t[e] = i
 }
 
-function s(t, e, n) {
+function o(t, e, n) {
   Object.defineProperty(t, e, {
     value: n,
     writable: !0,
@@ -49,45 +49,45 @@ function s(t, e, n) {
 
 function u(t, e) {
   let n = e.prototype || {};
-  t.prototype = e.prototype = n, s(t, "__sentry_original__", e)
-}
-
-function c(t) {
-  return t.__sentry_original__
+  t.prototype = e.prototype = n, o(t, "__sentry_original__", e)
 }
 
 function l(t) {
+  return t.__sentry_original__
+}
+
+function c(t) {
   return Object.keys(t).map(e => `${encodeURIComponent(e)}=${encodeURIComponent(t[e])}`).join("&")
 }
 
 function d(t) {
-  if ((0, i.isError)(t)) return {
+  if ((0, i.VZ)(t)) return {
     message: t.message,
     name: t.name,
     stack: t.stack,
-    ...p(t)
+    ..._(t)
   };
-  if (!(0, i.isEvent)(t)) return t;
+  if (!(0, i.cO)(t)) return t;
   {
     let e = {
       type: t.type,
-      target: f(t.target),
-      currentTarget: f(t.currentTarget),
-      ...p(t)
+      target: h(t.target),
+      currentTarget: h(t.currentTarget),
+      ..._(t)
     };
-    return "undefined" != typeof CustomEvent && (0, i.isInstanceOf)(t, CustomEvent) && (e.detail = t.detail), e
+    return "undefined" != typeof CustomEvent && (0, i.V9)(t, CustomEvent) && (e.detail = t.detail), e
   }
 }
 
-function f(t) {
+function h(t) {
   try {
-    return (0, i.isElement)(t) ? (0, r.htmlTreeAsString)(t) : Object.prototype.toString.call(t)
+    return (0, i.kK)(t) ? (0, r.Rt)(t) : Object.prototype.toString.call(t)
   } catch (t) {
     return "<unknown>"
   }
 }
 
-function p(t) {
+function _(t) {
   if ("object" != typeof t || null === t) return {};
   {
     let e = {};
@@ -96,23 +96,23 @@ function p(t) {
   }
 }
 
-function h(t, e = 40) {
+function f(t, e = 40) {
   let n = Object.keys(d(t));
   if (n.sort(), !n.length) return "[object has no keys]";
-  if (n[0].length >= e) return (0, a.truncate)(n[0], e);
+  if (n[0].length >= e) return (0, s.$G)(n[0], e);
   for (let t = n.length; t > 0; t--) {
     let r = n.slice(0, t).join(", ");
     if (!(r.length > e)) {
       if (t === n.length) return r;
-      return (0, a.truncate)(r, e)
+      return (0, s.$G)(r, e)
     }
   }
   return ""
 }
 
-function _(t) {
+function p(t) {
   return function t(e, n) {
-    if ((0, i.isPlainObject)(e)) {
+    if ((0, i.PO)(e)) {
       let r = n.get(e);
       if (void 0 !== r) return r;
       let i = {};

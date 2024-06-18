@@ -1,23 +1,23 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return i
+t.d(s, {
+  Z: function() {
+    return a
   }
 });
-var a = s("149765"),
-  l = s("700785"),
-  n = s("981631");
+var n = t(149765),
+  i = t(700785),
+  l = t(981631);
 
-function i(e, t) {
-  let s = {
-    [t.id]: t
+function a(e, s) {
+  let t = {
+    [s.id]: s
   };
   return e.filter(e => {
-    let t = l.computePermissionsForRoles({
-        forceRoles: s,
+    let s = i.I0({
+        forceRoles: t,
         context: e
       }),
-      i = n.Permissions.VIEW_CHANNEL;
-    return e.isGuildVocal() && (i = a.add(i, n.Permissions.CONNECT)), a.has(t, i) && !l.canEveryoneRole(i, e)
+      a = l.Plq.VIEW_CHANNEL;
+    return e.isGuildVocal() && (a = n.IH(a, l.Plq.CONNECT)), n.e$(s, a) && !i.Uu(a, e)
   })
 }

@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-t.default = {
+t.Z = {
   aa: "aa-ET",
   af: "af-ZA",
   ak: "ak-GH",

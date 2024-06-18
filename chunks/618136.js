@@ -1,26 +1,26 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return o
   }
-}), n("47120");
-var i = n("436660"),
-  r = n("887490"),
-  s = n("42530");
+}), n(47120);
+var i = n(436660),
+  r = n(887490),
+  s = n(42530);
 
-function a(e) {
+function o(e) {
   let {
     apply: t,
     onChange: n
   } = e;
   return e.apply = n => {
-    t(n), r.SelectionUtils.isValid(e, e.selection) && (e.lastGoodSelection = e.selection)
+    t(n), r.Ew.isValid(e, e.selection) && (e.lastGoodSelection = e.selection)
   }, e.onChange = () => {
-    if (!r.SelectionUtils.isValid(e, e.selection) && (e.selection = function(e) {
+    if (!r.Ew.isValid(e, e.selection) && (e.selection = function(e) {
         let t;
-        if (r.SelectionUtils.isValid(e, e.lastGoodSelection)) t = e.lastGoodSelection;
+        if (r.Ew.isValid(e, e.lastGoodSelection)) t = e.lastGoodSelection;
         else {
-          let n = r.EditorUtils.end(e, []);
+          let n = r.bN.end(e, []);
           t = {
             anchor: n,
             focus: n
@@ -28,20 +28,20 @@ function a(e) {
         }
         return t
       }(e)), null != e.selection) {
-      let t, n, [a, o] = r.RangeUtils.edges(e.selection),
+      let t, n, [o, a] = r.M8.edges(e.selection),
         l = !1;
-      for (; null != a && null != (t = r.EditorUtils.getParentVoid(e, a)) && !s.SELECTABLE_VOIDS.includes(t[0].type);) a = r.EditorUtils.before(e, a, {
+      for (; null != o && null != (t = r.bN.getParentVoid(e, o)) && !s.On.includes(t[0].type);) o = r.bN.before(e, o, {
         unit: "offset"
       }), l = !0;
-      for (; null != o && null != (n = r.EditorUtils.getParentVoid(e, o)) && !s.SELECTABLE_VOIDS.includes(n[0].type);) o = r.EditorUtils.after(e, o, {
+      for (; null != a && null != (n = r.bN.getParentVoid(e, a)) && !s.On.includes(n[0].type);) a = r.bN.after(e, a, {
         unit: "offset"
       }), l = !0;
-      l && null != a && null != o && (r.RangeUtils.isForward(e.selection) ? i.SlateTransforms.select(e, {
-        anchor: a,
-        focus: o
-      }) : i.SlateTransforms.select(e, {
+      l && null != o && null != a && (r.M8.isForward(e.selection) ? i.Q.select(e, {
         anchor: o,
         focus: a
+      }) : i.Q.select(e, {
+        anchor: a,
+        focus: o
       }))
     }
     n()

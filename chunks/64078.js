@@ -1,45 +1,45 @@
 "use strict";
-n.r(t), n.d(t, {
-  clearMessageCombo: function() {
+n.d(t, {
+  AI: function() {
+    return l
+  },
+  EL: function() {
     return d
   },
-  updateCombo: function() {
+  SE: function() {
     return u
   },
-  updateComboOnMessageSend: function() {
+  ew: function() {
     return _
-  },
-  updatePoggermodeSettings: function() {
-    return l
   }
 });
-var i = n("570140"),
-  r = n("314897"),
-  s = n("351780"),
-  a = n("843693"),
-  o = n("112606");
+var i = n(570140),
+  r = n(314897),
+  s = n(351780),
+  o = n(843693),
+  a = n(112606);
 
 function l(e) {
-  i.default.dispatch({
+  i.Z.dispatch({
     type: "POGGERMODE_SETTINGS_UPDATE",
     settings: e
   });
   let t = {
-    ...s.default.getState(),
+    ...s.Z.getState(),
     ...e
   };
-  (0, o.default)(t)
+  (0, a.Z)(t)
 }
 
 function u(e) {
-  i.default.dispatch({
+  i.Z.dispatch({
     type: "POGGERMODE_UPDATE_COMBO",
     ...e
   })
 }
 
-function d(e) {
-  i.default.dispatch({
+function _(e) {
+  i.Z.dispatch({
     type: "POGGERMODE_UPDATE_MESSAGE_COMBO",
     comboMessage: {
       ...e,
@@ -48,21 +48,21 @@ function d(e) {
   })
 }
 
-function _(e, t) {
+function d(e, t) {
   var n;
   let s = r.default.getId(),
-    o = a.default.getUserCombo(s, e);
-  null != o && i.default.dispatch({
+    a = o.ZP.getUserCombo(s, e);
+  null != a && i.Z.dispatch({
     type: "POGGERMODE_UPDATE_MESSAGE_COMBO",
     comboMessage: {
-      combo: o,
+      combo: a,
       channelId: e,
       messageId: t,
       displayed: !1
     }
   });
-  let l = null != o && (null == o ? void 0 : o.value) > 0 ? (null !== (n = null == o ? void 0 : o.multiplier) && void 0 !== n ? n : 0) + 1 : 1;
-  i.default.dispatch({
+  let l = null != a && (null == a ? void 0 : a.value) > 0 ? (null !== (n = null == a ? void 0 : a.multiplier) && void 0 !== n ? n : 0) + 1 : 1;
+  i.Z.dispatch({
     type: "POGGERMODE_UPDATE_COMBO",
     channelId: e,
     userId: s,

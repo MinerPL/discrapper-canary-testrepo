@@ -1,14 +1,13 @@
 "use strict";
 let i;
-n.r(t);
-var r, a, s, o, l = n("259443"),
-  u = n("442837"),
-  d = n("570140"),
-  _ = n("818083"),
-  c = n("353926"),
-  E = n("988348"),
-  I = n("987338");
-let T = (0, _.createExperiment)({
+var r, s, o, a, l = n(259443),
+  u = n(442837),
+  _ = n(570140),
+  d = n(818083),
+  c = n(353926),
+  E = n(988348),
+  I = n(987338);
+let T = (0, d.B)({
     id: "2024-03_gateway_zstd",
     label: "Gateway Zstd compression",
     kind: "user",
@@ -17,7 +16,7 @@ let T = (0, _.createExperiment)({
       doVerification: !1
     },
     treatments: [{
-      id: I.ExperimentBuckets.CONTROL,
+      id: I.NZ.CONTROL,
       label: "Control (verification)",
       config: {
         useZstd: !1,
@@ -46,7 +45,7 @@ let T = (0, _.createExperiment)({
       }
     }]
   }),
-  f = (0, _.createExperiment)({
+  h = (0, d.B)({
     id: "2024-04_gateway_zstd_verification",
     label: "Gateway Zstd Verification",
     kind: "user",
@@ -61,17 +60,17 @@ let T = (0, _.createExperiment)({
       }
     }]
   }),
-  S = new l.Logger("GatewayZstdStore");
-let h = !1,
-  A = 0,
-  m = !0;
+  S = new l.Y("GatewayZstdStore");
+let f = !1,
+  N = 0,
+  A = !0;
 
-function N() {
-  return null == i && (i = (0, E.supportsZstd)() && (0, E.getFastConnectZstd)()), i
+function m() {
+  return null == i && (i = (0, E.NF)() && (0, E.MF)()), i
 }
 
-function p() {
-  if (h) {
+function O() {
+  if (f) {
     S.info("Ignoring zstd experiment config because we fell back to zlib");
     return
   }
@@ -79,43 +78,43 @@ function p() {
       location: "GatewayZstdStore"
     }),
     t = e.useZstd;
-  e.doVerification && (t = f.getCurrentConfig({
+  e.doVerification && (t = h.getCurrentConfig({
     location: "GatewayZstdStore"
-  }).useZstd), O(t), A = 0
+  }).useZstd), R(t), N = 0
 }
 
-function O(e) {
-  if (e && !(0, E.supportsZstd)()) {
+function R(e) {
+  if (e && !(0, E.NF)()) {
     S.warn("Attempting to enable zstd but it is not supported");
     return
-  }(0, E.setFastConnectZstd)(e), e !== i && S.info("Setting Zstd to ".concat(e)), i = e
+  }(0, E.CG)(e), e !== i && S.info("Setting Zstd to ".concat(e)), i = e
 }
-class C extends(o = u.default.Store) {
+class C extends(a = u.ZP.Store) {
   initialize() {
-    this.waitFor(c.default)
+    this.waitFor(c.Z)
   }
   shouldUseZstd() {
-    return N()
+    return m()
   }
   enableFailureTracking() {
-    m = !0
+    A = !0
   }
   disableFailureTracking() {
-    m = !1
+    A = !1
   }
 }
-s = "GatewayZstdStore", (a = "displayName") in(r = C) ? Object.defineProperty(r, a, {
-  value: s,
+o = "GatewayZstdStore", (s = "displayName") in(r = C) ? Object.defineProperty(r, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s, t.default = new C(d.default, {
-  CONNECTION_OPEN: p,
+}) : r[s] = o, t.Z = new C(_.Z, {
+  CONNECTION_OPEN: O,
   CONNECTION_INTERRUPTED: function(e) {
     let {
       code: t
     } = e;
-    N() && m && 1e3 !== t && (A += 1) > 3 && (S.error("Disabling zstd due to consecutive errors"), O(!1), h = !0)
+    if (!!m() && !!A && 1e3 !== t)(N += 1) > 3 && (S.error("Disabling zstd due to consecutive errors"), R(!1), f = !0)
   },
-  CONNECTION_RESUMED: p
+  CONNECTION_RESUMED: O
 })

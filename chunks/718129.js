@@ -1,6 +1,6 @@
 "use strict";
-var r = n("927066")("%Reflect.construct%", !0),
-  i = n("751564");
+var r = n(927066)("%Reflect.construct%", !0),
+  i = n(751564);
 try {
   i({}, "", {
     "[[Get]]": function() {}

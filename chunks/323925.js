@@ -11,8 +11,8 @@ function r(e) {
 function i(e) {
   return null !== e && "object" === r(e) && Object.prototype.hasOwnProperty.call(e, "current")
 }
-n.r(t), n.d(t, {
-  isRef: function() {
+n.d(t, {
+  d: function() {
     return i
   }
 })

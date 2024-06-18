@@ -1,6 +1,6 @@
 "use strict";
-var n = r("322273"),
-  i = r("550782");
+var n = r(322273),
+  i = r(550782);
 
 function o(t) {
   return null == t ? t : String(t)

@@ -1,4 +1,4 @@
-var r = n("748372");
+var r = n(748372);
 e.exports = function(e, t, n) {
   for (var i = -1, a = e.criteria, o = t.criteria, s = a.length, u = n.length; ++i < s;) {
     var c = r(a[i], o[i]);

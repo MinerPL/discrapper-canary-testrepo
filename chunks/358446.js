@@ -1,31 +1,31 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return E
+n.d(t, {
+  K: function() {
+    return Z
   },
-  useGetKeybindNotification: function() {
-    return m
+  Z: function() {
+    return g
   }
-}), n("47120");
-var i = n("735250");
-n("470079");
-var a = n("524437"),
-  l = n("481060"),
-  s = n("13245"),
-  o = n("312839"),
-  r = n("706140"),
-  d = n("454902"),
-  u = n("357727"),
-  c = n("658785"),
-  f = n("987650"),
-  h = n("921944"),
-  p = n("689938"),
-  g = n("918910");
+}), n(47120);
+var i = n(735250);
+n(470079);
+var s = n(704215),
+  l = n(481060),
+  a = n(13245),
+  o = n(312839),
+  r = n(706140),
+  d = n(454902),
+  c = n(357727),
+  u = n(658785),
+  h = n(987650),
+  p = n(921944),
+  f = n(689938),
+  E = n(398644);
 
-function m() {
-  let [e, t] = (0, r.useGetDismissibleContent)([a.DismissibleContent.OVERLAY_KEYBIND_NOTIFICATION]), {
+function Z() {
+  let [e, t] = (0, r.c)([s.z.OVERLAY_KEYBIND_NOTIFICATION]), {
     showKeybindIndicators: n
-  } = c.default.useExperiment({
+  } = u.Z.useExperiment({
     location: "Overlay"
   }, {
     autoTrackExposure: !1
@@ -36,36 +36,36 @@ function m() {
   }
 }
 
-function E(e) {
+function g(e) {
   let {
     markAsDismissed: t
   } = e, {
     trackView: n,
-    trackClick: a
-  } = (0, o.makeAnalyticsTrackers)(f.OverlayNotificationType.KeybindIndicatorsNotification, {
-    notif_type: f.OverlayNotificationType.KeybindIndicatorsNotification
+    trackClick: s
+  } = (0, o.R)(h.n0.KeybindIndicatorsNotification, {
+    notif_type: h.n0.KeybindIndicatorsNotification
   });
   return {
     icon: null,
     body: (0, i.jsxs)("div", {
-      className: g.notificationBody,
+      className: E.notificationBody,
       children: [(0, i.jsx)("div", {
-        className: g.iconContainer,
-        children: (0, i.jsx)(u.default, {
+        className: E.iconContainer,
+        children: (0, i.jsx)(c.Z, {
           height: 28,
           width: 28
         })
       }), (0, i.jsx)(l.Text, {
         variant: "text-sm/normal",
-        children: p.default.Messages.KEYBIND_NOTIFICATION_DESCRIPTION
+        children: f.Z.Messages.KEYBIND_NOTIFICATION_DESCRIPTION
       })]
     }),
-    colorScheme: d.ColorSchemes.PRIMARY,
+    colorScheme: d.IC.PRIMARY,
     onDismissClick: (e, n) => {
-      a("dismiss"), t(h.ContentDismissActionType.DISMISS), s.default.updateNotificationStatus(n)
+      s("dismiss"), t(p.L.DISMISS), a.Z.updateNotificationStatus(n)
     },
     onNotificationShow: () => {
-      t(h.ContentDismissActionType.AUTO_DISMISS), n()
+      t(p.L.AUTO_DISMISS), n()
     }
   }
 }

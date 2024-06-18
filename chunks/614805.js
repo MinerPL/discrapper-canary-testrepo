@@ -1,5 +1,5 @@
 "use strict";
-var r, i = n("531478").codes,
+var r, i = n(531478).codes,
   a = i.ERR_MISSING_ARGS,
   o = i.ERR_STREAM_DESTROYED;
 
@@ -26,7 +26,7 @@ e.exports = function() {
         !m && (m = !0, h.apply(void 0, arguments))
       }, g = !1, a.on("close", function() {
         g = !0
-      }), void 0 === r && (r = n("133495")), r(a, {
+      }), void 0 === r && (r = n(133495)), r(a, {
         readable: s,
         writable: c
       }, function(e) {

@@ -1,48 +1,48 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
+t.d(s, {
+  Z: function() {
     return T
   }
-}), s("47120");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("803997"),
-  i = s.n(n),
-  r = s("442837"),
-  o = s("481060"),
-  d = s("393238"),
-  u = s("607070"),
-  c = s("465670"),
-  E = s("596390"),
-  _ = s("574248");
-let I = l.forwardRef(function(e, t) {
-  var s, n;
+}), t(47120);
+var n = t(735250),
+  i = t(470079),
+  l = t(120356),
+  a = t.n(l),
+  r = t(442837),
+  o = t(481060),
+  c = t(393238),
+  d = t(607070),
+  u = t(465670),
+  E = t(596390),
+  _ = t(738434);
+let I = i.forwardRef(function(e, s) {
+  var t, l;
   let {
     value: r,
-    isSelected: d,
-    isEditing: u,
-    forceShowErrorTooltip: c = !1,
+    isSelected: c,
+    isEditing: d,
+    forceShowErrorTooltip: u = !1,
     error: E
-  } = e, [I, T, S] = l.useMemo(() => {
+  } = e, [I, T, N] = i.useMemo(() => {
     if (null == E) return [];
     let {
       erroringCharacterOffset: e = 0,
-      erroringCharacterLength: t = r.length
-    } = null != E ? E : {}, s = r.slice(0, e), a = r.slice(e, e + t);
-    return [s, a, r.slice(e + t)]
+      erroringCharacterLength: s = r.length
+    } = null != E ? E : {}, t = r.slice(0, e), n = r.slice(e, e + s);
+    return [t, n, r.slice(e + s)]
   }, [r, E]);
-  return null == E ? (0, a.jsx)("div", {
-    className: i()(_.chipletValue, {
-      [_.isEditing]: u,
-      [_.isSelected]: d
+  return null == E ? (0, n.jsx)("div", {
+    className: a()(_.chipletValue, {
+      [_.isEditing]: d,
+      [_.isSelected]: c
     }),
-    ref: t,
+    ref: s,
     children: r
-  }) : (null !== (s = null == I ? void 0 : I.length) && void 0 !== s ? s : 0) + (null !== (n = null == T ? void 0 : T.length) && void 0 !== n ? n : 0) > 70 ? (0, a.jsx)(o.Tooltip, {
+  }) : (null !== (t = null == I ? void 0 : I.length) && void 0 !== t ? t : 0) + (null !== (l = null == T ? void 0 : T.length) && void 0 !== l ? l : 0) > 70 ? (0, n.jsx)(o.Tooltip, {
     "aria-label": E.message,
-    text: () => (0, a.jsxs)("div", {
+    text: () => (0, n.jsxs)("div", {
       "aria-label": E.message,
-      children: [E.message, " ", (0, a.jsx)("span", {
+      children: [E.message, " ", (0, n.jsx)("span", {
         className: _.errorOverflowValue,
         children: T
       })]
@@ -50,142 +50,142 @@ let I = l.forwardRef(function(e, t) {
     tooltipClassName: _.errorTooltip,
     color: o.Tooltip.Colors.RED,
     position: "left",
-    forceOpen: c || void 0,
-    children: e => (0, a.jsxs)("div", {
-      ref: t,
-      className: i()(_.chipletValue, {
-        [_.isEditing]: u,
-        [_.isError]: null != E && !u,
-        [_.isOverflowing]: null != E && !u
+    forceOpen: u || void 0,
+    children: e => (0, n.jsxs)("div", {
+      ref: s,
+      className: a()(_.chipletValue, {
+        [_.isEditing]: d,
+        [_.isError]: null != E && !d,
+        [_.isOverflowing]: null != E && !d
       }),
       ...e,
-      children: [(0, a.jsx)("span", {
+      children: [(0, n.jsx)("span", {
         children: I
-      }), (0, a.jsx)("span", {
+      }), (0, n.jsx)("span", {
         className: _.errorValue,
         children: T
-      }), (0, a.jsx)("span", {
-        children: S
+      }), (0, n.jsx)("span", {
+        children: N
       })]
     })
-  }) : (0, a.jsxs)("div", {
-    ref: t,
-    className: i()(_.chipletValue, {
-      [_.isEditing]: u,
-      [_.isError]: null != E && !u
+  }) : (0, n.jsxs)("div", {
+    ref: s,
+    className: a()(_.chipletValue, {
+      [_.isEditing]: d,
+      [_.isError]: null != E && !d
     }),
-    children: [(0, a.jsx)("span", {
+    children: [(0, n.jsx)("span", {
       children: I
-    }), (0, a.jsx)(o.Tooltip, {
+    }), (0, n.jsx)(o.Tooltip, {
       text: E.message,
       color: o.Tooltip.Colors.RED,
       position: "top",
-      forceOpen: c || void 0,
-      children: e => (0, a.jsx)("span", {
+      forceOpen: u || void 0,
+      children: e => (0, n.jsx)("span", {
         ...e,
         className: _.errorValue,
         children: T
       })
-    }), (0, a.jsx)("span", {
-      children: S
+    }), (0, n.jsx)("span", {
+      children: N
     })]
   })
 });
 
 function T(e) {
   let {
-    value: t,
-    onChange: s,
-    onBlur: n,
+    value: s,
+    onChange: t,
+    onBlur: l,
     onFocus: T,
-    onRemove: S,
-    isSelected: f,
-    isSelecting: m,
-    error: N,
+    onRemove: N,
+    isSelected: m,
+    isSelecting: S,
+    error: h,
     forceShowErrorTooltip: g
-  } = e, h = l.useRef(null), C = l.useRef(null), [R, x] = l.useState(!1), {
-    ref: L,
-    width: O = 0
-  } = (0, d.default)(R), {
-    ref: A,
-    width: p = 0
-  } = (0, d.default)(R), M = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [D, v] = l.useState(g), j = l.useRef(null), G = O > p ? O : p;
-  l.useEffect(() => {
-    g ? (v(!0), j.current = setTimeout(() => {
-      v(!1), j.current = null
-    }, E.CHIPLET_ERROR_FORCE_SHOW_TOOLTIP_TIMER_MS)) : v(!1)
-  }, [g]), l.useEffect(() => () => {
-    clearTimeout(j.current)
+  } = e, x = i.useRef(null), C = i.useRef(null), [R, L] = i.useState(!1), {
+    ref: O,
+    width: A = 0
+  } = (0, c.Z)(R), {
+    ref: p,
+    width: M = 0
+  } = (0, c.Z)(R), f = (0, r.e7)([d.Z], () => d.Z.useReducedMotion), [v, D] = i.useState(g), Z = i.useRef(null), j = A > M ? A : M;
+  i.useEffect(() => {
+    g ? (D(!0), Z.current = setTimeout(() => {
+      D(!1), Z.current = null
+    }, E.I5)) : D(!1)
+  }, [g]), i.useEffect(() => () => {
+    clearTimeout(Z.current)
   }, []);
-  let U = l.useCallback(e => {
-      s(e.target.value)
-    }, [s]),
-    P = l.useCallback(function() {
+  let U = i.useCallback(e => {
+      t(e.target.value)
+    }, [t]),
+    G = i.useCallback(function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      if (t.trim().length <= 0 && S(), null != h.current && null != L.current && null != C.current) {
-        var s;
-        h.current.scrollTo(0, 0), h.current.setSelectionRange(0, 0), h.current.scrollLeft = 0, L.current.scrollLeft = 0, (null === (s = C.current) || void 0 === s ? void 0 : s.ref) != null && (C.current.ref.scrollLeft = 0)
+      if (s.trim().length <= 0 && N(), null != x.current && null != O.current && null != C.current) {
+        var t;
+        x.current.scrollTo(0, 0), x.current.setSelectionRange(0, 0), x.current.scrollLeft = 0, O.current.scrollLeft = 0, (null === (t = C.current) || void 0 === t ? void 0 : t.ref) != null && (C.current.ref.scrollLeft = 0)
       }
-      x(!1), n(e)
-    }, [t, L, n, S]),
-    b = l.useCallback(e => {
-      let s = t.trim().length <= 0;
-      E.NEXT_CHIP_INPUT_KEY.has(e.key) ? (e.preventDefault(), e.stopPropagation(), P(!0)) : "Backspace" === e.key && s && (e.preventDefault(), e.stopPropagation(), P(!0))
-    }, [P, t]),
-    B = l.useCallback(e => {
-      let t = e.metaKey || e.ctrlKey;
-      T(t), t ? e.preventDefault() : x(!0), e.stopPropagation()
+      L(!1), l(e)
+    }, [s, O, l, N]),
+    P = i.useCallback(e => {
+      let t = s.trim().length <= 0;
+      E.ye.has(e.key) ? (e.preventDefault(), e.stopPropagation(), G(!0)) : "Backspace" === e.key && t && (e.preventDefault(), e.stopPropagation(), G(!0))
+    }, [G, s]),
+    b = i.useCallback(e => {
+      let s = e.metaKey || e.ctrlKey;
+      T(s), s ? e.preventDefault() : L(!0), e.stopPropagation()
     }, [T]),
-    y = l.useCallback(e => {
-      S()
-    }, [S]);
-  return (0, a.jsx)("div", {
+    B = i.useCallback(e => {
+      N()
+    }, [N]);
+  return (0, n.jsx)("div", {
     className: _.chipletFlexContainer,
-    children: (0, a.jsxs)("div", {
-      ref: A,
-      className: i()(_.chipletContainer, {
+    children: (0, n.jsxs)("div", {
+      ref: p,
+      className: a()(_.chipletContainer, {
         [_.isEditing]: R,
-        [_.smallBlink]: !R && !M,
-        [_.isSelected]: f,
-        [_.isSelecting]: m,
-        [_.isError]: null != N && !R
+        [_.smallBlink]: !R && !f,
+        [_.isSelected]: m,
+        [_.isSelecting]: S,
+        [_.isError]: null != h && !R
       }),
-      children: [(0, a.jsxs)(o.Clickable, {
+      children: [(0, n.jsxs)(o.Clickable, {
         tag: "div",
-        onBlur: () => P(!1),
-        onClick: B,
+        onBlur: () => G(!1),
+        onClick: b,
         ignoreKeyPress: !0,
-        onMouseEnter: () => v(!0),
-        onMouseLeave: () => v(!1),
-        className: i()(_.chipletContainerInner, {
-          [_.isSelecting]: m,
+        onMouseEnter: () => D(!0),
+        onMouseLeave: () => D(!1),
+        className: a()(_.chipletContainerInner, {
+          [_.isSelecting]: S,
           [_.isEditing]: R
         }),
         ref: C,
-        children: [(0, a.jsx)("input", {
-          className: i()(_.chipletInput, {
+        children: [(0, n.jsx)("input", {
+          className: a()(_.chipletInput, {
             [_.isEditing]: R,
-            [_.isSelecting]: m
+            [_.isSelecting]: S
           }),
-          ref: h,
+          ref: x,
           onChange: U,
-          onKeyDownCapture: b,
-          value: t,
+          onKeyDownCapture: P,
+          value: s,
           style: {
-            width: G > 0 ? G : "calc(".concat(t.length, "ch + 10px)")
+            width: j > 0 ? j : "calc(".concat(s.length, "ch + 10px)")
           }
-        }), (0, a.jsx)(I, {
-          ref: L,
-          value: t,
+        }), (0, n.jsx)(I, {
+          ref: O,
+          value: s,
           isEditing: R,
-          isSelected: f,
-          error: N,
-          forceShowErrorTooltip: D || R
+          isSelected: m,
+          error: h,
+          forceShowErrorTooltip: v || R
         })]
-      }), !R && (0, a.jsx)(o.Clickable, {
+      }), !R && (0, n.jsx)(o.Clickable, {
         className: _.closeIconContainer,
-        onClick: y,
-        children: (0, a.jsx)(c.default, {
+        onClick: B,
+        children: (0, n.jsx)(u.Z, {
           className: _.closeIcon,
           width: 12,
           height: 12

@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
-  reflectionLongConvert: function() {
+n.d(t, {
+  _: function() {
     return i
   }
 });
-var r = n("36056");
+var r = n(36056);
 
 function i(e, t) {
   switch (t) {
-    case r.LongType.BIGINT:
+    case r.pz.BIGINT:
       return e.toBigInt();
-    case r.LongType.NUMBER:
+    case r.pz.NUMBER:
       return e.toNumber();
     default:
       return e.toString()

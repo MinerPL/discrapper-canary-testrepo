@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("275726"),
-  r = n("904245"),
-  s = n("147913"),
-  a = n("314897"),
-  o = n("592125"),
-  l = n("375954"),
-  u = n("496675"),
-  d = n("944486"),
-  _ = n("594174"),
-  c = n("146085"),
-  E = n("96052"),
-  I = n("981631");
-class T extends s.default {
+n(47120);
+var i = n(275726),
+  r = n(904245),
+  s = n(147913),
+  o = n(314897),
+  a = n(592125),
+  l = n(375954),
+  u = n(496675),
+  _ = n(944486),
+  d = n(594174),
+  c = n(146085),
+  E = n(96052),
+  I = n(981631);
+class T extends s.Z {
   handleVoiceStateUpdates(e) {
     let {
       voiceStates: t
@@ -24,14 +24,14 @@ class T extends s.default {
         suppress: s,
         requestToSpeakTimestamp: T
       } = e;
-      if (d.default.getVoiceChannelId() === t && !!s && null != t && n !== a.default.getId()) {
-        if (u.default.can(c.MODERATE_STAGE_CHANNEL_PERMISSIONS, o.default.getChannel(t))) {
+      if (_.Z.getVoiceChannelId() === t && !!s && null != t && n !== o.default.getId()) {
+        if (u.Z.can(c.yP, a.Z.getChannel(t))) {
           if (null != T) {
-            let e = _.default.getUser(n);
-            null != e && (0, E.sendStageRequestToSpeakEphemeralMessage)(t, e, T)
+            let e = d.default.getUser(n);
+            null != e && (0, E.U)(t, e, T)
           } else {
-            let e = l.default.getMessages(t).findNewest(e => e.type === i.MessageTypes.STAGE_RAISE_HAND && e.hasFlag(I.MessageFlags.EPHEMERAL) && e.author.id === n);
-            null != e && r.default.deleteMessage(t, e.id, !0)
+            let e = l.Z.getMessages(t).findNewest(e => e.type === i.u.STAGE_RAISE_HAND && e.hasFlag(I.iLy.EPHEMERAL) && e.author.id === n);
+            null != e && r.Z.deleteMessage(t, e.id, !0)
           }
         }
       }
@@ -49,4 +49,4 @@ class T extends s.default {
     }) : t[n] = i
   }
 }
-t.default = new T
+t.Z = new T

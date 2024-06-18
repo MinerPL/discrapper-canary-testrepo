@@ -1,7 +1,7 @@
-t.exports = function(t, e) {
-  for (var n = -1, r = null == t ? 0 : t.length, i = 0, a = []; ++n < r;) {
-    var o = t[n];
-    e(o, n, t) && (a[i++] = o)
+t.exports = function(t, r) {
+  for (var e = -1, n = null == t ? 0 : t.length, o = 0, i = []; ++e < n;) {
+    var a = t[e];
+    r(a, e, t) && (i[o++] = a)
   }
-  return a
+  return i
 }

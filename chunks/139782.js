@@ -1,6 +1,6 @@
 "use strict";
-n.r(e), n.d(e, {
-  SDK_VERSION: function() {
+n.d(e, {
+  J: function() {
     return r
   }
 });

@@ -1,42 +1,42 @@
 "use strict";
-n.r(t), n.d(t, {
-  ineligibleQualitySetting: function() {
+n.d(t, {
+  F4: function() {
+    return d
+  },
+  mc: function() {
     return E
   },
-  shouldActivatePerkDemo: function() {
+  vw: function() {
     return c
-  },
-  shouldFetchPerksDemos: function() {
-    return _
   }
 });
-var i = n("594174"),
-  r = n("74538"),
-  a = n("736871"),
-  s = n("351742"),
-  o = n("114064"),
-  l = n("474936"),
-  u = n("37113");
+var i = n(594174),
+  r = n(74538),
+  s = n(736871),
+  o = n(351742),
+  a = n(114064),
+  l = n(474936),
+  u = n(37113);
 
-function d() {
+function _() {
   let e = i.default.getCurrentUser();
-  return null != e && !(0, r.isPremium)(e, l.PremiumTypes.TIER_1)
+  return null != e && !(0, r.I5)(e, l.p9.TIER_1)
 }
-let _ = () => {
+let d = () => {
     let {
       inPerksDemosExperiment: e
-    } = a.default.getCurrentConfig({
+    } = s.Z.getCurrentConfig({
       location: "shouldFetchPerksDemos"
     }, {
       autoTrackExposure: !1
     }), {
       enabled: t
-    } = s.default.getCurrentConfig({
+    } = o.Z.getCurrentConfig({
       location: "shouldFetchPerksDemos"
     }, {
       autoTrackExposure: !1
     });
-    return d() && o.default.shouldFetch() && e && t
+    return _() && a.Z.shouldFetch() && e && t
   },
-  c = e => d() && o.default.shouldActivate(e),
-  E = (e, t) => e === u.ApplicationStreamResolutions.RESOLUTION_720 && t !== u.ApplicationStreamFPS.FPS_60
+  c = e => _() && a.Z.shouldActivate(e),
+  E = (e, t) => e === u.LY.RESOLUTION_720 && t !== u.ws.FPS_60

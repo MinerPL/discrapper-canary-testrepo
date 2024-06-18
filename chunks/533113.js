@@ -1,34 +1,34 @@
 "use strict";
-var r = n("67867"),
-  a = n("96403"),
-  o = n("548828"),
-  i = n("611345"),
-  l = n("474883"),
-  u = n("474505"),
-  s = n("342545"),
-  c = n("821819"),
-  d = n("409851"),
-  f = n("54659"),
-  p = n("949999"),
-  h = n("301338"),
-  m = n("882708"),
-  y = n("407747"),
+var r = n(67867),
+  o = n(96403),
+  a = n(548828),
+  i = n(611345),
+  s = n(474883),
+  c = n(474505),
+  l = n(342545),
+  u = n(821819),
+  d = n(409851),
+  p = n(54659),
+  h = n(949999),
+  f = n(301338),
+  m = n(882708),
+  y = n(407747),
   v = [],
-  g = a(v.sort),
-  b = a(v.push),
-  _ = c(function() {
+  g = o(v.sort),
+  b = o(v.push),
+  _ = u(function() {
     v.sort(void 0)
   }),
-  k = c(function() {
+  k = u(function() {
     v.sort(null)
   }),
-  C = f("sort"),
-  w = !c(function() {
+  C = p("sort"),
+  Z = !u(function() {
     if (m) return m < 70;
-    if (!p || !(p > 3)) {
-      if (h) return !0;
+    if (!h || !(h > 3)) {
+      if (f) return !0;
       if (y) return y < 603;
-      var e, t, n, r, a = "";
+      var e, t, n, r, o = "";
       for (e = 65; e < 76; e++) {
         switch (t = String.fromCharCode(e), e) {
           case 66:
@@ -51,26 +51,26 @@ var r = n("67867"),
       }
       for (v.sort(function(e, t) {
           return t.v - e.v
-        }), r = 0; r < v.length; r++) t = v[r].k.charAt(0), a.charAt(a.length - 1) !== t && (a += t);
-      return "DGBEFHACIJK" !== a
+        }), r = 0; r < v.length; r++) t = v[r].k.charAt(0), o.charAt(o.length - 1) !== t && (o += t);
+      return "DGBEFHACIJK" !== o
     }
   });
 r({
   target: "Array",
   proto: !0,
-  forced: _ || !k || !C || !w
+  forced: _ || !k || !C || !Z
 }, {
   sort: function(e) {
-    void 0 !== e && o(e);
-    var t, n, r, a = i(this);
-    if (w) return void 0 === e ? g(a) : g(a, e);
-    var c = [],
-      f = l(a);
-    for (r = 0; r < f; r++) r in a && b(c, a[r]);
-    for (d(c, (t = e, function(e, n) {
-        return void 0 === n ? -1 : void 0 === e ? 1 : void 0 !== t ? +t(e, n) || 0 : s(e) > s(n) ? 1 : -1
-      })), n = l(c), r = 0; r < n;) a[r] = c[r++];
-    for (; r < f;) u(a, r++);
-    return a
+    void 0 !== e && a(e);
+    var t, n, r, o = i(this);
+    if (Z) return void 0 === e ? g(o) : g(o, e);
+    var u = [],
+      p = s(o);
+    for (r = 0; r < p; r++) r in o && b(u, o[r]);
+    for (d(u, (t = e, function(e, n) {
+        return void 0 === n ? -1 : void 0 === e ? 1 : void 0 !== t ? +t(e, n) || 0 : l(e) > l(n) ? 1 : -1
+      })), n = s(u), r = 0; r < n;) o[r] = u[r++];
+    for (; r < p;) c(o, r++);
+    return o
   }
 })

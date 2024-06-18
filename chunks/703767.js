@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n("653041"), n("47120");
-var i = n("147913"),
-  r = n("579806"),
-  a = n("818083"),
-  s = n("998502");
-let o = [0, 0];
+n(653041), n(47120);
+var i = n(147913),
+  r = n(579806),
+  s = n(818083),
+  o = n(998502);
+let a = [0, 0];
 
 function l(e) {
   let t = e.toString(16);
@@ -15,9 +15,9 @@ function l(e) {
 function u(e) {
   return [4098, e]
 }
-let d = [function(e, t, n, i) {
+let _ = [function(e, t, n, i) {
   let r = [],
-    s = n.map(e => e.map(l).join(":")).join(", ");
+    o = n.map(e => e.map(l).join(":")).join(", ");
   for (let e = 0; e < i.length; e++) {
     let t = {};
     t[i[e]] = "1", r.push({
@@ -28,27 +28,27 @@ let d = [function(e, t, n, i) {
   }
   return {
     gpus: n,
-    experiment: (0, a.createExperiment)({
+    experiment: (0, s.B)({
       kind: "user",
       id: e,
-      label: "GPU Workarounds: ".concat(t, " (").concat(s, ")"),
+      label: "GPU Workarounds: ".concat(t, " (").concat(o, ")"),
       defaultConfig: {},
       treatments: r
     })
   }
 }("2024-03_amd_vdec_tests_1", "AMD video decode tests 1", [u(5592), u(5597), u(5686), u(5688), u(5708), u(5761), u(26607), u(26591), u(29471), u(29504), u(29631), u(29679), u(29663), u(29695), u(29759), u(29772), u(29822), u(29824)], ["disable_media_foundation_clear_playback", "disable_d3d11_video_decoder"])];
 
-function _(e) {
+function d(e) {
   for (let t of e)
-    if (t[0] === o[0] && t[1] === o[1]) return !0;
+    if (t[0] === a[0] && t[1] === a[1]) return !0;
   return !1
 }
 let c = !1;
 
 function E() {
   let e = {};
-  for (let t of d)
-    if (_(t.gpus)) {
+  for (let t of _)
+    if (d(t.gpus)) {
       let n = t.experiment.getCurrentConfig({
         location: "updateFlags"
       });
@@ -56,9 +56,9 @@ function E() {
         ...e,
         ...n
       }
-    } s.default.setChromiumSwitches(e)
+    } o.ZP.setChromiumSwitches(e)
 }
-class I extends i.default {
+class I extends i.Z {
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
@@ -66,9 +66,9 @@ class I extends i.default {
         try {
           var e, t, n, i;
           if (c || (null === (t = window.DiscordNative) || void 0 === t ? void 0 : null === (e = t.gpuSettings) || void 0 === e ? void 0 : e.setChromiumSwitches) == null) return;
-          let a = await r.default.processUtils.getSystemInfo();
-          for (let e of null !== (i = null === (n = a.electronGPUInfo) || void 0 === n ? void 0 : n.gpuDevice) && void 0 !== i ? i : []) !0 === e.active && (o = [e.vendorId, e.deviceId]);
-          for (let e of (c = !0, d)) _(e.gpus) && e.experiment.subscribe({
+          let s = await r.Z.processUtils.getSystemInfo();
+          for (let e of null !== (i = null === (n = s.electronGPUInfo) || void 0 === n ? void 0 : n.gpuDevice) && void 0 !== i ? i : []) !0 === e.active && (a = [e.vendorId, e.deviceId]);
+          for (let e of (c = !0, _)) d(e.gpus) && e.experiment.subscribe({
             location: "GPU experiment subscription"
           }, E);
           E()
@@ -82,4 +82,4 @@ class I extends i.default {
     }) : t[n] = i
   }
 }
-t.default = new I
+t.Z = new I

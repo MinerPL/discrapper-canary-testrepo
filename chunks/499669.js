@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  TimestampMillisecondsParser: function() {
+n.d(t, {
+  T: function() {
     return d
   }
 });
-var r = n("717029"),
-  i = n("846042");
+var r = n(717029),
+  i = n(846042);
 
 function a(e) {
   return (a = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
@@ -68,13 +68,10 @@ var d = function(e) {
     }
   }(), function() {
     var e, r = c(t);
-    if (n) {
-      var i = c(this).constructor;
-      e = Reflect.construct(r, arguments, i)
-    } else e = r.apply(this, arguments);
-    return function(e, t) {
-      return t && ("object" === a(t) || "function" == typeof t) ? t : u(e)
-    }(this, e)
+    return e = n ? Reflect.construct(r, arguments, c(this).constructor) : r.apply(this, arguments),
+      function(e, t) {
+        return t && ("object" === a(t) || "function" == typeof t) ? t : u(e)
+      }(this, e)
   });
 
   function h() {
@@ -88,7 +85,7 @@ var d = function(e) {
   return r = h, d = [{
     key: "parse",
     value: function(e) {
-      return (0, i.parseAnyDigitsSigned)(e)
+      return (0, i.n8)(e)
     }
   }, {
     key: "set",
@@ -97,5 +94,5 @@ var d = function(e) {
         timestampIsSet: !0
       }]
     }
-  }], o(r.prototype, d), f && o(r, f), h
-}(r.Parser)
+  }], o(r.prototype, d), h
+}(r._)

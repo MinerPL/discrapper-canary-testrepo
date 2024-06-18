@@ -1,39 +1,39 @@
 "use strict";
-n.r(t), n.d(t, {
-  canUseWebp: function() {
-    return S
-  },
-  getChromeVersion: function() {
-    return c
-  },
-  getFirefoxVersion: function() {
+n.d(t, {
+  hY: function() {
     return T
   },
-  supportsHEVCAlpha: function() {
-    return h
+  og: function() {
+    return S
+  },
+  rO: function() {
+    return f
+  },
+  vu: function() {
+    return c
   }
 });
-var i, r, s, a, o, l = n("525654"),
+var i, r, s, o, a, l = n(525654),
   u = n.n(l);
-let d = (null !== (i = u().name) && void 0 !== i ? i : "unknown").toLowerCase(),
-  _ = "chrome" === d.toLowerCase() ? parseInt(null !== (r = u().version) && void 0 !== r ? r : "", 10) : -1;
+let _ = (null !== (i = u().name) && void 0 !== i ? i : "unknown").toLowerCase(),
+  d = "chrome" === _.toLowerCase() ? parseInt(null !== (r = u().version) && void 0 !== r ? r : "", 10) : -1;
 
 function c() {
-  return _
+  return d
 }
-let E = "electron" === d.toLowerCase() ? parseInt(null !== (s = u().version) && void 0 !== s ? s : "", 10) : -1,
-  I = "firefox" === d.toLowerCase() ? parseInt(null !== (a = u().version) && void 0 !== a ? a : "", 10) : -1;
+let E = "electron" === _.toLowerCase() ? parseInt(null !== (s = u().version) && void 0 !== s ? s : "", 10) : -1,
+  I = "firefox" === _.toLowerCase() ? parseInt(null !== (o = u().version) && void 0 !== o ? o : "", 10) : -1;
 
 function T() {
   return I
 }
-let f = "edge" === d.toLowerCase() ? parseInt(null !== (o = u().version) && void 0 !== o ? o : "", 10) : -1;
+let h = "edge" === _.toLowerCase() ? parseInt(null !== (a = u().version) && void 0 !== a ? a : "", 10) : -1;
 
 function S() {
-  return -1 !== _ || -1 !== E || -1 !== I || -1 !== f
+  return -1 !== d || -1 !== E || -1 !== I || -1 !== h
 }
 
-function h() {
+function f() {
   var e;
   let t = window.navigator,
     n = t.userAgent.toLowerCase(),

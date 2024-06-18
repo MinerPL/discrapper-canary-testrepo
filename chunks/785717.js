@@ -1,66 +1,69 @@
 "use strict";
-n.r(t), n.d(t, {
-  UserProfileAnalyticsProvider: function() {
+n.d(t, {
+  KZ: function() {
+    return _
+  },
+  Mt: function() {
     return l
   },
-  useTrackUserProfileAction: function() {
+  Q1: function() {
     return u
-  },
-  useUserProfileAnalyticsContext: function() {
-    return d
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  a = n("906732"),
-  s = n("221292");
-let o = r.createContext({}),
+var i = n(735250),
+  r = n(470079),
+  s = n(906732),
+  o = n(221292);
+let a = r.createContext({}),
   l = e => {
     let {
       children: t,
       layout: n,
       userId: l,
       guildId: u,
-      channelId: d,
-      messageId: _,
+      channelId: _,
+      messageId: d,
       roleId: c,
-      shouldTrackViewOnMount: E = !0
+      showGuildProfile: E = !0,
+      shouldTrackViewOnMount: I = !0
     } = e, {
-      analyticsLocations: I
-    } = (0, a.default)(), T = r.useMemo(() => ({
+      analyticsLocations: T
+    } = (0, s.ZP)(), h = r.useMemo(() => ({
       layout: n,
       userId: l,
       guildId: u,
-      channelId: d,
-      messageId: _,
-      roleId: c
-    }), [n, l, u, d, _, c]);
+      channelId: _,
+      messageId: d,
+      roleId: c,
+      showGuildProfile: E
+    }), [n, l, u, _, d, c, E]);
     return r.useEffect(() => {
-      E && null != n && null != l && (0, s.trackUserProfileAction)({
+      if (!!I && null != n && null != l)(0, o.pQ)({
         action: "VIEW",
         layout: n,
         userId: l,
         guildId: u,
-        channelId: d,
-        messageId: _,
+        channelId: _,
+        messageId: d,
         roleId: c,
-        analyticsLocations: I
+        showGuildProfile: E,
+        analyticsLocations: T
       })
-    }, [E]), (0, i.jsx)(o.Provider, {
-      value: T,
+    }, [I]), (0, i.jsx)(a.Provider, {
+      value: h,
       children: t
     })
   },
   u = e => {
     let {
       analyticsLocations: t
-    } = (0, a.default)();
+    } = (0, s.ZP)();
     return r.useCallback(n => {
       let {
         layout: i,
         userId: r
       } = e;
-      null != i && null != r && (0, s.trackUserProfileAction)({
+      if (null != i && null != r)(0, o.pQ)({
         analyticsLocations: t,
         layout: i,
         userId: r,
@@ -69,8 +72,8 @@ let o = r.createContext({}),
       })
     }, [e, t])
   },
-  d = () => {
-    let e = r.useContext(o);
+  _ = () => {
+    let e = r.useContext(a);
     return {
       trackUserProfileAction: u(e),
       ...e

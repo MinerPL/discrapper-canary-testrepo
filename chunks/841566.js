@@ -1,5 +1,5 @@
-var r = n("73184"),
-  i = n("533206"),
+var r = n(73184),
+  i = n(533206),
   a = Object.prototype,
   o = a.hasOwnProperty,
   s = a.propertyIsEnumerable,

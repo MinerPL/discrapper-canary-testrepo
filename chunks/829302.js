@@ -1,7 +1,7 @@
 "use strict";
-var n = r("379846"),
-  i = r("808570"),
-  o = r("924125");
+var n = r(379846),
+  i = r(808570),
+  o = r(924125);
 t.exports = function(t, e) {
   var r = e.currentTarget.ownerDocument;
   if (!t.props.preserveSelectionOnBlur && o(r) === r.body) {
@@ -11,7 +11,7 @@ t.exports = function(t, e) {
   }
   var s = t._latestEditorState,
     c = s.getSelection();
-  if (c.getHasFocus()) {
+  if (!!c.getHasFocus()) {
     var l = c.set("hasFocus", !1);
     t.props.onBlur && t.props.onBlur(e), t.update(n.acceptSelection(s, l))
   }

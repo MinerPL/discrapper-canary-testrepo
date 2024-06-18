@@ -1,37 +1,36 @@
 "use strict";
-a.r(t);
-var l = a("735250");
-a("470079");
-var s = a("780384"),
-  r = a("481060"),
-  n = a("410030"),
-  i = a("689938"),
-  o = a("797056"),
-  u = a("982240"),
-  c = a("533854");
-t.default = e => {
+var n = t(735250);
+t(470079);
+var a = t(780384),
+  i = t(481060),
+  l = t(410030),
+  r = t(689938),
+  o = t(797056),
+  c = t(982240),
+  u = t(533854);
+s.Z = e => {
   let {
-    onRetry: t
-  } = e, a = (0, n.default)();
-  return (0, l.jsxs)("div", {
+    onRetry: s
+  } = e, t = (0, l.ZP)();
+  return (0, n.jsxs)("div", {
     className: o.wrapper,
-    children: [(0, l.jsx)("img", {
+    children: [(0, n.jsx)("img", {
       className: o.__invalid_loadIssueImg,
-      src: (0, s.isThemeDark)(a) ? u : c,
+      src: (0, a.wj)(t) ? c : u,
       alt: ""
-    }), (0, l.jsx)(r.Heading, {
+    }), (0, n.jsx)(i.Heading, {
       className: o.heading1,
       variant: "heading-xl/semibold",
-      children: i.default.Messages.COLLECTIBLES_SHOP_ERROR_HEADING
-    }), (0, l.jsx)(r.Text, {
+      children: r.Z.Messages.COLLECTIBLES_SHOP_ERROR_HEADING
+    }), (0, n.jsx)(i.Text, {
       variant: "text-md/normal",
-      children: i.default.Messages.COLLECTIBLES_SHOP_ERROR_SHOP_LOAD
-    }), (0, l.jsx)(r.Button, {
+      children: r.Z.Messages.COLLECTIBLES_SHOP_ERROR_SHOP_LOAD
+    }), (0, n.jsx)(i.Button, {
       className: o.reload,
-      size: r.Button.Sizes.MEDIUM,
-      color: r.Button.Colors.BRAND_NEW,
-      onClick: t,
-      children: i.default.Messages.ERRORS_RELOAD
+      size: i.Button.Sizes.MEDIUM,
+      color: i.Button.Colors.BRAND,
+      onClick: s,
+      children: r.Z.Messages.ERRORS_RELOAD
     })]
   })
 }

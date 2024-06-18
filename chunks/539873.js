@@ -1,72 +1,72 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return p
+n.d(t, {
+  Z: function() {
+    return O
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  a = n("442837"),
-  s = n("481060"),
-  o = n("570140"),
-  l = n("605236"),
-  u = n("837741"),
-  d = n("804545"),
-  _ = n("587446"),
-  c = n("996073"),
-  E = n("153124"),
-  I = n("327943"),
-  T = n("997945"),
-  f = n("401460"),
-  S = n("441319"),
-  h = n("921944"),
-  A = n("526761"),
-  m = n("689938"),
-  N = n("401728");
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(442837),
+  o = n(481060),
+  a = n(570140),
+  l = n(605236),
+  u = n(837741),
+  _ = n(804545),
+  d = n(587446),
+  c = n(996073),
+  E = n(153124),
+  I = n(327943),
+  T = n(997945),
+  h = n(401460),
+  S = n(441319),
+  f = n(921944),
+  N = n(526761),
+  A = n(689938),
+  m = n(401728);
 
-function p(e) {
+function O(e) {
   let {
     className: t,
     disabled: n,
-    renderCTAButtons: p
-  } = e, [O, C] = (0, a.useStateFromStoresArray)([I.default], () => [I.default.getCurrentDesktopIcon(), I.default.isEditorOpen]), R = r.useRef(null);
-  (0, c.default)(R, A.AppearanceScrollPositions.CUSTOM_APP_ICONS);
-  let g = (0, E.useUID)(),
-    L = (0, s.useRadioGroup)({
+    renderCTAButtons: O
+  } = e, [R, C] = (0, s.Wu)([I.Z], () => [I.Z.getCurrentDesktopIcon(), I.Z.isEditorOpen]), p = r.useRef(null);
+  (0, c.Z)(p, N.h1.CUSTOM_APP_ICONS);
+  let g = (0, E.Dt)(),
+    L = (0, o.useRadioGroup)({
       orientation: "horizontal",
       labelledBy: g
     }),
     v = e => {
-      o.default.dispatch({
+      a.Z.dispatch({
         type: "APP_ICON_UPDATED",
         id: e
       });
-      let t = T.NewAppIconsDCMap.get(e);
-      null != t && (0, l.markDismissibleContentAsDismissed)(t, {
-        dismissAction: h.ContentDismissActionType.TAKE_ACTION
+      let t = T.Mw.get(e);
+      null != t && (0, l.EW)(t, {
+        dismissAction: f.L.TAKE_ACTION
       })
     },
     D = "AppIconSelectionGroup",
     {
       enabled: M
-    } = (0, u.useBrandRefreshPerksExperiment)({
+    } = (0, u.J)({
       location: D
     }),
     {
-      enabled: y
-    } = (0, d.usePrideMonthPerksExperiment)({
+      enabled: P
+    } = (0, _._)({
       location: D
     }),
-    P = (e, t) => {
+    y = (e, t) => {
       let n = !1;
       switch (t) {
-        case T.PremiumAppIconIds.BLURPLE_TWILIGHT:
+        case T.Ru.BLURPLE_TWILIGHT:
           n = M;
           break;
-        case T.PremiumAppIconIds.IN_RAINBOWS:
-        case T.PremiumAppIconIds.MIDNIGHT_PRISM:
-        case T.PremiumAppIconIds.COLOR_WAVE:
-          n = y;
+        case T.Ru.IN_RAINBOWS:
+        case T.Ru.MIDNIGHT_PRISM:
+        case T.Ru.COLOR_WAVE:
+          n = P;
           break;
         default:
           n = !0
@@ -74,47 +74,47 @@ function p(e) {
       return n && !0 !== e
     },
     U = r.useMemo(() => e => {
-      let t = T.NewAppIconsDCMap.get(e),
-        i = null != t && !(0, l.isDismissibleContentDismissed)(t);
-      return n && i && setTimeout(() => (0, l.markDismissibleContentAsDismissed)(t, {
-        dismissAction: h.ContentDismissActionType.AUTO_DISMISS
+      let t = T.Mw.get(e),
+        i = null != t && !(0, l.un)(t);
+      return n && i && setTimeout(() => (0, l.EW)(t, {
+        dismissAction: f.L.AUTO_DISMISS
       }), 5e3), i
     }, [n]);
   return (0, i.jsx)("div", {
-    ref: R,
+    ref: p,
     children: (0, i.jsx)("div", {
       ...L,
-      className: N.__invalid_container,
+      className: m.__invalid_container,
       children: (0, i.jsxs)("div", {
         className: t,
         children: [(0, i.jsxs)("div", {
-          className: N.header,
+          className: m.header,
           children: [(0, i.jsxs)("div", {
-            className: N.headings,
+            className: m.headings,
             children: [C ? null : (0, i.jsxs)("div", {
-              className: N.title,
-              children: [(0, i.jsx)(s.Heading, {
+              className: m.title,
+              children: [(0, i.jsx)(o.Heading, {
                 variant: "text-md/medium",
-                children: m.default.Messages.APP_ICON_SETTINGS_TITLE
-              }), (0, i.jsx)(_.default, {
-                className: N.premiumIcon
+                children: A.Z.Messages.APP_ICON_SETTINGS_TITLE
+              }), (0, i.jsx)(d.Z, {
+                className: m.premiumIcon
               })]
-            }), (0, i.jsx)(s.Heading, {
+            }), (0, i.jsx)(o.Heading, {
               variant: "text-sm/normal",
-              children: m.default.Messages.APP_ICON_SETTINGS_DESCRIPTION
+              children: A.Z.Messages.APP_ICON_SETTINGS_DESCRIPTION
             })]
-          }), null == p ? void 0 : p()]
+          }), null == O ? void 0 : O()]
         }), (0, i.jsx)("div", {
-          className: N.presets,
-          children: S.ICONS.filter(e => {
+          className: m.presets,
+          children: S.UZ.filter(e => {
             let {
               isHidden: t,
               id: n
             } = e;
-            return P(t, n)
-          }).map((e, t) => (0, i.jsx)(f.default, {
+            return y(t, n)
+          }).map((e, t) => (0, i.jsx)(h.Z, {
             icon: e,
-            isSelected: O === e.id,
+            isSelected: R === e.id,
             onSelect: e => v(e),
             disabled: n,
             tabIndex: 0 !== t || n ? void 0 : 0,

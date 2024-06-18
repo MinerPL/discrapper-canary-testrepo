@@ -1,16 +1,16 @@
 "use strict";
-s.r(t), s.d(t, {
-  generateDeveloperPortalLink: function() {
-    return n
+t.d(s, {
+  $: function() {
+    return l
   }
 });
-var a = s("970648"),
-  l = s("981631");
-async function n(e) {
-  let t = a.default.generateNonce();
+var n = t(970648),
+  i = t(981631);
+async function l(e) {
+  let s = n.Z.generateNonce();
   try {
-    let s = await a.default.createHandoffToken(t);
-    return l.MarketingURLs.DEVELOPER_PORTAL_LOGIN_HANDOFF(t, s, e)
+    let t = await n.Z.createHandoffToken(s);
+    return i.EYA.DEVELOPER_PORTAL_LOGIN_HANDOFF(s, t, e)
   } catch {
     return "//".concat(window.GLOBAL_ENV.DEVELOPERS_ENDPOINT, "/").concat(e)
   }

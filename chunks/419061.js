@@ -1,16 +1,9 @@
 "use strict";
-n.r(t), n.d(t, {
-  AvatarDecorationBorderSizes: function() {
-    return s
-  },
-  DECORATION_TO_AVATAR_RATIO: function() {
+n.d(t, {
+  hs: function() {
     return r
   }
 });
-var i = n("182294");
-let r = 1.2,
-  s = {
-    [i.AvatarSizes.SIZE_56]: 4,
-    [i.AvatarSizes.SIZE_80]: 6,
-    [i.AvatarSizes.SIZE_120]: 8
-  }
+var i = n(182294);
+let r = 1.2;
+i.EF.SIZE_56, i.EF.SIZE_80, i.EF.SIZE_120

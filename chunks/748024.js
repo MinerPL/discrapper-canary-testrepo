@@ -5,8 +5,8 @@ function a(e) {
     return e.__proto__ || Object.getPrototypeOf(e)
   })(e)
 }
-r.r(t), r.d(t, {
-  default: function() {
+r.d(t, {
+  Z: function() {
     return a
   }
 })

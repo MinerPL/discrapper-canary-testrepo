@@ -1,111 +1,110 @@
 "use strict";
-s.r(t);
-var a = s("735250");
-s("470079");
-var l = s("780384"),
-  n = s("481060"),
-  i = s("410030"),
-  r = s("367907"),
-  o = s("906732"),
-  d = s("807582"),
-  u = s("518738"),
-  c = s("26323"),
-  E = s("54264"),
-  _ = s("176278"),
-  I = s("764260"),
-  T = s("981631"),
-  S = s("30513"),
-  f = s("689938"),
-  m = s("866871");
-t.default = function(e) {
+var n = t(735250);
+t(470079);
+var i = t(780384),
+  l = t(481060),
+  a = t(410030),
+  r = t(367907),
+  o = t(906732),
+  c = t(807582),
+  d = t(518738),
+  u = t(26323),
+  E = t(54264),
+  _ = t(176278),
+  I = t(764260),
+  T = t(981631),
+  N = t(30513),
+  m = t(689938),
+  S = t(311180);
+s.Z = function(e) {
   let {
-    guild: t,
-    disabled: N,
+    guild: s,
+    disabled: h,
     role: g
-  } = e, h = (0, i.default)(), C = (0, u.useRoleIconForPreview)(t.id, g), {
+  } = e, x = (0, a.ZP)(), C = (0, d.oC)(s.id, g), {
     analyticsLocations: R
-  } = (0, o.default)(), x = () => {
-    (0, n.openModalLazy)(async () => {
+  } = (0, o.ZP)(), L = () => {
+    (0, l.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([s.e("99387"), s.e("22942")]).then(s.bind(s, "660727"));
-      return s => (0, a.jsx)(e, {
-        ...s,
-        guildId: t.id,
-        onUploadIcon: e => (0, I.updateRoleIcon)(g.id, e, null),
-        onSelectUnicodeEmoji: e => (0, I.updateRoleIcon)(g.id, null, e)
+      } = await Promise.all([t.e("99387"), t.e("22942")]).then(t.bind(t, 660727));
+      return t => (0, n.jsx)(e, {
+        ...t,
+        guildId: s.id,
+        onUploadIcon: e => (0, I._l)(g.id, e, null),
+        onSelectUnicodeEmoji: e => (0, I._l)(g.id, null, e)
       })
     })
-  }, L = t.features.has(T.GuildFeatures.ROLE_ICONS), O = e => {
-    !L && ((0, r.trackWithMetadata)(T.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
+  }, O = s.features.has(T.oNc.ROLE_ICONS), A = e => {
+    !O && ((0, r.yw)(T.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
       location: {
         ...e,
-        section: T.AnalyticsSections.CUSTOM_ROLE_ICONS_TOOLTIP
+        section: T.jXE.CUSTOM_ROLE_ICONS_TOOLTIP
       },
-      guild_id: null == t ? void 0 : t.id,
+      guild_id: null == s ? void 0 : s.id,
       location_stack: R
-    }), (0, c.default)({
+    }), (0, u.Z)({
       analyticsLocations: R,
       analyticsSourceLocation: {
-        page: T.AnalyticsPages.GUILD_SETTINGS,
-        section: T.AnalyticsSections.GUILD_ROLE_EDIT_UPSELL_MODAL,
-        object: T.AnalyticsObjects.BADGE
+        page: T.ZY5.GUILD_SETTINGS,
+        section: T.jXE.GUILD_ROLE_EDIT_UPSELL_MODAL,
+        object: T.qAy.BADGE
       },
-      guild: t,
-      perks: (0, S.customRoleIconUpsellPerks)()
+      guild: s,
+      perks: (0, N.Yp)()
     }))
-  }, A = (0, a.jsx)(d.default, {
-    className: m.availabilityIndicator,
-    guild: t,
-    guildFeature: T.GuildFeatures.ROLE_ICONS,
+  }, p = (0, n.jsx)(c.Z, {
+    className: S.availabilityIndicator,
+    guild: s,
+    guildFeature: T.oNc.ROLE_ICONS,
     tooltipPosition: "top",
-    hideTooltip: L,
-    onClick: () => O({
-      object: T.AnalyticsObjects.LEARN_MORE,
-      objectType: T.AnalyticsObjectTypes.TIER_2
+    hideTooltip: O,
+    onClick: () => A({
+      object: T.qAy.LEARN_MORE,
+      objectType: T.Qqv.TIER_2
     })
   });
-  return (0, a.jsxs)(n.FormItem, {
-    className: m.container,
-    children: [(0, a.jsxs)(n.FormTitle, {
-      className: m.formTitle,
-      children: [(0, a.jsx)("div", {
-        children: f.default.Messages.FORM_LABEL_ROLE_ICON
-      }), A]
-    }), (0, a.jsx)(n.FormText, {
-      className: m.description,
-      children: f.default.Messages.ROLE_ICON_HELP
-    }), (0, a.jsxs)("div", {
-      className: m.rolePreviewArea,
-      children: [(0, a.jsx)("div", {
-        className: m.previewContainer,
-        children: null != C ? (0, a.jsx)(_.default, {
+  return (0, n.jsxs)(l.FormItem, {
+    className: S.container,
+    children: [(0, n.jsxs)(l.FormTitle, {
+      className: S.formTitle,
+      children: [(0, n.jsx)("div", {
+        children: m.Z.Messages.FORM_LABEL_ROLE_ICON
+      }), p]
+    }), (0, n.jsx)(l.FormText, {
+      className: S.description,
+      children: m.Z.Messages.ROLE_ICON_HELP
+    }), (0, n.jsxs)("div", {
+      className: S.rolePreviewArea,
+      children: [(0, n.jsx)("div", {
+        className: S.previewContainer,
+        children: null != C ? (0, n.jsx)(_.Z, {
           ...C,
-          className: m.roleIconPreview,
+          className: S.roleIconPreview,
           enableTooltip: !1
-        }) : (0, a.jsx)(E.default, {
+        }) : (0, n.jsx)(E.Z, {
           width: 24,
           height: 24,
-          className: m.preview
+          className: S.preview
         })
-      }), (0, a.jsx)(n.Button, {
-        className: m.button,
-        color: (0, l.isThemeLight)(h) ? n.Button.Colors.PRIMARY : n.Button.Colors.WHITE,
-        look: n.Button.Looks.OUTLINED,
-        onClick: () => t.hasFeature(T.GuildFeatures.ROLE_ICONS) ? x() : O({
-          object: T.AnalyticsObjects.UPLOAD_IMAGE
+      }), (0, n.jsx)(l.Button, {
+        className: S.button,
+        color: (0, i.ap)(x) ? l.Button.Colors.PRIMARY : l.Button.Colors.WHITE,
+        look: l.Button.Looks.OUTLINED,
+        onClick: () => s.hasFeature(T.oNc.ROLE_ICONS) ? L() : A({
+          object: T.qAy.UPLOAD_IMAGE
         }),
-        disabled: N,
-        children: f.default.Messages.ROLE_ICON_CHOOSE_IMAGE
-      }), null != C ? (0, a.jsx)(n.Button, {
-        className: m.button,
-        color: (0, l.isThemeLight)(h) ? n.Button.Colors.PRIMARY : n.Button.Colors.TRANSPARENT,
-        look: n.Button.Looks.BLANK,
+        disabled: h,
+        children: m.Z.Messages.ROLE_ICON_CHOOSE_IMAGE
+      }), null != C ? (0, n.jsx)(l.Button, {
+        className: S.button,
+        color: (0, i.ap)(x) ? l.Button.Colors.PRIMARY : l.Button.Colors.TRANSPARENT,
+        look: l.Button.Looks.BLANK,
         onClick: () => {
-          (0, I.updateRoleIcon)(g.id, null, null)
+          (0, I._l)(g.id, null, null)
         },
-        disabled: N,
-        children: f.default.Messages.REMOVE_ICON
+        disabled: h,
+        children: m.Z.Messages.REMOVE_ICON
       }) : null]
     })]
   })

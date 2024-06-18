@@ -1,4 +1,3 @@
 "use strict";
-r.r(t);
-var n = (0, r("177624").default)(Object, "create");
-t.default = n
+var r = (0, n(177624).Z)(Object, "create");
+t.Z = r

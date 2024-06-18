@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  getPricesFromServer: function() {
+n.d(t, {
+  l: function() {
     return r
   }
-}), n("724458");
-var i = n("301766");
+}), n(724458);
+var i = n(301766);
 
 function r(e) {
   return null == e ? {} : Object.keys(e).reduce((t, n) => {
@@ -13,7 +13,7 @@ function r(e) {
     return t[n] = {
       countryPrices: {
         countryCode: r.country_prices.country_code,
-        prices: r.country_prices.prices.map(e => (0, i.getPriceFromServer)(e, !0))
+        prices: r.country_prices.prices.map(e => (0, i.kH)(e, !0))
       },
       paymentSourcePrices: {}
     }, t

@@ -1,9 +1,9 @@
 "use strict";
 t.__esModule = !0, t.default = void 0;
-var o = u(n("476400")),
-  r = u(n("470079")),
-  i = n("823189"),
-  a = n("381862");
+var o = u(n(476400)),
+  i = u(n(470079)),
+  r = n(823189),
+  a = n(381862);
 
 function u(e) {
   return e && e.__esModule ? e : {
@@ -32,23 +32,23 @@ var c = Object.values || function(e) {
   },
   p = function(e) {
     function t(t, n) {
-      var o, r = (o = e.call(this, t, n) || this).handleExited.bind(l(l(o)));
+      var o, i = (o = e.call(this, t, n) || this).handleExited.bind(l(l(o)));
       return o.state = {
-        handleExited: r,
+        handleExited: i,
         firstRender: !0
       }, o
     }
     n = t, o = e, n.prototype = Object.create(o.prototype), n.prototype.constructor = n, n.__proto__ = o;
-    var n, o, i = t.prototype;
-    return i.getChildContext = function() {
+    var n, o, r = t.prototype;
+    return r.getChildContext = function() {
       return {
         transitionGroup: {
           isMounting: !this.appeared
         }
       }
-    }, i.componentDidMount = function() {
+    }, r.componentDidMount = function() {
       this.appeared = !0, this.mounted = !0
-    }, i.componentWillUnmount = function() {
+    }, r.componentWillUnmount = function() {
       this.mounted = !1
     }, t.getDerivedStateFromProps = function(e, t) {
       var n = t.children,
@@ -57,7 +57,7 @@ var c = Object.values || function(e) {
         children: t.firstRender ? (0, a.getInitialChildMapping)(e, o) : (0, a.getNextChildMapping)(e, n, o),
         firstRender: !1
       }
-    }, i.handleExited = function(e, t) {
+    }, r.handleExited = function(e, t) {
       var n = (0, a.getChildMapping)(this.props.children);
       !(e.key in n) && (e.props.onExited && e.props.onExited(t), this.mounted && this.setState(function(t) {
         var n = s({}, t.children);
@@ -65,21 +65,21 @@ var c = Object.values || function(e) {
           children: n
         }
       }))
-    }, i.render = function() {
+    }, r.render = function() {
       var e = this.props,
         t = e.component,
         n = e.childFactory,
         o = function(e, t) {
           if (null == e) return {};
-          var n, o, r = {},
-            i = Object.keys(e);
-          for (o = 0; o < i.length; o++) n = i[o], !(t.indexOf(n) >= 0) && (r[n] = e[n]);
-          return r
+          var n, o, i = {},
+            r = Object.keys(e);
+          for (o = 0; o < r.length; o++) n = r[o], !(t.indexOf(n) >= 0) && (i[n] = e[n]);
+          return i
         }(e, ["component", "childFactory"]),
-        i = c(this.state.children).map(n);
-      return (delete o.appear, delete o.enter, delete o.exit, null === t) ? i : r.default.createElement(t, o, i)
+        r = c(this.state.children).map(n);
+      return (delete o.appear, delete o.enter, delete o.exit, null === t) ? r : i.default.createElement(t, o, r)
     }, t
-  }(r.default.Component);
+  }(i.default.Component);
 p.childContextTypes = {
   transitionGroup: o.default.object.isRequired
 }, p.propTypes = {}, p.defaultProps = {
@@ -88,5 +88,5 @@ p.childContextTypes = {
     return e
   }
 };
-var d = (0, i.polyfill)(p);
+var d = (0, r.polyfill)(p);
 t.default = d, e.exports = t.default

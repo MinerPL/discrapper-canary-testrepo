@@ -3,8 +3,8 @@
 function a(e) {
   return 1 === e.nodeType
 }
-t.r(r), t.d(r, {
-  isVisible: function() {
+t.d(r, {
+  p: function() {
     return o
   }
 });

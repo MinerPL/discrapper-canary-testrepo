@@ -1,29 +1,29 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  a = n("392711"),
-  s = n.n(a),
-  o = n("818405"),
-  l = n("587158"),
-  u = n("286379"),
-  d = n("442837"),
-  _ = n("481060"),
-  c = n("386506"),
-  E = n("304761"),
-  I = n("865427"),
-  T = n("25779"),
-  f = n("797614"),
-  S = n("703656"),
-  h = n("586576"),
-  A = n("626135"),
-  m = n("960048"),
-  N = n("998502"),
-  p = n("981631"),
-  O = n("689938"),
-  R = n("898816");
+n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(392711),
+  o = n.n(s),
+  a = n(818405),
+  l = n(587158),
+  u = n(286379),
+  _ = n(442837),
+  d = n(481060),
+  c = n(386506),
+  E = n(304761),
+  I = n(865427),
+  T = n(25779),
+  h = n(797614),
+  S = n(703656),
+  f = n(586576),
+  N = n(626135),
+  A = n(960048),
+  m = n(998502),
+  O = n(981631),
+  R = n(689938),
+  C = n(242414);
 
-function C(e, t, n) {
+function p(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -34,29 +34,29 @@ function C(e, t, n) {
 
 function g() {
   let [e, t] = r.useState(!1);
-  if (null == (0, d.useStateFromStores)([E.default], () => {
+  if (null == (0, _.e7)([E.C], () => {
       var e;
-      return (0, I.probablyHasBuildOverride)() ? null === (e = E.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
+      return (0, I.fD)() ? null === (e = E.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
     })) return null;
   let n = async () => {
     try {
-      t(!0), await (0, c.clearBuildOverride)(), window.location.reload(!0)
+      t(!0), await (0, c.bF)(), window.location.reload(!0)
     } catch (e) {
       t(!1)
     }
   };
-  return (0, i.jsx)(_.Button, {
-    size: _.ButtonSizes.LARGE,
+  return (0, i.jsx)(d.Button, {
+    size: d.ButtonSizes.LARGE,
     onClick: n,
     submitting: e,
-    className: R.clearOverrideButton,
-    children: O.default.Messages.CLEAR_BUILD_OVERRIDE
+    className: C.clearOverrideButton,
+    children: R.Z.Messages.CLEAR_BUILD_OVERRIDE
   })
 }
-let L = s().throttle(e => {
-  f.default.increment({
-    name: u.MetricEvents.APP_CRASHED,
-    tags: ["reason:".concat(o.AppCrashedReasons.UNHANDLED_JS_ERROR), "level:".concat(l.ErrorLevels.FATAL), "modded_client:".concat(e)]
+let L = o().throttle(e => {
+  h.Z.increment({
+    name: u.V.APP_CRASHED,
+    tags: ["reason:".concat(a.v.UNHANDLED_JS_ERROR), "level:".concat(l.c.FATAL), "modded_client:".concat(e)]
   }, !0)
 }, 100, {
   trailing: !1
@@ -66,23 +66,23 @@ class v extends r.PureComponent {
     this.triggerSoftCrash(e, t)
   }
   triggerSoftCrash(e, t) {
-    let n = (0, S.getHistory)().location;
+    let n = (0, S.s1)().location;
     this.setState({
       error: e,
       info: t
     });
-    let i = (0, T.usesClientMods)(),
-      r = m.default.captureCrash(e, {
+    let i = (0, T.e)(),
+      r = A.Z.captureCrash(e, {
         extra: t
       });
-    A.default.track(p.AnalyticEvents.APP_CRASHED, {
+    N.default.track(O.rMx.APP_CRASHED, {
       path: n.pathname,
       extra: t,
       error_message: e.message,
       error_stack: e.stack,
       sentry_issue_id: r,
       uses_client_mods: i
-    }), L(i), N.default.cleanupDisplaySleep()
+    }), L(i), m.ZP.cleanupDisplaySleep()
   }
   _handleSubmitReport() {
     location.reload(!0)
@@ -105,33 +105,33 @@ class v extends r.PureComponent {
     if (null !== this.state.error) {
       let e = (0, i.jsxs)("div", {
           children: [(0, i.jsx)("p", {
-            children: O.default.Messages.ERRORS_UNEXPECTED_CRASH
+            children: R.Z.Messages.ERRORS_UNEXPECTED_CRASH
           }), (0, i.jsx)("p", {
-            children: O.default.Messages.ERRORS_ACTION_TO_TAKE
+            children: R.Z.Messages.ERRORS_ACTION_TO_TAKE
           })]
         }),
         n = (0, i.jsxs)("div", {
-          className: R.buttons,
-          children: [(0, i.jsx)(_.Button, {
-            size: _.ButtonSizes.LARGE,
+          className: C.buttons,
+          children: [(0, i.jsx)(d.Button, {
+            size: d.ButtonSizes.LARGE,
             onClick: this._handleSubmitReport,
-            children: O.default.Messages.ERRORS_RELOAD
+            children: R.Z.Messages.ERRORS_RELOAD
           }), (0, i.jsx)(g, {})]
         });
-      return (0, i.jsx)(h.default, {
-        title: O.default.Messages.UNSUPPORTED_BROWSER_TITLE,
+      return (0, i.jsx)(f.Z, {
+        title: R.Z.Messages.UNSUPPORTED_BROWSER_TITLE,
         note: null != t ? t() : e,
         action: n,
-        className: R.errorPage
+        className: C.errorPage
       })
     }
     return e
   }
   constructor(...e) {
-    super(...e), C(this, "state", {
+    super(...e), p(this, "state", {
       error: null,
       info: null
-    }), C(this, "discordErrorsSet", !1)
+    }), p(this, "discordErrorsSet", !1)
   }
 }
-t.default = v
+t.Z = v

@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  DropTargetMonitorImpl: function() {
-    return s
+n.d(t, {
+  H: function() {
+    return a
   }
 });
-var r = n("573654");
+var r = n(573654);
 
 function i(e, t) {
   for (var n = 0; n < t.length; n++) {
@@ -13,7 +13,7 @@ function i(e, t) {
   }
 }
 
-function a(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -21,16 +21,16 @@ function a(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-var o = !1,
-  s = function() {
+var u = !1,
+  a = function() {
     var e, t, n;
 
-    function s(e) {
+    function a(e) {
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-      }(this, s), a(this, "internalMonitor", void 0), a(this, "targetId", null), this.internalMonitor = e.getMonitor()
+      }(this, a), o(this, "internalMonitor", void 0), o(this, "targetId", null), this.internalMonitor = e.getMonitor()
     }
-    return e = s, t = [{
+    return e = a, t = [{
       key: "receiveHandlerId",
       value: function(e) {
         this.targetId = e
@@ -49,11 +49,11 @@ var o = !1,
       key: "canDrop",
       value: function() {
         if (!this.targetId) return !1;
-        (0, r.invariant)(!o, "You may not call monitor.canDrop() inside your canDrop() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target-monitor");
+        (0, r.k)(!u, "You may not call monitor.canDrop() inside your canDrop() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target-monitor");
         try {
-          return o = !0, this.internalMonitor.canDropOnTarget(this.targetId)
+          return u = !0, this.internalMonitor.canDropOnTarget(this.targetId)
         } finally {
-          o = !1
+          u = !1
         }
       }
     }, {
@@ -106,5 +106,5 @@ var o = !1,
       value: function() {
         return this.internalMonitor.getDifferenceFromInitialOffset()
       }
-    }], i(e.prototype, t), n && i(e, n), s
+    }], i(e.prototype, t), a
   }()

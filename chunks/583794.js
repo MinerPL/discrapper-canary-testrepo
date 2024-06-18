@@ -8,11 +8,11 @@ function i(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
-}), n("47120");
+}), n(47120);
 class r {
   traceEvent(e, t) {
     let n;

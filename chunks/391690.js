@@ -1,14 +1,14 @@
 "use strict";
 let i;
-n.r(t), n("47120"), n("757143");
-var r, s = n("442837"),
-  a = n("570140"),
-  o = n("579806"),
-  l = n("358085"),
-  u = n("417363"),
-  d = n("689938");
+n(47120), n(757143);
+var r, s = n(442837),
+  o = n(570140),
+  a = n(579806),
+  l = n(358085),
+  u = n(417363),
+  _ = n(689938);
 
-function _(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -17,7 +17,7 @@ function _(e, t, n) {
   }) : e[t] = n, e
 }
 let c = {},
-  E = (0, l.isWindows)() ? "".concat(o.default.process.env.LOCALAPPDATA, "\\DiscordGames") : (0, l.isMac)() ? "/Applications/DiscordGames" : "/tmp";
+  E = (0, l.isWindows)() ? "".concat(a.Z.process.env.LOCALAPPDATA, "\\DiscordGames") : (0, l.isMac)() ? "/Applications/DiscordGames" : "/tmp";
 
 function I(e, t) {
   var n;
@@ -44,7 +44,7 @@ function T(e) {
   })
 }
 
-function f(e) {
+function h(e) {
   let {
     applicationId: t,
     branchId: n
@@ -59,7 +59,7 @@ function S(e) {
   let t = new Set(i.installationPaths);
   t.add(e.path), i.installationPaths = t
 }
-class h extends(r = s.default.PersistedStore) {
+class f extends(r = s.ZP.PersistedStore) {
   initialize(e) {
     let t = {
       ...e
@@ -98,18 +98,18 @@ class h extends(r = s.default.PersistedStore) {
   }
   getLabelFromPath(e) {
     var t, n;
-    return e === E ? d.default.Messages.INSTALL_LOCATION_MAIN : null !== (n = null !== (t = o.default.fileManager.basename(e)) && void 0 !== t ? t : e.replace(/[/\\]+$/, "").split(/[/\\]+/g).slice(-1)[0]) && void 0 !== n ? n : "?"
+    return e === E ? _.Z.Messages.INSTALL_LOCATION_MAIN : null !== (n = null !== (t = a.Z.fileManager.basename(e)) && void 0 !== t ? t : e.replace(/[/\\]+$/, "").split(/[/\\]+/g).slice(-1)[0]) && void 0 !== n ? n : "?"
   }
 }
-_(h, "displayName", "InstallationManagerStore"), _(h, "persistKey", "InstallationManagerStore"), t.default = new h(a.default, {
+d(f, "displayName", "InstallationManagerStore"), d(f, "persistKey", "InstallationManagerStore"), t.Z = new f(o.Z, {
   DISPATCH_APPLICATION_INSTALL: T,
-  DISPATCH_APPLICATION_UNINSTALL: f,
+  DISPATCH_APPLICATION_UNINSTALL: h,
   DISPATCH_APPLICATION_CANCEL: function(e) {
     let {
       applicationId: t,
       branchId: n
-    } = e, i = u.default.getState(t, n);
-    null != i && null == i.buildId && null == i.manifestIds && f({
+    } = e, i = u.Z.getState(t, n);
+    null != i && null == i.buildId && null == i.manifestIds && h({
       applicationId: t,
       branchId: n
     })
@@ -139,10 +139,10 @@ _(h, "displayName", "InstallationManagerStore"), _(h, "persistKey", "Installatio
     } = e;
     if (!i.installationPaths.has(t)) return !1;
     if (null != n && "" !== n && i.pathLabels[t] !== n) {
-      var s, a;
-      s = t, a = n, i.pathLabels = {
+      var s, o;
+      s = t, o = n, i.pathLabels = {
         ...i.pathLabels,
-        [s]: a
+        [s]: o
       }
     }
     r && i.defaultInstallationPath !== t && (i.defaultInstallationPath = t)

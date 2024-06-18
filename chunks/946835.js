@@ -1,25 +1,25 @@
 "use strict";
-n.r(t), n.d(t, {
-  CircleQuestionIcon: function() {
-    return a
+n.d(t, {
+  i: function() {
+    return o
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("692547"),
-  s = n("331595");
-let a = e => {
+var i = n(735250);
+n(470079);
+var r = n(692547),
+  s = n(331595);
+let o = e => {
   let {
     width: t = 24,
     height: n = 24,
-    secondaryColor: a = "transparent",
-    secondaryColorClass: o = "",
-    color: l = r.default.colors.INTERACTIVE_NORMAL,
+    secondaryColor: o = "transparent",
+    secondaryColorClass: a = "",
+    color: l = r.Z.colors.INTERACTIVE_NORMAL,
     colorClass: u = "",
-    ...d
+    ..._
   } = e;
   return (0, i.jsxs)("svg", {
-    ...(0, s.default)(d),
+    ...(0, s.Z)(_),
     xmlns: "http://www.w3.org/2000/svg",
     width: t,
     height: n,
@@ -29,8 +29,8 @@ let a = e => {
       cx: "12",
       cy: "12",
       r: "10",
-      fill: "string" == typeof a ? a : a.css,
-      className: o
+      fill: "string" == typeof o ? o : o.css,
+      className: a
     }), (0, i.jsx)("path", {
       fill: "string" == typeof l ? l : l.css,
       fillRule: "evenodd",

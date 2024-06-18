@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  BogoPromotionExperiment: function() {
+n.d(t, {
+  Am: function() {
     return i
   },
-  isBogoPromotionExperimentEnabled: function() {
+  aW: function() {
     return r
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
     kind: "user",
     id: "2023-06_bogo_promotion_gate",
     label: "BOGO Promotion Manager",
@@ -30,7 +30,7 @@ let i = (0, n("818083").createExperiment)({
       autoTrackExposure: e
     })
   };
-t.default = function() {
+t.ZP = function() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
   return i.useExperiment({
     location: "489551_1"

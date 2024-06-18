@@ -1,14 +1,14 @@
 "use strict";
-var i, r, a, s;
-n.r(t), n.d(t, {
-  ApplicationTypes: function() {
-    return i
-  },
-  BotTagTypes: function() {
+var i, r, s, o;
+n.d(t, {
+  Hb: function() {
     return r
   },
-  INSTALL_LESS_APP_IDS: function() {
-    return o
+  Yq: function() {
+    return a
+  },
+  wW: function() {
+    return i
   }
-}), (a = i || (i = {}))[a.GAME = 1] = "GAME", a[a.TICKETED_EVENTS = 3] = "TICKETED_EVENTS", a[a.GUILD_ROLE_SUBSCRIPTIONS = 4] = "GUILD_ROLE_SUBSCRIPTIONS", (s = r || (r = {}))[s.BOT = 0] = "BOT", s[s.SERVER = 1] = "SERVER", s[s.SYSTEM_DM = 2] = "SYSTEM_DM", s[s.OFFICIAL = 3] = "OFFICIAL", s[s.STAFF_ONLY_DM = 4] = "STAFF_ONLY_DM", s[s.ORIGINAL_POSTER = 5] = "ORIGINAL_POSTER", s[s.AI = 6] = "AI", s[s.REMIX = 7] = "REMIX";
-let o = ["1102741339122188349", "1211781489931452447", "1211780388607885393", "1166579889915310151"]
+}), (s = i || (i = {}))[s.GAME = 1] = "GAME", s[s.TICKETED_EVENTS = 3] = "TICKETED_EVENTS", s[s.GUILD_ROLE_SUBSCRIPTIONS = 4] = "GUILD_ROLE_SUBSCRIPTIONS", (o = r || (r = {}))[o.BOT = 0] = "BOT", o[o.SERVER = 1] = "SERVER", o[o.SYSTEM_DM = 2] = "SYSTEM_DM", o[o.OFFICIAL = 3] = "OFFICIAL", o[o.STAFF_ONLY_DM = 4] = "STAFF_ONLY_DM", o[o.ORIGINAL_POSTER = 5] = "ORIGINAL_POSTER", o[o.AI = 6] = "AI", o[o.REMIX = 7] = "REMIX";
+let a = ["1102741339122188349", "1211781489931452447", "1211780388607885393", "1166579889915310151"]

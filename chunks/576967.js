@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
-  usePreview: function() {
+n.d(t, {
+  u: function() {
     return s
   }
 });
-var r = n("470079"),
-  i = n("176617"),
-  a = n("395673");
+var r = n(470079),
+  i = n(294796),
+  a = n(395673);
 let o = e => {
     let t = "translate(".concat(e.x.toFixed(1), "px, ").concat(e.y.toFixed(1), "px)");
     return {
@@ -20,8 +20,8 @@ let o = e => {
   },
   s = () => {
     let e = (0, r.useRef)(null),
-      t = (0, i.useDragLayer)(t => ({
-        currentOffset: (0, a.calculatePointerPosition)(t, e),
+      t = (0, i.f)(t => ({
+        currentOffset: (0, a.s)(t, e),
         isDragging: t.isDragging(),
         itemType: t.getItemType(),
         item: t.getItem(),

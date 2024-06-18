@@ -1,43 +1,43 @@
 "use strict";
-n.r(t), n.d(t, {
-  filterBroadcastingGDMs: function() {
+n.d(t, {
+  Ce: function() {
     return l
   },
-  getIsBroadcastingGDM: function() {
+  Dd: function() {
     return o
   },
-  useIsBroadcastingGDM: function() {
+  V1: function() {
     return a
   }
 });
-var i = n("442837"),
-  r = n("592125"),
-  s = n("770471");
-
-function a(e) {
-  let {
-    canViewBroadcasts: t
-  } = s.default.useExperiment({
-    location: "use_is_broadcasting_gdm"
-  }, {
-    autoTrackExposure: !1
-  }), n = (0, i.useStateFromStores)([r.default], () => r.default.getChannel(e));
-  return !!t && !!(null == n ? void 0 : n.isBroadcastChannel())
-}
+var i = n(442837),
+  r = n(592125),
+  s = n(770471);
 
 function o(e) {
   let {
     canViewBroadcasts: t
-  } = s.default.getCurrentConfig({
+  } = s.Z.useExperiment({
+    location: "use_is_broadcasting_gdm"
+  }, {
+    autoTrackExposure: !1
+  }), n = (0, i.e7)([r.Z], () => r.Z.getChannel(e));
+  return !!t && !!(null == n ? void 0 : n.isBroadcastChannel())
+}
+
+function a(e) {
+  let {
+    canViewBroadcasts: t
+  } = s.Z.getCurrentConfig({
     location: "get_is_broadcasting_gdm"
   }, {
     autoTrackExposure: !1
   });
   if (!t) return !1;
-  let n = r.default.getChannel(e);
+  let n = r.Z.getChannel(e);
   return !!(null == n ? void 0 : n.isBroadcastChannel())
 }
 
 function l(e) {
-  return e.filter(e => !o(e))
+  return e.filter(e => !a(e))
 }

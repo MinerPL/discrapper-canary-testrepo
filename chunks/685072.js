@@ -1,25 +1,25 @@
 "use strict";
-n.r(t), n.d(t, {
-  useEndCallLottie: function() {
-    return o
+n.d(t, {
+  K: function() {
+    return a
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("709014");
-let a = {
+var i = n(735250),
+  r = n(470079),
+  s = n(709014);
+let o = {
     all: {
       name: "all",
       start: 0,
       duration: 90
     }
   },
-  o = () => {
+  a = () => {
     let e = r.useRef(null),
       t = r.useCallback(() => {
         null != e.current && e.current.play("all")
       }, []),
-      o = r.useCallback(() => {
+      a = r.useCallback(() => {
         null != e.current && e.current.play("all")
       }, []),
       l = r.useCallback(() => {
@@ -27,15 +27,15 @@ let a = {
       }, []);
     return {
       events: {
-        onMouseEnter: o,
+        onMouseEnter: a,
         onMouseLeave: l
       },
       play: t,
-      Component: r.useCallback(t => (0, i.jsx)(s.LottieIcon, {
+      Component: r.useCallback(t => (0, i.jsx)(s.L, {
         ...t,
-        src: () => n.e("52680").then(n.t.bind(n, "728913", 19)),
+        src: () => n.e("52680").then(n.t.bind(n, 728913, 19)),
         ref: e,
-        markers: a
+        markers: o
       }), [])
     }
   }

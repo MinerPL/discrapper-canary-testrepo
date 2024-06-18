@@ -1,7 +1,7 @@
 "use strict";
 
 function i(e) {
-  null != window.DiscordSentry && window.DiscordSentry.addBreadcrumb({
+  if (null != window.DiscordSentry) window.DiscordSentry.addBreadcrumb({
     type: "default",
     level: "info",
     category: e.category,
@@ -10,8 +10,8 @@ function i(e) {
     timestamp: Date.now()
   })
 }
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return i
   }
 })

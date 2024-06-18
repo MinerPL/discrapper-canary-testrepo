@@ -1,245 +1,245 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return O
+t.d(s, {
+  Z: function() {
+    return A
   }
-}), s("653041");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("120356"),
-  i = s.n(n),
-  r = s("692547"),
-  o = s("481060"),
-  d = s("239091"),
-  u = s("977258"),
-  c = s("637853"),
-  E = s("473403"),
-  _ = s("216306"),
-  I = s("514342"),
-  T = s("630641"),
-  S = s("743475"),
-  f = s("827907"),
-  m = s("868814"),
-  N = s("981631"),
-  g = s("689938"),
-  h = s("46771");
+}), t(653041);
+var n = t(735250),
+  i = t(470079),
+  l = t(120356),
+  a = t.n(l),
+  r = t(692547),
+  o = t(481060),
+  c = t(239091),
+  d = t(977258),
+  u = t(637853),
+  E = t(473403),
+  _ = t(216306),
+  I = t(514342),
+  T = t(630641),
+  N = t(743475),
+  m = t(827907),
+  S = t(868814),
+  h = t(981631),
+  g = t(689938),
+  x = t(46771);
 
 function C(e) {
   let {
-    guild: t,
-    channel: l
-  } = e, n = (0, f.useIsChecked)(l.id);
-  return "null" === l.id ? (0, a.jsx)("div", {
-    className: i()(h.categoryRow, h.uncategorized),
-    children: (0, a.jsx)(o.Text, {
-      className: h.categoryText,
+    guild: s,
+    channel: i
+  } = e, l = (0, m.Mf)(i.id);
+  return "null" === i.id ? (0, n.jsx)("div", {
+    className: a()(x.categoryRow, x.uncategorized),
+    children: (0, n.jsx)(o.Text, {
+      className: x.categoryText,
       color: "text-muted",
       variant: "text-xs/semibold",
       lineClamp: 1,
-      children: l.name
+      children: i.name
     })
-  }) : (0, a.jsxs)(o.Clickable, {
-    className: i()(h.categoryRow, {
-      [h.uncategorized]: "null" === l.id
+  }) : (0, n.jsxs)(o.Clickable, {
+    className: a()(x.categoryRow, {
+      [x.uncategorized]: "null" === i.id
     }),
     onContextMenu: e => {
-      (0, d.openContextMenuLazy)(e, async () => {
+      (0, c.jW)(e, async () => {
         let {
           default: e
-        } = await Promise.all([s.e("39285"), s.e("86977"), s.e("8965"), s.e("85760")]).then(s.bind(s, "139035"));
-        return s => (0, a.jsx)(e, {
-          ...s,
-          channel: l,
-          guild: t
+        } = await Promise.all([t.e("86977"), t.e("39285"), t.e("8965"), t.e("85760")]).then(t.bind(t, 139035));
+        return t => (0, n.jsx)(e, {
+          ...t,
+          channel: i,
+          guild: s
         })
       })
     },
-    onClick: e => (e.stopPropagation(), (0, u.canChannelBeDefault)(t.id, l.id) ? (0, S.toggleDefaultChannel)(l.id) : (0, o.openModalLazy)(async () => {
+    onClick: e => (e.stopPropagation(), (0, d.s)(s.id, i.id) ? (0, N.pt)(i.id) : (0, o.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([s.e("99387"), s.e("35641")]).then(s.bind(s, "89216"));
-      return s => (0, a.jsx)(e, {
-        ...s,
-        guildId: t.id,
-        startingChannelId: l.id
+      } = await Promise.all([t.e("99387"), t.e("35641")]).then(t.bind(t, 89216));
+      return t => (0, n.jsx)(e, {
+        ...t,
+        guildId: s.id,
+        startingChannelId: i.id
       })
     }), !0),
-    children: [(0, a.jsx)(o.Text, {
-      className: h.categoryText,
+    children: [(0, n.jsx)(o.Text, {
+      className: x.categoryText,
       color: "text-muted",
       variant: "text-xs/semibold",
       lineClamp: 1,
-      children: l.name
-    }), (0, a.jsx)(o.Checkbox, {
-      "aria-checked": n,
-      value: n,
+      children: i.name
+    }), (0, n.jsx)(o.Checkbox, {
+      "aria-checked": l,
+      value: l,
       type: o.Checkbox.Types.INVERTED,
-      className: h.checkbox,
+      className: x.checkbox,
       displayOnly: !0
     })]
   })
 }
-let R = l.memo(function() {
-    return (0, a.jsx)("div", {
-      className: h.separator
+let R = i.memo(function() {
+    return (0, n.jsx)("div", {
+      className: x.separator
     })
   }),
-  x = l.memo(function(e) {
+  L = i.memo(function(e) {
     let {
-      index: t
+      index: s
     } = e;
-    return (0, a.jsx)(o.Text, {
+    return (0, n.jsx)(o.Text, {
       variant: "text-xs/normal",
-      className: h.subtitleSeparator,
+      className: x.subtitleSeparator,
       children: "\xb7"
-    }, "separator-".concat(t))
+    }, "separator-".concat(s))
   }),
-  L = l.memo(function(e) {
+  O = i.memo(function(e) {
     let {
-      channel: t,
-      category: l,
-      guild: n,
+      channel: s,
+      category: i,
+      guild: l,
       isFirstChannel: _,
       isLastChannel: C,
-      tooltipDirection: L = "right"
-    } = e, O = (0, f.useIsChecked)(t.id, l.id), A = (0, f.useIsDisabled)(t.id, l.id), p = (0, f.useDisabledTooltip)(t.id, l.id), M = (0, f.useTooltip)(n.id, l.id), D = null != (0, m.default)(n).find(e => e.id === t.id), v = (0, c.useIsChattableChannel)(t.id), G = e => {
-      if (!A) return e.stopPropagation(), (0, u.canChannelBeDefault)(n.id, t.id) ? (0, S.toggleDefaultChannel)(t.id) : (0, o.openModalLazy)(async () => {
+      tooltipDirection: O = "right"
+    } = e, A = (0, m.Mf)(s.id, i.id), p = (0, m.t4)(s.id, i.id), M = (0, m.EH)(s.id, i.id), f = (0, m.lL)(l.id, i.id), v = null != (0, S.Z)(l).find(e => e.id === s.id), D = (0, u.mn)(s.id), Z = e => {
+      if (!p) return e.stopPropagation(), (0, d.s)(l.id, s.id) ? (0, N.pt)(s.id) : (0, o.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([s.e("99387"), s.e("35641")]).then(s.bind(s, "89216"));
-        return s => (0, a.jsx)(e, {
-          ...s,
-          guildId: n.id,
-          startingChannelId: t.id
+        } = await Promise.all([t.e("99387"), t.e("35641")]).then(t.bind(t, 89216));
+        return t => (0, n.jsx)(e, {
+          ...t,
+          guildId: l.id,
+          startingChannelId: s.id
         })
       }), !0
     }, j = e => {
-      t.isGuildVocal() ? (0, d.openContextMenuLazy)(e, async () => {
+      s.isGuildVocal() ? (0, c.jW)(e, async () => {
         let {
           default: e
-        } = await Promise.all([s.e("99387"), s.e("39285"), s.e("86977"), s.e("14262"), s.e("58360"), s.e("8137"), s.e("83331"), s.e("7872")]).then(s.bind(s, "213202"));
-        return s => (0, a.jsx)(e, {
-          ...s,
-          channel: t,
-          guild: n
+        } = await Promise.all([t.e("99387"), t.e("79695"), t.e("14262"), t.e("86977"), t.e("39285"), t.e("32400"), t.e("18320"), t.e("83331"), t.e("69069")]).then(t.bind(t, 213202));
+        return t => (0, n.jsx)(e, {
+          ...t,
+          channel: s,
+          guild: l
         })
-      }) : (0, d.openContextMenuLazy)(e, async () => {
+      }) : (0, c.jW)(e, async () => {
         let {
           default: e
-        } = await Promise.all([s.e("49237"), s.e("99387"), s.e("30386"), s.e("6380"), s.e("11250"), s.e("57878"), s.e("77172"), s.e("95393"), s.e("81539"), s.e("67535"), s.e("39285"), s.e("86977"), s.e("7590"), s.e("14262"), s.e("90687"), s.e("82882"), s.e("8739"), s.e("58286"), s.e("41947"), s.e("30243"), s.e("37766"), s.e("53466"), s.e("38779"), s.e("59743"), s.e("23404"), s.e("37220"), s.e("58360"), s.e("8137"), s.e("91315"), s.e("80954"), s.e("86557"), s.e("37839"), s.e("34345")]).then(s.bind(s, "373651"));
-        return s => (0, a.jsx)(e, {
-          ...s,
-          channel: t,
-          guild: n
+        } = await Promise.all([t.e("49237"), t.e("99387"), t.e("50990"), t.e("79695"), t.e("6380"), t.e("11250"), t.e("57878"), t.e("77172"), t.e("67535"), t.e("95393"), t.e("14262"), t.e("86977"), t.e("81539"), t.e("7590"), t.e("8739"), t.e("58286"), t.e("39285"), t.e("90687"), t.e("41947"), t.e("30243"), t.e("88646"), t.e("38779"), t.e("55207"), t.e("15357"), t.e("47939"), t.e("47403"), t.e("48800"), t.e("39072"), t.e("32400"), t.e("37220"), t.e("62038"), t.e("91315"), t.e("18320"), t.e("72922"), t.e("77791")]).then(t.bind(t, 373651));
+        return t => (0, n.jsx)(e, {
+          ...t,
+          channel: s,
+          guild: l
         })
       })
     };
-    return (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(o.Tooltip, {
-        text: null != p ? p : M,
+    return (0, n.jsxs)(n.Fragment, {
+      children: [(0, n.jsx)(o.Tooltip, {
+        text: null != M ? M : f,
         delay: 500,
-        position: L,
-        children: e => (0, a.jsxs)(o.Clickable, {
-          className: i()(h.channelRow, {
-            [h.firstChannel]: _,
-            [h.lastChannel]: C,
-            [h.disabled]: A
+        position: O,
+        children: e => (0, n.jsxs)(o.Clickable, {
+          className: a()(x.channelRow, {
+            [x.firstChannel]: _,
+            [x.lastChannel]: C,
+            [x.disabled]: p
           }),
           ...e,
-          onClick: G,
+          onClick: Z,
           onContextMenu: j,
-          children: [(0, a.jsx)("div", {
-            className: h.channelInfo,
-            children: (0, a.jsxs)("div", {
-              className: h.channelName,
-              children: [(0, a.jsx)(E.ChannelItemIcon, {
-                channel: t,
-                guild: n
-              }), (0, a.jsx)(I.default, {
-                className: h.__invalid_name,
-                children: (0, a.jsx)(o.Text, {
-                  className: h.channelText,
+          children: [(0, n.jsx)("div", {
+            className: x.channelInfo,
+            children: (0, n.jsxs)("div", {
+              className: x.channelName,
+              children: [(0, n.jsx)(E._, {
+                channel: s,
+                guild: l
+              }), (0, n.jsx)(I.Z, {
+                className: x.__invalid_name,
+                children: (0, n.jsx)(o.Text, {
+                  className: x.channelText,
                   variant: "text-md/medium",
                   lineClamp: 1,
-                  color: A ? "text-muted" : "text-normal",
-                  children: t.name
+                  color: p ? "text-muted" : "text-normal",
+                  children: s.name
                 })
-              }), D ? (0, a.jsxs)(a.Fragment, {
-                children: [(0, a.jsx)(x, {
+              }), v ? (0, n.jsxs)(n.Fragment, {
+                children: [(0, n.jsx)(L, {
                   index: 0
-                }), (0, a.jsx)(o.Text, {
+                }), (0, n.jsx)(o.Text, {
                   variant: "text-xs/medium",
-                  className: h.channelSubtitle,
+                  className: x.channelSubtitle,
                   color: "text-brand",
-                  children: g.default.Messages.CHANNEL_POPULAR
+                  children: g.Z.Messages.CHANNEL_POPULAR
                 })]
               }) : null]
             })
-          }), (0, a.jsx)("div", {
-            className: h.channelActions,
-            children: (0, u.canChannelBeDefault)(t.guild_id, t.id) ? (0, a.jsx)(o.Checkbox, {
-              "aria-checked": O,
-              value: O,
+          }), (0, n.jsx)("div", {
+            className: x.channelActions,
+            children: (0, d.s)(s.guild_id, s.id) ? (0, n.jsx)(o.Checkbox, {
+              "aria-checked": A,
+              value: A,
               type: o.Checkbox.Types.INVERTED,
-              disabled: A,
-              color: v ? r.default.colors.TEXT_BRAND.css : r.default.colors.BUTTON_SECONDARY_BACKGROUND.css,
-              innerClassName: h.checkboxInner,
+              disabled: p,
+              color: D ? r.Z.colors.TEXT_BRAND.css : r.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
+              innerClassName: x.checkboxInner,
               displayOnly: !0
-            }) : (0, a.jsxs)(o.Button, {
+            }) : (0, n.jsxs)(o.Button, {
               look: o.Button.Looks.OUTLINED,
               color: o.Button.Colors.PRIMARY,
-              className: h.lockedPill,
-              innerClassName: h.lockedPillInner,
-              onClick: N.NOOP,
-              children: [(0, a.jsx)(T.default, {
+              className: x.lockedPill,
+              innerClassName: x.lockedPillInner,
+              onClick: h.dG4,
+              children: [(0, n.jsx)(T.Z, {
                 width: 16,
                 height: 16
-              }), (0, a.jsx)(o.Text, {
+              }), (0, n.jsx)(o.Text, {
                 variant: "text-sm/medium",
                 color: "none",
-                children: g.default.Messages.UNLOCK
+                children: g.Z.Messages.UNLOCK
               })]
             })
           })]
         })
-      }), !C && (0, a.jsx)(R, {})]
+      }), !C && (0, n.jsx)(R, {})]
     })
   });
 
-function O(e) {
+function A(e) {
   let {
-    categories: t,
-    guild: s,
-    className: n,
-    hasSidebar: i
-  } = e, r = l.useCallback(e => {
-    let l = t._categories[e];
-    return (0, a.jsx)(C, {
-      channel: l.channel,
-      guild: s
-    }, l.channel.id)
-  }, [t, s]), o = l.useCallback((e, l) => {
-    let n = t._categories[e],
-      r = t[n.channel.id][l];
-    return null == r ? null : (0, a.jsx)(L, {
-      category: n.channel,
+    categories: s,
+    guild: t,
+    className: l,
+    hasSidebar: a
+  } = e, r = i.useCallback(e => {
+    let i = s._categories[e];
+    return (0, n.jsx)(C, {
+      channel: i.channel,
+      guild: t
+    }, i.channel.id)
+  }, [s, t]), o = i.useCallback((e, i) => {
+    let l = s._categories[e],
+      r = s[l.channel.id][i];
+    return null == r ? null : (0, n.jsx)(O, {
+      category: l.channel,
       channel: r.channel,
-      guild: s,
-      isFirstChannel: 0 === l,
-      isLastChannel: t[n.channel.id].length - 1 === l,
-      tooltipDirection: i ? "right" : "top"
+      guild: t,
+      isFirstChannel: 0 === i,
+      isLastChannel: s[l.channel.id].length - 1 === i,
+      tooltipDirection: a ? "right" : "top"
     }, r.channel.id)
-  }, [t, s, i]), d = (0, _.useChannelBrowserSections)(s.id, t, 64);
-  return (0, a.jsx)("div", {
-    className: n,
-    children: d.map((e, t) => {
-      let s = r(t),
-        l = [],
-        n = e.rowCount;
-      if (0 === n) return null;
-      for (let e = 0; e < n; e++) l.push(o(t, e));
-      return (0, a.jsxs)(a.Fragment, {
-        children: [s, l]
+  }, [s, t, a]), c = (0, _.tn)(t.id, s, 64);
+  return (0, n.jsx)("div", {
+    className: l,
+    children: c.map((e, s) => {
+      let t = r(s),
+        i = [],
+        l = e.rowCount;
+      if (0 === l) return null;
+      for (let e = 0; e < l; e++) i.push(o(s, e));
+      return (0, n.jsxs)(n.Fragment, {
+        children: [t, i]
       })
     })
   })

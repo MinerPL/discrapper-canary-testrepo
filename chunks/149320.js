@@ -1,2 +1,2 @@
 "use strict";
-n("501953")("flat")
+n(501953)("flat")

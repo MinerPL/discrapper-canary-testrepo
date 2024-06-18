@@ -1,11 +1,11 @@
 "use strict";
 e.exports = l;
-var r = n("531478").codes,
+var r = n(531478).codes,
   i = r.ERR_METHOD_NOT_IMPLEMENTED,
   a = r.ERR_MULTIPLE_CALLBACK,
   o = r.ERR_TRANSFORM_ALREADY_TRANSFORMING,
   s = r.ERR_TRANSFORM_WITH_LENGTH_0,
-  u = n("827664");
+  u = n(827664);
 
 function c(e, t) {
   var n = this._transformState;
@@ -42,7 +42,7 @@ function f(e, t, n) {
   if (e._transformState.transforming) throw new o;
   return e.push(null)
 }
-n("689118")(l, u), l.prototype.push = function(e, t) {
+n(689118)(l, u), l.prototype.push = function(e, t) {
   return this._transformState.needTransform = !1, u.prototype.push.call(this, e, t)
 }, l.prototype._transform = function(e, t, n) {
   n(new i("_transform()"))

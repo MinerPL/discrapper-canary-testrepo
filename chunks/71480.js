@@ -1,14 +1,14 @@
 "use strict";
-var r = n("566885"),
-  i = n("926515"),
-  a = n("24033"),
-  o = n("938507"),
-  s = n("908355"),
-  u = n("49693"),
-  c = n("838957"),
-  l = n("981971"),
-  d = n("11697"),
-  f = n("776245"),
+var r = n(566885),
+  i = n(926515),
+  a = n(24033),
+  o = n(938507),
+  s = n(908355),
+  u = n(49693),
+  c = n(838957),
+  l = n(981971),
+  d = n(11697),
+  f = n(776245),
   p = TypeError,
   h = function(e, t) {
     this.stopped = e, this.result = t
@@ -17,18 +17,18 @@ var r = n("566885"),
 e.exports = function(e, t, n) {
   var g, _, b, v, y, E, S, x = n && n.that,
     w = !!(n && n.AS_ENTRIES),
-    T = !!(n && n.IS_RECORD),
-    C = !!(n && n.IS_ITERATOR),
+    C = !!(n && n.IS_RECORD),
+    T = !!(n && n.IS_ITERATOR),
     D = !!(n && n.INTERRUPTED),
-    O = r(t, x),
-    M = function(e) {
+    M = r(t, x),
+    O = function(e) {
       return g && f(g, "normal", e), new h(!0, e)
     },
     A = function(e) {
-      return w ? (a(e), D ? O(e[0], e[1], M) : O(e[0], e[1])) : D ? O(e, M) : O(e)
+      return w ? (a(e), D ? M(e[0], e[1], O) : M(e[0], e[1])) : D ? M(e, O) : M(e)
     };
-  if (T) g = e.iterator;
-  else if (C) g = e;
+  if (C) g = e.iterator;
+  else if (T) g = e;
   else {
     if (!(_ = d(e))) throw p(o(e) + " is not iterable");
     if (s(_)) {
@@ -38,7 +38,7 @@ e.exports = function(e, t, n) {
     }
     g = l(e, _)
   }
-  for (E = T ? e.next : g.next; !(S = i(E, g)).done;) {
+  for (E = C ? e.next : g.next; !(S = i(E, g)).done;) {
     try {
       y = A(S.value)
     } catch (e) {

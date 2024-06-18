@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
-  useDragSourceMonitor: function() {
-    return o
+n.d(t, {
+  _: function() {
+    return u
   }
 });
-var r = n("470079"),
-  i = n("805518"),
-  a = n("209851");
+var r = n(470079),
+  i = n(22555),
+  o = n(209851);
 
-function o() {
-  var e = (0, a.useDragDropManager)();
+function u() {
+  var e = (0, o.N)();
   return (0, r.useMemo)(function() {
-    return new i.DragSourceMonitorImpl(e)
+    return new i.p(e)
   }, [e])
 }

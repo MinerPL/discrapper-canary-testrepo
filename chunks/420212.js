@@ -1,24 +1,24 @@
 "use strict";
-n.r(t), n.d(t, {
-  FOCUS_SECTION_JUMP_KEY: function() {
-    return a
-  },
-  KeyboardEventKey: function() {
-    return s.Key
-  },
-  KeyboardKeysUpdated: function() {
-    return i
-  },
-  NavigationKeyShortcutMap: function() {
+n.d(t, {
+  LT: function() {
     return o
   },
-  NavigationShortcuts: function() {
+  Sp: function() {
     return l
+  },
+  el: function() {
+    return a
+  },
+  mR: function() {
+    return s.Key
+  },
+  vn: function() {
+    return i
   }
-}), n("47120");
-var i, r, s = n("15858");
-let a = s.Key.F6,
-  o = new Map([
+}), n(47120);
+var i, r, s = n(15858);
+let o = s.Key.F6,
+  a = new Map([
     [s.Key.F6, "f6"],
     [s.Key.Tab, "tab"],
     [s.Key.ArrowDown, "down"],

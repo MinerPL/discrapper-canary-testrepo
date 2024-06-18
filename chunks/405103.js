@@ -6,8 +6,8 @@ function r(e) {
     scrollTop: e.scrollTop
   }
 }
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 })

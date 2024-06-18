@@ -1,13 +1,13 @@
-var r = n("413135").Buffer,
-  i = n("814033"),
-  a = new(n("687363")),
+var r = n(413135).Buffer,
+  i = n(814033),
+  a = new(n(687363)),
   o = new i(24),
   s = new i(11),
   u = new i(10),
   c = new i(3),
   l = new i(7),
-  d = n("988608"),
-  f = n("706178");
+  d = n(988608),
+  f = n(706178);
 
 function p(e, t) {
   return t = t || "utf8", !r.isBuffer(e) && (e = new r(e, t)), this._pub = new i(e), this

@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
-  DmUpsellActionTypes: function() {
-    return r
+n.d(t, {
+  L: function() {
+    return a
   },
-  trackEvent: function() {
-    return o
+  Q: function() {
+    return r
   }
 });
-var i, r, a = n("626135"),
-  s = n("981631");
+var i, r, s = n(626135),
+  o = n(981631);
 
-function o(e, t) {
-  a.default.track(s.AnalyticEvents.DM_SETTINGS_UPSELL_ACTION, {
+function a(e, t) {
+  s.default.track(o.rMx.DM_SETTINGS_UPSELL_ACTION, {
     action: e,
     guild_id: t
   })

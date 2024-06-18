@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  GuildEntityDao: function() {
-    return a
+n.d(t, {
+  N: function() {
+    return o
   }
-}), n("627494"), n("757143");
-var i = n("503461"),
-  r = n("190313");
+}), n(627494), n(757143);
+var i = n(503461),
+  r = n(190313);
 
 function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -15,12 +15,12 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class a {
+class o {
   get prefix() {
     return this.table.prefix
   }
   withoutLogging() {
-    return new a(this.originalPrefix, this.table.tableId, this.table.database, !1)
+    return new o(this.originalPrefix, this.table.tableId, this.table.database, !1)
   }
   get(e, t) {
     return this.table.get([e, t])
@@ -47,11 +47,11 @@ class a {
     return this.table.getParentId([null, e])
   }
   put(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.ConflictOptions.Replace;
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.Sn.Replace;
     return this.transaction(i => i.put(e, t, n), "".concat(this.prefix, " put"))
   }
   putAll(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.ConflictOptions.Replace;
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.Sn.Replace;
     return this.transaction(i => i.putAll(e, t, n), "".concat(this.prefix, " putAll"))
   }
   replaceAll(e, t) {
@@ -64,10 +64,10 @@ class a {
     return this.transaction(n => n.deleteGeneration(e, t), "".concat(this.prefix, " deleteGeneration"))
   }
   transaction(e, t) {
-    return this.table.transaction(t => e(new o(t)), t)
+    return this.table.transaction(t => e(new a(t)), t)
   }
   upgradeTransaction(e) {
-    return new o(this.table.upgradeTransaction(e))
+    return new a(this.table.upgradeTransaction(e))
   }
   getManySyncUnsafe(e, t) {
     return this.table.getManySyncUnsafe([e], t)
@@ -83,24 +83,24 @@ class a {
     }
   }
   constructor(e, t, n, i = !0) {
-    s(this, "originalPrefix", void 0), s(this, "table", void 0), this.originalPrefix = e, this.table = new r.Table([e], t, n, i)
+    s(this, "originalPrefix", void 0), s(this, "table", void 0), this.originalPrefix = e, this.table = new r.i([e], t, n, i)
   }
 }
-class o {
+class a {
   static fromDatabaseTransaction(e, t, n) {
-    return new o(new r.TableTransaction(e, t, n))
+    return new a(new r.E(e, t, n))
   }
   put(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.ConflictOptions.Replace;
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.Sn.Replace;
     return this.putWithGeneration(e, t, null, n)
   }
   putWithGeneration(e, t, n) {
-    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.ConflictOptions.Replace;
-    return this.transaction.put(a.cell(e, t, n), r)
+    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.Sn.Replace;
+    return this.transaction.put(o.cell(e, t, n), r)
   }
   putAll(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.ConflictOptions.Replace;
-    return this.transaction.putAll(t.map(t => a.cell(e, t, null)), n)
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.Sn.Replace;
+    return this.transaction.putAll(t.map(t => o.cell(e, t, null)), n)
   }
   replaceAll(e, t) {
     this.delete(e), this.putAll(e, t)

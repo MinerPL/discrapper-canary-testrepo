@@ -1,15 +1,14 @@
 "use strict";
-n.r(t);
-var i = n("735250"),
-  a = n("470079"),
-  l = n("613828"),
-  s = n("749210"),
-  o = n("287734"),
-  r = n("765717"),
-  d = n("893607"),
-  u = n("703656"),
-  c = n("981631");
-class f extends a.Component {
+var i = n(735250),
+  s = n(470079),
+  l = n(266067),
+  a = n(749210),
+  o = n(287734),
+  r = n(765717),
+  d = n(893607),
+  c = n(703656),
+  u = n(981631);
+class h extends s.Component {
   componentDidUpdate(e) {
     let {
       location: t
@@ -32,26 +31,26 @@ class f extends a.Component {
         messageId: i
       } = e.params;
       return {
-        guildId: null != t && "" !== t ? t : c.ME,
+        guildId: null != t && "" !== t ? t : u.ME,
         channelId: n,
         messageId: i
       }
     }(e);
-    (0, d.isValidGuildId)(t) && (0, d.isValidChannelId)(n) ? (s.default.selectGuild(t), o.default.selectChannel({
+    (0, d.S)(t) && (0, d.c)(n) ? (a.Z.selectGuild(t), o.default.selectChannel({
       guildId: t,
       channelId: n,
       messageId: i
-    })) : (0, u.replaceWith)(c.Routes.ME)
+    })) : (0, c.dL)(u.Z5c.ME)
   }
   render() {
     return null
   }
 }
-t.default = () => (0, i.jsxs)(l.Switch, {
-  children: [(0, i.jsx)(r.default, {
-    path: c.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?"),
-    component: f
-  }), (0, i.jsx)(r.default, {
-    component: f
+t.Z = () => (0, i.jsxs)(l.rs, {
+  children: [(0, i.jsx)(r.Z, {
+    path: u.Z5c.CHANNEL(":guildId", ":channelId?", ":messageId?"),
+    component: h
+  }), (0, i.jsx)(r.Z, {
+    component: h
   })]
 })

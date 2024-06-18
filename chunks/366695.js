@@ -1,21 +1,20 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("803997"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("829968"),
-  o = n("346656"),
-  l = n("438071"),
-  u = n("474936"),
-  d = n("689938"),
-  _ = n("810516");
+  o = n(829968),
+  a = n(346656),
+  l = n(438071),
+  u = n(474936),
+  _ = n(689938),
+  d = n(458217);
 let c = {
-    XXSMALL: _.xxsmall,
-    XSMALL: _.xsmall,
-    SMALL: _.small,
-    MEDIUM: _.medium,
-    LARGE: _.large
+    XXSMALL: d.xxsmall,
+    XSMALL: d.xsmall,
+    SMALL: d.small,
+    MEDIUM: d.medium,
+    LARGE: d.large
   },
   E = e => {
     let t, {
@@ -23,22 +22,22 @@ let c = {
       guild: E,
       skuId: I,
       pid: T,
-      className: f,
+      className: h,
       guildClassName: S,
-      size: h = c.MEDIUM
+      size: f = c.MEDIUM
     } = e;
     if (null != I && (t = function(e) {
         if (null == e) return null;
         switch (e) {
-          case u.PremiumSubscriptionSKUs.GUILD:
-            return n("632342");
-          case u.PremiumSubscriptionSKUs.TIER_0:
-            return n("467596");
-          case u.PremiumSubscriptionSKUs.TIER_1:
-            return n("670957");
-          case u.PremiumSubscriptionSKUs.TIER_2:
-          case u.PremiumSubscriptionSKUs.LEGACY:
-            return n("480768");
+          case u.Si.GUILD:
+            return n(632342);
+          case u.Si.TIER_0:
+            return n(467596);
+          case u.Si.TIER_1:
+            return n(670957);
+          case u.Si.TIER_2:
+          case u.Si.LEGACY:
+            return n(480768);
           default:
             return null
         }
@@ -57,37 +56,37 @@ let c = {
           default:
             return 80
         }
-      }(h))), null == (t = (0, a.default)(T, t)) && null != E) {
+      }(f))), null == (t = (0, o.Z)(T, t)) && null != E) {
       let e = function(e) {
         switch (e) {
           case c.XSMALL:
-            return o.default.Sizes.SMALLER;
+            return a.Z.Sizes.SMALLER;
           case c.SMALL:
-            return o.default.Sizes.SMALL;
+            return a.Z.Sizes.SMALL;
           case c.LARGE:
-            return o.default.Sizes.LARGE;
+            return a.Z.Sizes.LARGE;
           default:
           case c.MEDIUM:
-            return o.default.Sizes.MEDIUM
+            return a.Z.Sizes.MEDIUM
         }
-      }(h);
-      return (0, i.jsx)(o.default, {
-        className: s()(_.gameIcon, S, f),
+      }(f);
+      return (0, i.jsx)(a.Z, {
+        className: s()(d.gameIcon, S, h),
         guild: E,
         size: e
       })
     }
-    if (null == t) return (0, i.jsx)(l.default, {
-      className: s()(_.gameIcon, h, f)
+    if (null == t) return (0, i.jsx)(l.Z, {
+      className: s()(d.gameIcon, f, h)
     });
-    let A = null == r ? void 0 : r.name,
-      m = null != A && "" !== A ? d.default.Messages.APPLICATION_ICON_A11Y_LABEL.format({
-        applicationName: A
-      }) : d.default.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL;
+    let N = null == r ? void 0 : r.name,
+      A = null != N && "" !== N ? _.Z.Messages.APPLICATION_ICON_A11Y_LABEL.format({
+        applicationName: N
+      }) : _.Z.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL;
     return (0, i.jsx)("img", {
-      alt: m,
+      alt: A,
       src: t,
-      className: s()(_.gameIcon, h, f)
+      className: s()(d.gameIcon, f, h)
     })
   };
-E.Sizes = c, t.default = E
+E.Sizes = c, t.Z = E

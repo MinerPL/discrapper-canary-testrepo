@@ -1,39 +1,39 @@
 "use strict";
-n.r(t), n.d(t, {
-  isOnNewPanels: function() {
-    return o
+n.d(t, {
+  JH: function() {
+    return a
   },
-  isSplitMessagesTab: function() {
-    return l
-  },
-  isSplitMessagesTabAndOnMessagesTab: function() {
+  O7: function() {
     return u
   },
-  shouldHandleNewPanelsRoute: function() {
-    return d
+  Z0: function() {
+    return _
+  },
+  x7: function() {
+    return l
   }
 });
-var i = n("57132"),
-  r = n("528097"),
-  s = n("289551"),
-  a = n("981631");
+var i = n(57132),
+  r = n(215355),
+  s = n(289551),
+  o = n(981631);
 
-function o() {
-  return (0, i.isInMainTabsExperiment)()
+function a() {
+  return (0, i.cn)()
 }
 
 function l() {
-  return (0, i.isInMainTabsExperiment)() && !(0, r.getNavYouBarExperiment)({
+  return (0, i.cn)() && !(0, r.LI)({
     location: "isSplitMessagesTab"
-  }).showYouBar
+  }).mergeTabs
 }
 
 function u() {
   if (!l()) return !1;
-  let e = (0, s.default)();
+  let e = (0, s.Z)();
   return (null == e ? void 0 : e.name) === "messages"
 }
 
-function d(e) {
-  return !!o() && (!l() || null != e && e !== a.ME)
+function _(e) {
+  return !!a() && (!l() || null != e && e !== o.ME)
 }

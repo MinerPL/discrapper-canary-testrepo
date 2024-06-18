@@ -1,6 +1,6 @@
 "use strict";
-var n = r("837512"),
-  i = r("65183").Map;
+var n = r(837512),
+  i = r(65183).Map;
 
 function o(t, e, r, o) {
   var a = t.getBlockMap(),

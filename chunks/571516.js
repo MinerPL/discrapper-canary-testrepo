@@ -1,11 +1,10 @@
 "use strict";
-r.r(t);
-var n = r("572657"),
-  a = r("670097"),
-  o = r("429296"),
-  i = r("675717");
-t.default = function(e, t, r) {
-  if (!(0, i.default)(r)) return !1;
-  var l = typeof t;
-  return ("number" == l ? !!((0, a.default)(r) && (0, o.default)(t, r.length)) : "string" == l && t in r) && (0, n.default)(r[t], e)
+var r = n(572657),
+  i = n(670097),
+  a = n(429296),
+  o = n(675717);
+t.Z = function(e, t, n) {
+  if (!(0, o.Z)(n)) return !1;
+  var s = typeof t;
+  return ("number" == s ? !!((0, i.Z)(n) && (0, a.Z)(t, n.length)) : "string" == s && t in n) && (0, r.Z)(n[t], e)
 }

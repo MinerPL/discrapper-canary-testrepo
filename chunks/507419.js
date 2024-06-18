@@ -1,50 +1,50 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("735250"),
-  l = n("470079"),
-  u = n("481060"),
-  i = n("897353"),
-  s = n("936908"),
-  r = n("22382"),
-  o = n("747071"),
-  d = n("586826"),
-  c = n("174727"),
-  f = n("990792"),
-  m = n("689938"),
-  h = n("935003");
-t.default = l.memo(function(e) {
+t(47120);
+var l = t(735250),
+  a = t(470079),
+  s = t(481060),
+  i = t(897353),
+  r = t(936908),
+  u = t(22382),
+  o = t(747071),
+  c = t(586826),
+  d = t(174727),
+  f = t(990792),
+  m = t(689938),
+  h = t(330875);
+n.Z = a.memo(function(e) {
   let {
-    sound: t,
-    volume: n,
+    sound: n,
+    volume: t,
     disabled: g
-  } = e, [S, p] = l.useState(!1), N = l.useRef(null), {
-    file: v,
-    audio: _,
-    loadAudioFromFile: D
-  } = (0, d.useAudioTrimmerStore)(), O = l.useMemo(() => (0, r.default)(t.soundId), [t]);
-  return l.useEffect(() => {
-    null == N.current && (N.current = (0, c.loadAudioFileFromUrl)(O, t.name).then(D))
-  }, [O, D, t.name]), (0, a.jsxs)("div", {
+  } = e, [p, N] = a.useState(!1), v = a.useRef(null), {
+    file: _,
+    audio: D,
+    loadAudioFromFile: O
+  } = (0, c.p)(), x = a.useMemo(() => (0, u.Z)(n.soundId), [n]);
+  return a.useEffect(() => {
+    null == v.current && (v.current = (0, d.XG)(x, n.name).then(O))
+  }, [x, O, n.name]), (0, l.jsxs)("div", {
     className: h.previewContainer,
-    children: [(0, a.jsx)(u.Clickable, {
+    children: [(0, l.jsx)(s.Clickable, {
       onClick: g ? void 0 : function() {
-        null != _ && (_.paused ? (_.volume = (0, o.default)(n), _.currentTime = 0, _.play(), p(!0), _.addEventListener("ended", () => p(!1), {
+        null != D && (D.paused ? (D.volume = (0, o.Z)(t), D.currentTime = 0, D.play(), N(!0), D.addEventListener("ended", () => N(!1), {
           once: !0
-        })) : (_.pause(), p(!1)))
+        })) : (D.pause(), N(!1)))
       },
       className: h.playButton,
-      "aria-label": S ? m.default.Messages.STOP : m.default.Messages.PLAY,
-      children: S ? (0, a.jsx)(s.default, {
+      "aria-label": p ? m.Z.Messages.STOP : m.Z.Messages.PLAY,
+      children: p ? (0, l.jsx)(r.Z, {
         className: h.playIcon
-      }) : (0, a.jsx)(i.default, {
+      }) : (0, l.jsx)(i.Z, {
         className: h.playIcon
       })
-    }), (0, a.jsx)("div", {
+    }), (0, l.jsx)("div", {
       className: h.waveformContainer,
-      children: (0, a.jsx)(f.default, {
+      children: (0, l.jsx)(f.Z, {
         className: h.waveform,
-        file: v,
-        audio: _
+        file: _,
+        audio: D
       })
     })]
   })

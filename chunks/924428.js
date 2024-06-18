@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return s
   }
-}), n("47120");
-var i = n("470079"),
-  r = n("699581");
+}), n(47120);
+var i = n(470079),
+  r = n(699581);
 
 function s() {
   let [, e] = (0, i.useState)(0);

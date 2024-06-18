@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
+n.d(t, {
+  EQ: function() {
+    return q
+  },
   P: function() {
     return K
-  },
-  match: function() {
-    return Q
   }
 });
 let r = Symbol.for("@ts-pattern/matcher"),
@@ -193,21 +193,21 @@ let S = d(_(function(e) {
     regex: t => x(m(e, _(e => y(e) && !!e.match(t))))
   }),
   w = x(_(y)),
-  T = (e, t) => _(n => v(n) && e <= n && t >= n),
-  C = e => _(t => v(t) && t < e),
+  C = (e, t) => _(n => v(n) && e <= n && t >= n),
+  T = e => _(t => v(t) && t < e),
   D = e => _(t => v(t) && t > e),
-  O = e => _(t => v(t) && t <= e),
-  M = e => _(t => v(t) && t >= e),
+  M = e => _(t => v(t) && t <= e),
+  O = e => _(t => v(t) && t >= e),
   A = () => _(e => v(e) && Number.isInteger(e)),
   k = () => _(e => v(e) && Number.isFinite(e)),
   R = () => _(e => v(e) && e > 0),
   N = () => _(e => v(e) && e < 0),
   I = e => Object.assign(d(e), {
-    between: (t, n) => I(m(e, T(t, n))),
-    lt: t => I(m(e, C(t))),
+    between: (t, n) => I(m(e, C(t, n))),
+    lt: t => I(m(e, T(t))),
     gt: t => I(m(e, D(t))),
-    lte: t => I(m(e, O(t))),
-    gte: t => I(m(e, M(t))),
+    lte: t => I(m(e, M(t))),
+    gte: t => I(m(e, O(t))),
     int: () => I(m(e, A())),
     finite: () => I(m(e, k())),
     positive: () => I(m(e, R())),
@@ -215,19 +215,19 @@ let S = d(_(function(e) {
   }),
   L = I(_(v)),
   P = (e, t) => _(n => E(n) && e <= n && t >= n),
-  F = e => _(t => E(t) && t < e),
-  B = e => _(t => E(t) && t > e),
+  B = e => _(t => E(t) && t < e),
+  F = e => _(t => E(t) && t > e),
   U = e => _(t => E(t) && t <= e),
-  Y = e => _(t => E(t) && t >= e),
-  j = () => _(e => E(e) && e > 0),
+  j = e => _(t => E(t) && t >= e),
+  Y = () => _(e => E(e) && e > 0),
   z = () => _(e => E(e) && e < 0),
   H = e => Object.assign(d(e), {
     between: (t, n) => H(m(e, P(t, n))),
-    lt: t => H(m(e, F(t))),
-    gt: t => H(m(e, B(t))),
+    lt: t => H(m(e, B(t))),
+    gt: t => H(m(e, F(t))),
     lte: t => H(m(e, U(t))),
-    gte: t => H(m(e, Y(t))),
-    positive: () => H(m(e, j())),
+    gte: t => H(m(e, j(t))),
+    positive: () => H(m(e, Y())),
     negative: () => H(m(e, z()))
   }),
   G = H(_(E)),
@@ -237,7 +237,7 @@ let S = d(_(function(e) {
   $ = d(_(function(e) {
     return "symbol" == typeof e
   })),
-  W = d(_(function(e) {
+  Z = d(_(function(e) {
     return null == e
   }));
 var K = {
@@ -366,27 +366,27 @@ var K = {
   any: S,
   _: S,
   string: w,
-  between: T,
-  lt: C,
+  between: C,
+  lt: T,
   gt: D,
-  lte: O,
-  gte: M,
+  lte: M,
+  gte: O,
   int: A,
   finite: k,
   positive: R,
   negative: N,
   number: L,
   betweenBigInt: P,
-  ltBigInt: F,
-  gtBigInt: B,
+  ltBigInt: B,
+  gtBigInt: F,
   lteBigInt: U,
-  gteBigInt: Y,
-  positiveBigInt: j,
+  gteBigInt: j,
+  positiveBigInt: Y,
   negativeBigInt: z,
   bigint: G,
   boolean: V,
   symbol: $,
-  nullish: W,
+  nullish: Z,
   instanceOf: function(e) {
     var t;
     return d(_((t = e, e => e instanceof t)))
@@ -405,15 +405,15 @@ var K = {
     }(e)))
   }
 };
-let q = {
+let W = {
   matched: !1,
   value: void 0
 };
 
-function Q(e) {
-  return new Z(e, q)
+function q(e) {
+  return new Q(e, W)
 }
-class Z {
+class Q {
   constructor(e, t) {
     this.input = void 0, this.state = void 0, this.input = e, this.state = t
   }
@@ -431,16 +431,16 @@ class Z {
       c = r.some(e => u(e, this.input, s)) && (!t || t(this.input)) ? {
         matched: !0,
         value: n(i ? a in o ? o[a] : o : this.input, this.input)
-      } : q;
-    return new Z(this.input, c)
+      } : W;
+    return new Q(this.input, c)
   }
   when(e, t) {
     if (this.state.matched) return this;
     let n = !!e(this.input);
-    return new Z(this.input, n ? {
+    return new Q(this.input, n ? {
       matched: !0,
       value: t(this.input, this.input)
-    } : q)
+    } : W)
   }
   otherwise(e) {
     return this.state.matched ? this.state.value : e(this.input)

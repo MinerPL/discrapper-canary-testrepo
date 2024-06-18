@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
-  getFirstItem: function() {
+n.d(t, {
+  Kx: function() {
+    return s
+  },
+  l8: function() {
     return u
   },
-  getLastItem: function() {
+  s: function() {
     return c
-  },
-  useCollection: function() {
-    return s
   }
 });
-var r = n("470079");
+var r = n(470079);
 class i {
   build(e, t) {
     return this.context = t, a(() => this.iterateCollection(e))

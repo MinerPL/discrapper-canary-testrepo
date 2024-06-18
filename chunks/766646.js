@@ -1,28 +1,28 @@
 "use strict";
-n.r(t), n.d(t, {
-  HiddenVisually: function() {
-    return o
+n.d(t, {
+  n: function() {
+    return a
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("803997"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("513209");
+  o = n(159242);
 
-function o(e) {
+function a(e) {
   let {
     id: t,
     tag: n = "span",
     showOnFocus: r,
-    children: o
+    children: a
   } = e;
   return (0, i.jsx)(n, {
     id: t,
     className: s()({
-      [a.hiddenVisually]: !r,
-      [a.showOnFocus]: r
+      [o.hiddenVisually]: !r,
+      [o.showOnFocus]: r
     }),
-    children: o
+    children: a
   })
 }

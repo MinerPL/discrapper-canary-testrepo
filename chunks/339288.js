@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  DayParser: function() {
+n.d(t, {
+  d: function() {
     return d
   }
 });
-var r = n("717029"),
-  i = n("395913");
+var r = n(717029),
+  i = n(395913);
 
 function a(e) {
   return (a = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
@@ -68,13 +68,10 @@ var d = function(e) {
     }
   }(), function() {
     var e, r = c(t);
-    if (n) {
-      var i = c(this).constructor;
-      e = Reflect.construct(r, arguments, i)
-    } else e = r.apply(this, arguments);
-    return function(e, t) {
-      return t && ("object" === a(t) || "function" == typeof t) ? t : u(e)
-    }(this, e)
+    return e = n ? Reflect.construct(r, arguments, c(this).constructor) : r.apply(this, arguments),
+      function(e, t) {
+        return t && ("object" === a(t) || "function" == typeof t) ? t : u(e)
+      }(this, e)
   });
 
   function h() {
@@ -139,7 +136,7 @@ var d = function(e) {
   }, {
     key: "set",
     value: function(e, t, n, r) {
-      return (e = (0, i.default)(e, n, r)).setUTCHours(0, 0, 0, 0), e
+      return (e = (0, i.Z)(e, n, r)).setUTCHours(0, 0, 0, 0), e
     }
-  }], o(r.prototype, d), f && o(r, f), h
-}(r.Parser)
+  }], o(r.prototype, d), h
+}(r._)

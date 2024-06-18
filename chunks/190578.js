@@ -53,8 +53,8 @@ e.exports = function(e) {
       match: r(/\./, i(...c)),
       relevance: 0
     },
-    T = c.filter(e => "string" == typeof e).concat(["_|0"]),
-    C = {
+    C = c.filter(e => "string" == typeof e).concat(["_|0"]),
+    T = {
       variants: [{
         className: "keyword",
         match: i(...c.filter(e => "string" != typeof e).concat(u).map(a), ...s)
@@ -62,15 +62,15 @@ e.exports = function(e) {
     },
     D = {
       $pattern: i(/\b\w+/, /#\w+/),
-      keyword: T.concat(f),
+      keyword: C.concat(f),
       literal: l
     },
-    O = [x, w, C],
-    M = {
+    M = [x, w, T],
+    O = {
       match: r(/\./, i(...p)),
       relevance: 0
     },
-    A = [M, {
+    A = [O, {
       className: "built_in",
       match: r(/\b/, i(...p), /(?=\()/)
     }],
@@ -110,11 +110,11 @@ e.exports = function(e) {
         match: r(/\\/, e, /u\{[0-9a-fA-F]{1,8}\}/)
       }]
     }),
-    F = (e = "") => ({
+    B = (e = "") => ({
       className: "subst",
       match: r(/\\/, e, /[\t ]*(?:[\r\n]|\r\n)/)
     }),
-    B = (e = "") => ({
+    F = (e = "") => ({
       className: "subst",
       label: "interpol",
       begin: r(/\\/, e, /\(/),
@@ -123,16 +123,16 @@ e.exports = function(e) {
     U = (e = "") => ({
       begin: r(e, /"""/),
       end: r(/"""/, e),
-      contains: [P(e), F(e), B(e)]
+      contains: [P(e), B(e), F(e)]
     }),
-    Y = (e = "") => ({
+    j = (e = "") => ({
       begin: r(e, /"/),
       end: r(/"/, e),
-      contains: [P(e), B(e)]
+      contains: [P(e), F(e)]
     }),
-    j = {
+    Y = {
       className: "string",
-      variants: [U(), U("#"), U("##"), U("###"), Y(), Y("#"), Y("##"), Y("###")]
+      variants: [U(), U("#"), U("##"), U("###"), j(), j("#"), j("##"), j("###")]
     },
     z = {
       match: r(/`/, v, /`/)
@@ -152,7 +152,7 @@ e.exports = function(e) {
           begin: /\(/,
           end: /\)/,
           keywords: S,
-          contains: [...R, L, j]
+          contains: [...R, L, Y]
         }]
       }
     },
@@ -164,7 +164,7 @@ e.exports = function(e) {
       className: "meta",
       match: r(/@/, v)
     }],
-    W = {
+    Z = {
       match: n(/\b[A-Z]/),
       relevance: 0,
       contains: [{
@@ -189,10 +189,10 @@ e.exports = function(e) {
       begin: /</,
       end: />/,
       keywords: D,
-      contains: [..._, ...O, ...$, k, W]
+      contains: [..._, ...M, ...$, k, Z]
     };
-  W.contains.push(K);
-  let q = {
+  Z.contains.push(K);
+  let W = {
       begin: /\(/,
       end: /\)/,
       relevance: 0,
@@ -201,14 +201,14 @@ e.exports = function(e) {
         match: r(v, /\s*:/),
         keywords: "_|0",
         relevance: 0
-      }, ..._, ...O, ...A, ...R, L, j, ...H, ...$, W]
+      }, ..._, ...M, ...A, ...R, L, Y, ...H, ...$, Z]
     },
-    Q = {
+    q = {
       begin: /</,
       end: />/,
-      contains: [..._, W]
+      contains: [..._, Z]
     },
-    Z = {
+    Q = {
       begin: /\(/,
       end: /\)/,
       keywords: D,
@@ -223,7 +223,7 @@ e.exports = function(e) {
           className: "params",
           match: v
         }]
-      }, ..._, ...O, ...R, L, j, ...$, W, q],
+      }, ..._, ...M, ...R, L, Y, ...$, Z, W],
       endsParent: !0,
       illegal: /["']/
     },
@@ -233,7 +233,7 @@ e.exports = function(e) {
         1: "keyword",
         3: "title.function"
       },
-      contains: [Q, Z, t],
+      contains: [q, Q, t],
       illegal: [/\[/, /%/]
     },
     J = {
@@ -242,14 +242,14 @@ e.exports = function(e) {
         1: "keyword",
         3: "title"
       },
-      contains: [W],
+      contains: [Z],
       keywords: [...d, ...l],
       end: /}/
     };
-  for (let e of j.variants) {
+  for (let e of Y.variants) {
     let t = e.contains.find(e => "interpol" === e.label);
     t.keywords = D;
-    let n = [...O, ...A, ...R, L, j, ...H];
+    let n = [...M, ...A, ...R, L, Y, ...H];
     t.contains = [...n, {
       begin: /\(/,
       end: /\)/,
@@ -264,7 +264,7 @@ e.exports = function(e) {
       className: {
         1: "keyword"
       },
-      contains: [Q, Z, t],
+      contains: [q, Q, t],
       illegal: /\[|%/
     }, {
       beginKeywords: "struct protocol class extension enum actor",
@@ -274,7 +274,7 @@ e.exports = function(e) {
       contains: [e.inherit(e.TITLE_MODE, {
         className: "title.class",
         begin: /[A-Za-z$_][\u00C0-\u02B80-9A-Za-z$_]*/
-      }), ...O]
+      }), ...M]
     }, {
       match: [/operator/, /\s+/, g],
       className: {
@@ -286,6 +286,6 @@ e.exports = function(e) {
       end: /$/,
       contains: [..._],
       relevance: 0
-    }, ...O, ...A, ...R, L, j, ...H, ...$, W, q]
+    }, ...M, ...A, ...R, L, Y, ...H, ...$, Z, W]
   }
 }

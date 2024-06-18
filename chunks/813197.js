@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
-  getFilters: function() {
+n.d(t, {
+  Fq: function() {
     return d
   },
-  processImage: function() {
+  Zj: function() {
     return _
   }
-}), n("47120");
-var i, r = n("735250"),
-  s = n("470079"),
-  a = n("53281"),
-  o = n("869783"),
-  l = n("689938");
+}), n(47120);
+var i, r = n(735250),
+  s = n(470079),
+  o = n(53281),
+  a = n(869783),
+  l = n(689938);
 
 function u(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -22,14 +22,14 @@ function u(e, t, n) {
   }) : e[t] = n, e
 }
 
-function d() {
+function _() {
   return [{
-    name: l.default.Messages.IMAGES,
+    name: l.Z.Messages.IMAGES,
     extensions: ["jpg", "jpeg", "png", "gif"]
   }]
 }
 
-function _(e, t, n) {
+function d(e, t, n) {
   ! function(e, t) {
     if (null != e) {
       let n = new FileReader;
@@ -39,7 +39,7 @@ function _(e, t, n) {
       }, n.readAsDataURL(e)
     }
   }(e, i => {
-    if (e.type === o.FileTypes.MP4) return t(i, e);
+    if (e.type === a.m.MP4) return t(i, e);
     let r = new Image;
     r.src = i, r.onload = () => {
       t(i, e)
@@ -63,12 +63,12 @@ class c extends(i = s.PureComponent) {
       className: n,
       tabIndex: i,
       "aria-label": s,
-      filters: o
+      filters: a
     } = this.props;
-    return (0, r.jsx)(a.default, {
+    return (0, r.jsx)(o.Z, {
       ref: this._ref,
       onChange: this.handleFileChange,
-      filters: null != o ? o : d(),
+      filters: null != a ? a : _(),
       multiple: e,
       disabled: t,
       className: n,
@@ -89,7 +89,7 @@ class c extends(i = s.PureComponent) {
             null == t || t(n, r.size);
             continue
           }
-          _(r, this.handleFileRead, this.handleFileError)
+          d(r, this.handleFileRead, this.handleFileError)
         }
     }), u(this, "handleFileRead", (e, t) => {
       let {
@@ -99,10 +99,10 @@ class c extends(i = s.PureComponent) {
     }), u(this, "handleFileError", async () => {
       let {
         openUploadError: e
-      } = await Promise.resolve().then(n.bind(n, "531643"));
+      } = await Promise.resolve().then(n.bind(n, 531643));
       e({
-        title: l.default.Messages.PREMIUM_ALERT_ERROR_TITLE,
-        help: l.default.Messages.UNABLE_TO_PROCESS_IMAGE
+        title: l.Z.Messages.PREMIUM_ALERT_ERROR_TITLE,
+        help: l.Z.Messages.UNABLE_TO_PROCESS_IMAGE
       })
     })
   }
@@ -111,4 +111,4 @@ u(c, "defaultProps", {
   multiple: !0,
   tabIndex: -1,
   maxFileSizeBytes: 1 / 0
-}), t.default = c
+}), t.ZP = c

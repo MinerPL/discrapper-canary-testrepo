@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return _
+n.d(t, {
+  Z: function() {
+    return d
   }
-}), n("47120"), n("411104");
-var i = n("836560"),
-  r = n("392711"),
+}), n(47120), n(411104);
+var i = n(836560),
+  r = n(392711),
   s = n.n(r),
-  a = n("710845"),
-  o = n("596956"),
-  l = n("959517");
+  o = n(710845),
+  a = n(596956),
+  l = n(959517);
 
 function u(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -19,8 +19,8 @@ function u(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let d = new a.default("UploaderBase.tsx");
-class _ extends i.EventEmitter {
+let _ = new o.Z("UploaderBase.tsx");
+class d extends i.EventEmitter {
   _addAttachmentsToPayload(e, t, n) {
     let i = {
         ...e
@@ -32,7 +32,7 @@ class _ extends i.EventEmitter {
     null != this.processingMessageChangeInterval && (clearInterval(this.processingMessageChangeInterval), this.processingMessageChangeInterval = void 0)
   }
   cancel() {
-    d.log("cancel() for ".concat(this.id)), this._aborted = !0, null != this._cancel && this._cancel(), this._handleComplete()
+    _.log("cancel() for ".concat(this.id)), this._aborted = !0, null != this._cancel && this._cancel(), this._handleComplete()
   }
   cancelItem(e) {
     throw Error("cancelItem() is not implemented on UploaderBase; must implement cancelItem() on subclass")
@@ -61,11 +61,11 @@ class _ extends i.EventEmitter {
       this._cancel = e, !this.alreadyStarted && this.emit("start", this._file), this.alreadyStarted = !0
     }), u(this, "_handleProgress", (e, t, n) => {
       let i = Date.now(),
-        r = (0, o.calculateProgress)(e, t),
+        r = (0, a.S)(e, t),
         s = Math.floor((e - this._loaded) / ((i - this._lastUpdate) / 1e3));
       if (null != n) {
-        var a;
-        null === (a = this._file.items) || void 0 === a || a.forEach(e => {
+        var o;
+        null === (o = this._file.items) || void 0 === o || o.forEach(e => {
           e.item.progress = n[e.id]
         })
       }
@@ -78,7 +78,7 @@ class _ extends i.EventEmitter {
     }), u(this, "_handleException", e => {
       this._handleError({
         reason: {
-          type: l.FileUploadErrorTypes.ERROR_SOURCE_UNKNOWN,
+          type: l.xi.ERROR_SOURCE_UNKNOWN,
           msg: e.toString()
         }
       })
@@ -90,9 +90,9 @@ class _ extends i.EventEmitter {
         reason: n,
         body: i
       } = e;
-      this.clearProcessingMessageInterval(), !this._aborted && (this._errored = !0, d.log("_handleError: ".concat(t, " (").concat(JSON.stringify(n), ") for ").concat(this.id)), this.emit("error", this._file, t, i, n), this.removeAllListeners())
+      if (this.clearProcessingMessageInterval(), !this._aborted) this._errored = !0, _.log("_handleError: ".concat(t, " (").concat(JSON.stringify(n), ") for ").concat(this.id)), this.emit("error", this._file, t, i, n), this.removeAllListeners()
     }), u(this, "_handleComplete", e => {
-      this.clearProcessingMessageInterval(), d.log("_handleComplete for ".concat(this.id)), this.emit("complete", this._file, e), this.removeAllListeners()
+      this.clearProcessingMessageInterval(), _.log("_handleComplete for ".concat(this.id)), this.emit("complete", this._file, e), this.removeAllListeners()
     }), this.id = s().uniqueId("Uploader"), this._url = e, this._method = t, this._raiseEndpointErrors = null !== (i = null == n ? void 0 : n.raiseEndpointErrors) && void 0 !== i && i
   }
 }

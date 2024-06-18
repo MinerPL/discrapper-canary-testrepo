@@ -1,7 +1,7 @@
-var r = n("56135"),
-  i = n("886985"),
-  a = n("290677"),
-  o = n("158698"),
+var r = n(56135),
+  i = n(886985),
+  a = n(290677),
+  o = n(158698),
   s = 1 / 0,
   u = r ? r.prototype : void 0,
   c = u ? u.toString : void 0;

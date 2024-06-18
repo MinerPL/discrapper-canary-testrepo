@@ -1,52 +1,52 @@
 "use strict";
 let i, r;
-n.r(t), n("724458");
-var s, a, o, l, u = n("442837"),
-  d = n("433517"),
-  _ = n("570140"),
-  c = n("592125"),
-  E = n("430824");
+n(724458);
+var s, o, a, l, u = n(442837),
+  _ = n(433517),
+  d = n(570140),
+  c = n(592125),
+  E = n(430824);
 let I = "hideSuppressWarning",
   T = !1,
-  f = !0,
+  h = !0,
   S = !1;
-class h extends(s = u.default.Store) {
+class f extends(s = u.ZP.Store) {
   initialize() {
-    S = d.Storage.get(I) || S
+    S = _.K.get(I) || S
   }
   isAFKChannel() {
-    let e = c.default.getChannel(r);
+    let e = c.Z.getChannel(r);
     if (null == e) return !1;
-    let t = E.default.getGuild(e.getGuildId());
+    let t = E.Z.getGuild(e.getGuildId());
     return null != t && e.id === t.afkChannelId
   }
   shouldShowWarning() {
     var e;
-    return !(null === (e = c.default.getChannel(r)) || void 0 === e ? void 0 : e.isGuildStageVoice()) && !f
+    return !(null === (e = c.Z.getChannel(r)) || void 0 === e ? void 0 : e.isGuildStageVoice()) && !h
   }
 }
-l = "PermissionSpeakStore", (o = "displayName") in(a = h) ? Object.defineProperty(a, o, {
+l = "PermissionSpeakStore", (a = "displayName") in(o = f) ? Object.defineProperty(o, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = l, t.default = new h(_.default, {
+}) : o[a] = l, t.Z = new f(d.Z, {
   CONNECTION_OPEN: function(e) {
     i = e.sessionId, T = !1
   },
   CONNECTION_CLOSED: function() {
-    i = null, r = null, f = !0
+    i = null, r = null, h = !0
   },
   VOICE_STATE_UPDATES: function(e) {
     let {
       voiceStates: t
     } = e;
-    return t.reduce((e, t) => i !== t.sessionId ? e : (T !== t.suppress && (f = !(T = t.suppress)), r !== t.channelId && (r = t.channelId, f = !T), (S || null == t.channelId) && (f = !0), !0), !1)
+    return t.reduce((e, t) => i !== t.sessionId ? e : (T !== t.suppress && (h = !(T = t.suppress)), r !== t.channelId && (r = t.channelId, h = !T), (S || null == t.channelId) && (h = !0), !0), !1)
   },
   PERMISSION_CLEAR_SUPPRESS_WARNING: function(e) {
     let {
       forever: t
     } = e;
-    f = !0, t && (S = !0, d.Storage.set(I, S))
+    h = !0, t && (S = !0, _.K.set(I, S))
   }
 })

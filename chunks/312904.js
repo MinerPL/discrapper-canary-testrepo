@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-var i = n("470079");
+var i = n(470079);
 let r = e => {
   e.effects.forEach(e => {
     let {
@@ -9,7 +8,7 @@ let r = e => {
     n.rel = "prefetch", n.href = t, document.body.appendChild(n)
   })
 };
-t.default = e => {
+t.Z = e => {
   i.useEffect(() => {
     r(e)
   }, [e])

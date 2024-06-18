@@ -1,5 +1,5 @@
 "use strict";
-var n = r("65183").Record,
+var n = r(65183).Record,
   i = function(t) {
     function e() {
       return t.apply(this, arguments) || this

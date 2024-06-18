@@ -6,8 +6,8 @@ function i(e, t) {
   for (let r = 0; r < i; r++) n |= e.charCodeAt(r) ^ t.charCodeAt(r);
   return 0 === n && e.length === t.length
 }
-n.r(t), n.d(t, {
-  constantTimeCompare: function() {
+n.d(t, {
+  y: function() {
     return i
   }
 })

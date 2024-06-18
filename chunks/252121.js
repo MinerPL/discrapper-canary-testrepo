@@ -1,20 +1,20 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
+t.d(s, {
+  Z: function() {
     return r
   }
-}), s("47120");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("236413"),
-  i = s("564488");
+}), t(47120);
+var n = t(735250),
+  i = t(470079),
+  l = t(236413),
+  a = t(564488);
 
 function r(e) {
   let {
-    guildId: t,
-    triggerType: s
-  } = e, r = l.useMemo(() => () => (0, n.createDefaultRule)(t, s), [t, s]), [o] = l.useState(r);
-  return (0, a.jsx)(i.default, {
+    guildId: s,
+    triggerType: t
+  } = e, r = i.useMemo(() => () => (0, l.ep)(s, t), [s, t]), [o] = i.useState(r);
+  return (0, n.jsx)(a.Z, {
     rule: o
   })
 }

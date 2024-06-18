@@ -1,39 +1,39 @@
 "use strict";
-l.r(t), l.d(t, {
-  default: function() {
-    return C
+n.d(t, {
+  Z: function() {
+    return h
   }
 });
-var a = l("735250");
-l("470079");
-var s = l("442837"),
-  n = l("481060"),
-  i = l("984933"),
-  r = l("430824"),
-  u = l("496675"),
-  o = l("594174"),
-  d = l("938475"),
-  c = l("102172"),
-  f = l("499596"),
-  m = l("148381"),
-  S = l("689938"),
-  E = l("769138");
+var l = n(735250);
+n(470079);
+var s = n(442837),
+  a = n(481060),
+  i = n(984933),
+  r = n(430824),
+  o = n(496675),
+  u = n(594174),
+  c = n(938475),
+  d = n(102172),
+  m = n(499596),
+  E = n(148381),
+  _ = n(689938),
+  S = n(402806);
 
-function C(e) {
+function h(e) {
   let {
     selectedChannelId: t,
-    guildId: l,
-    onChangeSelectedChannelId: C
-  } = e, _ = (0, s.useStateFromStores)([o.default], () => o.default.getCurrentUser()), g = (0, s.useStateFromStores)([r.default, i.default, u.default], () => (0, c.getStreamEligibleChannels)(i.default.getChannels(l), r.default, u.default)), N = (0, s.useStateFromStores)([d.default], () => d.default.getVoiceStates(l)), h = g.map(e => {
-    var l;
+    guildId: n,
+    onChangeSelectedChannelId: h
+  } = e, g = (0, s.e7)([u.default], () => u.default.getCurrentUser()), Z = (0, s.e7)([r.Z, i.ZP, o.Z], () => (0, d.h_)(i.ZP.getChannels(n), r.Z, o.Z)), C = (0, s.e7)([c.ZP], () => c.ZP.getVoiceStates(n)), f = Z.map(e => {
+    var n;
     return {
-      name: (0, a.jsx)(f.default, {
+      name: (0, l.jsx)(m.Z, {
         channel: e,
-        users: null === (l = N[e.id]) || void 0 === l ? void 0 : l.filter(e => {
+        users: null === (n = C[e.id]) || void 0 === n ? void 0 : n.filter(e => {
           let {
             user: t
           } = e;
-          return t.id !== (null == _ ? void 0 : _.id)
+          return t.id !== (null == g ? void 0 : g.id)
         }).map(e => {
           let {
             user: t
@@ -45,19 +45,19 @@ function C(e) {
       value: e.id
     }
   });
-  return (0, a.jsx)(m.default, {
-    title: S.default.Messages.GO_LIVE_MODAL_SELECT_CHANNEL_FORM_TITLE,
-    scrollerInnerClassName: E.channelSelectScrollerInner,
-    children: (0, a.jsx)(n.RadioGroup, {
-      options: h,
+  return (0, l.jsx)(E.Z, {
+    title: _.Z.Messages.GO_LIVE_MODAL_SELECT_CHANNEL_FORM_TITLE,
+    scrollerInnerClassName: S.channelSelectScrollerInner,
+    children: (0, l.jsx)(a.RadioGroup, {
+      options: f,
       value: t,
-      itemInfoClassName: E.channelInfoWrapper,
-      itemTitleClassName: E.channelTitleWrapper,
+      itemInfoClassName: S.channelInfoWrapper,
+      itemTitleClassName: S.channelTitleWrapper,
       onChange: e => {
         let {
           value: t
         } = e;
-        return C(t)
+        return h(t)
       }
     })
   })

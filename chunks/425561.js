@@ -1,10 +1,10 @@
-var r = n("302767"),
-  i = n("800016"),
-  a = n("364832");
+var n = e(302767),
+  o = e(800016),
+  i = e(364832);
 
-function o(t) {
-  var e = -1,
-    n = null == t ? 0 : t.length;
-  for (this.__data__ = new r; ++e < n;) this.add(t[e])
+function a(t) {
+  var r = -1,
+    e = null == t ? 0 : t.length;
+  for (this.__data__ = new n; ++r < e;) this.add(t[r])
 }
-o.prototype.add = o.prototype.push = i, o.prototype.has = a, t.exports = o
+a.prototype.add = a.prototype.push = o, a.prototype.has = i, t.exports = a

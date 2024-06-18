@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
-  DropTargetNavigator: function() {
-    return o
+n.d(t, {
+  n: function() {
+    return a
   }
-}), n("47120"), n("724458"), n("653041");
-var i, r, s = n("372817");
+}), n(47120), n(724458), n(653041);
+var i, r, s = n(372817);
 
-function a(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -14,7 +14,7 @@ function a(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(r = i || (i = {})).UP = "ArrowUp", r.DOWN = "ArrowDown", r.DROP = "Shift", r.CANCEL = "Escape";
-class o {
+class a {
   disconnect() {
     window.removeEventListener("keydown", this.handleDraggedElementKeyDown, {
       capture: !0
@@ -76,7 +76,7 @@ class o {
     }, [])
   }
   constructor(e, t, n, i, r) {
-    a(this, "targetNodes", void 0), a(this, "manager", void 0), a(this, "previewer", void 0), a(this, "announcer", void 0), a(this, "currentHoveredNode", void 0), a(this, "focusManager", void 0), a(this, "actions", void 0), a(this, "monitor", void 0), a(this, "handleDraggedElementKeyDown", void 0), this.targetNodes = t, this.manager = n, this.previewer = i, this.announcer = r, this.handleDraggedElementKeyDown = async e => {
+    o(this, "targetNodes", void 0), o(this, "manager", void 0), o(this, "previewer", void 0), o(this, "announcer", void 0), o(this, "currentHoveredNode", void 0), o(this, "focusManager", void 0), o(this, "actions", void 0), o(this, "monitor", void 0), o(this, "handleDraggedElementKeyDown", void 0), this.targetNodes = t, this.manager = n, this.previewer = i, this.announcer = r, this.handleDraggedElementKeyDown = async e => {
       switch (e.key) {
         case "ArrowUp":
           e.preventDefault(), e.stopPropagation(), this.hoverNode(await this.getPreviousDropTarget());
@@ -84,7 +84,7 @@ class o {
         case "ArrowDown":
           e.preventDefault(), e.stopPropagation(), this.hoverNode(await this.getNextDropTarget())
       }
-    }, this.currentHoveredNode = e, this.focusManager = (0, s.createFocusManager)({
+    }, this.currentHoveredNode = e, this.focusManager = (0, s.E)({
       getFocusableElements: () => this.getViableTargets(t),
       getActiveElement: () => e.ownerDocument.activeElement
     }), this.actions = n.getActions(), this.monitor = n.getMonitor(), window.addEventListener("keydown", this.handleDraggedElementKeyDown, {

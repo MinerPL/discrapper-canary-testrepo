@@ -1,10 +1,10 @@
 "use strict";
-var e = n("67867"),
-  o = n("141603"),
-  i = n("538769"),
-  u = n("858698"),
-  s = n("293303"),
-  c = n("56684"),
+var e = n(67867),
+  o = n(141603),
+  i = n(538769),
+  u = n(858698),
+  s = n(293303),
+  c = n(56684),
   f = s("symbol-to-string-registry");
 e({
   target: "Symbol",

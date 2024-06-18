@@ -1,6 +1,6 @@
 "use strict";
-var n = r("531463"),
-  i = r("65183"),
+var n = r(531463),
+  i = r(65183),
   o = i.List,
   a = i.Repeat,
   u = i.Record,

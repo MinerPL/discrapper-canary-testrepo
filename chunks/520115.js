@@ -1,8 +1,8 @@
 "use strict";
-var r = n("875604"),
-  a = n("720559"),
-  o = Array.prototype;
+var r = n(875604),
+  o = n(720559),
+  a = Array.prototype;
 e.exports = function(e) {
   var t = e.indexOf;
-  return e === o || r(o, e) && t === o.indexOf ? a : t
+  return e === a || r(a, e) && t === a.indexOf ? o : t
 }

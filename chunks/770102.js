@@ -1,22 +1,22 @@
 "use strict";
-n.r(t), n.d(t, {
-  FormDivider: function() {
-    return o
+n.d(t, {
+  $: function() {
+    return a
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("120356"),
-  a = n.n(r),
-  s = n("83623");
+var i = n(735250);
+n(470079);
+var r = n(120356),
+  s = n.n(r),
+  o = n(83623);
 
-function o(e) {
+function a(e) {
   let {
     className: t,
     style: n
   } = e;
   return (0, i.jsx)("div", {
-    className: a()(s.divider, t),
+    className: s()(o.divider, t),
     style: n
   })
 }

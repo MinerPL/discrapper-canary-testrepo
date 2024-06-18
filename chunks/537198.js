@@ -18,8 +18,8 @@ function r() {
         }
   }]
 }
-n.r(e), n.d(e, {
-  memoBuilder: function() {
+n.d(e, {
+  i: function() {
     return r
   }
 })

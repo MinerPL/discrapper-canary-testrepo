@@ -1,8 +1,7 @@
 "use strict";
-a.r(t);
-var s = a("818083");
-a("358085");
-let r = (0, s.createExperiment)({
+var i = n(818083);
+n(358085), n(967415);
+let r = (0, i.B)({
   kind: "user",
   id: "2024-01_mobile_shop",
   label: "Mobile Shop Experiment",
@@ -50,7 +49,7 @@ let r = (0, s.createExperiment)({
     }
   }]
 });
-t.default = e => {
+t.Z = e => {
   let {
     location: t
   } = e;

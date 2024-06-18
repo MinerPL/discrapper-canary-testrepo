@@ -1,48 +1,48 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return p
+n.d(t, {
+  Z: function() {
+    return f
   }
 });
-var i = n("26151"),
-  a = n("13245"),
-  l = n("43267"),
-  s = n("933557"),
-  o = n("699516"),
-  r = n("594174"),
-  d = n("454902"),
-  u = n("312839"),
-  c = n("981631"),
-  f = n("987650"),
-  h = n("689938");
+var i = n(26151),
+  s = n(13245),
+  l = n(43267),
+  a = n(933557),
+  o = n(699516),
+  r = n(594174),
+  d = n(454902),
+  c = n(312839),
+  u = n(981631),
+  h = n(987650),
+  p = n(689938);
 
-function p(e) {
-  let t = (0, s.computeChannelName)(e, r.default, o.default),
-    n = h.default.Messages.OVERLAY_NOTIFICATION_INCOMING_CALL,
-    p = (0, l.getChannelIconURL)(e),
+function f(e) {
+  let t = (0, a.F6)(e, r.default, o.Z),
+    n = p.Z.Messages.OVERLAY_NOTIFICATION_INCOMING_CALL,
+    f = (0, l.x)(e),
     {
-      trackView: g,
-      trackClick: m
-    } = (0, u.makeAnalyticsTrackers)(f.OverlayNotificationType.IncomingCall, {
-      notif_type: f.OverlayNotificationType.IncomingCall,
+      trackView: E,
+      trackClick: Z
+    } = (0, c.R)(h.n0.IncomingCall, {
+      notif_type: h.n0.IncomingCall,
       notif_user_id: 1 === e.recipients.length ? e.recipients[0] : null,
       guild_id: e.guild_id,
       channel_id: e.id,
       channel_type: e.type
     });
   return {
-    colorScheme: d.default.ColorSchemes.PRIMARY,
-    icon: p,
+    colorScheme: d.ZP.ColorSchemes.PRIMARY,
+    icon: f,
     title: t,
     body: n,
-    hint: e => (0, d.renderKeybindHint)(e, (0, u.getOverlayKeybind)(), h.default.Messages.OVERLAY_UNLOCK_TO_ANSWER),
-    confirmText: h.default.Messages.JOIN_CALL,
-    cancelText: h.default.Messages.DECLINE,
+    hint: e => (0, d.QR)(e, (0, c.P)(), p.Z.Messages.OVERLAY_UNLOCK_TO_ANSWER),
+    confirmText: p.Z.Messages.JOIN_CALL,
+    cancelText: p.Z.Messages.DECLINE,
     onNotificationShow: () => {
-      g()
+      E()
     },
     onConfirmClick: () => {
-      a.default.callPrivateChannel(e.id), m("join"), a.default.track(c.AnalyticEvents.VOICE_CHANNEL_SELECTED, {
+      s.Z.callPrivateChannel(e.id), Z("join"), s.Z.track(u.rMx.VOICE_CHANNEL_SELECTED, {
         location: "Overlay Notificaiton",
         guild_id: null,
         channel_id: e.id,
@@ -50,10 +50,10 @@ function p(e) {
       })
     },
     onCancelClick: () => {
-      i.default.stopRinging(e.id), m("decline")
+      i.Z.stopRinging(e.id), Z("decline")
     },
     onDismissClick: () => {
-      m("dismiss")
+      Z("dismiss")
     }
   }
 }

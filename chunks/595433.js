@@ -1,18 +1,18 @@
 "use strict";
-a.r(t), a.d(t, {
-  useShowAnimation: function() {
-    return l
+n.d(t, {
+  H: function() {
+    return a
   }
-}), a("47120");
-var s = a("470079"),
-  n = a("718017");
+}), n(47120);
+var s = n(470079),
+  l = n(920906);
 
-function l(e) {
-  let [t, a] = s.useState(!0);
+function a(e) {
+  let [t, n] = s.useState(!0);
   return {
-    transitions: (0, n.useTransition)(t, {
+    transitions: (0, l.useTransition)(t, {
       keys: e => e ? "shown" : "hidden",
-      config: r,
+      config: i,
       from: {
         opacity: 0
       },
@@ -25,10 +25,10 @@ function l(e) {
       unique: !0,
       immediate: e
     }),
-    setVisible: a
+    setVisible: n
   }
 }
-let r = {
+let i = {
   mass: 1,
   tension: 250,
   friction: 18,

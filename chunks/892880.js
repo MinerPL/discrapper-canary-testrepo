@@ -1,18 +1,18 @@
 "use strict";
 let i;
-n.r(t), n("653041");
-var r = n("392711"),
+n(653041);
+var r = n(392711),
   s = n.n(r),
-  a = n("31775"),
-  o = n.n(a),
-  l = n("749210"),
-  u = n("430824"),
-  d = n("594174"),
-  _ = n("70956"),
-  c = n("51144"),
-  E = n("689938");
-let I = new(o())({
-  maxAge: 1 * _.default.Millis.MINUTE
+  o = n(31775),
+  a = n.n(o),
+  l = n(749210),
+  u = n(430824),
+  _ = n(594174),
+  d = n(70956),
+  c = n(51144),
+  E = n(689938);
+let I = new(a())({
+  maxAge: 1 * d.Z.Millis.MINUTE
 });
 
 function T(e, t, n) {
@@ -21,30 +21,30 @@ function T(e, t, n) {
       r = e => {
         i.push(e.id)
       };
-    if (null == e) s().forEach(u.default.getGuilds(), r);
+    if (null == e) s().forEach(u.Z.getGuilds(), r);
     else if (Array.isArray(e)) e.forEach(e => {
-      let t = u.default.getGuild(e);
+      let t = u.Z.getGuild(e);
       null != t && r(t)
     });
     else {
-      let t = u.default.getGuild(e);
+      let t = u.Z.getGuild(e);
       null != t && r(t)
     }
-    i.length > 0 && l.default.requestMembers(i, t.toLocaleLowerCase(), n)
+    i.length > 0 && l.Z.requestMembers(i, t.toLocaleLowerCase(), n)
   }, 200)
 }
 
-function f(e, t) {
+function h(e, t) {
   let n = "".concat(null != e ? e : "", ":").concat(t),
     i = I.get(n);
   if (null != i) return i;
   I.set(n, !0)
 }
-t.default = {
+t.Z = {
   getGuildNameSuggestion: function(e) {
-    let t = d.default.getCurrentUser(),
-      n = c.getName(t);
-    return null == n || 0 === n.length ? "" : E.default.Messages.CREATE_SERVER_DEFAULT_SERVER_NAME_FORMAT.format({
+    let t = _.default.getCurrentUser(),
+      n = c.oY(t);
+    return null == n || 0 === n.length ? "" : E.Z.Messages.CREATE_SERVER_DEFAULT_SERVER_NAME_FORMAT.format({
       username: (null == e ? void 0 : e.truncateUsername) ? n.slice(0, 20) : n
     })
   },
@@ -54,7 +54,7 @@ t.default = {
       r = [],
       s = !1;
     i ? e.forEach(e => {
-      null == f(e, t) && r.push(e)
-    }) : null == f(e, t) && (s = !0), r.length > 0 && i ? T(r, t, n) : s && T(e, t, n)
+      null == h(e, t) && r.push(e)
+    }) : null == h(e, t) && (s = !0), r.length > 0 && i ? T(r, t, n) : s && T(e, t, n)
   }
 }

@@ -1,10 +1,10 @@
 "use strict";
-var r = n("67867"),
-  a = n("420926");
+var r = n(67867),
+  o = n(420926);
 r({
   target: "Function",
   proto: !0,
-  forced: Function.bind !== a
+  forced: Function.bind !== o
 }, {
-  bind: a
+  bind: o
 })

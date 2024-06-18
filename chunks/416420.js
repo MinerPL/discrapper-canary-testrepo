@@ -1,6 +1,6 @@
 "use strict";
-var n = r("733359"),
-  i = r("65183").OrderedSet,
+var n = r(733359),
+  i = r(65183).OrderedSet,
   o = n.substr,
   a = i();
 t.exports = function(t, e) {

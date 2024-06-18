@@ -1,24 +1,24 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return i
+t.d(s, {
+  Z: function() {
+    return a
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("689938"),
-  n = s("444981");
+var n = t(735250);
+t(470079);
+var i = t(689938),
+  l = t(444981);
 
-function i(e) {
+function a(e) {
   let {
-    showDirtyIndicator: t
+    showDirtyIndicator: s
   } = e;
-  return t ? (0, a.jsxs)("div", {
-    className: n.container,
-    children: [l.default.Messages.GUILD_TEMPLATES, (0, a.jsx)("div", {
-      className: n.dot
+  return s ? (0, n.jsxs)("div", {
+    className: l.container,
+    children: [i.Z.Messages.GUILD_TEMPLATES, (0, n.jsx)("div", {
+      className: l.dot
     })]
-  }) : (0, a.jsx)(a.Fragment, {
-    children: l.default.Messages.GUILD_TEMPLATES
+  }) : (0, n.jsx)(n.Fragment, {
+    children: i.Z.Messages.GUILD_TEMPLATES
   })
 }

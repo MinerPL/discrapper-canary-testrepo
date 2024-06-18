@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-var r = function() {
+var n = function() {
   var e = {
       base: "https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.2/assets/",
       ext: ".png",
@@ -107,4 +106,4 @@ var r = function() {
     return n.join(t || "-")
   }
 }();
-t.default = r
+t.Z = n

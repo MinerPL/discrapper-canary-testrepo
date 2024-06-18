@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return _
+n.d(t, {
+  Z: function() {
+    return d
   }
-}), n("47120"), n("789020");
-var i = n("913527"),
+}), n(47120), n(789020);
+var i = n(913527),
   r = n.n(i),
-  s = n("81825"),
-  a = n("630388"),
-  o = n("973616"),
-  l = n("981631");
+  s = n(81825),
+  o = n(630388),
+  a = n(973616),
+  l = n(981631);
 
 function u(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -19,18 +19,18 @@ function u(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let d = ["500428425362931713", "451550535720501248", "471376328319303681", "466696214818193408"];
-class _ extends s.default {
+let _ = ["500428425362931713", "451550535720501248", "471376328319303681", "466696214818193408"];
+class d extends s.Z {
   static createFromServer(e) {
-    var t, n, i, s, a;
+    var t, n, i, s, o;
     let {
       price: l
     } = e;
-    return new _({
+    return new d({
       id: e.id,
       type: e.type,
       applicationId: e.application_id,
-      application: null != e.application ? o.default.createFromServer(e.application) : null,
+      application: null != e.application ? a.Z.createFromServer(e.application) : null,
       productLine: e.product_line,
       name: null !== (t = e.name) && void 0 !== t ? t : "",
       releaseDate: null != e.release_date ? r()(e.release_date) : null,
@@ -62,19 +62,19 @@ class _ extends s.default {
       locales: null !== (s = e.locales) && void 0 !== s ? s : ["en-US"],
       flags: e.flags,
       externalPurchaseUrl: e.external_purchase_url,
-      deleted: null !== (a = e.deleted) && void 0 !== a && a
+      deleted: null !== (o = e.deleted) && void 0 !== o && o
     })
   }
   get supportedOperatingSystems() {
     let e = null != this.systemRequirements ? Object.keys(this.systemRequirements) : [];
-    return e.length > 0 ? e : [l.OperatingSystems.WINDOWS]
+    return e.length > 0 ? e : [l.TaA.WINDOWS]
   }
   get isOnSale() {
     return null != this.price && null != this.price.saleAmount
   }
   isGiftable() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.price;
-    return this.type === l.SKUTypes.DURABLE_PRIMARY && this.available && this.requiresPayment && null != e && l.GIFTABLE_CURRENCIES.has(e.currency) && null == this.externalPurchaseUrl
+    return this.type === l.epS.DURABLE_PRIMARY && this.available && this.requiresPayment && null != e && l.w2V.has(e.currency) && null == this.externalPurchaseUrl
   }
   getPrice() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
@@ -107,19 +107,19 @@ class _ extends s.default {
     return !this.premium && null != e && e.amount > 0
   }
   get isTheGameAwardsWinner() {
-    return d.includes(this.id)
+    return _.includes(this.id)
   }
   get available() {
-    return (0, a.hasFlag)(this.flags, l.SKUFlags.AVAILABLE) || null != this.externalPurchaseUrl
+    return (0, o.yE)(this.flags, l.l4R.AVAILABLE) || null != this.externalPurchaseUrl
   }
   isAvailableForDistribution() {
-    return this.available && null != this.getPrice() && null == this.externalPurchaseUrl && (!this.premium || (0, a.hasFlag)(this.flags, l.SKUFlags.PREMIUM_AND_DISTRIBUTION))
+    return this.available && null != this.getPrice() && null == this.externalPurchaseUrl && (!this.premium || (0, o.yE)(this.flags, l.l4R.PREMIUM_AND_DISTRIBUTION))
   }
   isAvailable() {
-    return (0, a.hasFlag)(this.flags, l.SKUFlags.AVAILABLE)
+    return (0, o.yE)(this.flags, l.l4R.AVAILABLE)
   }
   isPremiumPerk() {
-    return this.premium && ((0, a.hasFlag)(this.flags, l.SKUFlags.PREMIUM_PURCHASE) || (0, a.hasFlag)(this.flags, l.SKUFlags.PREMIUM_AND_DISTRIBUTION))
+    return this.premium && ((0, o.yE)(this.flags, l.l4R.PREMIUM_PURCHASE) || (0, o.yE)(this.flags, l.l4R.PREMIUM_AND_DISTRIBUTION))
   }
   hasFeature(e) {
     return this.features.has(e)

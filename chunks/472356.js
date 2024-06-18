@@ -1,5 +1,5 @@
-var a = t("692316"),
-  o = t("303249");
+var a = t(692316),
+  o = t(303249);
 e.exports = function(e, r, t) {
   return (r = o(r)) in e ? a(e, r, {
     value: t,

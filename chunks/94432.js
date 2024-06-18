@@ -1,12 +1,12 @@
 "use strict";
 var i, r;
-n.r(t), n.d(t, {
-  VOICE_RECORDING_MIN_DURATION_MILLIS: function() {
-    return s
+n.d(t, {
+  Xi: function() {
+    return o
   },
-  WAVEFORM_WAVE_MAX_VALUE: function() {
-    return a
+  e3: function() {
+    return s
   }
 }), (r = i || (i = {}))[r.SENDING = 0] = "SENDING", r[r.CANCELLING = 1] = "CANCELLING", r[r.LOCKING = 2] = "LOCKING", r[r.LOCKED = 3] = "LOCKED";
 let s = 500,
-  a = 255
+  o = 255

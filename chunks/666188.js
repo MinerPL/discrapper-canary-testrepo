@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return s
+n.d(t, {
+  Z: function() {
+    return o
   }
-}), n("47120");
-var i = n("284363"),
-  r = n("854218");
-let a = new Set([i.BadgeCategory.PARTNERED, i.BadgeCategory.VERIFIED, i.BadgeCategory.VERIFIED_AND_PARTNERED, i.BadgeCategory.COMMUNITY, i.BadgeCategory.DISCOVERABLE, i.BadgeCategory.CLAN]);
+}), n(47120);
+var i = n(284363),
+  r = n(854218);
+let s = new Set([i.Q.PARTNERED, i.Q.VERIFIED, i.Q.VERIFIED_AND_PARTNERED, i.Q.COMMUNITY, i.Q.DISCOVERABLE, i.Q.CLAN]);
 
-function s(e) {
+function o(e) {
   if (null == e) return !1;
-  let t = (0, r.getGuildTraits)(e),
-    n = (0, i.getBadgeCategory)(t);
-  return a.has(n)
+  let t = (0, r.XX)(e),
+    n = (0, i.i)(t);
+  return s.has(n)
 }

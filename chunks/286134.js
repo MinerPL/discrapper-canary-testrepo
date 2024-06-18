@@ -1,6 +1,5 @@
 "use strict";
-r.r(t);
 var n = Object.prototype.toString;
-t.default = function(e) {
+t.Z = function(e) {
   return n.call(e)
 }

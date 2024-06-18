@@ -1,7 +1,7 @@
-var n = r("573401"),
-  i = r("105890"),
-  o = r("67948"),
-  s = r("44091"),
+var n = r(573401),
+  i = r(105890),
+  o = r(67948),
+  s = r(44091),
   a = n.isFinite,
   u = Math.min;
 e.exports = function(e) {

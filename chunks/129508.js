@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("512722"),
+n(47120);
+var i = n(512722),
   r = n.n(i),
-  a = n("921608"),
-  s = n("693824");
+  s = n(921608),
+  o = n(693824);
 
-function o(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -13,7 +13,7 @@ function o(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-t.default = class e {
+t.Z = class e {
   getCanvas() {
     return this.canvas
   }
@@ -21,8 +21,8 @@ t.default = class e {
     this.color = e
   }
   setFont(e) {
-    var t, n, i, r, a;
-    this.font.style = null !== (t = e.style) && void 0 !== t ? t : this.font.style, this.font.size = null !== (n = e.size) && void 0 !== n ? n : this.font.size, this.font.weight = null !== (i = e.weight) && void 0 !== i ? i : this.font.weight, this.font.family = null !== (r = e.family) && void 0 !== r ? r : this.font.family, this.font.truncate = null !== (a = e.truncate) && void 0 !== a ? a : this.font.truncate
+    var t, n, i, r, s;
+    this.font.style = null !== (t = e.style) && void 0 !== t ? t : this.font.style, this.font.size = null !== (n = e.size) && void 0 !== n ? n : this.font.size, this.font.weight = null !== (i = e.weight) && void 0 !== i ? i : this.font.weight, this.font.family = null !== (r = e.family) && void 0 !== r ? r : this.font.family, this.font.truncate = null !== (s = e.truncate) && void 0 !== s ? s : this.font.truncate
   }
   getLoadedImage(e) {
     r()(null != this.assetMap, "DiscordCanvas: An AssetStore has not been initialized.");
@@ -34,19 +34,19 @@ t.default = class e {
     return t
   }
   drawRoundedImageWithFallbacks(e, t, n, i, r) {
-    for (let a of e) {
-      let e = this.drawRoundedImage(a, t, n, i, r);
-      if (e !== s.DrawResultStatus.Failure) return e
+    for (let s of e) {
+      let e = this.drawRoundedImage(s, t, n, i, r);
+      if (e !== o.vP.Failure) return e
     }
-    return s.DrawResultStatus.Failure
+    return o.vP.Failure
   }
   constructor(e, t) {
-    o(this, "color", "black"), o(this, "font", {
+    a(this, "color", "black"), a(this, "font", {
       style: "normal",
       weight: 300,
-      size: a.DEFAULT_FONT_SIZE,
+      size: s.n,
       family: ["serif"],
-      truncate: s.TextTruncationMethod.None
-    }), o(this, "assetMap", void 0), o(this, "canvas", void 0), this.canvas = e, this.assetMap = t
+      truncate: o.GX.None
+    }), a(this, "assetMap", void 0), a(this, "canvas", void 0), this.canvas = e, this.assetMap = t
   }
 }

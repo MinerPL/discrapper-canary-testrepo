@@ -1,55 +1,54 @@
 "use strict";
-n.r(t);
-var i = n("735250"),
-  r = n("470079"),
-  a = n("996146"),
-  s = n("481060"),
-  o = n("100527"),
-  l = n("906732"),
-  u = n("963249"),
-  d = n("147915"),
-  _ = n("51144"),
-  c = n("981631"),
-  E = n("474936"),
-  I = n("689938"),
-  T = n("414367");
-t.default = r.memo(function(e) {
+var i = n(735250),
+  r = n(470079),
+  s = n(996146),
+  o = n(481060),
+  a = n(100527),
+  l = n(906732),
+  u = n(963249),
+  _ = n(147915),
+  d = n(51144),
+  c = n(981631),
+  E = n(474936),
+  I = n(689938),
+  T = n(838329);
+t.Z = r.memo(function(e) {
   let {
     disabled: t,
     channel: n
   } = e, {
     analyticsLocations: r
-  } = (0, l.default)(o.default.GIFT_BUTTON), f = (0, _.useDirectMessageRecipient)(n), {
+  } = (0, l.ZP)(a.Z.GIFT_BUTTON), h = (0, d.Ft)(n), {
     Component: S,
-    events: h,
-    play: A
-  } = (0, a.useGiftLottie)();
+    events: f,
+    play: N
+  } = (0, s.$)();
   if (t) return null;
-  let m = () => (0, u.default)({
+  let A = () => (0, u.Z)({
     isGift: !0,
-    giftRecipient: null === f ? void 0 : f,
+    giftRecipient: null === h ? void 0 : h,
     initialPlanId: null,
-    subscriptionTier: E.PremiumSubscriptionSKUs.TIER_2,
+    subscriptionTier: E.Si.TIER_2,
     analyticsLocations: r,
     analyticsObject: {
-      page: n.isPrivate() ? c.AnalyticsPages.DM_CHANNEL : c.AnalyticsPages.GUILD_CHANNEL,
-      section: c.AnalyticsSections.CHANNEL_TEXT_AREA,
-      object: c.AnalyticsObjects.BUTTON_ICON,
-      objectType: c.AnalyticsObjectTypes.GIFT
+      page: n.isPrivate() ? c.ZY5.DM_CHANNEL : c.ZY5.GUILD_CHANNEL,
+      section: c.jXE.CHANNEL_TEXT_AREA,
+      object: c.qAy.BUTTON_ICON,
+      objectType: c.Qqv.GIFT
     }
   });
-  return (0, i.jsx)(s.Tooltip, {
-    text: I.default.Messages.PREMIUM_GIFT_BUTTON_TOOLTIP,
-    children: e => (0, i.jsx)(d.default, {
+  return (0, i.jsx)(o.Tooltip, {
+    text: I.Z.Messages.PREMIUM_GIFT_BUTTON_TOOLTIP,
+    children: e => (0, i.jsx)(_.Z, {
       ...e,
       innerClassName: T.button,
       isActive: !1,
-      "aria-label": I.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
+      "aria-label": I.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
       "aria-haspopup": "dialog",
       onClick: () => {
-        m(), A()
+        A(), N()
       },
-      ...h,
+      ...f,
       children: (0, i.jsx)(S, {
         color: "currentColor"
       })

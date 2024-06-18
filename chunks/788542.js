@@ -1,22 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
-  Preview: function() {
-    return s
+n.d(t, {
+  M: function() {
+    return o
   }
 });
-var r = n("470079"),
-  i = n.n(r),
-  a = n("576967"),
-  o = n("694542");
-let s = e => {
+var r = n(470079),
+  i = n(576967),
+  a = n(694542);
+let o = e => {
   let t;
-  let n = (0, a.usePreview)();
+  let n = (0, i.u)();
   if (!n.display) return null;
   let {
-    display: r,
+    display: o,
     ...s
   } = n;
-  return t = "children" in e ? "function" == typeof e.children ? e.children(s) : e.children : e.generator(s), i().createElement(o.Context.Provider, {
+  return t = "children" in e ? "function" == typeof e.children ? e.children(s) : e.children : e.generator(s), r.createElement(a._.Provider, {
     value: s
   }, t)
 }

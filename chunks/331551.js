@@ -1,22 +1,22 @@
 "use strict";
-n.r(t), n.d(t, {
-  getSortValueForMember: function() {
+n.d(t, {
+  b: function() {
     return s
   }
 });
-var i = n("815790"),
-  r = n("588215");
+var i = n(815790),
+  r = n(588215);
 
 function s(e, t) {
-  let n = (0, i.getJoinedAtTimestamp)(e.joinedAt);
+  let n = (0, i.Dw)(e.joinedAt);
   switch (t) {
-    case r.OrderBy.ORDER_BY_GUILD_JOINED_AT_ASC:
+    case r.d$.ORDER_BY_GUILD_JOINED_AT_ASC:
       return n;
-    case r.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC:
+    case r.d$.ORDER_BY_GUILD_JOINED_AT_DESC:
       return -n;
-    case r.OrderBy.ORDER_BY_USER_ID_ASC:
+    case r.d$.ORDER_BY_USER_ID_ASC:
       return parseInt(e.userId);
-    case r.OrderBy.ORDER_BY_USER_ID_DESC:
+    case r.d$.ORDER_BY_USER_ID_DESC:
       return -parseInt(e.userId);
     default:
       return -n

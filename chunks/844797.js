@@ -1,38 +1,38 @@
 "use strict";
-n.r(t), n.d(t, {
-  isActivityInTextStart: function() {
-    return _
-  },
-  useIsActivityInTextChannel: function() {
+n.d(t, {
+  TX: function() {
     return d
+  },
+  oy: function() {
+    return _
   }
 });
-var i = n("442837"),
-  r = n("592125"),
-  a = n("944486"),
-  s = n("867176"),
-  o = n("317381"),
-  l = n("981631");
+var i = n(442837),
+  r = n(592125),
+  s = n(944486),
+  o = n(867176),
+  a = n(317381),
+  l = n(981631);
 
 function u(e) {
   let {
     channelId: t,
     SelectedChannelStore: n,
     ChannelStore: i
-  } = e, r = i.getChannel(t), a = (0, s.isActivitiesInTextEnabled)(r, !1, "isActivityInTextChannel");
-  return !!((null == r ? void 0 : r.type) === l.ChannelTypes.GUILD_TEXT && a || null != r && r.isPrivate() && a && null == n.getVoiceChannelId()) || !1
+  } = e, r = i.getChannel(t), s = (0, o.WS)(r, !1, "isActivityInTextChannel");
+  return !!((null == r ? void 0 : r.type) === l.d4z.GUILD_TEXT && s || null != r && r.isPrivate() && s && null == n.getVoiceChannelId()) || !1
 }
 
-function d(e) {
-  return (0, i.useStateFromStores)([r.default, a.default], () => u({
+function _(e) {
+  return (0, i.e7)([r.Z, s.Z], () => u({
     channelId: null == e ? void 0 : e.id,
-    ChannelStore: r.default,
-    SelectedChannelStore: a.default
+    ChannelStore: r.Z,
+    SelectedChannelStore: s.Z
   }))
 }
 
-function _(e, t, n, i) {
-  return !o.default.getEmbeddedActivitiesForChannel(e).some(e => e.applicationId === t) && u({
+function d(e, t, n, i) {
+  return !a.ZP.getEmbeddedActivitiesForChannel(e).some(e => e.applicationId === t) && u({
     channelId: e,
     SelectedChannelStore: n,
     ChannelStore: i

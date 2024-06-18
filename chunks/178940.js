@@ -1,40 +1,40 @@
 "use strict";
-n.r(t), n.d(t, {
-  Checkbox: function() {
-    return p
+n.d(t, {
+  X: function() {
+    return R
   }
-}), n("47120");
-var i, r, s, a, o, l = n("735250"),
-  u = n("470079"),
-  d = n("803997"),
-  _ = n.n(d),
-  c = n("512722"),
+}), n(47120);
+var i, r, s, o, a, l = n(735250),
+  u = n(470079),
+  _ = n(120356),
+  d = n.n(_),
+  c = n(512722),
   E = n.n(c),
-  I = n("866442"),
-  T = n("692547"),
-  f = n("84735"),
-  S = n("263704"),
-  h = n("981631"),
-  A = n("532721");
+  I = n(866442),
+  T = n(692547),
+  h = n(84735),
+  S = n(263704),
+  f = n(981631),
+  N = n(780150);
 
-function m(e, t, n) {
+function A(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
   }) : e[t] = n, e
-}(a = i || (i = {})).DEFAULT = "default", a.INVERTED = "inverted", a.GHOST = "ghost", a.ROW = "row", (o = r || (r = {})).TOP = "top", o.CENTER = "center";
-let N = {
-    BOX: A.box,
-    ROUND: A.round,
-    SMALL_BOX: A.smallBox
+}(o = i || (i = {})).DEFAULT = "default", o.INVERTED = "inverted", o.GHOST = "ghost", o.ROW = "row", (a = r || (r = {})).TOP = "top", a.CENTER = "center";
+let m = {
+    BOX: N.box,
+    ROUND: N.round,
+    SMALL_BOX: N.smallBox
   },
   O = {
-    top: A.alignTop,
-    center: A.alignCenter
+    top: N.alignTop,
+    center: N.alignCenter
   };
-class p extends(s = u.PureComponent) {
+class R extends(s = u.PureComponent) {
   getInputMode() {
     return this.props.disabled ? "disabled" : this.props.readOnly ? "readonly" : "default"
   }
@@ -48,7 +48,7 @@ class p extends(s = u.PureComponent) {
     if (!1 === t) return r;
     if (r = {
         ...r
-      }, i === T.default.unsafe_rawColors.BRAND_500.css) switch (n) {
+      }, i === T.Z.unsafe_rawColors.BRAND_500.css) switch (n) {
       case "default":
         r.borderColor = "var(--control-brand-foreground)";
         break;
@@ -57,7 +57,7 @@ class p extends(s = u.PureComponent) {
         break;
       case "row":
       case "inverted":
-        r.borderColor = "var(--brand-experiment-400)", r.backgroundColor = "var(--brand-experiment-500)"
+        r.borderColor = "var(--brand-400)", r.backgroundColor = "var(--brand-500)"
     } else switch (n) {
       case "default":
         r.borderColor = i;
@@ -66,7 +66,7 @@ class p extends(s = u.PureComponent) {
         if (i.startsWith("var(--")) {
           let e = "".concat(i.slice(0, -1), "-hsl)");
           r.borderColor = "rgba(".concat(e, ", 0.15)"), r.backgroundColor = "rgba(".concat(e, ", 0.15)")
-        } else E()((0, I.isValidHex)(i), "Checkbox: ".concat(i, " is not a valid hex color")), r.borderColor = (0, I.hex2rgb)(i, .15), r.backgroundColor = (0, I.hex2rgb)(i, .15);
+        } else E()((0, I.FX)(i), "Checkbox: ".concat(i, " is not a valid hex color")), r.borderColor = (0, I.wK)(i, .15), r.backgroundColor = (0, I.wK)(i, .15);
         break;
       case "row":
       case "inverted":
@@ -80,7 +80,7 @@ class p extends(s = u.PureComponent) {
       type: t,
       color: n
     } = this.props;
-    return e ? "inverted" === t || "row" === t ? T.default.unsafe_rawColors.WHITE_500.css : n : T.default.unsafe_rawColors.TRANSPARENT.css
+    return e ? "inverted" === t || "row" === t ? T.Z.unsafe_rawColors.WHITE_500.css : n : T.Z.unsafe_rawColors.TRANSPARENT.css
   }
   render() {
     let {
@@ -90,32 +90,32 @@ class p extends(s = u.PureComponent) {
       shape: i,
       align: r = "center",
       className: s,
-      innerClassName: a,
-      children: o,
+      innerClassName: o,
+      children: a,
       size: u,
-      reverse: d,
+      reverse: _,
       checkboxColor: c,
       displayOnly: E,
       type: I,
       onClick: T
-    } = this.props, m = null != o ? (0, l.jsx)("div", {
-      className: _()(A.label, e ? A.labelDisabled : A.labelClickable, d ? A.labelReversed : A.labelForward),
+    } = this.props, A = null != a ? (0, l.jsx)("div", {
+      className: d()(N.label, e ? N.labelDisabled : N.labelClickable, _ ? N.labelReversed : N.labelForward),
       style: {
         lineHeight: "".concat(u, "px")
       },
-      children: o
-    }) : null, N = this.props.disabled ? A.inputDisabled : this.props.readOnly ? A.inputReadonly : A.inputDefault;
+      children: a
+    }) : null, m = this.props.disabled ? N.inputDisabled : this.props.readOnly ? N.inputReadonly : N.inputDefault;
     return (0, l.jsxs)(E ? "span" : "label", {
-      className: _()(e ? A.checkboxWrapperDisabled : A.checkboxWrapper, O[r], s, {
-        [A.row]: "row" === I,
-        [A.checked]: n
+      className: d()(e ? N.checkboxWrapperDisabled : N.checkboxWrapper, O[r], s, {
+        [N.row]: "row" === I,
+        [N.checked]: n
       }),
-      children: [d ? m : null, !E && (0, l.jsx)(f.FocusRing, {
+      children: [_ ? A : null, !E && (0, l.jsx)(h.t, {
         children: (0, l.jsx)("input", {
-          className: _()(a, N),
+          className: d()(o, m),
           type: "checkbox",
           onClick: T,
-          onChange: e || t ? h.NOOP : this.handleChange,
+          onChange: e || t ? f.dG4 : this.handleChange,
           checked: n,
           style: {
             width: u,
@@ -123,8 +123,8 @@ class p extends(s = u.PureComponent) {
           }
         })
       }), (0, l.jsx)("div", {
-        className: _()(A.checkbox, i, {
-          [A.checked]: n
+        className: d()(N.checkbox, i, {
+          [N.checked]: n
         }),
         style: {
           width: u,
@@ -132,17 +132,17 @@ class p extends(s = u.PureComponent) {
           borderColor: c,
           ...this.getStyle()
         },
-        children: (0, l.jsx)(S.default, {
+        children: (0, l.jsx)(S.Z, {
           width: 18,
           height: 18,
           color: this.getColor(),
           "aria-hidden": !0
         })
-      }), d ? null : m]
+      }), _ ? null : A]
     })
   }
   constructor(...e) {
-    super(...e), m(this, "handleChange", e => {
+    super(...e), A(this, "handleChange", e => {
       let {
         onChange: t
       } = this.props;
@@ -150,16 +150,16 @@ class p extends(s = u.PureComponent) {
     })
   }
 }
-m(p, "Types", i), m(p, "Shapes", N), m(p, "Aligns", r), m(p, "defaultProps", {
+A(R, "Types", i), A(R, "Shapes", m), A(R, "Aligns", r), A(R, "defaultProps", {
   size: 24,
   disabled: !1,
   readOnly: !1,
   displayOnly: !1,
   value: !1,
   type: "default",
-  color: T.default.unsafe_rawColors.BRAND_500.css,
-  shape: N.BOX,
+  color: T.Z.unsafe_rawColors.BRAND_500.css,
+  shape: m.BOX,
   align: "center",
-  onChange: h.NOOP,
+  onChange: f.dG4,
   reverse: !1
 })

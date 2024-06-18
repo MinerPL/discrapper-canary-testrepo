@@ -1,23 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return s
+n.d(t, {
+  Z: function() {
+    return o
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("481060"),
-  a = n("64003");
+var i = n(735250);
+n(470079);
+var r = n(481060),
+  s = n(64003);
 
-function s(e) {
+function o(e) {
   let {
     user: t,
     nickname: n
-  } = e, s = null != n;
+  } = e, o = null != n;
   return (0, i.jsx)(r.Avatar, {
-    src: t.getAvatarURL(void 0, s ? 16 : 24),
-    size: s ? r.AvatarSizes.SIZE_16 : r.AvatarSizes.SIZE_24,
-    className: s ? a.miniAvatar : a.largeAvatar,
+    src: t.getAvatarURL(void 0, o ? 16 : 24),
+    size: o ? r.AvatarSizes.SIZE_16 : r.AvatarSizes.SIZE_24,
+    className: o ? s.miniAvatar : s.largeAvatar,
     "aria-hidden": !0
   })
 }

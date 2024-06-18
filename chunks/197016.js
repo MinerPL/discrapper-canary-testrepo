@@ -1,42 +1,42 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return d
+n.d(t, {
+  Z: function() {
+    return _
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("685072"),
-  s = n("287734"),
-  a = n("67212"),
-  o = n("158631"),
-  l = n("871499"),
-  u = n("689938");
+var i = n(735250);
+n(470079);
+var r = n(685072),
+  s = n(287734),
+  o = n(67212),
+  a = n(158631),
+  l = n(871499),
+  u = n(689938);
 
-function d(e) {
+function _(e) {
   let {
     centerButton: t = !1,
     channel: n,
-    onClick: d,
-    onMouseEnter: _,
+    onClick: _,
+    onMouseEnter: d,
     onMouseLeave: c,
     ...E
-  } = e, I = t ? l.CenterControlButton : l.default, T = n.isBroadcastChannel(), f = (0, o.useIsBroadcastingInChannel)(n.id), {
+  } = e, I = t ? l.d : l.Z, T = n.isBroadcastChannel(), h = (0, a.zW)(n.id), {
     Component: S,
-    events: h
-  } = (0, r.useEndCallLottie)();
+    events: f
+  } = (0, r.K)();
   return (0, i.jsx)(I, {
     ...E,
     onClick: () => {
-      f && (0, a.stopBroadcast)(), s.default.disconnect(), null == d || d()
+      h && (0, o.b_)(), s.default.disconnect(), null == _ || _()
     },
     iconComponent: S,
     onMouseEnter: e => {
-      null == _ || _(e), h.onMouseEnter()
+      null == d || d(e), f.onMouseEnter()
     },
     onMouseLeave: e => {
-      null == c || c(e), h.onMouseLeave()
+      null == c || c(e), f.onMouseLeave()
     },
-    label: f ? u.default.Messages.STOP_BROADCASTING : T ? u.default.Messages.LEAVE_BROADCAST : u.default.Messages.DISCONNECT_SELF
+    label: h ? u.Z.Messages.STOP_BROADCASTING : T ? u.Z.Messages.LEAVE_BROADCAST : u.Z.Messages.DISCONNECT_SELF
   })
 }

@@ -1,7 +1,7 @@
 "use strict";
-var r = n("375044"),
-  a = TypeError;
+var r = n(375044),
+  o = TypeError;
 e.exports = function(e) {
-  if (r(e)) throw new a("The method doesn't accept regular expressions");
+  if (r(e)) throw new o("The method doesn't accept regular expressions");
   return e
 }

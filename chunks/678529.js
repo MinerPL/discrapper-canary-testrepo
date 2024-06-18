@@ -1,7 +1,6 @@
 "use strict";
-r.r(t);
-t.default = function(e, t) {
-  return function(r) {
-    return null != r && r[e] === t && (void 0 !== t || e in Object(r))
+t.Z = function(e, t) {
+  return function(n) {
+    return null != n && n[e] === t && (void 0 !== t || e in Object(n))
   }
 }

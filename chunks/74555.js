@@ -1,45 +1,45 @@
 "use strict";
-n.r(t), n.d(t, {
-  CompositeDisposable: function() {
+r.d(t, {
+  JT: function() {
     return c
   },
-  Disposable: function() {
-    return u
+  M$: function() {
+    return d
   },
-  SerialDisposable: function() {
-    return l
+  Xz: function() {
+    return u
   }
 });
-var r = n("139883");
+var n = r(139883);
 
-function i(e, t) {
+function o(e, t) {
   if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
 }
 
-function a(e, t) {
-  for (var n = 0; n < t.length; n++) {
-    var r = t[n];
-    r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+function i(e, t) {
+  for (var r = 0; r < t.length; r++) {
+    var n = t[r];
+    n.enumerable = n.enumerable || !1, n.configurable = !0, "value" in n && (n.writable = !0), Object.defineProperty(e, n.key, n)
   }
 }
 
-function o(e, t, n) {
-  return t && a(e.prototype, t), n && a(e, n), e
+function s(e, t, r) {
+  return t && i(e.prototype, t), r && i(e, r), e
 }
 
-function s(e, t, n) {
+function a(e, t, r) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: r,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = r, e
 }
-var u = function() {
+var c = function() {
   function e(t) {
-    i(this, e), s(this, "isDisposed", !1), s(this, "action", void 0), this.action = (0, r.isFunction)(t) ? t : r.noop
+    o(this, e), a(this, "isDisposed", !1), a(this, "action", void 0), this.action = (0, n.mf)(t) ? t : n.ZT
   }
-  return o(e, [{
+  return s(e, [{
     key: "dispose",
     value: function() {
       !this.isDisposed && (this.action(), this.isDisposed = !0)
@@ -47,7 +47,7 @@ var u = function() {
   }], [{
     key: "isDisposable",
     value: function(e) {
-      return !!(e && (0, r.isFunction)(e.dispose))
+      return !!(e && (0, n.mf)(e.dispose))
     }
   }, {
     key: "_fixup",
@@ -61,16 +61,16 @@ var u = function() {
     }
   }]), e
 }();
-s(u, "empty", {
-  dispose: r.noop
+a(c, "empty", {
+  dispose: n.ZT
 });
-var c = function() {
+var u = function() {
     function e() {
-      i(this, e), s(this, "isDisposed", !1), s(this, "disposables", void 0);
-      for (var t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-      this.disposables = n
+      o(this, e), a(this, "isDisposed", !1), a(this, "disposables", void 0);
+      for (var t = arguments.length, r = Array(t), n = 0; n < t; n++) r[n] = arguments[n];
+      this.disposables = r
     }
-    return o(e, [{
+    return s(e, [{
       key: "add",
       value: function(e) {
         this.isDisposed ? e.dispose() : this.disposables.push(e)
@@ -80,7 +80,7 @@ var c = function() {
       value: function(e) {
         var t = !1;
         if (!this.isDisposed) {
-          var n = this.disposables.indexOf(e); - 1 !== n && (t = !0, this.disposables.splice(n, 1), e.dispose())
+          var r = this.disposables.indexOf(e); - 1 !== r && (t = !0, this.disposables.splice(r, 1), e.dispose())
         }
         return t
       }
@@ -88,9 +88,9 @@ var c = function() {
       key: "clear",
       value: function() {
         if (!this.isDisposed) {
-          for (var e = this.disposables.length, t = Array(e), n = 0; n < e; n++) t[n] = this.disposables[n];
+          for (var e = this.disposables.length, t = Array(e), r = 0; r < e; r++) t[r] = this.disposables[r];
           this.disposables = [];
-          for (var r = 0; r < e; r++) t[r].dispose()
+          for (var n = 0; n < e; n++) t[n].dispose()
         }
       }
     }, {
@@ -98,18 +98,18 @@ var c = function() {
       value: function() {
         if (!this.isDisposed) {
           this.isDisposed = !0;
-          for (var e = this.disposables.length, t = Array(e), n = 0; n < e; n++) t[n] = this.disposables[n];
+          for (var e = this.disposables.length, t = Array(e), r = 0; r < e; r++) t[r] = this.disposables[r];
           this.disposables = [];
-          for (var r = 0; r < e; r++) t[r].dispose()
+          for (var n = 0; n < e; n++) t[n].dispose()
         }
       }
     }]), e
   }(),
-  l = function() {
+  d = function() {
     function e() {
-      i(this, e), s(this, "isDisposed", !1), s(this, "current", void 0)
+      o(this, e), a(this, "isDisposed", !1), a(this, "current", void 0)
     }
-    return o(e, [{
+    return s(e, [{
       key: "getDisposable",
       value: function() {
         return this.current
@@ -119,8 +119,8 @@ var c = function() {
       value: function(e) {
         var t = this.isDisposed;
         if (!t) {
-          var n = this.current;
-          this.current = e, n && n.dispose()
+          var r = this.current;
+          this.current = e, r && r.dispose()
         }
         t && e && e.dispose()
       }

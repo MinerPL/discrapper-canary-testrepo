@@ -1,30 +1,25 @@
 "use strict";
 let i;
-n.r(t), n.d(t, {
-  impl: function() {
-    return a
-  },
-  sessionStorageTest: function() {
+n.d(t, {
+  y: function() {
     return s
   }
 });
-var r = n("37082");
+var r = n(37082);
 try {
   i = window.sessionStorage
 } catch (e) {}
 try {
   delete window.sessionStorage
 } catch (e) {}
-
-function s() {
+let s = ! function() {
   let e = "test";
   try {
     return i.setItem(e, e), i.removeItem(e), !0
   } catch (e) {
     return !1
   }
-}
-let a = s() ? new class e {
+}() ? new r.R : new class e {
   get(e, t) {
     let n = i.getItem(e);
     if (null != n) try {
@@ -43,4 +38,4 @@ let a = s() ? new class e {
   clear() {
     i.clear()
   }
-} : new r.ObjectStorage
+}

@@ -4,4 +4,4 @@ t._reverse = function(e) {
   return Object.keys(e).forEach(function(n) {
     (0 | n) == n && (n |= 0), t[e[n]] = n
   }), t
-}, t.der = n("375990")
+}, t.der = n(375990)

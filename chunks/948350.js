@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2022-09_free_file_upload_limit",
   label: "Free File Upload Limit Increase",
@@ -15,4 +14,4 @@ let i = (0, n("818083").createExperiment)({
     }
   }]
 });
-t.default = i
+t.Z = i

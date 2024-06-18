@@ -1,27 +1,27 @@
 "use strict";
-n.r(t), n.d(t, {
-  updateFlags: function() {
-    return a
+n.d(t, {
+  h: function() {
+    return o
   }
 });
-var i = n("544891"),
-  r = n("570140"),
-  s = n("981631");
+var i = n(544891),
+  r = n(570140),
+  s = n(981631);
 
-function a(e, t, n) {
-  return r.default.dispatch({
+function o(e, t, n) {
+  return r.Z.dispatch({
     type: "LIBRARY_APPLICATION_FLAGS_UPDATE_START",
     applicationId: e,
     branchId: t,
     flags: n
-  }), i.HTTP.patch({
-    url: s.Endpoints.LIBRARY_APPLICATION_BRANCH(e, t),
+  }), i.tn.patch({
+    url: s.ANM.LIBRARY_APPLICATION_BRANCH(e, t),
     body: {
       flags: n
     },
     oldFormErrors: !0
   }).then(e => {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS",
       libraryApplication: e.body
     })

@@ -1,10 +1,10 @@
 "use strict";
-n.r(e), n.d(e, {
-  useIsSafetyHubGuildViolationInAppAppealsEnabled: function() {
-    return a
+e.d(n, {
+  A: function() {
+    return u
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, e(818083).B)({
   kind: "user",
   id: "2024-02_safety_hub_guild_violation_in_app_appeals",
   label: "Safety Hub Guild Violation In App Appeals",
@@ -20,7 +20,7 @@ let i = (0, n("818083").createExperiment)({
   }]
 });
 
-function a(t) {
+function u(t) {
   return !!i.useExperiment({
     location: t
   }, {

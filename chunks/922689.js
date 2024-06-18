@@ -1,8 +1,8 @@
 "use strict";
-var r = n("21841"),
-  i = n("689118"),
-  a = n("726315"),
-  o = n("449348");
+var r = n(21841),
+  i = n(689118),
+  a = n(726315),
+  o = n(449348);
 
 function s() {
   this.tmp = [, , ], this.keys = null

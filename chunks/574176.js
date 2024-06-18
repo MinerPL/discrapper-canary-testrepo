@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  HangStatusExperiment: function() {
+n.d(t, {
+  n: function() {
     return i
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "guild",
   id: "2024-04_hang_status_v2",
   label: "Hang Statuses - V2 experiment",

@@ -1,17 +1,17 @@
 "use strict";
-l.r(t), l.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return s
   }
-}), l("47120");
-var a = l("131951");
+}), n(47120);
+var l = n(131951);
 
 function s() {
-  return Object.entries(a.default.getVideoDevices()).map(e => {
-    let [t, l] = e;
+  return Object.entries(l.Z.getVideoDevices()).map(e => {
+    let [t, n] = e;
     return {
-      id: "camera:" + l.id,
-      name: l.name,
+      id: "camera:" + n.id,
+      name: n.name,
       url: ""
     }
   })

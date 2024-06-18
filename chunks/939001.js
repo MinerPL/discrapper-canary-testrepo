@@ -2,7 +2,7 @@
 Object.defineProperty(e, "__esModule", {
   value: !0
 });
-let i = a("411496");
+let i = a(411496);
 e.default = class t {
   constructor(t) {
     this.data = {

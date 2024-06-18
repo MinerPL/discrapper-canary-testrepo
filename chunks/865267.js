@@ -1,31 +1,30 @@
 "use strict";
-s.r(t);
-var a = s("735250");
-s("470079");
-var l = s("960259"),
-  n = s("827334"),
-  i = s("325767");
-t.default = (0, l.replaceIcon)(function(e) {
+var n = t(735250);
+t(470079);
+var i = t(960259),
+  l = t(827334),
+  a = t(325767);
+s.Z = (0, i.hN)(function(e) {
   let {
-    width: t = 24,
-    height: s = 24,
-    color: l = "currentColor",
-    foreground: n,
+    width: s = 24,
+    height: t = 24,
+    color: i = "currentColor",
+    foreground: l,
     ...r
   } = e;
-  return (0, a.jsx)("svg", {
-    ...(0, i.default)(r),
-    width: t,
-    height: s,
+  return (0, n.jsx)("svg", {
+    ...(0, a.Z)(r),
+    width: s,
+    height: t,
     viewBox: "0 0 32 32",
-    children: (0, a.jsx)("path", {
-      fill: l,
-      className: n,
+    children: (0, n.jsx)("path", {
+      fill: i,
+      className: l,
       fillRule: "evenodd",
       clipRule: "evenodd",
       d: "M16.5 1.46002L24.62 9.58002L20.62 11.23L16.5 7.12002V1.46002ZM11 12.16L7 10.5V21.42L11 19.76V12.16ZM16.5 24.8001V30.4601L24.62 22.3401L20.62 20.6801L16.5 24.8001ZM15.5 7.12004V1.46004L7.38 9.58004L11.38 11.23L15.5 7.12004ZM15.5 30.46L7.38 22.34L11.38 20.68L15.5 24.8V30.46ZM21 19.76L25 21.42V10.5L21 12.16V19.76ZM16 8.03003L20 12.03V19.89L16 23.89L12 19.89V12.03L16 8.03003Z"
     })
   })
-}, n.BoostTier2Icon, void 0, {
+}, l.$, void 0, {
   size: 24
 })

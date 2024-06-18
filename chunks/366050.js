@@ -1,17 +1,17 @@
 "use strict";
 let i, r;
-n.r(t), n("47120");
-var s, a, o, l, u = n("442837"),
-  d = n("433517"),
-  _ = n("570140"),
-  c = n("981631");
+n(47120);
+var s, o, a, l, u = n(442837),
+  _ = n(433517),
+  d = n(570140),
+  c = n(981631);
 let E = "PictureInPictureLocation",
   I = new Map,
-  T = c.PictureInPicturePositions.BOTTOM_RIGHT,
-  f = {};
-class S extends(s = u.default.Store) {
+  T = c.VD2.BOTTOM_RIGHT,
+  h = {};
+class S extends(s = u.ZP.Store) {
   initialize() {
-    T = d.Storage.get(E, c.PictureInPicturePositions.BOTTOM_RIGHT)
+    T = _.K.get(E, c.VD2.BOTTOM_RIGHT)
   }
   get pipWindow() {
     var e;
@@ -30,34 +30,34 @@ class S extends(s = u.default.Store) {
     return null == r
   }
   getDockedRect(e) {
-    return f[e]
+    return h[e]
   }
   isOpen(e) {
     return null != e && I.has(e)
   }
 }
-l = "PictureInPictureStore", (o = "displayName") in(a = S) ? Object.defineProperty(a, o, {
+l = "PictureInPictureStore", (a = "displayName") in(o = S) ? Object.defineProperty(o, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = l, t.default = new S(_.default, {
+}) : o[a] = l, t.Z = new S(d.Z, {
   PICTURE_IN_PICTURE_OPEN: function(e) {
     var t, n;
     let {
       id: s,
-      component: a,
-      props: o
+      component: o,
+      props: a
     } = e;
     if (null != I.get(s)) return;
     let l = {
       id: s,
-      component: a,
-      position: null !== (t = o.position) && void 0 !== t ? t : T,
-      props: o,
-      docked: null !== (n = o.docked) && void 0 !== n && n
+      component: o,
+      position: null !== (t = a.position) && void 0 !== t ? t : T,
+      props: a,
+      docked: null !== (n = a.docked) && void 0 !== n && n
     };
-    I.set(s, l), a === c.PictureInPictureComponents.VIDEO ? null == i && (i = s) : a === c.PictureInPictureComponents.EMBED_IFRAME && null == r && (r = s)
+    I.set(s, l), o === c.NYg.VIDEO ? null == i && (i = s) : o === c.NYg.EMBED_IFRAME && null == r && (r = s)
   },
   PICTURE_IN_PICTURE_CLOSE: function(e) {
     let {
@@ -69,10 +69,10 @@ l = "PictureInPictureStore", (o = "displayName") in(a = S) ? Object.defineProper
       let e = Array.from(I.keys());
       i === t ? i = e.find(e => {
         let t = I.get(e);
-        return null != t && t.component === c.PictureInPictureComponents.VIDEO
+        return null != t && t.component === c.NYg.VIDEO
       }) : r === t && (r = e.find(e => {
         let t = I.get(e);
-        return null != t && t.component === c.PictureInPictureComponents.EMBED_IFRAME
+        return null != t && t.component === c.NYg.EMBED_IFRAME
       }))
     }
   },
@@ -89,7 +89,7 @@ l = "PictureInPictureStore", (o = "displayName") in(a = S) ? Object.defineProper
           ...t,
           position: n
         })
-      }), I = e, T = n, d.Storage.set(E, n)
+      }), I = e, T = n, _.K.set(E, n)
     }
   },
   PICTURE_IN_PICTURE_HIDE: function(e) {
@@ -125,13 +125,13 @@ l = "PictureInPictureStore", (o = "displayName") in(a = S) ? Object.defineProper
       id: t,
       rect: n
     } = e;
-    f[t] = n
+    h[t] = n
   },
   PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW: function(e) {
     let {
       id: t
     } = e, n = I.get(t);
-    null != n && (n.component === c.PictureInPictureComponents.VIDEO ? i = t : n.component === c.PictureInPictureComponents.EMBED_IFRAME && (r = t))
+    null != n && (n.component === c.NYg.VIDEO ? i = t : n.component === c.NYg.EMBED_IFRAME && (r = t))
   },
   LOGOUT: function() {
     i = null, r = null, I = new Map

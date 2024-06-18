@@ -1,32 +1,32 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return l
   },
-  getTopAndNewlyAddedEmojis: function() {
-    return o
+  _: function() {
+    return a
   }
 });
-var i = n("399606"),
-  r = n("339085"),
-  s = n("185923");
-let a = [];
+var i = n(399606),
+  r = n(339085),
+  s = n(185923);
+let o = [];
 
-function o(e) {
+function a(e) {
   let {
-    emojiStoreInstance: t = r.default,
+    emojiStoreInstance: t = r.Z,
     guildId: n,
     pickerIntention: i
   } = e;
   return {
-    topEmojis: i !== s.EmojiIntention.REACTION ? t.getTopEmoji(n) : a,
-    newlyAddedEmojis: i !== s.EmojiIntention.REACTION ? t.getNewlyAddedEmoji(n) : a
+    topEmojis: i !== s.Hz.REACTION ? t.getTopEmoji(n) : o,
+    newlyAddedEmojis: i !== s.Hz.REACTION ? t.getNewlyAddedEmoji(n) : o
   }
 }
 
 function l(e, t) {
-  return (0, i.useStateFromStoresObject)([r.default], () => o({
-    emojiStoreInstance: r.default,
+  return (0, i.cj)([r.Z], () => a({
+    emojiStoreInstance: r.Z,
     guildId: e,
     pickerIntention: t
   }), [e, t])

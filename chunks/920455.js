@@ -1,54 +1,54 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return T
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
-  o = n("481060"),
-  l = n("239091"),
-  u = n("688465"),
-  d = n("63063"),
-  _ = n("689079"),
-  c = n("981631"),
-  E = n("689938"),
-  I = n("594379");
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(481060),
+  l = n(239091),
+  u = n(688465),
+  _ = n(63063),
+  d = n(689079),
+  c = n(981631),
+  E = n(689938),
+  I = n(418609);
 
 function T(e) {
   var t;
   let {
     className: s,
     activeCommand: T
-  } = e, f = r.useCallback(e => {
+  } = e, h = r.useCallback(e => {
     var t;
     let r = null == T ? void 0 : null === (t = T.rootCommand) || void 0 === t ? void 0 : t.id;
     if (null == r) {
       e.preventDefault();
       return
-    }(0, l.openContextMenuLazy)(e, async () => {
+    }(0, l.jW)(e, async () => {
       let {
         default: e
-      } = await n.e("5396").then(n.bind(n, "731646"));
+      } = await n.e("5396").then(n.bind(n, 731646));
       return t => (0, i.jsx)(e, {
         ...t,
         id: r,
-        label: E.default.Messages.COPY_ID_COMMAND
+        label: E.Z.Messages.COPY_ID_COMMAND
       })
     })
   }, [null == T ? void 0 : null === (t = T.rootCommand) || void 0 === t ? void 0 : t.id]);
   return null == T ? null : (0, i.jsxs)("div", {
-    className: a()(s, I.bar),
-    onContextMenu: f,
-    children: [(0, i.jsx)(u.default, {}), (0, i.jsxs)(o.Text, {
+    className: o()(s, I.bar),
+    onContextMenu: h,
+    children: [(0, i.jsx)(u.Z, {}), (0, i.jsxs)(a.Text, {
       variant: "text-sm/normal",
       color: "text-muted",
-      children: [E.default.Messages.APPLICATION_COMMAND_USER_INSTALL_EDUCATION.format({
-        betaUserLimit: _.APPLICATION_USER_INSTALL_BETA_USER_LIMIT
-      }), E.default.Messages.APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE.format({
-        learnMoreUrl: d.default.getArticleURL(c.HelpdeskArticles.USING_APPS_FAQ)
+      children: [E.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EDUCATION.format({
+        betaUserLimit: d.um
+      }), E.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE.format({
+        learnMoreUrl: _.Z.getArticleURL(c.BhN.USING_APPS_FAQ)
       })]
     })]
   })

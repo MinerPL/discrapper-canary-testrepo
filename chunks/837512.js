@@ -1,5 +1,5 @@
 "use strict";
-var n = r("65183"),
+var n = r(65183),
   i = n.Map,
   o = n.OrderedSet,
   a = n.Record,

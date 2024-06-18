@@ -1,6 +1,5 @@
 "use strict";
-r.r(t);
-var n = r("177624"),
-  a = r("195168"),
-  o = (0, n.default)(a.default, "Promise");
-t.default = o
+var r = n(177624),
+  i = n(195168),
+  a = (0, r.Z)(i.Z, "Promise");
+t.Z = a

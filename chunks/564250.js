@@ -1,5 +1,5 @@
 "use strict";
-var r = n("505388"),
+var r = n(505388),
   i = Object.prototype.hasOwnProperty,
   a = Array.isArray,
   o = {
@@ -34,7 +34,7 @@ var r = n("505388"),
       f = t.charset;
     if (t.charsetSentinel)
       for (p = 0; p < l.length; ++p) 0 === l[p].indexOf("utf8=") && ("utf8=%E2%9C%93" === l[p] ? f = "utf-8" : "utf8=%26%2310003%3B" === l[p] && (f = "iso-8859-1"), d = p, p = l.length);
-    for (p = 0; p < l.length; ++p)
+    for (p = 0; p < l.length; ++p) {
       if (p !== d) {
         var p, h, m, g = l[p],
           _ = g.indexOf("]="),
@@ -45,7 +45,9 @@ var r = n("505388"),
           return String.fromCharCode(parseInt(t, 10))
         });
         g.indexOf("[]=") > -1 && (m = a(m) ? [m] : m), i.call(n, h) ? n[h] = r.combine(n[h], m) : n[h] = m
-      } return n
+      }
+    }
+    return n
   },
   c = function(e, t, n, r) {
     for (var i = r ? t : s(t, n), a = e.length - 1; a >= 0; --a) {
@@ -64,7 +66,7 @@ var r = n("505388"),
     return i
   },
   l = function(e, t, n, r) {
-    if (e) {
+    if (!!e) {
       var a = n.allowDots ? e.replace(/\.([^.[]+)/g, "[$1]") : e,
         o = /(\[[^[\]]*])/g,
         s = n.depth > 0 && /(\[[^[\]]*])/.exec(a),

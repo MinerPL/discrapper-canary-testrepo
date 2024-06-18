@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n("47120"), n("724458");
-var i, r, s, a, o = n("442837"),
-  l = n("570140"),
-  u = n("271383"),
-  d = n("430824"),
-  _ = n("594174"),
-  c = n("981631");
+n(47120), n(724458);
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(271383),
+  _ = n(430824),
+  d = n(594174),
+  c = n(981631);
 let E = [],
   I = {},
   T = null,
-  f = null;
+  h = null;
 
 function S(e) {
   let t = E.indexOf(e);
@@ -20,12 +20,12 @@ function S(e) {
   return !1
 }
 
-function h(e) {
+function f(e) {
   return !(e === c.ME || E.includes(e)) && (E = [...E, e], !0)
 }
-class A extends(i = o.default.Store) {
+class N extends(i = a.ZP.Store) {
   initialize() {
-    this.waitFor(d.default, _.default)
+    this.waitFor(_.Z, d.default)
   }
   setHistorySnapshot(e) {
     T = e
@@ -41,25 +41,25 @@ class A extends(i = o.default.Store) {
   }
   isLurking(e) {
     var t;
-    let n = u.default.isCurrentUserGuest(e),
-      i = null === (t = d.default.getGuild(e)) || void 0 === t ? void 0 : t.isLurker();
+    let n = u.ZP.isCurrentUserGuest(e),
+      i = null === (t = _.Z.getGuild(e)) || void 0 === t ? void 0 : t.isLurker();
     return !!(!n && i)
   }
   getLurkingSource() {
-    return f
+    return h
   }
   getLoadId(e) {
     return null != e ? I[e] : null
   }
 }
-a = "LurkingStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
-  value: a,
+o = "LurkingStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new A(l.default, {
+}) : r[s] = o, t.Z = new N(l.Z, {
   CONNECTION_OPEN: function() {
-    E = Object.values(d.default.getGuilds()).reduce((e, t) => t.isLurker() ? [...e, t.id] : e, [])
+    E = Object.values(_.Z.getGuilds()).reduce((e, t) => t.isLurker() ? [...e, t.id] : e, [])
   },
   GUILD_JOIN: function(e) {
     let {
@@ -70,21 +70,21 @@ a = "LurkingStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, 
       loadId: s
     } = e;
     if (n) {
-      var a, o;
-      switch (h(t), a = t, null != (o = s) && (I[a] = o), i) {
-        case c.JoinGuildSources.MOBILE_GUILD_DISCOVERY:
-          f = {
-            type: c.JoinGuildSources.MOBILE_GUILD_DISCOVERY
+      var o, a;
+      switch (f(t), o = t, null != (a = s) && (I[o] = a), i) {
+        case c.vtS.MOBILE_GUILD_DISCOVERY:
+          h = {
+            type: c.vtS.MOBILE_GUILD_DISCOVERY
           };
           break;
-        case c.JoinGuildSources.DIRECTORY_ENTRY:
-          f = {
-            type: c.JoinGuildSources.DIRECTORY_ENTRY,
+        case c.vtS.DIRECTORY_ENTRY:
+          h = {
+            type: c.vtS.DIRECTORY_ENTRY,
             directoryChannelId: r
           };
           break;
         default:
-          f = null
+          h = null
       }
       return !0
     }
@@ -97,26 +97,26 @@ a = "LurkingStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, 
       let t = new Set([...null != e ? e : []]);
       return [...E].reduce((e, n) => t.has(n) ? e : S(n) || e, !1)
     }(t);
-    return n && (T = null, f = null), n
+    return n && (T = null, h = null), n
   },
   GUILD_STOP_LURKING_FAILURE: function(e) {
     let {
       lurkingGuildId: t,
       lurkingSource: n
     } = e;
-    return h(t), f = n, !0
+    return f(t), h = n, !0
   },
   GUILD_CREATE: function(e) {
     let {
       guild: t
     } = e;
-    return !!(null != t.joined_at && E.includes(t.id)) && (S(t.id), T = null, f = null, !0)
+    return !!(null != t.joined_at && E.includes(t.id)) && (S(t.id), T = null, h = null, !0)
   },
   GUILD_DELETE: function(e) {
     let {
       guild: t
     } = e;
-    return !!E.includes(t.id) && (S(t.id), T = null, f = null, !0)
+    return !!E.includes(t.id) && (S(t.id), T = null, h = null, !0)
   },
   GUILD_MEMBER_ADD: function(e) {
     var t;
@@ -124,7 +124,7 @@ a = "LurkingStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, 
       guildId: n,
       joinedAt: i,
       user: r
-    } = e, s = r.id === (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
-    return !!(s && null != i && E.includes(n)) && (S(n), T = null, f = null, !0)
+    } = e, s = r.id === (null === (t = d.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
+    return !!(s && null != i && E.includes(n)) && (S(n), T = null, h = null, !0)
   }
 })

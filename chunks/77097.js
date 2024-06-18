@@ -1,123 +1,123 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return C
+n.d(t, {
+  Z: function() {
+    return p
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
-  o = n("442837"),
-  l = n("481060"),
-  u = n("749210"),
-  d = n("906732"),
-  _ = n("977392"),
-  c = n("706454"),
-  E = n("246946"),
-  I = n("259580"),
-  T = n("785717"),
-  f = n("621853"),
-  S = n("335191"),
-  h = n("171368"),
-  A = n("659101"),
-  m = n("228168"),
-  N = n("981631"),
-  p = n("689938"),
-  O = n("777180"),
-  R = n("795197");
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(442837),
+  l = n(481060),
+  u = n(749210),
+  _ = n(906732),
+  d = n(977392),
+  c = n(706454),
+  E = n(246946),
+  I = n(259580),
+  T = n(785717),
+  h = n(621853),
+  S = n(335191),
+  f = n(171368),
+  N = n(659101),
+  A = n(228168),
+  m = n(981631),
+  O = n(689938),
+  R = n(580737),
+  C = n(379916);
 
-function C(e) {
+function p(e) {
   var t, n;
-  let a, C, {
+  let s, p, {
       userId: g,
       channelId: L,
       guild: v,
       theme: D,
       onClose: M,
-      className: y
+      className: P
     } = e,
     {
-      analyticsLocations: P
-    } = (0, d.default)(),
+      analyticsLocations: y
+    } = (0, _.ZP)(),
     {
       messageId: U,
       roleId: b
-    } = (0, T.useUserProfileAnalyticsContext)(),
-    G = (0, _.default)(v, g, L),
-    [w, B] = r.useState(new Set),
-    k = (0, o.useStateFromStores)([f.default], () => f.default.getUserProfile(g)),
-    V = null !== (t = null == k ? void 0 : k.connectedAccounts) && void 0 !== t ? t : [],
-    x = null !== (n = null == k ? void 0 : k.applicationRoleConnections) && void 0 !== n ? n : [],
-    F = (0, o.useStateFromStores)([E.default], () => E.default.hidePersonalInformation),
-    H = (0, o.useStateFromStores)([c.default], () => c.default.locale);
+    } = (0, T.KZ)(),
+    G = (0, d.Z)(v, g, L),
+    [w, k] = r.useState(new Set),
+    B = (0, a.e7)([h.Z], () => h.Z.getUserProfile(g)),
+    x = null !== (t = null == B ? void 0 : B.connectedAccounts) && void 0 !== t ? t : [],
+    V = null !== (n = null == B ? void 0 : B.applicationRoleConnections) && void 0 !== n ? n : [],
+    Z = (0, a.e7)([E.Z], () => E.Z.hidePersonalInformation),
+    H = (0, a.e7)([c.default], () => c.default.locale);
   if (r.useEffect(() => {
-      (null == v ? void 0 : v.id) != null && (null == G ? void 0 : G.id) != null && u.default.fetchGuildRoleConnectionsEligibility(v.id, G.id).then(e => {
+      if ((null == v ? void 0 : v.id) != null && (null == G ? void 0 : G.id) != null) u.Z.fetchGuildRoleConnectionsEligibility(v.id, G.id).then(e => {
         let t = new Set;
         for (let n of e)
           for (let {
               connection_type: e
             }
             of n) t.add(e);
-        B(t)
+        k(t)
       })
-    }, [null == v ? void 0 : v.id, null == G ? void 0 : G.id]), F || null == G) return null;
-  let Y = Array.from(w).map(e => {
-    let t = V.find(t => t.type === e);
-    return null == t ? null : (0, i.jsx)(S.ConnectedUserAccount, {
+    }, [null == v ? void 0 : v.id, null == G ? void 0 : G.id]), Z || null == G) return null;
+  let F = Array.from(w).map(e => {
+    let t = x.find(t => t.type === e);
+    return null == t ? null : (0, i.jsx)(S.E3, {
       connectedAccount: t,
       theme: D,
       locale: H,
       userId: g
     }, "".concat(t.type, ":").concat(t.id))
   }).filter(e => null != e);
-  return (Y.length > 0 && (a = (0, i.jsxs)(i.Fragment, {
+  return (F.length > 0 && (s = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(l.Heading, {
       variant: "eyebrow",
-      className: R.title,
-      children: p.default.Messages.CONNECTIONS
+      className: C.title,
+      children: O.Z.Messages.CONNECTIONS
     }), (0, i.jsxs)("div", {
-      className: s()(O.connectionsContainer, y),
-      children: [Y, (0, i.jsxs)(l.Clickable, {
+      className: o()(R.connectionsContainer, P),
+      children: [F, (0, i.jsxs)(l.Clickable, {
         onClick: function() {
-          (0, h.openUserProfileModal)({
+          (0, f.openUserProfileModal)({
             userId: g,
             channelId: L,
             guildId: null == v ? void 0 : v.id,
             messageId: U,
             roleId: b,
-            section: m.UserProfileSections.USER_INFO_CONNECTIONS,
-            sourceAnalyticsLocations: P,
+            section: A.oh.USER_INFO_CONNECTIONS,
+            sourceAnalyticsLocations: y,
             analyticsLocation: {
-              section: N.AnalyticsSections.PROFILE_POPOUT
+              section: m.jXE.PROFILE_POPOUT
             }
           }), null == M || M()
         },
-        className: O.connections,
+        className: R.connections,
         children: [(0, i.jsx)(l.Text, {
           variant: "text-md/semibold",
           color: "interactive-active",
-          className: O.connectionsText,
-          children: p.default.Messages.CONNECTIONS_ROLE_POPOUT_VIEW_ALL
-        }), (0, i.jsx)(I.default, {
-          direction: I.default.Directions.RIGHT,
-          className: O.connectionsCaret
+          className: R.connectionsText,
+          children: O.Z.Messages.CONNECTIONS_ROLE_POPOUT_VIEW_ALL
+        }), (0, i.jsx)(I.Z, {
+          direction: I.Z.Directions.RIGHT,
+          className: R.connectionsCaret
         })]
       })]
     })]
-  })), x.length > 0 && (C = (0, i.jsxs)(i.Fragment, {
+  })), V.length > 0 && (p = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(l.Heading, {
       variant: "eyebrow",
-      className: R.title,
-      children: p.default.Messages.APPS
+      className: C.title,
+      children: O.Z.Messages.APPS
     }), (0, i.jsx)("div", {
-      className: s()(O.connectionsContainer, y),
-      children: x.map(e => (0, i.jsx)(S.ConnectedApplicationUserRoleAccount, {
+      className: o()(R.connectionsContainer, P),
+      children: V.map(e => (0, i.jsx)(S.tH, {
         applicationRoleConnection: e,
         locale: H
       }, e.application.id))
     })]
-  })), null == a && null == C) ? null : (0, i.jsxs)(A.default, {
-    children: [C, a]
+  })), null == s && null == p) ? null : (0, i.jsxs)(N.Z, {
+    children: [p, s]
   })
 }

@@ -1,6 +1,5 @@
 "use strict";
-r.r(t);
-var n = r("195168");
-t.default = function() {
-  return n.default.Date.now()
+var r = n(195168);
+t.Z = function() {
+  return r.Z.Date.now()
 }

@@ -1,23 +1,22 @@
 "use strict";
-n.r(t);
-var i, r, s, a, o = n("442837"),
-  l = n("570140"),
-  u = n("931619"),
-  d = n("981631");
-let _ = d.NetworkConnectionTypes.UNKNOWN,
-  c = d.NetworkConnectionSpeeds.UNKNOWN,
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(931619),
+  _ = n(981631);
+let d = _.IWh.UNKNOWN,
+  c = _.IyS.UNKNOWN,
   E = null;
 
 function I(e) {
   var t;
-  _ = null != e.type ? e.type : d.NetworkConnectionTypes.UNKNOWN, c = null !== (t = e.effectiveSpeed) && void 0 !== t ? t : d.NetworkConnectionSpeeds.UNKNOWN, E = e.serviceProvider, f.emitChange()
+  d = null != e.type ? e.type : _.IWh.UNKNOWN, c = null !== (t = e.effectiveSpeed) && void 0 !== t ? t : _.IyS.UNKNOWN, E = e.serviceProvider, h.emitChange()
 }
-class T extends(a = o.default.Store) {
+class T extends(o = a.ZP.Store) {
   initialize() {
-    u.default.getNetworkInformation().then(I), u.default.addChangeCallback(I)
+    u.Z.getNetworkInformation().then(I), u.Z.addChangeCallback(I)
   }
   getType() {
-    return _
+    return d
   }
   getEffectiveConnectionSpeed() {
     return c
@@ -32,5 +31,5 @@ s = "NetworkStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r, 
   configurable: !0,
   writable: !0
 }) : i[r] = s;
-let f = new T(l.default, {});
-t.default = f
+let h = new T(l.Z, {});
+t.Z = h

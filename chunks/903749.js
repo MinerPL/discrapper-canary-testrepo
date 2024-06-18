@@ -1,22 +1,22 @@
 "use strict";
-t.r(l), t.d(l, {
-  default: function() {
+t.d(n, {
+  Z: function() {
     return u
   }
 });
-var a = t("512722"),
-  s = t.n(a),
-  i = t("442837"),
-  n = t("339085"),
-  o = t("633302");
+var l = t(512722),
+  a = t.n(l),
+  s = t(442837),
+  i = t(339085),
+  r = t(633302);
 
 function u(e) {
   let {
-    emojiId: l,
+    emojiId: n,
     emojiName: t
-  } = e, a = (0, i.useStateFromStores)([n.default], () => null != l ? n.default.getCustomEmojiById(l) : null);
-  if (null != a || null != t) {
-    if (null == l) return s()(null != t, "emojiName must be defined if emojiId is not defined"), o.default.convertSurrogateToName(t, !1);
-    else return null == a ? void 0 : a.name
+  } = e, l = (0, s.e7)([i.Z], () => null != n ? i.Z.getCustomEmojiById(n) : null);
+  if (null != l || null != t) {
+    if (null == n) return a()(null != t, "emojiName must be defined if emojiId is not defined"), r.ZP.convertSurrogateToName(t, !1);
+    else return null == l ? void 0 : l.name
   }
 }

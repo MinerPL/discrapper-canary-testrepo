@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  createInterpolator: function() {
+n.d(t, {
+  m: function() {
     return a
   }
 });
-var r = n("239189"),
-  i = n("217348"),
+var r = n(239189),
+  i = n(217348),
   a = function(e, t, n) {
     if (i.is.fun(e)) return e;
     if (i.is.arr(e)) return a({

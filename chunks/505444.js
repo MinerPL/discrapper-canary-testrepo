@@ -138,8 +138,8 @@ e.exports = {
   createDangerousStringForStyles: function(e) {},
   setValueForStyles: function(e, t, n) {
     var i = e.style;
-    for (var a in t)
-      if (t.hasOwnProperty(a)) {
+    for (var a in t) {
+      if (!!t.hasOwnProperty(a)) {
         var s, u, l, d = 0 === a.indexOf("--");
         var f = (s = a, u = t[a], l = d, null == u || "boolean" == typeof u || "" === u ? "" : l || "number" != typeof u || 0 === u || o.hasOwnProperty(s) && o[s] ? ("" + u).trim() : u + "px");
         if ("float" === a && (a = "cssFloat"), d) i.setProperty(a, f);
@@ -151,5 +151,6 @@ e.exports = {
           else i[a] = ""
         }
       }
+    }
   }
 }

@@ -1,27 +1,27 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
+t.d(s, {
+  Z: function() {
     return o
   }
-}), s("653041");
-var a = s("442837"),
-  l = s("977258"),
-  n = s("958832"),
-  i = s("592125"),
-  r = s("981631");
+}), t(653041);
+var n = t(442837),
+  i = t(977258),
+  l = t(958832),
+  a = t(592125),
+  r = t(981631);
 
 function o(e) {
-  return (0, a.useStateFromStoresArray)([n.default, i.default], () => {
-    var t;
-    let s = (null !== (t = n.default.getTopChannelIds(e.id)) && void 0 !== t ? t : []).map(e => i.default.getChannel(e)).filter(t => null == t || t.id !== e.rulesChannelId),
-      a = [],
+  return (0, n.Wu)([l.Z, a.Z], () => {
+    var s;
+    let t = (null !== (s = l.Z.getTopChannelIds(e.id)) && void 0 !== s ? s : []).map(e => a.Z.getChannel(e)).filter(s => null == s || s.id !== e.rulesChannelId),
+      n = [],
       o = 0;
-    return s.forEach(e => {
-      if (e.type === r.ChannelTypes.GUILD_ANNOUNCEMENT) {
+    return t.forEach(e => {
+      if (e.type === r.d4z.GUILD_ANNOUNCEMENT) {
         if (o >= 2) return;
         o++
       }
-      a.length < 5 && !a.includes(e) && a.push(e)
-    }), a.sort((t, s) => ((0, l.canChannelBeDefault)(e.id, s.id) ? 1 : 0) - ((0, l.canChannelBeDefault)(e.id, t.id) ? 1 : 0)), a
+      n.length < 5 && !n.includes(e) && n.push(e)
+    }), n.sort((s, t) => ((0, i.s)(e.id, t.id) ? 1 : 0) - ((0, i.s)(e.id, s.id) ? 1 : 0)), n
   })
 }

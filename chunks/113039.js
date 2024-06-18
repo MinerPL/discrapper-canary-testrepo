@@ -1,28 +1,28 @@
 "use strict";
-n.r(t), n.d(t, {
-  getContent: function() {
-    return f
-  },
-  memoizeMessageProps: function() {
+n.d(t, {
+  HR: function() {
     return S
+  },
+  L5: function() {
+    return h
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
-  o = n("653603"),
-  l = n.n(o),
-  u = n("902704"),
-  d = n("453687"),
-  _ = n("534761"),
-  c = n("981631"),
-  E = n("689938"),
-  I = n("946278"),
-  T = n("822545");
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(653603),
+  l = n.n(a),
+  u = n(902704),
+  _ = n(453687),
+  d = n(534761),
+  c = n(981631),
+  E = n(689938),
+  I = n(946278),
+  T = n(822545);
 
-function f(e, t) {
-  return e.type === c.MessageTypes.VOICE_HANGOUT_INVITE ? "" : e.hasFlag(c.MessageFlags.SOURCE_MESSAGE_DELETED) ? E.default.Messages.SOURCE_MESSAGE_DELETED : t
+function h(e, t) {
+  return e.type === c.uaV.VOICE_HANGOUT_INVITE ? "" : e.hasFlag(c.iLy.SOURCE_MESSAGE_DELETED) ? E.Z.Messages.SOURCE_MESSAGE_DELETED : t
 }
 
 function S(e, t) {
@@ -30,40 +30,40 @@ function S(e, t) {
   let {
     message: r
   } = t, {
-    message: a
+    message: s
   } = e;
-  return (0, u.default)(e, t, ["message"]) && r.content === a.content && r.state === a.state && (null === (n = r.editedTimestamp) || void 0 === n ? void 0 : n.toString()) === (null === (i = a.editedTimestamp) || void 0 === i ? void 0 : i.toString())
+  return (0, u.Z)(e, t, ["message"]) && r.content === s.content && r.state === s.state && (null === (n = r.editedTimestamp) || void 0 === n ? void 0 : n.toString()) === (null === (i = s.editedTimestamp) || void 0 === i ? void 0 : i.toString())
 }
-t.default = r.memo(function(e) {
+t.ZP = r.memo(function(e) {
   var t;
   let {
     className: n,
-    message: a,
-    children: o,
+    message: s,
+    children: a,
     content: u,
     onUpdate: S,
-    contentRef: h
-  } = e, A = a.isEdited(), m = a.state === c.MessageStates.SEND_FAILED, N = a.state === c.MessageStates.SENDING, p = a.isCommandType(), O = null === (t = a.editedTimestamp) || void 0 === t ? void 0 : t.toString(), C = r.useRef(!1);
+    contentRef: f
+  } = e, N = s.isEdited(), A = s.state === c.yb.SEND_FAILED, m = s.state === c.yb.SENDING, O = s.isCommandType(), R = null === (t = s.editedTimestamp) || void 0 === t ? void 0 : t.toString(), C = r.useRef(!1);
   return r.useLayoutEffect(() => {
     C.current ? null != S && S() : C.current = !0
-  }, [S, a.content, u, O, o]), (0, i.jsxs)("div", {
-    id: (0, d.getMessageContentId)(a),
-    ref: h,
-    className: s()(n, I.markup, {
+  }, [S, s.content, u, R, a]), (0, i.jsxs)("div", {
+    id: (0, _.ut)(s),
+    ref: f,
+    className: o()(n, I.markup, {
       [T.messageContent]: !0,
-      [T.isSending]: N && !p,
-      [T.markupRtl]: "rtl" === l()(a.content),
-      [T.isFailed]: m,
-      [T.isUnsupported]: a.isUnsupported
+      [T.isSending]: m && !O,
+      [T.markupRtl]: "rtl" === l()(s.content),
+      [T.isFailed]: A,
+      [T.isUnsupported]: s.isUnsupported
     }),
-    children: [null != o ? o : f(a, u), A && null != a.editedTimestamp && (0, i.jsxs)(i.Fragment, {
-      children: [" ", (0, i.jsx)(_.default, {
-        timestamp: a.editedTimestamp,
+    children: [null != a ? a : h(s, u), N && null != s.editedTimestamp && (0, i.jsxs)(i.Fragment, {
+      children: [" ", (0, i.jsx)(d.Z, {
+        timestamp: s.editedTimestamp,
         isEdited: !0,
         isInline: !1,
         children: (0, i.jsxs)("span", {
           className: T.edited,
-          children: ["(", E.default.Messages.MESSAGE_EDITED, ")"]
+          children: ["(", E.Z.Messages.MESSAGE_EDITED, ")"]
         })
       })]
     })]

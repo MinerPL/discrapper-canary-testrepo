@@ -1,5 +1,5 @@
 "use strict";
-var n = r("207549").getPunctuation(),
+var n = r(207549).getPunctuation(),
   i = "['‘’]",
   o = "\\s|(?![_])" + n,
   a = RegExp("^(?:" + o + ")*(?:" + i + "|(?!" + o + ").)*(?:(?!" + o + ").)"),

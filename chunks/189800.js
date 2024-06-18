@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  ExperimentRPCServerAnalyticsKillswitch: function() {
+n.d(t, {
+  N: function() {
     return i
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-01_rpc_analytics_killswitch",
   label: "RPC Server Analytics Killswitch",

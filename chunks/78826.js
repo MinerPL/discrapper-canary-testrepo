@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
-  QuestsAsset: function() {
+n.d(t, {
+  Fl: function() {
+    return _
+  },
+  d7: function() {
     return d
   },
-  QuestsAssetContextProvider: function() {
+  p: function() {
     return u
-  },
-  useQuestsAssetsLoadState: function() {
-    return _
   }
-}), n("411104"), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  a = n("374470"),
-  s = n("960048");
-let o = r.createContext({
+}), n(411104), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(374470),
+  o = n(960048);
+let a = r.createContext({
   registerAsset: () => {},
   unregisterAsset: () => {},
   hasError: !1,
@@ -22,7 +22,7 @@ let o = r.createContext({
 });
 
 function l(e) {
-  return (0, a.isElement)(e, HTMLImageElement) ? e.complete : !(0, a.isElement)(e, HTMLVideoElement) || e.readyState >= 2
+  return (0, s.k)(e, HTMLImageElement) ? e.complete : !(0, s.k)(e, HTMLVideoElement) || e.readyState >= 2
 }
 
 function u(e) {
@@ -30,7 +30,7 @@ function u(e) {
     children: t,
     isPreview: n = !1,
     sentrySource: u
-  } = e, [d, _] = r.useState(!1), [c, E] = r.useState(new Set), [I, T] = r.useState(!1), f = r.useRef(!1);
+  } = e, [_, d] = r.useState(!1), [c, E] = r.useState(new Set), [I, T] = r.useState(!1), h = r.useRef(!1);
   r.useEffect(() => {
     let e = new Set;
     for (let t of c) !l(t) && e.add(t);
@@ -41,80 +41,80 @@ function u(e) {
         assetNode: t,
         nodeId: i,
         errorPrefix: r,
-        errorMessage: o
+        errorMessage: a
       } = e;
       if (!n && null != u) {
-        var l, d, c;
-        s.default.captureException(Error("".concat(r, ": ").concat(null != o ? "".concat(o, ", ") : "").concat((l = t, (0, a.isElement)(l, HTMLImageElement) ? l.getAttribute("src") : (0, a.isElement)(l, HTMLVideoElement) ? null !== (c = null === (d = l.querySelectorAll("source")[0]) || void 0 === d ? void 0 : d.getAttribute("src")) && void 0 !== c ? c : "video" : l.tagName), ", ").concat(i)), {
+        var l, _, c;
+        o.Z.captureException(Error("".concat(r, ": ").concat(null != a ? "".concat(a, ", ") : "").concat((l = t, (0, s.k)(l, HTMLImageElement) ? l.getAttribute("src") : (0, s.k)(l, HTMLVideoElement) ? null !== (c = null === (_ = l.querySelectorAll("source")[0]) || void 0 === _ ? void 0 : _.getAttribute("src")) && void 0 !== c ? c : "video" : l.tagName), ", ").concat(i)), {
           tags: {
             source: u
           }
-        }), _(!0)
+        }), d(!0)
       }
     }, [n, u]),
-    h = r.useCallback(e => {
+    f = r.useCallback(e => {
       E(t => {
         let n = new Set(t);
         return n.delete(e), n
       })
     }, []),
-    A = r.useCallback((e, t) => {
+    N = r.useCallback((e, t) => {
       var n;
       if (T(!0), l(e)) return;
       E(t => {
         let n = new Set(t);
         return n.add(e), n
       });
-      let i = (n = e, (0, a.isElement)(n, HTMLImageElement) ? "load" : (0, a.isElement)(n, HTMLVideoElement) ? "canplaythrough" : "load");
+      let i = (n = e, (0, s.k)(n, HTMLImageElement) ? "load" : (0, s.k)(n, HTMLVideoElement) ? "canplaythrough" : "load");
       e.addEventListener(i, function t() {
-        h(e), e.removeEventListener(i, t)
+        f(e), e.removeEventListener(i, t)
       });
       e.addEventListener("error", function n(i) {
-        h(e), S({
+        f(e), S({
           assetNode: e,
           nodeId: t,
           errorPrefix: "Error loading asset",
           errorMessage: "message" in i ? i.message : null
         }), e.removeEventListener("error", n)
       })
-    }, [S, h]),
-    m = r.useMemo(() => c.size > 0 || !I, [I, c]);
+    }, [S, f]),
+    A = r.useMemo(() => c.size > 0 || !I, [I, c]);
   r.useEffect(() => {
-    !m && (f.current = !0)
-  }, [m]);
-  let N = r.useMemo(() => ({
-    registerAsset: A,
-    unregisterAsset: h,
-    hasError: d,
-    isLoading: m && !f.current
-  }), [A, h, d, m]);
-  return (0, i.jsx)(o.Provider, {
-    value: N,
+    !A && (h.current = !0)
+  }, [A]);
+  let m = r.useMemo(() => ({
+    registerAsset: N,
+    unregisterAsset: f,
+    hasError: _,
+    isLoading: A && !h.current
+  }), [N, f, _, A]);
+  return (0, i.jsx)(a.Provider, {
+    value: m,
     children: t
   })
 }
 
-function d(e) {
+function _(e) {
   let {
     id: t,
     children: n
   } = e, {
     registerAsset: i,
-    unregisterAsset: a
-  } = r.useContext(o), s = r.useRef(null);
+    unregisterAsset: s
+  } = r.useContext(a), o = r.useRef(null);
   return r.useEffect(() => {
-    let e = s.current;
+    let e = o.current;
     return null != e && i(e, t), () => {
-      null != e && a(e)
+      null != e && s(e)
     }
-  }, [i, a, t]), n(s)
+  }, [i, s, t]), n(o)
 }
 
-function _() {
+function d() {
   let {
     hasError: e,
     isLoading: t
-  } = r.useContext(o);
+  } = r.useContext(a);
   return {
     hasError: e,
     isLoading: t

@@ -1,60 +1,60 @@
 "use strict";
-a.r(t), a.d(t, {
-  useExtractEmbedPreview: function() {
+n.d(t, {
+  M: function() {
     return o
   }
-}), a("47120"), a("653041");
-var s = a("470079"),
-  n = a("392711"),
-  l = a("591759"),
-  r = a("158222"),
-  i = a("154135");
+}), n(47120), n(653041);
+var s = n(470079),
+  l = n(392711),
+  a = n(591759),
+  i = n(158222),
+  r = n(154135);
 
-function o(e, t, a) {
+function o(e, t, n) {
   let o = s.useRef(new Map),
-    [, d] = s.useState(null),
-    [u, c] = s.useState(null),
-    m = s.useMemo(() => n.debounce((e, a) => {
-      if (null == a || e || 0 === t) return;
-      let s = a.match(l.default.URL_REGEX);
+    [, c] = s.useState(null),
+    [d, u] = s.useState(null),
+    h = s.useMemo(() => l.debounce((e, n) => {
+      if (null == n || e || 0 === t) return;
+      let s = n.match(a.Z.URL_REGEX);
       if (null == s || 0 === s.length) {
-        o.current = new Map, c(null);
+        o.current = new Map, u(null);
         return
       }
-      c(n.uniq(s).slice(0, i.MAX_THUMBNAIL_COUNT))
+      u(l.uniq(s).slice(0, r.Yh))
     }, 1e3), [t, o]);
   s.useEffect(() => {
-    m(e, a)
-  }, [m, a, e]), s.useEffect(() => {
+    h(e, n)
+  }, [h, n, e]), s.useEffect(() => {
     (async function e(e, t) {
       if (null == t) return;
-      let a = e.current,
-        s = new Set(a.keys()),
-        n = t.filter(e => !(null == s ? void 0 : s.has(e)));
-      if (0 !== n.length) try {
-        let t = await r.unfurlEmbedUrl(n);
-        e.current = function(e, t, a) {
-          return null == a || a.forEach(a => {
+      let n = e.current,
+        s = new Set(n.keys()),
+        l = t.filter(e => !(null == s ? void 0 : s.has(e)));
+      if (0 !== l.length) try {
+        let t = await i.V6(l);
+        e.current = function(e, t, n) {
+          return null == n || n.forEach(n => {
             let s = function(e, t) {
               return e.find(e => (null == t ? void 0 : t.url) != null && e.startsWith(t.url))
-            }(t, a);
+            }(t, n);
             if (null == s) return;
-            let n = e.get(s);
-            null == n ? e.set(s, [a]) : n.push(a)
+            let l = e.get(s);
+            null == l ? e.set(s, [n]) : l.push(n)
           }), e
-        }(new Map(a), n, null == t ? void 0 : t.embeds), d({})
+        }(new Map(n), l, null == t ? void 0 : t.embeds), c({})
       } catch (e) {}
-    })(o, u)
-  }, [u]);
-  let h = o.current,
-    f = s.useMemo(() => {
+    })(o, d)
+  }, [d]);
+  let m = o.current,
+    g = s.useMemo(() => {
       let e = [];
-      return null == u || u.forEach(t => {
-        let a = h.get(t);
-        null != a && e.push(...a)
+      return null == d || d.forEach(t => {
+        let n = m.get(t);
+        null != n && e.push(...n)
       }), e.length > 0 ? e : null
-    }, [u, h]);
+    }, [d, m]);
   return {
-    embeds: e ? null : f
+    embeds: e ? null : g
   }
 }

@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 });
-var i = n("987170");
+var i = n(987170);
 
 function r(e) {
-  let t = (0, i.default)({
+  let t = (0, i.Z)({
     ...e,
     id: "".concat(e.id, "_existing_users"),
     label: "".concat(e.label, " - Existing Users")
   });
   return {
     existingUsers: t,
-    newUsers: (0, i.default)({
+    newUsers: (0, i.Z)({
       ...e,
       id: "".concat(e.id, "_new_users"),
       label: "".concat(e.label, " - New Users")

@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  isActivityParticipantCurrentUserCurrentSession: function() {
-    return l
+n.d(t, {
+  J: function() {
+    return r
   }
 });
-var a = n("314897");
+var i = n(314897);
 
-function l(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.default,
+function r(e) {
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.default,
     n = t.getId(),
-    l = t.getSessionId();
-  return e.userId === n && (null == e.sessionId || void 0 === e.sessionId || e.sessionId === l || !1)
+    r = t.getSessionId();
+  return e.userId === n && (null == e.sessionId || void 0 === e.sessionId || e.sessionId === r || !1)
 }

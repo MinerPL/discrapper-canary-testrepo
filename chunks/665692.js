@@ -1,27 +1,27 @@
 "use strict";
-n.r(t), n.d(t, {
-  CHANNEL_SENTINEL: function() {
-    return r
-  },
-  COMMAND_SENTINEL: function() {
+n.d(t, {
+  GI: function() {
     return l
   },
-  EMOJI_SENTINEL: function() {
+  Iv: function() {
     return s
   },
-  MENTION_SENTINEL: function() {
+  ME: function() {
     return i
   },
-  REACTION_END_SENTINEL: function() {
+  a4: function() {
     return o
   },
-  REACTION_START_SENTINEL: function() {
+  jp: function() {
     return a
+  },
+  zy: function() {
+    return r
   }
 });
 let i = "@",
   r = "#",
   s = ":",
-  a = "+:",
-  o = ":",
+  o = "+:",
+  a = ":",
   l = "/"

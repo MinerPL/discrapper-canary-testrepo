@@ -1,8 +1,8 @@
 "use strict";
-var r = n("875604"),
-  a = n("537828"),
-  o = Function.prototype;
+var r = n(875604),
+  o = n(537828),
+  a = Function.prototype;
 e.exports = function(e) {
   var t = e.bind;
-  return e === o || r(o, e) && t === o.bind ? a : t
+  return e === a || r(a, e) && t === a.bind ? o : t
 }

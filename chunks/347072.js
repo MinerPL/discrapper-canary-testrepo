@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return c
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("803997"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("481060"),
-  o = n("889161"),
-  l = n("729285"),
-  u = n("343747"),
-  d = n("689938"),
-  _ = n("990037");
+  o = n(481060),
+  a = n(889161),
+  l = n(729285),
+  u = n(343747),
+  _ = n(689938),
+  d = n(630916);
 
 function c(e) {
   let {
@@ -22,29 +22,29 @@ function c(e) {
     ...r
   } = e, {
     canCreateExpressions: c
-  } = (0, o.useManageResourcePermissions)(t);
-  return (0, i.jsx)(a.Tooltip, {
-    text: d.default.Messages.SOUNDBOARD_SOUND_UPLOAD_BUTTON_DISABLED,
+  } = (0, a.XJ)(t);
+  return (0, i.jsx)(o.Tooltip, {
+    text: _.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_BUTTON_DISABLED,
     shouldShow: !c,
     children: e => (0, i.jsx)("li", {
-      className: _.soundButtonWrapper,
+      className: d.soundButtonWrapper,
       ...e,
-      children: (0, i.jsxs)(a.ClickableContainer, {
+      children: (0, i.jsxs)(o.ClickableContainer, {
         ...r,
-        "aria-label": d.default.Messages.SOUNDBOARD_UPLOAD_SOUND_FOR_GUILD.format({
+        "aria-label": _.Z.Messages.SOUNDBOARD_UPLOAD_SOUND_FOR_GUILD.format({
           guildName: t.name
         }),
-        className: s()(_.soundAddButton, {
-          [_.focused]: n,
-          [_.disabled]: !c
+        className: s()(d.soundAddButton, {
+          [d.focused]: n,
+          [d.disabled]: !c
         }),
-        onClick: () => (0, u.default)(t.id),
-        children: [(0, i.jsx)(l.default, {
-          className: _.soundAddIcon
-        }), (0, i.jsx)(a.Text, {
+        onClick: () => (0, u.Z)(t.id),
+        children: [(0, i.jsx)(l.Z, {
+          className: d.soundAddIcon
+        }), (0, i.jsx)(o.Text, {
           variant: "text-xs/normal",
           color: c ? "header-primary" : "text-muted",
-          children: d.default.Messages.SOUNDBOARD_SOUND_ADD_SOUND
+          children: _.Z.Messages.SOUNDBOARD_SOUND_ADD_SOUND
         })]
       })
     })

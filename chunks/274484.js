@@ -1,46 +1,46 @@
 "use strict";
-n.r(e), n.d(e, {
-  addMetadataToStackFrames: function() {
+n.d(e, {
+  CC: function() {
     return o
   },
-  stripMetadataFromStackFrames: function() {
-    return s
+  GY: function() {
+    return a
   }
 });
-var r = n("648238");
+var r = n(24716);
 let i = new Map,
-  a = new Set;
+  s = new Set;
 
-function o(t, e) {
+function a(t, e) {
   try {
     e.exception.values.forEach(e => {
-      if (e.stacktrace)
-        for (let s of e.stacktrace.frames || []) {
-          var n, o;
-          if (!s.filename) continue;
-          let e = (n = t, o = s.filename, ! function(t) {
-            if (r.GLOBAL_OBJ._sentryModuleMetadata)
-              for (let e of Object.keys(r.GLOBAL_OBJ._sentryModuleMetadata)) {
-                let n = r.GLOBAL_OBJ._sentryModuleMetadata[e];
-                if (!a.has(e)) {
-                  for (let r of (a.add(e), t(e).reverse()))
+      if (!!e.stacktrace)
+        for (let o of e.stacktrace.frames || []) {
+          var n, a;
+          if (!o.filename) continue;
+          let e = (n = t, a = o.filename, ! function(t) {
+            if (!!r.n2._sentryModuleMetadata)
+              for (let e of Object.keys(r.n2._sentryModuleMetadata)) {
+                let n = r.n2._sentryModuleMetadata[e];
+                if (!s.has(e)) {
+                  for (let r of (s.add(e), t(e).reverse()))
                     if (r.filename) {
                       i.set(r.filename, n);
                       break
                     }
                 }
               }
-          }(n), i.get(o));
-          e && (s.module_metadata = e)
+          }(n), i.get(a));
+          e && (o.module_metadata = e)
         }
     })
   } catch (t) {}
 }
 
-function s(t) {
+function o(t) {
   try {
     t.exception.values.forEach(t => {
-      if (t.stacktrace)
+      if (!!t.stacktrace)
         for (let e of t.stacktrace.frames || []) delete e.module_metadata
     })
   } catch (t) {}

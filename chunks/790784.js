@@ -1,10 +1,10 @@
-var r = n("459584"),
-  i = n("957578").Buffer,
-  a = n("737372"),
-  o = n("222822"),
-  s = n("764900"),
-  u = n("458340"),
-  c = n("245413");
+var r = n(459584),
+  i = n(957578).Buffer,
+  a = n(737372),
+  o = n(222822),
+  s = n(764900),
+  u = n(458340),
+  c = n(245413);
 
 function l(e, t, n) {
   s.call(this), this._cache = new d, this._last = void 0, this._cipher = new u.AES(t), this._prev = i.from(n), this._mode = e, this._autopadding = !0
@@ -13,7 +13,7 @@ function l(e, t, n) {
 function d() {
   this.cache = i.allocUnsafe(0)
 }
-n("689118")(l, s), l.prototype._update = function(e) {
+n(689118)(l, s), l.prototype._update = function(e) {
   this._cache.add(e);
   for (var t, n, r = []; t = this._cache.get(this._autopadding);) n = this._mode.decrypt(this, t), r.push(n);
   return i.concat(r)

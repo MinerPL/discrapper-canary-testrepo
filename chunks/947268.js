@@ -1,5 +1,5 @@
 "use strict";
-var n, i = r("114912"),
+var n, i = r(114912),
   o = "Unknown",
   a = {
     "Mac OS": "Mac OS X"

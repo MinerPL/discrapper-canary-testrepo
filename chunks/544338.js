@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return i
   }
 });
-var r = n("607033");
+var r = n(607033);
 
 function i(e) {
-  return Object.assign({}, (0, r.default)(), e)
+  return Object.assign({}, (0, r.Z)(), e)
 }

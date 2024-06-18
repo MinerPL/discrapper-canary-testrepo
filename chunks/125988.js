@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("470079"),
-  r = n("442837"),
-  s = n("607070"),
-  a = n("166625"),
-  o = n("271383"),
-  l = n("594174"),
-  u = n("451478"),
-  d = n("768581"),
-  _ = n("660097");
-t.default = e => {
+n(47120);
+var i = n(470079),
+  r = n(442837),
+  s = n(607070),
+  o = n(166625),
+  a = n(271383),
+  l = n(594174),
+  u = n(451478),
+  _ = n(768581),
+  d = n(660097);
+t.Z = e => {
   var t;
   let {
     user: n,
@@ -17,28 +17,28 @@ t.default = e => {
     size: E,
     animateOnHover: I = !1,
     showPending: T = !1,
-    showTryItOut: f = !1,
+    showTryItOut: h = !1,
     avatarDecorationOverride: S
-  } = e, [h, A] = i.useState(!1), m = (0, r.useStateFromStores)([s.default], () => s.default.useReducedMotion), N = (0, r.useStateFromStores)([u.default], () => u.default.isFocused()), O = (0, r.useStateFromStores)([o.default], () => null != c && null != n ? o.default.getMember(c, n.id) : null), [p, R] = (0, r.useStateFromStoresArray)([l.default], () => {
+  } = e, [f, N] = i.useState(!1), A = (0, r.e7)([s.Z], () => s.Z.useReducedMotion), m = (0, r.e7)([u.Z], () => u.Z.isFocused()), O = (0, r.e7)([a.ZP], () => null != c && null != n ? a.ZP.getMember(c, n.id) : null), [R, C] = (0, r.Wu)([l.default], () => {
     var e;
     return [null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.id, l.default.getUser(null == n ? void 0 : n.id)]
-  }), C = null == O ? null == R ? void 0 : R.avatarDecoration : null === O.avatarDecoration ? null : null !== (t = O.avatarDecoration) && void 0 !== t ? t : null == R ? void 0 : R.avatarDecoration, {
+  }), p = null == O ? null == C ? void 0 : C.avatarDecoration : null === O.avatarDecoration ? null : null !== (t = O.avatarDecoration) && void 0 !== t ? t : null == C ? void 0 : C.avatarDecoration, {
     pendingAvatarDecoration: g
-  } = (0, a.default)({
-    isTryItOut: f,
+  } = (0, o.Z)({
+    isTryItOut: h,
     guildId: c
-  }), L = N && (h || !m && !I), D = T && void 0 !== g && void 0 !== p && p === (null == n ? void 0 : n.id), v = null != c && null === g, M = D ? v ? null == n ? void 0 : n.avatarDecoration : null != g ? g : C : null != C ? C : null == n ? void 0 : n.avatarDecoration, y = i.useMemo(() => (0, d.getAvatarDecorationURL)({
+  }), L = m && (f || !A && !I), v = T && void 0 !== g && void 0 !== R && R === (null == n ? void 0 : n.id), D = null != c && null === g, M = v ? D ? null == n ? void 0 : n.avatarDecoration : null != g ? g : p : null != p ? p : null == n ? void 0 : n.avatarDecoration, P = i.useMemo(() => (0, _.NZ)({
     avatarDecoration: void 0 !== S ? S : M,
     canAnimate: L,
     size: E
-  }), [M, L, E, S]), P = i.useCallback(() => A(!0), []);
+  }), [M, L, E, S]), y = i.useCallback(() => N(!0), []);
   return {
-    avatarPlaceholderSrc: _,
-    avatarDecorationSrc: y,
+    avatarPlaceholderSrc: d,
+    avatarDecorationSrc: P,
     isAvatarDecorationAnimating: L,
     eventHandlers: {
-      onMouseEnter: P,
-      onMouseLeave: i.useCallback(() => A(!1), [])
+      onMouseEnter: y,
+      onMouseLeave: i.useCallback(() => N(!1), [])
     }
   }
 }

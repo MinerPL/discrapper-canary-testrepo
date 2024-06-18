@@ -1,75 +1,75 @@
 "use strict";
-s.r(t), s.d(t, {
-  resetDefaultChannels: function() {
+t.d(s, {
+  BG: function() {
     return T
   },
-  saveDefaultChannels: function() {
-    return f
+  DO: function() {
+    return m
   },
-  toggleDefaultChannel: function() {
-    return S
+  pt: function() {
+    return N
   }
-}), s("47120");
-var a = s("570140"),
-  l = s("668781"),
-  n = s("881052"),
-  i = s("45966"),
-  r = s("637853"),
-  o = s("592125"),
-  d = s("823379"),
-  u = s("889369"),
-  c = s("570961"),
-  E = s("208665"),
-  _ = s("290511"),
-  I = s("689938");
+}), t(47120);
+var n = t(570140),
+  i = t(668781),
+  l = t(881052),
+  a = t(45966),
+  r = t(637853),
+  o = t(592125),
+  c = t(823379),
+  d = t(889369),
+  u = t(570961),
+  E = t(208665),
+  _ = t(290511),
+  I = t(689938);
 
 function T() {
-  a.default.dispatch({
+  n.Z.dispatch({
     type: "GUILD_SETTINGS_DEFAULT_CHANNELS_RESET"
   })
 }
 
-function S(e) {
-  a.default.dispatch({
+function N(e) {
+  n.Z.dispatch({
     type: "GUILD_SETTINGS_DEFAULT_CHANNELS_TOGGLE",
     channelId: e
   })
 }
-async function f(e) {
-  let t = Array.from(u.default.editedDefaultChannelIds).filter(e => null != o.default.getChannel(e)),
-    s = E.default.advancedMode,
-    [T, S] = (0, r.getChattableDefaultChannels)(e.id, [...t]),
-    f = (0, r.getMinimumSetOfDefaultChannelIds)(e.id, t, E.default.editedOnboardingPrompts),
-    m = (0, r.getMinimumSetOfDefaultChannelIds)(e.id, t, E.default.editedOnboardingPrompts, r.isChattableChannelId);
-  if (i.default.getEnabled(e.id) && (!s && (S.length < _.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING || T.length < _.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN) || s && (f.length < _.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING || m.length < _.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN))) {
-    l.default.show({
-      title: I.default.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
-      body: I.default.Messages.DEFAULT_CHANNELS_SAVE_INVALID_DEFAULT_CHANNELS
+async function m(e) {
+  let s = Array.from(d.Z.editedDefaultChannelIds).filter(e => null != o.Z.getChannel(e)),
+    t = E.Z.advancedMode,
+    [T, N] = (0, r.d9)(e.id, [...s]),
+    m = (0, r.kl)(e.id, s, E.Z.editedOnboardingPrompts),
+    S = (0, r.kl)(e.id, s, E.Z.editedOnboardingPrompts, r.V7);
+  if (a.Z.getEnabled(e.id) && (!t && (N.length < _.md || T.length < _.X) || t && (m.length < _.md || S.length < _.X))) {
+    i.Z.show({
+      title: I.Z.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
+      body: I.Z.Messages.DEFAULT_CHANNELS_SAVE_INVALID_DEFAULT_CHANNELS
     });
     return
   }
-  if (u.default.hasChanges()) {
-    a.default.dispatch({
+  if (d.Z.hasChanges()) {
+    n.Z.dispatch({
       type: "GUILD_SETTINGS_DEFAULT_CHANNELS_SUBMIT"
     });
     try {
-      await (0, c.editOnboarding)(e.id, {
-        default_channel_ids: t
-      }), a.default.dispatch({
+      await (0, u.n_)(e.id, {
+        default_channel_ids: s
+      }), n.Z.dispatch({
         type: "GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS",
         guildId: e.id,
-        channelIds: t
+        channelIds: s
       })
-    } catch (s) {
-      var N;
+    } catch (t) {
+      var h;
       let {
         fieldName: e,
-        error: t
-      } = null !== (N = new n.APIError(s).getAnyErrorMessageAndField()) && void 0 !== N ? N : {};
-      l.default.show({
-        title: I.default.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
-        body: [e, t].filter(d.isNotNullish).join(": ")
-      }), a.default.dispatch({
+        error: s
+      } = null !== (h = new l.Hx(t).getAnyErrorMessageAndField()) && void 0 !== h ? h : {};
+      i.Z.show({
+        title: I.Z.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
+        body: [e, s].filter(c.lm).join(": ")
+      }), n.Z.dispatch({
         type: "GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_FAILED"
       })
     }

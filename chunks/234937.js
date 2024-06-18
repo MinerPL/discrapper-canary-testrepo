@@ -1,37 +1,36 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var l = n("442837"),
-  r = n("481060"),
-  s = n("430824"),
-  i = n("346656"),
-  d = n("689938"),
-  o = n("325468");
-t.default = e => {
+var i = n(735250);
+n(470079);
+var r = n(442837),
+  s = n(481060),
+  o = n(430824),
+  a = n(346656),
+  l = n(689938),
+  u = n(294485);
+t.Z = e => {
   let {
     event: t
-  } = e, n = (0, l.useStateFromStores)([s.default], () => s.default.getGuild(t.guild_id));
-  return null == n ? null : (0, a.jsxs)("div", {
-    className: o.container,
-    children: [(0, a.jsx)(r.Heading, {
-      className: o.header,
+  } = e, n = (0, r.e7)([o.Z], () => o.Z.getGuild(t.guild_id));
+  return null == n ? null : (0, i.jsxs)("div", {
+    className: u.container,
+    children: [(0, i.jsx)(s.Heading, {
+      className: u.header,
       variant: "heading-sm/semibold",
-      children: d.default.Messages.MOBILE_REPORTS_EVENT_PREVIEW_TITLE
-    }), (0, a.jsxs)("div", {
-      className: o.guildContainer,
-      children: [(0, a.jsxs)("div", {
-        className: o.guildInfo,
-        children: [(0, a.jsx)(i.default, {
+      children: l.Z.Messages.MOBILE_REPORTS_EVENT_PREVIEW_TITLE
+    }), (0, i.jsxs)("div", {
+      className: u.guildContainer,
+      children: [(0, i.jsxs)("div", {
+        className: u.guildInfo,
+        children: [(0, i.jsx)(a.Z, {
           guild: n,
-          size: i.default.Sizes.MINI,
-          className: o.guildIcon
-        }), (0, a.jsx)(r.Text, {
+          size: a.Z.Sizes.MINI,
+          className: u.guildIcon
+        }), (0, i.jsx)(s.Text, {
           color: "header-secondary",
           variant: "text-sm/normal",
           children: n.name
         })]
-      }), (0, a.jsx)(r.Text, {
+      }), (0, i.jsx)(s.Text, {
         variant: "text-md/semibold",
         color: "header-primary",
         children: t.name

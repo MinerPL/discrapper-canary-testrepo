@@ -1,5 +1,5 @@
 "use strict";
-var e = n("96403"),
+var e = n(96403),
   o = 0,
   i = Math.random(),
   u = e(1..toString);

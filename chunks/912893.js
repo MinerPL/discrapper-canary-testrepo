@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
-  addReactionPickerAnimation: function() {
-    return r
-  },
-  clearReactionPickerAnimation: function() {
+n.d(t, {
+  G: function() {
     return s
+  },
+  U: function() {
+    return r
   }
 });
-var i = n("570140");
+var i = n(570140);
 
 function r(e, t, n, r) {
-  i.default.dispatch({
+  i.Z.dispatch({
     type: "BURST_REACTION_PICKER_ANIMATION_ADD",
     messageId: e,
     emojiName: t,
@@ -20,7 +20,7 @@ function r(e, t, n, r) {
 }
 
 function s(e, t, n) {
-  i.default.dispatch({
+  i.Z.dispatch({
     type: "BURST_REACTION_PICKER_ANIMATION_CLEAR",
     messageId: e,
     emojiName: t,

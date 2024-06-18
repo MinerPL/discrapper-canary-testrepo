@@ -1,5 +1,5 @@
-var a = t("198208"),
-  o = t("46818").default;
+var a = t(198208),
+  o = t(46818).default;
 e.exports = function(e, r) {
   if ("object" !== o(e) || null === e) return e;
   var t = e[a];

@@ -1,7 +1,6 @@
 "use strict";
-n.r(t);
-var i = n("818083");
-t.default = (0, i.createExperiment)({
+var i = n(818083);
+t.Z = (0, i.B)({
   kind: "guild",
   id: "2024-04_audio_short_circuit_guild",
   label: "Audio processing short circuiting (guild)",

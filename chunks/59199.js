@@ -17,8 +17,8 @@ var r = Object.assign || function(e) {
       return n && e(t.prototype, n), r && e(t, r), t
     }
   }(),
-  a = n("161796"),
-  o = n("512722"),
+  a = n(161796),
+  o = n(512722),
   s = function(e) {
     return e
   },
@@ -82,11 +82,11 @@ var r = Object.assign || function(e) {
               var u = e;
               if (u < t) {
                 if ("identity" === o) return u;
-                "clamp" === o && (u = t)
+                "clamp" === o ? u = t : o
               }
               if (u > n) {
                 if ("identity" === s) return u;
-                "clamp" === s && (u = n)
+                "clamp" === s ? u = n : s
               }
               if (r === i) return r;
               if (t === n) return e <= t ? r : i;

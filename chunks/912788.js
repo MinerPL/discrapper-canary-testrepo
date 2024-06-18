@@ -1,28 +1,27 @@
 "use strict";
-n.r(t);
-var i, r, s, a, o = n("442837"),
-  l = n("570140"),
-  u = n("881052");
-let d = null,
-  _ = null,
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(881052);
+let _ = null,
+  d = null,
   c = null;
 
 function E(e) {
   let {
     error: t
   } = e;
-  d = t
+  _ = t
 }
 
 function I() {
-  d = null
+  _ = null
 }
-class T extends(a = o.default.Store) {
+class T extends(o = a.ZP.Store) {
   get paymentError() {
-    return d
+    return _
   }
   getGiftCode(e) {
-    return e === c ? _ : null
+    return e === c ? d : null
   }
 }
 s = "PremiumPaymentModalStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r, {
@@ -30,7 +29,7 @@ s = "PremiumPaymentModalStore", (r = "displayName") in(i = T) ? Object.definePro
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new T(l.default, {
+}) : i[r] = s, t.Z = new T(l.Z, {
   PREMIUM_PAYMENT_SUBSCRIBE_FAIL: E,
   PREMIUM_PAYMENT_UPDATE_FAIL: E,
   PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: function() {
@@ -43,20 +42,20 @@ s = "PremiumPaymentModalStore", (r = "displayName") in(i = T) ? Object.definePro
       message: t,
       code: n
     } = e;
-    d = new u.BillingError(t, n)
+    _ = new u.HF(t, n)
   },
   BRAINTREE_TOKENIZE_VENMO_FAIL: function(e) {
     let {
       message: t,
       code: n
     } = e;
-    d = new u.BillingError(t, n)
+    _ = new u.HF(t, n)
   },
   SKU_PURCHASE_SUCCESS: function(e) {
-    _ = e.giftCode, c = e.skuId
+    d = e.giftCode, c = e.skuId
   },
   SKU_PURCHASE_FAIL: function(e) {
-    d = e.error
+    _ = e.error
   },
   SKU_PURCHASE_AWAIT_CONFIRMATION: function(e) {
     e.isGift && (c = e.skuId)
@@ -66,6 +65,6 @@ s = "PremiumPaymentModalStore", (r = "displayName") in(i = T) ? Object.definePro
       giftCode: t
     } = e;
     if (0 !== t.uses || t.sku_id !== c) return !1;
-    _ = t.code
+    d = t.code
   }
 })

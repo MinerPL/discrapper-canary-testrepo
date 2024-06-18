@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 });
-var i = n("570140");
+var i = n(570140);
 
 function r(e, t, n, r) {
-  i.default.dispatch({
+  i.Z.dispatch({
     type: "EMBEDDED_ACTIVITY_DEFERRED_OPEN",
     channelId: e,
     applicationId: t,

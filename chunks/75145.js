@@ -1,41 +1,40 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("120356"),
-  a = n.n(r),
-  s = n("242411"),
-  o = n("12517");
-t.default = function(e) {
+var i = n(735250);
+n(470079);
+var r = n(120356),
+  s = n.n(r),
+  o = n(242411),
+  a = n(12517);
+t.Z = function(e) {
   let {
     glowOpacity: t,
     className: n
   } = e;
   return (0, i.jsxs)("div", {
-    className: a()(o.nitroTopDividerContainer, n),
+    className: s()(a.nitroTopDividerContainer, n),
     children: [(0, i.jsx)("div", {
-      className: o.nitroTopDividerUpper
+      className: a.nitroTopDividerUpper
     }), (0, i.jsx)("div", {
       style: {
         opacity: t
       },
-      className: o.nitroTopDividerShadow
+      className: a.nitroTopDividerShadow
     }), (0, i.jsxs)("div", {
-      className: a()(o.nitroTopDividerLockContainer),
+      className: s()(a.nitroTopDividerLockContainer),
       children: [(0, i.jsx)("div", {
-        className: o.nitroTopDividerLockBorder
+        className: a.nitroTopDividerLockBorder
       }), (0, i.jsx)("div", {
-        className: o.nitroTopDividerLockCircle,
-        children: (0, i.jsx)(s.default, {
+        className: a.nitroTopDividerLockCircle,
+        children: (0, i.jsx)(o.Z, {
           width: 16,
           height: 16,
           color: "white"
         })
       }), (0, i.jsx)("div", {
-        className: o.nitroTopDividerLockBorderReversed
+        className: a.nitroTopDividerLockBorderReversed
       })]
     }), (0, i.jsx)("div", {
-      className: o.nitroTopDividerLower
+      className: a.nitroTopDividerLower
     })]
   })
 }

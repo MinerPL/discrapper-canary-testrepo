@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  getValorantAdminSignupExperiment: function() {
+n.d(t, {
+  t: function() {
     return r
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-03_valorant_admin_signup",
   label: "Valorant Admin Signup",

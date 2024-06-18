@@ -1,6 +1,6 @@
 "use strict";
-var r = n("625014").start,
-  a = n("875701");
-e.exports = a("trimStart") ? function() {
+var r = n(625014).start,
+  o = n(875701);
+e.exports = o("trimStart") ? function() {
   return r(this)
 } : "".trimStart

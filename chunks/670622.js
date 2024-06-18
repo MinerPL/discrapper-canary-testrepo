@@ -1,6 +1,6 @@
 "use strict";
-var e = n("447631"),
-  o = n("141603"),
+var e = n(447631),
+  o = n(141603),
   i = Function.prototype,
   u = e && Object.getOwnPropertyDescriptor,
   s = o(i, "name"),

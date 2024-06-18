@@ -1,90 +1,90 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return N
+t.d(s, {
+  R: function() {
+    return S
   },
-  getRiskyPerms: function() {
-    return m
+  Z: function() {
+    return h
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("803997"),
-  n = s.n(l),
-  i = s("149765"),
-  r = s("442837"),
-  o = s("481060"),
-  d = s("430824"),
-  u = s("496675"),
-  c = s("441674"),
-  E = s("759231"),
-  _ = s("700785"),
-  I = s("647086"),
-  T = s("135899"),
-  S = s("689938"),
-  f = s("893079");
+var n = t(735250);
+t(470079);
+var i = t(120356),
+  l = t.n(i),
+  a = t(149765),
+  r = t(442837),
+  o = t(481060),
+  c = t(430824),
+  d = t(496675),
+  u = t(441674),
+  E = t(759231),
+  _ = t(700785),
+  I = t(647086),
+  T = t(135899),
+  N = t(689938),
+  m = t(212723);
 
-function m(e) {
-  return T.MODERATOR_PERMISSIONS.filter(t => (null == e ? void 0 : e.id) !== I.FAVORITES_RAW_GUILD_ID && _.canEveryone(t, e))
+function S(e) {
+  return T.$X.filter(s => (null == e ? void 0 : e.id) !== I._ && _.oz(s, e))
 }
 
-function N(e) {
+function h(e) {
   let {
-    guild: t
-  } = e, l = (0, r.useStateFromStores)([d.default], () => d.default.getRole(t.id, t.getEveryoneRoleId())), _ = m(t), I = _.length > 0, N = T.MODERATOR_PERMISSIONS.some(e => !u.default.can(e, t, null, {
-    [l.id]: {
-      ...l,
-      permissions: i.remove(l.permissions, e)
+    guild: s
+  } = e, i = (0, r.e7)([c.Z], () => c.Z.getRole(s.id, s.getEveryoneRoleId())), _ = S(s), I = _.length > 0, h = T.$X.some(e => !d.Z.can(e, s, null, {
+    [i.id]: {
+      ...i,
+      permissions: a.Od(i.permissions, e)
     }
-  })), g = (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsxs)("div", {
-      className: f.itemContent,
-      children: [(0, a.jsx)(o.Heading, {
+  })), g = (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsxs)("div", {
+      className: m.itemContent,
+      children: [(0, n.jsx)(o.Heading, {
         variant: "text-md/semibold",
         color: "header-primary",
-        children: S.default.Messages.GUILD_SETTINGS_SAFETY_EVERYONE_RISKY_PERMISSIONS
-      }), (0, a.jsx)(o.Text, {
+        children: N.Z.Messages.GUILD_SETTINGS_SAFETY_EVERYONE_RISKY_PERMISSIONS
+      }), (0, n.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: S.default.Messages.GUILD_SETTINGS_SAFETY_EVERYONE_RISKY_PERMISSIONS_DETAILS.format({
+        children: N.Z.Messages.GUILD_SETTINGS_SAFETY_EVERYONE_RISKY_PERMISSIONS_DETAILS.format({
           numPerms: _.length
         })
       })]
-    }), I ? (0, a.jsx)(E.default, {
+    }), I ? (0, n.jsx)(E.Z, {
       height: 24,
       width: 24,
-      className: f.warning,
-      "aria-label": S.default.Messages.SAFETY_REMOVE_RISKY_PERMS_ARIA_LABEL
-    }) : (0, a.jsx)(c.default, {
+      className: m.warning,
+      "aria-label": N.Z.Messages.SAFETY_REMOVE_RISKY_PERMS_ARIA_LABEL
+    }) : (0, n.jsx)(u.Z, {
       height: 24,
       width: 24,
-      className: f.check,
-      "aria-label": S.default.Messages.SAFETY_REMOVE_RISKY_PERMS_ARIA_LABEL_COMPLETE
+      className: m.check,
+      "aria-label": N.Z.Messages.SAFETY_REMOVE_RISKY_PERMS_ARIA_LABEL_COMPLETE
     })]
   });
-  return I ? N ? (0, a.jsx)(o.Tooltip, {
-    text: S.default.Messages.SAFETY_REMOVE_RISKY_PERMS_WARNING,
-    children: e => (0, a.jsx)("div", {
-      className: n()(f.simpleItemWrapper, f.disabled),
+  return I ? h ? (0, n.jsx)(o.Tooltip, {
+    text: N.Z.Messages.SAFETY_REMOVE_RISKY_PERMS_WARNING,
+    children: e => (0, n.jsx)("div", {
+      className: l()(m.simpleItemWrapper, m.disabled),
       ...e,
       children: g
     })
-  }) : (0, a.jsx)(o.Clickable, {
+  }) : (0, n.jsx)(o.Clickable, {
     onClick: () => {
       (0, o.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([s.e("99387"), s.e("39627")]).then(s.bind(s, "193845"));
-        return s => (0, a.jsx)(e, {
-          guild: t,
-          ...s
+        } = await Promise.all([t.e("99387"), t.e("39627")]).then(t.bind(t, 193845));
+        return t => (0, n.jsx)(e, {
+          guild: s,
+          ...t
         })
       })
     },
-    className: n()(f.simpleItemWrapper, f.clickable),
+    className: l()(m.simpleItemWrapper, m.clickable),
     children: g
-  }) : (0, a.jsx)("div", {
-    className: f.simpleItemWrapper,
+  }) : (0, n.jsx)("div", {
+    className: m.simpleItemWrapper,
     children: g
   })
 }

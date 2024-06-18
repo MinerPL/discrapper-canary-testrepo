@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-t.default = {
+t.Z = {
   animationIterationCount: 1,
   borderImageOutset: 1,
   borderImageSlice: 1,

@@ -1,7 +1,7 @@
 "use strict";
-n.r(t), t.default = {
+t.Z = {
   openCreateGuildModal: e => {
-    Promise.all([n.e("99387"), n.e("42483"), n.e("24813")]).then(n.bind(n, "635703")).then(t => {
+    Promise.all([n.e("99387"), n.e("42483"), n.e("24813")]).then(n.bind(n, 635703)).then(t => {
       let {
         openCreateGuildModal: n
       } = t;
@@ -9,7 +9,7 @@ n.r(t), t.default = {
     })
   },
   updateCreateGuildModal: e => {
-    Promise.all([n.e("99387"), n.e("42483"), n.e("24813")]).then(n.bind(n, "635703")).then(t => {
+    Promise.all([n.e("99387"), n.e("42483"), n.e("24813")]).then(n.bind(n, 635703)).then(t => {
       let {
         updateCreateGuildModal: n
       } = t;

@@ -1,6 +1,6 @@
 "use strict";
-var e = n("294377"),
-  o = n("96403"),
+var e = n(294377),
+  o = n(96403),
   i = e("Symbol"),
   u = i.keyFor,
   s = o(i.prototype.valueOf);

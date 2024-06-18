@@ -1,15 +1,14 @@
 "use strict";
-r.r(t);
-var n = r("675717"),
-  a = Object.create,
-  o = function() {
+var r = n(675717),
+  i = Object.create,
+  a = function() {
     function e() {}
     return function(t) {
-      if (!(0, n.default)(t)) return {};
-      if (a) return a(t);
+      if (!(0, r.Z)(t)) return {};
+      if (i) return i(t);
       e.prototype = t;
-      var r = new e;
-      return e.prototype = void 0, r
+      var n = new e;
+      return e.prototype = void 0, n
     }
   }();
-t.default = o
+t.Z = a

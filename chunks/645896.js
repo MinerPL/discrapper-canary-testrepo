@@ -1,30 +1,30 @@
 "use strict";
-n.r(t), n.d(t, {
-  fetchClanInfo: function() {
-    return c
+n.d(t, {
+  Cc: function() {
+    return _
   },
-  useClanInfo: function() {
+  E8: function() {
     return d
   },
-  useFetchClanInfo: function() {
+  L_: function() {
     return E
   },
-  useIsFetchingClanInfo: function() {
-    return _
+  _S: function() {
+    return c
   }
-}), n("47120");
-var i = n("470079"),
-  r = n("652874"),
-  a = n("143927"),
-  s = n("881052"),
-  o = n("931240");
+}), n(47120);
+var i = n(470079),
+  r = n(652874),
+  s = n(143927),
+  o = n(881052),
+  a = n(931240);
 let l = {},
-  u = (0, r.default)((e, t) => ({
+  u = (0, r.Z)((e, t) => ({
     clans: {},
     fetching: !1,
     error: null,
     fetchClanInfo: async n => {
-      if (function(e) {
+      if (!! function(e) {
           var t;
           let n = Date.now(),
             i = null !== (t = l[e]) && void 0 !== t ? t : 0;
@@ -35,7 +35,7 @@ let l = {},
           e({
             fetching: !0
           });
-          let i = await (0, o.getClanInfo)(n),
+          let i = await (0, a.WJ)(n),
             r = t().clans;
           e({
             clans: {
@@ -46,7 +46,7 @@ let l = {},
           })
         } catch (t) {
           e({
-            error: new s.APIError(t)
+            error: new o.Hx(t)
           })
         } finally {
           e({
@@ -57,11 +57,11 @@ let l = {},
     }
   }));
 
-function d(e) {
+function _(e) {
   return u(t => null != e ? t.clans[e] : null)
 }
 
-function _() {
+function d() {
   return u(e => e.fetching)
 }
 async function c(e) {
@@ -74,12 +74,12 @@ async function c(e) {
 }
 
 function E(e) {
-  let [t, n] = i.useState(!1), [r, s] = u(e => [e.fetchClanInfo, e.fetching], a.default);
+  let [t, n] = i.useState(!1), [r, o] = u(e => [e.fetchClanInfo, e.fetching], s.Z);
   return [t, i.useCallback(async () => {
-    if (!s && null != e) try {
+    if (!o && null != e) try {
       n(!0), await r(e)
     } finally {
       n(!1)
     }
-  }, [e, s, r])]
+  }, [e, o, r])]
 }

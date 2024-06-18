@@ -1,6 +1,6 @@
-var r = n("257693"),
-  i = n("957578").Buffer,
-  a = n("875115");
+var r = n(257693),
+  i = n(957578).Buffer,
+  a = n(875115);
 t.encrypt = function(e, t) {
   var n = Math.ceil(t.length / 16),
     o = e._cache.length;

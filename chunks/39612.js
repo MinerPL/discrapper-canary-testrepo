@@ -11,14 +11,14 @@ function r(e) {
 function s() {
   return "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT, "/channels/@me")
 }
-n.r(t), n.d(t, {
-  getDefaultDynamicLinkTemplate: function() {
+n.d(t, {
+  Gk: function() {
     return s
   },
-  getGuildTemplateDynamicLinkTemplate: function() {
+  Oh: function() {
     return r
   },
-  getInviteDynamicLinkTemplate: function() {
+  z0: function() {
     return i
   }
 })

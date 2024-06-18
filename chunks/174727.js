@@ -1,61 +1,59 @@
 "use strict";
-n.r(t), n.d(t, {
-  getEndHandleValue: function() {
-    return o
-  },
-  getMaxValue: function() {
-    return s
-  },
-  getMinValue: function() {
-    return u
-  },
-  getStartHandleValue: function() {
+t.d(n, {
+  MN: function() {
     return r
   },
-  loadAudioFileFromUrl: function() {
-    return c
-  },
-  loadAudioFromFile: function() {
+  XG: function() {
     return d
   },
-  toSeconds: function() {
+  ao: function() {
+    return s
+  },
+  kD: function() {
+    return o
+  },
+  lj: function() {
+    return c
+  },
+  my: function() {
     return i
+  },
+  pN: function() {
+    return u
   }
-}), n("411104"), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("47120");
-var a = n("943351"),
-  l = n("689938");
-let u = (e, t, n) => -1 === e ? 0 : e - t * e / n;
+}), t(411104), t(315314), t(610138), t(216116), t(78328), t(815648), t(47120);
+var l = t(943351),
+  a = t(689938);
+let s = (e, n, t) => -1 === e ? 0 : e - n * e / t;
 
 function i(e) {
   return e / 1e3
 }
-let s = (e, t, n) => -1 === e ? n : e + t * (n - e) / n,
-  r = (e, t, n, a) => {
-    let l = 0;
-    return (l = t >= 0 && n > 0 ? (e - (t - n * t / a)) * 100 / n : 100 * e / a).toFixed(4)
+let r = (e, n, t) => -1 === e ? t : e + n * (t - e) / t,
+  u = (e, n, t, l) => {
+    let a = 0;
+    return (a = n >= 0 && t > 0 ? (e - (n - t * n / l)) * 100 / t : 100 * e / l).toFixed(4)
   },
-  o = (e, t, n, a) => {
-    let l = 0;
-    return (l = t >= 0 && n > 0 ? -((e - (t + n * (a - t) / a)) * 100) / n : -100 * e / a + 100).toFixed(4)
+  o = (e, n, t, l) => {
+    let a = 0;
+    return (a = n >= 0 && t > 0 ? -((e - (n + t * (l - n) / l)) * 100) / t : -100 * e / l + 100).toFixed(4)
   };
-async function d(e) {
-  var t;
-  if (!(e.type.startsWith("audio") || e.type.startsWith("video")) || !a.SUPPORTED_AUDIO_FILE_TYPES.has(e.type)) throw Error(l.default.Messages.SOUNDBOARD_ERROR_INVALID_FILE_TYPE.format({
+async function c(e) {
+  var n;
+  if (!(e.type.startsWith("audio") || e.type.startsWith("video")) || !l.bp.has(e.type)) throw Error(a.Z.Messages.SOUNDBOARD_ERROR_INVALID_FILE_TYPE.format({
     fileType: e.type
   }));
-  let n = URL.createObjectURL(e),
-    u = new Audio(n);
-  return await (t = u, new Promise(e => {
-    let n = () => {
-      e(), t.removeEventListener("canplaythrough", n)
+  let t = new Audio(URL.createObjectURL(e));
+  return await (n = t, new Promise(e => {
+    let t = () => {
+      e(), n.removeEventListener("canplaythrough", t)
     };
-    t.addEventListener("canplaythrough", n), t.load()
-  })), u
+    n.addEventListener("canplaythrough", t), n.load()
+  })), t
 }
-async function c(e, t) {
-  let n = await fetch(e),
-    a = await n.blob();
-  return new File([a], t, {
+async function d(e, n) {
+  let t = await fetch(e);
+  return new File([await t.blob()], n, {
     type: "audio/mp3"
   })
 }

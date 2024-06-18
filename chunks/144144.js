@@ -1,15 +1,14 @@
 "use strict";
-n.r(t);
-var i = n("570140");
-t.default = {
+var i = n(570140);
+t.Z = {
   startTyping(e) {
-    i.default.dispatch({
+    i.Z.dispatch({
       type: "TYPING_START_LOCAL",
       channelId: e
     })
   },
   stopTyping(e) {
-    i.default.dispatch({
+    i.Z.dispatch({
       type: "TYPING_STOP_LOCAL",
       channelId: e
     })

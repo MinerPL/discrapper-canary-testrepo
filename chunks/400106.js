@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return c
   }
-}), n("47120");
-var i, r = n("544891"),
-  s = n("81825"),
-  a = n("601964"),
-  o = n("768581"),
-  l = n("624138"),
-  u = n("981631");
+}), n(47120);
+var i, r = n(544891),
+  s = n(81825),
+  o = n(601964),
+  a = n(768581),
+  l = n(624138),
+  u = n(981631);
 
-function d(e, t, n) {
+function _(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -19,12 +19,12 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(i || (i = {})).GUILD = "GUILD";
-let _ = async e => {
+let d = async e => {
   let t = null;
   try {
     var n;
-    let i = await r.HTTP.get({
-      url: u.Endpoints.EMOJI_SOURCE_DATA(e),
+    let i = await r.tn.get({
+      url: u.ANM.EMOJI_SOURCE_DATA(e),
       oldFormErrors: !0,
       timeout: 5e3
     });
@@ -35,10 +35,10 @@ let _ = async e => {
   } catch {}
   return t
 };
-class c extends s.default {
+class c extends s.Z {
   getIconURL(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return o.default.getGuildIconURL({
+    return a.ZP.getGuildIconURL({
       id: this.id,
       size: e,
       icon: this.icon,
@@ -47,7 +47,7 @@ class c extends s.default {
   }
   getIconSource(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return o.default.getAnimatableSourceWithFallback(t, t => o.default.getGuildIconSource({
+    return a.ZP.getAnimatableSourceWithFallback(t, t => a.ZP.getGuildIconSource({
       id: this.id,
       size: e,
       icon: this.icon,
@@ -58,13 +58,13 @@ class c extends s.default {
     return this.features.has(e)
   }
   isDiscoverable() {
-    return this.hasFeature(u.GuildFeatures.DISCOVERABLE)
+    return this.hasFeature(u.oNc.DISCOVERABLE)
   }
   get acronym() {
-    return (0, l.getAcronym)(this.name)
+    return (0, l.Zg)(this.name)
   }
   static async getGuildFromEmojiId(e) {
-    let t = await _(e);
+    let t = await d(e);
     return null != t && (null == t ? void 0 : t.type) === "GUILD" ? t.guild : null
   }
   static _mapCommon(e) {
@@ -108,9 +108,9 @@ class c extends s.default {
     })
   }
   static createFromGuildType(e) {
-    return e instanceof c ? e : e instanceof a.default ? c.createFromGuildRecord(e) : c.createFromDiscoverableGuild(e)
+    return e instanceof c ? e : e instanceof o.ZP ? c.createFromGuildRecord(e) : c.createFromDiscoverableGuild(e)
   }
   constructor(e) {
-    super(), d(this, "id", void 0), d(this, "name", void 0), d(this, "icon", void 0), d(this, "description", void 0), d(this, "features", void 0), d(this, "premiumTier", void 0), d(this, "premiumSubscriberCount", void 0), d(this, "presenceCount", void 0), d(this, "memberCount", void 0), d(this, "emojis", void 0), this.id = e.id, this.name = e.name, this.icon = e.icon, this.description = e.description, this.features = e.features, this.premiumTier = e.premiumTier, this.premiumSubscriberCount = e.premiumSubscriberCount, this.presenceCount = e.presenceCount, this.memberCount = e.memberCount, this.emojis = e.emojis
+    super(), _(this, "id", void 0), _(this, "name", void 0), _(this, "icon", void 0), _(this, "description", void 0), _(this, "features", void 0), _(this, "premiumTier", void 0), _(this, "premiumSubscriberCount", void 0), _(this, "presenceCount", void 0), _(this, "memberCount", void 0), _(this, "emojis", void 0), this.id = e.id, this.name = e.name, this.icon = e.icon, this.description = e.description, this.features = e.features, this.premiumTier = e.premiumTier, this.premiumSubscriberCount = e.premiumSubscriberCount, this.presenceCount = e.presenceCount, this.memberCount = e.memberCount, this.emojis = e.emojis
   }
 }

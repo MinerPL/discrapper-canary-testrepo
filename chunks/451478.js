@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n("47120");
-var i, r, s, a, o = n("512722"),
-  l = n.n(o),
-  u = n("442837"),
-  d = n("570140"),
-  _ = n("830917");
+n(47120);
+var i, r, s, o, a = n(512722),
+  l = n.n(a),
+  u = n(442837),
+  _ = n(570140),
+  d = n(830917);
 let c = null,
   E = new Map;
 
@@ -20,13 +20,13 @@ function I(e) {
     visible: !1
   }) : t
 }
-class T extends(i = u.default.Store) {
+class T extends(i = u.ZP.Store) {
   isFocused() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, _.getMainWindowId)();
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, d.UU)();
     return I(e).focused
   }
   isVisible() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, _.getMainWindowId)();
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, d.UU)();
     return I(e).visible
   }
   getFocusedWindowId() {
@@ -39,21 +39,21 @@ class T extends(i = u.default.Store) {
     return c
   }
   isElementFullScreen() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, _.getMainWindowId)();
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, d.UU)();
     return I(e).isElementFullscreen
   }
   windowSize() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, _.getMainWindowId)();
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, d.UU)();
     return I(e).windowSize
   }
 }
-a = "WindowStore", (s = "displayName") in(r = T) ? Object.defineProperty(r, s, {
-  value: a,
+o = "WindowStore", (s = "displayName") in(r = T) ? Object.defineProperty(r, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a;
-let f = new T(d.default, {
+}) : r[s] = o;
+let h = new T(_.Z, {
   WINDOW_INIT: function(e) {
     l()(!E.has(e.windowId), "Window initialized multiple times");
     let {
@@ -108,11 +108,11 @@ let f = new T(d.default, {
     }), !0)
   }
 });
-Promise.resolve().then(n.bind(n, "626135")).then(e => {
+Promise.resolve().then(n.bind(n, 626135)).then(e => {
   let {
     addExtraAnalyticsDecorator: t
   } = e;
   t(e => {
-    e.client_app_state = f.isFocused() ? "focused" : "unfocused"
+    e.client_app_state = h.isFocused() ? "focused" : "unfocused"
   })
-}), t.default = f
+}), t.Z = h

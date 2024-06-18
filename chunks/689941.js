@@ -1,5 +1,5 @@
-var r = n("413135").Buffer,
-  i = n("257693");
+var r = n(413135).Buffer,
+  i = n(257693);
 t.encrypt = function(e, t) {
   for (; e._cache.length < t.length;) {
     var n;

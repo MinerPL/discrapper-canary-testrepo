@@ -10,12 +10,12 @@ var r = function() {
       return n && e(t.prototype, n), r && e(t, r), t
     }
   }(),
-  i = n("464942");
-n("592093");
-var a = n("1108"),
-  o = n("144613"),
-  s = n("512722"),
-  u = n("510610");
+  i = n(464942);
+n(592093);
+var a = n(1108),
+  o = n(144613),
+  s = n(512722),
+  u = n(510610);
 
 function c(e, t) {
   return null == e ? t : e
@@ -86,7 +86,7 @@ var l = function(e) {
         var _ = (l + 2 * (f + h) + g) / 6;
         e += (c + 2 * (d + p) + m) / 6 * u, t += _ * u
       }
-      if (this._lastTime = i, this._lastPosition = e, this._lastVelocity = t, this._onUpdate(e), this.__active) {
+      if (this._lastTime = i, this._lastPosition = e, this._lastVelocity = t, this._onUpdate(e), !!this.__active) {
         var b = !1;
         this._overshootClamping && 0 !== this._tension && (b = this._startPosition < this._toValue ? e > this._toValue : e < this._toValue);
         var v = Math.abs(t) <= this._restSpeedThreshold,

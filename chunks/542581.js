@@ -1,135 +1,135 @@
 "use strict";
-a.r(t), a("47120");
-var s = a("735250"),
-  n = a("470079"),
-  l = a("120356"),
-  r = a.n(l),
-  i = a("920906"),
-  o = a("442837"),
-  u = a("481060"),
-  d = a("787014"),
-  c = a("607070"),
-  m = a("454585"),
-  h = a("814550"),
-  f = a("465670"),
-  g = a("928457"),
-  x = a("185403"),
-  C = a("456269"),
-  _ = a("470623"),
-  p = a("981631"),
-  T = a("689938"),
-  S = a("411900"),
-  E = a("946278");
-t.default = n.memo(function(e) {
+n(47120);
+var s = n(735250),
+  l = n(470079),
+  a = n(120356),
+  i = n.n(a),
+  r = n(920906),
+  o = n(442837),
+  c = n(481060),
+  d = n(787014),
+  u = n(607070),
+  h = n(454585),
+  m = n(814550),
+  g = n(465670),
+  x = n(928457),
+  _ = n(185403),
+  f = n(456269),
+  E = n(470623),
+  N = n(981631),
+  T = n(689938),
+  C = n(411900),
+  p = n(946278);
+t.Z = l.memo(function(e) {
   let {
     channel: t,
-    onChange: l
-  } = e, N = (0, _.useForumPostComposerStoreApi)(), {
+    onChange: a
+  } = e, v = (0, E.AF)(), {
     guidelinesOpen: M
-  } = (0, _.useForumPostComposerStore)(e => {
+  } = (0, E.xH)(e => {
     let {
       guidelinesOpen: t
     } = e;
     return {
       guidelinesOpen: t
     }
-  }), A = (0, C.useCanManageChannel)(t), [v, I] = n.useState(!1), j = n.useCallback(e => {
+  }), S = (0, f.r_)(t), [I, j] = l.useState(!1), A = l.useCallback(e => {
     if (null == e) return;
     let t = e.clientHeight >= 220;
-    t !== v && I(t)
-  }, [v]);
-  n.useLayoutEffect(() => {
-    setTimeout(l, 350)
-  }, [M, l]);
-  let O = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion),
-    [R, b] = n.useState(!M),
-    L = (0, i.useSpring)({
+    t !== I && j(t)
+  }, [I]);
+  l.useLayoutEffect(() => {
+    setTimeout(a, 350)
+  }, [M, a]);
+  let R = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+    [Z, O] = l.useState(!M),
+    b = (0, r.useSpring)({
       opacity: M ? 1 : 0,
       maxHeight: M ? 500 : 0,
       config: {
         duration: 300
       },
-      immediate: O,
-      onRest: () => b(!M)
+      immediate: R,
+      onRest: () => O(!M)
     });
-  return null != t.topic && t.topic.length > 0 ? (0, s.jsx)(i.animated.div, {
-    style: L,
-    className: R ? S.hiddenVisually : void 0,
+  return null != t.topic && t.topic.length > 0 ? (0, s.jsx)(r.animated.div, {
+    style: b,
+    className: Z ? C.hiddenVisually : void 0,
     children: (0, s.jsxs)("div", {
-      className: S.container,
+      className: C.container,
       children: [(0, s.jsxs)("div", {
-        className: S.headerContainer,
-        children: [(0, s.jsxs)(u.Heading, {
+        className: C.headerContainer,
+        children: [(0, s.jsxs)(c.Heading, {
           variant: "heading-lg/semibold",
-          className: S.guidelinesHeader,
-          children: [(0, s.jsx)(h.default, {
+          className: C.guidelinesHeader,
+          children: [(0, s.jsx)(m.Z, {
             width: 20,
             height: 20
-          }), T.default.Messages.FORUM_POST_GUIDELINES_TITLE, A && (0, s.jsx)(u.Clickable, {
+          }), T.Z.Messages.FORUM_POST_GUIDELINES_TITLE, S && (0, s.jsx)(c.Clickable, {
             onClick: () => {
-              d.default.open(t.id, void 0, p.ChannelSettingsSubsections.TOPIC)
+              d.ZP.open(t.id, void 0, N.ZfP.TOPIC)
             },
             tag: "span",
-            className: S.clickable,
-            children: (0, s.jsx)(x.default, {
+            className: C.clickable,
+            children: (0, s.jsx)(_.Z, {
               width: 16,
               height: 16
             })
           })]
-        }), (0, s.jsx)(u.Clickable, {
-          "aria-label": T.default.Messages.CLOSE,
-          className: S.clickable,
+        }), (0, s.jsx)(c.Clickable, {
+          "aria-label": T.Z.Messages.CLOSE,
+          className: C.clickable,
           onClick: () => {
-            N.getState().setGuidelinesOpen(!1)
+            v.getState().setGuidelinesOpen(!1)
           },
-          children: (0, s.jsx)(f.default, {
+          children: (0, s.jsx)(g.Z, {
             width: 16,
             height: 16
           })
         })]
       }), (0, s.jsxs)("div", {
-        className: S.descriptionContainer,
-        children: [(0, s.jsx)(u.Text, {
+        className: C.descriptionContainer,
+        children: [(0, s.jsx)(c.Text, {
           selectable: !0,
           variant: "text-sm/normal",
           color: "header-secondary",
           style: {
             maxHeight: 220
           },
-          className: r()(S.guidelines, E.markup),
+          className: i()(C.guidelines, p.markup),
           children: (0, s.jsx)("div", {
-            ref: j,
-            children: m.default.parseForumPostGuidelines(t.topic, !0, {
+            ref: A,
+            children: h.Z.parseForumPostGuidelines(t.topic, !0, {
               channelId: t.id,
               allowHeading: !0,
               allowList: !0
             })
           })
-        }), v && (0, s.jsxs)("div", {
-          className: S.showMore,
+        }), I && (0, s.jsxs)("div", {
+          className: C.showMore,
           children: [(0, s.jsx)("div", {
-            className: S.gradient
+            className: C.gradient
           }), (0, s.jsx)("div", {
-            className: S.linkContainer,
-            children: (0, s.jsx)(u.Clickable, {
-              className: S.showMoreLink,
+            className: C.linkContainer,
+            children: (0, s.jsx)(c.Clickable, {
+              className: C.showMoreLink,
               onClick: () => {
-                (0, u.openModalLazy)(async () => {
+                (0, c.openModalLazy)(async () => {
                   let {
                     default: e
-                  } = await Promise.all([a.e("99387"), a.e("78712")]).then(a.bind(a, "223164"));
-                  return a => (0, s.jsx)(e, {
-                    ...a,
+                  } = await Promise.all([n.e("99387"), n.e("78712")]).then(n.bind(n, 223164));
+                  return n => (0, s.jsx)(e, {
+                    ...n,
                     channel: t
                   })
                 })
               },
-              children: (0, s.jsxs)(u.Text, {
+              children: (0, s.jsxs)(c.Text, {
                 variant: "text-sm/semibold",
                 color: "text-brand",
-                className: S.showMoreText,
-                children: [T.default.Messages.FORUM_CHANNEL_TOPIC_VIEW_ALL, (0, s.jsx)(g.default, {
-                  className: S.showMoreIcon
+                className: C.showMoreText,
+                children: [T.Z.Messages.FORUM_CHANNEL_TOPIC_VIEW_ALL, (0, s.jsx)(x.Z, {
+                  className: C.showMoreIcon
                 })]
               })
             })

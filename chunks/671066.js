@@ -1,74 +1,74 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
+t.d(s, {
+  Z: function() {
     return _
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("442837"),
-  n = s("481060"),
-  i = s("933557"),
-  r = s("592125"),
-  o = s("699516"),
-  d = s("594174"),
-  u = s("556012"),
-  c = s("689938"),
-  E = s("39097");
+var n = t(735250);
+t(470079);
+var i = t(442837),
+  l = t(481060),
+  a = t(933557),
+  r = t(592125),
+  o = t(699516),
+  c = t(594174),
+  d = t(556012),
+  u = t(689938),
+  E = t(39097);
 
 function _(e) {
-  var t;
+  var s;
   let {
-    action: s,
+    action: t,
     triggerType: _,
     toggled: I,
     onToggleAction: T
-  } = e, S = e => () => T(e), f = (0, u.getActionInfo)(s.type, s, _), m = null === (t = s.metadata) || void 0 === t ? void 0 : t.channelId, N = (0, l.useStateFromStores)([d.default, o.default, r.default], () => {
-    let e = r.default.getChannel(m);
-    return null == e ? null : (0, i.computeChannelName)(e, d.default, o.default)
-  }, [m]);
-  if (null == f) return null;
+  } = e, N = e => () => T(e), m = (0, d.c)(t.type, t, _), S = null === (s = t.metadata) || void 0 === s ? void 0 : s.channelId, h = (0, i.e7)([c.default, o.Z, r.Z], () => {
+    let e = r.Z.getChannel(S);
+    return null == e ? null : (0, a.F6)(e, c.default, o.Z)
+  }, [S]);
+  if (null == m) return null;
   let {
     headerText: g,
-    descriptionText: h,
+    descriptionText: x,
     icon: C
-  } = f;
-  return (0, a.jsxs)("div", {
+  } = m;
+  return (0, n.jsxs)("div", {
     className: E.actionContainer,
-    children: [(0, a.jsx)("div", {
+    children: [(0, n.jsx)("div", {
       className: E.actionIconContainer,
-      children: (0, a.jsx)(C, {
+      children: (0, n.jsx)(C, {
         width: 24,
         height: 24,
         className: E.actionIcon
       })
-    }), (0, a.jsxs)("div", {
+    }), (0, n.jsxs)("div", {
       className: E.actionTextContainer,
-      children: [(0, a.jsx)(n.Heading, {
+      children: [(0, n.jsx)(l.Heading, {
         variant: "heading-sm/semibold",
         children: g
-      }), (0, a.jsx)(n.Text, {
+      }), (0, n.jsx)(l.Text, {
         color: "interactive-normal",
         variant: "text-xs/medium",
-        children: h
-      }), I && (0, a.jsxs)(n.Text, {
+        children: x
+      }), I && (0, n.jsxs)(l.Text, {
         color: "text-muted",
         variant: "text-xs/medium",
-        children: [null != N && c.default.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_EDIT_HELPER.format({
-          channelName: N
-        }), (0, a.jsx)(n.Clickable, {
-          onClick: S(!0),
+        children: [null != h && u.Z.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_EDIT_HELPER.format({
+          channelName: h
+        }), (0, n.jsx)(l.Clickable, {
+          onClick: N(!0),
           className: E.editChannel,
           tag: "span",
           role: "link",
-          children: c.default.Messages.EDIT_CHANNEL
+          children: u.Z.Messages.EDIT_CHANNEL
         })]
       })]
-    }), (0, a.jsx)("div", {
-      children: (0, a.jsx)(n.Checkbox, {
-        type: n.Checkbox.Types.INVERTED,
+    }), (0, n.jsx)("div", {
+      children: (0, n.jsx)(l.Checkbox, {
+        type: l.Checkbox.Types.INVERTED,
         value: I,
-        onChange: S(!1),
+        onChange: N(!1),
         className: E.__invalid_actionCheckbox
       })
     })]

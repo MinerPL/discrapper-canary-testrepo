@@ -16,11 +16,11 @@ function r(e, t, n) {
   if (null == i) throw Error();
   i.dispatchEvent(e)
 }
-n.r(t), n.d(t, {
-  createMouseEvent: function() {
+n.d(t, {
+  B: function() {
     return i
   },
-  dispatchEventToPoint: function() {
+  J: function() {
     return r
   }
-}), n("411104")
+}), n(411104)

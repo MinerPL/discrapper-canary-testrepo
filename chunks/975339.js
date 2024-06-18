@@ -1,7 +1,7 @@
 "use strict";
-n.r(t), n.d(t, {
-  createManagedReactiveScroller: function() {
-    return i.createManagedReactiveScroller
+n.d(t, {
+  $: function() {
+    return i.$
   }
 });
-var i = n("355336")
+var i = n(355336)

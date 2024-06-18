@@ -1,8 +1,8 @@
 "use strict";
-var n = r("887109"),
-  i = r("379846"),
-  o = r("172213"),
-  a = r("482789");
+var n = r(887109),
+  i = r(379846),
+  o = r(172213),
+  a = r(482789);
 t.exports = function(t) {
   if (t._blockSelectEvents || t._latestEditorState !== t.props.editorState) {
     if (t._blockSelectEvents) {

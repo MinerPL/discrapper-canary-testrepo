@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
-  waitForOnboardingCompletion: function() {
-    return o
+n.d(t, {
+  x: function() {
+    return a
   }
-}), n("789020");
-var i = n("271383"),
-  r = n("630388"),
-  s = n("549817"),
-  a = n("372897");
+}), n(789020);
+var i = n(271383),
+  r = n(630388),
+  s = n(549817),
+  o = n(372897);
 
-function o(e) {
+function a(e) {
   return new Promise(t => {
-    i.default.addConditionalChangeListener(() => {
+    i.ZP.addConditionalChangeListener(() => {
       var n;
-      let o = i.default.getSelfMember(e);
-      return !(0, r.hasFlag)(null !== (n = null == o ? void 0 : o.flags) && void 0 !== n ? n : 0, a.GuildMemberFlags.COMPLETED_ONBOARDING) || (s.default.finishOnboarding(e), t(), !1)
+      let a = i.ZP.getSelfMember(e);
+      return !(0, r.yE)(null !== (n = null == a ? void 0 : a.flags) && void 0 !== n ? n : 0, o.q.COMPLETED_ONBOARDING) || (s.Z.finishOnboarding(e), t(), !1)
     })
   })
 }

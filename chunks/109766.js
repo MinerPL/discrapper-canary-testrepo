@@ -15,8 +15,8 @@ function r(e, t) {
     f = Math.floor((u + l - 7 * d + 114) / 31);
   return [Math.ceil((Date.UTC(e, f - 1, (u + l - 7 * d + 114) % 31 + 1 + t) - Date.UTC(e, 0, 1)) / 864e5)]
 }
-n.r(t), n.d(t, {
-  easter: function() {
+n.d(t, {
+  d: function() {
     return r
   }
 })

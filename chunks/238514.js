@@ -1,13 +1,12 @@
 "use strict";
-n.r(t);
-var i, r = n("392711"),
+var i, r = n(392711),
   s = n.n(r),
-  a = n("442837"),
-  o = n("433517"),
-  l = n("570140"),
-  u = n("981631");
+  o = n(442837),
+  a = n(433517),
+  l = n(570140),
+  u = n(981631);
 
-function d(e, t, n) {
+function _(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -15,37 +14,37 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let _ = {};
-class c extends(i = a.default.PersistedStore) {
+let d = {};
+class c extends(i = o.ZP.PersistedStore) {
   initialize(e) {
-    _ = null != e ? e : {}
+    d = null != e ? e : {}
   }
   getState() {
-    return _
+    return d
   }
   shouldSync(e) {
     var t;
-    return (null === (t = _[e]) || void 0 === t ? void 0 : t.shouldSync) !== !1
+    return (null === (t = d[e]) || void 0 === t ? void 0 : t.shouldSync) !== !1
   }
   getTextSettings() {
     var e;
-    return null === (e = _.text) || void 0 === e ? void 0 : e.settings
+    return null === (e = d.text) || void 0 === e ? void 0 : e.settings
   }
   getAppearanceSettings() {
     var e;
-    return null === (e = _.appearance) || void 0 === e ? void 0 : e.settings
+    return null === (e = d.appearance) || void 0 === e ? void 0 : e.settings
   }
 }
-d(c, "displayName", "SelectivelySyncedUserSettingsStore"), d(c, "persistKey", "SelectivelySyncedUserSettingsStore"), d(c, "migrations", [() => {
+_(c, "displayName", "SelectivelySyncedUserSettingsStore"), _(c, "persistKey", "SelectivelySyncedUserSettingsStore"), _(c, "migrations", [() => {
   var e, t;
-  let n = null !== (e = o.Storage.get("UserSettingsSync")) && void 0 !== e ? e : {},
-    i = null !== (t = o.Storage.get("UserSettingsStore")) && void 0 !== t ? t : {};
-  o.Storage.remove("UserSettingsSync");
+  let n = null !== (e = a.K.get("UserSettingsSync")) && void 0 !== e ? e : {},
+    i = null !== (t = a.K.get("UserSettingsStore")) && void 0 !== t ? t : {};
+  a.K.remove("UserSettingsSync");
   let r = {};
-  return !1 === n[u.UserSettingsSections.TEXT] && (r.text = {
+  return !1 === n[u.oAB.TEXT] && (r.text = {
     shouldSync: !1,
     settings: s().pick(i, ["inlineAttachmentMedia", "inlineEmbedMedia", "renderEmbeds", "renderReactions", "animateEmoji", "animateStickers", "gifAutoPlay"])
-  }), !1 === n[u.UserSettingsSections.APPEARANCE] && (r.appearance = {
+  }), !1 === n[u.oAB.APPEARANCE] && (r.appearance = {
     shouldSync: !1,
     settings: s().pick(i, ["theme", "clientThemeSettings", "developerMode"])
   }), r
@@ -61,7 +60,7 @@ d(c, "displayName", "SelectivelySyncedUserSettingsStore"), d(c, "persistKey", "S
       }
     }
   }
-}]), t.default = new c(l.default, {
+}]), t.Z = new c(l.Z, {
   SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: function(e) {
     let {
       changes: t
@@ -73,17 +72,17 @@ d(c, "displayName", "SelectivelySyncedUserSettingsStore"), d(c, "persistKey", "S
         settings: r
       } = t[e];
       if (!0 === i) {
-        delete _[e];
+        delete d[e];
         continue
-      }!1 === i && (_[e] = {
+      }!1 === i && (d[e] = {
         shouldSync: i,
         settings: {}
       });
-      if ((null === (n = _[e]) || void 0 === n ? void 0 : n.shouldSync) === !1)
-        for (let t in r) _[e].settings[t] = r[t]
+      if ((null === (n = d[e]) || void 0 === n ? void 0 : n.shouldSync) === !1)
+        for (let t in r) d[e].settings[t] = r[t]
     }
   },
   LOGOUT: function() {
-    _ = {}
+    d = {}
   }
 })

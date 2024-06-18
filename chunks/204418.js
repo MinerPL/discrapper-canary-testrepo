@@ -1,42 +1,41 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("481060"),
-  a = n("204197"),
-  s = n("998502"),
-  o = n("689938");
-let l = s.default.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
-t.default = e => {
+var i = n(735250);
+n(470079);
+var r = n(481060),
+  s = n(204197),
+  o = n(998502),
+  a = n(689938);
+let l = o.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
+t.Z = e => {
   let {
     user: t,
     guildId: n,
-    avatarDecorationOverride: s,
+    avatarDecorationOverride: o,
     status: u,
-    avatarSize: d = r.AvatarSizes.SIZE_120,
-    "aria-hidden": _ = !1,
+    avatarSize: _ = r.AvatarSizes.SIZE_120,
+    "aria-hidden": d = !1,
     className: c,
     animateOnHover: E = !1
   } = e, {
     avatarDecorationSrc: I,
     avatarSrc: T,
-    eventHandlers: f
-  } = (0, a.default)({
+    eventHandlers: h
+  } = (0, s.Z)({
     user: t,
     guildId: n,
-    size: d,
+    size: _,
     showPending: !0,
-    avatarDecorationOverride: s,
+    avatarDecorationOverride: o,
     animateOnHover: E
   });
   return (0, i.jsx)(l, {
     avatarDecoration: I,
     src: T,
-    size: d,
+    size: _,
     status: u,
-    "aria-label": _ ? void 0 : o.default.Messages.USER_SETTINGS_AVATAR,
-    "aria-hidden": _,
+    "aria-label": d ? void 0 : a.Z.Messages.USER_SETTINGS_AVATAR,
+    "aria-hidden": d,
     className: c,
-    ...f
+    ...h
   })
 }

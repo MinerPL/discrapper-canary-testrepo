@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n("411104");
-var i, r = n("735250"),
-  s = n("470079"),
-  a = n("803997"),
-  o = n.n(a),
-  l = n("736336");
+n(411104);
+var i, r = n(735250),
+  s = n(470079),
+  o = n(120356),
+  a = n.n(o),
+  l = n(480057);
 
 function u(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -14,19 +14,19 @@ function u(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let d = e => new Promise((t, n) => {
+let _ = e => new Promise((t, n) => {
   null == e && n(Error("No image src passed"));
   let i = new Image;
   i.src = e, i.onload = () => t(i), i.onerror = e => n(e)
 });
-class _ extends(i = s.PureComponent) {
+class d extends(i = s.PureComponent) {
   componentDidUpdate(e) {
     e.src !== this.props.src && this.setState({
       loaded: !1
     }, () => this.initialize())
   }
   initialize() {
-    d(this.props.src).then(() => {
+    _(this.props.src).then(() => {
       !this.unmounting && this.setState({
         loaded: !0
       })
@@ -42,11 +42,11 @@ class _ extends(i = s.PureComponent) {
       alt: n,
       width: i,
       height: s,
-      onLoad: a,
+      onLoad: o,
       style: u,
-      imageClassName: d
+      imageClassName: _
     } = this.props, {
-      loaded: _
+      loaded: d
     } = this.state;
     return (0, r.jsx)("div", {
       className: e,
@@ -56,14 +56,14 @@ class _ extends(i = s.PureComponent) {
         height: s
       },
       children: (0, r.jsx)("img", {
-        className: o()(l.image, d, {
-          [l.loaded]: _
+        className: a()(l.image, _, {
+          [l.loaded]: d
         }),
         width: i,
         height: s,
         src: t,
         alt: n,
-        onLoad: a
+        onLoad: o
       })
     })
   }
@@ -73,8 +73,8 @@ class _ extends(i = s.PureComponent) {
     }), this.initialize()
   }
 }
-u(_, "defaultProps", {
+u(d, "defaultProps", {
   width: 0,
   height: 0,
   alt: ""
-}), t.default = _
+}), t.Z = d

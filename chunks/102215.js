@@ -1,5 +1,5 @@
 "use strict";
-var e = n("668530"),
+var e = n(668530),
   o = Object.defineProperty;
 t.exports = function(t, r) {
   try {

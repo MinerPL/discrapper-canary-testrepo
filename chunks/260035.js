@@ -1,43 +1,43 @@
 "use strict";
-n.r(t), n.d(t, {
-  CommonConfettiCannonContextProvider: function() {
+n.d(t, {
+  m: function() {
     return u
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("911765"),
-  a = n("745510"),
-  o = n("675654"),
-  l = n("399303");
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(887024),
+  o = n(745510),
+  a = n(675654),
+  l = n(724734);
 
 function u(e) {
   let {
     children: t
-  } = e, [n, u] = r.useState(null), [d, _] = r.useState(null), c = r.useRef(new Set), [E, I] = r.useState(!1), T = r.useCallback(e => {
+  } = e, [n, u] = r.useState(null), [_, d] = r.useState(null), c = r.useRef(new Set), [E, I] = r.useState(!1), T = r.useCallback(e => {
     c.current.delete(e), I(c.current.size > 0)
-  }, []), f = r.useCallback(e => (c.current.add(e), I(!0), () => T(e)), [T]), S = r.useCallback((e, t) => {
+  }, []), h = r.useCallback(e => (c.current.add(e), I(!0), () => T(e)), [T]), S = r.useCallback((e, t) => {
     for (let n of c.current) n(e, t)
   }, []);
   return (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(a.ConfettiCannonContextProvider, {
-      confettiCanvas: d,
+    children: [(0, i.jsx)(o.d, {
+      confettiCanvas: _,
       spriteCanvas: n,
-      baseConfig: o.COMMON_CONFETTI_BASE_CONFIG,
-      addClickListener: f,
+      baseConfig: a.We,
+      addClickListener: h,
       removeClickListener: T,
       children: t
-    }), (0, i.jsx)(s.ConfettiCanvas, {
-      ref: _,
+    }), (0, i.jsx)(s.O_, {
+      ref: d,
       className: l.canvas,
-      environment: o.COMMON_CONFETTI_ENVIRONMENT,
+      environment: a.rq,
       onClick: E ? S : void 0
-    }), (0, i.jsx)(s.SpriteCanvas, {
+    }), (0, i.jsx)(s.Ji, {
       ref: u,
-      colors: o.COMMON_CONFETTI_COLORS,
-      sprites: o.COMMON_CONFETTI_SPRITES,
-      spriteWidth: o.COMMON_CONFETTI_MAX_SPRITE_SIZE,
-      spriteHeight: o.COMMON_CONFETTI_MAX_SPRITE_SIZE
+      colors: a.Br,
+      sprites: a.CA,
+      spriteWidth: a.Ko,
+      spriteHeight: a.Ko
     })]
   })
 }

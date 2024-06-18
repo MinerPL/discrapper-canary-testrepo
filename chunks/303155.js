@@ -1,6 +1,6 @@
 "use strict";
-n.r(e), n.d(e, {
-  SentryError: function() {
+n.d(e, {
+  b: function() {
     return r
   }
 });

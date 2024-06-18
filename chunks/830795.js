@@ -8,11 +8,11 @@ function i(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
-}), n("653041"), n("951953"), n("970173"), n("520712"), n("268111"), n("941497"), n("32026"), n("480839"), n("744285"), n("492257"), n("873817");
+}), n(653041), n(951953), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817);
 class r {
   stop() {
     this.source.disconnect(), clearInterval(this.interval), this.speakingCounter = 0
@@ -32,16 +32,16 @@ class r {
   }
   constructor(e, t, n, r = .1, s = 10) {
     i(this, "threshold", void 0), i(this, "currentVolume", 0), i(this, "analyser", void 0), i(this, "interval", void 0), i(this, "fftBins", void 0), i(this, "source", void 0), i(this, "speakingHistory", void 0), i(this, "speakingHistoryIndex", 0), i(this, "speakingCounter", 0), i(this, "silenceThreshold", void 0), i(this, "silentFrames", void 0), i(this, "onProcess", null);
-    let a = e.createAnalyser();
-    a.fftSize = 512, a.smoothingTimeConstant = r;
-    let o = e.createMediaStreamSource(t);
-    o.connect(a);
+    let o = e.createAnalyser();
+    o.fftSize = 512, o.smoothingTimeConstant = r;
+    let a = e.createMediaStreamSource(t);
+    a.connect(o);
     let l = [];
     for (let e = 0; e < s; e++) l.push(!1);
     let u = window.setInterval(() => {
       var e;
       this.update(), null === (e = this.onProcess) || void 0 === e || e.call(this, this.speaking, this.currentVolume)
     }, 20);
-    this.threshold = n, this.analyser = a, this.interval = u, this.fftBins = new Float32Array(a.fftSize), this.source = o, this.speakingHistory = l, this.silenceThreshold = this.speakingHistory.length, this.silentFrames = this.silenceThreshold
+    this.threshold = n, this.analyser = o, this.interval = u, this.fftBins = new Float32Array(o.fftSize), this.source = a, this.speakingHistory = l, this.silenceThreshold = this.speakingHistory.length, this.silentFrames = this.silenceThreshold
   }
 }

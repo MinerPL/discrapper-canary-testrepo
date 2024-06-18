@@ -1,34 +1,34 @@
 "use strict";
-n.r(t), n.d(t, {
-  Dialog: function() {
-    return d
-  },
-  DialogContext: function() {
+n.d(t, {
+  M: function() {
     return u
+  },
+  V: function() {
+    return _
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("597442"),
-  a = n("84735"),
-  o = n("337033"),
-  l = n("812663");
+var i = n(735250),
+  r = n(470079),
+  s = n(597442),
+  o = n(84735),
+  a = n(337033),
+  l = n(812663);
 let u = r.createContext(void 0),
-  d = r.forwardRef(function(e, t) {
+  _ = r.forwardRef(function(e, t) {
     let {
       children: n,
-      impressionType: d,
-      impression: _,
+      impressionType: _,
+      impression: d,
       disableTrack: c,
       returnRef: E,
       ...I
     } = e, T = r.useRef(null);
-    return (0, s.useFocusLock)(T, {
+    return (0, s.T)(T, {
       returnRef: E
-    }), r.useContext(l.default)({
-      type: d,
-      name: null == _ ? void 0 : _.impressionName,
-      properties: null == _ ? void 0 : _.impressionProperties
+    }), r.useContext(l.Z)({
+      type: _,
+      name: null == d ? void 0 : d.impressionName,
+      properties: null == d ? void 0 : d.impressionProperties
     }, {
       disableTrack: c
     }), r.useImperativeHandle(t, () => T.current), (0, i.jsx)(u.Provider, {
@@ -39,9 +39,9 @@ let u = r.createContext(void 0),
         role: "dialog",
         tabIndex: -1,
         "aria-modal": !0,
-        children: (0, i.jsx)(o.HeadingLevel, {
+        children: (0, i.jsx)(a.y, {
           forceLevel: 1,
-          children: (0, i.jsx)(a.FocusRingScope, {
+          children: (0, i.jsx)(o.J, {
             containerRef: T,
             children: n
           })

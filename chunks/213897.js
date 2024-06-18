@@ -1,5 +1,5 @@
 "use strict";
-var r = n("526988"),
+var r = n(526988),
   i = TypeError,
   a = function(e) {
     var t, n;

@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 });
-var i = n("812206");
+var i = n(812206);
 
 function r(e) {
   var t;
@@ -12,9 +12,9 @@ function r(e) {
     applicationId: n,
     activityConfigs: r,
     applications: s
-  } = e, a = null !== (t = null == s ? void 0 : s.find(e => e.id === n)) && void 0 !== t ? t : i.default.getApplication(n), o = r.find(e => e.application_id === n);
-  return null == o || null == a ? null : {
-    activity: o,
-    application: a
+  } = e, o = null !== (t = null == s ? void 0 : s.find(e => e.id === n)) && void 0 !== t ? t : i.Z.getApplication(n), a = r.find(e => e.application_id === n);
+  return null == a || null == o ? null : {
+    activity: a,
+    application: o
   }
 }

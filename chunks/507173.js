@@ -1,35 +1,35 @@
 "use strict";
-n.r(t), n.d(t, {
-  StackedProgress: function() {
+n.d(t, {
+  y: function() {
     return c
   }
-}), n("47120");
-var i, r, s = n("735250");
-n("470079");
-var a = n("803997"),
-  o = n.n(a),
-  l = n("392711"),
+}), n(47120);
+var i, r, s = n(735250);
+n(470079);
+var o = n(120356),
+  a = n.n(o),
+  l = n(392711),
   u = n.n(l),
-  d = n("692547"),
-  _ = n("379241");
+  _ = n(692547),
+  d = n(557130);
 
 function c(e) {
   let {
     className: t,
     percents: n,
     size: i = "small",
-    foregroundColors: r = [d.default.unsafe_rawColors.BRAND_500.css],
-    backgroundColor: a = "var(--background-modifier-active)",
+    foregroundColors: r = [_.Z.unsafe_rawColors.BRAND_500.css],
+    backgroundColor: o = "var(--background-modifier-active)",
     animate: l = !0
   } = e, c = u().zip(n, r).map((e, t) => {
-    let n, [r, a] = e;
-    return n = Array.isArray(a) ? {
-      background: "linear-gradient(to right, ".concat(a[0], ", ").concat(a[1], ")")
+    let n, [r, o] = e;
+    return n = Array.isArray(o) ? {
+      background: "linear-gradient(to right, ".concat(o[0], ", ").concat(o[1], ")")
     } : {
-      backgroundColor: a
+      backgroundColor: o
     }, (0, s.jsx)("div", {
-      className: o()(_.progressBar, _[i], {
-        [_.animating]: l
+      className: a()(d.progressBar, d[i], {
+        [d.animating]: l
       }),
       style: {
         transform: "translate3d(".concat(Math.min(Math.max(0, r), 100) - 100, "%, 0, 0)"),
@@ -38,9 +38,9 @@ function c(e) {
     }, t)
   }).reverse();
   return (0, s.jsx)("div", {
-    className: o()(t, _.progress, _[i]),
+    className: a()(t, d.progress, d[i]),
     style: {
-      backgroundColor: a
+      backgroundColor: o
     },
     children: c
   })

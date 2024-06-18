@@ -1,73 +1,73 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return O
+n.d(t, {
+  Z: function() {
+    return m
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
-  o = n("866442"),
-  l = n("442837"),
-  u = n("692547"),
-  d = n("481060"),
-  _ = n("220082"),
-  c = n("583405"),
-  E = n("695346"),
-  I = n("451478"),
-  T = n("311715"),
-  f = n("768581"),
-  S = n("74538"),
-  h = n("888778"),
-  A = n("943217"),
-  m = n("793397"),
-  N = n("474936"),
-  p = n("851641");
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(866442),
+  l = n(442837),
+  u = n(692547),
+  _ = n(481060),
+  d = n(220082),
+  c = n(583405),
+  E = n(695346),
+  I = n(451478),
+  T = n(311715),
+  h = n(768581),
+  S = n(888778),
+  f = n(943217),
+  N = n(793397),
+  A = n(214572);
 
-function O(e) {
-  var t, n;
+function m(e) {
+  var t;
   let {
-    user: a,
-    displayProfile: O,
-    guildId: R,
-    overrideBannerSrc: C,
-    profileType: g,
-    animateOnHover: L = !1,
-    hasProfileEffect: v = !1
-  } = e, D = S.default.isPremiumAtLeast(null == O ? void 0 : O.premiumType, N.PremiumTypes.TIER_2), [M, y] = r.useState(!1), P = (0, l.useStateFromStores)([I.default], () => I.default.isFocused()), U = E.GifAutoPlay.getSetting(), {
-    bannerSrc: b,
-    status: G
-  } = (0, h.default)({
-    displayProfile: O,
-    overrideBannerSrc: C,
-    size: (0, m.getUserBannerSize)(g),
-    canAnimate: L || !U ? M : P
-  }), w = (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_800).hex(), B = (0, d.getAvatarSize)(d.AvatarSizes.SIZE_80), k = (0, o.hex2int)((0, _.default)(a.getAvatarURL(R, B), w, !1)), V = (0, c.default)(null !== (t = null == O ? void 0 : O.primaryColor) && void 0 !== t ? t : k).hsl;
-  return (0, i.jsx)(A.default, {
-    isPremium: D,
-    hasThemeColors: null !== (n = null == O ? void 0 : O.canEditThemes) && void 0 !== n && n,
-    profileType: g,
-    hasBanner: null != b,
-    hasProfileEffect: v,
-    children: (0, i.jsx)("div", {
-      className: s()(p.banner, p.divider, (0, m.getUserBannerStyles)({
-        profileType: g,
+    user: n,
+    displayProfile: s,
+    guildId: m,
+    profileType: O,
+    pendingBanner: R,
+    children: C,
+    animateOnHover: p = !1,
+    hasProfileEffect: g = !1,
+    canUsePremiumCustomization: L = !1
+  } = e, v = L || (null == s ? void 0 : s.canUsePremiumProfileCustomization) || !1, [D, M] = r.useState(!1), P = (0, l.e7)([I.Z], () => I.Z.isFocused()), y = E.QK.getSetting(), {
+    bannerSrc: U,
+    status: b
+  } = (0, S.Z)({
+    displayProfile: s,
+    pendingBanner: R,
+    size: (0, N.e7)(O),
+    canAnimate: p || !y ? D : P
+  }), G = (0, _.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(), w = (0, _.getAvatarSize)(_.AvatarSizes.SIZE_80), k = (0, a._i)((0, d.ZP)(n.getAvatarURL(m, w), G, !1)), B = (0, c.Z)(null !== (t = null == s ? void 0 : s.primaryColor) && void 0 !== t ? t : k).hsl;
+  return (0, i.jsx)(f.Z, {
+    isPremium: v,
+    hasThemeColors: v,
+    profileType: O,
+    hasBanner: null != U,
+    hasProfileEffect: g,
+    children: (0, i.jsxs)("div", {
+      className: o()(A.banner, A.divider, (0, N.Ae)({
+        profileType: O,
         user: {
-          hasBanner: null != b,
-          isPremium: D,
-          hasProfileEffect: v
+          hasBanner: null != U,
+          isPremium: v,
+          hasProfileEffect: g
         }
       })),
-      onMouseMove: () => y(!0),
-      onMouseLeave: () => y(!1),
+      onMouseMove: () => M(!0),
+      onMouseLeave: () => M(!1),
       style: {
-        backgroundImage: null != b ? "url(".concat(b, ")") : void 0,
-        backgroundColor: G !== h.BannerLoadingStatus.COMPLETE ? u.default.unsafe_rawColors.PRIMARY_800.css : V
+        backgroundImage: null != U ? "url(".concat(U, ")") : void 0,
+        backgroundColor: b !== S.s.COMPLETE ? u.Z.unsafe_rawColors.PRIMARY_800.css : B
       },
-      children: !U && (0, f.isAnimatedImageURL)(b) && (0, i.jsx)(T.default, {
-        className: p.gifTag
-      })
+      children: [!y && (0, h.F8)(U) && (0, i.jsx)(T.Z, {
+        className: A.gifTag
+      }), C]
     })
   })
 }

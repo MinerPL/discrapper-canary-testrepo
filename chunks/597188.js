@@ -1,8 +1,7 @@
 "use strict";
-r.r(t);
-t.default = function(e) {
+t.Z = function(e) {
   var t = [];
   if (null != e)
-    for (var r in Object(e)) t.push(r);
+    for (var n in Object(e)) t.push(n);
   return t
 }

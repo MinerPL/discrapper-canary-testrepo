@@ -1,220 +1,221 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
+t.d(s, {
+  Z: function() {
     return D
   }
-}), s("47120");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("120356"),
-  i = s.n(n),
-  r = s("176617"),
-  o = s("866442"),
-  d = s("442837"),
-  u = s("481060"),
-  c = s("239091"),
-  E = s("749210"),
-  _ = s("607070"),
-  I = s("605436"),
-  T = s("134433"),
-  S = s("496675"),
-  f = s("442313"),
-  m = s("671533"),
-  N = s("729285"),
-  g = s("946724"),
-  h = s("970129"),
-  C = s("712181"),
-  R = s("420966"),
-  x = s("203377"),
-  L = s("981631"),
-  O = s("689938"),
-  A = s("272197");
-let p = "DRAGGABLE_ROLE";
+}), t(47120);
+var n = t(735250),
+  i = t(470079),
+  l = t(120356),
+  a = t.n(l),
+  r = t(225857),
+  o = t(290843),
+  c = t(866442),
+  d = t(442837),
+  u = t(481060),
+  E = t(239091),
+  _ = t(749210),
+  I = t(607070),
+  T = t(605436),
+  N = t(134433),
+  m = t(496675),
+  S = t(442313),
+  h = t(671533),
+  g = t(729285),
+  x = t(946724),
+  C = t(970129),
+  R = t(712181),
+  L = t(420966),
+  O = t(203377),
+  A = t(981631),
+  p = t(689938),
+  M = t(272197);
+let f = "DRAGGABLE_ROLE";
 
-function M(e) {
-  var t, l;
-  let n, {
+function v(e) {
+  var s, i;
+  let l, {
       guild: d,
-      role: E,
-      highestRole: _,
-      selectedItem: S,
-      onClick: f,
-      currentPosition: m,
-      onDragStart: N,
-      onDragReset: g,
-      onDragComplete: C,
-      roleStyle: R
+      role: _,
+      highestRole: I,
+      selectedItem: m,
+      onClick: S,
+      currentPosition: h,
+      onDragStart: g,
+      onDragReset: x,
+      onDragComplete: R,
+      roleStyle: L
     } = e,
-    x = (0, h.useLockTooltip)(d, _, E),
-    O = (0, I.isEveryoneRoleId)(d.id, E.id),
-    M = null == x && !O,
-    D = (null === (t = E.tags) || void 0 === t ? void 0 : t.guild_connections) !== void 0,
-    [, v] = (0, r.useDrag)({
-      type: p,
-      item: () => (N(E.id), {
-        id: E.id,
-        position: m
+    O = (0, C.T)(d, I, _),
+    p = (0, T.pM)(d.id, _.id),
+    v = null == O && !p,
+    D = (null === (s = _.tags) || void 0 === s ? void 0 : s.guild_connections) !== void 0,
+    [, Z] = (0, r.c)({
+      type: f,
+      item: () => (g(_.id), {
+        id: _.id,
+        position: h
       }),
-      canDrag: () => M,
-      end: (e, t) => {
-        let s = t.getDropResult();
-        if (null == s) {
-          g();
+      canDrag: () => v,
+      end: (e, s) => {
+        let t = s.getDropResult();
+        if (null == t) {
+          x();
           return
         }
-        C(s.roleId)
+        R(t.roleId)
       }
     }),
     [{
-      dragSourcePosition: G
-    }, j] = (0, r.useDrop)({
-      accept: p,
-      canDrop: () => M,
+      dragSourcePosition: j
+    }, U] = (0, o.L)({
+      accept: f,
+      canDrop: () => v,
       collect: e => {
-        let t = e.getItem();
-        return null != t && e.isOver() && e.canDrop() ? {
-          dragSourcePosition: t.position
+        let s = e.getItem();
+        return null != s && e.isOver() && e.canDrop() ? {
+          dragSourcePosition: s.position
         } : {
           dragSourcePosition: null
         }
       },
       drop: () => ({
-        roleId: E.id
+        roleId: _.id
       })
     }),
-    U = null !== (l = E.colorString) && void 0 !== l ? l : (0, o.int2hex)(L.DEFAULT_ROLE_COLOR);
-  return n = D ? (0, a.jsx)(T.default, {
+    G = null !== (i = _.colorString) && void 0 !== i ? i : (0, c.Rf)(A.p6O);
+  return l = D ? (0, n.jsx)(N.Z, {
     size: 12,
-    color: E.colorString,
-    className: A.verifiedRoleIcon
-  }) : "dot" === R ? (0, a.jsx)(u.RoleDot, {
-    color: U,
+    color: _.colorString,
+    className: M.verifiedRoleIcon
+  }) : "dot" === L ? (0, n.jsx)(u.RoleDot, {
+    color: G,
     background: !1,
     tooltip: !1
-  }) : (0, a.jsx)(u.RoleCircle, {
-    color: U
-  }), (0, a.jsxs)(u.TabBar.Item, {
-    className: i()(A.row, {
-      [A.dragBefore]: null !== G && m < G,
-      [A.dragAfter]: null !== G && m > G
+  }) : (0, n.jsx)(u.RoleCircle, {
+    color: G
+  }), (0, n.jsxs)(u.TabBar.Item, {
+    className: a()(M.row, {
+      [M.dragBefore]: null !== j && h < j,
+      [M.dragAfter]: null !== j && h > j
     }),
-    id: E.id,
-    selectedItem: S,
+    id: _.id,
+    selectedItem: m,
     itemType: "side",
-    onClick: f,
+    onClick: S,
     onContextMenu: function(e) {
-      (0, c.openContextMenuLazy)(e, async () => {
+      (0, E.jW)(e, async () => {
         let {
           default: e
-        } = await Promise.resolve().then(s.bind(s, "741247"));
-        return t => (0, a.jsx)(e, {
-          ...t,
-          role: E,
+        } = await Promise.resolve().then(t.bind(t, 741247));
+        return s => (0, n.jsx)(e, {
+          ...s,
+          role: _,
           guild: d
         })
       })
     },
-    "aria-label": E.name,
+    "aria-label": _.name,
     clickableRef: e => {
-      var t;
-      return v(j(null !== (t = null == e ? void 0 : e.ref) && void 0 !== t ? t : null))
+      var s;
+      return Z(U(null !== (s = null == e ? void 0 : e.ref) && void 0 !== s ? s : null))
     },
-    children: [n, null != x ? (0, a.jsx)(h.default, {
-      className: A.lock,
-      tooltipText: x
-    }) : null, (0, a.jsx)(u.Text, {
+    children: [l, null != O ? (0, n.jsx)(C.Z, {
+      className: M.lock,
+      tooltipText: O
+    }) : null, (0, n.jsx)(u.Text, {
       variant: "text-sm/medium",
-      color: O ? "header-primary" : "interactive-active",
+      color: p ? "header-primary" : "interactive-active",
       lineClamp: 1,
-      children: E.name
+      children: _.name
     })]
   })
 }
 
 function D(e) {
   let {
-    guild: t,
-    currentRoleId: s,
-    setCurrentRoleId: n,
+    guild: s,
+    currentRoleId: t,
+    setCurrentRoleId: l,
     setSelectedSection: r
-  } = e, o = (0, d.useStateFromStores)([g.default], () => g.default.roles), c = (0, d.useStateFromStores)([S.default], () => S.default.getHighestRole(t)), I = (0, d.useStateFromStores)([_.default], () => _.default.roleStyle), [T, h] = l.useState(o.length), {
-    scrolledToTop: L,
-    handleScroll: p
-  } = (0, R.useScrolledToTop)(), {
-    handleDragStart: D,
-    handleDragReset: v,
-    handleDragComplete: G
-  } = (0, C.default)(o), j = l.useRef(null), U = l.useCallback(e => {
-    var t, s;
-    let a = o.findIndex(t => t.id === e);
-    null === (s = j.current) || void 0 === s || null === (t = s.getScrollerNode()) || void 0 === t || t.scrollTo({
-      top: Math.max((a - 2) * 34, 0)
+  } = e, o = (0, d.e7)([x.Z], () => x.Z.roles), c = (0, d.e7)([m.Z], () => m.Z.getHighestRole(s)), E = (0, d.e7)([I.Z], () => I.Z.roleStyle), [T, N] = i.useState(o.length), {
+    scrolledToTop: C,
+    handleScroll: A
+  } = (0, L.V)(), {
+    handleDragStart: f,
+    handleDragReset: D,
+    handleDragComplete: Z
+  } = (0, R.Z)(o), j = i.useRef(null), U = i.useCallback(e => {
+    var s, t;
+    let n = o.findIndex(s => s.id === e);
+    null === (t = j.current) || void 0 === t || null === (s = t.getScrollerNode()) || void 0 === s || s.scrollTo({
+      top: Math.max((n - 2) * 34, 0)
     })
   }, [o]);
-  l.useEffect(() => {
-    U(s)
-  }, []), l.useEffect(() => {
-    o.length > T && U(s), o.length !== T && h(o.length)
-  }, [o.length, T, h, U, s]);
-  let P = () => {
-    E.default.createRole(t.id), r(x.GuildSettingsRoleEditSections.DISPLAY)
+  i.useEffect(() => {
+    U(t)
+  }, []), i.useEffect(() => {
+    o.length > T && U(t), o.length !== T && N(o.length)
+  }, [o.length, T, N, U, t]);
+  let G = () => {
+    _.Z.createRole(s.id), r(O.ZI.DISPLAY)
   };
-  return (0, a.jsx)(f.default.Sidebar, {
-    className: A.sidebar,
-    children: (0, a.jsxs)("div", {
-      className: A.container,
-      children: [(0, a.jsxs)("div", {
-        className: i()(A.titleContainer, {
-          [A.titleElevated]: !L
+  return (0, n.jsx)(S.ZP.Sidebar, {
+    className: M.sidebar,
+    children: (0, n.jsxs)("div", {
+      className: M.container,
+      children: [(0, n.jsxs)("div", {
+        className: a()(M.titleContainer, {
+          [M.titleElevated]: !C
         }),
-        children: [(0, a.jsxs)(u.Clickable, {
-          className: A.title,
-          onClick: () => n(null),
-          children: [(0, a.jsx)(m.default, {
-            direction: m.default.Directions.LEFT
-          }), (0, a.jsx)(u.Text, {
-            className: A.titleText,
+        children: [(0, n.jsxs)(u.Clickable, {
+          className: M.title,
+          onClick: () => l(null),
+          children: [(0, n.jsx)(h.Z, {
+            direction: h.Z.Directions.LEFT
+          }), (0, n.jsx)(u.Text, {
+            className: M.titleText,
             variant: "text-md/semibold",
             color: "none",
-            children: O.default.Messages.BACK
+            children: p.Z.Messages.BACK
           })]
-        }), (0, a.jsx)(u.Tooltip, {
+        }), (0, n.jsx)(u.Tooltip, {
           position: "top",
-          "aria-label": O.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_CREATE,
-          text: (0, a.jsx)(u.Text, {
-            className: A.tooltip,
+          "aria-label": p.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_CREATE,
+          text: (0, n.jsx)(u.Text, {
+            className: M.tooltip,
             variant: "text-sm/normal",
-            children: O.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_CREATE
+            children: p.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_CREATE
           }),
-          children: e => (0, a.jsx)(u.Clickable, {
-            className: A.addRole,
+          children: e => (0, n.jsx)(u.Clickable, {
+            className: M.addRole,
             ...e,
-            onClick: P,
-            children: (0, a.jsx)(N.default, {
+            onClick: G,
+            children: (0, n.jsx)(g.Z, {
               width: 20,
               height: 20
             })
           })
         })]
-      }), (0, a.jsx)(u.AdvancedScroller, {
-        className: A.list,
+      }), (0, n.jsx)(u.AdvancedScroller, {
+        className: M.list,
         ref: j,
-        onScroll: p,
-        children: (0, a.jsx)(u.TabBar, {
-          selectedItem: s,
-          onItemSelect: e => n(e),
+        onScroll: A,
+        children: (0, n.jsx)(u.TabBar, {
+          selectedItem: t,
+          onItemSelect: e => l(e),
           orientation: "vertical",
-          children: o.map((e, l) => (0, a.jsx)(M, {
-            guild: t,
+          children: o.map((e, i) => (0, n.jsx)(v, {
+            guild: s,
             role: e,
             highestRole: c,
-            selectedItem: s,
-            onClick: () => n(e.id),
-            currentPosition: l,
-            onDragStart: D,
-            onDragReset: v,
-            onDragComplete: G,
-            roleStyle: I
+            selectedItem: t,
+            onClick: () => l(e.id),
+            currentPosition: i,
+            onDragStart: f,
+            onDragReset: D,
+            onDragComplete: Z,
+            roleStyle: E
           }, e.id))
         })
       })]

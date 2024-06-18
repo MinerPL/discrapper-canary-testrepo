@@ -1,19 +1,19 @@
 "use strict";
-var r = n("96403"),
-  a = n("463374"),
-  o = n("342545"),
-  i = n("219479"),
-  l = r("".replace),
-  u = RegExp("^[" + i + "]+"),
-  s = RegExp("(^|[^" + i + "])[" + i + "]+$"),
-  c = function(e) {
+var r = n(96403),
+  o = n(463374),
+  a = n(342545),
+  i = n(219479),
+  s = r("".replace),
+  c = RegExp("^[" + i + "]+"),
+  l = RegExp("(^|[^" + i + "])[" + i + "]+$"),
+  u = function(e) {
     return function(t) {
-      var n = o(a(t));
-      return 1 & e && (n = l(n, u, "")), 2 & e && (n = l(n, s, "$1")), n
+      var n = a(o(t));
+      return 1 & e && (n = s(n, c, "")), 2 & e && (n = s(n, l, "$1")), n
     }
   };
 e.exports = {
-  start: c(1),
-  end: c(2),
-  trim: c(3)
+  start: u(1),
+  end: u(2),
+  trim: u(3)
 }

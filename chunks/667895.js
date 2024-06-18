@@ -1,8 +1,7 @@
 "use strict";
-n.r(t);
-var r = n("261168"),
+var r = n(261168),
   i = {
-    date: (0, r.default)({
+    date: (0, r.Z)({
       formats: {
         full: "EEEE, MMMM do, y",
         long: "MMMM do, y",
@@ -11,7 +10,7 @@ var r = n("261168"),
       },
       defaultWidth: "full"
     }),
-    time: (0, r.default)({
+    time: (0, r.Z)({
       formats: {
         full: "h:mm:ss a zzzz",
         long: "h:mm:ss a z",
@@ -20,7 +19,7 @@ var r = n("261168"),
       },
       defaultWidth: "full"
     }),
-    dateTime: (0, r.default)({
+    dateTime: (0, r.Z)({
       formats: {
         full: "{{date}} 'at' {{time}}",
         long: "{{date}} 'at' {{time}}",
@@ -30,4 +29,4 @@ var r = n("261168"),
       defaultWidth: "full"
     })
   };
-t.default = i
+t.Z = i

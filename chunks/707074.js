@@ -1,30 +1,30 @@
 "use strict";
-var r = n("548828"),
-  a = n("611345"),
-  o = n("186973"),
-  i = n("474883"),
-  l = TypeError,
-  u = function(e) {
-    return function(t, n, u, s) {
-      var c = a(t),
-        d = o(c),
-        f = i(c);
+var r = n(548828),
+  o = n(611345),
+  a = n(186973),
+  i = n(474883),
+  s = TypeError,
+  c = function(e) {
+    return function(t, n, c, l) {
+      var u = o(t),
+        d = a(u),
+        p = i(u);
       r(n);
-      var p = e ? f - 1 : 0,
-        h = e ? -1 : 1;
-      if (u < 2)
+      var h = e ? p - 1 : 0,
+        f = e ? -1 : 1;
+      if (c < 2)
         for (;;) {
-          if (p in d) {
-            s = d[p], p += h;
+          if (h in d) {
+            l = d[h], h += f;
             break
           }
-          if (p += h, e ? p < 0 : f <= p) throw new l("Reduce of empty array with no initial value")
+          if (h += f, e ? h < 0 : p <= h) throw new s("Reduce of empty array with no initial value")
         }
-      for (; e ? p >= 0 : f > p; p += h) p in d && (s = n(s, d[p], p, c));
-      return s
+      for (; e ? h >= 0 : p > h; h += f) h in d && (l = n(l, d[h], h, u));
+      return l
     }
   };
 e.exports = {
-  left: u(!1),
-  right: u(!0)
+  left: c(!1),
+  right: c(!0)
 }

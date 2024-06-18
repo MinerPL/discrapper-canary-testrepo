@@ -1,7 +1,7 @@
 "use strict";
-var n = r("556019"),
-  i = r("464762"),
-  o = r("581079");
+var n = r(556019),
+  i = r(464762),
+  o = r(581079);
 
 function a(t, e, r, a, u, s, c) {
   var l = r.getStartOffset(),

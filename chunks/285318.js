@@ -1,102 +1,102 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return u
+t.d(s, {
+  Z: function() {
+    return d
   }
-}), s("47120");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("481060"),
-  i = s("273504"),
-  r = s("689938"),
-  o = s("928517");
+}), t(47120);
+var n = t(735250),
+  i = t(470079),
+  l = t(481060),
+  a = t(273504),
+  r = t(689938),
+  o = t(789398);
 
-function d(e) {
+function c(e) {
   let {
-    preset: t,
-    toggled: s,
-    onToggle: l
+    preset: s,
+    toggled: t,
+    onToggle: i
   } = e, {
-    headerText: d,
-    subtitleText: u
+    headerText: c,
+    subtitleText: d
   } = function(e) {
-    let t = null,
-      s = null;
+    let s = null,
+      t = null;
     switch (e) {
-      case i.KeywordPreset.PROFANITY:
-        t = r.default.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_PROFANITY_HEADER, s = (0, a.jsx)(a.Fragment, {
-          children: r.default.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_PROFANITY_SUBTITLE
+      case a.Ux.PROFANITY:
+        s = r.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_PROFANITY_HEADER, t = (0, n.jsx)(n.Fragment, {
+          children: r.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_PROFANITY_SUBTITLE
         });
         break;
-      case i.KeywordPreset.SEXUAL_CONTENT:
-        t = r.default.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SEXUAL_CONTENT_HEADER, s = (0, a.jsx)(a.Fragment, {
-          children: r.default.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SEXUAL_CONTENT_SUBTITLE
+      case a.Ux.SEXUAL_CONTENT:
+        s = r.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SEXUAL_CONTENT_HEADER, t = (0, n.jsx)(n.Fragment, {
+          children: r.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SEXUAL_CONTENT_SUBTITLE
         });
         break;
-      case i.KeywordPreset.SLURS:
-        t = r.default.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SLURS_HEADER, s = (0, a.jsx)(a.Fragment, {
-          children: r.default.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SLURS_SUBTITLE
+      case a.Ux.SLURS:
+        s = r.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SLURS_HEADER, t = (0, n.jsx)(n.Fragment, {
+          children: r.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SLURS_SUBTITLE
         });
         break;
       default:
-        t = "Error", s = "Unrecognized list"
+        s = "Error", t = "Unrecognized list"
     }
     return {
-      headerText: t,
-      subtitleText: s
+      headerText: s,
+      subtitleText: t
     }
-  }(t);
-  return (0, a.jsxs)("div", {
+  }(s);
+  return (0, n.jsxs)("div", {
     className: o.keywordListContainer,
-    children: [(0, a.jsxs)("div", {
+    children: [(0, n.jsxs)("div", {
       className: o.keywordListTextContainer,
-      children: [(0, a.jsx)(n.Heading, {
+      children: [(0, n.jsx)(l.Heading, {
         variant: "heading-sm/semibold",
-        children: d
-      }), (0, a.jsx)(n.Text, {
+        children: c
+      }), (0, n.jsx)(l.Text, {
         color: "interactive-normal",
         variant: "text-xs/medium",
-        children: u
+        children: d
       })]
-    }), (0, a.jsx)(n.Checkbox, {
+    }), (0, n.jsx)(l.Checkbox, {
       className: o.toggle,
-      type: n.Checkbox.Types.INVERTED,
-      value: s,
-      onChange: () => l(t)
+      type: l.Checkbox.Types.INVERTED,
+      value: t,
+      onChange: () => i(s)
     })]
   })
 }
 
-function u(e) {
-  var t;
+function d(e) {
+  var s;
   let {
-    rule: s,
-    onChangeRule: n
-  } = e, [r, o] = l.useState(new Set(null == s ? void 0 : null === (t = s.triggerMetadata) || void 0 === t ? void 0 : t.presets)), u = l.useMemo(() => e => {
-    n({
-      ...s,
+    rule: t,
+    onChangeRule: l
+  } = e, [r, o] = i.useState(new Set(null == t ? void 0 : null === (s = t.triggerMetadata) || void 0 === s ? void 0 : s.presets)), d = i.useMemo(() => e => {
+    l({
+      ...t,
       triggerMetadata: {
-        ...s.triggerMetadata,
+        ...t.triggerMetadata,
         presets: e
       }
     })
-  }, [n, s]), c = e => {
-    let t = new Set(r);
-    t.has(e) ? t.delete(e) : t.add(e), o(t), u(Array.from(t))
+  }, [l, t]), u = e => {
+    let s = new Set(r);
+    s.has(e) ? s.delete(e) : s.add(e), o(s), d(Array.from(s))
   };
-  return (0, a.jsxs)("div", {
-    children: [(0, a.jsx)(d, {
-      preset: i.KeywordPreset.PROFANITY,
-      toggled: r.has(i.KeywordPreset.PROFANITY),
-      onToggle: c
-    }), (0, a.jsx)(d, {
-      preset: i.KeywordPreset.SLURS,
-      toggled: r.has(i.KeywordPreset.SLURS),
-      onToggle: c
-    }), (0, a.jsx)(d, {
-      preset: i.KeywordPreset.SEXUAL_CONTENT,
-      toggled: r.has(i.KeywordPreset.SEXUAL_CONTENT),
-      onToggle: c
+  return (0, n.jsxs)("div", {
+    children: [(0, n.jsx)(c, {
+      preset: a.Ux.PROFANITY,
+      toggled: r.has(a.Ux.PROFANITY),
+      onToggle: u
+    }), (0, n.jsx)(c, {
+      preset: a.Ux.SLURS,
+      toggled: r.has(a.Ux.SLURS),
+      onToggle: u
+    }), (0, n.jsx)(c, {
+      preset: a.Ux.SEXUAL_CONTENT,
+      toggled: r.has(a.Ux.SEXUAL_CONTENT),
+      onToggle: u
     })]
   })
 }

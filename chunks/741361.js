@@ -1,31 +1,31 @@
 "use strict";
-n.r(t), n.d(t, {
-  init: function() {
+n.d(t, {
+  Aj: function() {
+    return a
+  },
+  S1: function() {
     return u
   },
-  saveAndClearPermissionUpdates: function() {
-    return _
-  },
-  savePermissionUpdates: function() {
-    return d
-  },
-  selectPermission: function() {
-    return o
-  },
-  setAdvancedMode: function() {
+  d$: function() {
     return l
   },
-  updatePermission: function() {
-    return a
+  hw: function() {
+    return _
+  },
+  kU: function() {
+    return d
+  },
+  kY: function() {
+    return o
   }
 });
-var i = n("570140"),
-  r = n("156699"),
-  s = n("493683");
-async function a(e, t, n, s) {
-  let a = e.getGuildId();
-  if (null != a && t === a && !await (0, r.checkDefaultChannelThresholdMetAfterChannelPermissionDeny)(e, s, n)) return !1;
-  i.default.dispatch({
+var i = n(570140),
+  r = n(156699),
+  s = n(493683);
+async function o(e, t, n, s) {
+  let o = e.getGuildId();
+  if (null != o && t === o && !await (0, r.u)(e, s, n)) return !1;
+  i.Z.dispatch({
     type: "CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION",
     id: t,
     allow: n,
@@ -33,32 +33,32 @@ async function a(e, t, n, s) {
   })
 }
 
-function o(e) {
-  i.default.dispatch({
+function a(e) {
+  i.Z.dispatch({
     type: "CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION",
     id: e
   })
 }
 
 function l(e) {
-  i.default.dispatch({
+  i.Z.dispatch({
     type: "CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE",
     advancedMode: e
   })
 }
 
 function u() {
-  i.default.dispatch({
+  i.Z.dispatch({
     type: "CHANNEL_SETTINGS_PERMISSIONS_INIT"
   })
 }
 
-function d(e, t, n) {
-  return _(e, t, [], n)
+function _(e, t, n) {
+  return d(e, t, [], n)
 }
 
-function _(e, t, n, r) {
-  return i.default.dispatch({
+function d(e, t, n, r) {
+  return i.Z.dispatch({
     type: "CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING"
   }), new Promise(i => {
     let r = () => {
@@ -66,16 +66,16 @@ function _(e, t, n, r) {
       if (t.length > 0) {
         let n = t.pop();
         if (null == n) return r();
-        s.default.updatePermissionOverwrite(e, n).then(r, r)
+        s.Z.updatePermissionOverwrite(e, n).then(r, r)
       } else {
         let t = n.pop();
         if (null == t) return r();
-        s.default.clearPermissionOverwrite(e, t).then(r, r)
+        s.Z.clearPermissionOverwrite(e, t).then(r, r)
       }
     };
     r()
   }).then(() => {
-    i.default.dispatch({
+    i.Z.dispatch({
       type: "CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS",
       silent: r
     })

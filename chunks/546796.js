@@ -1,18 +1,18 @@
 "use strict";
 let i, r;
-n.r(t), n.d(t, {
-  default: function() {
-    return d
+n.d(t, {
+  Z: function() {
+    return _
   }
-}), n("411104");
-var s = n("594174"),
-  a = n("831160");
-let o = () => {
+}), n(411104);
+var s = n(594174),
+  o = n(831160);
+let a = () => {
   throw Error("updateModal has not been implemented.")
 };
 {
-  let e = n("169480");
-  i = e.showModal, o = e.updateModalProps, r = n("952265").closeModal
+  let e = n(169480);
+  i = e.showModal, a = e.updateModalProps, r = n(952265).Mr
 }
 
 function l(e) {
@@ -20,7 +20,7 @@ function l(e) {
     promiseFn: t,
     resolve: n,
     reject: s,
-    modalProps: a = {},
+    modalProps: o = {},
     hooks: {
       onEarlyClose: l
     } = {}
@@ -29,23 +29,23 @@ function l(e) {
     null == l || l();
     return
   }
-  let d = i(I, _, a);
+  let _ = i(I, d, o);
 
-  function _() {
+  function d() {
     null == l || l()
   }
 
   function c(e) {
-    r(d), n(e)
+    r(_), n(e)
   }
 
   function E(e) {
-    r(d), s(e)
+    r(_), s(e)
   }
 
   function I(e) {
-    return o(d, I, _, {
-      ...a,
+    return a(_, I, d, {
+      ...o,
       isLoading: !0
     }), u({
       promiseFn: t,
@@ -61,8 +61,8 @@ function l(e) {
     let {
       res: t
     } = e;
-    o(d, I, _, {
-      ...a,
+    a(_, I, d, {
+      ...o,
       error: t.body.message
     })
   }
@@ -75,36 +75,36 @@ function u(e) {
     reject: i,
     code: r,
     mfaCodeHandler: s = l,
-    isModalOpen: a = !1,
-    ...o
+    isModalOpen: o = !1,
+    ...a
   } = e;
   return t(null != r ? {
     code: r
   } : {}).then(n, e => {
     var r, l;
-    if (r = e, l = a, r.body && 60008 === r.body.code || l && 429 === r.status) return s({
+    if (r = e, l = o, r.body && 60008 === r.body.code || l && 429 === r.status) return s({
       promiseFn: t,
       resolve: n,
       reject: i,
       res: e,
-      ...o
+      ...a
     });
     i(e)
   })
 }
 
-function d(e, t) {
+function _(e, t) {
   var n, i;
   let {
     checkEnabled: r = null !== (i = null === (n = s.default.getCurrentUser()) || void 0 === n ? void 0 : n.mfaEnabled) && void 0 !== i && i,
-    ...o
+    ...a
   } = null != t ? t : {};
   return new Promise((t, n) => {
-    ((0, a.resolveThunk)(r) ? l : u)({
+    ((0, o.d)(r) ? l : u)({
       promiseFn: e,
       resolve: t,
       reject: n,
-      ...o
+      ...a
     })
   })
 }

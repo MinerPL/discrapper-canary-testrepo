@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
-  calculateProgress: function() {
+n.d(t, {
+  S: function() {
     return s
   },
-  doesImageMatchUpload: function() {
+  T: function() {
     return r
   }
 });
-var i = n("476326");
+var i = n(476326);
 
 function r(e, t) {
   if (t.id === e.uri || null != t.id && t.id === e.id) return !0;
-  if (t.item.platform === i.UploadPlatform.REACT_NATIVE) {
+  if (t.item.platform === i.ow.REACT_NATIVE) {
     let {
       item: i
     } = t, {

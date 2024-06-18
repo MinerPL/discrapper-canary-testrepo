@@ -1,49 +1,49 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return m
+n.d(t, {
+  Z: function() {
+    return g
   }
-}), n("47120"), n("773603");
-var s = n("735250"),
-  a = n("470079"),
-  i = n("593473"),
-  r = n("266067"),
-  l = n("442837"),
-  o = n("893776"),
-  u = n("899742"),
-  d = n("743142"),
-  c = n("703656"),
-  f = n("314897"),
-  h = n("781428"),
-  g = n("981631"),
-  E = n("176505");
+}), n(47120), n(773603);
+var s = n(735250),
+  r = n(470079),
+  i = n(593473),
+  a = n(266067),
+  l = n(442837),
+  o = n(893776),
+  u = n(899742),
+  c = n(743142),
+  d = n(703656),
+  h = n(314897),
+  E = n(781428),
+  _ = n(981631),
+  m = n(176505);
 
-function m(e) {
-  let t = a.useCallback(t => {
+function g(e) {
+  let t = r.useCallback(t => {
       if (function(e) {
           var t;
-          let n = (0, r.matchPath)(e, {
-            path: g.Routes.CHANNEL(":guildId", ":channelId")
+          let n = (0, a.LX)(e, {
+            path: _.Z5c.CHANNEL(":guildId", ":channelId")
           });
-          return (null == n ? void 0 : null === (t = n.params) || void 0 === t ? void 0 : t.channelId) === E.StaticChannelRoute.ROLE_SUBSCRIPTIONS || !1
-        }(t)) c.replaceWith(t);
+          return (null == n ? void 0 : null === (t = n.params) || void 0 === t ? void 0 : t.channelId) === m.oC.ROLE_SUBSCRIPTIONS || !1
+        }(t)) d.dL(t);
       else {
         var n;
-        (null !== (n = e.transitionTo) && void 0 !== n ? n : c.transitionTo)(t)
+        (null !== (n = e.transitionTo) && void 0 !== n ? n : d.uL)(t)
       }
     }, [e.transitionTo]),
     {
       isAuthenticated: n,
-      loginStatus: m
-    } = (0, l.useStateFromStoresObject)([f.default], () => ({
-      isAuthenticated: f.default.isAuthenticated(),
-      loginStatus: f.default.getLoginStatus()
+      loginStatus: g
+    } = (0, l.cj)([h.default], () => ({
+      isAuthenticated: h.default.isAuthenticated(),
+      loginStatus: h.default.getLoginStatus()
     })),
     {
-      location: p,
-      redirectTo: _
+      location: f,
+      redirectTo: p
     } = e,
-    [S, R] = a.useState(n);
+    [I, N] = r.useState(n);
 
   function A(e) {
     let {
@@ -51,21 +51,21 @@ function m(e) {
       handoffToken: n,
       handoffSource: s
     } = e;
-    (0, u.handoffFromApp)({
+    (0, u.Yz)({
       handoffKey: t,
       handoffToken: n,
       handoffSource: s
-    }), R(!1)
+    }), N(!1)
   }
-  return (a.useEffect(() => {
-    if (null != p) {
+  return (r.useEffect(() => {
+    if (null != f) {
       let {
         handoff_key: e,
         handoff_token: t
-      } = (0, i.parse)(p.search);
+      } = (0, i.parse)(f.search);
       if (null != e && null != t) {
-        let n = null != _ ? (0, d.getLoginHandoffSourceFromRedirectTo)(_) : void 0;
-        S ? o.default.logout(null).finally(() => {
+        let n = null != p ? (0, c.L)(p) : void 0;
+        I ? o.Z.logout(null).finally(() => {
           A({
             handoffKey: e,
             handoffToken: t,
@@ -78,7 +78,7 @@ function m(e) {
         })
       }
     }
-  }, []), S || m === g.LoginStates.LOGGING_IN) ? (0, s.jsx)(h.LoginSpinner, {}) : (0, s.jsx)(h.default, {
+  }, []), I || g === _.u34.LOGGING_IN) ? (0, s.jsx)(E.q, {}) : (0, s.jsx)(E.Z, {
     ...e,
     transitionTo: t
   })

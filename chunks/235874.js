@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  LazyPopout: function() {
+n.d(t, {
+  K: function() {
     return T
   },
-  Popout: function() {
+  y: function() {
     return I
   }
-}), n("411104"), n("47120");
-var i, r, a, s = n("735250"),
-  o = n("470079"),
-  l = n("922770"),
-  u = n("930295"),
-  d = n("126306"),
-  _ = n("684050");
+}), n(411104), n(47120);
+var i, r, s, o = n(735250),
+  a = n(470079),
+  l = n(922770),
+  u = n(930295),
+  _ = n(126306),
+  d = n(900975);
 
 function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -21,13 +21,13 @@ function c(e, t, n) {
     configurable: !0,
     writable: !0
   }) : e[t] = n, e
-}(a = i || (i = {})).NONE = "1", a.TRANSLATE = "2", a.SCALE = "3", a.FADE = "4";
+}(s = i || (i = {})).NONE = "1", s.TRANSLATE = "2", s.SCALE = "3", s.FADE = "4";
 let E = Object.freeze({
-  2: d.PopoutCSSAnimator.Types.TRANSLATE,
-  3: d.PopoutCSSAnimator.Types.SCALE,
-  4: d.PopoutCSSAnimator.Types.FADE
+  2: _.l.Types.TRANSLATE,
+  3: _.l.Types.SCALE,
+  4: _.l.Types.FADE
 });
-class I extends(r = o.Component) {
+class I extends(r = a.Component) {
   render() {
     let {
       children: e,
@@ -35,27 +35,27 @@ class I extends(r = o.Component) {
       position: n,
       onRequestOpen: i,
       onRequestClose: r,
-      align: a,
-      autoInvert: o,
+      align: s,
+      autoInvert: a,
       fixed: l,
-      nudgeAlignIntoViewport: d,
-      useRawTargetDimensions: _,
+      nudgeAlignIntoViewport: _,
+      useRawTargetDimensions: d,
       spacing: c,
       onShiftClick: E,
       positionKey: I,
       preload: T,
-      disablePointerEvents: f,
+      disablePointerEvents: h,
       ignoreModalClicks: S,
-      closeOnScroll: h,
-      useMouseEnter: A,
-      renderPopout: m,
-      layerContext: N
+      closeOnScroll: f,
+      useMouseEnter: N,
+      renderPopout: A,
+      layerContext: m
     } = this.props;
-    return (0, s.jsx)(u.BasePopout, {
+    return (0, o.jsx)(u.H, {
       ref: this.ref,
       preload: T,
       position: n,
-      align: null != a ? a : function(e) {
+      align: null != s ? s : function(e) {
         switch (e) {
           case "top":
           case "bottom":
@@ -69,27 +69,27 @@ class I extends(r = o.Component) {
         }
         throw Error("Unexpected position: ".concat(e))
       }(n),
-      autoInvert: o,
+      autoInvert: a,
       fixed: l,
-      nudgeAlignIntoViewport: d,
-      useRawTargetDimensions: _,
+      nudgeAlignIntoViewport: _,
+      useRawTargetDimensions: d,
       renderPopout: this.renderPopout,
       spacing: c,
-      shouldShow: null != m && t,
+      shouldShow: null != A && t,
       onRequestOpen: i,
       onRequestClose: r,
       onShiftClick: E,
       positionKey: I,
-      disablePointerEvents: f,
+      disablePointerEvents: h,
       ignoreModalClicks: S,
-      closeOnScroll: h,
-      useMouseEnter: A,
-      layerContext: N,
+      closeOnScroll: f,
+      useMouseEnter: N,
+      layerContext: m,
       children: e
     })
   }
   constructor(...e) {
-    super(...e), c(this, "ref", o.createRef()), c(this, "renderPopout", e => {
+    super(...e), c(this, "ref", a.createRef()), c(this, "renderPopout", e => {
       let {
         renderPopout: t,
         animation: n,
@@ -99,7 +99,7 @@ class I extends(r = o.Component) {
         case "2":
         case "3":
         case "4":
-          return (0, s.jsx)(d.PopoutCSSAnimator, {
+          return (0, o.jsx)(_.l, {
             position: e.position,
             type: E[n],
             children: t(e)
@@ -116,50 +116,50 @@ function T(e) {
   let {
     renderPopout: t,
     ...n
-  } = e, i = o.useRef(null), [r, a] = o.useState(0);
+  } = e, i = a.useRef(null), [r, s] = a.useState(0);
 
   function u() {
-    return c(), (0, s.jsx)(s.Fragment, {})
+    return c(), (0, o.jsx)(o.Fragment, {})
   }
-  o.useLayoutEffect(() => {
+  a.useLayoutEffect(() => {
     if (r > 0) {
-      var e, t, n, a, s;
-      null === (s = i.current) || void 0 === s || null === (a = s.ref) || void 0 === a || null === (n = a.current) || void 0 === n || null === (t = n.layerRef) || void 0 === t || null === (e = t.current) || void 0 === e || e.updatePosition()
+      var e, t, n, s, o;
+      null === (o = i.current) || void 0 === o || null === (s = o.ref) || void 0 === s || null === (n = s.current) || void 0 === n || null === (t = n.layerRef) || void 0 === t || null === (e = t.current) || void 0 === e || e.updatePosition()
     }
-  }, [r]), o.useEffect(() => {
+  }, [r]), a.useEffect(() => {
     let e = setTimeout(t, 20 + 20 * Math.random());
     return () => clearTimeout(e)
   }, []);
-  let d = o.useRef(!1);
+  let _ = a.useRef(!1);
   async function c() {
-    if (!d.current) {
-      d.current = !0;
+    if (!_.current) {
+      _.current = !0;
       let e = setTimeout(() => {
-          f(() => E), a(e => e + 1)
+          h(() => E), s(e => e + 1)
         }, 300),
         n = await t();
-      f(() => n), a(e => e + 1), clearTimeout(e)
+      h(() => n), s(e => e + 1), clearTimeout(e)
     }
   }
 
   function E() {
     var e, t, n, r;
-    let a = null === (r = i.current) || void 0 === r ? void 0 : null === (n = r.ref) || void 0 === n ? void 0 : null === (t = n.current) || void 0 === t ? void 0 : null === (e = t.domElementRef) || void 0 === e ? void 0 : e.current,
-      o = Math.max(100, null == a ? 100 : a.offsetWidth - 20);
-    return (0, s.jsx)("div", {
-      className: _.loader,
+    let s = null === (r = i.current) || void 0 === r ? void 0 : null === (n = r.ref) || void 0 === n ? void 0 : null === (t = n.current) || void 0 === t ? void 0 : null === (e = t.domElementRef) || void 0 === e ? void 0 : e.current,
+      a = Math.max(100, null == s ? 100 : s.offsetWidth - 20);
+    return (0, o.jsx)("div", {
+      className: d.loader,
       style: {
-        width: o
+        width: a
       },
-      children: (0, s.jsx)(l.Spinner, {})
+      children: (0, o.jsx)(l.$, {})
     })
   }
-  let [T, f] = o.useState(() => u);
-  return o.useEffect(() => {
-    d.current ? t().then(e => {
-      f(() => e), a(e => e + 1)
-    }) : f(u)
-  }, [t]), (0, s.jsx)(I, {
+  let [T, h] = a.useState(() => u);
+  return a.useEffect(() => {
+    _.current ? t().then(e => {
+      h(() => e), s(e => e + 1)
+    }) : h(u)
+  }, [t]), (0, o.jsx)(I, {
     ref: i,
     ...n,
     renderPopout: T

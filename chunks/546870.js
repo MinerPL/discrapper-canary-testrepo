@@ -1,7 +1,7 @@
 "use strict";
-var n = r("837512"),
-  i = r("531463"),
-  o = r("65183"),
+var n = r(837512),
+  i = r(531463),
+  o = r(65183),
   a = o.List,
   u = o.Map,
   s = o.OrderedSet,

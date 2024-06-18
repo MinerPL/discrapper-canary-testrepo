@@ -1,11 +1,11 @@
-var r = n("957578").Buffer,
-  i = n("63523").Transform,
-  a = n("2682").StringDecoder;
+var r = n(957578).Buffer,
+  i = n(63523).Transform,
+  a = n(2682).StringDecoder;
 
 function o(e) {
   i.call(this), this.hashMode = "string" == typeof e, this.hashMode ? this[e] = this._finalOrDigest : this.final = this._finalOrDigest, this._final && (this.__final = this._final, this._final = null), this._decoder = null, this._encoding = null
 }
-n("689118")(o, i), o.prototype.update = function(e, t, n) {
+n(689118)(o, i), o.prototype.update = function(e, t, n) {
   "string" == typeof e && (e = r.from(e, t));
   var i = this._update(e);
   return this.hashMode ? this : (n && (i = this._toString(i, n)), i)

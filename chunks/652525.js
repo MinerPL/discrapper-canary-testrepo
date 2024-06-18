@@ -1,10 +1,10 @@
 "use strict";
-t.r(r), t.d(r, {
-  default: function() {
+t.d(r, {
+  Z: function() {
     return i
   }
 });
-var a = t("147693"),
+var a = t(147693),
   o = {
     article: "article",
     aside: "complementary",
@@ -83,9 +83,9 @@ function i(e) {
   }(e);
   if (null === r || "presentation" === r) {
     var t = function(e) {
-      var r = o[(0, a.getLocalName)(e)];
+      var r = o[(0, a.$Q)(e)];
       if (void 0 !== r) return r;
-      switch ((0, a.getLocalName)(e)) {
+      switch ((0, a.$Q)(e)) {
         case "a":
         case "area":
         case "link":

@@ -1,6 +1,6 @@
 "use strict";
-var r = n("21841"),
-  i = n("689118"),
+var r = n(21841),
+  i = n(689118),
   a = {};
 
 function o(e) {

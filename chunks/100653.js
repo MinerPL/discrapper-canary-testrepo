@@ -1,4 +1,4 @@
-var r = n("257693");
+var r = n(257693);
 t.encrypt = function(e, t) {
   var n = r(t, e._prev);
   return e._prev = e._cipher.encryptBlock(n), e._prev

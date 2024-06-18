@@ -1,41 +1,39 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("844303"),
-  i = r("786547"),
-  l = r("994167"),
-  u = function() {
+var r = n(470079),
+  i = n(844303),
+  a = n(786547),
+  o = n(994167),
+  s = function() {
     function e(e, t) {
-      for (var r = 0; r < t.length; r++) {
-        var n = t[r];
-        n.enumerable = n.enumerable || !1, n.configurable = !0, "value" in n && (n.writable = !0), Object.defineProperty(e, n.key, n)
+      for (var n = 0; n < t.length; n++) {
+        var r = t[n];
+        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
       }
     }
-    return function(t, r, n) {
-      return r && e(t.prototype, r), n && e(t, n), t
+    return function(t, n, r) {
+      return n && e(t.prototype, n), r && e(t, r), t
     }
   }(),
-  s = function(e) {
+  u = function(e) {
     function t(e) {
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
       }(this, t);
-      var r = function(e, t) {
+      var n = function(e, t) {
         if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
         return t && ("object" == typeof t || "function" == typeof t) ? t : e
       }(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
-      return r.handleChange = function(e) {
-        "function" == typeof r.props.onChange && r.throttle(r.props.onChange, l.calculateChange(e, r.props.hsl, r.container), e)
-      }, r.handleMouseDown = function(e) {
-        r.handleChange(e);
-        var t = r.getContainerRenderWindow();
-        t.addEventListener("mousemove", r.handleChange), t.addEventListener("mouseup", r.handleMouseUp)
-      }, r.handleMouseUp = function() {
-        r.unbindEventListeners()
-      }, r.throttle = (0, i.default)(function(e, t, r) {
-        e(t, r)
-      }, 50), r
+      return n.handleChange = function(e) {
+        "function" == typeof n.props.onChange && n.throttle(n.props.onChange, o.T(e, n.props.hsl, n.container), e)
+      }, n.handleMouseDown = function(e) {
+        n.handleChange(e);
+        var t = n.getContainerRenderWindow();
+        t.addEventListener("mousemove", n.handleChange), t.addEventListener("mouseup", n.handleMouseUp)
+      }, n.handleMouseUp = function() {
+        n.unbindEventListeners()
+      }, n.throttle = (0, a.Z)(function(e, t, n) {
+        e(t, n)
+      }, 50), n
     }
     return ! function(e, t) {
       if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function, not " + typeof t);
@@ -47,7 +45,7 @@ var n = r("470079"),
           configurable: !0
         }
       }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-    }(t, e), u(t, [{
+    }(t, e), s(t, [{
       key: "componentWillUnmount",
       value: function() {
         this.throttle.cancel(), this.unbindEventListeners()
@@ -69,12 +67,12 @@ var n = r("470079"),
       value: function() {
         var e = this,
           t = this.props.style || {},
-          r = t.color,
-          n = t.white,
-          i = t.black,
-          l = t.pointer,
+          n = t.color,
+          a = t.white,
+          o = t.black,
+          s = t.pointer,
           u = t.circle,
-          s = (0, o.default)({
+          c = (0, i.default)({
             default: {
               color: {
                 absolute: "0px 0px 0px 0px",
@@ -106,35 +104,35 @@ var n = r("470079"),
               }
             },
             custom: {
-              color: r,
-              white: n,
-              black: i,
-              pointer: l,
+              color: n,
+              white: a,
+              black: o,
+              pointer: s,
               circle: u
             }
           }, {
             custom: !!this.props.style
           });
-        return a().createElement("div", {
-          style: s.color,
+        return r.createElement("div", {
+          style: c.color,
           ref: function(t) {
             return e.container = t
           },
           onMouseDown: this.handleMouseDown,
           onTouchMove: this.handleChange,
           onTouchStart: this.handleChange
-        }, a().createElement("style", null, "\n          .saturation-white {\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n          }\n          .saturation-black {\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\n          }\n        "), a().createElement("div", {
-          style: s.white,
+        }, r.createElement("style", null, "\n          .saturation-white {\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n          }\n          .saturation-black {\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\n          }\n        "), r.createElement("div", {
+          style: c.white,
           className: "saturation-white"
-        }, a().createElement("div", {
-          style: s.black,
+        }, r.createElement("div", {
+          style: c.black,
           className: "saturation-black"
-        }), a().createElement("div", {
-          style: s.pointer
-        }, this.props.pointer ? a().createElement(this.props.pointer, this.props) : a().createElement("div", {
-          style: s.circle
+        }), r.createElement("div", {
+          style: c.pointer
+        }, this.props.pointer ? r.createElement(this.props.pointer, this.props) : r.createElement("div", {
+          style: c.circle
         }))))
       }
     }]), t
-  }(n.PureComponent || n.Component);
-t.default = s
+  }(r.PureComponent || r.Component);
+t.Z = u

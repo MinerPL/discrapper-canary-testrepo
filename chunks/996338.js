@@ -1,17 +1,15 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("844303"),
-  i = r("13942"),
-  l = r("464854");
-t.default = function(e) {
+var r = n(470079),
+  i = n(844303),
+  a = n(13942),
+  o = n(464854);
+t.Z = function(e) {
   var t = e.onChange,
-    r = e.rgb,
-    n = e.hsl,
+    n = e.rgb,
+    s = e.hsl,
     u = e.hex,
-    s = e.disableAlpha,
-    f = (0, o.default)({
+    c = e.disableAlpha,
+    l = (0, i.default)({
       default: {
         fields: {
           display: "flex",
@@ -51,85 +49,85 @@ t.default = function(e) {
         }
       }
     }, {
-      disableAlpha: s
+      disableAlpha: c
     }),
-    c = function(e, a) {
-      e.hex ? i.isValidHex(e.hex) && t({
+    d = function(e, r) {
+      e.hex ? a.FX(e.hex) && t({
         hex: e.hex,
         source: "hex"
-      }, a) : e.r || e.g || e.b ? t({
-        r: e.r || r.r,
-        g: e.g || r.g,
-        b: e.b || r.b,
-        a: r.a,
+      }, r) : e.r || e.g || e.b ? t({
+        r: e.r || n.r,
+        g: e.g || n.g,
+        b: e.b || n.b,
+        a: n.a,
         source: "rgb"
-      }, a) : e.a && (e.a < 0 ? e.a = 0 : e.a > 100 && (e.a = 100), e.a /= 100, t({
-        h: n.h,
-        s: n.s,
-        l: n.l,
+      }, r) : e.a && (e.a < 0 ? e.a = 0 : e.a > 100 && (e.a = 100), e.a /= 100, t({
+        h: s.h,
+        s: s.s,
+        l: s.l,
         a: e.a,
         source: "rgb"
-      }, a))
+      }, r))
     };
-  return a().createElement("div", {
-    style: f.fields,
+  return r.createElement("div", {
+    style: l.fields,
     className: "flexbox-fix"
-  }, a().createElement("div", {
-    style: f.double
-  }, a().createElement(l.EditableInput, {
+  }, r.createElement("div", {
+    style: l.double
+  }, r.createElement(o.Vm, {
     style: {
-      input: f.input,
-      label: f.label
+      input: l.input,
+      label: l.label
     },
     label: "hex",
     value: u.replace("#", ""),
-    onChange: c
-  })), a().createElement("div", {
-    style: f.single
-  }, a().createElement(l.EditableInput, {
+    onChange: d
+  })), r.createElement("div", {
+    style: l.single
+  }, r.createElement(o.Vm, {
     style: {
-      input: f.input,
-      label: f.label
+      input: l.input,
+      label: l.label
     },
     label: "r",
-    value: r.r,
-    onChange: c,
+    value: n.r,
+    onChange: d,
     dragLabel: "true",
     dragMax: "255"
-  })), a().createElement("div", {
-    style: f.single
-  }, a().createElement(l.EditableInput, {
+  })), r.createElement("div", {
+    style: l.single
+  }, r.createElement(o.Vm, {
     style: {
-      input: f.input,
-      label: f.label
+      input: l.input,
+      label: l.label
     },
     label: "g",
-    value: r.g,
-    onChange: c,
+    value: n.g,
+    onChange: d,
     dragLabel: "true",
     dragMax: "255"
-  })), a().createElement("div", {
-    style: f.single
-  }, a().createElement(l.EditableInput, {
+  })), r.createElement("div", {
+    style: l.single
+  }, r.createElement(o.Vm, {
     style: {
-      input: f.input,
-      label: f.label
+      input: l.input,
+      label: l.label
     },
     label: "b",
-    value: r.b,
-    onChange: c,
+    value: n.b,
+    onChange: d,
     dragLabel: "true",
     dragMax: "255"
-  })), a().createElement("div", {
-    style: f.alpha
-  }, a().createElement(l.EditableInput, {
+  })), r.createElement("div", {
+    style: l.alpha
+  }, r.createElement(o.Vm, {
     style: {
-      input: f.input,
-      label: f.label
+      input: l.input,
+      label: l.label
     },
     label: "a",
-    value: Math.round(100 * r.a),
-    onChange: c,
+    value: Math.round(100 * n.a),
+    onChange: d,
     dragLabel: "true",
     dragMax: "100"
   })))

@@ -1,7 +1,7 @@
 "use strict";
-var e = n("96403"),
-  o = n("821819"),
-  i = n("726433"),
+var e = n(96403),
+  o = n(821819),
+  i = n(726433),
   u = Object,
   s = e("".split);
 t.exports = o(function() {

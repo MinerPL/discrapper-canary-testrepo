@@ -1,5 +1,5 @@
 "use strict";
-var r = n("754793"),
+var r = n(754793),
   i = !0,
   a = !0;
 try {

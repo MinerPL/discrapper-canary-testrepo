@@ -1,16 +1,15 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("399606"),
-  s = n("481060"),
-  a = n("607070"),
-  o = n("689938"),
-  l = n("826837"),
-  u = n("567949"),
-  d = n("552781"),
-  _ = n("952567"),
-  c = n("807159");
+var i = n(735250);
+n(470079);
+var r = n(399606),
+  s = n(481060),
+  o = n(607070),
+  a = n(689938),
+  l = n(440476),
+  u = n(567949),
+  _ = n(552781),
+  d = n(952567),
+  c = n(807159);
 
 function E(e) {
   let {
@@ -35,27 +34,27 @@ function E(e) {
     })]
   })
 }
-t.default = function() {
-  let e = (0, r.useStateFromStores)([a.default], () => a.default.useReducedMotion);
+t.Z = function() {
+  let e = (0, r.e7)([o.Z], () => o.Z.useReducedMotion);
   return (0, i.jsxs)("div", {
     className: l.wrapper,
     children: [(0, i.jsx)(s.Heading, {
       className: l.heading,
       variant: "heading-xxl/extrabold",
-      children: o.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_HEADING
+      children: a.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_HEADING
     }), (0, i.jsxs)("div", {
       className: l.topPerksCards,
       children: [(0, i.jsx)(E, {
-        description: o.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_HD_STREAMING_DESCRIPTION,
-        heading: o.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_HD_STREAMING_HEADING,
-        imgSrc: _
+        description: a.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_HD_STREAMING_DESCRIPTION,
+        heading: a.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_HD_STREAMING_HEADING,
+        imgSrc: d
       }), (0, i.jsx)(E, {
-        description: o.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_ANIMATED_GUILD_ICON_DESCRIPTION,
-        heading: o.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_ANIMATED_GUILD_ICON_HEADING,
-        imgSrc: e ? d : u
+        description: a.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_ANIMATED_GUILD_ICON_DESCRIPTION,
+        heading: a.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_ANIMATED_GUILD_ICON_HEADING,
+        imgSrc: e ? _ : u
       }), (0, i.jsx)(E, {
-        description: o.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_VANITY_URL_DESCRIPTION,
-        heading: o.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_VANITY_URL_HEADING,
+        description: a.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_VANITY_URL_DESCRIPTION,
+        heading: a.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_VANITY_URL_HEADING,
         imgSrc: c
       })]
     })]

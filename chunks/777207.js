@@ -1,34 +1,34 @@
 "use strict";
-n.r(t), n.d(t, {
-  Text: function() {
+n.d(t, {
+  x: function() {
     return E
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  a = n("803997"),
-  s = n.n(a),
-  o = n("696689"),
-  l = n.n(o),
-  u = n("692547"),
-  d = n("701717"),
-  _ = n("24073");
-let c = Object.fromEntries(Object.keys(u.default.colors).map(e => [l()(e), e])),
+var i = n(735250),
+  r = n(470079),
+  s = n(803997),
+  o = n.n(s),
+  a = n(696689),
+  l = n.n(a),
+  u = n(692547),
+  _ = n(701717),
+  d = n(24073);
+let c = Object.fromEntries(Object.keys(u.Z.colors).map(e => [l()(e), e])),
   E = r.forwardRef(function(e, t) {
     let n, {
         variant: r,
-        tag: a = "div",
-        selectable: o = !1,
+        tag: s = "div",
+        selectable: a = !1,
         className: l,
         lineClamp: E,
         color: I,
         tabularNumbers: T = !1,
-        scaleFontToUserSetting: f = !1,
+        scaleFontToUserSetting: h = !1,
         ...S
       } = e,
-      h = "",
-      A = {};
-    if (null != E && (1 === E ? h = d.lineClamp1 : (h = d.lineClamp2Plus, A = {
+      f = "",
+      N = {};
+    if (null != E && (1 === E ? f = _.lineClamp1 : (f = _.lineClamp2Plus, N = {
         lineClamp: E,
         WebkitLineClamp: E
       })), void 0 !== I) switch (I) {
@@ -42,24 +42,24 @@ let c = Object.fromEntries(Object.keys(u.default.colors).map(e => [l()(e), e])),
         n = "white";
         break;
       default:
-        var m;
-        n = null === (m = u.default.colors[c[I]]) || void 0 === m ? void 0 : m.css
+        var A;
+        n = null === (A = u.Z.colors[c[I]]) || void 0 === A ? void 0 : A.css
     }
-    let N = {
+    let m = {
       color: n,
-      ...A,
+      ...N,
       ...S.style
     };
-    return (0, i.jsx)(a, {
+    return (0, i.jsx)(s, {
       ref: t,
-      className: s()({
-        [d.defaultColor]: void 0 === I,
-        [d.selectable]: o,
-        [d.tabularNumbers]: T,
-        [_.fontScaling]: f
-      }, h, _[r], l),
+      className: o()({
+        [_.defaultColor]: void 0 === I,
+        [_.selectable]: a,
+        [_.tabularNumbers]: T,
+        [d.fontScaling]: h
+      }, f, d[r], l),
       ...S,
-      style: Object.values(N).filter(Boolean).length > 0 ? N : void 0,
+      style: Object.values(m).filter(Boolean).length > 0 ? m : void 0,
       "data-text-variant": r
     })
   })

@@ -1,55 +1,55 @@
 "use strict";
-n.r(t), n.d(t, {
-  ClickableContainer: function() {
-    return o
+n.d(t, {
+  k: function() {
+    return a
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("1561"),
-  a = n("641076");
+var i = n(735250),
+  r = n(470079),
+  s = n(1561),
+  o = n(939022);
 
-function o(e) {
+function a(e) {
   let {
     tag: t = "div",
     children: n,
-    className: o,
+    className: a,
     focusProps: l,
     onClick: u,
-    onDoubleClick: d,
-    onContextMenu: _,
+    onDoubleClick: _,
+    onContextMenu: d,
     onKeyDown: c,
     onFocus: E,
     onBlur: I,
     onMouseOver: T,
-    onMouseDown: f,
+    onMouseDown: h,
     onMouseLeave: S,
-    buttonProps: h,
-    "aria-label": A
-  } = e, m = r.useRef(null);
+    buttonProps: f,
+    "aria-label": N
+  } = e, A = r.useRef(null);
   return (0, i.jsxs)(t, {
-    ref: m,
-    className: o,
+    ref: A,
+    className: a,
     onClick: u,
     onMouseOver: T,
     onMouseLeave: S,
-    onDoubleClick: d,
-    onContextMenu: _,
-    children: [(0, i.jsx)(s.Clickable, {
-      ...h,
+    onDoubleClick: _,
+    onContextMenu: d,
+    children: [(0, i.jsx)(s.P, {
+      ...f,
       focusProps: {
-        ringTarget: m,
+        ringTarget: A,
         ...l
       },
-      className: a.focusTarget,
-      "aria-label": A,
+      className: o.focusTarget,
+      "aria-label": N,
       onClick: e => {
         e.stopPropagation(), null == u || u(e)
       },
       onKeyDown: c,
       onFocus: E,
       onBlur: I,
-      onMouseDown: f
+      onMouseDown: h
     }), n]
   })
 }

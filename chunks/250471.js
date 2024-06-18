@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  isMetricsEndpointV2Enabled: function() {
+n.d(t, {
+  V: function() {
     return r
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-03_metrics_endpoint_v2",
   label: "Metrics V2 Endpoint Rollout",

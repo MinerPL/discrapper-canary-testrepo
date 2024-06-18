@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  MessageDao: function() {
-    return a
+n.d(t, {
+  u: function() {
+    return o
   }
 });
-var i = n("503461"),
-  r = n("190313");
+var i = n(503461),
+  r = n(190313);
 
 function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -15,19 +15,19 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class a {
+class o {
   get prefix() {
     return this.table.prefix
   }
   withoutLogging() {
-    return new a(this.originalPrefix, this.table.tableId, this.table.database, !1)
+    return new o(this.originalPrefix, this.table.tableId, this.table.database, !1)
   }
   get(e, t, n) {
     return this.table.get([e, t, u(n)])
   }
   getLatest(e, t, n) {
     return this.table.getMany([e, t], {
-      ordering: i.Ordering.Descending,
+      ordering: i.Sk.Descending,
       limit: n
     })
   }
@@ -38,11 +38,11 @@ class a {
     return this.table.messages.getLatest(e)
   }
   put(e, t, n) {
-    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.ConflictOptions.Replace;
+    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.Sn.Replace;
     return this.table.put(l(e, t, n), r)
   }
   putAll(e, t, n) {
-    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.ConflictOptions.Replace,
+    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.Sn.Replace,
       s = n.map(n => l(e, t, n));
     return this.table.putAll(s, r)
   }
@@ -59,28 +59,28 @@ class a {
     return this.table.delete([e, t, u(n)])
   }
   transaction(e, t) {
-    return this.table.transaction(t => e(new o(t)), t)
+    return this.table.transaction(t => e(new a(t)), t)
   }
   upgradeTransaction(e) {
-    return new o(this.table.upgradeTransaction(e))
+    return new a(this.table.upgradeTransaction(e))
   }
   constructor(e, t, n, i = !0) {
-    s(this, "originalPrefix", void 0), s(this, "table", void 0), this.originalPrefix = e, this.table = new r.Table([e], t, n, i)
+    s(this, "originalPrefix", void 0), s(this, "table", void 0), this.originalPrefix = e, this.table = new r.i([e], t, n, i)
   }
 }
-class o {
+class a {
   static fromTableTransaction(e) {
-    return new o(e)
+    return new a(e)
   }
   static fromDatabaseTransaction(e, t, n) {
-    return new o(new r.TableTransaction(e, t, n))
+    return new a(new r.E(e, t, n))
   }
   put(e, t, n) {
-    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.ConflictOptions.Replace;
+    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.Sn.Replace;
     this.transaction.put(l(e, t, n), r)
   }
   putAll(e, t, n) {
-    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.ConflictOptions.Replace,
+    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.Sn.Replace,
       s = n.map(n => l(e, t, n));
     this.transaction.putAll(s, r)
   }

@@ -1,9 +1,8 @@
 "use strict";
-n.r(t);
-var i, r = n("442837"),
-  s = n("570140"),
-  a = n("37113"),
-  o = n("65154");
+var i, r = n(442837),
+  s = n(570140),
+  o = n(37113),
+  a = n(65154);
 
 function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -13,34 +12,34 @@ function l(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let u = a.ApplicationStreamPresets.PRESET_VIDEO,
-  d = a.ApplicationStreamResolutions.RESOLUTION_720,
-  _ = a.ApplicationStreamFPS.FPS_30,
+let u = o.tI.PRESET_VIDEO,
+  _ = o.LY.RESOLUTION_720,
+  d = o.ws.FPS_30,
   c = !0;
-class E extends(i = r.default.PersistedStore) {
+class E extends(i = r.ZP.PersistedStore) {
   initialize(e) {
     if (null != e) {
       var t, n;
-      u = null !== (t = e.preset) && void 0 !== t ? t : a.ApplicationStreamPresets.PRESET_VIDEO, d = e.resolution, _ = e.fps, c = null === (n = e.soundshareEnabled) || void 0 === n || n
+      u = null !== (t = e.preset) && void 0 !== t ? t : o.tI.PRESET_VIDEO, _ = e.resolution, d = e.fps, c = null === (n = e.soundshareEnabled) || void 0 === n || n
     }
   }
   getState() {
     return {
       preset: u,
-      resolution: d,
-      fps: _,
+      resolution: _,
+      fps: d,
       soundshareEnabled: c
     }
   }
 }
-l(E, "displayName", "ApplicationStreamingSettingsStore"), l(E, "persistKey", "ApplicationStreamingSettingStore"), t.default = new E(s.default, {
+l(E, "displayName", "ApplicationStreamingSettingsStore"), l(E, "persistKey", "ApplicationStreamingSettingStore"), t.Z = new E(s.Z, {
   MEDIA_ENGINE_SET_GO_LIVE_SOURCE: function(e) {
     let {
       settings: t
     } = e;
-    if ((null == t ? void 0 : t.context) === o.MediaEngineContextTypes.STREAM) {
+    if ((null == t ? void 0 : t.context) === a.Yn.STREAM) {
       if ((null == t ? void 0 : t.qualityOptions) == null || (null == t ? void 0 : t.qualityOptions.resolution) == null || (null == t ? void 0 : t.qualityOptions.frameRate) == null) return !1;
-      d = t.qualityOptions.resolution, _ = t.qualityOptions.frameRate
+      _ = t.qualityOptions.resolution, d = t.qualityOptions.frameRate
     }
   },
   STREAM_UPDATE_SETTINGS: function(e) {
@@ -50,6 +49,6 @@ l(E, "displayName", "ApplicationStreamingSettingsStore"), l(E, "persistKey", "Ap
       frameRate: i,
       soundshareEnabled: r
     } = e, s = !1;
-    return null != t && (u = t, s = !0), null != n && (d = n, s = !0), null != i && (_ = i, s = !0), null != r && (c = r, s = !0), s
+    return null != t && (u = t, s = !0), null != n && (_ = n, s = !0), null != i && (d = i, s = !0), null != r && (c = r, s = !0), s
   }
 })

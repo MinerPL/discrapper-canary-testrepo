@@ -1,38 +1,38 @@
 "use strict";
-n.r(e), n.d(e, {
-  trace: function() {
-    return o
+n.d(e, {
+  g: function() {
+    return a
   }
 });
-var r = n("648238"),
-  i = n("876122"),
-  a = n("633401");
+var r = n(46834),
+  i = n(876122),
+  s = n(633401);
 
-function o(t, e, n = () => {}) {
-  let o;
-  let s = {
+function a(t, e, n = () => {}) {
+  let a;
+  let o = {
     ...t
   };
-  void 0 !== s.name && void 0 === s.description && (s.description = s.name);
-  let u = (0, i.getCurrentHub)(),
-    c = u.getScope(),
-    l = c.getSpan(),
+  void 0 !== o.name && void 0 === o.description && (o.description = o.name);
+  let u = (0, i.Gd)(),
+    l = u.getScope(),
+    c = l.getSpan(),
     d = function() {
-      if ((0, a.hasTracingEnabled)()) return l ? l.startChild(s) : u.startTransaction(s)
+      if (!!(0, s.z)()) return c ? c.startChild(o) : u.startTransaction(o)
     }();
 
-  function f() {
-    d && d.finish(), u.getScope().setSpan(l)
+  function h() {
+    d && d.finish(), u.getScope().setSpan(c)
   }
-  c.setSpan(d);
+  l.setSpan(d);
   try {
-    o = e(d)
+    a = e(d)
   } catch (t) {
-    throw d && d.setStatus("internal_error"), n(t), f(), t
+    throw d && d.setStatus("internal_error"), n(t), h(), t
   }
-  return (0, r.isThenable)(o) ? Promise.resolve(o).then(() => {
-    f()
+  return (0, r.J8)(a) ? Promise.resolve(a).then(() => {
+    h()
   }, t => {
-    d && d.setStatus("internal_error"), n(t), f()
-  }) : f(), o
+    d && d.setStatus("internal_error"), n(t), h()
+  }) : h(), a
 }

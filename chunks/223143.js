@@ -1,103 +1,78 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return E
+n.d(t, {
+  Z: function() {
+    return d
   },
-  useFetchPurchases: function() {
-    return c
-  },
-  useMaybeFetchCollectiblesCategories: function() {
+  c: function() {
     return _
   }
-}), n("47120");
-var i = n("470079"),
-  r = n("399606"),
-  a = n("634894"),
-  s = n("335131"),
-  o = n("597688"),
-  l = n("337679"),
-  u = n("1870"),
-  d = n("617452");
+}), n(47120);
+var i = n(470079),
+  r = n(399606),
+  s = n(634894),
+  o = n(335131),
+  a = n(337679),
+  l = n(1870),
+  u = n(267097);
 
-function _(e) {
-  let t = "useMaybeFetchCollectiblesCategories";
-  (0, a.useTriggerDebuggingAA)({
-    location: t + " auto on",
-    autoTrackExposure: !0
-  }), (0, a.useTriggerDebuggingAA)({
-    location: t + " auto off",
-    autoTrackExposure: !1
-  });
-  let n = (0, d.useShopBundleEnabled)("useMaybeFetchCollectiblesCategories"),
-    [l, u, _, c] = (0, r.useStateFromStoresArray)([o.default], () => {
-      var e;
-      return [o.default.isFetchingCategories, o.default.error, null !== (e = o.default.lastFetched) && void 0 !== e ? e : 0, o.default.categories]
-    });
-  return (0, i.useEffect)(() => {
-    !(l || u || Date.now() - _ < 6e5) && (0, s.fetchCollectiblesCategories)({
-      ...e,
-      includeBundles: n
-    })
-  }, [l, _, u, e, n]), {
-    isFetching: l,
-    categories: c,
-    error: u
-  }
-}
-
-function c() {
+function _() {
   let e = "useFetchPurchases";
-  (0, a.useTriggerDebuggingAA)({
+  (0, s.j)({
     location: e + " auto on",
     autoTrackExposure: !0
-  }), (0, a.useTriggerDebuggingAA)({
+  }), (0, s.j)({
     location: e + " auto off",
     autoTrackExposure: !1
   });
-  let [t, n, o, d, _] = (0, r.useStateFromStoresArray)([u.default], () => [u.default.isFetching, u.default.isClaiming, u.default.fetchError, u.default.claimError, u.default.purchases]), {
+  let [t, n, u, _, d] = (0, r.Wu)([l.Z], () => [l.Z.isFetching, l.Z.isClaiming, l.Z.fetchError, l.Z.claimError, l.Z.purchases]), {
     shouldFakePurchaseSuccessFlowLocally: c
-  } = (0, l.default)({
+  } = (0, a.Z)({
     location: "useFetchPurchases"
   });
   return (0, i.useEffect)(() => {
-    (!c || !(_.size > 0)) && (0, s.fetchCollectiblesPurchases)()
+    if (!c || !(d.size > 0))(0, o.qg)()
   }, [c]), {
     isClaiming: n,
-    fetchError: o,
-    claimError: d,
+    fetchError: u,
+    claimError: _,
     isFetching: t,
-    purchases: _
+    purchases: d
   }
 }
 
-function E(e) {
+function d(e) {
   var t;
-  let n = "useFetchCollectiblesCategoriesAndPurchases";
-  (0, a.useTriggerDebuggingAA)({
-    location: n + " auto on",
+  let n = null == e ? void 0 : e.paymentGateway,
+    i = "useFetchCollectiblesCategoriesAndPurchases";
+  (0, s.j)({
+    location: i + " auto on",
     autoTrackExposure: !0
-  }), (0, a.useTriggerDebuggingAA)({
-    location: n + " auto off",
+  }), (0, s.j)({
+    location: i + " auto off",
     autoTrackExposure: !1
   });
   let {
-    isFetching: i,
-    categories: r,
-    error: s
-  } = _(e), {
-    isClaiming: o,
-    fetchError: l,
-    claimError: u,
-    isFetching: d,
-    purchases: E
-  } = c();
+    isFetching: r,
+    categories: o,
+    error: a,
+    refreshCategories: l
+  } = (0, u.Z)({
+    paymentGateway: n
+  }), {
+    isClaiming: d,
+    fetchError: c,
+    claimError: E,
+    isFetching: I,
+    purchases: T
+  } = _();
   return {
-    isFetching: i || d,
-    isFetchingCategories: i,
-    isFetchingPurchases: d,
-    isClaiming: o,
-    categories: r,
-    purchases: E,
-    error: null !== (t = null != s ? s : l) && void 0 !== t ? t : u
+    isFetching: r || I,
+    isFetchingCategories: r,
+    isFetchingPurchases: I,
+    isClaiming: d,
+    categories: o,
+    purchases: T,
+    error: null !== (t = null != a ? a : c) && void 0 !== t ? t : E,
+    refreshCategories: l
   }
 }

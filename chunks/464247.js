@@ -1,12 +1,12 @@
 "use strict";
-var n = r("310176"),
-  i = r("379846"),
-  o = r("118658"),
-  a = r("563751"),
-  u = r("121868"),
-  s = r("653635"),
-  c = r("467159"),
-  l = r("843260"),
+var n = r(310176),
+  i = r(379846),
+  o = r(118658),
+  a = r(563751),
+  u = r(121868),
+  s = r(653635),
+  c = r(467159),
+  l = r(843260),
   f = o.isBrowser("Firefox");
 
 function p(t, e, r, o, a) {
@@ -15,43 +15,43 @@ function p(t, e, r, o, a) {
 }
 t.exports = function(t, e) {
   void 0 !== t._pendingStateFromBeforeInput && (t.update(t._pendingStateFromBeforeInput), t._pendingStateFromBeforeInput = void 0);
-  var r = t._latestEditorState,
-    n = e.data;
-  if (n) {
-    if (t.props.handleBeforeInput && u(t.props.handleBeforeInput(n, r, e.timeStamp))) {
+  var r, n = t._latestEditorState,
+    o = e.data;
+  if (!!o) {
+    if (t.props.handleBeforeInput && u(t.props.handleBeforeInput(o, n, e.timeStamp))) {
       e.preventDefault();
       return
     }
-    var o, h = r.getSelection(),
+    var h = n.getSelection(),
       d = h.getStartOffset(),
       g = h.getAnchorKey();
     if (!h.isCollapsed()) {
-      e.preventDefault(), t.update(p(r, n, r.getCurrentInlineStyle(), a(r.getCurrentContent(), r.getSelection()), !0));
+      e.preventDefault(), t.update(p(n, o, n.getCurrentInlineStyle(), a(n.getCurrentContent(), n.getSelection()), !0));
       return
     }
-    var y = p(r, n, r.getCurrentInlineStyle(), a(r.getCurrentContent(), r.getSelection()), !1),
+    var y = p(n, o, n.getCurrentInlineStyle(), a(n.getCurrentContent(), n.getSelection()), !1),
       v = !1;
     if (v = s(t._latestCommittedEditorState), !v) {
-      var m = r.getBlockTree(g),
+      var m = n.getBlockTree(g),
         _ = y.getBlockTree(g);
       v = m.size !== _.size || m.zip(_).some(function(t) {
         var e = t[0],
           r = t[1],
-          i = e.get("start"),
-          o = i + (i >= d ? n.length : 0),
+          n = e.get("start"),
+          i = n + (n >= d ? o.length : 0),
           a = e.get("end"),
-          u = a + (a >= d ? n.length : 0),
+          u = a + (a >= d ? o.length : 0),
           s = r.get("start"),
           c = r.get("end"),
           l = r.get("decoratorKey");
-        return e.get("decoratorKey") !== l || e.get("leaves").size !== r.get("leaves").size || o !== s || u !== c || null != l && c - s != a - i
+        return e.get("decoratorKey") !== l || e.get("leaves").size !== r.get("leaves").size || i !== s || u !== c || null != l && c - s != a - n
       })
     }
     if (!v) {
       ;
-      o = n, v = f && ("'" == o || "/" == o)
+      r = o, v = f && ("'" == r || "/" == r)
     }
-    if (!v && (v = c(y.getDirectionMap()).get(g) !== c(r.getDirectionMap()).get(g)), v) {
+    if (!v && (v = c(y.getDirectionMap()).get(g) !== c(n.getDirectionMap()).get(g)), v) {
       e.preventDefault(), y = i.set(y, {
         forceSelection: !0
       }), t.update(y);

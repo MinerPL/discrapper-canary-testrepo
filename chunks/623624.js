@@ -1,34 +1,34 @@
 "use strict";
-n.r(t), n.d(t, {
-  openGuildBoostingMarketingModal: function() {
+n.d(t, {
+  f: function() {
     return I
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("512722"),
+var i = n(735250);
+n(470079);
+var r = n(512722),
   s = n.n(r),
-  a = n("442837"),
-  o = n("100527"),
-  l = n("906732"),
-  u = n("430824"),
-  d = n("594174"),
-  _ = n("725568"),
-  c = n("443002");
+  o = n(442837),
+  a = n(100527),
+  l = n(906732),
+  u = n(430824),
+  _ = n(594174),
+  d = n(725568),
+  c = n(443002);
 let E = e => {
   let {
     guildId: t,
     close: n,
     location: r
-  } = e, _ = (0, a.useStateFromStores)([d.default], () => d.default.getCurrentUser());
-  s()(null != _, "PremiumGuildPerksModalConnected: currentUser cannot be undefined");
-  let E = (0, a.useStateFromStores)([u.default], () => u.default.getGuild(t), [t]),
+  } = e, d = (0, o.e7)([_.default], () => _.default.getCurrentUser());
+  s()(null != d, "PremiumGuildPerksModalConnected: currentUser cannot be undefined");
+  let E = (0, o.e7)([u.Z], () => u.Z.getGuild(t), [t]),
     {
       analyticsLocations: I
-    } = (0, l.default)(o.default.BOOSTED_GUILD_PERKS_MODAL);
-  return null == E ? null : (0, i.jsx)(l.AnalyticsLocationProvider, {
+    } = (0, l.ZP)(a.Z.BOOSTED_GUILD_PERKS_MODAL);
+  return null == E ? null : (0, i.jsx)(l.Gt, {
     value: I,
-    children: (0, i.jsx)(c.default, {
+    children: (0, i.jsx)(c.Z, {
       analyticsLocation: r,
       onClose: n,
       guild: E
@@ -41,7 +41,7 @@ function I(e) {
     guildId: t,
     location: n
   } = e;
-  (0, _.openFullScreenLayer)(e => {
+  (0, d.q4)(e => {
     let {
       closeLayer: r
     } = e;

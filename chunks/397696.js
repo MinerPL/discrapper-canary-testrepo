@@ -1,26 +1,29 @@
 "use strict";
-n.r(t), n.d(t, {
-  Versions: function() {
-    return s
+n.d(t, {
+  L: function() {
+    return l
   }
-}), n("47120"), n("411104");
-var i = n("578012");
-class r extends i.MessageType {
+}), n(47120), n(411104);
+var i = n(230367),
+  r = n(320215),
+  s = n(240773),
+  o = n(495852);
+class a extends o.C {
   create(e) {
     let t = {
       clientVersion: 0,
       serverVersion: 0,
       dataVersion: 0
     };
-    return globalThis.Object.defineProperty(t, i.MESSAGE_TYPE, {
+    return globalThis.Object.defineProperty(t, s.C, {
       enumerable: !1,
       value: this
-    }), void 0 !== e && (0, i.reflectionMergePartial)(this, t, e), t
+    }), void 0 !== e && (0, r.l)(this, t, e), t
   }
   internalBinaryRead(e, t, n, r) {
     let s = null != r ? r : this.create(),
-      a = e.pos + t;
-    for (; e.pos < a;) {
+      o = e.pos + t;
+    for (; e.pos < o;) {
       let [t, r] = e.tag();
       switch (t) {
         case 1:
@@ -33,18 +36,18 @@ class r extends i.MessageType {
           s.dataVersion = e.uint32();
           break;
         default:
-          let a = n.readUnknownField;
-          if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(r, ") for ").concat(this.typeName));
-          let o = e.skip(r);
-          !1 !== a && (!0 === a ? i.UnknownFieldHandler.onRead : a)(this.typeName, s, t, r, o)
+          let o = n.readUnknownField;
+          if ("throw" === o) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(r, ") for ").concat(this.typeName));
+          let a = e.skip(r);
+          !1 !== o && (!0 === o ? i.z.onRead : o)(this.typeName, s, t, r, a)
       }
     }
     return s
   }
   internalBinaryWrite(e, t, n) {
-    0 !== e.clientVersion && t.tag(1, i.WireType.Varint).uint32(e.clientVersion), 0 !== e.serverVersion && t.tag(2, i.WireType.Varint).uint32(e.serverVersion), 0 !== e.dataVersion && t.tag(3, i.WireType.Varint).uint32(e.dataVersion);
+    0 !== e.clientVersion && t.tag(1, i.TD.Varint).uint32(e.clientVersion), 0 !== e.serverVersion && t.tag(2, i.TD.Varint).uint32(e.serverVersion), 0 !== e.dataVersion && t.tag(3, i.TD.Varint).uint32(e.dataVersion);
     let r = n.writeUnknownFields;
-    return !1 !== r && (!0 == r ? i.UnknownFieldHandler.onWrite : r)(this.typeName, e, t), t
+    return !1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t
   }
   constructor() {
     super("discord_protos.discord_users.v1.Versions", [{
@@ -65,4 +68,4 @@ class r extends i.MessageType {
     }])
   }
 }
-let s = new r
+let l = new a

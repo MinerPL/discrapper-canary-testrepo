@@ -1,4 +1,4 @@
-var r = n("767172"),
+var r = n(767172),
   i = /%[sdv%]/g,
   a = function(e) {
     var t = 1,

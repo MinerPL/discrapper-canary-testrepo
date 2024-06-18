@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n("47120");
-var i, r, s, a = n("735250"),
-  o = n("470079"),
-  l = n("803997"),
+n(47120);
+var i, r, s, o = n(735250),
+  a = n(470079),
+  l = n(120356),
   u = n.n(l),
-  d = n("481060"),
-  _ = n("285952"),
-  c = n("843226");
+  _ = n(481060),
+  d = n(285952),
+  c = n(550118);
 
 function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -17,38 +17,38 @@ function E(e, t, n) {
   }) : e[t] = n, e
 }(s = i || (i = {})).SINGLE_AVATAR = "1", s.MULTIPLE_AVATAR = "2";
 let I = {
-  [d.AvatarSizes.SIZE_32]: c.avatarSmall,
-  [d.AvatarSizes.SIZE_40]: c.avatarLarge
+  [_.AvatarSizes.SIZE_32]: c.avatarSmall,
+  [_.AvatarSizes.SIZE_40]: c.avatarLarge
 };
-class T extends(r = o.Component) {
+class T extends(r = a.Component) {
   render() {
     let {
       type: e,
       avatarSize: t,
       className: n
     } = this.props;
-    return "2" === e ? (0, a.jsxs)("div", {
+    return "2" === e ? (0, o.jsxs)("div", {
       className: u()(c.multiplePlaceholder, n),
-      children: [(0, a.jsxs)(_.default, {
-        children: [(0, a.jsx)("div", {
+      children: [(0, o.jsxs)(d.Z, {
+        children: [(0, o.jsx)("div", {
           className: u()(c.placeholderAvatar, I[t], c.avatarMasked)
-        }), (0, a.jsx)("div", {
+        }), (0, o.jsx)("div", {
           className: u()(c.placeholderAvatar, I[t], c.avatarMasked)
-        }), (0, a.jsx)("div", {
+        }), (0, o.jsx)("div", {
           className: u()(c.placeholderAvatar, I[t])
         })]
-      }), (0, a.jsx)(_.default, {
+      }), (0, o.jsx)(d.Z, {
         grow: 1,
         className: c.mulitplePlaceholderUsername,
         style: {
           maxWidth: this.placeholderMaxWidth
         }
       })]
-    }) : (0, a.jsxs)(_.default, {
+    }) : (0, o.jsxs)(d.Z, {
       className: u()(c.placeholder, n),
-      children: [(0, a.jsx)("div", {
+      children: [(0, o.jsx)("div", {
         className: u()(c.placeholderAvatar, I[t])
-      }), (0, a.jsx)(_.default, {
+      }), (0, o.jsx)(d.Z, {
         grow: 1,
         className: c.placeholderUsername,
         style: {
@@ -63,4 +63,4 @@ class T extends(r = o.Component) {
 }
 E(T, "defaultProps", {
   type: "1"
-}), E(T, "Types", i), t.default = T
+}), E(T, "Types", i), t.Z = T

@@ -1,28 +1,28 @@
 "use strict";
-n.r(t), n.d(t, {
-  hex3: function() {
-    return l
-  },
-  hex4: function() {
-    return d
-  },
-  hex6: function() {
-    return f
-  },
-  hex8: function() {
-    return p
-  },
-  hsl: function() {
-    return u
-  },
-  hsla: function() {
-    return c
-  },
-  rgb: function() {
+n.d(t, {
+  B8: function() {
     return o
   },
-  rgba: function() {
+  Jn: function() {
+    return c
+  },
+  L_: function() {
+    return d
+  },
+  Ym: function() {
+    return u
+  },
+  g7: function() {
+    return f
+  },
+  m4: function() {
     return s
+  },
+  sA: function() {
+    return p
+  },
+  wb: function() {
+    return l
   }
 });
 var r = "[-+]?\\d*\\.?\\d+",

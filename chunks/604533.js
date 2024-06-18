@@ -1,16 +1,15 @@
 "use strict";
-r.r(t);
-var n = r("176338"),
-  a = r("754401"),
-  o = r("370873"),
-  i = Object.prototype,
-  l = Function.prototype.toString,
-  u = i.hasOwnProperty,
-  s = l.call(Object);
-t.default = function(e) {
-  if (!(0, o.default)(e) || "[object Object]" != (0, n.default)(e)) return !1;
-  var t = (0, a.default)(e);
+var r = n(176338),
+  i = n(754401),
+  a = n(370873),
+  o = Object.prototype,
+  s = Function.prototype.toString,
+  u = o.hasOwnProperty,
+  c = s.call(Object);
+t.Z = function(e) {
+  if (!(0, a.Z)(e) || "[object Object]" != (0, r.Z)(e)) return !1;
+  var t = (0, i.Z)(e);
   if (null === t) return !0;
-  var r = u.call(t, "constructor") && t.constructor;
-  return "function" == typeof r && r instanceof r && l.call(r) == s
+  var n = u.call(t, "constructor") && t.constructor;
+  return "function" == typeof n && n instanceof n && s.call(n) == c
 }

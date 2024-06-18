@@ -1,12 +1,12 @@
 "use strict";
-var n = r("8400"),
-  i = r("887109"),
-  o = r("118658"),
-  a = r("808570"),
-  u = r("924125"),
-  s = r("488959"),
-  c = r("581079"),
-  l = r("660610"),
+var n = r(8400),
+  i = r(887109),
+  o = r(118658),
+  a = r(808570),
+  u = r(924125),
+  s = r(488959),
+  c = r(581079),
+  l = r(660610),
   f = o.isBrowser("IE");
 
 function p(t, e) {
@@ -90,7 +90,7 @@ function g(t, e, r, o) {
 t.exports = {
   setDraftEditorSelection: function(t, e, r, n, i) {
     var o = s(e);
-    if (a(o.documentElement, e)) {
+    if (!!a(o.documentElement, e)) {
       var u = o.defaultView.getSelection(),
         c = t.getAnchorKey(),
         l = t.getAnchorOffset(),

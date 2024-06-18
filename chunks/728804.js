@@ -1,7 +1,7 @@
 "use strict";
-var r = n("690244"),
-  i = n("192853"),
-  a = n("813426"),
+var r = n(690244),
+  i = n(192853),
+  a = n(813426),
   o = r("%TypeError%"),
   s = r("%WeakMap%", !0),
   u = r("%Map%", !0),

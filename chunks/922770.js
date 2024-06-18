@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
-  Spinner: function() {
+n.d(t, {
+  $: function() {
     return c
   },
-  SpinnerTypes: function() {
+  R: function() {
     return r
   }
 });
-var i, r, s = n("735250"),
-  a = n("470079"),
-  o = n("803997"),
-  l = n.n(o),
-  u = n("186325"),
-  d = n("689938"),
-  _ = n("462363");
+var i, r, s = n(735250),
+  o = n(470079),
+  a = n(120356),
+  l = n.n(a),
+  u = n(186325),
+  _ = n(689938),
+  d = n(879967);
 (i = r || (r = {})).WANDERING_CUBES = "wanderingCubes", i.CHASING_DOTS = "chasingDots", i.PULSING_ELLIPSIS = "pulsingEllipsis", i.SPINNING_CIRCLE = "spinningCircle", i.SPINNING_CIRCLE_SIMPLE = "spinningCircleSimple", i.LOW_MOTION = "lowMotion";
 
 function c(e) {
@@ -22,11 +22,11 @@ function c(e) {
     animated: n = !0,
     className: i,
     itemClassName: r,
-    "aria-label": o,
+    "aria-label": a,
     ...c
   } = e, {
     reducedMotion: E
-  } = a.useContext(u.AccessibilityPreferencesContext), I = E.enabled ? function(e) {
+  } = o.useContext(u.S), I = E.enabled ? function(e) {
     switch (e) {
       case "wanderingCubes":
       case "chasingDots":
@@ -35,32 +35,32 @@ function c(e) {
         return e
     }
   }(t) : t;
-  if (o = null != o ? o : d.default.Messages.LOADING, "spinningCircle" === I || "spinningCircleSimple" === I) return (0, s.jsx)("div", {
-    className: l()(_.spinner, _[I], i, {
-      [_.stopAnimation]: !n
+  if (a = null != a ? a : _.Z.Messages.LOADING, "spinningCircle" === I || "spinningCircleSimple" === I) return (0, s.jsx)("div", {
+    className: l()(d.spinner, d[I], i, {
+      [d.stopAnimation]: !n
     }),
     role: "img",
-    "aria-label": o,
+    "aria-label": a,
     ...c,
     children: (0, s.jsx)("div", {
-      className: _.spinningCircleInner,
+      className: d.spinningCircleInner,
       children: (0, s.jsxs)("svg", {
-        className: _.circular,
+        className: d.circular,
         viewBox: "25 25 50 50",
         children: ["spinningCircle" === I && (0, s.jsxs)(s.Fragment, {
           children: [(0, s.jsx)("circle", {
-            className: l()(_.path, _.path3, r),
+            className: l()(d.path, d.path3, r),
             cx: "50",
             cy: "50",
             r: "20"
           }), (0, s.jsx)("circle", {
-            className: l()(_.path, _.path2, r),
+            className: l()(d.path, d.path2, r),
             cx: "50",
             cy: "50",
             r: "20"
           })]
         }), (0, s.jsx)("circle", {
-          className: l()(_.path, r),
+          className: l()(d.path, r),
           cx: "50",
           cy: "50",
           r: "20"
@@ -68,16 +68,16 @@ function c(e) {
       })
     })
   });
-  let T = l()(_.item, r);
+  let T = l()(d.item, r);
   return (0, s.jsx)("span", {
-    className: l()(_.spinner, i, {
-      [_.stopAnimation]: !n
+    className: l()(d.spinner, i, {
+      [d.stopAnimation]: !n
     }),
     role: "img",
-    "aria-label": o,
+    "aria-label": a,
     ...c,
     children: (0, s.jsxs)("span", {
-      className: l()(_.inner, _[I]),
+      className: l()(d.inner, d[I]),
       children: [(0, s.jsx)("span", {
         className: T
       }), (0, s.jsx)("span", {

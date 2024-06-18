@@ -1,6 +1,6 @@
 "use strict";
-var r = n("814033"),
-  i = n("685053"),
+var r = n(814033),
+  i = n(685053),
   a = i.getNAF,
   o = i.getJSF,
   s = i.assert;
@@ -76,16 +76,16 @@ e.exports = u, u.prototype.point = function() {
     x = this._wnafT4;
   for (s = p; s >= 0; s--) {
     for (var w = 0; s >= 0;) {
-      var T = !0;
-      for (u = 0; u < r; u++) x[u] = 0 | f[u][s], 0 !== x[u] && (T = !1);
-      if (!T) break;
+      var C = !0;
+      for (u = 0; u < r; u++) x[u] = 0 | f[u][s], 0 !== x[u] && (C = !1);
+      if (!C) break;
       w++, s--
     }
     if (s >= 0 && w++, S = S.dblp(w), s < 0) break;
     for (u = 0; u < r; u++) {
-      var C = x[u];
-      if (0 !== C) {
-        C > 0 ? c = d[u][C - 1 >> 1] : C < 0 && (c = d[u][-C - 1 >> 1].neg());
+      var T = x[u];
+      if (0 !== T) {
+        T > 0 ? c = d[u][T - 1 >> 1] : T < 0 && (c = d[u][-T - 1 >> 1].neg());
         S = "affine" === c.type ? S.mixedAdd(c) : S.add(c)
       }
     }

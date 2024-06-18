@@ -1,16 +1,19 @@
 "use strict";
-n.r(t), n("47120");
-var i, r, a, s, o = n("442837"),
-  l = n("570140");
+n(47120);
+var i, r, s, o, a = n(442837),
+  l = n(570140);
 let u = new Map,
-  d = new Set,
-  _ = new Set;
-class c extends(i = o.default.Store) {
+  _ = new Set,
+  d = new Set;
+class c extends(i = a.ZP.Store) {
   canFetch(e) {
-    return !d.has(e) && !_.has(e) && !u.has(e)
+    return !_.has(e) && !d.has(e) && !u.has(e)
   }
   isFetching(e) {
-    return d.has(e)
+    return _.has(e)
+  }
+  getGame(e) {
+    return u.get(e)
   }
   getLocalizedName(e) {
     var t;
@@ -26,21 +29,21 @@ class c extends(i = o.default.Store) {
     return null == i ? null : null == t ? i : "".concat(i, "?width=").concat(t.width, "&height=").concat(t.height)
   }
 }
-s = "DetectableGameSupplementalStore", (a = "displayName") in(r = c) ? Object.defineProperty(r, a, {
-  value: s,
+o = "DetectableGameSupplementalStore", (s = "displayName") in(r = c) ? Object.defineProperty(r, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s, t.default = new c(l.default, {
+}) : r[s] = o, t.Z = new c(l.Z, {
   CONNECTION_OPEN: function() {
-    u = new Map, d = new Set, _ = new Set
+    u = new Map, _ = new Set, d = new Set
   },
   DETECTABLE_GAME_SUPPLEMENTAL_FETCH: function(e) {
     let {
       applicationIds: t
     } = e;
     t.forEach(e => {
-      d.add(e), _.delete(e)
+      _.add(e), d.delete(e)
     })
   },
   DETECTABLE_GAME_SUPPLEMENTAL_FETCH_SUCCESS: function(e) {
@@ -49,18 +52,28 @@ s = "DetectableGameSupplementalStore", (a = "displayName") in(r = c) ? Object.de
       supplementalGameData: n
     } = e;
     t.forEach(e => {
-      d.delete(e), _.delete(e)
+      _.delete(e), d.delete(e)
     }), n.forEach(e => {
       let {
         application_id: t,
-        cover_image_url: n,
-        name: i,
-        themes: r
+        name: n,
+        summary: i,
+        websites: r,
+        themes: s,
+        genres: o,
+        artwork_urls: a,
+        cover_image_url: l,
+        first_release_date: _
       } = e;
       u.set(t, {
-        themes: r,
-        coverImageUrl: n,
-        name: i
+        name: n,
+        summary: i,
+        websites: r,
+        themes: s,
+        genres: o,
+        artwork: a,
+        coverImageUrl: l,
+        firstReleaseDate: _
       })
     })
   },
@@ -69,7 +82,7 @@ s = "DetectableGameSupplementalStore", (a = "displayName") in(r = c) ? Object.de
       applicationIds: t
     } = e;
     t.forEach(e => {
-      d.delete(e), _.add(e)
+      _.delete(e), d.add(e)
     })
   }
 })

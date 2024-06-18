@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
-  cancelGetAttachmentFile: function() {
-    return l
+n.d(t, {
+  J: function() {
+    return a
   },
-  getAttachmentFile: function() {
-    return o
+  V: function() {
+    return l
   }
 });
-var i = n("512722"),
+var i = n(512722),
   r = n.n(i),
-  s = n("476326"),
-  a = n("861990");
+  s = n(476326),
+  o = n(861990);
 
-function o(e, t) {
+function a(e, t) {
   var n;
-  r()(e.item.platform === s.UploadPlatform.WEB, "Upload must be in the Web format");
-  let i = (0, a.getAttachmentPayload)(e, t);
+  r()(e.item.platform === s.ow.WEB, "Upload must be in the Web format");
+  let i = (0, o.B)(e, t);
   return Promise.resolve({
     file: e.item.file,
     name: null !== (n = i.filename) && void 0 !== n ? n : ""

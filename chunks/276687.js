@@ -1,25 +1,24 @@
 "use strict";
-s.r(t);
-var a = s("735250");
-s("470079");
-var l = s("442837"),
-  n = s("852860"),
-  i = s("999382"),
-  r = s("524329"),
-  o = s("575258"),
-  d = s("689938");
-t.default = () => {
+var n = t(735250);
+t(470079);
+var i = t(442837),
+  l = t(852860),
+  a = t(999382),
+  r = t(524329),
+  o = t(575258),
+  c = t(689938);
+s.Z = () => {
   let {
     guild: e
-  } = (0, l.useStateFromStores)([i.default], () => i.default.getProps()), {
-    submitting: t,
-    welcomeSettings: s
-  } = (0, l.useStateFromStores)([o.default], () => o.default.getSettingsProps());
-  return null == e ? null : (0, a.jsx)(n.default, {
-    onSave: () => (0, r.saveWelcomeScreen)(e.id, s),
-    onReset: r.resetWelcomeScreen,
-    submitting: t,
-    onSaveText: d.default.Messages.TRY_AGAIN,
-    message: d.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_UPDATE_FAILURE
+  } = (0, i.e7)([a.Z], () => a.Z.getProps()), {
+    submitting: s,
+    welcomeSettings: t
+  } = (0, i.e7)([o.Z], () => o.Z.getSettingsProps());
+  return null == e ? null : (0, n.jsx)(l.Z, {
+    onSave: () => (0, r.Es)(e.id, t),
+    onReset: r.Xb,
+    submitting: s,
+    onSaveText: c.Z.Messages.TRY_AGAIN,
+    message: c.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_UPDATE_FAILURE
   })
 }

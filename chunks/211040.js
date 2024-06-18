@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("570140"),
-  r = n("147913"),
-  s = n("703656"),
-  a = n("70956"),
-  o = n("654769"),
-  l = n("641051"),
-  u = n("329461"),
-  d = n("981631");
+n(47120);
+var i = n(570140),
+  r = n(147913),
+  s = n(703656),
+  o = n(70956),
+  a = n(654769),
+  l = n(641051),
+  u = n(329461),
+  _ = n(981631);
 
-function _(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -17,19 +17,19 @@ function _(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class c extends r.default {
+class c extends r.Z {
   constructor(...e) {
-    super(...e), _(this, "actions", {
+    super(...e), d(this, "actions", {
       POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen()
-    }), _(this, "handlePostConnectionOpen", () => {
+    }), d(this, "handlePostConnectionOpen", () => {
       ! function e() {
-        l.default.getCurrentConfig({
+        l.Z.getCurrentConfig({
           location: "8fe27d_1"
         }, {
           autoTrackExposure: !1
-        }).showReminders && (u.default.getMessageReminders().filter(e => null != e.dueAt && new Date > e.dueAt).filter(e => !u.default.hasSentNotification(e.messageId)).forEach(e => {
+        }).showReminders && (u.Z.getMessageReminders().filter(e => null != e.dueAt && new Date > e.dueAt).filter(e => !u.Z.hasSentNotification(e.messageId)).forEach(e => {
           var t, n;
-          o.default.showNotification(null, "Overdue reminder in ".concat(e.channelSummary), null !== (n = null !== (t = e.notes) && void 0 !== t ? t : e.messageSummary) && void 0 !== n ? n : "", {
+          a.Z.showNotification(null, "Overdue reminder in ".concat(e.channelSummary), null !== (n = null !== (t = e.notes) && void 0 !== t ? t : e.messageSummary) && void 0 !== n ? n : "", {
             notif_type: "OVERDUE_MESSAGE_REMINDER",
             notif_user_id: e.authorId,
             message_id: e.messageId,
@@ -39,17 +39,17 @@ class c extends r.default {
             omitViewTracking: !0,
             tag: e.messageId,
             onClick() {
-              (0, s.transitionTo)(d.Routes.CHANNEL(e.guildId, e.channelId, e.messageId))
+              (0, s.uL)(_.Z5c.CHANNEL(e.guildId, e.channelId, e.messageId))
             }
-          }), i.default.dispatch({
+          }), i.Z.dispatch({
             type: "MESSAGE_REMINDER_NOTIFIED",
             messageId: e.messageId
           })
         }), setTimeout(() => {
           e()
-        }, 5 * a.default.Millis.MINUTE))
+        }, 5 * o.Z.Millis.MINUTE))
       }()
     })
   }
 }
-t.default = new c
+t.Z = new c

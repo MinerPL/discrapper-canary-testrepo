@@ -1,8 +1,7 @@
 "use strict";
-r.r(t);
-var a = r("711294"),
-  n = r("667929"),
-  s = r("172650");
+var a = r(692378),
+  n = r(667929),
+  s = r(172650);
 
 function o(e, t) {
   var r = Object.keys(e);
@@ -19,14 +18,14 @@ function i(e) {
   for (var t = 1; t < arguments.length; t++) {
     var r = null != arguments[t] ? arguments[t] : {};
     t % 2 ? o(Object(r), !0).forEach(function(t) {
-      (0, a.default)(e, t, r[t])
+      (0, a.Z)(e, t, r[t])
     }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r)) : o(Object(r)).forEach(function(t) {
       Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t))
     })
   }
   return e
 }
-var u = (0, n.createStyling)(function(e) {
+var c = (0, n.t7)(function(e) {
   var t, r = {
     BACKGROUND_COLOR: (t = e).base00,
     TEXT_COLOR: t.base07,
@@ -196,6 +195,6 @@ var u = (0, n.createStyling)(function(e) {
     }
   }
 }, {
-  defaultBase16: s.default
+  defaultBase16: s.Z
 });
-t.default = u
+t.Z = c

@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  createInitialState: function() {
-    return d
-  },
-  default: function() {
+n.d(t, {
+  P: function() {
     return _
+  },
+  Z: function() {
+    return d
   }
-}), n("47120");
-var i = n("836560"),
-  r = n("555573"),
-  s = n("376918"),
-  a = n("695346"),
-  o = n("590921"),
-  l = n("152089");
+}), n(47120);
+var i = n(836560),
+  r = n(555573),
+  s = n(376918),
+  o = n(695346),
+  a = n(590921),
+  l = n(152089);
 
 function u(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function u(e, t, n) {
   }) : e[t] = n, e
 }
 
-function d() {
+function _() {
   return {
     query: null,
     selectedIndex: null,
@@ -31,7 +31,7 @@ function d() {
     didInitialQuery: !1
   }
 }
-class _ extends i.EventEmitter {
+class d extends i.EventEmitter {
   updateProps(e) {
     let t = this.props.focused !== e.focused,
       n = this.props.channel.id !== e.channel.id || this.props.activeCommandOption !== e.activeCommandOption,
@@ -57,16 +57,16 @@ class _ extends i.EventEmitter {
     if (null == this.state.selectedIndex) {
       var t;
       let n = null === (t = this.state.query) || void 0 === t ? void 0 : t.typeInfo.focusMode;
-      return !e && (n === o.FocusMode.MANUAL || n === o.FocusMode.AUTO_WHEN_FILTERED) && (this.setSelectedIndex(0), !0)
+      return !e && (n === a.QZ.MANUAL || n === a.QZ.AUTO_WHEN_FILTERED) && (this.setSelectedIndex(0), !0)
     }
     return this.selectResult(this.state.selectedIndex, e, !0)
   }
   onMoveSelection(e) {
     var t, n;
     if (!this.state.isVisible) return !1;
-    if (e < 0 ? this.props.navigator.focusPreviousItem() : e > 0 && this.props.navigator.focusNextItem(), null != this.state.selectedIndex && (null === (t = this.state.query) || void 0 === t ? void 0 : t.type) === o.AutocompleteOptionTypes.COMMANDS) {
+    if (e < 0 ? this.props.navigator.focusPreviousItem() : e > 0 && this.props.navigator.focusNextItem(), null != this.state.selectedIndex && (null === (t = this.state.query) || void 0 === t ? void 0 : t.type) === a.eq.COMMANDS) {
       let e = null === (n = this.state.query.results.commands) || void 0 === n ? void 0 : n[this.state.selectedIndex];
-      null != e && r.setPreferredCommandId(this.props.channel.id, e.id)
+      null != e && r.Sg(this.props.channel.id, e.id)
     }
     return !0
   }
@@ -102,8 +102,8 @@ class _ extends i.EventEmitter {
     let n = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
       i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (null == this.props.editorRef.current) return;
-    let r = (0, l.getOptions)(this.props),
-      u = (0, l.findMatchingAutocompleteType)({
+    let r = (0, l.FW)(this.props),
+      u = (0, l.fZ)({
         channel: this.props.channel,
         guild: this.props.guild,
         options: r,
@@ -112,64 +112,64 @@ class _ extends i.EventEmitter {
         textValue: this.props.textValue,
         optionText: this.props.optionText
       }),
-      d = r.commands !== o.CommandMode.DISABLED ? (0, l.findCommandOptionAutocompleteType)(this.props.activeCommandOption, this.props.currentWord) : null;
-    if (null == u && null != d) u = d;
-    else if (null == u || null != d && u.type !== d.type) {
+      _ = r.commands !== a.L8.DISABLED ? (0, l.py)(this.props.activeCommandOption, this.props.currentWord) : null;
+    if (null == u && null != _) u = _;
+    else if (null == u || null != _ && u.type !== _.type) {
       this.clearQuery();
       return
     }
     let {
-      type: _,
+      type: d,
       typeInfo: c,
       query: E
-    } = u, I = i || n && ((null === (e = this.state.query) || void 0 === e ? void 0 : e.queryText) !== E || (null === (t = this.state.query) || void 0 === t ? void 0 : t.typeInfo) !== c), T = a.IncludeStickersInAutocomplete.getSetting();
+    } = u, I = i || n && ((null === (e = this.state.query) || void 0 === e ? void 0 : e.queryText) !== E || (null === (t = this.state.query) || void 0 === t ? void 0 : t.typeInfo) !== c), T = o.fq.getSetting();
     r.allowStickers = r.allowStickers ? T : r.allowStickers;
     let {
-      results: f,
+      results: h,
       metadata: S
-    } = c.queryResults(this.props.channel, this.props.guild, E, r, I), h = 0;
-    for (let e of Object.values(f)) Array.isArray(e) && (h += e.length);
-    let A = !0 === f.isLoading,
-      m = this.shouldShow(h, A, c),
-      N = this.state.selectedIndex;
-    !m || A ? N = null : null != N && N >= h && (N = h - 1), m && !this.state.isVisible && (0, s.trackAutocompleteOpen)(_, this.props.channel, S), this.setState({
+    } = c.queryResults(this.props.channel, this.props.guild, E, r, I), f = 0;
+    for (let e of Object.values(h)) Array.isArray(e) && (f += e.length);
+    let N = !0 === h.isLoading,
+      A = this.shouldShow(f, N, c),
+      m = this.state.selectedIndex;
+    !A || N ? m = null : null != m && m >= f && (m = f - 1), A && !this.state.isVisible && (0, s.a7)(d, this.props.channel, S), this.setState({
       query: {
-        type: _,
+        type: d,
         typeInfo: c,
         queryText: E,
-        results: f,
-        resultCount: h,
+        results: h,
+        resultCount: f,
         options: r,
-        isLoading: A
+        isLoading: N
       },
-      isVisible: m,
-      selectedIndex: N
+      isVisible: A,
+      selectedIndex: m
     })
   }
   shouldShow(e, t, n) {
     return this.props.focused && null == this.props.expressionPickerView && (e > 0 || t || n.showEmpty)
   }
   selectResult(e, t, n) {
-    var i, r, a;
+    var i, r, o;
     if (!this.state.isVisible) return !1;
     let {
       type: l,
       typeInfo: u,
-      results: d,
-      resultCount: _,
+      results: _,
+      resultCount: d,
       options: c
     } = this.state.query;
-    if (e >= _) return !1;
+    if (e >= d) return !1;
     let E = null === (r = u.onSelect) || void 0 === r ? void 0 : r.call(u, {
-      results: d,
+      results: _,
       index: e,
-      type: t ? o.SelectType.SEND : o.SelectType.INSERT,
+      type: t ? a.QB.SEND : a.QB.INSERT,
       options: c,
       channel: this.props.channel,
       tabOrEnter: n,
       queryText: null === (i = this.state.query) || void 0 === i ? void 0 : i.queryText
     });
-    return null != E && (0, s.trackAutocompleteSelect)(l, null !== (a = E.type) && void 0 !== a ? a : null, this.props.channel, E.metadata), !0
+    return null != E && (0, s.Qt)(l, null !== (o = E.type) && void 0 !== o ? o : null, this.props.channel, E.metadata), !0
   }
   setState(e) {
     for (let t in e)
@@ -182,6 +182,6 @@ class _ extends i.EventEmitter {
       }
   }
   constructor(e) {
-    super(), u(this, "props", void 0), u(this, "state", void 0), this.props = e, this.state = d()
+    super(), u(this, "props", void 0), u(this, "state", void 0), this.props = e, this.state = _()
   }
 }

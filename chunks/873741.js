@@ -7,11 +7,11 @@ function i() {
 function r() {
   return null
 }
-n.r(t), n.d(t, {
-  getSignalStrength: function() {
-    return r
-  },
-  isSlowNetwork: function() {
+n.d(t, {
+  K: function() {
     return i
+  },
+  d: function() {
+    return r
   }
 })

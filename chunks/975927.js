@@ -1,15 +1,15 @@
 "use strict";
-n.r(e), n.d(e, {
-  makeXHRTransport: function() {
-    return a
+n.d(e, {
+  K: function() {
+    return s
   }
 });
-var r = n("91320"),
-  i = n("648238");
+var r = n(347421),
+  i = n(880803);
 
-function a(t) {
-  return (0, r.createTransport)(t, function(e) {
-    return new i.SyncPromise((n, r) => {
+function s(t) {
+  return (0, r.q)(t, function(e) {
+    return new i.cW((n, r) => {
       let i = new XMLHttpRequest;
       for (let e in i.onerror = r, i.onreadystatechange = () => {
           4 === i.readyState && n({

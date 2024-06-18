@@ -1,4 +1,4 @@
-var r = n("158698"),
+var r = n(158698),
   i = 1 / 0;
 e.exports = function(e) {
   if ("string" == typeof e || r(e)) return e;

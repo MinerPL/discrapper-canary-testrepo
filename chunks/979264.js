@@ -1,98 +1,101 @@
 "use strict";
-n.r(t), n.d(t, {
-  BaseClanTagChiplet: function() {
-    return m
+n.d(t, {
+  KQ: function() {
+    return S
   },
-  ClanTagBadge: function() {
-    return A
-  },
-  useShouldDisplayClanTag: function() {
-    return p
+  aG: function() {
+    return f
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
-  o = n("442837"),
-  l = n("481060"),
-  u = n("715903"),
-  d = n("271383"),
-  _ = n("594174"),
-  c = n("645896"),
-  E = n("353093"),
-  I = n("954138"),
-  T = n("426964"),
-  f = n("308083"),
-  S = n("689938"),
-  h = n("53408");
-let A = r.memo(function(e) {
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(442837),
+  l = n(481060),
+  u = n(594174),
+  _ = n(645896),
+  d = n(353093),
+  c = n(954138),
+  E = n(426964),
+  I = n(308083),
+  T = n(689938),
+  h = n(53408);
+let S = r.memo(function(e) {
     let {
       src: t,
-      className: n,
-      size: r = f.ClanTagBadgeSize.SIZE_16
+      tag: n,
+      className: r,
+      size: s = I.NC.SIZE_16
     } = e;
     return null == t ? null : (0, i.jsx)("img", {
       src: t,
-      alt: S.default.Messages.CLAN_BADGE,
-      className: s()(h.badge, n),
-      width: r,
-      height: r
+      alt: T.Z.Messages.CLAN_BADGE_ALT.format({
+        tag: n
+      }),
+      className: o()(h.badge, r),
+      width: s,
+      height: s
     })
   }),
-  m = r.memo(function(e) {
+  f = r.memo(function(e) {
     let {
-      clanTag: t,
-      clanBadge: n,
-      className: r,
+      guildId: t,
+      clanTag: n,
+      clanBadge: r,
+      className: s,
       textClassName: a,
-      badgeClassName: o,
-      onClick: u,
-      onMouseEnter: d,
-      textVariant: _ = "text-xs/medium",
-      textColor: c = "text-normal",
-      badgeSize: E = f.ClanTagBadgeSize.SIZE_12,
-      inline: T = !0
+      badgeClassName: u,
+      onClick: _,
+      onMouseEnter: E,
+      textVariant: T = "text-xs/semibold",
+      textColor: f = "text-normal",
+      badgeSize: N = I.NC.SIZE_12,
+      inline: A = !0
     } = e;
-    return (0, I.default)("base_clan_tag_chiplet") ? (0, i.jsx)(l.Clickable, {
+    return (0, c.Z)("base_clan_tag_chiplet") ? (0, i.jsx)(l.Clickable, {
       tag: "span",
-      tabIndex: null == u ? -1 : void 0,
-      onClick: u,
-      onMouseEnter: d,
-      className: s()(h.chipletContainerInner, T && h.chipletContainerInline, null != u && h.clickable, r),
+      tabIndex: null == _ ? -1 : void 0,
+      onClick: _,
+      onMouseEnter: E,
+      className: o()(h.chipletContainerInner, A && h.chipletContainerInline, null != _ && h.clickable, s),
       children: (0, i.jsxs)(l.Text, {
-        variant: _,
-        color: c,
+        variant: T,
+        color: f,
         tag: "span",
-        className: s()(h.text, a),
-        children: [null != n && "string" == typeof n ? (0, i.jsx)(A, {
-          src: n,
-          size: E,
-          className: o
-        }) : n, t]
+        className: o()(h.text, a),
+        children: [null != r && "string" == typeof r ? (0, i.jsx)(S, {
+          src: (0, d.ky)(t, r, N),
+          tag: null == n ? void 0 : n.toString(),
+          size: N,
+          className: u
+        }) : r, (0, i.jsx)("span", {
+          className: h.unselectable,
+          children: n
+        })]
       })
     }) : null
   }),
   N = r.memo(function(e) {
     var t, n;
     let {
-      clan: a,
-      userId: s,
-      children: u,
-      profileViewedAnalytics: d
-    } = e, E = (0, o.useStateFromStores)([_.default], () => _.default.getUser(s), [s]), I = null !== (t = null == E ? void 0 : E.clan) && void 0 !== t ? t : a, [f, S] = (0, c.useFetchClanInfo)(null !== (n = null == I ? void 0 : I.identityGuildId) && void 0 !== n ? n : null), A = r.useCallback(() => {
-      S()
-    }, [S]);
+      clan: s,
+      userId: o,
+      children: d,
+      profileViewedAnalytics: c
+    } = e, I = (0, a.e7)([u.default], () => u.default.getUser(o), [o]), T = null !== (t = null == I ? void 0 : I.clan) && void 0 !== t ? t : s, [S, f] = (0, _.L_)(null !== (n = null == T ? void 0 : T.identityGuildId) && void 0 !== n ? n : null), N = r.useCallback(() => {
+      f()
+    }, [f]);
     return (0, i.jsx)(l.Popout, {
       renderPopout: e => {
         let {
           closePopout: t
         } = e;
-        return (0, i.jsx)(T.default, {
-          isLoading: f,
-          clan: I,
+        return (0, i.jsx)(E.Z, {
+          isLoading: S,
+          clan: T,
           onClose: t,
-          profileViewedAnalytics: d
+          profileViewedAnalytics: c
         })
       },
       position: "top",
@@ -108,66 +111,52 @@ let A = r.memo(function(e) {
         },
         onMouseEnter: () => {
           var t;
-          A(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e)
+          N(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e)
         },
-        children: u
+        children: d
       })
     })
   });
-
-function p(e, t) {
-  let n = (0, o.useStateFromStores)([_.default], () => _.default.getUser(e), [e]),
-    i = (0, o.useStateFromStores)([d.default], () => {
-      if (null == t || null == e) return null;
-      let n = d.default.getMember(t, e);
-      return (0, u.hasAutomodQuarantinedProfile)(n)
-    }, [t, e]),
-    {
-      tag: r,
-      guildId: a
-    } = (0, E.getUserClanData)(null == n ? void 0 : n.clan);
-  return !!(0, I.default)("clan_tag_chiplet") && null != a && null != r && !i && !0
-}
-t.default = r.memo(function(e) {
+t.ZP = r.memo(function(e) {
   var t;
   let {
     clan: n,
     userId: r,
-    contextGuildId: a,
+    contextGuildId: s,
     className: l,
-    textVariant: u,
-    textColor: d,
-    badgeSize: c,
-    disableTooltip: I = !1,
+    textVariant: _,
+    textColor: c,
+    badgeSize: E,
+    disableGuildProfile: I = !1,
     inline: T = !0,
-    profileViewedAnalytics: f
-  } = e, S = (0, o.useStateFromStores)([_.default], () => _.default.getUser(r), [r]), A = null !== (t = null == S ? void 0 : S.clan) && void 0 !== t ? t : n, {
+    profileViewedAnalytics: S
+  } = e, A = (0, a.e7)([u.default], () => u.default.getUser(r), [r]), m = null !== (t = null == A ? void 0 : A.clan) && void 0 !== t ? t : n, {
     tag: O,
-    badge: C,
-    guildId: R
-  } = (0, E.getUserClanData)(A);
-  if (!p(r, a) || null == R) return null;
-  let g = (0, E.getClanBadgeUrl)(R, C, c);
-  return I ? (0, i.jsx)(m, {
+    badge: R,
+    guildId: C
+  } = (0, d.vh)(m);
+  return (0, d.p0)(r, s) && null != C ? I ? (0, i.jsx)(f, {
+    guildId: C,
     clanTag: O,
-    clanBadge: g,
-    className: s()(h.noTooltip, l),
-    textVariant: u,
-    textColor: d,
-    badgeSize: c,
+    clanBadge: R,
+    className: o()(h.noTooltip, l),
+    textVariant: _,
+    textColor: c,
+    badgeSize: E,
     inline: T
   }) : (0, i.jsx)(N, {
-    clan: A,
+    clan: m,
     userId: r,
-    profileViewedAnalytics: f,
-    children: (0, i.jsx)(m, {
+    profileViewedAnalytics: S,
+    children: (0, i.jsx)(f, {
+      guildId: C,
       clanTag: O,
-      clanBadge: g,
+      clanBadge: R,
       className: l,
-      textVariant: u,
-      textColor: d,
-      badgeSize: c,
+      textVariant: _,
+      textColor: c,
+      badgeSize: E,
       inline: T
     })
-  })
+  }) : null
 })

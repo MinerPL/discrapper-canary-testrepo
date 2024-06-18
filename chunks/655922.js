@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 });
-var i = n("701488");
+var i = n(701488);
 
 function r(e) {
-  if (null != e && null != e.url && i.validStreamURL.test(e.url)) return e.url
+  if (null != e && null != e.url && i.Fr.test(e.url)) return e.url
 }

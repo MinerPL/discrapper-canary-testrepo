@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  useSwitch: function() {
+n.d(t, {
+  h: function() {
     return i
   }
 });
-var r = n("820002");
+var r = n(820002);
 
 function i(e, t, n) {
   let {
@@ -14,7 +14,7 @@ function i(e, t, n) {
     isPressed: s,
     isDisabled: u,
     isReadOnly: c
-  } = (0, r.useToggle)(e, t, n);
+  } = (0, r.O)(e, t, n);
   return {
     labelProps: i,
     inputProps: {

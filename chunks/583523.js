@@ -1,33 +1,33 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("570140"),
-  r = n("147913"),
-  s = n("314897"),
-  a = n("967368"),
-  o = n("592125"),
-  l = n("944486"),
-  u = n("631768"),
-  d = n("981631");
+n(47120);
+var i = n(570140),
+  r = n(147913),
+  s = n(314897),
+  o = n(967368),
+  a = n(592125),
+  l = n(944486),
+  u = n(631768),
+  _ = n(981631);
 
-function _() {
+function d() {
   ! function() {
-    let e = l.default.getVoiceChannelId(),
-      t = a.default.bitrate;
+    let e = l.Z.getVoiceChannelId(),
+      t = o.Z.bitrate;
     if (null == e) return;
-    let n = o.default.getChannel(e);
-    if (null != n) t !== n.bitrate && i.default.dispatch({
+    let n = a.Z.getChannel(e);
+    if (null != n) t !== n.bitrate && i.Z.dispatch({
       type: "SET_CHANNEL_BITRATE",
       bitrate: n.bitrate
     })
   }(), ! function() {
     var e;
-    let t = l.default.getVoiceChannelId(),
-      n = u.default.mode;
+    let t = l.Z.getVoiceChannelId(),
+      n = u.Z.mode;
     if (null == t) return;
-    let r = o.default.getChannel(t);
+    let r = a.Z.getChannel(t);
     if (null == r) return;
-    let s = null !== (e = r.videoQualityMode) && void 0 !== e ? e : d.VideoQualityMode.AUTO;
-    n !== s && i.default.dispatch({
+    let s = null !== (e = r.videoQualityMode) && void 0 !== e ? e : _.Ucd.AUTO;
+    n !== s && i.Z.dispatch({
       type: "SET_CHANNEL_VIDEO_QUALITY_MODE",
       mode: s
     })
@@ -38,7 +38,7 @@ function c(e) {
   let {
     channels: t
   } = e;
-  for (let e of t) l.default.getVoiceChannelId() === e.id && _()
+  for (let e of t) l.Z.getVoiceChannelId() === e.id && d()
 }
 
 function E(e) {
@@ -46,10 +46,10 @@ function E(e) {
     voiceStates: t
   } = e;
   t.forEach(e => {
-    s.default.getSessionId() === e.sessionId && _()
+    s.default.getSessionId() === e.sessionId && d()
   })
 }
-class I extends r.default {
+class I extends r.Z {
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
@@ -63,4 +63,4 @@ class I extends r.default {
     }) : t[n] = i
   }
 }
-t.default = new I
+t.Z = new I

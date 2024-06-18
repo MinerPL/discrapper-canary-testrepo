@@ -1,7 +1,6 @@
 "use strict";
-n.r(t);
-var r = n("740078"),
-  i = n("510104");
+var r = n(740078),
+  i = n(510104);
 
 function a(e, t, n) {
   return void 0 === n && (n = {
@@ -16,11 +15,11 @@ function a(e, t, n) {
 }
 
 function o(e) {
-  return [(0, r.top), (0, r.right), (0, r.bottom), (0, r.left)].some(function(t) {
+  return [r.we, r.F2, r.I, r.t$].some(function(t) {
     return e[t] >= 0
   })
 }
-t.default = {
+t.Z = {
   name: "hide",
   enabled: !0,
   phase: "main",
@@ -31,10 +30,10 @@ t.default = {
       r = t.rects.reference,
       s = t.rects.popper,
       u = t.modifiersData.preventOverflow,
-      c = (0, i.default)(t, {
+      c = (0, i.Z)(t, {
         elementContext: "reference"
       }),
-      l = (0, i.default)(t, {
+      l = (0, i.Z)(t, {
         altBoundary: !0
       }),
       d = a(c, r),

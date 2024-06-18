@@ -1,11 +1,10 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("960259"),
-  s = n("609959"),
-  a = n("325767");
-t.default = (0, r.replaceIcon)(function(e) {
+var i = n(735250);
+n(470079);
+var r = n(960259),
+  s = n(609959),
+  o = n(325767);
+t.Z = (0, r.hN)(function(e) {
   let {
     width: t = 24,
     height: n = 24,
@@ -13,7 +12,7 @@ t.default = (0, r.replaceIcon)(function(e) {
     ...s
   } = e;
   return (0, i.jsxs)("svg", {
-    ...(0, a.default)(s),
+    ...(0, o.Z)(s),
     width: t,
     height: n,
     viewBox: "0 0 20 20",
@@ -29,6 +28,6 @@ t.default = (0, r.replaceIcon)(function(e) {
       fill: r
     })]
   })
-}, s.ChannelListMagnifyingGlassIcon, void 0, {
+}, s.H, void 0, {
   size: 24
 })

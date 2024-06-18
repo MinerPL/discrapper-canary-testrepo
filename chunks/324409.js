@@ -15,11 +15,11 @@ function i(e, t, n) {
     return r.removeSource(i)
   }]
 }
-n.r(t), n.d(t, {
-  registerSource: function() {
-    return i
-  },
-  registerTarget: function() {
+n.d(t, {
+  n: function() {
     return r
+  },
+  w: function() {
+    return i
   }
 })

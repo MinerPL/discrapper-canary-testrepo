@@ -1,4 +1,4 @@
-var r = n("444675"),
+var r = n(444675),
   i = Object.getOwnPropertyDescriptors || function(e) {
     for (var t = Object.keys(e), n = {}, r = 0; r < t.length; r++) n[t[r]] = Object.getOwnPropertyDescriptor(e, t[r]);
     return n
@@ -103,7 +103,7 @@ t.debuglog = function(e) {
 };
 
 function f(e, n, r) {
-  if (e.customInspect && n && T(n.inspect) && n.inspect !== t.inspect && !(n.constructor && n.constructor.prototype === n)) {
+  if (e.customInspect && n && C(n.inspect) && n.inspect !== t.inspect && !(n.constructor && n.constructor.prototype === n)) {
     var i, a, o = n.inspect(r, e);
     return !v(o) && (o = f(e, o, r)), o
   }
@@ -122,7 +122,7 @@ function f(e, n, r) {
   }), i);
   if (e.showHidden && (u = Object.getOwnPropertyNames(n)), w(n) && (u.indexOf("message") >= 0 || u.indexOf("description") >= 0)) return p(n);
   if (0 === u.length) {
-    if (T(n)) {
+    if (C(n)) {
       var l = n.name ? ": " + n.name : "";
       return e.stylize("[Function" + l + "]", "special")
     }
@@ -132,11 +132,11 @@ function f(e, n, r) {
   }
   var d = "",
     S = !1,
-    C = ["{", "}"];
-  if (m(n) && (S = !0, C = ["[", "]"]), T(n) && (d = " [Function" + (n.name ? ": " + n.name : "") + "]"), E(n) && (d = " " + RegExp.prototype.toString.call(n)), x(n) && (d = " " + Date.prototype.toUTCString.call(n)), w(n) && (d = " " + p(n)), 0 === u.length && (!S || 0 == n.length)) return C[0] + d + C[1];
+    T = ["{", "}"];
+  if (m(n) && (S = !0, T = ["[", "]"]), C(n) && (d = " [Function" + (n.name ? ": " + n.name : "") + "]"), E(n) && (d = " " + RegExp.prototype.toString.call(n)), x(n) && (d = " " + Date.prototype.toUTCString.call(n)), w(n) && (d = " " + p(n)), 0 === u.length && (!S || 0 == n.length)) return T[0] + d + T[1];
   if (r < 0) return E(n) ? e.stylize(RegExp.prototype.toString.call(n), "regexp") : e.stylize("[Object]", "special");
   return e.seen.push(n), a = S ? function(e, t, n, r, i) {
-      for (var a = [], o = 0, s = t.length; o < s; ++o) M(t, String(o)) ? a.push(h(e, t, n, r, String(o), !0)) : a.push("");
+      for (var a = [], o = 0, s = t.length; o < s; ++o) O(t, String(o)) ? a.push(h(e, t, n, r, String(o), !0)) : a.push("");
       return i.forEach(function(i) {
         !i.match(/^\d+$/) && a.push(h(e, t, n, r, i, !0))
       }), a
@@ -148,7 +148,7 @@ function f(e, n, r) {
       return e.reduce(function(e, t) {
         return r++, t.indexOf("\n") >= 0 && r++, e + t.replace(/\u001b\[\d\d?m/g, "").length + 1
       }, 0) > 60 ? n[0] + ("" === t ? "" : t + "\n ") + " " + e.join(",\n  ") + " " + n[1] : n[0] + t + " " + e.join(", ") + " " + n[1]
-    }(a, d, C)
+    }(a, d, T)
 }
 
 function p(e) {
@@ -159,7 +159,7 @@ function h(e, t, n, r, i, a) {
   var o, s, u;
   if ((u = Object.getOwnPropertyDescriptor(t, i) || {
       value: t[i]
-    }).get ? s = u.set ? e.stylize("[Getter/Setter]", "special") : e.stylize("[Getter]", "special") : u.set && (s = e.stylize("[Setter]", "special")), !M(r, i) && (o = "[" + i + "]"), !s && (0 > e.seen.indexOf(u.value) ? (s = _(n) ? f(e, u.value, null) : f(e, u.value, n - 1)).indexOf("\n") > -1 && (s = a ? s.split("\n").map(function(e) {
+    }).get ? s = u.set ? e.stylize("[Getter/Setter]", "special") : e.stylize("[Getter]", "special") : u.set && (s = e.stylize("[Setter]", "special")), !O(r, i) && (o = "[" + i + "]"), !s && (0 > e.seen.indexOf(u.value) ? (s = _(n) ? f(e, u.value, null) : f(e, u.value, n - 1)).indexOf("\n") > -1 && (s = a ? s.split("\n").map(function(e) {
       return "  " + e
     }).join("\n").slice(2) : "\n" + s.split("\n").map(function(e) {
       return "   " + e
@@ -181,7 +181,7 @@ function g(e) {
 function _(e) {
   return null === e
 }
-t.types = n("842406"), t.isArray = m, t.isBoolean = g, t.isNull = _;
+t.types = n(842406), t.isArray = m, t.isBoolean = g, t.isNull = _;
 
 function b(e) {
   return "number" == typeof e
@@ -199,7 +199,7 @@ function y(e) {
 }
 
 function E(e) {
-  return S(e) && "[object RegExp]" === C(e)
+  return S(e) && "[object RegExp]" === T(e)
 }
 
 function S(e) {
@@ -207,21 +207,21 @@ function S(e) {
 }
 
 function x(e) {
-  return S(e) && "[object Date]" === C(e)
+  return S(e) && "[object Date]" === T(e)
 }
 
 function w(e) {
-  return S(e) && ("[object Error]" === C(e) || e instanceof Error)
+  return S(e) && ("[object Error]" === T(e) || e instanceof Error)
 }
 
-function T(e) {
+function C(e) {
   return "function" == typeof e
 }
 t.isSymbol = function(e) {
   return "symbol" == typeof e
-}, t.isUndefined = y, t.isRegExp = E, t.types.isRegExp = E, t.isObject = S, t.isDate = x, t.types.isDate = x, t.isError = w, t.types.isNativeError = w, t.isFunction = T;
+}, t.isUndefined = y, t.isRegExp = E, t.types.isRegExp = E, t.isObject = S, t.isDate = x, t.types.isDate = x, t.isError = w, t.types.isNativeError = w, t.isFunction = C;
 
-function C(e) {
+function T(e) {
   return Object.prototype.toString.call(e)
 }
 
@@ -230,16 +230,16 @@ function D(e) {
 }
 t.isPrimitive = function(e) {
   return null === e || "boolean" == typeof e || "number" == typeof e || "string" == typeof e || "symbol" == typeof e || void 0 === e
-}, t.isBuffer = n("102439");
-var O = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+}, t.isBuffer = n(102439);
+var M = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-function M(e, t) {
+function O(e, t) {
   return Object.prototype.hasOwnProperty.call(e, t)
 }
 t.log = function() {
   var e, n;
-  console.log("%s - %s", (n = [D((e = new Date).getHours()), D(e.getMinutes()), D(e.getSeconds())].join(":"), [e.getDate(), O[e.getMonth()], n].join(" ")), t.format.apply(t, arguments))
-}, t.inherits = n("689118"), t._extend = function(e, t) {
+  console.log("%s - %s", (n = [D((e = new Date).getHours()), D(e.getMinutes()), D(e.getSeconds())].join(":"), [e.getDate(), M[e.getMonth()], n].join(" ")), t.format.apply(t, arguments))
+}, t.inherits = n(689118), t._extend = function(e, t) {
   if (!t || !S(t)) return e;
   for (var n = Object.keys(t), r = n.length; r--;) e[n[r]] = t[n[r]];
   return e

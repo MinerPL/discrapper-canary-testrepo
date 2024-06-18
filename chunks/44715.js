@@ -1,32 +1,32 @@
 "use strict";
-n.r(t), n.d(t, {
-  getMemberSupplementalByGuildId: function() {
-    return s
+n.d(t, {
+  Qu: function() {
+    return o
   },
-  syncMemberSupplemental: function() {
-    return a
+  W2: function() {
+    return s
   }
 });
-var i = n("327999");
+var i = n(327999);
 let r = {};
 
 function s(e) {
   return null == r[e] && (r[e] = {}), r[e]
 }
 
-function a(e, t) {
+function o(e, t) {
   if (0 === t.length) return !1;
   let n = s(e);
   return t.forEach(e => {
-    var t, r, s, a, o, l, u, d;
-    let _ = n[e.userId],
-      c = null !== (r = null !== (t = e.joinSourceType) && void 0 !== t ? t : null == _ ? void 0 : _.joinSourceType) && void 0 !== r ? r : null;
-    (null == c || c === i.JoinSourceType.UNSPECIFIED) && null != e.sourceInviteCode && (c = i.JoinSourceType.INVITE), n[e.userId] = {
+    var t, r, s, o, a, l, u, _;
+    let d = n[e.userId],
+      c = null !== (r = null !== (t = e.joinSourceType) && void 0 !== t ? t : null == d ? void 0 : d.joinSourceType) && void 0 !== r ? r : null;
+    (null == c || c === i.gq.UNSPECIFIED) && null != e.sourceInviteCode && (c = i.gq.INVITE), n[e.userId] = {
       userId: e.userId,
-      sourceInviteCode: null !== (a = null !== (s = e.sourceInviteCode) && void 0 !== s ? s : null == _ ? void 0 : _.sourceInviteCode) && void 0 !== a ? a : null,
+      sourceInviteCode: null !== (o = null !== (s = e.sourceInviteCode) && void 0 !== s ? s : null == d ? void 0 : d.sourceInviteCode) && void 0 !== o ? o : null,
       joinSourceType: c,
-      inviterId: null !== (l = null !== (o = e.inviterId) && void 0 !== o ? o : null == _ ? void 0 : _.inviterId) && void 0 !== l ? l : null,
-      integrationType: null !== (d = null !== (u = e.integrationType) && void 0 !== u ? u : null == _ ? void 0 : _.integrationType) && void 0 !== d ? d : null
+      inviterId: null !== (l = null !== (a = e.inviterId) && void 0 !== a ? a : null == d ? void 0 : d.inviterId) && void 0 !== l ? l : null,
+      integrationType: null !== (_ = null !== (u = e.integrationType) && void 0 !== u ? u : null == d ? void 0 : d.integrationType) && void 0 !== _ ? _ : null
     }
   }), !0
 }

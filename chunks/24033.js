@@ -1,5 +1,5 @@
 "use strict";
-var e = n("622281"),
+var e = n(622281),
   o = String,
   i = TypeError;
 t.exports = function(t) {

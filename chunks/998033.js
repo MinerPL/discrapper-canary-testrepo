@@ -1,35 +1,35 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return g
+n.d(t, {
+  Z: function() {
+    return E
   }
 });
-var i = n("735250");
-n("470079");
-var a = n("13245"),
-  l = n("703656"),
-  s = n("974180"),
-  o = n("237997"),
-  r = n("454902"),
-  d = n("150097"),
-  u = n("557177"),
-  c = n("312839"),
-  f = n("981631"),
-  h = n("987650"),
-  p = n("689938");
+var i = n(735250);
+n(470079);
+var s = n(13245),
+  l = n(703656),
+  a = n(974180),
+  o = n(237997),
+  r = n(454902),
+  d = n(150097),
+  c = n(557177),
+  u = n(312839),
+  h = n(981631),
+  p = n(987650),
+  f = n(689938);
 
-function g(e, t, n, g) {
-  var m;
+function E(e, t, n, E) {
+  var Z;
   let {
-    icon: E,
-    title: S,
-    body: v
-  } = (0, d.makeTextChatNotification)(e, t, n), {
-    trackView: y,
-    trackClick: I
-  } = (0, c.makeAnalyticsTrackers)(h.OverlayNotificationType.TextChat, {
-    notif_type: h.OverlayNotificationType.TextChat,
-    notif_user_id: null === (m = t.author) || void 0 === m ? void 0 : m.id,
+    icon: g,
+    title: m,
+    body: _
+  } = (0, d.Xi)(e, t, n), {
+    trackView: I,
+    trackClick: S
+  } = (0, u.R)(p.n0.TextChat, {
+    notif_type: p.n0.TextChat,
+    notif_user_id: null === (Z = t.author) || void 0 === Z ? void 0 : Z.id,
     message_id: t.id,
     message_type: t.type,
     guild_id: e.guild_id,
@@ -37,25 +37,25 @@ function g(e, t, n, g) {
     channel_type: e.type
   });
   return {
-    colorScheme: r.ColorSchemes.PRIMARY,
-    icon: E,
-    title: S,
-    body: v,
+    colorScheme: r.IC.PRIMARY,
+    icon: g,
+    title: m,
+    body: _,
     renderFooter: e => e ? (0, i.jsx)("div", {
       style: {
         textAlign: "center"
       },
-      children: p.default.Messages.OVERLAY_CLICK_TO_JUMP_TO_CHANNEL
+      children: f.Z.Messages.OVERLAY_CLICK_TO_JUMP_TO_CHANNEL
     }) : null,
     maxBodyLines: 2,
     onNotificationShow: () => {
-      g && (0, u.playSound)(s.MESSAGE_SOUND, s.MESSAGE_SOUND_VOLUME), y()
+      E && (0, c.GN)(a.Ay, a.yk), I()
     },
     onNotificationClick: () => {
-      (0, l.transitionTo)(f.Routes.CHANNEL(e.guild_id, e.id)), I("jump"), o.default.isInstanceUILocked() && a.default.setInstanceLocked(!1)
+      (0, l.uL)(h.Z5c.CHANNEL(e.guild_id, e.id)), S("jump"), o.Z.isInstanceUILocked() && s.Z.setInstanceLocked(!1)
     },
     onDismissClick: () => {
-      I("dismiss")
+      S("dismiss")
     }
   }
 }

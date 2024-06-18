@@ -1,21 +1,20 @@
 "use strict";
-n.r(t);
-var i = n("998502");
-t.default = {
+var i = n(998502);
+t.Z = {
   flushDNSCache() {
-    i.default.flushDNSCache()
+    i.ZP.flushDNSCache()
   },
-  flushCookies: () => i.default.flushCookies(),
+  flushCookies: () => i.ZP.flushCookies(),
   setApplicationBackgroundColor(e) {
-    i.default.setApplicationBackgroundColor(e)
+    i.ZP.setApplicationBackgroundColor(e)
   },
-  setZoomFactor: e => i.default.setZoomFactor(e),
+  setZoomFactor: e => i.ZP.setZoomFactor(e),
   focus(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    i.default.focus(e, t)
+    i.ZP.focus(e, t)
   },
-  submitLiveCrashReport: e => i.default.submitLiveCrashReport(e),
-  getPidFromDesktopSource: e => i.default.getPidFromDesktopSource(e),
-  getAudioPid: e => i.default.getAudioPid(e),
-  generateSessionFromPid: e => i.default.generateSessionFromPid(e)
+  submitLiveCrashReport: e => i.ZP.submitLiveCrashReport(e),
+  getPidFromDesktopSource: e => i.ZP.getPidFromDesktopSource(e),
+  getAudioPid: e => i.ZP.getAudioPid(e),
+  generateSessionFromPid: e => i.ZP.generateSessionFromPid(e)
 }

@@ -1,61 +1,61 @@
 "use strict";
-s.r(t), s.d(t, {
-  close: function() {
-    return i
+t.d(s, {
+  Gy: function() {
+    return o
   },
-  resetCode: function() {
+  H7: function() {
     return r
   },
-  saveCode: function() {
-    return d
+  en: function() {
+    return c
   },
-  setCode: function() {
-    return o
+  xv: function() {
+    return a
   }
 });
-var a = s("544891"),
-  l = s("570140"),
-  n = s("981631");
+var n = t(544891),
+  i = t(570140),
+  l = t(981631);
 
-function i() {
-  l.default.dispatch({
+function a() {
+  i.Z.dispatch({
     type: "GUILD_SETTINGS_VANITY_URL_CLOSE"
   })
 }
 
 function r() {
-  l.default.dispatch({
+  i.Z.dispatch({
     type: "GUILD_SETTINGS_VANITY_URL_RESET"
   })
 }
 
 function o(e) {
-  l.default.dispatch({
+  i.Z.dispatch({
     type: "GUILD_SETTINGS_VANITY_URL_SET",
     code: e
   })
 }
 
-function d(e, t) {
-  return a.HTTP.patch({
-    url: n.Endpoints.GUILD_VANITY_URL(e),
+function c(e, s) {
+  return n.tn.patch({
+    url: l.ANM.GUILD_VANITY_URL(e),
     body: {
-      code: t
+      code: s
     },
     oldFormErrors: !0
   }).then(e => {
     let {
       body: {
-        code: t,
-        uses: s
+        code: s,
+        uses: t
       }
     } = e;
-    l.default.dispatch({
+    i.Z.dispatch({
       type: "GUILD_SETTINGS_SET_VANITY_URL",
-      code: t,
-      uses: s
+      code: s,
+      uses: t
     })
-  }, e => (l.default.dispatch({
+  }, e => (i.Z.dispatch({
     type: "GUILD_SETTINGS_VANITY_URL_ERROR",
     error: e.body
   }), e))

@@ -1,33 +1,33 @@
-var r = n("990393"),
-  i = Object.prototype.hasOwnProperty;
-t.exports = function(t, e, n, a, o, s) {
-  var u = 1 & n,
-    c = r(t),
-    l = c.length;
-  if (l != r(e).length && !u) return !1;
-  for (var d = l; d--;) {
-    var f = c[d];
-    if (!(u ? f in e : i.call(e, f))) return !1
+var n = e(990393),
+  o = Object.prototype.hasOwnProperty;
+t.exports = function(t, r, e, i, a, u) {
+  var f = 1 & e,
+    c = n(t),
+    s = c.length;
+  if (s != n(r).length && !f) return !1;
+  for (var p = s; p--;) {
+    var l = c[p];
+    if (!(f ? l in r : o.call(r, l))) return !1
   }
-  var p = s.get(t),
-    h = s.get(e);
-  if (p && h) return p == e && h == t;
-  var _ = !0;
-  s.set(t, e), s.set(e, t);
-  for (var g = u; ++d < l;) {
-    var m = t[f = c[d]],
-      y = e[f];
-    if (a) var v = u ? a(y, m, f, e, t, s) : a(m, y, f, t, e, s);
-    if (!(void 0 === v ? m === y || o(m, y, n, a, s) : v)) {
-      _ = !1;
+  var h = u.get(t),
+    v = u.get(r);
+  if (h && v) return h == r && v == t;
+  var d = !0;
+  u.set(t, r), u.set(r, t);
+  for (var b = f; ++p < s;) {
+    var g = t[l = c[p]],
+      y = r[l];
+    if (i) var m = f ? i(y, g, l, r, t, u) : i(g, y, l, t, r, u);
+    if (!(void 0 === m ? g === y || a(g, y, e, i, u) : m)) {
+      d = !1;
       break
     }
-    g || (g = "constructor" == f)
+    b || (b = "constructor" == l)
   }
-  if (_ && !g) {
-    var b = t.constructor,
-      E = e.constructor;
-    b != E && "constructor" in t && "constructor" in e && !("function" == typeof b && b instanceof b && "function" == typeof E && E instanceof E) && (_ = !1)
+  if (d && !b) {
+    var w = t.constructor,
+      _ = r.constructor;
+    w != _ && "constructor" in t && "constructor" in r && !("function" == typeof w && w instanceof w && "function" == typeof _ && _ instanceof _) && (d = !1)
   }
-  return s.delete(t), s.delete(e), _
+  return u.delete(t), u.delete(r), d
 }

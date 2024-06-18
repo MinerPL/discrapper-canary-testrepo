@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  NumberFormatter: function() {
-    return s
-  },
-  NumberParser: function() {
+n.d(t, {
+  d: function() {
     return l
+  },
+  e: function() {
+    return s
   }
 });
 let r = new Map,
@@ -204,23 +204,21 @@ class h {
           maximumFractionDigits: 2
         }).formatToParts(.001).find(e => "decimal" === e.type)) || void 0 === o ? void 0 : o.value,
         v = null === (s = l.find(e => "group" === e.type)) || void 0 === s ? void 0 : s.value,
-        y = l.filter(e => !m.has(e.type)).map(e => b(e.value)),
-        E = f.flatMap(e => e.filter(e => !m.has(e.type)).map(e => b(e.value))),
-        S = [...new Set([...y, ...E])].sort((e, t) => t.length - e.length),
-        x = 0 === S.length ? RegExp("[\\p{White_Space}]", "gu") : RegExp(`${S.join("|")}|[\\p{White_Space}]`, "gu"),
-        w = [...new Intl.NumberFormat(n.locale, {
+        y = [...new Set([...l.filter(e => !m.has(e.type)).map(e => b(e.value)), ...f.flatMap(e => e.filter(e => !m.has(e.type)).map(e => b(e.value)))])].sort((e, t) => t.length - e.length),
+        E = 0 === y.length ? RegExp("[\\p{White_Space}]", "gu") : RegExp(`${y.join("|")}|[\\p{White_Space}]`, "gu"),
+        S = [...new Intl.NumberFormat(n.locale, {
           useGrouping: !1
         }).format(9876543210)].reverse(),
-        T = new Map(w.map((e, t) => [e, t])),
-        C = RegExp(`[${w.join("")}]`, "g");
+        x = new Map(S.map((e, t) => [e, t])),
+        w = RegExp(`[${S.join("")}]`, "g");
       return {
         minusSign: p,
         plusSign: h,
         decimal: _,
         group: v,
-        literals: x,
-        numeral: C,
-        index: e => String(T.get(e))
+        literals: E,
+        numeral: w,
+        index: e => String(x.get(e))
       }
     }(e, this.formatter, this.options, t), "percent" === this.options.style && ((null !== (n = this.options.minimumFractionDigits) && void 0 !== n ? n : 0) > 18 || (null !== (r = this.options.maximumFractionDigits) && void 0 !== r ? r : 0) > 18) && console.warn("NumberParser cannot handle percentages with greater than 18 decimal places, please reduce the number in your options.")
   }

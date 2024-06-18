@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  BlockInteractions: function() {
-    return s
-  },
-  BlockInteractionsContext: function() {
+n.d(t, {
+  g: function() {
     return r
+  },
+  n: function() {
+    return s
   }
 });
-var i = n("735250");
-let r = n("470079").createContext(!1);
+var i = n(735250);
+let r = n(470079).createContext(!1);
 
 function s(e) {
   let {

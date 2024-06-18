@@ -1,50 +1,50 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return d
-  },
-  getIsBroadcastingToAnyone: function() {
-    return E
-  },
-  isBroadcastingInChannel: function() {
-    return c
-  },
-  useIsBroadcastingInChannel: function() {
+n.d(t, {
+  ZP: function() {
     return _
   },
-  useSelfBroadcast: function() {
+  _n: function() {
     return u
+  },
+  dD: function() {
+    return E
+  },
+  tA: function() {
+    return c
+  },
+  zW: function() {
+    return d
   }
 });
-var i = n("442837"),
-  r = n("695346");
-n("199902");
-var s = n("314897"),
-  a = n("592125");
-n("944486");
-var o = n("885110"),
-  l = n("770471");
+var i = n(442837),
+  r = n(695346);
+n(199902);
+var s = n(314897),
+  o = n(592125);
+n(944486);
+var a = n(885110),
+  l = n(770471);
 
 function u() {
-  let e = (0, i.useStateFromStores)([s.default], () => s.default.getId()),
+  let e = (0, i.e7)([s.default], () => s.default.getId()),
     {
       canBroadcast: t
-    } = l.default.useExperiment({
+    } = l.Z.useExperiment({
       location: "use_self_broadcast"
     }, {
       autoTrackExposure: !1
     }),
-    n = (0, i.useStateFromStores)([o.default], () => o.default.getBroadcast());
+    n = (0, i.e7)([a.Z], () => a.Z.getBroadcast());
   return t && (null == n ? void 0 : n.userId) === e ? n : null
 }
 
-function d() {
+function _() {
   return null != u()
 }
 
-function _(e) {
+function d(e) {
   let t = u(),
-    n = (0, i.useStateFromStores)([a.default], () => a.default.getChannel(e));
+    n = (0, i.e7)([o.Z], () => o.Z.getChannel(e));
   return null != t && null != n && n.ownerId === t.userId && n.isBroadcastChannel()
 }
 
@@ -52,20 +52,20 @@ function c(e) {
   let t = s.default.getId(),
     {
       canBroadcast: n
-    } = l.default.getCurrentConfig({
+    } = l.Z.getCurrentConfig({
       location: "is_broadcasting_in_channel"
     }, {
       autoTrackExposure: !1
     }),
-    i = o.default.getBroadcast();
+    i = a.Z.getBroadcast();
   if (!n || null == i || i.userId !== t) return !1;
-  let r = a.default.getChannel(e);
+  let r = o.Z.getChannel(e);
   return null != r && r.ownerId === i.userId && r.isBroadcastChannel()
 }
 
 function E() {
-  let e = r.BroadcastAllowedGuildIds.getSetting(),
-    t = r.BroadcastAllowedUserIds.getSetting();
-  return r.BroadcastAllowFriends.getSetting() || e.length > 0 || t.length > 0
+  let e = r.MI.getSetting(),
+    t = r.GA.getSetting();
+  return r.Uc.getSetting() || e.length > 0 || t.length > 0
 }
-n("292584")
+n(292584)

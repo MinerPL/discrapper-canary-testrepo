@@ -1,10 +1,10 @@
 "use strict";
-r.r(t), r.d(t, {
-  default: function() {
+r.d(t, {
+  Z: function() {
     return i
   }
 });
-var a = r("347514");
+var a = r(870271);
 
 function n(e, t) {
   (null == t || t > e.length) && (t = e.length);
@@ -34,10 +34,10 @@ function s(e, t, r) {
     })
   };
   else {
-    var i, u, c = 0,
+    var i, c, u = 0,
       l = [],
-      f = !0,
-      b = "function" == typeof t.set,
+      b = !0,
+      f = "function" == typeof t.set,
       d = function(e, t) {
         var r = "undefined" != typeof Symbol && e[Symbol.iterator] || e["@@iterator"];
         if (!r) {
@@ -71,7 +71,7 @@ function s(e, t, r) {
           throw TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
         }
         var o, i = !0,
-          u = !1;
+          c = !1;
         return {
           s: function() {
             r = r.call(e)
@@ -81,37 +81,37 @@ function s(e, t, r) {
             return i = e.done, e
           },
           e: function(e) {
-            u = !0, o = e
+            c = !0, o = e
           },
           f: function() {
             try {
               !i && null != r.return && r.return()
             } finally {
-              if (u) throw o
+              if (c) throw o
             }
           }
         }
       }(t);
     try {
-      for (d.s(); !(u = d.n()).done;) {
-        var h = u.value;
-        if (c > s) {
-          f = !1;
+      for (d.s(); !(c = d.n()).done;) {
+        var h = c.value;
+        if (u > s) {
+          b = !1;
           break
         }
-        a <= c && (b && Array.isArray(h) ? "string" == typeof h[0] || "number" == typeof h[0] ? l.push({
+        a <= u && (f && Array.isArray(h) ? "string" == typeof h[0] || "number" == typeof h[0] ? l.push({
           key: h[0],
           value: h[1]
         }) : l.push({
-          key: "[entry ".concat(c, "]"),
+          key: "[entry ".concat(u, "]"),
           value: {
             "[key]": h[0],
             "[value]": h[1]
           }
         }) : l.push({
-          key: c,
+          key: u,
           value: h
-        })), c++
+        })), u++
       }
     } catch (e) {
       d.e(e)
@@ -119,7 +119,7 @@ function s(e, t, r) {
       d.f()
     }
     i = {
-      hasMore: !f,
+      hasMore: !b,
       entries: l
     }
   }
@@ -136,20 +136,20 @@ function o(e, t, r) {
 }
 
 function i(e, t, r, n) {
-  var i, u, c, l = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
-    f = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1 / 0,
-    b = s.bind(null, e, t, r);
-  if (!n) return b().entries;
-  var d = f < 1 / 0;
-  var h = Math.min(f - l, (i = e, u = t, "Object" === i ? Object.keys(u).length : "Array" === i ? u.length : 1 / 0));
+  var i, c, u, l = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
+    b = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1 / 0,
+    f = s.bind(null, e, t, r);
+  if (!n) return f().entries;
+  var d = b < 1 / 0;
+  var h = Math.min(b - l, (i = e, c = t, "Object" === i ? Object.keys(c).length : "Array" === i ? c.length : 1 / 0));
   if ("Iterable" !== e) {
-    if (h <= n || n < 7) return b(l, f).entries
-  } else if (h <= n && !d) return b(l, f).entries;
+    if (h <= n || n < 7) return f(l, b).entries
+  } else if (h <= n && !d) return f(l, b).entries;
   if ("Iterable" === e) {
-    var p = b(l, l + n - 1),
+    var p = f(l, l + n - 1),
       y = p.hasMore,
       g = p.entries;
-    c = y ? [].concat((0, a.default)(g), (0, a.default)(o(l + n, l + 2 * n - 1, n))) : g
-  } else c = d ? o(l, f, n) : [].concat((0, a.default)(b(0, n - 5).entries), (0, a.default)(o(n - 4, h - 5, n)), (0, a.default)(b(h - 4, h - 1).entries));
-  return c
+    u = y ? [].concat((0, a.Z)(g), (0, a.Z)(o(l + n, l + 2 * n - 1, n))) : g
+  } else u = d ? o(l, b, n) : [].concat((0, a.Z)(f(0, n - 5).entries), (0, a.Z)(o(n - 4, h - 5, n)), (0, a.Z)(f(h - 4, h - 1).entries));
+  return u
 }

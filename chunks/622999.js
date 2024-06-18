@@ -1,22 +1,22 @@
 "use strict";
 let i;
-n.r(t), n.d(t, {
-  authenticatePaymentIntentForPaymentId: function() {
-    return E
-  },
-  getStripe: function() {
-    return _
-  },
-  parseStripePaymentMethod: function() {
+n.d(t, {
+  az: function() {
     return c
   },
-  validateExpiry: function() {
+  d2: function() {
     return d
+  },
+  eH: function() {
+    return _
+  },
+  oe: function() {
+    return E
   }
-}), n("47120");
-var r, s, a = n("713845"),
-  o = n("544891"),
-  l = n("981631");
+}), n(47120);
+var r, s, o = n(657610),
+  a = n(544891),
+  l = n(981631);
 (s = r || (r = {})).REQUIRES_PAYMENT_METHOD = "requires_payment_method", s.REQUIRES_CONFIRMATION = "requires_confirmation", s.REQUIRES_ACTION = "requires_action", s.PROCESSING = "processing", s.CANCELED = "canceled", s.SUCCEEDED = "succeeded";
 let u = e => {
     let t = t => "You passed an invalid expiration date ".concat(e) + "".concat(null != t ? t : "") + "Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`",
@@ -29,7 +29,7 @@ let u = e => {
       [r, s] = i[0] > 12 ? [i[1], i[0]] : [i[0], i[1]];
     return r > 12 && t("Month must be a number 1-12, not ".concat(r, ".")), s < 100 && (s += 2e3), [r, s]
   },
-  d = e => {
+  _ = e => {
     let t, n;
     try {
       [t, n] = u(e)
@@ -41,36 +41,36 @@ let u = e => {
     return i.setMonth(i.getMonth() - 1), i.setMonth(i.getMonth() + 1, 1), i > r
   };
 
-function _() {
-  return null != i ? Promise.resolve(i) : (0, a.loadStripe)(l.PaymentSettings.STRIPE.KEY).then(e => (i = e, e))
+function d() {
+  return null != i ? Promise.resolve(i) : (0, o.loadStripe)(l.Ai1.STRIPE.KEY).then(e => (i = e, e))
 }
 
 function c(e) {
-  var t, n, i, r, s, a, o, l;
+  var t, n, i, r, s, o, a, l;
   let {
     billing_details: u
-  } = e, d = null !== (t = u.address) && void 0 !== t ? t : {}, _ = {
+  } = e, _ = null !== (t = u.address) && void 0 !== t ? t : {}, d = {
     name: null !== (n = u.name) && void 0 !== n ? n : "",
-    line1: null !== (i = d.line1) && void 0 !== i ? i : "",
-    line2: null !== (r = d.line2) && void 0 !== r ? r : "",
-    city: null !== (s = d.city) && void 0 !== s ? s : "",
-    state: null !== (a = d.state) && void 0 !== a ? a : "",
-    country: null !== (o = d.country) && void 0 !== o ? o : "",
-    postalCode: null !== (l = d.postal_code) && void 0 !== l ? l : ""
+    line1: null !== (i = _.line1) && void 0 !== i ? i : "",
+    line2: null !== (r = _.line2) && void 0 !== r ? r : "",
+    city: null !== (s = _.city) && void 0 !== s ? s : "",
+    state: null !== (o = _.state) && void 0 !== o ? o : "",
+    country: null !== (a = _.country) && void 0 !== a ? a : "",
+    postalCode: null !== (l = _.postal_code) && void 0 !== l ? l : ""
   };
   return {
     token: e.id,
-    billingAddressInfo: _
+    billingAddressInfo: d
   }
 }
 async function E(e) {
   try {
     let {
       stripe_payment_intent_client_secret: t
-    } = (await o.HTTP.get({
-      url: l.Endpoints.BILLING_STRIPE_PAYMENT_INTENTS(e),
+    } = (await a.tn.get({
+      url: l.ANM.BILLING_STRIPE_PAYMENT_INTENTS(e),
       oldFormErrors: !0
-    })).body, n = await _();
+    })).body, n = await d();
     if (null == n) return {
       error: "unable to load stripe"
     };
@@ -90,10 +90,10 @@ async function E(e) {
       case "requires_confirmation":
       case "requires_action":
         let {
-          error: a
+          error: o
         } = await n.confirmCardPayment(t, s);
-        if (null != a) return {
-          error: a.message
+        if (null != o) return {
+          error: o.message
         };
         return {};
       case "succeeded":

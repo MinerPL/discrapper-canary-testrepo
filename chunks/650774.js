@@ -1,11 +1,10 @@
 "use strict";
-n.r(t);
-var i, r, s, a, o = n("442837"),
-  l = n("570140");
+var i, r, s, o, a = n(442837),
+  l = n(570140);
 let u = {},
-  d = {};
+  _ = {};
 
-function _(e) {
+function d(e) {
   let {
     invite: t
   } = e, {
@@ -13,9 +12,9 @@ function _(e) {
     approximate_presence_count: i
   } = t;
   if ((null == n ? void 0 : n.id) == null || null == i) return !1;
-  d[n.id] = i
+  _[n.id] = i
 }
-class c extends(a = o.default.Store) {
+class c extends(o = a.ZP.Store) {
   getMemberCounts() {
     return u
   }
@@ -23,7 +22,7 @@ class c extends(a = o.default.Store) {
     return null != e ? u[e] : null
   }
   getOnlineCount(e) {
-    return null != e ? d[e] : null
+    return null != e ? _[e] : null
   }
 }
 s = "GuildMemberCountStore", (r = "displayName") in(i = c) ? Object.defineProperty(i, r, {
@@ -31,7 +30,7 @@ s = "GuildMemberCountStore", (r = "displayName") in(i = c) ? Object.defineProper
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new c(l.default, {
+}) : i[r] = s, t.Z = new c(l.Z, {
   CONNECTION_OPEN: function(e) {
     let {
       guilds: t
@@ -55,8 +54,8 @@ s = "GuildMemberCountStore", (r = "displayName") in(i = c) ? Object.defineProper
     let {
       guild: t
     } = e;
-    if (null == u[t.id] && null == d[t.id]) return !1;
-    delete u[t.id], delete d[t.id]
+    if (null == u[t.id] && null == _[t.id]) return !1;
+    delete u[t.id], delete _[t.id]
   },
   GUILD_MEMBER_LIST_UPDATE: function(e) {
     let {
@@ -64,16 +63,16 @@ s = "GuildMemberCountStore", (r = "displayName") in(i = c) ? Object.defineProper
       memberCount: n,
       onlineCount: i
     } = e, r = !1;
-    return u[t] !== n && (u[t] = n, r = !0), d[t] !== i && (d[t] = i, r = !0), r
+    return u[t] !== n && (u[t] = n, r = !0), _[t] !== i && (_[t] = i, r = !0), r
   },
-  INVITE_ACCEPT_SUCCESS: _,
-  INVITE_RESOLVE_SUCCESS: _,
+  INVITE_ACCEPT_SUCCESS: d,
+  INVITE_RESOLVE_SUCCESS: d,
   ONLINE_GUILD_MEMBER_COUNT_UPDATE: function(e) {
     let {
       guildId: t,
       count: n
     } = e;
     if (null == t || null == n) return !1;
-    d[t] = n
+    _[t] = n
   }
 })

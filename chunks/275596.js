@@ -1,6 +1,6 @@
-var a = t("962908"),
-  o = t("991813"),
-  n = t("169690");
+var a = t(962908),
+  o = t(991813),
+  n = t(169690);
 e.exports = function(e, r) {
   if (e) {
     if ("string" == typeof e) return n(e, r);

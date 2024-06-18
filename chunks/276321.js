@@ -1,7 +1,7 @@
 "use strict";
-var n = r("680500"),
-  o = r("24033"),
-  i = r("340618");
+var n = r(680500),
+  o = r(24033),
+  i = r(340618);
 t.exports = Object.setPrototypeOf || ("__proto__" in {} ? function() {
   var t, e = !1,
     r = {};

@@ -1,15 +1,15 @@
-var r = n("553070"),
-  i = n("883638"),
-  a = n("538444"),
-  o = n("455877"),
-  s = n("58990");
+var n = e(553070),
+  o = e(883638),
+  i = e(538444),
+  a = e(455877),
+  u = e(58990);
 
-function u(t) {
-  var e = -1,
-    n = null == t ? 0 : t.length;
-  for (this.clear(); ++e < n;) {
-    var r = t[e];
-    this.set(r[0], r[1])
+function f(t) {
+  var r = -1,
+    e = null == t ? 0 : t.length;
+  for (this.clear(); ++r < e;) {
+    var n = t[r];
+    this.set(n[0], n[1])
   }
 }
-u.prototype.clear = r, u.prototype.delete = i, u.prototype.get = a, u.prototype.has = o, u.prototype.set = s, t.exports = u
+f.prototype.clear = n, f.prototype.delete = o, f.prototype.get = i, f.prototype.has = a, f.prototype.set = u, t.exports = f

@@ -1,52 +1,52 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return f
+t.d(s, {
+  Z: function() {
+    return m
   }
 });
-var a = s("735250"),
-  l = s("470079"),
-  n = s("120356"),
-  i = s.n(n),
-  r = s("477690"),
-  o = s("481060"),
-  d = s("518738"),
-  u = s("208567"),
-  c = s("54264"),
-  E = s("176278"),
-  _ = s("624138"),
-  I = s("689938"),
-  T = s("3827");
-let S = (0, _.cssValueToNumber)(r.default.ROLE_ICON_UPLOADER_ICON_SIZE);
+var n = t(735250),
+  i = t(470079),
+  l = t(120356),
+  a = t.n(l),
+  r = t(477690),
+  o = t(481060),
+  c = t(518738),
+  d = t(208567),
+  u = t(54264),
+  E = t(176278),
+  _ = t(624138),
+  I = t(689938),
+  T = t(3827);
+let N = (0, _.Mg)(r.Z.ROLE_ICON_UPLOADER_ICON_SIZE);
 
-function f(e) {
+function m(e) {
   let {
-    role: t,
-    "aria-label": s = I.default.Messages.UPLOAD_IMAGE,
-    className: n,
+    role: s,
+    "aria-label": t = I.Z.Messages.UPLOAD_IMAGE,
+    className: l,
     onClick: r,
     disabled: _ = !1
-  } = e, f = l.useRef(null), m = l.useMemo(() => null != t ? (0, d.getRoleIconProps)(t, S) : null, [t]), N = null != m ? (0, a.jsx)(E.default, {
+  } = e, m = i.useRef(null), S = i.useMemo(() => null != s ? (0, c.Kz)(s, N) : null, [s]), h = null != S ? (0, n.jsx)(E.Z, {
     enableTooltip: !1,
     className: T.icon,
-    ...m
-  }) : (0, a.jsx)(c.default, {
+    ...S
+  }) : (0, n.jsx)(u.Z, {
     className: T.icon
   });
-  return (0, a.jsx)(o.FocusRing, {
-    ringTarget: f,
-    children: (0, a.jsxs)(o.Clickable, {
-      "aria-label": s,
-      className: i()(T.container, n, {
+  return (0, n.jsx)(o.FocusRing, {
+    ringTarget: m,
+    children: (0, n.jsxs)(o.Clickable, {
+      "aria-label": t,
+      className: a()(T.container, l, {
         [T.disabled]: _
       }),
       onClick: _ ? void 0 : r,
       "aria-disabled": _,
-      children: [(0, a.jsx)("div", {
-        ref: f,
+      children: [(0, n.jsx)("div", {
+        ref: m,
         className: T.preview,
-        children: N
-      }), null != m ? (0, a.jsx)(u.ImageUploaderIcon, {
+        children: h
+      }), null != S ? (0, n.jsx)(d.S, {
         className: T.uploaderIcon
       }) : null]
     })

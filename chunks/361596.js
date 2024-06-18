@@ -1,10 +1,10 @@
-var r = n("915646"),
-  i = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,
-  a = /\\(\\)?/g,
-  o = r(function(t) {
-    var e = [];
-    return 46 === t.charCodeAt(0) && e.push(""), t.replace(i, function(t, n, r, i) {
-      e.push(r ? i.replace(a, "$1") : n || t)
-    }), e
+var n = e(915646),
+  o = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,
+  i = /\\(\\)?/g,
+  a = n(function(t) {
+    var r = [];
+    return 46 === t.charCodeAt(0) && r.push(""), t.replace(o, function(t, e, n, o) {
+      r.push(n ? o.replace(i, "$1") : e || t)
+    }), r
   });
-t.exports = o
+t.exports = a

@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  encodeProperties: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 });
-var i = n("413135").Buffer;
+var i = n(413135).Buffer;
 
 function r(e) {
   try {

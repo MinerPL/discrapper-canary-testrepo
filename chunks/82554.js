@@ -1,10 +1,10 @@
 "use strict";
-var a, l, r, s;
-n.r(t), n.d(t, {
-  ReportNames: function() {
-    return a
+var i, r, s, o;
+n.d(t, {
+  B: function() {
+    return r
   },
-  UnauthenticatedReportNames: function() {
-    return l
+  b: function() {
+    return i
   }
-}), (r = a || (a = {})).GUILD = "guild", r.GUILD_DISCOVERY = "guild_discovery", r.GUILD_DIRECTORY_ENTRY = "guild_directory_entry", r.MESSAGE = "message", r.STAGE_CHANNEL = "stage_channel", r.GUILD_SCHEDULED_EVENT = "guild_scheduled_event", r.FIRST_DM = "first_dm", r.USER = "user", (s = l || (l = {})).MESSAGE = "message_urf", s.USER = "user_urf"
+}), (s = i || (i = {})).GUILD = "guild", s.GUILD_DISCOVERY = "guild_discovery", s.GUILD_DIRECTORY_ENTRY = "guild_directory_entry", s.MESSAGE = "message", s.STAGE_CHANNEL = "stage_channel", s.GUILD_SCHEDULED_EVENT = "guild_scheduled_event", s.FIRST_DM = "first_dm", s.USER = "user", (o = r || (r = {})).MESSAGE = "message_urf", o.USER = "user_urf"

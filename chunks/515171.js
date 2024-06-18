@@ -1,6 +1,6 @@
 "use strict";
-var r = n("286233"),
-  i = n("673555");
+var r = n(286233),
+  i = n(673555);
 e.exports = function() {
   var e = i();
   return r(Array.prototype, {

@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return a
   }
 });
-var r = n("923868"),
-  i = n("951516");
+var r = n(923868),
+  i = n(951516);
 
 function a(e) {
-  return (0, i.default)(1, arguments), (0, r.default)(e, {
+  return (0, i.Z)(1, arguments), (0, r.default)(e, {
     weekStartsOn: 1
   })
 }

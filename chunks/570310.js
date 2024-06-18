@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("147913"),
-  r = n("430871"),
-  s = n("185923");
-let a = new Set([s.EmojiInteractionPoint.EmojiButtonMouseEntered, s.EmojiInteractionPoint.ChatInputExpressionPressed, s.EmojiInteractionPoint.ChatInputSuggestionsShown, s.EmojiInteractionPoint.SearchEmojiKeybindPressed, s.EmojiInteractionPoint.AutocompleteTyped, s.EmojiInteractionPoint.GuildLeaveModalShown, s.EmojiInteractionPoint.AddReactionPopoutMouseEntered, s.EmojiInteractionPoint.AddReactionPopoutFocused, s.EmojiInteractionPoint.MessageContextMenuMouseEntered, s.EmojiInteractionPoint.AutocompleteWrapperShown]);
-class o extends i.default {
+n(47120);
+var i = n(147913),
+  r = n(430871),
+  s = n(185923);
+let o = new Set([s.qR.EmojiButtonMouseEntered, s.qR.ChatInputExpressionPressed, s.qR.ChatInputSuggestionsShown, s.qR.SearchEmojiKeybindPressed, s.qR.AutocompleteTyped, s.qR.GuildLeaveModalShown, s.qR.AddReactionPopoutMouseEntered, s.qR.AddReactionPopoutFocused, s.qR.MessageContextMenuMouseEntered, s.qR.AutocompleteWrapperShown]);
+class a extends i.Z {
   handleInteraction(e) {
     let {
       interaction: t
     } = e;
-    a.has(t) && (0, r.maybeGetEmojiCaptionsForUser)(t)
+    o.has(t) && (0, r.x)(t)
   }
   constructor(...e) {
     var t, n, i;
@@ -23,4 +23,4 @@ class o extends i.default {
     }) : t[n] = i
   }
 }
-t.default = new o
+t.Z = new a

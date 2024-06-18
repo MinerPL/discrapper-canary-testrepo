@@ -1,27 +1,31 @@
 "use strict";
-n.r(t);
-var s, a, i, r, l = n("973361"),
-  o = n("442837"),
-  u = n("570140"),
-  d = n("358085"),
-  c = n("723359");
-let f = null,
-  h = "underage";
-class g extends(r = o.default.Store) {
+var s, r, i, a, l = n(973361),
+  o = n(442837),
+  u = n(570140),
+  c = n(358085),
+  d = n(723359);
+let h = null,
+  E = "underage";
+class _ extends(a = o.ZP.Store) {
   isUnderageAnonymous() {
-    return d.isPlatformEmbedded ? !!(null != f && f + c.AGE_GATE_REGISTER_TIMEOUT_MS > Date.now()) || !1 : null != l.parse(document.cookie)[h]
+    if (c.isPlatformEmbedded) {
+      if (null != h && h + d.k0 > Date.now()) return !0
+    } else return null != l.parse(document.cookie)[E];
+    return !1
   }
 }
-i = "AgeGateStore", (a = "displayName") in(s = g) ? Object.defineProperty(s, a, {
+i = "AgeGateStore", (r = "displayName") in(s = _) ? Object.defineProperty(s, r, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = i, t.default = new g(u.default, {
+}) : s[r] = i, t.Z = new _(u.Z, {
   AGE_GATE_PREVENT_UNDERAGE_REGISTRATION: function() {
-    f = Date.now(), document.cookie = "".concat(h, "=1;path=/")
+    h = Date.now();
+    document.cookie = "".concat(E, "=1;path=/")
   },
   LOGIN_SUCCESS: function() {
-    f = null, document.cookie = "".concat(h, "=1;path=/;max-age=0")
+    h = null;
+    document.cookie = "".concat(E, "=1;path=/;max-age=0")
   }
 })

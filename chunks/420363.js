@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2023-08_video_quality_measurement_v1",
   label: "Video Quality Measurement",
@@ -101,7 +100,7 @@ let i = (0, n("818083").createExperiment)({
     }
   }]
 });
-t.default = {
+t.Z = {
   isFeatureSupportedOnPlatform: () => !0,
   getConfig(e) {
     let t = i.getCurrentConfig({

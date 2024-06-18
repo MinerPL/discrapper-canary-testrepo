@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return l
   }
 });
-var i = n("259443"),
-  r = n("46973"),
-  a = n("65154");
+var i = n(259443),
+  r = n(46973),
+  s = n(65154);
 
-function s(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -16,7 +16,7 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let o = new i.Logger("ConnectionEventFramerateReducer");
+let a = new i.Y("ConnectionEventFramerateReducer");
 class l {
   initialize() {
     this.userSpeakingChange(!0)
@@ -28,8 +28,8 @@ class l {
         return
       }
       this.framerateReductionTimeout = setTimeout(() => {
-        !this.connection.destroyed && (o.info("BaseConnection.userSpeakingChange: Reduced framerate after ".concat(a.VIDEO_QUALITY_FRAMRATE_NOT_SPEAKING_TIMEOUT, " ms.")), this.framerateReductionTimeout = void 0, this.sinkWants.isMuted = !0, this.updateRemoteWantsFramerate())
-      }, a.VIDEO_QUALITY_FRAMRATE_NOT_SPEAKING_TIMEOUT)
+        if (!this.connection.destroyed) a.info("BaseConnection.userSpeakingChange: Reduced framerate after ".concat(s.u$, " ms.")), this.framerateReductionTimeout = void 0, this.sinkWants.isMuted = !0, this.updateRemoteWantsFramerate()
+      }, s.u$)
     }
   }
   destroyFramerateScaleFactorTimers() {
@@ -42,10 +42,10 @@ class l {
     this.destroyFramerateScaleFactorTimers()
   }
   constructor(e, t) {
-    s(this, "connection", void 0), s(this, "sinkWants", void 0), s(this, "framerateReductionTimeout", void 0), s(this, "handleSpeaking", void 0), s(this, "handleSelfMute", void 0), this.connection = e, this.sinkWants = t, this.handleSpeaking = (e, t) => {
-      e === this.connection.userId && this.userSpeakingChange(t === a.SpeakingFlags.NONE)
+    o(this, "connection", void 0), o(this, "sinkWants", void 0), o(this, "framerateReductionTimeout", void 0), o(this, "handleSpeaking", void 0), o(this, "handleSelfMute", void 0), this.connection = e, this.sinkWants = t, this.handleSpeaking = (e, t) => {
+      e === this.connection.userId && this.userSpeakingChange(t === s.Dg.NONE)
     }, this.handleSelfMute = e => {
-      !this.connection.hasDesktopSource() && (this.destroyFramerateScaleFactorTimers(), this.sinkWants.isMuted = e, this.updateRemoteWantsFramerate())
-    }, e.on(r.BaseConnectionEvent.Speaking, this.handleSpeaking), e.on(r.BaseConnectionEvent.Mute, this.handleSelfMute), this.initialize()
+      if (!this.connection.hasDesktopSource()) this.destroyFramerateScaleFactorTimers(), this.sinkWants.isMuted = e, this.updateRemoteWantsFramerate()
+    }, e.on(r.Sh.Speaking, this.handleSpeaking), e.on(r.Sh.Mute, this.handleSelfMute), this.initialize()
   }
 }

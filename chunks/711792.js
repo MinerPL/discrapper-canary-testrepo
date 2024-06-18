@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
-  useTab: function() {
-    return c
-  },
-  useTabList: function() {
+n.d(t, {
+  hp: function() {
     return d
+  },
+  xD: function() {
+    return c
   }
 });
-var r = n("182823"),
-  i = n("148836"),
-  a = n("470079"),
-  o = n("602607");
+var r = n(182823),
+  i = n(148836),
+  a = n(470079),
+  o = n(616073);
 let s = new WeakMap;
 
 function u(e, t, n) {
@@ -31,7 +31,7 @@ function c(e, t, n) {
   } = t, f = o === d, p = s || t.isDisabled || t.disabledKeys.has(o), {
     itemProps: h,
     isPressed: m
-  } = (0, i.useSelectableItem)({
+  } = (0, i.Cs)({
     selectionManager: l,
     key: o,
     ref: n,
@@ -40,12 +40,12 @@ function c(e, t, n) {
     linkBehavior: "selection"
   }), g = u(t, o, "tab"), _ = u(t, o, "tabpanel"), {
     tabIndex: b
-  } = h, v = t.collection.getItem(o), y = (0, r.filterDOMProps)(null == v ? void 0 : v.props, {
+  } = h, v = t.collection.getItem(o), y = (0, r.zL)(null == v ? void 0 : v.props, {
     isLink: !!(null == v ? void 0 : null === (a = v.props) || void 0 === a ? void 0 : a.href),
     labelable: !0
   });
   return delete y.id, {
-    tabProps: (0, r.mergeProps)(y, h, {
+    tabProps: (0, r.dG)(y, h, {
       id: g,
       "aria-selected": f,
       "aria-disabled": p || void 0,
@@ -102,9 +102,9 @@ function d(e, t, n) {
     disabledKeys: p
   } = t, {
     direction: h
-  } = (0, o.useLocale)(), m = (0, a.useMemo)(() => new l(d, h, u, p), [d, p, u, h]), {
+  } = (0, o.bU)(), m = (0, a.useMemo)(() => new l(d, h, u, p), [d, p, u, h]), {
     collectionProps: g
-  } = (0, i.useSelectableCollection)({
+  } = (0, i.gq)({
     ref: n,
     selectionManager: f,
     keyboardDelegate: m,
@@ -112,15 +112,15 @@ function d(e, t, n) {
     disallowEmptySelection: !0,
     scrollRef: n,
     linkBehavior: "selection"
-  }), _ = (0, r.useId)();
+  }), _ = (0, r.Me)();
   s.set(t, _);
-  let b = (0, r.useLabels)({
+  let b = (0, r.bE)({
     ...e,
     id: _
   });
   return {
     tabListProps: {
-      ...(0, r.mergeProps)(g, b),
+      ...(0, r.dG)(g, b),
       role: "tablist",
       "aria-orientation": u,
       tabIndex: void 0

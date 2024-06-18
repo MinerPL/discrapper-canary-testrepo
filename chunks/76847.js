@@ -24,7 +24,7 @@ e.exports = function(e) {
     },
     contains: [n, e.C_NUMBER_MODE, {
       className: "built_in",
-      begin: t.concat(/\b/, t.either(...[/clipboard info/, /the clipboard/, /info for/, /list (disks|folder)/, /mount volume/, /path to/, /(close|open for) access/, /(get|set) eof/, /current date/, /do shell script/, /get volume settings/, /random number/, /set volume/, /system attribute/, /system info/, /time to GMT/, /(load|run|store) script/, /scripting components/, /ASCII (character|number)/, /localized string/, /choose (application|color|file|file name|folder|from list|remote application|URL)/, /display (alert|dialog)/]), /\b/)
+      begin: t.concat(/\b/, t.either(/clipboard info/, /the clipboard/, /info for/, /list (disks|folder)/, /mount volume/, /path to/, /(close|open for) access/, /(get|set) eof/, /current date/, /do shell script/, /get volume settings/, /random number/, /set volume/, /system attribute/, /system info/, /time to GMT/, /(load|run|store) script/, /scripting components/, /ASCII (character|number)/, /localized string/, /choose (application|color|file|file name|folder|from list|remote application|URL)/, /display (alert|dialog)/), /\b/)
     }, {
       className: "built_in",
       begin: /^\s*return\b/
@@ -33,7 +33,7 @@ e.exports = function(e) {
       begin: /\b(text item delimiters|current application|missing value)\b/
     }, {
       className: "keyword",
-      begin: t.concat(/\b/, t.either(...[/apart from/, /aside from/, /instead of/, /out of/, /greater than/, /isn't|(doesn't|does not) (equal|come before|come after|contain)/, /(greater|less) than( or equal)?/, /(starts?|ends|begins?) with/, /contained by/, /comes (before|after)/, /a (ref|reference)/, /POSIX (file|path)/, /(date|time) string/, /quoted form/]), /\b/)
+      begin: t.concat(/\b/, t.either(/apart from/, /aside from/, /instead of/, /out of/, /greater than/, /isn't|(doesn't|does not) (equal|come before|come after|contain)/, /(greater|less) than( or equal)?/, /(starts?|ends|begins?) with/, /contained by/, /comes (before|after)/, /a (ref|reference)/, /POSIX (file|path)/, /(date|time) string/, /quoted form/), /\b/)
     }, {
       beginKeywords: "on",
       illegal: /[${=;\n]/,

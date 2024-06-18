@@ -1,14 +1,13 @@
 "use strict";
-n.r(t);
-var i = n("153832");
+var i = n(772848);
 
 function r(e) {
   return {
     channelId: e,
-    sessionId: (0, i.v4)()
+    sessionId: (0, i.Z)()
   }
 }
-t.default = new class e {
+t.Z = new class e {
   getForumChannelSessionId(e) {
     return null == this.session && (this.session = r(e)), this.session.channelId !== e && (this.session = r(e)), this.session.sessionId
   }

@@ -12,7 +12,7 @@ var n = function(t) {
   }, i.getData = function() {
     return this.get("data")
   }, e
-}((0, r("65183").Record)({
+}((0, r(65183).Record)({
   type: "TOKEN",
   mutability: "IMMUTABLE",
   data: Object

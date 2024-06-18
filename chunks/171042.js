@@ -1,22 +1,22 @@
 "use strict";
-s.r(t), s("47120");
-var a, l, n, i = s("735250"),
-  r = s("470079"),
-  o = s("120356"),
-  d = s.n(o),
-  u = s("392711"),
-  c = s.n(u),
-  E = s("82923"),
-  _ = s("920082");
+t(47120);
+var n, i, l, a = t(735250),
+  r = t(470079),
+  o = t(120356),
+  c = t.n(o),
+  d = t(392711),
+  u = t.n(d),
+  E = t(82923),
+  _ = t(269510);
 
-function I(e, t, s) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: s,
+function I(e, s, t) {
+  return s in e ? Object.defineProperty(e, s, {
+    value: t,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = s, e
-}(n = a || (a = {}))[n.HOVERING = 0] = "HOVERING", n[n.FLYING = 1] = "FLYING";
+  }) : e[s] = t, e
+}(l = n || (n = {}))[l.HOVERING = 0] = "HOVERING", l[l.FLYING = 1] = "FLYING";
 let T = Object.freeze({
   HOVERING: {
     Y_DURATION: 1500,
@@ -45,9 +45,9 @@ let T = Object.freeze({
   FLYING: {
     DURATION: 500,
     Y_VALUE: -1e3,
-    Y_EASING: E.default.Easing.bezier(.46, .01, 1, -.3),
+    Y_EASING: E.ZP.Easing.bezier(.46, .01, 1, -.3),
     X_VALUE: 200,
-    X_EASING: E.default.Easing.bezier(.65, .05, 1, .25),
+    X_EASING: E.ZP.Easing.bezier(.65, .05, 1, .25),
     FIRE_COUNT: 10,
     FIRE_MIN_INTENSITY: 1.2,
     FIRE_MAX_INTENSITY: 1.4,
@@ -56,13 +56,13 @@ let T = Object.freeze({
   }
 });
 
-function S(e, t, s, a) {
-  return E.default.sequence(c().times(t, l => E.default.timing(e, {
-    toValue: a(l),
-    duration: s / t
+function N(e, s, t, n) {
+  return E.ZP.sequence(u().times(s, i => E.ZP.timing(e, {
+    toValue: n(i),
+    duration: t / s
   })))
 }
-class f extends(l = r.Component) {
+class m extends(i = r.Component) {
   componentDidMount() {
     this.startAnimation()
   }
@@ -86,62 +86,62 @@ class f extends(l = r.Component) {
   startHoverAnimate() {
     this.resetAnimation(), this.hoverAnimate(T.HOVERING.Y_VALUE)
   }
-  createFireAnimation(e, t, s, a) {
-    return S(this.fireScale, e, t, () => c().random(s, a))
+  createFireAnimation(e, s, t, n) {
+    return N(this.fireScale, e, s, () => u().random(t, n))
   }
   async hoverAnimate(e) {
-    var t;
+    var s;
     if (0 !== this.props.stage || this.isUnmounted) return;
-    let s = e > 1,
-      a = s ? T.HOVERING.FIRE_MIN_INTENSITY_FALLING : T.HOVERING.FIRE_MIN_INTENSITY_RISING,
-      l = s ? T.HOVERING.FIRE_MAX_INTENSITY_FALLING : T.HOVERING.FIRE_MAX_INTENSITY_RISING,
-      n = this.createFireAnimation(T.HOVERING.FIRE_COUNT, T.HOVERING.Y_DURATION, a, l),
-      i = E.default.timing(this.y, {
+    let t = e > 1,
+      n = t ? T.HOVERING.FIRE_MIN_INTENSITY_FALLING : T.HOVERING.FIRE_MIN_INTENSITY_RISING,
+      i = t ? T.HOVERING.FIRE_MAX_INTENSITY_FALLING : T.HOVERING.FIRE_MAX_INTENSITY_RISING,
+      l = this.createFireAnimation(T.HOVERING.FIRE_COUNT, T.HOVERING.Y_DURATION, n, i),
+      a = E.ZP.timing(this.y, {
         toValue: e,
         duration: T.HOVERING.Y_DURATION,
-        easing: E.default.Easing.inOut(E.default.Easing.ease)
+        easing: E.ZP.Easing.inOut(E.ZP.Easing.ease)
       });
-    this.currentAnimation = E.default.parallel([i, n]), await (null === (t = this.currentAnimation) || void 0 === t ? void 0 : t.start()), this.hoverAnimate(e * T.HOVERING.Y_VALUE_MODIFIER)
+    this.currentAnimation = E.ZP.parallel([a, l]), await (null === (s = this.currentAnimation) || void 0 === s ? void 0 : s.start()), this.hoverAnimate(e * T.HOVERING.Y_VALUE_MODIFIER)
   }
-  createShakeAnimation(e, t, s) {
-    return S(this.x, e, t, e => c().random(1, s) * (e % 2 == 0 ? 1 : -1))
+  createShakeAnimation(e, s, t) {
+    return N(this.x, e, s, e => u().random(1, t) * (e % 2 == 0 ? 1 : -1))
   }
   async flyAnimate() {
     var e;
-    let t = E.default.spring(this.y, {
+    let s = E.ZP.spring(this.y, {
         toValue: T.FALLING.Y_VALUE,
         overshootClamping: !0
       }),
-      s = E.default.spring(this.fireScale, {
+      t = E.ZP.spring(this.fireScale, {
         toValue: T.FALLING.FIRE_VALUE,
         overshootClamping: !0
       }),
-      a = E.default.parallel([t, s]),
-      l = E.default.timing(this.y, {
+      n = E.ZP.parallel([s, t]),
+      i = E.ZP.timing(this.y, {
         toValue: T.STAGING.Y_VALUE,
         duration: T.STAGING.DURATION
       }),
-      n = this.createShakeAnimation(T.STAGING.SHAKE_COUNT, T.STAGING.DURATION, T.STAGING.SHAKE_INTENSITY),
-      i = this.createFireAnimation(T.STAGING.FIRE_COUNT, T.STAGING.DURATION, T.STAGING.FIRE_MIN_INTENSITY, T.STAGING.FIRE_MAX_INTENSITY),
-      r = E.default.parallel([l, n, i]),
-      o = E.default.timing(this.y, {
+      l = this.createShakeAnimation(T.STAGING.SHAKE_COUNT, T.STAGING.DURATION, T.STAGING.SHAKE_INTENSITY),
+      a = this.createFireAnimation(T.STAGING.FIRE_COUNT, T.STAGING.DURATION, T.STAGING.FIRE_MIN_INTENSITY, T.STAGING.FIRE_MAX_INTENSITY),
+      r = E.ZP.parallel([i, l, a]),
+      o = E.ZP.timing(this.y, {
         toValue: T.FLYING.Y_VALUE,
         duration: T.FLYING.DURATION,
         easing: T.FLYING.Y_EASING
       }),
-      d = E.default.timing(this.x, {
+      c = E.ZP.timing(this.x, {
         toValue: T.FLYING.X_VALUE,
         duration: T.FLYING.DURATION,
         easing: T.FLYING.X_EASING
       }),
-      u = E.default.timing(this.opacity, {
+      d = E.ZP.timing(this.opacity, {
         toValue: T.FLYING.OPACITY_VALUE,
         duration: T.FLYING.DURATION / T.FLYING.OPACITY_DURATION_DIVIDEND,
         delay: T.FLYING.DURATION / T.FLYING.OPACITY_DURATION_DIVIDEND
       }),
-      c = this.createFireAnimation(T.FLYING.FIRE_COUNT, T.FLYING.DURATION, T.FLYING.FIRE_MIN_INTENSITY, T.FLYING.FIRE_MAX_INTENSITY),
-      _ = E.default.parallel([o, d, u, c]);
-    if (this.currentAnimation = E.default.sequence([a, r, _]), await (null === (e = this.currentAnimation) || void 0 === e ? void 0 : e.start()), !this.isUnmounted) {
+      u = this.createFireAnimation(T.FLYING.FIRE_COUNT, T.FLYING.DURATION, T.FLYING.FIRE_MIN_INTENSITY, T.FLYING.FIRE_MAX_INTENSITY),
+      _ = E.ZP.parallel([o, c, d, u]);
+    if (this.currentAnimation = E.ZP.sequence([n, r, _]), await (null === (e = this.currentAnimation) || void 0 === e ? void 0 : e.start()), !this.isUnmounted) {
       let {
         onFlyingComplete: e
       } = this.props;
@@ -174,33 +174,33 @@ class f extends(l = r.Component) {
   render() {
     let {
       className: e,
-      style: t
+      style: s
     } = this.props;
-    return (0, i.jsxs)(E.default.div, {
-      className: d()(_.animation, e),
+    return (0, a.jsxs)(E.ZP.div, {
+      className: c()(_.animation, e),
       style: {
-        ...t,
+        ...s,
         ...this.getWumpusStyle()
       },
-      children: [(0, i.jsx)("div", {
+      children: [(0, a.jsx)("div", {
         className: _.fireTopWrapper,
-        children: (0, i.jsx)(E.default.div, {
+        children: (0, a.jsx)(E.ZP.div, {
           className: _.fire,
           style: this.getFireStyle()
         })
-      }), (0, i.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: _.fireBottomWrapper,
-        children: (0, i.jsx)(E.default.div, {
+        children: (0, a.jsx)(E.ZP.div, {
           className: _.fire,
           style: this.getFireStyle()
         })
-      }), (0, i.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: _.wumpus
       })]
     })
   }
   constructor(...e) {
-    super(...e), I(this, "x", new E.default.Value(0)), I(this, "y", new E.default.Value(0)), I(this, "opacity", new E.default.Value(1)), I(this, "fireScale", new E.default.Value(1)), I(this, "currentAnimation", null), I(this, "isUnmounted", !1)
+    super(...e), I(this, "x", new E.ZP.Value(0)), I(this, "y", new E.ZP.Value(0)), I(this, "opacity", new E.ZP.Value(1)), I(this, "fireScale", new E.ZP.Value(1)), I(this, "currentAnimation", null), I(this, "isUnmounted", !1)
   }
 }
-I(f, "Stages", a), t.default = f
+I(m, "Stages", n), s.Z = m

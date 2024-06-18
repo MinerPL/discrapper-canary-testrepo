@@ -1,16 +1,16 @@
 "use strict";
 let i, r;
-n.r(t), n.d(t, {
-  MultiAccountTokenStatus: function() {
+n.d(t, {
+  q: function() {
     return s
   }
-}), n("653041");
-var s, a, o, l = n("213919"),
-  u = n("442837"),
-  d = n("570140"),
-  _ = n("990492"),
-  c = n("988965"),
-  E = n("798077");
+}), n(653041);
+var s, o, a, l = n(213919),
+  u = n(442837),
+  _ = n(570140),
+  d = n(990492),
+  c = n(988965),
+  E = n(798077);
 
 function I(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -19,9 +19,9 @@ function I(e, t, n) {
     configurable: !0,
     writable: !0
   }) : e[t] = n, e
-}(o = s || (s = {}))[o.INVALID = 0] = "INVALID", o[o.VALIDATING = 1] = "VALIDATING", o[o.VALID = 2] = "VALID";
+}(a = s || (s = {}))[a.INVALID = 0] = "INVALID", a[a.VALIDATING = 1] = "VALIDATING", a[a.VALID = 2] = "VALID";
 let T = [],
-  f = !1;
+  h = !1;
 
 function S(e) {
   T = T.filter(t => {
@@ -32,7 +32,7 @@ function S(e) {
   }), l.removeToken(e)
 }
 
-function h(e, t) {
+function f(e, t) {
   let n = T.slice(),
     i = n.find(t => {
       let {
@@ -42,7 +42,7 @@ function h(e, t) {
     });
   null != i && (i.tokenStatus = t, T = n)
 }
-class A extends(a = u.default.PersistedStore) {
+class N extends(o = u.ZP.PersistedStore) {
   initialize(e) {
     if (null != e) {
       var t;
@@ -81,17 +81,17 @@ class A extends(a = u.default.PersistedStore) {
     })
   }
   get canUseMultiAccountNotifications() {
-    return this.getCanUseMultiAccountMobile() && c.MultiAccountMobileNotificationsExperiment.getCurrentConfig({
+    return this.getCanUseMultiAccountMobile() && c.N.getCurrentConfig({
       location: "09e468_1"
     }, {
       autoTrackExposure: !1
     }).isMultiAccountMobileNotificationsEnabled
   }
   get isSwitchingAccount() {
-    return f
+    return h
   }
 }
-I(A, "displayName", "MultiAccountStore"), I(A, "persistKey", "MultiAccountStore"), I(A, "migrations", [e => {
+I(N, "displayName", "MultiAccountStore"), I(N, "persistKey", "MultiAccountStore"), I(N, "migrations", [e => {
   if (null != e) {
     var t;
     return {
@@ -103,12 +103,12 @@ I(A, "displayName", "MultiAccountStore"), I(A, "persistKey", "MultiAccountStore"
     users: [],
     canUseMultiAccountMobile: !1
   }
-}]), t.default = new A(d.default, {
+}]), t.Z = new N(_.Z, {
   CONNECTION_OPEN: function(e) {
     let {
       user: t
     } = e;
-    i = t.id, f = !1;
+    i = t.id, h = !1;
     let n = T.slice(),
       r = n.findIndex(e => {
         let {
@@ -123,7 +123,7 @@ I(A, "displayName", "MultiAccountStore"), I(A, "persistKey", "MultiAccountStore"
       discriminator: t.discriminator,
       tokenStatus: 2,
       pushSyncToken: null
-    }), (T = n).length > E.MAX_ACCOUNTS && T.splice(E.MAX_ACCOUNTS).forEach(e => {
+    }), (T = n).length > E.$H && T.splice(E.$H).forEach(e => {
       let {
         id: t
       } = e;
@@ -131,23 +131,23 @@ I(A, "displayName", "MultiAccountStore"), I(A, "persistKey", "MultiAccountStore"
     })
   },
   LOGOUT: function(e) {
-    f = !!e.isSwitchingAccount, !e.isSwitchingAccount && (T = T.filter(e => {
+    h = !!e.isSwitchingAccount, !e.isSwitchingAccount && (T = T.filter(e => {
       let {
         id: t
       } = e;
       return t !== i
     })), i = null
   },
-  MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: e => h(e.userId, 1),
-  MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: e => h(e.userId, 2),
-  MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: e => h(e.userId, 0),
+  MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: e => f(e.userId, 1),
+  MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: e => f(e.userId, 2),
+  MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: e => f(e.userId, 0),
   MULTI_ACCOUNT_REMOVE_ACCOUNT: e => S(e.userId),
   MULTI_ACCOUNT_MOVE_ACCOUNT: function(e) {
     let {
       from: t,
       to: n
     } = e;
-    T = (0, _.moveItemFromTo)(T, t, n)
+    T = (0, d.aB)(T, t, n)
   },
   CURRENT_USER_UPDATE: function(e) {
     let {

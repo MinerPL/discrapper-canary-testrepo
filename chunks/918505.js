@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
-  experiment: function() {
-    return i
-  },
-  getPomeloEligibility: function() {
+n.d(t, {
+  JH: function() {
     return s
   },
-  usePomeloEligibility: function() {
+  o9: function() {
     return r
+  },
+  w8: function() {
+    return i
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
     kind: "user",
     label: "Pomelo",
     id: "2023-03_pomelo",

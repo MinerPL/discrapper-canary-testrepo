@@ -1,70 +1,69 @@
 "use strict";
-n.r(t);
-var i = n("544891"),
-  r = n("570140"),
-  a = n("802098"),
-  s = n("695346"),
-  o = n("981631"),
-  l = n("596401");
+var i = n(544891),
+  r = n(570140),
+  s = n(802098),
+  o = n(695346),
+  a = n(981631),
+  l = n(596401);
 
 function u() {
   let e = new Date().getMinutes();
   return "x=".concat(Math.floor(e / 5))
 }
-t.default = {
+t.Z = {
   lockChangeLog(e) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "CHANGE_LOG_LOCK",
       key: e
     })
   },
   unlockChangeLog(e) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "CHANGE_LOG_UNLOCK",
       key: e
     })
   },
   markChangelogAsSeen(e, t) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "CHANGE_LOG_MARK_SEEN",
       changelogId: e,
       changelogDate: t
-    }), s.LastReceivedChangelogId.updateSetting(e)
+    }), o.l4.updateSetting(e)
   },
   setChangelogOverride(e) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "CHANGE_LOG_SET_OVERRIDE",
       id: e
     }), null != e && this.sendChangelogMessage(e)
   },
   sendChangelogMessage(e) {
-    i.HTTP.post({
-      url: o.Endpoints.CHANGELOG_MESSAGES,
+    i.tn.post({
+      url: a.ANM.CHANGELOG_MESSAGES,
       body: {
         changelog_id: e
       }
     })
   },
   fetchChangelogConfig() {
-    let e = l.ChangelogPlatforms.DESKTOP;
-    return i.HTTP.get({
+    let e = l.Vw.DESKTOP;
+    return i.tn.get({
       url: "https://cdn.discordapp.com/changelogs/config_".concat(e, ".json?").concat(u())
     })
   },
   async fetchChangelog(e, t) {
-    if (arguments.length > 2 && void 0 !== arguments[2] && arguments[2], null != a.default.getChangelog(e, t)) return null;
-    let n = l.ChangelogPlatforms.DESKTOP;
+    if (arguments.length > 2 && void 0 !== arguments[2] && arguments[2], null != s.Z.getChangelog(e, t)) return null;
+    let n = l.Vw.DESKTOP;
     try {
-      let a = await i.HTTP.get({
+      let s = await i.tn.get({
         url: "https://cdn.discordapp.com/changelogs/".concat(n, "/").concat(e, "/").concat(t, ".json?").concat(u())
       });
-      return r.default.dispatch({
+      return r.Z.dispatch({
         type: "CHANGE_LOG_FETCH_SUCCESS",
         id: e,
-        changelog: a.body
-      }), a.body
+        changelog: s.body
+      }), s.body
     } catch {
-      if (r.default.dispatch({
+      if (r.Z.dispatch({
           type: "CHANGE_LOG_FETCH_FAILED",
           id: e,
           locale: t

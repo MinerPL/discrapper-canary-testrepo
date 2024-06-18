@@ -1,22 +1,22 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return i
+t.d(s, {
+  Z: function() {
+    return a
   }
 });
-var a = s("81825"),
-  l = s("598077");
+var n = t(81825),
+  i = t(598077);
 
-function n(e, t, s) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: s,
+function l(e, s, t) {
+  return s in e ? Object.defineProperty(e, s, {
+    value: t,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = s, e
+  }) : e[s] = t, e
 }
-class i extends a.default {
+class a extends n.Z {
   constructor(e) {
-    super(), n(this, "id", void 0), n(this, "name", void 0), n(this, "managed", void 0), n(this, "roles", void 0), n(this, "requiredColons", void 0), n(this, "user", void 0), n(this, "animated", void 0), n(this, "available", void 0), this.id = e.id, this.name = e.name, this.managed = e.managed, this.roles = e.roles, this.requiredColons = e.requiredColons, this.user = new l.default(e.user), this.animated = e.animated, this.available = e.available
+    super(), l(this, "id", void 0), l(this, "name", void 0), l(this, "managed", void 0), l(this, "roles", void 0), l(this, "requiredColons", void 0), l(this, "user", void 0), l(this, "animated", void 0), l(this, "available", void 0), this.id = e.id, this.name = e.name, this.managed = e.managed, this.roles = e.roles, this.requiredColons = e.requiredColons, this.user = new i.Z(e.user), this.animated = e.animated, this.available = e.available
   }
 }

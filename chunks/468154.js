@@ -1,9 +1,9 @@
 "use strict";
-var e = n("594463").IteratorPrototype,
-  o = n("224106"),
-  i = n("241777"),
-  u = n("414847"),
-  s = n("519723"),
+var e = n(594463).IteratorPrototype,
+  o = n(224106),
+  i = n(241777),
+  u = n(414847),
+  s = n(519723),
   c = function() {
     return this
   };

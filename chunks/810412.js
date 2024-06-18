@@ -1,7 +1,7 @@
 "use strict";
-n.r(t), n.d(t, {
-  PinToBottomScrollerAuto: function() {
-    return i.PinToBottomScrollerAuto
+n.d(t, {
+  e: function() {
+    return i.e
   }
 });
-var i = n("260305")
+var i = n(260305)

@@ -1,6 +1,5 @@
 "use strict";
-r.r(t);
-t.default = function(e) {
+t.Z = function(e) {
   var t = this.has(e) && delete this.__data__[e];
   return this.size -= t ? 1 : 0, t
 }

@@ -62,19 +62,19 @@ t.default = function() {
           value: "time",
           description: '"time"'
         },
-        T = "plural",
-        C = {
+        C = "plural",
+        T = {
           type: "literal",
           value: "plural",
           description: '"plural"'
         },
         D = "selectordinal",
-        O = {
+        M = {
           type: "literal",
           value: "selectordinal",
           description: '"selectordinal"'
         },
-        M = "select",
+        O = "select",
         A = {
           type: "literal",
           value: "select",
@@ -101,18 +101,18 @@ t.default = function() {
           value: "[ \\t\\n\\r]",
           description: "[ \\t\\n\\r]"
         },
-        F = {
+        B = {
           type: "other",
           description: "optionalWhitespace"
         },
-        B = /^[0-9]/,
+        F = /^[0-9]/,
         U = {
           type: "class",
           value: "[0-9]",
           description: "[0-9]"
         },
-        Y = /^[0-9a-f]/i,
-        j = {
+        j = /^[0-9a-f]/i,
+        Y = {
           type: "class",
           value: "[0-9a-f]i",
           description: "[0-9a-f]i"
@@ -134,7 +134,7 @@ t.default = function() {
           value: "[^{}\\\\\\0-\\x1F\x7f \\t\\n\\r]",
           description: "[^{}\\\\\\0-\\x1F\x7f \\t\\n\\r]"
         },
-        W = {
+        Z = {
           type: "literal",
           value: "\\\\",
           description: '"\\\\\\\\"'
@@ -144,17 +144,17 @@ t.default = function() {
           value: "\\#",
           description: '"\\\\#"'
         },
-        q = {
+        W = {
           type: "literal",
           value: "\\{",
           description: '"\\\\{"'
         },
-        Q = {
+        q = {
           type: "literal",
           value: "\\}",
           description: '"\\\\}"'
         },
-        Z = {
+        Q = {
           type: "literal",
           value: "\\u",
           description: '"\\\\u"'
@@ -175,7 +175,7 @@ t.default = function() {
       }
 
       function ei(e) {
-        !(X < et) && (X > et && (et = X, en = []), en.push(e))
+        if (!(X < et)) X > et && (et = X, en = []), en.push(e)
       }
 
       function ea() {
@@ -240,7 +240,7 @@ t.default = function() {
                         return e
                       }()) === l && (e = function() {
                         var e, n, r, i, a;
-                        if (e = X, t.substr(X, 6) === T ? (n = T, X += 6) : (n = l, 0 === er && ei(C)), n !== l) {
+                        if (e = X, t.substr(X, 6) === C ? (n = C, X += 6) : (n = l, 0 === er && ei(T)), n !== l) {
                           if (ed() !== l) {
                             if (44 === t.charCodeAt(X) ? (r = ",", X++) : (r = l, 0 === er && ei(_)), r !== l) {
                               if (ed() !== l) {
@@ -260,7 +260,7 @@ t.default = function() {
                         return e
                       }()) === l && (e = function() {
                         var e, n, r, i, a;
-                        if (e = X, t.substr(X, 13) === D ? (n = D, X += 13) : (n = l, 0 === er && ei(O)), n !== l) {
+                        if (e = X, t.substr(X, 13) === D ? (n = D, X += 13) : (n = l, 0 === er && ei(M)), n !== l) {
                           if (ed() !== l) {
                             if (44 === t.charCodeAt(X) ? (r = ",", X++) : (r = l, 0 === er && ei(_)), r !== l) {
                               if (ed() !== l) {
@@ -280,7 +280,7 @@ t.default = function() {
                         return e
                       }()) === l && (e = function() {
                         var e, n, r, i, a;
-                        if (e = X, t.substr(X, 6) === M ? (n = M, X += 6) : (n = l, 0 === er && ei(A)), n !== l) {
+                        if (e = X, t.substr(X, 6) === O ? (n = O, X += 6) : (n = l, 0 === er && ei(A)), n !== l) {
                           if (ed() !== l) {
                             if (44 === t.charCodeAt(X) ? (r = ",", X++) : (r = l, 0 === er && ei(_)), r !== l) {
                               if (ed() !== l) {
@@ -382,17 +382,17 @@ t.default = function() {
       function ed() {
         var e, n, r;
         for (er++, e = X, n = [], r = el(); r !== l;) n.push(r), r = el();
-        return n !== l && (n = t.substring(e, X)), e = n, er--, e === l && (n = l, 0 === er && ei(F)), e
+        return n !== l && (n = t.substring(e, X)), e = n, er--, e === l && (n = l, 0 === er && ei(B)), e
       }
 
       function ef() {
         var e;
-        return B.test(t.charAt(X)) ? (e = t.charAt(X), X++) : (e = l, 0 === er && ei(U)), e
+        return F.test(t.charAt(X)) ? (e = t.charAt(X), X++) : (e = l, 0 === er && ei(U)), e
       }
 
       function ep() {
         var e;
-        return Y.test(t.charAt(X)) ? (e = t.charAt(X), X++) : (e = l, 0 === er && ei(j)), e
+        return j.test(t.charAt(X)) ? (e = t.charAt(X), X++) : (e = l, 0 === er && ei(Y)), e
       }
 
       function eh() {
@@ -410,8 +410,8 @@ t.default = function() {
 
       function em() {
         var e, n, r, i, a, o, s, u;
-        if (V.test(t.charAt(X)) ? (e = t.charAt(X), X++) : (e = l, 0 === er && ei($)), e === l && (e = X, "\\\\" === t.substr(X, 2) ? (n = "\\\\", X += 2) : (n = l, 0 === er && ei(W)), n !== l && (n = "\\"), (e = n) === l && (e = X, "\\#" === t.substr(X, 2) ? (n = "\\#", X += 2) : (n = l, 0 === er && ei(K)), n !== l && (n = "\\#"), (e = n) === l && (e = X, "\\{" === t.substr(X, 2) ? (n = "\\{", X += 2) : (n = l, 0 === er && ei(q)), n !== l && (n = "{"), (e = n) === l && (e = X, "\\}" === t.substr(X, 2) ? (n = "\\}", X += 2) : (n = l, 0 === er && ei(Q)), n !== l && (n = "}"), (e = n) === l))))) {
-          if (e = X, "\\u" === t.substr(X, 2) ? (n = "\\u", X += 2) : (n = l, 0 === er && ei(Z)), n !== l) {
+        if (V.test(t.charAt(X)) ? (e = t.charAt(X), X++) : (e = l, 0 === er && ei($)), e === l && (e = X, "\\\\" === t.substr(X, 2) ? (n = "\\\\", X += 2) : (n = l, 0 === er && ei(Z)), n !== l && (n = "\\"), (e = n) === l && (e = X, "\\#" === t.substr(X, 2) ? (n = "\\#", X += 2) : (n = l, 0 === er && ei(K)), n !== l && (n = "\\#"), (e = n) === l && (e = X, "\\{" === t.substr(X, 2) ? (n = "\\{", X += 2) : (n = l, 0 === er && ei(W)), n !== l && (n = "{"), (e = n) === l && (e = X, "\\}" === t.substr(X, 2) ? (n = "\\}", X += 2) : (n = l, 0 === er && ei(q)), n !== l && (n = "}"), (e = n) === l))))) {
+          if (e = X, "\\u" === t.substr(X, 2) ? (n = "\\u", X += 2) : (n = l, 0 === er && ei(Q)), n !== l) {
             if (r = X, i = X, (a = ep()) !== l && (o = ep()) !== l && (s = ep()) !== l && (u = ep()) !== l ? i = a = [a, o, s, u] : (X = i, i = l), i !== l && (i = t.substring(r, X)), (r = i) !== l) e = n = String.fromCharCode(parseInt(r, 16));
             else X = e, e = l
           } else X = e, e = l
@@ -443,7 +443,7 @@ t.default = function() {
         for (e.sort(function(e, t) {
             return e.description < t.description ? -1 : e.description > t.description ? 1 : 0
           }); t < e.length;) e[t - 1] === e[t] ? e.splice(t, 1) : t++
-      }(r), new e(null !== n ? n : function(e, t) {
+      }(r), new e(function(e, t) {
         var n, r, i = Array(e.length);
         for (r = 0; r < e.length; r++) i[r] = e[r].description;
         return n = e.length > 1 ? i.slice(0, -1).join(", ") + " or " + i[e.length - 1] : i[0], "Expected " + n + " but " + (t ? '"' + function(e) {

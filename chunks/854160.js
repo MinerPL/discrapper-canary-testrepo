@@ -1,5 +1,5 @@
 "use strict";
-var r = n("970661"),
+var r = n(970661),
   i = function() {
     try {
       return !!Object.defineProperty({}, "a", {})

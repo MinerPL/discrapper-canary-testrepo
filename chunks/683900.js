@@ -1,10 +1,10 @@
 "use strict";
-n.r(e), n.d(e, {
-  Dedupe: function() {
+n.d(e, {
+  I: function() {
     return i
   }
 });
-var r = n("648238");
+var r = n(529866);
 class i {
   constructor() {
     i.prototype.__init.call(this)
@@ -25,13 +25,13 @@ class i {
               return !!e && (!!(function(t, e) {
                 let n = t.message,
                   r = e.message;
-                return !!((n || r) && (!n || r) && (n || !r) && n === r && o(t, e) && a(t, e)) || !1
+                return !!((n || r) && (!n || r) && (n || !r) && n === r && a(t, e) && s(t, e)) || !1
               }(t, e) || function(t, e) {
-                let n = s(e),
-                  r = s(t);
-                return !!(n && r && n.type === r.type && n.value === r.value && o(t, e) && a(t, e)) || !1
+                let n = o(e),
+                  r = o(t);
+                return !!(n && r && n.type === r.type && n.value === r.value && a(t, e) && s(t, e)) || !1
               }(t, e)) || !1)
-            }(t, n._previousEvent)) return ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.warn("Event dropped due to being a duplicate of previously captured event."), null
+            }(t, n._previousEvent)) return ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.kg.warn("Event dropped due to being a duplicate of previously captured event."), null
         } catch (t) {}
         return n._previousEvent = t
       }
@@ -42,11 +42,12 @@ class i {
 }
 i.__initStatic();
 
-function a(t, e) {
+function s(t, e) {
   let n = u(t),
     r = u(e);
   if (!n && !r) return !0;
-  if (n && !r || !n && r || r.length !== n.length) return !1;
+  if (n && !r || !n && r) return !1;
+  if (r.length !== n.length) return !1;
   for (let t = 0; t < r.length; t++) {
     let e = r[t],
       i = n[t];
@@ -55,7 +56,7 @@ function a(t, e) {
   return !0
 }
 
-function o(t, e) {
+function a(t, e) {
   let n = t.fingerprint,
     r = e.fingerprint;
   if (!n && !r) return !0;
@@ -67,7 +68,7 @@ function o(t, e) {
   }
 }
 
-function s(t) {
+function o(t) {
   return t.exception && t.exception.values && t.exception.values[0]
 }
 

@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("846519"),
-  r = n("147913"),
-  s = n("77498"),
-  a = n("19780"),
-  o = n("626135"),
-  l = n("70956"),
-  u = n("581567"),
-  d = n("594190"),
-  _ = n("981631");
+n(47120);
+var i = n(846519),
+  r = n(147913),
+  s = n(77498),
+  o = n(19780),
+  a = n(626135),
+  l = n(70956),
+  u = n(581567),
+  _ = n(594190),
+  d = n(981631);
 
 function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -18,8 +18,8 @@ function c(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let E = 5 * l.default.Millis.MINUTE;
-class I extends r.default {
+let E = 5 * l.Z.Millis.MINUTE;
+class I extends r.Z {
   _terminate() {
     this.stopHeartbeat()
   }
@@ -30,10 +30,10 @@ class I extends r.default {
     this.heartbeatInterval.stop(), this.runningGameKeys.clear()
   }
   handlePostConnectionOpen() {
-    d.default.getRunningGames().length > 0 && this.maybeStartHeartbeat()
+    _.ZP.getRunningGames().length > 0 && this.maybeStartHeartbeat()
   }
   constructor(...e) {
-    super(...e), c(this, "heartbeatInterval", new i.Interval), c(this, "runningGameKeys", new Set), c(this, "actions", {
+    super(...e), c(this, "heartbeatInterval", new i.Xp), c(this, "runningGameKeys", new Set), c(this, "actions", {
       RUNNING_GAMES_CHANGE: e => this.handleRunningGamesChanged(e),
       LOGOUT: () => this.stopHeartbeat(),
       CONNECTION_CLOSED: () => this.stopHeartbeat(),
@@ -48,28 +48,28 @@ class I extends r.default {
       }
       this.maybeStartHeartbeat()
     }), c(this, "logRunningGameHeartbeats", () => {
-      let e = d.default.getRunningGames(),
+      let e = _.ZP.getRunningGames(),
         t = {
-          rtc_connection_id: a.default.getRTCConnectionId(),
-          media_session_id: a.default.getMediaSessionId()
+          rtc_connection_id: o.Z.getRTCConnectionId(),
+          media_session_id: o.Z.getMediaSessionId()
         },
         n = new Set;
       e.forEach(e => {
         var i, r;
-        let a = (0, d.gameKey)(e),
-          l = !this.runningGameKeys.has(a),
-          c = null !== (r = e.id) && void 0 !== r ? r : null === (i = s.default.getGameByName(e.name)) || void 0 === i ? void 0 : i.id;
-        o.default.track(_.AnalyticEvents.RUNNING_GAME_HEARTBEAT, {
+        let o = (0, _.rH)(e),
+          l = !this.runningGameKeys.has(o),
+          c = null !== (r = e.id) && void 0 !== r ? r : null === (i = s.Z.getGameByName(e.name)) || void 0 === i ? void 0 : i.id;
+        a.default.track(d.rMx.RUNNING_GAME_HEARTBEAT, {
           game_id: c,
           game_name: e.name,
           game_distributor: e.distributor,
-          game_executable: (0, u.removeExecutablePathPrefix)(e.exePath),
-          game_detection_enabled: (0, d.isDetectionEnabled)(e),
+          game_executable: (0, u.N6)(e.exePath),
+          game_detection_enabled: (0, _.ik)(e),
           initial_heartbeat: l,
           ...t
-        }), n.add((0, d.gameKey)(e))
+        }), n.add((0, _.rH)(e))
       }), this.runningGameKeys = n
     })
   }
 }
-t.default = new I
+t.Z = new I

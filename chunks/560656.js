@@ -6,13 +6,13 @@ function r(e) {
 Object.defineProperty(t, "__esModule", {
   value: !0
 });
-var i = n("698091"),
-  a = r(n("624482")),
-  o = r(n("102386")),
-  s = r(n("248766")),
-  u = n("239189"),
-  c = n("470079"),
-  l = n("672268"),
+var i = n(698091),
+  a = r(n(624482)),
+  o = r(n(102386)),
+  s = r(n(248766)),
+  u = n(239189),
+  c = n(470079),
+  l = n(672268),
   d = Symbol.for("Animated:node"),
   f = function(e) {
     return !!e && e[d] === e
@@ -174,7 +174,7 @@ var i = n("698091"),
         u = i.useForceUpdate(),
         d = new E(function() {
           var e = a.current;
-          (!o || e) && !1 === (!!e && t.applyAnimatedValues(e, d.getValue(!0))) && u()
+          if (!o || !!e) !1 === (!!e && t.applyAnimatedValues(e, d.getValue(!0))) && u()
         }),
         f = new Set;
       return d.setValue(n, {

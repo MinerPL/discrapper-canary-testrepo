@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
-  isUserEligibleForNitroTenureRewardCard: function() {
-    return s
-  },
-  useUserEligibleForNitroTenureRewardCard: function() {
+n.d(t, {
+  c: function() {
     return r
+  },
+  d: function() {
+    return s
   }
 });
-var i = n("290031");
+var i = n(290031);
 
 function r(e) {
   let {
     location: t
   } = e, {
     enableNitroTenureRewardCard: n
-  } = i.NitroTenureRewardCardExperiment.useExperiment({
+  } = i.O.useExperiment({
     location: t
   }, {
     autoTrackExposure: !1
@@ -27,7 +27,7 @@ function s(e) {
     location: t
   } = e, {
     enableNitroTenureRewardCard: n
-  } = i.NitroTenureRewardCardExperiment.getCurrentConfig({
+  } = i.O.getCurrentConfig({
     location: t
   }, {
     autoTrackExposure: !1

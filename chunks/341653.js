@@ -3,8 +3,8 @@
 function i() {
   return null
 }
-n.r(t), n.d(t, {
-  getSystemVersion: function() {
+n.d(t, {
+  e: function() {
     return i
   }
 })

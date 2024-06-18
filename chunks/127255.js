@@ -1,40 +1,40 @@
 "use strict";
-i.r(t), i.d(t, {
-  default: function() {
-    return f
+n.d(t, {
+  Z: function() {
+    return c
   }
-}), i("789020"), i("47120"), i("653041");
-var l = i("470079"),
-  n = i("442837"),
-  a = i("630388"),
-  d = i("115130"),
-  u = i("844797"),
-  o = i("694312"),
-  r = i("405625"),
-  c = i("664097"),
-  s = i("981631");
+}), n(789020), n(47120), n(653041);
+var i = n(470079),
+  r = n(442837),
+  s = n(630388),
+  o = n(115130),
+  a = n(844797),
+  l = n(694312),
+  u = n(405625),
+  _ = n(664097),
+  d = n(981631);
 
-function f(e) {
+function c(e) {
   let {
     guildId: t,
-    enableFilter: i = !1,
-    channel: f
+    enableFilter: n = !1,
+    channel: c
   } = e, {
-    filter: p
-  } = (0, n.useStateFromStoresObject)([d.default], () => ({
-    filter: d.default.getFilter()
-  })), v = (0, o.useActivityShelfData)(t), E = (0, r.default)(v), A = (0, c.useDeveloperActivityShelfItems)(), m = (0, u.useIsActivityInTextChannel)(f);
-  return l.useMemo(() => {
+    filter: E
+  } = (0, r.cj)([o.Z], () => ({
+    filter: o.Z.getFilter()
+  })), I = (0, l.E)(t), T = (0, u.Z)(I), h = (0, _.o)(), S = (0, a.oy)(c);
+  return i.useMemo(() => {
     function e(e) {
-      return !!(!i || "" === p || e.application.name.toLowerCase().includes(p.toLowerCase())) || !1
+      return !!(!n || "" === E || e.application.name.toLowerCase().includes(E.toLowerCase())) || !1
     }
 
     function t(e) {
-      return !m || (0, a.hasFlag)(e.application.flags, s.ApplicationFlags.EMBEDDED_RELEASED)
+      return !S || (0, s.yE)(e.application.flags, d.udG.EMBEDDED_RELEASED)
     }
-    let l = [...A].filter(e).filter(t),
-      n = new Set(l.map(e => e.application.id));
-    for (let i of E) !n.has(i.application.id) && e(i) && t(i) && l.push(i);
-    return l
-  }, [A, i, p, E, m])
+    let i = [...h].filter(e).filter(t),
+      r = new Set(i.map(e => e.application.id));
+    for (let n of T) !r.has(n.application.id) && e(n) && t(n) && i.push(n);
+    return i
+  }, [h, n, E, T, S])
 }

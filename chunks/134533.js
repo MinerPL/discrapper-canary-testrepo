@@ -1,5 +1,5 @@
 "use strict";
-var r = n("583584"),
+var r = n(583584),
   i = function() {
     return !!r
   };

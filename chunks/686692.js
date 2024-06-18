@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  isInGuildMemberModViewExperiment: function() {
-    return u
+n.d(t, {
+  Om: function() {
+    return o
   },
-  useGuildMemberModViewExperiment: function() {
-    return l
+  Qf: function() {
+    return s
   }
 });
-var i = n("100527");
-let a = (0, n("818083").createExperiment)({
+var i = n(100527);
+let r = (0, n(818083).B)({
     kind: "guild",
     id: "2023-08_guild_member_mod_view",
     label: "Guild Member Mod View",
@@ -23,35 +23,35 @@ let a = (0, n("818083").createExperiment)({
       }
     }]
   }),
-  u = function(e) {
+  s = function(e) {
     let {
       autoTrackExposure: t = !1,
       disable: n = !1,
-      location: u = i.default.GUILD_MEMBER_MOD_VIEW
+      location: s = i.Z.GUILD_MEMBER_MOD_VIEW
     } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, {
-      enabled: l
-    } = a.getCurrentConfig({
+      enabled: o
+    } = r.getCurrentConfig({
       guildId: e,
-      location: u
+      location: s
     }, {
       autoTrackExposure: t,
       disable: n
     });
-    return l
+    return o
   },
-  l = function(e) {
+  o = function(e) {
     let {
       autoTrackExposure: t = !1,
       disable: n = !1,
-      location: u = i.default.GUILD_MEMBER_MOD_VIEW
+      location: s = i.Z.GUILD_MEMBER_MOD_VIEW
     } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, {
-      enabled: l
-    } = a.useExperiment({
+      enabled: o
+    } = r.useExperiment({
       guildId: null != e ? e : void 0,
-      location: u
+      location: s
     }, {
       autoTrackExposure: t,
       disable: n
     });
-    return l
+    return o
   }

@@ -1,101 +1,100 @@
 "use strict";
-s.r(t);
-var a = s("735250"),
-  l = s("470079"),
-  n = s("120356"),
-  i = s.n(n),
-  r = s("924826"),
-  o = s("442837"),
-  d = s("780384"),
-  u = s("481060"),
-  c = s("726542"),
-  E = s("100527"),
-  _ = s("933557"),
-  I = s("484459"),
-  T = s("103575"),
-  S = s("210887"),
-  f = s("699516"),
-  m = s("594174"),
-  N = s("259580"),
-  g = s("274730"),
-  h = s("51144"),
-  C = s("426563"),
-  R = s("501801"),
-  x = s("981631"),
-  L = s("689938"),
-  O = s("313633");
-class A extends l.PureComponent {
+var n = t(735250),
+  i = t(470079),
+  l = t(120356),
+  a = t.n(l),
+  r = t(91192),
+  o = t(442837),
+  c = t(780384),
+  d = t(481060),
+  u = t(726542),
+  E = t(100527),
+  _ = t(933557),
+  I = t(484459),
+  T = t(103575),
+  N = t(210887),
+  m = t(699516),
+  S = t(594174),
+  h = t(259580),
+  g = t(274730),
+  x = t(51144),
+  C = t(426563),
+  R = t(501801),
+  L = t(981631),
+  O = t(689938),
+  A = t(466568);
+class p extends i.PureComponent {
   render() {
     let {
       user: e,
-      onContextMenu: t
+      onContextMenu: s
     } = this.props;
-    return (0, a.jsxs)("span", {
-      onContextMenu: t,
-      className: O.userHook,
-      children: [(0, a.jsx)(u.Text, {
+    return (0, n.jsxs)("span", {
+      onContextMenu: s,
+      className: A.userHook,
+      children: [(0, n.jsx)(d.Text, {
         variant: "text-md/normal",
-        children: h.default.getUserTag(e, {
+        children: x.ZP.getUserTag(e, {
           mode: "username"
         })
-      }), "0" !== e.discriminator && (0, a.jsxs)(u.Text, {
+      }), "0" !== e.discriminator && (0, n.jsxs)(d.Text, {
         variant: "text-xs/normal",
-        className: O.discrim,
+        className: A.discrim,
         children: ["#", e.discriminator]
       })]
     })
   }
 }
-class p extends l.PureComponent {
+class M extends i.PureComponent {
   hasChangesToRender() {
     let {
       log: e
     } = this.props, {
-      changes: t
+      changes: s
     } = e;
-    return (e.actionType !== x.AuditLogActionTypes.DELETE || e.action === x.AuditLogActions.MEMBER_BAN_ADD || e.action === x.AuditLogActions.MEMBER_KICK || e.action === x.AuditLogActions.MEMBER_PRUNE) && null != t && t.some(t => !(0, R.shouldNotRenderChangeDetail)(e, t))
+    return (e.actionType !== L.vB8.DELETE || e.action === L.rsA.MEMBER_BAN_ADD || e.action === L.rsA.MEMBER_KICK || e.action === L.rsA.MEMBER_PRUNE) && null != s && s.some(s => !(0, R.xO)(e, s))
   }
   renderTitle() {
     let {
       log: e,
-      onUserContextMenu: t,
-      onTargetContextMenu: s,
-      onChannelContextMenu: l
+      onUserContextMenu: s,
+      onTargetContextMenu: t,
+      onChannelContextMenu: i
     } = this.props, {
-      user: n,
-      target: i,
+      user: l,
+      target: a,
       options: r
-    } = e, o = g.getChangeTitle(e);
-    return null != o ? (0, a.jsx)("div", {
-      className: O.overflowEllipsis,
+    } = e, o = g.N5(e);
+    return null != o ? (0, n.jsx)("div", {
+      className: A.overflowEllipsis,
       children: o.format({
-        user: n,
-        target: i,
-        userHook: (s, l) => {
-          if (null != e.user) return (0, a.jsx)(A, {
+        user: l,
+        target: a,
+        userHook: (t, i) => {
+          if (null != e.user) return (0, n.jsx)(p, {
             user: e.user,
-            onContextMenu: t
-          }, l);
+            onContextMenu: s
+          }, i);
           if (null != e.options.integration_type) {
-            var n;
-            let t = c.default.get(e.options.integration_type);
-            return null !== (n = null == t ? void 0 : t.name) && void 0 !== n ? n : L.default.Messages.UNKNOWN_INTEGRATION
+            var l;
+            let s = u.Z.get(e.options.integration_type);
+            return null !== (l = null == s ? void 0 : s.name) && void 0 !== l ? l : O.Z.Messages.UNKNOWN_INTEGRATION
           }
-          return L.default.Messages.UNKNOWN_USER
+          return O.Z.Messages.UNKNOWN_USER
         },
-        targetHook: (t, l) => e.targetType === x.AuditLogTargetTypes.USER ? (0, a.jsx)(A, {
+        targetHook: (s, i) => e.targetType === L.KFR.USER ? (0, n.jsx)(p, {
           user: e.target,
-          onContextMenu: s
-        }, l) : (0, a.jsx)("span", {
-          onContextMenu: s,
-          children: t
-        }, l),
+          onContextMenu: t
+        }, i) : (0, n.jsx)("span", {
+          onContextMenu: t,
+          children: s
+        }, i),
         count: r.count,
-        channel: r.channel ? "string" == typeof r.channel ? r.channel : (0, _.computeChannelName)(r.channel, m.default, f.default, !0) : null,
-        channelHook: (e, t) => (0, a.jsx)("span", {
-          onContextMenu: l,
+        channel: r.channel ? "string" == typeof r.channel ? r.channel : (0, _.F6)(r.channel, S.default, m.Z, !0) : null,
+        channelHook: (e, s) => (0, n.jsx)("span", {
+          onContextMenu: i,
           children: e
-        }, t),
+        }, s),
         subtarget: r.subtarget
       })
     }) : null
@@ -103,64 +102,64 @@ class p extends l.PureComponent {
   renderChangeSummary() {
     let {
       expanded: e,
-      log: t,
-      guild: s,
-      onContentClick: l
+      log: s,
+      guild: t,
+      onContentClick: i
     } = this.props;
-    return e && null != s ? (0, a.jsx)(R.AuditLogExpandedChangeDetails, {
-      log: t,
-      guild: s,
-      onContentClick: l
+    return e && null != t ? (0, n.jsx)(R.tP, {
+      log: s,
+      guild: t,
+      onContentClick: i
     }) : null
   }
   renderEntryAvatar() {
     let {
       props: {
         log: e,
-        guildId: t,
-        theme: s
+        guildId: s,
+        theme: t
       }
     } = this, {
-      user: l,
-      userId: n,
+      user: i,
+      userId: l,
       options: {
-        integration_type: i
+        integration_type: a
       }
     } = e;
-    if (null != l && null != n) return (0, a.jsx)(u.Popout, {
-      preload: () => (0, I.maybeFetchUserProfileForPopout)(n, l.getAvatarURL(t, 80), {
-        guildId: t
+    if (null != i && null != l) return (0, n.jsx)(d.Popout, {
+      preload: () => (0, I.W)(l, i.getAvatarURL(s, 80), {
+        guildId: s
       }),
-      renderPopout: e => (0, a.jsx)(T.default, {
+      renderPopout: e => (0, n.jsx)(T.Z, {
         ...e,
         location: "GuildSettingsAuditLogEntry",
-        userId: n,
-        guildId: t,
-        newAnalyticsLocations: [E.default.AVATAR]
+        userId: l,
+        guildId: s,
+        newAnalyticsLocations: [E.Z.AVATAR]
       }),
-      children: s => {
-        var l, n, i;
-        return (0, a.jsx)(u.Avatar, {
-          ...s,
+      children: t => {
+        var i, l, a;
+        return (0, n.jsx)(d.Avatar, {
+          ...t,
           onClick: e => {
-            e.stopPropagation(), s.onClick(e)
+            e.stopPropagation(), t.onClick(e)
           },
-          className: O.avatar,
-          src: (l = e, n = t, l.action === x.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE || l.action === x.AuditLogActions.AUTO_MODERATION_FLAG_TO_CHANNEL || l.action === x.AuditLogActions.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || l.action === x.AuditLogActions.AUTO_MODERATION_QUARANTINE_USER ? (0, C.getAutomodAvatarURL)() : null === (i = l.user) || void 0 === i ? void 0 : i.getAvatarURL(n, 40)),
+          className: A.avatar,
+          src: (i = e, l = s, i.action === L.rsA.AUTO_MODERATION_BLOCK_MESSAGE || i.action === L.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || i.action === L.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || i.action === L.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, C.j)() : null === (a = i.user) || void 0 === a ? void 0 : a.getAvatarURL(l, 40)),
           "aria-hidden": !0,
-          size: u.AvatarSizes.SIZE_40
+          size: d.AvatarSizes.SIZE_40
         })
       }
     });
-    if (null != i) {
-      let e = c.default.get(i);
+    if (null != a) {
+      let e = u.Z.get(a);
       if (null != e) {
-        let t = (0, d.isThemeDark)(s) ? e.icon.darkSVG : e.icon.lightSVG;
-        return (0, a.jsx)(u.Avatar, {
-          className: O.avatar,
-          src: t,
+        let s = (0, c.wj)(t) ? e.icon.darkSVG : e.icon.lightSVG;
+        return (0, n.jsx)(d.Avatar, {
+          className: A.avatar,
+          src: s,
           "aria-hidden": !0,
-          size: u.AvatarSizes.SIZE_40
+          size: d.AvatarSizes.SIZE_40
         })
       }
     }
@@ -169,56 +168,56 @@ class p extends l.PureComponent {
   render() {
     let e;
     let {
-      log: t,
-      className: s,
-      expanded: l,
-      onHeaderClick: n
-    } = this.props, o = this.hasChangesToRender(), d = O.headerDefault;
-    l ? d = O.headerExpanded : o && (d = O.headerClickable);
-    let c = t.timestampStart.calendar(),
-      E = t.timestampEnd.calendar();
-    e = c === E ? (0, a.jsx)(u.Text, {
-      className: O.timestamp,
+      log: s,
+      className: t,
+      expanded: i,
+      onHeaderClick: l
+    } = this.props, o = this.hasChangesToRender(), c = A.headerDefault;
+    i ? c = A.headerExpanded : o && (c = A.headerClickable);
+    let u = s.timestampStart.calendar(),
+      E = s.timestampEnd.calendar();
+    e = u === E ? (0, n.jsx)(d.Text, {
+      className: A.timestamp,
       variant: "text-sm/normal",
-      children: c
-    }) : (0, a.jsxs)(u.Text, {
-      className: O.timestamp,
+      children: u
+    }) : (0, n.jsxs)(d.Text, {
+      className: A.timestamp,
       variant: "text-sm/normal",
-      children: [c, "—", E]
+      children: [u, "—", E]
     });
-    let _ = o ? n : x.NOOP;
-    return (0, a.jsx)(r.ListNavigatorItem, {
-      id: t.id,
-      children: n => (0, a.jsxs)("div", {
-        className: i()(O.auditLog, s),
-        children: [(0, a.jsxs)(u.Clickable, {
-          className: d,
-          "aria-expanded": l,
+    let _ = o ? l : L.dG4;
+    return (0, n.jsx)(r.mh, {
+      id: s.id,
+      children: l => (0, n.jsxs)("div", {
+        className: a()(A.auditLog, t),
+        children: [(0, n.jsxs)(d.Clickable, {
+          className: c,
+          "aria-expanded": i,
           onClick: _,
-          ...n,
-          children: [(0, a.jsx)(R.AuditLogIcon, {
-            action: t.action,
-            actionType: t.actionType,
-            targetType: t.targetType
-          }), this.renderEntryAvatar(), (0, a.jsxs)("div", {
-            className: O.timeWrap,
-            children: [(0, a.jsx)("div", {
-              className: O.title,
+          ...l,
+          children: [(0, n.jsx)(R.mp, {
+            action: s.action,
+            actionType: s.actionType,
+            targetType: s.targetType
+          }), this.renderEntryAvatar(), (0, n.jsxs)("div", {
+            className: A.timeWrap,
+            children: [(0, n.jsx)("div", {
+              className: A.title,
               children: this.renderTitle()
             }), e]
-          }), o ? (0, a.jsx)(N.default, {
-            className: O.expand,
-            foreground: O.expandForeground,
-            expanded: l,
+          }), o ? (0, n.jsx)(h.Z, {
+            className: A.expand,
+            foreground: A.expandForeground,
+            expanded: i,
             "aria-hidden": !0
           }) : null]
-        }), l ? (0, a.jsx)("div", {
-          className: O.divider
+        }), i ? (0, n.jsx)("div", {
+          className: A.divider
         }) : null, this.renderChangeSummary()]
       })
     })
   }
 }
-t.default = o.default.connectStores([S.default], () => ({
-  theme: S.default.theme
-}))(p)
+s.Z = o.ZP.connectStores([N.Z], () => ({
+  theme: N.Z.theme
+}))(M)

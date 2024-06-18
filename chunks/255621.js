@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return l
   }
 });
-var i = n("358085"),
-  r = n("782769"),
-  s = n("527805"),
-  a = n("620662"),
-  o = n("981631");
+var i = n(358085),
+  r = n(782769),
+  s = n(527805),
+  o = n(620662),
+  a = n(981631);
 
 function l(e) {
   let {
@@ -16,41 +16,41 @@ function l(e) {
     activity: n,
     application: l,
     channelId: u,
-    currentUser: d,
-    isEmbedded: _,
+    currentUser: _,
+    isEmbedded: d,
     ChannelStore: c,
     GuildStore: E,
     GuildMemberCountStore: I,
     RelationshipStore: T,
-    SelectedChannelStore: f,
+    SelectedChannelStore: h,
     VoiceStateStore: S,
-    PermissionStore: h
-  } = e, A = c.getChannel(u), m = (0, r.getIsActivitiesEnabledForCurrentPlatform)(A);
+    PermissionStore: f
+  } = e, N = c.getChannel(u), A = (0, r.a)(N);
   if (null == t) return !1;
-  if (_) return (0, s.default)({
+  if (d) return (0, s.ZP)({
     userId: t.id,
     activity: n,
     channelId: u,
-    currentUser: d,
+    currentUser: _,
     application: l,
-    isActivitiesEnabledForCurrentPlatform: m,
+    isActivitiesEnabledForCurrentPlatform: A,
     ChannelStore: c,
     VoiceStateStore: S,
-    PermissionStore: h,
+    PermissionStore: f,
     GuildStore: E
-  }) === s.EmbeddedActivityJoinability.CAN_JOIN;
+  }) === s.Fw.CAN_JOIN;
   if (!(0, i.isDesktop)()) return !1;
-  if ((0, a.default)(n, o.ActivityFlags.PARTY_PRIVACY_FRIENDS) && T.isFriend(t.id)) return !0;
-  if ((0, a.default)(n, o.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL)) {
-    let e = c.getChannel(f.getVoiceChannelId());
+  if ((0, o.Z)(n, a.xjy.PARTY_PRIVACY_FRIENDS) && T.isFriend(t.id)) return !0;
+  if ((0, o.Z)(n, a.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) {
+    let e = c.getChannel(h.getVoiceChannelId());
     if (null == e || !S.isInChannel(e.id, t.id)) return !1;
     switch (e.type) {
-      case o.ChannelTypes.DM:
-      case o.ChannelTypes.GROUP_DM:
+      case a.d4z.DM:
+      case a.d4z.GROUP_DM:
         return !0
     }
     let n = E.getGuild(e.getGuildId());
-    if (null == n || n.hasFeature(o.GuildFeatures.COMMUNITY)) return !1;
+    if (null == n || n.hasFeature(a.oNc.COMMUNITY)) return !1;
     let i = I.getMemberCount(n.id);
     return null != i && i < 100
   }

@@ -1,58 +1,58 @@
 "use strict";
-n.r(t), n.d(t, {
-  AUTOMATIC_APPROVAL_FORM_FIELDS: function() {
-    return s
+n.d(t, {
+  N4: function() {
+    return h
   },
-  IN_APP_MEMBER_VERIFICATION_MODAL_KEY: function() {
+  Pn: function() {
     return S
   },
-  MANUAL_APPROVAL_FORM_FIELDS: function() {
-    return a
-  },
-  MAX_CHOICE_LENGTH: function() {
-    return c
-  },
-  MAX_DESCRIPTION_LENGTH: function() {
-    return T
-  },
-  MAX_FORM_ELEMENTS: function() {
-    return o
-  },
-  MAX_NUM_CHOICES: function() {
-    return _
-  },
-  MAX_NUM_RULES: function() {
-    return l
-  },
-  MAX_PARAGRAPH_RESPONSE_LENGTH: function() {
+  RS: function() {
     return I
   },
-  MAX_QUESTION_LENGTH: function() {
-    return d
+  Us: function() {
+    return T
   },
-  MAX_RULE_LENGTH: function() {
+  X2: function() {
+    return l
+  },
+  XN: function() {
+    return _
+  },
+  au: function() {
+    return c
+  },
+  fn: function() {
     return u
   },
-  MAX_TEXT_RESPONSE_LENGTH: function() {
-    return E
+  hZ: function() {
+    return o
   },
-  MEMBER_VERIFICATION_TYPE: function() {
-    return f
+  lI: function() {
+    return s
+  },
+  mb: function() {
+    return d
+  },
+  nx: function() {
+    return a
+  },
+  tL: function() {
+    return E
   }
-}), n("47120");
-var i, r = n("246364");
-r.VerificationFormFieldTypes.VERIFICATION;
-let s = new Set([r.VerificationFormFieldTypes.TERMS]),
-  a = new Set([r.VerificationFormFieldTypes.MULTIPLE_CHOICE, r.VerificationFormFieldTypes.TEXT_INPUT, r.VerificationFormFieldTypes.PARAGRAPH]),
-  o = 5,
+}), n(47120);
+var i, r = n(246364);
+r.QJ.VERIFICATION;
+let s = new Set([r.QJ.TERMS]),
+  o = new Set([r.QJ.MULTIPLE_CHOICE, r.QJ.TEXT_INPUT, r.QJ.PARAGRAPH]),
+  a = 5,
   l = 16,
   u = 300,
-  d = 300,
-  _ = 8,
+  _ = 300,
+  d = 8,
   c = 150,
   E = 150,
   I = 1e3,
   T = 300,
-  f = "Membership Gating",
+  h = "Membership Gating",
   S = "in-app-member-verification";
 (i || (i = {})).VERIFICATION_INFO = "VERIFICATION_INFO"

@@ -1,15 +1,15 @@
 "use strict";
-var r = n("570596"),
-  a = n("548828"),
-  o = n("735471"),
-  i = n("28886"),
-  l = TypeError;
+var r = n(570596),
+  o = n(548828),
+  a = n(735471),
+  i = n(28886),
+  s = TypeError;
 e.exports = function(e, t) {
-  var n, u = i(this),
-    s = a(u.get),
-    c = a(u.has),
-    d = a(u.set),
-    f = arguments.length > 2 ? arguments[2] : void 0;
-  if (!o(t) && !o(f)) throw new l("At least one callback required");
-  return r(c, u, e) ? (n = r(s, u, e), o(t) && r(d, u, e, n = t(n))) : o(f) && r(d, u, e, n = f()), n
+  var n, c = i(this),
+    l = o(c.get),
+    u = o(c.has),
+    d = o(c.set),
+    p = arguments.length > 2 ? arguments[2] : void 0;
+  if (!a(t) && !a(p)) throw new s("At least one callback required");
+  return r(u, c, e) ? (n = r(l, c, e), a(t) && r(d, c, e, n = t(n))) : a(p) && r(d, c, e, n = p()), n
 }

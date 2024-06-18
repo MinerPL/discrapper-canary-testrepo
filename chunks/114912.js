@@ -62,7 +62,7 @@
         for (r = o = 0; r < p.length && !c && p[r];) {
           ;
           if (c = p[r++].exec(t))
-            for (u = 0; u < h.length; u++) l = c[++o], typeof(s = h[u]) === a && s.length > 0 ? 2 === s.length ? typeof s[1] == i ? this[s[0]] = s[1].call(this, l) : this[s[0]] = s[1] : 3 === s.length ? typeof s[1] !== i || s[1].exec && s[1].test ? this[s[0]] = l ? l.replace(s[1], s[2]) : n : this[s[0]] = l ? s[1].call(this, l, s[2]) : n : 4 === s.length && (this[s[0]] = l ? s[3].call(this, l.replace(s[1], s[2])) : n) : this[s] = l || n
+            for (u = 0; u < h.length; u++) l = c[++o], typeof(s = h[u]) === a && s.length > 0 ? 2 === s.length ? typeof s[1] == i ? this[s[0]] = s[1].call(this, l) : this[s[0]] = s[1] : 3 === s.length ? typeof s[1] !== i || s[1].exec && s[1].test ? this[s[0]] = l ? l.replace(s[1], s[2]) : void 0 : this[s[0]] = l ? s[1].call(this, l, s[2]) : n : 4 === s.length && (this[s[0]] = l ? s[3].call(this, l.replace(s[1], s[2])) : n) : this[s] = l || n
         }
         f += 2
       }

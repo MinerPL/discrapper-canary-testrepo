@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 });
-var i = n("963202");
+var i = n(963202);
 
 function r(e) {
   let {
     enableClanCreation: t
-  } = (0, i.useClanPrepilotExperimentForAllGuilds)({
+  } = (0, i.C3)({
     location: e,
     includeConverted: !1
   }), {
     clanDiscoveryEnabled: n
-  } = (0, i.useClanPilotExperiment)(e);
+  } = (0, i.nk)(e);
   return t || n
 }

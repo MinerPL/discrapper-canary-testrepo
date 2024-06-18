@@ -1,5 +1,5 @@
 "use strict";
-var r = n("957578").Buffer,
+var r = n(957578).Buffer,
   i = r.isEncoding || function(e) {
     switch ((e = "" + e) && e.toLowerCase()) {
       case "hex":

@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
-  useMeter: function() {
+n.d(t, {
+  M: function() {
     return i
   }
 });
-var r = n("652222");
+var r = n(652222);
 
 function i(e) {
   let {
     progressBarProps: t,
     labelProps: n
-  } = (0, r.useProgressBar)(e);
+  } = (0, r.D)(e);
   return {
     meterProps: {
       ...t,

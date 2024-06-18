@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n("47120");
-var i, r = n("442837"),
-  s = n("570140"),
-  a = n("581883");
+n(47120);
+var i, r = n(442837),
+  s = n(570140),
+  o = n(581883);
 
-function o(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -13,9 +13,9 @@ function o(e, t, n) {
   }) : e[t] = n, e
 }
 let l = new Set;
-class u extends(i = r.default.PersistedStore) {
+class u extends(i = r.ZP.PersistedStore) {
   initialize(e) {
-    null != e && (l = new Set(e.expandedFolders)), this.waitFor(a.default)
+    null != e && (l = new Set(e.expandedFolders)), this.waitFor(o.Z)
   }
   getState() {
     return {
@@ -29,7 +29,7 @@ class u extends(i = r.default.PersistedStore) {
     return l.has(e)
   }
 }
-o(u, "displayName", "ExpandedGuildFolderStore"), o(u, "persistKey", "ExpandedGuildFolderStore"), t.default = new u(s.default, {
+a(u, "displayName", "ExpandedGuildFolderStore"), a(u, "persistKey", "ExpandedGuildFolderStore"), t.Z = new u(s.Z, {
   TOGGLE_GUILD_FOLDER_EXPAND: function(e) {
     let {
       folderId: t
@@ -44,7 +44,7 @@ o(u, "displayName", "ExpandedGuildFolderStore"), o(u, "persistKey", "ExpandedGui
     l = new Set(l), n ? l.add(t) : l.has(t) && l.delete(t)
   },
   USER_SETTINGS_PROTO_UPDATE: function() {
-    let e = a.default.getGuildFolders();
+    let e = o.Z.getGuildFolders();
     if (null == e) return !1;
     let t = !1;
     for (let n of l) !e.some(e => e.folderId === n) && ((l = new Set(l)).delete(n), t = !0);

@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
-  shouldShowVoiceChannelChangeConfirmation: function() {
+n.d(t, {
+  _: function() {
     return l
   }
 });
-var i = n("258609"),
-  r = n("740492"),
-  s = n("314897"),
-  a = n("430824"),
-  o = n("979651");
+var i = n(258609),
+  r = n(740492),
+  s = n(314897),
+  o = n(430824),
+  a = n(979651);
 
 function l(e) {
-  if (r.default.disableVoiceChannelChangeAlert) return !1;
-  let t = i.default.getRemoteSessionId();
-  if (null != o.default.getVoiceStateForSession(s.default.getId(), t) || !o.default.isCurrentClientInVoiceChannel() || o.default.isInChannel(e.id)) return !1;
-  let n = a.default.getGuild(e.getGuildId());
-  return !((null == n ? void 0 : n.afkChannelId) != null && o.default.isInChannel(n.afkChannelId)) && !0
+  if (r.ZP.disableVoiceChannelChangeAlert) return !1;
+  let t = i.Z.getRemoteSessionId();
+  if (null != a.Z.getVoiceStateForSession(s.default.getId(), t) || !a.Z.isCurrentClientInVoiceChannel() || a.Z.isInChannel(e.id)) return !1;
+  let n = o.Z.getGuild(e.getGuildId());
+  return !((null == n ? void 0 : n.afkChannelId) != null && a.Z.isInChannel(n.afkChannelId)) && !0
 }

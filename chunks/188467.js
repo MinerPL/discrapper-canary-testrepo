@@ -36,7 +36,7 @@ e.exports = function(e) {
     }, {
       className: "built_in",
       variants: [{
-        begin: ":-\\|-->"
+        begin: ":-\\|--\x3e"
       }, {
         begin: "=",
         relevance: 0

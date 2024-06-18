@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  Database: function() {
+n.d(t, {
+  v: function() {
     return l
   }
-}), n("411104"), n("653041"), n("47120");
-var i = n("956067"),
-  r = n("930145"),
-  s = n("350167"),
-  a = n("503461");
+}), n(411104), n(653041), n(47120);
+var i = n(956067),
+  r = n(930145),
+  s = n(350167),
+  o = n(503461);
 
-function o(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -19,20 +19,20 @@ function o(e, t, n) {
 }
 class l {
   static async open(e, t) {
-    return new l(await r.Host.open(e, t))
+    return new l(await r.A.open(e, t))
   }
   static openSyncUnsafe(e, t) {
-    return new l(r.Host.openSyncUnsafe(e, t))
+    return new l(r.A.openSyncUnsafe(e, t))
   }
   static delete(e) {
-    return r.Host.delete(e)
+    return r.A.delete(e)
   }
   close() {
     var e;
-    this.lastState = a.DatabaseState.Closed, null === (e = this.raw) || void 0 === e || e.close(), this.raw = null, s.Runtime.removeCompletionCallback(this.databaseStateCallback)
+    this.lastState = o.hi.Closed, null === (e = this.raw) || void 0 === e || e.close(), this.raw = null, s.r.removeCompletionCallback(this.databaseStateCallback)
   }
   disable(e) {
-    return null == this.raw ? Promise.resolve() : (this.lastState = a.DatabaseState.Disabled, this.execute({
+    return null == this.raw ? Promise.resolve() : (this.lastState = o.hi.Disabled, this.execute({
       type: "db.disable",
       handle: 0,
       reason: e
@@ -41,18 +41,18 @@ class l {
   execute(e, t) {
     if (null == this.raw) throw Error("database is no longer open (database: ".concat(this));
     let n = "key" in e ? e.key[0] : e.table,
-      r = () => s.Runtime.executeAsync(null != t ? t : e.type, t => {
+      r = () => s.r.executeAsync(null != t ? t : e.type, t => {
         this.raw.execute(t, {
           ...e,
           handle: 0
         })
       });
-    return null === t ? r() : i.default.timeAsync("\uD83D\uDCBE", "".concat(null != t ? t : e.type, " ").concat(null != n ? n : ""), r)
+    return null === t ? r() : i.Z.timeAsync("\uD83D\uDCBE", "".concat(null != t ? t : e.type, " ").concat(null != n ? n : ""), r)
   }
   executeSync(e) {
     if (null == this.raw) throw Error("database is no longer open (database: ".concat(this));
     let t = "key" in e ? e.key[0] : e.table;
-    return i.default.time("\uD83D\uDCBE", "SYNC: ".concat(e.type, " ").concat(null != t ? t : ""), () => this.raw.execute(null, {
+    return i.Z.time("\uD83D\uDCBE", "SYNC: ".concat(e.type, " ").concat(null != t ? t : ""), () => this.raw.execute(null, {
       ...e,
       handle: 0
     }, {
@@ -80,12 +80,12 @@ class l {
     })
   }
   instantaneousState() {
-    return null == this.raw ? a.DatabaseState.Closed : this.lastState = this.executeSync({
+    return null == this.raw ? o.hi.Closed : this.lastState = this.executeSync({
       type: "db.state"
     })
   }
   async instantaneousStateAsync() {
-    return null == this.raw ? a.DatabaseState.Closed : this.lastState = await this.execute({
+    return null == this.raw ? o.hi.Closed : this.lastState = await this.execute({
       type: "db.state"
     })
   }
@@ -100,7 +100,7 @@ class l {
     }, t) : Promise.resolve())
   }
   constructor(e) {
-    o(this, "name", void 0), o(this, "handle", void 0), o(this, "raw", void 0), o(this, "lastState", void 0), o(this, "databaseStateCallback", void 0), this.raw = e, this.name = e.name, this.lastState = a.DatabaseState.Open, this.handle = e.handle, this.databaseStateCallback = s.Runtime.addDatabaseStateCallback((e, t) => {
+    a(this, "name", void 0), a(this, "handle", void 0), a(this, "raw", void 0), a(this, "lastState", void 0), a(this, "databaseStateCallback", void 0), this.raw = e, this.name = e.name, this.lastState = o.hi.Open, this.handle = e.handle, this.databaseStateCallback = s.r.addDatabaseStateCallback((e, t) => {
       this.handle === e && (this.lastState = t)
     })
   }
@@ -117,6 +117,6 @@ class u {
     return "[DatabaseTransaction ".concat(this.database.handle, ": ").concat(this.operations.length, " ops]")
   }
   constructor(e) {
-    o(this, "database", void 0), o(this, "operations", void 0), this.database = e, this.operations = []
+    a(this, "database", void 0), a(this, "operations", void 0), this.database = e, this.operations = []
   }
 }

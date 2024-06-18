@@ -1,43 +1,44 @@
 "use strict";
-n.r(t), n.d(t, {
-  useResetClientThemePreview: function() {
+n.d(t, {
+  J: function() {
     return T
   },
-  useTrackClientThemePreviewEvent: function() {
-    return f
+  q: function() {
+    return h
   }
-}), n("47120");
-var i = n("470079"),
-  r = n("442837"),
-  s = n("524437"),
-  a = n("781391"),
-  o = n("740492"),
-  l = n("581883"),
-  u = n("626135"),
-  d = n("238302"),
-  _ = n("514361"),
-  c = n("981631"),
-  E = n("474936"),
-  I = n("874893");
+}), n(47120);
+var i = n(470079),
+  r = n(442837),
+  s = n(524437),
+  o = n(781391),
+  a = n(740492),
+  l = n(581883),
+  u = n(626135),
+  _ = n(238302),
+  d = n(514361),
+  c = n(981631),
+  E = n(474936),
+  I = n(874893);
 let T = () => {
-    let e = (0, r.useStateFromStores)([_.default], () => _.default.gradientPreset),
-      t = (0, r.useStateFromStores)([o.default], () => o.default.useSystemTheme === I.SystemThemeState.ON),
+    let e = (0, r.e7)([d.Z], () => d.Z.gradientPreset),
+      t = (0, r.e7)([a.ZP], () => a.ZP.useSystemTheme === I.K.ON),
       [n, s] = (0, i.useState)(t);
     return (0, i.useEffect)(() => {
-      null == e && s(t)
+      if (null == e) s(t)
     }, [e, t]), (0, i.useCallback)(() => {
-      if (null != e)(0, d.resetPreviewClientTheme)(), n && (0, a.setUseSystemTheme)(I.SystemThemeState.ON)
+      if (null == e) return;
+      if ((0, _.kj)(), !!n)(0, o.hi)(I.K.ON)
     }, [e, n])
   },
-  f = () => {
+  h = () => {
     let {
       previewPaneVariant: e
-    } = (0, r.useStateFromStoresObject)([_.default], () => ({
-      previewPaneVariant: _.default.isPreview ? E.AnalyticsPremiumFeatureTiers.FREE : E.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD
-    })), t = (0, r.useStateFromStores)([l.default], () => {
+    } = (0, r.cj)([d.Z], () => ({
+      previewPaneVariant: d.Z.isPreview ? E.h1.FREE : E.h1.PREMIUM_STANDARD
+    })), t = (0, r.e7)([l.Z], () => {
       var e;
-      let t = null === (e = l.default.settings.appearance) || void 0 === e ? void 0 : e.theme;
-      return "default ".concat(t === s.Theme.LIGHT ? c.ThemeTypes.LIGHT : c.ThemeTypes.DARK)
+      let t = null === (e = l.Z.settings.appearance) || void 0 === e ? void 0 : e.theme;
+      return "default ".concat(t === s.Q2.LIGHT ? c.BRd.LIGHT : c.BRd.DARK)
     });
     return (0, i.useCallback)(n => {
       u.default.track(n, {

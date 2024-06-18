@@ -1,136 +1,137 @@
 "use strict";
-n.r(t), n("47120"), n("789020");
-var i = n("481060"),
-  r = n("570140"),
-  s = n("430742"),
-  a = n("904245"),
-  o = n("166459"),
-  l = n("531643"),
-  u = n("881052"),
-  d = n("673750"),
-  _ = n("141795"),
-  c = n("476326"),
-  E = n("680287"),
-  I = n("163268"),
-  T = n("539573"),
-  f = n("786761"),
-  S = n("3148"),
-  h = n("785359"),
-  A = n("79390"),
-  m = n("623292"),
-  N = n("807092"),
-  O = n("467798"),
-  p = n("703558"),
-  R = n("117530"),
-  C = n("630388"),
-  g = n("226351"),
-  L = n("981631"),
-  D = n("689938");
-async function v(e) {
+n(47120), n(789020);
+var i = n(481060),
+  r = n(570140),
+  s = n(430742),
+  o = n(904245),
+  a = n(166459),
+  l = n(531643),
+  u = n(881052),
+  _ = n(673750),
+  d = n(141795),
+  c = n(476326),
+  E = n(680287),
+  I = n(163268),
+  T = n(539573),
+  h = n(786761),
+  S = n(3148),
+  f = n(48854),
+  N = n(785359),
+  A = n(79390),
+  m = n(623292),
+  O = n(807092),
+  R = n(467798),
+  C = n(703558),
+  p = n(117530),
+  g = n(630388),
+  L = n(226351),
+  v = n(981631),
+  D = n(689938);
+async function M(e) {
   var t, n, i;
-  let _, {
+  let d, {
       channelId: c,
-      uploads: v,
-      draftType: M,
+      uploads: M,
+      draftType: P,
       parsedMessage: y,
-      options: P = {},
-      raiseEndpointErrors: U = !1
+      options: U = {},
+      raiseEndpointErrors: b = !1
     } = e,
-    b = new E.default(L.Endpoints.MESSAGES(c)),
-    G = new g.Future,
-    w = {
+    G = new E.Z(v.ANM.MESSAGES(c)),
+    w = new L.o,
+    k = {
       content: "",
       nonce: "",
       channel_id: c,
-      type: L.MessageTypes.DEFAULT,
-      sticker_ids: null == P ? void 0 : P.stickerIds,
-      poll: null == P ? void 0 : P.poll
+      type: v.uaV.DEFAULT,
+      sticker_ids: null == U ? void 0 : U.stickerIds,
+      poll: null == U ? void 0 : U.poll
     };
-  null != y && (w.content = null == y ? void 0 : y.content), null != N.default.getPendingReply(c) && (w.type = L.MessageTypes.REPLY, w.message_reference = P.messageReference, w.allowed_mentions = P.allowedMentions, (0, m.deletePendingReply)(c));
-  let [k, B] = (0, O.default)(w.content);
-  k && (w.content = B, w.flags = (0, C.addFlag)(null !== (t = w.flags) && void 0 !== t ? t : 0, L.MessageFlags.SUPPRESS_NOTIFICATIONS));
-  let V = null !== (n = P.nonce) && void 0 !== n ? n : (0, S.createNonce)(),
-    F = (0, S.default)({
+  null != y && (k.content = null == y ? void 0 : y.content), null != O.Z.getPendingReply(c) && (k.type = v.uaV.REPLY, k.message_reference = U.messageReference, k.allowed_mentions = U.allowedMentions, (0, m.A6)(c));
+  let [B, x] = (0, R.ZP)(k.content);
+  B && (k.content = x, k.flags = (0, g.pj)(null !== (t = k.flags) && void 0 !== t ? t : 0, v.iLy.SUPPRESS_NOTIFICATIONS));
+  let V = null !== (n = U.nonce) && void 0 !== n ? n : (0, f.r)(),
+    Z = (0, S.ZP)({
       channelId: c,
-      content: w.content,
+      content: k.content,
       tts: null !== (i = null == y ? void 0 : y.tts) && void 0 !== i && i,
-      type: w.type,
-      messageReference: w.message_reference,
-      flags: w.flags,
+      type: k.type,
+      messageReference: k.message_reference,
+      flags: k.flags,
       nonce: V,
-      poll: (0, A.createPollServerDataFromCreateRequest)(P.poll)
+      poll: (0, A.x9)(U.poll)
     });
-  return (w.nonce = V, b.on("start", e => {
-    _ = (0, f.createMessageRecord)({
-      ...F,
+  return (k.nonce = V, G.on("start", e => {
+    d = (0, h.e5)({
+      ...Z,
       id: e.id
-    }), r.default.dispatch({
+    }), r.Z.dispatch({
       type: "UPLOAD_START",
       channelId: c,
       file: e,
-      message: _,
-      uploader: b
+      message: d,
+      uploader: G
     })
-  }), b.on("progress", e => {
-    r.default.dispatch({
+  }), G.on("progress", e => {
+    r.Z.dispatch({
       type: "UPLOAD_PROGRESS",
       channelId: c,
       file: e
     })
-  })), b.on("error", (e, t, n, i) => {
-    if (r.default.dispatch({
+  })), G.on("error", (e, t, n, i) => {
+    if (r.Z.dispatch({
         type: "UPLOAD_FAIL",
         channelId: c,
         file: e,
-        messageRecord: _
-      }), (0, h.logMessageSendFailure)({
+        messageRecord: d
+      }), (0, N.x)({
         fileItems: e.items,
         failureCode: t,
         errorMessage: null == i ? void 0 : i.msg
-      }), t === L.AbortCodes.EXPLICIT_CONTENT) {
-      a.default.sendExplicitMediaClydeError(c, null == n ? void 0 : n.attachments, I.TrackMediaRedactionContext.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
+      }), t === v.evJ.EXPLICIT_CONTENT) {
+      o.Z.sendExplicitMediaClydeError(c, null == n ? void 0 : n.attachments, I.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
       return
     }
-    if (t === L.AbortCodes.AUTOMOD_MESSAGE_BLOCKED) {
+    if (t === v.evJ.AUTOMOD_MESSAGE_BLOCKED) {
       let e = {
           code: t,
           message: null == n ? void 0 : n.message
         },
-        i = null == _ ? null : {
-          type: d.MessageDataType.SEND,
+        i = null == d ? null : {
+          type: _.$V.SEND,
           message: {
-            ..._,
+            ...d,
             channelId: c
           }
         };
       (0, l.openUploadError)({
-        title: D.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
-        help: (0, T.getAutomodErrorMessage)(i, e)
+        title: D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
+        help: (0, T.uF)(i, e)
       });
       return
     }
-    t !== L.AbortCodes.GUILD_FILE_UPLOAD_RATE_LIMITED_ACCESS && (U ? G.reject(new u.APIError({
+    if (t !== v.evJ.GUILD_FILE_UPLOAD_RATE_LIMITED_ACCESS) b ? w.reject(new u.Hx({
       status: t,
       body: null != n ? n : {}
     }, t)) : (0, l.openUploadError)({
-      title: D.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
-      help: D.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
-    }), "" !== w.content && "" === p.default.getDraft(c, M) && s.default.saveDraft(c, w.content, M), 0 === R.default.getUploadCount(c, M) && o.default.setUploads({
+      title: D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
+      help: D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
+    }), "" !== k.content && "" === C.Z.getDraft(c, P) && s.Z.saveDraft(c, k.content, P), 0 === p.Z.getUploadCount(c, P) && a.Z.setUploads({
       channelId: c,
-      uploads: v,
-      draftType: M
-    }))
-  }), b.on("complete", (e, t) => {
-    r.default.dispatch({
+      uploads: M,
+      draftType: P
+    })
+  }), G.on("complete", (e, t) => {
+    r.Z.dispatch({
       type: "UPLOAD_COMPLETE",
       channelId: c,
       file: e,
-      aborted: b._aborted,
+      aborted: G._aborted,
       messageRecord: t
     })
-  }), await b.uploadFiles(v, w), G.resolve(), G.promise
+  }), await G.uploadFiles(M, k), w.resolve(), w.promise
 }
-t.default = {
+t.Z = {
   instantBatchUpload: function(e) {
     let {
       channelId: t,
@@ -138,99 +139,99 @@ t.default = {
       draftType: i,
       isThumbnail: r = !1,
       filesMetadata: s = []
-    } = e, a = Array.from(n).map((e, n) => {
+    } = e, o = Array.from(n).map((e, n) => {
       let i = null != s ? s[n] : {};
-      return new _.CloudUpload({
+      return new d.n({
         file: e,
-        platform: c.UploadPlatform.WEB,
+        platform: c.ow.WEB,
         isThumbnail: r,
         ...i
       }, t)
     });
-    v({
+    M({
       channelId: t,
-      uploads: a,
+      uploads: o,
       draftType: i
     })
   },
   upload: function e(t) {
     let {
       channelId: n,
-      file: o,
+      file: a,
       draftType: u,
-      message: d,
-      hasSpoiler: _,
+      message: _,
+      hasSpoiler: d,
       filename: c
     } = t, T = {
       content: "",
       tts: !1,
-      hasSpoiler: _,
+      hasSpoiler: d,
       filename: c
     };
-    if (null != d) {
-      T.content = d.content, T.tts = d.tts, T.channel_id = d.channel_id;
-      let e = N.default.getPendingReply(n);
+    if (null != _) {
+      T.content = _.content, T.tts = _.tts, T.channel_id = _.channel_id;
+      let e = O.Z.getPendingReply(n);
       if (null != e) {
-        let t = a.default.getSendMessageOptionsForReply(e);
-        T.type = L.MessageTypes.REPLY, T.message_reference = t.messageReference, T.allowed_mentions = t.allowedMentions, (0, m.deletePendingReply)(n)
+        let t = o.Z.getSendMessageOptionsForReply(e);
+        T.type = v.uaV.REPLY, T.message_reference = t.messageReference, T.allowed_mentions = t.allowedMentions, (0, m.A6)(n)
       }
     }
-    let f = new E.default(L.Endpoints.MESSAGES(n));
-    f.on("start", e => {
-      r.default.dispatch({
+    let h = new E.Z(v.ANM.MESSAGES(n));
+    h.on("start", e => {
+      r.Z.dispatch({
         type: "UPLOAD_START",
         channelId: n,
         file: e,
-        uploader: f
+        uploader: h
       })
-    }), f.on("progress", e => {
-      r.default.dispatch({
+    }), h.on("progress", e => {
+      r.Z.dispatch({
         type: "UPLOAD_PROGRESS",
         channelId: n,
         file: e
       })
-    }), f.on("error", (t, _, c) => {
-      if (r.default.dispatch({
+    }), h.on("error", (t, d, c) => {
+      if (r.Z.dispatch({
           type: "UPLOAD_FAIL",
           channelId: n,
           file: t
-        }), (0, h.logMessageSendFailure)({
+        }), (0, N.x)({
           fileItems: t.items,
-          failureCode: _
-        }), _ === L.AbortCodes.EXPLICIT_CONTENT) {
-        a.default.sendExplicitMediaClydeError(n, null == c ? void 0 : c.attachments, I.TrackMediaRedactionContext.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
+          failureCode: d
+        }), d === v.evJ.EXPLICIT_CONTENT) {
+        o.Z.sendExplicitMediaClydeError(n, null == c ? void 0 : c.attachments, I.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
         return
       }(0, l.openUploadError)({
-        title: D.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
-        help: D.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_HELP.format({
+        title: D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
+        help: D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_HELP.format({
           onClick: () => {
             (0, i.closeModal)(l.UPLOAD_ERROR_MODAL_KEY), e({
               channelId: n,
-              file: o,
+              file: a,
               draftType: u,
-              message: d
+              message: _
             })
           }
         })
-      }), "" !== T.content && "" === p.default.getDraft(n, u) && s.default.saveDraft(n, T.content, u)
-    }), f.on("complete", e => {
-      r.default.dispatch({
+      }), "" !== T.content && "" === C.Z.getDraft(n, u) && s.Z.saveDraft(n, T.content, u)
+    }), h.on("complete", e => {
+      r.Z.dispatch({
         type: "UPLOAD_COMPLETE",
         channelId: n,
         file: e
       })
-    }), f.upload(o, T)
+    }), h.upload(a, T)
   },
-  uploadFiles: v,
+  uploadFiles: M,
   cancel(e) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "UPLOAD_CANCEL_REQUEST",
       file: e
-    }), null != e.draftContent && null != e.channelId && "" === p.default.getDraft(e.channelId, p.DraftType.ChannelMessage) && r.default.dispatch({
+    }), null != e.draftContent && null != e.channelId && "" === C.Z.getDraft(e.channelId, C.d.ChannelMessage) && r.Z.dispatch({
       type: "DRAFT_SAVE",
       channelId: e.channelId,
       draft: e.draftContent,
-      draftType: p.DraftType.ChannelMessage
+      draftType: C.d.ChannelMessage
     })
   }
 }

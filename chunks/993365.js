@@ -1,7 +1,7 @@
 "use strict";
-n.r(t), n.d(t, {
-  Text: function() {
-    return i.Text
+n.d(t, {
+  x: function() {
+    return i.x
   }
 });
-var i = n("793030")
+var i = n(793030)

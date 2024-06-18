@@ -1,29 +1,29 @@
 "use strict";
-n.r(e), n.d(e, {
-  makeFetchTransport: function() {
-    return o
+n.d(e, {
+  f: function() {
+    return a
   }
 });
-var r = n("91320"),
-  i = n("648238"),
-  a = n("56618");
+var r = n(347421),
+  i = n(880803),
+  s = n(56618);
 
-function o(t, e = (0, a.getNativeFetchImplementation)()) {
+function a(t, e = (0, s.x)()) {
   let n = 0,
-    o = 0;
-  return (0, r.createTransport)(t, function(r) {
-    let s = r.body.length;
-    n += s, o++;
+    a = 0;
+  return (0, r.q)(t, function(r) {
+    let o = r.body.length;
+    n += o, a++;
     let u = {
       body: r.body,
       method: "POST",
       referrerPolicy: "origin",
       headers: t.headers,
-      keepalive: n <= 6e4 && o < 15,
+      keepalive: n <= 6e4 && a < 15,
       ...t.fetchOptions
     };
     try {
-      return e(t.url, u).then(t => (n -= s, o--, {
+      return e(t.url, u).then(t => (n -= o, a--, {
         statusCode: t.status,
         headers: {
           "x-sentry-rate-limits": t.headers.get("X-Sentry-Rate-Limits"),
@@ -31,7 +31,7 @@ function o(t, e = (0, a.getNativeFetchImplementation)()) {
         }
       }))
     } catch (t) {
-      return (0, a.clearCachedFetchImplementation)(), n -= s, o--, (0, i.rejectedSyncPromise)(t)
+      return (0, s.c)(), n -= o, a--, (0, i.$2)(t)
     }
   })
 }

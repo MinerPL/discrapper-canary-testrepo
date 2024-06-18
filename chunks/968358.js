@@ -6,8 +6,8 @@ function i(e) {
     if (e[t].voiceState.selfStream) return !0;
   return !1
 }
-n.r(t), n.d(t, {
-  hasStream: function() {
+n.d(t, {
+  a: function() {
     return i
   }
 })

@@ -8,7 +8,7 @@
   }, d.test = function(t) {
     return "string" == typeof t && /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(t)
   }, "undefined" != typeof crypto ? e = crypto : "undefined" != typeof window && void 0 !== window.msCrypto && (e = window.msCrypto);
-  e = e || a("636463"), t.exports = d, d.randomBytes = function() {
+  e = e || a(636463), t.exports = d, d.randomBytes = function() {
     if (e) {
       if (e.randomBytes) return e.randomBytes;
       if (e.getRandomValues) return "function" != typeof Uint8Array.prototype.slice ? function(t) {
@@ -27,7 +27,7 @@
   }();
 
   function o() {
-    var t, e = (t = 16, (!i || n + t > d.BUFFER_SIZE) && (n = 0, i = d.randomBytes(d.BUFFER_SIZE)), i.slice(n, n += t));
+    var t, e = (t = 16, (!i || n + 16 > d.BUFFER_SIZE) && (n = 0, i = d.randomBytes(d.BUFFER_SIZE)), i.slice(n, n += t));
     return e[6] = 15 & e[6] | 64, e[8] = 63 & e[8] | 128, e
   }
 

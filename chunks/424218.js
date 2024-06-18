@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  formatKbSize: function() {
-    return a
-  },
-  formatSize: function() {
+n.d(t, {
+  BU: function() {
     return s
+  },
+  IC: function() {
+    return o
   }
 });
-var i = n("689938");
+var i = n(689938);
 let r = {
   useKibibytes: !1,
   showDecimalForGB: !0,
@@ -18,28 +18,28 @@ function s(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r,
     n = t.useKibibytes ? 1024 : 1e3,
     s = t.useKibibytes ? 1024 : 1e3,
-    a = Math.ceil(e / n);
-  if (a < s) return t.useSpace ? i.default.Messages.FILE_SIZE_MB.format({
-    size: a
-  }) : i.default.Messages.FILE_SIZE_MB_NO_SPACE.format({
-    size: a
+    o = Math.ceil(e / n);
+  if (o < s) return t.useSpace ? i.Z.Messages.FILE_SIZE_MB.format({
+    size: o
+  }) : i.Z.Messages.FILE_SIZE_MB_NO_SPACE.format({
+    size: o
   });
-  let o = a / s;
-  return o = t.showDecimalForGB ? Math.round(10 * o) / 10 : Math.round(o), t.useSpace ? i.default.Messages.FILE_SIZE_GB.format({
-    size: o
-  }) : i.default.Messages.FILE_SIZE_GB_NO_SPACE.format({
-    size: o
+  let a = o / s;
+  return a = t.showDecimalForGB ? Math.round(10 * a) / 10 : Math.round(a), t.useSpace ? i.Z.Messages.FILE_SIZE_GB.format({
+    size: a
+  }) : i.Z.Messages.FILE_SIZE_GB_NO_SPACE.format({
+    size: a
   })
 }
 
-function a(e) {
+function o(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r,
     n = t.useKibibytes ? 1024 : 1e3,
-    a = t.useKibibytes ? 1024 : 1e3,
-    o = e / n;
-  return o / a >= 1 ? s(o, t) : t.useSpace ? i.default.Messages.FILE_SIZE_KB.format({
-    size: Math.ceil(o)
-  }) : i.default.Messages.FILE_SIZE_KB_NO_SPACE.format({
-    size: Math.ceil(o)
+    o = t.useKibibytes ? 1024 : 1e3,
+    a = e / n;
+  return a / o >= 1 ? s(a, t) : t.useSpace ? i.Z.Messages.FILE_SIZE_KB.format({
+    size: Math.ceil(a)
+  }) : i.Z.Messages.FILE_SIZE_KB_NO_SPACE.format({
+    size: Math.ceil(a)
   })
 }

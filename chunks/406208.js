@@ -1,14 +1,13 @@
 "use strict";
-r.r(t);
-var n = r("544364"),
+var n = r(544364),
   i = Date.now(),
   o = "fnValues" + i,
   s = "fnStyle" + ++i;
-t.default = function() {
+t.Z = function() {
   return {
     onCreateRule: function(e, t, r) {
       if ("function" != typeof t) return null;
-      var i = (0, n.createRule)(e, {}, r);
+      var i = (0, n.JH)(e, {}, r);
       return i[s] = t, i
     },
     onProcessStyle: function(e, t) {

@@ -1,4 +1,4 @@
-var r = n("413135").Buffer;
+var r = n(413135).Buffer;
 ! function(e) {
   function t() {}
 
@@ -45,7 +45,7 @@ var r = n("413135").Buffer;
           }
           if (55296 <= o && 56319 >= o) continue
         }
-        if (r + 4 > a.length && (i += 8, i *= 1 + t / e.length * 2, i = i >>> 3 << 3, (s = new Uint8Array(i)).set(a), a = s), 0 == (4294967168 & o)) a[r++] = o;
+        if (r + 4 > a.length && (i += 8, i *= 1 + t / e.length * 2, (s = new Uint8Array(i = i >>> 3 << 3)).set(a), a = s), 0 == (4294967168 & o)) a[r++] = o;
         else {
           if (0 == (4294965248 & o)) a[r++] = o >>> 6 & 31 | 192;
           else if (0 == (4294901760 & o)) a[r++] = o >>> 12 & 15 | 224, a[r++] = o >>> 6 & 63 | 128;

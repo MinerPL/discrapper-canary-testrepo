@@ -1,10 +1,9 @@
 "use strict";
-n.r(t);
-var i = n("302454"),
+var i = n(302454),
   r = n.n(i),
-  a = n("818083");
-let s = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com))\/(?:attachments|ephemeral-attachments)\/\d+\/\d+\/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?/,
-  o = (0, a.createExperiment)({
+  s = n(818083);
+let o = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com))\/(?:attachments|ephemeral-attachments)\/\d+\/\d+\/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?/,
+  a = (0, s.B)({
     kind: "user",
     id: "2023-11_attachment_link_markup",
     label: "Attachment Link Config User Experiment",
@@ -29,11 +28,11 @@ let s = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com
     order: r().defaultRules.url.order - .5,
     requiredFirstCharacters: ["h"],
     match(e) {
-      let t = s.exec(e);
+      let t = o.exec(e);
       if (null !== t) {
         let {
           enabled: e
-        } = o.getCurrentConfig({
+        } = a.getCurrentConfig({
           location: "markup"
         });
         if (!e) return null
@@ -54,6 +53,6 @@ let s = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com
       }
     }
   };
-t.default = {
+t.Z = {
   attachmentLink: l
 }

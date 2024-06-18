@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  SecureFramesGuildExperiment: function() {
-    return a
+n.d(t, {
+  N: function() {
+    return s
   },
-  SecureFramesUserExperiment: function() {
+  m: function() {
     return r
   }
 });
-var i = n("818083");
-let r = (0, i.createExperiment)({
+var i = n(818083);
+let r = (0, i.B)({
     kind: "user",
     id: "2023-08_secure_frames_encryption",
     label: "Allowing testing secure frames for voice/video",
@@ -49,9 +49,17 @@ let r = (0, i.createExperiment)({
         canSupportSecureFrames: !0,
         canSupportMls: !0
       }
+    }, {
+      id: 10,
+      label: "Can support secure frames above protocol version 112 (MLS)",
+      config: {
+        protocolVersionFloor: 12,
+        canSupportSecureFrames: !0,
+        canSupportMls: !0
+      }
     }]
   }),
-  a = (0, i.createExperiment)({
+  s = (0, i.B)({
     kind: "guild",
     id: "2023-11_secure_frames_encryption_guilds",
     label: "Allowing testing secure frames for voice/video (Guilds)",
@@ -89,6 +97,14 @@ let r = (0, i.createExperiment)({
       label: "Can support secure frames above protocol version 111 (MLS)",
       config: {
         protocolVersionFloor: 11,
+        canSupportSecureFrames: !0,
+        canSupportMls: !0
+      }
+    }, {
+      id: 10,
+      label: "Can support secure frames above protocol version 112 (MLS)",
+      config: {
+        protocolVersionFloor: 12,
         canSupportSecureFrames: !0,
         canSupportMls: !0
       }

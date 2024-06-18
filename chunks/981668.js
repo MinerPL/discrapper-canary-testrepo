@@ -1,45 +1,45 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("147913"),
-  r = n("367907"),
-  s = n("728345"),
-  a = n("812206"),
-  o = n("574176"),
-  l = n("314897"),
-  u = n("592125"),
-  d = n("944486"),
-  _ = n("885110"),
-  c = n("649739"),
-  E = n("981631");
+n(47120);
+var i = n(147913),
+  r = n(367907),
+  s = n(728345),
+  o = n(812206),
+  a = n(574176),
+  l = n(314897),
+  u = n(592125),
+  _ = n(944486),
+  d = n(885110),
+  c = n(649739),
+  E = n(981631);
 async function I(e) {
-  await s.default.fetchApplications(e, !1)
+  await s.Z.fetchApplications(e, !1)
 }
 async function T(e) {
   if (null == e) return;
-  let t = u.default.getChannel(e),
+  let t = u.Z.getChannel(e),
     {
       enableHangStatus: n
-    } = o.HangStatusExperiment.getCurrentConfig({
+    } = a.n.getCurrentConfig({
       location: "GameActivityManager"
     }, {
       autoTrackExposure: !1
     });
-  if (null == t || !((0, c.isVoiceUserGameActivityEnabled)("running_games_change", !1) || n)) return;
-  let i = _.default.getActivities();
+  if (null == t || !((0, c.Ku)("running_games_change", !1) || n)) return;
+  let i = d.Z.getActivities();
   if (0 === i.length) return;
-  let s = [...i].filter(e => e.type === E.ActivityTypes.PLAYING && e.application_id).map(e => e.application_id);
+  let s = [...i].filter(e => e.type === E.IIU.PLAYING && e.application_id).map(e => e.application_id);
   await I([...s]);
-  let d = a.default.getApplication(s[0]);
-  null != d && r.default.trackWithMetadata(E.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET, {
+  let _ = o.Z.getApplication(s[0]);
+  null != _ && r.ZP.trackWithMetadata(E.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET, {
     channel_id: e,
     guild_id: t.guild_id,
-    game_name: d.name,
+    game_name: _.name,
     user_id: l.default.getId()
   })
 }
-class f extends i.default {
+class h extends i.Z {
   handleRunningGamesChange() {
-    T(d.default.getVoiceChannelId())
+    T(_.Z.getVoiceChannelId())
   }
   handleVoiceChannelSelect(e) {
     let {
@@ -60,4 +60,4 @@ class f extends i.default {
     }) : t[n] = i
   }
 }
-t.default = new f
+t.Z = new h

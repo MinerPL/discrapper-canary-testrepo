@@ -1,83 +1,78 @@
 "use strict";
-n.r(t), n("47120"), n("411104"), n("570140");
-var i = n("147913");
-n("674588");
-var r = n("900489"),
-  a = n("751189"),
-  s = n("409059");
-n("652898"), n("701190");
-var o = n("960904"),
-  l = n("830121");
-let u = new Set;
+n(47120), n(411104), n(570140);
+var i = n(147913);
+n(674588);
+var r = n(751189),
+  s = n(409059);
+n(652898), n(701190);
+var o = n(960904),
+  a = n(830121);
+let l = new Set;
 
-function d(e) {
+function u(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  if (t && !u.has(e.channel_id)) return;
-  let n = (0, l.default)(e.content);
+  if (t && !l.has(e.channel_id)) return;
+  let n = (0, a.ZP)(e.content);
   null != n && 0 !== n.length && n.forEach(e => {
     let {
       type: t,
       code: n
     } = e;
-    if (t === o.CodedLinkType.INVITE);
-    else if (t === o.CodedLinkType.TEMPLATE) null == s.default.getGuildTemplate(n) && a.default.resolveGuildTemplate(n);
-    else if (t === o.CodedLinkType.BUILD_OVERRIDE || t === o.CodedLinkType.MANUAL_BUILD_OVERRIDE);
-    else if (t === o.CodedLinkType.EVENT);
-    else if (t === o.CodedLinkType.CHANNEL_LINK);
-    else if (t === o.CodedLinkType.APP_DIRECTORY_PROFILE);
-    else if (t === o.CodedLinkType.ACTIVITY_BOOKMARK);
-    else if (t === o.CodedLinkType.EMBEDDED_ACTIVITY_INVITE);
-    else if (t === o.CodedLinkType.GUILD_PRODUCT);
-    else if (t === o.CodedLinkType.SERVER_SHOP);
-    else if (t === o.CodedLinkType.QUESTS_EMBED);
+    if (t === o.g.INVITE);
+    else if (t === o.g.TEMPLATE) null == s.Z.getGuildTemplate(n) && r.Z.resolveGuildTemplate(n);
+    else if (t === o.g.BUILD_OVERRIDE || t === o.g.MANUAL_BUILD_OVERRIDE);
+    else if (t === o.g.EVENT);
+    else if (t === o.g.CHANNEL_LINK);
+    else if (t === o.g.APP_DIRECTORY_PROFILE);
+    else if (t === o.g.ACTIVITY_BOOKMARK);
+    else if (t === o.g.EMBEDDED_ACTIVITY_INVITE);
+    else if (t === o.g.GUILD_PRODUCT);
+    else if (t === o.g.SERVER_SHOP);
+    else if (t === o.g.QUESTS_EMBED);
+    else if (t === o.g.APP_DIRECTORY_STOREFRONT);
+    else if (t === o.g.APP_DIRECTORY_STOREFRONT_SKU);
     else throw Error("Unknown coded link type: ".concat(t))
   })
 }
-class _ extends i.default {
+class _ extends i.Z {
   handleConnectionOpen() {
-    u.clear()
+    l.clear()
   }
   handleChannelSelect(e) {
     let {
       channelId: t
     } = e;
-    null != t && u.add(t)
+    null != t && l.add(t)
   }
   handleMessage(e) {
     let {
       message: t
     } = e;
-    return d(t, !0)
+    return u(t, !0)
   }
   handleLoadMessages(e) {
     let {
       channelId: t,
       messages: n
     } = e;
-    u.add(t), n.forEach(e => d(e, !0))
+    l.add(t), n.forEach(e => u(e, !0))
   }
   handleLoadRecentMentions(e) {
     let {
       messages: t
     } = e;
-    t.forEach(e => d(e))
+    t.forEach(e => u(e))
   }
   handleLoadPinnedMessages(e) {
     let {
       messages: t
     } = e;
-    t.forEach(e => d(e))
+    t.forEach(e => u(e))
   }
   handleSearchFinish(e) {
     e.messages.forEach(e => {
-      e.forEach(e => d(e))
+      e.forEach(e => u(e))
     })
-  }
-  handleGuildFeedFetchSuccess(e) {
-    let {
-      data: t
-    } = e;
-    (0, r.getMessagesFromGuildFeedFetch)(t).forEach(e => d(e))
   }
   constructor(...e) {
     var t, n, i;
@@ -94,7 +89,6 @@ class _ extends i.default {
       LOAD_PINNED_MESSAGES_SUCCESS: this.handleLoadPinnedMessages,
       SEARCH_FINISH: this.handleSearchFinish,
       MOD_VIEW_SEARCH_FINISH: this.handleSearchFinish,
-      GUILD_FEED_FETCH_SUCCESS: this.handleGuildFeedFetchSuccess,
       CHANNEL_SELECT: {
         callback: this.handleChannelSelect,
         autoSubscribe: !1
@@ -107,4 +101,4 @@ class _ extends i.default {
     }) : t[n] = i
   }
 }
-t.default = new _
+t.Z = new _

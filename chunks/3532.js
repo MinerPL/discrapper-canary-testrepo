@@ -1,18 +1,18 @@
 "use strict";
-var r = n("67867"),
-  a = n("821819"),
-  o = n("729605"),
-  i = n("65007").f,
-  l = n("447631");
+var r = n(67867),
+  o = n(821819),
+  a = n(729605),
+  i = n(65007).f,
+  s = n(447631);
 r({
   target: "Object",
   stat: !0,
-  forced: !l || a(function() {
+  forced: !s || o(function() {
     i(1)
   }),
-  sham: !l
+  sham: !s
 }, {
   getOwnPropertyDescriptor: function(e, t) {
-    return i(o(e), t)
+    return i(a(e), t)
   }
 })

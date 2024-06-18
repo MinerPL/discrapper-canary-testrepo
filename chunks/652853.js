@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
-  UserProfileThemeContextProvider: function() {
+n.d(t, {
+  X: function() {
     return u
   },
-  useUserProfileThemeContext: function() {
-    return d
+  z: function() {
+    return _
   }
 });
-var i, r = n("735250"),
-  a = n("470079"),
-  s = n("541049"),
-  o = n("231338");
-let l = a.createContext({
+var i, r = n(735250),
+  s = n(470079),
+  o = n(541049),
+  a = n(231338);
+let l = s.createContext({
   profileType: null,
-  theme: null !== (i = (0, s.default)()) && void 0 !== i ? i : o.ThemeTypes.DARK,
+  theme: null !== (i = (0, o.Z)()) && void 0 !== i ? i : a.BR.DARK,
   primaryColor: null,
   secondaryColor: null
 });
@@ -23,17 +23,17 @@ function u(e) {
     profileType: t,
     theme: n,
     primaryColor: i,
-    secondaryColor: s,
-    children: o
-  } = e, u = a.useMemo(() => ({
+    secondaryColor: o,
+    children: a
+  } = e, u = s.useMemo(() => ({
     profileType: t,
     theme: n,
     primaryColor: i,
-    secondaryColor: s
-  }), [t, n, i, s]);
+    secondaryColor: o
+  }), [t, n, i, o]);
   return (0, r.jsx)(l.Provider, {
     value: u,
-    children: o
+    children: a
   })
 }
-let d = () => a.useContext(l)
+let _ = () => s.useContext(l)

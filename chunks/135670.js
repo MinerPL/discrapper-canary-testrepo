@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return u
   }
-}), n("411104"), n("47120");
-var i = n("47770"),
-  r = n("46973"),
-  s = n("65154");
+}), n(411104), n(47120);
+var i = n(47770),
+  r = n(46973),
+  s = n(65154);
 
-function a(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -17,23 +17,23 @@ function a(e, t, n) {
   }) : e[t] = n, e
 }
 
-function o(e) {
+function a(e) {
   return null
 }
 
 function l(e) {
   return null
 }
-class u extends i.default {
+class u extends i.Z {
   destroy() {
-    this.emit(r.MediaEngineEvent.Destroy), this.removeAllListeners()
+    this.emit(r.aB.Destroy), this.removeAllListeners()
   }
   interact() {}
   supported() {
     return __OVERLAY__
   }
   supports(e) {
-    if (e === s.Features.AUTO_ENABLE) return __OVERLAY__;
+    if (e === s.AN.AUTO_ENABLE) return __OVERLAY__;
     return !1
   }
   connect(e, t, n) {
@@ -67,7 +67,7 @@ class u extends i.default {
     return Promise.reject(Error("getCodecSurvey is not implemented for MediaEngineDummy"))
   }
   getAudioSubsystem() {
-    return s.AudioSubsystems.STANDARD
+    return s.iA.STANDARD
   }
   getAudioLayer() {
     return ""
@@ -78,7 +78,7 @@ class u extends i.default {
     return !1
   }
   setDesktopSource(e) {
-    arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.MediaEngineContextTypes.DEFAULT
+    arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.Yn.DEFAULT
   }
   setSoundshareSource(e, t, n) {}
   getDesktopSource() {
@@ -152,6 +152,6 @@ class u extends i.default {
     e([])
   }
   constructor(...e) {
-    super(...e), a(this, "Video", o), a(this, "Camera", l)
+    super(...e), o(this, "Video", a), o(this, "Camera", l)
   }
 }

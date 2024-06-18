@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  NitroTenureRewardCardExperiment: function() {
+n.d(t, {
+  O: function() {
     return i
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-03_nitro_tenure_reward_card",
   label: "Nitro Tenure Reward Card",

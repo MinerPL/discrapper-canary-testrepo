@@ -15,8 +15,8 @@ function r(t) {
     relative: e[5] + n + r
   }
 }
-n.r(e), n.d(e, {
-  parseUrl: function() {
+n.d(e, {
+  en: function() {
     return r
   }
 })

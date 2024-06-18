@@ -1,85 +1,85 @@
 "use strict";
-n.r(t), n.d(t, {
-  ACKED_RECENTLY_WINDOW_DAYS: function() {
-    return y
-  },
-  ANALYTICS_GUILD_EVENTS_MODAL_NAME: function() {
-    return p
-  },
-  ENTITY_TYPES_REQUIRED_CHANNEL_ID: function() {
-    return L
-  },
-  ENTITY_TYPES_REQUIRED_ENTITY_METADATA: function() {
-    return g
-  },
-  EVENT_STARTING_SOON_WINDOW_MILLISECONDS: function() {
-    return M
-  },
-  EntityChannelTypes: function() {
+n.d(t, {
+  $I: function() {
     return C
   },
-  EventDetailSections: function() {
-    return o
-  },
-  FAKE_EVENT_ID: function() {
-    return O
-  },
-  GUILD_EVENT_MAX_DESCRIPTION_LENGTH: function() {
-    return m
-  },
-  GUILD_EVENT_MAX_NAME_LENGTH: function() {
-    return A
-  },
-  GuildScheduledEventEntityTypes: function() {
-    return r
-  },
-  GuildScheduledEventNotificationTypes: function() {
-    return a
-  },
-  GuildScheduledEventPrivacyLevel: function() {
-    return s
-  },
-  GuildScheduledEventStatus: function() {
-    return i
-  },
-  GuildScheduledEventStatusDone: function() {
-    return R
-  },
-  GuildScheduledEventUserResponses: function() {
-    return u
-  },
-  MAX_EVENT_LOCATION_LENGTH: function() {
-    return N
-  },
-  MAX_RSVP_USER_DISPLAY_COUNT: function() {
-    return v
-  },
-  NEW_EVENT_WINDOW_MILLISECONDS: function() {
+  Fc: function() {
     return D
   },
-  UpcomingGuildEventNoticeTypes: function() {
+  Ku: function() {
+    return R
+  },
+  VF: function() {
+    return M
+  },
+  WX: function() {
+    return r
+  },
+  X_: function() {
     return l
+  },
+  _U: function() {
+    return g
+  },
+  fL: function() {
+    return a
+  },
+  gG: function() {
+    return m
+  },
+  gv: function() {
+    return u
+  },
+  j8: function() {
+    return o
+  },
+  nz: function() {
+    return p
+  },
+  p: function() {
+    return N
+  },
+  p1: function() {
+    return i
+  },
+  pg: function() {
+    return L
+  },
+  rC: function() {
+    return v
+  },
+  sy: function() {
+    return s
+  },
+  wm: function() {
+    return A
+  },
+  zV: function() {
+    return P
+  },
+  zw: function() {
+    return O
   }
-}), n("47120");
-var i, r, a, s, o, l, u, d, _, c, E, I, T, f, S = n("70956"),
-  h = n("981631");
-let A = 100,
-  m = 1e3,
-  N = 100,
-  p = "Guild Events Modal",
-  O = "-1";
-(d = i || (i = {}))[d.SCHEDULED = 1] = "SCHEDULED", d[d.ACTIVE = 2] = "ACTIVE", d[d.COMPLETED = 3] = "COMPLETED", d[d.CANCELED = 4] = "CANCELED";
-let R = new Set([3, 4]);
-(_ = r || (r = {}))[_.NONE = 0] = "NONE", _[_.STAGE_INSTANCE = 1] = "STAGE_INSTANCE", _[_.VOICE = 2] = "VOICE", _[_.EXTERNAL = 3] = "EXTERNAL", _[_.PRIME_TIME = 4] = "PRIME_TIME", (c = a || (a = {}))[c.EVENT_START = 1] = "EVENT_START", (E = s || (s = {}))[E.PUBLIC = 1] = "PUBLIC", E[E.GUILD_ONLY = 2] = "GUILD_ONLY";
-let C = {
-    1: h.ChannelTypes.GUILD_STAGE_VOICE,
-    2: h.ChannelTypes.GUILD_VOICE
+}), n(47120);
+var i, r, s, o, a, l, u, _, d, c, E, I, T, h, S = n(70956),
+  f = n(981631);
+let N = 100,
+  A = 1e3,
+  m = 100,
+  O = "Guild Events Modal",
+  R = "-1";
+(_ = i || (i = {}))[_.SCHEDULED = 1] = "SCHEDULED", _[_.ACTIVE = 2] = "ACTIVE", _[_.COMPLETED = 3] = "COMPLETED", _[_.CANCELED = 4] = "CANCELED";
+let C = new Set([3, 4]);
+(d = r || (r = {}))[d.NONE = 0] = "NONE", d[d.STAGE_INSTANCE = 1] = "STAGE_INSTANCE", d[d.VOICE = 2] = "VOICE", d[d.EXTERNAL = 3] = "EXTERNAL", d[d.PRIME_TIME = 4] = "PRIME_TIME", (c = s || (s = {}))[c.EVENT_START = 1] = "EVENT_START", (E = o || (o = {}))[E.PUBLIC = 1] = "PUBLIC", E[E.GUILD_ONLY = 2] = "GUILD_ONLY";
+let p = {
+    1: f.d4z.GUILD_STAGE_VOICE,
+    2: f.d4z.GUILD_VOICE
   },
   g = new Set([3]),
   L = new Set([1, 2]);
-(I = o || (o = {}))[I.EVENT_INFO = 0] = "EVENT_INFO", I[I.RSVP_LIST = 1] = "RSVP_LIST";
+(I = a || (a = {}))[I.EVENT_INFO = 0] = "EVENT_INFO", I[I.RSVP_LIST = 1] = "RSVP_LIST";
 let v = 100,
-  D = 2 * S.default.Millis.DAY,
-  M = 12 * S.default.Millis.HOUR,
-  y = 4;
-(T = l || (l = {})).NEW_EVENT = "Upcoming Event Notice", T.EVENT_STARTING_SOON = "Event Starting Soon Notice", (f = u || (u = {}))[f.UNINTERESTED = 0] = "UNINTERESTED", f[f.INTERESTED = 1] = "INTERESTED"
+  D = 2 * S.Z.Millis.DAY,
+  M = 12 * S.Z.Millis.HOUR,
+  P = 4;
+(T = l || (l = {})).NEW_EVENT = "Upcoming Event Notice", T.EVENT_STARTING_SOON = "Event Starting Soon Notice", (h = u || (u = {}))[h.UNINTERESTED = 0] = "UNINTERESTED", h[h.INTERESTED = 1] = "INTERESTED"

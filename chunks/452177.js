@@ -1,6 +1,6 @@
 "use strict";
-var r = n("690244"),
-  i = n("76542"),
+var r = n(690244),
+  i = n(76542),
   a = r("%TypeError%");
 e.exports = function(e) {
   if ("number" != typeof e && "bigint" != typeof e) throw new a("argument must be a Number or a BigInt");

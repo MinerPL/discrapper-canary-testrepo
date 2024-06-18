@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  useTriggerDebuggingAA: function() {
+n.d(t, {
+  j: function() {
     return r
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2023-09_trigger_debugging_aa",
   label: "trigger debugging aa mobile",

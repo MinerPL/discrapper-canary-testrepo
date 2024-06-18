@@ -1,24 +1,23 @@
 "use strict";
 let i;
-n.r(t);
-var r, s, a, o, l = n("569048"),
+var r, s, o, a, l = n(569048),
   u = n.n(l),
-  d = n("167006"),
-  _ = n.n(d),
-  c = n("989872"),
+  _ = n(167006),
+  d = n.n(_),
+  c = n(989872),
   E = n.n(c),
-  I = n("442837"),
-  T = n("570140"),
-  f = n("758449"),
-  S = n("245335");
-let h = {},
+  I = n(442837),
+  T = n(570140),
+  h = n(758449),
+  S = n(245335);
+let f = {},
+  N = {},
   A = {},
   m = {},
-  N = {},
   O = !1,
-  p = !1,
-  R = !1;
-class C extends(o = I.default.Store) {
+  R = !1,
+  C = !1;
+class p extends(a = I.ZP.Store) {
   getInvite(e) {
     var t, n;
     let {
@@ -26,7 +25,7 @@ class C extends(o = I.default.Store) {
       targetUserId: r,
       targetApplicationId: s
     } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return i === S.InviteTargetTypes.STREAM && null != r ? null === (t = A[e]) || void 0 === t ? void 0 : t[r] : i === S.InviteTargetTypes.EMBEDDED_APPLICATION && null != s ? null === (n = m[e]) || void 0 === n ? void 0 : n[s] : h[e]
+    return i === S.Iq.STREAM && null != r ? null === (t = N[e]) || void 0 === t ? void 0 : t[r] : i === S.Iq.EMBEDDED_APPLICATION && null != s ? null === (n = A[e]) || void 0 === n ? void 0 : n[s] : f[e]
   }
   getFriendInvite() {
     return i
@@ -35,72 +34,72 @@ class C extends(o = I.default.Store) {
     return O
   }
   canRevokeFriendInvite() {
-    return null != i && !p && !R
+    return null != i && !R && !C
   }
 }
-a = "InstantInviteStore", (s = "displayName") in(r = C) ? Object.defineProperty(r, s, {
-  value: a,
+o = "InstantInviteStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new C(T.default, {
+}) : r[s] = o, t.Z = new p(T.Z, {
   CONNECTION_OPEN: function() {
-    h = {}, A = {}, m = {}, N = {}, i = null, p = !1, R = !1, O = !1
+    f = {}, N = {}, A = {}, m = {}, i = null, R = !1, C = !1, O = !1
   },
   CHANNEL_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    delete h[t.id], delete A[t.id], delete m[t.id]
+    delete f[t.id], delete N[t.id], delete A[t.id]
   },
   FRIEND_INVITE_CREATE_SUCCESS: function(e) {
     var t;
-    N[e.invite.code] = f.default.createFromServer(e.invite), i = null !== (t = u()(_()(E()(Object.values(N), "createdAt")))) && void 0 !== t ? t : null, R = !1
+    m[e.invite.code] = h.Z.createFromServer(e.invite), i = null !== (t = u()(d()(E()(Object.values(m), "createdAt")))) && void 0 !== t ? t : null, C = !1
   },
   FRIEND_INVITE_CREATE_FAILURE: function() {
-    R = !1
+    C = !1
   },
   FRIEND_INVITE_REVOKE_SUCCESS: function(e) {
     var t;
     null != e.invites && e.invites.forEach(e => {
-      null != N[e.code] && delete N[e.code]
-    }), i = null !== (t = u()(_()(E()(Object.values(N), "createdAt")))) && void 0 !== t ? t : null, p = !1
+      null != m[e.code] && delete m[e.code]
+    }), i = null !== (t = u()(d()(E()(Object.values(m), "createdAt")))) && void 0 !== t ? t : null, R = !1
   },
   INSTANT_INVITE_CREATE_SUCCESS: function(e) {
     let {
       channelId: t,
       invite: n
-    } = e, i = f.default.createFromServer(n);
-    i.targetType === S.InviteTargetTypes.STREAM && null != i.targetUser ? (null == A[t] && (A[t] = {}), A[t][String(i.targetUser.id)] = i) : i.targetType === S.InviteTargetTypes.EMBEDDED_APPLICATION && null != i.targetApplication ? (null == m[t] && (m[t] = {}), m[t][i.targetApplication.id] = i) : h[t] = i
+    } = e, i = h.Z.createFromServer(n);
+    i.targetType === S.Iq.STREAM && null != i.targetUser ? (null == N[t] && (N[t] = {}), N[t][String(i.targetUser.id)] = i) : i.targetType === S.Iq.EMBEDDED_APPLICATION && null != i.targetApplication ? (null == A[t] && (A[t] = {}), A[t][i.targetApplication.id] = i) : f[t] = i
   },
   INSTANT_INVITE_CREATE_FAILURE: function(e) {
     let {
       channelId: t
     } = e;
-    h[t] = null
+    f[t] = null
   },
   INSTANT_INVITE_REVOKE_SUCCESS: function(e) {
     let {
       channelId: t
     } = e;
-    h[t] = null
+    f[t] = null
   },
   FRIEND_INVITE_REVOKE_REQUEST: function() {
-    p = !0
+    R = !0
   },
   FRIEND_INVITE_CREATE_REQUEST: function() {
-    R = !0
+    C = !0
   },
   FRIEND_INVITES_FETCH_REQUEST: function() {
     O = !0
   },
   FRIEND_INVITES_FETCH_RESPONSE: function(e) {
     var t;
-    N = {}, e.invites.forEach(e => {
-      N[e.code] = f.default.createFromServer(e)
-    }), i = null !== (t = u()(_()(E()(Object.values(N), "createdAt")))) && void 0 !== t ? t : null, O = !1
+    m = {}, e.invites.forEach(e => {
+      m[e.code] = h.Z.createFromServer(e)
+    }), i = null !== (t = u()(d()(E()(Object.values(m), "createdAt")))) && void 0 !== t ? t : null, O = !1
   },
   INSTANT_INVITE_CLEAR: function(e) {
-    delete h[e.channelId]
+    delete f[e.channelId]
   }
 })

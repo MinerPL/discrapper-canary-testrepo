@@ -1,50 +1,51 @@
 "use strict";
-n.r(t), n.d(t, {
-  localPresenceState: function() {
+n.d(t, {
+  GC: function() {
+    return h
+  },
+  RR: function() {
     return T
   },
-  localVoiceState: function() {
-    return f
-  },
-  socket: function() {
+  Wb: function() {
     return I
   }
 });
-var i = n("570140"),
-  r = n("579806"),
-  a = n("710845"),
-  s = n("314897"),
-  o = n("626135"),
-  l = n("931619"),
-  u = n("358085"),
-  d = n("548570"),
-  _ = n("616810"),
-  c = n("755278");
-let E = new a.default("ConnectionStore"),
-  I = new d.default,
-  T = new _.default(I),
-  f = new c.default(I);
+var i = n(570140),
+  r = n(579806),
+  s = n(710845),
+  o = n(314897),
+  a = n(626135),
+  l = n(931619),
+  u = n(358085),
+  _ = n(548570),
+  d = n(616810),
+  c = n(755278);
+let E = new s.Z("ConnectionStore"),
+  I = new _.Z,
+  T = new d.Z(I),
+  h = new c.Z(I);
 I.handleIdentify = () => {
-  let e = s.default.getToken();
+  let e = o.default.getToken();
   return (E.verbose("handleIdentify called", {
     hasToken: null != e
   }), null == e) ? null : {
     token: e,
-    properties: o.default.getSuperProperties(),
+    properties: a.default.getSuperProperties(),
     presence: T.getInitialState()
   }
-}, (0, u.isDesktop)() && r.default.remotePowerMonitor.on("resume", () => {
+};
+(0, u.isDesktop)() && r.Z.remotePowerMonitor.on("resume", () => {
   I.expeditedHeartbeat(5e3, "power monitor resumed")
-}), l.default.addOfflineCallback(() => {
+}), l.Z.addOfflineCallback(() => {
   I.networkStateChange(15e3, "network detected offline.", !1)
-}), l.default.addOnlineCallback(() => {
+}), l.Z.addOnlineCallback(() => {
   I.networkStateChange(5e3, "network detected online.")
 }), I.on("disconnect", e => {
   let {
     code: t,
     reason: n
   } = e;
-  i.default.dispatch({
+  i.Z.dispatch({
     type: "CONNECTION_CLOSED",
     code: t,
     reason: n
@@ -54,7 +55,7 @@ I.handleIdentify = () => {
     code: t,
     reason: n
   } = e;
-  i.default.dispatch({
+  i.Z.dispatch({
     type: "CONNECTION_INTERRUPTED",
     code: t,
     reason: n

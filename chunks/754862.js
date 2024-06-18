@@ -1,7 +1,4 @@
 "use strict";
-Object.defineProperty(t, "__esModule", {
-  value: !0
-});
 var o = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
       var n = arguments[t];
@@ -9,7 +6,7 @@ var o = Object.assign || function(e) {
     }
     return e
   },
-  r = function() {
+  i = function() {
     function e(e, t) {
       for (var n = 0; n < t.length; n++) {
         var o = t[n];
@@ -20,9 +17,9 @@ var o = Object.assign || function(e) {
       return n && e(t.prototype, n), o && e(t, o), t
     }
   }(),
-  i = n("470079"),
-  a = s(i),
-  u = s(n("476400"));
+  r = n(470079),
+  a = s(r),
+  u = s(n(476400));
 
 function s(e) {
   return e && e.__esModule ? e : {
@@ -76,7 +73,7 @@ var l = {
           configurable: !0
         }
       }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-    }(t, e), r(t, [{
+    }(t, e), i(t, [{
       key: "componentDidMount",
       value: function() {
         this.mounted = !0, this.copyInputStyles(), this.updateInputWidth()
@@ -102,15 +99,14 @@ var l = {
     }, {
       key: "copyInputStyles",
       value: function() {
-        if (!!this.mounted && !!window.getComputedStyle) {
-          var e = this.input && window.getComputedStyle(this.input);
-          e && (p(e, this.sizer), this.placeHolderSizer && p(e, this.placeHolderSizer))
-        }
+        if (!this.mounted || !window.getComputedStyle) return;
+        var e = this.input && window.getComputedStyle(this.input);
+        if (!!e) p(e, this.sizer), this.placeHolderSizer && p(e, this.placeHolderSizer)
       }
     }, {
       key: "updateInputWidth",
       value: function() {
-        if (this.mounted && this.sizer && void 0 !== this.sizer.scrollWidth) {
+        if (!!this.mounted && !!this.sizer && void 0 !== this.sizer.scrollWidth) {
           var e = void 0;
           e = this.props.placeholder && (!this.props.value || this.props.value && this.props.placeholderIsMinWidth) ? Math.max(this.sizer.scrollWidth, this.placeHolderSizer.scrollWidth) + 2 : this.sizer.scrollWidth + 2, (e += "number" === this.props.type && void 0 === this.props.extraWidth ? 16 : parseInt(this.props.extraWidth) || 0) < this.props.minWidth && (e = this.props.minWidth), e !== this.state.inputWidth && this.setState({
             inputWidth: e
@@ -155,23 +151,23 @@ var l = {
           }),
           n = o({}, this.props.style);
         !n.display && (n.display = "inline-block");
-        var r = o({
+        var i = o({
             boxSizing: "content-box",
             width: this.state.inputWidth + "px"
           }, this.props.inputStyle),
-          i = function(e, t) {
+          r = function(e, t) {
             var n = {};
             for (var o in e) {
               if (!(t.indexOf(o) >= 0)) Object.prototype.hasOwnProperty.call(e, o) && (n[o] = e[o])
             }
             return n
           }(this.props, []);
-        return e = i, c.forEach(function(t) {
+        return e = r, c.forEach(function(t) {
           return delete e[t]
-        }), i.className = this.props.inputClassName, i.id = this.state.inputId, i.style = r, a.default.createElement("div", {
+        }), r.className = this.props.inputClassName, r.id = this.state.inputId, r.style = i, a.default.createElement("div", {
           className: this.props.className,
           style: n
-        }, this.renderStyles(), a.default.createElement("input", o({}, i, {
+        }, this.renderStyles(), a.default.createElement("input", o({}, r, {
           ref: this.inputRef
         })), a.default.createElement("div", {
           ref: this.sizerRef,
@@ -182,7 +178,7 @@ var l = {
         }, this.props.placeholder) : null)
       }
     }]), t
-  }(i.Component);
+  }(r.Component);
 h.propTypes = {
   className: u.default.string,
   defaultValue: u.default.any,

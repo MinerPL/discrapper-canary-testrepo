@@ -1,6 +1,6 @@
 "use strict";
-n.r(t), n.d(t, {
-  NativeDragSource: function() {
+n.d(t, {
+  p: function() {
     return a
   }
 });
@@ -75,5 +75,5 @@ var a = function() {
   }, {
     key: "endDrag",
     value: function() {}
-  }], r(e.prototype, t), n && r(e, n), a
+  }], r(e.prototype, t), a
 }()

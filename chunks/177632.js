@@ -1,13 +1,11 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("782726"),
-  o = n("476400"),
-  s = n.n(o),
-  u = "undefined" != typeof globalThis ? globalThis : "undefined" != typeof window ? window : void 0 !== n.g ? n.g : {},
-  c = i().createContext || function(e, t) {
-    var n, i, o, c = "__create-react-context-" + (u[n = "__global_unique_id__"] = (u[n] || 0) + 1) + "__",
+var r = n(470079),
+  i = n(919499),
+  a = n(476400),
+  o = n.n(a),
+  s = "undefined" != typeof globalThis ? globalThis : "undefined" != typeof window ? window : void 0 !== n.g ? n.g : {},
+  u = r.createContext || function(e, t) {
+    var n, a, u, c = "__create-react-context-" + (s[n = "__global_unique_id__"] = (s[n] || 0) + 1) + "__",
       l = function(e) {
         function n() {
           var t, n, r;
@@ -29,7 +27,7 @@ var r = n("470079"),
               })
             }
           }), t
-        }(0, a.default)(n, e);
+        }(0, i.Z)(n, e);
         var r = n.prototype;
         return r.getChildContext = function() {
           var e;
@@ -39,13 +37,16 @@ var r = n("470079"),
             var n, r, i, a = this.props.value,
               o = e.value;
             if ((n = a) === (r = o) ? 0 !== n || 1 / n == 1 / r : n != n && r != r) i = 0;
-            else 0 != (i = ("function" == typeof t ? t(a, o) : 1073741823) | 0) && this.emitter.set(e.value, i)
+            else {
+              i = "function" == typeof t ? t(a, o) : 1073741823;
+              0 != (i |= 0) && this.emitter.set(e.value, i)
+            }
           }
         }, r.render = function() {
           return this.props.children
         }, n
       }(r.Component);
-    l.childContextTypes = ((i = {})[c] = s().object.isRequired, i);
+    l.childContextTypes = ((a = {})[c] = o().object.isRequired, a);
     var d = function(t) {
       function n() {
         var e;
@@ -56,7 +57,7 @@ var r = n("470079"),
             value: e.getValue()
           })
         }, e
-      }(0, a.default)(n, t);
+      }(0, i.Z)(n, t);
       var r = n.prototype;
       return r.componentWillReceiveProps = function(e) {
         var t = e.observedBits;
@@ -74,9 +75,9 @@ var r = n("470079"),
         return (Array.isArray(e = this.props.children) ? e[0] : e)(this.state.value)
       }, n
     }(r.Component);
-    return d.contextTypes = ((o = {})[c] = s().object, o), {
+    return d.contextTypes = ((u = {})[c] = o().object, u), {
       Provider: l,
       Consumer: d
     }
   };
-t.default = c
+t.Z = u

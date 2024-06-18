@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return a
   }
 });
-var r = n("470079");
+var r = n(470079);
 let i = "undefined" == typeof window || !window.navigator || /ServerSideRendering|^Deno\//.test(window.navigator.userAgent) ? r.useEffect : r.useLayoutEffect;
 
 function a(e) {

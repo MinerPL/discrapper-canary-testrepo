@@ -1,78 +1,78 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return m
+n.d(t, {
+  Z: function() {
+    return A
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("120356"),
-  a = n.n(r),
-  s = n("481060"),
-  o = n("315263"),
-  l = n("100527"),
-  u = n("906732"),
-  d = n("617136"),
-  _ = n("497505"),
-  c = n("626135"),
-  E = n("785717"),
-  I = n("221292"),
-  T = n("290421"),
-  f = n("228168"),
-  S = n("981631"),
-  h = n("689938"),
-  A = n("477040");
+var i = n(735250);
+n(470079);
+var r = n(120356),
+  s = n.n(r),
+  o = n(481060),
+  a = n(315263),
+  l = n(100527),
+  u = n(906732),
+  _ = n(617136),
+  d = n(497505),
+  c = n(626135),
+  E = n(785717),
+  I = n(221292),
+  T = n(290421),
+  h = n(228168),
+  S = n(981631),
+  f = n(689938),
+  N = n(477040);
 
-function m(e) {
+function A(e) {
   let {
     badges: t,
     className: n,
     badgeClassName: r,
-    onClose: m
+    onClose: A
   } = e, {
-    analyticsLocations: N
-  } = (0, u.default)(l.default.BADGE), {
-    trackUserProfileAction: p,
-    ...O
-  } = (0, E.useUserProfileAnalyticsContext)();
+    analyticsLocations: m
+  } = (0, u.ZP)(l.Z.BADGE), {
+    trackUserProfileAction: O,
+    ...R
+  } = (0, E.KZ)();
   return (0, i.jsx)("div", {
-    className: a()(A.container, n),
-    "aria-label": h.default.Messages.PROFILE_USER_BADGES,
+    className: s()(N.container, n),
+    "aria-label": f.Z.Messages.PROFILE_USER_BADGES,
     role: "group",
-    children: t.map(e => (0, i.jsx)(s.TooltipContainer, {
+    children: t.map(e => (0, i.jsx)(o.TooltipContainer, {
       text: e.description,
-      delay: f.USER_PROFILE_TOOLTIP_DELAY,
-      children: (0, i.jsx)(s.Anchor, {
+      delay: h.vB,
+      children: (0, i.jsx)(o.Anchor, {
         onClick: t => {
-          p({
+          O({
             action: "PRESS_BADGE"
-          }), (0, I.trackUserProfileBadgePressed)({
+          }), (0, I.NE)({
             badge: e.id,
-            analyticsLocations: N,
-            ...O
+            analyticsLocations: m,
+            ...R
           });
-          let n = null != e.link ? (0, o.default)(e.link, {
-            analyticsLocations: N
+          let n = null != e.link ? (0, a.default)(e.link, {
+            analyticsLocations: m
           }) : null;
-          if (null != n) return null == m || m(), n(t)
+          if (null != n) return null == A || A(), n(t)
         },
         onMouseEnter: () => {
-          e.id === T.QUEST_COMPLETED_BADGE && c.default.track(S.AnalyticEvents.QUEST_CONTENT_VIEWED, {
-            ...(0, d.getContentProperties)(_.QuestContent.QUEST_BADGE)
-          }), p({
+          e.id === T.i && c.default.track(S.rMx.QUEST_CONTENT_VIEWED, {
+            ...(0, _.mH)(d.jn.QUEST_BADGE)
+          }), O({
             action: "HOVER_BADGE"
-          }), (0, I.trackUserProfileBadgeHovered)({
+          }), (0, I.Qf)({
             badge: e.id,
-            analyticsLocations: N,
-            ...O
+            analyticsLocations: m,
+            ...R
           })
         },
         href: e.link,
         children: (0, i.jsx)("img", {
           alt: " ",
           "aria-hidden": !0,
-          src: (0, f.getBadgeAsset)(e.icon),
-          className: a()(A.badge, r)
+          src: (0, h.jC)(e.icon),
+          className: s()(N.badge, r)
         })
       })
     }, e.id))

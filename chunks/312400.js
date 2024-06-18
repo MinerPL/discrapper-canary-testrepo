@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
-  NewUserUnreadsEntryPointExperiment: function() {
-    return a
+n.d(t, {
+  ad: function() {
+    return o
   },
-  NotificationsExperiment: function() {
-    return r
-  },
-  UnreadsEntryPointExperiment: function() {
+  fs: function() {
     return s
+  },
+  xT: function() {
+    return r
   }
 });
-var i = n("818083");
-let r = (0, i.createExperiment)({
+var i = n(818083);
+let r = (0, i.B)({
     kind: "user",
     id: "2023-11_totally_benign_and_non_controversial_notification_tweaks",
     label: "Notification Changes",
@@ -26,7 +26,7 @@ let r = (0, i.createExperiment)({
       }
     }]
   }),
-  s = (0, i.createExperiment)({
+  s = (0, i.B)({
     kind: "user",
     id: "2024-01_unreads",
     label: "Unreads Experiment (grey-dot mode)",
@@ -61,7 +61,7 @@ let r = (0, i.createExperiment)({
       }
     }]
   }),
-  a = (0, i.createExperiment)({
+  o = (0, i.B)({
     kind: "user",
     id: "2024-03_unreads_new_users",
     label: "Unreads Experiment (grey-dot mode) (new users)",

@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return o
   }
-}), n("47120");
-var i = n("31775"),
+}), n(47120);
+var i = n(31775),
   r = n.n(i);
 
 function s(e, t, n) {
@@ -15,7 +15,7 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class a {
+class o {
   reset() {
     this._subscriptions = {}
   }

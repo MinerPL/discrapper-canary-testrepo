@@ -1,18 +1,18 @@
 "use strict";
-u.r(e), u.d(e, {
-  getRoundingMethod: function() {
-    return r
+n.d(t, {
+  u: function() {
+    return i
   }
 });
-var n = {
+var r = {
   ceil: Math.ceil,
   round: Math.round,
   floor: Math.floor,
-  trunc: function(t) {
-    return t < 0 ? Math.ceil(t) : Math.floor(t)
+  trunc: function(e) {
+    return e < 0 ? Math.ceil(e) : Math.floor(e)
   }
 };
 
-function r(t) {
-  return t ? n[t] : n.trunc
+function i(e) {
+  return e ? r[e] : r.trunc
 }

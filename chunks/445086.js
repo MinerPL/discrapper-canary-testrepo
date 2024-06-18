@@ -1,6 +1,6 @@
 "use strict";
-var r = n("134533")(),
-  i = n("690244"),
+var r = n(134533)(),
+  i = n(690244),
   a = r && i("%Object.defineProperty%", !0);
 if (a) try {
   a({}, "a", {
@@ -11,7 +11,7 @@ if (a) try {
 }
 var o = i("%SyntaxError%"),
   s = i("%TypeError%"),
-  u = n("49662");
+  u = n(49662);
 e.exports = function(e, t, n) {
   if (!e || "object" != typeof e && "function" != typeof e) throw new s("`obj` must be an object or a function`");
   if ("string" != typeof t && "symbol" != typeof t) throw new s("`property` must be a string or a symbol`");

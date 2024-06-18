@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-let r = "undefined" != typeof crypto && crypto.randomUUID && crypto.randomUUID.bind(crypto);
-t.default = {
-  randomUUID: r
+let n = "undefined" != typeof crypto && crypto.randomUUID && crypto.randomUUID.bind(crypto);
+t.Z = {
+  randomUUID: n
 }

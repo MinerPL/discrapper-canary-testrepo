@@ -1,59 +1,58 @@
 "use strict";
-s.r(t), s("47120");
-var a, l = s("392711"),
-  n = s.n(l),
-  i = s("442837"),
-  r = s("570140"),
-  o = s("563534"),
-  d = s("999382");
+t(47120);
+var n, i = t(392711),
+  l = t.n(i),
+  a = t(442837),
+  r = t(570140),
+  o = t(563534),
+  c = t(999382);
 
-function u(e, t, s) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: s,
+function d(e, s, t) {
+  return s in e ? Object.defineProperty(e, s, {
+    value: t,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = s, e
+  }) : e[s] = t, e
 }
-let c = {
+let u = {
     enabled: !1
   },
   E = null,
-  _ = Object.assign({}, c),
+  _ = Object.assign({}, u),
   I = !1,
-  T = {},
-  S = {};
+  T = {};
 
-function f() {
+function N() {
   (function() {
-    E = null, _ = Object.assign({}, c), I = !1, S = {}
-  })(), E = d.default.getGuildId(), _ = n().cloneDeep(Object.assign({}, o.default.getSettings(E))), S = {}
+    E = null, _ = Object.assign({}, u), I = !1
+  })(), E = c.Z.getGuildId(), _ = l().cloneDeep(Object.assign({}, o.Z.getSettings(E)))
 }
 
-function m(e, t) {
+function m(e, s) {
   if (null == _.newMemberActions) return !1;
-  let s = _.newMemberActions.findIndex(t => t.channelId === e);
-  if (s < 0) return !1;
-  _.newMemberActions[s] = {
-    ...t
-  }, _.newMemberActions = [..._.newMemberActions], delete S[e]
+  let t = _.newMemberActions.findIndex(s => s.channelId === e);
+  if (t < 0) return !1;
+  _.newMemberActions[t] = {
+    ...s
+  }, _.newMemberActions = [..._.newMemberActions]
 }
 
-function N(e, t) {
+function S(e, s) {
   if (null == _.resourceChannels) return !1;
-  let s = _.resourceChannels.findIndex(t => t.channelId === e);
-  if (s < 0) return !1;
-  _.resourceChannels[s] = {
-    ...t
+  let t = _.resourceChannels.findIndex(s => s.channelId === e);
+  if (t < 0) return !1;
+  _.resourceChannels[t] = {
+    ...s
   }, _.resourceChannels = [..._.resourceChannels]
 }
 
-function g() {
-  I = !1, _ = n().cloneDeep(Object.assign({}, o.default.getSettings(E)))
+function h() {
+  I = !1, _ = l().cloneDeep(Object.assign({}, o.Z.getSettings(E)))
 }
-class h extends(a = i.default.PersistedStore) {
+class g extends(n = a.ZP.PersistedStore) {
   initialize(e) {
-    null != e && (T = e.dismissedSuggestedChannelIdsByGuildId), this.waitFor(d.default, o.default)
+    null != e && (T = e.dismissedSuggestedChannelIdsByGuildId), this.waitFor(c.Z, o.Z)
   }
   getState() {
     return {
@@ -61,148 +60,128 @@ class h extends(a = i.default.PersistedStore) {
     }
   }
   getSettings() {
-    return null != _ ? _ : c
+    return null != _ ? _ : u
   }
   hasChanges() {
-    return null != E && !n().isEqual(n().omit(_, "newMemberActions"), n().omit(o.default.getSettings(E), "newMemberActions"))
+    return null != E && !l().isEqual(l().omit(_, "newMemberActions"), l().omit(o.Z.getSettings(E), "newMemberActions"))
   }
   getSubmitting() {
     return I
   }
   getDismissedSuggestedChannelIds(e) {
-    var t;
-    return null == e ? [] : null !== (t = T[e]) && void 0 !== t ? t : []
+    var s;
+    return null == e ? [] : null !== (s = T[e]) && void 0 !== s ? s : []
   }
   getResourceChannel(e) {
-    var t;
+    var s;
     if (null == e) return null;
-    let s = null === (t = _.resourceChannels) || void 0 === t ? void 0 : t.find(t => t.channelId === e);
-    return null == s ? null : s
+    let t = null === (s = _.resourceChannels) || void 0 === s ? void 0 : s.find(s => s.channelId === e);
+    return null == t ? null : t
   }
   getNewMemberAction(e) {
-    var t;
+    var s;
     if (null == e) return null;
-    let s = null === (t = _.newMemberActions) || void 0 === t ? void 0 : t.find(t => t.channelId === e);
-    return null == s ? null : s
-  }
-  getNewMemberActionIconData(e) {
-    var t;
-    return null == e ? null : null !== (t = S[e]) && void 0 !== t ? t : null
-  }
-  hasActionIconChanged(e) {
-    if (null == e) return !1;
-    let t = o.default.getNewMemberAction(E, e);
-    if (null == t) return !1;
-    let s = S[e];
-    return void 0 !== s && (null != s || null != t.icon && null == s)
+    let t = null === (s = _.newMemberActions) || void 0 === s ? void 0 : s.find(s => s.channelId === e);
+    return null == t ? null : t
   }
 }
-u(h, "displayName", "GuildSettingsOnboardingHomeSettingsStore"), u(h, "persistKey", "GuildSettingsOnboardingHomeSettingsStore"), t.default = new h(r.default, {
-  GUILD_SETTINGS_INIT: f,
-  GUILD_SETTINGS_SET_SECTION: f,
-  GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESET: f,
+d(g, "displayName", "GuildSettingsOnboardingHomeSettingsStore"), d(g, "persistKey", "GuildSettingsOnboardingHomeSettingsStore"), s.Z = new g(r.Z, {
+  GUILD_SETTINGS_INIT: N,
+  GUILD_SETTINGS_SET_SECTION: N,
+  GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESET: N,
   GUILD_HOME_SETTINGS_FETCH_SUCCESS: function() {
-    _ = n().cloneDeep(Object.assign({}, o.default.getSettings(E))), S = {}
+    _ = l().cloneDeep(Object.assign({}, o.Z.getSettings(E)))
   },
   GUILD_HOME_SETTINGS_UPDATE_START: function() {
     I = !0
   },
-  GUILD_HOME_SETTINGS_UPDATE_SUCCESS: g,
-  GUILD_HOME_SETTINGS_UPDATE_FAIL: g,
+  GUILD_HOME_SETTINGS_UPDATE_SUCCESS: h,
+  GUILD_HOME_SETTINGS_UPDATE_FAIL: h,
   GUILD_NEW_MEMBER_ACTION_UPDATE_SUCCESS: function(e) {
     let {
-      action: t
+      action: s
     } = e;
-    return m(t.channelId, t)
+    return m(s.channelId, s)
   },
   GUILD_RESOURCE_CHANNEL_UPDATE_SUCCESS: function(e) {
     let {
-      resourceChannel: t
+      resourceChannel: s
     } = e;
-    N(t.channelId, t)
+    S(s.channelId, s)
   },
   GUILD_SETTINGS_ONBOARDING_UPDATE_WELCOME_MESSAGE: function(e) {
     let {
-      welcomeMessage: t
+      welcomeMessage: s
     } = e;
-    if (null == t) _.welcomeMessage = void 0;
+    if (null == s) _.welcomeMessage = void 0;
     else {
-      var s, a, l, n, i, r;
+      var t, n, i, l, a, r;
       _.welcomeMessage = {
-        authorIds: null !== (n = null !== (l = t.authorIds) && void 0 !== l ? l : null === (s = _.welcomeMessage) || void 0 === s ? void 0 : s.authorIds) && void 0 !== n ? n : [],
-        message: null !== (r = null !== (i = t.message) && void 0 !== i ? i : null === (a = _.welcomeMessage) || void 0 === a ? void 0 : a.message) && void 0 !== r ? r : ""
+        authorIds: null !== (l = null !== (i = s.authorIds) && void 0 !== i ? i : null === (t = _.welcomeMessage) || void 0 === t ? void 0 : t.authorIds) && void 0 !== l ? l : [],
+        message: null !== (r = null !== (a = s.message) && void 0 !== a ? a : null === (n = _.welcomeMessage) || void 0 === n ? void 0 : n.message) && void 0 !== r ? r : ""
       }
     }
   },
   GUILD_SETTINGS_ONBOARDING_UPDATE_NEW_MEMBER_ACTION: function(e) {
     let {
-      channelId: t,
-      action: s
+      channelId: s,
+      action: t
     } = e;
-    return m(t, s)
+    return m(s, t)
   },
   GUILD_SETTINGS_ONBOARDING_ADD_NEW_MEMBER_ACTION: function(e) {
-    var t;
+    var s;
     let {
-      action: s
+      action: t
     } = e;
-    _.newMemberActions = null !== (t = _.newMemberActions) && void 0 !== t ? t : [], _.newMemberActions = [..._.newMemberActions, s]
+    _.newMemberActions = null !== (s = _.newMemberActions) && void 0 !== s ? s : [], _.newMemberActions = [..._.newMemberActions, t]
   },
   GUILD_SETTINGS_ONBOARDING_DELETE_NEW_MEMBER_ACTION: function(e) {
     let {
-      channelId: t
+      channelId: s
     } = e;
     if (null == _.newMemberActions) return !1;
-    _.newMemberActions = [..._.newMemberActions.filter(e => e.channelId !== t)]
+    _.newMemberActions = [..._.newMemberActions.filter(e => e.channelId !== s)]
   },
   GUILD_SETTINGS_ONBOARDING_REORDER_NEW_MEMBER_ACTION: function(e) {
     let {
-      actions: t
+      actions: s
     } = e;
-    _.newMemberActions = t
+    _.newMemberActions = s
   },
   GUILD_SETTINGS_ONBOARDING_UPDATE_RESOURCE_CHANNEL: function(e) {
     let {
-      channelId: t,
-      resourceChannel: s
+      channelId: s,
+      resourceChannel: t
     } = e;
-    N(t, s)
+    S(s, t)
   },
   GUILD_SETTINGS_ONBOARDING_ADD_RESOURCE_CHANNEL: function(e) {
-    var t;
+    var s;
     let {
-      resourceChannel: s
+      resourceChannel: t
     } = e;
-    _.resourceChannels = (null !== (t = _.resourceChannels) && void 0 !== t ? t : []).filter(e => e.channelId !== s.channelId), _.resourceChannels = [..._.resourceChannels, s]
+    _.resourceChannels = (null !== (s = _.resourceChannels) && void 0 !== s ? s : []).filter(e => e.channelId !== t.channelId), _.resourceChannels = [..._.resourceChannels, t]
   },
   GUILD_SETTINGS_ONBOARDING_DELETE_RESOURCE_CHANNEL: function(e) {
     let {
-      resourceChannelId: t
+      resourceChannelId: s
     } = e;
     if (null == _.resourceChannels) return !1;
-    _.resourceChannels = [..._.resourceChannels.filter(e => e.channelId !== t)]
+    _.resourceChannels = [..._.resourceChannels.filter(e => e.channelId !== s)]
   },
   GUILD_SETTINGS_ONBOARDING_REORDER_RESOURCE_CHANNEL: function(e) {
     let {
-      resourceChannels: t
+      resourceChannels: s
     } = e;
-    _.resourceChannels = t
+    _.resourceChannels = s
   },
   GUILD_SETTINGS_ONBOARDING_DISMISS_RESOURCE_CHANNEL_SUGGESTION: function(e) {
-    var t;
+    var s;
     let {
-      guildId: s,
-      channelIds: a
+      guildId: t,
+      channelIds: n
     } = e;
-    T[s] = [...null !== (t = T[s]) && void 0 !== t ? t : [], ...a]
-  },
-  GUILD_SETTINGS_ONBOARDING_UPDATE_NEW_MEMBER_ACTION_ICON_DATA: function(e) {
-    var t;
-    let {
-      channelId: s,
-      iconData: a
-    } = e, l = null === (t = _.newMemberActions) || void 0 === t ? void 0 : t.find(e => e.channelId === s);
-    if (null == l) return !1;
-    S[s] = a, l.icon = null
+    T[t] = [...null !== (s = T[t]) && void 0 !== s ? s : [], ...n]
   }
 })

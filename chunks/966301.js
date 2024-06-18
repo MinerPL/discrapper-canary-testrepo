@@ -1,203 +1,203 @@
 "use strict";
-s.r(t), s.d(t, {
-  GuildSettingsOnboardingPromptsNotice: function() {
-    return p
+t.d(s, {
+  ZP: function() {
+    return A
   },
-  default: function() {
-    return O
+  Zm: function() {
+    return M
   }
-}), s("47120");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("442837"),
-  i = s("481060"),
-  r = s("852860"),
-  o = s("471445"),
-  d = s("45966"),
-  u = s("637853"),
-  c = s("93879"),
-  E = s("605403"),
-  _ = s("759231"),
-  I = s("999382"),
-  T = s("889369"),
-  S = s("983135"),
-  f = s("570961"),
-  m = s("208665"),
-  N = s("974513"),
-  g = s("716130"),
-  h = s("981631"),
-  C = s("290511"),
-  R = s("689938"),
-  x = s("82591");
+}), t(47120);
+var n = t(735250),
+  i = t(470079),
+  l = t(442837),
+  a = t(481060),
+  r = t(852860),
+  o = t(471445),
+  c = t(45966),
+  d = t(637853),
+  u = t(93879),
+  E = t(605403),
+  _ = t(759231),
+  I = t(999382),
+  T = t(889369),
+  N = t(983135),
+  m = t(570961),
+  S = t(208665),
+  h = t(974513),
+  g = t(716130),
+  x = t(981631),
+  C = t(290511),
+  R = t(689938),
+  L = t(82591);
 
-function L(e) {
+function O(e) {
   let {
-    guildId: t,
-    prompts: s
-  } = e, r = (0, n.useStateFromStores)([T.default], () => T.default.editedDefaultChannelIds), [d, I] = (0, u.useChannelCoverageForOnboarding)(t, s, [...r]), S = d.length, f = d.length + I.length, m = S / f * 100, N = Math.max(Math.ceil(85 * f / 100) - S, 0), [g, h] = l.useState(!1);
-  return (0, a.jsxs)("div", {
-    className: x.channelCoverage,
-    children: [(0, a.jsxs)(i.Clickable, {
-      className: x.coverageHeader,
-      onClick: () => h(!g),
-      children: [(0, a.jsxs)("div", {
-        className: x.warningTextContainer,
-        children: [m <= 85 && (0, a.jsx)(_.default, {
+    guildId: s,
+    prompts: t
+  } = e, r = (0, l.e7)([T.Z], () => T.Z.editedDefaultChannelIds), [c, I] = (0, d.dF)(s, t, [...r]), N = c.length, m = c.length + I.length, S = N / m * 100, h = Math.max(Math.ceil(85 * m / 100) - N, 0), [g, x] = i.useState(!1);
+  return (0, n.jsxs)("div", {
+    className: L.channelCoverage,
+    children: [(0, n.jsxs)(a.Clickable, {
+      className: L.coverageHeader,
+      onClick: () => x(!g),
+      children: [(0, n.jsxs)("div", {
+        className: L.warningTextContainer,
+        children: [S <= 85 && (0, n.jsx)(_.Z, {
           width: 16,
           height: 16,
-          className: x.warning
-        }), (0, a.jsx)(i.Text, {
-          className: x.coverageTitle,
+          className: L.warning
+        }), (0, n.jsx)(a.Text, {
+          className: L.coverageTitle,
           variant: "text-xs/medium",
           color: "text-muted",
-          children: R.default.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_MISSING_CHANNELS.format({
-            numChannelsMissing: f - S
+          children: R.Z.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_MISSING_CHANNELS.format({
+            numChannelsMissing: m - N
           })
         })]
-      }), (0, a.jsxs)("div", {
-        className: x.progressContainer,
-        children: [(0, a.jsx)(i.Progress, {
-          className: x.coverageProgress,
-          foregroundColor: m > 85 ? "var(--status-positive)" : "var(--status-warning)",
-          percent: m
-        }), (0, a.jsx)(E.default, {
-          className: x.caret,
+      }), (0, n.jsxs)("div", {
+        className: L.progressContainer,
+        children: [(0, n.jsx)(a.Progress, {
+          className: L.coverageProgress,
+          foregroundColor: S > 85 ? "var(--status-positive)" : "var(--status-warning)",
+          percent: S
+        }), (0, n.jsx)(E.Z, {
+          className: L.caret,
           open: g
         })]
       })]
-    }), g ? (0, a.jsxs)("div", {
-      className: x.channelCoverageDetails,
-      children: [(0, a.jsx)(i.Text, {
+    }), g ? (0, n.jsxs)("div", {
+      className: L.channelCoverageDetails,
+      children: [(0, n.jsx)(a.Text, {
         variant: "text-xs/semibold",
         color: "text-muted",
-        children: R.default.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_CHANNELS
-      }), (0, a.jsx)("div", {
-        className: x.channels,
+        children: R.Z.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_CHANNELS
+      }), (0, n.jsx)("div", {
+        className: L.channels,
         children: I.map(e => {
-          var t;
-          let s = null !== (t = (0, o.getChannelIconComponent)(e)) && void 0 !== t ? t : c.default;
-          return (0, a.jsx)("div", {
-            className: x.channelPill,
-            children: (0, a.jsxs)(i.Text, {
-              className: x.channel,
+          var s;
+          let t = null !== (s = (0, o.KS)(e)) && void 0 !== s ? s : u.Z;
+          return (0, n.jsx)("div", {
+            className: L.channelPill,
+            children: (0, n.jsxs)(a.Text, {
+              className: L.channel,
               variant: "text-xs/normal",
               color: "interactive-active",
-              children: [(0, a.jsx)(s, {
+              children: [(0, n.jsx)(t, {
                 width: 12,
                 height: 12
               }), e.name]
             })
           }, e.id)
         })
-      }), (0, a.jsx)("div", {
-        className: x.channelCoverageHint,
-        children: N > 0 ? (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(_.default, {
+      }), (0, n.jsx)("div", {
+        className: L.channelCoverageHint,
+        children: h > 0 ? (0, n.jsxs)(n.Fragment, {
+          children: [(0, n.jsx)(_.Z, {
             width: 16,
             height: 16
-          }), (0, a.jsx)(i.Text, {
+          }), (0, n.jsx)(a.Text, {
             variant: "text-xs/normal",
             color: "text-muted",
-            children: R.default.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_ADD_HELP.format({
-              numChannels: N
+            children: R.Z.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_ADD_HELP.format({
+              numChannels: h
             })
           })]
-        }) : (0, a.jsx)(i.Text, {
+        }) : (0, n.jsx)(a.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
-          children: R.default.Messages.GUILD_NO_CHANNELS_HEADER
+          children: R.Z.Messages.GUILD_NO_CHANNELS_HEADER
         })
       })]
     }) : null]
   })
 }
 
-function O(e) {
+function A(e) {
   let {
-    saveOnClose: t
-  } = e, s = (0, n.useStateFromStores)([I.default], () => I.default.getGuild());
-  return null == s ? null : (0, a.jsx)(A, {
-    guild: s,
-    saveOnClose: t
+    saveOnClose: s
+  } = e, t = (0, l.e7)([I.Z], () => I.Z.getGuild());
+  return null == t ? null : (0, n.jsx)(p, {
+    guild: t,
+    saveOnClose: s
   })
 }
 
-function A(e) {
+function p(e) {
   let {
-    guild: t,
-    saveOnClose: s
-  } = e, r = (0, n.useStateFromStores)([d.default], () => d.default.isLoading()), o = (0, n.useStateFromStores)([m.default], () => m.default.editedOnboardingPrompts), u = (0, n.useStateFromStores)([m.default], () => m.default.advancedMode), c = l.useRef(!1);
-  if (l.useEffect(() => {
-      !r && !c.current && 0 === o.length && (c.current = !0, !u && (0, f.editGuildOnboardingPrompts)(t, [(0, C.getDefaultPrompt)()], !1))
-    }), l.useEffect(() => {
-      if (s) return () => {
-        (0, f.saveGuildOnboardingPrompts)(t, {
+    guild: s,
+    saveOnClose: t
+  } = e, r = (0, l.e7)([c.Z], () => c.Z.isLoading()), o = (0, l.e7)([S.Z], () => S.Z.editedOnboardingPrompts), d = (0, l.e7)([S.Z], () => S.Z.advancedMode), u = i.useRef(!1);
+  if (i.useEffect(() => {
+      !r && !u.current && 0 === o.length && (u.current = !0, !d && (0, m.tS)(s, [(0, C.ae)()], !1))
+    }), i.useEffect(() => {
+      if (t) return () => {
+        (0, m.rS)(s, {
           ignoreDefaultPrompt: !0
         }).catch(() => {})
       }
-    }, [s]), null == t) return null;
+    }, [t]), null == s) return null;
   let E = async () => {
     try {
-      await (0, f.saveGuildOnboardingPrompts)(t), await (0, S.startPreview)(t.id)
+      await (0, m.rS)(s), await (0, N.di)(s.id)
     } catch {}
   };
-  return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(i.Heading, {
-      className: x.header,
+  return (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsx)(a.Heading, {
+      className: L.header,
       variant: "heading-lg/extrabold",
-      children: u ? R.default.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER_ADVANCED : R.default.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER
-    }), (0, a.jsx)(i.Text, {
+      children: d ? R.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER_ADVANCED : R.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER
+    }), (0, n.jsx)(a.Text, {
       variant: "text-sm/normal",
       color: "header-secondary",
-      children: R.default.Messages.ONBOARDING_PROMPT_SETTINGS_SUBHEADER
-    }), (0, a.jsxs)("div", {
-      className: x.links,
-      children: [(0, a.jsx)(i.Anchor, {
+      children: R.Z.Messages.ONBOARDING_PROMPT_SETTINGS_SUBHEADER
+    }), (0, n.jsxs)("div", {
+      className: L.links,
+      children: [(0, n.jsx)(a.Anchor, {
         target: "_blank",
-        href: h.MarketingURLs.GUILD_ONBOARDING_EXAMPLES,
-        children: (0, a.jsx)(i.Text, {
+        href: x.EYA.GUILD_ONBOARDING_EXAMPLES,
+        children: (0, n.jsx)(a.Text, {
           variant: "text-sm/medium",
           color: "text-link",
-          children: R.default.Messages.GUILD_ONBOARDING_OVERVIEW_SEE_EXAMPLES
+          children: R.Z.Messages.GUILD_ONBOARDING_OVERVIEW_SEE_EXAMPLES
         })
-      }), (0, a.jsx)("div", {
-        className: x.dot
-      }), (0, a.jsx)(i.Anchor, {
+      }), (0, n.jsx)("div", {
+        className: L.dot
+      }), (0, n.jsx)(a.Anchor, {
         onClick: E,
-        children: (0, a.jsx)(i.Text, {
+        children: (0, n.jsx)(a.Text, {
           variant: "text-sm/medium",
           color: "text-link",
-          children: R.default.Messages.GUILD_ONBOARDING_SETUP_PREVIEW
+          children: R.Z.Messages.GUILD_ONBOARDING_SETUP_PREVIEW
         })
-      }), (0, a.jsx)("div", {
-        className: x.dot
-      }), (0, a.jsx)(N.AdvancedModeToggle, {
-        guildId: t.id
+      }), (0, n.jsx)("div", {
+        className: L.dot
+      }), (0, n.jsx)(h.Wu, {
+        guildId: s.id
       })]
-    }), (0, a.jsx)(L, {
-      guildId: t.id,
+    }), (0, n.jsx)(O, {
+      guildId: s.id,
       prompts: o
-    }), (0, a.jsx)("div", {
-      className: x.prompts,
-      children: r ? (0, a.jsx)(i.Spinner, {}) : (0, a.jsx)(g.default, {
-        postjoinOnly: u,
-        guildId: t.id
+    }), (0, n.jsx)("div", {
+      className: L.prompts,
+      children: r ? (0, n.jsx)(a.Spinner, {}) : (0, n.jsx)(g.Z, {
+        postjoinOnly: d,
+        guildId: s.id
       })
     })]
   })
 }
 
-function p() {
-  let e = (0, n.useStateFromStores)([I.default], () => I.default.getGuild()),
-    t = (0, n.useStateFromStores)([m.default], () => m.default.submitting);
-  return null == e ? null : (0, a.jsx)(r.default, {
+function M() {
+  let e = (0, l.e7)([I.Z], () => I.Z.getGuild()),
+    s = (0, l.e7)([S.Z], () => S.Z.submitting);
+  return null == e ? null : (0, n.jsx)(r.Z, {
     onSave: () => {
       try {
-        (0, f.saveGuildOnboardingPrompts)(e)
+        (0, m.rS)(e)
       } catch {}
     },
-    onReset: f.resetGuildOnboardingPrompts,
-    submitting: t,
-    onSaveText: R.default.Messages.SAVE
+    onReset: m.NB,
+    submitting: s,
+    onSaveText: R.Z.Messages.SAVE
   })
 }

@@ -1,4 +1,4 @@
-var r = n("661233"),
+var r = n(661233),
   i = Object.create,
   a = function() {
     function e() {}

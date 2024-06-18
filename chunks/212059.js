@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-var r = {
+var n = {
   lessThanXSeconds: {
     one: "less than a second",
     other: "less than {{count}} seconds"
@@ -63,8 +62,8 @@ var r = {
     other: "almost {{count}} years"
   }
 };
-t.default = function(e, t, n) {
-  var i, a = r[e];
-  if (i = "string" == typeof a ? a : 1 === t ? a.one : a.other.replace("{{count}}", t.toString()), null != n && n.addSuffix) return n.comparison && n.comparison > 0 ? "in " + i : i + " ago";
+t.Z = function(e, t, r) {
+  var i, a = n[e];
+  if (i = "string" == typeof a ? a : 1 === t ? a.one : a.other.replace("{{count}}", t.toString()), null != r && r.addSuffix) return r.comparison && r.comparison > 0 ? "in " + i : i + " ago";
   return i
 }

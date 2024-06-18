@@ -1,5 +1,5 @@
 "use strict";
-var e = n("962557"),
+var e = n(962557),
   o = Function.prototype,
   i = o.call,
   u = e && o.bind.bind(i, i);

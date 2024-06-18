@@ -1,5 +1,5 @@
 "use strict";
-var a = r("489161"),
+var a = r(489161),
   n = Array.prototype.concat,
   s = Array.prototype.slice,
   o = e.exports = function(e) {

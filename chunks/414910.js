@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return o
   }
 });
-var i = n("354459"),
-  r = n("65154");
+var i = n(354459),
+  r = n(65154);
 let s = Object.freeze({
-  [i.ParticipantTypes.STREAM]: r.MediaEngineContextTypes.STREAM,
-  [i.ParticipantTypes.HIDDEN_STREAM]: r.MediaEngineContextTypes.STREAM,
-  [i.ParticipantTypes.USER]: r.MediaEngineContextTypes.DEFAULT,
-  [i.ParticipantTypes.ACTIVITY]: r.MediaEngineContextTypes.DEFAULT
+  [i.fO.STREAM]: r.Yn.STREAM,
+  [i.fO.HIDDEN_STREAM]: r.Yn.STREAM,
+  [i.fO.USER]: r.Yn.DEFAULT,
+  [i.fO.ACTIVITY]: r.Yn.DEFAULT
 });
 
-function a(e) {
+function o(e) {
   return s[e]
 }

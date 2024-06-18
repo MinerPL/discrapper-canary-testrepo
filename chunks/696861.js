@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  DndProvider: function() {
+n.d(t, {
+  W: function() {
     return d
   }
 });
-var r = n("735250"),
-  i = n("470079"),
-  a = n("647841"),
-  o = n("84562"),
+var r = n(735250),
+  i = n(470079),
+  a = n(468204),
+  o = n(84562),
   s = ["children"];
 
 function u(e, t) {
@@ -29,7 +29,7 @@ var c = 0,
             n = arguments.length > 2 ? arguments[2] : void 0,
             r = arguments.length > 3 ? arguments[3] : void 0;
           return !t[l] && (t[l] = {
-            dragDropManager: (0, a.createDragDropManager)(e, t, n, r)
+            dragDropManager: (0, a.i)(e, t, n, r)
           }), t[l]
         }(e.backend, e.context, e.options, e.debugMode), !e.context]
       }(function(e, t) {
@@ -67,7 +67,7 @@ var c = 0,
           }
           return a
         }
-      }(t, n) || function(e, t) {
+      }(t, 2) || function(e, t) {
         if (e) {
           if ("string" == typeof e) return u(e, t);
           var n = Object.prototype.toString.call(e).slice(8, -1);
@@ -87,7 +87,7 @@ var c = 0,
             0 == --c && (e[l] = null)
           }
       }
-    }, []), (0, r.jsx)(o.DndContext.Provider, Object.assign({
+    }, []), (0, r.jsx)(o.L.Provider, Object.assign({
       value: h
     }, {
       children: d

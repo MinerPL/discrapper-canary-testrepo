@@ -1,25 +1,25 @@
 "use strict";
-n.r(t), n.d(t, {
-  FULLSCREEN_CHANGE_EVENT: function() {
-    return l
-  },
-  exitFullScreen: function() {
-    return a
-  },
-  getFullScreenNode: function() {
-    return r
-  },
-  isFullScreen: function() {
-    return o
-  },
-  requestFullScreen: function() {
+n.d(t, {
+  Dj: function() {
     return s
   },
-  subscribeDocumentToFullScreenChange: function() {
+  NO: function() {
+    return l
+  },
+  Pr: function() {
+    return o
+  },
+  fn: function() {
+    return r
+  },
+  rB: function() {
+    return a
+  },
+  uF: function() {
     return u
   }
 });
-var i = n("710845");
+var i = n(710845);
 
 function r() {
   for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
@@ -29,15 +29,15 @@ function r() {
 }
 
 function s(e) {
-  "function" == typeof e.requestFullscreen ? e.requestFullscreen() : "function" == typeof e.webkitRequestFullscreen ? e.webkitRequestFullscreen() : "function" == typeof e.webkitEnterFullscreen ? e.webkitEnterFullscreen() : "function" == typeof e.mozRequestFullScreen ? e.mozRequestFullScreen() : "function" == typeof e.msRequestFullscreen ? e.msRequestFullscreen() : new i.default("FullScreenUtils").warn("Fullscreen API is not supported.")
-}
-
-function a(e, t) {
-  let n = null != t ? t : document;
-  o(null, n) && ("function" == typeof n.exitFullscreen ? n.exitFullscreen() : "function" == typeof n.webkitExitFullscreen ? n.webkitExitFullscreen() : "function" == typeof e.webkitExitFullscreen ? e.webkitExitFullscreen() : "function" == typeof n.mozCancelFullScreen ? n.mozCancelFullScreen() : "function" == typeof n.msExitFullscreen ? n.msExitFullscreen() : new i.default("FullScreenUtils").warn("Fullscreen API is not supported."))
+  "function" == typeof e.requestFullscreen ? e.requestFullscreen() : "function" == typeof e.webkitRequestFullscreen ? e.webkitRequestFullscreen() : "function" == typeof e.webkitEnterFullscreen ? e.webkitEnterFullscreen() : "function" == typeof e.mozRequestFullScreen ? e.mozRequestFullScreen() : "function" == typeof e.msRequestFullscreen ? e.msRequestFullscreen() : new i.Z("FullScreenUtils").warn("Fullscreen API is not supported.")
 }
 
 function o(e, t) {
+  let n = null != t ? t : document;
+  a(null, n) && ("function" == typeof n.exitFullscreen ? n.exitFullscreen() : "function" == typeof n.webkitExitFullscreen ? n.webkitExitFullscreen() : "function" == typeof e.webkitExitFullscreen ? e.webkitExitFullscreen() : "function" == typeof n.mozCancelFullScreen ? n.mozCancelFullScreen() : "function" == typeof n.msExitFullscreen ? n.msExitFullscreen() : new i.Z("FullScreenUtils").warn("Fullscreen API is not supported."))
+}
+
+function a(e, t) {
   let n = null != t ? t : document;
   return !!(null != n.fullscreenElement || null != n.mozFullScreenElement || null != n.webkitFullscreenElement || null != n.msFullscreenElement || null != e && e.webkitDisplayingFullscreen)
 }

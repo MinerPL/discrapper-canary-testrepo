@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  FormText: function() {
-    return d
+n.d(t, {
+  R: function() {
+    return _
   },
-  FormTextTypes: function() {
+  g: function() {
     return l
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("803997"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("154921"),
-  o = n("485459");
+  o = n(154921),
+  a = n(102998);
 let l = {
     DEFAULT: "default",
     INPUT_PLACEHOLDER: "placeholder",
@@ -29,21 +29,21 @@ let l = {
     SELECTABLE: "modeSelectable"
   };
 
-function d(e) {
+function _(e) {
   let {
     type: t = l.DEFAULT,
     className: n,
     disabled: r,
-    selectable: d,
-    children: _,
+    selectable: _,
+    children: d,
     style: c,
     ...E
   } = e, I = u.DEFAULT;
-  return r ? I = u.DISABLED : d && (I = u.SELECTABLE), (0, i.jsx)(a.default, {
-    className: s()(o[t], n, o[I]),
+  return r ? I = u.DISABLED : _ && (I = u.SELECTABLE), (0, i.jsx)(o.Z, {
+    className: s()(a[t], n, a[I]),
     style: c,
     ...E,
-    children: _
+    children: d
   })
 }
-d.Types = l
+_.Types = l

@@ -1,6 +1,6 @@
-e.exports = function(e, t, s, a) {
-  var l = -1,
-    n = null == e ? 0 : e.length;
-  for (a && n && (s = e[++l]); ++l < n;) s = t(s, e[l], l, e);
-  return s
+e.exports = function(e, t, n, i) {
+  var s = -1,
+    l = null == e ? 0 : e.length;
+  for (i && l && (n = e[++s]); ++s < l;) n = t(n, e[s], s, e);
+  return n
 }

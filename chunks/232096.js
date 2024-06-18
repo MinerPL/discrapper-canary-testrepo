@@ -1,9 +1,9 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return s
   }
-}), n("47120");
+}), n(47120);
 let i = [
     ["position", "absolute"],
     ["top", "-100px"],

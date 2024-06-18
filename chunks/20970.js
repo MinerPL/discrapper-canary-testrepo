@@ -1,36 +1,36 @@
 "use strict";
-n.r(t), n.d(t, {
-  rules: function() {
+n.d(t, {
+  j: function() {
     return I
   }
 });
-var i = n("302454");
+var i = n(302454);
 let {
   newline: r,
   paragraph: s,
-  url: a,
-  link: o,
+  url: o,
+  link: a,
   strong: l,
   u,
-  br: d,
-  em: _,
+  br: _,
+  em: d,
   image: c,
   text: E
 } = i.defaultRules, I = {
   newline: r,
   paragraph: s,
-  url: a,
+  url: o,
   link: {
-    ...o,
+    ...a,
     parse(e, t, n) {
-      let i = o.parse(e, t, n);
+      let i = a.parse(e, t, n);
       return i.context = n.context, i
     }
   },
   strong: l,
   u,
-  br: d,
-  em: _,
+  br: _,
+  em: d,
   image: c,
   hook: {
     order: E.order,

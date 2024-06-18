@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  canChannelBeDefault: function() {
-    return o
+n.d(t, {
+  s: function() {
+    return a
   }
-}), n("442837");
-var i = n("430198"),
-  r = n("592125"),
-  s = n("700785"),
-  a = n("981631");
+}), n(442837);
+var i = n(430198),
+  r = n(592125),
+  s = n(700785),
+  o = n(981631);
 
-function o(e, t) {
-  return i.default.isChannelGated(e, t) || s.canEveryoneRole(a.Permissions.VIEW_CHANNEL, r.default.getChannel(t))
+function a(e, t) {
+  return i.Z.isChannelGated(e, t) || s.Uu(o.Plq.VIEW_CHANNEL, r.Z.getChannel(t))
 }

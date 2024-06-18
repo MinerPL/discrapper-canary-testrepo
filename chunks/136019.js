@@ -1,4 +1,4 @@
-var r = n("559969"),
+var r = n(559969),
   i = Array.prototype.splice;
 e.exports = function(e) {
   var t = this.__data__,

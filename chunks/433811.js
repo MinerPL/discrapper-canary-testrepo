@@ -1,40 +1,39 @@
 "use strict";
-l.r(t);
-var a = l("735250");
-l("470079");
-var n = l("442837"),
-  s = l("780384"),
-  i = l("481060"),
-  r = l("210887"),
-  u = l("918701"),
-  o = l("231338"),
-  d = l("689938"),
-  c = l("626439");
-t.default = function(e) {
+var l = n(735250);
+n(470079);
+var s = n(442837),
+  a = n(780384),
+  i = n(481060),
+  r = n(210887),
+  o = n(918701),
+  u = n(231338),
+  c = n(689938),
+  d = n(835525);
+t.Z = function(e) {
   let {
     quest: t
-  } = e, l = (0, n.useStateFromStores)([r.default], () => r.default.getState().theme), f = (0, s.isThemeDark)(l) ? o.ThemeTypes.DARK : o.ThemeTypes.LIGHT;
-  return (0, a.jsx)("div", {
-    className: c.wrapper,
-    children: (0, a.jsxs)("div", {
-      className: c.content,
-      children: [(0, a.jsx)("img", {
-        src: (0, u.getGameTileAssetUrl)(t, f),
+  } = e, n = (0, s.e7)([r.Z], () => r.Z.getState().theme), m = (0, a.wj)(n) ? u.BR.DARK : u.BR.LIGHT;
+  return (0, l.jsx)("div", {
+    className: d.wrapper,
+    children: (0, l.jsxs)("div", {
+      className: d.content,
+      children: [(0, l.jsx)("img", {
+        src: (0, o.uo)(t, m),
         alt: "",
-        className: c.gameTile
-      }), (0, a.jsxs)("div", {
-        className: c.copy,
-        children: [(0, a.jsx)(i.Heading, {
+        className: d.gameTile
+      }), (0, l.jsxs)("div", {
+        className: d.copy,
+        children: [(0, l.jsx)(i.Heading, {
           color: "always-white",
           variant: "text-sm/medium",
-          children: d.default.Messages.QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING.format({
+          children: c.Z.Messages.QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING.format({
             gameTitle: t.config.messages.gameTitle
           })
-        }), (0, a.jsx)(i.Text, {
-          className: c.subheading,
+        }), (0, l.jsx)(i.Text, {
+          className: d.subheading,
           color: "always-white",
           variant: "text-xs/medium",
-          children: d.default.Messages.QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING
+          children: c.Z.Messages.QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING
         })]
       })]
     })

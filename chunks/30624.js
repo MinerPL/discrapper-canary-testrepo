@@ -1,13 +1,13 @@
 "use strict";
-s.r(t), s.d(t, {
-  isUserTeamAdministrator: function() {
-    return l
+t.d(s, {
+  Z: function() {
+    return i
   }
 });
-var a = s("421535");
+var n = t(421535);
 
-function l(e, t) {
-  var s, l, n;
-  if (t.owner_user_id === e) return !0;
-  return (null === (l = t, n = e, s = l.members.find(e => e.user.id === n)) || void 0 === s ? void 0 : s.role) === a.TeamMemberRoles.ADMIN
+function i(e, s) {
+  var t, i, l;
+  if (s.owner_user_id === e) return !0;
+  return (null === (i = s, l = e, t = i.members.find(e => e.user.id === l)) || void 0 === t ? void 0 : t.role) === n.T.ADMIN
 }

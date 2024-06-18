@@ -1,30 +1,30 @@
 "use strict";
-n.r(t), n.d(t, {
-  activatePerkDemo: function() {
-    return d
+n.d(t, {
+  S: function() {
+    return _
   },
-  fetchPerksDemos: function() {
+  z: function() {
     return u
   }
 });
-var i = n("544891"),
-  r = n("570140"),
-  a = n("168232"),
-  s = n("594174"),
-  o = n("114064"),
-  l = n("981631");
+var i = n(544891),
+  r = n(570140),
+  s = n(168232),
+  o = n(594174),
+  a = n(114064),
+  l = n(981631);
 async function u() {
-  let e = s.default.getCurrentUser();
+  let e = o.default.getCurrentUser();
   try {
     let {
       body: t
-    } = await i.HTTP.get({
-      url: l.Endpoints.USER_PERKS_DEMOS
+    } = await i.tn.get({
+      url: l.ANM.USER_PERKS_DEMOS
     });
-    (0, a.isStaffEnv)(e) && (t = {
+    (0, s.QI)(e) && (t = {
       ...t,
       ... function() {
-        let e = o.default.overrides(),
+        let e = a.Z.overrides(),
           t = {};
         for (let r in e) {
           var n, i;
@@ -32,37 +32,37 @@ async function u() {
         }
         return t
       }()
-    }), r.default.dispatch({
+    }), r.Z.dispatch({
       type: "PREMIUM_PERKS_DEMOS_FETCH_SUCCESS",
       demos: t
     })
   } catch (e) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "PREMIUM_PERKS_DEMOS_FETCH_FAILURE"
     })
   }
 }
-async function d(e) {
-  if (o.default.getActivated()[e]) return !0;
-  let t = s.default.getCurrentUser();
+async function _(e) {
+  if (a.Z.getActivated()[e]) return !0;
+  let t = o.default.getCurrentUser();
   try {
-    return await i.HTTP.post({
-      url: l.Endpoints.USER_PERKS_DEMOS_ACTIVATE(e)
-    }), _(e), !0
+    return await i.tn.post({
+      url: l.ANM.USER_PERKS_DEMOS_ACTIVATE(e)
+    }), d(e), !0
   } catch {
-    if ((0, a.isStaffEnv)(t) && function(e) {
+    if ((0, s.QI)(t) && function(e) {
         var t;
-        return (null === (t = o.default.overrides()[e]) || void 0 === t ? void 0 : t.activateSuccess) === !0
-      }(e)) return _(e), !0;
-    return r.default.dispatch({
+        return (null === (t = a.Z.overrides()[e]) || void 0 === t ? void 0 : t.activateSuccess) === !0
+      }(e)) return d(e), !0;
+    return r.Z.dispatch({
       type: "PREMIUM_PERKS_DEMO_ACTIVATE_FAILURE",
       perkType: e
     }), !1
   }
 }
 
-function _(e) {
-  r.default.dispatch({
+function d(e) {
+  r.Z.dispatch({
     type: "PREMIUM_PERKS_DEMO_ACTIVATE_SUCCESS",
     perkType: e
   })

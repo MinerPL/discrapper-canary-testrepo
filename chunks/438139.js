@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return l
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("846519"),
-  a = n("689938");
+var i = n(735250),
+  r = n(470079),
+  s = n(846519),
+  o = n(689938);
 
-function o(e) {
+function a(e) {
   return "".concat(e).length < 13 ? 1e3 * e : e
 }
 
@@ -28,7 +28,7 @@ function l(e) {
       let {
         timestamps: e
       } = this.props, t = Date.now() / 1e3;
-      return null != e.end ? this.getDiff(t, o(e.end) / 1e3) : null != e.start ? this.getDiff(o(e.start) / 1e3, t) : {
+      return null != e.end ? this.getDiff(t, a(e.end) / 1e3) : null != e.start ? this.getDiff(a(e.start) / 1e3, t) : {
         hours: 0,
         minutes: 0,
         seconds: 0
@@ -39,11 +39,13 @@ function l(e) {
       return t && e <= 0 ? -1 : e < 10 ? "0".concat(e) : e
     }
     getDiff(e, t) {
-      let n = Math.max(t - e, 0);
+      let n = Math.max(t - e, 0),
+        i = Math.floor(n) % 60,
+        r = Math.floor(n / 60) % 60;
       return {
         hours: Math.floor(n / 3600) % 24,
-        minutes: Math.floor(n / 60) % 60,
-        seconds: Math.floor(n) % 60
+        minutes: r,
+        seconds: i
       }
     }
     render() {
@@ -53,18 +55,18 @@ function l(e) {
       } = this.props, {
         hours: r,
         minutes: s,
-        seconds: o
+        seconds: a
       } = this.state, l = {
         hours: this.renderTime(r, !0),
         minutes: this.renderTime(s),
-        seconds: this.renderTime(o)
+        seconds: this.renderTime(a)
       };
       return null != t.end ? (0, i.jsx)(e, {
         ...n,
-        message: a.default.Messages.USER_ACTIVITY_TIMESTAMP_END.format(l)
+        message: o.Z.Messages.USER_ACTIVITY_TIMESTAMP_END.format(l)
       }) : null != t.start ? (0, i.jsx)(e, {
         ...n,
-        message: a.default.Messages.USER_ACTIVITY_TIMESTAMP_START.format(l)
+        message: o.Z.Messages.USER_ACTIVITY_TIMESTAMP_START.format(l)
       }) : null
     }
     constructor(e) {
@@ -74,7 +76,7 @@ function l(e) {
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : t[n] = i, this._interval = new s.Interval, this.state = {
+      }) : t[n] = i, this._interval = new s.Xp, this.state = {
         ...this.getUpdatedTime()
       }
     }

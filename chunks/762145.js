@@ -2,7 +2,7 @@ e.exports = function(e) {
   let t = e.regex,
     n = {
       className: "variable.constant",
-      begin: t.concat(/\$/, t.either(...["ADMINTOOLS", "APPDATA", "CDBURN_AREA", "CMDLINE", "COMMONFILES32", "COMMONFILES64", "COMMONFILES", "COOKIES", "DESKTOP", "DOCUMENTS", "EXEDIR", "EXEFILE", "EXEPATH", "FAVORITES", "FONTS", "HISTORY", "HWNDPARENT", "INSTDIR", "INTERNET_CACHE", "LANGUAGE", "LOCALAPPDATA", "MUSIC", "NETHOOD", "OUTDIR", "PICTURES", "PLUGINSDIR", "PRINTHOOD", "PROFILE", "PROGRAMFILES32", "PROGRAMFILES64", "PROGRAMFILES", "QUICKLAUNCH", "RECENT", "RESOURCES_LOCALIZED", "RESOURCES", "SENDTO", "SMPROGRAMS", "SMSTARTUP", "STARTMENU", "SYSDIR", "TEMP", "TEMPLATES", "VIDEOS", "WINDIR"]))
+      begin: t.concat(/\$/, t.either("ADMINTOOLS", "APPDATA", "CDBURN_AREA", "CMDLINE", "COMMONFILES32", "COMMONFILES64", "COMMONFILES", "COOKIES", "DESKTOP", "DOCUMENTS", "EXEDIR", "EXEFILE", "EXEPATH", "FAVORITES", "FONTS", "HISTORY", "HWNDPARENT", "INSTDIR", "INTERNET_CACHE", "LANGUAGE", "LOCALAPPDATA", "MUSIC", "NETHOOD", "OUTDIR", "PICTURES", "PLUGINSDIR", "PRINTHOOD", "PROFILE", "PROGRAMFILES32", "PROGRAMFILES64", "PROGRAMFILES", "QUICKLAUNCH", "RECENT", "RESOURCES_LOCALIZED", "RESOURCES", "SENDTO", "SMPROGRAMS", "SMSTARTUP", "STARTMENU", "SYSDIR", "TEMP", "TEMPLATES", "VIDEOS", "WINDIR"))
     },
     r = {
       className: "variable",
@@ -19,11 +19,11 @@ e.exports = function(e) {
     },
     o = {
       className: "params",
-      begin: t.either(...["ARCHIVE", "FILE_ATTRIBUTE_ARCHIVE", "FILE_ATTRIBUTE_NORMAL", "FILE_ATTRIBUTE_OFFLINE", "FILE_ATTRIBUTE_READONLY", "FILE_ATTRIBUTE_SYSTEM", "FILE_ATTRIBUTE_TEMPORARY", "HKCR", "HKCU", "HKDD", "HKEY_CLASSES_ROOT", "HKEY_CURRENT_CONFIG", "HKEY_CURRENT_USER", "HKEY_DYN_DATA", "HKEY_LOCAL_MACHINE", "HKEY_PERFORMANCE_DATA", "HKEY_USERS", "HKLM", "HKPD", "HKU", "IDABORT", "IDCANCEL", "IDIGNORE", "IDNO", "IDOK", "IDRETRY", "IDYES", "MB_ABORTRETRYIGNORE", "MB_DEFBUTTON1", "MB_DEFBUTTON2", "MB_DEFBUTTON3", "MB_DEFBUTTON4", "MB_ICONEXCLAMATION", "MB_ICONINFORMATION", "MB_ICONQUESTION", "MB_ICONSTOP", "MB_OK", "MB_OKCANCEL", "MB_RETRYCANCEL", "MB_RIGHT", "MB_RTLREADING", "MB_SETFOREGROUND", "MB_TOPMOST", "MB_USERICON", "MB_YESNO", "NORMAL", "OFFLINE", "READONLY", "SHCTX", "SHELL_CONTEXT", "SYSTEM|TEMPORARY"])
+      begin: t.either("ARCHIVE", "FILE_ATTRIBUTE_ARCHIVE", "FILE_ATTRIBUTE_NORMAL", "FILE_ATTRIBUTE_OFFLINE", "FILE_ATTRIBUTE_READONLY", "FILE_ATTRIBUTE_SYSTEM", "FILE_ATTRIBUTE_TEMPORARY", "HKCR", "HKCU", "HKDD", "HKEY_CLASSES_ROOT", "HKEY_CURRENT_CONFIG", "HKEY_CURRENT_USER", "HKEY_DYN_DATA", "HKEY_LOCAL_MACHINE", "HKEY_PERFORMANCE_DATA", "HKEY_USERS", "HKLM", "HKPD", "HKU", "IDABORT", "IDCANCEL", "IDIGNORE", "IDNO", "IDOK", "IDRETRY", "IDYES", "MB_ABORTRETRYIGNORE", "MB_DEFBUTTON1", "MB_DEFBUTTON2", "MB_DEFBUTTON3", "MB_DEFBUTTON4", "MB_ICONEXCLAMATION", "MB_ICONINFORMATION", "MB_ICONQUESTION", "MB_ICONSTOP", "MB_OK", "MB_OKCANCEL", "MB_RETRYCANCEL", "MB_RIGHT", "MB_RTLREADING", "MB_SETFOREGROUND", "MB_TOPMOST", "MB_USERICON", "MB_YESNO", "NORMAL", "OFFLINE", "READONLY", "SHCTX", "SHELL_CONTEXT", "SYSTEM|TEMPORARY")
     },
     s = {
       className: "keyword",
-      begin: t.concat(/!/, t.either(...["addincludedir", "addplugindir", "appendfile", "cd", "define", "delfile", "echo", "else", "endif", "error", "execute", "finalize", "getdllversion", "gettlbversion", "if", "ifdef", "ifmacrodef", "ifmacrondef", "ifndef", "include", "insertmacro", "macro", "macroend", "makensis", "packhdr", "searchparse", "searchreplace", "system", "tempfile", "undef", "uninstfinalize", "verbose", "warning"]))
+      begin: t.concat(/!/, t.either("addincludedir", "addplugindir", "appendfile", "cd", "define", "delfile", "echo", "else", "endif", "error", "execute", "finalize", "getdllversion", "gettlbversion", "if", "ifdef", "ifmacrodef", "ifmacrondef", "ifndef", "include", "insertmacro", "macro", "macroend", "makensis", "packhdr", "searchparse", "searchreplace", "system", "tempfile", "undef", "uninstfinalize", "verbose", "warning"))
     },
     u = {
       match: [/Function/, /\s+/, t.concat(/(\.)?/, e.IDENT_RE)],

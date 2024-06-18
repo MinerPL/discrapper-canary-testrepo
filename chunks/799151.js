@@ -1,33 +1,33 @@
 "use strict";
-n.r(t), n.d(t, {
-  DnDKeyboardHelpBar: function() {
+n.d(t, {
+  c: function() {
     return E
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("718017"),
-  a = n("442837"),
-  o = n("710593"),
-  l = n("993365"),
-  u = n("607070"),
-  d = n("79320"),
-  _ = n("689938"),
-  c = n("305895");
+var i = n(735250),
+  r = n(470079),
+  s = n(920906),
+  o = n(442837),
+  a = n(710593),
+  l = n(993365),
+  u = n(607070),
+  _ = n(79320),
+  d = n(689938),
+  c = n(689085);
 
 function E() {
   let e = [{
       keybinds: ["Spacebar", "Enter"],
-      name: _.default.Messages.DND_OPERATION_LABEL_DROP
+      name: d.Z.Messages.DND_OPERATION_LABEL_DROP
     }, {
       keybinds: ["up", "down"],
-      name: _.default.Messages.DND_OPERATION_LABEL_MOVE
+      name: d.Z.Messages.DND_OPERATION_LABEL_MOVE
     }, {
       keybinds: ["ESC"],
-      name: _.default.Messages.DND_OPERATION_LABEL_CANCEL
+      name: d.Z.Messages.DND_OPERATION_LABEL_CANCEL
     }],
-    t = (0, a.useStateFromStores)([u.default], () => u.default.useReducedMotion),
-    n = (0, d.useDndMode)();
+    t = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+    n = (0, _.zP)();
   return (0, s.useTransition)(n, {
     enter: {
       from: {
@@ -52,20 +52,20 @@ function E() {
       children: e.map((t, n) => {
         let {
           keybinds: s,
-          name: a
+          name: o
         } = t;
         return (0, i.jsxs)(r.Fragment, {
-          children: [(0, i.jsx)(l.Text, {
+          children: [(0, i.jsx)(l.x, {
             variant: "text-md/semibold",
             className: c.bindName,
-            children: a
-          }), s.map(e => (0, i.jsx)(o.KeyCombo, {
+            children: o
+          }), s.map(e => (0, i.jsx)(a.M, {
             shortcut: e,
             className: c.shortcut
           }, e)), n < e.length - 1 ? (0, i.jsx)("span", {
             className: c.separator
           }) : null]
-        }, a)
+        }, o)
       })
     })
   }) : null)

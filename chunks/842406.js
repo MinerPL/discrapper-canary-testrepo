@@ -1,8 +1,8 @@
 "use strict";
-var r = n("607974"),
-  i = n("350434"),
-  a = n("91826"),
-  o = n("400194");
+var r = n(607974),
+  i = n(350434),
+  a = n(91826),
+  o = n(400194);
 
 function s(e) {
   return e.call.bind(e)
@@ -108,14 +108,14 @@ function w(e) {
 t.isWeakSet = function(e) {
   return y(e)
 }, E.working = "undefined" != typeof ArrayBuffer && E(new ArrayBuffer), t.isArrayBuffer = S, x.working = "undefined" != typeof ArrayBuffer && "undefined" != typeof DataView && x(new DataView(new ArrayBuffer(1), 0, 1)), t.isDataView = w;
-var T = "undefined" != typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
+var C = "undefined" != typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
 
-function C(e) {
+function T(e) {
   return "[object SharedArrayBuffer]" === l(e)
 }
 
 function D(e) {
-  return void 0 !== T && (void 0 === C.working && (C.working = C(new T)), C.working ? C(e) : e instanceof T)
+  return void 0 !== C && (void 0 === T.working && (T.working = T(new C)), T.working ? T(e) : e instanceof C)
 }
 t.isSharedArrayBuffer = D;
 t.isAsyncFunction = function(e) {
@@ -131,11 +131,11 @@ t.isGeneratorObject = function(e) {
   return "[object Generator]" === l(e)
 };
 
-function O(e) {
+function M(e) {
   return g(e, d)
 }
 
-function M(e) {
+function O(e) {
   return g(e, f)
 }
 
@@ -152,9 +152,9 @@ function R(e) {
 }
 t.isWebAssemblyCompiledModule = function(e) {
   return "[object WebAssembly.Module]" === l(e)
-}, t.isNumberObject = O, t.isStringObject = M, t.isBooleanObject = A, t.isBigIntObject = k, t.isSymbolObject = R;
+}, t.isNumberObject = M, t.isStringObject = O, t.isBooleanObject = A, t.isBigIntObject = k, t.isSymbolObject = R;
 t.isBoxedPrimitive = function(e) {
-  return O(e) || M(e) || A(e) || k(e) || R(e)
+  return M(e) || O(e) || A(e) || k(e) || R(e)
 };
 t.isAnyArrayBuffer = function(e) {
   return "undefined" != typeof Uint8Array && (S(e) || D(e))

@@ -1,29 +1,29 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return o
   }
 });
-var i = n("5192"),
-  r = n("981631"),
-  s = n("689938");
+var i = n(5192),
+  r = n(981631),
+  s = n(689938);
 
-function a(e, t, n, a) {
-  if (e.state === r.ApplicationStreamStates.RECONNECTING) return {
-    mainText: s.default.Messages.STREAM_RECONNECTING_ERROR,
-    supportingText: s.default.Messages.STREAM_RECONNECTING_ERROR_SUBTEXT
+function o(e, t, n, o) {
+  if (e.state === r.jm8.RECONNECTING) return {
+    mainText: s.Z.Messages.STREAM_RECONNECTING_ERROR,
+    supportingText: s.Z.Messages.STREAM_RECONNECTING_ERROR_SUBTEXT
   };
-  if (e.state === r.ApplicationStreamStates.PAUSED) return n ? {
-    mainText: s.default.Messages.STREAM_CAPTURE_PAUSED,
-    supportingText: s.default.Messages.STREAM_CAPTURE_PAUSED_DETAILS
+  if (e.state === r.jm8.PAUSED) return n ? {
+    mainText: s.Z.Messages.STREAM_CAPTURE_PAUSED,
+    supportingText: s.Z.Messages.STREAM_CAPTURE_PAUSED_DETAILS
   } : {
-    mainText: s.default.Messages.STREAM_CAPTURE_PAUSED,
-    supportingText: s.default.Messages.STREAM_CAPTURE_PAUSED_DETAILS_VIEWER.format({
-      username: i.default.getName(e.guildId, e.channelId, t)
+    mainText: s.Z.Messages.STREAM_CAPTURE_PAUSED,
+    supportingText: s.Z.Messages.STREAM_CAPTURE_PAUSED_DETAILS_VIEWER.format({
+      username: i.ZP.getName(e.guildId, e.channelId, t)
     })
   };
-  return a ? {
-    mainText: s.default.Messages.STREAM_PREVIEW_PAUSED,
-    supportingText: s.default.Messages.STREAM_PREVIEW_PAUSED_SUBTEXT
+  return o ? {
+    mainText: s.Z.Messages.STREAM_PREVIEW_PAUSED,
+    supportingText: s.Z.Messages.STREAM_PREVIEW_PAUSED_SUBTEXT
   } : null
 }

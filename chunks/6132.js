@@ -1,24 +1,23 @@
 "use strict";
-n.r(t);
-var i, r, s, a, o = n("442837"),
-  l = n("570140"),
-  u = n("981631");
-let d = 0;
-class _ extends(a = o.default.Store) {
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(981631);
+let _ = 0;
+class d extends(o = a.ZP.Store) {
   getId() {
-    return d
+    return _
   }
 }
-s = "InstanceIdStore", (r = "displayName") in(i = _) ? Object.defineProperty(i, r, {
+s = "InstanceIdStore", (r = "displayName") in(i = d) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new _(l.default, {
+}) : i[r] = s, t.Z = new d(l.Z, {
   RPC_SERVER_READY: function(e) {
     let {
       port: t
     } = e;
-    d = u.RPC_STARTING_PORT - t
+    _ = u.V6Z - t
   }
 })

@@ -1,88 +1,87 @@
 "use strict";
-l.r(t), l.d(t, {
-  default: function() {
-    return N
+n.d(t, {
+  Z: function() {
+    return Z
   }
-}), l("47120");
-var a = l("735250"),
-  n = l("470079"),
-  s = l("120356"),
-  i = l.n(s),
-  r = l("848246"),
-  u = l("442837"),
-  o = l("481060"),
-  d = l("607070"),
-  c = l("386542"),
-  f = l("485731"),
-  m = l("301822"),
-  S = l("626135"),
-  E = l("981631"),
-  _ = l("689938"),
-  C = l("364835");
+}), n(47120);
+var l = n(735250),
+  s = n(470079),
+  a = n(120356),
+  i = n.n(a),
+  r = n(848246),
+  o = n(442837),
+  u = n(481060),
+  c = n(607070),
+  d = n(386542),
+  m = n(485731),
+  E = n(626135),
+  _ = n(981631),
+  S = n(689938),
+  h = n(492626);
 let g = async () => {
   let {
     default: e
-  } = await l.e("21812").then(l.t.bind(l, "741855", 19));
+  } = await n.e("21812").then(n.t.bind(n, 741855, 19));
   return e
 };
 
-function N(e) {
+function Z(e) {
   let {
     selectedGuildId: t,
-    selectedChannelId: l,
-    glow: s,
-    playIntroTransition: N,
-    onUnlocked: h
-  } = e, [A, I] = n.useState(!1), x = (0, u.useStateFromStores)([d.default], () => d.default.useReducedMotion), {
-    hqStreamingState: p
-  } = (0, c.usePerksDemo)(r.EntitlementFeatureNames.STREAM_HIGH_QUALITY), T = n.useCallback(() => {
-    (0, f.hqStreamingUnlockAnimationPlayed)(!0), h()
-  }, [h]);
-  return n.useEffect(() => {
-    if (p.hqStreamingUnlockAnimationPlayed) return;
+    selectedChannelId: n,
+    glow: a,
+    playIntroTransition: Z,
+    onUnlocked: C
+  } = e, [f, N] = s.useState(!1), x = (0, o.e7)([c.Z], () => c.Z.useReducedMotion), {
+    hqStreamingState: I
+  } = (0, d.k)(r.q.STREAM_HIGH_QUALITY), A = s.useCallback(() => {
+    (0, m.dE)(!0), C()
+  }, [C]);
+  return s.useEffect(() => {
+    if (I.hqStreamingUnlockAnimationPlayed) return;
     let e = setTimeout(() => {
-      I(!0)
+      N(!0)
     }, 1150);
     return () => {
-      clearTimeout(e), I(!1)
+      clearTimeout(e), N(!1)
     }
-  }, [T, p, x]), n.useEffect(() => {
-    if (p.hqStreamingUnlockAnimationPlayed) return;
+  }, [A, I, x]), s.useEffect(() => {
+    if (I.hqStreamingUnlockAnimationPlayed) return;
     if (x) {
-      T();
+      A();
       return
     }
     let e = setTimeout(() => {
-      T()
+      A()
     }, 250);
     return () => {
       clearTimeout(e)
     }
-  }, [h, T, , p, x]), n.useEffect(() => {
-    S.default.track(E.AnalyticEvents.PERK_DEMO_OFFER_VIEWED, {
+  }, [C, A, , I, x]), s.useEffect(() => {
+    E.default.track(_.rMx.PERK_DEMO_OFFER_VIEWED, {
       guild_id: t,
-      channel_id: l,
-      perk_type: r.EntitlementFeatureNames.STREAM_HIGH_QUALITY
+      channel_id: n,
+      perk_type: r.q.STREAM_HIGH_QUALITY
     })
-  }, []), (0, a.jsx)("div", {
-    className: i()(C.container, {
-      [C.gradientGlow]: s
+  }, []), (0, l.jsx)("div", {
+    className: i()(h.container, {
+      [h.gradientGlow]: a
     }),
-    children: (0, a.jsxs)("div", {
-      className: C.content,
-      children: [(0, a.jsx)(m.default, {
+    children: (0, l.jsxs)("div", {
+      className: h.content,
+      children: [(0, l.jsx)(u.LottieAnimation, {
         importData: g,
         shouldAnimate: !x,
         pauseAtFrame: 90,
-        className: i()(C.animation, {
-          [C.animationEndState]: A || !N || x
+        className: i()(h.animation, {
+          [h.animationEndState]: f || !Z || x
         }),
         loop: !1
-      }), (0, a.jsx)("div", {
-        className: C.message,
-        children: (0, a.jsx)(o.Text, {
+      }), (0, l.jsx)("div", {
+        className: h.message,
+        children: (0, l.jsx)(u.Text, {
           variant: "text-sm/medium",
-          children: _.default.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_INITIAL_UPSELL
+          children: S.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_INITIAL_UPSELL
         })
       })]
     })

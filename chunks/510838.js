@@ -1,10 +1,10 @@
-var r = n("957578").Buffer,
-  i = n("294415"),
-  a = n("530917"),
-  o = n("136924").ec,
-  s = n("28704"),
-  u = n("223428"),
-  c = n("733345");
+var r = n(957578).Buffer,
+  i = n(294415),
+  a = n(530917),
+  o = n(136924).ec,
+  s = n(28704),
+  u = n(223428),
+  c = n(733345);
 
 function l(e, t, n, a) {
   if ((e = r.from(e.toArray())).length < t.byteLength()) {

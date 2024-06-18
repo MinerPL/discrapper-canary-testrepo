@@ -1,78 +1,78 @@
 "use strict";
-l.r(t), l.d(t, {
-  default: function() {
-    return N
+n.d(t, {
+  Z: function() {
+    return C
   }
-}), l("724458"), l("47120");
-var a = l("735250"),
-  s = l("470079"),
-  n = l("512722"),
-  i = l.n(n),
-  r = l("392711"),
-  u = l.n(r),
-  o = l("856901"),
-  d = l("442837"),
-  c = l("481060"),
-  f = l("131951"),
-  m = l("537135"),
-  S = l("176940"),
-  E = l("689938"),
-  C = l("981213"),
-  _ = l("223318"),
-  g = l("794711");
+}), n(724458), n(47120);
+var l = n(735250),
+  s = n(470079),
+  a = n(512722),
+  i = n.n(a),
+  r = n(392711),
+  o = n.n(r),
+  u = n(856901),
+  c = n(442837),
+  d = n(481060),
+  m = n(131951),
+  E = n(537135),
+  _ = n(176940),
+  S = n(689938),
+  h = n(378873),
+  g = n(555066),
+  Z = n(611273);
 
-function N(e) {
+function C(e) {
   let {
     selectedSource: t,
-    onChangeVideoDeviceSource: l,
-    onChangeAudioDevice: n
+    onChangeVideoDeviceSource: n,
+    onChangeAudioDevice: a
   } = e;
   i()(null != t, "Camera capture device cannot be null");
-  let r = (0, S.default)(),
-    N = (0, d.useStateFromStores)([f.default], () => f.default.getInputDevices()),
-    [h, x] = s.useState(function(e, t, l) {
-      if (null != t && null != l) {
-        let a = t.find(t => t.id === e);
-        if (null == a) return;
-        let s = u().reduce(l, (e, t) => (0, o.stringSimilarity)(a.name, t.name) > (0, o.stringSimilarity)(a.name, e.name) ? t : e);
+  let r = (0, _.Z)(),
+    C = (0, c.e7)([m.Z], () => m.Z.getInputDevices()),
+    [f, N] = s.useState(function(e, t, n) {
+      if (null != t && null != n) {
+        let l = t.find(t => t.id === e);
+        if (null == l) return;
+        let s = o().reduce(n, (e, t) => (0, u.stringSimilarity)(l.name, t.name) > (0, u.stringSimilarity)(l.name, e.name) ? t : e);
         if (null != s) return s.id
       }
-    }(t.id, r, N));
-  return null != h && n(h), (0, a.jsx)(s.Fragment, {
-    children: (0, a.jsxs)(c.FormItem, {
+    }(t.id, r, C));
+  return null != f && a(f), (0, l.jsx)(s.Fragment, {
+    children: (0, l.jsxs)(d.FormItem, {
       title: "Capture Device",
-      className: _.modalContent,
-      children: [(0, a.jsx)(c.FormItem, {
-        className: g.marginTop8,
-        children: (0, a.jsxs)(m.default, {
-          children: [(0, a.jsx)("span", {
-            className: C.ellipsisText,
+      className: g.modalContent,
+      children: [(0, l.jsx)(d.FormItem, {
+        className: Z.marginTop8,
+        children: (0, l.jsxs)(E.Z, {
+          children: [(0, l.jsx)("span", {
+            className: h.ellipsisText,
             children: t.name
-          }), (0, a.jsx)(c.Button, {
-            className: C.changeButton,
-            color: c.Button.Colors.PRIMARY,
-            size: c.Button.Sizes.SMALL,
-            onClick: l,
-            children: E.default.Messages.CHANGE
+          }), (0, l.jsx)(d.Button, {
+            className: h.changeButton,
+            color: d.Button.Colors.PRIMARY,
+            size: d.Button.Sizes.SMALL,
+            onClick: n,
+            children: S.Z.Messages.CHANGE
           })]
         })
-      }), (0, a.jsx)(c.FormItem, {
-        className: g.marginTop8,
-        title: E.default.Messages.GO_LIVE_FORM_LABEL_AUDIO_DEVICE,
-        children: (0, a.jsx)(c.SingleSelect, {
-          value: h,
-          className: g.__invalid_marginaTop8,
+      }), (0, l.jsx)(d.FormItem, {
+        className: Z.marginTop8,
+        title: S.Z.Messages.GO_LIVE_FORM_LABEL_AUDIO_DEVICE,
+        children: (0, l.jsx)(d.SingleSelect, {
+          value: f,
+          className: Z.__invalid_marginaTop8,
           onChange: e => {
-            x(e), n(e)
+            N(e), a(e)
           },
-          options: u().map(N, e => {
+          options: o().map(C, e => {
             let {
               id: t,
-              name: l
+              name: n
             } = e;
             return {
               value: t,
-              label: l
+              label: n
             }
           })
         })

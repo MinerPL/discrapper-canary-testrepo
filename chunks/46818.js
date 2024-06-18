@@ -1,5 +1,5 @@
-var e = n("36478"),
-  o = n("573492");
+var e = n(36478),
+  o = n(573492);
 
 function i(r) {
   return t.exports = i = "function" == typeof e && "symbol" == typeof o ? function(t) {

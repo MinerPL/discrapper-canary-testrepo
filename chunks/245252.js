@@ -1,6 +1,6 @@
 "use strict";
-var r = n("972910"),
-  i = n("160171"),
+var r = n(972910),
+  i = n(160171),
   a = r("%Promise.resolve%", !0),
   o = a && i(a);
 e.exports = function(e, t) {

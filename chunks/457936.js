@@ -1,5 +1,5 @@
 "use strict";
-var n = r("733359").substr;
+var n = r(733359).substr;
 t.exports = function(t, e) {
   var r = Array(t.length).fill(null);
   return e && e.forEach(function(e) {

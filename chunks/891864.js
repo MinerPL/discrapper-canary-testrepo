@@ -1,6 +1,6 @@
 "use strict";
 
-function a(e) {
+function n(e) {
   return {
     id: e.id,
     name: e.name,
@@ -17,8 +17,8 @@ function a(e) {
     emojis: e.emojis
   }
 }
-s.r(t), s.d(t, {
-  default: function() {
-    return a
+t.d(s, {
+  Z: function() {
+    return n
   }
-}), s("47120")
+}), t(47120)

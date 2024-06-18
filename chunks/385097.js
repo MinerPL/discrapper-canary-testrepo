@@ -1,7 +1,7 @@
 "use strict";
-var r = n("192853"),
-  i = n("690244"),
-  a = n("148025"),
+var r = n(192853),
+  i = n(690244),
+  a = n(148025),
   o = r("RegExp.prototype.exec"),
   s = i("%TypeError%");
 e.exports = function(e) {

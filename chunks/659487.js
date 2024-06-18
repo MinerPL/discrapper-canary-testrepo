@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  validateClipMetadata: function() {
-    return a
+n.d(t, {
+  w: function() {
+    return o
   }
-}), n("47120"), n("724458");
-var i = n("356659");
+}), n(47120), n(724458);
+var i = n(356659);
 let r = [e => {
     let t = {
       ...e,
@@ -23,12 +23,12 @@ let r = [e => {
     name: "" === e.name ? void 0 : e.name
   })],
   s = null;
-async function a(e) {
+async function o(e) {
   var t;
-  let a = (await n.e("56268").then(n.t.bind(n, "826753", 23))).default;
-  let o = (t = a, null != s ? s : s = t.object({
+  let o = (await n.e("56268").then(n.t.bind(n, 826753, 23))).default;
+  let a = (t = o, null != s ? s : s = t.object({
     id: t.string().required(),
-    version: t.number().positive().integer().min(0).max(i.CURRENT_CLIP_METADATA_VERSION).optional(),
+    version: t.number().positive().integer().min(0).max(i.Bg).optional(),
     name: t.string().when("version", {
       is: t.number().less(3),
       then: t.string().allow("")
@@ -57,7 +57,7 @@ async function a(e) {
     clipMethod: t.string().allow("auto", "manual").required()
   }).required());
   try {
-    a.assert(e, o);
+    o.assert(e, a);
     return null == e.version && (e.version = 0), r.slice(e.version).reduce((e, t) => t(e), e)
   } catch (e) {
     return null

@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n("47120");
-var i, r = n("735250"),
-  s = n("470079"),
-  a = n("803997"),
-  o = n.n(a),
-  l = n("481060"),
-  u = n("189595"),
-  d = n("632184"),
-  _ = n("82965"),
-  c = n("326757"),
-  E = n("689938"),
-  I = n("553400");
+n(47120);
+var i, r = n(735250),
+  s = n(470079),
+  o = n(120356),
+  a = n.n(o),
+  l = n(481060),
+  u = n(189595),
+  _ = n(632184),
+  d = n(82965),
+  c = n(326757),
+  E = n(689938),
+  I = n(727514);
 
 function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -20,7 +20,7 @@ function T(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class f extends(i = s.PureComponent) {
+class h extends(i = s.PureComponent) {
   componentDidMount() {
     this.updateMediaBar()
   }
@@ -42,29 +42,29 @@ class f extends(i = s.PureComponent) {
       sliderWrapperClassName: n,
       sliderClassName: i,
       currentWindow: s,
-      muted: a,
+      muted: o,
       minValue: T,
-      maxValue: f,
+      maxValue: h,
       value: S,
-      onVolumeShow: h,
-      onVolumeHide: A
+      onVolumeShow: f,
+      onVolumeHide: N
     } = this.props, {
-      hovered: m,
-      focused: N,
+      hovered: A,
+      focused: m,
       dragging: O
-    } = this.state, p = d.default;
-    return a || S === T ? p = _.default : S < f / 2 && (p = c.default), (0, r.jsxs)("div", {
-      className: o()(t, I.container),
+    } = this.state, R = _.Z;
+    return o || S === T ? R = d.Z : S < h / 2 && (R = c.Z), (0, r.jsxs)("div", {
+      className: a()(t, I.container),
       onMouseEnter: () => {
         clearTimeout(this._hoverTimeout), this.setState({
           hovered: !0
-        }), null == h || h()
+        }), null == f || f()
       },
       onMouseLeave: () => {
         clearTimeout(this._hoverTimeout), this._hoverTimeout = setTimeout(() => {
           this.setState({
             hovered: !1
-          }), null == A || A()
+          }), null == N || N()
         }, 150)
       },
       onFocus: () => this.setState({
@@ -75,8 +75,8 @@ class f extends(i = s.PureComponent) {
       }),
       onKeyDown: this.handleKeyDown,
       children: [(0, r.jsx)("div", {
-        className: o()(I.volumeButtonSlider, n, {
-          [I.sliderVisible]: m || N || O
+        className: a()(I.volumeButtonSlider, n, {
+          [I.sliderVisible]: A || m || O
         }),
         onMouseEnter: () => {
           clearTimeout(this._hoverTimeout), this.setState({
@@ -88,10 +88,10 @@ class f extends(i = s.PureComponent) {
             hovered: !1
           }), 150)
         },
-        children: (0, r.jsx)(u.default, {
+        children: (0, r.jsx)(u.Z, {
           sliderClassName: i,
-          type: u.default.Types.VOLUME,
-          value: S / f,
+          type: u.Z.Types.VOLUME,
+          value: S / h,
           onDrag: this.handleValueChange,
           onDragStart: this.handleDragStart,
           onDragEnd: this.handleDragEnd,
@@ -100,11 +100,11 @@ class f extends(i = s.PureComponent) {
         })
       }), (0, r.jsx)(l.Button, {
         className: I.volumeButton,
-        "aria-label": E.default.Messages.CONTROL_VOLUME,
+        "aria-label": E.Z.Messages.CONTROL_VOLUME,
         size: l.Button.Sizes.NONE,
         look: l.Button.Looks.BLANK,
         onClick: this.handleToggleMute,
-        children: (0, r.jsx)(p, {
+        children: (0, r.jsx)(R, {
           className: e
         })
       })]
@@ -155,8 +155,8 @@ class f extends(i = s.PureComponent) {
     })
   }
 }
-T(f, "defaultProps", {
+T(h, "defaultProps", {
   minValue: 0,
   maxValue: 100,
   handleSize: 16
-}), t.default = f
+}), t.Z = h

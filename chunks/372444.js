@@ -1,85 +1,82 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
+t.d(s, {
+  Z: function() {
     return _
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("120356"),
-  n = s.n(l),
-  i = s("481060"),
-  r = s("100527"),
-  o = s("906732"),
-  d = s("678558"),
-  u = s("689938"),
-  c = s("660600");
+var n = t(735250);
+t(470079);
+var i = t(120356),
+  l = t.n(i),
+  a = t(481060),
+  r = t(100527),
+  o = t(906732),
+  c = t(678558),
+  d = t(689938),
+  u = t(517673);
 let E = e => {
   let {
-    guild: t,
-    analyticsLocation: s,
-    className: l,
-    buttonProps: n = {
-      color: void 0,
-      look: i.ButtonLooks.INVERTED,
-      text: u.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_BANNER_BUTTON
+    guild: s,
+    analyticsLocation: t,
+    className: i,
+    buttonProps: l = {
+      color: a.ButtonColors.BRAND_INVERTED,
+      text: d.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_BANNER_BUTTON
     }
   } = e, {
     color: r,
-    look: o,
-    text: c
-  } = n, E = t.premiumTier + 1;
-  return (0, a.jsx)(d.default, {
+    text: o
+  } = l, u = s.premiumTier + 1;
+  return (0, n.jsx)(c.Z, {
     color: r,
-    look: o,
-    analyticsLocation: s,
-    guild: t,
-    buttonText: c,
-    targetBoostedGuildTier: E,
-    className: l
+    analyticsLocation: t,
+    guild: s,
+    buttonText: o,
+    targetBoostedGuildTier: u,
+    className: i
   })
 };
 
 function _(e) {
   let {
-    header: t,
-    text: l,
-    analyticsLocation: d,
-    guild: u,
+    header: s,
+    text: i,
+    analyticsLocation: c,
+    guild: d,
     className: _,
     textColor: I,
     headerColor: T,
-    buttonProps: S
+    buttonProps: N
   } = e, {
-    analyticsLocations: f
-  } = (0, o.default)(r.default.GUILD_BOOSTING_UPSELL_BANNER);
-  return (0, a.jsx)(o.AnalyticsLocationProvider, {
-    value: f,
-    children: (0, a.jsxs)("div", {
-      className: n()(c.banner, _),
-      children: [(0, a.jsx)("img", {
-        className: c.__invalid_headerGraphic,
+    analyticsLocations: m
+  } = (0, o.ZP)(r.Z.GUILD_BOOSTING_UPSELL_BANNER);
+  return (0, n.jsx)(o.Gt, {
+    value: m,
+    children: (0, n.jsxs)("div", {
+      className: l()(u.banner, _),
+      children: [(0, n.jsx)("img", {
+        className: u.__invalid_headerGraphic,
         alt: "",
-        src: s("322393")
-      }), (0, a.jsxs)("div", {
-        className: c.content,
-        children: [(0, a.jsx)(i.Text, {
+        src: t(322393)
+      }), (0, n.jsxs)("div", {
+        className: u.content,
+        children: [(0, n.jsx)(a.Text, {
           variant: "text-lg/semibold",
           color: null != T ? T : "always-white",
-          className: c.header,
-          children: t
-        }), (0, a.jsx)(i.Text, {
+          className: u.header,
+          children: s
+        }), (0, n.jsx)(a.Text, {
           variant: "text-sm/normal",
           color: null != I ? I : "always-white",
-          children: l
+          children: i
         })]
-      }), (0, a.jsx)("div", {
-        className: c.ctaContainer,
-        children: (0, a.jsx)(E, {
-          guild: u,
-          analyticsLocation: d,
-          className: c.button,
-          buttonProps: S
+      }), (0, n.jsx)("div", {
+        className: u.ctaContainer,
+        children: (0, n.jsx)(E, {
+          guild: d,
+          analyticsLocation: c,
+          className: u.button,
+          buttonProps: N
         })
       })]
     })

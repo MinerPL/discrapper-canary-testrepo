@@ -1,7 +1,7 @@
 var r;
 r = function() {
   "use strict";
-  var e, t, r, i, a = "undefined" != typeof window ? window : n.g,
+  var e, t, r, i, a = "undefined" != typeof window ? window : (n.g, n.g),
     o = a.cancelRequestAnimationFrame && a.requestAnimationFrame || setTimeout,
     s = a.cancelRequestAnimationFrame || clearTimeout,
     u = [],
@@ -47,7 +47,7 @@ r = function() {
   }
 
   function S() {
-    !l && (t = p - (Date.now() - m), e = Date.now(), l = !0, f && t < f && (t = f), t > 9 ? r = setTimeout(E, t) : (t = 0, E()))
+    if (!l) t = p - (Date.now() - m), e = Date.now(), l = !0, f && t < f && (t = f), t > 9 ? r = setTimeout(E, t) : (t = 0, E())
   }
 
   function x() {
@@ -61,7 +61,7 @@ r = function() {
     return h++, u.push(e), S(), h
   }
 
-  function T(e) {
+  function C(e) {
     var t = e - 1 - g;
     u[t] && (u[t] = null)
   }
@@ -85,7 +85,7 @@ r = function() {
         })
       }
     }(a.requestIdleCallback)
-  } else a.requestIdleCallback = w, a.cancelIdleCallback = T, a.document && document.addEventListener && (a.addEventListener("scroll", v, !0), a.addEventListener("resize", v), document.addEventListener("focus", v, !0), document.addEventListener("mouseover", v, !0), ["click", "keypress", "touchstart", "mousedown"].forEach(function(e) {
+  } else a.requestIdleCallback = w, a.cancelIdleCallback = C, a.document && document.addEventListener && (a.addEventListener("scroll", v, !0), a.addEventListener("resize", v), document.addEventListener("focus", v, !0), document.addEventListener("mouseover", v, !0), ["click", "keypress", "touchstart", "mousedown"].forEach(function(e) {
     document.addEventListener(e, v, {
       capture: !0,
       passive: !0
@@ -97,6 +97,6 @@ r = function() {
   }));
   return {
     request: w,
-    cancel: T
+    cancel: C
   }
 }, "function" == typeof define && define.amd ? define([], r) : e.exports ? e.exports = r() : window.idleCallbackShim = r()

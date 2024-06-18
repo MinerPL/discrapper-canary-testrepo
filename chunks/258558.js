@@ -1,10 +1,10 @@
 "use strict";
-var i, r, s, a, o, l, u;
-n.r(t), n("653041"), n("411104"), i = n.g, r = Date.now ? Date.now() : +new Date, s = i.performance || {}, a = [], o = {}, l = function(e, t) {
-  for (var n = 0, i = a.length, r = []; n < i; n++) a[n][e] == t && r.push(a[n]);
+var i, r, s, o, a, l, u;
+n(653041), n(411104), i = n.g, r = Date.now ? Date.now() : +new Date, s = i.performance || {}, o = [], a = {}, l = function(e, t) {
+  for (var n = 0, i = o.length, r = []; n < i; n++) o[n][e] == t && r.push(o[n]);
   return r
 }, u = function(e, t) {
-  for (var n, i = a.length; i--;)(n = a[i]).entryType == e && (void 0 === t || n.name == t) && a.splice(i, 1)
+  for (var n, i = o.length; i--;)(n = o[i]).entryType == e && (void 0 === t || n.name == t) && o.splice(i, 1)
 }, s.now || (s.now = s.webkitNow || s.mozNow || s.msNow || function() {
   return (Date.now ? Date.now() : +new Date) - r
 }), s.mark || (s.mark = s.webkitMark || function(e) {
@@ -14,12 +14,12 @@ n.r(t), n("653041"), n("411104"), i = n.g, r = Date.now ? Date.now() : +new Date
     startTime: s.now(),
     duration: 0
   };
-  a.push(t), o[e] = t
+  o.push(t), a[e] = t
 }), s.measure || (s.measure = s.webkitMeasure || function(e, t, n) {
   var i, r;
-  if (void 0 !== n && void 0 === o[n]) throw SyntaxError("Failed to execute 'measure' on 'Performance': The mark '" + n + "' does not exist.");
-  if (void 0 !== t && void 0 === o[t]) throw SyntaxError("Failed to execute 'measure' on 'Performance': The mark '" + t + "' does not exist.");
-  i = o[t] ? o[t].startTime : 0, r = o[n] ? o[n].startTime : s.now(), a.push({
+  if (void 0 !== n && void 0 === a[n]) throw SyntaxError("Failed to execute 'measure' on 'Performance': The mark '" + n + "' does not exist.");
+  if (void 0 !== t && void 0 === a[t]) throw SyntaxError("Failed to execute 'measure' on 'Performance': The mark '" + t + "' does not exist.");
+  i = a[t] ? a[t].startTime : 0, r = a[n] ? a[n].startTime : s.now(), o.push({
     name: e,
     entryType: "measure",
     startTime: i,

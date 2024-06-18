@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  VisuallyHidden: function() {
-    return u
-  },
-  useVisuallyHidden: function() {
+n.d(t, {
+  S: function() {
     return s
+  },
+  T: function() {
+    return u
   }
 });
-var r = n("182823"),
-  i = n("470079"),
-  a = n("612001");
+var r = n(182823),
+  i = n(470079),
+  a = n(612001);
 let o = {
   border: 0,
   clip: "rect(0 0 0 0)",
@@ -29,7 +29,7 @@ function s(e = {}) {
     isFocusable: n
   } = e, [r, s] = (0, i.useState)(!1), {
     focusWithinProps: u
-  } = (0, a.useFocusWithin)({
+  } = (0, a.L_)({
     isDisabled: !n,
     onFocusWithinChange: e => s(e)
   }), c = (0, i.useMemo)(() => r ? t : t ? {
@@ -54,5 +54,5 @@ function u(e) {
   } = e, {
     visuallyHiddenProps: c
   } = s(e);
-  return i.createElement(n, (0, r.mergeProps)(u, c), t)
+  return i.createElement(n, (0, r.dG)(u, c), t)
 }

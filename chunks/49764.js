@@ -1,14 +1,12 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("844303"),
-  i = r("464854");
-t.default = function(e) {
+var r = n(470079),
+  i = n(844303),
+  a = n(464854);
+t.Z = function(e) {
   var t = e.hex,
-    r = e.rgb,
-    n = e.onChange,
-    l = (0, o.default)({
+    n = e.rgb,
+    o = e.onChange,
+    s = (0, i.default)({
       default: {
         fields: {
           display: "flex",
@@ -69,56 +67,56 @@ t.default = function(e) {
       }
     }),
     u = function(e, t) {
-      e.r || e.g || e.b ? n({
-        r: e.r || r.r,
-        g: e.g || r.g,
-        b: e.b || r.b,
+      e.r || e.g || e.b ? o({
+        r: e.r || n.r,
+        g: e.g || n.g,
+        b: e.b || n.b,
         source: "rgb"
-      }, t) : n({
+      }, t) : o({
         hex: e.hex,
         source: "hex"
       }, t)
     };
-  return a().createElement("div", {
-    style: l.fields,
+  return r.createElement("div", {
+    style: s.fields,
     className: "flexbox-fix"
-  }, a().createElement("div", {
-    style: l.active
-  }), a().createElement(i.EditableInput, {
+  }, r.createElement("div", {
+    style: s.active
+  }), r.createElement(a.Vm, {
     style: {
-      wrap: l.HEXwrap,
-      input: l.HEXinput,
-      label: l.HEXlabel
+      wrap: s.HEXwrap,
+      input: s.HEXinput,
+      label: s.HEXlabel
     },
     label: "hex",
     value: t,
     onChange: u
-  }), a().createElement(i.EditableInput, {
+  }), r.createElement(a.Vm, {
     style: {
-      wrap: l.RGBwrap,
-      input: l.RGBinput,
-      label: l.RGBlabel
+      wrap: s.RGBwrap,
+      input: s.RGBinput,
+      label: s.RGBlabel
     },
     label: "r",
-    value: r.r,
+    value: n.r,
     onChange: u
-  }), a().createElement(i.EditableInput, {
+  }), r.createElement(a.Vm, {
     style: {
-      wrap: l.RGBwrap,
-      input: l.RGBinput,
-      label: l.RGBlabel
+      wrap: s.RGBwrap,
+      input: s.RGBinput,
+      label: s.RGBlabel
     },
     label: "g",
-    value: r.g,
+    value: n.g,
     onChange: u
-  }), a().createElement(i.EditableInput, {
+  }), r.createElement(a.Vm, {
     style: {
-      wrap: l.RGBwrap,
-      input: l.RGBinput,
-      label: l.RGBlabel
+      wrap: s.RGBwrap,
+      input: s.RGBinput,
+      label: s.RGBlabel
     },
     label: "b",
-    value: r.b,
+    value: n.b,
     onChange: u
   }))
 }

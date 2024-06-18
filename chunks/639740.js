@@ -1,11 +1,10 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("960259"),
-  s = n("359653"),
-  a = n("325767");
-t.default = (0, r.replaceIcon)(function(e) {
+var i = n(735250);
+n(470079);
+var r = n(960259),
+  s = n(359653),
+  o = n(325767);
+t.Z = (0, r.hN)(function(e) {
   let {
     width: t = 10,
     height: n = 10,
@@ -13,7 +12,7 @@ t.default = (0, r.replaceIcon)(function(e) {
     ...s
   } = e;
   return (0, i.jsx)("svg", {
-    ...(0, a.default)(s),
+    ...(0, o.Z)(s),
     width: t,
     height: n,
     viewBox: "0 0 10 10",
@@ -30,7 +29,7 @@ t.default = (0, r.replaceIcon)(function(e) {
     height: n = 10,
     ...r
   } = e;
-  return (0, i.jsx)(s.HomeIcon, {
+  return (0, i.jsx)(s.t, {
     width: t,
     height: n,
     ...r

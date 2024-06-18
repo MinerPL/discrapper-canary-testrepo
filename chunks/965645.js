@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 });
-var i = n("735250");
+var i = n(735250);
 
 function r(e) {
   let {
@@ -12,10 +12,10 @@ function r(e) {
     height: n = 24,
     boxColor: r,
     ribbonColor: s,
-    style: a
+    style: o
   } = e;
   return (0, i.jsxs)("svg", {
-    style: a,
+    style: o,
     width: t,
     height: n,
     viewBox: "0 0 24 24",
@@ -58,4 +58,4 @@ function r(e) {
     })]
   })
 }
-n("470079")
+n(470079)

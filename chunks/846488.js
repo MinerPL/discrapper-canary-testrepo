@@ -1,12 +1,12 @@
 "use strict";
-n.r(e), n.d(e, {
-  useSafetyHubInitialized: function() {
-    return u
+e.d(n, {
+  e: function() {
+    return l
   }
 });
-var i = n("442837"),
-  a = n("236289");
+var i = e(442837),
+  u = e(236289);
 
-function u() {
-  return (0, i.useStateFromStores)([a.default], () => a.default.isInitialized())
+function l() {
+  return (0, i.e7)([u.Z], () => u.Z.isInitialized())
 }

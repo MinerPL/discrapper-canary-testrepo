@@ -1,31 +1,37 @@
 "use strict";
 n.r(t), n.d(t, {
   DISCORD_EPOCH: function() {
-    return s.DISCORD_EPOCH
+    return s.cj
+  },
+  SnowflakeSequence: function() {
+    return s.Tk
   }
 });
-var i = n("392711"),
+var i = n(392711),
   r = n.n(i),
-  s = n("67423");
+  s = n(67423);
 
-function a(e) {
+function o(e) {
   return e
 }
 t.default = {
   age: function(e) {
-    return s.age(e)
+    return s.B_(e)
   },
   extractTimestamp: function(e) {
-    return s.extractTimestamp(e)
+    return s.Lm(e)
   },
   compare: function(e, t) {
-    return s.compare(e, t)
+    return s.qu(e, t)
   },
   atPreviousMillisecond: function(e) {
-    return s.atPreviousMillisecond(e)
+    return s.cO(e)
   },
   fromTimestamp: function(e) {
-    return s.fromTimestamp(e)
+    return s.Ol(e)
+  },
+  fromTimestampWithSequence: function(e, t) {
+    return s.P4(e, t)
   },
   keys: function(e) {
     return Object.keys(e)
@@ -48,5 +54,5 @@ t.default = {
   castGuildIdAsEveryoneGuildRoleId: function(e) {
     return e
   },
-  cast: a
+  cast: o
 }

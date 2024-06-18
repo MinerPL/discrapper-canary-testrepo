@@ -1,50 +1,50 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return c
+t.d(s, {
+  Z: function() {
+    return u
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("803997"),
-  n = s.n(l),
-  i = s("399606"),
-  r = s("481060"),
-  o = s("246946"),
-  d = s("467679"),
-  u = s("835291");
+var n = t(735250);
+t(470079);
+var i = t(120356),
+  l = t.n(i),
+  a = t(399606),
+  r = t(481060),
+  o = t(246946),
+  c = t(467679),
+  d = t(815589);
 
-function c(e) {
+function u(e) {
   let {
-    className: t,
-    avatarURL: s,
-    name: l,
-    bot: c,
+    className: s,
+    avatarURL: t,
+    name: i,
+    bot: u,
     verifiedBot: E,
     userTag: _
-  } = e, I = (0, i.useStateFromStores)([o.default], () => o.default.hidePersonalInformation);
-  return (0, a.jsxs)("div", {
-    className: n()(u.container, t),
-    children: [(0, a.jsx)(r.Avatar, {
-      className: u.avatar,
-      src: s,
+  } = e, I = (0, a.e7)([o.Z], () => o.Z.hidePersonalInformation);
+  return (0, n.jsxs)("div", {
+    className: l()(d.container, s),
+    children: [(0, n.jsx)(r.Avatar, {
+      className: d.avatar,
+      src: t,
       size: r.AvatarSizes.SIZE_24,
-      "aria-label": l
-    }), (0, a.jsxs)("div", {
-      className: u.textContainer,
-      children: [(0, a.jsx)(r.Text, {
+      "aria-label": i
+    }), (0, n.jsxs)("div", {
+      className: d.textContainer,
+      children: [(0, n.jsx)(r.Text, {
         tag: "span",
-        className: u.name,
+        className: d.name,
         color: "header-primary",
         variant: "text-sm/semibold",
-        children: l
-      }), c ? (0, a.jsx)(d.default, {
-        className: u.botTag,
+        children: i
+      }), u ? (0, n.jsx)(c.Z, {
+        className: d.botTag,
         verified: E
-      }) : null, I ? null : (0, a.jsx)(r.Text, {
+      }) : null, I ? null : (0, n.jsx)(r.Text, {
         tag: "span",
         color: "interactive-normal",
-        className: u.userTag,
+        className: d.userTag,
         variant: "text-sm/normal",
         children: _
       })]

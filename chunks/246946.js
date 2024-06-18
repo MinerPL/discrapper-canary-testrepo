@@ -1,10 +1,9 @@
 "use strict";
-n.r(t);
-var i, r = n("442837"),
-  s = n("570140"),
-  a = n("626135"),
-  o = n("314897"),
-  l = n("981631");
+var i, r = n(442837),
+  s = n(570140),
+  o = n(626135),
+  a = n(314897),
+  l = n(981631);
 
 function u(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -15,13 +14,13 @@ function u(e, t, n) {
   }) : e[t] = n, e
 }
 
-function d(e, t) {
-  a.default.track(l.AnalyticEvents.STREAMER_MODE_TOGGLE, {
+function _(e, t) {
+  o.default.track(l.rMx.STREAMER_MODE_TOGGLE, {
     enabled: e,
     automatic: t
   })
 }
-let _ = {
+let d = {
     enabled: !1,
     autoToggle: !0,
     hideInstantInvites: !0,
@@ -32,17 +31,17 @@ let _ = {
   },
   c = {},
   E = {
-    ..._
+    ...d
   };
-class I extends(i = r.default.PersistedStore) {
+class I extends(i = r.ZP.PersistedStore) {
   initialize(e) {
-    Object.assign(c, e), this.syncWith([o.default], () => {
+    Object.assign(c, e), this.syncWith([a.default], () => {
       var e;
-      let t, n = o.default.getId();
+      let t, n = a.default.getId();
       E = null != n ? (null == (t = c[e = n]) && (t = c[e] = {
-        ..._
+        ...d
       }), t) : {
-        ..._
+        ...d
       }
     })
   }
@@ -75,13 +74,13 @@ class I extends(i = r.default.PersistedStore) {
   }
 }
 u(I, "displayName", "StreamerModeStore"), u(I, "persistKey", "StreamerModeStore"), u(I, "migrations", [e => {
-  let t = o.default.getId();
+  let t = a.default.getId();
   return null == e || null == t ? {} : {
     [t]: {
       ...e
     }
   }
-}]), t.default = new I(s.default, {
+}]), t.Z = new I(s.Z, {
   LOGOUT: function(e) {
     !e.isSwitchingAccount && (c = {})
   },
@@ -92,7 +91,7 @@ u(I, "displayName", "StreamerModeStore"), u(I, "persistKey", "StreamerModeStore"
     let t = {
       ...E
     };
-    return E[e.key] = e.value, "enabled" === e.key ? d(e.value, !1) : a.default.track(l.AnalyticEvents.UPDATE_STREAMER_MODE_SETTINGS, {
+    return E[e.key] = e.value, "enabled" === e.key ? _(e.value, !1) : o.default.track(l.rMx.UPDATE_STREAMER_MODE_SETTINGS, {
       enabled: E.enabled,
       automatic: E.autoToggle,
       disable_notifications: E.disableNotifications,
@@ -113,7 +112,7 @@ u(I, "displayName", "StreamerModeStore"), u(I, "persistKey", "StreamerModeStore"
     if (!E.autoToggle) return !1;
     {
       let t = e.count > 0;
-      return E.enabled = t, d(t, !0), !0
+      return E.enabled = t, _(t, !0), !0
     }
   }
 })

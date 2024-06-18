@@ -1,6 +1,6 @@
 "use strict";
-var e = n("992051"),
-  o = n("801127");
+var e = n(992051),
+  o = n(801127);
 (t.exports = function(t, r) {
   return o[t] || (o[t] = void 0 !== r ? r : {})
 })("versions", []).push({

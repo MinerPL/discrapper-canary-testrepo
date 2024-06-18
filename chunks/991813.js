@@ -1,2 +1,2 @@
 "use strict";
-t.exports = n("896416")
+e.exports = t(896416)

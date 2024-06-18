@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n("47120"), n("653041");
-var i = n("31775"),
+n(47120), n(653041);
+var i = n(31775),
   r = n.n(i),
-  s = n("147913"),
-  a = n("626135"),
-  o = n("709054"),
-  l = n("981631");
+  s = n(147913),
+  o = n(626135),
+  a = n(709054),
+  l = n(981631);
 
 function u(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function u(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class d extends s.default {
+class _ extends s.Z {
   handleMessageBecameVisible(e) {
     let {
       messageId: t
@@ -35,14 +35,14 @@ class d extends s.default {
   handleMessageListVisibilityChange(e) {
     for (let t of e) this.handleMessageBecameVisible(t);
     let t = new Set(e.map(e => e.messageId));
-    for (let e of o.default.keys(this.currentlyVisibleMessageTimers)) !t.has(e) && this.handleMessageLostVisibility(e)
+    for (let e of a.default.keys(this.currentlyVisibleMessageTimers)) !t.has(e) && this.handleMessageLostVisibility(e)
   }
   handleChannelSelect() {
     for (let e of Object.values(this.currentlyVisibleMessageTimers)) clearTimeout(e);
     this.currentlyVisibleMessageTimers = {}, this.viewsInCurrentChannel.clear(), this.drainBuffer()
   }
   drainBuffer() {
-    for (let e of this.batchBuffer) a.default.track(l.AnalyticEvents.ANNOUNCEMENT_MESSAGE_VIEWED, {
+    for (let e of this.batchBuffer) o.default.track(l.rMx.ANNOUNCEMENT_MESSAGE_VIEWED, {
       message_id: e.messageId,
       channel_id: e.channelId,
       guild_id: e.guildId,
@@ -63,4 +63,4 @@ class d extends s.default {
     })
   }
 }
-t.default = new d
+t.Z = new _

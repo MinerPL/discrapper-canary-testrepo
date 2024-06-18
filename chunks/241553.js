@@ -1,39 +1,39 @@
 "use strict";
-n.r(t), n.d(t, {
-  SeasonalGiftIcon: function() {
-    return x
+n.d(t, {
+  e: function() {
+    return V
   }
-}), n("47120"), n("653041");
-var i = n("735250"),
-  r = n("470079"),
-  a = n("718017"),
-  s = n("442837"),
-  o = n("524437"),
-  l = n("780384"),
-  u = n("481060"),
-  d = n("845538"),
-  _ = n("410030"),
-  c = n("100527"),
-  E = n("906732"),
-  I = n("605236"),
-  T = n("243778"),
-  f = n("963249"),
-  S = n("646476"),
-  h = n("819640"),
-  A = n("594174"),
-  m = n("147915"),
-  N = n("559629"),
-  p = n("965645"),
-  O = n("362061"),
-  R = n("70956"),
-  C = n("709054"),
-  g = n("51144"),
-  L = n("981631"),
-  v = n("921944"),
-  D = n("474936"),
-  M = n("689938"),
-  y = n("343184"),
-  P = n("414367");
+}), n(47120), n(653041);
+var i = n(735250),
+  r = n(470079),
+  s = n(920906),
+  o = n(442837),
+  a = n(704215),
+  l = n(780384),
+  u = n(481060),
+  _ = n(845538),
+  d = n(410030),
+  c = n(100527),
+  E = n(906732),
+  I = n(605236),
+  T = n(243778),
+  h = n(963249),
+  S = n(646476),
+  f = n(819640),
+  N = n(594174),
+  A = n(147915),
+  m = n(559629),
+  O = n(965645),
+  R = n(362061),
+  C = n(70956),
+  p = n(709054),
+  g = n(51144),
+  L = n(981631),
+  v = n(921944),
+  D = n(474936),
+  M = n(689938),
+  P = n(252088),
+  y = n(838329);
 let U = [{
     box: "#FFD89E",
     ribbon: "#FF7476"
@@ -79,32 +79,32 @@ let U = [{
     ribbon: "#81C29F"
   }],
   G = 1 / 300,
-  w = R.default.Millis.DAYS_30,
-  B = (0, a.animated)(p.default),
-  k = (0, a.animated)(O.default),
-  V = (0, a.animated)(N.default);
+  w = C.Z.Millis.DAYS_30,
+  k = (0, s.animated)(O.Z),
+  B = (0, s.animated)(R.Z),
+  x = (0, s.animated)(m.Z);
 
-function x(e) {
+function V(e) {
   let {
     themeOverride: t,
     hovered: n,
-    isContentDismissed: s,
-    boxColors: o = {
+    isContentDismissed: o,
+    boxColors: a = {
       dark: U,
       light: b
     }
-  } = e, u = (0, _.default)(), [d, c] = function(e) {
-    let [t, n] = r.useState(!1), [i, a] = r.useState(Math.floor(7 * Math.random()));
+  } = e, u = (0, d.ZP)(), [_, c] = function(e) {
+    let [t, n] = r.useState(!1), [i, s] = r.useState(Math.floor(7 * Math.random()));
     return r.useEffect(() => {
       if (e) return;
       let t = Math.random() <= G;
       if (n(t), !t) {
         let e;
         do e = Math.floor(7 * Math.random()); while (e === i);
-        a(e)
+        s(e)
       }
     }, [e]), [t, i]
-  }(n), E = (0, a.useSpring)({
+  }(n), E = (0, s.useSpring)({
     reverse: !n,
     reset: !0,
     from: {
@@ -117,81 +117,81 @@ function x(e) {
       tension: 800,
       friction: 24
     }
-  }), I = s ? c : 0, T = (0, l.isThemeDark)(null != t ? t : u) ? o.dark[I] : o.light[I];
-  return !n && s ? (0, i.jsx)(V, {}) : s && d ? (0, i.jsx)(k, {
-    isDark: (0, l.isThemeDark)(u),
+  }), I = o ? c : 0, T = (0, l.wj)(null != t ? t : u) ? a.dark[I] : a.light[I];
+  return !n && o ? (0, i.jsx)(x, {}) : o && _ ? (0, i.jsx)(B, {
+    isDark: (0, l.wj)(u),
     style: E
-  }) : (0, i.jsx)(B, {
+  }) : (0, i.jsx)(k, {
     boxColor: T.box,
     ribbonColor: T.ribbon,
     style: E
   })
 }
-t.default = r.memo(function(e) {
+t.Z = r.memo(function(e) {
   let {
     disabled: t,
     channel: n
   } = e, {
-    analyticsLocations: a
-  } = (0, E.default)(c.default.GIFT_BUTTON), [l, _] = r.useState(!1), N = (0, s.useStateFromStores)([h.default], () => !(null === h.default || void 0 === h.default ? void 0 : h.default.hasLayers())), p = (0, s.useStateFromStores)([A.default], () => A.default.getCurrentUser()), O = null != p ? C.default.age(p.id) : 0, R = !t && N && O >= w, {
+    analyticsLocations: s
+  } = (0, E.ZP)(c.Z.GIFT_BUTTON), [l, d] = r.useState(!1), m = (0, o.e7)([f.Z], () => !(null === f.Z || void 0 === f.Z ? void 0 : f.Z.hasLayers())), O = (0, o.e7)([N.default], () => N.default.getCurrentUser()), R = null != O ? p.default.age(O.id) : 0, C = !t && m && R >= w, {
     enabled: U
-  } = S.SeasonalGiftingMarketingExperiment.useExperiment({
+  } = S.RO.useExperiment({
     location: "ChannelPremiumGiftButton"
   }, {
-    autoTrackExposure: R
+    autoTrackExposure: C
   }), b = [];
-  U && R && b.push(o.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
-  let [G, B] = (0, T.useSelectedDismissibleContent)(b), k = null != G, V = (0, g.useDirectMessageRecipient)(n), F = null != V;
+  U && C && b.push(a.z.SEASONAL_GIFTING_COACHMARK_2023);
+  let [G, k] = (0, T.U)(b), B = null != G, x = (0, g.Ft)(n), Z = null != x;
   if (t) return null;
   let H = () => {
-      (0, f.default)({
+      (0, h.Z)({
         isGift: !0,
-        giftRecipient: null == V ? void 0 : V,
+        giftRecipient: null == x ? void 0 : x,
         initialPlanId: null,
-        subscriptionTier: D.PremiumSubscriptionSKUs.TIER_2,
-        analyticsLocations: a,
+        subscriptionTier: D.Si.TIER_2,
+        analyticsLocations: s,
         analyticsObject: {
-          page: n.isPrivate() ? L.AnalyticsPages.DM_CHANNEL : L.AnalyticsPages.GUILD_CHANNEL,
-          section: L.AnalyticsSections.CHANNEL_TEXT_AREA,
-          object: L.AnalyticsObjects.SEASONAL_BUTTON_ICON,
-          objectType: L.AnalyticsObjectTypes.GIFT
+          page: n.isPrivate() ? L.ZY5.DM_CHANNEL : L.ZY5.GUILD_CHANNEL,
+          section: L.jXE.CHANNEL_TEXT_AREA,
+          object: L.qAy.SEASONAL_BUTTON_ICON,
+          objectType: L.Qqv.GIFT
         }
       })
     },
-    Y = (0, i.jsxs)("div", {
-      className: y.container,
+    F = (0, i.jsxs)("div", {
+      className: P.container,
       onMouseEnter: () => {
-        !l && _(!0)
+        !l && d(!0)
       },
       onMouseLeave: () => {
-        _(!1)
+        d(!1)
       },
-      children: [k && (0, i.jsx)(d.default, {
-        onComplete: () => _(!1),
+      children: [B && (0, i.jsx)(_.Z, {
+        onComplete: () => d(!1),
         onDMCheckItOutClick: H,
-        markAsDismissed: B,
-        isDM: F
-      }), (0, i.jsx)(m.default, {
-        innerClassName: P.button,
-        "aria-label": M.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
+        markAsDismissed: k,
+        isDM: Z
+      }), (0, i.jsx)(A.Z, {
+        innerClassName: y.button,
+        "aria-label": M.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
         isActive: !1,
         onClick: () => {
-          _(!1), (0, I.markDismissibleContentAsDismissed)(o.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023, {
-            dismissAction: v.ContentDismissActionType.TAKE_ACTION
+          d(!1), (0, I.EW)(a.z.SEASONAL_GIFTING_COACHMARK_2023, {
+            dismissAction: v.L.TAKE_ACTION
           }), H()
         },
         children: (0, i.jsx)("div", {
-          className: y.noPointerEvents,
-          children: (0, i.jsx)(x, {
+          className: P.noPointerEvents,
+          children: (0, i.jsx)(V, {
             hovered: l,
-            isContentDismissed: !k
+            isContentDismissed: !B
           })
         })
       })]
     });
-  return k ? Y : (0, i.jsx)(u.TooltipContainer, {
-    className: y.container,
-    text: (0, d.getSeasonalGiftingBody)(F),
-    children: Y
+  return B ? F : (0, i.jsx)(u.TooltipContainer, {
+    className: P.container,
+    text: (0, _.i)(Z),
+    children: F
   })
 })

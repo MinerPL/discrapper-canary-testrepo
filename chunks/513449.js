@@ -1,36 +1,36 @@
 "use strict";
-n.r(t), n.d(t, {
-  setIsOnStartStageScreen: function() {
-    return _
+n.d(t, {
+  Ku: function() {
+    return d
   },
-  useUpdateIsOnStartStageScreenEffect: function() {
+  MV: function() {
     return c
   }
 });
-var i = n("470079"),
-  r = n("652874"),
-  s = n("442837"),
-  a = n("496675"),
-  o = n("944486"),
-  l = n("146085"),
-  u = n("643632");
-let d = (0, r.default)(e => ({
+var i = n(470079),
+  r = n(652874),
+  s = n(442837),
+  o = n(496675),
+  a = n(944486),
+  l = n(146085),
+  u = n(643632);
+let _ = (0, r.Z)(e => ({
   isOnStartStageScreen: !0
 }));
 
-function _(e) {
-  d.setState({
+function d(e) {
+  _.setState({
     isOnStartStageScreen: e
   })
 }
 
 function c(e) {
-  let t = (0, s.useStateFromStores)([o.default], () => o.default.getVoiceChannelId() === e.id),
-    n = (0, s.useStateFromStores)([a.default], () => a.default.can(l.MODERATE_STAGE_CHANNEL_PERMISSIONS, e), [e]),
-    r = (0, u.default)(e.id),
-    d = n && !r;
+  let t = (0, s.e7)([a.Z], () => a.Z.getVoiceChannelId() === e.id),
+    n = (0, s.e7)([o.Z], () => o.Z.can(l.yP, e), [e]),
+    r = (0, u.Z)(e.id),
+    _ = n && !r;
   i.useEffect(() => {
-    t ? !d && _(!1) : _(d)
-  }, [t, d])
+    t ? !_ && d(!1) : d(_)
+  }, [t, _])
 }
-t.default = d
+t.ZP = _

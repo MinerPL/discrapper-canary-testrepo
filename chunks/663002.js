@@ -1,23 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
-  isThemeDark: function() {
-    return s
-  },
-  isThemeLight: function() {
+n.d(t, {
+  a: function() {
     return r
+  },
+  w: function() {
+    return s
   }
 });
-var i = n("231338");
+var i = n(231338);
 
 function r(e) {
-  return e === i.ThemeTypes.LIGHT
+  return e === i.BR.LIGHT
 }
 
 function s(e) {
   switch (e) {
-    case i.ThemeTypes.DARK:
-    case i.ThemeTypes.MIDNIGHT:
-    case i.ThemeTypes.DARKER:
+    case i.BR.DARK:
+    case i.BR.MIDNIGHT:
+    case i.BR.DARKER:
       return !0;
     default:
       return !1

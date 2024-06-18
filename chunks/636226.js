@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return i
   }
 });
-var r = n("49691");
+var r = n(49691);
 
 function i(e) {
-  var t = (0, r.default)(e);
+  var t = (0, r.Z)(e);
   return {
     scrollLeft: t.pageXOffset,
     scrollTop: t.pageYOffset

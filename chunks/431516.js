@@ -1,20 +1,20 @@
 "use strict";
-s.r(t), s.d(t, {
-  useIsMFAEnabled: function() {
+t.d(s, {
+  N: function() {
     return r
   }
 });
-var a = s("399606"),
-  l = s("999382"),
-  n = s("594174"),
-  i = s("981631");
+var n = t(399606),
+  i = t(999382),
+  l = t(594174),
+  a = t(981631);
 
 function r() {
-  let e = (0, a.useStateFromStores)([n.default], () => n.default.getCurrentUser()),
-    t = (0, a.useStateFromStores)([l.default], () => l.default.getProps().mfaLevel),
-    s = (null == e ? void 0 : e.mfaEnabled) === !0;
+  let e = (0, n.e7)([l.default], () => l.default.getCurrentUser()),
+    s = (0, n.e7)([i.Z], () => i.Z.getProps().mfaLevel),
+    t = (null == e ? void 0 : e.mfaEnabled) === !0;
   return {
-    isUserMFAEnabled: s,
-    isModerationMFAEnabled: t === i.MFALevels.ELEVATED
+    isUserMFAEnabled: t,
+    isModerationMFAEnabled: s === a.BpS.ELEVATED
   }
 }

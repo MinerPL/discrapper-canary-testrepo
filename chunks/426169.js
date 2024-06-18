@@ -1,6 +1,6 @@
-var n = r("657398"),
-  a = r("402428"),
-  o = r("389109");
+var r = n(657398),
+  i = n(402428),
+  a = n(389109);
 e.exports = function(e) {
-  return "string" == typeof e || !a(e) && o(e) && "[object String]" == n(e)
+  return "string" == typeof e || !i(e) && a(e) && "[object String]" == r(e)
 }

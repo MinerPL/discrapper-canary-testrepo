@@ -1,5 +1,5 @@
 "use strict";
-var n = r("379846");
+var n = r(379846);
 t.exports = function(t, e) {
   t.setMode("composite"), t.update(n.set(t._latestEditorState, {
     inCompositionMode: !0

@@ -1,27 +1,26 @@
 "use strict";
-n.r(t);
-var i, r, s, a, o = n("442837"),
-  l = n("570140"),
-  u = n("585483"),
-  d = n("981631");
-let _ = null,
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(585483),
+  _ = n(981631);
+let d = null,
   c = 0;
 
 function E() {
-  _ = null
+  d = null
 }
-class I extends(a = o.default.Store) {
+class I extends(o = a.ZP.Store) {
   isOpen() {
-    return null != _
+    return null != d
   }
   get version() {
     return c
   }
   getContextMenu() {
-    return _
+    return d
   }
   close() {
-    return !!this.isOpen() && (u.ComponentDispatch.dispatch(d.ComponentActions.CONTEXT_MENU_CLOSE), !0)
+    return !!this.isOpen() && (u.S.dispatch(_.CkL.CONTEXT_MENU_CLOSE), !0)
   }
 }
 s = "ContextMenuStore", (r = "displayName") in(i = I) ? Object.defineProperty(i, r, {
@@ -29,12 +28,12 @@ s = "ContextMenuStore", (r = "displayName") in(i = I) ? Object.defineProperty(i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new I(l.default, {
+}) : i[r] = s, t.Z = new I(l.Z, {
   CONTEXT_MENU_OPEN: function(e) {
     let {
       contextMenu: t
     } = e;
-    c++, _ = t
+    c++, d = t
   },
   LAYER_PUSH: E,
   CONTEXT_MENU_CLOSE: E,

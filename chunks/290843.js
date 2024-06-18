@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
-  useDrop: function() {
-    return c
+n.d(t, {
+  L: function() {
+    return s
   }
 });
-var r = n("387063"),
-  i = n("341932"),
-  a = n("369999"),
-  o = n("782728"),
-  s = n("3022"),
-  u = n("151699");
+var r = n(387063),
+  i = n(341932),
+  o = n(369999),
+  u = n(782728),
+  a = n(3022),
+  c = n(151699);
 
-function c(e, t) {
-  var n = (0, i.useOptionalFactory)(e, t),
-    c = (0, a.useDropTargetMonitor)(),
-    l = (0, o.useDropTargetConnector)(n.options);
-  return (0, r.useRegisteredDropTarget)(n, c, l), [(0, s.useCollectedProps)(n.collect, c, l), (0, u.useConnectDropTarget)(l)]
+function s(e, t) {
+  var n = (0, i.w)(e, t),
+    s = (0, o.V)(),
+    l = (0, u.H)(n.options);
+  return (0, r.E)(n, s, l), [(0, a.J)(n.collect, s, l), (0, c.s)(l)]
 }

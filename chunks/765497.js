@@ -1,13 +1,13 @@
 "use strict";
-n.r(e), n.d(e, {
-  makePromiseBuffer: function() {
-    return a
+n.d(e, {
+  x: function() {
+    return s
   }
 });
-var r = n("303155"),
-  i = n("880803");
+var r = n(303155),
+  i = n(880803);
 
-function a(t) {
+function s(t) {
   let e = [];
 
   function n(t) {
@@ -15,21 +15,21 @@ function a(t) {
   }
   return {
     $: e,
-    add: function(a) {
-      if (!(void 0 === t || e.length < t)) return (0, i.rejectedSyncPromise)(new r.SentryError("Not adding Promise because buffer limit was reached."));
-      let o = a();
-      return -1 === e.indexOf(o) && e.push(o), o.then(() => n(o)).then(null, () => n(o).then(null, () => {})), o
+    add: function(s) {
+      if (!(void 0 === t || e.length < t)) return (0, i.$2)(new r.b("Not adding Promise because buffer limit was reached."));
+      let a = s();
+      return -1 === e.indexOf(a) && e.push(a), a.then(() => n(a)).then(null, () => n(a).then(null, () => {})), a
     },
     drain: function(t) {
-      return new i.SyncPromise((n, r) => {
-        let a = e.length;
-        if (!a) return n(!0);
-        let o = setTimeout(() => {
+      return new i.cW((n, r) => {
+        let s = e.length;
+        if (!s) return n(!0);
+        let a = setTimeout(() => {
           t && t > 0 && n(!1)
         }, t);
         e.forEach(t => {
-          (0, i.resolvedSyncPromise)(t).then(() => {
-            !--a && (clearTimeout(o), n(!0))
+          (0, i.WD)(t).then(() => {
+            !--s && (clearTimeout(a), n(!0))
           }, r)
         })
       })

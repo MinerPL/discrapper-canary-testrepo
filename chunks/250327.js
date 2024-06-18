@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  millisecondsInHour: function() {
+n.d(t, {
+  qk: function() {
+    return a
+  },
+  vh: function() {
     return i
   },
-  millisecondsInMinute: function() {
+  yJ: function() {
     return r
-  },
-  millisecondsInSecond: function() {
-    return a
   }
 });
 var r = 6e4,

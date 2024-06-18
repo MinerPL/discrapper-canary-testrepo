@@ -1,7 +1,7 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return i.default
+n.d(t, {
+  Z: function() {
+    return i.Z
   }
 });
-var i = n("331595")
+var i = n(331595)

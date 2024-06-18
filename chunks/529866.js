@@ -1,24 +1,24 @@
 "use strict";
 let r;
-n.r(e), n.d(e, {
-  CONSOLE_LEVELS: function() {
+n.d(e, {
+  Cf: function() {
     return a
   },
-  consoleSandbox: function() {
-    return o
+  RU: function() {
+    return s
   },
-  logger: function() {
+  kg: function() {
     return r
   }
 });
-var i = n("24716");
-let a = ["debug", "info", "warn", "error", "log", "assert", "trace"];
+var i = n(24716);
+let s = ["debug", "info", "warn", "error", "log", "assert", "trace"];
 
-function o(t) {
-  if (!("console" in i.GLOBAL_OBJ)) return t();
-  let e = i.GLOBAL_OBJ.console,
+function a(t) {
+  if (!("console" in i.n2)) return t();
+  let e = i.n2.console,
     n = {};
-  a.forEach(t => {
+  s.forEach(t => {
     let r = e[t] && e[t].__sentry_original__;
     t in e && r && (n[t] = e[t], e[t] = r)
   });
@@ -31,7 +31,7 @@ function o(t) {
   }
 }
 
-function s() {
+function o() {
   let t = !1,
     e = {
       enable: () => {
@@ -41,14 +41,14 @@ function s() {
         t = !1
       }
     };
-  return "undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__ ? a.forEach(n => {
+  return "undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__ ? s.forEach(n => {
     e[n] = (...e) => {
-      t && o(() => {
-        i.GLOBAL_OBJ.console[n](`Sentry Logger [${n}]:`, ...e)
+      t && a(() => {
+        i.n2.console[n](`Sentry Logger [${n}]:`, ...e)
       })
     }
-  }) : a.forEach(t => {
+  }) : s.forEach(t => {
     e[t] = () => void 0
   }), e
 }
-r = "undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__ ? (0, i.getGlobalSingleton)("logger", s) : s()
+"undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__ ? r = (0, i.YO)("logger", o) : r = o()

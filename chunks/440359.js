@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  EnterLeaveCounter: function() {
+n.d(t, {
+  e: function() {
     return o
   }
 });
-var r = n("708644");
+var r = n(708644);
 
 function i(e, t) {
   for (var n = 0; n < t.length; n++) {
@@ -34,7 +34,7 @@ var o = function() {
     value: function(e) {
       var t = this,
         n = this.entered.length;
-      return this.entered = (0, r.union)(this.entered.filter(function(n) {
+      return this.entered = (0, r.G0)(this.entered.filter(function(n) {
         return t.isNodeInDocument(n) && (!n.contains || n.contains(e))
       }), [e]), 0 === n && this.entered.length > 0
     }
@@ -42,12 +42,12 @@ var o = function() {
     key: "leave",
     value: function(e) {
       var t = this.entered.length;
-      return this.entered = (0, r.without)(this.entered.filter(this.isNodeInDocument), e), t > 0 && 0 === this.entered.length
+      return this.entered = (0, r.zu)(this.entered.filter(this.isNodeInDocument), e), t > 0 && 0 === this.entered.length
     }
   }, {
     key: "reset",
     value: function() {
       this.entered = []
     }
-  }], i(e.prototype, t), n && i(e, n), o
+  }], i(e.prototype, t), o
 }()

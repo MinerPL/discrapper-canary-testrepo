@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  BatchedStoreListener: function() {
+n.d(t, {
+  F: function() {
     return s
   }
-}), n("411104");
-var i = n("153102");
+}), n(411104);
+var i = n(153102);
 
 function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -32,8 +32,8 @@ class s {
   }
   constructor(e, t) {
     r(this, "stores", void 0), r(this, "changeCallback", void 0), r(this, "storeVersionHandled", void 0), r(this, "handleStoreChange", () => {
-      let e = i.default.getChangeSentinel();
-      this.storeVersionHandled !== e && (this.changeCallback(), this.storeVersionHandled = e)
+      let e = i.Z.getChangeSentinel();
+      if (this.storeVersionHandled !== e) this.changeCallback(), this.storeVersionHandled = e
     }), this.stores = e, this.changeCallback = t
   }
 }

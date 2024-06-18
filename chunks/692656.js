@@ -1,8 +1,8 @@
 "use strict";
-let r = n("689118"),
-  i = n("988324").Buffer,
-  a = n("206424"),
-  o = n("375990");
+let r = n(689118),
+  i = n(988324).Buffer,
+  a = n(206424),
+  o = n(375990);
 
 function s(e) {
   this.enc = "der", this.name = e.name, this.entity = e, this.tree = new u, this.tree._init(e.body)

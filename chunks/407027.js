@@ -7,10 +7,10 @@ var i, r, n = this && this.__importDefault || function(t) {
 Object.defineProperty(e, "__esModule", {
   value: !0
 }), e.ICalCalendarMethod = void 0;
-let s = a("411496"),
-  o = n(a("210646")),
-  d = a("613919"),
-  l = a("613919");
+let s = a(411496),
+  o = n(a(210646)),
+  d = a(613919),
+  l = a(613919);
 (i = r = e.ICalCalendarMethod || (e.ICalCalendarMethod = {})).PUBLISH = "PUBLISH", i.REQUEST = "REQUEST", i.REPLY = "REPLY", i.ADD = "ADD", i.CANCEL = "CANCEL", i.REFRESH = "REFRESH", i.COUNTER = "COUNTER", i.DECLINECOUNTER = "DECLINECOUNTER";
 e.default = class t {
   constructor(t = {}) {
@@ -119,7 +119,7 @@ e.default = class t {
       var e;
       if (!(null === (e = this.data.timezone) || void 0 === e ? void 0 : e.generator)) return;
       let i = this.data.timezone.generator(t);
-      i && (a += i.replace(/\r\n/g, "\n").replace(/\n/g, "\r\n").trim() + "\r\n")
+      if (!!i) a += i.replace(/\r\n/g, "\n").replace(/\n/g, "\r\n").trim() + "\r\n"
     }), (null === (e = this.data.timezone) || void 0 === e ? void 0 : e.name) && (a += "TIMEZONE-ID:" + this.data.timezone.name + "\r\n" + ("X-WR-TIMEZONE:" + this.data.timezone.name + "\r\n")), this.data.ttl && (a += "REFRESH-INTERVAL;VALUE=DURATION:" + (0, s.toDurationString)(this.data.ttl) + "\r\n" + ("X-PUBLISHED-TTL:" + (0, s.toDurationString)(this.data.ttl) + "\r\n")), this.data.events.forEach(t => a += t.toString()), a += (0, s.generateCustomAttributes)(this.data) + "END:VCALENDAR", (0, s.foldLines)(a)
   }
 }

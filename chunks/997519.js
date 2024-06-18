@@ -1,52 +1,52 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return d
+t.d(s, {
+  Z: function() {
+    return c
   }
 });
-var a = s("470079"),
-  l = s("766434"),
-  n = s("310291"),
-  i = s("730647"),
-  r = s("495298"),
-  o = s("198139");
+var n = t(470079),
+  i = t(766434),
+  l = t(310291),
+  a = t(730647),
+  r = t(495298),
+  o = t(198139);
 
-function d(e, t) {
-  let s = null == t ? void 0 : t.team,
+function c(e, s) {
+  let t = null == s ? void 0 : s.team,
     {
-      payoutsByPeriod: d,
-      loading: u
-    } = (0, n.default)(null == t ? void 0 : t.id, {
-      groupType: o.PaymentPayoutGroupTypes.SERVER_ROLE_SUBSCRIPTION,
-      teamId: null == s ? void 0 : s.id
+      payoutsByPeriod: c,
+      loading: d
+    } = (0, l.Z)(null == s ? void 0 : s.id, {
+      groupType: o.uw.SERVER_ROLE_SUBSCRIPTION,
+      teamId: null == t ? void 0 : t.id
     }),
-    c = (0, i.useGroupListingsFetchContext)("useEarningMetrics"),
-    E = (0, r.default)(e),
+    u = (0, a.f)("useEarningMetrics"),
+    E = (0, r.Z)(e),
     {
       currentPeriod: _,
       previousPeriods: I,
       metrics: T
-    } = a.useMemo(() => {
+    } = n.useMemo(() => {
       let {
         currentPeriod: e,
-        previousPeriods: t
-      } = (0, l.splitCurrentPeriod)(d), s = (0, l.calculateMetrics)(e, t[0]);
+        previousPeriods: s
+      } = (0, i.Br)(c), t = (0, i.Uj)(e, s[0]);
       return {
         currentPeriod: e,
-        previousPeriods: t,
+        previousPeriods: s,
         metrics: {
-          ...s,
+          ...t,
           subscribers: E,
-          subscriberChange: s.paymentsCountChange
+          subscriberChange: t.paymentsCountChange
         }
       }
-    }, [d, E]);
+    }, [c, E]);
   return {
-    loading: u || !c,
-    team: s,
+    loading: d || !u,
+    team: t,
     currentPeriod: _,
     previousPeriods: I,
-    allPeriods: d,
+    allPeriods: c,
     metrics: T
   }
 }

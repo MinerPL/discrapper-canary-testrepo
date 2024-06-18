@@ -1,2 +1,2 @@
 "use strict";
-e.exports = n.p + "04bca5e801a9fcbfc3aa.woff2"
+e.exports = n.p + "ecff74bf4394e6e58dd1.woff2"

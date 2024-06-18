@@ -8,8 +8,8 @@ function r(e) {
     bottom: e.y + e.height
   })
 }
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 })

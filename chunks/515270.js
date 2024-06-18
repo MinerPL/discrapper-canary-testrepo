@@ -1,101 +1,101 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return h
+n.d(t, {
+  L6: function() {
+    return R
   },
-  hasOpenPlainTextCodeBlock: function() {
-    return p
+  ZP: function() {
+    return f
   },
-  isPointInCodeBlock: function() {
+  iF: function() {
     return O
   }
-}), n("47120"), n("411104"), n("653041"), n("757143");
-var i = n("920478"),
-  r = n("31775"),
+}), n(47120), n(411104), n(653041), n(757143);
+var i = n(920478),
+  r = n(31775),
   s = n.n(r),
-  a = n("70956"),
-  o = n("364964"),
-  l = n("53529"),
-  u = n("925994"),
-  d = n("436660"),
-  _ = n("887490"),
-  c = n("42530");
+  o = n(70956),
+  a = n(364964),
+  l = n(53529),
+  u = n(925994),
+  _ = n(436660),
+  d = n(887490),
+  c = n(42530);
 let E = new Set(["line"]),
-  I = i.default.listLanguages(),
+  I = i.Z.listLanguages(),
   T = {};
 for (let e of I) {
   e = e.toLowerCase();
-  let t = i.default.getLanguage(e);
+  let t = i.Z.getLanguage(e);
   if (null == t) continue;
   let n = t.aliases;
   if (T[e] = e, null != n)
     for (let t of n) T[t.toLowerCase()] = e
 }
-let f = /^[a-z0-9_+\-.#]+$/,
+let h = /^[a-z0-9_+\-.#]+$/,
   S = /^[a-z0-9_+\-.#]+$/i;
 for (let e in T)
-  if (null == e.match(f)) throw Error("Language name does not match regex: ".concat(e));
+  if (null == e.match(h)) throw Error("Language name does not match regex: ".concat(e));
 
-function h(e) {
+function f(e) {
   let {
     onChange: t
   } = e, n = null;
   return e.onChange = () => {
-    _.EditorUtils.richValue(e) !== n && (l.HistoryUtils.withMergedEntry(e, () => {
-      _.EditorUtils.withoutNormalizing(e, () => (function(e) {
+    d.bN.richValue(e) !== n && (l.T.withMergedEntry(e, () => {
+      d.bN.withoutNormalizing(e, () => (function(e) {
         let t = function(e) {
           let t = [],
             n = null;
-          for (let i of _.EditorUtils.blocks(e)) {
+          for (let i of d.bN.blocks(e)) {
             let r = null != n && (n.isInCodeBlock || n.opensCodeBlock),
               s = null != n && (n.isStyledCodeBlockLine || n.opensCodeBlockOnOwnLine);
             n = function(e, t, n, i, r) {
               var s;
-              let a = function(e) {
+              let o = function(e) {
                   let t;
                   let [n, i] = e;
                   if (!E.has(n.type)) return [];
                   let r = [],
                     s = /\\|```/g;
                   for (let e = 0; e < n.children.length; e++) {
-                    let a = n.children[e];
-                    if (_.TextUtils.isText(a))
-                      for (s.lastIndex = 0; null != (t = s.exec(a.text));) {
+                    let o = n.children[e];
+                    if (d.LC.isText(o))
+                      for (s.lastIndex = 0; null != (t = s.exec(o.text));) {
                         if ("\\" === t[0]) {
                           s.lastIndex += 1;
                           continue
                         }
                         r.push({
-                          path: _.PathUtils.child(i, e),
+                          path: d.C0.child(i, e),
                           offset: t.index
                         })
                       }
                   }
                   return r
                 }(t),
-                o = a[0],
-                l = a[a.length - 1],
+                a = o[0],
+                l = o[o.length - 1],
                 u = null;
               if (null != l) {
-                let [t] = _.EditorUtils.node(e, l.path);
+                let [t] = d.bN.node(e, l.path);
                 u = t.text.substring(l.offset + 3)
               }
-              let d = n && null != o,
-                c = n && 0 === a.length,
-                I = i && 0 === a.length,
-                f = (d ? a.slice(1) : a).length % 2 == 1,
-                h = f && (null == u || "" === u || null != u.match(S)),
-                A = h && null != u && null !== (s = T[u.toLowerCase()]) && void 0 !== s ? s : null;
+              let _ = n && null != a,
+                c = n && 0 === o.length,
+                I = i && 0 === o.length,
+                h = (_ ? o.slice(1) : o).length % 2 == 1,
+                f = h && (null == u || "" === u || null != u.match(S)),
+                N = f && null != u && null !== (s = T[u.toLowerCase()]) && void 0 !== s ? s : null;
               return {
                 blockEntry: t,
                 wasInCodeBlock: n,
                 isInCodeBlock: c,
                 isStyledCodeBlockLine: I,
-                lang: f || d ? A : r,
+                lang: h || _ ? N : r,
                 hljsTypes: null,
-                closesCodeBlock: d,
-                opensCodeBlock: f,
-                opensCodeBlockOnOwnLine: h
+                closesCodeBlock: _,
+                opensCodeBlock: h,
+                opensCodeBlockOnOwnLine: f
               }
             }(e, i, r, s, null != n && (n.opensCodeBlock || !n.closesCodeBlock) ? n.lang : null), t.push(n)
           }
@@ -105,44 +105,44 @@ function h(e) {
             for (let r of e) {
               let s = r === e[e.length - 1];
               if ((r.closesCodeBlock || s) && (n && s && !r.closesCodeBlock && t.push(r), n = !1, t.length > 0)) {
-                let e = t.map(e => (0, u.serializeDescendant)(e.blockEntry[0])).join("\n"),
+                let e = t.map(e => (0, u.sg)(e.blockEntry[0])).join("\n"),
                   n = t[0].lang;
-                if (null != n && null != i.default.getLanguage(n)) {
+                if (null != n && null != i.Z.getLanguage(n)) {
                   let i = function(e, t) {
                     let n = "".concat(e, "-").concat(t),
-                      i = N.get(n);
+                      i = m.get(n);
                     if (null != i) return i;
-                    let r = o.default.highlight(t, e, !1);
+                    let r = a.default.highlight(t, e, !1);
                     if (null == r || r.illegal) return null;
                     let s = r.value.split("\n");
-                    return N.set(n, s), s
+                    return m.set(n, s), s
                   }(e, n);
                   if (null != i && i.length === t.length) {
                     let e = [];
                     for (let n = 0; n < t.length; n++) {
                       let r;
                       let s = i[n].replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#x27;/g, "'"),
-                        a = [],
-                        o = 0,
+                        o = [],
+                        a = 0,
                         l = 0;
-                      for (; null != (r = A.exec(s));) {
+                      for (; null != (r = N.exec(s));) {
                         let t = r.index + r[0].length,
                           n = r.index - l;
-                        r.index > l && (e.length > 0 && a.push({
+                        r.index > l && (e.length > 0 && o.push({
                           types: [...e],
-                          start: o,
-                          end: o + n
-                        }), o += n), "</span>" === r[0] ? e.pop() : e.push(r[1]), l = t
+                          start: a,
+                          end: a + n
+                        }), a += n), "</span>" === r[0] ? e.pop() : e.push(r[1]), l = t
                       }
                       if (e.length > 0) {
                         let t = s.length - l;
-                        a.push({
+                        o.push({
                           types: [...e],
-                          start: o,
-                          end: o + t
+                          start: a,
+                          end: a + t
                         })
                       }
-                      t[n].hljsTypes = a
+                      t[n].hljsTypes = o
                     }
                   } else
                     for (let e = 0; e < t.length; e++) t[e].hljsTypes = null
@@ -164,7 +164,7 @@ function h(e) {
                 hljsTypes: e.hljsTypes
               } : null
             }(n);
-            (null == t ? void 0 : t.codeBlockState) != r && d.SlateTransforms.setNodes(e, {
+            (null == t ? void 0 : t.codeBlockState) != r && _.Q.setNodes(e, {
               codeBlockState: r
             }, {
               at: i
@@ -172,41 +172,41 @@ function h(e) {
           }
         })(e, t)
       })(e))
-    }), n = _.EditorUtils.richValue(e)), t()
+    }), n = d.bN.richValue(e)), t()
   }, e
 }
-let A = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
-  m = {
+let N = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
+  A = {
     max: 1 / 0,
-    maxAge: 1 * a.default.Millis.MINUTE,
+    maxAge: 1 * o.Z.Millis.MINUTE,
     updateAgeOnGet: !0
   },
-  N = new(s())(m);
+  m = new(s())(A);
 
 function O(e, t) {
   let n = 0;
-  for (let r of _.EditorUtils.nodes(e, {
+  for (let r of d.bN.nodes(e, {
       at: {
         anchor: {
-          path: c.FIRST_TEXT_PATH,
+          path: c.u9,
           offset: 0
         },
         focus: t
       },
       mode: "lowest",
-      match: e => _.TextUtils.isText(e)
+      match: e => d.LC.isText(e)
     })) {
     var i;
     let e = r[0].text;
-    _.PathUtils.equals(r[1], t.path) && (e = e.substring(0, t.offset));
+    d.C0.equals(r[1], t.path) && (e = e.substring(0, t.offset));
     let s = e.match(/```/g);
     n += null !== (i = null == s ? void 0 : s.length) && void 0 !== i ? i : 0
   }
   return n % 2 != 0
 }
 
-function p(e) {
+function R(e) {
   if (null == e.selection) return !1;
-  let t = _.RangeUtils.start(e.selection);
+  let t = d.M8.start(e.selection);
   return O(e, t)
 }

@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return o
+n.d(t, {
+  Z: function() {
+    return a
   }
 });
-var i = n("442837"),
-  r = n("594174"),
-  s = n("74538"),
-  a = n("981631");
+var i = n(442837),
+  r = n(594174),
+  s = n(74538),
+  o = n(981631);
 
-function o() {
-  return (0, i.useStateFromStores)([r.default], () => s.default.canUseIncreasedMessageLength(r.default.getCurrentUser())) ? a.MAX_MESSAGE_LENGTH_PREMIUM : a.MAX_MESSAGE_LENGTH
+function a() {
+  return (0, i.e7)([r.default], () => s.ZP.canUseIncreasedMessageLength(r.default.getCurrentUser())) ? o.en1 : o.J6R
 }

@@ -1,5 +1,5 @@
 "use strict";
-var e = n("951332"),
+var e = n(951332),
   o = RangeError;
 t.exports = function(t, r) {
   var n = e(t);

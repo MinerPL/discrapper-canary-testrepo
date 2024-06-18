@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 });
-var i = n("594190");
+var i = n(594190);
 
 function r(e) {
   let t, n;
   if (null == e) return {};
   let r = e.sourcePid;
   if (null != r) {
-    let e = i.default.getGameForPID(r);
+    let e = i.ZP.getGameForPID(r);
     t = null == e ? void 0 : e.name, n = null == e ? void 0 : e.id
   }
   return {

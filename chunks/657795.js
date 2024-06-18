@@ -1,86 +1,86 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return R
+n.d(t, {
+  Z: function() {
+    return C
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
-  o = n("442837"),
-  l = n("481060"),
-  u = n("100527"),
-  d = n("906732"),
-  _ = n("104494"),
-  c = n("639119"),
-  E = n("165583"),
-  I = n("626135"),
-  T = n("453070"),
-  f = n("926491"),
-  S = n("419922"),
-  h = n("27733"),
-  A = n("611480"),
-  m = n("981631"),
-  N = n("474936"),
-  p = n("689938"),
-  O = n("243935");
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(442837),
+  l = n(481060),
+  u = n(100527),
+  _ = n(906732),
+  d = n(104494),
+  c = n(639119),
+  E = n(165583),
+  I = n(626135),
+  T = n(453070),
+  h = n(926491),
+  S = n(419922),
+  f = n(27733),
+  N = n(611480),
+  A = n(981631),
+  m = n(474936),
+  O = n(689938),
+  R = n(121185);
 
-function R(e) {
-  var t, n, a;
+function C(e) {
+  var t, n, s;
   let {
-    className: R,
-    onClose: C
+    className: C,
+    onClose: p
   } = e;
-  (0, T.useFetchStickerPacks)();
+  (0, T.fP)();
   let {
     analyticsLocations: g
-  } = (0, d.default)(u.default.EMPTY_STATE), L = (0, o.useStateFromStoresArray)([f.default], () => A.EMPTY_STATE_STICKERS.map(e => f.default.getStickerById(e)));
+  } = (0, _.ZP)(u.Z.EMPTY_STATE), L = (0, a.Wu)([h.Z], () => N.Wt.map(e => h.Z.getStickerById(e)));
   r.useEffect(() => {
-    I.default.track(m.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: N.PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL,
+    I.default.track(A.rMx.PREMIUM_UPSELL_VIEWED, {
+      type: m.cd.EMPTY_STICKER_PICKER_UPSELL,
       source: {
-        section: m.AnalyticsSections.EMPTY_STICKER_PICKER_UPSELL
+        section: A.jXE.EMPTY_STICKER_PICKER_UPSELL
       },
       location_stack: g
     })
   }, [g]);
-  let v = (0, c.usePremiumTrialOffer)(),
-    D = (0, _.usePremiumDiscountOffer)(),
+  let v = (0, c.N)(),
+    D = (0, d.Ng)(),
     M = null != v || null != D,
-    y = (null == v ? void 0 : null === (t = v.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === N.PremiumSubscriptionSKUs.TIER_0;
+    P = (null == v ? void 0 : null === (t = v.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === m.Si.TIER_0;
   return (0, i.jsxs)("div", {
-    className: s()(O.emptyState, R, {
-      [O.unifyTrialUpsell]: M
+    className: o()(R.emptyState, C, {
+      [R.unifyTrialUpsell]: M
     }),
-    children: [M ? (0, i.jsx)(E.default, {
+    children: [M ? (0, i.jsx)(E.ZP, {
       discountOffer: D,
       trialOffer: v,
-      onClose: C,
-      type: N.PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL,
-      subscriptionTier: null !== (a = null == v ? void 0 : null === (n = v.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : N.PremiumSubscriptionSKUs.TIER_2,
-      children: p.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE
+      onClose: p,
+      type: m.cd.EMPTY_STICKER_PICKER_UPSELL,
+      subscriptionTier: null !== (s = null == v ? void 0 : null === (n = v.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== s ? s : m.Si.TIER_2,
+      children: O.Z.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE
     }) : (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(l.Heading, {
-        className: O.header,
+        className: R.header,
         variant: "heading-xl/semibold",
-        children: p.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_TITLE
+        children: O.Z.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_TITLE
       }), (0, i.jsx)(l.Text, {
-        className: O.subtitle,
+        className: R.subtitle,
         color: "header-secondary",
         variant: "text-md/normal",
-        children: p.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE
+        children: O.Z.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE
       }), (0, i.jsx)("div", {
-        className: O.stickersRow,
-        children: L.filter(e => null != e).map(e => (0, i.jsx)(S.default, {
+        className: R.stickersRow,
+        children: L.filter(e => null != e).map(e => (0, i.jsx)(S.ZP, {
           sticker: e,
-          className: O.sticker,
+          className: R.sticker,
           size: 80
         }, null == e ? void 0 : e.id))
       })]
-    }), !M && (0, i.jsx)(h.default, {
-      analyticsSection: m.AnalyticsSections.EXPRESSION_PICKER,
-      buttonText: M ? y ? p.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : p.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
+    }), !M && (0, i.jsx)(f.Z, {
+      analyticsSection: A.jXE.EXPRESSION_PICKER,
+      buttonText: M ? P ? O.Z.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : O.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
     })]
   })
 }

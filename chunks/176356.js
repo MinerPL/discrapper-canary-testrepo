@@ -1,6 +1,6 @@
 "use strict";
-var n = r("379846"),
-  i = r("118658");
+var n = r(379846),
+  i = r(118658);
 t.exports = function(t, e) {
   var r = t._latestEditorState,
     o = r.getSelection();

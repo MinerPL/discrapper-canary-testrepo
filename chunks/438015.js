@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("735250"),
-  a = n("470079"),
-  l = n("748780"),
-  s = n("13245"),
-  o = n("454902"),
-  r = n("692546"),
-  d = n("981631"),
-  u = n("925779");
+n(47120);
+var i = n(735250),
+  s = n(470079),
+  l = n(748780),
+  a = n(13245),
+  o = n(454902),
+  r = n(692546),
+  d = n(981631),
+  c = n(196689);
 
-function c(e, t, n) {
+function u(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -17,7 +17,7 @@ function c(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class f extends a.Component {
+class h extends s.Component {
   componentWillAppear(e) {
     let {
       index: t
@@ -43,62 +43,62 @@ class f extends a.Component {
     e.index !== t && this.animateTo(t)
   }
   animateTo(e, t) {
-    let n, i, a, l;
+    let n, i, s, l;
     let {
-      opacity: s,
+      opacity: a,
       scale: o,
       translateX: r,
       translateY: d
     } = this;
     switch (e) {
       case 0:
-        i = 0, a = 1, l = 1;
+        i = 0, s = 1, l = 1;
         break;
       case 1:
-        i = .3, a = .6, l = .98;
+        i = .3, s = .6, l = .98;
         break;
       case 2:
-        i = .6, a = .3, l = .95;
+        i = .6, s = .3, l = .95;
         break;
       default:
-        i = .6, a = 0, l = .93
+        i = .6, s = 0, l = .93
     }
-    null != t ? (0 === e ? l = 1.1 : i = 1.3, a = 0, n = t) : n = this.handleAnimationEnd, r.setValue(1), d.setValue(i), o.setValue(l), s.setValue(a), n()
+    null != t ? (0 === e ? l = 1.1 : i = 1.3, s = 0, n = t) : n = this.handleAnimationEnd, r.setValue(1), d.setValue(i), o.setValue(l), a.setValue(s), n()
   }
   getStyle() {
-    let e, t, n, i, a;
+    let e, t, n, i, s;
     let {
       opacity: l,
-      scale: s,
+      scale: a,
       translateX: o,
       translateY: r,
       props: {
-        position: u,
-        zIndex: c
+        position: c,
+        zIndex: u
       }
     } = this;
-    switch (u) {
-      case d.OverlayNotificationPositions.TOP_LEFT:
-      case d.OverlayNotificationPositions.BOTTOM_LEFT:
+    switch (c) {
+      case d._vf.TOP_LEFT:
+      case d._vf.BOTTOM_LEFT:
         e = "-100%", t = 0;
         break;
       default:
         n = 0, e = "100%"
     }
-    switch (u) {
-      case d.OverlayNotificationPositions.BOTTOM_LEFT:
-      case d.OverlayNotificationPositions.BOTTOM_RIGHT:
+    switch (c) {
+      case d._vf.BOTTOM_LEFT:
+      case d._vf.BOTTOM_RIGHT:
         i = 0;
         break;
       default:
-        a = 0
+        s = 0
     }
     return {
       left: t,
       right: n,
       bottom: i,
-      top: a,
-      zIndex: c,
+      top: s,
+      zIndex: u,
       opacity: l,
       transform: [{
         translateX: o.interpolate({
@@ -111,7 +111,7 @@ class f extends a.Component {
           outputRange: ["0px", "20px"]
         })
       }, {
-        scale: s
+        scale: a
       }]
     }
   }
@@ -123,40 +123,40 @@ class f extends a.Component {
         notification: {
           props: {
             onNotificationShow: n,
-            onDismissClick: a,
-            onNotificationClick: s,
+            onDismissClick: s,
+            onNotificationClick: a,
             onConfirmClick: d,
-            onCancelClick: c,
-            ...f
+            onCancelClick: u,
+            ...h
           }
         }
       },
       state: {
-        animatedIn: h
+        animatedIn: p
       }
-    } = this, p = (0, i.jsx)(l.default.div, {
-      className: u.animationContainer,
+    } = this, f = (0, i.jsx)(l.Z.div, {
+      className: c.animationContainer,
       style: this.getStyle(),
-      children: (0, i.jsx)(o.default, {
-        ...f,
-        onNotificationShow: h && 0 === t ? this.handleNotificationShow : null,
+      children: (0, i.jsx)(o.ZP, {
+        ...h,
+        onNotificationShow: p && 0 === t ? this.handleNotificationShow : null,
         onDismissClick: this.handleDismissClick,
-        onNotificationClick: null != s ? this.handleNotificationClick : null,
+        onNotificationClick: null != a ? this.handleNotificationClick : null,
         onConfirmClick: null != d ? this.handleConfirmClick : null,
-        onCancelClick: null != c ? this.handleCancelClick : null,
+        onCancelClick: null != u ? this.handleCancelClick : null,
         expand: !e && 0 === t,
         disabled: 0 !== t
       })
     });
-    return 0 === t ? (0, i.jsx)(r.default, {
+    return 0 === t ? (0, i.jsx)(r.Z, {
       observeInterval: 200,
-      children: p
-    }) : p
+      children: f
+    }) : f
   }
   constructor(...e) {
-    super(...e), c(this, "translateX", new l.default.Value(0)), c(this, "translateY", new l.default.Value(0)), c(this, "scale", new l.default.Value(1)), c(this, "opacity", new l.default.Value(1)), c(this, "state", {
+    super(...e), u(this, "translateX", new l.Z.Value(0)), u(this, "translateY", new l.Z.Value(0)), u(this, "scale", new l.Z.Value(1)), u(this, "opacity", new l.Z.Value(1)), u(this, "state", {
       animatedIn: !1
-    }), c(this, "handleNotificationShow", () => {
+    }), u(this, "handleNotificationShow", () => {
       let {
         id: e,
         props: {
@@ -164,15 +164,15 @@ class f extends a.Component {
         }
       } = this.props.notification;
       t(e)
-    }), c(this, "handleDismissClick", e => {
+    }), u(this, "handleDismissClick", e => {
       let {
         id: t,
         props: {
           onDismissClick: n
         }
       } = this.props.notification;
-      s.default.updateNotificationStatus(t), null != n && n(e, t)
-    }), c(this, "handleNotificationClick", e => {
+      a.Z.updateNotificationStatus(t), null != n && n(e, t)
+    }), u(this, "handleNotificationClick", e => {
       let {
         id: t,
         props: {
@@ -180,7 +180,7 @@ class f extends a.Component {
         }
       } = this.props.notification;
       null != n && n(e, t)
-    }), c(this, "handleConfirmClick", e => {
+    }), u(this, "handleConfirmClick", e => {
       let {
         id: t,
         props: {
@@ -188,7 +188,7 @@ class f extends a.Component {
         }
       } = this.props.notification;
       null != n && n(e, t)
-    }), c(this, "handleCancelClick", e => {
+    }), u(this, "handleCancelClick", e => {
       let {
         id: t,
         props: {
@@ -196,7 +196,7 @@ class f extends a.Component {
         }
       } = this.props.notification;
       null != n && n(e, t)
-    }), c(this, "handleAnimationEnd", () => {
+    }), u(this, "handleAnimationEnd", () => {
       let {
         animatedIn: e
       } = this.state;
@@ -206,4 +206,4 @@ class f extends a.Component {
     })
   }
 }
-t.default = f
+t.Z = h

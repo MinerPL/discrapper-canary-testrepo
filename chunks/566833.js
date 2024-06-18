@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  usePopper: function() {
+n.d(t, {
+  D: function() {
     return l
   }
 });
-var r = n("470079"),
-  i = n("699581"),
-  a = n("186585"),
-  o = n("427753"),
+var r = n(470079),
+  i = n(699581),
+  a = n(978008),
+  o = n(427753),
   s = n.n(o),
-  u = n("705942"),
+  u = n(705942),
   c = [],
   l = function(e, t, n) {
     void 0 === n && (n = {});
@@ -45,10 +45,10 @@ var r = n("470079"),
               n = Object.keys(t.elements);
             i.flushSync(function() {
               p({
-                styles: (0, u.fromEntries)(n.map(function(e) {
+                styles: (0, u.sq)(n.map(function(e) {
                   return [e, t.styles[e] || {}]
                 })),
-                attributes: (0, u.fromEntries)(n.map(function(e) {
+                attributes: (0, u.sq)(n.map(function(e) {
                   return [e, t.attributes[e]]
                 }))
               })
@@ -70,11 +70,11 @@ var r = n("470079"),
         return s()(o.current, e) ? o.current || e : (o.current = e, e)
       }, [l.onFirstUpdate, l.placement, l.strategy, l.modifiers, h]),
       g = r.useRef();
-    return (0, u.useIsomorphicLayoutEffect)(function() {
+    return (0, u.LI)(function() {
       g.current && g.current.setOptions(m)
-    }, [m]), (0, u.useIsomorphicLayoutEffect)(function() {
+    }, [m]), (0, u.LI)(function() {
       if (null != e && null != t) {
-        var r = (n.createPopper || a.createPopper)(e, t, m);
+        var r = (n.createPopper || a.fi)(e, t, m);
         return g.current = r,
           function() {
             r.destroy(), g.current = null

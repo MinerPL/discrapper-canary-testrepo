@@ -1,25 +1,25 @@
 "use strict";
-n.r(t), n.d(t, {
-  useCurrentUserGuildBadgeStatus: function() {
-    return d
+n.d(t, {
+  E: function() {
+    return _
   }
 });
-var i = n("442837"),
-  r = n("271383"),
-  s = n("594174"),
-  a = n("881952"),
-  o = n("467138"),
-  l = n("937111"),
-  u = n("981631");
+var i = n(442837),
+  r = n(271383),
+  s = n(594174),
+  o = n(881952),
+  a = n(467138),
+  l = n(937111),
+  u = n(981631);
 
-function d(e) {
-  let t = (0, o.useIsMemberVerificationManualApproval)(null != e ? e : u.EMPTY_STRING_SNOWFLAKE_ID),
-    n = (0, i.useStateFromStores)([l.default, s.default, r.default], () => {
-      let t = l.default.getRequest(e),
+function _(e) {
+  let t = (0, a.e)(null != e ? e : u.lds),
+    n = (0, i.e7)([l.Z, s.default, r.ZP], () => {
+      let t = l.Z.getRequest(e),
         n = s.default.getCurrentUser();
       if (null == n || null == t || t.userId !== n.id) return;
-      let i = r.default.getMember(e, t.userId);
-      if (!(null != i && !i.isPending) || (0, a.isActionedAndNotAcked)(t)) return t.applicationStatus
+      let i = r.ZP.getMember(e, t.userId);
+      if (null == i || !!i.isPending || !!(0, o.oP)(t)) return t.applicationStatus
     }, [e]);
   return t ? n : void 0
 }

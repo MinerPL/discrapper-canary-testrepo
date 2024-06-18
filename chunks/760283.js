@@ -11,5 +11,5 @@ e.exports = function(e, t, r) {
       continue
     }!l && this.fireCallback(i[a].callback, r, i[a].combo)
   }
-  s = "keypress" === r.type && this.ignoreNextKeypress, o = n("64000"), r.type === this.nextExpectedAction && !o(e) && !s && this.resetSequences(u), this.ignoreNextKeypress = l && "keydown" === r.type
+  s = "keypress" === r.type && this.ignoreNextKeypress, o = n(64e3), r.type === this.nextExpectedAction && !o(e) && !s && this.resetSequences(u), this.ignoreNextKeypress = l && "keydown" === r.type
 }

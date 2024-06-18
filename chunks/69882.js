@@ -7,11 +7,11 @@ function i(e) {
 function r(e) {
   return i(null == e ? void 0 : e.communicationDisabledUntil)
 }
-n.r(t), n.d(t, {
-  isCommunicationDisabled: function() {
+n.d(t, {
+  J: function() {
     return i
   },
-  isMemberCommunicationDisabled: function() {
+  b: function() {
     return r
   }
 })

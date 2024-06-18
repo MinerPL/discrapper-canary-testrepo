@@ -1,8 +1,8 @@
 "use strict";
-var r = n("926515"),
-  i = n("740362"),
-  a = n("838957"),
-  o = n("572609"),
+var r = n(926515),
+  i = n(740362),
+  a = n(838957),
+  o = n(572609),
   s = RegExp.prototype;
 e.exports = function(e) {
   var t = e.flags;

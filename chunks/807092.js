@@ -1,35 +1,34 @@
 "use strict";
-n.r(t);
-var i, r, s, a, o = n("442837"),
-  l = n("570140"),
-  u = n("375954");
-let d = {},
-  _ = {},
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(375954);
+let _ = {},
+  d = {},
   c = {};
 
 function E(e) {
   if (null == e) return !1;
-  let t = _[e];
+  let t = d[e];
   if (null == t) return !1;
-  let n = u.default.getMessage(e, t.messageId);
+  let n = u.Z.getMessage(e, t.messageId);
   if (null == n) return !1;
-  d[e] = {
+  _[e] = {
     channel: t.channel,
     message: n,
     shouldMention: t.shouldMention,
     showMentionToggle: t.showMentionToggle
-  }, delete _[e]
+  }, delete d[e]
 }
 
 function I() {
-  d = {}, _ = {}, c = {}
+  _ = {}, d = {}, c = {}
 }
-class T extends(a = o.default.Store) {
+class T extends(o = a.ZP.Store) {
   initialize() {
-    this.waitFor(u.default)
+    this.waitFor(u.Z)
   }
   getPendingReply(e) {
-    return d[e]
+    return _[e]
   }
   getPendingReplyActionSource(e) {
     return c[e]
@@ -40,7 +39,7 @@ s = "PendingReplyStore", (r = "displayName") in(i = T) ? Object.defineProperty(i
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new T(l.default, {
+}) : i[r] = s, t.Z = new T(l.Z, {
   CREATE_PENDING_REPLY: function(e) {
     let {
       channel: t,
@@ -49,7 +48,7 @@ s = "PendingReplyStore", (r = "displayName") in(i = T) ? Object.defineProperty(i
       showMentionToggle: r = !0,
       source: s
     } = e;
-    d[t.id] = {
+    _[t.id] = {
       channel: t,
       message: n,
       shouldMention: i,
@@ -63,7 +62,7 @@ s = "PendingReplyStore", (r = "displayName") in(i = T) ? Object.defineProperty(i
       shouldMention: i = !0,
       showMentionToggle: r = !0
     } = e;
-    _[t.id] = {
+    d[t.id] = {
       channel: t,
       messageId: n,
       shouldMention: i,
@@ -75,11 +74,11 @@ s = "PendingReplyStore", (r = "displayName") in(i = T) ? Object.defineProperty(i
       channelId: t,
       shouldMention: n
     } = e;
-    t in d && (d[t] = {
-      ...d[t],
-      shouldMention: n
-    }), t in _ && (_[t] = {
+    t in _ && (_[t] = {
       ..._[t],
+      shouldMention: n
+    }), t in d && (d[t] = {
+      ...d[t],
       shouldMention: n
     })
   },
@@ -87,7 +86,7 @@ s = "PendingReplyStore", (r = "displayName") in(i = T) ? Object.defineProperty(i
     let {
       channelId: t
     } = e;
-    delete d[t], delete _[t]
+    delete _[t], delete d[t]
   },
   CONNECTION_OPEN: I,
   LOGOUT: I,
@@ -97,10 +96,10 @@ s = "PendingReplyStore", (r = "displayName") in(i = T) ? Object.defineProperty(i
       id: r,
       channelId: s
     } = e;
-    if ((null === (n = d[s]) || void 0 === n ? void 0 : null === (t = n.message) || void 0 === t ? void 0 : t.id) === r) delete d[s], delete c[s];
+    if ((null === (n = _[s]) || void 0 === n ? void 0 : null === (t = n.message) || void 0 === t ? void 0 : t.id) === r) delete _[s], delete c[s];
     else {
-      if ((null === (i = _[s]) || void 0 === i ? void 0 : i.messageId) !== r) return !1;
-      delete _[s], delete c[s]
+      if ((null === (i = d[s]) || void 0 === i ? void 0 : i.messageId) !== r) return !1;
+      delete d[s], delete c[s]
     }
   },
   CHANNEL_SELECT: function(e) {

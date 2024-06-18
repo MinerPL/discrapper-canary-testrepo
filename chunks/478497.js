@@ -1,8 +1,8 @@
 "use strict";
-var r = n("690244"),
-  i = n("192853"),
-  a = n("813426"),
-  o = n("815329"),
+var r = n(690244),
+  i = n(192853),
+  a = n(813426),
+  o = n(815329),
   s = r("%WeakMap%", !0),
   u = r("%Map%", !0),
   c = i("WeakMap.prototype.get", !0),

@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  ClanBadgeSnow: function() {
+n.d(t, {
+  W: function() {
     return c
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("331595"),
-  a = n("249849");
-let s = ["#4282D8", "#54cfff", "#f0f0f0"],
-  o = ["#6c9ca6", "#9af4dc", "#f0f0f0"],
+var i = n(735250);
+n(470079);
+var r = n(331595),
+  s = n(249849);
+let o = ["#4282D8", "#54cfff", "#f0f0f0"],
+  a = ["#6c9ca6", "#9af4dc", "#f0f0f0"],
   l = [.1, .35, 1],
   u = [{
     base: 8,
@@ -21,8 +21,8 @@ let s = ["#4282D8", "#54cfff", "#f0f0f0"],
     base: 8,
     tint: 1
   }],
-  d = [.1, .6, 1],
-  _ = [{
+  _ = [.1, .6, 1],
+  d = [{
     base: 4,
     tint: 1
   }, {
@@ -41,19 +41,19 @@ let s = ["#4282D8", "#54cfff", "#f0f0f0"],
       ...I
     } = e, {
       primaryColorsTransformed: T,
-      secondaryColorsTransformed: f
-    } = (0, a.getTransformedBadgeColors)({
-      primaryBaseColors: s,
+      secondaryColorsTransformed: h
+    } = (0, s.s)({
+      primaryBaseColors: o,
       primaryTintColor: c,
       primaryTintLuminances: l,
       primaryLuminanceWeights: u,
-      secondaryBaseColors: o,
+      secondaryBaseColors: a,
       secondaryTintColor: E,
-      secondaryTintLuminances: d,
-      secondaryLuminanceWeights: _
+      secondaryTintLuminances: _,
+      secondaryLuminanceWeights: d
     });
     return (0, i.jsxs)("svg", {
-      ...(0, r.default)(I),
+      ...(0, r.Z)(I),
       width: t,
       height: n,
       viewBox: "0 0 16 16",
@@ -79,13 +79,13 @@ let s = ["#4282D8", "#54cfff", "#f0f0f0"],
         fill: "#000"
       }), (0, i.jsx)("path", {
         d: "M9 6H8V5H4v1H3v4h1v1h4v-1h1V6Z",
-        fill: f[1]
+        fill: h[1]
       }), (0, i.jsx)("path", {
         d: "M8 10H4v1h4v-1ZM4 9H3v1h1V9ZM9 9H8v1h1V9Z",
-        fill: f[0]
+        fill: h[0]
       }), (0, i.jsx)("path", {
         d: "M4 6H3v1h1V6ZM6 7H5v1h1V7ZM8 5H4v1h4V5Z",
-        fill: f[2]
+        fill: h[2]
       }), (0, i.jsx)("path", {
         d: "M8 13H7v1h1v-1Z",
         fill: "#000"

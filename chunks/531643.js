@@ -10,44 +10,44 @@ n.r(t), n.d(t, {
     return T
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("803997"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("952265"),
-  o = n("466377"),
-  l = n("355314"),
-  u = n("153124"),
-  d = n("310752"),
-  _ = n("731994"),
-  c = n("294575");
+  o = n(952265),
+  a = n(466377),
+  l = n(355314),
+  u = n(153124),
+  _ = n(310752),
+  d = n(731994),
+  c = n(239792);
 
 function E(e) {
   let {
     title: t,
     help: n,
     showPremiumUpsell: r,
-    transitionState: a,
+    transitionState: o,
     icons: E,
     fileSize: I,
     onClose: T
-  } = e, f = (0, u.useUID)(), S = null != E ? E : _.DEFAULT_FILE_UPLOAD_ICONS;
-  return r ? (0, i.jsx)(l.default, {
-    transitionState: a,
+  } = e, h = (0, u.Dt)(), S = null != E ? E : d.J6;
+  return r ? (0, i.jsx)(l.Z, {
+    transitionState: o,
     onClose: T,
     fileSize: I
-  }) : (0, i.jsx)(o.ModalRoot, {
-    size: o.ModalSize.DYNAMIC,
-    "aria-labelledby": f,
-    transitionState: a,
+  }) : (0, i.jsx)(a.Y0, {
+    size: a.Cg.DYNAMIC,
+    "aria-labelledby": h,
+    transitionState: o,
     children: (0, i.jsx)("div", {
       className: s()(c.uploadDropModal, c.error),
       children: (0, i.jsxs)("div", {
         className: c.inner,
-        children: [(0, i.jsx)(d.default, {
+        children: [(0, i.jsx)(_.Z, {
           icons: S
         }), (0, i.jsx)("div", {
-          id: f,
+          id: h,
           className: c.title,
           children: t
         }), (0, i.jsx)("div", {
@@ -61,7 +61,7 @@ function E(e) {
 let I = "UPLOAD_ERROR_MODAL_KEY";
 
 function T(e) {
-  (0, a.openModal)(t => (0, i.jsx)(E, {
+  (0, o.h7)(t => (0, i.jsx)(E, {
     ...t,
     ...e
   }), {

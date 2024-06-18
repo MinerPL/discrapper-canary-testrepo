@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return s
   }
 });
-var i = n("871465");
+var i = n(871465);
 let r = {
-  [i.Soundpacks.CLASSIC]: {
+  [i.YC.CLASSIC]: {
     discodo: "discodo",
     message1: "message1",
     deafen: "deafen",
@@ -30,7 +30,7 @@ let r = {
     poggermode_achievement_unlock: "poggermode_achievement_unlock",
     stage_waiting: "stage_waiting"
   },
-  [i.Soundpacks.DETUNE]: {
+  [i.YC.DETUNE]: {
     discodo: "detune_discodo",
     message1: "detune_message1",
     deafen: "detune_deafen",
@@ -50,26 +50,26 @@ let r = {
     stream_user_joined: "detune_stream_user_joined",
     stream_user_left: "detune_stream_user_left"
   },
-  [i.Soundpacks.RETRO]: {
+  [i.YC.RETRO]: {
     message1: "bit_message1"
   },
-  [i.Soundpacks.BUBBLE]: {
+  [i.YC.BUBBLE]: {
     message1: "bop_message1"
   },
-  [i.Soundpacks.DUCKY]: {
+  [i.YC.DUCKY]: {
     message1: "ducky_message1"
   },
-  [i.Soundpacks.LOFI]: {
+  [i.YC.LOFI]: {
     message1: "lofi_message1"
   },
-  [i.Soundpacks.ASMR]: {
+  [i.YC.ASMR]: {
     message1: "asmr_message1"
   },
-  [i.Soundpacks.DISCODO]: {
+  [i.YC.DISCODO]: {
     message1: "discodo"
   }
 };
 
-function a(e) {
+function s(e) {
   return r[e]
 }

@@ -1,6 +1,6 @@
 "use strict";
-var e = n("668530"),
-  o = n("982665"),
+var e = n(668530),
+  o = n(982665),
   i = e.document,
   u = o(i) && o(i.createElement);
 t.exports = function(t) {

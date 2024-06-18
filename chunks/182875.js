@@ -1,5 +1,5 @@
 "use strict";
-var r = n("470079"),
+var r = n(470079),
   i = Symbol.for("react.element"),
   a = Symbol.for("react.fragment"),
   o = Object.prototype.hasOwnProperty,

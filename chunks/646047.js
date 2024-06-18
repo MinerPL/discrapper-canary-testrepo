@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-let i = new class e {
+let n = new class e {
   setActive(e) {
     return Promise.resolve()
   }
@@ -19,4 +18,4 @@ let i = new class e {
     return !1
   }
 };
-t.default = i
+t.Z = n

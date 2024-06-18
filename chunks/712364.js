@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n("47120");
-var i, r = n("735250"),
-  s = n("470079"),
-  a = n("803997"),
-  o = n.n(a),
-  l = n("481060"),
-  u = n("689938"),
-  d = n("290168");
+n(47120);
+var i, r = n(735250),
+  s = n(470079),
+  o = n(120356),
+  a = n.n(o),
+  l = n(481060),
+  u = n(689938),
+  _ = n(603838);
 
-function _(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -23,40 +23,40 @@ class c extends(i = s.PureComponent) {
       title: t,
       actionText: n,
       children: i,
-      error: a,
-      isLoading: _,
+      error: o,
+      isLoading: d,
       maxLength: c,
       transitionState: E,
       helpMessage: I,
       retryPrompt: T,
-      retrySuccessMessage: f
+      retrySuccessMessage: h
     } = this.props, {
       code: S,
-      errorMessage: h,
-      retrySuccess: A
-    } = this.state, m = s.Children.count(i) > 0 ? (0, r.jsx)(l.Card, {
+      errorMessage: f,
+      retrySuccess: N
+    } = this.state, A = s.Children.count(i) > 0 ? (0, r.jsx)(l.Card, {
       type: l.Card.Types.WARNING,
-      className: d.card,
+      className: _.card,
       children: (0, r.jsx)(l.Text, {
         variant: "text-md/normal",
         children: i
       })
-    }) : null, N = null != T ? (0, r.jsxs)(l.Text, {
-      className: o()(d.__invalid_submitText, d.spacing),
+    }) : null, m = null != T ? (0, r.jsxs)(l.Text, {
+      className: a()(_.__invalid_submitText, _.spacing),
       variant: "text-sm/normal",
       children: [(0, r.jsx)("br", {}), (0, r.jsx)(l.Clickable, {
-        className: o()(d.spacing, d.__invalid_link),
+        className: a()(_.spacing, _.__invalid_link),
         onClick: this.handleRetry,
         children: (0, r.jsx)(l.Anchor, {
           children: T
         })
       })]
-    }) : null, O = A ? (0, r.jsx)(l.Card, {
+    }) : null, O = N ? (0, r.jsx)(l.Card, {
       type: l.Card.Types.SUCCESS,
-      className: d.card,
+      className: _.card,
       children: (0, r.jsx)(l.Text, {
         variant: "text-md/normal",
-        children: f
+        children: h
       })
     }) : null;
     return (0, r.jsx)(l.ModalRoot, {
@@ -73,11 +73,11 @@ class c extends(i = s.PureComponent) {
           children: [null != I ? (0, r.jsx)(l.Text, {
             color: "text-normal",
             variant: "text-md/normal",
-            className: d.spacing,
+            className: _.spacing,
             children: I
-          }) : null, m, O, (0, r.jsxs)(l.FormItem, {
+          }) : null, A, O, (0, r.jsxs)(l.FormItem, {
             title: this.getLabelText(),
-            className: d.spacing,
+            className: _.spacing,
             children: [(0, r.jsx)(l.TextInput, {
               inputRef: this.setRef,
               onChange: this.handleCodeChange,
@@ -89,74 +89,74 @@ class c extends(i = s.PureComponent) {
             }), this.errorPresent() ? (0, r.jsx)(l.Text, {
               color: "text-danger",
               variant: "text-xs/normal",
-              className: d.error,
-              children: null != a ? a : h
-            }) : null, N]
+              className: _.error,
+              children: null != o ? o : f
+            }) : null, m]
           })]
         }), (0, r.jsxs)(l.ModalFooter, {
           children: [(0, r.jsx)(l.Button, {
             type: "submit",
-            disabled: _ || 0 === S.length,
-            children: null != n ? n : u.default.Messages.CONFIRM
+            disabled: d || 0 === S.length,
+            children: null != n ? n : u.Z.Messages.CONFIRM
           }), (0, r.jsx)(l.Button, {
             onClick: this.handleCancel,
-            disabled: _,
+            disabled: d,
             look: l.Button.Looks.LINK,
             color: l.Button.Colors.PRIMARY,
-            children: u.default.Messages.CANCEL
+            children: u.Z.Messages.CANCEL
           })]
         })]
       })
     })
   }
   constructor(...e) {
-    super(...e), _(this, "_input", void 0), _(this, "state", {
+    super(...e), d(this, "_input", void 0), d(this, "state", {
       code: "",
       errorMessage: "",
       retrySuccess: !1
-    }), _(this, "setRef", e => {
+    }), d(this, "setRef", e => {
       this._input = e
-    }), _(this, "getLabelText", () => {
+    }), d(this, "getLabelText", () => {
       var e;
-      return null !== (e = this.props.label) && void 0 !== e ? e : this.props.disallowBackupCodes ? u.default.Messages.TWO_FA_ENTER_TOKEN_NO_BACKUP_LABEL : u.default.Messages.TWO_FA_ENTER_TOKEN_LABEL
-    }), _(this, "getSupportedCodeTypes", () => this.props.disallowBackupCodes ? u.default.Messages.TWO_FA_AUTH_CODE_NO_BACKUP : u.default.Messages.TWO_FA_AUTH_CODE), _(this, "getPlaceholder", () => {
+      return null !== (e = this.props.label) && void 0 !== e ? e : this.props.disallowBackupCodes ? u.Z.Messages.TWO_FA_ENTER_TOKEN_NO_BACKUP_LABEL : u.Z.Messages.TWO_FA_ENTER_TOKEN_LABEL
+    }), d(this, "getSupportedCodeTypes", () => this.props.disallowBackupCodes ? u.Z.Messages.TWO_FA_AUTH_CODE_NO_BACKUP : u.Z.Messages.TWO_FA_AUTH_CODE), d(this, "getPlaceholder", () => {
       var e;
       return this.props.forceNoPlaceholder ? null : null !== (e = this.props.placeholder) && void 0 !== e ? e : this.getSupportedCodeTypes()
-    }), _(this, "errorPresent", () => null != this.props.error && "" !== this.props.error || null != this.state.errorMessage && "" !== this.state.errorMessage), _(this, "handleRetry", () => {
+    }), d(this, "errorPresent", () => null != this.props.error && "" !== this.props.error || null != this.state.errorMessage && "" !== this.state.errorMessage), d(this, "handleRetry", () => {
       let {
         onRetry: e
       } = this.props;
       null == e || e().then(() => this.setState({
         retrySuccess: !0
       }))
-    }), _(this, "handleSubmit", e => {
+    }), d(this, "handleSubmit", e => {
       e.preventDefault();
       let {
         handleSubmit: t,
         onError: n
       } = this.props;
       t(this.state.code).catch(e => {
-        null != e.body && (null == n || n(e.body), e.body.message && this.setState({
+        if (null != e.body) null == n || n(e.body), e.body.message && this.setState({
           errorMessage: e.body.message
-        }))
+        })
       })
-    }), _(this, "handleCancel", () => {
+    }), d(this, "handleCancel", () => {
       let {
         onClose: e,
         handleEarlyClose: t
       } = this.props;
       e(), null == t || t()
-    }), _(this, "handleCodeChange", e => {
+    }), d(this, "handleCodeChange", e => {
       this.setState({
         code: e
       })
     })
   }
 }
-_(c, "defaultProps", {
+d(c, "defaultProps", {
   btnClass: "",
   isLoading: !1,
   disallowBackupCodes: !1,
   error: null,
   forceNoPlaceholder: !1
-}), t.default = c
+}), t.Z = c

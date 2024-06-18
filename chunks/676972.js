@@ -1,4 +1,4 @@
-var r = n("957578").Buffer;
+var r = n(957578).Buffer;
 
 function i(e, t) {
   this._block = r.alloc(e), this._finalSize = t, this._blockSize = e, this._len = 0

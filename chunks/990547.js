@@ -2,94 +2,94 @@
 let i, r;
 n.r(t), n.d(t, {
   AnalyticsActionHandlers: function() {
-    return A.AnalyticsActionHandlers
+    return S.X
   },
   Impression: function() {
-    return m.Impression
+    return f.Impression
   },
   ImpressionGroups: function() {
-    return m.ImpressionGroups
+    return f.A
   },
   ImpressionNames: function() {
-    return N.ImpressionNames
+    return N.z
   },
   ImpressionSchema: function() {
     return N.ImpressionSchema
   },
   ImpressionTypes: function() {
-    return m.ImpressionTypes
+    return f.n
   },
   NetworkActionNames: function() {
-    return N.NetworkActionNames
+    return N.a
   },
   StandardAnalyticsLocation: function() {
-    return m.StandardAnalyticsLocation
+    return f.StandardAnalyticsLocation
   },
   StandardAnalyticsSchemaNameMap: function() {
     return N.StandardAnalyticsSchemaNameMap
   },
   TypedEventProperties: function() {
-    return m.TypedEventProperties
+    return f.TypedEventProperties
   },
   analyticsTrackingStoreMaker: function() {
-    return A.analyticsTrackingStoreMaker
+    return S.l
   },
   encodeProperties: function() {
-    return h.encodeProperties
+    return h.Z
   },
   extendSuperProperties: function() {
-    return b
-  },
-  getCampaignParams: function() {
-    return v
-  },
-  getDevice: function() {
     return y
   },
+  getCampaignParams: function() {
+    return L
+  },
+  getDevice: function() {
+    return D
+  },
   getOS: function() {
-    return M
+    return v
   },
   getSuperProperties: function() {
-    return w
+    return b
   },
   getSuperPropertiesBase64: function() {
-    return k
+    return G
   },
   isThrottled: function() {
-    return U
+    return P
   },
   trackMaker: function() {
-    return G
+    return U
   }
-}), n("757143"), n("47120");
-var s, a, o, l = n("348327"),
+}), n(757143), n(47120);
+var s, o = n(348327),
+  a = n.n(o),
+  l = n(512722),
   u = n.n(l),
-  d = n("512722"),
-  _ = n.n(d),
-  c = n("264344"),
-  E = n.n(c),
-  I = n("627420"),
-  T = n("433517"),
-  f = n("298444"),
-  S = n("979675"),
-  h = n("947486"),
-  A = n("699407"),
-  m = n("20281"),
-  N = n("525769");
-let O = "deviceProperties",
-  p = "referralProperties",
+  _ = n(264344),
+  d = n.n(_),
+  c = n(627420),
+  E = n(433517),
+  I = n(298444),
+  T = n(979675),
+  h = n(947486),
+  S = n(699407),
+  f = n(20281),
+  N = n(525769);
+let A = "deviceProperties",
+  m = "referralProperties",
+  O = {},
   R = {},
-  C = {},
-  g = window.DiscordNative;
-if (null != g) {
+  C = window.DiscordNative;
+if (null != C) {
   let e;
-  let t = g.remoteApp.getVersion(),
-    n = g.process.platform,
-    r = g.os.release,
-    a = g.os.arch,
-    o = g.os.appArch,
-    l = g.remoteApp.getReleaseChannel(),
-    u = (0, I.getSystemLocale)();
+  let t = C.remoteApp.getVersion(),
+    n = C.process.platform,
+    r = C.os.release,
+    o = C.os.arch,
+    a = C.os.appArch,
+    l = C.remoteApp.getReleaseChannel(),
+    u = (0, c.qf)();
   switch (n) {
     case "win32":
       e = "Windows";
@@ -109,32 +109,32 @@ if (null != g) {
       release_channel: l || "unknown",
       client_version: t,
       os_version: r,
-      os_arch: a,
-      app_arch: o,
+      os_arch: o,
+      app_arch: a,
       system_locale: u
-    }, (null === (s = E().name) || void 0 === s ? void 0 : s.toLocaleLowerCase()) === "electron" && (i.browser_user_agent = E().ua || "", i.browser_version = E().version || ""), "linux" === n) {
-    let e = g.crashReporter.getMetadata();
+    }, (null === (s = d().name) || void 0 === s ? void 0 : s.toLocaleLowerCase()) === "electron" && (i.browser_user_agent = d().ua || "", i.browser_version = d().version || ""), "linux" === n) {
+    let e = C.crashReporter.getMetadata();
     i.window_manager = e.wm, i.distro = e.distro
   }
 }
-let L = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
+let p = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
 
-function D(e, t) {
+function g(e, t) {
   if (null == e) return "";
   t = t.replace(/[[]/, "\\[").replace(/[\]]/, "\\]");
   let n = new RegExp("[\\?&]".concat(t, "=([^&#]*)")).exec(e);
   return null === n || "string" != typeof n[1] && n[1].length ? "" : decodeURIComponent(n[1]).replace(/\+/g, " ")
 }
 
-function v(e) {
+function L(e) {
   let t = {};
-  return L.forEach(n => {
-    let i = D(e, n);
+  return p.forEach(n => {
+    let i = g(e, n);
     i.length > 0 && (t[n] = i)
   }), t
 }
 
-function M() {
+function v() {
   let {
     userAgent: e
   } = window.navigator;
@@ -147,7 +147,7 @@ function M() {
   else return ""
 }
 
-function y() {
+function D() {
   let {
     userAgent: e
   } = window.navigator;
@@ -159,14 +159,14 @@ function y() {
   else return ""
 }
 
-function P() {
+function M() {
   let e = {};
   return e.referrer = document.referrer, e.referring_domain = function() {
     let e = document.referrer.split("/");
     return e.length >= 3 ? e[2] : ""
   }(), e = {
     ...e,
-    ...v(window.location.href),
+    ...L(window.location.href),
     ... function() {
       let e = {},
         t = document.referrer,
@@ -180,7 +180,7 @@ function P() {
         }();
       if (null != n) {
         e.search_engine = n;
-        let i = D(t, "yahoo" !== n ? "q" : "p");
+        let i = g(t, "yahoo" !== n ? "q" : "p");
         i.length > 0 && (e.mp_keyword = i)
       }
       return e
@@ -188,15 +188,14 @@ function P() {
   }
 }
 
-function U(e) {
-  return null != R[e] && R[e] > Date.now()
+function P(e) {
+  return null != O[e] && O[e] > Date.now()
 }
 if (null == i) try {
-  ;
   let e, t, n;
-  e = T.Storage.get(O), null == e && (e = function() {
+  e = E.K.get(A), null == e && (e = function() {
     let e = {},
-      t = M();
+      t = v();
     return e.os = t, e.browser = function() {
       let {
         userAgent: e,
@@ -217,15 +216,23 @@ if (null == i) try {
       else if (/MSIE|Trident\//.test(e)) return "Internet Explorer";
       else if (/Gecko/.test(e)) return "Mozilla";
       else return ""
-    }(), e.device = y(), e.system_locale = (0, I.getSystemLocale)(), e
-  }(), T.Storage.set(O, e)), t = T.Storage.get(p), null == t && (t = P(), T.Storage.set(p, t)), n = f.SessionStorage.get(p), null == n && (n = function(e, t) {
+    }(), e.device = D(), e.system_locale = (0, c.qf)(), e
+  }(), E.K.set(A, e)), t = E.K.get(m), null == t && (t = M(), E.K.set(m, t)), n = I.x.get(m), null == n && (n = function(e, t) {
     let n = {};
     return Object.keys(e).map(i => n["".concat(i).concat(t)] = e[i]), n
-  }(P(), "_current"), f.SessionStorage.set(p, n)), i = {
+  }(M(), "_current"), I.x.set(m, n)), i = {
     ...e,
-    browser_user_agent: window.navigator.userAgent || "",
-    browser_version: E().version || "",
-    os_version: null !== (o = null === E() || void 0 === E() ? void 0 : null === (a = E().os) || void 0 === a ? void 0 : a.version) && void 0 !== o ? o : "",
+    ... function() {
+      var e, t;
+      let n = {
+        browser_user_agent: window.navigator.userAgent || "",
+        browser_version: d().version || ""
+      };
+      return {
+        ...n,
+        os_version: null !== (t = null === d() || void 0 === d() ? void 0 : null === (e = d().os) || void 0 === e ? void 0 : e.version) && void 0 !== t ? t : ""
+      }
+    }(),
     ...t,
     ...n
   }
@@ -233,61 +240,61 @@ if (null == i) try {
   i = {}
 }
 
-function b(e) {
+function y(e) {
   i = {
     ...i,
     ...e
-  }, r = (0, h.encodeProperties)(i)
+  }, r = (0, h.Z)(i)
 }
-b(function() {
+y(function() {
   var e, t, n;
   let i = {},
     r = window.GLOBAL_ENV.RELEASE_CHANNEL;
   r && (i.release_channel = r.split("-")[0]);
-  let s = parseInt((n = "279519", "279519"), 10);
+  let s = parseInt((n = "302882", "302882"), 10);
   !isNaN(s) && (i.client_build_number = s);
-  let a = null == g ? void 0 : null === (e = (t = g.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
-  return !isNaN(a) && (i.native_build_number = a), i.client_event_source = function() {
+  let o = null == C ? void 0 : null === (e = (t = C.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
+  return !isNaN(o) && (i.native_build_number = o), i.client_event_source = function() {
     try {
       if (__OVERLAY__) return "OVERLAY"
     } catch (e) {}
     return null
   }(), i
 }());
-let G = e => {
+let U = e => {
   let {
     analyticEventConfigs: t,
     dispatcher: i,
     TRACK_ACTION_NAME: r
-  } = e, s = (0, S.queueTrackingEventMaker)(i, r);
+  } = e, s = (0, T.$)(i, r);
   return function(e, i) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     if (null != n.g.isServerRendering && !0 === n.g.isServerRendering) return Promise.resolve();
-    let a = null != i ? i : {},
-      o = t[e];
-    if (null != o) {
-      if ("throttlePeriod" in o) {
-        let t = [e, ...o.throttleKeys(a)].join("_");
-        if (U(t)) return Promise.resolve();
-        if ("number" == typeof o.throttlePercent && Math.random() > o.throttlePercent) return Promise.resolve();
-        if (o.deduplicate) {
-          let e = C[t];
-          if (u()(e, a)) return Promise.resolve();
-          C[t] = a
+    let o = null != i ? i : {},
+      l = t[e];
+    if (null != l) {
+      if ("throttlePeriod" in l) {
+        let t = [e, ...l.throttleKeys(o)].join("_");
+        if (P(t)) return Promise.resolve();
+        if ("number" == typeof l.throttlePercent && Math.random() > l.throttlePercent) return Promise.resolve();
+        if (l.deduplicate) {
+          let e = R[t];
+          if (a()(e, o)) return Promise.resolve();
+          R[t] = o
         }
-        R[t] = Date.now() + o.throttlePeriod
-      } else if ("throttlePercent" in o) {
-        if (Math.random() > o.throttlePercent) return Promise.resolve()
-      } else _()(!1, "Unsupported analytics event config: ".concat(o))
+        O[t] = Date.now() + l.throttlePeriod
+      } else if ("throttlePercent" in l) {
+        if (Math.random() > l.throttlePercent) return Promise.resolve()
+      } else u()(!1, "Unsupported analytics event config: ".concat(l))
     }
     return s(e, i, r)
   }
 };
 
-function w() {
+function b() {
   return i
 }
 
-function k() {
+function G() {
   return r
 }

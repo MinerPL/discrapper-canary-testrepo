@@ -1,5 +1,5 @@
 "use strict";
-var r = n("29513");
+var r = n(29513);
 
 function i() {
   var e = {},
@@ -50,11 +50,11 @@ e.exports = function(e) {
       }(), s.add(e, n)
     },
     force: function(e) {
-      !u && (void 0 === e && (e = a), t && (function(e) {
+      if (!u) void 0 === e && (e = a), t && (function(e) {
         clearTimeout(e)
       }(t), t = null), e ? function() {
         t = d(c)
-      }() : c())
+      }() : c()
     }
   }
 }

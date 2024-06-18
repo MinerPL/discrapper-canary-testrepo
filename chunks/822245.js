@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
-  FREQUENCY_ITEM_LIMIT: function() {
+n.d(t, {
+  y: function() {
     return E
   }
-}), n("653041");
-var i, r = n("392711"),
+}), n(653041);
+var i, r = n(392711),
   s = n.n(r),
-  a = n("442837"),
-  o = n("570140"),
-  l = n("911969"),
-  u = n("704907"),
-  d = n("581883"),
-  _ = n("526761");
+  o = n(442837),
+  a = n(570140),
+  l = n(911969),
+  u = n(704907),
+  _ = n(581883),
+  d = n(526761);
 
 function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ let E = 250,
   I = {
     pendingUsages: []
   },
-  T = new u.default({
+  T = new u.Z({
     computeBonus: () => 100,
     computeWeight: e => e <= 3 ? 100 : e <= 15 ? 70 : e <= 30 ? 50 : e <= 45 ? 30 : e <= 80 ? 10 : 0,
     lookupKey: e => e,
@@ -33,7 +33,7 @@ let E = 250,
     numFrequentlyItems: E
   });
 
-function f(e) {
+function h(e) {
   I.pendingUsages.push({
     key: e,
     timestamp: Date.now()
@@ -42,15 +42,15 @@ function f(e) {
 
 function S() {
   var e, t;
-  let n = null !== (t = null === (e = d.default.frecencyWithoutFetchingLatest.applicationFrecency) || void 0 === e ? void 0 : e.applications) && void 0 !== t ? t : {};
+  let n = null !== (t = null === (e = _.Z.frecencyWithoutFetchingLatest.applicationFrecency) || void 0 === e ? void 0 : e.applications) && void 0 !== t ? t : {};
   T.overwriteHistory(s().mapValues(n, e => ({
     ...e,
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
   })), I.pendingUsages)
 }
-class h extends(i = a.default.PersistedStore) {
+class f extends(i = o.ZP.PersistedStore) {
   initialize(e) {
-    null != e && (I = e), this.syncWith([d.default], S)
+    null != e && (I = e), this.syncWith([_.Z], S)
   }
   getState() {
     return I
@@ -69,19 +69,19 @@ class h extends(i = a.default.PersistedStore) {
     return T.frequently
   }
 }
-c(h, "displayName", "ApplicationFrecencyStore"), c(h, "persistKey", "ApplicationFrecency"), t.default = new h(o.default, {
+c(f, "displayName", "ApplicationFrecencyStore"), c(f, "persistKey", "ApplicationFrecency"), t.Z = new f(a.Z, {
   APPLICATION_COMMAND_USED: function(e) {
     let {
       command: t
     } = e;
-    if (t.type !== l.ApplicationCommandType.CHAT) return !1;
-    f(t.applicationId)
+    if (t.type !== l.yU.CHAT) return !1;
+    h(t.applicationId)
   },
   EMBEDDED_ACTIVITY_OPEN: function(e) {
     let {
       applicationId: t
     } = e;
-    f(t)
+    h(t)
   },
   USER_SETTINGS_PROTO_UPDATE: function(e) {
     let {
@@ -90,7 +90,7 @@ c(h, "displayName", "ApplicationFrecencyStore"), c(h, "persistKey", "Application
       },
       wasSaved: n
     } = e;
-    if (t !== _.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+    if (t !== d.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
     I.pendingUsages = []
   }
 })

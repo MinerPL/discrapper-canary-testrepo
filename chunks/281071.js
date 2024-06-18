@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return s
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("302454");
+var i = n(735250);
+n(470079);
+var r = n(302454);
 
 function s(e) {
   return e.heading = r.defaultRules.heading, e.lheading = r.defaultRules.lheading, e.list = r.defaultRules.list, e.paragraph = {
@@ -25,8 +25,8 @@ function s(e) {
         t && t.onClick ? (s.onClick = t.onClick, s.onContextMenu = t.onContextMenu) : s.onClick = t
       }
       if (null == s.onClick) {
-        var a;
-        s.href = null !== (a = (0, r.sanitizeUrl)(e.target)) && void 0 !== a ? a : void 0, s.target = "_blank"
+        var o;
+        s.href = null !== (o = (0, r.sanitizeUrl)(e.target)) && void 0 !== o ? o : void 0, s.target = "_blank"
       }
       return (0, i.jsx)("a", {
         title: e.title,

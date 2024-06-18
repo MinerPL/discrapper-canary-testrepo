@@ -1,9 +1,9 @@
 "use strict";
-n.r(t), n("47120");
-var i, r = n("442837"),
-  s = n("570140"),
-  a = n("374023"),
-  o = n("188785");
+n(47120);
+var i, r = n(442837),
+  s = n(570140),
+  o = n(374023),
+  a = n(188785);
 
 function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -14,33 +14,33 @@ function l(e, t, n) {
   }) : e[t] = n, e
 }
 let u = new Set,
-  d = {};
-class _ extends(i = r.default.PersistedStore) {
+  _ = {};
+class d extends(i = r.ZP.PersistedStore) {
   initialize(e) {
-    null != e && (Array.isArray(e.hiddenHotspots) && (u = new Set(e.hiddenHotspots)), null != e.hotspotOverrides && (d = e.hotspotOverrides))
+    null != e && (Array.isArray(e.hiddenHotspots) && (u = new Set(e.hiddenHotspots)), null != e.hotspotOverrides && (_ = e.hotspotOverrides))
   }
   hasHotspot(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-      n = !t && d[e];
-    return !(o.CONFERENCE_MODE_ENABLED || a.ProcessArgs.isDisallowPopupsSet()) && (n || !u.has(e))
+      n = !t && _[e];
+    return !(a.a || o.s.isDisallowPopupsSet()) && (n || !u.has(e))
   }
   hasHiddenHotspot(e) {
     return u.has(e)
   }
   getHotspotOverride(e) {
-    return d[e]
+    return _[e]
   }
   getState() {
     return {
       hiddenHotspots: u,
-      hotspotOverrides: d
+      hotspotOverrides: _
     }
   }
 }
-l(_, "displayName", "HotspotStore"), l(_, "persistKey", "hotspots"), l(_, "migrations", [e => ({
+l(d, "displayName", "HotspotStore"), l(d, "persistKey", "hotspots"), l(d, "migrations", [e => ({
   hiddenHotspots: null != e ? e : [],
   hotspotOverrides: {}
-})]), t.default = new _(s.default, {
+})]), t.Z = new d(s.Z, {
   OVERLAY_INITIALIZE: function(e) {
     let {
       hiddenHotspots: t
@@ -59,13 +59,13 @@ l(_, "displayName", "HotspotStore"), l(_, "persistKey", "hotspots"), l(_, "migra
       location: t,
       enabled: n
     } = e;
-    d[t] = n
+    _[t] = n
   },
   HOTSPOT_OVERRIDE_CLEAR: function(e) {
     let {
       location: t
     } = e;
-    if (null == d[t]) return !1;
-    delete d[t]
+    if (null == _[t]) return !1;
+    delete _[t]
   }
 })

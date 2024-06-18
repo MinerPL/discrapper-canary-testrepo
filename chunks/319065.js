@@ -2,32 +2,32 @@
 Object.defineProperty(t, "__esModule", {
   value: !0
 }), t.hover = void 0;
-var n = Object.assign || function(e) {
+var r = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
-      var r = arguments[t];
-      for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n])
+      var n = arguments[t];
+      for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
     }
     return e
   },
-  a = function(e) {
+  i = function(e) {
     return e && e.__esModule ? e : {
       default: e
     }
-  }(r("470079"));
+  }(n(470079));
 
-function o(e, t) {
+function a(e, t) {
   if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
   return t && ("object" == typeof t || "function" == typeof t) ? t : e
 }
-var i = t.hover = function(e) {
+var o = t.hover = function(e) {
   var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "span";
-  return function(r) {
-    function i() {
+  return function(n) {
+    function o() {
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-      }(this, i);
-      for (var r, l, u, s = arguments.length, f = Array(s), c = 0; c < s; c++) f[c] = arguments[c];
-      return l = u = o(this, (r = i.__proto__ || Object.getPrototypeOf(i)).call.apply(r, [this].concat(f))), u.state = {
+      }(this, o);
+      for (var n, s, u, c = arguments.length, l = Array(c), d = 0; d < c; d++) l[d] = arguments[d];
+      return s = u = a(this, (n = o.__proto__ || Object.getPrototypeOf(o)).call.apply(n, [this].concat(l))), u.state = {
         hover: !1
       }, u.handleMouseOver = function() {
         return u.setState({
@@ -38,11 +38,11 @@ var i = t.hover = function(e) {
           hover: !1
         })
       }, u.render = function() {
-        return a.default.createElement(t, {
+        return i.default.createElement(t, {
           onMouseOver: u.handleMouseOver,
           onMouseOut: u.handleMouseOut
-        }, a.default.createElement(e, n({}, u.props, u.state)))
-      }, o(u, l)
+        }, i.default.createElement(e, r({}, u.props, u.state)))
+      }, a(u, s)
     }
     return ! function(e, t) {
       if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function, not " + typeof t);
@@ -54,7 +54,7 @@ var i = t.hover = function(e) {
           configurable: !0
         }
       }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-    }(i, r), i
-  }(a.default.Component)
+    }(o, n), o
+  }(i.default.Component)
 };
-t.default = i
+t.default = o

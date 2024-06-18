@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  getDifferenceFromInitialOffset: function() {
-    return a
-  },
-  getSourceClientOffset: function() {
+n.d(t, {
+  YY: function() {
     return i
+  },
+  ar: function() {
+    return a
   }
 });
 

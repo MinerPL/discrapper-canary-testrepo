@@ -1,19 +1,22 @@
 "use strict";
-n.r(t);
-var i = n("818083"),
-  r = n("420582");
-t.default = (0, i.createExperiment)({
+n.d(t, {
+  e: function() {
+    return r
+  }
+});
+var i, r, s = n(818083);
+(i = r || (r = {})).ALLOWED = "allowed", i.DEFAULT = "default", t.Z = (0, s.B)({
   kind: "guild",
   id: "2023-09_user_apps_guild",
   label: "Allow user app commands",
   defaultConfig: {
-    userAppsTreatment: r.UserAppsTreatment.DEFAULT
+    userAppsTreatment: "default"
   },
   treatments: [{
     id: 1,
     label: "Allow user app commands",
     config: {
-      userAppsTreatment: r.UserAppsTreatment.ALLOWED
+      userAppsTreatment: "allowed"
     }
   }]
 })

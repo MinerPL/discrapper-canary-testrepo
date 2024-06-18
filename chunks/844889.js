@@ -1,28 +1,28 @@
 "use strict";
-n.r(t), n.d(t, {
-  getSession: function() {
-    return _
-  },
-  setSessionExtendingEnabled: function() {
+n.d(t, {
+  Gg: function() {
     return d
   },
-  timestampOrZero: function() {
+  Hg: function() {
     return E
+  },
+  fr: function() {
+    return _
   }
 });
-var i = n("153832"),
-  r = n("433517");
+var i = n(772848),
+  r = n(433517);
 let s = "LATEST_SESSION_TIMESTAMP",
-  a = "LATEST_SESSION_UUID",
-  o = "LATEST_SESSION_INITIALIZED_TIMESTAMP",
+  o = "LATEST_SESSION_UUID",
+  a = "LATEST_SESSION_INITIALIZED_TIMESTAMP",
   l = Promise.resolve(),
   u = !1;
 
-function d(e) {
+function _(e) {
   u = e
 }
 
-function _() {
+function d() {
   return l = l.then(async () => {
     let e = await c();
     if (null == e || function(e) {
@@ -30,19 +30,19 @@ function _() {
       }(e)) {
       if (!u) return null;
       let t = {
-        uuid: (0, i.v4)(),
+        uuid: (0, i.Z)(),
         initialized: Date.now(),
         lastUsed: Date.now()
       };
-      r.Storage.set(a, t.uuid), r.Storage.set(o, t.initialized.toString()), r.Storage.set(s, Date.now().toString()), e = t
-    } else u && r.Storage.set(s, Date.now().toString());
+      r.K.set(o, t.uuid), r.K.set(a, t.initialized.toString()), r.K.set(s, Date.now().toString()), e = t
+    } else u && r.K.set(s, Date.now().toString());
     return e
   })
 }
 async function c() {
-  let e = await r.Storage.getAfterRefresh(a),
-    t = await r.Storage.getAfterRefresh(o).then(E),
-    n = await r.Storage.getAfterRefresh(s).then(E);
+  let e = await r.K.getAfterRefresh(o),
+    t = await r.K.getAfterRefresh(a).then(E),
+    n = await r.K.getAfterRefresh(s).then(E);
   return null != e && null != t ? {
     uuid: e,
     initialized: t,

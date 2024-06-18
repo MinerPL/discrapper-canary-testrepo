@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
-  hasGlobalDefaultAvatarDecoration: function() {
+n.d(t, {
+  FG: function() {
+    return s
+  },
+  ad: function() {
     return a
   },
-  isAnimatedAvatarDecoration: function() {
-    return i
-  },
-  isEqualAvatarDecoration: function() {
+  ae: function() {
     return r
   },
-  parseAvatarDecorationData: function() {
-    return s
+  sr: function() {
+    return o
   }
 });
-let i = e => e.split("_", 2).includes("a"),
-  r = (e, t) => null == e || null == t ? e === t : e.asset === t.asset && e.skuId === t.skuId,
+var i = n(392711);
+let r = e => e.split("_", 2).includes("a"),
   s = e => "object" == typeof e && null != e && "asset" in e && "string" == typeof e.asset ? "sku_id" in e && "string" == typeof e.sku_id ? {
     asset: e.asset,
     skuId: e.sku_id
@@ -24,6 +24,7 @@ let i = e => e.split("_", 2).includes("a"),
   } : {
     asset: e.asset
   } : null,
+  o = (e, t) => null == e || null == t ? e === t : (0, i.isEqual)(s(e), s(t)),
   a = (e, t) => {
     var n;
     return null != t && (null == e ? void 0 : null === (n = e.avatarDecoration) || void 0 === n ? void 0 : n.asset) != null

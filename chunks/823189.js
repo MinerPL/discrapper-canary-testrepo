@@ -5,14 +5,14 @@ function o() {
   null != e && this.setState(e)
 }
 
-function r(e) {
+function i(e) {
   this.setState((function(t) {
     var n = this.constructor.getDerivedStateFromProps(e, t);
     return null != n ? n : null
   }).bind(this))
 }
 
-function i(e, t) {
+function r(e, t) {
   try {
     var n = this.props,
       o = this.state;
@@ -30,9 +30,9 @@ function a(e) {
     a = null,
     u = null;
   if ("function" == typeof t.componentWillMount ? n = "componentWillMount" : "function" == typeof t.UNSAFE_componentWillMount && (n = "UNSAFE_componentWillMount"), "function" == typeof t.componentWillReceiveProps ? a = "componentWillReceiveProps" : "function" == typeof t.UNSAFE_componentWillReceiveProps && (a = "UNSAFE_componentWillReceiveProps"), "function" == typeof t.componentWillUpdate ? u = "componentWillUpdate" : "function" == typeof t.UNSAFE_componentWillUpdate && (u = "UNSAFE_componentWillUpdate"), null !== n || null !== a || null !== u) throw Error("Unsafe legacy lifecycles will not be called for components using new component APIs.\n\n" + (e.displayName || e.name) + " uses " + ("function" == typeof e.getDerivedStateFromProps ? "getDerivedStateFromProps()" : "getSnapshotBeforeUpdate()") + " but also contains the following legacy lifecycles:" + (null !== n ? "\n  " + n : "") + (null !== a ? "\n  " + a : "") + (null !== u ? "\n  " + u : "") + "\n\nThe above lifecycles should be removed. Learn more about this warning here:\nhttps://fb.me/react-async-component-lifecycle-hooks");
-  if ("function" == typeof e.getDerivedStateFromProps && (t.componentWillMount = o, t.componentWillReceiveProps = r), "function" == typeof t.getSnapshotBeforeUpdate) {
+  if ("function" == typeof e.getDerivedStateFromProps && (t.componentWillMount = o, t.componentWillReceiveProps = i), "function" == typeof t.getSnapshotBeforeUpdate) {
     if ("function" != typeof t.componentDidUpdate) throw Error("Cannot polyfill getSnapshotBeforeUpdate() for components that do not define componentDidUpdate() on the prototype");
-    t.componentWillUpdate = i;
+    t.componentWillUpdate = r;
     var s = t.componentDidUpdate;
     t.componentDidUpdate = function(e, t, n) {
       var o = this.__reactInternalSnapshotFlag ? this.__reactInternalSnapshot : n;
@@ -45,4 +45,4 @@ n.r(t), n.d(t, {
   polyfill: function() {
     return a
   }
-}), o.__suppressDeprecationWarning = !0, r.__suppressDeprecationWarning = !0, i.__suppressDeprecationWarning = !0
+}), o.__suppressDeprecationWarning = !0, i.__suppressDeprecationWarning = !0, r.__suppressDeprecationWarning = !0

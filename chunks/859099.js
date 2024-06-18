@@ -1,26 +1,26 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("780384"),
-  r = n("147913"),
-  s = n("844070"),
-  a = n("981631"),
-  o = n("689938");
+n(47120);
+var i = n(780384),
+  r = n(147913),
+  s = n(844070),
+  o = n(981631),
+  a = n(689938);
 
 function l(e) {
-  e.relationship.type === a.RelationshipTypes.PENDING_INCOMING && (i.AccessibilityAnnouncer.announce(o.default.Messages.FRIEND_REQUEST_PENDING_A11Y_ANNOUNCEMENT.format({
+  e.relationship.type === o.OGo.PENDING_INCOMING && (i.uv.announce(a.Z.Messages.FRIEND_REQUEST_PENDING_A11Y_ANNOUNCEMENT.format({
     username: e.relationship.user.username
-  })), s.showPendingNotification(e.relationship.user))
+  })), s.T(e.relationship.user))
 }
 
 function u(e) {
   let {
     user: t
   } = e;
-  i.AccessibilityAnnouncer.announce(o.default.Messages.FRIEND_REQUEST_ACCEPTED_A11Y_ANNOUNCEMENT.format({
+  i.uv.announce(a.Z.Messages.FRIEND_REQUEST_ACCEPTED_A11Y_ANNOUNCEMENT.format({
     username: t.username
-  })), s.showAcceptedNotification(t)
+  })), s.z(t)
 }
-class d extends r.default {
+class _ extends r.Z {
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
@@ -34,4 +34,4 @@ class d extends r.default {
     }) : t[n] = i
   }
 }
-t.default = new d
+t.Z = new _

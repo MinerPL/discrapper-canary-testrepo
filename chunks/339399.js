@@ -1,10 +1,10 @@
 "use strict";
-var e = n("796774"),
-  o = n("680625"),
+var e = n(796774),
+  o = n(680625),
   i = Array,
   u = Math.abs,
-  f = Math.pow,
-  c = Math.floor,
+  c = Math.pow,
+  f = Math.floor,
   a = Math.log,
   s = Math.LN2,
   y = function(t) {
@@ -14,33 +14,33 @@ var e = n("796774"),
   };
 t.exports = {
   pack: function(t, r, n) {
-    var e, o, h, p = i(n),
+    var e, o, p, h = i(n),
       v = 8 * n - r - 1,
-      d = (1 << v) - 1,
-      l = d >> 1,
-      g = 23 === r ? f(2, -24) - f(2, -77) : 0,
+      l = (1 << v) - 1,
+      g = l >> 1,
+      d = 23 === r ? c(2, -24) - c(2, -77) : 0,
       A = t < 0 || 0 === t && 1 / t < 0 ? 1 : 0,
       w = 0;
-    for ((t = u(t)) != t || t === 1 / 0 ? (o = t != t ? 1 : 0, e = d) : (h = f(2, -(e = c(a(t) / s))), t * h < 1 && (e--, h *= 2), e + l >= 1 ? t += g / h : t += g * f(2, 1 - l), t * h >= 2 && (e++, h /= 2), e + l >= d ? (o = 0, e = d) : e + l >= 1 ? (o = y((t * h - 1) * f(2, r)), e += l) : (o = y(t * f(2, l - 1) * f(2, r)), e = 0)); r >= 8;) p[w++] = 255 & o, o /= 256, r -= 8;
-    for (e = e << r | o, v += r; v > 0;) p[w++] = 255 & e, e /= 256, v -= 8;
-    return p[--w] |= 128 * A, p
+    for ((t = u(t)) != t || t === 1 / 0 ? (o = t != t ? 1 : 0, e = l) : (p = c(2, -(e = f(a(t) / s))), t * p < 1 && (e--, p *= 2), e + g >= 1 ? t += d / p : t += d * c(2, 1 - g), t * p >= 2 && (e++, p /= 2), e + g >= l ? (o = 0, e = l) : e + g >= 1 ? (o = y((t * p - 1) * c(2, r)), e += g) : (o = y(t * c(2, g - 1) * c(2, r)), e = 0)); r >= 8;) h[w++] = 255 & o, o /= 256, r -= 8;
+    for (e = e << r | o, v += r; v > 0;) h[w++] = 255 & e, e /= 256, v -= 8;
+    return h[--w] |= 128 * A, h
   },
   unpack: function(t, r) {
     var n, e = t.length,
       o = 8 * e - r - 1,
       i = (1 << o) - 1,
       u = i >> 1,
-      c = o - 7,
+      f = o - 7,
       a = e - 1,
       s = t[a--],
       y = 127 & s;
-    for (s >>= 7; c > 0;) y = 256 * y + t[a--], c -= 8;
-    for (n = y & (1 << -c) - 1, y >>= -c, c += r; c > 0;) n = 256 * n + t[a--], c -= 8;
+    for (s >>= 7; f > 0;) y = 256 * y + t[a--], f -= 8;
+    for (n = y & (1 << -f) - 1, y >>= -f, f += r; f > 0;) n = 256 * n + t[a--], f -= 8;
     if (0 === y) y = 1 - u;
     else {
       if (y === i) return n ? NaN : s ? -1 / 0 : 1 / 0;
-      n += f(2, r), y -= u
+      n += c(2, r), y -= u
     }
-    return (s ? -1 : 1) * n * f(2, y - r)
+    return (s ? -1 : 1) * n * c(2, y - r)
   }
 }

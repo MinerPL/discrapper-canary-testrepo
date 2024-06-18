@@ -1,23 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
-  SocketEvent: function() {
-    return s
+n.d(t, {
+  V: function() {
+    return o
   },
-  default: function() {
-    return v
+  Z: function() {
+    return D
   }
-}), n("518263"), n("970173"), n("520712"), n("268111"), n("941497"), n("32026"), n("480839"), n("744285"), n("492257"), n("873817"), n("47120"), n("789020");
-var i, r, a, s, o, l, u, d, _ = n("512722"),
-  c = n.n(_),
-  E = n("261470"),
-  I = n("47770"),
-  T = n("710845"),
-  f = n("857192"),
-  S = n("70956"),
-  h = n("358085"),
-  A = n("65154");
+}), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817), n(47120), n(789020);
+var i, r, s, o, a, l, u, _, d = n(512722),
+  c = n.n(d),
+  E = n(261470),
+  I = n(47770),
+  T = n(710845),
+  h = n(857192),
+  S = n(70956),
+  f = n(358085),
+  N = n(65154);
 
-function m(e, t, n) {
+function A(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -26,12 +26,13 @@ function m(e, t, n) {
   }) : e[t] = n, e
 }
 
-function N() {}(o = i || (i = {}))[o.IDENTIFY = 0] = "IDENTIFY", o[o.SELECT_PROTOCOL = 1] = "SELECT_PROTOCOL", o[o.READY = 2] = "READY", o[o.HEARTBEAT = 3] = "HEARTBEAT", o[o.SELECT_PROTOCOL_ACK = 4] = "SELECT_PROTOCOL_ACK", o[o.SPEAKING = 5] = "SPEAKING", o[o.HEARTBEAT_ACK = 6] = "HEARTBEAT_ACK", o[o.RESUME = 7] = "RESUME", o[o.HELLO = 8] = "HELLO", o[o.RESUMED = 9] = "RESUMED", o[o.VIDEO = 12] = "VIDEO", o[o.CLIENT_DISCONNECT = 13] = "CLIENT_DISCONNECT", o[o.SESSION_UPDATE = 14] = "SESSION_UPDATE", o[o.MEDIA_SINK_WANTS = 15] = "MEDIA_SINK_WANTS", o[o.VOICE_BACKEND_VERSION = 16] = "VOICE_BACKEND_VERSION", o[o.CHANNEL_OPTIONS_UPDATE = 17] = "CHANNEL_OPTIONS_UPDATE", o[o.FLAGS = 18] = "FLAGS", o[o.SPEED_TEST = 19] = "SPEED_TEST", o[o.PLATFORM = 20] = "PLATFORM", o[o.SECURE_FRAMES_PREPARE_PROTOCOL_TRANSITION = 21] = "SECURE_FRAMES_PREPARE_PROTOCOL_TRANSITION", o[o.SECURE_FRAMES_EXECUTE_TRANSITION = 22] = "SECURE_FRAMES_EXECUTE_TRANSITION", o[o.SECURE_FRAMES_READY_FOR_TRANSITION = 23] = "SECURE_FRAMES_READY_FOR_TRANSITION", o[o.SECURE_FRAMES_PREPARE_EPOCH = 24] = "SECURE_FRAMES_PREPARE_EPOCH", o[o.MLS_EXTERNAL_SENDER_PACKAGE = 25] = "MLS_EXTERNAL_SENDER_PACKAGE", o[o.MLS_KEY_PACKAGE = 26] = "MLS_KEY_PACKAGE", o[o.MLS_PROPOSALS = 27] = "MLS_PROPOSALS", o[o.MLS_COMMIT_WELCOME = 28] = "MLS_COMMIT_WELCOME", o[o.MLS_PREPARE_COMMIT_TRANSITION = 29] = "MLS_PREPARE_COMMIT_TRANSITION", o[o.MLS_WELCOME = 30] = "MLS_WELCOME", (l = r || (r = {}))[l.AUTHENTICATION_FAILED = 4004] = "AUTHENTICATION_FAILED", l[l.INVALID_SESSION = 4006] = "INVALID_SESSION", l[l.SERVER_NOT_FOUND = 4011] = "SERVER_NOT_FOUND", l[l.SERVER_CRASH = 4015] = "SERVER_CRASH", l[l.CANCELED = 4016] = "CANCELED", l[l.HEARTBEAT_TIMEOUT = 4800] = "HEARTBEAT_TIMEOUT", l[l.UNRESUMABLE = 4801] = "UNRESUMABLE", l[l.RESET_BACKOFF = 4802] = "RESET_BACKOFF", (u = a || (a = {}))[u.DISCONNECTED = 0] = "DISCONNECTED", u[u.CONNECTING = 1] = "CONNECTING", u[u.IDENTIFYING = 2] = "IDENTIFYING", u[u.RESUMING = 3] = "RESUMING", u[u.CONNECTED = 4] = "CONNECTED", u[u.RECONNECTING = 5] = "RECONNECTING";
-let p = 20 * S.default.Millis.SECOND,
-  O = 1 * S.default.Millis.MINUTE,
-  R = 5 * S.default.Millis.SECOND;
+function m() {}(a = i || (i = {}))[a.IDENTIFY = 0] = "IDENTIFY", a[a.SELECT_PROTOCOL = 1] = "SELECT_PROTOCOL", a[a.READY = 2] = "READY", a[a.HEARTBEAT = 3] = "HEARTBEAT", a[a.SELECT_PROTOCOL_ACK = 4] = "SELECT_PROTOCOL_ACK", a[a.SPEAKING = 5] = "SPEAKING", a[a.HEARTBEAT_ACK = 6] = "HEARTBEAT_ACK", a[a.RESUME = 7] = "RESUME", a[a.HELLO = 8] = "HELLO", a[a.RESUMED = 9] = "RESUMED", a[a.VIDEO = 12] = "VIDEO", a[a.CLIENT_DISCONNECT = 13] = "CLIENT_DISCONNECT", a[a.SESSION_UPDATE = 14] = "SESSION_UPDATE", a[a.MEDIA_SINK_WANTS = 15] = "MEDIA_SINK_WANTS", a[a.VOICE_BACKEND_VERSION = 16] = "VOICE_BACKEND_VERSION", a[a.CHANNEL_OPTIONS_UPDATE = 17] = "CHANNEL_OPTIONS_UPDATE", a[a.FLAGS = 18] = "FLAGS", a[a.SPEED_TEST = 19] = "SPEED_TEST", a[a.PLATFORM = 20] = "PLATFORM", a[a.SECURE_FRAMES_PREPARE_PROTOCOL_TRANSITION = 21] = "SECURE_FRAMES_PREPARE_PROTOCOL_TRANSITION", a[a.SECURE_FRAMES_EXECUTE_TRANSITION = 22] = "SECURE_FRAMES_EXECUTE_TRANSITION", a[a.SECURE_FRAMES_READY_FOR_TRANSITION = 23] = "SECURE_FRAMES_READY_FOR_TRANSITION", a[a.SECURE_FRAMES_PREPARE_EPOCH = 24] = "SECURE_FRAMES_PREPARE_EPOCH", a[a.MLS_EXTERNAL_SENDER_PACKAGE = 25] = "MLS_EXTERNAL_SENDER_PACKAGE", a[a.MLS_KEY_PACKAGE = 26] = "MLS_KEY_PACKAGE", a[a.MLS_PROPOSALS = 27] = "MLS_PROPOSALS", a[a.MLS_COMMIT_WELCOME = 28] = "MLS_COMMIT_WELCOME", a[a.MLS_PREPARE_COMMIT_TRANSITION = 29] = "MLS_PREPARE_COMMIT_TRANSITION", a[a.MLS_WELCOME = 30] = "MLS_WELCOME", a[a.MLS_INVALID_COMMIT_WELCOME = 31] = "MLS_INVALID_COMMIT_WELCOME", (l = r || (r = {}))[l.AUTHENTICATION_FAILED = 4004] = "AUTHENTICATION_FAILED", l[l.INVALID_SESSION = 4006] = "INVALID_SESSION", l[l.SERVER_NOT_FOUND = 4011] = "SERVER_NOT_FOUND", l[l.SERVER_CRASH = 4015] = "SERVER_CRASH", l[l.CANCELED = 4016] = "CANCELED", l[l.HEARTBEAT_TIMEOUT = 4800] = "HEARTBEAT_TIMEOUT", l[l.UNRESUMABLE = 4801] = "UNRESUMABLE", l[l.RESET_BACKOFF = 4802] = "RESET_BACKOFF", (u = s || (s = {}))[u.DISCONNECTED = 0] = "DISCONNECTED", u[u.CONNECTING = 1] = "CONNECTING", u[u.IDENTIFYING = 2] = "IDENTIFYING", u[u.RESUMING = 3] = "RESUMING", u[u.CONNECTED = 4] = "CONNECTED", u[u.RECONNECTING = 5] = "RECONNECTING";
+let O = 20 * S.Z.Millis.SECOND,
+  R = 1 * S.Z.Millis.MINUTE,
+  C = 5 * S.Z.Millis.SECOND,
+  p = 5 * S.Z.Millis.SECOND;
 
-function C(e) {
+function g(e) {
   return e.map(e => ({
     name: e.name,
     type: e.type,
@@ -43,7 +44,7 @@ function C(e) {
   }))
 }
 
-function g(e) {
+function L(e) {
   return null == e ? void 0 : e.map(e => ({
     type: e.type,
     rid: e.rid,
@@ -61,14 +62,14 @@ function g(e) {
   }))
 }
 
-function L(e) {
+function v(e) {
   var t;
   return null !== (t = null == e ? void 0 : e.map(e => ({
     type: function(e) {
-      if ("audio" === e) return A.MediaTypes.AUDIO;
-      if ("test" === e) return A.MediaTypes.TEST;
-      if ("screen" === e) return A.MediaTypes.SCREEN;
-      else return A.MediaTypes.VIDEO
+      if ("audio" === e) return N.Tr.AUDIO;
+      if ("test" === e) return N.Tr.TEST;
+      if ("screen" === e) return N.Tr.SCREEN;
+      else return N.Tr.VIDEO
     }(e.type),
     rid: e.rid,
     ssrc: e.ssrc,
@@ -83,13 +84,13 @@ function L(e) {
       height: e.max_resolution.height
     } : void 0
   }))) && void 0 !== t ? t : []
-}(d = s || (s = {})).Connecting = "connecting", d.Connect = "connect", d.Disconnect = "disconnect", d.Resuming = "resuming", d.Ready = "ready", d.Speaking = "speaking", d.Video = "video", d.Ping = "ping", d.ClientDisconnect = "client-disconnect", d.Codecs = "codecs", d.MediaSessionId = "media-session-id", d.MediaSinkWants = "media-sink-wants", d.VoiceBackendVersion = "voice-backend-version", d.KeyframeInterval = "keyframe-interval", d.ChannelOptionsUpdateSecureFramesProtocol = "update-secure-frames-protocol", d.Flags = "flags", d.Platform = "platform", d.SDP = "sdp", d.Encryption = "encryption", d.SpeedTest = "speed-test", d.BandwidthEstimationExperiment = "bandwidth-estimation-experiment", d.SecureFramesInit = "secure-frames-init", d.SecureFramesPrepareTransition = "secure-frames-prepare-transition", d.SecureFramesExecuteTransition = "secure-frames-execute-transition", d.SecureFramesPrepareEpoch = "secure-frames-prepare-epoch", d.MLSExternalSenderPackage = "mls-external-sender-package", d.MLSProposals = "mls-proposals", d.MLSPrepareCommitTransition = "mls-prepare-commit-transition", d.MLSWelcome = "mls-welcome";
-class v extends I.default {
+}(_ = o || (o = {})).Connecting = "connecting", _.Connect = "connect", _.Disconnect = "disconnect", _.Resuming = "resuming", _.Ready = "ready", _.Speaking = "speaking", _.Video = "video", _.Ping = "ping", _.ClientDisconnect = "client-disconnect", _.Codecs = "codecs", _.MediaSessionId = "media-session-id", _.MediaSinkWants = "media-sink-wants", _.VoiceBackendVersion = "voice-backend-version", _.KeyframeInterval = "keyframe-interval", _.ChannelOptionsUpdateSecureFramesProtocol = "update-secure-frames-protocol", _.Flags = "flags", _.Platform = "platform", _.SDP = "sdp", _.Encryption = "encryption", _.SpeedTest = "speed-test", _.BandwidthEstimationExperiment = "bandwidth-estimation-experiment", _.SecureFramesInit = "secure-frames-init", _.SecureFramesPrepareTransition = "secure-frames-prepare-transition", _.SecureFramesExecuteTransition = "secure-frames-execute-transition", _.SecureFramesPrepareEpoch = "secure-frames-prepare-epoch", _.MLSExternalSenderPackage = "mls-external-sender-package", _.MLSProposals = "mls-proposals", _.MLSPrepareCommitTransition = "mls-prepare-commit-transition", _.MLSWelcome = "mls-welcome";
+class D extends I.Z {
   createWebSocket() {
     this.logger.info("[CONNECT] ".concat(this.url)), null !== this.webSocket && (this.logger.error("Connect called with already existing websocket"), this.cleanupWebSocket(e => e.close(4e3))), this.connectionStartTime = Date.now(), this.helloTimeout = setTimeout(() => {
       let e = Date.now() - this.connectionStartTime;
       this.handleClose(!1, 0, "The connection timed out after ".concat(e, " ms - did not receive OP_HELLO in time."))
-    }, p);
+    }, O);
     let e = this.webSocket = new WebSocket("".concat(this.url, "?v=").concat(7));
     e.binaryType = "arraybuffer", e.onopen = () => {
       1 === this.connectionState ? this.emit("connect") : 5 === this.connectionState && this.doResumeOrClose(), this.connectionState = 4;
@@ -100,7 +101,7 @@ class v extends I.default {
         op: t,
         d: n
       } = this.parseWebSocketMessage(e);
-      if (f.default.isLoggingGatewayEvents) {
+      if (h.default.isLoggingGatewayEvents) {
         if (n instanceof Uint8Array) {
           let e = [...n].map(e => e.toString(16).padStart(2, "0")).join("");
           this.logger.info("~> ".concat(t, ": 0x").concat(e))
@@ -121,7 +122,7 @@ class v extends I.default {
           break;
         case 5:
           let i = n.speaking;
-          "boolean" == typeof i && (i = i ? A.SpeakingFlags.VOICE : A.SpeakingFlags.NONE), this.emit("speaking", n.user_id, n.ssrc, i);
+          "boolean" == typeof i && (i = i ? N.Dg.VOICE : N.Dg.NONE), this.emit("speaking", n.user_id, n.ssrc, i);
           break;
         case 3:
           this.sendHeartbeat();
@@ -130,7 +131,7 @@ class v extends I.default {
           this.emit("ping", Date.now() - n), this.handleHeartbeatAck(n);
           break;
         case 12:
-          this.emit("video", n.user_id, n.audio_ssrc, n.video_ssrc, L(n.streams));
+          this.emit("video", n.user_id, n.audio_ssrc, n.video_ssrc, v(n.streams));
           break;
         case 13:
           this.emit("client-disconnect", n.user_id);
@@ -200,7 +201,7 @@ class v extends I.default {
       op: e,
       d: t
     });
-    f.default.isLoggingGatewayEvents && this.logger.info("<~ ".concat(i));
+    h.default.isLoggingGatewayEvents && this.logger.info("<~ ".concat(i));
     try {
       n.send(i)
     } catch (e) {}
@@ -219,7 +220,7 @@ class v extends I.default {
   }
   doResumeOrClose() {
     let e = Date.now();
-    null !== this.serverId && null !== this.token && null !== this.sessionId && this.resumable && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= O) ? (this.doResume(), this.lastHeartbeatAckTime = e) : this.disconnect(!1, 4801, "Cannot resume connection.")
+    null !== this.serverId && null !== this.token && null !== this.sessionId && this.resumable && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= R) ? (this.doResume(), this.lastHeartbeatAckTime = e) : this.disconnect(!1, 4801, "Cannot resume connection.")
   }
   doResume() {
     var e, t;
@@ -232,16 +233,16 @@ class v extends I.default {
   handleHello(e) {
     var t, n, i;
     if (this.serverVersion = null !== (t = e.v) && void 0 !== t ? t : 3, this.serverVersion <= 3) {
-      let t = h.isPlatformEmbedded ? .25 : .1;
+      let t = f.isPlatformEmbedded ? .25 : .1;
       this.heartbeatInterval = e.heartbeat_interval * t
-    } else this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier, !h.isPlatformEmbedded && (this.heartbeatInterval = Math.min(R, null !== (n = this.heartbeatInterval) && void 0 !== n ? n : NaN));
+    } else this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier, !f.isPlatformEmbedded && (this.heartbeatInterval = Math.min(p, null !== (n = this.heartbeatInterval) && void 0 !== n ? n : NaN));
     let r = Date.now() - this.connectionStartTime;
     this.logger.info("[HELLO] heartbeat interval: ".concat(null !== (i = this.heartbeatInterval) && void 0 !== i ? i : "??", ", version: ").concat(this.serverVersion, ", took ").concat(r, " ms")), this.startHeartbeater()
   }
   handleReady(e) {
     this.backoff.succeed();
     let t = Date.now() - this.connectionStartTime;
-    this.logger.info("[READY] took ".concat(t, " ms")), this.serverVersion >= 6 && this.send(16, {}), this.emit("ready", e.ip, e.port, e.modes, e.ssrc, L(e.streams), e.experiments)
+    this.logger.info("[READY] took ".concat(t, " ms")), this.serverVersion >= 6 && this.send(16, {}), this.emit("ready", e.ip, e.port, e.modes, e.ssrc, v(e.streams), e.experiments)
   }
   handleResumed(e) {
     this.backoff.succeed()
@@ -263,7 +264,7 @@ class v extends I.default {
   cleanupWebSocket(e) {
     this.stopHeartbeater(), this.clearHelloTimeout();
     let t = this.webSocket;
-    this.webSocket = null, null != t && (t.onopen = N, t.onmessage = N, t.onerror = N, t.onclose = N, null == e || e(t)), this.backoff.cancel()
+    this.webSocket = null, null != t && (t.onopen = m, t.onmessage = m, t.onerror = m, t.onclose = m, null == e || e(t)), this.backoff.cancel()
   }
   cleanupState() {
     this.serverId = null, this.sessionId = null, this.token = null, this.resumable = !1
@@ -295,7 +296,7 @@ class v extends I.default {
     }, this.heartbeatInterval)
   }
   sendHeartbeat() {
-    this.logger.info("Sending heartbeat"), this.send(3, Date.now())
+    this.logger.info("Sending heartbeat"), this.send(3, Date.now()), this.lastHeartbeatTime = performance.now()
   }
   stopHeartbeater() {
     null !== this.heartbeater && (clearInterval(this.heartbeater), this.heartbeater = null), null !== this.expeditedHeartbeatTimeout && (clearTimeout(this.expeditedHeartbeatTimeout), this.expeditedHeartbeatTimeout = null)
@@ -309,18 +310,18 @@ class v extends I.default {
       userId: n,
       sessionId: i,
       token: r,
-      maxSecureFramesVersion: a,
-      video: s = !1,
-      streamParameters: o
+      maxSecureFramesVersion: s,
+      video: o = !1,
+      streamParameters: a
     } = e;
     this.serverId = t, this.sessionId = i, this.token = r, this.connectionState = 2, this.send(0, {
       server_id: t,
       user_id: n,
       session_id: i,
       token: r,
-      max_secure_frames_version: a,
-      video: s,
-      streams: g(o)
+      max_secure_frames_version: s,
+      video: o,
+      streams: L(a)
     })
   }
   expeditedHeartbeat(e) {
@@ -347,29 +348,29 @@ class v extends I.default {
   }
   selectProtocol(e, t, n, i) {
     let r;
-    let a = {};
-    null == n ? r = null : "sdp" in n && null != n.sdp && "" !== n.sdp ? (r = n.sdp, a = {
+    let s = {};
+    null == n ? r = null : "sdp" in n && null != n.sdp && "" !== n.sdp ? (r = n.sdp, s = {
       ...n,
-      codecs: C(n.codecs),
+      codecs: g(n.codecs),
       rtc_connection_id: t
     }) : "address" in n && null != n.address && "" !== n.address && n.port && null != n.mode && "" !== n.mode && (r = {
       address: n.address,
       port: n.port,
       mode: n.mode
-    }, a = {
+    }, s = {
       ...n,
-      codecs: C(n.codecs),
+      codecs: g(n.codecs),
       rtc_connection_id: t,
       experiments: i
     }), this.send(1, {
       protocol: e,
       data: r,
-      ...a
+      ...s
     })
   }
   updateSession(e) {
     this.send(14, {
-      codecs: C(e.codecs)
+      codecs: g(e.codecs)
     })
   }
   speaking(e) {
@@ -386,7 +387,7 @@ class v extends I.default {
       audio_ssrc: e,
       video_ssrc: t,
       rtx_ssrc: n,
-      streams: g(i)
+      streams: L(i)
     })
   }
   mediaSinkWants(e) {
@@ -409,10 +410,18 @@ class v extends I.default {
   sendMLSCommitWelcome(e) {
     this.logger.info("Sending MLS commit + welcome message"), this.sendBinary(28, new Uint8Array(e))
   }
+  flagMLSInvalidCommitWelcome(e) {
+    this.send(31, {
+      transition_id: e
+    })
+  }
   setHeartbeatIntervalModifier(e) {
     this.heartbeatIntervalModifier = e
   }
+  sendHeartbeatIfOverdue() {
+    if (null != this.heartbeatInterval && null != this.heartbeater && null != this.lastHeartbeatTime) performance.now() - this.lastHeartbeatTime > this.heartbeatInterval + C && (this.logger.info("Forcing heartbeat"), this.sendHeartbeat())
+  }
   constructor(e) {
-    super(), m(this, "url", void 0), m(this, "logger", new T.default("RTCControlSocket")), m(this, "backoff", new E.default(1e3, 5e3)), m(this, "webSocket", void 0), m(this, "connectionState", void 0), m(this, "heartbeatInterval", void 0), m(this, "helloTimeout", void 0), m(this, "heartbeater", void 0), m(this, "lastHeartbeatAckTime", void 0), m(this, "expeditedHeartbeatTimeout", void 0), m(this, "heartbeatAck", void 0), m(this, "heartbeatIntervalModifier", void 0), m(this, "connectionStartTime", void 0), m(this, "sessionId", void 0), m(this, "serverId", void 0), m(this, "token", void 0), m(this, "resumable", void 0), m(this, "serverVersion", 0), this.url = e, this.webSocket = null, this.connectionState = 0, this.helloTimeout = null, this.lastHeartbeatAckTime = null, this.heartbeatInterval = null, this.heartbeater = null, this.heartbeatAck = !0, this.expeditedHeartbeatTimeout = null, this.heartbeatIntervalModifier = 1, this.connectionStartTime = 0, this.sessionId = null, this.serverId = null, this.token = null, this.resumable = !1
+    super(), A(this, "url", void 0), A(this, "logger", new T.Z("RTCControlSocket")), A(this, "backoff", new E.Z(1e3, 5e3)), A(this, "webSocket", void 0), A(this, "connectionState", void 0), A(this, "heartbeatInterval", void 0), A(this, "helloTimeout", void 0), A(this, "heartbeater", void 0), A(this, "lastHeartbeatTime", void 0), A(this, "lastHeartbeatAckTime", void 0), A(this, "expeditedHeartbeatTimeout", void 0), A(this, "heartbeatAck", void 0), A(this, "heartbeatIntervalModifier", void 0), A(this, "connectionStartTime", void 0), A(this, "sessionId", void 0), A(this, "serverId", void 0), A(this, "token", void 0), A(this, "resumable", void 0), A(this, "serverVersion", 0), this.url = e, this.webSocket = null, this.connectionState = 0, this.helloTimeout = null, this.lastHeartbeatTime = null, this.lastHeartbeatAckTime = null, this.heartbeatInterval = null, this.heartbeater = null, this.heartbeatAck = !0, this.expeditedHeartbeatTimeout = null, this.heartbeatIntervalModifier = 1, this.connectionStartTime = 0, this.sessionId = null, this.serverId = null, this.token = null, this.resumable = !1
   }
 }

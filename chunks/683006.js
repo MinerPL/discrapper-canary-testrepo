@@ -1,5 +1,5 @@
 "use strict";
-var r = n("896859");
+var r = n(896859);
 
 function i() {}
 

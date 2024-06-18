@@ -1,12 +1,12 @@
 "use strict";
-s.r(t), s.d(t, {
-  getPaymentPayoutGroups: function() {
-    return n
+t.d(s, {
+  C: function() {
+    return l
   }
 });
-var a = s("544891"),
-  l = s("981631");
-let n = async (e, t) => (await a.HTTP.get({
-  url: l.Endpoints.PAYMENT_PAYOUT_GROUPS(e),
-  query: t
+var n = t(544891),
+  i = t(981631);
+let l = async (e, s) => (await n.tn.get({
+  url: i.ANM.PAYMENT_PAYOUT_GROUPS(e),
+  query: s
 })).body

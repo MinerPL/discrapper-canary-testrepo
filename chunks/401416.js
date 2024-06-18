@@ -1,24 +1,24 @@
 "use strict";
-n.r(t), n.d(t, {
-  acknowledgeDmSettingsUpsell: function() {
+n.d(t, {
+  Y: function() {
     return u
   }
-}), n("47120");
-var i = n("544891"),
-  r = n("147913"),
-  a = n("25733"),
-  s = n("704587"),
-  o = n("981631");
-class l extends r.default {
+}), n(47120);
+var i = n(544891),
+  r = n(147913),
+  s = n(25733),
+  o = n(704587),
+  a = n(981631);
+class l extends r.Z {
   intialize() {
-    s.DmSettingsUpsellExperiment.getCurrentConfig({
+    o.s.getCurrentConfig({
       location: "initializer"
     }, {
       autoTrackExposure: !1
     })
   }
   handleDmSettingsUpsellShow(e) {
-    a.default.openDmSettingsUpsellModal(e.guildId)
+    s.Z.openDmSettingsUpsellModal(e.guildId)
   }
   constructor(...e) {
     var t, n, i;
@@ -34,8 +34,8 @@ class l extends r.default {
 }
 
 function u(e) {
-  return i.HTTP.post({
-    url: o.Endpoints.DM_SETTINGS_UPSELL_ACK(e)
+  return i.tn.post({
+    url: a.ANM.DM_SETTINGS_UPSELL_ACK(e)
   })
 }
-t.default = new l
+t.Z = new l

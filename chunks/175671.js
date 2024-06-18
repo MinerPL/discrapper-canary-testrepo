@@ -1,6 +1,6 @@
 "use strict";
-var r = n("814033"),
-  i = n("685053").assert;
+var r = n(814033),
+  i = n(685053).assert;
 
 function a(e, t) {
   this.ec = e, this.priv = null, this.pub = null, t.priv && this._importPrivate(t.priv, t.privEnc), t.pub && this._importPublic(t.pub, t.pubEnc)

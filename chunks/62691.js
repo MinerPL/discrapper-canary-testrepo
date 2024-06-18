@@ -1,65 +1,65 @@
 "use strict";
-var r, a, o, i, l = n("668530"),
-  u = n("156741"),
-  s = n("476508"),
-  c = n("735471"),
-  d = n("141603"),
-  f = n("821819"),
-  p = n("439230"),
-  h = n("780524"),
-  m = n("535538"),
-  y = n("274745"),
-  v = n("378636"),
-  g = n("42433"),
-  b = l.setImmediate,
-  _ = l.clearImmediate,
-  k = l.process,
-  C = l.Dispatch,
-  w = l.Function,
-  S = l.MessageChannel,
-  N = l.String,
-  x = 0,
-  P = {},
-  A = "onreadystatechange";
-f(function() {
-  r = l.location
+var r, o, a, i, s = n(668530),
+  c = n(156741),
+  l = n(476508),
+  u = n(735471),
+  d = n(141603),
+  p = n(821819),
+  h = n(439230),
+  f = n(780524),
+  m = n(535538),
+  y = n(274745),
+  v = n(378636),
+  g = n(42433),
+  b = s.setImmediate,
+  _ = s.clearImmediate,
+  k = s.process,
+  C = s.Dispatch,
+  Z = s.Function,
+  w = s.MessageChannel,
+  S = s.String,
+  N = 0,
+  x = {},
+  P = "onreadystatechange";
+p(function() {
+  r = s.location
 });
-var R = function(e) {
-    if (d(P, e)) {
-      var t = P[e];
-      delete P[e], t()
+var A = function(e) {
+    if (d(x, e)) {
+      var t = x[e];
+      delete x[e], t()
+    }
+  },
+  R = function(e) {
+    return function() {
+      A(e)
     }
   },
   F = function(e) {
-    return function() {
-      R(e)
-    }
+    A(e.data)
   },
   O = function(e) {
-    R(e.data)
-  },
-  E = function(e) {
-    l.postMessage(N(e), r.protocol + "//" + r.host)
+    s.postMessage(S(e), r.protocol + "//" + r.host)
   };
 (!b || !_) && (b = function(e) {
   y(arguments.length, 1);
-  var t = c(e) ? e : w(e),
-    n = h(arguments, 1);
-  return P[++x] = function() {
-    u(t, void 0, n)
-  }, a(x), x
+  var t = u(e) ? e : Z(e),
+    n = f(arguments, 1);
+  return x[++N] = function() {
+    c(t, void 0, n)
+  }, o(N), N
 }, _ = function(e) {
-  delete P[e]
-}, g ? a = function(e) {
-  k.nextTick(F(e))
-} : C && C.now ? a = function(e) {
-  C.now(F(e))
-} : S && !v ? (i = (o = new S).port2, o.port1.onmessage = O, a = s(i.postMessage, i)) : l.addEventListener && c(l.postMessage) && !l.importScripts && r && "file:" !== r.protocol && !f(E) ? (a = E, l.addEventListener("message", O, !1)) : a = A in m("script") ? function(e) {
-  p.appendChild(m("script"))[A] = function() {
-    p.removeChild(this), R(e)
+  delete x[e]
+}, g ? o = function(e) {
+  k.nextTick(R(e))
+} : C && C.now ? o = function(e) {
+  C.now(R(e))
+} : w && !v ? (i = (a = new w).port2, a.port1.onmessage = F, o = l(i.postMessage, i)) : s.addEventListener && u(s.postMessage) && !s.importScripts && r && "file:" !== r.protocol && !p(O) ? (o = O, s.addEventListener("message", F, !1)) : o = P in m("script") ? function(e) {
+  h.appendChild(m("script"))[P] = function() {
+    h.removeChild(this), A(e)
   }
 } : function(e) {
-  setTimeout(F(e), 0)
+  setTimeout(R(e), 0)
 }), e.exports = {
   set: b,
   clear: _

@@ -1,5 +1,5 @@
 "use strict";
-var n = e("936940");
+var n = e(936940);
 t.exports = function(t, r) {
   var e = [][t];
   return !!e && n(function() {

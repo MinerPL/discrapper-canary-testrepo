@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return s
   }
 });
-var i = n("311850");
+var i = n(311850);
 
 function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -14,22 +14,22 @@ function r(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class a {
+class s {
   static fromServer(e) {
     let {
       prices: t,
       type: n,
       premium_type: r,
-      name: s,
-      sku_id: o,
+      name: o,
+      sku_id: a,
       summary: l
     } = e;
-    return new a({
-      prices: (0, i.getPricesFromServer)(t),
+    return new s({
+      prices: (0, i.l)(t),
       type: n,
       premiumType: r,
-      name: s,
-      skuId: o,
+      name: o,
+      skuId: a,
       summary: l
     })
   }

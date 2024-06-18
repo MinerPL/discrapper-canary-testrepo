@@ -1,49 +1,49 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
+t.d(s, {
+  Z: function() {
     return r
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("481060"),
-  n = s("556012"),
-  i = s("454775");
+var n = t(735250);
+t(470079);
+var i = t(481060),
+  l = t(556012),
+  a = t(485670);
 
 function r(e) {
-  var t;
+  var s;
   let {
-    action: s,
+    action: t,
     actionType: r,
     triggerType: o
-  } = e, d = (0, n.getActionInfo)(null !== (t = null == s ? void 0 : s.type) && void 0 !== t ? t : r, s, o);
-  if (null == d) return null;
+  } = e, c = (0, l.c)(null !== (s = null == t ? void 0 : t.type) && void 0 !== s ? s : r, t, o);
+  if (null == c) return null;
   let {
-    headerText: u,
-    helperText: c,
+    headerText: d,
+    helperText: u,
     icon: E
-  } = d;
-  return (0, a.jsxs)("div", {
-    className: i.actionContainer,
-    children: [(0, a.jsx)("div", {
-      className: i.actionIconContainer,
-      children: (0, a.jsx)(E, {
+  } = c;
+  return (0, n.jsxs)("div", {
+    className: a.actionContainer,
+    children: [(0, n.jsx)("div", {
+      className: a.actionIconContainer,
+      children: (0, n.jsx)(E, {
         width: 14,
         height: 14,
-        className: i.actionIcon
+        className: a.actionIcon
       })
-    }), (0, a.jsx)("div", {
-      className: i.actionTextContainer,
-      children: (0, a.jsxs)(l.Text, {
-        className: i.actionTextHeader,
+    }), (0, n.jsx)("div", {
+      className: a.actionTextContainer,
+      children: (0, n.jsxs)(i.Text, {
+        className: a.actionTextHeader,
         variant: "text-xs/medium",
         color: "interactive-normal",
-        children: [u, null != c && (0, a.jsx)(l.Text, {
-          className: i.actionTextHelper,
+        children: [d, null != u && (0, n.jsx)(i.Text, {
+          className: a.actionTextHelper,
           variant: "text-xs/medium",
           color: "text-muted",
           tag: "span",
-          children: c
+          children: u
         })]
       })
     })]

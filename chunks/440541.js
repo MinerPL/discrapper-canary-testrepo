@@ -1,6 +1,6 @@
 "use strict";
-var r = n("546299"),
-  i = n("261638"),
+var r = n(546299),
+  i = n(261638),
   a = r.rotl32,
   o = r.sum32,
   s = r.sum32_3,

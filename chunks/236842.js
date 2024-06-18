@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return l
   }
-}), n("47120"), n("411104");
-var i = n("836560"),
-  r = n("259443"),
-  s = n("436620");
+}), n(47120), n(411104);
+var i = n(836560),
+  r = n(259443),
+  s = n(436620);
 
-function a(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -16,13 +16,13 @@ function a(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let o = new r.Logger("PeerConnection");
+let a = new r.Y("PeerConnection");
 class l extends i.EventEmitter {
   setBitRate(e) {
     this.bitrate !== e && (this.bitrate = e, this.negotiationNeeded())
   }
   close() {
-    o.info("Close RTCPeerConnection"), "closed" !== this.signalingState && this.pc.close(), this.removeAllListeners()
+    a.info("Close RTCPeerConnection"), "closed" !== this.signalingState && this.pc.close(), this.removeAllListeners()
   }
   get peerConnectionState() {
     return this.pc.connectionState
@@ -53,7 +53,7 @@ class l extends i.EventEmitter {
       if (null == t) throw Error("localDescription is null");
       return this.emit("offer", t), t
     }).catch(t => {
-      if ("have-remote-offer" === e.signalingState) return o.error(t), this.createOffer();
+      if ("have-remote-offer" === e.signalingState) return a.error(t), this.createOffer();
       throw t
     })
   }
@@ -64,7 +64,7 @@ class l extends i.EventEmitter {
       if (null == t) throw Error("localDescription is null");
       return this.emit("answer", t), t
     }).catch(t => {
-      throw o.warn("PeerConnection#createAnswer: Attempted to set local description in state: ".concat(e.signalingState)), t
+      throw a.warn("PeerConnection#createAnswer: Attempted to set local description in state: ".concat(e.signalingState)), t
     })
   }
   negotiationNeeded() {
@@ -83,7 +83,7 @@ class l extends i.EventEmitter {
   makeOfferAnswerOptions() {
     return {
       offerToReceiveAudio: !0,
-      offerToReceiveVideo: s.BROWSER_SUPPORTS_VIDEO,
+      offerToReceiveVideo: s.U8,
       iceRestart: !1
     }
   }
@@ -104,22 +104,22 @@ class l extends i.EventEmitter {
     }, this.emit("addtrack", e, t))
   }
   constructor(e) {
-    super(), a(this, "bitrate", void 0), a(this, "pc", void 0), a(this, "stream", null), a(this, "senders", []), a(this, "negotiating", !1), a(this, "_negotiationNeeded", !1), a(this, "handlePeerConnectionStateChange", () => {
+    super(), o(this, "bitrate", void 0), o(this, "pc", void 0), o(this, "stream", null), o(this, "senders", []), o(this, "negotiating", !1), o(this, "_negotiationNeeded", !1), o(this, "handlePeerConnectionStateChange", () => {
       let e = this.peerConnectionState;
-      o.info("peerConnectionState =>", e), "connecting" === e ? "connected" === this.iceConnectionState ? this.emit(e) : this.emit(this.iceConnectionState) : this.emit(e)
-    }), a(this, "handleIceConnectionStateChange", () => {
+      a.info("peerConnectionState =>", e), "connecting" === e ? "connected" === this.iceConnectionState ? this.emit(e) : this.emit(this.iceConnectionState) : this.emit(e)
+    }), o(this, "handleIceConnectionStateChange", () => {
       let e = this.iceConnectionState;
-      o.info("iceConnectionState =>", e), "completed" === e && (e = "connected"), this.emit(e)
-    }), a(this, "handleSignalingStateChange", () => {
-      o.info("signalingState => ".concat(this.signalingState, ", negotiation needed: ").concat(this._negotiationNeeded.toString())), "stable" === this.signalingState && (this.negotiating = !1, this._negotiationNeeded && this.negotiationNeeded())
-    }), a(this, "handleIceGatheringStateChange", () => {
-      o.info("iceGatheringState =>", this.iceGatheringState)
-    }), a(this, "handleTrack", e => {
+      a.info("iceConnectionState =>", e), "completed" === e && (e = "connected"), this.emit(e)
+    }), o(this, "handleSignalingStateChange", () => {
+      a.info("signalingState => ".concat(this.signalingState, ", negotiation needed: ").concat(this._negotiationNeeded.toString())), "stable" === this.signalingState && (this.negotiating = !1, this._negotiationNeeded && this.negotiationNeeded())
+    }), o(this, "handleIceGatheringStateChange", () => {
+      a.info("iceGatheringState =>", this.iceGatheringState)
+    }), o(this, "handleTrack", e => {
       this.emitTrack(e.streams[0].id, e.track)
     }), this.bitrate = e;
     let t = this.pc = new RTCPeerConnection({
       sdpSemantics: "plan-b"
     });
-    s.BROWSER_SUPPORTS_CONNECTION_STATE ? (t.onconnectionstatechange = this.handlePeerConnectionStateChange, t.oniceconnectionstatechange = this.handlePeerConnectionStateChange) : t.oniceconnectionstatechange = this.handleIceConnectionStateChange, t.onsignalingstatechange = this.handleSignalingStateChange, t.onicegatheringstatechange = this.handleIceGatheringStateChange, t.ontrack = this.handleTrack.bind(this), o.info("Constructed RTCPeerConnection")
+    s.X6 ? (t.onconnectionstatechange = this.handlePeerConnectionStateChange, t.oniceconnectionstatechange = this.handlePeerConnectionStateChange) : t.oniceconnectionstatechange = this.handleIceConnectionStateChange, t.onsignalingstatechange = this.handleSignalingStateChange, t.onicegatheringstatechange = this.handleIceGatheringStateChange, t.ontrack = this.handleTrack.bind(this), a.info("Constructed RTCPeerConnection")
   }
 }

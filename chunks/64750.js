@@ -1,5 +1,5 @@
 "use strict";
-var r = n("977791"),
+var r = n(977791),
   i = SyntaxError,
   a = "object" == typeof StopIteration ? StopIteration : null;
 e.exports = function(e) {

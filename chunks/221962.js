@@ -1,8 +1,8 @@
 "use strict";
-var r = n("875604"),
-  a = n("623966"),
-  o = Array.prototype;
+var r = n(875604),
+  o = n(623966),
+  a = Array.prototype;
 e.exports = function(e) {
   var t = e.findIndex;
-  return e === o || r(o, e) && t === o.findIndex ? a : t
+  return e === a || r(a, e) && t === a.findIndex ? o : t
 }

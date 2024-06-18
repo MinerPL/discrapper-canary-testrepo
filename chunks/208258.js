@@ -1,2 +1,2 @@
 "use strict";
-e.exports = n.p + "ce7035c0392bfdf6f1ef.ico"
+e.exports = n.p + "757df026fc30252f435a.ico"

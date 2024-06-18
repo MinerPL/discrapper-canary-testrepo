@@ -1,20 +1,19 @@
 "use strict";
-n.r(t);
-var i = n("302454"),
+var i = n(302454),
   r = n.n(i),
-  a = n("777547");
-let s = /\n$/,
-  o = /^ *-# +((?!(-#)+)[^\n]+?) *(?:\n|$)/,
+  s = n(777547);
+let o = /\n$/,
+  a = /^ *-# +((?!(-#)+)[^\n]+?) *(?:\n|$)/,
   l = {
     order: r().defaultRules.heading.order,
     requiredFirstCharacters: ["-"],
     match: (e, t, n) => {
       let {
         showSubtextMarkdown: r
-      } = a.SubtextMarkdownUserExperiment.getCurrentConfig({
+      } = s.m.getCurrentConfig({
         location: "MarkupSubtextRule"
       });
-      return r ? null == n || "" === n || null != n.match(s) ? (0, i.anyScopeRegex)(o)(e, t, n) : null : null
+      return r ? null == n || "" === n || null != n.match(o) ? (0, i.anyScopeRegex)(a)(e, t, n) : null : null
     },
     parse: function(e, t, n) {
       return {
@@ -22,4 +21,4 @@ let s = /\n$/,
       }
     }
   };
-t.default = l
+t.Z = l

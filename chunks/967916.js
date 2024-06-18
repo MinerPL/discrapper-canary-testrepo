@@ -1,35 +1,35 @@
 "use strict";
-s.r(t), s.d(t, {
-  fetchDiscoverableGuilds: function() {
+t.d(s, {
+  z: function() {
     return r
   }
 });
-var a = s("664751"),
-  l = s("544891"),
-  n = s("570140");
-s("900849"), s("719879");
-var i = s("981631");
+var n = t(664751),
+  i = t(544891),
+  l = t(570140);
+t(900849), t(719879);
+var a = t(981631);
 async function r(e) {
-  n.default.dispatch({
+  l.Z.dispatch({
     type: "DISCOVER_GUILDS_FETCH_START",
     guildIds: e
   });
   try {
     let {
-      guilds: t
-    } = (await l.HTTP.get({
-      url: i.Endpoints.GUILD_DISCOVERY,
-      query: a.stringify({
+      guilds: s
+    } = (await i.tn.get({
+      url: a.ANM.GUILD_DISCOVERY,
+      query: n.stringify({
         guild_ids: e
       }),
       oldFormErrors: !0
     })).body;
-    n.default.dispatch({
+    l.Z.dispatch({
       type: "DISCOVER_GUILDS_FETCH_SUCCESS",
-      guilds: t
+      guilds: s
     })
   } catch (e) {
-    n.default.dispatch({
+    l.Z.dispatch({
       type: "DISCOVER_GUILDS_FETCH_FAILURE"
     })
   }

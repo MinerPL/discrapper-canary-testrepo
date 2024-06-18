@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
-  getClipCreatedAt: function() {
+n.d(t, {
+  U: function() {
     return s
   },
-  getClipParticipantIds: function() {
-    return a
+  Z: function() {
+    return o
   }
 });
-var i = n("709054"),
-  r = n("356659");
+var i = n(709054),
+  r = n(356659);
 
 function s(e) {
   return new Date(i.default.extractTimestamp(e)).toISOString()
 }
 
-function a(e) {
-  return e.slice(0, r.CLIPS_MAX_PARTICIPANTS)
+function o(e) {
+  return e.slice(0, r.JO)
 }

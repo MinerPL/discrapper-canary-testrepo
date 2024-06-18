@@ -1,7 +1,7 @@
-var r = n("520714"),
-  i = n("650359"),
-  a = n("557105"),
-  o = n("964417");
+var r = n(520714),
+  i = n(650359),
+  a = n(557105),
+  o = n(964417);
 
 function s(t) {
   var n = "function" == typeof Map ? new Map : void 0;

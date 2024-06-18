@@ -1,4 +1,3 @@
 "use strict";
-r.r(t);
-var n = r("195168").default.Uint8Array;
-t.default = n
+var r = n(195168).Z.Uint8Array;
+t.Z = r

@@ -1,22 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return h
+n.d(t, {
+  Z: function() {
+    return f
   }
-}), n("47120");
-var i, r = n("735250"),
-  s = n("470079"),
-  a = n("374470"),
-  o = n("481060"),
-  l = n("40851"),
-  u = n("261922"),
-  d = n("926836"),
-  _ = n("956664"),
-  c = n("506071"),
-  E = n("689938"),
-  I = n("988517");
+}), n(47120);
+var i, r = n(735250),
+  s = n(470079),
+  o = n(374470),
+  a = n(481060),
+  l = n(40851),
+  u = n(261922),
+  _ = n(926836),
+  d = n(956664),
+  c = n(506071),
+  E = n(503349),
+  I = n(689938),
+  T = n(381237);
 
-function T(e, t, n) {
+function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -24,7 +25,6 @@ function T(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let f = "Zoomed Lazy Image Modal";
 class S extends(i = s.PureComponent) {
   render() {
     let {
@@ -32,7 +32,7 @@ class S extends(i = s.PureComponent) {
       isWindowFocused: t,
       ...n
     } = this.props;
-    return (0, r.jsx)(u.default, {
+    return (0, r.jsx)(u.Z, {
       ...n,
       onZoom: this.onZoom,
       onMouseEnter: this.onMouseEnter,
@@ -40,17 +40,17 @@ class S extends(i = s.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), T(this, "onMouseEnter", (e, t) => {
+    super(...e), h(this, "onMouseEnter", (e, t) => {
       let {
         preloadImage: n
       } = t, {
         width: i,
         height: r
       } = this.props;
-      n((0, _.zoomFit)(i, r))
-    }), T(this, "modalContext", (0, o.modalContextFromAppContext)(this.props.appContext)), T(this, "onCloseImage", () => {
-      (0, o.closeModal)(f, this.modalContext)
-    }), T(this, "onZoom", (e, t) => {
+      n((0, d.zp)(i, r))
+    }), h(this, "modalContext", (0, a.modalContextFromAppContext)(this.props.appContext)), h(this, "onCloseImage", () => {
+      (0, a.closeModal)(E.c, this.modalContext)
+    }), h(this, "onZoom", (e, t) => {
       let {
         zoomThumbnailPlaceholder: n,
         trigger: i
@@ -60,57 +60,59 @@ class S extends(i = s.PureComponent) {
         alt: s,
         src: l,
         original: u,
-        width: _,
+        width: d,
         height: c,
-        animated: T,
+        animated: h,
         children: S,
-        renderLinkComponent: h,
+        renderLinkComponent: f,
+        renderForwardComponent: N,
         isWindowFocused: A,
         shouldHideMediaOptions: m = !1
-      } = this.props, N = {
+      } = this.props, O = {
         alt: s,
         src: l,
         original: null != u ? u : l,
-        width: _,
+        width: d,
         height: c,
-        animated: T,
+        animated: h,
         children: S,
         zoomThumbnailPlaceholder: n,
-        renderLinkComponent: h,
+        renderLinkComponent: f,
+        renderForwardComponent: N,
         onContextMenu: m ? e => {
           e.stopPropagation(), e.preventDefault()
         } : void 0,
         trigger: i
       };
-      (0, a.isElement)(e.currentTarget) && e.currentTarget.blur(), (0, o.openModal)(e => (0, r.jsx)(o.ModalRoot, {
-        className: I.modal,
+      (0, o.k)(e.currentTarget) && e.currentTarget.blur(), (0, a.openModal)(e => (0, r.jsx)(a.ModalRoot, {
+        className: T.modal,
         ...e,
-        size: o.ModalSize.DYNAMIC,
-        "aria-label": E.default.Messages.IMAGE,
-        children: (0, r.jsx)(d.ImageModal, {
-          ...N,
-          className: I.image,
+        size: a.ModalSize.DYNAMIC,
+        "aria-label": I.Z.Messages.IMAGE,
+        children: (0, r.jsx)(_.y, {
+          ...O,
+          className: T.image,
           shouldAnimate: A,
           onClose: this.onCloseImage,
           shouldHideMediaOptions: m
         })
       }), {
-        modalKey: f
+        modalKey: E.c
       }, this.modalContext)
     })
   }
 }
 
-function h(e) {
-  let t = (0, l.useAppContext)(),
-    n = (0, c.useIsWindowFocused)();
+function f(e) {
+  let t = (0, l.bp)(),
+    n = (0, c.n)();
   return (0, r.jsx)(S, {
     ...e,
     isWindowFocused: n,
     appContext: t
   })
 }
-T(S, "defaultProps", {
+h(S, "defaultProps", {
   shouldLink: !0,
   autoPlay: !1,
   animated: !1

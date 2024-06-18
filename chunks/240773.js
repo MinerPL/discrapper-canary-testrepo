@@ -1,6 +1,6 @@
 "use strict";
-n.r(t), n.d(t, {
-  MESSAGE_TYPE: function() {
+n.d(t, {
+  C: function() {
     return r
   }
 });

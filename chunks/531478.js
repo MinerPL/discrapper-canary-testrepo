@@ -25,11 +25,11 @@ function r(e, t) {
 n("ERR_INVALID_OPT_VALUE", function(e, t) {
   return 'The value "' + t + '" is invalid for option "' + e + '"'
 }, TypeError), n("ERR_INVALID_ARG_TYPE", function(e, t, n) {
-  if ("string" == typeof t && (i = "not ", t.substr(!a || a < 0 ? 0 : +a, i.length) === i)) f = "must not be", t = t.replace(/^not /, "");
+  if ("string" == typeof t && (i = "not ", t.substr(0, i.length) === i)) f = "must not be", t = t.replace(/^not /, "");
   else f = "must be";
   if (o = e, s = " argument", (void 0 === u || u > o.length) && (u = o.length), o.substring(u - s.length, u) === s) p = "The ".concat(e, " ").concat(f, " ").concat(r(t, "type"));
   else {
-    var i, a, o, s, u, c, l, d, f, p, h = (c = e, "number" != typeof d && (d = 0), d + (l = ".").length > c.length || -1 === c.indexOf(l, d)) ? "argument" : "property";
+    var i, a, o, s, u, c, l, d, f, p, h = (c = e, l = ".", "number" != typeof d && (d = 0), d + 1 > c.length || -1 === c.indexOf(l, d)) ? "argument" : "property";
     p = 'The "'.concat(e, '" ').concat(h, " ").concat(f, " ").concat(r(t, "type"))
   }
   return p += ". Received type ".concat(typeof n)

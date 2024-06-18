@@ -1,9 +1,8 @@
 "use strict";
-n.r(t);
-var i = n("570140");
-t.default = class e {
+var i = n(570140);
+t.Z = class e {
   static setPermission(e, t) {
-    i.default.dispatch({
+    i.Z.dispatch({
       type: "SET_NATIVE_PERMISSION",
       permissionType: e,
       state: t

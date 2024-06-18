@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  useCollector: function() {
+n.d(t, {
+  r: function() {
     return u
   }
 });
-var r = n("595490"),
+var r = n(595490),
   i = n.n(r),
-  a = n("470079"),
-  o = n("175806");
+  a = n(470079),
+  o = n(175806);
 
 function s(e, t) {
   (null == t || t > e.length) && (t = e.length);
@@ -39,7 +39,7 @@ function u(e, t, n) {
         }
         return a
       }
-    }(r, u) || function(e, t) {
+    }(r, 2) || function(e, t) {
       if (e) {
         if ("string" == typeof e) return s(e, t);
         var n = Object.prototype.toString.call(e).slice(8, -1);
@@ -55,5 +55,5 @@ function u(e, t, n) {
       var r = t(e);
       !i()(l, r) && (d(r), n && n())
     }, [l, e, n]);
-  return (0, o.useIsomorphicLayoutEffect)(f), [l, f]
+  return (0, o.L)(f), [l, f]
 }

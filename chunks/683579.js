@@ -1,58 +1,58 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
+t.d(s, {
+  Z: function() {
     return E
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("481060"),
-  n = s("556012"),
-  i = s("862085"),
-  r = s("769998"),
-  o = s("671066"),
-  d = s("273504"),
-  u = s("39097");
+var n = t(735250);
+t(470079);
+var i = t(481060),
+  l = t(556012),
+  a = t(862085),
+  r = t(769998),
+  o = t(671066),
+  c = t(273504),
+  d = t(39097);
 
-function c(e) {
+function u(e) {
   let {
-    action: t,
-    triggerType: s,
-    toggled: i,
+    action: s,
+    triggerType: t,
+    toggled: a,
     onToggleAction: r
-  } = e, o = (0, n.getActionInfo)(t.type, t, s);
+  } = e, o = (0, l.c)(s.type, s, t);
   if (null == o) return null;
   let {
-    headerText: d,
-    descriptionText: c,
+    headerText: c,
+    descriptionText: u,
     icon: E
   } = o;
-  return (0, a.jsxs)("div", {
-    className: u.actionContainer,
-    children: [(0, a.jsx)("div", {
-      className: u.actionIconContainer,
-      children: (0, a.jsx)(E, {
+  return (0, n.jsxs)("div", {
+    className: d.actionContainer,
+    children: [(0, n.jsx)("div", {
+      className: d.actionIconContainer,
+      children: (0, n.jsx)(E, {
         width: 24,
         height: 24,
-        className: u.actionIcon
+        className: d.actionIcon
       })
-    }), (0, a.jsxs)("div", {
-      className: u.actionTextContainer,
-      children: [(0, a.jsx)(l.Heading, {
+    }), (0, n.jsxs)("div", {
+      className: d.actionTextContainer,
+      children: [(0, n.jsx)(i.Heading, {
         variant: "heading-sm/semibold",
-        children: d
-      }), (0, a.jsx)(l.Text, {
+        children: c
+      }), (0, n.jsx)(i.Text, {
         color: "interactive-normal",
         variant: "text-xs/medium",
-        children: c
+        children: u
       })]
-    }), (0, a.jsx)("div", {
-      children: (0, a.jsx)(l.Checkbox, {
+    }), (0, n.jsx)("div", {
+      children: (0, n.jsx)(i.Checkbox, {
         disabled: !o.isEditable,
-        type: l.Checkbox.Types.INVERTED,
-        value: i,
+        type: i.Checkbox.Types.INVERTED,
+        value: a,
         onChange: () => r(!1),
-        className: u.__invalid_actionCheckbox
+        className: d.__invalid_actionCheckbox
       })
     })]
   })
@@ -60,42 +60,42 @@ function c(e) {
 
 function E(e) {
   let {
-    action: t,
-    guildId: s,
-    triggerType: l,
-    toggled: n,
-    onToggleAction: u
+    action: s,
+    guildId: t,
+    triggerType: i,
+    toggled: l,
+    onToggleAction: d
   } = e;
-  switch (t.type) {
-    case d.AutomodActionType.FLAG_TO_CHANNEL:
-      return (0, a.jsx)(o.default, {
-        action: t,
-        triggerType: l,
-        toggled: n,
-        onToggleAction: u
+  switch (s.type) {
+    case c.jj.FLAG_TO_CHANNEL:
+      return (0, n.jsx)(o.Z, {
+        action: s,
+        triggerType: i,
+        toggled: l,
+        onToggleAction: d
       });
-    case d.AutomodActionType.USER_COMMUNICATION_DISABLED:
-      return (0, a.jsx)(r.default, {
-        action: t,
-        guildId: s,
-        triggerType: l,
-        toggled: n,
-        onToggleAction: u
+    case c.jj.USER_COMMUNICATION_DISABLED:
+      return (0, n.jsx)(r.Z, {
+        action: s,
+        guildId: t,
+        triggerType: i,
+        toggled: l,
+        onToggleAction: d
       });
-    case d.AutomodActionType.BLOCK_MESSAGE:
-      return (0, a.jsx)(i.default, {
-        action: t,
-        triggerType: l,
-        toggled: n,
-        onToggleAction: u
+    case c.jj.BLOCK_MESSAGE:
+      return (0, n.jsx)(a.Z, {
+        action: s,
+        triggerType: i,
+        toggled: l,
+        onToggleAction: d
       });
     default:
-      return (0, a.jsx)(c, {
-        action: t,
-        guildId: s,
-        toggled: n,
-        triggerType: l,
-        onToggleAction: u
+      return (0, n.jsx)(u, {
+        action: s,
+        guildId: t,
+        toggled: l,
+        triggerType: i,
+        onToggleAction: d
       })
   }
 }

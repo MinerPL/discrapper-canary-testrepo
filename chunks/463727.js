@@ -1,6 +1,5 @@
 "use strict";
-l.r(t);
-let a = (0, l("818083").createExperiment)({
+let l = (0, n(818083).B)({
   kind: "user",
   id: "2023-06_golive_capture_card",
   label: "GoLive Capture Card Support",
@@ -15,4 +14,4 @@ let a = (0, l("818083").createExperiment)({
     }
   }]
 });
-t.default = a
+t.Z = l

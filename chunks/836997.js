@@ -1,5 +1,5 @@
-var r = n("957578").Buffer,
-  i = n("257693");
+var r = n(957578).Buffer,
+  i = n(257693);
 
 function a(e, t, n) {
   var a = t.length,

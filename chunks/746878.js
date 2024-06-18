@@ -7,11 +7,11 @@ function i(e, t, n) {
 function r(e) {
   return "home" === e || "browse" === e || "customize" === e || "guide" === e
 }
-n.r(t), n.d(t, {
-  isStaticRouteIconType: function() {
-    return r
-  },
-  smartOutput: function() {
+n.d(t, {
+  S: function() {
     return i
+  },
+  k: function() {
+    return r
   }
 })

@@ -1,29 +1,29 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return n
+t.d(s, {
+  Z: function() {
+    return l
   }
-}), s("47120");
-var a = s("470079"),
-  l = s("295141");
+}), t(47120);
+var n = t(470079),
+  i = t(295141);
 
-function n(e) {
-  let [t, s] = a.useState(!0), [n, i] = a.useState(), [r, o] = a.useState(), d = a.useCallback(async e => {
-    s(!0), i(void 0);
+function l(e) {
+  let [s, t] = n.useState(!0), [l, a] = n.useState(), [r, o] = n.useState(), c = n.useCallback(async e => {
+    t(!0), a(void 0);
     try {
-      let t = await l.fetchHighlightedCreatorGuildDetails(e);
-      o(t)
+      let s = await i.HT(e);
+      o(s)
     } catch (e) {
-      i(e)
+      a(e)
     } finally {
-      s(!1)
+      t(!1)
     }
   }, []);
-  return a.useEffect(() => {
-    d(e)
-  }, [e, d]), {
-    isLoading: t,
-    error: n,
+  return n.useEffect(() => {
+    c(e)
+  }, [e, c]), {
+    isLoading: s,
+    error: l,
     highlightedCreatorDetails: r
   }
 }

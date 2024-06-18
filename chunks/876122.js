@@ -1,27 +1,30 @@
 "use strict";
-n.r(e), n.d(e, {
-  Hub: function() {
-    return s
+n.d(e, {
+  Gd: function() {
+    return _
   },
-  getCurrentHub: function() {
-    return l
+  Xb: function() {
+    return c
   },
-  getHubFromCarrier: function() {
+  cu: function() {
     return d
   },
-  getMainCarrier: function() {
-    return u
+  pj: function() {
+    return h
   },
-  makeMain: function() {
-    return c
+  vi: function() {
+    return f
   }
 });
-var r = n("648238"),
-  i = n("28434"),
-  a = n("703498"),
-  o = n("741900");
-class s {
-  constructor(t, e = new a.Scope, n = 4) {
+var r = n(862315),
+  i = n(868145),
+  s = n(529866),
+  a = n(24716),
+  o = n(28434),
+  u = n(703498),
+  l = n(741900);
+class c {
+  constructor(t, e = new u.s, n = 4) {
     this._version = n, this._stack = [{
       scope: e
     }], t && this.bindClient(t)
@@ -33,7 +36,7 @@ class s {
     this.getStackTop().client = t, t && t.setupIntegrations && t.setupIntegrations()
   }
   pushScope() {
-    let t = a.Scope.clone(this.getScope());
+    let t = u.s.clone(this.getScope());
     return this.getStack().push({
       client: this.getClient(),
       scope: t
@@ -63,31 +66,31 @@ class s {
     return this._stack[this._stack.length - 1]
   }
   captureException(t, e) {
-    let n = this._lastEventId = e && e.event_id ? e.event_id : (0, r.uuid4)(),
+    let n = this._lastEventId = e && e.event_id ? e.event_id : (0, r.DM)(),
       i = Error("Sentry syntheticException");
-    return this._withClient((r, a) => {
+    return this._withClient((r, s) => {
       r.captureException(t, {
         originalException: t,
         syntheticException: i,
         ...e,
         event_id: n
-      }, a)
+      }, s)
     }), n
   }
   captureMessage(t, e, n) {
-    let i = this._lastEventId = n && n.event_id ? n.event_id : (0, r.uuid4)(),
-      a = Error(t);
-    return this._withClient((r, o) => {
+    let i = this._lastEventId = n && n.event_id ? n.event_id : (0, r.DM)(),
+      s = Error(t);
+    return this._withClient((r, a) => {
       r.captureMessage(t, e, {
         originalException: t,
-        syntheticException: a,
+        syntheticException: s,
         ...n,
         event_id: i
-      }, o)
+      }, a)
     }), i
   }
   captureEvent(t, e) {
-    let n = e && e.event_id ? e.event_id : (0, r.uuid4)();
+    let n = e && e.event_id ? e.event_id : (0, r.DM)();
     return !t.type && (this._lastEventId = n), this._withClient((r, i) => {
       r.captureEvent(t, {
         ...e,
@@ -101,20 +104,20 @@ class s {
   addBreadcrumb(t, e) {
     let {
       scope: n,
-      client: i
+      client: r
     } = this.getStackTop();
-    if (!i) return;
+    if (!r) return;
     let {
       beforeBreadcrumb: a = null,
       maxBreadcrumbs: o = 100
-    } = i.getOptions && i.getOptions() || {};
+    } = r.getOptions && r.getOptions() || {};
     if (o <= 0) return;
-    let s = {
-        timestamp: (0, r.dateTimestampInSeconds)(),
+    let u = {
+        timestamp: (0, i.yW)(),
         ...t
       },
-      u = a ? (0, r.consoleSandbox)(() => a(s, e)) : s;
-    null !== u && (i.emit && i.emit("beforeAddBreadcrumb", u, e), n.addBreadcrumb(u, o))
+      l = a ? (0, s.Cf)(() => a(u, e)) : u;
+    null !== l && (r.emit && r.emit("beforeAddBreadcrumb", l, e), n.addBreadcrumb(l, o))
   }
   setUser(t) {
     this.getScope().setUser(t)
@@ -142,11 +145,11 @@ class s {
     n && t(e)
   }
   run(t) {
-    let e = c(this);
+    let e = h(this);
     try {
       t(this)
     } finally {
-      c(e)
+      h(e)
     }
   }
   getIntegration(t) {
@@ -155,7 +158,7 @@ class s {
     try {
       return e.getIntegration(t)
     } catch (e) {
-      return ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.warn(`Cannot retrieve integration ${t.id} from the current Hub`), null
+      return ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && s.kg.warn(`Cannot retrieve integration ${t.id} from the current Hub`), null
     }
   }
   startTransaction(t, e) {
@@ -175,29 +178,29 @@ Sentry.init({...});
   endSession() {
     let t = this.getStackTop().scope,
       e = t.getSession();
-    e && (0, o.closeSession)(e), this._sendSessionUpdate(), t.setSession()
+    e && (0, l.RJ)(e), this._sendSessionUpdate(), t.setSession()
   }
   startSession(t) {
     let {
       scope: e,
       client: n
     } = this.getStackTop(), {
-      release: a,
-      environment: s = i.DEFAULT_ENVIRONMENT
+      release: r,
+      environment: i = o.J
     } = n && n.getOptions() || {}, {
-      userAgent: u
-    } = r.GLOBAL_OBJ.navigator || {}, c = (0, o.makeSession)({
-      release: a,
-      environment: s,
+      userAgent: s
+    } = a.n2.navigator || {}, u = (0, l.Hv)({
+      release: r,
+      environment: i,
       user: e.getUser(),
-      ...u && {
-        userAgent: u
+      ...s && {
+        userAgent: s
       },
       ...t
-    }), l = e.getSession && e.getSession();
-    return l && "ok" === l.status && (0, o.updateSession)(l, {
+    }), c = e.getSession && e.getSession();
+    return c && "ok" === c.status && (0, l.CT)(c, {
       status: "exited"
-    }), this.endSession(), e.setSession(c), c
+    }), this.endSession(), e.setSession(u), u
   }
   shouldSendDefaultPii() {
     let t = this.getClient(),
@@ -219,42 +222,42 @@ Sentry.init({...});
     n && t(n, e)
   }
   _callExtensionMethod(t, ...e) {
-    let n = u().__SENTRY__;
+    let n = d().__SENTRY__;
     if (n && n.extensions && "function" == typeof n.extensions[t]) return n.extensions[t].apply(this, e);
-    ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.warn(`Extension method ${t} couldn't be found, doing nothing.`)
+    ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && s.kg.warn(`Extension method ${t} couldn't be found, doing nothing.`)
   }
 }
 
-function u() {
-  return r.GLOBAL_OBJ.__SENTRY__ = r.GLOBAL_OBJ.__SENTRY__ || {
+function d() {
+  return a.n2.__SENTRY__ = a.n2.__SENTRY__ || {
     extensions: {},
     hub: void 0
-  }, r.GLOBAL_OBJ
+  }, a.n2
 }
 
-function c(t) {
-  let e = u(),
-    n = d(e);
-  return f(e, t), n
+function h(t) {
+  let e = d(),
+    n = f(e);
+  return p(e, t), n
 }
 
-function l() {
-  let t = u();
+function _() {
+  let t = d();
   if (t.__SENTRY__ && t.__SENTRY__.acs) {
     let e = t.__SENTRY__.acs.getCurrentHub();
     if (e) return e
   }
-  return function(t = u()) {
+  return function(t = d()) {
     return (! function(t) {
       return !!(t && t.__SENTRY__ && t.__SENTRY__.hub)
-    }(t) || d(t).isOlderThan(4)) && f(t, new s), d(t)
+    }(t) || f(t).isOlderThan(4)) && p(t, new c), f(t)
   }(t)
 }
 
-function d(t) {
-  return (0, r.getGlobalSingleton)("hub", () => new s, t)
+function f(t) {
+  return (0, a.YO)("hub", () => new c, t)
 }
 
-function f(t, e) {
+function p(t, e) {
   return !!t && ((t.__SENTRY__ = t.__SENTRY__ || {}).hub = e, !0)
 }

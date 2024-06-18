@@ -1,40 +1,38 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("147913"),
-  r = n("57132"),
-  s = n("914010"),
-  a = n("924301"),
-  o = n("482241");
+n(47120);
+var i = n(147913),
+  r = n(57132),
+  s = n(914010),
+  o = n(924301),
+  a = n(482241);
 let l = {},
   u = new Set,
-  d = async e => {
-    if (0 !== a.default.getGuildScheduledEventsForGuild(e).length) {
-      if (!u.has(e)) try {
-        await o.default.getGuildEventsForCurrentUser(e), u.add(e)
-      } catch (e) {}
-    }
+  _ = async e => {
+    if (!(0 === o.ZP.getGuildScheduledEventsForGuild(e).length || u.has(e))) try {
+      await a.Z.getGuildEventsForCurrentUser(e), u.add(e)
+    } catch (e) {}
   };
-class _ extends i.default {
+class d extends i.Z {
   async getGuildEventUserCounts(e, t, n) {
     let i = n.filter(n => null == l["".concat(e, "-").concat(t, "-").concat(n)] || Date.now() - l["".concat(e, "-").concat(t, "-").concat(n)] > 18e5);
     if (!(Date.now() - l["".concat(e, "-").concat(t)] < 18e5) || 0 !== i.length) {
       l["".concat(e, "-").concat(t)] = Date.now(), i.forEach(n => l["".concat(e, "-").concat(t, "-").concat(n)] = Date.now());
       try {
-        await o.default.fetchGuildEventUserCounts(e, t, i)
+        await a.Z.fetchGuildEventUserCounts(e, t, i)
       } catch (e) {}
     }
   }
   getGuildEventUsers(e, t, n) {
-    return o.default.fetchUsersForGuildEvent(e, t, n)
+    return a.Z.fetchUsersForGuildEvent(e, t, n)
   }
   getGuildEventsForCurrentUser(e) {
-    return d(e)
+    return _(e)
   }
   handleConnectionOpen() {
     u.clear(), l = {};
-    let e = (0, r.isInMainTabsExperiment)(),
-      t = s.default.getLastSelectedGuildId();
-    e && null != t && a.default.getGuildScheduledEventsForGuild(t).forEach(e => this.getGuildEventUserCounts(t, e.id, []))
+    let e = (0, r.cn)(),
+      t = s.Z.getLastSelectedGuildId();
+    e && null != t && o.ZP.getGuildScheduledEventsForGuild(t).forEach(e => this.getGuildEventUserCounts(t, e.id, []))
   }
   handleGuildUnavailable(e) {
     let {
@@ -53,13 +51,13 @@ class _ extends i.default {
     let {
       invite: n
     } = e, i = n.guild_scheduled_event, r = null === (t = n.guild) || void 0 === t ? void 0 : t.id;
-    null != i && null != r && d(r)
+    if (null != i && null != r) _(r)
   }
   handleChannelSelect(e) {
     let {
       guildId: t
     } = e;
-    if (null != t) a.default.getGuildScheduledEventsForGuild(t).forEach(e => this.getGuildEventUserCounts(t, e.id, []))
+    if (null != t) o.ZP.getGuildScheduledEventsForGuild(t).forEach(e => this.getGuildEventUserCounts(t, e.id, []))
   }
   constructor(...e) {
     var t, n, i;
@@ -77,4 +75,4 @@ class _ extends i.default {
     }) : t[n] = i
   }
 }
-t.default = new _
+t.Z = new d

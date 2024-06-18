@@ -1,5 +1,5 @@
-var r = n("108381"),
-  i = n("957578").Buffer;
+var r = n(108381),
+  i = n(957578).Buffer;
 e.exports = function(e, t) {
   for (var n, a = i.alloc(0), o = 0; a.length < t;) n = function(e) {
     var t = i.allocUnsafe(4);

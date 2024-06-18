@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  isEligibleForQuestsClientMonitoring: function() {
+n.d(t, {
+  a: function() {
     return r
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
     id: "2024-03_quests_client_monitoring",
     kind: "user",
     label: "Quests client monitoring experiment",

@@ -1,4 +1,4 @@
-var r = n("352644"),
+var r = n(352644),
   i = Object.prototype.hasOwnProperty;
 e.exports = function(e) {
   var t = this.__data__;

@@ -1,7 +1,7 @@
-var r = n("196322"),
-  i = n("828091");
-t.exports = function(t, e) {
-  e = r(e, t);
-  for (var n = 0, a = e.length; null != t && n < a;) t = t[i(e[n++])];
-  return n && n == a ? t : void 0
+var n = e(196322),
+  o = e(828091);
+t.exports = function(t, r) {
+  r = n(r, t);
+  for (var e = 0, i = r.length; null != t && e < i;) t = t[o(r[e++])];
+  return e && e == i ? t : void 0
 }

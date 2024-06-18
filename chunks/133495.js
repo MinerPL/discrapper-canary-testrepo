@@ -1,5 +1,5 @@
 "use strict";
-var r = n("531478").codes.ERR_STREAM_PREMATURE_CLOSE;
+var r = n(531478).codes.ERR_STREAM_PREMATURE_CLOSE;
 
 function i() {}
 e.exports = function e(t, n, a) {

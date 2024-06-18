@@ -1,5 +1,5 @@
 "use strict";
-var n = r("546870");
+var n = r(546870);
 t.exports = function(t, e) {
   if (!(t instanceof n)) return null;
   var r = t.getNextSiblingKey();

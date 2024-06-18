@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  clickstreamExperimentEnabled: function() {
+n.d(t, {
+  A: function() {
     return r
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-03_clickstream_analytics",
   label: "Clickstream Analytics",

@@ -1,28 +1,28 @@
 "use strict";
-n.r(t), n.d(t, {
-  ADD_SOURCE: function() {
-    return r
+n.d(t, {
+  BT: function() {
+    return l
   },
-  ADD_TARGET: function() {
-    return i
-  },
-  REMOVE_SOURCE: function() {
-    return a
-  },
-  REMOVE_TARGET: function() {
+  IS: function() {
     return o
   },
-  addSource: function() {
+  Rd: function() {
+    return i
+  },
+  SG: function() {
+    return a
+  },
+  fu: function() {
+    return r
+  },
+  j1: function() {
     return s
   },
-  addTarget: function() {
+  jn: function() {
     return u
   },
-  removeSource: function() {
+  wZ: function() {
     return c
-  },
-  removeTarget: function() {
-    return l
   }
 });
 var r = "dnd-core/ADD_SOURCE",

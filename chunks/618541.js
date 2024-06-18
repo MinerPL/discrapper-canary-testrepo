@@ -1,24 +1,24 @@
 "use strict";
 let i, r;
-n.r(t), n("411104");
-var s, a, o, l, u = n("442837"),
-  d = n("544891"),
-  _ = n("570140"),
-  c = n("358085"),
-  E = n("981631");
+n(411104);
+var s, o, a, l, u = n(442837),
+  _ = n(544891),
+  d = n(570140),
+  c = n(358085),
+  E = n(981631);
 let I = null,
   T = null,
-  f = null;
+  h = null;
 (0, c.isDesktop)() && (window.popupBridge = {
   getReturnUrlPrefix: () => {
     if (null == i) throw Error("popupBridgeState is unset");
-    return (0, d.getAPIBaseURL)() + E.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(E.PaymentGateways.BRAINTREE, i)
+    return (0, _.K0)() + E.ANM.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(E.gg$.BRAINTREE, i)
   },
   open: e => {
-    r = e, window.open(e), h.emitChange()
+    r = e, window.open(e), f.emitChange()
   }
 });
-class S extends(s = u.default.Store) {
+class S extends(s = u.ZP.Store) {
   getClient() {
     return I
   }
@@ -26,19 +26,19 @@ class S extends(s = u.default.Store) {
     return T
   }
   getVenmoClient() {
-    return f
+    return h
   }
   getLastURL() {
     return r
   }
 }
-l = "BraintreeStore", (o = "displayName") in(a = S) ? Object.defineProperty(a, o, {
+l = "BraintreeStore", (a = "displayName") in(o = S) ? Object.defineProperty(o, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = l;
-let h = new S(_.default, {
+}) : o[a] = l;
+let f = new S(d.Z, {
   BRAINTREE_CREATE_CLIENT_SUCCESS: function(e) {
     let {
       client: t
@@ -58,9 +58,9 @@ let h = new S(_.default, {
       path: r,
       query: s
     } = e;
-    if (t !== E.PaymentSourceTypes.PAYPAL || n !== i) return;
-    let a = window.popupBridge.onComplete;
-    "function" == typeof a && a(null, {
+    if (t !== E.HeQ.PAYPAL || n !== i) return;
+    let o = window.popupBridge.onComplete;
+    "function" == typeof o && o(null, {
       path: r,
       queryItems: s
     })
@@ -70,7 +70,7 @@ let h = new S(_.default, {
       paymentSourceType: t,
       state: n
     } = e;
-    t === E.PaymentSourceTypes.PAYPAL && (i = n)
+    t === E.HeQ.PAYPAL && (i = n)
   },
   BRAINTREE_TEARDOWN_PAYPAL_CLIENT: function() {
     T = null
@@ -79,10 +79,10 @@ let h = new S(_.default, {
     let {
       venmoClient: t
     } = e;
-    f = t
+    h = t
   },
   BRAINTREE_TEARDOWN_VENMO_CLIENT: function() {
-    f = null
+    h = null
   }
 });
-t.default = h
+t.Z = f

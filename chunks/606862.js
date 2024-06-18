@@ -1,5 +1,5 @@
 "use strict";
-var r = n("320387"),
+var r = n(320387),
   i = Object.prototype.toString,
   a = Object.prototype.hasOwnProperty,
   o = function(e, t, n) {

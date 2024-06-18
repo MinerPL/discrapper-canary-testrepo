@@ -1,25 +1,25 @@
 "use strict";
-s.r(t), s.d(t, {
-  getRuleInfo: function() {
-    return N
-  },
-  isRegexSupported: function() {
+t.d(s, {
+  S: function() {
     return E
+  },
+  w: function() {
+    return h
   }
 });
-var a = s("36082"),
-  l = s("925221"),
-  n = s("757698"),
-  i = s("723992"),
-  r = s("779376"),
-  o = s("236413"),
-  d = s("85960"),
-  u = s("273504"),
-  c = s("689938");
+var n = t(36082),
+  i = t(925221),
+  l = t(757698),
+  a = t(723992),
+  r = t(779376),
+  o = t(236413),
+  c = t(85960),
+  d = t(273504),
+  u = t(689938);
 let E = e => {
     switch (e) {
-      case u.AutomodTriggerType.KEYWORD:
-      case u.AutomodTriggerType.USER_PROFILE:
+      case d.fX.KEYWORD:
+      case d.fX.USER_PROFILE:
         return !0;
       default:
         return !1
@@ -27,69 +27,71 @@ let E = e => {
   },
   _ = e => {
     switch (e) {
-      case u.AutomodTriggerType.KEYWORD:
-      case u.AutomodTriggerType.ML_SPAM:
-      case u.AutomodTriggerType.DEFAULT_KEYWORD_LIST:
-      case u.AutomodTriggerType.MENTION_SPAM:
-      case u.AutomodTriggerType.SERVER_POLICY:
-      case u.AutomodTriggerType.USER_PROFILE:
+      case d.fX.KEYWORD:
+      case d.fX.ML_SPAM:
+      case d.fX.DEFAULT_KEYWORD_LIST:
+      case d.fX.MENTION_SPAM:
+      case d.fX.SERVER_POLICY:
+      case d.fX.USER_PROFILE:
         return !0;
       default:
         return !1
     }
   },
-  I = (e, t) => {
-    var s;
-    return null !== (s = null == t ? void 0 : t.name) && void 0 !== s ? s : (0, d.triggerConfigs)[e].getDefaultRuleName()
+  I = (e, s) => {
+    var t;
+    return null !== (t = null == s ? void 0 : s.name) && void 0 !== t ? t : c.I6[e].getDefaultRuleName()
   },
-  T = (e, t) => {
-    if ((0, o.isBackendPersistedRule)(t) && (0, o.isRuleKeywordFilter)(t)) return t.triggerMetadata.regexPatterns.length > 0 ? c.default.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_HEADER_WORD_AND_REGEX_COUNT.format({
-      keywordCount: t.triggerMetadata.keywordFilter.length,
-      regexPatternCount: t.triggerMetadata.regexPatterns.length
-    }) : c.default.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_HEADER_WORD_COUNT.format({
-      keywordCount: t.triggerMetadata.keywordFilter.length
-    })
+  T = (e, s) => {
+    if (!!(0, o.Vb)(s)) {
+      if ((0, o.DO)(s)) return s.triggerMetadata.regexPatterns.length > 0 ? u.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_HEADER_WORD_AND_REGEX_COUNT.format({
+        keywordCount: s.triggerMetadata.keywordFilter.length,
+        regexPatternCount: s.triggerMetadata.regexPatterns.length
+      }) : u.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_HEADER_WORD_COUNT.format({
+        keywordCount: s.triggerMetadata.keywordFilter.length
+      })
+    }
   },
-  S = e => {
+  N = e => {
     switch (e) {
-      case u.AutomodTriggerType.KEYWORD:
-        return c.default.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_DESCRIPTION;
-      case u.AutomodTriggerType.ML_SPAM:
-        return c.default.Messages.GUILD_AUTOMOD_ML_SPAM_FILTER_DESCRIPTION;
-      case u.AutomodTriggerType.DEFAULT_KEYWORD_LIST:
-        return c.default.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_DESCRIPTION_TEXT;
-      case u.AutomodTriggerType.MENTION_SPAM:
-        return c.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_DESCRIPTION;
-      case u.AutomodTriggerType.USER_PROFILE:
-        return c.default.Messages.GUILD_AUTOMOD_USER_PROFILE_FILTER_DESCRIPTION;
+      case d.fX.KEYWORD:
+        return u.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_DESCRIPTION;
+      case d.fX.ML_SPAM:
+        return u.Z.Messages.GUILD_AUTOMOD_ML_SPAM_FILTER_DESCRIPTION;
+      case d.fX.DEFAULT_KEYWORD_LIST:
+        return u.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_DESCRIPTION_TEXT;
+      case d.fX.MENTION_SPAM:
+        return u.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_DESCRIPTION;
+      case d.fX.USER_PROFILE:
+        return u.Z.Messages.GUILD_AUTOMOD_USER_PROFILE_FILTER_DESCRIPTION;
       default:
         return null
     }
   },
-  f = e => {
-    if (e === u.AutomodTriggerType.KEYWORD) return c.default.Messages.GUILD_AUTOMOD_LINK_FILTER_MATCHING_STRATEGY_DESCRIPTION.format()
-  },
   m = e => {
+    if (e === d.fX.KEYWORD) return u.Z.Messages.GUILD_AUTOMOD_LINK_FILTER_MATCHING_STRATEGY_DESCRIPTION.format()
+  },
+  S = e => {
     switch (e) {
-      case u.AutomodTriggerType.MENTION_SPAM:
-        return a.default;
-      case u.AutomodTriggerType.KEYWORD:
-        return i.default;
-      case u.AutomodTriggerType.ML_SPAM:
-      case u.AutomodTriggerType.USER_PROFILE:
-        return l.default;
-      case u.AutomodTriggerType.DEFAULT_KEYWORD_LIST:
-        return r.default
+      case d.fX.MENTION_SPAM:
+        return n.Z;
+      case d.fX.KEYWORD:
+        return a.Z;
+      case d.fX.ML_SPAM:
+      case d.fX.USER_PROFILE:
+        return i.Z;
+      case d.fX.DEFAULT_KEYWORD_LIST:
+        return r.Z
     }
   };
 
-function N(e, t) {
-  var s, a, l, i, r;
+function h(e, s) {
+  var t, n, i, a, r;
   return null != e && _(e) ? {
-    headerText: null !== (s = I(e, t)) && void 0 !== s ? s : "",
-    headerSubtext: null !== (a = T(e, t)) && void 0 !== a ? a : "",
-    descriptionText: null !== (l = S(e)) && void 0 !== l ? l : "",
-    descriptionSubtext: null !== (i = f(e)) && void 0 !== i ? i : "",
-    icon: null !== (r = m(e)) && void 0 !== r ? r : n.default
+    headerText: null !== (t = I(e, s)) && void 0 !== t ? t : "",
+    headerSubtext: null !== (n = T(e, s)) && void 0 !== n ? n : "",
+    descriptionText: null !== (i = N(e)) && void 0 !== i ? i : "",
+    descriptionSubtext: null !== (a = m(e)) && void 0 !== a ? a : "",
+    icon: null !== (r = S(e)) && void 0 !== r ? r : l.Z
   } : null
 }

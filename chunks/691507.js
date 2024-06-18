@@ -1,24 +1,22 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("476400"),
-  i = r.n(o),
-  l = r("844303"),
-  u = r("464854"),
-  s = Object.assign || function(e) {
+var r = n(470079),
+  i = n(476400),
+  a = n.n(i),
+  o = n(844303),
+  s = n(464854),
+  u = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
-      var r = arguments[t];
-      for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n])
+      var n = arguments[t];
+      for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
     }
     return e
   },
-  f = function(e) {
+  c = function(e) {
     var t = e.colors,
-      r = e.onClick,
-      n = void 0 === r ? function() {} : r,
-      o = e.onSwatchHover,
-      i = (0, l.default)({
+      n = e.onClick,
+      i = void 0 === n ? function() {} : n,
+      a = e.onSwatchHover,
+      c = (0, o.default)({
         default: {
           colors: {
             margin: "0 -10px",
@@ -46,36 +44,36 @@ var n = r("470079"),
       }, {
         "no-presets": !t || !t.length
       }),
-      f = function(e, t) {
-        n({
+      l = function(e, t) {
+        i({
           hex: e,
           source: "hex"
         }, t)
       };
-    return a().createElement("div", {
-      style: i.colors,
+    return r.createElement("div", {
+      style: c.colors,
       className: "flexbox-fix"
     }, t.map(function(e) {
       var t = "string" == typeof e ? {
           color: e
         } : e,
-        r = "" + t.color + (t.title || "");
-      return a().createElement("div", {
-        key: r,
-        style: i.swatchWrap
-      }, a().createElement(u.Swatch, s({}, t, {
-        style: i.swatch,
-        onClick: f,
-        onHover: o,
+        n = "" + t.color + (t.title || "");
+      return r.createElement("div", {
+        key: n,
+        style: c.swatchWrap
+      }, r.createElement(s.m4, u({}, t, {
+        style: c.swatch,
+        onClick: l,
+        onHover: a,
         focusStyle: {
           boxShadow: "inset 0 0 0 1px rgba(0,0,0,.15), 0 0 4px " + t.color
         }
       })))
     }))
   };
-f.propTypes = {
-  colors: i().arrayOf(i().oneOfType([i().string, i().shape({
-    color: i().string,
-    title: i().string
+c.propTypes = {
+  colors: a().arrayOf(a().oneOfType([a().string, a().shape({
+    color: a().string,
+    title: a().string
   })])).isRequired
-}, t.default = f
+}, t.Z = c

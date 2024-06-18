@@ -1,106 +1,106 @@
 "use strict";
-s.r(t), s.d(t, {
-  GuildSettingsDiscoveryNotice: function() {
-    return V
+t.d(s, {
+  s: function() {
+    return H
   }
-}), s("47120"), s("653041");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("153832"),
-  i = s("442837"),
-  r = s("481060"),
-  o = s("852860"),
-  d = s("558324"),
-  u = s("933557"),
-  c = s("719879"),
-  E = s("59970"),
-  _ = s("946314"),
-  I = s("938502"),
-  T = s("1259"),
-  S = s("296386"),
-  f = s("150192"),
-  m = s("816817"),
-  N = s("339085"),
-  g = s("400106"),
-  h = s("134432"),
-  C = s("813197"),
-  R = s("208567"),
-  x = s("183023"),
-  L = s("984933"),
-  O = s("496675"),
-  A = s("699516"),
-  p = s("594174"),
-  M = s("987134"),
-  D = s("768581"),
-  v = s("900849"),
-  j = s("434404"),
-  G = s("999382"),
-  U = s("450474"),
-  P = s("354051"),
-  b = s("347604"),
-  B = s("203377"),
-  y = s("981631"),
-  F = s("731455"),
-  H = s("689938"),
-  k = s("455628");
+}), t(47120), t(653041);
+var n = t(735250),
+  i = t(470079),
+  l = t(772848),
+  a = t(442837),
+  r = t(481060),
+  o = t(852860),
+  c = t(558324),
+  d = t(933557),
+  u = t(719879),
+  E = t(59970),
+  _ = t(946314),
+  I = t(938502),
+  T = t(1259),
+  N = t(296386),
+  m = t(150192),
+  S = t(816817),
+  h = t(339085),
+  g = t(400106),
+  x = t(134432),
+  C = t(813197),
+  R = t(208567),
+  L = t(183023),
+  O = t(984933),
+  A = t(496675),
+  p = t(699516),
+  M = t(594174),
+  f = t(987134),
+  v = t(768581),
+  D = t(900849),
+  Z = t(434404),
+  j = t(999382),
+  U = t(450474),
+  G = t(354051),
+  P = t(347604),
+  b = t(203377),
+  B = t(981631),
+  y = t(731455),
+  F = t(689938),
+  w = t(612247);
 
-function w(e, t, s) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: s,
+function k(e, s, t) {
+  return s in e ? Object.defineProperty(e, s, {
+    value: t,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = s, e
+  }) : e[s] = t, e
 }
-let V = i.default.connectStores([G.default], () => {
+let H = a.ZP.connectStores([j.Z], () => {
   let {
     guild: e,
-    originalGuild: t,
-    submitting: s,
-    guildMetadata: a
-  } = G.default.getProps();
+    originalGuild: s,
+    submitting: t,
+    guildMetadata: n
+  } = j.Z.getProps();
   return {
     guild: e,
-    submitting: s,
+    submitting: t,
     onReset() {
-      null != e && j.default.init(e.id)
+      if (null != e) Z.Z.init(e.id)
     },
     onSave() {
-      null != e && ((0, I.trackDiscoverySettingsChange)(e, t), j.default.saveGuild(e.id, {
+      if (null != e)(0, I.UA)(e, s), Z.Z.saveGuild(e.id, {
         features: e.features,
         discoverySplash: e.discoverySplash,
         description: e.description,
         safetyAlertsChannelId: e.safetyAlertsChannelId,
         rulesChannelId: e.rulesChannelId,
         preferredLocale: e.preferredLocale
-      }), S.saveGuildMetadata({
+      }), N.Vv({
         guildId: e.id,
-        primaryCategoryId: a.primaryCategoryId,
-        keywords: a.keywords,
-        emojiDiscoverabilityEnabled: a.emojiDiscoverabilityEnabled,
-        partnerActionedTimestamp: a.partnerActionedTimestamp,
-        partnerApplicationTimestamp: a.partnerApplicationTimestamp,
-        isPublished: a.isPublished,
-        reasonsToJoin: a.reasonsToJoin,
-        socialLinks: a.socialLinks,
-        about: a.about
-      }))
+        primaryCategoryId: n.primaryCategoryId,
+        keywords: n.keywords,
+        emojiDiscoverabilityEnabled: n.emojiDiscoverabilityEnabled,
+        partnerActionedTimestamp: n.partnerActionedTimestamp,
+        partnerApplicationTimestamp: n.partnerApplicationTimestamp,
+        isPublished: n.isPublished,
+        reasonsToJoin: n.reasonsToJoin,
+        socialLinks: n.socialLinks,
+        about: n.about
+      })
     }
   }
-})(o.default);
-class Y extends l.PureComponent {
+})(o.Z);
+class V extends i.PureComponent {
   async componentDidMount() {
     let {
       guild: e
     } = this.props;
     if (null != e) {
-      (0, E.fetchDiscoveryChecklist)(e.id).then(() => {
-        (0, c.trackGuildSettingsDiscoveryViewed)(e.id)
-      }), S.maybeFetchGuildDiscoveryCategories(), S.fetchMetadataForGuild(e.id);
-      let t = await (0, v.getDiscoverableGuild)(e.id);
-      null != t && this.setState({
-        discoverableGuild: t
-      }), this.checkForLowerMemberCountReqEnabled(e) && T.DiscoveryRequirementsM2Experiment.trackExposure({
+      (0, E.k)(e.id).then(() => {
+        (0, u.VP)(e.id)
+      }), N.le(), N.aC(e.id);
+      let s = await (0, D.Eg)(e.id);
+      null != s && this.setState({
+        discoverableGuild: s
+      }), this.checkForLowerMemberCountReqEnabled(e) && T.t.trackExposure({
         guildId: e.id,
         location: "006266_1"
       })
@@ -109,38 +109,37 @@ class Y extends l.PureComponent {
   renderDiscoverableSection() {
     let {
       guild: e,
-      isGuildAdmin: t
+      isGuildAdmin: s
     } = this.props;
     if (null == e) return;
-    let s = e.hasFeature(y.GuildFeatures.DISCOVERABLE);
-    return (0, a.jsxs)(r.FormSection, {
-      className: k.twoColumnFormSection,
-      children: [(0, a.jsxs)("div", {
-        children: [(0, a.jsx)(r.FormTitle, {
-          className: k.formTitle,
-          children: H.default.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
-        }), (0, a.jsx)(r.FormText, {
+    let t = e.hasFeature(B.oNc.DISCOVERABLE);
+    return (0, n.jsxs)(r.FormSection, {
+      className: w.twoColumnFormSection,
+      children: [(0, n.jsxs)("div", {
+        children: [(0, n.jsx)(r.FormTitle, {
+          className: w.formTitle,
+          children: F.Z.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
+        }), (0, n.jsx)(r.FormText, {
           type: r.FormTextTypes.DESCRIPTION,
-          className: k.formDescription,
-          children: H.default.Messages.FORM_HELP_ENABLE_DISCOVERABLE
-        }), (0, a.jsx)(r.FormText, {
+          className: w.formDescription,
+          children: F.Z.Messages.FORM_HELP_ENABLE_DISCOVERABLE
+        }), (0, n.jsx)(r.FormText, {
           type: r.FormTextTypes.DESCRIPTION,
-          className: k.formDescription,
-          children: H.default.Messages.FORM_HELP_DISCOVERABLE_CHANGE_TIME
-        }), (0, a.jsx)(r.Tooltip, {
-          text: t ? null : H.default.Messages.GUILD_SETTINGS_DISCOVERY_ADMIN_ONLY,
-          children: e => (0, a.jsx)(r.Button, {
+          className: w.formDescription,
+          children: F.Z.Messages.FORM_HELP_DISCOVERABLE_CHANGE_TIME
+        }), (0, n.jsx)(r.Tooltip, {
+          text: s ? null : F.Z.Messages.GUILD_SETTINGS_DISCOVERY_ADMIN_ONLY,
+          children: e => (0, n.jsx)(r.Button, {
             size: r.Button.Sizes.SMALL,
             onClick: this.handleToggleDiscovery,
-            color: s ? r.Button.Colors.PRIMARY : r.Button.Colors.GREEN,
-            hover: s ? r.Button.Colors.PRIMARY : r.Button.Colors.GREEN,
-            disabled: !t,
+            color: t ? r.Button.Colors.PRIMARY : r.Button.Colors.GREEN,
+            disabled: !s,
             ...e,
-            children: s ? H.default.Messages.GUILD_SETTINGS_DISABLE_DISCOVERABLE : H.default.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
+            children: t ? F.Z.Messages.GUILD_SETTINGS_DISABLE_DISCOVERABLE : F.Z.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
           })
         })]
-      }), (0, a.jsx)(m.default, {
-        className: k.guildCard,
+      }), (0, n.jsx)(S.Z, {
+        className: w.guildCard,
         loading: null == e,
         guild: e
       })]
@@ -149,106 +148,104 @@ class Y extends l.PureComponent {
   renderCoverImageSection() {
     let {
       guild: e,
-      errors: t,
-      canManageGuild: s
+      errors: s,
+      canManageGuild: t
     } = this.props;
-    if (null != e) return (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsxs)(r.FormSection, {
-        className: k.twoColumnFormSection,
-        children: [(0, a.jsxs)("div", {
-          children: [(0, a.jsx)(r.FormTitle, {
-            className: k.formTitle,
-            children: H.default.Messages.FORM_LABEL_DISCOVERY_COVER_IMAGE
-          }), (0, a.jsx)(r.FormText, {
+    if (null != e) return (0, n.jsxs)(n.Fragment, {
+      children: [(0, n.jsxs)(r.FormSection, {
+        className: w.twoColumnFormSection,
+        children: [(0, n.jsxs)("div", {
+          children: [(0, n.jsx)(r.FormTitle, {
+            className: w.formTitle,
+            children: F.Z.Messages.FORM_LABEL_DISCOVERY_COVER_IMAGE
+          }), (0, n.jsx)(r.FormText, {
             type: r.FormTextTypes.DESCRIPTION,
-            className: k.formDescription,
-            children: H.default.Messages.FORM_HELP_DISCOVERY_COVER_IMAGE
-          }), (0, a.jsxs)(r.Button, {
+            className: w.formDescription,
+            children: F.Z.Messages.FORM_HELP_DISCOVERY_COVER_IMAGE
+          }), (0, n.jsxs)(r.Button, {
             size: r.Button.Sizes.SMALL,
             color: r.Button.Colors.PRIMARY,
-            hover: r.Button.Colors.PRIMARY,
-            children: [H.default.Messages.UPLOAD_BACKGROUND, (0, a.jsx)(C.default, {
-              disabled: !s,
+            children: [F.Z.Messages.UPLOAD_BACKGROUND, (0, n.jsx)(C.ZP, {
+              disabled: !t,
               onChange: this.handleSplashChange
             })]
           })]
-        }), (0, a.jsx)("div", {
-          className: k.imageUploaderWrapper,
-          children: (0, a.jsx)(R.default, {
+        }), (0, n.jsx)("div", {
+          className: w.imageUploaderWrapper,
+          children: (0, n.jsx)(R.Z, {
             image: e.discoverySplash,
-            makeURL: t => D.default.getGuildDiscoverySplashURL({
+            makeURL: s => v.ZP.getGuildDiscoverySplashURL({
               id: e.id,
-              splash: t,
-              size: 512 * (0, h.getDevicePixelRatio)()
+              splash: s,
+              size: 512 * (0, x.x_)()
             }),
-            disabled: !s,
+            disabled: !t,
             onChange: this.handleSplashChange,
-            hint: H.default.Messages.CHANGE_SPLASH,
-            imageClassName: k.imageUploaderInnerSquare,
+            hint: F.Z.Messages.CHANGE_SPLASH,
+            imageClassName: w.imageUploaderInnerSquare,
             hideSize: !0
           })
         })]
-      }), (null == t ? void 0 : t.discovery_splash) != null ? (0, a.jsx)(r.Text, {
+      }), (null == s ? void 0 : s.discovery_splash) != null ? (0, n.jsx)(r.Text, {
         color: "text-danger",
         variant: "text-sm/normal",
-        children: t.discovery_splash
+        children: s.discovery_splash
       }) : null]
     })
   }
   renderEmojiDiscoverabilitySection() {
     var e;
     let {
-      canManageGuild: t,
-      guildMetadata: s,
-      guild: l
+      canManageGuild: s,
+      guildMetadata: t,
+      guild: i
     } = this.props, {
-      discoverableGuild: i
+      discoverableGuild: a
     } = this.state, {
       emojiDiscoverabilityEnabled: o
-    } = s, d = i;
-    if (null == d && null != l) {
-      let e = N.default.getGuildEmoji(l.id);
-      d = {
-        ...l,
-        premiumSubscriptionCount: null == l ? void 0 : l.premiumSubscriberCount,
+    } = t, c = a;
+    if (null == c && null != i) {
+      let e = h.Z.getGuildEmoji(i.id);
+      c = {
+        ...i,
+        premiumSubscriptionCount: null == i ? void 0 : i.premiumSubscriberCount,
         emojis: e,
         emojiCount: e.length,
         presenceCount: 1234,
         memberCount: 1234
       }
     }
-    let u = null != d ? g.default.createFromDiscoverableGuild(d) : null,
-      c = null == d ? void 0 : null === (e = d.emojis) || void 0 === e ? void 0 : e[0],
-      E = null != c ? {
-        name: c.require_colons ? ":".concat(c.name, ":") : c.name,
-        emojiId: c.id,
-        animated: c.animated,
+    let d = null != c ? g.Z.createFromDiscoverableGuild(c) : null,
+      u = null == c ? void 0 : null === (e = c.emojis) || void 0 === e ? void 0 : e[0],
+      E = null != u ? {
+        name: u.require_colons ? ":".concat(u.name, ":") : u.name,
+        emojiId: u.id,
+        animated: u.animated,
         jumboable: !0
       } : {};
-    return (0, a.jsxs)(r.FormSection, {
-      className: k.twoColumnFormSection,
-      children: [(0, a.jsxs)("div", {
-        className: k.formColumnLeft,
-        children: [(0, a.jsx)(r.FormTitle, {
-          className: k.formTitle,
-          children: H.default.Messages.GUILD_SETTINGS_DISCOVERY_EMOJI_DISCOVERABILITY_TITLE
-        }), (0, a.jsx)(r.FormText, {
-          className: k.description,
+    return (0, n.jsxs)(r.FormSection, {
+      className: w.twoColumnFormSection,
+      children: [(0, n.jsxs)("div", {
+        className: w.formColumnLeft,
+        children: [(0, n.jsx)(r.FormTitle, {
+          className: w.formTitle,
+          children: F.Z.Messages.GUILD_SETTINGS_DISCOVERY_EMOJI_DISCOVERABILITY_TITLE
+        }), (0, n.jsx)(r.FormText, {
+          className: w.description,
           type: r.FormTextTypes.DESCRIPTION,
-          children: H.default.Messages.GUILD_SETTINGS_DISCOVERY_EMOJI_DISCOVERABILITY_DESCRIPTION
-        }), (0, a.jsx)(r.Button, {
+          children: F.Z.Messages.GUILD_SETTINGS_DISCOVERY_EMOJI_DISCOVERABILITY_DESCRIPTION
+        }), (0, n.jsx)(r.Button, {
           size: r.Button.Sizes.SMALL,
           color: o ? r.Button.Colors.PRIMARY : r.Button.Colors.GREEN,
-          hover: o ? r.Button.Colors.PRIMARY : r.Button.Colors.GREEN,
-          disabled: !t,
+          disabled: !s,
           onClick: this.handleToggleEmojiDiscoverability,
-          children: o ? H.default.Messages.GUILD_SETTINGS_DISCOVERY_EMOJI_DISCOVERABILITY_DISABLE : H.default.Messages.GUILD_SETTINGS_DISCOVERY_EMOJI_DISCOVERABILITY_ENABLE
+          children: o ? F.Z.Messages.GUILD_SETTINGS_DISCOVERY_EMOJI_DISCOVERABILITY_DISABLE : F.Z.Messages.GUILD_SETTINGS_DISCOVERY_EMOJI_DISCOVERABILITY_ENABLE
         })]
-      }), null != u && u.isDiscoverable() && (0, a.jsx)(x.CustomGuildEmojiPopout, {
-        expressionSourceGuild: u,
+      }), null != d && d.isDiscoverable() && (0, n.jsx)(L.UA, {
+        expressionSourceGuild: d,
         node: E,
-        closePopout: y.NOOP,
-        nonce: (0, n.v4)(),
+        closePopout: B.dG4,
+        nonce: (0, l.Z)(),
         demoMode: !0
       })]
     })
@@ -256,27 +253,27 @@ class Y extends l.PureComponent {
   renderLocaleSelector() {
     let {
       guild: e,
-      canManageGuild: t,
-      localeOptions: s
+      canManageGuild: s,
+      localeOptions: t
     } = this.props;
-    if (null != e) return (0, a.jsxs)(r.FormSection, {
-      className: k.twoColumnFormSection,
-      children: [(0, a.jsxs)("div", {
-        children: [(0, a.jsx)(r.FormTitle, {
-          className: k.formTitle,
-          children: H.default.Messages.FORM_LABEL_SERVER_LANGUAGE
-        }), (0, a.jsx)(r.FormText, {
+    if (null != e) return (0, n.jsxs)(r.FormSection, {
+      className: w.twoColumnFormSection,
+      children: [(0, n.jsxs)("div", {
+        children: [(0, n.jsx)(r.FormTitle, {
+          className: w.formTitle,
+          children: F.Z.Messages.FORM_LABEL_SERVER_LANGUAGE
+        }), (0, n.jsx)(r.FormText, {
           type: r.FormTextTypes.DESCRIPTION,
-          className: k.formDescription,
-          children: H.default.Messages.GUILD_SETTINGS_DISCOVERY_LOCALE_HELP
+          className: w.formDescription,
+          children: F.Z.Messages.GUILD_SETTINGS_DISCOVERY_LOCALE_HELP
         })]
-      }), (0, a.jsx)("div", {
-        className: k.formSelect,
-        children: (0, a.jsx)(r.SingleSelect, {
+      }), (0, n.jsx)("div", {
+        className: w.formSelect,
+        children: (0, n.jsx)(r.SingleSelect, {
           value: e.preferredLocale,
-          options: s,
+          options: t,
           onChange: this.handleLocaleChange,
-          isDisabled: !t
+          isDisabled: !s
         })
       })]
     })
@@ -284,108 +281,108 @@ class Y extends l.PureComponent {
   renderCategoriesSection() {
     let {
       canManageGuild: e,
-      guildMetadata: t,
-      primaryCategoryOptions: s,
-      errors: l,
-      guild: n
+      guildMetadata: s,
+      primaryCategoryOptions: t,
+      errors: i,
+      guild: l
     } = this.props;
-    if (null != n) return (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsxs)(r.FormSection, {
-        children: [(0, a.jsx)(r.FormTitle, {
-          className: k.formTitle,
-          children: H.default.Messages.GUILD_SETTINGS_DISCOVERY_PRIMARY_CATEGORY_TITLE
-        }), (0, a.jsx)(r.FormText, {
+    if (null != l) return (0, n.jsxs)(n.Fragment, {
+      children: [(0, n.jsxs)(r.FormSection, {
+        children: [(0, n.jsx)(r.FormTitle, {
+          className: w.formTitle,
+          children: F.Z.Messages.GUILD_SETTINGS_DISCOVERY_PRIMARY_CATEGORY_TITLE
+        }), (0, n.jsx)(r.FormText, {
           type: r.FormTextTypes.DESCRIPTION,
-          className: k.description,
-          children: H.default.Messages.GUILD_SETTINGS_DISCOVERY_PRIMARY_CATEGORY_DESCRIPTION
+          className: w.description,
+          children: F.Z.Messages.GUILD_SETTINGS_DISCOVERY_PRIMARY_CATEGORY_DESCRIPTION
         })]
-      }), (0, a.jsx)(M.default, {
-        value: t.primaryCategoryId === F.DEFAULT_DISCOVERY_CATEGORY_ID ? null : t.primaryCategoryId,
-        placeholder: H.default.Messages.SELECT,
-        options: s,
+      }), (0, n.jsx)(f.Z, {
+        value: s.primaryCategoryId === y.o3 ? null : s.primaryCategoryId,
+        placeholder: F.Z.Messages.SELECT,
+        options: t,
         onChange: this.handlePrimaryCategoryChange,
         disabled: !e,
         searchable: !0,
         clearable: !0
-      }), (0, a.jsxs)(r.FormSection, {
-        className: k.noDividerFormSection,
-        children: [(0, a.jsx)(r.FormTitle, {
-          className: k.formTitle,
-          children: H.default.Messages.GUILD_SETTINGS_DISCOVERY_SUBCATEGORY_TITLE
-        }), (0, a.jsx)(U.default, {
-          guild: n,
-          guildMetadata: t
+      }), (0, n.jsxs)(r.FormSection, {
+        className: w.noDividerFormSection,
+        children: [(0, n.jsx)(r.FormTitle, {
+          className: w.formTitle,
+          children: F.Z.Messages.GUILD_SETTINGS_DISCOVERY_SUBCATEGORY_TITLE
+        }), (0, n.jsx)(U.Z, {
+          guild: l,
+          guildMetadata: s
         })]
-      }), (null == l ? void 0 : l.category) != null ? (0, a.jsx)(r.Text, {
+      }), (null == i ? void 0 : i.category) != null ? (0, n.jsx)(r.Text, {
         color: "text-danger",
-        className: k.error,
+        className: w.error,
         variant: "text-sm/normal",
-        children: l.category
+        children: i.category
       }) : null]
     })
   }
   renderKeywordsSection() {
     let {
       canManageGuild: e,
-      guildMetadata: t,
-      errors: s
+      guildMetadata: s,
+      errors: t
     } = this.props;
-    return (0, a.jsxs)(r.FormSection, {
-      children: [(0, a.jsx)(r.FormTitle, {
-        className: k.formTitle,
-        children: H.default.Messages.GUILD_SETTINGS_DISCOVERY_SEARCH_KEYWORDS_TITLE
-      }), (0, a.jsx)(r.FormText, {
-        className: k.description,
+    return (0, n.jsxs)(r.FormSection, {
+      children: [(0, n.jsx)(r.FormTitle, {
+        className: w.formTitle,
+        children: F.Z.Messages.GUILD_SETTINGS_DISCOVERY_SEARCH_KEYWORDS_TITLE
+      }), (0, n.jsx)(r.FormText, {
+        className: w.description,
         type: r.FormTextTypes.DESCRIPTION,
-        children: H.default.Messages.GUILD_SETTINGS_DISCOVERY_SEARCH_KEYWORDS_DESCRIPTION.format()
-      }), (0, a.jsx)(d.default, {
-        tags: t.keywords,
+        children: F.Z.Messages.GUILD_SETTINGS_DISCOVERY_SEARCH_KEYWORDS_DESCRIPTION.format()
+      }), (0, n.jsx)(c.Z, {
+        tags: s.keywords,
         onRemoveTag: this.handleRemoveKeyword,
         onAddTag: this.handleAddKeyword,
-        maxTags: B.MAX_KEYWORDS,
-        maxTaxLength: B.MAX_KEYWORD_LENGTH,
+        maxTags: b.G7,
+        maxTaxLength: b._0,
         disabled: !e
-      }), (null == s ? void 0 : s.keywords) != null ? (0, a.jsx)(r.Text, {
+      }), (null == t ? void 0 : t.keywords) != null ? (0, n.jsx)(r.Text, {
         color: "text-danger",
-        className: k.error,
+        className: w.error,
         variant: "text-sm/normal",
-        children: s.keywords
+        children: t.keywords
       }) : null]
     })
   }
   render() {
     let {
       guild: e,
-      discoveryChecklist: t,
-      isGuildAdmin: s
+      discoveryChecklist: s,
+      isGuildAdmin: t
     } = this.props;
-    if (null == e || null == t) return null;
-    switch ((0, I.getSettingsView)(e, t)) {
-      case I.DiscoverySettingsViews.INTRO:
-        return (0, a.jsx)(b.default, {
+    if (null == e || null == s) return null;
+    switch ((0, I.TJ)(e, s)) {
+      case I.d5.INTRO:
+        return (0, n.jsx)(P.Z, {
           guild: e,
           onEnableDiscovery: this.handleEnableDiscovery,
-          isGuildAdmin: s
+          isGuildAdmin: t
         });
-      case I.DiscoverySettingsViews.DISQUALIFIED:
-        return (0, a.jsx)(P.default, {
+      case I.d5.DISQUALIFIED:
+        return (0, n.jsx)(G.Z, {
           guild: e
         });
-      case I.DiscoverySettingsViews.SETTINGS:
-        return (0, a.jsxs)(r.FormSection, {
-          className: k.__invalid_discoverySettings,
-          title: H.default.Messages.DISCOVERY,
+      case I.d5.SETTINGS:
+        return (0, n.jsxs)(r.FormSection, {
+          className: w.__invalid_discoverySettings,
+          title: F.Z.Messages.DISCOVERY,
           tag: r.FormTitleTags.H1,
-          children: [this.renderDiscoverableSection(), (0, a.jsx)(r.FormDivider, {
-            className: k.divider
-          }), this.renderCoverImageSection(), (0, a.jsx)(r.FormDivider, {
-            className: k.divider
-          }), this.renderEmojiDiscoverabilitySection(), (0, a.jsx)(r.FormDivider, {
-            className: k.divider
-          }), this.renderCategoriesSection(), (0, a.jsx)(r.FormDivider, {
-            className: k.divider
-          }), this.renderKeywordsSection(), (0, a.jsx)(r.FormDivider, {
-            className: k.divider
+          children: [this.renderDiscoverableSection(), (0, n.jsx)(r.FormDivider, {
+            className: w.divider
+          }), this.renderCoverImageSection(), (0, n.jsx)(r.FormDivider, {
+            className: w.divider
+          }), this.renderEmojiDiscoverabilitySection(), (0, n.jsx)(r.FormDivider, {
+            className: w.divider
+          }), this.renderCategoriesSection(), (0, n.jsx)(r.FormDivider, {
+            className: w.divider
+          }), this.renderKeywordsSection(), (0, n.jsx)(r.FormDivider, {
+            className: w.divider
           }), this.renderLocaleSelector()]
         });
       default:
@@ -393,41 +390,41 @@ class Y extends l.PureComponent {
     }
   }
   constructor(...e) {
-    super(...e), w(this, "state", {
+    super(...e), k(this, "state", {
       discoverableGuild: null
-    }), w(this, "checkForLowerMemberCountReqEnabled", e => {
+    }), k(this, "checkForLowerMemberCountReqEnabled", e => {
       let {
-        isGuildAdmin: t
-      } = this.props, s = e.hasFeature(y.GuildFeatures.COMMUNITY), {
-        enableLowerMemberCountReq: a
-      } = T.DiscoveryRequirementsM2Experiment.getCurrentConfig({
+        isGuildAdmin: s
+      } = this.props, t = e.hasFeature(B.oNc.COMMUNITY), {
+        enableLowerMemberCountReq: n
+      } = T.t.getCurrentConfig({
         guildId: e.id,
         location: "006266_2"
       }, {
-        disable: !(t && s),
+        disable: !(s && t),
         autoTrackExposure: !1
       });
-      return a
-    }), w(this, "handleToggleDiscovery", () => {
+      return n
+    }), k(this, "handleToggleDiscovery", () => {
       let {
         guild: e
       } = this.props;
       if (null == e) return;
-      let t = new Set(e.features);
-      e.hasFeature(y.GuildFeatures.DISCOVERABLE) ? t.delete(y.GuildFeatures.DISCOVERABLE) : t.add(y.GuildFeatures.DISCOVERABLE), j.default.updateGuild({
-        features: t
+      let s = new Set(e.features);
+      e.hasFeature(B.oNc.DISCOVERABLE) ? s.delete(B.oNc.DISCOVERABLE) : s.add(B.oNc.DISCOVERABLE), Z.Z.updateGuild({
+        features: s
       })
-    }), w(this, "handleEnableDiscovery", async () => {
+    }), k(this, "handleEnableDiscovery", async () => {
       let e = await (0, r.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([s.e("99387"), s.e("6957")]).then(s.bind(s, "993382"));
-        return t => {
+        } = await Promise.all([t.e("99387"), t.e("6957")]).then(t.bind(t, 993382));
+        return s => {
           let {
-            ...s
-          } = t;
-          return (0, a.jsx)(e, {
-            ...s
+            ...t
+          } = s;
+          return (0, n.jsx)(e, {
+            ...t
           })
         }
       }, {
@@ -435,83 +432,83 @@ class Y extends l.PureComponent {
           null != e && (0, r.closeModal)(e)
         }
       })
-    }), w(this, "handleSplashChange", e => {
-      j.default.updateGuild({
+    }), k(this, "handleSplashChange", e => {
+      Z.Z.updateGuild({
         discoverySplash: e
       })
-    }), w(this, "handleLocaleChange", e => {
-      j.default.updateGuild({
+    }), k(this, "handleLocaleChange", e => {
+      Z.Z.updateGuild({
         preferredLocale: e
       })
-    }), w(this, "handlePrimaryCategoryChange", e => {
-      var t;
+    }), k(this, "handlePrimaryCategoryChange", e => {
+      var s;
       let {
-        guild: s
+        guild: t
       } = this.props;
-      (null == s ? void 0 : s.id) != null && S.updateGuildPrimaryCategory(null == s ? void 0 : s.id, null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : F.DEFAULT_DISCOVERY_CATEGORY_ID)
-    }), w(this, "handleRemoveKeyword", e => {
+      (null == t ? void 0 : t.id) != null && N.TA(null == t ? void 0 : t.id, null !== (s = null == e ? void 0 : e.value) && void 0 !== s ? s : y.o3)
+    }), k(this, "handleRemoveKeyword", e => {
       let {
-        guild: t,
-        guildMetadata: s
+        guild: s,
+        guildMetadata: t
       } = this.props;
-      if ((null == t ? void 0 : t.id) == null) return;
-      let a = [...s.keywords];
-      a.splice(e, 1), S.updateGuildKeywords(t.id, a)
-    }), w(this, "handleAddKeyword", e => {
+      if ((null == s ? void 0 : s.id) == null) return;
+      let n = [...t.keywords];
+      n.splice(e, 1), N.zH(s.id, n)
+    }), k(this, "handleAddKeyword", e => {
       let {
-        guild: t,
-        guildMetadata: s
-      } = this.props, {
-        keywords: a
-      } = s;
-      if ((null == t ? void 0 : t.id) != null) !(a.length >= B.MAX_KEYWORDS) && S.updateGuildKeywords(t.id, [...a, e])
-    }), w(this, "handleToggleEmojiDiscoverability", () => {
-      let {
-        guild: e,
+        guild: s,
         guildMetadata: t
       } = this.props, {
-        emojiDiscoverabilityEnabled: s
+        keywords: n
       } = t;
-      (null == e ? void 0 : e.id) != null && S.updateGuildEmojiDiscoverabilityEnabled(e.id, !s)
+      if ((null == s ? void 0 : s.id) != null) !(n.length >= b.G7) && N.zH(s.id, [...n, e])
+    }), k(this, "handleToggleEmojiDiscoverability", () => {
+      let {
+        guild: e,
+        guildMetadata: s
+      } = this.props, {
+        emojiDiscoverabilityEnabled: t
+      } = s;
+      (null == e ? void 0 : e.id) != null && N.J9(e.id, !t)
     })
   }
 }
-t.default = i.default.connectStores([G.default, O.default, _.default, L.default, f.default, p.default, A.default], () => {
+s.Z = a.ZP.connectStores([j.Z, A.Z, _.ZP, O.ZP, m.Z, M.default, p.Z], () => {
   let {
     guild: e,
-    errors: t,
-    submitting: s,
-    guildMetadata: a
-  } = G.default.getProps(), l = O.default.can(y.Permissions.MANAGE_GUILD, e), n = O.default.can(y.Permissions.ADMINISTRATOR, e), i = null != e ? _.default.getDiscoveryChecklist(e.id) : null, r = null != e ? L.default.getChannels(e.id) : null, o = [];
-  null != r && r[0, L.GUILD_SELECTABLE_CHANNELS_KEY].forEach(e => {
+    errors: s,
+    submitting: t,
+    guildMetadata: n
+  } = j.Z.getProps(), i = A.Z.can(B.Plq.MANAGE_GUILD, e), l = A.Z.can(B.Plq.ADMINISTRATOR, e), a = null != e ? _.ZP.getDiscoveryChecklist(e.id) : null, r = null != e ? O.ZP.getChannels(e.id) : null, o = [];
+  null != r && r[O.sH].forEach(e => {
     let {
-      channel: t
+      channel: s
     } = e;
-    t.type === y.ChannelTypes.GUILD_TEXT && o.push({
-      value: t.id,
-      label: (0, u.computeChannelName)(t, p.default, A.default, !0)
+    s.type === B.d4z.GUILD_TEXT && o.push({
+      value: s.id,
+      label: (0, d.F6)(s, M.default, p.Z, !0)
     })
   });
-  let d = f.default.getPrimaryCategories().map(e => {
+  let c = m.Z.getPrimaryCategories().map(e => {
     let {
-      categoryId: t,
-      name: s
+      categoryId: s,
+      name: t
     } = e;
     return {
-      value: t,
-      label: s
+      value: s,
+      label: t
     }
   });
   return {
     guild: e,
-    errors: t,
-    submitting: s,
-    discoveryChecklist: i,
+    errors: s,
+    submitting: t,
+    discoveryChecklist: a,
     selectableChannels: o,
-    canManageGuild: l,
-    isGuildAdmin: n,
-    guildMetadata: a,
-    primaryCategoryOptions: d,
-    localeOptions: (0, F.calculateLocaleOptions)()
+    canManageGuild: i,
+    isGuildAdmin: l,
+    guildMetadata: n,
+    primaryCategoryOptions: c,
+    localeOptions: (0, y.jb)()
   }
-})(Y)
+})(V)

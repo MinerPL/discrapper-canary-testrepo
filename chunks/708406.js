@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  calculateAnalyticsMetadata: function() {
+n.d(t, {
+  _: function() {
     return r
   }
 });
-var i = n("981631");
+var i = n(981631);
 
 function r(e, t, n) {
   let r = null != t ? {
@@ -12,18 +12,18 @@ function r(e, t, n) {
     } : {},
     {
       offset: s,
-      limit: a,
-      results: o,
+      limit: o,
+      results: a,
       totalResults: l
     } = null != n ? n : {};
   return {
-    search_type: i.SearchTypes.GIF,
+    search_type: i.aib.GIF,
     load_id: e,
-    limit: a,
+    limit: o,
     offset: s,
-    page: null != a && null != s ? Math.floor(s / a) + 1 : 1,
+    page: null != o && null != s ? Math.floor(s / o) + 1 : 1,
     total_results: l,
-    page_results: null != o ? o.length : null,
+    page_results: null != a ? a.length : null,
     num_modifiers: Object.keys(r).length,
     modifiers: r
   }

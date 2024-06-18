@@ -1,4 +1,4 @@
-var a = r("296585"),
+var a = r(296585),
   n = {};
 for (var s in a) a.hasOwnProperty(s) && (n[a[s]] = s);
 var o = e.exports = {
@@ -68,31 +68,31 @@ for (var i in o)
     if (!("channels" in o[i])) throw Error("missing channels property: " + i);
     if (!("labels" in o[i])) throw Error("missing channel labels property: " + i);
     if (o[i].labels.length !== o[i].channels) throw Error("channel and label counts mismatch: " + i);
-    var u = o[i].channels,
-      c = o[i].labels;
+    var c = o[i].channels,
+      u = o[i].labels;
     delete o[i].channels, delete o[i].labels, Object.defineProperty(o[i], "channels", {
-      value: u
-    }), Object.defineProperty(o[i], "labels", {
       value: c
+    }), Object.defineProperty(o[i], "labels", {
+      value: u
     })
   } o.rgb.hsl = function(e) {
   var t, r, a, n = e[0] / 255,
     s = e[1] / 255,
     o = e[2] / 255,
     i = Math.min(n, s, o),
-    u = Math.max(n, s, o),
-    c = u - i;
-  return u === i ? t = 0 : n === u ? t = (s - o) / c : s === u ? t = 2 + (o - n) / c : o === u && (t = 4 + (n - s) / c), (t = Math.min(60 * t, 360)) < 0 && (t += 360), a = (i + u) / 2, [t, 100 * (r = u === i ? 0 : a <= .5 ? c / (u + i) : c / (2 - u - i)), 100 * a]
+    c = Math.max(n, s, o),
+    u = c - i;
+  return c === i ? t = 0 : n === c ? t = (s - o) / u : s === c ? t = 2 + (o - n) / u : o === c && (t = 4 + (n - s) / u), (t = Math.min(60 * t, 360)) < 0 && (t += 360), a = (i + c) / 2, [t, 100 * (r = c === i ? 0 : a <= .5 ? u / (c + i) : u / (2 - c - i)), 100 * a]
 }, o.rgb.hsv = function(e) {
   var t, r, a, n, s, o = e[0] / 255,
     i = e[1] / 255,
-    u = e[2] / 255,
-    c = Math.max(o, i, u),
-    l = c - Math.min(o, i, u),
-    f = function(e) {
-      return (c - e) / 6 / l + .5
+    c = e[2] / 255,
+    u = Math.max(o, i, c),
+    l = u - Math.min(o, i, c),
+    b = function(e) {
+      return (u - e) / 6 / l + .5
     };
-  return 0 === l ? n = s = 0 : (s = l / c, t = f(o), r = f(i), a = f(u), o === c ? n = a - r : i === c ? n = 1 / 3 + t - a : u === c && (n = 2 / 3 + r - t), n < 0 ? n += 1 : n > 1 && (n -= 1)), [360 * n, 100 * s, 100 * c]
+  return 0 === l ? n = s = 0 : (s = l / u, t = b(o), r = b(i), a = b(c), o === u ? n = a - r : i === u ? n = 1 / 3 + t - a : c === u && (n = 2 / 3 + r - t), n < 0 ? n += 1 : n > 1 && (n -= 1)), [360 * n, 100 * s, 100 * u]
 }, o.rgb.hwb = function(e) {
   var t = e[0],
     r = e[1],
@@ -111,8 +111,8 @@ o.rgb.keyword = function(e) {
   var s = 1 / 0;
   for (var o in a)
     if (a.hasOwnProperty(o)) {
-      var i, u, c = a[o];
-      var l = (i = e, u = c, Math.pow(i[0] - u[0], 2) + Math.pow(i[1] - u[1], 2) + Math.pow(i[2] - u[2], 2));
+      var i, c, u = a[o];
+      var l = (i = e, c = u, Math.pow(i[0] - c[0], 2) + Math.pow(i[1] - c[1], 2) + Math.pow(i[2] - c[2], 2));
       l < s && (s = l, t = o)
     } return t
 }, o.keyword.rgb = function(e) {
@@ -131,10 +131,10 @@ o.rgb.keyword = function(e) {
 }, o.hsl.rgb = function(e) {
   var t, r, a, n, s, o = e[0] / 360,
     i = e[1] / 100,
-    u = e[2] / 100;
-  if (0 === i) return [s = 255 * u, s, s];
-  r = u < .5 ? u * (1 + i) : u + i - u * i, t = 2 * u - r, n = [0, 0, 0];
-  for (var c = 0; c < 3; c++)(a = o + -(1 / 3 * (c - 1))) < 0 && a++, a > 1 && a--, s = 6 * a < 1 ? t + (r - t) * 6 * a : 2 * a < 1 ? r : 3 * a < 2 ? t + (r - t) * (2 / 3 - a) * 6 : t, n[c] = 255 * s;
+    c = e[2] / 100;
+  if (0 === i) return [s = 255 * c, s, s];
+  r = c < .5 ? c * (1 + i) : c + i - c * i, t = 2 * c - r, n = [0, 0, 0];
+  for (var u = 0; u < 3; u++)(a = o + -(1 / 3 * (u - 1))) < 0 && a++, a > 1 && a--, s = 6 * a < 1 ? t + (r - t) * 6 * a : 2 * a < 1 ? r : 3 * a < 2 ? t + (r - t) * (2 / 3 - a) * 6 : t, n[u] = 255 * s;
   return n
 }, o.hsl.hsv = function(e) {
   var t, r = e[0],
@@ -147,23 +147,24 @@ o.rgb.keyword = function(e) {
   var t = e[0] / 60,
     r = e[1] / 100,
     a = e[2] / 100,
-    n = t - Math.floor(t),
-    s = 255 * a * (1 - r),
-    o = 255 * a * (1 - r * n),
-    i = 255 * a * (1 - r * (1 - n));
-  switch (a *= 255, Math.floor(t) % 6) {
+    n = Math.floor(t) % 6,
+    s = t - Math.floor(t),
+    o = 255 * a * (1 - r),
+    i = 255 * a * (1 - r * s),
+    c = 255 * a * (1 - r * (1 - s));
+  switch (a *= 255, n) {
     case 0:
-      return [a, i, s];
+      return [a, c, o];
     case 1:
-      return [o, a, s];
+      return [i, a, o];
     case 2:
-      return [s, a, i];
+      return [o, a, c];
     case 3:
-      return [s, o, a];
+      return [o, i, a];
     case 4:
-      return [i, s, a];
+      return [c, o, a];
     case 5:
-      return [a, s, o]
+      return [a, o, i]
   }
 }, o.hsv.hsl = function(e) {
   var t, r, a, n = e[0],
@@ -172,30 +173,30 @@ o.rgb.keyword = function(e) {
     i = Math.max(o, .01);
   return a = (2 - s) * o, t = (2 - s) * i, r = (r = s * i / (t <= 1 ? t : 2 - t)) || 0, [n, 100 * r, 100 * (a /= 2)]
 }, o.hwb.rgb = function(e) {
-  var t, r, a, n, s, o, i, u = e[0] / 360,
-    c = e[1] / 100,
+  var t, r, a, n, s, o, i, c = e[0] / 360,
+    u = e[1] / 100,
     l = e[2] / 100,
-    f = c + l;
-  switch (f > 1 && (c /= f, l /= f), t = Math.floor(6 * u), r = 1 - l, a = 6 * u - t, (1 & t) != 0 && (a = 1 - a), n = c + a * (r - c), t) {
+    b = u + l;
+  switch (b > 1 && (u /= b, l /= b), t = Math.floor(6 * c), r = 1 - l, a = 6 * c - t, (1 & t) != 0 && (a = 1 - a), n = u + a * (r - u), t) {
     default:
     case 6:
     case 0:
-      s = r, o = n, i = c;
+      s = r, o = n, i = u;
       break;
     case 1:
-      s = n, o = r, i = c;
+      s = n, o = r, i = u;
       break;
     case 2:
-      s = c, o = r, i = n;
+      s = u, o = r, i = n;
       break;
     case 3:
-      s = c, o = n, i = r;
+      s = u, o = n, i = r;
       break;
     case 4:
-      s = n, o = c, i = r;
+      s = n, o = u, i = r;
       break;
     case 5:
-      s = r, o = c, i = n
+      s = r, o = u, i = n
   }
   return [255 * s, 255 * o, 255 * i]
 }, o.cmyk.rgb = function(e) {
@@ -220,18 +221,18 @@ o.rgb.keyword = function(e) {
     o = e[2];
   t = s / 500 + (r = (n + 16) / 116), a = r - o / 200;
   var i = Math.pow(r, 3),
-    u = Math.pow(t, 3),
-    c = Math.pow(a, 3);
-  return r = (i > .008856 ? i : (r - 16 / 116) / 7.787) * 100, [t = (u > .008856 ? u : (t - 16 / 116) / 7.787) * 95.047, r, a = (c > .008856 ? c : (a - 16 / 116) / 7.787) * 108.883]
+    c = Math.pow(t, 3),
+    u = Math.pow(a, 3);
+  return r = (i > .008856 ? i : (r - 16 / 116) / 7.787) * 100, [t = (c > .008856 ? c : (t - 16 / 116) / 7.787) * 95.047, r, a = (u > .008856 ? u : (a - 16 / 116) / 7.787) * 108.883]
 }, o.lab.lch = function(e) {
   var t, r = e[0],
     a = e[1],
     n = e[2];
   return (t = 360 * Math.atan2(n, a) / 2 / Math.PI) < 0 && (t += 360), [r, Math.sqrt(a * a + n * n), t]
 }, o.lch.lab = function(e) {
-  var t, r = e[0],
-    a = e[1];
-  return t = e[2] / 360 * 2 * Math.PI, [r, a * Math.cos(t), a * Math.sin(t)]
+  var t, r, a = e[0],
+    n = e[1];
+  return t = n * Math.cos(r = e[2] / 360 * 2 * Math.PI), [a, t, n * Math.sin(r)]
 }, o.rgb.ansi16 = function(e) {
   var t = e[0],
     r = e[1],
@@ -279,8 +280,8 @@ o.rgb.keyword = function(e) {
     s = e[2] / 255,
     o = Math.max(Math.max(a, n), s),
     i = Math.min(Math.min(a, n), s),
-    u = o - i;
-  return t = u < 1 ? i / (1 - u) : 0, [360 * (r = (u <= 0 ? 0 : o === a ? (n - s) / u % 6 : o === n ? 2 + (s - a) / u : 4 + (a - n) / u + 4) / 6 % 1), 100 * u, 100 * t]
+    c = o - i;
+  return t = c < 1 ? i / (1 - c) : 0, [360 * (r = (c <= 0 ? 0 : o === a ? (n - s) / c % 6 : o === n ? 2 + (s - a) / c : 4 + (a - n) / c + 4) / 6 % 1), 100 * c, 100 * t]
 }, o.hsl.hcg = function(e) {
   var t = e[1] / 100,
     r = e[2] / 100,
@@ -302,7 +303,7 @@ o.rgb.keyword = function(e) {
     s = t % 1 * 6,
     o = s % 1,
     i = 1 - o,
-    u = 0;
+    c = 0;
   switch (Math.floor(s)) {
     case 0:
       n[0] = 1, n[1] = o, n[2] = 0;
@@ -322,7 +323,7 @@ o.rgb.keyword = function(e) {
     default:
       n[0] = 1, n[1] = 0, n[2] = i
   }
-  return u = (1 - r) * a, [(r * n[0] + u) * 255, (r * n[1] + u) * 255, (r * n[2] + u) * 255]
+  return c = (1 - r) * a, [(r * n[0] + c) * 255, (r * n[1] + c) * 255, (r * n[2] + c) * 255]
 }, o.hcg.hsv = function(e) {
   var t = e[1] / 100,
     r = t + e[2] / 100 * (1 - t),

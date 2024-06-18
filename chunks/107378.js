@@ -1,10 +1,10 @@
-var r = n("92801"),
-  i = n("58834");
+var n = e(92801),
+  o = e(58834);
 t.exports = function(t) {
-  for (var e = i(t), n = e.length; n--;) {
-    var a = e[n],
-      o = t[a];
-    e[n] = [a, o, r(o)]
+  for (var r = o(t), e = r.length; e--;) {
+    var i = r[e],
+      a = t[i];
+    r[e] = [i, a, n(a)]
   }
-  return e
+  return r
 }

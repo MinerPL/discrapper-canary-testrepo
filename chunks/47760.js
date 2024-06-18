@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
-  areThemesEqualForGradientThemes: function() {
+n.d(t, {
+  VK: function() {
     return s
   },
-  getLinearGradientForBackgroundGradient: function() {
-    return a
+  qu: function() {
+    return o
   }
-}), n("47120"), n("524437");
-var i = n("44315");
-n("469115");
-var r = n("231338");
+}), n(47120), n(524437);
+var i = n(44315);
+n(469115);
+var r = n(231338);
 
-function a(e) {
+function s(e) {
   let {
     angle: t,
     colors: n
@@ -21,10 +21,10 @@ function a(e) {
       token: t,
       stop: n
     } = e;
-    return "".concat((0, i.getColor)(t), " ").concat(n, "%")
+    return "".concat((0, i.Lq)(t), " ").concat(n, "%")
   }).join(", "), ")")
 }
 
-function s(e, t) {
-  return e === t || e === r.ThemeTypes.DARK && t === r.ThemeTypes.DARKER || e === r.ThemeTypes.DARKER && t === r.ThemeTypes.DARK || !1
+function o(e, t) {
+  return e === t || e === r.BR.DARK && t === r.BR.DARKER || e === r.BR.DARKER && t === r.BR.DARK || !1
 }

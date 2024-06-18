@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("133080"),
-  r = n("592125"),
-  s = n("412788");
+n(47120);
+var i = n(133080),
+  r = n(592125),
+  s = n(412788);
 
-function a(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -12,27 +12,27 @@ function a(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let o = new Set,
+let a = new Set,
   l = new Set,
   u = !1,
-  d = null;
+  _ = null;
 
-function _(e) {
+function d(e) {
   return e.isMessageRequest && !e.isSpam
 }
 
 function c(e) {
   let t = !1;
-  return _(e) && !o.has(e.id) && (o.add(e.id), t = !0), !_(e) && o.has(e.id) && (o.delete(e.id), t = !0), !_(e) && l.has(e.id) && (l.delete(e.id), t = !0), t
+  return d(e) && !a.has(e.id) && (a.add(e.id), t = !0), !d(e) && a.has(e.id) && (a.delete(e.id), t = !0), !d(e) && l.has(e.id) && (l.delete(e.id), t = !0), t
 }
 
 function E(e) {
   var t;
-  null != e && (d = null !== (t = (0, i.getCountryCodeByAlpha2)(e)) && void 0 !== t ? t : (0, i.getDefaultCountryCode)())
+  if (null != e) _ = null !== (t = (0, i.Zz)(e)) && void 0 !== t ? t : (0, i.K4)()
 }
 
 function I(e) {
-  "CONNECTION_OPEN" === e.type && E(e.countryCode), o.clear(), l.clear(), Object.values(r.default.getMutablePrivateChannels()).forEach(e => {
+  "CONNECTION_OPEN" === e.type && E(e.countryCode), a.clear(), l.clear(), Object.values(r.Z.getMutablePrivateChannels()).forEach(e => {
     c(e)
   }), u = !0
 }
@@ -44,7 +44,7 @@ function T(e) {
   l.add(t)
 }
 
-function f(e) {
+function h(e) {
   let {
     channel: t
   } = e;
@@ -58,54 +58,54 @@ function S(e) {
   for (let e of t) c(e)
 }
 
-function h(e) {
+function f(e) {
   let {
     channel: t
   } = e;
-  return !!o.has(t.id) && (o.delete(t.id), !0)
+  return !!a.has(t.id) && (a.delete(t.id), !0)
 }
 
-function A(e) {
+function N(e) {
   let {
     messageRequestChannelIds: t
   } = e;
-  t.forEach(e => o.add(e))
+  t.forEach(e => a.add(e))
 }
 
-function m(e) {
+function A(e) {
   let {
     countryCode: t
   } = e;
   E(t)
 }
-class N extends s.default {
+class m extends s.Z {
   initialize() {
-    this.waitFor(r.default)
+    this.waitFor(r.Z)
   }
   loadCache() {
-    let e = this.readSnapshot(N.LATEST_SNAPSHOT_VERSION);
-    null != e && (o = new Set(e))
+    let e = this.readSnapshot(m.LATEST_SNAPSHOT_VERSION);
+    null != e && (a = new Set(e))
   }
   takeSnapshot() {
     return {
-      version: N.LATEST_SNAPSHOT_VERSION,
-      data: Array.from(o)
+      version: m.LATEST_SNAPSHOT_VERSION,
+      data: Array.from(a)
     }
   }
   getMessageRequestChannelIds() {
-    return o
+    return a
   }
   getMessageRequestsCount() {
-    return o.size
+    return a.size
   }
   isMessageRequest(e) {
-    return o.has(e)
+    return a.has(e)
   }
   isAcceptedOptimistic(e) {
     return l.has(e)
   }
   getUserCountryCode() {
-    return d
+    return _
   }
   isReady() {
     return u
@@ -115,13 +115,13 @@ class N extends s.default {
       CONNECTION_OPEN: I,
       CONNECTION_OPEN_SUPPLEMENTAL: I,
       CACHE_LOADED_LAZY: () => this.loadCache(),
-      OVERLAY_INITIALIZE: A,
-      CHANNEL_CREATE: f,
+      OVERLAY_INITIALIZE: N,
+      CHANNEL_CREATE: h,
       CHANNEL_UPDATES: S,
-      CHANNEL_DELETE: h,
-      SET_LOCATION_METADATA: m,
+      CHANNEL_DELETE: f,
+      SET_LOCATION_METADATA: A,
       MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: T
     })
   }
 }
-a(N, "displayName", "MessageRequestStore"), a(N, "LATEST_SNAPSHOT_VERSION", 1), t.default = new N
+o(m, "displayName", "MessageRequestStore"), o(m, "LATEST_SNAPSHOT_VERSION", 1), t.Z = new m

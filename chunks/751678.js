@@ -1,10 +1,10 @@
 "use strict";
-var n = r("213912"),
-  i = r("546870"),
-  o = r("846362"),
-  a = r("56720"),
-  u = r("979037"),
-  s = r("581079"),
+var n = r(213912),
+  i = r(546870),
+  o = r(846362),
+  a = r(56720),
+  u = r(979037),
+  s = r(581079),
   c = function(t, e) {
     return {
       key: t.getKey(),
@@ -62,7 +62,7 @@ var n = r("213912"),
       }, function(e) {
         var n = t.getEntityAt(e),
           i = o.stringify(n);
-        !a[i] && (a[i] = n, r[i] = "".concat(u), u++)
+        if (!a[i]) a[i] = n, r[i] = "".concat(u), u++
       }), l(t, r, n, i)
     }), {
       blocks: n,

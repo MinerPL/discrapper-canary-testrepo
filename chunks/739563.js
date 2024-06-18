@@ -1,73 +1,73 @@
 "use strict";
-s.r(t), s("47120");
-var a = s("735250"),
-  n = s("470079"),
-  l = s("803997"),
-  i = s.n(l),
-  r = s("481060"),
-  o = s("783014"),
-  d = s("981631"),
-  u = s("689938"),
-  c = s("949669"),
-  S = s("794711");
-let E = 0,
-  T = () => "notification-position-selector-".concat(E++),
-  _ = e => {
+n(47120);
+var i = n(735250),
+  s = n(470079),
+  l = n(120356),
+  a = n.n(l),
+  o = n(481060),
+  r = n(783014),
+  d = n(981631),
+  c = n(689938),
+  u = n(713265),
+  h = n(611273);
+let p = 0,
+  f = () => "notification-position-selector-".concat(p++),
+  E = e => {
     switch (e) {
-      case d.OverlayNotificationPositions.TOP_LEFT:
-        return u.default.Messages.OVERLAY_NOTIFICATIONS_TOP_LEFT;
-      case d.OverlayNotificationPositions.TOP_RIGHT:
-        return u.default.Messages.OVERLAY_NOTIFICATIONS_TOP_RIGHT;
-      case d.OverlayNotificationPositions.BOTTOM_LEFT:
-        return u.default.Messages.OVERLAY_NOTIFICATIONS_BOTTOM_LEFT;
-      case d.OverlayNotificationPositions.BOTTOM_RIGHT:
-        return u.default.Messages.OVERLAY_NOTIFICATIONS_BOTTOM_RIGHT;
+      case d._vf.TOP_LEFT:
+        return c.Z.Messages.OVERLAY_NOTIFICATIONS_TOP_LEFT;
+      case d._vf.TOP_RIGHT:
+        return c.Z.Messages.OVERLAY_NOTIFICATIONS_TOP_RIGHT;
+      case d._vf.BOTTOM_LEFT:
+        return c.Z.Messages.OVERLAY_NOTIFICATIONS_BOTTOM_LEFT;
+      case d._vf.BOTTOM_RIGHT:
+        return c.Z.Messages.OVERLAY_NOTIFICATIONS_BOTTOM_RIGHT;
       default:
-        return u.default.Messages.OVERLAY_NOTIFICATIONS_DISABLED
+        return c.Z.Messages.OVERLAY_NOTIFICATIONS_DISABLED
     }
   },
-  f = [d.OverlayNotificationPositions.DISABLED, d.OverlayNotificationPositions.TOP_LEFT, d.OverlayNotificationPositions.TOP_RIGHT, d.OverlayNotificationPositions.BOTTOM_LEFT, d.OverlayNotificationPositions.BOTTOM_RIGHT];
+  Z = [d._vf.DISABLED, d._vf.TOP_LEFT, d._vf.TOP_RIGHT, d._vf.BOTTOM_LEFT, d._vf.BOTTOM_RIGHT];
 
-function m(e) {
+function g(e) {
   let {
     position: t,
-    onChange: s
-  } = e, [l] = n.useState(() => T()), E = t === d.OverlayNotificationPositions.DISABLED ? u.default.Messages.OVERLAY_NOTIFICATION_SETTINGS_DISABLED : u.default.Messages.OVERLAY_NOTIFICATION_SETTINGS_POSITION.format({
-    position: _(t)
+    onChange: n
+  } = e, [l] = s.useState(() => f()), p = t === d._vf.DISABLED ? c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_DISABLED : c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_POSITION.format({
+    position: E(t)
   });
-  return (0, a.jsxs)("div", {
-    children: [(0, a.jsx)(r.FocusRing, {
+  return (0, i.jsxs)("div", {
+    children: [(0, i.jsx)(o.FocusRing, {
       within: !0,
       offset: -2,
-      children: (0, a.jsx)("div", {
-        className: i()(c.wrapper, {
-          [c.disabledSelected]: t === d.OverlayNotificationPositions.DISABLED
+      children: (0, i.jsx)("div", {
+        className: a()(u.wrapper, {
+          [u.disabledSelected]: t === d._vf.DISABLED
         }),
-        children: f.map(e => (0, a.jsxs)("label", {
-          className: i()({
-            [c.selected]: e === t,
-            [c.disabled]: e === d.OverlayNotificationPositions.DISABLED,
-            [c.topRight]: e === d.OverlayNotificationPositions.TOP_RIGHT,
-            [c.topLeft]: e === d.OverlayNotificationPositions.TOP_LEFT,
-            [c.bottomRight]: e === d.OverlayNotificationPositions.BOTTOM_RIGHT,
-            [c.bottomLeft]: e === d.OverlayNotificationPositions.BOTTOM_LEFT
+        children: Z.map(e => (0, i.jsxs)("label", {
+          className: a()({
+            [u.selected]: e === t,
+            [u.disabled]: e === d._vf.DISABLED,
+            [u.topRight]: e === d._vf.TOP_RIGHT,
+            [u.topLeft]: e === d._vf.TOP_LEFT,
+            [u.bottomRight]: e === d._vf.BOTTOM_RIGHT,
+            [u.bottomLeft]: e === d._vf.BOTTOM_LEFT
           }),
-          children: [_(e), e === d.OverlayNotificationPositions.DISABLED ? (0, a.jsx)(o.default, {
-            className: c.disabledIcon
-          }) : null, (0, a.jsx)("input", {
+          children: [E(e), e === d._vf.DISABLED ? (0, i.jsx)(r.Z, {
+            className: u.disabledIcon
+          }) : null, (0, i.jsx)("input", {
             type: "radio",
             name: l,
             value: e,
-            onChange: t => s(t, e),
-            className: c.hiddenInput
+            onChange: t => n(t, e),
+            className: u.hiddenInput
           })]
         }, e))
       })
-    }), (0, a.jsx)(r.FormText, {
-      type: r.FormTextTypes.DESCRIPTION,
-      className: S.marginTop8,
-      children: E
+    }), (0, i.jsx)(o.FormText, {
+      type: o.FormTextTypes.DESCRIPTION,
+      className: h.marginTop8,
+      children: p
     })]
   })
 }
-m.Positions = d.OverlayNotificationPositions, t.default = m
+g.Positions = d._vf, t.Z = g

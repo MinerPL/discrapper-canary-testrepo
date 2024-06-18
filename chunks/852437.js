@@ -1,7 +1,7 @@
 "use strict";
-var r = n("147018"),
-  i = n("82246").findLast,
-  a = n("345374");
+var r = n(147018),
+  i = n(82246).findLast,
+  a = n(345374);
 r({
   target: "Array",
   proto: !0

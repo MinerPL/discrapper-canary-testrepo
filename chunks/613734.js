@@ -1,65 +1,65 @@
 "use strict";
-n.r(e), n.d(e, {
-  useActiveSafetyHubClassifications: function() {
-    return _
+e.d(n, {
+  KM: function() {
+    return f
   },
-  useExpiredSafetyHubClassifications: function() {
-    return E
+  U0: function() {
+    return A
   },
-  useSafetyHubAppealSignal: function() {
-    return p
-  },
-  useSafetyHubClassification: function() {
+  YG: function() {
     return S
+  },
+  y9: function() {
+    return d
   }
 });
-var i = n("470079"),
-  a = n("442837"),
-  u = n("709054"),
-  l = n("103879"),
-  s = n("364226"),
-  o = n("531441"),
-  r = n("236289"),
-  c = n("788080"),
-  d = n("800530");
+var i = e(470079),
+  u = e(442837),
+  l = e(709054),
+  a = e(103879),
+  r = e(364226),
+  o = e(531441),
+  s = e(236289),
+  c = e(788080),
+  _ = e(800530);
 
-function f() {
-  return (0, a.useStateFromStoresArray)([r.default], () => r.default.getClassifications()).sort((t, e) => u.default.extractTimestamp(e.id) - u.default.extractTimestamp(t.id))
+function E() {
+  return (0, u.Wu)([s.Z], () => s.Z.getClassifications()).sort((t, n) => l.default.extractTimestamp(n.id) - l.default.extractTimestamp(t.id))
 }
 
 function S(t) {
-  let e;
-  let n = (0, a.useStateFromStores)([r.default], () => r.default.getClassification(t)),
-    u = (0, a.useStateFromStores)([r.default], () => r.default.getClassificationRequestState(t)),
-    f = (0, a.useStateFromStores)([r.default], () => r.default.getIsDsaEligible()),
-    S = (0, s.useIsSafetyHubGuildViolationInAppAppealsEnabled)("classification_detail");
-  if ((0, c.isGuildClassification)(n)) {
-    var _;
-    e = (null === (_ = n.guild_metadata) || void 0 === _ ? void 0 : _.member_type) === o.MemberType.OWNER ? d.ViolationType.GUILD_OWNER : d.ViolationType.GUILD_MEMBER
-  } else e = d.ViolationType.USER;
+  let n;
+  let e = (0, u.e7)([s.Z], () => s.Z.getClassification(t)),
+    l = (0, u.e7)([s.Z], () => s.Z.getClassificationRequestState(t)),
+    E = (0, u.e7)([s.Z], () => s.Z.getIsDsaEligible()),
+    S = (0, r.A)("classification_detail");
+  if ((0, c.FB)(e)) {
+    var d;
+    n = (null === (d = e.guild_metadata) || void 0 === d ? void 0 : d.member_type) === o.wO.OWNER ? _.qS.GUILD_OWNER : _.qS.GUILD_MEMBER
+  } else n = _.qS.USER;
   return i.useEffect(() => {
-    void 0 === n && null == u && l.getSafetyHubDataForClassification(t)
-  }, [t, n, u]), {
-    classification: n,
-    classificationRequestState: u,
-    isDsaEligible: f,
-    isAppealEligible: f && null != n && null == n.appeal_status && (!(0, c.isGuildClassification)(n) || S),
-    violationType: e
+    void 0 === e && null == l && a.NA(t)
+  }, [t, e, l]), {
+    classification: e,
+    classificationRequestState: l,
+    isDsaEligible: E,
+    isAppealEligible: E && null != e && null == e.appeal_status && (!(0, c.FB)(e) || S),
+    violationType: n
   }
 }
 
-function _() {
-  let t = f(),
-    e = new Date;
-  return t.filter(t => new Date(t.max_expiration_time) > e)
+function d() {
+  let t = E(),
+    n = new Date;
+  return t.filter(t => new Date(t.max_expiration_time) > n)
 }
 
-function E() {
-  let t = f(),
-    e = new Date;
-  return t.filter(t => new Date(t.max_expiration_time) <= e)
+function f() {
+  let t = E(),
+    n = new Date;
+  return t.filter(t => new Date(t.max_expiration_time) <= n)
 }
 
-function p() {
-  return (0, a.useStateFromStores)([r.default], () => r.default.getAppealSignal())
+function A() {
+  return (0, u.e7)([s.Z], () => s.Z.getAppealSignal())
 }

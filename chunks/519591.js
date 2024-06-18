@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return s
   }
 });
-var i = n("987650");
+var i = n(987650);
 
-function a(e) {
+function s(e) {
   switch (e) {
-    case i.OpacityBounds.BOTTOM:
-      return i.BackgroundOpacityClasses.LOW;
-    case i.OpacityBounds.LOWER:
-      return i.BackgroundOpacityClasses.MEDIUM;
-    case i.OpacityBounds.UPPER:
-      return i.BackgroundOpacityClasses.HIGH;
-    case i.OpacityBounds.TOP:
-      return i.BackgroundOpacityClasses.FULL;
+    case i.wF.BOTTOM:
+      return i.ap.LOW;
+    case i.wF.LOWER:
+      return i.ap.MEDIUM;
+    case i.wF.UPPER:
+      return i.ap.HIGH;
+    case i.wF.TOP:
+      return i.ap.FULL;
     default:
       return
   }

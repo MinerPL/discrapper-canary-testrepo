@@ -9,24 +9,24 @@ e = n.nmd(e), o = function() {
         e(t + "}")
       } catch (e) {}
     }
-    return function(r, i, a, u, s, l, c, p, d, f) {
-      switch (r) {
+    return function(i, r, a, u, s, l, c, p, d, f) {
+      switch (i) {
         case 1:
-          if (0 === d && 64 === i.charCodeAt(0)) return e(i + ";"), "";
+          if (0 === d && 64 === r.charCodeAt(0)) return e(r + ";"), "";
           break;
         case 2:
-          if (0 === p) return i + t;
+          if (0 === p) return r + t;
           break;
         case 3:
           switch (p) {
             case 102:
             case 112:
-              return e(a[0] + i), "";
+              return e(a[0] + r), "";
             default:
-              return i + (0 === f ? t : "")
+              return r + (0 === f ? t : "")
           }
         case -2:
-          i.split(n).forEach(o)
+          r.split(n).forEach(o)
       }
     }
   }

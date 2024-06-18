@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  UserDefenses: function() {
-    return a
+n.d(t, {
+  Y: function() {
+    return o
   }
 });
-var i = n("912860"),
-  r = n("873546");
+var i = n(912860),
+  r = n(873546);
 
 function s(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
@@ -15,9 +15,9 @@ function s(e) {
   })), "font-size: 16px;")) : setTimeout(() => s(e, t + 1), 1e3))
 }
 
-function a(e, t, n) {
+function o(e, t, n) {
   if (null != n && "0.0.0" === n.remoteApp.getVersion()) return;
-  let a = new i.DevToolsListener;
+  let o = new i.b;
   if (null != n) {
     if (null != n.window.setDevtoolsCallbacks) n.window.setDevtoolsCallbacks(() => {
       t.hideToken(), s(e)
@@ -30,7 +30,7 @@ function a(e, t, n) {
         t.hideToken(), s(e)
       }), i.on("devtools-closed", t.showToken)
     }
-  } else !r.isMobile && !r.isTablet && a.on("changed", n => {
+  } else !r.tq && !r.Em && o.on("changed", n => {
     let {
       open: i
     } = n;

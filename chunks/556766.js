@@ -1,79 +1,78 @@
 "use strict";
-n.r(t);
-var i = n("735250"),
-  r = n("470079"),
-  a = n("392711"),
-  s = n.n(a),
-  o = n("207561"),
-  l = n("920906"),
-  u = n("442837"),
-  d = n("317381"),
-  _ = n("966302"),
-  c = n("378364"),
-  E = n("197344"),
-  I = n("474873"),
-  T = n("292959"),
-  f = n("944486"),
-  S = n("246946"),
-  h = n("340895"),
-  A = n("557177"),
-  m = n("918559"),
-  N = n("871465");
-let p = {
+var i = n(735250),
+  r = n(470079),
+  s = n(392711),
+  o = n.n(s),
+  a = n(792986),
+  l = n(920906),
+  u = n(442837),
+  _ = n(317381),
+  d = n(966302),
+  c = n(378364),
+  E = n(197344),
+  I = n(474873),
+  T = n(292959),
+  h = n(944486),
+  S = n(246946),
+  f = n(340895),
+  N = n(557177),
+  A = n(918559),
+  m = n(871465);
+let O = {
     transform: "scale(0.7)",
     opacity: 0
   },
-  O = {
+  R = {
     transform: "scale(1)",
     opacity: 1
   };
-t.default = () => {
+t.Z = () => {
   let {
     connectedActivityChannelId: e,
     activityPanelMode: t
-  } = (0, u.useStateFromStoresObject)([d.default], () => ({
-    connectedActivityChannelId: d.default.getConnectedActivityChannelId(),
-    activityPanelMode: d.default.getActivityPanelMode()
+  } = (0, u.cj)([_.ZP], () => ({
+    connectedActivityChannelId: _.ZP.getConnectedActivityChannelId(),
+    activityPanelMode: _.ZP.getActivityPanelMode()
   })), {
     currentChannelId: n,
-    selectedVoiceChannelId: a
-  } = (0, u.useStateFromStoresObject)([f.default], () => ({
-    currentChannelId: f.default.getChannelId(),
-    selectedVoiceChannelId: f.default.getVoiceChannelId()
-  })), C = (0, u.useStateFromStoresArray)([h.default], () => h.default.getIncomingCalls().filter(i => {
+    selectedVoiceChannelId: s
+  } = (0, u.cj)([h.Z], () => ({
+    currentChannelId: h.Z.getChannelId(),
+    selectedVoiceChannelId: h.Z.getVoiceChannelId()
+  })), C = (0, u.Wu)([f.Z], () => f.Z.getIncomingCalls().filter(i => {
     let {
       channel: r
-    } = i, s = e === r.id && a !== r.id && t === m.ActivityPanelModes.PANEL;
-    return n !== r.id || s
-  })), R = (0, u.useStateFromStores)([h.default], () => h.default.hasIncomingCalls()), g = (0, u.useStateFromStores)([T.default], () => T.default.isSoundDisabled("call_ringing")), L = E.default.useIsRingtoneEligible(), v = E.default.useIsRingtoneDisabled(), D = (0, u.useStateFromStores)([S.default], () => S.default.disableSounds), M = (0, u.useStateFromStores)([I.default], () => I.default.getSoundpack()), y = r.useRef(!1), P = (0, o.useStableMemo)(() => {
+    } = i, o = e === r.id && s !== r.id && t === A.Ez.PANEL;
+    return n !== r.id || o
+  })), p = (0, u.e7)([f.Z], () => f.Z.hasIncomingCalls()), g = (0, u.e7)([T.Z], () => T.Z.isSoundDisabled("call_ringing")), L = E.Z.useIsRingtoneEligible(), v = E.Z.useIsRingtoneDisabled(), D = (0, u.e7)([S.Z], () => S.Z.disableSounds), M = (0, u.e7)([I.Z], () => I.Z.getSoundpack()), P = r.useRef(!1), y = (0, a.Z)(() => {
     let e = "call_ringing";
-    return L && !v ? (0, A.createSound)(c.default.ringtone, e) : M === N.Soundpacks.CLASSIC ? (0, A.createSound)(500 !== s().random(1, 1e3) ? "call_ringing" : s().sample(["call_ringing_beat", "call_ringing_snow_halation"]), e) : (0, A.createSoundForPack)("call_ringing", M)
+    return L && !v ? (0, N.tu)(c.Z.ringtone, e) : M === m.YC.CLASSIC ? (0, N.tu)(500 !== o().random(1, 1e3) ? "call_ringing" : o().sample(["call_ringing_beat", "call_ringing_snow_halation"]), e) : (0, N.uk)("call_ringing", M)
   }, [M, v, L]);
   return r.useEffect(() => () => {
-    P.stop()
-  }, [P]), r.useEffect(() => {
+    y.stop()
+  }, [y]), r.useEffect(() => {
     if (D || g) {
-      y.current && (P.stop(), y.current = !1);
+      P.current && (y.stop(), P.current = !1);
       return
     }
-    R && !y.current ? (P.loop(), y.current = !0) : !R && y.current && (P.stop(), y.current = !1)
-  }, [g, D, R, P]), (0, l.useTransition)(C, {
+    p && !P.current ? (y.loop(), P.current = !0) : !p && P.current && (y.stop(), P.current = !1)
+  }, [g, D, p, y]), (0, l.useTransition)(C, {
     keys: e => {
       var t;
       return null === (t = e.channel) || void 0 === t ? void 0 : t.id
     },
     enter: {
-      from: p,
-      to: O
+      from: O,
+      to: R
     },
-    leave: p,
+    leave: O,
     config: {
       mass: 1,
       tension: 500,
       friction: 18,
       clamp: !0
     }
-  })((e, t) => (0, i.jsx)(_.default, {
+  })((e, t) => (0, i.jsx)(d.Z, {
     ...t,
     animatedStyle: e
   }))

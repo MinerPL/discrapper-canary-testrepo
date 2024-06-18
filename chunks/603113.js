@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return s
   }
 });
-var i = n("802856"),
-  r = n("981631");
+var i = n(802856),
+  r = n(981631);
 
 function s(e) {
-  return null == e || null == e.type || e.type !== r.ActivityTypes.PLAYING ? null : (0, i.default)(e) ? r.ActivityGamePlatforms.XBOX : null != e.platform ? e.platform : r.ActivityGamePlatforms.DESKTOP
+  return null == e || null == e.type || e.type !== r.IIU.PLAYING ? null : (0, i.Z)(e) ? r.M7m.XBOX : null != e.platform ? e.platform : r.M7m.DESKTOP
 }

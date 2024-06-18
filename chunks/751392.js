@@ -1,11 +1,9 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("844303");
-t.default = function(e) {
+var r = n(470079),
+  i = n(844303);
+t.Z = function(e) {
   var t = e.direction,
-    r = (0, o.default)({
+    n = (0, i.default)({
       default: {
         picker: {
           width: "18px",
@@ -24,7 +22,7 @@ t.default = function(e) {
     }, {
       vertical: "vertical" === t
     });
-  return a().createElement("div", {
-    style: r.picker
+  return r.createElement("div", {
+    style: n.picker
   })
 }

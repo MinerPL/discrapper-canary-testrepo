@@ -1,8 +1,7 @@
 "use strict";
-n.r(t);
-var i = n("526761");
+var i = n(526761);
 let r = {
-  [i.UserSettingsTypes.PRELOADED_USER_SETTINGS]: [],
-  [i.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: []
+  [i.yP.PRELOADED_USER_SETTINGS]: [],
+  [i.yP.FRECENCY_AND_FAVORITES_SETTINGS]: []
 };
-t.default = r
+t.Z = r

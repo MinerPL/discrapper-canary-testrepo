@@ -1,31 +1,32 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return E
-  },
-  getInitialParserState: function() {
-    return _
-  },
-  getInitialParserStateFromMessage: function() {
-    return d
-  },
-  renderAutomodMessageMarkup: function() {
+n.d(t, {
+  ZP: function() {
     return I
   },
-  renderChangelogMessageMarkup: function() {
+  k$: function() {
+    return T
+  },
+  n0: function() {
+    return E
+  },
+  p6: function() {
     return c
+  },
+  rs: function() {
+    return d
   }
-}), n("47120"), n("757143"), n("865427");
-var i = n("830121"),
-  r = n("454585"),
-  a = n("55406"),
-  s = n("408433"),
-  o = n("981631");
-let l = new Set([o.MessageEmbedTypes.IMAGE, o.MessageEmbedTypes.GIFV]),
-  u = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
+}), n(47120), n(757143), n(865427);
+var i = n(830121),
+  r = n(202131),
+  s = n(454585),
+  o = n(55406),
+  a = n(408433),
+  l = n(981631);
+let u = new Set([l.hBH.IMAGE, l.hBH.GIFV]),
+  _ = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
 
 function d(e, t) {
-  let n = _({
+  let n = c({
       channelId: e.channel_id,
       messageId: e.id,
       renderOptions: t
@@ -39,7 +40,7 @@ function d(e, t) {
   }
 }
 
-function _(e) {
+function c(e) {
   let {
     channelId: t,
     messageId: n,
@@ -61,59 +62,67 @@ function _(e) {
     disableAutoBlockNewlines: !0,
     mentionChannels: [],
     muted: !1,
-    unknownUserMentionPlaceholder: !0
+    unknownUserMentionPlaceholder: !0,
+    viewingChannelId: i.viewingChannelId
   }
 }
 
-function c(e, t, n) {
+function E(e, t, n) {
   return {
     hasSpoilerEmbeds: !1,
-    content: r.default.reactParserFor(a.default.getDefaultRules(t))(e.content, !1, null != n ? {
+    content: s.Z.reactParserFor(o.Z.getDefaultRules(t))(e.content, !1, null != n ? {
       changeLog: n
     } : {})
   }
 }
 
-function E(e) {
+function I(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   return function(e, t, n) {
-    var r;
+    var s;
     let {
-      toAST: a = !1,
-      hideSimpleEmbedContent: o = !0,
-      formatInline: _ = !1,
-      postProcessor: c
-    } = n, E = !1, I = e((null !== (r = n.contentMessage) && void 0 !== r ? r : t).content, !0, d(t, n), (e, n) => (!Array.isArray(e) && (e = [e]), o && (e = function(e, t) {
+      toAST: o = !1,
+      hideSimpleEmbedContent: l = !0,
+      formatInline: c = !1,
+      postProcessor: E,
+      shouldFilterKeywords: I,
+      contentMessage: T
+    } = n, f = !1, N = (null != T ? T : t).content, A = e(I ? (0, r.N)(N, {
+      escapeReplacement: !0,
+      messageId: t.id,
+      channelId: t.channel_id,
+      authorId: null === (s = t.author) || void 0 === s ? void 0 : s.id
+    }) : N, !0, d(t, n), (e, n) => (!Array.isArray(e) && (e = [e]), l && (e = function(e, t) {
       if (1 !== e.length || 1 !== t.length) return e;
       let n = e[0],
         i = t[0];
-      return ("link" === n.type || "attachmentLink" === n.type) && l.has(i.type) && (0, s.isEmbedInline)(i) ? [] : e
-    }(e, t.embeds)), !_ && (e = function(e, t) {
-      return t ? T(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = T(e[0].content)), e)
-    }(e, n)), E = function(e, t) {
-      return t ? f(e) : "paragraph" === e[0].type && e[0].content instanceof Array && f(e[0].content)
+      return ("link" === n.type || "attachmentLink" === n.type) && u.has(i.type) && (0, a.dY)(i) ? [] : e
+    }(e, (null != T ? T : t).embeds)), !c && (e = function(e, t) {
+      return t ? h(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = h(e[0].content)), e)
+    }(e, n)), f = function(e, t) {
+      return t ? S(e) : "paragraph" === e[0].type && e[0].content instanceof Array && S(e[0].content)
     }(e = function(e) {
       let t = e.some(e => "link" !== e.type || !1);
       return e.filter(e => {
         let n = "link" === e.type,
-          r = (0, i.parseQuestsEmbedCode)(e.target);
+          r = (0, i.el)(e.target);
         return !(n && null != r && !t)
       })
-    }(e), n), _ && (e = function e(t) {
+    }(e), n), c && (e = function e(t) {
       return t.forEach(t => {
-        u.has(t.type) && null != t.content && (Array.isArray(t.content) ? e(t.content) : t.content = t.content.replace(/\n/g, " "))
+        _.has(t.type) && null != t.content && (Array.isArray(t.content) ? e(t.content) : t.content = t.content.replace(/\n/g, " "))
       }), t
-    }(e)), null != c && (e = c(e, n)), e));
+    }(e)), null != E && (e = E(e, n)), e));
     return {
-      hasSpoilerEmbeds: E,
-      content: I
+      hasSpoilerEmbeds: f,
+      content: A
     }
-  }(t.formatInline ? r.default.parseInlineReply : r.default.parse, e, t)
+  }(t.formatInline ? s.Z.parseInlineReply : s.Z.parse, e, t)
 }
 
-function I(e, t, n) {
+function T(e, t, n) {
   var i;
-  return i = r.default.parseAutoModerationSystemMessage, i(e, !0, {
+  return i = s.Z.parseAutoModerationSystemMessage, i(e, !0, {
     allowLinks: !1,
     allowDevLinks: !1,
     allowEmojiLinks: !1,
@@ -131,7 +140,7 @@ function I(e, t, n) {
   }, e => (!Array.isArray(e) && (e = [e]), e))
 }
 
-function T(e) {
+function h(e) {
   if (e.some(e => "emoji" !== e.type && "customEmoji" !== e.type && "soundboard" !== e.type && ("string" != typeof e.content || "" !== e.content.trim()) && !0)) return e;
   let t = 0;
   return (e.forEach(e => {
@@ -141,6 +150,6 @@ function T(e) {
   }), e)
 }
 
-function f(e) {
+function S(e) {
   return e.some(e => "spoiler" === e.type && Array.isArray(e.content) && e.content.some(e => "link" === e.type || "attachmentLink" === e.type))
 }

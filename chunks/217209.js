@@ -10,7 +10,7 @@ var r = function() {
       return n && e(t.prototype, n), r && e(t, r), t
     }
   }(),
-  i = n("870391"),
+  i = n(870391),
   a = function() {
     function e() {
       ! function(e, t) {

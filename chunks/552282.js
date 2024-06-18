@@ -7,8 +7,8 @@ function i(e) {
     name: null !== (t = e.name) && void 0 !== t ? t : ""
   } : null
 }
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return i
   }
 })

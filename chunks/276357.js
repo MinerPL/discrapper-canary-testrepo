@@ -1,122 +1,123 @@
 "use strict";
-a.r(t), a.d(t, {
-  default: function() {
-    return C
+n.d(t, {
+  Z: function() {
+    return E
   }
-}), a("47120");
-var s = a("735250"),
-  n = a("470079"),
-  l = a("924826"),
-  r = a("442837"),
-  i = a("481060"),
-  o = a("607070"),
-  d = a("109434"),
-  u = a("456269"),
-  c = a("228392"),
-  m = a("479099"),
-  h = a("981631"),
-  f = a("689938"),
-  g = a("228155");
+}), n(47120);
+var s = n(735250),
+  l = n(470079),
+  a = n(924826),
+  i = n(91192),
+  r = n(442837),
+  o = n(481060),
+  c = n(607070),
+  d = n(109434),
+  u = n(456269),
+  h = n(228392),
+  m = n(479099),
+  g = n(981631),
+  x = n(689938),
+  _ = n(451379);
 
-function x() {
+function f() {
   return Promise.resolve()
 }
 
-function C(e) {
+function E(e) {
   let {
     channel: t,
-    closePopout: a,
-    setPopoutRef: C
-  } = e, _ = (0, u.useVisibleForumTags)(t), {
-    tagFilter: S
-  } = (0, d.useForumChannelStore)(t.id), T = (0, d.useForumChannelStoreApi)(), p = (0, r.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), E = n.useCallback(e => {
-    (0, c.trackForumTagFilterClicked)({
+    closePopout: n,
+    setPopoutRef: E
+  } = e, N = (0, u.Vm)(t), {
+    tagFilter: T
+  } = (0, d.H)(t.id), C = (0, d.v)(), p = (0, r.e7)([c.Z], () => c.Z.keyboardModeEnabled), v = l.useCallback(e => {
+    (0, h.e7)({
       guildId: t.guild_id,
       channelId: t.id,
       tagId: e,
-      filterTagIds: Array.from(S),
-      added: !S.has(e),
+      filterTagIds: Array.from(T),
+      added: !T.has(e),
       location: {
-        page: h.AnalyticsPages.GUILD_CHANNEL,
-        section: h.AnalyticsSections.FORUM_CHANNEL_HEADER,
-        object: h.AnalyticsObjects.CHANNEL_TAG
+        page: g.ZY5.GUILD_CHANNEL,
+        section: g.jXE.FORUM_CHANNEL_HEADER,
+        object: g.qAy.CHANNEL_TAG
       }
-    }), T.getState().toggleTagFilter(t.id, e)
-  }, [t, S, T]), N = n.useCallback(() => {
-    T.getState().setTagFilter(t.id, new Set), !p && a()
-  }, [T, t.id, p, a]), M = (0, l.default)({
+    }), C.getState().toggleTagFilter(t.id, e)
+  }, [t, T, C]), M = l.useCallback(() => {
+    C.getState().setTagFilter(t.id, new Set), !p && n()
+  }, [C, t.id, p, n]), S = (0, a.ZP)({
     id: "".concat(t.id, "-all-tags-dropdown-navigator"),
     isEnabled: !0,
     wrap: !0,
-    scrollToStart: x,
-    scrollToEnd: x
-  }), v = n.useRef(null);
-  return n.useEffect(() => {
+    scrollToStart: f,
+    scrollToEnd: f
+  }), I = l.useRef(null);
+  return l.useEffect(() => {
     requestAnimationFrame(() => {
-      if (null != v.current) {
-        let e = v.current.querySelector(".".concat(g.tag));
+      if (null != I.current) {
+        let e = I.current.querySelector(".".concat(_.tag));
         null != e && e.focus()
       }
     })
-  }, []), (0, s.jsxs)(i.Dialog, {
-    ref: C,
-    "aria-label": f.default.Messages.FORUM_TAG_FILTER_HEADER,
-    className: g.container,
+  }, []), (0, s.jsxs)(o.Dialog, {
+    ref: E,
+    "aria-label": x.Z.Messages.FORUM_TAG_FILTER_HEADER,
+    className: _.container,
     children: [(0, s.jsx)("div", {
-      className: g.header,
+      className: _.header,
       children: (0, s.jsxs)("div", {
-        className: g.headerLeft,
-        children: [(0, s.jsx)(i.Heading, {
+        className: _.headerLeft,
+        children: [(0, s.jsx)(o.Heading, {
           color: "interactive-normal",
           variant: "text-xs/bold",
-          className: g.headerText,
-          children: f.default.Messages.FORUM_TAG_POST_SELECT
+          className: _.headerText,
+          children: x.Z.Messages.FORUM_TAG_POST_SELECT
         }), (0, s.jsx)("div", {
-          className: g.countContainer,
-          children: (0, s.jsx)(i.Text, {
-            className: g.countText,
+          className: _.countContainer,
+          children: (0, s.jsx)(o.Text, {
+            className: _.countText,
             color: "none",
             variant: "text-xs/medium",
-            children: S.size
+            children: T.size
           })
         })]
       })
-    }), (0, s.jsx)(l.ListNavigatorProvider, {
-      navigator: M,
-      children: (0, s.jsx)(l.ListNavigatorContainer, {
+    }), (0, s.jsx)(i.bG, {
+      navigator: S,
+      children: (0, s.jsx)(i.SJ, {
         children: e => {
           let {
             ref: t,
-            ...a
+            ...n
           } = e;
           return (0, s.jsx)("div", {
             ref: e => {
-              t.current = e, v.current = e
+              t.current = e, I.current = e
             },
-            ...a,
-            className: g.tagContainer,
-            children: _.map(e => (0, s.jsx)(m.default, {
-              className: g.tag,
+            ...n,
+            className: _.tagContainer,
+            children: N.map(e => (0, s.jsx)(m.Z, {
+              className: _.tag,
               tag: e,
-              selected: S.has(e.id),
-              onClick: () => E(e.id)
+              selected: T.has(e.id),
+              onClick: () => v(e.id)
             }, e.id))
           })
         }
       })
     }), (0, s.jsx)("div", {
-      className: g.separator
-    }), (0, s.jsx)(i.Button, {
-      look: i.Button.Looks.LINK,
-      size: i.Button.Sizes.MIN,
-      color: i.Button.Colors.CUSTOM,
-      className: g.clear,
-      "aria-label": f.default.Messages.FORUM_CLEAR_ALL,
-      onClick: N,
-      children: (0, s.jsx)(i.Text, {
+      className: _.separator
+    }), (0, s.jsx)(o.Button, {
+      look: o.Button.Looks.LINK,
+      size: o.Button.Sizes.MIN,
+      color: o.Button.Colors.CUSTOM,
+      className: _.clear,
+      "aria-label": x.Z.Messages.FORUM_CLEAR_ALL,
+      onClick: M,
+      children: (0, s.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "text-link",
-        children: f.default.Messages.FORUM_CLEAR_ALL
+        children: x.Z.Messages.FORUM_CLEAR_ALL
       })
     })]
   })

@@ -1,43 +1,43 @@
 "use strict";
-n.r(t), n.d(t, {
-  NameWithRole: function() {
+n.d(t, {
+  P: function() {
     return E
   },
-  NameWithRoleAnchor: function() {
+  r: function() {
     return c
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("803997"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("442837"),
-  o = n("756715"),
-  l = n("607070"),
-  u = n("109161"),
-  d = n("658092");
+  o = n(442837),
+  a = n(756715),
+  l = n(607070),
+  u = n(109161),
+  _ = n(794323);
 
-function _(e) {
+function d(e) {
   let {
     roleStyle: t,
     name: n,
     color: r,
-    roleName: a,
-    dotAlignment: o = "left",
+    roleName: o,
+    dotAlignment: a = "left",
     className: l
-  } = e, _ = "username" === t, c = "dot" === t ? (0, i.jsx)(u.RoleDot, {
+  } = e, d = "username" === t, c = "dot" === t ? (0, i.jsx)(u.F, {
     color: r,
-    name: a,
-    className: "left" === o ? d.roleDotLeft : d.roleDotRight
+    name: o,
+    className: "left" === a ? _.roleDotLeft : _.roleDotRight
   }) : null;
   return (0, i.jsxs)("span", {
     style: {
-      color: _ && null != r ? r : void 0
+      color: d && null != r ? r : void 0
     },
     className: s()(l, {
-      [d.username]: _
+      [_.username]: d
     }),
-    children: ["left" === o && c, n, "right" === o && c]
+    children: ["left" === a && c, n, "right" === a && c]
   })
 }
 
@@ -48,8 +48,8 @@ function c(e) {
     roleName: r,
     dotAlignment: s,
     className: u,
-    ...d
-  } = e, c = (0, a.useStateFromStores)([l.default], () => l.default.roleStyle), E = "username" === c, I = (0, i.jsx)(_, {
+    ..._
+  } = e, c = (0, o.e7)([l.Z], () => l.Z.roleStyle), E = "username" === c, I = (0, i.jsx)(d, {
     roleStyle: c,
     name: t,
     color: n,
@@ -59,16 +59,16 @@ function c(e) {
   }), T = E ? {
     color: n
   } : void 0;
-  return (0, i.jsx)(o.Anchor, {
-    ...d,
+  return (0, i.jsx)(a.e, {
+    ..._,
     children: I,
     style: T
   })
 }
 
 function E(e) {
-  let t = (0, a.useStateFromStores)([l.default], () => l.default.roleStyle);
-  return (0, i.jsx)(_, {
+  let t = (0, o.e7)([l.Z], () => l.Z.roleStyle);
+  return (0, i.jsx)(d, {
     ...e,
     roleStyle: t
   })

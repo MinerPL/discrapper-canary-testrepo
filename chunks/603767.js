@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return s
   }
-}), n("47120");
-var i = n("718017");
+}), n(47120);
+var i = n(920906);
 
 function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -31,11 +31,11 @@ class s extends i.FrameLoop {
         this.animations.length > 0 || this.startQueue.size > 0 || this.frameQueue.size > 0 || this.writeQueue.size > 0 || this.timeoutQueue.length > 0 ? this.id = this._requestAnimationFrame(this.loop) : (this.lastTime = 0, this.id = 0)
       }
     }), r(this, "startLoop", () => {
-      !(this.lastTime > 0) && (this.lastTime = i.Globals.now(), this.id = this._requestAnimationFrame(this.loop))
+      if (!(this.lastTime > 0)) this.lastTime = i.Globals.now(), this.id = this._requestAnimationFrame(this.loop)
     }), r(this, "advance", () => {
       let e = i.Globals.now();
       if (this.startQueue.size > 0 && (this.startQueue.forEach(this.addAnimation), this.startQueue.clear()), this.timeoutQueue.length > 0 && i.Globals.batchedUpdates(() => {
-          let t = a(this.timeoutQueue, t => t.time > e);
+          let t = o(this.timeoutQueue, t => t.time > e);
           this.timeoutQueue.splice(0, t).forEach(e => e.handler())
         }), e > this.lastTime) {
         let t = Math.min(64, e - this.lastTime);
@@ -51,13 +51,13 @@ class s extends i.FrameLoop {
           let e = this.timeoutQueue.findIndex(e => e.cancel === r);
           e >= 0 && this.timeoutQueue.splice(e, 1)
         },
-        s = a(this.timeoutQueue, e => e.time > n),
-        o = {
+        s = o(this.timeoutQueue, e => e.time > n),
+        a = {
           time: n,
           handler: e,
           cancel: r
         };
-      return this.timeoutQueue.splice(s, 0, o), this.startLoop(), o
+      return this.timeoutQueue.splice(s, 0, a), this.startLoop(), a
     }), r(this, "onFrame", e => {
       this.frameQueue.add(e), this.startLoop()
     }), r(this, "onWrite", e => {
@@ -66,7 +66,7 @@ class s extends i.FrameLoop {
   }
 }
 
-function a(e, t) {
+function o(e, t) {
   let n = e.findIndex(t);
   return n < 0 ? e.length : n
 }

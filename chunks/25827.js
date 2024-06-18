@@ -1,51 +1,51 @@
 "use strict";
-n.r(t), n.d(t, {
-  VideoButtonWrapper: function() {
-    return c
-  },
-  default: function() {
+n.d(t, {
+  C: function() {
     return E
+  },
+  Z: function() {
+    return c
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
-  o = n("75735"),
-  l = n("40851"),
-  u = n("67844"),
-  d = n("871499"),
-  _ = n("504986");
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(75735),
+  l = n(40851),
+  u = n(67844),
+  _ = n(871499),
+  d = n(239618);
 
 function c(e) {
-  let t = (0, u.getVideoButtonLabel)(e),
+  let t = (0, u.X)(e),
     {
       enabled: n,
       cameraUnavailable: s,
-      onChange: a,
-      onCameraUnavailable: d,
-      hasPermission: _,
+      onChange: o,
+      onCameraUnavailable: _,
+      hasPermission: d,
       children: c,
       channelLimitReached: E = !1,
       join: I
     } = e,
-    T = (0, l.useAppContext)(),
-    f = s ? () => d() : () => a(!e.enabled, T),
+    T = (0, l.bp)(),
+    h = s ? () => _() : () => o(!e.enabled, T),
     {
       Component: S,
-      play: h,
-      events: A
-    } = (0, o.useVideoLottie)(I || n ? "disable" : "enable");
-  return r.useEffect(() => () => h(), [n, h]), (0, i.jsx)(i.Fragment, {
+      play: f,
+      events: N
+    } = (0, a.o)(I || n ? "disable" : "enable");
+  return r.useEffect(() => () => f(), [n, f]), (0, i.jsx)(i.Fragment, {
     children: c({
-      onClick: f,
+      onClick: h,
       active: n,
-      disabled: !n && (!_ || E),
+      disabled: !n && (!d || E),
       iconComponent: S,
       label: t,
       unavailable: s,
-      onMouseEnter: I ? void 0 : A.onMouseEnter,
-      onMouseLeave: I ? void 0 : A.onMouseLeave
+      onMouseEnter: I ? void 0 : N.onMouseEnter,
+      onMouseLeave: I ? void 0 : N.onMouseLeave
     })
   })
 }
@@ -56,22 +56,22 @@ function E(e) {
     join: n,
     channel: r,
     onChange: s,
-    onCameraUnavailable: o,
+    onCameraUnavailable: a,
     cameraUnavailable: l,
     hasPermission: u,
     className: E,
     channelLimitReached: I,
     channelLimit: T,
-    centerButton: f = !1,
+    centerButton: h = !1,
     onPopoutClick: S,
-    ...h
-  } = e, A = f ? d.CenterControlButton : d.default;
+    ...f
+  } = e, N = h ? _.d : _.Z;
   return (0, i.jsx)(c, {
     enabled: t,
     join: n,
     channel: r,
     onChange: s,
-    onCameraUnavailable: o,
+    onCameraUnavailable: a,
     cameraUnavailable: l,
     hasPermission: u,
     channelLimitReached: I,
@@ -81,22 +81,22 @@ function E(e) {
         unavailable: n,
         onMouseEnter: r,
         onMouseLeave: s,
-        ...o
+        ...a
       } = e;
-      return (0, i.jsx)(A, {
-        ...o,
-        ...h,
+      return (0, i.jsx)(N, {
+        ...a,
+        ...f,
         onMouseEnter: e => {
           var t;
-          null === (t = h.onMouseEnter) || void 0 === t || t.call(h, e), null == r || r()
+          null === (t = f.onMouseEnter) || void 0 === t || t.call(f, e), null == r || r()
         },
         onMouseLeave: e => {
           var t;
-          null === (t = h.onMouseLeave) || void 0 === t || t.call(h, e), null == s || s()
+          null === (t = f.onMouseLeave) || void 0 === t || t.call(f, e), null == s || s()
         },
         isActive: t,
-        className: a()(E, {
-          [_.fauxDisabled]: n
+        className: o()(E, {
+          [d.fauxDisabled]: n
         }),
         onPopoutClick: S
       })

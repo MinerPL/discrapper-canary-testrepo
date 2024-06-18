@@ -1,7 +1,7 @@
 "use strict";
-var r = n("689118"),
-  i = n("258922"),
-  a = n("957578").Buffer,
+var r = n(689118),
+  i = n(258922),
+  a = n(957578).Buffer,
   o = Array(16);
 
 function s() {

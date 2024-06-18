@@ -1,10 +1,9 @@
 "use strict";
-n.r(t);
-var r = n("49691"),
+var r = n(49691),
   i = {
     passive: !0
   };
-t.default = {
+t.Z = {
   name: "eventListeners",
   enabled: !0,
   phase: "write",
@@ -17,7 +16,7 @@ t.default = {
       s = void 0 === o || o,
       u = a.resize,
       c = void 0 === u || u,
-      l = (0, r.default)(t.elements.popper),
+      l = (0, r.Z)(t.elements.popper),
       d = [].concat(t.scrollParents.reference, t.scrollParents.popper);
     return s && d.forEach(function(e) {
         e.addEventListener("scroll", n.update, i)

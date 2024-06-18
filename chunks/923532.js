@@ -1,47 +1,47 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return p
+n.d(t, {
+  Z: function() {
+    return f
   }
 });
-var i = n("735250"),
-  a = n("470079"),
-  l = n("512722"),
-  s = n.n(l),
-  o = n("399606"),
-  r = n("822183"),
-  d = n("673125"),
-  u = n("610947"),
-  c = n("594174"),
-  f = n("904070");
+var i = n(735250),
+  s = n(470079),
+  l = n(512722),
+  a = n.n(l),
+  o = n(399606),
+  r = n(822183),
+  d = n(673125),
+  c = n(610947),
+  u = n(594174),
+  h = n(904070);
 
-function h(e) {
+function p(e) {
   let {
     streamerId: t,
     channelId: n
-  } = e, l = a.useRef(null), r = (0, o.useStateFromStores)([c.default], () => c.default.getCurrentUser());
-  return s()(null != r, "user cannot be null"), (0, u.default)(l, r, t, n), (0, i.jsx)("canvas", {
-    className: f.canvas,
+  } = e, l = s.useRef(null), r = (0, o.e7)([u.default], () => u.default.getCurrentUser());
+  return a()(null != r, "user cannot be null"), (0, c.Z)(l, r, t, n), (0, i.jsx)("canvas", {
+    className: h.canvas,
     ref: l
   })
 }
 
-function p(e) {
+function f(e) {
   let {
     guildId: t,
     channelId: n,
-    streamerId: a
+    streamerId: s
   } = e, {
     isSharedCanvasEnabled: l
-  } = r.default.useExperiment({
+  } = r.Z.useExperiment({
     guildId: t,
     location: "f0d1b1_1"
   }, {
     autoTrackExposure: !0
-  }), s = (0, o.useStateFromStores)([d.default], () => d.default.visibleOverlayCanvas);
-  return l && s ? (0, i.jsx)(h, {
+  }), a = (0, o.e7)([d.Z], () => d.Z.visibleOverlayCanvas);
+  return l && a ? (0, i.jsx)(p, {
     guildId: t,
     channelId: n,
-    streamerId: a
+    streamerId: s
   }) : null
 }

@@ -1,35 +1,34 @@
 "use strict";
-n.r(t);
-var i = n("735250"),
-  r = n("470079"),
-  s = n("271383"),
-  a = n("156361"),
-  o = n("483360"),
-  l = n("51144"),
-  u = n("877565"),
-  d = n("590921"),
-  _ = n("665692"),
-  c = n("689938");
+var i = n(735250),
+  r = n(470079),
+  s = n(271383),
+  o = n(156361),
+  a = n(483360),
+  l = n(51144),
+  u = n(877565),
+  _ = n(590921),
+  d = n(665692),
+  c = n(689938);
 let E = {
-  sentinel: _.MENTION_SENTINEL,
-  stores: [s.default],
-  matches: (e, t, n, i, r) => (r.mentions.user !== d.UserMentionMode.DENY || r.mentions.role !== d.RoleMentionMode.DENY || r.mentions.global !== d.GlobalMentionMode.DENY) && !0,
+  sentinel: d.ME,
+  stores: [s.ZP],
+  matches: (e, t, n, i, r) => (r.mentions.user !== _.h3.DENY || r.mentions.role !== _.Fw.DENY || r.mentions.global !== _.VV.DENY) && !0,
   queryResults(e, t, n, i, r) {
-    let s = i.mentions.global === d.GlobalMentionMode.ALLOW_EVERYONE || i.mentions.global === d.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE,
-      a = i.mentions.global === d.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE,
-      l = i.mentions.user !== d.UserMentionMode.DENY,
-      u = i.mentions.role !== d.RoleMentionMode.DENY,
-      _ = i.mentions.user === d.UserMentionMode.ALLOW_GUILD,
-      c = i.mentions.role === d.RoleMentionMode.ALLOW_ALL;
+    let s = i.mentions.global === _.VV.ALLOW_EVERYONE || i.mentions.global === _.VV.ALLOW_EVERYONE_OR_HERE,
+      o = i.mentions.global === _.VV.ALLOW_EVERYONE_OR_HERE,
+      l = i.mentions.user !== _.h3.DENY,
+      u = i.mentions.role !== _.Fw.DENY,
+      d = i.mentions.user === _.h3.ALLOW_GUILD,
+      c = i.mentions.role === _.Fw.ALLOW_ALL;
     return {
-      results: o.default.queryMentionResults({
+      results: a.ZP.queryMentionResults({
         query: n,
         channel: e,
         canMentionEveryone: s,
-        canMentionHere: a,
+        canMentionHere: o,
         canMentionUsers: l,
         canMentionRoles: u,
-        includeAllGuildUsers: _,
+        includeAllGuildUsers: d,
         includeNonMentionableRoles: c,
         request: r
       })
@@ -39,51 +38,51 @@ let E = {
     let t, n, {
         results: {
           users: s,
-          globals: o,
+          globals: a,
           roles: l
         },
         selectedIndex: E,
         channel: I,
         query: T,
-        options: f,
+        options: h,
         onHover: S,
-        onClick: h
+        onClick: f
       } = e,
-      A = s.map((e, t) => (0, i.jsx)(a.default.User, {
+      N = s.map((e, t) => (0, i.jsx)(o.ZP.User, {
         guildId: I.guild_id,
-        onClick: h,
+        onClick: f,
         onHover: S,
         selected: E === t,
         index: t,
         user: e.user,
         nick: e.nick,
         status: e.status,
-        hidePersonalInformation: f.hidePersonalInformation
+        hidePersonalInformation: h.hidePersonalInformation
       }, e.user.id)),
-      m = o.map((e, t) => (0, i.jsx)(a.default.Generic, {
-        onClick: h,
+      A = a.map((e, t) => (0, i.jsx)(o.ZP.Generic, {
+        onClick: f,
         onHover: S,
         selected: E === t + s.length,
         index: s.length + t,
         text: e.text,
-        description: f.hideMentionDescription ? null : e.description,
+        description: h.hideMentionDescription ? null : e.description,
         "aria-label": e.text
       }, e.text)),
-      N = l.map((e, t) => (0, i.jsx)(a.default.Role, {
-        onClick: h,
+      m = l.map((e, t) => (0, i.jsx)(o.ZP.Role, {
+        onClick: f,
         onHover: S,
-        selected: E === t + s.length + o.length,
-        index: s.length + o.length + t,
+        selected: E === t + s.length + a.length,
+        index: s.length + a.length + t,
         role: e,
-        hideDescription: f.hideMentionDescription
+        hideDescription: h.hideMentionDescription
       }, e.id));
-    return f.mentions.user === d.UserMentionMode.DENY ? (t = c.default.Messages.ROLES_MATCHING, n = c.default.Messages.ROLES) : (t = c.default.Messages.MEMBERS_MATCHING, n = c.default.Messages.MEMBERS), (0, i.jsxs)(r.Fragment, {
-      children: [(0, u.renderHeader)({
+    return h.mentions.user === _.h3.DENY ? (t = c.Z.Messages.ROLES_MATCHING, n = c.Z.Messages.ROLES) : (t = c.Z.Messages.MEMBERS_MATCHING, n = c.Z.Messages.MEMBERS), (0, i.jsxs)(r.Fragment, {
+      children: [(0, u.gm)({
         titleWithQuery: t,
         titleWithoutQuery: n,
         query: T,
-        getQuery: e => "".concat(_.MENTION_SENTINEL).concat(e)
-      }), A, s.length > 0 && o.length > 0 ? (0, i.jsx)(a.default.Divider, {}) : null, m, s.length > 0 && l.length > 0 || o.length > 0 && l.length > 0 ? (0, i.jsx)(a.default.Divider, {}) : null, N]
+        getQuery: e => "".concat(d.ME).concat(e)
+      }), N, s.length > 0 && a.length > 0 ? (0, i.jsx)(o.ZP.Divider, {}) : null, A, s.length > 0 && l.length > 0 || a.length > 0 && l.length > 0 ? (0, i.jsx)(o.ZP.Divider, {}) : null, m]
     }, "mentions")
   },
   onSelect(e) {
@@ -95,23 +94,23 @@ let E = {
       },
       index: r,
       options: s,
-      channel: a
+      channel: o
     } = e, u = t[r], c = n[r - t.length], E = i[r - t.length - n.length];
     return null != u ? s.insertText(function(e, t, n) {
-      return o.default.hasSameRoleAsUsername(t, e) ? "".concat(_.MENTION_SENTINEL).concat(e.tag) : "".concat(_.MENTION_SENTINEL).concat(l.default.getUserTag(e, {
+      return a.ZP.hasSameRoleAsUsername(t, e) ? "".concat(d.ME).concat(e.tag) : "".concat(d.ME).concat(l.ZP.getUserTag(e, {
         identifiable: n ? "never" : "always"
       }))
-    }(u.user, a, s.hidePersonalInformation), function(e) {
+    }(u.user, o, s.hidePersonalInformation), function(e) {
       return "<@".concat(e.id, ">")
     }(u.user)) : null != c ? s.insertText(function(e) {
       return e.text
     }(c)) : null != E && s.insertText(function(e) {
-      return "".concat(_.MENTION_SENTINEL).concat(e.name)
+      return "".concat(d.ME).concat(e.name)
     }(E), function(e) {
       return "<@&".concat(e.id, ">")
     }(E)), {
-      type: d.AutocompleteSelectionTypes.MENTION
+      type: _.z2.MENTION
     }
   }
 };
-t.default = E
+t.Z = E

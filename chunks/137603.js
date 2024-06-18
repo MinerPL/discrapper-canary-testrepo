@@ -1,8 +1,8 @@
 "use strict";
-var r = n("147018"),
-  i = n("161581"),
-  a = n("112285").set,
-  o = n("602932"),
+var r = n(147018),
+  i = n(161581),
+  a = n(112285).set,
+  o = n(602932),
   s = i.setImmediate ? o(a, !1) : a;
 r({
   global: !0,

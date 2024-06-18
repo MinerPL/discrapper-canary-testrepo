@@ -1,7 +1,7 @@
 "use strict";
-n.r(t), n.d(t, {
-  createExperiment: function() {
-    return i.default
+n.d(t, {
+  B: function() {
+    return i.Z
   }
 });
-var i = n("987170")
+var i = n(987170)

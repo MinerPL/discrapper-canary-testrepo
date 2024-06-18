@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return s
   }
-}), n("47120"), n("653041");
-var i = n("878604");
+}), n(47120), n(653041);
+var i = n(878604);
 
 function r(e) {
   return {
@@ -14,20 +14,20 @@ function r(e) {
 }
 
 function s(e, t, n, s) {
-  var a, o, l;
+  var o, a, l;
   let u = {},
-    d = {},
-    _ = [],
+    _ = {},
+    d = [],
     c = [];
   for (let t of e.values()) switch (t.type) {
     case "candidate-pair":
       u[t.id] = t;
       break;
     case "codec":
-      d[t.id] = t;
+      _[t.id] = t;
       break;
     case "inbound-rtp":
-      _.push(t);
+      d.push(t);
       break;
     case "outbound-rtp":
       c.push(t)
@@ -36,14 +36,14 @@ function s(e, t, n, s) {
   if (void 0 === E) return null;
   let I = [];
   for (let e of c) {
-    let t = d[e.codecId];
+    let t = _[e.codecId];
     if (null == t) continue;
     let s = {
       type: e.kind,
       ssrc: e.ssrc,
       timestamp: e.timestamp,
-      sinkWant: (0, i.formatSinkWantStat)(n, e.ssrc, "video" === e.kind),
-      sinkWantAsInt: (0, i.formatSinkWantAsInt)(n, e.ssrc),
+      sinkWant: (0, i.f)(n, e.ssrc, "video" === e.kind),
+      sinkWantAsInt: (0, i.F)(n, e.ssrc),
       codec: r(t),
       bytesSent: e.bytesSent,
       packetsSent: e.packetsSent
@@ -76,38 +76,38 @@ function s(e, t, n, s) {
     }
   }
   let T = {};
-  for (let e of _) {
-    let a = d[e.codecId];
-    if (null == a) continue;
-    let o = t(e.ssrc);
+  for (let e of d) {
+    let o = _[e.codecId];
     if (null == o) continue;
+    let a = t(e.ssrc);
+    if (null == a) continue;
     let l = {
       type: e.kind,
       ssrc: e.ssrc,
       timestamp: e.timestamp,
-      sinkWant: (0, i.formatSinkWantStat)(n, e.ssrc, "video" === e.kind),
-      sinkWantAsInt: (0, i.formatSinkWantAsInt)(n, e.ssrc),
-      sinkWantLocal: (0, i.formatSinkWantStat)(s, e.ssrc, "video" === e.kind),
-      codec: r(a),
+      sinkWant: (0, i.f)(n, e.ssrc, "video" === e.kind),
+      sinkWantAsInt: (0, i.F)(n, e.ssrc),
+      sinkWantLocal: (0, i.f)(s, e.ssrc, "video" === e.kind),
+      codec: r(o),
       bytesReceived: e.bytesReceived,
       packetsReceived: e.packetsReceived,
       packetsLost: e.packetsLost
     };
     if ("audio" === e.kind) {
       let t = void 0 !== e.jitterBufferDelay && void 0 !== e.jitterBufferEmittedCount ? Math.round(1e3 * e.jitterBufferDelay / e.jitterBufferEmittedCount) : 0;
-      null == T[o] && (T[o] = []), T[o].push({
+      null == T[a] && (T[a] = []), T[a].push({
         ...l,
         audioLevel: e.audioLevel,
         jitter: 1e3 * e.jitter,
         jitterBuffer: t
       })
     } else if ("video" === e.kind) {
-      null == T[o] && (T[o] = []);
+      null == T[a] && (T[a] = []);
       let t = null !== e.frameWidth ? {
         width: e.frameWidth,
         height: e.frameHeight
       } : void 0;
-      T[o].push({
+      T[a].push({
         ...l,
         resolution: t,
         framesDecoded: e.framesDecoded,
@@ -119,18 +119,22 @@ function s(e, t, n, s) {
         firCount: e.firCount,
         nackCount: e.nackCount,
         pliCount: e.pliCount,
+        freezeCount: e.freezeCount,
+        pauseCount: e.pauseCount,
+        totalFreezesDuration: e.totalFreezesDuration,
+        totalPausesDuration: e.totalPausesDuration,
         qpSum: e.qpSum,
         decoderImplementationName: "WebRTC"
       })
     }
   }
-  let f = (null !== (a = E.currentRoundTripTime) && void 0 !== a ? a : 0) * 1e3;
+  let h = (null !== (o = E.currentRoundTripTime) && void 0 !== o ? o : 0) * 1e3;
   return {
     transport: {
-      availableOutgoingBitrate: null !== (o = E.availableOutgoingBitrate) && void 0 !== o ? o : 0,
+      availableOutgoingBitrate: null !== (a = E.availableOutgoingBitrate) && void 0 !== a ? a : 0,
       bytesReceived: E.bytesReceived,
       bytesSent: E.bytesSent,
-      ping: f
+      ping: h
     },
     rtp: {
       inbound: T,

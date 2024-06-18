@@ -5,8 +5,8 @@ function i() {
   for (let e of t)
     if (null != e && e) return e
 }
-n.r(t), n.d(t, {
-  getFirstTruthyValue: function() {
+n.d(t, {
+  L: function() {
     return i
   }
-}), n("47120")
+}), n(47120)

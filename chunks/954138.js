@@ -1,16 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return r
   }
 });
-var i = n("963202"),
-  r = n("169559");
+var i = n(963202);
 
-function a(e) {
-  let t = (0, r.default)(e),
-    {
-      clanTagsVisible: n
-    } = (0, i.useClanGeneralExperiment)(e);
-  return t || n
+function r(e) {
+  return (0, i.It)(e).clanTagsVisible
 }

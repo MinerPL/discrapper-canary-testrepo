@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  MediaSinkWantsLadder: function() {
+n.d(t, {
+  x: function() {
     return s
   }
-}), n("411104"), n("47120"), n("653041");
-var i = n("65154");
+}), n(411104), n(47120), n(653041);
+var i = n(65154);
 
 function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -58,31 +58,31 @@ class s {
       }
     }
     let r = {},
-      a = 0,
-      o = 100;
+      o = 0,
+      a = 100;
     for (let t = 1; t <= 25; ++t) {
       let l = 0,
         u = 0,
-        d = 0;
+        _ = 0;
       for (let i of n) {
         if (i.pixelCount * t > e) break;
-        l = i.width, u = i.height, d = i.budgetPortion
+        l = i.width, u = i.height, _ = i.budgetPortion
       }
-      if (a !== l) {
-        let e = s.getMutedFramerate(o);
-        r[o] = {
+      if (o !== l) {
+        let e = s.getMutedFramerate(a);
+        r[a] = {
           width: l,
           height: u,
-          budgetPortion: d,
+          budgetPortion: _,
           mutedFramerate: e,
-          framerate: i.VIDEO_QUALITY_FRAMERATE
-        }, o -= 10, a = l
+          framerate: i.Gs
+        }, a -= 10, o = l
       }
     }
     return r
   }
   static getMutedFramerate(e) {
-    return e <= 20 ? i.VIDEO_QUALITY_FRAMERATE_MUTED_2 : i.VIDEO_QUALITY_FRAMERATE_MUTED
+    return e <= 20 ? i.Er : i.P8
   }
   static calculateOrderedLadder(e) {
     let t = [];
@@ -97,7 +97,7 @@ class s {
     }
     return t
   }
-  constructor(e = i.defaultVideoQualityOptions) {
+  constructor(e = i.kS) {
     r(this, "pixelBudget", void 0), r(this, "ladder", void 0), r(this, "orderedLadder", void 0);
     let {
       width: t,

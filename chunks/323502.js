@@ -1,25 +1,25 @@
 "use strict";
-s.r(t), s.d(t, {
-  fetchTopReadChannels: function() {
-    return i
+t.d(s, {
+  S: function() {
+    return a
   }
 });
-var a = s("544891"),
-  l = s("570140"),
-  n = s("981631");
+var n = t(544891),
+  i = t(570140),
+  l = t(981631);
 
-function i(e) {
-  return a.HTTP.get({
-    url: n.Endpoints.GUILD_TOP_READ_CHANNELS(e),
+function a(e) {
+  return n.tn.get({
+    url: l.ANM.GUILD_TOP_READ_CHANNELS(e),
     oldFormErrors: !0
-  }).then(t => {
+  }).then(s => {
     let {
-      body: s
-    } = t;
-    l.default.dispatch({
+      body: t
+    } = s;
+    i.Z.dispatch({
       type: "GUILD_TOP_READ_CHANNELS_FETCH_SUCCESS",
       guildId: e,
-      topChannelIds: s
+      topChannelIds: t
     })
   })
 }

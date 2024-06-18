@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  makeAnalyticsID: function() {
+n.d(t, {
+  P: function() {
     return r
   }
-}), n("757143");
-var i = n("153832");
+}), n(757143);
+var i = n(772848);
 
 function r() {
-  return (0, i.v4)().replace(/-/g, "")
+  return (0, i.Z)().replace(/-/g, "")
 }

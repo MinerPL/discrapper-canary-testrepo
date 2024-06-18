@@ -345,10 +345,9 @@
       function n(e) {
         if (window.Worker && window.Blob && getWebWorker()) {
           var i = new Blob(["var _workerSelf = self; self.onmessage = ", e.toString()], {
-              type: "text/javascript"
-            }),
-            s = URL.createObjectURL(i);
-          return new Worker(s)
+            type: "text/javascript"
+          });
+          return new Worker(URL.createObjectURL(i))
         }
         return t = e, r
       }
@@ -589,7 +588,7 @@
               }();
 
             function c(i) {
-              !i.__complete && (p(i), o(i), h(i), l(i), f(i), t(i.layers, i.assets), e(i.chars, i.assets), i.__complete = !0)
+              if (!i.__complete) p(i), o(i), h(i), l(i), f(i), t(i.layers, i.assets), e(i.chars, i.assets), i.__complete = !0
             }
 
             function m(t) {
@@ -985,13 +984,13 @@
   }, AnimationItem.prototype.preloadImages = function() {
     this.imagePreloader.setAssetsPath(this.assetsPath), this.imagePreloader.setPath(this.path), this.imagePreloader.loadAssets(this.animationData.assets, this.imagesLoaded.bind(this))
   }, AnimationItem.prototype.configAnimation = function(t) {
-    if (this.renderer) try {
+    if (!!this.renderer) try {
       this.animationData = t, this.initialSegment ? (this.totalFrames = Math.floor(this.initialSegment[1] - this.initialSegment[0]), this.firstFrame = Math.round(this.initialSegment[0])) : (this.totalFrames = Math.floor(this.animationData.op - this.animationData.ip), this.firstFrame = Math.round(this.animationData.ip)), this.renderer.configAnimation(t), !t.assets && (t.assets = []), this.assets = this.animationData.assets, this.frameRate = this.animationData.fr, this.frameMult = this.animationData.fr / 1e3, this.renderer.searchExtraCompositions(t.assets), this.markers = markerParser(t.markers || []), this.trigger("config_ready"), this.preloadImages(), this.loadSegments(), this.updaFrameModifier(), this.waitForFontsLoaded(), this.isPaused && this.audioController.pause()
     } catch (t) {
       this.triggerConfigError(t)
     }
   }, AnimationItem.prototype.waitForFontsLoaded = function() {
-    this.renderer && (this.renderer.globalData.fontManager.isLoaded ? this.checkLoaded() : setTimeout(this.waitForFontsLoaded.bind(this), 20))
+    if (!!this.renderer) this.renderer.globalData.fontManager.isLoaded ? this.checkLoaded() : setTimeout(this.waitForFontsLoaded.bind(this), 20)
   }, AnimationItem.prototype.checkLoaded = function() {
     if (!this.isLoaded && this.renderer.globalData.fontManager.isLoaded && (this.imagePreloader.loadedImages() || "canvas" !== this.renderer.rendererType) && this.imagePreloader.loadedFootages()) {
       this.isLoaded = !0;
@@ -1009,29 +1008,28 @@
   }, AnimationItem.prototype.gotoFrame = function() {
     this.currentFrame = this.isSubframeEnabled ? this.currentRawFrame : ~~this.currentRawFrame, this.timeCompleted !== this.totalFrames && this.currentFrame > this.timeCompleted && (this.currentFrame = this.timeCompleted), this.trigger("enterFrame"), this.renderFrame(), this.trigger("drawnFrame")
   }, AnimationItem.prototype.renderFrame = function() {
-    if (!1 !== this.isLoaded && this.renderer) try {
+    if (!1 !== this.isLoaded && !!this.renderer) try {
       this.expressionsPlugin && this.expressionsPlugin.resetFrame(), this.renderer.renderFrame(this.currentFrame + this.firstFrame)
     } catch (t) {
       this.triggerRenderFrameError(t)
     }
   }, AnimationItem.prototype.play = function(t) {
-    (!t || this.name === t) && !0 === this.isPaused && (this.isPaused = !1, this.trigger("_play"), this.audioController.resume(), this._idle && (this._idle = !1, this.trigger("_active")))
+    if (!t || this.name === t) !0 === this.isPaused && (this.isPaused = !1, this.trigger("_play"), this.audioController.resume(), this._idle && (this._idle = !1, this.trigger("_active")))
   }, AnimationItem.prototype.pause = function(t) {
-    (!t || this.name === t) && !1 === this.isPaused && (this.isPaused = !0, this.trigger("_pause"), this._idle = !0, this.trigger("_idle"), this.audioController.pause())
+    if (!t || this.name === t) !1 === this.isPaused && (this.isPaused = !0, this.trigger("_pause"), this._idle = !0, this.trigger("_idle"), this.audioController.pause())
   }, AnimationItem.prototype.togglePause = function(t) {
-    (!t || this.name === t) && (!0 === this.isPaused ? this.play() : this.pause())
+    if (!t || this.name === t) !0 === this.isPaused ? this.play() : this.pause()
   }, AnimationItem.prototype.stop = function(t) {
-    (!t || this.name === t) && (this.pause(), this.playCount = 0, this._completedLoop = !1, this.setCurrentRawFrameValue(0))
+    if (!t || this.name === t) this.pause(), this.playCount = 0, this._completedLoop = !1, this.setCurrentRawFrameValue(0)
   }, AnimationItem.prototype.getMarkerData = function(t) {
     for (var e, i = 0; i < this.markers.length; i += 1)
       if ((e = this.markers[i]).payload && e.payload.name === t) return e;
     return null
   }, AnimationItem.prototype.goToAndStop = function(t, e, i) {
     if (!i || this.name === i) {
-      var s = Number(t);
-      if (isNaN(s)) {
-        var r = this.getMarkerData(t);
-        r && this.goToAndStop(r.time, !0)
+      if (isNaN(Number(t))) {
+        var s = this.getMarkerData(t);
+        s && this.goToAndStop(s.time, !0)
       } else e ? this.setCurrentRawFrameValue(t) : this.setCurrentRawFrameValue(t * this.frameModifier);
       this.pause()
     }
@@ -1066,7 +1064,7 @@
   }, AnimationItem.prototype.checkSegments = function(t) {
     return !!this.segments.length && (this.adjustSegment(this.segments.shift(), t), !0)
   }, AnimationItem.prototype.destroy = function(t) {
-    (!t || this.name === t) && this.renderer && (this.renderer.destroy(), this.imagePreloader.destroy(), this.trigger("destroy"), this._cbs = null, this.onEnterFrame = null, this.onLoopComplete = null, this.onComplete = null, this.onSegmentStart = null, this.onDestroy = null, this.renderer = null, this.expressionsPlugin = null, this.imagePreloader = null, this.projectInterface = null)
+    if ((!t || this.name === t) && !!this.renderer) this.renderer.destroy(), this.imagePreloader.destroy(), this.trigger("destroy"), this._cbs = null, this.onEnterFrame = null, this.onLoopComplete = null, this.onComplete = null, this.onSegmentStart = null, this.onDestroy = null, this.renderer = null, this.expressionsPlugin = null, this.imagePreloader = null, this.projectInterface = null
   }, AnimationItem.prototype.setCurrentRawFrameValue = function(t) {
     this.currentRawFrame = t, this.gotoFrame()
   }, AnimationItem.prototype.setSpeed = function(t) {
@@ -1076,13 +1074,13 @@
   }, AnimationItem.prototype.setLoop = function(t) {
     this.loop = t
   }, AnimationItem.prototype.setVolume = function(t, e) {
-    (!e || this.name === e) && this.audioController.setVolume(t)
+    if (!e || this.name === e) this.audioController.setVolume(t)
   }, AnimationItem.prototype.getVolume = function() {
     return this.audioController.getVolume()
   }, AnimationItem.prototype.mute = function(t) {
-    (!t || this.name === t) && this.audioController.mute()
+    if (!t || this.name === t) this.audioController.mute()
   }, AnimationItem.prototype.unmute = function(t) {
-    (!t || this.name === t) && this.audioController.unmute()
+    if (!t || this.name === t) this.audioController.unmute()
   }, AnimationItem.prototype.updaFrameModifier = function() {
     this.frameModifier = this.frameMult * this.playSpeed * this.playDirection, this.audioController.setRate(this.playSpeed * this.playDirection)
   }, AnimationItem.prototype.getPath = function() {
@@ -1656,7 +1654,7 @@
   }
 
   function processEffectsSequence() {
-    if (this.elem.globalData.frameId !== this.frameId && this.effectsSequence.length) {
+    if (this.elem.globalData.frameId !== this.frameId && !!this.effectsSequence.length) {
       if (this.lock) {
         this.setVValue(this.pv);
         return
@@ -1924,7 +1922,7 @@
           return e.prototype = {
             reset: s,
             getValue: function() {
-              this.elem.globalData.frameId !== this.frameId && (this.frameId = this.elem.globalData.frameId, this.iterateDynamicProperties(), this._mdf && this.convertEllToPath())
+              if (this.elem.globalData.frameId !== this.frameId) this.frameId = this.elem.globalData.frameId, this.iterateDynamicProperties(), this._mdf && this.convertEllToPath()
             },
             convertEllToPath: function() {
               var e = this.p.v[0],
@@ -1944,7 +1942,7 @@
           return t.prototype = {
             reset: s,
             getValue: function() {
-              this.elem.globalData.frameId !== this.frameId && (this.frameId = this.elem.globalData.frameId, this.iterateDynamicProperties(), this._mdf && this.convertToPath())
+              if (this.elem.globalData.frameId !== this.frameId) this.frameId = this.elem.globalData.frameId, this.iterateDynamicProperties(), this._mdf && this.convertToPath()
             },
             convertStarToPath: function() {
               var t, e, i, s, r = 2 * Math.floor(this.pt.v),
@@ -2002,7 +2000,7 @@
               this.v._length = 0, 2 === this.d || 1 === this.d ? (this.v.setTripleAt(t + i, e - s + r, t + i, e - s + r, t + i, e - s + a, 0, !0), this.v.setTripleAt(t + i, e + s - r, t + i, e + s - a, t + i, e + s - r, 1, !0), 0 !== r ? (this.v.setTripleAt(t + i - r, e + s, t + i - r, e + s, t + i - a, e + s, 2, !0), this.v.setTripleAt(t - i + r, e + s, t - i + a, e + s, t - i + r, e + s, 3, !0), this.v.setTripleAt(t - i, e + s - r, t - i, e + s - r, t - i, e + s - a, 4, !0), this.v.setTripleAt(t - i, e - s + r, t - i, e - s + a, t - i, e - s + r, 5, !0), this.v.setTripleAt(t - i + r, e - s, t - i + r, e - s, t - i + a, e - s, 6, !0), this.v.setTripleAt(t + i - r, e - s, t + i - a, e - s, t + i - r, e - s, 7, !0)) : (this.v.setTripleAt(t - i, e + s, t - i + a, e + s, t - i, e + s, 2), this.v.setTripleAt(t - i, e - s, t - i, e - s + a, t - i, e - s, 3))) : (this.v.setTripleAt(t + i, e - s + r, t + i, e - s + a, t + i, e - s + r, 0, !0), 0 !== r ? (this.v.setTripleAt(t + i - r, e - s, t + i - r, e - s, t + i - a, e - s, 1, !0), this.v.setTripleAt(t - i + r, e - s, t - i + a, e - s, t - i + r, e - s, 2, !0), this.v.setTripleAt(t - i, e - s + r, t - i, e - s + r, t - i, e - s + a, 3, !0), this.v.setTripleAt(t - i, e + s - r, t - i, e + s - a, t - i, e + s - r, 4, !0), this.v.setTripleAt(t - i + r, e + s, t - i + r, e + s, t - i + a, e + s, 5, !0), this.v.setTripleAt(t + i - r, e + s, t + i - a, e + s, t + i - r, e + s, 6, !0), this.v.setTripleAt(t + i, e + s - r, t + i, e + s - r, t + i, e + s - a, 7, !0)) : (this.v.setTripleAt(t - i, e - s, t - i + a, e - s, t - i, e - s, 1, !0), this.v.setTripleAt(t - i, e + s, t - i, e + s - a, t - i, e + s, 2, !0), this.v.setTripleAt(t + i, e + s, t + i - a, e + s, t + i, e + s, 3, !0)))
             },
             getValue: function() {
-              this.elem.globalData.frameId !== this.frameId && (this.frameId = this.elem.globalData.frameId, this.iterateDynamicProperties(), this._mdf && this.convertRectToPath())
+              if (this.elem.globalData.frameId !== this.frameId) this.frameId = this.elem.globalData.frameId, this.iterateDynamicProperties(), this._mdf && this.convertRectToPath()
             },
             reset: s
           }, extendPrototype([DynamicPropertyContainer], t), t
@@ -2350,7 +2348,7 @@
   }, ShapeModifier.prototype.init = function(t, e) {
     this.shapes = [], this.elem = t, this.initDynamicPropertyContainer(t), this.initModifierProperties(t, e), this.frameId = initialDefaultFrame, this.closed = !1, this.k = !1, this.dynamicProperties.length ? this.k = !0 : this.getValue(!0)
   }, ShapeModifier.prototype.processKeys = function() {
-    this.elem.globalData.frameId !== this.frameId && (this.frameId = this.elem.globalData.frameId, this.iterateDynamicProperties())
+    if (this.elem.globalData.frameId !== this.frameId) this.frameId = this.elem.globalData.frameId, this.iterateDynamicProperties()
   }, extendPrototype([DynamicPropertyContainer], ShapeModifier), extendPrototype([ShapeModifier], TrimModifier), TrimModifier.prototype.initModifierProperties = function(t, e) {
     this.s = PropertyFactory.getProp(t, e.s, 0, .01, this), this.e = PropertyFactory.getProp(t, e.e, 0, .01, this), this.o = PropertyFactory.getProp(t, e.o, 0, 0, this), this.sValue = 0, this.eValue = 0, this.getValue = this.processKeys, this.m = e.m, this._isAnimated = !!this.s.effectsSequence.length || !!this.e.effectsSequence.length || !!this.o.effectsSequence.length
   }, TrimModifier.prototype.addShapeToModifier = function(t) {
@@ -3184,7 +3182,7 @@
     }
 
     function y(t) {
-      if (t) {
+      if (!!t) {
         !this.chars && (this.chars = []);
         var e, i, s, r = t.length,
           a = this.chars.length;
@@ -3476,7 +3474,7 @@
     },
     initExpressions: function() {
       var t = getExpressionInterfaces();
-      if (t) {
+      if (!!t) {
         var e = t("layer"),
           i = t("effects"),
           s = t("shape"),
@@ -3513,7 +3511,7 @@
     return null
   }, FootageElement.prototype.renderFrame = function() {}, FootageElement.prototype.destroy = function() {}, FootageElement.prototype.initExpressions = function() {
     var t = getExpressionInterfaces();
-    if (t) {
+    if (!!t) {
       var e = t("footage");
       this.layerInterface = e(this)
     }
@@ -3910,7 +3908,7 @@
       return this.matteMasks[t]
     },
     setMatte: function(t) {
-      this.matteElement && this.matteElement.setAttribute("mask", "url(" + getLocationHref() + "#" + t + ")")
+      if (!!this.matteElement) this.matteElement.setAttribute("mask", "url(" + getLocationHref() + "#" + t + ")")
     }
   }, HierarchyElement.prototype = {
     initHierarchy: function() {
@@ -3937,7 +3935,7 @@
         this.isInRange && !this.isTransparent && (!this.data.hd && ((this.baseElement || this.layerElement).style.display = "block"), this.hidden = !1, this._isFirstFrame = !0)
       },
       renderFrame: function() {
-        !this.data.hd && !this.hidden && (this.renderTransform(), this.renderRenderable(), this.renderLocalTransform(), this.renderElement(), this.renderInnerContent(), this._isFirstFrame && (this._isFirstFrame = !1))
+        if (!this.data.hd && !this.hidden) this.renderTransform(), this.renderRenderable(), this.renderLocalTransform(), this.renderElement(), this.renderInnerContent(), this._isFirstFrame && (this._isFirstFrame = !1)
       },
       renderInnerContent: function() {},
       prepareFrame: function(t) {
@@ -3963,10 +3961,10 @@
       return !1
     },
     renderModifiers: function() {
-      if (this.shapeModifiers.length) {
+      if (!!this.shapeModifiers.length) {
         var t, e = this.shapes.length;
         for (t = 0; t < e; t += 1) this.shapes[t].sh.reset();
-        for (e = this.shapeModifiers.length, t = e - 1; t >= 0 && !this.shapeModifiers[t].processShapes(this._isFirstFrame); t -= 1);
+        for (t = (e = this.shapeModifiers.length) - 1; t >= 0 && !this.shapeModifiers[t].processShapes(this._isFirstFrame); t -= 1);
       }
     },
     searchProcessedElement: function(t) {
@@ -4065,10 +4063,12 @@
   }, SVGStyleData.prototype.reset = function() {
     this.d = "", this._mdf = !1
   }, DashProperty.prototype.getValue = function(t) {
-    if ((this.elem.globalData.frameId !== this.frameId || t) && (this.frameId = this.elem.globalData.frameId, this.iterateDynamicProperties(), this._mdf = this._mdf || t, this._mdf)) {
-      var e = 0,
-        i = this.dataProps.length;
-      for ("svg" === this.renderer && (this.dashStr = ""), e = 0; e < i; e += 1) "o" !== this.dataProps[e].n ? "svg" === this.renderer ? this.dashStr += " " + this.dataProps[e].p.v : this.dashArray[e] = this.dataProps[e].p.v : this.dashoffset[0] = this.dataProps[e].p.v
+    if (this.elem.globalData.frameId !== this.frameId || !!t) {
+      if (this.frameId = this.elem.globalData.frameId, this.iterateDynamicProperties(), this._mdf = this._mdf || t, this._mdf) {
+        var e = 0,
+          i = this.dataProps.length;
+        for ("svg" === this.renderer && (this.dashStr = ""), e = 0; e < i; e += 1) "o" !== this.dataProps[e].n ? "svg" === this.renderer ? this.dashStr += " " + this.dataProps[e].p.v : this.dashArray[e] = this.dataProps[e].p.v : this.dashoffset[0] = this.dataProps[e].p.v
+      }
     }
   }, extendPrototype([DynamicPropertyContainer], DashProperty), extendPrototype([DynamicPropertyContainer], SVGStrokeStyleData), extendPrototype([DynamicPropertyContainer], SVGFillStyleData), extendPrototype([DynamicPropertyContainer], SVGNoStyleData), GradientProperty.prototype.comparePoints = function(t, e) {
     for (var i = 0, s = this.o.length / 2; i < s;) {
@@ -4374,7 +4374,7 @@
   }, TextProperty.prototype.addEffect = function(t) {
     this.effectsSequence.push(t), this.elem.addDynamicProperty(this)
   }, TextProperty.prototype.getValue = function(t) {
-    if (this.elem.globalData.frameId !== this.frameId && this.effectsSequence.length || t) {
+    if (this.elem.globalData.frameId !== this.frameId && !!this.effectsSequence.length || !!t) {
       this.currentData.t = this.data.d.k[this.keysIndex].s.t;
       var e, i = this.currentData,
         s = this.keysIndex;
@@ -4600,7 +4600,7 @@
       m: this._elem.maskManager.getMaskProperty(this._textData.p.m)
     }, this._hasMaskedPath = !0) : this._hasMaskedPath = !1, this._moreOptions.alignment = s(this._elem, this._textData.m.a, 1, 0, this)
   }, TextAnimatorProperty.prototype.getMeasures = function(t, e) {
-    if (this.lettersChangedFlag = e, this._mdf || this._isFirstFrame || e || this._hasMaskedPath && this._pathData.m._mdf) {
+    if (this.lettersChangedFlag = e, !!this._mdf || !!this._isFirstFrame || !!e || !!this._hasMaskedPath && !!this._pathData.m._mdf) {
       this._isFirstFrame = !1;
       var i, s, r, a, n, o, h, l, p, f, c, m, u, d, g, y, v, b, x = this._moreOptions.alignment.v,
         _ = this._animatorsData,
@@ -4610,49 +4610,49 @@
         A = this.renderedLetters.length,
         w = t.l;
       if (this._hasMaskedPath) {
-        if (Y = this._pathData.m, !this._pathData.n || this._pathData._mdf) {
-          var S, D, T, M, E, F, I, L, B, R, V, z, O, N, G, j, q, W, Y, H, X = Y.v;
-          for (this._pathData.r.v && (X = X.reverse()), E = {
+        if (W = this._pathData.m, !this._pathData.n || this._pathData._mdf) {
+          var S, D, T, M, E, F, I, L, B, R, V, z, O, N, G, j, q, W, Y, H = W.v;
+          for (this._pathData.r.v && (H = H.reverse()), E = {
               tLength: 0,
               segments: []
-            }, M = X._length - 1, j = 0, T = 0; T < M; T += 1) H = bez.buildBezierData(X.v[T], X.v[T + 1], [X.o[T][0] - X.v[T][0], X.o[T][1] - X.v[T][1]], [X.i[T + 1][0] - X.v[T + 1][0], X.i[T + 1][1] - X.v[T + 1][1]]), E.tLength += H.segmentLength, E.segments.push(H), j += H.segmentLength;
-          T = M, Y.v.c && (H = bez.buildBezierData(X.v[T], X.v[0], [X.o[T][0] - X.v[T][0], X.o[T][1] - X.v[T][1]], [X.i[0][0] - X.v[0][0], X.i[0][1] - X.v[0][1]]), E.tLength += H.segmentLength, E.segments.push(H), j += H.segmentLength), this._pathData.pi = E
+            }, M = H._length - 1, j = 0, T = 0; T < M; T += 1) Y = bez.buildBezierData(H.v[T], H.v[T + 1], [H.o[T][0] - H.v[T][0], H.o[T][1] - H.v[T][1]], [H.i[T + 1][0] - H.v[T + 1][0], H.i[T + 1][1] - H.v[T + 1][1]]), E.tLength += Y.segmentLength, E.segments.push(Y), j += Y.segmentLength;
+          T = M, W.v.c && (Y = bez.buildBezierData(H.v[T], H.v[0], [H.o[T][0] - H.v[T][0], H.o[T][1] - H.v[T][1]], [H.i[0][0] - H.v[0][0], H.i[0][1] - H.v[0][1]]), E.tLength += Y.segmentLength, E.segments.push(Y), j += Y.segmentLength), this._pathData.pi = E
         }
-        if (E = this._pathData.pi, F = this._pathData.f.v, V = 0, R = 1, L = 0, B = !0, N = E.segments, F < 0 && Y.v.c)
+        if (E = this._pathData.pi, F = this._pathData.f.v, V = 0, R = 1, L = 0, B = !0, N = E.segments, F < 0 && W.v.c)
           for (E.tLength < Math.abs(F) && (F = -Math.abs(F) % E.tLength), V = N.length - 1, R = (O = N[V].points).length - 1; F < 0;) F += O[R].partialLength, (R -= 1) < 0 && (V -= 1, R = (O = N[V].points).length - 1);
         z = (O = N[V].points)[R - 1], G = (I = O[R]).partialLength
       }
       M = w.length, S = 0, D = 0;
-      var J = 1.2 * t.finalSize * .714,
-        K = !0;
+      var X = 1.2 * t.finalSize * .714,
+        J = !0;
       a = _.length;
-      var Z = -1,
-        U = F,
-        Q = V,
-        $ = R,
-        tt = -1,
-        te = "",
-        ti = this.defaultPropsArray;
+      var K = -1,
+        Z = F,
+        U = V,
+        Q = R,
+        $ = -1,
+        tt = "",
+        te = this.defaultPropsArray;
       if (2 === t.j || 1 === t.j) {
-        var ts = 0,
-          tr = 0,
-          ta = 2 === t.j ? -.5 : -1,
-          tn = 0,
-          to = !0;
+        var ti = 0,
+          ts = 0,
+          tr = 2 === t.j ? -.5 : -1,
+          ta = 0,
+          tn = !0;
         for (T = 0; T < M; T += 1)
           if (w[T].n) {
-            for (ts && (ts += tr); tn < T;) w[tn].animatorJustifyOffset = ts, tn += 1;
-            ts = 0, to = !0
+            for (ti && (ti += ts); ta < T;) w[ta].animatorJustifyOffset = ti, ta += 1;
+            ti = 0, tn = !0
           } else {
-            for (r = 0; r < a; r += 1)(i = _[r].a).t.propType && (to && 2 === t.j && (tr += i.t.v * ta), (o = (s = _[r].s).getMult(w[T].anIndexes[r], k.a[r].s.totalChars)).length ? ts += i.t.v * o[0] * ta : ts += i.t.v * o * ta);
-            to = !1
-          } for (ts && (ts += tr); tn < T;) w[tn].animatorJustifyOffset = ts, tn += 1
+            for (r = 0; r < a; r += 1)(i = _[r].a).t.propType && (tn && 2 === t.j && (ts += i.t.v * tr), (o = (s = _[r].s).getMult(w[T].anIndexes[r], k.a[r].s.totalChars)).length ? ti += i.t.v * o[0] * tr : ti += i.t.v * o * tr);
+            tn = !1
+          } for (ti && (ti += ts); ta < T;) w[ta].animatorJustifyOffset = ti, ta += 1
       }
       for (T = 0; T < M; T += 1) {
-        if (C.reset(), f = 1, w[T].n) S = 0, D += t.yOffset + (K ? 1 : 0), F = U, K = !1, this._hasMaskedPath && (V = Q, R = $, z = (O = N[V].points)[R - 1], G = (I = O[R]).partialLength, L = 0), te = "", v = "", g = "", b = "", ti = this.defaultPropsArray;
+        if (C.reset(), f = 1, w[T].n) S = 0, D += t.yOffset + (J ? 1 : 0), F = Z, J = !1, this._hasMaskedPath && (V = U, R = Q, z = (O = N[V].points)[R - 1], G = (I = O[R]).partialLength, L = 0), tt = "", v = "", g = "", b = "", te = this.defaultPropsArray;
         else {
           if (this._hasMaskedPath) {
-            if (tt !== w[T].line) {
+            if ($ !== w[T].line) {
               switch (t.j) {
                 case 1:
                   F += j - t.lineWidths[w[T].line];
@@ -4660,14 +4660,14 @@
                 case 2:
                   F += (j - t.lineWidths[w[T].line]) / 2
               }
-              tt = w[T].line
+              $ = w[T].line
             }
-            Z !== w[T].ind && (w[Z] && (F += w[Z].extra), F += w[T].an / 2, Z = w[T].ind), F += x[0] * w[T].an * .005;
-            var th = 0;
-            for (r = 0; r < a; r += 1)(i = _[r].a).p.propType && ((o = (s = _[r].s).getMult(w[T].anIndexes[r], k.a[r].s.totalChars)).length ? th += i.p.v[0] * o[0] : th += i.p.v[0] * o), i.a.propType && ((o = (s = _[r].s).getMult(w[T].anIndexes[r], k.a[r].s.totalChars)).length ? th += i.a.v[0] * o[0] : th += i.a.v[0] * o);
-            for (B = !0, this._pathData.a.v && (F = .5 * w[0].an + (j - this._pathData.f.v - .5 * w[0].an - .5 * w[w.length - 1].an) * Z / (M - 1) + this._pathData.f.v); B;) L + G >= F + th || !O ? (q = (F + th - L) / I.partialLength, l = z.point[0] + (I.point[0] - z.point[0]) * q, p = z.point[1] + (I.point[1] - z.point[1]) * q, C.translate(-x[0] * w[T].an * .005, -(x[1] * J * .01)), B = !1) : O && (L += I.partialLength, (R += 1) >= O.length && (R = 0, N[V += 1] ? O = N[V].points : Y.v.c ? (R = 0, O = N[V = 0].points) : (L -= I.partialLength, O = null)), O && (z = I, G = (I = O[R]).partialLength));
+            K !== w[T].ind && (w[K] && (F += w[K].extra), F += w[T].an / 2, K = w[T].ind), F += x[0] * w[T].an * .005;
+            var to = 0;
+            for (r = 0; r < a; r += 1)(i = _[r].a).p.propType && ((o = (s = _[r].s).getMult(w[T].anIndexes[r], k.a[r].s.totalChars)).length ? to += i.p.v[0] * o[0] : to += i.p.v[0] * o), i.a.propType && ((o = (s = _[r].s).getMult(w[T].anIndexes[r], k.a[r].s.totalChars)).length ? to += i.a.v[0] * o[0] : to += i.a.v[0] * o);
+            for (B = !0, this._pathData.a.v && (F = .5 * w[0].an + (j - this._pathData.f.v - .5 * w[0].an - .5 * w[w.length - 1].an) * K / (M - 1) + this._pathData.f.v); B;) L + G >= F + to || !O ? (q = (F + to - L) / I.partialLength, l = z.point[0] + (I.point[0] - z.point[0]) * q, p = z.point[1] + (I.point[1] - z.point[1]) * q, C.translate(-x[0] * w[T].an * .005, -(.01 * (x[1] * X))), B = !1) : O && (L += I.partialLength, (R += 1) >= O.length && (R = 0, N[V += 1] ? O = N[V].points : W.v.c ? (R = 0, O = N[V = 0].points) : (L -= I.partialLength, O = null)), O && (z = I, G = (I = O[R]).partialLength));
             h = w[T].an / 2 - w[T].add, C.translate(-h, 0, 0)
-          } else h = w[T].an / 2 - w[T].add, C.translate(-h, 0, 0), C.translate(-x[0] * w[T].an * .005, -x[1] * J * .01, 0);
+          } else h = w[T].an / 2 - w[T].add, C.translate(-h, 0, 0), C.translate(-x[0] * w[T].an * .005, -x[1] * X * .01, 0);
           for (r = 0; r < a; r += 1)(i = _[r].a).t.propType && (o = (s = _[r].s).getMult(w[T].anIndexes[r], k.a[r].s.totalChars), (0 !== S || 0 !== t.j) && (this._hasMaskedPath ? o.length ? F += i.t.v * o[0] : F += i.t.v * o : o.length ? S += i.t.v * o[0] : S += i.t.v * o));
           for (t.strokeWidthAnim && (m = t.sw || 0), t.strokeColorAnim && (c = t.sc ? [t.sc[0], t.sc[1], t.sc[2]] : [0, 0, 0]), t.fillColorAnim && t.fc && (u = [t.fc[0], t.fc[1], t.fc[2]]), r = 0; r < a; r += 1)(i = _[r].a).a.propType && ((o = (s = _[r].s).getMult(w[T].anIndexes[r], k.a[r].s.totalChars)).length ? C.translate(-i.a.v[0] * o[0], -i.a.v[1] * o[1], i.a.v[2] * o[2]) : C.translate(-i.a.v[0] * o, -i.a.v[1] * o, i.a.v[2] * o));
           for (r = 0; r < a; r += 1)(i = _[r].a).s.propType && ((o = (s = _[r].s).getMult(w[T].anIndexes[r], k.a[r].s.totalChars)).length ? C.scale(1 + (i.s.v[0] - 1) * o[0], 1 + (i.s.v[1] - 1) * o[1], 1) : C.scale(1 + (i.s.v[0] - 1) * o, 1 + (i.s.v[1] - 1) * o, 1));
@@ -4682,11 +4682,11 @@
           }
           for (r = 0; r < a; r += 1)(i = _[r].a).p.propType && (o = (s = _[r].s).getMult(w[T].anIndexes[r], k.a[r].s.totalChars), this._hasMaskedPath ? o.length ? C.translate(0, i.p.v[1] * o[0], -i.p.v[2] * o[1]) : C.translate(0, i.p.v[1] * o, -i.p.v[2] * o) : o.length ? C.translate(i.p.v[0] * o[0], i.p.v[1] * o[1], -i.p.v[2] * o[2]) : C.translate(i.p.v[0] * o, i.p.v[1] * o, -i.p.v[2] * o));
           if (t.strokeWidthAnim && (g = m < 0 ? 0 : m), t.strokeColorAnim && (y = "rgb(" + Math.round(255 * c[0]) + "," + Math.round(255 * c[1]) + "," + Math.round(255 * c[2]) + ")"), t.fillColorAnim && t.fc && (v = "rgb(" + Math.round(255 * u[0]) + "," + Math.round(255 * u[1]) + "," + Math.round(255 * u[2]) + ")"), this._hasMaskedPath) {
-            if (C.translate(0, -t.ls), C.translate(0, x[1] * J * .01 + D, 0), this._pathData.p.v) {
-              var tl = 180 * Math.atan(W = (I.point[1] - z.point[1]) / (I.point[0] - z.point[0])) / Math.PI;
-              I.point[0] < z.point[0] && (tl += 180), C.rotate(-tl * Math.PI / 180)
+            if (C.translate(0, -t.ls), C.translate(0, x[1] * X * .01 + D, 0), this._pathData.p.v) {
+              var th = 180 * Math.atan((I.point[1] - z.point[1]) / (I.point[0] - z.point[0])) / Math.PI;
+              I.point[0] < z.point[0] && (th += 180), C.rotate(-th * Math.PI / 180)
             }
-            C.translate(l, p, 0), F -= x[0] * w[T].an * .005, w[T + 1] && Z !== w[T + 1].ind && (F += w[T].an / 2 + .001 * t.tr * t.finalSize)
+            C.translate(l, p, 0), F -= x[0] * w[T].an * .005, w[T + 1] && K !== w[T + 1].ind && (F += w[T].an / 2 + .001 * t.tr * t.finalSize)
           } else {
             switch (C.translate(S, D, 0), t.ps && C.translate(t.ps[0], t.ps[1] + t.ascent, 0), t.j) {
               case 1:
@@ -4695,15 +4695,15 @@
               case 2:
                 C.translate(w[T].animatorJustifyOffset + t.justifyOffset + (t.boxWidth - t.lineWidths[w[T].line]) / 2, 0, 0)
             }
-            C.translate(0, -t.ls), C.translate(h, 0, 0), C.translate(x[0] * w[T].an * .005, x[1] * J * .01, 0), S += w[T].l + .001 * t.tr * t.finalSize
+            C.translate(0, -t.ls), C.translate(h, 0, 0), C.translate(x[0] * w[T].an * .005, x[1] * X * .01, 0), S += w[T].l + .001 * t.tr * t.finalSize
           }
-          "html" === P ? te = C.toCSS() : "svg" === P ? te = C.to2dCSS() : ti = [C.props[0], C.props[1], C.props[2], C.props[3], C.props[4], C.props[5], C.props[6], C.props[7], C.props[8], C.props[9], C.props[10], C.props[11], C.props[12], C.props[13], C.props[14], C.props[15]], b = f
+          "html" === P ? tt = C.toCSS() : "svg" === P ? tt = C.to2dCSS() : te = [C.props[0], C.props[1], C.props[2], C.props[3], C.props[4], C.props[5], C.props[6], C.props[7], C.props[8], C.props[9], C.props[10], C.props[11], C.props[12], C.props[13], C.props[14], C.props[15]], b = f
         }
-        A <= T ? (n = new LetterProps(b, g, y, v, te, ti), this.renderedLetters.push(n), A += 1, this.lettersChangedFlag = !0) : (n = this.renderedLetters[T], this.lettersChangedFlag = n.update(b, g, y, v, te, ti) || this.lettersChangedFlag)
+        A <= T ? (n = new LetterProps(b, g, y, v, tt, te), this.renderedLetters.push(n), A += 1, this.lettersChangedFlag = !0) : (n = this.renderedLetters[T], this.lettersChangedFlag = n.update(b, g, y, v, tt, te) || this.lettersChangedFlag)
       }
     }
   }, TextAnimatorProperty.prototype.getValue = function() {
-    this._elem.globalData.frameId !== this._frameId && (this._frameId = this._elem.globalData.frameId, this.iterateDynamicProperties())
+    if (this._elem.globalData.frameId !== this._frameId) this._frameId = this._elem.globalData.frameId, this.iterateDynamicProperties()
   }, TextAnimatorProperty.prototype.mHelper = new Matrix, TextAnimatorProperty.prototype.defaultPropsArray = [], extendPrototype([DynamicPropertyContainer], TextAnimatorProperty), ITextElement.prototype.initElement = function(t, e, i) {
     this.lettersChangedFlag = !0, this.initFrame(), this.initBaseData(t, e, i), this.textProperty = new TextProperty(this, t.t, this.dynamicProperties), this.textAnimator = new TextAnimatorProperty(t.t, this.renderType, this), this.initTransform(t, e, i), this.initHierarchy(), this.initRenderable(), this.initRendererElement(), this.createContainerElements(), this.createRenderableComponents(), this.createContent(), this.hide(), this.textAnimator.searchProperties(this.dynamicProperties)
   }, ITextElement.prototype.prepareFrame = function(t) {
@@ -4996,7 +4996,7 @@
     }
   }, SVGRendererBase.prototype.appendElementInPos = function(t, e) {
     var i, s = t.getBaseElement();
-    if (s) {
+    if (!!s) {
       for (var r = 0; r < e;) this.elements[r] && !0 !== this.elements[r] && this.elements[r].getBaseElement() && (i = this.elements[r].getBaseElement()), r += 1;
       i ? this.layerElement.insertBefore(s, i) : this.layerElement.appendChild(s)
     }
@@ -5007,7 +5007,7 @@
   }, extendPrototype([BaseElement, TransformElement, HierarchyElement, FrameElement, RenderableDOMElement], ICompElement), ICompElement.prototype.initElement = function(t, e, i) {
     this.initFrame(), this.initBaseData(t, e, i), this.initTransform(t, e, i), this.initRenderable(), this.initHierarchy(), this.initRendererElement(), this.createContainerElements(), this.createRenderableComponents(), (this.data.xt || !e.progressiveLoad) && this.buildAllItems(), this.hide()
   }, ICompElement.prototype.prepareFrame = function(t) {
-    if (this._mdf = !1, this.prepareRenderableFrame(t), this.prepareProperties(t, this.isInRange), this.isInRange || this.data.xt) {
+    if (this._mdf = !1, this.prepareRenderableFrame(t), this.prepareProperties(t, this.isInRange), !!this.isInRange || !!this.data.xt) {
       if (this.tm._placeholder) this.renderedFrame = t / this.data.sr;
       else {
         var e, i = this.tm.v;
@@ -5138,7 +5138,7 @@
     for (e = 0; e < i; e += 1) this.filters[e].type === t && s.push(this.filters[e]);
     return s
   }, CVMaskElement.prototype.renderFrame = function() {
-    if (this.hasMasks) {
+    if (!!this.hasMasks) {
       var t = this.element.finalTransform.mat,
         e = this.element.canvasContext,
         i = this.masksProperties.length;
@@ -5368,12 +5368,10 @@
       }
     },
     renderFrame: function(t) {
-      if (!this.hidden && !this.data.hd) {
-        if (1 !== this.data.td || t) {
-          this.renderTransform(), this.renderRenderable(), this.renderLocalTransform(), this.setBlendMode();
-          var e = 0 === this.data.ty;
-          this.prepareLayer(), this.globalData.renderer.save(e), this.globalData.renderer.ctxTransform(this.finalTransform.localMat.props), this.globalData.renderer.ctxOpacity(this.finalTransform.localOpacity), this.renderInnerContent(), this.globalData.renderer.restore(e), this.exitLayer(), this.maskManager.hasMasks && this.globalData.renderer.restore(!0), this._isFirstFrame && (this._isFirstFrame = !1)
-        }
+      if (!this.hidden && !this.data.hd && (1 !== this.data.td || !!t)) {
+        this.renderTransform(), this.renderRenderable(), this.renderLocalTransform(), this.setBlendMode();
+        var e = 0 === this.data.ty;
+        this.prepareLayer(), this.globalData.renderer.save(e), this.globalData.renderer.ctxTransform(this.finalTransform.localMat.props), this.globalData.renderer.ctxOpacity(this.finalTransform.localOpacity), this.renderInnerContent(), this.globalData.renderer.restore(e), this.exitLayer(), this.maskManager.hasMasks && this.globalData.renderer.restore(!0), this._isFirstFrame && (this._isFirstFrame = !1)
       }
     },
     destroy: function() {
@@ -5621,7 +5619,7 @@
   }, CanvasRendererBase.prototype.createSolid = function(t) {
     return new CVSolidElement(t, this.globalData, this)
   }, CanvasRendererBase.prototype.createNull = SVGRenderer.prototype.createNull, CanvasRendererBase.prototype.ctxTransform = function(t) {
-    (1 !== t[0] || 0 !== t[1] || 0 !== t[4] || 1 !== t[5] || 0 !== t[12] || 0 !== t[13]) && this.canvasContext.transform(t[0], t[1], t[4], t[5], t[12], t[13])
+    if (1 !== t[0] || 0 !== t[1] || 0 !== t[4] || 1 !== t[5] || 0 !== t[12] || 0 !== t[13]) this.canvasContext.transform(t[0], t[1], t[4], t[5], t[12], t[13])
   }, CanvasRendererBase.prototype.ctxOpacity = function(t) {
     this.canvasContext.globalAlpha *= t < 0 ? 0 : t
   }, CanvasRendererBase.prototype.ctxFillStyle = function(t) {
@@ -5687,7 +5685,7 @@
     for (this.renderConfig.clearCanvas && this.animationItem.wrapper && (this.animationItem.wrapper.innerText = ""), t = (this.layers ? this.layers.length : 0) - 1; t >= 0; t -= 1) this.elements[t] && this.elements[t].destroy && this.elements[t].destroy();
     this.elements.length = 0, this.globalData.canvasContext = null, this.animationItem.container = null, this.destroyed = !0
   }, CanvasRendererBase.prototype.renderFrame = function(t, e) {
-    if ((this.renderedFrame !== t || !0 !== this.renderConfig.clearCanvas || e) && !this.destroyed && -1 !== t) {
+    if ((this.renderedFrame !== t || !0 !== this.renderConfig.clearCanvas || !!e) && !this.destroyed && -1 !== t) {
       this.renderedFrame = t, this.globalData.frameNum = t - this.animationItem._isFirstFrame, this.globalData.frameId += 1, this.globalData._mdf = !this.renderConfig.clearCanvas || e, this.globalData.projectInterface.currentFrame = t;
       var i, s = this.layers.length;
       for (!this.completeLayers && this.checkLayers(t), i = s - 1; i >= 0; i -= 1)(this.completeLayers || this.elements[i]) && this.elements[i].prepareFrame(t - this.layers[i].st);
@@ -5795,7 +5793,7 @@
       this.finalTransform._opMdf && (t.opacity = this.finalTransform.mProp.o.v)
     },
     renderFrame: function() {
-      !this.data.hd && !this.hidden && (this.renderTransform(), this.renderRenderable(), this.renderElement(), this.renderInnerContent(), this._isFirstFrame && (this._isFirstFrame = !1))
+      if (!this.data.hd && !this.hidden) this.renderTransform(), this.renderRenderable(), this.renderElement(), this.renderInnerContent(), this._isFirstFrame && (this._isFirstFrame = !1)
     },
     destroy: function() {
       this.layerElement = null, this.transformedElement = null, this.matteElement && (this.matteElement = null), this.maskManager && (this.maskManager.destroy(), this.maskManager = null)
@@ -5944,7 +5942,7 @@
         t.transform = n, t.webkitTransform = n
       }
     }
-    if (this.textAnimator.getMeasures(this.textProperty.currentData, this.lettersChangedFlag), this.lettersChangedFlag || this.textAnimator.lettersChangedFlag) {
+    if (this.textAnimator.getMeasures(this.textProperty.currentData, this.lettersChangedFlag), !!this.lettersChangedFlag || !!this.textAnimator.lettersChangedFlag) {
       var o = 0,
         h = this.textAnimator.renderedLetters,
         l = this.textProperty.currentData.l;
@@ -6014,7 +6012,7 @@
     for (; this.pendingElements.length;) this.pendingElements.pop().checkParenting()
   }, HybridRendererBase.prototype.appendElementInPos = function(t, e) {
     var i = t.getBaseElement();
-    if (i) {
+    if (!!i) {
       var s = this.layers[e];
       if (s.ddd && this.supports3d) this.addTo3dContainer(i, e);
       else if (this.threeDElements) this.addTo3dContainer(i, e);
@@ -7905,7 +7903,7 @@
     return null
   }, SVGMatte3Effect.prototype.replaceInParent = function(t, e) {
     var i, s = t.layerElement.parentNode;
-    if (s) {
+    if (!!s) {
       for (var r = s.children, a = 0, n = r.length; a < n && r[a] !== t.layerElement;) {
         ;
         a += 1

@@ -18,30 +18,30 @@ function s(e) {
   }
 }
 
-function a(e, t, n) {
+function o(e, t, n) {
   let {
     session_id: i,
     application_id: r,
     channel_id: s,
-    stream_key: a
+    stream_key: o
   } = e;
   return {
     sessionId: i,
     userId: t,
     applicationId: r,
     channelId: s,
-    streamKey: a,
+    streamKey: o,
     source: n
   }
 }
-n.r(t), n.d(t, {
-  BroadcastSourceType: function() {
+n.d(t, {
+  $C: function() {
     return i
   },
-  broadcastFromServer: function() {
-    return a
-  },
-  broadcastToServer: function() {
+  HD: function() {
     return s
+  },
+  tI: function() {
+    return o
   }
 }), (r = i || (i = {}))[r.GLOBAL = 0] = "GLOBAL", r[r.GUILD = 1] = "GUILD"

@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  useAccept: function() {
-    return a
+n.d(t, {
+  b: function() {
+    return o
   }
 });
-var r = n("573654"),
-  i = n("470079");
+var r = n(573654),
+  i = n(470079);
 
-function a(e) {
+function o(e) {
   var t = e.accept;
   return (0, i.useMemo)(function() {
-    return (0, r.invariant)(null != e.accept, "accept must be defined"), Array.isArray(t) ? t : [t]
+    return (0, r.k)(null != e.accept, "accept must be defined"), Array.isArray(t) ? t : [t]
   }, [t])
 }

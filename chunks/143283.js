@@ -1,5 +1,5 @@
-var r, i = n("54640");
-var a = (r = /[^.]+$/.exec(i && i.keys && i.keys.IE_PROTO || "")) ? "Symbol(src)_1." + r : "";
+var n, o = e(54640);
+var i = (n = /[^.]+$/.exec(o && o.keys && o.keys.IE_PROTO || "")) ? "Symbol(src)_1." + n : "";
 t.exports = function(t) {
-  return !!a && a in t
+  return !!i && i in t
 }

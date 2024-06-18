@@ -1,12 +1,11 @@
 "use strict";
-r.r(t);
-var n = r("194649"),
-  i = r("544364"),
+var n = r(599295),
+  i = r(544364),
   o = "@global",
   s = "@global ",
   a = function() {
     function e(e, t, r) {
-      for (var s in this.type = "global", this.at = o, this.isProcessed = !1, this.key = e, this.options = r, this.rules = new i.RuleList((0, n.default)({}, r, {
+      for (var s in this.type = "global", this.at = o, this.isProcessed = !1, this.key = e, this.options = r, this.rules = new i.RB((0, n.Z)({}, r, {
           parent: this
         })), t) this.rules.add(s, t[s]);
       this.rules.process()
@@ -30,7 +29,7 @@ var n = r("194649"),
     function e(e, t, r) {
       this.type = "global", this.at = o, this.isProcessed = !1, this.key = e, this.options = r;
       var i = e.substr(s.length);
-      this.rule = r.jss.createRule(i, t, (0, n.default)({}, r, {
+      this.rule = r.jss.createRule(i, t, (0, n.Z)({}, r, {
         parent: this
       }))
     }
@@ -44,7 +43,7 @@ function c(e, t) {
   for (var r = e.split(l), n = "", i = 0; i < r.length; i++) n += t + " " + r[i].trim(), r[i + 1] && (n += ", ");
   return n
 }
-t.default = function() {
+t.Z = function() {
   return {
     onCreateRule: function(e, t, r) {
       if (!e) return null;
@@ -59,7 +58,7 @@ t.default = function() {
           i = e.style,
           s = i ? i[o] : null;
         if (s) {
-          for (var a in s) t.addRule(a, s[a], (0, n.default)({}, r, {
+          for (var a in s) t.addRule(a, s[a], (0, n.Z)({}, r, {
             selector: c(a, e.selector)
           }));
           delete i[o]
@@ -70,7 +69,7 @@ t.default = function() {
         for (var s in i)
           if ("@" === s[0] && s.substr(0, o.length) === o) {
             var a = c(s.substr(o.length), e.selector);
-            t.addRule(a, i[s], (0, n.default)({}, r, {
+            t.addRule(a, i[s], (0, n.Z)({}, r, {
               selector: a
             })), delete i[s]
           }

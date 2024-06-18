@@ -1,67 +1,67 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return V
+n.d(t, {
+  Z: function() {
+    return x
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
-  o = n("302454"),
-  l = n("481060"),
-  u = n("794295"),
-  d = n("663993"),
-  _ = n("339085"),
-  c = n("590956"),
-  E = n("703656"),
-  I = n("430824"),
-  T = n("797053"),
-  f = n("68588"),
-  S = n("263704"),
-  h = n("757206"),
-  A = n("332870"),
-  m = n("750156"),
-  N = n("979516"),
-  p = n("671612"),
-  O = n("572004"),
-  R = n("900849"),
-  C = n("746878"),
-  g = n("285063"),
-  L = n("943362"),
-  v = n("551452"),
-  D = n("69626"),
-  M = n("142990"),
-  y = n("532901"),
-  P = n("981631"),
-  U = n("176505"),
-  b = n("689938"),
-  G = n("819041");
-n("492009");
-var w = n("990291");
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(302454),
+  l = n(481060),
+  u = n(794295),
+  _ = n(663993),
+  d = n(339085),
+  c = n(590956),
+  E = n(703656),
+  I = n(430824),
+  T = n(797053),
+  h = n(68588),
+  S = n(263704),
+  f = n(757206),
+  N = n(332870),
+  A = n(750156),
+  m = n(979516),
+  O = n(671612),
+  R = n(572004),
+  C = n(900849),
+  p = n(746878),
+  g = n(285063),
+  L = n(943362),
+  v = n(551452),
+  D = n(69626),
+  M = n(142990),
+  P = n(532901),
+  y = n(981631),
+  U = n(176505),
+  b = n(689938),
+  G = n(842648);
+n(987744);
+var w = n(946278);
 
-function B(e) {
+function k(e) {
   let {
     text: t
-  } = e, [n, a] = r.useState(!1);
+  } = e, [n, s] = r.useState(!1);
   return (0, i.jsx)(l.Clickable, {
     onClick: () => {
       try {
-        (0, O.copy)(t), a(!0)
+        (0, R.JG)(t), s(!0)
       } catch (e) {
-        a(!1)
+        s(!1)
       }
     },
-    children: n ? (0, i.jsx)(S.default, {
+    children: n ? (0, i.jsx)(S.Z, {
       width: 16,
       height: 16
-    }) : (0, i.jsx)(h.default, {
+    }) : (0, i.jsx)(f.Z, {
       width: 16,
       height: 16
     })
   })
 }
-let k = {
+let B = {
   blockQuote: {
     react: (e, t, n) => (0, i.jsxs)("div", {
       className: w.blockquoteContainer,
@@ -91,33 +91,33 @@ let k = {
   inlineCode: {
     react: (e, t, n) => (0, i.jsx)("code", {
       className: "inline",
-      children: (0, C.smartOutput)(e, t, n)
+      children: (0, p.S)(e, t, n)
     }, n.key)
   },
   codeBlock: {
     react(e, t, r) {
-      let a = () => (0, i.jsx)("code", {
-        className: s()(G.scrollbarGhostHairline, "hljs"),
-        children: (0, C.smartOutput)(e, t, r)
+      let s = () => (0, i.jsx)("code", {
+        className: o()(G.scrollbarGhostHairline, "hljs"),
+        children: (0, p.S)(e, t, r)
       });
       return (0, i.jsx)("pre", {
         children: (0, i.jsxs)("div", {
           className: w.codeContainer,
-          children: [O.SUPPORTS_COPY ? (0, i.jsx)("div", {
+          children: [R.wS ? (0, i.jsx)("div", {
             className: w.codeActions,
-            children: (0, i.jsx)(B, {
+            children: (0, i.jsx)(k, {
               text: e.content
             })
-          }) : null, (0, i.jsx)(d.LazyLibrary, {
-            createPromise: () => Promise.resolve().then(n.bind(n, "364964")),
-            webpackId: "364964",
-            renderFallback: a,
+          }) : null, (0, i.jsx)(_.GI, {
+            createPromise: () => Promise.resolve().then(n.bind(n, 364964)),
+            webpackId: 364964,
+            renderFallback: s,
             render: t => {
-              if (!(e.lang && t.hasLanguage(e.lang))) return a();
+              if (!(e.lang && t.hasLanguage(e.lang))) return s();
               {
                 let n = t.highlight(e.lang, e.content, !0);
-                return null == n ? a() : (0, i.jsx)("code", {
-                  className: s()(G.scrollbarGhostHairline, "hljs", n.language),
+                return null == n ? s() : (0, i.jsx)("code", {
+                  className: o()(G.scrollbarGhostHairline, "hljs", n.language),
                   dangerouslySetInnerHTML: {
                     __html: n.value
                   }
@@ -137,17 +137,17 @@ let k = {
     }, n.key)
   },
   spoiler: {
-    react: (e, t, n) => (0, i.jsx)(f.default, {
-      type: f.default.Types.TEXT,
+    react: (e, t, n) => (0, i.jsx)(h.Z, {
+      type: h.Z.Types.TEXT,
       inline: n.formatInline,
-      renderTextElement: (e, t) => null == e || e.type !== u.default || t ? e : r.cloneElement(e, {
+      renderTextElement: (e, t) => null == e || e.type !== u.Z || t ? e : r.cloneElement(e, {
         tabIndex: -1
       }),
       children: () => t(e.content, n)
     }, n.key)
   },
   soundboard: {
-    react: e => (0, i.jsx)(p.default, {
+    react: e => (0, i.jsx)(O.Z, {
       channelId: e.channelId,
       soundId: e.soundId,
       jumbo: e.jumboable
@@ -157,49 +157,49 @@ let k = {
     react(e, t, n) {
       let r = () => {
         ! function(e, t) {
-          let n = I.default.getGuild(e);
-          if (null == e || null == n || !n.hasFeature(P.GuildFeatures.COMMUNITY)) return;
+          let n = I.Z.getGuild(e);
+          if (null == e || null == n || !n.hasFeature(y.oNc.COMMUNITY)) return;
           let i = {
-              home: U.StaticChannelRoute.GUILD_HOME,
-              browse: U.StaticChannelRoute.CHANNEL_BROWSER,
-              customize: U.StaticChannelRoute.CUSTOMIZE_COMMUNITY,
-              guide: U.StaticChannelRoute.GUILD_HOME
+              home: U.oC.GUILD_HOME,
+              browse: U.oC.CHANNEL_BROWSER,
+              customize: U.oC.CUSTOMIZE_COMMUNITY,
+              guide: U.oC.GUILD_HOME
             } [t],
-            r = I.default.getGuild(e);
+            r = I.Z.getGuild(e);
           if ((null == r ? void 0 : r.joinedAt) == null) {
-            R.startLurking(e, {}, {
+            C.Ub(e, {}, {
               channelId: i
             });
             return
-          }(0, E.transitionTo)(P.Routes.CHANNEL(e, i))
+          }(0, E.uL)(y.Z5c.CHANNEL(e, i))
         }(e.guildId, e.channelId)
       };
-      if (!(0, C.isStaticRouteIconType)(e.channelId)) return null;
-      let a = "".concat(e.channelId);
+      if (!(0, p.k)(e.channelId)) return null;
+      let s = "".concat(e.channelId);
       switch (e.channelId) {
-        case U.StaticChannelId.GUILD_HOME:
-        case U.StaticChannelId.SERVER_GUIDE:
-          a = b.default.Messages.SERVER_GUIDE;
+        case U.HY.GUILD_HOME:
+        case U.HY.SERVER_GUIDE:
+          s = b.Z.Messages.SERVER_GUIDE;
           break;
-        case U.StaticChannelId.CHANNEL_BROWSER:
-          a = b.default.Messages.GUILD_SIDEBAR_CHANNEL_BROWSER;
+        case U.HY.CHANNEL_BROWSER:
+          s = b.Z.Messages.GUILD_SIDEBAR_CHANNEL_BROWSER;
           break;
-        case U.StaticChannelId.CUSTOMIZE_COMMUNITY:
-          a = b.default.Messages.CHANNELS_AND_ROLES
+        case U.HY.CUSTOMIZE_COMMUNITY:
+          s = b.Z.Messages.CHANNELS_AND_ROLES
       }
       return (0, i.jsx)(l.Tooltip, {
-        text: a,
+        text: s,
         position: "top",
-        children: a => {
+        children: s => {
           let {
-            onMouseEnter: s,
-            onMouseLeave: o
-          } = a;
-          return (0, i.jsx)(T.default, {
+            onMouseEnter: o,
+            onMouseLeave: a
+          } = s;
+          return (0, i.jsx)(T.Z, {
             role: "link",
             onClick: r,
-            onMouseEnter: s,
-            onMouseLeave: o,
+            onMouseEnter: o,
+            onMouseLeave: a,
             className: "channelMention",
             iconType: e.channelId,
             children: t(e.content, n)
@@ -209,7 +209,7 @@ let k = {
     }
   },
   timestamp: {
-    react: (e, t, n) => (0, i.jsx)(g.default, {
+    react: (e, t, n) => (0, i.jsx)(g.Z, {
       node: e
     }, n.key)
   },
@@ -217,17 +217,17 @@ let k = {
     react: (e, t, n) => {
       let i = e.ordered ? "ol" : "ul",
         r = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
-      return (0, o.reactElement)(i, "".concat(n.key), {
+      return (0, a.reactElement)(i, "".concat(n.key), {
         start: e.start,
         className: n.formatInline ? w.inlineFormat : null,
         style: {
           "--totalCharacters": r
         },
         children: e.items.map((e, i) => {
-          let r = (0, o.reactElement)("span", "".concat(n.key, "-").concat(i, "-innerSpan"), {
+          let r = (0, a.reactElement)("span", "".concat(n.key, "-").concat(i, "-innerSpan"), {
             children: t(e, n)
           });
-          return (0, o.reactElement)("li", "".concat(n.key, "-").concat(i) + i, {
+          return (0, a.reactElement)("li", "".concat(n.key, "-").concat(i) + i, {
             children: r
           })
         })
@@ -236,10 +236,10 @@ let k = {
   },
   heading: {
     react: (e, t, n) => {
-      let i = (0, o.reactElement)("span", "".concat(n.key, "-innerSpan"), {
+      let i = (0, a.reactElement)("span", "".concat(n.key, "-innerSpan"), {
         children: t(e.content, n)
       });
-      return (0, o.reactElement)("h" + e.level, (null == n ? void 0 : n.key) != null ? "".concat(n.key) : null, {
+      return (0, a.reactElement)("h" + e.level, (null == n ? void 0 : n.key) != null ? "".concat(n.key) : null, {
         children: i,
         className: n.formatInline ? w.inlineFormat : null
       })
@@ -247,52 +247,52 @@ let k = {
   },
   guild: {
     react: (e, t, n) => {
-      let r = I.default.getGuild(e.guildId);
-      return (0, i.jsx)(m.default, {
+      let r = I.Z.getGuild(e.guildId);
+      return (0, i.jsx)(A.Z, {
         guild: r,
-        children: (0, C.smartOutput)(e, t, n)
+        children: (0, p.S)(e, t, n)
       }, n.key)
     }
   },
   channel: {
-    react: (e, t, n) => (0, i.jsx)(A.default, {
+    react: (e, t, n) => (0, i.jsx)(N.Z, {
       iconType: e.iconType,
-      children: (0, C.smartOutput)(e, t, n)
+      children: (0, p.S)(e, t, n)
     }, n.key)
   },
   message: {
-    react: (e, t, n) => (0, i.jsx)(N.default, {}, n.key)
+    react: (e, t, n) => (0, i.jsx)(m.Z, {}, n.key)
   },
   subtext: {
-    react: (e, t, n) => (0, o.reactElement)("small", (null == n ? void 0 : n.key) != null ? "".concat(n.key) : null, {
+    react: (e, t, n) => (0, a.reactElement)("small", (null == n ? void 0 : n.key) != null ? "".concat(n.key) : null, {
       children: t(e.content, n),
       className: n.formatInline ? w.inlineFormat : null
     })
   }
 };
 
-function V(e) {
+function x(e) {
   return {
-    ...k,
-    link: (0, y.default)(e),
-    devLink: (0, M.default)(e),
+    ...B,
+    link: (0, P.Z)(e),
+    devLink: (0, M.Z)(e),
     emoji: function(e) {
       let {
         emojiTooltipPosition: t = "top",
         enableEmojiClick: n = !0
       } = e;
       return {
-        react(e, r, a) {
+        react(e, r, s) {
           let {
-            key: s
-          } = a;
-          return e.src ? (0, i.jsx)(c.MessageStandardEmoji, {
+            key: o
+          } = s;
+          return e.src ? (0, i.jsx)(c.c, {
             node: e,
             tooltipPosition: t,
             enableClick: n
-          }, s) : (0, i.jsx)("span", {
+          }, o) : (0, i.jsx)("span", {
             children: e.surrogate
-          }, s)
+          }, o)
         }
       }
     }(e),
@@ -302,12 +302,12 @@ function V(e) {
         enableEmojiClick: n = !0
       } = e;
       return {
-        react(e, r, a) {
+        react(e, r, s) {
           let {
-            key: s,
-            guildId: o,
+            key: o,
+            guildId: a,
             isInteracting: l
-          } = a, u = _.default.getDisambiguatedEmojiContext(o).getById(e.emojiId);
+          } = s, u = d.Z.getDisambiguatedEmojiContext(a).getById(e.emojiId);
           if (null != u) {
             let t = u.require_colons;
             e = {
@@ -315,17 +315,17 @@ function V(e) {
               name: t ? ":".concat(u.name, ":") : u.name
             }
           }
-          return (0, i.jsx)(c.MessageCustomEmoji, {
+          return (0, i.jsx)(c.Y, {
             isInteracting: l,
             node: e,
             tooltipPosition: t,
             enableClick: n
-          }, s)
+          }, o)
         }
       }
     }(e),
-    channelMention: (0, v.default)(e),
-    commandMention: (0, D.default)(e),
-    attachmentLink: (0, L.default)(e)
+    channelMention: (0, v.Z)(e),
+    commandMention: (0, D.ZP)(e),
+    attachmentLink: (0, L.Z)(e)
   }
 }

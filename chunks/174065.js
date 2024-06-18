@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n("47120");
-var i, r = n("442837"),
-  s = n("570140"),
-  a = n("70956");
+n(47120);
+var i, r = n(442837),
+  s = n(570140),
+  o = n(70956);
 
-function o(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -16,9 +16,9 @@ let l = {
     captionsById: new Map
   },
   u = l,
-  d = !1,
-  _ = null;
-class c extends(i = r.default.PersistedStore) {
+  _ = !1,
+  d = null;
+class c extends(i = r.ZP.PersistedStore) {
   initialize(e) {
     u = null != e ? {
       captionsById: new Map(e.captionsById)
@@ -35,41 +35,41 @@ class c extends(i = r.default.PersistedStore) {
     return null !== (t = u.captionsById.get(n)) && void 0 !== t ? t : []
   }
   getIsFetching() {
-    return d
+    return _
   }
   getEmojiCaptionsTTL() {
-    return _
+    return d
   }
   hasPersistedState() {
     return u.captionsById.size > 0
   }
   clear() {
-    u = l, d = !1, _ = null
+    u = l, _ = !1, d = null
   }
 }
-o(c, "displayName", "EmojiCaptionsStore"), o(c, "persistKey", "EmojiCaptionsStore"), t.default = new c(s.default, {
+a(c, "displayName", "EmojiCaptionsStore"), a(c, "persistKey", "EmojiCaptionsStore"), t.Z = new c(s.Z, {
   LOGOUT: function() {
-    u = l, d = !1, _ = null
+    u = l, _ = !1, d = null
   },
   EMOJI_CAPTIONS_FETCH: function(e) {
     let {} = e;
-    !d && (d = !0)
+    !_ && (_ = !0)
   },
   EMOJI_CAPTIONS_FETCH_SUCCESS: function(e) {
     let {
       emojiCaptions: t
     } = e;
-    u.captionsById = new Map(Object.entries(t)), d = !1, _ = Date.now() + 360 * a.default.Millis.MINUTE
+    u.captionsById = new Map(Object.entries(t)), _ = !1, d = Date.now() + 360 * o.Z.Millis.MINUTE
   },
   EMOJI_CAPTIONS_FETCH_ERROR: function(e) {
     let {
       is4XXError: t
     } = e;
-    d = !1;
-    _ = Date.now() + (t ? 10 : 1) * a.default.Millis.MINUTE
+    _ = !1;
+    d = Date.now() + (t ? 10 : 1) * o.Z.Millis.MINUTE
   },
   POST_CONNECTION_OPEN: function(e) {
     let {} = e;
-    d = !1
+    _ = !1
   }
 })

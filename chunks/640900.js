@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
-  useFormattedTextField: function() {
-    return f
-  },
-  useTextField: function() {
+n.d(t, {
+  E: function() {
     return l
+  },
+  h: function() {
+    return f
   }
 });
-var r = n("470079"),
-  i = n("182823"),
-  a = n("882932"),
-  o = n("251433"),
-  s = n("706682"),
-  u = n("705782"),
-  c = n("201284");
+var r = n(470079),
+  i = n(182823),
+  a = n(882932),
+  o = n(251433),
+  s = n(706682),
+  u = n(705782),
+  c = n(201284);
 
 function l(e, t) {
   let {
@@ -23,9 +23,9 @@ function l(e, t) {
     isReadOnly: f = !1,
     type: p = "text",
     validationBehavior: h = "aria"
-  } = e, [m, g] = (0, a.useControlledState)(e.value, e.defaultValue || "", e.onChange), {
+  } = e, [m, g] = (0, a.zk)(e.value, e.defaultValue || "", e.onChange), {
     focusableProps: _
-  } = (0, s.useFocusable)(e, t), b = (0, c.useFormValidationState)({
+  } = (0, s.kc)(e, t), b = (0, c.Q3)({
     ...e,
     value: m
   }), {
@@ -36,19 +36,19 @@ function l(e, t) {
     labelProps: S,
     fieldProps: x,
     descriptionProps: w,
-    errorMessageProps: T
-  } = (0, o.useField)({
+    errorMessageProps: C
+  } = (0, o.U)({
     ...e,
     isInvalid: v,
     errorMessage: e.errorMessage || y
-  }), C = (0, i.filterDOMProps)(e, {
+  }), T = (0, i.zL)(e, {
     labelable: !0
   }), D = {
     type: p,
     pattern: e.pattern
   };
-  return (0, i.useFormReset)(t, m, g), (0, u.useFormValidation)(e, b, t), (0, r.useEffect)(() => {
-    if (t.current instanceof(0, i.getOwnerWindow)(t.current).HTMLTextAreaElement) {
+  return (0, i.y$)(t, m, g), (0, u.Q)(e, b, t), (0, r.useEffect)(() => {
+    if (t.current instanceof(0, i.kR)(t.current).HTMLTextAreaElement) {
       let e = t.current;
       Object.defineProperty(e, "defaultValue", {
         get: () => e.value,
@@ -58,7 +58,7 @@ function l(e, t) {
     }
   }, [t]), {
     labelProps: S,
-    inputProps: (0, i.mergeProps)(C, "input" === n && D, {
+    inputProps: (0, i.dG)(T, "input" === n && D, {
       disabled: l,
       readOnly: f,
       required: d && "native" === h,
@@ -90,7 +90,7 @@ function l(e, t) {
       ...x
     }),
     descriptionProps: w,
-    errorMessageProps: T,
+    errorMessageProps: C,
     isInvalid: v,
     validationErrors: y,
     validationDetails: E
@@ -102,7 +102,7 @@ function d() {
 }
 
 function f(e, t, n) {
-  let a = (0, i.useEffectEvent)(e => {
+  let a = (0, i.iW)(e => {
     let r, i = n.current;
     switch (e.inputType) {
       case "historyUndo":
@@ -147,7 +147,7 @@ function f(e, t, n) {
     } = l(e, n),
     h = (0, r.useRef)(null);
   return {
-    inputProps: (0, i.mergeProps)(u, {
+    inputProps: (0, i.dG)(u, {
       onBeforeInput: o,
       onCompositionStart() {
         let {

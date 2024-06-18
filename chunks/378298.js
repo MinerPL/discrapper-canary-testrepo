@@ -1,32 +1,32 @@
 "use strict";
-n.r(t), n.d(t, {
-  acknowledgeChannelSafetyWarningTooltip: function() {
-    return u
-  },
-  clearChannelSafetyWarnings: function() {
-    return l
-  },
-  dismissChannelSafetyWarnings: function() {
+n.d(t, {
+  Ms: function() {
     return a
   },
-  reportFalsePositive: function() {
-    return d
+  Ot: function() {
+    return u
   },
-  setChannelSafetyWarningFeedback: function() {
+  T: function() {
     return o
+  },
+  Uj: function() {
+    return _
+  },
+  wS: function() {
+    return l
   }
 });
-var i = n("544891"),
-  r = n("570140"),
-  s = n("981631");
+var i = n(544891),
+  r = n(570140),
+  s = n(981631);
 
-function a(e, t) {
-  return r.default.dispatch({
+function o(e, t) {
+  return r.Z.dispatch({
     type: "DISMISS_CHANNEL_SAFETY_WARNINGS",
     channelId: e,
     warningIds: t
-  }), i.HTTP.post({
-    url: s.Endpoints.CHANNEL_SAFETY_WARNINGS_ACK(e),
+  }), i.tn.post({
+    url: s.ANM.CHANNEL_SAFETY_WARNINGS_ACK(e),
     body: {
       warning_ids: t
     },
@@ -34,8 +34,8 @@ function a(e, t) {
   })
 }
 
-function o(e, t, n) {
-  r.default.dispatch({
+function a(e, t, n) {
+  r.Z.dispatch({
     type: "CHANNEL_SAFETY_WARNING_FEEDBACK",
     channelId: e,
     warningId: t,
@@ -44,21 +44,21 @@ function o(e, t, n) {
 }
 
 function l(e) {
-  r.default.dispatch({
+  r.Z.dispatch({
     type: "CLEAR_CHANNEL_SAFETY_WARNINGS",
     channelId: e
   })
 }
 
 function u(e) {
-  r.default.dispatch({
+  r.Z.dispatch({
     type: "ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP",
     channelId: e
   })
 }
 
-function d(e) {
-  return i.HTTP.post({
-    url: s.Endpoints.SAFETY_WARNING_FALSE_POSITIVE(e)
+function _(e) {
+  return i.tn.post({
+    url: s.ANM.SAFETY_WARNING_FALSE_POSITIVE(e)
   })
 }

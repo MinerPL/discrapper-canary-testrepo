@@ -1,11 +1,11 @@
 "use strict";
 var r, i, a;
-n.r(t), n.d(t, {
-  UnknownFieldHandler: function() {
-    return r
-  },
-  WireType: function() {
+n.d(t, {
+  TD: function() {
     return i
+  },
+  z: function() {
+    return r
   }
 }), ! function(e) {
   e.symbol = Symbol.for("protobuf-ts/unknown"), e.onRead = (n, r, i, a, o) => {

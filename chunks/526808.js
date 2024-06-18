@@ -21,7 +21,7 @@ if (e.exports = function(e) {
   throw Error("Not implemented yet")
 });
 else try {
-  var a = n("908690");
+  var a = n(865605);
   if ("function" != typeof a.randomBytes) throw Error("Not supported");
   i.prototype._rand = function(e) {
     return a.randomBytes(e)

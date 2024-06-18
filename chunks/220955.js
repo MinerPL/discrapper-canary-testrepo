@@ -1,22 +1,21 @@
 "use strict";
-r.r(t);
-var n = r("112419"),
-  a = r("675717"),
-  o = r("906024"),
-  i = 0 / 0,
-  l = /^[-+]0x[0-9a-f]+$/i,
+var r = n(112419),
+  i = n(675717),
+  a = n(906024),
+  o = 0 / 0,
+  s = /^[-+]0x[0-9a-f]+$/i,
   u = /^0b[01]+$/i,
-  s = /^0o[0-7]+$/i,
-  f = parseInt;
-t.default = function(e) {
+  c = /^0o[0-7]+$/i,
+  l = parseInt;
+t.Z = function(e) {
   if ("number" == typeof e) return e;
-  if ((0, o.default)(e)) return i;
-  if ((0, a.default)(e)) {
+  if ((0, a.Z)(e)) return o;
+  if ((0, i.Z)(e)) {
     var t = "function" == typeof e.valueOf ? e.valueOf() : e;
-    e = (0, a.default)(t) ? t + "" : t
+    e = (0, i.Z)(t) ? t + "" : t
   }
   if ("string" != typeof e) return 0 === e ? e : +e;
-  e = (0, n.default)(e);
-  var r = u.test(e);
-  return r || s.test(e) ? f(e.slice(2), r ? 2 : 8) : l.test(e) ? i : +e
+  e = (0, r.Z)(e);
+  var n = u.test(e);
+  return n || c.test(e) ? l(e.slice(2), n ? 2 : 8) : s.test(e) ? o : +e
 }

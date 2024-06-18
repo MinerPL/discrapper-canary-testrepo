@@ -1,14 +1,13 @@
 "use strict";
-r.r(t);
-var n = r("844511"),
-  a = r("364555");
-t.default = function(e, t, r, o) {
-  var i = !r;
-  r || (r = {});
-  for (var l = -1, u = t.length; ++l < u;) {
-    var s = t[l],
-      f = o ? o(r[s], e[s], s, r, e) : void 0;
-    void 0 === f && (f = e[s]), i ? (0, a.default)(r, s, f) : (0, n.default)(r, s, f)
+var r = n(844511),
+  i = n(364555);
+t.Z = function(e, t, n, a) {
+  var o = !n;
+  n || (n = {});
+  for (var s = -1, u = t.length; ++s < u;) {
+    var c = t[s],
+      l = a ? a(n[c], e[c], c, n, e) : void 0;
+    void 0 === l && (l = e[c]), o ? (0, i.Z)(n, c, l) : (0, r.Z)(n, c, l)
   }
-  return r
+  return n
 }

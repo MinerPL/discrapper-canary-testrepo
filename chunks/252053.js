@@ -1,12 +1,10 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("844303"),
-  i = r("476400"),
-  l = r.n(i),
-  u = function(e) {
-    var t = (0, o.default)({
+var r = n(470079),
+  i = n(844303),
+  a = n(476400),
+  o = n.n(a),
+  s = function(e) {
+    var t = (0, i.default)({
       default: {
         picker: {
           width: "20px",
@@ -18,22 +16,22 @@ var n = r("470079"),
         }
       }
     });
-    return a().createElement("div", {
+    return r.createElement("div", {
       style: t.picker
     })
   };
-u.propTypes = {
-  hsl: l().shape({
-    h: l().number,
-    s: l().number,
-    l: l().number,
-    a: l().number
+s.propTypes = {
+  hsl: o().shape({
+    h: o().number,
+    s: o().number,
+    l: o().number,
+    a: o().number
   })
-}, u.defaultProps = {
+}, s.defaultProps = {
   hsl: {
     a: 1,
     h: 249.94,
     l: .2,
     s: .5
   }
-}, t.default = u
+}, t.Z = s

@@ -1,2 +1,2 @@
 "use strict";
-n("345374")("flat")
+n(345374)("flat")

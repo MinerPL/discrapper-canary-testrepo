@@ -1,24 +1,24 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Ct: function() {
     return _
   },
-  getForumPostSeenManagerId: function() {
+  UP: function() {
     return l
   },
-  markForumPostItemAsSeen: function() {
-    return u
-  },
-  markForumPostItemAsUnseen: function() {
+  ZP: function() {
     return d
+  },
+  rj: function() {
+    return u
   }
-}), n("653041"), n("47120");
-var i = n("929991"),
-  r = n("480739"),
-  s = n("228392"),
-  a = n("6496");
+}), n(653041), n(47120);
+var i = n(929991),
+  r = n(480739),
+  s = n(228392),
+  o = n(6496);
 
-function o(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -28,17 +28,17 @@ function o(e, t, n) {
 }
 
 function l(e) {
-  return "".concat(r.AnalyticsFeedTypes.FORUM_CHANNEL, "_").concat(e)
+  return "".concat(r.AT.FORUM_CHANNEL, "_").concat(e)
 }
 
 function u(e, t, n) {
-  (0, i.markAnalyticsFeedItemSeen)(l(e), t, n)
+  (0, i.a8)(l(e), t, n)
 }
 
-function d(e, t, n) {
-  (0, i.markAnalyticsFeedItemUnseen)(l(e), t, n)
+function _(e, t, n) {
+  (0, i.FL)(l(e), t, n)
 }
-class _ extends r.AnalyticsFeedItemSeenManager {
+class d extends r.zQ {
   constructor({
     guildId: e,
     channelId: t,
@@ -49,7 +49,7 @@ class _ extends r.AnalyticsFeedItemSeenManager {
       windowId: n,
       isPaused: i,
       id: l(t)
-    }), o(this, "guildId", void 0), o(this, "channelId", void 0), o(this, "sessionId", void 0), o(this, "createFlushSeenItemsFunction", e => {
+    }), a(this, "guildId", void 0), a(this, "channelId", void 0), a(this, "sessionId", void 0), a(this, "createFlushSeenItemsFunction", e => {
       let t = this.trackedFeedItems,
         n = this.channelId,
         i = this.guildId,
@@ -66,20 +66,20 @@ class _ extends r.AnalyticsFeedItemSeenManager {
           channelId: n,
           sessionId: i,
           trackedFeedItems: r,
-          isForcedFlush: a
-        } = e, o = [], l = [];
+          isForcedFlush: o
+        } = e, a = [], l = [];
         for (let e of Object.keys(r)) {
-          let t = r[e].computeSeenTimeDestructive(a);
-          t > 0 && (o.push(e), l.push(t))
+          let t = r[e].computeSeenTimeDestructive(o);
+          t > 0 && (a.push(e), l.push(t))
         }
-        0 !== o.length && (0, s.trackForumChannelSeenBatch)({
+        0 !== a.length && (0, s.qs)({
           guildId: t,
           channelId: n,
           sessionId: i,
-          postIds: o,
+          postIds: a,
           additionalTimes: l
         })
       })(r)
-    }), this.guildId = e, this.channelId = t, this.sessionId = (0, a.getForumChannelSessionId)(t)
+    }), this.guildId = e, this.channelId = t, this.sessionId = (0, o.WW)(t)
   }
 }

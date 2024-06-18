@@ -1,17 +1,16 @@
 "use strict";
-r.r(t);
-var n = r("548015"),
-  a = Object.prototype,
-  o = a.hasOwnProperty,
-  i = a.toString,
-  l = n.default ? n.default.toStringTag : void 0;
-t.default = function(e) {
-  var t = o.call(e, l),
-    r = e[l];
+var r = n(548015),
+  i = Object.prototype,
+  a = i.hasOwnProperty,
+  o = i.toString,
+  s = r.Z ? r.Z.toStringTag : void 0;
+t.Z = function(e) {
+  var t = a.call(e, s),
+    n = e[s];
   try {
-    e[l] = void 0;
-    var n = !0
+    e[s] = void 0;
+    var r = !0
   } catch (e) {}
-  var a = i.call(e);
-  return n && (t ? e[l] = r : delete e[l]), a
+  var i = o.call(e);
+  return r && (t ? e[s] = n : delete e[s]), i
 }

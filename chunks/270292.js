@@ -1,32 +1,32 @@
 "use strict";
-n.r(t), n.d(t, {
-  ArrowLargeLeftIcon: function() {
-    return i
+n.d(t, {
+  j: function() {
+    return o
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("692547"),
-  l = n("331595");
-let i = e => {
+var i = n(735250);
+n(470079);
+var r = n(692547),
+  s = n(331595);
+let o = e => {
   let {
     width: t = 24,
     height: n = 24,
-    color: i = s.default.colors.INTERACTIVE_NORMAL,
-    colorClass: r = "",
-    ...o
+    color: o = r.Z.colors.INTERACTIVE_NORMAL,
+    colorClass: a = "",
+    ...l
   } = e;
-  return (0, a.jsx)("svg", {
-    ...(0, l.default)(o),
+  return (0, i.jsx)("svg", {
+    ...(0, s.Z)(l),
     xmlns: "http://www.w3.org/2000/svg",
     width: t,
     height: n,
     fill: "none",
     viewBox: "0 0 24 24",
-    children: (0, a.jsx)("path", {
-      fill: "string" == typeof i ? i : i.css,
+    children: (0, i.jsx)("path", {
+      fill: "string" == typeof o ? o : o.css,
       d: "M3.3 11.3a1 1 0 0 0 0 1.4l8 8a1 1 0 1 0 1.4-1.4L6.42 13H20a1 1 0 1 0 0-2H6.41l6.3-6.3a1 1 0 0 0-1.42-1.4l-8 8Z",
-      className: r
+      className: a
     })
   })
 }

@@ -1,6 +1,6 @@
 "use strict";
-var e, o, i = n("161581"),
-  u = n("626544"),
+var e, o, i = n(161581),
+  u = n(626544),
   c = i.process,
   s = i.Deno,
   f = c && c.versions || s && s.version,

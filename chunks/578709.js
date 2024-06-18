@@ -1,11 +1,9 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("844303");
-t.default = function(e) {
+var r = n(470079),
+  i = n(844303);
+t.Z = function(e) {
   var t = e.hsl,
-    r = (0, o.default)({
+    n = (0, i.default)({
       default: {
         picker: {
           width: "12px",
@@ -23,7 +21,7 @@ t.default = function(e) {
     }, {
       "black-outline": t.l > .5
     });
-  return a().createElement("div", {
-    style: r.picker
+  return r.createElement("div", {
+    style: n.picker
   })
 }

@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
-  createListScroller: function() {
+n.d(t, {
+  v: function() {
     return c
   }
-}), n("653041"), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
-  o = n("952639"),
-  l = n.n(o),
-  u = n("84735"),
-  d = n("562701"),
-  _ = n("592879");
+}), n(653041), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(952639),
+  l = n.n(a),
+  u = n(84735),
+  _ = n(562701),
+  d = n(689197);
 
 function c(e, t, n, s) {
-  let o = (0, d.getScrollbarSpecs)(e),
+  let a = (0, _.G6)(e),
     c = new Map,
     E = new s(e => {
       e.forEach(e => {
@@ -29,48 +29,48 @@ function c(e, t, n, s) {
   return r.forwardRef(function(s, I) {
     let {
       className: T,
-      onScroll: f,
+      onScroll: h,
       onResize: S = null,
-      onContentResize: h = null,
-      dir: A = "ltr",
-      sections: m,
-      sectionHeight: N,
+      onContentResize: f = null,
+      dir: N = "ltr",
+      sections: A,
+      sectionHeight: m,
       rowHeight: O,
-      footerHeight: p = 0,
-      sidebarHeight: R,
-      listHeaderHeight: C = 0,
+      footerHeight: R = 0,
+      sidebarHeight: C,
+      listHeaderHeight: p = 0,
       renderSection: g,
       renderRow: L,
-      renderFooter: D,
-      renderSidebar: v,
+      renderFooter: v,
+      renderSidebar: D,
       renderListHeader: M,
-      wrapSection: y,
-      getAnchorId: P,
+      wrapSection: P,
+      getAnchorId: y,
       paddingTop: U,
       paddingBottom: b,
       fade: G = !1,
       customTheme: w = !1,
       chunkSize: k,
       style: B,
-      innerId: V,
-      innerRole: F,
-      innerAriaLabel: x,
+      innerId: x,
+      innerRole: V,
+      innerAriaLabel: Z,
       innerAriaMultiselectable: H,
-      innerAriaOrientation: Y,
-      innerClassName: j,
-      innerTag: W = "div",
-      ...K
-    } = s, z = r.useRef(null), X = r.useRef(null), [Q, q] = r.useState(!1), {
-      scrollerRef: J,
-      scrollerState: Z,
+      innerAriaOrientation: F,
+      innerClassName: Y,
+      innerTag: j = "div",
+      ...W
+    } = s, K = r.useRef(null), z = r.useRef(null), [q, X] = r.useState(!1), {
+      scrollerRef: Q,
+      scrollerState: J,
       getScrollerState: $
-    } = (0, d.useCachedScrollerState)();
-    (0, d.usePaddingFixes)({
-      scrollerRef: J,
+    } = (0, _.T4)();
+    (0, _.tT)({
+      scrollerRef: Q,
       className: T,
-      specs: o,
+      specs: a,
       orientation: "vertical",
-      dir: A
+      dir: N
     });
     let {
       spacerTop: ee,
@@ -79,40 +79,40 @@ function c(e, t, n, s) {
       isSidebarVisible: ei,
       listComputer: er,
       forceUpdateOnChunkChange: es,
-      anchor: ea
-    } = (0, d.useVirtualizedState)({
-      sections: m,
-      sectionHeight: N,
+      anchor: eo
+    } = (0, _.aU)({
+      sections: A,
+      sectionHeight: m,
       rowHeight: O,
-      footerHeight: p,
-      sidebarHeight: R,
-      listHeaderHeight: C,
+      footerHeight: R,
+      sidebarHeight: C,
+      listHeaderHeight: p,
       paddingTop: U,
       paddingBottom: b,
       chunkSize: k,
       getScrollerState: $,
-      getAnchorId: P
-    }), eo = (0, d.useScrollSpring)(J), el = r.useRef(S), eu = r.useRef(h);
+      getAnchorId: y
+    }), ea = (0, _.t2)(Q), el = r.useRef(S), eu = r.useRef(f);
     r.useLayoutEffect(() => {
-      el.current = S, eu.current = h
+      el.current = S, eu.current = f
     });
-    let ed = r.useCallback(function() {
+    let e_ = r.useCallback(function() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
-        if (e > Z.current.dirty && (Z.current.dirty = e), 2 === e) {
+        if (e > J.current.dirty && (J.current.dirty = e), 2 === e) {
           var t;
           null === (t = el.current) || void 0 === t || t.call(el)
         }
         es(e)
-      }, [es, Z]),
-      e_ = r.useCallback(() => ed(), [ed]);
-    (0, d.useResizeObserverSubscription)({
-      ref: J,
-      onUpdate: e_,
+      }, [es, J]),
+      ed = r.useCallback(() => e_(), [e_]);
+    (0, _.zn)({
+      ref: Q,
+      onUpdate: ed,
       key: "container",
       resizeObserver: E,
       listenerMap: c
-    }), (0, d.useResizeObserverSubscription)({
-      ref: X,
+    }), (0, _.zn)({
+      ref: z,
       onUpdate: () => {
         var e;
         return null === (e = eu.current) || void 0 === e ? void 0 : e.call(eu)
@@ -138,98 +138,98 @@ function c(e, t, n, s) {
           }
           return [0, 0]
         }, [])
-      }(m);
+      }(A);
     r.useImperativeHandle(I, () => ({
-      getScrollerNode: () => J.current,
+      getScrollerNode: () => Q.current,
       getScrollerState: $,
       getItems: ec,
       getSectionRowFromIndex: eE,
-      ...(0, d.getAnimatedListScrollHelpers)(J, $, er, eo)
-    }), [J, $, eE, ec, er, eo]);
+      ...(0, _.rH)(Q, $, er, ea)
+    }), [Q, $, eE, ec, er, ea]);
     let eI = r.useCallback(e => {
-      ed(1), null == z.current ? q(!0) : clearTimeout(z.current), z.current = setTimeout(() => {
-        z.current = null, q(!1)
-      }, 200), null != f && f(e)
-    }, [f, ed]);
+      e_(1), null == K.current ? X(!0) : clearTimeout(K.current), K.current = setTimeout(() => {
+        K.current = null, X(!1)
+      }, 200), null != h && h(e)
+    }, [h, e_]);
     return r.useLayoutEffect(() => {
-      2 !== Z.current.dirty && (Z.current.dirty = 2)
-    }, [en, g, L, D, y, et, ee, Z]), (0, d.useVirtualizedAnchor)({
-      scrollerRef: J,
-      anchor: ea,
+      2 !== J.current.dirty && (J.current.dirty = 2)
+    }, [en, g, L, v, P, et, ee, J]), (0, _.rS)({
+      scrollerRef: Q,
+      anchor: eo,
       getScrollerState: $,
       listComputer: er,
-      getAnchorId: P,
+      getAnchorId: y,
       totalHeight: et
     }), (0, i.jsxs)("div", {
-      ref: J,
+      ref: Q,
       onScroll: eI,
-      className: a()(T, {
+      className: o()(T, {
         [e]: !0,
         [t]: G,
         [n]: w,
-        [_.scrolling]: Q
+        [d.scrolling]: q
       }),
-      style: (0, d.getMergedOrientationStyles)(B),
-      ...K,
-      children: [r.useMemo(() => (0, i.jsx)(W, {
-        id: V,
-        role: F,
-        "aria-label": x,
+      style: (0, _.uT)(B),
+      ...W,
+      children: [r.useMemo(() => (0, i.jsx)(j, {
+        id: x,
+        role: V,
+        "aria-label": Z,
         "aria-multiselectable": H,
-        "aria-orientation": Y,
+        "aria-orientation": F,
         style: {
           height: et
         },
-        className: a()(_.content, j),
-        ref: X,
-        children: (0, i.jsx)(u.FocusRingScope, {
-          containerRef: X,
+        className: o()(d.content, Y),
+        ref: z,
+        children: (0, i.jsx)(u.J, {
+          containerRef: z,
           children: function(e) {
             let {
               renderSection: t,
               renderRow: n,
               renderFooter: r,
               renderListHeader: s,
-              wrapSection: a,
-              items: o,
+              wrapSection: o,
+              items: a,
               spacerTop: u
-            } = e, d = [(0, i.jsx)("div", {
+            } = e, _ = [(0, i.jsx)("div", {
               "aria-hidden": !0,
               style: {
                 height: u
               }
-            }, "---list-spacer-top")], _ = [], c = 0;
-            if (o.forEach(e => {
+            }, "---list-spacer-top")], d = [], c = 0;
+            if (a.forEach(e => {
                 var i;
-                switch (e.section !== c && _.length > 0 && (d.push(null != a ? a(c, _) : _), _ = []), c = null !== (i = e.section) && void 0 !== i ? i : 0, e.type) {
+                switch (e.section !== c && d.length > 0 && (_.push(null != o ? o(c, d) : d), d = []), c = null !== (i = e.section) && void 0 !== i ? i : 0, e.type) {
                   case "section":
-                    null != t && _.push(t(e));
+                    null != t && d.push(t(e));
                     break;
                   case "row":
-                    _.push(n(e));
+                    d.push(n(e));
                     break;
                   case "footer":
-                    null != r && _.push(r(e));
+                    null != r && d.push(r(e));
                     break;
                   case "header":
-                    null != s && _.push(s())
+                    null != s && d.push(s())
                 }
-              }), _.length > 0) {
+              }), d.length > 0) {
               var E;
-              d.push(null !== (E = null == a ? void 0 : a(c, _)) && void 0 !== E ? E : _)
+              _.push(null !== (E = null == o ? void 0 : o(c, d)) && void 0 !== E ? E : d)
             }
-            return l()(d)
+            return l()(_)
           }({
             items: en,
             renderListHeader: M,
             renderSection: g,
             renderRow: L,
-            renderFooter: D,
-            wrapSection: y,
+            renderFooter: v,
+            wrapSection: P,
             spacerTop: ee
           })
         })
-      }), [V, F, x, H, Y, j, W, et, en, g, L, D, M, y, ee]), r.useMemo(() => (function(e) {
+      }), [x, V, Z, H, F, Y, j, et, en, g, L, v, M, P, ee]), r.useMemo(() => (function(e) {
         let {
           renderSidebar: t,
           sidebarHeight: n,
@@ -239,10 +239,10 @@ function c(e, t, n, s) {
         return null == n || null == t ? null : t(r, i)
       })({
         isSidebarVisible: ei,
-        renderSidebar: v,
-        sidebarHeight: R,
+        renderSidebar: D,
+        sidebarHeight: C,
         isListVisible: 0 !== en.length
-      }), [ei, v, R, en.length])]
+      }), [ei, D, C, en.length])]
     })
   })
 }

@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  Shakeable: function() {
-    return d
+n.d(t, {
+  F: function() {
+    return _
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("512722"),
-  a = n.n(s),
-  o = n("392711"),
-  l = n.n(o);
+var i = n(735250),
+  r = n(470079),
+  s = n(512722),
+  o = n.n(s),
+  a = n(392711),
+  l = n.n(a);
 
 function u(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -19,7 +19,7 @@ function u(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class d extends r.Component {
+class _ extends r.Component {
   getDefaultAnimProps(e, t) {
     return {
       duration: null != e ? e : 300,
@@ -34,7 +34,7 @@ class d extends r.Component {
     this._animationCleanup()
   }
   shake(e, t) {
-    this.animProps = this.getDefaultAnimProps(e, t), !this.state.shaking && this.setState({
+    if (this.animProps = this.getDefaultAnimProps(e, t), !this.state.shaking) this.setState({
       shaking: !0
     }, this._animate)
   }
@@ -73,7 +73,7 @@ class d extends r.Component {
         let t = e.lastDirection * e.intensity,
           n = l().random(-e.intensity, e.intensity, !0),
           i = Math.max(0, Math.cbrt(e.duration - e.progress / 1e3));
-        e.intensity *= Math.min(1, i), e.lastDirection *= -1, a()(null != this.ref.current, "Shakeable style set when not mounted"), this.ref.current.style.transform = "translate3d(".concat(t, "px,").concat(n, "px,0px)")
+        e.intensity *= Math.min(1, i), e.lastDirection *= -1, o()(null != this.ref.current, "Shakeable style set when not mounted"), this.ref.current.style.transform = "translate3d(".concat(t, "px,").concat(n, "px,0px)")
       }
       e.frameCount += 1, this._animationFrame = requestAnimationFrame(this._animate)
     }), u(this, "_animationCleanup", () => {

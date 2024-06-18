@@ -1,113 +1,113 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return A
+t.d(s, {
+  Z: function() {
+    return p
   }
 });
-var a = s("735250"),
-  l = s("470079"),
-  n = s("120356"),
-  i = s.n(n),
-  r = s("399606"),
-  o = s("481060"),
-  d = s("100527"),
-  u = s("906732"),
-  c = s("434404"),
-  E = s("171368"),
-  _ = s("430824"),
-  I = s("893966"),
-  T = s("527379"),
-  S = s("305473"),
-  f = s("113679"),
-  m = s("440857"),
-  N = s("472596"),
-  g = s("598948"),
-  h = s("428936"),
-  C = s("41586"),
-  R = s("918192"),
-  x = s("981631"),
-  L = s("689938"),
-  O = s("22401");
+var n = t(735250),
+  i = t(470079),
+  l = t(120356),
+  a = t.n(l),
+  r = t(399606),
+  o = t(481060),
+  c = t(100527),
+  d = t(906732),
+  u = t(434404),
+  E = t(171368),
+  _ = t(430824),
+  I = t(893966),
+  T = t(527379),
+  N = t(305473),
+  m = t(113679),
+  S = t(440857),
+  h = t(472596),
+  g = t(598948),
+  x = t(428936),
+  C = t(41586),
+  R = t(918192),
+  L = t(981631),
+  O = t(689938),
+  A = t(22401);
 
-function A(e) {
+function p(e) {
   let {
-    guildId: t
-  } = e, s = (0, r.useStateFromStores)([_.default], () => _.default.getGuild(t)), {
-    analyticsLocations: n
-  } = (0, u.default)(d.default.GUILD_SETTINGS_MEMBERS_PAGE), A = !1 == !!(null == s ? void 0 : s.hasFeature(x.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)), p = (0, r.useStateFromStores)([I.default], () => I.default.getEstimatedMemberSearchCountByGuildId(t), [t]), M = l.useCallback(e => {
-    null != e && (0, E.openUserProfileModal)({
+    guildId: s
+  } = e, t = (0, r.e7)([_.Z], () => _.Z.getGuild(s)), {
+    analyticsLocations: l
+  } = (0, d.ZP)(c.Z.GUILD_SETTINGS_MEMBERS_PAGE), p = !1 == !!(null == t ? void 0 : t.hasFeature(L.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)), M = (0, r.e7)([I.Z], () => I.Z.getEstimatedMemberSearchCountByGuildId(s), [s]), f = i.useCallback(e => {
+    if (null != e)(0, E.openUserProfileModal)({
       userId: e.userId,
       guildId: e.guildId,
-      sourceAnalyticsLocations: n,
+      sourceAnalyticsLocations: l,
       analyticsLocation: {
-        section: x.AnalyticsSections.GUILD_SETTINGS_MEMBERS
+        section: L.jXE.GUILD_SETTINGS_MEMBERS
       }
     })
-  }, [n]), D = l.useRef(null), v = l.useCallback(() => {
+  }, [l]), v = i.useRef(null), D = i.useCallback(() => {
     var e;
-    null === (e = D.current) || void 0 === e || e.resetSearchText()
+    null === (e = v.current) || void 0 === e || e.resetSearchText()
   }, []);
-  if (null == s) return null;
-  let G = (0, N.getSearchState)(!1, !1, p);
-  return (0, a.jsx)(u.AnalyticsLocationProvider, {
-    value: n,
-    children: (0, a.jsx)("div", {
-      className: O.settingsColumn,
-      children: (0, a.jsx)("div", {
-        className: O.settingsContainer,
-        children: (0, a.jsx)(o.ScrollerAuto, {
-          className: O.settingsScroller,
+  if (null == t) return null;
+  let Z = (0, h.xb)(!1, !1, M);
+  return (0, n.jsx)(d.Gt, {
+    value: l,
+    children: (0, n.jsx)("div", {
+      className: A.settingsColumn,
+      children: (0, n.jsx)("div", {
+        className: A.settingsContainer,
+        children: (0, n.jsx)(o.ScrollerAuto, {
+          className: A.settingsScroller,
           orientation: "auto",
-          children: (0, a.jsxs)("main", {
-            className: O.settingsContent,
-            children: [(0, a.jsx)(o.FormSection, {
-              className: i()(O.header),
-              children: (0, a.jsx)(o.FormTitle, {
+          children: (0, n.jsxs)("main", {
+            className: A.settingsContent,
+            children: [(0, n.jsx)(o.FormSection, {
+              className: a()(A.header),
+              children: (0, n.jsx)(o.FormTitle, {
                 tag: o.FormTitleTags.H1,
-                children: L.default.Messages.GUILD_SETTINGS_MEMBERS_SERVER_MEMBERS
+                children: O.Z.Messages.GUILD_SETTINGS_MEMBERS_SERVER_MEMBERS
               })
-            }, "header"), (0, a.jsx)(o.FormSection, {
-              children: (0, a.jsxs)("div", {
-                className: i()(O.tableContainer),
-                children: [(0, a.jsx)(f.default, {
-                  guild: s
-                }), (0, a.jsx)(S.default, {
-                  guild: s
-                }), A ? (0, a.jsxs)("div", {
-                  className: i()(O.mainTableContainer),
-                  children: [(0, a.jsx)(C.default, {
-                    guild: s,
-                    ref: D
-                  }), (0, a.jsx)(g.default, {
-                    guild: s,
-                    searchState: G,
+            }, "header"), (0, n.jsx)(o.FormSection, {
+              children: (0, n.jsxs)("div", {
+                className: a()(A.tableContainer),
+                children: [(0, n.jsx)(m.Z, {
+                  guild: t
+                }), (0, n.jsx)(N.Z, {
+                  guild: t
+                }), p ? (0, n.jsxs)("div", {
+                  className: a()(A.mainTableContainer),
+                  children: [(0, n.jsx)(C.Z, {
+                    guild: t,
+                    ref: v
+                  }), (0, n.jsx)(g.Z, {
+                    guild: t,
+                    searchState: Z,
                     compact: !0,
-                    onSelectRow: M,
-                    onResetForNewMembers: v
-                  }), G !== N.SearchState.SUCCESS_STILL_INDEXING && (0, a.jsx)(h.default, {
-                    guildId: s.id
+                    onSelectRow: f,
+                    onResetForNewMembers: D
+                  }), Z !== h.po.SUCCESS_STILL_INDEXING && (0, n.jsx)(x.Z, {
+                    guildId: t.id
                   })]
-                }) : (0, a.jsx)("div", {
-                  className: i()(O.movedTable),
-                  children: (0, a.jsxs)("div", {
-                    className: i()(O.noResultsContainer),
-                    children: [(0, a.jsx)("div", {
-                      className: i()(O.__invalid_noResultsIconContainer),
-                      children: (0, a.jsx)(R.default, {})
-                    }), (0, a.jsx)(o.Text, {
+                }) : (0, n.jsx)("div", {
+                  className: a()(A.movedTable),
+                  children: (0, n.jsxs)("div", {
+                    className: a()(A.noResultsContainer),
+                    children: [(0, n.jsx)("div", {
+                      className: a()(A.__invalid_noResultsIconContainer),
+                      children: (0, n.jsx)(R.Z, {})
+                    }), (0, n.jsx)(o.Text, {
                       variant: "text-md/normal",
                       color: "text-muted",
-                      children: L.default.Messages.GUILD_SETTINGS_SAFETY_MODERATION_EXPERIENCE_ENABLED.format({
+                      children: O.Z.Messages.GUILD_SETTINGS_SAFETY_MODERATION_EXPERIENCE_ENABLED.format({
                         onClick: e => {
-                          null != s && (e.preventDefault(), c.default.close(), (0, T.goToMemberSafetyDashboard)(s.id))
+                          if (null != t) e.preventDefault(), u.Z.close(), (0, T._X)(t.id)
                         }
                       })
                     })]
                   })
                 })]
               })
-            }, "body"), (0, a.jsx)(m.default, {
-              guildId: s.id
+            }, "body"), (0, n.jsx)(S.Z, {
+              guildId: t.id
             })]
           })
         })

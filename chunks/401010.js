@@ -6,8 +6,8 @@ function r(e, t, n) {
   }, "");
   return null != r ? r : n
 }
-n.r(t), n.d(t, {
-  getDataFromDataTransfer: function() {
+n.d(t, {
+  R: function() {
     return r
   }
 })

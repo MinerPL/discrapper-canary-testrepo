@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
-  questRewardsConfigFromServer: function() {
-    return a
+n.d(t, {
+  Q: function() {
+    return s
   }
 });
-var i = n("887003");
+var i = n(887003);
 
 function r(e) {
   switch (e.tag) {
-    case i.QuestRewardTypes.COLLECTIBLE:
+    case i.w.COLLECTIBLE:
       return {
         tag: e.tag, skuId: e.sku_id, messages: {
           name: e.messages.name,
           nameWithArticle: e.messages.name_with_article
         }
       };
-    case i.QuestRewardTypes.IN_GAME:
+    case i.w.IN_GAME:
       return {
         tag: e.tag, skuId: e.sku_id, messages: {
           name: e.messages.name,
@@ -23,7 +23,7 @@ function r(e) {
           redemptionInstructions: e.messages.redemption_instructions
         }
       };
-    case i.QuestRewardTypes.REWARD_CODE:
+    case i.w.REWARD_CODE:
       return {
         tag: e.tag, skuId: e.sku_id, messages: {
           name: e.messages.name,
@@ -34,7 +34,7 @@ function r(e) {
   }
 }
 
-function a(e) {
+function s(e) {
   return {
     assignmentMethod: e.assignment_method,
     rewards: e.rewards.map(r)

@@ -1,46 +1,46 @@
 "use strict";
-i.r(t), i.d(t, {
-  default: function() {
-    return r
+n.d(t, {
+  Z: function() {
+    return u
   }
-}), i("653041"), i("47120");
-var l = i("470079"),
-  n = i("911969"),
-  a = i("822245"),
-  d = i("675478"),
-  u = i("358085"),
-  o = i("761122");
+}), n(653041), n(47120);
+var i = n(470079),
+  r = n(911969),
+  s = n(822245),
+  o = n(675478),
+  a = n(358085),
+  l = n(761122);
 
-function r(e) {
-  return d.FrecencyUserSettingsActionCreators.loadIfNecessary(), l.useMemo(() => {
+function u(e) {
+  return o.DZ.loadIfNecessary(), i.useMemo(() => {
     let t = [];
     e.forEach(e => t.push(e.application.id));
-    let i = [...t];
-    return i.sort((e, i) => {
-      let l = a.default.getScoreWithoutLoadingLatest(e),
-        n = a.default.getScoreWithoutLoadingLatest(i);
-      return l !== n ? n - l : t.findIndex(t => t === e) < t.findIndex(e => e === i) ? -1 : 1
-    }), c(e, i)
+    let n = [...t];
+    return n.sort((e, n) => {
+      let i = s.Z.getScoreWithoutLoadingLatest(e),
+        r = s.Z.getScoreWithoutLoadingLatest(n);
+      return i !== r ? r - i : t.findIndex(t => t === e) < t.findIndex(e => e === n) ? -1 : 1
+    }), _(e, n)
   }, [e])
 }
-let c = (e, t) => {
-  let i = [...e],
-    l = 0;
+let _ = (e, t) => {
+  let n = [...e],
+    i = 0;
   return t.forEach(e => {
-    let t = i.findIndex(t => t.application.id === e);
+    let t = n.findIndex(t => t.application.id === e);
     if (-1 !== t) {
-      let e = i[t];
-      i.splice(t, 1), i = [...i.slice(0, l), e, ...i.slice(l)], ++l
+      let e = n[t];
+      n.splice(t, 1), n = [...n.slice(0, i), e, ...n.slice(i)], ++i
     }
-  }), i.map((e, t) => [e, t]).filter(e => {
-    var t, i;
-    let [l] = e, a = null === (i = l.application.embeddedActivityConfig) || void 0 === i ? void 0 : null === (t = i.client_platform_config[(0, o.default)((0, u.getOS)())]) || void 0 === t ? void 0 : t.label_type;
-    return !!a && (a === n.EmbeddedActivityLabelTypes.NEW || a === n.EmbeddedActivityLabelTypes.UPDATED)
+  }), n.map((e, t) => [e, t]).filter(e => {
+    var t, n;
+    let [i] = e, s = null === (n = i.application.embeddedActivityConfig) || void 0 === n ? void 0 : null === (t = n.client_platform_config[(0, l.Z)((0, a.getOS)())]) || void 0 === t ? void 0 : t.label_type;
+    return !!s && (s === r.ww.NEW || s === r.ww.UPDATED)
   }).forEach(e => {
-    let [t, l] = e, n = null != t.application.embeddedActivityConfig && null != t.application.embeddedActivityConfig.shelf_rank ? t.application.embeddedActivityConfig.shelf_rank - 1 : l;
-    if (n < l) {
-      let e = i[l];
-      i.splice(l, 1), i = [...i.slice(0, n), e, ...i.slice(n)]
+    let [t, i] = e, r = null != t.application.embeddedActivityConfig && null != t.application.embeddedActivityConfig.shelf_rank ? t.application.embeddedActivityConfig.shelf_rank - 1 : i;
+    if (r < i) {
+      let e = n[i];
+      n.splice(i, 1), n = [...n.slice(0, r), e, ...n.slice(r)]
     }
-  }), i
+  }), n
 }

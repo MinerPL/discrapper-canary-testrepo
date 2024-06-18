@@ -1,3 +1,3 @@
 "use strict";
-var e = n("96403");
+var e = n(96403);
 t.exports = e({}.isPrototypeOf)

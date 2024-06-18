@@ -10,8 +10,8 @@ function i(e) {
     joinTimestamp: e.join_timestamp
   }
 }
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return i
   }
-}), n("789020")
+}), n(789020)

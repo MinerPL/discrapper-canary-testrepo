@@ -1,192 +1,191 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return f
+t.d(s, {
+  Z: function() {
+    return m
   }
-}), s("536091");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("481060"),
-  i = s("727072"),
-  r = s("85960"),
-  o = s("676317"),
-  d = s("823379"),
-  u = s("84613"),
-  c = s("740903"),
-  E = s("598622"),
-  _ = s("689938"),
-  I = s("19957");
+}), t(536091);
+var n = t(735250),
+  i = t(470079),
+  l = t(481060),
+  a = t(727072),
+  r = t(85960),
+  o = t(676317),
+  c = t(823379),
+  d = t(84613),
+  u = t(740903),
+  E = t(598622),
+  _ = t(689938),
+  I = t(19957);
 
 function T() {
   let e = "• ";
-  return (0, a.jsxs)("div", {
+  return (0, n.jsxs)("div", {
     className: I.changelog,
-    children: [(0, a.jsx)("img", {
+    children: [(0, n.jsx)("img", {
       className: I.changelogImage,
-      src: s("531945"),
+      src: t(531945),
       alt: "changelog"
-    }), (0, a.jsxs)("div", {
-      children: [(0, a.jsx)(n.Heading, {
+    }), (0, n.jsxs)("div", {
+      children: [(0, n.jsx)(l.Heading, {
         variant: "heading-md/semibold",
         color: "header-primary",
         className: I.updatesHeader,
-        children: _.default.Messages.GUILD_SETTINGS_SAFETY_UPDATES_HEADER
-      }), (0, a.jsx)(n.Text, {
+        children: _.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_HEADER
+      }), (0, n.jsx)(l.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
         className: I.updatesDescription,
-        children: _.default.Messages.GUILD_SETTINGS_SAFETY_UPDATES_LINE_1
-      }), (0, a.jsx)(n.Text, {
+        children: _.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_LINE_1
+      }), (0, n.jsx)(l.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
         className: I.updatesDescription,
-        children: _.default.Messages.GUILD_SETTINGS_SAFETY_UPDATES_LINE_2
-      }), (0, a.jsxs)(n.Text, {
+        children: _.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_LINE_2
+      }), (0, n.jsxs)(l.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: [e, _.default.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_1]
-      }), (0, a.jsxs)(n.Text, {
+        children: [e, _.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_1]
+      }), (0, n.jsxs)(l.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: [e, _.default.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_2]
-      }), (0, a.jsxs)(n.Text, {
+        children: [e, _.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_2]
+      }), (0, n.jsxs)(l.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: [e, _.default.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_3]
-      }), (0, a.jsxs)(n.Text, {
+        children: [e, _.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_3]
+      }), (0, n.jsxs)(l.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: [e, _.default.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_4]
+        children: [e, _.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_4]
       })]
     })]
   })
 }
 
-function S(e) {
+function N(e) {
   let {
-    title: t,
-    subtitle: s,
-    icon: l,
-    page: i
+    title: s,
+    subtitle: t,
+    icon: i,
+    page: a
   } = e;
-  return (0, a.jsxs)("div", {
+  return (0, n.jsxs)("div", {
     className: I.safetyStepRow,
-    children: [(0, a.jsxs)("div", {
+    children: [(0, n.jsxs)("div", {
       className: I.safetyStepContent,
-      children: [(0, a.jsx)(n.Avatar, {
-        src: l,
-        size: n.AvatarSizes.SIZE_40,
-        "aria-label": t
-      }), (0, a.jsxs)("div", {
-        children: [(0, a.jsx)(n.Heading, {
+      children: [(0, n.jsx)(l.Avatar, {
+        src: i,
+        size: l.AvatarSizes.SIZE_40,
+        "aria-label": s
+      }), (0, n.jsxs)("div", {
+        children: [(0, n.jsx)(l.Heading, {
           variant: "heading-md/semibold",
           color: "header-primary",
-          children: t
-        }), (0, a.jsx)(n.Text, {
+          children: s
+        }), (0, n.jsx)(l.Text, {
           variant: "text-xs/medium",
           color: "header-secondary",
-          children: s
+          children: t
         })]
       })]
-    }), (0, a.jsx)(n.Button, {
+    }), (0, n.jsx)(l.Button, {
       className: I.__invalid_editButton,
-      size: n.Button.Sizes.SMALL,
-      color: n.Button.Colors.PRIMARY,
-      look: n.Button.Looks.OUTLINED,
-      borderColor: n.Button.BorderColors.PRIMARY,
-      onClick: () => (0, u.setSafetyPage)(i),
-      children: _.default.Messages.EDIT
+      size: l.Button.Sizes.SMALL,
+      color: l.Button.Colors.PRIMARY,
+      look: l.Button.Looks.OUTLINED,
+      onClick: () => (0, d.K)(a),
+      children: _.Z.Messages.EDIT
     })]
   })
 }
 
-function f(e) {
+function m(e) {
   let {
-    guild: t,
-    hideChangelog: u
+    guild: s,
+    hideChangelog: d
   } = e;
-  (0, i.useSyncAutomodRulesEffect)(t.id);
-  let f = (0, r.useAvailableTriggerTypes)(t.id),
+  (0, a.RD)(s.id);
+  let m = (0, r.Z6)(s.id),
     {
-      rulesByTriggerType: m
-    } = (0, i.useAutomodRulesList)(t.id),
+      rulesByTriggerType: S
+    } = (0, a.pH)(s.id),
     {
-      numEnabledRules: N,
+      numEnabledRules: h,
       numRules: g
-    } = l.useMemo(() => {
+    } = i.useMemo(() => {
       let e = 0,
-        t = 0;
-      return null == m ? {
+        s = 0;
+      return null == S ? {
         numEnabledRules: e,
-        numRules: t
-      } : (Object.values(f).flat().forEach(s => {
-        var a;
-        let l = null === (a = m[s]) || void 0 === a ? void 0 : a.filter(d.isNotNullish);
-        if (null == l || 0 === l.length) {
-          t++;
+        numRules: s
+      } : (Object.values(m).flat().forEach(t => {
+        var n;
+        let i = null === (n = S[t]) || void 0 === n ? void 0 : n.filter(c.lm);
+        if (null == i || 0 === i.length) {
+          s++;
           return
         }
-        l.forEach(s => {
-          s.enabled && e++, t++
+        i.forEach(t => {
+          t.enabled && e++, s++
         })
       }), {
         numEnabledRules: e,
-        numRules: t
+        numRules: s
       })
-    }, [f, m]),
-    h = (0, E.getGuildSafetySettings)(t),
-    C = h[c.GuildSettingsSafetyPage.CAPTCHA_AND_RAID_PROTECTION],
-    R = h[c.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION],
-    x = h[c.GuildSettingsSafetyPage.PERMISSIONS],
-    L = (0, o.useCanCurrentUserManageAutomod)(t.id);
-  return (0, a.jsxs)("div", {
-    children: [(0, a.jsx)(n.Heading, {
+    }, [m, S]),
+    x = (0, E.Q)(s),
+    C = x[u.u.CAPTCHA_AND_RAID_PROTECTION],
+    R = x[u.u.DM_AND_SPAM_PROTECTION],
+    L = x[u.u.PERMISSIONS],
+    O = (0, o.pr)(s.id);
+  return (0, n.jsxs)("div", {
+    children: [(0, n.jsx)(l.Heading, {
       variant: "heading-lg/semibold",
       color: "header-primary",
       className: I.header,
-      children: _.default.Messages.GUILD_SETTINGS_SAFETY_SETUP_HEADER
-    }), !u && (0, a.jsx)(T, {}), (0, a.jsxs)("div", {
+      children: _.Z.Messages.GUILD_SETTINGS_SAFETY_SETUP_HEADER
+    }), !d && (0, n.jsx)(T, {}), (0, n.jsxs)("div", {
       className: I.safetyChecklist,
-      children: [(0, a.jsx)(S, {
-        icon: s("14215"),
-        title: _.default.Messages.GUILD_SETTINGS_SAFETY_CAPTCHA_RAID_PROTECTION,
-        subtitle: _.default.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
+      children: [(0, n.jsx)(N, {
+        icon: t(14215),
+        title: _.Z.Messages.GUILD_SETTINGS_SAFETY_CAPTCHA_RAID_PROTECTION,
+        subtitle: _.Z.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
           enabled: C.filter(e => e.enabled).length,
           total: C.length
         }),
-        page: c.GuildSettingsSafetyPage.CAPTCHA_AND_RAID_PROTECTION
-      }), (0, a.jsx)("div", {
+        page: u.u.CAPTCHA_AND_RAID_PROTECTION
+      }), (0, n.jsx)("div", {
         className: I.divider
-      }), (0, a.jsx)(S, {
-        icon: s("128724"),
-        title: _.default.Messages.GUILD_SETTINGS_SAFETY_DM_SPAM_PROTECTION,
-        subtitle: _.default.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
+      }), (0, n.jsx)(N, {
+        icon: t(128724),
+        title: _.Z.Messages.GUILD_SETTINGS_SAFETY_DM_SPAM_PROTECTION,
+        subtitle: _.Z.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
           enabled: R.filter(e => e.enabled).length,
           total: R.length
         }),
-        page: c.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION
-      }), (0, a.jsx)("div", {
+        page: u.u.DM_AND_SPAM_PROTECTION
+      }), (0, n.jsx)("div", {
         className: I.divider
-      }), L && (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(S, {
-          icon: s("145136"),
-          title: _.default.Messages.GUILD_SETTINGS_AUTOMOD_TITLE,
-          subtitle: _.default.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
-            enabled: N,
+      }), O && (0, n.jsxs)(n.Fragment, {
+        children: [(0, n.jsx)(N, {
+          icon: t(145136),
+          title: _.Z.Messages.GUILD_SETTINGS_AUTOMOD_TITLE,
+          subtitle: _.Z.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
+            enabled: h,
             total: g
           }),
-          page: c.GuildSettingsSafetyPage.AUTOMOD
-        }), (0, a.jsx)("div", {
+          page: u.u.AUTOMOD
+        }), (0, n.jsx)("div", {
           className: I.divider
         })]
-      }), (0, a.jsx)(S, {
-        icon: s("913414"),
-        title: _.default.Messages.PERMISSIONS,
-        subtitle: _.default.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
-          enabled: x.filter(e => e.enabled).length,
-          total: x.length
+      }), (0, n.jsx)(N, {
+        icon: t(913414),
+        title: _.Z.Messages.PERMISSIONS,
+        subtitle: _.Z.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
+          enabled: L.filter(e => e.enabled).length,
+          total: L.length
         }),
-        page: c.GuildSettingsSafetyPage.PERMISSIONS
+        page: u.u.PERMISSIONS
       })]
     })]
   })

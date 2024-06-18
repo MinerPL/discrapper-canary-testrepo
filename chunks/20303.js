@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n("47120"), n("757143");
-var i, r, s, a, o, l = n("442837"),
-  u = n("433517"),
-  d = n("570140"),
-  _ = n("591759"),
-  c = n("902676"),
-  E = n("616922");
+n(47120), n(757143);
+var i, r, s, o, a, l = n(442837),
+  u = n(433517),
+  _ = n(570140),
+  d = n(591759),
+  c = n(902676),
+  E = n(616922);
 let I = "MaskedLinkStore",
   T = new Set,
-  f = new Set,
+  h = new Set,
   S = null === (i = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === i ? void 0 : i.replace("//", "");
 
-function h(e) {
-  let t = (0, c.getHostname)(e);
+function f(e) {
+  let t = (0, c.F)(e);
   switch (t) {
     case window.GLOBAL_ENV.CDN_HOST:
     case window.GLOBAL_ENV.INVITE_HOST:
@@ -22,58 +22,58 @@ function h(e) {
     case location.hostname:
       return !0;
     default:
-      return E.SPOTIFY_HOSTNAMES.includes(t) || _.default.isDiscordHostname(t) || T.has(t)
+      return E.SD.includes(t) || d.Z.isDiscordHostname(t) || T.has(t)
   }
 }
 
-function A(e) {
-  let t = (0, c.getProtocol)(e);
-  return f.has(t)
+function N(e) {
+  let t = (0, c.E)(e);
+  return h.has(t)
 }
-class m extends(r = l.default.Store) {
+class A extends(r = l.ZP.Store) {
   initialize() {
     var e;
-    let t = null !== (e = u.Storage.get(I)) && void 0 !== e ? e : {};
-    if (Array.isArray(t)) T = new Set(null != t ? Array.from(t) : null), f = new Set;
+    let t = null !== (e = u.K.get(I)) && void 0 !== e ? e : {};
+    if (Array.isArray(t)) T = new Set(null != t ? Array.from(t) : null), h = new Set;
     else {
       let {
         trustedDomains: e,
         trustedProtocols: n
       } = t;
-      T = new Set(null != e ? Array.from(e) : null), f = new Set(null != n ? Array.from(n) : null)
+      T = new Set(null != e ? Array.from(e) : null), h = new Set(null != n ? Array.from(n) : null)
     }
   }
   isTrustedDomain(e) {
-    return h(e)
+    return f(e)
   }
   isTrustedProtocol(e) {
-    return A(e)
+    return N(e)
   }
 }
-o = "MaskedLinkStore", (a = "displayName") in(s = m) ? Object.defineProperty(s, a, {
-  value: o,
+a = "MaskedLinkStore", (o = "displayName") in(s = A) ? Object.defineProperty(s, o, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = o, t.default = new m(d.default, {
+}) : s[o] = a, t.Z = new A(_.Z, {
   MASKED_LINK_ADD_TRUSTED_DOMAIN: function(e) {
     let {
       url: t
     } = e;
-    if (h(t)) return !1;
-    T.add((0, c.getHostname)(t)), u.Storage.set(I, {
+    if (f(t)) return !1;
+    T.add((0, c.F)(t)), u.K.set(I, {
       trustedDomains: T,
-      trustedProtocols: f
+      trustedProtocols: h
     })
   },
   MASKED_LINK_ADD_TRUSTED_PROTOCOL: function(e) {
     let {
       url: t
     } = e;
-    if (A(t)) return !1;
-    f.add((0, c.getProtocol)(t)), u.Storage.set(I, {
+    if (N(t)) return !1;
+    h.add((0, c.E)(t)), u.K.set(I, {
       trustedDomains: T,
-      trustedProtocols: f
+      trustedProtocols: h
     })
   }
 })

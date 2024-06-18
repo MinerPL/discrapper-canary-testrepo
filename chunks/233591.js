@@ -1,5 +1,5 @@
 "use strict";
-var r = n("581031"),
+var r = n(581031),
   i = /[^\0-\u007E]/,
   a = /[.\u3002\uFF0E\uFF61]/g,
   o = "Overflow: input needs wider integers to process",
@@ -53,8 +53,8 @@ var r = n("581031"),
             var x = S <= c ? 1 : S >= c + 26 ? 26 : S - c;
             if (E < x) break;
             var w = E - x,
-              T = 36 - x;
-            h(r, d(v(x + w % T))), E = l(w / T), S += 36
+              C = 36 - x;
+            h(r, d(v(x + w % C))), E = l(w / C), S += 36
           }
           h(r, d(v(E))), c = y(s, _, m === f), s = 0, m++
         }

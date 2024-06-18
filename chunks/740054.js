@@ -1,29 +1,29 @@
 "use strict";
 let r;
-n.r(e), n.d(e, {
-  FunctionToString: function() {
-    return a
+n.d(e, {
+  c: function() {
+    return s
   }
 });
-var i = n("648238");
-class a {
+var i = n(442853);
+class s {
   constructor() {
-    a.prototype.__init.call(this)
+    s.prototype.__init.call(this)
   }
   static __initStatic() {
     this.id = "FunctionToString"
   }
   __init() {
-    this.name = a.id
+    this.name = s.id
   }
   setupOnce() {
     r = Function.prototype.toString;
     try {
       Function.prototype.toString = function(...t) {
-        let e = (0, i.getOriginalFunction)(this) || this;
+        let e = (0, i.HK)(this) || this;
         return r.apply(e, t)
       }
     } catch (t) {}
   }
 }
-a.__initStatic()
+s.__initStatic()

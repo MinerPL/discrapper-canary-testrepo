@@ -1,20 +1,20 @@
 "use strict";
-t.randomBytes = t.rng = t.pseudoRandomBytes = t.prng = n("706178"), t.createHash = t.Hash = n("108381"), t.createHmac = t.Hmac = n("294415");
-var r = ["sha1", "sha224", "sha256", "sha384", "sha512", "md5", "rmd160"].concat(Object.keys(n("518401")));
+t.randomBytes = t.rng = t.pseudoRandomBytes = t.prng = n(706178), t.createHash = t.Hash = n(108381), t.createHmac = t.Hmac = n(294415);
+var r = ["sha1", "sha224", "sha256", "sha384", "sha512", "md5", "rmd160"].concat(Object.keys(n(518401)));
 t.getHashes = function() {
   return r
 };
-var i = n("585754");
+var i = n(585754);
 t.pbkdf2 = i.pbkdf2, t.pbkdf2Sync = i.pbkdf2Sync;
-var a = n("768730");
+var a = n(768730);
 t.Cipher = a.Cipher, t.createCipher = a.createCipher, t.Cipheriv = a.Cipheriv, t.createCipheriv = a.createCipheriv, t.Decipher = a.Decipher, t.createDecipher = a.createDecipher, t.Decipheriv = a.Decipheriv, t.createDecipheriv = a.createDecipheriv, t.getCiphers = a.getCiphers, t.listCiphers = a.listCiphers;
-var o = n("985493");
+var o = n(985493);
 t.DiffieHellmanGroup = o.DiffieHellmanGroup, t.createDiffieHellmanGroup = o.createDiffieHellmanGroup, t.getDiffieHellman = o.getDiffieHellman, t.createDiffieHellman = o.createDiffieHellman, t.DiffieHellman = o.DiffieHellman;
-var s = n("552718");
-t.createSign = s.createSign, t.Sign = s.Sign, t.createVerify = s.createVerify, t.Verify = s.Verify, t.createECDH = n("398833");
-var u = n("197909");
+var s = n(552718);
+t.createSign = s.createSign, t.Sign = s.Sign, t.createVerify = s.createVerify, t.Verify = s.Verify, t.createECDH = n(398833);
+var u = n(197909);
 t.publicEncrypt = u.publicEncrypt, t.privateEncrypt = u.privateEncrypt, t.publicDecrypt = u.publicDecrypt, t.privateDecrypt = u.privateDecrypt;
-var c = n("107083");
+var c = n(107083);
 t.randomFill = c.randomFill, t.randomFillSync = c.randomFillSync, t.createCredentials = function() {
   throw Error("sorry, createCredentials is not implemented yet\nwe accept pull requests\nhttps://github.com/crypto-browserify/crypto-browserify")
 }, t.constants = {

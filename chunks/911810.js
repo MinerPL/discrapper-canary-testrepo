@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  MenuGroup: function() {
+n.d(t, {
+  k: function() {
     return l
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("803997"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("939350"),
-  o = n("989608");
+  o = n(939350),
+  a = n(768160);
 
 function l(e) {
   let {
@@ -23,7 +23,7 @@ function l(e) {
     role: "group",
     className: r,
     children: [null != n ? (0, i.jsx)("div", {
-      className: s()(o.groupLabel, a.MENU_ITEM_COLORS[l]),
+      className: s()(a.groupLabel, o._[l]),
       children: n
     }) : null, t]
   })

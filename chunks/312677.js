@@ -1,35 +1,35 @@
-    "use strict";
-    var r = e("147018"),
-      o = e("161581"),
-      u = e("4340"),
-      i = e("325008"),
-      c = TypeError,
-      f = Object.defineProperty,
-      _ = o.self !== o;
-    try {
-      if (i) {
-        var a = Object.getOwnPropertyDescriptor(o, "self");
-        (_ || !a || !a.get || !a.enumerable) && u(o, "self", {
-          get: function() {
-            return o
-          },
-          set: function(n) {
-            if (this !== o) throw c("Illegal invocation");
-            f(o, "self", {
-              value: n,
-              writable: !0,
-              configurable: !0,
-              enumerable: !0
-            })
-          },
+"use strict";
+var e = n(147018),
+  o = n(161581),
+  i = n(4340),
+  u = n(325008),
+  c = TypeError,
+  f = Object.defineProperty,
+  a = o.self !== o;
+try {
+  if (u) {
+    var s = Object.getOwnPropertyDescriptor(o, "self");
+    (a || !s || !s.get || !s.enumerable) && i(o, "self", {
+      get: function() {
+        return o
+      },
+      set: function(t) {
+        if (this !== o) throw c("Illegal invocation");
+        f(o, "self", {
+          value: t,
+          writable: !0,
           configurable: !0,
           enumerable: !0
         })
-      } else r({
-        global: !0,
-        simple: !0,
-        forced: _
-      }, {
-        self: o
-      })
-    } catch (n) {}
+      },
+      configurable: !0,
+      enumerable: !0
+    })
+  } else e({
+    global: !0,
+    simple: !0,
+    forced: a
+  }, {
+    self: o
+  })
+} catch (t) {}

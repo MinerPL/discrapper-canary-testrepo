@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return c
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("120356"),
-  a = n.n(r),
-  s = n("481060"),
-  o = n("412899"),
-  l = n("659101"),
-  u = n("689938"),
-  d = n("559567"),
-  _ = n("379916");
+var i = n(735250);
+n(470079);
+var r = n(120356),
+  s = n.n(r),
+  o = n(481060),
+  a = n(412899),
+  l = n(659101),
+  u = n(689938),
+  _ = n(559567),
+  d = n(379916);
 
 function c(e) {
   let {
@@ -22,18 +22,18 @@ function c(e) {
     guildMember: r,
     showBorder: c
   } = e;
-  return null == n || null == r ? null : (0, i.jsxs)(l.default, {
-    children: [(0, i.jsx)(s.Heading, {
+  return null == n || null == r ? null : (0, i.jsxs)(l.Z, {
+    children: [(0, i.jsx)(o.Heading, {
       variant: "eyebrow",
-      className: _.title,
-      children: u.default.Messages.ROLES_LIST.format({
+      className: d.title,
+      children: u.Z.Messages.ROLES_LIST.format({
         numRoles: r.roles.length
       })
-    }), (0, i.jsx)(o.default, {
-      roleClassName: a()(d.rolePill, {
-        [d.rolePillBorder]: c
+    }), (0, i.jsx)(a.ZP, {
+      roleClassName: s()(_.rolePill, {
+        [_.rolePillBorder]: c
       }),
-      className: d.roles,
+      className: _.roles,
       guild: n,
       user: t,
       userRoles: r.roles,

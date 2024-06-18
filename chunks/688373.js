@@ -1,15 +1,14 @@
 "use strict";
-r.r(t);
-var n = r("65708"),
-  i = r("544364"),
+var n = r(65708),
+  i = r(544364),
   o = function(e) {
-    return e && e[n.default] && e === e[0, n.default]()
+    return e && e[n.Z] && e === e[n.Z]()
   };
-t.default = function(e) {
+t.Z = function(e) {
   return {
     onCreateRule: function(t, r, n) {
       if (!o(r)) return null;
-      var s = (0, i.createRule)(t, {}, n);
+      var s = (0, i.JH)(t, {}, n);
       return r.subscribe(function(t) {
         for (var r in t) s.prop(r, t[r], e)
       }), s

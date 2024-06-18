@@ -1,7 +1,7 @@
 "use strict";
-let r = n("689118"),
-  i = n("761655").Reporter,
-  a = n("988324").Buffer;
+let r = n(689118),
+  i = n(761655).Reporter,
+  a = n(988324).Buffer;
 
 function o(e, t) {
   if (i.call(this, t), !a.isBuffer(e)) {

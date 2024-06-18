@@ -1,34 +1,34 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return h
+n.d(t, {
+  Z: function() {
+    return p
   }
-}), n("47120");
-var i = n("735250");
-n("470079");
-var a = n("442837"),
-  l = n("352527"),
-  s = n("183584"),
-  o = n("487029"),
-  r = n("592125"),
-  d = n("944486"),
-  u = n("554174"),
-  c = n("710111"),
-  f = n("690046");
+}), n(47120);
+var i = n(735250);
+n(470079);
+var s = n(442837),
+  l = n(352527),
+  a = n(183584),
+  o = n(487029),
+  r = n(592125),
+  d = n(944486),
+  c = n(554174),
+  u = n(710111),
+  h = n(278029);
 
-function h() {
-  let [e, t] = (0, a.useStateFromStoresArray)([l.default], () => [l.default.enabled, l.default.keepOpen]), n = (0, a.useStateFromStores)([d.default], () => d.default.getVoiceChannelId()), h = (0, a.useStateFromStores)([r.default], () => r.default.getChannel(n), [n]), p = null == h ? void 0 : h.getGuildId();
-  return e && null != h ? (0, i.jsx)("div", {
-    className: f.widget,
-    children: (0, i.jsx)(o.default, {
-      width: c.SoundboardWheelSize.width,
-      height: c.SoundboardWheelSize.height,
-      guildId: p,
-      channel: h,
+function p() {
+  let [e, t] = (0, s.Wu)([l.Z], () => [l.Z.enabled, l.Z.keepOpen]), n = (0, s.e7)([d.Z], () => d.Z.getVoiceChannelId()), p = (0, s.e7)([r.Z], () => r.Z.getChannel(n), [n]), f = null == p ? void 0 : p.getGuildId();
+  return e && null != p ? (0, i.jsx)("div", {
+    className: h.widget,
+    children: (0, i.jsx)(o.Z, {
+      width: u.FW.width,
+      height: u.FW.height,
+      guildId: f,
+      channel: p,
       keepOpen: t,
       onClose: function() {
-        let e = (0, u.default)();
-        null != e && (0, s.closeSoundboardInOverlay)(e)
+        let e = (0, c.Z)();
+        null != e && (0, a.oZ)(e)
       },
       analyticsSource: "overlay"
     })

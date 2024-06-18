@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return c
   }
-}), n("47120");
-var i = n("735250");
-n("470079");
-var r = n("866442"),
-  s = n("442837"),
-  a = n("692547"),
-  o = n("481060"),
-  l = n("607070"),
-  u = n("797717"),
-  d = n("507957"),
-  _ = n("689938");
+}), n(47120);
+var i = n(735250);
+n(470079);
+var r = n(866442),
+  s = n(442837),
+  o = n(692547),
+  a = n(481060),
+  l = n(607070),
+  u = n(797717),
+  _ = n(507957),
+  d = n(689938);
 
 function c(e) {
   let t, {
@@ -22,20 +22,20 @@ function c(e) {
       forcedIconColor: E,
       className: I,
       iconClassName: T,
-      tooltipText: f
+      tooltipText: h
     } = e,
-    [S, h] = (0, s.useStateFromStoresArray)([l.default], () => [l.default.desaturateUserColors, l.default.saturation]),
-    A = (0, o.useToken)(a.default.unsafe_rawColors.PRIMARY_300).hex(),
-    m = (0, r.hex2int)(null != n ? n : A),
-    N = (0, r.int2hsl)(m, !1, S ? h : null);
-  return t = null != E ? E : .3 > (0, r.getDarkness)(m) ? a.default.unsafe_rawColors.PRIMARY_630.css : a.default.unsafe_rawColors.WHITE_500.css, (0, i.jsx)(o.Tooltip, {
-    text: null != f ? f : _.default.Messages.CONNECTIONS_ROLE_OFFICIAL_ICON_TOOLTIP,
-    children: e => (0, i.jsx)(u.default, {
+    [S, f] = (0, s.Wu)([l.Z], () => [l.Z.desaturateUserColors, l.Z.saturation]),
+    N = (0, a.useToken)(o.Z.unsafe_rawColors.PRIMARY_300).hex(),
+    A = (0, r._i)(null != n ? n : N),
+    m = (0, r.ho)(A, !1, S ? f : null);
+  return t = null != E ? E : .3 > (0, r.Bd)(A) ? o.Z.unsafe_rawColors.PRIMARY_630.css : o.Z.unsafe_rawColors.WHITE_500.css, (0, i.jsx)(a.Tooltip, {
+    text: null != h ? h : d.Z.Messages.CONNECTIONS_ROLE_OFFICIAL_ICON_TOOLTIP,
+    children: e => (0, i.jsx)(u.Z, {
       ...e,
       className: I,
-      color: N,
+      color: m,
       size: c,
-      children: (0, i.jsx)(d.default, {
+      children: (0, i.jsx)(_.Z, {
         color: t,
         height: c,
         width: c,

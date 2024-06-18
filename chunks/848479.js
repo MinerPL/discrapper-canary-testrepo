@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n("724458");
-var i = n("259443"),
-  r = n("579806"),
-  a = n("77450"),
-  s = n("998502");
-let o = new i.Logger("ProcessUtilsElectron");
-class l extends a.ProcessUtils {
+n(724458);
+var i = n(259443),
+  r = n(579806),
+  s = n(77450),
+  o = n(998502);
+let a = new i.Y("ProcessUtilsElectron");
+class l extends s.h {
   setupReportingTimer() {
     var e, t;
-    let n = null === r.default || void 0 === r.default ? void 0 : null === (e = r.default.processUtils) || void 0 === e ? void 0 : e.setMemoryInformation;
+    let n = null === r.Z || void 0 === r.Z ? void 0 : null === (e = r.Z.processUtils) || void 0 === e ? void 0 : e.setMemoryInformation;
     if (null == n) {
-      o.log("setMemoryInformation not available.");
+      a.log("setMemoryInformation not available.");
       return
-    }(null === (t = performance.memory) || void 0 === t ? void 0 : t.usedJSHeapSize) == null && o.error("usedJSHeapSize is not available.");
+    }(null === (t = performance.memory) || void 0 === t ? void 0 : t.usedJSHeapSize) == null && a.error("usedJSHeapSize is not available.");
     setInterval(() => {
       var e, t, i;
       let r = null !== (t = null === (e = performance.memory) || void 0 === e ? void 0 : e.usedJSHeapSize) && void 0 !== t ? t : 0;
@@ -24,15 +24,15 @@ class l extends a.ProcessUtils {
   }
   getProcessUptime() {
     var e, t;
-    return null === r.default || void 0 === r.default ? void 0 : null === (t = r.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getProcessUptime) || void 0 === e ? void 0 : e.call(t)
+    return null === r.Z || void 0 === r.Z ? void 0 : null === (t = r.Z.processUtils) || void 0 === t ? void 0 : null === (e = t.getProcessUptime) || void 0 === e ? void 0 : e.call(t)
   }
   getCurrentCPUUsagePercent() {
     var e, t;
-    return null === r.default || void 0 === r.default ? void 0 : null === (t = r.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getCurrentCPUUsagePercent) || void 0 === e ? void 0 : e.call(t)
+    return null === r.Z || void 0 === r.Z ? void 0 : null === (t = r.Z.processUtils) || void 0 === t ? void 0 : null === (e = t.getCurrentCPUUsagePercent) || void 0 === e ? void 0 : e.call(t)
   }
   getCumulativeCPUUsage() {
     var e, t;
-    return null === r.default || void 0 === r.default ? void 0 : null === (t = r.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getCumulativeCPUUsage) || void 0 === e ? void 0 : e.call(t)
+    return null === r.Z || void 0 === r.Z ? void 0 : null === (t = r.Z.processUtils) || void 0 === t ? void 0 : null === (e = t.getCumulativeCPUUsage) || void 0 === e ? void 0 : e.call(t)
   }
   getCurrentMemoryUsageKB() {
     let e = l.getCurrentMemoryUsageKBCore();
@@ -40,7 +40,7 @@ class l extends a.ProcessUtils {
   }
   static getCurrentMemoryUsageKBCore() {
     try {
-      let e = s.default.getDiscordMemoryUsage();
+      let e = o.ZP.getDiscordMemoryUsage();
       if (null == e) return 0;
       let t = Object.values(e).reduce((e, t) => e + t, 0);
       return Math.ceil(t / 1024)
@@ -49,27 +49,27 @@ class l extends a.ProcessUtils {
     }
   }
   getMemoryUsageDetails() {
-    return s.default.getDiscordMemoryUsage()
+    return o.ZP.getDiscordMemoryUsage()
   }
   getMemoryUsageElectronRenderer() {
     try {
-      return s.default.getDiscordMemoryUsageElectronRenderer()
+      return o.ZP.getDiscordMemoryUsageElectronRenderer()
     } catch (e) {
       return null
     }
   }
   getMemoryUsageElectronRendererUsedHeapSize() {
     var e, t;
-    return null === r.default || void 0 === r.default ? void 0 : null === (t = r.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getUsedHeapSize) || void 0 === e ? void 0 : e.call(t)
+    return null === r.Z || void 0 === r.Z ? void 0 : null === (t = r.Z.processUtils) || void 0 === t ? void 0 : null === (e = t.getUsedHeapSize) || void 0 === e ? void 0 : e.call(t)
   }
   constructor() {
-    var e, t, n, i, a;
-    super(), n = this, a = void 0, (i = "lastMemoryUsageKB") in n ? Object.defineProperty(n, i, {
-      value: a,
+    var e, t, n, i, s;
+    super(), n = this, s = void 0, (i = "lastMemoryUsageKB") in n ? Object.defineProperty(n, i, {
+      value: s,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : n[i] = a, this.cpuCoreCount = null === r.default || void 0 === r.default ? void 0 : null === (t = r.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getCPUCoreCount) || void 0 === e ? void 0 : e.call(t), this.setupReportingTimer()
+    }) : n[i] = s, this.cpuCoreCount = null === r.Z || void 0 === r.Z ? void 0 : null === (t = r.Z.processUtils) || void 0 === t ? void 0 : null === (e = t.getCPUCoreCount) || void 0 === e ? void 0 : e.call(t), this.setupReportingTimer()
   }
 }
-t.default = new l
+t.Z = new l

@@ -1,18 +1,18 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return l
+t.d(s, {
+  Z: function() {
+    return i
   }
-}), s("47120");
-var a = s("470079");
+}), t(47120);
+var n = t(470079);
 
-function l(e) {
-  let [t, s] = a.useState(e), l = a.useRef(null);
-  return a.useEffect(() => {
-    var t, a;
-    s(null !== (a = null === (t = l.current) || void 0 === t ? void 0 : t.offsetHeight) && void 0 !== a ? a : e)
+function i(e) {
+  let [s, t] = n.useState(e), i = n.useRef(null);
+  return n.useEffect(() => {
+    var s, n;
+    t(null !== (n = null === (s = i.current) || void 0 === s ? void 0 : s.offsetHeight) && void 0 !== n ? n : e)
   }), {
-    headerHeight: t,
-    headerRef: l
+    headerHeight: s,
+    headerRef: i
   }
 }

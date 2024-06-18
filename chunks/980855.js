@@ -1,5 +1,5 @@
 "use strict";
-var e = n("959318"),
+var e = n(959318),
   o = Math.max,
   i = Math.min;
 t.exports = function(t, r) {

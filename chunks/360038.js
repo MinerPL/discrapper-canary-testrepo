@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  JUMP_TO_GUILD: function() {
+n.d(t, {
+  u: function() {
     return c
   }
-}), n("653041");
-var i = n("853856"),
-  r = n("706590"),
-  s = n("703656"),
-  a = n("920440"),
-  o = n("592125"),
-  l = n("496675"),
-  u = n("914010"),
-  d = n("771845"),
-  _ = n("981631");
+}), n(653041);
+var i = n(853856),
+  r = n(706590),
+  s = n(703656),
+  o = n(769654),
+  a = n(592125),
+  l = n(496675),
+  u = n(914010),
+  _ = n(771845),
+  d = n(981631);
 let c = {
   binds: (() => {
     let e = [];
@@ -22,8 +22,6 @@ let c = {
   comboKeysBindGlobal: !0,
   action(e, t) {
     let n, c = parseInt(t.split("+")[1], 10);
-    if (0 === c && (c = 10), !isNaN(c) && 0 !== c) {
-      if (null != (n = 1 === c ? _.ME : (0, r.isFavoritesGuildVisible)(i.default, o.default, l.default) ? 2 === c ? _.FAVORITES : d.default.getFlattenedGuildIds()[c - 3] : d.default.getFlattenedGuildIds()[c - 2])) return n === _.ME && null == u.default.getGuildId() ? ((0, s.transitionTo)(_.Routes.CHANNEL(n)), !1) : ((0, a.transitionToGuild)(n), !1)
-    }
+    return (0 === c && (c = 10), isNaN(c) || 0 === c || null == (n = 1 === c ? d.ME : (0, r.z)(i.Z, a.Z, l.Z) ? 2 === c ? d.I_8 : _.ZP.getFlattenedGuildIds()[c - 3] : _.ZP.getFlattenedGuildIds()[c - 2])) ? void 0 : n === d.ME && null == u.Z.getGuildId() ? ((0, s.uL)(d.Z5c.CHANNEL(n)), !1) : ((0, o.X)(n), !1)
   }
 }

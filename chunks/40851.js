@@ -1,59 +1,59 @@
 "use strict";
-n.r(t), n.d(t, {
-  AppWindowContextProvider: function() {
-    return T
+n.d(t, {
+  Aq: function() {
+    return S
   },
-  MainWindowDispatch: function() {
-    return u
-  },
-  getAppWindowContextValue: function() {
-    return E
-  },
-  getCurrentlyInteractingAppContext: function() {
+  GB: function() {
     return I
   },
-  getWindowDispatchForElement: function() {
+  J5: function() {
     return c
   },
-  useAppContext: function() {
-    return f
+  UI: function() {
+    return u
   },
-  useWindowDispatch: function() {
-    return S
+  Wu: function() {
+    return T
+  },
+  bp: function() {
+    return h
+  },
+  g0: function() {
+    return E
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("585483"),
-  a = n("830917"),
-  o = n("919570"),
-  l = n("981631");
-let u = new s.ComponentDispatcher,
-  d = r.createContext({
-    appContext: l.AppContext.APP,
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(585483),
+  o = n(830917),
+  a = n(919570),
+  l = n(981631);
+let u = new s.b,
+  _ = r.createContext({
+    appContext: l.IlC.APP,
     renderWindow: window,
     windowDispatch: u,
-    windowId: (0, a.getMainWindowId)()
+    windowId: (0, o.UU)()
   }),
-  _ = new Map;
+  d = new Map;
 
 function c(e) {
   var t;
   let n = e.ownerDocument.defaultView;
   if (null == n) return;
-  let i = (0, a.getWindowId)(n);
-  return null === (t = _.get(i)) || void 0 === t ? void 0 : t.windowDispatch
+  let i = (0, o.ZY)(n);
+  return null === (t = d.get(i)) || void 0 === t ? void 0 : t.windowDispatch
 }
 
 function E(e) {
-  return _.get(e)
+  return d.get(e)
 }
 
 function I() {
   let e = function() {
     var e;
-    let t = (0, o.getCurrentlyInteractingWindowId)();
-    return null == t ? null : null !== (e = _.get(t)) && void 0 !== e ? e : null
+    let t = (0, a.GR)();
+    return null == t ? null : null !== (e = d.get(t)) && void 0 !== e ? e : null
   }();
   return null != e ? e.appContext : null
 }
@@ -63,29 +63,29 @@ function T(e) {
     appContext: t,
     renderWindow: n,
     children: r
-  } = e, o = function(e, t) {
-    let n = (0, a.getWindowId)(t),
-      i = _.get(n);
+  } = e, a = function(e, t) {
+    let n = (0, o.ZY)(t),
+      i = d.get(n);
     return null == i && (i = {
       appContext: e,
       renderWindow: t,
-      windowDispatch: new s.ComponentDispatcher,
+      windowDispatch: new s.b,
       windowId: n
-    }, _.set(n, i), t.addEventListener("unload", () => {
-      _.delete(n)
+    }, d.set(n, i), t.addEventListener("unload", () => {
+      d.delete(n)
     })), i
   }(t, n);
-  return (0, i.jsx)(d.Provider, {
-    value: o,
+  return (0, i.jsx)(_.Provider, {
+    value: a,
     children: r
   })
 }
 
-function f() {
-  return r.useContext(d).appContext
+function h() {
+  return r.useContext(_).appContext
 }
 
 function S() {
-  return r.useContext(d).windowDispatch
+  return r.useContext(_).windowDispatch
 }
-t.default = d
+t.ZP = _

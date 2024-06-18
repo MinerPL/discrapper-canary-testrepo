@@ -8,8 +8,8 @@ function i(e) {
     }
   }
 }
-n.r(t), n.d(t, {
-  initRenderingContext2D: function() {
+n.d(t, {
+  y: function() {
     return i
   }
 })

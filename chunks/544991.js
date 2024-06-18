@@ -5,8 +5,8 @@ function r(e, t) {
   for (var n in t) Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]);
   return e
 }
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 })

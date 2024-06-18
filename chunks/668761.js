@@ -1,47 +1,47 @@
 "use strict";
-n.r(t), n.d(t, {
-  createClipsNotification: function() {
-    return p
+n.d(t, {
+  f: function() {
+    return f
   },
-  createClipsReminderNotification: function() {
-    return h
+  y: function() {
+    return p
   }
 });
-var i = n("735250");
-n("470079");
-var a = n("481060"),
-  l = n("312839"),
-  s = n("556296"),
-  o = n("454902"),
-  r = n("529653"),
-  d = n("13140"),
-  u = n("981631"),
-  c = n("987650"),
-  f = n("689938");
+var i = n(735250);
+n(470079);
+var s = n(481060),
+  l = n(312839),
+  a = n(556296),
+  o = n(454902),
+  r = n(529653),
+  d = n(13140),
+  c = n(981631),
+  u = n(987650),
+  h = n(689938);
 
-function h() {
+function p() {
   let {
     trackView: e,
     trackClick: t
-  } = (0, l.makeAnalyticsTrackers)(c.OverlayNotificationType.ClipsReminderNotification, {
-    notif_type: c.OverlayNotificationType.ClipsReminderNotification
-  }), n = s.default.getKeybindForAction(u.GlobalKeybindActions.SAVE_CLIP);
+  } = (0, l.R)(u.n0.ClipsReminderNotification, {
+    notif_type: u.n0.ClipsReminderNotification
+  }), n = a.Z.getKeybindForAction(c.kg4.SAVE_CLIP);
   if (null == n) return null;
-  let h = d.toString(n.shortcut, !0);
+  let p = d.BB(n.shortcut, !0);
   return {
-    colorScheme: o.ColorSchemes.PRIMARY,
-    title: f.default.Messages.CLIPS_REMINDER_NOTIFICATION_TITLE.format({
-      keybind: h,
+    colorScheme: o.IC.PRIMARY,
+    title: h.Z.Messages.CLIPS_REMINDER_NOTIFICATION_TITLE.format({
+      keybind: p,
       keybindHook: () => (0, i.jsx)("span", {
         style: {
           display: "inline-block"
         },
-        children: (0, i.jsx)(a.KeyCombo, {
-          shortcut: h
+        children: (0, i.jsx)(s.KeyCombo, {
+          shortcut: p
         })
       })
     }),
-    icon: (0, i.jsx)(r.default, {}),
+    icon: (0, i.jsx)(r.Z, {}),
     onNotificationShow: () => {
       e()
     },
@@ -51,17 +51,17 @@ function h() {
   }
 }
 
-function p(e) {
+function f(e) {
   let {
     trackView: t,
     trackClick: n
-  } = (0, l.makeAnalyticsTrackers)(c.OverlayNotificationType.ClipsNotification, {
-    notif_type: c.OverlayNotificationType.ClipsNotification
+  } = (0, l.R)(u.n0.ClipsNotification, {
+    notif_type: u.n0.ClipsNotification
   });
   return {
-    colorScheme: o.ColorSchemes.PRIMARY,
+    colorScheme: o.IC.PRIMARY,
     title: e,
-    icon: (0, i.jsx)(r.default, {}),
+    icon: (0, i.jsx)(r.Z, {}),
     onNotificationShow: () => {
       t()
     },

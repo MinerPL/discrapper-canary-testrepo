@@ -1,8 +1,8 @@
 "use strict";
-var r = n("875604"),
-  a = n("129789"),
-  o = Array.prototype;
+var r = n(875604),
+  o = n(129789),
+  a = Array.prototype;
 e.exports = function(e) {
   var t = e.filter;
-  return e === o || r(o, e) && t === o.filter ? a : t
+  return e === a || r(a, e) && t === a.filter ? o : t
 }

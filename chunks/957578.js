@@ -1,4 +1,4 @@
-var r = n("413135"),
+var r = n(413135),
   i = r.Buffer;
 
 function a(e, t) {

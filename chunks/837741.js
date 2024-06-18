@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  BrandRefreshPerksExperiment: function() {
+n.d(t, {
+  F: function() {
     return i
   },
-  useBrandRefreshPerksExperiment: function() {
+  J: function() {
     return r
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
     kind: "user",
     id: "2024-05_brand_refresh_perks_experiment",
     label: "Brand Refresh Perks Experiment",

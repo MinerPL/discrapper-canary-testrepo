@@ -1,43 +1,43 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return c
+t.d(s, {
+  Z: function() {
+    return u
   }
-}), s("47120");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("481060"),
-  i = s("273504"),
-  r = s("981631"),
-  o = s("689938"),
-  d = s("258704"),
-  u = s("568046");
+}), t(47120);
+var n = t(735250),
+  i = t(470079),
+  l = t(481060),
+  a = t(273504),
+  r = t(981631),
+  o = t(689938),
+  c = t(407483),
+  d = t(139123);
 
-function c(e) {
+function u(e) {
   let {
-    rule: t,
-    onChangeRule: s
-  } = e, [c, E] = l.useState(t.name);
-  return (0, a.jsxs)(n.FormItem, {
-    children: [(0, a.jsx)(n.Text, {
-      className: u.triggerHeader,
+    rule: s,
+    onChangeRule: t
+  } = e, [u, E] = i.useState(s.name);
+  return (0, n.jsxs)(l.FormItem, {
+    children: [(0, n.jsx)(l.Text, {
+      className: d.triggerHeader,
       variant: "text-sm/semibold",
-      children: o.default.Messages.GUILD_AUTOMOD_INPUT_FILTER_NAME
-    }), (0, a.jsx)(n.TextInput, {
-      className: d.ruleNameInput,
+      children: o.Z.Messages.GUILD_AUTOMOD_INPUT_FILTER_NAME
+    }), (0, n.jsx)(l.TextInput, {
+      className: c.ruleNameInput,
       onChange: e => {
-        E(e), s({
-          ...t,
+        E(e), t({
+          ...s,
           name: e
         })
       },
       onClick: e => e.stopPropagation(),
       onKeyPress: e => {
-        e.which === r.KeyboardKeys.SPACE && e.stopPropagation()
+        e.which === r.yXg.SPACE && e.stopPropagation()
       },
-      placeholder: o.default.Messages.GUILD_AUTOMOD_INPUT_FILTER_NAME_PLACEHOLDER,
-      maxLength: i.MAX_RULE_NAME_LENGTH,
-      value: c
+      placeholder: o.Z.Messages.GUILD_AUTOMOD_INPUT_FILTER_NAME_PLACEHOLDER,
+      maxLength: a.OU,
+      value: u
     })]
   })
 }

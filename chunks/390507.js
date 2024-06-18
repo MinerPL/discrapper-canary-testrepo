@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  getIconSize: function() {
+n.d(t, {
+  m: function() {
     return r
   }
 });
-var i = n("212605");
+var i = n(212605);
 
 function r(e) {
   if ("custom" === e) return null;
-  let t = i.ICON_SIZE[e];
+  let t = i.Z[e];
   return {
     width: t,
     height: t

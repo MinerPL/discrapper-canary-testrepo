@@ -1,4 +1,3 @@
 "use strict";
-n.r(t);
-var i = n("318885");
-t.default = i.getDesktopSourceMetadata
+var i = n(318885);
+t.Z = i.t

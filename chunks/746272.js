@@ -1,6 +1,6 @@
-var o = r("338091"),
-  n = r("669013"),
-  i = r("465758"),
+var o = r(338091),
+  n = r(669013),
+  i = r(465758),
   a = {
     PATTERN000: 0,
     PATTERN001: 1,
@@ -136,11 +136,12 @@ var o = r("338091"),
     getLostPoint: function(t) {
       for (var e = t.getModuleCount(), r = 0, o = 0; o < e; o++)
         for (var n = 0; n < e; n++) {
-          for (var i = 0, a = t.isDark(o, n), u = -1; u <= 1; u++)
+          for (var i = 0, a = t.isDark(o, n), u = -1; u <= 1; u++) {
             if (!(o + u < 0) && !(e <= o + u))
               for (var s = -1; s <= 1; s++) {
-                if (!(n + s < 0) && !(e <= n + s))(0 != u || 0 != s) && a == t.isDark(o + u, n + s) && i++
+                if (!(n + s < 0) && !(e <= n + s) && (0 != u || 0 != s)) a == t.isDark(o + u, n + s) && i++
               }
+          }
           i > 5 && (r += 3 + i - 5)
         }
       for (var o = 0; o < e - 1; o++)

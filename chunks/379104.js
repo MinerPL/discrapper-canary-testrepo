@@ -1,4 +1,4 @@
-var r = n("829132");
+var r = n(829132);
 
 function i(e) {
   this.data = e, this.left = null, this.right = null, this.red = !0

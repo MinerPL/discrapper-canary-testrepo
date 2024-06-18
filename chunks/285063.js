@@ -1,25 +1,25 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return o
+n.d(t, {
+  Z: function() {
+    return a
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("481060"),
-  s = n("916752"),
-  a = n("931093");
+var i = n(735250);
+n(470079);
+var r = n(481060),
+  s = n(916752),
+  o = n(946278);
 
-function o(e) {
+function a(e) {
   let {
     node: t
-  } = e, n = (0, s.default)(t);
+  } = e, n = (0, s.Z)(t);
   return (0, i.jsx)(r.Tooltip, {
     text: t.full,
-    tooltipClassName: a.timestampTooltip,
+    tooltipClassName: o.timestampTooltip,
     children: e => (0, i.jsx)("span", {
       ...e,
-      className: a.timestamp,
+      className: o.timestamp,
       children: n
     })
   })

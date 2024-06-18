@@ -1,7 +1,7 @@
 "use strict";
-var e = n("581031"),
-  o = n("354848"),
-  i = n("801127"),
+var e = n(581031),
+  o = n(354848),
+  i = n(801127),
   u = e(Function.toString);
 !o(i.inspectSource) && (i.inspectSource = function(t) {
   return u(t)

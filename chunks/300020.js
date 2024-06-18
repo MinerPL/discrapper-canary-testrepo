@@ -1,27 +1,27 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return s
   }
 });
-var i = n("616922"),
-  r = n("689938");
+var i = n(616922),
+  r = n(689938);
 
 function s(e, t) {
   switch (t) {
-    case i.SpotifyActionTypes.USER_ACTIVITY_PLAY:
-      return e.hasSpotifyAccount ? r.default.Messages.USER_ACTIVITY_PLAY_ON_PLATFORM.format({
-        platform: i.SPOTIFY_PLATFORM_NAME
-      }) : r.default.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
-        platform: i.SPOTIFY_PLATFORM_NAME
+    case i.kG.USER_ACTIVITY_PLAY:
+      return e.hasSpotifyAccount ? r.Z.Messages.USER_ACTIVITY_PLAY_ON_PLATFORM.format({
+        platform: i.ai
+      }) : r.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
+        platform: i.ai
       });
-    case i.SpotifyActionTypes.EMBED_SYNC:
-      if (!e.hasSpotifyAccount) return r.default.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
-        platform: i.SPOTIFY_PLATFORM_NAME
+    case i.kG.EMBED_SYNC:
+      if (!e.hasSpotifyAccount) return r.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
+        platform: i.ai
       });
-      if (e.syncingWithUser || e.syncingWithParty) return r.default.Messages.INVITE_EMBED_JOINED;
-      return r.default.Messages.JOIN;
-    case i.SpotifyActionTypes.USER_ACTIVITY_SYNC:
+      if (e.syncingWithUser || e.syncingWithParty) return r.Z.Messages.INVITE_EMBED_JOINED;
+      return r.Z.Messages.JOIN;
+    case i.kG.USER_ACTIVITY_SYNC:
     default:
       return
   }

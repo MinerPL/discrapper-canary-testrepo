@@ -1,10 +1,9 @@
 "use strict";
-n.r(t);
-var i, r, s, a, o = n("442837"),
-  l = n("902704"),
-  u = n("570140");
-let d = {},
-  _ = {},
+var i, r, s, o, a = n(442837),
+  l = n(902704),
+  u = n(570140);
+let _ = {},
+  d = {},
   c = {
     scrollTop: 0
   };
@@ -18,33 +17,33 @@ function E(e) {
 }
 
 function I(e) {
-  if (null != d[e]) {
+  if (null != _[e]) {
     let {
       scrollTop: t,
       scrollHeight: n,
       offsetHeight: i
-    } = d[e];
+    } = _[e];
     return t === n - i
   }
   return !0
 }
-class T extends(a = o.default.Store) {
+class T extends(o = a.ZP.Store) {
   percentageScrolled(e) {
-    if (null != d[e]) {
+    if (null != _[e]) {
       let {
         scrollTop: t,
         scrollHeight: n
-      } = d[e];
+      } = _[e];
       return t / n
     }
     return 1
   }
   getChannelDimensions(e) {
-    return d[e]
+    return _[e]
   }
   getGuildDimensions(e) {
     var t;
-    return null !== (t = _[e]) && void 0 !== t ? t : E(e)
+    return null !== (t = d[e]) && void 0 !== t ? t : E(e)
   }
   getGuildListDimensions() {
     return c
@@ -58,17 +57,17 @@ s = "DimensionStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new T(u.default, {
+}) : i[r] = s, t.Z = new T(u.Z, {
   UPDATE_CHANNEL_DIMENSIONS: function(e) {
     let {
       channelId: t,
       scrollTop: n,
       scrollHeight: i,
       offsetHeight: r
-    } = e, s = d[t];
+    } = e, s = _[t];
     if (null == n || null == i || null == r) {
       if (null == s) return !1;
-      delete d[t]
+      delete _[t]
     } else {
       let e = {
         channelId: t,
@@ -76,8 +75,8 @@ s = "DimensionStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r
         scrollHeight: i,
         offsetHeight: r
       };
-      if (null != s && (0, l.default)(s, e)) return !1;
-      d[t] = e
+      if (null != s && (0, l.Z)(s, e)) return !1;
+      _[t] = e
     }
   },
   UPDATE_CHANNEL_LIST_DIMENSIONS: function(e) {
@@ -86,9 +85,9 @@ s = "DimensionStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r
       scrollTop: n,
       scrollTo: i
     } = e;
-    null == _[t] && (_[t] = E(t)), void 0 !== n && (_[t].scrollTop = n);
+    null == d[t] && (d[t] = E(t)), void 0 !== n && (d[t].scrollTop = n);
     let r = !1;
-    return void 0 !== i && (r = _[t].scrollTo !== i, _[t].scrollTo = i), null != i || r
+    return void 0 !== i && (r = d[t].scrollTo !== i, d[t].scrollTo = i), null != i || r
   },
   UPDATE_GUILD_LIST_DIMENSIONS: function(e) {
     let {
@@ -100,6 +99,6 @@ s = "DimensionStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r
     let {
       channelId: t
     } = e;
-    I(t) && delete d[t]
+    I(t) && delete _[t]
   }
 })

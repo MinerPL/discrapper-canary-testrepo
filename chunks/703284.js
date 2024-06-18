@@ -1,3 +1,3 @@
-t.exports = function(t, e) {
-  return t === e || t != t && e != e
+t.exports = function(t, r) {
+  return t === r || t != t && r != r
 }

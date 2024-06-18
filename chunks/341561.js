@@ -1,42 +1,41 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("952265"),
-  a = n("285651"),
-  s = n("268350"),
-  o = n("926491"),
-  l = n("373228"),
-  u = n("419922"),
-  d = n("430824"),
-  _ = n("156361"),
-  c = n("483360"),
-  E = n("877565"),
-  I = n("590921"),
-  T = n("665692"),
-  f = n("981631"),
-  S = n("689938"),
-  h = n("230706");
+var i = n(735250);
+n(470079);
+var r = n(952265),
+  s = n(285651),
+  o = n(268350),
+  a = n(926491),
+  l = n(373228),
+  u = n(419922),
+  _ = n(430824),
+  d = n(156361),
+  c = n(483360),
+  E = n(877565),
+  I = n(590921),
+  T = n(665692),
+  h = n(981631),
+  S = n(689938),
+  f = n(573198);
 
-function A(e, t) {
-  return (0, i.jsx)(u.default, {
+function N(e, t) {
+  return (0, i.jsx)(u.ZP, {
     sticker: e,
     isInteracting: t,
     size: 40
   })
 }
-let m = {
-  sentinel: T.EMOJI_SENTINEL,
-  stores: [o.default],
+let A = {
+  sentinel: T.Iv,
+  stores: [a.Z],
   matches: (e, t, n, i, r) => n.length > 1,
   queryResults(e, t, n, i, r) {
-    let o = i.allowStickers ? 0 : 40,
-      l = f.MAX_AUTOCOMPLETE_RESULTS + o,
+    let a = i.allowStickers ? 0 : 40,
+      l = h.rnv + a,
       {
         emojis: {
           unlocked: u
         }
-      } = c.default.queryEmojiResults({
+      } = c.ZP.queryEmojiResults({
         query: n,
         channel: e,
         intention: i.emojiIntention,
@@ -46,24 +45,24 @@ let m = {
       var t;
       return null === (t = e.names) || void 0 === t ? void 0 : t.includes(n)
     }));
-    let d = [];
+    let _ = [];
     if (i.allowStickers) {
-      (0, s.fetchStickerPacks)();
-      let t = c.default.queryStickers([n], !0, [e, (e, t) => t === a.StickerSendability.SENDABLE]),
+      (0, o.$p)();
+      let t = c.ZP.queryStickers([n], !0, [e, (e, t) => t === s.eb.SENDABLE]),
         i = Math.max(4, 8 - u.length);
-      d = t.slice(0, i), "-" === n[0] && (d = t.filter(e => e.sticker.name === n))
+      _ = t.slice(0, i), "-" === n[0] && (_ = t.filter(e => e.sticker.name === n))
     }
-    let _ = u.slice(0, l - d.length);
+    let d = u.slice(0, l - _.length);
     return {
       results: {
-        emojis: _,
+        emojis: d,
         emojisLocked: [],
-        stickers: d
+        stickers: _
       },
       metadata: {
-        numEmojiResults: _.length,
+        numEmojiResults: d.length,
         numLockedEmojiResults: 0,
-        numStickerResults: d.length
+        numStickerResults: _.length
       }
     }
   },
@@ -71,50 +70,50 @@ let m = {
     let {
       results: {
         emojis: t,
-        stickers: a,
-        emojisLocked: s
+        stickers: s,
+        emojisLocked: o
       },
-      selectedIndex: o,
+      selectedIndex: a,
       query: l,
       onHover: u,
       onClick: c
     } = e;
     return (0, i.jsxs)(i.Fragment, {
-      children: [(0, E.renderAutocompleteGroup)({
+      children: [(0, E.HI)({
         query: l,
-        selectedIndex: o,
+        selectedIndex: a,
         autocompletes: t,
         onHover: u,
         onClick: c,
-        titleWithQuery: S.default.Messages.EMOJI_MATCHING,
-        titleWithoutQuery: S.default.Messages.EMOJI,
-        Component: _.default.Emoji,
+        titleWithQuery: S.Z.Messages.EMOJI_MATCHING,
+        titleWithoutQuery: S.Z.Messages.EMOJI,
+        Component: d.ZP.Emoji,
         getProps: e => ({
           emoji: e,
           key: e.id || e.uniqueName || e.name,
-          sentinel: T.EMOJI_SENTINEL,
-          guild: null != e.guildId ? d.default.getGuild(e.guildId) : null
+          sentinel: T.Iv,
+          guild: null != e.guildId ? _.Z.getGuild(e.guildId) : null
         }),
-        getQuery: e => "".concat(T.EMOJI_SENTINEL).concat(e),
+        getQuery: e => "".concat(T.Iv).concat(e),
         key: "emoji"
-      }), s.length > 0 ? (0, E.renderAutocompleteGroup)({
+      }), o.length > 0 ? (0, E.HI)({
         query: l,
-        selectedIndex: o,
-        autocompletes: s,
+        selectedIndex: a,
+        autocompletes: o,
         onHover: u,
         onClick: () => {
-          (0, r.openModalLazy)(async () => {
+          (0, r.ZD)(async () => {
             let {
               default: e
-            } = await Promise.all([n.e("99387"), n.e("9766")]).then(n.bind(n, "889684"));
+            } = await Promise.all([n.e("99387"), n.e("9766")]).then(n.bind(n, 889684));
             return t => (0, i.jsx)(e, {
               ...t
             })
           })
         },
-        titleWithQuery: 0 === t.length ? S.default.Messages.EMOJI_MATCHING : null,
-        titleWithoutQuery: 0 === t.length ? S.default.Messages.EMOJI : null,
-        Component: _.default.EmojiUpsell,
+        titleWithQuery: 0 === t.length ? S.Z.Messages.EMOJI_MATCHING : null,
+        titleWithoutQuery: 0 === t.length ? S.Z.Messages.EMOJI : null,
+        Component: d.ZP.EmojiUpsell,
         getProps: e => {
           let {
             emojis: t
@@ -124,27 +123,27 @@ let m = {
             emojis: t
           }
         },
-        getQuery: e => "".concat(T.EMOJI_SENTINEL).concat(e),
+        getQuery: e => "".concat(T.Iv).concat(e),
         key: "emoji-upsell",
         indexOffset: t.length
-      }) : null, (t.length > 0 || s.length > 0) && a.length > 0 && (0, i.jsx)(_.default.Divider, {
-        className: h.emojiStickersDivider
-      }), (0, E.renderAutocompleteGroup)({
+      }) : null, (t.length > 0 || o.length > 0) && s.length > 0 && (0, i.jsx)(d.ZP.Divider, {
+        className: f.emojiStickersDivider
+      }), (0, E.HI)({
         query: l,
-        selectedIndex: o,
-        autocompletes: a,
+        selectedIndex: a,
+        autocompletes: s,
         onHover: u,
         onClick: c,
-        titleWithQuery: S.default.Messages.STICKERS_MATCHING,
-        titleWithoutQuery: S.default.Messages.STICKER,
-        Component: _.default.Sticker,
+        titleWithQuery: S.Z.Messages.STICKERS_MATCHING,
+        titleWithoutQuery: S.Z.Messages.STICKER,
+        Component: d.ZP.Sticker,
         getProps: e => {
           let {
             comparator: t,
             sticker: n
           } = e;
           return {
-            renderSticker: A,
+            renderSticker: N,
             queryMatch: t !== n.name.toLocaleLowerCase() ? t : void 0,
             sticker: n,
             key: n.id
@@ -152,8 +151,8 @@ let m = {
         },
         getQuery: e => e,
         key: "stickers",
-        indexOffset: t.length + s.length,
-        headerClassName: t.length > 0 ? h.stickersHeaderWithEmojiResults : void 0
+        indexOffset: t.length + o.length,
+        headerClassName: t.length > 0 ? f.stickersHeaderWithEmojiResults : void 0
       })]
     })
   },
@@ -165,18 +164,18 @@ let m = {
         stickers: i
       },
       index: r,
-      options: a
+      options: s
     } = e;
     if (r < t.length) {
       let e = t[r];
-      return a.insertText(function(e) {
-        return "".concat(T.EMOJI_SENTINEL).concat(e.name).concat(T.EMOJI_SENTINEL)
+      return s.insertText(function(e) {
+        return "".concat(T.Iv).concat(e.name).concat(T.Iv)
       }(e), function(e) {
         var t;
         let n = e.animated ? "a" : "";
-        return e.managed || null == e.id ? "".concat(T.EMOJI_SENTINEL).concat(e.name).concat(T.EMOJI_SENTINEL) : "<".concat(n, ":").concat(null !== (t = e.originalName) && void 0 !== t ? t : e.name, ":").concat(e.id, ">")
+        return e.managed || null == e.id ? "".concat(T.Iv).concat(e.name).concat(T.Iv) : "<".concat(n, ":").concat(null !== (t = e.originalName) && void 0 !== t ? t : e.name, ":").concat(e.id, ">")
       }(e)), {
-        type: I.AutocompleteSelectionTypes.EMOJI,
+        type: I.z2.EMOJI,
         metadata: {
           emojiId: e.id,
           numEmojiResults: t.length,
@@ -192,8 +191,8 @@ let m = {
     };
     if ((r -= n.length) < i.length) {
       let e = i[r];
-      return a.insertText(""), a.sendSticker(e.sticker, l.StickerSelectLocation.AUTOCOMPLETE), {
-        type: I.AutocompleteSelectionTypes.STICKER,
+      return s.insertText(""), s.sendSticker(e.sticker, l.V0.AUTOCOMPLETE), {
+        type: I.z2.STICKER,
         metadata: {
           numEmojiResults: t.length,
           numStickerResults: i.length,
@@ -206,4 +205,4 @@ let m = {
     }
   }
 };
-t.default = m
+t.Z = A

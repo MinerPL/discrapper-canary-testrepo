@@ -1,29 +1,29 @@
 "use strict";
-n.r(t), n.d(t, {
-  QUEST_COMPLETED_BADGE: function() {
-    return l
+n.d(t, {
+  Z: function() {
+    return _
   },
-  default: function() {
-    return d
+  i: function() {
+    return l
   }
 });
-var i = n("399606"),
-  r = n("695346"),
-  a = n("246946"),
-  s = n("594174"),
-  o = n("689938");
+var i = n(399606),
+  r = n(695346),
+  s = n(246946),
+  o = n(594174),
+  a = n(689938);
 let l = "quest_completed",
   u = "legacy_username";
 
-function d(e) {
+function _(e) {
   var t;
-  let n = r.LegacyUsernameDisabled.useSetting(),
-    l = (0, i.useStateFromStores)([s.default], () => s.default.getCurrentUser()),
-    d = (0, i.useStateFromStores)([a.default], () => a.default.hidePersonalInformation);
+  let n = r.R_.useSetting(),
+    l = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
+    _ = (0, i.e7)([s.Z], () => s.Z.hidePersonalInformation);
   if (null == e) return [];
-  let _ = null !== (t = null == e ? void 0 : e.getBadges()) && void 0 !== t ? t : [];
-  return null != l && l.id === e.userId && n && (_ = _.filter(e => e.id !== u)), d && (_ = _.map(e => ({
+  let d = null !== (t = null == e ? void 0 : e.getBadges()) && void 0 !== t ? t : [];
+  return null != l && l.id === e.userId && n && (d = d.filter(e => e.id !== u)), _ && (d = d.map(e => ({
     ...e,
-    description: e.id === u ? o.default.Messages.STREAMER_MODE_ENABLED : e.description
-  }))), _
+    description: e.id === u ? a.Z.Messages.STREAMER_MODE_ENABLED : e.description
+  }))), d
 }

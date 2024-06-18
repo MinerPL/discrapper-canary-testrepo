@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-t.default = function() {
+t.Z = function() {
   for (var e, t, n = 0, r = "", i = arguments.length; n < i; n++)(e = arguments[n]) && (t = function e(t) {
     var n, r, i = "";
     if ("string" == typeof t || "number" == typeof t) i += t;

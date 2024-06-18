@@ -1,35 +1,34 @@
 "use strict";
-n.r(t);
-var i = n("735250"),
-  r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
-  o = n("695464"),
-  l = n("28546"),
-  u = n("981631"),
-  d = n("479877");
-let _ = e => {
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(695464),
+  l = n(28546),
+  u = n(981631),
+  _ = n(425565);
+let d = e => {
   let {
     activeIndex: t,
     categoryListRef: n,
     getScrollOffsetForIndex: i
-  } = e, s = r.useRef(u.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID), a = r.useRef(t);
+  } = e, s = r.useRef(u.xAR), o = r.useRef(t);
   return r.useEffect(() => {
-    null != t && t !== a.current && (s.current !== u.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID && window.cancelAnimationFrame(s.current), s.current = window.requestAnimationFrame(() => {
+    null != t && t !== o.current && (s.current !== u.xAR && window.cancelAnimationFrame(s.current), s.current = window.requestAnimationFrame(() => {
       var e;
       if (null == n.current) return;
-      let r = t > (null !== (e = a.current) && void 0 !== e ? e : -1),
-        o = null != i ? i(t, r) : 0;
+      let r = t > (null !== (e = o.current) && void 0 !== e ? e : -1),
+        a = null != i ? i(t, r) : 0;
       n.current.scrollRowIntoView(t, {
         animate: !0,
-        offset: o
-      }), s.current = u.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID, a.current = t
+        offset: a
+      }), s.current = u.xAR, o.current = t
     }))
   }, [t, n, i]), {
     categoryListRef: n
   }
 };
-t.default = function(e) {
+t.Z = function(e) {
   let {
     categoryListRef: t,
     expressionsListRef: n,
@@ -39,42 +38,42 @@ t.default = function(e) {
     className: E,
     listPadding: I,
     rowCount: T,
-    getScrollOffsetForIndex: f,
+    getScrollOffsetForIndex: h,
     categoryHeight: S,
-    onScroll: h,
-    renderCategoryListItem: A,
-    rowCountBySection: m,
-    renderSection: N
+    onScroll: f,
+    renderCategoryListItem: N,
+    rowCountBySection: A,
+    renderSection: m
   } = e, O = u.useStore(e => e.activeCategoryIndex);
-  _({
+  d({
     activeIndex: O,
     categoryListRef: t,
-    getScrollOffsetForIndex: f
+    getScrollOffsetForIndex: h
   });
-  let p = r.useCallback(e => {
+  let R = r.useCallback(e => {
       let {
         searchQuery: t
-      } = l.useExpressionPickerStore.getState();
-      if (u.setActiveCategoryIndex(e), "" !== t)(0, l.setSearchQuery)("");
+      } = l.Iu.getState();
+      if (u.setActiveCategoryIndex(e), "" !== t)(0, l.ql)("");
       else {
         var i;
         null === (i = n.current) || void 0 === i || i.scrollToSectionTop(e)
       }
     }, [n, u]),
-    R = r.useCallback(e => A(s[e], e, () => p(e), O === e), [O, s, p, A]),
-    C = r.useMemo(() => "function" == typeof S ? e => S(s[e], e) : S, [s, S]);
+    C = r.useCallback(e => N(s[e], e, () => R(e), O === e), [O, s, R, N]),
+    p = r.useMemo(() => "function" == typeof S ? e => S(s[e], e) : S, [s, S]);
   return (0, i.jsxs)("div", {
-    className: a()(d.wrapper, E),
-    children: [(0, i.jsx)(o.default, {
+    className: o()(_.wrapper, E),
+    children: [(0, i.jsx)(a.Z, {
       listPadding: I,
-      onScroll: h,
+      onScroll: f,
       ref: t,
-      renderRow: R,
+      renderRow: C,
       rowCount: T,
-      rowHeight: C,
+      rowHeight: p,
       hideScrollbar: !0,
-      rowCountBySection: m,
-      renderSection: N
-    }), null == c ? void 0 : c(p)]
+      rowCountBySection: A,
+      renderSection: m
+    }), null == c ? void 0 : c(R)]
   })
 }

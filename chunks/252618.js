@@ -1,33 +1,33 @@
 "use strict";
-n.r(t), n.d(t, {
-  AppPageTitle: function() {
-    return E
+n.d(t, {
+  EM: function() {
+    return _
   },
-  flashPageTitle: function() {
-    return d
-  },
-  setPageTitleNotificationCount: function() {
+  PR: function() {
     return u
   },
-  usePageTitle: function() {
+  Tt: function() {
     return c
   },
-  usePageTitleManager: function() {
+  ZD: function() {
     return I
-  }
-}), n("47120");
-var i = n("470079"),
-  r = n("652874");
-let s = {
-    base: n("358085").isPlatformEmbedded ? void 0 : "Discord"
   },
-  a = 0,
-  o = {
+  yY: function() {
+    return E
+  }
+}), n(47120);
+var i = n(470079),
+  r = n(652874);
+let s = {
+    base: n(358085).isPlatformEmbedded ? void 0 : "Discord"
+  },
+  o = 0,
+  a = {
     count: 3,
     onlyWhenBlurred: !1,
     interval: 1e3
   },
-  l = (0, r.default)(() => ({
+  l = (0, r.Z)(() => ({
     titles: [s],
     notificationCount: void 0,
     flashQueue: []
@@ -39,18 +39,18 @@ function u(e) {
   })
 }
 
-function d(e) {
+function _(e) {
   let t = {
-    ...o,
+    ...a,
     ...e,
-    id: a++
+    id: o++
   };
   return t.count = Math.max(t.count, t.messages.length), l.setState(e => ({
     flashQueue: [...e.flashQueue, t]
-  })), () => _(t.id)
+  })), () => d(t.id)
 }
 
-function _(e) {
+function d(e) {
   l.setState(t => ({
     flashQueue: t.flashQueue.filter(t => t.id !== e)
   }))
@@ -107,28 +107,28 @@ function I() {
         return null == t || 0 === t ? "" : t < 0 ? "• " : "(".concat(t, ") ")
       }(e);
       return ["".concat(i).concat(n), t[0]]
-    }), [n, r] = i.useState(!1), s = i.useRef(0), a = null == t ? void 0 : t.messages[s.current % t.messages.length];
+    }), [n, r] = i.useState(!1), s = i.useRef(0), o = null == t ? void 0 : t.messages[s.current % t.messages.length];
     return i.useEffect(() => {
       if (null == t) {
         s.current = 0, r(!1);
         return
       }
       if (document.hasFocus() && t.onlyWhenBlurred) {
-        _(t.id), r(!1);
+        d(t.id), r(!1);
         return
       }
       let e = setInterval(() => {
         if (s.current >= t.count) {
-          _(t.id), r(!1);
+          d(t.id), r(!1);
           return
         }
         r(e => !e || (s.current += 1, !1))
       }, t.interval);
       return () => clearInterval(e)
-    }, [t]), n ? a : e
+    }, [t]), n ? o : e
   }();
   i.useEffect(() => {
     let n = t === s.base;
-    (!e || !n) && (document.title = t)
+    if (!e || !n) document.title = t
   }, [e, t])
 }

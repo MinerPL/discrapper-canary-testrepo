@@ -9,17 +9,17 @@ function i(e, t, n) {
   }) : e[t] = n, e
 }
 async function r(e) {
-  let t = new a,
+  let t = new s,
     n = [];
   for (let i of Object.keys(e)) n.push(t.loadRemoteImage(i, e[i]));
   return await Promise.all(n), t
 }
-n.r(t), n.d(t, {
-  loadAssetMap: function() {
+n.d(t, {
+  k2: function() {
     return r
   }
-}), n("653041"), n("47120");
-class a {
+}), n(653041), n(47120);
+class s {
   loadFonts() {
     return Promise.resolve()
   }

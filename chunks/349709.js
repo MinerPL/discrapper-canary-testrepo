@@ -1,94 +1,94 @@
 "use strict";
-t.r(l), t.d(l, {
-  default: function() {
-    return L
+t.d(n, {
+  Z: function() {
+    return _
   }
 });
-var a = t("735250"),
-  s = t("470079"),
-  i = t("803997"),
-  n = t.n(i),
-  o = t("442837"),
-  u = t("481060"),
-  d = t("596454"),
-  r = t("225433"),
-  c = t("727637"),
-  m = t("907040"),
-  I = t("984933"),
-  f = t("401227"),
-  _ = t("903749"),
-  E = t("185923"),
-  T = t("689938"),
-  g = t("253613");
+var l = t(735250),
+  a = t(470079),
+  s = t(120356),
+  i = t.n(s),
+  r = t(442837),
+  u = t(481060),
+  o = t(596454),
+  c = t(225433),
+  d = t(727637),
+  f = t(907040),
+  m = t(984933),
+  h = t(401227),
+  g = t(903749),
+  p = t(185923),
+  N = t(689938),
+  v = t(328452);
 
-function L(e) {
+function _(e) {
   let {
-    className: l,
+    className: n,
     guildId: t,
-    error: i,
-    emojiId: L,
-    emojiName: S,
-    isRequiredField: v = !0,
-    shouldUpdateBothEmojiFields: D = !1,
-    setEmojiId: p,
-    setEmojiName: x
-  } = e, C = (0, _.default)({
-    emojiId: L,
-    emojiName: S
-  }), R = (0, o.useStateFromStores)([I.default], () => null != t ? I.default.getDefaultChannel(t) : null), j = s.createRef(), h = (0, c.default)(j), U = () => {
-    x(void 0), p(void 0)
-  }, A = e => (l, t) => {
-    let a = (null == l ? void 0 : l.id) == null;
-    U(), a ? x(null == l ? void 0 : l.optionallyDiverseSequence) : (D && x(null == l ? void 0 : l.name), p(null == l ? void 0 : l.id)), t && e()
-  }, N = e => {
-    e.stopPropagation(), U()
+    error: s,
+    emojiId: _,
+    emojiName: D,
+    isRequiredField: O = !0,
+    shouldUpdateBothEmojiFields: x = !1,
+    setEmojiId: S,
+    setEmojiName: E
+  } = e, y = (0, g.Z)({
+    emojiId: _,
+    emojiName: D
+  }), A = (0, r.e7)([m.ZP], () => null != t ? m.ZP.getDefaultChannel(t) : null), b = a.createRef(), M = (0, d.Z)(b), j = () => {
+    E(void 0), S(void 0)
+  }, w = e => (n, t) => {
+    let l = (null == n ? void 0 : n.id) == null;
+    j(), l ? E(null == n ? void 0 : n.optionallyDiverseSequence) : (x && E(null == n ? void 0 : n.name), S(null == n ? void 0 : n.id)), t && e()
+  }, C = e => {
+    e.stopPropagation(), j()
   };
-  return (0, a.jsx)(u.FormItem, {
-    required: v,
-    title: T.default.Messages.GUILD_STICKER_UPLOAD_RELATED_EMOJI_TITLE,
-    className: n()(l, g.section),
-    error: i,
-    children: (0, a.jsx)(u.Popout, {
+  return (0, l.jsx)(u.FormItem, {
+    required: O,
+    title: N.Z.Messages.GUILD_STICKER_UPLOAD_RELATED_EMOJI_TITLE,
+    className: i()(n, v.section),
+    error: s,
+    children: (0, l.jsx)(u.Popout, {
       animation: u.Popout.Animation.NONE,
       position: "top",
       renderPopout: e => {
         let {
-          closePopout: l
+          closePopout: n
         } = e;
-        return (0, a.jsx)(m.default, {
-          closePopout: l,
-          pickerIntention: E.EmojiIntention.SOUNDBOARD,
-          onNavigateAway: l,
-          onSelectEmoji: A(l),
+        return (0, l.jsx)(f.Z, {
+          closePopout: n,
+          pickerIntention: p.Hz.SOUNDBOARD,
+          onNavigateAway: n,
+          onSelectEmoji: w(n),
           guildId: t,
-          channel: R
+          channel: A
         })
       },
-      children: (e, l) => {
+      children: (e, n) => {
         let {
           isShown: t
-        } = l;
-        return (0, a.jsxs)("div", {
+        } = n;
+        return (0, l.jsxs)("div", {
           ...e,
-          className: g.emojiInput,
-          ref: j,
-          children: [(0, a.jsx)(f.default, {
-            className: g.emojiButton,
+          className: v.emojiInput,
+          ref: b,
+          children: [(0, l.jsx)(h.Z, {
+            className: v.emojiButton,
             active: t,
             tabIndex: 0,
-            renderButtonContents: null != L || null != S ? () => (0, a.jsx)(d.default, {
-              emojiName: S,
-              emojiId: L
+            renderButtonContents: null != _ || null != D ? () => (0, l.jsx)(o.Z, {
+              emojiName: D,
+              emojiId: _
             }) : null
-          }), (0, a.jsx)(u.TextInput, {
-            inputClassName: g.emojiText,
-            placeholder: T.default.Messages.GUILD_STICKER_UPLOAD_RELATED_EMOJI_PLACEHOLDER,
-            value: null != C ? ":".concat(C, ":") : "",
+          }), (0, l.jsx)(u.TextInput, {
+            inputClassName: v.emojiText,
+            placeholder: N.Z.Messages.GUILD_STICKER_UPLOAD_RELATED_EMOJI_PLACEHOLDER,
+            value: null != y ? ":".concat(y, ":") : "",
             readOnly: !0
-          }), h && null != C && (0, a.jsx)(r.default, {
+          }), M && null != y && (0, l.jsx)(c.Z, {
             ...e,
-            onClick: N,
-            className: g.removeButton
+            onClick: C,
+            className: v.removeButton
           })]
         })
       }

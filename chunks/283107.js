@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  ClanBadgeLava: function() {
+n.d(t, {
+  x: function() {
     return c
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("331595"),
-  a = n("249849");
-let s = ["#ba3500", "#fd6214", "#ffb84b", "#f0f0f0"],
-  o = ["#35363a", "#57595f", "#d8d8d8"],
+var i = n(735250);
+n(470079);
+var r = n(331595),
+  s = n(249849);
+let o = ["#ba3500", "#fd6214", "#ffb84b", "#f0f0f0"],
+  a = ["#35363a", "#57595f", "#d8d8d8"],
   l = [.05, .15, .4, .9],
   u = [{
     base: 8,
@@ -24,8 +24,8 @@ let s = ["#ba3500", "#fd6214", "#ffb84b", "#f0f0f0"],
     base: 8,
     tint: 1
   }],
-  d = [.05, .3, .95],
-  _ = [{
+  _ = [.05, .3, .95],
+  d = [{
     base: 2,
     tint: 1
   }, {
@@ -44,19 +44,19 @@ let s = ["#ba3500", "#fd6214", "#ffb84b", "#f0f0f0"],
       ...I
     } = e, {
       primaryColorsTransformed: T,
-      secondaryColorsTransformed: f
-    } = (0, a.getTransformedBadgeColors)({
-      primaryBaseColors: s,
+      secondaryColorsTransformed: h
+    } = (0, s.s)({
+      primaryBaseColors: o,
       primaryTintColor: c,
       primaryTintLuminances: l,
       primaryLuminanceWeights: u,
-      secondaryBaseColors: o,
+      secondaryBaseColors: a,
       secondaryTintColor: E,
-      secondaryTintLuminances: d,
-      secondaryLuminanceWeights: _
+      secondaryTintLuminances: _,
+      secondaryLuminanceWeights: d
     });
     return (0, i.jsxs)("svg", {
-      ...(0, r.default)(I),
+      ...(0, r.Z)(I),
       width: t,
       height: n,
       viewBox: "0 0 16 16",
@@ -70,13 +70,13 @@ let s = ["#ba3500", "#fd6214", "#ffb84b", "#f0f0f0"],
         fill: "#000"
       }), (0, i.jsx)("path", {
         d: "M6 3H5v1h1V3ZM5 4H4v1h1V4ZM13 3h-1v1h1V3ZM12 4h-1v1h1V4ZM13 10h-1v1h1v-1ZM12 11h-1v1h1v-1ZM6 10H5v1h1v-1ZM5 11H4v1h1v-1Z",
-        fill: f[1]
+        fill: h[1]
       }), (0, i.jsx)("path", {
         d: "M10 1H9v1h1V1ZM1 7H0v2h1V7Z",
         fill: "#000"
       }), (0, i.jsx)("path", {
         d: "M5 4v1H3v1h3V4H5ZM12 4v1h-2v1h3V4h-1ZM5 11v1H3v1h3v-2H5ZM12 11v1h-2v1h3v-2h-1Z",
-        fill: f[0]
+        fill: h[0]
       }), (0, i.jsx)("path", {
         d: "M2 9H1v1h1V9ZM2 6H1v1h1V6ZM16 7h-1v2h1V7Z",
         fill: "#000"
@@ -112,7 +112,7 @@ let s = ["#ba3500", "#fd6214", "#ffb84b", "#f0f0f0"],
         fill: T[0]
       }), (0, i.jsx)("path", {
         d: "M5 3H3v2h1V4h1V3ZM12 3h-2v2h1V4h1V3ZM5 10H3v2h1v-1h1v-1ZM12 10h-2v2h1v-1h1v-1Z",
-        fill: f[2]
+        fill: h[2]
       }), (0, i.jsx)("path", {
         d: "M9 5V4H8V2H7v3h2ZM9 6H8v1H7v1H6v1h1v2h1v3h1v-4H8V8h2V7H9V6ZM14 7h-1v1h1V7Z",
         fill: T[1]

@@ -1,31 +1,31 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return o
+n.d(t, {
+  Z: function() {
+    return a
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("112560"),
-  s = n("285952"),
-  a = n("584506");
+var i = n(735250);
+n(470079);
+var r = n(112560),
+  s = n(285952),
+  o = n(850928);
 
-function o(e) {
+function a(e) {
   let {
     mainText: t,
     supportingText: n,
-    children: o,
+    children: a,
     size: l
   } = e;
-  return (0, i.jsxs)(s.default, {
-    className: a.root,
-    justify: s.default.Justify.CENTER,
-    align: s.default.Align.CENTER,
-    direction: s.default.Direction.VERTICAL,
-    children: [(0, i.jsx)(r.default, {
+  return (0, i.jsxs)(s.Z, {
+    className: o.root,
+    justify: s.Z.Justify.CENTER,
+    align: s.Z.Align.CENTER,
+    direction: s.Z.Direction.VERTICAL,
+    children: [(0, i.jsx)(r.Z, {
       header: t,
       description: n,
       size: l
-    }), o]
+    }), a]
   })
 }

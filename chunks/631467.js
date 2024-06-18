@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-t.default = {
+t.Z = {
   HANDSHAKE: 0,
   FRAME: 1,
   CLOSE: 2,

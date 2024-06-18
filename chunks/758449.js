@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return o
+n.d(t, {
+  Z: function() {
+    return a
   }
-}), n("789020");
-var i = n("913527"),
+}), n(789020);
+var i = n(913527),
   r = n.n(i),
-  s = n("81825");
+  s = n(81825);
 
-function a(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -16,10 +16,10 @@ function a(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class o extends s.default {
+class a extends s.Z {
   static createFromServer(e) {
     var t;
-    return new o({
+    return new a({
       ...e,
       maxUses: e.max_uses,
       maxAge: e.max_age,
@@ -40,6 +40,6 @@ class o extends s.default {
     return this.code
   }
   constructor(e) {
-    super(), a(this, "code", void 0), a(this, "temporary", void 0), a(this, "revoked", void 0), a(this, "uses", void 0), a(this, "maxUses", void 0), a(this, "maxAge", void 0), a(this, "createdAt", void 0), a(this, "channel", void 0), a(this, "guild", void 0), a(this, "inviter", void 0), a(this, "targetType", void 0), a(this, "targetUser", void 0), a(this, "targetApplication", void 0), a(this, "type", void 0), a(this, "flags", void 0), this.code = e.code || "", this.temporary = e.temporary || !1, this.revoked = e.revoked || !1, this.uses = e.uses || 0, this.maxUses = e.maxUses || 0, this.maxAge = e.maxAge || 0, this.createdAt = e.createdAt || new Date, this.channel = e.channel, this.guild = e.guild, this.inviter = e.inviter || null, this.targetType = e.targetType || null, this.targetUser = e.targetUser || null, this.targetApplication = e.targetApplication || null, this.type = e.type || null, this.flags = e.flags || 0
+    super(), o(this, "code", void 0), o(this, "temporary", void 0), o(this, "revoked", void 0), o(this, "uses", void 0), o(this, "maxUses", void 0), o(this, "maxAge", void 0), o(this, "createdAt", void 0), o(this, "channel", void 0), o(this, "guild", void 0), o(this, "inviter", void 0), o(this, "targetType", void 0), o(this, "targetUser", void 0), o(this, "targetApplication", void 0), o(this, "type", void 0), o(this, "flags", void 0), this.code = e.code || "", this.temporary = e.temporary || !1, this.revoked = e.revoked || !1, this.uses = e.uses || 0, this.maxUses = e.maxUses || 0, this.maxAge = e.maxAge || 0, this.createdAt = e.createdAt || new Date, this.channel = e.channel, this.guild = e.guild, this.inviter = e.inviter || null, this.targetType = e.targetType || null, this.targetUser = e.targetUser || null, this.targetApplication = e.targetApplication || null, this.type = e.type || null, this.flags = e.flags || 0
   }
 }

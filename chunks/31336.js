@@ -1,33 +1,33 @@
 "use strict";
-n.r(t), n.d(t, {
-  clearAnalyticsLog: function() {
+n.d(t, {
+  Qh: function() {
+    return s
+  },
+  SO: function() {
     return o
   },
-  toggleDisplayDevTools: function() {
+  Zw: function() {
     return a
-  },
-  updateDevToolsSettings: function() {
-    return s
   }
 });
-var i = n("570140"),
-  r = n("19759");
+var i = n(570140),
+  r = n(19759);
 
 function s(e) {
-  i.default.dispatch({
+  i.Z.dispatch({
     type: "DEV_TOOLS_SETTINGS_UPDATE",
     settings: e
   })
 }
 
-function a() {
+function o() {
   s({
-    displayTools: !r.default.displayTools
+    displayTools: !r.Z.displayTools
   })
 }
 
-function o() {
-  i.default.dispatch({
+function a() {
+  i.Z.dispatch({
     type: "ANALYTICS_LOG_CLEAR"
   })
 }

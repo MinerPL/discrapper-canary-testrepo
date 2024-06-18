@@ -1,14 +1,13 @@
 "use strict";
-n.r(t);
-var i = n("735250"),
-  a = n("470079");
-class l extends a.PureComponent {
+var i = n(735250),
+  s = n(470079);
+class l extends s.PureComponent {
   render() {
     let {
       layout: e,
       layoutSize: t,
       className: n,
-      renderWidget: a
+      renderWidget: s
     } = this.props;
     return null != e ? (0, i.jsx)("div", {
       className: n,
@@ -16,8 +15,8 @@ class l extends a.PureComponent {
         width: t.width,
         height: t.height
       },
-      children: e.widgets.map(e => a(e, t))
+      children: e.widgets.map(e => s(e, t))
     }) : null
   }
 }
-t.default = l
+t.Z = l

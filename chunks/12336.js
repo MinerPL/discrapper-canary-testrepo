@@ -32,8 +32,8 @@ function r(e) {
     };
   return t = e(r, i, o), o
 }
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 })

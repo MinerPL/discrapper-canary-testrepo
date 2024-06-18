@@ -1,16 +1,15 @@
 "use strict";
-r.r(t);
-var n = r("835449"),
-  a = r("571516");
-t.default = function(e) {
-  return (0, n.default)(function(t, r) {
-    var n = -1,
-      o = r.length,
-      i = o > 1 ? r[o - 1] : void 0,
-      l = o > 2 ? r[2] : void 0;
-    for (i = e.length > 3 && "function" == typeof i ? (o--, i) : void 0, l && (0, a.default)(r[0], r[1], l) && (i = o < 3 ? void 0 : i, o = 1), t = Object(t); ++n < o;) {
-      var u = r[n];
-      u && e(t, u, n, i)
+var r = n(835449),
+  i = n(571516);
+t.Z = function(e) {
+  return (0, r.Z)(function(t, n) {
+    var r = -1,
+      a = n.length,
+      o = a > 1 ? n[a - 1] : void 0,
+      s = a > 2 ? n[2] : void 0;
+    for (o = e.length > 3 && "function" == typeof o ? (a--, o) : void 0, s && (0, i.Z)(n[0], n[1], s) && (o = a < 3 ? void 0 : o, a = 1), t = Object(t); ++r < a;) {
+      var u = n[r];
+      u && e(t, u, r, o)
     }
     return t
   })

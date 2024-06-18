@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n("724458");
-var i, r, s, a, o = n("442837"),
-  l = n("570140"),
-  u = n("786761"),
-  d = n("651530"),
-  _ = n("163268");
+n(724458);
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(786761),
+  _ = n(651530),
+  d = n(163268);
 let c = {};
 
 function E(e) {
@@ -12,15 +12,15 @@ function E(e) {
 }
 
 function I(e) {
-  return !!(0, d.isEligibleForExplicitMediaRedaction)() && null != e.messages && (c = e.messages.reduce((e, t) => (t.forEach(t => {
-    e[E(t)] = (0, u.createMessageRecord)(t)
+  return !!(0, _.Kh)() && null != e.messages && (c = e.messages.reduce((e, t) => (t.forEach(t => {
+    e[E(t)] = (0, u.e5)(t)
   }), e), {}), !0)
 }
 
 function T() {
   c = {}
 }
-class f extends(i = o.default.Store) {
+class h extends(i = a.ZP.Store) {
   getMessage(e, t) {
     return c[E({
       id: e,
@@ -28,22 +28,22 @@ class f extends(i = o.default.Store) {
     })]
   }
 }
-a = "SearchMessageStore", (s = "displayName") in(r = f) ? Object.defineProperty(r, s, {
-  value: a,
+o = "SearchMessageStore", (s = "displayName") in(r = h) ? Object.defineProperty(r, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new f(l.default, {
+}) : r[s] = o, t.Z = new h(l.Z, {
   SEARCH_FINISH: I,
   MOD_VIEW_SEARCH_FINISH: I,
   MESSAGE_UPDATE: function(e) {
     let {
       message: t
     } = e;
-    if (!(0, d.isEligibleForExplicitMediaRedaction)() || null == t.id || null == t.channel_id) return !1;
+    if (!(0, _.Kh)() || null == t.id || null == t.channel_id) return !1;
     let n = E(t),
       i = c[n];
-    return null != i && (c[n] = (0, u.updateMessageRecord)(i, {
+    return null != i && (c[n] = (0, u.wi)(i, {
       attachments: t.attachments,
       embeds: t.embeds
     }), !0)
@@ -66,6 +66,6 @@ a = "SearchMessageStore", (s = "displayName") in(r = f) ? Object.defineProperty(
       id: t,
       channel_id: n
     }), r = c[i];
-    null != r && (c[i] = (0, _.handleExplicitMediaScanTimeoutForMessage)(r))
+    null != r && (c[i] = (0, d.Cm)(r))
   }
 })

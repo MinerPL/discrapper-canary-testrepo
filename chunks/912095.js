@@ -1,24 +1,24 @@
 "use strict";
-n.r(t), n.d(t, {
-  EncoderParameter: function() {
-    return i
+n.d(t, {
+  Z: function() {
+    return f
   },
-  default: function() {
-    return h
+  p: function() {
+    return i
   }
-}), n("47120"), n("411104"), n("177593");
-var i, r, a = n("874141"),
-  s = n.n(a),
-  o = n("565925"),
-  l = n.n(o),
-  u = n("839548"),
-  d = n("46973"),
-  _ = n("886848"),
-  c = n("961304"),
-  E = n("313232"),
-  I = n("450279"),
-  T = n("65154"),
-  f = n("436620");
+}), n(47120), n(411104), n(177593);
+var i, r, s = n(874141),
+  o = n.n(s),
+  a = n(565925),
+  l = n.n(a),
+  u = n(839548),
+  _ = n(46973),
+  d = n(886848),
+  c = n(961304),
+  E = n(313232),
+  I = n(450279),
+  T = n(65154),
+  h = n(436620);
 
 function S(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(r = i || (i = {}))[r.AUDIO_BITRATE = 0] = "AUDIO_BITRATE", r[r.VIDEO_RESOLUTION_SCALE = 1] = "VIDEO_RESOLUTION_SCALE", r[r.VIDEO_BITRATE = 2] = "VIDEO_BITRATE", r[r.VIDEO_FRAMERATE = 3] = "VIDEO_FRAMERATE";
-class h extends u.default {
+class f extends u.Z {
   interact() {
     for (let e of (this.interacted = !0, Object.keys(this.outputs))) this.outputs[e].play();
     this.input.resumeAudio()
@@ -38,9 +38,9 @@ class h extends u.default {
     this.input.destroy()
   }
   async getStats() {
-    if (!f.BROWSER_SUPPORTS_DIAGNOSTICS) return null;
+    if (!h.Fo) return null;
     let e = await this.getRawStats();
-    return (0, I.default)(e, this.getUserIdBySsrc, this.remoteVideoSinkWants, this.localVideoSinkWants)
+    return (0, I.Z)(e, this.getUserIdBySsrc, this.remoteVideoSinkWants, this.localVideoSinkWants)
   }
   setInputMode(e, t) {
     this.input.setAudioMode(e, {
@@ -52,7 +52,7 @@ class h extends u.default {
     for (let t of (this.selfDeaf = e, Object.keys(this.outputs))) this.outputs[t].mute = e || this.localMutes[t]
   }
   setLocalMute(e, t) {
-    this.localMutes[e] = t, null != this.outputs[e] && (this.outputs[e].mute = this.selfDeaf || t), this.emit(d.BaseConnectionEvent.LocalMute, e, t)
+    this.localMutes[e] = t, null != this.outputs[e] && (this.outputs[e].mute = this.selfDeaf || t), this.emit(_.Sh.LocalMute, e, t)
   }
   fastUdpReconnect() {}
   getNumFastUdpReconnects() {
@@ -60,7 +60,7 @@ class h extends u.default {
   }
   wasRemoteDisconnected() {}
   setRemoteVideoSinkWants(e) {
-    this.remoteVideoSinkWants = e, this.updateVideoQuality(T.MEDIA_SINK_WANTS_PROPERTIES)
+    this.remoteVideoSinkWants = e, this.updateVideoQuality(T.XR)
   }
   setLocalVideoSinkWants(e) {
     this.localVideoSinkWants = e
@@ -73,8 +73,8 @@ class h extends u.default {
     if (null != t.capture && null != t.capture.width && null != t.capture.height && null != e.remoteSinkWantsPixelCount && 0 !== e.remoteSinkWantsPixelCount && 0 !== t.capture.height) {
       let i = t.capture.width / t.capture.height,
         r = Math.sqrt(e.remoteSinkWantsPixelCount * i),
-        a = t.capture.width / r;
-      n = a < 1 ? void 0 : a
+        s = t.capture.width / r;
+      n = s < 1 ? void 0 : s
     }
     this.logger.info("BaseWebRTCConnection.updateVideoQuality: resolutionScaleFactor: ".concat(n, ", ") + "encodingVideoWidth: ".concat(e.encodingVideoWidth, ", remoteSinkWantsMaxFramerate: ").concat(e.remoteSinkWantsMaxFramerate, ", ") + "encodingVideoMaxBitRate: ".concat(e.encodingVideoMaxBitRate, ", localWant: ").concat(this.getLocalWant())), this.setVideoEncoderParameters([{
       parameter: 1,
@@ -87,16 +87,16 @@ class h extends u.default {
       value: e.remoteSinkWantsMaxFramerate
     }]);
     let r = e.encodingVideoWidth,
-      a = e.encodingVideoHeight;
+      s = e.encodingVideoHeight;
     for (let e of i.getTracks()) {
-      var s, o;
+      var o, a;
       let t = e.getConstraints(),
-        n = null === (s = t.width) || void 0 === s ? void 0 : s.max,
-        i = null === (o = t.height) || void 0 === o ? void 0 : o.max;
-      (n !== r || i !== a) && (this.logger.info("BaseWebRTCConnection.updateVideoQuality: old: ".concat(n, " x ").concat(i, ", new: ").concat(r, " x ").concat(a)), t.width = {
+        n = null === (o = t.width) || void 0 === o ? void 0 : o.max,
+        i = null === (a = t.height) || void 0 === a ? void 0 : a.max;
+      (n !== r || i !== s) && (this.logger.info("BaseWebRTCConnection.updateVideoQuality: old: ".concat(n, " x ").concat(i, ", new: ").concat(r, " x ").concat(s)), t.width = {
         max: r
       }, t.height = {
-        max: a
+        max: s
       }, e.applyConstraints(t))
     }
   }
@@ -105,15 +105,15 @@ class h extends u.default {
     t ? this.canHavePriority.add(e) : this.canHavePriority.delete(e), this.canHavePriority.size !== n && this.recalculatePrioritySpeakers()
   }
   setSpeakingFlags(e, t) {
-    null != t && t !== T.SpeakingFlags.NONE ? this.localSpeakingFlags[e] = t : delete this.localSpeakingFlags[e];
+    null != t && t !== T.Dg.NONE ? this.localSpeakingFlags[e] = t : delete this.localSpeakingFlags[e];
     let n = this.outputs[e];
     null != n && n.setSpeakingFlags(t);
     let i = this.wantsPriority.size,
-      r = T.SpeakingFlags.VOICE | T.SpeakingFlags.PRIORITY;
+      r = T.Dg.VOICE | T.Dg.PRIORITY;
     (t & r) === r ? this.wantsPriority.add(e) : this.wantsPriority.delete(e), this.wantsPriority.size !== i && this.recalculatePrioritySpeakers()
   }
   clearAllSpeaking() {
-    for (let e in this.localSpeakingFlags) delete this.localSpeakingFlags[e], null != this.outputs[e] && this.outputs[e].setSpeakingFlags(T.SpeakingFlags.NONE)
+    for (let e in this.localSpeakingFlags) delete this.localSpeakingFlags[e], null != this.outputs[e] && this.outputs[e].setSpeakingFlags(T.Dg.NONE)
   }
   setOutputVolume(e) {
     for (let t of (this.outputVolume = e, Object.keys(this.outputs))) this.outputs[t].volume = this.computeLocalVolume(t)
@@ -136,7 +136,7 @@ class h extends u.default {
     })
   }
   recalculatePrioritySpeakers() {
-    this.prioritySpeakers = new Set(Array.from(this.wantsPriority).filter(e => this.canHavePriority.has(e))), s()(this.outputs, (e, t) => {
+    this.prioritySpeakers = new Set(Array.from(this.wantsPriority).filter(e => this.canHavePriority.has(e))), o()(this.outputs, (e, t) => {
       e.volume = this.computeLocalVolume(t)
     })
   }
@@ -148,11 +148,11 @@ class h extends u.default {
   }
   getLocalVolume(e) {
     let t = this.localVolumes[e];
-    return null == t && (t = this.context === T.MediaEngineContextTypes.DEFAULT ? T.DEFAULT_VOLUME : T.DEFAULT_STREAM_VOLUME), null != t ? t : T.DEFAULT_VOLUME
+    return null == t && (t = this.context === T.Yn.DEFAULT ? T.Qx : T.Yh), null != t ? t : T.Qx
   }
   computeLocalVolume(e) {
-    let t = this.outputVolume * this.getLocalVolume(e) / T.DEFAULT_VOLUME;
-    return this.prioritySpeakers.size > 0 && !this.prioritySpeakers.has(e) ? t * T.DEFAULT_PRIORITY_SPEAKER_DUCKING : t
+    let t = this.outputVolume * this.getLocalVolume(e) / T.Qx;
+    return this.prioritySpeakers.size > 0 && !this.prioritySpeakers.has(e) ? t * T.jg : t
   }
   hasDesktopSource() {
     var e;
@@ -166,10 +166,10 @@ class h extends u.default {
     let n = this.outputs[e];
     if (null == n) {
       var i;
-      (n = new c.default(e, this.audioContext)).mute = this.selfDeaf || this.localMutes[e], n.volume = this.computeLocalVolume(e), n.on(c.OutputEvent.Speaking, t => this.emit(d.BaseConnectionEvent.Speaking, e, t, this.audioSSRC)), n.on(c.OutputEvent.Video, t => {
+      (n = new c.Z(e, this.audioContext)).mute = this.selfDeaf || this.localMutes[e], n.volume = this.computeLocalVolume(e), n.on(c.X.Speaking, t => this.emit(_.Sh.Speaking, e, t, this.audioSSRC)), n.on(c.X.Video, t => {
         var n;
-        return this.emitUnsafe(d.BaseConnectionEvent.Video, e, t, this.audioSSRC, this.videoStreamParameters[0].ssrc, null !== (n = this.videoStreamParameters[0].rtxSsrc) && void 0 !== n ? n : 0, this.videoStreamParameters)
-      }), n.on(c.OutputEvent.InteractionRequired, e => this.emit(d.BaseConnectionEvent.InteractionRequired, e)), n.setSpeakingFlags(null !== (i = this.localSpeakingFlags[e]) && void 0 !== i ? i : T.SpeakingFlags.NONE), n.setSinkId(this.sinkId), this.outputs[e] = n
+        return this.emitUnsafe(_.Sh.Video, e, t, this.audioSSRC, this.videoStreamParameters[0].ssrc, null !== (n = this.videoStreamParameters[0].rtxSsrc) && void 0 !== n ? n : 0, this.videoStreamParameters)
+      }), n.on(c.X.InteractionRequired, e => this.emit(_.Sh.InteractionRequired, e)), n.setSpeakingFlags(null !== (i = this.localSpeakingFlags[e]) && void 0 !== i ? i : T.Dg.NONE), n.setSinkId(this.sinkId), this.outputs[e] = n
     }
     n.addTrack(t)
   }
@@ -209,39 +209,39 @@ class h extends u.default {
   processMLSWelcome(e, t, n) {}
   constructor(e, t, n, i) {
     var r;
-    super(e, t), r = this, S(this, "input", void 0), S(this, "silenced", !1), S(this, "interacted", !1), S(this, "outputVolume", T.DEFAULT_VOLUME), S(this, "sinkId", T.DEFAULT_DEVICE_ID), S(this, "lastPingTime", 0), S(this, "outputs", {}), S(this, "webrtcStats", new E.WebRTCStatsCalculator), S(this, "silenceThreshold", -100), S(this, "canHavePriority", new Set), S(this, "prioritySpeakers", new Set), S(this, "audioContext", void 0), S(this, "setEchoCancellation", e => this.input.setEchoCancellation(e)), S(this, "setNoiseSuppression", e => this.input.setNoiseSuppression(e)), S(this, "setNoiseCancellation", e => this.input.setNoiseCancellation(e)), S(this, "setAutomaticGainControl", e => this.input.setAutomaticGainControl(e)), S(this, "setAudioSource", e => this.input.setAudioSource(e)), S(this, "setVideoSource", e => this.input.setVideoSource(e)), S(this, "setDesktopInput", e => this.input.setDesktop(e)), S(this, "setForceAudioInput", function(e) {
+    super(e, t), r = this, S(this, "input", void 0), S(this, "silenced", !1), S(this, "interacted", !1), S(this, "outputVolume", T.Qx), S(this, "sinkId", T.w5), S(this, "lastPingTime", 0), S(this, "outputs", {}), S(this, "webrtcStats", new E.r), S(this, "silenceThreshold", -100), S(this, "canHavePriority", new Set), S(this, "prioritySpeakers", new Set), S(this, "audioContext", void 0), S(this, "setEchoCancellation", e => this.input.setEchoCancellation(e)), S(this, "setNoiseSuppression", e => this.input.setNoiseSuppression(e)), S(this, "setNoiseCancellation", e => this.input.setNoiseCancellation(e)), S(this, "setAutomaticGainControl", e => this.input.setAutomaticGainControl(e)), S(this, "setAudioSource", e => this.input.setAudioSource(e)), S(this, "setVideoSource", e => this.input.setVideoSource(e)), S(this, "setDesktopInput", e => this.input.setDesktop(e)), S(this, "setForceAudioInput", function(e) {
       return arguments.length > 1 && void 0 !== arguments[1] && arguments[1], r.input.setPTTActive(e)
     }), S(this, "setSelfMute", e => {
-      this.input.setMute(e), this.emit(d.BaseConnectionEvent.Mute, e)
+      this.input.setMute(e), this.emit(_.Sh.Mute, e)
     }), S(this, "handleAddVideoTrack", () => {
       this.updateVideoQuality()
-    }), S(this, "handleAudioPermission", e => this.emit(d.BaseConnectionEvent.AudioPermission, e)), S(this, "handleVideoPermission", e => this.emit(d.BaseConnectionEvent.VideoPermission, e)), S(this, "handleVideo", e => {
+    }), S(this, "handleAudioPermission", e => this.emit(_.Sh.AudioPermission, e)), S(this, "handleVideoPermission", e => this.emit(_.Sh.VideoPermission, e)), S(this, "handleVideo", e => {
       var t;
-      return this.emit(d.BaseConnectionEvent.Video, this.userId, e, this.audioSSRC, this.videoStreamParameters[0].ssrc, null !== (t = this.videoStreamParameters[0].rtxSsrc) && void 0 !== t ? t : 0, this.videoStreamParameters)
-    }), S(this, "handleDesktopSourceEnd", () => this.emit(d.BaseConnectionEvent.DesktopSourceEnd)), S(this, "handleStream", e => this.setStream(e)), S(this, "handleVoiceActivity", e => {
+      return this.emit(_.Sh.Video, this.userId, e, this.audioSSRC, this.videoStreamParameters[0].ssrc, null !== (t = this.videoStreamParameters[0].rtxSsrc) && void 0 !== t ? t : 0, this.videoStreamParameters)
+    }), S(this, "handleDesktopSourceEnd", () => this.emit(_.Sh.DesktopSourceEnd)), S(this, "handleStream", e => this.setStream(e)), S(this, "handleVoiceActivity", e => {
       let t = e <= this.silenceThreshold;
-      this.silenced !== t && !this.input.mute() && (this.silenced = t, this.emit(d.BaseConnectionEvent.Silence, t))
+      this.silenced !== t && !this.input.mute() && (this.silenced = t, this.emit(_.Sh.Silence, t))
     }), S(this, "handleNewListener", e => {
       switch (e) {
-        case d.BaseConnectionEvent.Video:
+        case _.Sh.Video:
           this.videoReady && setImmediate(() => this.handleVideo(this.input.getVideoStreamId()));
           break;
-        case d.BaseConnectionEvent.ConnectionStateChange:
+        case _.Sh.ConnectionStateChange:
           this.emit(e, this.connectionState);
           break;
-        case d.BaseConnectionEvent.InteractionRequired:
+        case _.Sh.InteractionRequired:
           !this.interacted && "suspended" === this.input.getAudioState() && setImmediate(() => this.emit(e, !0))
       }
     }), S(this, "handleInputSpeaking", e => {
-      this.emit(d.BaseConnectionEvent.Speaking, this.userId, e ? T.SpeakingFlags.VOICE : T.SpeakingFlags.NONE, this.audioSSRC)
+      this.emit(_.Sh.Speaking, this.userId, e ? T.Dg.VOICE : T.Dg.NONE, this.audioSSRC)
     }), S(this, "handleAudioContextStateChange", () => {
-      !this.interacted && "running" === this.input.getAudioState() && (this.interact(), this.emit(d.BaseConnectionEvent.InteractionRequired, !1))
+      !this.interacted && "running" === this.input.getAudioState() && (this.interact(), this.emit(_.Sh.InteractionRequired, !1))
     }), S(this, "handleStats", e => {
-      if (this.connectionState === T.ConnectionStates.DISCONNECTED) {
-        this.off(d.BaseConnectionEvent.Stats, this.handleStats);
+      if (this.connectionState === T.$j.DISCONNECTED) {
+        this.off(_.Sh.Stats, this.handleStats);
         return
       }
-      null != e && (this.webrtcStats.update(e), this.stats = e, Date.now() - this.lastPingTime >= T.PING_INTERVAL && (this.emit(d.BaseConnectionEvent.Ping, e.transport.ping), this.lastPingTime = Date.now()))
-    }), this.input = new _.default(n), n.addEventListener("statechange", this.handleAudioContextStateChange), this.audioContext = n, this.input.on(_.InputEvent.AudioPermission, this.handleAudioPermission), this.input.on(_.InputEvent.VideoPermission, this.handleVideoPermission), this.input.on(_.InputEvent.Video, this.handleVideo), this.input.on(_.InputEvent.Mute, e => this.emit(d.BaseConnectionEvent.Mute, e)), this.input.on(_.InputEvent.Stream, this.handleStream), this.input.on(_.InputEvent.DesktopSourceEnd, this.handleDesktopSourceEnd), this.input.on(_.InputEvent.Speaking, this.handleInputSpeaking), this.input.on(_.InputEvent.AddVideoTrack, this.handleAddVideoTrack), this.input.on(_.InputEvent.Video, this.handleAddVideoTrack), this.on("newListener", this.handleNewListener), this.initializeStreamParameters(i)
+      null != e && (this.webrtcStats.update(e), this.stats = e, Date.now() - this.lastPingTime >= T.$B && (this.emit(_.Sh.Ping, e.transport.ping), this.lastPingTime = Date.now()))
+    }), this.input = new d.Z(n), n.addEventListener("statechange", this.handleAudioContextStateChange), this.audioContext = n, this.input.on(d.G.AudioPermission, this.handleAudioPermission), this.input.on(d.G.VideoPermission, this.handleVideoPermission), this.input.on(d.G.Video, this.handleVideo), this.input.on(d.G.Mute, e => this.emit(_.Sh.Mute, e)), this.input.on(d.G.Stream, this.handleStream), this.input.on(d.G.DesktopSourceEnd, this.handleDesktopSourceEnd), this.input.on(d.G.Speaking, this.handleInputSpeaking), this.input.on(d.G.AddVideoTrack, this.handleAddVideoTrack), this.input.on(d.G.Video, this.handleAddVideoTrack), this.on("newListener", this.handleNewListener), this.initializeStreamParameters(i)
   }
 }

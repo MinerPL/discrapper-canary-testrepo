@@ -10,7 +10,7 @@ var r = function() {
       return n && e(t.prototype, n), r && e(t, r), t
     }
   }(),
-  i = n("968598"),
+  i = n(968598),
   a = function(e) {
     function t(e, n) {
       ! function(e, t) {
@@ -54,5 +54,5 @@ var r = function() {
         for (var e = 0; e < this._values.length; ++e) this._values[e] instanceof i && this._values[e].__removeChild(this)
       }
     }]), t
-  }(n("261469"));
+  }(n(261469));
 e.exports = a

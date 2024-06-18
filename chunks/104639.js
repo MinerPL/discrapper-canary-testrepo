@@ -4,12 +4,12 @@ function i() {
   return {
     logsUploaded: new Date().toISOString(),
     releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-    buildNumber: "279519",
-    versionHash: "0e6229f96f388a45d0ea4b965761b0728c44542b"
+    buildNumber: "302882",
+    versionHash: "9283f9b7a252d846abe586077fec1f53ede07e8c"
   }
 }
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return i
   }
 })

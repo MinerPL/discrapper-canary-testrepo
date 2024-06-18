@@ -1,20 +1,19 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("960259"),
-  a = n("278724"),
-  s = n("325767");
-t.default = (0, r.replaceIcon)(function(e) {
+var i = n(735250);
+n(470079);
+var r = n(960259),
+  s = n(278724),
+  o = n(325767);
+t.Z = (0, r.hN)(function(e) {
   let {
     width: t = 24,
     height: n = 24,
     color: r = "currentColor",
-    foreground: a,
-    ...o
+    foreground: s,
+    ...a
   } = e;
   return (0, i.jsxs)("svg", {
-    ...(0, s.default)(o),
+    ...(0, o.Z)(a),
     width: t,
     height: n,
     viewBox: "0 0 24 24",
@@ -29,10 +28,10 @@ t.default = (0, r.replaceIcon)(function(e) {
       fill: r
     }), (0, i.jsx)("path", {
       d: "M21 4.27L19.73 3L3 19.73L4.27 21L8.46 16.82L9.69 15.58L11.35 13.92L14.99 10.28L21 4.27Z",
-      className: a,
+      className: s,
       fill: r
     })]
   })
-}, a.MicrophoneSlashIcon, void 0, {
+}, s.n, void 0, {
   size: 24
 })

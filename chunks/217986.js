@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), t.default = [{
+t.Z = [{
   name: "Afghanistan",
   alpha2: "AF",
   phoneCountryCode: "+93",

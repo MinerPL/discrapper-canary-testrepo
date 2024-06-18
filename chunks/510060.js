@@ -1,37 +1,37 @@
 "use strict";
-a.r(t), a.d(t, {
-  ForumListLayoutRenderOptions: function() {
-    return d
+n.d(t, {
+  I8: function() {
+    return r
   },
-  GRID_POST_CONTROLS_MARGIN: function() {
-    return i
+  KW: function() {
+    return h
   },
-  GridLayout: function() {
-    return o
-  },
-  IMAGE_PADDING: function() {
-    return c
-  },
-  getFrameDimensions: function() {
+  LT: function() {
     return u
   },
-  getGridPostHeight: function() {
-    return m
+  Me: function() {
+    return o
+  },
+  eU: function() {
+    return c
+  },
+  rI: function() {
+    return d
   }
 });
-var s = a("512722"),
-  n = a.n(s);
+var s = n(512722),
+  l = n.n(s);
 
-function l(e, t, a) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: a,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = a, e
+  }) : e[t] = n, e
 }
-let r = 2 / 3,
-  i = 12;
+let i = 2 / 3,
+  r = 12;
 class o {
   getWidth(e) {
     return this.getRenderOptions(e).columnWidth
@@ -42,28 +42,29 @@ class o {
       columnWidth: this.minWidth
     };
     let t = e / this.maxWidth,
-      a = Math.max(Math.floor(t + (e / this.minWidth - t) / 2), 1),
-      s = this.gap * (a - 1);
+      n = Math.max(Math.floor(t + (e / this.minWidth - t) / 2), 1),
+      s = this.gap * (n - 1);
     return {
-      columns: a,
-      columnWidth: (e - s) / a
+      columns: n,
+      columnWidth: (e - s) / n
     }
   }
   constructor({
     minWidth: e,
     maxWidth: t,
-    gap: a
+    gap: n
   }) {
-    l(this, "minWidth", void 0), l(this, "maxWidth", void 0), l(this, "gap", void 0), n()(e < t, "minWidth needs to be smaller than maxWidth"), this.minWidth = e, this.maxWidth = t, this.gap = a
+    a(this, "minWidth", void 0), a(this, "maxWidth", void 0), a(this, "gap", void 0), l()(e < t, "minWidth needs to be smaller than maxWidth"), this.minWidth = e, this.maxWidth = t, this.gap = n
   }
 }
-let d = {
+let c = {
     columns: 1,
     columnWidth: 450
   },
-  u = e => {
-    let t = e - 2;
-    return [t, Math.ceil(t * r)]
+  d = e => {
+    let t = e - 2,
+      n = Math.ceil(t * i);
+    return [t, n]
   },
-  c = 12,
-  m = e => 60 + u(e - 2 * c)[1] + 24 + 3 * i
+  u = 12,
+  h = e => 60 + d(e - 2 * u)[1] + 24 + 3 * r

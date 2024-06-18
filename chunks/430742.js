@@ -1,16 +1,15 @@
 "use strict";
-n.r(t);
-var i = n("570140");
-t.default = {
+var i = n(570140);
+t.Z = {
   clearDraft(e, t) {
-    i.default.dispatch({
+    i.Z.dispatch({
       type: "DRAFT_CLEAR",
       channelId: e,
       draftType: t
     })
   },
   saveDraft(e, t, n) {
-    i.default.dispatch({
+    i.Z.dispatch({
       type: "DRAFT_SAVE",
       channelId: e,
       draft: t,
@@ -18,7 +17,7 @@ t.default = {
     })
   },
   changeDraft(e, t, n) {
-    i.default.dispatch({
+    i.Z.dispatch({
       type: "DRAFT_CHANGE",
       channelId: e,
       draft: t,
@@ -26,7 +25,7 @@ t.default = {
     })
   },
   changeThreadSettings(e, t) {
-    i.default.dispatch({
+    i.Z.dispatch({
       type: "THREAD_SETTINGS_DRAFT_CHANGE",
       channelId: e,
       draft: t

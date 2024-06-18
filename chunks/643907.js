@@ -1,4 +1,4 @@
-var r = n("492750");
+var r = n(492750);
 t.types = Object.create(null), t.extensions = Object.create(null), Object.keys(r).forEach(function(e) {
   var n = r[e].extensions;
   n && n.length && (t.extensions[e] = n, n.forEach(function(n) {

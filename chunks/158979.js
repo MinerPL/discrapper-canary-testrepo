@@ -1,111 +1,111 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return h
+n.d(t, {
+  Z: function() {
+    return p
   }
 });
-var i = n("735250");
-n("470079");
-var a = n("481060"),
-  l = n("13245"),
-  s = n("454902"),
-  o = n("312839"),
-  r = n("981631"),
-  d = n("987650"),
-  u = n("689938"),
-  c = n("553198");
+var i = n(735250);
+n(470079);
+var s = n(481060),
+  l = n(13245),
+  a = n(454902),
+  o = n(312839),
+  r = n(981631),
+  d = n(987650),
+  c = n(689938),
+  u = n(174325);
 
-function f() {
+function h() {
   return (0, i.jsx)("div", {
-    className: c.footer,
-    children: (0, i.jsx)(a.Button, {
-      color: a.Button.Colors.GREEN,
-      size: a.Button.Sizes.SMALL,
-      className: c.ctaButton,
-      children: u.default.Messages.OVERLAY_NEWS_GO_LIVE_CTA
+    className: u.footer,
+    children: (0, i.jsx)(s.Button, {
+      color: s.Button.Colors.GREEN,
+      size: s.Button.Sizes.SMALL,
+      className: u.ctaButton,
+      children: c.Z.Messages.OVERLAY_NEWS_GO_LIVE_CTA
     })
   })
 }
 
-function h(e) {
+function p(e) {
   switch (e.type) {
-    case d.OverlayNudgeTypes.GO_LIVE_VOICE: {
+    case d.nc.GO_LIVE_VOICE: {
       let {
         game: t,
-        voiceGuild: c
+        voiceGuild: u
       } = e, {
-        trackView: h,
-        trackClick: p
-      } = (0, o.makeAnalyticsTrackers)(d.OverlayNotificationType.GoLiveNudge, {
-        notif_type: d.OverlayNotificationType.GoLiveNudge
+        trackView: p,
+        trackClick: f
+      } = (0, o.R)(d.n0.GoLiveNudge, {
+        notif_type: d.n0.GoLiveNudge
       });
       return {
-        colorScheme: s.ColorSchemes.PRIMARY,
-        icon: n("847881"),
+        colorScheme: a.IC.PRIMARY,
+        icon: n(847881),
         title: null,
-        body: u.default.Messages.OVERLAY_NEWS_GO_LIVE_BODY.format({
+        body: c.Z.Messages.OVERLAY_NEWS_GO_LIVE_BODY.format({
           game: t.name,
-          server: c.toString()
+          server: u.toString()
         }),
-        hint: () => (0, i.jsx)(f, {}),
-        renderFooter: () => (0, i.jsx)(f, {}),
+        hint: () => (0, i.jsx)(h, {}),
+        renderFooter: () => (0, i.jsx)(h, {}),
         onNotificationShow: () => {
-          h()
+          p()
         },
         onNotificationClick: (e, t) => {
-          p("unlock"), l.default.updateNotificationStatus(t), l.default.setInstanceLocked(!1), (0, a.openModalLazy)(async () => {
+          f("unlock"), l.Z.updateNotificationStatus(t), l.Z.setInstanceLocked(!1), (0, s.openModalLazy)(async () => {
             let {
               default: e
-            } = await Promise.all([n.e("49237"), n.e("99387"), n.e("79477"), n.e("33641")]).then(n.bind(n, "60594"));
+            } = await Promise.all([n.e("49237"), n.e("99387"), n.e("79477"), n.e("33641")]).then(n.bind(n, 60594));
             return t => (0, i.jsx)(e, {
               ...t,
               selectSource: !1,
-              guildId: c.id,
-              analyticsLocation: r.AnalyticsLocations.OVERLAY_NUDGE
+              guildId: u.id,
+              analyticsLocation: r.Sbl.OVERLAY_NUDGE
+            })
+          })
+        },
+        onDismissClick: () => {
+          f("dismiss")
+        }
+      }
+    }
+    case d.nc.GO_LIVE_NON_VOICE: {
+      let {
+        game: t
+      } = e, {
+        trackView: u,
+        trackClick: p
+      } = (0, o.R)(d.n0.GoLiveNonVoiceNudge, {
+        notif_type: d.n0.GoLiveNonVoiceNudge
+      });
+      return {
+        colorScheme: a.IC.PRIMARY,
+        icon: n(847881),
+        title: null,
+        body: c.Z.Messages.OVERLAY_NEWS_GO_LIVE_BODY_NO_VOICE_CHANNEL.format({
+          game: t.name
+        }),
+        hint: () => (0, i.jsx)(h, {}),
+        renderFooter: () => (0, i.jsx)(h, {}),
+        onNotificationShow: () => {
+          u()
+        },
+        onNotificationClick: (e, t) => {
+          p("unlock"), l.Z.updateNotificationStatus(t), l.Z.setInstanceLocked(!1), (0, s.openModalLazy)(async () => {
+            let {
+              default: e
+            } = await Promise.all([n.e("49237"), n.e("99387"), n.e("79477"), n.e("33641")]).then(n.bind(n, 60594));
+            return t => (0, i.jsx)(e, {
+              ...t,
+              selectSource: !1,
+              selectGuild: !0,
+              analyticsLocation: r.Sbl.OVERLAY_NUDGE
             })
           })
         },
         onDismissClick: () => {
           p("dismiss")
-        }
-      }
-    }
-    case d.OverlayNudgeTypes.GO_LIVE_NON_VOICE: {
-      let {
-        game: t
-      } = e, {
-        trackView: c,
-        trackClick: h
-      } = (0, o.makeAnalyticsTrackers)(d.OverlayNotificationType.GoLiveNonVoiceNudge, {
-        notif_type: d.OverlayNotificationType.GoLiveNonVoiceNudge
-      });
-      return {
-        colorScheme: s.ColorSchemes.PRIMARY,
-        icon: n("847881"),
-        title: null,
-        body: u.default.Messages.OVERLAY_NEWS_GO_LIVE_BODY_NO_VOICE_CHANNEL.format({
-          game: t.name
-        }),
-        hint: () => (0, i.jsx)(f, {}),
-        renderFooter: () => (0, i.jsx)(f, {}),
-        onNotificationShow: () => {
-          c()
-        },
-        onNotificationClick: (e, t) => {
-          h("unlock"), l.default.updateNotificationStatus(t), l.default.setInstanceLocked(!1), (0, a.openModalLazy)(async () => {
-            let {
-              default: e
-            } = await Promise.all([n.e("49237"), n.e("99387"), n.e("79477"), n.e("33641")]).then(n.bind(n, "60594"));
-            return t => (0, i.jsx)(e, {
-              ...t,
-              selectSource: !1,
-              selectGuild: !0,
-              analyticsLocation: r.AnalyticsLocations.OVERLAY_NUDGE
-            })
-          })
-        },
-        onDismissClick: () => {
-          h("dismiss")
         }
       }
     }

@@ -1,7 +1,7 @@
 "use strict";
-let r = n("689118"),
-  i = n("988324").Buffer,
-  a = n("1199");
+let r = n(689118),
+  i = n(988324).Buffer,
+  a = n(1199);
 
 function o(e) {
   a.call(this, e), this.enc = "pem"

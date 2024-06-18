@@ -1,25 +1,25 @@
 "use strict";
-n.r(t), n.d(t, {
-  DELAY_BEFORE_SUGGESTIONS_MS: function() {
+n.d(t, {
+  J7: function() {
+    return _
+  },
+  gf: function() {
     return l
   },
-  MAX_NUM_SUGGESTED_STICKERS: function() {
-    return a
-  },
-  MAX_NUM_USER_INPUT_WORDS: function() {
+  qm: function() {
     return o
   },
-  REQUEST_THROTTLE_DURATION_MS: function() {
-    return d
+  t7: function() {
+    return a
   },
-  SUGGESTIONS_SHOWED_INSTRUMENTATION_RATE_LIMIT_MS: function() {
+  xv: function() {
     return u
   }
 });
-var i, r, s = n("70956");
-let a = 4,
-  o = 5,
+var i, r, s = n(70956);
+let o = 4,
+  a = 5,
   l = 350,
-  u = s.default.Millis.MINUTE,
-  d = 2 * s.default.Millis.MINUTE;
+  u = s.Z.Millis.MINUTE,
+  _ = 2 * s.Z.Millis.MINUTE;
 (i = r || (r = {}))[i.STICKER = 0] = "STICKER"

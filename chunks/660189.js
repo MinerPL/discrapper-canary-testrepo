@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n("47120");
-var i, r, s, a, o = n("442837"),
-  l = n("570140"),
-  u = n("786761"),
-  d = n("797316"),
-  _ = n("594174"),
-  c = n("709054");
+n(47120);
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(786761),
+  _ = n(797316),
+  d = n(594174),
+  c = n(709054);
 let E = {};
 
 function I(e) {
@@ -22,34 +22,34 @@ function I(e) {
 }
 
 function T(e, t) {
-  let n = null == t ? null : (0, u.createMessageRecord)(t);
+  let n = null == t ? null : (0, u.e5)(t);
   E[e] = {
     loaded: !0,
     firstMessage: n
   }
 }
 
-function f(e) {
+function h(e) {
   let {
     type: t,
     channelId: n,
     messageId: i,
     userId: r,
     emoji: s,
-    optimistic: a,
-    reactionType: o
+    optimistic: o,
+    reactionType: a
   } = e, l = E[n];
   if (null == l || null == l.firstMessage || i !== l.firstMessage.id) return !1;
-  let u = _.default.getCurrentUser(),
-    d = null != u && u.id === r;
-  if (a && !d) return !1;
+  let u = d.default.getCurrentUser(),
+    _ = null != u && u.id === r;
+  if (o && !_) return !1;
   E[n] = {
     ...l
-  }, "MESSAGE_REACTION_ADD" === t ? E[n].firstMessage = l.firstMessage.addReaction(s, d, e.colors, o) : E[n].firstMessage = l.firstMessage.removeReaction(s, d, o)
+  }, "MESSAGE_REACTION_ADD" === t ? E[n].firstMessage = l.firstMessage.addReaction(s, _, e.colors, a) : E[n].firstMessage = l.firstMessage.removeReaction(s, _, a)
 }
-class S extends(i = o.default.Store) {
+class S extends(i = a.ZP.Store) {
   initialize() {
-    this.waitFor(d.default, _.default)
+    this.waitFor(_.Z, d.default)
   }
   isLoading(e) {
     var t;
@@ -62,12 +62,12 @@ class S extends(i = o.default.Store) {
     }), E[e]
   }
 }
-a = "ForumPostMessagesStore", (s = "displayName") in(r = S) ? Object.defineProperty(r, s, {
-  value: a,
+o = "ForumPostMessagesStore", (s = "displayName") in(r = S) ? Object.defineProperty(r, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new S(l.default, {
+}) : r[s] = o, t.Z = new S(l.Z, {
   CONNECTION_OPEN: function() {
     E = {}
   },
@@ -81,7 +81,7 @@ a = "ForumPostMessagesStore", (s = "displayName") in(r = S) ? Object.definePrope
     if (null == t || null == t.firstMessage) return !1;
     E[c.default.castMessageIdAsChannelId(e.message.id)] = {
       ...t,
-      firstMessage: (0, u.updateMessageRecord)(t.firstMessage, e.message)
+      firstMessage: (0, u.wi)(t.firstMessage, e.message)
     }
   },
   MESSAGE_DELETE: function(e) {
@@ -92,14 +92,14 @@ a = "ForumPostMessagesStore", (s = "displayName") in(r = S) ? Object.definePrope
     }
   },
   THREAD_CREATE: function(e) {
-    if (null != E[e.channel.id] || !d.default.isSubscribedToThreads(e.channel.guild_id)) return !1;
+    if (null != E[e.channel.id] || !_.Z.isSubscribedToThreads(e.channel.guild_id)) return !1;
     E[e.channel.id] = {
       loaded: !0,
       firstMessage: null
     }
   },
-  MESSAGE_REACTION_ADD: f,
-  MESSAGE_REACTION_REMOVE: f,
+  MESSAGE_REACTION_ADD: h,
+  MESSAGE_REACTION_REMOVE: h,
   MESSAGE_REACTION_REMOVE_ALL: function(e) {
     let {
       channelId: t,
@@ -130,11 +130,11 @@ a = "ForumPostMessagesStore", (s = "displayName") in(r = S) ? Object.definePrope
       reactions: i
     } = e, r = E[t];
     if (null == r || null == r.firstMessage || n !== r.firstMessage.id) return !1;
-    let s = _.default.getCurrentUser(),
-      a = r.firstMessage.addReactionBatch(i, null == s ? void 0 : s.id);
+    let s = d.default.getCurrentUser(),
+      o = r.firstMessage.addReactionBatch(i, null == s ? void 0 : s.id);
     E[t] = {
       ...r,
-      firstMessage: a
+      firstMessage: o
     }
   },
   LOAD_FORUM_POSTS: function(e) {
@@ -152,7 +152,7 @@ a = "ForumPostMessagesStore", (s = "displayName") in(r = S) ? Object.definePrope
     } = e, i = n[n.length - 1];
     null != i && i.id === c.default.castChannelIdAsMessageId(t) && (E[t] = {
       loaded: !0,
-      firstMessage: (0, u.createMessageRecord)(i)
+      firstMessage: (0, u.e5)(i)
     })
   }
 })

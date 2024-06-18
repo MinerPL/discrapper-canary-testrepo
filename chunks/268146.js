@@ -1,13 +1,13 @@
 "use strict";
-var i, r, s, a, o, l;
-n.r(t), n.d(t, {
-  DesktopSources: function() {
-    return s
+var i, r, s, o, a, l;
+n.d(t, {
+  X4: function() {
+    return i
   },
-  JSExceptionLocation: function() {
+  Xo: function() {
     return r
   },
-  StoredCrashInformation: function() {
-    return i
+  vA: function() {
+    return s
   }
-}), (a = i || (i = {}))[a.HasRTCConnection = 0] = "HasRTCConnection", a[a.IsSendingVideo = 1] = "IsSendingVideo", a[a.IsSendingStream = 2] = "IsSendingStream", a[a.IsReceivingVideo = 3] = "IsReceivingVideo", a[a.IsReceivingStream = 4] = "IsReceivingStream", a[a.VideoMediaSessionId = 5] = "VideoMediaSessionId", a[a.StreamMediaSessionId = 6] = "StreamMediaSessionId", (o = r || (r = {}))[o.RendererProcessDelayed = 0] = "RendererProcessDelayed", o[o.RendererProcess = 1] = "RendererProcess", o[o.MainProcess = 2] = "MainProcess", (l = s || (s = {})).WINDOW = "window", l.SCREEN = "screen", l.CAMERA = "camera"
+}), (o = i || (i = {}))[o.HasRTCConnection = 0] = "HasRTCConnection", o[o.IsSendingVideo = 1] = "IsSendingVideo", o[o.IsSendingStream = 2] = "IsSendingStream", o[o.IsReceivingVideo = 3] = "IsReceivingVideo", o[o.IsReceivingStream = 4] = "IsReceivingStream", o[o.VideoMediaSessionId = 5] = "VideoMediaSessionId", o[o.StreamMediaSessionId = 6] = "StreamMediaSessionId", (a = r || (r = {}))[a.RendererProcessDelayed = 0] = "RendererProcessDelayed", a[a.RendererProcess = 1] = "RendererProcess", a[a.MainProcess = 2] = "MainProcess", (l = s || (s = {})).WINDOW = "window", l.SCREEN = "screen", l.CAMERA = "camera"

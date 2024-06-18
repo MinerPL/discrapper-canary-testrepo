@@ -1,16 +1,16 @@
 "use strict";
-s.r(t), s.d(t, {
-  getCreatorMonetizationAcceptTermsCheckboxText: function() {
-    return i
+t.d(s, {
+  f: function() {
+    return a
   }
 });
-var a = s("63063"),
-  l = s("981631"),
-  n = s("689938");
+var n = t(63063),
+  i = t(981631),
+  l = t(689938);
 
-function i() {
-  return n.default.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_V2_ACCEPT_TERMS_CHECKBOX.format({
-    fullTermsUrl: a.default.getArticleURL(l.HelpdeskArticles.CREATOR_TERMS),
-    creatorRevenuePolicyUrl: a.default.getArticleURL(l.HelpdeskArticles.CREATOR_POLICY)
+function a() {
+  return l.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_V2_ACCEPT_TERMS_CHECKBOX.format({
+    fullTermsUrl: n.Z.getArticleURL(i.BhN.CREATOR_TERMS),
+    creatorRevenuePolicyUrl: n.Z.getArticleURL(i.BhN.CREATOR_POLICY)
   })
 }

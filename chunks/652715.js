@@ -1,5 +1,5 @@
 t.exports = function(t) {
-  return function(e) {
-    return t(e)
+  return function(r) {
+    return t(r)
   }
 }

@@ -1,31 +1,31 @@
 "use strict";
-s.r(t), s.d(t, {
-  useNewOwnerOnboardingRequired: function() {
-    return d
+t.d(s, {
+  P: function() {
+    return c
   }
 });
-var a = s("735250"),
-  l = s("470079"),
-  n = s("442837"),
-  i = s("481060"),
-  r = s("594174"),
-  o = s("981631");
+var n = t(735250),
+  i = t(470079),
+  l = t(442837),
+  a = t(481060),
+  r = t(594174),
+  o = t(981631);
 
-function d(e) {
-  let t = (null == e ? void 0 : e.hasFeature(o.GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING)) === !0,
-    d = (null == e ? void 0 : e.hasFeature(o.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED)) === !0,
-    u = (0, n.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
-    c = (null == e ? void 0 : e.isOwner(u)) === !0;
-  l.useEffect(() => {
-    null != e && t && c && (0, i.openModalLazy)(async () => {
+function c(e) {
+  let s = (null == e ? void 0 : e.hasFeature(o.oNc.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING)) === !0,
+    c = (null == e ? void 0 : e.hasFeature(o.oNc.ROLE_SUBSCRIPTIONS_ENABLED)) === !0,
+    d = (0, l.e7)([r.default], () => r.default.getCurrentUser()),
+    u = (null == e ? void 0 : e.isOwner(d)) === !0;
+  i.useEffect(() => {
+    null != e && s && u && (0, a.openModalLazy)(async () => {
       let {
-        default: t
-      } = await Promise.all([s.e("99387"), s.e("710")]).then(s.bind(s, "32342"));
-      return s => (0, a.jsx)(t, {
-        ...s,
+        default: s
+      } = await Promise.all([t.e("99387"), t.e("710")]).then(t.bind(t, 32342));
+      return t => (0, n.jsx)(s, {
+        ...t,
         guildId: e.id,
-        requireTeamSetup: d
+        requireTeamSetup: c
       })
     })
-  }, [t, d, e, c])
+  }, [s, c, e, u])
 }

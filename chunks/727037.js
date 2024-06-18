@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  ReflectionBinaryReader: function() {
+n.d(t, {
+  I: function() {
     return s
   }
 });
-var r = n("230367"),
-  i = n("36056"),
-  a = n("929412"),
-  o = n("436759");
+var r = n(230367),
+  i = n(36056),
+  a = n(929412),
+  o = n(436759);
 class s {
   constructor(e) {
     this.info = e
@@ -28,7 +28,7 @@ class s {
         let i = n.readUnknownField;
         if ("throw" == i) throw Error(`Unknown field ${a} (wire type ${o}) for ${this.info.typeName}`);
         let s = e.skip(o);
-        !1 !== i && (!0 === i ? r.UnknownFieldHandler.onRead : i)(this.info.typeName, t, a, o, s);
+        !1 !== i && (!0 === i ? r.z.onRead : i)(this.info.typeName, t, a, o, s);
         continue
       }
       let u = t,
@@ -39,11 +39,11 @@ class s {
         }), s.kind) {
         case "scalar":
         case "enum":
-          let d = "enum" == s.kind ? i.ScalarType.INT32 : s.T,
+          let d = "enum" == s.kind ? i.wx.INT32 : s.T,
             f = "scalar" == s.kind ? s.L : void 0;
           if (c) {
             let t = u[l];
-            if (o == r.WireType.LengthDelimited && d != i.ScalarType.STRING && d != i.ScalarType.BYTES) {
+            if (o == r.TD.LengthDelimited && d != i.wx.STRING && d != i.wx.BYTES) {
               let n = e.uint32() + e.pos;
               for (; e.pos < n;) t.push(this.scalar(e, d, f))
             } else t.push(this.scalar(e, d, f))
@@ -69,7 +69,7 @@ class s {
       let [o, s] = t.tag();
       switch (o) {
         case 1:
-          r = e.K == i.ScalarType.BOOL ? t.bool().toString() : this.scalar(t, e.K, i.LongType.STRING);
+          r = e.K == i.wx.BOOL ? t.bool().toString() : this.scalar(t, e.K, i.pz.STRING);
           break;
         case 2:
           switch (e.V.kind) {
@@ -88,12 +88,12 @@ class s {
       }
     }
     if (void 0 === r) {
-      let t = (0, o.reflectionScalarDefault)(e.K);
-      r = e.K == i.ScalarType.BOOL ? t.toString() : t
+      let t = (0, o.N)(e.K);
+      r = e.K == i.wx.BOOL ? t.toString() : t
     }
     if (void 0 === a) switch (e.V.kind) {
       case "scalar":
-        a = (0, o.reflectionScalarDefault)(e.V.T, e.V.L);
+        a = (0, o.N)(e.V.T, e.V.L);
         break;
       case "enum":
         a = 0;
@@ -105,36 +105,36 @@ class s {
   }
   scalar(e, t, n) {
     switch (t) {
-      case i.ScalarType.INT32:
+      case i.wx.INT32:
         return e.int32();
-      case i.ScalarType.STRING:
+      case i.wx.STRING:
         return e.string();
-      case i.ScalarType.BOOL:
+      case i.wx.BOOL:
         return e.bool();
-      case i.ScalarType.DOUBLE:
+      case i.wx.DOUBLE:
         return e.double();
-      case i.ScalarType.FLOAT:
+      case i.wx.FLOAT:
         return e.float();
-      case i.ScalarType.INT64:
-        return (0, a.reflectionLongConvert)(e.int64(), n);
-      case i.ScalarType.UINT64:
-        return (0, a.reflectionLongConvert)(e.uint64(), n);
-      case i.ScalarType.FIXED64:
-        return (0, a.reflectionLongConvert)(e.fixed64(), n);
-      case i.ScalarType.FIXED32:
+      case i.wx.INT64:
+        return (0, a._)(e.int64(), n);
+      case i.wx.UINT64:
+        return (0, a._)(e.uint64(), n);
+      case i.wx.FIXED64:
+        return (0, a._)(e.fixed64(), n);
+      case i.wx.FIXED32:
         return e.fixed32();
-      case i.ScalarType.BYTES:
+      case i.wx.BYTES:
         return e.bytes();
-      case i.ScalarType.UINT32:
+      case i.wx.UINT32:
         return e.uint32();
-      case i.ScalarType.SFIXED32:
+      case i.wx.SFIXED32:
         return e.sfixed32();
-      case i.ScalarType.SFIXED64:
-        return (0, a.reflectionLongConvert)(e.sfixed64(), n);
-      case i.ScalarType.SINT32:
+      case i.wx.SFIXED64:
+        return (0, a._)(e.sfixed64(), n);
+      case i.wx.SINT32:
         return e.sint32();
-      case i.ScalarType.SINT64:
-        return (0, a.reflectionLongConvert)(e.sint64(), n)
+      case i.wx.SINT64:
+        return (0, a._)(e.sint64(), n)
     }
   }
 }

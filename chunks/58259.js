@@ -1,25 +1,25 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return i
+t.d(s, {
+  Z: function() {
+    return a
   }
-}), s("47120");
-var a = s("470079"),
-  l = s("479531"),
-  n = s("53365");
+}), t(47120);
+var n = t(470079),
+  i = t(479531),
+  l = t(53365);
 
-function i(e) {
-  let [t, s] = a.useState(), [i, r] = a.useState(!1), [o, d] = a.useState(!1);
+function a(e) {
+  let [s, t] = n.useState(), [a, r] = n.useState(!1), [o, c] = n.useState(!1);
   return {
-    error: t,
-    loading: i,
-    createEnableRequest: a.useCallback(async () => {
+    error: s,
+    loading: a,
+    createEnableRequest: n.useCallback(async () => {
       if (null != e) {
-        r(!0), s(void 0), d(!1);
+        r(!0), t(void 0), c(!1);
         try {
-          await n.createCreatorMonetizationEnableRequest(e), d(!0)
+          await l.He(e), c(!0)
         } catch (e) {
-          s(new l.default(e))
+          t(new i.Z(e))
         } finally {
           r(!1)
         }

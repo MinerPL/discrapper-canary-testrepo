@@ -1,43 +1,43 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("442837"),
-  a = n("481060"),
-  o = n("923928"),
-  l = n("468026"),
-  u = n("503856"),
-  d = n("209590"),
-  _ = n("689938");
+n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(442837),
+  o = n(481060),
+  a = n(923928),
+  l = n(468026),
+  u = n(503856),
+  _ = n(209590),
+  d = n(689938);
 let c = () => {
-    o.default.clearSuppressWarning()
+    a.Z.clearSuppressWarning()
   },
   E = () => {
-    o.default.clearSuppressWarning(!0)
+    a.Z.clearSuppressWarning(!0)
   };
-t.default = () => {
+t.Z = () => {
   let e = r.useRef(null);
 
   function t() {
-    null !== e.current && ((0, a.closeModal)(e.current), e.current = null)
+    null !== e.current && ((0, o.closeModal)(e.current), e.current = null)
   }
-  let [o, I] = (0, s.useStateFromStoresArray)([d.default], () => [d.default.shouldShowWarning(), d.default.isAFKChannel()], []), T = r.useCallback(() => {
+  let [a, I] = (0, s.Wu)([_.Z], () => [_.Z.shouldShowWarning(), _.Z.isAFKChannel()], []), T = r.useCallback(() => {
     let t = "",
       n = "";
-    I ? (t = _.default.Messages.SUPPRESSED_AFK_TITLE, n = _.default.Messages.SUPPRESSED_AFK_BODY) : (t = _.default.Messages.SUPPRESSED, n = _.default.Messages.SUPPRESSED_PERMISSION_BODY), e.current = (0, a.openModal)(e => (0, i.jsx)(l.default, {
+    I ? (t = d.Z.Messages.SUPPRESSED_AFK_TITLE, n = d.Z.Messages.SUPPRESSED_AFK_BODY) : (t = d.Z.Messages.SUPPRESSED, n = d.Z.Messages.SUPPRESSED_PERMISSION_BODY), e.current = (0, o.openModal)(e => (0, i.jsx)(l.default, {
       title: t,
       body: n,
       onConfirm: c,
-      confirmText: _.default.Messages.OKAY,
-      secondaryConfirmText: _.default.Messages.DONT_SHOW_AGAIN,
+      confirmText: d.Z.Messages.OKAY,
+      secondaryConfirmText: d.Z.Messages.DONT_SHOW_AGAIN,
       onConfirmSecondary: E,
       ...e
     }))
-  }, [I]), f = r.useCallback(() => {
-    (0, a.openModalLazy)(async () => {
+  }, [I]), h = r.useCallback(() => {
+    (0, o.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("41281")]).then(n.bind(n, "669732"));
+      } = await Promise.all([n.e("99387"), n.e("41281")]).then(n.bind(n, 669732));
       return t => (0, i.jsx)(e, {
         ...t,
         showHideSuppressWarning: !0
@@ -46,7 +46,7 @@ t.default = () => {
       null != t && (e.current = t)
     })
   }, []);
-  return r.useEffect(() => (o && (0, u.isRTCConnectedInHub)() ? f() : o ? T() : t(), () => {
+  return r.useEffect(() => (a && (0, u.p)() ? h() : a ? T() : t(), () => {
     t()
-  }), [o, T, f]), null
+  }), [a, T, h]), null
 }

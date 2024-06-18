@@ -1,57 +1,57 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return N
+t.d(s, {
+  Z: function() {
+    return h
   }
 });
-var a = s("735250"),
-  l = s("470079"),
-  n = s("442837"),
-  i = s("524437"),
-  r = s("481060"),
-  o = s("725803"),
-  d = s("605236"),
-  u = s("999382"),
-  c = s("614342"),
-  E = s("303737"),
-  _ = s("618748"),
-  I = s("500395"),
-  T = s("975464"),
-  S = s("981631"),
-  f = s("674563"),
-  m = s("613847");
+var n = t(735250),
+  i = t(470079),
+  l = t(442837),
+  a = t(704215),
+  r = t(481060),
+  o = t(725803),
+  c = t(605236),
+  d = t(999382),
+  u = t(614342),
+  E = t(303737),
+  _ = t(618748),
+  I = t(500395),
+  T = t(975464),
+  N = t(981631),
+  m = t(674563),
+  S = t(969457);
 
-function N() {
+function h() {
   let e;
-  let t = (0, n.useStateFromStores)([u.default], () => u.default.getGuild()),
+  let s = (0, l.e7)([d.Z], () => d.Z.getGuild()),
     {
-      application: s,
-      loading: N
-    } = (0, o.default)(null == t ? void 0 : t.id, f.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS),
-    g = l.useRef(null),
-    h = (0, c.default)(null != t ? t : void 0);
-  l.useEffect(() => {
-    null != t && (0, E.isEligibleForNewBadge)(t) && (0, d.markDismissibleContentAsDismissed)(i.DismissibleContent.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE)
-  }, [t]);
-  let C = (null == t ? void 0 : t.hasFeature(S.GuildFeatures.CREATOR_MONETIZABLE)) === !1 && (null == t ? void 0 : t.hasFeature(S.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
-  return e = null == t || N ? (0, a.jsx)(r.Spinner, {}) : null != h ? (0, a.jsx)(I.default, {
-    guild: t,
-    config: h
-  }) : C ? (0, a.jsx)(T.default, {
-    guild: t
-  }) : (0, a.jsx)(_.default, {
-    guild: t,
-    application: s
-  }), (0, a.jsx)("div", {
-    className: m.settingsColumn,
-    children: (0, a.jsx)("div", {
-      className: m.settingsContainer,
-      children: (0, a.jsx)(r.ScrollerAuto, {
-        className: m.settingsScroller,
-        children: (0, a.jsx)("main", {
+      application: t,
+      loading: h
+    } = (0, o.Z)(null == s ? void 0 : s.id, m.wW.GUILD_ROLE_SUBSCRIPTIONS),
+    g = i.useRef(null),
+    x = (0, u.Z)(null != s ? s : void 0);
+  i.useEffect(() => {
+    null != s && (0, E.sO)(s) && (0, c.EW)(a.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE)
+  }, [s]);
+  let C = (null == s ? void 0 : s.hasFeature(N.oNc.CREATOR_MONETIZABLE)) === !1 && (null == s ? void 0 : s.hasFeature(N.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
+  return e = null == s || h ? (0, n.jsx)(r.Spinner, {}) : null != x ? (0, n.jsx)(I.Z, {
+    guild: s,
+    config: x
+  }) : C ? (0, n.jsx)(T.Z, {
+    guild: s
+  }) : (0, n.jsx)(_.Z, {
+    guild: s,
+    application: t
+  }), (0, n.jsx)("div", {
+    className: S.settingsColumn,
+    children: (0, n.jsx)("div", {
+      className: S.settingsContainer,
+      children: (0, n.jsx)(r.ScrollerAuto, {
+        className: S.settingsScroller,
+        children: (0, n.jsx)("main", {
           ref: g,
-          className: m.settingsContent,
-          children: (0, a.jsx)(r.FocusRingScope, {
+          className: S.settingsContent,
+          children: (0, n.jsx)(r.FocusRingScope, {
             containerRef: g,
             children: e
           })

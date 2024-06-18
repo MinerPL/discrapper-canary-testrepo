@@ -1,26 +1,26 @@
 "use strict";
-n.r(e), n.d(e, {
-  BAGGAGE_HEADER_NAME: function() {
-    return a
-  },
-  baggageHeaderToDynamicSamplingContext: function() {
+n.d(e, {
+  EN: function() {
     return u
   },
-  dynamicSamplingContextToSentryBaggageHeader: function() {
-    return c
+  IQ: function() {
+    return l
+  },
+  bU: function() {
+    return s
   }
 });
-var r = n("46834"),
-  i = n("529866");
-let a = "baggage",
-  o = "sentry-",
-  s = /^sentry-/;
+var r = n(46834),
+  i = n(529866);
+let s = "baggage",
+  a = "sentry-",
+  o = /^sentry-/;
 
 function u(t) {
-  if (!(0, r.isString)(t) && !Array.isArray(t)) return;
+  if (!(0, r.HD)(t) && !Array.isArray(t)) return;
   let e = {};
   if (Array.isArray(t)) e = t.reduce((t, e) => {
-    let n = l(e);
+    let n = c(e);
     return {
       ...t,
       ...n
@@ -28,22 +28,22 @@ function u(t) {
   }, {});
   else {
     if (!t) return;
-    e = l(t)
+    e = c(t)
   }
-  let n = Object.entries(e).reduce((t, [e, n]) => (e.match(s) && (t[e.slice(o.length)] = n), t), {});
+  let n = Object.entries(e).reduce((t, [e, n]) => (e.match(o) && (t[e.slice(a.length)] = n), t), {});
   return Object.keys(n).length > 0 ? n : void 0
 }
 
-function c(t) {
+function l(t) {
   if (!!t) return function(t) {
     if (0 !== Object.keys(t).length) return Object.entries(t).reduce((t, [e, n], r) => {
-      let a = `${encodeURIComponent(e)}=${encodeURIComponent(n)}`,
-        o = 0 === r ? a : `${t},${a}`;
-      return o.length > 8192 ? (("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.logger.warn(`Not adding key: ${e} with val: ${n} to baggage header due to exceeding baggage size limits.`), t) : o
+      let s = `${encodeURIComponent(e)}=${encodeURIComponent(n)}`,
+        a = 0 === r ? s : `${t},${s}`;
+      return a.length > 8192 ? (("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.warn(`Not adding key: ${e} with val: ${n} to baggage header due to exceeding baggage size limits.`), t) : a
     }, "")
-  }(Object.entries(t).reduce((t, [e, n]) => (n && (t[`${o}${e}`] = n), t), {}))
+  }(Object.entries(t).reduce((t, [e, n]) => (n && (t[`${a}${e}`] = n), t), {}))
 }
 
-function l(t) {
+function c(t) {
   return t.split(",").map(t => t.split("=").map(t => decodeURIComponent(t.trim()))).reduce((t, [e, n]) => (t[e] = n, t), {})
 }

@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n("47120"), n("757143"), n("653041"), n("627494");
-var i = n("710845"),
-  r = n("287328");
-let s = new i.default("GuildEmojis");
-t.default = new class e {
+n(47120), n(757143), n(653041), n(627494);
+var i = n(710845),
+  r = n(287328);
+let s = new i.Z("GuildEmojis");
+t.Z = new class e {
   async getAsync(e) {
     let t = performance.now(),
-      n = await r.default.emojis(e).getMapEntries(),
+      n = await r.Z.emojis(e).getMapEntries(),
       i = performance.now();
     return s.log("asynchronously loaded in ".concat(i - t, "ms (guilds: ").concat(n.length, ")")), n
   }
@@ -36,13 +36,13 @@ t.default = new class e {
   }
   resetInMemoryState() {}
   replace(e, t, n) {
-    r.default.emojisTransaction(n).replaceAll(e, t)
+    r.Z.emojisTransaction(n).replaceAll(e, t)
   }
   delete(e, t) {
-    r.default.emojisTransaction(t).delete(e)
+    r.Z.emojisTransaction(t).delete(e)
   }
   update(e, t, n, i) {
-    let s = r.default.emojisTransaction(i);
+    let s = r.Z.emojisTransaction(i);
     for (let i of (s.putAll(e, t), n)) s.delete(e, i)
   }
   constructor() {

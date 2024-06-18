@@ -1,24 +1,24 @@
 "use strict";
-n.r(t), n.d(t, {
-  SegmentedControl: function() {
-    return _
+n.d(t, {
+  s: function() {
+    return d
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
-  o = n("1561"),
-  l = n("993365"),
-  u = n("264049");
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(1561),
+  l = n(993365),
+  u = n(928283);
 
-function d(e) {
+function _(e) {
   let {
     option: t,
     selected: n,
     onClick: s,
-    look: d,
-    className: _,
+    look: _,
+    className: d,
     selectedClassName: c
   } = e, E = {
     [function(e) {
@@ -29,12 +29,12 @@ function d(e) {
         case "pill":
           return u.pillItemSelected
       }
-    }(d)]: n
+    }(_)]: n
   };
   null != c && (E[c] = n);
   let I = r.useCallback(e => s(t, e), [s, t]);
-  return (0, i.jsx)(o.Clickable, {
-    className: a()(function(e) {
+  return (0, i.jsx)(a.P, {
+    className: o()(function(e) {
       switch (e) {
         case "tab":
         default:
@@ -42,9 +42,9 @@ function d(e) {
         case "pill":
           return u.pillItem
       }
-    }(d), _, E),
+    }(_), d, E),
     onClick: I,
-    children: (0, i.jsx)(l.Text, {
+    children: (0, i.jsx)(l.x, {
       variant: "text-sm/medium",
       color: "none",
       children: t.name
@@ -52,29 +52,29 @@ function d(e) {
   })
 }
 
-function _(e) {
+function d(e) {
   let {
     options: t,
     value: n,
     onChange: s,
-    look: o = "tab",
+    look: a = "tab",
     className: l,
-    optionClassName: _,
+    optionClassName: d,
     selectedOptionClassName: c
   } = e, E = r.useCallback(e => {
     var t;
     let r = n === e.value;
-    return (0, i.jsx)(d, {
+    return (0, i.jsx)(_, {
       selected: r,
       option: e,
-      look: o,
+      look: a,
       onClick: s,
-      className: _,
+      className: d,
       selectedClassName: c
     }, null !== (t = e.key) && void 0 !== t ? t : String(e.value))
-  }, [n, o, s, _, c]);
+  }, [n, a, s, d, c]);
   return (0, i.jsx)("div", {
-    className: a()(function(e) {
+    className: o()(function(e) {
       switch (e) {
         case "tab":
         default:
@@ -82,7 +82,7 @@ function _(e) {
         case "pill":
           return u.pillContainer
       }
-    }(o), l),
+    }(a), l),
     children: t.map(E)
   })
 }

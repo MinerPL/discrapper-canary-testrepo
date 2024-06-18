@@ -2,7 +2,7 @@
 var r, i = Object.prototype.toString,
   a = Function.prototype.toString,
   o = /^\s*(?:function)?\*/,
-  s = n("703825")(),
+  s = n(703825)(),
   u = Object.getPrototypeOf,
   c = function() {
     if (!s) return !1;

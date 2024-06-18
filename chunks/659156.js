@@ -102,7 +102,7 @@ e.exports = function(e) {
           begin: "///",
           relevance: 0
         }, {
-          begin: "\x3c!--|-->"
+          begin: "\x3c!--|--\x3e"
         }, {
           begin: "</?",
           end: ">"

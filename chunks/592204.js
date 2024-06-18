@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  isEligibleForKeywordFiltering: function() {
-    return l
+n.d(t, {
+  Xo: function() {
+    return r
   },
-  useIsEligibleForKeywordFiltering: function() {
+  pB: function() {
     return s
   }
 });
-let a = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-04_keyword_filter_experiment",
   label: "Replace registered keywords with asterisks",
@@ -23,22 +23,22 @@ let a = (0, n("818083").createExperiment)({
   }]
 });
 
-function s(e) {
+function r(e) {
   let {
     location: t
   } = e;
-  return a.useExperiment({
+  return i.useExperiment({
     location: t
   }, {
     autoTrackExposure: !0
   }).enabled
 }
 
-function l(e) {
+function s(e) {
   let {
     location: t
   } = e;
-  return a.getCurrentConfig({
+  return i.getCurrentConfig({
     location: t
   }).enabled
 }

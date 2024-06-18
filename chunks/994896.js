@@ -1,29 +1,49 @@
 "use strict";
-a.r(t), a.d(t, {
-  useCollectiblesCondensedBannersExperiment: function() {
-    return s
+t.d(s, {
+  O: function() {
+    return a
   }
 });
-let l = (0, a("818083").createExperiment)({
+let n = (0, t(818083).B)({
     kind: "user",
     id: "2024-05_shop_condensed_category_banners",
-    label: "Collectibles Shop Condensed Category Banners",
+    label: "Collectibles Shop Dynamic Header & Condensed Category Banners",
     defaultConfig: {
-      condensedBannersEnabled: !1
+      condensedBannersEnabled: !1,
+      condensedBannersAndDynamicHeadersEnabled: !1,
+      newShopLogoEnabled: !1
     },
     treatments: [{
+      id: 0,
+      label: "Control",
+      config: {
+        condensedBannersEnabled: !1,
+        condensedBannersAndDynamicHeadersEnabled: !1,
+        newShopLogoEnabled: !1
+      }
+    }, {
       id: 1,
       label: "Enables condensed banners in the Shop",
       config: {
-        condensedBannersEnabled: !0
+        condensedBannersEnabled: !0,
+        condensedBannersAndDynamicHeadersEnabled: !1,
+        newShopLogoEnabled: !0
+      }
+    }, {
+      id: 2,
+      label: "Enables dynamic headers and condensed banners in the Shop",
+      config: {
+        condensedBannersEnabled: !0,
+        condensedBannersAndDynamicHeadersEnabled: !0,
+        newShopLogoEnabled: !0
       }
     }]
   }),
-  s = e => {
+  a = e => {
     let {
-      location: t
+      location: s
     } = e;
-    return l.useExperiment({
-      location: t
+    return n.useExperiment({
+      location: s
     })
   }

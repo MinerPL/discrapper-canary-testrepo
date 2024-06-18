@@ -1,5 +1,5 @@
 "use strict";
-var n = r("381538");
+var n = r(381538);
 
 function i() {
   return (i = n || function(t) {
@@ -10,20 +10,20 @@ function i() {
     return t
   }).apply(this, arguments)
 }
-var o = r("642512"),
-  a = r("297326"),
-  u = r("470079"),
-  s = r("1231"),
-  c = r("292489"),
-  l = r("746117"),
-  f = r("856084"),
-  p = r("606166"),
-  h = r("675411"),
-  d = r("685536"),
-  g = r("126502"),
-  y = r("581079"),
-  v = r("822274"),
-  m = r("467159"),
+var o = r(642512),
+  a = r(297326),
+  u = r(470079),
+  s = r(1231),
+  c = r(292489),
+  l = r(746117),
+  f = r(856084),
+  p = r(606166),
+  h = r(675411),
+  d = r(685536),
+  g = r(126502),
+  y = r(581079),
+  v = r(822274),
+  m = r(467159),
   _ = function(t, e) {
     return t.getAnchorKey() === e || t.getFocusKey() === e
   },
@@ -48,20 +48,19 @@ var o = r("642512"),
       if (this.props.preventScroll) return;
       var t, e = this.props.selection,
         r = e.getEndKey();
-      if (!!e.getHasFocus() && r === this.props.block.getKey()) {
-        var n = this._node;
-        if (null != n) {
-          var i = c.getScrollParent(n),
-            o = d(i);
-          if (i === window) {
-            var a = h(n),
-              u = a.y + a.height;
-            (t = u - g().height) > 0 && window.scrollTo(o.x, o.y + t + 10)
-          } else {
-            v(n) || y(!1);
-            var l = n.offsetHeight + n.offsetTop;
-            (t = l - (i.offsetTop + i.offsetHeight + o.y)) > 0 && s.setTop(i, s.getTop(i) + t + 10)
-          }
+      if (!e.getHasFocus() || r !== this.props.block.getKey()) return;
+      var n = this._node;
+      if (null != n) {
+        var i = c.getScrollParent(n),
+          o = d(i);
+        if (i === window) {
+          var a = h(n),
+            u = a.y + a.height;
+          (t = u - g().height) > 0 && window.scrollTo(o.x, o.y + t + 10)
+        } else {
+          v(n) || y(!1);
+          var l = n.offsetHeight + n.offsetTop;
+          (t = l - (i.offsetTop + i.offsetHeight + o.y)) > 0 && s.setTop(i, s.getTop(i) + t + 10)
         }
       }
     }, b._renderChildren = function() {

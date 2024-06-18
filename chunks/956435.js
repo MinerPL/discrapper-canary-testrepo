@@ -42,7 +42,7 @@ e.exports = function(e) {
       }
     }, {
       className: "type",
-      begin: t.either(...["double precision", "large object", "with timezone", "without timezone"])
+      begin: t.either("double precision", "large object", "with timezone", "without timezone")
     }, u, {
       className: "variable",
       begin: /@[a-z0-9]+/

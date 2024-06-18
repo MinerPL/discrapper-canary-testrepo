@@ -1,5 +1,5 @@
 "use strict";
-var r = n("531478").codes.ERR_INVALID_OPT_VALUE;
+var r = n(531478).codes.ERR_INVALID_OPT_VALUE;
 e.exports = {
   getHighWaterMark: function(e, t, n, i) {
     var a, o, s, u = (a = t, o = i, s = n, null != a.highWaterMark ? a.highWaterMark : o ? a[s] : null);

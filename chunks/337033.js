@@ -1,37 +1,37 @@
 "use strict";
-n.r(t), n.d(t, {
+n.d(t, {
   H: function() {
-    return a
+    return o
   },
-  HeadingLevel: function() {
-    return s
-  },
-  usePrivateHeadingLevel: function() {
+  x: function() {
     return l
+  },
+  y: function() {
+    return s
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079");
+}), n(47120);
+var i = n(735250),
+  r = n(470079);
 
 function s(e) {
   let {
     component: t,
     children: n,
     forceLevel: s
-  } = e, a = r.useContext(o), [l, u] = r.useState(null != t), d = 1, _ = 1;
-  null != s ? null != t ? (d = s, _ = s + 1) : _ = s : null != t ? (d = a.level, _ = a.level + 1) : _ = a.level + (l ? 1 : 0);
-  let c = r.useCallback(() => (u(!0), d), [d]),
-    E = r.useCallback(() => (u(!0), _), [_]);
+  } = e, o = r.useContext(a), [l, u] = r.useState(null != t), _ = 1, d = 1;
+  null != s ? null != t ? (_ = s, d = s + 1) : d = s : null != t ? (_ = o.level, d = o.level + 1) : d = o.level + (l ? 1 : 0);
+  let c = r.useCallback(() => (u(!0), _), [_]),
+    E = r.useCallback(() => (u(!0), d), [d]);
   return (0, i.jsxs)(i.Fragment, {
-    children: [null != t ? (0, i.jsx)(o.Provider, {
+    children: [null != t ? (0, i.jsx)(a.Provider, {
       value: {
-        level: d,
+        level: _,
         getLevelAndMarkUsed: c
       },
       children: t
-    }) : null, (0, i.jsx)(o.Provider, {
+    }) : null, (0, i.jsx)(a.Provider, {
       value: {
-        level: _,
+        level: d,
         getLevelAndMarkUsed: E
       },
       children: n
@@ -39,7 +39,7 @@ function s(e) {
   })
 }
 
-function a(e) {
+function o(e) {
   let t = l(),
     n = "h".concat(Math.min(t, 6));
   return (0, i.jsx)(n, {
@@ -49,7 +49,7 @@ function a(e) {
     ...e
   })
 }
-let o = r.createContext({
+let a = r.createContext({
   getLevelAndMarkUsed: () => 2,
   level: 2
 });
@@ -57,7 +57,7 @@ let o = r.createContext({
 function l() {
   let {
     getLevelAndMarkUsed: e
-  } = r.useContext(o);
+  } = r.useContext(a);
   return e()
 }
-o.displayName = "HeadingLevelContext"
+a.displayName = "HeadingLevelContext"

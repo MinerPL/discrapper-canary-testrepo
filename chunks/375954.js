@@ -1,133 +1,133 @@
 "use strict";
-n.r(t), n("47120"), n("789020"), n("653041"), n("177593");
-var i, r, a, s, o = n("392711"),
-  l = n.n(o),
-  u = n("442837"),
-  d = n("570140"),
-  _ = n("89892"),
-  c = n("673750"),
-  E = n("710845"),
-  I = n("163268"),
-  T = n("723352"),
-  f = n("160404"),
-  S = n("786761"),
-  h = n("418476");
-n("739566");
-var A = n("995774"),
-  m = n("706454"),
-  N = n("630388"),
-  p = n("709054"),
-  O = n("314897"),
-  R = n("592125"),
-  C = n("796974"),
-  g = n("984933"),
-  L = n("271383"),
-  v = n("430824"),
-  D = n("496675"),
-  M = n("699516"),
-  y = n("944486"),
-  P = n("914010"),
-  U = n("594174"),
-  b = n("981631");
-let G = new Set,
-  w = new E.default("MessageStore"),
+n(47120), n(789020), n(653041), n(177593);
+var i, r, s, o, a = n(392711),
+  l = n.n(a),
+  u = n(442837),
+  _ = n(570140),
+  d = n(89892),
+  c = n(673750),
+  E = n(710845),
+  I = n(163268),
+  T = n(723352),
+  h = n(160404),
+  S = n(786761),
+  f = n(418476),
+  N = n(739566),
+  A = n(995774),
+  m = n(706454),
+  O = n(630388),
+  R = n(709054),
+  C = n(314897),
+  p = n(592125),
+  g = n(796974),
+  L = n(984933),
+  v = n(271383),
+  D = n(430824),
+  M = n(496675),
+  P = n(699516),
+  y = n(944486),
+  U = n(914010),
+  b = n(594174),
+  G = n(981631);
+let w = new Set,
+  k = new E.Z("MessageStore"),
   B = !1;
 
-function k() {
-  _.default.forEach(e => {
-    _.default.commit(e.mutate({
+function x() {
+  d.Z.forEach(e => {
+    d.Z.commit(e.mutate({
       ready: !1,
       loadingMore: !1
     }))
-  }), G.clear()
+  }), w.clear()
 }
 
 function V() {
-  _.default.forEach(e => {
+  d.Z.forEach(e => {
     let {
       channelId: t
     } = e;
-    null == R.default.getChannel(t) && _.default.clear(t)
+    null == p.Z.getChannel(t) && d.Z.clear(t)
   })
 }
 
-function x() {
-  _.default.forEach(e => {
-    _.default.commit(e.reset(e.map(e => e.set("blocked", M.default.isBlocked(e.author.id)))))
+function Z() {
+  d.Z.forEach(e => {
+    d.Z.commit(e.reset(e.map(e => e.set("blocked", P.Z.isBlocked(e.author.id)))))
   })
-}
-
-function F(e) {
-  let {
-    type: t,
-    channelId: n,
-    messageId: i,
-    userId: r,
-    emoji: a,
-    reactionType: s
-  } = e, o = _.default.get(n);
-  if (null == o || !(0, A.shouldApplyReaction)(e)) return !1;
-  let l = O.default.getId() === r;
-  o = o.update(i, n => "MESSAGE_REACTION_ADD" === t ? n.addReaction(a, l, e.colors, s) : n.removeReaction(a, l, s)), _.default.commit(o)
 }
 
 function H(e) {
   let {
     type: t,
+    channelId: n,
+    messageId: i,
+    userId: r,
+    emoji: s,
+    reactionType: o
+  } = e, a = d.Z.get(n);
+  if (null == a || !(0, A.sm)(e)) return !1;
+  let l = C.default.getId() === r;
+  a = a.update(i, n => "MESSAGE_REACTION_ADD" === t ? n.addReaction(s, l, e.colors, o) : n.removeReaction(s, l, o)), d.Z.commit(a)
+}
+
+function F(e) {
+  let {
+    type: t,
     messageData: n
   } = e, {
     message: i
-  } = n, r = (0, c.getFailedMessageId)(n), a = i.channelId, s = _.default.getOrCreate(a);
-  if (!s.has(r)) return !1;
-  s = s.update(r, e => {
+  } = n, r = (0, c.hc)(n), s = i.channelId, o = d.Z.getOrCreate(s);
+  if (!o.has(r)) return !1;
+  o = o.update(r, e => {
     var n;
-    return (null === (n = e.embeds) || void 0 === n ? void 0 : n.filter(T.isNotAutomodEmbed).length) > 0 && (e = e.set("embeds", [])), "MESSAGE_SEND_FAILED_AUTOMOD" === t && (e = e.set("flags", (0, N.addFlag)(e.flags, b.MessageFlags.EPHEMERAL))), e
-  }), _.default.commit(s)
+    return (null === (n = e.embeds) || void 0 === n ? void 0 : n.filter(T.K).length) > 0 && (e = e.set("embeds", [])), "MESSAGE_SEND_FAILED_AUTOMOD" === t && (e = e.set("flags", (0, O.pj)(e.flags, G.iLy.EPHEMERAL))), e
+  }), d.Z.commit(o)
 }
-class Y extends(i = u.default.Store) {
+class Y extends(i = u.ZP.Store) {
   initialize() {
-    this.waitFor(U.default, R.default, C.default, L.default, m.default, y.default, P.default, v.default, M.default, g.default), this.syncWith([f.default], () => {})
+    this.waitFor(b.default, p.Z, g.Z, v.ZP, m.default, y.Z, U.Z, D.Z, P.Z, L.ZP), this.syncWith([h.Z], () => {})
   }
   getMessages(e) {
-    if (f.default.hasViewingRoles()) {
-      let t = R.default.getChannel(e),
+    if (h.Z.hasViewingRoles()) {
+      let t = p.Z.getChannel(e),
         n = null == t ? void 0 : t.getGuildId();
-      if (f.default.isViewingRoles(n) && !D.default.can(b.Permissions.VIEW_CHANNEL, t)) return new _.default(e)
+      if (h.Z.isViewingRoles(n) && !M.Z.can(G.Plq.VIEW_CHANNEL, t)) return new d.Z(e)
     }
-    return _.default.getOrCreate(e)
+    return d.Z.getOrCreate(e)
   }
   getMessage(e, t) {
-    return _.default.getOrCreate(e).get(t)
+    return d.Z.getOrCreate(e).get(t)
   }
   getLastEditableMessage(e) {
-    let t = U.default.getCurrentUser();
-    return l()(this.getMessages(e).toArray()).reverse().find(e => (0, h.default)(e, null == t ? void 0 : t.id))
+    let t = b.default.getCurrentUser();
+    return l()(this.getMessages(e).toArray()).reverse().find(e => (0, f.Z)(e, null == t ? void 0 : t.id))
   }
   getLastCommandMessage(e) {
-    let t = U.default.getCurrentUser();
+    let t = b.default.getCurrentUser();
     return this.getMessages(e).toArray().reverse().find(e => null != e.interaction && e.interaction.user.id === (null == t ? void 0 : t.id))
   }
   getLastMessage(e) {
     return l()(this.getMessages(e).toArray()).reverse().get(0)
   }
   getLastNonCurrentUserMessage(e) {
-    let t = U.default.getCurrentUser();
+    let t = b.default.getCurrentUser();
     return l()(this.getMessages(e).toArray()).reverse().find(e => e.author.id !== (null == t ? void 0 : t.id))
   }
   jumpedMessageId(e) {
-    let t = _.default.get(e);
+    let t = d.Z.get(e);
     return null == t ? void 0 : t.jumpTargetId
   }
   focusedMessageId(e) {
-    let t = _.default.get(e);
+    let t = d.Z.get(e);
     return null == t ? void 0 : t.focusTargetId
   }
   hasPresent(e) {
-    let t = _.default.get(e);
+    let t = d.Z.get(e);
     return null != t && t.ready && t.hasPresent()
   }
   isReady(e) {
-    return _.default.getOrCreate(e).ready
+    return d.Z.getOrCreate(e).ready
   }
   whenReady(e, t) {
     this.addConditionalChangeListener(() => {
@@ -135,40 +135,40 @@ class Y extends(i = u.default.Store) {
     })
   }
   isLoadingMessages(e) {
-    return _.default.getOrCreate(e).loadingMore
+    return d.Z.getOrCreate(e).loadingMore
   }
   hasCurrentUserSentMessage(e) {
-    let t = U.default.getCurrentUser();
+    let t = b.default.getCurrentUser();
     return null != this.getMessages(e).findNewest(e => e.author.id === (null == t ? void 0 : t.id))
   }
   hasCurrentUserSentMessageSinceAppStart() {
     return B
   }
 }
-s = "MessageStore", (a = "displayName") in(r = Y) ? Object.defineProperty(r, a, {
-  value: s,
+o = "MessageStore", (s = "displayName") in(r = Y) ? Object.defineProperty(r, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s, t.default = new Y(d.default, {
+}) : r[s] = o, t.Z = new Y(_.Z, {
   BACKGROUND_SYNC_CHANNEL_MESSAGES: function(e) {
     let {
       changesByChannelId: t
     } = e;
     for (let e in t) {
-      let n = _.default.get(e);
+      let n = d.Z.get(e);
       if (null != n) {
         n.cached;
         n.mergeDelta(t[e].new_messages, t[e].modified_messages, t[e].deleted_message_ids)
       }
     }
   },
-  CONNECTION_OPEN: k,
-  OVERLAY_INITIALIZE: k,
+  CONNECTION_OPEN: x,
+  OVERLAY_INITIALIZE: x,
   CACHE_LOADED: function(e) {
-    for (let [t, n] of p.default.entries(e.messages)) {
-      let e = _.default.getOrCreate(t).addCachedMessages(n, !0);
-      _.default.commit(e)
+    for (let [t, n] of R.default.entries(e.messages)) {
+      let e = d.Z.getOrCreate(t).addCachedMessages(n, !0);
+      d.Z.commit(e)
     }
   },
   LOAD_MESSAGES: function() {
@@ -180,28 +180,28 @@ s = "MessageStore", (a = "displayName") in(r = Y) ? Object.defineProperty(r, a, 
       isBefore: n,
       isAfter: i,
       jump: r,
-      hasMoreBefore: a,
-      hasMoreAfter: s,
-      messages: o,
+      hasMoreBefore: s,
+      hasMoreAfter: o,
+      messages: a,
       isStale: l,
       truncate: u
-    } = e, d = _.default.getOrCreate(t);
-    d = d.loadComplete({
-      newMessages: o,
+    } = e, _ = d.Z.getOrCreate(t);
+    _ = _.loadComplete({
+      newMessages: a,
       isBefore: n,
       isAfter: i,
       jump: r,
-      hasMoreBefore: a,
-      hasMoreAfter: s,
+      hasMoreBefore: s,
+      hasMoreAfter: o,
       cached: l,
       hasFetched: !0
-    }), null != u && (n || i) && (!n || !i) && (d = d.truncate(n, i)), _.default.commit(d)
+    }), null != u && (n || i) && (!n || !i) && (_ = _.truncate(n, i)), d.Z.commit(_)
   },
   LOAD_MESSAGES_FAILURE: function(e) {
     let {
       channelId: t
-    } = e, n = _.default.getOrCreate(t);
-    _.default.commit(n.mutate({
+    } = e, n = d.Z.getOrCreate(t);
+    d.Z.commit(n.mutate({
       loadingMore: !1,
       error: !0
     }))
@@ -212,22 +212,22 @@ s = "MessageStore", (a = "displayName") in(r = Y) ? Object.defineProperty(r, a, 
       jump: n,
       focus: i,
       before: r,
-      after: a,
-      limit: s,
-      truncate: o
-    } = e, l = _.default.getOrCreate(t);
-    (null == n ? void 0 : n.present) ? l = l.jumpToPresent(s): (null == i ? void 0 : i.messageId) != null ? l = l.focusOnMessage(i.messageId) : (null == n ? void 0 : n.messageId) != null ? l = l.jumpToMessage(n.messageId, n.flash, n.offset, n.returnMessageId, n.jumpType) : (null != r || null != a) && (l = l.loadFromCache(null != r, s)), null != o && (null != r || null != a) && (null == r || null == a) && (l = l.truncate(null != r, null != a)), _.default.commit(l)
+      after: s,
+      limit: o,
+      truncate: a
+    } = e, l = d.Z.getOrCreate(t);
+    (null == n ? void 0 : n.present) ? l = l.jumpToPresent(o): (null == i ? void 0 : i.messageId) != null ? l = l.focusOnMessage(i.messageId) : (null == n ? void 0 : n.messageId) != null ? l = l.jumpToMessage(n.messageId, n.flash, n.offset, n.returnMessageId, n.jumpType) : (null != r || null != s) && (l = l.loadFromCache(null != r, o)), null != a && (null != r || null != s) && (null == r || null == s) && (l = l.truncate(null != r, null != s)), d.Z.commit(l)
   },
   LOCAL_MESSAGES_LOADED: function(e) {
-    let t = _.default.getOrCreate(e.channelId);
-    (t.cached || !t.ready) && _.default.commit(t.addCachedMessages(e.messages, e.stale))
+    let t = d.Z.getOrCreate(e.channelId);
+    (t.cached || !t.ready) && d.Z.commit(t.addCachedMessages(e.messages, e.stale))
   },
   LOAD_MESSAGE_INTERACTION_DATA_SUCCESS: function(e) {
     let t = e.messageId,
       n = e.channelId,
-      i = _.default.get(n);
+      i = d.Z.get(n);
     if (null == i || !i.has(t)) return !1;
-    i = i.update(t, t => t.set("interactionData", e.interactionData)), _.default.commit(i)
+    i = i.update(t, t => t.set("interactionData", e.interactionData)), d.Z.commit(i)
   },
   TRUNCATE_MESSAGES: function(e) {
     let {
@@ -235,61 +235,61 @@ s = "MessageStore", (a = "displayName") in(r = Y) ? Object.defineProperty(r, a, 
       truncateBottom: n,
       truncateTop: i
     } = e;
-    w.log("Truncating messages for ".concat(t, " bottom:").concat(n, " top:").concat(i));
-    let r = _.default.getOrCreate(t);
-    r = r.truncate(n, i), _.default.commit(r)
+    k.log("Truncating messages for ".concat(t, " bottom:").concat(n, " top:").concat(i));
+    let r = d.Z.getOrCreate(t);
+    r = r.truncate(n, i), d.Z.commit(r)
   },
   CLEAR_MESSAGES: function(e) {
     let {
       channelId: t
     } = e;
-    w.log("Clearing messages for ".concat(t)), _.default.clear(t), G.clear()
+    k.log("Clearing messages for ".concat(t)), d.Z.clear(t), w.clear()
   },
   MESSAGE_CREATE: function(e) {
     let {
       channelId: t,
       message: n,
       isPushNotification: i
-    } = e, r = _.default.getOrCreate(t);
+    } = e, r = d.Z.getOrCreate(t);
     if (i) {
-      w.log("Inserting message tapped on from a push notification", n.id, n.channel_id), _.default.commit(r.receivePushNotification(n));
+      k.log("Inserting message tapped on from a push notification", n.id, n.channel_id), d.Z.commit(r.receivePushNotification(n));
       return
     }
     if (!r.ready) return !1;
-    null != n.nonce && n.state !== b.MessageStates.SENDING && G.has(n.nonce) && (r = r.remove(n.nonce), G.delete(n.nonce)), r = r.receiveMessage(n, C.default.isAtBottom(t)), _.default.commit(r)
+    null != n.nonce && n.state !== G.yb.SENDING && w.has(n.nonce) && (r = r.remove(n.nonce), w.delete(n.nonce)), r = r.receiveMessage(n, g.Z.isAtBottom(t)), d.Z.commit(r)
   },
   MESSAGE_SEND_FAILED: function(e) {
     let {
       channelId: t,
       messageId: n,
       reason: i
-    } = e, r = _.default.getOrCreate(t);
+    } = e, r = d.Z.getOrCreate(t);
     if (null == r || !r.has(n)) return !1;
-    let a = r.get(n, !0);
-    r = (null == a ? void 0 : a.isPoll()) === !0 ? r.remove(n) : r.update(n, e => ((e = e.set("state", b.MessageStates.SEND_FAILED)).isCommandType() ? e = (e = e.set("interactionError", null != i ? i : "")).set("flags", (0, N.addFlag)(e.flags, b.MessageFlags.EPHEMERAL)) : null != i && (e = e.set("interactionError", null != i ? i : "")), e)), _.default.commit(r)
+    let s = r.get(n, !0);
+    r = (null == s ? void 0 : s.isPoll()) === !0 ? r.remove(n) : r.update(n, e => ((e = e.set("state", G.yb.SEND_FAILED)).isCommandType() ? e = (e = e.set("interactionError", null != i ? i : "")).set("flags", (0, O.pj)(e.flags, G.iLy.EPHEMERAL)) : null != i && (e = e.set("interactionError", null != i ? i : "")), e)), d.Z.commit(r)
   },
-  MESSAGE_SEND_FAILED_AUTOMOD: H,
-  MESSAGE_EDIT_FAILED_AUTOMOD: H,
+  MESSAGE_SEND_FAILED_AUTOMOD: F,
+  MESSAGE_EDIT_FAILED_AUTOMOD: F,
   MESSAGE_UPDATE: function(e) {
     let t = e.message.id,
       n = e.message.channel_id,
-      i = _.default.getOrCreate(n);
+      i = d.Z.getOrCreate(n);
     if (null == i || !i.has(t)) return !1;
-    i = i.update(t, t => (0, S.updateMessageRecord)(t, e.message)), _.default.commit(i)
+    i = i.update(t, t => (0, S.wi)(t, e.message)), d.Z.commit(i)
   },
   MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function(e) {
     let {
       messageId: t,
       channelId: n
-    } = e, i = _.default.get(n);
+    } = e, i = d.Z.get(n);
     if (null == i || !i.has(t)) return !1;
-    i = i.update(t, I.handleExplicitMediaScanTimeoutForMessage), _.default.commit(i)
+    i = i.update(t, I.Cm), d.Z.commit(i)
   },
   MESSAGE_DELETE: function(e) {
     let {
       id: t,
       channelId: n
-    } = e, i = _.default.getOrCreate(n);
+    } = e, i = d.Z.getOrCreate(n);
     if (null == i || !i.has(t)) return !1;
     if (i.revealedMessageId === t) {
       let e = i.getAfter(t);
@@ -299,13 +299,13 @@ s = "MessageStore", (a = "displayName") in(r = Y) ? Object.defineProperty(r, a, 
         revealedMessageId: null
       })
     }
-    i = i.remove(t), _.default.commit(i), G.delete(t)
+    i = i.remove(t), d.Z.commit(i), w.delete(t)
   },
   MESSAGE_DELETE_BULK: function(e) {
     let {
       ids: t,
       channelId: n
-    } = e, i = _.default.getOrCreate(n);
+    } = e, i = d.Z.getOrCreate(n);
     if (null == i) return !1;
     let r = i.removeMany(t);
     if (i === r) return !1;
@@ -317,94 +317,94 @@ s = "MessageStore", (a = "displayName") in(r = Y) ? Object.defineProperty(r, a, 
         revealedMessageId: null
       })
     }
-    _.default.commit(r), t.forEach(e => {
-      G.delete(e)
+    d.Z.commit(r), t.forEach(e => {
+      w.delete(e)
     })
   },
   MESSAGE_REVEAL: function(e) {
     let {
       channelId: t,
       messageId: n
-    } = e, i = _.default.getOrCreate(t);
-    _.default.commit(i.mutate({
+    } = e, i = d.Z.getOrCreate(t);
+    d.Z.commit(i.mutate({
       revealedMessageId: n
     }))
   },
   THREAD_CREATE_LOCAL: function(e) {
     let {
       channelId: t
-    } = e, n = _.default.getOrCreate(t);
+    } = e, n = d.Z.getOrCreate(t);
     n = n.loadComplete({
       newMessages: [],
       hasMoreAfter: !1,
       hasMoreBefore: !1
-    }), _.default.commit(n)
+    }), d.Z.commit(n)
   },
   CHANNEL_DELETE: V,
   THREAD_DELETE: V,
   GUILD_DELETE: V,
-  RELATIONSHIP_ADD: x,
-  RELATIONSHIP_REMOVE: x,
+  RELATIONSHIP_ADD: Z,
+  RELATIONSHIP_REMOVE: Z,
   GUILD_MEMBERS_CHUNK_BATCH: function(e) {},
   THREAD_MEMBER_LIST_UPDATE: function(e) {},
-  MESSAGE_REACTION_ADD: F,
+  MESSAGE_REACTION_ADD: H,
   MESSAGE_REACTION_ADD_MANY: function(e) {
     let {
       channelId: t,
       messageId: n,
       reactions: i
-    } = e, r = _.default.get(t);
+    } = e, r = d.Z.get(t);
     if (null == r) return !1;
     r = r.update(n, e => {
       var t;
-      return e.addReactionBatch(i, null === (t = U.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
-    }), _.default.commit(r)
+      return e.addReactionBatch(i, null === (t = b.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
+    }), d.Z.commit(r)
   },
-  MESSAGE_REACTION_REMOVE: F,
+  MESSAGE_REACTION_REMOVE: H,
   MESSAGE_REACTION_REMOVE_ALL: function(e) {
     let {
       channelId: t,
       messageId: n
-    } = e, i = _.default.get(t);
+    } = e, i = d.Z.get(t);
     if (null == i) return !1;
-    i = i.update(n, e => e.set("reactions", [])), _.default.commit(i)
+    i = i.update(n, e => e.set("reactions", [])), d.Z.commit(i)
   },
   MESSAGE_REACTION_REMOVE_EMOJI: function(e) {
     let {
       channelId: t,
       messageId: n,
       emoji: i
-    } = e, r = _.default.get(t);
+    } = e, r = d.Z.get(t);
     if (null == r) return !1;
-    r = r.update(n, e => e.removeReactionsForEmoji(i)), _.default.commit(r)
+    r = r.update(n, e => e.removeReactionsForEmoji(i)), d.Z.commit(r)
   },
   LOGOUT: function() {
-    _.default.forEach(e => {
-      _.default.clear(e.channelId)
-    }), G.clear()
+    d.Z.forEach(e => {
+      d.Z.clear(e.channelId)
+    }), w.clear()
   },
   UPLOAD_START: function(e) {
     let {
       message: t
     } = e;
-    null != t.nonce && G.add(t.nonce)
+    null != t.nonce && w.add(t.nonce)
   },
   UPLOAD_FAIL: function(e) {
     let {
       channelId: t,
       messageRecord: n
     } = e, i = null == n ? void 0 : n.nonce;
-    if (null != i && G.has(i)) {
-      let e = _.default.getOrCreate(t),
+    if (null != i && w.has(i)) {
+      let e = d.Z.getOrCreate(t),
         n = e.get(i);
       if (null == n) return;
-      e = (e = e.remove(i)).merge([n]), G.delete(i), _.default.commit(e)
+      e = (e = e.remove(i)).merge([n]), w.delete(i), d.Z.commit(e)
     }
   },
   LOCAL_MESSAGE_CREATE: function(e) {
     let {
       message: t
-    } = e, n = U.default.getCurrentUser();
+    } = e, n = b.default.getCurrentUser();
     null != t && null != t.author && null != n && t.author.id === n.id && (B = !0)
   }
 })

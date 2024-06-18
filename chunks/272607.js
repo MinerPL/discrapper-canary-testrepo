@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  LocalWeekYearParser: function() {
+n.d(t, {
+  x: function() {
     return p
   }
 });
-var r = n("717029"),
-  i = n("846042"),
-  a = n("193603"),
-  o = n("780603");
+var r = n(717029),
+  i = n(846042),
+  a = n(193603),
+  o = n(780603);
 
 function s(e) {
   return (s = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
@@ -70,13 +70,10 @@ var p = function(e) {
     }
   }(), function() {
     var e, r = d(t);
-    if (n) {
-      var i = d(this).constructor;
-      e = Reflect.construct(r, arguments, i)
-    } else e = r.apply(this, arguments);
-    return function(e, t) {
-      return t && ("object" === s(t) || "function" == typeof t) ? t : l(e)
-    }(this, e)
+    return e = n ? Reflect.construct(r, arguments, d(this).constructor) : r.apply(this, arguments),
+      function(e, t) {
+        return t && ("object" === s(t) || "function" == typeof t) ? t : l(e)
+      }(this, e)
   });
 
   function g() {
@@ -98,13 +95,13 @@ var p = function(e) {
       };
       switch (t) {
         case "Y":
-          return (0, i.mapValue)((0, i.parseNDigits)(4, e), r);
+          return (0, i.jg)((0, i.ZL)(4, e), r);
         case "Yo":
-          return (0, i.mapValue)(n.ordinalNumber(e, {
+          return (0, i.jg)(n.ordinalNumber(e, {
             unit: "year"
           }), r);
         default:
-          return (0, i.mapValue)((0, i.parseNDigits)(t.length, e), r)
+          return (0, i.jg)((0, i.ZL)(t.length, e), r)
       }
     }
   }, {
@@ -115,13 +112,13 @@ var p = function(e) {
   }, {
     key: "set",
     value: function(e, t, n, r) {
-      var s = (0, a.default)(e, r);
+      var s = (0, a.Z)(e, r);
       if (n.isTwoDigitYear) {
-        var u = (0, i.normalizeTwoDigitYear)(n.year, s);
-        return e.setUTCFullYear(u, 0, r.firstWeekContainsDate), e.setUTCHours(0, 0, 0, 0), (0, o.default)(e, r)
+        var u = (0, i.WG)(n.year, s);
+        return e.setUTCFullYear(u, 0, r.firstWeekContainsDate), e.setUTCHours(0, 0, 0, 0), (0, o.Z)(e, r)
       }
       var c = "era" in t && 1 !== t.era ? 1 - n.year : n.year;
-      return e.setUTCFullYear(c, 0, r.firstWeekContainsDate), e.setUTCHours(0, 0, 0, 0), (0, o.default)(e, r)
+      return e.setUTCFullYear(c, 0, r.firstWeekContainsDate), e.setUTCHours(0, 0, 0, 0), (0, o.Z)(e, r)
     }
-  }], u(r.prototype, p), h && u(r, h), g
-}(r.Parser)
+  }], u(r.prototype, p), g
+}(r._)

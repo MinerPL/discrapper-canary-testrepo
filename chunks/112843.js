@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return o
+n.d(t, {
+  Z: function() {
+    return a
   }
 });
-var i = n("470079"),
-  r = n("399606"),
-  s = n("745510"),
-  a = n("351780");
+var i = n(470079),
+  r = n(399606),
+  s = n(745510),
+  o = n(351780);
 
-function o() {
+function a() {
   let {
     createMultipleConfettiAt: e
-  } = i.useContext(s.ConfettiCannonContext), t = (0, r.useStateFromStores)([a.default], () => a.default.getState()), n = i.useCallback(e => ({
+  } = i.useContext(s.h), t = (0, r.e7)([o.Z], () => o.Z.getState()), n = i.useCallback(e => ({
     size: {
       type: "static-random",
       minValue: e.confettiSize - 7,
@@ -21,12 +21,12 @@ function o() {
   }), []);
   return i.useMemo(() => ({
     fire: (i, r, s) => {
-      var a, o;
+      var o, a;
       let l = (null == s ? void 0 : s.settings) != null ? {
         ...t,
         ...s.settings
       } : t;
-      e(i, r, n(l), (null !== (a = null == s ? void 0 : s.count) && void 0 !== a ? a : l.confettiCount) * (null !== (o = null == s ? void 0 : s.countMultiplier) && void 0 !== o ? o : 1), {
+      e(i, r, n(l), (null !== (o = null == s ? void 0 : s.count) && void 0 !== o ? o : l.confettiCount) * (null !== (a = null == s ? void 0 : s.countMultiplier) && void 0 !== a ? a : 1), {
         sprite: null == s ? void 0 : s.sprite
       })
     }

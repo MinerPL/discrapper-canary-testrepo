@@ -1,47 +1,47 @@
 "use strict";
 let i;
-n.r(t), n.d(t, {
-  cleanExecutablePath: function() {
+n.d(t, {
+  F: function() {
     return E
   },
-  default: function() {
+  Z: function() {
     return I
   }
-}), n("757143"), n("653041");
-var r = n("392711"),
+}), n(757143), n(653041);
+var r = n(392711),
   s = n.n(r),
-  a = n("579806"),
-  o = n("710845"),
-  l = n("358085"),
-  u = n("998502");
-let d = [];
+  o = n(579806),
+  a = n(710845),
+  l = n(358085),
+  u = n(998502);
+let _ = [];
 
-function _(e) {
+function d(e) {
   return e = e.toLowerCase(), (0, l.isWindows)() && (e = (e = e.replace(/^[a-z]:/, "")).replace(/\\/g, "/")), e
 }
 
 function c(e) {
-  null != e && "" !== e && (!(e = _(e)).endsWith("/") && (e += "/"), d.push(e))
+  null != e && "" !== e && (!(e = d(e)).endsWith("/") && (e += "/"), _.push(e))
 }
 
 function E(e) {
-  e = _(e);
+  e = d(e);
   let t = !1;
-  return (d.forEach(n => {
+  return (_.forEach(n => {
     !t && e.startsWith(n) && (e = e.substr(n.length), t = !0)
   }), t) ? e = e.includes("dosbox.exe") ? e.split("/").slice(-3).join("/") : e.split("/").slice(-2).join("/") : null
 }
 async function I() {
   if (null != i) return i;
   try {
-    await u.default.ensureModule("discord_game_utils"), i = await u.default.requireModule("discord_game_utils")
+    await u.ZP.ensureModule("discord_game_utils"), i = await u.ZP.requireModule("discord_game_utils")
   } catch (e) {
-    new o.default("GamesActionCreators").error("could not load discord_game_utils", e)
+    new a.Z("GamesActionCreators").error("could not load discord_game_utils", e)
   }
   if ((0, l.isWindows)()) {
-    let e = a.default.process.env;
+    let e = o.Z.process.env;
     c(e.LOCALAPPDATA), c(e["PROGRAMFILES(X86)"]), c(e.PROGRAMFILES), c(e.PROGRAMW6432), c(e.PROGRAMDATA), c("/games/"), c("/steamlibrary/steamapps/common/")
   }
-  let e = a.default.remoteApp.getPath;
-  return c(await e("home")), c(await e("appData")), c(await e("desktop")), c(await e("documents")), c(await e("downloads")), (d = s().uniq(d)).sort((e, t) => t.length - e.length), i
+  let e = o.Z.remoteApp.getPath;
+  return c(await e("home")), c(await e("appData")), c(await e("desktop")), c(await e("documents")), c(await e("downloads")), (_ = s().uniq(_)).sort((e, t) => t.length - e.length), i
 }

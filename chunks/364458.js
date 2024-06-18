@@ -11,8 +11,8 @@ function i(e) {
     };
   return t
 }
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return i
   }
-}), n("47120")
+}), n(47120)

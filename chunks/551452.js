@@ -1,59 +1,59 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return A
+n.d(t, {
+  Z: function() {
+    return N
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("481060"),
-  s = n("239091"),
-  a = n("287734"),
-  o = n("364640"),
-  l = n("754688"),
-  u = n("336197"),
-  d = n("131704"),
-  _ = n("592125"),
-  c = n("430824"),
-  E = n("797053"),
-  I = n("442514"),
-  T = n("900849"),
-  f = n("746878"),
-  S = n("981631");
-async function h(e, t, n) {
+var i = n(735250);
+n(470079);
+var r = n(481060),
+  s = n(239091),
+  o = n(287734),
+  a = n(364640),
+  l = n(754688),
+  u = n(336197),
+  _ = n(131704),
+  d = n(592125),
+  c = n(430824),
+  E = n(797053),
+  I = n(442514),
+  T = n(900849),
+  h = n(746878),
+  S = n(981631);
+async function f(e, t, n) {
   if (null == t) return;
-  if (o.default.trackDiscordLinkClicked({
+  if (a.Z.trackDiscordLinkClicked({
       guildId: e,
       channelId: t,
       messageId: n
     }), null != e) {
-    let n = c.default.getGuild(e);
+    let n = c.Z.getGuild(e);
     if ((null == n ? void 0 : n.joinedAt) == null) try {
-      await T.startLurking(e, {}, {
+      await T.Ub(e, {}, {
         channelId: t
       });
       return
     } catch {}
   }
-  let i = _.default.getChannel(t);
-  if (null != i && null == n && (0, d.isGuildVocalChannelType)(i.type) && (0, l.canViewChannel)(i)) {
-    a.default.selectVoiceChannel(i.id);
+  let i = d.Z.getChannel(t);
+  if (null != i && null == n && (0, _.bw)(i.type) && (0, l.YO)(i)) {
+    o.default.selectVoiceChannel(i.id);
     return
-  }(0, u.default)(S.Routes.CHANNEL(e, t, n))
+  }(0, u.Z)(S.Z5c.CHANNEL(e, t, n))
 }
 
-function A(e) {
+function N(e) {
   return {
-    react(t, a, o) {
-      let l = _.default.getChannel(t.channelId),
-        u = o.noStyleAndInteraction ? void 0 : n => {
-          e.shouldStopPropagation && (null == n || n.stopPropagation()), h(t.guildId, t.channelId, t.messageId), e.shouldCloseDefaultModals && (0, r.closeAllModals)()
+    react(t, o, a) {
+      let l = d.Z.getChannel(t.channelId),
+        u = a.noStyleAndInteraction ? void 0 : n => {
+          e.shouldStopPropagation && (null == n || n.stopPropagation()), f(t.guildId, t.channelId, t.messageId), e.shouldCloseDefaultModals && (0, r.closeAllModals)()
         },
-        d = o.noStyleAndInteraction || null == t.channelId || null == l && null == t.originalLink ? S.NOOP : e => {
-          (0, s.openContextMenuLazy)(e, async () => {
+        _ = a.noStyleAndInteraction || null == t.channelId || null == l && null == t.originalLink ? S.dG4 : e => {
+          (0, s.jW)(e, async () => {
             let {
               default: e
-            } = await n.e("9573").then(n.bind(n, "546649"));
+            } = await n.e("9573").then(n.bind(n, 546649));
             return n => {
               var r;
               return (0, i.jsx)(e, {
@@ -66,13 +66,13 @@ function A(e) {
             }
           })
         };
-      return (0, i.jsxs)(E.default, {
+      return (0, i.jsxs)(E.Z, {
         role: "link",
         onClick: u,
-        onContextMenu: d,
+        onContextMenu: _,
         className: "channelMention",
-        children: [null != t.inContent ? a(t.inContent, o) : null, null != t.inContent ? (0, i.jsx)(I.default, {}) : null, (0, f.smartOutput)(t, a, o)]
-      }, o.key)
+        children: [null != t.inContent ? o(t.inContent, a) : null, null != t.inContent ? (0, i.jsx)(I.Z, {}) : null, (0, h.S)(t, o, a)]
+      }, a.key)
     }
   }
 }

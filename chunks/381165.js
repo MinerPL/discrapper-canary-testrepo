@@ -1,7 +1,7 @@
 "use strict";
-var n = r("546870"),
-  i = r("680643"),
-  o = r("65183").OrderedMap,
+var n = r(546870),
+  i = r(680643),
+  o = r(65183).OrderedMap,
   a = function(t) {
     var e, r = {};
     return o(t.withMutations(function(t) {

@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
-  DateParser: function() {
+n.d(t, {
+  G: function() {
     return h
   }
 });
-var r = n("846042"),
-  i = n("717029"),
-  a = n("25487");
+var r = n(846042),
+  i = n(717029),
+  a = n(25487);
 
 function o(e) {
   return (o = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
@@ -71,13 +71,10 @@ var f = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
       }
     }(), function() {
       var e, r = l(t);
-      if (n) {
-        var i = l(this).constructor;
-        e = Reflect.construct(r, arguments, i)
-      } else e = r.apply(this, arguments);
-      return function(e, t) {
-        return t && ("object" === o(t) || "function" == typeof t) ? t : c(e)
-      }(this, e)
+      return e = n ? Reflect.construct(r, arguments, l(this).constructor) : r.apply(this, arguments),
+        function(e, t) {
+          return t && ("object" === o(t) || "function" == typeof t) ? t : c(e)
+        }(this, e)
     });
 
     function _() {
@@ -93,20 +90,20 @@ var f = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
       value: function(e, t, n) {
         switch (t) {
           case "d":
-            return (0, r.parseNumericPattern)(a.numericPatterns.date, e);
+            return (0, r.ie)(a.z.date, e);
           case "do":
             return n.ordinalNumber(e, {
               unit: "date"
             });
           default:
-            return (0, r.parseNDigits)(t.length, e)
+            return (0, r.ZL)(t.length, e)
         }
       }
     }, {
       key: "validate",
       value: function(e, t) {
         var n = e.getUTCFullYear(),
-          i = (0, r.isLeapYearIndex)(n),
+          i = (0, r.kT)(n),
           a = e.getUTCMonth();
         return i ? t >= 1 && t <= p[a] : t >= 1 && t <= f[a]
       }
@@ -115,5 +112,5 @@ var f = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
       value: function(e, t, n) {
         return e.setUTCDate(n), e.setUTCHours(0, 0, 0, 0), e
       }
-    }], s(i.prototype, h), m && s(i, m), _
-  }(i.Parser)
+    }], s(i.prototype, h), _
+  }(i._)

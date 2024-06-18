@@ -1,14 +1,14 @@
 "use strict";
-var r = n("338752"),
-  a = n("342545"),
-  o = n("463374"),
+var r = n(338752),
+  o = n(342545),
+  a = n(463374),
   i = RangeError;
 e.exports = function(e) {
-  var t = a(o(this)),
+  var t = o(a(this)),
     n = "",
-    l = r(e);
-  if (l < 0 || l === 1 / 0) throw new i("Wrong number of repetitions");
-  for (; l > 0;
-    (l >>>= 1) && (t += t)) 1 & l && (n += t);
+    s = r(e);
+  if (s < 0 || s === 1 / 0) throw new i("Wrong number of repetitions");
+  for (; s > 0;
+    (s >>>= 1) && (t += t)) 1 & s && (n += t);
   return n
 }

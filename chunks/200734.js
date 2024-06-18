@@ -1,23 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
-  parseDtstart: function() {
-    return c
-  },
-  parseString: function() {
+n.d(t, {
+  B: function() {
     return u
+  },
+  o: function() {
+    return c
   }
 });
-var r = n("146150"),
-  i = n("707908"),
-  a = n("713267"),
-  o = n("695170"),
-  s = n("812975");
+var r = n(146150),
+  i = n(707908),
+  a = n(713267),
+  o = n(695170),
+  s = n(812975);
 
 function u(e) {
   var t = e.split("\n").map(l).filter(function(e) {
     return null !== e
   });
-  return (0, r.__assign)((0, r.__assign)({}, t[0]), t[1])
+  return (0, r.pi)((0, r.pi)({}, t[0]), t[1])
 }
 
 function c(e) {
@@ -26,7 +26,7 @@ function c(e) {
   if (!n) return t;
   var r = n[1],
     i = n[2];
-  return r && (t.tzid = r), t.dtstart = (0, o.untilStringToDate)(i), t
+  return r && (t.tzid = r), t.dtstart = (0, o.gE)(i), t
 }
 
 function l(e) {
@@ -53,10 +53,10 @@ function d(e) {
       l = r[1];
     switch (u.toUpperCase()) {
       case "FREQ":
-        t.freq = i.Frequency[l.toUpperCase()];
+        t.freq = i.D[l.toUpperCase()];
         break;
       case "WKST":
-        t.wkst = s.Days[l.toUpperCase()];
+        t.wkst = s.hn[l.toUpperCase()];
         break;
       case "COUNT":
       case "INTERVAL":
@@ -77,13 +77,13 @@ function d(e) {
       case "BYDAY":
         t.byweekday = function(e) {
           return e.split(",").map(function(e) {
-            if (2 === e.length) return s.Days[e];
+            if (2 === e.length) return s.hn[e];
             var t = e.match(/^([+-]?\d{1,2})([A-Z]{2})$/);
             if (!t || t.length < 3) throw SyntaxError("Invalid weekday string: ".concat(e));
             var n = Number(t[1]),
               r = t[2],
-              i = s.Days[r].weekday;
-            return new a.Weekday(i, n)
+              i = s.hn[r].weekday;
+            return new a.O(i, n)
           })
         }(l);
         break;
@@ -93,7 +93,7 @@ function d(e) {
         t.tzid = p.tzid, t.dtstart = p.dtstart;
         break;
       case "UNTIL":
-        t.until = (0, o.untilStringToDate)(l);
+        t.until = (0, o.gE)(l);
         break;
       case "BYEASTER":
         t.byeaster = Number(l);

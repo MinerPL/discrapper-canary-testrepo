@@ -1,13 +1,13 @@
 "use strict";
-n.r(e), n.d(e, {
-  isRateLimited: function() {
-    return i
-  },
-  parseRetryAfterHeader: function() {
+n.d(e, {
+  JY: function() {
     return r
   },
-  updateRateLimits: function() {
-    return a
+  Q: function() {
+    return i
+  },
+  WG: function() {
+    return s
   }
 });
 
@@ -23,21 +23,21 @@ function i(t, e, n = Date.now()) {
   return ((r = t)[e] || r.all || 0) > n
 }
 
-function a(t, {
+function s(t, {
   statusCode: e,
   headers: n
 }, i = Date.now()) {
-  let a = {
+  let s = {
       ...t
     },
-    o = n && n["x-sentry-rate-limits"],
-    s = n && n["retry-after"];
-  if (o)
-    for (let t of o.trim().split(",")) {
-      let [e, n] = t.split(":", 2), r = parseInt(e, 10), o = (isNaN(r) ? 60 : r) * 1e3;
+    a = n && n["x-sentry-rate-limits"],
+    o = n && n["retry-after"];
+  if (a)
+    for (let t of a.trim().split(",")) {
+      let [e, n] = t.split(":", 2), r = parseInt(e, 10), a = (isNaN(r) ? 60 : r) * 1e3;
       if (n)
-        for (let t of n.split(";")) a[t] = i + o;
-      else a.all = i + o
-    } else s ? a.all = i + r(s, i) : 429 === e && (a.all = i + 6e4);
-  return a
+        for (let t of n.split(";")) s[t] = i + a;
+      else s.all = i + a
+    } else o ? s.all = i + r(o, i) : 429 === e && (s.all = i + 6e4);
+  return s
 }

@@ -1,4 +1,4 @@
-var r = n("706627");
+var n = e(706627);
 t.exports = function(t) {
-  return t == t && !r(t)
+  return t == t && !n(t)
 }

@@ -1,5 +1,5 @@
 "use strict";
-var o = r("311596");
+var o = r(311596);
 
 function n() {}
 

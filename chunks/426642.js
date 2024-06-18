@@ -1,90 +1,90 @@
 "use strict";
-s.r(t), s.d(t, {
-  ImageInputUploadErrors: function() {
-    return l
+t.d(s, {
+  d: function() {
+    return i
   }
 });
-var a, l, n = s("735250");
-s("470079");
-var i = s("692547"),
-  r = s("481060"),
-  o = s("809309"),
-  d = s("769993"),
-  u = s("507893"),
-  c = s("752657"),
-  E = s("17557"),
-  _ = s("759231"),
-  I = s("689938"),
-  T = s("472017");
-(a = l || (l = {}))[a.TOO_BIG = 0] = "TOO_BIG", a[a.RATE_LIMIT = 1] = "RATE_LIMIT", a[a.TOO_MANY_EMOJI = 2] = "TOO_MANY_EMOJI", a[a.TOO_MANY_ANIMATED_EMOJI = 3] = "TOO_MANY_ANIMATED_EMOJI", a[a.WRONG_TYPE = 4] = "WRONG_TYPE", a[a.RESIZE_GIF = 5] = "RESIZE_GIF";
-t.default = e => {
+var n, i, l = t(735250);
+t(470079);
+var a = t(692547),
+  r = t(481060),
+  o = t(809309),
+  c = t(769993),
+  d = t(507893),
+  u = t(752657),
+  E = t(17557),
+  _ = t(759231),
+  I = t(689938),
+  T = t(738714);
+(n = i || (i = {}))[n.TOO_BIG = 0] = "TOO_BIG", n[n.RATE_LIMIT = 1] = "RATE_LIMIT", n[n.TOO_MANY_EMOJI = 2] = "TOO_MANY_EMOJI", n[n.TOO_MANY_ANIMATED_EMOJI = 3] = "TOO_MANY_ANIMATED_EMOJI", n[n.WRONG_TYPE = 4] = "WRONG_TYPE", n[n.RESIZE_GIF = 5] = "RESIZE_GIF";
+s.Z = e => {
   let {
-    error: t
+    error: s
   } = e, {
-    type: s,
-    filename: a
-  } = t, {
-    icon: l,
-    description: S,
-    color: f,
-    tooltip: m
+    type: t,
+    filename: n
+  } = s, {
+    icon: i,
+    description: N,
+    color: m,
+    tooltip: S
   } = {
     0: {
-      icon: o.default,
-      description: I.default.Messages.UPLOAD_ERROR_TOO_LARGE,
-      color: i.default.unsafe_rawColors.RED_400.css,
-      tooltip: I.default.Messages.UPLOAD_ERROR_TITLE
+      icon: o.Z,
+      description: I.Z.Messages.UPLOAD_ERROR_TOO_LARGE,
+      color: a.Z.unsafe_rawColors.RED_400.css,
+      tooltip: I.Z.Messages.UPLOAD_ERROR_TITLE
     },
     4: {
-      icon: d.default,
-      description: I.default.Messages.UPLOAD_ERROR_WRONG_TYPE,
-      color: i.default.unsafe_rawColors.RED_400.css,
-      tooltip: I.default.Messages.UPLOAD_ERROR_TITLE
+      icon: c.Z,
+      description: I.Z.Messages.UPLOAD_ERROR_WRONG_TYPE,
+      color: a.Z.unsafe_rawColors.RED_400.css,
+      tooltip: I.Z.Messages.UPLOAD_ERROR_TITLE
     },
     5: {
-      icon: c.default,
-      description: I.default.Messages.UPLOAD_ERROR_RESIZE_GIF,
-      color: i.default.unsafe_rawColors.RED_400.css,
-      tooltip: I.default.Messages.UPLOAD_ERROR_TITLE
+      icon: u.Z,
+      description: I.Z.Messages.UPLOAD_ERROR_RESIZE_GIF,
+      color: a.Z.unsafe_rawColors.RED_400.css,
+      tooltip: I.Z.Messages.UPLOAD_ERROR_TITLE
     },
     1: {
-      icon: E.default,
-      description: I.default.Messages.UPLOAD_ERROR_RATE_LIMIT,
-      color: i.default.unsafe_rawColors.ORANGE_345.css,
-      tooltip: I.default.Messages.UPLOAD_ERROR_RETRY
+      icon: E.Z,
+      description: I.Z.Messages.UPLOAD_ERROR_RATE_LIMIT,
+      color: a.Z.unsafe_rawColors.ORANGE_345.css,
+      tooltip: I.Z.Messages.UPLOAD_ERROR_RETRY
     },
     2: {
-      icon: u.default,
-      description: I.default.Messages.UPLOAD_ERROR_TOO_MANY_EMOJI,
-      color: i.default.unsafe_rawColors.RED_400.css,
-      tooltip: I.default.Messages.UPLOAD_ERROR_TITLE
+      icon: d.Z,
+      description: I.Z.Messages.UPLOAD_ERROR_TOO_MANY_EMOJI,
+      color: a.Z.unsafe_rawColors.RED_400.css,
+      tooltip: I.Z.Messages.UPLOAD_ERROR_TITLE
     },
     3: {
-      icon: u.default,
-      description: I.default.Messages.UPLOAD_ERROR_TOO_MANY_ANIMATED_EMOJI,
-      color: i.default.unsafe_rawColors.RED_400.css,
-      tooltip: I.default.Messages.UPLOAD_ERROR_TITLE
+      icon: d.Z,
+      description: I.Z.Messages.UPLOAD_ERROR_TOO_MANY_ANIMATED_EMOJI,
+      color: a.Z.unsafe_rawColors.RED_400.css,
+      tooltip: I.Z.Messages.UPLOAD_ERROR_TITLE
     }
-  } [s];
-  return (0, n.jsxs)("div", {
+  } [t];
+  return (0, l.jsxs)("div", {
     className: T.emojiErrorItem,
-    children: [(0, n.jsx)(l, {
+    children: [(0, l.jsx)(i, {
       className: T.fileIcon,
-      color: i.default.unsafe_rawColors.PRIMARY_300.css
-    }), (0, n.jsxs)(r.FormSection, {
+      color: a.Z.unsafe_rawColors.PRIMARY_300.css
+    }), (0, l.jsxs)(r.FormSection, {
       className: T.fileInfo,
-      children: [(0, n.jsx)(r.FormTitle, {
+      children: [(0, l.jsx)(r.FormTitle, {
         className: T.fileName,
-        children: a
-      }), (0, n.jsx)(r.FormText, {
+        children: n
+      }), (0, l.jsx)(r.FormText, {
         type: r.FormTextTypes.DESCRIPTION,
-        children: S
+        children: N
       })]
-    }), (0, n.jsx)(r.TooltipContainer, {
+    }), (0, l.jsx)(r.TooltipContainer, {
       position: "right",
-      text: m,
-      children: (0, n.jsx)(_.default, {
-        color: f
+      text: S,
+      children: (0, l.jsx)(_.Z, {
+        color: m
       })
     })]
   })

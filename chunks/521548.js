@@ -5,20 +5,20 @@ function r(e, t, n, r) {
   if (void 0 !== i) return !!i;
   if (e === t) return !0;
   if ("object" != typeof e || !e || "object" != typeof t || !t) return !1;
-  var a = Object.keys(e),
-    o = Object.keys(t);
-  if (a.length !== o.length) return !1;
-  for (var s = Object.prototype.hasOwnProperty.bind(t), u = 0; u < a.length; u++) {
-    var c = a[u];
-    if (!s(c)) return !1;
-    var l = e[c],
-      d = t[c];
-    if (!1 === (i = n ? n.call(r, l, d, c) : void 0) || void 0 === i && l !== d) return !1
+  var o = Object.keys(e),
+    u = Object.keys(t);
+  if (o.length !== u.length) return !1;
+  for (var a = Object.prototype.hasOwnProperty.bind(t), c = 0; c < o.length; c++) {
+    var s = o[c];
+    if (!a(s)) return !1;
+    var l = e[s],
+      f = t[s];
+    if (!1 === (i = n ? n.call(r, l, f, s) : void 0) || void 0 === i && l !== f) return !1
   }
   return !0
 }
-n.r(t), n.d(t, {
-  shallowEqual: function() {
+n.d(t, {
+  w: function() {
     return r
   }
 })

@@ -1,32 +1,31 @@
 "use strict";
-n.r(t);
-var i, r, s, a, o = n("392711"),
-  l = n.n(o),
-  u = n("442837"),
-  d = n("433517"),
-  _ = n("570140"),
-  c = n("65154");
+var i, r, s, o, a = n(392711),
+  l = n.n(a),
+  u = n(442837),
+  _ = n(433517),
+  d = n(570140),
+  c = n(65154);
 let E = "CertifiedDeviceStore",
   I = {},
   T = {},
-  f = 0;
+  h = 0;
 
 function S(e, t, n) {
   let i = T[e];
   return null != i ? n(i) : t
 }
 
-function h(e, t) {
+function f(e, t) {
   let n = I[e];
   null != n && n.forEach(e => delete T[e.id]), I[e] = t, t.forEach(e => T[e.id] = e)
 }
-class A extends(a = u.default.Store) {
+class N extends(o = u.ZP.Store) {
   initialize() {
-    let e = d.Storage.get(E);
+    let e = _.K.get(E);
     null != e && l().forEach(e, (e, t) => {
       e.forEach(e => {
         "audioinput" === e.type && e.hardwareMute && (e.hardwareMute = !1)
-      }), h(t, e)
+      }), f(t, e)
     })
   }
   isCertified(e) {
@@ -43,16 +42,16 @@ class A extends(a = u.default.Store) {
     return l().find(T, t => t.type === e)
   }
   isHardwareMute(e) {
-    return S(e, !1, e => e.type === c.DeviceTypes.AUDIO_INPUT && e.hardwareMute)
+    return S(e, !1, e => e.type === c.h7.AUDIO_INPUT && e.hardwareMute)
   }
   hasEchoCancellation(e) {
-    return S(e, !1, e => e.type === c.DeviceTypes.AUDIO_INPUT && e.echoCancellation)
+    return S(e, !1, e => e.type === c.h7.AUDIO_INPUT && e.echoCancellation)
   }
   hasNoiseSuppression(e) {
-    return S(e, !1, e => e.type === c.DeviceTypes.AUDIO_INPUT && e.noiseSuppression)
+    return S(e, !1, e => e.type === c.h7.AUDIO_INPUT && e.noiseSuppression)
   }
   hasAutomaticGainControl(e) {
-    return S(e, !1, e => e.type === c.DeviceTypes.AUDIO_INPUT && e.automaticGainControl)
+    return S(e, !1, e => e.type === c.h7.AUDIO_INPUT && e.automaticGainControl)
   }
   getVendor(e) {
     return S(e, null, e => e.vendor)
@@ -61,20 +60,20 @@ class A extends(a = u.default.Store) {
     return S(e, null, e => e.model)
   }
   getRevision() {
-    return f
+    return h
   }
 }
-s = "CertifiedDeviceStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
+s = "CertifiedDeviceStore", (r = "displayName") in(i = N) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new A(_.default, {
+}) : i[r] = s, t.Z = new N(d.Z, {
   CERTIFIED_DEVICES_SET: function(e) {
     let {
       applicationId: t,
       devices: n
     } = e;
-    h(t, n), d.Storage.set(E, I), f++
+    f(t, n), _.K.set(E, I), h++
   }
 })

@@ -1,4 +1,4 @@
-var r = n("957578").Buffer;
+var r = n(957578).Buffer;
 
 function i(e) {
   !r.isBuffer(e) && (e = r.from(e));

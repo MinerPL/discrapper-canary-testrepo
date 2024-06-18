@@ -1,54 +1,54 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return f
+n.d(t, {
+  Z: function() {
+    return h
   }
 });
-var i = n("812206"),
-  r = n("592125"),
-  a = n("944486"),
-  s = n("594174"),
-  o = n("867176"),
-  l = n("566620"),
-  u = n("882347"),
-  d = n("917107"),
-  _ = n("89425"),
-  c = n("275920"),
-  E = n("197386"),
-  I = n("701488"),
-  T = n("981631");
-async function f(e) {
+var i = n(812206),
+  r = n(592125),
+  s = n(944486),
+  o = n(594174),
+  a = n(867176),
+  l = n(566620),
+  u = n(882347),
+  _ = n(917107),
+  d = n(89425),
+  c = n(275920),
+  E = n(197386),
+  I = n(701488),
+  T = n(981631);
+async function h(e) {
   let {
     applicationId: t,
     currentEmbeddedApplication: n,
-    activityChannelId: f,
+    activityChannelId: h,
     locationObject: S,
-    embeddedActivitiesManager: h,
-    analyticsLocations: A
-  } = e, m = r.default.getChannel(f), N = null == m ? void 0 : m.getGuildId(), p = null == N || "" === N, O = s.default.getCurrentUser();
-  if (null == m || p && !m.isPrivate() || null == f || null == O) return Promise.resolve(!1);
-  if (a.default.getVoiceChannelId() === f && (null == n ? void 0 : n.id) === t) return (0, E.default)(N, f), Promise.resolve(!0);
-  if (!await (0, u.confirmActivityLaunchChecks)({
+    embeddedActivitiesManager: f,
+    analyticsLocations: N
+  } = e, A = r.Z.getChannel(h), m = null == A ? void 0 : A.getGuildId(), O = null == m || "" === m, R = o.default.getCurrentUser();
+  if (null == A || O && !A.isPrivate() || null == h || null == R) return Promise.resolve(!1);
+  if (s.Z.getVoiceChannelId() === h && (null == n ? void 0 : n.id) === t) return (0, E.Z)(m, h), Promise.resolve(!0);
+  if (!await (0, u.p)({
       applicationId: t,
-      application: i.default.getApplication(t),
-      channel: m,
+      application: i.Z.getApplication(t),
+      channel: A,
       currentEmbeddedApplication: n,
-      embeddedActivitiesManager: h,
-      user: O
+      embeddedActivitiesManager: f,
+      user: R
     })) return !1;
-  let R = (0, d.default)(m.id),
-    C = I.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(m.type);
-  if (R) {
-    if (!await (0, _.default)({
-        channelId: m.id,
+  let C = (0, _.Z)(A.id),
+    p = I.wP.includes(A.type);
+  if (C) {
+    if (!await (0, d.Z)({
+        channelId: A.id,
         bypassChangeModal: null != n
       })) return !1
-  } else if (!(0, o.isActivitiesInTextEnabled)(m, !1, "joinEmbeddedActivity") || !C) return !1;
-  return (0, E.default)(N, f), (0, l.startEmbeddedActivity)(f, t, A), (0, c.default)({
-    type: T.AnalyticsGameOpenTypes.JOIN,
-    userId: O.id,
+  } else if (!(0, a.WS)(A, !1, "joinEmbeddedActivity") || !p) return !1;
+  return (0, E.Z)(m, h), (0, l.J$)(h, t, N), (0, c.Z)({
+    type: T.q5t.JOIN,
+    userId: R.id,
     applicationId: t,
     locationObject: S,
-    analyticsLocations: A
+    analyticsLocations: N
   }), !0
 }

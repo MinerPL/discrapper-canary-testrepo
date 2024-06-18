@@ -1,10 +1,10 @@
 "use strict";
-i.r(e), i.d(e, {
-  shouldShowNitroBadge: function() {
+n.d(t, {
+  R: function() {
     return r
   }
 });
-let l = (0, i("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2023-10_social_proofing_message_nitro_badge",
   label: "Social Proofing Message Nitro Badge",
@@ -29,11 +29,11 @@ let l = (0, i("818083").createExperiment)({
   }]
 });
 
-function r(t, e) {
-  let i = l.getCurrentConfig({
-    location: e
+function r(e, t) {
+  let n = i.getCurrentConfig({
+    location: t
   }, {
     autoTrackExposure: !0
   });
-  return i.enabled && (!i.hideNitroBadgeWhenRoleBadgePresent || i.hideNitroBadgeWhenRoleBadgePresent && !t)
+  return n.enabled && (!n.hideNitroBadgeWhenRoleBadgePresent || n.hideNitroBadgeWhenRoleBadgePresent && !e)
 }

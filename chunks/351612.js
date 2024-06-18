@@ -1,7 +1,7 @@
 "use strict";
-var n = r("837512"),
-  i = r("531463"),
-  o = r("581079");
+var n = r(837512),
+  i = r(531463),
+  o = r(581079);
 
 function a(t, e, r) {
   var a = e.getCharacterList(),

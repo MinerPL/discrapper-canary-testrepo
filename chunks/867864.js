@@ -1,7 +1,7 @@
 "use strict";
-var n = r("65183"),
-  i = r("436048"),
-  o = r("581079"),
+var n = r(65183),
+  i = r(436048),
+  o = r(581079),
   a = n.Repeat;
 t.exports = function(t, e, r, n) {
   e.isCollapsed() || o(!1);

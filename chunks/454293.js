@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
-  setApplicationSharing: function() {
-    return a
+n.d(t, {
+  M: function() {
+    return s
   }
 });
-var i = n("960048"),
-  r = n("536150");
-async function a(e, t) {
+var i = n(960048),
+  r = n(536150);
+async function s(e, t) {
   try {
-    await (0, r.patchContentInventoryApplication)(e, {
+    await (0, r.i)(e, {
       is_sharing: t
     })
   } catch (e) {
-    i.default.captureException(e)
+    i.Z.captureException(e)
   }
 }

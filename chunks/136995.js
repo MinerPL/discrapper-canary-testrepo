@@ -1,30 +1,30 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return c
+n.d(t, {
+  Z: function() {
+    return d
   }
 });
-var a = n("735250"),
-  l = n("470079"),
-  s = n("287734"),
-  i = n("125015"),
-  r = n("585483"),
-  o = n("871499"),
-  u = n("981631"),
-  d = n("689938");
+var i = n(735250),
+  r = n(470079),
+  s = n(287734),
+  o = n(125015),
+  a = n(585483),
+  l = n(871499),
+  u = n(981631),
+  _ = n(689938);
 
-function c(e) {
+function d(e) {
   let {
     channel: t,
     centerButton: n = !1,
-    ...c
-  } = e, f = n ? o.CenterControlButton : o.default, h = t.isManaged() || !t.isPrivate() ? d.default.Messages.CONNECT : d.default.Messages.JOIN_CALL, m = l.useCallback(() => s.default.selectVoiceChannel(t.id), [t.id]);
-  return l.useEffect(() => (r.ComponentDispatch.subscribe(u.ComponentActions.CALL_ACCEPT, m), () => {
-    r.ComponentDispatch.unsubscribe(u.ComponentActions.CALL_ACCEPT, m)
-  }), [m]), (0, a.jsx)(f, {
-    ...c,
-    iconComponent: i.default,
-    label: h,
-    onClick: m
+    ...d
+  } = e, c = n ? l.d : l.Z, E = t.isManaged() || !t.isPrivate() ? _.Z.Messages.CONNECT : _.Z.Messages.JOIN_CALL, I = r.useCallback(() => s.default.selectVoiceChannel(t.id), [t.id]);
+  return r.useEffect(() => (a.S.subscribe(u.CkL.CALL_ACCEPT, I), () => {
+    a.S.unsubscribe(u.CkL.CALL_ACCEPT, I)
+  }), [I]), (0, i.jsx)(c, {
+    ...d,
+    iconComponent: o.Z,
+    label: E,
+    onClick: I
   })
 }

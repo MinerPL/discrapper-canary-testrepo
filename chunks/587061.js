@@ -1,55 +1,54 @@
 "use strict";
-n.r(t);
-var i = n("470079"),
-  r = n("442837"),
-  s = n("952265"),
-  a = n("481060"),
-  o = n("714338"),
-  l = n("857595"),
-  u = n("607070"),
-  d = n("627845"),
-  _ = n("556296"),
-  c = n("5967"),
-  E = n("13140"),
-  I = n("981631"),
-  T = n("420212");
+var i = n(470079),
+  r = n(442837),
+  s = n(952265),
+  o = n(481060),
+  a = n(714338),
+  l = n(857595),
+  u = n(607070),
+  _ = n(627845),
+  d = n(556296),
+  c = n(5967),
+  E = n(13140),
+  I = n(981631),
+  T = n(420212);
 
-function f(e) {
+function h(e) {
   let t = e.ctrlKey || e.altKey || e.metaKey;
-  e.key === T.KeyboardEventKey.Tab && !t && !__OVERLAY__ && !(0, s.hasAnyModalOpen)() && d.default.maybeShowKeyboardNavigationExplainerModal()
+  e.key === T.mR.Tab && !t && !__OVERLAY__ && !(0, s.$s)() && _.Z.maybeShowKeyboardNavigationExplainerModal()
 }
 
 function S() {
-  (0, l.disableKeyboardMode)()
+  (0, l.rf)()
 }
-t.default = function(e, t) {
-  let n = (0, r.useStateFromStores)([u.default], () => u.default.keyboardModeEnabled);
-  (0, a.useFocusJumpSectionManager)(n);
+t.Z = function(e, t) {
+  let n = (0, r.e7)([u.Z], () => u.Z.keyboardModeEnabled);
+  (0, o.useFocusJumpSectionManager)(n);
   let s = (0, i.useCallback)(e => {
     ! function(e, t) {
       var n, i;
-      let r = (0, c.isInputLikeElement)(null === (n = (0, c.eventOwnerDocument)(e)) || void 0 === n ? void 0 : n.activeElement);
-      if (r && e.key !== T.KeyboardEventKey.Tab || e.ctrlKey || e.altKey || e.metaKey || e.key !== T.KeyboardEventKey.Tab && e.shiftKey) return;
+      let r = (0, c.VG)(null === (n = (0, c.uB)(e)) || void 0 === n ? void 0 : n.activeElement);
+      if (r && e.key !== T.mR.Tab || e.ctrlKey || e.altKey || e.metaKey || e.key !== T.mR.Tab && e.shiftKey) return;
       let s = function(e) {
-        let t = E.keyToCode("shift"),
-          n = E.keyToCode("tab");
-        if (e.key === T.KeyboardEventKey.Tab && e.shiftKey && null != t && null != n) return [
-          [I.KeyboardDeviceTypes.KEYBOARD_KEY, t],
-          [I.KeyboardDeviceTypes.KEYBOARD_KEY, n]
+        let t = E.C$("shift"),
+          n = E.C$("tab");
+        if (e.key === T.mR.Tab && e.shiftKey && null != t && null != n) return [
+          [I.MoX.KEYBOARD_KEY, t],
+          [I.MoX.KEYBOARD_KEY, n]
         ];
-        let i = T.NavigationKeyShortcutMap.get(e.key);
+        let i = T.el.get(e.key);
         if (null != i) {
-          let e = E.keyToCode(i);
+          let e = E.C$(i);
           if (null != e) return [
-            [I.KeyboardDeviceTypes.KEYBOARD_KEY, e]
+            [I.MoX.KEYBOARD_KEY, e]
           ]
         }
         return null
       }(e);
-      null != s && !_.default.hasExactKeybind(s) && !o.default.hasBind(null !== (i = E.codeToKey(s[0])) && void 0 !== i ? i : "") && ((0, l.enableKeyboardMode)(), r && !t && e.preventDefault())
+      null != s && !d.Z.hasExactKeybind(s) && !a.Z.hasBind(null !== (i = E.H9(s[0])) && void 0 !== i ? i : "") && ((0, l.Qj)(), r && !t && e.preventDefault())
     }(e, t)
   }, [t]);
-  return (0, i.useLayoutEffect)(() => (n ? (e.addEventListener("mousedown", S), e.addEventListener("keydown", f)) : e.addEventListener("keydown", s), () => {
-    n ? (e.removeEventListener("mousedown", S), e.removeEventListener("keydown", f)) : e.removeEventListener("keydown", s)
+  return (0, i.useLayoutEffect)(() => (n ? (e.addEventListener("mousedown", S), e.addEventListener("keydown", h)) : e.addEventListener("keydown", s), () => {
+    n ? (e.removeEventListener("mousedown", S), e.removeEventListener("keydown", h)) : e.removeEventListener("keydown", s)
   }), [e, s, n]), n
 }

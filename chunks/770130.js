@@ -11,18 +11,18 @@ t.__esModule = !0, t.default = void 0,
         }
     }
     t.default = e
-  }(n("476400"));
-var o = u(n("121116")),
-  r = u(n("938398")),
-  i = u(n("470079")),
-  a = u(n("562249"));
+  }(n(476400));
+var o = u(n(121116)),
+  i = u(n(938398)),
+  r = u(n(470079)),
+  a = u(n(562249));
 
 function u(e) {
   return e && e.__esModule ? e : {
     default: e
   }
 }
-n("53165");
+n(53165);
 
 function s() {
   return (s = Object.assign || function(e) {
@@ -40,12 +40,12 @@ var l = function(e, t) {
   },
   c = function(e, t) {
     return e && t && t.split(" ").forEach(function(t) {
-      return (0, r.default)(e, t)
+      return (0, i.default)(e, t)
     })
   },
   p = function(e) {
     function t() {
-      for (var t, n = arguments.length, o = Array(n), r = 0; r < n; r++) o[r] = arguments[r];
+      for (var t, n = arguments.length, o = Array(n), i = 0; i < n; i++) o[i] = arguments[i];
       return (t = e.call.apply(e, [this].concat(o)) || this).onEnter = function(e, n) {
         var o = t.getClassNames(n ? "appear" : "enter").className;
         t.removeClasses(e, "exit"), l(e, o), t.props.onEnter && t.props.onEnter(e, n)
@@ -54,8 +54,8 @@ var l = function(e, t) {
         t.reflowAndAddClass(e, o), t.props.onEntering && t.props.onEntering(e, n)
       }, t.onEntered = function(e, n) {
         var o = t.getClassNames("appear").doneClassName,
-          r = t.getClassNames("enter").doneClassName;
-        t.removeClasses(e, n ? "appear" : "enter"), l(e, n ? o + " " + r : r), t.props.onEntered && t.props.onEntered(e, n)
+          i = t.getClassNames("enter").doneClassName;
+        t.removeClasses(e, n ? "appear" : "enter"), l(e, n ? o + " " + i : i), t.props.onEntered && t.props.onEntered(e, n)
       }, t.onExit = function(e) {
         var n = t.getClassNames("exit").className;
         t.removeClasses(e, "appear"), t.removeClasses(e, "enter"), l(e, n), t.props.onExit && t.props.onExit(e)
@@ -68,29 +68,30 @@ var l = function(e, t) {
       }, t.getClassNames = function(e) {
         var n = t.props.classNames,
           o = "string" == typeof n,
-          r = o ? (o && n ? n + "-" : "") + e : n[e],
-          i = o ? r + "-active" : n[e + "Active"],
-          a = o ? r + "-done" : n[e + "Done"];
+          i = o && n ? n + "-" : "",
+          r = o ? i + e : n[e],
+          a = o ? r + "-active" : n[e + "Active"],
+          u = o ? r + "-done" : n[e + "Done"];
         return {
           className: r,
-          activeClassName: i,
-          doneClassName: a
+          activeClassName: a,
+          doneClassName: u
         }
       }, t
     }
     n = t, o = e, n.prototype = Object.create(o.prototype), n.prototype.constructor = n, n.__proto__ = o;
-    var n, o, r = t.prototype;
-    return r.removeClasses = function(e, t) {
+    var n, o, i = t.prototype;
+    return i.removeClasses = function(e, t) {
       var n = this.getClassNames(t),
         o = n.className,
-        r = n.activeClassName,
-        i = n.doneClassName;
-      o && c(e, o), r && c(e, r), i && c(e, i)
-    }, r.reflowAndAddClass = function(e, t) {
+        i = n.activeClassName,
+        r = n.doneClassName;
+      o && c(e, o), i && c(e, i), r && c(e, r)
+    }, i.reflowAndAddClass = function(e, t) {
       t && (e && e.scrollTop, l(e, t))
-    }, r.render = function() {
+    }, i.render = function() {
       var e = s({}, this.props);
-      return delete e.classNames, i.default.createElement(a.default, s({}, e, {
+      return delete e.classNames, r.default.createElement(a.default, s({}, e, {
         onEnter: this.onEnter,
         onEntered: this.onEntered,
         onEntering: this.onEntering,
@@ -99,7 +100,7 @@ var l = function(e, t) {
         onExited: this.onExited
       }))
     }, t
-  }(i.default.Component);
+  }(r.default.Component);
 p.defaultProps = {
   classNames: ""
 }, p.propTypes = {};

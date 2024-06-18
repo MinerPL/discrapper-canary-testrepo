@@ -1,6 +1,6 @@
 "use strict";
-var r, i, a, o, s = n("192853"),
-  u = n("703825")();
+var r, i, a, o, s = n(192853),
+  u = n(703825)();
 if (u) {
   r = s("Object.prototype.hasOwnProperty"), i = s("RegExp.prototype.exec"), a = {};
   var c = function() {

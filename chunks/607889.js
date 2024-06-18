@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return s
   }
 });
-var i = n("217942");
+var i = n(217942);
 
 function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -22,10 +22,10 @@ class s {
     return e > t ? (this.animationDetails = null, this.value) : this.value < this.animationDetails.lastValue ? i.easeOutQuint(e, this.animationDetails.lastValue, this.value, t) : i.easeOutBack(e, this.animationDetails.lastValue, this.value, t, 4)
   }
   animateTo(e) {
-    this.isReset = !1, this.value !== e && (this.animationDetails = {
+    if (this.isReset = !1, this.value !== e) this.animationDetails = {
       lastValue: this.value,
       animationStart: performance.now()
-    }, this.value = e)
+    }, this.value = e
   }
   isAnimating() {
     return null != this.animationDetails

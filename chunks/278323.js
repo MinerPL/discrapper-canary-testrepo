@@ -1,43 +1,42 @@
 "use strict";
-n.r(t);
-var i = n("544891"),
-  r = n("570140"),
-  a = n("367907"),
-  s = n("957730"),
-  o = n("592125"),
-  l = n("493683"),
-  u = n("904245"),
-  d = n("981631");
-t.default = {
+var i = n(544891),
+  r = n(570140),
+  s = n(367907),
+  o = n(957730),
+  a = n(592125),
+  l = n(493683),
+  u = n(904245),
+  _ = n(981631);
+t.Z = {
   updateActivity(e) {
     let {
       applicationId: t,
       distributor: n,
-      shareActivity: a,
-      token: s = null,
-      duration: o = 0,
+      shareActivity: s,
+      token: o = null,
+      duration: a = 0,
       closed: l = !1,
       exePath: u = null,
-      voiceChannelId: _ = null,
+      voiceChannelId: d = null,
       sessionId: c = null,
       mediaSessionId: E = null
     } = e;
-    r.default.wait(() => r.default.dispatch({
+    r.Z.wait(() => r.Z.dispatch({
       type: "ACTIVITY_UPDATE_START",
       applicationId: t,
-      duration: o,
+      duration: a,
       distributor: n
-    })), i.HTTP.post({
-      url: d.Endpoints.ACTIVITIES,
+    })), i.tn.post({
+      url: _.ANM.ACTIVITIES,
       body: {
         application_id: t,
-        token: s,
-        duration: o,
-        share_activity: a,
+        token: o,
+        duration: a,
+        share_activity: s,
         distributor: n,
         closed: l,
         exePath: u,
-        voice_channel_id: _,
+        voice_channel_id: d,
         session_id: c,
         media_session_id: E
       },
@@ -49,15 +48,15 @@ t.default = {
           token: i
         }
       } = e;
-      r.default.dispatch({
+      r.Z.dispatch({
         type: "ACTIVITY_UPDATE_SUCCESS",
         applicationId: t,
         token: i,
-        duration: o,
+        duration: a,
         distributor: n
       })
     }).catch(() => {
-      r.default.dispatch({
+      r.Z.dispatch({
         type: "ACTIVITY_UPDATE_FAIL",
         applicationId: t
       })
@@ -70,22 +69,22 @@ t.default = {
       activity: i,
       content: r,
       location: l
-    } = e, _ = o.default.getChannel(t);
-    if (null == _) return Promise.resolve(null);
-    let c = s.default.parse(_, null != r ? r : "");
-    return u.default.sendMessage(_.id, c, !1, {
+    } = e, d = a.Z.getChannel(t);
+    if (null == d) return Promise.resolve(null);
+    let c = o.ZP.parse(d, null != r ? r : "");
+    return u.Z.sendMessage(d.id, c, !1, {
       activityAction: {
         type: n,
         activity: i
       }
-    }).then(e => (a.default.trackWithMetadata(d.AnalyticEvents.INVITE_SENT, {
+    }).then(e => (s.ZP.trackWithMetadata(_.rMx.INVITE_SENT, {
       location: l,
-      invite_type: i.type === d.ActivityTypes.LISTENING ? d.LoggingInviteTypes.SPOTIFY : d.LoggingInviteTypes.APPLICATION,
+      invite_type: i.type === _.IIU.LISTENING ? _.dAT.SPOTIFY : _.dAT.APPLICATION,
       application_id: i.application_id,
-      guild_id: _.getGuildId(),
-      channel_id: _.id,
+      guild_id: d.getGuildId(),
+      channel_id: d.id,
       message_id: null != e ? e.body.id : null
-    }), Promise.resolve(_)), e => Promise.reject(e))
+    }), Promise.resolve(d)), e => Promise.reject(e))
   },
   sendActivityInviteUser(e) {
     let {
@@ -93,22 +92,22 @@ t.default = {
       type: n,
       activity: i,
       content: r,
-      location: a
+      location: s
     } = e;
-    return l.default.ensurePrivateChannel(t).then(e => this.sendActivityInvite({
+    return l.Z.ensurePrivateChannel(t).then(e => this.sendActivityInvite({
       channelId: e,
       type: n,
       activity: i,
       content: r,
-      location: a
+      location: s
     }))
   },
-  async getJoinSecret(e, t, n, r, a) {
-    let s = {};
-    return null != r && (s.channel_id = r), null != a && (s.message_id = a), (await i.HTTP.get({
-      url: d.Endpoints.USER_ACTIVITY_JOIN(e, t, n),
+  async getJoinSecret(e, t, n, r, s) {
+    let o = {};
+    return null != r && (o.channel_id = r), null != s && (o.message_id = s), (await i.tn.get({
+      url: _.ANM.USER_ACTIVITY_JOIN(e, t, n),
       retries: 3,
-      query: s
+      query: o
     })).body.secret
   }
 }

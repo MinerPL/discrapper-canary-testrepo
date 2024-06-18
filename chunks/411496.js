@@ -1,4 +1,4 @@
-var i = a("413135").Buffer;
+var i = a(413135).Buffer;
 "use strict";
 
 function r(t, e, a, i) {

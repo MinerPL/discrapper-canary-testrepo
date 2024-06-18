@@ -1,10 +1,9 @@
 "use strict";
-n.r(t);
-var i = n("735250"),
-  a = n("470079"),
-  l = n("803997"),
-  s = n.n(l),
-  o = n("420261");
+var i = n(735250),
+  s = n(470079),
+  l = n(120356),
+  a = n.n(l),
+  o = n(798947);
 let r = e => {
   let {
     keybind: t,
@@ -12,9 +11,9 @@ let r = e => {
     className: l
   } = e;
   return (0, i.jsx)(i.Fragment, {
-    children: t.map((e, r) => (0, i.jsxs)(a.Fragment, {
+    children: t.map((e, r) => (0, i.jsxs)(s.Fragment, {
       children: [(0, i.jsx)("span", {
-        className: s()(o.key, l),
+        className: a()(o.key, l),
         children: e
       }), r === t.length - 1 ? void 0 : n]
     }, r))
@@ -22,4 +21,4 @@ let r = e => {
 };
 r.defaultProps = {
   separator: "+"
-}, t.default = r
+}, t.Z = r

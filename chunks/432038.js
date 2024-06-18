@@ -1,13 +1,13 @@
 "use strict";
-n.r(e), n.d(e, {
-  createStackParser: function() {
-    return i
+n.d(e, {
+  $P: function() {
+    return o
   },
-  getFunctionName: function() {
+  Sq: function() {
     return s
   },
-  stackParserFromStackParserOptions: function() {
-    return a
+  pE: function() {
+    return i
   }
 });
 let r = /\(error: (.*)\)/;
@@ -16,14 +16,14 @@ function i(...t) {
   let e = t.sort((t, e) => t[0] - e[0]).map(t => t[1]);
   return (t, n = 0) => {
     let i = [],
-      a = t.split("\n");
-    for (let t = n; t < a.length; t++) {
-      let n = a[t];
+      s = t.split("\n");
+    for (let t = n; t < s.length; t++) {
+      let n = s[t];
       if (n.length > 1024) continue;
-      let o = r.test(n) ? n.replace(r, "$1") : n;
-      if (!o.match(/\S*Error: /)) {
+      let a = r.test(n) ? n.replace(r, "$1") : n;
+      if (!a.match(/\S*Error: /)) {
         for (let t of e) {
-          let e = t(o);
+          let e = t(a);
           if (e) {
             i.push(e);
             break
@@ -47,16 +47,16 @@ function i(...t) {
   }
 }
 
-function a(t) {
+function s(t) {
   return Array.isArray(t) ? i(...t) : t
 }
-let o = "<anonymous>";
+let a = "<anonymous>";
 
-function s(t) {
+function o(t) {
   try {
-    if (!t || "function" != typeof t) return o;
-    return t.name || o
+    if (!t || "function" != typeof t) return a;
+    return t.name || a
   } catch (t) {
-    return o
+    return a
   }
 }

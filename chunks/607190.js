@@ -1,7 +1,7 @@
 "use strict";
-n.r(e), n.d(e, {
-  WINDOW: function() {
+n.d(e, {
+  m: function() {
     return r
   }
 });
-let r = n("648238").GLOBAL_OBJ
+let r = n(24716).n2

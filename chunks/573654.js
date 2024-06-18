@@ -13,8 +13,8 @@ function r(e, t) {
     throw n.framesToPop = 1, n
   }
 }
-n.r(t), n.d(t, {
-  invariant: function() {
+n.d(t, {
+  k: function() {
     return r
   }
 })

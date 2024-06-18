@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  useSeparator: function() {
+n.d(t, {
+  z: function() {
     return i
   }
 });
-var r = n("182823");
+var r = n(182823);
 
 function i(e) {
-  let t, n = (0, r.filterDOMProps)(e, {
+  let t, n = (0, r.zL)(e, {
     labelable: !0
   });
   return ("vertical" === e.orientation && (t = "vertical"), "hr" !== e.elementType) ? {

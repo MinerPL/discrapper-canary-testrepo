@@ -1,23 +1,23 @@
 "use strict";
-s.r(t), s.d(t, {
-  getPowerfulPermissionTitles: function() {
-    return r
+t.d(s, {
+  F: function() {
+    return a
   },
-  isRolePowerful: function() {
-    return i
+  i: function() {
+    return r
   }
-}), s("653041"), s("47120");
-var a = s("149765"),
-  l = s("233608"),
-  n = s("981631");
+}), t(653041), t(47120);
+var n = t(149765),
+  i = t(233608),
+  l = t(981631);
 
-function i(e) {
-  return a.hasAny(e.permissions, n.ElevatedPermissions)
+function a(e) {
+  return n.Db(e.permissions, l.TC2)
 }
 
-function r(e, t) {
-  let s = [],
-    i = l.default.getGuildPermissionSpecMap(e);
-  for (let e of n.ElevatedPermissionsList) a.has(t.permissions, e) && s.push(i[e.toString()].title);
-  return s
+function r(e, s) {
+  let t = [],
+    a = i.Z.getGuildPermissionSpecMap(e);
+  for (let e of l.yYS) n.e$(s.permissions, e) && t.push(a[e.toString()].title);
+  return t
 }

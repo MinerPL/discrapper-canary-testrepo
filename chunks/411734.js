@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
-  FocusBlock: function() {
-    return o
-  },
-  useFocusBlock: function() {
+n.d(t, {
+  R: function() {
     return a
+  },
+  n: function() {
+    return o
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079");
+}), n(47120);
+var i = n(735250),
+  r = n(470079);
 let s = 0;
 
-function a(e, t) {
+function o(e, t) {
   let [n] = r.useState(() => s++), i = "".concat("data-focus-blocked", "-").concat(n);
   r.useLayoutEffect(() => {
     if (t) {
@@ -41,14 +41,14 @@ function a(e, t) {
   }, [t])
 }
 
-function o(e) {
+function a(e) {
   let {
     children: t,
     className: n,
     enabled: s = !0
-  } = e, o = r.useRef(null);
-  return a(o, s), (0, i.jsx)("div", {
-    ref: o,
+  } = e, a = r.useRef(null);
+  return o(a, s), (0, i.jsx)("div", {
+    ref: a,
     className: n,
     children: t
   })

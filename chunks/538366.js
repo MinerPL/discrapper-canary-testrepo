@@ -1,75 +1,75 @@
 "use strict";
-a.r(t), a.d(t, {
-  default: function() {
-    return x
+n.d(t, {
+  Z: function() {
+    return _
   }
 });
-var s = a("735250"),
-  n = a("470079"),
-  l = a("481060"),
-  r = a("665906"),
-  i = a("634648"),
-  o = a("499033"),
-  d = a("692437"),
-  u = a("585483"),
-  c = a("456269"),
-  m = a("228392"),
-  h = a("981631"),
-  f = a("689938"),
-  g = a("921684");
+var s = n(735250),
+  l = n(470079),
+  a = n(481060),
+  i = n(665906),
+  r = n(634648),
+  o = n(499033),
+  c = n(692437),
+  d = n(585483),
+  u = n(456269),
+  h = n(228392),
+  m = n(981631),
+  g = n(689938),
+  x = n(737472);
 
-function x(e) {
+function _(e) {
   let {
     channelName: t,
-    guildId: x,
-    tagFilter: C,
-    channel: _
-  } = e, S = (0, c.useCanManageChannel)(_), T = (0, r.useCanStartThread)(_), p = _.isMediaChannel(), E = n.useCallback(() => {
-    (0, m.trackForumUpsellModalViewed)(), (0, l.openModalLazy)(async () => {
+    guildId: _,
+    tagFilter: f,
+    channel: E
+  } = e, N = (0, u.r_)(E), T = (0, i.cD)(E), C = E.isMediaChannel(), p = l.useCallback(() => {
+    (0, h.qz)(), (0, a.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([a.e("99387"), a.e("18417")]).then(a.bind(a, "740696"));
+      } = await Promise.all([n.e("99387"), n.e("18417")]).then(n.bind(n, 740696));
       return t => (0, s.jsx)(e, {
         ...t,
-        guildId: x
+        guildId: _
       })
     })
-  }, [x]), N = C.size > 0, M = T || S, v = !N && S && !p, A = n.useCallback(() => v ? E() : T ? void u.ComponentDispatch.dispatch(h.ComponentActions.FOCUS_COMPOSER_TITLE) : (0, h.NOOP_NULL)(), [E, v, T]);
+  }, [_]), v = f.size > 0, M = T || N, S = !v && N && !C, I = l.useCallback(() => S ? p() : T ? void d.S.dispatch(m.CkL.FOCUS_COMPOSER_TITLE) : (0, m.VqG)(), [p, S, T]);
   return (0, s.jsxs)("div", {
-    className: g.container,
+    className: x.container,
     children: [(0, s.jsxs)("div", {
-      className: g.iconContainer,
+      className: x.iconContainer,
       children: [(0, s.jsx)("div", {
-        className: g.icon,
-        children: (0, s.jsx)(i.default, {
+        className: x.icon,
+        children: (0, s.jsx)(r.Z, {
           width: 30,
           height: 30
         })
-      }), (0, s.jsx)(o.default, {
-        className: g.stars
+      }), (0, s.jsx)(o.Z, {
+        className: x.stars
       })]
-    }), (0, s.jsx)(l.Heading, {
-      className: g.header,
+    }), (0, s.jsx)(a.Heading, {
+      className: x.header,
       variant: "heading-md/semibold",
-      children: N ? f.default.Messages.FORUM_NO_POST_WITH_TAG_TITLE.format({
-        numTags: C.size
-      }) : f.default.Messages.FORUM_EMPTY_STATE_TITLE
-    }), (0, s.jsx)(l.Text, {
+      children: v ? g.Z.Messages.FORUM_NO_POST_WITH_TAG_TITLE.format({
+        numTags: f.size
+      }) : g.Z.Messages.FORUM_EMPTY_STATE_TITLE
+    }), (0, s.jsx)(a.Text, {
       color: "header-secondary",
       variant: "text-sm/normal",
-      children: N ? f.default.Messages.FORUM_NO_POST_WITH_TAG_DESCRIPTION.format({
-        numTags: C.size
-      }) : f.default.Messages.FORUM_EMPTY_STATE_DESCRIPTION.format({
+      children: v ? g.Z.Messages.FORUM_NO_POST_WITH_TAG_DESCRIPTION.format({
+        numTags: f.size
+      }) : g.Z.Messages.FORUM_EMPTY_STATE_DESCRIPTION.format({
         channelName: t
       })
-    }), M && (0, s.jsxs)(l.Button, {
-      look: l.Button.Looks.BLANK,
-      size: l.Button.Sizes.MIN,
-      color: l.Button.Colors.GREEN,
-      onClick: A,
-      className: g.cta,
-      innerClassName: g.button,
-      children: [v ? f.default.Messages.FORUM_EMPTY_STATE_CTA : f.default.Messages.FORUM_EMPTY_STATE_CREATE_POST_CTA, (0, s.jsx)(d.default, {
+    }), M && (0, s.jsxs)(a.Button, {
+      look: a.Button.Looks.BLANK,
+      size: a.Button.Sizes.MIN,
+      color: a.Button.Colors.GREEN,
+      onClick: I,
+      className: x.cta,
+      innerClassName: x.button,
+      children: [S ? g.Z.Messages.FORUM_EMPTY_STATE_CTA : g.Z.Messages.FORUM_EMPTY_STATE_CREATE_POST_CTA, (0, s.jsx)(c.Z, {
         width: 12
       })]
     })]

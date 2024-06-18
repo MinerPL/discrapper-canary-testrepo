@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n("757143"), n("47120");
-var i, r, s, a, o = n("442837"),
-  l = n("377108"),
-  u = n("570140"),
-  d = n("187500"),
-  _ = n("981631"),
-  c = n("689938");
+n(757143), n(47120);
+var i, r, s, o, a = n(442837),
+  l = n(377108),
+  u = n(570140),
+  _ = n(187500),
+  d = n(981631),
+  c = n(689938);
 let E = {
     MP4: "mp4",
     TINYMP4: "tinymp4",
@@ -23,73 +23,73 @@ let E = {
     ORIGINAL_MP4: "original.mp4"
   },
   T = E.MP4,
-  f = null,
+  h = null,
   S = "",
-  h = "",
+  f = "",
+  N = [],
   A = [],
   m = [],
-  N = [],
   O = [];
 
-function p(e) {
+function R(e) {
   return e.replace(/^https?:/, "")
 }
-class R extends(i = o.default.Store) {
+class C extends(i = a.ZP.Store) {
   getAnalyticsID() {
-    return f
+    return h
   }
   getQuery() {
     return S
   }
   getResultQuery() {
-    return h
+    return f
   }
   getResultItems() {
-    return A
+    return N
   }
   getTrendingCategories() {
-    return m
+    return A
   }
   getSelectedFormat() {
     return T
   }
   getSuggestions() {
-    return N
+    return m
   }
   getTrendingSearchTerms() {
     return O
   }
 }
-a = "GIFPickerViewStore", (s = "displayName") in(r = R) ? Object.defineProperty(r, s, {
-  value: a,
+o = "GIFPickerViewStore", (s = "displayName") in(r = C) ? Object.defineProperty(r, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new R(u.default, {
+}) : r[s] = o, t.Z = new C(u.Z, {
   GIF_PICKER_INITIALIZE: function(e) {
-    f = e.analyticsID
+    h = e.analyticsID
   },
   GIF_PICKER_QUERY: function(e) {
-    "" === (S = e.query) && (h = "", A = [], N = [])
+    "" === (S = e.query) && (f = "", N = [], m = [])
   },
   GIF_PICKER_QUERY_SUCCESS: function(e) {
-    if (null != e.query && S === h) return !1;
-    null != e.query && (h = e.query), A = e.items.map(e => {
+    if (null != e.query && S === f) return !1;
+    null != e.query && (f = e.query), N = e.items.map(e => {
       let {
         width: t,
         height: n,
         src: i,
         gif_src: r,
         url: s,
-        id: a
+        id: o
       } = e;
       return {
         width: t,
         height: n,
-        src: p(i),
-        gifSrc: p(r),
+        src: R(i),
+        gifSrc: R(r),
         url: s,
-        id: a,
+        id: o,
         format: ! function(e) {
           switch (e) {
             case I.FIXED_HEIGHT_MP4:
@@ -108,7 +108,7 @@ a = "GIFPickerViewStore", (s = "displayName") in(r = R) ? Object.defineProperty(
             default:
               return !1
           }
-        }(T) ? l.GIFType.IMAGE : l.GIFType.VIDEO
+        }(T) ? l.EO.IMAGE : l.EO.VIDEO
       }
     })
   },
@@ -117,28 +117,28 @@ a = "GIFPickerViewStore", (s = "displayName") in(r = R) ? Object.defineProperty(
       query: t
     } = e;
     if (null == t) return !1;
-    h = t, A = []
+    f = t, N = []
   },
   GIF_PICKER_TRENDING_FETCH_SUCCESS: function(e) {
     let t = e.trendingCategories;
-    m = [...null != e.trendingGIFPreview ? [{
-      type: _.GIFPickerResultTypes.TRENDING_GIFS,
-      icon: d.default,
-      name: c.default.Messages.GIF_PICKER_RESULT_TYPE_TRENDING_GIFS,
-      src: p(e.trendingGIFPreview.src),
-      format: l.GIFType.IMAGE
+    A = [...null != e.trendingGIFPreview ? [{
+      type: d.wI2.TRENDING_GIFS,
+      icon: _.Z,
+      name: c.Z.Messages.GIF_PICKER_RESULT_TYPE_TRENDING_GIFS,
+      src: R(e.trendingGIFPreview.src),
+      format: l.EO.IMAGE
     }] : [], ...t.map(e => ({
       ...e,
-      src: p(e.src),
-      type: _.GIFPickerResultTypes.TRENDING_CATEGORY,
-      format: l.GIFType.VIDEO
+      src: R(e.src),
+      type: d.wI2.TRENDING_CATEGORY,
+      format: l.EO.VIDEO
     }))]
   },
   GIF_PICKER_SUGGESTIONS_SUCCESS: function(e) {
     let {
       items: t
     } = e;
-    N = t
+    m = t
   },
   GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS: function(e) {
     let {

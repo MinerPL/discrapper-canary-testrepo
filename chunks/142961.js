@@ -1,24 +1,24 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return i
-  },
-  isOnboardingWizardCompleted: function() {
+t.d(s, {
+  C: function() {
     return r
+  },
+  Z: function() {
+    return a
   }
 });
-var a = s("442837"),
-  l = s("430824"),
-  n = s("981631");
+var n = t(442837),
+  i = t(430824),
+  l = t(981631);
 
-function i(e) {
-  return (0, a.useStateFromStores)([l.default], () => {
-    let t = l.default.getGuild(e);
-    return null != t && t.hasFeature(n.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED)
+function a(e) {
+  return (0, n.e7)([i.Z], () => {
+    let s = i.Z.getGuild(e);
+    return null != s && s.hasFeature(l.oNc.GUILD_ONBOARDING_EVER_ENABLED)
   })
 }
 
 function r(e) {
-  let t = l.default.getGuild(e);
-  return null != t && t.hasFeature(n.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED)
+  let s = i.Z.getGuild(e);
+  return null != s && s.hasFeature(l.oNc.GUILD_ONBOARDING_EVER_ENABLED)
 }

@@ -1,39 +1,39 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return i
+t.d(s, {
+  Z: function() {
+    return a
   }
-}), s("47120");
-var a = s("470079"),
-  l = s("881052"),
-  n = s("728345");
+}), t(47120);
+var n = t(470079),
+  i = t(881052),
+  l = t(728345);
 
-function i() {
-  let [e, t] = a.useState(!1), [s, i] = a.useState(), r = a.useRef();
+function a() {
+  let [e, s] = n.useState(!1), [t, a] = n.useState(), r = n.useRef();
   return {
-    createGuildApplication: async (e, s, a, o) => {
-      i(void 0);
+    createGuildApplication: async (e, t, n, o) => {
+      a(void 0);
       try {
-        if (t(!0), null == r.current) {
-          let t = await n.default.createApplication({
+        if (s(!0), null == r.current) {
+          let s = await l.Z.createApplication({
             name: o,
             guildId: e.id,
-            type: a,
-            teamId: s
+            type: n,
+            teamId: t
           });
-          r.current = t
+          r.current = s
         }
-        return await n.default.getApplicationsForGuild(e.id, {
-          type: a,
+        return await l.Z.getApplicationsForGuild(e.id, {
+          type: n,
           includeTeam: !0
         }), !0
       } catch (e) {
-        return i(new l.APIError(e)), !1
+        return a(new i.Hx(e)), !1
       } finally {
-        t(!1)
+        s(!1)
       }
     },
     submitting: e,
-    error: s
+    error: t
   }
 }

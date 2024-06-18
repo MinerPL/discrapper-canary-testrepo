@@ -1,15 +1,14 @@
 "use strict";
-n.r(t);
-var i = n("570140");
-t.default = {
+var i = n(570140);
+t.Z = {
   setSection(e) {
-    i.default.dispatch({
+    i.Z.dispatch({
       type: "FRIENDS_SET_SECTION",
       section: e
     })
   },
   setInitialSection(e) {
-    i.default.dispatch({
+    i.Z.dispatch({
       type: "FRIENDS_SET_INITIAL_SECTION",
       section: e
     })

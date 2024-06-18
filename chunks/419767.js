@@ -1,42 +1,43 @@
 "use strict";
-n.r(e), n.d(e, {
-  createEventEnvelope: function() {
+n.d(e, {
+  M: function() {
     return a
   },
-  createSessionEnvelope: function() {
-    return i
+  Q: function() {
+    return s
   }
 });
-var r = n("648238");
+var r = n(50074),
+  i = n(177668);
 
-function i(t, e, n, i) {
-  let a = (0, r.getSdkMetadataForEnvelopeHeader)(n),
+function s(t, e, n, s) {
+  let a = (0, r.HY)(n),
     o = {
       sent_at: new Date().toISOString(),
       ...a && {
         sdk: a
       },
-      ...!!i && {
-        dsn: (0, r.dsnToString)(e)
+      ...!!s && {
+        dsn: (0, i.RA)(e)
       }
     },
-    s = "aggregates" in t ? [{
+    u = "aggregates" in t ? [{
       type: "sessions"
     }, t] : [{
       type: "session"
     }, t.toJSON()];
-  return (0, r.createEnvelope)(o, [s])
+  return (0, r.Jd)(o, [u])
 }
 
 function a(t, e, n, i) {
-  var a, o;
-  let s = (0, r.getSdkMetadataForEnvelopeHeader)(n),
+  var s, a;
+  let o = (0, r.HY)(n),
     u = t.type && "replay_event" !== t.type ? t.type : "event";
-  a = t, !(o = n && n.sdk) || (a.sdk = a.sdk || {}, a.sdk.name = a.sdk.name || o.name, a.sdk.version = a.sdk.version || o.version, a.sdk.integrations = [...a.sdk.integrations || [], ...o.integrations || []], a.sdk.packages = [...a.sdk.packages || [], ...o.packages || []]);
-  let c = (0, r.createEventEnvelopeHeaders)(t, s, i, e);
+  s = t, !(a = n && n.sdk) || (s.sdk = s.sdk || {}, s.sdk.name = s.sdk.name || a.name, s.sdk.version = s.sdk.version || a.version, s.sdk.integrations = [...s.sdk.integrations || [], ...a.integrations || []], s.sdk.packages = [...s.sdk.packages || [], ...a.packages || []]);
+  let l = (0, r.Cd)(t, o, i, e);
   delete t.sdkProcessingMetadata;
-  let l = [{
+  let c = [{
     type: u
   }, t];
-  return (0, r.createEnvelope)(c, [l])
+  return (0, r.Jd)(l, [c])
 }

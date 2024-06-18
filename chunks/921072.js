@@ -1,13 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
-  ApplicationDisclosureType: function() {
+n.d(t, {
+  u$: function() {
     return i
   }
-}), n("47120"), n("411104"), n("653041");
-var i, r, a = n("578012"),
-  s = n("835913");
+}), n(47120), n(411104), n(653041);
+var i, r, s = n(230367),
+  o = n(320215),
+  a = n(240773),
+  l = n(495852),
+  u = n(835913);
 (r = i || (i = {}))[r.UNSPECIFIED_DISCLOSURE = 0] = "UNSPECIFIED_DISCLOSURE", r[r.IP_LOCATION = 1] = "IP_LOCATION", r[r.DISPLAYS_ADVERTISEMENTS = 2] = "DISPLAYS_ADVERTISEMENTS";
-class o extends a.MessageType {
+class _ extends l.C {
   create(e) {
     let t = {
       metadata: {},
@@ -15,15 +18,15 @@ class o extends a.MessageType {
       platformUsername: "",
       version: "0"
     };
-    return globalThis.Object.defineProperty(t, a.MESSAGE_TYPE, {
+    return globalThis.Object.defineProperty(t, a.C, {
       enumerable: !1,
       value: this
-    }), void 0 !== e && (0, a.reflectionMergePartial)(this, t, e), t
+    }), void 0 !== e && (0, o.l)(this, t, e), t
   }
   internalBinaryRead(e, t, n, i) {
     let r = null != i ? i : this.create(),
-      s = e.pos + t;
-    for (; e.pos < s;) {
+      o = e.pos + t;
+    for (; e.pos < o;) {
       let [t, i] = e.tag();
       switch (t) {
         case 1:
@@ -39,10 +42,10 @@ class o extends a.MessageType {
           r.version = e.fixed64().toString();
           break;
         default:
-          let s = n.readUnknownField;
-          if ("throw" === s) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName));
-          let o = e.skip(i);
-          !1 !== s && (!0 === s ? a.UnknownFieldHandler.onRead : s)(this.typeName, r, t, i, o)
+          let o = n.readUnknownField;
+          if ("throw" === o) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName));
+          let a = e.skip(i);
+          !1 !== o && (!0 === o ? s.z.onRead : o)(this.typeName, r, t, i, a)
       }
     }
     return r
@@ -50,27 +53,27 @@ class o extends a.MessageType {
   binaryReadMap1(e, t, n) {
     let i = t.uint32(),
       r = t.pos + i,
-      a, s;
+      s, o;
     for (; t.pos < r;) {
       let [e, n] = t.tag();
       switch (e) {
         case 1:
-          a = t.string();
+          s = t.string();
           break;
         case 2:
-          s = t.string();
+          o = t.string();
           break;
         default:
           throw new globalThis.Error("unknown map entry field for field discord_protos.discord_kkv_store_value_models.v1.ApplicationUserRoleConnection.metadata")
       }
     }
-    e[null != a ? a : ""] = null != s ? s : ""
+    e[null != s ? s : ""] = null != o ? o : ""
   }
   internalBinaryWrite(e, t, n) {
-    for (let n of Object.keys(e.metadata)) t.tag(1, a.WireType.LengthDelimited).fork().tag(1, a.WireType.LengthDelimited).string(n).tag(2, a.WireType.LengthDelimited).string(e.metadata[n]).join();
-    "" !== e.platformName && t.tag(2, a.WireType.LengthDelimited).string(e.platformName), "" !== e.platformUsername && t.tag(3, a.WireType.LengthDelimited).string(e.platformUsername), "0" !== e.version && t.tag(4, a.WireType.Bit64).fixed64(e.version);
+    for (let n of Object.keys(e.metadata)) t.tag(1, s.TD.LengthDelimited).fork().tag(1, s.TD.LengthDelimited).string(n).tag(2, s.TD.LengthDelimited).string(e.metadata[n]).join();
+    "" !== e.platformName && t.tag(2, s.TD.LengthDelimited).string(e.platformName), "" !== e.platformUsername && t.tag(3, s.TD.LengthDelimited).string(e.platformUsername), "0" !== e.version && t.tag(4, s.TD.Bit64).fixed64(e.version);
     let i = n.writeUnknownFields;
-    return !1 !== i && (!0 == i ? a.UnknownFieldHandler.onWrite : i)(this.typeName, e, t), t
+    return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, t), t
   }
   constructor() {
     super("discord_protos.discord_kkv_store_value_models.v1.ApplicationUserRoleConnection", [{
@@ -100,16 +103,16 @@ class o extends a.MessageType {
     }])
   }
 }
-new o;
-class l extends a.MessageType {
+new _;
+class d extends l.C {
   create(e) {
     let t = {
       disclosureType: 0
     };
-    return globalThis.Object.defineProperty(t, a.MESSAGE_TYPE, {
+    return globalThis.Object.defineProperty(t, a.C, {
       enumerable: !1,
       value: this
-    }), void 0 !== e && (0, a.reflectionMergePartial)(this, t, e), t
+    }), void 0 !== e && (0, o.l)(this, t, e), t
   }
   internalBinaryRead(e, t, n, i) {
     let r = null != i ? i : this.create(),
@@ -121,21 +124,21 @@ class l extends a.MessageType {
           r.disclosureType = e.int32();
           break;
         case 2:
-          r.ackedAt = s.Timestamp.internalBinaryRead(e, e.uint32(), n, r.ackedAt);
+          r.ackedAt = u.E.internalBinaryRead(e, e.uint32(), n, r.ackedAt);
           break;
         default:
           let o = n.readUnknownField;
           if ("throw" === o) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName));
-          let l = e.skip(i);
-          !1 !== o && (!0 === o ? a.UnknownFieldHandler.onRead : o)(this.typeName, r, t, i, l)
+          let a = e.skip(i);
+          !1 !== o && (!0 === o ? s.z.onRead : o)(this.typeName, r, t, i, a)
       }
     }
     return r
   }
   internalBinaryWrite(e, t, n) {
-    0 !== e.disclosureType && t.tag(1, a.WireType.Varint).int32(e.disclosureType), e.ackedAt && s.Timestamp.internalBinaryWrite(e.ackedAt, t.tag(2, a.WireType.LengthDelimited).fork(), n).join();
+    0 !== e.disclosureType && t.tag(1, s.TD.Varint).int32(e.disclosureType), e.ackedAt && u.E.internalBinaryWrite(e.ackedAt, t.tag(2, s.TD.LengthDelimited).fork(), n).join();
     let i = n.writeUnknownFields;
-    return !1 !== i && (!0 == i ? a.UnknownFieldHandler.onWrite : i)(this.typeName, e, t), t
+    return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, t), t
   }
   constructor() {
     super("discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosure", [{
@@ -147,40 +150,40 @@ class l extends a.MessageType {
       no: 2,
       name: "acked_at",
       kind: "message",
-      T: () => s.Timestamp
+      T: () => u.E
     }])
   }
 }
-let u = new l;
-class d extends a.MessageType {
+let c = new d;
+class E extends l.C {
   create(e) {
     let t = {
       ackedDisclosures: []
     };
-    return globalThis.Object.defineProperty(t, a.MESSAGE_TYPE, {
+    return globalThis.Object.defineProperty(t, a.C, {
       enumerable: !1,
       value: this
-    }), void 0 !== e && (0, a.reflectionMergePartial)(this, t, e), t
+    }), void 0 !== e && (0, o.l)(this, t, e), t
   }
   internalBinaryRead(e, t, n, i) {
     let r = null != i ? i : this.create(),
-      s = e.pos + t;
-    for (; e.pos < s;) {
+      o = e.pos + t;
+    for (; e.pos < o;) {
       let [t, i] = e.tag();
-      if (1 === t) r.ackedDisclosures.push(u.internalBinaryRead(e, e.uint32(), n));
+      if (1 === t) r.ackedDisclosures.push(c.internalBinaryRead(e, e.uint32(), n));
       else {
-        let s = n.readUnknownField;
-        if ("throw" === s) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName));
-        let o = e.skip(i);
-        !1 !== s && (!0 === s ? a.UnknownFieldHandler.onRead : s)(this.typeName, r, t, i, o)
+        let o = n.readUnknownField;
+        if ("throw" === o) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName));
+        let a = e.skip(i);
+        !1 !== o && (!0 === o ? s.z.onRead : o)(this.typeName, r, t, i, a)
       }
     }
     return r
   }
   internalBinaryWrite(e, t, n) {
-    for (let i = 0; i < e.ackedDisclosures.length; i++) u.internalBinaryWrite(e.ackedDisclosures[i], t.tag(1, a.WireType.LengthDelimited).fork(), n).join();
+    for (let i = 0; i < e.ackedDisclosures.length; i++) c.internalBinaryWrite(e.ackedDisclosures[i], t.tag(1, s.TD.LengthDelimited).fork(), n).join();
     let i = n.writeUnknownFields;
-    return !1 !== i && (!0 == i ? a.UnknownFieldHandler.onWrite : i)(this.typeName, e, t), t
+    return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, t), t
   }
   constructor() {
     super("discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosures", [{
@@ -188,8 +191,8 @@ class d extends a.MessageType {
       name: "acked_disclosures",
       kind: "message",
       repeat: 1,
-      T: () => u
+      T: () => c
     }])
   }
 }
-new d
+new E

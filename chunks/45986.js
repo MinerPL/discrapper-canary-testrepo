@@ -1,23 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
-  trustDomain: function() {
+n.d(t, {
+  o: function() {
     return r
   },
-  trustProtocol: function() {
+  u: function() {
     return s
   }
 });
-var i = n("570140");
+var i = n(570140);
 
 function r(e) {
-  i.default.dispatch({
+  i.Z.dispatch({
     type: "MASKED_LINK_ADD_TRUSTED_DOMAIN",
     url: e
   })
 }
 
 function s(e) {
-  i.default.dispatch({
+  i.Z.dispatch({
     type: "MASKED_LINK_ADD_TRUSTED_PROTOCOL",
     url: e
   })

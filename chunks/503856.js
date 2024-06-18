@@ -1,30 +1,30 @@
 "use strict";
-n.r(t), n.d(t, {
-  isRTCConnectedInHub: function() {
+n.d(t, {
+  p: function() {
     return l
   },
-  useConnectedInCurrentHub: function() {
+  r: function() {
     return u
   }
 });
-var i = n("442837"),
-  r = n("592125"),
-  s = n("430824"),
-  a = n("944486"),
-  o = n("981631");
+var i = n(442837),
+  r = n(592125),
+  s = n(430824),
+  o = n(944486),
+  a = n(981631);
 let l = () => {
-    let e = a.default.getVoiceChannelId();
+    let e = o.Z.getVoiceChannelId();
     if (null == e) return !1;
-    let t = r.default.getChannel(e);
+    let t = r.Z.getChannel(e);
     if (null == t) return !1;
-    let n = s.default.getGuild(t.getGuildId());
-    return null != n && n.hasFeature(o.GuildFeatures.HUB)
+    let n = s.Z.getGuild(t.getGuildId());
+    return null != n && n.hasFeature(a.oNc.HUB)
   },
-  u = e => (0, i.useStateFromStores)([a.default, r.default, s.default], () => {
-    let t = a.default.getVoiceChannelId();
+  u = e => (0, i.e7)([o.Z, r.Z, s.Z], () => {
+    let t = o.Z.getVoiceChannelId();
     if (null == t) return !1;
-    let n = r.default.getChannel(t);
+    let n = r.Z.getChannel(t);
     if (null == n) return !1;
-    let i = s.default.getGuild(n.getGuildId());
+    let i = s.Z.getGuild(n.getGuildId());
     return null != i && i.id === e
   })

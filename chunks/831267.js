@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
-  MESSAGE_REMINDER_DURATION_ITEMS: function() {
+n.d(t, {
+  BS: function() {
     return l
   },
-  savedMessageHasMetadata: function() {
+  cu: function() {
+    return s
+  },
+  lY: function() {
     return o
   },
-  savedMessageToClient: function() {
+  uX: function() {
     return a
-  },
-  savedMessageToServer: function() {
-    return s
   }
 });
-var i = n("70956"),
-  r = n("689938");
+var i = n(70956),
+  r = n(689938);
 
 function s(e) {
   var t;
@@ -32,7 +32,7 @@ function s(e) {
   }
 }
 
-function a(e) {
+function o(e) {
   return {
     channelId: e.channel_id,
     messageId: e.message_id,
@@ -47,22 +47,22 @@ function a(e) {
   }
 }
 
-function o(e) {
+function a(e) {
   return null != e.authorSummary && e.authorSummary.length > 0 && null != e.channelSummary && e.channelSummary.length > 0 && null != e.messageSummary && e.messageSummary.length > 0 && null != e.authorId && e.authorId.length > 0
 }
 let l = [{
-  duration: i.default.Millis.HOUR,
-  getLabel: () => r.default.Messages.MESSAGE_REMINDERS_IN_ONE_HOUR
+  duration: i.Z.Millis.HOUR,
+  getLabel: () => r.Z.Messages.MESSAGE_REMINDERS_IN_ONE_HOUR
 }, {
-  duration: 2 * i.default.Millis.HOUR,
-  getLabel: () => r.default.Messages.MESSAGE_REMINDERS_IN_TWO_HOURS
+  duration: 2 * i.Z.Millis.HOUR,
+  getLabel: () => r.Z.Messages.MESSAGE_REMINDERS_IN_TWO_HOURS
 }, {
-  duration: 4 * i.default.Millis.HOUR,
-  getLabel: () => r.default.Messages.MESSAGE_REMINDERS_IN_FOUR_HOURS
+  duration: 4 * i.Z.Millis.HOUR,
+  getLabel: () => r.Z.Messages.MESSAGE_REMINDERS_IN_FOUR_HOURS
 }, {
-  duration: i.default.Millis.DAY,
-  getLabel: () => r.default.Messages.MESSAGE_REMINDERS_IN_ONE_DAY
+  duration: i.Z.Millis.DAY,
+  getLabel: () => r.Z.Messages.MESSAGE_REMINDERS_IN_ONE_DAY
 }, {
-  duration: i.default.Millis.WEEK,
-  getLabel: () => r.default.Messages.MESSAGE_REMINDERS_IN_ONE_WEEK
+  duration: i.Z.Millis.WEEK,
+  getLabel: () => r.Z.Messages.MESSAGE_REMINDERS_IN_ONE_WEEK
 }]

@@ -1,4 +1,3 @@
 "use strict";
-n.r(t);
-var i = n("831209");
-t.default = i.default
+var i = n(831209);
+t.Z = i.Z

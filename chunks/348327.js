@@ -1,6 +1,6 @@
 var r = Array.prototype.slice,
-  i = n("775569"),
-  a = n("35262"),
+  i = n(775569),
+  a = n(35262),
   o = e.exports = function(e, t, n) {
     if (!n && (n = {}), e === t) return !0;
     if (e instanceof Date && t instanceof Date) return e.getTime() === t.getTime();

@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return s
   }
 });
-var r = n("470079"),
-  i = n("335218"),
+var r = n(470079),
+  i = n(335218),
   a = n.n(i),
   o = {};
 

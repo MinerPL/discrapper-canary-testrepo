@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return u
   }
-}), n("47120");
-var i = n("836560"),
-  r = n("68721"),
-  s = n("961304"),
-  a = n("65154");
+}), n(47120);
+var i = n(836560),
+  r = n(68721),
+  s = n(961304),
+  o = n(65154);
 
-function o(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -38,7 +38,7 @@ class u extends i.EventEmitter {
   }
   createOutput(e, t) {
     let n = this.outputs[e];
-    null == n && ((n = new s.default(this.userId, this.audioContext)).mute = !1, n.volume = 100, n.setSpeakingFlags(a.SpeakingFlags.VOICE), n.setSinkId(this.sinkId), this.outputs[e] = n), n.addTrack(t), n.play()
+    null == n && ((n = new s.Z(this.userId, this.audioContext)).mute = !1, n.volume = 100, n.setSpeakingFlags(o.Dg.VOICE), n.setSinkId(this.sinkId), this.outputs[e] = n), n.addTrack(t), n.play()
   }
   destroyOutput(e, t) {
     let n = this.outputs[e];
@@ -66,10 +66,10 @@ class u extends i.EventEmitter {
     })
   }
   constructor(e, t, n, i = "") {
-    super(), o(this, "userId", void 0), o(this, "sinkId", void 0), o(this, "input", void 0), o(this, "pc1", void 0), o(this, "pc2", void 0), o(this, "senders", []), o(this, "outputs", {}), o(this, "audioContext", void 0), o(this, "handleStream", () => {
+    super(), a(this, "userId", void 0), a(this, "sinkId", void 0), a(this, "input", void 0), a(this, "pc1", void 0), a(this, "pc2", void 0), a(this, "senders", []), a(this, "outputs", {}), a(this, "audioContext", void 0), a(this, "handleStream", () => {
       let e = this.input.getDelayedStream();
       this.senders.forEach(e => this.pc1.removeTrack(e)), this.senders = [...e.getAudioTracks().map(t => this.pc1.addTrack(t, e))], this.handshake()
-    }), o(this, "handleTrack", e => {
+    }), a(this, "handleTrack", e => {
       e.streams[0].getTracks().forEach(e => {
         this.createOutput(e.id, e), e.onmute = () => {
           this.destroyOutput(e.id, e)
@@ -79,6 +79,6 @@ class u extends i.EventEmitter {
       null != e.candidate && this.pc2.addIceCandidate(e.candidate)
     }, this.pc2 = new RTCPeerConnection, this.pc2.onicecandidate = e => {
       null != e.candidate && this.pc1.addIceCandidate(e.candidate)
-    }, this.pc2.ontrack = this.handleTrack, this.input = new r.default(e), this.input.setSource(t), this.input.on("stream", this.handleStream), this.input.enable(), this.audioContext = e
+    }, this.pc2.ontrack = this.handleTrack, this.input = new r.Z(e), this.input.setSource(t), this.input.on("stream", this.handleStream), this.input.enable(), this.audioContext = e
   }
 }

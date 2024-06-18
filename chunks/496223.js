@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  ClanBadgeToadstool: function() {
+n.d(t, {
+  j: function() {
     return c
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("331595"),
-  a = n("249849");
-let s = ["#be0351", "#ff2c52"],
-  o = ["#ffb84b", "#ffe361"],
+var i = n(735250);
+n(470079);
+var r = n(331595),
+  s = n(249849);
+let o = ["#be0351", "#ff2c52"],
+  a = ["#ffb84b", "#ffe361"],
   l = [.12, .25],
   u = [{
     base: 5,
@@ -18,8 +18,8 @@ let s = ["#be0351", "#ff2c52"],
     base: 4,
     tint: 1
   }],
-  d = [.4, .8],
-  _ = [{
+  _ = [.4, .8],
+  d = [{
     base: 5,
     tint: 1
   }, {
@@ -35,19 +35,19 @@ let s = ["#be0351", "#ff2c52"],
       ...I
     } = e, {
       primaryColorsTransformed: T,
-      secondaryColorsTransformed: f
-    } = (0, a.getTransformedBadgeColors)({
-      primaryBaseColors: s,
+      secondaryColorsTransformed: h
+    } = (0, s.s)({
+      primaryBaseColors: o,
       primaryTintColor: c,
       primaryTintLuminances: l,
       primaryLuminanceWeights: u,
-      secondaryBaseColors: o,
+      secondaryBaseColors: a,
       secondaryTintColor: E,
-      secondaryTintLuminances: d,
-      secondaryLuminanceWeights: _
+      secondaryTintLuminances: _,
+      secondaryLuminanceWeights: d
     });
     return (0, i.jsxs)("svg", {
-      ...(0, r.default)(I),
+      ...(0, r.Z)(I),
       width: t,
       height: n,
       viewBox: "0 0 16 16",
@@ -55,7 +55,7 @@ let s = ["#be0351", "#ff2c52"],
       xmlns: "http://www.w3.org/2000/svg",
       children: [(0, i.jsx)("path", {
         d: "M11 12v-2h-1V9H6v1H5v2H4v3h8v-3h-1Z",
-        fill: f[1]
+        fill: h[1]
       }), (0, i.jsx)("path", {
         d: "M14 3V2h-2V1H4v1H2v1H1v6h1v1h2V9h8v1h2V9h1V3h-1Z",
         fill: T[1]
@@ -89,7 +89,7 @@ let s = ["#be0351", "#ff2c52"],
         fill: "#fff"
       }), (0, i.jsx)("path", {
         d: "M11 10h-1v2h1v-2ZM11 12v2H4v1h8v-3h-1Z",
-        fill: f[0]
+        fill: h[0]
       }), (0, i.jsx)("path", {
         d: "M5 12H4v2h1v-2Z",
         fill: "#fff"

@@ -1,19 +1,19 @@
 "use strict";
-var i, r, s, a;
-n.r(t), n.d(t, {
-  CHAT_INPUT_BUTTON_CLASSNAME: function() {
-    return o
+var i, r, s, o;
+n.d(t, {
+  CT: function() {
+    return a
   },
-  ExpressionPickerViewType: function() {
+  Om: function() {
+    return l
+  },
+  X1: function() {
     return i
   },
-  ExpressionPickerWidths: function() {
+  _j: function() {
     return r
-  },
-  MIN_EXPRESSION_PICKER_WIDTH: function() {
-    return l
   }
 }), (s = i || (i = {})).EMOJI = "emoji", s.GIF = "gif", s.STICKER = "sticker", s.SOUNDBOARD = "soundboard";
-let o = "expression-picker-chat-input-button",
+let a = "expression-picker-chat-input-button",
   l = 498;
-(a = r || (r = {})).MIN = "min", a.MAX = "max"
+(o = r || (r = {})).MIN = "min", o.MAX = "max"

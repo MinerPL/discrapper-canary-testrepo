@@ -50,8 +50,8 @@ function o(e) {
   }(e, "string");
   return "symbol" == typeof t ? t : String(t)
 }
-var s = n("413135").Buffer,
-  u = n("252602").inspect,
+var s = n(413135).Buffer,
+  u = n(252602).inspect,
   c = u && u.custom || "inspect";
 e.exports = function() {
   var e, t, n;
@@ -160,7 +160,7 @@ e.exports = function() {
         customInspect: !1
       }))
     }
-  }], a(e.prototype, t), n && a(e, n), Object.defineProperty(e, "prototype", {
+  }], a(e.prototype, t), Object.defineProperty(e, "prototype", {
     writable: !1
   }), r
 }()

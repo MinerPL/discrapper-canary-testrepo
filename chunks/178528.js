@@ -1,41 +1,43 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return w
+n.d(t, {
+  Z: function() {
+    return k
   }
-}), n("47120");
-var i = n("735250"),
-  a = n("470079"),
-  l = n("718017"),
-  s = n("442837"),
-  o = n("481060"),
-  r = n("619915"),
-  d = n("554747"),
-  u = n("373274"),
-  c = n("315174"),
-  f = n("840780"),
-  h = n("905423"),
-  p = n("680089"),
-  g = n("58468"),
-  m = n("796974"),
-  E = n("324067"),
-  S = n("984933"),
-  v = n("888369"),
-  y = n("430824"),
-  I = n("496675"),
-  T = n("944486"),
-  N = n("9156"),
-  O = n("938475"),
-  _ = n("937482"),
-  C = n("547881"),
-  A = n("669083"),
-  x = n("711553"),
-  R = n("981631"),
-  M = n("647086"),
-  L = n("689938"),
-  D = n("555344");
+}), n(47120);
+var i = n(735250),
+  s = n(470079),
+  l = n(920906),
+  a = n(442837),
+  o = n(481060),
+  r = n(619915),
+  d = n(554747),
+  c = n(373274),
+  u = n(315174),
+  h = n(840780),
+  p = n(905423),
+  f = n(680089),
+  E = n(58468),
+  Z = n(796974),
+  g = n(324067),
+  m = n(984933),
+  _ = n(888369),
+  I = n(430824),
+  S = n(496675),
+  v = n(878884),
+  C = n(19780),
+  x = n(944486),
+  N = n(9156),
+  T = n(938475),
+  O = n(937482),
+  A = n(547881),
+  y = n(669083),
+  R = n(711553),
+  M = n(981631),
+  L = n(647086),
+  D = n(689938),
+  P = n(589131);
 
-function b(e, t, n) {
+function j(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -43,8 +45,8 @@ function b(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let j = 54;
-class P extends a.PureComponent {
+let b = 54;
+class w extends s.PureComponent {
   static getDerivedStateFromProps(e) {
     let {
       guild: t
@@ -59,7 +61,7 @@ class P extends a.PureComponent {
       guildId: e
     } = this.props, {
       scrollTop: t
-    } = m.default.getGuildDimensions(e);
+    } = Z.Z.getGuildDimensions(e);
     this.setAnimatedValue(null != t ? t : 0)
   }
   componentDidUpdate(e) {
@@ -70,7 +72,7 @@ class P extends a.PureComponent {
     if (e.guild !== t) {
       let {
         scrollTop: e
-      } = m.default.getGuildDimensions(n);
+      } = Z.Z.getGuildDimensions(n);
       this.setAnimatedValue(null != e ? e : 0)
     }
   }
@@ -78,7 +80,7 @@ class P extends a.PureComponent {
     let {
       closePopout: t
     } = e;
-    return (0, i.jsx)(A.default, {
+    return (0, i.jsx)(y.Z, {
       onClose: t
     })
   }
@@ -86,20 +88,20 @@ class P extends a.PureComponent {
     let {
       guild: t
     } = this.props, n = null == t ? void 0 : t.hasCommunityInfoSubheader();
-    null != t && (null != t.banner || n) && (null != t.banner ? this.setAnimatedValueForBanner(e) : this.setAnimatedValueForCommunityInfo(e))
+    if (null != t && (null != t.banner || !!n)) null != t.banner ? this.setAnimatedValueForBanner(e) : this.setAnimatedValueForCommunityInfo(e)
   }
   setAnimatedValueForBanner(e) {
     let {
       renderBanner: t,
       communityInfoVisible: n,
       bannerVisible: i,
-      controller: a
+      controller: s
     } = this.state;
-    (e >= j && i || e < j && !i) && (i = !i), (e >= 78 && !t || e < 78 && t) && (t = !t), n = i, (t !== this.state.renderBanner || i !== this.state.bannerVisible || n !== this.state.communityInfoVisible) && this.setState({
+    (e >= b && i || e < b && !i) && (i = !i), (e >= 78 && !t || e < 78 && t) && (t = !t), n = i, (t !== this.state.renderBanner || i !== this.state.bannerVisible || n !== this.state.communityInfoVisible) && this.setState({
       renderBanner: t,
       bannerVisible: i,
       communityInfoVisible: n
-    }), a.update({
+    }), s.update({
       value: Math.min(1, Math.max(0, 1 - e / 78)),
       immediate: !0
     }).start()
@@ -123,34 +125,34 @@ class P extends a.PureComponent {
     } = this.props, {
       guild: n
     } = t, {
-      controller: a,
+      controller: s,
       renderBanner: l,
-      bannerVisible: s,
+      bannerVisible: a,
       communityInfoVisible: r
-    } = this.state, d = n.id === M.FAVORITES_RAW_GUILD_ID ? u.FavoritesChannelList : u.GuildChannelList;
-    return (0, i.jsxs)(x.default, {
-      header: (0, i.jsx)(c.default, {
+    } = this.state, d = n.id === L._ ? c.j : c.E;
+    return (0, i.jsxs)(R.Z, {
+      header: (0, i.jsx)(u.ZP, {
         guild: n,
-        controller: a,
+        controller: s,
         renderBanner: l,
-        bannerVisible: s,
-        className: D.guildHeader,
-        headerClassName: D.guildHeaderInner,
+        bannerVisible: a,
+        className: P.guildHeader,
+        headerClassName: P.guildHeaderInner,
         onMouseDown: e,
         disableBannerAnimation: !1,
         communityInfoVisible: r,
         children: (0, i.jsx)(o.Popout, {
           position: "right",
           renderPopout: this.renderSettings,
-          children: e => (0, i.jsx)(C.default.Icon, {
-            icon: _.default,
-            label: L.default.Messages.SETTINGS,
+          children: e => (0, i.jsx)(A.ZP.Icon, {
+            icon: O.Z,
+            label: D.Z.Messages.SETTINGS,
             ...e
           })
         })
       }),
       children: [(0, i.jsx)("div", {
-        className: D.channelList,
+        className: P.channelList,
         children: (0, i.jsx)(d, {
           ...t,
           guild: n,
@@ -158,16 +160,16 @@ class P extends a.PureComponent {
           onScroll: null != n && null != n.banner ? this.handleScroll : null
         })
       }), (0, i.jsx)("section", {
-        className: D.panels,
-        "aria-label": L.default.Messages.ACCOUNT_A11Y_LABEL,
-        children: (0, i.jsx)(f.default, {
+        className: P.panels,
+        "aria-label": D.Z.Messages.ACCOUNT_A11Y_LABEL,
+        children: (0, i.jsx)(h.Z, {
           guildId: n.id
         })
       })]
     })
   }
   constructor(...e) {
-    super(...e), b(this, "state", {
+    super(...e), j(this, "state", {
       controller: new l.Controller({
         value: 1,
         immediate: !0
@@ -175,7 +177,7 @@ class P extends a.PureComponent {
       renderBanner: !1,
       bannerVisible: !1,
       communityInfoVisible: !1
-    }), b(this, "handleScroll", e => {
+    }), j(this, "handleScroll", e => {
       let {
         scrollTop: t
       } = e;
@@ -184,42 +186,44 @@ class P extends a.PureComponent {
   }
 }
 
-function w(e) {
+function k(e) {
   var t;
   let {
     guildId: n
-  } = e, a = (0, s.useStateFromStores)([y.default], () => y.default.getGuild(n)), l = (0, s.useStateFromStores)([S.default], () => S.default.getChannels(n)), o = (0, s.useStateFromStores)([E.default], () => E.default.getCategories(n)), {
-    mutedChannels: u,
-    collapseMuted: c
-  } = (0, s.useStateFromStoresObject)([N.default], () => ({
-    mutedChannels: N.default.getMutedChannels(n),
-    collapseMuted: N.default.isGuildCollapsed(n)
-  })), f = (0, s.useStateFromStores)([O.default], () => O.default.getVoiceStates(n)), _ = (0, s.useStateFromStores)([g.default], () => g.default.getCollapsed()), {
-    scrollTo: C
-  } = (0, s.useStateFromStores)([m.default], () => m.default.getGuildDimensions(n)), A = (0, h.default)(e => {
+  } = e, s = (0, a.e7)([I.Z], () => I.Z.getGuild(n)), l = (0, a.e7)([m.ZP], () => m.ZP.getChannels(n)), o = (0, a.e7)([g.Z], () => g.Z.getCategories(n)), {
+    mutedChannels: c,
+    collapseMuted: u
+  } = (0, a.cj)([N.ZP], () => ({
+    mutedChannels: N.ZP.getMutedChannels(n),
+    collapseMuted: N.ZP.isGuildCollapsed(n)
+  })), h = (0, a.e7)([T.ZP], () => T.ZP.getVoiceStates(n)), O = (0, a.e7)([E.Z], () => E.Z.getCollapsed()), {
+    scrollTo: A
+  } = (0, a.e7)([Z.Z], () => Z.Z.getGuildDimensions(n)), y = (0, p.Z)(e => {
     let {
       channelId: t
     } = e;
     return t
-  }), x = (0, s.useStateFromStores)([T.default], () => T.default.getVoiceChannelId()), M = (0, s.useStateFromStores)([I.default], () => I.default.getGuildVersion(n)), L = (0, s.useStateFromStores)([p.default], () => p.default.version), D = (0, s.useStateFromStores)([v.default], () => v.default.getGuildChangeSentinel(n)), b = (0, r.useEmbeddedAppsByChannel)(null == a ? void 0 : a.id), j = (0, d.useActiveEventsByChannel)(null == a ? void 0 : a.id), w = null !== (t = null == a ? void 0 : a.hasFeature(R.GuildFeatures.COMMUNITY)) && void 0 !== t && t;
-  return (0, i.jsx)(P, {
+  }), R = (0, a.e7)([x.Z], () => x.Z.getVoiceChannelId()), L = (0, a.e7)([S.Z], () => S.Z.getGuildVersion(n)), D = (0, a.e7)([f.Z], () => f.Z.version), P = (0, a.e7)([_.default], () => _.default.getGuildChangeSentinel(n)), j = (0, r.QN)(null == s ? void 0 : s.id), b = (0, d.gM)(null == s ? void 0 : s.id), k = null !== (t = null == s ? void 0 : s.hasFeature(M.oNc.COMMUNITY)) && void 0 !== t && t, V = (0, a.e7)([C.Z], () => C.Z.getChannelId()), U = (0, a.e7)([v.Z], () => v.Z.desyncedVoiceStatesCount);
+  return (0, i.jsx)(w, {
     guildId: n,
-    guild: a,
+    guild: s,
     channels: l,
     categories: o,
-    mutedChannels: u,
-    scrollToChannel: C,
-    selectedChannelId: A,
-    selectedVoiceChannelId: x,
-    voiceStates: f,
-    collapsedChannels: _,
-    collapseMuted: c,
-    guildReadStateSentinel: D,
-    permissionVersion: M,
-    categoryCollapseVersion: L,
-    embeddedAppsByChannel: b,
-    activeEventsByChannel: j,
-    showNewUnreadsBar: w,
+    mutedChannels: c,
+    scrollToChannel: A,
+    selectedChannelId: y,
+    selectedVoiceChannelId: R,
+    voiceStates: h,
+    rtcConnectedChannelId: V,
+    rtcDesyncedVoiceStatesCount: U,
+    collapsedChannels: O,
+    collapseMuted: u,
+    guildReadStateSentinel: P,
+    permissionVersion: L,
+    categoryCollapseVersion: D,
+    embeddedAppsByChannel: j,
+    activeEventsByChannel: b,
+    showNewUnreadsBar: k,
     optInEnabled: !1
   })
 }

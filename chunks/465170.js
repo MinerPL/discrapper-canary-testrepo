@@ -35,12 +35,12 @@ e.exports = t, t.Node = n, t.create = t, t.prototype.removeNode = function(e) {
   })(this, arguments[e]);
   return this.length
 }, t.prototype.pop = function() {
-  if (this.tail) {
+  if (!!this.tail) {
     var e = this.tail.value;
     return this.tail = this.tail.prev, this.tail ? this.tail.next = null : this.head = null, this.length--, e
   }
 }, t.prototype.shift = function() {
-  if (this.head) {
+  if (!!this.head) {
     var e = this.head.value;
     return this.head = this.head.next, this.head ? this.head.prev = null : this.tail = null, this.length--, e
   }

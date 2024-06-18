@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return o
   }
-}), n("47120");
-var i = n("445686"),
-  r = n("379649");
+}), n(47120);
+var i = n(445686),
+  r = n(379649);
 
 function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -15,9 +15,9 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class a {
+class o {
   start() {
-    this.listeningUsers.clear(), this.listening.reset(), this.speaking.reset(), this.participation.reset(), this.connected.reset(), this.connected.start(), this.connection.on(i.BaseConnectionEvent.Speaking, (e, t, n) => {
+    this.listeningUsers.clear(), this.listening.reset(), this.speaking.reset(), this.participation.reset(), this.connected.reset(), this.connected.start(), this.connection.on(i.S.Speaking, (e, t, n) => {
       this.userId === e ? this.onSpeaking(0 !== t) : this.onListening(0 !== t, e)
     })
   }
@@ -38,7 +38,7 @@ class a {
       duration_connected_ms: this.connected.elapsed().asMilliseconds()
     }
   }
-  constructor(e, t, n = r.TimeStampProducer) {
-    s(this, "userId", void 0), s(this, "connection", void 0), s(this, "timestampProducer", void 0), s(this, "listeningUsers", void 0), s(this, "listening", void 0), s(this, "speaking", void 0), s(this, "participation", void 0), s(this, "connected", void 0), this.userId = e, this.connection = t, this.timestampProducer = n, this.listeningUsers = new Set, this.listening = new r.StopWatch(this.timestampProducer), this.speaking = new r.StopWatch(this.timestampProducer), this.participation = new r.StopWatch(this.timestampProducer), this.connected = new r.StopWatch(this.timestampProducer)
+  constructor(e, t, n = r.Z_) {
+    s(this, "userId", void 0), s(this, "connection", void 0), s(this, "timestampProducer", void 0), s(this, "listeningUsers", void 0), s(this, "listening", void 0), s(this, "speaking", void 0), s(this, "participation", void 0), s(this, "connected", void 0), this.userId = e, this.connection = t, this.timestampProducer = n, this.listeningUsers = new Set, this.listening = new r.G9(this.timestampProducer), this.speaking = new r.G9(this.timestampProducer), this.participation = new r.G9(this.timestampProducer), this.connected = new r.G9(this.timestampProducer)
   }
 }

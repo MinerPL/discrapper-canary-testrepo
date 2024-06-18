@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  ReflectionBinaryWriter: function() {
+n.d(t, {
+  R: function() {
     return s
   }
 });
-var r = n("230367"),
-  i = n("36056"),
-  a = n("17146"),
-  o = n("69122");
+var r = n(230367),
+  i = n(36056),
+  a = n(17146),
+  o = n(69122);
 class s {
   constructor(e) {
     this.info = e
@@ -30,45 +30,45 @@ class s {
       switch (r.kind) {
         case "scalar":
         case "enum":
-          let l = "enum" == r.kind ? i.ScalarType.INT32 : r.T;
+          let l = "enum" == r.kind ? i.wx.INT32 : r.T;
           if (u) {
-            if ((0, a.assert)(Array.isArray(o)), u == i.RepeatType.PACKED) this.packed(t, l, r.no, o);
+            if ((0, a.hu)(Array.isArray(o)), u == i.P0.PACKED) this.packed(t, l, r.no, o);
             else
               for (let e of o) this.scalar(t, l, r.no, e, !0)
-          } else void 0 === o ? (0, a.assert)(r.opt) : this.scalar(t, l, r.no, o, s || r.opt);
+          } else void 0 === o ? (0, a.hu)(r.opt) : this.scalar(t, l, r.no, o, s || r.opt);
           break;
         case "message":
           if (u)
-            for (let e of ((0, a.assert)(Array.isArray(o)), o)) this.message(t, n, r.T(), r.no, e);
+            for (let e of ((0, a.hu)(Array.isArray(o)), o)) this.message(t, n, r.T(), r.no, e);
           else this.message(t, n, r.T(), r.no, o);
           break;
         case "map":
-          for (let [e, i] of((0, a.assert)("object" == typeof o && null !== o), Object.entries(o))) this.mapEntry(t, n, r, e, i)
+          for (let [e, i] of((0, a.hu)("object" == typeof o && null !== o), Object.entries(o))) this.mapEntry(t, n, r, e, i)
       }
     }
     let o = n.writeUnknownFields;
-    !1 !== o && (!0 === o ? r.UnknownFieldHandler.onWrite : o)(this.info.typeName, e, t)
+    !1 !== o && (!0 === o ? r.z.onWrite : o)(this.info.typeName, e, t)
   }
   mapEntry(e, t, n, o, s) {
-    e.tag(n.no, r.WireType.LengthDelimited), e.fork();
+    e.tag(n.no, r.TD.LengthDelimited), e.fork();
     let u = o;
     switch (n.K) {
-      case i.ScalarType.INT32:
-      case i.ScalarType.FIXED32:
-      case i.ScalarType.UINT32:
-      case i.ScalarType.SFIXED32:
-      case i.ScalarType.SINT32:
+      case i.wx.INT32:
+      case i.wx.FIXED32:
+      case i.wx.UINT32:
+      case i.wx.SFIXED32:
+      case i.wx.SINT32:
         u = Number.parseInt(o);
         break;
-      case i.ScalarType.BOOL:
-        (0, a.assert)("true" == o || "false" == o), u = "true" == o
+      case i.wx.BOOL:
+        (0, a.hu)("true" == o || "false" == o), u = "true" == o
     }
     switch (this.scalar(e, n.K, 1, u, !0), n.V.kind) {
       case "scalar":
         this.scalar(e, n.V.T, 2, s, !0);
         break;
       case "enum":
-        this.scalar(e, i.ScalarType.INT32, 2, s, !0);
+        this.scalar(e, i.wx.INT32, 2, s, !0);
         break;
       case "message":
         this.message(e, t, n.V.T(), 2, s)
@@ -76,7 +76,7 @@ class s {
     e.join()
   }
   message(e, t, n, i, a) {
-    void 0 !== a && (n.internalBinaryWrite(a, e.tag(i, r.WireType.LengthDelimited).fork(), t), e.join())
+    void 0 !== a && (n.internalBinaryWrite(a, e.tag(i, r.TD.LengthDelimited).fork(), t), e.join())
   }
   scalar(e, t, n, r, i) {
     let [a, o, s] = this.scalarInfo(t, r);
@@ -84,60 +84,60 @@ class s {
   }
   packed(e, t, n, o) {
     if (!o.length) return;
-    (0, a.assert)(t !== i.ScalarType.BYTES && t !== i.ScalarType.STRING), e.tag(n, r.WireType.LengthDelimited), e.fork();
+    (0, a.hu)(t !== i.wx.BYTES && t !== i.wx.STRING), e.tag(n, r.TD.LengthDelimited), e.fork();
     let [, s] = this.scalarInfo(t);
     for (let t = 0; t < o.length; t++) e[s](o[t]);
     e.join()
   }
   scalarInfo(e, t) {
-    let n, a = r.WireType.Varint,
+    let n, a = r.TD.Varint,
       s = void 0 === t,
       u = 0 === t;
     switch (e) {
-      case i.ScalarType.INT32:
+      case i.wx.INT32:
         n = "int32";
         break;
-      case i.ScalarType.STRING:
-        u = s || !t.length, a = r.WireType.LengthDelimited, n = "string";
+      case i.wx.STRING:
+        u = s || !t.length, a = r.TD.LengthDelimited, n = "string";
         break;
-      case i.ScalarType.BOOL:
+      case i.wx.BOOL:
         u = !1 === t, n = "bool";
         break;
-      case i.ScalarType.UINT32:
+      case i.wx.UINT32:
         n = "uint32";
         break;
-      case i.ScalarType.DOUBLE:
-        a = r.WireType.Bit64, n = "double";
+      case i.wx.DOUBLE:
+        a = r.TD.Bit64, n = "double";
         break;
-      case i.ScalarType.FLOAT:
-        a = r.WireType.Bit32, n = "float";
+      case i.wx.FLOAT:
+        a = r.TD.Bit32, n = "float";
         break;
-      case i.ScalarType.INT64:
-        u = s || o.PbLong.from(t).isZero(), n = "int64";
+      case i.wx.INT64:
+        u = s || o.M.from(t).isZero(), n = "int64";
         break;
-      case i.ScalarType.UINT64:
-        u = s || o.PbULong.from(t).isZero(), n = "uint64";
+      case i.wx.UINT64:
+        u = s || o.p.from(t).isZero(), n = "uint64";
         break;
-      case i.ScalarType.FIXED64:
-        u = s || o.PbULong.from(t).isZero(), a = r.WireType.Bit64, n = "fixed64";
+      case i.wx.FIXED64:
+        u = s || o.p.from(t).isZero(), a = r.TD.Bit64, n = "fixed64";
         break;
-      case i.ScalarType.BYTES:
-        u = s || !t.byteLength, a = r.WireType.LengthDelimited, n = "bytes";
+      case i.wx.BYTES:
+        u = s || !t.byteLength, a = r.TD.LengthDelimited, n = "bytes";
         break;
-      case i.ScalarType.FIXED32:
-        a = r.WireType.Bit32, n = "fixed32";
+      case i.wx.FIXED32:
+        a = r.TD.Bit32, n = "fixed32";
         break;
-      case i.ScalarType.SFIXED32:
-        a = r.WireType.Bit32, n = "sfixed32";
+      case i.wx.SFIXED32:
+        a = r.TD.Bit32, n = "sfixed32";
         break;
-      case i.ScalarType.SFIXED64:
-        u = s || o.PbLong.from(t).isZero(), a = r.WireType.Bit64, n = "sfixed64";
+      case i.wx.SFIXED64:
+        u = s || o.M.from(t).isZero(), a = r.TD.Bit64, n = "sfixed64";
         break;
-      case i.ScalarType.SINT32:
+      case i.wx.SINT32:
         n = "sint32";
         break;
-      case i.ScalarType.SINT64:
-        u = s || o.PbLong.from(t).isZero(), n = "sint64"
+      case i.wx.SINT64:
+        u = s || o.M.from(t).isZero(), n = "sint64"
     }
     return [a, n, s || u]
   }

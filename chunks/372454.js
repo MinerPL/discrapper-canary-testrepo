@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  GuildSettingsBansNewExperiment: function() {
+n.d(t, {
+  T: function() {
     return i
   }
 });
-let i = (0, n("987170").default)({
+let i = (0, n(987170).Z)({
   kind: "guild",
   id: "2023-08_improved_bans_page",
   label: "Guild Settings Improved Bans Page",

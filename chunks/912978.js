@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return l
   }
-}), n("653041"), n("411104"), n("47120");
-var i = n("836560"),
-  r = n("264344"),
+}), n(653041), n(411104), n(47120);
+var i = n(836560),
+  r = n(264344),
   s = n.n(r),
-  a = n("649318");
+  o = n(649318);
 
-function o(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -51,7 +51,7 @@ class l extends i.EventEmitter {
     return this._sdp
   }
   set sdp(e) {
-    if (!(0, a.validateSdp)(e)) throw Error("Incorrect SDP received from rtc-worker: ".concat(e));
+    if (!(0, o.$6)(e)) throw Error("Incorrect SDP received from rtc-worker: ".concat(e));
     this._sdp = e, this.createAnswer(), this.connected = !0, this._negotiationNeeded && this.negotiationNeeded()
   }
   negotiationNeeded() {
@@ -73,17 +73,17 @@ class l extends i.EventEmitter {
         cname: n,
         ssrc: i,
         type: r
-      } = e, s = this.activeAudioSSRCs[n], o = this.activeVideoSSRCs[n], l = "".concat(r, "_inbound_").concat(t);
-      return [i, n, r, s === i || o === i ? this.direction : a.Directions.INACTIVE, l]
+      } = e, s = this.activeAudioSSRCs[n], a = this.activeVideoSSRCs[n], l = "".concat(r, "_inbound_").concat(t);
+      return [i, n, r, s === i || a === i ? this.direction : o.Ns.INACTIVE, l]
     });
     if ("Firefox" !== s().name) return this.connected ? t : [];
-    let n = this.outboundStreams.map((e, t) => [0, "outbound", e.type, (0, a.getDirection)(e.direction), "".concat(e.type, "_outbound_").concat(t)]);
+    let n = this.outboundStreams.map((e, t) => [0, "outbound", e.type, (0, o.Mg)(e.direction), "".concat(e.type, "_outbound_").concat(t)]);
     if ("answer" !== e) return n.concat(t);
     {
       let e = n.length - t.length;
       return n.slice(0, e).concat(t).slice(0, n.length).map((e, t) => {
-        let [n, i, r, s, o] = e;
-        return [n, i, r, (0, a.getDirection)(this.outboundStreams[t].direction), this.outboundStreams[t].mid]
+        let [n, i, r, s, a] = e;
+        return [n, i, r, (0, o.Mg)(this.outboundStreams[t].direction), this.outboundStreams[t].mid]
       })
     }
   }
@@ -93,11 +93,11 @@ class l extends i.EventEmitter {
       i = this.videoCodec,
       r = this.videoPayloadType,
       s = this.rtxPayloadType,
-      o = this.sdp;
-    if (null == t || null == n || null == i || null == r || null == s || null == o || null == this.direction) throw Error("Invalid payload: audioCodec: ".concat(t, ", audioPayloadType: ").concat(null == n ? "null" : n, ", videoCodec: ").concat(i, ", videoCodecPayloadType: ").concat(null == r ? "null" : r, ", rtxPayloadType: ").concat(null == s ? "null" : s, ", sdp: ").concat(o));
-    let l = (0, a.generateSessionDescription)({
+      a = this.sdp;
+    if (null == t || null == n || null == i || null == r || null == s || null == a || null == this.direction) throw Error("Invalid payload: audioCodec: ".concat(t, ", audioPayloadType: ").concat(null == n ? "null" : n, ", videoCodec: ").concat(i, ", videoCodecPayloadType: ").concat(null == r ? "null" : r, ", rtxPayloadType: ").concat(null == s ? "null" : s, ", sdp: ").concat(a));
+    let l = (0, o.MP)({
       type: e,
-      baseSDP: o,
+      baseSDP: a,
       direction: this.direction,
       audioCodec: t,
       audioPayloadType: n,
@@ -112,6 +112,6 @@ class l extends i.EventEmitter {
     return this.emit(e, l), Promise.resolve(l)
   }
   constructor(...e) {
-    super(...e), o(this, "audioCodec", null), o(this, "audioPayloadType", null), o(this, "videoCodec", null), o(this, "videoPayloadType", null), o(this, "rtxPayloadType", null), o(this, "direction", null), o(this, "outboundStreams", []), o(this, "extensions", []), o(this, "streams", []), o(this, "activeAudioSSRCs", {}), o(this, "activeVideoSSRCs", {}), o(this, "_sdp", null), o(this, "connected", !1), o(this, "negotiating", !1), o(this, "_negotiationNeeded", !1)
+    super(...e), a(this, "audioCodec", null), a(this, "audioPayloadType", null), a(this, "videoCodec", null), a(this, "videoPayloadType", null), a(this, "rtxPayloadType", null), a(this, "direction", null), a(this, "outboundStreams", []), a(this, "extensions", []), a(this, "streams", []), a(this, "activeAudioSSRCs", {}), a(this, "activeVideoSSRCs", {}), a(this, "_sdp", null), a(this, "connected", !1), a(this, "negotiating", !1), a(this, "_negotiationNeeded", !1)
   }
 }

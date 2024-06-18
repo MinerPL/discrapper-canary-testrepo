@@ -1,30 +1,30 @@
 "use strict";
-n.r(e), n.d(e, {
-  LinkedErrors: function() {
-    return a
+n.d(e, {
+  i: function() {
+    return s
   }
 });
-var r = n("648238"),
-  i = n("590171");
-class a {
+var r = n(147658),
+  i = n(590171);
+class s {
   static __initStatic() {
     this.id = "LinkedErrors"
   }
   __init() {
-    this.name = a.id
+    this.name = s.id
   }
   constructor(t = {}) {
-    a.prototype.__init.call(this), this._key = t.key || "cause", this._limit = t.limit || 5
+    s.prototype.__init.call(this), this._key = t.key || "cause", this._limit = t.limit || 5
   }
   setupOnce(t, e) {
     t((t, n) => {
-      let o = e(),
-        s = o.getClient(),
-        u = o.getIntegration(a);
-      if (!s || !u) return t;
-      let c = s.getOptions();
-      return (0, r.applyAggregateErrorsToEvent)(i.exceptionFromError, c.stackParser, c.maxValueLength, u._key, u._limit, t, n), t
+      let a = e(),
+        o = a.getClient(),
+        u = a.getIntegration(s);
+      if (!o || !u) return t;
+      let l = o.getOptions();
+      return (0, r.Z)(i.GJ, l.stackParser, l.maxValueLength, u._key, u._limit, t, n), t
     })
   }
 }
-a.__initStatic()
+s.__initStatic()

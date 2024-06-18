@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  isMemberVerificationManualApproval: function() {
+n.d(t, {
+  P: function() {
     return s
   },
-  useIsMemberVerificationManualApproval: function() {
+  e: function() {
     return r
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "guild",
   id: "2021-11_member_verification_manual_approval",
   label: "Member Verification Manual Approval",

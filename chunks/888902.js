@@ -45,9 +45,9 @@ var e = function() {
       return this.cacheStartTime_ == t && this.cacheStepSize_ == e && this.cacheValues_.length == r ? this.cacheValues_ : (this.cacheValues_ = this.getValuesInternal_(t, e, r), this.cacheStartTime_ = t, this.cacheStepSize_ = e, this.cacheValues_)
     },
     getValuesInternal_: function(t, e, r) {
-      for (var n = [], i = 0, a = 0, s = t, o = 0; o < r; ++o) {
-        for (; i < this.dataPoints_.length && this.dataPoints_[i].time < s;) a = this.dataPoints_[i].value, ++i;
-        n[o] = a, s += e
+      for (var n = [], i = 0, a = 0, o = t, s = 0; s < r; ++s) {
+        for (; i < this.dataPoints_.length && this.dataPoints_[i].time < o;) a = this.dataPoints_[i].value, ++i;
+        n[s] = a, o += e
       }
       return n
     }

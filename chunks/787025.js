@@ -1,64 +1,64 @@
 "use strict";
-n.r(t), n.d(t, {
-  OAuth2Modal: function() {
-    return h
-  },
-  OAuth2Page: function() {
+n.d(t, {
+  G: function() {
     return S
+  },
+  j: function() {
+    return f
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
-  o = n("466377"),
-  l = n("481060"),
-  u = n("252618"),
-  d = n("612744"),
-  _ = n("449934"),
-  c = n("792125"),
-  E = n("981631"),
-  I = n("756286"),
-  T = n("689938"),
-  f = n("160516");
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(466377),
+  l = n(481060),
+  u = n(252618),
+  _ = n(612744),
+  d = n(449934),
+  c = n(792125),
+  E = n(981631),
+  I = n(756286),
+  T = n(689938),
+  h = n(897456);
 
 function S(e) {
   let {
     children: t,
     wrapperClassName: n,
     embedded: s
-  } = e, [o, S] = r.useState(I.WaveStates.INITIAL), h = r.useCallback(e => {
+  } = e, [a, S] = r.useState(I.hO.INITIAL), f = r.useCallback(e => {
     S(t => Math.max(t, e))
   }, []);
-  return (0, u.usePageTitle)({
-    location: T.default.Messages.OAUTH2_TITLE
+  return (0, u.Tt)({
+    location: T.Z.Messages.OAUTH2_TITLE
   }), (0, i.jsx)(l.ThemeContextProvider, {
-    theme: E.ThemeTypes.DARK,
-    children: (0, i.jsx)(d.default, {
+    theme: E.BRd.DARK,
+    children: (0, i.jsx)(_.Z, {
       embedded: s,
-      className: a()((0, c.getThemeClass)(E.ThemeTypes.DARK), f.wave),
-      splash: (0, _.getArtForPath)(),
-      waveState: o,
+      className: o()((0, c.Q)(E.BRd.DARK), h.wave),
+      splash: (0, d.gK)(),
+      waveState: a,
       showLogo: !0,
-      updateWaveState: h,
+      updateWaveState: f,
       children: (0, i.jsx)("div", {
-        className: a()(f.oauth2Wrapper, n),
+        className: o()(h.oauth2Wrapper, n),
         children: t
       })
     })
   })
 }
 
-function h(e) {
+function f(e) {
   let {
     children: t,
     transitionState: n,
     ...r
   } = e;
-  return (0, i.jsx)(o.ModalRoot, {
-    size: o.ModalSize.DYNAMIC,
+  return (0, i.jsx)(a.Y0, {
+    size: a.Cg.DYNAMIC,
     transitionState: n,
-    className: f.oauth2Wrapper,
+    className: h.oauth2Wrapper,
     ...r,
     children: t
   })

@@ -1,6 +1,6 @@
 "use strict";
-var n = r("118658"),
-  i = r("581079"),
+var n = r(118658),
+  i = r(581079),
   o = n.isBrowser("Chrome"),
   a = o ? function(t) {
     for (var e = t.cloneRange(), r = [], n = t.endContainer; null != n; n = n.parentNode) {

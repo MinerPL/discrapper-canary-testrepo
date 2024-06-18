@@ -1,24 +1,24 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return o
+n.d(t, {
+  Z: function() {
+    return a
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("692547"),
-  s = n("26290"),
-  a = n("689938");
+var i = n(735250);
+n(470079);
+var r = n(692547),
+  s = n(481060),
+  o = n(689938);
 
-function o(e) {
+function a(e) {
   let {
     className: t,
-    color: n = r.default.unsafe_rawColors.BRAND_500.css,
-    ...o
+    color: n = r.Z.unsafe_rawColors.BRAND_500.css,
+    ...a
   } = e;
   return (0, i.jsx)(s.TextBadge, {
-    ...o,
-    text: a.default.Messages.BETA,
+    ...a,
+    text: o.Z.Messages.BETA,
     color: n,
     className: t
   })

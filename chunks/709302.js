@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-var i = n("81825");
+var i = n(81825);
 
 function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -10,7 +9,7 @@ function r(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class s extends i.default {
+class s extends i.Z {
   static fromPath(e) {
     return new s({
       id: e,
@@ -21,4 +20,4 @@ class s extends i.default {
     super(), r(this, "id", void 0), r(this, "path", void 0), this.id = e.id, this.path = e.path
   }
 }
-t.default = s
+t.Z = s

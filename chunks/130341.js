@@ -1,112 +1,112 @@
 "use strict";
-s.r(t), s.d(t, {
-  ADD_MEMBER_QUERY_LIMIT: function() {
-    return S
-  },
-  MAX_PREFETCH_MEMBER_COUNT: function() {
-    return f
-  },
-  filterFullMembersByQuery: function() {
-    return h
-  },
-  filterRole: function() {
-    return R
-  },
-  getSectionAnalyticsName: function() {
+t.d(s, {
+  UT: function() {
     return C
   },
-  useGuildMembers: function() {
-    return m
-  },
-  useGuildRoleMembers: function() {
+  _4: function() {
     return N
   },
-  useQueryGuildMembers: function() {
+  cm: function() {
+    return m
+  },
+  e: function() {
+    return h
+  },
+  eg: function() {
+    return x
+  },
+  lJ: function() {
+    return S
+  },
+  rY: function() {
     return g
+  },
+  uo: function() {
+    return R
   }
-}), s("724458"), s("653041"), s("47120");
-var a = s("470079"),
-  l = s("658722"),
-  n = s.n(l),
-  i = s("442837"),
-  r = s("271383"),
-  o = s("594174"),
-  d = s("626135"),
-  u = s("823379"),
-  c = s("892880"),
-  E = s("51144"),
-  _ = s("480608"),
-  I = s("203377"),
-  T = s("981631");
-let S = 50,
-  f = 1e3;
+}), t(724458), t(653041), t(47120);
+var n = t(470079),
+  i = t(658722),
+  l = t.n(i),
+  a = t(442837),
+  r = t(271383),
+  o = t(594174),
+  c = t(626135),
+  d = t(823379),
+  u = t(892880),
+  E = t(51144),
+  _ = t(480608),
+  I = t(203377),
+  T = t(981631);
+let N = 50,
+  m = 1e3;
 
-function m(e, t) {
-  let s = (0, i.useStateFromStoresArray)([r.default], () => {
-      let s = r.default.getMembers(e);
-      return null == t ? s : s.filter(t)
-    }, [e, t]),
-    l = (0, i.useStateFromStoresObject)([o.default], () => s.reduce((e, t) => {
-      let s = o.default.getUser(t.userId);
-      return null == s ? e : (e[t.userId] = s, e)
-    }, {}), [s]);
-  return a.useMemo(() => {
-    let t = [];
-    for (let n of s) {
-      var a;
-      let s = l[n.userId];
-      null != s && t.push({
-        name: null !== (a = n.nick) && void 0 !== a ? a : E.default.getName(s),
-        userTag: E.default.getUserTag(s),
-        id: n.userId,
-        avatarSource: s.getAvatarSource(e),
-        avatarURL: s.getAvatarURL(e, 80),
-        bot: s.bot,
-        verifiedBot: s.isVerifiedBot(),
-        roles: n.roles,
-        key: n.userId,
-        user: s
+function S(e, s) {
+  let t = (0, a.Wu)([r.ZP], () => {
+      let t = r.ZP.getMembers(e);
+      return null == s ? t : t.filter(s)
+    }, [e, s]),
+    i = (0, a.cj)([o.default], () => t.reduce((e, s) => {
+      let t = o.default.getUser(s.userId);
+      return null == t ? e : (e[s.userId] = t, e)
+    }, {}), [t]);
+  return n.useMemo(() => {
+    let s = [];
+    for (let l of t) {
+      var n;
+      let t = i[l.userId];
+      null != t && s.push({
+        name: null !== (n = l.nick) && void 0 !== n ? n : E.ZP.getName(t),
+        userTag: E.ZP.getUserTag(t),
+        id: l.userId,
+        avatarSource: t.getAvatarSource(e),
+        avatarURL: t.getAvatarURL(e, 80),
+        bot: t.bot,
+        verifiedBot: t.isVerifiedBot(),
+        roles: l.roles,
+        key: l.userId,
+        user: t
       })
     }
-    return t
-  }, [s, l, e])
+    return s
+  }, [t, i, e])
 }
 
-function N(e, t, s) {
-  return a.useEffect(() => {
-    (0, _.requestMembersForRole)(e, t).catch(s)
-  }, [e, t]), m(e, a.useCallback(e => e.roles.includes(t), [t]))
+function h(e, s, t) {
+  return n.useEffect(() => {
+    (0, _.H)(e, s).catch(t)
+  }, [e, s]), S(e, n.useCallback(e => e.roles.includes(s), [s]))
 }
 
-function g(e, t) {
-  let s = a.useRef(!1);
-  a.useEffect(() => {
-    c.default.requestMembers(e, t, 200), "" !== t && !s.current && (d.default.track(T.AnalyticEvents.SEARCH_STARTED, {
+function g(e, s) {
+  let t = n.useRef(!1);
+  n.useEffect(() => {
+    u.Z.requestMembers(e, s, 200), "" !== s && !t.current && (c.default.track(T.rMx.SEARCH_STARTED, {
       search_type: "Role Members"
-    }), s.current = !0)
-  }, [e, t])
+    }), t.current = !0)
+  }, [e, s])
 }
 
-function h(e, t) {
-  let s = e.trim().toLowerCase();
-  return t.id === s || n()(s, t.name.toLowerCase()) || n()(s, t.userTag.toLowerCase())
+function x(e, s) {
+  let t = e.trim().toLowerCase();
+  return s.id === t || l()(t, s.name.toLowerCase()) || l()(t, s.userTag.toLowerCase())
 }
 
 function C(e) {
   switch (e) {
-    case I.GuildSettingsRoleEditSections.MEMBERS:
+    case I.ZI.MEMBERS:
       return "Members";
-    case I.GuildSettingsRoleEditSections.PERMISSIONS:
+    case I.ZI.PERMISSIONS:
       return "Permissions";
-    case I.GuildSettingsRoleEditSections.DISPLAY:
+    case I.ZI.DISPLAY:
       return "Role Settings";
-    case I.GuildSettingsRoleEditSections.VERIFICATIONS:
+    case I.ZI.VERIFICATIONS:
       return "Connections";
     default:
-      (0, u.assertNever)(e)
+      (0, d.vE)(e)
   }
 }
 
-function R(e, t) {
-  return "" === t || e.name.toLowerCase().includes(t.toLowerCase())
+function R(e, s) {
+  return "" === s || e.name.toLowerCase().includes(s.toLowerCase())
 }

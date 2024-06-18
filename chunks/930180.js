@@ -1,28 +1,28 @@
 "use strict";
-n.r(t), n.d(t, {
-  getStageBlockedUsersCount: function() {
+n.d(t, {
+  Z7: function() {
+    return a
+  },
+  _d: function() {
     return o
   },
-  useStageBlockedUsers: function() {
+  z: function() {
     return l
-  },
-  useStageBlockedUsersCount: function() {
-    return a
   }
 });
-var i = n("442837"),
-  r = n("565799"),
-  s = n("501655");
-
-function a(e) {
-  return (0, i.useStateFromStores)([r.default], () => null != e ? r.default.getParticipantCount(e, s.StageChannelParticipantNamedIndex.BLOCKED) : 0, [e])
-}
+var i = n(442837),
+  r = n(565799),
+  s = n(501655);
 
 function o(e) {
+  return (0, i.e7)([r.Z], () => null != e ? r.Z.getParticipantCount(e, s.pV.BLOCKED) : 0, [e])
+}
+
+function a(e) {
   var t;
-  return null !== (t = r.default.getParticipantCount(e, s.StageChannelParticipantNamedIndex.BLOCKED)) && void 0 !== t ? t : 0
+  return null !== (t = r.Z.getParticipantCount(e, s.pV.BLOCKED)) && void 0 !== t ? t : 0
 }
 
 function l(e) {
-  return (0, i.useStateFromStores)([r.default], () => r.default.getMutableParticipants(e, s.StageChannelParticipantNamedIndex.BLOCKED), [e])
+  return (0, i.e7)([r.Z], () => r.Z.getMutableParticipants(e, s.pV.BLOCKED), [e])
 }

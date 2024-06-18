@@ -1,10 +1,10 @@
 "use strict";
-var r = n("134533"),
-  i = n("690244"),
+var r = n(134533),
+  i = n(690244),
   a = r() && i("%Object.defineProperty%", !0),
   o = r.hasArrayLengthDefineBug(),
-  s = o && n("453312"),
-  u = n("192853")("Object.prototype.propertyIsEnumerable");
+  s = o && n(453312),
+  u = n(192853)("Object.prototype.propertyIsEnumerable");
 e.exports = function(e, t, n, r, i, c) {
   if (!a) {
     if (!e(c) || !c["[[Configurable]]"] || !c["[[Writable]]"] || i in r && u(r, i) !== !!c["[[Enumerable]]"]) return !1;

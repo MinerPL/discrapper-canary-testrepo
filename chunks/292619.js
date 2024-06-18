@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  isEligibleForWebAudioAPI: function() {
+n.d(t, {
+  w: function() {
     return r
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-03_web_audio_api_rollout",
   label: "Web Audio API Rollout",

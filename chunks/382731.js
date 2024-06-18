@@ -1,33 +1,33 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return o
   }
 });
-var i = n("470079"),
-  r = n("699581");
+var i = n(470079),
+  r = n(699581);
 let s = Object.freeze({
   box: "border-box"
 });
 
-function a(e) {
+function o(e) {
   let {
     ref: t,
     onUpdate: n,
-    resizeObserver: a,
-    listenerMap: o,
+    resizeObserver: o,
+    listenerMap: a,
     key: l
   } = e;
   (0, i.useLayoutEffect)(() => {
     let {
       current: e
     } = t;
-    return null != e && (o.set(e, e => {
+    return null != e && (a.set(e, e => {
       (0, r.flushSync)(() => {
         n(e, l)
       })
-    }), a.observe(e, s)), () => {
-      null != e && (a.unobserve(e), o.delete(e))
+    }), o.observe(e, s)), () => {
+      null != e && (o.unobserve(e), a.delete(e))
     }
-  }, [n, a, t, o, l])
+  }, [n, o, t, a, l])
 }

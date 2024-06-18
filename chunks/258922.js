@@ -1,7 +1,7 @@
 "use strict";
-var r = n("957578").Buffer,
-  i = n("477260").Transform,
-  a = n("689118");
+var r = n(957578).Buffer,
+  i = n(477260).Transform,
+  a = n(689118);
 
 function o(e) {
   i.call(this), this._block = r.allocUnsafe(e), this._blockSize = e, this._blockOffset = 0, this._length = [0, 0, 0, 0], this._finalized = !1

@@ -1,7 +1,7 @@
 "use strict";
-n.r(t), n("411104");
-var i = n("374023");
-let r = (0, n("733393").getErlpackEncoding)();
+n(411104);
+var i = n(374023);
+let r = (0, n(733393).V)();
 class s {
   pack(e) {
     return JSON.stringify(e)
@@ -17,5 +17,5 @@ class s {
     return !0
   }
 }
-let a = void 0 !== r ? r : s;
-i.ProcessArgs.isDiscordGatewayPlaintextSet() && (a = s), t.default = a
+let o = void 0 !== r ? r : s;
+i.s.isDiscordGatewayPlaintextSet() && (o = s), t.Z = o

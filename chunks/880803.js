@@ -1,24 +1,24 @@
 "use strict";
-n.r(e), n.d(e, {
-  SyncPromise: function() {
-    return u
-  },
-  rejectedSyncPromise: function() {
-    return s
-  },
-  resolvedSyncPromise: function() {
+n.d(e, {
+  $2: function() {
     return o
+  },
+  WD: function() {
+    return a
+  },
+  cW: function() {
+    return u
   }
 });
-var r, i, a = n("46834");
+var r, i, s = n(46834);
 
-function o(t) {
+function a(t) {
   return new u(e => {
     e(t)
   })
 }
 
-function s(t) {
+function o(t) {
   return new u((e, n) => {
     n(t)
   })
@@ -85,7 +85,7 @@ class u {
   __init5() {
     this._setResult = (t, e) => {
       if (this._state === i.PENDING) {
-        if ((0, a.isThenable)(e)) {
+        if ((0, s.J8)(e)) {
           e.then(this._resolve, this._reject);
           return
         }
@@ -98,7 +98,7 @@ class u {
       if (this._state === i.PENDING) return;
       let t = this._handlers.slice();
       this._handlers = [], t.forEach(t => {
-        !t[0] && (this._state === i.RESOLVED && t[1](this._value), this._state === i.REJECTED && t[2](this._value), t[0] = !0)
+        if (!t[0]) this._state === i.RESOLVED && t[1](this._value), this._state === i.REJECTED && t[2](this._value), t[0] = !0
       })
     }
   }

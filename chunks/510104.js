@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return f
   }
 });
-var r = n("685516"),
-  i = n("285363"),
-  a = n("175922"),
-  o = n("406434"),
-  s = n("6138"),
-  u = n("740078"),
-  c = n("882159"),
-  l = n("544338"),
-  d = n("581206");
+var r = n(685516),
+  i = n(285363),
+  a = n(175922),
+  o = n(406434),
+  s = n(6138),
+  u = n(740078),
+  c = n(882159),
+  l = n(544338),
+  d = n(581206);
 
 function f(e, t) {
   void 0 === t && (t = {});
@@ -22,40 +22,40 @@ function f(e, t) {
     h = n.strategy,
     m = void 0 === h ? e.strategy : h,
     g = n.boundary,
-    _ = void 0 === g ? u.clippingParents : g,
+    _ = void 0 === g ? u.zV : g,
     b = n.rootBoundary,
-    v = void 0 === b ? u.viewport : b,
+    v = void 0 === b ? u.Pj : b,
     y = n.elementContext,
-    E = void 0 === y ? u.popper : y,
+    E = void 0 === y ? u.k5 : y,
     S = n.altBoundary,
     x = n.padding,
     w = void 0 === x ? 0 : x,
-    T = (0, l.default)("number" != typeof w ? w : (0, d.default)(w, u.basePlacements)),
-    C = E === u.popper ? u.reference : u.popper,
+    C = (0, l.Z)("number" != typeof w ? w : (0, d.Z)(w, u.mv)),
+    T = E === u.k5 ? u.YP : u.k5,
     D = e.rects.popper,
-    O = e.elements[void 0 !== S && S ? C : E],
-    M = (0, r.default)((0, c.isElement)(O) ? O : O.contextElement || (0, i.default)(e.elements.popper), _, v, m),
-    A = (0, a.default)(e.elements.reference),
-    k = (0, o.default)({
+    M = e.elements[void 0 !== S && S ? T : E],
+    O = (0, r.Z)((0, c.kK)(M) ? M : M.contextElement || (0, i.Z)(e.elements.popper), _, v, m),
+    A = (0, a.Z)(e.elements.reference),
+    k = (0, o.Z)({
       reference: A,
       element: D,
       strategy: "absolute",
       placement: p
     }),
-    R = (0, s.default)(Object.assign({}, D, k)),
-    N = E === u.popper ? R : A,
+    R = (0, s.Z)(Object.assign({}, D, k)),
+    N = E === u.k5 ? R : A,
     I = {
-      top: M.top - N.top + T.top,
-      bottom: N.bottom - M.bottom + T.bottom,
-      left: M.left - N.left + T.left,
-      right: N.right - M.right + T.right
+      top: O.top - N.top + C.top,
+      bottom: N.bottom - O.bottom + C.bottom,
+      left: O.left - N.left + C.left,
+      right: N.right - O.right + C.right
     },
     L = e.modifiersData.offset;
-  if (E === u.popper && L) {
+  if (E === u.k5 && L) {
     var P = L[p];
     Object.keys(I).forEach(function(e) {
-      var t = [(0, u.right), (0, u.bottom)].indexOf(e) >= 0 ? 1 : -1,
-        n = [(0, u.top), (0, u.bottom)].indexOf(e) >= 0 ? "y" : "x";
+      var t = [u.F2, u.I].indexOf(e) >= 0 ? 1 : -1,
+        n = [u.we, u.I].indexOf(e) >= 0 ? "y" : "x";
       I[e] += P[n] * t
     })
   }

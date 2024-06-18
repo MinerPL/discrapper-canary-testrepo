@@ -1,12 +1,12 @@
 "use strict";
-s.r(t), s.d(t, {
-  useGuildAuditLogV2Enabled: function() {
+t.d(s, {
+  pU: function() {
     return r
   }
 });
-var a = s("818083"),
-  l = s("981631");
-let n = (0, a.createExperiment)({
+var n = t(818083),
+  i = t(981631);
+let l = (0, n.B)({
     kind: "user",
     id: "2022-02_guild_audit_log_user",
     label: "Guild Audit Log - User Feature Flag",
@@ -21,7 +21,7 @@ let n = (0, a.createExperiment)({
       }
     }]
   }),
-  i = (0, a.createExperiment)({
+  a = (0, n.B)({
     kind: "guild",
     id: "2022-02_guild_audit_log_guild",
     label: "Guild Audit Log - Guild Feature Flag",
@@ -39,16 +39,16 @@ let n = (0, a.createExperiment)({
 
 function r(e) {
   let {
-    enableForGuild: t
-  } = i.useExperiment({
-    guildId: null != e ? e : l.EMPTY_STRING_SNOWFLAKE_ID,
+    enableForGuild: s
+  } = a.useExperiment({
+    guildId: null != e ? e : i.lds,
     location: "da2d90_1"
   }), {
-    enableForUser: s
-  } = n.useExperiment({
+    enableForUser: t
+  } = l.useExperiment({
     location: "da2d90_2"
   }, {
     autoTrackExposure: !1
   });
-  return s && t
+  return t && s
 }

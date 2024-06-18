@@ -1,37 +1,36 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("481060"),
-  a = n("592125"),
-  s = n("430824"),
-  o = n("346656"),
-  l = n("689938"),
-  u = n("939414");
-t.default = e => {
+var i = n(735250);
+n(470079);
+var r = n(481060),
+  s = n(592125),
+  o = n(430824),
+  a = n(346656),
+  l = n(689938),
+  u = n(645944);
+t.Z = e => {
   let {
     entry: t
-  } = e, n = a.default.getChannel(t.channelId);
+  } = e, n = s.Z.getChannel(t.channelId);
   if (null == n) return null;
-  let d = s.default.getGuild(n.guild_id);
-  return null == d ? null : (0, i.jsxs)("div", {
+  let _ = o.Z.getGuild(n.guild_id);
+  return null == _ ? null : (0, i.jsxs)("div", {
     className: u.container,
     children: [(0, i.jsx)(r.Heading, {
       className: u.header,
       variant: "heading-sm/semibold",
-      children: l.default.Messages.REPORT_MODAL_SERVER_PREVIEW_HEADER
+      children: l.Z.Messages.REPORT_MODAL_SERVER_PREVIEW_HEADER
     }), (0, i.jsxs)("div", {
       className: u.guildContainer,
       children: [(0, i.jsxs)("div", {
         className: u.hubInfo,
-        children: [(0, i.jsx)(o.default, {
-          guild: d,
-          size: o.default.Sizes.MINI,
+        children: [(0, i.jsx)(a.Z, {
+          guild: _,
+          size: a.Z.Sizes.MINI,
           className: u.hubIcon
         }), (0, i.jsx)(r.Text, {
           color: "header-secondary",
           variant: "text-sm/normal",
-          children: d.name
+          children: _.name
         })]
       }), (0, i.jsx)(r.Text, {
         variant: "text-md/semibold",

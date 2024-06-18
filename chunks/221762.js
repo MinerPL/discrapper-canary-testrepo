@@ -7,12 +7,12 @@ var a = this && this.__importDefault || function(e) {
 Object.defineProperty(t, "__esModule", {
   value: !0
 });
-let n = a(r("919565")),
-  s = a(r("537978")),
-  o = a(r("158965")),
+let n = a(r(919565)),
+  s = a(r(537978)),
+  o = a(r(158965)),
   i = "twhZNwxI1aFG3r4";
 
-function u(e, ...t) {
+function c(e, ...t) {
   let r = "";
   for (let a = 0; a < e.length; a++)
     if (r += e[a], a < t.length) {
@@ -34,6 +34,6 @@ function u(e, ...t) {
       } else r += e
     } return (r = n.default(r)).split(i).join("")
 }
-u.pretty = e => s.default(e) ? {
+c.pretty = e => s.default(e) ? {
   [i]: JSON.stringify(e, null, 2)
-} : e, t.default = u
+} : e, t.default = c

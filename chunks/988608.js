@@ -1,8 +1,8 @@
-var r = n("706178");
+var r = n(706178);
 e.exports = _, _.simpleSieve = m, _.fermatTest = g;
-var i = n("814033"),
+var i = n(814033),
   a = new i(24),
-  o = new(n("687363")),
+  o = new(n(687363)),
   s = new i(1),
   u = new i(2),
   c = new i(5);

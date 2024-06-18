@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return o
   }
 });
-var i = n("81825"),
-  r = n("591548");
+var i = n(81825),
+  r = n(591548);
 
 function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -15,12 +15,12 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class a extends i.default {
+class o extends i.Z {
   static createInvoiceFromServer(e) {
     var t;
-    return new a({
+    return new o({
       id: e.id,
-      invoiceItems: null === (t = e.invoice_items) || void 0 === t ? void 0 : t.map(r.createInvoiceItemFromServer),
+      invoiceItems: null === (t = e.invoice_items) || void 0 === t ? void 0 : t.map(r.H),
       total: e.total,
       subtotal: e.subtotal,
       currency: e.currency,

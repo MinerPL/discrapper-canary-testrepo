@@ -1,51 +1,51 @@
 "use strict";
-n.r(e), n.d(e, {
-  extractTraceparentData: function() {
-    return o
-  },
-  generateSentryTraceHeader: function() {
+n.d(e, {
+  $p: function() {
     return u
   },
-  tracingContextFromHeaders: function() {
-    return s
+  KA: function() {
+    return o
+  },
+  qG: function() {
+    return a
   }
 });
-var r = n("545459"),
-  i = n("862315");
-let a = RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");
+var r = n(545459),
+  i = n(862315);
+let s = RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");
 
-function o(t) {
+function a(t) {
   let e;
   if (!t) return;
-  let n = t.match(a);
-  if (n) return "1" === n[3] ? e = !0 : "0" === n[3] && (e = !1), {
+  let n = t.match(s);
+  if (!!n) return "1" === n[3] ? e = !0 : "0" === n[3] && (e = !1), {
     traceId: n[1],
     parentSampled: e,
     parentSpanId: n[2]
   }
 }
 
-function s(t, e) {
-  let n = o(t),
-    a = (0, r.baggageHeaderToDynamicSamplingContext)(e),
+function o(t, e) {
+  let n = a(t),
+    s = (0, r.EN)(e),
     {
-      traceId: s,
+      traceId: o,
       parentSpanId: u,
-      parentSampled: c
+      parentSampled: l
     } = n || {},
-    l = {
-      traceId: s || (0, i.uuid4)(),
-      spanId: (0, i.uuid4)().substring(16),
-      sampled: void 0 !== c && c
+    c = {
+      traceId: o || (0, i.DM)(),
+      spanId: (0, i.DM)().substring(16),
+      sampled: void 0 !== l && l
     };
-  return u && (l.parentSpanId = u), a && (l.dsc = a), {
+  return u && (c.parentSpanId = u), s && (c.dsc = s), {
     traceparentData: n,
-    dynamicSamplingContext: a,
-    propagationContext: l
+    dynamicSamplingContext: s,
+    propagationContext: c
   }
 }
 
-function u(t = (0, i.uuid4)(), e = (0, i.uuid4)().substring(16), n) {
+function u(t = (0, i.DM)(), e = (0, i.DM)().substring(16), n) {
   let r = "";
   return void 0 !== n && (r = n ? "-1" : "-0"), `${t}-${e}${r}`
 }

@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  applyPatches: function() {
-    return r
-  },
-  sortEffectLayers: function() {
+n.d(t, {
+  H: function() {
     return i
+  },
+  Q: function() {
+    return r
   }
 });
 let i = e => e.sort((e, t) => {

@@ -1,8 +1,7 @@
 "use strict";
-r.r(t);
-var n = r("648500"),
-  a = r("754401"),
-  o = r("880051");
-t.default = function(e) {
-  return "function" != typeof e.constructor || (0, o.default)(e) ? {} : (0, n.default)((0, a.default)(e))
+var r = n(648500),
+  i = n(754401),
+  a = n(880051);
+t.Z = function(e) {
+  return "function" != typeof e.constructor || (0, a.Z)(e) ? {} : (0, r.Z)((0, i.Z)(e))
 }

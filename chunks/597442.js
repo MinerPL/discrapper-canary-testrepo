@@ -1,24 +1,24 @@
 "use strict";
-n.r(t), n.d(t, {
-  FocusLock: function() {
-    return d
+n.d(t, {
+  E: function() {
+    return _
   },
-  useFocusLock: function() {
+  T: function() {
     return u
   }
 });
-var i, r = n("470079"),
-  s = n("802498"),
-  a = n("442837"),
-  o = n("607070");
+var i, r = n(470079),
+  s = n(802498),
+  o = n(442837),
+  a = n(607070);
 let l = null !== (i = document.getElementById("app-mount")) && void 0 !== i ? i : document;
 
 function u(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-    i = (0, a.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled),
+    i = (0, o.e7)([a.Z], () => a.Z.keyboardModeEnabled),
     u = r.useRef(!1);
-  return u.current = !i, (0, s.default)(e, {
+  return u.current = !i, (0, s.ZP)(e, {
     ...n,
     disableReturnRef: u,
     attachTo: null !== (t = n.attachTo) && void 0 !== t ? t : l,
@@ -26,6 +26,6 @@ function u(e) {
   })
 }
 
-function d(e) {
+function _(e) {
   return u(e.containerRef), e.children
 }

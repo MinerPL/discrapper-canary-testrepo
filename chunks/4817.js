@@ -2,29 +2,29 @@
 Object.defineProperty(t, "__esModule", {
   value: !0
 }), t.mergeClasses = void 0;
-var n = i(r("320403")),
-  a = i(r("117806")),
-  o = Object.assign || function(e) {
+var r = o(n(320403)),
+  i = o(n(117806)),
+  a = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
-      var r = arguments[t];
-      for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n])
+      var n = arguments[t];
+      for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
     }
     return e
   };
 
-function i(e) {
+function o(e) {
   return e && e.__esModule ? e : {
     default: e
   }
 }
-var l = t.mergeClasses = function(e) {
+var s = t.mergeClasses = function(e) {
   var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-    r = e.default && (0, a.default)(e.default) || {};
+    n = e.default && (0, i.default)(e.default) || {};
   return t.map(function(t) {
-    var a = e[t];
-    return a && (0, n.default)(a, function(e, t) {
-      !r[t] && (r[t] = {}), r[t] = o({}, r[t], a[t])
+    var i = e[t];
+    return i && (0, r.default)(i, function(e, t) {
+      !n[t] && (n[t] = {}), n[t] = a({}, n[t], i[t])
     }), t
-  }), r
+  }), n
 };
-t.default = l
+t.default = s

@@ -1,12 +1,12 @@
 "use strict";
-var r = n("81021"),
+var r = n(690244),
   i = r("%Array.prototype%"),
   a = r("%RangeError%"),
   o = r("%SyntaxError%"),
   s = r("%TypeError%"),
-  u = n("73871"),
+  u = n(73871),
   c = 4294967295,
-  l = n("429804")(),
+  l = n(79536)(),
   d = r("%Object.setPrototypeOf%", !0) || (l ? function(e, t) {
     return e.__proto__ = t, e
   } : null);

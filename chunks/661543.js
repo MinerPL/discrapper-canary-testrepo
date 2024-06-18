@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  maybeOpenProfilePreviewModal: function() {
+n.d(t, {
+  j: function() {
     return r
   }
 });
-var i = n("570140");
+var i = n(570140);
 
 function r(e) {
   let {
@@ -12,14 +12,14 @@ function r(e) {
     file: n,
     uploadType: r,
     guildId: s,
-    isTryItOutFlow: a = !1
+    isTryItOutFlow: o = !1
   } = e;
-  i.default.dispatch({
+  i.Z.dispatch({
     type: "PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL",
     imageSrc: t,
     file: n,
     uploadType: r,
     guildId: s,
-    isTryItOutFlow: a
+    isTryItOutFlow: o
   })
 }

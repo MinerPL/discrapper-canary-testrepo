@@ -1,7 +1,6 @@
 "use strict";
-n.r(t);
-var s = n("818083");
-t.default = (0, s.createExperiment)({
+var s = n(818083);
+t.Z = (0, s.B)({
   kind: "user",
   id: "2022-04_registration_copy_updates",
   label: "Registration Copy Updates",

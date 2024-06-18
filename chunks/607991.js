@@ -1,5 +1,5 @@
-var r = n("369529"),
-  i = n("898042"),
+var r = n(369529),
+  i = n(898042),
   a = Object.prototype.propertyIsEnumerable,
   o = Object.getOwnPropertySymbols,
   s = o ? function(e) {

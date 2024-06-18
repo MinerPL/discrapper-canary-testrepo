@@ -1,37 +1,37 @@
 "use strict";
-n.r(e), n.d(e, {
-  normalize: function() {
-    return s
+n.d(e, {
+  Fv: function() {
+    return o
   },
-  normalizeToSize: function() {
+  Qy: function() {
     return function t(e, n = 3, r = 102400) {
-      let i = s(e, n);
+      let i = o(e, n);
       return function(t) {
         return ~-encodeURI(JSON.stringify(t)).split(/%..|./).length
       }(i) > r ? t(e, n - 1, r) : i
     }
   }
 });
-var r = n("46834"),
-  i = n("537198"),
-  a = n("442853"),
-  o = n("432038");
+var r = n(46834),
+  i = n(537198),
+  s = n(442853),
+  a = n(432038);
 
-function s(t, e = 100, s = 1 / 0) {
+function o(t, e = 100, o = Infinity) {
   try {
-    return function t(e, s, u = 1 / 0, c = 1 / 0, l = (0, i.memoBuilder)()) {
-      let [d, f] = l;
-      if (null == s || ["number", "boolean", "string"].includes(typeof s) && !(0, r.isNaN)(s)) return s;
-      let p = function(t, e) {
+    return function t(e, o, u = Infinity, l = Infinity, c = (0, i.i)()) {
+      let [d, h] = c;
+      if (null == o || ["number", "boolean", "string"].includes(typeof o) && !(0, r.i2)(o)) return o;
+      let _ = function(t, e) {
         try {
           if ("domain" === t && e && "object" == typeof e && e._events) return "[Domain]";
           if ("domainEmitter" === t) return "[DomainEmitter]";
           if (void 0 !== n.g && e === n.g) return "[Global]";
           if ("undefined" != typeof window && e === window) return "[Window]";
           if ("undefined" != typeof document && e === document) return "[Document]";
-          if ((0, r.isSyntheticEvent)(e)) return "[SyntheticEvent]";
+          if ((0, r.Cy)(e)) return "[SyntheticEvent]";
           if ("number" == typeof e && e != e) return "[NaN]";
-          if ("function" == typeof e) return `[Function: ${(0,o.getFunctionName)(e)}]`;
+          if ("function" == typeof e) return `[Function: ${(0,a.$P)(e)}]`;
           if ("symbol" == typeof e) return `[${String(e)}]`;
           if ("bigint" == typeof e) return `[BigInt: ${String(e)}]`;
           let i = function(t) {
@@ -43,30 +43,30 @@ function s(t, e = 100, s = 1 / 0) {
         } catch (t) {
           return `**non-serializable** (${t})`
         }
-      }(e, s);
-      if (!p.startsWith("[object ")) return p;
-      if (s.__sentry_skip_normalization__) return s;
-      let h = "number" == typeof s.__sentry_override_normalization_depth__ ? s.__sentry_override_normalization_depth__ : u;
-      if (0 === h) return p.replace("object ", "");
-      if (d(s)) return "[Circular ~]";
-      if (s && "function" == typeof s.toJSON) try {
-        let e = s.toJSON();
-        return t("", e, h - 1, c, l)
+      }(e, o);
+      if (!_.startsWith("[object ")) return _;
+      if (o.__sentry_skip_normalization__) return o;
+      let f = "number" == typeof o.__sentry_override_normalization_depth__ ? o.__sentry_override_normalization_depth__ : u;
+      if (0 === f) return _.replace("object ", "");
+      if (d(o)) return "[Circular ~]";
+      if (o && "function" == typeof o.toJSON) try {
+        let e = o.toJSON();
+        return t("", e, f - 1, l, c)
       } catch (t) {}
-      let _ = Array.isArray(s) ? [] : {},
-        g = 0,
-        m = (0, a.convertToPlainObject)(s);
-      for (let e in m) {
-        if (!Object.prototype.hasOwnProperty.call(m, e)) continue;
-        if (g >= c) {
-          _[e] = "[MaxProperties ~]";
+      let p = Array.isArray(o) ? [] : {},
+        m = 0,
+        g = (0, s.Sh)(o);
+      for (let e in g) {
+        if (!Object.prototype.hasOwnProperty.call(g, e)) continue;
+        if (m >= l) {
+          p[e] = "[MaxProperties ~]";
           break
         }
-        let n = m[e];
-        _[e] = t(e, n, h - 1, c, l), g++
+        let n = g[e];
+        p[e] = t(e, n, f - 1, l, c), m++
       }
-      return f(s), _
-    }("", t, e, s)
+      return h(o), p
+    }("", t, e, o)
   } catch (t) {
     return {
       ERROR: `**non-serializable** (${t})`

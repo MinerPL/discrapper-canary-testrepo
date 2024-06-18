@@ -1,16 +1,15 @@
 "use strict";
-s.r(t);
-var a = s("735250");
-s("470079");
-var l = s("481060");
-t.default = {
+var n = t(735250);
+t(470079);
+var i = t(481060);
+s.Z = {
   open() {
-    (0, l.openModalLazy)(async () => {
+    (0, i.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([s.e("99387"), s.e("57486")]).then(s.bind(s, "87026"));
-      return t => (0, a.jsx)(e, {
-        ...t
+      } = await Promise.all([t.e("99387"), t.e("57486")]).then(t.bind(t, 87026));
+      return s => (0, n.jsx)(e, {
+        ...s
       })
     })
   }

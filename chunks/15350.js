@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
-  getFilteredStickers: function() {
+n.d(t, {
+  S: function() {
     return s
   }
-}), n("653041");
-var i = n("285651"),
-  r = n("138421");
+}), n(653041);
+var i = n(285651),
+  r = n(138421);
 let s = (e, t, n) => {
   if ("" === e) return null;
   let s = [],
-    a = [];
-  return (0, r.searchAllStickers)(e).forEach(e => {
-    let r = (0, i.getStickerSendability)(e, t, n);
-    r === i.StickerSendability.SENDABLE ? s.push(e) : r === i.StickerSendability.SENDABLE_WITH_PREMIUM && a.push(e)
+    o = [];
+  return (0, r.WL)(e).forEach(e => {
+    let r = (0, i.cO)(e, t, n);
+    r === i.eb.SENDABLE ? s.push(e) : r === i.eb.SENDABLE_WITH_PREMIUM && o.push(e)
   }), {
     sendable: s,
-    sendableWithPremium: a
+    sendableWithPremium: o
   }
 }

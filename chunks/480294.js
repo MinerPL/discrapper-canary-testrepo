@@ -1,20 +1,19 @@
 "use strict";
-n.r(t);
-var i, r, s, a, o = n("442837"),
-  l = n("570140");
+var i, r, s, o, a = n(442837),
+  l = n(570140);
 let u = !1,
-  d = !1,
-  _ = {},
+  _ = !1,
+  d = {},
   c = null;
-class E extends(a = o.default.Store) {
+class E extends(o = a.ZP.Store) {
   hasConsented(e) {
-    return null != _[e] && _[e].consented
+    return null != d[e] && d[e].consented
   }
   get fetchedConsents() {
     return u
   }
   get receivedConsentsInConnectionOpen() {
-    return d
+    return _
   }
   getAuthenticationConsentRequired() {
     return c
@@ -25,21 +24,21 @@ s = "ConsentStore", (r = "displayName") in(i = E) ? Object.defineProperty(i, r, 
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new E(l.default, {
+}) : i[r] = s, t.Z = new E(l.Z, {
   CONNECTION_OPEN: function(e) {
     let {
       consents: t
     } = e;
-    null != t && (_ = {
-      ..._,
+    null != t && (d = {
+      ...d,
       ...t
-    }, d = !0)
+    }, _ = !0)
   },
   UPDATE_CONSENTS: function(e) {
     let {
       consents: t
     } = e;
-    _ = {
+    d = {
       ...t
     }, u = !0
   },

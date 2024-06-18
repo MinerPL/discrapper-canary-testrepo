@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n("47120");
-var i, r, a, s, o, l, u = n("392711"),
-  d = n.n(u),
-  _ = n("442837"),
-  c = n("570140");
-(a = i || (i = {}))[a.NOT_FETCHED = 0] = "NOT_FETCHED", a[a.FETCHING = 1] = "FETCHING", a[a.FETCH_SUCCESS = 2] = "FETCH_SUCCESS";
+n(47120);
+var i, r, s, o, a, l, u = n(392711),
+  _ = n.n(u),
+  d = n(442837),
+  c = n(570140);
+(s = i || (i = {}))[s.NOT_FETCHED = 0] = "NOT_FETCHED", s[s.FETCHING = 1] = "FETCHING", s[s.FETCH_SUCCESS = 2] = "FETCH_SUCCESS";
 let E = {},
   I = {};
 
@@ -18,13 +18,13 @@ function T(e) {
     var i;
     let r = t[e];
     n[e] = 2, I[e] = {
-      assets: null !== (i = d().keyBy(r, "name")) && void 0 !== i ? i : {},
+      assets: null !== (i = _().keyBy(r, "name")) && void 0 !== i ? i : {},
       lastUpdated: Date.now()
     }
   }
   E = n
 }
-class f extends(r = _.default.Store) {
+class h extends(r = d.ZP.Store) {
   getApplicationAssetFetchState(e) {
     var t;
     return null !== (t = E[e]) && void 0 !== t ? t : 0
@@ -42,12 +42,12 @@ class f extends(r = _.default.Store) {
     return I[e]
   }
 }
-l = "ApplicationAssetsStore", (o = "displayName") in(s = f) ? Object.defineProperty(s, o, {
+l = "ApplicationAssetsStore", (a = "displayName") in(o = h) ? Object.defineProperty(o, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[o] = l, t.default = new f(c.default, {
+}) : o[a] = l, t.Z = new h(c.Z, {
   APPLICATION_ASSETS_FETCH: function(e) {
     let {
       applicationId: t
@@ -74,7 +74,7 @@ l = "ApplicationAssetsStore", (o = "displayName") in(s = f) ? Object.definePrope
     if (null != n) {
       var i;
       I[t] = {
-        assets: null !== (i = d().keyBy(n, "name")) && void 0 !== i ? i : {},
+        assets: null !== (i = _().keyBy(n, "name")) && void 0 !== i ? i : {},
         lastUpdated: Date.now()
       }
     } else delete I[t]

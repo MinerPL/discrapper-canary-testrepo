@@ -1,68 +1,67 @@
 "use strict";
-n.r(t);
-var i, r, a, s, o = n("442837"),
-  l = n("570140"),
-  u = n("168232");
-let d = {
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(168232);
+let _ = {
     perksDemos: null,
     activated: {},
     lastFetched: null,
     overrides: {}
   },
-  _ = d;
-class c extends(s = o.default.Store) {
+  d = _;
+class c extends(o = a.ZP.Store) {
   getPerksDemos() {
-    return _.perksDemos
+    return d.perksDemos
   }
   getActivated() {
-    return _.activated
+    return d.activated
   }
   shouldFetch() {
-    return null == _.lastFetched || Date.now() > _.lastFetched + 864e5
+    return null == d.lastFetched || Date.now() > d.lastFetched + 864e5
   }
   shouldActivate(e) {
     var t;
-    return (null === (t = _.perksDemos) || void 0 === t ? void 0 : t[e]) === !0
+    return (null === (t = d.perksDemos) || void 0 === t ? void 0 : t[e]) === !0
   }
   overrides() {
-    return _.overrides
+    return d.overrides
   }
 }
-a = "PerksDemosStore", (r = "displayName") in(i = c) ? Object.defineProperty(i, r, {
-  value: a,
+s = "PerksDemosStore", (r = "displayName") in(i = c) ? Object.defineProperty(i, r, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = a, t.default = new c(l.default, {
+}) : i[r] = s, t.Z = new c(l.Z, {
   PREMIUM_PERKS_DEMOS_FETCH_SUCCESS: function(e) {
     let {
       demos: t
     } = e;
-    _.perksDemos = t, _.lastFetched = Date.now()
+    d.perksDemos = t, d.lastFetched = Date.now()
   },
   PREMIUM_PERKS_DEMOS_FETCH_FAILURE: function() {
-    _.perksDemos = d.perksDemos, _.lastFetched = null
+    d.perksDemos = _.perksDemos, d.lastFetched = null
   },
   PREMIUM_PERKS_DEMO_ACTIVATE_SUCCESS: function(e) {
     let {
       perkType: t
     } = e;
-    _.activated[t] = !0
+    d.activated[t] = !0
   },
   PREMIUM_PERKS_DEMO_ACTIVATE_FAILURE: function(e) {
     let {
       perkType: t
     } = e;
-    _.activated[t] = !1
+    d.activated[t] = !1
   },
   PREMIUM_PERKS_DEMO_COMPLETE: function(e) {
     let {
       perkType: t
     } = e;
-    null != _.perksDemos && !0 === _.activated[t] && (_.perksDemos[t] = !1)
+    null != d.perksDemos && !0 === d.activated[t] && (d.perksDemos[t] = !1)
   },
   LOGOUT: function() {
-    _ = d
+    d = _
   },
   PREMIUM_PERKS_DEMO_OVERRIDE: function(e) {
     let {
@@ -71,9 +70,9 @@ a = "PerksDemosStore", (r = "displayName") in(i = c) ? Object.defineProperty(i, 
       available: i,
       activateSuccess: r
     } = e;
-    void 0 !== t && (0, u.isStaffEnv)(t) && (_.overrides[n] = {
+    void 0 !== t && (0, u.QI)(t) && (d.overrides[n] = {
       available: i,
       activateSuccess: r
-    }, null == _.perksDemos && (_.perksDemos = {}), _.perksDemos[n] = i || !1, _.activated[n] = !1, _.lastFetched = null)
+    }, null == d.perksDemos && (d.perksDemos = {}), d.perksDemos[n] = i || !1, d.activated[n] = !1, d.lastFetched = null)
   }
 })

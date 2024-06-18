@@ -7,9 +7,9 @@ function r(e) {
     return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
   })(e)
 }
-n.r(t), n.d(t, {
-  DragSourceImpl: function() {
-    return o
+n.d(t, {
+  O: function() {
+    return u
   }
 });
 
@@ -20,7 +20,7 @@ function i(e, t) {
   }
 }
 
-function a(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -28,15 +28,15 @@ function a(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-var o = function() {
+var u = function() {
   var e, t, n;
 
-  function o(e, t, n) {
+  function u(e, t, n) {
     ! function(e, t) {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-    }(this, o), a(this, "spec", void 0), a(this, "monitor", void 0), a(this, "connector", void 0), this.spec = e, this.monitor = t, this.connector = n
+    }(this, u), o(this, "spec", void 0), o(this, "monitor", void 0), o(this, "connector", void 0), this.spec = e, this.monitor = t, this.connector = n
   }
-  return e = o, t = [{
+  return e = u, t = [{
     key: "beginDrag",
     value: function() {
       var e, t = this.spec,
@@ -68,5 +68,5 @@ var o = function() {
         r = e.end;
       r && r(t.getItem(), t), n.reconnect()
     }
-  }], i(e.prototype, t), n && i(e, n), o
+  }], i(e.prototype, t), u
 }()

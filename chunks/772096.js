@@ -1,29 +1,29 @@
 "use strict";
-n.r(t), n.d(t, {
-  punycodeLink: function() {
-    return p
+n.d(t, {
+  yw: function() {
+    return O
   }
-}), n("47120"), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("411104");
-var i = n("392711"),
+}), n(47120), n(315314), n(610138), n(216116), n(78328), n(815648), n(411104);
+var i = n(392711),
   r = n.n(i),
-  a = n("31775"),
-  s = n.n(a);
-n("711739");
-var o = n("302454"),
-  l = n.n(o),
-  u = n("830121"),
-  d = n("823379"),
-  _ = n("172244"),
-  c = n("571989");
-let E = new(s())({
+  s = n(31775),
+  o = n.n(s);
+n(711739);
+var a = n(302454),
+  l = n.n(a),
+  u = n(830121),
+  _ = n(823379),
+  d = n(172244),
+  c = n(571989);
+let E = new(o())({
   max: 50
 });
 
 function I(e) {
   let t = E.get(e);
   if (null != t) return t;
-  let n = (0, c.sanitizeWhitespace)(e),
-    i = (0, c.sanitizeUnicodeConfusables)(n),
+  let n = (0, c.yx)(e),
+    i = (0, c.zq)(n),
     r = {
       whitespaceSanitized: n,
       fullySanitized: i
@@ -31,112 +31,112 @@ function I(e) {
   return E.set(e, r), r
 }
 let T = ["http:", "https:", "discord:"],
-  f = [_.AST_KEY.TEXT, _.AST_KEY.UNDERLINE, _.AST_KEY.STRONG, _.AST_KEY.ITALICS, _.AST_KEY.STRIKETHROUGH, _.AST_KEY.INLINE_CODE, _.AST_KEY.SPOILER, _.AST_KEY.LINE_BREAK, _.AST_KEY.TIMESTAMP],
-  S = [...f, _.AST_KEY.EMOJI, _.AST_KEY.CUSTOM_EMOJI],
-  h = [_.AST_KEY.LIST, _.AST_KEY.HEADING, _.AST_KEY.BLOCK_QUOTE, _.AST_KEY.SUBTEXT],
-  A = [_.AST_KEY.TEXT],
-  m = [_.AST_KEY.UNDERLINE, _.AST_KEY.STRONG, _.AST_KEY.ITALICS, _.AST_KEY.STRIKETHROUGH, _.AST_KEY.INLINE_CODE, _.AST_KEY.SPOILER, _.AST_KEY.LINE_BREAK, _.AST_KEY.TIMESTAMP, _.AST_KEY.EMOJI, _.AST_KEY.CUSTOM_EMOJI, _.AST_KEY.LIST, _.AST_KEY.HEADING, _.AST_KEY.BLOCK_QUOTE, _.AST_KEY.SUBTEXT];
+  h = [d.b.TEXT, d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP],
+  S = [...h, d.b.EMOJI, d.b.CUSTOM_EMOJI],
+  f = [d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT],
+  N = [d.b.TEXT],
+  A = [d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP, d.b.EMOJI, d.b.CUSTOM_EMOJI, d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT];
 
-function N(e, t) {
+function m(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
   for (let i of (!Array.isArray(e) && (e = [e]), e)) {
     if (void 0 === i || !t.includes(i.type)) return null;
-    if (i.type === _.AST_KEY.INLINE_CODE) {
+    if (i.type === d.b.INLINE_CODE) {
       let e = [...t, ...n];
-      if (null == N(i.validationChildContent, e)) return null
+      if (null == m(i.validationChildContent, e)) return null
     }
-    if (Array.isArray(i.content) && null == N(i.content, t)) return null
+    if (Array.isArray(i.content) && null == m(i.content, t)) return null
   }
   return e
 }
 
-function p(e) {
+function O(e) {
   try {
     var t;
     let n = new URL(e),
       i = null !== (t = n.protocol) && void 0 !== t ? t : "";
     if (!T.includes(i.toLowerCase())) throw Error("Provided protocol is not allowed: " + i);
     if (("http:" === i || "https:" === i) && (null == n.hostname || 0 === n.hostname.length)) throw Error("no hostname");
-    let r = (0, c.safelyMakeUrlHumanReadable)(n);
+    let r = (0, c.MO)(n);
     n.username = "", n.password = "";
-    let a = (0, c.safelyMakeUrlHumanReadable)(n);
+    let s = (0, c.MO)(n);
     return {
       target: r,
-      displayTarget: a
+      displayTarget: s
     }
   } catch (e) {
     return null
   }
 }
-t.default = {
+t.ZP = {
   ...l().defaultRules.link,
   match: (e, t, n) => t.allowLinks ? l().defaultRules.link.match(e, t, n) : null,
   parse(e, t, n) {
-    let [i, a, s, o] = e, c = () => ({
-      type: _.AST_KEY.TEXT,
+    let [i, s, o, a] = e, c = () => ({
+      type: d.b.TEXT,
       content: i
-    }), E = I(s), T = I(a), O = I(null != o ? o : ""), R = E.whitespaceSanitized, C = T.fullySanitized, g = O.fullySanitized, L = C.trim();
-    if (0 === R.trim().length || 0 === L.length) return c();
-    let v = p(l().unescapeUrl(s)),
-      D = (0, u.default)(a).length > 0 || (0, u.default)(o).length > 0;
+    }), E = I(o), T = I(s), R = I(null != a ? a : ""), C = E.whitespaceSanitized, p = T.fullySanitized, g = R.fullySanitized, L = p.trim();
+    if (0 === C.trim().length || 0 === L.length) return c();
+    let v = O(l().unescapeUrl(o)),
+      D = (0, u.ZP)(s).length > 0 || (0, u.ZP)(a).length > 0;
     if (null == v || D) return c();
     let M = {
         ...n,
         allowEscape: !1,
         parseInlineCodeChildContent: !0
       },
-      y = n.allowEmojiLinks ? S : f,
-      P = [...y, ...h],
-      U = [...A, ...m],
-      b = N(t(C, M), P, [_.AST_KEY.EMOJI]),
-      G = N(t(g, M), U);
+      P = n.allowEmojiLinks ? S : h,
+      y = [...P, ...f],
+      U = [...N, ...A],
+      b = m(t(p, M), y, [d.b.EMOJI]),
+      G = m(t(g, M), U);
     if (null == b || null == G || 0 === (function e(t) {
         let n = "";
         for (let i of t) switch (i.type) {
-          case _.AST_KEY.TEXT:
-          case _.AST_KEY.INLINE_CODE:
+          case d.b.TEXT:
+          case d.b.INLINE_CODE:
             n += i.content;
             break;
-          case _.AST_KEY.CUSTOM_EMOJI:
+          case d.b.CUSTOM_EMOJI:
             n += i.name;
             break;
-          case _.AST_KEY.EMOJI:
+          case d.b.EMOJI:
             n += i.surrogate;
             break;
-          case _.AST_KEY.LINE_BREAK:
+          case d.b.LINE_BREAK:
             n += "\n";
             break;
-          case _.AST_KEY.STRONG:
-          case _.AST_KEY.ITALICS:
-          case _.AST_KEY.UNDERLINE:
-          case _.AST_KEY.STRIKETHROUGH:
-          case _.AST_KEY.SPOILER:
+          case d.b.STRONG:
+          case d.b.ITALICS:
+          case d.b.UNDERLINE:
+          case d.b.STRIKETHROUGH:
+          case d.b.SPOILER:
             n += e(i.content);
             break;
-          case _.AST_KEY.TIMESTAMP:
+          case d.b.TIMESTAMP:
             n += "<timestamp>";
             break;
-          case _.AST_KEY.BLOCK_QUOTE:
-          case _.AST_KEY.LIST:
-          case _.AST_KEY.HEADING:
-          case _.AST_KEY.SUBTEXT:
+          case d.b.BLOCK_QUOTE:
+          case d.b.LIST:
+          case d.b.HEADING:
+          case d.b.SUBTEXT:
             n += "<".concat(i.type, "Content>");
             break;
           default:
-            (0, d.assertNever)(i.type)
+            (0, _.vE)(i.type)
         }
         return n
       })(b).trim().length) return c();
-    let w = r().pick(t.rules, y),
-      B = l().parserFor(w)(T.whitespaceSanitized, M),
-      k = O.whitespaceSanitized,
+    let w = r().pick(t.rules, P),
+      k = l().parserFor(w)(T.whitespaceSanitized, M),
+      B = R.whitespaceSanitized,
       {
-        target: V
+        target: x
       } = v;
     return {
-      content: B,
-      target: V,
-      title: k
+      content: k,
+      target: x,
+      title: B
     }
   }
 }

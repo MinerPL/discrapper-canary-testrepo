@@ -1,37 +1,39 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return c
+n.d(t, {
+  Z: function() {
+    return _
   }
 });
-var l = n("735250");
-n("470079");
-var u = n("512722"),
-  a = n.n(u),
-  i = n("481060"),
-  o = n("695346"),
-  r = n("754424"),
-  s = n("572004");
+var i = n(735250);
+n(470079);
+var r = n(512722),
+  s = n.n(r),
+  o = n(481060),
+  a = n(695346),
+  l = n(754424),
+  u = n(572004);
 
-function c(e) {
+function _(e) {
   let {
     id: t,
     label: n,
-    onSuccess: u,
-    shiftId: c,
+    onSuccess: r,
+    shiftId: _,
     showIconFirst: d,
-    showWithoutDeveloperMode: f
-  } = e, _ = o.DeveloperMode.useSetting();
-  if (__OVERLAY__ || !(f || _) || !s.SUPPORTS_COPY || null == t) return null;
-  let E = "devmode-copy-id-".concat(t);
-  return (0, l.jsx)(i.MenuItem, {
-    id: E,
+    showWithoutDeveloperMode: c,
+    focusedClassName: E
+  } = e, I = a.Sb.useSetting();
+  if (__OVERLAY__ || !(c || I) || !u.wS || null == t) return null;
+  let T = "devmode-copy-id-".concat(t);
+  return (0, i.jsx)(o.MenuItem, {
+    id: T,
     label: n,
     action: function(e) {
-      let n = null != c && e.shiftKey ? c : t;
-      a()(null != n, "cannot copy null text"), (0, s.copy)(n), null == u || u()
+      let n = null != _ && e.shiftKey ? _ : t;
+      s()(null != n, "cannot copy null text"), (0, u.JG)(n), null == r || r()
     },
-    icon: r.default,
-    showIconFirst: d
-  }, E)
+    icon: l.Z,
+    showIconFirst: d,
+    focusedClassName: E
+  }, T)
 }

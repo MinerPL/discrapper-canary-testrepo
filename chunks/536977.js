@@ -1,4 +1,4 @@
-var r = n("771701");
+var r = n(771701);
 e.exports = function(e, t) {
   return function(n, i) {
     if (null == n) return n;

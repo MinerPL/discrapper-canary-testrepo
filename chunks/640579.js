@@ -1,18 +1,18 @@
 "use strict";
-var r = n("67867"),
-  a = n("821819"),
-  o = n("611345"),
-  i = n("82474"),
-  l = n("925768");
+var r = n(67867),
+  o = n(821819),
+  a = n(611345),
+  i = n(82474),
+  s = n(925768);
 r({
   target: "Object",
   stat: !0,
-  forced: a(function() {
+  forced: o(function() {
     i(1)
   }),
-  sham: !l
+  sham: !s
 }, {
   getPrototypeOf: function(e) {
-    return i(o(e))
+    return i(a(e))
   }
 })

@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  useConnectDropTarget: function() {
+n.d(t, {
+  s: function() {
     return i
   }
 });
-var r = n("470079");
+var r = n(470079);
 
 function i(e) {
   return (0, r.useMemo)(function() {

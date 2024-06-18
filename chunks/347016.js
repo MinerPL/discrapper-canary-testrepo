@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
-  FocusRingManager: function() {
+n.d(t, {
+  d: function() {
     return s
   }
 });
-var i = n("789978"),
-  r = n("607070");
-n("797100");
+var i = n(789978),
+  r = n(607070);
+n(790381);
 let s = {
   init() {
-    r.default.addChangeListener(() => {
-      r.default.keyboardModeEnabled ? (i.FocusRingManager.setRingsEnabled(!0), i.FocusRingManager.enableAnimationTracking()) : (i.FocusRingManager.setRingsEnabled(!1), i.FocusRingManager.disableAnimationTracking())
+    r.Z.addChangeListener(() => {
+      r.Z.keyboardModeEnabled ? (i.dx.setRingsEnabled(!0), i.dx.enableAnimationTracking()) : (i.dx.setRingsEnabled(!1), i.dx.disableAnimationTracking())
     })
   }
 }

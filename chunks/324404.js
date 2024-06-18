@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  VisibilityObserver: function() {
-    return o
+n.d(t, {
+  Z: function() {
+    return a
   }
-}), n("47120");
-var i = n("699581"),
-  r = n("374470");
+}), n(47120);
+var i = n(699581),
+  r = n(374470);
 
 function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -15,12 +15,12 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let a = {
+let o = {
   root: null,
   rootMargin: "0px",
   threshold: .5
 };
-class o {
+class a {
   isVisible(e) {
     return null == this._observer || this._visibleComponents.has(e)
   }
@@ -29,7 +29,7 @@ class o {
     if (null == t) return;
     this.unobserve(e);
     let n = (0, i.findDOMNode)(e);
-    (0, r.isElement)(n, HTMLElement) && (this._nodes.set(n, e), this._components.set(e, n), t.observe(n))
+    (0, r.k)(n, HTMLElement) && (this._nodes.set(n, e), this._components.set(e, n), t.observe(n))
   }
   unobserve(e) {
     let t = this._observer;
@@ -37,7 +37,7 @@ class o {
     let n = this._components.get(e);
     null != n && (this._nodes.delete(n), this._components.delete(e), this._visibleComponents.delete(e), t.unobserve(n))
   }
-  constructor(e = a) {
+  constructor(e = o) {
     s(this, "_observer", void 0), s(this, "_options", void 0), s(this, "_nodes", new WeakMap), s(this, "_components", new WeakMap), s(this, "_visibleComponents", new WeakSet), s(this, "_handleEntries", e => {
       e.forEach(e => {
         let t;

@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return h
   }
 });
-var r, i, a = n("470079"),
-  o = n("699581");
+var r, i, a = n(470079),
+  o = n(699581);
 
 function s(e, t) {
   return (s = Object.setPrototypeOf || function(e, t) {
@@ -70,16 +70,20 @@ t.default = function(e, t) {
           var e = r.props.eventTypes;
           !e.forEach && (e = [e]), d[r._uid] = function(e) {
             var t;
-            if (null === r.componentNode) return;
-            if (r.props.preventDefault && e.preventDefault(), r.props.stopPropagation && e.stopPropagation(), !r.props.excludeScrollbar || (t = e, !(document.documentElement.clientWidth <= t.clientX) && !(document.documentElement.clientHeight <= t.clientY)))(function(e, t, n) {
-              if (e === t) return !0;
-              for (; e.parentNode || e.host;) {
-                var r, i, a;
-                if (e.parentNode && (r = e, i = t, a = n, r === i || (r.correspondingElement ? r.correspondingElement.classList.contains(a) : r.classList.contains(a)))) return !0;
-                e = e.parentNode || e.host
+            if (null !== r.componentNode) {
+              if (r.props.preventDefault && e.preventDefault(), r.props.stopPropagation && e.stopPropagation(), !(r.props.excludeScrollbar && (t = e, document.documentElement.clientWidth <= t.clientX || document.documentElement.clientHeight <= t.clientY))) {
+                if (function(e, t, n) {
+                    if (e === t) return !0;
+                    for (; e.parentNode || e.host;) {
+                      var r, i, a;
+                      if (e.parentNode && (r = e, i = t, a = n, r === i || (r.correspondingElement ? r.correspondingElement.classList.contains(a) : r.classList.contains(a)))) return !0;
+                      e = e.parentNode || e.host
+                    }
+                    return e
+                  }(e.composed && e.composedPath && e.composedPath().shift() || e.target, r.componentNode, r.props.outsideClickIgnoreClass) !== document) return;
+                r.__outsideClickHandler(e)
               }
-              return e
-            })(e.composed && e.composedPath && e.composedPath().shift() || e.target, r.componentNode, r.props.outsideClickIgnoreClass) === document && r.__outsideClickHandler(e)
+            }
           }, e.forEach(function(e) {
             document.addEventListener(e, d[r._uid], m(u(r), e))
           })

@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("147913"),
-  r = n("592125"),
-  s = n("109590"),
-  a = n("176505");
-class o extends i.default {
+n(47120);
+var i = n(147913),
+  r = n(592125),
+  s = n(109590),
+  o = n(176505);
+class a extends i.Z {
   handleChannelPreload(e) {
     let {
       channelId: t
     } = e;
-    if ((0, a.isStaticChannelRoute)(t)) return;
-    let n = r.default.getChannel(t);
-    null != n && n.isForumLikeChannel() && (0, s.preloadForumThreads)(n)
+    if ((0, o.AB)(t)) return;
+    let n = r.Z.getChannel(t);
+    null != n && n.isForumLikeChannel() && (0, s.EB)(n)
   }
   constructor(...e) {
     var t, n, i;
@@ -25,4 +25,4 @@ class o extends i.default {
     }) : t[n] = i
   }
 }
-t.default = new o
+t.Z = new a

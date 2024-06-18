@@ -1,16 +1,16 @@
 "use strict";
-s.r(t), s("47120");
-var a = s("748780");
+t(47120);
+var n = t(748780);
 
-function l(e, t, s) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: s,
+function i(e, s, t) {
+  return s in e ? Object.defineProperty(e, s, {
+    value: t,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = s, e
+  }) : e[s] = t, e
 }
-class n {
+class l {
   start() {
     return new Promise(e => {
       this.animation.start(() => {
@@ -22,10 +22,10 @@ class n {
     this.animation.stop()
   }
   constructor(e) {
-    l(this, "animation", void 0), this.animation = e
+    i(this, "animation", void 0), this.animation = e
   }
 }
-class i {
+class a {
   _map(e) {
     return this.animations.map(e)
   }
@@ -36,7 +36,7 @@ class i {
     this._map(e => e.stop())
   }
   constructor(e) {
-    l(this, "animations", void 0), this.animations = e
+    i(this, "animations", void 0), this.animations = e
   }
 }
 class r {
@@ -50,25 +50,25 @@ class r {
     this.stopped = !0, this.animations.map(e => e.stop())
   }
   constructor(e) {
-    l(this, "animations", void 0), l(this, "stopped", !1), this.animations = e
+    i(this, "animations", void 0), i(this, "stopped", !1), this.animations = e
   }
 }
 
-function o(e, t, s) {
-  return new n(s(e, {
-    ...t
+function o(e, s, t) {
+  return new l(t(e, {
+    ...s
   }))
 }
-t.default = {
-  ...a.default,
-  timing: function(e, t) {
-    return o(e, t, a.default.timing)
+s.ZP = {
+  ...n.Z,
+  timing: function(e, s) {
+    return o(e, s, n.Z.timing)
   },
-  spring: function(e, t) {
-    return o(e, t, a.default.spring)
+  spring: function(e, s) {
+    return o(e, s, n.Z.spring)
   },
   parallel: function(e) {
-    return new i(e)
+    return new a(e)
   },
   sequence: function(e) {
     return new r(e)

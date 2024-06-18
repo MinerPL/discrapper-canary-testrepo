@@ -1,5 +1,5 @@
 "use strict";
-var n = r("656566");
+var n = r(656566);
 t.exports = function t(e, r) {
   if (!e || !r) return !1;
   if (e === r) return !0;

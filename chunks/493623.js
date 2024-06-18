@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return i
   }
 });
-var r = n("175922");
+var r = n(175922);
 
 function i(e) {
-  var t = (0, r.default)(e),
+  var t = (0, r.Z)(e),
     n = e.offsetWidth,
     i = e.offsetHeight;
   return 1 >= Math.abs(t.width - n) && (n = t.width), 1 >= Math.abs(t.height - i) && (i = t.height), {

@@ -1,7 +1,7 @@
 "use strict";
-var r = n("147018"),
-  i = n("717441"),
-  a = n("299623"),
+var r = n(147018),
+  i = n(717441),
+  a = n(299623),
   o = Array;
 r({
   target: "Array",

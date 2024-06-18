@@ -1,53 +1,53 @@
 "use strict";
 let r;
-n.r(e), n.d(e, {
-  browserPerformanceTimeOrigin: function() {
-    return f
+n.d(e, {
+  Z1: function() {
+    return h
   },
-  dateTimestampInSeconds: function() {
-    return l
-  },
-  timestampInSeconds: function() {
+  ph: function() {
     return d
+  },
+  yW: function() {
+    return c
   }
 });
-var i = n("635602"),
-  a = n("24716");
+var i = n(635602),
+  s = n(24716);
 t = n.hmd(t);
-let o = (0, a.getGlobalObject)(),
-  s = {
+let a = (0, s.Rf)(),
+  o = {
     nowSeconds: () => Date.now() / 1e3
   },
-  u = (0, i.isNodeEnv)() ? function() {
+  u = (0, i.KV)() ? function() {
     try {
-      return (0, i.dynamicRequire)(t, "perf_hooks").performance
+      return (0, i.l$)(t, "perf_hooks").performance
     } catch (t) {
       return
     }
   }() : function() {
     let {
       performance: t
-    } = o;
+    } = a;
     if (!!t && !!t.now) return {
       now: () => t.now(),
       timeOrigin: Date.now() - t.now()
     }
   }(),
-  c = void 0 === u ? s : {
+  l = void 0 === u ? o : {
     nowSeconds: () => (u.timeOrigin + u.now()) / 1e3
   },
-  l = s.nowSeconds.bind(s),
-  d = c.nowSeconds.bind(c),
-  f = (() => {
+  c = o.nowSeconds.bind(o),
+  d = l.nowSeconds.bind(l),
+  h = (() => {
     let {
       performance: t
-    } = o;
+    } = a;
     if (!t || !t.now) return;
     let e = t.now(),
       n = Date.now(),
       r = t.timeOrigin ? Math.abs(t.timeOrigin + e - n) : 36e5,
       i = t.timing && t.timing.navigationStart,
-      a = "number" == typeof i ? Math.abs(i + e - n) : 36e5;
-    if (r < 36e5 || a < 36e5) return r <= a ? t.timeOrigin : i;
+      s = "number" == typeof i ? Math.abs(i + e - n) : 36e5;
+    if (r < 36e5 || s < 36e5) return r <= s ? t.timeOrigin : i;
     return n
   })()

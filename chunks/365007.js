@@ -1,76 +1,83 @@
 "use strict";
-s.r(t), s.d(t, {
-  deleteWebAuthnCredential: function() {
-    return o
-  },
-  editWebAuthnCredential: function() {
+n.d(t, {
+  L$: function() {
     return d
   },
-  fetchWebAuthnConditionalChallenge: function() {
-    return i
+  Sr: function() {
+    return c
   },
-  fetchWebAuthnCredentials: function() {
+  WQ: function() {
+    return _
+  },
+  cT: function() {
     return u
   },
-  fetchWebAuthnPasswordlessChallenge: function() {
-    return r
+  d$: function() {
+    return a
   },
-  finishRegisterWebAuthnCredential: function() {
-    return f
+  hL: function() {
+    return l
   },
-  startRegisterWebAuthnCredential: function() {
-    return c
+  us: function() {
+    return o
   }
 });
-var n = s("544891"),
-  a = s("570140"),
-  l = s("981631");
-async function i() {
-  return (await n.HTTP.post(l.Endpoints.WEBAUTHN_CONDITIONAL_UI_CHALLENGE)).body
+var i = n(544891),
+  r = n(570140),
+  s = n(981631);
+async function o() {
+  return (await i.tn.post(s.ANM.WEBAUTHN_CONDITIONAL_UI_CHALLENGE)).body
 }
-async function r() {
-  return (await n.HTTP.post(l.Endpoints.WEBAUTHN_PASSWORDLESS_CHALLENGE)).body
+async function a() {
+  let {
+    challenge: e,
+    ticket: t
+  } = (await i.tn.post(s.ANM.WEBAUTHN_PASSWORDLESS_CHALLENGE)).body;
+  return {
+    challenge: e,
+    ticket: t
+  }
 }
 
-function u() {
-  a.default.dispatch({
+function l() {
+  r.Z.dispatch({
     type: "MFA_WEBAUTHN_CREDENTIALS_LOADING"
-  }), n.HTTP.get(l.Endpoints.MFA_WEBAUTHN_CREDENTIALS).then(e => {
-    a.default.dispatch({
+  }), i.tn.get(s.ANM.MFA_WEBAUTHN_CREDENTIALS).then(e => {
+    r.Z.dispatch({
       type: "MFA_WEBAUTHN_CREDENTIALS_LOADED",
       credentials: e.body
     })
   })
 }
 
-function o(e) {
-  n.HTTP.del(l.Endpoints.MFA_WEBAUTHN_CREDENTIAL(e.id)).then(() => {
-    a.default.dispatch({
+function u(e) {
+  i.tn.del(s.ANM.MFA_WEBAUTHN_CREDENTIAL(e.id)).then(() => {
+    r.Z.dispatch({
       type: "AUTHENTICATOR_DELETE",
       credential: e
     })
   })
 }
-async function d(e, t) {
-  let s = await n.HTTP.patch({
-    url: l.Endpoints.MFA_WEBAUTHN_CREDENTIAL(e),
+async function _(e, t) {
+  let n = await i.tn.patch({
+    url: s.ANM.MFA_WEBAUTHN_CREDENTIAL(e),
     body: {
       name: t
     }
   });
-  a.default.dispatch({
+  r.Z.dispatch({
     type: "AUTHENTICATOR_UPDATE",
-    credential: s.body
+    credential: n.body
   })
 }
-async function c() {
+async function d() {
   let {
     body: {
       ticket: e,
       challenge: t
     }
-  } = await n.HTTP.post({
-    url: l.Endpoints.MFA_WEBAUTHN_CREDENTIALS,
+  } = await i.tn.post({
+    url: s.ANM.MFA_WEBAUTHN_CREDENTIALS,
     body: {}
   });
   return {
@@ -78,20 +85,20 @@ async function c() {
     challenge: t
   }
 }
-async function f(e, t, s) {
-  let i = await n.HTTP.post({
-    url: l.Endpoints.MFA_WEBAUTHN_CREDENTIALS,
+async function c(e, t, n) {
+  let o = await i.tn.post({
+    url: s.ANM.MFA_WEBAUTHN_CREDENTIALS,
     body: {
       name: e,
       ticket: t,
-      credential: s
+      credential: n
     }
   });
-  a.default.dispatch({
+  r.Z.dispatch({
     type: "AUTHENTICATOR_CREATE",
-    credential: i.body
-  }), a.default.dispatch({
+    credential: o.body
+  }), r.Z.dispatch({
     type: "MFA_ENABLE_SUCCESS",
-    codes: i.body.backup_codes
+    codes: o.body.backup_codes
   })
 }

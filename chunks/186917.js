@@ -1,16 +1,15 @@
 "use strict";
-n.r(t);
-var i = n("470079"),
-  r = n("580747"),
-  s = n("607789");
-t.default = (e, t) => {
-  let n = (0, r.default)("profile_effect_debug_controls"),
+var i = n(470079),
+  r = n(580747),
+  s = n(607789);
+t.Z = (e, t) => {
+  let n = (0, r.Z)("profile_effect_debug_controls"),
     {
-      id: a,
-      preset: o,
+      id: o,
+      preset: a,
       increment: l,
       decrement: u
-    } = (0, s.default)(e);
+    } = (0, s.Z)(e);
   return i.useEffect(() => {
     if (!n) return;
     let e = e => {
@@ -20,7 +19,7 @@ t.default = (e, t) => {
       window.removeEventListener("keydown", e)
     }
   }, []), {
-    id: null != a ? a : null,
-    preset: o
+    id: null != o ? o : null,
+    preset: a
   }
 }

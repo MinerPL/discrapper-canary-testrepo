@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  KeyCombo: function() {
-    return d
+n.d(t, {
+  M: function() {
+    return _
   },
-  PRETTY_KEYS: function() {
+  c: function() {
     return u
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("803997"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("714338"),
-  o = n("121938");
+  o = n(714338),
+  a = n(583543);
 
 function l(e) {
   let {
@@ -22,7 +22,7 @@ function l(e) {
     width: "10",
     height: "10",
     xmlns: "http://www.w3.org/2000/svg",
-    className: s()(o.bindArrow, o[t]),
+    className: s()(a.bindArrow, a[t]),
     children: (0, i.jsx)("g", {
       fill: "#FFFFFF",
       children: (0, i.jsx)("polygon", {
@@ -33,8 +33,8 @@ function l(e) {
   })
 }
 let u = {
-  mod: () => a.default.modKey,
-  alt: () => a.default.altKey,
+  mod: () => o.Z.modKey,
+  alt: () => o.Z.altKey,
   up: () => (0, i.jsx)(l, {
     direction: "up"
   }),
@@ -51,22 +51,22 @@ let u = {
   pagedown: () => "page down",
   "any-character": () => "any key",
   plus: () => "+",
-  return: () => a.default.returnKey
+  return: () => o.Z.returnKey
 };
 
-function d(e) {
+function _(e) {
   let {
     shortcut: t,
     dim: n = !1,
     className: r,
-    keyClassName: a
+    keyClassName: o
   } = e, l = Array.isArray(t) ? t : t.split("+");
   return (0, i.jsx)("div", {
-    className: s()(o.combo, r, {
-      [o.dim]: n
+    className: s()(a.combo, r, {
+      [a.dim]: n
     }),
     children: l.map(e => null != u[e] ? u[e]() : e).map((e, t) => (0, i.jsx)("span", {
-      className: s()(o.key, a),
+      className: s()(a.key, o),
       children: e
     }, t))
   })

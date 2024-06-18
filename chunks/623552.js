@@ -1,21 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return _
+n.d(t, {
+  Z: function() {
+    return E
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
-  o = n("481060"),
-  l = n("718582"),
-  u = n("411511");
-let d = [
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(481060),
+  l = n(410030),
+  u = n(718582),
+  _ = n(981631),
+  d = n(411511);
+let c = [
   [{
     translateY: 0,
     translateX: 0,
-    scale: 1
+    scale: 1.2
   }, {
     translateY: 0,
     translateX: 0,
@@ -32,11 +34,11 @@ let d = [
   [{
     translateY: -14,
     translateX: -14,
-    scale: .75
+    scale: .7058823529411765
   }, {
     translateY: 12,
     translateX: 12,
-    scale: .875
+    scale: .8235294117647058
   }, {
     translateY: 0,
     translateX: 0,
@@ -49,85 +51,88 @@ let d = [
   [{
     translateY: -4,
     translateX: 16,
-    scale: .75
+    scale: .7058823529411765
   }, {
     translateY: 14,
     translateX: -14,
-    scale: .875
+    scale: .8235294117647058
   }, {
     translateY: -18,
     translateX: -12,
-    scale: .625
+    scale: .5882352941176471
   }, {
     translateY: 0,
     translateX: 0,
     scale: 0
   }],
   [{
-    translateY: -14,
-    translateX: -14,
-    scale: .875
+    translateY: -13,
+    translateX: -13,
+    scale: .8235294117647058
   }, {
-    translateY: 14,
-    translateX: 14,
-    scale: .875
+    translateY: 13,
+    translateX: 13,
+    scale: .8235294117647058
   }, {
     translateY: -18,
     translateX: 18,
-    scale: .625
+    scale: .5882352941176471
   }, {
     translateY: 18,
     translateX: -18,
-    scale: .625
+    scale: .5882352941176471
   }]
 ];
 
-function _(e) {
+function E(e) {
   let {
     users: t,
     guildId: n
-  } = e, a = (0, l.useSortUsersByAffinity)(t), o = r.useRef(!1);
+  } = e, s = (0, u.fd)(t), a = (0, l.ZP)(), E = r.useRef(!1);
   r.useEffect(() => {
-    o.current = !0
+    E.current = !0
   }, []);
-  let _ = Math.min(d.length - 1, a.length - 1),
-    I = d[Math.max(0, _)],
-    T = a.length > 4,
-    f = a.length - 3,
-    S = f >= 10 ? 1 : 2,
-    h = I.map((e, t) => {
-      let r = a[t];
+  let h = Math.min(c.length - 1, s.length - 1),
+    S = c[Math.max(0, h)],
+    f = s.length > 4,
+    N = s.length - 3,
+    A = N >= 10 ? 1 : 2,
+    m = S.map((e, t) => {
+      let r = s[t];
       if (null == r) return null;
-      let o = T && t === S;
+      let a = f && t === A;
       return (0, i.jsx)("div", {
-        className: s()(u.avatarContainer),
+        className: o()(d.avatarContainer),
         style: {
           opacity: 1,
           transform: "translateX(".concat(e.translateX, "px) translateY(").concat(e.translateY, "px) scale(").concat(e.scale, ")")
         },
-        children: o ? (0, i.jsx)(c, {
-          count: f
-        }) : (0, i.jsx)(E, {
+        children: a ? (0, i.jsx)(I, {
+          count: N
+        }) : (0, i.jsx)(T, {
           guildId: n,
           user: r
         })
       }, r.id)
     });
   return (0, i.jsx)("div", {
-    className: u.groupContainer,
-    children: h
+    className: a === _.BRd.DARK ? d.gradientContainerDark : d.gradientContainer,
+    children: (0, i.jsx)("div", {
+      className: d.groupContainer,
+      children: m
+    })
   })
 }
 
-function c(e) {
+function I(e) {
   let {
     count: t
   } = e;
   return (0, i.jsx)("div", {
-    className: u.avatarWrapper,
+    className: d.avatarWrapper,
     children: (0, i.jsx)("div", {
-      className: u.overflowCount,
-      children: (0, i.jsxs)(o.Text, {
+      className: d.overflowCount,
+      children: (0, i.jsxs)(a.Text, {
         variant: "text-sm/semibold",
         children: ["+", t]
       })
@@ -135,15 +140,15 @@ function c(e) {
   })
 }
 
-function E(e) {
+function T(e) {
   let {
     guildId: t,
     user: n
   } = e;
-  return null == r.useMemo(() => null == n ? void 0 : n.getAvatarSource(t, !1, 32), [t, n]) ? null : (0, i.jsx)("div", {
-    className: u.avatarWrapper,
+  return null == r.useMemo(() => null == n ? void 0 : n.getAvatarSource(t, !1, 30), [t, n]) ? null : (0, i.jsx)("div", {
+    className: d.avatarWrapper,
     children: (0, i.jsx)("img", {
-      className: u.avatar,
+      className: d.avatar,
       src: null == n ? void 0 : n.getAvatarURL(t, 80),
       alt: ""
     })

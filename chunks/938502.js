@@ -1,44 +1,44 @@
 "use strict";
-s.r(t), s.d(t, {
-  DiscoverySettingsViews: function() {
-    return l
-  },
-  getSettingsView: function() {
-    return u
-  },
-  getSuggestedTags: function() {
+t.d(s, {
+  P5: function() {
     return E
   },
-  trackDiscoverySettingsChange: function() {
-    return c
+  TJ: function() {
+    return d
+  },
+  UA: function() {
+    return u
+  },
+  d5: function() {
+    return i
   }
-}), s("47120"), s("470079"), s("442837"), s("430824");
-var a, l, n, i, r = s("626135");
-s("59970"), s("946314");
-var o = s("731455"),
-  d = s("981631");
+}), t(47120), t(470079), t(442837), t(430824);
+var n, i, l, a, r = t(626135);
+t(59970), t(946314);
+var o = t(731455),
+  c = t(981631);
 
-function u(e, t) {
-  let s = e.hasFeature(d.GuildFeatures.VERIFIED),
-    a = e.hasFeature(d.GuildFeatures.DISCOVERABLE),
-    l = e.hasFeature(d.GuildFeatures.ENABLED_DISCOVERABLE_BEFORE);
-  if (s) return "settings";
-  if (!a && !l) return "intro";
-  if (null == t) return "settings";
-  let n = t.sufficientWithoutGracePeriod && null != t.gracePeriodEndDate && t.gracePeriodEndDate > new Date;
-  return t.sufficient || n || !a ? t.sufficient || n ? "settings" : "intro" : "disqualified"
+function d(e, s) {
+  let t = e.hasFeature(c.oNc.VERIFIED),
+    n = e.hasFeature(c.oNc.DISCOVERABLE),
+    i = e.hasFeature(c.oNc.ENABLED_DISCOVERABLE_BEFORE);
+  if (t) return "settings";
+  if (!n && !i) return "intro";
+  if (null == s) return "settings";
+  let l = s.sufficientWithoutGracePeriod && null != s.gracePeriodEndDate && s.gracePeriodEndDate > new Date;
+  return s.sufficient || l || !n ? s.sufficient || l ? "settings" : "intro" : "disqualified"
 }
 
-function c(e, t) {
-  let s = !1,
-    a = {
+function u(e, s) {
+  let t = !1,
+    n = {
       guild_id: e.id,
       automatic: !1
     };
-  (null == t || e.discoverySplash !== t.discoverySplash) && (a.discovery_splash_edit_type = null == e.discoverySplash ? "removed" : "uploaded", s = !0), (null == t || e.features.has(d.GuildFeatures.DISCOVERABLE) !== t.features.has(d.GuildFeatures.DISCOVERABLE)) && (a.is_discoverable = e.features.has(d.GuildFeatures.DISCOVERABLE), s = !0), (null == t || e.rulesChannelId !== t.rulesChannelId) && (a.rules_channel_id = e.rulesChannelId, s = !0), s && r.default.track(d.AnalyticEvents.GUILD_SETTINGS_DISCOVERY_UPDATED, a)
+  (null == s || e.discoverySplash !== s.discoverySplash) && (n.discovery_splash_edit_type = null == e.discoverySplash ? "removed" : "uploaded", t = !0), (null == s || e.features.has(c.oNc.DISCOVERABLE) !== s.features.has(c.oNc.DISCOVERABLE)) && (n.is_discoverable = e.features.has(c.oNc.DISCOVERABLE), t = !0), (null == s || e.rulesChannelId !== s.rulesChannelId) && (n.rules_channel_id = e.rulesChannelId, t = !0), t && r.default.track(c.rMx.GUILD_SETTINGS_DISCOVERY_UPDATED, n)
 }
 
 function E(e) {
-  var t, s;
-  return null !== (s = null === (t = o.SUGGESTED_TAGS_FOR_CATEGORIES[e]) || void 0 === t ? void 0 : t.map(e => e())) && void 0 !== s ? s : []
-}(n = a || (a = {})).UPLOADED = "uploaded", n.REMOVED = "removed", (i = l || (l = {})).INTRO = "intro", i.DISQUALIFIED = "disqualified", i.SETTINGS = "settings"
+  var s, t;
+  return null !== (t = null === (s = o.U2[e]) || void 0 === s ? void 0 : s.map(e => e())) && void 0 !== t ? t : []
+}(l = n || (n = {})).UPLOADED = "uploaded", l.REMOVED = "removed", (a = i || (i = {})).INTRO = "intro", a.DISQUALIFIED = "disqualified", a.SETTINGS = "settings"

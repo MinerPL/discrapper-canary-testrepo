@@ -1,67 +1,66 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return _
+t.d(s, {
+  Z: function() {
+    return E
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("215569"),
-  n = s("481060"),
-  i = s("852860"),
-  r = s("864293"),
-  o = s("236413"),
-  d = s("727072"),
-  u = s("65912"),
-  c = s("689938"),
-  E = s("587271");
+var n = t(735250);
+t(470079);
+var i = t(215569),
+  l = t(481060),
+  a = t(852860),
+  r = t(236413),
+  o = t(727072),
+  c = t(65912),
+  d = t(689938),
+  u = t(817437);
 
-function _(e) {
+function E(e) {
   let {
-    guildId: t,
-    existingRules: s
+    guildId: s,
+    existingRules: t
   } = e, {
-    cancelEditingRule: _,
-    isLoading: I,
-    hasChanges: T,
-    editingRule: S,
-    errorMessage: f,
+    cancelEditingRule: E,
+    isLoading: _,
+    hasChanges: I,
+    editingRule: T,
+    errorMessage: N,
     saveEditingRule: m
-  } = (0, u.useAutomodEditingRuleActions)(), {
-    updateRule: N
-  } = (0, d.useAutomodRulesList)(t), g = null != S, h = g && !(0, o.isBackendPersistedRule)(S), C = g || T || h, R = async () => {
-    if (!T && !h) return _();
-    null != S && !h && N(S);
-    let e = s.find(e => {
+  } = (0, c.w)(), {
+    updateRule: S
+  } = (0, o.pH)(s), h = null != T, g = h && !(0, r.Vb)(T), x = h || I || g, C = async () => {
+    if (!I && !g) return E();
+    null != T && !g && S(T);
+    let e = t.find(e => {
       let {
-        id: t
+        id: s
       } = e;
-      return t === (null == S ? void 0 : S.id)
+      return s === (null == T ? void 0 : T.id)
     });
     try {
-      let e = await m(s);
-      null != e && N(e)
-    } catch (t) {
-      null != e && N(e)
+      let e = await m(t);
+      null != e && S(e)
+    } catch (s) {
+      null != e && S(e)
     }
-  }, x = c.default.Messages.CANCEL, L = !T && g ? c.default.Messages.GUILD_AUTOMOD_EDIT_NO_CHANGES.format({
-    ruleName: null == S ? void 0 : S.name
+  }, R = d.Z.Messages.CANCEL, L = !I && h ? d.Z.Messages.GUILD_AUTOMOD_EDIT_NO_CHANGES.format({
+    ruleName: null == T ? void 0 : T.name
   }) : void 0;
-  return null != f && (L = (0, a.jsx)(n.Text, {
+  return null != N && (L = (0, n.jsx)(l.Text, {
     variant: "text-md/normal",
     color: "text-danger",
-    className: E.message,
-    children: f
-  })), (0, a.jsx)(l.TransitionGroup, {
+    className: u.message,
+    children: N
+  })), (0, n.jsx)(i.W, {
     component: "div",
-    className: E.saveNoticeContainer,
-    children: C && (0, a.jsx)(r.default, {
-      children: (0, a.jsx)(i.default, {
-        submitting: I,
-        disabled: I,
-        onSave: R,
-        onReset: _,
-        onResetText: x,
+    className: u.saveNoticeContainer,
+    children: x && (0, n.jsx)(l.SlideIn, {
+      children: (0, n.jsx)(a.Z, {
+        submitting: _,
+        disabled: _,
+        onSave: C,
+        onReset: E,
+        onResetText: R,
         message: L
       })
     })

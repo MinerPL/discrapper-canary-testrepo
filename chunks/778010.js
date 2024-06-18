@@ -5,8 +5,8 @@ function r(e, t) {
     return e === t
   }) : e === t
 }
-n.r(t), n.d(t, {
-  matchesType: function() {
+n.d(t, {
+  s: function() {
     return r
   }
 })

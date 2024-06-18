@@ -1,24 +1,24 @@
 "use strict";
 let i, r;
-n.r(t), n.d(t, {
-  FormattedMessage: function() {
-    return c
-  },
-  getMessage: function() {
+n.d(t, {
+  FC: function() {
     return I
   },
-  setUpdateRules: function() {
+  _H: function() {
+    return c
+  },
+  yR: function() {
     return E
   }
-}), n("47120"), n("757143");
-var s = n("400053"),
-  a = n.n(s),
-  o = n("302454"),
-  l = n.n(o),
-  u = n("20970"),
-  d = n("959525");
+}), n(47120), n(757143);
+var s = n(400053),
+  o = n.n(s),
+  a = n(302454),
+  l = n.n(a),
+  u = n(20970),
+  _ = n(959525);
 
-function _(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -40,7 +40,7 @@ class c {
     return this.intlMessage.format(e)
   }
   getContext(e) {
-    let t = d.UNSAFE_RE.test(this.message),
+    let t = _.yF.test(this.message),
       n = {};
     if (t) {
       let t = 0;
@@ -49,7 +49,7 @@ class c {
     return [e, n]
   }
   constructor(e, t, n) {
-    _(this, "message", void 0), _(this, "hasMarkdown", void 0), _(this, "intlMessage", void 0), this.message = n ? e : e.replace(d.UNSAFE_RE_ALL, ""), this.hasMarkdown = n, this.intlMessage = new(a())(this.message, t)
+    d(this, "message", void 0), d(this, "hasMarkdown", void 0), d(this, "intlMessage", void 0), this.message = n ? e : e.replace(_.hN, ""), this.hasMarkdown = n, this.intlMessage = new(o())(this.message, t)
   }
 }
 
@@ -65,20 +65,20 @@ function E(e) {
         unsafeContext: r
       }))
     }
-  }(u.rules, e), r = function(e) {
+  }(u.j, e), r = function(e) {
     let t = l().parserFor(e);
     return (e, n, i) => t(e + "\n\n", {
       inline: !1,
       context: n,
       unsafeContext: i
     })
-  }(u.rules)
+  }(u.j)
 }
 
 function I(e, t) {
   if (null == e) return "";
-  null == i && E(n("281071").default), e = e.replace(/^\n+|\n+$/g, "");
-  let r = d.FORMAT_RE.test(e),
-    s = d.MARKDOWN_RE.test(e);
+  null == i && E(n(281071).Z), e = e.replace(/^\n+|\n+$/g, "");
+  let r = _.aT.test(e),
+    s = _.b9.test(e);
   return r || s ? new c(e, t, s) : e
 }

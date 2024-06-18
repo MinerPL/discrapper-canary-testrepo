@@ -1,9 +1,9 @@
 "use strict";
-var r = n("161581"),
-  i = n("325008"),
-  a = n("4340"),
-  o = n("572609"),
-  s = n("936940"),
+var r = n(161581),
+  i = n(325008),
+  a = n(4340),
+  o = n(572609),
+  s = n(936940),
   u = r.RegExp,
   c = u.prototype;
 i && s(function() {

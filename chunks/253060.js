@@ -1,5 +1,5 @@
 "use strict";
-var n = r("381538");
+var n = r(381538);
 
 function i() {
   return (i = n || function(t) {
@@ -41,28 +41,28 @@ function u(t, e, r) {
 function s(t, e) {
   t.prototype = Object.create(e.prototype), t.prototype.constructor = t, t.__proto__ = e
 }
-var c = r("660793"),
-  l = r("673004"),
-  f = r("759959"),
-  p = r("182209"),
-  h = r("679358"),
-  d = r("189841"),
-  g = r("203304"),
-  y = r("209975"),
-  v = r("8400"),
-  m = r("379846"),
-  _ = r("470079"),
-  b = r("1231"),
-  S = r("292489"),
-  w = r("118658"),
-  k = r("606166"),
-  x = r("680643"),
-  C = r("421520"),
-  E = r("685536"),
-  D = r("316103"),
-  O = r("581079"),
-  K = r("822274"),
-  T = r("467159"),
+var c = r(660793),
+  l = r(673004),
+  f = r(759959),
+  p = r(182209),
+  h = r(679358),
+  d = r(189841),
+  g = r(203304),
+  y = r(209975),
+  v = r(8400),
+  m = r(379846),
+  _ = r(470079),
+  b = r(1231),
+  S = r(292489),
+  w = r(118658),
+  k = r(606166),
+  x = r(680643),
+  C = r(421520),
+  E = r(685536),
+  D = r(316103),
+  O = r(581079),
+  K = r(822274),
+  T = r(467159),
   M = w.isBrowser("IE"),
   A = !M,
   I = {
@@ -99,7 +99,7 @@ var c = r("660793"),
         var e = r.props.editorState,
           n = e.getSelection().getHasFocus(),
           i = r.editor;
-        if (i) {
+        if (!!i) {
           var o = S.getScrollParent(i),
             a = t || E(o),
             u = a.x,
@@ -108,7 +108,7 @@ var c = r("660793"),
         }
       }), u(a(r), "blur", function() {
         var t = r.editor;
-        t && (K(t) || O(!1), t.blur())
+        if (!!t) K(t) || O(!1), t.blur()
       }), u(a(r), "setMode", function(t) {
         var e = r.props,
           n = e.onPaste,

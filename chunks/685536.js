@@ -1,6 +1,6 @@
 "use strict";
-var n = r("143310"),
-  i = r("688411");
+var n = r(143310),
+  i = r(688411);
 t.exports = function(t) {
   var e = n(t.ownerDocument || t.document);
   t.Window && t instanceof t.Window && (t = e);

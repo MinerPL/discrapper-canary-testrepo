@@ -13,11 +13,11 @@ function n(e) {
     a = e[2] / 255;
   return [.299 * t + .587 * r + .114 * a, -.14713 * t + -.28886 * r + .436 * a, .615 * t + -.51499 * r + -.10001 * a]
 }
-r.r(t), r.d(t, {
-  rgb2yuv: function() {
+r.d(t, {
+  L: function() {
     return n
   },
-  yuv2rgb: function() {
+  x: function() {
     return a
   }
 })

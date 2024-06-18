@@ -1,3 +1,3 @@
 "use strict";
-var e = n("569839");
+var e = n(569839);
 t.exports = e

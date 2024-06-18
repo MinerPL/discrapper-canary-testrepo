@@ -1,189 +1,205 @@
 "use strict";
-n.r(t), n.d(t, {
-  ACTIVITY_INVITE_COVER_IMAGE_SIZE: function() {
-    return R
-  },
-  ACTIVITY_SHELF_WEB_MODAL_KEY: function() {
-    return ee
-  },
-  AM_HARMONY_PRD_APPLICATION_ID: function() {
-    return X
-  },
-  AM_HARMONY_STG_APPLICATION_ID: function() {
-    return Z
-  },
-  APPLICATIONS_WITH_ALLOWED_POPUPS: function() {
-    return et
-  },
-  APPLICATIONS_WITH_NO_REFFERER: function() {
-    return en
-  },
-  ActivityFeedbackReasons: function() {
-    return i
-  },
-  ActivityIntent: function() {
-    return r
-  },
-  ActivityLayoutMode: function() {
-    return c
-  },
-  ActivityPlatform: function() {
-    return a
-  },
-  ActivityScreenOrientation: function() {
-    return _
-  },
-  ActivityShelfSlides: function() {
-    return u
-  },
-  BLAZIN_8S_APPLICATION_ID: function() {
-    return F
-  },
-  BOBBLE_LEAGUE_APPLICATION_ID: function() {
-    return B
-  },
-  BYS_LETTER_APP_ID: function() {
-    return Y
-  },
-  BYS_TWOODLE_APP_ID: function() {
-    return j
-  },
-  CHECKERS_IN_THE_PARK_APP_ID: function() {
-    return V
-  },
-  CHEF_SHOWDOWN_APPLICATION_ID: function() {
-    return W
-  },
-  CHESS_IN_THE_PARK_APP_ID: function() {
-    return x
-  },
-  COLOR_TOGETHER_APPLICATION_ID: function() {
-    return U
-  },
-  DEATH_BY_AI_APPLICATION_ID: function() {
-    return Q
-  },
-  DEFAULT_EMBEDDED_ACTIVITY_CONFIG: function() {
+n.d(t, {
+  AC: function() {
     return er
   },
-  EMBEDDED_ACTIVITY_SURVEY_URL: function() {
-    return q
-  },
-  END_GAME_APPLICATION_ID: function() {
-    return v
-  },
-  EmbeddedActivityUpdateCodes: function() {
-    return o
-  },
-  GARTIC_PHONE_APPLICATION_ID: function() {
-    return P
-  },
-  ImageSizes: function() {
-    return J
-  },
-  JAM_SPACE_APPLICATION_ID: function() {
-    return y
-  },
-  KRUNKER_STRIKE_APPLICATION_ID: function() {
-    return z
-  },
-  KWIM_APPLICATION_ID: function() {
-    return k
-  },
-  LAND_IO_APPLICATION_ID: function() {
-    return G
-  },
-  OrientationLockState: function() {
-    return l
-  },
-  POKER_NIGHT_APPLICATION_ID: function() {
-    return H
-  },
-  PRIVATE_APPS_HELP_ARTICLE: function() {
-    return es
-  },
-  PUTT_PARTY_APPLICATION_ID: function() {
-    return K
-  },
-  SPELL_CAST_APPLICATION_ID: function() {
-    return b
-  },
-  STAFF_RELEASE_PHASES: function() {
+  Br: function() {
     return $
   },
-  SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES: function() {
-    return ea
+  ES: function() {
+    return _
   },
-  WATCH_YOUTUBE_PROD_APP_ID: function() {
-    return w
+  Ec: function() {
+    return Z
   },
-  WhatsNewSection: function() {
-    return d
+  Es: function() {
+    return et
   },
-  XBOX_ACTIVITY_APPLICATION_ID: function() {
+  Ev: function() {
     return L
   },
-  validStreamURL: function() {
+  Fr: function() {
     return g
+  },
+  Fu: function() {
+    return J
+  },
+  GR: function() {
+    return k
+  },
+  IF: function() {
+    return Y
+  },
+  In: function() {
+    return X
+  },
+  JT: function() {
+    return Q
+  },
+  K8: function() {
+    return i
+  },
+  MO: function() {
+    return b
+  },
+  N4: function() {
+    return K
+  },
+  OF: function() {
+    return e_
+  },
+  PD: function() {
+    return B
+  },
+  Pc: function() {
+    return es
+  },
+  QJ: function() {
+    return ee
+  },
+  S4: function() {
+    return s
+  },
+  SL: function() {
+    return W
+  },
+  Si: function() {
+    return en
+  },
+  V5: function() {
+    return U
+  },
+  W0: function() {
+    return d
+  },
+  Ws: function() {
+    return r
+  },
+  Zc: function() {
+    return j
+  },
+  ag: function() {
+    return u
+  },
+  am: function() {
+    return V
+  },
+  cE: function() {
+    return c
+  },
+  cc: function() {
+    return p
+  },
+  dv: function() {
+    return P
+  },
+  eB: function() {
+    return ei
+  },
+  f9: function() {
+    return q
+  },
+  fE: function() {
+    return F
+  },
+  jT: function() {
+    return x
+  },
+  js: function() {
+    return G
+  },
+  l4: function() {
+    return H
+  },
+  m2: function() {
+    return a
+  },
+  mI: function() {
+    return w
+  },
+  n1: function() {
+    return y
+  },
+  qG: function() {
+    return z
+  },
+  qm: function() {
+    return v
+  },
+  um: function() {
+    return eo
+  },
+  wP: function() {
+    return eu
+  },
+  wT: function() {
+    return el
+  },
+  xK: function() {
+    return l
   }
-}), n("47120");
-var i, r, a, s, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O = n("911969"),
-  C = n("981631");
-let R = 160,
+}), n(47120);
+var i, r, s, o, a, l, u, _, d, c, E, I, T, h, S, f, N, A, m, O, R = n(911969),
+  C = n(981631);
+let p = 160,
   g = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
   L = "438122941302046720",
   v = "773336526917861400",
   D = "880218832743055411",
   M = "1050941315912835122",
-  y = "1070087967294631976",
-  P = "1007373802981822582",
-  U = "1039835161136746497",
-  b = "852509694341283871",
-  G = "903769130790969345",
-  w = "880218394199220334",
-  k = "1078728822972764312",
-  B = "947957217959759964",
-  V = "832013003968348200",
-  x = "832012774040141894",
-  F = "832025144389533716",
-  H = "755827207812677713",
-  Y = "879863686565621790",
-  j = "902271654783242291",
-  W = "1037680572660727838",
-  K = "945737671223947305",
-  z = "1011683823555199066",
-  Z = "1234546995360694434",
-  X = "1214629548377768066",
-  Q = "1194351737264406548",
-  q = "https://discord.sjc1.qualtrics.com/jfe/form/SV_6SvWAOxlcSRWiEu",
-  J = {
+  P = "1019001450015100928",
+  y = "1019304931275968512",
+  U = "1019326282124623872",
+  b = "1070087967294631976",
+  G = "1007373802981822582",
+  w = "1039835161136746497",
+  k = "852509694341283871",
+  B = "903769130790969345",
+  x = "880218394199220334",
+  V = "1078728822972764312",
+  Z = "947957217959759964",
+  H = "832013003968348200",
+  F = "832012774040141894",
+  Y = "832025144389533716",
+  j = "755827207812677713",
+  W = "879863686565621790",
+  K = "902271654783242291",
+  z = "1037680572660727838",
+  q = "945737671223947305",
+  X = "1011683823555199066",
+  Q = "1234546995360694434",
+  J = "1214629548377768066",
+  $ = "1196535986226745437",
+  ee = "1199817737728442569",
+  et = "https://discord.sjc1.qualtrics.com/jfe/form/SV_6SvWAOxlcSRWiEu",
+  en = {
     SMALL: 64,
     LARGE: 160
   },
-  $ = ["in_development", "activities_team", "employee_release"];
-(E = i || (i = {})).ADS = "ADS", E.FAILED_LOAD = "FAILED_LOAD", E.LAGGING = "LAGGING", E.CONFUSING = "CONFUSING", E.NOT_FUN = "NOT_FUN", E.OTHER = "OTHER", (I = r || (r = {}))[I.PLAY = 0] = "PLAY", I[I.SPECTATE = 1] = "SPECTATE", (T = a || (a = {})).DESKTOP = "desktop", T.MOBILE = "mobile", (f = s || (s = {})).BETRAYAL_MARKETING_TOOLTIP = "BETRAYAL_MARKETING_TOOLTIP", f.FISHINGTON_MARKETING_TOOLTIP = "FISHINGTON_MARKETING_TOOLTIP", f.POKER_MARKETING_TOOLTIP = "POKER_MARKETING_TOOLTIP", f.YOUTUBE_MARKETING_TOOLTIP = "YOUTUBE_MARKETING_TOOLTIP", (S = o || (o = {}))[S.NO_UPDATE = 0] = "NO_UPDATE", S[S.ACTIVITY_STATE_UPDATE = 1] = "ACTIVITY_STATE_UPDATE", S[S.ACTIVITY_STARTED = 2] = "ACTIVITY_STARTED", S[S.ACTIVITY_ENDED = 3] = "ACTIVITY_ENDED", S[S.USER_JOINED = 4] = "USER_JOINED", S[S.USER_LEFT = 5] = "USER_LEFT", S[S.ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST = 6] = "ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST", (h = l || (l = {}))[h.UNLOCKED = 1] = "UNLOCKED", h[h.PORTRAIT = 2] = "PORTRAIT", h[h.LANDSCAPE = 3] = "LANDSCAPE", (A = u || (u = {}))[A.DIRECTORY = 0] = "DIRECTORY", A[A.SELECT_CHANNEL = 1] = "SELECT_CHANNEL", A[A.DETAIL_PAGE = 2] = "DETAIL_PAGE";
-let ee = "activity-shelf",
-  et = new Set(["755600276941176913", D, M, w]),
-  en = new Set([D, M, w]);
-(m = d || (d = {})).DISCORD_TURNS_8 = "DISCORD_TURNS_8", m.GDM_ACTIVITIES = "GDM_ACTIVITIES", m.PUTT_PARTY = "PUTT_PARTY", m.JAMSPACE_OLD = "JAMSPACE", m.JAMSPACE = "JAMSPACE2", m.POKER = "POKER", m.FREE = "FREE", (N = _ || (_ = {}))[N.PORTRAIT = 0] = "PORTRAIT", N[N.LANDSCAPE = 1] = "LANDSCAPE", (p = c || (c = {}))[p.FOCUSED = 0] = "FOCUSED", p[p.PIP = 1] = "PIP", p[p.GRID = 2] = "GRID";
-let ei = {
-    label_type: O.EmbeddedActivityLabelTypes.NONE,
+  ei = ["in_development", "activities_team", "employee_release"];
+(E = i || (i = {})).ADS = "ADS", E.FAILED_LOAD = "FAILED_LOAD", E.LAGGING = "LAGGING", E.CONFUSING = "CONFUSING", E.NOT_FUN = "NOT_FUN", E.OTHER = "OTHER", (I = r || (r = {}))[I.PLAY = 0] = "PLAY", I[I.SPECTATE = 1] = "SPECTATE", (T = s || (s = {})).DESKTOP = "desktop", T.MOBILE = "mobile", (h = o || (o = {})).BETRAYAL_MARKETING_TOOLTIP = "BETRAYAL_MARKETING_TOOLTIP", h.FISHINGTON_MARKETING_TOOLTIP = "FISHINGTON_MARKETING_TOOLTIP", h.POKER_MARKETING_TOOLTIP = "POKER_MARKETING_TOOLTIP", h.YOUTUBE_MARKETING_TOOLTIP = "YOUTUBE_MARKETING_TOOLTIP", (S = a || (a = {}))[S.NO_UPDATE = 0] = "NO_UPDATE", S[S.ACTIVITY_STATE_UPDATE = 1] = "ACTIVITY_STATE_UPDATE", S[S.ACTIVITY_STARTED = 2] = "ACTIVITY_STARTED", S[S.ACTIVITY_ENDED = 3] = "ACTIVITY_ENDED", S[S.USER_JOINED = 4] = "USER_JOINED", S[S.USER_LEFT = 5] = "USER_LEFT", S[S.ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST = 6] = "ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST", (f = l || (l = {}))[f.UNLOCKED = 1] = "UNLOCKED", f[f.PORTRAIT = 2] = "PORTRAIT", f[f.LANDSCAPE = 3] = "LANDSCAPE", (N = u || (u = {}))[N.DIRECTORY = 0] = "DIRECTORY", N[N.SELECT_CHANNEL = 1] = "SELECT_CHANNEL", N[N.DETAIL_PAGE = 2] = "DETAIL_PAGE";
+let er = "activity-shelf",
+  es = new Set(["755600276941176913", D, M, x]),
+  eo = new Set([D, M, x]);
+(A = _ || (_ = {})).DISCORD_TURNS_8 = "DISCORD_TURNS_8", A.GDM_ACTIVITIES = "GDM_ACTIVITIES", A.PUTT_PARTY = "PUTT_PARTY", A.JAMSPACE_OLD = "JAMSPACE", A.JAMSPACE = "JAMSPACE2", A.POKER = "POKER", A.FREE = "FREE", (m = d || (d = {}))[m.PORTRAIT = 0] = "PORTRAIT", m[m.LANDSCAPE = 1] = "LANDSCAPE", (O = c || (c = {}))[O.FOCUSED = 0] = "FOCUSED", O[O.PIP = 1] = "PIP", O[O.GRID = 2] = "GRID";
+let ea = {
+    label_type: R.ww.NONE,
     release_phase: "",
     label_until: null
   },
-  er = {
+  el = {
     application_id: "",
     requires_age_gate: !1,
     default_orientation_lock_state: 1,
     tablet_default_orientation_lock_state: 1,
-    supported_platforms: [O.EmbeddedActivitySupportedPlatforms.WEB],
+    supported_platforms: [R.C3.WEB],
     client_platform_config: {
-      [O.EmbeddedActivitySupportedPlatforms.WEB]: ei,
-      [O.EmbeddedActivitySupportedPlatforms.IOS]: ei,
-      [O.EmbeddedActivitySupportedPlatforms.ANDROID]: ei
+      [R.C3.WEB]: ea,
+      [R.C3.IOS]: ea,
+      [R.C3.ANDROID]: ea
     },
     has_csp_exception: !1,
     displays_advertisements: !1
   },
-  ea = [C.ChannelTypes.GUILD_TEXT, C.ChannelTypes.DM, C.ChannelTypes.GROUP_DM],
-  es = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety"
+  eu = [C.d4z.GUILD_TEXT, C.d4z.DM, C.d4z.GROUP_DM],
+  e_ = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety"

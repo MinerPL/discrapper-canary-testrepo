@@ -1,7 +1,7 @@
 "use strict";
-var n = r("470079"),
-  i = r("606166"),
-  o = (0, r("65183").Map)({
+var n = r(470079),
+  i = r(606166),
+  o = (0, r(65183).Map)({
     "header-one": {
       element: "h1"
     },

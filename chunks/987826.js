@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return u
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("120356"),
-  a = n.n(r),
-  s = n("481060"),
-  o = n("154921"),
-  l = n("369661");
+var i = n(735250);
+n(470079);
+var r = n(120356),
+  s = n.n(r),
+  o = n(481060),
+  a = n(154921),
+  l = n(483853);
 
 function u(e) {
   var t;
@@ -18,21 +18,21 @@ function u(e) {
     name: n,
     className: r,
     state: u,
-    isInline: d,
-    onClick: _
-  } = e, c = null, E = o.default.Colors.HEADER_PRIMARY;
-  (null == u ? void 0 : u.isActive) && !d ? c = l.active : (null == u ? void 0 : null === (t = u.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? c = l.error : (null == u ? void 0 : u.hasValue) && !d && (c = l.set);
-  let I = (0, i.jsx)(o.default, {
-    size: d ? o.default.Sizes.SIZE_16 : o.default.Sizes.SIZE_14,
+    isInline: _,
+    onClick: d
+  } = e, c = null, E = a.Z.Colors.HEADER_PRIMARY;
+  (null == u ? void 0 : u.isActive) && !_ ? c = l.active : (null == u ? void 0 : null === (t = u.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? c = l.error : (null == u ? void 0 : u.hasValue) && !_ && (c = l.set);
+  let I = (0, i.jsx)(a.Z, {
+    size: _ ? a.Z.Sizes.SIZE_16 : a.Z.Sizes.SIZE_14,
     color: E,
-    className: a()(l.option, {
-      [l.inline]: d
+    className: s()(l.option, {
+      [l.inline]: _
     }, c, r),
-    children: n + (d ? ":" : "")
+    children: n + (_ ? ":" : "")
   });
-  return null == _ ? I : (0, i.jsx)(s.Clickable, {
+  return null == d ? I : (0, i.jsx)(o.Clickable, {
     className: l.clickable,
-    onClick: () => _(n),
+    onClick: () => d(n),
     children: I
   })
 }

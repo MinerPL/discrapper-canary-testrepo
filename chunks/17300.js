@@ -1,34 +1,25 @@
 "use strict";
-n.r(t), n.d(t, {
-  shouldImmediatelyRequestVoicePermissions: function() {
-    return S
-  }
-}), n("47120");
-var i = n("147913"),
-  r = n("751571"),
-  s = n("88751"),
-  a = n("590415"),
-  o = n("189786"),
-  l = n("314897"),
-  u = n("592125"),
-  d = n("131951"),
-  _ = n("19780"),
-  c = n("876506"),
-  E = n("981631"),
-  I = n("761274");
+n(47120);
+var i = n(147913),
+  r = n(751571),
+  s = n(88751),
+  o = n(590415),
+  a = n(189786),
+  l = n(314897),
+  u = n(592125),
+  _ = n(131951),
+  d = n(19780),
+  c = n(876506),
+  E = n(981631),
+  I = n(761274);
 let T = null;
 
-function f() {
-  r.default.requestPermission(I.NativePermissionTypes.AUDIO).then(e => {
-    e && (0, c.default)(!0)
-  }), d.default.getMode() === E.InputModes.PUSH_TO_TALK && r.default.requestPermission(I.NativePermissionTypes.INPUT_MONITORING)
+function h() {
+  r.Z.requestPermission(I.Eu.AUDIO).then(e => {
+    if (!!e)(0, c.Z)(!0)
+  }), _.Z.getMode() === E.pM4.PUSH_TO_TALK && r.Z.requestPermission(I.Eu.INPUT_MONITORING)
 }
-
-function S(e, t) {
-  var n;
-  return (null === (n = u.default.getChannel(t)) || void 0 === n ? !void 0 : !n.isListenModeCapable()) || s.default.isSpeaker(e, t)
-}
-class h extends i.default {
+class S extends i.Z {
   handleVoiceChannelSelect(e) {
     let {
       channelId: t
@@ -40,17 +31,17 @@ class h extends i.default {
       voiceStates: t
     } = e;
     t.forEach(e => {
-      var t;
+      var t, n, i, r;
       let {
-        userId: n,
-        channelId: i
+        userId: _,
+        channelId: c
       } = e;
-      if (null != i && l.default.getId() === n && null != _.default.getRTCConnectionId() && T !== i) {
-        if (S(n, i)) {
-          T = i, f();
+      if (null != c && l.default.getId() === _ && null != d.Z.getRTCConnectionId() && T !== c) {
+        if (t = _, n = c, (null === (i = u.Z.getChannel(n)) || void 0 === i ? !void 0 : !i.isListenModeCapable()) || s.ZP.isSpeaker(t, n)) {
+          T = c, h();
           return
         }
-        t = new o.default(e), (0, a.getAudienceRequestToSpeakState)(t) === a.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && (T = i, f())
+        r = new a.Z(e), (0, o.gf)(r) === o.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && (T = c, h())
       }
     })
   }
@@ -67,4 +58,4 @@ class h extends i.default {
     }) : t[n] = i
   }
 }
-t.default = new h
+t.Z = new S

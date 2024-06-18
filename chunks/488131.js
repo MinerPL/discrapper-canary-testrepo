@@ -1,68 +1,68 @@
 "use strict";
-n.r(t), n.d(t, {
-  closeAndClearThreadSidebar: function() {
-    return C
-  },
-  closeThreadSidebar: function() {
-    return R
-  },
-  openThreadSidebarForCreating: function() {
+n.d(t, {
+  NK: function() {
     return p
   },
-  openThreadSidebarForViewing: function() {
+  R6: function() {
+    return R
+  },
+  ok: function() {
     return O
+  },
+  vN: function() {
+    return C
   }
 });
-var i = n("512722"),
+var i = n(512722),
   r = n.n(i),
-  s = n("392711"),
-  a = n.n(s),
-  o = n("570140"),
-  l = n("430742"),
-  u = n("40851"),
-  d = n("367907"),
-  _ = n("727429"),
-  c = n("703656"),
-  E = n("359110"),
-  I = n("695346"),
-  T = n("703558"),
-  f = n("944486"),
-  S = n("979651"),
-  h = n("585483"),
-  A = n("124368"),
-  m = n("981631"),
-  N = n("176505");
+  s = n(392711),
+  o = n.n(s),
+  a = n(570140),
+  l = n(430742),
+  u = n(40851),
+  _ = n(367907),
+  d = n(727429),
+  c = n(703656),
+  E = n(359110),
+  I = n(695346),
+  T = n(703558),
+  h = n(944486),
+  S = n(979651),
+  f = n(585483),
+  N = n(124368),
+  A = n(981631),
+  m = n(176505);
 
 function O(e, t, n) {
-  u.MainWindowDispatch.dispatch(m.ComponentActions.POPOUT_CLOSE);
-  let i = !a().isEmpty(S.default.getVoiceStatesForChannel(e.id));
-  if (t || !I.UseThreadSidebar.getSetting() || __OVERLAY__ || i) {
-    o.default.dispatch({
+  u.UI.dispatch(A.CkL.POPOUT_CLOSE);
+  let i = !o().isEmpty(S.Z.getVoiceStatesForChannel(e.id));
+  if (t || !I.vF.getSetting() || __OVERLAY__ || i) {
+    a.Z.dispatch({
       type: "SIDEBAR_CLOSE",
       baseChannelId: e.parent_id
-    }), null != n ? (0, E.transitionToThread)(e, n) : (0, E.transitionToChannel)(e.id);
+    }), null != n ? (0, E.ad)(e, n) : (0, E.Kh)(e.id);
     return
   }
   r()(null != e.parent_id, "all threads must have parents");
-  let s = f.default.getChannelId();
-  e.parent_id !== s && !(0, N.isGuildHomeChannel)(s) && (0, E.transitionToChannel)(e.parent_id), (0, c.transitionTo)(m.Routes.CHANNEL_THREAD_VIEW((0, _.getGuildIdForGenericRedirect)(e), (0, N.isGuildHomeChannel)(s) ? N.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? A.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
-    h.ComponentDispatch.dispatch(m.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+  let s = h.Z.getChannelId();
+  e.parent_id !== s && !(0, m.ME)(s) && (0, E.Kh)(e.parent_id), (0, c.uL)(A.Z5c.CHANNEL_THREAD_VIEW((0, d.e)(e), (0, m.ME)(s) ? m.oC.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? N.on.FORUM : void 0), setTimeout(() => {
+    f.S.dispatch(A.CkL.FOCUS_CHANNEL_TEXT_AREA, {
       channelId: e.id
     })
   }, 0)
 }
 
-function p(e, t, n) {
-  if (r()(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"), r()(!__OVERLAY__, "Cannot create threads in the overlay."), (0, d.trackWithMetadata)(m.AnalyticEvents.THREAD_CREATION_STARTED, {
+function R(e, t, n) {
+  if (r()(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"), r()(!__OVERLAY__, "Cannot create threads in the overlay."), (0, _.yw)(A.rMx.THREAD_CREATION_STARTED, {
       location: n,
       channel_id: e.id,
       guild_id: e.guild_id
-    }), u.MainWindowDispatch.dispatch(m.ComponentActions.POPOUT_CLOSE), f.default.getChannelId() !== e.id && (0, E.transitionToChannel)(e.id), "" === T.default.getDraft(e.id, T.DraftType.FirstThreadMessage)) {
-    let t = T.default.getDraft(e.id, T.DraftType.ChannelMessage);
-    l.default.saveDraft(e.id, "", T.DraftType.ChannelMessage), l.default.saveDraft(e.id, t, T.DraftType.FirstThreadMessage)
+    }), u.UI.dispatch(A.CkL.POPOUT_CLOSE), h.Z.getChannelId() !== e.id && (0, E.Kh)(e.id), "" === T.Z.getDraft(e.id, T.d.FirstThreadMessage)) {
+    let t = T.Z.getDraft(e.id, T.d.ChannelMessage);
+    l.Z.saveDraft(e.id, "", T.d.ChannelMessage), l.Z.saveDraft(e.id, t, T.d.FirstThreadMessage)
   }
   setTimeout(() => {
-    o.default.dispatch({
+    a.Z.dispatch({
       type: "SIDEBAR_CREATE_THREAD",
       parentChannelId: e.id,
       parentMessageId: null == t ? void 0 : t.id,
@@ -71,24 +71,24 @@ function p(e, t, n) {
   }, 0)
 }
 
-function R(e, t) {
-  (0, c.transitionTo)(m.Routes.CHANNEL(e, (0, N.isGuildHomeChannel)(t) ? N.StaticChannelRoute.GUILD_HOME : t)), o.default.dispatch({
+function C(e, t) {
+  (0, c.uL)(A.Z5c.CHANNEL(e, (0, m.ME)(t) ? m.oC.GUILD_HOME : t)), a.Z.dispatch({
     type: "SIDEBAR_CLOSE",
     baseChannelId: t
   })
 }
 
-function C(e) {
-  o.default.dispatch({
+function p(e) {
+  a.Z.dispatch({
     type: "SIDEBAR_CLOSE",
     baseChannelId: e
-  }), o.default.dispatch({
+  }), a.Z.dispatch({
     type: "DRAFT_CLEAR",
     channelId: e,
-    draftType: T.DraftType.FirstThreadMessage
-  }), o.default.dispatch({
+    draftType: T.d.FirstThreadMessage
+  }), a.Z.dispatch({
     type: "DRAFT_CLEAR",
     channelId: e,
-    draftType: T.DraftType.ThreadSettings
+    draftType: T.d.ThreadSettings
   })
 }

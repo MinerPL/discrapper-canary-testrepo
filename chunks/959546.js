@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return o
+n.d(t, {
+  Z: function() {
+    return a
   }
 });
-var i = n("81825"),
-  r = n("74538"),
-  s = n("981631");
+var i = n(81825),
+  r = n(74538),
+  s = n(981631);
 
-function a(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -16,10 +16,10 @@ function a(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class o extends i.default {
+class a extends i.Z {
   static createFromServer(e) {
     var t, n;
-    return new o({
+    return new a({
       id: e.id,
       skuId: e.sku_id,
       applicationId: e.application_id,
@@ -40,14 +40,14 @@ class o extends i.default {
     })
   }
   get isGiftable() {
-    return this.type === s.EntitlementTypes.USER_GIFT && null == this.gifterId
+    return this.type === s.qc2.USER_GIFT && null == this.gifterId
   }
   isValid(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
     if (this.isGiftable || this.deleted) return !1;
-    if (this.type === s.EntitlementTypes.PREMIUM_SUBSCRIPTION) {
+    if (this.type === s.qc2.PREMIUM_SUBSCRIPTION) {
       let n = t.get(this.skuId);
-      if (null != n && !n.premium || !r.default.canInstallPremiumApplications(e)) return !1
+      if (null != n && !n.premium || !r.ZP.canInstallPremiumApplications(e)) return !1
     }
     let i = new Date;
     if (null != this.startsAt && i < this.startsAt || null != this.endsAt && i >= this.endsAt) return !1;
@@ -59,6 +59,6 @@ class o extends i.default {
     return !0
   }
   constructor(e) {
-    super(), a(this, "id", void 0), a(this, "skuId", void 0), a(this, "applicationId", void 0), a(this, "userId", void 0), a(this, "gifterId", void 0), a(this, "type", void 0), a(this, "branches", void 0), a(this, "startsAt", void 0), a(this, "endsAt", void 0), a(this, "subscriptionId", void 0), a(this, "subscriptionPlanId", void 0), a(this, "parentId", void 0), a(this, "consumed", void 0), a(this, "giftCodeBatchId", void 0), a(this, "giftStyle", void 0), a(this, "guildId", void 0), a(this, "deleted", void 0), this.id = e.id, this.skuId = e.skuId, this.applicationId = e.applicationId, this.userId = e.userId, this.gifterId = e.gifterId, this.type = e.type, this.branches = e.branches, this.startsAt = e.startsAt, this.endsAt = e.endsAt, this.subscriptionId = e.subscriptionId, this.subscriptionPlanId = e.subscriptionPlanId, this.parentId = e.parentId, this.consumed = e.consumed, this.giftCodeBatchId = e.giftCodeBatchId, this.giftStyle = e.giftStyle, this.guildId = e.guildId, this.deleted = e.deleted
+    super(), o(this, "id", void 0), o(this, "skuId", void 0), o(this, "applicationId", void 0), o(this, "userId", void 0), o(this, "gifterId", void 0), o(this, "type", void 0), o(this, "branches", void 0), o(this, "startsAt", void 0), o(this, "endsAt", void 0), o(this, "subscriptionId", void 0), o(this, "subscriptionPlanId", void 0), o(this, "parentId", void 0), o(this, "consumed", void 0), o(this, "giftCodeBatchId", void 0), o(this, "giftStyle", void 0), o(this, "guildId", void 0), o(this, "deleted", void 0), this.id = e.id, this.skuId = e.skuId, this.applicationId = e.applicationId, this.userId = e.userId, this.gifterId = e.gifterId, this.type = e.type, this.branches = e.branches, this.startsAt = e.startsAt, this.endsAt = e.endsAt, this.subscriptionId = e.subscriptionId, this.subscriptionPlanId = e.subscriptionPlanId, this.parentId = e.parentId, this.consumed = e.consumed, this.giftCodeBatchId = e.giftCodeBatchId, this.giftStyle = e.giftStyle, this.guildId = e.guildId, this.deleted = e.deleted
   }
 }

@@ -1,7 +1,7 @@
 "use strict";
-var r = n("67867"),
-  a = n("228042"),
-  o = n("292137");
+var r = n(67867),
+  o = n(228042),
+  a = n(292137);
 r({
   target: "Map",
   proto: !0,
@@ -9,7 +9,7 @@ r({
   forced: !0
 }, {
   keyOf: function(e) {
-    var t = o(a(this), function(t, n) {
+    var t = a(o(this), function(t, n) {
       if (t === e) return {
         key: n
       }

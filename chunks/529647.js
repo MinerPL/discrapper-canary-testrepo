@@ -3,7 +3,7 @@ var i, r, n, s, o, d;
 Object.defineProperty(e, "__esModule", {
   value: !0
 }), e.ICalAttendeeType = e.ICalAttendeeStatus = e.ICalAttendeeRole = void 0;
-let l = a("411496");
+let l = a(411496);
 (s = i = e.ICalAttendeeRole || (e.ICalAttendeeRole = {})).CHAIR = "CHAIR", s.REQ = "REQ-PARTICIPANT", s.OPT = "OPT-PARTICIPANT", s.NON = "NON-PARTICIPANT", (o = r = e.ICalAttendeeStatus || (e.ICalAttendeeStatus = {})).ACCEPTED = "ACCEPTED", o.TENTATIVE = "TENTATIVE", o.DECLINED = "DECLINED", o.DELEGATED = "DELEGATED", o.NEEDSACTION = "NEEDS-ACTION", (d = n = e.ICalAttendeeType || (e.ICalAttendeeType = {})).INDIVIDUAL = "INDIVIDUAL", d.GROUP = "GROUP", d.RESOURCE = "RESOURCE", d.ROOM = "ROOM", d.UNKNOWN = "UNKNOWN";
 class u {
   constructor(t, e) {

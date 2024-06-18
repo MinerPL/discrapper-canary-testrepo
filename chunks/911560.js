@@ -1,42 +1,41 @@
 "use strict";
-n.r(t);
-var i = n("266067"),
-  r = n("544891"),
-  s = n("570140"),
-  a = n("38618"),
-  o = n("131704"),
-  l = n("592125"),
-  u = n("944486"),
-  d = n("981631"),
-  _ = n("176505");
+var i = n(266067),
+  r = n(544891),
+  s = n(570140),
+  o = n(38618),
+  a = n(131704),
+  l = n(592125),
+  u = n(944486),
+  _ = n(981631),
+  d = n(176505);
 let c = {},
   E = !1;
 
 function I(e) {
-  if (null == e || e === _.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID || (0, _.isStaticChannelRoute)(e) || null != l.default.getChannel(e)) return Promise.resolve();
-  if (E || (E = !0, s.default.subscribe("CONNECTION_OPEN", () => {
+  if (null == e || e === d.V || (0, d.AB)(e) || null != l.Z.getChannel(e)) return Promise.resolve();
+  if (E || (E = !0, s.Z.subscribe("CONNECTION_OPEN", () => {
       c = {};
-      let e = u.default.getChannelId(),
-        t = l.default.getChannel(e);
+      let e = u.Z.getChannelId(),
+        t = l.Z.getChannel(e);
       null != e && null == t && I(e)
-    })), !a.default.isConnected()) return Promise.resolve();
+    })), !o.Z.isConnected()) return Promise.resolve();
   let t = c[e];
   if (null != t) return "LOADING" === t.type ? t.promise : Promise.resolve();
-  let n = (0, i.matchPath)(location.pathname, {
-      path: d.Routes.CHANNEL(":guildId", ":channelId", ":messageId"),
+  let n = (0, i.LX)(location.pathname, {
+      path: _.Z5c.CHANNEL(":guildId", ":channelId", ":messageId"),
       exact: !0
     }),
-    T = r.HTTP.get(d.Endpoints.CHANNEL(e)).then(t => {
+    T = r.tn.get(_.ANM.CHANNEL(e)).then(t => {
       let {
         body: i
       } = t;
       if (c[e] = {
           type: "LOADED"
-        }, o.THREAD_CHANNEL_TYPES.has(i.type)) {
+        }, a.Ec.has(i.type)) {
         var r;
-        s.default.dispatch({
+        s.Z.dispatch({
           type: "THREAD_CREATE",
-          channel: (0, o.createChannelRecordFromServer)(i),
+          channel: (0, a.q_)(i),
           messageId: null == n ? void 0 : null === (r = n.params) || void 0 === r ? void 0 : r.messageId
         })
       }
@@ -44,7 +43,7 @@ function I(e) {
       var t;
       c[e] = {
         type: "NOT_FOUND"
-      }, s.default.dispatch({
+      }, s.Z.dispatch({
         type: "CHANNEL_DELETE",
         channel: {
           id: e,
@@ -58,6 +57,6 @@ function I(e) {
     promise: T
   }, T
 }
-t.default = {
+t.Z = {
   loadThread: I
 }

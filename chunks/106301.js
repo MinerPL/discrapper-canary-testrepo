@@ -1,11 +1,11 @@
 "use strict";
 let i, r, s;
-n.r(t), n("47120");
-var a, o = n("392711"),
-  l = n.n(o),
-  u = n("442837"),
-  d = n("570140"),
-  _ = n("981631");
+n(47120);
+var o, a = n(392711),
+  l = n.n(a),
+  u = n(442837),
+  _ = n(570140),
+  d = n(981631);
 
 function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function I() {
     currentDefaultStatus: null
   }
 }
-class T extends(a = u.default.PersistedStore) {
+class T extends(o = u.ZP.PersistedStore) {
   initialize(e) {
     E = {
       ...I(),
@@ -49,7 +49,7 @@ class T extends(a = u.default.PersistedStore) {
     return null == i ? null : s
   }
 }
-c(T, "displayName", "HangStatusStore"), c(T, "persistKey", "HangStatusStore"), t.default = new T(d.default, {
+c(T, "displayName", "HangStatusStore"), c(T, "persistKey", "HangStatusStore"), t.Z = new T(_.Z, {
   LOGOUT: function() {
     E = I()
   },
@@ -63,7 +63,7 @@ c(T, "displayName", "HangStatusStore"), c(T, "persistKey", "HangStatusStore"), t
       customHangStatus: r,
       expiresAt: Date.now() + 288e5
     }), s = {
-      type: _.ActivityTypes.HANG_STATUS,
+      type: d.IIU.HANG_STATUS,
       name: "Hang Status",
       state: i
     }
@@ -72,19 +72,19 @@ c(T, "displayName", "HangStatusStore"), c(T, "persistKey", "HangStatusStore"), t
     let {
       status: t,
       emoji: n,
-      saveAsDefault: a
+      saveAsDefault: o
     } = e;
-    i = _.HangStatusTypes.CUSTOM, r = {
+    i = d.tNA.CUSTOM, r = {
       status: t,
       emoji: n
     };
-    let o = [...E.recentCustomStatuses],
-      u = o.findIndex(e => e.status === t && l().isEqual(e.emoji, n)); - 1 !== u ? o.splice(u, 1) : 7 === o.length && o.splice(6, 1), E.recentCustomStatuses = [r, ...o], a && (E.currentDefaultStatus = {
+    let a = [...E.recentCustomStatuses],
+      u = a.findIndex(e => e.status === t && l().isEqual(e.emoji, n)); - 1 !== u ? a.splice(u, 1) : 7 === a.length && a.splice(6, 1), E.recentCustomStatuses = [r, ...a], o && (E.currentDefaultStatus = {
       status: i,
       customHangStatus: r,
       expiresAt: Date.now() + 288e5
     }), s = {
-      type: _.ActivityTypes.HANG_STATUS,
+      type: d.IIU.HANG_STATUS,
       name: "Hang Status",
       state: i,
       details: t,

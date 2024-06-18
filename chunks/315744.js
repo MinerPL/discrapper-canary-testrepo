@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  useSoundmojiExperiment: function() {
+n.d(t, {
+  P: function() {
     return r
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2023-09_soundmoji",
   label: "Soundmoji",

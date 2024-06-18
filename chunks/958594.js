@@ -1,14 +1,13 @@
 "use strict";
-var n = r("546870"),
-  i = r("195961"),
-  o = r("65183");
+var n = r(546870),
+  i = r(195961),
+  o = r(65183);
 o.List;
 var a = o.Map,
   u = function(t, e, r) {
-    if (!!t) {
-      var n = e.get(t);
-      n && e.set(t, r(n))
-    }
+    if (!t) return;
+    var n = e.get(t);
+    if (!!n) e.set(t, r(n))
   },
   s = function(t, e) {
     var r = [];

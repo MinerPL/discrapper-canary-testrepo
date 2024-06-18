@@ -3,8 +3,8 @@
 function r(e, t) {
   return t.get ? t.get.call(e) : t.value
 }
-n.r(t), n.d(t, {
-  _class_apply_descriptor_get: function() {
+n.d(t, {
+  e: function() {
     return r
   }
 })

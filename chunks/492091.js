@@ -1,9 +1,9 @@
 "use strict";
-var e = n("96403"),
-  o = n("952256"),
-  i = n("735471"),
-  u = n("726433"),
-  s = n("342545"),
+var e = n(96403),
+  o = n(952256),
+  i = n(735471),
+  u = n(726433),
+  s = n(342545),
   c = e([].push);
 t.exports = function(t) {
   if (i(t)) return t;

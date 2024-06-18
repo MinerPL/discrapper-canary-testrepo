@@ -1,13 +1,13 @@
 "use strict";
-s.r(t), s.d(t, {
-  setSafetyPage: function() {
-    return l
+t.d(s, {
+  K: function() {
+    return i
   }
 });
-var a = s("570140");
+var n = t(570140);
 
-function l(e) {
-  a.default.dispatch({
+function i(e) {
+  n.Z.dispatch({
     type: "GUILD_SETTINGS_SAFETY_PAGE",
     page: e
   })

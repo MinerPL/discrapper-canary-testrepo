@@ -1,6 +1,6 @@
 "use strict";
-var r = n("21841"),
-  i = n("689118");
+var r = n(21841),
+  i = n(689118);
 t.inherits = i;
 t.toArray = function(e, t) {
   if (Array.isArray(e)) return e.slice();

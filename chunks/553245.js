@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  ExtendedMemoryLru: function() {
-    return a
+n.d(t, {
+  b: function() {
+    return o
   }
-}), n("47120");
-var i = n("689320"),
-  r = n("143806");
+}), n(47120);
+var i = n(689320),
+  r = n(143806);
 
 function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class a {
+class o {
   get totalLength() {
     return this.primary.length + this.extended.length
   }
@@ -47,7 +47,7 @@ class a {
     return this.upstreamItems(), t || n
   }
   upstreamItems() {
-    if (this.canUpstreamItems()) {
+    if (!!this.canUpstreamItems()) {
       for (let [e, t] of this.extended.entries())
         if (this.primary.put(e, t), this.extended.delete(e), !this.canUpstreamItems()) break
     }
@@ -65,15 +65,15 @@ class a {
     return this.primary.values()
   }
   allEntries() {
-    return i.chain(this.extended.entries(), this.primary.entries())
+    return i.t(this.extended.entries(), this.primary.entries())
   }
   allKeys() {
-    return i.chain(this.extended.keys(), this.primary.keys())
+    return i.t(this.extended.keys(), this.primary.keys())
   }
   allValues() {
-    return i.chain(this.extended.values(), this.primary.values())
+    return i.t(this.extended.values(), this.primary.values())
   }
   constructor(e, t) {
-    s(this, "primary", void 0), s(this, "extended", void 0), this.primary = new r.Lru(e), this.extended = new r.Lru(t)
+    s(this, "primary", void 0), s(this, "extended", void 0), this.primary = new r.S(e), this.extended = new r.S(t)
   }
 }

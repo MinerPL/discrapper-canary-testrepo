@@ -1,6 +1,6 @@
 "use strict";
-var r = n("384111");
-t.certificate = n("201699");
+var r = n(384111);
+t.certificate = n(201699);
 var i = r.define("RSAPrivateKey", function() {
   this.seq().obj(this.key("version").int(), this.key("modulus").int(), this.key("publicExponent").int(), this.key("privateExponent").int(), this.key("prime1").int(), this.key("prime2").int(), this.key("exponent1").int(), this.key("exponent2").int(), this.key("coefficient").int())
 });

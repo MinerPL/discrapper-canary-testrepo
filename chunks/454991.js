@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  OverlayStoredSettings: function() {
+n.d(t, {
+  v: function() {
     return l
   }
 });
-var i, r, s = n("433517"),
-  a = n("987650");
+var i, r, s = n(433517),
+  o = n(987650);
 
-function o(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -31,32 +31,32 @@ class l {
       enabled: this.enabled,
       legacyEnabled: this.legacyEnabled
     };
-    s.Storage.set("OverlayStore3", e)
+    s.K.set("OverlayStore3", e)
   }
   static load() {
     return null == l._loaded && (l._loaded = l.loadInternal()), l._loaded
   }
   static loadInternal() {
-    let e = s.Storage.get("OverlayStore");
+    let e = s.K.get("OverlayStore");
     if (null != e) {
-      let t = new l("boolean" == typeof e.enabled ? e.enabled : a.OVERLAY_SUPPORTED, !1);
-      return t.save(), s.Storage.remove("OverlayStore"), t
+      let t = new l("boolean" == typeof e.enabled ? e.enabled : o.iP, !1);
+      return t.save(), s.K.remove("OverlayStore"), t
     }
-    let t = s.Storage.get("overlayEnabled");
+    let t = s.K.get("overlayEnabled");
     if (null != t) {
-      let e = new l("boolean" == typeof t ? t : a.OVERLAY_SUPPORTED, !1);
-      return e.save(), s.Storage.remove("overlayEnabled"), e
+      let e = new l("boolean" == typeof t ? t : o.iP, !1);
+      return e.save(), s.K.remove("overlayEnabled"), e
     }
-    let n = s.Storage.get("OverlayStore3");
+    let n = s.K.get("OverlayStore3");
     if (null != n) {
       var i, r;
-      return new l(null !== (i = n.enabled) && void 0 !== i ? i : a.OVERLAY_SUPPORTED, null !== (r = n.legacyEnabled) && void 0 !== r && r)
+      return new l(null !== (i = n.enabled) && void 0 !== i ? i : o.iP, null !== (r = n.legacyEnabled) && void 0 !== r && r)
     }
-    let o = new l(a.OVERLAY_SUPPORTED, !1);
-    return o.save(), o
+    let a = new l(o.iP, !1);
+    return a.save(), a
   }
   constructor(e, t) {
-    o(this, "enabled", void 0), o(this, "legacyEnabled", void 0), this.enabled = e, this.legacyEnabled = t
+    a(this, "enabled", void 0), a(this, "legacyEnabled", void 0), this.enabled = e, this.legacyEnabled = t
   }
 }
-o(l, "_loaded", null)
+a(l, "_loaded", null)

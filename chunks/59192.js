@@ -1,43 +1,43 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return u
+t.d(s, {
+  Z: function() {
+    return d
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("236413"),
-  n = s("961926"),
-  i = s("314224"),
-  r = s("849715"),
-  o = s("591026"),
-  d = s("813922");
+var n = t(735250);
+t(470079);
+var i = t(236413),
+  l = t(961926),
+  a = t(314224),
+  r = t(849715),
+  o = t(591026),
+  c = t(813922);
 
-function u(e) {
+function d(e) {
   let {
-    rule: t,
-    isLoading: s,
-    onChangeRule: u
+    rule: s,
+    isLoading: t,
+    onChangeRule: d
   } = e;
-  return null == t ? null : (0, l.isRuleKeywordFilter)(t) ? (0, a.jsx)(i.default, {
-    rule: t,
-    isLoading: s,
-    onChangeRule: u
-  }) : (0, l.isRuleMLSpamFilter)(t) ? (0, a.jsx)(r.default, {
-    rule: t,
-    isLoading: s,
-    onChangeRule: u
-  }) : (0, l.isRuleDefaultKeywordListFilter)(t) ? (0, a.jsx)(n.default, {
-    rule: t,
-    isLoading: s,
-    onChangeRule: u
-  }) : (0, l.isRuleMentionSpamFilter)(t) ? (0, a.jsx)(o.default, {
-    rule: t,
-    isLoading: s,
-    onChangeRule: u
-  }) : (0, l.isRuleUserProfileFilter)(t) ? (0, a.jsx)(d.default, {
-    rule: t,
-    isLoading: s,
-    onChangeRule: u
+  return null == s ? null : (0, i.DO)(s) ? (0, n.jsx)(a.Z, {
+    rule: s,
+    isLoading: t,
+    onChangeRule: d
+  }) : (0, i.vo)(s) ? (0, n.jsx)(r.Z, {
+    rule: s,
+    isLoading: t,
+    onChangeRule: d
+  }) : (0, i.Fn)(s) ? (0, n.jsx)(l.Z, {
+    rule: s,
+    isLoading: t,
+    onChangeRule: d
+  }) : (0, i.nC)(s) ? (0, n.jsx)(o.Z, {
+    rule: s,
+    isLoading: t,
+    onChangeRule: d
+  }) : (0, i.Jq)(s) ? (0, n.jsx)(c.Z, {
+    rule: s,
+    isLoading: t,
+    onChangeRule: d
   }) : null
 }

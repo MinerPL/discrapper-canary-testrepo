@@ -1,9 +1,9 @@
 "use strict";
-var r = n("706165"),
-  i = n("690244")("%TypeError%"),
-  a = n("632384"),
-  o = n("710157"),
-  s = n("713720");
+var r = n(706165),
+  i = n(690244)("%TypeError%"),
+  a = n(632384),
+  o = n(710157),
+  s = n(713720);
 e.exports = function(e) {
   if ("Object" !== a(e)) throw new i("ToPropertyDescriptor requires an object");
   var t = {};

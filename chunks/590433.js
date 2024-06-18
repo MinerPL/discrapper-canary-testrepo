@@ -1,58 +1,58 @@
 "use strict";
-n.r(t), n.d(t, {
-  CLEAR_COMMUNICATION_DISABLED_MODAL_NAME: function() {
+n.d(t, {
+  Cl: function() {
     return E
   },
-  DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY: function() {
-    return _
-  },
-  DisableCommunicationDuration: function() {
-    return r
-  },
-  GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: function() {
-    return d
-  },
-  MAX_REASON_LENGTH: function() {
+  GN: function() {
     return I
   },
-  SET_COMMUNICATION_DISABLED_MODAL_NAME: function() {
+  L9: function() {
+    return l
+  },
+  UK: function() {
+    return r
+  },
+  av: function() {
     return c
   },
-  getDisableCommunicationDurationOptions: function() {
-    return u
+  cu: function() {
+    return _
   },
-  getFriendlyDurationString: function() {
-    return l
+  hL: function() {
+    return d
+  },
+  tr: function() {
+    return u
   }
 });
-var i, r, s = n("63063"),
-  a = n("981631"),
-  o = n("689938");
+var i, r, s = n(63063),
+  o = n(981631),
+  a = n(689938);
 
 function l(e) {
   switch (e) {
     case 60:
-      return o.default.Messages.DURATION_SECS.format({
+      return a.Z.Messages.DURATION_SECS.format({
         secs: 60
       });
     case 300:
-      return o.default.Messages.DURATION_MINS.format({
+      return a.Z.Messages.DURATION_MINS.format({
         mins: 5
       });
     case 600:
-      return o.default.Messages.DURATION_MINS.format({
+      return a.Z.Messages.DURATION_MINS.format({
         mins: 10
       });
     case 3600:
-      return o.default.Messages.DURATION_HOURS.format({
+      return a.Z.Messages.DURATION_HOURS.format({
         hours: 1
       });
     case 86400:
-      return o.default.Messages.DURATION_DAYS.format({
+      return a.Z.Messages.DURATION_DAYS.format({
         days: 1
       });
     case 604800:
-      return o.default.Messages.DURATION_WEEKS.format({
+      return a.Z.Messages.DURATION_WEEKS.format({
         weeks: 1
       });
     default:
@@ -66,8 +66,8 @@ let u = () => Object.keys(r).filter(e => isNaN(Number(e))).map(e => {
       value: r[e]
     }
   }),
-  d = s.default.getArticleURL(a.HelpdeskArticles.DISABLE_GUILD_COMMUNICATION),
-  _ = "GuildCommunicationDisabledDismissedGuilds",
+  _ = s.Z.getArticleURL(o.BhN.DISABLE_GUILD_COMMUNICATION),
+  d = "GuildCommunicationDisabledDismissedGuilds",
   c = "Set Communication Disabled Modal",
   E = "Clear Communication Disabled Modal",
   I = 512

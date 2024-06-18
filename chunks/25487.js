@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  numericPatterns: function() {
-    return r
-  },
-  timezonePatterns: function() {
+n.d(t, {
+  s: function() {
     return i
+  },
+  z: function() {
+    return r
   }
 });
 var r = {

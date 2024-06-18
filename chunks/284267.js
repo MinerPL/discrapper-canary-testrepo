@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  reflectionEquals: function() {
+n.d(t, {
+  Y: function() {
     return i
   }
 });
-var r = n("36056");
+var r = n(36056);
 
 function i(e, t, n) {
   if (t === n) return !0;
@@ -16,11 +16,11 @@ function i(e, t, n) {
     switch (i.kind) {
       case "enum":
       case "scalar":
-        let d = "enum" == i.kind ? r.ScalarType.INT32 : i.T;
+        let d = "enum" == i.kind ? r.wx.INT32 : i.T;
         if (!(i.repeat ? s(d, c, l) : o(d, c, l))) return !1;
         break;
       case "map":
-        if (!("message" == i.V.kind ? u(i.V.T(), a(c), a(l)) : s("enum" == i.V.kind ? r.ScalarType.INT32 : i.V.T, a(c), a(l)))) return !1;
+        if (!("message" == i.V.kind ? u(i.V.T(), a(c), a(l)) : s("enum" == i.V.kind ? r.wx.INT32 : i.V.T, a(c), a(l)))) return !1;
         break;
       case "message":
         let f = i.T();
@@ -33,7 +33,7 @@ let a = Object.values;
 
 function o(e, t, n) {
   if (t === n) return !0;
-  if (e !== r.ScalarType.BYTES) return !1;
+  if (e !== r.wx.BYTES) return !1;
   if (t.length !== n.length) return !1;
   for (let e = 0; e < t.length; e++)
     if (t[e] != n[e]) return !1;

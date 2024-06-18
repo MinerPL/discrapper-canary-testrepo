@@ -1,10 +1,10 @@
 "use strict";
-var r = n("538315"),
+var r = n(538315),
   i = "function" == typeof Symbol && "symbol" == typeof Symbol("foo"),
   a = Object.prototype.toString,
   o = Array.prototype.concat,
-  s = n("445086"),
-  u = n("768175")(),
+  s = n(445086),
+  u = n(768175)(),
   c = function(e, t, n, r) {
     if (t in e) {
       if (!0 === r) {

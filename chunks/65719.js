@@ -1,49 +1,47 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("924102"),
-  i = r("13942"),
-  l = Object.assign || function(e) {
+var r = n(470079),
+  i = n(924102),
+  a = n(13942),
+  o = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
-      var r = arguments[t];
-      for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n])
+      var n = arguments[t];
+      for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
     }
     return e
   },
-  u = function() {
+  s = function() {
     function e(e, t) {
-      for (var r = 0; r < t.length; r++) {
-        var n = t[r];
-        n.enumerable = n.enumerable || !1, n.configurable = !0, "value" in n && (n.writable = !0), Object.defineProperty(e, n.key, n)
+      for (var n = 0; n < t.length; n++) {
+        var r = t[n];
+        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
       }
     }
-    return function(t, r, n) {
-      return r && e(t.prototype, r), n && e(t, n), t
+    return function(t, n, r) {
+      return n && e(t.prototype, n), r && e(t, r), t
     }
   }();
-t.default = function(e) {
+t.Z = function(e) {
   var t = function(t) {
-    function r(e) {
+    function n(e) {
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-      }(this, r);
+      }(this, n);
       var t = function(e, t) {
         if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
         return t && ("object" == typeof t || "function" == typeof t) ? t : e
-      }(this, (r.__proto__ || Object.getPrototypeOf(r)).call(this));
-      return t.handleChange = function(e, r) {
-        if (i.simpleCheckForValidColor(e)) {
-          var n = i.toState(e, e.h || t.state.oldHue);
-          t.setState(n), t.props.onChangeComplete && t.debounce(t.props.onChangeComplete, n, r), t.props.onChange && t.props.onChange(n, r)
+      }(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
+      return t.handleChange = function(e, n) {
+        if (a.LX(e)) {
+          var r = a.jH(e, e.h || t.state.oldHue);
+          t.setState(r), t.props.onChangeComplete && t.debounce(t.props.onChangeComplete, r, n), t.props.onChange && t.props.onChange(r, n)
         }
-      }, t.handleSwatchHover = function(e, r) {
-        if (i.simpleCheckForValidColor(e)) {
-          var n = i.toState(e, e.h || t.state.oldHue);
-          t.props.onSwatchHover && t.props.onSwatchHover(n, r)
+      }, t.handleSwatchHover = function(e, n) {
+        if (a.LX(e)) {
+          var r = a.jH(e, e.h || t.state.oldHue);
+          t.props.onSwatchHover && t.props.onSwatchHover(r, n)
         }
-      }, t.state = l({}, i.toState(e.color, 0)), t.debounce = (0, o.default)(function(e, t, r) {
-        e(t, r)
+      }, t.state = o({}, a.jH(e.color, 0)), t.debounce = (0, i.Z)(function(e, t, n) {
+        e(t, n)
       }, 100), t
     }
     return ! function(e, t) {
@@ -56,22 +54,22 @@ t.default = function(e) {
           configurable: !0
         }
       }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-    }(r, t), u(r, [{
+    }(n, t), s(n, [{
       key: "render",
       value: function() {
         var t = {};
-        return this.props.onSwatchHover && (t.onSwatchHover = this.handleSwatchHover), a().createElement(e, l({}, this.props, this.state, {
+        return this.props.onSwatchHover && (t.onSwatchHover = this.handleSwatchHover), r.createElement(e, o({}, this.props, this.state, {
           onChange: this.handleChange
         }, t))
       }
     }], [{
       key: "getDerivedStateFromProps",
       value: function(e, t) {
-        return l({}, i.toState(e.color, t.oldHue))
+        return o({}, a.jH(e.color, t.oldHue))
       }
-    }]), r
-  }(n.PureComponent || n.Component);
-  return t.propTypes = l({}, e.propTypes), t.defaultProps = l({}, e.defaultProps, {
+    }]), n
+  }(r.PureComponent || r.Component);
+  return t.propTypes = o({}, e.propTypes), t.defaultProps = o({}, e.defaultProps, {
     color: {
       h: 250,
       s: .5,

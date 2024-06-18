@@ -12,12 +12,12 @@ function i(e, t, n) {
 function r(e) {
   return "row" === e.type
 }
-n.r(t), n.d(t, {
-  isListItemRow: function() {
+n.d(t, {
+  o: function() {
     return r
   }
-}), n("653041");
-t.default = class e {
+}), n(653041);
+t.Z = class e {
   mergeProps(e) {
     let {
       sectionHeight: t,
@@ -25,11 +25,11 @@ t.default = class e {
       footerHeight: i,
       listHeaderHeight: r,
       paddingTop: s,
-      paddingBottom: a,
-      sections: o,
+      paddingBottom: o,
+      sections: a,
       getAnchorId: l
     } = e;
-    this.sections = o, this.sectionHeight = t, this.rowHeight = n, this.footerHeight = i, this.listHeaderHeight = r, this.uniform = "number" == typeof n, this.paddingTop = s, this.paddingBottom = a, this.getAnchorId = null != l ? l : this.getAnchorId
+    this.sections = a, this.sectionHeight = t, this.rowHeight = n, this.footerHeight = i, this.listHeaderHeight = r, this.uniform = "number" == typeof n, this.paddingTop = s, this.paddingBottom = o, this.getAnchorId = null != l ? l : this.getAnchorId
   }
   getHeight() {
     let e = this.paddingTop + this.getListHeaderHeight(),
@@ -73,10 +73,10 @@ t.default = class e {
       i = n,
       r = n,
       s = 0,
-      a = 0,
-      o = [],
+      o = 0,
+      a = [],
       l = s => (r = n, (n += s) < e) ? (i += s, !1) : !(r > t) && !0;
-    l(this.getListHeaderHeight()) && o.push({
+    l(this.getListHeaderHeight()) && a.push({
       type: "header",
       section: -1,
       offsetTop: r
@@ -84,34 +84,34 @@ t.default = class e {
     for (let e = 0; e < this.sections.length; e++) {
       let t = this.sections[e];
       if (0 !== t) {
-        if (l(this.getHeightForSection(e)) && o.push({
+        if (l(this.getHeightForSection(e)) && a.push({
             type: "section",
             section: e,
-            listIndex: a,
+            listIndex: o,
             offsetTop: r,
             anchorId: this.getAnchorId(e)
-          }), a += 1, this.uniform) {
+          }), o += 1, this.uniform) {
           let n = this.getHeightForRow(e, 0);
-          for (let i = 0; i < t; i++) l(n) && o.push({
+          for (let i = 0; i < t; i++) l(n) && a.push({
             type: "row",
             section: e,
-            listIndex: a,
+            listIndex: o,
             row: i,
             rowIndex: s,
             offsetTop: r,
             anchorId: this.getAnchorId(e, i)
-          }), s += 1, a += 1
+          }), s += 1, o += 1
         } else
-          for (let n = 0; n < t; n++) l(this.getHeightForRow(e, n)) && o.push({
+          for (let n = 0; n < t; n++) l(this.getHeightForRow(e, n)) && a.push({
             type: "row",
             section: e,
-            listIndex: a,
+            listIndex: o,
             row: n,
             rowIndex: s,
             offsetTop: r,
             anchorId: this.getAnchorId(e, n)
-          }), s += 1, a += 1;
-        l(this.getHeightForFooter(e)) && o.push({
+          }), s += 1, o += 1;
+        l(this.getHeightForFooter(e)) && a.push({
           type: "footer",
           section: e,
           offsetTop: r
@@ -121,7 +121,7 @@ t.default = class e {
     return {
       spacerTop: i,
       totalHeight: n + this.paddingBottom,
-      items: o
+      items: a
     }
   }
   computeScrollPosition(e, t) {
@@ -139,12 +139,12 @@ t.default = class e {
         continue
       }
       if (i += this.getHeightForSection(r), this.uniform) {
-        let a = this.getHeightForRow(r, 0);
-        r === e && null != t ? (i += a * t, s = !0) : i += a * n
+        let o = this.getHeightForRow(r, 0);
+        r === e && null != t ? (i += o * t, s = !0) : i += o * n
       } else
-        for (let a = 0; a < n; a++)
-          if (r < e || r === e && null != t && a < t) i += this.getHeightForRow(r, a);
-          else if (r === e && null != t && a === t) {
+        for (let o = 0; o < n; o++)
+          if (r < e || r === e && null != t && o < t) i += this.getHeightForRow(r, o);
+          else if (r === e && null != t && o === t) {
         s = !0;
         break
       }!s && (i += this.getHeightForFooter(r)), r += 1

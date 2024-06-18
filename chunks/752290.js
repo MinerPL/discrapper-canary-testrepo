@@ -1,47 +1,47 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("729357"),
+n(47120);
+var i = n(729357),
   r = n.n(i),
-  s = n("147913"),
-  a = n("557177");
-let o = (0, a.createSound)("vibing_wumpus", "vibing_wumpus", 0),
+  s = n(147913),
+  o = n(557177);
+let a = (0, o.tu)("vibing_wumpus", "vibing_wumpus", 0),
   l = 0,
   u = 0,
-  d = null;
+  _ = null;
 
-function _(e, t) {
+function d(e, t) {
   let n = Math.round(100 * e),
     i = Math.round(100 * u),
     s = Math.round(100 * l);
-  n > 0 && s >= i || n < 0 && s <= i ? (clearInterval(d), 0 === i && null != t && t()) : (s += n, l = s / 100, o.volume = r()(l, 0, .5))
+  n > 0 && s >= i || n < 0 && s <= i ? (clearInterval(_), 0 === i && null != t && t()) : (s += n, l = s / 100, a.volume = r()(l, 0, .5))
 }
 
 function c(e) {
-  null != d && clearInterval(d), u = 0;
-  let t = f();
-  d = setInterval(() => {
-    _(t, e)
+  null != _ && clearInterval(_), u = 0;
+  let t = h();
+  _ = setInterval(() => {
+    d(t, e)
   }, 100)
 }
 
 function E() {
-  null != d && clearInterval(d), o.loop(), u = .5;
-  let e = f();
-  d = setInterval(() => _(e), 100)
+  null != _ && clearInterval(_), a.loop(), u = .5;
+  let e = h();
+  _ = setInterval(() => d(e), 100)
 }
 
 function I() {
-  c(o.pause.bind(o))
+  c(a.pause.bind(a))
 }
 
 function T() {
-  c(o.stop.bind(o))
+  c(a.stop.bind(a))
 }
 
-function f() {
+function h() {
   return .2 * (u - l)
 }
-class S extends s.default {
+class S extends s.Z {
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
@@ -56,4 +56,4 @@ class S extends s.default {
     }) : t[n] = i
   }
 }
-t.default = new S
+t.Z = new S

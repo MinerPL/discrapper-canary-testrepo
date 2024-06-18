@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return s
   }
 });
-var i = n("987650");
+var i = n(987650);
 
-function a(e) {
+function s(e) {
   switch (e) {
-    case i.OpacityBounds.BOTTOM:
-      return i.OpacityBounds.BOTTOM;
-    case i.OpacityBounds.LOWER:
-      return i.OpacityBounds.LOWER;
-    case i.OpacityBounds.UPPER:
-      return i.OpacityBounds.UPPER;
+    case i.wF.BOTTOM:
+      return i.wF.BOTTOM;
+    case i.wF.LOWER:
+      return i.wF.LOWER;
+    case i.wF.UPPER:
+      return i.wF.UPPER;
     default:
-      return i.OpacityBounds.TOP
+      return i.wF.TOP
   }
 }

@@ -8,10 +8,10 @@ function i(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-n.r(t), n("733860"), n("653041");
+n(733860), n(653041);
 let r = null == n.g.__getTotalRequireTime ? () => 0 : () => n.g.__getTotalRequireTime(),
   s = "undefined" != typeof performance;
-t.default = new class e {
+t.Z = new class e {
   get isTracing() {
     return !!s && !!this.isTracing_ && (!(Date.now() > this.endTime_) || (this.isTracing_ = !1, !1))
   }
@@ -85,8 +85,8 @@ t.default = new class e {
     this.mark(e, "Start ".concat(t)), this.prefix += "| ";
     let r = Date.now(),
       s = n(),
-      a = Date.now() - r;
-    return this.prefix = i, this.mark(e, "Finish ".concat(t), a), s
+      o = Date.now() - r;
+    return this.prefix = i, this.mark(e, "Finish ".concat(t), o), s
   }
   async timeAsync(e, t, n) {
     if (!this.isTracing) return n();

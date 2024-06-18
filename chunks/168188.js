@@ -39,28 +39,27 @@ var e = function() {
       !this.graph_ && (this.graph_ = new e(this.devicePixelRatio)), this.graph_.addDataSeries(t), this.repaint()
     },
     repaint: function() {
-      if (null !== this.canvas_.offsetParent) {
-        this.repaintTimerRunning_ = !1;
-        var t = this.canvas_.width,
-          e = this.canvas_.height,
-          r = this.canvas_.getContext("2d");
-        if (r.fillStyle = this.backgroundColor, r.fillRect(0, 0, t, e), !(4 * this.fontSize > e) && !(t < 50)) {
-          r.save();
-          var n = this.scrollbar_.position_;
-          0 == this.scrollbar_.range_ && (n = this.getLength_() - t);
-          var i = this.startTime_ + n * this.scale_,
-            a = e;
-          e -= Math.ceil(this.fontSize * this.devicePixelRatio) + 4, this.drawTimeLabels(r, t, e, a, i), r.strokeStyle = this.gridColor, r.lineWidth = this.devicePixelRatio, r.strokeRect(1, 1, t - 1, e - 1), this.graph_ && (this.graph_.layout(t, e, this.fontSize, i, this.scale_), this.graph_.drawTicks(r), this.graph_.drawLines(r), this.graph_.drawLabels(r)), r.restore()
-        }
+      if (null === this.canvas_.offsetParent) return;
+      this.repaintTimerRunning_ = !1;
+      var t = this.canvas_.width,
+        e = this.canvas_.height,
+        r = this.canvas_.getContext("2d");
+      if (r.fillStyle = this.backgroundColor, r.fillRect(0, 0, t, e), !(4 * this.fontSize > e) && !(t < 50)) {
+        r.save();
+        var n = this.scrollbar_.position_;
+        0 == this.scrollbar_.range_ && (n = this.getLength_() - t);
+        var i = this.startTime_ + n * this.scale_,
+          a = e;
+        e -= Math.ceil(this.fontSize * this.devicePixelRatio) + 4, this.drawTimeLabels(r, t, e, a, i), r.strokeStyle = this.gridColor, r.lineWidth = this.devicePixelRatio, r.strokeRect(1, 1, t - 1, e - 1), this.graph_ && (this.graph_.layout(t, e, this.fontSize, i, this.scale_), this.graph_.drawTicks(r), this.graph_.drawLines(r), this.graph_.drawLabels(r)), r.restore()
       }
     },
     drawTimeLabels: function(t, e, r, n, i) {
       var a = 6e4 * Math.ceil(i / 6e4);
       for (t.textBaseline = "bottom", t.textAlign = "center", t.fillStyle = this.textColor, t.strokeStyle = this.gridColor, t.lineWidth = this.devicePixelRatio, t.font = `${this.fontWeight} ${this.fontSize*this.devicePixelRatio}px ${this.fontFamily}`;;) {
-        var s = Math.round((a - i) / this.scale_);
-        if (s >= e) break;
-        var o = new Date(a).toLocaleTimeString(this.timeLocales, this.timeOptions);
-        t.fillText(o, s, n), t.beginPath(), t.lineTo(s, 1), t.lineTo(s, r), t.stroke(), a += 6e4
+        var o = Math.round((a - i) / this.scale_);
+        if (o >= e) break;
+        var s = new Date(a).toLocaleTimeString(this.timeLocales, this.timeOptions);
+        t.fillText(s, o, n), t.beginPath(), t.lineTo(o, 1), t.lineTo(o, r), t.stroke(), a += 6e4
       }
     },
     getDataSeriesCount: function() {
@@ -88,12 +87,12 @@ var e = function() {
       },
       layout: function(t, e, r, n, i) {
         this.width_ = t, this.height_ = e, this.fontHeight_ = r, this.startTime_ = n, this.scale_ = i;
-        for (var a = 0, s = 0, o = 0; o < this.dataSeries_.length; ++o) {
-          var u = this.getValues(this.dataSeries_[o]);
+        for (var a = 0, o = 0, s = 0; s < this.dataSeries_.length; ++s) {
+          var u = this.getValues(this.dataSeries_[s]);
           if (u)
-            for (var c = 0; c < u.length; ++c) u[c] > a ? a = u[c] : u[c] < s && (s = u[c])
+            for (var c = 0; c < u.length; ++c) u[c] > a ? a = u[c] : u[c] < o && (o = u[c])
         }
-        this.layoutLabels_(s, a)
+        this.layoutLabels_(o, a)
       },
       layoutLabels_: function(t, e) {
         if (e - t < 1024) {
@@ -117,20 +116,20 @@ var e = function() {
         var i = 2 * this.fontHeight_ + 4,
           a = 1 + this.height_ / i;
         a < 2 ? a = 2 : a > 6 && (a = 6);
-        for (var s = Math.pow(10, -r), o = r; !(Math.ceil(n / s) + 1 <= a);) {
+        for (var o = Math.pow(10, -r), s = r; !(Math.ceil(n / o) + 1 <= a);) {
           ;
-          if (Math.ceil(n / (2 * s)) + 1 <= a) {
-            s *= 2;
+          if (Math.ceil(n / (2 * o)) + 1 <= a) {
+            o *= 2;
             break
           }
-          if (Math.ceil(n / (5 * s)) + 1 <= a) {
-            s *= 5;
+          if (Math.ceil(n / (5 * o)) + 1 <= a) {
+            o *= 5;
             break
           }
-          s *= 10, o > 0 && --o
+          o *= 10, s > 0 && --s
         }
-        this.max_ = Math.ceil(e / s) * s, this.min_ = Math.floor(t / s) * s;
-        for (var u = this.max_; u >= this.min_; u -= s) this.labels_.push(u.toFixed(o))
+        this.max_ = Math.ceil(e / o) * o, this.min_ = Math.floor(t / o) * o;
+        for (var u = this.max_; u >= this.min_; u -= o) this.labels_.push(u.toFixed(s))
       },
       drawTicks: function(t) {
         e = this.width_ - 1, r = this.width_ - 1 - 10, t.fillStyle = this.gridColor, t.lineWidth = this.devicePixelRatio, t.beginPath();

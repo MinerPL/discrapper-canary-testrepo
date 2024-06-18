@@ -1,14 +1,14 @@
 "use strict";
-var r = n("690244")("%TypeError%"),
-  i = n("395238"),
-  a = n("116298"),
-  o = n("441596"),
-  s = n("75150"),
-  u = n("860438"),
-  c = n("828148"),
-  l = n("148309"),
-  d = n("240919"),
-  f = n("632384");
+var r = n(690244)("%TypeError%"),
+  i = n(395238),
+  a = n(116298),
+  o = n(441596),
+  s = n(75150),
+  u = n(860438),
+  c = n(828148),
+  l = n(148309),
+  d = n(240919),
+  f = n(632384);
 e.exports = function(e, t, n) {
   if ("Object" !== f(e)) throw new r("Assertion failed: Type(O) is not Object");
   if (!c(t)) throw new r("Assertion failed: IsPropertyKey(P) is not true");

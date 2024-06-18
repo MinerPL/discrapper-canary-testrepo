@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
-  FIRST_BLOCK_PATH: function() {
+n.d(t, {
+  On: function() {
+    return a
+  },
+  YD: function() {
     return i
   },
-  FIRST_TEXT_PATH: function() {
-    return r
-  },
-  FIRST_TEXT_POINT: function() {
-    return s
-  },
-  SELECTABLE_VOIDS: function() {
+  i$: function() {
     return o
   },
-  WHITESPACE_RE: function() {
-    return a
+  nO: function() {
+    return s
+  },
+  u9: function() {
+    return r
   }
 });
 let i = [0],
@@ -22,5 +22,5 @@ let i = [0],
     path: [0, 0],
     offset: 0
   },
-  a = /(\t|\s)/,
-  o = ["applicationCommandOption"]
+  o = /(\t|\s)/,
+  a = ["applicationCommandOption"]

@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  isGamingVoiceActivityEnabled: function() {
-    return s
-  },
-  useIsGamingVoiceActivityEnabled: function() {
+n.d(t, {
+  kM: function() {
     return r
+  },
+  vg: function() {
+    return s
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-01_guild_gaming_voice_activity",
   label: "Guild Gaming Voice Activity",
@@ -53,4 +53,4 @@ function s(e, t) {
   });
   return n
 }
-t.default = i
+t.ZP = i

@@ -1,40 +1,39 @@
 "use strict";
-n.r(t);
-var i, r, s, a, o = n("442837"),
-  l = n("570140"),
-  u = n("592125");
-let d = {};
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(592125);
+let _ = {};
 
-function _(e) {
-  let t = u.default.getChannel(e);
+function d(e) {
+  let t = u.Z.getChannel(e);
   return !!(null != t && t.isForumLikeChannel()) || !1
 }
 
 function c(e) {
   var t;
-  let n = null !== (t = d[e]) && void 0 !== t ? t : {
+  let n = null !== (t = _[e]) && void 0 !== t ? t : {
     query: null,
     loading: !1,
     results: null
   };
-  return d[e] = n, n
+  return _[e] = n, n
 }
-class E extends(a = o.default.Store) {
+class E extends(o = a.ZP.Store) {
   getSearchQuery(e) {
-    let t = d[e];
+    let t = _[e];
     return null == t ? void 0 : t.query
   }
   getSearchLoading(e) {
     var t;
-    let n = d[e];
+    let n = _[e];
     return null !== (t = null == n ? void 0 : n.loading) && void 0 !== t && t
   }
   getSearchResults(e) {
-    let t = d[e];
+    let t = _[e];
     return null == t ? void 0 : t.results
   }
   getHasSearchResults(e) {
-    let t = d[e];
+    let t = _[e];
     return (null == t ? void 0 : t.results) != null && t.results.length > 0
   }
 }
@@ -43,9 +42,9 @@ s = "ForumSearchStore", (r = "displayName") in(i = E) ? Object.defineProperty(i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new E(l.default, {
+}) : i[r] = s, t.Z = new E(l.Z, {
   CONNECTION_OPEN: function() {
-    d = {}
+    _ = {}
   },
   THREAD_DELETE: function(e) {
     var t;
@@ -53,9 +52,9 @@ s = "ForumSearchStore", (r = "displayName") in(i = E) ? Object.defineProperty(i,
       channel: n
     } = e, i = n.parent_id;
     if (null == i) return !1;
-    let r = d[i];
+    let r = _[i];
     if (null == r) return !1;
-    d[i] = {
+    _[i] = {
       ...r,
       results: null === (t = r.results) || void 0 === t ? void 0 : t.filter(e => n.id !== e)
     }
@@ -64,16 +63,16 @@ s = "ForumSearchStore", (r = "displayName") in(i = E) ? Object.defineProperty(i,
     let {
       channel: t
     } = e;
-    return delete d[t.id]
+    return delete _[t.id]
   },
   FORUM_SEARCH_QUERY_UPDATED: function(e) {
     let {
       channelId: t,
       query: n
     } = e;
-    if (!_(t)) return !1;
+    if (!d(t)) return !1;
     let i = c(t);
-    d[t] = {
+    _[t] = {
       ...i,
       query: n,
       results: null
@@ -83,9 +82,9 @@ s = "ForumSearchStore", (r = "displayName") in(i = E) ? Object.defineProperty(i,
     let {
       channelId: t
     } = e;
-    if (!_(t)) return !1;
+    if (!d(t)) return !1;
     let n = c(t);
-    d[t] = {
+    _[t] = {
       ...n,
       loading: !0
     }
@@ -95,9 +94,9 @@ s = "ForumSearchStore", (r = "displayName") in(i = E) ? Object.defineProperty(i,
       channelId: t,
       threadIds: n
     } = e;
-    if (!_(t)) return !1;
+    if (!d(t)) return !1;
     let i = c(t);
-    d[t] = {
+    _[t] = {
       ...i,
       loading: !1,
       results: n
@@ -107,9 +106,9 @@ s = "ForumSearchStore", (r = "displayName") in(i = E) ? Object.defineProperty(i,
     let {
       channelId: t
     } = e;
-    if (!_(t)) return !1;
+    if (!d(t)) return !1;
     let n = c(t);
-    d[t] = {
+    _[t] = {
       ...n,
       loading: !1,
       results: []
@@ -119,6 +118,6 @@ s = "ForumSearchStore", (r = "displayName") in(i = E) ? Object.defineProperty(i,
     let {
       channelId: t
     } = e;
-    return !!_(t) && delete d[t]
+    return !!d(t) && delete _[t]
   }
 })

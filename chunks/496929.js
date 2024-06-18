@@ -1,39 +1,39 @@
 "use strict";
-n.r(t), n.d(t, {
-  fetchGiftableEntitlements: function() {
+n.d(t, {
+  Qv: function() {
     return u
   },
-  fetchUserEntitlements: function() {
+  p0: function() {
     return l
   },
-  fetchUserEntitlementsForApplication: function() {
-    return o
+  yD: function() {
+    return a
   }
 });
-var i = n("544891"),
-  r = n("570140"),
-  s = n("73346"),
-  a = n("981631");
+var i = n(544891),
+  r = n(570140),
+  s = n(73346),
+  o = n(981631);
 
-function o(e) {
+function a(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  return r.default.wait(() => {
-    r.default.dispatch({
+  return r.Z.wait(() => {
+    r.Z.dispatch({
       type: "ENTITLEMENT_FETCH_APPLICATION_START",
       applicationId: e
     })
-  }), i.HTTP.get({
-    url: a.Endpoints.ENTITLEMENTS_FOR_APPLICATION(e),
+  }), i.tn.get({
+    url: o.ANM.ENTITLEMENTS_FOR_APPLICATION(e),
     oldFormErrors: !0,
     query: {
       exclude_consumed: t
     }
-  }).then(t => (r.default.dispatch({
+  }).then(t => (r.Z.dispatch({
     type: "ENTITLEMENT_FETCH_APPLICATION_SUCCESS",
     applicationId: e,
     entitlements: t.body
   }), t.body)).catch(() => {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "ENTITLEMENT_FETCH_APPLICATION_FAIL",
       applicationId: e
     })
@@ -45,42 +45,42 @@ async function l(e) {
     withApplication: n = !1,
     entitlementType: s
   } = e;
-  r.default.dispatch({
+  r.Z.dispatch({
     type: "ENTITLEMENTS_FETCH_FOR_USER_START"
   });
   try {
-    let e = await i.HTTP.get({
-      url: a.Endpoints.ENTITLEMENTS_FOR_USER,
+    let e = await i.tn.get({
+      url: o.ANM.ENTITLEMENTS_FOR_USER,
       query: {
         with_sku: t,
         with_application: n,
         entitlement_type: s
       }
     });
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "ENTITLEMENTS_FETCH_FOR_USER_SUCCESS",
       entitlements: e.body
     })
   } catch (e) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "ENTITLEMENTS_FETCH_FOR_USER_FAIL"
     })
   }
 }
 async function u() {
-  r.default.dispatch({
+  r.Z.dispatch({
     type: "ENTITLEMENTS_GIFTABLE_FETCH"
   });
   try {
-    let e = await (0, s.httpGetWithCountryCodeQuery)({
-      url: a.Endpoints.ENTITLEMENTS_GIFTABLE
+    let e = await (0, s.Kb)({
+      url: o.ANM.ENTITLEMENTS_GIFTABLE
     });
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS",
       entitlements: e.body
     })
   } catch (e) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "ENTITLEMENTS_GIFTABLE_FETCH_FAIL"
     })
   }

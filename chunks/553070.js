@@ -1,10 +1,10 @@
-var r = n("861538"),
-  i = n("900624"),
-  a = n("117973");
+var n = e(861538),
+  o = e(900624),
+  i = e(117973);
 t.exports = function() {
   this.size = 0, this.__data__ = {
-    hash: new r,
-    map: new(a || i),
-    string: new r
+    hash: new n,
+    map: new(i || o),
+    string: new n
   }
 }

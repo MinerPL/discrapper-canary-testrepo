@@ -2,43 +2,43 @@
 Object.defineProperty(t, "__esModule", {
   value: !0
 }), t.isvalidColorString = t.red = t.getContrastingColor = t.isValidHex = t.toState = t.simpleCheckForValidColor = void 0;
-var n = o(r("876344")),
-  a = o(r("979590"));
+var r = a(n(876344)),
+  i = a(n(979590));
 
-function o(e) {
+function a(e) {
   return e && e.__esModule ? e : {
     default: e
   }
 }
 t.simpleCheckForValidColor = function(e) {
   var t = 0,
-    r = 0;
-  return (0, n.default)(["r", "g", "b", "a", "h", "s", "l", "v"], function(n) {
-    e[n] && (t += 1, !isNaN(e[n]) && (r += 1), ("s" === n || "l" === n) && /^\d+%$/.test(e[n]) && (r += 1))
-  }), t === r && e
+    n = 0;
+  return (0, r.default)(["r", "g", "b", "a", "h", "s", "l", "v"], function(r) {
+    e[r] && (t += 1, !isNaN(e[r]) && (n += 1), ("s" === r || "l" === r) && /^\d+%$/.test(e[r]) && (n += 1))
+  }), t === n && e
 };
-var i = t.toState = function(e, t) {
-  var r = e.hex ? (0, a.default)(e.hex) : (0, a.default)(e),
-    n = r.toHsl(),
-    o = r.toHsv(),
-    i = r.toRgb(),
-    l = r.toHex();
-  return 0 === n.s && (n.h = t || 0, o.h = t || 0), {
-    hsl: n,
-    hex: "000000" === l && 0 === i.a ? "transparent" : "#" + l,
-    rgb: i,
-    hsv: o,
-    oldHue: e.h || t || n.h,
+var o = t.toState = function(e, t) {
+  var n = e.hex ? (0, i.default)(e.hex) : (0, i.default)(e),
+    r = n.toHsl(),
+    a = n.toHsv(),
+    o = n.toRgb(),
+    s = n.toHex();
+  return 0 === r.s && (r.h = t || 0, a.h = t || 0), {
+    hsl: r,
+    hex: "000000" === s && 0 === o.a ? "transparent" : "#" + s,
+    rgb: o,
+    hsv: a,
+    oldHue: e.h || t || r.h,
     source: e.source
   }
 };
 t.isValidHex = function(e) {
   if ("transparent" === e) return !0;
   var t = "#" === String(e).charAt(0) ? 1 : 0;
-  return e.length !== 4 + t && e.length < 7 + t && (0, a.default)(e).isValid()
+  return e.length !== 4 + t && e.length < 7 + t && (0, i.default)(e).isValid()
 }, t.getContrastingColor = function(e) {
   if (!e) return "#fff";
-  var t = i(e);
+  var t = o(e);
   return "transparent" === t.hex ? "rgba(0,0,0,0.4)" : (299 * t.rgb.r + 587 * t.rgb.g + 114 * t.rgb.b) / 1e3 >= 128 ? "#000" : "#fff"
 }, t.red = {
   hsl: {
@@ -61,6 +61,6 @@ t.isValidHex = function(e) {
     a: 1
   }
 }, t.isvalidColorString = function(e, t) {
-  var r = e.replace("\xb0", "");
-  return (0, a.default)(t + " (" + r + ")")._ok
+  var n = e.replace("\xb0", "");
+  return (0, i.default)(t + " (" + n + ")")._ok
 }

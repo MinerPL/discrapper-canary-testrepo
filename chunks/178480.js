@@ -1,39 +1,39 @@
 "use strict";
-n.r(t), n.d(t, {
-  getRelativeTimestamp: function() {
-    return l
-  },
-  inNotificationCenterEnabled: function() {
+n.d(t, {
+  $N: function() {
     return E
   },
-  incomingFriendRequestLocalItem: function() {
-    return d
-  },
-  isMentionItem: function() {
+  RB: function() {
     return c
   },
-  isRemoteAcked: function() {
-    return u
+  a3: function() {
+    return l
   },
-  mobileNativeUpdateAvailableLocalItem: function() {
+  hn: function() {
+    return d
+  },
+  mH: function() {
     return _
+  },
+  r: function() {
+    return u
   }
 });
-var i = n("695346"),
-  r = n("709054"),
-  s = n("360629"),
-  a = n("497089"),
-  o = n("925928");
+var i = n(695346),
+  r = n(709054),
+  s = n(360629),
+  o = n(497089),
+  a = n(925928);
 let l = function(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return (0, o.default)({
+    return (0, a.ZP)({
       since: e,
-      getFormatter: t ? o.getAbbreviatedFormatter : o.getFullFormatter
+      getFormatter: t ? a.d0 : a.Zk
     })
   },
-  u = (e, t) => e.acked || t !== i.NOTIFICATION_CENTER_ACKED_BEFORE_ID_UNSET && r.default.compare(t, e.id) >= 0;
+  u = (e, t) => e.acked || t !== i.uL && r.default.compare(t, e.id) >= 0;
 
-function d(e, t) {
+function _(e, t) {
   let n = r.default.fromTimestamp(new Date(t).getTime());
   return {
     acked: !1,
@@ -42,24 +42,24 @@ function d(e, t) {
     kind: "notification-center-item",
     local_id: "incoming_friend_requests_".concat(e.id, "_").concat(n),
     deeplink: "https://discord.com/users/".concat(e.id),
-    type: a.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS,
+    type: o.O7.INCOMING_FRIEND_REQUESTS,
     id: n
   }
 }
 
-function _(e) {
+function d(e) {
   return {
     acked: !1,
     enableBadge: !0,
     id: r.default.fromTimestamp(new Date().getTime()),
     kind: "notification-center-item",
     local_id: "mobile_update_available_".concat(e.build),
-    type: a.NotificationCenterLocalItems.MOBILE_NATIVE_UPDATE_AVAILABLE,
+    type: o.O7.MOBILE_NATIVE_UPDATE_AVAILABLE,
     deeplink: e.urls.install.toString()
   }
 }
-let c = e => e.type === a.NotificationCenterItems.RECENT_MENTION || e.type === a.NotificationCenterItems.REPLY_MENTION;
+let c = e => e.type === o.DY.RECENT_MENTION || e.type === o.DY.REPLY_MENTION;
 
 function E() {
-  return (0, s.inDesktopNotificationCenterExperiment)()
+  return (0, s.Fl)()
 }

@@ -1,28 +1,27 @@
 "use strict";
-a.r(s);
-var t = a("735250");
-a("470079");
-var l = a("803997"),
-  i = a.n(l),
-  r = a("442837"),
-  d = a("481060"),
-  n = a("434404"),
-  o = a("999382"),
-  c = a("219369"),
-  E = a("981631"),
-  u = a("689938"),
-  S = a("190500");
-s.default = e => {
+var t = a(735250);
+a(470079);
+var i = a(120356),
+  r = a.n(i),
+  l = a(442837),
+  n = a(481060),
+  o = a(434404),
+  d = a(999382),
+  c = a(219369),
+  E = a(981631),
+  R = a(689938),
+  S = a(353964);
+s.Z = e => {
   var s;
   let {
     guild: a,
-    headerId: l
-  } = e, R = (0, r.useStateFromStores)([o.default], () => "description" in o.default.getErrors()), m = R ? u.default.Messages.SERVER_DISCOVERY_BLOCKED_WORD_LEARN_MORE.format({
+    headerId: i
+  } = e, m = (0, l.e7)([d.Z], () => "description" in d.Z.getErrors()), x = m ? R.Z.Messages.SERVER_DISCOVERY_BLOCKED_WORD_LEARN_MORE.format({
     onLearnMoreClick: () => {
-      (0, c.navigateToAndTrackHelpCenterClick)({
-        articleId: E.HelpdeskArticles.SERVER_DISCOVERY_GUIDELINES,
+      (0, c.lW)({
+        articleId: E.BhN.SERVER_DISCOVERY_GUIDELINES,
         guildId: a.id,
-        modalStep: c.DiscoverySetupModalSteps.DESCRIPTION
+        modalStep: c.tK.DESCRIPTION
       })
     }
   }) : null;
@@ -31,39 +30,39 @@ s.default = e => {
     children: [(0, t.jsxs)("div", {
       className: S.content,
       children: [(0, t.jsx)("div", {
-        className: i()(S.stepImage, S.pencilImage)
-      }), (0, t.jsx)(d.Heading, {
+        className: r()(S.stepImage, S.pencilImage)
+      }), (0, t.jsx)(n.Heading, {
         variant: "heading-xl/semibold",
         className: S.header,
-        id: l,
-        children: u.default.Messages.SERVER_DISCOVERY_DESCRIPTION_PAGE_HEADER
-      }), (0, t.jsx)(d.Text, {
+        id: i,
+        children: R.Z.Messages.SERVER_DISCOVERY_DESCRIPTION_PAGE_HEADER
+      }), (0, t.jsx)(n.Text, {
         color: "none",
         variant: "text-md/normal",
         className: S.headerCaption,
-        children: u.default.Messages.SERVER_DISCOVERY_DESCRIPTION_PAGE_SUBHEADING
+        children: R.Z.Messages.SERVER_DISCOVERY_DESCRIPTION_PAGE_SUBHEADING
       })]
-    }), (0, t.jsxs)(d.FormSection, {
+    }), (0, t.jsxs)(n.FormSection, {
       className: S.form,
-      children: [(0, t.jsx)(d.FormTitle, {
+      children: [(0, t.jsx)(n.FormTitle, {
         required: !0,
-        children: u.default.Messages.FORM_LABEL_SERVER_DESCRIPTION
-      }), (0, t.jsx)(d.FormText, {
-        type: d.FormTextTypes.DESCRIPTION,
+        children: R.Z.Messages.FORM_LABEL_SERVER_DESCRIPTION
+      }), (0, t.jsx)(n.FormText, {
+        type: n.FormTextTypes.DESCRIPTION,
         className: S.description,
-        children: u.default.Messages.SERVER_DISCOVERY_SERVER_DESCRIPTION_INPUT_SUBLABEL
-      }), (0, t.jsx)(d.TextArea, {
+        children: R.Z.Messages.SERVER_DISCOVERY_SERVER_DESCRIPTION_INPUT_SUBLABEL
+      }), (0, t.jsx)(n.TextArea, {
         autoFocus: !0,
         value: null !== (s = a.description) && void 0 !== s ? s : "",
-        placeholder: u.default.Messages.SERVER_DESCIPTION_EMPTY,
+        placeholder: R.Z.Messages.SERVER_DESCIPTION_EMPTY,
         onChange: e => {
-          n.default.updateGuild({
+          o.Z.updateGuild({
             description: e
           })
         },
         maxLength: 120,
         className: S.textArea,
-        error: m
+        error: x
       })]
     })]
   })

@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  Interactive: function() {
+n.d(t, {
+  v: function() {
     return l
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("803997"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("1561"),
-  o = n("399795");
+  o = n(1561),
+  a = n(590471);
 
 function l(e) {
   let {
@@ -18,12 +18,12 @@ function l(e) {
     selected: r = !1,
     className: l,
     ...u
-  } = e, d = null != t ? t : a.Clickable;
-  return (0, i.jsx)(d, {
+  } = e, _ = null != t ? t : o.P;
+  return (0, i.jsx)(_, {
     ...u,
-    className: s()(o.interactive, l, {
-      [o.muted]: n,
-      [o.selected]: r
+    className: s()(a.interactive, l, {
+      [a.muted]: n,
+      [a.selected]: r
     })
   })
 }

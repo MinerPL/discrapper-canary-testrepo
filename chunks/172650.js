@@ -1,5 +1,5 @@
 "use strict";
-r.r(t), t.default = {
+t.Z = {
   scheme: "solarized",
   author: "ethan schoonover (http://ethanschoonover.com/solarized)",
   base00: "#002b36",

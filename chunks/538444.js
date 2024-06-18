@@ -1,4 +1,4 @@
-var r = n("961499");
+var n = e(961499);
 t.exports = function(t) {
-  return r(this, t).get(t)
+  return n(this, t).get(t)
 }

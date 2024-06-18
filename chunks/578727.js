@@ -1,5 +1,5 @@
 "use strict";
-var n = r("660610");
+var n = r(660610);
 t.exports = function t(e) {
   if (n(e)) {
     var r = e.getAttribute("data-offset-key");

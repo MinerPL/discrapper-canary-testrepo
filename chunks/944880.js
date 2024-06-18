@@ -1,107 +1,111 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("913527"),
+n(47120);
+var i = n(913527),
   r = n.n(i),
-  a = n("570140"),
-  s = n("147913"),
-  o = n("959546"),
-  l = n("594174"),
-  u = n("580130"),
-  d = n("111361"),
-  _ = n("470918"),
-  c = n("595878"),
-  E = n("513785"),
-  I = n("106255"),
-  T = n("474936"),
-  f = n("735825");
+  s = n(570140),
+  o = n(147913),
+  a = n(959546),
+  l = n(594174),
+  u = n(580130),
+  _ = n(111361),
+  d = n(470918),
+  c = n(595878),
+  E = n(513785),
+  I = n(106255),
+  T = n(474936),
+  h = n(735825);
 let S = null,
-  h = !1;
+  f = !1;
 
-function A(e) {
-  let t = o.default.createFromServer(e.entitlement);
-  (0, I.isPremiumTier2Entitlement)(t) ? m({
+function N(e) {
+  let t = a.Z.createFromServer(e.entitlement);
+  (0, I._k)(t) ? A({
     forceRefresh: !0
-  }): (0, I.isValidTenureRewardEntitlement)(t) && null != E.default.getTenureRewardStatusForRewardId(t.skuId) && a.default.dispatch({
+  }): (0, I.YE)(t) && null != E.Z.getTenureRewardStatusForRewardId(t.skuId) && s.Z.dispatch({
     type: "USER_TENURE_REWARD_STATUS_DELETE",
     tenureRewardIds: [t.skuId]
   })
 }
 
-function m() {
+function A() {
   let {
     forceRefresh: e = !1
   } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-  p();
-  let t = u.default.getForApplication(T.PREMIUM_SUBSCRIPTION_APPLICATION),
-    n = (0, I.getPremiumTier2Entitlement)(t),
-    i = (0, I.getTenureRewardEntitlement)([f.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH, f.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS], t),
-    s = l.default.getCurrentUser();
-  if (!(0, d.isPremiumExactly)(s, T.PremiumTypes.TIER_2) && null == n) {
-    a.default.dispatch({
+  O();
+  let t = u.Z.getForApplication(T.RQ),
+    n = (0, I.kG)(t),
+    i = (0, I.MR)([h.Ft.FREE_GUILD_BOOST_1_MONTH, h.Ft.FREE_GUILD_BOOST_3_MONTHS], t),
+    o = l.default.getCurrentUser();
+  if (!(0, _.M5)(o, T.p9.TIER_2) && null == n) {
+    null != o && s.Z.dispatch({
       type: "USER_TENURE_REWARD_STATUS_RESET"
     });
     return
   }
-  if (!!(0, c.isUserEligibleForNitroTenureRewardCard)({
+  if (!!(0, c.d)({
       location: "tenure_reward_manager"
     }))
-    if ((E.default.getFetchState() !== E.FetchState.FETCHED || !0 === e || function() {
-        var e;
-        let t = null !== (e = E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS);
-        return null != t && null != t.redeemable_at && 0 >= r()(t.redeemable_at).diff(r().utc(), "seconds")
-      }() || function() {
-        let e = E.default.getState();
-        return null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 12096e5
-      }()) && null == i) N();
+    if ((!0 === e || function(e) {
+        if (E.Z.getFetchState() !== E.M.FETCHED) return !0;
+        let t = (0, I.LA)();
+        return null != t && null != e && e.id !== t.user_id || function() {
+          let e = E.Z.getState();
+          return null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 12096e5
+        }() || function() {
+          var e;
+          let t = null !== (e = E.Z.getTenureRewardStatusForRewardId(h.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : E.Z.getTenureRewardStatusForRewardId(h.Ft.FREE_GUILD_BOOST_3_MONTHS);
+          return null != t && null != t.redeemable_at && 0 >= r()(t.redeemable_at).diff(r().utc(), "seconds")
+        }()
+      }(o)) && null == i) m();
     else {
-      let e = u.default.getForApplication(T.PREMIUM_SUBSCRIPTION_APPLICATION);
+      let e = u.Z.getForApplication(T.RQ);
       if (null == e) return;
-      let t = Array.from(e).filter(e => null != E.default.getTenureRewardStatusForRewardId(e.skuId)).map(e => e.skuId);
-      t.length > 0 && a.default.dispatch({
+      let t = Array.from(e).filter(e => null != E.Z.getTenureRewardStatusForRewardId(e.skuId)).map(e => e.skuId);
+      t.length > 0 && s.Z.dispatch({
         type: "USER_TENURE_REWARD_STATUS_DELETE",
         tenureRewardIds: t
       })
     }
 }
-async function N() {
-  !h && (h = !0, await _.syncUserTenureRewardStatus(), h = !1, a.default.wait(() => (function() {
+async function m() {
+  if (!f) f = !0, await d.V(), f = !1, s.Z.wait(() => (function() {
     var e;
-    if (p(), E.default.getFetchState() !== E.FetchState.FETCHED || h) return;
-    let t = null !== (e = E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS);
+    if (O(), E.Z.getFetchState() !== E.M.FETCHED || f) return;
+    let t = null !== (e = E.Z.getTenureRewardStatusForRewardId(h.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : E.Z.getTenureRewardStatusForRewardId(h.Ft.FREE_GUILD_BOOST_3_MONTHS);
     if ((null == t ? void 0 : t.redeemable_at) == null) return;
     let n = (null == t ? void 0 : t.redeemable_at) != null ? new Date(t.redeemable_at).getTime() - Date.now() : null;
-    null != n && n > 0 && (S = setTimeout(m, n))
-  })()))
-}
-
-function p() {
-  clearTimeout(S), S = null
+    null != n && n > 0 && (S = setTimeout(A, n))
+  })())
 }
 
 function O() {
-  p()
+  clearTimeout(S), S = null
 }
 
 function R() {
-  m()
+  O()
 }
-class C extends s.default {
+
+function C() {
+  A()
+}
+class p extends o.Z {
   forceRefreshIfOutdated() {
-    let e = E.default.getState();
-    null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 864e5 && m({
+    let e = E.Z.getState();
+    null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 864e5 && A({
       forceRefresh: !0
     })
   }
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
-      POST_CONNECTION_OPEN: R,
-      CONNECTION_CLOSED: O,
-      ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => m(),
-      ENTITLEMENT_CREATE: A,
-      ENTITLEMENT_UPDATE: () => m(),
-      ENTITLEMENT_DELETE: () => m(),
-      LOGOUT: p
+      POST_CONNECTION_OPEN: C,
+      CONNECTION_CLOSED: R,
+      ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => A(),
+      ENTITLEMENT_CREATE: N,
+      ENTITLEMENT_UPDATE: () => A(),
+      ENTITLEMENT_DELETE: () => A(),
+      LOGOUT: O
     }, n in t ? Object.defineProperty(t, n, {
       value: i,
       enumerable: !0,
@@ -110,4 +114,4 @@ class C extends s.default {
     }) : t[n] = i
   }
 }
-t.default = new C
+t.Z = new p

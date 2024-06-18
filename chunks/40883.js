@@ -32,7 +32,7 @@ e.exports = function(e) {
       }]
     }, {
       scope: "variable.constant",
-      match: t.concat(/`/, t.either(...["__FILE__", "__LINE__"]))
+      match: t.concat(/`/, t.either("__FILE__", "__LINE__"))
     }, {
       scope: "meta",
       begin: t.concat(/`/, t.either(...n)),

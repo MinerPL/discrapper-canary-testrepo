@@ -1,14 +1,18 @@
 "use strict";
 
 function i(e) {
-  if (null != e) {
-    if ("analyticsActivitySessionId" in e && null != e.analyticsActivitySessionId && "" !== e.analyticsActivitySessionId) return e.analyticsActivitySessionId;
-    if ("launchId" in e && null != e.launchId) return e.launchId;
-    if ("activity_id" in e) return e.activity_id
-  }
+  var t;
+  return null !== (t = null == e ? void 0 : e.compositeInstanceId) && void 0 !== t ? t : null == e ? void 0 : e.analyticsActivitySessionId
 }
-n.r(t), n.d(t, {
-  default: function() {
+
+function r(e) {
+  return null == e ? void 0 : e.activity_id
+}
+n.d(t, {
+  C: function() {
+    return r
+  },
+  Z: function() {
     return i
   }
 })

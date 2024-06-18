@@ -1,34 +1,34 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
+t.d(s, {
+  Z: function() {
     return o
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("85960"),
-  n = s("489776"),
-  i = s("252121"),
-  r = s("564488");
+var n = t(735250);
+t(470079);
+var i = t(85960),
+  l = t(489776),
+  a = t(252121),
+  r = t(564488);
 
 function o(e) {
   let {
-    guildId: t,
-    rules: s,
+    guildId: s,
+    rules: t,
     triggerType: o,
-    initWithEdit: d
+    initWithEdit: c
   } = e, {
-    perGuildMaxCount: u
-  } = l.triggerConfigs[o], c = 0 === s.length, E = u > s.length && !c;
-  return (0, a.jsxs)(a.Fragment, {
-    children: [c && (0, a.jsx)(i.default, {
-      guildId: t,
+    perGuildMaxCount: d
+  } = i.I6[o], u = 0 === t.length, E = d > t.length && !u;
+  return (0, n.jsxs)(n.Fragment, {
+    children: [u && (0, n.jsx)(a.Z, {
+      guildId: s,
       triggerType: o
-    }), s.map(e => (0, a.jsx)(r.default, {
+    }), t.map(e => (0, n.jsx)(r.Z, {
       rule: e,
-      initWithEdit: d
-    }, e.id)), E && (0, a.jsx)(n.default, {
-      guildId: t,
+      initWithEdit: c
+    }, e.id)), E && (0, n.jsx)(l.Z, {
+      guildId: s,
       triggerType: o
     })]
   })

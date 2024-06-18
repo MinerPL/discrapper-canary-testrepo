@@ -1,42 +1,42 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return d
+t.d(s, {
+  Z: function() {
+    return c
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("481060"),
-  n = s("449226"),
-  i = s("231338"),
-  r = s("689938"),
-  o = s("893079");
+var n = t(735250);
+t(470079);
+var i = t(481060),
+  l = t(449226),
+  a = t(231338),
+  r = t(689938),
+  o = t(212723);
 
-function d(e) {
+function c(e) {
   let {
-    title: t,
-    details: s
+    title: s,
+    details: t
   } = e;
-  return (0, a.jsxs)("div", {
+  return (0, n.jsxs)("div", {
     className: o.simpleItemWrapper,
-    children: [(0, a.jsxs)("div", {
+    children: [(0, n.jsxs)("div", {
       className: o.itemContent,
-      children: [(0, a.jsx)(l.Heading, {
+      children: [(0, n.jsx)(i.Heading, {
         variant: "text-md/semibold",
         color: "header-primary",
-        children: t
-      }), "string" == typeof s ? (0, a.jsx)(l.Text, {
+        children: s
+      }), "string" == typeof t ? (0, n.jsx)(i.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: s
-      }) : s]
-    }), (0, a.jsx)(l.Tooltip, {
+        children: t
+      }) : t]
+    }), (0, n.jsx)(i.Tooltip, {
       tooltipContentClassName: o.tooltip,
-      text: r.default.Messages.GUILD_SETTINGS_SAFETY_ON_BY_DEFAULT,
-      children: e => (0, a.jsx)(n.default, {
+      text: r.Z.Messages.GUILD_SETTINGS_SAFETY_ON_BY_DEFAULT,
+      children: e => (0, n.jsx)(l.Z, {
         checked: !0,
         disabled: !0,
-        onChange: i.NOOP,
+        onChange: a.dG,
         className: o.bringToFront,
         tooltipProps: e
       })

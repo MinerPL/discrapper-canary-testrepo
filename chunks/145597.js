@@ -1,47 +1,47 @@
 "use strict";
 let i, r;
-n.r(t), n.d(t, {
-  DEV_PID: function() {
-    return d
-  },
-  OVERLAY_DEFAULT_RESOLUTION: function() {
-    return o
-  },
-  OVERLAY_LAYOUT_ID: function() {
-    return u
-  },
-  OVERLAY_MIN_RESOLUTION: function() {
+n.d(t, {
+  FW: function() {
     return l
   },
-  OVERLAY_VERSION: function() {
+  Gr: function() {
     return a
   },
-  getPID: function() {
-    return c
-  },
-  getRPCAuthToken: function() {
+  Ht: function() {
     return I
   },
-  isOutOfProcess: function() {
-    return h
+  Js: function() {
+    return _
   },
-  setOutOfProcessSupport: function() {
-    return f
+  QF: function() {
+    return c
   },
-  setPID: function() {
-    return E
+  Te: function() {
+    return T
   },
-  supportsOutOfProcess: function() {
+  Tq: function() {
+    return o
+  },
+  VS: function() {
     return S
   },
-  validResolution: function() {
-    return T
+  W2: function() {
+    return f
+  },
+  qU: function() {
+    return u
+  },
+  tB: function() {
+    return E
+  },
+  vR: function() {
+    return h
   }
-}), n("610138"), n("216116"), n("78328"), n("815648"), n("47120"), n("490029");
-var s = n("358085");
-n("981631");
-let a = 2,
-  o = {
+}), n(610138), n(216116), n(78328), n(815648), n(47120), n(490029);
+var s = n(358085);
+n(981631);
+let o = 2,
+  a = {
     width: 3840,
     height: 2160
   },
@@ -50,8 +50,8 @@ let a = 2,
     height: 432
   },
   u = "overlay_default",
-  d = -2,
-  _ = !1;
+  _ = -2,
+  d = !1;
 
 function c() {
   var e;
@@ -61,7 +61,7 @@ function c() {
 }
 
 function E(e) {
-  h() && (i = e)
+  f() && (i = e)
 }
 
 function I() {
@@ -72,15 +72,15 @@ function T(e) {
   return !s.isPlatformEmbedded || e.width >= l.width && e.height >= l.height
 }
 
-function f(e) {
-  _ = e
+function h(e) {
+  d = e
 }
 
 function S() {
-  return _
+  return d
 }
 
-function h() {
+function f() {
   var e;
   return void 0 !== r ? r : r = (null !== (e = new URLSearchParams(window.location.search).get("oop")) && void 0 !== e ? e : "") === "true"
 }

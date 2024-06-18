@@ -1,8 +1,8 @@
 "use strict";
 
 function i() {}
-n.r(t), n.d(t, {
-  getRootNavigationRef: function() {
+n.d(t, {
+  D: function() {
     return i
   }
 })

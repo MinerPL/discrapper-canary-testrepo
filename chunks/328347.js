@@ -1,17 +1,16 @@
 "use strict";
 let i;
-n.r(t);
-var r, s, a, o, l = n("442837"),
-  u = n("570140");
-let d = [],
-  _ = d,
+var r, s, o, a, l = n(442837),
+  u = n(570140);
+let _ = [],
+  d = _,
   c = null,
   E = e => {
-    _ = d, c = null
+    d = _, c = null
   };
-class I extends(o = l.default.Store) {
+class I extends(a = l.ZP.Store) {
   get analyticsLocations() {
-    return _
+    return d
   }
   get analyticsSource() {
     return c
@@ -21,20 +20,20 @@ class I extends(o = l.default.Store) {
   }
   getAnalytics() {
     return {
-      analyticsLocations: _,
+      analyticsLocations: d,
       analyticsSource: c
     }
   }
 }
-a = "CollectiblesShopStore", (s = "displayName") in(r = I) ? Object.defineProperty(r, s, {
-  value: a,
+o = "CollectiblesShopStore", (s = "displayName") in(r = I) ? Object.defineProperty(r, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new I(u.default, {
+}) : r[s] = o, t.Z = new I(u.Z, {
   COLLECTIBLES_SHOP_OPEN: e => {
     var t, n;
-    _ = null !== (t = e.analyticsLocations) && void 0 !== t ? t : d, c = null !== (n = e.analyticsSource) && void 0 !== n ? n : null, i = e.initialProductSkuId
+    d = null !== (t = e.analyticsLocations) && void 0 !== t ? t : _, c = null !== (n = e.analyticsSource) && void 0 !== n ? n : null, i = e.initialProductSkuId
   },
   COLLECTIBLES_SHOP_CLOSE: E,
   COLLECTIBLES_PRODUCT_DETAILS_OPEN: e => {

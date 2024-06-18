@@ -1,17 +1,17 @@
 "use strict";
-var e = n("192291"),
-  o = n("692994"),
-  i = n("165915"),
-  u = n("974971"),
-  f = n("926515"),
-  c = n("581031"),
-  a = n("936940"),
+var e = n(192291),
+  o = n(692994),
+  i = n(165915),
+  u = n(974971),
+  c = n(926515),
+  f = n(581031),
+  a = n(936940),
   s = e.aTypedArray,
   y = e.exportTypedArrayMethod,
-  h = c("".slice);
+  p = f("".slice);
 y("fill", function(t) {
   var r = arguments.length;
-  return s(this), f(o, this, "Big" === h(u(this), 0, 3) ? i(t) : +t, r > 1 ? arguments[1] : void 0, r > 2 ? arguments[2] : void 0)
+  return s(this), c(o, this, "Big" === p(u(this), 0, 3) ? i(t) : +t, r > 1 ? arguments[1] : void 0, r > 2 ? arguments[2] : void 0)
 }, a(function() {
   var t = 0;
   return new Int8Array(2).fill({

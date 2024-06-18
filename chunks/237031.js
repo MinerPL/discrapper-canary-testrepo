@@ -1,40 +1,40 @@
 "use strict";
-a.r(t), a.d(t, {
-  closeCollectiblesShopProductDetailsModal: function() {
-    return o
+t.d(s, {
+  T: function() {
+    return l
   },
-  openCollectiblesShopProductDetailsModal: function() {
-    return n
+  v: function() {
+    return r
   }
 });
-var s = a("735250");
-a("470079");
-var l = a("481060");
-let r = "collectibles shop product details modal",
-  n = e => {
+var n = t(735250);
+t(470079);
+var a = t(481060);
+let i = "collectibles shop product details modal",
+  l = e => {
     let {
-      product: t,
-      category: n,
-      analyticsSource: o,
-      analyticsLocations: i,
-      returnRef: u
+      product: s,
+      category: l,
+      analyticsSource: r,
+      analyticsLocations: o,
+      returnRef: c
     } = e;
-    (0, l.openModalLazy)(async () => {
+    (0, a.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([a.e("99387"), a.e("65866"), a.e("36848")]).then(a.bind(a, "702370"));
-      return a => (0, s.jsx)(e, {
-        ...a,
-        product: t,
-        category: n,
-        analyticsSource: o,
-        analyticsLocations: i,
-        returnRef: u
+      } = await Promise.all([t.e("99387"), t.e("2026")]).then(t.bind(t, 702370));
+      return t => (0, n.jsx)(e, {
+        ...t,
+        product: s,
+        category: l,
+        analyticsSource: r,
+        analyticsLocations: o,
+        returnRef: c
       })
     }, {
-      modalKey: r
+      modalKey: i
     })
   },
-  o = () => {
-    (0, l.closeModal)(r)
+  r = () => {
+    (0, a.closeModal)(i)
   }

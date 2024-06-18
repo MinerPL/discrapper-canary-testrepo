@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  FormattedMessage: function() {
-    return r.FormattedMessage
+n.d(t, {
+  _H: function() {
+    return r._H
   },
-  getSystemLocale: function() {
-    return i.getSystemLocale
+  qf: function() {
+    return i.q
   },
-  setUpdateRules: function() {
-    return r.setUpdateRules
+  yR: function() {
+    return r.yR
   }
 });
-var i = n("825409"),
-  r = n("142494");
-t.default = i.I18N
+var i = n(825409),
+  r = n(142494);
+t.ZP = i.m

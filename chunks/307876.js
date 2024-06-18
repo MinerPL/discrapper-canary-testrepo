@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return I
   }
 });
-var i = n("232567"),
-  r = n("147913"),
-  s = n("592125"),
-  a = n("944486"),
-  o = n("594174"),
-  l = n("894257"),
-  u = n("981631");
+var i = n(232567),
+  r = n(147913),
+  s = n(592125),
+  o = n(944486),
+  a = n(594174),
+  l = n(894257),
+  u = n(981631);
 
-function d(e, t, n) {
+function _(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -20,28 +20,28 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let _ = !1;
+let d = !1;
 
 function c(e) {
-  let t = o.default.getCurrentUser();
+  let t = a.default.getCurrentUser();
   if (null == t) return;
-  let n = a.default.getChannelId(),
-    i = s.default.getDMFromUserId(l.SYSTEM_USER);
+  let n = o.Z.getChannelId(),
+    i = s.Z.getDMFromUserId(l.I);
   if (!t.hasUrgentMessages() || i === n) return E({
     channelId: n
   });
-  !_ && (_ = !0, e())
+  !d && (d = !0, e())
 }
 
 function E(e) {
   let {
     channelId: t
-  } = e, n = o.default.getCurrentUser(), r = t === s.default.getDMFromUserId(l.SYSTEM_USER);
-  null != n && n.hasUrgentMessages() && r && (_ = !1, i.setFlag(u.UserFlags.HAS_UNREAD_URGENT_MESSAGES, !1))
+  } = e, n = a.default.getCurrentUser(), r = t === s.Z.getDMFromUserId(l.I);
+  null != n && n.hasUrgentMessages() && r && (d = !1, i.mB(u.xW$.HAS_UNREAD_URGENT_MESSAGES, !1))
 }
-class I extends r.default {
+class I extends r.Z {
   constructor(e) {
-    super(), d(this, "handleShowUrgentMessageAlert", void 0), d(this, "actions", void 0), this.handleShowUrgentMessageAlert = e, this.actions = {
+    super(), _(this, "handleShowUrgentMessageAlert", void 0), _(this, "actions", void 0), this.handleShowUrgentMessageAlert = e, this.actions = {
       POST_CONNECTION_OPEN: () => c(this.handleShowUrgentMessageAlert),
       MESSAGE_CREATE: () => c(this.handleShowUrgentMessageAlert),
       CHANNEL_SELECT: E

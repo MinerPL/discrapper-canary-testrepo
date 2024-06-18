@@ -1,25 +1,24 @@
 "use strict";
-n.r(t);
-var i, r, s, a, o = n("442837"),
-  l = n("570140");
+var i, r, s, o, a = n(442837),
+  l = n(570140);
 let u = {};
 
-function d() {
+function _() {
   u = {}
 }
-class _ extends(a = o.default.Store) {
+class d extends(o = a.ZP.Store) {
   getNote(e) {
     return u[e]
   }
 }
-s = "NoteStore", (r = "displayName") in(i = _) ? Object.defineProperty(i, r, {
+s = "NoteStore", (r = "displayName") in(i = d) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new _(l.default, {
-  CONNECTION_OPEN: d,
-  OVERLAY_INITIALIZE: d,
+}) : i[r] = s, t.Z = new d(l.Z, {
+  CONNECTION_OPEN: _,
+  OVERLAY_INITIALIZE: _,
   USER_NOTE_UPDATE: function(e) {
     u[e.id] = {
       loading: !1,

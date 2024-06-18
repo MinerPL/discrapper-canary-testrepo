@@ -1,9 +1,9 @@
 var r = /Proc-Type: 4,ENCRYPTED[\n\r]+DEK-Info: AES-((?:128)|(?:192)|(?:256))-CBC,([0-9A-H]+)[\n\r]+([0-9A-z\n\r+/=]+)[\n\r]+/m,
   i = /^-----BEGIN ((?:.*? KEY)|CERTIFICATE)-----/m,
   a = /^-----BEGIN ((?:.*? KEY)|CERTIFICATE)-----([0-9A-z\n\r+/=]+)-----END \1-----$/m,
-  o = n("245413"),
-  s = n("780177"),
-  u = n("957578").Buffer;
+  o = n(245413),
+  s = n(780177),
+  u = n(957578).Buffer;
 e.exports = function(e, t) {
   var n, c = e.toString(),
     l = c.match(r);

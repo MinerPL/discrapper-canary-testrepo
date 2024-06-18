@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return i
   }
 });
-var r = n("408431");
+var r = n(408431);
 
 function i() {
-  return !/^((?!chrome|android).)*safari/i.test((0, r.default)())
+  return !/^((?!chrome|android).)*safari/i.test((0, r.Z)())
 }

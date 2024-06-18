@@ -1,43 +1,43 @@
 "use strict";
-n.r(t), n.d(t, {
-  ConnectionConfigurationRuleOperator: function() {
-    return r
-  },
-  getCallbackParamsFromURL: function() {
-    return S
-  },
-  getConnectionsCheckText: function() {
-    return h
-  },
-  getCreatedAtDate: function() {
-    return N
-  },
-  getVisibleConnectionsRole: function() {
+n.d(t, {
+  FI: function() {
     return m
   },
-  isVerifiedRolesChannelVisible: function() {
+  O1: function() {
+    return r
+  },
+  SJ: function() {
+    return h
+  },
+  Ur: function() {
     return A
   },
-  officialApplicationIds: function() {
+  kQ: function() {
+    return N
+  },
+  n_: function() {
     return f
+  },
+  xp: function() {
+    return S
   }
 });
-var i, r, s = n("512722"),
-  a = n.n(s),
-  o = n("392711"),
-  l = n.n(o),
-  u = n("729594");
-n("442837");
-var d = n("627420");
-n("524437");
-var _ = n("277800");
-n("605236");
-var c = n("430824");
-n("496675");
-var E = n("856651"),
-  I = n("981631"),
-  T = n("689938");
-let f = ["426537812993638400", "1042836142560645130", "296023718839451649", "979802510766268446", "1031611223235637258", "512333785338216465"];
+var i, r, s = n(512722),
+  o = n.n(s),
+  a = n(392711),
+  l = n.n(a),
+  u = n(729594);
+n(442837);
+var _ = n(627420);
+n(704215);
+var d = n(277800);
+n(605236);
+var c = n(430824);
+n(496675);
+var E = n(856651),
+  I = n(981631),
+  T = n(689938);
+let h = ["426537812993638400", "1042836142560645130", "296023718839451649", "979802510766268446", "1031611223235637258", "512333785338216465"];
 
 function S(e) {
   let {
@@ -48,7 +48,7 @@ function S(e) {
     error: r,
     error_description: s
   } = t;
-  return a()(!Array.isArray(n), "Received multiple query param values for code"), a()(!Array.isArray(i), "Received multiple query param values for state"), a()(!Array.isArray(r), "Received multiple query param values for error"), a()(!Array.isArray(s), "Received multiple query param values for error_description"), {
+  return o()(!Array.isArray(n), "Received multiple query param values for code"), o()(!Array.isArray(i), "Received multiple query param values for state"), o()(!Array.isArray(r), "Received multiple query param values for error"), o()(!Array.isArray(s), "Received multiple query param values for error_description"), {
     code: n,
     state: i,
     error: r,
@@ -56,121 +56,89 @@ function S(e) {
   }
 }
 
-function h(e) {
+function f(e) {
   let {
     connectionType: t,
     connectionMetadataField: n,
     operator: i,
     operatorText: r,
     value: s
-  } = e, a = null, o = Math.round(Number(s));
+  } = e, o = null, a = Math.round(Number(s));
   switch (i) {
-    case E.OperatorTypes.EQUAL:
-      a = T.default.Messages.CONNECTIONS_ROLE_POPOUT_MUST_BE, t === I.PlatformTypes.PAYPAL && n === E.MetadataFields.PAYPAL_VERIFIED && (a = T.default.Messages.CONNECTIONS_ROLE_POPOUT_MUST_HAVE_A);
+    case E.iO.EQUAL:
+      o = T.Z.Messages.CONNECTIONS_ROLE_POPOUT_MUST_BE, t === I.ABu.PAYPAL && n === E.PC.PAYPAL_VERIFIED && (o = T.Z.Messages.CONNECTIONS_ROLE_POPOUT_MUST_HAVE_A);
       break;
-    case E.OperatorTypes.NOT_EQUAL:
-      a = T.default.Messages.CONNECTIONS_ROLE_POPOUT_MUST_NOT_BE;
+    case E.iO.NOT_EQUAL:
+      o = T.Z.Messages.CONNECTIONS_ROLE_POPOUT_MUST_NOT_BE;
       break;
-    case E.OperatorTypes.LESS_THAN:
-      a = T.default.Messages.CONNECTIONS_ROLE_POPOUT_MUST_HAVE_AT_MOST, o = Math.max(0, o - 1);
+    case E.iO.LESS_THAN:
+      o = T.Z.Messages.CONNECTIONS_ROLE_POPOUT_MUST_HAVE_AT_MOST, a = Math.max(0, a - 1);
       break;
-    case E.OperatorTypes.GREATER_THAN:
-      a = T.default.Messages.CONNECTIONS_ROLE_POPOUT_MUST_HAVE_AT_LEAST, o = Math.max(0, o + 1);
+    case E.iO.GREATER_THAN:
+      o = T.Z.Messages.CONNECTIONS_ROLE_POPOUT_MUST_HAVE_AT_LEAST, a = Math.max(0, a + 1);
       break;
     case void 0:
     case null:
       return null
   }
-  if (null != r && (a = r), a instanceof d.FormattedMessage && null != i) switch (t) {
-    case I.PlatformTypes.REDDIT:
+  if (null != r && (o = r), o instanceof _._H && null != i) switch (t) {
+    case I.ABu.REDDIT:
       switch (n) {
-        case E.MetadataFields.CREATED_AT:
-          a = a.format({
-            platformQuantityHook: () => T.default.Messages.CONNECTIONS_ROLE_RULE_ACCOUNT_AGE.format({
-              days: o
+        case E.PC.CREATED_AT:
+          o = o.format({
+            platformQuantityHook: () => T.Z.Messages.CONNECTIONS_ROLE_RULE_ACCOUNT_AGE.format({
+              days: a
             })
           });
           break;
-        case E.MetadataFields.REDDIT_TOTAL_KARMA:
-          a = a.format({
-            platformQuantityHook: () => T.default.Messages.CONNECTIONS_ROLE_RULE_REDDIT_KARMA.format({
-              karma: o
+        case E.PC.REDDIT_TOTAL_KARMA:
+          o = o.format({
+            platformQuantityHook: () => T.Z.Messages.CONNECTIONS_ROLE_RULE_REDDIT_KARMA.format({
+              karma: a
             })
           });
           break;
-        case E.MetadataFields.REDDIT_GOLD:
-          a = a.format({
-            platformQuantityHook: () => T.default.Messages.CONNECTIONS_ROLE_RULE_REDDIT_GOLD
+        case E.PC.REDDIT_GOLD:
+          o = o.format({
+            platformQuantityHook: () => T.Z.Messages.CONNECTIONS_ROLE_RULE_REDDIT_GOLD
           });
           break;
-        case E.MetadataFields.REDDIT_MOD:
-          a = a.format({
-            platformQuantityHook: () => T.default.Messages.CONNECTIONS_ROLE_RULE_REDDIT_MODERATOR
+        case E.PC.REDDIT_MOD:
+          o = o.format({
+            platformQuantityHook: () => T.Z.Messages.CONNECTIONS_ROLE_RULE_REDDIT_MODERATOR
           });
           break;
         default:
           return null
       }
       break;
-    case I.PlatformTypes.STEAM:
+    case I.ABu.STEAM:
       switch (n) {
-        case E.MetadataFields.CREATED_AT:
-          a = a.format({
-            platformQuantityHook: () => T.default.Messages.CONNECTIONS_ROLE_RULE_ACCOUNT_AGE.format({
-              days: o
+        case E.PC.CREATED_AT:
+          o = o.format({
+            platformQuantityHook: () => T.Z.Messages.CONNECTIONS_ROLE_RULE_ACCOUNT_AGE.format({
+              days: a
             })
           });
           break;
-        case E.MetadataFields.STEAM_GAME_COUNT:
-          a = a.format({
-            platformQuantityHook: () => T.default.Messages.CONNECTIONS_ROLE_RULE_STEAM_GAMES.format({
-              count: o
+        case E.PC.STEAM_GAME_COUNT:
+          o = o.format({
+            platformQuantityHook: () => T.Z.Messages.CONNECTIONS_ROLE_RULE_STEAM_GAMES.format({
+              count: a
             })
           });
           break;
-        case E.MetadataFields.STEAM_ITEM_COUNT_TF2:
-          a = a.format({
-            platformQuantityHook: () => T.default.Messages.CONNECTIONS_ROLE_RULE_STEAM_TF2_ITEMS.format({
-              count: o
+        case E.PC.STEAM_ITEM_COUNT_TF2:
+          o = o.format({
+            platformQuantityHook: () => T.Z.Messages.CONNECTIONS_ROLE_RULE_STEAM_TF2_ITEMS.format({
+              count: a
             })
           });
           break;
-        case E.MetadataFields.STEAM_ITEM_COUNT_DOTA2:
-          a = a.format({
-            platformQuantityHook: () => T.default.Messages.CONNECTIONS_ROLE_RULE_STEAM_DOTA2_ITEMS.format({
-              count: o
-            })
-          });
-          break;
-        default:
-          return null
-      }
-      break;
-    case I.PlatformTypes.TWITTER:
-      switch (n) {
-        case E.MetadataFields.CREATED_AT:
-          a = a.format({
-            platformQuantityHook: () => T.default.Messages.CONNECTIONS_ROLE_RULE_ACCOUNT_AGE.format({
-              days: o
-            })
-          });
-          break;
-        case E.MetadataFields.TWITTER_VERIFIED:
-          a = a.format({
-            platformQuantityHook: () => T.default.Messages.CONNECTIONS_ROLE_RULE_TWITTER_VERIFIED
-          });
-          break;
-        case E.MetadataFields.TWITTER_FOLLOWERS_COUNT:
-          a = a.format({
-            platformQuantityHook: () => T.default.Messages.CONNECTIONS_ROLE_RULE_TWITTER_FOLLOWERS.format({
-              count: o
-            })
-          });
-          break;
-        case E.MetadataFields.TWITTER_STATUSES_COUNT:
-          a = a.format({
-            platformQuantityHook: () => T.default.Messages.CONNECTIONS_ROLE_RULE_TWITTER_STATUSES.format({
-              count: o
+        case E.PC.STEAM_ITEM_COUNT_DOTA2:
+          o = o.format({
+            platformQuantityHook: () => T.Z.Messages.CONNECTIONS_ROLE_RULE_STEAM_DOTA2_ITEMS.format({
+              count: a
             })
           });
           break;
@@ -178,56 +146,31 @@ function h(e) {
           return null
       }
       break;
-    case I.PlatformTypes.PAYPAL:
+    case I.ABu.TWITTER:
       switch (n) {
-        case E.MetadataFields.CREATED_AT:
-          a = a.format({
-            platformQuantityHook: () => T.default.Messages.CONNECTIONS_ROLE_RULE_ACCOUNT_AGE.format({
-              days: o
+        case E.PC.CREATED_AT:
+          o = o.format({
+            platformQuantityHook: () => T.Z.Messages.CONNECTIONS_ROLE_RULE_ACCOUNT_AGE.format({
+              days: a
             })
           });
           break;
-        case E.MetadataFields.PAYPAL_VERIFIED:
-          a = a.format({
-            platformQuantityHook: () => T.default.Messages.CONNECTIONS_ROLE_RULE_PAYPAL_VERIFIED
+        case E.PC.TWITTER_VERIFIED:
+          o = o.format({
+            platformQuantityHook: () => T.Z.Messages.CONNECTIONS_ROLE_RULE_TWITTER_VERIFIED
           });
           break;
-        default:
-          return null
-      }
-      break;
-    case I.PlatformTypes.EBAY:
-      switch (n) {
-        case E.MetadataFields.CREATED_AT:
-          a = a.format({
-            platformQuantityHook: () => T.default.Messages.CONNECTIONS_ROLE_RULE_ACCOUNT_AGE.format({
-              days: o
+        case E.PC.TWITTER_FOLLOWERS_COUNT:
+          o = o.format({
+            platformQuantityHook: () => T.Z.Messages.CONNECTIONS_ROLE_RULE_TWITTER_FOLLOWERS.format({
+              count: a
             })
           });
           break;
-        case E.MetadataFields.EBAY_TOP_RATED_SELLER:
-          a = a.format({
-            platformQuantityHook: () => T.default.Messages.CONNECTIONS_EBAY_TOP_RATED_SELLER
-          });
-          break;
-        case E.MetadataFields.EBAY_POSITIVE_FEEDBACK_PERCENTAGE:
-          a = a.format({
-            platformQuantityHook: () => T.default.Messages.CONNECTIONS_ROLE_RULE_EBAY_POSITIVE_FEEDBACK_PERCENTAGE.format({
-              value: o
-            })
-          });
-          break;
-        case E.MetadataFields.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT:
-          a = a.format({
-            platformQuantityHook: () => T.default.Messages.CONNECTIONS_ROLE_RULE_EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT.format({
-              count: o
-            })
-          });
-          break;
-        case E.MetadataFields.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT:
-          a = a.format({
-            platformQuantityHook: () => T.default.Messages.CONNECTIONS_ROLE_RULE_EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT.format({
-              count: o
+        case E.PC.TWITTER_STATUSES_COUNT:
+          o = o.format({
+            platformQuantityHook: () => T.Z.Messages.CONNECTIONS_ROLE_RULE_TWITTER_STATUSES.format({
+              count: a
             })
           });
           break;
@@ -235,31 +178,88 @@ function h(e) {
           return null
       }
       break;
-    case I.PlatformTypes.TIKTOK:
+    case I.ABu.PAYPAL:
       switch (n) {
-        case E.MetadataFields.TIKTOK_VERIFIED:
-          a = a.format({
-            platformQuantityHook: () => T.default.Messages.CONNECTIONS_ROLE_RULE_TIKTOK_VERIFIED
-          });
-          break;
-        case E.MetadataFields.TIKTOK_FOLLOWER_COUNT:
-          a = a.format({
-            platformQuantityHook: () => T.default.Messages.CONNECTIONS_ROLE_RULE_TIKTOK_FOLLOWER_COUNT.format({
-              count: o
+        case E.PC.CREATED_AT:
+          o = o.format({
+            platformQuantityHook: () => T.Z.Messages.CONNECTIONS_ROLE_RULE_ACCOUNT_AGE.format({
+              days: a
             })
           });
           break;
-        case E.MetadataFields.TIKTOK_FOLLOWING_COUNT:
-          a = a.format({
-            platformQuantityHook: () => T.default.Messages.CONNECTIONS_ROLE_RULE_TIKTOK_FOLLOWING_COUNT.format({
-              count: o
+        case E.PC.PAYPAL_VERIFIED:
+          o = o.format({
+            platformQuantityHook: () => T.Z.Messages.CONNECTIONS_ROLE_RULE_PAYPAL_VERIFIED
+          });
+          break;
+        default:
+          return null
+      }
+      break;
+    case I.ABu.EBAY:
+      switch (n) {
+        case E.PC.CREATED_AT:
+          o = o.format({
+            platformQuantityHook: () => T.Z.Messages.CONNECTIONS_ROLE_RULE_ACCOUNT_AGE.format({
+              days: a
             })
           });
           break;
-        case E.MetadataFields.TIKTOK_LIKES_COUNT:
-          a = a.format({
-            platformQuantityHook: () => T.default.Messages.CONNECTIONS_ROLE_RULE_TIKTOK_LIKES_COUNT.format({
-              count: o
+        case E.PC.EBAY_TOP_RATED_SELLER:
+          o = o.format({
+            platformQuantityHook: () => T.Z.Messages.CONNECTIONS_EBAY_TOP_RATED_SELLER
+          });
+          break;
+        case E.PC.EBAY_POSITIVE_FEEDBACK_PERCENTAGE:
+          o = o.format({
+            platformQuantityHook: () => T.Z.Messages.CONNECTIONS_ROLE_RULE_EBAY_POSITIVE_FEEDBACK_PERCENTAGE.format({
+              value: a
+            })
+          });
+          break;
+        case E.PC.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT:
+          o = o.format({
+            platformQuantityHook: () => T.Z.Messages.CONNECTIONS_ROLE_RULE_EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT.format({
+              count: a
+            })
+          });
+          break;
+        case E.PC.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT:
+          o = o.format({
+            platformQuantityHook: () => T.Z.Messages.CONNECTIONS_ROLE_RULE_EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT.format({
+              count: a
+            })
+          });
+          break;
+        default:
+          return null
+      }
+      break;
+    case I.ABu.TIKTOK:
+      switch (n) {
+        case E.PC.TIKTOK_VERIFIED:
+          o = o.format({
+            platformQuantityHook: () => T.Z.Messages.CONNECTIONS_ROLE_RULE_TIKTOK_VERIFIED
+          });
+          break;
+        case E.PC.TIKTOK_FOLLOWER_COUNT:
+          o = o.format({
+            platformQuantityHook: () => T.Z.Messages.CONNECTIONS_ROLE_RULE_TIKTOK_FOLLOWER_COUNT.format({
+              count: a
+            })
+          });
+          break;
+        case E.PC.TIKTOK_FOLLOWING_COUNT:
+          o = o.format({
+            platformQuantityHook: () => T.Z.Messages.CONNECTIONS_ROLE_RULE_TIKTOK_FOLLOWING_COUNT.format({
+              count: a
+            })
+          });
+          break;
+        case E.PC.TIKTOK_LIKES_COUNT:
+          o = o.format({
+            platformQuantityHook: () => T.Z.Messages.CONNECTIONS_ROLE_RULE_TIKTOK_LIKES_COUNT.format({
+              count: a
             })
           });
           break;
@@ -270,40 +270,40 @@ function h(e) {
     default:
       return null
   }
-  return a
+  return o
 }
 
-function A(e, t) {
+function N(e, t) {
   return Object.values(t).some(e => {
     var t;
     return (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null
   })
 }
 
-function m(e) {
+function A(e) {
   var t, n;
   let {
     guildMember: i,
     guild: r,
     guildRoles: s,
-    channel: o,
+    channel: a,
     onlyChannelConnectionRoles: u = !1
   } = e;
   if (null == i) return null;
-  if (null == r && null != o && (r = c.default.getGuild(o.getGuildId())), null == r) return null;
+  if (null == r && null != a && (r = c.Z.getGuild(a.getGuildId())), null == r) return null;
   let {
-    id: d
+    id: _
   } = r;
-  null == s && (s = c.default.getRoles(d));
+  null == s && (s = c.Z.getRoles(_));
   let E = i.roles.map(e => s[e]).filter(e => {
       var t;
       return (null == e ? void 0 : null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null
-    }).sort((e, t) => (a()(null != e && null != t, "roleA or roleB is null"), t.position - e.position)),
-    I = l().intersection(E, (0, _.default)(o));
+    }).sort((e, t) => (o()(null != e && null != t, "roleA or roleB is null"), t.position - e.position)),
+    I = l().intersection(E, (0, d.Z)(a));
   return I.length > 0 ? null !== (t = I[0]) && void 0 !== t ? t : null : u ? null : null !== (n = E[0]) && void 0 !== n ? n : null
 }
 
-function N(e, t) {
+function m(e, t) {
   if (null == e || "" === e) return null;
   let n = new Date(e);
   return !(n instanceof Date) || isNaN(n.getTime()) ? null : n.toLocaleDateString(t, {

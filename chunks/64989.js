@@ -1,6 +1,6 @@
 "use strict";
-t.r(r), t.d(r, {
-  default: function() {
+t.d(r, {
+  Z: function() {
     return l
   }
 });

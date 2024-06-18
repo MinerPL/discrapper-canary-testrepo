@@ -1,19 +1,19 @@
 "use strict";
-var n = r("310176"),
-  i = r("297326"),
-  o = r("379846"),
-  a = r("118658"),
-  u = r("786834").notEmptyKey,
-  s = r("100066"),
-  c = r("110599"),
-  l = r("467159"),
+var n = r(310176),
+  i = r(297326),
+  o = r(379846),
+  a = r(118658),
+  u = r(786834).notEmptyKey,
+  s = r(100066),
+  c = r(110599),
+  l = r(467159),
   f = a.isEngine("Gecko");
 t.exports = function(t, e) {
   void 0 !== t._pendingStateFromBeforeInput && (t.update(t._pendingStateFromBeforeInput), t._pendingStateFromBeforeInput = void 0);
   var r, a, p, h, d = t.editor.ownerDocument.defaultView.getSelection(),
     g = d.anchorNode,
     y = d.isCollapsed;
-  if (!((null == g ? void 0 : g.nodeType) !== Node.TEXT_NODE && (null == g ? void 0 : g.nodeType) !== Node.ELEMENT_NODE)) {
+  if ((null == g ? void 0 : g.nodeType) === Node.TEXT_NODE || (null == g ? void 0 : g.nodeType) === Node.ELEMENT_NODE) {
     if (g.nodeType === Node.TEXT_NODE && (null !== g.previousSibling || null !== g.nextSibling)) {
       var v = g.parentNode;
       g.nodeValue = v.textContent;

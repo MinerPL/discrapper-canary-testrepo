@@ -1,18 +1,18 @@
 "use strict";
-var r = n("67867"),
-  a = n("294377"),
-  o = n("414629"),
-  i = n("197859"),
-  l = n("732116").CONSTRUCTOR,
-  u = n("607672"),
-  s = a("Promise"),
-  c = o && !l;
+var r = n(67867),
+  o = n(294377),
+  a = n(414629),
+  i = n(197859),
+  s = n(732116).CONSTRUCTOR,
+  c = n(607672),
+  l = o("Promise"),
+  u = a && !s;
 r({
   target: "Promise",
   stat: !0,
-  forced: o || l
+  forced: a || s
 }, {
   resolve: function(e) {
-    return u(c && this === s ? i : this, e)
+    return c(u && this === l ? i : this, e)
   }
 })

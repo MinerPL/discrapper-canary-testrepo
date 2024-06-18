@@ -1,29 +1,29 @@
 "use strict";
-n.r(t), n("411104");
-var i = n("710845"),
-  r = n("358085"),
-  s = n("579806");
-let a = new i.default("ProgressBarManager");
-t.default = new class e {
+n(411104);
+var i = n(710845),
+  r = n(358085),
+  s = n(579806);
+let o = new i.Z("ProgressBarManager");
+t.Z = new class e {
   setProgress(e, t) {
     if (!(0, r.isDesktop)()) throw Error("cannot set progress from non-native");
     if (null != this.taskID && this.taskID !== e) {
-      a.warn("".concat(this.taskID, " is already running. cannot set ").concat(e));
+      o.warn("".concat(this.taskID, " is already running. cannot set ").concat(e));
       return
     }
-    this.taskID = e, s.default.window.setProgressBar(t)
+    this.taskID = e, s.Z.window.setProgressBar(t)
   }
   clearProgress(e) {
     if (!(0, r.isDesktop)()) throw Error("cannot clear progress from non-native");
     if (null == this.taskID) {
-      a.warn("cannot clear progress. No current progress running.");
+      o.warn("cannot clear progress. No current progress running.");
       return
     }
     if (this.taskID !== e) {
-      a.warn("cannot clear progress of ".concat(e, " when ").concat(this.taskID, " is running"));
+      o.warn("cannot clear progress of ".concat(e, " when ").concat(this.taskID, " is running"));
       return
     }
-    this.taskID = null, s.default.window.setProgressBar(-1)
+    this.taskID = null, s.Z.window.setProgressBar(-1)
   }
   constructor() {
     var e, t, n;

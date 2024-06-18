@@ -1,4 +1,4 @@
-var r = n("660566");
+var r = n(660566);
 e.exports = f, e.exports.parse = a, e.exports.compile = function(e, t) {
   return s(a(e, t))
 }, e.exports.tokensToFunction = s, e.exports.tokensToRegExp = d;

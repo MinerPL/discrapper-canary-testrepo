@@ -1,49 +1,47 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("844303"),
-  i = r("13942"),
-  l = r("464854");
-t.default = function(e) {
+var r = n(470079),
+  i = n(844303),
+  a = n(13942),
+  o = n(464854);
+t.Z = function(e) {
   var t = e.onChange,
-    r = e.rgb,
-    n = e.hsl,
+    n = e.rgb,
+    s = e.hsl,
     u = e.hex,
-    s = e.hsv,
-    f = function(e, r) {
-      if (e.hex) i.isValidHex(e.hex) && t({
+    c = e.hsv,
+    l = function(e, n) {
+      if (e.hex) a.FX(e.hex) && t({
         hex: e.hex,
         source: "hex"
-      }, r);
+      }, n);
       else if (e.rgb) {
-        var n = e.rgb.split(",");
-        i.isvalidColorString(e.rgb, "rgb") && t({
-          r: n[0],
-          g: n[1],
-          b: n[2],
+        var r = e.rgb.split(",");
+        a.p7(e.rgb, "rgb") && t({
+          r: r[0],
+          g: r[1],
+          b: r[2],
           a: 1,
           source: "rgb"
-        }, r)
+        }, n)
       } else if (e.hsv) {
-        var a = e.hsv.split(",");
-        i.isvalidColorString(e.hsv, "hsv") && (a[2] = a[2].replace("%", ""), a[1] = a[1].replace("%", ""), a[0] = a[0].replace("\xb0", ""), 1 == a[1] ? a[1] = .01 : 1 == a[2] && (a[2] = .01), t({
-          h: Number(a[0]),
-          s: Number(a[1]),
-          v: Number(a[2]),
+        var i = e.hsv.split(",");
+        a.p7(e.hsv, "hsv") && (i[2] = i[2].replace("%", ""), i[1] = i[1].replace("%", ""), i[0] = i[0].replace("\xb0", ""), 1 == i[1] ? i[1] = .01 : 1 == i[2] && (i[2] = .01), t({
+          h: Number(i[0]),
+          s: Number(i[1]),
+          v: Number(i[2]),
           source: "hsv"
-        }, r))
+        }, n))
       } else if (e.hsl) {
         var o = e.hsl.split(",");
-        i.isvalidColorString(e.hsl, "hsl") && (o[2] = o[2].replace("%", ""), o[1] = o[1].replace("%", ""), o[0] = o[0].replace("\xb0", ""), 1 == h[1] ? h[1] = .01 : 1 == h[2] && (h[2] = .01), t({
+        a.p7(e.hsl, "hsl") && (o[2] = o[2].replace("%", ""), o[1] = o[1].replace("%", ""), o[0] = o[0].replace("\xb0", ""), 1 == h[1] ? h[1] = .01 : 1 == h[2] && (h[2] = .01), t({
           h: Number(o[0]),
           s: Number(o[1]),
           v: Number(o[2]),
           source: "hsl"
-        }, r))
+        }, n))
       }
     },
-    c = (0, o.default)({
+    d = (0, i.default)({
       default: {
         wrap: {
           display: "flex",
@@ -120,55 +118,55 @@ t.default = function(e) {
         }
       }
     }),
-    d = r.r + ", " + r.g + ", " + r.b,
-    p = Math.round(n.h) + "\xb0, " + Math.round(100 * n.s) + "%, " + Math.round(100 * n.l) + "%",
-    h = Math.round(s.h) + "\xb0, " + Math.round(100 * s.s) + "%, " + Math.round(100 * s.v) + "%";
-  return a().createElement("div", {
-    style: c.wrap,
+    f = n.r + ", " + n.g + ", " + n.b,
+    p = Math.round(s.h) + "\xb0, " + Math.round(100 * s.s) + "%, " + Math.round(100 * s.l) + "%",
+    h = Math.round(c.h) + "\xb0, " + Math.round(100 * c.s) + "%, " + Math.round(100 * c.v) + "%";
+  return r.createElement("div", {
+    style: d.wrap,
     className: "flexbox-fix"
-  }, a().createElement("div", {
-    style: c.fields
-  }, a().createElement("div", {
-    style: c.double
-  }, a().createElement(l.EditableInput, {
+  }, r.createElement("div", {
+    style: d.fields
+  }, r.createElement("div", {
+    style: d.double
+  }, r.createElement(o.Vm, {
     style: {
-      input: c.input,
-      label: c.label
+      input: d.input,
+      label: d.label
     },
     label: "hex",
     value: u,
-    onChange: f
-  })), a().createElement("div", {
-    style: c.column
-  }, a().createElement("div", {
-    style: c.single
-  }, a().createElement(l.EditableInput, {
+    onChange: l
+  })), r.createElement("div", {
+    style: d.column
+  }, r.createElement("div", {
+    style: d.single
+  }, r.createElement(o.Vm, {
     style: {
-      input: c.input2,
-      label: c.label2
+      input: d.input2,
+      label: d.label2
     },
     label: "rgb",
-    value: d,
-    onChange: f
-  })), a().createElement("div", {
-    style: c.single
-  }, a().createElement(l.EditableInput, {
+    value: f,
+    onChange: l
+  })), r.createElement("div", {
+    style: d.single
+  }, r.createElement(o.Vm, {
     style: {
-      input: c.input2,
-      label: c.label2
+      input: d.input2,
+      label: d.label2
     },
     label: "hsv",
     value: h,
-    onChange: f
-  })), a().createElement("div", {
-    style: c.single
-  }, a().createElement(l.EditableInput, {
+    onChange: l
+  })), r.createElement("div", {
+    style: d.single
+  }, r.createElement(o.Vm, {
     style: {
-      input: c.input2,
-      label: c.label2
+      input: d.input2,
+      label: d.label2
     },
     label: "hsl",
     value: p,
-    onChange: f
+    onChange: l
   })))))
 }

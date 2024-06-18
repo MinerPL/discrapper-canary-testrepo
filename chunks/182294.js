@@ -1,42 +1,42 @@
 "use strict";
-var i, r, s, a, o, l;
-n.r(t), n.d(t, {
-  AvatarSizeSpecs: function() {
-    return E
-  },
-  AvatarSizes: function() {
-    return i
-  },
-  CUTOUT_BORDER_RADIUS: function() {
-    return c
-  },
-  MOBILE_HEIGHT_RATIO: function() {
-    return u
-  },
-  MOBILE_ICON_RADIUS: function() {
+var i, r, s, o, a, l;
+n.d(t, {
+  D6: function() {
     return _
   },
-  StatusBackdropColors: function() {
+  EF: function() {
+    return i
+  },
+  EW: function() {
+    return u
+  },
+  UC: function() {
+    return I
+  },
+  VZ: function() {
     return r
   },
-  StatusBackdropOpacity: function() {
+  ZC: function() {
+    return c
+  },
+  d_: function() {
     return s
   },
-  TYPING_WIDTH_RATIO: function() {
+  e7: function() {
     return d
   },
-  getAvatarSize: function() {
-    return T
+  ny: function() {
+    return E
   },
-  getAvatarSpecs: function() {
-    return I
+  px: function() {
+    return T
   }
-}), n("411104");
+}), n(411104);
 let u = 1.5,
-  d = 2.5,
-  _ = .125,
+  _ = 2.5,
+  d = .125,
   c = .2;
-(a = i || (i = {})).SIZE_16 = "SIZE_16", a.SIZE_20 = "SIZE_20", a.SIZE_24 = "SIZE_24", a.SIZE_32 = "SIZE_32", a.SIZE_40 = "SIZE_40", a.SIZE_48 = "SIZE_48", a.SIZE_56 = "SIZE_56", a.SIZE_80 = "SIZE_80", a.SIZE_120 = "SIZE_120", a.SIZE_152 = "SIZE_152", a.DEPRECATED_SIZE_30 = "DEPRECATED_SIZE_30", a.DEPRECATED_SIZE_60 = "DEPRECATED_SIZE_60", a.DEPRECATED_SIZE_100 = "DEPRECATED_SIZE_100", (o = r || (r = {})).BLACK = "black", o.WHITE = "white", (l = s || (s = {}))[l.HIGH = .7] = "HIGH", l[l.LOW = .45] = "LOW";
+(o = i || (i = {})).SIZE_16 = "SIZE_16", o.SIZE_20 = "SIZE_20", o.SIZE_24 = "SIZE_24", o.SIZE_32 = "SIZE_32", o.SIZE_40 = "SIZE_40", o.SIZE_48 = "SIZE_48", o.SIZE_56 = "SIZE_56", o.SIZE_80 = "SIZE_80", o.SIZE_120 = "SIZE_120", o.SIZE_152 = "SIZE_152", o.DEPRECATED_SIZE_30 = "DEPRECATED_SIZE_30", o.DEPRECATED_SIZE_60 = "DEPRECATED_SIZE_60", o.DEPRECATED_SIZE_100 = "DEPRECATED_SIZE_100", (a = r || (r = {})).BLACK = "black", a.WHITE = "white", (l = s || (s = {}))[l.HIGH = .7] = "HIGH", l[l.LOW = .45] = "LOW";
 let E = Object.freeze({
   SIZE_16: Object.freeze({
     size: 16,

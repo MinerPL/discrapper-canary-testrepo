@@ -1,14 +1,13 @@
 "use strict";
-t.r(r);
 
-function a(e, r) {
+function t(e, r) {
   for (var t = 0; t < r.length; t++) {
     var a = r[t];
     a.enumerable = a.enumerable || !1, a.configurable = !0, "value" in a && (a.writable = !0), Object.defineProperty(e, a.key, a)
   }
 }
-var o = function() {
-  var e, r, t;
+var a = function() {
+  var e, r, a;
 
   function o() {
     var e, r, t, a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
@@ -57,6 +56,6 @@ var o = function() {
     get: function() {
       return this.items.length
     }
-  }], a(e.prototype, r), t && a(e, t), o
+  }], t(e.prototype, r), o
 }();
-r.default = "undefined" == typeof Set ? Set : o
+r.Z = "undefined" == typeof Set ? Set : a

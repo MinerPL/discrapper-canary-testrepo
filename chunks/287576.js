@@ -1,48 +1,48 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return d
+t.d(s, {
+  Z: function() {
+    return c
   }
 });
-var a = s("470079"),
-  l = s("725803"),
-  n = s("766434"),
-  i = s("310291"),
-  r = s("674563"),
-  o = s("198139");
+var n = t(470079),
+  i = t(725803),
+  l = t(766434),
+  a = t(310291),
+  r = t(674563),
+  o = t(198139);
 
-function d(e) {
-  var t;
+function c(e) {
+  var s;
   let {
-    application: s,
-    loading: d
-  } = (0, l.default)(e, r.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS), {
-    payoutsByPeriod: u,
+    application: t,
     loading: c
-  } = (0, i.default)(null == s ? void 0 : s.id, {
-    groupType: o.PaymentPayoutGroupTypes.GUILD_PRODUCT,
-    teamId: null == s ? void 0 : null === (t = s.team) || void 0 === t ? void 0 : t.id
+  } = (0, i.Z)(e, r.wW.GUILD_ROLE_SUBSCRIPTIONS), {
+    payoutsByPeriod: d,
+    loading: u
+  } = (0, a.Z)(null == t ? void 0 : t.id, {
+    groupType: o.uw.GUILD_PRODUCT,
+    teamId: null == t ? void 0 : null === (s = t.team) || void 0 === s ? void 0 : s.id
   }), {
     currentPeriod: E,
     previousPeriods: _,
     metrics: I
-  } = a.useMemo(() => {
+  } = n.useMemo(() => {
     let {
       currentPeriod: e,
-      previousPeriods: t
-    } = (0, n.splitCurrentPeriod)(u), s = (0, n.calculateMetrics)(e, t[0]);
+      previousPeriods: s
+    } = (0, l.Br)(d), t = (0, l.Uj)(e, s[0]);
     return {
       currentPeriod: e,
-      previousPeriods: t,
-      metrics: s
+      previousPeriods: s,
+      metrics: t
     }
-  }, [u]);
+  }, [d]);
   return {
-    loading: d || c,
-    payoutsByPeriod: u,
+    loading: c || u,
+    payoutsByPeriod: d,
     currentPeriod: E,
     previousPeriods: _,
     metrics: I,
-    application: s
+    application: t
   }
 }

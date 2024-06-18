@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 });
-var i = n("275726");
+var i = n(275726);
 
 function r(e) {
-  return !i.MessageTypesSets.USER_MESSAGE.has(e.type)
+  return !i.V.USER_MESSAGE.has(e.type)
 }

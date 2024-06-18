@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
-  DevToolsListener: function() {
-    return o
+n.d(t, {
+  b: function() {
+    return a
   }
 });
-var i, r, a = n("836560");
+var i, r, s = n(836560);
 (i = r || (r = {})).VERTICAL = "vertical", i.HORIZONTAL = "horizontal";
-let s = {
+let o = {
   open: !1,
   orientation: null
 };
-class o extends a.EventEmitter {
+class a extends s.EventEmitter {
   get orientations() {
     return Object.values(r)
   }
   get state() {
-    return s
+    return o
   }
   check() {
     let e = function() {
@@ -34,12 +34,12 @@ class o extends a.EventEmitter {
       }() > 160,
       n = e ? "vertical" : "horizontal";
     if (!(t && e) && (e || t)) {
-      let e = s.open;
-      s = {
+      let e = o.open;
+      o = {
         open: !0,
         orientation: n
-      }, (!e || s.orientation !== n) && this.emit("changed", s)
-    } else s.open && (s.open = !1, this.emit("changed", s))
+      }, (!e || o.orientation !== n) && this.emit("changed", o)
+    } else o.open && (o.open = !1, this.emit("changed", o))
   }
   constructor() {
     super(), setInterval(() => this.check(), 500)

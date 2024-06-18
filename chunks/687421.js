@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
-  MonthParser: function() {
+n.d(t, {
+  C: function() {
     return f
   }
 });
-var r = n("846042"),
-  i = n("717029"),
-  a = n("25487");
+var r = n(846042),
+  i = n(717029),
+  a = n(25487);
 
 function o(e) {
   return (o = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
@@ -69,13 +69,10 @@ var f = function(e) {
     }
   }(), function() {
     var e, r = l(t);
-    if (n) {
-      var i = l(this).constructor;
-      e = Reflect.construct(r, arguments, i)
-    } else e = r.apply(this, arguments);
-    return function(e, t) {
-      return t && ("object" === o(t) || "function" == typeof t) ? t : c(e)
-    }(this, e)
+    return e = n ? Reflect.construct(r, arguments, l(this).constructor) : r.apply(this, arguments),
+      function(e, t) {
+        return t && ("object" === o(t) || "function" == typeof t) ? t : c(e)
+      }(this, e)
   });
 
   function m() {
@@ -94,11 +91,11 @@ var f = function(e) {
       };
       switch (t) {
         case "M":
-          return (0, r.mapValue)((0, r.parseNumericPattern)(a.numericPatterns.month, e), i);
+          return (0, r.jg)((0, r.ie)(a.z.month, e), i);
         case "MM":
-          return (0, r.mapValue)((0, r.parseNDigits)(2, e), i);
+          return (0, r.jg)((0, r.ZL)(2, e), i);
         case "Mo":
-          return (0, r.mapValue)(n.ordinalNumber(e, {
+          return (0, r.jg)(n.ordinalNumber(e, {
             unit: "month"
           }), i);
         case "MMM":
@@ -137,5 +134,5 @@ var f = function(e) {
     value: function(e, t, n) {
       return e.setUTCMonth(n, 1), e.setUTCHours(0, 0, 0, 0), e
     }
-  }], s(i.prototype, f), p && s(i, p), m
-}(i.Parser)
+  }], s(i.prototype, f), m
+}(i._)

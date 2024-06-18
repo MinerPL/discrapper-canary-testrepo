@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  logMessageSendFailure: function() {
+n.d(t, {
+  x: function() {
     return s
   }
 });
-var i = n("367907"),
-  r = n("981631");
+var i = n(367907),
+  r = n(981631);
 
 function s(e) {
   var t, n;
@@ -15,11 +15,11 @@ function s(e) {
         return null !== (t = e.mimeType) && void 0 !== t ? t : "unknown"
       })
     }(e.fileItems) : [],
-    a = null !== (t = e.errorMessage) && void 0 !== t ? t : void 0,
-    o = null !== (n = e.failureCode) && void 0 !== n ? n : void 0;
-  (0, i.trackWithMetadata)(r.AnalyticEvents.SEND_MESSAGE_FAILURE, {
-    failure_code: o,
-    error_message: a,
+    o = null !== (t = e.errorMessage) && void 0 !== t ? t : void 0,
+    a = null !== (n = e.failureCode) && void 0 !== n ? n : void 0;
+  (0, i.yw)(r.rMx.SEND_MESSAGE_FAILURE, {
+    failure_code: a,
+    error_message: o,
     attachment_mimetypes: s
   })
 }

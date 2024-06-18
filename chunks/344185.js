@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n("47120");
-var i, r, s, a, o = n("392711"),
-  l = n.n(o),
-  u = n("442837"),
-  d = n("570140"),
-  _ = n("131704"),
-  c = n("592125"),
-  E = n("709054");
+n(47120);
+var i, r, s, o, a = n(392711),
+  l = n.n(a),
+  u = n(442837),
+  _ = n(570140),
+  d = n(131704),
+  c = n(592125),
+  E = n(709054);
 let I = {},
   T = new Set;
 
-function f(e) {
+function h(e) {
   return {
     id: e.id,
     parentId: e.parent_id
@@ -21,36 +21,36 @@ function S(e) {
   e in I && delete I[e]
 }
 
-function h(e) {
-  null != e.threads && e.threads.length > 0 && (I[e.id] = {}, e.threads.filter(e => _.ALL_CHANNEL_TYPES.has(e.type)).forEach(t => A(e.id, t))), e.hasThreadsSubscription && T.add(e.id)
+function f(e) {
+  null != e.threads && e.threads.length > 0 && (I[e.id] = {}, e.threads.filter(e => d.AW.has(e.type)).forEach(t => N(e.id, t))), e.hasThreadsSubscription && T.add(e.id)
 }
 
-function A(e, t) {
+function N(e, t) {
   let n = I[e],
     i = t.parent_id;
-  !(i in n) && (n[i] = {}), I[e][i][t.id] = f(t)
+  !(i in n) && (n[i] = {}), I[e][i][t.id] = h(t)
 }
 
-function m(e) {
+function A(e) {
   var t, n;
   let {
     channel: i
   } = e;
-  if (!_.ALL_CHANNEL_TYPES.has(i.type)) return !1;
-  if ((null === (t = i.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0) return N(i);
+  if (!d.AW.has(i.type)) return !1;
+  if ((null === (t = i.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0) return m(i);
   {
     let e = null !== (n = I[i.guild_id]) && void 0 !== n ? n : {};
     I[i.guild_id] = {
       ...e,
       [i.parent_id]: {
         ...e[i.parent_id],
-        [i.id]: f(i)
+        [i.id]: h(i)
       }
     }
   }
 }
 
-function N(e) {
+function m(e) {
   let {
     guild_id: t,
     parent_id: n,
@@ -65,9 +65,9 @@ function N(e) {
   }, delete I[t][n][i], l().isEmpty(I[t][n]) && delete I[t][n]
 }
 let O = {};
-class p extends(i = u.default.Store) {
+class R extends(i = u.ZP.Store) {
   initialize() {
-    this.waitFor(c.default)
+    this.waitFor(c.Z)
   }
   isActive(e, t, n) {
     return null != e && null != this.getThreadsForParent(e, t)[n]
@@ -92,30 +92,30 @@ class p extends(i = u.default.Store) {
     return T.has(e)
   }
 }
-a = "ActiveThreadsStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
-  value: a,
+o = "ActiveThreadsStore", (s = "displayName") in(r = R) ? Object.defineProperty(r, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new p(d.default, {
+}) : r[s] = o, t.Z = new R(_.Z, {
   CONNECTION_OPEN: function(e) {
     I = {}, T.clear(), e.guilds.forEach(e => {
-      h(e)
+      f(e)
     })
   },
   OVERLAY_INITIALIZE: function(e) {
     let {
       channels: t
     } = e;
-    I = {}, l()(t).filter(e => _.THREAD_CHANNEL_TYPES.has(e.type)).groupBy("guild_id").forEach((e, t) => {
-      I[t] = {}, e.forEach(e => A(t, e))
+    I = {}, l()(t).filter(e => d.Ec.has(e.type)).groupBy("guild_id").forEach((e, t) => {
+      I[t] = {}, e.forEach(e => N(t, e))
     })
   },
   GUILD_CREATE: function(e) {
     let {
       guild: t
     } = e;
-    S(t.id), h(t)
+    S(t.id), f(t)
   },
   GUILD_DELETE: function(e) {
     let {
@@ -123,8 +123,8 @@ a = "ActiveThreadsStore", (s = "displayName") in(r = p) ? Object.defineProperty(
     } = e;
     S(t.id)
   },
-  THREAD_CREATE: m,
-  THREAD_UPDATE: m,
+  THREAD_CREATE: A,
+  THREAD_UPDATE: A,
   THREAD_LIST_SYNC: function(e) {
     let {
       guildId: t,
@@ -136,13 +136,13 @@ a = "ActiveThreadsStore", (s = "displayName") in(r = p) ? Object.defineProperty(
       }, I[t]) I[t][e] = {
       ...I[t][e]
     };
-    n.forEach(e => A(t, e))
+    n.forEach(e => N(t, e))
   },
   THREAD_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    return N(t)
+    return m(t)
   },
   CHANNEL_DELETE: function(e) {
     let {

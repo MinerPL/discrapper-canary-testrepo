@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("433517"),
-  r = n("147913");
+n(47120);
+var i = n(433517),
+  r = n(147913);
 let s = "formGuidelinesStorageKey";
-class a extends r.default {
+class o extends r.Z {
   _initialize() {
-    let e = i.Storage.get(s);
+    let e = i.K.get(s);
     null != e && (this.seenForumGuidelines = new Set(e))
   }
   _terminate() {
-    i.Storage.set(s, this.seenForumGuidelines)
+    i.K.set(s, this.seenForumGuidelines)
   }
   markAsSeen(e) {
-    this.seenForumGuidelines.add(e), i.Storage.set(s, this.seenForumGuidelines)
+    this.seenForumGuidelines.add(e), i.K.set(s, this.seenForumGuidelines)
   }
   hasSeen(e) {
     return this.seenForumGuidelines.has(e)
@@ -27,4 +27,4 @@ class a extends r.default {
     }) : t[n] = i
   }
 }
-t.default = new a
+t.Z = new o

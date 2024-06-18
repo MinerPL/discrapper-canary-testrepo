@@ -1,47 +1,47 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return h
+n.d(t, {
+  Z: function() {
+    return f
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
-  o = n("519953"),
-  l = n("442837"),
-  u = n("911969"),
-  d = n("998698"),
-  _ = n("703558"),
-  c = n("117530"),
-  E = n("91313"),
-  I = n("436660"),
-  T = n("887490"),
-  f = n("689938"),
-  S = n("697692");
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(519953),
+  l = n(442837),
+  u = n(911969),
+  _ = n(998698),
+  d = n(703558),
+  c = n(117530),
+  E = n(91313),
+  I = n(436660),
+  T = n(887490),
+  h = n(689938),
+  S = n(697692);
 
-function h(e, t, n) {
+function f(e, t, n) {
   let {
     attributes: r,
-    children: a,
-    element: s
+    children: s,
+    element: o
   } = t;
-  switch (s.type) {
+  switch (o.type) {
     case "applicationCommand":
-      let o = d.default.getActiveCommand(n),
+      let a = _.Z.getActiveCommand(n),
         l = 0,
         u = 0;
-      if (null != o && o.id === s.command.id) {
-        var _;
-        let t = E.getOptionNames(e);
-        for (let e of null !== (_ = o.options) && void 0 !== _ ? _ : []) t.includes(e.name) ? u++ : l++
+      if (null != a && a.id === o.command.id) {
+        var d;
+        let t = E.cu(e);
+        for (let e of null !== (d = a.options) && void 0 !== d ? d : []) t.includes(e.name) ? u++ : l++
       }
       let c = {};
       if (l > 0) {
         let e;
-        e = u > 0 ? f.default.Messages.COMMANDS_OPTIONAL_COUNT_REMAINING.format({
+        e = u > 0 ? h.Z.Messages.COMMANDS_OPTIONAL_COUNT_REMAINING.format({
           count: l
-        }) : f.default.Messages.COMMANDS_OPTION_COUNT.format({
+        }) : h.Z.Messages.COMMANDS_OPTION_COUNT.format({
           count: l
         }), c["data-trailing-placeholder"] = e
       }
@@ -49,60 +49,60 @@ function h(e, t, n) {
         className: S.applicationCommand,
         ...r,
         ...c,
-        children: a
+        children: s
       });
     case "applicationCommandOption":
-      return (0, i.jsx)(A, {
+      return (0, i.jsx)(N, {
         attributes: r,
         channelId: n,
-        element: s,
-        children: a
+        element: o,
+        children: s
       });
     default:
       return null
   }
 }
-let A = e => {
+let N = e => {
   let t, {
       channelId: n,
-      element: a,
+      element: s,
       attributes: E,
-      children: h
+      children: f
     } = e,
-    A = (0, o.useSelected)(),
-    m = (0, o.useFocused)(),
-    N = (0, o.useSlateStatic)(),
+    N = (0, a.vt)(),
+    A = (0, a.UE)(),
+    m = (0, a._7)(),
     {
-      optionType: p,
-      errored: O
-    } = (0, l.useStateFromStoresObject)([d.default], () => {
+      optionType: O,
+      errored: R
+    } = (0, l.cj)([_.Z], () => {
       var e, t, i;
       return {
-        optionType: null === (e = d.default.getOption(n, a.optionName)) || void 0 === e ? void 0 : e.type,
-        errored: (null === (i = d.default.getOptionState(n, a.optionName)) || void 0 === i ? void 0 : null === (t = i.lastValidationResult) || void 0 === t ? void 0 : t.success) !== !0
+        optionType: null === (e = _.Z.getOption(n, s.optionName)) || void 0 === e ? void 0 : e.type,
+        errored: (null === (i = _.Z.getOptionState(n, s.optionName)) || void 0 === i ? void 0 : null === (t = i.lastValidationResult) || void 0 === t ? void 0 : t.success) !== !0
       }
-    }, [n, a.optionName]),
-    C = (0, l.useStateFromStores)([c.default], () => c.default.getUpload(n, a.optionName, _.DraftType.SlashCommand), [n, a.optionName]),
-    R = a.children[a.children.length - 1],
-    g = null != R && T.TextUtils.isText(R) && R.text.endsWith("\n"),
-    L = s()(S.inlineElement, S.optionPill, {
-      [S.selectedPill]: m && A,
-      [S.erroredPill]: (!m || !A) && O
+    }, [n, s.optionName]),
+    C = (0, l.e7)([c.Z], () => c.Z.getUpload(n, s.optionName, d.d.SlashCommand), [n, s.optionName]),
+    p = s.children[s.children.length - 1],
+    g = null != p && T.LC.isText(p) && p.text.endsWith("\n"),
+    L = o()(S.inlineElement, S.optionPill, {
+      [S.selectedPill]: A && N,
+      [S.erroredPill]: (!A || !N) && R
     }),
     v = r.useCallback(() => {
-      !T.EditorUtils.isVoid(N, a) && I.SlateTransforms.selectCommandOption(N, a.optionName, !0)
-    }, [N, a]);
-  return t = p === u.ApplicationCommandOptionType.ATTACHMENT ? (null == C ? void 0 : C.filename) != null ? (0, i.jsxs)("span", {
-    className: s()(S.optionPillValue, S.attachmentFilename),
+      !T.bN.isVoid(m, s) && I.Q.selectCommandOption(m, s.optionName, !0)
+    }, [m, s]);
+  return t = O === u.jw.ATTACHMENT ? (null == C ? void 0 : C.filename) != null ? (0, i.jsxs)("span", {
+    className: o()(S.optionPillValue, S.attachmentFilename),
     contentEditable: !1,
-    children: [C.filename, h]
+    children: [C.filename, f]
   }) : (0, i.jsxs)("span", {
-    className: s()(S.optionPillValue, S.readonlyPillValue),
+    className: o()(S.optionPillValue, S.readonlyPillValue),
     contentEditable: !1,
-    children: [f.default.Messages.APPLICATION_COMMAND_FILE_ATTACHMENT, h]
+    children: [h.Z.Messages.APPLICATION_COMMAND_FILE_ATTACHMENT, f]
   }) : (0, i.jsxs)("span", {
     className: S.optionPillValue,
-    children: [h, g ? (0, i.jsx)("span", {
+    children: [f, g ? (0, i.jsx)("span", {
       className: S.newLine,
       contentEditable: !1
     }) : null]
@@ -113,7 +113,7 @@ let A = e => {
       className: S.optionPillKey,
       contentEditable: !1,
       onClick: v,
-      children: [a.optionDisplayName, "​"]
+      children: [s.optionDisplayName, "​"]
     }), t, (0, i.jsx)("span", {
       contentEditable: !1,
       children: "​"

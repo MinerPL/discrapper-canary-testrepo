@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n("47120");
-var i, r, s, a, o = n("442837"),
-  l = n("570140"),
-  u = n("433355"),
-  d = n("944486"),
-  _ = n("581364");
+n(47120);
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(433355),
+  _ = n(944486),
+  d = n(581364);
 let c = {};
 
 function E() {
@@ -29,29 +29,29 @@ function T(e) {
     command: i,
     section: r,
     initialValues: s,
-    location: a,
-    triggerSection: o,
+    location: o,
+    triggerSection: a,
     queryLength: l
   } = e, u = I(n);
   if ((null == i ? void 0 : i.id) === (null === (t = u.activeCommand) || void 0 === t ? void 0 : t.id)) return !1;
   u.activeCommand = i, u.activeCommandSection = r, u.activeOptionName = null, u.preferredCommandId = null, u.initialValues = null != s ? s : {};
-  let d = {};
+  let _ = {};
   return (null == i ? void 0 : i.options) != null && i.options.forEach(e => {
-    d[e.name] = {
+    _[e.name] = {
       isActive: !1,
       hasValue: !1,
       lastValidationResult: null,
       optionValue: null
     }
-  }), u.optionStates = d, null != i && (0, _.trackCommandSelected)({
+  }), u.optionStates = _, null != i && (0, d.qJ)({
     command: i,
-    location: a,
-    triggerSection: o,
+    location: o,
+    triggerSection: a,
     queryLength: l
   }), !0
 }
 
-function f(e) {
+function h(e) {
   var t, n;
   let {
     channelId: i,
@@ -68,7 +68,7 @@ function S(e) {
     ...i.optionStates
   };
   for (let [e, t] of Object.entries(n)) {
-    var s, a, o;
+    var s, o, a;
     if (!(e in i.optionStates)) continue;
     if (!(void 0 !== t.hasValue ? t.hasValue : r[e].hasValue)) {
       r[e] = {
@@ -87,20 +87,20 @@ function S(e) {
       isActive: void 0 !== t.isActive ? t.isActive : n.isActive,
       lastValidationResult: void 0 !== t.lastValidationResult ? t.lastValidationResult : n.lastValidationResult,
       optionValue: null !== (s = t.optionValue) && void 0 !== s ? s : n.optionValue,
-      location: null !== (a = t.location) && void 0 !== a ? a : n.location,
-      length: null !== (o = t.length) && void 0 !== o ? o : n.length
+      location: null !== (o = t.location) && void 0 !== o ? o : n.location,
+      length: null !== (a = t.length) && void 0 !== a ? a : n.length
     }, void 0 !== t.isActive && (t.isActive ? (null != i.activeOptionName && i.activeOptionName !== e && (r[i.activeOptionName] = {
       ...r[i.activeOptionName]
     }, r[i.activeOptionName].isActive = !1), i.activeOptionName = e) : e === i.activeOptionName && (i.activeOptionName = null))
   }
   return i.optionStates = r, !0
 }
-class h extends(i = o.default.Store) {
+class f extends(i = a.ZP.Store) {
   initialize() {
-    u.default.addChangeListener(() => {
-      let e = d.default.getChannelId();
+    u.ZP.addChangeListener(() => {
+      let e = _.Z.getChannelId();
       if (null == e) return c = {}, !0;
-      let t = u.default.getCurrentSidebarChannelId(e);
+      let t = u.ZP.getCurrentSidebarChannelId(e);
       if (null != t && t in c) return !1;
       c = e in c ? {
         [e]: c[e]
@@ -140,18 +140,18 @@ class h extends(i = o.default.Store) {
     }
   }
 }
-a = "ApplicationCommandStore", (s = "displayName") in(r = h) ? Object.defineProperty(r, s, {
-  value: a,
+o = "ApplicationCommandStore", (s = "displayName") in(r = f) ? Object.defineProperty(r, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a;
-let A = new h(l.default, {
+}) : r[s] = o;
+let N = new f(l.Z, {
   CONNECTION_OPEN: E,
   CHANNEL_SELECT: E,
   LOGOUT: E,
   APPLICATION_COMMAND_SET_ACTIVE_COMMAND: T,
-  APPLICATION_COMMAND_SET_PREFERRED_COMMAND: f,
+  APPLICATION_COMMAND_SET_PREFERRED_COMMAND: h,
   APPLICATION_COMMAND_UPDATE_OPTIONS: S,
   APPLICATION_COMMAND_UPDATE_CHANNEL_STATE: function(e) {
     let {
@@ -160,23 +160,23 @@ let A = new h(l.default, {
       command: i,
       section: r,
       location: s,
-      changedOptionStates: a
-    } = e, o = T({
+      changedOptionStates: o
+    } = e, a = T({
       type: "APPLICATION_COMMAND_SET_ACTIVE_COMMAND",
       channelId: t,
       command: i,
       section: r,
       location: s
-    }), l = f({
+    }), l = h({
       type: "APPLICATION_COMMAND_SET_PREFERRED_COMMAND",
       channelId: t,
       commandId: n
     }), u = S({
       type: "APPLICATION_COMMAND_UPDATE_OPTIONS",
       channelId: t,
-      changedOptionStates: a
+      changedOptionStates: o
     });
-    return o || l || u
+    return a || l || u
   }
 });
-t.default = A
+t.Z = N

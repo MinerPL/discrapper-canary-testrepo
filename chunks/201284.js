@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
-  DEFAULT_VALIDATION_RESULT: function() {
+n.d(t, {
+  PS: function() {
     return o
   },
-  mergeValidation: function() {
+  Q3: function() {
+    return c
+  },
+  W0: function() {
     return p
   },
-  privateValidationStateProp: function() {
+  tL: function() {
     return u
-  },
-  useFormValidationState: function() {
-    return c
   }
 });
-var r = n("470079");
+var r = n(470079);
 let i = {
     badInput: !1,
     customError: !1,
@@ -88,25 +88,25 @@ function c(e) {
     _ !== v && (y(_), S(!1));
     let x = (0, r.useMemo)(() => d(E ? [] : b), [E, b]),
       w = (0, r.useRef)(o),
-      [T, C] = (0, r.useState)(o),
+      [C, T] = (0, r.useState)(o),
       D = (0, r.useRef)(o),
-      [O, M] = (0, r.useState)(!1);
+      [M, O] = (0, r.useState)(!1);
     return (0, r.useEffect)(() => {
-      if (!O) return;
-      M(!1);
+      if (!M) return;
+      O(!1);
       let e = g || c || w.current;
-      !f(e, D.current) && (D.current = e, C(e))
+      !f(e, D.current) && (D.current = e, T(e))
     }), {
       realtimeValidation: m || x || g || c || o,
-      displayValidation: "native" === h ? m || x || T : m || x || g || c || T,
+      displayValidation: "native" === h ? m || x || C : m || x || g || c || C,
       updateValidation(e) {
-        "aria" !== h || f(T, e) ? w.current = e : C(e)
+        "aria" !== h || f(C, e) ? w.current = e : T(e)
       },
       resetValidation() {
-        !f(o, D.current) && (D.current = o, C(o)), "native" === h && M(!1), S(!0)
+        !f(o, D.current) && (D.current = o, T(o)), "native" === h && O(!1), S(!0)
       },
       commitValidation() {
-        "native" === h && M(!0), S(!0)
+        "native" === h && O(!0), S(!0)
       }
     }
   }(e)

@@ -1,5 +1,5 @@
 "use strict";
-var r = n("201694").forEach;
+var r = n(201694).forEach;
 e.exports = function(e) {
   var t = (e = e || {}).reporter,
     n = e.batchProcessor,
@@ -113,11 +113,11 @@ e.exports = function(e) {
         return e + 10 + S()
       }
 
-      function T(e) {
+      function C(e) {
         return e + 10 + x()
       }
 
-      function C(e, t, n) {
+      function T(e, t, n) {
         var r = f(e),
           i = p(e),
           a = t + 10 + S(),
@@ -139,7 +139,7 @@ e.exports = function(e) {
         return e
       }
 
-      function O() {
+      function M() {
         if (_("Injecting elements"), !i(u)) {
           _("Aborting because element has been uninstalled");
           return
@@ -167,11 +167,11 @@ e.exports = function(e) {
           S = document.createElement("div"),
           x = document.createElement("div"),
           w = document.createElement("div"),
-          T = document.createElement("div"),
           C = document.createElement("div"),
-          O = document.createElement("div");
+          T = document.createElement("div"),
+          M = document.createElement("div");
 
-        function M() {
+        function O() {
           var e = i(u);
           e && e.onExpand ? e.onExpand() : _("Aborting expand scroll handler: element has been uninstalled")
         }
@@ -180,10 +180,10 @@ e.exports = function(e) {
           var e = i(u);
           e && e.onShrink ? e.onShrink() : _("Aborting shrink scroll handler: element has been uninstalled")
         }
-        S.dir = "ltr", S.style.cssText = m, S.className = s, x.className = s, x.style.cssText = g, w.style.cssText = b, T.style.cssText = y, C.style.cssText = v, O.style.cssText = E, w.appendChild(T), C.appendChild(O), x.appendChild(w), x.appendChild(C), S.appendChild(x), f.appendChild(S), l(w, "scroll", M), l(C, "scroll", A), i(u).onExpandScroll = M, i(u).onShrinkScroll = A
+        S.dir = "ltr", S.style.cssText = m, S.className = s, x.className = s, x.style.cssText = g, w.style.cssText = b, C.style.cssText = y, T.style.cssText = v, M.style.cssText = E, w.appendChild(C), T.appendChild(M), x.appendChild(w), x.appendChild(T), S.appendChild(x), f.appendChild(S), l(w, "scroll", O), l(T, "scroll", A), i(u).onExpandScroll = O, i(u).onShrinkScroll = A
       }
 
-      function M() {
+      function O() {
         function o(t, n, r) {
           var i = f(t).childNodes[0],
             a = n + 10 + S(),
@@ -196,7 +196,7 @@ e.exports = function(e) {
             l = u.offsetHeight,
             d = s !== i(u).lastWidth || l !== i(u).lastHeight;
           _("Storing current size", s, l), E(u, s, l), n.add(0, function() {
-            if (d) {
+            if (!!d) {
               if (!i(u)) {
                 _("Aborting because element has been uninstalled");
                 return
@@ -221,7 +221,7 @@ e.exports = function(e) {
               _("Aborting because element container has not been initialized");
               return
             }
-            C(u, s, l)
+            T(u, s, l)
           }), d && r && n.add(2, function() {
             if (!i(u)) {
               _("Aborting because element has been uninstalled");
@@ -278,7 +278,7 @@ e.exports = function(e) {
           return
         }
         var e = i(u).style;
-        E(u, e.width, e.height), C(u, e.width, e.height)
+        E(u, e.width, e.height), T(u, e.width, e.height)
       }
 
       function k() {
@@ -290,7 +290,7 @@ e.exports = function(e) {
         _("Installing..."), i(u).listeners = [], e = v(), i(u).startSize = {
           width: e.width,
           height: e.height
-        }, _("Element start size", i(u).startSize), n.add(0, y), n.add(1, O), n.add(2, M), n.add(3, A), n.add(4, k)
+        }, _("Element start size", i(u).startSize), n.add(0, y), n.add(1, M), n.add(2, O), n.add(3, A), n.add(4, k)
       }
       if (_("Making detectable..."), (g = (m = h = u).getRootNode && m.getRootNode().contains(m), (m === m.ownerDocument.body || m.ownerDocument.body.contains(m) || g) && null !== window.getComputedStyle(h)) ? 1 : 0) R();
       else _("Element is detached"), D(), _("Waiting until element is attached..."), i(u).onRendered = function() {
@@ -303,7 +303,7 @@ e.exports = function(e) {
     },
     uninstall: function(e) {
       var t = i(e);
-      t && (t.onExpandScroll && d(f(e), "scroll", t.onExpandScroll), t.onShrinkScroll && d(p(e), "scroll", t.onShrinkScroll), t.onAnimationStart && d(t.container, "animationstart", t.onAnimationStart), t.container && e.removeChild(t.container))
+      if (!!t) t.onExpandScroll && d(f(e), "scroll", t.onExpandScroll), t.onShrinkScroll && d(p(e), "scroll", t.onShrinkScroll), t.onAnimationStart && d(t.container, "animationstart", t.onAnimationStart), t.container && e.removeChild(t.container)
     },
     initDocument: u
   }

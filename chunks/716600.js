@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return s
   }
 });
-var i = n("442837"),
-  r = n("317381");
+var i = n(442837),
+  r = n(317381);
 
 function s() {
-  return (0, i.useStateFromStores)([r.default], () => r.default.getCurrentEmbeddedActivity())
+  return (0, i.e7)([r.ZP], () => r.ZP.getCurrentEmbeddedActivity())
 }

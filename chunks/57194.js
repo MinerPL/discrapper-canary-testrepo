@@ -108,7 +108,7 @@ e.exports = function(e) {
       match: /\b[_a-z]\w*(?=\s*\{)/
     },
     y = {
-      begin: [/^\s*/, i(/#/, a(...["if", "else", "endif", "line", "nowarn", "light", "r", "i", "I", "load", "time", "help", "quit"])), /\b/],
+      begin: [/^\s*/, i(/#/, a("if", "else", "endif", "line", "nowarn", "light", "r", "i", "I", "load", "time", "help", "quit")), /\b/],
       beginScope: {
         2: "meta"
       },
@@ -137,13 +137,13 @@ e.exports = function(e) {
       end: /"""/,
       relevance: 2
     },
-    T = {
+    C = {
       scope: "subst",
       begin: /\{/,
       end: /\}/,
       keywords: s
     },
-    C = {
+    T = {
       scope: "string",
       begin: /\$"/,
       end: /"/,
@@ -151,7 +151,7 @@ e.exports = function(e) {
         match: /\{\{/
       }, {
         match: /\}\}/
-      }, e.BACKSLASH_ESCAPE, T]
+      }, e.BACKSLASH_ESCAPE, C]
     },
     D = {
       scope: "string",
@@ -163,13 +163,13 @@ e.exports = function(e) {
         match: /\}\}/
       }, {
         match: /""/
-      }, e.BACKSLASH_ESCAPE, T]
+      }, e.BACKSLASH_ESCAPE, C]
     },
-    O = {
+    M = {
       scope: "string",
       match: i(/'/, a(/[^\\']/, /\\(?:.|\d{3}|x[a-fA-F\d]{2}|u[a-fA-F\d]{4}|U[a-fA-F\d]{8})/), /'/)
     };
-  return T.contains = [D, C, x, S, O, n, u, c, g, v, y, E, d, p], {
+  return C.contains = [D, T, x, S, M, n, u, c, g, v, y, E, d, p], {
     name: "F#",
     aliases: ["fs", "f#"],
     keywords: s,
@@ -186,15 +186,15 @@ e.exports = function(e) {
           match: /\{\{/
         }, {
           match: /\}\}/
-        }, T],
+        }, C],
         relevance: 2
-      }, D, C, w, x, S, O]
+      }, D, T, w, x, S, M]
     }, u, c, b, {
       scope: "meta",
       begin: /\[</,
       end: />\]/,
       relevance: 2,
-      contains: [c, w, x, S, O, E]
+      contains: [c, w, x, S, M, E]
     }, _, g, v, y, E, d, p]
   }
 }

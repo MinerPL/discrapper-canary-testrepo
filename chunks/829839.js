@@ -1,17 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
-  codecNameToPayloadName: function() {
-    return u
+n.d(t, {
+  AQ: function() {
+    return E
   },
-  filterVideoCodecs: function() {
-    return o
+  DY: function() {
+    return _
   },
-  getExperimentCodecs: function() {
-    return s
+  yQ: function() {
+    return d
   }
-}), n("653041"), n("733860");
-var i = n("65154");
-let r = [{
+}), n(653041), n(733860);
+var i, r, s, o, a = n(65154);
+let l = [{
+  name: "H265",
+  encode: (null === (r = window) || void 0 === r ? void 0 : null === (i = r.DiscordNative) || void 0 === i ? void 0 : i.process.platform) !== "darwin" || (null === (o = window) || void 0 === o ? void 0 : null === (s = o.DiscordNative) || void 0 === s ? void 0 : s.os.arch) === "arm64",
+  decode: !0
+}, {
   name: "H264",
   encode: !0,
   decode: !0
@@ -25,8 +29,8 @@ let r = [{
   decode: !0
 }];
 
-function a(e, t) {
-  let n = t.concat(r),
+function u(e, t) {
+  let n = t.concat(l),
     i = [];
   return n.forEach(t => {
     let n = e.find(e => t.name === e.codec);
@@ -38,39 +42,31 @@ function a(e, t) {
   }), i
 }
 
-function s(e) {
+function _(e) {
   let t = [];
-  return e.has(i.ExperimentFlags.SIGNAL_H265_SUPPORT) ? t.unshift({
-    name: "H265",
-    encode: !0,
-    decode: !0
-  }) : e.has(i.ExperimentFlags.SIGNAL_H265_DECODE_SUPPORT) && t.unshift({
-    name: "H265",
-    encode: !1,
-    decode: !0
-  }), e.has(i.ExperimentFlags.SIGNAL_AV1_SUPPORT) && t.unshift({
+  return e.has(a.V8.SIGNAL_AV1_SUPPORT) && t.unshift({
     name: "AV1",
     encode: !0,
     decode: !0
   }), t
 }
 
-function o(e, t) {
-  return "string" == typeof e ? a(JSON.parse(e).map(e => ({
-    codec: l(e.codec),
+function d(e, t) {
+  return "string" == typeof e ? u(JSON.parse(e).map(e => ({
+    codec: c(e.codec),
     encode: e.encode,
     decode: e.decode
-  })), t) : a(e.map(e => ({
-    codec: l(e),
+  })), t) : u(e.map(e => ({
+    codec: c(e),
     encode: !0,
     decode: !0
   })), t)
 }
 
-function l(e) {
+function c(e) {
   return "AV1X" === e ? "AV1" : e
 }
 
-function u(e) {
+function E(e) {
   return "AV1" === e ? "AV1X" : e
 }

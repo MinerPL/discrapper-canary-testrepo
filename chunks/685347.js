@@ -1,4 +1,4 @@
-var r = n("704446");
+var r = n(704446);
 e.exports = function(e, t, n) {
   "__proto__" == t && r ? r(e, t, {
     configurable: !0,

@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return E
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("692547"),
-  a = n("325767");
-let o = "currentColor",
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(692547),
+  o = n(325767);
+let a = "currentColor",
   l = new Map([
     ["url(#birthday_gradient_1)", "url(#birthday_secondary_gradient_1)"],
     ["url(#birthday_gradient_2)", "url(#birthday_secondary_gradient_2)"],
@@ -19,7 +19,7 @@ let o = "currentColor",
     ["url(#birthday_gradient_2_light)", "url(#birthday_secondary_gradient_2_light)"],
     ["url(#birthday_gradient_3_light)", "url(#birthday_secondary_gradient_3_light)"]
   ]),
-  d = e => {
+  _ = e => {
     let {
       referralsRemaining: t,
       fillColor: n,
@@ -55,7 +55,7 @@ let o = "currentColor",
       })]
     })
   },
-  _ = e => {
+  d = e => {
     let {
       fillColor: t
     } = e;
@@ -69,10 +69,10 @@ let o = "currentColor",
     })
   },
   c = (e, t, n, i, r) => {
-    if (!t || i) return e ? "url(#nitro_hover)" : o;
+    if (!t || i) return e ? "url(#nitro_hover)" : a;
     let s = n ? [...u.keys()].filter(e => e !== r) : [...l.keys()].filter(e => e !== r),
-      a = Math.floor(Math.random() * s.length);
-    return s[a]
+      o = Math.floor(Math.random() * s.length);
+    return s[o]
   };
 
 function E(e) {
@@ -83,23 +83,23 @@ function E(e) {
     referralsRemaining: E,
     isResending: I,
     hovered: T,
-    shouldShowBirthdayUX: f,
+    shouldShowBirthdayUX: h,
     isLightTheme: S,
-    ...h
-  } = e, [A, m] = r.useState(o), N = null !== (t = l.get(A)) && void 0 !== t ? t : null;
+    ...f
+  } = e, [N, A] = r.useState(a), m = null !== (t = l.get(N)) && void 0 !== t ? t : null;
   return r.useEffect(() => {
-    T ? m(e => c(T, f, S, I, e)) : I && m(o)
-  }, [T, f, S, I]), (0, i.jsxs)("svg", {
+    T ? A(e => c(T, h, S, I, e)) : I && A(a)
+  }, [T, h, S, I]), (0, i.jsxs)("svg", {
     width: n,
     height: u,
-    ...(0, a.default)(h),
+    ...(0, o.Z)(f),
     xmlns: "http://www.w3.org/2000/svg",
-    children: [I ? (0, i.jsx)(_, {
-      fillColor: A
-    }) : (0, i.jsx)(d, {
+    children: [I ? (0, i.jsx)(d, {
+      fillColor: N
+    }) : (0, i.jsx)(_, {
       referralsRemaining: E,
-      fillColor: T ? A : o,
-      secondaryFillColor: T ? N : null
+      fillColor: T ? N : a,
+      secondaryFillColor: T ? m : null
     }), (0, i.jsxs)("defs", {
       children: [(0, i.jsxs)("linearGradient", {
         id: "nitro_hover",
@@ -109,10 +109,10 @@ function E(e) {
         y2: "11.8026",
         gradientUnits: "userSpaceOnUse",
         children: [(0, i.jsx)("stop", {
-          stopColor: s.default.unsafe_rawColors.PREMIUM_TIER_2_PURPLE.css
+          stopColor: s.Z.unsafe_rawColors.PREMIUM_TIER_2_PURPLE.css
         }), (0, i.jsx)("stop", {
           offset: "1",
-          stopColor: s.default.unsafe_rawColors.PREMIUM_TIER_2_PINK.css
+          stopColor: s.Z.unsafe_rawColors.PREMIUM_TIER_2_PINK.css
         })]
       }), (0, i.jsxs)("linearGradient", {
         id: "birthday_gradient_1",

@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
-  wrapConnectorHooks: function() {
-    return a
+n.d(t, {
+  p: function() {
+    return o
   }
 });
-var r = n("573654"),
-  i = n("470079");
+var r = n(573654),
+  i = n(470079);
 
-function a(e) {
+function o(e) {
   var t = {};
   return Object.keys(e).forEach(function(n) {
-    var a = e[n];
+    var o = e[n];
     if (n.endsWith("Ref")) t[n] = e[n];
     else {
-      var s, u = (s = a, function() {
+      var a, c = (a = o, function() {
         var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
           t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         return (0, i.isValidElement)(e) ? (! function(e) {
@@ -23,24 +23,24 @@ function a(e) {
           }
         }(e), function(e, t) {
           var n = e.ref;
-          return ((0, r.invariant)("string" != typeof n, "Cannot connect React DnD to an element with an existing string ref. Please convert it to use a callback ref instead, or wrap it into a <span> or <div>. Read more: https://reactjs.org/docs/refs-and-the-dom.html#callback-refs"), n) ? (0, i.cloneElement)(e, {
+          return ((0, r.k)("string" != typeof n, "Cannot connect React DnD to an element with an existing string ref. Please convert it to use a callback ref instead, or wrap it into a <span> or <div>. Read more: https://reactjs.org/docs/refs-and-the-dom.html#callback-refs"), n) ? (0, i.cloneElement)(e, {
             ref: function(e) {
-              o(n, e), o(t, e)
+              u(n, e), u(t, e)
             }
           }) : (0, i.cloneElement)(e, {
             ref: t
           })
         }(e, t ? function(e) {
-          return s(e, t)
-        } : s)) : (s(e, t), e)
+          return a(e, t)
+        } : a)) : (a(e, t), e)
       });
       t[n] = function() {
-        return u
+        return c
       }
     }
   }), t
 }
 
-function o(e, t) {
+function u(e, t) {
   "function" == typeof e ? e(t) : e.current = t
 }

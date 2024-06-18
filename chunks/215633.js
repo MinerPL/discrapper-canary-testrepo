@@ -1,34 +1,36 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return l
+n.d(t, {
+  Z: function() {
+    return u
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("505737"),
-  a = n("705556"),
-  s = n("901952"),
-  o = n("391016");
+var i = n(735250);
+n(470079);
+var r = n(505737),
+  s = n(705556),
+  o = n(901952),
+  a = n(228168),
+  l = n(391016);
 
-function l(e) {
+function u(e) {
   let {
     user: t,
     guildId: n,
-    channelId: l,
-    onClose: u
-  } = e, d = (0, r.default)(t.id, n);
+    channelId: u,
+    onClose: _
+  } = e, d = (0, r.Z)(t.id, n);
   return (0, i.jsxs)("footer", {
-    className: o.footer,
-    children: [d && (0, i.jsx)(s.default, {
+    className: l.footer,
+    children: [d && (0, i.jsx)(o.Z, {
       user: t,
       guildId: n,
-      channelId: l,
-      onClose: u
-    }), !d && (0, i.jsx)(a.default, {
+      channelId: u,
+      onClose: _
+    }), !d && (0, i.jsx)(s.Z, {
       user: t,
       guildId: n,
-      onClose: u
+      onClose: _,
+      profileType: a.y0.BITE_SIZE
     })]
   })
 }

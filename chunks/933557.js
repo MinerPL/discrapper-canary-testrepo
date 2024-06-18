@@ -1,71 +1,71 @@
 "use strict";
-n.r(t), n.d(t, {
-  computeChannelName: function() {
+n.d(t, {
+  F6: function() {
     return c
   },
-  default: function() {
+  ZP: function() {
     return T
   },
-  escapeChannelName: function() {
+  le: function() {
     return E
   },
-  unescapeChannelName: function() {
+  mA: function() {
     return I
   }
-}), n("47120"), n("757143");
-var i = n("442837"),
-  r = n("762914"),
-  s = n("828695"),
-  a = n("699516"),
-  o = n("594174"),
-  l = n("823379"),
-  u = n("51144"),
-  d = n("981631"),
-  _ = n("689938");
+}), n(47120), n(757143);
+var i = n(442837),
+  r = n(762914),
+  s = n(353926),
+  o = n(699516),
+  a = n(594174),
+  l = n(823379),
+  u = n(51144),
+  _ = n(981631),
+  d = n(689938);
 
 function c(e, t, n) {
   var i, s;
-  let a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-    o = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+  let o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+    a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
   switch (e.type) {
-    case d.ChannelTypes.DM:
-      let [c] = e.recipients.map(t.getUser).filter(l.isNotNullish);
+    case _.d4z.DM:
+      let [c] = e.recipients.map(t.getUser).filter(l.lm);
       if (null == c) return "???";
       let I = n.getNickname(c.id),
-        T = null !== (i = null != I ? I : u.default.getName(c)) && void 0 !== i ? i : "???";
-      return a ? "@".concat(T) : T;
-    case d.ChannelTypes.GROUP_DM:
-      let f = (0, r.getIsBroadcastingGDM)(e.id);
+        T = null !== (i = null != I ? I : u.ZP.getName(c)) && void 0 !== i ? i : "???";
+      return o ? "@".concat(T) : T;
+    case _.d4z.GROUP_DM:
+      let h = (0, r.V1)(e.id);
       if ("" !== e.name) return e.name;
-      if (f && null != e.ownerId && "" !== e.ownerId) {
+      if (h && null != e.ownerId && "" !== e.ownerId) {
         let i = t.getUser(e.ownerId),
-          r = null !== (s = n.getNickname(e.ownerId)) && void 0 !== s ? s : u.default.getName(i);
-        return _.default.Messages.BROADCASTING_CHANNEL_NAME.format({
+          r = null !== (s = n.getNickname(e.ownerId)) && void 0 !== s ? s : u.ZP.getName(i);
+        return d.Z.Messages.BROADCASTING_CHANNEL_NAME.format({
           name: r
         })
       }
-      let S = e.recipients.map(t.getUser).filter(l.isNotNullish).map(e => {
+      let S = e.recipients.map(t.getUser).filter(l.lm).map(e => {
         var t;
-        return null !== (t = n.getNickname(e.id)) && void 0 !== t ? t : u.default.getName(e)
+        return null !== (t = n.getNickname(e.id)) && void 0 !== t ? t : u.ZP.getName(e)
       });
       if (S.length > 0) return S.join(", ");
-      return _.default.Messages.GROUP_DM_ALONE.format({
-        name: u.default.getName(t.getCurrentUser())
+      return d.Z.Messages.GROUP_DM_ALONE.format({
+        name: u.ZP.getName(t.getCurrentUser())
       });
-    case d.ChannelTypes.GUILD_ANNOUNCEMENT:
-    case d.ChannelTypes.GUILD_TEXT:
-    case d.ChannelTypes.GUILD_FORUM:
-    case d.ChannelTypes.GUILD_MEDIA:
-      if (a) return "#".concat(e.name);
+    case _.d4z.GUILD_ANNOUNCEMENT:
+    case _.d4z.GUILD_TEXT:
+    case _.d4z.GUILD_FORUM:
+    case _.d4z.GUILD_MEDIA:
+      if (o) return "#".concat(e.name);
       return e.name;
-    case d.ChannelTypes.PUBLIC_THREAD:
-    case d.ChannelTypes.PRIVATE_THREAD:
-    case d.ChannelTypes.ANNOUNCEMENT_THREAD:
-    case d.ChannelTypes.GUILD_VOICE:
-    case d.ChannelTypes.GUILD_STAGE_VOICE:
-    case d.ChannelTypes.GUILD_CATEGORY:
-      if (o) return '#"'.concat(E(e.name), '"');
-      if (a && e.isThread()) return '"'.concat(e.name, '"');
+    case _.d4z.PUBLIC_THREAD:
+    case _.d4z.PRIVATE_THREAD:
+    case _.d4z.ANNOUNCEMENT_THREAD:
+    case _.d4z.GUILD_VOICE:
+    case _.d4z.GUILD_STAGE_VOICE:
+    case _.d4z.GUILD_CATEGORY:
+      if (a) return '#"'.concat(E(e.name), '"');
+      if (o && e.isThread()) return '"'.concat(e.name, '"');
       return e.name;
     default:
       return e.name
@@ -82,5 +82,5 @@ function I(e) {
 
 function T(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  return (0, i.useStateFromStores)([o.default, s.default, a.default], () => null == e ? null : c(e, o.default, a.default, t))
+  return (0, i.e7)([a.default, s.Z, o.Z], () => null == e ? null : c(e, a.default, o.Z, t))
 }

@@ -1,9 +1,8 @@
 "use strict";
-n.r(t);
-var i, r = n("392711"),
-  s = n("442837"),
-  a = n("570140"),
-  o = n("524484");
+var i, r = n(392711),
+  s = n(442837),
+  o = n(570140),
+  a = n(524484);
 
 function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -14,7 +13,7 @@ function l(e, t, n) {
   }) : e[t] = n, e
 }
 let u = !1,
-  d = {
+  _ = {
     settingsVisible: !1,
     enabled: !1,
     combosEnabled: !0,
@@ -22,69 +21,69 @@ let u = !1,
     comboSoundsEnabled: !0,
     screenshakeEnabled: !0,
     screenshakeEnabledLocations: {
-      [o.ShakeLocation.CHAT_INPUT]: !0,
-      [o.ShakeLocation.VOICE_USER]: !1,
-      [o.ShakeLocation.MENTION]: !1
+      [a.oZ.CHAT_INPUT]: !0,
+      [a.oZ.VOICE_USER]: !1,
+      [a.oZ.MENTION]: !1
     },
     shakeIntensity: 1,
     confettiEnabled: !0,
     confettiEnabledLocations: {
-      [o.ConfettiLocation.CHAT_INPUT]: !0,
-      [o.ConfettiLocation.REACTION]: !0,
-      [o.ConfettiLocation.MEMBER_USER]: !0,
-      [o.ConfettiLocation.CALL_TILE]: !0
+      [a.Hn.CHAT_INPUT]: !0,
+      [a.Hn.REACTION]: !0,
+      [a.Hn.MEMBER_USER]: !0,
+      [a.Hn.CALL_TILE]: !0
     },
     confettiSize: 16,
     confettiCount: 5,
     warningSeen: !1
   },
-  _ = (0, r.cloneDeep)(d);
-class c extends(i = s.default.DeviceSettingsStore) {
+  d = (0, r.cloneDeep)(_);
+class c extends(i = s.ZP.DeviceSettingsStore) {
   initialize(e) {
-    _ = {
-      ..._,
+    d = {
+      ...d,
       ...e
     }
   }
   getUserAgnosticState() {
-    return _
+    return d
   }
   get settingsVisible() {
-    return _.settingsVisible
+    return d.settingsVisible
   }
   isEnabled() {
     let {
       confettiLocation: e,
       shakeLocation: t
-    } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, n = null == e || _.confettiEnabled && _.confettiEnabledLocations[e], i = null == t || _.screenshakeEnabled && _.screenshakeEnabledLocations[t];
-    return this.settingsVisible && !u && _.enabled && n && i
+    } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, n = null == e || d.confettiEnabled && d.confettiEnabledLocations[e], i = null == t || d.screenshakeEnabled && d.screenshakeEnabledLocations[t];
+    return this.settingsVisible && !u && d.enabled && n && i
   }
   get shakeIntensity() {
-    return this.isEnabled() ? _.shakeIntensity : 0
+    return this.isEnabled() ? d.shakeIntensity : 0
   }
   get combosRequiredCount() {
-    return this.isEnabled() ? _.combosRequiredCount : 0
+    return this.isEnabled() ? d.combosRequiredCount : 0
   }
   get screenshakeEnabled() {
-    return _.screenshakeEnabled
+    return d.screenshakeEnabled
   }
   get screenshakeEnabledLocations() {
-    return _.screenshakeEnabledLocations
+    return d.screenshakeEnabledLocations
   }
   get combosEnabled() {
-    return _.combosEnabled
+    return d.combosEnabled
   }
   get comboSoundsEnabled() {
-    return _.comboSoundsEnabled
+    return d.comboSoundsEnabled
   }
 }
-l(c, "displayName", "PoggermodeSettingsStore"), l(c, "persistKey", "PoggermodeSettingsStore"), t.default = new c(a.default, {
+l(c, "displayName", "PoggermodeSettingsStore"), l(c, "persistKey", "PoggermodeSettingsStore"), t.Z = new c(o.Z, {
   POGGERMODE_SETTINGS_UPDATE: function(e) {
     let {
       settings: t
     } = e;
-    _ = {
-      ..._,
+    d = {
+      ...d,
       ...t
     }
   },

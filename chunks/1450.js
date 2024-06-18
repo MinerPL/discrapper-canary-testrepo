@@ -1,92 +1,91 @@
 "use strict";
-n.r(t);
-var i = n("735250"),
-  r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
-  o = n("442837"),
-  l = n("481060"),
-  u = n("2052"),
-  d = n("367907"),
-  _ = n("906732"),
-  c = n("28546"),
-  E = n("26323"),
-  I = n("434404"),
-  T = n("889161"),
-  f = n("430824"),
-  S = n("973675"),
-  h = n("68736"),
-  A = n("267642"),
-  m = n("981631"),
-  N = n("30513"),
-  O = n("689938"),
-  p = n("182998");
-t.default = e => {
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(442837),
+  l = n(481060),
+  u = n(2052),
+  _ = n(367907),
+  d = n(906732),
+  c = n(28546),
+  E = n(26323),
+  I = n(434404),
+  T = n(889161),
+  h = n(430824),
+  S = n(973675),
+  f = n(68736),
+  N = n(267642),
+  A = n(981631),
+  m = n(30513),
+  O = n(689938),
+  R = n(743346);
+t.Z = e => {
   let {
     className: t,
     guildId: n,
     channel: s,
-    shouldTrackUpsellViewed: R,
-    setTrackedUpsellViewed: C
+    shouldTrackUpsellViewed: C,
+    setTrackedUpsellViewed: p
   } = e, {
     location: g
-  } = (0, u.useAnalyticsContext)(), {
+  } = (0, u.O)(), {
     analyticsLocations: L
-  } = (0, _.default)(), D = (0, o.useStateFromStores)([f.default], () => f.default.getGuild(n)), {
-    canManageAllExpressions: v
-  } = (0, T.useManageResourcePermissions)(D), M = null != D && 0 === (0, A.getTotalStickerCountForTier)(D.premiumTier) && !D.hasFeature(m.GuildFeatures.MORE_STICKERS);
+  } = (0, d.ZP)(), v = (0, a.e7)([h.Z], () => h.Z.getGuild(n)), {
+    canManageAllExpressions: D
+  } = (0, T.XJ)(v), M = null != v && 0 === (0, N.A3)(v.premiumTier) && !v.hasFeature(A.oNc.MORE_STICKERS);
   return (r.useEffect(() => {
-    v && M && R && ((0, d.trackWithMetadata)(m.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
+    D && M && C && ((0, _.yw)(A.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
       location: g,
-      guild_id: null == D ? void 0 : D.id,
+      guild_id: null == v ? void 0 : v.id,
       channel_id: null == s ? void 0 : s.id,
       type: "Expression Picker Inline Sticker Upsell",
       location_stack: L
-    }), C(!0))
-  }, [M, D, s, g, R, C, L, v]), null != D && v) ? M ? (0, i.jsxs)("div", {
-    className: a()(p.upsell, t),
-    children: [(0, i.jsx)(S.default, {
-      className: p.icon,
+    }), p(!0))
+  }, [M, v, s, g, C, p, L, D]), null != v && D) ? M ? (0, i.jsxs)("div", {
+    className: o()(R.upsell, t),
+    children: [(0, i.jsx)(S.Z, {
+      className: R.icon,
       width: 24,
       height: 24
     }), (0, i.jsx)(l.Text, {
       color: "interactive-normal",
-      className: p.body,
+      className: R.body,
       variant: "text-sm/normal",
-      children: O.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_PREMIUM_SUBSCRIPTIONS_DESCRIPTION.format({
-        count: (0, A.getTotalStickerCountForTier)(m.BoostedGuildTiers.TIER_1)
+      children: O.Z.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_PREMIUM_SUBSCRIPTIONS_DESCRIPTION.format({
+        count: (0, N.A3)(A.Eu4.TIER_1)
       })
     }), (0, i.jsx)(l.Button, {
       look: l.Button.Looks.LINK,
       color: l.Button.Colors.LINK,
       onClick: () => {
-        (0, E.default)({
+        (0, E.Z)({
           analyticsLocations: L,
           analyticsSourceLocation: g,
-          guild: D,
-          perks: (0, N.guildBoostingPerks)()
+          guild: v,
+          perks: (0, m.hC)()
         })
       },
-      children: O.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_PREMIUM_SUBSCRIPTIONS_CTA
+      children: O.Z.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_PREMIUM_SUBSCRIPTIONS_CTA
     })]
   }) : (0, i.jsxs)("div", {
-    className: a()(p.upsell, t),
-    children: [(0, i.jsx)(h.default, {
-      className: p.icon,
+    className: o()(R.upsell, t),
+    children: [(0, i.jsx)(f.Z, {
+      className: R.icon,
       width: 20,
       height: 20
     }), (0, i.jsx)(l.Text, {
       color: "interactive-normal",
-      className: p.body,
+      className: R.body,
       variant: "text-sm/normal",
-      children: O.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_STICKERS_DESCRIPTION
+      children: O.Z.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_STICKERS_DESCRIPTION
     }), (0, i.jsx)(l.Button, {
       look: l.Button.Looks.LINK,
       color: l.Button.Colors.LINK,
       onClick: () => {
-        (0, c.closeExpressionPicker)(), I.default.open(n, m.GuildSettingsSections.STICKERS, g)
+        (0, c._Q)(), I.Z.open(n, A.pNK.STICKERS, g)
       },
-      children: O.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_STICKERS_CTA
+      children: O.Z.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_STICKERS_CTA
     })]
   }) : null
 }

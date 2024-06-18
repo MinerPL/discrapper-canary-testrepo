@@ -1,262 +1,262 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return j
+t.d(s, {
+  Z: function() {
+    return Z
   }
-}), s("47120"), s("653041"), s("536091");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("803997"),
-  i = s.n(n),
-  r = s("392711"),
-  o = s.n(r),
-  d = s("442837"),
-  u = s("481060"),
-  c = s("570140"),
-  E = s("275759"),
-  _ = s("153124"),
-  I = s("151785"),
-  T = s("759231"),
-  S = s("63063"),
-  f = s("243730"),
-  m = s("764260"),
-  N = s("946724"),
-  g = s("95242"),
-  h = s("530198"),
-  C = s("420966"),
-  R = s("203377"),
-  x = s("981631"),
-  L = s("856651"),
-  O = s("689938"),
-  A = s("451173"),
-  p = s("790492");
-let M = (0, _.uid)();
+}), t(47120), t(653041), t(536091);
+var n = t(735250),
+  i = t(470079),
+  l = t(120356),
+  a = t.n(l),
+  r = t(392711),
+  o = t.n(r),
+  c = t(442837),
+  d = t(481060),
+  u = t(570140),
+  E = t(275759),
+  _ = t(153124),
+  I = t(151785),
+  T = t(759231),
+  N = t(63063),
+  m = t(243730),
+  S = t(764260),
+  h = t(946724),
+  g = t(95242),
+  x = t(530198),
+  C = t(420966),
+  R = t(203377),
+  L = t(981631),
+  O = t(856651),
+  A = t(689938),
+  p = t(273879),
+  M = t(585512);
+let f = (0, _.hQ)();
 
-function D(e, t) {
-  return t !== E.ConnectionConfigurationRuleOperator.AND ? Object.values(o().groupBy(e, e => "".concat(e.connectionType, ":").concat(e.applicationId))) : 0 === e.length ? [] : [
+function v(e, s) {
+  return s !== E.O1.AND ? Object.values(o().groupBy(e, e => "".concat(e.connectionType, ":").concat(e.applicationId))) : 0 === e.length ? [] : [
     [...e]
   ]
 }
 
-function v(e) {
+function D(e) {
   let {
-    handleAddVerificationClicked: t,
-    locked: s
+    handleAddVerificationClicked: s,
+    locked: t
   } = e;
-  return (0, a.jsxs)("div", {
-    className: A.headerNoConfigContainer,
-    children: [(0, a.jsx)(u.Heading, {
-      className: A.headerHeading,
+  return (0, n.jsxs)("div", {
+    className: p.headerNoConfigContainer,
+    children: [(0, n.jsx)(d.Heading, {
+      className: p.headerHeading,
       variant: "eyebrow",
-      children: O.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER
-    }), (0, a.jsx)(u.Text, {
+      children: A.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER
+    }), (0, n.jsx)(d.Text, {
       variant: "text-sm/normal",
       color: "header-secondary",
-      children: O.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_DESCRIPTION_LEARN_MORE.format({
-        helpdeskArticleUrl: S.default.getArticleURL(x.HelpdeskArticles.CONNECTION_DETAILS_ADMIN)
+      children: A.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_DESCRIPTION_LEARN_MORE.format({
+        helpdeskArticleUrl: N.Z.getArticleURL(L.BhN.CONNECTION_DETAILS_ADMIN)
       })
-    }), (0, a.jsx)(u.Button, {
-      disabled: s,
-      className: A.addVerificationButton,
-      size: u.Button.Sizes.MEDIUM,
-      look: u.Button.Looks.FILLED,
-      color: u.Button.Colors.BRAND_NEW,
-      onClick: t,
-      children: O.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_ADD_CONNECTION
+    }), (0, n.jsx)(d.Button, {
+      disabled: t,
+      className: p.addVerificationButton,
+      size: d.Button.Sizes.MEDIUM,
+      look: d.Button.Looks.FILLED,
+      color: d.Button.Colors.BRAND,
+      onClick: s,
+      children: A.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_ADD_CONNECTION
     })]
   })
 }
 
-function j(e) {
+function Z(e) {
   let {
-    guild: t,
-    role: s,
-    locked: n,
+    guild: s,
+    role: t,
+    locked: l,
     setSelectedSection: r,
     integrations: o
   } = e, {
     headerHeight: _,
-    headerRef: j
-  } = (0, g.default)(0), {
-    scrolledToTop: G,
+    headerRef: Z
+  } = (0, g.Z)(0), {
+    scrolledToTop: j,
     handleScroll: U
-  } = (0, C.useScrolledToTop)(), P = (0, d.useStateFromStores)([f.default], () => {
+  } = (0, C.V)(), G = (0, c.e7)([m.Z], () => {
     var e;
-    return null === (e = f.default.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[s.id]
-  }, [s.id, t.id]), b = (0, d.useStateFromStoresArray)([N.default], () => {
+    return null === (e = m.Z.getRoleMemberCount(s.id)) || void 0 === e ? void 0 : e[t.id]
+  }, [t.id, s.id]), P = (0, c.Wu)([h.Z], () => {
     var e;
-    return null !== (e = N.default.getEditedRoleConnectionConfigurationsMap().get(s.id)) && void 0 !== e ? e : []
-  }), B = b.length > 1 ? E.ConnectionConfigurationRuleOperator.OR : E.ConnectionConfigurationRuleOperator.AND, y = l.useMemo(() => B === E.ConnectionConfigurationRuleOperator.OR ? b.flat() : null != b && b.length > 0 ? b[0] : [], [B, b]), F = l.useMemo(() => new Set(y.map(e => e.connectionType)), [y]);
+    return null !== (e = h.Z.getEditedRoleConnectionConfigurationsMap().get(t.id)) && void 0 !== e ? e : []
+  }), b = P.length > 1 ? E.O1.OR : E.O1.AND, B = i.useMemo(() => b === E.O1.OR ? P.flat() : null != P && P.length > 0 ? P[0] : [], [b, P]), y = i.useMemo(() => new Set(B.map(e => e.connectionType)), [B]);
 
-  function H(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-      a = [...y];
-    a.push({
+  function F(e) {
+    let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
+      n = [...B];
+    n.push({
       connectionType: e,
       connectionMetadataField: void 0,
-      applicationId: t,
+      applicationId: s,
       operator: void 0,
       value: void 0
-    }), (0, m.updateRoleConnectionConfigurations)(s.id, D(a, B))
+    }), (0, S.d_)(t.id, v(n, b))
   }
 
-  function k() {
-    c.default.dispatch({
+  function w() {
+    u.Z.dispatch({
       type: "CONNECTIONS_GRID_MODAL_SHOW",
-      onComplete: e => H(e),
-      excludedPlatformTypes: F,
+      onComplete: e => F(e),
+      excludedPlatformTypes: y,
       integrations: o,
-      onCompleteApplication: e => H(L.GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE, e)
+      onCompleteApplication: e => F(O.Kt, e)
     })
   }
-  let w = null;
-  if (0 === y.length) w = (0, a.jsx)(v, {
-    handleAddVerificationClicked: k,
-    locked: n
+  let k = null;
+  if (0 === B.length) k = (0, n.jsx)(D, {
+    handleAddVerificationClicked: w,
+    locked: l
   });
-  else if (y.length > 0) {
-    var V, Y;
+  else if (B.length > 0) {
+    var H, V;
     let e = null;
-    y.length < 10 && (e = (0, a.jsx)(u.Button, {
-      className: i()(A.addVerificationButton, A.addVerificationButtonAppend),
-      size: u.Button.Sizes.LARGE,
-      look: u.Button.Looks.BLANK,
-      color: u.Button.Colors.LINK,
-      onClick: k,
-      disabled: n,
-      children: (0, a.jsxs)("div", {
-        className: A.addVerificationButtonAppendTextContainer,
-        children: [(0, a.jsx)(I.default, {}), O.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_ADD_CONNECTION]
+    B.length < 10 && (e = (0, n.jsx)(d.Button, {
+      className: a()(p.addVerificationButton, p.addVerificationButtonAppend),
+      size: d.Button.Sizes.LARGE,
+      look: d.Button.Looks.BLANK,
+      color: d.Button.Colors.LINK,
+      onClick: w,
+      disabled: l,
+      children: (0, n.jsxs)("div", {
+        className: p.addVerificationButtonAppendTextContainer,
+        children: [(0, n.jsx)(I.Z, {}), A.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_ADD_CONNECTION]
       })
-    })), w = (0, a.jsxs)(a.Fragment, {
-      children: [(V = () => (0, m.updateRoleConnectionConfigurations)(s.id, []), Y = n, (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsxs)("div", {
-          className: A.headerTitleContainer,
-          children: [(0, a.jsx)("div", {
-            className: A.headerTitleTextContainer,
-            children: (0, a.jsx)(u.Heading, {
+    })), k = (0, n.jsxs)(n.Fragment, {
+      children: [(H = () => (0, S.d_)(t.id, []), V = l, (0, n.jsxs)(n.Fragment, {
+        children: [(0, n.jsxs)("div", {
+          className: p.headerTitleContainer,
+          children: [(0, n.jsx)("div", {
+            className: p.headerTitleTextContainer,
+            children: (0, n.jsx)(d.Heading, {
               variant: "eyebrow",
-              children: O.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER
+              children: A.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER
             })
-          }), (0, a.jsx)(u.Button, {
-            className: A.headerTitleButton,
-            size: u.Button.Sizes.TINY,
-            look: u.Button.Looks.LINK,
-            color: u.Button.Colors.LINK,
-            onClick: V,
-            disabled: Y,
-            children: O.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_CLEAR_ALL
+          }), (0, n.jsx)(d.Button, {
+            className: p.headerTitleButton,
+            size: d.Button.Sizes.TINY,
+            look: d.Button.Looks.LINK,
+            color: d.Button.Colors.LINK,
+            onClick: H,
+            disabled: V,
+            children: A.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_CLEAR_ALL
           })]
-        }), (0, a.jsx)(u.Text, {
+        }), (0, n.jsx)(d.Text, {
           variant: "text-sm/normal",
-          children: O.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_DESCRIPTION_LEARN_MORE.format({
-            helpdeskArticleUrl: S.default.getArticleURL(x.HelpdeskArticles.CONNECTION_DETAILS_ADMIN)
+          children: A.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_DESCRIPTION_LEARN_MORE.format({
+            helpdeskArticleUrl: N.Z.getArticleURL(L.BhN.CONNECTION_DETAILS_ADMIN)
           })
         })]
-      })), function(e, t, s, l, n) {
-        let i = D(l, E.ConnectionConfigurationRuleOperator.OR);
-        return (0, a.jsx)(u.FormItem, {
-          className: A.operatorContainer,
-          title: O.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_REQUIREMENTS,
-          children: (0, a.jsx)(u.RadioGroup, {
+      })), function(e, s, t, i, l) {
+        let a = v(i, E.O1.OR);
+        return (0, n.jsx)(d.FormItem, {
+          className: p.operatorContainer,
+          title: A.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_REQUIREMENTS,
+          children: (0, n.jsx)(d.RadioGroup, {
             options: [{
-              name: O.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_OR_DESCRIPTION,
-              value: E.ConnectionConfigurationRuleOperator.OR
+              name: A.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_OR_DESCRIPTION,
+              value: E.O1.OR
             }, {
-              name: O.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_AND_DESCRIPTION,
-              value: E.ConnectionConfigurationRuleOperator.AND
+              name: A.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_AND_DESCRIPTION,
+              value: E.O1.AND
             }],
-            onChange: e => n(l, e.value),
-            value: s,
-            disabled: e || i.length < 2,
-            "aria-labelledby": M
+            onChange: e => l(i, e.value),
+            value: t,
+            disabled: e || a.length < 2,
+            "aria-labelledby": f
           })
         })
-      }(n, s.id, B, y, (e, t) => (0, m.updateRoleConnectionConfigurations)(s.id, D(e, t))), function(e, t, s, l, n) {
-        function i(s, a) {
-          let l = [];
-          for (let t of e) l.push({
-            ...t
+      }(l, t.id, b, B, (e, s) => (0, S.d_)(t.id, v(e, s))), function(e, s, t, i, l) {
+        function a(t, n) {
+          let i = [];
+          for (let s of e) i.push({
+            ...s
           });
-          if (null == s) {
-            let t = e[a];
-            null !== t && null == t.connectionMetadataField && null == t.operator && null == t.value ? l = l.filter(e => null == t.applicationId ? e.connectionType !== t.connectionType : e.connectionType !== t.connectionType && e.applicationId !== t.applicationId) : l.splice(a, 1)
-          } else - 1 === a ? l.push(s) : a >= 0 && (l[a] = s);
-          t(l)
+          if (null == t) {
+            let s = e[n];
+            null !== s && null == s.connectionMetadataField && null == s.operator && null == s.value ? i = i.filter(e => null == s.applicationId ? e.connectionType !== s.connectionType : e.connectionType !== s.connectionType && e.applicationId !== s.applicationId) : i.splice(n, 1)
+          } else - 1 === n ? i.push(t) : n >= 0 && (i[n] = t);
+          s(i)
         }
         let r = new Map;
-        for (let t of (e.forEach((e, t) => {
-            let s = "".concat(e.connectionType, ":").concat(e.applicationId);
-            if (r.has(s)) {
-              let a = r.get(s);
-              null == a || a.push({
-                index: t,
+        for (let s of (e.forEach((e, s) => {
+            let t = "".concat(e.connectionType, ":").concat(e.applicationId);
+            if (r.has(t)) {
+              let n = r.get(t);
+              null == n || n.push({
+                index: s,
                 configuration: e
               })
-            } else r.set(s, [{
-              index: t,
+            } else r.set(t, [{
+              index: s,
               configuration: e
             }])
           }), r.values())) {
-          if (t.some(e => {
+          if (s.some(e => {
               let {
-                configuration: t
+                configuration: s
               } = e;
-              return null == t.connectionMetadataField && null == t.operator && null == t.value
+              return null == s.connectionMetadataField && null == s.operator && null == s.value
             })) continue;
-          let s = {
-              ...t[0].configuration,
+          let t = {
+              ...s[0].configuration,
               connectionMetadataField: void 0,
               operator: void 0,
               value: void 0
             },
-            a = e.push(s);
-          t.push({
-            index: a - 1,
-            configuration: s
+            n = e.push(t);
+          s.push({
+            index: n - 1,
+            configuration: t
           })
         }
-        return (0, a.jsx)("div", {
-          className: A.configurationsContainer,
-          children: Array.from(r.values()).map(e => (0, a.jsx)(h.default, {
+        return (0, n.jsx)("div", {
+          className: p.configurationsContainer,
+          children: Array.from(r.values()).map(e => (0, n.jsx)(x.Z, {
             configurationItems: e,
-            onConfigurationChange: i,
-            locked: s,
-            integrations: n
+            onConfigurationChange: a,
+            locked: t,
+            integrations: l
           }, e[0].configuration.connectionType + ":" + e[0].index))
         })
-      }(y, e => (0, m.updateRoleConnectionConfigurations)(s.id, D(e, B)), n, s.id, o), e]
+      }(B, e => (0, S.d_)(t.id, v(e, b)), l, t.id, o), e]
     })
   }
-  return (0, a.jsx)(u.AdvancedScrollerAuto, {
-    className: A.scroller,
+  return (0, n.jsx)(d.AdvancedScrollerAuto, {
+    className: p.scroller,
     style: {
       scrollPaddingTop: _
     },
     onScroll: U,
-    children: (0, a.jsxs)("div", {
-      className: p.contentWidth,
-      children: [(0, a.jsx)("div", {
-        className: i()(p.header, p.stickyHeader, {
-          [p.stickyHeaderElevated]: !G
+    children: (0, n.jsxs)("div", {
+      className: M.contentWidth,
+      children: [(0, n.jsx)("div", {
+        className: a()(M.header, M.stickyHeader, {
+          [M.stickyHeaderElevated]: !j
         }),
-        ref: j,
-        children: (0, a.jsx)(C.default, {
-          guild: t,
-          role: s,
-          selectedSection: R.GuildSettingsRoleEditSections.VERIFICATIONS,
+        ref: Z,
+        children: (0, n.jsx)(C.Z, {
+          guild: s,
+          role: t,
+          selectedSection: R.ZI.VERIFICATIONS,
           setSelectedSection: r
         })
-      }), (null != P ? P : 0) > 0 ? (0, a.jsxs)("div", {
-        className: A.warningContainer,
-        children: [(0, a.jsx)(T.default, {
-          className: A.warningIcon
-        }), (0, a.jsx)(u.Text, {
+      }), (null != G ? G : 0) > 0 ? (0, n.jsxs)("div", {
+        className: p.warningContainer,
+        children: [(0, n.jsx)(T.Z, {
+          className: p.warningIcon
+        }), (0, n.jsx)(d.Text, {
           variant: "text-sm/normal",
           color: "text-normal",
-          children: O.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MEMBERS_WARNING
+          children: A.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MEMBERS_WARNING
         })]
-      }) : null, w]
+      }) : null, k]
     })
   })
 }

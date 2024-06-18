@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return o
   }
 });
-var i = n("358085"),
-  r = n("924557"),
-  s = n("65154");
+var i = n(358085),
+  r = n(924557),
+  s = n(65154);
 
-function a(e) {
+function o(e) {
   let {
     ignorePlatformRestriction: t
-  } = r.ClipsExperiment.getCurrentConfig({
+  } = r.NV.getCurrentConfig({
     location: "isClipsClientCapable"
   }, {
     autoTrackExposure: !1
   });
-  return t || i.isDesktop() && e.getMediaEngine().supports(s.Features.CLIPS)
+  return t || i.isDesktop() && e.getMediaEngine().supports(s.AN.CLIPS)
 }

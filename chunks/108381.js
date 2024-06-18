@@ -1,9 +1,9 @@
 "use strict";
-var r = n("689118"),
-  i = n("292735"),
-  a = n("335613"),
-  o = n("315893"),
-  s = n("764900");
+var r = n(689118),
+  i = n(292735),
+  a = n(335613),
+  o = n(315893),
+  s = n(764900);
 
 function u(e) {
   s.call(this, "digest"), this._hash = e

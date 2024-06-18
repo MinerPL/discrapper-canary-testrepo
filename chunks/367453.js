@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return i
   }
 });
-var r = n("692316"),
-  a = n("665336");
+var r = n(335832),
+  o = n(665336);
 
-function o(e, t) {
+function a(e, t) {
   for (var n = 0; n < t.length; n++) {
-    var o = t[n];
-    o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), r(e, (0, a.default)(o.key), o)
+    var a = t[n];
+    a.enumerable = a.enumerable || !1, a.configurable = !0, "value" in a && (a.writable = !0), r(e, (0, o.Z)(a.key), a)
   }
 }
 
 function i(e, t, n) {
-  return t && o(e.prototype, t), n && o(e, n), r(e, "prototype", {
+  return t && a(e.prototype, t), n && a(e, n), r(e, "prototype", {
     writable: !1
   }), e
 }

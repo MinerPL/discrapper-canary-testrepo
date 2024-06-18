@@ -1,22 +1,22 @@
 "use strict";
-n.r(t), n.d(t, {
-  addPostConnectionCallback: function() {
-    return o
+n.d(t, {
+  h: function() {
+    return a
   }
-}), n("177593"), n("653041");
-var i = n("570140"),
-  r = n("38618");
-let a = [];
+}), n(177593), n(653041);
+var i = n(570140),
+  r = n(38618);
+let s = [];
 
-function s(e) {
+function o(e) {
   setImmediate(() => e())
 }
 
-function o(e) {
-  r.default.isConnectedOrOverlay() ? s(e) : a.push(e)
+function a(e) {
+  r.Z.isConnectedOrOverlay() ? o(e) : s.push(e)
 }
-i.default.subscribe("CONNECTION_OPEN", () => {
-  a.forEach(e => s(e)), a = []
-}), i.default.subscribe("CONNECTION_RESUMED", () => {
-  a.forEach(e => s(e)), a = []
+i.Z.subscribe("CONNECTION_OPEN", () => {
+  s.forEach(e => o(e)), s = []
+}), i.Z.subscribe("CONNECTION_RESUMED", () => {
+  s.forEach(e => o(e)), s = []
 })

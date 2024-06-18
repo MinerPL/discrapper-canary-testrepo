@@ -1,56 +1,54 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("844303"),
-  i = r("846822"),
-  l = r("827622"),
-  u = Object.assign || function(e) {
+var r = n(470079),
+  i = n(844303),
+  a = n(846822),
+  o = n(827622),
+  s = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
-      var r = arguments[t];
-      for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n])
+      var n = arguments[t];
+      for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
     }
     return e
   };
-t.default = (0, i.handleFocus)(function(e) {
+t.Z = (0, a.I)(function(e) {
   var t = e.color,
-    r = e.style,
-    n = e.onClick,
-    i = void 0 === n ? function() {} : n,
-    s = e.onHover,
-    f = e.title,
-    c = void 0 === f ? t : f,
-    d = e.children,
+    n = e.style,
+    a = e.onClick,
+    u = void 0 === a ? function() {} : a,
+    c = e.onHover,
+    l = e.title,
+    d = void 0 === l ? t : l,
+    f = e.children,
     p = e.focus,
     h = e.focusStyle,
-    b = "transparent" === t,
-    v = (0, o.default)({
+    m = "transparent" === t,
+    g = (0, i.default)({
       default: {
-        swatch: u({
+        swatch: s({
           background: t,
           height: "100%",
           width: "100%",
           cursor: "pointer",
           position: "relative",
           outline: "none"
-        }, r, p ? void 0 === h ? {} : h : {})
+        }, n, p ? void 0 === h ? {} : h : {})
       }
     }),
-    g = {};
-  return s && (g.onMouseOver = function(e) {
-    return s(t, e)
-  }), a().createElement("div", u({
-    style: v.swatch,
+    _ = {};
+  return c && (_.onMouseOver = function(e) {
+    return c(t, e)
+  }), r.createElement("div", s({
+    style: g.swatch,
     onClick: function(e) {
-      return i(t, e)
+      return u(t, e)
     },
-    title: c,
+    title: d,
     tabIndex: 0,
     onKeyDown: function(e) {
-      return 13 === e.keyCode && i(t, e)
+      return 13 === e.keyCode && u(t, e)
     }
-  }, g), d, b && a().createElement(l.default, {
-    borderRadius: v.swatch.borderRadius,
+  }, _), f, m && r.createElement(o.Z, {
+    borderRadius: g.swatch.borderRadius,
     boxShadow: "inset 0 0 0 1px rgba(0,0,0,0.1)"
   }))
 })

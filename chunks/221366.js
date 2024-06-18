@@ -1,6 +1,6 @@
 "use strict";
-var n = r("561401"),
-  i = r("65183");
+var n = r(561401),
+  i = r(65183);
 t.exports = function(t, e, r) {
   var o = t.getBlockMap(),
     a = e.getStartKey(),

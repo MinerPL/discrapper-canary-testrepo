@@ -1,16 +1,15 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("803997"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("531057"),
-  o = n("605260"),
-  l = n("465270"),
-  u = n("865824"),
-  d = n("481060"),
-  _ = n("325767"),
-  c = n("715837");
+  o = n(531057),
+  a = n(605260),
+  l = n(465270),
+  u = n(865824),
+  _ = n(481060),
+  d = n(325767),
+  c = n(199813);
 let E = {
     UP: c.directionUp,
     RIGHT: c.directionRight,
@@ -24,23 +23,23 @@ let E = {
       height: r = 24,
       color: I = "currentColor",
       transition: T = c.transition,
-      className: f,
+      className: h,
       foreground: S,
-      expanded: h,
-      ...A
+      expanded: f,
+      ...N
     } = e, {
-      enabled: m
-    } = (0, d.useRedesignIconContext)(), N = t;
-    if (!0 === h ? N = E.DOWN : !1 === h && (N = E.RIGHT), m) {
+      enabled: A
+    } = (0, _.useRedesignIconContext)(), m = t;
+    if (!0 === f ? m = E.DOWN : !1 === f && (m = E.RIGHT), A) {
       let e = {
-        [E.UP]: u.ChevronSmallUpIcon,
-        [E.DOWN]: a.ChevronSmallDownIcon,
-        [E.LEFT]: o.ChevronSmallLeftIcon,
-        [E.RIGHT]: l.ChevronSmallRightIcon
-      } [N];
+        [E.UP]: u.u,
+        [E.DOWN]: o.C,
+        [E.LEFT]: a.V,
+        [E.RIGHT]: l.F
+      } [m];
       return (0, i.jsx)(e, {
-        ...A,
-        className: f,
+        ...N,
+        className: h,
         width: n,
         height: r,
         color: I,
@@ -48,11 +47,11 @@ let E = {
       })
     }
     return (0, i.jsx)("svg", {
-      className: s()(f, T, N),
+      className: s()(h, T, m),
       width: n,
       height: r,
       viewBox: "0 0 24 24",
-      ...(0, _.default)(A),
+      ...(0, d.Z)(N),
       children: (0, i.jsx)("path", {
         className: S,
         fill: "none",
@@ -65,4 +64,4 @@ let E = {
       })
     })
   };
-I.Directions = E, t.default = I
+I.Directions = E, t.Z = I

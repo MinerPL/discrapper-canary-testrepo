@@ -1,22 +1,22 @@
 "use strict";
-n.r(t), n.d(t, {
-  getBuildPlatform: function() {
-    return o
+n.d(t, {
+  D: function() {
+    return a
   }
-}), n("411104");
-var i, r, s = n("358085"),
-  a = n("981631");
+}), n(411104);
+var i, r, s = n(358085),
+  o = n(981631);
 
-function o() {
+function a() {
   switch ((0, s.getPlatform)()) {
     case s.PlatformTypes.WINDOWS:
       let e = "x86";
-      if (null != window.DiscordNative && (e = window.DiscordNative.os.arch), "x86" === e || "ia32" === e) return a.BuildPlatformTypes.WIN32;
-      return a.BuildPlatformTypes.WIN64;
+      if (null != window.DiscordNative && (e = window.DiscordNative.os.arch), "x86" === e || "ia32" === e) return o.QR$.WIN32;
+      return o.QR$.WIN64;
     case s.PlatformTypes.OSX:
-      return a.BuildPlatformTypes.MACOS;
+      return o.QR$.MACOS;
     case s.PlatformTypes.LINUX:
-      return a.BuildPlatformTypes.LINUX;
+      return o.QR$.LINUX;
     default:
       throw Error("Unsupported build type")
   }

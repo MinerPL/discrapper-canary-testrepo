@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return u
   }
 });
-var i = n("979590"),
+var i = n(979590),
   r = n.n(i),
-  s = n("866442"),
-  a = n("81825");
+  s = n(866442),
+  o = n(81825);
 
-function o(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -18,11 +18,11 @@ function o(e, t, n) {
   }) : e[t] = n, e
 }
 let l = e => null == e ? e : {
-  backgroundColors: e.background_colors.map(e => r()((0, s.int2hex)(e))),
-  buttonColors: e.button_colors.map(e => r()((0, s.int2hex)(e))),
-  confettiColors: e.confetti_colors.map(e => r()((0, s.int2hex)(e)))
+  backgroundColors: e.background_colors.map(e => r()((0, s.Rf)(e))),
+  buttonColors: e.button_colors.map(e => r()((0, s.Rf)(e))),
+  confettiColors: e.confetti_colors.map(e => r()((0, s.Rf)(e)))
 };
-class u extends a.default {
+class u extends o.Z {
   static fromServer(e) {
     let {
       store_listing_id: t,
@@ -30,16 +30,16 @@ class u extends a.default {
       unpublished_at: i,
       styles: r,
       ...s
-    } = e, a = null != i ? new Date(i) : null;
+    } = e, o = null != i ? new Date(i) : null;
     return new u({
       ...s,
       storeListingId: t,
       skuId: n,
-      unpublishedAt: a,
+      unpublishedAt: o,
       styles: l(r)
     })
   }
   constructor(e) {
-    super(), o(this, "storeListingId", void 0), o(this, "skuId", void 0), o(this, "name", void 0), o(this, "summary", void 0), o(this, "banner", void 0), o(this, "unpublishedAt", void 0), o(this, "styles", void 0), this.storeListingId = e.storeListingId, this.skuId = e.skuId, this.name = e.name, this.summary = e.summary, this.banner = e.banner, this.unpublishedAt = e.unpublishedAt, this.styles = e.styles
+    super(), a(this, "storeListingId", void 0), a(this, "skuId", void 0), a(this, "name", void 0), a(this, "summary", void 0), a(this, "banner", void 0), a(this, "unpublishedAt", void 0), a(this, "styles", void 0), this.storeListingId = e.storeListingId, this.skuId = e.skuId, this.name = e.name, this.summary = e.summary, this.banner = e.banner, this.unpublishedAt = e.unpublishedAt, this.styles = e.styles
   }
 }

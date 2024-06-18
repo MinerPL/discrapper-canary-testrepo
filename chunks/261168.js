@@ -7,8 +7,8 @@ function r(e) {
     return e.formats[n] || e.formats[e.defaultWidth]
   }
 }
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 })

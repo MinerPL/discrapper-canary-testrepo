@@ -1,53 +1,53 @@
 "use strict";
-n.r(t), n.d(t, {
-  defineProtoSetting: function() {
-    return u
-  },
-  wrapSettingWithOverride: function() {
+n.d(t, {
+  KM: function() {
     return _
   },
-  wrapSettingWithSelectiveSyncing: function() {
+  R2: function() {
     return d
+  },
+  Zc: function() {
+    return u
   }
 });
-var i = n("442837"),
-  r = n("570140"),
-  s = n("238514"),
-  a = n("675478"),
-  o = n("581883"),
-  l = n("526761");
+var i = n(442837),
+  r = n(570140),
+  s = n(238514),
+  o = n(675478),
+  a = n(581883),
+  l = n(526761);
 
 function u(e, t, n, r) {
   let s = () => {
     var i;
-    return n(null === (i = o.default.settings[e]) || void 0 === i ? void 0 : i[t])
+    return n(null === (i = a.Z.settings[e]) || void 0 === i ? void 0 : i[t])
   };
   return {
     getSetting: s,
-    updateSetting: c(s, n => a.PreloadedUserSettingsActionCreators.updateAsync(e, e => {
+    updateSetting: c(s, n => o.hW.updateAsync(e, e => {
       e[t] = r(n, e[t])
-    }, l.UserSettingsDelay.INFREQUENT_USER_ACTION)),
-    useSetting: () => (0, i.useStateFromStores)([o.default], s)
+    }, l.fy.INFREQUENT_USER_ACTION)),
+    useSetting: () => (0, i.e7)([a.Z], s)
   }
 }
 
-function d(e, t, n) {
-  let a = () => {
+function _(e, t, n) {
+  let o = () => {
     var i;
-    let r = s.default.getState()[t];
+    let r = s.Z.getState()[t];
     return null !== (i = null == r ? void 0 : r.settings[n]) && void 0 !== i ? i : e.getSetting()
   };
   return {
-    getSetting: a,
+    getSetting: o,
     useSetting: () => {
       let r = e.useSetting(),
-        a = (0, i.useStateFromStores)([s.default], () => {
-          let e = s.default.getState()[t];
+        o = (0, i.e7)([s.Z], () => {
+          let e = s.Z.getState()[t];
           return null == e ? void 0 : e.settings[n]
         });
-      return null != a ? a : r
+      return null != o ? o : r
     },
-    updateSetting: c(a, i => s.default.shouldSync(t) ? e.updateSetting(i) : (r.default.dispatch({
+    updateSetting: c(o, i => s.Z.shouldSync(t) ? e.updateSetting(i) : (r.Z.dispatch({
       type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
       changes: {
         [t]: {
@@ -60,7 +60,7 @@ function d(e, t, n) {
   }
 }
 
-function _(e, t, n, i) {
+function d(e, t, n, i) {
   let s = () => {
     var t;
     return null !== (t = n()) && void 0 !== t ? t : e.getSetting()
@@ -72,7 +72,7 @@ function _(e, t, n, i) {
         n = i();
       return null != n ? n : t
     },
-    updateSetting: c(s, n => (r.default.dispatch({
+    updateSetting: c(s, n => (r.Z.dispatch({
       type: "USER_SETTINGS_OVERRIDE_CLEAR",
       settings: [t]
     }), e.updateSetting(n)))

@@ -1,5 +1,5 @@
 "use strict";
-var e = n("96403"),
+var e = n(96403),
   o = e({}.toString),
   i = e("".slice);
 t.exports = function(t) {

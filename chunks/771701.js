@@ -1,5 +1,5 @@
-var r = n("807419"),
-  i = n("406705");
+var n = e(807419),
+  o = e(406705);
 t.exports = function(t) {
-  return null != t && i(t.length) && !r(t)
+  return null != t && o(t.length) && !n(t)
 }

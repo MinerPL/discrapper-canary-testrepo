@@ -1,11 +1,11 @@
 "use strict";
-var r = n("444675");
+var r = n(444675);
 
 function i() {
   throw Error("secure random number generation not supported by this browser\nuse chrome, FireFox or Internet Explorer 11")
 }
-var a = n("957578"),
-  o = n("706178"),
+var a = n(957578),
+  o = n(706178),
   s = a.Buffer,
   u = a.kMaxLength,
   c = n.g.crypto || n.g.msCrypto,
@@ -35,9 +35,8 @@ c && c.getRandomValues || !r.browser ? (t.randomFill = function(e, t, r, i) {
 
 function p(e, t, n, i) {
   if (r.browser) {
-    var a = e.buffer,
-      s = new Uint8Array(a, t, n);
-    if (c.getRandomValues(s), i) {
+    var a = new Uint8Array(e.buffer, t, n);
+    if (c.getRandomValues(a), i) {
       r.nextTick(function() {
         i(null, e)
       });

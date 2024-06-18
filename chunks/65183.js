@@ -623,20 +623,20 @@ r = this, n = function() {
   }, tP.prototype.clear = function() {
     return 0 === this.size ? this : this.__ownerID ? (this.size = 0, this._root = null, this.__hash = void 0, this.__altered = !0, this) : tQ()
   }, tP.prototype.merge = function() {
-    return t5(this, void 0, arguments)
+    return t2(this, void 0, arguments)
   }, tP.prototype.mergeWith = function(t) {
     var e = l.call(arguments, 1);
-    return t5(this, t, e)
+    return t2(this, t, e)
   }, tP.prototype.mergeIn = function(t) {
     var e = l.call(arguments, 1);
     return this.updateIn(t, tQ(), function(t) {
       return "function" == typeof t.merge ? t.merge.apply(t, e) : e[e.length - 1]
     })
   }, tP.prototype.mergeDeep = function() {
-    return t5(this, t8, arguments)
+    return t2(this, t8, arguments)
   }, tP.prototype.mergeDeepWith = function(t) {
     var e = l.call(arguments, 1);
-    return t5(this, t3(t), e)
+    return t2(this, t5(t), e)
   }, tP.prototype.mergeDeepIn = function(t) {
     var e = l.call(arguments, 1);
     return this.updateIn(t, tQ(), function(t) {
@@ -734,15 +734,15 @@ r = this, n = function() {
     return t.update(e, r, n, i, o, a, u)
   }
 
-  function t2(t) {
+  function t6(t) {
     return t.constructor === tJ || t.constructor === tG
   }
 
-  function t6(t, e, r, n, i) {
+  function t3(t, e, r, n, i) {
     if (t.keyHash === n) return new tG(e, n, [t.entry, i]);
     var o, a = (0 === r ? t.keyHash : t.keyHash >>> r) & D,
       u = (0 === r ? n : n >>> r) & D,
-      s = a === u ? [t6(t, e, r + 5, n, i)] : (o = new tJ(e, n, i), a < u ? [t, o] : [o, t]);
+      s = a === u ? [t3(t, e, r + 5, n, i)] : (o = new tJ(e, n, i), a < u ? [t, o] : [o, t]);
     return new tW(e, 1 << a | 1 << u, s)
   }
   tq[tU] = !0, tq[C] = tq.remove, tq.removeIn = tq.deleteIn, tH.prototype.get = function(t, e, r, n) {
@@ -787,8 +787,8 @@ r = this, n = function() {
       for (var o = 0, a = Array(E), u = 0; 0 !== r; u++, r >>>= 1) a[u] = 1 & r ? e[o++] : void 0;
       return a[n] = i, new tV(t, o + 1, a)
     }(t, p, c, u, d);
-    if (l && !d && 2 === p.length && t2(p[1 ^ f])) return p[1 ^ f];
-    if (l && d && 1 === p.length && t2(d)) return d;
+    if (l && !d && 2 === p.length && t6(p[1 ^ f])) return p[1 ^ f];
+    if (l && d && 1 === p.length && t6(d)) return d;
     var g = t && t === this.ownerID,
       y = l ? d ? c : c ^ s : c | s,
       v = l ? d ? t4(p, f, d, g) : function(t, e, r) {
@@ -837,7 +837,7 @@ r = this, n = function() {
   }, tG.prototype.update = function(t, e, r, n, i, o, a) {
     void 0 === r && (r = tO(n));
     var u = i === O;
-    if (r !== this.keyHash) return u ? this : (A(a), A(o), t6(this, t, e, r, [n, i]));
+    if (r !== this.keyHash) return u ? this : (A(a), A(o), t3(this, t, e, r, [n, i]));
     for (var s = this.entries, c = 0, l = s.length; c < l && !tv(n, s[c][0]); c++);
     var f = c < l;
     if (f ? s[c][1] === i : u) return this;
@@ -856,7 +856,7 @@ r = this, n = function() {
       return
     }
     if (s) return t && t === this.ownerID ? (this.entry[1] = i, this) : new tJ(t, this.keyHash, [n, i]);
-    return A(o), t6(this, t, e, tO(n), [n, i])
+    return A(o), t3(this, t, e, tO(n), [n, i])
   }, tH.prototype.iterate = tG.prototype.iterate = function(t, e) {
     for (var r = this.entries, n = 0, i = r.length - 1; n <= i; n++)
       if (!1 === t(r[e ? i - n : n])) return !1
@@ -888,7 +888,7 @@ r = this, n = function() {
     return G()
   };
 
-  function t5(t, e, r) {
+  function t2(t, e, r) {
     for (var n = [], i = 0; i < r.length; i++) {
       var o = r[i],
         a = h(o);
@@ -903,7 +903,7 @@ r = this, n = function() {
     return t && t.mergeDeep && y(e) ? t.mergeDeep(e) : tv(t, e) ? t : e
   }
 
-  function t3(t) {
+  function t5(t) {
     return function(e, r, n) {
       if (e && e.mergeDeepWith && y(r)) return e.mergeDeepWith(t, r);
       var i = t(e, r, n);
@@ -1007,7 +1007,7 @@ r = this, n = function() {
     return ey(this, t8, arguments)
   }, en.prototype.mergeDeepWith = function(t) {
     var e = l.call(arguments, 1);
-    return ey(this, t3(t), e)
+    return ey(this, t5(t), e)
   }, en.prototype.setSize = function(t) {
     return eg(this, 0, t)
   }, en.prototype.slice = function(t, e) {
@@ -1738,7 +1738,7 @@ r = this, n = function() {
   }
 
   function eZ(t) {
-    return null == t ? e6() : e$(t) && !b(t) ? t : e6().withMutations(function(e) {
+    return null == t ? e3() : e$(t) && !b(t) ? t : e3().withMutations(function(e) {
       var r = g(t);
       tz(r.size), r.forEach(function(t) {
         return e.add(t)
@@ -1806,9 +1806,9 @@ r = this, n = function() {
     var e = l.call(arguments, 1);
     return this.union.apply(this, e)
   }, eZ.prototype.sort = function(t) {
-    return e5(eB(this, t))
+    return e2(eB(this, t))
   }, eZ.prototype.sortBy = function(t, e) {
-    return e5(eB(this, e, t))
+    return e2(eB(this, e, t))
   }, eZ.prototype.wasAltered = function() {
     return this._map.wasAltered()
   }, eZ.prototype.__iterate = function(t, e) {
@@ -1832,16 +1832,16 @@ r = this, n = function() {
     return t.__ownerID ? (t.size = e.size, t._map = e, t) : e === t._map ? t : 0 === e.size ? t.__empty() : t.__make(e)
   }
 
-  function e2(t, e) {
+  function e6(t, e) {
     var r = Object.create(e0);
     return r.size = t ? t.size : 0, r._map = t, r.__ownerID = e, r
   }
 
-  function e6() {
-    return u || (u = e2(tQ()))
+  function e3() {
+    return u || (u = e6(tQ()))
   }
 
-  function e5(t) {
+  function e2(t) {
     return null == t ? e9() : e8(t) ? t : e9().withMutations(function(e) {
       var r = g(t);
       tz(r.size), r.forEach(function(t) {
@@ -1853,17 +1853,17 @@ r = this, n = function() {
   function e8(t) {
     return e$(t) && b(t)
   }
-  e0[eQ] = !0, e0[C] = e0.remove, e0.mergeDeep = e0.merge, e0.mergeDeepWith = e0.mergeWith, e0.withMutations = tq.withMutations, e0.asMutable = tq.asMutable, e0.asImmutable = tq.asImmutable, e0.__empty = e6, e0.__make = e2, f(e5, eZ), e5.of = function() {
+  e0[eQ] = !0, e0[C] = e0.remove, e0.mergeDeep = e0.merge, e0.mergeDeepWith = e0.mergeWith, e0.withMutations = tq.withMutations, e0.asMutable = tq.asMutable, e0.asImmutable = tq.asImmutable, e0.__empty = e3, e0.__make = e6, f(e2, eZ), e2.of = function() {
     return this(arguments)
-  }, e5.fromKeys = function(t) {
+  }, e2.fromKeys = function(t) {
     return this(h(t).keySeq())
-  }, e5.prototype.toString = function() {
+  }, e2.prototype.toString = function() {
     return this.__toString("OrderedSet {", "}")
-  }, e5.isOrderedSet = e8;
-  var e3 = e5.prototype;
+  }, e2.isOrderedSet = e8;
+  var e5 = e2.prototype;
 
   function e7(t, e) {
-    var r = Object.create(e3);
+    var r = Object.create(e5);
     return r.size = t ? t.size : 0, r._map = t, r.__ownerID = e, r
   }
 
@@ -1878,7 +1878,7 @@ r = this, n = function() {
   function rt(t) {
     return !!(t && t[re])
   }
-  e3[x] = !0, e3.__empty = e9, e3.__make = e7, f(e4, tx), e4.of = function() {
+  e5[x] = !0, e5.__empty = e9, e5.__make = e7, f(e4, tx), e4.of = function() {
     return this(arguments)
   }, e4.prototype.toString = function() {
     return this.__toString("Stack [", "]")
@@ -1999,7 +1999,7 @@ r = this, n = function() {
       return em(this.toKeyedSeq())
     },
     toOrderedSet: function() {
-      return e5(v(this) ? this.valueSeq() : this)
+      return e2(v(this) ? this.valueSeq() : this)
     },
     toSet: function() {
       return eZ(v(this) ? this.valueSeq() : this)
@@ -2502,7 +2502,7 @@ r = this, n = function() {
     List: en,
     Stack: e4,
     Set: eZ,
-    OrderedSet: e5,
+    OrderedSet: e2,
     Record: eV,
     Range: tS,
     Repeat: t_,

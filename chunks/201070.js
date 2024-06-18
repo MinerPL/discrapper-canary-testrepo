@@ -1,42 +1,33 @@
 "use strict";
-n.r(t), n.d(t, {
-  getChunkIndex: function() {
-    return M
-  },
-  getChunkNumbers: function() {
+n.d(t, {
+  $j: function() {
     return y
   },
-  useIsMakingRequest: function() {
+  M3: function() {
     return U
-  },
-  useIsStillIndexing: function() {
-    return b
-  },
-  useMembersSearchRecordStore: function() {
-    return R
   }
-}), n("47120"), n("411104");
-var i, r, s, a, o = n("348327"),
-  l = n.n(o),
-  u = n("392711"),
-  d = n("652874"),
-  _ = n("259443"),
-  c = n("379649"),
-  E = n("147913"),
-  I = n("823379"),
-  T = n("709054"),
-  f = n("823596"),
-  S = n("733026"),
-  h = n("588215"),
-  A = n("496135"),
-  m = n("893966");
-let N = new _.Logger("MemberSafetySearchManager");
+}), n(47120), n(411104);
+var i, r, s, o, a = n(348327),
+  l = n.n(a),
+  u = n(392711),
+  _ = n(652874),
+  d = n(259443),
+  c = n(379649),
+  E = n(147913),
+  I = n(823379),
+  T = n(709054),
+  h = n(823596),
+  S = n(733026),
+  f = n(588215),
+  N = n(496135),
+  A = n(893966);
+let m = new d.Y("MemberSafetySearchManager");
 
 function O(e) {
   return "guild_".concat(e)
 }
 
-function p(e) {
+function R(e) {
   return {
     requestState: e,
     abortController: null,
@@ -48,38 +39,38 @@ function p(e) {
     elasticSearchCursor: null
   }
 }(s = i || (i = {}))[s.FAILED = 0] = "FAILED", s[s.UNFETCHED = 1] = "UNFETCHED", s[s.PENDING = 2] = "PENDING", s[s.SUCCEEDED = 3] = "SUCCEEDED", s[s.STILL_INDEXING = 4] = "STILL_INDEXING";
-let R = (0, d.default)(e => ({}));
+let C = (0, _.Z)(e => ({}));
 
-function C(e, t) {
-  let n = R.getState()[e];
-  return null == n && (n = p(1)), n = {
+function p(e, t) {
+  let n = C.getState()[e];
+  return null == n && (n = R(1)), n = {
     ...n,
     ...t
-  }, R.setState(t => ({
+  }, C.setState(t => ({
     ...t,
     [e]: n
   })), n
 }
 
 function g(e) {
-  return R.getState()[e]
+  return C.getState()[e]
 }
 
 function L(e) {
   let t = g(e);
-  return null == t && C(e, t = p(1)), t
+  return null == t && p(e, t = R(1)), t
 }
-async function D(e) {
-  await (0, c.sleep)(200), null != g(e) && C(e, {
+async function v(e) {
+  if (await (0, c._v)(200), null != g(e)) p(e, {
     requestState: 3,
     abortController: null,
     lastUpdated: Date.now()
   })
 }
 
-function v(e) {
+function D(e) {
   var t;
-  t = O(e), R.setState(e => {
+  t = O(e), C.setState(e => {
     let n = {
       ...e
     };
@@ -89,77 +80,75 @@ function v(e) {
 
 function M(e, t) {
   return Math.floor(Math.max(e - 1, 0) / t)
-}
-
-function y(e) {
-  let t = (0, f.getSearchChunkLimit)(e),
-    n = e.pageSize * (e.currentPage - 1),
-    i = e.pageSize * e.currentPage,
-    r = e.pageSize * (e.currentPage + 1);
-  return {
-    previousPageChunkNumber: M(n, t),
-    currentPageChunkNumber: M(i, t),
-    nextPageChunkNumber: M(r, t)
-  }
-}(a = r || (r = {}))[a.FIRST_PAGE_CHUNK = 0] = "FIRST_PAGE_CHUNK", a[a.CURRENT_SEARCH_CHUNK = 1] = "CURRENT_SEARCH_CHUNK", a[a.NEXT_SEARCH_CHUNK = 2] = "NEXT_SEARCH_CHUNK", a[a.PREVIOUS_SEARCH_CHUNK = 3] = "PREVIOUS_SEARCH_CHUNK";
+}(o = r || (r = {}))[o.FIRST_PAGE_CHUNK = 0] = "FIRST_PAGE_CHUNK", o[o.CURRENT_SEARCH_CHUNK = 1] = "CURRENT_SEARCH_CHUNK", o[o.NEXT_SEARCH_CHUNK = 2] = "NEXT_SEARCH_CHUNK", o[o.PREVIOUS_SEARCH_CHUNK = 3] = "PREVIOUS_SEARCH_CHUNK";
 async function P(e) {
-  var t, n, i, r, s, a;
-  let o = m.default.getSearchStateByGuildId(e),
-    d = m.default.getPaginationStateByGuildId(e),
+  var t, n, i, r, s;
+  let o = A.Z.getSearchStateByGuildId(e),
+    a = A.Z.getPaginationStateByGuildId(e),
     _ = O(e),
-    c = L(_),
-    [E, p] = function(e, t, n) {
-      var i, r, s, a, o, l;
+    d = L(_),
+    [c, E] = function(e, t, n) {
+      var i, r, s, o, a, l;
       let u = function(e, t) {
           var n;
           let {
             currentPageChunkNumber: i,
             previousPageChunkNumber: r,
             nextPageChunkNumber: s
-          } = y(t), {
-            previousPagination: a
-          } = L(O(e)), o = t.currentPage, l = null !== (n = null == a ? void 0 : a.currentPage) && void 0 !== n ? n : 0, u = m.default.getElasticSearchPaginationByGuildId(e);
+          } = function(e) {
+            let t = (0, h.t3)(e),
+              n = e.pageSize * (e.currentPage - 1),
+              i = e.pageSize * e.currentPage,
+              r = e.pageSize * (e.currentPage + 1);
+            return {
+              previousPageChunkNumber: M(n, t),
+              currentPageChunkNumber: M(i, t),
+              nextPageChunkNumber: M(r, t)
+            }
+          }(t), {
+            previousPagination: o
+          } = L(O(e)), a = t.currentPage, l = null !== (n = null == o ? void 0 : o.currentPage) && void 0 !== n ? n : 0, u = A.Z.getElasticSearchPaginationByGuildId(e);
           switch (!0) {
             case null == u:
             case i === s && 0 === i:
               return 0;
             case i === s && i === r:
               return 1;
-            case l < o && i < s:
+            case l < a && i < s:
               return 2;
-            case l > o && i >= r:
+            case l > a && i >= r:
               if (0 < i) return 3;
               return 0;
             default:
               return 1
           }
         }(e, n),
-        d = m.default.getElasticSearchPaginationByGuildId(e),
-        _ = (0, f.getSearchChunkLimit)(n);
+        _ = A.Z.getElasticSearchPaginationByGuildId(e),
+        d = (0, h.t3)(n);
       switch (u) {
         case 0:
           return [null, {
-            limit: _
+            limit: d
           }];
         case 1:
           return [null !== (i = t.cursor) && void 0 !== i ? i : null, {
-            limit: _,
+            limit: d,
             after: null !== (r = t.cursor) && void 0 !== r ? r : void 0
           }];
         case 2:
-          return [null !== (s = null == d ? void 0 : d.after) && void 0 !== s ? s : null, {
-            limit: _,
-            after: null !== (a = null == d ? void 0 : d.after) && void 0 !== a ? a : void 0
+          return [null !== (s = null == _ ? void 0 : _.after) && void 0 !== s ? s : null, {
+            limit: d,
+            after: null !== (o = null == _ ? void 0 : _.after) && void 0 !== o ? o : void 0
           }];
         case 3:
-          return [null !== (o = null == d ? void 0 : d.before) && void 0 !== o ? o : null, {
-            limit: _,
-            before: null !== (l = null == d ? void 0 : d.before) && void 0 !== l ? l : void 0
+          return [null !== (a = null == _ ? void 0 : _.before) && void 0 !== a ? a : null, {
+            limit: d,
+            before: null !== (l = null == _ ? void 0 : _.before) && void 0 !== l ? l : void 0
           }];
         default:
-          (0, I.assertNever)(u)
+          (0, I.vE)(u)
       }
-    }(e, c, d);
+    }(e, d, a);
   let R = (r = function(e) {
       var t, n;
       let i = {},
@@ -168,7 +157,7 @@ async function P(e) {
           query: s
         } = e;
       if (null != (t = s) && t.length > 1) {
-        let [e, t] = (0, S.splitQuery)(s);
+        let [e, t] = (0, S.C)(s);
         e.length > 0 && (i.usernames = {
           or_query: e
         }), t.length > 0 && (i.user_id = {
@@ -176,25 +165,25 @@ async function P(e) {
         })
       }
       let {
-        requireUnusualDmActivity: a,
-        requireCommunicationDisabled: o,
+        requireUnusualDmActivity: o,
+        requireCommunicationDisabled: a,
         requireUnusualAccountActivity: l,
         requireUsernameQuarantined: u
-      } = e, d = {};
-      a && (d.unusual_dm_activity_until = {
+      } = e, _ = {};
+      o && (_.unusual_dm_activity_until = {
         range: {
-          gte: Date.now() - h.UNUSUAL_DM_COMPARISON_DELTA
+          gte: Date.now() - f.rL
         }
-      }), o && (d.communication_disabled_until = {
+      }), a && (_.communication_disabled_until = {
         range: {
           gte: Date.now()
         }
-      }), l && (d.unusual_account_activity = l), u && (d.automod_quarantined_username = u), Object.keys(d).length > 0 && (r.safety_signals = d);
+      }), l && (_.unusual_account_activity = l), u && (_.automod_quarantined_username = u), Object.keys(_).length > 0 && (r.safety_signals = _);
       let {
-        selectedRoleIds: _
+        selectedRoleIds: d
       } = e;
-      _.size > 0 && (i.role_ids = {
-        and_query: Array.from(_)
+      d.size > 0 && (i.role_ids = {
+        and_query: Array.from(d)
       });
       let {
         selectedJoinDateOption: c
@@ -228,35 +217,35 @@ async function P(e) {
         or_query: [I]
       });
       let {
-        selectedJoinSourceType: f
+        selectedJoinSourceType: h
       } = e;
-      null != f && (i.join_source_type = {
-        or_query: [f]
+      null != h && (i.join_source_type = {
+        or_query: [h]
       });
-      let A = {
+      let N = {
           or_query: r,
           and_query: i
         },
         {
-          selectedSort: m
+          selectedSort: A
         } = e;
-      return null != m && (A.sort = m), A
-    }(o), null == (s = p) ? r : {
+      return null != A && (N.sort = A), N
+    }(o), null == (s = E) ? r : {
       ...r,
       ...s
     }),
-    v = null !== (t = o.selectedSort) && void 0 !== t ? t : h.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC;
+    C = null !== (t = o.selectedSort) && void 0 !== t ? t : f.d$.ORDER_BY_GUILD_JOINED_AT_DESC;
   if (function(e, t) {
       let n = L(e);
       return l()(n.query, t)
-    }(_, R) && (0, u.isEqual)(E, c.cursor)) return;
-  let M = function(e, t, n, i, r) {
+    }(_, R) && (0, u.isEqual)(c, d.cursor)) return;
+  let D = function(e, t, n, i, r) {
     let s = g(e);
     if ((null == s ? void 0 : s.requestState) === 2) {
-      var a;
-      null === (a = s.abortController) || void 0 === a || a.abort()
+      var o;
+      null === (o = s.abortController) || void 0 === o || o.abort()
     }
-    return C(e, {
+    return p(e, {
       requestState: 2,
       abortController: new AbortController,
       lastUpdated: Date.now(),
@@ -265,53 +254,54 @@ async function P(e) {
       previousPagination: i,
       sort: r
     })
-  }(_, R, E, d, v);
+  }(_, R, c, a, C);
   try {
-    if (N.info("Making member search request", {
-        query: M.query,
+    if (m.info("Making member search request", {
+        query: D.query,
         guildId: e
-      }), null == M.query) throw Error("Query is null");
-    await (0, A.searchGuildMembers)(e, M.query, {
-      signal: null !== (i = null === (n = M.abortController) || void 0 === n ? void 0 : n.signal) && void 0 !== i ? i : void 0
+      }), null == D.query) throw Error("Query is null");
+    await (0, N.D)(e, D.query, {
+      signal: null !== (i = null === (n = D.abortController) || void 0 === n ? void 0 : n.signal) && void 0 !== i ? i : void 0
     })
   } catch (e) {
-    ;
     if (-1 === e.code) return;
-    null != g(a = _) && C(a, {
-      requestState: 0,
-      abortController: null,
-      lastUpdated: Date.now()
-    });
+    ! function(e) {
+      if (null != g(e)) p(e, {
+        requestState: 0,
+        abortController: null,
+        lastUpdated: Date.now()
+      })
+    }(_);
     return
   }
-  await D(_)
+  await v(_)
 }
 
-function U(e) {
-  return R(t => {
+function y(e) {
+  return C(t => {
     var n;
     return (null === (n = t[O(e)]) || void 0 === n ? void 0 : n.requestState) === 2
   })
 }
 
-function b(e) {
-  return R(t => {
+function U(e) {
+  return C(t => {
     var n;
     return (null === (n = t[O(e)]) || void 0 === n ? void 0 : n.requestState) === 4
   })
 }
-class G extends E.default {
+class b extends E.Z {
   handleInitialize(e) {
     let {
       guildId: t
     } = e;
-    return v(t), P(t)
+    return D(t), P(t)
   }
   handleGuildDelete(e) {
     let {
       guild: t
     } = e;
-    return v(t.id)
+    return D(t.id)
   }
   handleSearchStateUpdate(e) {
     let {
@@ -329,13 +319,13 @@ class G extends E.default {
     let {
       guildId: t
     } = e;
-    return D(O(t))
+    return v(O(t))
   }
   handleGuildMemberSearchStillIndexing(e) {
     let {
       guildId: t
     } = e;
-    C(O(t), {
+    p(O(t), {
       requestState: 4,
       abortController: null,
       lastUpdated: Date.now()
@@ -365,4 +355,4 @@ class G extends E.default {
     }) : t[n] = i
   }
 }
-t.default = new G
+t.ZP = new b

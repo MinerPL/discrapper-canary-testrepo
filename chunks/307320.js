@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-01_auto_disable_video_mobile_v2",
   label: "Mobile performance: VideoHealthManager (v2)",
@@ -53,7 +52,7 @@ let i = (0, n("818083").createExperiment)({
     }
   }]
 });
-t.default = {
+t.Z = {
   isFeatureSupportedOnPlatform: () => !1,
   getConfig(e) {
     let t = i.getCurrentConfig({

@@ -1,37 +1,37 @@
 "use strict";
-n.r(t), n.d(t, {
-  useKeyboardNavigation: function() {
+n.d(t, {
+  t: function() {
     return l
   }
 });
-var i = n("470079"),
-  r = n("739940"),
-  s = n("2052"),
-  a = n("691251"),
-  o = n("98528");
+var i = n(470079),
+  r = n(611144),
+  s = n(2052),
+  o = n(691251),
+  a = n(98528);
 let l = e => {
   let {
     columnCounts: t,
     stickersGrid: n,
     stickersListRef: l,
     store: u,
-    gridNavigatorId: d,
-    setInspectedStickerPosition: _,
+    gridNavigatorId: _,
+    setInspectedStickerPosition: d,
     onGridItemSelect: c
-  } = e, E = (0, s.useAnalyticsContext)(), I = i.useCallback(e => {
+  } = e, E = (0, s.O)(), I = i.useCallback(e => {
     c(e, E)
   }, [c, E]), T = i.useCallback((e, t) => {
-    _(e, t, a.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT)
-  }, [_]), {
-    gridDispatch: f,
+    d(e, t, o.u.GRID_NAVIGATOR_EVENT)
+  }, [d]), {
+    gridDispatch: h,
     getItemProps: S,
-    getRowProps: h,
-    gridContainerProps: A,
-    handleGridContainerKeyDown: m,
-    isUsingKeyboardNavigation: N
-  } = (0, o.useExpressionPickerGridKeyboardNavigation)({
+    getRowProps: f,
+    gridContainerProps: N,
+    handleGridContainerKeyDown: A,
+    isUsingKeyboardNavigation: m
+  } = (0, a.VO)({
     columnCounts: t,
-    gridNavigatorId: d,
+    gridNavigatorId: _,
     itemGrid: n,
     itemList: l,
     onGridNavigatorItemSelect: I,
@@ -44,16 +44,16 @@ let l = e => {
       rowIndex: n,
       source: i
     } = e;
-    i !== a.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT && f({
-      type: r.GridActionType.SET_FOCUSED_POSITION,
+    i !== o.u.GRID_NAVIGATOR_EVENT && h({
+      type: r.s.SET_FOCUSED_POSITION,
       x: t,
       y: n
     })
-  }, e => e.inspectedExpressionPosition), [f, u]), {
+  }, e => e.inspectedExpressionPosition), [h, u]), {
     getItemProps: S,
-    getRowProps: h,
-    gridContainerProps: A,
-    handleGridContainerKeyDown: m,
-    isUsingKeyboardNavigation: N
+    getRowProps: f,
+    gridContainerProps: N,
+    handleGridContainerKeyDown: A,
+    isUsingKeyboardNavigation: m
   }
 }

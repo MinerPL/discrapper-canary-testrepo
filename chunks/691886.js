@@ -1,144 +1,144 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return L
+t.d(s, {
+  Z: function() {
+    return O
   }
-}), s("653041"), s("47120");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("803997"),
-  i = s.n(n),
-  r = s("442837"),
-  o = s("481060"),
-  d = s("933557"),
-  u = s("471445"),
-  c = s("131704"),
-  E = s("324067"),
-  _ = s("699516"),
-  I = s("594174"),
-  T = s("729285"),
-  S = s("303737"),
-  f = s("981631"),
-  m = s("689938"),
-  N = s("712186");
+}), t(653041), t(47120);
+var n = t(735250),
+  i = t(470079),
+  l = t(120356),
+  a = t.n(l),
+  r = t(442837),
+  o = t(481060),
+  c = t(933557),
+  d = t(471445),
+  u = t(131704),
+  E = t(324067),
+  _ = t(699516),
+  I = t(594174),
+  T = t(729285),
+  N = t(303737),
+  m = t(981631),
+  S = t(689938),
+  h = t(652144);
 
 function g(e) {
   return String(e)
 }
 
-function h(e) {
+function x(e) {
   let {
-    icon: t,
-    title: s,
-    subtitle: l,
-    className: n
+    icon: s,
+    title: t,
+    subtitle: i,
+    className: l
   } = e;
-  return (0, a.jsxs)("div", {
-    className: i()(N.label, n),
-    children: [t, (0, a.jsxs)("div", {
-      className: N.labelText,
-      children: [(0, a.jsx)(o.Text, {
+  return (0, n.jsxs)("div", {
+    className: a()(h.label, l),
+    children: [s, (0, n.jsxs)("div", {
+      className: h.labelText,
+      children: [(0, n.jsx)(o.Text, {
         variant: "text-md/normal",
         color: "none",
-        className: N.labelTitle,
-        children: s
-      }), null != l && "" !== l ? (0, a.jsx)(o.Text, {
+        className: h.labelTitle,
+        children: t
+      }), null != i && "" !== i ? (0, n.jsx)(o.Text, {
         variant: "text-xs/semibold",
         color: "text-muted",
-        className: N.labelSubtitle,
-        children: l
+        className: h.labelSubtitle,
+        children: i
       }) : null]
     })]
   })
 }
 
 function C() {
-  return (0, a.jsx)(h, {
-    icon: (0, a.jsx)(T.default, {
-      className: N.labelIcon
+  return (0, n.jsx)(x, {
+    icon: (0, n.jsx)(T.Z, {
+      className: h.labelIcon
     }),
-    title: m.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_SELECT_CREATE_LABEL,
-    className: N.createLabel
+    title: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_SELECT_CREATE_LABEL,
+    className: h.createLabel
   })
 }
 
 function R(e) {
-  var t;
+  var s;
   let {
-    channelId: s
-  } = e, l = (0, S.useChannelWithTemplateFallback)(s), n = (0, S.useChannelWithTemplateFallback)(null !== (t = null == l ? void 0 : l.parent_id) && void 0 !== t ? t : f.EMPTY_STRING_SNOWFLAKE_ID);
-  if (null == l) return null;
-  let i = (0, u.getChannelIconComponent)(l),
-    r = (0, d.computeChannelName)(l, I.default, _.default),
-    o = null != n ? (0, d.computeChannelName)(n, I.default, _.default) : void 0;
-  return (0, a.jsx)(h, {
-    icon: null != i && (0, a.jsx)(i, {
-      className: N.labelIcon
+    channelId: t
+  } = e, i = (0, N.m7)(t), l = (0, N.m7)(null !== (s = null == i ? void 0 : i.parent_id) && void 0 !== s ? s : m.lds);
+  if (null == i) return null;
+  let a = (0, d.KS)(i),
+    r = (0, c.F6)(i, I.default, _.Z),
+    o = null != l ? (0, c.F6)(l, I.default, _.Z) : void 0;
+  return (0, n.jsx)(x, {
+    icon: null != a && (0, n.jsx)(a, {
+      className: h.labelIcon
     }),
     title: r,
     subtitle: o
   })
 }
 
-function x(e) {
-  let {
-    value: t
-  } = e;
-  return null != t ? (0, a.jsx)(R, {
-    channelId: t
-  }) : (0, a.jsx)(C, {})
-}
-
 function L(e) {
   let {
-    guildId: t,
-    value: n,
-    initialChannelId: i,
-    omitChannelIds: u,
+    value: s
+  } = e;
+  return null != s ? (0, n.jsx)(R, {
+    channelId: s
+  }) : (0, n.jsx)(C, {})
+}
+
+function O(e) {
+  let {
+    guildId: s,
+    value: l,
+    initialChannelId: a,
+    omitChannelIds: d,
     "aria-labelledby": T,
-    onChange: N
-  } = e, h = m.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_SELECT_CREATE_LABEL, C = (0, r.useStateFromStores)([E.default], () => E.default.getCategories(t), [t]), R = (0, S.useChannelWithTemplateFallback)(null != n ? n : f.EMPTY_STRING_SNOWFLAKE_ID), L = l.useMemo(() => {
+    onChange: h
+  } = e, x = S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_SELECT_CREATE_LABEL, C = (0, r.e7)([E.Z], () => E.Z.getCategories(s), [s]), R = (0, N.m7)(null != l ? l : m.lds), O = i.useMemo(() => {
     let e = [{
         value: null,
-        label: h
+        label: x
       }],
-      t = !1;
-    for (let s of C._categories)
+      s = !1;
+    for (let t of C._categories)
       for (let {
-          channel: a
+          channel: n
         }
-        of C[s.channel.id]) {
-        if (!!(0, c.isGuildSelectableChannelType)(a.type) || !!(0, c.isGuildVocalChannelType)(a.type))(!(a.id !== n && (null == u ? void 0 : u.has(a.id))) || a.id === i && n !== i) && (n === a.id && (t = !0), e.push({
-          value: a.id,
-          label: (0, d.computeChannelName)(a, I.default, _.default)
+        of C[t.channel.id]) {
+        if (!!(0, u.r8)(n.type) || !!(0, u.bw)(n.type))(!(n.id !== l && (null == d ? void 0 : d.has(n.id))) || n.id === a && l !== a) && (l === n.id && (s = !0), e.push({
+          value: n.id,
+          label: (0, c.F6)(n, I.default, _.Z)
         }))
       }
-    return null != n && !t && null != R && e.push({
-      value: n,
+    return null != l && !s && null != R && e.push({
+      value: l,
       label: R.name
     }), e
-  }, [h, n, R, C, u, i]);
-  return (0, a.jsx)(o.Select, {
-    placeholder: m.default.Messages.CHANNEL_SELECT,
-    options: L,
+  }, [x, l, R, C, d, a]);
+  return (0, n.jsx)(o.Select, {
+    placeholder: S.Z.Messages.CHANNEL_SELECT,
+    options: O,
     select: function(e) {
       null == e ? (0, o.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([s.e("99387"), s.e("7590"), s.e("45094"), s.e("61214")]).then(s.bind(s, "797671"));
-        return s => (0, a.jsx)(e, {
-          ...s,
-          guildId: t,
-          onSubmit: N
+        } = await Promise.all([t.e("99387"), t.e("7590"), t.e("45094"), t.e("61214")]).then(t.bind(t, 797671));
+        return t => (0, n.jsx)(e, {
+          ...t,
+          guildId: s,
+          onSubmit: h
         })
-      }) : N(e)
+      }) : h(e)
     },
-    isSelected: e => null != n && g(e) === g(n),
+    isSelected: e => null != l && g(e) === g(l),
     serialize: g,
-    renderOptionLabel: x,
+    renderOptionLabel: L,
     renderOptionValue: e => {
-      let [t] = e;
-      return x(t)
+      let [s] = e;
+      return L(s)
     },
     "aria-labelledby": T
   })

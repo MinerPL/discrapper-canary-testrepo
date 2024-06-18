@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  AsapQueue: function() {
+n.d(t, {
+  W: function() {
     return i
   }
 });
-var r = n("726074");
+var r = n(726074);
 class i {
   enqueueTask(e) {
     let {
@@ -28,7 +28,7 @@ class i {
       e.length = 0, this.index = 0, this.flushing = !1
     }, this.registerPendingError = e => {
       this.pendingErrors.push(e), this.requestErrorThrow()
-    }, this.requestFlush = (0, r.makeRequestCall)(this.flush), this.requestErrorThrow = (0, r.makeRequestCallFromTimer)(() => {
+    }, this.requestFlush = (0, r.tX)(this.flush), this.requestErrorThrow = (0, r.as)(() => {
       if (this.pendingErrors.length) throw this.pendingErrors.shift()
     })
   }

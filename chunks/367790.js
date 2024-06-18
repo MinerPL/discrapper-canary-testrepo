@@ -1,10 +1,10 @@
 "use strict";
-var i, r, s, a;
-n.r(t), n.d(t, {
-  BuiltInCommandFilter: function() {
+var i, r, s, o;
+n.d(t, {
+  D: function() {
     return r
   },
-  ScoreMethod: function() {
+  p: function() {
     return i
   }
-}), (s = i || (i = {})).NONE = "none", s.APPLICATION_ONLY = "application_only", s.COMMAND_ONLY = "command_only", s.COMMAND_OR_APPLICATION = "command_or_application", (a = r || (r = {})).ALLOW = "allow", a.ONLY_TEXT = "only_text", a.DENY = "deny"
+}), (s = i || (i = {})).NONE = "none", s.APPLICATION_ONLY = "application_only", s.COMMAND_ONLY = "command_only", s.COMMAND_OR_APPLICATION = "command_or_application", (o = r || (r = {})).ALLOW = "allow", o.ONLY_TEXT = "only_text", o.DENY = "deny"

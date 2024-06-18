@@ -1,25 +1,25 @@
 "use strict";
-n.r(t), n.d(t, {
-  clearCompletedHighFive: function() {
-    return l
-  },
-  completeHighFive: function() {
-    return o
-  },
-  queueHighFive: function() {
-    return r
-  },
-  removeHighFive: function() {
+n.d(t, {
+  Gd: function() {
     return s
   },
-  setHighFiveEnabled: function() {
+  ME: function() {
+    return o
+  },
+  Ym: function() {
     return a
+  },
+  _g: function() {
+    return r
+  },
+  hu: function() {
+    return l
   }
 });
-var i = n("570140");
+var i = n(570140);
 
 function r(e, t, n) {
-  i.default.dispatch({
+  i.Z.dispatch({
     type: "HIGH_FIVE_QUEUE",
     userId: t,
     channelId: n,
@@ -28,22 +28,22 @@ function r(e, t, n) {
 }
 
 function s(e, t) {
-  i.default.dispatch({
+  i.Z.dispatch({
     type: "HIGH_FIVE_REMOVE",
     channelId: t,
     userId: e
   })
 }
 
-function a(e) {
-  i.default.dispatch({
+function o(e) {
+  i.Z.dispatch({
     type: "HIGH_FIVE_SET_ENABLED",
     enabled: e
   })
 }
 
-function o(e, t, n, r) {
-  i.default.dispatch({
+function a(e, t, n, r) {
+  i.Z.dispatch({
     type: "HIGH_FIVE_COMPLETE",
     waitingUserId: e,
     completingUserId: t,
@@ -53,7 +53,7 @@ function o(e, t, n, r) {
 }
 
 function l(e, t, n) {
-  i.default.dispatch({
+  i.Z.dispatch({
     type: "HIGH_FIVE_COMPLETE_CLEAR",
     firstUserId: e,
     secondUserId: t,

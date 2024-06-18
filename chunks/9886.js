@@ -1,6 +1,5 @@
 "use strict";
-r.r(t);
-var n = {
+var r = {
     "background-size": !0,
     "background-position": !0,
     border: !0,
@@ -22,11 +21,11 @@ var n = {
     transform: !0,
     transition: !0
   },
-  i = {
+  n = {
     position: !0,
     size: !0
   },
-  o = {
+  i = {
     padding: {
       top: 0,
       right: 0,
@@ -117,7 +116,7 @@ var n = {
       color: null
     }
   },
-  s = {
+  o = {
     border: {
       radius: "border-radius",
       image: "border-image",
@@ -205,37 +204,37 @@ var n = {
     }
   };
 
-function a(e, t, r, n, a) {
-  if (!(o[t] || s[t])) return [];
+function s(e, t, r, s, u) {
+  if (!(i[t] || o[t])) return [];
   var l = [];
-  if (s[t] && (e = function(e, t, r, n) {
+  if (o[t] && (e = function(e, t, r, n) {
       for (var i in r) {
         var o = r[i];
         if (void 0 !== e[i] && (n || !t.prop(o))) {
-          var s, a = u(((s = {})[o] = e[i], s), t)[o];
-          n ? t.style.fallbacks[o] = a : t.style[o] = a
+          var s, u = a(((s = {})[o] = e[i], s), t)[o];
+          n ? t.style.fallbacks[o] = u : t.style[o] = u
         }
         delete e[i]
       }
       return e
-    }(e, r, s[t], n)), Object.keys(e).length)
-    for (var c in o[t]) {
+    }(e, r, o[t], s)), Object.keys(e).length)
+    for (var c in i[t]) {
       if (e[c]) {
-        Array.isArray(e[c]) ? l.push(null === i[c] ? e[c] : e[c].join(" ")) : l.push(e[c]);
+        Array.isArray(e[c]) ? l.push(null === n[c] ? e[c] : e[c].join(" ")) : l.push(e[c]);
         continue
       }
-      null != o[t][c] && l.push(o[t][c])
+      null != i[t][c] && l.push(i[t][c])
     }
-  return !l.length || a ? l : [l]
+  return !l.length || u ? l : [l]
 }
 
-function u(e, t, r) {
+function a(e, t, n) {
   for (var i in e) {
     var o = e[i];
     if (Array.isArray(o)) {
       if (!Array.isArray(o[0])) {
         if ("fallbacks" === i) {
-          for (var s = 0; s < e.fallbacks.length; s++) e.fallbacks[s] = u(e.fallbacks[s], t, !0);
+          for (var u = 0; u < e.fallbacks.length; u++) e.fallbacks[u] = a(e.fallbacks[u], t, !0);
           continue
         }
         e[i] = function e(t, r, n, i) {
@@ -243,33 +242,33 @@ function u(e, t, r) {
           if (0 === t.length) return [];
           if (Array.isArray(t[0])) return e(t[0], r, n, i);
           if ("object" == typeof t[0]) {
-            var o, s, u;
-            return o = t, s = r, u = i, o.map(function(e) {
-              return a(e, s, u, !1, !0)
+            var o, a, u;
+            return o = t, a = r, u = i, o.map(function(e) {
+              return s(e, a, u, !1, !0)
             })
           }
           return [t]
-        }(o, i, n, t), !e[i].length && delete e[i]
+        }(o, i, r, t), !e[i].length && delete e[i]
       }
     } else if ("object" == typeof o) {
       if ("fallbacks" === i) {
-        e.fallbacks = u(e.fallbacks, t, !0);
+        e.fallbacks = a(e.fallbacks, t, !0);
         continue
       }
-      e[i] = a(o, i, t, r), !e[i].length && delete e[i]
+      e[i] = s(o, i, t, n), !e[i].length && delete e[i]
     } else "" === e[i] && delete e[i]
   }
   return e
 }
-t.default = function() {
+t.Z = function() {
   return {
     onProcessStyle: function(e, t) {
       if (!e || "style" !== t.type) return e;
       if (Array.isArray(e)) {
-        for (var r = 0; r < e.length; r++) e[r] = u(e[r], t);
+        for (var r = 0; r < e.length; r++) e[r] = a(e[r], t);
         return e
       }
-      return u(e, t)
+      return a(e, t)
     }
   }
 }

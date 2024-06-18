@@ -1,39 +1,39 @@
 "use strict";
-n.r(t), n.d(t, {
-  filterScopes: function() {
-    return d
-  },
-  parseOAuth2AuthorizeProps: function() {
+n.d(t, {
+  K: function() {
     return _
+  },
+  y: function() {
+    return d
   }
-}), n("653041");
-var i = n("593473"),
-  r = n("149765"),
-  a = n("592125"),
-  s = n("914010"),
-  o = n("700785"),
-  l = n("713938"),
-  u = n("231338");
-
-function d(e) {
-  let t = e.filter(e => !l.RemovedScopes.includes(e));
-  return t.includes(u.OAuth2Scopes.BOT) && !t.includes(u.OAuth2Scopes.APPLICATIONS_COMMANDS) && t.push(u.OAuth2Scopes.APPLICATIONS_COMMANDS), t
-}
+}), n(653041);
+var i = n(593473),
+  r = n(243814),
+  s = n(149765),
+  o = n(592125),
+  a = n(914010),
+  l = n(700785),
+  u = n(713938);
 
 function _(e) {
-  var t, n, l, u, d, _;
+  let t = e.filter(e => !u.up.includes(e));
+  return t.includes(r.x.BOT) && !t.includes(r.x.APPLICATIONS_COMMANDS) && t.push(r.x.APPLICATIONS_COMMANDS), t
+}
+
+function d(e) {
+  var t, n, r, u, _, d;
   let c = (0, i.parse)(e, {
       arrayFormat: "bracket"
     }),
-    E = o.NONE;
+    E = l.Hn;
   try {
-    E = r.deserialize(null != c.permissions && "" !== c.permissions ? c.permissions : "0")
+    E = s.vB(null != c.permissions && "" !== c.permissions ? c.permissions : "0")
   } catch (e) {}
   let I = c.channel_id,
-    T = null !== (u = null !== (l = null !== (n = c.guild_id) && void 0 !== n ? n : null === (t = a.default.getChannel(I)) || void 0 === t ? void 0 : t.guild_id) && void 0 !== l ? l : s.default.getGuildId()) && void 0 !== u ? u : void 0;
+    T = null !== (u = null !== (r = null !== (n = c.guild_id) && void 0 !== n ? n : null === (t = o.Z.getChannel(I)) || void 0 === t ? void 0 : t.guild_id) && void 0 !== r ? r : a.Z.getGuildId()) && void 0 !== u ? u : void 0;
   return {
-    clientId: null !== (d = c.client_id) && void 0 !== d ? d : "",
-    scopes: (null !== (_ = c.scope) && void 0 !== _ ? _ : "").split(" ").filter(e => e.length > 0),
+    clientId: null !== (_ = c.client_id) && void 0 !== _ ? _ : "",
+    scopes: (null !== (d = c.scope) && void 0 !== d ? d : "").split(" ").filter(e => e.length > 0),
     responseType: c.response_type,
     redirectUri: c.redirect_uri,
     codeChallenge: c.code_challenge,

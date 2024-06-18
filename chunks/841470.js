@@ -1,61 +1,60 @@
 "use strict";
-s.r(t);
-var a = s("735250");
-s("470079");
-var l = s("692547"),
-  n = s("481060"),
-  i = s("41542"),
-  r = s("355011"),
-  o = s("689938"),
-  d = s("458127");
-t.default = e => {
+var n = t(735250);
+t(470079);
+var i = t(692547),
+  l = t(481060),
+  a = t(41542),
+  r = t(355011),
+  o = t(689938),
+  c = t(414131);
+s.Z = e => {
   let {
-    title: t,
-    subtext: s = o.default.Messages.NOT_AVAILABLE,
-    localizedNumber: u,
-    isTrendingUp: c,
+    title: s,
+    subtext: t = o.Z.Messages.NOT_AVAILABLE,
+    localizedNumber: d,
+    isTrendingUp: u,
     isTrendingDown: E,
     tooltipText: _
-  } = e, I = "string" == typeof _ ? _ : t, T = null != _ ? (0, a.jsx)(n.Tooltip, {
+  } = e, I = "string" == typeof _ ? _ : s, T = null != _ ? (0, n.jsx)(l.Tooltip, {
     text: _,
     position: "top",
     "aria-label": I,
-    children: e => (0, a.jsx)(i.default, {
+    children: e => (0, n.jsx)(a.Z, {
       ...e,
-      className: d.infoIcon,
+      className: c.infoIcon,
       height: 16,
       width: 16
     })
   }) : null;
-  return (0, a.jsxs)("div", {
-    className: d.analyticsCard,
-    children: [(0, a.jsxs)(n.FormTitle, {
-      className: d.analyticsCardTitle,
-      children: [t, T]
-    }), (0, a.jsx)("div", {
-      className: d.analyticsCardContent,
-      children: (0, a.jsx)(n.Heading, {
-        className: null != u ? d.analyticsCardNumber : d.analyticsCardNumberNotAvailable,
+  return (0, n.jsxs)("div", {
+    className: c.analyticsCard,
+    children: [(0, n.jsxs)(l.FormTitle, {
+      className: c.analyticsCardTitle,
+      children: [s, T]
+    }), (0, n.jsx)("div", {
+      className: c.analyticsCardContent,
+      children: (0, n.jsx)(l.Heading, {
+        className: null != d ? c.analyticsCardNumber : c.analyticsCardNumberNotAvailable,
         variant: "heading-xl/semibold",
-        children: null != u ? u : o.default.Messages.NOT_AVAILABLE
+        children: null != d ? d : o.Z.Messages.NOT_AVAILABLE
       })
-    }), (0, a.jsxs)("div", {
-      className: d.analyticsCardArrowSubText,
-      children: [c ? (0, a.jsx)(r.default, {
-        className: d.trendingArrow,
-        color: l.default.unsafe_rawColors.GREEN_360.css,
-        "aria-label": o.default.Messages.TRENDING_ARROW_UP,
+    }), (0, n.jsxs)("div", {
+      className: c.analyticsCardArrowSubText,
+      children: [u ? (0, n.jsx)(r.Z, {
+        className: c.trendingArrow,
+        color: i.Z.unsafe_rawColors.GREEN_360.css,
+        "aria-label": o.Z.Messages.TRENDING_ARROW_UP,
         width: 14,
         height: 12
-      }) : null, E ? (0, a.jsx)(r.default, {
-        className: d.trendingArrowIconDown,
-        color: l.default.unsafe_rawColors.RED_400.css,
-        "aria-label": o.default.Messages.TRENDING_ARROW_DOWN,
+      }) : null, E ? (0, n.jsx)(r.Z, {
+        className: c.trendingArrowIconDown,
+        color: i.Z.unsafe_rawColors.RED_400.css,
+        "aria-label": o.Z.Messages.TRENDING_ARROW_DOWN,
         width: 14,
         height: 12
-      }) : null, (0, a.jsx)(n.Text, {
+      }) : null, (0, n.jsx)(l.Text, {
         variant: "text-xs/normal",
-        children: s
+        children: t
       })]
     })]
   })

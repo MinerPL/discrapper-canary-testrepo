@@ -1,10 +1,9 @@
 "use strict";
-n.r(t);
-var i, r = n("913527"),
+var i, r = n(913527),
   s = n.n(r),
-  a = n("442837"),
-  o = n("570140"),
-  l = n("709054");
+  o = n(442837),
+  a = n(570140),
+  l = n(709054);
 
 function u(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -14,24 +13,24 @@ function u(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let d = {
+let _ = {
     lastSeenNewlyAddedEmojiIds: {}
   },
-  _ = d,
+  d = _,
   c = {};
 
 function E() {
-  for (let e in c) _.lastSeenNewlyAddedEmojiIds[e] = c[e]
+  for (let e in c) d.lastSeenNewlyAddedEmojiIds[e] = c[e]
 }
-class I extends(i = a.default.PersistedStore) {
+class I extends(i = o.ZP.PersistedStore) {
   initialize(e) {
-    _ = null != e ? e : d
+    d = null != e ? e : _
   }
   getState() {
-    return _
+    return d
   }
   getLastSeenEmojiByGuild(e) {
-    return _.lastSeenNewlyAddedEmojiIds[e]
+    return d.lastSeenNewlyAddedEmojiIds[e]
   }
   isNewerThanLastSeen(e, t) {
     if (null == e || null == t) return !1;
@@ -58,16 +57,16 @@ u(I, "displayName", "NewlyAddedEmojiStore"), u(I, "persistKey", "NewlyAddedEmoji
   return {
     lastSeenNewlyAddedEmojiIds: n
   }
-}]), t.default = new I(o.default, {
+}]), t.Z = new I(a.Z, {
   LOGOUT: function() {
-    _ = d, c = {}
+    d = _, c = {}
   },
   NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED: function(e) {
     var t;
     let {
       guildId: n,
       emojiId: i
-    } = e, r = null !== (t = c[n]) && void 0 !== t ? t : _.lastSeenNewlyAddedEmojiIds[n];
+    } = e, r = null !== (t = c[n]) && void 0 !== t ? t : d.lastSeenNewlyAddedEmojiIds[n];
     null == r || 0 > l.default.compare(r.id, i) ? c[n] = {
       id: i,
       lastSeen: Date.now(),
@@ -82,7 +81,7 @@ u(I, "displayName", "NewlyAddedEmojiStore"), u(I, "persistKey", "NewlyAddedEmoji
     let {
       guildId: n,
       emojiId: i
-    } = e, r = null !== (t = c[n]) && void 0 !== t ? t : _.lastSeenNewlyAddedEmojiIds[n];
+    } = e, r = null !== (t = c[n]) && void 0 !== t ? t : d.lastSeenNewlyAddedEmojiIds[n];
     (null == r || 0 > l.default.compare(r.id, i)) && (c[n] = {
       id: i,
       lastSeen: Date.now(),
@@ -91,7 +90,7 @@ u(I, "displayName", "NewlyAddedEmojiStore"), u(I, "persistKey", "NewlyAddedEmoji
   },
   NEWLY_ADDED_EMOJI_SEEN_UPDATED: E,
   CLEAR_CACHES: function() {
-    _ = d, E()
+    d = _, E()
   },
   CONNECTION_CLOSED: E
 })

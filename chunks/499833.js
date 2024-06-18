@@ -1,53 +1,55 @@
 "use strict";
-n.r(e), n.d(e, {
-  makeOfflineTransport: function() {
-    return a
+n.d(e, {
+  Pd: function() {
+    return o
   }
 });
-var r = n("648238");
+var r = n(529866),
+  i = n(50074),
+  s = n(128603);
 
-function i(t, e) {
-  ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.info(`[Offline]: ${t}`, e)
+function a(t, e) {
+  ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.kg.info(`[Offline]: ${t}`, e)
 }
 
-function a(t) {
+function o(t) {
   return e => {
     let n;
-    let a = t(e),
+    let r = t(e),
       o = e.createStore ? e.createStore(e) : void 0,
-      s = 5e3;
+      u = 5e3;
 
-    function u(t) {
-      o && (n && clearTimeout(n), "number" != typeof(n = setTimeout(async () => {
+    function l(t) {
+      if (!!o) n && clearTimeout(n), "number" != typeof(n = setTimeout(async () => {
         n = void 0;
         let t = await o.pop();
-        t && (i("Attempting to send previously queued event"), l(t).catch(t => {
-          i("Failed to retry sending", t)
+        t && (a("Attempting to send previously queued event"), d(t).catch(t => {
+          a("Failed to retry sending", t)
         }))
-      }, t)) && n.unref && n.unref())
+      }, t)) && n.unref && n.unref()
     }
 
     function c() {
-      !n && (u(s), s = Math.min(2 * s, 36e5))
+      if (!n) l(u), u = Math.min(2 * u, 36e5)
     }
-    async function l(t) {
+    async function d(t) {
       try {
-        let e = await a.send(t),
+        let e = await r.send(t),
           n = 100;
         if (e) {
-          if (e.headers && e.headers["retry-after"]) n = (0, r.parseRetryAfterHeader)(e.headers["retry-after"]);
+          if (e.headers && e.headers["retry-after"]) n = (0, s.JY)(e.headers["retry-after"]);
           else if ((e.statusCode || 0) >= 400) return e
         }
-        return u(n), s = 5e3, e
-      } catch (a) {
-        var n, l, d;
-        if (o && await (n = t, l = a, d = s, !(0, r.envelopeContainsItemType)(n, ["replay_event", "replay_recording", "client_report"]) && (!e.shouldStore || e.shouldStore(n, l, d)))) return await o.insert(t), c(), i("Error sending. Event queued", a), {};
-        throw a
+        return l(n), u = 5e3, e
+      } catch (r) {
+        var n, d, h;
+        if (o && await (n = t, d = r, h = u, !(0, i.R)(n, ["replay_event", "replay_recording", "client_report"]) && (!e.shouldStore || e.shouldStore(n, d, h)))) return await o.insert(t), c(), a("Error sending. Event queued", r), {};
+        throw r
       }
     }
     return e.flushAtStartup && c(), {
-      send: l,
-      flush: t => a.flush(t)
+      send: d,
+      flush: t => r.flush(t)
     }
   }
 }

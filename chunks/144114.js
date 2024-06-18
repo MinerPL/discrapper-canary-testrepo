@@ -1,25 +1,25 @@
 "use strict";
-n.r(t), n.d(t, {
-  ChangePhoneReason: function() {
-    return s
+n.d(t, {
+  L: function() {
+    return o
   }
 });
-var r, s, o = n("990547"),
-  i = n("544891"),
-  a = n("570140"),
-  l = n("314897"),
-  u = n("573261"),
-  d = n("815660"),
-  c = n("981631");
-(r = s || (s = {})).USER_ACTION_REQUIRED = "user_action_required", r.USER_SETTINGS_UPDATE = "user_settings_update", r.GUILD_PHONE_REQUIRED = "guild_phone_required", r.MFA_PHONE_UPDATE = "mfa_phone_update", r.CONTACT_SYNC = "contact_sync", t.default = {
+var r, o, s = n(990547),
+  a = n(544891),
+  i = n(570140),
+  l = n(314897),
+  d = n(573261),
+  E = n(815660),
+  c = n(981631);
+(r = o || (o = {})).USER_ACTION_REQUIRED = "user_action_required", r.USER_SETTINGS_UPDATE = "user_settings_update", r.GUILD_PHONE_REQUIRED = "guild_phone_required", r.MFA_PHONE_UPDATE = "mfa_phone_update", r.CONTACT_SYNC = "contact_sync", t.Z = {
   setCountryCode(e) {
-    a.default.dispatch({
+    i.Z.dispatch({
       type: "PHONE_SET_COUNTRY_CODE",
       countryCode: e
     })
   },
-  removePhone: (e, t) => i.HTTP.del({
-    url: c.Endpoints.PHONE,
+  removePhone: (e, t) => a.tn.del({
+    url: c.ANM.PHONE,
     body: {
       password: e,
       change_phone_reason: t
@@ -29,23 +29,23 @@ var r, s, o = n("990547"),
   resendCode(e) {
     let t = {},
       n = l.default.getFingerprint();
-    return null != n && "" !== n && (t["X-Fingerprint"] = n), i.HTTP.post({
-      url: c.Endpoints.RESEND_PHONE,
+    return null != n && "" !== n && (t["X-Fingerprint"] = n), a.tn.post({
+      url: c.ANM.RESEND_PHONE,
       headers: t,
       body: {
         phone: e
       }
     })
   },
-  beginAddPhone: (e, t) => i.HTTP.post({
-    url: c.Endpoints.PHONE,
+  beginAddPhone: (e, t) => a.tn.post({
+    url: c.ANM.PHONE,
     body: {
       phone: e,
       change_phone_reason: t
     }
   }),
-  addPhone: (e, t, n) => i.HTTP.post({
-    url: c.Endpoints.PHONE,
+  addPhone: (e, t, n) => a.tn.post({
+    url: c.ANM.PHONE,
     body: {
       phone_token: e,
       password: t,
@@ -53,21 +53,21 @@ var r, s, o = n("990547"),
     },
     oldFormErrors: !0
   }),
-  addPhoneWithoutPassword: e => i.HTTP.post({
-    url: c.Endpoints.PHONE_VERIFY_NO_PASSWORD,
+  addPhoneWithoutPassword: e => a.tn.post({
+    url: c.ANM.PHONE_VERIFY_NO_PASSWORD,
     body: {
       code: e
     }
   }),
-  beginReverifyPhone: (e, t) => i.HTTP.post({
-    url: c.Endpoints.PHONE_REVERIFY,
+  beginReverifyPhone: (e, t) => a.tn.post({
+    url: c.ANM.PHONE_REVERIFY,
     body: {
       phone: e,
       change_phone_reason: t
     }
   }),
-  reverifyPhone: (e, t, n) => i.HTTP.post({
-    url: c.Endpoints.PHONE_REVERIFY,
+  reverifyPhone: (e, t, n) => a.tn.post({
+    url: c.ANM.PHONE_REVERIFY,
     body: {
       phone_token: e,
       password: t,
@@ -75,8 +75,8 @@ var r, s, o = n("990547"),
     },
     oldFormErrors: !0
   }),
-  validatePhoneForSupport: e => i.HTTP.post({
-    url: c.Endpoints.VERIFY_PHONE_FOR_TICKET,
+  validatePhoneForSupport: e => a.tn.post({
+    url: c.ANM.VERIFY_PHONE_FOR_TICKET,
     body: {
       token: e
     },
@@ -85,24 +85,24 @@ var r, s, o = n("990547"),
   async verifyPhone(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
       r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-      s = {},
-      i = l.default.getFingerprint();
-    null != i && "" !== i && (s["X-Fingerprint"] = i), r && (s.authorization = "");
-    let h = await u.default.post({
-      url: c.Endpoints.VERIFY_PHONE,
-      headers: s,
+      o = {},
+      a = l.default.getFingerprint();
+    null != a && "" !== a && (o["X-Fingerprint"] = a), r && (o.authorization = "");
+    let u = await d.Z.post({
+      url: c.ANM.VERIFY_PHONE,
+      headers: o,
       body: {
         phone: e,
         code: t
       },
       oldFormErrors: !0,
       trackedActionData: {
-        event: o.NetworkActionNames.USER_VERIFY_PHONE
+        event: s.NetworkActionNames.USER_VERIFY_PHONE
       }
     });
-    return n && a.default.dispatch({
+    return n && i.Z.dispatch({
       type: "MODAL_POP",
-      key: d.PHONE_VERIFICATION_MODAL_KEY
-    }), h.body
+      key: E.M
+    }), u.body
   }
 }

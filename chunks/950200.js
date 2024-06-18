@@ -143,18 +143,18 @@ var n = function() {
       var u, c, l, d, f, p, h, m, g, _, b, v, y, E, S, x, w = (u = o, f = Array(32768), u.forEach(function(t) {
           l = t[0] >> e, d = t[1] >> e, f[c = n(l, d, t[2] >> e)] = (f[c] || 0) + 1
         }), f),
-        T = 0;
+        C = 0;
       w.forEach(function() {
-        T++
+        C++
       });
-      var C = (p = o, h = w, b = 1e6, v = 0, y = 1e6, E = 0, S = 1e6, x = 0, p.forEach(function(t) {
+      var T = (p = o, h = w, b = 1e6, v = 0, y = 1e6, E = 0, S = 1e6, x = 0, p.forEach(function(t) {
           m = t[0] >> e, g = t[1] >> e, _ = t[2] >> e, m < b ? b = m : m > v && (v = m), g < y ? y = g : g > E && (E = g), _ < S ? S = _ : _ > x && (x = _)
         }), new i(b, v, y, E, S, x, h)),
         D = new r(function(e, n) {
           return t.naturalOrder(e.count(), n.count())
         });
 
-      function O(e, r) {
+      function M(e, r) {
         for (var i, a = 1, o = 0; o < 1e3;) {
           if (!(i = e.pop()).count()) {
             e.push(i), o++;
@@ -209,12 +209,12 @@ var n = function() {
           if (e.push(u), c && (e.push(c), a++), a >= r || o++ > 1e3) return
         }
       }
-      D.push(C), O(D, .75 * s);
-      for (var M = new r(function(e, n) {
+      D.push(T), M(D, .75 * s);
+      for (var O = new r(function(e, n) {
           return t.naturalOrder(e.count() * e.volume(), n.count() * n.volume())
-        }); D.size();) M.push(D.pop());
-      O(M, s - M.size());
-      for (var A = new a; M.size();) A.push(M.pop());
+        }); D.size();) O.push(D.pop());
+      M(O, s - O.size());
+      for (var A = new a; O.size();) A.push(O.pop());
       return A
     }
   }

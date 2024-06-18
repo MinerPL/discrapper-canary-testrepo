@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  DesktopVisualRefreshExperiment: function() {
-    return i
-  },
-  useIsDesktopVisualRefreshEnabled: function() {
+n.d(t, {
+  Q: function() {
     return r
+  },
+  i: function() {
+    return i
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   id: "2024-05_desktop_visual_refresh",
   label: "Desktop Visual Refresh",
   kind: "user",

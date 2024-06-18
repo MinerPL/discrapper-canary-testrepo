@@ -1,6 +1,6 @@
 "use strict";
-var r, i = n("444675"),
-  a = n("413135"),
+var r, i = n(444675),
+  a = n(413135),
   o = a.Buffer,
   s = {};
 for (r in a) {
@@ -16,7 +16,7 @@ if (s.Buffer.prototype = o.prototype, (!u.from || u.from === Uint8Array.from) &&
     return o(e, t, n)
   }), !u.alloc && (u.alloc = function(e, t, n) {
     if ("number" != typeof e) throw TypeError('The "size" argument must be of type number. Received type ' + typeof e);
-    if (e < 0 || e >= 2147483648) throw RangeError('The value "' + e + '" is invalid for option "size"');
+    if (e < 0 || e >= 2 * 1073741824) throw RangeError('The value "' + e + '" is invalid for option "size"');
     var r = o(e);
     return t && 0 !== t.length ? "string" == typeof n ? r.fill(t, n) : r.fill(t) : r.fill(0), r
   }), !s.kStringMaxLength) try {

@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  ComponentDispatch: function() {
-    return o
-  },
-  ComponentDispatcher: function() {
+n.d(t, {
+  S: function() {
     return a
+  },
+  b: function() {
+    return o
   }
-}), n("47120"), n("653041");
-var i = n("836560");
-n("17089");
-var r = n("710845");
+}), n(47120), n(653041);
+var i = n(836560);
+n(17089);
+var r = n(710845);
 
 function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -19,8 +19,8 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-n("981631");
-class a {
+n(981631);
+class o {
   safeDispatch(e) {
     for (var t, n = arguments.length, i = Array(n > 1 ? n - 1 : 0), r = 1; r < n; r++) i[r - 1] = arguments[r];
     if (!this.hasSubscribers(e)) {
@@ -30,7 +30,8 @@ class a {
     return this.dispatch(e, ...i)
   }
   dispatch(e, t) {
-    return Date.now(), this.emitter.emit(e, t), this
+    Date.now();
+    return this.emitter.emit(e, t), this
   }
   dispatchToLastSubscribed(e, t) {
     Date.now();
@@ -49,13 +50,13 @@ class a {
     }), this._savedDispatches[e] = void 0)
   }
   subscribe(e, t) {
-    return this.emitter.listeners(e).indexOf(t) >= 0 ? (new r.default("ComponentDispatchUtils").warn("ComponentDispatch.subscribe: Attempting to add a duplicate listener", e), this) : (this.emitter.on(e, t), this._checkSavedDispatches(e), this)
+    return this.emitter.listeners(e).indexOf(t) >= 0 ? (new r.Z("ComponentDispatchUtils").warn("ComponentDispatch.subscribe: Attempting to add a duplicate listener", e), this) : (this.emitter.on(e, t), this._checkSavedDispatches(e), this)
   }
   subscribeOnce(e, t) {
     return this.emitter.once(e, t), this._checkSavedDispatches(e), this
   }
   resubscribe(e, t) {
-    if (!this.emitter.listeners(e).includes(t)) return new r.default("ComponentDispatchUtils").warn("ComponentDispatch.resubscribe: Resubscribe without existing subscription", e), this;
+    if (!this.emitter.listeners(e).includes(t)) return new r.Z("ComponentDispatchUtils").warn("ComponentDispatch.resubscribe: Resubscribe without existing subscription", e), this;
     this.emitter.off(e, t), this.emitter.on(e, t)
   }
   unsubscribe(e, t) {
@@ -78,4 +79,4 @@ class a {
     s(this, "emitter", new i.EventEmitter), s(this, "_savedDispatches", {}), this.emitter.setMaxListeners(100)
   }
 }
-let o = new a
+let a = new o

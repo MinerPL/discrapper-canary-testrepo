@@ -1,51 +1,51 @@
 "use strict";
-n.r(t), n.d(t, {
-  anyFileTooLarge: function() {
+n.d(t, {
+  Ng: function() {
     return N
   },
-  classifyFile: function() {
-    return S
+  OC: function() {
+    return R
   },
-  classifyFileName: function() {
-    return h
-  },
-  getMaxRequestSize: function() {
-    return p
-  },
-  makeFile: function() {
-    return T
-  },
-  maxFileSize: function() {
-    return m
-  },
-  sizeString: function() {
+  dg: function() {
     return A
   },
-  transformNativeFile: function() {
+  dp: function() {
+    return T
+  },
+  f3: function() {
+    return S
+  },
+  nA: function() {
+    return m
+  },
+  qF: function() {
     return I
   },
-  uploadSumTooLarge: function() {
+  uV: function() {
+    return f
+  },
+  vY: function() {
     return O
   }
-}), n("47120");
-var i = n("119516"),
+}), n(47120);
+var i = n(112456),
   r = n.n(i),
-  s = n("392711"),
-  a = n.n(s),
-  o = n("206744"),
-  l = n("948350"),
-  u = n("430824"),
-  d = n("594174"),
-  _ = n("74538"),
-  c = n("981631"),
-  E = n("474936");
+  s = n(392711),
+  o = n.n(s),
+  a = n(206744),
+  l = n(948350),
+  u = n(430824),
+  _ = n(594174),
+  d = n(74538),
+  c = n(981631),
+  E = n(474936);
 
 function I(e, t) {
   return e instanceof File ? e : T(e.data, e.filename, t)
 }
 
 function T(e, t, i) {
-  let r = n("643907");
+  let r = n(643907);
   if (null == t && (t = "unknown", "type" in e)) {
     let n = r.extension(e.type);
     n && (t += ".".concat(n))
@@ -54,7 +54,7 @@ function T(e, t, i) {
     type: i
   })
 }
-let f = [{
+let h = [{
   reType: /^image\/vnd.adobe.photoshop/,
   klass: "photoshop"
 }, {
@@ -99,35 +99,35 @@ let f = [{
 }];
 
 function S(e) {
-  return h(e.name, e.type)
+  return f(e.name, e.type)
 }
 
-function h(e, t) {
+function f(e, t) {
   var n;
   e = null !== (n = null == e ? void 0 : e.toLowerCase()) && void 0 !== n ? n : "";
-  let i = a().find(f, n => null != n.reType && null != t ? n.reType.test(t) : null != n.reName && "" !== e && n.reName.test(e));
+  let i = o().find(h, n => null != n.reType && null != t ? n.reType.test(t) : null != n.reName && "" !== e && n.reName.test(e));
   return null != i ? i.klass : "unknown"
 }
 
-function A(e) {
+function N(e) {
   return r().filesize(e)
 }
 
-function m(e) {
-  let t = d.default.getCurrentUser();
-  o.default.trackExposure({
+function A(e) {
+  let t = _.default.getCurrentUser();
+  a.Z.trackExposure({
     location: "de18ec_1"
-  }), l.default.trackExposure({
+  }), l.Z.trackExposure({
     location: "de18ec_2"
   });
-  let n = _.default.getUserMaxFileSize(t);
+  let n = d.ZP.getUserMaxFileSize(t);
   if (null == e) return n;
-  let i = u.default.getGuild(e);
-  return Math.max(null != i ? E.BoostedGuildFeatures[i.premiumTier].limits.fileSize : c.MAX_ATTACHMENT_SIZE, n)
+  let i = u.Z.getGuild(e);
+  return Math.max(null != i ? E.HO[i.premiumTier].limits.fileSize : c.mBz, n)
 }
 
-function N(e, t) {
-  let n = m(t);
+function m(e, t) {
+  let n = A(t);
   return Array.from(e).some(e => e.size > n)
 }
 
@@ -136,10 +136,10 @@ function O(e) {
     let t = 0;
     for (let n of e) t += n.size;
     return t
-  }(e) > p()
+  }(e) > R()
 }
 
-function p() {
-  let e = d.default.getCurrentUser();
+function R() {
+  let e = _.default.getCurrentUser();
   return null != e && e.isStaff() ? 524288e3 : 524288e3
 }

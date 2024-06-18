@@ -1,9 +1,9 @@
 "use strict";
-n.r(t), n("47120");
-var i, r = n("442837"),
-  s = n("570140"),
-  a = n("797258"),
-  o = n("979651");
+n(47120);
+var i, r = n(442837),
+  s = n(570140),
+  o = n(797258),
+  a = n(979651);
 
 function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -14,15 +14,15 @@ function l(e, t, n) {
   }) : e[t] = n, e
 }
 let u = null,
-  d = null,
-  _ = new Set,
+  _ = null,
+  d = new Set,
   c = {},
   E = {},
   I = new Set,
   T = Object.freeze({});
-class f extends(i = r.default.DeviceSettingsStore) {
+class h extends(i = r.ZP.DeviceSettingsStore) {
   initialize(e) {
-    null != e && (E = e.lastSelectedDeviceByPlatform), this.waitFor(a.default, o.default)
+    null != e && (E = e.lastSelectedDeviceByPlatform), this.waitFor(o.Z, a.Z)
   }
   getUserAgnosticState() {
     return {
@@ -44,24 +44,24 @@ class f extends(i = r.default.DeviceSettingsStore) {
     return I.has(e)
   }
   getPendingDeviceCommands() {
-    return _
+    return d
   }
   getRemoteSessionId() {
     return u
   }
   getAwaitingRemoteSessionInfo() {
-    return d
+    return _
   }
 }
-l(f, "displayName", "GameConsoleStore"), l(f, "persistKey", "GameConsoleStore"), t.default = new f(s.default, {
+l(h, "displayName", "GameConsoleStore"), l(h, "persistKey", "GameConsoleStore"), t.Z = new h(s.Z, {
   REMOTE_SESSION_CONNECT: function(e) {
     let {
       sessionId: t
     } = e;
-    u = t, d = null
+    u = t, _ = null
   },
   REMOTE_SESSION_DISCONNECT: function() {
-    u = null, d = null
+    u = null, _ = null
   },
   WAIT_FOR_REMOTE_SESSION: function(e) {
     let {
@@ -71,7 +71,7 @@ l(f, "displayName", "GameConsoleStore"), l(f, "persistKey", "GameConsoleStore"),
       deviceId: r,
       commandId: s
     } = e;
-    d = {
+    _ = {
       type: t,
       nonce: n,
       channelId: i,

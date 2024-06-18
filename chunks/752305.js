@@ -15,23 +15,23 @@ function i() {
 function r(e) {
   return {
     textValue: e,
-    richValue: a(e)
+    richValue: o(e)
   }
 }
-n.r(t), n.d(t, {
-  createEmptyState: function() {
+n.d(t, {
+  H2: function() {
     return i
   },
-  createState: function() {
-    return r
+  JM: function() {
+    return o
   },
-  toRichValue: function() {
+  VI: function() {
     return a
   },
-  voidToOptionValue: function() {
-    return o
+  eK: function() {
+    return r
   }
-}), n("411104");
+}), n(411104);
 let s = Object.freeze([Object.freeze({
   type: "line",
   children: Object.freeze([Object.freeze({
@@ -39,7 +39,7 @@ let s = Object.freeze([Object.freeze({
   })])
 })]);
 
-function a(e) {
+function o(e) {
   return "" !== e ? e.split("\n").map(e => ({
     type: "line",
     children: [{
@@ -48,7 +48,7 @@ function a(e) {
   })) : s
 }
 
-function o(e) {
+function a(e) {
   switch (e.type) {
     case "userMention":
       return {

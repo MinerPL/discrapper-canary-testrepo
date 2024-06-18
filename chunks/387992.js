@@ -1,6 +1,6 @@
 "use strict";
-var e = n("668530"),
-  o = n("974802");
+var e = n(668530),
+  o = n(974802);
 t.exports = function(t, r) {
   var n = o[t + "Prototype"],
     i = n && n[r];

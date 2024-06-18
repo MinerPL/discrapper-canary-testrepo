@@ -1,10 +1,10 @@
 e.exports = i;
-var r = n("836560").EventEmitter;
+var r = n(836560).EventEmitter;
 
 function i() {
   r.call(this)
 }
-n("689118")(i, r), i.Readable = n("555170"), i.Writable = n("833327"), i.Duplex = n("827664"), i.Transform = n("92057"), i.PassThrough = n("203163"), i.finished = n("133495"), i.pipeline = n("614805"), i.Stream = i, i.prototype.pipe = function(e, t) {
+n(689118)(i, r), i.Readable = n(555170), i.Writable = n(833327), i.Duplex = n(827664), i.Transform = n(92057), i.PassThrough = n(203163), i.finished = n(133495), i.pipeline = n(614805), i.Stream = i, i.prototype.pipe = function(e, t) {
   var n = this;
 
   function i(t) {

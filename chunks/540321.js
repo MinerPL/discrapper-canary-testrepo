@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return i
   }
 });
-var r = n("740078");
+var r = n(740078);
 
 function i(e) {
   var t, n, i, a, o = (t = e, n = new Map, i = new Set, a = [], t.forEach(function(e) {
@@ -19,7 +19,7 @@ function i(e) {
       }), a.push(t)
     }(e)
   }), a);
-  return r.modifierPhases.reduce(function(e, t) {
+  return r.xs.reduce(function(e, t) {
     return e.concat(o.filter(function(e) {
       return e.phase === t
     }))

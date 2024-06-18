@@ -1,56 +1,54 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("844303"),
-  i = r("464854"),
-  l = r("751392"),
-  u = Object.assign || function(e) {
+var r = n(470079),
+  i = n(844303),
+  a = n(464854),
+  o = n(751392),
+  s = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
-      var r = arguments[t];
-      for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n])
+      var n = arguments[t];
+      for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
     }
     return e
   },
-  s = function(e) {
+  u = function(e) {
     var t = e.rgb,
-      r = e.hsl,
-      n = e.width,
-      l = e.height,
-      s = e.onChange,
-      f = e.direction,
-      c = e.style,
-      d = e.renderers,
+      n = e.hsl,
+      o = e.width,
+      u = e.height,
+      c = e.onChange,
+      l = e.direction,
+      d = e.style,
+      f = e.renderers,
       p = e.pointer,
       h = e.className,
-      b = (0, o.default)({
+      m = (0, i.default)({
         default: {
           picker: {
             position: "relative",
-            width: n,
-            height: l
+            width: o,
+            height: u
           },
           alpha: {
             radius: "2px",
-            style: c
+            style: d
           }
         }
       });
-    return a().createElement("div", {
-      style: b.picker,
+    return r.createElement("div", {
+      style: m.picker,
       className: "alpha-picker " + (void 0 === h ? "" : h)
-    }, a().createElement(i.Alpha, u({}, b.alpha, {
+    }, r.createElement(a.xV, s({}, m.alpha, {
       rgb: t,
-      hsl: r,
+      hsl: n,
       pointer: p,
-      renderers: d,
-      onChange: s,
-      direction: f
+      renderers: f,
+      onChange: c,
+      direction: l
     })))
   };
-s.defaultProps = {
+u.defaultProps = {
   width: "316px",
   height: "16px",
   direction: "horizontal",
-  pointer: l.default
-}, (0, i.ColorWrap)(s)
+  pointer: o.Z
+}, (0, a.t1)(u)

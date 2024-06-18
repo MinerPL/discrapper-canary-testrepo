@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
-  StandAloneLocalDayParser: function() {
+n.d(t, {
+  C: function() {
     return f
   }
 });
-var r = n("717029"),
-  i = n("846042"),
-  a = n("395913");
+var r = n(717029),
+  i = n(846042),
+  a = n(395913);
 
 function o(e) {
   return (o = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
@@ -69,13 +69,10 @@ var f = function(e) {
     }
   }(), function() {
     var e, r = l(t);
-    if (n) {
-      var i = l(this).constructor;
-      e = Reflect.construct(r, arguments, i)
-    } else e = r.apply(this, arguments);
-    return function(e, t) {
-      return t && ("object" === o(t) || "function" == typeof t) ? t : c(e)
-    }(this, e)
+    return e = n ? Reflect.construct(r, arguments, l(this).constructor) : r.apply(this, arguments),
+      function(e, t) {
+        return t && ("object" === o(t) || "function" == typeof t) ? t : c(e)
+      }(this, e)
   });
 
   function m() {
@@ -96,9 +93,9 @@ var f = function(e) {
       switch (t) {
         case "c":
         case "cc":
-          return (0, i.mapValue)((0, i.parseNDigits)(t.length, e), a);
+          return (0, i.jg)((0, i.ZL)(t.length, e), a);
         case "co":
-          return (0, i.mapValue)(n.ordinalNumber(e, {
+          return (0, i.jg)(n.ordinalNumber(e, {
             unit: "day"
           }), a);
         case "ccc":
@@ -149,7 +146,7 @@ var f = function(e) {
   }, {
     key: "set",
     value: function(e, t, n, r) {
-      return (e = (0, a.default)(e, n, r)).setUTCHours(0, 0, 0, 0), e
+      return (e = (0, a.Z)(e, n, r)).setUTCHours(0, 0, 0, 0), e
     }
-  }], s(r.prototype, f), p && s(r, p), m
-}(r.Parser)
+  }], s(r.prototype, f), m
+}(r._)

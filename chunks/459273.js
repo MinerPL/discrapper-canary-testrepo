@@ -1,32 +1,32 @@
 "use strict";
-n.r(t), n.d(t, {
-  ComponentAction: function() {
-    return _
-  },
-  ComponentDispatchGroupContext: function() {
-    return l
-  },
-  ComponentDispatchGroupProvider: function() {
+n.d(t, {
+  I3: function() {
     return u
   },
-  useComponentAction: function() {
+  d9: function() {
     return d
+  },
+  oo: function() {
+    return l
+  },
+  yp: function() {
+    return _
   }
-}), n("47120"), n("411104");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("836560"),
-  a = n("585483");
-class o {
+}), n(47120), n(411104);
+var i = n(735250),
+  r = n(470079),
+  s = n(836560),
+  o = n(585483);
+class a {
   subscribe(e, t) {
-    a.ComponentDispatch.subscribe(e, t), this.emitter.on(e, t)
+    o.S.subscribe(e, t), this.emitter.on(e, t)
   }
   unsubscribe(e, t) {
-    a.ComponentDispatch.unsubscribe(e, t), this.emitter.off(e, t)
+    o.S.unsubscribe(e, t), this.emitter.off(e, t)
   }
   bumpDispatchPriority() {
     for (let e of this.emitter.eventNames())
-      for (let t of this.emitter.listeners(e)) a.ComponentDispatch.resubscribe(e, t)
+      for (let t of this.emitter.listeners(e)) o.S.resubscribe(e, t)
   }
   constructor() {
     var e, t, n;
@@ -40,10 +40,10 @@ class o {
 }
 let l = r.createContext(new class e {
     subscribe(e, t) {
-      a.ComponentDispatch.subscribe(e, t)
+      o.S.subscribe(e, t)
     }
     unsubscribe(e, t) {
-      a.ComponentDispatch.unsubscribe(e, t)
+      o.S.unsubscribe(e, t)
     }
     bumpDispatchPriority() {}
   }),
@@ -52,16 +52,16 @@ let l = r.createContext(new class e {
       children: n
     } = e, s = r.useRef(null);
 
-    function a() {
-      return null === s.current && (s.current = new o), s.current
+    function o() {
+      return null === s.current && (s.current = new a), s.current
     }
-    return r.useImperativeHandle(t, a), (0, i.jsx)(l.Provider, {
-      value: a(),
+    return r.useImperativeHandle(t, o), (0, i.jsx)(l.Provider, {
+      value: o(),
       children: n
     })
   });
 
-function d(e) {
+function _(e) {
   let {
     event: t,
     handler: n
@@ -69,9 +69,9 @@ function d(e) {
   r.useEffect(() => {
     s.current = n
   }, [n]);
-  let a = null == n;
+  let o = null == n;
   return r.useEffect(() => {
-    if (a) return;
+    if (o) return;
     let e = function() {
       for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
       null === (e = s.current) || void 0 === e || e.call(s, ...n)
@@ -79,9 +79,9 @@ function d(e) {
     return i.subscribe(t, e), () => {
       i.unsubscribe(t, e)
     }
-  }, [i, t, a]), null
+  }, [i, t, o]), null
 }
 
-function _(e) {
-  return d(e), null
+function d(e) {
+  return _(e), null
 }

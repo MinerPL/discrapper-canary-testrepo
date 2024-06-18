@@ -1,3 +1,3 @@
-t.exports = function(t, e) {
-  return null == t ? void 0 : t[e]
+t.exports = function(t, r) {
+  return null == t ? void 0 : t[r]
 }

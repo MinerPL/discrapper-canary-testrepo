@@ -1,29 +1,29 @@
 "use strict";
-n.r(t), n.d(t, {
-  getQueriesFromUserInput: function() {
+n.d(t, {
+  Tk: function() {
+    return c
+  },
+  kT: function() {
     return _
   },
-  removePunctuation: function() {
+  wN: function() {
     return d
-  },
-  throttledTrackExpressionSuggestionDisplayed: function() {
-    return c
   }
-}), n("757143");
-var i = n("299608"),
+}), n(757143);
+var i = n(299608),
   r = n.n(i),
-  s = n("626135"),
-  a = n("549058"),
-  o = n("981631");
+  s = n(626135),
+  o = n(549058),
+  a = n(981631);
 let l = /(!|\.|;|,|-|—|–|\?|"|')/g,
   u = /(\n|\t|\s)/g,
-  d = e => e.replace(l, "").replace(u, " "),
-  _ = e => null == e ? [] : d(e).trim().split(" "),
+  _ = e => e.replace(l, "").replace(u, " "),
+  d = e => null == e ? [] : _(e).trim().split(" "),
   c = r()(e => {
-    s.default.track(o.AnalyticEvents.AUTO_SUGGEST_DISPLAYED, {
+    s.default.track(a.rMx.AUTO_SUGGEST_DISPLAYED, {
       suggestion_trigger: e
     })
-  }, a.SUGGESTIONS_SHOWED_INSTRUMENTATION_RATE_LIMIT_MS, {
+  }, o.xv, {
     leading: !0,
     trailing: !1
   })

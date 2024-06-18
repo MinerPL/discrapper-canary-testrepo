@@ -1,46 +1,46 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return u
   }
 });
-var i = n("933557"),
-  r = n("592125"),
-  s = n("699516"),
-  a = n("594174"),
-  o = n("727785"),
-  l = n("981631");
+var i = n(933557),
+  r = n(592125),
+  s = n(699516),
+  o = n(594174),
+  a = n(727785),
+  l = n(981631);
 
 function u(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.default,
-    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.default,
-    u = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.default,
-    d = t.getChannel(e);
-  if (null == d) return null;
-  let _ = (0, i.computeChannelName)(d, n, u);
-  switch (d.type) {
-    case l.ChannelTypes.DM: {
-      let e = n.getUser(d.getRecipientId());
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.Z,
+    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.default,
+    u = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.Z,
+    _ = t.getChannel(e);
+  if (null == _) return null;
+  let d = (0, i.F6)(_, n, u);
+  switch (_.type) {
+    case l.d4z.DM: {
+      let e = n.getUser(_.getRecipientId());
       if (null == e) return null;
       return {
-        type: o.AutocompleterResultTypes.USER,
+        type: a.h8.USER,
         record: e,
         score: 0,
-        comparator: _
+        comparator: d
       }
     }
-    case l.ChannelTypes.GROUP_DM:
+    case l.d4z.GROUP_DM:
       return {
-        type: o.AutocompleterResultTypes.GROUP_DM, record: d, score: 0, comparator: _
+        type: a.h8.GROUP_DM, record: _, score: 0, comparator: d
       };
-    case l.ChannelTypes.GUILD_VOICE:
-    case l.ChannelTypes.GUILD_STAGE_VOICE:
+    case l.d4z.GUILD_VOICE:
+    case l.d4z.GUILD_STAGE_VOICE:
       return {
-        type: o.AutocompleterResultTypes.VOICE_CHANNEL, record: d, score: 0, comparator: _
+        type: a.h8.VOICE_CHANNEL, record: _, score: 0, comparator: d
       };
     default:
       return {
-        type: o.AutocompleterResultTypes.TEXT_CHANNEL, record: d, score: 0, comparator: _
+        type: a.h8.TEXT_CHANNEL, record: _, score: 0, comparator: d
       }
   }
 }

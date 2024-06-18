@@ -1,5 +1,5 @@
 "use strict";
-var n = r("379846");
+var n = r(379846);
 t.exports = function(t, e, r) {
   var i = n.undo(e);
   if ("spellcheck-change" === e.getLastChangeType()) {

@@ -1,27 +1,25 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return l
+n.d(t, {
+  Z: function() {
+    return s
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("803997"),
-  s = n.n(r),
-  a = n("481060"),
-  o = n("272434");
+var i = n(735250);
+n(470079);
+var r = n(481060);
 
-function l(e) {
+function s(e) {
   let {
     children: t,
     className: n,
-    size: r = a.Button.Sizes.SMALL,
-    ...l
+    size: s = r.Button.Sizes.SMALL,
+    ...o
   } = e;
-  return (0, i.jsx)(a.Button, {
-    ...l,
-    size: r,
-    className: s()(o.button, n),
+  return (0, i.jsx)(r.Button, {
+    ...o,
+    color: r.Button.Colors.BRAND,
+    size: s,
+    className: n,
     children: t
   })
 }

@@ -1,4 +1,4 @@
-var r = n("42848"),
+var r = n(42848),
   i = 4294967294,
   a = Math.floor,
   o = Math.min;

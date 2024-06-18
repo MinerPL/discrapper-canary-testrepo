@@ -1,23 +1,23 @@
 "use strict";
-var r = n("447631"),
-  a = n("821819"),
-  o = n("96403"),
-  i = n("82474"),
-  l = n("302231"),
-  u = n("729605"),
-  s = o(n("790248").f),
-  c = o([].push),
-  d = r && a(function() {
+var r = n(447631),
+  o = n(821819),
+  a = n(96403),
+  i = n(82474),
+  s = n(302231),
+  c = n(729605),
+  l = a(n(790248).f),
+  u = a([].push),
+  d = r && o(function() {
     var e = Object.create(null);
-    return e[2] = 2, !s(e, 2)
+    return e[2] = 2, !l(e, 2)
   }),
-  f = function(e) {
+  p = function(e) {
     return function(t) {
-      for (var n, a = u(t), o = l(a), f = d && null === i(a), p = o.length, h = 0, m = []; p > h;) n = o[h++], (!r || (f ? n in a : s(a, n))) && c(m, e ? [n, a[n]] : a[n]);
+      for (var n, o = c(t), a = s(o), p = d && null === i(o), h = a.length, f = 0, m = []; h > f;) n = a[f++], (!r || (p ? n in o : l(o, n))) && u(m, e ? [n, o[n]] : o[n]);
       return m
     }
   };
 e.exports = {
-  entries: f(!0),
-  values: f(!1)
+  entries: p(!0),
+  values: p(!1)
 }

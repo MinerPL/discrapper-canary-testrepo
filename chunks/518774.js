@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  PictureInPictureWindow: function() {
-    return T
+n.d(t, {
+  _: function() {
+    return S
   }
-}), n("47120");
-var i, r = n("735250"),
-  a = n("470079"),
-  s = n("120356"),
-  o = n.n(s),
-  l = n("699581"),
-  u = n("358085"),
-  d = n("144036"),
-  _ = n("981631"),
-  c = n("731718");
+}), n(47120);
+var i, r = n(735250),
+  s = n(470079),
+  o = n(120356),
+  a = n.n(o),
+  l = n(699581),
+  u = n(358085),
+  _ = n(144036),
+  d = n(981631),
+  c = n(731718);
 
 function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -22,12 +22,10 @@ function E(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let I = {
-  top: 80,
-  bottom: 132,
-  left: 80
-};
-class T extends(i = a.PureComponent) {
+let I = 80,
+  T = 132,
+  h = 80;
+class S extends(i = s.PureComponent) {
   componentDidMount() {
     this.setPosition(this.props.position)
   }
@@ -48,28 +46,28 @@ class T extends(i = a.PureComponent) {
       edgeOffsetTop: n,
       edgeOffsetLeft: i,
       edgeOffsetBottom: r,
-      edgeOffsetRight: a,
-      maxX: s,
-      maxY: o,
-      dockedRect: d
-    } = this.props, c = Math.round(n), E = Math.round(o - r - this._height), I = Math.round(i), T = Math.round(s - a - this._width), f = (0, u.getPlatform)() !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
-    if (null != d) {
-      var S, h;
+      edgeOffsetRight: s,
+      maxX: o,
+      maxY: a,
+      dockedRect: _
+    } = this.props, c = Math.round(n), E = Math.round(a - r - this._height), I = Math.round(i), T = Math.round(o - s - this._width), h = (0, u.getPlatform)() !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
+    if (null != _) {
+      var S, f;
       return {
-        y: (null !== (S = null == d ? void 0 : d.y) && void 0 !== S ? S : 0) - f,
-        x: null !== (h = null == d ? void 0 : d.x) && void 0 !== h ? h : 0
+        y: (null !== (S = null == _ ? void 0 : _.y) && void 0 !== S ? S : 0) - h,
+        x: null !== (f = null == _ ? void 0 : _.x) && void 0 !== f ? f : 0
       }
     }
     switch (e) {
-      case _.PictureInPicturePositions.TOP_LEFT:
+      case d.VD2.TOP_LEFT:
         return {
           y: c, x: I
         };
-      case _.PictureInPicturePositions.BOTTOM_LEFT:
+      case d.VD2.BOTTOM_LEFT:
         return {
           y: E, x: I
         };
-      case _.PictureInPicturePositions.TOP_RIGHT:
+      case d.VD2.TOP_RIGHT:
         return {
           y: c, x: T
         };
@@ -108,8 +106,8 @@ class T extends(i = a.PureComponent) {
       edgeOffsetRight: n
     } = this.props;
     switch (e) {
-      case _.PictureInPicturePositions.TOP_LEFT:
-      case _.PictureInPicturePositions.BOTTOM_LEFT:
+      case d.VD2.TOP_LEFT:
+      case d.VD2.BOTTOM_LEFT:
         return -t;
       default:
         return n
@@ -122,15 +120,15 @@ class T extends(i = a.PureComponent) {
       edgeOffsetBottom: n
     } = this.props;
     switch (e) {
-      case _.PictureInPicturePositions.TOP_LEFT:
-      case _.PictureInPicturePositions.TOP_RIGHT:
+      case d.VD2.TOP_LEFT:
+      case d.VD2.TOP_RIGHT:
         return -t;
       default:
         return n
     }
   }
   get inPopout() {
-    return this.props.appContext === _.AppContext.POPOUT
+    return this.props.appContext === d.IlC.POPOUT
   }
   render() {
     let {
@@ -138,19 +136,19 @@ class T extends(i = a.PureComponent) {
       maxY: t,
       dockedRect: n,
       hidden: i,
-      roundCorners: a,
-      className: s
+      roundCorners: s,
+      className: o
     } = this.props, l = {};
     return null != n && (l = {
       transform: "translate3d(".concat(n.x, ", ").concat(n.y, ", 0)"),
       width: n.width,
       height: n.height
-    }), (0, r.jsx)(d.default, {
+    }), (0, r.jsx)(_.Z, {
       dragAnywhere: !0,
       ref: this.handleSetDraggableRef,
-      className: o()(c.pictureInPictureWindow, s, {
+      className: a()(c.pictureInPictureWindow, o, {
         [c.hidden]: i,
-        [c.borderRadius]: a
+        [c.borderRadius]: s
       }),
       maxX: e,
       maxY: t,
@@ -188,8 +186,8 @@ class T extends(i = a.PureComponent) {
       let {
         maxX: i,
         maxY: r
-      } = this.props, a = this.calculateDecayingPosition(e, t, this._velocityX, this._velocityY), s = !0, o = !0;
-      if (a.x > i / 2 && (o = !1), a.y > r / 2 && (s = !1), n = s && o ? _.PictureInPicturePositions.TOP_LEFT : s && !o ? _.PictureInPicturePositions.TOP_RIGHT : !s && o ? _.PictureInPicturePositions.BOTTOM_LEFT : _.PictureInPicturePositions.BOTTOM_RIGHT, this.animateToPosition(n, this.ensureIsInPosition), n !== this.props.position) {
+      } = this.props, s = this.calculateDecayingPosition(e, t, this._velocityX, this._velocityY), o = !0, a = !0;
+      if (s.x > i / 2 && (a = !1), s.y > r / 2 && (o = !1), n = o && a ? d.VD2.TOP_LEFT : o && !a ? d.VD2.TOP_RIGHT : !o && a ? d.VD2.BOTTOM_LEFT : d.VD2.BOTTOM_RIGHT, this.animateToPosition(n, this.ensureIsInPosition), n !== this.props.position) {
         let {
           id: e,
           onMove: t
@@ -199,47 +197,47 @@ class T extends(i = a.PureComponent) {
     })
   }
 }
-E(T, "defaultProps", {
+E(S, "defaultProps", {
   hidden: !1,
   roundCorners: !0
 });
-t.default = a.memo(e => {
+t.Z = s.memo(e => {
   let {
     selectedPIPWindow: t,
     pipWindows: n,
     maxX: i,
-    maxY: a,
-    onWindowMove: s,
-    dockedRect: o,
+    maxY: s,
+    onWindowMove: o,
+    dockedRect: a,
     pictureInPictureComponents: l,
     appContext: u,
-    roundCorners: d
+    roundCorners: _
   } = e;
   return (0, r.jsx)("div", {
     className: c.pictureInPicture,
     children: (() => {
       if (null == t) return null;
       let e = n.map(e => {
-        if (e.id !== t.id && e.component !== _.PictureInPictureComponents.EMBED_IFRAME) return null;
+        if (e.id !== t.id && e.component !== d.NYg.EMBED_IFRAME) return null;
         let n = "string" == typeof e.component ? l[e.component] : e.component;
         return (0, r.jsx)(n, {
           ...e.props
         }, "pipWindow-".concat(e.id))
       });
-      return (0, r.jsx)(T, {
+      return (0, r.jsx)(S, {
         appContext: u,
         position: t.position,
         id: t.id,
         hidden: t.hidden,
-        onMove: s,
+        onMove: o,
         maxX: i,
-        maxY: a,
-        dockedRect: o,
-        edgeOffsetTop: I.top,
-        edgeOffsetBottom: I.bottom,
-        edgeOffsetLeft: I.left,
-        edgeOffsetRight: I.top,
-        roundCorners: d,
+        maxY: s,
+        dockedRect: a,
+        edgeOffsetTop: I,
+        edgeOffsetBottom: T,
+        edgeOffsetLeft: h,
+        edgeOffsetRight: I,
+        roundCorners: _,
         children: e
       })
     })()

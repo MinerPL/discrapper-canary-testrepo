@@ -1,90 +1,89 @@
 "use strict";
-n.r(t);
-var i = n("735250"),
-  r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
-  o = n("613828"),
-  l = n("481060"),
-  u = n("892090");
-let d = r.forwardRef(function(e, t) {
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(613828),
+  l = n(481060),
+  u = n(368488);
+let _ = r.forwardRef(function(e, t) {
   var n;
   let {
     avatar: r,
     name: s,
-    children: d,
-    subText: _,
+    children: _,
+    subText: d,
     decorators: c,
     onClick: E,
     selected: I,
     muted: T,
-    to: f,
+    to: h,
     avatarClassName: S,
-    selectedClassName: h,
-    innerClassName: A,
-    wrapContent: m,
-    highlighted: N,
+    selectedClassName: f,
+    innerClassName: N,
+    wrapContent: A,
+    highlighted: m,
     focusProps: O,
-    ...p
+    ...R
   } = e;
-  p.className = a()(p.className, u.container, {
+  R.className = o()(R.className, u.container, {
     [u.selected]: I,
-    [u.highlighted]: N,
-    [null != h ? h : ""]: I,
-    [u.clickable]: !I && (null != f || null != E)
-  }), p["aria-selected"] = null !== (n = p["aria-selected"]) && void 0 !== n ? n : I;
-  let R = (0, i.jsxs)("div", {
-    className: a()(A, u.layout, {
+    [u.highlighted]: m,
+    [null != f ? f : ""]: I,
+    [u.clickable]: !I && (null != h || null != E)
+  }), R["aria-selected"] = null !== (n = R["aria-selected"]) && void 0 !== n ? n : I;
+  let C = (0, i.jsxs)("div", {
+    className: o()(N, u.layout, {
       [u.muted]: !I && T,
-      [u.wrappedLayout]: m
+      [u.wrappedLayout]: A
     }),
     children: [(0, i.jsx)("div", {
-      className: a()(u.avatar, S),
+      className: o()(u.avatar, S),
       children: r
     }), (0, i.jsxs)("div", {
       className: u.content,
       children: [(0, i.jsxs)("div", {
         className: u.nameAndDecorators,
         children: [(0, i.jsx)("div", {
-          className: a()(u.name, {
-            [u.wrappedName]: m
+          className: o()(u.name, {
+            [u.wrappedName]: A
           }),
           children: s
         }), c]
-      }), null != _ ? (0, i.jsx)("div", {
+      }), null != d ? (0, i.jsx)("div", {
         className: u.subText,
-        children: _
+        children: d
       }) : null]
-    }), null != d ? (0, i.jsx)("div", {
+    }), null != _ ? (0, i.jsx)("div", {
       className: u.children,
-      children: d
+      children: _
     }) : null]
   });
-  return null != f ? (0, i.jsx)(l.FocusRing, {
+  return null != h ? (0, i.jsx)(l.FocusRing, {
     ...O,
-    children: (0, i.jsx)(o.Link, {
-      to: f,
+    children: (0, i.jsx)(a.rU, {
+      to: h,
       onClick: E,
-      ...p,
+      ...R,
       role: "listitem",
       ref: t,
-      children: R
+      children: C
     })
   }) : null != E ? (0, i.jsx)(l.Clickable, {
     onClick: E,
     focusProps: O,
-    ...p,
+    ...R,
     role: "listitem",
     innerRef: t,
-    children: R
+    children: C
   }) : (0, i.jsx)(l.FocusRing, {
     ...O,
     children: (0, i.jsx)("div", {
-      ...p,
+      ...R,
       role: "listitem",
       ref: t,
-      children: R
+      children: C
     })
   })
 });
-t.default = d
+t.Z = _

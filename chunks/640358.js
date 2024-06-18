@@ -1,20 +1,20 @@
 "use strict";
-s.r(t), s.d(t, {
-  truncateAndLocalizeNumber: function() {
-    return l
+t.d(s, {
+  o: function() {
+    return i
   }
 });
-var a = s("330711");
-let l = (e, t) => {
-  let s = Math.round(10 * e) / 10;
-  if (e < 1e6) return new Intl.NumberFormat(t, {
-    maximumFractionDigits: s % 1 == 0 ? 0 : 1
+var n = t(330711);
+let i = (e, s) => {
+  let t = Math.round(10 * e) / 10;
+  if (e < 1e6) return new Intl.NumberFormat(s, {
+    maximumFractionDigits: t % 1 == 0 ? 0 : 1
   }).format(e);
-  let l = Math.round(e / 1e6 * 10) / 10,
-    n = new Intl.NumberFormat(t, {
-      maximumFractionDigits: l % 1 == 0 ? 0 : 1
+  let i = Math.round(e / 1e6 * 10) / 10,
+    l = new Intl.NumberFormat(s, {
+      maximumFractionDigits: i % 1 == 0 ? 0 : 1
     }).format(e / 1e6);
-  return a.default.Messages.NumberAbbreviations.MILLION.format({
-    num: n
+  return n.Z.Messages.NumberAbbreviations.MILLION.format({
+    num: l
   })
 }

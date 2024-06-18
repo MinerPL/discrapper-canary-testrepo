@@ -1,49 +1,49 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("735250");
-n("470079");
-var r = n("524437"),
-  s = n("481060"),
-  a = n("147913"),
-  o = n("605236"),
-  l = n("944486"),
-  u = n("914010"),
-  d = n("626135"),
-  _ = n("150340"),
-  c = n("981631"),
-  E = n("921944");
+n(47120);
+var i = n(735250);
+n(470079);
+var r = n(704215),
+  s = n(481060),
+  o = n(147913),
+  a = n(605236),
+  l = n(944486),
+  u = n(914010),
+  _ = n(626135),
+  d = n(150340),
+  c = n(981631),
+  E = n(921944);
 let I = "GUILD_ONBOARDING_UPSELL_MODAL",
   T = (e, t) => {
-    if (__OVERLAY__ || null == e || null == t || !(0, _.shouldShowGuildOnboardingUpsell)(e, r.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2)) return;
-    (0, o.requestMarkDismissibleContentAsShown)(r.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2);
-    let a = function() {
-      let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : E.ContentDismissActionType.DISMISS;
-      d.default.track(c.AnalyticEvents.UPSELL_CLICKED, {
-        type: r.DismissibleContent[r.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2],
+    if (__OVERLAY__ || null == e || null == t || !(0, d.S)(e, r.z.GUILD_ONBOARDING_UPSELL_MODAL_V2)) return;
+    (0, a.kk)(r.z.GUILD_ONBOARDING_UPSELL_MODAL_V2);
+    let o = function() {
+      let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : E.L.DISMISS;
+      _.default.track(c.rMx.UPSELL_CLICKED, {
+        type: r.z[r.z.GUILD_ONBOARDING_UPSELL_MODAL_V2],
         action: "dismiss"
-      }), (0, _.dismissedGuildOnboardingUpsell)(e, r.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2), (0, o.markDismissibleContentAsDismissed)(r.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2, {
+      }), (0, d.G)(e, r.z.GUILD_ONBOARDING_UPSELL_MODAL_V2), (0, a.EW)(r.z.GUILD_ONBOARDING_UPSELL_MODAL_V2, {
         dismissAction: t
       })
     };
     (0, s.openModalLazy)(async () => {
       let {
         default: t
-      } = await Promise.all([n.e("99387"), n.e("93776")]).then(n.bind(n, "563288"));
+      } = await Promise.all([n.e("99387"), n.e("93776")]).then(n.bind(n, 563288));
       return n => (0, i.jsx)(t, {
         ...n,
         guildId: e,
         onClose: e => {
-          a(e), n.onClose()
+          o(e), n.onClose()
         }
       })
     }, {
       modalKey: I,
       onCloseRequest: () => {
-        a(), (0, s.closeModal)(I)
+        o(), (0, s.closeModal)(I)
       }
     })
   };
-class f extends a.default {
+class h extends o.Z {
   handleChannelSelect(e) {
     let {
       guildId: t,
@@ -52,8 +52,8 @@ class f extends a.default {
     T(t, n)
   }
   handlePostConnectionOpen() {
-    let e = l.default.getCurrentlySelectedChannelId();
-    T(u.default.getGuildId(), e)
+    let e = l.Z.getCurrentlySelectedChannelId();
+    T(u.Z.getGuildId(), e)
   }
   constructor(...e) {
     var t, n, i;
@@ -68,4 +68,4 @@ class f extends a.default {
     }) : t[n] = i
   }
 }
-t.default = new f
+t.Z = new h

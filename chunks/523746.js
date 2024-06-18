@@ -1,99 +1,98 @@
 "use strict";
-n.r(t);
-var i, r, s, a, o = n("392711"),
-  l = n.n(o),
-  u = n("442837"),
-  d = n("544891"),
-  _ = n("570140"),
-  c = n("592125"),
-  E = n("944486"),
-  I = n("914010"),
-  T = n("981631");
-let f = {},
+var i, r, s, o, a = n(392711),
+  l = n.n(a),
+  u = n(442837),
+  _ = n(544891),
+  d = n(570140),
+  c = n(592125),
+  E = n(944486),
+  I = n(914010),
+  T = n(981631);
+let h = {},
   S = {};
 
-function h() {
+function f() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-    t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : E.default.getChannelId(),
-    n = c.default.getChannel(t);
-  if (null != n && null == n.getGuildId() && null != t && (null == f[t] || e)) {
+    t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : E.Z.getChannelId(),
+    n = c.Z.getChannel(t);
+  if (null != n && null == n.getGuildId() && null != t && (null == h[t] || e)) {
     var i;
-    return f[t] = null !== (i = f[t]) && void 0 !== i ? i : {
+    return h[t] = null !== (i = h[t]) && void 0 !== i ? i : {
       channelId: t,
       ringing: []
-    }, _.default.dispatch({
+    }, d.Z.dispatch({
       type: "CALL_CONNECT",
       channelId: t
     }), !0
   }
   return !1
 }
-class A extends(a = u.default.Store) {
+class N extends(o = u.ZP.Store) {
   initialize() {
-    this.waitFor(I.default, E.default)
+    this.waitFor(I.Z, E.Z)
   }
   getCall(e) {
-    return f[e]
+    return h[e]
   }
   getCalls() {
-    return Object.values(f)
+    return Object.values(h)
   }
   getMessageId(e) {
     let t = this.getCall(e);
     return null != t ? t.messageId : null
   }
   isCallActive(e, t) {
-    let n = f[e];
+    let n = h[e];
     return null != n && !n.unavailable && (null != t ? n.messageId === t : null != n.region)
   }
   isCallUnavailable(e) {
-    let t = f[e];
+    let t = h[e];
     return null != t && t.unavailable
   }
   getInternalState() {
     return {
-      calls: f,
+      calls: h,
       enqueuedRings: S
     }
   }
 }
-s = "CallStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
+s = "CallStore", (r = "displayName") in(i = N) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new A(_.default, {
+}) : i[r] = s, t.Z = new N(d.Z, {
   CONNECTION_OPEN: function() {
-    return h(!0)
+    return f(!0)
   },
   CONNECTION_CLOSED: function() {
-    f = {}, S = {}
+    h = {}, S = {}
   },
   OVERLAY_INITIALIZE: function(e) {
     let {
       callStoreInternalState: t
     } = e;
-    f = {
+    h = {
       ...t.calls
     }, S = {
       ...t.enqueuedRings
     }
   },
   CONNECTION_RESUMED: function() {
-    return h(!0)
+    return f(!0)
   },
   CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    return h(!1, t)
+    return f(!1, t)
   },
   CHANNEL_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    if (null != S[t.id] && delete S[t.id], null == f[t.id]) return !1;
-    delete f[t.id]
+    if (null != S[t.id] && delete S[t.id], null == h[t.id]) return !1;
+    delete h[t.id]
   },
   CALL_CREATE: function(e) {
     let {
@@ -102,7 +101,7 @@ s = "CallStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
       region: i,
       ringing: r
     } = e;
-    if (f[t] = {
+    if (h[t] = {
         channelId: t,
         messageId: n,
         region: i,
@@ -111,8 +110,8 @@ s = "CallStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
         regionUpdated: !1
       }, null != S[t]) {
       let e = S[t];
-      delete S[t], 1 !== e.indexOf("all") && (e = null), d.HTTP.post({
-        url: T.Endpoints.CALL_RING(t),
+      delete S[t], 1 !== e.indexOf("all") && (e = null), _.tn.post({
+        url: T.ANM.CALL_RING(t),
         body: {
           recipients: e
         },
@@ -126,24 +125,24 @@ s = "CallStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
       messageId: n,
       region: i,
       ringing: r
-    } = e, s = f[t], a = null != s && (s.regionUpdated || s.region !== i);
-    f[t] = {
-      ...f[t],
+    } = e, s = h[t], o = null != s && (s.regionUpdated || s.region !== i);
+    h[t] = {
+      ...h[t],
       messageId: n,
       region: i,
       ringing: r,
-      regionUpdated: a
+      regionUpdated: o
     }
   },
   CALL_DELETE: function(e) {
     let {
       channelId: t,
       unavailable: n
-    } = e, i = f[t];
-    !0 === n && null != i ? f[t] = {
+    } = e, i = h[t];
+    !0 === n && null != i ? h[t] = {
       ...i,
       unavailable: n
-    } : f[t] = {
+    } : h[t] = {
       channelId: t,
       ringing: [],
       messageId: null,

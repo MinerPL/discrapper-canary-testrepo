@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  MidjourneyOnboardingExperiment: function() {
+n.d(t, {
+  L: function() {
     return i
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2023-11_midjourney_onboarding",
   label: "Midjourney Onboarding",

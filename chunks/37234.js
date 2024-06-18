@@ -1,32 +1,32 @@
 "use strict";
-n.r(t), n.d(t, {
-  popAllLayers: function() {
-    return a
+n.d(t, {
+  Ou: function() {
+    return o
   },
-  popLayer: function() {
-    return s
-  },
-  pushLayer: function() {
+  jN: function() {
     return r
+  },
+  xf: function() {
+    return s
   }
 });
-var i = n("570140");
+var i = n(570140);
 
 function r(e) {
-  i.default.dispatch({
+  i.Z.dispatch({
     type: "LAYER_PUSH",
     component: e
   })
 }
 
 function s() {
-  i.default.dispatch({
+  i.Z.dispatch({
     type: "LAYER_POP"
   })
 }
 
-function a() {
-  i.default.dispatch({
+function o() {
+  i.Z.dispatch({
     type: "LAYER_POP_ALL"
   })
 }

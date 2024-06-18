@@ -1,14 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return i
   }
 });
 var r = "Invariant failed";
 
 function i(e, t) {
-  if (!e) {
-    var n;
-    throw Error(r)
-  }
+  var n;
+  if (!e) throw Error(r)
 }

@@ -1,8 +1,8 @@
 "use strict";
-var r = n("814033"),
-  i = n("689118"),
-  a = n("806981"),
-  o = n("685053");
+var r = n(814033),
+  i = n(689118),
+  a = n(806981),
+  o = n(685053);
 
 function s(e) {
   a.call(this, "mont", e), this.a = new r(e.a, 16).toRed(this.red), this.b = new r(e.b, 16).toRed(this.red), this.i4 = new r(4).toRed(this.red).redInvm(), this.two = new r(2).toRed(this.red), this.a24 = this.i4.redMul(this.a.redAdd(this.two))

@@ -1,6 +1,6 @@
 "use strict";
-var e = n("360518"),
-  o = n("519723"),
+var e = n(360518),
+  o = n(519723),
   i = e("iterator"),
   u = Array.prototype;
 t.exports = function(t) {

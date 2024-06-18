@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("570140"),
-  r = n("317770"),
-  s = n("280837"),
-  a = n("592125"),
-  o = n("914010"),
-  l = n("823379");
+n(47120);
+var i = n(570140),
+  r = n(317770),
+  s = n(280837),
+  o = n(592125),
+  a = n(914010),
+  l = n(823379);
 
 function u(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -15,12 +15,12 @@ function u(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class d extends r.default {
+class _ extends r.Z {
   _initialize() {
-    i.default.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect), i.default.subscribe("LOGOUT", this.handleLogout)
+    i.Z.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect), i.Z.subscribe("LOGOUT", this.handleLogout)
   }
   _terminate() {
-    i.default.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect), i.default.unsubscribe("LOGOUT", this.handleLogout)
+    i.Z.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect), i.Z.unsubscribe("LOGOUT", this.handleLogout)
   }
   constructor(...e) {
     super(...e), u(this, "handleVoiceChannelSelect", e => {
@@ -29,17 +29,17 @@ class d extends r.default {
         guildId: n
       } = e;
       if (null != t) {
-        let e = a.default.getChannel(t);
+        let e = o.Z.getChannel(t);
         if (null == e || e.isGuildStageVoice()) return
       }
       this.terminate();
       this.handleDisconnectFromStageChannel(null == t ? null : null != n ? n : null)
     }), u(this, "handleDisconnectFromStageChannel", e => {
-      let t = o.default.getGuildId();
-      (0, s.stopLurkingAll)([t, e].filter(l.isNotNullish))
+      let t = a.Z.getGuildId();
+      (0, s.O)([t, e].filter(l.lm))
     }), u(this, "handleLogout", () => {
       this.terminate(), this.handleDisconnectFromStageChannel(null)
     })
   }
 }
-t.default = new d
+t.Z = new _

@@ -1,6 +1,6 @@
 "use strict";
-var n = r("846362"),
-  i = r("733359").strlen;
+var n = r(846362),
+  i = r(733359).strlen;
 t.exports = function(t, e) {
   var r = [];
   return t.findEntityRanges(function(t) {

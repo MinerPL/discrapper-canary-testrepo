@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  doesThreadMembersActionAffectMe: function() {
+n.d(t, {
+  s: function() {
     return r
   }
 });
-var i = n("314897");
+var i = n(314897);
 
 function r(e) {
   var t, n;

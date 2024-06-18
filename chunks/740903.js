@@ -1,7 +1,7 @@
 "use strict";
-var a, l;
-s.r(t), s.d(t, {
-  GuildSettingsSafetyPage: function() {
-    return a
+var n, i;
+t.d(s, {
+  u: function() {
+    return n
   }
-}), (l = a || (a = {}))[l.OVERVIEW = 0] = "OVERVIEW", l[l.CAPTCHA_AND_RAID_PROTECTION = 1] = "CAPTCHA_AND_RAID_PROTECTION", l[l.DM_AND_SPAM_PROTECTION = 2] = "DM_AND_SPAM_PROTECTION", l[l.AUTOMOD = 3] = "AUTOMOD", l[l.PERMISSIONS = 4] = "PERMISSIONS"
+}), (i = n || (n = {}))[i.OVERVIEW = 0] = "OVERVIEW", i[i.CAPTCHA_AND_RAID_PROTECTION = 1] = "CAPTCHA_AND_RAID_PROTECTION", i[i.DM_AND_SPAM_PROTECTION = 2] = "DM_AND_SPAM_PROTECTION", i[i.AUTOMOD = 3] = "AUTOMOD", i[i.PERMISSIONS = 4] = "PERMISSIONS"

@@ -1,12 +1,12 @@
 "use strict";
-var r = n("390976"),
-  i = n("690244"),
-  a = n("781421"),
-  o = n("815329"),
+var r = n(390976),
+  i = n(690244),
+  a = n(781421),
+  o = n(815329),
   s = i("%Function.prototype.apply%"),
   u = i("%Function.prototype.call%"),
   c = i("%Reflect.apply%", !0) || r.call(u, s),
-  l = n("583584"),
+  l = n(583584),
   d = i("%Math.max%");
 e.exports = function(e) {
   if ("function" != typeof e) throw new o("a function is required");

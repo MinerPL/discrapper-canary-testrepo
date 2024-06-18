@@ -1,10 +1,10 @@
 "use strict";
-var e = n("926515"),
-  o = n("622281"),
-  i = n("323979"),
-  u = n("995739"),
-  c = n("337856"),
-  s = n("641236"),
+var e = n(926515),
+  o = n(622281),
+  i = n(323979),
+  u = n(995739),
+  c = n(337856),
+  s = n(641236),
   f = TypeError,
   a = s("toPrimitive");
 t.exports = function(t, r) {

@@ -1,8 +1,8 @@
-var r = n("957578").Buffer,
-  i = n("28704"),
-  a = n("136924").ec,
-  o = n("223428"),
-  s = n("733345");
+var r = n(957578).Buffer,
+  i = n(28704),
+  a = n(136924).ec,
+  o = n(223428),
+  s = n(733345);
 
 function u(e, t) {
   if (0 >= e.cmpn(0) || e.cmp(t) >= t) throw Error("invalid sig")

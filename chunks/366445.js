@@ -1,7 +1,7 @@
 "use strict";
-let r = n("318655"),
-  i = n("728734"),
-  a = n("689118");
+let r = n(318655),
+  i = n(728734),
+  a = n(689118);
 
 function o(e, t) {
   this.name = e, this.body = t, this.decoders = {}, this.encoders = {}

@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  PbLong: function() {
+n.d(t, {
+  M: function() {
     return c
   },
-  PbULong: function() {
+  p: function() {
     return u
   }
 });
-var r = n("825842");
+var r = n(825842);
 let i = function() {
   let e = new DataView(new ArrayBuffer(8));
   return void 0 !== globalThis.BigInt && "function" == typeof e.getBigInt64 && "function" == typeof e.getBigUint64 && "function" == typeof e.setBigInt64 && "function" == typeof e.setBigUint64 ? {
@@ -56,7 +56,7 @@ class u extends s {
       case "string":
         if ("0" == e) return this.ZERO;
         if (e = e.trim(), !o.test(e)) throw Error("string is no integer");
-        let [t, n, a] = (0, r.int64fromString)(e);
+        let [t, n, a] = (0, r.IL)(e);
         if (t) throw Error("signed value");
         return new u(n, a);
       case "number":
@@ -68,7 +68,7 @@ class u extends s {
     throw Error("unknown value " + typeof e)
   }
   toString() {
-    return i ? this.toBigInt().toString() : (0, r.int64toString)(this.lo, this.hi)
+    return i ? this.toBigInt().toString() : (0, r.gn)(this.lo, this.hi)
   }
   toBigInt() {
     return a(i), i.V.setInt32(0, this.lo, !0), i.V.setInt32(4, this.hi, !0), i.V.getBigUint64(0, !0)
@@ -94,7 +94,7 @@ class c extends s {
       case "string":
         if ("0" == e) return this.ZERO;
         if (e = e.trim(), !o.test(e)) throw Error("string is no integer");
-        let [t, n, a] = (0, r.int64fromString)(e), s = new c(n, a);
+        let [t, n, a] = (0, r.IL)(e), s = new c(n, a);
         return t ? s.negate() : s;
       case "number":
         if (0 == e) return this.ZERO;
@@ -115,9 +115,9 @@ class c extends s {
     if (i) return this.toBigInt().toString();
     if (this.isNegative()) {
       let e = this.negate();
-      return "-" + (0, r.int64toString)(e.lo, e.hi)
+      return "-" + (0, r.gn)(e.lo, e.hi)
     }
-    return (0, r.int64toString)(this.lo, this.hi)
+    return (0, r.gn)(this.lo, this.hi)
   }
   toBigInt() {
     return a(i), i.V.setInt32(0, this.lo, !0), i.V.setInt32(4, this.hi, !0), i.V.getBigInt64(0, !0)

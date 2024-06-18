@@ -5,11 +5,11 @@ function i() {
 }
 
 function r(e) {}
-n.r(t), n.d(t, {
-  getUserId: function() {
-    return i
-  },
-  setUserId: function() {
+n.d(t, {
+  I: function() {
     return r
+  },
+  n: function() {
+    return i
   }
 })

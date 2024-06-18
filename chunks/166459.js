@@ -1,9 +1,8 @@
 "use strict";
-n.r(t);
-var i = n("570140");
-t.default = {
+var i = n(570140);
+t.Z = {
   popFirstFile(e) {
-    i.default.dispatch({
+    i.Z.dispatch({
       type: "UPLOAD_ATTACHMENT_POP_FILE",
       channelId: e
     })
@@ -15,7 +14,7 @@ t.default = {
       showLargeMessageDialog: r,
       draftType: s
     } = e;
-    i.default.dispatch({
+    i.Z.dispatch({
       type: "UPLOAD_ATTACHMENT_ADD_FILES",
       channelId: n,
       files: t,
@@ -30,7 +29,7 @@ t.default = {
       showLargeMessageDialog: r,
       draftType: s
     } = e;
-    i.default.dispatch({
+    i.Z.dispatch({
       type: "UPLOAD_ATTACHMENT_ADD_FILES",
       channelId: n,
       files: [t],
@@ -39,7 +38,7 @@ t.default = {
     })
   },
   remove(e, t, n) {
-    i.default.dispatch({
+    i.Z.dispatch({
       type: "UPLOAD_ATTACHMENT_REMOVE_FILE",
       channelId: e,
       id: t,
@@ -47,7 +46,7 @@ t.default = {
     })
   },
   removeFiles(e, t, n) {
-    i.default.dispatch({
+    i.Z.dispatch({
       type: "UPLOAD_ATTACHMENT_REMOVE_FILES",
       channelId: e,
       attachmentIds: t,
@@ -55,7 +54,7 @@ t.default = {
     })
   },
   clearAll(e, t) {
-    i.default.dispatch({
+    i.Z.dispatch({
       type: "UPLOAD_ATTACHMENT_CLEAR_ALL_FILES",
       channelId: e,
       draftType: t
@@ -64,18 +63,18 @@ t.default = {
   update(e, t, n, r) {
     let {
       description: s,
-      filename: a,
-      spoiler: o,
+      filename: o,
+      spoiler: a,
       thumbnail: l
     } = r;
-    i.default.dispatch({
+    i.Z.dispatch({
       type: "UPLOAD_ATTACHMENT_UPDATE_FILE",
       channelId: e,
       id: t,
-      filename: a,
+      filename: o,
       description: s,
       thumbnail: l,
-      spoiler: o,
+      spoiler: a,
       draftType: n
     })
   },
@@ -86,7 +85,7 @@ t.default = {
       draftType: r,
       resetState: s
     } = e;
-    i.default.dispatch({
+    i.Z.dispatch({
       type: "UPLOAD_ATTACHMENT_SET_UPLOADS",
       channelId: n,
       uploads: s ? t.map(e => e.resetState()) : t,
@@ -100,7 +99,7 @@ t.default = {
       id: r,
       draftType: s
     } = e;
-    i.default.dispatch({
+    i.Z.dispatch({
       type: "UPLOAD_ATTACHMENT_SET_FILE",
       channelId: n,
       id: r,

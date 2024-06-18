@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
-  useProfileEffectPreset: function() {
-    return o
+n.d(t, {
+  V: function() {
+    return a
   }
 });
-var i = n("470079"),
-  r = n("442837"),
-  a = n("365943"),
-  s = n("25251");
-let o = e => {
-  let t = (0, r.useStateFromStores)([s.default], () => s.default.getProfileEffectById(e)),
+var i = n(470079),
+  r = n(442837),
+  s = n(365943),
+  o = n(25251);
+let a = e => {
+  let t = (0, r.e7)([o.Z], () => o.Z.getProfileEffectById(e)),
     n = null != t;
   return i.useEffect(() => {
-    null != e && !n && (0, a.fetchUserProfileEffects)(!0)
+    null != e && !n && (0, s.z)(!0)
   }, [e, n]), t
 }

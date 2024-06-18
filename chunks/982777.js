@@ -1,41 +1,44 @@
 "use strict";
-n.r(t), n.d(t, {
-  createSourceFactory: function() {
-    return l
+r.d(t, {
+  a: function() {
+    return d
   }
 });
-var r = n("573654"),
-  i = n("139883");
+var n = r(573654),
+  o = r(139883);
 
-function a(e, t) {
-  for (var n = 0; n < t.length; n++) {
-    var r = t[n];
-    r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+function i(e, t) {
+  for (var r = 0; r < t.length; r++) {
+    var n = t[r];
+    n.enumerable = n.enumerable || !1, n.configurable = !0, "value" in n && (n.writable = !0), Object.defineProperty(e, n.key, n)
   }
 }
 
-function o(e, t, n) {
+function s(e, t, r) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: r,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = r, e
 }
-var s = ["canDrag", "beginDrag", "isDragging", "endDrag"],
-  u = ["beginDrag"],
-  c = function() {
-    var e, t, n;
+var a = ["canDrag", "beginDrag", "isDragging", "endDrag"],
+  c = ["beginDrag"],
+  u = function() {
+    var e, t, r;
 
-    function r(e, t, n) {
-      var i = this;
+    function n(e, t, r) {
+      var o = this;
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-      }(this, r), o(this, "props", null), o(this, "spec", void 0), o(this, "monitor", void 0), o(this, "ref", void 0), o(this, "beginDrag", function() {
-        if (i.props) return i.spec.beginDrag(i.props, i.monitor, i.ref.current)
-      }), this.spec = e, this.monitor = t, this.ref = n
+      }(this, n), s(this, "props", null), s(this, "spec", void 0), s(this, "monitor", void 0), s(this, "ref", void 0), s(this, "beginDrag", function() {
+        if (!!o.props) {
+          var e = o.spec.beginDrag(o.props, o.monitor, o.ref.current);
+          return e
+        }
+      }), this.spec = e, this.monitor = t, this.ref = r
     }
-    return e = r, t = [{
+    return e = n, t = [{
       key: "receiveProps",
       value: function(e) {
         this.props = e
@@ -53,18 +56,18 @@ var s = ["canDrag", "beginDrag", "isDragging", "endDrag"],
     }, {
       key: "endDrag",
       value: function() {
-        if (!!this.props) this.spec.endDrag && this.spec.endDrag(this.props, this.monitor, (0, i.getDecoratedComponent)(this.ref))
+        if (!!this.props && !!this.spec.endDrag) this.spec.endDrag(this.props, this.monitor, (0, o.Al)(this.ref))
       }
-    }], a(e.prototype, t), n && a(e, n), r
+    }], i(e.prototype, t), n
   }();
 
-function l(e) {
+function d(e) {
   return Object.keys(e).forEach(function(t) {
-      (0, r.invariant)(s.indexOf(t) > -1, 'Expected the drag source specification to only have some of the following keys: %s. Instead received a specification with an unexpected "%s" key. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source', s.join(", "), t), (0, r.invariant)("function" == typeof e[t], "Expected %s in the drag source specification to be a function. Instead received a specification with %s: %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source", t, t, e[t])
-    }), u.forEach(function(t) {
-      (0, r.invariant)("function" == typeof e[t], "Expected %s in the drag source specification to be a function. Instead received a specification with %s: %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source", t, t, e[t])
+      (0, n.k)(a.indexOf(t) > -1, 'Expected the drag source specification to only have some of the following keys: %s. Instead received a specification with an unexpected "%s" key. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source', a.join(", "), t), (0, n.k)("function" == typeof e[t], "Expected %s in the drag source specification to be a function. Instead received a specification with %s: %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source", t, t, e[t])
+    }), c.forEach(function(t) {
+      (0, n.k)("function" == typeof e[t], "Expected %s in the drag source specification to be a function. Instead received a specification with %s: %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source", t, t, e[t])
     }),
-    function(t, n) {
-      return new c(e, t, n)
+    function(t, r) {
+      return new u(e, t, r)
     }
 }

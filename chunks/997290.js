@@ -1,7 +1,7 @@
 "use strict";
-var r = n("689118"),
-  i = n("957578").Buffer,
-  a = n("764900"),
+var r = n(689118),
+  i = n(957578).Buffer,
+  a = n(764900),
   o = i.alloc(128);
 
 function s(e, t) {

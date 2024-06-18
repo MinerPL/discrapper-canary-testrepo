@@ -1,67 +1,67 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
+t.d(s, {
+  Z: function() {
     return T
   }
 });
-var a = s("735250"),
-  l = s("470079"),
-  n = s("803997"),
-  i = s.n(n),
-  r = s("481060"),
-  o = s("456935"),
-  d = s("259580"),
-  u = s("916187"),
-  c = s("736921"),
-  E = s("981631"),
-  _ = s("689938"),
-  I = s("893079");
+var n = t(735250),
+  i = t(470079),
+  l = t(120356),
+  a = t.n(l),
+  r = t(481060),
+  o = t(456935),
+  c = t(259580),
+  d = t(916187),
+  u = t(736921),
+  E = t(981631),
+  _ = t(689938),
+  I = t(212723);
 
 function T(e) {
   let {
-    guild: t
-  } = e, n = t.verificationLevel, T = l.useMemo(() => (0, o.getVerificationLevelText)(n), [n]);
-  return (0, a.jsxs)(r.Clickable, {
+    guild: s
+  } = e, l = s.verificationLevel, T = i.useMemo(() => (0, o.I9)(l), [l]);
+  return (0, n.jsxs)(r.Clickable, {
     onClick: () => (0, r.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([s.e("99387"), s.e("72458")]).then(s.bind(s, "694278"));
-      return s => (0, a.jsx)(e, {
-        ...s,
-        guild: t,
+      } = await Promise.all([t.e("99387"), t.e("72458")]).then(t.bind(t, 694278));
+      return t => (0, n.jsx)(e, {
+        ...t,
+        guild: s,
         hideColors: !0
       })
     }),
-    className: i()(I.simpleItemWrapper, I.clickable),
-    children: [(0, a.jsxs)("div", {
+    className: a()(I.simpleItemWrapper, I.clickable),
+    children: [(0, n.jsxs)("div", {
       className: I.itemContent,
-      children: [(0, a.jsx)(r.Heading, {
+      children: [(0, n.jsx)(r.Heading, {
         variant: "text-md/semibold",
         color: "header-primary",
-        children: _.default.Messages.FORM_LABEL_VERIFICATION_LEVEL
-      }), (0, a.jsx)(r.Text, {
+        children: _.Z.Messages.FORM_LABEL_VERIFICATION_LEVEL
+      }), (0, n.jsx)(r.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: _.default.Messages.GUILD_SETTINGS_SAFETY_VERIFICATION_DESCRIPTION
-      }), (0, a.jsx)("div", {
+        children: _.Z.Messages.GUILD_SETTINGS_SAFETY_VERIFICATION_DESCRIPTION
+      }), (0, n.jsx)("div", {
         className: I.__invalid_pillRow,
-        children: (0, a.jsxs)(r.Text, {
+        children: (0, n.jsxs)(r.Text, {
           variant: "text-xs/medium",
           color: "interactive-normal",
           className: I.valuePill,
-          children: [n === E.VerificationLevels.VERY_HIGH ? (0, a.jsx)(c.default, {
+          children: [l === E.sFg.VERY_HIGH ? (0, n.jsx)(u.Z, {
             width: 16,
             height: 16
-          }) : (0, a.jsx)(u.default, {
+          }) : (0, n.jsx)(d.Z, {
             width: 16,
             height: 16
           }), T]
         })
       })]
-    }), (0, a.jsx)(d.default, {
+    }), (0, n.jsx)(c.Z, {
       height: 24,
       width: 24,
-      direction: d.default.Directions.RIGHT,
+      direction: c.Z.Directions.RIGHT,
       className: I.caret
     })]
   })

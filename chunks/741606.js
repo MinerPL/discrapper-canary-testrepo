@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return o
+n.d(t, {
+  Z: function() {
+    return a
   }
 });
-var i = n("470079"),
-  r = n("442837"),
-  a = n("693546"),
-  s = n("937111");
+var i = n(470079),
+  r = n(442837),
+  s = n(693546),
+  o = n(937111);
 
-function o(e) {
-  let t = (0, r.useStateFromStores)([s.default], () => null == e ? null : s.default.getRequest(e)),
-    n = (0, r.useStateFromStores)([s.default], () => s.default.hasFetchedRequestToJoinGuilds);
+function a(e) {
+  let t = (0, r.e7)([o.Z], () => null == e ? null : o.Z.getRequest(e)),
+    n = (0, r.e7)([o.Z], () => o.Z.hasFetchedRequestToJoinGuilds);
   return i.useEffect(() => {
-    !n && a.default.fetchRequestToJoinGuilds()
+    !n && s.Z.fetchRequestToJoinGuilds()
   }, [n]), t
 }

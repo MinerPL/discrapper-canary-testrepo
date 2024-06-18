@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("355467"),
-  r = n("147913"),
-  s = n("400407");
-class a extends r.default {
+n(47120);
+var i = n(355467),
+  r = n(147913),
+  s = n(400407);
+class o extends r.Z {
   constructor(...e) {
     var t, n, r;
     super(...e), t = this, n = "actions", r = {
       POST_CONNECTION_OPEN: () => {
         let {
           enabled: e
-        } = s.LocalizedPricingPromoManagerExperiment.getCurrentConfig({
+        } = s.A.getCurrentConfig({
           location: "cd74f0_1"
         }, {
           autoTrackExposure: !1
         });
-        e && (0, i.fetchLocalizedPromo)()
+        e && (0, i.B$)()
       }
     }, n in t ? Object.defineProperty(t, n, {
       value: r,
@@ -25,4 +25,4 @@ class a extends r.default {
     }) : t[n] = r
   }
 }
-t.default = new a
+t.Z = new o

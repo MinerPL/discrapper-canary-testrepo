@@ -1,6 +1,5 @@
 "use strict";
-r.r(t);
-var n = r("194649"),
+var n = r(599295),
   i = function(e) {
     return e && "object" == typeof e && !Array.isArray(e)
   },
@@ -19,7 +18,7 @@ function s(e, t, r, o) {
     if (Array.isArray(e.extend)) {
       for (var l = 0; l < e.extend.length; l++) {
         var c = e.extend[l];
-        s("string" == typeof c ? (0, n.default)({}, e, {
+        s("string" == typeof c ? (0, n.Z)({}, e, {
           extend: c
         }) : e.extend[l], t, r, o)
       }
@@ -51,7 +50,7 @@ function s(e, t, r, o) {
       }
   }(e, t, r, o), o
 }
-t.default = function() {
+t.Z = function() {
   return {
     onProcessStyle: function(e, t, r) {
       return "extend" in e ? s(e, t, r) : e

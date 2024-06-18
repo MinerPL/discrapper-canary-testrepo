@@ -1,36 +1,36 @@
 "use strict";
-a.r(t);
-var l = a("735250");
-a("470079");
-var s = a("120356"),
-  r = a.n(s),
-  n = a("425734"),
-  i = a("897246"),
-  o = a("211371"),
-  u = a("775087");
-let c = () => 4 * Math.random() + 8,
-  d = [c(), c(), c()];
-t.default = () => (0, l.jsx)(l.Fragment, {
-  children: d.map(e => (0, l.jsxs)("div", {
-    className: n.cardsContainer,
-    children: [(0, l.jsx)("div", {
-      className: r()(o.skeleton, i.shopBanner),
-      children: (0, l.jsx)("div", {
+var n = t(735250);
+t(470079);
+var a = t(120356),
+  i = t.n(a),
+  l = t(425734),
+  r = t(897246),
+  o = t(211371),
+  c = t(775087);
+let u = () => 4 * Math.random() + 8,
+  d = [u(), u(), u()];
+s.Z = () => (0, n.jsx)("div", {
+  className: l.skeletons,
+  children: d.map(e => (0, n.jsxs)("div", {
+    className: l.cardsContainer,
+    children: [(0, n.jsx)("div", {
+      className: i()(o.skeleton, r.shopBanner),
+      children: (0, n.jsx)("div", {
         className: o.bannerBody
       })
     }), Array.from({
       length: e
-    }, (e, t) => t).map(e => (0, l.jsx)("div", {
-      className: r()(o.skeleton, u.shopCard),
-      children: (0, l.jsxs)("div", {
+    }, (e, s) => s).map(e => (0, n.jsx)("div", {
+      className: i()(o.skeleton, c.shopCard),
+      children: (0, n.jsxs)("div", {
         className: o.cardBody,
-        children: [(0, l.jsx)("div", {
+        children: [(0, n.jsx)("div", {
           className: o.cardAvatar
-        }), (0, l.jsx)("div", {
+        }), (0, n.jsx)("div", {
           className: o.cardTitle
-        }), (0, l.jsx)("div", {
+        }), (0, n.jsx)("div", {
           className: o.cardDescription
-        }), (0, l.jsx)("div", {
+        }), (0, n.jsx)("div", {
           className: o.cardSummary
         })]
       })

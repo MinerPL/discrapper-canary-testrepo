@@ -1,30 +1,30 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return d
+n.d(t, {
+  Z: function() {
+    return _
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
-  o = n("481060"),
-  l = n("603368"),
-  u = n("843656");
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(481060),
+  l = n(603368),
+  u = n(843656);
 
-function d(e) {
+function _(e) {
   let {
     themeColor: t,
     color: n,
-    className: a,
-    ...d
-  } = e, _ = (0, o.useToken)(o.tokens.colors.BG_SURFACE_OVERLAY), c = r.useMemo(() => (0, l.getClanPrimaryButtonStyles)(t, _.hex()), [t]);
-  return (0, i.jsx)(o.Button, {
-    ...d,
+    className: s,
+    ..._
+  } = e, d = (0, a.useToken)(a.tokens.colors.BG_SURFACE_OVERLAY), c = r.useMemo(() => (0, l.j1)(t, d.hex()), [t]);
+  return (0, i.jsx)(a.Button, {
+    ..._,
     style: c,
-    className: s()(a, {
+    className: o()(s, {
       [u.customButton]: null != c
     }),
-    color: null != c ? o.Button.Colors.CUSTOM : n
+    color: null != c ? a.Button.Colors.CUSTOM : n
   })
 }

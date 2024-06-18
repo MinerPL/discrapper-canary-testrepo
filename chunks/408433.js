@@ -1,36 +1,36 @@
 "use strict";
-n.r(t), n.d(t, {
-  getMaxEmbedMediaSize: function() {
-    return p
-  },
-  isEmbedInline: function() {
-    return m
-  },
-  isServerShopArticleEmbed: function() {
-    return N
-  },
-  mergeEmbedsOnURL: function() {
+n.d(t, {
+  dY: function() {
     return A
   },
-  sanitizeEmbed: function() {
-    return h
+  kC: function() {
+    return f
+  },
+  l3: function() {
+    return m
+  },
+  o3: function() {
+    return N
+  },
+  vP: function() {
+    return O
   }
-}), n("789020"), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("47120"), n("653041");
-var i = n("392711"),
+}), n(789020), n(315314), n(610138), n(216116), n(78328), n(815648), n(47120), n(653041);
+var i = n(392711),
   r = n.n(i),
-  a = n("913527"),
-  s = n.n(a),
-  o = n("866442"),
-  l = n("709054"),
-  u = n("981631"),
-  d = n("817384");
-let _ = /sketchfab/i,
+  s = n(913527),
+  o = n.n(s),
+  a = n(866442),
+  l = n(709054),
+  u = n(981631),
+  _ = n(817384);
+let d = /sketchfab/i,
   c = /^https:\/\/sketchfab\.com/i,
   E = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
   I = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
   T = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/;
 
-function f(e) {
+function h(e) {
   let {
     width: t,
     height: n
@@ -44,20 +44,20 @@ function S(e) {
     proxy_url: n,
     width: i,
     height: r,
-    placeholder: a,
-    placeholder_version: s
+    placeholder: s,
+    placeholder_version: o
   } = e;
   return {
     url: t,
     proxyURL: n,
     width: i,
     height: r,
-    placeholder: a,
-    placeholderVersion: s
+    placeholder: s,
+    placeholderVersion: o
   }
 }
 
-function h(e, t, n) {
+function f(e, t, n) {
   let i = {
     id: r().uniqueId("embed_"),
     url: n.url,
@@ -80,15 +80,15 @@ function h(e, t, n) {
     }), null != n.provider && null != n.provider.name && (i.provider = {
       name: n.provider.name,
       url: n.provider.url
-    }), null != n.timestamp && (i.timestamp = s()(new Date(n.timestamp))), null != n.color && (i.color = (0, o.int2hsl)(n.color, !0)), null != n.thumbnail && f(n.thumbnail)) switch (i.type) {
-    case u.MessageEmbedTypes.ARTICLE:
-    case u.MessageEmbedTypes.IMAGE:
+    }), null != n.timestamp && (i.timestamp = o()(new Date(n.timestamp))), null != n.color && (i.color = (0, a.ho)(n.color, !0)), null != n.thumbnail && h(n.thumbnail)) switch (i.type) {
+    case u.hBH.ARTICLE:
+    case u.hBH.IMAGE:
       i.image = S(n.thumbnail);
       break;
     default:
       i.thumbnail = S(n.thumbnail)
   }
-  if (null != n.image && f(n.image) && (i.image = S(n.image)), null != n.video && (null == i.thumbnail && null != n.video.proxy_url && f(n.video) && (i.thumbnail = {
+  if (null != n.image && h(n.image) && (i.image = S(n.image)), null != n.video && (null == i.thumbnail && null != n.video.proxy_url && h(n.video) && (i.thumbnail = {
       width: n.video.width,
       height: n.video.height,
       url: function(e, t) {
@@ -99,13 +99,13 @@ function h(e, t, n) {
       }(n.video.proxy_url, {
         format: "jpeg"
       })
-    }), null != i.thumbnail && f(n.video) && function(e, t, n) {
-      if (null != t && _.test(t.name) || c.test(n.url)) return !1;
+    }), null != i.thumbnail && h(n.video) && function(e, t, n) {
+      if (null != t && d.test(t.name) || c.test(n.url)) return !1;
       let i = null != n.proxy_url || /^https:/i.test(n.url);
       return null != e && 1492472454139 > l.default.extractTimestamp(e) && (i = i && null != t && E.test(t.name)), i
-    }(t, n.provider, n.video) && (i.video = S(n.video))), d.EMBED_TYPES_WITH_PARSEABLE_FIELDS.has(i.type)) {
-    var a;
-    let e = null !== (a = n.fields) && void 0 !== a ? a : [];
+    }(t, n.provider, n.video) && (i.video = S(n.video))), _.k.has(i.type)) {
+    var s;
+    let e = null !== (s = n.fields) && void 0 !== s ? s : [];
     i.fields = e.map(e => {
       let {
         name: t,
@@ -122,7 +122,7 @@ function h(e, t, n) {
   return i
 }
 
-function A(e) {
+function N(e) {
   let t = new Map,
     n = [];
   return e.forEach(e => {
@@ -135,26 +135,26 @@ function A(e) {
       n.push(e), t.set(e.url, e);
       return
     }
-    null != e.image && (null == i.images && (i.images = [], null != i.image && i.images.push(i.image)), i.images.push(e.image))
+    if (null != e.image) null == i.images && (i.images = [], null != i.image && i.images.push(i.image)), i.images.push(e.image)
   }), n
 }
 
-function m(e) {
+function A(e) {
   let {
     image: t,
     video: n,
     type: i,
     author: r,
-    rawTitle: a
+    rawTitle: s
   } = e;
-  return (null != t || null != n) && (i === u.MessageEmbedTypes.GIFV || i !== u.MessageEmbedTypes.RICH && null == r && null == a)
+  return (null != t || null != n) && (i === u.hBH.GIFV || i !== u.hBH.RICH && null == r && null == s)
 }
 
-function N(e) {
-  return e.type === u.MessageEmbedTypes.ARTICLE && null != e.url && (T.test(e.url) || I.test(e.url))
+function m(e) {
+  return e.type === u.hBH.ARTICLE && null != e.url && (T.test(e.url) || I.test(e.url))
 }
 
-function p(e, t, n) {
+function O(e, t, n) {
   var i;
   return null != t && null != n ? {
     maxMediaWidth: t,

@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  LinkMarkupRule: function() {
-    return i
+n.d(t, {
+  s: function() {
+    return a
   }
 });
-var a = n("735250");
-n("470079");
-var l = n("302454"),
-  r = n.n(l),
-  s = n("481060");
-let i = {
-  ...r().defaultRules.link,
+var i = n(735250);
+n(470079);
+var r = n(302454),
+  s = n.n(r),
+  o = n(481060);
+let a = {
+  ...s().defaultRules.link,
   react: function(e, t, n) {
-    return (0, a.jsx)(s.Anchor, {
+    return (0, i.jsx)(o.Anchor, {
       href: e.target,
       target: "_blank",
       children: t(e.content, n)

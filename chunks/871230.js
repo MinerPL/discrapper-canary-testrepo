@@ -1,4 +1,4 @@
-var r = n("957578").Buffer;
+var r = n(957578).Buffer;
 e.exports = function(e, t, n) {
   if (r.isBuffer(e)) return e;
   if ("string" == typeof e) return r.from(e, t);

@@ -1,7 +1,7 @@
 "use strict";
-var r = n("325008"),
-  i = n("581031"),
-  a = n("4340"),
+var r = n(325008),
+  i = n(581031),
+  a = n(4340),
   o = URLSearchParams.prototype,
   s = i(o.forEach);
 r && !("size" in o) && a(o, "size", {

@@ -1,27 +1,26 @@
 "use strict";
-n.r(t);
-var i = n("735250"),
-  r = n("470079"),
-  s = n("374470"),
-  a = n("442837"),
-  o = n("607070"),
-  l = n("768760");
+var i = n(735250),
+  r = n(470079),
+  s = n(374470),
+  o = n(442837),
+  a = n(607070),
+  l = n(768760);
 let u = e => {
   let {
     externalRef: t,
     autoPlay: n,
     playOnHover: u,
-    responsive: d,
-    mediaLayoutType: _,
+    responsive: _,
+    mediaLayoutType: d,
     ...c
-  } = e, E = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion), I = r.useRef(null);
+  } = e, E = (0, o.e7)([a.Z], () => a.Z.useReducedMotion), I = r.useRef(null);
 
   function T() {
     var e;
     u && (null == I || null === (e = I.current) || void 0 === e || e.play())
   }
 
-  function f() {
+  function h() {
     var e;
     u && (null == I || null === (e = I.current) || void 0 === e || e.pause())
   }
@@ -31,7 +30,7 @@ let u = e => {
     } = I;
     null != e && function(e) {
       e.removeAttribute("src"), Array.from(e.children).forEach(e => {
-        (0, s.isElement)(e, HTMLSourceElement) && (e.removeAttribute("src"), e.removeAttribute("type")), (0, s.isElement)(e, HTMLImageElement) && e.removeAttribute("src")
+        (0, s.k)(e, HTMLSourceElement) && (e.removeAttribute("src"), e.removeAttribute("type")), (0, s.k)(e, HTMLImageElement) && e.removeAttribute("src")
       });
       try {
         e.load()
@@ -43,15 +42,15 @@ let u = e => {
     ref: I,
     autoPlay: !E && !u && n,
     onMouseEnter: T,
-    onMouseLeave: f,
+    onMouseLeave: h,
     onFocus: T,
-    onBlur: f,
-    style: _ === l.MediaLayoutType.MOSAIC ? {
+    onBlur: h,
+    style: d === l.hV.MOSAIC ? {
       width: "100%",
       height: "100%",
       maxHeight: "inherit",
       objectFit: "cover"
-    } : d ? function() {
+    } : _ ? function() {
       return {
         maxWidth: c.width,
         maxHeight: c.height,
@@ -62,7 +61,7 @@ let u = e => {
     ...c
   })
 };
-t.default = r.forwardRef((e, t) => (0, i.jsx)(u, {
+t.Z = r.forwardRef((e, t) => (0, i.jsx)(u, {
   ...e,
   externalRef: t
 }))

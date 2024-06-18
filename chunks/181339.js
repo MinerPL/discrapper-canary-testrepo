@@ -1,196 +1,196 @@
 "use strict";
-s.r(t), s.d(t, {
-  RaidAlertsSection: function() {
-    return D
+t.d(s, {
+  Z: function() {
+    return f
   },
-  default: function() {
-    return M
+  w: function() {
+    return v
   }
-}), s("47120");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("803997"),
-  i = s.n(n),
-  r = s("106351"),
-  o = s("442837"),
-  d = s("481060"),
-  u = s("367907"),
-  c = s("933557"),
-  E = s("369994"),
-  _ = s("162157"),
-  I = s("177862"),
-  T = s("11265"),
-  S = s("592125"),
-  f = s("984933"),
-  m = s("496675"),
-  N = s("699516"),
-  g = s("594174"),
-  h = s("93879"),
-  C = s("434404"),
-  R = s("449226"),
-  x = s("981631"),
-  L = s("689938"),
-  O = s("893079");
+}), t(47120);
+var n = t(735250),
+  i = t(470079),
+  l = t(120356),
+  a = t.n(l),
+  r = t(106351),
+  o = t(442837),
+  c = t(481060),
+  d = t(367907),
+  u = t(933557),
+  E = t(369994),
+  _ = t(162157),
+  I = t(177862),
+  T = t(11265),
+  N = t(592125),
+  m = t(984933),
+  S = t(496675),
+  h = t(699516),
+  g = t(594174),
+  x = t(93879),
+  C = t(434404),
+  R = t(449226),
+  L = t(981631),
+  O = t(689938),
+  A = t(212723);
 
-function A(e) {
+function p(e) {
   let {
-    guild: t,
-    isExpanded: s,
-    selectedChannelId: n,
+    guild: s,
+    isExpanded: t,
+    selectedChannelId: l,
     className: r
-  } = e, T = (0, _.useCanEnableRaidAlerts)(t), f = t.canHaveRaidActivityAlerts(), [m, N] = l.useState(f), g = (0, o.useStateFromStores)([S.default], () => S.default.getChannel(n), [n]), C = (0, c.default)(g), A = async () => {
-    N(!m);
+  } = e, T = (0, _.BT)(s), m = s.canHaveRaidActivityAlerts(), [S, h] = i.useState(m), g = (0, o.e7)([N.Z], () => N.Z.getChannel(l), [l]), C = (0, u.ZP)(g), p = async () => {
+    h(!S);
     try {
       var e;
-      await (0, E.setGuildRaidAlerts)(t, !f);
-      let s = null !== (e = null != n ? n : t.safetyAlertsChannelId) && void 0 !== e ? e : null;
-      if (null != s) {
+      await (0, E.f6)(s, !m);
+      let t = null !== (e = null != l ? l : s.safetyAlertsChannelId) && void 0 !== e ? e : null;
+      if (null != t) {
         let e = {
-          raid_alert_type: I.RaidAlertType.JOIN_RAID,
-          enabled: !f,
-          raid_alert_channel_id: s,
-          guild_id: t.id,
-          channel_id: s
+          raid_alert_type: I.wR.JOIN_RAID,
+          enabled: !m,
+          raid_alert_channel_id: t,
+          guild_id: s.id,
+          channel_id: t
         };
-        (0, u.trackWithMetadata)(x.AnalyticEvents.GUILD_RAID_ALERTS_SETUP, e)
+        (0, d.yw)(L.rMx.GUILD_RAID_ALERTS_SETUP, e)
       }
     } catch (e) {
-      (0, d.showToast)((0, d.createToast)(L.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, d.ToastType.FAILURE)), N(!f)
+      (0, c.showToast)((0, c.createToast)(O.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, c.ToastType.FAILURE)), h(!m)
     }
   };
-  return (0, a.jsxs)("div", {
-    className: i()(O.itemWrapper, r),
-    children: [(0, a.jsxs)("div", {
-      className: O.itemContent,
-      children: [(0, a.jsx)(d.Heading, {
+  return (0, n.jsxs)("div", {
+    className: a()(A.itemWrapper, r),
+    children: [(0, n.jsxs)("div", {
+      className: A.itemContent,
+      children: [(0, n.jsx)(c.Heading, {
         variant: "text-md/semibold",
         color: "header-primary",
-        children: L.default.Messages.GUILD_SETTINGS_SAFETY_RAID_ALERTS_TITLE
-      }), (0, a.jsx)(d.Text, {
+        children: O.Z.Messages.GUILD_SETTINGS_SAFETY_RAID_ALERTS_TITLE
+      }), (0, n.jsx)(c.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: L.default.Messages.GUILD_SETTINGS_SAFETY_RAID_ALERTS_DESCRIPTION
-      }), s || null == n ? null : (0, a.jsxs)(d.Text, {
+        children: O.Z.Messages.GUILD_SETTINGS_SAFETY_RAID_ALERTS_DESCRIPTION
+      }), t || null == l ? null : (0, n.jsxs)(c.Text, {
         color: "interactive-normal",
         variant: "text-xs/medium",
-        className: O.valuePill,
-        children: [(0, a.jsx)(h.default, {
+        className: A.valuePill,
+        children: [(0, n.jsx)(x.Z, {
           width: 12,
           height: 12
         }), " ", C]
       })]
-    }), (0, a.jsx)(R.default, {
-      checked: m,
-      onChange: A,
-      disabled: !T || null == n
+    }), (0, n.jsx)(R.Z, {
+      checked: S,
+      onChange: p,
+      disabled: !T || null == l
     })]
   })
 }
 
-function p(e) {
-  var t;
+function M(e) {
+  var s;
   let {
-    guild: s,
-    selectedChannelId: l,
-    setSelectedChannelId: n,
+    guild: t,
+    selectedChannelId: i,
+    setSelectedChannelId: l,
     className: E
-  } = e, _ = null !== (t = s.safetyAlertsChannelId) && void 0 !== t ? t : null, T = (0, o.useStateFromStoresArray)([f.default, g.default, N.default, m.default], () => {
-    let e = f.default.getChannels(s.id)[0, f.GUILD_SELECTABLE_CHANNELS_KEY].filter(e => {
+  } = e, _ = null !== (s = t.safetyAlertsChannelId) && void 0 !== s ? s : null, T = (0, o.Wu)([m.ZP, g.default, h.Z, S.Z], () => {
+    let e = m.ZP.getChannels(t.id)[m.sH].filter(e => {
       let {
-        channel: t
+        channel: s
       } = e;
-      return t.type === r.ChannelTypes.GUILD_TEXT && m.default.can(x.Permissions.SEND_MESSAGES, t)
+      return s.type === r.d.GUILD_TEXT && S.Z.can(L.Plq.SEND_MESSAGES, s)
     }).map(e => {
       let {
-        channel: t
+        channel: s
       } = e;
       return {
-        value: t.id,
-        label: (0, c.computeChannelName)(t, g.default, N.default, !0)
+        value: s.id,
+        label: (0, u.F6)(s, g.default, h.Z, !0)
       }
     });
     return null != _ ? e : [...e]
-  }, [s.id, _]), S = async e => {
-    n(e);
+  }, [t.id, _]), N = async e => {
+    l(e);
     try {
-      if (e !== _ && (await C.default.saveGuild(s.id, {
+      if (e !== _ && (await C.Z.saveGuild(t.id, {
           safetyAlertsChannelId: e
         }, {
           throwErr: !0
-        }), C.default.updateGuild({
+        }), C.Z.updateGuild({
           safetyAlertsChannelId: e
         })), null != e) {
-        let t = {
-          raid_alert_type: I.RaidAlertType.JOIN_RAID,
-          enabled: s.canHaveRaidActivityAlerts(),
+        let s = {
+          raid_alert_type: I.wR.JOIN_RAID,
+          enabled: t.canHaveRaidActivityAlerts(),
           raid_alert_channel_id: e,
-          guild_id: s.id,
+          guild_id: t.id,
           channel_id: e
         };
-        (0, u.trackWithMetadata)(x.AnalyticEvents.GUILD_RAID_ALERTS_SETUP, t)
+        (0, d.yw)(L.rMx.GUILD_RAID_ALERTS_SETUP, s)
       }
     } catch (e) {
-      (0, d.showToast)((0, d.createToast)(L.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, d.ToastType.FAILURE)), n(_)
+      (0, c.showToast)((0, c.createToast)(O.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, c.ToastType.FAILURE)), l(_)
     }
   };
-  return (0, a.jsx)("div", {
-    className: i()(O.itemBodyContainer, E),
-    children: (0, a.jsxs)("div", {
-      className: O.itemBodyInner,
-      children: [(0, a.jsx)(d.FormTitle, {
-        children: L.default.Messages.GUILD_ANTIRAID_SAFETY_CHANNEL_TITLE
-      }), (0, a.jsx)(d.SearchableSelect, {
-        wrapperClassName: O.bringToFront,
+  return (0, n.jsx)("div", {
+    className: a()(A.itemBodyContainer, E),
+    children: (0, n.jsxs)("div", {
+      className: A.itemBodyInner,
+      children: [(0, n.jsx)(c.FormTitle, {
+        children: O.Z.Messages.GUILD_ANTIRAID_SAFETY_CHANNEL_TITLE
+      }), (0, n.jsx)(c.SearchableSelect, {
+        wrapperClassName: A.bringToFront,
         options: T,
-        onChange: S,
-        value: l,
+        onChange: N,
+        value: i,
         maxVisibleItems: 5
-      }), (0, a.jsx)(d.Text, {
+      }), (0, n.jsx)(c.Text, {
         variant: "text-sm/medium",
         color: "interactive-normal",
-        children: L.default.Messages.GUILD_SETTINGS_SAFETY_NOTIFICATIONS_CHANNEL_DESCRIPTION
+        children: O.Z.Messages.GUILD_SETTINGS_SAFETY_NOTIFICATIONS_CHANNEL_DESCRIPTION
       })]
     })
   })
 }
 
-function M(e) {
-  var t, s;
+function f(e) {
+  var s, t;
   let {
-    guild: n
-  } = e, [i, r] = l.useState(!1), o = null !== (t = n.safetyAlertsChannelId) && void 0 !== t ? t : null, [d, u] = l.useState(null != o ? o : null !== (s = null == n ? void 0 : n.publicUpdatesChannelId) && void 0 !== s ? s : null);
-  return (0, a.jsx)(T.default, {
-    renderHeader: (0, a.jsx)(A, {
-      isExpanded: i,
-      guild: n,
-      selectedChannelId: d
+    guild: l
+  } = e, [a, r] = i.useState(!1), o = null !== (s = l.safetyAlertsChannelId) && void 0 !== s ? s : null, [c, d] = i.useState(null != o ? o : null !== (t = null == l ? void 0 : l.publicUpdatesChannelId) && void 0 !== t ? t : null);
+  return (0, n.jsx)(T.Z, {
+    renderHeader: (0, n.jsx)(p, {
+      isExpanded: a,
+      guild: l,
+      selectedChannelId: c
     }),
-    isExpanded: i,
-    onExpand: () => r(!i),
-    children: (0, a.jsx)(p, {
-      guild: n,
-      selectedChannelId: d,
-      setSelectedChannelId: u
+    isExpanded: a,
+    onExpand: () => r(!a),
+    children: (0, n.jsx)(M, {
+      guild: l,
+      selectedChannelId: c,
+      setSelectedChannelId: d
     })
   })
 }
 
-function D(e) {
-  var t, s;
+function v(e) {
+  var s, t;
   let {
-    guild: n
-  } = e, i = null !== (t = n.safetyAlertsChannelId) && void 0 !== t ? t : null, [r, o] = l.useState(null != i ? i : null !== (s = null == n ? void 0 : n.publicUpdatesChannelId) && void 0 !== s ? s : null);
-  return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(A, {
+    guild: l
+  } = e, a = null !== (s = l.safetyAlertsChannelId) && void 0 !== s ? s : null, [r, o] = i.useState(null != a ? a : null !== (t = null == l ? void 0 : l.publicUpdatesChannelId) && void 0 !== t ? t : null);
+  return (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsx)(p, {
       isExpanded: !0,
-      guild: n,
+      guild: l,
       selectedChannelId: r,
-      className: O.noPadding
-    }), (0, a.jsx)(p, {
-      guild: n,
+      className: A.noPadding
+    }), (0, n.jsx)(M, {
+      guild: l,
       selectedChannelId: r,
       setSelectedChannelId: o,
-      className: O.noPadding
+      className: A.noPadding
     })]
   })
 }

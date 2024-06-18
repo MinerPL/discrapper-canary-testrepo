@@ -1,89 +1,89 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
+t.d(s, {
+  Z: function() {
     return C
   }
 });
-var a = s("735250"),
-  l = s("470079"),
-  n = s("442837"),
-  i = s("524437"),
-  r = s("481060"),
-  o = s("605236"),
-  d = s("874993"),
-  u = s("430824"),
-  c = s("996753"),
-  E = s("999382"),
-  _ = s("84613"),
-  I = s("392885"),
-  T = s("740903"),
-  S = s("464610"),
-  f = s("733629"),
-  m = s("598622"),
-  N = s("921944"),
-  g = s("689938"),
-  h = s("893079");
+var n = t(735250),
+  i = t(470079),
+  l = t(442837),
+  a = t(704215),
+  r = t(481060),
+  o = t(605236),
+  c = t(874993),
+  d = t(430824),
+  u = t(996753),
+  E = t(999382),
+  _ = t(84613),
+  I = t(392885),
+  T = t(740903),
+  N = t(464610),
+  m = t(733629),
+  S = t(598622),
+  h = t(921944),
+  g = t(689938),
+  x = t(212723);
 
 function C(e) {
-  let t, {
-      hideChangelog: s
+  let s, {
+      hideChangelog: t
     } = e,
-    C = (0, n.useStateFromStores)([E.default], () => E.default.getGuildId()),
-    R = (0, n.useStateFromStores)([u.default], () => u.default.getGuild(C)),
-    x = (0, n.useStateFromStores)([I.default], () => I.default.getCurrentPage());
-  if (l.useEffect(() => {
-      (0, o.markDismissibleContentAsDismissed)(i.DismissibleContent.COMMUNITY_GUILD_SETTINGS_SAFETY, {
-        dismissAction: N.ContentDismissActionType.AUTO
+    C = (0, l.e7)([E.Z], () => E.Z.getGuildId()),
+    R = (0, l.e7)([d.Z], () => d.Z.getGuild(C)),
+    L = (0, l.e7)([I.Z], () => I.Z.getCurrentPage());
+  if (i.useEffect(() => {
+      (0, o.EW)(a.z.COMMUNITY_GUILD_SETTINGS_SAFETY, {
+        dismissAction: h.L.AUTO
       })
     }, []), null == R) return null;
-  let L = (0, m.getGuildSafetySettings)(R);
-  switch (x) {
-    case T.GuildSettingsSafetyPage.OVERVIEW:
-      t = (0, a.jsx)(S.default, {
+  let O = (0, S.Q)(R);
+  switch (L) {
+    case T.u.OVERVIEW:
+      s = (0, n.jsx)(N.Z, {
         guild: R,
-        hideChangelog: s
+        hideChangelog: t
       });
       break;
-    case T.GuildSettingsSafetyPage.CAPTCHA_AND_RAID_PROTECTION:
-      t = (0, a.jsx)(f.default, {
-        title: g.default.Messages.GUILD_SETTINGS_SAFETY_CAPTCHA_RAID_PROTECTION,
-        settings: L[T.GuildSettingsSafetyPage.CAPTCHA_AND_RAID_PROTECTION]
+    case T.u.CAPTCHA_AND_RAID_PROTECTION:
+      s = (0, n.jsx)(m.Z, {
+        title: g.Z.Messages.GUILD_SETTINGS_SAFETY_CAPTCHA_RAID_PROTECTION,
+        settings: O[T.u.CAPTCHA_AND_RAID_PROTECTION]
       });
       break;
-    case T.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION:
-      t = (0, a.jsx)(f.default, {
-        title: g.default.Messages.GUILD_SETTINGS_SAFETY_DM_SPAM_PROTECTION,
-        settings: L[T.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION]
+    case T.u.DM_AND_SPAM_PROTECTION:
+      s = (0, n.jsx)(m.Z, {
+        title: g.Z.Messages.GUILD_SETTINGS_SAFETY_DM_SPAM_PROTECTION,
+        settings: O[T.u.DM_AND_SPAM_PROTECTION]
       });
       break;
-    case T.GuildSettingsSafetyPage.AUTOMOD:
-      t = (0, a.jsx)(d.default, {
+    case T.u.AUTOMOD:
+      s = (0, n.jsx)(c.Z, {
         guildId: R.id
       });
       break;
-    case T.GuildSettingsSafetyPage.PERMISSIONS:
-      t = (0, a.jsx)(f.default, {
-        title: g.default.Messages.GUILD_SETTINGS_SAFETY_PERMISSIONS_TITLE,
-        settings: L[T.GuildSettingsSafetyPage.PERMISSIONS]
+    case T.u.PERMISSIONS:
+      s = (0, n.jsx)(m.Z, {
+        title: g.Z.Messages.GUILD_SETTINGS_SAFETY_PERMISSIONS_TITLE,
+        settings: O[T.u.PERMISSIONS]
       })
   }
-  return (0, a.jsxs)(a.Fragment, {
-    children: [x !== T.GuildSettingsSafetyPage.OVERVIEW && (0, a.jsxs)(r.Button, {
-      className: h.back,
-      innerClassName: h.backButton,
+  return (0, n.jsxs)(n.Fragment, {
+    children: [L !== T.u.OVERVIEW && (0, n.jsxs)(r.Button, {
+      className: x.back,
+      innerClassName: x.backButton,
       look: r.Button.Looks.BLANK,
       size: r.Button.Sizes.MIN,
       onClick: () => {
-        (0, _.setSafetyPage)(T.GuildSettingsSafetyPage.OVERVIEW)
+        (0, _.K)(T.u.OVERVIEW)
       },
-      children: [(0, a.jsx)(c.default, {
-        className: h.__invalid_arrow,
-        direction: c.default.Directions.LEFT
-      }), (0, a.jsx)(r.Text, {
+      children: [(0, n.jsx)(u.Z, {
+        className: x.__invalid_arrow,
+        direction: u.Z.Directions.LEFT
+      }), (0, n.jsx)(r.Text, {
         variant: "text-sm/semibold",
         color: "interactive-normal",
-        children: g.default.Messages.BACK
+        children: g.Z.Messages.BACK
       })]
-    }), t]
+    }), s]
   })
 }

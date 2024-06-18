@@ -1,9 +1,9 @@
 "use strict";
-n.r(t), n("724458");
-var i, r = n("442837"),
-  s = n("570140");
+n(724458);
+var i, r = n(442837),
+  s = n(570140);
 
-function a(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -11,27 +11,27 @@ function a(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let o = {},
+let a = {},
   l = null,
   u = null;
 
-function d(e, t) {
-  null == t ? e in o && delete o[e] : null != e && (o[e] = t)
+function _(e, t) {
+  null == t ? e in a && delete a[e] : null != e && (a[e] = t)
 }
 
-function _(e) {
+function d(e) {
   let {
     user: t
   } = e;
   u = t.id
 }
-class c extends(i = r.default.PersistedStore) {
+class c extends(i = r.ZP.PersistedStore) {
   initialize(e) {
-    null != e && (o = e)
+    null != e && (a = e)
   }
   requiredActions(e) {
     var t;
-    return null !== (t = o[e]) && void 0 !== t ? t : null
+    return null !== (t = a[e]) && void 0 !== t ? t : null
   }
   requiredActionsIncludes(e, t) {
     let n = this.requiredActions(e);
@@ -41,35 +41,35 @@ class c extends(i = r.default.PersistedStore) {
     return l === e
   }
   getState() {
-    return o
+    return a
   }
 }
-a(c, "displayName", "LoginRequiredActionStore"), a(c, "persistKey", "LoginRequiredActionStore"), t.default = new c(s.default, {
+o(c, "displayName", "LoginRequiredActionStore"), o(c, "persistKey", "LoginRequiredActionStore"), t.Z = new c(s.Z, {
   LOGIN_ATTEMPTED: function(e) {
     let {
       required_actions: t,
       user_id: n
     } = e;
-    d(l = n, t)
+    _(l = n, t)
   },
-  CONNECTION_OPEN: _,
-  CURRENT_USER_UPDATE: _,
+  CONNECTION_OPEN: d,
+  CURRENT_USER_UPDATE: d,
   LOGOUT: function(e) {
     let {
       isSwitchingAccount: t
     } = e;
-    !t && null != u && d(u, null)
+    !t && null != u && _(u, null)
   },
   PASSWORD_UPDATED: function(e) {
     let {
       userId: t
     } = e;
-    d(t, null)
+    _(t, null)
   },
   MULTI_ACCOUNT_REMOVE_ACCOUNT: function(e) {
     let {
       userId: t
     } = e;
-    d(t, null)
+    _(t, null)
   }
 })

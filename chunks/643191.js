@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  navigationStart: function() {
-    return i
-  },
-  performance: function() {
+n.d(t, {
+  Sv: function() {
     return s
   },
-  timeOrigin: function() {
+  mb: function() {
+    return i
+  },
+  v0: function() {
     return r
   }
-}), n("258558");
+}), n(258558);
 try {
   null == Date.now && (Date.now = () => new Date().valueOf())
 } catch (e) {}

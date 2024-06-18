@@ -1,6 +1,6 @@
 "use strict";
-var e = n("821819"),
-  o = n("735471"),
+var e = n(821819),
+  o = n(735471),
   i = /#|\.prototype\./,
   u = function(t, r) {
     var n = c[s(t)];

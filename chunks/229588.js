@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  setLocaleHack: function() {
+n.d(t, {
+  f: function() {
     return c
   }
 });
-var i, r, s, a, o = n("442837"),
-  l = n("570140");
+var i, r, s, o, a = n(442837),
+  l = n(570140);
 let u = !1,
-  d = null,
-  _ = null;
+  _ = null,
+  d = null;
 
 function c(e) {
   E({
@@ -20,14 +20,14 @@ function E(e) {
   let {
     locale: t
   } = e;
-  u = !0, d = t
+  u = !0, _ = t
 }
-class I extends(a = o.default.Store) {
+class I extends(o = a.ZP.Store) {
   isLoading() {
     return u
   }
   getError() {
-    return _
+    return d
   }
 }
 s = "I18nLoaderStore", (r = "displayName") in(i = I) ? Object.defineProperty(i, r, {
@@ -35,19 +35,19 @@ s = "I18nLoaderStore", (r = "displayName") in(i = I) ? Object.defineProperty(i, 
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new I(l.default, {
+}) : i[r] = s, t.Z = new I(l.Z, {
   I18N_LOAD_START: E,
   I18N_LOAD_SUCCESS: function(e) {
     let {
       locale: t
     } = e;
-    t === d && (u = !1, _ = null, d = null)
+    t === _ && (u = !1, d = null, _ = null)
   },
   I18N_LOAD_ERROR: function(e) {
     let {
       error: t,
       locale: n
     } = e;
-    n === d && (u = !1, _ = null != t ? t : null, d = null)
+    n === _ && (u = !1, d = null != t ? t : null, _ = null)
   }
 })

@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("147913"),
-  r = n("336197"),
-  s = n("341298"),
-  a = n("558921"),
-  o = n("981631");
-class l extends i.default {
+n(47120);
+var i = n(147913),
+  r = n(336197),
+  s = n(341298),
+  o = n(558921),
+  a = n(981631);
+class l extends i.Z {
   async handleChannelCreate(e) {
     let {
       channel: t
     } = e;
-    (0, s.isEligibleForMidjourneyRedirect)(t) && (await (0, s.hasRedirectedToGuild)(a.MIDJOURNEY_GUILD_ID), (0, r.default)(o.Routes.CHANNEL(null, t.id)))
+    (0, s.tr)(t) && (await (0, s.mM)(o.y), (0, r.Z)(a.Z5c.CHANNEL(null, t.id)))
   }
   constructor(...e) {
     var t, n, i;
@@ -24,4 +24,4 @@ class l extends i.default {
     }) : t[n] = i
   }
 }
-t.default = new l
+t.Z = new l

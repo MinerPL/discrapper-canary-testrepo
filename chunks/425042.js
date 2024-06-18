@@ -21,24 +21,24 @@ function i(t, e, r) {
     writable: !0
   }) : t[e] = r, t
 }
-var o, a = r("837512"),
-  u = r("213912"),
-  s = r("546870"),
-  c = r("660793"),
-  l = r("49287"),
-  f = r("946572"),
-  p = r("606166"),
-  h = r("680643"),
-  d = r("490540"),
-  g = r("316103"),
-  y = r("65183"),
+var o, a = r(837512),
+  u = r(213912),
+  s = r(546870),
+  c = r(660793),
+  l = r(49287),
+  f = r(946572),
+  p = r(606166),
+  h = r(680643),
+  d = r(490540),
+  g = r(316103),
+  y = r(65183),
   v = y.List,
   m = y.Map,
   _ = y.OrderedSet,
-  b = r("407734"),
-  S = r("45623"),
-  w = r("822274"),
-  k = r("710621"),
+  b = r(407734),
+  S = r(45623),
+  w = r(822274),
+  k = r(710621),
   x = g("draft_tree_data_support"),
   C = RegExp("\r", "g"),
   E = RegExp("\n", "g"),
@@ -187,9 +187,9 @@ var o, a = r("837512"),
       var r = t.textContent;
       "" === r.trim() && "pre" !== this.wrapper && (r = " "), "pre" !== this.wrapper && (r = (r = r.replace(D, "")).replace(E, " ")), this._appendText(r, e)
     }, e._addBreakNode = function(t, e) {
-      S(t) && this._appendText("\n", e)
+      if (!!S(t)) this._appendText("\n", e)
     }, e._addImgNode = function(t, e) {
-      if (k(t)) {
+      if (!!k(t)) {
         var r = {};
         B.forEach(function(e) {
           var n = t.getAttribute(e);
@@ -197,7 +197,7 @@ var o, a = r("837512"),
         }), this.currentEntity = this.entityMap.__create("IMAGE", "IMMUTABLE", r), g("draftjs_fix_paste_for_img") ? "presentation" !== t.getAttribute("role") && this._appendText("\uD83D\uDCF7", e) : this._appendText("\uD83D\uDCF7", e), this.currentEntity = null
       }
     }, e._addAnchorNode = function(t, e, r) {
-      if (b(t)) {
+      if (!!b(t)) {
         var n = {};
         I.forEach(function(e) {
           var r = t.getAttribute(e);

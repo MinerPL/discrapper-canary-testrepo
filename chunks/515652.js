@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  nativeTypesConfig: function() {
+n.d(t, {
+  s: function() {
     return s
   }
 });
-var r, i = n("778882"),
-  a = n("401010");
+var r, i = n(778882),
+  a = n(401010);
 
 function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -28,21 +28,21 @@ var s = (o(r = {}, i.FILE, {
 }), o(r, i.HTML, {
   exposeProperties: {
     html: function(e, t) {
-      return (0, a.getDataFromDataTransfer)(e, t, "")
+      return (0, a.R)(e, t, "")
     }
   },
   matchesTypes: ["Html", "text/html"]
 }), o(r, i.URL, {
   exposeProperties: {
     urls: function(e, t) {
-      return (0, a.getDataFromDataTransfer)(e, t, "").split("\n")
+      return (0, a.R)(e, t, "").split("\n")
     }
   },
   matchesTypes: ["Url", "text/uri-list"]
 }), o(r, i.TEXT, {
   exposeProperties: {
     text: function(e, t) {
-      return (0, a.getDataFromDataTransfer)(e, t, "")
+      return (0, a.R)(e, t, "")
     }
   },
   matchesTypes: ["Text", "text/plain"]

@@ -1,36 +1,35 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return d
+n.d(t, {
+  Z: function() {
+    return u
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("803997"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("481060"),
-  o = n("976644"),
-  l = n("549631"),
-  u = n("872010");
+  o = n(481060),
+  a = n(549631),
+  l = n(517039);
 
-function d(e) {
+function u(e) {
   let {
     children: t,
     className: n,
-    size: r = a.Button.Sizes.MEDIUM,
-    onlyShineOnHover: d = !1,
+    size: r = o.Button.Sizes.MEDIUM,
+    onlyShineOnHover: u = !1,
     ..._
   } = e;
-  return (0, i.jsx)(o.default, {
+  return (0, i.jsx)(o.ShinyButton, {
     ..._,
-    color: a.Button.Colors.CUSTOM,
+    color: o.Button.Colors.CUSTOM,
     size: r,
-    className: s()(u.button, n),
-    onlyShineOnHover: d,
+    className: s()(l.button, n),
+    onlyShineOnHover: u,
     children: (0, i.jsxs)("div", {
-      className: u.buttonContents,
-      children: [(0, i.jsx)(l.default, {
-        className: u.icon
+      className: l.buttonContents,
+      children: [(0, i.jsx)(a.Z, {
+        className: l.icon
       }), t]
     })
   })

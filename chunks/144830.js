@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
-  TimeUnits: function() {
+n.d(t, {
+  CI: function() {
+    return m
+  },
+  J6: function() {
     return r
   },
-  default: function() {
+  ZP: function() {
     return O
-  },
-  getTimeAndUnit: function() {
-    return N
   }
-}), n("411104"), n("852437"), n("47120");
-var i, r, s, a, o, l, u = n("735250"),
-  d = n("470079"),
-  _ = n("392711"),
-  c = n.n(_),
-  E = n("846519"),
-  I = n("689938");
+}), n(411104), n(852437), n(47120);
+var i, r, s, o, a, l, u = n(735250),
+  _ = n(470079),
+  d = n(392711),
+  c = n.n(d),
+  E = n(846519),
+  I = n(689938);
 
 function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -24,8 +24,8 @@ function T(e, t, n) {
     configurable: !0,
     writable: !0
   }) : e[t] = n, e
-}(a = i || (i = {})).ACTIVITY_FEED = "ACTIVITY_FEED", a.ACTIVITY_FEED_NEW = "ACTIVITY_FEED_NEW", a.USER_ACTIVITY = "USER_ACTIVITY", a.GAME_LIBRARY_TIME_PLAYED = "GAME_LIBRARY_TIME_PLAYED", a.GAME_LIBRARY_LAST_PLAYED = "GAME_LIBRARY_LAST_PLAYED", (o = r || (r = {})).NONE = "NONE", o.SECONDS = "SECONDS", o.MINUTES = "MINUTES", o.HOURS = "HOURS", o.DAYS = "DAYS", o.WEEKS = "WEEKS", o.MONTHS = "MONTHS", o.YEARS = "YEARS", (l = s || (s = {})).START = "START", l.END = "END", l.TIME = "TIME";
-let f = {
+}(o = i || (i = {})).ACTIVITY_FEED = "ACTIVITY_FEED", o.ACTIVITY_FEED_NEW = "ACTIVITY_FEED_NEW", o.USER_ACTIVITY = "USER_ACTIVITY", o.GAME_LIBRARY_TIME_PLAYED = "GAME_LIBRARY_TIME_PLAYED", o.GAME_LIBRARY_LAST_PLAYED = "GAME_LIBRARY_LAST_PLAYED", (a = r || (r = {})).NONE = "NONE", a.SECONDS = "SECONDS", a.MINUTES = "MINUTES", a.HOURS = "HOURS", a.DAYS = "DAYS", a.WEEKS = "WEEKS", a.MONTHS = "MONTHS", a.YEARS = "YEARS", (l = s || (s = {})).START = "START", l.END = "END", l.TIME = "TIME";
+let h = {
     NONE: e => 0,
     SECONDS: e => 60 * e,
     MINUTES: e => e,
@@ -60,92 +60,92 @@ let f = {
     unit: "YEARS",
     max: 1 / 0
   }],
-  h = e => (t, n) => null == n ? "" : e().format({
+  f = e => (t, n) => null == n ? "" : e().format({
     time: t,
     ...n
   }),
-  A = {
+  N = {
     ACTIVITY_FEED: {
       START: {
-        SECONDS: () => I.default.Messages.GAME_FEED_USER_PLAYING_JUST_STARTED,
-        MINUTES: e => I.default.Messages.GAME_FEED_USER_PLAYING_FOR_MINUTES.format({
+        SECONDS: () => I.Z.Messages.GAME_FEED_USER_PLAYING_JUST_STARTED,
+        MINUTES: e => I.Z.Messages.GAME_FEED_USER_PLAYING_FOR_MINUTES.format({
           time: e
         }),
-        HOURS: e => I.default.Messages.GAME_FEED_USER_PLAYING_FOR_HOURS.format({
+        HOURS: e => I.Z.Messages.GAME_FEED_USER_PLAYING_FOR_HOURS.format({
           time: e
         }),
-        DAYS: e => I.default.Messages.GAME_FEED_USER_PLAYING_FOR_DAYS.format({
+        DAYS: e => I.Z.Messages.GAME_FEED_USER_PLAYING_FOR_DAYS.format({
           time: e
         })
       },
       END: {
-        SECONDS: () => I.default.Messages.GAME_FEED_USER_PLAYING_JUST_ENDED,
-        MINUTES: e => I.default.Messages.GAME_FEED_USER_PLAYED_MINUTES_AGO.format({
+        SECONDS: () => I.Z.Messages.GAME_FEED_USER_PLAYING_JUST_ENDED,
+        MINUTES: e => I.Z.Messages.GAME_FEED_USER_PLAYED_MINUTES_AGO.format({
           time: e
         }),
-        HOURS: e => I.default.Messages.GAME_FEED_USER_PLAYED_HOURS_AGO.format({
+        HOURS: e => I.Z.Messages.GAME_FEED_USER_PLAYED_HOURS_AGO.format({
           time: e
         }),
-        DAYS: e => I.default.Messages.GAME_FEED_USER_PLAYED_DAYS_AGO.format({
+        DAYS: e => I.Z.Messages.GAME_FEED_USER_PLAYED_DAYS_AGO.format({
           time: e
         }),
-        WEEKS: e => I.default.Messages.GAME_FEED_USER_PLAYED_WEEKS_AGO.format({
+        WEEKS: e => I.Z.Messages.GAME_FEED_USER_PLAYED_WEEKS_AGO.format({
           time: e
         }),
-        MONTHS: e => I.default.Messages.GAME_FEED_USER_PLAYED_MONTHS_AGO.format({
+        MONTHS: e => I.Z.Messages.GAME_FEED_USER_PLAYED_MONTHS_AGO.format({
           time: e
         }),
-        YEARS: e => I.default.Messages.GAME_FEED_USER_PLAYED_YEARS_AGO.format({
+        YEARS: e => I.Z.Messages.GAME_FEED_USER_PLAYED_YEARS_AGO.format({
           time: e
         })
       }
     },
     ACTIVITY_FEED_NEW: {
       START: {
-        SECONDS: h(() => I.default.Messages.ACTIVITY_FEED_USER_PLAYING_JUST_STARTED),
-        MINUTES: h(() => I.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_MINUTES),
-        HOURS: h(() => I.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_HOURS),
-        DAYS: h(() => I.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_DAYS)
+        SECONDS: f(() => I.Z.Messages.ACTIVITY_FEED_USER_PLAYING_JUST_STARTED),
+        MINUTES: f(() => I.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_MINUTES),
+        HOURS: f(() => I.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_HOURS),
+        DAYS: f(() => I.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_DAYS)
       },
       END: {
-        SECONDS: e => I.default.Messages.DURATION_SECONDS_AGO.format({
+        SECONDS: e => I.Z.Messages.DURATION_SECONDS_AGO.format({
           seconds: e
         }),
-        MINUTES: e => I.default.Messages.DURATION_MINUTES_AGO.format({
+        MINUTES: e => I.Z.Messages.DURATION_MINUTES_AGO.format({
           minutes: e
         }),
-        HOURS: e => I.default.Messages.DURATION_HOURS_AGO.format({
+        HOURS: e => I.Z.Messages.DURATION_HOURS_AGO.format({
           hours: e
         }),
-        DAYS: e => I.default.Messages.DURATION_DAYS_AGO.format({
+        DAYS: e => I.Z.Messages.DURATION_DAYS_AGO.format({
           days: e
         })
       }
     },
     USER_ACTIVITY: {
       START: {
-        SECONDS: () => I.default.Messages.GAME_FEED_USER_PLAYING_JUST_STARTED,
+        SECONDS: () => I.Z.Messages.GAME_FEED_USER_PLAYING_JUST_STARTED,
         MINUTES: function(e, t) {
           let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          return n ? I.default.Messages.GAME_FEED_USER_PLAYING_FOR_MINUTES.format({
+          return n ? I.Z.Messages.GAME_FEED_USER_PLAYING_FOR_MINUTES.format({
             time: e
-          }) : I.default.Messages.USER_ACTIVITY_USER_PLAYING_FOR_MINUTES.format({
+          }) : I.Z.Messages.USER_ACTIVITY_USER_PLAYING_FOR_MINUTES.format({
             time: e
           })
         },
         HOURS: function(e, t) {
           let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          return n ? I.default.Messages.GAME_FEED_USER_PLAYING_FOR_HOURS.format({
+          return n ? I.Z.Messages.GAME_FEED_USER_PLAYING_FOR_HOURS.format({
             time: e
-          }) : I.default.Messages.USER_ACTIVITY_USER_PLAYING_FOR_HOURS.format({
+          }) : I.Z.Messages.USER_ACTIVITY_USER_PLAYING_FOR_HOURS.format({
             time: e
           })
         },
         DAYS: function(e, t) {
           let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          return n ? I.default.Messages.GAME_FEED_USER_PLAYING_FOR_DAYS.format({
+          return n ? I.Z.Messages.GAME_FEED_USER_PLAYING_FOR_DAYS.format({
             time: e
-          }) : I.default.Messages.USER_ACTIVITY_USER_PLAYING_FOR_DAYS.format({
+          }) : I.Z.Messages.USER_ACTIVITY_USER_PLAYING_FOR_DAYS.format({
             time: e
           })
         }
@@ -153,45 +153,45 @@ let f = {
     },
     GAME_LIBRARY_TIME_PLAYED: {
       TIME: {
-        NONE: () => I.default.Messages.GAME_LIBRARY_TIME_PLAYED_NONE,
-        SECONDS: e => I.default.Messages.GAME_LIBRARY_TIME_PLAYED_SECONDS.format({
+        NONE: () => I.Z.Messages.GAME_LIBRARY_TIME_PLAYED_NONE,
+        SECONDS: e => I.Z.Messages.GAME_LIBRARY_TIME_PLAYED_SECONDS.format({
           time: e
         }),
-        MINUTES: e => I.default.Messages.GAME_LIBRARY_TIME_PLAYED_MINUTES.format({
+        MINUTES: e => I.Z.Messages.GAME_LIBRARY_TIME_PLAYED_MINUTES.format({
           time: e
         }),
-        HOURS: e => I.default.Messages.GAME_LIBRARY_TIME_PLAYED_HOURS.format({
+        HOURS: e => I.Z.Messages.GAME_LIBRARY_TIME_PLAYED_HOURS.format({
           time: e
         })
       }
     },
     GAME_LIBRARY_LAST_PLAYED: {
       END: {
-        NONE: () => I.default.Messages.GAME_LIBRARY_LAST_PLAYED_NONE,
-        SECONDS: () => I.default.Messages.GAME_LIBRARY_LAST_PLAYED_JUST_NOW,
-        MINUTES: e => I.default.Messages.GAME_LIBRARY_LAST_PLAYED_MINUTES.format({
+        NONE: () => I.Z.Messages.GAME_LIBRARY_LAST_PLAYED_NONE,
+        SECONDS: () => I.Z.Messages.GAME_LIBRARY_LAST_PLAYED_JUST_NOW,
+        MINUTES: e => I.Z.Messages.GAME_LIBRARY_LAST_PLAYED_MINUTES.format({
           time: e
         }),
-        HOURS: e => I.default.Messages.GAME_LIBRARY_LAST_PLAYED_HOURS.format({
+        HOURS: e => I.Z.Messages.GAME_LIBRARY_LAST_PLAYED_HOURS.format({
           time: e
         }),
-        DAYS: e => I.default.Messages.GAME_LIBRARY_LAST_PLAYED_DAYS.format({
+        DAYS: e => I.Z.Messages.GAME_LIBRARY_LAST_PLAYED_DAYS.format({
           time: e
         }),
-        WEEKS: e => I.default.Messages.GAME_LIBRARY_LAST_PLAYED_WEEKS.format({
+        WEEKS: e => I.Z.Messages.GAME_LIBRARY_LAST_PLAYED_WEEKS.format({
           time: e
         }),
-        MONTHS: e => I.default.Messages.GAME_LIBRARY_LAST_PLAYED_MONTHS.format({
+        MONTHS: e => I.Z.Messages.GAME_LIBRARY_LAST_PLAYED_MONTHS.format({
           time: e
         }),
-        YEARS: e => I.default.Messages.GAME_LIBRARY_LAST_PLAYED_YEARS.format({
+        YEARS: e => I.Z.Messages.GAME_LIBRARY_LAST_PLAYED_YEARS.format({
           time: e
         })
       }
     }
   };
 
-function m(e, t) {
+function A(e, t) {
   let n = S.findIndex(t => {
       let {
         max: n,
@@ -215,9 +215,9 @@ function m(e, t) {
   return null != r ? r.unit : null
 }
 
-function N(e, t) {
-  let n = null != e ? m(e, e => t.includes(e)) : "NONE",
-    i = null != n ? f[n] : null;
+function m(e, t) {
+  let n = null != e ? A(e, e => t.includes(e)) : "NONE",
+    i = null != n ? h[n] : null;
   return {
     unit: n,
     time: null != e && null != i ? Math.floor(i(e)) : null
@@ -226,7 +226,7 @@ function N(e, t) {
 
 function O(e) {
   var t, n;
-  return n = class extends(t = d.PureComponent) {
+  return n = class extends(t = _.PureComponent) {
     componentDidMount() {
       this.timer.start(1e4, this.update)
     }
@@ -253,8 +253,8 @@ function O(e) {
       return null != e ? r = i - e : null != t && (r = i - t), Math.abs(r) / 1e3 / 60
     }
     getTimeUnit(e, t, n) {
-      let i = m(e, e => (function(e, t, n) {
-        let i = A[n];
+      let i = A(e, e => (function(e, t, n) {
+        let i = N[n];
         if (null != i) {
           let n = i[t];
           if (null != n) return null != n[e]
@@ -276,7 +276,7 @@ function O(e) {
       return null
     }
     transformTime(e, t) {
-      return f[e](t)
+      return h[e](t)
     }
     render() {
       let {
@@ -286,20 +286,20 @@ function O(e) {
         ...r
       } = this.props, {
         time: s
-      } = this.state, a = this.getType();
-      if (null == a) return null;
-      let o = this.getTimeUnit(s, t, a),
-        l = A[t][a];
+      } = this.state, o = this.getType();
+      if (null == o) return null;
+      let a = this.getTimeUnit(s, t, o),
+        l = N[t][o];
       if (null == l) return null;
-      let d = l[o],
-        _ = Math.floor(this.transformTime(o, s));
+      let _ = l[a],
+        d = Math.floor(this.transformTime(a, s));
       return (0, u.jsx)(e, {
         ...r,
-        children: null == d ? void 0 : d(_, n, i)
+        children: null == _ ? void 0 : _(d, n, i)
       })
     }
     constructor(...e) {
-      super(...e), T(this, "timer", new E.Interval), T(this, "state", {
+      super(...e), T(this, "timer", new E.Xp), T(this, "state", {
         time: this.getDiff()
       }), T(this, "update", () => {
         this.setState({

@@ -1,8 +1,8 @@
 "use strict";
-var n = r("310176"),
-  i = r("379846"),
-  o = r("222295"),
-  a = r("467159"),
+var n = r(310176),
+  i = r(379846),
+  o = r(222295),
+  a = r(467159),
   u = {
     currentBlockContainsLink: function(t) {
       var e = t.getSelection(),

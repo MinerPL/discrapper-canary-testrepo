@@ -1,50 +1,51 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return u
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("120356"),
-  a = n.n(r),
-  s = n("693789"),
-  o = n("481060"),
-  l = n("47200");
+var i = n(735250);
+n(470079);
+var r = n(120356),
+  s = n.n(r),
+  o = n(693789),
+  a = n(481060),
+  l = n(47200);
 
 function u(e) {
   let {
-    icon: t,
+    variant: t,
     text: n,
-    compact: r,
-    className: u,
-    innerClassName: d,
-    ..._
-  } = e, c = (0, i.jsx)(t, {
-    width: 16,
-    height: 16,
-    color: "currentColor"
-  });
-  return r ? (0, i.jsx)(o.TooltipContainer, {
+    icon: r,
+    tooltipDelay: u,
+    tooltipClassName: _,
+    className: d,
+    innerClassName: c,
+    ...E
+  } = e, I = {
+    [l.text]: "text" === t,
+    [l.icon]: "icon" === t,
+    [l.banner]: "banner" === t
+  };
+  return (0, i.jsx)(a.TooltipContainer, {
     text: n,
-    "aria-label": _["aria-label"],
-    children: (0, i.jsx)(s.Button, {
-      className: a()(l.compactButton, u),
-      innerClassName: a()(l.compactButtonInner, d),
-      color: a()(s.ButtonColors.PRIMARY, l.color),
-      look: s.Button.Looks.FILLED,
-      size: s.Button.Sizes.NONE,
-      grow: !1,
-      ..._,
-      children: c
+    "aria-label": E["aria-label"],
+    delay: u,
+    tooltipClassName: _,
+    shouldShow: "text" !== t,
+    children: (0, i.jsxs)(o.zx, {
+      className: s()(l.button, I, d),
+      innerClassName: s()(l.buttonInner, I, c),
+      color: s()(o.Tt.PRIMARY, l.color, I),
+      look: o.zx.Looks.FILLED,
+      size: "text" === t ? o.zx.Sizes.SMALL : o.zx.Sizes.NONE,
+      grow: "text" === t,
+      ...E,
+      children: [null != r && (0, i.jsx)(r, {
+        width: 16,
+        height: 16,
+        color: "currentColor"
+      }), "text" === t && n]
     })
-  }) : (0, i.jsxs)(s.Button, {
-    className: u,
-    innerClassName: a()(l.button, d),
-    color: a()(s.ButtonColors.PRIMARY, l.color),
-    look: s.Button.Looks.FILLED,
-    size: s.Button.Sizes.MEDIUM,
-    ..._,
-    children: [c, n]
   })
 }

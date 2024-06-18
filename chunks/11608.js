@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-var r = {
+var n = {
   lastWeek: "'last' eeee 'at' p",
   yesterday: "'yesterday at' p",
   today: "'today at' p",
@@ -8,6 +7,6 @@ var r = {
   nextWeek: "eeee 'at' p",
   other: "P"
 };
-t.default = function(e, t, n, i) {
-  return r[e]
+t.Z = function(e, t, r, i) {
+  return n[e]
 }

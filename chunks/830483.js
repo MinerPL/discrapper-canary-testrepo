@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  getChildMapping: function() {
-    return r
-  },
-  mergeChildMappings: function() {
+n.d(t, {
+  B: function() {
     return s
+  },
+  n: function() {
+    return r
   }
-}), n("653041");
-var i = n("470079");
+}), n(653041);
+var i = n(470079);
 
 function r(e) {
   let t = {};
@@ -31,15 +31,15 @@ function s() {
   let r = {},
     s = [];
   for (let e in t) n.hasOwnProperty(e) ? s.length && (r[e] = s, s = []) : s.push(e);
-  let a = {};
+  let o = {};
   for (let t in n) {
     if (r.hasOwnProperty(t))
       for (e = 0; e < r[t].length; e++) {
         let n = r[t][e];
-        a[r[t][e]] = i(n)
+        o[r[t][e]] = i(n)
       }
-    a[t] = i(t)
+    o[t] = i(t)
   }
-  for (e = 0; e < s.length; e++) a[s[e]] = i(s[e]);
-  return a
+  for (e = 0; e < s.length; e++) o[s[e]] = i(s[e]);
+  return o
 }

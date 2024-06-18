@@ -1,6 +1,6 @@
 "use strict";
-n.r(t), n.d(t, {
-  unsafeStringify: function() {
+n.d(t, {
+  S: function() {
     return i
   }
 });

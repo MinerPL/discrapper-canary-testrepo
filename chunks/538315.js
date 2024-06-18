@@ -1,10 +1,10 @@
 "use strict";
 var r = Array.prototype.slice,
-  i = n("560640"),
+  i = n(560640),
   a = Object.keys,
   o = a ? function(e) {
     return a(e)
-  } : n("973351"),
+  } : n(973351),
   s = Object.keys;
 o.shim = function() {
   return Object.keys ? ! function() {

@@ -1,34 +1,34 @@
 "use strict";
-n.r(t), n.d(t, {
-  getPublicSystemMessageAvatar: function() {
-    return c
-  },
-  isPublicSystemMessage: function() {
-    return u
-  },
-  trackEnableCommunityFlow: function() {
+n.d(t, {
+  BF: function() {
     return d
+  },
+  QA: function() {
+    return _
+  },
+  cp: function() {
+    return u
   }
 });
-var a = n("367907"),
-  r = n("368859"),
-  i = n("626135"),
-  s = n("135899"),
-  l = n("981631"),
-  o = n("943702");
+var i = n(367907),
+  r = n(368859),
+  s = n(626135),
+  o = n(135899),
+  a = n(981631),
+  l = n(943702);
 
 function u(e) {
-  return (0, r.default)(e) && e.messageReference.guild_id === s.PUBLIC_GUILD_ANNOUNCEMENTS_GUILD_ID || null != e.author && e.author.id === s.PUBLIC_GUILD_UPDATES_WEBHOOK_USER_ID
+  return (0, r.Z)(e) && e.messageReference.guild_id === o.M_ || null != e.author && e.author.id === o.c9
 }
 
-function c() {
-  return o
+function _() {
+  return l
 }
 let d = e => {
-  i.default.track(l.AnalyticEvents.USER_FLOW_TRANSITION, {
-    flow_type: s.ENABLE_COMMUNITY_FLOW_MODAL_KEY,
+  s.default.track(a.rMx.USER_FLOW_TRANSITION, {
+    flow_type: o.tA,
     from_step: e.fromStep,
     to_step: e.toStep,
-    ...(0, a.collectGuildAnalyticsMetadata)(e.guildId)
+    ...(0, i.hH)(e.guildId)
   })
 }

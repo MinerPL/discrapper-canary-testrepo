@@ -1,6 +1,6 @@
-var a = t("36478"),
-  o = t("639000"),
-  n = t("14243");
+var a = t(36478),
+  o = t(639e3),
+  n = t(14243);
 e.exports = function(e, r) {
   var t = null == e ? null : void 0 !== a && o(e) || e["@@iterator"];
   if (null != t) {

@@ -1,51 +1,51 @@
 "use strict";
-s.r(t), s.d(t, {
-  ImpersonateRoleDescription: function() {
+t.d(s, {
+  L: function() {
     return E
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("481060"),
-  n = s("962086"),
-  i = s("225675"),
-  r = s("671533"),
-  o = s("434404"),
-  d = s("981631"),
-  u = s("689938"),
-  c = s("991517");
+var n = t(735250);
+t(470079);
+var i = t(481060),
+  l = t(962086),
+  a = t(225675),
+  r = t(671533),
+  o = t(434404),
+  c = t(981631),
+  d = t(689938),
+  u = t(941393);
 
 function E(e) {
   let {
-    guildId: t,
-    role: s
+    guildId: s,
+    role: t
   } = e;
-  return (0, a.jsx)(a.Fragment, {
-    children: (0, a.jsxs)(l.FormItem, {
-      title: u.default.Messages.VIEW_AS_ROLE,
-      className: c.container,
-      children: [(0, a.jsx)(l.Text, {
+  return (0, n.jsx)(n.Fragment, {
+    children: (0, n.jsxs)(i.FormItem, {
+      title: d.Z.Messages.VIEW_AS_ROLE,
+      className: u.container,
+      children: [(0, n.jsx)(i.Text, {
         variant: "text-sm/normal",
-        children: u.default.Messages.VIEW_AS_ROLE_DESCRIPTION
-      }), (0, a.jsxs)(l.Button, {
-        className: c.button,
-        innerClassName: c.buttonInner,
-        size: l.Button.Sizes.SMALL,
-        color: l.Button.Colors.PRIMARY,
+        children: d.Z.Messages.VIEW_AS_ROLE_DESCRIPTION
+      }), (0, n.jsxs)(i.Button, {
+        className: u.button,
+        innerClassName: u.buttonInner,
+        size: i.Button.Sizes.SMALL,
+        color: i.Button.Colors.PRIMARY,
         onClick: () => {
-          o.default.close(), (0, n.startImpersonating)(t, {
-            type: i.ImpersonateType.ROLES,
+          o.Z.close(), (0, l.iD)(s, {
+            type: a.z.ROLES,
             roles: {
-              [s.id]: s
+              [t.id]: t
             },
-            returnToSection: d.GuildSettingsSections.ROLES
+            returnToSection: c.pNK.ROLES
           })
         },
-        children: [u.default.Messages.VIEW_AS_ROLE, (0, a.jsx)(r.default, {
+        children: [d.Z.Messages.VIEW_AS_ROLE, (0, n.jsx)(r.Z, {
           width: 16,
           height: 16,
-          direction: r.default.Directions.RIGHT,
-          className: c.arrowIcon
+          direction: r.Z.Directions.RIGHT,
+          className: u.arrowIcon
         })]
       })]
     })

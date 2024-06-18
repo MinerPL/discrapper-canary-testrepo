@@ -1,41 +1,48 @@
 "use strict";
-n.r(e), n.d(e, {
-  defaultRequestInstrumentationOptions: function() {
-    return o
+n.d(e, {
+  L7: function() {
+    return f
   },
-  instrumentOutgoingRequests: function() {
-    return s
+  k3: function() {
+    return _
   }
 });
-var r = n("91320"),
-  i = n("648238");
-let a = ["localhost", /^\/(?!\/)/],
-  o = {
+var r = n(633401),
+  i = n(876122),
+  s = n(154405),
+  a = n(793884),
+  o = n(868145),
+  u = n(336344),
+  l = n(874230),
+  c = n(545459),
+  d = n(46834);
+let h = ["localhost", /^\/(?!\/)/],
+  _ = {
     traceFetch: !0,
     traceXHR: !0,
     enableHTTPTimings: !0,
-    tracingOrigins: a,
-    tracePropagationTargets: a
+    tracingOrigins: h,
+    tracePropagationTargets: h
   };
 
-function s(t) {
+function f(t) {
   let {
     traceFetch: e,
     traceXHR: n,
-    tracePropagationTargets: s,
-    tracingOrigins: c,
-    shouldCreateSpanForRequest: d,
-    enableHTTPTimings: f
+    tracePropagationTargets: o,
+    tracingOrigins: f,
+    shouldCreateSpanForRequest: m,
+    enableHTTPTimings: y
   } = {
-    traceFetch: o.traceFetch,
-    traceXHR: o.traceXHR,
+    traceFetch: _.traceFetch,
+    traceXHR: _.traceXHR,
     ...t
-  }, p = "function" == typeof d ? d : t => !0, h = t => (function(t, e) {
-    return (0, i.stringMatchesSomePattern)(t, e || a)
-  })(t, s || c), _ = {};
-  e && (0, i.addInstrumentationHandler)("fetch", t => {
+  }, v = "function" == typeof m ? m : t => !0, b = t => (function(t, e) {
+    return (0, u.U0)(t, e || h)
+  })(t, o || f), E = {};
+  e && (0, a.oq)("fetch", t => {
     let e = function(t, e, n, a) {
-      if (!(0, r.hasTracingEnabled)() || !t.fetchData) return;
+      if (!(0, r.z)() || !t.fetchData) return;
       let o = e(t.fetchData.url);
       if (t.endTimestamp && o) {
         let e = t.fetchData.__span;
@@ -51,115 +58,115 @@ function s(t) {
         }
         return
       }
-      let s = (0, r.getCurrentHub)(),
-        u = s.getScope(),
-        c = s.getClient(),
-        l = u.getSpan(),
+      let u = (0, i.Gd)(),
+        h = u.getScope(),
+        _ = u.getClient(),
+        f = h.getSpan(),
         {
-          method: d,
-          url: f
+          method: p,
+          url: m
         } = t.fetchData,
-        p = o && l ? l.startChild({
+        g = o && f ? f.startChild({
           data: {
-            url: f,
+            url: m,
             type: "fetch",
-            "http.method": d
+            "http.method": p
           },
-          description: `${d} ${f}`,
+          description: `${p} ${m}`,
           op: "http.client"
         }) : void 0;
-      if (p && (t.fetchData.__span = p.spanId, a[p.spanId] = p), n(t.fetchData.url) && c) {
+      if (g && (t.fetchData.__span = g.spanId, a[g.spanId] = g), n(t.fetchData.url) && _) {
         let e = t.args[0];
         t.args[1] = t.args[1] || {};
         let n = t.args[1];
-        n.headers = function(t, e, n, a) {
-          let o = n.getSpan(),
-            s = o && o.transaction,
+        n.headers = function(t, e, n, r) {
+          let i = n.getSpan(),
+            a = i && i.transaction,
             {
-              traceId: u,
-              sampled: c,
-              dsc: l
+              traceId: o,
+              sampled: u,
+              dsc: h
             } = n.getPropagationContext(),
-            d = o ? o.toTraceparent() : (0, i.generateSentryTraceHeader)(u, void 0, c),
-            f = s ? s.getDynamicSamplingContext() : l || (0, r.getDynamicSamplingContextFromClient)(u, e, n),
-            p = (0, i.dynamicSamplingContextToSentryBaggageHeader)(f),
-            h = "undefined" != typeof Request && (0, i.isInstanceOf)(t, Request) ? t.headers : a.headers;
-          if (!h) return {
-            "sentry-trace": d,
+            _ = i ? i.toTraceparent() : (0, l.$p)(o, void 0, u),
+            f = a ? a.getDynamicSamplingContext() : h || (0, s._)(o, e, n),
+            p = (0, c.IQ)(f),
+            m = "undefined" != typeof Request && (0, d.V9)(t, Request) ? t.headers : r.headers;
+          if (!m) return {
+            "sentry-trace": _,
             baggage: p
           };
-          if ("undefined" != typeof Headers && (0, i.isInstanceOf)(h, Headers)) {
-            let t = new Headers(h);
-            return t.append("sentry-trace", d), p && t.append(i.BAGGAGE_HEADER_NAME, p), t
+          if ("undefined" != typeof Headers && (0, d.V9)(m, Headers)) {
+            let t = new Headers(m);
+            return t.append("sentry-trace", _), p && t.append(c.bU, p), t
           }
-          if (Array.isArray(h)) {
-            let t = [...h, ["sentry-trace", d]];
-            return p && t.push([i.BAGGAGE_HEADER_NAME, p]), t
+          if (Array.isArray(m)) {
+            let t = [...m, ["sentry-trace", _]];
+            return p && t.push([c.bU, p]), t
           } else {
-            let t = "baggage" in h ? h.baggage : void 0,
+            let t = "baggage" in m ? m.baggage : void 0,
               e = [];
             return Array.isArray(t) ? e.push(...t) : t && e.push(t), p && e.push(p), {
-              ...h,
-              "sentry-trace": d,
+              ...m,
+              "sentry-trace": _,
               baggage: e.length > 0 ? e.join(",") : void 0
             }
           }
-        }(e, c, u, n)
+        }(e, _, h, n)
       }
-      return p
-    }(t, p, h, _);
-    f && e && u(e)
-  }), n && (0, i.addInstrumentationHandler)("xhr", t => {
-    let e = function(t, e, n, a) {
-      let o = t.xhr,
-        s = o && o[i.SENTRY_XHR_DATA_KEY];
-      if (!(0, r.hasTracingEnabled)() || o && o.__sentry_own_request__ || !o || !s) return;
-      let u = e(s.url);
-      if (t.endTimestamp && u) {
-        let t = o.__sentry_xhr_span_id__;
+      return g
+    }(t, v, b, E);
+    y && e && p(e)
+  }), n && (0, a.oq)("xhr", t => {
+    let e = function(t, e, n, o) {
+      let u = t.xhr,
+        d = u && u[a.xU];
+      if (!(0, r.z)() || u && u.__sentry_own_request__ || !u || !d) return;
+      let h = e(d.url);
+      if (t.endTimestamp && h) {
+        let t = u.__sentry_xhr_span_id__;
         if (!t) return;
-        let e = a[t];
-        e && (e.setHttpStatus(s.status_code), e.finish(), delete a[t]);
+        let e = o[t];
+        e && (e.setHttpStatus(d.status_code), e.finish(), delete o[t]);
         return
       }
-      let c = (0, r.getCurrentHub)(),
-        d = c.getScope(),
-        f = d.getSpan(),
-        p = u && f ? f.startChild({
+      let _ = (0, i.Gd)(),
+        f = _.getScope(),
+        p = f.getSpan(),
+        m = h && p ? p.startChild({
           data: {
-            ...s.data,
+            ...d.data,
             type: "xhr",
-            "http.method": s.method,
-            url: s.url
+            "http.method": d.method,
+            url: d.url
           },
-          description: `${s.method} ${s.url}`,
+          description: `${d.method} ${d.url}`,
           op: "http.client"
         }) : void 0;
-      if (p && (o.__sentry_xhr_span_id__ = p.spanId, a[o.__sentry_xhr_span_id__] = p), o.setRequestHeader && n(s.url)) {
-        if (p) {
-          let t = p && p.transaction,
+      if (m && (u.__sentry_xhr_span_id__ = m.spanId, o[u.__sentry_xhr_span_id__] = m), u.setRequestHeader && n(d.url)) {
+        if (m) {
+          let t = m && m.transaction,
             e = t && t.getDynamicSamplingContext(),
-            n = (0, i.dynamicSamplingContextToSentryBaggageHeader)(e);
-          l(o, p.toTraceparent(), n)
+            n = (0, c.IQ)(e);
+          g(u, m.toTraceparent(), n)
         } else {
-          let t = c.getClient(),
+          let t = _.getClient(),
             {
               traceId: e,
               sampled: n,
-              dsc: a
-            } = d.getPropagationContext(),
-            s = (0, i.generateSentryTraceHeader)(e, void 0, n),
-            u = a || (t ? (0, r.getDynamicSamplingContextFromClient)(e, t, d) : void 0);
-          l(o, s, (0, i.dynamicSamplingContextToSentryBaggageHeader)(u))
+              dsc: r
+            } = f.getPropagationContext(),
+            i = (0, l.$p)(e, void 0, n),
+            a = r || (t ? (0, s._)(e, t, f) : void 0);
+          g(u, i, (0, c.IQ)(a))
         }
       }
-      return p
-    }(t, p, h, _);
-    f && e && u(e)
+      return m
+    }(t, v, b, E);
+    y && e && p(e)
   })
 }
 
-function u(t) {
+function p(t) {
   let e = t.data.url,
     n = new PerformanceObserver(r => {
       r.getEntries().forEach(r => {
@@ -187,16 +194,16 @@ function u(t) {
               version: n
             }
           }(t.nextHopProtocol), r = [];
-          return (r.push(["network.protocol.version", n], ["network.protocol.name", e]), i.browserPerformanceTimeOrigin) ? [...r, ["http.request.redirect_start", c(t.redirectStart)],
-            ["http.request.fetch_start", c(t.fetchStart)],
-            ["http.request.domain_lookup_start", c(t.domainLookupStart)],
-            ["http.request.domain_lookup_end", c(t.domainLookupEnd)],
-            ["http.request.connect_start", c(t.connectStart)],
-            ["http.request.secure_connection_start", c(t.secureConnectionStart)],
-            ["http.request.connection_end", c(t.connectEnd)],
-            ["http.request.request_start", c(t.requestStart)],
-            ["http.request.response_start", c(t.responseStart)],
-            ["http.request.response_end", c(t.responseEnd)]
+          return (r.push(["network.protocol.version", n], ["network.protocol.name", e]), o.Z1) ? [...r, ["http.request.redirect_start", m(t.redirectStart)],
+            ["http.request.fetch_start", m(t.fetchStart)],
+            ["http.request.domain_lookup_start", m(t.domainLookupStart)],
+            ["http.request.domain_lookup_end", m(t.domainLookupEnd)],
+            ["http.request.connect_start", m(t.connectStart)],
+            ["http.request.secure_connection_start", m(t.secureConnectionStart)],
+            ["http.request.connection_end", m(t.connectEnd)],
+            ["http.request.request_start", m(t.requestStart)],
+            ["http.request.response_start", m(t.responseStart)],
+            ["http.request.response_end", m(t.responseEnd)]
           ] : r
         })(r).forEach(e => t.setData(...e)), n.disconnect())
       })
@@ -206,12 +213,12 @@ function u(t) {
   })
 }
 
-function c(t) {
-  return ((i.browserPerformanceTimeOrigin || performance.timeOrigin) + t) / 1e3
+function m(t) {
+  return ((o.Z1 || performance.timeOrigin) + t) / 1e3
 }
 
-function l(t, e, n) {
+function g(t, e, n) {
   try {
-    t.setRequestHeader("sentry-trace", e), n && t.setRequestHeader(i.BAGGAGE_HEADER_NAME, n)
+    t.setRequestHeader("sentry-trace", e), n && t.setRequestHeader(c.bU, n)
   } catch (t) {}
 }

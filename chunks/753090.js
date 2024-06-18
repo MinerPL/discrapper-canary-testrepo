@@ -1,6 +1,6 @@
 "use strict";
-n.r(t), n("47120");
-t.default = {
+n(47120);
+t.Z = {
   makeMemoizer: function(e) {
     let t = new Map;
     return n => {

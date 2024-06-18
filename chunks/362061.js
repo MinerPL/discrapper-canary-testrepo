@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 });
-var i = n("735250");
+var i = n(735250);
 
 function r(e) {
   let {
@@ -237,4 +237,4 @@ function r(e) {
     })]
   })
 }
-n("470079")
+n(470079)

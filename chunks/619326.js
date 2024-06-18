@@ -1,138 +1,137 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return h
+t.d(s, {
+  Z: function() {
+    return g
   }
-}), s("47120");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("803997"),
-  i = s.n(n),
-  r = s("866442"),
-  o = s("481060"),
-  d = s("393238"),
-  u = s("44315"),
-  c = s("663993"),
-  E = s("703685"),
-  _ = s("263704"),
-  I = s("214623"),
-  T = s("981631"),
-  S = s("689938"),
-  f = s("286794");
-let m = (0, c.makeLazy)({
-  createPromise: () => s.e("5609").then(s.bind(s, "336231")),
-  webpackId: "336231"
+}), t(47120);
+var n = t(735250),
+  i = t(470079),
+  l = t(120356),
+  a = t.n(l),
+  r = t(866442),
+  o = t(481060),
+  c = t(393238),
+  d = t(44315),
+  u = t(663993),
+  E = t(263704),
+  _ = t(214623),
+  I = t(981631),
+  T = t(689938),
+  N = t(694036);
+let m = (0, u.Un)({
+  createPromise: () => t.e("5609").then(t.bind(t, 336231)),
+  webpackId: 336231
 });
 
-function N(e) {
-  let t = (0, r.getDarkness)(e) > .25;
-  return (0, u.getColor)(t ? T.Color.WHITE_500 : T.Color.PRIMARY_530)
+function S(e) {
+  let s = (0, r.Bd)(e) > .25;
+  return (0, d.Lq)(s ? I.Ilk.WHITE_500 : I.Ilk.PRIMARY_530)
 }
 
-function g(e) {
+function h(e) {
   let {
-    value: t,
-    onChange: s,
-    disabled: n = !1
-  } = e, [d, u] = l.useState(t);
+    value: s,
+    onChange: t,
+    disabled: l = !1
+  } = e, [c, d] = i.useState(s);
 
-  function c() {
-    s(d)
+  function u() {
+    t(c)
   }
 
   function m(e) {
-    s(e), u(e)
+    t(e), d(e)
   }
-  let g = t === T.DEFAULT_ROLE_COLOR,
-    h = g ? d : t,
-    C = (0, a.jsx)(_.default, {
+  let h = s === I.p6O,
+    g = h ? c : s,
+    x = (0, n.jsx)(E.Z, {
       width: 32,
       height: 24,
-      color: N(t)
+      color: S(s)
     }),
-    R = (0, o.useRadioGroup)({
+    C = (0, o.useRadioGroup)({
       orientation: "horizontal",
-      isDisabled: n
+      isDisabled: l
     }),
-    x = (0, o.useRadioItem)({
-      isSelected: g,
-      label: S.default.Messages.USER_SETTINGS_PROFILE_COLOR_DEFAULT_BUTTON.format({
-        colorHex: (0, r.int2hex)(T.DEFAULT_ROLE_COLOR)
+    R = (0, o.useRadioItem)({
+      isSelected: h,
+      label: T.Z.Messages.USER_SETTINGS_PROFILE_COLOR_DEFAULT_BUTTON.format({
+        colorHex: (0, r.Rf)(I.p6O)
       })
     }),
     L = (0, o.useRadioItem)({
-      isSelected: !g,
-      label: S.default.Messages.USER_SETTINGS_PROFILE_COLOR_CUSTOM_BUTTON.format({
-        colorHex: (0, r.int2hex)(t)
+      isSelected: !h,
+      label: T.Z.Messages.USER_SETTINGS_PROFILE_COLOR_CUSTOM_BUTTON.format({
+        colorHex: (0, r.Rf)(s)
       })
     });
-  return (0, a.jsxs)("div", {
-    className: f.buttonsContainer,
-    "aria-label": S.default.Messages.USER_SETTINGS_PROFILE_COLOR,
-    ...R,
-    children: [(0, a.jsx)("div", {
-      className: i()(f.colorSwatch, {
-        [f.disabled]: n
+  return (0, n.jsxs)("div", {
+    className: N.buttonsContainer,
+    "aria-label": T.Z.Messages.USER_SETTINGS_PROFILE_COLOR,
+    ...C,
+    children: [(0, n.jsx)("div", {
+      className: a()(N.colorSwatch, {
+        [N.disabled]: l
       }),
-      children: (0, a.jsxs)(o.Clickable, {
-        onClick: n ? void 0 : function() {
-          s(T.DEFAULT_ROLE_COLOR)
+      children: (0, n.jsxs)(o.Clickable, {
+        onClick: l ? void 0 : function() {
+          t(I.p6O)
         },
-        "aria-disabled": n,
-        ...x,
-        children: [(0, a.jsx)("div", {
-          className: f.swatch,
+        "aria-disabled": l,
+        ...R,
+        children: [(0, n.jsx)("div", {
+          className: N.swatch,
           style: {
-            backgroundColor: (0, r.int2hex)(T.DEFAULT_ROLE_COLOR)
+            backgroundColor: (0, r.Rf)(I.p6O)
           },
-          children: g ? C : null
-        }), (0, a.jsx)(o.Text, {
-          className: f.swatchDescription,
+          children: h ? x : null
+        }), (0, n.jsx)(o.Text, {
+          className: N.swatchDescription,
           color: "header-secondary",
           variant: "text-xs/normal",
           "aria-hidden": !0,
-          children: S.default.Messages.USER_SETTINGS_PROFILE_COLOR_DEFAULT
+          children: T.Z.Messages.USER_SETTINGS_PROFILE_COLOR_DEFAULT
         })]
       })
-    }), (0, a.jsxs)("div", {
-      className: i()(f.colorSwatch, {
-        [f.disabled]: n
+    }), (0, n.jsxs)("div", {
+      className: a()(N.colorSwatch, {
+        [N.disabled]: l
       }),
-      children: [(0, a.jsxs)(o.Clickable, {
-        onClick: n ? void 0 : c,
-        "aria-disabled": n,
+      children: [(0, n.jsxs)(o.Clickable, {
+        onClick: l ? void 0 : u,
+        "aria-disabled": l,
         ...L,
-        children: [(0, a.jsx)("div", {
-          className: i()(f.customSwatch, {
-            [f.defaultSwatch]: h === T.DEFAULT_ROLE_COLOR
+        children: [(0, n.jsx)("div", {
+          className: a()(N.customSwatch, {
+            [N.defaultSwatch]: g === I.p6O
           }),
           style: {
-            "--custom-color": (0, r.int2hex)(h)
+            "--custom-color": (0, r.Rf)(g)
           },
-          children: g ? null : C
-        }), (0, a.jsx)(o.Text, {
-          className: f.swatchDescription,
+          children: h ? null : x
+        }), (0, n.jsx)(o.Text, {
+          className: N.swatchDescription,
           color: "header-secondary",
           variant: "text-xs/normal",
           "aria-hidden": !0,
-          children: S.default.Messages.USER_SETTINGS_PROFILE_COLOR_CUSTOM
+          children: T.Z.Messages.USER_SETTINGS_PROFILE_COLOR_CUSTOM
         })]
-      }), !n && (0, a.jsx)(o.Popout, {
-        onRequestOpen: c,
-        renderPopout: e => (0, a.jsx)(E.CustomColorPicker, {
+      }), !l && (0, n.jsx)(o.Popout, {
+        onRequestOpen: u,
+        renderPopout: e => (0, n.jsx)(o.CustomColorPicker, {
           ...e,
-          value: t,
+          value: s,
           onChange: m
         }),
-        children: e => (0, a.jsx)(o.Clickable, {
+        children: e => (0, n.jsx)(o.Clickable, {
           ...e,
-          className: f.dropperIconButton,
-          "aria-label": S.default.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,
-          children: (0, a.jsx)(I.default, {
-            className: f.dropperIcon,
+          className: N.dropperIconButton,
+          "aria-label": T.Z.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,
+          children: (0, n.jsx)(_.Z, {
+            className: N.dropperIcon,
             width: 14,
             height: 14,
-            color: N(h)
+            color: S(g)
           })
         })
       })]
@@ -140,28 +139,28 @@ function g(e) {
   })
 }
 
-function h(e) {
-  let t, {
-      value: s,
-      onChange: l,
-      disabled: n = !1
+function g(e) {
+  let s, {
+      value: t,
+      onChange: i,
+      disabled: l = !1
     } = e,
     {
-      ref: i,
+      ref: a,
       width: r
-    } = (0, d.default)();
-  return t = null == r || r < 440 ? (0, a.jsx)(g, {
-    value: s,
-    onChange: l,
-    disabled: n
-  }) : (0, a.jsx)(m, {
-    defaultColor: T.DEFAULT_ROLE_COLOR,
-    colors: T.ROLE_COLORS,
-    value: s,
-    onChange: l,
-    disabled: n
-  }), (0, a.jsx)("div", {
-    ref: i,
-    children: t
+    } = (0, c.Z)();
+  return s = null == r || r < 440 ? (0, n.jsx)(h, {
+    value: t,
+    onChange: i,
+    disabled: l
+  }) : (0, n.jsx)(m, {
+    defaultColor: I.p6O,
+    colors: I.pmI,
+    value: t,
+    onChange: i,
+    disabled: l
+  }), (0, n.jsx)("div", {
+    ref: a,
+    children: s
   })
 }

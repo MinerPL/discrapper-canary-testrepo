@@ -1,45 +1,45 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return I
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
-  o = n("481060"),
-  l = n("806966"),
-  u = n("254494"),
-  d = n("895924"),
-  _ = n("826298"),
-  c = n("496030");
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(481060),
+  l = n(806966),
+  u = n(254494),
+  _ = n(895924),
+  d = n(826298),
+  c = n(496030);
 let E = [16, 12, 8, 12];
 
 function I(e) {
   let {
     className: t,
     channel: n,
-    sections: a,
+    sections: s,
     activeCategoryIndex: I,
     filteredSectionId: T,
-    onSectionClick: f,
+    onSectionClick: h,
     applicationCommandListRef: S
-  } = e, h = r.useRef(null), A = r.useCallback((e, t) => {
+  } = e, f = r.useRef(null), N = r.useCallback((e, t) => {
     var n;
     let i = 8;
-    return (null === (n = a[t + 1]) || void 0 === n ? void 0 : n.type) === d.ApplicationCommandSectionType.BUILT_IN && (i += 8), 32 + i
-  }, [a]), m = r.useCallback((e, t) => {
+    return (null === (n = s[t + 1]) || void 0 === n ? void 0 : n.type) === _.Qi.BUILT_IN && (i += 8), 32 + i
+  }, [s]), A = r.useCallback((e, t) => {
     var n;
     if (!t) return 0 === e ? 0 : 8;
-    return (null === (n = a[e + 1]) || void 0 === n ? void 0 : n.type) === d.ApplicationCommandSectionType.BUILT_IN ? 0 : 8
-  }, [a]), N = r.useCallback((e, t) => {
-    let r = a[t];
+    return (null === (n = s[e + 1]) || void 0 === n ? void 0 : n.type) === _.Qi.BUILT_IN ? 0 : 8
+  }, [s]), m = r.useCallback((e, t) => {
+    let r = s[t];
     if (null == r) return;
-    let s = (0, _.getIconComponent)(r),
-      l = r.type === d.ApplicationCommandSectionType.BUILT_IN ? 4 : 0,
+    let o = (0, d.ky)(r),
+      l = r.type === _.Qi.BUILT_IN ? 4 : 0,
       u = 32 - 2 * l,
-      E = (0, i.jsx)(s, {
+      E = (0, i.jsx)(o, {
         channel: n,
         section: r,
         isSelected: null != T ? r.id === T : I === t,
@@ -48,10 +48,10 @@ function I(e) {
         height: u,
         selectable: !0
       }),
-      S = r.type !== d.ApplicationCommandSectionType.BUILT_IN && t < a.length - 1 && a[t + 1].type === d.ApplicationCommandSectionType.BUILT_IN;
+      S = r.type !== _.Qi.BUILT_IN && t < s.length - 1 && s[t + 1].type === _.Qi.BUILT_IN;
     return (0, i.jsxs)("div", {
       className: c.section,
-      children: [(0, i.jsx)(o.Tooltip, {
+      children: [(0, i.jsx)(a.Tooltip, {
         text: r.name,
         position: "right",
         children: e => {
@@ -59,10 +59,10 @@ function I(e) {
             onClick: t,
             ...n
           } = e;
-          return (0, i.jsx)(o.Clickable, {
+          return (0, i.jsx)(a.Clickable, {
             "aria-label": r.name,
             onClick: () => {
-              f(r), null == t || t()
+              h(r), null == t || t()
             },
             ...n,
             children: E
@@ -72,20 +72,20 @@ function I(e) {
         className: c.builtInSeparator
       }) : null]
     }, r.id)
-  }, [I, n, f, a, T]);
-  return 0 === a.length ? null : (0, i.jsx)("div", {
-    className: s()(t, c.wrapper),
-    children: (0, i.jsx)(u.default, {
-      categoryListRef: h,
+  }, [I, n, h, s, T]);
+  return 0 === s.length ? null : (0, i.jsx)("div", {
+    className: o()(t, c.wrapper),
+    children: (0, i.jsx)(u.Z, {
+      categoryListRef: f,
       expressionsListRef: S,
-      store: l.ApplicationCommandDiscoveryPickerStore,
-      categories: a,
+      store: l.Xn,
+      categories: s,
       className: c.list,
-      renderCategoryListItem: N,
-      rowCount: a.length,
-      categoryHeight: A,
+      renderCategoryListItem: m,
+      rowCount: s.length,
+      categoryHeight: N,
       listPadding: E,
-      getScrollOffsetForIndex: m
+      getScrollOffsetForIndex: A
     })
   })
 }

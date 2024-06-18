@@ -1,8 +1,8 @@
-var r, i, a = n("957578").Buffer,
-  o = n("180756"),
-  s = n("138031"),
-  u = n("275227"),
-  c = n("871230"),
+var r, i, a = n(957578).Buffer,
+  o = n(180756),
+  s = n(138031),
+  u = n(275227),
+  c = n(871230),
   l = n.g.crypto && n.g.crypto.subtle,
   d = {
     sha: "SHA-1",

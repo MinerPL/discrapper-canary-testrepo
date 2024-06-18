@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  Clickable: function() {
+n.d(t, {
+  P: function() {
     return c
   }
-}), n("47120");
-var i, r = n("735250"),
-  s = n("470079"),
-  a = n("803997"),
-  o = n.n(a),
-  l = n("532712"),
-  u = n("84735"),
-  d = n("981631");
+}), n(47120);
+var i, r = n(735250),
+  s = n(470079),
+  o = n(120356),
+  a = n.n(o),
+  l = n(532712),
+  u = n(84735),
+  _ = n(981631);
 
-function _(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -28,12 +28,12 @@ class c extends(i = s.Component) {
       innerRef: n,
       onClick: i,
       role: r,
-      tabIndex: a,
-      ...o
+      tabIndex: o,
+      ...a
     } = this.props;
     return s.createElement(e, {
       ref: this.setRef,
-      ...o
+      ...a
     })
   }
   renderInner() {
@@ -43,37 +43,37 @@ class c extends(i = s.Component) {
       className: n,
       children: i,
       focusProps: r,
-      innerRef: a,
+      innerRef: o,
       ...l
     } = this.props;
     return null == t ? s.createElement(e, {
       ref: this.setRef,
-      className: o()(n),
+      className: a()(n),
       ...l
     }, i) : s.createElement(e, {
       onClick: t,
       ref: this.setRef,
       onKeyPress: this.handleKeyPress,
-      className: o()(n),
+      className: a()(n),
       ...l
     }, i)
   }
   render() {
-    return this.context ? this.renderNonInteractive() : (0, r.jsx)(u.FocusRing, {
+    return this.context ? this.renderNonInteractive() : (0, r.jsx)(u.t, {
       ...this.props.focusProps,
       children: this.renderInner()
     })
   }
   constructor(...e) {
-    super(...e), _(this, "ref", void 0), _(this, "handleKeyPress", e => {
+    super(...e), d(this, "ref", void 0), d(this, "handleKeyPress", e => {
       let {
         onClick: t,
         href: n,
         onKeyPress: i,
         ignoreKeyPress: r
       } = this.props;
-      !e.repeat && (!r && null != t && null != this.ref && (e.charCode === d.KeyboardKeys.SPACE || e.charCode === d.KeyboardKeys.ENTER) && (null == n && e.preventDefault(), null == this.ref.click ? t(e) : this.ref.click()), null != i && i(e))
-    }), _(this, "setRef", e => {
+      !e.repeat && (!r && null != t && null != this.ref && (e.charCode === _.yXg.SPACE || e.charCode === _.yXg.ENTER) && (null == n && e.preventDefault(), null == this.ref.click ? t(e) : this.ref.click()), null != i && i(e))
+    }), d(this, "setRef", e => {
       this.ref = e;
       let {
         innerRef: t
@@ -82,7 +82,7 @@ class c extends(i = s.Component) {
     })
   }
 }
-_(c, "contextType", l.BlockInteractionsContext), _(c, "defaultProps", {
+d(c, "contextType", l.g), d(c, "defaultProps", {
   tag: "div",
   role: "button",
   tabIndex: 0

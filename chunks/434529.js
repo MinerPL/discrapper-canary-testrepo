@@ -9,13 +9,13 @@ function r(e, t) {
     top: n,
     bottom: r,
     left: s,
-    right: a
+    right: o
   } = e;
   return {
     top: null != n ? Math.floor(i(n) * t.height) : null,
     left: null != s ? Math.floor(i(s) * t.width) : null,
     bottom: null != r ? Math.floor(i(r) * t.height) : null,
-    right: null != a ? Math.floor(i(a) * t.width) : null
+    right: null != o ? Math.floor(i(o) * t.width) : null
   }
 }
 
@@ -30,22 +30,22 @@ function s(e, t) {
   }
 }
 
-function a(e, t) {
+function o(e, t) {
   let {
     top: n,
     bottom: r,
     left: s,
-    right: a
+    right: o
   } = e;
   return {
     top: null != n ? i(n / t.height) : null,
     left: null != s ? i(s / t.width) : null,
     bottom: null != r ? i(r / t.height) : null,
-    right: null != a ? i(a / t.width) : null
+    right: null != o ? i(o / t.width) : null
   }
 }
 
-function o(e, t) {
+function a(e, t) {
   let {
     width: n,
     height: i
@@ -59,15 +59,15 @@ function o(e, t) {
 function l(e, t, n, i, r) {
   let {
     top: s,
-    bottom: a,
-    left: o,
+    bottom: o,
+    left: a,
     right: l
   } = e;
-  if (null == s && null == a ? (s = 0, a = n - r) : null == s && null != a ? s = n - (a + r) : null != s && (a = n - (s + r)), null == o && null == l ? (o = 0, l = t - i) : null == o && null != l ? o = t - (l + i) : null == l && null != o && (l = t - (o + i)), null == s || null == a || null == o || null == l) throw Error("Logically this can never happen based on our if/else statements");
+  if (null == s && null == o ? (s = 0, o = n - r) : null == s && null != o ? s = n - (o + r) : null != s && (o = n - (s + r)), null == a && null == l ? (a = 0, l = t - i) : null == a && null != l ? a = t - (l + i) : null == l && null != a && (l = t - (a + i)), null == s || null == o || null == a || null == l) throw Error("Logically this can never happen based on our if/else statements");
   return {
     top: s,
-    left: o,
-    bottom: a,
+    left: a,
+    bottom: o,
     right: l
   }
 }
@@ -87,7 +87,7 @@ function u(e) {
   }
 }
 
-function d(e) {
+function _(e) {
   let {
     top: t,
     left: n,
@@ -102,13 +102,13 @@ function d(e) {
   }
 }
 
-function _(e, t, n) {
+function d(e, t, n) {
   e = r(e, n);
   let {
     width: i,
-    height: a
+    height: o
   } = s(t, n);
-  return i = "string" == typeof i ? 0 : i, a = "string" == typeof a ? 0 : a, l(e, n.width, n.height, i, a)
+  return i = "string" == typeof i ? 0 : i, o = "string" == typeof o ? 0 : o, l(e, n.width, n.height, i, o)
 }
 
 function c(e, t, n) {
@@ -117,7 +117,7 @@ function c(e, t, n) {
     left: r
   } = e, {
     x: s,
-    y: _
+    y: d
   } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
     x: 0,
     y: 0
@@ -125,12 +125,12 @@ function c(e, t, n) {
     width: c,
     height: E
   } = t;
-  return [a(u(d(l({
-    top: i + _,
+  return [o(u(_(l({
+    top: i + d,
     left: r + s,
     bottom: null,
     right: null
-  }, n.width, n.height, "number" == typeof c ? c : 0, "number" == typeof E ? E : 0))), n), o(t, n)]
+  }, n.width, n.height, "number" == typeof c ? c : 0, "number" == typeof E ? E : 0))), n), a(t, n)]
 }
 
 function E(e, t, n) {
@@ -139,7 +139,7 @@ function E(e, t, n) {
     right: r
   } = e, {
     x: s,
-    y: _
+    y: d
   } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
     x: 0,
     y: 0
@@ -147,42 +147,42 @@ function E(e, t, n) {
     width: c,
     height: E
   } = t;
-  return [a(u(d(l({
-    top: i + _,
+  return [o(u(_(l({
+    top: i + d,
     left: null,
     bottom: null,
     right: r - s
-  }, n.width, n.height, "number" == typeof c ? c : 0, "number" == typeof E ? E : 0))), n), o(t, n)]
+  }, n.width, n.height, "number" == typeof c ? c : 0, "number" == typeof E ? E : 0))), n), a(t, n)]
 }
-n.r(t), n.d(t, {
-  fitFullCoordsToContainer: function() {
-    return d
-  },
-  getAnchorCoordsFromFullCoords: function() {
-    return u
-  },
-  getAnchorCoordsFromLayoutSize: function() {
+n.d(t, {
+  KR: function() {
     return r
   },
-  getAnchorPercentageFromLayoutSize: function() {
+  Ox: function() {
     return a
   },
-  getFullCoordsFromAnchorCoords: function() {
+  PY: function() {
     return l
   },
-  getFullCoordsFromLayoutSize: function() {
-    return _
+  R: function() {
+    return u
   },
-  getLeftWidgetSpecs: function() {
+  jL: function() {
+    return o
+  },
+  o4: function() {
     return c
   },
-  getRightWidgetSpecs: function() {
+  ou: function() {
+    return _
+  },
+  uq: function() {
     return E
   },
-  getSizeFromLayoutSize: function() {
-    return s
+  vS: function() {
+    return d
   },
-  getSizePercentageFromSize: function() {
-    return o
+  w_: function() {
+    return s
   }
-}), n("411104")
+}), n(411104)

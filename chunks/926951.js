@@ -1,38 +1,50 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("818083");
-let r = (0, i.createExperiment)({
+n(47120);
+var i = n(818083);
+let r = (0, i.B)({
   kind: "user",
-  id: "2024-03_remb_experiment",
-  label: "Bandwidth Estimation - REMB",
+  id: "2024-06_rtc_pacer__simulcast",
+  label: "RTC Pacer & Golive Simulcast",
   defaultConfig: {
     enabled: !0,
-    fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/trendline-window-duration-3750,robust-estimator"
+    fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/",
+    simulcastEnabled: !1
   },
   treatments: [{
     id: 1,
-    label: "Sender + Worker: Trendline Window Duration 7500ms + Robust Estimator, worker REMB PLI only",
+    label: "Golive Simulcast",
     config: {
       enabled: !0,
-      fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/trendline-window-duration-3750,robust-estimator,worker-bitrate-remb-pli"
+      fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/",
+      simulcastEnabled: !0
     }
   }, {
     id: 2,
-    label: "Sender + Worker: Trendline Window Duration 7500ms + Robust Estimator, worker continuous REMB only",
+    label: "Golive Simulcast with pacing and probing",
     config: {
       enabled: !0,
-      fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/trendline-window-duration-3750,robust-estimator,worker-bitrate-remb-preemption-v1"
+      fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-pacer,worker-pacer-probe",
+      simulcastEnabled: !0
     }
   }, {
     id: 3,
-    label: "Sender + Worker: Trendline Window Duration 7500ms + Robust Estimator, worker REMB PLI with continuous",
+    label: "Golive with pacing",
     config: {
       enabled: !0,
-      fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/trendline-window-duration-3750,robust-estimator,worker-bitrate-remb-preemption-v1,worker-bitrate-remb-pli"
+      fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-pacer",
+      simulcastEnabled: !1
+    }
+  }, {
+    id: 4,
+    label: "Golive with pacing and probing",
+    config: {
+      enabled: !0,
+      fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-pacer,worker-pacer-probe",
+      simulcastEnabled: !1
     }
   }]
 });
-t.default = {
+t.Z = {
   getConfig(e, t) {
     let n = r.getCurrentConfig({
       location: "e1c55b_1"
@@ -51,5 +63,10 @@ t.default = {
   getMediaEngineExperiments(e) {
     let t = e.split("/");
     return 3 !== t.length || "bandwidth_estimation" !== t[0] ? null : t[1].split(",").filter(e => 0 !== e.length)
-  }
+  },
+  supportsSimulcast: () => r.getCurrentConfig({
+    location: "e1c55b_2"
+  }, {
+    autoTrackExposure: !1
+  }).simulcastEnabled
 }

@@ -1,8 +1,8 @@
 "use strict";
-var r = n("21841"),
-  i = n("689118"),
-  a = n("449348"),
-  o = n("922689");
+var r = n(21841),
+  i = n(689118),
+  a = n(449348),
+  o = n(922689);
 
 function s(e, t) {
   r.equal(t.length, 24, "Invalid key length");

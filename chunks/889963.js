@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  PaginationController: function() {
-    return d
+n.d(t, {
+  W: function() {
+    return _
   },
-  PaginationTypes: function() {
+  s: function() {
     return i
   }
-}), n("47120"), n("653041");
-var i, r, s, a = n("470079"),
-  o = n("392711"),
-  l = n.n(o);
+}), n(47120), n(653041);
+var i, r, s, o = n(470079),
+  a = n(392711),
+  l = n.n(a);
 
 function u(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -19,14 +19,14 @@ function u(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(s = i || (i = {})).PAGE = "PAGE", s.GAP = "GAP", s.BACK = "BACK", s.NEXT = "NEXT";
-class d extends(r = a.PureComponent) {
+class _ extends(r = o.PureComponent) {
   getNeighborBounds() {
     let {
       totalPageCount: e,
       maxVisiblePages: t,
       selectedPage: n
-    } = this.props, i = Math.ceil(t / 2), r = Math.floor(t / 2), s = [1, e], [a, o] = s = n <= i ? [1, t] : n > e - r ? [e - t + 1, e] : [n - i + 1, n + r];
-    return [Math.max(a, 1), Math.min(o, e)]
+    } = this.props, i = Math.ceil(t / 2), r = Math.floor(t / 2), s = [1, e], [o, a] = s = n <= i ? [1, t] : n > e - r ? [e - t + 1, e] : [n - i + 1, n + r];
+    return [Math.max(o, 1), Math.min(a, e)]
   }
   getPageList() {
     let {
@@ -39,14 +39,14 @@ class d extends(r = a.PureComponent) {
       disabled: 1 === t,
       selected: !1,
       navigateToPage: this.handleBackward
-    }, a = {
+    }, o = {
       type: "NEXT",
       key: "next",
       disabled: t === e,
       selected: !1,
       navigateToPage: this.handleForward
-    }, o = [], u = [];
-    return i > 1 && (o = [{
+    }, a = [], u = [];
+    return i > 1 && (a = [{
       type: "PAGE",
       key: "page-1",
       targetPage: 1,
@@ -62,14 +62,14 @@ class d extends(r = a.PureComponent) {
       key: "page-".concat(e),
       targetPage: e,
       navigateToPage: () => this.handleJump(e)
-    }), r -= 2), [s, ...o, ...l().range(i, r + 1).map(e => ({
+    }), r -= 2), [s, ...a, ...l().range(i, r + 1).map(e => ({
       type: "PAGE",
       key: "page-".concat(e),
       targetPage: e,
       selected: e === t,
       disabled: !1,
       navigateToPage: () => this.handleJump(e)
-    })), ...u, a]
+    })), ...u, o]
   }
   render() {
     let {
@@ -97,7 +97,7 @@ class d extends(r = a.PureComponent) {
     })
   }
 }
-u(d, "defaultProps", {
+u(_, "defaultProps", {
   maxVisiblePages: 9,
   hideMaxPage: !1
 })

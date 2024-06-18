@@ -1,82 +1,82 @@
 "use strict";
-n.r(t), n("653041"), n("47120");
-var i, r, a, s, o = n("348327"),
-  l = n.n(o),
-  u = n("392711"),
-  d = n.n(u),
-  _ = n("442837"),
-  c = n("570140"),
-  E = n("317381"),
-  I = n("812206"),
-  T = n("676035"),
-  f = n("594190"),
-  S = n("106301"),
-  h = n("406066"),
-  A = n("768419"),
-  m = n("695346"),
-  N = n("581883"),
-  p = n("199902"),
-  O = n("272053"),
-  C = n("77498"),
-  R = n("981631"),
-  g = n("689938");
+n(653041), n(47120);
+var i, r, s, o, a = n(348327),
+  l = n.n(a),
+  u = n(392711),
+  _ = n.n(u),
+  d = n(442837),
+  c = n(570140),
+  E = n(317381),
+  I = n(812206),
+  T = n(676035),
+  h = n(594190),
+  S = n(106301),
+  f = n(406066),
+  N = n(768419),
+  A = n(695346),
+  m = n(581883),
+  O = n(199902),
+  R = n(272053),
+  C = n(77498),
+  p = n(981631),
+  g = n(689938);
 let L = [],
   v = {};
 
 function D() {
   let e = [],
-    t = m.CustomStatusSetting.getSetting();
-  null != t && ("0" === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, T.getActivityFromCustomStatus)(t));
-  let n = h.default.getActivities();
+    t = A.Ok.getSetting();
+  null != t && ("0" === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, T.I)(t));
+  let n = f.Z.getActivities();
   e.push(...n);
-  let i = O.default.getStream();
+  let i = R.Z.getStream();
   null != i && e.push({
-    type: R.ActivityTypes.STREAMING,
+    type: p.IIU.STREAMING,
     ...i
   });
   let r = new Set,
-    a = new Set;
-  d().forEach(v, t => {
-    null != t.application_id && (r.add(t.name), a.add(t.application_id), e.push(t))
-  }), E.default.getSelfEmbeddedActivities().forEach(t => {
+    s = new Set;
+  _().forEach(v, t => {
+    null != t.application_id && (r.add(t.name), s.add(t.application_id), e.push(t))
+  }), E.ZP.getSelfEmbeddedActivities().forEach(t => {
     var n;
     let {
       applicationId: i
     } = t;
-    if (a.has(i)) return;
-    let r = null === (n = I.default.getApplication(i)) || void 0 === n ? void 0 : n.name;
+    if (s.has(i)) return;
+    let r = null === (n = I.Z.getApplication(i)) || void 0 === n ? void 0 : n.name;
     e.push({
-      type: R.ActivityTypes.PLAYING,
-      name: null != r ? r : g.default.Messages.EMBEDDED_ACTIVITIES_LAUNCHING_ACTIVITY,
+      type: p.IIU.PLAYING,
+      name: null != r ? r : g.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCHING_ACTIVITY,
       application_id: i,
-      flags: R.ActivityFlags.EMBEDDED
+      flags: p.xjy.EMBEDDED
     })
   });
-  let s = f.default.getVisibleGame(),
-    o = null != s && null != s.name && r.has(s.name),
-    u = null != s && s.isLauncher,
-    _ = p.default.getCurrentUserActiveStream();
-  if (null != s && null != s.name && !(o || u && !(null != _))) {
-    var c, N;
+  let o = h.ZP.getVisibleGame(),
+    a = null != o && null != o.name && r.has(o.name),
+    u = null != o && o.isLauncher,
+    d = O.Z.getCurrentUserActiveStream();
+  if (null != o && null != o.name && !(a || u && !(null != d))) {
+    var c, m;
     e.push({
-      type: R.ActivityTypes.PLAYING,
-      name: s.name,
-      application_id: null !== (N = s.id) && void 0 !== N ? N : null === (c = C.default.getGameByName(s.name)) || void 0 === c ? void 0 : c.id,
+      type: p.IIU.PLAYING,
+      name: o.name,
+      application_id: null !== (m = o.id) && void 0 !== m ? m : null === (c = C.Z.getGameByName(o.name)) || void 0 === c ? void 0 : c.id,
       timestamps: {
-        start: s.start
+        start: o.start
       }
     })
   }
-  let D = A.default.getActivity();
+  let D = N.Z.getActivity();
   null != D && e.push({
-    type: R.ActivityTypes.LISTENING,
+    type: p.IIU.LISTENING,
     ...D
   });
-  let M = S.default.getCurrentHangStatus();
+  let M = S.Z.getCurrentHangStatus();
   if (null != M) {
-    let t = S.default.getCustomHangStatus();
+    let t = S.Z.getCustomHangStatus();
     e.push({
-      type: R.ActivityTypes.HANG_STATUS,
+      type: p.IIU.HANG_STATUS,
       name: "Hang Status",
       state: M,
       details: null == t ? void 0 : t.status,
@@ -84,9 +84,9 @@ function D() {
     })
   }!l()(L, e) && (L = e)
 }
-class M extends(i = _.default.Store) {
+class M extends(i = d.ZP.Store) {
   initialize() {
-    this.waitFor(f.default, E.default, O.default, p.default, A.default, N.default, S.default, C.default), this.syncWith([h.default, S.default], () => D())
+    this.waitFor(h.ZP, E.ZP, R.Z, O.Z, N.Z, m.Z, S.Z, C.Z), this.syncWith([f.Z, S.Z], () => D())
   }
   getActivities() {
     return L
@@ -98,7 +98,7 @@ class M extends(i = _.default.Store) {
     return this.findActivity(t => t.application_id === e)
   }
   getCustomStatusActivity() {
-    return this.findActivity(e => e.type === R.ActivityTypes.CUSTOM_STATUS)
+    return this.findActivity(e => e.type === p.IIU.CUSTOM_STATUS)
   }
   findActivity(e) {
     return L.find(e)
@@ -107,12 +107,12 @@ class M extends(i = _.default.Store) {
     return v
   }
 }
-s = "LocalActivityStore", (a = "displayName") in(r = M) ? Object.defineProperty(r, a, {
-  value: s,
+o = "LocalActivityStore", (s = "displayName") in(r = M) ? Object.defineProperty(r, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s, t.default = new M(c.default, {
+}) : r[s] = o, t.Z = new M(c.Z, {
   OVERLAY_INITIALIZE: function(e) {
     let {
       localActivities: t

@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  DevSettingsCategory: function() {
+n.d(t, {
+  zU: function() {
     return i
   }
-}), n("47120");
-var i, r, a, s = n("442837"),
-  o = n("570140");
+}), n(47120);
+var i, r, s, o = n(442837),
+  a = n(570140);
 
 function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function l(e, t, n) {
     configurable: !0,
     writable: !0
   }) : e[t] = n, e
-}(a = i || (i = {}))[a.MESSAGING = 0] = "MESSAGING", a[a.OVERLAYS = 1] = "OVERLAYS", a[a.PREMIUM = 2] = "PREMIUM";
+}(s = i || (i = {}))[s.MESSAGING = 0] = "MESSAGING", s[s.OVERLAYS = 1] = "OVERLAYS", s[s.PREMIUM = 2] = "PREMIUM";
 let u = {
     visual_effect_view_overrides: {
       label: "Blur view overrides for designers to test with",
@@ -41,29 +41,29 @@ let u = {
       category: 2
     }
   },
-  d = {};
-class _ extends(r = s.default.DeviceSettingsStore) {
+  _ = {};
+class d extends(r = o.ZP.DeviceSettingsStore) {
   getUserAgnosticState() {
     return {
-      toggleStates: d
+      toggleStates: _
     }
   }
   initialize(e) {
     for (var t in u) {
       var n, i;
       let r = null !== (i = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== i && i;
-      d[t] = r
+      _[t] = r
     }
   }
   get(e) {
     var t;
-    return null !== (t = d[e]) && void 0 !== t && t
+    return null !== (t = _[e]) && void 0 !== t && t
   }
   set(e, t) {
-    return d[e] = t, t
+    return _[e] = t, t
   }
   all() {
-    return d
+    return _
   }
   allByCategory(e) {
     return Object.entries(u).filter(t => {
@@ -71,12 +71,12 @@ class _ extends(r = s.default.DeviceSettingsStore) {
       return i.category === e
     }).map(e => {
       let [t, n] = e;
-      return [t, d[t], n]
+      return [t, _[t], n]
     })
   }
 }
-l(_, "displayName", "DevToolsDevSettingsStore"), l(_, "persistKey", "DevToolsDevSettingsStore"), t.default = new _(o.default, {
+l(d, "displayName", "DevToolsDevSettingsStore"), l(d, "persistKey", "DevToolsDevSettingsStore"), t.ZP = new d(a.Z, {
   DEV_TOOLS_DEV_SETTING_SET: function(e) {
-    d[e.toggle] = e.value
+    _[e.toggle] = e.value
   }
 })

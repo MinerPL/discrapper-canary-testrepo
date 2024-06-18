@@ -9,8 +9,8 @@ function r() {
     return e
   }).apply(this, arguments)
 }
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 })

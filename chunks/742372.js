@@ -1,9 +1,9 @@
 "use strict";
-var e = n("486095").charAt,
-  o = n("342545"),
-  i = n("29461"),
-  u = n("790142"),
-  s = n("215645"),
+var e = n(486095).charAt,
+  o = n(342545),
+  i = n(29461),
+  u = n(790142),
+  s = n(215645),
   c = "String Iterator",
   f = i.set,
   a = i.getterFor(c);

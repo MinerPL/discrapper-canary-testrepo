@@ -1,8 +1,8 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("442837"),
-  r = n("570140");
-class s extends i.Store {
+n(47120);
+var i = n(442837),
+  r = n(570140);
+class s extends i.yh {
   allGuildIds() {
     return this.guildIds
   }
@@ -26,13 +26,13 @@ class s extends i.Store {
   }
   constructor() {
     var e, t, n;
-    super(r.default, {
+    super(r.Z, {
       CACHE_LOADED: e => this.handleCacheLoaded(e),
       CACHE_LOADED_LAZY: e => this.handleCacheLoadedLazy(e),
       CONNECTION_OPEN: e => this.handleConnectionOpen(e),
       GUILD_CREATE: e => this.handleGuildCreate(e),
       GUILD_DELETE: e => this.handleGuildDelete(e)
-    }, r.DispatchBand.Early), e = this, t = "guildIds", n = new Set, t in e ? Object.defineProperty(e, t, {
+    }, r.c.Early), e = this, t = "guildIds", n = new Set, t in e ? Object.defineProperty(e, t, {
       value: n,
       enumerable: !0,
       configurable: !0,
@@ -40,4 +40,4 @@ class s extends i.Store {
     }) : e[t] = n
   }
 }
-t.default = new s
+t.Z = new s

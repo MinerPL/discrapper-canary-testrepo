@@ -9,18 +9,18 @@ function i(e) {
   } = e;
   async function s(e) {
     var r, s;
-    let o = (null == e ? void 0 : e.from) || n();
-    if (null == o) return null;
-    let l = (r = o, null !== (s = t().find(e => !!(r.compareDocumentPosition(e) & (Node.DOCUMENT_POSITION_FOLLOWING | Node.DOCUMENT_POSITION_CONTAINED_BY)))) && void 0 !== s ? s : null);
-    return null == l && (null == e ? void 0 : e.wrap) ? (await (null == i ? void 0 : i()), a()) : l
+    let a = (null == e ? void 0 : e.from) || n();
+    if (null == a) return null;
+    let l = (r = a, null !== (s = t().find(e => !!(r.compareDocumentPosition(e) & (Node.DOCUMENT_POSITION_FOLLOWING | Node.DOCUMENT_POSITION_CONTAINED_BY)))) && void 0 !== s ? s : null);
+    return null == l && (null == e ? void 0 : e.wrap) ? (await (null == i ? void 0 : i()), o()) : l
   }
 
-  function a() {
+  function o() {
     var e;
     return null !== (e = t()[0]) && void 0 !== e ? e : null
   }
 
-  function o() {
+  function a() {
     var e;
     let n = t();
     return null !== (e = n[n.length - 1]) && void 0 !== e ? e : null
@@ -38,14 +38,14 @@ function i(e) {
         }
         return null
       }(i);
-      return null == s && (null == e ? void 0 : e.wrap) ? (await (null == r ? void 0 : r()), o()) : s
+      return null == s && (null == e ? void 0 : e.wrap) ? (await (null == r ? void 0 : r()), a()) : s
     },
-    getFirstFocusableElement: a,
-    getLastFocusableElement: o
+    getFirstFocusableElement: o,
+    getLastFocusableElement: a
   }
 }
-n.r(t), n.d(t, {
-  createFocusManager: function() {
+n.d(t, {
+  E: function() {
     return i
   }
 })

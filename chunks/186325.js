@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  AccessibilityPreferencesContext: function() {
+n.d(t, {
+  S: function() {
     return i
   }
 });
-let i = n("470079").createContext({
+let i = n(470079).createContext({
   reducedMotion: {
     enabled: !1,
     rawValue: "no-preference"

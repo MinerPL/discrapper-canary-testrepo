@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  ISOWeekParser: function() {
+n.d(t, {
+  d: function() {
     return h
   }
 });
-var r = n("717029"),
-  i = n("25487"),
-  a = n("846042"),
-  o = n("823498"),
-  s = n("964415");
+var r = n(717029),
+  i = n(25487),
+  a = n(846042),
+  o = n(823498),
+  s = n(964415);
 
 function u(e) {
   return (u = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
@@ -71,13 +71,10 @@ var h = function(e) {
     }
   }(), function() {
     var e, r = f(t);
-    if (n) {
-      var i = f(this).constructor;
-      e = Reflect.construct(r, arguments, i)
-    } else e = r.apply(this, arguments);
-    return function(e, t) {
-      return t && ("object" === u(t) || "function" == typeof t) ? t : d(e)
-    }(this, e)
+    return e = n ? Reflect.construct(r, arguments, f(this).constructor) : r.apply(this, arguments),
+      function(e, t) {
+        return t && ("object" === u(t) || "function" == typeof t) ? t : d(e)
+      }(this, e)
   });
 
   function _() {
@@ -93,13 +90,13 @@ var h = function(e) {
     value: function(e, t, n) {
       switch (t) {
         case "I":
-          return (0, a.parseNumericPattern)(i.numericPatterns.week, e);
+          return (0, a.ie)(i.z.week, e);
         case "Io":
           return n.ordinalNumber(e, {
             unit: "week"
           });
         default:
-          return (0, a.parseNDigits)(t.length, e)
+          return (0, a.ZL)(t.length, e)
       }
     }
   }, {
@@ -110,7 +107,7 @@ var h = function(e) {
   }, {
     key: "set",
     value: function(e, t, n) {
-      return (0, s.default)((0, o.default)(e, n))
+      return (0, s.Z)((0, o.Z)(e, n))
     }
-  }], c(r.prototype, h), m && c(r, m), _
-}(r.Parser)
+  }], c(r.prototype, h), _
+}(r._)

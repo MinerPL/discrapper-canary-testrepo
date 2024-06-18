@@ -1,4 +1,7 @@
 "use strict";
-n.r(t);
-var i = n("771752");
-n.es(i, t)
+n.d(t, {
+  f: function() {
+    return i.f
+  }
+});
+var i = n(771752)

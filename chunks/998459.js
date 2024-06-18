@@ -1,14 +1,14 @@
 "use strict";
-var r = n("147018"),
-  i = n("926515"),
-  a = n("526988"),
-  o = n("213897"),
-  s = n("532055"),
-  u = n("71480");
+var r = n(147018),
+  i = n(926515),
+  a = n(526988),
+  o = n(213897),
+  s = n(532055),
+  u = n(71480);
 r({
   target: "Promise",
   stat: !0,
-  forced: n("246582")
+  forced: n(246582)
 }, {
   allSettled: function(e) {
     var t = this,

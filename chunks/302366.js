@@ -1,5 +1,5 @@
 "use strict";
-var r = n("117417");
+var r = n(117417);
 e.exports = function(e) {
   var t = (e = e || {}).reporter,
     n = e.batchProcessor,
@@ -32,21 +32,21 @@ e.exports = function(e) {
           }
           "" !== f.position && (e(f), d = !0);
           var n = document.createElement("object");
-          n.style.cssText = l, n.tabIndex = -1, n.type = "text/html", n.setAttribute("aria-hidden", "true"), n.onload = function() {
-            !d && e();
-            ! function e(t, n) {
-              if (!t.contentDocument) {
-                var r = i(t);
-                r.checkForObjectDocumentTimeoutId && window.clearTimeout(r.checkForObjectDocumentTimeoutId), r.checkForObjectDocumentTimeoutId = setTimeout(function() {
-                  r.checkForObjectDocumentTimeoutId = 0, e(t, n)
-                }, 100);
-                return
-              }
-              n(t.contentDocument)
-            }(this, function(e) {
-              s(o)
-            })
-          }, !r.isIE() && (n.data = "about:blank"), i(o) && (o.appendChild(n), i(o).object = n, r.isIE() && (n.data = "about:blank"))
+          if (n.style.cssText = l, n.tabIndex = -1, n.type = "text/html", n.setAttribute("aria-hidden", "true"), n.onload = function() {
+              !d && e();
+              ! function e(t, n) {
+                if (!t.contentDocument) {
+                  var r = i(t);
+                  r.checkForObjectDocumentTimeoutId && window.clearTimeout(r.checkForObjectDocumentTimeoutId), r.checkForObjectDocumentTimeoutId = setTimeout(function() {
+                    r.checkForObjectDocumentTimeoutId = 0, e(t, n)
+                  }, 100);
+                  return
+                }
+                n(t.contentDocument)
+              }(this, function(e) {
+                s(o)
+              })
+            }, !r.isIE() && (n.data = "about:blank"), !!i(o)) o.appendChild(n), i(o).object = n, r.isIE() && (n.data = "about:blank")
         }
         i(o).startSize = {
           width: p,
@@ -70,10 +70,9 @@ e.exports = function(e) {
       }
     },
     uninstall: function(e) {
-      if (!!i(e)) {
-        var t = i(e).object;
-        t && (r.isIE(8) ? e.detachEvent("onresize", t.proxy) : e.removeChild(t), i(e).checkForObjectDocumentTimeoutId && window.clearTimeout(i(e).checkForObjectDocumentTimeoutId), delete i(e).object)
-      }
+      if (!i(e)) return;
+      var t = i(e).object;
+      if (!!t) r.isIE(8) ? e.detachEvent("onresize", t.proxy) : e.removeChild(t), i(e).checkForObjectDocumentTimeoutId && window.clearTimeout(i(e).checkForObjectDocumentTimeoutId), delete i(e).object
     }
   }
 }

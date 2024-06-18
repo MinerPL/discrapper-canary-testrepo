@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return o
   }
 });
-var i = n("695346"),
-  r = n("131951"),
-  s = n("36703");
+var i = n(695346),
+  r = n(131951),
+  s = n(36703);
 
-function a(e) {
+function o(e) {
   let t = function() {
     var e;
-    let t = i.SoundboardSettings.getSetting();
-    return (0, s.amplitudeToPerceptual)(null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 100) / 100
+    let t = i.kU.getSetting();
+    return (0, s.P)(null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 100) / 100
   }();
-  return Math.min(e * t * Math.min(r.default.getOutputVolume() / 100, 1), 1)
+  return Math.min(e * t * Math.min(r.Z.getOutputVolume() / 100, 1), 1)
 }

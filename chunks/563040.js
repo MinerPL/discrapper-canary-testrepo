@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
-  TimeOptions: function() {
+n.d(t, {
+  rK: function() {
     return h
   },
-  convertToTimeOfADay: function() {
-    return I
-  },
-  timeAtSpecificDay: function() {
+  tR: function() {
     return f
+  },
+  tj: function() {
+    return I
   }
-}), n("757143"), n("653041"), n("47120"), n("411104");
-var i = n("913527"),
+}), n(757143), n(653041), n(47120), n(411104);
+var i = n(913527),
   r = n.n(i),
-  s = n("55935");
+  s = n(55935);
 
-function a(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -22,13 +22,13 @@ function a(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let o = /^[0]+/,
+let a = /^[0]+/,
   l = /:00/,
   u = /(AM|ΠΜ|सुबह)/i,
-  d = /(PM|ΜΜ|शाम)/i,
-  _ = /\s+/,
-  c = e => e.replace(o, "").replace(l, "").replace(u, "").replace(_, ""),
-  E = e => e.replace(o, "").replace(d, "").replace(_, ""),
+  _ = /(PM|ΜΜ|शाम)/i,
+  d = /\s+/,
+  c = e => e.replace(a, "").replace(l, "").replace(u, "").replace(d, ""),
+  E = e => e.replace(a, "").replace(_, "").replace(d, ""),
   I = (e, t) => {
     let n = t.toUpperCase().trim();
     if (n.length > 0) {
@@ -37,16 +37,16 @@ let o = /^[0]+/,
     }
   },
   T = r()("2021-04-12T00:00:00"),
-  f = (e, t) => e.clone().hours(t.hour()).minutes(t.minutes()).seconds(0),
+  h = (e, t) => e.clone().hours(t.hour()).minutes(t.minutes()).seconds(0),
   S = (e, t) => e.value.unix() - t.value.unix();
-class h {
+class f {
   lookupByValue(e) {
     if (null == e) return;
-    let t = f(T, e);
+    let t = h(T, e);
     return this._index[t.unix()]
   }
   _createLabel(e) {
-    return (0, s.dateFormat)(e.locale(r().locale()), this.labelFormat)
+    return (0, s.vc)(e.locale(r().locale()), this.labelFormat)
   }
   _generateTimeOptions() {
     this.options = [], this._index = {};
@@ -59,14 +59,14 @@ class h {
     }
   }
   _createNewOption(e) {
-    let t = f(T, e);
+    let t = h(T, e);
     return {
       label: this._createLabel(t),
       value: t
     }
   }
   _addNewOption(e) {
-    let t = f(T, e),
+    let t = h(T, e),
       n = this._createLabel(t);
     return this._index[t.unix()] = t, this.options.push({
       label: n,
@@ -107,7 +107,7 @@ class h {
     intervalInMinutes: e = 15,
     labelFormat: t = "LT"
   } = {}) {
-    if (a(this, "intervalInMinutes", void 0), a(this, "labelFormat", void 0), a(this, "options", []), a(this, "_index", {}), e <= 0) throw Error("intervalInMinutes should be positive number, got ".concat(e));
+    if (o(this, "intervalInMinutes", void 0), o(this, "labelFormat", void 0), o(this, "options", []), o(this, "_index", {}), e <= 0) throw Error("intervalInMinutes should be positive number, got ".concat(e));
     this.intervalInMinutes = e, this.labelFormat = t, this._generateTimeOptions()
   }
 }

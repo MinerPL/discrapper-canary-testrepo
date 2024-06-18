@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("147913"),
-  r = n("579806"),
-  s = n("246946");
-let a = !1;
+n(47120);
+var i = n(147913),
+  r = n(579806),
+  s = n(246946);
+let o = !1;
 
-function o() {
+function a() {
   var e;
-  let t = null === r.default || void 0 === r.default ? void 0 : null === (e = r.default.window) || void 0 === e ? void 0 : e.setContentProtection;
+  let t = null === r.Z || void 0 === r.Z ? void 0 : null === (e = r.Z.window) || void 0 === e ? void 0 : e.setContentProtection;
   if (null == t) return;
-  let n = s.default.enableContentProtection;
-  n !== a && (t(n), a = n)
+  let n = s.Z.enableContentProtection;
+  n !== o && (t(n), o = n)
 }
-class l extends i.default {
+class l extends i.Z {
   constructor() {
     var e, t, n;
-    o(), super(), e = this, t = "stores", n = new Map().set(s.default, o), t in e ? Object.defineProperty(e, t, {
+    a(), super(), e = this, t = "stores", n = new Map().set(s.Z, a), t in e ? Object.defineProperty(e, t, {
       value: n,
       enumerable: !0,
       configurable: !0,
@@ -23,4 +23,4 @@ class l extends i.default {
     }) : e[t] = n
   }
 }
-t.default = new l
+t.Z = new l

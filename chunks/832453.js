@@ -1,9 +1,9 @@
 "use strict";
-var r = n("67867"),
-  a = n("668530");
+var r = n(67867),
+  o = n(668530);
 r({
   global: !0,
-  forced: a.globalThis !== a
+  forced: o.globalThis !== o
 }, {
-  globalThis: a
+  globalThis: o
 })

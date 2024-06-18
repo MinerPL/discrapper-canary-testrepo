@@ -107,12 +107,11 @@
         if (o.assert(e && e instanceof i, "you must provide a joi schema"), o.assert("string" == typeof t, "path must be a string"), "" === t) return e;
         var r = t.split("."),
           n = e._inner.children;
-        if (n) {
+        if (!!n)
           for (var s = r[0], a = 0; a < n.length; ++a) {
             var c = n[a];
             if (c.key === s) return this.reach(c.schema, t.substr(s.length + 1))
           }
-        }
       }, t.lazy = function(e) {
         return c.set(e)
       }, t.extend = function() {
@@ -469,7 +468,7 @@
         var r = t.callStack(void 0 === e ? 1 : e + 1);
         return t.formatTrace(r)
       }, t.abortThrow = !1, t.abort = function(e, r) {
-        if (!0 === t.abortThrow) throw Error(e || "Unknown error");
+        if ("test" === n.env.NODE_ENV || !0 === t.abortThrow) throw Error(e || "Unknown error");
         var o = "";
         !r && (o = t.displayStack(1).join("\n	")), console.log("ABORT: " + e + "\n	" + o), n.exit(1)
       }, t.assert = function(e) {
@@ -646,7 +645,7 @@
       }
       c.alloc = function(e, t, r) {
         var n, o, i, s;
-        return n = null, o = e, i = t, s = r, (l(o), o <= 0) ? a(n, o) : void 0 !== i ? "string" == typeof s ? a(n, o).fill(i, s) : a(n, o).fill(i) : a(n, o)
+        return n = null, o = e, i = t, s = r, (l(o), o <= 0) ? a(null, o) : void 0 !== i ? "string" == typeof s ? a(n, o).fill(i, s) : a(n, o).fill(i) : a(n, o)
       }, c.allocUnsafe = function(e) {
         return f(null, e)
       }, c.allocUnsafeSlow = function(e) {
@@ -1325,7 +1324,7 @@
       f = -1;
 
     function p() {
-      l && o && (l = !1, o.length ? u = o.concat(u) : f = -1, u.length && h())
+      if (!!l && !!o) l = !1, o.length ? u = o.concat(u) : f = -1, u.length && h()
     }
 
     function h() {
@@ -2216,24 +2215,22 @@
           }
         }
       }
-      var w = {
-          key: /_\$key\$_([, \d]+)_\$end\$_\"/g,
-          missing: /\"_\$miss\$_([^\|]+)\|(\d+)_\$end\$_\"\: \"__missing__\"/g,
-          arrayIndex: /\s*\"_\$idx\$_([, \d]+)_\$end\$_\",?\n(.*)/g,
-          specials: /"\[(NaN|Symbol.*|-?Infinity|function.*|\(.*)\]"/g
-        },
-        E = s.safeStringify(a, 2).replace(w.key, function(e, r) {
+      var w = /_\$key\$_([, \d]+)_\$end\$_\"/g,
+        E = /\"_\$miss\$_([^\|]+)\|(\d+)_\$end\$_\"\: \"__missing__\"/g,
+        x = /\s*\"_\$idx\$_([, \d]+)_\$end\$_\",?\n(.*)/g,
+        j = /"\[(NaN|Symbol.*|-?Infinity|function.*|\(.*)\]"/g,
+        O = s.safeStringify(a, 2).replace(w, function(e, r) {
           return '" ' + t + "[" + r + "]" + i
-        }).replace(w.missing, function(e, n, o) {
+        }).replace(E, function(e, n, o) {
           return r + '"' + n + '"' + i + t + " [" + o + "]: -- missing --" + i
-        }).replace(w.arrayIndex, function(e, r, n) {
+        }).replace(x, function(e, r, n) {
           return "\n" + n + " " + t + "[" + r + "]" + i
-        }).replace(w.specials, function(e, t) {
+        }).replace(j, function(e, t) {
           return t
         });
-      E = E + "\n" + t;
-      for (var x = 0; x < this.details.length; ++x) E = E + "\n[" + (x + 1) + "] " + this.details[x].message;
-      return E += i
+      O = O + "\n" + t;
+      for (var k = 0; k < this.details.length; ++k) O = O + "\n[" + (k + 1) + "] " + this.details[k].message;
+      return O += i
     }
   }, function(e, t) {
     "use strict";
@@ -2406,7 +2403,9 @@
             r && o.isRef(c) && (c = c(r.reference || r.parent, i)), !Array.isArray(c) && (c = [c]);
             for (var u = 0; u < c.length; ++u) {
               var l = c[u];
-              if ((void 0 === e ? "undefined" : n(e)) === (void 0 === l ? "undefined" : n(l)) && (e === l || e instanceof Date && l instanceof Date && e.getTime() === l.getTime() || s && "string" == typeof e && e.toLowerCase() === l.toLowerCase() || t.isBuffer(e) && t.isBuffer(l) && e.length === l.length && e.toString("binary") === l.toString("binary"))) return !0
+              if ((void 0 === e ? "undefined" : n(e)) === (void 0 === l ? "undefined" : n(l))) {
+                if (e === l || e instanceof Date && l instanceof Date && e.getTime() === l.getTime() || s && "string" == typeof e && e.toLowerCase() === l.toLowerCase() || t.isBuffer(e) && t.isBuffer(l) && e.length === l.length && e.toString("binary") === l.toString("binary")) return !0
+              }
             }
           }
           return !1
@@ -4062,7 +4061,7 @@
         var P = T;
         if (x[T]) {
           P = null;
-          for (var R = 0; R < this._items.length; ++R)
+          for (var R = 0; R < this._items.length; ++R) {
             if (!0 !== S[R]) {
               !x[R] && (x[R] = []);
               for (var D = x[R].length, C = 0, I = 0; I < D; ++I) A.indexOf(x[R][I]) >= 0 && ++C;
@@ -4071,6 +4070,7 @@
                 break
               }
             }
+          }
         }
         null !== P && (S[P = P.toString()] = !0, A.push(P))
       }
@@ -4277,38 +4277,39 @@
                   pos: f
                 }, n)), n.abortEarly)) return o;
               break
-            } if (!h) {
-            var w = !!n.stripUnknown && (!0 === n.stripUnknown || !!n.stripUnknown.arrays);
-            b = u.length;
-            for (var E = 0; E < b; ++E) {
-              var x = u[E],
-                j = s.indexOf(x);
-              if (-1 !== j) g = m[j];
-              else if (!(g = x._validate(p, d, n)).errors) {
-                x._flags.strip ? (a.fastSplice(e, f), --f, --l) : this._flags.sparse || void 0 !== g.value ? e[f] = g.value : (o.push(this.createError("array.sparse", null, {
-                  key: r.key,
-                  path: d.path,
-                  pos: f
-                }, n)), i = !0), h = !0;
-                break
-              }
-              if (1 === b) {
-                if (w) {
-                  a.fastSplice(e, f), --f, --l, h = !0;
-                  break
-                }
-                if (o.push(this.createError(t ? "array.includesOne" : "array.includesOneSingle", {
-                    pos: f,
-                    reason: g.errors,
-                    value: p
-                  }, {
-                    key: r.key,
-                    path: d.path
-                  }, n)), i = !0, n.abortEarly) return o;
-                break
-              }
+            } if (h) continue;
+          var w = !!n.stripUnknown && (!0 === n.stripUnknown || !!n.stripUnknown.arrays);
+          b = u.length;
+          for (var E = 0; E < b; ++E) {
+            var x = u[E],
+              j = s.indexOf(x);
+            if (-1 !== j) g = m[j];
+            else if (!(g = x._validate(p, d, n)).errors) {
+              x._flags.strip ? (a.fastSplice(e, f), --f, --l) : this._flags.sparse || void 0 !== g.value ? e[f] = g.value : (o.push(this.createError("array.sparse", null, {
+                key: r.key,
+                path: d.path,
+                pos: f
+              }, n)), i = !0), h = !0;
+              break
             }
-            if (!i && this._inner.inclusions.length && !h) {
+            if (1 === b) {
+              if (w) {
+                a.fastSplice(e, f), --f, --l, h = !0;
+                break
+              }
+              if (o.push(this.createError(t ? "array.includesOne" : "array.includesOneSingle", {
+                  pos: f,
+                  reason: g.errors,
+                  value: p
+                }, {
+                  key: r.key,
+                  path: d.path
+                }, n)), i = !0, n.abortEarly) return o;
+              break
+            }
+          }
+          if (!i) {
+            if (this._inner.inclusions.length && !h) {
               if (w) {
                 a.fastSplice(e, f), --f, --l;
                 continue

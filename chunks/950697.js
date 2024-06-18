@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  ReflectionTypeCheck: function() {
+n.d(t, {
+  Z: function() {
     return a
   }
 });
-var r = n("36056"),
-  i = n("350508");
+var r = n(36056),
+  i = n(350508);
 class a {
   constructor(e) {
     var t;
@@ -45,7 +45,7 @@ class a {
     if (t < 1) return !0;
     for (let r of a.oneofs) {
       let a = e[r];
-      if (!(0, i.isOneofGroup)(a)) return !1;
+      if (!(0, i.Li)(a)) return !1;
       if (void 0 === a.oneofKind) continue;
       let o = this.fields.find(e => e.localName === a.oneofKind);
       if (!o || !this.field(a[a.oneofKind], o, n, t)) return !1
@@ -63,8 +63,8 @@ class a {
         return this.scalar(e, t.T, t.L);
       case "enum":
         if (void 0 === e) return t.opt;
-        if (a) return this.scalars(e, r.ScalarType.INT32, i);
-        return this.scalar(e, r.ScalarType.INT32);
+        if (a) return this.scalars(e, r.wx.INT32, i);
+        return this.scalar(e, r.wx.INT32);
       case "message":
         if (void 0 === e) break;
         if (a) return this.messages(e, t.T(), n, i);
@@ -77,7 +77,7 @@ class a {
           case "scalar":
             return this.scalars(Object.values(e), t.V.T, i, t.V.L);
           case "enum":
-            return this.scalars(Object.values(e), r.ScalarType.INT32, i);
+            return this.scalars(Object.values(e), r.wx.INT32, i);
           case "message":
             return this.messages(Object.values(e), t.V.T(), n, i)
         }
@@ -101,27 +101,27 @@ class a {
   scalar(e, t, n) {
     let i = typeof e;
     switch (t) {
-      case r.ScalarType.UINT64:
-      case r.ScalarType.FIXED64:
-      case r.ScalarType.INT64:
-      case r.ScalarType.SFIXED64:
-      case r.ScalarType.SINT64:
+      case r.wx.UINT64:
+      case r.wx.FIXED64:
+      case r.wx.INT64:
+      case r.wx.SFIXED64:
+      case r.wx.SINT64:
         switch (n) {
-          case r.LongType.BIGINT:
+          case r.pz.BIGINT:
             return "bigint" == i;
-          case r.LongType.NUMBER:
+          case r.pz.NUMBER:
             return "number" == i && !isNaN(e);
           default:
             return "string" == i
         }
-      case r.ScalarType.BOOL:
+      case r.wx.BOOL:
         return "boolean" == i;
-      case r.ScalarType.STRING:
+      case r.wx.STRING:
         return "string" == i;
-      case r.ScalarType.BYTES:
+      case r.wx.BYTES:
         return e instanceof Uint8Array;
-      case r.ScalarType.DOUBLE:
-      case r.ScalarType.FLOAT:
+      case r.wx.DOUBLE:
+      case r.wx.FLOAT:
         return "number" == i && !isNaN(e);
       default:
         return "number" == i && Number.isInteger(e)
@@ -139,16 +139,16 @@ class a {
   mapKeys(e, t, n) {
     let i = Object.keys(e);
     switch (t) {
-      case r.ScalarType.INT32:
-      case r.ScalarType.FIXED32:
-      case r.ScalarType.SFIXED32:
-      case r.ScalarType.SINT32:
-      case r.ScalarType.UINT32:
+      case r.wx.INT32:
+      case r.wx.FIXED32:
+      case r.wx.SFIXED32:
+      case r.wx.SINT32:
+      case r.wx.UINT32:
         return this.scalars(i.slice(0, n).map(e => parseInt(e)), t, n);
-      case r.ScalarType.BOOL:
+      case r.wx.BOOL:
         return this.scalars(i.slice(0, n).map(e => "true" == e || "false" != e && e), t, n);
       default:
-        return this.scalars(i, t, n, r.LongType.STRING)
+        return this.scalars(i, t, n, r.pz.STRING)
     }
   }
 }

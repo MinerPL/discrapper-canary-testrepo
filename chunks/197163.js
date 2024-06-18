@@ -29,7 +29,9 @@ r = this, i = function(e) {
 
   function a(e, t, a, o) {
     var s = e + " ";
-    return 1 === e ? s + n(e, t, a[0], o) : t ? s + (r(e) ? i(a)[1] : i(a)[0]) : o ? s + i(a)[1] : s + (r(e) ? i(a)[1] : i(a)[2])
+    if (1 === e) return s + n(e, t, a[0], o);
+    if (t) return s + (r(e) ? i(a)[1] : i(a)[0]);
+    return o ? s + i(a)[1] : s + (r(e) ? i(a)[1] : i(a)[2])
   }
   return e.defineLocale("lt", {
     months: {
@@ -93,4 +95,4 @@ r = this, i = function(e) {
       doy: 4
     }
   })
-}, "object" == typeof t ? i(n("913527")) : "function" == typeof define && define.amd ? define(["../moment"], i) : i(r.moment)
+}, "object" == typeof t ? i(n(913527)) : "function" == typeof define && define.amd ? define(["../moment"], i) : i(r.moment)

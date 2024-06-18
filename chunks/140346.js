@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  StandAloneQuarterParser: function() {
+n.d(t, {
+  x: function() {
     return d
   }
 });
-var r = n("717029"),
-  i = n("846042");
+var r = n(717029),
+  i = n(846042);
 
 function a(e) {
   return (a = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
@@ -68,13 +68,10 @@ var d = function(e) {
     }
   }(), function() {
     var e, r = c(t);
-    if (n) {
-      var i = c(this).constructor;
-      e = Reflect.construct(r, arguments, i)
-    } else e = r.apply(this, arguments);
-    return function(e, t) {
-      return t && ("object" === a(t) || "function" == typeof t) ? t : u(e)
-    }(this, e)
+    return e = n ? Reflect.construct(r, arguments, c(this).constructor) : r.apply(this, arguments),
+      function(e, t) {
+        return t && ("object" === a(t) || "function" == typeof t) ? t : u(e)
+      }(this, e)
   });
 
   function h() {
@@ -91,7 +88,7 @@ var d = function(e) {
       switch (t) {
         case "q":
         case "qq":
-          return (0, i.parseNDigits)(t.length, e);
+          return (0, i.ZL)(t.length, e);
         case "qo":
           return n.ordinalNumber(e, {
             unit: "quarter"
@@ -132,5 +129,5 @@ var d = function(e) {
     value: function(e, t, n) {
       return e.setUTCMonth((n - 1) * 3, 1), e.setUTCHours(0, 0, 0, 0), e
     }
-  }], o(r.prototype, d), f && o(r, f), h
-}(r.Parser)
+  }], o(r.prototype, d), h
+}(r._)

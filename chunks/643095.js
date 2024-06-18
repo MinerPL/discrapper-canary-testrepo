@@ -1,55 +1,54 @@
 "use strict";
-l.r(t);
-var a, n, s, i = l("735250"),
-  r = l("470079"),
-  u = l("120356"),
-  o = l.n(u),
-  d = l("285952"),
-  c = l("287651");
+var l, s, a, i = n(735250),
+  r = n(470079),
+  o = n(120356),
+  u = n.n(o),
+  c = n(285952),
+  d = n(287651);
 
-function f(e, t, l) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: l,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = l, e
-}(a = n || (n = {})).WRAP = "wrap", a.STACK = "stack";
-class m extends(s = r.PureComponent) {
+  }) : e[t] = n, e
+}(l = s || (s = {})).WRAP = "wrap", l.STACK = "stack";
+class E extends(a = r.PureComponent) {
   renderChildren() {
     let e;
     let {
       children: t,
-      layout: l,
-      columns: a
+      layout: n,
+      columns: l
     } = this.props;
-    switch (l) {
+    switch (n) {
       case "stack":
         e = "100%";
         break;
       case "wrap":
-        e = "".concat(1 / a * 100, "%")
+        e = "".concat(1 / l * 100, "%")
     }
-    return t.map((t, l) => (0, i.jsx)(d.default.Child, {
-      className: c.tile,
+    return t.map((t, n) => (0, i.jsx)(c.Z.Child, {
+      className: d.tile,
       basis: e,
       grow: 0,
       children: t
-    }, l))
+    }, n))
   }
   render() {
     let {
       className: e
     } = this.props;
-    return (0, i.jsx)(d.default, {
-      className: o()(e, c.grid),
-      wrap: d.default.Wrap.WRAP,
+    return (0, i.jsx)(c.Z, {
+      className: u()(e, d.grid),
+      wrap: c.Z.Wrap.WRAP,
       children: this.renderChildren()
     })
   }
 }
-f(m, "Layout", n), f(m, "defaultProps", {
+m(E, "Layout", s), m(E, "defaultProps", {
   children: [],
   layout: "wrap",
   columns: 4
-}), t.default = m
+}), t.Z = E

@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  isStaffTeenSafetyAssistAgeBypass: function() {
+n.d(t, {
+  Sx: function() {
     return r
   },
-  useStaffTeenSafetyAssistAgeBypass: function() {
+  zL: function() {
     return s
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2023-10_staff_teen_safety_assist_age_bypass",
   label: "Staff Teen Safety Assist Age Bypass",

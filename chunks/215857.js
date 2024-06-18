@@ -1,6 +1,6 @@
 "use strict";
-n.r(t), n.d(t, {
-  OptionsReader: function() {
+n.d(t, {
+  r: function() {
     return a
   }
 });
@@ -45,5 +45,5 @@ var a = function() {
       var e;
       return (null === (e = this.optionsArgs) || void 0 === e ? void 0 : e.rootElement) || this.window
     }
-  }], r(e.prototype, t), n && r(e, n), a
+  }], r(e.prototype, t), a
 }()

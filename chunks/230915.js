@@ -7,16 +7,13 @@ function n(e) {
     return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
   })(e)
 }
-Object.defineProperty(t, "__esModule", {
-  value: !0
-});
 var r, i = "https://js.stripe.com/v3",
   a = /^https:\/\/js\.stripe\.com\/v3\/?(\?.*)?$/,
   o = "loadStripe.setLoadParameters was called but an existing Stripe.js script already exists in the document; existing script parameters will be used",
   s = function() {
     for (var e = document.querySelectorAll('script[src^="'.concat(i, '"]')), t = 0; t < e.length; t++) {
       var n = e[t];
-      if (a.test(n.src)) return n
+      if (!!a.test(n.src)) return n
     }
     return null
   },
@@ -29,7 +26,7 @@ var r, i = "https://js.stripe.com/v3",
     return r.appendChild(n), n
   },
   c = function(e, t) {
-    e && e._registerWrapper && e._registerWrapper({
+    if (!!e && !!e._registerWrapper) e._registerWrapper({
       name: "stripe-js",
       version: "3.3.0",
       startTime: t

@@ -1,38 +1,41 @@
 "use strict";
-n.r(t), n("47120"), n("653041");
-var i = n("913527"),
+n(47120), n(653041);
+var i = n(913527),
   r = n.n(i),
-  s = n("627420"),
-  a = n("375964"),
-  o = n.n(a),
-  l = n("924658"),
+  s = n(627420),
+  o = n(375964),
+  a = n.n(o),
+  l = n(924658),
   u = n.n(l),
-  d = n("539590"),
-  _ = n.n(d);
+  _ = n(539590),
+  d = n.n(_);
 let c = e => ({
     ...u(),
-    ..._(),
+    ...d(),
     ...e
   }),
-  E = new s.default({
-    getMessages: e => "en-US" === e ? c(o()) : n("594802")("./messages/".concat(e, ".jsona").replace("./messages/", "./")).then(e => {
-      let {
-        default: t
-      } = e;
-      return t
-    }).then(c),
-    getLanguages: () => n("515297")
+  E = new s.ZP({
+    getMessages: e => {
+      if ("en-US" === e) return c(a());
+      return n(385007)("./".concat(e, ".jsona")).then(e => {
+        let {
+          default: t
+        } = e;
+        return t
+      }).then(c)
+    },
+    getLanguages: () => n(515297)
   });
 
 function I(e) {
-  n("763747").dateFnsLocales[e]().then(t => {
+  n(763747).q[e]().then(t => {
     let {
       default: i
     } = t;
     {
       let {
         registerLocale: t
-      } = n("217379");
+      } = n(578807);
       t(e, i)
     }
   })
@@ -46,8 +49,9 @@ E.addListener("locale", e => {
   }(e, "en-US");
   let {
     setTags: t
-  } = n("960048").default;
+  } = n(960048).Z;
   t({
     locale: e
   })
-}), E.addListener("locale", I), I(E.getLocale()), t.default = E
+});
+E.addListener("locale", I), I(E.getLocale()), t.Z = E

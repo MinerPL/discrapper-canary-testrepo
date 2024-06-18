@@ -1,22 +1,21 @@
 "use strict";
-s.r(t);
-var a = s("442837"),
-  l = s("570140");
-let n = {};
-class i extends a.default.Store {
+var n = t(442837),
+  i = t(570140);
+let l = {};
+class a extends n.ZP.Store {
   hasFetched(e) {
-    return null != n[e]
+    return null != l[e]
   }
   getTopChannelIds(e) {
-    return "874345844743213126" === e ? ["1041887225819955252", "985996080107892776", "1035280727610241166"] : n[e]
+    return "874345844743213126" === e ? ["1041887225819955252", "985996080107892776", "1035280727610241166"] : l[e]
   }
 }
-t.default = new i(l.default, {
+s.Z = new a(i.Z, {
   GUILD_TOP_READ_CHANNELS_FETCH_SUCCESS: function(e) {
     let {
-      guildId: t,
-      topChannelIds: s
+      guildId: s,
+      topChannelIds: t
     } = e;
-    n[t] = s
+    l[s] = t
   }
 })

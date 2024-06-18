@@ -1,36 +1,36 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return d
+n.d(t, {
+  Z: function() {
+    return _
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
-  o = n("481060"),
-  l = n("189798"),
-  u = n("179753");
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(481060),
+  l = n(189798),
+  u = n(237987);
 
-function d(e) {
+function _(e) {
   let {
     children: t,
     size: n = 16,
     className: s,
-    flowerStarClassName: d,
-    ..._
-  } = e, c = r.Children.only(t), E = (0, o.useRedesignIconContext)().enabled;
+    flowerStarClassName: _,
+    ...d
+  } = e, c = r.Children.only(t), E = (0, a.useRedesignIconContext)().enabled;
   return (0, i.jsxs)("div", {
-    className: a()(u.flowerStarContainer, s),
+    className: o()(u.flowerStarContainer, s),
     style: {
       width: n,
       height: n
     },
-    children: [(0, i.jsx)(l.default, {
-      ..._,
-      className: a()(d, u.flowerStar)
+    children: [(0, i.jsx)(l.Z, {
+      ...d,
+      className: o()(_, u.flowerStar)
     }), (0, i.jsx)("div", {
-      className: a()(u.childContainer, {
+      className: o()(u.childContainer, {
         [u.redesignIconChildContainer]: E
       }),
       children: c

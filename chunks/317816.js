@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  getGenshinUserSignupExperiment: function() {
+n.d(t, {
+  v: function() {
     return r
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-04_genshin_user_signup",
   label: "Genshin User Signup",

@@ -1,5 +1,5 @@
 "use strict";
-var n = r("381538");
+var n = r(381538);
 
 function i() {
   return (i = n || function(t) {
@@ -32,17 +32,17 @@ function a(t, e, r) {
     writable: !0
   }) : t[e] = r, t
 }
-var u = r("428374"),
-  s = r("297326"),
-  c = r("470079"),
-  l = r("1231"),
-  f = r("292489"),
-  p = r("675411"),
-  h = r("685536"),
-  d = r("126502"),
-  g = r("65183"),
-  y = r("581079"),
-  v = r("822274");
+var u = r(428374),
+  s = r(297326),
+  c = r(470079),
+  l = r(1231),
+  f = r(292489),
+  p = r(675411),
+  h = r(685536),
+  d = r(126502),
+  g = r(65183),
+  y = r(581079),
+  v = r(822274);
 g.List;
 var m = function(t, e) {
     return t.getAnchorKey() === e || t.getFocusKey() === e
@@ -130,20 +130,19 @@ var m = function(t, e) {
     }, g.componentDidMount = function() {
       var t, e = this.props.selection,
         r = e.getEndKey();
-      if (!!e.getHasFocus() && r === this.props.block.getKey()) {
-        var n = this.wrapperRef.current;
-        if (n) {
-          var i = f.getScrollParent(n),
-            o = h(i);
-          if (i === window) {
-            var a = p(n),
-              u = a.y + a.height;
-            (t = u - d().height) > 0 && window.scrollTo(o.x, o.y + t + 10)
-          } else {
-            v(n) || y(!1);
-            var s = n.offsetHeight + n.offsetTop;
-            (t = s - (i.offsetHeight + o.y)) > 0 && l.setTop(i, l.getTop(i) + t + 10)
-          }
+      if (!e.getHasFocus() || r !== this.props.block.getKey()) return;
+      var n = this.wrapperRef.current;
+      if (!!n) {
+        var i = f.getScrollParent(n),
+          o = h(i);
+        if (i === window) {
+          var a = p(n),
+            u = a.y + a.height;
+          (t = u - d().height) > 0 && window.scrollTo(o.x, o.y + t + 10)
+        } else {
+          v(n) || y(!1);
+          var s = n.offsetHeight + n.offsetTop;
+          (t = s - (i.offsetHeight + o.y)) > 0 && l.setTop(i, l.getTop(i) + t + 10)
         }
       }
     }, g.render = function() {

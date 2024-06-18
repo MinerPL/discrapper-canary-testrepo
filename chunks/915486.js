@@ -1,26 +1,27 @@
 "use strict";
-n.r(t), n.d(t, {
-  addBit: function() {
-    return r
-  },
-  hasBit: function() {
-    return i
-  },
-  isSerializedUint8Array: function() {
-    return o
-  },
-  isUint8Array: function() {
+n.d(t, {
+  Bx: function() {
     return a
   },
-  removeBit: function() {
+  GV: function() {
+    return r
+  },
+  jl: function() {
+    return i
+  },
+  jx: function() {
     return s
+  },
+  lq: function() {
+    return o
   }
-}), n("518263"), n("970173"), n("520712"), n("268111"), n("941497"), n("32026"), n("480839"), n("744285"), n("492257"), n("873817");
+}), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817);
 
 function i(e, t) {
   if (0 === e.length) return !1;
-  let n = e[Math.floor(t / 8)];
-  return (n & 1 << t % 8) != 0
+  let n = Math.floor(t / 8),
+    i = e[n];
+  return (i & 1 << t % 8) != 0
 }
 
 function r(e, t) {
@@ -41,10 +42,10 @@ function s(e, t) {
   return e
 }
 
-function a(e) {
+function o(e) {
   return e instanceof Uint8Array
 }
 
-function o(e) {
+function a(e) {
   return null != e && "object" == typeof e && "uint8array" === e.__tag__
 }

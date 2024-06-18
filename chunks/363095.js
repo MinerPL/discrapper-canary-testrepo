@@ -1,6 +1,6 @@
 "use strict";
-var r = n("546299"),
-  i = n("21841");
+var r = n(546299),
+  i = n(21841);
 
 function a(e, t, n) {
   if (!(this instanceof a)) return new a(e, t, n);

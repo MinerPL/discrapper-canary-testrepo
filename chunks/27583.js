@@ -1,13 +1,13 @@
 "use strict";
-n.r(e), n.d(e, {
-  getNavigationEntry: function() {
-    return a
+n.d(e, {
+  W: function() {
+    return s
   }
 });
-var r = n("607190");
+var r = n(607190);
 let i = () => {
-    let t = r.WINDOW.performance.timing,
-      e = r.WINDOW.performance.navigation.type,
+    let t = r.m.performance.timing,
+      e = r.m.performance.navigation.type,
       n = {
         entryType: "navigation",
         startTime: 0,
@@ -16,4 +16,4 @@ let i = () => {
     for (let e in t) "navigationStart" !== e && "toJSON" !== e && (n[e] = Math.max(t[e] - t.navigationStart, 0));
     return n
   },
-  a = () => r.WINDOW.__WEB_VITALS_POLYFILL__ ? r.WINDOW.performance && (performance.getEntriesByType && performance.getEntriesByType("navigation")[0] || i()) : r.WINDOW.performance && performance.getEntriesByType && performance.getEntriesByType("navigation")[0]
+  s = () => r.m.__WEB_VITALS_POLYFILL__ ? r.m.performance && (performance.getEntriesByType && performance.getEntriesByType("navigation")[0] || i()) : r.m.performance && performance.getEntriesByType && performance.getEntriesByType("navigation")[0]

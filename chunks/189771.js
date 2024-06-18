@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return o
+n.d(t, {
+  Z: function() {
+    return a
   },
-  getVideoPermission: function() {
+  y: function() {
     return l
   }
 });
-var i = n("442837"),
-  r = n("102172"),
-  s = n("430824"),
-  a = n("496675");
+var i = n(442837),
+  r = n(102172),
+  s = n(430824),
+  o = n(496675);
 
-function o(e) {
-  return (0, i.useStateFromStores)([s.default, a.default], () => e.isPrivate() || (0, r.canStreamInChannel)(e, s.default, a.default, !1), [e])
+function a(e) {
+  return (0, i.e7)([s.Z, o.Z], () => e.isPrivate() || (0, r.JL)(e, s.Z, o.Z, !1), [e])
 }
 
 function l(e) {
-  return e.isPrivate() || (0, r.canStreamInChannel)(e, s.default, a.default, !1)
+  return e.isPrivate() || (0, r.JL)(e, s.Z, o.Z, !1)
 }

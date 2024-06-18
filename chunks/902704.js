@@ -6,25 +6,25 @@ function i(e, t, n, i) {
   let r = Object.keys(e),
     s = Object.keys(t);
   if (r.length !== s.length) return null != i && i("shallowEqual: unequal key lengths ".concat(r.length, " !=== ").concat(s.length)), !1;
-  let a = [];
+  let o = [];
   for (let s = 0; s < r.length; s++) {
-    let o = r[s];
-    if (e[o] !== t[o] && (null == n || !n.includes(o))) {
+    let a = r[s];
+    if (e[a] !== t[a] && (null == n || !n.includes(a))) {
       if (null == i) return !1;
-      a.push(o)
+      o.push(a)
     }
   }
-  return null != i && a.length > 0 && i("shallowEqual: unequal keys: ".concat(a.join(", "))), 0 === a.length
+  return null != i && o.length > 0 && i("shallowEqual: unequal keys: ".concat(o.join(", "))), 0 === o.length
 }
 
 function r(e, t) {
   return null != t && e.length === t.length && !e.some((e, n) => t[n] !== e)
 }
-n.r(t), n.d(t, {
-  areArraysShallowEqual: function() {
+n.d(t, {
+  E: function() {
     return r
   },
-  default: function() {
+  Z: function() {
     return i
   }
-}), n("653041")
+}), n(653041)

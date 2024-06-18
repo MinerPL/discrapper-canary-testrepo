@@ -1,93 +1,93 @@
 "use strict";
-n.r(t), n.d(t, {
-  serializeDescendant: function() {
+n.d(t, {
+  sg: function() {
     return S
   },
-  toTextValue: function() {
+  sk: function() {
     return T
   }
-}), n("47120"), n("653041"), n("757143");
-var i = n("512722"),
+}), n(47120), n(653041), n(757143);
+var i = n(512722),
   r = n.n(i),
-  s = n("933557"),
-  a = n("660199"),
-  o = n("763296"),
-  l = n("592125"),
-  u = n("430824"),
-  d = n("699516"),
-  _ = n("914010"),
-  c = n("594174"),
-  E = n("51144"),
-  I = n("887490");
+  s = n(933557),
+  o = n(660199),
+  a = n(763296),
+  l = n(592125),
+  u = n(430824),
+  _ = n(699516),
+  d = n(914010),
+  c = n(594174),
+  E = n(51144),
+  I = n(887490);
 
 function T(e, t) {
   let {
     mode: n,
     ignoreTrailingEmptyNodes: i,
     preventEmojiSurrogates: r
-  } = null != t ? t : {}, [s, a] = (null == t ? void 0 : t.range) != null ? I.RangeUtils.edges(t.range) : [void 0, void 0];
-  return f(e, {
+  } = null != t ? t : {}, [s, o] = (null == t ? void 0 : t.range) != null ? I.M8.edges(t.range) : [void 0, void 0];
+  return h(e, {
     mode: n,
     start: s,
-    end: a,
+    end: o,
     ignoreTrailingEmptyNodes: i,
     preventEmojiSurrogates: r
   })
 }
 
-function f(e, t) {
+function h(e, t) {
   var n, i;
   let {
     mode: r,
     start: s,
-    end: a,
-    separator: o,
+    end: o,
+    separator: a,
     ignoreEmptyNodes: l,
     ignoreTrailingEmptyNodes: u,
-    preventEmojiSurrogates: d
-  } = null != t ? t : {}, _ = e.length > 0 && !I.TextUtils.isText(e[0]);
-  null == o && (o = _ ? "\n" : "");
+    preventEmojiSurrogates: _
+  } = null != t ? t : {}, d = e.length > 0 && !I.LC.isText(e[0]);
+  null == a && (a = d ? "\n" : "");
   let c = null !== (n = null == s ? void 0 : s.path[0]) && void 0 !== n ? n : 0,
-    E = null !== (i = null == a ? void 0 : a.path[0]) && void 0 !== i ? i : e.length - 1;
+    E = null !== (i = null == o ? void 0 : o.path[0]) && void 0 !== i ? i : e.length - 1;
   if (u)
     for (let t = E; t >= c; t--) {
       let n = e[t];
-      if (I.TextUtils.isText(n)) {
+      if (I.LC.isText(n)) {
         if (n.text.length > 0) {
           E = t;
           break
         }
-      } else if (!I.ElementUtils.isEmpty(n)) {
+      } else if (!I.q.isEmpty(n)) {
         E = t;
         break
       }
       if (t === c) return ""
     }
-  let T = c > 0 && I.NodeUtils.isType(e[c - 1], "blockQuote"),
-    f = I.NodeUtils.isType(e[c], "blockQuote"),
-    h = I.NodeUtils.isType(e[E], "blockQuote"),
-    A = [];
+  let T = c > 0 && I.aj.isType(e[c - 1], "blockQuote"),
+    h = I.aj.isType(e[c], "blockQuote"),
+    f = I.aj.isType(e[E], "blockQuote"),
+    N = [];
   for (let t = c; t <= E; t++) {
     let n = e[t];
-    if (l && I.TextUtils.isText(n) && 0 === n.text.length) continue;
+    if (l && I.LC.isText(n) && 0 === n.text.length) continue;
     let i = null != s && t === c ? {
         path: s.path.slice(1),
         offset: s.offset
       } : void 0,
-      o = null != a && t === E ? {
-        path: a.path.slice(1),
-        offset: a.offset
+      a = null != o && t === E ? {
+        path: o.path.slice(1),
+        offset: o.offset
       } : void 0,
       u = S(n, {
         mode: r,
         start: i,
-        end: o,
-        allowBlockQuotePrefix: null == s || null == a || !T && (!f || h),
-        preventEmojiSurrogates: d
+        end: a,
+        allowBlockQuotePrefix: null == s || null == o || !T && (!h || f),
+        preventEmojiSurrogates: _
       });
-    (!l || u.length > 0) && A.push(u)
+    (!l || u.length > 0) && N.push(u)
   }
-  return A.join(o)
+  return N.join(a)
 }
 
 function S(e, t) {
@@ -97,22 +97,22 @@ function S(e, t) {
     allowBlockQuotePrefix: T = !1,
     preventEmojiSurrogates: S = !1
   } = null != t ? t : {};
-  if (I.TextUtils.isText(e)) return function(e, t) {
+  if (I.LC.isText(e)) return function(e, t) {
     var n, i;
     let {
       start: s,
-      end: a
+      end: o
     } = null != t ? t : {};
-    return r()(null == s || 0 === s.path.length, "Invalid start provided to serializeText"), r()(null == a || 0 === a.path.length, "Invalid end provided to serializeText"), e.substring(null !== (n = null == s ? void 0 : s.offset) && void 0 !== n ? n : 0, null !== (i = null == a ? void 0 : a.offset) && void 0 !== i ? i : e.length)
+    return r()(null == s || 0 === s.path.length, "Invalid start provided to serializeText"), r()(null == o || 0 === o.path.length, "Invalid end provided to serializeText"), e.substring(null !== (n = null == s ? void 0 : s.offset) && void 0 !== n ? n : 0, null !== (i = null == o ? void 0 : o.offset) && void 0 !== i ? i : e.length)
   }(e.text, t);
   switch (e.type) {
     case "line":
     case "testInline":
-      return f(e.children, t);
+      return h(e.children, t);
     case "testInlineVoid":
       return "";
     case "blockQuote": {
-      let n = f(e.children, t),
+      let n = h(e.children, t),
         r = null != i && 1 === i.path.length && 0 === i.path[0] && 0 === i.offset;
       if (T && (null == i || r)) return "> ".concat(n);
       return n
@@ -136,29 +136,29 @@ function S(e, t) {
     case "channelMention": {
       let t = "<#".concat(e.channelId, ">");
       if ("raw" === n) return t;
-      let i = l.default.getChannel(e.channelId);
+      let i = l.Z.getChannel(e.channelId);
       if (null == i) return t;
-      return (0, s.computeChannelName)(i, c.default, d.default, !0, !0)
+      return (0, s.F6)(i, c.default, _.Z, !0, !0)
     }
     case "soundboard": {
       let t = "<sound:".concat(e.soundId, ">");
       if ("raw" === n) return t;
-      let i = o.default.getSoundById(e.soundId);
+      let i = a.Z.getSoundById(e.soundId);
       if (null == i) return t;
       return i.name
     }
     case "staticRouteLink": {
       let t = "<id:".concat(e.channelId, ">");
       if ("raw" === n) return t;
-      let i = l.default.getChannel(e.channelId);
+      let i = l.Z.getChannel(e.channelId);
       if (null == i) return t;
-      return (0, s.computeChannelName)(i, c.default, d.default, !0, !0)
+      return (0, s.F6)(i, c.default, _.Z, !0, !0)
     }
     case "roleMention": {
       let t = "<@&".concat(e.roleId, ">");
       if ("raw" === n) return t;
-      let i = _.default.getGuildId(),
-        r = null != i ? u.default.getRole(i, e.roleId) : void 0;
+      let i = d.Z.getGuildId(),
+        r = null != i ? u.Z.getRole(i, e.roleId) : void 0;
       if (null == r) return t;
       return "@".concat(r.name)
     }
@@ -167,22 +167,22 @@ function S(e, t) {
       if ("raw" === n) return t;
       let i = c.default.getUser(e.userId);
       if (null == i) return t;
-      return "@".concat(E.default.getUserTag(i, {
+      return "@".concat(E.ZP.getUserTag(i, {
         decoration: "never"
       }))
     }
     case "commandMention":
       return "</".concat(e.commandName, ":").concat(e.commandId, ">");
     case "timestamp":
-      return (0, a.unparseTimestamp)(e.parsed.timestamp, e.parsed.format);
+      return (0, o.He)(e.parsed.timestamp, e.parsed.format);
     case "applicationCommand":
-      return f(e.children, {
+      return h(e.children, {
         ...t,
         separator: " ",
         ignoreEmptyNodes: !0
       });
     case "applicationCommandOption": {
-      let n = f(e.children, t);
+      let n = h(e.children, t);
       if (null == i) return "".concat(e.optionDisplayName, ":").concat(n);
       return n
     }

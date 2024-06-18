@@ -1,204 +1,204 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return M
+t.d(s, {
+  Z: function() {
+    return f
   }
 });
-var a = s("735250"),
-  l = s("470079"),
-  n = s("803997"),
-  i = s.n(n),
-  r = s("442837"),
-  o = s("524437"),
-  d = s("481060"),
-  u = s("605236"),
-  c = s("621923"),
-  E = s("996753"),
-  _ = s("999382"),
-  I = s("743475"),
-  T = s("983135"),
-  S = s("570961"),
-  f = s("208665"),
-  m = s("359191"),
-  N = s("84658"),
-  g = s("142961"),
-  h = s("729311"),
-  C = s("850864"),
-  R = s("729995"),
-  x = s("966301"),
-  L = s("707076"),
-  O = s("213956"),
-  A = s("689938"),
-  p = s("341335");
+var n = t(735250),
+  i = t(470079),
+  l = t(120356),
+  a = t.n(l),
+  r = t(442837),
+  o = t(704215),
+  c = t(481060),
+  d = t(605236),
+  u = t(621923),
+  E = t(996753),
+  _ = t(999382),
+  I = t(743475),
+  T = t(983135),
+  N = t(570961),
+  m = t(208665),
+  S = t(359191),
+  h = t(84658),
+  g = t(142961),
+  x = t(729311),
+  C = t(850864),
+  R = t(729995),
+  L = t(966301),
+  O = t(707076),
+  A = t(213956),
+  p = t(689938),
+  M = t(631691);
 
-function M() {
-  let e = (0, r.useStateFromStores)([_.default], () => _.default.getGuildId());
-  return null == e ? null : (0, a.jsx)(D, {
+function f() {
+  let e = (0, r.e7)([_.Z], () => _.Z.getGuildId());
+  return null == e ? null : (0, n.jsx)(v, {
     guildId: e
   })
 }
 
-function D(e) {
-  let t, {
-      guildId: s
+function v(e) {
+  let s, {
+      guildId: t
     } = e,
-    n = (0, r.useStateFromStores)([m.default], () => m.default.getCurrentPage()),
-    _ = (0, r.useStateFromStores)([m.default], () => {
-      let e = (0, N.pageToEducationUpsellType)(n);
-      return null != e && !m.default.isEducationUpsellDismissed(e)
+    l = (0, r.e7)([S.Z], () => S.Z.getCurrentPage()),
+    _ = (0, r.e7)([S.Z], () => {
+      let e = (0, h.lg)(l);
+      return null != e && !S.Z.isEducationUpsellDismissed(e)
     }),
-    f = (0, g.default)(s),
-    M = !f && _,
+    m = (0, g.Z)(t),
+    f = !m && _,
     {
-      homeSettingsEnabled: D
-    } = (0, c.useOnboardingHomeAdminExperiment)(s);
-  switch (l.useEffect(() => {
-      (0, u.markDismissibleContentAsDismissed)(o.DismissibleContent.COMMUNITY_ONBOARDING_NEW_BADGE)
-    }, []), n) {
-    case N.GuildSettingsOnboardingPage.LANDING:
-      t = f ? (0, a.jsx)(R.default, {
+      homeSettingsEnabled: v
+    } = (0, u.kZ)(t);
+  switch (i.useEffect(() => {
+      (0, d.EW)(o.z.COMMUNITY_ONBOARDING_NEW_BADGE)
+    }, []), l) {
+    case h.PG.LANDING:
+      s = m ? (0, n.jsx)(R.Z, {
         completed: !0,
-        guildId: s
-      }) : (0, a.jsx)(L.default, {});
+        guildId: t
+      }) : (0, n.jsx)(O.Z, {});
       break;
-    case N.GuildSettingsOnboardingPage.SAFETY_CHECK:
-      t = (0, a.jsx)(O.default, {
+    case h.PG.SAFETY_CHECK:
+      s = (0, n.jsx)(A.Z, {
         hideChangelog: !0
       });
       break;
-    case N.GuildSettingsOnboardingPage.DEFAULT_CHANNELS:
-      t = (0, a.jsx)(h.default, {
-        saveOnClose: !f
+    case h.PG.DEFAULT_CHANNELS:
+      s = (0, n.jsx)(x.Z, {
+        saveOnClose: !m
       });
       break;
-    case N.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS:
-      t = (0, a.jsx)(x.default, {
-        saveOnClose: !f
+    case h.PG.CUSTOMIZATION_QUESTIONS:
+      s = (0, n.jsx)(L.ZP, {
+        saveOnClose: !m
       });
       break;
-    case N.GuildSettingsOnboardingPage.HOME_SETTINGS:
-      t = (0, a.jsx)(C.default, {
-        saveOnClose: !f
+    case h.PG.HOME_SETTINGS:
+      s = (0, n.jsx)(C.Z, {
+        saveOnClose: !m
       });
       break;
-    case N.GuildSettingsOnboardingPage.REVIEW:
-      t = (0, a.jsx)(R.default, {
-        completed: f,
-        guildId: s
+    case h.PG.REVIEW:
+      s = (0, n.jsx)(R.Z, {
+        completed: m,
+        guildId: t
       })
   }
-  return (0, a.jsxs)("div", {
-    className: i()(p.onboardingContainer, {
-      [p.upsellOnTop]: M
+  return (0, n.jsxs)("div", {
+    className: a()(M.onboardingContainer, {
+      [M.upsellOnTop]: f
     }),
-    children: [!f && n !== N.GuildSettingsOnboardingPage.LANDING && (0, a.jsx)(v, {
-      setOnboardingStep: T.setOnboardingStep,
-      page: n,
-      homeSettingsEnabled: D
-    }), f && n !== N.GuildSettingsOnboardingPage.LANDING && (0, a.jsx)("div", {
-      children: (0, a.jsxs)(d.Button, {
-        innerClassName: p.backButton,
-        look: d.Button.Looks.BLANK,
-        size: d.Button.Sizes.MIN,
+    children: [!m && l !== h.PG.LANDING && (0, n.jsx)(D, {
+      setOnboardingStep: T.$K,
+      page: l,
+      homeSettingsEnabled: v
+    }), m && l !== h.PG.LANDING && (0, n.jsx)("div", {
+      children: (0, n.jsxs)(c.Button, {
+        innerClassName: M.backButton,
+        look: c.Button.Looks.BLANK,
+        size: c.Button.Sizes.MIN,
         onClick: () => {
-          (0, S.resetGuildOnboardingPrompts)(), (0, I.resetDefaultChannels)(), (0, T.setOnboardingStep)(N.GuildSettingsOnboardingPage.LANDING)
+          (0, N.NB)(), (0, I.BG)(), (0, T.$K)(h.PG.LANDING)
         },
-        children: [(0, a.jsx)(E.default, {
-          className: p.arrow,
-          direction: E.default.Directions.LEFT
-        }), (0, a.jsx)(d.Text, {
+        children: [(0, n.jsx)(E.Z, {
+          className: M.arrow,
+          direction: E.Z.Directions.LEFT
+        }), (0, n.jsx)(c.Text, {
           variant: "text-sm/semibold",
           color: "interactive-normal",
-          children: A.default.Messages.BACK
+          children: p.Z.Messages.BACK
         })]
       })
-    }), (0, a.jsx)("div", {
-      children: t
+    }), (0, n.jsx)("div", {
+      children: s
     })]
   })
 }
 
-function v(e) {
+function D(e) {
   let {
-    page: t,
-    setOnboardingStep: s,
-    homeSettingsEnabled: l
-  } = e, n = (0, r.useStateFromStores)([m.default], () => m.default.hasErrors()), o = e => {
-    if (!n) return () => s(e)
-  }, u = (0, r.useStateFromStores)([f.default], () => f.default.advancedMode);
-  return (0, a.jsxs)("div", {
-    className: p.progressContainer,
-    children: [(0, a.jsxs)(d.Clickable, {
-      className: i()(p.progressBarContainer, p.clickableProgressBar),
-      onClick: o(N.GuildSettingsOnboardingPage.SAFETY_CHECK),
-      children: [(0, a.jsx)("div", {
-        className: i()(p.progressBar, {
-          [p.progressBarCurrent]: t === N.GuildSettingsOnboardingPage.SAFETY_CHECK
+    page: s,
+    setOnboardingStep: t,
+    homeSettingsEnabled: i
+  } = e, l = (0, r.e7)([S.Z], () => S.Z.hasErrors()), o = e => {
+    if (!l) return () => t(e)
+  }, d = (0, r.e7)([m.Z], () => m.Z.advancedMode);
+  return (0, n.jsxs)("div", {
+    className: M.progressContainer,
+    children: [(0, n.jsxs)(c.Clickable, {
+      className: a()(M.progressBarContainer, M.clickableProgressBar),
+      onClick: o(h.PG.SAFETY_CHECK),
+      children: [(0, n.jsx)("div", {
+        className: a()(M.progressBar, {
+          [M.progressBarCurrent]: s === h.PG.SAFETY_CHECK
         })
-      }), (0, a.jsx)(d.Text, {
-        color: t === N.GuildSettingsOnboardingPage.SAFETY_CHECK ? "text-brand" : "text-muted",
+      }), (0, n.jsx)(c.Text, {
+        color: s === h.PG.SAFETY_CHECK ? "text-brand" : "text-muted",
         variant: "text-xs/medium",
-        children: A.default.Messages.GUILD_ONBOARDING_SETUP_STEP_SAFETY.format({
+        children: p.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_SAFETY.format({
           stepNumber: 1
         })
       })]
-    }), (0, a.jsxs)(d.Clickable, {
-      className: i()(p.progressBarContainer, p.clickableProgressBar),
-      onClick: o(N.GuildSettingsOnboardingPage.DEFAULT_CHANNELS),
-      children: [(0, a.jsx)("div", {
-        className: i()(p.progressBar, {
-          [p.progressBarCurrent]: t === N.GuildSettingsOnboardingPage.DEFAULT_CHANNELS
+    }), (0, n.jsxs)(c.Clickable, {
+      className: a()(M.progressBarContainer, M.clickableProgressBar),
+      onClick: o(h.PG.DEFAULT_CHANNELS),
+      children: [(0, n.jsx)("div", {
+        className: a()(M.progressBar, {
+          [M.progressBarCurrent]: s === h.PG.DEFAULT_CHANNELS
         })
-      }), (0, a.jsx)(d.Text, {
-        color: t === N.GuildSettingsOnboardingPage.DEFAULT_CHANNELS ? "text-brand" : "text-muted",
+      }), (0, n.jsx)(c.Text, {
+        color: s === h.PG.DEFAULT_CHANNELS ? "text-brand" : "text-muted",
         variant: "text-xs/medium",
-        children: u ? A.default.Messages.GUILD_ONBOARDING_SETUP_STEP_CHANNELS_ADVANCED.format({
+        children: d ? p.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_CHANNELS_ADVANCED.format({
           stepNumber: 2
-        }) : A.default.Messages.GUILD_ONBOARDING_SETUP_STEP_CHANNELS.format({
+        }) : p.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_CHANNELS.format({
           stepNumber: 2
         })
       })]
-    }), (0, a.jsxs)(d.Clickable, {
-      className: i()(p.progressBarContainer, p.clickableProgressBar),
-      onClick: o(N.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS),
-      children: [(0, a.jsx)("div", {
-        className: i()(p.progressBar, {
-          [p.progressBarCurrent]: t === N.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS
+    }), (0, n.jsxs)(c.Clickable, {
+      className: a()(M.progressBarContainer, M.clickableProgressBar),
+      onClick: o(h.PG.CUSTOMIZATION_QUESTIONS),
+      children: [(0, n.jsx)("div", {
+        className: a()(M.progressBar, {
+          [M.progressBarCurrent]: s === h.PG.CUSTOMIZATION_QUESTIONS
         })
-      }), (0, a.jsx)(d.Text, {
-        color: t === N.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS ? "text-brand" : "text-muted",
+      }), (0, n.jsx)(c.Text, {
+        color: s === h.PG.CUSTOMIZATION_QUESTIONS ? "text-brand" : "text-muted",
         variant: "text-xs/medium",
-        children: u ? A.default.Messages.GUILD_ONBOARDING_SETUP_STEP_PROMPTS_ADVANCED.format({
+        children: d ? p.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_PROMPTS_ADVANCED.format({
           stepNumber: 3
-        }) : A.default.Messages.GUILD_ONBOARDING_SETUP_STEP_PROMPTS.format({
+        }) : p.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_PROMPTS.format({
           stepNumber: 3
         })
       })]
-    }), l && (0, a.jsxs)(d.Clickable, {
-      className: i()(p.progressBarContainer, p.clickableProgressBar),
-      onClick: o(N.GuildSettingsOnboardingPage.HOME_SETTINGS),
-      children: [(0, a.jsx)("div", {
-        className: i()(p.progressBar, {
-          [p.progressBarCurrent]: t === N.GuildSettingsOnboardingPage.HOME_SETTINGS
+    }), i && (0, n.jsxs)(c.Clickable, {
+      className: a()(M.progressBarContainer, M.clickableProgressBar),
+      onClick: o(h.PG.HOME_SETTINGS),
+      children: [(0, n.jsx)("div", {
+        className: a()(M.progressBar, {
+          [M.progressBarCurrent]: s === h.PG.HOME_SETTINGS
         })
-      }), (0, a.jsx)(d.Text, {
-        color: t === N.GuildSettingsOnboardingPage.HOME_SETTINGS ? "text-brand" : "text-muted",
+      }), (0, n.jsx)(c.Text, {
+        color: s === h.PG.HOME_SETTINGS ? "text-brand" : "text-muted",
         variant: "text-xs/medium",
-        children: A.default.Messages.GUILD_ONBOARDING_SETUP_STEP_HOME.format({
+        children: p.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_HOME.format({
           stepNumber: 4
         })
       })]
-    }), (0, a.jsxs)("div", {
-      className: p.progressBarContainer,
-      children: [(0, a.jsx)("div", {
-        className: i()(p.progressBar, {
-          [p.progressBarCurrent]: t === N.GuildSettingsOnboardingPage.REVIEW
+    }), (0, n.jsxs)("div", {
+      className: M.progressBarContainer,
+      children: [(0, n.jsx)("div", {
+        className: a()(M.progressBar, {
+          [M.progressBarCurrent]: s === h.PG.REVIEW
         })
-      }), (0, a.jsx)(d.Text, {
-        color: t === N.GuildSettingsOnboardingPage.REVIEW ? "text-brand" : "text-muted",
+      }), (0, n.jsx)(c.Text, {
+        color: s === h.PG.REVIEW ? "text-brand" : "text-muted",
         variant: "text-xs/medium",
-        children: A.default.Messages.GUILD_ONBOARDING_SETUP_STEP_REVIEW.format({
-          stepNumber: 3 + (l ? 1 : 0) + 1
+        children: p.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_REVIEW.format({
+          stepNumber: 3 + (i ? 1 : 0) + 1
         })
       })]
     })]

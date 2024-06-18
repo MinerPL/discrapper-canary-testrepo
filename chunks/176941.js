@@ -2,62 +2,62 @@
 Object.defineProperty(t, "__esModule", {
   value: !0
 }), t.ColorWrap = void 0;
-var n = Object.assign || function(e) {
+var r = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
-      var r = arguments[t];
-      for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n])
+      var n = arguments[t];
+      for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
     }
     return e
   },
-  a = function() {
+  i = function() {
     function e(e, t) {
-      for (var r = 0; r < t.length; r++) {
-        var n = t[r];
-        n.enumerable = n.enumerable || !1, n.configurable = !0, "value" in n && (n.writable = !0), Object.defineProperty(e, n.key, n)
+      for (var n = 0; n < t.length; n++) {
+        var r = t[n];
+        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
       }
     }
-    return function(t, r, n) {
-      return r && e(t.prototype, r), n && e(t, n), t
+    return function(t, n, r) {
+      return n && e(t.prototype, n), r && e(t, r), t
     }
   }(),
-  o = r("470079"),
-  i = s(o),
-  l = s(r("889678")),
+  a = n(470079),
+  o = c(a),
+  s = c(n(889678)),
   u = function(e) {
     if (e && e.__esModule) return e;
     var t = {};
     if (null != e)
-      for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && (t[r] = e[r]);
+      for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
     return t.default = e, t
-  }(r("389165"));
+  }(n(389165));
 
-function s(e) {
+function c(e) {
   return e && e.__esModule ? e : {
     default: e
   }
 }
-var f = t.ColorWrap = function(e) {
+var l = t.ColorWrap = function(e) {
   var t = function(t) {
-    function r(e) {
+    function n(e) {
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-      }(this, r);
+      }(this, n);
       var t = function(e, t) {
         if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
         return t && ("object" == typeof t || "function" == typeof t) ? t : e
-      }(this, (r.__proto__ || Object.getPrototypeOf(r)).call(this));
-      return t.handleChange = function(e, r) {
+      }(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
+      return t.handleChange = function(e, n) {
         if (u.simpleCheckForValidColor(e)) {
-          var n = u.toState(e, e.h || t.state.oldHue);
-          t.setState(n), t.props.onChangeComplete && t.debounce(t.props.onChangeComplete, n, r), t.props.onChange && t.props.onChange(n, r)
+          var r = u.toState(e, e.h || t.state.oldHue);
+          t.setState(r), t.props.onChangeComplete && t.debounce(t.props.onChangeComplete, r, n), t.props.onChange && t.props.onChange(r, n)
         }
-      }, t.handleSwatchHover = function(e, r) {
+      }, t.handleSwatchHover = function(e, n) {
         if (u.simpleCheckForValidColor(e)) {
-          var n = u.toState(e, e.h || t.state.oldHue);
-          t.props.onSwatchHover && t.props.onSwatchHover(n, r)
+          var r = u.toState(e, e.h || t.state.oldHue);
+          t.props.onSwatchHover && t.props.onSwatchHover(r, n)
         }
-      }, t.state = n({}, u.toState(e.color, 0)), t.debounce = (0, l.default)(function(e, t, r) {
-        e(t, r)
+      }, t.state = r({}, u.toState(e.color, 0)), t.debounce = (0, s.default)(function(e, t, n) {
+        e(t, n)
       }, 100), t
     }
     return ! function(e, t) {
@@ -70,22 +70,22 @@ var f = t.ColorWrap = function(e) {
           configurable: !0
         }
       }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-    }(r, t), a(r, [{
+    }(n, t), i(n, [{
       key: "render",
       value: function() {
         var t = {};
-        return this.props.onSwatchHover && (t.onSwatchHover = this.handleSwatchHover), i.default.createElement(e, n({}, this.props, this.state, {
+        return this.props.onSwatchHover && (t.onSwatchHover = this.handleSwatchHover), o.default.createElement(e, r({}, this.props, this.state, {
           onChange: this.handleChange
         }, t))
       }
     }], [{
       key: "getDerivedStateFromProps",
       value: function(e, t) {
-        return n({}, u.toState(e.color, t.oldHue))
+        return r({}, u.toState(e.color, t.oldHue))
       }
-    }]), r
-  }(o.PureComponent || o.Component);
-  return t.propTypes = n({}, e.propTypes), t.defaultProps = n({}, e.defaultProps, {
+    }]), n
+  }(a.PureComponent || a.Component);
+  return t.propTypes = r({}, e.propTypes), t.defaultProps = r({}, e.defaultProps, {
     color: {
       h: 250,
       s: .5,
@@ -94,4 +94,4 @@ var f = t.ColorWrap = function(e) {
     }
   }), t
 };
-t.default = f
+t.default = l

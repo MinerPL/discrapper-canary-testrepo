@@ -1,9 +1,10 @@
 "use strict";
 let i;
-n.r(t), n("653041"), i = n("538036").default;
+n(653041);
+i = n(538036).Z;
 let r = [],
   s = !1;
-t.default = {
+t.Z = {
   ...i,
   awaitOnline: () => new Promise(e => {
     if (i.isOnline()) return e();

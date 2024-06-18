@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  getAnnualDiscountsExperimentConfig: function() {
-    return a
-  },
-  useAnnualDiscountExperiment: function() {
+n.d(t, {
+  Uh: function() {
     return r
+  },
+  lf: function() {
+    return s
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-03_annual_discounts_experiment",
   label: "Test price for standard annual plan utilizing discount framework",
@@ -51,7 +51,7 @@ function r(e) {
   return n
 }
 
-function a(e) {
+function s(e) {
   let {
     enabled: t,
     discount_percentage: n

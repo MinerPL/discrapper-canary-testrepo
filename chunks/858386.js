@@ -1,47 +1,42 @@
 "use strict";
-n.r(t), n.d(t, {
-  LOGIN_REQUIRED_ACTIONS_MODAL_KEY: function() {
-    return E
-  }
-}), n("47120");
-var i = n("735250");
-n("470079");
-var r = n("481060"),
-  s = n("893776"),
-  a = n("147913"),
-  o = n("594174"),
-  l = n("626135"),
-  u = n("374023"),
-  d = n("344532"),
-  _ = n("981631"),
-  c = n("231338");
-let E = "LOGIN_REQUIRED_ACTIONS_MODAL_KEY";
-class I extends a.default {
+n(47120);
+var i = n(735250);
+n(470079);
+var r = n(481060),
+  s = n(893776),
+  o = n(147913),
+  a = n(594174),
+  l = n(626135),
+  u = n(374023),
+  _ = n(344532),
+  d = n(981631),
+  c = n(231338);
+class E extends o.Z {
   handleConnectionOpen() {
-    let e = o.default.getCurrentUser();
-    if (null == e || u.ProcessArgs.isDisallowPopupsSet()) return;
-    let t = d.default.requiredActionsIncludes(e.id, [_.LoginRequiredActions.UPDATE_PASSWORD]);
-    d.default.wasLoginAttemptedInSession(e.id) && t ? (0, r.openModalLazy)(async () => {
+    let e = a.default.getCurrentUser();
+    if (null == e || u.s.isDisallowPopupsSet()) return;
+    let t = _.Z.requiredActionsIncludes(e.id, [d.ane.UPDATE_PASSWORD]);
+    _.Z.wasLoginAttemptedInSession(e.id) && t ? (0, r.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("48707")]).then(n.bind(n, "194530"));
+      } = await Promise.all([n.e("99387"), n.e("48707")]).then(n.bind(n, 194530));
       return function(t) {
         return (0, i.jsx)(e, {
           ...t,
           onSuccess: () => {
-            l.default.track(_.AnalyticEvents.FORCED_UPDATE_PASSWORD_SUCCEEDED), t.onClose()
+            l.default.track(d.rMx.FORCED_UPDATE_PASSWORD_SUCCEEDED), t.onClose()
           },
           onClose: () => {
-            t.onClose(), s.default.logout(_.Routes.LOGIN)
+            t.onClose(), s.Z.logout(d.Z5c.LOGIN)
           },
           requirementsUpdated: !0
         })
       }
     }, {
-      modalKey: E,
-      onCloseRequest: c.NOOP_NULL,
+      modalKey: "LOGIN_REQUIRED_ACTIONS_MODAL_KEY",
+      onCloseRequest: c.Vq,
       instant: !0
-    }) : t && s.default.logout(_.Routes.LOGIN)
+    }) : t && s.Z.logout(d.Z5c.LOGIN)
   }
   constructor(...e) {
     var t, n, i;
@@ -55,4 +50,4 @@ class I extends a.default {
     }) : t[n] = i
   }
 }
-t.default = new I
+t.Z = new E

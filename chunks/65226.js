@@ -1,111 +1,111 @@
 "use strict";
-s.r(t), s.d(t, {
-  GuildAuditLogSearch: function() {
-    return S
+t.d(s, {
+  M: function() {
+    return N
   }
-}), s("47120"), s("757143");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("371917"),
-  i = s("481060"),
-  r = s("461745"),
-  o = s("349033"),
-  d = s("999650"),
-  u = s("487989"),
-  c = s("135163"),
-  E = s("72006"),
-  _ = s("405656"),
-  I = s("689938"),
-  T = s("679473");
-s("436967");
+}), t(47120), t(757143);
+var n = t(735250),
+  i = t(470079),
+  l = t(371917),
+  a = t(481060),
+  r = t(461745),
+  o = t(349033),
+  c = t(999650),
+  d = t(487989),
+  u = t(135163),
+  E = t(72006),
+  _ = t(405656),
+  I = t(689938),
+  T = t(679473);
+t(436967);
 
-function S(e) {
+function N(e) {
   let {
-    className: t
+    className: s
   } = e;
-  l.useEffect(() => {
-    _.clearTokenCache()
+  i.useEffect(() => {
+    _.WU()
   }, []);
-  let [s, S] = l.useState({
-    editorState: E.createEmptyEditorState([])
+  let [t, N] = i.useState({
+    editorState: E.nR([])
   }), {
-    editorState: f
-  } = s, [m, N] = l.useState(!0), g = null, h = e => {
-    S(t => ({
-      ...t,
+    editorState: m
+  } = t, [S, h] = i.useState(!0), g = null, x = e => {
+    N(s => ({
+      ...s,
       editorState: e
     }))
   }, C = e => {
-    let t = _.tokenizeQuery(E.getFirstTextBlock(e)).filter(e => e.type !== o.default.NON_TOKEN_TYPE);
-    return E.applyTokensAsEntities(t, e, d.default)
-  }, R = () => {}, x = () => {
+    let s = _.kG(E.Sq(e)).filter(e => e.type !== o.ZP.NON_TOKEN_TYPE);
+    return E.lv(s, e, c.ZP)
+  }, R = () => {}, L = () => {
     null != g && Promise.resolve().then(() => null == g ? void 0 : g.focus())
-  }, L = () => {
+  }, O = () => {
     null == g || g.blur()
-  }, O = e => {
+  }, A = e => {
     g = e
-  }, A = () => {
-    N(!0)
   }, p = () => {
-    N(!1), null != f && E.isEmpty(f) && R()
-  }, M = e => {
-    if (null == f) return;
-    if (E.getFirstTextBlock(f).length >= 512) return !0;
-    let t = f;
-    return t = E.updateContent(e, t), h(t = C(t = E.truncateContent(t, 512))), !m && N(!0), !0
-  }, D = e => (e.preventDefault(), !0), v = e => {
-    if (e = null != e ? e.replace(/\n/g, "") : "", null == f) return;
-    let t = f;
-    return t = E.updateContent(e, t), t = C(t = E.truncateContent(t, 512)), !m && N(!0), h(t), !0
-  }, G = null != f && E.getFirstTextBlock(f).length > 0;
-  return (0, a.jsx)("div", {
-    className: t,
-    children: (0, a.jsxs)("div", {
+    h(!0)
+  }, M = () => {
+    h(!1), null != m && E.xb(m) && R()
+  }, f = e => {
+    if (null == m) return;
+    if (E.Sq(m).length >= 512) return !0;
+    let s = m;
+    return s = E.x0(e, s), x(s = C(s = E.Hl(s, 512))), !S && h(!0), !0
+  }, v = e => (e.preventDefault(), !0), D = e => {
+    if (e = null != e ? e.replace(/\n/g, "") : "", null == m) return;
+    let s = m;
+    return s = E.x0(e, s), s = C(s = E.Hl(s, 512)), !S && h(!0), x(s), !0
+  }, Z = null != m && E.Sq(m).length > 0;
+  return (0, n.jsx)("div", {
+    className: s,
+    children: (0, n.jsxs)("div", {
       className: T.search,
-      children: [(0, a.jsxs)("div", {
+      children: [(0, n.jsxs)("div", {
         className: T.searchBar,
-        children: [(0, a.jsx)(n.Editor, {
-          ref: O,
-          onBlur: p,
-          onFocus: A,
-          handleReturn: D,
-          handleBeforeInput: M,
-          handlePastedText: v,
-          placeholder: I.default.Messages.SEARCH,
-          editorState: f,
-          onChange: h,
+        children: [(0, n.jsx)(l.Editor, {
+          ref: A,
+          onBlur: M,
+          onFocus: p,
+          handleReturn: v,
+          handleBeforeInput: f,
+          handlePastedText: D,
+          placeholder: I.Z.Messages.SEARCH,
+          editorState: m,
+          onChange: x,
           role: "combobox",
-          ariaLabel: I.default.Messages.SEARCH
-        }), (0, a.jsx)(r.SearchBarIcon, {
+          ariaLabel: I.Z.Messages.SEARCH
+        }), (0, n.jsx)(r.BK, {
           onClear: e => {
-            if (null == f) return;
-            if (e.preventDefault(), e.stopPropagation(), "" === E.getFirstTextBlock(f)) {
-              x();
+            if (null == m) return;
+            if (e.preventDefault(), e.stopPropagation(), "" === E.Sq(m)) {
+              L();
               return
             }
-            let t = f;
-            h(t = E.truncateContent(t, 0)), !m && Promise.resolve().then(() => L())
+            let s = m;
+            x(s = E.Hl(s, 0)), !S && Promise.resolve().then(() => O())
           },
-          hasContent: G,
+          hasContent: Z,
           className: T.searchIcon
-        }), (0, a.jsxs)(i.Button, {
-          look: i.Button.Looks.BLANK,
+        }), (0, n.jsxs)(a.Button, {
+          look: a.Button.Looks.BLANK,
           className: T.filter,
           innerClassName: T.filterButton,
           onClick: () => {},
-          children: [I.default.Messages.GUILD_SETTINGS_AUDIT_LOG_V2_FILTER, (0, a.jsx)(u.default, {
+          children: [I.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_V2_FILTER, (0, n.jsx)(d.Z, {
             className: T.filterIcon,
             width: 16,
             height: 16
           })]
         })]
-      }), (0, a.jsxs)(i.Button, {
-        color: i.Button.Colors.PRIMARY,
+      }), (0, n.jsxs)(a.Button, {
+        color: a.Button.Colors.PRIMARY,
         className: T.sort,
         innerClassName: T.sortButton,
-        size: i.Button.Sizes.SMALL,
+        size: a.Button.Sizes.SMALL,
         onClick: () => {},
-        children: [I.default.Messages.GUILD_SETTINGS_AUDIT_LOG_V2_SORT, (0, a.jsx)(c.default, {
+        children: [I.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_V2_SORT, (0, n.jsx)(u.Z, {
           className: T.sortIcon,
           width: 16,
           height: 16

@@ -1,7 +1,7 @@
 "use strict";
-var n = r("680444"),
-  i = r("574369"),
-  o = r("118658"),
+var n = r(680444),
+  i = r(574369),
+  o = r(118658),
   a = o.isPlatform("Mac OS X"),
   u = a && o.isBrowser("Firefox < 29"),
   s = n.hasCommandModifier,

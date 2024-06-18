@@ -1,5 +1,5 @@
 "use strict";
-var n = r("808570");
+var n = r(808570);
 t.exports = function(t) {
   var e = t.ownerDocument.documentElement;
   if (!("getBoundingClientRect" in t) || !n(e, t)) return {

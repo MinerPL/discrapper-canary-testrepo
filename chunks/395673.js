@@ -1,6 +1,6 @@
 "use strict";
-n.r(t), n.d(t, {
-  calculatePointerPosition: function() {
+n.d(t, {
+  s: function() {
     return a
   }
 });

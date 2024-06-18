@@ -1,35 +1,35 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  ZP: function() {
     return c
   },
-  getAbbreviatedFormatter: function() {
+  Zk: function() {
     return d
   },
-  getFullFormatter: function() {
+  d0: function() {
     return _
   }
 });
-var i = n("913527"),
+var i = n(913527),
   r = n.n(i),
-  s = n("689938");
-let a = 3600,
-  o = 86400,
+  s = n(689938);
+let o = 3600,
+  a = 86400,
   l = 2592e3,
   u = 31104e3,
-  d = () => ({
-    minutes: s.default.Messages.DURATION_MINUTES_SHORT,
-    hours: s.default.Messages.DURATION_HOURS_SHORT,
-    days: s.default.Messages.DURATION_DAYS_SHORT,
-    months: s.default.Messages.DURATION_MONTHS_SHORT,
-    years: s.default.Messages.DURATION_YEARS_SHORT
-  }),
   _ = () => ({
-    minutes: s.default.Messages.DURATION_MINUTES_AGO,
-    hours: s.default.Messages.DURATION_HOURS_AGO,
-    days: s.default.Messages.DURATION_DAYS_AGO,
-    months: s.default.Messages.DURATION_MONTHS_AGO,
-    years: s.default.Messages.DURATION_YEARS_AGO
+    minutes: s.Z.Messages.DURATION_MINUTES_SHORT,
+    hours: s.Z.Messages.DURATION_HOURS_SHORT,
+    days: s.Z.Messages.DURATION_DAYS_SHORT,
+    months: s.Z.Messages.DURATION_MONTHS_SHORT,
+    years: s.Z.Messages.DURATION_YEARS_SHORT
+  }),
+  d = () => ({
+    minutes: s.Z.Messages.DURATION_MINUTES_AGO,
+    hours: s.Z.Messages.DURATION_HOURS_AGO,
+    days: s.Z.Messages.DURATION_DAYS_AGO,
+    months: s.Z.Messages.DURATION_MONTHS_AGO,
+    years: s.Z.Messages.DURATION_YEARS_AGO
   });
 
 function c(e) {
@@ -44,12 +44,12 @@ function c(e) {
     } = e, i = n(), r = "";
     return r = t < 60 ? i.minutes.format({
       minutes: 1
-    }) : t < a ? i.minutes.format({
+    }) : t < o ? i.minutes.format({
       minutes: Math.floor(t / 60)
-    }) : t < o ? i.hours.format({
-      hours: Math.floor(t / a)
+    }) : t < a ? i.hours.format({
+      hours: Math.floor(t / o)
     }) : t < l ? i.days.format({
-      days: Math.floor(t / o)
+      days: Math.floor(t / a)
     }) : t < u ? i.months.format({
       months: Math.floor(t / l)
     }) : i.years.format({

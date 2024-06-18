@@ -1,51 +1,51 @@
 "use strict";
 var i, r;
-n.r(t), n.d(t, {
-  ACTIVITY_IMAGE_FALLBACK_PATH: function() {
+n.d(t, {
+  Cv: function() {
     return T
   },
-  AssetTypes: function() {
-    return i
-  },
-  activitySize: function() {
-    return c
-  },
-  canvasHeight: function() {
-    return a
-  },
-  canvasWidth: function() {
+  En: function() {
     return s
   },
-  fontPadding: function() {
-    return u
-  },
-  imagePadding: function() {
-    return l
-  },
-  lineHeight: function() {
-    return d
-  },
-  padding: function() {
-    return o
-  },
-  platformSize: function() {
+  Nv: function() {
     return _
   },
-  titleMaxWidthNoPlatform: function() {
+  SG: function() {
+    return u
+  },
+  W3: function() {
+    return i
+  },
+  dI: function() {
+    return o
+  },
+  ee: function() {
+    return I
+  },
+  ez: function() {
+    return d
+  },
+  o3: function() {
+    return a
+  },
+  sB: function() {
+    return l
+  },
+  sp: function() {
     return E
   },
-  titleMaxWidthPlatform: function() {
-    return I
+  vS: function() {
+    return c
   }
 });
 let s = 348,
-  a = 88;
+  o = 88;
 (r = i || (i = {})).AssetImage = "AssetImage", r.ApplicationImage = "ApplicationImage", r.Platform = "Platform", r.StreamPreview = "StreamPreview", r.HangStatus = "HangStatus";
-let o = 12,
+let a = 12,
   l = 12,
   u = 24,
-  d = 16,
-  _ = 24,
+  _ = 16,
+  d = 24,
   c = 64,
   E = 335,
   I = 310,

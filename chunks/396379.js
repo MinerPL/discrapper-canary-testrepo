@@ -1,9 +1,8 @@
 "use strict";
-r.r(t);
-t.default = function(e) {
+t.Z = function(e) {
   var t = -1,
-    r = Array(e.size);
+    n = Array(e.size);
   return e.forEach(function(e) {
-    r[++t] = e
-  }), r
+    n[++t] = e
+  }), n
 }

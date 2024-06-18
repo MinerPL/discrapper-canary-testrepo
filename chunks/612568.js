@@ -1,11 +1,12 @@
 "use strict";
-n.r(e), n.d(e, {
-  HttpContext: function() {
+n.d(e, {
+  q: function() {
     return a
   }
 });
-var r = n("91320"),
-  i = n("643487");
+var r = n(703498),
+  i = n(876122),
+  s = n(643487);
 class a {
   constructor() {
     a.prototype.__init.call(this)
@@ -17,17 +18,17 @@ class a {
     this.name = a.id
   }
   setupOnce() {
-    (0, r.addGlobalEventProcessor)(t => {
-      if ((0, r.getCurrentHub)().getIntegration(a)) {
-        if (!i.WINDOW.navigator && !i.WINDOW.location && !i.WINDOW.document) return t;
-        let e = t.request && t.request.url || i.WINDOW.location && i.WINDOW.location.href,
+    (0, r.c)(t => {
+      if ((0, i.Gd)().getIntegration(a)) {
+        if (!s.m9.navigator && !s.m9.location && !s.m9.document) return t;
+        let e = t.request && t.request.url || s.m9.location && s.m9.location.href,
           {
             referrer: n
-          } = i.WINDOW.document || {},
+          } = s.m9.document || {},
           {
             userAgent: r
-          } = i.WINDOW.navigator || {},
-          a = {
+          } = s.m9.navigator || {},
+          i = {
             ...t.request && t.request.headers,
             ...n && {
               Referer: n
@@ -36,16 +37,16 @@ class a {
               "User-Agent": r
             }
           },
-          o = {
+          a = {
             ...t.request,
             ...e && {
               url: e
             },
-            headers: a
+            headers: i
           };
         return {
           ...t,
-          request: o
+          request: a
         }
       }
       return t

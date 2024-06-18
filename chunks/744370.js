@@ -1,17 +1,17 @@
 "use strict";
-var r = n("476508"),
-  a = n("570596"),
-  o = n("548828"),
-  i = n("831496"),
-  l = n("250765"),
-  u = n("730427"),
-  s = [].push;
+var r = n(476508),
+  o = n(570596),
+  a = n(548828),
+  i = n(831496),
+  s = n(250765),
+  c = n(730427),
+  l = [].push;
 e.exports = function(e) {
-  var t, n, c, d, f = arguments.length,
-    p = f > 1 ? arguments[1] : void 0;
-  return (i(this), (t = void 0 !== p) && o(p), l(e)) ? new this : (n = [], t ? (c = 0, d = r(p, f > 2 ? arguments[2] : void 0), u(e, function(e) {
-    a(s, n, d(e, c++))
-  })) : u(e, s, {
+  var t, n, u, d, p = arguments.length,
+    h = p > 1 ? arguments[1] : void 0;
+  return (i(this), (t = void 0 !== h) && a(h), s(e)) ? new this : (n = [], t ? (u = 0, d = r(h, p > 2 ? arguments[2] : void 0), c(e, function(e) {
+    o(l, n, d(e, u++))
+  })) : c(e, l, {
     that: n
   }), new this(n))
 }

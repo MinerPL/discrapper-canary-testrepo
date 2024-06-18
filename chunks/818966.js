@@ -1,21 +1,19 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("844303");
-t.default = function(e) {
+var r = n(470079),
+  i = n(844303);
+t.Z = function(e) {
   var t = e.hsl,
-    r = e.offset,
-    n = e.onClick,
-    i = void 0 === n ? function() {} : n,
-    l = e.active,
+    n = e.offset,
+    a = e.onClick,
+    o = void 0 === a ? function() {} : a,
+    s = e.active,
     u = e.first,
-    s = e.last,
-    f = (0, o.default)({
+    c = e.last,
+    l = (0, i.default)({
       default: {
         swatch: {
           height: "12px",
-          background: "hsl(" + t.h + ", 50%, " + 100 * r + "%)",
+          background: "hsl(" + t.h + ", 50%, " + 100 * n + "%)",
           cursor: "pointer"
         }
       },
@@ -36,17 +34,17 @@ t.default = function(e) {
         }
       }
     }, {
-      active: l,
+      active: s,
       first: u,
-      last: s
+      last: c
     });
-  return a().createElement("div", {
-    style: f.swatch,
+  return r.createElement("div", {
+    style: l.swatch,
     onClick: function(e) {
-      return i({
+      return o({
         h: t.h,
         s: .5,
-        l: r,
+        l: n,
         source: "hsl"
       }, e)
     }

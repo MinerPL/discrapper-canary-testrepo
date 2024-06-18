@@ -19,20 +19,20 @@ function n(t) {
   }
   return t
 }
-var i = r("213912"),
-  o = r("546870"),
-  a = r("770209"),
-  u = r("49287"),
-  s = r("88071");
-r("901182");
-var c = r("114080"),
-  l = r("9893"),
-  f = r("457936"),
-  p = r("416420"),
-  h = r("680643"),
-  d = r("316103"),
-  g = r("65183"),
-  y = r("581079"),
+var i = r(213912),
+  o = r(546870),
+  a = r(770209),
+  u = r(49287),
+  s = r(88071);
+r(901182);
+var c = r(114080),
+  l = r(9893),
+  f = r(457936),
+  p = r(416420),
+  h = r(680643),
+  d = r(316103),
+  g = r(65183),
+  y = r(581079),
   v = d("draft_tree_data_support"),
   m = g.List,
   _ = g.Map,
@@ -87,7 +87,7 @@ var c = r("114080"),
         return [e.getKey(), e]
       }))
     }
-    return u = f, c = e, u.map(k).reduce(function(t, e, r) {
+    var p = (u = f, c = e, u.map(k).reduce(function(t, e, r) {
       Array.isArray(e.children) || y(!1);
       var i = e.children.map(k),
         a = new o(n({}, S(e, c), {
@@ -120,7 +120,8 @@ var c = r("114080"),
         t = t.set(v.getKey(), v), s = x(s, g, v)
       }
       return t
-    }, b())
+    }, b()));
+    return p
   },
   E = function(t) {
     var e = t.entityMap,

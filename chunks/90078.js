@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  Popper: function() {
+n.d(t, {
+  r: function() {
     return l
   }
 });
-var r = n("470079"),
-  i = n("234366"),
-  a = n("705942"),
-  o = n("566833"),
+var r = n(470079),
+  i = n(234366),
+  a = n(705942),
+  o = n(566833),
   s = function() {},
   u = function() {
     return Promise.resolve(null)
@@ -25,7 +25,7 @@ function l(e) {
     m = e.onFirstUpdate,
     g = e.innerRef,
     _ = e.children,
-    b = r.useContext(i.ManagerReferenceNodeContext),
+    b = r.useContext(i.C8),
     v = r.useState(null),
     y = v[0],
     E = v[1],
@@ -33,9 +33,9 @@ function l(e) {
     x = S[0],
     w = S[1];
   r.useEffect(function() {
-    (0, a.setRef)(g, y)
+    (0, a.k$)(g, y)
   }, [g, y]);
-  var T = r.useMemo(function() {
+  var C = r.useMemo(function() {
       return {
         placement: n,
         strategy: d,
@@ -49,25 +49,25 @@ function l(e) {
         }])
       }
     }, [n, d, m, p, x]),
-    C = (0, o.usePopper)(h || b, y, T),
-    D = C.state,
-    O = C.styles,
-    M = C.forceUpdate,
-    A = C.update,
+    T = (0, o.D)(h || b, y, C),
+    D = T.state,
+    M = T.styles,
+    O = T.forceUpdate,
+    A = T.update,
     k = r.useMemo(function() {
       return {
         ref: E,
-        style: O.popper,
+        style: M.popper,
         placement: D ? D.placement : n,
         hasPopperEscaped: D && D.modifiersData.hide ? D.modifiersData.hide.hasPopperEscaped : null,
         isReferenceHidden: D && D.modifiersData.hide ? D.modifiersData.hide.isReferenceHidden : null,
         arrowProps: {
-          style: O.arrow,
+          style: M.arrow,
           ref: w
         },
-        forceUpdate: M || s,
+        forceUpdate: O || s,
         update: A || u
       }
-    }, [E, w, n, D, O, A, M]);
-  return (0, a.unwrapArray)(_)(k)
+    }, [E, w, n, D, M, A, O]);
+  return (0, a.$p)(_)(k)
 }

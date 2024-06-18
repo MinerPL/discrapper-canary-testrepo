@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), (0, n("818083").createExperiment)({
+(0, n(818083).B)({
   kind: "user",
   id: "2021-09_ios_screenshare_resolution_profiles",
   label: "iOS: Screenshare resolution profiles",

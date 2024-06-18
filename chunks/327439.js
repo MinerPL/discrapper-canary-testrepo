@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  MultiBackendImpl: function() {
+n.d(t, {
+  T: function() {
     return y
   }
 });
-var r = n("313694");
+var r = n(313694);
 
 function i(e, t, n) {
   (function(e, t) {
@@ -96,7 +96,7 @@ class y {
           y.isSetUp = !0, o(this, m).call(this, window), o(this, d)[o(this, c)].instance.setup()
         }
       }), a(this, "teardown", () => {
-        "undefined" != typeof window && (y.isSetUp = !1, o(this, g).call(this, window), o(this, d)[o(this, c)].instance.teardown())
+        if ("undefined" != typeof window) y.isSetUp = !1, o(this, g).call(this, window), o(this, d)[o(this, c)].instance.teardown()
       }), a(this, "connectDragSource", (e, t, n) => o(this, v).call(this, "connectDragSource", e, t, n)), a(this, "connectDragPreview", (e, t, n) => o(this, v).call(this, "connectDragPreview", e, t, n)), a(this, "connectDropTarget", (e, t, n) => o(this, v).call(this, "connectDropTarget", e, t, n)), a(this, "profile", () => o(this, d)[o(this, c)].instance.profile()), a(this, "previewEnabled", () => o(this, d)[o(this, c)].preview), a(this, "previewsList", () => o(this, l)), a(this, "backendsList", () => o(this, f)), i(this, m, {
         writable: !0,
         value: e => {
@@ -144,7 +144,7 @@ class y {
           }
         }
       }), !n || !n.backends || n.backends.length < 1) throw Error("You must specify at least one Backend, if you are coming from 2.x.x (or don't understand this error)\n        see this guide: https://github.com/louisbrunner/dnd-multi-backend/tree/master/packages/react-dnd-multi-backend#migrating-from-2xx");
-    s(this, l, new r.PreviewListImpl), s(this, d, {}), s(this, f, []), n.backends.forEach(n => {
+    s(this, l, new r.J), s(this, d, {}), s(this, f, []), n.backends.forEach(n => {
       let r = o(this, h).call(this, e, t, n);
       o(this, d)[r.id] = r, o(this, f).push(r)
     }), s(this, c, o(this, f)[0].id), s(this, p, {})

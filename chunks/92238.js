@@ -1,5 +1,5 @@
-var r = n("805100"),
-  i = n("580897");
+var r = n(805100),
+  i = n(580897);
 e.exports = function(e, t, n, a) {
   var o = !n;
   n || (n = {});

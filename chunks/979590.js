@@ -33,72 +33,72 @@
           a: 0,
           format: "name"
         };
-        if (t = Y.rgb.exec(e)) return {
+        if (t = j.rgb.exec(e)) return {
           r: t[1],
           g: t[2],
           b: t[3]
         };
-        if (t = Y.rgba.exec(e)) return {
+        if (t = j.rgba.exec(e)) return {
           r: t[1],
           g: t[2],
           b: t[3],
           a: t[4]
         };
-        if (t = Y.hsl.exec(e)) return {
+        if (t = j.hsl.exec(e)) return {
           h: t[1],
           s: t[2],
           l: t[3]
         };
-        if (t = Y.hsla.exec(e)) return {
+        if (t = j.hsla.exec(e)) return {
           h: t[1],
           s: t[2],
           l: t[3],
           a: t[4]
         };
-        if (t = Y.hsv.exec(e)) return {
+        if (t = j.hsv.exec(e)) return {
           h: t[1],
           s: t[2],
           v: t[3]
         };
-        if (t = Y.hsva.exec(e)) return {
+        if (t = j.hsva.exec(e)) return {
           h: t[1],
           s: t[2],
           v: t[3],
           a: t[4]
         };
-        if (t = Y.hex8.exec(e)) return {
+        if (t = j.hex8.exec(e)) return {
           r: L(t[1]),
           g: L(t[2]),
           b: L(t[3]),
           a: L(t[4]) / 255,
           format: n ? "name" : "hex8"
         };
-        if (t = Y.hex6.exec(e)) return {
+        if (t = j.hex6.exec(e)) return {
           r: L(t[1]),
           g: L(t[2]),
           b: L(t[3]),
           format: n ? "name" : "hex"
         };
-        if (t = Y.hex4.exec(e)) return {
+        if (t = j.hex4.exec(e)) return {
           r: L(t[1] + "" + t[1]),
           g: L(t[2] + "" + t[2]),
           b: L(t[3] + "" + t[3]),
           a: L(t[4] + "" + t[4]) / 255,
           format: n ? "name" : "hex8"
         };
-        return !!(t = Y.hex3.exec(e)) && {
+        return !!(t = j.hex3.exec(e)) && {
           r: L(t[1] + "" + t[1]),
           g: L(t[2] + "" + t[2]),
           b: L(t[3] + "" + t[3]),
           format: n ? "name" : "hex"
         }
-      }(e)), "object" == typeof e && (j(e.r) && j(e.g) && j(e.b) ? (n = function(e, t, n) {
+      }(e)), "object" == typeof e && (Y(e.r) && Y(e.g) && Y(e.b) ? (n = function(e, t, n) {
         return {
           r: 255 * N(e, 255),
           g: 255 * N(t, 255),
           b: 255 * N(n, 255)
         }
-      }(e.r, e.g, e.b), d = !0, f = "%" === String(e.r).substr(-1) ? "prgb" : "rgb") : j(e.h) && j(e.s) && j(e.v) ? (i = F(e.s), s = F(e.v), n = function(e, n, r) {
+      }(e.r, e.g, e.b), d = !0, f = "%" === String(e.r).substr(-1) ? "prgb" : "rgb") : Y(e.h) && Y(e.s) && Y(e.v) ? (i = B(e.s), s = B(e.v), n = function(e, n, r) {
         e = 6 * N(e, 360), n = N(n, 100), r = N(r, 100);
         var i = t.floor(e),
           a = e - i,
@@ -111,7 +111,7 @@
           g: 255 * [u, r, r, s, o, o][c],
           b: 255 * [o, o, u, r, r, s][c]
         }
-      }(e.h, i, s), d = !0, f = "hsv") : j(e.h) && j(e.s) && j(e.l) && (i = F(e.s), u = F(e.l), n = function(e, t, n) {
+      }(e.h, i, s), d = !0, f = "hsv") : Y(e.h) && Y(e.s) && Y(e.l) && (i = B(e.s), u = B(e.l), n = function(e, t, n) {
         var r, i, a;
 
         function o(e, t, n) {
@@ -209,7 +209,7 @@
     },
     toHex8: function(e) {
       return function(e, t, n, r, i) {
-        var a = [P(u(e).toString(16)), P(u(t).toString(16)), P(u(n).toString(16)), P(B(r))];
+        var a = [P(u(e).toString(16)), P(u(t).toString(16)), P(u(n).toString(16)), P(F(r))];
         return i && a[0].charAt(0) == a[0].charAt(1) && a[1].charAt(0) == a[1].charAt(1) && a[2].charAt(0) == a[2].charAt(1) && a[3].charAt(0) == a[3].charAt(1) ? a[0].charAt(0) + a[1].charAt(0) + a[2].charAt(0) + a[3].charAt(0) : a.join("")
       }(this._r, this._g, this._b, this._a, e)
     },
@@ -291,27 +291,27 @@
       return e.apply(null, [this].concat([].slice.call(t)))
     },
     analogous: function() {
-      return this._applyCombination(O, arguments)
+      return this._applyCombination(M, arguments)
     },
     complement: function() {
       return this._applyCombination(w, arguments)
     },
     monochromatic: function() {
-      return this._applyCombination(M, arguments)
+      return this._applyCombination(O, arguments)
     },
     splitcomplement: function() {
       return this._applyCombination(D, arguments)
     },
     triad: function() {
-      return this._applyCombination(T, arguments)
+      return this._applyCombination(C, arguments)
     },
     tetrad: function() {
-      return this._applyCombination(C, arguments)
+      return this._applyCombination(T, arguments)
     }
   }, f.fromRatio = function(e, t) {
     if ("object" == typeof e) {
       var n = {};
-      for (var r in e) e.hasOwnProperty(r) && ("a" === r ? n[r] = e[r] : n[r] = F(e[r]));
+      for (var r in e) e.hasOwnProperty(r) && ("a" === r ? n[r] = e[r] : n[r] = B(e[r]));
       e = n
     }
     return f(e, t)
@@ -346,27 +346,27 @@
 
   function h(e, t, n) {
     e = N(e, 255), t = N(t, 255);
-    var r, i = l(e, t, n = N(n, 255)),
-      a = c(e, t, n);
-    var o = i - a;
-    if (i == a) r = 0;
+    var r, i, a = l(e, t, n = N(n, 255)),
+      o = c(e, t, n);
+    var s = a - o;
+    if (i = 0 === a ? 0 : s / a, a == o) r = 0;
     else {
-      switch (i) {
+      switch (a) {
         case e:
-          r = (t - n) / o + (t < n ? 6 : 0);
+          r = (t - n) / s + (t < n ? 6 : 0);
           break;
         case t:
-          r = (n - e) / o + 2;
+          r = (n - e) / s + 2;
           break;
         case n:
-          r = (e - t) / o + 4
+          r = (e - t) / s + 4
       }
       r /= 6
     }
     return {
       h: r,
-      s: 0 === i ? 0 : o / i,
-      v: i
+      s: i,
+      v: a
     }
   }
 
@@ -376,7 +376,7 @@
   }
 
   function g(e, t, n, r) {
-    return [P(B(r)), P(u(e).toString(16)), P(u(t).toString(16)), P(u(n).toString(16))].join("")
+    return [P(F(r)), P(u(e).toString(16)), P(u(t).toString(16)), P(u(n).toString(16))].join("")
   }
 
   function _(e, t) {
@@ -424,7 +424,7 @@
     return t.h = (t.h + 180) % 360, f(t)
   }
 
-  function T(e) {
+  function C(e) {
     var t = f(e).toHsl(),
       n = t.h;
     return [f(e), f({
@@ -438,7 +438,7 @@
     })]
   }
 
-  function C(e) {
+  function T(e) {
     var t = f(e).toHsl(),
       n = t.h;
     return [f(e), f({
@@ -470,7 +470,7 @@
     })]
   }
 
-  function O(e, t, n) {
+  function M(e, t, n) {
     t = t || 6, n = n || 30;
     var r = f(e).toHsl(),
       i = 360 / n,
@@ -479,7 +479,7 @@
     return a
   }
 
-  function M(e, t) {
+  function O(e, t) {
     t = t || 6;
     for (var n = f(e).toHsv(), r = n.h, i = n.s, a = n.v, o = [], s = 1 / t; t--;) o.push(f({
       h: r,
@@ -727,18 +727,18 @@
     return 1 == e.length ? "0" + e : "" + e
   }
 
-  function F(e) {
+  function B(e) {
     return e <= 1 && (e = 100 * e + "%"), e
   }
 
-  function B(e) {
+  function F(e) {
     return t.round(255 * parseFloat(e)).toString(16)
   }
 
   function U(e) {
     return L(e) / 255
   }
-  var Y = (r = "[\\s|\\(]+(" + (n = "(?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?)") + ")[,|\\s]+(" + n + ")[,|\\s]+(" + n + ")\\s*\\)?", i = "[\\s|\\(]+(" + n + ")[,|\\s]+(" + n + ")[,|\\s]+(" + n + ")[,|\\s]+(" + n + ")\\s*\\)?", {
+  var j = (r = "[\\s|\\(]+(" + (n = "(?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?)") + ")[,|\\s]+(" + n + ")[,|\\s]+(" + n + ")\\s*\\)?", i = "[\\s|\\(]+(" + n + ")[,|\\s]+(" + n + ")[,|\\s]+(" + n + ")[,|\\s]+(" + n + ")\\s*\\)?", {
     CSS_UNIT: new RegExp(n),
     rgb: RegExp("rgb" + r),
     rgba: RegExp("rgba" + i),
@@ -752,8 +752,8 @@
     hex8: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/
   });
 
-  function j(e) {
-    return !!Y.CSS_UNIT.exec(e)
+  function Y(e) {
+    return !!j.CSS_UNIT.exec(e)
   }
   e.exports ? e.exports = f : "function" == typeof define && define.amd ? define(function() {
     return f

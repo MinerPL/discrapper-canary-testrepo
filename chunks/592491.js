@@ -166,7 +166,7 @@ e.exports = function(e) {
     }, p, {
       className: "operator",
       begin: "\\s+" + i + "\\s+",
-      illegal: "-->",
+      illegal: "--\x3e",
       relevance: 0
     }, s, e.C_LINE_COMMENT_MODE, {
       className: "pattern-match",

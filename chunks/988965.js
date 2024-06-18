@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  MultiAccountMobileNotificationsExperiment: function() {
+n.d(t, {
+  N: function() {
     return r
   }
 });
-var i = n("818083");
-(0, i.createExperiment)({
+var i = n(818083);
+(0, i.B)({
   kind: "user",
   id: "2022-09_mobile_account_switcher",
   label: "Mobile Account Switcher",
@@ -29,7 +29,7 @@ var i = n("818083");
     }
   }]
 });
-let r = (0, i.createExperiment)({
+let r = (0, i.B)({
   kind: "user",
   id: "2022-11_mobile_account_switcher_notifications",
   label: "Mobile Account Switcher: Notifications",

@@ -1,24 +1,24 @@
 "use strict";
-n.r(t), n.d(t, {
-  addQueued: function() {
+n.d(t, {
+  B0: function() {
     return o
   },
-  fetchMessageInteractionData: function() {
+  OG: function() {
     return u
   },
-  queueInteractionComponentState: function() {
-    return s
+  kz: function() {
+    return a
   },
-  setFailed: function() {
+  yr: function() {
     return l
   }
 });
-var i = n("544891"),
-  r = n("570140"),
-  a = n("981631");
+var i = n(544891),
+  r = n(570140),
+  s = n(981631);
 
-function s(e, t, n, i) {
-  r.default.dispatch({
+function o(e, t, n, i) {
+  r.Z.dispatch({
     type: "QUEUE_INTERACTION_COMPONENT_STATE",
     messageId: e,
     nonce: t,
@@ -27,27 +27,27 @@ function s(e, t, n, i) {
   })
 }
 
-function o(e, t) {
+function a(e, t) {
   let {
     data: n,
     messageId: i,
-    onCreate: a,
-    onSuccess: s,
-    onFailure: o
+    onCreate: s,
+    onSuccess: o,
+    onFailure: a
   } = t;
-  r.default.dispatch({
+  r.Z.dispatch({
     type: "INTERACTION_QUEUE",
     data: n,
     nonce: e,
     messageId: i,
-    onCreate: a,
-    onSuccess: s,
-    onFailure: o
+    onCreate: s,
+    onSuccess: o,
+    onFailure: a
   })
 }
 
 function l(e, t, n) {
-  r.default.dispatch({
+  r.Z.dispatch({
     type: "INTERACTION_FAILURE",
     nonce: e,
     errorMessage: n,
@@ -55,13 +55,13 @@ function l(e, t, n) {
   })
 }
 async function u(e, t) {
-  let n = await i.HTTP.get({
-    url: a.Endpoints.MESSAGE_INTERACTION_DATA(e, t),
+  let n = await i.tn.get({
+    url: s.ANM.MESSAGE_INTERACTION_DATA(e, t),
     oldFormErrors: !0
   });
   if (n.ok) {
     let i = n.body;
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "LOAD_MESSAGE_INTERACTION_DATA_SUCCESS",
       channelId: e,
       messageId: t,

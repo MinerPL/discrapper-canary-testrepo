@@ -1,5 +1,4 @@
 "use strict";
-r.r(t);
-t.default = function() {
+t.Z = function() {
   this.__data__ = [], this.size = 0
 }

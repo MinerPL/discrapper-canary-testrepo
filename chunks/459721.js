@@ -1,8 +1,8 @@
-var o = r("58615"),
-  n = r("860377"),
-  i = r("939059"),
-  a = r("746272"),
-  u = r("669013");
+var o = r(58615),
+  n = r(860377),
+  i = r(939059),
+  a = r(746272),
+  u = r(669013);
 
 function s(t, e) {
   this.typeNumber = t, this.errorCorrectLevel = e, this.modules = null, this.moduleCount = 0, this.dataCache = null, this.dataList = []
@@ -59,8 +59,12 @@ l.addData = function(t) {
   }
   return o
 }, l.setupTimingPattern = function() {
-  for (var t = 8; t < this.moduleCount - 8; t++) null == this.modules[t][6] && (this.modules[t][6] = t % 2 == 0);
-  for (var e = 8; e < this.moduleCount - 8; e++) null == this.modules[6][e] && (this.modules[6][e] = e % 2 == 0)
+  for (var t = 8; t < this.moduleCount - 8; t++) {
+    if (null == this.modules[t][6]) this.modules[t][6] = t % 2 == 0
+  }
+  for (var e = 8; e < this.moduleCount - 8; e++) {
+    if (null == this.modules[6][e]) this.modules[6][e] = e % 2 == 0
+  }
 }, l.setupPositionAdjustPattern = function() {
   for (var t = a.getPatternPosition(this.typeNumber), e = 0; e < t.length; e++)
     for (var r = 0; r < t.length; r++) {

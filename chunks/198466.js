@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
-  ProgressBarConfettiTrigger: function() {
+n.d(t, {
+  m: function() {
     return E
   }
-}), n("47120");
-var i, r, a = n("735250"),
-  s = n("470079"),
-  o = n("718017"),
-  l = n("442837"),
-  u = n("481060"),
-  d = n("607070"),
-  _ = n("745510"),
-  c = n("946283");
+}), n(47120);
+var i, r, s = n(735250),
+  o = n(470079),
+  a = n(920906),
+  l = n(442837),
+  u = n(481060),
+  _ = n(607070),
+  d = n(745510),
+  c = n(737774);
 
 function E(e) {
   let {
@@ -19,10 +19,10 @@ function E(e) {
     confettiTriggerRef: n,
     setConfettiCount: i,
     setShouldFireConfetti: r,
-    tooltipProps: _
-  } = e, [E, I] = s.useState(0), T = s.useRef(-1), f = s.useRef(!0), S = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion), {
-    scaleFactor: h
-  } = (0, o.useSpring)({
+    tooltipProps: d
+  } = e, [E, I] = o.useState(0), T = o.useRef(-1), h = o.useRef(!0), S = (0, l.e7)([_.Z], () => _.Z.useReducedMotion), {
+    scaleFactor: f
+  } = (0, a.useSpring)({
     from: {
       scaleFactor: 1
     },
@@ -34,20 +34,20 @@ function E(e) {
       friction: 7
     }
   });
-  return (s.useEffect(() => () => {
-    f.current = !1
-  }, []), S) ? (0, a.jsx)(a.Fragment, {
+  return (o.useEffect(() => () => {
+    h.current = !1
+  }, []), S) ? (0, s.jsx)(s.Fragment, {
     children: t
-  }) : (0, a.jsx)(o.animated.div, {
+  }) : (0, s.jsx)(a.animated.div, {
     className: c.confettiTriggerWrapper,
     style: {
-      transform: h.to(e => "scale(".concat(e, ")"))
+      transform: f.to(e => "scale(".concat(e, ")"))
     },
-    children: (0, a.jsx)(u.Clickable, {
+    children: (0, s.jsx)(u.Clickable, {
       className: c.confettiTrigger,
       onMouseDown: () => {
         I(1), r(!0), i(e => Math.min(e + 2, 200)), window.clearTimeout(T.current), T.current = window.setTimeout(() => {
-          f.current && i(0)
+          h.current && i(0)
         }, 200)
       },
       onMouseUp: () => {
@@ -55,33 +55,33 @@ function E(e) {
       },
       onMouseEnter: () => {
         var e;
-        I(2), null == _ || null === (e = _.onMouseEnter) || void 0 === e || e.call(_)
+        I(2), null == d || null === (e = d.onMouseEnter) || void 0 === e || e.call(d)
       },
       onMouseLeave: () => {
         var e;
-        I(0), null == _ || null === (e = _.onMouseLeave) || void 0 === e || e.call(_)
+        I(0), null == d || null === (e = d.onMouseLeave) || void 0 === e || e.call(d)
       },
       innerRef: n,
       children: t
     })
   })
 }(r = i || (i = {}))[r.INACTIVE = 0] = "INACTIVE", r[r.PRESSED = 1] = "PRESSED", r[r.HOVERED = 2] = "HOVERED";
-t.default = function(e) {
+t.Z = function(e) {
   let {
     confettiCount: t,
     confettiTriggerRef: n,
     isFiring: i
   } = e, {
     cannon: r,
-    createMultipleConfettiAt: a
-  } = s.useContext(_.ConfettiCannonContext), o = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion);
-  return s.useEffect(() => () => {
+    createMultipleConfettiAt: s
+  } = o.useContext(d.h), a = (0, l.e7)([_.Z], () => _.Z.useReducedMotion);
+  return o.useEffect(() => () => {
     null == r || r.clearConfetti()
-  }, [r]), s.useEffect(() => {
-    if (!i || o || null == n.current) return;
+  }, [r]), o.useEffect(() => {
+    if (!i || a || null == n.current) return;
     let e = n.current.getBoundingClientRect(),
       r = e.left + e.width / 2;
-    a(r, e.top + e.height / 2, {
+    s(r, e.top + e.height / 2, {
       velocity: {
         type: "static-random",
         minValue: {
@@ -94,5 +94,5 @@ t.default = function(e) {
         }
       }
     }, Math.max(t, 20))
-  }, [t, n, a, i, o]), null
+  }, [t, n, s, i, a]), null
 }

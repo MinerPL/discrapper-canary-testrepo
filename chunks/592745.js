@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n("47120");
-var i, r, s, a, o = n("442837"),
-  l = n("570140");
+n(47120);
+var i, r, s, o, a = n(442837),
+  l = n(570140);
 let u = new Set,
-  d = {};
+  _ = {};
 
-function _(e) {
+function d(e) {
   let {
     applicationId: t
   } = e;
@@ -18,35 +18,35 @@ function c(e) {
   } = e;
   u.delete(t)
 }
-class E extends(i = o.default.Store) {
+class E extends(i = a.ZP.Store) {
   get launchingGames() {
     return u
   }
   get launchableGames() {
-    return d
+    return _
   }
   isLaunchable(e) {
-    return null != d[e] ? d[e] : (d[e] = !1, l.default.dispatch({
+    return null != _[e] ? _[e] : (_[e] = !1, l.Z.dispatch({
       type: "CHECK_LAUNCHABLE_GAME",
       gameId: e
     }), !1)
   }
 }
-a = "LaunchableGameStore", (s = "displayName") in(r = E) ? Object.defineProperty(r, s, {
-  value: a,
+o = "LaunchableGameStore", (s = "displayName") in(r = E) ? Object.defineProperty(r, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new E(l.default, {
+}) : r[s] = o, t.Z = new E(l.Z, {
   GAME_LAUNCHABLE_UPDATE: function(e) {
     let {
       gameId: t,
       isLaunchable: n
     } = e;
-    d[t] = n
+    _[t] = n
   },
-  GAME_CLOUD_SYNC_START: _,
-  GAME_LAUNCH_START: _,
+  GAME_CLOUD_SYNC_START: d,
+  GAME_LAUNCH_START: d,
   GAME_LAUNCH_SUCCESS: c,
   GAME_LAUNCH_FAIL: c,
   GAME_CLOUD_SYNC_CONFLICT: c,

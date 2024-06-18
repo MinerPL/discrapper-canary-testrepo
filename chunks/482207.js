@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  ChatLayerContainer: function() {
-    return a
-  },
-  ChatLayerProvider: function() {
+n.d(t, {
+  kw: function() {
     return o
+  },
+  sW: function() {
+    return a
   }
 });
 let {
   Layer: i,
   LayerContainer: r,
   LayerProvider: s
-} = (0, n("302901").createLayer)("Chat"), a = r, o = s;
-t.default = i
+} = (0, n(302901).Xv)("Chat"), o = r, a = s;
+t.ZP = i

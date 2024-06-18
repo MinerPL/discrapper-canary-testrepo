@@ -7,8 +7,8 @@ function i(e) {
     discriminator: i,
     globalName: r,
     avatar: s,
-    avatarDecoration: a,
-    bot: o,
+    avatarDecoration: o,
+    bot: a,
     flags: l,
     premiumType: u
   } = e;
@@ -18,17 +18,17 @@ function i(e) {
     discriminator: i,
     global_name: r,
     avatar: s,
-    avatar_decoration_data: null != a ? {
-      asset: a.asset,
-      sku_id: a.skuId
+    avatar_decoration_data: null != o ? {
+      asset: o.asset,
+      sku_id: o.skuId
     } : null,
-    bot: o,
+    bot: a,
     flags: l,
     premium_type: null != u ? u : 0
   }
 }
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return i
   }
-}), n("789020")
+}), n(789020)

@@ -1,11 +1,11 @@
-var r = n("475227"),
-  i = n("389109"),
-  a = Object.prototype,
-  o = a.hasOwnProperty,
-  s = a.propertyIsEnumerable,
-  u = r(function() {
+var n = e(475227),
+  o = e(389109),
+  i = Object.prototype,
+  a = i.hasOwnProperty,
+  u = i.propertyIsEnumerable,
+  f = n(function() {
     return arguments
-  }()) ? r : function(t) {
-    return i(t) && o.call(t, "callee") && !s.call(t, "callee")
+  }()) ? n : function(t) {
+    return o(t) && a.call(t, "callee") && !u.call(t, "callee")
   };
-t.exports = u
+t.exports = f

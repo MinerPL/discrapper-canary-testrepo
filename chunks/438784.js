@@ -1,23 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
-  AnimatedDots: function() {
+n.d(t, {
+  I: function() {
     return E
   },
-  Dots: function() {
+  b: function() {
     return I
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
-  o = n("718017"),
-  l = n("597981");
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(920906),
+  l = n(122274);
 
 function u() {
   return document.hasFocus()
 }
-let d = {
+let _ = {
     config: {
       friction: 50,
       tension: 900,
@@ -37,7 +37,7 @@ let d = {
       dotPosition: 0
     }
   },
-  _ = {
+  d = {
     config: {
       duration: 2400
     },
@@ -56,14 +56,14 @@ let E = r.memo(function(e) {
       dotRadius: t,
       dotPosition: n,
       fill: s = "currentColor",
-      spacing: a = 2.5
-    } = e, l = r.useRef(u()), d = r.useRef(!0);
-    r.useEffect(() => () => void(d.current = !1), []);
-    let [E] = (0, o.useSpring)(() => ({
-      ..._,
+      spacing: o = 2.5
+    } = e, l = r.useRef(u()), _ = r.useRef(!0);
+    r.useEffect(() => () => void(_.current = !1), []);
+    let [E] = (0, a.useSpring)(() => ({
+      ...d,
       to: async e => {
         let t = 2.8;
-        for (; d.current;) {
+        for (; _.current;) {
           ;
           l.current = u(), l.current ? (t += 4, await e({
             dotCycle: t,
@@ -78,8 +78,8 @@ let E = r.memo(function(e) {
     return (0, i.jsx)(i.Fragment, {
       children: [0, 1, 2].map(e => {
         let r = .25 * e,
-          u = t + t * a * e;
-        return (0, i.jsx)(o.animated.circle, {
+          u = t + t * o * e;
+        return (0, i.jsx)(a.animated.circle, {
           cx: n ? n.to([0, 1], [I, u]) : u,
           cy: t,
           r: E.dotCycle.to(e => c(e - r)).to([0, .4, .8, 1], [.8 * t, .8 * t, t, t]).to(e => l.current ? e : t),
@@ -96,34 +96,34 @@ let E = r.memo(function(e) {
       dotRadius: n,
       x: r,
       y: s,
-      hide: _ = !1,
+      hide: d = !1,
       themed: c = !1,
       className: I
     } = e;
-    return (0, o.useTransition)(_, {
-      ...d,
+    return (0, a.useTransition)(d, {
+      ..._,
       key: e => e ? "true" : "false",
       immediate: !u()
-    })((e, u, d) => {
+    })((e, u, _) => {
       let {
-        dotPosition: _
+        dotPosition: d
       } = e, {
         key: T
-      } = d;
+      } = _;
       return u ? null : (0, i.jsx)("svg", {
         ref: t,
         x: r,
         y: s,
         width: 6 * n + n / 2 * 2,
         height: 2 * n,
-        className: a()(I, l.dots, c ? l.themed : null),
-        children: (0, i.jsx)(o.animated.g, {
+        className: o()(I, l.dots, c ? l.themed : null),
+        children: (0, i.jsx)(a.animated.g, {
           style: {
-            opacity: _.to(e => Math.min(1, Math.max(e, 0)))
+            opacity: d.to(e => Math.min(1, Math.max(e, 0)))
           },
           children: (0, i.jsx)(E, {
             dotRadius: n,
-            dotPosition: _
+            dotPosition: d
           })
         })
       }, T)

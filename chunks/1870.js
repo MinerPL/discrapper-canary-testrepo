@@ -1,13 +1,13 @@
 "use strict";
 let i, r, s;
-n.r(t), n("47120");
-var a, o, l, u, d = n("392711"),
-  _ = n("442837"),
-  c = n("570140");
+n(47120);
+var o, a, l, u, _ = n(392711),
+  d = n(442837),
+  c = n(570140);
 let E = new Map,
   I = E,
   T = !1;
-class f extends(a = _.default.Store) {
+class h extends(o = d.ZP.Store) {
   get isFetching() {
     return T
   }
@@ -27,17 +27,17 @@ class f extends(a = _.default.Store) {
     return null != e ? I.get(e) : void 0
   }
 }
-u = "CollectiblesPurchaseStore", (l = "displayName") in(o = f) ? Object.defineProperty(o, l, {
+u = "CollectiblesPurchaseStore", (l = "displayName") in(a = h) ? Object.defineProperty(a, l, {
   value: u,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[l] = u, t.default = new f(c.default, {
+}) : a[l] = u, t.Z = new h(c.Z, {
   COLLECTIBLES_PURCHASES_FETCH: e => {
     T = !0, r = void 0
   },
   COLLECTIBLES_PURCHASES_FETCH_SUCCESS: e => {
-    0 === e.purchases.length ? I = E : !(0, d.isEqual)([...I.values()], e.purchases) && (I = new Map(e.purchases.map(e => [e.skuId, e]))), T = !1, r = void 0
+    0 === e.purchases.length ? I = E : !(0, _.isEqual)([...I.values()], e.purchases) && (I = new Map(e.purchases.map(e => [e.skuId, e]))), T = !1, r = void 0
   },
   COLLECTIBLES_PURCHASES_FETCH_FAILURE: e => {
     let {
@@ -49,7 +49,7 @@ u = "CollectiblesPurchaseStore", (l = "displayName") in(o = f) ? Object.definePr
     i = e.skuId, s = void 0
   },
   COLLECTIBLES_CLAIM_SUCCESS: e => {
-    null == e.purchases || 0 === e.purchases.length ? I = E : !(0, d.isEqual)([...I.values()], e.purchases) && (I = new Map(e.purchases.map(e => [e.skuId, e]))), i = void 0, s = void 0
+    null == e.purchases || 0 === e.purchases.length ? I = E : !(0, _.isEqual)([...I.values()], e.purchases) && (I = new Map(e.purchases.map(e => [e.skuId, e]))), i = void 0, s = void 0
   },
   COLLECTIBLES_CLAIM_FAILURE: e => {
     let {

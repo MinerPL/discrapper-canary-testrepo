@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
-  reduce: function() {
+n.d(t, {
+  u: function() {
     return c
   }
 });
-var r = n("263016"),
-  i = n("40284"),
-  a = n("144459");
+var r = n(964742),
+  i = n(40284),
+  a = n(144459);
 
 function o(e, t) {
   var n = Object.keys(e);
@@ -52,7 +52,7 @@ function c() {
     t = arguments.length > 1 ? arguments[1] : void 0,
     n = t.payload;
   switch (t.type) {
-    case r.BEGIN_DRAG:
+    case r.qu:
       return s(s({}, e), {}, {
         itemType: n.itemType,
         item: n.item,
@@ -61,26 +61,26 @@ function c() {
         dropResult: null,
         didDrop: !1
       });
-    case r.PUBLISH_DRAG_SOURCE:
+    case r.js:
       return s(s({}, e), {}, {
         isSourcePublic: !0
       });
-    case r.HOVER:
+    case r.$T:
       return s(s({}, e), {}, {
         targetIds: n.targetIds
       });
-    case i.REMOVE_TARGET:
+    case i.IS:
       if (-1 === e.targetIds.indexOf(n.targetId)) return e;
       return s(s({}, e), {}, {
-        targetIds: (0, a.without)(e.targetIds, n.targetId)
+        targetIds: (0, a.zu)(e.targetIds, n.targetId)
       });
-    case r.DROP:
+    case r.rp:
       return s(s({}, e), {}, {
         dropResult: n.dropResult,
         didDrop: !0,
         targetIds: []
       });
-    case r.END_DRAG:
+    case r.Bs:
       return s(s({}, e), {}, {
         itemType: null,
         item: null,

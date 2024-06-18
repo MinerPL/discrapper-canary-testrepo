@@ -1,39 +1,38 @@
 "use strict";
-r.r(t);
-var n = r("345114"),
-  a = r("806159"),
-  o = r("738562");
-t.default = function(e, t, r, i, l, u) {
-  var s = 1 & r,
-    f = e.length,
-    c = t.length;
-  if (f != c && !(s && c > f)) return !1;
-  var d = u.get(e),
+var r = n(345114),
+  i = n(806159),
+  a = n(738562);
+t.Z = function(e, t, n, o, s, u) {
+  var c = 1 & n,
+    l = e.length,
+    d = t.length;
+  if (l != d && !(c && d > l)) return !1;
+  var f = u.get(e),
     p = u.get(t);
-  if (d && p) return d == t && p == e;
+  if (f && p) return f == t && p == e;
   var h = -1,
-    b = !0,
-    v = 2 & r ? new n.default : void 0;
-  for (u.set(e, t), u.set(t, e); ++h < f;) {
-    var g = e[h],
-      x = t[h];
-    if (i) var y = s ? i(x, g, h, t, e, u) : i(g, x, h, e, t, u);
-    if (void 0 !== y) {
-      if (y) continue;
-      b = !1;
+    m = !0,
+    g = 2 & n ? new r.Z : void 0;
+  for (u.set(e, t), u.set(t, e); ++h < l;) {
+    var _ = e[h],
+      b = t[h];
+    if (o) var v = c ? o(b, _, h, t, e, u) : o(_, b, h, e, t, u);
+    if (void 0 !== v) {
+      if (v) continue;
+      m = !1;
       break
     }
-    if (v) {
-      if (!(0, a.default)(t, function(e, t) {
-          if (!(0, o.default)(v, t) && (g === e || l(g, e, r, i, u))) return v.push(t)
+    if (g) {
+      if (!(0, i.Z)(t, function(e, t) {
+          if (!(0, a.Z)(g, t) && (_ === e || s(_, e, n, o, u))) return g.push(t)
         })) {
-        b = !1;
+        m = !1;
         break
       }
-    } else if (!(g === x || l(g, x, r, i, u))) {
-      b = !1;
+    } else if (!(_ === b || s(_, b, n, o, u))) {
+      m = !1;
       break
     }
   }
-  return u.delete(e), u.delete(t), b
+  return u.delete(e), u.delete(t), m
 }

@@ -1,6 +1,6 @@
 "use strict";
-n.r(t), n.d(t, {
-  ResizeObserverDetail: function() {
+n.d(t, {
+  r: function() {
     return r
   }
 });

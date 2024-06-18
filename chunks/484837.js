@@ -1,14 +1,12 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("844303");
-t.default = function(e) {
+var r = n(470079),
+  i = n(844303);
+t.C = function(e) {
   var t = e.onClick,
-    r = e.label,
-    n = e.children,
-    i = e.active,
-    l = (0, o.default)({
+    n = e.label,
+    a = e.children,
+    o = e.active,
+    s = (0, i.default)({
       default: {
         button: {
           backgroundImage: "linear-gradient(-180deg, #FFFFFF 0%, #E6E6E6 100%)",
@@ -30,10 +28,10 @@ t.default = function(e) {
         }
       }
     }, {
-      active: i
+      active: o
     });
-  return a().createElement("div", {
-    style: l.button,
+  return r.createElement("div", {
+    style: s.button,
     onClick: t
-  }, r || n)
+  }, n || a)
 }

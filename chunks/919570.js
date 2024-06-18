@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
-  INTERACTION_EVENTS: function() {
-    return i
-  },
-  clearCurrentlyInteractingWindowId: function() {
-    return o
-  },
-  getCurrentlyInteractingWindowId: function() {
+n.d(t, {
+  GR: function() {
     return s
   },
-  setCurrentlyInteractingWindowId: function() {
+  HQ: function() {
     return a
+  },
+  gK: function() {
+    return o
+  },
+  wu: function() {
+    return i
   }
 });
 let i = ["click", "mousedown", "mouseup", "keydown", "keyup", "keypress", "contextmenu"],
@@ -20,10 +20,10 @@ function s() {
   return r
 }
 
-function a(e) {
+function o(e) {
   r = e
 }
 
-function o(e) {
-  r === e && (r = null)
+function a(e) {
+  if (r === e) r = null
 }

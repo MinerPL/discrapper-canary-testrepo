@@ -1,33 +1,33 @@
 "use strict";
-n.r(t), n.d(t, {
-  ActivityEmoji: function() {
+n.d(t, {
+  I: function() {
     return v
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
-  o = n("844099"),
-  l = n("442837"),
-  u = n("481060"),
-  d = n("596454"),
-  _ = n("122810"),
-  c = n("74433"),
-  E = n("44315"),
-  I = n("633302"),
-  T = n("574176"),
-  f = n("106301"),
-  S = n("223135"),
-  h = n("695346"),
-  A = n("314897"),
-  m = n("592125"),
-  N = n("496675"),
-  p = n("158776"),
-  O = n("979651"),
-  C = n("6074"),
-  R = n("981631"),
-  g = n("573731");
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(844099),
+  l = n(442837),
+  u = n(481060),
+  _ = n(596454),
+  d = n(122810),
+  c = n(74433),
+  E = n(44315),
+  I = n(633302),
+  T = n(574176),
+  h = n(106301),
+  S = n(223135),
+  f = n(695346),
+  N = n(314897),
+  A = n(592125),
+  m = n(496675),
+  O = n(158776),
+  R = n(979651),
+  C = n(6074),
+  p = n(981631),
+  g = n(573731);
 let L = "14px";
 
 function v(e) {
@@ -35,21 +35,21 @@ function v(e) {
     emoji: t,
     className: n,
     animate: r = !0,
-    hideTooltip: a,
-    tooltipDelay: o
-  } = e, l = h.AnimateEmoji.useSetting(), _ = null != t.id ? ":".concat(t.name, ":") : I.default.translateSurrogatesToInlineEmoji(t.name), c = {
-    className: s()(g.emoji, n),
+    hideTooltip: s,
+    tooltipDelay: a
+  } = e, l = f.Yk.useSetting(), d = null != t.id ? ":".concat(t.name, ":") : I.ZP.translateSurrogatesToInlineEmoji(t.name), c = {
+    className: o()(g.emoji, n),
     emojiId: t.id,
     emojiName: t.name,
     autoplay: !0,
     animated: !!(t.animated && l && r)
   };
-  return a ? (0, i.jsx)(d.default, {
+  return s ? (0, i.jsx)(_.Z, {
     ...c
   }) : (0, i.jsx)(u.Tooltip, {
-    text: _,
-    delay: o,
-    children: e => (0, i.jsx)(d.default, {
+    text: d,
+    delay: a,
+    children: e => (0, i.jsx)(_.Z, {
       ...e,
       ...c
     })
@@ -59,14 +59,14 @@ let D = e => {
   let {
     className: t,
     text: n
-  } = e, a = r.useRef(null), o = r.useRef(null), [l, d] = r.useState(!1);
+  } = e, s = r.useRef(null), a = r.useRef(null), [l, _] = r.useState(!1);
   return r.useLayoutEffect(() => {
     let {
       current: e
-    } = a, {
+    } = s, {
       current: t
-    } = o;
-    if (null != e && null != t) d(!(e.clientWidth < t.clientWidth && e.clientHeight <= t.clientHeight))
+    } = a;
+    if (null != e && null != t) _(!(e.clientWidth < t.clientWidth && e.clientHeight <= t.clientHeight))
   }, [n]), (0, i.jsx)(u.Tooltip, {
     text: l || null == n || "" === n ? null : n,
     delay: 150,
@@ -75,65 +75,65 @@ let D = e => {
       children: [(0, i.jsx)("div", {
         ...e,
         className: t,
-        ref: a,
+        ref: s,
         children: n
       }), (0, i.jsx)("div", {
-        className: s()(g.textRuler, t),
-        ref: o,
+        className: o()(g.textRuler, t),
+        ref: a,
         "aria-hidden": !0,
         children: n
       })]
     })
   })
 };
-t.default = e => {
+t.Z = e => {
   var t;
   let {
     activities: n,
     applicationStream: r,
-    className: a,
-    textClassName: s,
+    className: s,
+    textClassName: o,
     emojiClassName: u,
-    animate: d = !0,
+    animate: _ = !0,
     hideTooltip: I = !1,
-    hideEmoji: h = !1,
+    hideEmoji: f = !1,
     user: M,
-    hasQuest: y
-  } = e, P = null != n ? n.find(e => e.type === R.ActivityTypes.CUSTOM_STATUS) : null, U = (0, l.useStateFromStores)([A.default], () => A.default.getId() === (null == M ? void 0 : M.id)), b = (0, l.useStateFromStores)([f.default], () => U ? f.default.getHangStatusActivity() : null != n ? n.find(e => e.type === R.ActivityTypes.HANG_STATUS) : null), G = (0, l.useStateFromStores)([O.default, m.default], () => {
+    hasQuest: P
+  } = e, y = null != n ? n.find(e => e.type === p.IIU.CUSTOM_STATUS) : null, U = (0, l.e7)([N.default], () => N.default.getId() === (null == M ? void 0 : M.id)), b = (0, l.e7)([h.Z], () => U ? h.Z.getHangStatusActivity() : null != n ? n.find(e => e.type === p.IIU.HANG_STATUS) : null), G = (0, l.e7)([R.Z, A.Z], () => {
     var e;
-    return null != b && null != M ? m.default.getChannel(null === (e = O.default.getVoiceStateForUser(M.id)) || void 0 === e ? void 0 : e.channelId) : null
+    return null != b && null != M ? A.Z.getChannel(null === (e = R.Z.getVoiceStateForUser(M.id)) || void 0 === e ? void 0 : e.channelId) : null
   }), {
     enableHangStatus: w
-  } = T.HangStatusExperiment.useExperiment({
+  } = T.n.useExperiment({
     guildId: null == G ? void 0 : G.guild_id,
     location: "ActivityStatus"
   }, {
     autoTrackExposure: !1
-  }), k = (0, E.useColorValue)(R.Color.BRAND_345), B = null, V = w && null != b && N.default.can(R.Permissions.CONNECT, G);
-  V ? B = (0, i.jsx)(S.default, {
+  }), k = (0, E.Sl)(p.Ilk.BRAND_345), B = null, x = w && null != b && m.Z.can(p.Plq.CONNECT, G);
+  x ? B = (0, i.jsx)(S.Z, {
     className: u,
     hangStatusActivity: b
-  }) : null != P && null != P.emoji && !h && (B = (0, i.jsx)(v, {
-    emoji: P.emoji,
-    animate: d,
+  }) : null != y && null != y.emoji && !f && (B = (0, i.jsx)(v, {
+    emoji: y.emoji,
+    animate: _,
     hideTooltip: I,
     className: u
   }));
-  let x = (0, l.useStateFromStores)([p.default], () => null != M ? p.default.getStatus(M.id) : null),
-    F = null !== x && [R.StatusTypes.OFFLINE, R.StatusTypes.INVISIBLE].includes(x),
-    H = null === (t = (0, c.default)(n, r, void 0, V)) || void 0 === t ? void 0 : t.activityText,
-    Y = null != H && H.length > 0;
-  return F || null == B && !Y ? null : (0, i.jsxs)("div", {
-    className: a,
+  let V = (0, l.e7)([O.Z], () => null != M ? O.Z.getStatus(M.id) : null),
+    Z = null !== V && [p.Skl.OFFLINE, p.Skl.INVISIBLE].includes(V),
+    H = null === (t = (0, c.Z)(n, r, void 0, x)) || void 0 === t ? void 0 : t.activityText,
+    F = null != H && H.length > 0;
+  return Z || null == B && !F ? null : (0, i.jsxs)("div", {
+    className: s,
     children: [B, (0, i.jsx)(D, {
       text: H,
-      className: s
-    }), y && (0, i.jsx)(o.QuestsIcon, {
+      className: o
+    }), P && (0, i.jsx)(a.q, {
       className: g.questsIcon,
       height: L,
       width: L,
       color: k.hex
-    }), null != n && n.some(e => (0, _.default)(e, V)) ? (0, i.jsx)(C.default, {
+    }), null != n && n.some(e => (0, d.Z)(e, x)) ? (0, i.jsx)(C.Z, {
       width: 16,
       height: 16,
       className: g.icon

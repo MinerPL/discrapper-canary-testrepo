@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  UUOneClickExperiment: function() {
+n.d(t, {
+  Z: function() {
     return i
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2023-11_uu_one_click",
   label: "Unique Username one click",

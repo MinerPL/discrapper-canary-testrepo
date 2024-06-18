@@ -1,19 +1,19 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return n
+t.d(s, {
+  Z: function() {
+    return l
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("548217");
+var n = t(735250);
+t(470079);
+var i = t(217440);
 
-function n(e) {
+function l(e) {
   let {
-    children: t
+    children: s
   } = e;
-  return (0, a.jsx)("div", {
-    className: l.paymentSections,
-    children: t
+  return (0, n.jsx)("div", {
+    className: i.paymentSections,
+    children: s
   })
 }

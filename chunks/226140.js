@@ -1,5 +1,5 @@
 "use strict";
-var r = n("685053"),
+var r = n(685053),
   i = r.assert,
   a = r.parseBytes,
   o = r.cachedProperty;

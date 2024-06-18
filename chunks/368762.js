@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  EraParser: function() {
+n.d(t, {
+  z: function() {
     return l
   }
 });
-var r = n("717029");
+var r = n(717029);
 
 function i(e) {
   return (i = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
@@ -67,13 +67,10 @@ var l = function(e) {
     }
   }(), function() {
     var e, r = u(t);
-    if (n) {
-      var a = u(this).constructor;
-      e = Reflect.construct(r, arguments, a)
-    } else e = r.apply(this, arguments);
-    return function(e, t) {
-      return t && ("object" === i(t) || "function" == typeof t) ? t : s(e)
-    }(this, e)
+    return e = n ? Reflect.construct(r, arguments, u(this).constructor) : r.apply(this, arguments),
+      function(e, t) {
+        return t && ("object" === i(t) || "function" == typeof t) ? t : s(e)
+      }(this, e)
   });
 
   function p() {
@@ -115,5 +112,5 @@ var l = function(e) {
     value: function(e, t, n) {
       return t.era = n, e.setUTCFullYear(n, 0, 1), e.setUTCHours(0, 0, 0, 0), e
     }
-  }], a(r.prototype, l), d && a(r, d), p
-}(r.Parser)
+  }], a(r.prototype, l), p
+}(r._)

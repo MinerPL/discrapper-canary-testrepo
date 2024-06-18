@@ -1,4 +1,4 @@
-var r = n("346391");
+var r = n(346391);
 e.exports = function(e, t) {
   var n = r(this, e),
     i = n.size;

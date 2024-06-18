@@ -1,16 +1,15 @@
 "use strict";
-var n = r("546870"),
-  i = r("680643"),
-  o = r("65183"),
-  a = r("581079"),
-  u = r("896775"),
+var n = r(546870),
+  i = r(680643),
+  o = r(65183),
+  a = r(581079),
+  u = r(896775),
   s = o.List,
   c = o.Map,
   l = function(t, e, r) {
-    if (!!t) {
-      var n = e.get(t);
-      n && e.set(t, r(n))
-    }
+    if (!t) return;
+    var n = e.get(t);
+    if (!!n) e.set(t, r(n))
   };
 t.exports = function(t, e) {
   e.isCollapsed() || a(!1);
@@ -30,29 +29,30 @@ t.exports = function(t, e) {
   var v = e.getAnchorOffset(),
     m = d.getCharacterList(),
     _ = i(),
-    b = d.merge({
+    b = d instanceof n,
+    S = d.merge({
       text: g.slice(0, v),
       characterList: m.slice(0, v)
     }),
-    S = b.merge({
+    w = S.merge({
       key: _,
       text: g.slice(v),
       characterList: m.slice(v),
       data: c()
     }),
-    w = h.toSeq().takeUntil(function(t) {
+    k = h.toSeq().takeUntil(function(t) {
       return t === d
     }),
-    k = h.toSeq().skipUntil(function(t) {
+    x = h.toSeq().skipUntil(function(t) {
       return t === d
     }).rest(),
-    x = w.concat([
-      [p, b],
-      [_, S]
-    ], k).toOrderedMap();
-  if (d instanceof n) {
+    C = k.concat([
+      [p, S],
+      [_, w]
+    ], x).toOrderedMap();
+  if (b) {
     ;
-    d.getChildKeys().isEmpty() || a(!1), r = x, o = b, f = S, x = r.withMutations(function(t) {
+    d.getChildKeys().isEmpty() || a(!1), r = C, o = S, f = w, C = r.withMutations(function(t) {
       var e = o.getKey(),
         r = f.getKey();
       l(o.getParentKey(), t, function(t) {
@@ -78,7 +78,7 @@ t.exports = function(t, e) {
     })
   }
   return t.merge({
-    blockMap: x,
+    blockMap: C,
     selectionBefore: e,
     selectionAfter: e.merge({
       anchorKey: _,

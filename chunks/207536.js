@@ -1,5 +1,5 @@
-var r = n("543744"),
-  i = n("436091");
+var r = n(543744),
+  i = n(436091);
 e.exports = function(e, t) {
   var n = -1,
     a = i(e) ? Array(e.length) : [];

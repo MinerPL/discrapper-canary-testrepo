@@ -1,20 +1,18 @@
 "use strict";
-n.r(t);
-var r = n("599295"),
-  i = n("781212"),
-  a = n("919499");
-n("476400");
-var o = n("898061"),
-  s = n("862127"),
-  u = n("470079"),
-  c = n.n(u),
-  l = n("73793"),
-  d = function(e, t) {
+var r = n(599295),
+  i = n(781212),
+  a = n(919499);
+n(476400);
+var o = n(898061),
+  s = n(862127),
+  u = n(470079),
+  c = n(73793),
+  l = function(e, t) {
     return e && t && t.split(" ").forEach(function(t) {
-      return (0, s.default)(e, t)
+      return (0, s.Z)(e, t)
     })
   },
-  f = function(e) {
+  d = function(e) {
     function t() {
       for (var t, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
       return (t = e.call.apply(e, [this].concat(r)) || this).appliedClasses = {
@@ -37,32 +35,33 @@ var o = n("898061"),
       }, t.getClassNames = function(e) {
         var n = t.props.classNames,
           r = "string" == typeof n,
-          i = r ? (r && n ? n + "-" : "") + e : n[e],
-          a = r ? i + "-active" : n[e + "Active"],
-          o = r ? i + "-done" : n[e + "Done"];
+          i = r && n ? n + "-" : "",
+          a = r ? "" + i + e : n[e],
+          o = r ? a + "-active" : n[e + "Active"],
+          s = r ? a + "-done" : n[e + "Done"];
         return {
-          baseClassName: i,
-          activeClassName: a,
-          doneClassName: o
+          baseClassName: a,
+          activeClassName: o,
+          doneClassName: s
         }
       }, t
-    }(0, a.default)(t, e);
+    }(0, a.Z)(t, e);
     var n = t.prototype;
     return n.addClass = function(e, t, n) {
       var r, i, a = this.getClassNames(t)[n + "ClassName"];
       "appear" === t && "done" === n && (a += " " + this.getClassNames("enter").doneClassName), "active" === n && e && e.scrollTop, this.appliedClasses[t][n] = a, r = e, i = a, r && i && i.split(" ").forEach(function(e) {
-        return (0, o.default)(r, e)
+        return (0, o.Z)(r, e)
       })
     }, n.removeClasses = function(e, t) {
       var n = this.appliedClasses[t],
         r = n.base,
         i = n.active,
         a = n.done;
-      this.appliedClasses[t] = {}, r && d(e, r), i && d(e, i), a && d(e, a)
+      this.appliedClasses[t] = {}, r && l(e, r), i && l(e, i), a && l(e, a)
     }, n.render = function() {
       var e = this.props,
-        t = (e.classNames, (0, i.default)(e, ["classNames"]));
-      return c().createElement(l.default, (0, r.default)({}, t, {
+        t = (e.classNames, (0, i.Z)(e, ["classNames"]));
+      return u.createElement(c.ZP, (0, r.Z)({}, t, {
         onEnter: this.onEnter,
         onEntered: this.onEntered,
         onEntering: this.onEntering,
@@ -71,7 +70,7 @@ var o = n("898061"),
         onExited: this.onExited
       }))
     }, t
-  }(c().Component);
-f.defaultProps = {
+  }(u.Component);
+d.defaultProps = {
   classNames: ""
-}, f.propTypes = {}, t.default = f
+}, d.propTypes = {}, t.Z = d

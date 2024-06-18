@@ -1,16 +1,16 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return i
+t.d(s, {
+  Z: function() {
+    return a
   }
-}), s("47120");
-var a = s("710344"),
-  l = s("764260");
+}), t(47120);
+var n = t(710344),
+  i = t(764260);
 
-function n(e) {
-  (0, l.updateRoleSort)([...e.map(e => e.id)])
+function l(e) {
+  (0, i.sI)([...e.map(e => e.id)])
 }
 
-function i(e) {
-  return (0, a.default)(e, n)
+function a(e) {
+  return (0, n.Z)(e, l)
 }

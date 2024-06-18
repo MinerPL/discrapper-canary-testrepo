@@ -1,20 +1,25 @@
 "use strict";
-n.r(e), n.d(e, {
-  Scope: function() {
-    return a
+n.d(e, {
+  c: function() {
+    return h
   },
-  addGlobalEventProcessor: function() {
-    return s
+  s: function() {
+    return c
   }
 });
-var r = n("648238"),
-  i = n("741900");
-class a {
+var r = n(46834),
+  i = n(868145),
+  s = n(880803),
+  a = n(529866),
+  o = n(862315),
+  u = n(24716),
+  l = n(741900);
+class c {
   constructor() {
-    this._notifyingListeners = !1, this._scopeListeners = [], this._eventProcessors = [], this._breadcrumbs = [], this._attachments = [], this._user = {}, this._tags = {}, this._extra = {}, this._contexts = {}, this._sdkProcessingMetadata = {}, this._propagationContext = u()
+    this._notifyingListeners = !1, this._scopeListeners = [], this._eventProcessors = [], this._breadcrumbs = [], this._attachments = [], this._user = {}, this._tags = {}, this._extra = {}, this._contexts = {}, this._sdkProcessingMetadata = {}, this._propagationContext = _()
   }
   static clone(t) {
-    let e = new a;
+    let e = new c;
     return t && (e._breadcrumbs = [...t._breadcrumbs], e._tags = {
       ...t._tags
     }, e._extra = {
@@ -34,7 +39,7 @@ class a {
     return this._eventProcessors.push(t), this
   }
   setUser(t) {
-    return this._user = t || {}, this._session && (0, i.updateSession)(this._session, {
+    return this._user = t || {}, this._session && (0, l.CT)(this._session, {
       user: t
     }), this._notifyScopeListeners(), this
   }
@@ -103,9 +108,9 @@ class a {
     if (!t) return this;
     if ("function" == typeof t) {
       let e = t(this);
-      return e instanceof a ? e : this
+      return e instanceof c ? e : this
     }
-    return t instanceof a ? (this._tags = {
+    return t instanceof c ? (this._tags = {
       ...this._tags,
       ...t._tags
     }, this._extra = {
@@ -114,7 +119,7 @@ class a {
     }, this._contexts = {
       ...this._contexts,
       ...t._contexts
-    }, t._user && Object.keys(t._user).length && (this._user = t._user), t._level && (this._level = t._level), t._fingerprint && (this._fingerprint = t._fingerprint), t._requestSession && (this._requestSession = t._requestSession), t._propagationContext && (this._propagationContext = t._propagationContext)) : (0, r.isPlainObject)(t) && (this._tags = {
+    }, t._user && Object.keys(t._user).length && (this._user = t._user), t._level && (this._level = t._level), t._fingerprint && (this._fingerprint = t._fingerprint), t._requestSession && (this._requestSession = t._requestSession), t._propagationContext && (this._propagationContext = t._propagationContext)) : (0, r.PO)(t) && (this._tags = {
       ...this._tags,
       ...t.tags
     }, this._extra = {
@@ -126,16 +131,16 @@ class a {
     }, t.user && (this._user = t.user), t.level && (this._level = t.level), t.fingerprint && (this._fingerprint = t.fingerprint), t.requestSession && (this._requestSession = t.requestSession), t.propagationContext && (this._propagationContext = t.propagationContext)), this
   }
   clear() {
-    return this._breadcrumbs = [], this._tags = {}, this._extra = {}, this._user = {}, this._contexts = {}, this._level = void 0, this._transactionName = void 0, this._fingerprint = void 0, this._requestSession = void 0, this._span = void 0, this._session = void 0, this._notifyScopeListeners(), this._attachments = [], this._propagationContext = u(), this
+    return this._breadcrumbs = [], this._tags = {}, this._extra = {}, this._user = {}, this._contexts = {}, this._level = void 0, this._transactionName = void 0, this._fingerprint = void 0, this._requestSession = void 0, this._span = void 0, this._session = void 0, this._notifyScopeListeners(), this._attachments = [], this._propagationContext = _(), this
   }
   addBreadcrumb(t, e) {
     let n = "number" == typeof e ? e : 100;
     if (n <= 0) return this;
-    let i = {
-      timestamp: (0, r.dateTimestampInSeconds)(),
+    let r = {
+      timestamp: (0, i.yW)(),
       ...t
     };
-    return this._breadcrumbs = [...this._breadcrumbs, i].slice(-n), this._notifyScopeListeners(), this
+    return this._breadcrumbs = [...this._breadcrumbs, r].slice(-n), this._notifyScopeListeners(), this
   }
   getLastBreadcrumb() {
     return this._breadcrumbs[this._breadcrumbs.length - 1]
@@ -187,7 +192,7 @@ class a {
       ...t.sdkProcessingMetadata,
       ...this._sdkProcessingMetadata,
       propagationContext: this._propagationContext
-    }, this._notifyEventProcessors([...o(), ...this._eventProcessors], t, e)
+    }, this._notifyEventProcessors([...d(), ...this._eventProcessors], t, e)
   }
   setSDKProcessingMetadata(t) {
     return this._sdkProcessingMetadata = {
@@ -202,14 +207,14 @@ class a {
     return this._propagationContext
   }
   _notifyEventProcessors(t, e, n, i = 0) {
-    return new r.SyncPromise((a, o) => {
-      let s = t[i];
-      if (null === e || "function" != typeof s) a(e);
+    return new s.cW((s, o) => {
+      let u = t[i];
+      if (null === e || "function" != typeof u) s(e);
       else {
-        let u = s({
+        let l = u({
           ...e
         }, n);
-        ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && s.id && null === u && r.logger.log(`Event processor "${s.id}" dropped event`), (0, r.isThenable)(u) ? u.then(e => this._notifyEventProcessors(t, e, n, i + 1).then(a)).then(null, o) : this._notifyEventProcessors(t, u, n, i + 1).then(a).then(null, o)
+        ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && u.id && null === l && a.kg.log(`Event processor "${u.id}" dropped event`), (0, r.J8)(l) ? l.then(e => this._notifyEventProcessors(t, e, n, i + 1).then(s)).then(null, o) : this._notifyEventProcessors(t, l, n, i + 1).then(s).then(null, o)
       }
     })
   }
@@ -219,22 +224,22 @@ class a {
     }), this._notifyingListeners = !1)
   }
   _applyFingerprint(t) {
-    t.fingerprint = t.fingerprint ? (0, r.arrayify)(t.fingerprint) : [], this._fingerprint && (t.fingerprint = t.fingerprint.concat(this._fingerprint)), t.fingerprint && !t.fingerprint.length && delete t.fingerprint
+    t.fingerprint = t.fingerprint ? (0, o.lE)(t.fingerprint) : [], this._fingerprint && (t.fingerprint = t.fingerprint.concat(this._fingerprint)), t.fingerprint && !t.fingerprint.length && delete t.fingerprint
   }
 }
 
-function o() {
-  return (0, r.getGlobalSingleton)("globalEventProcessors", () => [])
+function d() {
+  return (0, u.YO)("globalEventProcessors", () => [])
 }
 
-function s(t) {
-  o().push(t)
+function h(t) {
+  d().push(t)
 }
 
-function u() {
+function _() {
   return {
-    traceId: (0, r.uuid4)(),
-    spanId: (0, r.uuid4)().substring(16),
+    traceId: (0, o.DM)(),
+    spanId: (0, o.DM)().substring(16),
     sampled: !1
   }
 }

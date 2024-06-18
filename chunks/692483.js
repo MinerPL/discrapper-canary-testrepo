@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  formatUsername: function() {
-    return a
+n.d(t, {
+  K: function() {
+    return r
   }
 });
-var s = n("998502");
-async function a(e) {
+var s = n(998502);
+async function r(e) {
   try {
-    return await s.default.getSetting("USERNAME_PREFIX", "") + e
+    return await s.ZP.getSetting("USERNAME_PREFIX", "") + e
   } catch (e) {}
   return e
 }

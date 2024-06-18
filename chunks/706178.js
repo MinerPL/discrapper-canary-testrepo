@@ -1,6 +1,6 @@
 "use strict";
-var r = n("444675"),
-  i = n("957578").Buffer,
+var r = n(444675),
+  i = n(957578).Buffer,
   a = n.g.crypto || n.g.msCrypto;
 a && a.getRandomValues ? e.exports = function(e, t) {
   if (e > 4294967295) throw RangeError("requested too many random bytes");

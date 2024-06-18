@@ -1,5 +1,5 @@
 "use strict";
-var e = n("641236")("iterator"),
+var e = n(641236)("iterator"),
   o = !1;
 try {
   var i = 0,

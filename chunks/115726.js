@@ -1,6 +1,6 @@
 "use strict";
-var e = r("581031"),
-  i = r("339718"),
+var e = r(581031),
+  i = r(339718),
   u = Math.floor,
   c = e("".charAt),
   o = e("".replace),

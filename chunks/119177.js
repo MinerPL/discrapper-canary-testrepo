@@ -1,6 +1,6 @@
-var r = n("706627"),
-  i = n("292403"),
-  a = n("906087"),
+var r = n(706627),
+  i = n(292403),
+  a = n(906087),
   o = Object.prototype.hasOwnProperty;
 e.exports = function(e) {
   if (!r(e)) return a(e);

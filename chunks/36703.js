@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  amplitudeToPerceptual: function() {
-    return r
-  },
-  perceptualToAmplitude: function() {
+n.d(t, {
+  A: function() {
     return i
+  },
+  P: function() {
+    return r
   }
 });
 

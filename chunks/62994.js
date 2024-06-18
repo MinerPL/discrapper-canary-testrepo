@@ -424,10 +424,9 @@
           });
           let g = A[0].length,
             C = new Float32Array(g * A.length);
-          A.forEach((A, I) => {
+          return A.forEach((A, I) => {
             C.set(A, I * g)
-          });
-          let Q = function(A, I) {
+          }), new Blob([function(A, I) {
             let g = I.isFloat ? Float32Array : Uint16Array,
               C = function(A) {
                 let I = A.numFrames,
@@ -463,8 +462,7 @@
             isFloat: !0,
             numChannels: 1,
             sampleRate: I
-          });
-          return new Blob([Q], {
+          })], {
             type: "audio/wav;codecs=wav"
           })
         }

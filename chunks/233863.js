@@ -1,22 +1,22 @@
 "use strict";
-n.r(e), n.d(e, {
-  getVisibilityWatcher: function() {
+n.d(e, {
+  Y: function() {
     return u
   }
 });
-var r = n("607190"),
-  i = n("527475");
-let a = -1,
-  o = () => "hidden" !== r.WINDOW.document.visibilityState || r.WINDOW.document.prerendering ? 1 / 0 : 0,
-  s = () => {
-    (0, i.onHidden)(({
+var r = n(607190),
+  i = n(527475);
+let s = -1,
+  a = () => "hidden" !== r.m.document.visibilityState || r.m.document.prerendering ? 1 / 0 : 0,
+  o = () => {
+    (0, i.u)(({
       timeStamp: t
     }) => {
-      a = t
+      s = t
     }, !0)
   },
-  u = () => (a < 0 && (a = o(), s()), {
+  u = () => (s < 0 && (s = a(), o()), {
     get firstHiddenTime() {
-      return a
+      return s
     }
   })

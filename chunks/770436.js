@@ -1,98 +1,98 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return c
+t.d(s, {
+  Z: function() {
+    return u
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("239091"),
-  n = s("592125"),
-  i = s("430824"),
-  r = s("594174"),
-  o = s("909410"),
-  d = s("981631"),
-  u = s("689938");
+var n = t(735250);
+t(470079);
+var i = t(239091),
+  l = t(592125),
+  a = t(430824),
+  r = t(594174),
+  o = t(909410),
+  c = t(981631),
+  d = t(689938);
 
-function c(e) {
+function u(e) {
   let {
-    guildId: t,
-    log: c,
+    guildId: s,
+    log: u,
     onHeaderClick: E,
     className: _,
     expanded: I,
     onContentClick: T
   } = e;
-  return null == t ? null : (0, a.jsx)(o.default, {
-    guildId: t,
-    log: c,
+  return null == s ? null : (0, n.jsx)(o.Z, {
+    guildId: s,
+    log: u,
     className: _,
     expanded: I,
     onContentClick: T,
     onHeaderClick: () => {
-      null == E || E(c)
+      null == E || E(u)
     },
     onUserContextMenu: e => {
       let {
-        user: n
-      } = c;
-      null != n && null != t && (0, l.openContextMenuLazy)(e, async () => {
+        user: l
+      } = u;
+      null != l && null != s && (0, i.jW)(e, async () => {
         let {
           default: e
-        } = await Promise.all([s.e("99387"), s.e("50929")]).then(s.bind(s, "595011"));
-        return s => (0, a.jsx)(e, {
-          ...s,
-          guildId: t,
-          user: n
+        } = await Promise.all([t.e("99387"), t.e("50929")]).then(t.bind(t, 595011));
+        return t => (0, n.jsx)(e, {
+          ...t,
+          guildId: s,
+          user: l
         })
       })
     },
     onChannelContextMenu: e => {
-      let n = i.default.getGuild(t);
-      null != c.options.channel && null != n && (0, l.openContextMenuLazy)(e, async () => {
+      let l = a.Z.getGuild(s);
+      null != u.options.channel && null != l && (0, i.jW)(e, async () => {
         let {
           default: e
-        } = await s.e("51529").then(s.bind(s, "228620"));
-        return t => (0, a.jsx)(e, {
-          ...t,
-          channel: c.options.channel
+        } = await t.e("51529").then(t.bind(t, 228620));
+        return s => (0, n.jsx)(e, {
+          ...s,
+          channel: u.options.channel
         })
       })
     },
     onTargetContextMenu: e => {
-      switch (c.targetType) {
-        case d.AuditLogTargetTypes.CHANNEL:
-        case d.AuditLogTargetTypes.CHANNEL_OVERWRITE:
-          let o = n.default.getChannel(c.targetId),
-            E = i.default.getGuild(t);
-          if (null != o && null != E) return (0, l.openContextMenuLazy)(e, async () => {
+      switch (u.targetType) {
+        case c.KFR.CHANNEL:
+        case c.KFR.CHANNEL_OVERWRITE:
+          let o = l.Z.getChannel(u.targetId),
+            E = a.Z.getGuild(s);
+          if (null != o && null != E) return (0, i.jW)(e, async () => {
             let {
               default: e
-            } = await s.e("51529").then(s.bind(s, "228620"));
-            return t => (0, a.jsx)(e, {
-              ...t,
+            } = await t.e("51529").then(t.bind(t, 228620));
+            return s => (0, n.jsx)(e, {
+              ...s,
               channel: o
             })
           });
-          return (0, l.openContextMenuLazy)(e, async () => {
+          return (0, i.jW)(e, async () => {
             let {
               default: e
-            } = await s.e("5396").then(s.bind(s, "731646"));
-            return t => (0, a.jsx)(e, {
-              ...t,
-              id: c.targetId,
-              label: u.default.Messages.COPY_ID_UNKNOWN
+            } = await t.e("5396").then(t.bind(t, 731646));
+            return s => (0, n.jsx)(e, {
+              ...s,
+              id: u.targetId,
+              label: d.Z.Messages.COPY_ID_UNKNOWN
             })
           });
-        case d.AuditLogTargetTypes.USER:
-          let _ = r.default.getUser(c.targetId);
-          if (null != _ && null != t) return (0, l.openContextMenuLazy)(e, async () => {
+        case c.KFR.USER:
+          let _ = r.default.getUser(u.targetId);
+          if (null != _ && null != s) return (0, i.jW)(e, async () => {
             let {
               default: e
-            } = await Promise.all([s.e("99387"), s.e("50929")]).then(s.bind(s, "595011"));
-            return s => (0, a.jsx)(e, {
-              ...s,
-              guildId: t,
+            } = await Promise.all([t.e("99387"), t.e("50929")]).then(t.bind(t, 595011));
+            return t => (0, n.jsx)(e, {
+              ...t,
+              guildId: s,
               user: _
             })
           })

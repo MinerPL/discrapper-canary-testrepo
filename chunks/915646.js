@@ -1,8 +1,8 @@
-var r = n("574153");
+var n = e(574153);
 t.exports = function(t) {
-  var e = r(t, function(t) {
-      return 500 === n.size && n.clear(), t
+  var r = n(t, function(t) {
+      return 500 === e.size && e.clear(), t
     }),
-    n = e.cache;
-  return e
+    e = r.cache;
+  return r
 }

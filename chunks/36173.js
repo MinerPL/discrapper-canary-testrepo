@@ -1,2 +1,2 @@
 "use strict";
-n("187203")("replace")
+n(187203)("replace")

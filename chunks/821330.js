@@ -1,5 +1,5 @@
-var r = n("876557"),
-  i = n("541303"),
+var r = n(876557),
+  i = n(541303),
   a = Object.prototype.hasOwnProperty;
 e.exports = function(e) {
   if (!r(e)) return i(e);

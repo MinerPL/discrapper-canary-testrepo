@@ -1,13 +1,12 @@
 "use strict";
-n.r(t);
-var i, r = n("735250"),
-  s = n("470079"),
-  a = n("803997"),
-  o = n.n(a),
-  l = n("481060"),
-  u = n("639378");
+var i, r = n(735250),
+  s = n(470079),
+  o = n(120356),
+  a = n.n(o),
+  l = n(481060),
+  u = n(414497);
 
-function d(e, t, n) {
+function _(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -15,7 +14,7 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let _ = {
+let d = {
   SMALL: u.sizeSmall,
   MEDIUM: u.sizeMedium,
   LARGE: u.sizeLarge
@@ -57,20 +56,20 @@ class c extends(i = s.PureComponent) {
       tag: n,
       size: i,
       fullscreenOnMobile: s,
-      ...a
+      ...o
     } = this.props;
     return (0, r.jsx)(n, {
-      className: o()(u.modal, e, i, {
+      className: a()(u.modal, e, i, {
         [u.fullscreenOnMobile]: s
       }),
-      ...a,
+      ...o,
       children: this.renderChildren()
     })
   }
   constructor(e) {
-    super(e), d(this, "_scroller", null), d(this, "setRef", e => {
+    super(e), _(this, "_scroller", null), _(this, "setRef", e => {
       this._scroller = e, null != e && this.calculateScroll()
-    }), d(this, "handleScroll", e => {
+    }), _(this, "handleScroll", e => {
       this.calculateScroll();
       let {
         onScroll: t
@@ -81,8 +80,8 @@ class c extends(i = s.PureComponent) {
     }
   }
 }
-d(c, "Header", l.ModalHeader), d(c, "Footer", l.ModalFooter), d(c, "Content", l.ModalContent), d(c, "ListContent", l.ModalListContent), d(c, "CloseButton", l.ModalCloseButton), d(c, "Sizes", _), d(c, "defaultProps", {
+_(c, "Header", l.ModalHeader), _(c, "Footer", l.ModalFooter), _(c, "Content", l.ModalContent), _(c, "ListContent", l.ModalListContent), _(c, "CloseButton", l.ModalCloseButton), _(c, "Sizes", d), _(c, "defaultProps", {
   fullscreenOnMobile: !0,
-  size: _.SMALL,
+  size: d.SMALL,
   tag: "div"
-}), t.default = c
+})

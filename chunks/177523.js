@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
-  DEFAULT_RANGES: function() {
-    return a.DEFAULT_RANGES
+n.d(t, {
+  KV: function() {
+    return o.KV
   },
-  default: function() {
+  ZP: function() {
     return c
   }
-}), n("47120");
-var i = n("392711"),
+}), n(47120);
+var i = n(392711),
   r = n.n(i),
-  s = n("846519"),
-  a = n("509848"),
-  o = n("483019"),
-  l = n("945689"),
-  u = n("981631");
+  s = n(846519),
+  o = n(509848),
+  a = n(483019),
+  l = n(945689),
+  u = n(981631);
 
-function d(e, t, n) {
+function _(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -24,8 +24,8 @@ function d(e, t, n) {
   }) : e[t] = n, e
 }
 
-function _(e) {
-  return null != e && "null" !== e && e !== u.ME && "undefined" !== e && e !== u.FAVORITES
+function d(e) {
+  return null != e && "null" !== e && e !== u.ME && "undefined" !== e && e !== u.I_8
 }
 class c {
   _enqueue(e, t) {
@@ -74,31 +74,31 @@ class c {
     }), this._onChange(this._pending), this._pending = {}
   }
   subscribeUser(e, t) {
-    _(e) && this._members.subscribe(e, t)
+    d(e) && this._members.subscribe(e, t)
   }
   unsubscribeUser(e, t) {
-    _(e) && this._members.unsubscribe(e, t)
+    d(e) && this._members.unsubscribe(e, t)
   }
   subscribeChannel(e, t, n) {
-    return !!_(e) && this._channels.subscribe(e, t, n)
+    return !!d(e) && this._channels.subscribe(e, t, n)
   }
   subscribeToMemberUpdates(e) {
-    if (!_(e)) return !1;
+    if (!d(e)) return !1;
     this._enqueue(e, {
       member_updates: !0
     }), this._memberUpdates.add(e)
   }
   unsubscribeFromMemberUpdates(e) {
-    if (!_(e)) return !1;
+    if (!d(e)) return !1;
     this._enqueue(e, {
       member_updates: !1
     })
   }
   subscribeThreadMemberList(e, t, n) {
-    return !!_(e) && this._threadMemberLists.subscribe(e, t, n)
+    return !!d(e) && this._threadMemberLists.subscribe(e, t, n)
   }
   unsubscribeThreadMemberList(e, t) {
-    return !!_(e) && this._threadMemberLists.unsubscribe(e, t)
+    return !!d(e) && this._threadMemberLists.unsubscribe(e, t)
   }
   subscribeToGuild(e) {
     this._subscribeToFeature(e, this._typing, {
@@ -110,15 +110,17 @@ class c {
     })
   }
   _subscribeToFeature(e, t, n) {
-    if (!!_(e)) !t.has(e) && (t.add(e), this._enqueue(e, n))
+    if (d(e)) {
+      if (!t.has(e)) t.add(e), this._enqueue(e, n)
+    }
   }
   constructor(e) {
-    d(this, "_members", new o.default((e, t) => this._enqueue(e, {
+    _(this, "_members", new a.Z((e, t) => this._enqueue(e, {
       members: t
-    }))), d(this, "_channels", new a.default((e, t) => this._enqueue(e, {
+    }))), _(this, "_channels", new o.ZP((e, t) => this._enqueue(e, {
       channels: t
-    }))), d(this, "_threadMemberLists", new l.default((e, t) => this._enqueue(e, {
+    }))), _(this, "_threadMemberLists", new l.Z((e, t) => this._enqueue(e, {
       thread_member_lists: t
-    }))), d(this, "_typing", new Set), d(this, "_threads", new Set), d(this, "_activities", new Set), d(this, "_memberUpdates", new Set), d(this, "_subscribed", new Set), d(this, "_pending", {}), d(this, "_flush", new s.DelayedCall(0, () => this.flush())), d(this, "_onChange", void 0), this._onChange = e
+    }))), _(this, "_typing", new Set), _(this, "_threads", new Set), _(this, "_activities", new Set), _(this, "_memberUpdates", new Set), _(this, "_subscribed", new Set), _(this, "_pending", {}), _(this, "_flush", new s.sW(0, () => this.flush())), _(this, "_onChange", void 0), this._onChange = e
   }
 }

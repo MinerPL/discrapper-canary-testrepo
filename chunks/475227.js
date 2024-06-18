@@ -1,5 +1,5 @@
-var r = n("657398"),
-  i = n("389109");
+var n = e(657398),
+  o = e(389109);
 t.exports = function(t) {
-  return i(t) && "[object Arguments]" == r(t)
+  return o(t) && "[object Arguments]" == n(t)
 }

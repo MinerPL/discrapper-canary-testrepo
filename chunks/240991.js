@@ -1,31 +1,28 @@
 "use strict";
-n.r(t), n.d(t, {
-  parseBioReact: function() {
+n.d(t, {
+  YP: function() {
     return c
-  },
-  parseBioReactWithoutScrolling: function() {
-    return E
   }
 });
-var i = n("392711"),
+var i = n(392711),
   r = n.n(i),
-  s = n("31775"),
-  a = n.n(s);
-n("302454");
-var o = n("25209"),
-  l = n("691424"),
-  u = n("428595");
-n("454585");
-var d = n("364458");
-let _ = (0, d.default)([u.default.PROFILE_BIO_RULES, (0, l.default)({
+  s = n(31775),
+  o = n.n(s);
+n(302454);
+var a = n(25209),
+  l = n(691424),
+  u = n(428595);
+n(454585);
+var _ = n(364458);
+let d = (0, _.Z)([u.Z.PROFILE_BIO_RULES, (0, l.Z)({
   enableBuildOverrides: !1
 })]);
-new(a())({
+new(o())({
   max: 2e3
 });
-let c = o.reactParserFor(_),
-  E = o.reactParserFor((0, d.default)([r().omit(_, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]), {
-    emoji: {
-      react: () => null
-    }
-  }]))
+let c = a.w4(d);
+a.w4((0, _.Z)([r().omit(d, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]), {
+  emoji: {
+    react: () => null
+  }
+}]))

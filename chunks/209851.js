@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  useDragDropManager: function() {
+n.d(t, {
+  N: function() {
     return o
   }
 });
-var r = n("470079"),
-  i = n("573654"),
-  a = n("331752");
+var r = n(470079),
+  i = n(573654),
+  a = n(84562);
 
 function o() {
-  var e = (0, r.useContext)(a.DndContext).dragDropManager;
-  return (0, i.invariant)(null != e, "Expected drag drop context"), e
+  var e = (0, r.useContext)(a.L).dragDropManager;
+  return (0, i.k)(null != e, "Expected drag drop context"), e
 }

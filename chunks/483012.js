@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return s
   }
-}), n("47120"), n("653041");
-var i = n("570140");
+}), n(47120), n(653041);
+var i = n(570140);
 
 function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ class s {
     let {
       action: e
     } = this;
-    this.action = null, null != e && i.default.dispatch(e).catch(t => this.socket.resetSocketOnError({
+    this.action = null, null != e && i.Z.dispatch(e).catch(t => this.socket.resetSocketOnError({
       error: t,
       action: e.type
     }))

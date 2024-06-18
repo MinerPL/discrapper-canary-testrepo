@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
-  getHighestHoistedRole: function() {
-    return a
+n.d(t, {
+  H: function() {
+    return o
   }
-}), n("47120"), n("442837");
-var i = n("271383"),
-  r = n("430824"),
-  s = n("700785");
-let a = function(e, t) {
-  let [n, a] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [r.default, i.default];
+}), n(47120), n(442837);
+var i = n(271383),
+  r = n(430824),
+  s = n(700785);
+let o = function(e, t) {
+  let [n, o] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [r.Z, i.ZP];
   if (null == e || null == t) return null;
-  let o = n.getGuild(e);
-  if (null == o) return null;
-  let l = a.getMember(o.id, t);
-  return null == l ? null : s.getHighestHoistedRole(o, l)
+  let a = n.getGuild(e);
+  if (null == a) return null;
+  let l = o.getMember(a.id, t);
+  return null == l ? null : s.Hu(a, l)
 }

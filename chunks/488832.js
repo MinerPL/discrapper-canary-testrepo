@@ -1,22 +1,22 @@
 "use strict";
 let i, r;
-n.r(t), n.d(t, {
-  updateIsInTabsUI: function() {
+n.d(t, {
+  y: function() {
     return u
   }
 });
-var a = n("804098"),
-  s = n("20186"),
-  o = n("626135"),
-  l = n("960048");
+var s = n(804098),
+  o = n(20186),
+  a = n(626135),
+  l = n(960048);
 
 function u(e) {
-  i !== e && (i = e, r = e, ! function() {
-    let e = i ? r ? a.DesignIds.DESIGN_TABS_IA : a.DesignIds.DESIGN_IA : a.DesignIds.CLASSIC_IA;
-    o.default.extendSuperProperties({
+  if (i !== e) i = e, r = e, ! function() {
+    let e = i ? r ? s.D.DESIGN_TABS_IA : s.D.DESIGN_IA : s.D.CLASSIC_IA;
+    a.default.extendSuperProperties({
       design_id: e
-    }), s.addGlobalTag("design_id", e), l.default.setTags({
+    }), o.M("design_id", e), l.Z.setTags({
       design_id: "".concat(e)
     })
-  }())
+  }()
 }

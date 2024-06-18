@@ -1,9 +1,9 @@
 "use strict";
-var r = n("690244"),
+var r = n(690244),
   i = r("%TypeError%"),
   a = r("%SyntaxError%"),
-  o = n("706165"),
-  s = n("73871"),
+  o = n(706165),
+  s = n(73871),
   u = {
     "Property Descriptor": function(e) {
       var t = {
@@ -22,7 +22,7 @@ var r = n("690244"),
       if (r && a) throw new i("Property Descriptors may not be both accessor and data descriptors");
       return !0
     },
-    "Match Record": n("290951"),
+    "Match Record": n(290951),
     "Iterator Record": function(e) {
       return o(e, "[[Iterator]]") && o(e, "[[NextMethod]]") && o(e, "[[Done]]")
     },

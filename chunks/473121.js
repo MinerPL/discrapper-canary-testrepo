@@ -1,36 +1,35 @@
 "use strict";
-n.r(t);
-var a = n("735250"),
-  l = n("470079"),
-  r = n("481060"),
-  s = n("454585"),
-  i = n("273744"),
-  d = n("689938"),
-  o = n("140715");
-t.default = e => {
+var i = n(735250),
+  r = n(470079),
+  s = n(481060),
+  o = n(454585),
+  a = n(273744),
+  l = n(689938),
+  u = n(991917);
+t.Z = e => {
   let {
     node: {
       header: t,
       subheader: n,
-      button: u
+      button: _
     }
-  } = e, c = (null == u ? void 0 : u.type) === "submit", m = l.useRef(s.default.reactParserFor({
-    ...s.default.defaultRules,
-    link: i.LinkMarkupRule
+  } = e, d = (null == _ ? void 0 : _.type) === "submit", c = r.useRef(o.Z.reactParserFor({
+    ...o.Z.defaultRules,
+    link: a.s
   }));
-  return (0, a.jsxs)("div", {
-    className: o.headerContainer,
-    children: [null != t && "" !== t ? (0, a.jsx)(r.Heading, {
+  return (0, i.jsxs)("div", {
+    className: u.headerContainer,
+    children: [null != t && "" !== t ? (0, i.jsx)(s.Heading, {
       variant: "heading-xl/semibold",
       color: "header-primary",
       children: t
-    }) : null, null != n && "" !== t ? (0, a.jsx)(r.Text, {
+    }) : null, null != n && "" !== t ? (0, i.jsx)(s.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      children: m.current(n)
-    }) : null, c && (0, a.jsx)(r.Text, {
+      children: c.current(n)
+    }) : null, d && (0, i.jsx)(s.Text, {
       variant: "text-sm/normal",
-      children: d.default.Messages.MOBILE_REPORTS_SUBMIT_INFO_TEXT.format()
+      children: l.Z.Messages.MOBILE_REPORTS_SUBMIT_INFO_TEXT.format()
     })]
   })
 }

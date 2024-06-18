@@ -1,33 +1,33 @@
 "use strict";
-n.r(t), n.d(t, {
-  DnDProvider: function() {
+n.d(t, {
+  S: function() {
     return c
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("979714"),
-  s = n("499123"),
-  a = n("780384"),
-  o = n("79320"),
-  l = n("600795");
-let u = (0, s.createTransition)("keydown", e => !!(0, l.isDragTrigger)(e) && (e.preventDefault(), !0)),
-  d = (0, s.createTransition)("mousedown", e => -1 === e.type.indexOf("touch") && -1 !== e.type.indexOf("mouse") && ((0, o.toggleDndMode)(!1), !0)),
-  _ = {
+var i = n(735250);
+n(470079);
+var r = n(979714),
+  s = n(800870),
+  o = n(780384),
+  a = n(79320),
+  l = n(600795);
+let u = (0, s.vQ)("keydown", e => !!(0, l.Tm)(e) && (e.preventDefault(), !0)),
+  _ = (0, s.vQ)("mousedown", e => -1 === e.type.indexOf("touch") && -1 !== e.type.indexOf("mouse") && ((0, a.Yk)(!1), !0)),
+  d = {
     backends: [{
       id: "html5",
-      backend: r.HTML5Backend,
-      transition: d
+      backend: r.PD,
+      transition: _
     }, {
       id: "keyboard",
-      backend: l.default,
+      backend: l.ZP,
       context: {
         window,
         document
       },
       options: {
-        onDndModeChanged: o.toggleDndMode,
-        announcer: a.AccessibilityAnnouncer
+        onDndModeChanged: a.Yk,
+        announcer: o.uv
       },
       preview: !0,
       transition: u
@@ -38,8 +38,8 @@ function c(e) {
   let {
     children: t
   } = e;
-  return (0, i.jsx)(s.DndProvider, {
-    options: _,
+  return (0, i.jsx)(s.WG, {
+    options: d,
     children: t
   })
 }

@@ -1,5 +1,5 @@
 "use strict";
-var r = n("360518")("match");
+var r = n(360518)("match");
 e.exports = function(e) {
   var t = /./;
   try {

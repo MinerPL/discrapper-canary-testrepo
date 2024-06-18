@@ -5,7 +5,7 @@ function n(t, e) {
   return "auto" === r || "scroll" === r
 }
 var i = {
-  get: r("858255"),
+  get: r(858255),
   getScrollParent: function(t) {
     if (!t) return null;
     for (var e = t.ownerDocument; t && t !== e.body;) {

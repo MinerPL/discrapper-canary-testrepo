@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  SafetyWarningFeedbackTypes: function() {
+n.d(t, {
+  ny: function() {
     return r
   },
-  SafetyWarningTypes: function() {
+  pj: function() {
     return i
   }
-}), n("47120");
-var i, r, s, a, o = n("442837"),
-  l = n("570140"),
-  u = n("592125");
-let d = 5 * n("70956").default.Millis.SECOND;
-(s = i || (i = {}))[s.STRANGER_DANGER = 1] = "STRANGER_DANGER", s[s.INAPPROPRIATE_CONVERSATION_TIER_1 = 2] = "INAPPROPRIATE_CONVERSATION_TIER_1", s[s.INAPPROPRIATE_CONVERSATION_TIER_2 = 3] = "INAPPROPRIATE_CONVERSATION_TIER_2", (a = r || (r = {}))[a.UPVOTE = 0] = "UPVOTE", a[a.DOWNVOTE = 1] = "DOWNVOTE";
-let _ = [],
+}), n(47120);
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(592125);
+let _ = 5 * n(70956).Z.Millis.SECOND;
+(s = i || (i = {}))[s.STRANGER_DANGER = 1] = "STRANGER_DANGER", s[s.INAPPROPRIATE_CONVERSATION_TIER_1 = 2] = "INAPPROPRIATE_CONVERSATION_TIER_1", s[s.INAPPROPRIATE_CONVERSATION_TIER_2 = 3] = "INAPPROPRIATE_CONVERSATION_TIER_2", (o = r || (r = {}))[o.UPVOTE = 0] = "UPVOTE", o[o.DOWNVOTE = 1] = "DOWNVOTE";
+let d = [],
   c = {},
   E = new Set;
 
@@ -23,19 +23,19 @@ function I(e) {
   null != t && (c[e.id] = t, t.some(e => {
     var t;
     return (2 === (t = e).type || 3 === t.type) && null != e.dismiss_timestamp && ! function(e) {
-      return new Date(e).getTime() > Date.now() - d
+      return new Date(e).getTime() > Date.now() - _
     }(e.dismiss_timestamp)
   }) ? E.add(e.id) : E.delete(e.id)), null == t && (null != c[e.id] && delete c[e.id], E.delete(e.id))
 }
 
 function T() {
-  c = {}, Object.values(u.default.getMutablePrivateChannels()).forEach(e => {
+  c = {}, Object.values(u.Z.getMutablePrivateChannels()).forEach(e => {
     I(e)
   })
 }
-class f extends o.default.Store {
+class h extends a.ZP.Store {
   initialize() {
-    this.waitFor(u.default)
+    this.waitFor(u.Z)
   }
   getChannelSafetyWarning(e, t) {
     var n;
@@ -43,13 +43,13 @@ class f extends o.default.Store {
   }
   getChannelSafetyWarnings(e) {
     var t;
-    return null !== (t = c[e]) && void 0 !== t ? t : _
+    return null !== (t = c[e]) && void 0 !== t ? t : d
   }
   hasShownInitialTooltipForChannel(e) {
     return E.has(e)
   }
 }
-t.default = new f(l.default, {
+t.ZP = new h(l.Z, {
   CHANNEL_CREATE: function(e) {
     I(e.channel)
   },
@@ -72,19 +72,19 @@ t.default = new f(l.default, {
       warningId: n,
       feedbackType: i
     } = e, r = c[t];
-    null != r && (c[t] = r.map(e => e.id === n ? {
+    if (null != r) c[t] = r.map(e => e.id === n ? {
       ...e,
       feedback_type: i
-    } : e))
+    } : e)
   },
   CLEAR_CHANNEL_SAFETY_WARNINGS: function(e) {
     let {
       channelId: t
     } = e, n = c[t];
-    E.delete(t), null != n && (c[t] = n.map(e => ({
+    if (E.delete(t), null != n) c[t] = n.map(e => ({
       ...e,
       dismiss_timestamp: void 0
-    })))
+    }))
   },
   DISMISS_CHANNEL_SAFETY_WARNINGS: function(e) {
     let {

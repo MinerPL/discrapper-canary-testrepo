@@ -1,6 +1,5 @@
 "use strict";
-r.r(t);
-var n = r("675717");
-t.default = function(e) {
-  return e == e && !(0, n.default)(e)
+var r = n(675717);
+t.Z = function(e) {
+  return e == e && !(0, r.Z)(e)
 }

@@ -1,11 +1,10 @@
 "use strict";
-r.r(t);
-var n = r("809948"),
-  a = r("670097");
-t.default = function(e, t) {
-  var r = -1,
-    o = (0, a.default)(e) ? Array(e.length) : [];
-  return (0, n.default)(e, function(e, n, a) {
-    o[++r] = t(e, n, a)
-  }), o
+var r = n(809948),
+  i = n(670097);
+t.Z = function(e, t) {
+  var n = -1,
+    a = (0, i.Z)(e) ? Array(e.length) : [];
+  return (0, r.Z)(e, function(e, r, i) {
+    a[++n] = t(e, r, i)
+  }), a
 }

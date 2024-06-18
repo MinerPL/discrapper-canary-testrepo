@@ -1,6 +1,6 @@
 "use strict";
-n.r(t), n.d(t, {
-  MonotonicInterpolant: function() {
+n.d(t, {
+  I: function() {
     return a
   }
 });
@@ -48,8 +48,8 @@ var a = function() {
       o = f[S];
       var x = h[S],
         w = 1 / d[S],
-        T = x + h[S + 1] - o - o;
-      y.push((o - x - T) * w), E.push(T * w * w)
+        C = x + h[S + 1] - o - o;
+      y.push((o - x - C) * w), E.push(C * w * w)
     }
     this.xs = e, this.ys = t, this.c1s = h, this.c2s = y, this.c3s = E
   }
@@ -75,5 +75,5 @@ var a = function() {
         f = d * d;
       return r[s] + i[s] * d + a[s] * f + o[s] * d * f
     }
-  }], r(e.prototype, t), n && r(e, n), a
+  }], r(e.prototype, t), a
 }()

@@ -1,46 +1,46 @@
 "use strict";
 let i;
-n.r(t), n.d(t, {
-  gameKey: function() {
-    return ei
+n.d(t, {
+  FZ: function() {
+    return el
   },
-  getOverlayGameStatus: function() {
+  ik: function() {
+    return es
+  },
+  jk: function() {
     return er
   },
-  isDetectionEnabled: function() {
-    return ea
-  },
-  transformForGameSettings: function() {
-    return el
+  rH: function() {
+    return ei
   }
-}), n("47120"), n("653041"), n("724458"), n("757143"), n("733860");
-var r, a, s, o, l = n("392711"),
+}), n(47120), n(653041), n(724458), n(757143), n(733860);
+var r, s, o, a, l = n(392711),
   u = n.n(l),
-  d = n("913527"),
-  _ = n.n(d),
-  c = n("442837"),
-  E = n("433517"),
-  I = n("570140"),
-  T = n("593472"),
-  f = n("726542"),
-  S = n("710845"),
-  h = n("630699"),
-  A = n("855403"),
-  m = n("454991"),
-  N = n("77498"),
-  p = n("283595"),
-  O = n("417363"),
-  R = n("626135"),
-  C = n("70956"),
-  g = n("877481"),
-  L = n("823379"),
-  v = n("358085"),
-  D = n("998502"),
-  M = n("145597"),
-  y = n("370862"),
-  P = n("981631"),
-  U = n("987650");
-let b = new S.default("RunningGameStore"),
+  _ = n(913527),
+  d = n.n(_),
+  c = n(442837),
+  E = n(433517),
+  I = n(570140),
+  T = n(593472),
+  h = n(726542),
+  S = n(710845),
+  f = n(630699),
+  N = n(855403),
+  A = n(454991),
+  m = n(77498),
+  O = n(283595),
+  R = n(417363),
+  C = n(626135),
+  p = n(70956),
+  g = n(877481),
+  L = n(823379),
+  v = n(358085),
+  D = n(998502),
+  M = n(145597),
+  P = n(370862),
+  y = n(981631),
+  U = n(987650);
+let b = new S.Z("RunningGameStore"),
   G = "RunningGameStore",
   w = [{
     executables: [{
@@ -115,28 +115,28 @@ let b = new S.default("RunningGameStore"),
       os: "linux",
       name: "spotify"
     }],
-    name: f.default.get(P.PlatformTypes.SPOTIFY).name
+    name: h.Z.get(y.ABu.SPOTIFY).name
   }],
-  B = !0,
-  k = new Set,
-  V = [],
+  k = !0,
+  B = new Set,
   x = [],
-  F = [],
+  V = [],
+  Z = [],
   H = null,
-  Y = [],
+  F = [],
+  Y = {},
   j = {},
-  W = {},
-  K = {
+  W = {
     gamesSeen: [],
     gameOverrides: {},
     enableOverlay: {},
     enableDetection: {}
   },
-  z = function() {},
-  Z = {},
-  X = 0,
+  K = function() {},
+  z = {},
+  q = 0,
+  X = null,
   Q = null,
-  q = null,
   J = {};
 
 function $(e, t, n) {
@@ -153,22 +153,22 @@ function et(e) {
 }
 
 function en() {
-  if (F.length > 0) {
+  if (Z.length > 0) {
     let e = H;
-    H = F[0], null != e && H.pid === e.pid ? H.start = e.start : H.start = Date.now()
+    H = Z[0], null != e && H.pid === e.pid ? H.start = e.start : H.start = Date.now()
   } else H = null;
   let e = [];
-  for (let t of F) !(t.pid in J) && (J[t.pid] = t, e.push(t));
+  for (let t of Z) !(t.pid in J) && (J[t.pid] = t, e.push(t));
   let t = [];
-  for (let e of Object.values(J)) !F.some(t => t.pid === e.pid) && (t.push(e), delete J[e.pid]);
+  for (let e of Object.values(J)) !Z.some(t => t.pid === e.pid) && (t.push(e), delete J[e.pid]);
   b.info("games", {
-    runningGames: F,
+    runningGames: Z,
     added: e,
     removed: t,
     previousGames: J
-  }), I.default.dispatch({
+  }), I.Z.dispatch({
     type: "RUNNING_GAMES_CHANGE",
-    games: F,
+    games: Z,
     added: e,
     removed: t
   })
@@ -181,63 +181,63 @@ function ei(e) {
 
 function er(e) {
   if (e.isLauncher) return {
-    source: y.OverlayGameStatusSource.LAUNCHER,
+    source: P.d.LAUNCHER,
     enabled: !1,
-    overlayMethod: U.OverlayMethod.Disabled
+    overlayMethod: U.gl.Disabled
   };
-  let t = N.default.getGameByName(e.name);
+  let t = m.Z.getGameByName(e.name);
   if (null != t) {
-    let e = p.default.getActiveLibraryApplication(t.id);
+    let e = O.Z.getActiveLibraryApplication(t.id);
     if (null != e) return {
-      source: y.OverlayGameStatusSource.LIBRARY_APPLICATION,
+      source: P.d.LIBRARY_APPLICATION,
       enabled: e.isOverlayEnabled(),
-      overlayMethod: U.OverlayMethod.Disabled
+      overlayMethod: U.gl.Disabled
     }
   }
-  let n = h.isOOPExperimentEnabled() && (0, M.supportsOutOfProcess)() && !m.OverlayStoredSettings.legacyEnabled,
-    i = n ? U.OverlayMethod.OutOfProcess : U.OverlayMethod.Hook,
-    r = K.enableOverlay[ei(e)];
+  let n = f.H() && (0, M.VS)() && !A.v.legacyEnabled,
+    i = n ? U.gl.OutOfProcess : U.gl.Hook,
+    r = W.enableOverlay[ei(e)];
   if (null != r) return {
-    source: y.OverlayGameStatusSource.USER_OVERRIDE,
+    source: P.d.USER_OVERRIDE,
     enabled: r,
     overlayMethod: i
   };
-  let a = null == e.id ? null : Z[e.id];
-  return null != a ? {
-    source: y.OverlayGameStatusSource.DATABASE,
-    enabled: a.enabled || n,
+  let s = null == e.id ? null : z[e.id];
+  return null != s ? {
+    source: P.d.DATABASE,
+    enabled: s.enabled || n,
     overlayMethod: i
   } : {
-    source: y.OverlayGameStatusSource.DEFAULT,
+    source: P.d.DEFAULT,
     enabled: !1,
-    overlayMethod: U.OverlayMethod.Hook
+    overlayMethod: U.gl.Hook
   }
 }
 
-function ea(e) {
-  let t = K.enableDetection[ei(e)];
+function es(e) {
+  let t = W.enableDetection[ei(e)];
   return null == t || t
 }
 
-function es(e) {
-  return !e.hidden && ea(e)
+function eo(e) {
+  return !e.hidden && es(e)
 }
 
-function eo() {
-  E.Storage.set(G, K)
+function ea() {
+  E.K.set(G, W)
 }
 
 function el(e) {
   var t, n;
   let i = {
     ...e,
-    played: null != e.lastFocused && 0 !== e.lastFocused ? _()(new Date(e.lastFocused * C.default.Millis.SECOND)).fromNow() : " ",
-    overlay: (t = e, null !== (n = K.enableOverlay[ei(t)]) && void 0 !== n ? n : er(t).enabled),
-    verified: N.default.isGameInDatabase(e),
-    detectable: ea(e)
+    played: null != e.lastFocused && 0 !== e.lastFocused ? d()(new Date(e.lastFocused * p.Z.Millis.SECOND)).fromNow() : " ",
+    overlay: (t = e, null !== (n = W.enableOverlay[ei(t)]) && void 0 !== n ? n : er(t).enabled),
+    verified: m.Z.isGameInDatabase(e),
+    detectable: es(e)
   };
-  if (null != e.id && null != Z[e.id]) {
-    let t = Z[e.id];
+  if (null != e.id && null != z[e.id]) {
+    let t = z[e.id];
     i.overlayWarn = t.warn
   }
   return i
@@ -245,42 +245,42 @@ function el(e) {
 
 function eu() {
   let e = !1;
-  return V = u().values(p.default.libraryApplications).reduce((t, n) => {
-    let i = N.default.getDetectableGame(n.id);
+  return x = u().values(O.Z.libraryApplications).reduce((t, n) => {
+    let i = m.Z.getDetectableGame(n.id);
     if (null == i) return t;
-    for (let r of O.default.getLaunchOptions(n.id, n.branchId)) {
-      let a = "".concat(n.id, ":").concat(n.branchId);
-      !k.has(a) && (e = !0, k.add(a));
+    for (let r of R.Z.getLaunchOptions(n.id, n.branchId)) {
+      let s = "".concat(n.id, ":").concat(n.branchId);
+      !B.has(s) && (e = !0, B.add(s));
       let {
-        fullExecutablePath: s
-      } = r, o = s.replace(/\\/g, "/").toLowerCase();
-      j[o] = i.id, t.push({
+        fullExecutablePath: o
+      } = r, a = o.replace(/\\/g, "/").toLowerCase();
+      Y[a] = i.id, t.push({
         id: i.id,
         name: i.name,
-        exePath: o,
+        exePath: a,
         cmdLine: "",
         lastFocused: 0,
         add: !0
       })
     }
     return t
-  }, []), e && ed(), e
+  }, []), e && e_(), e
 }
 
-function ed() {
+function e_() {
   if (!__OVERLAY__ && v.isPlatformEmbedded) {
-    let e = [...V, ...u().values(K.gameOverrides)];
-    D.default.setGameCandidateOverrides(e)
+    let e = [...x, ...u().values(W.gameOverrides)];
+    D.ZP.setGameCandidateOverrides(e)
   }
 }
 
-function e_(e) {
-  null != e && 0 !== e.length && (e.forEach(e => {
-    if (K.gamesSeen.some(t => {
+function ed(e) {
+  if (null != e && 0 !== e.length) e.forEach(e => {
+    if (W.gamesSeen.some(t => {
         if (t.name === e.name) {
           if (e.lastFocused) {
             t.lastFocused = e.lastFocused;
-            let n = K.gameOverrides[ei(e)];
+            let n = W.gameOverrides[ei(e)];
             null != n && (n.lastFocused = e.lastFocused)
           }
           return ee(t, e), !0
@@ -289,7 +289,7 @@ function e_(e) {
       }));
     else {
       if (e.hidden) return;
-      K.gamesSeen.unshift(function(e) {
+      W.gamesSeen.unshift(function(e) {
         let t = {
           exePath: e.exePath,
           cmdLine: e.cmdLine,
@@ -298,24 +298,24 @@ function e_(e) {
         return null != e.id && (t.id = e.id), null != e.nativeProcessObserverId && (t.nativeProcessObserverId = e.nativeProcessObserverId), null != e.name && (t.name = e.name), e.add && (t.add = !0), e.block && (t.block = !0), ee(t, e), t
       }(e))
     }
-  }), K.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused), eo(), g.default.setRecentGames(ec().map(e => el(e))))
+  }), W.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused), ea(), g.Z.setRecentGames(ec().map(e => el(e)))
 }
 
 function ec() {
-  let e = u().values(K.gameOverrides);
-  return K.gamesSeen.filter(e => void 0 === K.gameOverrides[ei(e)]).concat(e)
-}!__OVERLAY__ && (0, v.isDesktop)() && (z = function() {
+  let e = u().values(W.gameOverrides);
+  return W.gamesSeen.filter(e => void 0 === W.gameOverrides[ei(e)]).concat(e)
+}!__OVERLAY__ && (0, v.isDesktop)() && (K = function() {
   let e = [],
     t = new Set;
   i = {};
-  let n = N.default.games;
+  let n = m.Z.games;
   for (let e of n) {
-    var r, a, s, o;
-    Z[e.id] = {
-      compatibilityHook: null !== (r = e.overlayCompatibilityHook) && void 0 !== r ? r : T.DEFAULT_OVERLAY_OPTIONS.compatibilityHook,
-      warn: null !== (a = e.overlayWarn) && void 0 !== a ? a : T.DEFAULT_OVERLAY_OPTIONS.warn,
-      enabled: null !== (s = e.overlay) && void 0 !== s ? s : T.DEFAULT_OVERLAY_OPTIONS.enabled,
-      allowHook: null !== (o = e.hook) && void 0 !== o ? o : T.DEFAULT_OVERLAY_OPTIONS.allowHook,
+    var r, s, o, a;
+    z[e.id] = {
+      compatibilityHook: null !== (r = e.overlayCompatibilityHook) && void 0 !== r ? r : T.r.compatibilityHook,
+      warn: null !== (s = e.overlayWarn) && void 0 !== s ? s : T.r.warn,
+      enabled: null !== (o = e.overlay) && void 0 !== o ? o : T.r.enabled,
+      allowHook: null !== (a = e.hook) && void 0 !== a ? a : T.r.allowHook,
       supportsOutOfProcessOverlay: e.supportsOutOfProcessOverlay
     }
   } [...n, ...w].forEach(n => {
@@ -326,27 +326,27 @@ function ec() {
         } = e;
         return t === (0, v.getPlatformName)()
       }) : [],
-      a = {};
+      s = {};
     r.forEach(e => {
       let n = null != e.arguments && e.arguments.length > 0 ? e.arguments : "null";
-      null == a[n] && (a[n] = []), a[n].push(e.name), e.isLauncher && t.add(e.name)
-    }), Object.keys(a).forEach(t => e.push({
+      null == s[n] && (s[n] = []), s[n].push(e.name), e.isLauncher && t.add(e.name)
+    }), Object.keys(s).forEach(t => e.push({
       name: n.name,
       id: n.id,
-      executables: a[t],
+      executables: s[t],
       cmdLine: "null" !== t ? t : null
     }))
-  }), e = e.filter(e => null != e.executables && e.executables.length > 0), D.default.setObservedGamesCallback(e, e => {
+  }), e = e.filter(e => null != e.executables && e.executables.length > 0), D.ZP.setObservedGamesCallback(e, e => {
     let n = [],
       r = {};
     e = e.filter(e => (e.distributor = function(e) {
-      if (null != j[e.exePath]) return P.Distributors.DISCORD;
-      if (/steamapps/.test(e.cmdLine)) return P.Distributors.STEAM;
-      if (/-epicapp/.test(e.cmdLine)) return P.Distributors.EPIC;
+      if (null != Y[e.exePath]) return y.GQo.DISCORD;
+      if (/steamapps/.test(e.cmdLine)) return y.GQo.STEAM;
+      if (/-epicapp/.test(e.cmdLine)) return y.GQo.EPIC;
       return e.distributor
     }(e), e.isLauncher = t.has(e.exeName), e.isLauncher && null != e.id && (r[e.id] = e), e.windowHandle = function(e, t) {
       if (void 0 === t) {
-        let t = D.default.getDiscordUtils();
+        let t = D.ZP.getDiscordUtils();
         if (null != t && null != t.getWindowHandleFromPid) {
           let n = t.getWindowHandleFromPid(e);
           return null != n && "0" !== n ? n : null
@@ -360,54 +360,54 @@ function ec() {
       } = t;
       return n === e.name
     }) || (n.push(e), !1)));
-    let a = n.filter(et).length;
-    a !== X && (X = a, I.default.dispatch({
+    let s = n.filter(et).length;
+    s !== q && (q = s, I.Z.dispatch({
       type: "RUNNING_STREAMER_TOOLS_CHANGE",
-      count: X
-    })), F = e, Y = n, i = r, en()
-  }), ed()
+      count: q
+    })), Z = e, F = n, i = r, en()
+  }), e_()
 });
-class eE extends(r = c.default.Store) {
+class eE extends(r = c.ZP.Store) {
   initialize() {
     var e, t, n, i;
-    let r = null !== (e = E.Storage.get(G)) && void 0 !== e ? e : {
+    let r = null !== (e = E.K.get(G)) && void 0 !== e ? e : {
       gamesSeen: [],
       gameOverrides: {},
       enableOverlay: {},
       enableDetection: {}
     };
-    K.gameOverrides = {};
-    let a = !1;
+    W.gameOverrides = {};
+    let s = !1;
     if (u().values(null !== (t = r.gameOverrides) && void 0 !== t ? t : {}).forEach(e => {
         let t = ei(e);
-        K.gameOverrides[t] = e
-      }), K.enableOverlay = null !== (n = r.enableOverlay) && void 0 !== n ? n : {}, K.enableDetection = null !== (i = r.enableDetection) && void 0 !== i ? i : {}, ed(), Array.isArray(r.gamesSeen))
-      for (let e of r.gamesSeen) "number" == typeof e.id && (e.nativeProcessObserverId = e.id, delete e.id, a = !0);
-    e_(r.gamesSeen), this.waitFor(N.default), this.syncWith([p.default, N.default, O.default], u().throttle(eu, 1e3)), a && eo()
+        W.gameOverrides[t] = e
+      }), W.enableOverlay = null !== (n = r.enableOverlay) && void 0 !== n ? n : {}, W.enableDetection = null !== (i = r.enableDetection) && void 0 !== i ? i : {}, e_(), Array.isArray(r.gamesSeen))
+      for (let e of r.gamesSeen) "number" == typeof e.id && (e.nativeProcessObserverId = e.id, delete e.id, s = !0);
+    ed(r.gamesSeen), this.waitFor(m.Z), this.syncWith([O.Z, m.Z, R.Z], u().throttle(eu, 1e3)), s && ea()
   }
   getVisibleGame() {
-    return null == H || es(H) ? H : null
+    return null == H || eo(H) ? H : null
   }
   getCurrentGameForAnalytics() {
     return H
   }
   getVisibleRunningGames() {
-    return F.filter(es)
+    return Z.filter(eo)
   }
   getRunningGames() {
-    return F
+    return Z
   }
   getRunningDiscordApplicationIds() {
     let e = [];
-    for (let t of F) null != j[t.exePath] && e.push(j[t.exePath]);
+    for (let t of Z) null != Y[t.exePath] && e.push(Y[t.exePath]);
     return e
   }
   getRunningVerifiedApplicationIds() {
-    return this.getRunningGames().map(e => N.default.getGameByName(e.name)).filter(L.isNotNullish).map(e => e.id)
+    return this.getRunningGames().map(e => m.Z.getGameByName(e.name)).filter(L.lm).map(e => e.id)
   }
   getGameForPID(e) {
     var t;
-    return null !== (t = F.find(t => t.pid === e)) && void 0 !== t ? t : null
+    return null !== (t = Z.find(t => t.pid === e)) && void 0 !== t ? t : null
   }
   getLauncherForPID(e) {
     let t = this.getGameForPID(e);
@@ -416,17 +416,17 @@ class eE extends(r = c.default.Store) {
   getOverlayOptionsForPID(e) {
     let t = this.getGameForPID(e);
     return null == t || t.isLauncher || null == t.id ? null : {
-      ...Z[t.id]
+      ...z[t.id]
     }
   }
   shouldElevateProcessForPID(e) {
-    return null != Q && Q === e
+    return null != X && X === e
   }
   shouldContinueWithoutElevatedProcessForPID(e) {
-    return null != q && q === e
+    return null != Q && Q === e
   }
   getCandidateGames() {
-    return x.filter(e => e.hidden || null == e.id).filter(e => void 0 === K.gameOverrides[ei(e)])
+    return V.filter(e => e.hidden || null == e.id).filter(e => void 0 === W.gameOverrides[ei(e)])
   }
   getGamesSeen(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -441,16 +441,16 @@ class eE extends(r = c.default.Store) {
     return t && n.sort((e, t) => t.lastFocused - e.lastFocused), n
   }
   getSeenGameByName(e) {
-    return K.gamesSeen.find(t => null != t.name && t.name.toLowerCase() === e.toLowerCase())
+    return W.gamesSeen.find(t => null != t.name && t.name.toLowerCase() === e.toLowerCase())
   }
   isObservedAppRunning(e) {
-    return Y.some(t => t.name === e)
+    return F.some(t => t.name === e)
   }
   getOverrides() {
-    return Object.values(K.gameOverrides)
+    return Object.values(W.gameOverrides)
   }
   getOverrideForGame(e) {
-    return K.gameOverrides[ei(e)]
+    return W.gameOverrides[ei(e)]
   }
   getGameOverlayStatus(e) {
     if (e.hidden || e.isLauncher || e.elevated || e.sandboxed) return b.verbose("getGameOverlayStatus: Overlay not supported.", e), null;
@@ -459,65 +459,65 @@ class eE extends(r = c.default.Store) {
   }
   getObservedAppNameForWindow(e) {
     var t, n;
-    return null !== (n = null === (t = Y.find(t => (0, A.default)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null
+    return null !== (n = null === (t = F.find(t => (0, N.Z)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null
   }
   get canShowAdminWarning() {
-    return B
+    return k
   }
   isDetectionEnabled(e) {
-    return ea(e)
+    return es(e)
   }
 }
-o = "RunningGameStore", (s = "displayName") in(a = eE) ? Object.defineProperty(a, s, {
-  value: o,
+a = "RunningGameStore", (o = "displayName") in(s = eE) ? Object.defineProperty(s, o, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = o, t.default = new eE(I.default, {
+}) : s[o] = a, t.ZP = new eE(I.Z, {
   RUNNING_GAMES_CHANGE: function(e) {
-    e_(F)
+    ed(Z)
   },
   CANDIDATE_GAMES_CHANGE: function(e) {
-    x = e.games
+    V = e.games
   },
   PERMISSION_CLEAR_PTT_ADMIN_WARNING: function() {
-    B = !1
+    k = !1
   },
   PERMISSION_REQUEST_ELEVATED_PROCESS: function(e) {
     let {
       pid: t
     } = e;
-    Q = t, q = null
+    X = t, Q = null
   },
   PERMISSION_CLEAR_ELEVATED_PROCESS: function() {
-    Q = null
+    X = null
   },
   PERMISSION_CONTINUE_NONELEVATED_PROCESS: function(e) {
     let {
       pid: t
     } = e;
-    q = t, Q = null
+    Q = t, X = null
   },
   RUNNING_GAME_ADD_OVERRIDE: function(e) {
     let t;
     let n = e.pid,
-      i = F.find(e => e.pid === n);
+      i = Z.find(e => e.pid === n);
     if (null == i) {
-      let e = x.find(e => e.pid === n);
+      let e = V.find(e => e.pid === n);
       if (null == e) return;
       (i = {
         ...e
-      }).hidden = !1, F.push(i), t = ei(i)
-    } else t = ei(i), i.hidden && (W[t] = !0), i.hidden = !1;
-    (null == i.lastFocused || 0 === i.lastFocused) && (i.lastFocused = Math.floor(Date.now() / 1e3)), K.gameOverrides[t] = {
+      }).hidden = !1, Z.push(i), t = ei(i)
+    } else t = ei(i), i.hidden && (j[t] = !0), i.hidden = !1;
+    (null == i.lastFocused || 0 === i.lastFocused) && (i.lastFocused = Math.floor(Date.now() / 1e3)), W.gameOverrides[t] = {
       ...i,
       add: !0
-    }, e_(F), ed(), eo(), en()
+    }, ed(Z), e_(), ea(), en()
   },
   RUNNING_GAME_TOGGLE_OVERLAY: function(e) {
-    if (K.enableOverlay[ei(e.game)] = e.newEnabledValue, eo(), !__OVERLAY__) {
-      let t = null != e.game.id ? N.default.getDetectableGame(e.game.id) : null;
-      null != t && R.default.track(P.AnalyticEvents.OVERLAY_TOGGLED, {
+    if (W.enableOverlay[ei(e.game)] = e.newEnabledValue, ea(), !__OVERLAY__) {
+      let t = null != e.game.id ? m.Z.getDetectableGame(e.game.id) : null;
+      null != t && C.default.track(y.rMx.OVERLAY_TOGGLED, {
         enabled: e.newEnabledValue,
         setting_type: "overlay toggled - game",
         application_id: t.id,
@@ -528,14 +528,14 @@ o = "RunningGameStore", (s = "displayName") in(a = eE) ? Object.defineProperty(a
   RUNNING_GAME_TOGGLE_DETECTION: function(e) {
     let {
       game: t
-    } = e, n = ea(t);
-    K.enableDetection[ei(t)] = !n, eo(), R.default.track(P.AnalyticEvents.USER_SETTINGS_GAME_DETECTION_TOGGLE, {
+    } = e, n = es(t);
+    W.enableDetection[ei(t)] = !n, ea(), C.default.track(y.rMx.USER_SETTINGS_GAME_DETECTION_TOGGLE, {
       enabled: !n
     })
   },
   RUNNING_GAME_EDIT_NAME: function(e) {
     let t = ei(e.game),
-      n = K.gameOverrides[t];
+      n = W.gameOverrides[t];
     if (null == n) {
       var i;
       (n = {
@@ -547,30 +547,30 @@ o = "RunningGameStore", (s = "displayName") in(a = eE) ? Object.defineProperty(a
     }
     n.name = e.newName;
     let r = ei(n);
-    delete K.gameOverrides[t], K.gameOverrides[r] = n, $(K.enableOverlay, t, r), $(K.enableDetection, t, r), $(W, t, r), K.gamesSeen.forEach(n => {
+    delete W.gameOverrides[t], W.gameOverrides[r] = n, $(W.enableOverlay, t, r), $(W.enableDetection, t, r), $(j, t, r), W.gamesSeen.forEach(n => {
       ei(n) === t && (n.name = e.newName)
     });
-    let a = !1;
-    F.forEach(n => {
-      ei(n) === t && (n.name = e.newName, a = !0)
-    }), ed(), eo(), a && en()
+    let s = !1;
+    Z.forEach(n => {
+      ei(n) === t && (n.name = e.newName, s = !0)
+    }), e_(), ea(), s && en()
   },
   RUNNING_GAME_DELETE_ENTRY: function(e) {
     let t = ei(e.game);
-    delete K.gameOverrides[t], delete K.enableOverlay[t], delete K.enableDetection[t], K.gamesSeen = K.gamesSeen.filter(e => ei(e) !== t), W[t] && (F.forEach(e => {
+    delete W.gameOverrides[t], delete W.enableOverlay[t], delete W.enableDetection[t], W.gamesSeen = W.gamesSeen.filter(e => ei(e) !== t), j[t] && (Z.forEach(e => {
       t === ei(e) && (e.hidden = !0)
-    }), delete W[t], en()), ed(), eo()
+    }), delete j[t], en()), e_(), ea()
   },
-  GAMES_DATABASE_UPDATE: z,
+  GAMES_DATABASE_UPDATE: K,
   GAME_LAUNCH_SUCCESS: function(e) {
     var t;
     if (__OVERLAY__ || !v.isPlatformEmbedded) return;
-    let n = D.default.getDiscordUtils().notifyGameLaunched;
+    let n = D.ZP.getDiscordUtils().notifyGameLaunched;
     if (null == n) return;
-    let i = N.default.getDetectableGame(e.applicationId);
-    null != i && n(i.id, i.name, null !== (t = e.pids) && void 0 !== t ? t : [])
+    let i = m.Z.getDetectableGame(e.applicationId);
+    if (null != i) n(i.id, i.name, null !== (t = e.pids) && void 0 !== t ? t : [])
   },
   GAME_DETECTION_WATCH_CANDIDATE_GAMES_START: function() {
-    ed()
+    e_()
   }
 })

@@ -1,24 +1,24 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return o
+n.d(t, {
+  Z: function() {
+    return a
   }
-}), n("47120");
-var i = n("470079"),
-  r = n("674588"),
-  s = n("70956"),
-  a = n("314734");
+}), n(47120);
+var i = n(470079),
+  r = n(674588),
+  s = n(70956),
+  o = n(314734);
 
-function o(e) {
+function a(e) {
   let {
     sectionId: t,
     commandsByActiveSection: n
-  } = e, [o, l] = i.useState(a.CommandListSortOrder.ALPHABETICAL), u = i.useMemo(() => {
+  } = e, [a, l] = i.useState(o.bS.ALPHABETICAL), u = i.useMemo(() => {
     var e, i;
     return null !== (i = null === (e = n.find(e => e.section.id === t)) || void 0 === e ? void 0 : e.data) && void 0 !== i ? i : []
   }, [n, t]), {
-    popularSortedCommands: d,
-    canSort: _
+    popularSortedCommands: _,
+    canSort: d
   } = function(e) {
     let {
       alphabeticalSortedCommands: t
@@ -58,24 +58,24 @@ function o(e) {
     alphabeticalSortedCommands: u
   });
   i.useEffect(() => {
-    r.getApplication(t, {
-      dontRefetchMs: s.default.Millis.DAY
+    r.i6(t, {
+      dontRefetchMs: s.Z.Millis.DAY
     })
   }, [t]), i.useEffect(() => {
-    _ && l(a.CommandListSortOrder.POPULAR)
-  }, [_]);
+    if (!!d) l(o.bS.POPULAR)
+  }, [d]);
   let c = u;
-  switch (o) {
-    case a.CommandListSortOrder.POPULAR:
-      c = d;
+  switch (a) {
+    case o.bS.POPULAR:
+      c = _;
       break;
-    case a.CommandListSortOrder.ALPHABETICAL:
+    case o.bS.ALPHABETICAL:
       c = u
   }
   return {
-    sortOrder: o,
+    sortOrder: a,
     setSortOrder: l,
     commands: c,
-    canSort: _
+    canSort: d
   }
 }

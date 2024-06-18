@@ -1,37 +1,37 @@
 "use strict";
-n.r(t), n.d(t, {
-  getDefaultLibraryApplicationAction: function() {
+n.d(t, {
+  i: function() {
     return s
   }
 });
-var i = n("804739"),
-  r = n("981631");
+var i = n(804739),
+  r = n(981631);
 
 function s(e, t, n) {
   let s = t.getState(e.id, e.branchId),
-    a = n.getQueuePosition(e.id, e.branchId),
-    o = n.paused;
+    o = n.getQueuePosition(e.id, e.branchId),
+    a = n.paused;
   if (null != s) {
-    if (null == a || -1 === a) switch (s.type) {
-      case r.LocalDispatchApplicationStates.INSTALLING:
-        return r.LibraryApplicationActions.INSTALL;
-      case r.LocalDispatchApplicationStates.UPDATING:
-      case r.LocalDispatchApplicationStates.UPDATE_REQUIRED:
-        return r.LibraryApplicationActions.UPDATE
+    if (null == o || -1 === o) switch (s.type) {
+      case r.vxO.INSTALLING:
+        return r.apO.INSTALL;
+      case r.vxO.UPDATING:
+      case r.vxO.UPDATE_REQUIRED:
+        return r.apO.UPDATE
     }
     switch (s.type) {
-      case r.LocalDispatchApplicationStates.INSTALLING:
-      case r.LocalDispatchApplicationStates.UPDATING:
-      case r.LocalDispatchApplicationStates.UPDATE_REQUIRED:
-      case r.LocalDispatchApplicationStates.REPAIRING:
-        if (a > 0) return r.LibraryApplicationActions.MOVE_UP;
-        if (o) return r.LibraryApplicationActions.RESUME;
-        return r.LibraryApplicationActions.PAUSE;
-      case r.LocalDispatchApplicationStates.UP_TO_DATE:
-        return r.LibraryApplicationActions.PLAY;
-      case r.LocalDispatchApplicationStates.UNINSTALLING:
+      case r.vxO.INSTALLING:
+      case r.vxO.UPDATING:
+      case r.vxO.UPDATE_REQUIRED:
+      case r.vxO.REPAIRING:
+        if (o > 0) return r.apO.MOVE_UP;
+        if (a) return r.apO.RESUME;
+        return r.apO.PAUSE;
+      case r.vxO.UP_TO_DATE:
+        return r.apO.PLAY;
+      case r.vxO.UNINSTALLING:
         return null
     }
   }
-  return null != a && a > 0 ? r.LibraryApplicationActions.MOVE_UP : (0, i.isSupportedPlatform)() ? r.LibraryApplicationActions.INSTALL : null
+  return null != o && o > 0 ? r.apO.MOVE_UP : (0, i.Q)() ? r.apO.INSTALL : null
 }

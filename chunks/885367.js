@@ -1,6 +1,6 @@
 "use strict";
-var e = n("875604"),
-  o = n("743469"),
+var e = n(875604),
+  o = n(743469),
   i = Array.prototype;
 t.exports = function(t) {
   var r = t.concat;

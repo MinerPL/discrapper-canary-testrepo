@@ -1,88 +1,88 @@
 "use strict";
-a.r(t), a.d(t, {
-  default: function() {
-    return c
+n.d(t, {
+  Z: function() {
+    return u
   }
 });
-var s = a("735250");
-a("470079");
-var n = a("313361"),
-  l = a("683860"),
-  r = a("481060"),
-  i = a("109434"),
-  o = a("228392"),
-  d = a("689938"),
-  u = a("254830");
+var s = n(735250);
+n(470079);
+var l = n(313361),
+  a = n(683860),
+  i = n(481060),
+  r = n(109434),
+  o = n(228392),
+  c = n(689938),
+  d = n(122128);
 
-function c(e) {
+function u(e) {
   let {
     channel: t,
-    closePopout: a
+    closePopout: n
   } = e, {
-    sortOrder: c,
-    layoutType: m
-  } = (0, i.useForumChannelStore)(t.id), h = (0, i.useForumChannelStoreApi)(), f = t.isMediaChannel(), g = e => {
-    (0, o.trackForumSortOrderUpdated)({
+    sortOrder: u,
+    layoutType: h
+  } = (0, r.H)(t.id), m = (0, r.v)(), g = t.isMediaChannel(), x = e => {
+    (0, o.KR)({
       guildId: t.guild_id,
       channelId: t.id,
       sortOrder: e
-    }), h.getState().setSortOrder(t.id, e), a()
-  }, x = e => {
-    (0, o.trackForumLayoutUpdated)({
+    }), m.getState().setSortOrder(t.id, e), n()
+  }, _ = e => {
+    (0, o.Do)({
       guildId: t.guild_id,
       channelId: t.id,
       forumLayout: e
-    }), h.getState().setLayoutType(t.id, e), a()
+    }), m.getState().setLayoutType(t.id, e), n()
   };
   return (0, s.jsx)("div", {
-    className: u.container,
-    children: (0, s.jsxs)(r.Menu, {
+    className: d.container,
+    children: (0, s.jsxs)(i.Menu, {
       navId: "sort-and-view",
-      "aria-label": f ? d.default.Messages.MEDIA_CHANNEL_SORT_A11Y_LABEL : d.default.Messages.FORUM_SORT_AND_VIEW_AY11_LABEL,
+      "aria-label": g ? c.Z.Messages.MEDIA_CHANNEL_SORT_A11Y_LABEL : c.Z.Messages.FORUM_SORT_AND_VIEW_AY11_LABEL,
       hideScroller: !0,
-      onClose: a,
-      onSelect: a,
-      children: [(0, s.jsxs)(r.MenuGroup, {
-        label: d.default.Messages.FORUM_CHANNEL_SORT_BY,
-        children: [(0, s.jsx)(r.MenuRadioItem, {
+      onClose: n,
+      onSelect: n,
+      children: [(0, s.jsxs)(i.MenuGroup, {
+        label: c.Z.Messages.FORUM_CHANNEL_SORT_BY,
+        children: [(0, s.jsx)(i.MenuRadioItem, {
           id: "sort-by-recent-activity",
           group: "sort-by",
-          label: d.default.Messages.FORUM_CHANNEL_SORT_BY_RECENTLY_ACTIVE,
-          action: () => g(l.ThreadSortOrder.LATEST_ACTIVITY),
-          checked: c === l.ThreadSortOrder.LATEST_ACTIVITY
-        }), (0, s.jsx)(r.MenuRadioItem, {
+          label: c.Z.Messages.FORUM_CHANNEL_SORT_BY_RECENTLY_ACTIVE,
+          action: () => x(a.z.LATEST_ACTIVITY),
+          checked: u === a.z.LATEST_ACTIVITY
+        }), (0, s.jsx)(i.MenuRadioItem, {
           id: "sort-by-date-posted",
           group: "sort-by",
-          label: d.default.Messages.FORUM_CHANNEL_SORT_BY_DATE_POSTED,
-          action: () => g(l.ThreadSortOrder.CREATION_DATE),
-          checked: c === l.ThreadSortOrder.CREATION_DATE
+          label: c.Z.Messages.FORUM_CHANNEL_SORT_BY_DATE_POSTED,
+          action: () => x(a.z.CREATION_DATE),
+          checked: u === a.z.CREATION_DATE
         })]
-      }), !t.isMediaChannel() && (0, s.jsxs)(r.MenuGroup, {
-        label: d.default.Messages.FORUM_CHANNEL_VIEW_AS,
-        children: [(0, s.jsx)(r.MenuRadioItem, {
+      }), !t.isMediaChannel() && (0, s.jsxs)(i.MenuGroup, {
+        label: c.Z.Messages.FORUM_CHANNEL_VIEW_AS,
+        children: [(0, s.jsx)(i.MenuRadioItem, {
           id: "view-as-list",
           group: "view-as",
-          label: d.default.Messages.FORUM_CHANNEL_VIEW_AS_LIST,
-          action: () => x(n.ForumLayout.LIST),
-          checked: m === n.ForumLayout.LIST
-        }), (0, s.jsx)(r.MenuRadioItem, {
+          label: c.Z.Messages.FORUM_CHANNEL_VIEW_AS_LIST,
+          action: () => _(l.X.LIST),
+          checked: h === l.X.LIST
+        }), (0, s.jsx)(i.MenuRadioItem, {
           id: "view-as-grid",
           group: "view-as",
-          label: d.default.Messages.FORUM_CHANNEL_VIEW_AS_GRID,
-          action: () => x(n.ForumLayout.GRID),
-          checked: m === n.ForumLayout.GRID
+          label: c.Z.Messages.FORUM_CHANNEL_VIEW_AS_GRID,
+          action: () => _(l.X.GRID),
+          checked: h === l.X.GRID
         })]
-      }), (0, s.jsx)(r.MenuGroup, {
-        children: (0, s.jsx)(r.MenuItem, {
+      }), (0, s.jsx)(i.MenuGroup, {
+        children: (0, s.jsx)(i.MenuItem, {
           id: "reset-all",
-          className: u.clearText,
-          label: (0, s.jsx)(r.Text, {
+          className: d.clearText,
+          label: (0, s.jsx)(i.Text, {
             variant: "text-sm/medium",
             color: "none",
-            children: d.default.Messages.FORUM_CHANNEL_RESET_ALL
+            children: c.Z.Messages.FORUM_CHANNEL_RESET_ALL
           }),
           action: () => {
-            g(t.getDefaultSortOrder()), x(t.getDefaultLayout())
+            x(t.getDefaultSortOrder()), _(t.getDefaultLayout())
           }
         })
       })]

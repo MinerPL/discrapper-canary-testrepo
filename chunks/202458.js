@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-02_activity_react_reply",
   label: "Activity React Reply",
@@ -15,7 +14,7 @@ let i = (0, n("818083").createExperiment)({
     }
   }]
 });
-t.default = function() {
+t.Z = function() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
   return i.useExperiment({
     location: "useIsEligibleForActivityReactReply"

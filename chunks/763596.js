@@ -1,7 +1,7 @@
 "use strict";
 var i, r;
-n.r(t), n.d(t, {
-  StripeErrorTypes: function() {
+n.d(t, {
+  i: function() {
     return s
   }
 });

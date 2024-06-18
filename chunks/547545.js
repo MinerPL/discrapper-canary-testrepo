@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 });
-var i = n("689938");
+var i = n(689938);
 class r {
   announce(e, t, n) {
     this.announcer.announce(e, t, n)
@@ -12,7 +12,7 @@ class r {
   announceDrag(e, t) {
     if (null == e) return;
     let n = this.getName(e, t);
-    this.announce(i.default.Messages.DND_ITEM_PICKED_UP.format({
+    this.announce(i.Z.Messages.DND_ITEM_PICKED_UP.format({
       itemName: n
     }))
   }
@@ -20,10 +20,10 @@ class r {
     null != e && this.announce(this.getName(e, t))
   }
   announceDrop() {
-    this.announce(i.default.Messages.DND_ITEM_DROPPED)
+    this.announce(i.Z.Messages.DND_ITEM_DROPPED)
   }
   announceCancel() {
-    this.announce(i.default.Messages.DND_DRAG_CANCELED)
+    this.announce(i.Z.Messages.DND_DRAG_CANCELED)
   }
   clear() {
     this.announcer.clearAnnouncements()
@@ -41,7 +41,7 @@ class r {
         writable: !0
       }) : t[i] = r, null != e) this.announcer = e;
     else {
-      let e = n("408160");
+      let e = n(408160);
       this.announcer = {
         announce: e.announce,
         clearAnnouncements: e.clearAnnouncer

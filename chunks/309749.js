@@ -1,12 +1,12 @@
 "use strict";
-var r = n("147018"),
-  i = n("926515");
-r({
+var n = e(147018),
+  o = e(926515);
+n({
   target: "URL",
   proto: !0,
   enumerable: !0
 }, {
   toJSON: function() {
-    return i(URL.prototype.toString, this)
+    return o(URL.prototype.toString, this)
   }
 })

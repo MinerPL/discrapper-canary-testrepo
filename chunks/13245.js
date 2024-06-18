@@ -1,60 +1,60 @@
 "use strict";
-n.r(t), n("411104"), n("47120");
-var i = n("153832"),
-  r = n("570140"),
-  s = n("318885"),
-  a = n("355863"),
-  o = n("449224"),
-  l = n("451478"),
-  u = n("434529"),
-  d = n("145597"),
-  _ = n("765250"),
-  c = n("981631");
+n(411104), n(47120);
+var i = n(772848),
+  r = n(570140),
+  s = n(318885),
+  o = n(355863),
+  a = n(449224),
+  l = n(451478),
+  u = n(434529),
+  _ = n(145597),
+  d = n(765250),
+  c = n(981631);
 let E = {
   track(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
       n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (!__OVERLAY__) throw Error("OverlayActionCreators.track: Must be called within Overlay context");
-    (0, s.trackWithOverlayMetadata)(e, t, n)
+    (0, s.Q)(e, t, n)
   },
   overlayReady(e) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_READY",
       pid: e
     })
   },
   overlayMounted(e) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_MOUNTED",
       nudge: e
     })
   },
   setFocusedPID(e) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_FOCUSED",
       pid: e
     })
   },
   setInputLocked(e, t) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_SET_INPUT_LOCKED",
       locked: e,
       pid: t
     })
   },
   setUILocked(e, t) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_SET_UI_LOCKED",
       locked: e,
       pid: t
     })
   },
   setLocked(e, t) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_SET_INPUT_LOCKED",
       locked: e,
       pid: t
-    }), r.default.dispatch({
+    }), r.Z.dispatch({
       type: "OVERLAY_SET_UI_LOCKED",
       locked: e,
       pid: t
@@ -62,101 +62,101 @@ let E = {
   },
   setInstanceLocked(e) {
     if (!__OVERLAY__) throw Error("OverlayActionCreators.setInstanceLocked: Must be called within Overlay context");
-    E.setLocked(e, (0, d.getPID)())
+    E.setLocked(e, (0, _.QF)())
   },
   setEnabled(e, t) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_SET_ENABLED",
       enabled: e,
       legacyEnabled: t
     })
   },
   selectCall(e) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_SELECT_CALL",
       callId: e
     })
   },
   setDisplayNameMode(e) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_SET_DISPLAY_NAME_MODE",
       mode: e
     })
   },
   setDisplayUserMode(e) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_SET_DISPLAY_USER_MODE",
       mode: e
     })
   },
   setAvatarSizeMode(e) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_SET_AVATAR_SIZE_MODE",
       mode: e
     })
   },
   setNotificationPositionMode(e) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_SET_NOTIFICATION_POSITION_MODE",
       mode: e
     })
   },
   setTextChatNotificationMode(e) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_SET_TEXT_CHAT_NOTIFICATION_MODE",
       mode: e
     })
   },
   setShowKeybindIndicators(e) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_SET_SHOW_KEYBIND_INDICATORS",
       shouldShow: e
     })
   },
   callPrivateChannel(e, t) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_CALL_PRIVATE_CHANNEL",
       channelId: e,
       ring: t
     })
   },
   setTextWidgetOpacity(e) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_SET_TEXT_WIDGET_OPACITY",
       opacity: e
     })
   },
   disableExternalLinkAlert() {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_DISABLE_EXTERNAL_LINK_ALERT"
     })
   },
   startSession() {
     if (!__OVERLAY__) throw Error("Attempting to start an overlay session outside of the overlay context");
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_START_SESSION"
     })
   },
   activateRegion(e) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_ACTIVATE_REGION",
       region: e
     })
   },
   deactivateAllRegions() {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_DEACTIVATE_ALL_REGIONS"
     })
   },
   setPreviewInGameMode(e) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_SET_PREVIEW_IN_GAME_MODE",
       isPreviewingInGame: e
     })
   },
   updateNotificationStatus(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.OverlayNotificationStatus.DISMISSED;
-    r.default.dispatch({
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c._1z.DISMISSED;
+    r.Z.dispatch({
       type: "OVERLAY_UPDATE_NOTIFICATION_STATUS",
       notificationId: e,
       status: t
@@ -164,8 +164,8 @@ let E = {
   },
   notificationEvent(e, t) {
     var n, i;
-    let s = o.default.getGame();
-    r.default.dispatch({
+    let s = a.Z.getGame();
+    r.Z.dispatch({
       type: "OVERLAY_NOTIFICATION_EVENT",
       notificationType: e,
       action: t,
@@ -174,13 +174,13 @@ let E = {
     })
   },
   setPinChat(e) {
-    let t = d.OVERLAY_LAYOUT_ID,
-      n = a.default.getWidgetsForLayout(t),
-      r = a.default.getWidgetConfig(c.OverlayWidgets.GUILDS),
-      s = a.default.getWidgetConfig(c.OverlayWidgets.TEXT),
-      o = a.default.getWidgetConfig(c.OverlayWidgets.GUILDS_TEXT);
-    if (0 === n.length || null == r || null == s || null == o) return;
-    let E = l.default.windowSize(),
+    let t = _.qU,
+      n = o.Z.getWidgetsForLayout(t),
+      r = o.Z.getWidgetConfig(c.Odu.GUILDS),
+      s = o.Z.getWidgetConfig(c.Odu.TEXT),
+      a = o.Z.getWidgetConfig(c.Odu.GUILDS_TEXT);
+    if (0 === n.length || null == r || null == s || null == a) return;
+    let E = l.Z.windowSize(),
       I = {
         width: 0,
         height: 0
@@ -191,7 +191,7 @@ let E = {
         right: 0,
         bottom: 0
       },
-      f = {
+      h = {
         width: 312,
         height: 0
       },
@@ -201,7 +201,7 @@ let E = {
         right: 0,
         bottom: 0
       },
-      h = {
+      f = {
         width: 0,
         height: 0
       };
@@ -213,43 +213,43 @@ let E = {
           size: r
         } = e;
         switch (t) {
-          case c.OverlayWidgets.TEXT:
-            I = (0, u.getSizeFromLayoutSize)(r, E), (0, _.deleteWidget)(n);
+          case c.Odu.TEXT:
+            I = (0, u.w_)(r, E), (0, d.E9)(n);
             break;
-          case c.OverlayWidgets.GUILDS:
-            T = (0, u.getFullCoordsFromLayoutSize)(i, r, E), f = (0, u.getSizeFromLayoutSize)(r, E), (0, _.deleteWidget)(n);
+          case c.Odu.GUILDS:
+            T = (0, u.vS)(i, r, E), h = (0, u.w_)(r, E), (0, d.E9)(n);
             break;
-          case c.OverlayWidgets.GUILDS_TEXT:
-            S = (0, u.getFullCoordsFromLayoutSize)(i, r, E), h = (0, u.getSizeFromLayoutSize)(r, E), (0, _.deleteWidget)(n)
+          case c.Odu.GUILDS_TEXT:
+            S = (0, u.vS)(i, r, E), f = (0, u.w_)(r, E), (0, d.E9)(n)
         }
       }), e) {
-      let e = "auto" === h.width ? o.minSize.width : h.width;
+      let e = "auto" === f.width ? a.minSize.width : f.width;
       e -= r.minSize.width;
-      let [n, s] = (0, u.getLeftWidgetSpecs)(S, {
-        ...h,
+      let [n, s] = (0, u.o4)(S, {
+        ...f,
         width: r.minSize.width
-      }, E), [l, d] = (0, u.getRightWidgetSpecs)(S, {
-        ...h,
+      }, E), [l, _] = (0, u.uq)(S, {
+        ...f,
         width: e
       }, E, {
         x: 10,
         y: 10
-      }), I = a.default.getWidgetDefaultSettings(c.OverlayWidgets.TEXT);
+      }), I = o.Z.getWidgetDefaultSettings(c.Odu.TEXT);
       if (null == I) throw Error("OverlayActionCreators.setPinChat: No config for TEXT exists");
-      (0, _.createWidget)({
+      (0, d.A4)({
         ...I,
-        type: c.OverlayWidgets.TEXT,
-        id: (0, i.v4)(),
-        size: d,
+        type: c.Odu.TEXT,
+        id: (0, i.Z)(),
+        size: _,
         anchor: l,
         layoutId: t
       });
-      let T = a.default.getWidgetDefaultSettings(c.OverlayWidgets.GUILDS);
+      let T = o.Z.getWidgetDefaultSettings(c.Odu.GUILDS);
       if (null == T) throw Error("OverlayActionCreators.setPinChat: No config for GUILDS exists");
-      (0, _.createWidget)({
+      (0, d.A4)({
         ...T,
-        type: c.OverlayWidgets.GUILDS,
-        id: (0, i.v4)(),
+        type: c.Odu.GUILDS,
+        id: (0, i.Z)(),
         size: s,
         anchor: n,
         layoutId: t
@@ -257,32 +257,32 @@ let E = {
     } else {
       let e = "auto" === I.width ? s.minSize.width : I.width;
       e += r.minSize.width;
-      let [n, o] = (0, u.getLeftWidgetSpecs)(T, {
-        height: f.height,
+      let [n, a] = (0, u.o4)(T, {
+        height: h.height,
         width: e
-      }, E), l = a.default.getWidgetDefaultSettings(c.OverlayWidgets.GUILDS_TEXT);
+      }, E), l = o.Z.getWidgetDefaultSettings(c.Odu.GUILDS_TEXT);
       if (null == l) throw Error("OverlayActionCreators.setPinChat: No config for GUILDS_TEXT exists");
-      (0, _.createWidget)({
+      (0, d.A4)({
         ...l,
-        type: c.OverlayWidgets.GUILDS_TEXT,
-        id: (0, i.v4)(),
+        type: c.Odu.GUILDS_TEXT,
+        id: (0, i.Z)(),
         layoutId: t,
         anchor: n,
-        size: o
+        size: a
       })
     }
   },
   resetDefaultLayout(e) {
-    null != a.default.getLayout(e) && ((0, _.deleteAllWidgets)(e), (0, _.createWidgets)(a.default.getDefaultLayout(e)))
+    if (null != o.Z.getLayout(e))(0, d.sz)(e), (0, d.jx)(o.Z.getDefaultLayout(e))
   },
   setClickZones(e) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_SET_CLICK_ZONES",
       zones: e
     })
   },
   relayClickZoneClicked(e, t, n) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_RELAY_CLICK_ZONE_CLICKED",
       zoneName: e,
       normalizedMouseX: t,
@@ -290,7 +290,7 @@ let E = {
     })
   },
   setAssociatedGame(e, t, n) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_SET_ASSOCIATED_GAME",
       previousAssociatedGamePID: e,
       associatedGamePID: t,
@@ -298,16 +298,16 @@ let E = {
     })
   },
   notifyReadyToShow(e) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_NOTIFY_READY_TO_SHOW",
       pid: e
     })
   },
   successfullyShown(e) {
-    r.default.dispatch({
+    r.Z.dispatch({
       type: "OVERLAY_SUCCESSFULLY_SHOWN",
       pid: e
     })
   }
 };
-t.default = E
+t.Z = E

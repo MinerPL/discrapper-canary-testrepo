@@ -1,14 +1,13 @@
 "use strict";
-r.r(t);
-var n = /[A-Z]/g,
-  i = /^ms-/,
-  o = {};
+var r = /[A-Z]/g,
+  n = /^ms-/,
+  i = {};
 
-function s(e) {
+function o(e) {
   return "-" + e.toLowerCase()
 }
-t.default = function(e) {
-  if (o.hasOwnProperty(e)) return o[e];
-  var t = e.replace(n, s);
-  return o[e] = i.test(t) ? "-" + t : t
+t.Z = function(e) {
+  if (i.hasOwnProperty(e)) return i[e];
+  var t = e.replace(r, o);
+  return i[e] = n.test(t) ? "-" + t : t
 }

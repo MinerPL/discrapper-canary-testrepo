@@ -1,11 +1,11 @@
 "use strict";
 let r;
-n.r(t), n.d(t, {
-  LocalizedStringDictionary: function() {
-    return o
-  },
-  LocalizedStringFormatter: function() {
+n.d(t, {
+  E: function() {
     return c
+  },
+  J: function() {
+    return o
   }
 });
 let i = Symbol.for("react-aria.i18n.locale"),

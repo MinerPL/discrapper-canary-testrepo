@@ -1,21 +1,23 @@
 "use strict";
-n.r(e), n.d(e, {
-  closeSession: function() {
+n.d(e, {
+  CT: function() {
     return o
   },
-  makeSession: function() {
-    return i
-  },
-  updateSession: function() {
+  Hv: function() {
     return a
+  },
+  RJ: function() {
+    return u
   }
 });
-var r = n("648238");
+var r = n(868145),
+  i = n(862315),
+  s = n(442853);
 
-function i(t) {
-  let e = (0, r.timestampInSeconds)(),
+function a(t) {
+  let e = (0, r.ph)(),
     n = {
-      sid: (0, r.uuid4)(),
+      sid: (0, i.DM)(),
       init: !0,
       timestamp: e,
       started: e,
@@ -24,7 +26,7 @@ function i(t) {
       errors: 0,
       ignoreDuration: !1,
       toJSON: () => (function(t) {
-        return (0, r.dropUndefinedKeys)({
+        return (0, s.Jr)({
           sid: `${t.sid}`,
           init: t.init,
           started: new Date(1e3 * t.started).toISOString(),
@@ -42,11 +44,11 @@ function i(t) {
         })
       })(n)
     };
-  return t && a(n, t), n
+  return t && o(n, t), n
 }
 
-function a(t, e = {}) {
-  if (e.user && (!t.ipAddress && e.user.ip_address && (t.ipAddress = e.user.ip_address), !t.did && !e.did && (t.did = e.user.id || e.user.email || e.user.username)), t.timestamp = e.timestamp || (0, r.timestampInSeconds)(), e.ignoreDuration && (t.ignoreDuration = e.ignoreDuration), e.sid && (t.sid = 32 === e.sid.length ? e.sid : (0, r.uuid4)()), void 0 !== e.init && (t.init = e.init), !t.did && e.did && (t.did = `${e.did}`), "number" == typeof e.started && (t.started = e.started), t.ignoreDuration) t.duration = void 0;
+function o(t, e = {}) {
+  if (e.user && (!t.ipAddress && e.user.ip_address && (t.ipAddress = e.user.ip_address), !t.did && !e.did && (t.did = e.user.id || e.user.email || e.user.username)), t.timestamp = e.timestamp || (0, r.ph)(), e.ignoreDuration && (t.ignoreDuration = e.ignoreDuration), e.sid && (t.sid = 32 === e.sid.length ? e.sid : (0, i.DM)()), void 0 !== e.init && (t.init = e.init), !t.did && e.did && (t.did = `${e.did}`), "number" == typeof e.started && (t.started = e.started), t.ignoreDuration) t.duration = void 0;
   else if ("number" == typeof e.duration) t.duration = e.duration;
   else {
     let e = t.timestamp - t.started;
@@ -55,11 +57,11 @@ function a(t, e = {}) {
   e.release && (t.release = e.release), e.environment && (t.environment = e.environment), !t.ipAddress && e.ipAddress && (t.ipAddress = e.ipAddress), !t.userAgent && e.userAgent && (t.userAgent = e.userAgent), "number" == typeof e.errors && (t.errors = e.errors), e.status && (t.status = e.status)
 }
 
-function o(t, e) {
+function u(t, e) {
   let n = {};
   e ? n = {
     status: e
   } : "ok" === t.status && (n = {
     status: "exited"
-  }), a(t, n)
+  }), o(t, n)
 }

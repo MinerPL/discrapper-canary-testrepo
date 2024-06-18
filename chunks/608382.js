@@ -1,9 +1,9 @@
 "use strict";
-var n = r("379846"),
-  i = r("278203"),
-  o = r("158225"),
-  a = r("242891"),
-  u = r("235767");
+var n = r(379846),
+  i = r(278203),
+  o = r(158225),
+  a = r(242891),
+  u = r(235767);
 t.exports = function(t, e) {
   var r = u(t, function(t) {
     var r = t.getSelection();

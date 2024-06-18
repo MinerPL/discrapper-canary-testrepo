@@ -1,7 +1,7 @@
 "use strict";
-n.r(t), n.d(t, {
-  IdGenerator: function() {
-    return i.IdGenerator
+n.d(t, {
+  R: function() {
+    return i.R
   }
 });
-var i = n("761609")
+var i = n(761609)

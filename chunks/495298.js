@@ -1,25 +1,25 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return i
+t.d(s, {
+  Z: function() {
+    return a
   }
-}), s("47120");
-var a = s("470079"),
-  l = s("584825"),
-  n = s("14263");
+}), t(47120);
+var n = t(470079),
+  i = t(584825),
+  l = t(14263);
 
-function i(e) {
-  let t = (0, l.useSubscriptionListingsForGuild)(e),
-    s = (0, n.default)(e);
-  return a.useMemo(() => {
+function a(e) {
+  let s = (0, i.qi)(e),
+    t = (0, l.Z)(e);
+  return n.useMemo(() => {
     let e = 0;
-    for (let a of t) {
-      let t = null == a ? void 0 : a.role_id;
-      if (null != t) {
-        let a = null == s ? void 0 : s[t];
-        null != a && (e += a)
+    for (let n of s) {
+      let s = null == n ? void 0 : n.role_id;
+      if (null != s) {
+        let n = null == t ? void 0 : t[s];
+        null != n && (e += n)
       }
     }
     return e
-  }, [t, s])
+  }, [s, t])
 }

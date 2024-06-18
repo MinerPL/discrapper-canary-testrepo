@@ -1,59 +1,58 @@
 "use strict";
-n.r(t);
-var i, r, s, a, o = n("442837"),
-  l = n("570140"),
-  u = n("314897"),
-  d = n("592125"),
-  _ = n("131951"),
-  c = n("496675"),
-  E = n("19780"),
-  I = n("979651"),
-  T = n("981631");
-let f = !0,
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(314897),
+  _ = n(592125),
+  d = n(131951),
+  c = n(496675),
+  E = n(19780),
+  I = n(979651),
+  T = n(981631);
+let h = !0,
   S = !0;
 
-function h() {
+function f() {
   let e;
-  let t = E.default.getChannelId();
+  let t = E.Z.getChannelId();
   if (null == t) e = !0;
   else {
     var n;
-    let i = d.default.getChannel(t),
-      r = I.default.getVoiceState(null == i ? void 0 : i.getGuildId(), u.default.getId());
-    e = _.default.getMode() !== T.InputModes.VOICE_ACTIVITY || null == i || i.isPrivate() || i.isGuildStageVoice() || c.default.can(T.Permissions.USE_VAD, i) || null == (n = r) || !!n.suppress || null != n.requestToSpeakTimestamp || !1
+    let i = _.Z.getChannel(t),
+      r = I.Z.getVoiceState(null == i ? void 0 : i.getGuildId(), u.default.getId());
+    e = d.Z.getMode() !== T.pM4.VOICE_ACTIVITY || null == i || i.isPrivate() || i.isGuildStageVoice() || c.Z.can(T.Plq.USE_VAD, i) || null == (n = r) || !!n.suppress || null != n.requestToSpeakTimestamp || !1
   }
-  if (f === e) return !1;
-  S = e, f = e, l.default.dispatch({
+  if (h === e) return !1;
+  S = e, h = e, l.Z.dispatch({
     type: "SET_VAD_PERMISSION",
-    hasPermission: f
+    hasPermission: h
   })
 }
-class A extends(a = o.default.Store) {
+class N extends(o = a.ZP.Store) {
   initialize() {
-    this.waitFor(c.default, _.default, E.default, I.default)
+    this.waitFor(c.Z, d.Z, E.Z, I.Z)
   }
   shouldShowWarning() {
     return !S
   }
   canUseVoiceActivity() {
-    return f
+    return h
   }
 }
-s = "PermissionVADStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
+s = "PermissionVADStore", (r = "displayName") in(i = N) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new A(l.default, {
-  RTC_CONNECTION_STATE: h,
-  MEDIA_ENGINE_SET_AUDIO_ENABLED: h,
-  AUDIO_SET_MODE: h,
-  CHANNEL_UPDATES: h,
-  THREAD_UPDATE: h,
-  GUILD_ROLE_UPDATE: h,
-  GUILD_MEMBER_UPDATE: h,
-  IMPERSONATE_UPDATE: h,
-  IMPERSONATE_STOP: h,
+}) : i[r] = s, t.Z = new N(l.Z, {
+  RTC_CONNECTION_STATE: f,
+  MEDIA_ENGINE_SET_AUDIO_ENABLED: f,
+  AUDIO_SET_MODE: f,
+  CHANNEL_UPDATES: f,
+  THREAD_UPDATE: f,
+  GUILD_ROLE_UPDATE: f,
+  GUILD_MEMBER_UPDATE: f,
+  IMPERSONATE_UPDATE: f,
+  IMPERSONATE_STOP: f,
   VOICE_STATE_UPDATES: function(e) {
     let {
       voiceStates: t
@@ -62,11 +61,11 @@ s = "PermissionVADStore", (r = "displayName") in(i = A) ? Object.defineProperty(
       let {
         userId: t
       } = e;
-      return t === u.default.getId() && h()
+      return t === u.default.getId() && f()
     })
   },
   AUDIO_TOGGLE_SELF_MUTE: function() {
-    S = f
+    S = h
   },
   PERMISSION_CLEAR_VAD_WARNING: function() {
     S = !0

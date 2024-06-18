@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  PlayStationVoiceExperiment: function() {
+n.d(t, {
+  c: function() {
     return i
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2022-08_churro_experiment",
   label: "PS5 Voice Experiment",

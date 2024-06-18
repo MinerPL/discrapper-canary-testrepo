@@ -1,10 +1,9 @@
 "use strict";
-n.r(t);
-var i = n("525654"),
+var i = n(525654),
   r = n.n(i),
-  s = n("444675");
+  s = n(444675);
 
-function a(e, t) {
+function o(e, t) {
   if (!e.startsWith("discord:")) return location.href = e, s.nextTick(() => t(!0));
   let {
     body: n
@@ -23,7 +22,7 @@ function a(e, t) {
   }, 1e3)
 }
 
-function o(e, t) {
+function a(e, t) {
   let n = !1;
 
   function i() {
@@ -41,12 +40,12 @@ function l(e, t) {
 function u(e, t) {
   location.href = e, s.nextTick(() => t(!0))
 }
-t.default = {
+t.Z = {
   launch: function() {
     var e, t;
     if ((null === (e = r().os) || void 0 === e ? void 0 : e.family) === "Android" || (null === (t = r().os) || void 0 === t ? void 0 : t.family) === "iOS") return u;
-    if ("Gecko" === r().layout) return a;
+    if ("Gecko" === r().layout) return o;
     if (null != r().ua && -1 !== r().ua.indexOf("Valve Steam GameOverlay")) return l;
-    return o
+    return a
   }()
 }

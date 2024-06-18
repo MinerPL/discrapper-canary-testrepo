@@ -1,9 +1,9 @@
 "use strict";
-let r = n("689118"),
-  i = n("814033"),
-  a = n("873994").DecoderBuffer,
-  o = n("206424"),
-  s = n("375990");
+let r = n(689118),
+  i = n(814033),
+  a = n(873994).DecoderBuffer,
+  o = n(206424),
+  s = n(375990);
 
 function u(e) {
   this.enc = "der", this.name = e.name, this.entity = e, this.tree = new c, this.tree._init(e.body)

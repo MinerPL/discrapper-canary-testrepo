@@ -42,8 +42,11 @@ e.exports = function(e, a) {
         for (u = s; 0 != u--;)
           if (!Object.prototype.hasOwnProperty.call(o, c[u])) return !1;
         if (t && a instanceof Element) return !1;
-        for (u = s; 0 != u--;)
-          if (("_owner" !== c[u] && "__v" !== c[u] && "__o" !== c[u] || !a.$$typeof) && !e(a[c[u]], o[c[u]])) return !1;
+        for (u = s; 0 != u--;) {
+          if ("_owner" !== c[u] && "__v" !== c[u] && "__o" !== c[u] || !a.$$typeof) {
+            if (!e(a[c[u]], o[c[u]])) return !1
+          }
+        }
         return !0
       }
       return a != a && o != o

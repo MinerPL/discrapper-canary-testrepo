@@ -1,29 +1,29 @@
 "use strict";
-s.r(t), s.d(t, {
-  fetchDiscoveryChecklist: function() {
-    return i
+t.d(s, {
+  k: function() {
+    return a
   }
 });
-var a = s("544891"),
-  l = s("570140"),
-  n = s("981631");
-async function i(e) {
-  l.default.dispatch({
+var n = t(544891),
+  i = t(570140),
+  l = t(981631);
+async function a(e) {
+  i.Z.dispatch({
     type: "DISCOVER_CHECKLIST_FETCH_START",
     guildId: e
   });
   try {
-    let t = await a.HTTP.get({
-      url: n.Endpoints.GUILD_DISCOVERY_REQUIREMENTS(e),
+    let s = await n.tn.get({
+      url: l.ANM.GUILD_DISCOVERY_REQUIREMENTS(e),
       oldFormErrors: !0
     });
-    l.default.dispatch({
+    i.Z.dispatch({
       type: "DISCOVER_CHECKLIST_FETCH_SUCCESS",
       guildId: e,
-      checklist: t.body
+      checklist: s.body
     })
-  } catch (t) {
-    l.default.dispatch({
+  } catch (s) {
+    i.Z.dispatch({
       type: "DISCOVER_CHECKLIST_FETCH_FAILURE",
       guildId: e
     })

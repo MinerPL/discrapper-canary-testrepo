@@ -3,8 +3,8 @@
 function i(e, t) {
   return new WebSocket(e, t)
 }
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return i
   }
 })

@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
-  BaseSpeedTesterEvent: function() {
-    return r.BaseSpeedTesterEvent
-  },
-  default: function() {
+n.d(t, {
+  Z: function() {
     return l
+  },
+  a: function() {
+    return r.a
   }
 });
-var i = n("47770"),
-  r = n("11934"),
-  a = n("65154");
+var i = n(47770),
+  r = n(11934),
+  s = n(65154);
 
-function s(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -19,16 +19,16 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let o = 0;
-class l extends i.default {
+let a = 0;
+class l extends i.Z {
   destroy() {
-    this.destroyed = !0, this.setConnectionState(a.ConnectionStates.DISCONNECTED), this.emit(r.BaseSpeedTesterEvent.Destroy, this), this.removeAllListeners()
+    this.destroyed = !0, this.setConnectionState(s.$j.DISCONNECTED), this.emit(r.a.Destroy, this), this.removeAllListeners()
   }
   setConnectionState(e) {
-    this.connectionState = e, this.emit(r.BaseSpeedTesterEvent.ConnectionStateChange, this.connectionState)
+    this.connectionState = e, this.emit(r.a.ConnectionStateChange, this.connectionState)
   }
   initializeStreamParameters(e) {
-    this.videoStreamParameters = e.filter(e => e.type === a.MediaTypes.TEST).map(e => {
+    this.videoStreamParameters = e.filter(e => e.type === s.Tr.TEST).map(e => {
       var t;
       return {
         type: e.type,
@@ -39,6 +39,6 @@ class l extends i.default {
     })
   }
   constructor(e) {
-    super(), s(this, "mediaEngineConnectionId", "WebRTC-".concat(o++)), s(this, "userId", void 0), s(this, "streamUserId", void 0), s(this, "destroyed", !1), s(this, "audioSSRC", 0), s(this, "videoStreamParameters", []), s(this, "connectionState", a.ConnectionStates.CONNECTING), this.userId = e
+    super(), o(this, "mediaEngineConnectionId", "WebRTC-".concat(a++)), o(this, "userId", void 0), o(this, "streamUserId", void 0), o(this, "destroyed", !1), o(this, "audioSSRC", 0), o(this, "videoStreamParameters", []), o(this, "connectionState", s.$j.CONNECTING), this.userId = e
   }
 }

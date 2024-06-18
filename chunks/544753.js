@@ -1,31 +1,29 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("844303"),
-  i = r("464854"),
-  l = function(e) {
+var r = n(470079),
+  i = n(844303),
+  a = n(464854),
+  o = function(e) {
     var t = e.color,
-      r = e.onClick,
-      n = e.onSwatchHover,
-      l = e.hover,
+      n = e.onClick,
+      o = e.onSwatchHover,
+      s = e.hover,
       u = e.active,
-      s = e.circleSize,
-      f = e.circleSpacing,
-      c = (0, o.default)({
+      c = e.circleSize,
+      l = e.circleSpacing,
+      d = (0, i.default)({
         default: {
           swatch: {
-            width: s,
-            height: s,
-            marginRight: f,
-            marginBottom: f,
+            width: c,
+            height: c,
+            marginRight: l,
+            marginBottom: l,
             transform: "scale(1)",
             transition: "100ms transform ease"
           },
           Swatch: {
             borderRadius: "50%",
             background: "transparent",
-            boxShadow: "inset 0 0 0 " + (s / 2 + 1) + "px " + t,
+            boxShadow: "inset 0 0 0 " + (c / 2 + 1) + "px " + t,
             transition: "100ms box-shadow ease"
           }
         },
@@ -40,22 +38,22 @@ var n = r("470079"),
           }
         }
       }, {
-        hover: l,
+        hover: s,
         active: u
       });
-    return a().createElement("div", {
-      style: c.swatch
-    }, a().createElement(i.Swatch, {
-      style: c.Swatch,
+    return r.createElement("div", {
+      style: d.swatch
+    }, r.createElement(a.m4, {
+      style: d.Swatch,
       color: t,
-      onClick: r,
-      onHover: n,
+      onClick: n,
+      onHover: o,
       focusStyle: {
-        boxShadow: c.Swatch.boxShadow + ", 0 0 5px " + t
+        boxShadow: d.Swatch.boxShadow + ", 0 0 5px " + t
       }
     }))
   };
-l.defaultProps = {
+o.defaultProps = {
   circleSize: 28,
   circleSpacing: 14
-}, t.default = (0, o.handleHover)(l)
+}, t.Z = (0, i.handleHover)(o)

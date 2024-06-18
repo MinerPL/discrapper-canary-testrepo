@@ -1,5 +1,5 @@
 "use strict";
-let r = n("689118");
+let r = n(689118);
 
 function i(e) {
   this._reporterState = {

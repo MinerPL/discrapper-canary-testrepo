@@ -1,9 +1,9 @@
 "use strict";
-var r = n("288537"),
-  i = n("754793"),
-  a = n("911725"),
-  o = n("441234"),
-  s = n("404625"),
+var r = n(288537),
+  i = n(754793),
+  a = n(911725),
+  o = n(441234),
+  s = n(404625),
   u = Object.prototype.toString;
 
 function c(e) {

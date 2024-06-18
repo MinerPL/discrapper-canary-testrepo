@@ -1,13 +1,13 @@
 var t = Date.now;
 e.exports = function(e) {
-  var r = 0,
-    n = 0;
+  var n = 0,
+    r = 0;
   return function() {
-    var a = t(),
-      o = 16 - (a - n);
-    if (n = a, o > 0) {
-      if (++r >= 800) return arguments[0]
-    } else r = 0;
+    var i = t(),
+      a = 16 - (i - r);
+    if (r = i, a > 0) {
+      if (++n >= 800) return arguments[0]
+    } else n = 0;
     return e.apply(void 0, arguments)
   }
 }

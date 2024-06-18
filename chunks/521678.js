@@ -1,11 +1,10 @@
 "use strict";
-r.r(t);
-var n = r("315162"),
-  a = r("906024"),
-  o = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
-  i = /^\w*$/;
-t.default = function(e, t) {
-  if ((0, n.default)(e)) return !1;
-  var r = typeof e;
-  return !!("number" == r || "symbol" == r || "boolean" == r || null == e || (0, a.default)(e)) || i.test(e) || !o.test(e) || null != t && e in Object(t)
+var r = n(175056),
+  i = n(906024),
+  a = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
+  o = /^\w*$/;
+t.Z = function(e, t) {
+  if ((0, r.Z)(e)) return !1;
+  var n = typeof e;
+  return !!("number" == n || "symbol" == n || "boolean" == n || null == e || (0, i.Z)(e)) || o.test(e) || !a.test(e) || null != t && e in Object(t)
 }

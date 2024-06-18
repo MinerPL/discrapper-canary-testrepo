@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
-  getOnboardingHomeAdminExperiment: function() {
-    return o
-  },
-  getOptionalOnboardingHomeAdminExperiment: function() {
+n.d(t, {
+  FJ: function() {
     return u
   },
-  useOnboardingHomeAdminExperiment: function() {
-    return a
-  },
-  useOptionalOnboardingHomeAdminExperiment: function() {
+  hl: function() {
     return l
+  },
+  kZ: function() {
+    return o
+  },
+  l6: function() {
+    return a
   }
 });
-var i = n("818083");
-let r = (0, i.createExperiment)({
+var i = n(818083);
+let r = (0, i.B)({
     kind: "guild",
     id: "2023-02_onboarding_home_admin",
     label: "[ADMIN] Home as a community onboarding surface",
@@ -29,7 +29,7 @@ let r = (0, i.createExperiment)({
       }
     }]
   }),
-  s = (0, i.createExperiment)({
+  s = (0, i.B)({
     kind: "guild",
     id: "2023-05_optional_onboarding_home_admin",
     label: "[ADMIN] Make server guide optional",
@@ -45,7 +45,7 @@ let r = (0, i.createExperiment)({
     }]
   });
 
-function a(e) {
+function o(e) {
   return r.useExperiment({
     guildId: e,
     location: "259c05_1"
@@ -54,7 +54,7 @@ function a(e) {
   })
 }
 
-function o(e) {
+function a(e) {
   return r.getCurrentConfig({
     guildId: e,
     location: "259c05_2"
@@ -76,4 +76,4 @@ function u(e) {
     location: "259c05_4"
   })
 }
-t.default = r
+t.ZP = r

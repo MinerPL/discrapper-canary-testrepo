@@ -1,7 +1,6 @@
 "use strict";
-n.r(t);
-var i = n("470079");
-t.default = (e, t) => {
+var i = n(470079);
+t.Z = (e, t) => {
   let n = (0, i.useRef)(e);
   (0, i.useEffect)(() => {
     n.current = e

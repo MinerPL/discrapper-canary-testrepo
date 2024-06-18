@@ -1,30 +1,30 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return o
+n.d(t, {
+  Z: function() {
+    return a
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("427217"),
-  s = n("659101"),
-  a = n("568340");
+var i = n(735250);
+n(470079);
+var r = n(427217),
+  s = n(659101),
+  o = n(812780);
 
-function o(e) {
+function a(e) {
   let {
     customStatusActivity: t,
     className: n,
-    animate: o
+    animate: a
   } = e;
-  return null == t ? null : (0, i.jsx)(s.default, {
+  return null == t ? null : (0, i.jsx)(s.Z, {
     className: n,
-    children: (0, i.jsx)(r.default, {
+    children: (0, i.jsx)(r.Z, {
       activity: t,
-      className: a.customStatus,
-      animate: o,
-      emojiClassName: a.customStatusEmoji,
-      soloEmojiClassName: a.customStatusSoloEmoji,
-      textClassName: a.customStatusText
+      className: o.customStatus,
+      animate: a,
+      emojiClassName: o.customStatusEmoji,
+      soloEmojiClassName: o.customStatusSoloEmoji,
+      textClassName: o.customStatusText
     })
   })
 }

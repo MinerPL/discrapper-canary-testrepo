@@ -1,14 +1,13 @@
 "use strict";
-n.r(t);
-var i, r = n("442837"),
-  a = n("433517"),
-  s = n("780384"),
-  o = n("570140"),
-  l = n("695346"),
-  u = n("581883"),
-  d = n("12647"),
-  _ = n("981631"),
-  c = n("959517");
+var i, r = n(442837),
+  s = n(433517),
+  o = n(780384),
+  a = n(570140),
+  l = n(695346),
+  u = n(581883),
+  _ = n(12647),
+  d = n(981631),
+  c = n(959517);
 
 function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -19,8 +18,8 @@ function E(e, t, n) {
   }) : e[t] = n, e
 }
 let I = {
-    fontSize: _.Accessibility.FONT_SIZE_DEFAULT,
-    zoom: _.Accessibility.ZOOM_DEFAULT,
+    fontSize: d.yqN.FONT_SIZE_DEFAULT,
+    zoom: d.yqN.ZOOM_DEFAULT,
     keyboardModeEnabled: !1,
     colorblindMode: !1,
     lowContrastMode: !1,
@@ -39,10 +38,11 @@ let I = {
     alwaysShowLinkDecorations: !1,
     roleStyle: "username",
     submitButtonEnabled: !1,
-    syncProfileThemeWithUserTheme: !1
+    syncProfileThemeWithUserTheme: !1,
+    hideGuildTags: !1
   },
   T = I,
-  f = {
+  h = {
     12: "font-size-12",
     14: "font-size-14",
     15: "font-size-15",
@@ -51,38 +51,38 @@ let I = {
     20: "font-size-20",
     24: "font-size-24"
   };
-class S extends(i = r.default.DeviceSettingsStore) {
+class S extends(i = r.ZP.DeviceSettingsStore) {
   initialize(e) {
-    this.waitFor(u.default), isNaN((T = {
+    this.waitFor(u.Z), isNaN((T = {
       ...I,
       ...null != e ? e : null
-    }).fontSize) && (T.fontSize = _.Accessibility.FONT_SIZE_DEFAULT), 0 > c.MESSAGE_GROUP_SPACING.indexOf(null != T.messageGroupSpacing ? T.messageGroupSpacing : -1) && (T.messageGroupSpacing = null)
+    }).fontSize) && (T.fontSize = d.yqN.FONT_SIZE_DEFAULT), 0 > c.fP.indexOf(null != T.messageGroupSpacing ? T.messageGroupSpacing : -1) && (T.messageGroupSpacing = null)
   }
   get fontScale() {
-    return T.fontSize / _.Accessibility.FONT_SIZE_DEFAULT * 100
+    return T.fontSize / d.yqN.FONT_SIZE_DEFAULT * 100
   }
   get fontSize() {
     return T.fontSize
   }
   get isFontScaledUp() {
-    return T.fontSize > _.Accessibility.FONT_SIZE_DEFAULT
+    return T.fontSize > d.yqN.FONT_SIZE_DEFAULT
   }
   get isFontScaledDown() {
-    return T.fontSize < _.Accessibility.FONT_SIZE_DEFAULT
+    return T.fontSize < d.yqN.FONT_SIZE_DEFAULT
   }
   get fontScaleClass() {
     var e;
-    let t = null !== (e = f[this.fontSize]) && void 0 !== e ? e : "";
+    let t = null !== (e = h[this.fontSize]) && void 0 !== e ? e : "";
     return this.isFontScaledUp ? "a11y-font-scaled-up ".concat(t) : this.isFontScaledDown ? "a11y-font-scaled-down ".concat(t) : "".concat(t)
   }
   get zoom() {
     return T.zoom
   }
   get isZoomedIn() {
-    return T.zoom > _.Accessibility.ZOOM_DEFAULT
+    return T.zoom > d.yqN.ZOOM_DEFAULT
   }
   get isZoomedOut() {
-    return T.zoom < _.Accessibility.ZOOM_DEFAULT
+    return T.zoom < d.yqN.ZOOM_DEFAULT
   }
   get keyboardModeEnabled() {
     return T.keyboardModeEnabled
@@ -109,14 +109,14 @@ class S extends(i = r.default.DeviceSettingsStore) {
     return T.keyboardNavigationExplainerModalSeen
   }
   get messageGroupSpacing() {
-    return null != T.messageGroupSpacing ? T.messageGroupSpacing : l.MessageDisplayCompact.getSetting() ? c.DEFAULT_COMPACT_SPACING : c.DEFAULT_COZY_SPACING
+    return null != T.messageGroupSpacing ? T.messageGroupSpacing : l.jU.getSetting() ? c.c8 : c.pq
   }
   get isMessageGroupSpacingIncreased() {
-    let e = l.MessageDisplayCompact.getSetting() ? c.DEFAULT_COMPACT_SPACING : c.DEFAULT_COZY_SPACING;
+    let e = l.jU.getSetting() ? c.c8 : c.pq;
     return this.messageGroupSpacing > e
   }
   get isMessageGroupSpacingDecreased() {
-    let e = l.MessageDisplayCompact.getSetting() ? c.DEFAULT_COMPACT_SPACING : c.DEFAULT_COZY_SPACING;
+    let e = l.jU.getSetting() ? c.c8 : c.pq;
     return this.messageGroupSpacing < e
   }
   get isSubmitButtonEnabled() {
@@ -162,23 +162,24 @@ class S extends(i = r.default.DeviceSettingsStore) {
   get roleStyle() {
     return T.roleStyle
   }
+  get hideTags() {
+    return T.hideGuildTags
+  }
   getUserAgnosticState() {
     return T
   }
 }
 E(S, "displayName", "AccessibilityStore"), E(S, "persistKey", "AccessibilityStore"), E(S, "migrations", [() => {
-  let e = {
-      FONT_SCALE: "a11yFontScale",
-      ZOOM: "a11yZoom",
-      COLORBLIND_MODE: "a11yColorblindMode"
-    },
-    t = a.Storage.get(e.FONT_SCALE) || 100,
-    n = a.Storage.get(e.ZOOM) || _.Accessibility.ZOOM_DEFAULT,
-    i = a.Storage.get(e.COLORBLIND_MODE) || !1;
-  return a.Storage.remove(e.FONT_SCALE), a.Storage.remove(e.ZOOM), a.Storage.remove(e.COLORBLIND_MODE), {
-    fontScale: t,
-    zoom: n,
-    colorblindMode: i,
+  let e = "a11yFontScale",
+    t = "a11yZoom",
+    n = "a11yColorblindMode",
+    i = s.K.get(e) || 100,
+    r = s.K.get(t) || d.yqN.ZOOM_DEFAULT,
+    o = s.K.get(n) || !1;
+  return s.K.remove(e), s.K.remove(t), s.K.remove(n), {
+    fontScale: i,
+    zoom: r,
+    colorblindMode: o,
     keyboardModeEnabled: !1
   }
 }, e => {
@@ -221,7 +222,7 @@ E(S, "displayName", "AccessibilityStore"), E(S, "persistKey", "AccessibilityStor
   prefersReducedMotion: "auto"
 }), e => ({
   ...e,
-  alwaysShowLinkDecorations: e.saturation <= s.LOW_SATURATION_THRESHOLD
+  alwaysShowLinkDecorations: e.saturation <= o.AE
 }), e => ({
   ...e,
   disableVoiceBackgrounds: !1
@@ -231,28 +232,28 @@ E(S, "displayName", "AccessibilityStore"), E(S, "persistKey", "AccessibilityStor
   } catch (e) {}
   return e
 }]);
-let h = new S(o.default, {
+let f = new S(a.Z, {
   ACCESSIBILITY_SET_FONT_SIZE: function(e) {
     var t;
-    let n = (t = e.fontSize, _.Accessibility.FONT_SIZES.indexOf(t) >= 0 ? t : _.Accessibility.FONT_SIZE_DEFAULT);
-    if (n > _.Accessibility.FONT_SIZE_MAX || n < _.Accessibility.FONT_SIZE_MIN || T.fontSize === n) return !1;
+    let n = (t = e.fontSize, d.yqN.FONT_SIZES.indexOf(t) >= 0 ? t : d.yqN.FONT_SIZE_DEFAULT);
+    if (n > d.yqN.FONT_SIZE_MAX || n < d.yqN.FONT_SIZE_MIN || T.fontSize === n) return !1;
     (T = {
       ...T
     }).fontSize = n
   },
   ACCESSIBILITY_SET_ZOOM: function(e) {
-    if (e.zoom < _.Accessibility.ZOOM_MIN || e.zoom > _.Accessibility.ZOOM_MAX || T.zoom === e.zoom) return !1;
+    if (e.zoom < d.yqN.ZOOM_MIN || e.zoom > d.yqN.ZOOM_MAX || T.zoom === e.zoom) return !1;
     (T = {
       ...T
-    }).zoom = e.zoom, d.default.setZoomFactor(T.zoom)
+    }).zoom = e.zoom, _.Z.setZoomFactor(T.zoom)
   },
   ACCESSIBILITY_RESET_TO_DEFAULT: function() {
-    let e = T.fontSize !== _.Accessibility.FONT_SIZE_DEFAULT,
-      t = T.zoom !== _.Accessibility.ZOOM_DEFAULT;
+    let e = T.fontSize !== d.yqN.FONT_SIZE_DEFAULT,
+      t = T.zoom !== d.yqN.ZOOM_DEFAULT;
     if (!e && !t) return !1;
     (T = {
       ...T
-    }).fontSize !== _.Accessibility.FONT_SIZE_DEFAULT && (T.fontSize = _.Accessibility.FONT_SIZE_DEFAULT), T.zoom !== _.Accessibility.ZOOM_DEFAULT && (T.zoom = _.Accessibility.ZOOM_DEFAULT, d.default.setZoomFactor(T.zoom))
+    }).fontSize !== d.yqN.FONT_SIZE_DEFAULT && (T.fontSize = d.yqN.FONT_SIZE_DEFAULT), T.zoom !== d.yqN.ZOOM_DEFAULT && (T.zoom = d.yqN.ZOOM_DEFAULT, _.Z.setZoomFactor(T.zoom))
   },
   ACCESSIBILITY_KEYBOARD_MODE_ENABLE: function() {
     if (T.keyboardModeEnabled) return !1;
@@ -369,6 +370,15 @@ let h = new S(o.default, {
       ...T,
       contrast: t
     }
+  },
+  ACCESSIBILITY_SET_HIDE_TAGS: function(e) {
+    let {
+      hideTags: t
+    } = e;
+    T = {
+      ...T,
+      hideGuildTags: t
+    }
   }
 });
-t.default = h
+t.Z = f

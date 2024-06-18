@@ -1,6 +1,6 @@
-var r = n("413135").Buffer,
-  i = n("136924"),
-  a = n("814033");
+var r = n(413135).Buffer,
+  i = n(136924),
+  a = n(814033);
 e.exports = function(e) {
   return new s(e)
 };

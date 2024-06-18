@@ -1,86 +1,86 @@
 "use strict";
-s.r(t), s("47120");
-var a, l, n, i, r = s("442837"),
-  o = s("570140"),
-  d = s("45966"),
-  u = s("734893"),
-  c = s("999382"),
-  E = s("392885"),
-  _ = s("740903"),
-  I = s("889369"),
-  T = s("969632"),
-  S = s("208665"),
-  f = s("84658"),
-  m = s("142961"),
-  N = s("981631");
+t(47120);
+var n, i, l, a, r = t(442837),
+  o = t(570140),
+  c = t(45966),
+  d = t(734893),
+  u = t(999382),
+  E = t(392885),
+  _ = t(740903),
+  I = t(889369),
+  T = t(969632),
+  N = t(208665),
+  m = t(84658),
+  S = t(142961),
+  h = t(981631);
 let g = new Set,
-  h = f.GuildSettingsOnboardingPage.LANDING,
+  x = m.PG.LANDING,
   C = null;
 
 function R(e) {
   let {
-    subsection: t
+    subsection: s
   } = e;
-  if (c.default.getGuildId() === C) return !1;
-  h = t === N.GuildSettingsSubsections.SERVER_GUIDE ? f.GuildSettingsOnboardingPage.HOME_SETTINGS : f.GuildSettingsOnboardingPage.LANDING, C = c.default.getGuildId()
+  if (u.Z.getGuildId() === C) return !1;
+  x = s === h.KsC.SERVER_GUIDE ? m.PG.HOME_SETTINGS : m.PG.LANDING, C = u.Z.getGuildId()
 }
-class x extends(a = r.default.Store) {
+class L extends(n = r.ZP.Store) {
   initialize() {
-    this.waitFor(d.default, I.default, S.default, T.default, E.default), this.syncWith([d.default, I.default, S.default, T.default, E.default], () => !0)
+    this.waitFor(c.Z, I.Z, N.Z, T.Z, E.Z), this.syncWith([c.Z, I.Z, N.Z, T.Z, E.Z], () => !0)
   }
   isEducationUpsellDismissed(e) {
     return g.has(e)
   }
   getCurrentPage() {
-    return h
+    return x
   }
   hasChanges() {
     if (null == C) return !1;
-    let e = d.default.isAdvancedMode(C);
-    if (h === f.GuildSettingsOnboardingPage.DEFAULT_CHANNELS) return e ? I.default.hasChanges() || S.default.hasChanges() : I.default.hasChanges();
-    if (h === f.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS) return S.default.hasChanges();
-    if (h === f.GuildSettingsOnboardingPage.HOME_SETTINGS) return T.default.hasChanges();
+    let e = c.Z.isAdvancedMode(C);
+    if (x === m.PG.DEFAULT_CHANNELS) return e ? I.Z.hasChanges() || N.Z.hasChanges() : I.Z.hasChanges();
+    if (x === m.PG.CUSTOMIZATION_QUESTIONS) return N.Z.hasChanges();
+    if (x === m.PG.HOME_SETTINGS) return T.Z.hasChanges();
     return !1
   }
   hasConfiguredAnythingForCurrentStep() {
     if (null == C) return !1;
-    if (h === f.GuildSettingsOnboardingPage.SAFETY_CHECK) return !0;
-    if (h === f.GuildSettingsOnboardingPage.DEFAULT_CHANNELS) return I.default.editedDefaultChannelIds.size > 0;
-    if (h === f.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS) return S.default.editedOnboardingPrompts.length > 0;
-    else if (h === f.GuildSettingsOnboardingPage.HOME_SETTINGS) return !(0, u.isSettingsEmpty)(T.default.getSettings());
+    if (x === m.PG.SAFETY_CHECK) return !0;
+    if (x === m.PG.DEFAULT_CHANNELS) return I.Z.editedDefaultChannelIds.size > 0;
+    if (x === m.PG.CUSTOMIZATION_QUESTIONS) return N.Z.editedOnboardingPrompts.length > 0;
+    else if (x === m.PG.HOME_SETTINGS) return !(0, d.av)(T.Z.getSettings());
     return !1
   }
   hasErrors() {
-    return h === f.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS && null != S.default.errors.find(e => null != e)
+    return x === m.PG.CUSTOMIZATION_QUESTIONS && null != N.Z.errors.find(e => null != e)
   }
   showNotice() {
     if (null == C) return !1;
-    if ((0, m.isOnboardingWizardCompleted)(C)) return this.hasChanges();
-    let e = E.default.getCurrentPage();
-    return (h !== f.GuildSettingsOnboardingPage.SAFETY_CHECK || e === _.GuildSettingsSafetyPage.OVERVIEW) && null != h && h !== f.GuildSettingsOnboardingPage.LANDING
+    if ((0, S.C)(C)) return this.hasChanges();
+    let e = E.Z.getCurrentPage();
+    return (x !== m.PG.SAFETY_CHECK || e === _.u.OVERVIEW) && null != x && x !== m.PG.LANDING
   }
   canCloseEarly() {
-    return null == C || !this.hasErrors() && (!(0, m.isOnboardingWizardCompleted)(C) || !this.hasChanges())
+    return null == C || !this.hasErrors() && (!(0, S.C)(C) || !this.hasChanges())
   }
 }
-i = "GuildSettingsOnboardingStore", (n = "displayName") in(l = x) ? Object.defineProperty(l, n, {
-  value: i,
+a = "GuildSettingsOnboardingStore", (l = "displayName") in(i = L) ? Object.defineProperty(i, l, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[n] = i, t.default = new x(o.default, {
+}) : i[l] = a, s.Z = new L(o.Z, {
   GUILD_SETTINGS_INIT: R,
   GUILD_SETTINGS_SET_SECTION: R,
   GUILD_SETTINGS_ONBOARDING_STEP: function(e) {
     let {
-      step: t
+      step: s
     } = e;
-    h = t
+    x = s
   },
   GUILD_SETTINGS_ONBOARDING_EDUCATION_UPSELL_DISMISSED: function(e) {
     let {
-      upsellType: t
+      upsellType: s
     } = e;
-    g.add(t)
+    g.add(s)
   }
 })

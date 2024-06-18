@@ -1,22 +1,22 @@
 "use strict";
-n.r(t), n.d(t, {
-  MessageSnapshotRecord: function() {
+n.d(t, {
+  Hx: function() {
     return E
   },
-  MinimalMessageRecord: function() {
+  pi: function() {
     return c
   }
-}), n("789020"), n("653041"), n("724458");
-var i = n("373793"),
-  r = n("81825"),
-  a = n("712057"),
-  s = n("566006"),
-  o = n("995774"),
-  l = n("630388"),
-  u = n("358085"),
-  d = n("981631");
+}), n(789020), n(653041), n(724458);
+var i = n(373793),
+  r = n(81825),
+  s = n(712057),
+  o = n(566006),
+  a = n(995774),
+  l = n(630388),
+  u = n(358085),
+  _ = n(981631);
 
-function _(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -24,18 +24,18 @@ function _(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class c extends r.default {
+class c extends r.Z {
   constructor(e) {
     var t;
-    super(), _(this, "type", void 0), _(this, "channel_id", void 0), _(this, "content", void 0), _(this, "attachments", void 0), _(this, "embeds", void 0), _(this, "timestamp", void 0), _(this, "editedTimestamp", void 0), _(this, "flags", void 0), _(this, "components", void 0), this.type = e.type || d.MessageTypes.DEFAULT, this.channel_id = e.channel_id, this.content = e.content || "", this.attachments = e.attachments || [], this.embeds = e.embeds || [], this.timestamp = e.timestamp || new Date, this.editedTimestamp = e.editedTimestamp || null, this.flags = e.flags || 0, this.components = null !== (t = e.components) && void 0 !== t ? t : []
+    super(), d(this, "type", void 0), d(this, "channel_id", void 0), d(this, "content", void 0), d(this, "attachments", void 0), d(this, "embeds", void 0), d(this, "timestamp", void 0), d(this, "editedTimestamp", void 0), d(this, "flags", void 0), d(this, "components", void 0), this.type = e.type || _.uaV.DEFAULT, this.channel_id = e.channel_id, this.content = e.content || "", this.attachments = e.attachments || [], this.embeds = e.embeds || [], this.timestamp = e.timestamp || new Date, this.editedTimestamp = e.editedTimestamp || null, this.flags = e.flags || 0, this.components = null !== (t = e.components) && void 0 !== t ? t : []
   }
 }
-class E extends r.default {
+class E extends r.Z {
   constructor(e) {
-    super(), _(this, "message", void 0), _(this, "guild", void 0), this.guild = e.guild, this.message = new c(e.message)
+    super(), d(this, "message", void 0), d(this, "guild", void 0), this.guild = e.guild, this.message = new c(e.message)
   }
 }
-t.default = class e extends c {
+t.ZP = class e extends c {
   isEdited() {
     return null != this.editedTimestamp
   }
@@ -43,21 +43,21 @@ t.default = class e extends c {
     return this.channel_id
   }
   getReaction(e) {
-    return this.reactions.find(t => (0, o.emojiEquals)(t.emoji, e))
+    return this.reactions.find(t => (0, a.ir)(t.emoji, e))
   }
   userHasReactedWithEmoji(e, t) {
     return this.reactions.some(n => {
-      if ((0, o.emojiEquals)(n.emoji, e)) return t && n.me || !t && n.me_burst
+      if ((0, a.ir)(n.emoji, e)) return t && n.me || !t && n.me_burst
     })
   }
   addReaction(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
       n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-      i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.ReactionTypes.NORMAL,
+      i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.O.NORMAL,
       r = -1,
-      l = this.reactions.map((l, d) => {
-        if ((0, o.emojiEquals)(l.emoji, e)) {
-          if (r = d, i === s.ReactionTypes.BURST) {
+      l = this.reactions.map((l, _) => {
+        if ((0, a.ir)(l.emoji, e)) {
+          if (r = _, i === o.O.BURST) {
             if (t && l.me) return l;
             let e = t && l.me_burst ? l.burst_count : l.burst_count + 1,
               i = null != l.burst_colors && l.burst_colors.length > 0 ? l.burst_colors : n;
@@ -70,14 +70,14 @@ t.default = class e extends c {
                 burst: e
               },
               burst_colors: i,
-              themedBurstColors: (0, a.buildPlatformedThemedEmojiColorPalette)({
+              themedBurstColors: (0, s.u)({
                 colors: i,
                 shouldProcessMobileColors: (0, u.isIOS)()
               })
             }
-          } else if (i === s.ReactionTypes.VOTE) {
-            var _, c;
-            let e = null !== (c = null === (_ = l.count_details) || void 0 === _ ? void 0 : _.vote) && void 0 !== c ? c : 0,
+          } else if (i === o.O.VOTE) {
+            var d, c;
+            let e = null !== (c = null === (d = l.count_details) || void 0 === d ? void 0 : d.vote) && void 0 !== c ? c : 0,
               n = t && l.me_vote ? e : e + 1;
             l = {
               ...l,
@@ -103,7 +103,7 @@ t.default = class e extends c {
         }
         return l
       });
-    return -1 === r && (i === s.ReactionTypes.BURST ? l.push({
+    return -1 === r && (i === o.O.BURST ? l.push({
       emoji: e,
       me: !1,
       me_burst: t,
@@ -114,11 +114,11 @@ t.default = class e extends c {
       },
       burst_count: 1,
       burst_colors: n,
-      themedBurstColors: (0, a.buildPlatformedThemedEmojiColorPalette)({
+      themedBurstColors: (0, s.u)({
         colors: null != n ? n : [],
         shouldProcessMobileColors: (0, u.isIOS)()
       })
-    }) : i === s.ReactionTypes.VOTE ? l.push({
+    }) : i === o.O.VOTE ? l.push({
       emoji: e,
       me: !1,
       me_burst: !1,
@@ -155,40 +155,40 @@ t.default = class e extends c {
   }
   removeReaction(e) {
     var t, n, i, r;
-    let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-      l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.ReactionTypes.NORMAL,
+    let s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+      l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.O.NORMAL,
       u = -1,
-      d = this.reactions.map((t, n) => {
-        if ((0, o.emojiEquals)(t.emoji, e)) {
-          if (l === s.ReactionTypes.BURST) {
-            let e = a && !t.me_burst ? t.burst_count : t.burst_count - 1;
+      _ = this.reactions.map((t, n) => {
+        if ((0, a.ir)(t.emoji, e)) {
+          if (l === o.O.BURST) {
+            let e = s && !t.me_burst ? t.burst_count : t.burst_count - 1;
             t = {
               ...t,
               burst_count: e,
-              me_burst: !a && t.me_burst,
+              me_burst: !s && t.me_burst,
               count_details: {
                 ...t.count_details,
                 burst: e
               }
             }
-          } else if (l === s.ReactionTypes.VOTE) {
+          } else if (l === o.O.VOTE) {
             var i, r;
             let e = null !== (r = null === (i = t.count_details) || void 0 === i ? void 0 : i.vote) && void 0 !== r ? r : 0,
-              n = a && !t.me_vote ? e : e - 1;
+              n = s && !t.me_vote ? e : e - 1;
             t = {
               ...t,
               count_details: {
                 ...t.count_details,
                 vote: n
               },
-              me_vote: !a && t.me_vote
+              me_vote: !s && t.me_vote
             }
           } else {
-            let e = a && !t.me ? t.count : t.count - 1;
+            let e = s && !t.me ? t.count : t.count - 1;
             t = {
               ...t,
               count: e,
-              me: !a && t.me,
+              me: !s && t.me,
               count_details: {
                 ...t.count_details,
                 normal: e
@@ -200,32 +200,32 @@ t.default = class e extends c {
         return t
       }),
       {
-        count: _,
+        count: d,
         burst_count: c,
         count_details: E
-      } = null !== (t = d[u]) && void 0 !== t ? t : {},
+      } = null !== (t = _[u]) && void 0 !== t ? t : {},
       I = null !== (n = null == E ? void 0 : E.normal) && void 0 !== n ? n : 0,
       T = null !== (i = null == E ? void 0 : E.burst) && void 0 !== i ? i : 0,
-      f = null !== (r = null == E ? void 0 : E.vote) && void 0 !== r ? r : 0;
-    return -1 !== u && _ <= 0 && c <= 0 && I <= 0 && T <= 0 && f <= 0 && d.splice(u, 1), this.set("reactions", d)
+      h = null !== (r = null == E ? void 0 : E.vote) && void 0 !== r ? r : 0;
+    return -1 !== u && d <= 0 && c <= 0 && I <= 0 && T <= 0 && h <= 0 && _.splice(u, 1), this.set("reactions", _)
   }
   removeReactionsForEmoji(e) {
-    return this.set("reactions", this.reactions.filter(t => !(0, o.emojiEquals)(t.emoji, e)))
+    return this.set("reactions", this.reactions.filter(t => !(0, a.ir)(t.emoji, e)))
   }
   isSystemDM() {
     return this.author.isSystemUser()
   }
   hasFlag(e) {
-    return (0, l.hasFlag)(this.flags, e)
+    return (0, l.yE)(this.flags, e)
   }
   isCommandType() {
-    return this.type === d.MessageTypes.CHAT_INPUT_COMMAND || this.type === d.MessageTypes.CONTEXT_MENU_COMMAND
+    return this.type === _.uaV.CHAT_INPUT_COMMAND || this.type === _.uaV.CONTEXT_MENU_COMMAND
   }
   isPoll() {
     return null != this.poll
   }
   isUIKitComponents() {
-    return (0, l.hasFlag)(this.flags, d.MessageFlags.IS_UIKIT_COMPONENTS)
+    return (0, l.yE)(this.flags, _.iLy.IS_UIKIT_COMPONENTS)
   }
   isInteractionPlaceholder() {
     return null != this.interaction && this.author.isNonUserBot()
@@ -233,8 +233,8 @@ t.default = class e extends c {
   canDeleteOwnMessage(e) {
     var t, n, r;
     if (this.author.id === e) return !0;
-    let a = null !== (r = null === (t = this.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners) && void 0 !== r ? r : {};
-    return (null === (n = this.interactionMetadata) || void 0 === n ? void 0 : n.user.id) === e && 1 === Object.keys(a).length && i.ApplicationIntegrationType.USER_INSTALL in a
+    let s = null !== (r = null === (t = this.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners) && void 0 !== r ? r : {};
+    return (null === (n = this.interactionMetadata) || void 0 === n ? void 0 : n.user.id) === e && 1 === Object.keys(s).length && i.Y.USER_INSTALL in s
   }
   toJS() {
     return {
@@ -249,6 +249,6 @@ t.default = class e extends c {
   }
   constructor(e) {
     var t, n, i, r;
-    super(e), _(this, "id", void 0), _(this, "author", void 0), _(this, "bot", void 0), _(this, "customRenderedContent", void 0), _(this, "pinned", void 0), _(this, "mentions", void 0), _(this, "mentionRoles", void 0), _(this, "mentionChannels", void 0), _(this, "mentionEveryone", void 0), _(this, "mentioned", void 0), _(this, "tts", void 0), _(this, "codedLinks", void 0), _(this, "giftCodes", void 0), _(this, "state", void 0), _(this, "nonce", void 0), _(this, "blocked", void 0), _(this, "call", void 0), _(this, "webhookId", void 0), _(this, "reactions", void 0), _(this, "applicationId", void 0), _(this, "application", void 0), _(this, "activity", void 0), _(this, "activityInstance", void 0), _(this, "interaction", void 0), _(this, "interactionData", void 0), _(this, "interactionMetadata", void 0), _(this, "interactionError", void 0), _(this, "messageReference", void 0), _(this, "isSearchHit", void 0), _(this, "stickers", void 0), _(this, "stickerItems", void 0), _(this, "roleSubscriptionData", void 0), _(this, "purchaseNotification", void 0), _(this, "poll", void 0), _(this, "loggingName", void 0), _(this, "referralTrialOfferId", void 0), _(this, "giftInfo", void 0), _(this, "messageSnapshots", void 0), _(this, "isUnsupported", void 0), _(this, "changelogId", void 0), _(this, "colorString", void 0), _(this, "nick", void 0), this.id = e.id, this.author = e.author, this.customRenderedContent = e.customRenderedContent, this.mentions = e.mentions || [], this.mentionRoles = e.mentionRoles || [], this.mentionChannels = e.mentionChannels || [], this.mentioned = e.mentioned || !1, this.pinned = e.pinned || !1, this.mentionEveryone = e.mentionEveryone || !1, this.tts = e.tts || !1, this.codedLinks = e.codedLinks || [], this.giftCodes = e.giftCodes || [], this.state = e.state || d.MessageStates.SENT, this.nonce = e.nonce || null, this.blocked = e.blocked || !1, this.call = e.call || null, this.bot = e.bot || !1, this.webhookId = e.webhookId || null, this.reactions = e.reactions || [], this.applicationId = e.application_id || e.applicationId || null, this.application = e.application || null, this.activity = e.activity || null, this.activityInstance = e.activity_instance || e.activityInstance || null, this.messageReference = e.messageReference || null, this.isSearchHit = e.hit || e.isSearchHit || !1, this.stickers = e.stickers || [], this.stickerItems = null !== (n = null !== (t = e.sticker_items) && void 0 !== t ? t : e.stickerItems) && void 0 !== n ? n : [], this.loggingName = e.loggingName || null, this.colorString = e.colorString, this.nick = e.nick, this.interaction = e.interaction || null, this.interactionData = e.interactionData || null, this.interactionMetadata = e.interactionMetadata || null, this.interactionError = e.interactionError || null, this.roleSubscriptionData = e.roleSubscriptionData, this.purchaseNotification = e.purchaseNotification, this.poll = e.poll, this.referralTrialOfferId = e.referralTrialOfferId || null, this.giftInfo = null !== (i = e.gift_info) && void 0 !== i ? i : e.giftInfo, this.messageSnapshots = e.messageSnapshots || [], this.isUnsupported = e.isUnsupported || !1, this.changelogId = null !== (r = e.changelog_id) && void 0 !== r ? r : e.changelogId || null
+    super(e), d(this, "id", void 0), d(this, "author", void 0), d(this, "bot", void 0), d(this, "customRenderedContent", void 0), d(this, "pinned", void 0), d(this, "mentions", void 0), d(this, "mentionRoles", void 0), d(this, "mentionChannels", void 0), d(this, "mentionEveryone", void 0), d(this, "mentioned", void 0), d(this, "tts", void 0), d(this, "codedLinks", void 0), d(this, "giftCodes", void 0), d(this, "state", void 0), d(this, "nonce", void 0), d(this, "blocked", void 0), d(this, "call", void 0), d(this, "webhookId", void 0), d(this, "reactions", void 0), d(this, "applicationId", void 0), d(this, "application", void 0), d(this, "activity", void 0), d(this, "activityInstance", void 0), d(this, "interaction", void 0), d(this, "interactionData", void 0), d(this, "interactionMetadata", void 0), d(this, "interactionError", void 0), d(this, "messageReference", void 0), d(this, "isSearchHit", void 0), d(this, "stickers", void 0), d(this, "stickerItems", void 0), d(this, "roleSubscriptionData", void 0), d(this, "purchaseNotification", void 0), d(this, "poll", void 0), d(this, "loggingName", void 0), d(this, "referralTrialOfferId", void 0), d(this, "giftInfo", void 0), d(this, "messageSnapshots", void 0), d(this, "isUnsupported", void 0), d(this, "changelogId", void 0), d(this, "colorString", void 0), d(this, "nick", void 0), this.id = e.id, this.author = e.author, this.customRenderedContent = e.customRenderedContent, this.mentions = e.mentions || [], this.mentionRoles = e.mentionRoles || [], this.mentionChannels = e.mentionChannels || [], this.mentioned = e.mentioned || !1, this.pinned = e.pinned || !1, this.mentionEveryone = e.mentionEveryone || !1, this.tts = e.tts || !1, this.codedLinks = e.codedLinks || [], this.giftCodes = e.giftCodes || [], this.state = e.state || _.yb.SENT, this.nonce = e.nonce || null, this.blocked = e.blocked || !1, this.call = e.call || null, this.bot = e.bot || !1, this.webhookId = e.webhookId || null, this.reactions = e.reactions || [], this.applicationId = e.application_id || e.applicationId || null, this.application = e.application || null, this.activity = e.activity || null, this.activityInstance = e.activity_instance || e.activityInstance || null, this.messageReference = e.messageReference || null, this.isSearchHit = e.hit || e.isSearchHit || !1, this.stickers = e.stickers || [], this.stickerItems = null !== (n = null !== (t = e.sticker_items) && void 0 !== t ? t : e.stickerItems) && void 0 !== n ? n : [], this.loggingName = e.loggingName || null, this.colorString = e.colorString, this.nick = e.nick, this.interaction = e.interaction || null, this.interactionData = e.interactionData || null, this.interactionMetadata = e.interactionMetadata || null, this.interactionError = e.interactionError || null, this.roleSubscriptionData = e.roleSubscriptionData, this.purchaseNotification = e.purchaseNotification, this.poll = e.poll, this.referralTrialOfferId = e.referralTrialOfferId || null, this.giftInfo = null !== (i = e.gift_info) && void 0 !== i ? i : e.giftInfo, this.messageSnapshots = e.messageSnapshots || [], this.isUnsupported = e.isUnsupported || !1, this.changelogId = null !== (r = e.changelog_id) && void 0 !== r ? r : e.changelogId || null
   }
 }

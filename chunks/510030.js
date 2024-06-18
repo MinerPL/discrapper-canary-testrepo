@@ -1,8 +1,8 @@
 "use strict";
-var n = e("526988"),
-  o = e("339718"),
-  i = e("470592"),
-  a = e("49693"),
+var n = e(526988),
+  o = e(339718),
+  i = e(470592),
+  a = e(49693),
   c = TypeError,
   u = function(t) {
     return function(r, e, u, s) {

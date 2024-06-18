@@ -1,28 +1,28 @@
 "use strict";
-n.r(t), n.d(t, {
-  coerceAudioContextForProto: function() {
-    return l
+n.d(t, {
+  r: function() {
+    return a
   },
-  snapVolumeToDefault: function() {
-    return o
+  z: function() {
+    return l
   }
 });
-var i = n("51407"),
-  r = n("46973"),
-  s = n("36703"),
-  a = n("526761");
+var i = n(51407),
+  r = n(46973),
+  s = n(36703),
+  o = n(526761);
 
-function o(e, t) {
-  let n = t === r.MediaEngineContextTypes.STREAM ? i.AudioSettingsDefaultVolumes.STREAM : i.AudioSettingsDefaultVolumes.USER;
-  return 1 > Math.abs((0, s.amplitudeToPerceptual)(n) - (0, s.amplitudeToPerceptual)(e)) ? n : e
+function a(e, t) {
+  let n = t === r.Yn.STREAM ? i.h.STREAM : i.h.USER;
+  return 1 > Math.abs((0, s.P)(n) - (0, s.P)(e)) ? n : e
 }
 
 function l(e) {
   switch (e) {
-    case r.MediaEngineContextTypes.DEFAULT:
-      return a.ProtoAudioSettingsContextTypes.USER;
-    case r.MediaEngineContextTypes.STREAM:
-      return a.ProtoAudioSettingsContextTypes.STREAM;
+    case r.Yn.DEFAULT:
+      return o.u0.USER;
+    case r.Yn.STREAM:
+      return o.u0.STREAM;
     default:
       return
   }

@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  CLYDE_AI_MENTION_COLOR: function() {
-    return r
-  },
-  CLYDE_AI_USER_ID: function() {
+n.d(t, {
+  fL: function() {
     return i
+  },
+  jM: function() {
+    return r
   }
 });
 let i = "1081004946872352958",

@@ -1,30 +1,30 @@
 "use strict";
-n.r(t), n("47120");
-var i, r, s, a, o = n("442837"),
-  l = n("570140"),
-  u = n("581883"),
-  d = n("430824"),
-  _ = n("496675"),
-  c = n("983620"),
-  E = n("709054"),
-  I = n("154285"),
-  T = n("533244");
-let f = {},
+n(47120);
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(353926),
+  _ = n(581883),
+  d = n(430824),
+  c = n(496675),
+  E = n(709054),
+  I = n(154285),
+  T = n(533244);
+let h = {},
   S = {};
 
-function h() {
+function f() {
   var e;
-  let t = null !== (e = u.default.getGuildsProto()) && void 0 !== e ? e : {},
-    n = d.default.getGuilds(),
+  let t = null !== (e = _.Z.getGuildsProto()) && void 0 !== e ? e : {},
+    n = d.Z.getGuilds(),
     i = E.default.keys(n);
-  for (let e of (S = {}, i))(0, I.getGuildAlertModeEnabled)(e).showAlertMode && (S[e] = {
+  for (let e of (S = {}, i))(0, I.jy)(e).showAlertMode && (S[e] = {
     guildId: e,
     guildName: n[e].name,
     ...t[e]
   })
 }
 
-function A(e) {
+function N(e) {
   return null != e && Object.keys(e).length > 0 ? {
     raidDetectedAt: e.raid_detected_at,
     dmSpamDetectedAt: e.dm_spam_detected_at,
@@ -32,53 +32,53 @@ function A(e) {
     invitesDisabledUntil: e.invites_disabled_until
   } : null
 }
-class m extends(i = o.default.Store) {
+class A extends(i = a.ZP.Store) {
   initialize() {
-    this.waitFor(u.default, d.default, _.default, c.default), this.syncWith([u.default, d.default, _.default, c.default], h)
+    this.waitFor(_.Z, d.Z, c.Z, u.Z), this.syncWith([_.Z, d.Z, c.Z, u.Z], f)
   }
   getGuildIncident(e) {
-    return f[e]
+    return h[e]
   }
   getIncidentsByGuild() {
-    return f
+    return h
   }
   getGuildAlertSettings() {
     return S
   }
 }
-a = "GuildIncidentsStore", (s = "displayName") in(r = m) ? Object.defineProperty(r, s, {
-  value: a,
+o = "GuildIncidentsStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new m(l.default, {
+}) : r[s] = o, t.Z = new A(l.Z, {
   CONNECTION_OPEN: function(e) {
-    for (let n of (f = {}, e.guilds)) {
+    for (let n of (h = {}, e.guilds)) {
       var t;
-      let e = A(null === (t = n.properties) || void 0 === t ? void 0 : t.incidents_data);
-      null != e && ((0, T.hasDetectedActivity)(e) || (0, T.isUnderLockdown)(e)) && (f[n.id] = e)
+      let e = N(null === (t = n.properties) || void 0 === t ? void 0 : t.incidents_data);
+      null != e && ((0, T.i9)(e) || (0, T.ur)(e)) && (h[n.id] = e)
     }
   },
   GUILD_CREATE: function(e) {
     var t;
     let {
       guild: n
-    } = e, i = A(null === (t = n.properties) || void 0 === t ? void 0 : t.incidents_data);
-    null != i && ((0, T.hasDetectedActivity)(i) || (0, T.isUnderLockdown)(i)) && (f[n.id] = i)
+    } = e, i = N(null === (t = n.properties) || void 0 === t ? void 0 : t.incidents_data);
+    null != i && ((0, T.i9)(i) || (0, T.ur)(i)) && (h[n.id] = i)
   },
   GUILD_UPDATE: function(e) {
     let {
       guild: t
-    } = e, n = A(t.incidents_data);
-    null != n && ((0, T.hasDetectedActivity)(n) || (0, T.isUnderLockdown)(n)) ? f[t.id] = n : delete f[t.id]
+    } = e, n = N(t.incidents_data);
+    null != n && ((0, T.i9)(n) || (0, T.ur)(n)) ? h[t.id] = n : delete h[t.id]
   },
   GUILD_DELETE: function(e) {
     let {
       guild: t
     } = e;
-    delete f[t.id]
+    delete h[t.id]
   },
   LOGOUT: function(e) {
-    f = {}
+    h = {}
   }
 })

@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  FrameLoop: function() {
+n.d(t, {
+  V: function() {
     return a
   }
 });
-var r = n("239189");
-n("444675");
+var r = n(239189);
+n(444675);
 var i = function(e) {
     return (0, r.requestAnimationFrame)(e)
   },

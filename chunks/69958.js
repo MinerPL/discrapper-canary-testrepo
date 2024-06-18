@@ -1,9 +1,8 @@
 "use strict";
-r.r(t);
-var n = r("867595"),
-  a = r("987355"),
-  o = r("521678"),
-  i = r("17071");
-t.default = function(e) {
-  return (0, o.default)(e) ? (0, n.default)((0, i.default)(e)) : (0, a.default)(e)
+var r = n(867595),
+  i = n(987355),
+  a = n(521678),
+  o = n(17071);
+t.Z = function(e) {
+  return (0, a.Z)(e) ? (0, r.Z)((0, o.Z)(e)) : (0, i.Z)(e)
 }

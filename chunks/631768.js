@@ -1,21 +1,20 @@
 "use strict";
-n.r(t);
-var i, r, s, a, o = n("442837"),
-  l = n("570140"),
-  u = n("981631");
-let d = u.VideoQualityMode.AUTO;
-class _ extends(a = o.default.Store) {
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(981631);
+let _ = u.Ucd.AUTO;
+class d extends(o = a.ZP.Store) {
   get mode() {
-    return d
+    return _
   }
 }
-s = "VideoQualityModeStore", (r = "displayName") in(i = _) ? Object.defineProperty(i, r, {
+s = "VideoQualityModeStore", (r = "displayName") in(i = d) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new _(l.default, {
+}) : i[r] = s, t.Z = new d(l.Z, {
   SET_CHANNEL_VIDEO_QUALITY_MODE: function(e) {
-    d = e.mode
+    _ = e.mode
   }
 })

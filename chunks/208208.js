@@ -1,11 +1,11 @@
 "use strict";
-var r = n("903799"),
-  i = n("609513"),
-  a = n("685053"),
+var r = n(903799),
+  i = n(609513),
+  a = n(685053),
   o = a.assert,
   s = a.parseBytes,
-  u = n("226140"),
-  c = n("452610");
+  u = n(226140),
+  c = n(452610);
 
 function l(e) {
   if (o("ed25519" === e, "only tested with ed25519 so far"), !(this instanceof l)) return new l(e);

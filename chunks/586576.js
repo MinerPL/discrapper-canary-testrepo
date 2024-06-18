@@ -1,13 +1,12 @@
 "use strict";
-n.r(t);
-var i = n("735250"),
-  r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
-  o = n("481060"),
-  l = n("285952"),
-  u = n("121972");
-class d extends r.PureComponent {
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(481060),
+  l = n(285952),
+  u = n(710909);
+class _ extends r.PureComponent {
   render() {
     let {
       note: e,
@@ -16,19 +15,19 @@ class d extends r.PureComponent {
       className: r
     } = this.props;
     return (0, i.jsx)("div", {
-      className: a()(u.wrapper, r),
-      children: (0, i.jsxs)(l.default, {
+      className: o()(u.wrapper, r),
+      children: (0, i.jsxs)(l.Z, {
         className: u.flexWrapper,
-        direction: l.default.Direction.VERTICAL,
-        align: l.default.Align.CENTER,
-        justify: l.default.Justify.CENTER,
-        children: [(0, i.jsx)(l.default.Child, {
+        direction: l.Z.Direction.VERTICAL,
+        align: l.Z.Align.CENTER,
+        justify: l.Z.Justify.CENTER,
+        children: [(0, i.jsx)(l.Z.Child, {
           grow: 0,
           className: u.image
-        }), (0, i.jsxs)(l.default.Child, {
+        }), (0, i.jsxs)(l.Z.Child, {
           grow: 0,
           className: u.text,
-          children: [(0, i.jsx)(o.H, {
+          children: [(0, i.jsx)(a.H, {
             className: u.title,
             children: t
           }), null != e ? (0, i.jsx)("div", {
@@ -40,4 +39,4 @@ class d extends r.PureComponent {
     })
   }
 }
-t.default = d
+t.Z = _

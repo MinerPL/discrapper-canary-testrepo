@@ -1,54 +1,54 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return _
+n.d(t, {
+  Z: function() {
+    return d
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("149765"),
-  a = n("260034"),
-  s = n("993365"),
-  o = n("481060"),
-  l = n("981631"),
-  u = n("689938"),
-  d = n("872272");
+var i = n(735250);
+n(470079);
+var r = n(149765),
+  s = n(260034),
+  o = n(993365),
+  a = n(481060),
+  l = n(981631),
+  u = n(689938),
+  _ = n(302191);
 
-function _(e) {
+function d(e) {
   let {
     error: t,
     selectedGuildId: n,
-    onGuildChange: _,
+    onGuildChange: d,
     guilds: c,
     disabled: E = !1
-  } = e, I = c.filter(e => r.has(e.permissions, l.Permissions.MANAGE_GUILD)).map(e => ({
+  } = e, I = c.filter(e => r.e$(e.permissions, l.Plq.MANAGE_GUILD)).map(e => ({
     value: e.id,
     label: e.name
   }));
   return (0, i.jsxs)("div", {
-    className: d.selectorGroup,
-    children: [(0, i.jsx)(a.Heading, {
+    className: _.selectorGroup,
+    children: [(0, i.jsx)(s.X, {
       variant: "heading-deprecated-12/semibold",
-      className: d.sectionLabel,
-      children: u.default.Messages.OAUTH2_ADD_TO_GUILD
-    }), null != t && "" !== t ? (0, i.jsx)(s.Text, {
+      className: _.sectionLabel,
+      children: u.Z.Messages.OAUTH2_ADD_TO_GUILD
+    }), null != t && "" !== t ? (0, i.jsx)(o.x, {
       variant: "text-xs/normal",
       color: "text-danger",
       children: t
-    }) : null, (0, i.jsx)(o.Select, {
-      className: d.select,
+    }) : null, (0, i.jsx)(a.Select, {
+      className: _.select,
       maxVisibleItems: 5,
-      placeholder: u.default.Messages.OAUTH2_ADD_TO_GUILD_PLACEHOLDER,
+      placeholder: u.Z.Messages.OAUTH2_ADD_TO_GUILD_PLACEHOLDER,
       options: I,
-      select: _,
+      select: d,
       isDisabled: E,
       isSelected: e => e === n,
       serialize: e => e
-    }), (0, i.jsx)(s.Text, {
+    }), (0, i.jsx)(o.x, {
       variant: "text-xs/medium",
       color: "header-secondary",
-      className: d.label,
-      children: u.default.Messages.OAUTH2_ADD_TO_GUILD_DESCRIPTION.format()
+      className: _.label,
+      children: u.Z.Messages.OAUTH2_ADD_TO_GUILD_DESCRIPTION.format()
     })]
   })
 }

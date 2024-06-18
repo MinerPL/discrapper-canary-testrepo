@@ -1,12 +1,12 @@
 "use strict";
-n.r(e), n.d(e, {
-  useSafetyHubAccountStanding: function() {
-    return u
+e.d(n, {
+  P: function() {
+    return l
   }
 });
-var i = n("442837"),
-  a = n("236289");
+var i = e(442837),
+  u = e(236289);
 
-function u() {
-  return (0, i.useStateFromStores)([a.default], () => a.default.getAccountStanding())
+function l() {
+  return (0, i.e7)([u.Z], () => u.Z.getAccountStanding())
 }

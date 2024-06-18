@@ -1,47 +1,48 @@
 "use strict";
-n.r(e), n.d(e, {
-  makeMultiplexedTransport: function() {
+n.d(e, {
+  W: function() {
     return o
   }
 });
-var r = n("648238"),
-  i = n("507506");
+var r = n(50074),
+  i = n(177668),
+  s = n(507506);
 
 function a(t, e) {
   let n;
-  return (0, r.forEachEnvelopeItem)(t, (t, r) => (e.includes(r) && (n = Array.isArray(t) ? t[1] : void 0), !!n)), n
+  return (0, r.gv)(t, (t, r) => (e.includes(r) && (n = Array.isArray(t) ? t[1] : void 0), !!n)), n
 }
 
 function o(t, e) {
   return n => {
-    let o = t(n),
-      s = {};
+    let r = t(n),
+      o = {};
 
-    function u(e, o) {
-      let u = o ? `${e}:${o}` : e;
-      if (!s[u]) {
-        var c, l;
-        let d = (0, r.dsnFromString)(e);
+    function u(e, r) {
+      let u = r ? `${e}:${r}` : e;
+      if (!o[u]) {
+        var l, c;
+        let d = (0, i.U4)(e);
         if (!d) return;
-        let f = (0, i.getEnvelopeEndpointWithUrlEncodedAuth)(d);
-        s[u] = o ? (c = t, l = o, t => {
-          let e = c(t);
+        let h = (0, s.U)(d);
+        o[u] = r ? (l = t, c = r, t => {
+          let e = l(t);
           return {
             send: async t => {
               let n = a(t, ["event", "transaction", "profile", "replay_event"]);
-              return n && (n.release = l), e.send(t)
+              return n && (n.release = c), e.send(t)
             },
             flush: t => e.flush(t)
           }
         })({
           ...n,
-          url: f
+          url: h
         }) : t({
           ...n,
-          url: f
+          url: h
         })
       }
-      return s[u]
+      return o[u]
     }
     return {
       send: async function t(t) {
@@ -51,10 +52,10 @@ function o(t, e) {
             return a(t, e && e.length ? e : ["event"])
           }
         }).map(t => "string" == typeof t ? u(t, void 0) : u(t.dsn, t.release)).filter(t => !!t);
-        return 0 === n.length && n.push(o), (await Promise.all(n.map(e => e.send(t))))[0]
+        return 0 === n.length && n.push(r), (await Promise.all(n.map(e => e.send(t))))[0]
       },
       flush: async function t(t) {
-        let e = [...Object.keys(s).map(t => s[t]), o];
+        let e = [...Object.keys(o).map(t => o[t]), r];
         return (await Promise.all(e.map(e => e.flush(t)))).every(t => t)
       }
     }

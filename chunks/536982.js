@@ -1,53 +1,53 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return c
+t.d(s, {
+  Z: function() {
+    return u
   }
-}), s("47120");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("481060"),
-  i = s("86813"),
-  r = s("826026"),
-  o = s("428760"),
-  d = s("689938"),
-  u = s("448396");
+}), t(47120);
+var n = t(735250),
+  i = t(470079),
+  l = t(481060),
+  a = t(86813),
+  r = t(826026),
+  o = t(428760),
+  c = t(689938),
+  d = t(448396);
 
-function c(e) {
+function u(e) {
   let {
-    onChange: t,
-    initialValue: s,
-    maxWordCount: c,
+    onChange: s,
+    initialValue: t,
+    maxWordCount: u,
     collapsed: E = !1
-  } = e, [_, I] = l.useState(!E);
-  return (0, a.jsx)(n.Collapsible, {
+  } = e, [_, I] = i.useState(!E);
+  return (0, n.jsx)(l.Collapsible, {
     isExpanded: _,
-    collapsibleContent: (0, a.jsx)(o.default, {
-      onChangeText: t,
-      maxWordCount: c,
-      className: u.keywordTextAreaContainer,
-      textAreaClassName: u.keywordTextArea,
-      subtitleText: d.default.Messages.GUILD_AUTOMOD_ALLOW_LIST_SUBTITLE,
-      initialValue: s
+    collapsibleContent: (0, n.jsx)(o.Z, {
+      onChangeText: s,
+      maxWordCount: u,
+      className: d.keywordTextAreaContainer,
+      textAreaClassName: d.keywordTextArea,
+      subtitleText: c.Z.Messages.GUILD_AUTOMOD_ALLOW_LIST_SUBTITLE,
+      initialValue: t
     }),
-    className: u.collapseable,
+    className: d.collapseable,
     children: e => {
       let {
-        onClick: t
+        onClick: s
       } = e;
-      return (0, a.jsx)(n.Clickable, {
+      return (0, n.jsx)(l.Clickable, {
         onClick: e => {
-          I(!_), t(e)
+          I(!_), s(e)
         },
-        children: (0, a.jsxs)("div", {
-          className: u.header,
-          children: [(0, a.jsx)(n.Heading, {
+        children: (0, n.jsxs)("div", {
+          className: d.header,
+          children: [(0, n.jsx)(l.Heading, {
             variant: "text-sm/medium",
-            children: d.default.Messages.GUILD_AUTOMOD_ALLOW_LIST_TITLE
-          }), _ ? (0, a.jsx)(r.default, {
-            className: u.arrow
-          }) : (0, a.jsx)(i.default, {
-            className: u.arrow
+            children: c.Z.Messages.GUILD_AUTOMOD_ALLOW_LIST_TITLE
+          }), _ ? (0, n.jsx)(r.Z, {
+            className: d.arrow
+          }) : (0, n.jsx)(a.Z, {
+            className: d.arrow
           })]
         })
       })

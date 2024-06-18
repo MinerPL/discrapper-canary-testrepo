@@ -8,12 +8,12 @@ function i(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-n.r(t), n.d(t, {
-  initRenderingContextWebGL: function() {
-    return a
+n.d(t, {
+  m: function() {
+    return o
   }
-}), n("951953"), n("970173"), n("520712"), n("268111"), n("941497"), n("32026"), n("480839"), n("744285"), n("492257"), n("873817");
-let r = new(n("259443")).Logger("RenderingContextWebGL");
+}), n(951953), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817);
+let r = new(n(259443)).Y("RenderingContextWebGL");
 class s {
   static create(e) {
     if (null == e) return null;
@@ -23,24 +23,24 @@ class s {
     let i = this.createProgram(e, t, n);
     if (null == i) return null;
     let r = e.getAttribLocation(i, "position"),
-      a = e.getAttribLocation(i, "texcoord");
-    if (-1 === r || -1 === a) return null;
-    let o = e.getUniformLocation(i, "transform"),
+      o = e.getAttribLocation(i, "texcoord");
+    if (-1 === r || -1 === o) return null;
+    let a = e.getUniformLocation(i, "transform"),
       l = e.getUniformLocation(i, "texture");
-    if (null == o || null == l) return null;
+    if (null == a || null == l) return null;
     let u = e.createBuffer();
     if (null == u) return null;
     e.bindBuffer(e.ARRAY_BUFFER, u), e.bufferData(e.ARRAY_BUFFER, new Float32Array([0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1]), e.STATIC_DRAW);
-    let d = e.createTexture();
-    return null == d ? null : new s({
+    let _ = e.createTexture();
+    return null == _ ? null : new s({
       gl: e,
       program: i,
       positionLoc: r,
-      texcoordLoc: a,
-      transformLoc: o,
+      texcoordLoc: o,
+      transformLoc: a,
       textureLoc: l,
       vertexBuffer: u,
-      texture: d
+      texture: _
     })
   }
   static createShader(e, t, n) {
@@ -77,15 +77,15 @@ class s {
     positionLoc: n,
     texcoordLoc: r,
     transformLoc: s,
-    textureLoc: a,
-    vertexBuffer: o,
+    textureLoc: o,
+    vertexBuffer: a,
     texture: l
   }) {
-    i(this, "transform", new Float32Array([2, 0, 0, 0, 0, -2, 0, 0, 0, 0, 1, 0, -1, 1, 0, 1])), i(this, "gl", void 0), i(this, "program", void 0), i(this, "positionLoc", void 0), i(this, "texcoordLoc", void 0), i(this, "transformLoc", void 0), i(this, "textureLoc", void 0), i(this, "vertexBuffer", void 0), i(this, "texture", void 0), this.gl = e, this.program = t, this.positionLoc = n, this.texcoordLoc = r, this.transformLoc = s, this.textureLoc = a, this.vertexBuffer = o, this.texture = l
+    i(this, "transform", new Float32Array([2, 0, 0, 0, 0, -2, 0, 0, 0, 0, 1, 0, -1, 1, 0, 1])), i(this, "gl", void 0), i(this, "program", void 0), i(this, "positionLoc", void 0), i(this, "texcoordLoc", void 0), i(this, "transformLoc", void 0), i(this, "textureLoc", void 0), i(this, "vertexBuffer", void 0), i(this, "texture", void 0), this.gl = e, this.program = t, this.positionLoc = n, this.texcoordLoc = r, this.transformLoc = s, this.textureLoc = o, this.vertexBuffer = a, this.texture = l
   }
 }
 
-function a(e) {
+function o(e) {
   let t = e.getContext("webgl2");
   return null == t ? null : s.create(t)
 }

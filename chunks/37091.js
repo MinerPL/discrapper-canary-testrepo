@@ -1,25 +1,24 @@
 "use strict";
-n.r(t);
-var i, r, s, a, o = n("442837"),
-  l = n("570140");
+var i, r, s, o, a = n(442837),
+  l = n(570140);
 let u = {
     enabled: !1
   },
-  d = {},
   _ = {},
+  d = {},
   c = !1;
-class E extends(a = o.default.DeviceSettingsStore) {
+class E extends(o = a.ZP.DeviceSettingsStore) {
   initialize() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u;
     c = e.enabled
   }
   getWaitingHighFive(e, t) {
     var n;
-    return null === (n = d[e]) || void 0 === n ? void 0 : n[t]
+    return null === (n = _[e]) || void 0 === n ? void 0 : n[t]
   }
   getCompletedHighFive(e, t) {
     var n;
-    return null === (n = _[e]) || void 0 === n ? void 0 : n[t]
+    return null === (n = d[e]) || void 0 === n ? void 0 : n[t]
   }
   getEnabled() {
     return c
@@ -35,15 +34,15 @@ s = "HighFiveStore", (r = "persistKey") in(i = E) ? Object.defineProperty(i, r, 
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new E(l.default, {
+}) : i[r] = s, t.Z = new E(l.Z, {
   HIGH_FIVE_QUEUE: function(e) {
     let {
       userId: t,
       channelId: n,
       emoji: i
     } = e;
-    d[n] = {
-      ...d[n],
+    _[n] = {
+      ..._[n],
       [t]: i
     }
   },
@@ -51,7 +50,7 @@ s = "HighFiveStore", (r = "persistKey") in(i = E) ? Object.defineProperty(i, r, 
     let {
       userId: t,
       channelId: n
-    } = e, i = d[n];
+    } = e, i = _[n];
     if (null == i) return !1;
     delete i[t]
   },
@@ -68,12 +67,12 @@ s = "HighFiveStore", (r = "persistKey") in(i = E) ? Object.defineProperty(i, r, 
       completingUserId: i,
       waitingUserId: r,
       channelId: s
-    } = e, a = null !== (t = d[s]) && void 0 !== t ? t : {}, o = a[r];
-    if (delete a[r], null == o) return !1;
-    _[s] = {
-      ..._[s],
-      [r]: [o, n],
-      [i]: [n, o]
+    } = e, o = null !== (t = _[s]) && void 0 !== t ? t : {}, a = o[r];
+    if (delete o[r], null == a) return !1;
+    d[s] = {
+      ...d[s],
+      [r]: [a, n],
+      [i]: [n, a]
     }
   },
   HIGH_FIVE_COMPLETE_CLEAR: function(e) {
@@ -82,7 +81,7 @@ s = "HighFiveStore", (r = "persistKey") in(i = E) ? Object.defineProperty(i, r, 
       firstUserId: n,
       secondUserId: i,
       channelId: r
-    } = e, s = null !== (t = _[r]) && void 0 !== t ? t : {};
+    } = e, s = null !== (t = d[r]) && void 0 !== t ? t : {};
     delete s[n], delete s[i]
   }
 })

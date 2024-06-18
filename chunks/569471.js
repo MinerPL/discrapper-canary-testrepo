@@ -1,44 +1,44 @@
 "use strict";
-n.r(t), n("47120"), n("789020");
-var i, r, s, a, o = n("392711"),
-  l = n.n(o),
-  u = n("442837"),
-  d = n("570140"),
-  _ = n("798140"),
-  c = n("131704"),
-  E = n("314897");
+n(47120), n(789020);
+var i, r, s, o, a = n(392711),
+  l = n.n(a),
+  u = n(442837),
+  _ = n(570140),
+  d = n(798140),
+  c = n(131704),
+  E = n(314897);
 let I = {},
-  T = new _.default,
-  f = new Set;
+  T = new d.ZP,
+  h = new Set;
 
 function S(e) {
   I = l()(I).reject(t => t.guildId === e).keyBy("threadId").value()
 }
 
-function h(e) {
+function f(e) {
   var t;
-  null === (t = e.threads) || void 0 === t || t.forEach(A)
+  null === (t = e.threads) || void 0 === t || t.forEach(N)
 }
 
-function A(e) {
-  c.ALL_CHANNEL_TYPES.has(e.type) && null != e.member && (I[e.id] = {
+function N(e) {
+  c.AW.has(e.type) && null != e.member && (I[e.id] = {
     threadId: e.id,
     guildId: e.guild_id,
     flags: e.member.flags,
     muted: e.member.muted,
     muteConfig: e.member.muteConfig,
     joinTimestamp: new Date(e.member.joinTimestamp)
-  }, m(e.id))
+  }, A(e.id))
+}
+
+function A(e) {
+  let t = I[e];
+  T.clearTimer(e), !0 === t.muted ? ((h = new Set(h)).add(e), T.setTimer(e, t.muteConfig, () => {
+    I[e].muted = !1, (h = new Set(h)).delete(e), R.emitChange()
+  }) && (I[e].muted = !1, (h = new Set(h)).delete(e))) : (h = new Set(h)).delete(e)
 }
 
 function m(e) {
-  let t = I[e];
-  T.clearTimer(e), !0 === t.muted ? ((f = new Set(f)).add(e), T.setTimer(e, t.muteConfig, () => {
-    I[e].muted = !1, (f = new Set(f)).delete(e), p.emitChange()
-  }) && (I[e].muted = !1, (f = new Set(f)).delete(e))) : (f = new Set(f)).delete(e)
-}
-
-function N(e) {
   let {
     guildId: t,
     members: n
@@ -51,10 +51,10 @@ function N(e) {
       muted: e.muted,
       muteConfig: e.muteConfig,
       joinTimestamp: new Date(e.joinTimestamp)
-    }, m(e.id)
+    }, A(e.id)
   })
 }
-class O extends(i = u.default.Store) {
+class O extends(i = u.ZP.Store) {
   hasJoined(e) {
     return e in I
   }
@@ -74,22 +74,22 @@ class O extends(i = u.default.Store) {
     return null === (t = I[e]) || void 0 === t ? void 0 : t.muteConfig
   }
   getMutedThreads() {
-    return f
+    return h
   }
   isMuted(e) {
-    return f.has(e)
+    return h.has(e)
   }
 }
-a = "JoinedThreadsStore", (s = "displayName") in(r = O) ? Object.defineProperty(r, s, {
-  value: a,
+o = "JoinedThreadsStore", (s = "displayName") in(r = O) ? Object.defineProperty(r, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a;
-let p = new O(d.default, {
+}) : r[s] = o;
+let R = new O(_.Z, {
   CONNECTION_OPEN: function(e) {
-    T.reset(), f = new Set, I = {}, e.guilds.forEach(e => {
-      h(e)
+    T.reset(), h = new Set, I = {}, e.guilds.forEach(e => {
+      f(e)
     })
   },
   OVERLAY_INITIALIZE: function(e) {
@@ -105,7 +105,7 @@ let p = new O(d.default, {
     let {
       guild: t
     } = e;
-    S(t.id), h(t)
+    S(t.id), f(t)
   },
   GUILD_DELETE: function(e) {
     let {
@@ -117,13 +117,13 @@ let p = new O(d.default, {
     let {
       channel: t
     } = e;
-    A(t)
+    N(t)
   },
-  THREAD_LIST_SYNC: N,
-  SEARCH_FINISH: N,
-  MOD_VIEW_SEARCH_FINISH: N,
-  LOAD_THREADS_SUCCESS: N,
-  LOAD_ARCHIVED_THREADS_SUCCESS: N,
+  THREAD_LIST_SYNC: m,
+  SEARCH_FINISH: m,
+  MOD_VIEW_SEARCH_FINISH: m,
+  LOAD_THREADS_SUCCESS: m,
+  LOAD_ARCHIVED_THREADS_SUCCESS: m,
   THREAD_DELETE: function(e) {
     let {
       channel: t
@@ -142,7 +142,7 @@ let p = new O(d.default, {
       muted: e.muted,
       muteConfig: e.muteConfig,
       joinTimestamp: new Date(e.joinTimestamp)
-    }, m(e.id)
+    }, A(e.id)
   },
   THREAD_MEMBER_LOCAL_UPDATE: function(e) {
     let {
@@ -178,8 +178,8 @@ let p = new O(d.default, {
         muted: t.muted,
         muteConfig: t.muteConfig,
         joinTimestamp: new Date(t.joinTimestamp)
-      }, m(e.id), i = !0)
+      }, A(e.id), i = !0)
     }), i
   }
 });
-t.default = p
+t.Z = R

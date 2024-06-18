@@ -1,38 +1,38 @@
 "use strict";
-n.r(t), n.d(t, {
-  openAlbum: function() {
-    return d
-  },
-  openArtist: function() {
-    return _
-  },
-  openPremiumSite: function() {
+n.d(t, {
+  KK: function() {
     return l
   },
-  openTrack: function() {
+  Z5: function() {
+    return _
+  },
+  aG: function() {
     return u
+  },
+  d$: function() {
+    return d
   }
-}), n("411104");
-var i = n("358085"),
-  r = n("18323"),
-  s = n("647162"),
-  a = n("616922");
+}), n(411104);
+var i = n(358085),
+  r = n(18323),
+  s = n(647162),
+  o = n(616922);
 
-function o(e, t, n) {
-  let o;
-  !(0, i.isDesktop)() && (o = window.open("", "_blank")), (0, s.getSpotifyMetadataFromActivity)(e, t).then(e => n(e)).then(e => {
+function a(e, t, n) {
+  let a;
+  !(0, i.isDesktop)() && (a = window.open("", "_blank")), (0, s.iy)(e, t).then(e => n(e)).then(e => {
     let {
       resourceType: t,
       resourceId: n
-    } = e, i = r.default.isProtocolRegistered() ? a.SpotifyEndpoints.PLAYER_OPEN(t, n) : a.SpotifyEndpoints.WEB_OPEN(t, n);
-    null != o ? o.location.href = i : window.open(i)
+    } = e, i = r.Z.isProtocolRegistered() ? o.C7.PLAYER_OPEN(t, n) : o.C7.WEB_OPEN(t, n);
+    null != a ? a.location.href = i : window.open(i)
   }).catch(() => {
-    null != o && o.close()
+    null != a && a.close()
   })
 }
 
 function l() {
-  window.open(a.SpotifyEndpoints.PREMIUM_SITE)
+  window.open(o.C7.PREMIUM_SITE)
 }
 
 function u(e) {
@@ -42,27 +42,27 @@ function u(e) {
     metadata: i
   } = e;
   if (null == n) return;
-  let s = (0, a.getSpotifyResourceType)(null !== (t = null == i ? void 0 : i.type) && void 0 !== t ? t : a.SpotifyResourceTypes.TRACK);
+  let s = (0, o.c8)(null !== (t = null == i ? void 0 : i.type) && void 0 !== t ? t : o.Hw.TRACK);
   if (null == s) return;
-  let o = r.default.isProtocolRegistered() ? a.SpotifyEndpoints.PLAYER_OPEN(s, n) : a.SpotifyEndpoints.WEB_OPEN(s, n);
-  window.open(o)
+  let a = r.Z.isProtocolRegistered() ? o.C7.PLAYER_OPEN(s, n) : o.C7.WEB_OPEN(s, n);
+  window.open(a)
 }
 
-function d(e, t) {
-  o(e, t, t => {
+function _(e, t) {
+  a(e, t, t => {
     var n;
     let {
       album_id: i
     } = t;
     return {
-      resourceType: (0, a.getSpotifyResourceType)(null === (n = e.metadata) || void 0 === n ? void 0 : n.type) === a.SpotifyResourceTypes.EPISODE ? a.SpotifyResourceTypes.SHOW : a.SpotifyResourceTypes.ALBUM,
+      resourceType: (0, o.c8)(null === (n = e.metadata) || void 0 === n ? void 0 : n.type) === o.Hw.EPISODE ? o.Hw.SHOW : o.Hw.ALBUM,
       resourceId: i
     }
   })
 }
 
-function _(e, t, n) {
-  o(e, t, e => {
+function d(e, t, n) {
+  a(e, t, e => {
     let {
       artist_ids: t
     } = e;
@@ -70,7 +70,7 @@ function _(e, t, n) {
     let i = t[n];
     if (null == i) throw Error("invalid artist index");
     return {
-      resourceType: a.SpotifyResourceTypes.ARTIST,
+      resourceType: o.Hw.ARTIST,
       resourceId: i
     }
   })

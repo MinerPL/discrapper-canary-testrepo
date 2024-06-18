@@ -1,2 +1,2 @@
 "use strict";
-e.exports = n.p + "b1c8a3167c939144c6b9.svg"
+e.exports = n.p + "968dc5f24e6b8eba16b2.svg"

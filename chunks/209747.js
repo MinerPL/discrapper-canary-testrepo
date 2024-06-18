@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-var i = n("81825");
+var i = n(81825);
 
 function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -10,7 +9,7 @@ function r(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class s extends i.default {
+class s extends i.Z {
   static createFromServer(e, t) {
     return new s({
       id: e.id,
@@ -34,4 +33,4 @@ class s extends i.default {
     super(), r(this, "id", void 0), r(this, "subscriptionId", void 0), r(this, "premiumGuildSubscription", void 0), r(this, "canceled", void 0), r(this, "cooldownEndsAt", void 0), r(this, "subscription", void 0), this.id = e.id, this.subscriptionId = e.subscriptionId, this.premiumGuildSubscription = e.premiumGuildSubscription, this.canceled = e.canceled, this.cooldownEndsAt = e.cooldownEndsAt, this.subscription = e.subscription
   }
 }
-t.default = s
+t.Z = s

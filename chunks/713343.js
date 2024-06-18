@@ -1,18 +1,16 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("476400"),
-  i = r.n(o),
-  l = r("844303"),
-  u = r("707850"),
-  s = function(e) {
+var r = n(470079),
+  i = n(476400),
+  a = n.n(i),
+  o = n(844303),
+  s = n(829307),
+  u = function(e) {
     var t = e.zDepth,
-      r = e.radius,
-      n = e.background,
-      o = e.children,
-      i = e.styles,
-      s = (0, l.default)((0, u.default)({
+      n = e.radius,
+      i = e.background,
+      a = e.children,
+      u = e.styles,
+      c = (0, o.default)((0, s.Z)({
         default: {
           wrap: {
             position: "relative",
@@ -24,8 +22,8 @@ var n = r("470079"),
           bg: {
             absolute: "0px 0px 0px 0px",
             boxShadow: "0 " + t + "px " + 4 * t + "px rgba(0,0,0,.24)",
-            borderRadius: r,
-            background: n
+            borderRadius: n,
+            background: i
           }
         },
         "zDepth-0": {
@@ -68,25 +66,25 @@ var n = r("470079"),
             borderRadius: "50%"
           }
         }
-      }, void 0 === i ? {} : i), {
+      }, void 0 === u ? {} : u), {
         "zDepth-1": 1 === t
       });
-    return a().createElement("div", {
-      style: s.wrap
-    }, a().createElement("div", {
-      style: s.bg
-    }), a().createElement("div", {
-      style: s.content
-    }, o))
+    return r.createElement("div", {
+      style: c.wrap
+    }, r.createElement("div", {
+      style: c.bg
+    }), r.createElement("div", {
+      style: c.content
+    }, a))
   };
-s.propTypes = {
-  background: i().string,
-  zDepth: i().oneOf([0, 1, 2, 3, 4, 5]),
-  radius: i().number,
-  styles: i().object
-}, s.defaultProps = {
+u.propTypes = {
+  background: a().string,
+  zDepth: a().oneOf([0, 1, 2, 3, 4, 5]),
+  radius: a().number,
+  styles: a().object
+}, u.defaultProps = {
   background: "#fff",
   zDepth: 1,
   radius: 2,
   styles: {}
-}, t.default = s
+}, t.Z = u

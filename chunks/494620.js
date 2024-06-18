@@ -1,42 +1,42 @@
 "use strict";
-l.r(t), l.d(t, {
-  InfoBoxLooks: function() {
-    return s
+n.d(t, {
+  Z: function() {
+    return _
   },
-  default: function() {
-    return S
+  z: function() {
+    return s
   }
 });
-var a, s, n = l("735250");
-l("470079");
-var i = l("803997"),
-  r = l.n(i),
-  u = l("481060"),
-  o = l("507893"),
-  d = l("759231"),
-  c = l("550565");
-(a = s || (s = {})).INFO = "info", a.WARNING = "warning";
-let f = {
-    info: c.info,
-    warning: c.warning
+var l, s, a = n(735250);
+n(470079);
+var i = n(120356),
+  r = n.n(i),
+  o = n(481060),
+  u = n(507893),
+  c = n(759231),
+  d = n(239260);
+(l = s || (s = {})).INFO = "info", l.WARNING = "warning";
+let m = {
+    info: d.info,
+    warning: d.warning
   },
-  m = {
-    info: o.default,
-    warning: d.default
+  E = {
+    info: u.Z,
+    warning: c.Z
   };
 
-function S(e) {
+function _(e) {
   let {
     children: t,
-    className: l,
-    look: a = "info"
-  } = e, s = m[a];
-  return (0, n.jsxs)("div", {
-    className: r()(c.root, l, f[a]),
-    children: [(0, n.jsx)(s, {
-      className: c.icon
-    }), (0, n.jsx)(u.Text, {
-      className: c.text,
+    className: n,
+    look: l = "info"
+  } = e, s = E[l];
+  return (0, a.jsxs)("div", {
+    className: r()(d.root, n, m[l]),
+    children: [(0, a.jsx)(s, {
+      className: d.icon
+    }), (0, a.jsx)(o.Text, {
+      className: d.text,
       variant: "text-sm/medium",
       color: "text-normal",
       children: t

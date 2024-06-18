@@ -1,79 +1,79 @@
 "use strict";
-s.r(t), s.d(t, {
-  getGuildSafetySettings: function() {
+t.d(s, {
+  Q: function() {
     return _
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("740903"),
-  n = s("426434"),
-  i = s("112824"),
-  r = s("181339"),
-  o = s("195189"),
-  d = s("616230"),
-  u = s("3896"),
-  c = s("981631"),
-  E = s("689938");
+var n = t(735250);
+t(470079);
+var i = t(740903),
+  l = t(426434),
+  a = t(112824),
+  r = t(181339),
+  o = t(195189),
+  c = t(616230),
+  d = t(3896),
+  u = t(981631),
+  E = t(689938);
 let _ = e => ({
-  [l.GuildSettingsSafetyPage.CAPTCHA_AND_RAID_PROTECTION]: [{
-    renderComponent: () => (0, a.jsx)(r.default, {
+  [i.u.CAPTCHA_AND_RAID_PROTECTION]: [{
+    renderComponent: () => (0, n.jsx)(r.Z, {
       guild: e
     }, "raid-alerts"),
-    enabled: !e.hasFeature(c.GuildFeatures.RAID_ALERTS_DISABLED)
+    enabled: !e.hasFeature(u.oNc.RAID_ALERTS_DISABLED)
   }, {
-    renderComponent: () => (0, a.jsx)(o.default, {
-      title: E.default.Messages.GUILD_SETTINGS_SAFETY_RAID_CAPTCHA
+    renderComponent: () => (0, n.jsx)(o.Z, {
+      title: E.Z.Messages.GUILD_SETTINGS_SAFETY_RAID_CAPTCHA
     }, "captcha-suspicious-joins"),
     enabled: !0
   }, {
-    renderComponent: () => (0, a.jsx)(o.default, {
-      title: E.default.Messages.GUILD_SETTINGS_SAFETY_RAID_CAPTCH_RAID
+    renderComponent: () => (0, n.jsx)(o.Z, {
+      title: E.Z.Messages.GUILD_SETTINGS_SAFETY_RAID_CAPTCH_RAID
     }, "captcha-raid-joins"),
     enabled: !0
   }],
-  [l.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION]: [{
-    renderComponent: () => (0, a.jsx)(u.default, {
+  [i.u.DM_AND_SPAM_PROTECTION]: [{
+    renderComponent: () => (0, n.jsx)(d.Z, {
       guild: e
     }, "verification-level"),
     enabled: !0
   }, {
-    renderComponent: () => (0, a.jsx)(d.default, {
+    renderComponent: () => (0, n.jsx)(c.Z, {
       guild: e
     }, "member-verification"),
     enabled: e.hasVerificationGate()
   }, {
-    renderComponent: () => (0, a.jsx)(o.default, {
-      title: E.default.Messages.GUILD_SETTINGS_SAFETY_SPAM_SUSPICIOUS_DMS,
-      details: E.default.Messages.GUILD_SETTINGS_SAFETY_SPAM_SUSPICIOUS_DMS_DESCRIPTION
+    renderComponent: () => (0, n.jsx)(o.Z, {
+      title: E.Z.Messages.GUILD_SETTINGS_SAFETY_SPAM_SUSPICIOUS_DMS,
+      details: E.Z.Messages.GUILD_SETTINGS_SAFETY_SPAM_SUSPICIOUS_DMS_DESCRIPTION
     }, "hide-suspicious-dms"),
     enabled: !0
   }, {
-    renderComponent: () => (0, a.jsx)(o.default, {
-      title: E.default.Messages.GUILD_SETTINGS_SAFETY_SPAM_DM_NON_FRIENDS,
-      details: E.default.Messages.GUILD_SETTINGS_SAFETY_SPAM_DM_NON_FRIENDS_DESCRIPTION
+    renderComponent: () => (0, n.jsx)(o.Z, {
+      title: E.Z.Messages.GUILD_SETTINGS_SAFETY_SPAM_DM_NON_FRIENDS,
+      details: E.Z.Messages.GUILD_SETTINGS_SAFETY_SPAM_DM_NON_FRIENDS_DESCRIPTION
     }, "filter-unknown-dms"),
     enabled: !0
   }, {
-    renderComponent: () => (0, a.jsx)(o.default, {
-      title: E.default.Messages.GUILD_SETTINGS_SAFETY_SPAM_SUSPICIOUS_LINKS
+    renderComponent: () => (0, n.jsx)(o.Z, {
+      title: E.Z.Messages.GUILD_SETTINGS_SAFETY_SPAM_SUSPICIOUS_LINKS
     }, "outbound-links-warn"),
     enabled: !0
   }, {
-    renderComponent: () => (0, a.jsx)(o.default, {
-      title: E.default.Messages.GUILD_SETTINGS_SAFETY_SPAM_DM_SUSPCIOUS_MESSAGES
+    renderComponent: () => (0, n.jsx)(o.Z, {
+      title: E.Z.Messages.GUILD_SETTINGS_SAFETY_SPAM_DM_SUSPCIOUS_MESSAGES
     }, "delete-spam"),
     enabled: !0
   }],
-  [l.GuildSettingsSafetyPage.PERMISSIONS]: [{
-    renderComponent: () => (0, a.jsx)(n.default, {
+  [i.u.PERMISSIONS]: [{
+    renderComponent: () => (0, n.jsx)(l.Z, {
       guild: e
     }, "guild-mfa"),
-    enabled: e.mfaLevel === c.MFALevels.ELEVATED
+    enabled: e.mfaLevel === u.BpS.ELEVATED
   }, {
-    renderComponent: () => (0, a.jsx)(i.default, {
+    renderComponent: () => (0, n.jsx)(a.Z, {
       guild: e
     }, "disable-risky-perms"),
-    enabled: 0 === (0, i.getRiskyPerms)(e).length
+    enabled: 0 === (0, a.R)(e).length
   }]
 })

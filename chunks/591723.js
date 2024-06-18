@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  HandlerRegistryImpl: function() {
+n.d(t, {
+  V: function() {
     return p
   }
 });
-var r = n("573654"),
-  i = n("40284"),
-  a = n("481732"),
-  o = n("478413"),
-  s = n("919513"),
-  u = n("158851");
+var r = n(573654),
+  i = n(40284),
+  a = n(481732),
+  o = n(478413),
+  s = n(919513),
+  u = n(158851);
 
 function c(e, t) {
   for (var n = 0; n < t.length; n++) {
@@ -27,11 +27,11 @@ function l(e, t) {
 function d(e) {
   switch (e[0]) {
     case "S":
-      return o.HandlerRole.SOURCE;
+      return o.t.SOURCE;
     case "T":
-      return o.HandlerRole.TARGET;
+      return o.t.TARGET;
     default:
-      (0, r.invariant)(!1, "Cannot parse handler ID: ".concat(e))
+      (0, r.k)(!1, "Cannot parse handler ID: ".concat(e))
   }
 }
 
@@ -62,7 +62,7 @@ function f(e, t) {
           }
           return n
         }
-      }(i, a) || function(e, t) {
+      }(i, 2) || function(e, t) {
         if (e) {
           if ("string" == typeof e) return l(e, t);
           var n = Object.prototype.toString.call(e).slice(8, -1);
@@ -87,16 +87,16 @@ var p = function() {
   return e = l, t = [{
     key: "addSource",
     value: function(e, t) {
-      (0, s.validateType)(e), (0, s.validateSourceContract)(t);
-      var n = this.addHandler(o.HandlerRole.SOURCE, e, t);
-      return this.store.dispatch((0, i.addSource)(n)), n
+      (0, s.sM)(e), (0, s.up)(t);
+      var n = this.addHandler(o.t.SOURCE, e, t);
+      return this.store.dispatch((0, i.j1)(n)), n
     }
   }, {
     key: "addTarget",
     value: function(e, t) {
-      (0, s.validateType)(e, !0), (0, s.validateTargetContract)(t);
-      var n = this.addHandler(o.HandlerRole.TARGET, e, t);
-      return this.store.dispatch((0, i.addTarget)(n)), n
+      (0, s.sM)(e, !0), (0, s.JP)(t);
+      var n = this.addHandler(o.t.TARGET, e, t);
+      return this.store.dispatch((0, i.jn)(n)), n
     }
   }, {
     key: "containsHandler",
@@ -107,72 +107,72 @@ var p = function() {
     key: "getSource",
     value: function(e) {
       var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      return (0, r.invariant)(this.isSourceId(e), "Expected a valid source ID."), t && e === this.pinnedSourceId ? this.pinnedSource : this.dragSources.get(e)
+      return (0, r.k)(this.isSourceId(e), "Expected a valid source ID."), t && e === this.pinnedSourceId ? this.pinnedSource : this.dragSources.get(e)
     }
   }, {
     key: "getTarget",
     value: function(e) {
-      return (0, r.invariant)(this.isTargetId(e), "Expected a valid target ID."), this.dropTargets.get(e)
+      return (0, r.k)(this.isTargetId(e), "Expected a valid target ID."), this.dropTargets.get(e)
     }
   }, {
     key: "getSourceType",
     value: function(e) {
-      return (0, r.invariant)(this.isSourceId(e), "Expected a valid source ID."), this.types.get(e)
+      return (0, r.k)(this.isSourceId(e), "Expected a valid source ID."), this.types.get(e)
     }
   }, {
     key: "getTargetType",
     value: function(e) {
-      return (0, r.invariant)(this.isTargetId(e), "Expected a valid target ID."), this.types.get(e)
+      return (0, r.k)(this.isTargetId(e), "Expected a valid target ID."), this.types.get(e)
     }
   }, {
     key: "isSourceId",
     value: function(e) {
-      return d(e) === o.HandlerRole.SOURCE
+      return d(e) === o.t.SOURCE
     }
   }, {
     key: "isTargetId",
     value: function(e) {
-      return d(e) === o.HandlerRole.TARGET
+      return d(e) === o.t.TARGET
     }
   }, {
     key: "removeSource",
     value: function(e) {
       var t = this;
-      (0, r.invariant)(this.getSource(e), "Expected an existing source."), this.store.dispatch((0, i.removeSource)(e)), (0, u.asap)(function() {
+      (0, r.k)(this.getSource(e), "Expected an existing source."), this.store.dispatch((0, i.wZ)(e)), (0, u.eM)(function() {
         t.dragSources.delete(e), t.types.delete(e)
       })
     }
   }, {
     key: "removeTarget",
     value: function(e) {
-      (0, r.invariant)(this.getTarget(e), "Expected an existing target."), this.store.dispatch((0, i.removeTarget)(e)), this.dropTargets.delete(e), this.types.delete(e)
+      (0, r.k)(this.getTarget(e), "Expected an existing target."), this.store.dispatch((0, i.BT)(e)), this.dropTargets.delete(e), this.types.delete(e)
     }
   }, {
     key: "pinSource",
     value: function(e) {
       var t = this.getSource(e);
-      (0, r.invariant)(t, "Expected an existing source."), this.pinnedSourceId = e, this.pinnedSource = t
+      (0, r.k)(t, "Expected an existing source."), this.pinnedSourceId = e, this.pinnedSource = t
     }
   }, {
     key: "unpinSource",
     value: function() {
-      (0, r.invariant)(this.pinnedSource, "No source is pinned at the time."), this.pinnedSourceId = null, this.pinnedSource = null
+      (0, r.k)(this.pinnedSource, "No source is pinned at the time."), this.pinnedSourceId = null, this.pinnedSource = null
     }
   }, {
     key: "addHandler",
     value: function(e, t, n) {
       var r = function(e) {
-        var t = (0, a.getNextUniqueId)().toString();
+        var t = (0, a.p)().toString();
         switch (e) {
-          case o.HandlerRole.SOURCE:
+          case o.t.SOURCE:
             return "S".concat(t);
-          case o.HandlerRole.TARGET:
+          case o.t.TARGET:
             return "T".concat(t);
           default:
             throw Error("Unknown Handler Role: ".concat(e))
         }
       }(e);
-      return this.types.set(r, t), e === o.HandlerRole.SOURCE ? this.dragSources.set(r, n) : e === o.HandlerRole.TARGET && this.dropTargets.set(r, n), r
+      return this.types.set(r, t), e === o.t.SOURCE ? this.dragSources.set(r, n) : e === o.t.TARGET && this.dropTargets.set(r, n), r
     }
-  }], c(e.prototype, t), n && c(e, n), l
+  }], c(e.prototype, t), l
 }()

@@ -1,30 +1,30 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return r
+n.d(t, {
+  Z: function() {
+    return a
   }
-}), n("47120");
-var s = n("735250"),
-  a = n("470079"),
-  l = n("558522"),
-  i = n("373977");
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(558522),
+  o = n(888868);
 
-function r(e) {
+function a(e) {
   let {
     imageBackground: t,
     applicationName: n,
-    imageClassName: r,
-    imageNotFoundClassName: o
-  } = e, [u, d] = a.useState(!1);
-  return "not-found" === t.state || u ? (0, s.jsx)("div", {
-    className: o,
-    children: (0, s.jsx)(l.default, {
-      className: i.brokenImageIcon
+    imageClassName: a,
+    imageNotFoundClassName: l
+  } = e, [u, _] = r.useState(!1);
+  return "not-found" === t.state || u ? (0, i.jsx)("div", {
+    className: l,
+    children: (0, i.jsx)(s.Z, {
+      className: o.brokenImageIcon
     })
-  }) : "loading" === t.state ? null : (0, s.jsx)("img", {
+  }) : "loading" === t.state ? null : (0, i.jsx)("img", {
     alt: n,
-    className: r,
+    className: a,
     src: t.url,
-    onError: () => d(!0)
+    onError: () => _(!0)
   })
 }

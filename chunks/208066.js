@@ -1,9 +1,8 @@
 "use strict";
-r.r(t);
-var n = r("926080"),
-  a = r("17071");
-t.default = function(e, t) {
-  t = (0, n.default)(t, e);
-  for (var r = 0, o = t.length; null != e && r < o;) e = e[(0, a.default)(t[r++])];
-  return r && r == o ? e : void 0
+var r = n(926080),
+  i = n(17071);
+t.Z = function(e, t) {
+  t = (0, r.Z)(t, e);
+  for (var n = 0, a = t.length; null != e && n < a;) e = e[(0, i.Z)(t[n++])];
+  return n && n == a ? e : void 0
 }

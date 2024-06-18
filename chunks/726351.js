@@ -1,15 +1,15 @@
 "use strict";
-var r = n("201694").forEach,
-  i = n("864483"),
-  a = n("10968"),
-  o = n("525185"),
-  s = n("498031"),
-  u = n("763160"),
-  c = n("117417"),
-  l = n("775548"),
-  d = n("656082"),
-  f = n("302366"),
-  p = n("78687");
+var r = n(201694).forEach,
+  i = n(864483),
+  a = n(10968),
+  o = n(525185),
+  s = n(498031),
+  u = n(763160),
+  c = n(117417),
+  l = n(775548),
+  d = n(656082),
+  f = n(302366),
+  p = n(78687);
 
 function h(e) {
   return Array.isArray(e) || void 0 !== e.length
@@ -58,17 +58,17 @@ e.exports = function(e) {
     }),
     x = _(e, "strategy", "object"),
     w = _(e, "important", !1),
-    T = {
+    C = {
       reporter: b,
       batchProcessor: v,
       stateHandler: d,
       idHandler: t,
       important: w
     };
-  if ("scroll" === x && (c.isLegacyOpera() ? (b.warn("Scroll strategy is not supported on legacy Opera. Changing to object strategy."), x = "object") : c.isIE(9) && (b.warn("Scroll strategy is not supported on IE9. Changing to object strategy."), x = "object")), "scroll" === x) n = p(T);
-  else if ("object" === x) n = f(T);
+  if ("scroll" === x && (c.isLegacyOpera() ? (b.warn("Scroll strategy is not supported on legacy Opera. Changing to object strategy."), x = "object") : c.isIE(9) && (b.warn("Scroll strategy is not supported on IE9. Changing to object strategy."), x = "object")), "scroll" === x) n = p(C);
+  else if ("object" === x) n = f(C);
   else throw Error("Invalid strategy name: " + x);
-  var C = {};
+  var T = {};
   return {
     listenTo: function(e, i, a) {
       function o(e) {
@@ -96,7 +96,7 @@ e.exports = function(e) {
         var p = t.get(e);
         if (f && b.log("Attaching listener to element", p, e), !S.isDetectable(e)) {
           if (f && b.log(p, "Not detectable."), S.isBusy(e)) {
-            f && b.log(p, "System busy making it detectable"), s(c, e, a), C[p] = C[p] || [], C[p].push(function() {
+            f && b.log(p, "System busy making it detectable"), s(c, e, a), T[p] = T[p] || [], T[p].push(function() {
               ++u === i.length && l()
             });
             return
@@ -113,11 +113,11 @@ e.exports = function(e) {
                   m = e.offsetHeight;
                 (t.startSize.width !== h || t.startSize.height !== m) && o(e)
               }
-              C[p] && r(C[p], function(e) {
+              T[p] && r(T[p], function(e) {
                 e()
               })
             } else f && b.log(p, "Element uninstalled before being detectable.");
-            delete C[p], ++u === i.length && l()
+            delete T[p], ++u === i.length && l()
           })
         }
         f && b.log(p, "Already detecable, adding listener."), s(c, e, a), u++

@@ -1,24 +1,24 @@
 "use strict";
-r.r(t), r.d(t, {
-  calculateChange: function() {
-    return n
+n.d(t, {
+  T: function() {
+    return r
   }
 });
-var n = function(e, t, r) {
-  var n = r.getBoundingClientRect(),
-    a = n.width,
-    o = n.height,
-    i = "number" == typeof e.pageX ? e.pageX : e.touches[0].pageX,
-    l = "number" == typeof e.pageY ? e.pageY : e.touches[0].pageY,
-    u = i - (r.getBoundingClientRect().left + window.pageXOffset),
-    s = l - (r.getBoundingClientRect().top + window.pageYOffset);
-  u < 0 ? u = 0 : u > a && (u = a), s < 0 ? s = 0 : s > o && (s = o);
-  var f = u / a,
-    c = 1 - s / o;
+var r = function(e, t, n) {
+  var r = n.getBoundingClientRect(),
+    i = r.width,
+    a = r.height,
+    o = "number" == typeof e.pageX ? e.pageX : e.touches[0].pageX,
+    s = "number" == typeof e.pageY ? e.pageY : e.touches[0].pageY,
+    u = o - (n.getBoundingClientRect().left + window.pageXOffset),
+    c = s - (n.getBoundingClientRect().top + window.pageYOffset);
+  u < 0 ? u = 0 : u > i && (u = i), c < 0 ? c = 0 : c > a && (c = a);
+  var l = u / i,
+    d = 1 - c / a;
   return {
     h: t.h,
-    s: f,
-    v: c,
+    s: l,
+    v: d,
     a: t.a,
     source: "hsv"
   }

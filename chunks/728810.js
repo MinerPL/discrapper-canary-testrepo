@@ -1,5 +1,5 @@
 "use strict";
-n("67867")({
+n(67867)({
   target: "Number",
   stat: !0
 }, {

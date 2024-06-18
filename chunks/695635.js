@@ -66,4 +66,4 @@ r = this, i = function(e) {
       return e < 12 ? "오전" : "오후"
     }
   })
-}, "object" == typeof t ? i(n("913527")) : "function" == typeof define && define.amd ? define(["../moment"], i) : i(r.moment)
+}, "object" == typeof t ? i(n(913527)) : "function" == typeof define && define.amd ? define(["../moment"], i) : i(r.moment)

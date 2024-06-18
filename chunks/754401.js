@@ -1,4 +1,3 @@
 "use strict";
-r.r(t);
-var n = (0, r("207666").default)(Object.getPrototypeOf, Object);
-t.default = n
+var r = (0, n(207666).Z)(Object.getPrototypeOf, Object);
+t.Z = r

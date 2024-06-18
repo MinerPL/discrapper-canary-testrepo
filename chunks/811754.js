@@ -1,26 +1,24 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("476400"),
-  i = r.n(o),
-  l = r("844303"),
-  u = r("329022"),
-  s = r("707850"),
-  f = r("705513"),
-  c = r("464854"),
-  d = r("544753"),
-  p = function(e) {
+var r = n(470079),
+  i = n(476400),
+  a = n.n(i),
+  o = n(844303),
+  s = n(329022),
+  u = n(829307),
+  c = n(705513),
+  l = n(464854),
+  d = n(544753),
+  f = function(e) {
     var t = e.width,
-      r = e.onChange,
-      n = e.onSwatchHover,
-      o = e.colors,
-      i = e.hex,
-      f = e.circleSize,
-      c = e.styles,
+      n = e.onChange,
+      i = e.onSwatchHover,
+      a = e.colors,
+      c = e.hex,
+      l = e.circleSize,
+      f = e.styles,
       p = e.circleSpacing,
       h = e.className,
-      b = (0, l.default)((0, s.default)({
+      m = (0, o.default)((0, u.Z)({
         default: {
           card: {
             width: t,
@@ -30,37 +28,37 @@ var n = r("470079"),
             marginBottom: -p
           }
         }
-      }, void 0 === c ? {} : c)),
-      v = function(e, t) {
-        return r({
+      }, void 0 === f ? {} : f)),
+      g = function(e, t) {
+        return n({
           hex: e,
           source: "hex"
         }, t)
       };
-    return a().createElement("div", {
-      style: b.card,
+    return r.createElement("div", {
+      style: m.card,
       className: "circle-picker " + (void 0 === h ? "" : h)
-    }, (0, u.default)(o, function(e) {
-      return a().createElement(d.default, {
+    }, (0, s.Z)(a, function(e) {
+      return r.createElement(d.Z, {
         key: e,
         color: e,
-        onClick: v,
-        onSwatchHover: n,
-        active: i === e.toLowerCase(),
-        circleSize: f,
+        onClick: g,
+        onSwatchHover: i,
+        active: c === e.toLowerCase(),
+        circleSize: l,
         circleSpacing: p
       })
     }))
   };
-p.propTypes = {
-  width: i().oneOfType([i().string, i().number]),
-  circleSize: i().number,
-  circleSpacing: i().number,
-  styles: i().object
-}, p.defaultProps = {
+f.propTypes = {
+  width: a().oneOfType([a().string, a().number]),
+  circleSize: a().number,
+  circleSpacing: a().number,
+  styles: a().object
+}, f.defaultProps = {
   width: 252,
   circleSize: 28,
   circleSpacing: 14,
-  colors: [f.red["500"], f.pink["500"], f.purple["500"], f.deepPurple["500"], f.indigo["500"], f.blue["500"], f.lightBlue["500"], f.cyan["500"], f.teal["500"], f.green["500"], f.lightGreen["500"], f.lime["500"], f.yellow["500"], f.amber["500"], f.orange["500"], f.deepOrange["500"], f.brown["500"], f.blueGrey["500"]],
+  colors: [c.Q6["500"], c.iQ["500"], c.jk["500"], c.vq["500"], c.QN["500"], c.iN["500"], c.f7["500"], c.sl["500"], c.$C["500"], c.ek["500"], c.ZE["500"], c.LR["500"], c.er["500"], c.Dz["500"], c.$y["500"], c.bK["500"], c.P_["500"], c.BU["500"]],
   styles: {}
-}, (0, c.ColorWrap)(p)
+}, (0, l.t1)(f)

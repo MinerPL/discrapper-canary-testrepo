@@ -1,10 +1,9 @@
 "use strict";
-r.r(t);
-var n = r("194649"),
+var n = r(599295),
   i = /\s*,\s*/g,
   o = /&/g,
   s = /\$([\w-]+)/g;
-t.default = function() {
+t.Z = function() {
   return {
     onProcessStyle: function(e, t, r) {
       if ("style" !== t.type) return e;
@@ -14,12 +13,12 @@ t.default = function() {
           d = "@" === c[0];
         if (f || d) {
           if (a = function(e, t, r) {
-              if (r) return (0, n.default)({}, r, {
+              if (r) return (0, n.Z)({}, r, {
                 index: r.index + 1
               });
               var i = e.options.nestingLevel;
               i = void 0 === i ? 1 : i + 1;
-              var o = (0, n.default)({}, e.options, {
+              var o = (0, n.Z)({}, e.options, {
                 nestingLevel: i,
                 index: t.indexOf(e) + 1
               });
@@ -41,9 +40,9 @@ t.default = function() {
               }
             }(l, r)), h = h.replace(s, u);
             var p = t.key + "-" + c;
-            "replaceRule" in l ? l.replaceRule(p, e[c], (0, n.default)({}, a, {
+            "replaceRule" in l ? l.replaceRule(p, e[c], (0, n.Z)({}, a, {
               selector: h
-            })) : l.addRule(p, e[c], (0, n.default)({}, a, {
+            })) : l.addRule(p, e[c], (0, n.Z)({}, a, {
               selector: h
             }))
           } else d && l.addRule(c, {}, a).addRule(t.key, e[c], {

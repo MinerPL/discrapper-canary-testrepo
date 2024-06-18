@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("433517"),
-  r = n("570140"),
-  s = n("317770"),
-  a = n("314897"),
-  o = n("944486"),
-  l = n("105372"),
-  u = n("88751"),
-  d = n("157925");
-class _ extends s.default {
+n(47120);
+var i = n(433517),
+  r = n(570140),
+  s = n(317770),
+  o = n(314897),
+  a = n(944486),
+  l = n(105372),
+  u = n(88751),
+  _ = n(157925);
+class d extends s.Z {
   _initialize() {
-    r.default.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
+    r.Z.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
   }
   _terminate() {
-    r.default.unsubscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
+    r.Z.unsubscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
   }
   constructor(...e) {
     var t, n, r;
@@ -22,10 +22,10 @@ class _ extends s.default {
         voiceStates: t
       } = e;
       t.forEach(e => {
-        if (null == e.channelId || e.userId !== a.default.getId()) return;
-        if (this.terminate(), i.Storage.get(d.STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY, !1)) return;
-        let t = o.default.getVoiceChannelId();
-        if (null != t) e.channelId === t && u.default.isAudienceMember(e.userId, t) && (i.Storage.set(d.STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY, !0), l.openStageChannelAudienceNoticeModal(t))
+        if (null == e.channelId || e.userId !== o.default.getId()) return;
+        if (this.terminate(), i.K.get(_.$z, !1)) return;
+        let t = a.Z.getVoiceChannelId();
+        if (null != t && e.channelId === t) u.ZP.isAudienceMember(e.userId, t) && (i.K.set(_.$z, !0), l.$(t))
       })
     }, n in t ? Object.defineProperty(t, n, {
       value: r,
@@ -35,4 +35,4 @@ class _ extends s.default {
     }) : t[n] = r
   }
 }
-t.default = new _
+t.Z = new d

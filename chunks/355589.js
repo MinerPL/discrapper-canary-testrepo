@@ -1,72 +1,71 @@
 "use strict";
-a.r(t), a("653041"), a("47120");
-var s = a("735250"),
-  n = a("470079"),
-  l = a("120356"),
-  r = a.n(l),
-  i = a("913527"),
-  o = a.n(i),
-  u = a("920906"),
-  d = a("831209"),
-  c = a("149765"),
-  m = a("442837"),
-  h = a("481060"),
-  f = a("787014"),
-  g = a("412899"),
-  x = a("607070"),
-  C = a("447003"),
-  _ = a("605436"),
-  p = a("621516"),
-  T = a("430824"),
-  S = a("263704"),
-  E = a("465670"),
-  N = a("110456"),
-  M = a("928457"),
-  A = a("41542"),
-  v = a("186523"),
-  I = a("692437"),
-  j = a("759231"),
-  O = a("26290"),
-  R = a("585483"),
-  b = a("70956"),
-  L = a("709054"),
-  F = a("961675"),
-  P = a("883429"),
-  y = a("993259"),
-  D = a("109434"),
-  w = a("456269"),
-  U = a("228392"),
-  k = a("432771"),
-  H = a("538366"),
-  B = a("470623"),
-  G = a("710352"),
-  V = a("981631"),
-  z = a("689938"),
-  W = a("114317");
+n(653041), n(47120);
+var s = n(735250),
+  l = n(470079),
+  a = n(120356),
+  i = n.n(a),
+  r = n(913527),
+  o = n.n(r),
+  c = n(920906),
+  d = n(831209),
+  u = n(149765),
+  h = n(442837),
+  m = n(481060),
+  g = n(787014),
+  x = n(412899),
+  _ = n(607070),
+  f = n(447003),
+  E = n(605436),
+  N = n(621516),
+  T = n(430824),
+  C = n(263704),
+  p = n(465670),
+  v = n(110456),
+  M = n(928457),
+  S = n(41542),
+  I = n(186523),
+  j = n(692437),
+  A = n(759231),
+  R = n(585483),
+  Z = n(70956),
+  O = n(709054),
+  b = n(961675),
+  L = n(883429),
+  P = n(993259),
+  D = n(109434),
+  y = n(456269),
+  H = n(228392),
+  w = n(432771),
+  F = n(538366),
+  U = n(470623),
+  k = n(710352),
+  B = n(981631),
+  G = n(689938),
+  V = n(114317);
 
-function K(e, t, a) {
+function z(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: a,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = a, e
+  }) : e[t] = n, e
 }
-let Y = {
+let W = {
     width: 28,
     height: 28
   },
-  X = {
+  q = {
     width: 20,
     height: 20,
     borderRadius: 10
   },
-  q = e => {
-    (0, U.trackForumOnboardingClicked)({
+  K = e => {
+    (0, H.e5)({
       onboardingCTA: e
     })
   };
-class Z {
+class Y {
   addStep(e) {
     ++this.currentIndex, this.steps.push({
       index: this.currentIndex,
@@ -80,16 +79,16 @@ class Z {
     return this.steps.every(e => e.isDone)
   }
   constructor() {
-    K(this, "currentIndex", 0), K(this, "steps", []), K(this, "completedSteps", 0)
+    z(this, "currentIndex", 0), z(this, "steps", []), z(this, "completedSteps", 0)
   }
 }
-let Q = e => {
+let X = e => {
     let t = null != e.topic && e.topic.length > 0;
     return {
-      name: z.default.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_GUIDELINES_TITLE,
-      description: z.default.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_GUIDELINES_DESCRIPTION,
+      name: G.Z.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_GUIDELINES_TITLE,
+      description: G.Z.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_GUIDELINES_DESCRIPTION,
       clickHandler: () => {
-        q(G.ForumOnboardingCTAs.GUIDELINES), f.default.open(e.id, void 0, V.ChannelSettingsSubsections.TOPIC)
+        K(k.ZI.GUIDELINES), g.ZP.open(e.id, void 0, B.ZfP.TOPIC)
       },
       isDone: t
     }
@@ -97,15 +96,15 @@ let Q = e => {
   J = e => {
     let t = null != e.availableTags && e.availableTags.length > 0;
     return {
-      name: z.default.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_TAGS_TITLE,
-      description: z.default.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_TAGS_DESCRIPTION,
+      name: G.Z.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_TAGS_TITLE,
+      description: G.Z.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_TAGS_DESCRIPTION,
       clickHandler: () => {
-        q(G.ForumOnboardingCTAs.TAGS), f.default.open(e.id), (0, h.openModalLazy)(async () => {
+        K(k.ZI.TAGS), g.ZP.open(e.id), (0, m.openModalLazy)(async () => {
           let {
             default: t
-          } = await Promise.all([a.e("99387"), a.e("21971")]).then(a.bind(a, "201049"));
-          return a => (0, s.jsx)(t, {
-            ...a,
+          } = await Promise.all([n.e("99387"), n.e("21971")]).then(n.bind(n, 201049));
+          return n => (0, s.jsx)(t, {
+            ...n,
             channelId: e.id,
             guildId: e.guild_id
           })
@@ -114,18 +113,18 @@ let Q = e => {
       isDone: t
     }
   },
-  $ = e => {
+  Q = e => {
     let t = null != e.defaultReactionEmoji;
     return {
-      name: z.default.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_DEFAULT_REACTION_TITLE,
-      description: z.default.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_DEFAULT_REACTION_DESCRIPTION,
+      name: G.Z.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_DEFAULT_REACTION_TITLE,
+      description: G.Z.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_DEFAULT_REACTION_DESCRIPTION,
       clickHandler: () => {
-        q(G.ForumOnboardingCTAs.DEFAULT_REACTION), (0, h.openModalLazy)(async () => {
+        K(k.ZI.DEFAULT_REACTION), (0, m.openModalLazy)(async () => {
           let {
             default: t
-          } = await Promise.all([a.e("99387"), a.e("80404")]).then(a.bind(a, "158586"));
-          return a => (0, s.jsx)(t, {
-            ...a,
+          } = await Promise.all([n.e("99387"), n.e("80404")]).then(n.bind(n, 158586));
+          return n => (0, s.jsx)(t, {
+            ...n,
             channel: e
           })
         })
@@ -133,67 +132,67 @@ let Q = e => {
       isDone: t
     }
   },
-  ee = (e, t, n) => ({
-    name: z.default.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_FIRST_POST_TITLE,
-    description: t ? z.default.Messages.MEDIA_CHANNEL_ONBOARDING_CHECKLIST_FIRST_POST_DESCRIPTION : z.default.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_FIRST_POST_DESCRIPTION.format({
+  $ = (e, t, l) => ({
+    name: G.Z.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_FIRST_POST_TITLE,
+    description: t ? G.Z.Messages.MEDIA_CHANNEL_ONBOARDING_CHECKLIST_FIRST_POST_DESCRIPTION : G.Z.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_FIRST_POST_DESCRIPTION.format({
       onClick: e => {
-        null != n && (e.preventDefault(), e.stopPropagation(), (0, U.trackForumUpsellModalViewed)(), (0, h.openModalLazy)(async () => {
+        null != l && (e.preventDefault(), e.stopPropagation(), (0, H.qz)(), (0, m.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([a.e("99387"), a.e("18417")]).then(a.bind(a, "740696"));
+          } = await Promise.all([n.e("99387"), n.e("18417")]).then(n.bind(n, 740696));
           return t => (0, s.jsx)(e, {
             ...t,
-            guildId: n
+            guildId: l
           })
         }))
       }
     }),
     clickHandler: () => {
-      q(G.ForumOnboardingCTAs.CREATE_POST), R.ComponentDispatch.dispatch(V.ComponentActions.FOCUS_COMPOSER_TITLE)
+      K(k.ZI.CREATE_POST), R.S.dispatch(B.CkL.FOCUS_COMPOSER_TITLE)
     },
     isDone: e
   }),
-  et = (e, t) => n.useCallback(() => (t(!1), P.default.hideAdminOnboarding(e, !0)), [e, t]),
-  ea = e => {
-    let t = L.default.extractTimestamp(e);
+  ee = (e, t) => l.useCallback(() => (t(!1), L.Z.hideAdminOnboarding(e, !0)), [e, t]),
+  et = e => {
+    let t = O.default.extractTimestamp(e);
     return o()().isBefore(o()(t).add(o().duration(15, "days")))
   },
-  es = (e, t, a) => {
-    n.useEffect(() => {
-      !e && a(!t)
-    }, [e, a, t])
+  en = (e, t, n) => {
+    l.useEffect(() => {
+      !e && n(!t)
+    }, [e, n, t])
   },
-  en = (e, t, a, s) => {
-    let l = n.useRef(0);
-    n.useEffect(() => (a || !e || t ? clearTimeout(l.current) : l.current = setTimeout(() => {
+  es = (e, t, n, s) => {
+    let a = l.useRef(0);
+    l.useEffect(() => (n || !e || t ? clearTimeout(a.current) : a.current = setTimeout(() => {
       s()
-    }, 60 * b.default.Millis.SECOND), () => clearTimeout(l.current)), [e, t, s, a])
+    }, 60 * Z.Z.Millis.SECOND), () => clearTimeout(a.current)), [e, t, s, n])
   },
-  el = (e, t, a) => {
-    n.useEffect(() => {
-      e && t && a()
+  el = (e, t, n) => {
+    l.useEffect(() => {
+      e && t && n()
     }, [])
   },
-  er = e => {
+  ea = e => {
     let {
       isAllDone: t,
-      isVisible: a,
+      isVisible: n,
       canManageChannel: s,
-      guildId: l,
-      channel: r
-    } = e, i = (0, m.useStateFromStores)([T.default], () => null != l ? T.default.getRoles(l) : void 0), o = n.useCallback(() => {
-      R.ComponentDispatch.dispatch(V.ComponentActions.REMEASURE_TARGET)
+      guildId: a,
+      channel: i
+    } = e, r = (0, h.e7)([T.Z], () => null != a ? T.Z.getRoles(a) : void 0), o = l.useCallback(() => {
+      R.S.dispatch(B.CkL.REMEASURE_TARGET)
     }, []);
-    n.useEffect(() => {
+    l.useEffect(() => {
       o()
-    }, [o, t, a, s, i, r.id, r.permissionOverwrites])
+    }, [o, t, n, s, r, i.id, i.permissionOverwrites])
   },
   ei = () => {
-    let [e, t] = n.useState(!0), a = (0, m.useStateFromStores)([x.default], () => x.default.useReducedMotion);
+    let [e, t] = l.useState(!0), n = (0, h.e7)([_.Z], () => _.Z.useReducedMotion);
     return {
-      transitions: (0, u.useTransition)(e, {
+      transitions: (0, c.useTransition)(e, {
         keys: e => e ? "shown" : "hidden",
-        config: ed,
+        config: ec,
         from: {
           opacity: 0
         },
@@ -204,14 +203,14 @@ let Q = e => {
           opacity: 0
         },
         unique: !0,
-        immediate: a
+        immediate: n
       }),
       setVisible: t
     }
   },
-  eo = e => {
-    let t = (0, m.useStateFromStores)([x.default], () => x.default.useReducedMotion);
-    return (0, u.useTransition)(e, {
+  er = e => {
+    let t = (0, h.e7)([_.Z], () => _.Z.useReducedMotion);
+    return (0, c.useTransition)(e, {
       from: {
         maxHeight: 0
       },
@@ -227,87 +226,87 @@ let Q = e => {
       immediate: t
     })
   },
-  eu = e => {
+  eo = e => {
     let {
       guild: t,
-      roles: a
+      roles: n
     } = e;
     return (0, s.jsx)("div", {
-      className: W.rolesList,
-      "aria-label": z.default.Messages.ROLES_LIST.format({
-        numRoles: a.length
+      className: V.rolesList,
+      "aria-label": G.Z.Messages.ROLES_LIST.format({
+        numRoles: n.length
       }),
-      children: a.map(e => (0, s.jsx)(g.MemberRole, {
+      children: n.map(e => (0, s.jsx)(x.UB, {
         role: e,
         canRemove: !1,
-        onRemove: V.NOOP_NULL,
+        onRemove: B.VqG,
         guildId: t.id,
-        className: W.rolePill
+        className: V.rolePill
       }, e.id))
     })
   },
-  ed = {
+  ec = {
     mass: 1,
     tension: 250,
     friction: 18,
     clamp: !0
   },
-  ec = e => {
+  ed = e => {
     let {
       guild: t,
-      channel: l,
-      hasAnyThread: r,
-      handleHide: i
-    } = e, [o, u] = n.useState(!1), d = (0, k.isOnboardingDismissed)(l.id), f = (0, m.useStateFromStores)([F.default], () => F.default.hasHidden(l.id)), g = function(e, t, l, r) {
-      let i = null == e ? void 0 : e.id,
-        o = (0, m.useStateFromStores)([T.default], () => null != i ? T.default.getRoles(i) : void 0);
-      return n.useMemo(() => {
-        let n = new Z,
-          i = (null == t ? void 0 : t.isMediaChannel()) === !0;
-        return null != e && null != t && !i && null != o && n.addStep(function(e, t, n, l) {
-          let r = (0, C.default)(n) ? c.combine(V.Permissions.VIEW_CHANNEL, V.Permissions.SEND_MESSAGES) : V.Permissions.SEND_MESSAGES,
-            i = null != e ? (0, y.getAllExistingRolesWithPermission)(e, t, n, r).filter(t => n.permissionOverwrites.hasOwnProperty(t.id) || (0, _.isEveryoneRoleId)(e.id, t.id)) : [],
-            o = i.length > 0,
-            u = i.some(t => (0, _.isEveryoneRoleId)(e.id, t.id));
+      channel: a,
+      hasAnyThread: i,
+      handleHide: r
+    } = e, [o, c] = l.useState(!1), d = (0, w.c)(a.id), g = (0, h.e7)([b.Z], () => b.Z.hasHidden(a.id)), x = function(e, t, a, i) {
+      let r = null == e ? void 0 : e.id,
+        o = (0, h.e7)([T.Z], () => null != r ? T.Z.getRoles(r) : void 0);
+      return l.useMemo(() => {
+        let l = new Y,
+          r = (null == t ? void 0 : t.isMediaChannel()) === !0;
+        return null != e && null != t && !r && null != o && l.addStep(function(e, t, l, a) {
+          let i = (0, f.Z)(l) ? u.$e(B.Plq.VIEW_CHANNEL, B.Plq.SEND_MESSAGES) : B.Plq.SEND_MESSAGES,
+            r = null != e ? (0, P.E$)(e, t, l, i).filter(t => l.permissionOverwrites.hasOwnProperty(t.id) || (0, E.pM)(e.id, t.id)) : [],
+            o = r.length > 0,
+            c = r.some(t => (0, E.pM)(e.id, t.id));
           return {
-            name: z.default.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_PERMISSION_TITLE,
-            description: z.default.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_PERMISSION_DESCRIPTION,
-            isDone: o && u,
-            shouldWarn: o && !u,
-            children: o ? (0, s.jsx)(eu, {
+            name: G.Z.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_PERMISSION_TITLE,
+            description: G.Z.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_PERMISSION_DESCRIPTION,
+            isDone: o && c,
+            shouldWarn: o && !c,
+            children: o ? (0, s.jsx)(eo, {
               guild: e,
-              roles: i
+              roles: r
             }) : null,
             clickHandler: () => {
-              q(G.ForumOnboardingCTAs.PERMISSIONS), (0, h.openModalLazy)(async () => {
+              K(k.ZI.PERMISSIONS), (0, m.openModalLazy)(async () => {
                 let {
                   default: t
-                } = await Promise.all([a.e("99387"), a.e("78704")]).then(a.bind(a, "560602"));
-                return l(!0), a => (0, s.jsx)(t, {
-                  ...a,
-                  channel: n,
+                } = await Promise.all([n.e("99387"), n.e("78704")]).then(n.bind(n, 560602));
+                return a(!0), n => (0, s.jsx)(t, {
+                  ...n,
+                  channel: l,
                   guild: e,
-                  permission: r,
-                  currentSelectedRoles: i
+                  permission: i,
+                  currentSelectedRoles: r
                 })
               }, {
                 modalKey: "SEND_MESSAGE_ROLE_PERMISSION_FIX_MODAL_KEY",
-                onCloseRequest: V.NOOP_NULL,
-                onCloseCallback: () => l(!1)
+                onCloseRequest: B.VqG,
+                onCloseCallback: () => a(!1)
               })
             }
           }
-        }(e, o, t, r)), !i && n.addStep(Q(t)), n.addStep(J(t)), n.addStep($(t)), n.addStep(ee(l, i, null == e ? void 0 : e.id)), n
-      }, [t, e, o, l, r])
-    }(t, l, r, u), x = g.isAllDone();
-    return en(x, d || f || !ea(l.id), o, i), {
-      onboardingSteps: g,
-      isHidden: f,
+        }(e, o, t, i)), !r && l.addStep(X(t)), l.addStep(J(t)), l.addStep(Q(t)), l.addStep($(a, r, null == e ? void 0 : e.id)), l
+      }, [t, e, o, a, i])
+    }(t, a, i, c), _ = x.isAllDone();
+    return es(_, d || g || !et(a.id), o, r), {
+      onboardingSteps: x,
+      isHidden: g,
       isDismissed: d,
-      isAllDone: x
+      isAllDone: _
     }
   },
-  em = () => n.useCallback(e => {
+  eu = () => l.useCallback(e => {
     var t;
     null === (t = e.clickHandler) || void 0 === t || t.call(e)
   }, []),
@@ -315,38 +314,38 @@ let Q = e => {
     let {
       handleHide: t
     } = e;
-    return (0, s.jsx)(h.Clickable, {
+    return (0, s.jsx)(m.Clickable, {
       onClick: t,
-      className: W.closeButton,
-      "aria-label": z.default.Messages.DISMISS,
-      children: (0, s.jsx)(E.default, {
-        className: W.closeIcon
+      className: V.closeButton,
+      "aria-label": G.Z.Messages.DISMISS,
+      children: (0, s.jsx)(p.Z, {
+        className: V.closeIcon
       })
     })
   },
-  ef = e => {
+  em = e => {
     let {
       expanded: t,
-      onClick: a
+      onClick: n
     } = e;
-    return (0, s.jsx)(h.Clickable, {
-      onClick: a,
-      className: W.closeButton,
-      "aria-label": t ? z.default.Messages.COLLAPSE : z.default.Messages.EXPAND,
-      children: t ? (0, s.jsx)(N.default, {
-        className: W.closeIcon
-      }) : (0, s.jsx)(M.default, {
-        className: W.closeIcon
+    return (0, s.jsx)(m.Clickable, {
+      onClick: n,
+      className: V.closeButton,
+      "aria-label": t ? G.Z.Messages.COLLAPSE : G.Z.Messages.EXPAND,
+      children: t ? (0, s.jsx)(v.Z, {
+        className: V.closeIcon
+      }) : (0, s.jsx)(M.Z, {
+        className: V.closeIcon
       })
     })
   };
-t.default = e => {
+t.Z = e => {
   let {
     hasAnyThread: t,
-    channel: a
+    channel: n
   } = e, {
-    onboardingExpanded: l
-  } = (0, B.useForumPostComposerStore)(e => {
+    onboardingExpanded: a
+  } = (0, U.xH)(e => {
     let {
       onboardingExpanded: t
     } = e;
@@ -354,117 +353,117 @@ t.default = e => {
       onboardingExpanded: t
     }
   }), {
-    tagFilter: i
-  } = (0, D.useForumChannelStore)(a.id), o = (0, m.useStateFromStores)([T.default], () => T.default.getGuild(a.getGuildId())), c = (0, w.useCanManageChannel)(a), {
-    transitions: f,
-    setVisible: g
-  } = ei(), x = eo(l), C = em(), _ = et(a.id, g), {
-    onboardingSteps: E,
-    isDismissed: N,
+    tagFilter: r
+  } = (0, D.H)(n.id), o = (0, h.e7)([T.Z], () => T.Z.getGuild(n.getGuildId())), u = (0, y.r_)(n), {
+    transitions: g,
+    setVisible: x
+  } = ei(), _ = er(a), f = eu(), E = ee(n.id, x), {
+    onboardingSteps: p,
+    isDismissed: v,
     isHidden: M,
     isAllDone: R
-  } = ec({
+  } = ed({
     guild: o,
-    channel: a,
+    channel: n,
     hasAnyThread: t,
-    handleHide: _
-  }), b = !M && !N, L = (0, B.useForumPostComposerStoreApi)(), F = a.isMediaChannel(), P = e => L.getState().setOnboardingExpanded(e);
-  return (el(R, b, _), er({
+    handleHide: E
+  }), Z = !M && !v, O = (0, U.AF)(), b = n.isMediaChannel(), L = e => O.getState().setOnboardingExpanded(e);
+  return (el(R, Z, E), ea({
     isAllDone: R,
-    isVisible: b,
-    canManageChannel: c,
+    isVisible: Z,
+    canManageChannel: u,
     guildId: null == o ? void 0 : o.id,
-    channel: a
-  }), es(N, M, g), n.useEffect(() => {
-    (!t || !b) && P(!0)
-  }, []), null == o) ? null : b && c ? F ? t ? null : (0, s.jsx)(p.default, {
-    channel: a
+    channel: n
+  }), en(v, M, x), l.useEffect(() => {
+    (!t || !Z) && L(!0)
+  }, []), null == o) ? null : Z && u ? b ? t ? null : (0, s.jsx)(N.Z, {
+    channel: n
   }) : (0, s.jsx)(s.Fragment, {
-    children: f((e, t) => t ? (0, s.jsx)(u.animated.div, {
+    children: g((e, t) => t ? (0, s.jsx)(c.animated.div, {
       style: e,
-      className: W.container,
+      className: V.container,
       children: (0, s.jsxs)("div", {
-        className: W.wrapper,
+        className: V.wrapper,
         children: [(0, s.jsx)("div", {
-          className: W.headerRow,
-          children: (0, s.jsxs)(h.HeadingLevel, {
-            component: (0, s.jsx)(h.Heading, {
+          className: V.headerRow,
+          children: (0, s.jsxs)(m.HeadingLevel, {
+            component: (0, s.jsx)(m.Heading, {
               variant: "heading-md/semibold",
-              children: z.default.Messages.GET_STARTED
+              children: G.Z.Messages.GET_STARTED
             }),
-            children: [(0, s.jsx)(h.Heading, {
+            children: [(0, s.jsx)(m.Heading, {
               variant: "heading-md/medium",
-              className: W.header,
-              children: z.default.Messages.FORUM_CHANNEL_ONBOARDING_COMPLETED_COUNT.format({
-                numCompleted: E.completedSteps.toString(),
-                numSteps: E.steps.length.toString()
+              className: V.header,
+              children: G.Z.Messages.FORUM_CHANNEL_ONBOARDING_COMPLETED_COUNT.format({
+                numCompleted: p.completedSteps.toString(),
+                numSteps: p.steps.length.toString()
               })
-            }), (0, s.jsxs)(h.Text, {
+            }), (0, s.jsxs)(m.Text, {
               variant: "text-xs/normal",
-              className: W.visibilityInfo,
-              children: [(0, s.jsx)(A.default, {
+              className: V.visibilityInfo,
+              children: [(0, s.jsx)(S.Z, {
                 width: 12,
                 height: 12,
-                className: W.icon
-              }), z.default.Messages.FORUM_CHANNEL_ONBOARDING_VISIBILITY]
-            }), (0, s.jsx)(ef, {
-              expanded: l,
-              onClick: () => P(!l)
+                className: V.icon
+              }), G.Z.Messages.FORUM_CHANNEL_ONBOARDING_VISIBILITY]
+            }), (0, s.jsx)(em, {
+              expanded: a,
+              onClick: () => L(!a)
             }), (0, s.jsx)(eh, {
-              handleHide: _
+              handleHide: E
             })]
           })
-        }), x((e, t) => t ? (0, s.jsx)(u.animated.div, {
+        }), _((e, t) => t ? (0, s.jsx)(c.animated.div, {
           style: e,
-          className: W.listContainer,
+          className: V.listContainer,
           children: (0, s.jsx)("ol", {
-            className: W.checklist,
-            children: E.getSteps().map(e => (0, s.jsxs)(h.Clickable, {
+            className: V.checklist,
+            children: p.getSteps().map(e => (0, s.jsxs)(m.Clickable, {
               tag: "li",
               "aria-label": e.name,
-              onClick: () => C(e),
-              className: r()(W.stepContainer, {
-                [W.completed]: e.isDone
+              onClick: () => f(e),
+              className: i()(V.stepContainer, {
+                [V.completed]: e.isDone
               }),
-              children: [e.shouldWarn ? (0, s.jsx)(j.default, {
-                color: d.default.STATUS_DANGER,
-                className: W.stepStatus
-              }) : e.isDone ? (0, s.jsx)(O.IconBadge, {
-                color: d.default.STATUS_POSITIVE_BACKGROUND,
-                icon: S.default,
-                style: X,
-                className: W.stepStatus
-              }) : (0, s.jsx)(O.IconBadge, {
+              children: [e.shouldWarn ? (0, s.jsx)(A.Z, {
+                color: d.Z.STATUS_DANGER,
+                className: V.stepStatus
+              }) : e.isDone ? (0, s.jsx)(m.IconBadge, {
+                color: d.Z.STATUS_POSITIVE_BACKGROUND,
+                icon: C.Z,
+                style: q,
+                className: V.stepStatus
+              }) : (0, s.jsx)(m.IconBadge, {
                 disableColor: !0,
-                icon: v.default,
-                style: Y,
-                className: r()(W.stepStatus, W.completed)
+                icon: I.Z,
+                style: W,
+                className: i()(V.stepStatus, V.completed)
               }), (0, s.jsxs)("div", {
-                className: W.step,
-                children: [(0, s.jsx)(h.Text, {
+                className: V.step,
+                children: [(0, s.jsx)(m.Text, {
                   variant: "text-md/medium",
                   color: e.isDone ? "header-secondary" : "header-primary",
-                  className: W.stepName,
+                  className: V.stepName,
                   children: e.name
-                }), (0, s.jsx)(h.Text, {
+                }), (0, s.jsx)(m.Text, {
                   variant: "text-sm/normal",
                   color: "header-secondary",
-                  className: W.stepDescription,
+                  className: V.stepDescription,
                   children: e.description
                 }), e.children]
-              }), (0, s.jsx)(I.default, {
+              }), (0, s.jsx)(j.Z, {
                 width: 12,
-                className: W.stepStatus
+                className: V.stepStatus
               })]
             }, "onboard-step-".concat(e.index)))
           })
         }) : null)]
       })
     }) : null)
-  }) : t ? null : (0, s.jsx)(H.default, {
-    channelName: a.name,
-    guildId: a.guild_id,
-    tagFilter: i,
-    channel: a
+  }) : t ? null : (0, s.jsx)(F.Z, {
+    channelName: n.name,
+    guildId: n.guild_id,
+    tagFilter: r,
+    channel: n
   })
 }

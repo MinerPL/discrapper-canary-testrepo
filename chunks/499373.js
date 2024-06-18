@@ -1,15 +1,14 @@
 "use strict";
-var n = r("546870"),
-  i = r("195961"),
-  o = r("65183"),
-  a = r("581079"),
+var n = r(546870),
+  i = r(195961),
+  o = r(65183),
+  a = r(581079),
   u = o.OrderedMap,
   s = o.List,
   c = function(t, e, r) {
-    if (!!t) {
-      var n = e.get(t);
-      n && e.set(t, r(n))
-    }
+    if (!t) return;
+    var n = e.get(t);
+    if (!!n) e.set(t, r(n))
   },
   l = function(t, e, r, n, i) {
     if (!i) return t;

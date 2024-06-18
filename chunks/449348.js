@@ -1,5 +1,5 @@
 "use strict";
-var r = n("21841");
+var r = n(21841);
 
 function i(e) {
   this.options = e, this.type = this.options.type, this.blockSize = 8, this._init(), this.buffer = Array(this.blockSize), this.bufferOff = 0, this.padding = !1 !== e.padding

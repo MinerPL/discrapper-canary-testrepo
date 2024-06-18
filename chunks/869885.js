@@ -51,4 +51,4 @@ r = this, i = function(e) {
       return "ທີ່" + e
     }
   })
-}, "object" == typeof t ? i(n("913527")) : "function" == typeof define && define.amd ? define(["../moment"], i) : i(r.moment)
+}, "object" == typeof t ? i(n(913527)) : "function" == typeof define && define.amd ? define(["../moment"], i) : i(r.moment)

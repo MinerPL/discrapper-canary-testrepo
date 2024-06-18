@@ -1,25 +1,25 @@
 "use strict";
-n.r(t), n.d(t, {
-  getVideoStream: function() {
+n.d(t, {
+  N7: function() {
+    return o
+  },
+  aG: function() {
     return l
   },
-  registerVideoStream: function() {
+  jC: function() {
     return a
-  },
-  unregisterVideoStream: function() {
-    return o
   }
 });
-var i = n("39383"),
+var i = n(39383),
   r = n.n(i);
 let s = {};
 
-function a(e) {
+function o(e) {
   let t = r()("VideoStream");
   return s[t] = e, t
 }
 
-function o(e) {
+function a(e) {
   delete s[e]
 }
 

@@ -1,7 +1,7 @@
 "use strict";
-var e = n("299623"),
-  o = n("980855"),
-  i = n("49693"),
+var e = n(299623),
+  o = n(980855),
+  i = n(49693),
   u = function(t) {
     return function(r, n, u) {
       var c, s = e(r),

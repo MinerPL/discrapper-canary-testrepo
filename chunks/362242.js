@@ -1,7 +1,7 @@
 "use strict";
-var n, i = r("166898"),
-  o = r("65183"),
-  a = r("467159"),
+var n, i = r(166898),
+  o = r(65183),
+  a = r(467159),
   u = o.OrderedMap;
 t.exports = {
   getDirectionMap: function(t, e) {

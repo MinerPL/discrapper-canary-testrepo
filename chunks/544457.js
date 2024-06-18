@@ -1,6 +1,6 @@
 "use strict";
-n.r(e), n.d(e, {
-  observe: function() {
+n.d(e, {
+  N: function() {
     return r
   }
 });

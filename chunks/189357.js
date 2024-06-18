@@ -1,52 +1,52 @@
 "use strict";
-n.r(t), n.d(t, {
-  canAccessGuildMemberModViewWithExperiment: function() {
+n.d(t, {
+  By: function() {
+    return d
+  },
+  ms: function() {
     return c
-  },
-  useCanAccessGuildMemberModView: function() {
-    return E
   }
-}), n("47120");
-var i = n("149765"),
-  a = n("442837"),
-  u = n("430824"),
-  l = n("594174"),
-  d = n("700785"),
-  r = n("686692"),
-  s = n("478743");
-let o = function(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [u.default, l.default];
+}), n(47120);
+var i = n(149765),
+  r = n(442837),
+  s = n(430824),
+  o = n(594174),
+  a = n(700785),
+  l = n(686692),
+  u = n(478743);
+let _ = function(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.Z, o.default];
     if (null == e) return !1;
-    let [n, a] = t, r = n.getGuild(e);
-    if (null == r) return !1;
-    let o = a.getCurrentUser();
-    return i.hasAny(d.computePermissions({
-      user: o,
-      context: r,
+    let [n, r] = t, l = n.getGuild(e);
+    if (null == l) return !1;
+    let _ = r.getCurrentUser();
+    return i.Db(a.uB({
+      user: _,
+      context: l,
       checkElevated: !1
-    }), s.MemberSafetyPagePermissions)
+    }), u.N)
   },
-  c = function(e) {
+  d = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
       n = arguments.length > 2 ? arguments[2] : void 0;
     if (null == e) return !1;
-    let i = o(e),
-      a = (0, r.isInGuildMemberModViewExperiment)(e, {
+    let i = _(e),
+      r = (0, l.Qf)(e, {
         autoTrackExposure: t,
         disable: !i,
         location: n
       });
-    return i && a
+    return i && r
   };
 
-function E(e) {
+function c(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = arguments.length > 2 ? arguments[2] : void 0,
-    i = (0, a.useStateFromStores)([u.default, l.default], () => o(e, [u.default, l.default]), [e]),
-    d = (0, r.useGuildMemberModViewExperiment)(e, {
+    i = (0, r.e7)([s.Z, o.default], () => _(e, [s.Z, o.default]), [e]),
+    a = (0, l.Om)(e, {
       autoTrackExposure: t,
       disable: !i,
       location: n
     });
-  return i && d
+  return i && a
 }

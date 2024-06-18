@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  getIsEligibleForActivityQuest: function() {
+n.d(t, {
+  S: function() {
     return r
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
     id: "2024-03_quests_activity_quest",
     kind: "user",
     label: "Activity Quest",

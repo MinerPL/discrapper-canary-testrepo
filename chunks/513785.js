@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  FetchState: function() {
+n.d(t, {
+  M: function() {
     return r
   }
 });
-var i, r, s, a = n("442837"),
-  o = n("570140");
+var i, r, s, o = n(442837),
+  a = n(570140);
 
 function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -20,27 +20,27 @@ let u = {
     lastFetchTimeMs: null,
     fetchState: 0
   },
-  d = u;
-class _ extends(s = a.default.PersistedStore) {
+  _ = u;
+class d extends(s = o.ZP.PersistedStore) {
   initialize(e) {
-    d = {
-      ...d,
+    _ = {
+      ..._,
       ...null != e ? e : {}
     }
   }
   getState() {
-    return d
+    return _
   }
   getFetchState() {
-    return d.fetchState
+    return _.fetchState
   }
   getTenureRewardStatusForRewardId(e) {
-    return d.userTenureRewardStatusByRewardId[e]
+    return _.userTenureRewardStatusByRewardId[e]
   }
 }
-l(_, "displayName", "TenureRewardStore"), l(_, "persistKey", "TenureRewardStore"), t.default = new _(o.default, {
+l(d, "displayName", "TenureRewardStore"), l(d, "persistKey", "TenureRewardStore"), t.Z = new d(a.Z, {
   USER_TENURE_REWARD_SYNC_START: function() {
-    d.fetchState = 1
+    _.fetchState = 1
   },
   USER_TENURE_REWARD_SYNC_SUCCESS: function(e) {
     let {
@@ -50,22 +50,22 @@ l(_, "displayName", "TenureRewardStore"), l(_, "persistKey", "TenureRewardStore"
       let e = {};
       t.forEach(t => {
         null != t.next_tenure_reward_id && (e[t.next_tenure_reward_id] = t)
-      }), d.userTenureRewardStatusByRewardId = e
-    } else d.userTenureRewardStatusByRewardId = u.userTenureRewardStatusByRewardId;
-    d.lastFetchTimeMs = Date.now(), d.fetchState = 2
+      }), _.userTenureRewardStatusByRewardId = e
+    } else _.userTenureRewardStatusByRewardId = u.userTenureRewardStatusByRewardId;
+    _.lastFetchTimeMs = Date.now(), _.fetchState = 2
   },
   USER_TENURE_REWARD_STATUS_RESET: function() {
-    d.userTenureRewardStatusByRewardId = u.userTenureRewardStatusByRewardId
+    _.userTenureRewardStatusByRewardId = u.userTenureRewardStatusByRewardId
   },
   USER_TENURE_REWARD_STATUS_DELETE: function(e) {
     let {
       tenureRewardIds: t
     } = e;
     t.forEach(e => {
-      delete d.userTenureRewardStatusByRewardId[e]
+      delete _.userTenureRewardStatusByRewardId[e]
     })
   },
   LOGOUT: function() {
-    d = u
+    _ = u
   }
 })

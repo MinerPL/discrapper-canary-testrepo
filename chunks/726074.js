@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  makeRequestCall: function() {
-    return o
-  },
-  makeRequestCallFromTimer: function() {
+n.d(t, {
+  as: function() {
     return a
+  },
+  tX: function() {
+    return o
   }
 });
 let r = "undefined" != typeof global ? global : self,

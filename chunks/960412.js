@@ -1,56 +1,56 @@
 "use strict";
-n.r(t), n.d(t, {
-  fetchEmailSettings: function() {
+n.d(t, {
+  Y7: function() {
     return u
   },
-  updateEmailSetting: function() {
+  oc: function() {
     return d
   },
-  updateMarketingEmailSettings: function() {
-    return c
+  pR: function() {
+    return _
   }
-}), n("724458");
-var a = n("990547"),
-  s = n("283693"),
-  l = n("570140"),
-  i = n("573261"),
-  r = n("930441"),
-  o = n("981631");
+}), n(724458);
+var i = n(990547),
+  r = n(283693),
+  s = n(570140),
+  o = n(573261),
+  a = n(930441),
+  l = n(981631);
 async function u() {
   try {
-    let e = await i.default.get({
-      url: o.Endpoints.EMAIL_SETTINGS,
+    let e = await o.Z.get({
+      url: l.ANM.EMAIL_SETTINGS,
       trackedActionData: {
-        event: a.NetworkActionNames.EMAIL_SETTINGS_FETCH,
+        event: i.NetworkActionNames.EMAIL_SETTINGS_FETCH,
         properties: e => {
           var t;
           let n = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.initialized;
-          return (0, s.exact)({
+          return (0, r.iG)({
             initialized: n
           })
         }
       }
     });
-    l.default.dispatch({
+    return s.Z.dispatch({
       type: "EMAIL_SETTINGS_FETCH_SUCCESS",
       settings: e.body
-    })
+    }), e.body
   } catch {
-    l.default.dispatch({
+    s.Z.dispatch({
       type: "EMAIL_SETTINGS_FETCH_FAILURE"
     })
   }
 }
-async function d(e, t) {
-  l.default.dispatch({
+async function _(e, t) {
+  s.Z.dispatch({
     type: "EMAIL_SETTINGS_UPDATE",
     updates: {
       [e]: t
     }
   });
   try {
-    let n = await i.default.patch({
-      url: o.Endpoints.EMAIL_SETTINGS,
+    let n = await o.Z.patch({
+      url: l.ANM.EMAIL_SETTINGS,
       body: {
         settings: {
           categories: {
@@ -59,54 +59,54 @@ async function d(e, t) {
         }
       },
       trackedActionData: {
-        event: a.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
+        event: i.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
         properties: {
           category: e,
           value: t
         }
       }
     });
-    l.default.dispatch({
+    s.Z.dispatch({
       type: "EMAIL_SETTINGS_UPDATE_SUCCESS",
       settings: n.body
     })
   } catch (e) {
-    l.default.dispatch({
+    s.Z.dispatch({
       type: "EMAIL_SETTINGS_UPDATE_FAILURE"
     })
   }
 }
-async function c() {
-  let e = r.MarketingEmailCategories.reduce((e, t) => ({
+async function d() {
+  let e = a.M0.reduce((e, t) => ({
     ...e,
     [t]: !1
   }), {});
-  l.default.dispatch({
+  s.Z.dispatch({
     type: "EMAIL_SETTINGS_UPDATE",
     updates: e
   });
   try {
-    let t = await i.default.patch({
-      url: o.Endpoints.EMAIL_SETTINGS,
+    let t = await o.Z.patch({
+      url: l.ANM.EMAIL_SETTINGS,
       body: {
         settings: {
           categories: e
         }
       },
       trackedActionData: {
-        event: a.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
+        event: i.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
         properties: {
           category: "marketing",
           value: !1
         }
       }
     });
-    l.default.dispatch({
+    s.Z.dispatch({
       type: "EMAIL_SETTINGS_UPDATE_SUCCESS",
       settings: t.body
     })
   } catch (e) {
-    l.default.dispatch({
+    s.Z.dispatch({
       type: "EMAIL_SETTINGS_UPDATE_FAILURE"
     })
   }

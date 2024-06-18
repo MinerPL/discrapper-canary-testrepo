@@ -1,24 +1,24 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return d
+n.d(t, {
+  Z: function() {
+    return _
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("481060"),
-  a = n("490504"),
-  s = n("946273"),
-  o = n("441110"),
-  l = n("689938"),
-  u = n("37433");
+var i = n(735250);
+n(470079);
+var r = n(481060),
+  s = n(490504),
+  o = n(946273),
+  a = n(441110),
+  l = n(689938),
+  u = n(37433);
 
-function d(e) {
+function _(e) {
   let {
     guild: t,
     message: n
   } = e;
-  return (0, s.useNewMemberBadge)(t.id, n.author.id) ? (0, i.jsx)(r.Popout, {
+  return (0, o.vV)(t.id, n.author.id) ? (0, i.jsx)(r.Popout, {
     animation: r.Popout.Animation.TRANSLATE,
     align: "center",
     autoInvert: !0,
@@ -28,7 +28,7 @@ function d(e) {
       let {
         closePopout: r
       } = e;
-      return (0, i.jsx)(o.default, {
+      return (0, i.jsx)(a.Z, {
         guild: t,
         message: n,
         onClose: r
@@ -42,11 +42,11 @@ function d(e) {
         onClick: t,
         tag: "span",
         children: (0, i.jsx)(r.Tooltip, {
-          text: l.default.Messages.NEW_MEMBER_BADGE_TOOLTIP_TEXT,
+          text: l.Z.Messages.NEW_MEMBER_BADGE_TOOLTIP_TEXT,
           children: e => (0, i.jsx)("div", {
             className: u.newMemberBadge,
             ...e,
-            children: (0, i.jsx)(a.default, {
+            children: (0, i.jsx)(s.Z, {
               width: 20,
               height: 20
             })

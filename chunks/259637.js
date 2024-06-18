@@ -1,69 +1,69 @@
 "use strict";
-a.r(t), a.d(t, {
-  default: function() {
-    return g
+n.d(t, {
+  Z: function() {
+    return x
   }
 });
-var s = a("735250");
-a("470079");
-var n = a("658722"),
-  l = a.n(n),
-  r = a("442837"),
-  i = a("481060"),
-  o = a("596454"),
-  d = a("339085"),
-  u = a("548420"),
-  c = a("456269"),
-  m = a("689938"),
-  h = a("228155");
-let f = e => {
+var s = n(735250);
+n(470079);
+var l = n(658722),
+  a = n.n(l),
+  i = n(442837),
+  r = n(481060),
+  o = n(596454),
+  c = n(339085),
+  d = n(548420),
+  u = n(456269),
+  h = n(689938),
+  m = n(451379);
+let g = e => {
   let {
     tag: t
   } = e, {
-    id: a,
-    name: n,
-    emojiId: l,
-    emojiName: c
-  } = t, m = (0, r.useStateFromStores)([d.default], () => null != l ? d.default.getUsableCustomEmojiById(l) : null), f = null != l || null != c;
-  return (0, s.jsx)(i.ComboboxItem, {
-    value: a,
-    children: (0, s.jsx)(i.ComboboxItem.Label, {
+    id: n,
+    name: l,
+    emojiId: a,
+    emojiName: u
+  } = t, h = (0, i.e7)([c.Z], () => null != a ? c.Z.getUsableCustomEmojiById(a) : null), g = null != a || null != u;
+  return (0, s.jsx)(r.ComboboxItem, {
+    value: n,
+    children: (0, s.jsx)(r.ComboboxItem.Label, {
       children: (0, s.jsxs)("div", {
-        className: h.row,
-        children: [f ? (0, s.jsx)(o.default, {
-          className: h.__invalid_emoji,
-          emojiId: l,
-          emojiName: c,
-          animated: !!(null == m ? void 0 : m.animated)
-        }) : (0, s.jsx)(u.default, {
-          className: h.__invalid_emoji
-        }), (0, s.jsx)(i.Text, {
+        className: m.row,
+        children: [g ? (0, s.jsx)(o.Z, {
+          className: m.__invalid_emoji,
+          emojiId: a,
+          emojiName: u,
+          animated: !!(null == h ? void 0 : h.animated)
+        }) : (0, s.jsx)(d.Z, {
+          className: m.__invalid_emoji
+        }), (0, s.jsx)(r.Text, {
           variant: "text-md/semibold",
           color: "header-secondary",
-          children: n
+          children: l
         })]
       })
     })
-  }, a)
+  }, n)
 };
 
-function g(e) {
+function x(e) {
   let {
     parentChannel: t,
-    appliedTags: a,
-    maxTagsApplied: n,
-    onSelectTag: r,
+    appliedTags: n,
+    maxTagsApplied: l,
+    onSelectTag: i,
     onClose: o
-  } = e, d = (0, c.useVisibleForumTags)(t), u = (e, t) => t.filter(t => l()(e.toLowerCase(), t.name.toLowerCase()));
-  return (0, s.jsx)(i.ComboboxPopout, {
+  } = e, c = (0, u.Vm)(t), d = (e, t) => t.filter(t => a()(e.toLowerCase(), t.name.toLowerCase()));
+  return (0, s.jsx)(r.ComboboxPopout, {
     showScrollbar: !0,
-    value: a,
+    value: n,
     onChange: e => {
-      (!n || a.has(e)) && (r(e), o())
+      if (!l || !!n.has(e)) i(e), o()
     },
-    placeholder: m.default.Messages.FORUM_TAG_POST_SEARCH_PLACEHOLDER,
-    "aria-label": m.default.Messages.FORUM_TAG_POST_SEARCH_PLACEHOLDER,
-    children: e => u(e, d).map(e => (0, s.jsx)(f, {
+    placeholder: h.Z.Messages.FORUM_TAG_POST_SEARCH_PLACEHOLDER,
+    "aria-label": h.Z.Messages.FORUM_TAG_POST_SEARCH_PLACEHOLDER,
+    children: e => d(e, c).map(e => (0, s.jsx)(g, {
       tag: e
     }, e.id))
   })

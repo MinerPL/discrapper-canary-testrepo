@@ -3,7 +3,7 @@
   else if ("function" == typeof define && define.amd) define([], r);
   else {
     var i;
-    (i = "undefined" != typeof window ? window : void 0 !== n.g ? n.g : "undefined" != typeof self ? self : this).braintree = r()
+    "undefined" != typeof window ? i = window : void 0 !== n.g ? i = n.g : "undefined" != typeof self ? i = self : i = this, i.braintree = r()
   }
 }(function() {
   var e;
@@ -304,14 +304,14 @@
           this._events[e] ? this._events[e].push(t) : this._events[e] = [t]
         }, e.prototype.off = function(e, t) {
           var n = this._events[e];
-          if (n) {
+          if (!!n) {
             var r = n.indexOf(t);
             n.splice(r, 1)
           }
         }, e.prototype._emit = function(e) {
           for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
           var r = this._events[e];
-          r && r.forEach(function(e) {
+          if (!!r) r.forEach(function(e) {
             e.apply(void 0, t)
           })
         }, e.prototype.hasListener = function(e) {
@@ -415,7 +415,7 @@
       n.assign = function(e) {
         for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
         return t.forEach(function(t) {
-          "object" == typeof t && Object.keys(t).forEach(function(n) {
+          if ("object" == typeof t) Object.keys(t).forEach(function(n) {
             e[n] = t[n]
           })
         }), e
@@ -623,7 +623,7 @@
         var o, a;
         for (o = 0; o < t.patterns.length; o++) {
           var s = t.patterns[o];
-          if (i.matches(e, s)) {
+          if (!!i.matches(e, s)) {
             var c = r.clone(t);
             a = Array.isArray(s) ? String(s[0]).length : String(s).length, e.length >= a && (c.matchStrength = a), n.push(c);
             break
@@ -873,7 +873,7 @@
           }, e.target = function(t) {
             return new e(t)
           }, e.prototype.addTargetFrame = function(e) {
-            this.limitBroadcastToFramesArray && this.targetFrames.push(e)
+            if (!!this.limitBroadcastToFramesArray) this.targetFrames.push(e)
           }, e.prototype.include = function(e) {
             return null != e && null != e.Window && e.constructor === e.Window && (r.childWindows.push(e), !0)
           }, e.prototype.target = function(t) {
@@ -904,7 +904,7 @@
               o = t;
             return e = this.namespaceEvent(e), !(0, r.subscriptionArgsInvalid)(e, o, i) && (this.hasAdditionalChecksForOnListeners && (o = function() {
               for (var e = [], r = 0; r < arguments.length; r++) e[r] = arguments[r];
-              if (!!n.passesVerifyDomainCheck(this && this.origin)) n.hasMatchingTargetFrame(this && this.source) && t.apply(void 0, e)
+              if (!!n.passesVerifyDomainCheck(this && this.origin) && !!n.hasMatchingTargetFrame(this && this.source)) t.apply(void 0, e)
             }), this.listeners.push({
               eventName: e,
               handler: o,
@@ -975,7 +975,7 @@
       var r = e("./"),
         i = !1;
       n.attach = function() {
-        !i && "undefined" != typeof window && (i = !0, window.addEventListener("message", r.onMessage, !1))
+        if (!i && "undefined" != typeof window) i = !0, window.addEventListener("message", r.onMessage, !1)
       };
       n.detach = function() {
         i = !1, window.removeEventListener("message", r.onMessage, !1)
@@ -1037,12 +1037,10 @@
       }), n.dispatch = void 0;
       var r = e("./");
       n.dispatch = function(e, t, n, i, o) {
-        if (!!r.subscribers[e]) {
-          if (r.subscribers[e][t]) {
-            var a = [];
-            n && a.push(n), i && a.push(i);
-            for (var s = 0; s < r.subscribers[e][t].length; s++) r.subscribers[e][t][s].apply(o, a)
-          }
+        if (!!r.subscribers[e] && !!r.subscribers[e][t]) {
+          var a = [];
+          n && a.push(n), i && a.push(i);
+          for (var s = 0; s < r.subscribers[e][t].length; s++) r.subscribers[e][t][s].apply(o, a)
         }
       }
     }, {
@@ -1109,13 +1107,12 @@
       }), n.onMessage = void 0;
       var r = e("./");
       n.onMessage = function(e) {
-        if (!(0, r.isntString)(e.data)) {
-          var t = (0, r.unpackPayload)(e);
-          if (t) {
-            var n = t.eventData,
-              i = t.reply;
-            (0, r.dispatch)("*", t.event, n, i, e), (0, r.dispatch)(e.origin, t.event, n, i, e), (0, r.broadcastToChildWindows)(e.data, t.origin, e.source)
-          }
+        if ((0, r.isntString)(e.data)) return;
+        var t = (0, r.unpackPayload)(e);
+        if (!!t) {
+          var n = t.eventData,
+            i = t.reply;
+          (0, r.dispatch)("*", t.event, n, i, e), (0, r.dispatch)(e.origin, t.event, n, i, e), (0, r.broadcastToChildWindows)(e.data, t.origin, e.source)
         }
       }
     }, {
@@ -1217,10 +1214,9 @@
             i = e.source,
             o = t.reply;
           t.reply = function(e) {
-            if (!!i) {
-              var t = (0, r.packagePayload)(o, n, e);
-              t && i.postMessage(t, n)
-            }
+            if (!i) return;
+            var t = (0, r.packagePayload)(o, n, e);
+            if (!!t) i.postMessage(t, n)
           }
         }
         return t
@@ -1589,7 +1585,7 @@
         }).bind(this))
       }, d.prototype._setMerchantIdentifier = function() {
         var e = this._client.getConfiguration().gatewayConfiguration.applePayWeb;
-        e && Object.defineProperty(this, "merchantIdentifier", {
+        if (!!e) Object.defineProperty(this, "merchantIdentifier", {
           value: e.merchantIdentifier,
           configurable: !1,
           writable: !1
@@ -2395,7 +2391,7 @@
           var t = function(e) {
             var t = [];
             return e.forEach(function(e) {
-              e.extensions && e.extensions.inputPath && function e(t, n, r) {
+              if (!!(e.extensions && e.extensions.inputPath))(function e(t, n, r) {
                 var i, o = n.extensions.legacyCode,
                   a = t[0];
                 if (1 === t.length) {
@@ -2412,7 +2408,7 @@
                   field: a,
                   fieldErrors: []
                 }, r.push(i)), e(t.slice(1), n, i.fieldErrors)
-              }(e.extensions.inputPath.slice(1), e, t)
+              })(e.extensions.inputPath.slice(1), e, t)
             }), t
           }(e.errors);
           return 0 === t.length ? {
@@ -3463,13 +3459,13 @@
         removeExtraFocusElements: function(e, t) {
           var n = Array.prototype.slice.call(e.elements);
           [u(n), u(n.reverse())].forEach(function(e) {
-            e && o.matchFocusElement(e.getAttribute("id")) && t(e.getAttribute("id"))
+            if (!!e) o.matchFocusElement(e.getAttribute("id")) && t(e.getAttribute("id"))
           })
         },
         createFocusChangeHandler: function(e, t) {
           return function(n) {
             var i, s, c, u, l = document.getElementById("bt-" + n.field + "-" + n.direction + "-" + e);
-            if (l) {
+            if (!!l) {
               if (c = a(l, "form")[0], document.forms.length < 1 || !c) {
                 t.onRemoveFocusIntercepts();
                 return
@@ -3728,9 +3724,9 @@
           })
         }).bind(this)) : this._bus.emit(A.REMOVE_FOCUS_INTERCEPTS)
       }, M.prototype._attachInvalidFieldContainersToError = function(e) {
-        e.details && e.details.invalidFieldKeys && e.details.invalidFieldKeys.length > 0 && (e.details.invalidFields = {}, e.details.invalidFieldKeys.forEach((function(t) {
+        if (!!(e.details && e.details.invalidFieldKeys && e.details.invalidFieldKeys.length > 0)) e.details.invalidFields = {}, e.details.invalidFieldKeys.forEach((function(t) {
           e.details.invalidFields[t] = this._fields[t].containerElement
-        }).bind(this)))
+        }).bind(this))
       }, M.prototype.getChallenges = function() {
         return this._clientPromise.then(function(e) {
           return e.getConfiguration().gatewayConfiguration.challenges
@@ -4903,7 +4899,7 @@
       }, i.prototype.focus = function() {
         this._frame.focus()
       }, i.prototype.close = function() {
-        !this._frame.closed && this._frame.close()
+        if (!this._frame.closed) this._frame.close()
       }, i.prototype.isClosed = function() {
         return !this._frame || !!this._frame.closed
       }, i.prototype.redirect = function(e) {
@@ -5139,15 +5135,17 @@
 
       function i(e, t) {
         var n, r, o, a, s = [];
-        for (a in e)
-          if (e.hasOwnProperty(a)) {
+        for (a in e) {
+          if (!!e.hasOwnProperty(a)) {
             if (o = e[a], t) {
               ;
               if ((n = e) && "object" == typeof n && "number" == typeof n.length && "[object Array]" === Object.prototype.toString.call(n)) r = t + "[]";
               else r = t + "[" + a + "]"
             } else r = a;
             "object" == typeof o ? s.push(i(o, r)) : s.push(encodeURIComponent(r) + "=" + encodeURIComponent(o))
-          } return s.join("&")
+          }
+        }
+        return s.join("&")
       }
       t.exports = {
         parse: function(e) {
@@ -6483,11 +6481,11 @@
           return n._frameService.close(), n._vaultInitiatedCheckoutInProgress = !1, n._removeModalBackdrop(), r.sendEvent(n._clientPromise, "paypal-checkout.startVaultInitiatedCheckout.succeeded"), Promise.resolve(e)
         }))
       }, I.prototype._addModalBackdrop = function(e) {
-        !e.optOutOfModalBackdrop && (!this._modalBackdrop && (this._modalBackdrop = document.createElement("div"), this._modalBackdrop.setAttribute("data-braintree-paypal-vault-initiated-checkout-modal", !0), this._modalBackdrop.style.position = "fixed", this._modalBackdrop.style.top = 0, this._modalBackdrop.style.bottom = 0, this._modalBackdrop.style.left = 0, this._modalBackdrop.style.right = 0, this._modalBackdrop.style.zIndex = 9999, this._modalBackdrop.style.background = "black", this._modalBackdrop.style.opacity = "0.7", this._modalBackdrop.addEventListener("click", (function() {
+        if (!e.optOutOfModalBackdrop) !this._modalBackdrop && (this._modalBackdrop = document.createElement("div"), this._modalBackdrop.setAttribute("data-braintree-paypal-vault-initiated-checkout-modal", !0), this._modalBackdrop.style.position = "fixed", this._modalBackdrop.style.top = 0, this._modalBackdrop.style.bottom = 0, this._modalBackdrop.style.left = 0, this._modalBackdrop.style.right = 0, this._modalBackdrop.style.zIndex = 9999, this._modalBackdrop.style.background = "black", this._modalBackdrop.style.opacity = "0.7", this._modalBackdrop.addEventListener("click", (function() {
           this.focusVaultInitiatedCheckoutWindow()
-        }).bind(this))), document.body.appendChild(this._modalBackdrop))
+        }).bind(this))), document.body.appendChild(this._modalBackdrop)
       }, I.prototype._removeModalBackdrop = function() {
-        this._modalBackdrop && this._modalBackdrop.parentNode && this._modalBackdrop.parentNode.removeChild(this._modalBackdrop)
+        if (!!(this._modalBackdrop && this._modalBackdrop.parentNode)) this._modalBackdrop.parentNode.removeChild(this._modalBackdrop)
       }, I.prototype.closeVaultInitiatedCheckoutWindow = function() {
         return this._vaultInitiatedCheckoutInProgress && r.sendEvent(this._clientPromise, "paypal-checkout.startVaultInitiatedCheckout.canceled.by-merchant"), this._waitForVaultInitiatedCheckoutDependencies().then((function() {
           this._frameService.close()
@@ -6553,24 +6551,24 @@
           return e.getConfiguration().gatewayConfiguration.paypal.clientId
         })
       }, I.prototype.loadPayPalSDK = function(e) {
-        var t, n = new s,
-          r = e && e.dataAttributes || {},
-          o = r["user-id-token"] || r["data-user-id-token"];
-        return !o && (o = this._authorizationInformation.fingerprint && this._authorizationInformation.fingerprint.split("?")[0]), this._paypalScript = document.createElement("script"), e = i({}, {
+        var t, n, r = new s,
+          o = e && e.dataAttributes || {},
+          a = o["user-id-token"] || o["data-user-id-token"];
+        return !a && (a = this._authorizationInformation.fingerprint && this._authorizationInformation.fingerprint.split("?")[0]), this._paypalScript = document.createElement("script"), e = i({}, {
           components: "buttons"
-        }, e), delete e.dataAttributes, e.vault ? e.intent = e.intent || "tokenize" : (e.intent = e.intent || "authorize", e.currency = e.currency || "USD"), this._paypalScript.onload = function() {
-          n.resolve()
-        }, Object.keys(r).forEach((function(e) {
-          this._paypalScript.setAttribute("data-" + e.replace(/^data\-/, ""), r[e])
+        }, e), delete e.dataAttributes, e.vault ? e.intent = e.intent || "tokenize" : (e.intent = e.intent || "authorize", e.currency = e.currency || "USD"), n = "https://www.paypal.com/sdk/js?", this._paypalScript.onload = function() {
+          r.resolve()
+        }, Object.keys(o).forEach((function(e) {
+          this._paypalScript.setAttribute("data-" + e.replace(/^data\-/, ""), o[e])
         }).bind(this)), (t = e["client-id"] ? Promise.resolve(e["client-id"]) : this.getClientId()).then((function(t) {
-          e["client-id"] = t, this._autoSetDataUserIdToken && o && (this._paypalScript.setAttribute("data-user-id-token", o), this._attachPreloadPixel({
+          e["client-id"] = t, this._autoSetDataUserIdToken && a && (this._paypalScript.setAttribute("data-user-id-token", a), this._attachPreloadPixel({
             id: t,
-            userIdToken: o,
-            amount: r.amount,
+            userIdToken: a,
+            amount: o.amount,
             currency: e.currency,
             merchantId: e["merchant-id"]
-          })), this._paypalScript.src = y.queryify("https://www.paypal.com/sdk/js?", e), document.head.insertBefore(this._paypalScript, document.head.firstElementChild)
-        }).bind(this)), n.then((function() {
+          })), this._paypalScript.src = y.queryify(n, e), document.head.insertBefore(this._paypalScript, document.head.firstElementChild)
+        }).bind(this)), r.then((function() {
           return this
         }).bind(this))
       }, I.prototype._attachPreloadPixel = function(e) {
@@ -7679,7 +7677,7 @@
           t.parentNode.removeChild(t), i.cancelVerifyCard(u.THREEDS_CARDINAL_SDK_CANCELED), document.removeEventListener("keyup", i._onV1Keyup), i._onV1Keyup = null
         }
         return this._onV1Keyup = function(e) {
-          if ("Escape" === e.key) t.parentNode && o()
+          if ("Escape" === e.key && !!t.parentNode) o()
         }, n && n.addEventListener("click", o), r && r.addEventListener("click", o), document.addEventListener("keyup", this._onV1Keyup), t
       }, A.prototype._addV1IframeToPage = function() {
         document.body.appendChild(this._v1Modal)
@@ -9047,7 +9045,7 @@
             })
           }, e.prototype.triggerCompleted = function(e) {
             var t = this;
-            !this.isHidden && setTimeout(function() {
+            if (!this.isHidden) setTimeout(function() {
               t.completedHandler && t.completedHandler(e), delete t.completedHandler
             }, 2e3)
           }, e.prototype.triggerRejected = function(e) {
@@ -9055,18 +9053,18 @@
           }, e.prototype.hideDesktopFlow = function() {
             this.setAlert(""), this.iframe.style.display = "none", this.bus.emit(c.VENMO_DESKTOP_CLOSED_FROM_PARENT), this.isHidden = !0
           }, e.prototype.displayError = function(e) {
-            !this.isHidden && (this.bus.emit(c.VENMO_DESKTOP_DISPLAY_ERROR, {
+            if (!this.isHidden) this.bus.emit(c.VENMO_DESKTOP_DISPLAY_ERROR, {
               message: e
-            }), this.setAlert(e))
+            }), this.setAlert(e)
           }, e.prototype.displayQRCode = function(e, t) {
-            !this.isHidden && (this.bus.emit(c.VENMO_DESKTOP_DISPLAY_QR_CODE, {
+            if (!this.isHidden) this.bus.emit(c.VENMO_DESKTOP_DISPLAY_QR_CODE, {
               id: e,
               merchantId: t
-            }), this.setAlert("To scan the QR code, open your Venmo app"))
+            }), this.setAlert("To scan the QR code, open your Venmo app")
           }, e.prototype.authorize = function() {
-            !this.isHidden && (this.bus.emit(c.VENMO_DESKTOP_AUTHORIZE), this.setAlert("Venmo account authorized"))
+            if (!this.isHidden) this.bus.emit(c.VENMO_DESKTOP_AUTHORIZE), this.setAlert("Venmo account authorized")
           }, e.prototype.authorizing = function() {
-            !this.isHidden && (this.bus.emit(c.VENMO_DESKTOP_AUTHORIZING), this.setAlert("Authorize on your Venmo app"))
+            if (!this.isHidden) this.bus.emit(c.VENMO_DESKTOP_AUTHORIZING), this.setAlert("Authorize on your Venmo app")
           }, e.prototype.startPolling = function() {
             var e = this;
             return this.createVenmoDesktopPaymentContext().then(function(t) {
@@ -9074,7 +9072,7 @@
                 r = Date.now() + n;
               return e.displayQRCode(t.id, t.merchantId), e.pollForStatusChange(t.status, r)
             }).then(function(t) {
-              if (t) {
+              if (!!t) {
                 var n = t.userName || "";
                 n = "@" + n.replace("@", ""), e.triggerCompleted({
                   paymentMethodNonce: t.paymentMethodId,
@@ -9084,7 +9082,7 @@
                 })
               }
             }).catch(function(t) {
-              !t.allowUIToHandleError && (e.sendEvent("venmo.tokenize.desktop.unhandled-error"), e.triggerRejected(t))
+              if (!t.allowUIToHandleError) e.sendEvent("venmo.tokenize.desktop.unhandled-error"), e.triggerRejected(t)
             })
           }, e.prototype.pollForStatusChange = function(e, t) {
             var n = this;
@@ -9430,52 +9428,50 @@
       var r = e("../../lib/frame-service/external"),
         i = e("../../lib/use-min"),
         o = e("@braintree/extended-promise"),
-        a = {
-          backdrop: "venmo-desktop-web-backdrop",
-          backdropHidden: "venmo-desktop-web-backdrop.hidden",
-          backdropContainer: "venmo-backdrop-container",
-          cancelButton: "venmo-popup-cancel-button",
-          continueButton: "venmo-popup-continue-button",
-          message: "venmo-message",
-          instructions: "venmo-instructions",
-          venmoLogo: "venmo-full-logo"
-        };
+        a = "venmo-desktop-web-backdrop",
+        s = "venmo-desktop-web-backdrop.hidden",
+        c = "venmo-backdrop-container",
+        d = "venmo-popup-cancel-button",
+        u = "venmo-popup-continue-button",
+        l = "venmo-message",
+        p = "venmo-instructions",
+        _ = "venmo-full-logo";
 
-      function s(e) {
+      function E(e) {
         var t = e.frameServiceInstance,
           n = e.venmoUrl,
           r = e.checkForStatusChange,
           i = e.cancelTokenization,
-          s = new o;
-        return document.getElementById(a.continueButton).addEventListener("click", function() {
+          a = new o;
+        return document.getElementById(u).addEventListener("click", function() {
           t.focus()
-        }), document.getElementById(a.cancelButton).addEventListener("click", function() {
-          t.close(), i(), c()
+        }), document.getElementById(d).addEventListener("click", function() {
+          t.close(), i(), h()
         }), t.open({}, function(e) {
-          e ? s.reject(e) : r(1).then(function(e) {
-            s.resolve(e)
+          e ? a.reject(e) : r(1).then(function(e) {
+            a.resolve(e)
           }).catch(function(e) {
-            s.reject(e)
-          }), t.close(), c()
-        }), t.redirect(n), s
+            a.reject(e)
+          }), t.close(), h()
+        }), t.redirect(n), a
       }
       o.suppressUnhandledPromiseMessage = !0;
 
-      function c() {
+      function h() {
         document.getElementById("venmo-desktop-web-backdrop").classList.add("hidden")
       }
       t.exports = {
         runWebLogin: function(e) {
           return ! function() {
-            var e, t, n, r, i, o, s, c, d = document.getElementById(a.backdrop);
-            if (d) {
-              d.classList.remove("hidden");
+            var e, t, n, r, i, o, E, h, m = document.getElementById(a);
+            if (m) {
+              m.classList.remove("hidden");
               return
             }
-            e = document.createElement("style"), t = document.createElement("div"), n = document.createElement("div"), r = document.createElement("div"), i = document.createElement("div"), o = document.createElement("div"), s = document.createElement("button"), c = document.createElement("button"), e.id = "venmo-desktop-web__injected-styles", e.innerHTML = ["#" + a.backdropHidden + " {", "display: none;", "}", "#" + a.backdrop + " {", "cursor: pointer;", "position: fixed;", "top: 0;", "left: 0;", "bottom: 0;", "width: 100%;", "background: rgba(0, 0, 0, 0.4);", "}"].concat(["#" + a.backdropContainer + " {", "display: flex;", "align-content: center;", "justify-content: center;", "align-items: center;", "width: 100%;", "height: 100%;", "flex-direction: column;", "}"], ["#" + a.cancelButton + " {", "height: 24px;", "width: 380px;", "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", "font-style: normal;", "font-weight: 700;", "font-size: 18px;", "line-height: 24px;", "text-align: center;", "background-color: transparent;", "border: none;", "color: #FFFFFF;", "margin-top: 28px;", "}"], ["#" + a.continueButton + " {", "width: 400px;", "height: 50px;", "background: #0074DE;", "border-radius: 24px;", "border: none;", "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", "font-style: normal;", "font-weight: 700;", "font-size: 18px;", "color: #FFFFFF;", "margin-top: 44px;", "}"], ["#" + a.message + " {", "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", "font-style: normal;", "font-weight: 500;", "font-size: 24px;", "line-height: 32px;", "text-align: center;", "color: #FFFFFF;", "margin-top: 32px;", "}"], ["#" + a.instructions + " {", "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", "font-style: normal;", "font-weight: 400;", "font-size: 16px;", "line-height: 20px;", "text-align: center;", "color: #FFFFFF;", "margin-top: 16px;", "width: 400px;", "}"]).join("\n"), t.id = a.backdrop, n.id = a.backdropContainer, r.id = a.venmoLogo, r.innerHTML = '<svg width="198" height="58" viewBox="0 0 198 58" fill="none" xmlns="http://www.w3.org/2000/svg">\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M43.0702 13.6572C44.1935 15.4585 44.6999 17.3139 44.6999 19.6576C44.6999 27.1328 38.1277 36.8436 32.7935 43.6625H20.6099L15.7236 15.2939L26.3917 14.3105L28.9751 34.4966C31.389 30.6783 34.3678 24.6779 34.3678 20.587C34.3678 18.3477 33.9727 16.8225 33.3553 15.5666L43.0702 13.6572Z" fill="white"/>\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M56.8965 26.1491C58.8596 26.1491 63.8018 25.2772 63.8018 22.5499C63.8018 21.2402 62.8481 20.587 61.7242 20.587C59.7579 20.587 57.1776 22.8763 56.8965 26.1491ZM56.6715 31.5506C56.6715 34.8807 58.5787 36.1873 61.107 36.1873C63.8603 36.1873 66.4966 35.534 69.923 33.8433L68.6324 42.3523C66.2183 43.4976 62.4559 44.2617 58.8039 44.2617C49.5403 44.2617 46.2249 38.8071 46.2249 31.9879C46.2249 23.1496 51.6179 13.765 62.7365 13.765C68.858 13.765 72.2809 17.0949 72.2809 21.7317C72.2815 29.2066 62.4005 31.4965 56.6715 31.5506Z" fill="white"/>\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M103.067 20.3142C103.067 21.4052 102.897 22.9875 102.727 24.0216L99.5262 43.6622H89.1385L92.0585 25.658C92.1139 25.1696 92.284 24.1865 92.284 23.6411C92.284 22.3314 91.4414 22.0047 90.4282 22.0047C89.0826 22.0047 87.7337 22.6042 86.8354 23.0418L83.5234 43.6625H73.0772L77.8495 14.257H86.8908L87.0052 16.6041C89.1382 15.2404 91.9469 13.7656 95.932 13.7656C101.212 13.765 103.067 16.3845 103.067 20.3142Z" fill="white"/>\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M133.906 16.9841C136.881 14.9131 139.69 13.765 143.563 13.765C148.897 13.765 150.753 16.3845 150.753 20.3142C150.753 21.4052 150.583 22.9875 150.413 24.0216L147.216 43.6622H136.825L139.801 25.2774C139.855 24.786 139.971 24.1865 139.971 23.8063C139.971 22.3317 139.128 22.0047 138.115 22.0047C136.824 22.0047 135.535 22.5501 134.577 23.0418L131.266 43.6625H120.878L123.854 25.2777C123.908 24.7863 124.02 24.1868 124.02 23.8065C124.02 22.332 123.177 22.0049 122.167 22.0049C120.819 22.0049 119.473 22.6045 118.574 23.0421L115.26 43.6628H104.817L109.589 14.2573H118.52L118.8 16.7122C120.878 15.241 123.684 13.7662 127.446 13.7662C130.704 13.765 132.837 15.129 133.906 16.9841Z" fill="white"/>\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M171.426 25.5502C171.426 23.1496 170.808 21.513 168.956 21.513C164.857 21.513 164.015 28.55 164.015 32.1498C164.015 34.8807 164.802 36.5709 166.653 36.5709C170.528 36.5709 171.426 29.1497 171.426 25.5502ZM153.458 31.7152C153.458 22.442 158.511 13.765 170.136 13.765C178.896 13.765 182.098 18.7854 182.098 25.7148C182.098 34.8805 177.099 44.3723 165.194 44.3723C156.378 44.3723 153.458 38.7525 153.458 31.7152Z" fill="white"/>\n</svg>', i.id = a.message, i.innerText = "What would you like to do?", o.id = a.instructions, o.innerText = "Tap cancel payment to cancel and return to the business. Continue payment will relaunch the payment window.", s.id = a.continueButton, s.innerText = "Continue payment", c.id = a.cancelButton, c.innerText = "Cancel payment", document.head.appendChild(e), n.appendChild(r), n.appendChild(i), n.appendChild(o), n.appendChild(s), n.appendChild(c), t.appendChild(n), document.body.appendChild(t)
-          }(), s(e)
+            e = document.createElement("style"), t = document.createElement("div"), n = document.createElement("div"), r = document.createElement("div"), i = document.createElement("div"), o = document.createElement("div"), E = document.createElement("button"), h = document.createElement("button"), e.id = "venmo-desktop-web__injected-styles", e.innerHTML = ["#" + s + " {", "display: none;", "}", "#" + a + " {", "cursor: pointer;", "position: fixed;", "top: 0;", "left: 0;", "bottom: 0;", "width: 100%;", "background: rgba(0, 0, 0, 0.4);", "}"].concat(["#" + c + " {", "display: flex;", "align-content: center;", "justify-content: center;", "align-items: center;", "width: 100%;", "height: 100%;", "flex-direction: column;", "}"], ["#" + d + " {", "height: 24px;", "width: 380px;", "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", "font-style: normal;", "font-weight: 700;", "font-size: 18px;", "line-height: 24px;", "text-align: center;", "background-color: transparent;", "border: none;", "color: #FFFFFF;", "margin-top: 28px;", "}"], ["#" + u + " {", "width: 400px;", "height: 50px;", "background: #0074DE;", "border-radius: 24px;", "border: none;", "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", "font-style: normal;", "font-weight: 700;", "font-size: 18px;", "color: #FFFFFF;", "margin-top: 44px;", "}"], ["#" + l + " {", "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", "font-style: normal;", "font-weight: 500;", "font-size: 24px;", "line-height: 32px;", "text-align: center;", "color: #FFFFFF;", "margin-top: 32px;", "}"], ["#" + p + " {", "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", "font-style: normal;", "font-weight: 400;", "font-size: 16px;", "line-height: 20px;", "text-align: center;", "color: #FFFFFF;", "margin-top: 16px;", "width: 400px;", "}"]).join("\n"), t.id = a, n.id = c, r.id = _, r.innerHTML = '<svg width="198" height="58" viewBox="0 0 198 58" fill="none" xmlns="http://www.w3.org/2000/svg">\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M43.0702 13.6572C44.1935 15.4585 44.6999 17.3139 44.6999 19.6576C44.6999 27.1328 38.1277 36.8436 32.7935 43.6625H20.6099L15.7236 15.2939L26.3917 14.3105L28.9751 34.4966C31.389 30.6783 34.3678 24.6779 34.3678 20.587C34.3678 18.3477 33.9727 16.8225 33.3553 15.5666L43.0702 13.6572Z" fill="white"/>\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M56.8965 26.1491C58.8596 26.1491 63.8018 25.2772 63.8018 22.5499C63.8018 21.2402 62.8481 20.587 61.7242 20.587C59.7579 20.587 57.1776 22.8763 56.8965 26.1491ZM56.6715 31.5506C56.6715 34.8807 58.5787 36.1873 61.107 36.1873C63.8603 36.1873 66.4966 35.534 69.923 33.8433L68.6324 42.3523C66.2183 43.4976 62.4559 44.2617 58.8039 44.2617C49.5403 44.2617 46.2249 38.8071 46.2249 31.9879C46.2249 23.1496 51.6179 13.765 62.7365 13.765C68.858 13.765 72.2809 17.0949 72.2809 21.7317C72.2815 29.2066 62.4005 31.4965 56.6715 31.5506Z" fill="white"/>\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M103.067 20.3142C103.067 21.4052 102.897 22.9875 102.727 24.0216L99.5262 43.6622H89.1385L92.0585 25.658C92.1139 25.1696 92.284 24.1865 92.284 23.6411C92.284 22.3314 91.4414 22.0047 90.4282 22.0047C89.0826 22.0047 87.7337 22.6042 86.8354 23.0418L83.5234 43.6625H73.0772L77.8495 14.257H86.8908L87.0052 16.6041C89.1382 15.2404 91.9469 13.7656 95.932 13.7656C101.212 13.765 103.067 16.3845 103.067 20.3142Z" fill="white"/>\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M133.906 16.9841C136.881 14.9131 139.69 13.765 143.563 13.765C148.897 13.765 150.753 16.3845 150.753 20.3142C150.753 21.4052 150.583 22.9875 150.413 24.0216L147.216 43.6622H136.825L139.801 25.2774C139.855 24.786 139.971 24.1865 139.971 23.8063C139.971 22.3317 139.128 22.0047 138.115 22.0047C136.824 22.0047 135.535 22.5501 134.577 23.0418L131.266 43.6625H120.878L123.854 25.2777C123.908 24.7863 124.02 24.1868 124.02 23.8065C124.02 22.332 123.177 22.0049 122.167 22.0049C120.819 22.0049 119.473 22.6045 118.574 23.0421L115.26 43.6628H104.817L109.589 14.2573H118.52L118.8 16.7122C120.878 15.241 123.684 13.7662 127.446 13.7662C130.704 13.765 132.837 15.129 133.906 16.9841Z" fill="white"/>\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M171.426 25.5502C171.426 23.1496 170.808 21.513 168.956 21.513C164.857 21.513 164.015 28.55 164.015 32.1498C164.015 34.8807 164.802 36.5709 166.653 36.5709C170.528 36.5709 171.426 29.1497 171.426 25.5502ZM153.458 31.7152C153.458 22.442 158.511 13.765 170.136 13.765C178.896 13.765 182.098 18.7854 182.098 25.7148C182.098 34.8805 177.099 44.3723 165.194 44.3723C156.378 44.3723 153.458 38.7525 153.458 31.7152Z" fill="white"/>\n</svg>', i.id = l, i.innerText = "What would you like to do?", o.id = p, o.innerText = "Tap cancel payment to cancel and return to the business. Continue payment will relaunch the payment window.", E.id = u, E.innerText = "Continue payment", h.id = d, h.innerText = "Cancel payment", document.head.appendChild(e), n.appendChild(r), n.appendChild(i), n.appendChild(o), n.appendChild(E), n.appendChild(h), t.appendChild(n), document.body.appendChild(t)
+          }(), E(e)
         },
-        openPopup: s,
+        openPopup: E,
         setupDesktopWebLogin: function(e) {
           var t = new o,
             n = e.assetsUrl,
@@ -9659,9 +9655,9 @@
         }
         return n.then(function(n) {
           var r = new Date(n.expiresAt) - new Date(n.createdAt);
-          clearTimeout(i._refreshPaymentContextTimeout), i._refreshPaymentContextTimeout = setTimeout(function() {
-            !i._tokenizationInProgress && i._createVenmoPaymentContext(e, !0)
-          }, .6666 * r), (!t || !i._tokenizationInProgress) && (i._venmoPaymentContextStatus = n.status, i._venmoPaymentContextId = n.id)
+          if (clearTimeout(i._refreshPaymentContextTimeout), i._refreshPaymentContextTimeout = setTimeout(function() {
+              if (!i._tokenizationInProgress) i._createVenmoPaymentContext(e, !0)
+            }, .6666 * r), !t || !i._tokenizationInProgress) i._venmoPaymentContextStatus = n.status, i._venmoPaymentContextId = n.id
         })
       }, N.prototype.appSwitch = function(e) {
         this._deepLinkReturnUrl ? function() {
@@ -9848,7 +9844,7 @@
         }
         return r.sendEvent(this._createPromise, "venmo.tokenize.mobile.start"), this._tokenizePromise = new h, this._previousHash = window.location.hash, this._onHashChangeListener = function(e) {
           var r = e.newURL.split("#")[1];
-          i._hasTokenizationResult(r) && (t = !0, clearTimeout(n), o(r))
+          if (!!i._hasTokenizationResult(r)) t = !0, clearTimeout(n), o(r)
         }, window.addEventListener("hashchange", this._onHashChangeListener, !1), this._visibilityChangeListener = function() {
           var r = e.processResultsDelay || a.DEFAULT_PROCESS_RESULTS_DELAY;
           !window.document.hidden && !t && (n = setTimeout(o, r))
@@ -9932,7 +9928,7 @@
           }), t._clearFragmentParameters()
         })
       }, N.prototype._clearFragmentParameters = function() {
-        !this._ignoreHistoryChanges && "function" == typeof window.history.replaceState && window.location.hash && history.pushState({}, "", window.location.href.slice(0, window.location.href.indexOf("#")))
+        if (!this._ignoreHistoryChanges) "function" == typeof window.history.replaceState && window.location.hash && history.pushState({}, "", window.location.href.slice(0, window.location.href.indexOf("#")))
       };
 
       function P() {

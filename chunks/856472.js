@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n("47120"), n("757143"), n("653041"), n("627494");
-var i = n("710845"),
-  r = n("287328");
-let s = new i.default("GuildStickers");
-t.default = new class e {
+n(47120), n(757143), n(653041), n(627494);
+var i = n(710845),
+  r = n(287328);
+let s = new i.Z("GuildStickers");
+t.Z = new class e {
   async getAsync(e) {
     let t = performance.now(),
-      n = await r.default.stickers(e).getMapEntries(),
+      n = await r.Z.stickers(e).getMapEntries(),
       i = performance.now();
     return s.log("asynchronously loaded in ".concat(i - t, "ms (guilds: ").concat(n.length, ")")), n
   }
@@ -36,13 +36,13 @@ t.default = new class e {
   }
   resetInMemoryState() {}
   replace(e, t, n) {
-    r.default.stickersTransaction(n).replaceAll(e, t)
+    r.Z.stickersTransaction(n).replaceAll(e, t)
   }
   delete(e, t) {
-    r.default.stickersTransaction(t).delete(e)
+    r.Z.stickersTransaction(t).delete(e)
   }
   update(e, t, n, i) {
-    let s = r.default.stickersTransaction(i);
+    let s = r.Z.stickersTransaction(i);
     for (let i of (s.putAll(e, t), n)) s.delete(e, i)
   }
   constructor() {

@@ -1,21 +1,20 @@
 "use strict";
-n.r(t);
-var i, r, s, a, o = n("442837"),
-  l = n("570140"),
-  u = n("981631");
-let d = {},
-  _ = {
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(981631);
+let _ = {},
+  d = {
     integration: "",
     query: ""
   };
-class c extends(a = o.default.Store) {
+class c extends(o = a.ZP.Store) {
   getResults(e, t) {
     if (null == e || null == t) return null;
-    let n = d[e];
+    let n = _[e];
     return null != n && null != n[t] ? n[t] : null
   }
   getQuery() {
-    return _
+    return d
   }
 }
 s = "IntegrationQueryStore", (r = "displayName") in(i = c) ? Object.defineProperty(i, r, {
@@ -23,14 +22,14 @@ s = "IntegrationQueryStore", (r = "displayName") in(i = c) ? Object.defineProper
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new c(l.default, {
+}) : i[r] = s, t.Z = new c(l.Z, {
   INTEGRATION_QUERY: function(e) {
     var t;
     let {
       integration: n,
       query: i
     } = e;
-    d[n] = null !== (t = d[n]) && void 0 !== t ? t : {}, d[n][i] = {
+    _[n] = null !== (t = _[n]) && void 0 !== t ? t : {}, _[n][i] = {
       loading: !0,
       results: []
     }
@@ -41,13 +40,13 @@ s = "IntegrationQueryStore", (r = "displayName") in(i = c) ? Object.defineProper
       query: n,
       results: i
     } = e;
-    d[t][n] = {
+    _[t][n] = {
       loading: !1,
       results: i.map(e => ({
-        type: u.ChannelTextAreaIntegrations[t].type,
+        type: u.nkL[t].type,
         meta: e
       }))
-    }, _ = {
+    }, d = {
       query: n,
       integration: t
     }
@@ -57,6 +56,6 @@ s = "IntegrationQueryStore", (r = "displayName") in(i = c) ? Object.defineProper
       integration: t,
       query: n
     } = e;
-    delete d[t][n]
+    delete _[t][n]
   }
 })

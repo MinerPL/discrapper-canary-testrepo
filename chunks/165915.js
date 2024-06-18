@@ -1,5 +1,5 @@
 "use strict";
-var e = n("691558"),
+var e = n(691558),
   o = TypeError;
 t.exports = function(t) {
   var r = e(t, "number");

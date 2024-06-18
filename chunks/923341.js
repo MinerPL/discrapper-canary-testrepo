@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  scheduler: function() {
+n.d(t, {
+  p: function() {
     return d
   },
-  updateCount: function() {
+  t: function() {
     return f
   }
 });
-var r = n("697171"),
-  i = n("288930"),
-  a = n("568764"),
+var r = n(697171),
+  i = n(288930),
+  a = n(568764),
   o = 0,
   s = {
     attributes: !0,
@@ -34,10 +34,10 @@ var r = n("697171"),
       if (void 0 === e && (e = 250), !l) {
         l = !0;
         var n = c(e);
-        (0, a.queueResizeObserver)(function() {
+        (0, a.p)(function() {
           var i = !1;
           try {
-            i = (0, r.process)()
+            i = (0, r.N)()
           } finally {
             if (l = !1, e = n - c(), !o) return;
             i ? t.run(1e3) : e > 0 ? t.run(e) : t.start()
@@ -51,16 +51,16 @@ var r = n("697171"),
         t = function() {
           return e.observer && e.observer.observe(document.body, s)
         };
-      document.body ? t() : i.global.addEventListener("DOMContentLoaded", t)
+      document.body ? t() : i.C.addEventListener("DOMContentLoaded", t)
     }, e.prototype.start = function() {
       var e = this;
       this.stopped && (this.stopped = !1, this.observer = new MutationObserver(this.listener), this.observe(), u.forEach(function(t) {
-        return i.global.addEventListener(t, e.listener, !0)
+        return i.C.addEventListener(t, e.listener, !0)
       }))
     }, e.prototype.stop = function() {
       var e = this;
       !this.stopped && (this.observer && this.observer.disconnect(), u.forEach(function(t) {
-        return i.global.removeEventListener(t, e.listener, !0)
+        return i.C.removeEventListener(t, e.listener, !0)
       }), this.stopped = !0)
     }, e
   }()),

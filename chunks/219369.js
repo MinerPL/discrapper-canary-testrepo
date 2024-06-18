@@ -1,40 +1,40 @@
 "use strict";
-s.r(t), s.d(t, {
-  DiscoverySetupModalSteps: function() {
-    return l
+t.d(s, {
+  Nx: function() {
+    return c
   },
-  navigateToAndTrackHelpCenterClick: function() {
-    return u
-  },
-  trackFlowAnalytics: function() {
+  lW: function() {
     return d
+  },
+  tK: function() {
+    return i
   }
 });
-var a, l, n = s("367907"),
-  i = s("626135"),
-  r = s("63063"),
-  o = s("981631");
-(a = l || (l = {})).DESCRIPTION = "description", a.CATEGORIES = "categories", a.TAGS = "tags", a.AGREE_TO_RULES = "agree_to_rules";
-let d = (e, t, s) => {
-    i.default.track(o.AnalyticEvents.USER_FLOW_TRANSITION, {
-      flow_type: o.AnalyticsSections.DISCOVERY_SETUP_MODAL,
+var n, i, l = t(367907),
+  a = t(626135),
+  r = t(63063),
+  o = t(981631);
+(n = i || (i = {})).DESCRIPTION = "description", n.CATEGORIES = "categories", n.TAGS = "tags", n.AGREE_TO_RULES = "agree_to_rules";
+let c = (e, s, t) => {
+    a.default.track(o.rMx.USER_FLOW_TRANSITION, {
+      flow_type: o.jXE.DISCOVERY_SETUP_MODAL,
       from_step: e,
-      to_step: t,
-      ...(0, n.collectGuildAnalyticsMetadata)(s)
+      to_step: s,
+      ...(0, l.hH)(t)
     })
   },
-  u = e => {
+  d = e => {
     let {
-      articleId: t,
-      guildId: s,
-      modalStep: a = null,
-      pageView: l = null
+      articleId: s,
+      guildId: t,
+      modalStep: n = null,
+      pageView: i = null
     } = e;
-    open(r.default.getArticleURL(t)), i.default.track(o.AnalyticEvents.DISCOVERY_SETUP_CTA_CLICKED, {
-      cta_name: o.HELP_CENTER_CTA_ANALYTICS_NAME,
-      discovery_settings_view: l,
-      help_center_article_id: t,
-      modal_step: a,
-      ...(0, n.collectGuildAnalyticsMetadata)(s)
+    open(r.Z.getArticleURL(s)), a.default.track(o.rMx.DISCOVERY_SETUP_CTA_CLICKED, {
+      cta_name: o.b8q,
+      discovery_settings_view: i,
+      help_center_article_id: s,
+      modal_step: n,
+      ...(0, l.hH)(t)
     })
   }

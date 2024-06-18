@@ -1,26 +1,26 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return u
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
-  o = n("481060"),
-  l = n("69649");
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(481060),
+  l = n(69649);
 
 function u(e) {
   let {
     children: t,
     "aria-label": n,
-    className: a,
+    className: s,
     position: u,
-    ...d
-  } = e, _ = r.useRef(null), c = null != n ? n : "string" == typeof t && t;
-  return (0, i.jsx)(o.Tooltip, {
-    ...d,
+    ..._
+  } = e, d = r.useRef(null), c = null != n ? n : "string" == typeof t && t;
+  return (0, i.jsx)(a.Tooltip, {
+    ..._,
     position: null != u ? u : "top",
     delay: 500,
     text: t,
@@ -28,19 +28,19 @@ function u(e) {
     children: n => {
       let {
         onMouseEnter: r,
-        onMouseLeave: o
+        onMouseLeave: a
       } = n;
       return (0, i.jsx)("div", {
-        className: s()(a, l.overflow),
-        ref: _,
+        className: o()(s, l.overflow),
+        ref: d,
         "aria-hidden": e["aria-hidden"],
         onMouseEnter: () => {
           let {
             current: e
-          } = _;
+          } = d;
           null != e && e.offsetWidth < e.scrollWidth && (null == r || r())
         },
-        onMouseLeave: o,
+        onMouseLeave: a,
         children: t
       })
     }

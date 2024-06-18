@@ -1,5 +1,5 @@
 "use strict";
-var r = n("384111"),
+var r = n(384111),
   i = r.define("Time", function() {
     this.choice({
       utcTime: this.utctime(),

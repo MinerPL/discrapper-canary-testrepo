@@ -1,5 +1,5 @@
 "use strict";
-var n = r("381538");
+var n = r(381538);
 
 function i() {
   return (i = n || function(t) {
@@ -10,10 +10,10 @@ function i() {
     return t
   }).apply(this, arguments)
 }
-var o = r("297326"),
-  a = r("470079"),
-  u = r("746117"),
-  s = r("856084"),
+var o = r(297326),
+  a = r(470079),
+  u = r(746117),
+  s = r(856084),
   c = function(t) {
     var e, r;
 

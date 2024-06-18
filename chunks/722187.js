@@ -1,41 +1,41 @@
 "use strict";
-n.r(t), n.d(t, {
-  FormLabel: function() {
-    return d
+n.d(t, {
+  l: function() {
+    return _
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("803997"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("766646"),
-  o = n("154921"),
-  l = n("689938"),
-  u = n("290852");
+  o = n(766646),
+  a = n(154921),
+  l = n(689938),
+  u = n(636176);
 
-function d(e) {
+function _(e) {
   let {
     children: t,
     className: n,
     disabled: r,
-    required: d = !1,
-    ..._
+    required: _ = !1,
+    ...d
   } = e;
-  return (0, i.jsxs)(o.default, {
+  return (0, i.jsxs)(a.Z, {
     tag: "label",
-    color: o.default.Colors.HEADER_SECONDARY,
+    color: a.Z.Colors.HEADER_SECONDARY,
     className: s()(u.label, n, {
       [u.defaultMargin]: null == n,
       [u.disabled]: r
     }),
-    ..._,
-    children: [t, d && (0, i.jsxs)(i.Fragment, {
+    ...d,
+    children: [t, _ && (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)("span", {
         className: u.required,
         "aria-hidden": !0,
         children: "*"
-      }), (0, i.jsx)(a.HiddenVisually, {
-        children: l.default.Messages.REQUIRED
+      }), (0, i.jsx)(o.n, {
+        children: l.Z.Messages.REQUIRED
       })]
     })]
   })

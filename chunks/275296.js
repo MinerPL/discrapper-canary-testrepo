@@ -1,33 +1,33 @@
 "use strict";
-s.r(t), s("789020");
-var a = s("735250");
-s("470079");
-var l = s("481060"),
-  n = s("759231"),
-  i = s("630388"),
-  r = s("402148"),
-  o = s("981631"),
-  d = s("689938"),
-  u = s("318311");
-t.default = e => {
+t(789020);
+var n = t(735250);
+t(470079);
+var i = t(481060),
+  l = t(759231),
+  a = t(630388),
+  r = t(402148),
+  o = t(981631),
+  c = t(689938),
+  d = t(376495);
+s.Z = e => {
   let {
-    role: t
+    role: s
   } = e;
-  return (0, i.hasFlag)(t.flags, o.RoleFlags.IN_PROMPT) ? (0, r.isRolePowerful)(t) ? (0, a.jsxs)("div", {
-    className: u.notice,
-    children: [(0, a.jsx)(n.default, {
-      className: u.noticeIconPowerful
-    }), (0, a.jsx)(l.Text, {
+  return (0, a.yE)(s.flags, o.aO5.IN_PROMPT) ? (0, r.F)(s) ? (0, n.jsxs)("div", {
+    className: d.notice,
+    children: [(0, n.jsx)(l.Z, {
+      className: d.noticeIconPowerful
+    }), (0, n.jsx)(i.Text, {
       variant: "text-sm/normal",
-      children: d.default.Messages.ROLE_IN_PROMPT_POWERFUL_NOTICE_TEXT
+      children: c.Z.Messages.ROLE_IN_PROMPT_POWERFUL_NOTICE_TEXT
     })]
-  }) : (0, a.jsxs)("div", {
-    className: u.notice,
-    children: [(0, a.jsx)(n.default, {
-      className: u.noticeIcon
-    }), (0, a.jsx)(l.Text, {
+  }) : (0, n.jsxs)("div", {
+    className: d.notice,
+    children: [(0, n.jsx)(l.Z, {
+      className: d.noticeIcon
+    }), (0, n.jsx)(i.Text, {
       variant: "text-sm/normal",
-      children: d.default.Messages.ROLE_IN_PROMPT_NOTICE_TEXT
+      children: c.Z.Messages.ROLE_IN_PROMPT_NOTICE_TEXT
     })]
   }) : null
 }

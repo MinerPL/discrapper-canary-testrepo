@@ -1,30 +1,30 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return i
+n.d(t, {
+  Z: function() {
+    return a
   }
-}), n("47120");
-var l = n("553813"),
-  r = n.n(l),
-  s = n("358085");
-let a = {
-  [s.PlatformTypes.WINDOWS]: {
+}), n(47120);
+var r = n(553813),
+  i = n.n(r),
+  l = n(358085);
+let s = {
+  [l.PlatformTypes.WINDOWS]: {
     nvidia: ">=397.93.0"
   }
 };
 
-function i(e) {
-  let t = a[(0, s.getPlatform)()];
+function a(e) {
+  let t = s[(0, l.getPlatform)()];
   if (null == t) return !1;
   for (let n of Object.keys(e)) {
-    let l = e[n],
-      s = t[n];
-    if (null == l || null == s || null != l.error) continue;
-    let a = function(e) {
+    let r = e[n],
+      l = t[n];
+    if (null == r || null == l || null != r.error) continue;
+    let s = function(e) {
       var t, n;
       return "".concat(null !== (t = e.major) && void 0 !== t ? t : 0, ".").concat(null !== (n = e.minor) && void 0 !== n ? n : 0, ".0")
-    }(l);
-    if (!r().satisfies(a, s)) return !0
+    }(r);
+    if (!i().satisfies(s, l)) return !0
   }
   return !1
 }

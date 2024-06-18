@@ -1,52 +1,51 @@
 "use strict";
-n.r(t);
-var i = n("735250"),
-  r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
-  o = n("392711"),
-  l = n.n(o),
-  u = n("481060"),
-  d = n("633302"),
-  _ = n("334920"),
-  c = n("242411"),
-  E = n("768581"),
-  I = n("185923"),
-  T = n("147981");
-let f = l().memoize(e => "".concat(e * I.EmojiSprites.NonDiversityPerRow, "px ").concat(e * Math.ceil(d.default.numNonDiversitySprites / I.EmojiSprites.NonDiversityPerRow), "px")),
-  S = l().memoize(e => "".concat(e * I.EmojiSprites.DiversityPerRow, "px ").concat(e * Math.ceil(d.default.numDiversitySprites / I.EmojiSprites.DiversityPerRow), "px")),
-  h = (e, t, i) => {
-    let r, a, s;
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(392711),
+  l = n.n(a),
+  u = n(481060),
+  _ = n(633302),
+  d = n(334920),
+  c = n(242411),
+  E = n(768581),
+  I = n(185923),
+  T = n(414073);
+let h = l().memoize(e => "".concat(e * I.DC.NonDiversityPerRow, "px ").concat(e * Math.ceil(_.ZP.numNonDiversitySprites / I.DC.NonDiversityPerRow), "px")),
+  S = l().memoize(e => "".concat(e * I.DC.DiversityPerRow, "px ").concat(e * Math.ceil(_.ZP.numDiversitySprites / I.DC.DiversityPerRow), "px")),
+  f = (e, t, i) => {
+    let r, s, o;
     if (!e.useSpriteSheet) return;
-    let o = null != e.index ? e.index : 0;
-    e.hasDiversity ? (r = n("36837")("./images/spritesheet-".concat(t, "-").concat(i, ".png").replace("./images/", "./")), a = S(i), s = I.EmojiSprites.DiversityPerRow) : (r = n("12302")("./images/spritesheet-emoji-".concat(i, ".png").replace("./images/", "./")), a = f(i), s = I.EmojiSprites.NonDiversityPerRow);
-    let l = -o % s * i,
-      u = -Math.floor(o / s) * i;
+    let a = null != e.index ? e.index : 0;
+    e.hasDiversity ? (r = n(735800)("./spritesheet-".concat(t, "-").concat(i, ".png")), s = S(i), o = I.DC.DiversityPerRow) : (r = n(604901)("./spritesheet-emoji-".concat(i, ".png")), s = h(i), o = I.DC.NonDiversityPerRow);
+    let l = -a % o * i,
+      u = -Math.floor(a / o) * i;
     return {
       backgroundImage: "url('".concat(r, "')"),
       backgroundPosition: "".concat(l, "px ").concat(u, "px"),
-      backgroundSize: a,
+      backgroundSize: s,
       height: i,
       width: i
     }
   },
-  A = r.memo(function(e) {
+  N = r.memo(function(e) {
     let {
       emoji: t,
       size: n,
-      surrogateCodePoint: a,
-      allowAnimatedEmoji: o,
+      surrogateCodePoint: s,
+      allowAnimatedEmoji: a,
       "aria-label": l,
-      isLocked: d
-    } = e, f = (() => {
+      isLocked: _
+    } = e, h = (() => {
       if (!t.useSpriteSheet) {
         var e;
-        let r = null == t.id ? t.url : E.default.getEmojiURL({
+        let r = null == t.id ? t.url : E.ZP.getEmojiURL({
           id: t.id,
-          animated: o && t.animated,
-          size: I.EMOJI_URL_BASE_SIZE
+          animated: a && t.animated,
+          size: I.$U
         });
-        return null != r ? (0, i.jsx)(_.default, {
+        return null != r ? (0, i.jsx)(d.Z, {
           className: T.lockedEmoji,
           "aria-label": l,
           src: r,
@@ -55,19 +54,19 @@ let f = l().memoize(e => "".concat(e * I.EmojiSprites.NonDiversityPerRow, "px ")
         }) : null
       }
       return (0, i.jsx)("div", {
-        className: s()(T.emojiSpriteImage, {
-          [T.lockedEmoji]: d
+        className: o()(T.emojiSpriteImage, {
+          [T.lockedEmoji]: _
         }),
-        style: h(t, a, n),
+        style: f(t, s, n),
         children: (0, i.jsx)(u.HiddenVisually, {
           children: l
         })
       })
     })();
     return (0, i.jsxs)(r.Fragment, {
-      children: [f, d ? (0, i.jsx)("div", {
+      children: [h, _ ? (0, i.jsx)("div", {
         className: T.emojiLockIconContainer,
-        children: (0, i.jsx)(c.default, {
+        children: (0, i.jsx)(c.Z, {
           width: 16,
           height: 16,
           className: T.emojiLockIcon
@@ -75,4 +74,4 @@ let f = l().memoize(e => "".concat(e * I.EmojiSprites.NonDiversityPerRow, "px ")
       }) : null]
     })
   });
-t.default = A
+t.Z = N

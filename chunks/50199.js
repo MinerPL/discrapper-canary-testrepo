@@ -1,13 +1,12 @@
 "use strict";
-s.r(t);
-var a = s("735250");
-s("470079");
-var l = s("960259"),
-  n = s("825762"),
-  i = s("671533");
-t.default = (0, l.replaceIcon)(function(e) {
-  return (0, a.jsx)(i.default, {
+var n = t(735250);
+t(470079);
+var i = t(960259),
+  l = t(825762),
+  a = t(671533);
+s.Z = (0, i.hN)(function(e) {
+  return (0, n.jsx)(a.Z, {
     ...e,
-    direction: i.default.Directions.DOWN
+    direction: a.Z.Directions.DOWN
   })
-}, n.ArrowSmallDownIcon)
+}, l.c)

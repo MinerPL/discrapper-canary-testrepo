@@ -1,5 +1,5 @@
 e = n.nmd(e);
-var r = n("325237"),
+var r = n(325237),
   i = "object" == typeof t && t && !t.nodeType && t,
   a = i && e && !e.nodeType && e,
   o = a && a.exports === i ? r.Buffer : void 0,

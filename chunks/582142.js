@@ -3,8 +3,8 @@
 function i(e) {
   return null == e.guild_id
 }
-n.r(t), n.d(t, {
-  isPrivateChannel: function() {
+n.d(t, {
+  p: function() {
     return i
   }
 })

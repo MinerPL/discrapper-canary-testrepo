@@ -1,4 +1,4 @@
-var r = n("444675");
+var r = n(444675);
 "use strict";
 
 function i(e) {
@@ -34,7 +34,9 @@ function a(e, t) {
 }
 var o = {
   resolve: function() {
-    for (var e, t, n = "", o = !1, s = arguments.length - 1; s >= -1 && !o; s--) s >= 0 ? t = arguments[s] : (void 0 === e && (e = r.cwd()), t = e), i(t), 0 !== t.length && (n = t + "/" + n, o = 47 === t.charCodeAt(0));
+    for (var e, t, n = "", o = !1, s = arguments.length - 1; s >= -1 && !o; s--) {
+      if (s >= 0 ? t = arguments[s] : (void 0 === e && (e = r.cwd()), t = e), i(t), 0 !== t.length) n = t + "/" + n, o = 47 === t.charCodeAt(0)
+    }
     if (n = a(n, !o), o) return n.length > 0 ? "/" + n : "/";
     if (n.length > 0) return n;
     return "."

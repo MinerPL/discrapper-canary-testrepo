@@ -1,44 +1,39 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return u
+n.d(t, {
+  Z: function() {
+    return l
   }
 });
-var i = n("442837"),
-  r = n("270144"),
-  s = n("11176"),
-  a = n("171246"),
-  o = n("621853"),
-  l = n("981631");
+var i = n(442837),
+  r = n(270144),
+  s = n(171246),
+  o = n(621853),
+  a = n(981631);
 
-function u(e) {
+function l(e) {
   var t;
   let {
     user: n,
-    guildId: u
-  } = e, d = (0, i.useStateFromStores)([o.default], () => {
+    guildId: l
+  } = e, u = (0, i.e7)([o.Z], () => {
     var e;
-    return null === (e = o.default.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application
+    return null === (e = o.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application
   }, [n]), {
     applicationSubscriptionListingsShown: _
-  } = (0, r.default)({
-    applicationId: null == d ? void 0 : d.id,
-    groupListingId: null == d ? void 0 : d.primarySkuId,
-    guildId: u
+  } = (0, r.ZP)({
+    applicationId: null == u ? void 0 : u.id,
+    groupListingId: null == u ? void 0 : u.primarySkuId,
+    guildId: l
   }), {
-    activeSubscriptionListing: c,
-    activeEntitlement: E,
-    subscriptionGroupListing: I
-  } = (0, r.useActiveSubscriptionListingForApplication)(null == d ? void 0 : d.id, u), {
-    enabled: T
-  } = s.otpSkusExperiment.useExperiment({
-    location: "useBotApplicationSubscription"
-  }), f = null !== (t = null == I ? void 0 : I.sku_flags) && void 0 !== t ? t : 0, S = (0, a.isApplicationUserSubscription)(f) || null != u && u !== l.ME && (0, a.isApplicationGuildSubscription)(f) || T, h = null != E;
+    activeSubscriptionListing: d,
+    activeEntitlement: c,
+    subscriptionGroupListing: E
+  } = (0, r.F5)(null == u ? void 0 : u.id, l), I = null !== (t = null == E ? void 0 : E.sku_flags) && void 0 !== t ? t : 0, T = (0, s.KW)(I) || null != l && l !== a.ME && (0, s.KK)(I), h = null != c;
   return _ ? {
     botUpgraded: h,
-    botUpgradeable: !h && _ && S,
-    activeSubscriptionListing: c,
-    subscriptionGroupListing: I
+    botUpgradeable: !h && _ && T,
+    activeSubscriptionListing: d,
+    subscriptionGroupListing: E
   } : {
     botUpgraded: !1,
     botUpgradeable: !1,

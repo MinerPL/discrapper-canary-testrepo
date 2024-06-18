@@ -1,82 +1,82 @@
 "use strict";
-s.r(t), s.d(t, {
-  uploadEmojiFile: function() {
-    return S
+t.d(s, {
+  G: function() {
+    return N
   }
 });
-var a = s("668781"),
-  l = s("80932"),
-  n = s("197712"),
-  i = s("426642"),
-  r = s("626135"),
-  o = s("176354"),
-  d = s("956664"),
-  u = s("185923"),
-  c = s("981631"),
-  E = s("689938"),
-  _ = s("413135").Buffer;
-let I = (e, t, s, a) => (r.default.track(c.AnalyticEvents.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
-    guild_id: s,
-    file_size: t,
-    upload_id: a
-  }), i.ImageInputUploadErrors.TOO_BIG),
-  T = (e, t, s) => {
-    r.default.track(c.AnalyticEvents.EMOJI_FILE_RESIZED, {
+var n = t(668781),
+  i = t(80932),
+  l = t(197712),
+  a = t(426642),
+  r = t(626135),
+  o = t(176354),
+  c = t(956664),
+  d = t(185923),
+  u = t(981631),
+  E = t(689938),
+  _ = t(413135).Buffer;
+let I = (e, s, t, n) => (r.default.track(u.rMx.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
+    guild_id: t,
+    file_size: s,
+    upload_id: n
+  }), a.d.TOO_BIG),
+  T = (e, s, t) => {
+    r.default.track(u.rMx.EMOJI_FILE_RESIZED, {
       is_animated: !1,
       file_type: e.type.split("/").pop(),
       original_file_size_bytes: e.size,
-      resized_file_size_bytes: (0, d.dataUriFileSize)(t),
-      resized_file_too_big: s
+      resized_file_size_bytes: (0, c.QB)(s),
+      resized_file_too_big: t
     })
   },
-  S = async e => {
+  N = async e => {
     let {
-      data: t,
-      file: s,
-      guildId: d,
-      uploadId: S,
-      roles: f,
-      image: m,
-      hideErrorModal: N
-    } = e, g = o.default.sanitizeEmojiName(s.name.split(".")[0]);
-    if (o.default.isFileTooBig(s)) {
-      if ("image/gif" === s.type) return I(s.name, s.size, d, S);
-      if (null != m) {
+      data: s,
+      file: t,
+      guildId: c,
+      uploadId: N,
+      roles: m,
+      image: S,
+      hideErrorModal: h
+    } = e, g = o.ZP.sanitizeEmojiName(t.name.split(".")[0]);
+    if (o.ZP.isFileTooBig(t)) {
+      if ("image/gif" === t.type) return I(t.name, t.size, c, N);
+      if (null != S) {
         let e;
-        t = (0, n.downsizeImage)(m, 128, 128);
+        s = (0, l.Ae)(S, 128, 128);
         try {
-          e = o.default.isDataTooBig(t)
+          e = o.ZP.isDataTooBig(s)
         } catch (e) {
-          return I(s.name, s.size, d, S)
+          return I(t.name, t.size, c, N)
         }
-        if (T(s, t, e), e) return I(s.name, s.size, d, S)
+        if (T(t, s, e), e) return I(t.name, t.size, c, N)
       }
     }
     try {
-      await (0, l.uploadEmoji)({
-        guildId: d,
-        image: t,
+      await (0, i.rS)({
+        guildId: c,
+        image: s,
         name: g,
-        roles: f
-      }), r.default.track(c.AnalyticEvents.EMOJI_UPLOAD_COMPLETED, {
-        guild_id: d,
-        upload_id: S
+        roles: m
+      }), r.default.track(u.rMx.EMOJI_UPLOAD_COMPLETED, {
+        guild_id: c,
+        upload_id: N
       })
     } catch (o) {
-      let e, s;
+      let e, t;
       let {
-        body: l,
-        status: n
+        body: i,
+        status: l
       } = o;
-      return null != l && (l.code === c.AbortCodes.TOO_MANY_EMOJI ? (e = E.default.Messages.TOO_MANY_EMOJI, s = i.ImageInputUploadErrors.TOO_MANY_EMOJI) : l.code === c.AbortCodes.TOO_MANY_ANIMATED_EMOJI ? (e = E.default.Messages.TOO_MANY_ANIMATED_EMOJI, s = i.ImageInputUploadErrors.TOO_MANY_ANIMATED_EMOJI) : null != l.image || l.code === c.AbortCodes.INVALID_FILE_ASSET_SIZE ? (r.default.track(c.AnalyticEvents.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
-        guild_id: d,
-        file_size: _.byteLength(t),
-        upload_id: S
-      }), e = E.default.Messages.EMOJI_TOO_BIG.format({
-        maxSize: u.EMOJI_MAX_FILESIZE_KB
-      }), s = i.ImageInputUploadErrors.TOO_BIG) : (null != l.image || l.code === c.AbortCodes.INVALID_FILE_ASSET_SIZE_RESIZE_GIF) && (s = i.ImageInputUploadErrors.RESIZE_GIF)), 429 === n && (e = E.default.Messages.RATE_LIMITED, s = i.ImageInputUploadErrors.RATE_LIMIT), null != e && !N && a.default.show({
-        title: E.default.Messages.GENERIC_ERROR_TITLE,
+      return null != i && (i.code === u.evJ.TOO_MANY_EMOJI ? (e = E.Z.Messages.TOO_MANY_EMOJI, t = a.d.TOO_MANY_EMOJI) : i.code === u.evJ.TOO_MANY_ANIMATED_EMOJI ? (e = E.Z.Messages.TOO_MANY_ANIMATED_EMOJI, t = a.d.TOO_MANY_ANIMATED_EMOJI) : null != i.image || i.code === u.evJ.INVALID_FILE_ASSET_SIZE ? (r.default.track(u.rMx.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
+        guild_id: c,
+        file_size: _.byteLength(s),
+        upload_id: N
+      }), e = E.Z.Messages.EMOJI_TOO_BIG.format({
+        maxSize: d.xG
+      }), t = a.d.TOO_BIG) : (null != i.image || i.code === u.evJ.INVALID_FILE_ASSET_SIZE_RESIZE_GIF) && (t = a.d.RESIZE_GIF)), 429 === l && (e = E.Z.Messages.RATE_LIMITED, t = a.d.RATE_LIMIT), null != e && !h && n.Z.show({
+        title: E.Z.Messages.GENERIC_ERROR_TITLE,
         body: e
-      }), s
+      }), t
     }
   }

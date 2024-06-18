@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  convertOAuth2Authorization: function() {
+n.d(t, {
+  d: function() {
     return r
   }
 });
-var i = n("149765");
+var i = n(149765);
 
 function r(e) {
   if (null == e.guilds) return e;
@@ -12,7 +12,7 @@ function r(e) {
     ...e,
     guilds: e.guilds.map(e => ({
       ...e,
-      permissions: i.deserialize(e.permissions)
+      permissions: i.vB(e.permissions)
     }))
   }
 }

@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return l
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("803997"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("481060"),
-  o = n("315472");
+  o = n(481060),
+  a = n(427782);
 
 function l(e) {
   let {
@@ -17,9 +17,9 @@ function l(e) {
     size: n,
     ...r
   } = e;
-  return (0, i.jsx)(a.Button, {
-    className: s()(o.button, t),
-    size: s()(o.buttonSize, n),
+  return (0, i.jsx)(o.Button, {
+    className: s()(a.button, t),
+    size: s()(a.buttonSize, n),
     ...r
   })
 }

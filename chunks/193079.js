@@ -1,42 +1,41 @@
 "use strict";
-r.r(t);
-var n = r("548015"),
-  a = r("74748"),
-  o = r("572657"),
-  i = r("318670"),
-  l = r("252798"),
-  u = r("396379"),
-  s = n.default ? n.default.prototype : void 0,
-  f = s ? s.valueOf : void 0;
-t.default = function(e, t, r, n, s, c, d) {
-  switch (r) {
+var r = n(548015),
+  i = n(74748),
+  a = n(572657),
+  o = n(318670),
+  s = n(252798),
+  u = n(396379),
+  c = r.Z ? r.Z.prototype : void 0,
+  l = c ? c.valueOf : void 0;
+t.Z = function(e, t, n, r, c, d, f) {
+  switch (n) {
     case "[object DataView]":
       if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset) break;
       e = e.buffer, t = t.buffer;
     case "[object ArrayBuffer]":
-      if (e.byteLength != t.byteLength || !c(new a.default(e), new a.default(t))) break;
+      if (e.byteLength != t.byteLength || !d(new i.Z(e), new i.Z(t))) break;
       return !0;
     case "[object Boolean]":
     case "[object Date]":
     case "[object Number]":
-      return (0, o.default)(+e, +t);
+      return (0, a.Z)(+e, +t);
     case "[object Error]":
       return e.name == t.name && e.message == t.message;
     case "[object RegExp]":
     case "[object String]":
       return e == t + "";
     case "[object Map]":
-      var p = l.default;
+      var p = s.Z;
     case "[object Set]":
-      var h = 1 & n;
-      if (p || (p = u.default), e.size != t.size && !h) break;
-      var b = d.get(e);
-      if (b) return b == t;
-      n |= 2, d.set(e, t);
-      var v = (0, i.default)(p(e), p(t), n, s, c, d);
-      return d.delete(e), v;
+      var h = 1 & r;
+      if (p || (p = u.Z), e.size != t.size && !h) break;
+      var m = f.get(e);
+      if (m) return m == t;
+      r |= 2, f.set(e, t);
+      var g = (0, o.Z)(p(e), p(t), r, c, d, f);
+      return f.delete(e), g;
     case "[object Symbol]":
-      if (f) return f.call(e) == f.call(t)
+      if (l) return l.call(e) == l.call(t)
   }
   return !1
 }

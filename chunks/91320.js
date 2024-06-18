@@ -1,154 +1,107 @@
 "use strict";
-n.r(e), n.d(e, {
-  BaseClient: function() {
-    return p.BaseClient
+n.d(e, {
+  $e: function() {
+    return o.$e
   },
-  DEFAULT_ENVIRONMENT: function() {
-    return w.DEFAULT_ENVIRONMENT
+  Gd: function() {
+    return u.Gd
   },
-  FunctionToString: function() {
-    return k.FunctionToString
+  Jn: function() {
+    return h.J
   },
-  Hub: function() {
-    return l.Hub
+  QD: function() {
+    return p.QD
   },
-  InboundFilters: function() {
-    return x.InboundFilters
+  Tb: function() {
+    return o.Tb
   },
-  Integrations: function() {
-    return b
+  Ts: function() {
+    return r.T
   },
-  ModuleMetadata: function() {
-    return T.ModuleMetadata
+  Wq: function() {
+    return d.W
   },
-  SDK_VERSION: function() {
-    return y.SDK_VERSION
+  Xb: function() {
+    return u.Xb
   },
-  Scope: function() {
-    return d.Scope
+  YA: function() {
+    return o.YA
   },
-  TRACING_DEFAULTS: function() {
-    return i.TRACING_DEFAULTS
+  Yr: function() {
+    return o.Yr
   },
-  addBreadcrumb: function() {
-    return c.addBreadcrumb
+  Zd: function() {
+    return i.Zd
   },
-  addGlobalEventProcessor: function() {
-    return d.addGlobalEventProcessor
+  _e: function() {
+    return _._
   },
-  addTracingExtensions: function() {
-    return r.addTracingExtensions
+  av: function() {
+    return o.av
   },
-  captureEvent: function() {
-    return c.captureEvent
+  cc: function() {
+    return l.c
   },
-  captureException: function() {
-    return c.captureException
+  cq: function() {
+    return f.c
   },
-  captureMessage: function() {
-    return c.captureMessage
+  e: function() {
+    return o.e
   },
-  configureScope: function() {
-    return c.configureScope
+  eN: function() {
+    return o.eN
   },
-  createTransport: function() {
-    return _.createTransport
+  g4: function() {
+    return a.g
   },
-  extractTraceparentData: function() {
-    return R.extractTraceparentData
+  mG: function() {
+    return o.mG
   },
-  getActiveTransaction: function() {
-    return o.getActiveTransaction
+  n_: function() {
+    return o.n_
   },
-  getCurrentHub: function() {
-    return l.getCurrentHub
+  pj: function() {
+    return u.pj
   },
-  getDynamicSamplingContextFromClient: function() {
-    return u.getDynamicSamplingContextFromClient
+  qG: function() {
+    return m.qG
   },
-  getHubFromCarrier: function() {
-    return l.getHubFromCarrier
+  qv: function() {
+    return c.q
   },
-  getIntegrationsToSetup: function() {
-    return v.getIntegrationsToSetup
+  rJ: function() {
+    return o.rJ
   },
-  getReportDialogEndpoint: function() {
-    return f.getReportDialogEndpoint
+  sU: function() {
+    return o.sU
   },
-  hasTracingEnabled: function() {
-    return S.hasTracingEnabled
+  sX: function() {
+    return l.s
   },
-  initAndBind: function() {
-    return h.initAndBind
+  uT: function() {
+    return o.uT
   },
-  makeMain: function() {
-    return l.makeMain
+  v: function() {
+    return o.v
   },
-  makeMultiplexedTransport: function() {
-    return m.makeMultiplexedTransport
+  vi: function() {
+    return u.vi
   },
-  makeOfflineTransport: function() {
-    return g.makeOfflineTransport
-  },
-  prepareEvent: function() {
-    return E.prepareEvent
-  },
-  setContext: function() {
-    return c.setContext
-  },
-  setExtra: function() {
-    return c.setExtra
-  },
-  setExtras: function() {
-    return c.setExtras
-  },
-  setTag: function() {
-    return c.setTag
-  },
-  setTags: function() {
-    return c.setTags
-  },
-  setUser: function() {
-    return c.setUser
-  },
-  spanStatusfromHttpCode: function() {
-    return a.spanStatusfromHttpCode
-  },
-  startIdleTransaction: function() {
-    return r.startIdleTransaction
-  },
-  startTransaction: function() {
-    return c.startTransaction
-  },
-  trace: function() {
-    return s.trace
-  },
-  withScope: function() {
-    return c.withScope
+  x1: function() {
+    return s.x1
   }
 });
-var r = n("90668"),
-  i = n("376097"),
-  a = n("48950"),
-  o = n("147816"),
-  s = n("468174"),
-  u = n("154405"),
-  c = n("138122"),
-  l = n("876122"),
-  d = n("703498"),
-  f = n("507506"),
-  p = n("861579"),
-  h = n("110575"),
-  _ = n("347421"),
-  g = n("499833"),
-  m = n("449701"),
-  y = n("139782"),
-  v = n("595208"),
-  b = n("89837"),
-  E = n("392405"),
-  S = n("633401"),
-  w = n("28434"),
-  T = n("333878"),
-  k = n("740054"),
-  x = n("344106"),
-  R = n("648238")
+var r = n(90668),
+  i = n(48950),
+  s = n(147816),
+  a = n(468174),
+  o = n(138122),
+  u = n(876122),
+  l = n(703498),
+  c = n(347421),
+  d = n(449701),
+  h = n(139782),
+  _ = n(333878),
+  f = n(740054),
+  p = n(344106),
+  m = n(648238)

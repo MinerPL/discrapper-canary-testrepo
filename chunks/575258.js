@@ -1,37 +1,36 @@
 "use strict";
-s.r(t);
-var a, l, n, i, r = s("442837"),
-  o = s("570140"),
-  d = s("430824"),
-  u = s("981631");
-let c = {
+var n, i, l, a, r = t(442837),
+  o = t(570140),
+  c = t(430824),
+  d = t(981631);
+let u = {
     description: "",
     channels: [],
     enabled: !1
   },
-  E = c,
+  E = u,
   _ = !1,
   I = !1,
-  T = c;
+  T = u;
 
-function S(e) {
+function N(e) {
   let {
-    welcomeScreen: t,
-    guildId: s
-  } = e, a = d.default.getGuild(s);
-  if (null != t) {
-    var l, n;
+    welcomeScreen: s,
+    guildId: t
+  } = e, n = c.Z.getGuild(t);
+  if (null != s) {
+    var i, l;
     T = E = {
-      description: null !== (l = t.description) && void 0 !== l ? l : "",
-      channels: null !== (n = t.welcome_channels) && void 0 !== n ? n : [],
-      enabled: null == a ? void 0 : a.hasFeature(u.GuildFeatures.WELCOME_SCREEN_ENABLED)
+      description: null !== (i = s.description) && void 0 !== i ? i : "",
+      channels: null !== (l = s.welcome_channels) && void 0 !== l ? l : [],
+      enabled: null == n ? void 0 : n.hasFeature(d.oNc.WELCOME_SCREEN_ENABLED)
     }
-  } else T = E = c;
+  } else T = E = u;
   I = !1
 }
-class f extends(i = r.default.Store) {
+class m extends(a = r.ZP.Store) {
   initialize() {
-    this.waitFor(d.default)
+    this.waitFor(c.Z)
   }
   get() {
     return T
@@ -48,34 +47,34 @@ class f extends(i = r.default.Store) {
     }
   }
 }
-n = "WelcomeScreenSettingsStore", (l = "displayName") in(a = f) ? Object.defineProperty(a, l, {
-  value: n,
+l = "WelcomeScreenSettingsStore", (i = "displayName") in(n = m) ? Object.defineProperty(n, i, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = n, t.default = new f(o.default, {
-  WELCOME_SCREEN_FETCH_SUCCESS: S,
-  WELCOME_SCREEN_UPDATE: S,
+}) : n[i] = l, s.Z = new m(o.Z, {
+  WELCOME_SCREEN_FETCH_SUCCESS: N,
+  WELCOME_SCREEN_UPDATE: N,
   WELCOME_SCREEN_SETTINGS_RESET: function() {
     T = E, I = !1
   },
   WELCOME_SCREEN_SETTINGS_CLEAR: function() {
-    T = c, E = c
+    T = u, E = u
   },
   WELCOME_SCREEN_SETTINGS_UPDATE: function(e) {
     let {
-      settings: t
+      settings: s
     } = e;
     T = {
       ...T,
-      ...t
+      ...s
     }
   },
   WELCOME_SCREEN_SUBMIT: function() {
     _ = !0
   },
   WELCOME_SCREEN_SUBMIT_SUCCESS: function(e) {
-    S(e), _ = !1
+    N(e), _ = !1
   },
   WELCOME_SCREEN_SUBMIT_FAILURE: function() {
     I = !0, _ = !1

@@ -1,20 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
-  isEligibleForContentInventoryV1: function() {
-    return s
-  },
-  isEligibleForImpressionCapping: function() {
-    return o
-  },
-  isEligibleForListenedMediaInventory: function() {
+n.d(t, {
+  Dy: function() {
     return E
   },
-  useIsEligibleForTopArtistInventory: function() {
-    return _
+  Rg: function() {
+    return d
+  },
+  sA: function() {
+    return o
+  },
+  wh: function() {
+    return T
+  },
+  wm: function() {
+    return a
   }
 });
-var i = n("818083");
-let r = (0, i.createExperiment)({
+var i = n(818083);
+let r = (0, i.B)({
     kind: "user",
     id: "2024-03_content_inventory_memberlist_and_ranker",
     label: "Enables the memberlist content feed",
@@ -40,9 +43,15 @@ let r = (0, i.createExperiment)({
         enabled: !0,
         impressionCappingEnabled: !0
       }
+    }, {
+      id: 4,
+      label: "Another Heuristic treatment for comparison ranking",
+      config: {
+        enabled: !0
+      }
     }]
   }),
-  a = (0, i.createExperiment)({
+  s = (0, i.B)({
     kind: "user",
     id: "2024-03_content_inventory_ranker_client_dummy",
     label: "Tracks exposure for which ranker bucket the user is in. This is here to test an exposure bug",
@@ -54,7 +63,7 @@ let r = (0, i.createExperiment)({
     }]
   });
 
-function s(e) {
+function o(e) {
   u.getCurrentConfig({
     location: e
   }, {
@@ -71,14 +80,14 @@ function s(e) {
   }, {
     autoTrackExposure: !0
   });
-  return t && a.getCurrentConfig({
+  return t && s.getCurrentConfig({
     location: e
   }, {
     autoTrackExposure: !0
   }), t
 }
 
-function o(e) {
+function a(e) {
   let {
     impressionCappingEnabled: t
   } = r.getCurrentConfig({
@@ -87,14 +96,14 @@ function o(e) {
     autoTrackExposure: !0
   });
   return !0 === t
-}(0, i.createExperiment)({
+}(0, i.B)({
   kind: "user",
   id: "2024-03_content_inventory_surface_holdout",
   label: "Content Inventory Surface Holdout",
   defaultConfig: {},
   treatments: []
 });
-let l = (0, i.createExperiment)({
+let l = (0, i.B)({
     kind: "user",
     id: "2024-03_holdout_bug_main_wrong_way",
     label: "Holdout Bug Experiment Wrong Way (pls ignore)",
@@ -105,7 +114,7 @@ let l = (0, i.createExperiment)({
       config: {}
     }]
   }),
-  u = (0, i.createExperiment)({
+  u = (0, i.B)({
     kind: "user",
     id: "2024-03_holdout_bug_main_right_way",
     label: "Holdout Bug Experiment Right Way (pls ignore)",
@@ -116,7 +125,7 @@ let l = (0, i.createExperiment)({
       config: {}
     }]
   }),
-  d = (0, i.createExperiment)({
+  _ = (0, i.B)({
     kind: "user",
     id: "2024-05_content_inventory_top_artist_cards",
     label: "Content Inventory: TOP_ARTIST cards",
@@ -132,17 +141,17 @@ let l = (0, i.createExperiment)({
     }]
   });
 
-function _(e) {
+function d(e) {
   let {
     enabled: t
-  } = d.useExperiment({
+  } = _.useExperiment({
     location: e
   }, {
     autoTrackExposure: !0
   });
   return t
 }
-let c = (0, i.createExperiment)({
+let c = (0, i.B)({
   kind: "user",
   id: "2024-04_content_inventory_listened_media",
   label: "Content Inventory: LISTENED_MEDIA",
@@ -162,6 +171,32 @@ function E(e) {
   let {
     enabled: t
   } = c.getCurrentConfig({
+    location: e
+  }, {
+    autoTrackExposure: !0
+  });
+  return t
+}
+let I = (0, i.B)({
+  kind: "user",
+  id: "2024-05_content_inventory_games_rich_presence",
+  label: "Content Inventory: Rich Presence for Games",
+  defaultConfig: {
+    enabled: !1
+  },
+  treatments: [{
+    id: 1,
+    label: "Enabled",
+    config: {
+      enabled: !0
+    }
+  }]
+});
+
+function T(e) {
+  let {
+    enabled: t
+  } = I.useExperiment({
     location: e
   }, {
     autoTrackExposure: !0

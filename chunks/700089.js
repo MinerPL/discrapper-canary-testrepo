@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  useTopCommands: function() {
-    return o
+n.d(t, {
+  R: function() {
+    return a
   }
 });
-var i = n("470079"),
-  r = n("442837"),
-  s = n("675478"),
-  a = n("654455");
+var i = n(470079),
+  r = n(442837),
+  s = n(675478),
+  o = n(654455);
 
-function o(e) {
+function a(e) {
   i.useEffect(() => {
-    s.FrecencyUserSettingsActionCreators.loadIfNecessary()
+    s.DZ.loadIfNecessary()
   }, []);
-  let t = (0, r.useStateFromStores)([a.default], () => a.default.getTopCommandsWithoutLoadingLatest());
-  return i.useMemo(() => (0, a.getFilteredTopCommands)(t, e), [t, e])
+  let t = (0, r.e7)([o.ZP], () => o.ZP.getTopCommandsWithoutLoadingLatest());
+  return i.useMemo(() => (0, o.LU)(t, e), [t, e])
 }

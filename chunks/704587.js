@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  DmSettingsUpsellExperiment: function() {
-    return i
-  },
-  isEligibleForDmSettingsUpsell: function() {
+n.d(t, {
+  G: function() {
     return r
+  },
+  s: function() {
+    return i
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-04_dm_settings_upsell",
   label: "DM Settings Upsell",

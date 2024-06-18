@@ -1,14 +1,16 @@
 "use strict";
 let i;
-n.r(t), n.d(t, {
-  astParserFor: function() {
-    return a
+n.d(t, {
+  Rp: function() {
+    return r.Rp
   },
-  reactParserFor: function() {
+  _p: function() {
+    return o
+  },
+  w4: function() {
     return s
   }
 });
-var r = n("840498");
-n.es(r, t);
-let s = (i = n("842091").default).reactParserFor,
-  a = i.astParserFor
+var r = n(840498);
+let s = (i = n(842091).Z).reactParserFor,
+  o = i.astParserFor

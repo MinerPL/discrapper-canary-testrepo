@@ -1,5 +1,5 @@
 "use strict";
-var n = r("581079");
+var n = r(581079);
 t.exports = function(t) {
   var e;
   return (e = t) && ("object" == typeof e || "function" == typeof e) && "length" in e && !("setInterval" in e) && "number" != typeof e.nodeType && (Array.isArray(e) || "callee" in e || "item" in e) ? Array.isArray(t) ? t.slice() : function(t) {

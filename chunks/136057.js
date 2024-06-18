@@ -1,9 +1,8 @@
 "use strict";
-r.r(t);
-var n = r("544364"),
-  i = n.hasCSSTOMSupport && CSS ? CSS.px : "px",
-  o = n.hasCSSTOMSupport && CSS ? CSS.ms : "ms",
-  s = n.hasCSSTOMSupport && CSS ? CSS.percent : "%";
+var n = r(544364),
+  i = n.HZ && CSS ? CSS.px : "px",
+  o = n.HZ && CSS ? CSS.ms : "ms",
+  s = n.HZ && CSS ? CSS.percent : "%";
 
 function a(e) {
   var t = /(-[a-z])/g,
@@ -161,7 +160,7 @@ function l(e, t, r) {
   }
   return t
 }
-t.default = function(e) {
+t.Z = function(e) {
   void 0 === e && (e = {});
   var t = a(e);
   return {

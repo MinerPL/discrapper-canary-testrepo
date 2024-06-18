@@ -1,7 +1,6 @@
 "use strict";
-n.r(t);
-var i = n("818083");
-t.default = (0, i.createExperiment)({
+var i = n(818083);
+t.Z = (0, i.B)({
   kind: "user",
   id: "2021-06_hdr_screen_capture",
   label: "HDR Screen Capture",

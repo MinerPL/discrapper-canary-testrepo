@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return s
   }
-}), n("757143");
-var i = n("379082");
+}), n(757143);
+var i = n(379082);
 let r = /🏻|🏼|🏽|🏾|🏿|\uFE0F/g;
 
 function s(e) {
-  return i.HIGH_FIVE_EMOJIS.has(e.replace(r, ""))
+  return i.h.has(e.replace(r, ""))
 }

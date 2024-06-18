@@ -1,27 +1,27 @@
 "use strict";
-n.r(t), n.d(t, {
-  getActivityAltText: function() {
+n.d(t, {
+  ZH: function() {
     return h
   },
-  getActivityPlatform: function() {
-    return f
+  b6: function() {
+    return T
   },
-  getProfileInfo: function() {
+  j3: function() {
     return S
   },
-  howLong: function() {
-    return T
+  xC: function() {
+    return f
   }
-}), n("47120");
-var i = n("866442"),
-  r = n("726542"),
-  s = n("503438"),
-  a = n("802856"),
-  o = n("420660"),
-  l = n("168631"),
-  u = n("621853"),
-  d = n("981631"),
-  _ = n("689938");
+}), n(47120);
+var i = n(866442),
+  r = n(726542),
+  s = n(503438),
+  o = n(802856),
+  a = n(420660),
+  l = n(168631),
+  u = n(621853),
+  _ = n(981631),
+  d = n(689938);
 let c = e => "".concat(e).length < 13 ? 1e3 * e : e,
   E = e => {
     let t = Date.now() / 1e3;
@@ -32,46 +32,48 @@ let c = e => "".concat(e).length < 13 ? 1e3 * e : e,
     }
   },
   I = (e, t) => {
-    let n = Math.max(t - e, 0);
+    let n = Math.max(t - e, 0),
+      i = Math.floor(n) % 60,
+      r = Math.floor(n / 60) % 60;
     return {
       hours: Math.floor(n / 3600) % 24,
-      minutes: Math.floor(n / 60) % 60,
-      seconds: Math.floor(n) % 60
+      minutes: r,
+      seconds: i
     }
   },
   T = e => {
     let t = E(e);
     return t.hours > 0 ? "".concat(t.hours, " hours") : t.minutes > 0 ? "".concat(t.minutes, " minutes") : "".concat(t.seconds, " seconds")
   },
-  f = e => (0, s.default)(e) ? r.default.get(d.PlatformTypes.SPOTIFY) : (0, a.default)(e) ? r.default.get(d.PlatformTypes.XBOX) : null != e.platform && [d.ActivityGamePlatforms.PS4, d.ActivityGamePlatforms.PS5].includes(e.platform) ? r.default.get(d.PlatformTypes.PLAYSTATION) : e.name === r.default.get(d.PlatformTypes.LEAGUE_OF_LEGENDS).name ? r.default.get(d.PlatformTypes.LEAGUE_OF_LEGENDS) : void(e.type, d.ActivityTypes.PLAYING),
+  h = e => (0, s.Z)(e) ? r.Z.get(_.ABu.SPOTIFY) : (0, o.Z)(e) ? r.Z.get(_.ABu.XBOX) : null != e.platform && [_.M7m.PS4, _.M7m.PS5].includes(e.platform) ? r.Z.get(_.ABu.PLAYSTATION) : e.name === r.Z.get(_.ABu.LEAGUE_OF_LEGENDS).name ? r.Z.get(_.ABu.LEAGUE_OF_LEGENDS) : void(e.type === _.IIU.PLAYING),
   S = (e, t) => {
     var n;
-    let r = u.default.getUserProfile(e.id),
-      [s, a] = null !== (n = null == r ? void 0 : r.themeColors) && void 0 !== n ? n : [],
-      o = (0, l.getProfileTheme)(s),
-      d = null != a ? (0, i.int2hex)(a) : t;
+    let r = u.Z.getUserProfile(e.id),
+      [s, o] = null !== (n = null == r ? void 0 : r.themeColors) && void 0 !== n ? n : [],
+      a = (0, l.V3)(s),
+      _ = null != o ? (0, i.Rf)(o) : t;
     return {
-      color: d,
-      theme: d === t ? "dark" : o
+      color: _,
+      theme: _ === t ? "dark" : a
     }
   },
-  h = (e, t) => (0, s.default)(t) ? _.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_SPOTIFY.format({
+  f = (e, t) => (0, s.Z)(t) ? d.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_SPOTIFY.format({
     username: e.username,
     song: t.details,
     artist: t.state
-  }) : t.type === d.ActivityTypes.PLAYING ? _.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+  }) : t.type === _.IIU.PLAYING ? d.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
     username: e.username,
     activity: t.name
-  }) : t.type === d.ActivityTypes.WATCHING ? _.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
+  }) : t.type === _.IIU.WATCHING ? d.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
     username: e.username,
     activity: t.name
-  }) : t.type === d.ActivityTypes.LISTENING ? _.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING.format({
+  }) : t.type === _.IIU.LISTENING ? d.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING.format({
     username: e.username,
     activity: t.name
-  }) : (0, o.default)(t) || t.type === d.ActivityTypes.STREAMING ? _.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING.format({
+  }) : (0, a.Z)(t) || t.type === _.IIU.STREAMING ? d.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING.format({
     username: e.username,
     activity: t.name
-  }) : _.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_BASE.format({
+  }) : d.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_BASE.format({
     username: e.username,
     activity: t.name
   })

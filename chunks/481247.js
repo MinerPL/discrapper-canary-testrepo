@@ -1,6 +1,6 @@
 "use strict";
-let r = n("689118"),
-  i = n("692656");
+let r = n(689118),
+  i = n(692656);
 
 function a(e) {
   i.call(this, e), this.enc = "pem"

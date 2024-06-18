@@ -1,18 +1,24 @@
 "use strict";
-n.r(e), n.d(e, {
-  BaseClient: function() {
-    return d
+n.d(e, {
+  W: function() {
+    return g
   }
 });
-var r = n("648238"),
-  i = n("507506"),
-  a = n("419767"),
-  o = n("595208"),
-  s = n("741900"),
-  u = n("154405"),
-  c = n("392405");
-let l = "Not capturing exception because it's already been captured.";
-class d {
+var r = n(177668),
+  i = n(529866),
+  s = n(862315),
+  a = n(46834),
+  o = n(880803),
+  u = n(50074),
+  l = n(303155),
+  c = n(507506),
+  d = n(419767),
+  h = n(595208),
+  _ = n(741900),
+  f = n(154405),
+  p = n(392405);
+let m = "Not capturing exception because it's already been captured.";
+class g {
   __init() {
     this._integrations = {}
   }
@@ -29,8 +35,8 @@ class d {
     this._hooks = {}
   }
   constructor(t) {
-    if (d.prototype.__init.call(this), d.prototype.__init2.call(this), d.prototype.__init3.call(this), d.prototype.__init4.call(this), d.prototype.__init5.call(this), this._options = t, t.dsn ? this._dsn = (0, r.makeDsn)(t.dsn) : ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.warn("No DSN provided, client will not do anything."), this._dsn) {
-      let e = (0, i.getEnvelopeEndpointWithUrlEncodedAuth)(this._dsn, t);
+    if (g.prototype.__init.call(this), g.prototype.__init2.call(this), g.prototype.__init3.call(this), g.prototype.__init4.call(this), g.prototype.__init5.call(this), this._options = t, t.dsn ? this._dsn = (0, r.vK)(t.dsn) : ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.warn("No DSN provided, client will not do anything."), this._dsn) {
+      let e = (0, c.U)(this._dsn, t);
       this._transport = t.transport({
         recordDroppedEvent: this.recordDroppedEvent.bind(this),
         ...t.transportOptions,
@@ -39,38 +45,38 @@ class d {
     }
   }
   captureException(t, e, n) {
-    if ((0, r.checkOrSetAlreadyCaught)(t)) {
-      ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.log(l);
+    if ((0, s.YO)(t)) {
+      ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.log(m);
       return
     }
-    let i = e && e.event_id;
+    let r = e && e.event_id;
     return this._process(this.eventFromException(t, e).then(t => this._captureEvent(t, e, n)).then(t => {
+      r = t
+    })), r
+  }
+  captureMessage(t, e, n, r) {
+    let i = n && n.event_id,
+      s = (0, a.pt)(t) ? this.eventFromMessage(String(t), e, n) : this.eventFromException(t, n);
+    return this._process(s.then(t => this._captureEvent(t, n, r)).then(t => {
       i = t
     })), i
-  }
-  captureMessage(t, e, n, i) {
-    let a = n && n.event_id,
-      o = (0, r.isPrimitive)(t) ? this.eventFromMessage(String(t), e, n) : this.eventFromException(t, n);
-    return this._process(o.then(t => this._captureEvent(t, n, i)).then(t => {
-      a = t
-    })), a
   }
   captureEvent(t, e, n) {
-    if (e && e.originalException && (0, r.checkOrSetAlreadyCaught)(e.originalException)) {
-      ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.log(l);
+    if (e && e.originalException && (0, s.YO)(e.originalException)) {
+      ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.log(m);
       return
     }
-    let i = e && e.event_id;
+    let r = e && e.event_id;
     return this._process(this._captureEvent(t, e, n).then(t => {
-      i = t
-    })), i
+      r = t
+    })), r
   }
   captureSession(t) {
     if (!this._isEnabled()) {
-      ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.warn("SDK not enabled, will not capture session.");
+      ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.warn("SDK not enabled, will not capture session.");
       return
     }
-    "string" != typeof t.release ? ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.warn("Discarded session because of missing or non-string release") : (this.sendSession(t), (0, s.updateSession)(t, {
+    "string" != typeof t.release ? ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.warn("Discarded session because of missing or non-string release") : (this.sendSession(t), (0, _.CT)(t, {
       init: !1
     }))
   }
@@ -88,13 +94,13 @@ class d {
   }
   flush(t) {
     let e = this._transport;
-    return e ? this._isClientDoneProcessing(t).then(n => e.flush(t).then(t => n && t)) : (0, r.resolvedSyncPromise)(!0)
+    return e ? this._isClientDoneProcessing(t).then(n => e.flush(t).then(t => n && t)) : (0, o.WD)(!0)
   }
   close(t) {
     return this.flush(t).then(t => (this.getOptions().enabled = !1, t))
   }
   setupIntegrations() {
-    this._isEnabled() && !this._integrationsInitialized && (this._integrations = (0, o.setupIntegrations)(this._options.integrations), this._integrationsInitialized = !0)
+    this._isEnabled() && !this._integrationsInitialized && (this._integrations = (0, h.q4)(this._options.integrations), this._integrationsInitialized = !0)
   }
   getIntegrationById(t) {
     return this._integrations[t]
@@ -103,30 +109,30 @@ class d {
     try {
       return this._integrations[t.id] || null
     } catch (e) {
-      return ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.warn(`Cannot retrieve integration ${t.id} from the current Client`), null
+      return ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.warn(`Cannot retrieve integration ${t.id} from the current Client`), null
     }
   }
   addIntegration(t) {
-    (0, o.setupIntegration)(t, this._integrations)
+    (0, h.m7)(t, this._integrations)
   }
   sendEvent(t, e = {}) {
     if (this._dsn) {
-      let n = (0, a.createEventEnvelope)(t, this._dsn, this._options._metadata, this._options.tunnel);
-      for (let t of e.attachments || []) n = (0, r.addItemToEnvelope)(n, (0, r.createAttachmentEnvelopeItem)(t, this._options.transportOptions && this._options.transportOptions.textEncoder));
-      let i = this._sendEnvelope(n);
-      i && i.then(e => this.emit("afterSendEvent", t, e), null)
+      let n = (0, d.M)(t, this._dsn, this._options._metadata, this._options.tunnel);
+      for (let t of e.attachments || []) n = (0, u.BO)(n, (0, u.zQ)(t, this._options.transportOptions && this._options.transportOptions.textEncoder));
+      let r = this._sendEnvelope(n);
+      r && r.then(e => this.emit("afterSendEvent", t, e), null)
     }
   }
   sendSession(t) {
     if (this._dsn) {
-      let e = (0, a.createSessionEnvelope)(t, this._dsn, this._options._metadata, this._options.tunnel);
+      let e = (0, d.Q)(t, this._dsn, this._options._metadata, this._options.tunnel);
       this._sendEnvelope(e)
     }
   }
   recordDroppedEvent(t, e, n) {
     if (this._options.sendClientReports) {
       let n = `${t}:${e}`;
-      ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.log(`Adding outcome: "${n}"`), this._outcomes[n] = this._outcomes[n] + 1 || 1
+      ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.log(`Adding outcome: "${n}"`), this._outcomes[n] = this._outcomes[n] + 1 || 1
     }
   }
   on(t, e) {
@@ -147,8 +153,8 @@ class d {
           break
         }
       }
-    let a = "ok" === t.status;
-    (a && 0 === t.errors || a && n) && ((0, s.updateSession)(t, {
+    let s = "ok" === t.status;
+    (s && 0 === t.errors || s && n) && ((0, _.CT)(t, {
       ...n && {
         status: "crashed"
       },
@@ -156,7 +162,7 @@ class d {
     }), this.captureSession(t))
   }
   _isClientDoneProcessing(t) {
-    return new r.SyncPromise(e => {
+    return new o.cW(e => {
       let n = 0,
         r = setInterval(() => {
           0 == this._numProcessing ? (clearInterval(r), e(!0)) : (n += 1, t && n >= t && (clearInterval(r), e(!1)))
@@ -169,7 +175,7 @@ class d {
   _prepareEvent(t, e, n) {
     let r = this.getOptions(),
       i = Object.keys(this._integrations);
-    return !e.integrations && i.length > 0 && (e.integrations = i), (0, c.prepareEvent)(r, t, e, n).then(t => {
+    return !e.integrations && i.length > 0 && (e.integrations = i), (0, p.R)(r, t, e, n).then(t => {
       if (null === t) return t;
       let {
         propagationContext: e
@@ -178,20 +184,20 @@ class d {
         let {
           traceId: r,
           spanId: i,
-          parentSpanId: a,
-          dsc: o
+          parentSpanId: s,
+          dsc: a
         } = e;
         t.contexts = {
           trace: {
             trace_id: r,
             span_id: i,
-            parent_span_id: a
+            parent_span_id: s
           },
           ...t.contexts
         };
-        let s = o || (0, u.getDynamicSamplingContextFromClient)(r, this, n);
+        let o = a || (0, f._)(r, this, n);
         t.sdkProcessingMetadata = {
-          dynamicSamplingContext: s,
+          dynamicSamplingContext: o,
           ...t.sdkProcessingMetadata
         }
       }
@@ -200,57 +206,57 @@ class d {
   }
   _captureEvent(t, e = {}, n) {
     return this._processEvent(t, e, n).then(t => t.event_id, t => {
-      ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && ("log" === t.logLevel ? r.logger.log(t.message) : r.logger.warn(t))
+      ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && ("log" === t.logLevel ? i.kg.log(t.message) : i.kg.warn(t))
     })
   }
   _processEvent(t, e, n) {
-    let i = this.getOptions(),
+    let r = this.getOptions(),
       {
-        sampleRate: a
-      } = i;
-    if (!this._isEnabled()) return (0, r.rejectedSyncPromise)(new r.SentryError("SDK not enabled, will not capture event.", "log"));
-    let o = p(t),
-      s = f(t),
-      u = t.type || "error",
-      c = `before send for type \`${u}\``;
-    if (s && "number" == typeof a && Math.random() > a) return this.recordDroppedEvent("sample_rate", "error", t), (0, r.rejectedSyncPromise)(new r.SentryError(`Discarding event because it's not included in the random sample (sampling rate = ${a})`, "log"));
-    let l = "replay_event" === u ? "replay" : u;
+        sampleRate: i
+      } = r;
+    if (!this._isEnabled()) return (0, o.$2)(new l.b("SDK not enabled, will not capture event.", "log"));
+    let s = v(t),
+      u = y(t),
+      c = t.type || "error",
+      d = `before send for type \`${c}\``;
+    if (u && "number" == typeof i && Math.random() > i) return this.recordDroppedEvent("sample_rate", "error", t), (0, o.$2)(new l.b(`Discarding event because it's not included in the random sample (sampling rate = ${i})`, "log"));
+    let h = "replay_event" === c ? "replay" : c;
     return this._prepareEvent(t, e, n).then(n => {
-      if (null === n) throw this.recordDroppedEvent("event_processor", l, t), new r.SentryError("An event processor returned `null`, will not send event.", "log");
+      if (null === n) throw this.recordDroppedEvent("event_processor", h, t), new l.b("An event processor returned `null`, will not send event.", "log");
       return e.data && !0 === e.data.__sentry__ ? n : function(t, e) {
         let n = `${e} must return \`null\` or a valid event.`;
-        if ((0, r.isThenable)(t)) return t.then(t => {
-          if (!(0, r.isPlainObject)(t) && null !== t) throw new r.SentryError(n);
+        if ((0, a.J8)(t)) return t.then(t => {
+          if (!(0, a.PO)(t) && null !== t) throw new l.b(n);
           return t
         }, t => {
-          throw new r.SentryError(`${e} rejected with ${t}`)
+          throw new l.b(`${e} rejected with ${t}`)
         });
-        if (!(0, r.isPlainObject)(t) && null !== t) throw new r.SentryError(n);
+        if (!(0, a.PO)(t) && null !== t) throw new l.b(n);
         return t
       }(function(t, e, n) {
         let {
           beforeSend: r,
           beforeSendTransaction: i
         } = t;
-        return f(e) && r ? r(e, n) : p(e) && i ? i(e, n) : e
-      }(i, n, e), c)
-    }).then(i => {
-      if (null === i) throw this.recordDroppedEvent("before_send", l, t), new r.SentryError(`${c} returned \`null\`, will not send event.`, "log");
-      let a = n && n.getSession();
-      !o && a && this._updateSessionFromEvent(a, i);
-      let s = i.transaction_info;
-      return o && s && i.transaction !== t.transaction && (i.transaction_info = {
-        ...s,
+        return y(e) && r ? r(e, n) : v(e) && i ? i(e, n) : e
+      }(r, n, e), d)
+    }).then(r => {
+      if (null === r) throw this.recordDroppedEvent("before_send", h, t), new l.b(`${d} returned \`null\`, will not send event.`, "log");
+      let i = n && n.getSession();
+      !s && i && this._updateSessionFromEvent(i, r);
+      let a = r.transaction_info;
+      return s && a && r.transaction !== t.transaction && (r.transaction_info = {
+        ...a,
         source: "custom"
-      }), this.sendEvent(i, e), i
+      }), this.sendEvent(r, e), r
     }).then(null, t => {
-      if (t instanceof r.SentryError) throw t;
+      if (t instanceof l.b) throw t;
       throw this.captureException(t, {
         data: {
           __sentry__: !0
         },
         originalException: t
-      }), new r.SentryError(`Event processing pipeline threw an error, original event will not be sent. Details have been sent as a new event.
+      }), new l.b(`Event processing pipeline threw an error, original event will not be sent. Details have been sent as a new event.
 Reason: ${t}`)
     })
   }
@@ -259,9 +265,9 @@ Reason: ${t}`)
   }
   _sendEnvelope(t) {
     if (this._transport && this._dsn) return this.emit("beforeEnvelope", t), this._transport.send(t).then(null, t => {
-      ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.error("Error while sending event:", t)
+      ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.error("Error while sending event:", t)
     });
-    ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.error("Transport disabled")
+    ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.error("Transport disabled")
   }
   _clearOutcomes() {
     let t = this._outcomes;
@@ -276,10 +282,10 @@ Reason: ${t}`)
   }
 }
 
-function f(t) {
+function y(t) {
   return void 0 === t.type
 }
 
-function p(t) {
+function v(t) {
   return "transaction" === t.type
 }

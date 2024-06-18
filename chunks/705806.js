@@ -1,6 +1,6 @@
 "use strict";
-var r = n("4148"),
-  i = n("665679"),
+var r = n(4148),
+  i = n(665679),
   a = i("%Function.prototype.apply%"),
   o = i("%Function.prototype.call%"),
   s = i("%Reflect.apply%", !0) || r.call(o, a),

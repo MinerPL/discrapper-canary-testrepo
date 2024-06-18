@@ -1,6 +1,6 @@
 "use strict";
-var r = n("250683"),
-  i = n("932093"),
+var r = n(250683),
+  i = n(932093),
   a = "function" == typeof Symbol && "function" == typeof Symbol.for ? Symbol.for("nodejs.util.inspect.custom") : null;
 t.Buffer = s, t.SlowBuffer = function(e) {
   return +e != e && (e = 0), s.alloc(+e)
@@ -131,7 +131,7 @@ function h(e, t) {
     case "hex":
       return n >>> 1;
     case "base64":
-      return M(e).length;
+      return O(e).length;
     default:
       if (i) return r ? -1 : D(e).length;
       t = ("" + t).toLowerCase(), i = !0
@@ -324,7 +324,7 @@ s.isBuffer = function(e) {
 };
 
 function v(e, t, n, r) {
-  return A(O(t), e, n, r)
+  return A(M(t), e, n, r)
 }
 s.prototype.write = function(e, t, n, r) {
   if (void 0 === t) r = "utf8", n = this.length, t = 0;
@@ -357,16 +357,16 @@ s.prototype.write = function(e, t, n, r) {
       return i = this, a = e, o = t, s = n, A(D(a, i.length - o), i, o, s);
     case "ascii":
       ;
-      return u = this, c = e, l = t, d = n, A(O(c), u, l, d);
+      return u = this, c = e, l = t, d = n, A(M(c), u, l, d);
     case "latin1":
     case "binary":
       return function(e, t, n, r) {
         var i, a, o, s;
-        return i = e, a = t, o = n, s = r, A(O(a), i, o, s)
+        return i = e, a = t, o = n, s = r, A(M(a), i, o, s)
       }(this, e, t, n);
     case "base64":
       ;
-      return f = this, p = e, h = t, m = n, A(M(p), f, h, m);
+      return f = this, p = e, h = t, m = n, A(O(p), f, h, m);
     case "ucs2":
     case "ucs-2":
     case "utf16le":
@@ -435,7 +435,7 @@ function w(e, t, n, r, a) {
   return t = +t, n >>>= 0, !a && x(e, t, n, 4, 34028234663852886e22, -34028234663852886e22), i.write(e, t, n, r, 23, 4), n + 4
 }
 
-function T(e, t, n, r, a) {
+function C(e, t, n, r, a) {
   return t = +t, n >>>= 0, !a && x(e, t, n, 8, 17976931348623157e292, -17976931348623157e292), i.write(e, t, n, r, 52, 8), n + 8
 }
 s.prototype.slice = function(e, t) {
@@ -554,9 +554,9 @@ s.prototype.slice = function(e, t) {
 }, s.prototype.writeFloatBE = function(e, t, n) {
   return w(this, e, t, !1, n)
 }, s.prototype.writeDoubleLE = function(e, t, n) {
-  return T(this, e, t, !0, n)
+  return C(this, e, t, !0, n)
 }, s.prototype.writeDoubleBE = function(e, t, n) {
-  return T(this, e, t, !1, n)
+  return C(this, e, t, !1, n)
 }, s.prototype.copy = function(e, t, n, r) {
   if (!s.isBuffer(e)) throw TypeError("argument should be a Buffer");
   if (!n && (n = 0), !r && 0 !== r && (r = this.length), t >= e.length && (t = e.length), !t && (t = 0), r > 0 && r < n && (r = n), r === n || 0 === e.length || 0 === this.length) return 0;
@@ -591,7 +591,7 @@ s.prototype.slice = function(e, t) {
   }
   return this
 };
-var C = /[^+/0-9A-Za-z-_]/g;
+var T = /[^+/0-9A-Za-z-_]/g;
 
 function D(e, t) {
   t = t || 1 / 0;
@@ -632,14 +632,14 @@ function D(e, t) {
   return a
 }
 
-function O(e) {
+function M(e) {
   for (var t = [], n = 0; n < e.length; ++n) t.push(255 & e.charCodeAt(n));
   return t
 }
 
-function M(e) {
+function O(e) {
   return r.toByteArray(function(e) {
-    if ((e = (e = e.split("=")[0]).trim().replace(C, "")).length < 2) return "";
+    if ((e = (e = e.split("=")[0]).trim().replace(T, "")).length < 2) return "";
     for (; e.length % 4 != 0;) e += "=";
     return e
   }(e))

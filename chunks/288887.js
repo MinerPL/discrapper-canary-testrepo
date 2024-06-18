@@ -1,1 +1,1 @@
-e.exports = n("26060")
+e.exports = n(26060)

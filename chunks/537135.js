@@ -1,18 +1,18 @@
 "use strict";
-l.r(t), l.d(t, {
-  default: function() {
-    return n
+n.d(t, {
+  Z: function() {
+    return a
   }
 });
-var a = l("735250");
-l("470079");
-var s = l("943383");
+var l = n(735250);
+n(470079);
+var s = n(396334);
 
-function n(e) {
+function a(e) {
   let {
     children: t
   } = e;
-  return (0, a.jsx)("div", {
+  return (0, l.jsx)("div", {
     className: s.card,
     children: t
   })

@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return o
+n.d(t, {
+  Z: function() {
+    return a
   }
 });
-var r = n("824523"),
-  a = n("664060");
+var r = n(824523),
+  o = n(664060);
 
-function o(e, t) {
-  if (t && ("object" === (0, r.default)(t) || "function" == typeof t)) return t;
+function a(e, t) {
+  if (t && ("object" === (0, r.Z)(t) || "function" == typeof t)) return t;
   if (void 0 !== t) throw TypeError("Derived constructors may only return object or undefined");
-  return (0, a.default)(e)
+  return (0, o.Z)(e)
 }

@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return o
+n.d(t, {
+  Z: function() {
+    return a
   }
-}), n("653041"), n("47120");
-var i = n("392711"),
+}), n(653041), n(47120);
+var i = n(392711),
   r = n.n(i);
 
 function s(e, t, n) {
@@ -15,11 +15,11 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let a = [];
-class o {
+let o = [];
+class a {
   static create() {
-    let e = new o;
-    return a.push(e), e.record
+    let e = new a;
+    return o.push(e), e.record
   }
   getTotalBytes() {
     return r().sum(Object.values(this.bytes))

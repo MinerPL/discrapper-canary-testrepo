@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   contextMenuCallbackNative: function() {
-    return a
+    return o
   },
   contextMenuCallbackWeb: function() {
-    return o
+    return a
   },
   getSelectionText: function() {
     return s
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("239091");
+var i = n(735250);
+n(470079);
+var r = n(239091);
 
 function s() {
   let e;
@@ -23,14 +23,14 @@ function s() {
   return null != e ? e : ""
 }
 
-function a(e) {
+function o(e) {
   let t = s(),
-    a = e.target;
-  if ((null == a ? void 0 : a.tagName) === "TEXTAREA" || (null == a ? void 0 : a.tagName) === "INPUT") {
-    if ((null == a ? void 0 : a.type) !== "checkbox") return (0, r.openContextMenuLazy)(e, async () => {
+    o = e.target;
+  if ((null == o ? void 0 : o.tagName) === "TEXTAREA" || (null == o ? void 0 : o.tagName) === "INPUT") {
+    if ((null == o ? void 0 : o.type) !== "checkbox") return (0, r.jW)(e, async () => {
       let {
         default: e
-      } = await n.e("99989").then(n.bind(n, "889662"));
+      } = await n.e("99989").then(n.bind(n, 889662));
       return n => (0, i.jsx)(e, {
         ...n,
         text: t
@@ -38,35 +38,35 @@ function a(e) {
     }, {
       enableSpellCheck: !0
     })
-  } else if ("none" === window.getComputedStyle(a).getPropertyValue("-webkit-user-select")) {
+  } else if ("none" === window.getComputedStyle(o).getPropertyValue("-webkit-user-select")) {
     e.preventDefault();
     return
   } else {
-    let s, a, o, l = e.target;
-    for (; null != l;) "src" in l && null != l.src && (a = l.src), "href" in l && null != l.href && (s = l.href, o = l.textContent), l = null == l ? void 0 : l.parentNode;
-    if (null != a) return (0, r.openContextMenuLazy)(e, async () => {
+    let s, o, a, l = e.target;
+    for (; null != l;) "src" in l && null != l.src && (o = l.src), "href" in l && null != l.href && (s = l.href, a = l.textContent), l = null == l ? void 0 : l.parentNode;
+    if (null != o) return (0, r.jW)(e, async () => {
       let {
         default: e
-      } = await n.e("12241").then(n.bind(n, "115512"));
+      } = await n.e("12241").then(n.bind(n, 115512));
       return t => (0, i.jsx)(e, {
         ...t,
-        src: null != a ? a : ""
+        src: null != o ? o : ""
       })
     });
-    if (null != s) return (0, r.openContextMenuLazy)(e, async () => {
+    if (null != s) return (0, r.jW)(e, async () => {
       let {
         default: e
-      } = await n.e("96473").then(n.bind(n, "805362"));
+      } = await n.e("96473").then(n.bind(n, 805362));
       return t => (0, i.jsx)(e, {
         ...t,
         href: s,
-        textContent: o
+        textContent: a
       })
     });
-    else if (null != t && "" !== t) return (0, r.openContextMenuLazy)(e, async () => {
+    else if (null != t && "" !== t) return (0, r.jW)(e, async () => {
       let {
         default: e
-      } = await n.e("3865").then(n.bind(n, "745763"));
+      } = await n.e("3865").then(n.bind(n, 745763));
       return n => (0, i.jsx)(e, {
         ...n,
         text: t
@@ -76,7 +76,7 @@ function a(e) {
   return e.preventDefault(), null
 }
 
-function o(e) {
+function a(e) {
   let t = !1,
     n = e.target;
   if ((null == n ? void 0 : n.tagName) === "INPUT" || (null == n ? void 0 : n.tagName) === "TEXTAREA") t = !0;

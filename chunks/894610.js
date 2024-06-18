@@ -1,71 +1,71 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
+t.d(s, {
+  Z: function() {
     return E
   }
 });
-var a, l, n = s("735250"),
-  i = s("470079"),
-  r = s("755930"),
-  o = s("267101"),
-  d = s("689938"),
-  u = s("261914");
-(a = l || (l = {})).LISTING_NAME = "LISTING_NAME", a.PAYMENTS_COUNT = "PAYMENTS_COUNT", a.PRICE = "PRICE";
-let c = (0, r.createTableColumns)([(0, r.createListingNameColumn)({
+var n, i, l = t(735250),
+  a = t(470079),
+  r = t(755930),
+  o = t(267101),
+  c = t(689938),
+  d = t(254510);
+(n = i || (i = {})).LISTING_NAME = "LISTING_NAME", n.PAYMENTS_COUNT = "PAYMENTS_COUNT", n.PRICE = "PRICE";
+let u = (0, r.Yn)([(0, r.nn)({
   key: "LISTING_NAME",
-  cellClassName: u.listingNameColumn,
-  renderHeader: () => (0, n.jsx)(r.HeaderCell, {
-    children: d.default.Messages.GUILD_PRODUCT_EARNINGS_TABLE_LISTING_COLUMN_TITLE
+  cellClassName: d.listingNameColumn,
+  renderHeader: () => (0, l.jsx)(r.qN, {
+    children: c.Z.Messages.GUILD_PRODUCT_EARNINGS_TABLE_LISTING_COLUMN_TITLE
   }),
-  sort: (0, r.getDefaultSorter)(e => e.listing.name.toLowerCase())
-}), (0, r.createPersonCountColumn)({
+  sort: (0, r.Qg)(e => e.listing.name.toLowerCase())
+}), (0, r.GW)({
   key: "PAYMENTS_COUNT",
-  cellClassName: u.paymentsCountColumn,
-  renderHeader: () => (0, n.jsx)(r.HeaderCell, {
-    children: d.default.Messages.GUILD_PRODUCT_EARNINGS_TABLE_PURCHASES_COLUMN_TITLE
+  cellClassName: d.paymentsCountColumn,
+  renderHeader: () => (0, l.jsx)(r.qN, {
+    children: c.Z.Messages.GUILD_PRODUCT_EARNINGS_TABLE_PURCHASES_COLUMN_TITLE
   }),
   getCount: e => e.paymentsCount,
-  sort: (0, r.getDefaultSorter)(e => {
-    var t;
-    return null !== (t = e.paymentsCount) && void 0 !== t ? t : 0
+  sort: (0, r.Qg)(e => {
+    var s;
+    return null !== (s = e.paymentsCount) && void 0 !== s ? s : 0
   })
-}), (0, r.createCurrencyAmountColumn)({
+}), (0, r.i$)({
   key: "PRICE",
-  cellClassName: u.priceColumn,
-  renderHeader: () => (0, n.jsx)(r.HeaderCell, {
-    children: d.default.Messages.GUILD_PRODUCT_EARNINGS_TABLE_PRICE_COLUMN_TITLE
+  cellClassName: d.priceColumn,
+  renderHeader: () => (0, l.jsx)(r.qN, {
+    children: c.Z.Messages.GUILD_PRODUCT_EARNINGS_TABLE_PRICE_COLUMN_TITLE
   }),
   getAmount(e) {
     let {
-      listing: t
+      listing: s
     } = e;
-    return t.price_tier
+    return s.price_tier
   },
-  sort: (0, r.getDefaultSorter)(e => {
-    var t;
-    return null !== (t = e.listing.price_tier) && void 0 !== t ? t : 0
+  sort: (0, r.Qg)(e => {
+    var s;
+    return null !== (s = e.listing.price_tier) && void 0 !== s ? s : 0
   })
 })]);
 
 function E(e) {
   let {
-    earningsData: t,
-    guildId: s
-  } = e, a = (0, o.useGuildProductsForGuild)(s, {
+    earningsData: s,
+    guildId: t
+  } = e, n = (0, o.ue)(t, {
     publishedOnly: !1
-  }), l = t.currentPeriod, d = i.useMemo(() => a.map(e => {
-    var t;
-    let s = null == l ? void 0 : l.ppgs[e.id];
+  }), i = s.currentPeriod, c = a.useMemo(() => n.map(e => {
+    var s;
+    let t = null == i ? void 0 : i.ppgs[e.id];
     return {
-      ...null != s ? s : {},
+      ...null != t ? t : {},
       key: e.id,
       listing: e,
-      paymentsCount: null !== (t = null == s ? void 0 : s.purchase_count) && void 0 !== t ? t : 0
+      paymentsCount: null !== (s = null == t ? void 0 : t.purchase_count) && void 0 !== s ? s : 0
     }
-  }).filter(e => e.listing.published || e.paymentsCount > 0), [a, null == l ? void 0 : l.ppgs]);
-  return null == a || 0 === a.length ? null : (0, n.jsx)(r.default, {
-    columns: c,
-    data: d,
+  }).filter(e => e.listing.published || e.paymentsCount > 0), [n, null == i ? void 0 : i.ppgs]);
+  return null == n || 0 === n.length ? null : (0, l.jsx)(r.ZP, {
+    columns: u,
+    data: c,
     initialSortKey: "LISTING_NAME"
   })
 }

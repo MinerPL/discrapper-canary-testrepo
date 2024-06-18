@@ -1,103 +1,102 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return S
+t.d(s, {
+  Z: function() {
+    return T
   }
-}), s("47120");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("803997"),
-  i = s.n(n),
-  r = s("481060"),
-  o = s("749210"),
-  d = s("6048"),
-  u = s("63063"),
-  c = s("714939"),
-  E = s("494831"),
-  _ = s("981631"),
-  I = s("689938"),
-  T = s("669758");
+}), t(47120);
+var n = t(735250),
+  i = t(470079),
+  l = t(120356),
+  a = t.n(l),
+  r = t(481060),
+  o = t(749210),
+  c = t(63063),
+  d = t(714939),
+  u = t(494831),
+  E = t(981631),
+  _ = t(689938),
+  I = t(793577);
 
-function S(e) {
+function T(e) {
   let {
-    guild: t,
-    everyoneRole: s,
-    filteredRoles: n,
-    setEditRoleId: i,
+    guild: s,
+    everyoneRole: t,
+    filteredRoles: l,
+    setEditRoleId: a,
     query: o,
-    setQuery: d,
-    setHeaderHeight: u
-  } = e, c = l.useRef(null);
-  l.useEffect(() => {
-    var e, t;
-    u(null !== (t = null === (e = c.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : E.DEFAULT_HEADER_HEIGHT_PX)
-  }, [u]);
-  let _ = l.useCallback(() => {
-    i(s.id)
-  }, [i, s.id]);
-  return (0, a.jsxs)("div", {
-    ref: c,
-    children: [(0, a.jsx)(r.FormTitle, {
+    setQuery: c,
+    setHeaderHeight: d
+  } = e, E = i.useRef(null);
+  i.useEffect(() => {
+    var e, s;
+    d(null !== (s = null === (e = E.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== s ? s : u.Cl)
+  }, [d]);
+  let T = i.useCallback(() => {
+    a(t.id)
+  }, [a, t.id]);
+  return (0, n.jsxs)("div", {
+    ref: E,
+    children: [(0, n.jsx)(r.FormTitle, {
       tag: r.FormTitleTags.H1,
-      children: I.default.Messages.ROLES
-    }), (0, a.jsx)(r.Text, {
-      className: T.description,
+      children: _.Z.Messages.ROLES
+    }), (0, n.jsx)(r.Text, {
+      className: I.description,
       color: "header-secondary",
       variant: "text-sm/normal",
-      children: I.default.Messages.ROLE_OVERVIEW_DESCRIPTION
-    }), (0, a.jsx)(f, {
-      guild: t,
-      everyoneRole: s,
-      filteredRoles: n,
+      children: _.Z.Messages.ROLE_OVERVIEW_DESCRIPTION
+    }), (0, n.jsx)(N, {
+      guild: s,
+      everyoneRole: t,
+      filteredRoles: l,
       query: o,
-      setQuery: d,
-      onEveryoneRoleClick: _
+      setQuery: c,
+      onEveryoneRoleClick: T
     })]
   })
 }
 
-function f(e) {
+function N(e) {
   let {
-    guild: t,
-    everyoneRole: s,
-    filteredRoles: l,
-    query: n,
+    guild: s,
+    everyoneRole: t,
+    filteredRoles: i,
+    query: l,
     setQuery: o,
-    onEveryoneRoleClick: d
+    onEveryoneRoleClick: u
   } = e;
-  return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(c.default, {
-      role: s,
-      onClick: d
-    }), (0, a.jsx)(m, {
-      guild: t,
-      query: n,
+  return (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsx)(d.Z, {
+      role: t,
+      onClick: u
+    }), (0, n.jsx)(m, {
+      guild: s,
+      query: l,
       setQuery: o
-    }), (0, a.jsx)(r.Text, {
-      className: T.helpText,
+    }), (0, n.jsx)(r.Text, {
+      className: I.helpText,
       color: "header-secondary",
       variant: "text-sm/normal",
-      children: I.default.Messages.ROLE_LIST_BODY_WITH_HELP.format({
-        articleURL: u.default.getArticleURL(_.HelpdeskArticles.PERMISSIONS_TUTORIAL)
+      children: _.Z.Messages.ROLE_LIST_BODY_WITH_HELP.format({
+        articleURL: c.Z.getArticleURL(E.BhN.PERMISSIONS_TUTORIAL)
       })
-    }), (0, a.jsx)("div", {
-      className: T.rolesTable,
-      children: (0, a.jsxs)("div", {
-        className: T.tableHeader,
-        children: [(0, a.jsx)("div", {
-          className: T.dragSpacing
-        }), (0, a.jsx)(r.Text, {
-          className: i()(T.tableTitle, T.roleNameSpacing),
+    }), (0, n.jsx)("div", {
+      className: I.rolesTable,
+      children: (0, n.jsxs)("div", {
+        className: I.tableHeader,
+        children: [(0, n.jsx)("div", {
+          className: I.dragSpacing
+        }), (0, n.jsx)(r.Text, {
+          className: a()(I.tableTitle, I.roleNameSpacing),
           variant: "text-sm/normal",
-          children: I.default.Messages.ROLE_LIST_HEADER.format({
-            numRoles: String(l.length)
+          children: _.Z.Messages.ROLE_LIST_HEADER.format({
+            numRoles: String(i.length)
           })
-        }), (0, a.jsx)(r.Text, {
-          className: i()(T.tableTitle, T.memberSpacing),
+        }), (0, n.jsx)(r.Text, {
+          className: a()(I.tableTitle, I.memberSpacing),
           variant: "text-sm/normal",
-          children: I.default.Messages.MEMBERS
-        }), (0, a.jsx)("div", {
-          className: T.buttonsSpacing
+          children: _.Z.Messages.MEMBERS
+        }), (0, n.jsx)("div", {
+          className: I.buttonsSpacing
         })]
       })
     })]
@@ -106,33 +105,33 @@ function f(e) {
 
 function m(e) {
   let {
-    guild: t,
-    query: s,
-    setQuery: n
-  } = e, [i, u] = l.useState(!1), c = l.useCallback(e => {
-    n(e)
-  }, [n]), E = l.useCallback(() => {
-    n("")
-  }, [n]), _ = async () => {
-    u(!0), await o.default.createRole(t.id), u(!1)
+    guild: s,
+    query: t,
+    setQuery: l
+  } = e, [a, c] = i.useState(!1), d = i.useCallback(e => {
+    l(e)
+  }, [l]), u = i.useCallback(() => {
+    l("")
+  }, [l]), E = async () => {
+    c(!0), await o.Z.createRole(s.id), c(!1)
   };
-  return (0, a.jsx)("div", {
-    className: T.__invalid_rolesList,
-    children: (0, a.jsxs)("div", {
-      className: T.searchContainer,
-      children: [(0, a.jsx)(d.default, {
-        size: d.default.Sizes.MEDIUM,
-        query: s,
-        onChange: c,
-        onClear: E,
-        placeholder: I.default.Messages.SEARCH_ROLES,
-        "aria-label": I.default.Messages.SEARCH_ROLES
-      }), (0, a.jsx)(r.Button, {
-        className: T.createButton,
+  return (0, n.jsx)("div", {
+    className: I.__invalid_rolesList,
+    children: (0, n.jsxs)("div", {
+      className: I.searchContainer,
+      children: [(0, n.jsx)(r.SearchBar, {
+        size: r.SearchBar.Sizes.MEDIUM,
+        query: t,
+        onChange: d,
+        onClear: u,
+        placeholder: _.Z.Messages.SEARCH_ROLES,
+        "aria-label": _.Z.Messages.SEARCH_ROLES
+      }), (0, n.jsx)(r.Button, {
+        className: I.createButton,
         size: r.Button.Sizes.SMALL,
-        onClick: _,
-        submitting: i,
-        children: I.default.Messages.ROLE_CREATE_CTA
+        onClick: E,
+        submitting: a,
+        children: _.Z.Messages.ROLE_CREATE_CTA
       })]
     })
   })

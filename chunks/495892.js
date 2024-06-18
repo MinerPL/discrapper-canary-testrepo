@@ -1,108 +1,108 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return M
+t.d(s, {
+  Z: function() {
+    return f
   }
-}), s("724458"), s("653041"), s("47120");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("392711"),
-  i = s("481060"),
-  r = s("239091"),
-  o = s("132580"),
-  d = s("688465"),
-  u = s("621113"),
-  c = s("236413"),
-  E = s("727072"),
-  _ = s("85960"),
-  I = s("65912"),
-  T = s("457414"),
-  S = s("154502"),
-  f = s("295708"),
-  m = s("273504"),
-  N = s("689938"),
-  g = s("326135");
+}), t(724458), t(653041), t(47120);
+var n = t(735250),
+  i = t(470079),
+  l = t(392711),
+  a = t(481060),
+  r = t(239091),
+  o = t(132580),
+  c = t(688465),
+  d = t(621113),
+  u = t(236413),
+  E = t(727072),
+  _ = t(85960),
+  I = t(65912),
+  T = t(457414),
+  N = t(154502),
+  m = t(295708),
+  S = t(273504),
+  h = t(689938),
+  g = t(180170);
 
-function h(e) {
+function x(e) {
   let {
-    rule: t,
-    triggerType: s
-  } = e, n = l.useMemo(() => null == t ? (0, _.getAvailableActionTypes)(s).map(e => (0, a.jsx)(S.default, {
+    rule: s,
+    triggerType: t
+  } = e, l = i.useMemo(() => null == s ? (0, _.V9)(t).map(e => (0, n.jsx)(N.Z, {
     actionType: e,
-    triggerType: s
-  }, e)) : (0, _.getAvailableActionTypes)(s).reduce((e, l) => {
-    var n;
-    let i = t.actions.find(e => {
+    triggerType: t
+  }, e)) : (0, _.V9)(t).reduce((e, i) => {
+    var l;
+    let a = s.actions.find(e => {
       let {
-        type: t
+        type: s
       } = e;
-      return l === t
+      return i === s
     });
-    return null == i ? e : (e.push((0, a.jsx)(S.default, {
-      actionType: l,
-      action: i,
-      triggerType: null !== (n = null == t ? void 0 : t.triggerType) && void 0 !== n ? n : s
-    }, l)), e)
-  }, []), [t, s]);
-  return 0 === n.length ? null : (0, a.jsx)("div", {
+    return null == a ? e : (e.push((0, n.jsx)(N.Z, {
+      actionType: i,
+      action: a,
+      triggerType: null !== (l = null == s ? void 0 : s.triggerType) && void 0 !== l ? l : t
+    }, i)), e)
+  }, []), [s, t]);
+  return 0 === l.length ? null : (0, n.jsx)("div", {
     className: g.actionRuleListContainer,
-    children: n
+    children: l
   })
 }
-let C = (e, t) => () => t({
+let C = (e, s) => () => s({
     ...e,
     enabled: !e.enabled
   }),
   R = e => {
     e.stopPropagation(), e.preventDefault()
   },
-  x = e => {
+  L = e => {
     let {
-      className: t,
-      children: s,
-      ...l
+      className: s,
+      children: t,
+      ...i
     } = e;
-    return (0, a.jsx)(i.Clickable, {
-      className: t,
+    return (0, n.jsx)(a.Clickable, {
+      className: s,
       onClick: R,
       onMouseDown: R,
       onMouseUp: R,
-      ...l,
-      children: s
+      ...i,
+      children: t
     })
   };
 
-function L(e) {
-  var t;
+function O(e) {
+  var s;
   let {
-    rule: s,
-    onChangeRule: l,
-    onContextMenu: n
-  } = e, r = C(s, l), o = e => {
-    R(e), n(e)
+    rule: t,
+    onChangeRule: i,
+    onContextMenu: l
+  } = e, r = C(t, i), o = e => {
+    R(e), l(e)
   };
-  return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)("div", {
+  return (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsx)("div", {
       className: g.ruleTextContainer,
-      children: (0, a.jsx)(f.default, {
-        rule: s,
-        onChangeRule: l
+      children: (0, n.jsx)(m.Z, {
+        rule: t,
+        onChangeRule: i
       })
-    }), (0, a.jsxs)(x, {
+    }), (0, n.jsxs)(L, {
       className: g.actionContainer,
-      children: [(0, a.jsx)(i.Switch, {
+      children: [(0, n.jsx)(a.Switch, {
         className: g.toggle,
         onChange: r,
-        checked: null !== (t = null == s ? void 0 : s.enabled) && void 0 !== t && t
-      }), (0, a.jsx)(i.Tooltip, {
-        text: N.default.Messages.MORE,
+        checked: null !== (s = null == t ? void 0 : t.enabled) && void 0 !== s && s
+      }), (0, n.jsx)(a.Tooltip, {
+        text: h.Z.Messages.MORE,
         position: "top",
-        "aria-label": N.default.Messages.MORE_OPTIONS,
-        children: e => (0, a.jsx)(i.Clickable, {
+        "aria-label": h.Z.Messages.MORE_OPTIONS,
+        children: e => (0, n.jsx)(a.Clickable, {
           ...e,
           onClick: o,
           className: g.menuIconButton,
-          children: (0, a.jsx)(u.default, {
+          children: (0, n.jsx)(d.Z, {
             width: 24,
             height: 24,
             className: g.menuIcon
@@ -113,178 +113,178 @@ function L(e) {
   })
 }
 
-function O(e) {
-  return (0, _.checkTriggerTypeForFlag)(e, _.AutomodTriggerConfigFlags.ALPHA) ? (0, a.jsx)(o.default, {
+function A(e) {
+  return (0, _.r5)(e, _.vT.ALPHA) ? (0, n.jsx)(o.Z, {
     className: g.alphaBetaTag
-  }) : (0, _.checkTriggerTypeForFlag)(e, _.AutomodTriggerConfigFlags.BETA) ? (0, a.jsx)(d.default, {
+  }) : (0, _.r5)(e, _.vT.BETA) ? (0, n.jsx)(c.Z, {
     className: g.alphaBetaTag
   }) : null
 }
 
-function A(e) {
+function p(e) {
   let {
-    rule: t,
-    isDefaultRule: s,
+    rule: s,
+    isDefaultRule: t,
     onContextMenu: r
-  } = e, o = (0, T.getRuleInfo)(t.triggerType, t), {
-    isLoading: d,
+  } = e, o = (0, T.w)(s.triggerType, s), {
+    isLoading: c,
     saveRule: _
-  } = (0, I.useAutomodEditingRuleActions)(), {
-    updateRule: S
-  } = (0, E.useAutomodRulesList)(t.guildId), [f, m] = l.useState(t.enabled), C = (0, n.throttle)(async (e, s) => {
-    if (s.preventDefault(), s.stopPropagation(), !d) {
+  } = (0, I.w)(), {
+    updateRule: N
+  } = (0, E.pH)(s.guildId), [m, S] = i.useState(s.enabled), C = (0, l.throttle)(async (e, t) => {
+    if (t.preventDefault(), t.stopPropagation(), !c) {
       let e = {
-        ...t,
-        enabled: !f
+        ...s,
+        enabled: !m
       };
-      m(!f);
-      let s = await _(e, []);
-      if (null != s) S(s), m(s.enabled)
+      S(!m);
+      let t = await _(e, []);
+      if (null != t) N(t), S(t.enabled)
     }
-  }, 300), L = e => {
+  }, 300), O = e => {
     R(e), r(e)
   };
   if (null == o) return null;
   let {
-    headerText: A,
-    headerSubtext: p,
-    descriptionText: M,
-    icon: D
-  } = o, v = !(0, c.isBackendPersistedRule)(t);
-  return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)("div", {
+    headerText: p,
+    headerSubtext: M,
+    descriptionText: f,
+    icon: v
+  } = o, D = !(0, u.Vb)(s);
+  return (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsx)("div", {
       className: g.ruleIconContainer,
-      children: (0, a.jsx)(D, {
+      children: (0, n.jsx)(v, {
         width: 24,
         height: 24,
         className: g.ruleIcon
       })
-    }), (0, a.jsxs)("div", {
+    }), (0, n.jsxs)("div", {
       className: g.ruleTextContainer,
-      children: [(0, a.jsxs)(i.Heading, {
+      children: [(0, n.jsxs)(a.Heading, {
         variant: "text-md/semibold",
         color: "header-primary",
         className: g.ruleTextHeaderContainer,
-        children: [(0, a.jsxs)("div", {
+        children: [(0, n.jsxs)("div", {
           className: g.ruleTextHeader,
-          children: [A, O(t.triggerType)]
-        }), (0, a.jsx)(i.Text, {
+          children: [p, A(s.triggerType)]
+        }), (0, n.jsx)(a.Text, {
           className: g.ruleSubtextHeader,
           variant: "text-sm/normal",
-          children: p
+          children: M
         })]
-      }), v && (0, a.jsx)(i.Text, {
+      }), D && (0, n.jsx)(a.Text, {
         className: g.ruleTextDescription,
         variant: "text-sm/normal",
-        children: M
-      }), (0, a.jsx)(h, {
-        rule: t,
-        triggerType: t.triggerType
+        children: f
+      }), (0, n.jsx)(x, {
+        rule: s,
+        triggerType: s.triggerType
       })]
-    }), (0, a.jsxs)(x, {
+    }), (0, n.jsxs)(L, {
       className: g.actionContainer,
-      children: [(0, a.jsx)(i.Switch, {
+      children: [(0, n.jsx)(a.Switch, {
         className: g.toggle,
         onChange: C,
-        checked: null != f && f
-      }), !s && (0, a.jsx)(i.Tooltip, {
-        text: N.default.Messages.MORE,
+        checked: null != m && m
+      }), !t && (0, n.jsx)(a.Tooltip, {
+        text: h.Z.Messages.MORE,
         position: "top",
-        "aria-label": N.default.Messages.MORE_OPTIONS,
-        children: e => (0, a.jsx)(i.Clickable, {
+        "aria-label": h.Z.Messages.MORE_OPTIONS,
+        children: e => (0, n.jsx)(a.Clickable, {
           ...e,
-          onClick: L,
+          onClick: O,
           className: g.menuIconButton,
-          children: (0, a.jsx)(u.default, {
+          children: (0, n.jsx)(d.Z, {
             width: 24,
             height: 24,
             className: g.menuIcon
           })
         })
       })]
-    })]
-  })
-}
-
-function p(e) {
-  let {
-    triggerType: t,
-    onSetupRule: s
-  } = e, n = l.useMemo(() => (0, T.getRuleInfo)(t), [t]);
-  if (null == n) return null;
-  let {
-    headerText: r,
-    descriptionText: o,
-    icon: d
-  } = n;
-  return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)("div", {
-      className: g.ruleIconContainer,
-      children: (0, a.jsx)(d, {
-        width: 24,
-        height: 24,
-        className: g.ruleIcon
-      })
-    }), (0, a.jsxs)("div", {
-      className: g.ruleTextContainer,
-      children: [(0, a.jsx)(i.Heading, {
-        className: g.ruleTextHeader,
-        variant: "text-md/semibold",
-        color: "header-primary",
-        children: (0, a.jsxs)("div", {
-          className: g.ruleTextHeader,
-          children: [r, O(t)]
-        })
-      }), (0, a.jsx)(i.Text, {
-        className: g.ruleTextDescription,
-        variant: "text-sm/normal",
-        children: o
-      }), (0, a.jsx)(h, {
-        triggerType: t
-      })]
-    }), (0, a.jsx)(x, {
-      className: g.actionContainer,
-      children: (0, a.jsx)(i.Button, {
-        size: i.Button.Sizes.SMALL,
-        onClick: s,
-        children: t === m.AutomodTriggerType.KEYWORD ? N.default.Messages.CREATE : N.default.Messages.GUILD_AUTOMOD_RULE_SETUP_BUTTON
-      })
     })]
   })
 }
 
 function M(e) {
   let {
-    rule: t,
-    triggerType: l,
-    isEditMode: n,
+    triggerType: s,
+    onSetupRule: t
+  } = e, l = i.useMemo(() => (0, T.w)(s), [s]);
+  if (null == l) return null;
+  let {
+    headerText: r,
+    descriptionText: o,
+    icon: c
+  } = l;
+  return (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsx)("div", {
+      className: g.ruleIconContainer,
+      children: (0, n.jsx)(c, {
+        width: 24,
+        height: 24,
+        className: g.ruleIcon
+      })
+    }), (0, n.jsxs)("div", {
+      className: g.ruleTextContainer,
+      children: [(0, n.jsx)(a.Heading, {
+        className: g.ruleTextHeader,
+        variant: "text-md/semibold",
+        color: "header-primary",
+        children: (0, n.jsxs)("div", {
+          className: g.ruleTextHeader,
+          children: [r, A(s)]
+        })
+      }), (0, n.jsx)(a.Text, {
+        className: g.ruleTextDescription,
+        variant: "text-sm/normal",
+        children: o
+      }), (0, n.jsx)(x, {
+        triggerType: s
+      })]
+    }), (0, n.jsx)(L, {
+      className: g.actionContainer,
+      children: (0, n.jsx)(a.Button, {
+        size: a.Button.Sizes.SMALL,
+        onClick: t,
+        children: s === S.fX.KEYWORD ? h.Z.Messages.CREATE : h.Z.Messages.GUILD_AUTOMOD_RULE_SETUP_BUTTON
+      })
+    })]
+  })
+}
+
+function f(e) {
+  let {
+    rule: s,
+    triggerType: i,
+    isEditMode: l,
     isDefaultRule: o,
-    forceSetup: d,
-    onSetupRule: u,
-    onChangeRule: c
+    forceSetup: c,
+    onSetupRule: d,
+    onChangeRule: u
   } = e, E = e => {
-    null != t && (e.preventDefault(), e.stopPropagation(), (0, r.openContextMenuLazy)(e, async () => {
+    if (null != s) e.preventDefault(), e.stopPropagation(), (0, r.jW)(e, async () => {
       let {
         default: e
-      } = await s.e("25443").then(s.bind(s, "46577"));
-      return s => (0, a.jsx)(e, {
-        rule: t,
-        ...s
+      } = await t.e("25443").then(t.bind(t, 46577));
+      return t => (0, n.jsx)(e, {
+        rule: s,
+        ...t
       })
-    }))
-  }, _ = (0, a.jsx)(p, {
-    triggerType: l,
-    onSetupRule: u
+    })
+  }, _ = (0, n.jsx)(M, {
+    triggerType: i,
+    onSetupRule: d
   });
-  return null != t && !d && (_ = n ? (0, a.jsx)(L, {
-    rule: t,
-    onChangeRule: c,
+  return null != s && !c && (_ = l ? (0, n.jsx)(O, {
+    rule: s,
+    onChangeRule: u,
     onContextMenu: E
-  }) : (0, a.jsx)(A, {
-    rule: t,
+  }) : (0, n.jsx)(p, {
+    rule: s,
     isDefaultRule: o,
     onContextMenu: E
-  })), (0, a.jsx)(i.Clickable, {
+  })), (0, n.jsx)(a.Clickable, {
     className: g.mainContainer,
     onContextMenu: E,
     children: _

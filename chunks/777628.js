@@ -1,8 +1,8 @@
 "use strict";
-var e = n("726433"),
-  o = n("729605"),
-  i = n("937443").f,
-  u = n("960081"),
+var e = n(726433),
+  o = n(729605),
+  i = n(937443).f,
+  u = n(960081),
   s = "object" == typeof window && window && Object.getOwnPropertyNames ? Object.getOwnPropertyNames(window) : [],
   c = function(t) {
     try {

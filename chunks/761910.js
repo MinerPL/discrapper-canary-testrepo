@@ -1,17 +1,17 @@
 "use strict";
-i.r(e), i.d(e, {
-  default: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return s
   }
 });
-var l = i("735250");
-i("470079");
-var r = i("114484");
+var i = n(735250);
+n(470079);
+var r = n(114484);
 
-function a(t) {
+function s(e) {
   return {
-    content: (0, l.jsx)(r.default, {
-      message: t
+    content: (0, i.jsx)(r.ZP, {
+      message: e
     }),
     hasSpoilerEmbeds: !1
   }

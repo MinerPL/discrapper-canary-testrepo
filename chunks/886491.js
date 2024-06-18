@@ -1,32 +1,31 @@
 "use strict";
-n.r(t), n.d(t, {
-  StorefrontButton: function() {
-    return d
+n.d(t, {
+  Q: function() {
+    return u
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("555730"),
-  s = n("481060"),
-  a = n("682864"),
-  o = n("359610"),
-  l = n("689938"),
-  u = n("320757");
+var i = n(735250);
+n(470079);
+var r = n(555730),
+  s = n(481060),
+  o = n(359610),
+  a = n(689938),
+  l = n(502249);
 
-function d(e) {
-  return (0, i.jsx)(o.default, {
+function u(e) {
+  return (0, i.jsx)(o.Z, {
     size: s.ButtonSizes.MEDIUM,
     ...e,
     children: (0, i.jsxs)("div", {
-      className: u.storeBtn,
-      children: [(0, i.jsx)(r.ShopSparkleIcon, {
+      className: l.storeBtn,
+      children: [(0, i.jsx)(r.Q, {
         width: 16,
         height: 16,
         color: "#fff"
-      }), (0, i.jsx)(a.default, {
+      }), (0, i.jsx)(s.Spacer, {
         size: 4,
         horizontal: !0
-      }), l.default.Messages.STOREFRONT]
+      }), a.Z.Messages.STOREFRONT]
     })
   })
 }

@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return s
   }
 });
-var i = n("81825");
+var i = n(81825);
 
 function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function r(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class s extends i.default {
+class s extends i.Z {
   toString() {
     return this.name
   }

@@ -5,4 +5,4 @@
   } catch (e) {
     console.error(e)
   }
-}(), e.exports = n("502920")
+}(), e.exports = n(502920)

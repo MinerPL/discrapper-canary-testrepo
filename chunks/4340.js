@@ -1,10 +1,10 @@
-    "use strict";
-    var r = e("230364"),
-      o = e("97131");
-    n.exports = function(n, t, e) {
-      return e.get && r(e.get, t, {
-        getter: !0
-      }), e.set && r(e.set, t, {
-        setter: !0
-      }), o.f(n, t, e)
-    }
+"use strict";
+var e = n(230364),
+  o = n(97131);
+t.exports = function(t, r, n) {
+  return n.get && e(n.get, r, {
+    getter: !0
+  }), n.set && e(n.set, r, {
+    setter: !0
+  }), o.f(t, r, n)
+}

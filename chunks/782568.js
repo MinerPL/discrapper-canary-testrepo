@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 });
-var i = n("358085");
+var i = n(358085);
 async function r(e, t) {
   let {
     default: r
-  } = await Promise.resolve().then(n.bind(n, "315263")), s = r(e, {
+  } = await Promise.resolve().then(n.bind(n, 315263)), s = r(e, {
     skipExtensionCheck: t,
     analyticsLocations: []
   });

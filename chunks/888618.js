@@ -7,11 +7,11 @@ function i(e, t) {
 function r(e, t, n, i) {
   return i.tension * (e - t) - i.friction * n
 }
-n.r(t), n.d(t, {
-  applySpringForce: function() {
+n.d(t, {
+  B: function() {
     return r
   },
-  randomNumber: function() {
+  M: function() {
     return i
   }
 })

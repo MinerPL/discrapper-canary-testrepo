@@ -12,7 +12,7 @@ var r = function(e) {
     var a = e.push ? {} : r ? t[e.name] : t;
     i(n.match(e.reg), a, e.names, e.name), e.push && t[e.push].push(a)
   },
-  o = n("767172"),
+  o = n(767172),
   s = RegExp.prototype.test.bind(/^([a-z])=(.*)/);
 t.parse = function(e) {
   var t = {},

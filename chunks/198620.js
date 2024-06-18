@@ -1,33 +1,33 @@
 "use strict";
-n.r(t), n.d(t, {
-  isAttachmentUrl: function() {
+n.d(t, {
+  B_: function() {
+    return A
+  },
+  MO: function() {
     return c
   },
-  maybeRefreshAttachmentUrl: function() {
-    return m
+  k5: function() {
+    return f
   },
-  messageHasExpiredAttachmentUrl: function() {
-    return h
-  },
-  removeSignedUrlParameters: function() {
+  q5: function() {
     return E
   }
-}), n("47120");
-var i, r = n("544891"),
-  s = n("70956"),
-  a = n("591759"),
-  o = n("796798"),
-  l = n("981631");
+}), n(47120);
+var i, r = n(544891),
+  s = n(70956),
+  o = n(591759),
+  a = n(796798),
+  l = n(981631);
 let u = new Set([window.GLOBAL_ENV.CDN_HOST, null === (i = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === i ? void 0 : i.substring(2)]),
-  d = new Set(["/attachments/", "/ephemeral-attachments/"]),
-  _ = 1 * s.default.Millis.HOUR;
+  _ = new Set(["/attachments/", "/ephemeral-attachments/"]),
+  d = 1 * s.Z.Millis.HOUR;
 
 function c(e) {
-  return u.has(e.hostname) && Array.from(d).some(t => e.pathname.startsWith(t))
+  return u.has(e.hostname) && Array.from(_).some(t => e.pathname.startsWith(t))
 }
 
 function E(e) {
-  let t = a.default.toURLSafe(e);
+  let t = o.Z.toURLSafe(e);
   if (null == t) return e;
   for (let e of ["ex", "is", "hm"]) t.searchParams.delete(e);
   return t
@@ -37,45 +37,45 @@ function I(e) {
   let t = function(e) {
     let t = e.searchParams.get("ex"),
       n = parseInt(null != t ? t : "", 16);
-    return isNaN(n) ? void 0 : n * s.default.Millis.SECOND
+    return isNaN(n) ? void 0 : n * s.Z.Millis.SECOND
   }(e);
-  return null == t || t <= Date.now() + _
+  return null == t || t <= Date.now() + d
 }
 
 function T(e) {
-  let t = a.default.toURLSafe(e.url);
+  let t = o.Z.toURLSafe(e.url);
   return null != t && I(t)
 }
 
-function f(e) {
+function h(e) {
   if (null == e) return !1;
-  let t = a.default.toURLSafe(e.url);
+  let t = o.Z.toURLSafe(e.url);
   return !!(null != t && c(t)) && I(t)
 }
 
 function S(e) {
   var t;
-  return f(e.image) || (null === (t = e.images) || void 0 === t ? void 0 : t.some(f)) || f(e.video)
+  return h(e.image) || (null === (t = e.images) || void 0 === t ? void 0 : t.some(h)) || h(e.video)
 }
 
-function h(e) {
+function f(e) {
   return e.attachments.some(T) || e.embeds.some(S)
 }
-async function A(e) {
-  let t = await r.HTTP.post({
-    url: l.Endpoints.ATTACHMENTS_REFRESH_URLS,
+async function N(e) {
+  let t = await r.tn.post({
+    url: l.ANM.ATTACHMENTS_REFRESH_URLS,
     body: {
       attachment_urls: [e]
     }
   });
   return t.ok ? t.body.refreshed_urls[0].refreshed : void 0
 }
-async function m(e) {
-  if (!o.AttachmentLinkRefreshExperiment.getCurrentConfig({
+async function A(e) {
+  if (!a.l.getCurrentConfig({
       location: "link_clicked"
     }).enabled) return e;
-  let t = a.default.toURLSafe(e);
+  let t = o.Z.toURLSafe(e);
   if (null == t || !I(t)) return e;
-  let n = await A(e);
+  let n = await N(e);
   return null != n ? n : e
 }

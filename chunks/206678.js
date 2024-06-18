@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return s
   }
-}), n("47120");
-var i = n("470079");
+}), n(47120);
+var i = n(470079);
 
 function r(e, t) {
   let n = e.getBoundingClientRect();
@@ -16,24 +16,24 @@ function s(e) {
     ref: t,
     onDrag: n,
     onDragStart: s,
-    onDragEnd: a
-  } = e, [o, l] = i.useState(!1);
+    onDragEnd: o
+  } = e, [a, l] = i.useState(!1);
   return i.useEffect(() => {
-    if (o) return window.addEventListener("mouseup", e), window.addEventListener("mousemove", i), () => {
+    if (!!a) return window.addEventListener("mouseup", e), window.addEventListener("mousemove", i), () => {
       window.removeEventListener("mouseup", e), window.removeEventListener("mousemove", i)
     };
 
     function e() {
-      null == a || a(), l(!1)
+      null == o || o(), l(!1)
     }
 
     function i(e) {
       let i = t.current;
-      null != i && (null == n || n(r(i, e)))
+      if (null != i) null == n || n(r(i, e))
     }
-  }, [t, o, a, n]), [o, i.useCallback(e => {
+  }, [t, a, o, n]), [a, i.useCallback(e => {
     e.preventDefault();
     let i = t.current;
-    null != i && (l(!0), null == s || s(), null == n || n(r(i, e)))
+    if (null != i) l(!0), null == s || s(), null == n || n(r(i, e))
   }, [t, s, n])]
 }

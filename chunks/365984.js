@@ -1,14 +1,13 @@
 "use strict";
-r.r(t);
-var n = r("595022"),
-  a = r("483266"),
-  o = r("334389");
-t.default = function(e, t) {
-  var r = this.__data__;
-  if (r instanceof n.default) {
-    var i = r.__data__;
-    if (!a.default || i.length < 199) return i.push([e, t]), this.size = ++r.size, this;
-    r = this.__data__ = new o.default(i)
+var r = n(595022),
+  i = n(483266),
+  a = n(334389);
+t.Z = function(e, t) {
+  var n = this.__data__;
+  if (n instanceof r.Z) {
+    var o = n.__data__;
+    if (!i.Z || o.length < 199) return o.push([e, t]), this.size = ++n.size, this;
+    n = this.__data__ = new a.Z(o)
   }
-  return r.set(e, t), this.size = r.size, this
+  return n.set(e, t), this.size = n.size, this
 }

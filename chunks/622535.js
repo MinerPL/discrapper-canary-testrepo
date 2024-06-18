@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  VisibilityObserver: function() {
-    return i.VisibilityObserver
+n.d(t, {
+  $: function() {
+    return r.$
   },
-  VisibilitySensor: function() {
-    return r.VisibilitySensor
+  Z: function() {
+    return i.Z
   }
-}), n("858685");
-var i = n("324404"),
-  r = n("558985")
+}), n(858685);
+var i = n(324404),
+  r = n(558985)

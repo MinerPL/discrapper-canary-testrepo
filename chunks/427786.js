@@ -75,10 +75,9 @@ t.prototype.toArray = function() {
   if (0 !== this._length) return this[this._front]
 }, t.prototype.get = function(e) {
   var t = e;
-  if (t === (0 | t)) {
-    var n = this._length;
-    if (t < 0 && (t += n), !(t < 0) && !(t >= n)) return this[this._front + t & this._capacity - 1]
-  }
+  if (t !== (0 | t)) return;
+  var n = this._length;
+  if (t < 0 && (t += n), !(t < 0) && !(t >= n)) return this[this._front + t & this._capacity - 1]
 }, t.prototype.isEmpty = function() {
   return 0 === this._length
 }, t.prototype.clear = function() {

@@ -8,11 +8,11 @@ function i(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-n.r(t), n.d(t, {
-  chain: function() {
-    return a
+n.d(t, {
+  t: function() {
+    return o
   }
-}), n("47120");
+}), n(47120);
 let r = Symbol.iterator;
 class s {
   [r]() {
@@ -34,7 +34,7 @@ class s {
   }
 }
 
-function a() {
+function o() {
   for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
   return new s(t)
 }

@@ -1,14 +1,14 @@
-var a = r("33608"),
-  n = r("405458"),
+var a = r(33608),
+  n = r(405458),
   s = Object.hasOwnProperty,
   o = Object.create(null);
 for (var i in a) s.call(a, i) && (o[a[i]] = i);
-var u = e.exports = {
+var c = e.exports = {
   to: {},
   get: {}
 };
 
-function c(e, t, r) {
+function u(e, t, r) {
   return Math.min(Math.max(t, e), r)
 }
 
@@ -16,23 +16,23 @@ function l(e) {
   var t = Math.round(e).toString(16).toUpperCase();
   return t.length < 2 ? "0" + t : t
 }
-u.get = function(e) {
+c.get = function(e) {
   var t, r;
   switch (e.substring(0, 3).toLowerCase()) {
     case "hsl":
-      t = u.get.hsl(e), r = "hsl";
+      t = c.get.hsl(e), r = "hsl";
       break;
     case "hwb":
-      t = u.get.hwb(e), r = "hwb";
+      t = c.get.hwb(e), r = "hwb";
       break;
     default:
-      t = u.get.rgb(e), r = "rgb"
+      t = c.get.rgb(e), r = "rgb"
   }
   return t ? {
     model: r,
     value: t
   } : null
-}, u.get.rgb = function(e) {
+}, c.get.rgb = function(e) {
   if (!e) return null;
   var t, r, n, o = [0, 0, 0, 1];
   if (t = e.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
@@ -52,43 +52,43 @@ u.get = function(e) {
     t[4] && (t[5] ? o[3] = .01 * parseFloat(t[4]) : o[3] = parseFloat(t[4]))
   } else if (!(t = e.match(/^(\w+)$/))) return null;
   else return "transparent" === t[1] ? [0, 0, 0, 0] : s.call(a, t[1]) ? ((o = a[t[1]])[3] = 1, o) : null;
-  for (r = 0; r < 3; r++) o[r] = c(o[r], 0, 255);
-  return o[3] = c(o[3], 0, 1), o
-}, u.get.hsl = function(e) {
+  for (r = 0; r < 3; r++) o[r] = u(o[r], 0, 255);
+  return o[3] = u(o[3], 0, 1), o
+}, c.get.hsl = function(e) {
   if (!e) return null;
   var t = e.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
   if (t) {
     var r = parseFloat(t[4]);
-    return [(parseFloat(t[1]) % 360 + 360) % 360, c(parseFloat(t[2]), 0, 100), c(parseFloat(t[3]), 0, 100), c(isNaN(r) ? 1 : r, 0, 1)]
+    return [(parseFloat(t[1]) % 360 + 360) % 360, u(parseFloat(t[2]), 0, 100), u(parseFloat(t[3]), 0, 100), u(isNaN(r) ? 1 : r, 0, 1)]
   }
   return null
-}, u.get.hwb = function(e) {
+}, c.get.hwb = function(e) {
   if (!e) return null;
   var t = e.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
   if (t) {
     var r = parseFloat(t[4]);
-    return [(parseFloat(t[1]) % 360 + 360) % 360, c(parseFloat(t[2]), 0, 100), c(parseFloat(t[3]), 0, 100), c(isNaN(r) ? 1 : r, 0, 1)]
+    return [(parseFloat(t[1]) % 360 + 360) % 360, u(parseFloat(t[2]), 0, 100), u(parseFloat(t[3]), 0, 100), u(isNaN(r) ? 1 : r, 0, 1)]
   }
   return null
-}, u.to.hex = function() {
+}, c.to.hex = function() {
   var e = n(arguments);
   return "#" + l(e[0]) + l(e[1]) + l(e[2]) + (e[3] < 1 ? l(Math.round(255 * e[3])) : "")
-}, u.to.rgb = function() {
+}, c.to.rgb = function() {
   var e = n(arguments);
   return e.length < 4 || 1 === e[3] ? "rgb(" + Math.round(e[0]) + ", " + Math.round(e[1]) + ", " + Math.round(e[2]) + ")" : "rgba(" + Math.round(e[0]) + ", " + Math.round(e[1]) + ", " + Math.round(e[2]) + ", " + e[3] + ")"
-}, u.to.rgb.percent = function() {
+}, c.to.rgb.percent = function() {
   var e = n(arguments),
     t = Math.round(e[0] / 255 * 100),
     r = Math.round(e[1] / 255 * 100),
     a = Math.round(e[2] / 255 * 100);
   return e.length < 4 || 1 === e[3] ? "rgb(" + t + "%, " + r + "%, " + a + "%)" : "rgba(" + t + "%, " + r + "%, " + a + "%, " + e[3] + ")"
-}, u.to.hsl = function() {
+}, c.to.hsl = function() {
   var e = n(arguments);
   return e.length < 4 || 1 === e[3] ? "hsl(" + e[0] + ", " + e[1] + "%, " + e[2] + "%)" : "hsla(" + e[0] + ", " + e[1] + "%, " + e[2] + "%, " + e[3] + ")"
-}, u.to.hwb = function() {
+}, c.to.hwb = function() {
   var e = n(arguments),
     t = "";
   return e.length >= 4 && 1 !== e[3] && (t = ", " + e[3]), "hwb(" + e[0] + ", " + e[1] + "%, " + e[2] + "%" + t + ")"
-}, u.to.keyword = function(e) {
+}, c.to.keyword = function(e) {
   return o[e.slice(0, 3)]
 }

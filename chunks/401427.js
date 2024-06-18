@@ -1,7 +1,7 @@
-var a = s("160739"),
-  l = s("988513"),
-  n = s("263604"),
-  i = s("519342");
-e.exports = function(e, t, s) {
-  return (e = n(e), void 0 === (t = s ? void 0 : t)) ? l(e) ? i(e) : a(e) : e.match(t) || []
+var i = n(160739),
+  s = n(988513),
+  l = n(263604),
+  a = n(519342);
+e.exports = function(e, t, n) {
+  return (e = l(e), void 0 === (t = n ? void 0 : t)) ? s(e) ? a(e) : i(e) : e.match(t) || []
 }

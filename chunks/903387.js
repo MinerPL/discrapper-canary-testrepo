@@ -1,7 +1,6 @@
 "use strict";
-n.r(t);
-var i = n("58406");
-class r extends i.NativePermissionBaseUtils {
+var i = n(58406);
+class r extends i.g {
   requestPermissionCore(e, t) {
     return Promise.resolve(!0)
   }
@@ -14,4 +13,4 @@ class r extends i.NativePermissionBaseUtils {
   }
   openAlertModal(e) {}
 }
-t.default = new r
+t.Z = new r

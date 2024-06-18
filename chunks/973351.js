@@ -3,7 +3,7 @@ var r;
 if (!Object.keys) {
   var i = Object.prototype.hasOwnProperty,
     a = Object.prototype.toString,
-    o = n("560640"),
+    o = n(560640),
     s = Object.prototype.propertyIsEnumerable,
     u = !s.call({
       toString: null

@@ -1,9 +1,9 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return i
   }
-}), n("47120");
+}), n(47120);
 class i {
   toJS() {
     return {
@@ -23,7 +23,7 @@ class i {
       if (!e.hasOwnProperty(n)) continue;
       let i = this[n],
         r = e[n];
-      (!(r instanceof Date) || !(i instanceof Date) || r.getTime() !== i.getTime()) && i !== r && (null == t && (t = {
+      if (!(r instanceof Date) || !(i instanceof Date) || r.getTime() !== i.getTime()) i !== r && (null == t && (t = {
         ...this
       }), t[n] = e[n])
     }

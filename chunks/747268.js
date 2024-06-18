@@ -1,6 +1,6 @@
 "use strict";
-n.r(t), n.d(t, {
-  CurrentReleaseChannel: function() {
+n.d(t, {
+  Z: function() {
     return i
   }
 }), window.GLOBAL_ENV.RELEASE_CHANNEL;

@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var r = n("470079");
+var r = n(470079);
 
 function i(e, t) {
   var n = (0, r.useState)(function() {

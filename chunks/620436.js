@@ -1,34 +1,34 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return d
+t.d(s, {
+  Z: function() {
+    return c
   }
 });
-var a, l, n = s("735250");
-s("470079");
-var i = s("50199"),
-  r = s("465670"),
-  o = s("331752");
-(a = l || (l = {})).ARROW_DOWN = "arrow_down", a.CROSS = "cross";
+var n, i, l = t(735250);
+t(470079);
+var a = t(50199),
+  r = t(465670),
+  o = t(229546);
+(n = i || (i = {})).ARROW_DOWN = "arrow_down", n.CROSS = "cross";
 
-function d(e) {
+function c(e) {
   let {
-    type: t
+    type: s
   } = e;
-  return (0, n.jsx)("div", {
+  return (0, l.jsx)("div", {
     className: o.dividerContainer,
-    children: (0, n.jsx)("div", {
+    children: (0, l.jsx)("div", {
       className: o.dividerIconContainer,
       children: function(e) {
         switch (e) {
           case "arrow_down":
-            return (0, n.jsx)(i.default, {
+            return (0, l.jsx)(a.Z, {
               width: 24,
               height: 24,
               className: o.dividierIcon
             });
           case "cross":
-            return (0, n.jsx)(r.default, {
+            return (0, l.jsx)(r.Z, {
               width: 24,
               height: 24,
               className: o.dividierIcon
@@ -36,8 +36,8 @@ function d(e) {
           default:
             return null
         }
-      }(t)
+      }(s)
     })
   })
 }
-d.Type = l
+c.Type = i

@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  DEVTOOLS_SIDEBAR_MIN_WIDTH: function() {
+n.d(t, {
+  h: function() {
     return l
   }
 });
-var i, r = n("442837"),
-  s = n("570140"),
-  a = n("906467");
+var i, r = n(442837),
+  s = n(570140),
+  o = n(906467);
 
-function o(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -27,9 +27,10 @@ let l = 360,
       y: 0
     }
   };
-class d extends(i = r.default.DeviceSettingsStore) {
+class _ extends(i = r.ZP.DeviceSettingsStore) {
   initialize(e) {
-    u = null != e ? e : u, s.default.actionLogger.persist = a.default.isDeveloper
+    u = null != e ? e : u;
+    s.Z.actionLogger.persist = o.Z.isDeveloper
   }
   getUserAgnosticState() {
     return u
@@ -42,20 +43,20 @@ class d extends(i = r.default.DeviceSettingsStore) {
     return null !== (e = u.lastOpenTabId) && void 0 !== e ? e : null
   }
   get displayTools() {
-    return a.default.isDeveloper && u.displayTools
+    return o.Z.isDeveloper && u.displayTools
   }
   get showDevWidget() {
-    return a.default.isDeveloper && u.showDevWidget
+    return o.Z.isDeveloper && u.showDevWidget
   }
   get devWidgetPosition() {
     return u.devWidgetPosition
   }
 }
-o(d, "displayName", "DevToolsSettingsStore"), o(d, "persistKey", "DevToolsSettingsStore"), t.default = new d(s.default, {
+a(_, "displayName", "DevToolsSettingsStore"), a(_, "persistKey", "DevToolsSettingsStore"), t.Z = new _(s.Z, {
   DEV_TOOLS_SETTINGS_UPDATE: function(e) {
-    a.default.isDeveloper && (u = {
+    if (!!o.Z.isDeveloper) u = {
       ...u,
       ...e.settings
-    })
+    }
   }
 })

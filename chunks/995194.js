@@ -1,6 +1,6 @@
 "use strict";
-var e = n("67867"),
-  o = n("592843");
+var e = n(67867),
+  o = n(592843);
 e({
   target: "Object",
   stat: !0,

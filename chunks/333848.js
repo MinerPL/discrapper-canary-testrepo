@@ -1,77 +1,77 @@
 "use strict";
-n.r(t), n("411104");
-var i = n("990547"),
-  a = n("283693"),
-  l = n("570140"),
-  r = n("408987"),
-  s = n("9156"),
-  o = n("621600"),
-  u = n("573261"),
-  d = n("92114"),
-  c = n("981631"),
-  _ = n("526761");
-t.default = {
+n(411104);
+var i = n(990547),
+  r = n(283693),
+  s = n(570140),
+  o = n(408987),
+  a = n(9156),
+  l = n(621600),
+  u = n(573261),
+  _ = n(92114),
+  d = n(981631),
+  c = n(526761);
+t.Z = {
   createChannel(e) {
     let {
       guildId: t,
       type: n,
       name: E,
-      permissionOverwrites: T = [],
-      bitrate: p,
-      userLimit: f,
+      permissionOverwrites: I = [],
+      bitrate: T,
+      userLimit: h,
       parentId: S,
-      skuId: h,
-      branchId: C
+      skuId: f,
+      branchId: N
     } = e;
-    l.default.dispatch({
+    s.Z.dispatch({
       type: "CREATE_CHANNEL_MODAL_SUBMIT"
     });
-    let g = {
+    let A = {
       type: n,
       name: E,
-      permission_overwrites: T
+      permission_overwrites: I
     };
-    if (null != p && p !== c.BITRATE_DEFAULT && (g.bitrate = p), null != f && f > 0 && (g.user_limit = f), null != S && (g.parent_id = S), n === c.ChannelTypes.GUILD_STORE) {
-      if (null == h) throw Error("Unexpected missing SKU");
-      g.sku_id = h, g.branch_id = C
+    if (null != T && T !== d.epw && (A.bitrate = T), null != h && h > 0 && (A.user_limit = h), null != S && (A.parent_id = S), n === d.d4z.GUILD_STORE) {
+      if (null == f) throw Error("Unexpected missing SKU");
+      A.sku_id = f, A.branch_id = N
     }
-    return u.default.post({
-      url: c.Endpoints.GUILD_CHANNELS(t),
-      body: g,
+    return u.Z.post({
+      url: d.ANM.GUILD_CHANNELS(t),
+      body: A,
       oldFormErrors: !0,
       trackedActionData: {
         event: i.NetworkActionNames.CHANNEL_CREATE,
         properties: e => {
           var t, n;
-          return (0, a.exact)({
-            is_private: T.length > 0,
+          return (0, r.iG)({
+            is_private: I.length > 0,
             channel_id: null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.id,
             channel_type: null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.type
           })
         }
       }
-    }).then(e => (s.default.isOptInEnabled(t) && d.default.updateChannelOverrideSettings(t, e.body.id, {
-      flags: _.ChannelNotificationSettingsFlags.OPT_IN_ENABLED
-    }, o.NotificationLabels.OptedIn), r.default.checkGuildTemplateDirty(t), e), e => {
-      throw l.default.dispatch({
+    }).then(e => (a.ZP.isOptInEnabled(t) && _.Z.updateChannelOverrideSettings(t, e.body.id, {
+      flags: c.ic.OPT_IN_ENABLED
+    }, l.ZB.OptedIn), o.Z.checkGuildTemplateDirty(t), e), e => {
+      throw s.Z.dispatch({
         type: "CREATE_CHANNEL_MODAL_SUBMIT_FAILURE",
         errors: e.body
       }), e
     })
   },
-  createRoleSubscriptionTemplateChannel: (e, t, n, l) => u.default.post({
-    url: c.Endpoints.GUILD_CHANNELS(e),
+  createRoleSubscriptionTemplateChannel: (e, t, n, s) => u.Z.post({
+    url: d.ANM.GUILD_CHANNELS(e),
     body: {
       name: t,
       type: n,
-      topic: l
+      topic: s
     },
     oldFormErrors: !0,
     trackedActionData: {
       event: i.NetworkActionNames.CHANNEL_CREATE,
       properties: e => {
         var t, n;
-        return (0, a.exact)({
+        return (0, r.iG)({
           is_private: !0,
           channel_id: null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.id,
           channel_type: null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.type

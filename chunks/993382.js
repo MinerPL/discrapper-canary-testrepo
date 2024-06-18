@@ -1,138 +1,138 @@
 "use strict";
-a.r(s), a("47120");
-var t = a("735250"),
-  l = a("470079"),
-  i = a("442837"),
-  r = a("481060"),
-  d = a("367907"),
-  n = a("434404"),
-  o = a("999382"),
-  c = a("416162"),
-  E = a("153124"),
-  u = a("296386"),
-  S = a("919947"),
-  R = a("506491"),
-  m = a("957783"),
-  _ = a("753583"),
-  x = a("219369"),
-  C = a("731455"),
-  p = a("981631"),
-  I = a("689938"),
-  g = a("190500"),
-  T = a("438825");
+a.r(s), a(47120);
+var t = a(735250),
+  i = a(470079),
+  r = a(442837),
+  l = a(481060),
+  n = a(367907),
+  o = a(434404),
+  d = a(999382),
+  c = a(416162),
+  E = a(153124),
+  R = a(296386),
+  S = a(919947),
+  m = a(506491),
+  x = a(957783),
+  _ = a(753583),
+  u = a(219369),
+  h = a(731455),
+  I = a(981631),
+  C = a(689938),
+  g = a(353964),
+  N = a(438825);
 s.default = e => {
   let {
     transitionState: s,
-    onClose: h
+    onClose: T
   } = e, {
-    guild: v,
-    guildMetadata: f
-  } = (0, i.useStateFromStoresObject)([o.default], () => o.default.getProps()), D = (0, E.useUID)(), [N, O] = l.useState(!1), [A, M] = l.useState(0), [V, j] = l.useState(!1);
-  if (l.useEffect(() => {
-      d.default.trackWithMetadata(p.AnalyticEvents.OPEN_MODAL, {
-        type: p.AnalyticsSections.DISCOVERY_SETUP_SUCCESS_MODAL
+    guild: p,
+    guildMetadata: v
+  } = (0, r.cj)([d.Z], () => d.Z.getProps()), O = (0, E.Dt)(), [D, j] = i.useState(!1), [V, A] = i.useState(0), [M, L] = i.useState(!1);
+  if (i.useEffect(() => {
+      n.ZP.trackWithMetadata(I.rMx.OPEN_MODAL, {
+        type: I.jXE.DISCOVERY_SETUP_SUCCESS_MODAL
       })
-    }, []), null == v) return null;
-  let y = (0, t.jsx)(R.default, {
-      guild: v,
-      headerId: D
+    }, []), null == p) return null;
+  let Z = (0, t.jsx)(m.Z, {
+      guild: p,
+      headerId: O
     }),
-    L = (0, t.jsx)(S.default, {
-      guild: v,
-      guildMetadata: f,
-      headerId: D
+    b = (0, t.jsx)(S.Z, {
+      guild: p,
+      guildMetadata: v,
+      headerId: O
     }),
-    k = (0, t.jsx)(_.default, {
-      guild: v,
-      guildMetadata: f,
-      headerId: D
+    y = (0, t.jsx)(_.Z, {
+      guild: p,
+      guildMetadata: v,
+      headerId: O
     }),
-    Y = (0, t.jsx)(m.default, {
-      guild: v,
-      headerId: D,
-      onAgreedChange: j
+    P = (0, t.jsx)(x.Z, {
+      guild: p,
+      headerId: O,
+      onAgreedChange: L
     }),
-    G = (0, t.jsx)("img", {
+    f = (0, t.jsx)("img", {
       alt: "",
-      src: T,
+      src: N,
       className: g.footerImage,
       width: 240
     }),
-    b = async () => {
-      if (0 === A) {
-        O(!0);
+    Y = async () => {
+      if (0 === V) {
+        j(!0);
         try {
-          await n.default.saveGuild(v.id, {
-            description: v.description
+          await o.Z.saveGuild(p.id, {
+            description: p.description
           }, {
             isForDiscovery: !0,
             throwErr: !0
-          }), M(A + 1), (0, x.trackFlowAnalytics)(x.DiscoverySetupModalSteps.DESCRIPTION, x.DiscoverySetupModalSteps.CATEGORIES, v.id)
+          }), A(V + 1), (0, u.Nx)(u.tK.DESCRIPTION, u.tK.CATEGORIES, p.id)
         } catch (e) {}
-      } else if (1 === A) M(A + 1), (0, x.trackFlowAnalytics)(x.DiscoverySetupModalSteps.CATEGORIES, x.DiscoverySetupModalSteps.TAGS, v.id);
-      else if (2 === A) {
-        O(!0);
+      } else if (1 === V) A(V + 1), (0, u.Nx)(u.tK.CATEGORIES, u.tK.TAGS, p.id);
+      else if (2 === V) {
+        j(!0);
         try {
-          await (0, u.saveGuildMetadata)({
-            guildId: v.id,
-            primaryCategoryId: f.primaryCategoryId,
-            keywords: f.keywords,
-            emojiDiscoverabilityEnabled: f.emojiDiscoverabilityEnabled,
-            partnerActionedTimestamp: f.partnerActionedTimestamp,
-            partnerApplicationTimestamp: f.partnerApplicationTimestamp,
-            isPublished: f.isPublished,
-            reasonsToJoin: f.reasonsToJoin,
-            socialLinks: f.socialLinks,
-            about: f.about
-          }), M(A + 1), (0, x.trackFlowAnalytics)(x.DiscoverySetupModalSteps.TAGS, x.DiscoverySetupModalSteps.AGREE_TO_RULES, v.id)
+          await (0, R.Vv)({
+            guildId: p.id,
+            primaryCategoryId: v.primaryCategoryId,
+            keywords: v.keywords,
+            emojiDiscoverabilityEnabled: v.emojiDiscoverabilityEnabled,
+            partnerActionedTimestamp: v.partnerActionedTimestamp,
+            partnerApplicationTimestamp: v.partnerApplicationTimestamp,
+            isPublished: v.isPublished,
+            reasonsToJoin: v.reasonsToJoin,
+            socialLinks: v.socialLinks,
+            about: v.about
+          }), A(V + 1), (0, u.Nx)(u.tK.TAGS, u.tK.AGREE_TO_RULES, p.id)
         } catch (e) {}
       }
-      O(!1)
-    }, P = [{
+      j(!1)
+    }, G = [{
+      modalContent: Z,
+      disableNextStep: null == p.description,
+      overviewTitle: C.Z.Messages.SERVER_DISCOVERY_DESCRIPTION
+    }, {
+      modalContent: b,
+      disableNextStep: v.primaryCategoryId === h.o3 || null == v.primaryCategoryId,
+      overviewTitle: C.Z.Messages.SERVER_DISCOVERY_CATEGORY
+    }, {
       modalContent: y,
-      disableNextStep: null == v.description,
-      overviewTitle: I.default.Messages.SERVER_DISCOVERY_DESCRIPTION
+      disableNextStep: 0 === v.keywords.length,
+      overviewTitle: C.Z.Messages.SERVER_DISCOVERY_TAGS
     }, {
-      modalContent: L,
-      disableNextStep: f.primaryCategoryId === C.DEFAULT_DISCOVERY_CATEGORY_ID || null == f.primaryCategoryId,
-      overviewTitle: I.default.Messages.SERVER_DISCOVERY_CATEGORY
-    }, {
-      modalContent: k,
-      disableNextStep: 0 === f.keywords.length,
-      overviewTitle: I.default.Messages.SERVER_DISCOVERY_TAGS
-    }, {
-      modalContent: Y,
-      disableNextStep: !V,
-      overviewTitle: I.default.Messages.SERVER_DISCOVERY_AGREE_TO_RULES
+      modalContent: P,
+      disableNextStep: !M,
+      overviewTitle: C.Z.Messages.SERVER_DISCOVERY_AGREE_TO_RULES
     }];
-  return (0, t.jsx)(c.default, {
-    stepData: P,
-    title: I.default.Messages.SERVER_DISCOVERY_SETUP_SIDEBAR_HEADLINE,
+  return (0, t.jsx)(c.Z, {
+    stepData: G,
+    title: C.Z.Messages.SERVER_DISCOVERY_SETUP_SIDEBAR_HEADLINE,
     transitionState: s,
-    onClose: h,
-    completeButtonText: I.default.Messages.ALL_DONE,
-    onNextPressed: b,
+    onClose: T,
+    completeButtonText: C.Z.Messages.ALL_DONE,
+    onNextPressed: Y,
     onPrevPressed: () => {
-      M(A - 1)
+      A(V - 1)
     },
-    forceStep: A,
+    forceStep: V,
     onComplete: () => {
-      let e = v.features;
-      !v.hasFeature(p.GuildFeatures.DISCOVERABLE) && e.add(p.GuildFeatures.DISCOVERABLE), n.default.saveGuild(v.id, {
+      let e = p.features;
+      !p.hasFeature(I.oNc.DISCOVERABLE) && e.add(I.oNc.DISCOVERABLE), o.Z.saveGuild(p.id, {
         features: e,
-        description: v.description
-      }), (0, r.openModalLazy)(async () => {
+        description: p.description
+      }), (0, l.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([a.e("99387"), a.e("89069")]).then(a.bind(a, "646364"));
+        } = await Promise.all([a.e("99387"), a.e("89069")]).then(a.bind(a, 646364));
         return s => (0, t.jsx)(e, {
           ...s,
-          guild: v
+          guild: p
         })
       })
     },
-    overviewFooter: G,
-    submitting: N,
+    overviewFooter: f,
+    submitting: D,
     sequencerClassName: g.container
   })
 }

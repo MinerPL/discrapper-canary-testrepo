@@ -1,29 +1,29 @@
 "use strict";
 var i, r;
-n.r(t), n.d(t, {
-  CLAN_BADGE_NUM_CUSTOMIZABLE_COLORS: function() {
+n.d(t, {
+  ME: function() {
     return u
   },
-  CLAN_BADGE_PALETTE_PRESETS: function() {
-    return a
-  },
-  CLAN_BADGE_PRIMARY_DEFAULT: function() {
-    return s
-  },
-  CLAN_BADGE_SECONDARY_DEFAULT: function() {
+  Nh: function() {
     return o
   },
-  ClanBadgeKind: function() {
+  ZD: function() {
     return i
   },
-  getRandomClanBadgeKind: function() {
-    return d
+  lP: function() {
+    return _
   },
-  getRandomClanBadgePreset: function() {
+  sg: function() {
+    return s
+  },
+  vY: function() {
+    return a
+  },
+  yf: function() {
     return l
   }
 }), (r = i || (i = {}))[r.SWORD = 0] = "SWORD", r[r.WATER_DROP = 1] = "WATER_DROP", r[r.SKULL = 2] = "SKULL", r[r.TOADSTOOL = 3] = "TOADSTOOL", r[r.MOON = 4] = "MOON", r[r.LIGHTNING = 5] = "LIGHTNING", r[r.LEAF = 6] = "LEAF", r[r.HEART = 7] = "HEART", r[r.FIRE = 8] = "FIRE", r[r.COMPASS = 9] = "COMPASS", r[r.CROSSHAIRS = 10] = "CROSSHAIRS", r[r.FLOWER = 11] = "FLOWER", r[r.FORCE = 12] = "FORCE", r[r.GEM = 13] = "GEM", r[r.LAVA = 14] = "LAVA", r[r.PSYCHIC = 15] = "PSYCHIC", r[r.SMOKE = 16] = "SMOKE", r[r.SNOW = 17] = "SNOW", r[r.SOUND = 18] = "SOUND", r[r.SUN = 19] = "SUN", r[r.WIND = 20] = "WIND";
-let a = [{
+let s = [{
     primary: "#ff1c90",
     secondary: "#ff7fc0"
   }, {
@@ -63,11 +63,11 @@ let a = [{
     primary: "#3f3f3f",
     secondary: "#555555"
   }],
-  s = a[0].primary,
-  o = a[0].secondary;
+  o = s[0].primary,
+  a = s[0].secondary;
 
 function l() {
-  return a[Math.floor(Math.random() * a.length)]
+  return s[Math.floor(Math.random() * s.length)]
 }
 let u = {
   0: 2,
@@ -93,7 +93,7 @@ let u = {
   20: 2
 };
 
-function d() {
+function _() {
   let e = Object.keys(i).filter(e => isNaN(Number(e)));
   return i[e[Math.round(Math.random() * e.length - 1)]]
 }

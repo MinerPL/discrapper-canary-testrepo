@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return l
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("376398"),
-  a = n("825040");
-async function o(e) {
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(376398),
+  o = n(825040);
+async function a(e) {
   let {
     deviceId: t,
     width: n,
@@ -37,16 +37,16 @@ function l(e) {
     width: n,
     height: l,
     disabled: u
-  } = e, [d, _] = r.useState();
+  } = e, [_, d] = r.useState();
   return r.useEffect(() => {
-    let e = o({
+    let e = a({
       deviceId: t,
       width: n,
       height: l,
       disabled: u
     }).then(e => {
-      let t = null != e ? (0, s.registerVideoStream)(e) : null;
-      return _(t), {
+      let t = null != e ? (0, s.N7)(e) : null;
+      return d(t), {
         stream: e,
         streamId: t
       }
@@ -58,17 +58,17 @@ function l(e) {
           stream: n,
           streamId: i
         } = e;
-        null != (t = n) && t.getTracks().forEach(e => e.stop()), null != i && (0, s.unregisterVideoStream)(i)
+        null != (t = n) && t.getTracks().forEach(e => e.stop()), null != i && (0, s.jC)(i)
       })
     }
-  }, [t, n, l, u]), null == d ? (0, i.jsx)("div", {
+  }, [t, n, l, u]), null == _ ? (0, i.jsx)("div", {
     className: "media-engine-video",
     style: {
       width: n,
       height: l
     }
-  }) : (0, i.jsx)(a.default, {
-    streamId: d,
+  }) : (0, i.jsx)(o.Z, {
+    streamId: _,
     style: {
       width: n,
       height: l

@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  BodyWave: function() {
+n.d(t, {
+  A: function() {
     return l
   },
-  HeaderWave: function() {
-    return a
+  O: function() {
+    return o
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("153832"),
-  s = n("168184");
+var i = n(735250);
+n(470079);
+var r = n(772848),
+  s = n(948583);
 
-function a() {
+function o() {
   return (0, i.jsx)("svg", {
     className: s.headerWave,
     version: "1.1",
@@ -31,7 +31,7 @@ function a() {
     })
   })
 }
-let o = (0, r.v4)();
+let a = (0, r.Z)();
 
 function l() {
   return (0, i.jsxs)("svg", {
@@ -45,7 +45,7 @@ function l() {
     viewBox: "0 0 1512 1619",
     xmlSpace: "preserve",
     children: [(0, i.jsxs)("linearGradient", {
-      id: o,
+      id: a,
       gradientUnits: "userSpaceOnUse",
       x1: "-13.3959",
       y1: "82.1225",
@@ -63,7 +63,7 @@ function l() {
       })]
     }), (0, i.jsx)("path", {
       style: {
-        fill: "url(#".concat(o, ")")
+        fill: "url(#".concat(a, ")")
       },
       d: "M0,1619c507-247.2,1154.7-241,1512-194.7V548.5c-150.9,56.4-400.3,51.2-691-222.6C506.6,29.9,186.8-16.5,0,4.3  V1619z"
     })]

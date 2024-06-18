@@ -1,16 +1,16 @@
 "use strict";
-a.r(t);
-var l = a("735250"),
-  s = a("470079"),
-  r = a("481060"),
-  n = a("727637"),
-  i = a("906732"),
-  o = a("241553"),
-  u = a("333867"),
-  c = a("559629"),
-  d = a("231338"),
-  f = a("689938"),
-  C = a("46309");
+var n = t(735250),
+  a = t(470079),
+  i = t(481060),
+  l = t(727637),
+  r = t(906732),
+  o = t(241553),
+  c = t(333867),
+  u = t(559629),
+  d = t(884697),
+  C = t(231338),
+  E = t(689938),
+  f = t(46309);
 let m = {
   dark: [{
     box: "#FFF19E",
@@ -57,46 +57,46 @@ let m = {
     ribbon: "#026530"
   }]
 };
-t.default = e => {
+s.Z = e => {
   let {
-    product: t,
-    returnRef: a,
+    product: s,
+    returnRef: t,
     onSuccess: p,
-    tooltipDelay: E,
+    tooltipDelay: g,
     isGiftEasterEggEnabled: h,
-    disableCustomColor: g = !1
+    disableCustomColor: x = !1
   } = e, {
-    analyticsLocations: x
-  } = (0, i.default)(), v = s.useRef(null), b = (0, n.default)(v), T = g ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT;
-  return (0, l.jsx)(r.Tooltip, {
-    text: f.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
-    delay: E,
-    children: e => (0, l.jsx)(r.Button, {
+    analyticsLocations: _
+  } = (0, r.ZP)(), I = a.useRef(null), T = (0, l.Z)(I), N = x ? C.BR.DARK : C.BR.LIGHT;
+  return (0, d.x6)(s) ? null : (0, n.jsx)(i.Tooltip, {
+    text: E.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
+    delay: g,
+    children: e => (0, n.jsx)(i.Button, {
       ...e,
-      buttonRef: v,
-      className: C.giftButton,
-      color: g ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
-      look: r.Button.Looks.FILLED,
-      size: r.ButtonSizes.ICON,
-      innerClassName: C.giftButtonInner,
-      "aria-label": f.default.Messages.PREMIUM_GIFTING_BUTTON,
+      buttonRef: I,
+      className: f.giftButton,
+      color: x ? i.ButtonColors.BRAND : i.ButtonColors.CUSTOM,
+      look: i.Button.Looks.FILLED,
+      size: i.ButtonSizes.ICON,
+      innerClassName: f.giftButtonInner,
+      "aria-label": E.Z.Messages.PREMIUM_GIFTING_BUTTON,
       onClick: e => {
-        e.stopPropagation(), (0, u.default)({
-          skuId: t.skuId,
+        e.stopPropagation(), (0, c.Z)({
+          skuId: s.skuId,
           isGift: !0,
-          analyticsLocations: x,
-          returnRef: a,
+          analyticsLocations: _,
+          returnRef: t,
           onClose: null != p ? e => {
             e && p()
           } : void 0
         })
       },
-      children: h ? (0, l.jsx)(o.SeasonalGiftIcon, {
-        hovered: b,
+      children: h ? (0, n.jsx)(o.e, {
+        hovered: T,
         isContentDismissed: !0,
-        themeOverride: T,
+        themeOverride: N,
         boxColors: m
-      }) : (0, l.jsx)(c.default, {
+      }) : (0, n.jsx)(u.Z, {
         width: 24,
         height: 24
       })

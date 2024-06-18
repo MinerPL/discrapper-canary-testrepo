@@ -1,26 +1,25 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("803997"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("140436");
-t.default = e => {
+  o = n(256286);
+t.Z = e => {
   let {
     message: t,
     className: n,
     noResultsImageURL: r,
-    forceLightTheme: o,
+    forceLightTheme: a,
     suggestions: l
   } = e;
   return (0, i.jsx)("div", {
     className: s()({
-      [a.forceLightTheme]: o
+      [o.forceLightTheme]: a
     }, n),
     children: (0, i.jsxs)("div", {
-      className: a.wrapper,
+      className: o.wrapper,
       children: [(0, i.jsx)("div", {
-        className: a.sadImage,
+        className: o.sadImage,
         style: null != r ? {
           backgroundImage: "url(".concat(r, ")")
         } : {}

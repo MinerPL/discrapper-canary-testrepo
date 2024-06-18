@@ -1,28 +1,26 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("476400"),
-  i = r.n(o),
-  l = r("844303"),
-  u = r("707850"),
-  s = r("464854"),
-  f = r("588945"),
-  c = r("740622"),
-  d = r("698842"),
-  p = function(e) {
+var r = n(470079),
+  i = n(476400),
+  a = n.n(i),
+  o = n(844303),
+  s = n(829307),
+  u = n(464854),
+  c = n(588945),
+  l = n(740622),
+  d = n(698842),
+  f = function(e) {
     var t = e.width,
-      r = e.onChange,
-      n = e.disableAlpha,
-      o = e.rgb,
-      i = e.hsl,
+      n = e.onChange,
+      i = e.disableAlpha,
+      a = e.rgb,
+      f = e.hsl,
       p = e.hsv,
       h = e.hex,
-      b = e.renderers,
-      v = e.styles,
-      g = e.className,
-      x = e.defaultView,
-      y = (0, l.default)((0, u.default)({
+      m = e.renderers,
+      g = e.styles,
+      _ = e.className,
+      b = e.defaultView,
+      v = (0, o.default)((0, s.Z)({
         default: {
           picker: {
             width: t,
@@ -63,7 +61,7 @@ var n = r("470079"),
             absolute: "0px 0px 0px 0px",
             borderRadius: "8px",
             boxShadow: "inset 0 0 0 1px rgba(0,0,0,.1)",
-            background: "rgba(" + o.r + ", " + o.g + ", " + o.b + ", " + o.a + ")",
+            background: "rgba(" + a.r + ", " + a.g + ", " + a.b + ", " + a.a + ")",
             zIndex: "2"
           },
           toggles: {
@@ -101,67 +99,67 @@ var n = r("470079"),
             marginTop: "0px"
           }
         }
-      }, void 0 === v ? {} : v), {
-        disableAlpha: n
+      }, void 0 === g ? {} : g), {
+        disableAlpha: i
       });
-    return a().createElement("div", {
-      style: y.picker,
-      className: "chrome-picker " + (void 0 === g ? "" : g)
-    }, a().createElement("div", {
-      style: y.saturation
-    }, a().createElement(s.Saturation, {
-      style: y.Saturation,
-      hsl: i,
+    return r.createElement("div", {
+      style: v.picker,
+      className: "chrome-picker " + (void 0 === _ ? "" : _)
+    }, r.createElement("div", {
+      style: v.saturation
+    }, r.createElement(u.OQ, {
+      style: v.Saturation,
+      hsl: f,
       hsv: p,
-      pointer: d.default,
-      onChange: r
-    })), a().createElement("div", {
-      style: y.body
-    }, a().createElement("div", {
-      style: y.controls,
+      pointer: d.Z,
+      onChange: n
+    })), r.createElement("div", {
+      style: v.body
+    }, r.createElement("div", {
+      style: v.controls,
       className: "flexbox-fix"
-    }, a().createElement("div", {
-      style: y.color
-    }, a().createElement("div", {
-      style: y.swatch
-    }, a().createElement("div", {
-      style: y.active
-    }), a().createElement(s.Checkboard, {
-      renderers: b
-    }))), a().createElement("div", {
-      style: y.toggles
-    }, a().createElement("div", {
-      style: y.hue
-    }, a().createElement(s.Hue, {
-      style: y.Hue,
-      hsl: i,
-      pointer: c.default,
-      onChange: r
-    })), a().createElement("div", {
-      style: y.alpha
-    }, a().createElement(s.Alpha, {
-      style: y.Alpha,
-      rgb: o,
-      hsl: i,
-      pointer: c.default,
-      renderers: b,
-      onChange: r
-    })))), a().createElement(f.default, {
-      rgb: o,
-      hsl: i,
+    }, r.createElement("div", {
+      style: v.color
+    }, r.createElement("div", {
+      style: v.swatch
+    }, r.createElement("div", {
+      style: v.active
+    }), r.createElement(u.QN, {
+      renderers: m
+    }))), r.createElement("div", {
+      style: v.toggles
+    }, r.createElement("div", {
+      style: v.hue
+    }, r.createElement(u.PS, {
+      style: v.Hue,
+      hsl: f,
+      pointer: l.Z,
+      onChange: n
+    })), r.createElement("div", {
+      style: v.alpha
+    }, r.createElement(u.xV, {
+      style: v.Alpha,
+      rgb: a,
+      hsl: f,
+      pointer: l.Z,
+      renderers: m,
+      onChange: n
+    })))), r.createElement(c.Z, {
+      rgb: a,
+      hsl: f,
       hex: h,
-      view: x,
-      onChange: r,
-      disableAlpha: n
+      view: b,
+      onChange: n,
+      disableAlpha: i
     })))
   };
-p.propTypes = {
-  width: i().oneOfType([i().string, i().number]),
-  disableAlpha: i().bool,
-  styles: i().object,
-  defaultView: i().oneOf(["hex", "rgb", "hsl"])
-}, p.defaultProps = {
+f.propTypes = {
+  width: a().oneOfType([a().string, a().number]),
+  disableAlpha: a().bool,
+  styles: a().object,
+  defaultView: a().oneOf(["hex", "rgb", "hsl"])
+}, f.defaultProps = {
   width: 225,
   disableAlpha: !1,
   styles: {}
-}, (0, s.ColorWrap)(p)
+}, (0, u.t1)(f)

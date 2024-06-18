@@ -1,37 +1,37 @@
 "use strict";
-n.r(t), n("47120");
-var s = n("544891"),
-  a = n("570140"),
-  i = n("893776"),
-  r = n("899742"),
-  l = n("743142"),
-  o = n("117240"),
-  u = n("626135"),
-  d = n("317770"),
-  c = n("981631");
+n(47120);
+var s = n(544891),
+  r = n(570140),
+  i = n(893776),
+  a = n(899742),
+  l = n(743142),
+  o = n(117240),
+  u = n(626135),
+  c = n(317770),
+  d = n(981631);
 
-function f(e, t) {
-  u.default.track(c.AnalyticEvents.BROWSER_HANDOFF_SUCCEEDED, {
+function h(e, t) {
+  u.default.track(d.rMx.BROWSER_HANDOFF_SUCCEEDED, {
     authenticated: e,
     handoff_source: t
   })
 }
-class h extends d.default {
+class E extends c.Z {
   _initialize() {
-    a.default.subscribe("BROWSER_HANDOFF_END", this.handleEnd), a.default.subscribe("BROWSER_HANDOFF_FROM_APP", this.handleHandoff)
+    r.Z.subscribe("BROWSER_HANDOFF_END", this.handleEnd), r.Z.subscribe("BROWSER_HANDOFF_FROM_APP", this.handleHandoff)
   }
   _terminate() {
-    a.default.unsubscribe("BROWSER_HANDOFF_END", this.handleEnd), a.default.unsubscribe("BROWSER_HANDOFF_FROM_APP", this.handleHandoff)
+    r.Z.unsubscribe("BROWSER_HANDOFF_END", this.handleEnd), r.Z.unsubscribe("BROWSER_HANDOFF_FROM_APP", this.handleHandoff)
   }
   handleHandoff(e) {
     let {
       handoffKey: t,
       handoffToken: n,
-      fingerprint: a,
+      fingerprint: r,
       handoffSource: o
     } = e;
-    null != n ? s.HTTP.post({
-      url: c.Endpoints.HANDOFF_EXCHANGE,
+    null != n ? s.tn.post({
+      url: d.ANM.HANDOFF_EXCHANGE,
       body: {
         key: t,
         handoff_token: n
@@ -40,16 +40,16 @@ class h extends d.default {
       let {
         body: t
       } = e;
-      (0, r.handoffSetUser)(t.user), i.default.loginToken(t.token, !1), f(!0, o)
+      (0, a.Vb)(t.user), i.Z.loginToken(t.token, !1), h(!0, o)
     }, e => {
-      if (null != a && f(!1, o), i.default.setFingerprint(a), (0, r.handoffEnd)(), o === l.LoginHandoffSource.ROLE_SUBSCRIPTION) {
+      if (null != r && h(!1, o), i.Z.setFingerprint(r), (0, a.lx)(), o === l.F.ROLE_SUBSCRIPTION) {
         var t;
-        u.default.track(c.AnalyticEvents.MOBILE_WEB_HANDOFF_FAILURE, {
+        u.default.track(d.rMx.MOBILE_WEB_HANDOFF_FAILURE, {
           reason: null !== (t = e.message) && void 0 !== t ? t : e.text,
           handoff_source: o
         })
       }
-    }) : null != a ? (i.default.setFingerprint(a), f(!1, o), (0, r.handoffEnd)()) : (i.default.setFingerprint(a), (0, r.handoffUnavailable)())
+    }) : null != r ? (i.Z.setFingerprint(r), h(!1, o), (0, a.lx)()) : (i.Z.setFingerprint(r), (0, a.by)())
   }
   constructor(...e) {
     var t, n, s;
@@ -57,13 +57,13 @@ class h extends d.default {
       let {
         handoffToken: t,
         fingerprint: n
-      } = e, s = o.default.key;
-      null != s && o.default.isHandoffAvailable() ? this.handleHandoff({
+      } = e, s = o.Z.key;
+      null != s && o.Z.isHandoffAvailable() ? this.handleHandoff({
         handoffKey: s,
         handoffToken: t,
         fingerprint: n,
         handoffSource: void 0
-      }) : (i.default.setFingerprint(null), (0, r.handoffUnavailable)())
+      }) : (i.Z.setFingerprint(null), (0, a.by)())
     }, n in t ? Object.defineProperty(t, n, {
       value: s,
       enumerable: !0,
@@ -72,4 +72,4 @@ class h extends d.default {
     }) : t[n] = s
   }
 }
-t.default = new h
+t.Z = new E

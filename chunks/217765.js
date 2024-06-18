@@ -1,1 +1,1 @@
-t.exports = n("828828")
+t.exports = n(828828)

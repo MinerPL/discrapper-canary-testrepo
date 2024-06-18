@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n("47120");
-var i, r = n("442837"),
-  a = n("570140"),
-  s = n("626135"),
-  o = n("261376"),
-  l = n("981631");
+n(47120);
+var i, r = n(442837),
+  s = n(570140),
+  o = n(626135),
+  a = n(261376),
+  l = n(981631);
 
 function u(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function u(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let d = {
+let _ = {
   numberOfDCsShownToday: 0,
   dailyCapPeriodStart: null,
   dismissibleContentSeenDuringSession: new Set,
@@ -22,38 +22,38 @@ let d = {
   renderedAtTimestamps: new Map,
   lastDCDismissed: null
 };
-class _ extends(i = r.default.PersistedStore) {
+class d extends(i = r.ZP.PersistedStore) {
   initialize(e) {
     if (null != e) {
       var t;
-      d.numberOfDCsShownToday = null !== (t = e.numberOfDCsShownToday) && void 0 !== t ? t : 0, d.dailyCapPeriodStart = e.dailyCapPeriodStart, d.dailyCapOverridden = e.dailyCapOverridden
+      _.numberOfDCsShownToday = null !== (t = e.numberOfDCsShownToday) && void 0 !== t ? t : 0, _.dailyCapPeriodStart = e.dailyCapPeriodStart, _.dailyCapOverridden = e.dailyCapOverridden
     }
-    d.dismissibleContentSeenDuringSession = new Set, d.lastDCDismissed = null
+    _.dismissibleContentSeenDuringSession = new Set, _.lastDCDismissed = null
   }
   getState() {
-    return d
+    return _
   }
   get dailyCapOverridden() {
-    return d.dailyCapOverridden
+    return _.dailyCapOverridden
   }
   get lastDCDismissed() {
-    return d.lastDCDismissed
+    return _.lastDCDismissed
   }
   getRenderedAtTimestamp(e) {
-    return d.renderedAtTimestamps.get(e)
+    return _.renderedAtTimestamps.get(e)
   }
   hasUserHitDCCap(e) {
-    if (null != e && (o.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(e) || d.dailyCapOverridden) || null != e && d.dismissibleContentSeenDuringSession.has(e)) return !1;
+    if (null != e && (a.O.has(e) || _.dailyCapOverridden) || null != e && _.dismissibleContentSeenDuringSession.has(e)) return !1;
     let t = new Date;
-    return t.setHours(0, 0, 0, 0), null != d.dailyCapPeriodStart && d.dailyCapPeriodStart < t.getTime() && (d.numberOfDCsShownToday = 0, d.dailyCapPeriodStart = null), d.numberOfDCsShownToday >= 3
+    return t.setHours(0, 0, 0, 0), null != _.dailyCapPeriodStart && _.dailyCapPeriodStart < t.getTime() && (_.numberOfDCsShownToday = 0, _.dailyCapPeriodStart = null), _.numberOfDCsShownToday >= 3
   }
 }
-u(_, "displayName", "DismissibleContentFrameworkStore"), u(_, "persistKey", "DismissibleContentFrameworkStore"), u(_, "migrations", [e => ({
+u(d, "displayName", "DismissibleContentFrameworkStore"), u(d, "persistKey", "DismissibleContentFrameworkStore"), u(d, "migrations", [e => ({
   ...e
-})]), t.default = new _(a.default, {
+})]), t.Z = new d(s.Z, {
   LOGOUT: function() {
-    d = {
-      ...d,
+    _ = {
+      ..._,
       dismissibleContentSeenDuringSession: new Set,
       renderedAtTimestamps: new Map
     }
@@ -62,33 +62,31 @@ u(_, "displayName", "DismissibleContentFrameworkStore"), u(_, "persistKey", "Dis
     let {
       value: t
     } = e;
-    d.dailyCapOverridden = t
+    _.dailyCapOverridden = t
   },
   DCF_HANDLE_DC_SHOWN: function(e) {
     let {
       dismissibleContent: t
     } = e, n = new Date;
-    if (d.renderedAtTimestamps.set(t, n.getTime()), !o.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(t) && !d.dailyCapOverridden) {
-      if (!d.dismissibleContentSeenDuringSession.has(t)) {
-        if (d.dismissibleContentSeenDuringSession.add(t), null == d.dailyCapPeriodStart) {
-          let e = new Date;
-          e.setHours(0, 0, 0, 0), d.dailyCapPeriodStart = e.getTime()
-        }
-        d.numberOfDCsShownToday += 1, d.numberOfDCsShownToday > 3 && s.default.track(l.AnalyticEvents.DCF_CAP_EXCEEDED, {
-          cap_type: "daily_cap",
-          dismissible_content: t,
-          shown_dcs: d.numberOfDCsShownToday
-        })
+    if (_.renderedAtTimestamps.set(t, n.getTime()), !(a.O.has(t) || _.dailyCapOverridden || _.dismissibleContentSeenDuringSession.has(t))) {
+      if (_.dismissibleContentSeenDuringSession.add(t), null == _.dailyCapPeriodStart) {
+        let e = new Date;
+        e.setHours(0, 0, 0, 0), _.dailyCapPeriodStart = e.getTime()
       }
+      _.numberOfDCsShownToday += 1, _.numberOfDCsShownToday > 3 && o.default.track(l.rMx.DCF_CAP_EXCEEDED, {
+        cap_type: "daily_cap",
+        dismissible_content: t,
+        shown_dcs: _.numberOfDCsShownToday
+      })
     }
   },
   DCF_HANDLE_DC_DISMISSED: function(e) {
     let {
       dismissibleContent: t
     } = e;
-    d.lastDCDismissed = t, d.renderedAtTimestamps.delete(t)
+    _.lastDCDismissed = t, _.renderedAtTimestamps.delete(t)
   },
   DCF_RESET: function() {
-    d.dailyCapPeriodStart = null, d.numberOfDCsShownToday = 0, d.dismissibleContentSeenDuringSession = new Set, d.lastDCDismissed = null
+    _.dailyCapPeriodStart = null, _.numberOfDCsShownToday = 0, _.dismissibleContentSeenDuringSession = new Set, _.lastDCDismissed = null
   }
 })

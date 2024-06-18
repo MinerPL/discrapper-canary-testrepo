@@ -1,32 +1,32 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("570140"),
-  r = n("287734"),
-  s = n("147913"),
-  a = n("703656"),
-  o = n("920440"),
-  l = n("131951"),
-  u = n("944486"),
-  d = n("914010"),
-  _ = n("981631");
-class c extends s.default {
+n(47120);
+var i = n(570140),
+  r = n(287734),
+  s = n(147913),
+  o = n(703656),
+  a = n(769654),
+  l = n(131951),
+  u = n(944486),
+  _ = n(914010),
+  d = n(981631);
+class c extends s.Z {
   handleGuildCreate(e) {
     let {
       guild: t
-    } = e, n = u.default.getChannelId(_.ME), i = u.default.getVoiceChannelId();
-    t.id === n && (0, o.transitionToGuild)(t.id), t.id === i && !1 !== t.unavailable && null == i && r.default.selectVoiceChannel((0, u.findFirstVoiceChannelId)(t.id))
+    } = e, n = u.Z.getChannelId(d.ME), i = u.Z.getVoiceChannelId();
+    t.id === n && (0, a.X)(t.id), t.id === i && !1 !== t.unavailable && null == i && r.default.selectVoiceChannel((0, u.C)(t.id))
   }
   handleChannelCreate(e) {
     let {
       channel: t
     } = e;
-    if (t.type !== _.ChannelTypes.GROUP_DM) return;
+    if (t.type !== d.d4z.GROUP_DM) return;
     let n = t.originChannelId,
-      i = u.default.getChannelId(_.NULL_STRING_GUILD_ID);
-    null == d.default.getGuildId() && null != n && n === i && (0, a.transitionTo)(_.Routes.CHANNEL(_.ME, t.id)), null != n && n === u.default.getVoiceChannelId() && r.default.selectVoiceChannel(t.id, l.default.isVideoEnabled())
+      i = u.Z.getChannelId(d.kod);
+    null == _.Z.getGuildId() && null != n && n === i && (0, o.uL)(d.Z5c.CHANNEL(d.ME, t.id)), null != n && n === u.Z.getVoiceChannelId() && r.default.selectVoiceChannel(t.id, l.Z.isVideoEnabled())
   }
   handleLogout() {
-    i.default.dispatch({
+    i.Z.dispatch({
       type: "VOICE_CHANNEL_SELECT",
       channelId: null,
       guildId: null,
@@ -48,4 +48,4 @@ class c extends s.default {
     }) : t[n] = i
   }
 }
-t.default = new c
+t.Z = new c

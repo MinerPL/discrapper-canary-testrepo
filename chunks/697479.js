@@ -1,6 +1,6 @@
 "use strict";
-n.r(t), n.d(t, {
-  insert: function() {
+n.d(t, {
+  $: function() {
     return i
   }
 });

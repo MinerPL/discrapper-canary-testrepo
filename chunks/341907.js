@@ -1,62 +1,38 @@
 "use strict";
-n.r(t), n.d(t, {
-  copyShareLink: function() {
-    return E
+n.d(t, {
+  a: function() {
+    return a
   },
-  openDisclosureModal: function() {
-    return c
-  },
-  openGameLink: function() {
-    return _
-  },
-  openQuestsRewardCodeModal: function() {
-    return d
+  h: function() {
+    return o
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("481060"),
-  a = n("782568"),
-  s = n("572004"),
-  o = n("49012"),
-  l = n("617136"),
-  u = n("918701");
+var i = n(735250);
+n(470079);
+var r = n(481060),
+  s = n(617136);
 
-function d(e) {
+function o(e) {
   let {
     questId: t,
-    location: a,
-    questContentPosition: s
+    location: s,
+    questContentPosition: o
   } = e;
   (0, r.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("61624")]).then(n.bind(n, "985866"));
+    } = await Promise.all([n.e("99387"), n.e("61624")]).then(n.bind(n, 985866));
     return n => (0, i.jsx)(e, {
       ...n,
       questId: t,
-      questContentPosition: s,
-      location: a
+      questContentPosition: o,
+      location: s
     })
   })
 }
 
-function _(e, t) {
-  (0, o.handleClick)({
-    href: e.config.getGameLink,
-    onConfirm: () => {
-      (0, l.trackQuestContentClicked)({
-        questId: e.id,
-        questContent: t.content,
-        questContentCTA: t.ctaContent,
-        questContentPosition: t.position
-      }), (0, a.default)(e.config.getGameLink)
-    }
-  })
-}
-
-function c(e, t) {
-  (0, l.trackQuestContentClicked)({
+function a(e, t) {
+  (0, s._3)({
     questId: e.id,
     questContent: t.content,
     questContentPosition: t.position,
@@ -64,19 +40,11 @@ function c(e, t) {
   }), (0, r.openModalLazy)(async () => {
     let {
       default: r
-    } = await Promise.all([n.e("99387"), n.e("4266")]).then(n.bind(n, "316210"));
+    } = await Promise.all([n.e("99387"), n.e("4266")]).then(n.bind(n, 316210));
     return n => (0, i.jsx)(r, {
       ...n,
       questContent: t.content,
-      questConfig: e.config
+      quest: e
     })
   })
-}
-let E = (e, t) => {
-  (0, l.trackQuestContentClicked)({
-    questId: e,
-    questContent: t.content,
-    questContentCTA: t.ctaContent,
-    questContentPosition: t.position
-  }), (0, s.copy)((0, u.getQuestUrl)(e))
 }

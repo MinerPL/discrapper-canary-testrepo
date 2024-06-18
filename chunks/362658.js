@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  useFavoritesServerExperiment: function() {
+n.d(t, {
+  z: function() {
     return r
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
     kind: "user",
     id: "2021-09_favorites_server",
     label: "Favorites Server",
@@ -57,4 +57,4 @@ let i = (0, n("818083").createExperiment)({
   }, {
     autoTrackExposure: !0
   });
-t.default = i
+t.Z = i

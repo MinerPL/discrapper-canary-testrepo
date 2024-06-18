@@ -8,8 +8,8 @@ function r() {
     left: 0
   }
 }
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 })

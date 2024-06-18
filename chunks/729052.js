@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  hasVoiceChannelActivityNotifsEnabled: function() {
-    return l
+n.d(t, {
+  p2: function() {
+    return a
   },
-  useVoiceActivityNotificationSettingsExperiment: function() {
-    return o
+  vS: function() {
+    return l
   }
 });
-var i = n("818083"),
-  r = n("981631");
-let s = (0, i.createExperiment)({
+var i = n(818083),
+  r = n(981631);
+let s = (0, i.B)({
     kind: "user",
     id: "2023-11_voice_activity_notification_user",
     label: "Voice Activity Notifications for User",
@@ -30,7 +30,7 @@ let s = (0, i.createExperiment)({
       }
     }]
   }),
-  a = (0, i.createExperiment)({
+  o = (0, i.B)({
     kind: "guild",
     id: "2023-11_voice_activity_notification_guild",
     label: "General Voice Channel Notifications for Guild",
@@ -46,33 +46,33 @@ let s = (0, i.createExperiment)({
     }]
   });
 
-function o(e) {
+function a(e) {
   var t;
   let {
     voiceChannelActivityNotifsEnabled: n
-  } = a.useExperiment({
+  } = o.useExperiment({
     location: "useVoiceActivityNotificationSettingsExperiment",
-    guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : r.EMPTY_STRING_SNOWFLAKE_ID
+    guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : r.lds
   }, {
-    disable: (null == e ? void 0 : e.type) !== r.ChannelTypes.GUILD_VOICE,
+    disable: (null == e ? void 0 : e.type) !== r.d4z.GUILD_VOICE,
     autoTrackExposure: !1
   }), {
     enabled: i
   } = s.useExperiment({
     location: "useVoiceActivityNotificationSettingsExperiment"
   }, {
-    disable: (null == e ? void 0 : e.type) !== r.ChannelTypes.GUILD_VOICE || !n,
+    disable: (null == e ? void 0 : e.type) !== r.d4z.GUILD_VOICE || !n,
     autoTrackExposure: !0
   });
-  return (null == e ? void 0 : e.type) === r.ChannelTypes.GUILD_VOICE && n && i
+  return (null == e ? void 0 : e.type) === r.d4z.GUILD_VOICE && n && i
 }
 
 function l(e) {
   var t;
   let {
     voiceChannelActivityNotifsEnabled: n
-  } = a.getCurrentConfig({
-    guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : r.EMPTY_STRING_SNOWFLAKE_ID,
+  } = o.getCurrentConfig({
+    guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : r.lds,
     location: "hasVoiceChannelActivityNotifsEnabled"
   });
   return n

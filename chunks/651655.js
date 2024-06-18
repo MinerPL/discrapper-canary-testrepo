@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return o
+n.d(t, {
+  Z: function() {
+    return a
   }
-}), n("653041"), n("177593"), n("733860");
-var i = n("427786"),
+}), n(653041), n(177593), n(733860);
+var i = n(427786),
   r = n.n(i);
 
 function s(e, t, n) {
@@ -15,8 +15,8 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let a = new(n("710845")).default("Queue");
-class o {
+let o = new(n(710845)).Z("Queue");
+class a {
   enqueue(e, t, n) {
     this.queue.push({
       message: e,
@@ -53,7 +53,7 @@ class o {
       }
     })
   }
-  constructor(e = a, t = 100) {
+  constructor(e = o, t = 100) {
     s(this, "logger", void 0), s(this, "defaultRetryAfter", void 0), s(this, "queue", void 0), s(this, "timeout", void 0), s(this, "draining", void 0), this.logger = e, this.defaultRetryAfter = t, this.queue = new(r()), this.timeout = null, this.draining = !1
   }
 }

@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var r = n("528734"),
-  i = n("951516");
+var r = n(528734),
+  i = n(951516);
 
 function a(e) {
   return (a = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
@@ -17,7 +17,7 @@ function a(e) {
 
 function o(e) {
   var t, n;
-  if ((0, i.default)(1, arguments), e && "function" == typeof e.forEach) t = e;
+  if ((0, i.Z)(1, arguments), e && "function" == typeof e.forEach) t = e;
   else {
     if ("object" !== a(e) || null === e) return new Date(NaN);
     t = Array.prototype.slice.call(e)

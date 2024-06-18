@@ -19,7 +19,7 @@ function a(e) {
     if (null === t) return !0;
     var n = Object.hasOwnProperty.call(t, "constructor") && t.constructor;
     return n === Object || "function" == typeof n && Function.toString.call(n) === H
-  }(e) || Array.isArray(e) || !!e[j] || !!(null === (t = e.constructor) || void 0 === t ? void 0 : t[j]) || l(e) || d(e))
+  }(e) || Array.isArray(e) || !!e[Y] || !!(null === (t = e.constructor) || void 0 === t ? void 0 : t[Y]) || l(e) || d(e))
 }
 
 function o(e, t, n) {
@@ -38,18 +38,18 @@ function s(e) {
 function u(e, t) {
   return 2 === s(e) ? e.has(t) : Object.prototype.hasOwnProperty.call(e, t)
 }
-n.r(t), n.d(t, {
-  createDraft: function() {
-    return Z
+n.d(t, {
+  P2: function() {
+    return Q
   },
-  finishDraft: function() {
+  Uy: function() {
+    return q
+  },
+  _x: function() {
     return X
   },
-  isDraft: function() {
+  mv: function() {
     return i
-  },
-  produce: function() {
-    return Q
   }
 });
 
@@ -59,11 +59,11 @@ function c(e, t, n) {
 }
 
 function l(e) {
-  return F && e instanceof Map
+  return B && e instanceof Map
 }
 
 function d(e) {
-  return B && e instanceof Set
+  return F && e instanceof Set
 }
 
 function f(e) {
@@ -141,14 +141,14 @@ function w(e, t) {
   t._ = t.p.length;
   var n = t.p[0],
     i = void 0 !== e && e !== n;
-  return t.h.O || _("ES5").S(t, e, i), i ? (n[z].P && (y(t), r(4)), a(e) && (e = T(t, e), t.l || D(t, e)), t.u && _("Patches").M(n[z].t, e, t.u, t.s)) : e = T(t, n, []), y(t), t.u && t.v(t.u, t.s), e !== Y ? e : void 0
+  return t.h.O || _("ES5").S(t, e, i), i ? (n[z].P && (y(t), r(4)), a(e) && (e = C(t, e), t.l || D(t, e)), t.u && _("Patches").M(n[z].t, e, t.u, t.s)) : e = C(t, n, []), y(t), t.u && t.v(t.u, t.s), e !== j ? e : void 0
 }
 
-function T(e, t, n) {
+function C(e, t, n) {
   if (g(t)) return t;
   var r = t[z];
   if (!r) return o(t, function(i, a) {
-    return C(e, r, t, i, a, n)
+    return T(e, r, t, i, a, n)
   }, !0), t;
   if (r.A !== e) return t;
   if (!r.P) return D(e, r.t, !0), r.t;
@@ -158,21 +158,21 @@ function T(e, t, n) {
       a = i,
       s = !1;
     3 === r.i && (a = new Set(i), i.clear(), s = !0), o(a, function(t, a) {
-      return C(e, r, i, t, a, n, s)
+      return T(e, r, i, t, a, n, s)
     }), D(e, i, !1), n && e.u && _("Patches").N(r, n, e.u, e.s)
   }
   return r.o
 }
 
-function C(e, t, n, r, o, s, l) {
+function T(e, t, n, r, o, s, l) {
   if (i(o)) {
-    var d = T(e, o, s && t && 3 !== t.i && !u(t.R, r) ? s.concat(r) : void 0);
+    var d = C(e, o, s && t && 3 !== t.i && !u(t.R, r) ? s.concat(r) : void 0);
     if (c(n, r, d), !i(d)) return;
     e.m = !1
   } else l && n.add(o);
   if (a(o) && !g(o)) {
     if (!e.h.D && e._ < 1) return;
-    T(e, o), t && t.A.l || D(e, o)
+    C(e, o), t && t.A.l || D(e, o)
   }
 }
 
@@ -180,12 +180,12 @@ function D(e, t, n) {
   void 0 === n && (n = !1), !e.l && e.h.D && e.m && h(t, n)
 }
 
-function O(e, t) {
+function M(e, t) {
   var n = e[z];
   return (n ? f(n) : e)[t]
 }
 
-function M(e, t) {
+function O(e, t) {
   if (t in e)
     for (var n = Object.getPrototypeOf(e); n;) {
       var r = Object.getOwnPropertyDescriptor(n, t);
@@ -215,7 +215,7 @@ function R(e, t, n) {
     o: null,
     j: null,
     C: !1
-  }, u = W, a && (s = [o], u = K), f = (c = Proxy.revocable(s, u)).revoke, p = c.proxy, o.k = p, o.j = f, p) : _("ES5").J(t, n);
+  }, u = Z, a && (s = [o], u = K), f = (c = Proxy.revocable(s, u)).revoke, p = c.proxy, o.k = p, o.j = f, p) : _("ES5").J(t, n);
   return (n ? n.A : L).p.push(h), h
 }
 
@@ -229,11 +229,11 @@ function N(e, t) {
   return p(e)
 }
 var I, L, P = "undefined" != typeof Symbol && "symbol" == typeof Symbol("x"),
-  F = "undefined" != typeof Map,
-  B = "undefined" != typeof Set,
+  B = "undefined" != typeof Map,
+  F = "undefined" != typeof Set,
   U = "undefined" != typeof Proxy && void 0 !== Proxy.revocable && "undefined" != typeof Reflect,
-  Y = P ? Symbol.for("immer-nothing") : ((I = {})["immer-nothing"] = !0, I),
-  j = P ? Symbol.for("immer-draftable") : "__$immer_draftable",
+  j = P ? Symbol.for("immer-nothing") : ((I = {})["immer-nothing"] = !0, I),
+  Y = P ? Symbol.for("immer-draftable") : "__$immer_draftable",
   z = P ? Symbol.for("immer-state") : "__$immer_state",
   H = "" + Object.prototype.constructor,
   G = "undefined" != typeof Reflect && Reflect.ownKeys ? Reflect.ownKeys : void 0 !== Object.getOwnPropertySymbols ? function(e) {
@@ -246,16 +246,16 @@ var I, L, P = "undefined" != typeof Symbol && "symbol" == typeof Symbol("x"),
     }), t
   },
   $ = {},
-  W = {
+  Z = {
     get: function(e, t) {
       if (t === z) return e;
       var n, r, i, o = f(e);
       if (!u(o, t)) {
         ;
-        return n = e, (i = M(o, t)) ? "value" in i ? i.value : null === (r = i.get) || void 0 === r ? void 0 : r.call(n.k) : void 0
+        return n = e, (i = O(o, t)) ? "value" in i ? i.value : null === (r = i.get) || void 0 === r ? void 0 : r.call(n.k) : void 0
       }
       var s = o[t];
-      return e.I || !a(s) ? s : s === O(e.t, t) ? (k(e), e.o[t] = R(e.A.h, s, e)) : s
+      return e.I || !a(s) ? s : s === M(e.t, t) ? (k(e), e.o[t] = R(e.A.h, s, e)) : s
     },
     has: function(e, t) {
       return t in f(e)
@@ -264,10 +264,10 @@ var I, L, P = "undefined" != typeof Symbol && "symbol" == typeof Symbol("x"),
       return Reflect.ownKeys(f(e))
     },
     set: function(e, t, n) {
-      var r = M(f(e), t);
+      var r = O(f(e), t);
       if (null == r ? void 0 : r.set) return r.set.call(e.k, n), !0;
       if (!e.P) {
-        var i, a, o = O(f(e), t),
+        var i, a, o = M(f(e), t),
           s = null == o ? void 0 : o[z];
         if (s && s.t === n) return e.o[t] = n, e.R[t] = !1, !0;
         if (((i = n) === (a = o) ? 0 !== i || 1 / i == 1 / a : i != i && a != a) && (void 0 !== n || u(e.t, t))) return !0;
@@ -276,7 +276,7 @@ var I, L, P = "undefined" != typeof Symbol && "symbol" == typeof Symbol("x"),
       return e.o[t] === n && (void 0 !== n || t in e.o) || Number.isNaN(n) && Number.isNaN(e.o[t]) || (e.o[t] = n, e.R[t] = !0), !0
     },
     deleteProperty: function(e, t) {
-      return void 0 !== O(e.t, t) || t in e.t ? (e.R[t] = !1, k(e), A(e)) : delete e.R[t], e.o && delete e.o[t], !0
+      return void 0 !== M(e.t, t) || t in e.t ? (e.R[t] = !1, k(e), A(e)) : delete e.R[t], e.o && delete e.o[t], !0
     },
     getOwnPropertyDescriptor: function(e, t) {
       var n = f(e),
@@ -299,16 +299,16 @@ var I, L, P = "undefined" != typeof Symbol && "symbol" == typeof Symbol("x"),
     }
   },
   K = {};
-o(W, function(e, t) {
+o(Z, function(e, t) {
   K[e] = function() {
     return arguments[0] = arguments[0][0], t.apply(this, arguments)
   }
 }), K.deleteProperty = function(e, t) {
   return K.set.call(this, e, t, void 0)
 }, K.set = function(e, t, n) {
-  return W.set.call(this, e[0], t, n, e[0])
+  return Z.set.call(this, e[0], t, n, e[0])
 };
-var q = new(function() {
+var W = new(function() {
     function e(e) {
       var t = this;
       this.O = U, this.D = !0, this.produce = function(e, n, i) {
@@ -341,7 +341,7 @@ var q = new(function() {
           }) : (v(u, i), w(o, u))
         }
         if (!e || "object" != typeof e) {
-          if (void 0 === (o = n(e)) && (o = e), o === Y && (o = void 0), t.D && h(o, !0), i) {
+          if (void 0 === (o = n(e)) && (o = e), o === j && (o = void 0), t.D && h(o, !0), i) {
             var d = [],
               f = [];
             _("Patches").M(e, o, d, f), i(d, f)
@@ -404,6 +404,6 @@ var q = new(function() {
       })
     }, e
   }()),
-  Q = q.produce,
-  Z = (q.produceWithPatches.bind(q), q.setAutoFreeze.bind(q), q.setUseProxies.bind(q), q.applyPatches.bind(q), q.createDraft.bind(q)),
-  X = q.finishDraft.bind(q)
+  q = W.produce,
+  Q = (W.produceWithPatches.bind(W), W.setAutoFreeze.bind(W), W.setUseProxies.bind(W), W.applyPatches.bind(W), W.createDraft.bind(W)),
+  X = W.finishDraft.bind(W)

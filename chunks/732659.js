@@ -1,23 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return o
   }
 });
-var i = n("470079"),
-  r = n("136035"),
-  s = n("887490");
+var i = n(470079),
+  r = n(519953),
+  s = n(887490);
 
-function a(e, t, n) {
+function o(e, t, n) {
   i.useEffect(() => {
-    let i = r.ReactEditor.findDocumentOrShadowRoot(e).defaultView;
+    let i = r.F3.findDocumentOrShadowRoot(e).defaultView;
     if ((null == i ? void 0 : i.ResizeObserver) == null) return;
-    let a = s.EditorUtils.toDOMNode(e, e),
-      o = a.offsetHeight,
+    let o = s.bN.toDOMNode(e, e),
+      a = o.offsetHeight,
       l = new i.ResizeObserver(() => {
-        let i = s.EditorUtils.toDOMNode(e, e).offsetHeight;
-        o !== i && (null != t.current && (t.current.style.height = "".concat(i, "px")), o = i, null == n || n(i))
+        let i = s.bN.toDOMNode(e, e).offsetHeight;
+        a !== i && (null != t.current && (t.current.style.height = "".concat(i, "px")), a = i, null == n || n(i))
       });
-    return l.observe(a), () => l.disconnect()
+    return l.observe(o), () => l.disconnect()
   }, [t, e, n])
 }

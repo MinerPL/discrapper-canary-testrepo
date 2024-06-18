@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  AmazonMusicConnectionExperiment: function() {
+n.d(t, {
+  E: function() {
     return i
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-04_rollout_for_vic",
   label: "Amazon Music Connection",

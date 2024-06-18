@@ -1,15 +1,16 @@
 "use strict";
-n.r(e), n.d(e, {
-  createUserFeedbackEnvelope: function() {
-    return i
+n.d(e, {
+  r: function() {
+    return s
   }
 });
-var r = n("648238");
+var r = n(177668),
+  i = n(50074);
 
-function i(t, {
+function s(t, {
   metadata: e,
   tunnel: n,
-  dsn: i
+  dsn: s
 }) {
   let a = {
       event_id: t.event_id,
@@ -20,8 +21,8 @@ function i(t, {
           version: e.sdk.version
         }
       },
-      ...!!n && !!i && {
-        dsn: (0, r.dsnToString)(i)
+      ...!!n && !!s && {
+        dsn: (0, r.RA)(s)
       }
     },
     o = function(t) {
@@ -29,5 +30,5 @@ function i(t, {
         type: "user_report"
       }, t]
     }(t);
-  return (0, r.createEnvelope)(a, [o])
+  return (0, i.Jd)(a, [o])
 }

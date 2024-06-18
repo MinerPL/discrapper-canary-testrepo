@@ -1,45 +1,45 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return I
-  },
-  maybeFetchColors: function() {
-    return c
-  },
-  useAvatarColors: function() {
+n.d(t, {
+  Cf: function() {
     return T
   },
-  useColorStore: function() {
-    return _
+  SR: function() {
+    return d
+  },
+  ZP: function() {
+    return I
+  },
+  vM: function() {
+    return c
   }
-}), n("47120");
-var i = n("470079"),
-  r = n("979590"),
+}), n(47120);
+var i = n(470079),
+  r = n(979590),
   s = n.n(r),
-  a = n("652874"),
-  o = n("442837"),
-  l = n("607070"),
-  u = n("302221"),
-  d = n("956664");
-let _ = (0, a.default)(() => ({
+  o = n(652874),
+  a = n(442837),
+  l = n(607070),
+  u = n(302221),
+  _ = n(956664);
+let d = (0, o.Z)(() => ({
   palette: {},
   fetching: {}
 }));
 async function c(e) {
-  null == _.getState().palette[e] && await E(e)
+  null == d.getState().palette[e] && await E(e)
 }
 async function E(e) {
-  if (!_.getState().fetching[e]) {
-    _.setState(t => ({
+  if (!d.getState().fetching[e]) {
+    d.setState(t => ({
       fetching: {
         ...t.fetching,
         [e]: !0
       }
     }));
     try {
-      let t = await (0, d.getPaletteForAvatar)(e),
-        n = (0, u.getComplimentaryPaletteForColor)(t[0]);
-      _.setState(i => ({
+      let t = await (0, _.OF)(e),
+        n = (0, u.WY)(t[0]);
+      d.setState(i => ({
         fetching: {
           ...i.fetching,
           [e]: !1
@@ -50,7 +50,7 @@ async function E(e) {
         }
       }))
     } catch (t) {
-      _.setState(t => ({
+      d.setState(t => ({
         fetching: {
           ...t.fetching,
           [e]: !1
@@ -68,15 +68,15 @@ function I(e, t) {
 
 function T(e, t) {
   let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-    r = _(t => null == e ? void 0 : t.palette[e]),
-    a = (0, o.useStateFromStores)([l.default], () => n && l.default.desaturateUserColors ? l.default.saturation : 1);
+    r = d(t => null == e ? void 0 : t.palette[e]),
+    o = (0, a.e7)([l.Z], () => n && l.Z.desaturateUserColors ? l.Z.saturation : 1);
   i.useEffect(() => {
-    null != e && null == r && E(e)
+    if (null != e && null == r) E(e)
   }, [e, r]);
   let u = i.useMemo(() => null == r ? void 0 : r.map(e => {
     let [t, n, i] = e, {
       h: r,
-      s: o,
+      s: a,
       l
     } = s()({
       r: t,
@@ -85,9 +85,9 @@ function T(e, t) {
     }).toHsl();
     return s()({
       h: r,
-      s: o * a,
+      s: a * o,
       l
     }).toHexString()
-  }), [r, a]);
+  }), [r, o]);
   return null != u ? u : [t, t]
 }

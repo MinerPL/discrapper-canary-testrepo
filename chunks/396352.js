@@ -1,9 +1,8 @@
 "use strict";
-n.r(t);
-var i, r = n("442837"),
-  s = n("570140");
+var i, r = n(442837),
+  s = n(570140);
 
-function a(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -11,14 +10,14 @@ function a(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let o = {
+let a = {
     topEmojisByGuildId: {}
   },
-  l = o,
+  l = a,
   u = {};
-class d extends(i = r.default.PersistedStore) {
+class _ extends(i = r.ZP.PersistedStore) {
   initialize(e) {
-    l = null != e ? e : o
+    l = null != e ? e : a
   }
   getState() {
     return l
@@ -30,9 +29,9 @@ class d extends(i = r.default.PersistedStore) {
     return u[e]
   }
 }
-a(d, "displayName", "TopEmojiStore"), a(d, "persistKey", "TopEmojiStore"), t.default = new d(s.default, {
+o(_, "displayName", "TopEmojiStore"), o(_, "persistKey", "TopEmojiStore"), t.Z = new _(s.Z, {
   LOGOUT: function() {
-    l = o, u = {}
+    l = a, u = {}
   },
   TOP_EMOJIS_FETCH: function(e) {
     let {

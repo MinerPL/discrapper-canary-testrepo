@@ -1,41 +1,40 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("952265"),
-  s = n("468026"),
-  a = n("689938");
-t.default = {
+var i = n(735250);
+n(470079);
+var r = n(952265),
+  s = n(468026),
+  o = n(689938);
+t.Z = {
   show(e) {
     let {
       title: t,
       body: n,
-      confirmColor: a,
-      confirmText: o,
+      confirmColor: o,
+      confirmText: a,
       cancelText: l,
       onConfirm: u,
-      onCancel: d,
-      onCloseCallback: _,
+      onCancel: _,
+      onCloseCallback: d,
       secondaryConfirmText: c,
       onConfirmSecondary: E,
       className: I,
       titleClassName: T
     } = e;
-    (0, r.openModal)(e => (0, i.jsx)(s.default, {
+    (0, r.h7)(e => (0, i.jsx)(s.default, {
       ...e,
       title: t,
       body: n,
-      confirmColor: a,
-      confirmText: o,
+      confirmColor: o,
+      confirmText: a,
       cancelText: l,
       onConfirm: u,
-      onCancel: d,
+      onCancel: _,
       secondaryConfirmText: c,
       onConfirmSecondary: E,
       className: I,
       titleClassName: T
     }), {
-      onCloseCallback: _
+      onCloseCallback: d
     })
   },
   close() {},
@@ -45,7 +44,7 @@ t.default = {
         onConfirm() {
           t(!0)
         },
-        cancelText: a.default.Messages.CANCEL,
+        cancelText: o.Z.Messages.CANCEL,
         onCancel() {
           t(!1)
         },

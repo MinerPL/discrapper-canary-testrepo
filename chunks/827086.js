@@ -1,13 +1,13 @@
 "use strict";
-s.r(t), s.d(t, {
-  useEnableMFAHook: function() {
+t.d(s, {
+  R: function() {
     return o
   }
 });
-var a = s("735250"),
-  l = s("470079"),
-  n = s("499150"),
-  i = s("431516");
+var n = t(735250),
+  i = t(470079),
+  l = t(499150),
+  a = t(431516);
 
 function r(e) {
   return e
@@ -15,16 +15,16 @@ function r(e) {
 
 function o(e) {
   let {
-    onEnableMFAClick: t,
-    onMFAEnabled: s
+    onEnableMFAClick: s,
+    onMFAEnabled: t
   } = e, {
     isUserMFAEnabled: o,
-    isModerationMFAEnabled: d
-  } = (0, i.useIsMFAEnabled)(), u = l.useCallback(async () => {
-    await t(), null == s || s()
-  }, [t, s]), c = l.useCallback(e => (0, a.jsx)(n.default, {
-    onClick: u,
+    isModerationMFAEnabled: c
+  } = (0, a.N)(), d = i.useCallback(async () => {
+    await s(), null == t || t()
+  }, [s, t]), u = i.useCallback(e => (0, n.jsx)(l.Z, {
+    onClick: d,
     children: e
-  }), [u]);
-  return o && d ? r : c
+  }), [d]);
+  return o && c ? r : u
 }

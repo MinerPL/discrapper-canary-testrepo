@@ -1,5 +1,5 @@
 "use strict";
-var n = r("581079"),
+var n = r(581079),
   i = /[\uD800-\uDFFF]/;
 
 function o(t) {

@@ -1,14 +1,13 @@
 "use strict";
-n.r(t);
-var i, r, s, a, o = n("442837"),
-  l = n("570140"),
-  u = n("752305"),
-  d = n("957730"),
-  _ = n("695346"),
-  c = n("375954");
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(752305),
+  _ = n(957730),
+  d = n(695346),
+  c = n(375954);
 let E = {},
   I = {};
-class T extends(a = o.default.Store) {
+class T extends(o = a.ZP.Store) {
   isEditing(e, t) {
     var n;
     return (null === (n = E[e]) || void 0 === n ? void 0 : n.messageId) === t
@@ -30,7 +29,7 @@ class T extends(a = o.default.Store) {
   }
   getEditingMessage(e) {
     let t = E[e];
-    return null != t && null != t.messageId ? c.default.getMessage(e, t.messageId) : null
+    return null != t && null != t.messageId ? c.Z.getMessage(e, t.messageId) : null
   }
   getEditActionSource(e) {
     return I[e]
@@ -41,19 +40,19 @@ s = "EditMessageStore", (r = "displayName") in(i = T) ? Object.defineProperty(i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new T(l.default, {
+}) : i[r] = s, t.Z = new T(l.Z, {
   MESSAGE_START_EDIT: function(e) {
     let {
       channelId: t,
       messageId: n,
       content: i,
       source: r
-    } = e, s = _.UseLegacyChatInput.getSetting(), a = d.default.unparse(i, t);
+    } = e, s = d.dN.getSetting(), o = _.ZP.unparse(i, t);
     E[t] = {
       channelId: t,
       messageId: n,
-      textValue: a,
-      richValue: (0, u.toRichValue)(s ? a : i)
+      textValue: o,
+      richValue: (0, u.JM)(s ? o : i)
     }, I[t] = r
   },
   MESSAGE_UPDATE_EDIT: function(e) {

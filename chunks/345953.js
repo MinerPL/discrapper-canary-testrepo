@@ -1,78 +1,78 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("392711"),
+n(47120);
+var i = n(392711),
   r = n.n(i),
-  s = n("51407"),
-  a = n("524437"),
-  o = n("433517"),
-  l = n("147913"),
-  u = n("254238"),
-  d = n("258609"),
-  _ = n("763296"),
-  c = n("314897"),
-  E = n("131951"),
-  I = n("709054"),
-  T = n("815016"),
-  f = n("725380"),
-  S = n("340332"),
-  h = n("675478"),
-  A = n("65154");
-let m = e => "AudioContextSettingsMigrated:".concat(e),
-  N = e => e === A.MediaEngineContextTypes.STREAM ? s.AudioSettingsDefaultVolumes.STREAM : s.AudioSettingsDefaultVolumes.USER;
+  s = n(51407),
+  o = n(524437),
+  a = n(433517),
+  l = n(147913),
+  u = n(254238),
+  _ = n(258609),
+  d = n(763296),
+  c = n(314897),
+  E = n(131951),
+  I = n(709054),
+  T = n(815016),
+  h = n(725380),
+  S = n(340332),
+  f = n(675478),
+  N = n(65154);
+let A = e => "AudioContextSettingsMigrated:".concat(e),
+  m = e => e === N.Yn.STREAM ? s.h.STREAM : s.h.USER;
 
 function O() {
-  (0, T.shouldReadWriteAudioSettings)() && (o.Storage.get(m(c.default.getId())) || h.PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", e => {
+  (0, T.R)() && (a.K.get(A(c.default.getId())) || f.hW.updateAsync("audioContextSettings", e => {
     let t = !1;
-    for (let [n, i] of Object.entries(E.default.getState().settingsByContext)) {
-      let r = (0, S.coerceAudioContextForProto)(n);
+    for (let [n, i] of Object.entries(E.Z.getState().settingsByContext)) {
+      let r = (0, S.z)(n);
       if (null == r) continue;
       let s = e[r],
-        a = String(Date.now()),
-        o = {};
-      for (let [e, t] of Object.entries(i.localMutes)) o[e] = {
+        o = String(Date.now()),
+        a = {};
+      for (let [e, t] of Object.entries(i.localMutes)) a[e] = {
         muted: t,
-        volume: N(n),
-        modifiedAt: a,
+        volume: m(n),
+        modifiedAt: o,
         soundboardMuted: !1
       };
-      for (let [e, t] of Object.entries(i.localVolumes)) o[e] = {
+      for (let [e, t] of Object.entries(i.localVolumes)) a[e] = {
         muted: !1,
-        modifiedAt: a,
-        ...o[e],
-        volume: (0, S.snapVolumeToDefault)(t, n)
+        modifiedAt: o,
+        ...a[e],
+        volume: (0, S.r)(t, n)
       };
       let l = Object.keys(s).length;
-      for (let [e, [n, i]] of Object.entries(o).entries()) {
+      for (let [e, [n, i]] of Object.entries(a).entries()) {
         if (300 - l - (e + 1) <= 0) break;
         null == s[n] && (t = !0, s[n] = i)
       }
     }
-    return o.Storage.set(m(c.default.getId()), !0), t
-  }, h.UserSettingsDelay.AUTOMATED))
+    return a.K.set(A(c.default.getId()), !0), t
+  }, f.fy.AUTOMATED))
 }
-let p = r().debounce(() => {
-    C()
+let R = r().debounce(() => {
+    p()
   }, 2e3),
-  R = r().debounce(u.remoteAudioSettingsUpdate, 500, {
+  C = r().debounce(u.On, 500, {
     maxWait: 500
   });
 
-function C() {
-  h.PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", e => {
+function p() {
+  f.hW.updateAsync("audioContextSettings", e => {
     let t = !1;
-    return (0, f.drainPendingAudioSettings)((n, i, r) => {
+    return (0, h.$E)((n, i, r) => {
       let s = function(e, t, n, i) {
-        var r, s, o, l, u;
-        let d = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4],
-          _ = (0, S.coerceAudioContextForProto)(n);
-        if (null == _) return !1;
-        let c = e[_];
-        if (c[t] = null !== (r = c[t]) && void 0 !== r ? r : (s = n, a.AudioContextSetting.create({
+        var r, s, a, l, u;
+        let _ = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4],
+          d = (0, S.z)(n);
+        if (null == d) return !1;
+        let c = e[d];
+        if (c[t] = null !== (r = c[t]) && void 0 !== r ? r : (s = n, o.JY.create({
             muted: !1,
-            volume: N(s)
-          })), i(c[t]), c[t].modifiedAt = String(Date.now()), d) {
+            volume: m(s)
+          })), i(c[t]), c[t].modifiedAt = String(Date.now()), _) {
           ;
-          o = c, l = t, u = n, o[l].volume !== N(u) || o[l].muted || o[l].soundboardMuted || delete o[l]
+          a = c, l = t, u = n, a[l].volume !== m(u) || a[l].muted || a[l].soundboardMuted || delete a[l]
         }
         return ! function(e) {
           let t = I.default.entries(e),
@@ -97,7 +97,7 @@ function C() {
       });
       t = t || s
     }), t
-  }, h.UserSettingsDelay.INFREQUENT_USER_ACTION)
+  }, f.fy.INFREQUENT_USER_ACTION)
 }
 
 function g(e) {
@@ -105,16 +105,16 @@ function g(e) {
   let {
     context: r,
     userId: s,
-    volume: a
+    volume: o
   } = e;
-  if (s === c.default.getId() || !(0, T.shouldReadWriteAudioSettings)()) return;
-  let o = d.default.getRemoteSessionId();
-  null != o && R(o, s, r, {
-    muted: E.default.isLocalMute(s, r),
-    volume: a
-  }), t = r, n = s, i = a, (0, f.updatePendingSettings)(t, n, {
+  if (s === c.default.getId() || !(0, T.R)()) return;
+  let a = _.Z.getRemoteSessionId();
+  null != a && C(a, s, r, {
+    muted: E.Z.isLocalMute(s, r),
+    volume: o
+  }), t = r, n = s, i = o, (0, h.RF)(t, n, {
     volume: i
-  }), p()
+  }), R()
 }
 
 function L(e) {
@@ -123,37 +123,37 @@ function L(e) {
     userId: n
   } = e;
   if (n !== c.default.getId()) {
-    if ((0, T.shouldReadWriteAudioSettings)()) {
+    if ((0, T.R)()) {
       var i, r, s;
-      i = t, r = n, s = E.default.isLocalMute(n, t), (0, f.updatePendingSettings)(i, r, {
+      i = t, r = n, s = E.Z.isLocalMute(n, t), (0, h.RF)(i, r, {
         muted: s
-      }), p.cancel(), C()
+      }), R.cancel(), p()
     }
   }
 }
 
-function D(e) {
+function v(e) {
   let {
     context: t,
     userId: n
   } = e;
   if (n !== c.default.getId()) {
-    if ((0, T.shouldReadWriteAudioSettings)()) {
+    if ((0, T.R)()) {
       var i, r, s;
-      i = t, r = n, s = _.default.isLocalSoundboardMuted(n), (0, f.updatePendingSettings)(i, r, {
+      i = t, r = n, s = d.Z.isLocalSoundboardMuted(n), (0, h.RF)(i, r, {
         soundboardMuted: s
-      }), p.cancel(), C()
+      }), R.cancel(), p()
     }
   }
 }
-class v extends l.default {
+class D extends l.Z {
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
       POST_CONNECTION_OPEN: O,
       AUDIO_SET_LOCAL_VOLUME: g,
       AUDIO_TOGGLE_LOCAL_MUTE: L,
-      AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: D
+      AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: v
     }, n in t ? Object.defineProperty(t, n, {
       value: i,
       enumerable: !0,
@@ -162,4 +162,4 @@ class v extends l.default {
     }) : t[n] = i
   }
 }
-t.default = new v
+t.Z = new D

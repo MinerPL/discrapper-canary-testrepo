@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  designConfig: function() {
-    return i
-  },
-  setDesignConfig: function() {
+n.d(t, {
+  E: function() {
     return r
+  },
+  X: function() {
+    return i
   }
 });
 let i = {

@@ -1,77 +1,77 @@
 "use strict";
-s.r(t), s.d(t, {
-  MetricTrend: function() {
+t.d(s, {
+  H: function() {
     return E
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("803997"),
-  n = s.n(l),
-  i = s("481060"),
-  r = s("41542"),
-  o = s("264451"),
-  d = s("75775"),
-  u = s("689938"),
-  c = s("113172");
+var n = t(735250);
+t(470079);
+var i = t(120356),
+  l = t.n(i),
+  a = t(481060),
+  r = t(41542),
+  o = t(264451),
+  c = t(75775),
+  d = t(689938),
+  u = t(364141);
 let E = e => {
   let {
-    value: t,
-    isPercent: s
+    value: s,
+    isPercent: t
   } = e;
-  if (null == t) return null;
+  if (null == s) return null;
   let {
-    formattedValue: l,
+    formattedValue: i,
     isPositive: r
-  } = (0, o.formatMetricTrend)(t, s);
-  return (0, a.jsxs)("div", {
-    className: c.trendContainer,
-    children: [(0, a.jsx)(d.default, {
-      className: n()(c.chartLineIcon, {
-        [c.chartLineIconNegative]: !r
+  } = (0, o.m5)(s, t);
+  return (0, n.jsxs)("div", {
+    className: u.trendContainer,
+    children: [(0, n.jsx)(c.Z, {
+      className: l()(u.chartLineIcon, {
+        [u.chartLineIconNegative]: !r
       })
-    }), (0, a.jsx)(i.Text, {
+    }), (0, n.jsx)(a.Text, {
       variant: "text-md/normal",
-      className: c.trendDescription,
-      children: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_METRIC_TREND_DESCRIPTION.format({
-        value: l
+      className: u.trendDescription,
+      children: d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_METRIC_TREND_DESCRIPTION.format({
+        value: i
       })
     })]
   })
 };
-t.default = e => {
+s.Z = e => {
   let {
-    label: t,
-    sublabel: s,
-    value: l,
-    additionalContent: n,
+    label: s,
+    sublabel: t,
+    value: i,
+    additionalContent: l,
     tooltip: o
   } = e;
-  return (0, a.jsxs)("div", {
-    className: c.container,
-    children: [(0, a.jsxs)("div", {
-      children: [(0, a.jsxs)("div", {
-        className: c.labelContainer,
-        children: [(0, a.jsx)(i.Text, {
+  return (0, n.jsxs)("div", {
+    className: u.container,
+    children: [(0, n.jsxs)("div", {
+      children: [(0, n.jsxs)("div", {
+        className: u.labelContainer,
+        children: [(0, n.jsx)(a.Text, {
           variant: "text-xs/medium",
-          className: c.label,
-          children: t
-        }), null != o && (0, a.jsx)(i.Tooltip, {
+          className: u.label,
+          children: s
+        }), null != o && (0, n.jsx)(a.Tooltip, {
           text: o,
-          children: e => (0, a.jsx)(r.default, {
-            className: c.labelTooltipIcon,
+          children: e => (0, n.jsx)(r.Z, {
+            className: u.labelTooltipIcon,
             ...e
           })
-        }), null != s ? (0, a.jsx)(i.Text, {
+        }), null != t ? (0, n.jsx)(a.Text, {
           variant: "text-xs/normal",
-          className: c.sublabel,
-          children: s
+          className: u.sublabel,
+          children: t
         }) : null]
-      }), (0, a.jsx)(i.Text, {
-        className: c.value,
+      }), (0, n.jsx)(a.Text, {
+        className: u.value,
         variant: "text-sm/normal",
-        children: l
+        children: i
       })]
-    }), n]
+    }), l]
   })
 }

@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
-  Trie: function() {
-    return r
+n.d(t, {
+  B: function() {
+    return a
   }
 });
-var a = n("141106");
+var i = n(141106);
 
-function s(e, t, n) {
+function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -14,52 +14,52 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let l = e => "*" === e.charAt(e.length - 1) ? a.MatchStrategy.PrefixMatch : a.MatchStrategy.ExactMatch;
-class i {
+let s = e => "*" === e.charAt(e.length - 1) ? i.dQ.PrefixMatch : i.dQ.ExactMatch;
+class o {
   _internalAdd(e, t, n) {
-    let a = e.charAt(0),
-      s = this.suffix[a];
-    null == s && (s = new i, this.suffix[a] = s, null != n ? s.value = n.slice(0, n.length - e.length + 1) : s.value = a), e.length > 1 && "*" !== e.charAt(1) ? s._internalAdd(e.substring(1), t, null != n ? n : e) : (s.strategy = l(t), s.isWord = !0)
+    let i = e.charAt(0),
+      r = this.suffix[i];
+    null == r && (r = new o, this.suffix[i] = r, null != n ? r.value = n.slice(0, n.length - e.length + 1) : r.value = i), e.length > 1 && "*" !== e.charAt(1) ? r._internalAdd(e.substring(1), t, null != n ? n : e) : (r.strategy = s(t), r.isWord = !0)
   }
   add(e) {
     this._internalAdd(e, e)
   }
   constructor() {
-    s(this, "isWord", void 0), s(this, "value", void 0), s(this, "suffix", {}), s(this, "strategy", void 0), this.isWord = null, this.value = null, this.suffix = {}, this.strategy = a.MatchStrategy.ExactMatch
+    r(this, "isWord", void 0), r(this, "value", void 0), r(this, "suffix", {}), r(this, "strategy", void 0), this.isWord = null, this.value = null, this.suffix = {}, this.strategy = i.dQ.ExactMatch
   }
 }
-class r {
+class a {
   static fromSnapshot(e) {
-    let t = new r;
+    let t = new a;
     return t.trie = e.trie, t
   }
   search(e) {
     let t = this.trie,
       n = null,
-      s = null,
-      l = {};
-    for (let u = 0; u <= e.length; u++)
-      if (n = e.charAt(u), (t = null != (s = t.suffix[n]) ? s : this.trie).isWord) {
-        var i, r, o;
+      r = null,
+      s = {};
+    for (let l = 0; l <= e.length; l++)
+      if (n = e.charAt(l), (t = null != (r = t.suffix[n]) ? r : null != this.trie.suffix[n] ? this.trie.suffix[n] : this.trie).isWord) {
+        var o, a;
         let n = t.strategy,
-          s = u + 1 - (null !== (r = null === (i = t.value) || void 0 === i ? void 0 : i.length) && void 0 !== r ? r : 0),
-          d = u;
-        if ((0, a.isMatch)(e, s, d, n)) {
-          let t = (0, a.getMatchedPositions)(e, s, d, n);
-          l[t.start] = Math.max(Number(null !== (o = l[t.start]) && void 0 !== o ? o : 0), t.end)
+          r = l + 1 - (null !== (a = null === (o = t.value) || void 0 === o ? void 0 : o.length) && void 0 !== a ? a : 0),
+          u = l;
+        if ((0, i.BD)(e, r, u, n)) {
+          let t = (0, i.jO)(e, r, u, n);
+          (null == s[t.start] || s[t.start].end < t.end) && (s[t.start] = t)
         }
-      } return l
+      } return s
   }
   addWord(e) {
-    null == this.trie && (this.trie = new i), this.trie.add(e)
+    null == this.trie && (this.trie = new o), this.trie.add(e)
   }
   addWords(e) {
     e.forEach(e => this.addWord(e))
   }
   clear() {
-    this.trie = new i
+    this.trie = new o
   }
   constructor() {
-    s(this, "trie", void 0), this.trie = new i
+    r(this, "trie", void 0), this.trie = new o
   }
 }

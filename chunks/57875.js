@@ -1,20 +1,20 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return u
+s.d(t, {
+  Z: function() {
+    return l
   }
-}), s("47120");
-var n = s("735250"),
-  r = s("470079"),
-  a = s("748780"),
-  o = s("481060"),
-  i = s("871239");
-class u extends r.Component {
+}), s(47120);
+var n = s(735250),
+  r = s(470079),
+  i = s(748780),
+  o = s(481060),
+  a = s(871239);
+class l extends r.Component {
   componentWillEnter(e) {
     let {
       offset: t
     } = this.state;
-    t.setValue(1), a.default.spring(t, {
+    t.setValue(1), i.Z.spring(t, {
       toValue: 0,
       duration: 75
     }).start(e)
@@ -26,7 +26,7 @@ class u extends r.Component {
     t.setValue(0), this.setState({
       isExiting: !0
     }, () => {
-      a.default.spring(t, {
+      i.Z.spring(t, {
         toValue: -1,
         duration: 75
       }).start(e)
@@ -37,8 +37,8 @@ class u extends r.Component {
       isExiting: e,
       offset: t
     } = this.state;
-    return (0, n.jsx)(a.default.div, {
-      className: i.wrapper,
+    return (0, n.jsx)(i.Z.div, {
+      className: a.wrapper,
       style: {
         left: 0,
         position: e ? "absolute" : "relative",
@@ -51,7 +51,7 @@ class u extends r.Component {
         }]
       },
       children: (0, n.jsx)(o.ModalContent, {
-        className: i.contentWrapper,
+        className: a.contentWrapper,
         children: this.props.children
       })
     })
@@ -60,7 +60,7 @@ class u extends r.Component {
     var t, s, n;
     super(...e), t = this, s = "state", n = {
       isExiting: !1,
-      offset: new a.default.Value(0),
+      offset: new i.Z.Value(0),
       selectedValue: null
     }, s in t ? Object.defineProperty(t, s, {
       value: n,

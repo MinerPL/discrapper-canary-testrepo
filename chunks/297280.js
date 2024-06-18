@@ -1,28 +1,32 @@
 "use strict";
-n.r(e), n.d(e, {
-  GlobalHandlers: function() {
-    return s
+n.d(e, {
+  d: function() {
+    return d
   }
 });
-var r = n("91320"),
-  i = n("648238"),
-  a = n("590171"),
-  o = n("643487");
-class s {
+var r = n(876122),
+  i = n(793884),
+  s = n(46834),
+  a = n(829919),
+  o = n(529866),
+  u = n(862315),
+  l = n(590171),
+  c = n(643487);
+class d {
   static __initStatic() {
     this.id = "GlobalHandlers"
   }
   __init() {
-    this.name = s.id
+    this.name = d.id
   }
   __init2() {
     this._installFunc = {
-      onerror: u,
-      onunhandledrejection: c
+      onerror: h,
+      onunhandledrejection: _
     }
   }
   constructor(t) {
-    s.prototype.__init.call(this), s.prototype.__init2.call(this), this._options = {
+    d.prototype.__init.call(this), d.prototype.__init2.call(this), this._options = {
       onerror: !0,
       onunhandledrejection: !0,
       ...t
@@ -34,51 +38,51 @@ class s {
     for (let e in t) {
       let n = this._installFunc[e];
       n && t[e] && (function(t) {
-        ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.logger.log(`Global Handler attached: ${t}`)
+        ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && o.kg.log(`Global Handler attached: ${t}`)
       }(e), n(), this._installFunc[e] = void 0)
     }
   }
 }
 
-function u() {
-  (0, i.addInstrumentationHandler)("error", t => {
-    let [e, n, r] = f();
-    if (!e.getIntegration(s)) return;
+function h() {
+  (0, i.oq)("error", t => {
+    let [e, n, r] = m();
+    if (!e.getIntegration(d)) return;
     let {
-      msg: u,
-      url: c,
-      line: p,
-      column: h,
-      error: _
+      msg: i,
+      url: a,
+      line: o,
+      column: u,
+      error: h
     } = t;
-    if ((0, o.shouldIgnoreOnError)() || _ && _.__sentry_own_request__) return;
-    let g = void 0 === _ && (0, i.isString)(u) ? function(t, e, n, r) {
-      let a = (0, i.isErrorEvent)(t) ? t.message : t,
-        o = "Error",
-        s = a.match(/^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i);
-      return s && (o = s[1], a = s[2]), l({
+    if ((0, c.Wz)() || h && h.__sentry_own_request__) return;
+    let _ = void 0 === h && (0, s.HD)(i) ? function(t, e, n, r) {
+      let i = (0, s.VW)(t) ? t.message : t,
+        a = "Error",
+        o = i.match(/^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i);
+      return o && (a = o[1], i = o[2]), f({
         exception: {
           values: [{
-            type: o,
-            value: a
+            type: a,
+            value: i
           }]
         }
       }, e, n, r)
-    }(u, c, p, h) : l((0, a.eventFromUnknownInput)(n, _ || u, void 0, r, !1), c, p, h);
-    g.level = "error", d(e, _, g, "onerror")
+    }(i, a, o, u) : f((0, l.ME)(n, h || i, void 0, r, !1), a, o, u);
+    _.level = "error", p(e, h, _, "onerror")
   })
 }
 
-function c() {
-  (0, i.addInstrumentationHandler)("unhandledrejection", t => {
-    let [e, n, r] = f();
-    if (!e.getIntegration(s)) return;
-    let u = t;
+function _() {
+  (0, i.oq)("unhandledrejection", t => {
+    let [e, n, r] = m();
+    if (!e.getIntegration(d)) return;
+    let i = t;
     try {
-      "reason" in t ? u = t.reason : "detail" in t && "reason" in t.detail && (u = t.detail.reason)
+      "reason" in t ? i = t.reason : "detail" in t && "reason" in t.detail && (i = t.detail.reason)
     } catch (t) {}
-    if ((0, o.shouldIgnoreOnError)() || u && u.__sentry_own_request__) return !0;
-    let c = (0, i.isPrimitive)(u) ? function(t) {
+    if ((0, c.Wz)() || i && i.__sentry_own_request__) return !0;
+    let a = (0, s.pt)(i) ? function(t) {
       return {
         exception: {
           values: [{
@@ -87,32 +91,32 @@ function c() {
           }]
         }
       }
-    }(u) : (0, a.eventFromUnknownInput)(n, u, void 0, r, !0);
-    c.level = "error", d(e, u, c, "onunhandledrejection")
+    }(i) : (0, l.ME)(n, i, void 0, r, !0);
+    a.level = "error", p(e, i, a, "onunhandledrejection")
   })
 }
-s.__initStatic();
+d.__initStatic();
 
-function l(t, e, n, r) {
-  let a = t.exception = t.exception || {},
-    o = a.values = a.values || [],
-    s = o[0] = o[0] || {},
-    u = s.stacktrace = s.stacktrace || {},
-    c = u.frames = u.frames || [],
-    l = isNaN(parseInt(r, 10)) ? void 0 : r,
-    d = isNaN(parseInt(n, 10)) ? void 0 : n,
-    f = (0, i.isString)(e) && e.length > 0 ? e : (0, i.getLocationHref)();
+function f(t, e, n, r) {
+  let i = t.exception = t.exception || {},
+    o = i.values = i.values || [],
+    u = o[0] = o[0] || {},
+    l = u.stacktrace = u.stacktrace || {},
+    c = l.frames = l.frames || [],
+    d = isNaN(parseInt(r, 10)) ? void 0 : r,
+    h = isNaN(parseInt(n, 10)) ? void 0 : n,
+    _ = (0, s.HD)(e) && e.length > 0 ? e : (0, a.l4)();
   return 0 === c.length && c.push({
-    colno: l,
-    filename: f,
+    colno: d,
+    filename: _,
     function: "?",
     in_app: !0,
-    lineno: d
+    lineno: h
   }), t
 }
 
-function d(t, e, n, r) {
-  (0, i.addExceptionMechanism)(n, {
+function p(t, e, n, r) {
+  (0, u.EG)(n, {
     handled: !1,
     type: r
   }), t.captureEvent(n, {
@@ -120,8 +124,8 @@ function d(t, e, n, r) {
   })
 }
 
-function f() {
-  let t = (0, r.getCurrentHub)(),
+function m() {
+  let t = (0, r.Gd)(),
     e = t.getClient(),
     n = e && e.getOptions() || {
       stackParser: () => [],

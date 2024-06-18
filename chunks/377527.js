@@ -1,6 +1,6 @@
 "use strict";
-n.r(t), n.d(t, {
-  TOOLTIP_SPRING_CONFIG: function() {
+n.d(t, {
+  F: function() {
     return i
   }
 });

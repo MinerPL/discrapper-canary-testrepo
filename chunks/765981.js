@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  DragDropManagerImpl: function() {
+n.d(t, {
+  f: function() {
     return a
   }
 });
-var r = n("263016");
+var r = n(263016);
 
 function i(e, t) {
   for (var n = 0; n < t.length; n++) {
@@ -49,7 +49,7 @@ var a = function() {
     value: function() {
       var e = this,
         t = this.store.dispatch,
-        n = (0, r.createDragDropActions)(this);
+        n = (0, r.W1)(this);
       return Object.keys(n).reduce(function(r, i) {
         var a, o = n[i];
         return r[i] = (a = o, function() {
@@ -64,5 +64,5 @@ var a = function() {
     value: function(e) {
       this.store.dispatch(e)
     }
-  }], i(e.prototype, t), n && i(e, n), a
+  }], i(e.prototype, t), a
 }()

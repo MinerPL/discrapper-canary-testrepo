@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  BOGOAnnouncementModalExperiment: function() {
+n.d(t, {
+  p: function() {
     return i
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2023-06_bogo_announcement_modal",
   label: "BOGO Announcement Modal",

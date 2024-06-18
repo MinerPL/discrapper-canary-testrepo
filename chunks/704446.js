@@ -1,4 +1,4 @@
-var r = n("680506"),
+var r = n(680506),
   i = function() {
     try {
       var e = r(Object, "defineProperty");

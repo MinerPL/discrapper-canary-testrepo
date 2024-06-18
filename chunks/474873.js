@@ -1,9 +1,8 @@
 "use strict";
-n.r(t);
-var i, r = n("442837"),
-  s = n("570140"),
-  a = n("657254"),
-  o = n("871465");
+var i, r = n(442837),
+  s = n(570140),
+  o = n(657254),
+  a = n(871465);
 
 function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -14,11 +13,11 @@ function l(e, t, n) {
   }) : e[t] = n, e
 }
 let u = {
-  soundpack: o.Soundpacks.CLASSIC
+  soundpack: a.YC.CLASSIC
 };
-class d extends(i = r.default.PersistedStore) {
+class _ extends(i = r.ZP.PersistedStore) {
   initialize(e) {
-    a.default.subscribe({
+    o.Z.subscribe({
       location: "1"
     }, () => this.emitChange()), null != e && (u = e)
   }
@@ -29,15 +28,15 @@ class d extends(i = r.default.PersistedStore) {
     var e;
     let {
       allowAprilFoolsSoundpack: t
-    } = a.default.getCurrentConfig({
+    } = o.Z.getCurrentConfig({
       location: "37bac2_1"
     }, {
       autoTrackExposure: !1
     });
-    return t && (e = u.soundpack, Object.values(o.Soundpacks).includes(e)) ? u.soundpack : o.Soundpacks.CLASSIC
+    return t && (e = u.soundpack, Object.values(a.YC).includes(e)) ? u.soundpack : a.YC.CLASSIC
   }
 }
-l(d, "displayName", "SoundpackStore"), l(d, "persistKey", "SoundpackStore"), t.default = new d(s.default, {
+l(_, "displayName", "SoundpackStore"), l(_, "persistKey", "SoundpackStore"), t.Z = new _(s.Z, {
   SET_SOUNDPACK: function(e) {
     let {
       soundpack: t

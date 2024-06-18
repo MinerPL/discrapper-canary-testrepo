@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  reduce: function() {
+n.d(t, {
+  u: function() {
     return u
   }
 });
-var r = n("263016"),
-  i = n("304832");
+var r = n(964742),
+  i = n(304832);
 
 function a(e, t) {
   var n = Object.keys(e);
@@ -47,18 +47,18 @@ function u() {
     t = arguments.length > 1 ? arguments[1] : void 0,
     n = t.payload;
   switch (t.type) {
-    case r.INIT_COORDS:
-    case r.BEGIN_DRAG:
+    case r.TL:
+    case r.qu:
       return {
         initialSourceClientOffset: n.sourceClientOffset, initialClientOffset: n.clientOffset, clientOffset: n.clientOffset
       };
-    case r.HOVER:
-      if ((0, i.areCoordsEqual)(e.clientOffset, n.clientOffset)) return e;
+    case r.$T:
+      if ((0, i.YJ)(e.clientOffset, n.clientOffset)) return e;
       return o(o({}, e), {}, {
         clientOffset: n.clientOffset
       });
-    case r.END_DRAG:
-    case r.DROP:
+    case r.Bs:
+    case r.rp:
       return s;
     default:
       return e

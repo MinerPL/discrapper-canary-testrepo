@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  useConnectDragPreview: function() {
-    return a
-  },
-  useConnectDragSource: function() {
+n.d(t, {
+  u: function() {
     return i
+  },
+  y: function() {
+    return o
   }
 });
-var r = n("470079");
+var r = n(470079);
 
 function i(e) {
   return (0, r.useMemo)(function() {
@@ -15,7 +15,7 @@ function i(e) {
   }, [e])
 }
 
-function a(e) {
+function o(e) {
   return (0, r.useMemo)(function() {
     return e.hooks.dragPreview()
   }, [e])

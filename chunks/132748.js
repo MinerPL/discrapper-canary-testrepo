@@ -1,9 +1,9 @@
 "use strict";
-n.r(t), n("47120");
-var i, r, s = n("470079"),
-  a = n("112724");
+n(47120);
+var i, r, s = n(470079),
+  o = n(112724);
 
-function o(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -15,7 +15,7 @@ function o(e, t, n) {
 function l(e, t, n) {
   return Math.min(Math.max(Math.floor(e / t), 1), n)
 }
-t.default = (0, a.default)((r = class extends(i = s.Component) {
+t.Z = (0, o.Z)((r = class extends(i = s.Component) {
   static getDerivedStateFromProps(e, t) {
     let {
       width: n,
@@ -37,10 +37,10 @@ t.default = (0, a.default)((r = class extends(i = s.Component) {
     return n(i, e, t)
   }
   constructor(...e) {
-    super(...e), o(this, "state", {
+    super(...e), a(this, "state", {
       columns: l(this.props.width, this.props.desiredItemWidth, this.props.maxColumns)
     })
   }
-}, o(r, "defaultProps", {
+}, a(r, "defaultProps", {
   desiredItemWidth: 200
 }), r))

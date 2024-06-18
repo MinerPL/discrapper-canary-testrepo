@@ -3,8 +3,8 @@
 function i(e, t) {
   return t && (e = e.trim()), e
 }
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return i
   }
 })

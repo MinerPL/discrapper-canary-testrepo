@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return c
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  a = n("149765"),
-  s = n("178940"),
-  o = n("993365"),
-  l = n("465670"),
-  u = n("422559"),
-  d = n("689938"),
-  _ = n("466397");
+var i = n(735250),
+  r = n(470079),
+  s = n(149765),
+  o = n(178940),
+  a = n(993365),
+  l = n(465670),
+  u = n(422559),
+  _ = n(689938),
+  d = n(466397);
 
 function c(e) {
   let {
@@ -21,68 +21,68 @@ function c(e) {
     deniedPermissions: c,
     onPermissionsChange: E,
     guild: I
-  } = e, T = r.useMemo(() => a.invert(I.permissions), [I.permissions]);
+  } = e, T = r.useMemo(() => s.U_(I.permissions), [I.permissions]);
   r.useEffect(() => {
-    E(!1, a.filter(n, T))
+    E(!1, s.hX(n, T))
   }, [T, E, n]);
-  let f = u.OrderedPermissions.filter(e => a.has(n, e)),
-    S = f.filter(e => !a.has(T, e)).map(e => {
-      let t = (0, u.getPermissionName)(e),
-        n = !a.has(c, e);
+  let h = u.VY.filter(e => s.e$(n, e)),
+    S = h.filter(e => !s.e$(T, e)).map(e => {
+      let t = (0, u.wt)(e),
+        n = !s.e$(c, e);
       return (0, i.jsx)("li", {
-        className: _.permission,
-        children: (0, i.jsx)(s.Checkbox, {
+        className: d.permission,
+        children: (0, i.jsx)(o.X, {
           value: n,
           onChange: (t, n) => E(n, e),
-          type: s.Checkbox.Types.INVERTED,
-          children: (0, i.jsx)(o.Text, {
+          type: o.X.Types.INVERTED,
+          children: (0, i.jsx)(a.x, {
             variant: "text-md/normal",
             children: t
           })
         })
       }, String(e))
     }),
-    h = f.filter(e => a.has(T, e)).map(e => {
-      let t = (0, u.getPermissionName)(e);
+    f = h.filter(e => s.e$(T, e)).map(e => {
+      let t = (0, u.wt)(e);
       return (0, i.jsxs)("li", {
-        className: _.permission,
+        className: d.permission,
         children: [(0, i.jsx)("div", {
-          className: _.disabledPermissionIcon,
-          children: (0, i.jsx)(l.default, {
-            className: _.icon
+          className: d.disabledPermissionIcon,
+          children: (0, i.jsx)(l.Z, {
+            className: d.icon
           })
-        }), (0, i.jsx)(o.Text, {
+        }), (0, i.jsx)(a.x, {
           variant: "text-md/normal",
           children: t
         })]
       }, String(e))
     });
   return (0, i.jsxs)("div", {
-    className: _.botPermissions,
+    className: d.botPermissions,
     children: [S.length > 0 ? (0, i.jsxs)(i.Fragment, {
-      children: [(0, i.jsx)(o.Text, {
+      children: [(0, i.jsx)(a.x, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        className: _.permissionsLabel,
-        children: d.default.Messages.OAUTH2_CONFIRM_BOT_PERMISSIONS.format({
+        className: d.permissionsLabel,
+        children: _.Z.Messages.OAUTH2_CONFIRM_BOT_PERMISSIONS.format({
           applicationName: t.name,
           guildName: I.name
         })
       }), (0, i.jsx)("ul", {
-        className: _.permissionsList,
+        className: d.permissionsList,
         children: S
       })]
-    }) : null, h.length > 0 ? (0, i.jsxs)(i.Fragment, {
-      children: [(0, i.jsx)(o.Text, {
+    }) : null, f.length > 0 ? (0, i.jsxs)(i.Fragment, {
+      children: [(0, i.jsx)(a.x, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        className: _.disabledPermissionsLabel,
-        children: d.default.Messages.OAUTH2_DISABLED_PERMISSIONS.format({
+        className: d.disabledPermissionsLabel,
+        children: _.Z.Messages.OAUTH2_DISABLED_PERMISSIONS.format({
           applicationName: t.name
         })
       }), (0, i.jsx)("ul", {
-        className: _.permissionsList,
-        children: h
+        className: d.permissionsList,
+        children: f
       })]
     }) : null]
   })

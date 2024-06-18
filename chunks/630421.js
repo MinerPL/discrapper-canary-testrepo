@@ -1,13 +1,12 @@
 "use strict";
-n.r(t);
-var r = n("740078"),
-  i = n("343713"),
-  a = n("49691"),
-  o = n("285363"),
-  s = n("874900"),
-  u = n("126387"),
-  c = n("632471"),
-  l = n("894417"),
+var r = n(740078),
+  i = n(343713),
+  a = n(49691),
+  o = n(285363),
+  s = n(874900),
+  u = n(126387),
+  c = n(632471),
+  l = n(894417),
   d = {
     top: "auto",
     right: "auto",
@@ -26,45 +25,46 @@ function f(e) {
     S = e.adaptive,
     x = e.roundOffsets,
     w = e.isFixed,
-    T = v.x,
-    C = void 0 === T ? 0 : T,
+    C = v.x,
+    T = void 0 === C ? 0 : C,
     D = v.y,
-    O = void 0 === D ? 0 : D,
-    M = "function" == typeof x ? x({
-      x: C,
-      y: O
+    M = void 0 === D ? 0 : D,
+    O = "function" == typeof x ? x({
+      x: T,
+      y: M
     }) : {
-      x: C,
-      y: O
+      x: T,
+      y: M
     };
-  C = M.x, O = M.y;
+  T = O.x, M = O.y;
   var A = v.hasOwnProperty("x"),
     k = v.hasOwnProperty("y"),
-    R = r.left,
-    N = r.top,
+    R = r.t$,
+    N = r.we,
     I = window;
   if (S) {
-    var L = (0, i.default)(m),
+    var L = (0, i.Z)(m),
       P = "clientHeight",
-      F = "clientWidth";
-    L === (0, a.default)(m) && (L = (0, o.default)(m), "static" !== (0, s.default)(L).position && "absolute" === y && (P = "scrollHeight", F = "scrollWidth")), (_ === r.top || (_ === r.left || _ === r.right) && b === r.end) && (N = r.bottom, O -= (w && L === I && I.visualViewport ? I.visualViewport.height : L[P]) - g.height, O *= E ? 1 : -1), (_ === r.left || (_ === r.top || _ === r.bottom) && b === r.end) && (R = r.right, C -= (w && L === I && I.visualViewport ? I.visualViewport.width : L[F]) - g.width, C *= E ? 1 : -1)
+      B = "clientWidth";
+    L === (0, a.Z)(m) && (L = (0, o.Z)(m), "static" !== (0, s.Z)(L).position && "absolute" === y && (P = "scrollHeight", B = "scrollWidth"));
+    (_ === r.we || (_ === r.t$ || _ === r.F2) && b === r.ut) && (N = r.I, M -= (w && L === I && I.visualViewport ? I.visualViewport.height : L[P]) - g.height, M *= E ? 1 : -1), (_ === r.t$ || (_ === r.we || _ === r.I) && b === r.ut) && (R = r.F2, T -= (w && L === I && I.visualViewport ? I.visualViewport.width : L[B]) - g.width, T *= E ? 1 : -1)
   }
-  var B = Object.assign({
+  var F = Object.assign({
     position: y
   }, S && d);
   var U = !0 === x ? (t = {
-    x: C,
-    y: O
-  }, n = (0, a.default)(m), u = t.x, c = t.y, f = n.devicePixelRatio || 1, {
-    x: (0, l.round)(u * f) / f || 0,
-    y: (0, l.round)(c * f) / f || 0
+    x: T,
+    y: M
+  }, n = (0, a.Z)(m), u = t.x, c = t.y, f = n.devicePixelRatio || 1, {
+    x: (0, l.NM)(u * f) / f || 0,
+    y: (0, l.NM)(c * f) / f || 0
   }) : {
-    x: C,
-    y: O
+    x: T,
+    y: M
   };
-  return (C = U.x, O = U.y, E) ? Object.assign({}, B, ((h = {})[N] = k ? "0" : "", h[R] = A ? "0" : "", h.transform = 1 >= (I.devicePixelRatio || 1) ? "translate(" + C + "px, " + O + "px)" : "translate3d(" + C + "px, " + O + "px, 0)", h)) : Object.assign({}, B, ((p = {})[N] = k ? O + "px" : "", p[R] = A ? C + "px" : "", p.transform = "", p))
+  return (T = U.x, M = U.y, E) ? Object.assign({}, F, ((h = {})[N] = k ? "0" : "", h[R] = A ? "0" : "", h.transform = 1 >= (I.devicePixelRatio || 1) ? "translate(" + T + "px, " + M + "px)" : "translate3d(" + T + "px, " + M + "px, 0)", h)) : Object.assign({}, F, ((p = {})[N] = k ? M + "px" : "", p[R] = A ? T + "px" : "", p.transform = "", p))
 }
-t.default = {
+t.Z = {
   name: "computeStyles",
   enabled: !0,
   phase: "beforeWrite",
@@ -76,8 +76,8 @@ t.default = {
       a = n.roundOffsets,
       o = void 0 === a || a,
       s = {
-        placement: (0, u.default)(t.placement),
-        variation: (0, c.default)(t.placement),
+        placement: (0, u.Z)(t.placement),
+        variation: (0, c.Z)(t.placement),
         popper: t.elements.popper,
         popperRect: t.rects.popper,
         gpuAcceleration: void 0 === r || r,

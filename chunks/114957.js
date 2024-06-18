@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("224706"),
-  r = n("978085"),
-  s = n("147913"),
-  a = n("283595"),
-  o = n("358085");
-class l extends s.default {
+n(47120);
+var i = n(224706),
+  r = n(978085),
+  s = n(147913),
+  o = n(283595),
+  a = n(358085);
+class l extends s.Z {
   handlePostConnectionOpen() {
-    (0, o.isDesktop)() && (!a.default.fetched && (0, r.fetchLibrary)(), i.default.getDetectableGames())
+    (0, a.isDesktop)() && (!o.Z.fetched && (0, r.b8)(), i.Z.getDetectableGames())
   }
   constructor(...e) {
     var t, n, i;
@@ -21,4 +21,4 @@ class l extends s.default {
     }) : t[n] = i
   }
 }
-t.default = new l
+t.Z = new l

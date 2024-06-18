@@ -1,17 +1,16 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("803997"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("646574"),
-  o = n("543241"),
-  l = n("747613"),
-  u = n("533432"),
-  d = n("149203"),
-  _ = n("185923"),
-  c = n("776464");
-t.default = e => {
+  o = n(646574),
+  a = n(543241),
+  l = n(747613),
+  u = n(533432),
+  _ = n(149203),
+  d = n(185923),
+  c = n(773390);
+t.Z = e => {
   let {
     accessory: t,
     pickerIntention: n,
@@ -19,39 +18,39 @@ t.default = e => {
     emojiListRef: E,
     onKeyDown: I,
     onFocus: T,
-    autoFocus: f,
+    autoFocus: h,
     searchBarRef: S,
-    hasTabWrapper: h,
-    diversitySurrogate: A,
-    isBurstReaction: m,
-    onBurstReactionToggle: N,
+    hasTabWrapper: f,
+    diversitySurrogate: N,
+    isBurstReaction: A,
+    onBurstReactionToggle: m,
     renderHeader: O
-  } = e, p = (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(u.default, {
+  } = e, R = (0, i.jsxs)(i.Fragment, {
+    children: [(0, i.jsx)(u.Z, {
       emojiListRef: E,
-      gridNavigatorId: d.GRID_NAVIGATOR_ID,
+      gridNavigatorId: _.Vr,
       onKeyDown: I,
       className: c.searchBar,
       ref: S,
-      isFullRow: n === _.EmojiIntention.COMMUNITY_CONTENT_ONLY,
+      isFullRow: !1,
       onFocus: T,
-      autoFocus: f,
-      defaultSearchPlaceholder: (0, o.getSearchPlaceholder)(n, m)
-    }), n === _.EmojiIntention.REACTION ? (0, i.jsx)("div", {
+      autoFocus: h,
+      defaultSearchPlaceholder: (0, a.nV)(n, A)
+    }), n === d.Hz.REACTION ? (0, i.jsx)("div", {
       className: c.burstToggle,
-      children: (0, i.jsx)(a.default, {
-        checked: m,
-        onClick: N
+      children: (0, i.jsx)(o.Z, {
+        checked: A,
+        onClick: m
       })
-    }) : null, n === _.EmojiIntention.COMMUNITY_CONTENT_ONLY ? null : null != t ? t : (0, i.jsx)(l.default, {
+    }) : null, null != t ? t : (0, i.jsx)(l.Z, {
       searchBarRef: S,
       className: c.diversitySelector,
-      hasTabWrapper: h,
-      selectedSurrogate: A
+      hasTabWrapper: f,
+      selectedSurrogate: N
     })]
   });
   return (0, i.jsx)("div", {
     className: s()(c.header, r),
-    children: null != O ? O(p) : p
+    children: null != O ? O(R) : R
   })
 }

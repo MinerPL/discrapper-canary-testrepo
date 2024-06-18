@@ -1,14 +1,13 @@
 "use strict";
-r.r(t);
-var n = r("924102"),
-  a = r("675717");
-t.default = function(e, t, r) {
-  var o = !0,
-    i = !0;
+var r = n(924102),
+  i = n(675717);
+t.Z = function(e, t, n) {
+  var a = !0,
+    o = !0;
   if ("function" != typeof e) throw TypeError("Expected a function");
-  return (0, a.default)(r) && (o = "leading" in r ? !!r.leading : o, i = "trailing" in r ? !!r.trailing : i), (0, n.default)(e, t, {
-    leading: o,
+  return (0, i.Z)(n) && (a = "leading" in n ? !!n.leading : a, o = "trailing" in n ? !!n.trailing : o), (0, r.Z)(e, t, {
+    leading: a,
     maxWait: t,
-    trailing: i
+    trailing: o
   })
 }

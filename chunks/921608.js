@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  DEFAULT_FONT_SIZE: function() {
-    return r
-  },
-  TEXT_TRUNCATION_PADDING_PX: function() {
+n.d(t, {
+  F: function() {
     return i
+  },
+  n: function() {
+    return r
   }
 });
 let i = 12,

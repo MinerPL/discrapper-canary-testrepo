@@ -1,43 +1,41 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("844303"),
-  i = r("958491"),
-  l = Object.assign || function(e) {
+var r = n(470079),
+  i = n(844303),
+  a = n(958491),
+  o = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
-      var r = arguments[t];
-      for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n])
+      var n = arguments[t];
+      for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
     }
     return e
   },
-  u = function(e) {
+  s = function(e) {
     var t = e.white,
-      r = e.grey,
-      u = e.size,
-      s = e.renderers,
-      f = e.borderRadius,
-      c = e.boxShadow,
+      n = e.grey,
+      s = e.size,
+      u = e.renderers,
+      c = e.borderRadius,
+      l = e.boxShadow,
       d = e.children,
-      p = (0, o.default)({
+      f = (0, i.default)({
         default: {
           grid: {
-            borderRadius: f,
-            boxShadow: c,
+            borderRadius: c,
+            boxShadow: l,
             absolute: "0px 0px 0px 0px",
-            background: "url(" + i.get(t, r, u, s.canvas) + ") center left"
+            background: "url(" + a.U(t, n, s, u.canvas) + ") center left"
           }
         }
       });
-    return (0, n.isValidElement)(d) ? a().cloneElement(d, l({}, d.props, {
-      style: l({}, d.props.style, p.grid)
-    })) : a().createElement("div", {
-      style: p.grid
+    return (0, r.isValidElement)(d) ? r.cloneElement(d, o({}, d.props, {
+      style: o({}, d.props.style, f.grid)
+    })) : r.createElement("div", {
+      style: f.grid
     })
   };
-u.defaultProps = {
+s.defaultProps = {
   size: 8,
   white: "transparent",
   grey: "rgba(0,0,0,.08)",
   renderers: {}
-}, t.default = u
+}, t.Z = s

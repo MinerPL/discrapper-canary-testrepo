@@ -1,26 +1,26 @@
 "use strict";
-n.r(t), n.d(t, {
-  MAX_TOTAL_ATTACHMENT_SIZE: function() {
+n.d(t, {
+  B: function() {
     return a
   },
-  getAttachmentPayload: function() {
-    return o
-  },
-  getFile: function() {
+  Fm: function() {
     return _
   },
-  getFileChunk: function() {
+  Lc: function() {
+    return u
+  },
+  U4: function() {
     return l
   },
-  getFileContentLength: function() {
+  hn: function() {
     return d
   },
-  getFileData: function() {
-    return u
+  zz: function() {
+    return o
   }
-}), n("411104");
-var i = n("830496"),
-  r = n("959517");
+}), n(411104);
+var i = n(830496),
+  r = n(959517);
 let s = [{
     reName: /\.jpe?g$/i,
     name: e => "image".concat(e, ".jpg"),
@@ -66,25 +66,25 @@ let s = [{
     name: e => "video".concat(e, ".webm"),
     type: "image/webm"
   }],
-  a = 524288e3;
+  o = 524288e3;
 
-function o(e) {
+function a(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
     s = arguments.length > 2 ? arguments[2] : void 0,
-    a = {
+    o = {
       id: null !== (t = null == n ? void 0 : n.toString()) && void 0 !== t ? t : e.id
     };
-  null != e.description && (a.description = e.description);
-  let o = function(e) {
+  null != e.description && (o.description = e.description);
+  let a = function(e) {
     let {
       spoiler: t
     } = e;
-    return t ? r.SPOILER_ATTACHMENT_PREFIX : ""
+    return t ? r._j : ""
   }({
     spoiler: e.spoiler
   });
-  return a.filename = "".concat(o).concat(null != s ? s : e.filename), a.uploaded_filename = e.uploadedFilename, "durationSecs" in e && null != e.durationSecs && (a.duration_secs = e.durationSecs), "waveform" in e && null != e.waveform && (a.waveform = e.waveform), "isThumbnail" in e && !0 === e.isThumbnail && (a.is_thumbnail = e.isThumbnail), "isRemix" in e && !0 === e.isRemix && (a.is_remix = e.isRemix), "clip" in e && null != e.clip && (a.is_clip = !0, a.title = e.clip.name, a.application_id = e.clip.applicationId, a.clip_created_at = (0, i.getClipCreatedAt)(e.clip.id), a.clip_participant_ids = (0, i.getClipParticipantIds)(e.clip.users)), a
+  return o.filename = "".concat(a).concat(null != s ? s : e.filename), o.uploaded_filename = e.uploadedFilename, "durationSecs" in e && null != e.durationSecs && (o.duration_secs = e.durationSecs), "waveform" in e && null != e.waveform && (o.waveform = e.waveform), "isThumbnail" in e && !0 === e.isThumbnail && (o.is_thumbnail = e.isThumbnail), "isRemix" in e && !0 === e.isRemix && (o.is_remix = e.isRemix), "clip" in e && null != e.clip && (o.is_clip = !0, o.title = e.clip.name, o.application_id = e.clip.applicationId, o.clip_created_at = (0, i.U)(e.clip.id), o.clip_participant_ids = (0, i.Z)(e.clip.users)), o
 }
 
 function l(e, t, n) {
@@ -106,7 +106,7 @@ function u(e) {
   })
 }
 
-function d(e) {
+function _(e) {
   return new Promise((t, n) => {
     let i = new XMLHttpRequest;
     i.open("HEAD", e, !0), i.onload = () => {
@@ -118,28 +118,28 @@ function d(e) {
   })
 }
 
-function _(e) {
-  var t, n, i, r, a, o;
+function d(e) {
+  var t, n, i, r, o, a;
   let l, {
       uri: u,
-      i: d,
-      overrideFilename: _,
+      i: _,
+      overrideFilename: d,
       overrideType: c
     } = e,
     E = u.split("/"),
     I = E[E.length - 1];
   I = null !== (i = null === (n = I.split("?")) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== i ? i : "";
   let T = s.find(e => e.reName.test(I));
-  if (null == T && null != _ && (T = s.find(e => e.reName.test(_))), null != T && null != _) {
-    let e = T.name(d).split(".").pop(),
-      t = _.lastIndexOf(".");
-    l = -1 !== t ? "".concat(_.substr(0, t), ".").concat(e) : "".concat(_, ".").concat(e)
-  } else l = null != T ? T.name(d) : null != _ ? _ : "unknown";
+  if (null == T && null != d && (T = s.find(e => e.reName.test(d))), null != T && null != d) {
+    let e = T.name(_).split(".").pop(),
+      t = d.lastIndexOf(".");
+    l = -1 !== t ? "".concat(d.substr(0, t), ".").concat(e) : "".concat(d, ".").concat(e)
+  } else l = null != T ? T.name(_) : null != d ? d : "unknown";
   return {
     uri: u,
     filename: l,
     type: null !== (r = null != c ? c : null == T ? void 0 : T.type) && void 0 !== r ? r : "unknown",
-    isVideo: -1 !== (null !== (a = null != c ? c : null == T ? void 0 : T.name(d)) && void 0 !== a ? a : "").indexOf("video"),
-    isImage: -1 !== (null !== (o = null != c ? c : null == T ? void 0 : T.name(d)) && void 0 !== o ? o : "").indexOf("image")
+    isVideo: -1 !== (null !== (o = null != c ? c : null == T ? void 0 : T.name(_)) && void 0 !== o ? o : "").indexOf("video"),
+    isImage: -1 !== (null !== (a = null != c ? c : null == T ? void 0 : T.name(_)) && void 0 !== a ? a : "").indexOf("image")
   }
 }

@@ -1,8 +1,8 @@
-var e = Function.prototype.toString;
+var r = Function.prototype.toString;
 t.exports = function(t) {
   if (null != t) {
     try {
-      return e.call(t)
+      return r.call(t)
     } catch (t) {}
     try {
       return t + ""

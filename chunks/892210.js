@@ -1,4 +1,4 @@
-for (var o = n("946282"), r = "undefined" == typeof window ? n.g : window, i = ["moz", "webkit"], a = "AnimationFrame", u = r["request" + a], s = r["cancel" + a] || r["cancelRequest" + a], l = 0; !u && l < i.length; l++) u = r[i[l] + "Request" + a], s = r[i[l] + "Cancel" + a] || r[i[l] + "CancelRequest" + a];
+for (var o = n(946282), i = "undefined" == typeof window ? n.g : window, r = ["moz", "webkit"], a = "AnimationFrame", u = i["request" + a], s = i["cancel" + a] || i["cancelRequest" + a], l = 0; !u && l < r.length; l++) u = i[r[l] + "Request" + a], s = i[r[l] + "Cancel" + a] || i[r[l] + "CancelRequest" + a];
 if (!u || !s) {
   var c = 0,
     p = 0,
@@ -31,9 +31,9 @@ if (!u || !s) {
   }
 }
 e.exports = function(e) {
-  return u.call(r, e)
+  return u.call(i, e)
 }, e.exports.cancel = function() {
-  s.apply(r, arguments)
+  s.apply(i, arguments)
 }, e.exports.polyfill = function(e) {
-  !e && (e = r), e.requestAnimationFrame = u, e.cancelAnimationFrame = s
+  !e && (e = i), e.requestAnimationFrame = u, e.cancelAnimationFrame = s
 }

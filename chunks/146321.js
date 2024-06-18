@@ -1,6 +1,6 @@
 "use strict";
-var e = n("294377"),
-  o = n("802973"),
+var e = n(294377),
+  o = n(802973),
   i = e("Map");
 t.exports = {
   Map: i,

@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
-}), n("47120");
-var i = n("836560");
+}), n(47120);
+var i = n(836560);
 class r {
   on(e, t) {
     this.emitter.on(e, t)

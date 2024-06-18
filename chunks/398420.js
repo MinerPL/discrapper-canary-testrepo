@@ -1,17 +1,15 @@
 "use strict";
-r.r(t);
-var a = r("194649"),
-  n = r("470079"),
-  s = r.n(n),
-  o = r("863850");
+var a = r(599295),
+  n = r(470079),
+  s = r(863850);
 
-function i(e, t) {
+function o(e, t) {
   (null == t || t > e.length) && (t = e.length);
   for (var r = 0, a = Array(t); r < t; r++) a[r] = e[r];
   return a
 }
 
-function u(e, t) {
+function i(e, t) {
   var r = 0,
     a = !1;
   if (Number.isSafeInteger(e.size)) r = e.size;
@@ -21,10 +19,10 @@ function u(e, t) {
       if (!r) {
         if (Array.isArray(e) || (r = function(e, t) {
             if (e) {
-              if ("string" == typeof e) return i(e, t);
+              if ("string" == typeof e) return o(e, t);
               var r = Object.prototype.toString.call(e).slice(8, -1);
               if ("Object" === r && e.constructor && (r = e.constructor.name), "Map" === r || "Set" === r) return Array.from(e);
-              if ("Arguments" === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return i(e, t)
+              if ("Arguments" === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return o(e, t)
             }
           }(e))) {
           r && (e = r);
@@ -48,24 +46,24 @@ function u(e, t) {
         }
         throw TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }
-      var s, o = !0,
-        u = !1;
+      var s, i = !0,
+        c = !1;
       return {
         s: function() {
           r = r.call(e)
         },
         n: function() {
           var e = r.next();
-          return o = e.done, e
+          return i = e.done, e
         },
         e: function(e) {
-          u = !0, s = e
+          c = !0, s = e
         },
         f: function() {
           try {
-            !o && null != r.return && r.return()
+            !i && null != r.return && r.return()
           } finally {
-            if (u) throw s
+            if (c) throw s
           }
         }
       }
@@ -86,11 +84,11 @@ function u(e, t) {
   }
   return "".concat(a ? ">" : "").concat(r, " ").concat(1 !== r ? "entries" : "entry")
 }
-t.default = function(e) {
-  var t = (0, a.default)({}, e);
-  return s().createElement(o.default, (0, a.default)({}, t, {
+t.Z = function(e) {
+  var t = (0, a.Z)({}, e);
+  return n.createElement(s.Z, (0, a.Z)({}, t, {
     nodeType: "Iterable",
     nodeTypeIndicator: "()",
-    createItemString: u
+    createItemString: i
   }))
 }

@@ -1,97 +1,99 @@
 "use strict";
-n.r(t), n.d(t, {
-  JoinSourceType: function() {
-    return r
+n.d(t, {
+  MS: function() {
+    return R
   },
-  fetchMemberSupplemental: function() {
+  Ph: function() {
+    return C
+  },
+  _2: function() {
     return g
   },
-  getIntegrationLabel: function() {
-    return p
-  },
-  getJoinSourceTypeLabel: function() {
+  bE: function() {
     return O
   },
-  registerFetchedSupplementals: function() {
-    return N
+  gq: function() {
+    return r
   },
-  useGetIntegrationIconString: function() {
-    return R
+  nf: function() {
+    return m
   }
-}), n("653041");
-var i, r, s, a, o, l, u = n("544891"),
-  d = n("780384"),
-  _ = n("410030"),
-  c = n("726542"),
-  E = n("122021"),
-  I = n("981631"),
-  T = n("689938");
-let f = {};
+}), n(653041);
+var i, r, s, o, a, l, u = n(544891),
+  _ = n(780384),
+  d = n(410030),
+  c = n(726542),
+  E = n(122021),
+  I = n(981631),
+  T = n(689938);
+let h = {};
 
 function S(e, t) {
   return e + t
 }
 
-function h(e, t) {
+function f(e, t) {
   return t.map(t => e + t)
 }
 
-function A(e) {
+function N(e) {
   return e.split("-")[1]
-}(a = i || (i = {}))[a.FAILED = 0] = "FAILED", a[a.UNFETCHED = 1] = "UNFETCHED", a[a.PENDING = 2] = "PENDING", a[a.SUCCEEDED = 3] = "SUCCEEDED", a[a.FAILED_NO_RETRY = 4] = "FAILED_NO_RETRY";
+}(o = i || (i = {}))[o.FAILED = 0] = "FAILED", o[o.UNFETCHED = 1] = "UNFETCHED", o[o.PENDING = 2] = "PENDING", o[o.SUCCEEDED = 3] = "SUCCEEDED", o[o.FAILED_NO_RETRY = 4] = "FAILED_NO_RETRY";
 
-function m(e, t) {
+function A(e, t) {
   e.forEach(e => {
-    f[e] = t
+    h[e] = t
   })
 }
 
-function N(e, t) {
+function m(e, t) {
   t.forEach(t => (function(e, t, n) {
-    f[e + t] = 3
+    h[e + t] = 3
   })(e, t, 3))
-}(o = r || (r = {}))[o.UNSPECIFIED = 0] = "UNSPECIFIED", o[o.BOT = 1] = "BOT", o[o.INTEGRATION = 2] = "INTEGRATION", o[o.DISCOVERY = 3] = "DISCOVERY", o[o.HUB = 4] = "HUB", o[o.INVITE = 5] = "INVITE", o[o.VANITY_URL = 6] = "VANITY_URL";
+}(a = r || (r = {}))[a.UNSPECIFIED = 0] = "UNSPECIFIED", a[a.BOT = 1] = "BOT", a[a.INTEGRATION = 2] = "INTEGRATION", a[a.DISCOVERY = 3] = "DISCOVERY", a[a.HUB = 4] = "HUB", a[a.INVITE = 5] = "INVITE", a[a.VANITY_URL = 6] = "VANITY_URL", a[a.MANUAL_MEMBER_VERIFICATION = 7] = "MANUAL_MEMBER_VERIFICATION";
 let O = function(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   switch (e) {
     case 1:
-      return T.default.Messages.MEMBER_SAFETY_JOIN_TYPE_BOT;
+      return T.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_BOT;
     case 2:
-      return T.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION;
+      return T.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION;
     case 3:
-      return T.default.Messages.MEMBER_SAFETY_JOIN_TYPE_DISCOVERY;
+      return T.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_DISCOVERY;
     case 4:
-      return T.default.Messages.MEMBER_SAFETY_JOIN_TYPE_HUB;
+      return T.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_HUB;
     case 5:
-      return T.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INVITE;
+      return T.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_INVITE;
     case 6:
-      if (null != t && !n) return T.default.Messages.MEMBER_SAFETY_JOIN_TYPE_VANITY_URL_LABEL_NAME.format({
+      if (null != t && !n) return T.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_VANITY_URL_LABEL_NAME.format({
         vanityUrl: t
       });
-      return T.default.Messages.MEMBER_SAFETY_JOIN_TYPE_VANITY_URL;
+      return T.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_VANITY_URL;
+    case 7:
+      return T.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_MANUAL_VERIFICATION;
     default:
-      return T.default.Messages.MEMBER_SAFETY_JOIN_TYPE_UNKNOWN
+      return T.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_UNKNOWN
   }
 };
 (l = s || (s = {})).DISCORD = "discord", l.TWITCH = "twitch", l.YOUTUBE = "youtube", l.GUILD_SUBSCRIPTION = "guild_subscription";
-let p = e => {
+let R = e => {
     switch (e) {
       case "twitch":
-        return T.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION_TWITCH;
+        return T.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION_TWITCH;
       case "youtube":
-        return T.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION_YOUTUBE;
+        return T.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION_YOUTUBE;
       default:
-        return T.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION
+        return T.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION
     }
   },
-  R = e => {
-    let t = c.default.get((0, E.useLegacyPlatformType)(e)),
-      n = (0, _.default)();
-    return null != t && ["twitch", "youtube"].includes(e) ? "url('".concat((0, d.isThemeDark)(n) ? t.icon.darkSVG : t.icon.lightSVG, "')") : null
+  C = e => {
+    let t = c.Z.get((0, E.rR)(e)),
+      n = (0, d.ZP)();
+    return null != t && ["twitch", "youtube"].includes(e) ? "url('".concat((0, _.wj)(n) ? t.icon.darkSVG : t.icon.lightSVG, "')") : null
   };
 
-function C(e) {
+function p(e) {
   return {
     userId: e.user_id,
     sourceInviteCode: e.source_invite_code,
@@ -101,19 +103,19 @@ function C(e) {
   }
 }
 async function g(e, t) {
-  let n = h(e, t),
-    i = n.filter(e => f[e] <= 1).map(A);
+  let n = f(e, t),
+    i = n.filter(e => h[e] <= 1).map(N);
   if (0 === i.length) return [];
-  m(n, 2);
+  A(n, 2);
   try {
-    let t = await u.HTTP.post({
-      url: I.Endpoints.MEMBER_SAFETY_SUPPLEMENTAL(e),
+    let t = await u.tn.post({
+      url: I.ANM.MEMBER_SAFETY_SUPPLEMENTAL(e),
       body: {
         user_ids: i
       }
     });
-    if (!Array.isArray(t.body)) return m(n, 0), [];
-    let r = t.body.map(C),
+    if (!Array.isArray(t.body)) return A(n, 0), [];
+    let r = t.body.map(p),
       s = [];
     r.forEach(e => {
       let {
@@ -121,12 +123,12 @@ async function g(e, t) {
       } = e;
       return s.push(t)
     });
-    let a = h(e, s),
-      o = i.filter(e => !s.includes(e)),
-      l = h(e, o);
-    return m(a, 3), m(l, 0), r
+    let o = f(e, s),
+      a = i.filter(e => !s.includes(e)),
+      l = f(e, a);
+    return A(o, 3), A(l, 0), r
   } catch (e) {
-    m(n, 0)
+    A(n, 0)
   }
   return []
 }

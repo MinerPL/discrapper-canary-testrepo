@@ -22,9 +22,9 @@ e.exports = {
     function i(e, t, n) {
       return t + e * (n - t)
     }
-    var a, o, s, u, c, l, d, f, p = (e / 1.7 - (a = 0)) / (20 - a);
-    var h = (u = .5) + (n / 1.7 - (s = 0)) / (20 - s) * (200 - u);
-    var m = (c = p = (o = 0) + p * (.8 - o), l = function(e) {
+    var a, o, s, u, c, l, d, f, p = (e / 1.7 - 0) / (20 - (a = 0));
+    var h = .5 + (n / 1.7 - 0) / (20 - (s = 0)) * (200 - (u = .5));
+    var m = (c = p = 0 + p * (.8 - (o = 0)), l = function(e) {
       var t, n, r;
       if (e <= 18) {
         ;

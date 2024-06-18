@@ -1,40 +1,40 @@
 "use strict";
-n.r(t), n.d(t, {
-  showReportModal: function() {
-    return i
+n.d(t, {
+  m: function() {
+    return a
   }
-}), n("653041");
-var a = n("735250");
-n("470079");
-var l = n("481060"),
-  r = n("185625"),
-  s = n("186023");
-async function i(e, t, n, i) {
-  let d = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4],
-    o = !(arguments.length > 5) || void 0 === arguments[5] || arguments[5],
-    u = arguments.length > 6 ? arguments[6] : void 0,
-    c = (0, l.getInteractingModalContext)();
+}), n(653041);
+var i = n(735250);
+n(470079);
+var r = n(481060),
+  s = n(185625),
+  o = n(186023);
+async function a(e, t, n, a) {
+  let l = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4],
+    u = !(arguments.length > 5) || void 0 === arguments[5] || arguments[5],
+    _ = arguments.length > 6 ? arguments[6] : void 0,
+    d = (0, r.getInteractingModalContext)();
   try {
-    let m, _ = o ? await (0, r.getReportMenu)(e, t) : await (0, r.getUnauthenticatedReportMenu)(e, t),
-      f = [];
-    let E = e => {
-        f.push(e)
+    let c, E = u ? await (0, s.Nt)(e, t) : await (0, s.B0)(e, t),
+      I = [];
+    let T = e => {
+        I.push(e)
       },
       h = e => {
-        m = e, null == n || n()
+        c = e, null == n || n()
       };
-    (0, l.openModal)(t => (0, a.jsx)(s.default, {
-      menu: _,
+    (0, r.openModal)(t => (0, i.jsx)(o.Z, {
+      menu: E,
       reportType: e,
       modalProps: t,
-      onNavigate: E,
+      onNavigate: T,
       onSubmit: h,
-      isAuthenticated: o,
-      emailToken: u
+      isAuthenticated: u,
+      emailToken: _
     }), {
       onCloseCallback: () => {
-        (0, r.trackCloseReportModalAnalytics)(e, f, m), null == i || i(), d && (0, r.showInAppReportsFeedbackModal)(e, null != m ? m : null)
+        (0, s.k8)(e, I, c), null == a || a(), l && (0, s.X)(e, null != c ? c : null)
       }
-    }, c)
+    }, d)
   } catch {}
 }

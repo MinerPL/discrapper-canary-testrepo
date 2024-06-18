@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
-  getChannelIdForGuildTransition: function() {
+n.d(t, {
+  V: function() {
     return u
   }
 });
-var i = n("819553"),
-  r = n("931261"),
-  a = n("592125"),
-  s = n("984933"),
-  o = n("944486"),
-  l = n("176505");
+var i = n(819553),
+  r = n(931261),
+  s = n(592125),
+  o = n(984933),
+  a = n(944486),
+  l = n(176505);
 
 function u(e) {
   var t;
-  let n = o.default.getChannelId(e),
-    u = null === (t = s.default.getDefaultChannel(e)) || void 0 === t ? void 0 : t.id;
-  return (n !== l.StaticChannelRoute.GUILD_ONBOARDING || i.default.shouldShowOnboarding(e)) && (n !== l.StaticChannelRoute.GUILD_HOME || (0, r.canSeeOnboardingHome)(e)) && null != a.default.getChannel(n) ? n : u
+  let n = a.Z.getChannelId(e),
+    u = null === (t = o.ZP.getDefaultChannel(e)) || void 0 === t ? void 0 : t.id;
+  return (n !== l.oC.GUILD_ONBOARDING || i.ZP.shouldShowOnboarding(e)) && (n !== l.oC.GUILD_HOME || (0, r.s)(e)) && null != s.Z.getChannel(n) ? n : u
 }

@@ -1,34 +1,34 @@
 "use strict";
-n.r(t), n.d(t, {
-  GIFPickerSearchItem: function() {
-    return P
-  },
-  useElementPools: function() {
+n.d(t, {
+  PY: function() {
     return b
+  },
+  iR: function() {
+    return y
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
-  o = n("392711"),
-  l = n.n(o),
-  u = n("944611"),
-  d = n("377108"),
-  _ = n("692547"),
-  c = n("481060"),
-  E = n("68405"),
-  I = n("527429"),
-  T = n("788911"),
-  f = n("40851"),
-  S = n("29909"),
-  h = n("887208"),
-  A = n("132748"),
-  m = n("981631"),
-  N = n("689938"),
-  O = n("533348");
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(392711),
+  l = n.n(a),
+  u = n(944611),
+  _ = n(377108),
+  d = n(692547),
+  c = n(481060),
+  E = n(68405),
+  I = n(527429),
+  T = n(788911),
+  h = n(40851),
+  S = n(29909),
+  f = n(887208),
+  N = n(132748),
+  A = n(981631),
+  m = n(689938),
+  O = n(943970);
 
-function p(e, t, n) {
+function R(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -36,8 +36,8 @@ function p(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let R = [_.default.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, _.default.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"],
-  C = 1220,
+let C = [d.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, d.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"],
+  p = 1220,
   g = Array.from({
     length: 16
   }).map((e, t) => ({
@@ -50,12 +50,12 @@ function L(e) {
   return null !== (t = e.id) && void 0 !== t ? t : e.src
 }
 
-function D(e, t) {
+function v(e, t) {
   let n = g[t];
   return null == n ? 0 : n.height
 }
 
-function v(e, t, n, r) {
+function D(e, t, n, r) {
   if (!(e > 0)) return null == g[t] ? null : (0, i.jsx)("div", {
     className: O.placeholder,
     style: {
@@ -70,10 +70,10 @@ function M(e, t) {
   return e > 0 ? "" : null !== (i = null === (n = g[t]) || void 0 === n ? void 0 : n.id) && void 0 !== i ? i : ""
 }
 
-function y(e) {
-  return e === d.GIFType.VIDEO
+function P(e) {
+  return e === _.EO.VIDEO
 }
-class P extends r.PureComponent {
+class y extends r.PureComponent {
   componentDidMount() {
     let {
       props: {
@@ -87,9 +87,9 @@ class P extends r.PureComponent {
       },
       ref: s
     } = this;
-    if (e !== d.GIFType.VIDEO || null == s) return;
-    let a = r.getElement();
-    a.oncanplay = this.handleCanPlay, a.src = t, a.width = n, a.height = i, s.appendChild(a), this._video = a
+    if (e !== _.EO.VIDEO || null == s) return;
+    let o = r.getElement();
+    o.oncanplay = this.handleCanPlay, o.src = t, o.width = n, o.height = i, s.appendChild(o), this._video = o
   }
   componentDidUpdate(e) {
     let {
@@ -135,7 +135,7 @@ class P extends r.PureComponent {
       coords: r,
       focused: s
     } = this.props, {
-      color: o,
+      color: a,
       loaded: l
     } = this.state;
     return (0, i.jsxs)(c.Clickable, {
@@ -143,23 +143,23 @@ class P extends r.PureComponent {
       innerRef: e => {
         this.ref = e
       },
-      className: a()(O.result, {
+      className: o()(O.result, {
         [O.focused]: s
       }),
       onClick: this.handleClick,
       style: {
-        backgroundColor: l ? void 0 : o,
+        backgroundColor: l ? void 0 : a,
         ...r
       },
-      children: [y(n) ? null : this.renderGIF(), null != t ? t(e) : null]
+      children: [P(n) ? null : this.renderGIF(), null != t ? t(e) : null]
     })
   }
   constructor(e) {
-    super(e), p(this, "ref", null), p(this, "_video", null), p(this, "_image", null), p(this, "_mounted", !0), p(this, "handleCanPlay", () => {
+    super(e), R(this, "ref", null), R(this, "_video", null), R(this, "_image", null), R(this, "_mounted", !0), R(this, "handleCanPlay", () => {
       this._mounted && this.setState({
         loaded: !0
       })
-    }), p(this, "handleClick", () => {
+    }), R(this, "handleClick", () => {
       let {
         onClick: e,
         item: t,
@@ -173,9 +173,9 @@ class P extends r.PureComponent {
       imagePool: i
     } = this.props;
     this.state = {
-      color: null == n ? l().sample(R) : n,
+      color: null == n ? l().sample(C) : n,
       loaded: !1
-    }, !y(t) && (this._image = i.getElement(), this._image.onload = () => this.setState({
+    }, !P(t) && (this._image = i.getElement(), this._image.onload = () => this.setState({
       loaded: !0
     }), this._image.src = e.src)
   }
@@ -186,7 +186,7 @@ class U extends r.PureComponent {
       resultType: e,
       data: t
     } = this.props;
-    e === m.GIFPickerResultTypes.FAVORITES && ((0, E.trackSearchStart)(m.GIFPickerResultTypes.FAVORITES), (0, E.trackSearchResultViewed)(t, m.GIFPickerResultTypes.FAVORITES, {
+    e === A.wI2.FAVORITES && ((0, E.t1)(A.wI2.FAVORITES), (0, E.hM)(t, A.wI2.FAVORITES, {
       limit: null
     }))
   }
@@ -197,7 +197,7 @@ class U extends r.PureComponent {
       data: r,
       resultQuery: s
     } = this.props;
-    null != n && n(e), (0, E.trackSelectGIF)({
+    null != n && n(e), (0, E.R7)({
       type: i,
       index: t,
       offset: this.props.searchOffset,
@@ -217,7 +217,7 @@ class U extends r.PureComponent {
       className: O.emptyHint,
       children: null != e ? (0, i.jsxs)("div", {
         className: O.emptyHintCard,
-        children: [t ? (0, i.jsx)(h.default, {
+        children: [t ? (0, i.jsx)(f.Z, {
           className: O.emptyHintFavorite
         }) : null, (0, i.jsx)("div", {
           className: O.emptyHintText,
@@ -234,15 +234,15 @@ class U extends r.PureComponent {
       fade: !0,
       children: (0, i.jsxs)("div", {
         className: O.emptyHints,
-        children: [this.renderEmptyFavorite(N.default.Messages.NO_GIF_FAVORITES_HOW_TO_FAVORITE, !0), this.renderEmptyFavorite(N.default.Messages.NO_GIF_FAVORITES_WHERE_TO_FAVORITE), this.renderEmptyFavorite(N.default.Messages.NO_GIF_FAVORITES_GO_FAVORITE), Array.from({
+        children: [this.renderEmptyFavorite(m.Z.Messages.NO_GIF_FAVORITES_HOW_TO_FAVORITE, !0), this.renderEmptyFavorite(m.Z.Messages.NO_GIF_FAVORITES_WHERE_TO_FAVORITE), this.renderEmptyFavorite(m.Z.Messages.NO_GIF_FAVORITES_GO_FAVORITE), Array.from({
           length: 15
         }).map((e, t) => (0, i.jsx)(r.Fragment, {
           children: this.renderEmptyFavorite()
-        }, t)), this.renderEmptyFavorite(N.default.Messages.NO_GIF_FAVORITES_FLAVOR_FAVORITE_PLEASE), Array.from({
+        }, t)), this.renderEmptyFavorite(m.Z.Messages.NO_GIF_FAVORITES_FLAVOR_FAVORITE_PLEASE), Array.from({
           length: 16
         }).map((e, t) => (0, i.jsx)(r.Fragment, {
           children: this.renderEmptyFavorite()
-        }, t)), this.renderEmptyFavorite(N.default.Messages.NO_GIF_FAVORITES_FLAVOR_STILL_HERE)]
+        }, t)), this.renderEmptyFavorite(m.Z.Messages.NO_GIF_FAVORITES_FLAVOR_STILL_HERE)]
       })
     })
   }
@@ -253,15 +253,15 @@ class U extends r.PureComponent {
       query: n,
       resultType: r
     } = this.props;
-    return 0 === e.length && t === n && r !== m.GIFPickerResultTypes.TRENDING_GIFS ? r === m.GIFPickerResultTypes.FAVORITES ? this.renderEmptyFavorites() : (0, i.jsx)(T.default, {
-      message: N.default.Messages.NO_GIF_SEARCH_RESULTS,
+    return 0 === e.length && t === n && r !== A.wI2.TRENDING_GIFS ? r === A.wI2.FAVORITES ? this.renderEmptyFavorites() : (0, i.jsx)(T.Z, {
+      message: m.Z.Messages.NO_GIF_SEARCH_RESULTS,
       className: O.noResults
-    }) : (0, i.jsx)(I.default, {
+    }) : (0, i.jsx)(I.Z, {
       getItemGrid: this.getItemGrid,
       getCoordsMap: this.getCoordsMap,
       onFocus: this.handleFocus,
       onSelect: this.handleSelect,
-      children: (0, i.jsx)(A.default, {
+      children: (0, i.jsx)(N.Z, {
         desiredItemWidth: 200,
         maxColumns: 8,
         children: this.renderContent
@@ -269,9 +269,9 @@ class U extends r.PureComponent {
     }, t)
   }
   constructor(...e) {
-    super(...e), p(this, "_masonryRef", r.createRef()), p(this, "prevResultQuery", null), p(this, "state", {
+    super(...e), R(this, "_masonryRef", r.createRef()), R(this, "prevResultQuery", null), R(this, "state", {
       focusedId: null
-    }), p(this, "handleFocus", e => {
+    }), R(this, "handleFocus", e => {
       let {
         current: t
       } = this._masonryRef;
@@ -283,14 +283,14 @@ class U extends r.PureComponent {
       }), this.setState({
         focusedId: e
       }))
-    }), p(this, "handleSelect", e => {
+    }), R(this, "handleSelect", e => {
       let t;
       let {
         data: n
       } = this.props, i = n.findIndex(t => L(t) === e); - 1 !== i && (t = n[i]), null != t && this.selectItem(t, i)
-    }), p(this, "handleClickItem", (e, t) => {
+    }), R(this, "handleClickItem", (e, t) => {
       this.selectItem(e, t)
-    }), p(this, "handleScroll", () => {
+    }), R(this, "handleScroll", () => {
       let {
         resultQuery: e
       } = this.props, {
@@ -301,51 +301,51 @@ class U extends r.PureComponent {
         scrollTop: n,
         scrollHeight: i
       } = t.getScrollerState();
-      i - n <= C && (e !== this.prevResultQuery && (0, E.fetchSuggestions)(e), this.prevResultQuery = e)
-    }), p(this, "renderItem", (e, t, n, r) => {
+      i - n <= p && (e !== this.prevResultQuery && (0, E.mO)(e), this.prevResultQuery = e)
+    }), R(this, "renderItem", (e, t, n, r) => {
       if (e > 0) return null;
       let {
         focusedId: s
-      } = this.state, a = this.props.data[t];
-      return null == a ? null : (0, i.jsx)(P, {
-        item: a,
+      } = this.state, o = this.props.data[t];
+      return null == o ? null : (0, i.jsx)(y, {
+        item: o,
         index: t,
-        format: a.format,
-        src: a.src,
+        format: o.format,
+        src: o.src,
         coords: n,
         onClick: this.handleClickItem,
-        renderExtras: () => (0, i.jsx)(S.default, {
+        renderExtras: () => (0, i.jsx)(S.Z, {
           className: O.favButton,
-          ...a
+          ...o
         }),
-        focused: L(a) === s,
+        focused: L(o) === s,
         imagePool: this.props.imagePool,
         videoPool: this.props.videoPool
       }, r)
-    }), p(this, "getItemHeight", (e, t, n) => {
+    }), R(this, "getItemHeight", (e, t, n) => {
       if (e > 0) return 0;
       let i = this.props.data[t];
-      return null == i ? 0 : i.height / i.width * n
-    }), p(this, "getItemKey", (e, t) => {
+      return null == i ? 0 : n * (i.height / i.width)
+    }), R(this, "getItemKey", (e, t) => {
       var n;
       if (e > 0) return null;
       let i = this.props.data[t];
       return null != i ? null !== (n = i.id) && void 0 !== n ? n : i.src : null
-    }), p(this, "renderSection", (e, t, n) => {
+    }), R(this, "renderSection", (e, t, n) => {
       let {
         onSelectSuggestion: s,
-        suggestions: a
+        suggestions: o
       } = this.props;
       return 1 === e ? (0, i.jsx)("div", {
         className: O.endContainer,
         style: t,
-        children: a.length > 0 ? (0, i.jsxs)(r.Fragment, {
+        children: o.length > 0 ? (0, i.jsxs)(r.Fragment, {
           children: [(0, i.jsx)("div", {
             className: O.endText,
-            children: N.default.Messages.GIF_PICKER_RELATED_SEARCH
+            children: m.Z.Messages.GIF_PICKER_RELATED_SEARCH
           }), (0, i.jsx)("div", {
             className: O.searchSuggestions,
-            children: a.map(e => (0, i.jsx)(c.Button, {
+            children: o.map(e => (0, i.jsx)(c.Button, {
               look: c.Button.Looks.OUTLINED,
               color: c.Button.Colors.PRIMARY,
               size: c.Button.Sizes.SMALL,
@@ -358,22 +358,22 @@ class U extends r.PureComponent {
           })]
         }) : null
       }, n) : null
-    }), p(this, "renderContent", (e, t, n) => {
+    }), R(this, "renderContent", (e, t, n) => {
       let {
         data: r,
         resultQuery: s,
-        query: a,
-        resultType: o
+        query: o,
+        resultType: a
       } = this.props;
-      return 0 === r.length && (s !== a || o === m.GIFPickerResultTypes.TRENDING_GIFS) ? (0, i.jsx)(c.MasonryList, {
+      return 0 === r.length && (s !== o || a === A.wI2.TRENDING_GIFS) ? (0, i.jsx)(c.MasonryList, {
         fade: !0,
         className: O.results,
         sections: [g.length],
         columns: e,
         itemGutter: 12,
         getItemKey: M,
-        getItemHeight: D,
-        renderItem: v,
+        getItemHeight: v,
+        renderItem: D,
         chunkSize: 128
       }, s) : (0, i.jsx)(c.MasonryList, {
         ref: this._masonryRef,
@@ -389,13 +389,13 @@ class U extends r.PureComponent {
         renderSection: this.renderSection,
         onScroll: this.handleScroll,
         chunkSize: 128
-      }, "".concat(s, "-").concat(null != o ? o : ""))
-    }), p(this, "getItemGrid", () => {
+      }, "".concat(s, "-").concat(null != a ? a : ""))
+    }), R(this, "getItemGrid", () => {
       let {
         current: e
       } = this._masonryRef;
       return null != e ? e.getItemGrid() : []
-    }), p(this, "getCoordsMap", () => {
+    }), R(this, "getCoordsMap", () => {
       let {
         current: e
       } = this._masonryRef;
@@ -407,9 +407,9 @@ class U extends r.PureComponent {
 function b() {
   let {
     renderWindow: e
-  } = r.useContext(f.default), t = e.document, [n] = r.useState(() => new u.ElementPool(() => t.createElement("img"), e => {
+  } = r.useContext(h.ZP), t = e.document, [n] = r.useState(() => new u.w(() => t.createElement("img"), e => {
     e.onload = null, e.src = ""
-  })), [i] = r.useState(() => new u.ElementPool(() => {
+  })), [i] = r.useState(() => new u.w(() => {
     let e = t.createElement("video");
     return e.className = O.gif, e.autoplay = !0, e.loop = !0, e.muted = !0, e.preload = "auto", e.controls = !1, e
   }, e => {
@@ -424,7 +424,7 @@ function b() {
     videoPool: i
   }
 }
-t.default = function(e) {
+t.ZP = function(e) {
   let t = b();
   return (0, i.jsx)(U, {
     ...e,

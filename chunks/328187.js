@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return s
   }
 });
-var i = n("512722"),
+var i = n(512722),
   r = n.n(i);
 
 function s(e, t) {
@@ -15,9 +15,9 @@ function s(e, t) {
   for (; i.length < t;) {
     let t = Math.round((i.length + 1) * n),
       r = 0,
-      a = 0;
-    for (let n = s; n < t && n < e.length; n++) r += e[n], a++;
-    i[i.length] = r / a, s = t
+      o = 0;
+    for (let n = s; n < t && n < e.length; n++) r += e[n], o++;
+    i[i.length] = r / o, s = t
   }
   return i
 }

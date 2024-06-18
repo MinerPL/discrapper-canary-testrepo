@@ -1,10 +1,10 @@
 "use strict";
-a.r(s), a.d(s, {
-  useIsIarUserReportingEnabled: function() {
-    return t
+n.d(t, {
+  oV: function() {
+    return r
   }
 });
-let n = (0, a("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2023-09_iar_user_reporting",
   label: "Safety Experience IAR User Reporting",
@@ -20,8 +20,8 @@ let n = (0, a("818083").createExperiment)({
   }]
 });
 
-function t(e) {
-  return n.useExperiment({
+function r(e) {
+  return i.useExperiment({
     location: e
   }, {
     autoTrackExposure: !0

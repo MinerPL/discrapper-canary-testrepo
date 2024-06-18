@@ -1,16 +1,15 @@
 "use strict";
-n.r(t);
-var r = n("475637"),
-  i = n("925300"),
+var r = n(475637),
+  i = n(925300),
   a = {
-    ordinalNumber: (0, i.default)({
+    ordinalNumber: (0, i.Z)({
       matchPattern: /^(\d+)(th|st|nd|rd)?/i,
       parsePattern: /\d+/i,
       valueCallback: function(e) {
         return parseInt(e, 10)
       }
     }),
-    era: (0, r.default)({
+    era: (0, r.Z)({
       matchPatterns: {
         narrow: /^(b|a)/i,
         abbreviated: /^(b\.?\s?c\.?|b\.?\s?c\.?\s?e\.?|a\.?\s?d\.?|c\.?\s?e\.?)/i,
@@ -22,7 +21,7 @@ var r = n("475637"),
       },
       defaultParseWidth: "any"
     }),
-    quarter: (0, r.default)({
+    quarter: (0, r.Z)({
       matchPatterns: {
         narrow: /^[1234]/i,
         abbreviated: /^q[1234]/i,
@@ -37,7 +36,7 @@ var r = n("475637"),
         return e + 1
       }
     }),
-    month: (0, r.default)({
+    month: (0, r.Z)({
       matchPatterns: {
         narrow: /^[jfmasond]/i,
         abbreviated: /^(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)/i,
@@ -50,7 +49,7 @@ var r = n("475637"),
       },
       defaultParseWidth: "any"
     }),
-    day: (0, r.default)({
+    day: (0, r.Z)({
       matchPatterns: {
         narrow: /^[smtwf]/i,
         short: /^(su|mo|tu|we|th|fr|sa)/i,
@@ -64,7 +63,7 @@ var r = n("475637"),
       },
       defaultParseWidth: "any"
     }),
-    dayPeriod: (0, r.default)({
+    dayPeriod: (0, r.Z)({
       matchPatterns: {
         narrow: /^(a|p|mi|n|(in the|at) (morning|afternoon|evening|night))/i,
         any: /^([ap]\.?\s?m\.?|midnight|noon|(in the|at) (morning|afternoon|evening|night))/i
@@ -85,4 +84,4 @@ var r = n("475637"),
       defaultParseWidth: "any"
     })
   };
-t.default = a
+t.Z = a

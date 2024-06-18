@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return _
+n.d(t, {
+  Z: function() {
+    return d
   }
-}), n("789020");
-var i = n("913527"),
+}), n(789020);
+var i = n(913527),
   r = n.n(i),
-  s = n("81825"),
-  a = n("812206"),
-  o = n("630388"),
-  l = n("959546"),
-  u = n("981631");
+  s = n(81825),
+  o = n(812206),
+  a = n(630388),
+  l = n(959546),
+  u = n(981631);
 
-function d(e, t, n) {
+function _(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -20,12 +20,12 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class _ extends s.default {
+class d extends s.Z {
   static createFromServer(e) {
-    return new _({
+    return new d({
       id: e.application.id,
       branchId: e.branch_id,
-      entitlements: null != e.entitlements ? e.entitlements.map(e => l.default.createFromServer(e)) : [],
+      entitlements: null != e.entitlements ? e.entitlements.map(e => l.Z.createFromServer(e)) : [],
       branch: e.branch,
       flags: e.flags,
       createdAt: e.created_at,
@@ -39,16 +39,16 @@ class _ extends s.default {
     })
   }
   static createForTestMode(e) {
-    return new _({
+    return new d({
       id: e.id,
       entitlements: [],
       branchId: e.branch.id,
       branch: e.branch,
-      flags: u.LibraryApplicationFlags.ENTITLED,
+      flags: u.eHb.ENTITLED,
       createdAt: e.branch.created_at,
       sku: {
         id: e.skuId,
-        type: u.SKUTypes.DURABLE_PRIMARY,
+        type: u.epS.DURABLE_PRIMARY,
         premium: !1
       },
       isTestMode: !0
@@ -58,13 +58,13 @@ class _ extends s.default {
     return this.flags
   }
   hasFlag(e) {
-    return o.hasFlag(this.flags, e)
+    return a.yE(this.flags, e)
   }
   isHidden() {
-    return this.hasFlag(u.LibraryApplicationFlags.HIDDEN)
+    return this.hasFlag(u.eHb.HIDDEN)
   }
   isOverlayEnabled() {
-    return !this.hasFlag(u.LibraryApplicationFlags.OVERLAY_DISABLED)
+    return !this.hasFlag(u.eHb.OVERLAY_DISABLED)
   }
   isMasterBranch() {
     return this.branchId === this.id
@@ -79,7 +79,7 @@ class _ extends s.default {
     return null != this.sku.preorderReleaseAt || null != this.sku.preorderApproximateReleaseDate
   }
   getDistributor() {
-    return u.Distributors.DISCORD
+    return u.GQo.DISCORD
   }
   getBranchName() {
     return null != this.branch ? this.branch.name : "master"
@@ -91,7 +91,7 @@ class _ extends s.default {
     return this.sku.id
   }
   getAnalyticsData() {
-    let e = a.default.getApplication(this.id);
+    let e = o.Z.getApplication(this.id);
     return {
       application_id: null != e ? e.id : null,
       application_name: null != e ? e.name : null,
@@ -100,6 +100,6 @@ class _ extends s.default {
     }
   }
   constructor(e) {
-    super(), d(this, "id", void 0), d(this, "branchId", void 0), d(this, "flags", void 0), d(this, "createdAt", void 0), d(this, "entitlements", void 0), d(this, "branch", void 0), d(this, "sku", void 0), d(this, "isTestMode", void 0), this.id = e.id, this.createdAt = e.createdAt, this.flags = e.flags, this.branchId = e.branchId, this.entitlements = e.entitlements, this.branch = e.branch, this.sku = e.sku, this.isTestMode = e.isTestMode || !1
+    super(), _(this, "id", void 0), _(this, "branchId", void 0), _(this, "flags", void 0), _(this, "createdAt", void 0), _(this, "entitlements", void 0), _(this, "branch", void 0), _(this, "sku", void 0), _(this, "isTestMode", void 0), this.id = e.id, this.createdAt = e.createdAt, this.flags = e.flags, this.branchId = e.branchId, this.entitlements = e.entitlements, this.branch = e.branch, this.sku = e.sku, this.isTestMode = e.isTestMode || !1
   }
 }

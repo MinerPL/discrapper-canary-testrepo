@@ -1,90 +1,90 @@
 "use strict";
-s.r(t), s.d(t, {
-  AddBenefitCard: function() {
-    return R
-  },
-  EditableBenefitsList: function() {
+t.d(s, {
+  p: function() {
     return C
+  },
+  s: function() {
+    return R
   }
 });
-var a = s("735250"),
-  l = s("470079"),
-  n = s("803997"),
-  i = s.n(n),
-  r = s("942389"),
-  o = s("481060"),
-  d = s("153124"),
-  u = s("548343"),
-  c = s("185403"),
-  E = s("151785"),
-  _ = s("817460"),
-  I = s("723047"),
-  T = s("528027"),
-  S = s("686807"),
-  f = s("157018"),
-  m = s("828656"),
-  N = s("689938"),
-  g = s("761942");
+var n = t(735250),
+  i = t(470079),
+  l = t(120356),
+  a = t.n(l),
+  r = t(294796),
+  o = t(481060),
+  c = t(153124),
+  d = t(548343),
+  u = t(185403),
+  E = t(151785),
+  _ = t(817460),
+  I = t(723047),
+  T = t(528027),
+  N = t(686807),
+  m = t(157018),
+  S = t(828656),
+  h = t(689938),
+  g = t(561555);
 
-function h(e) {
+function x(e) {
   let {
-    guildId: t,
-    emojiId: s,
-    emojiName: n,
+    guildId: s,
+    emojiId: t,
+    emojiName: l,
     title: r,
-    description: d,
+    description: c,
     targetType: E,
     index: _,
     dndName: I,
-    onEdit: S,
-    onMove: f,
-    disabled: h = !1
-  } = e, C = l.useRef(null), R = l.useRef(null), {
-    drag: x,
-    dragPreview: L,
-    drop: O,
-    isDragging: A
-  } = (0, m.default)(C, E, _, f);
-  return x(R), L(O(C)), (0, a.jsxs)("div", {
+    onEdit: N,
+    onMove: m,
+    disabled: x = !1
+  } = e, C = i.useRef(null), R = i.useRef(null), {
+    drag: L,
+    dragPreview: O,
+    drop: A,
+    isDragging: p
+  } = (0, S.Z)(C, E, _, m);
+  return L(R), O(A(C)), (0, n.jsxs)("div", {
     ref: C,
-    className: i()(g.card, {
-      [g.cardDragging]: A,
-      [g.disabled]: h
+    className: a()(g.card, {
+      [g.cardDragging]: p,
+      [g.disabled]: x
     }),
-    children: [(0, a.jsxs)("div", {
+    children: [(0, n.jsxs)("div", {
       className: g.emojiWrapper,
-      children: [(0, a.jsx)(T.default, {
-        guildId: t,
-        emojiId: s,
-        emojiName: n,
+      children: [(0, n.jsx)(T.Z, {
+        guildId: s,
+        emojiId: t,
+        emojiName: l,
         className: g.emoji
-      }), !h && (0, a.jsx)("div", {
+      }), !x && (0, n.jsx)("div", {
         ref: R,
         className: g.dragIconWrapper,
         "data-dnd-name": I,
-        children: (0, a.jsx)(u.default, {
+        children: (0, n.jsx)(d.Z, {
           className: g.dragIcon
         })
       })]
-    }), (0, a.jsxs)("div", {
+    }), (0, n.jsxs)("div", {
       className: g.cardText,
-      children: [(0, a.jsx)(o.Text, {
+      children: [(0, n.jsx)(o.Text, {
         color: "header-primary",
         variant: "text-md/semibold",
         children: r
-      }), (0, a.jsx)(o.Text, {
+      }), (0, n.jsx)(o.Text, {
         color: "interactive-normal",
         variant: "text-sm/normal",
-        children: d
+        children: c
       })]
-    }), (0, a.jsx)("div", {
+    }), (0, n.jsx)("div", {
       className: g.cardActions,
-      children: !h && (0, a.jsx)(o.Clickable, {
+      children: !x && (0, n.jsx)(o.Clickable, {
         className: g.cardActionButton,
-        onClick: h ? void 0 : S,
-        "aria-label": N.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_EDIT_ARIA_LABEL,
-        "aria-disabled": h,
-        children: (0, a.jsx)(c.default, {
+        onClick: x ? void 0 : N,
+        "aria-label": h.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_EDIT_ARIA_LABEL,
+        "aria-disabled": x,
+        children: (0, n.jsx)(u.Z, {
           className: g.cardActionButtonIcon
         })
       })
@@ -94,64 +94,64 @@ function h(e) {
 
 function C(e) {
   let {
-    benefits: t,
-    onEdit: s,
-    onMove: n,
+    benefits: s,
+    onEdit: t,
+    onMove: l,
     guildId: o
-  } = e, u = (0, d.useUID)(), {
-    isDragging: c
-  } = (0, r.useDragLayer)(e => ({
-    isDragging: e.getItemType() === u
-  })), E = (0, I.useRoleSubscriptionSettingsDisabled)();
-  return 0 === t.length ? null : (0, a.jsx)("div", {
-    className: i()(g.container, {
-      [g.isDragging]: c
+  } = e, d = (0, c.Dt)(), {
+    isDragging: u
+  } = (0, r.f)(e => ({
+    isDragging: e.getItemType() === d
+  })), E = (0, I.mY)();
+  return 0 === s.length ? null : (0, n.jsx)("div", {
+    className: a()(g.container, {
+      [g.isDragging]: u
     }),
-    children: t.map((e, t) => (0, a.jsxs)(l.Fragment, {
-      children: [t > 0 ? (0, a.jsx)("div", {
+    children: s.map((e, s) => (0, n.jsxs)(i.Fragment, {
+      children: [s > 0 ? (0, n.jsx)("div", {
         className: g.divider
-      }) : null, (0, a.jsx)(h, {
+      }) : null, (0, n.jsx)(x, {
         guildId: o,
         emojiId: e.emoji_id,
         emojiName: e.emoji_name,
-        title: (0, S.default)(e),
+        title: (0, N.Z)(e),
         description: e.description,
-        targetType: u,
-        index: t,
-        dndName: (0, f.default)(e),
-        onEdit: () => s(t),
-        onMove: n,
+        targetType: d,
+        index: s,
+        dndName: (0, m.Z)(e),
+        onEdit: () => t(s),
+        onMove: l,
         disabled: E
       })]
-    }, (0, _.getBenefitKey)(e)))
+    }, (0, _.ab)(e)))
   })
 }
 
 function R(e) {
   let {
-    onClick: t,
-    children: s,
-    disabled: l = !1
+    onClick: s,
+    children: t,
+    disabled: i = !1
   } = e;
-  return (0, a.jsx)(o.Clickable, {
+  return (0, n.jsx)(o.Clickable, {
     className: g.container,
-    onClick: l ? void 0 : t,
-    "aria-disabled": l,
-    children: (0, a.jsxs)("div", {
-      className: i()(g.card, g.addBenefit, {
-        [g.disabled]: l
+    onClick: i ? void 0 : s,
+    "aria-disabled": i,
+    children: (0, n.jsxs)("div", {
+      className: a()(g.card, g.addBenefit, {
+        [g.disabled]: i
       }),
-      children: [(0, a.jsx)("div", {
+      children: [(0, n.jsx)("div", {
         className: g.emojiWrapper,
-        children: (0, a.jsx)(E.default, {
+        children: (0, n.jsx)(E.Z, {
           className: g.addBenefitIcon
         })
-      }), (0, a.jsx)("div", {
+      }), (0, n.jsx)("div", {
         className: g.cardText,
-        children: (0, a.jsx)(o.Text, {
+        children: (0, n.jsx)(o.Text, {
           color: "header-primary",
           variant: "text-md/normal",
-          children: s
+          children: t
         })
       })]
     })

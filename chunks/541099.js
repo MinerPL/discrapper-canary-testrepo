@@ -1,43 +1,37 @@
 "use strict";
-n.r(t);
-var i, r, s, a, o = n("442837"),
-  l = n("570140");
-let u = {
-  showPopup: !1,
-  appDetail: null
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(827498);
+let _ = {
+  show: !1,
+  entrypoint: u._.NONE
 };
 
 function d() {
-  return u.showPopup = !1, u.appDetail = null, !0
+  return _.show = !1, _.entrypoint = u._.NONE, !0
 }
-class _ extends(a = o.default.Store) {
+class c extends(o = a.ZP.Store) {
   initialize() {}
   shouldShowPopup() {
-    return u.showPopup
+    return _.show && _.entrypoint === u._.TEXT
   }
-  getCurrentAppDetail() {
-    return u.appDetail
+  shouldShowModal() {
+    return _.show && _.entrypoint === u._.VOICE
   }
 }
-s = "AppLauncherStore", (r = "displayName") in(i = _) ? Object.defineProperty(i, r, {
+s = "AppLauncherStore", (r = "displayName") in(i = c) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new _(l.default, {
-  APP_LAUNCHER_SHOW_POPUP: function() {
-    return u.showPopup = !0, !0
-  },
-  APP_LAUNCHER_DISMISS_POPUP: d,
-  APP_LAUNCHER_SHOW_APP_DETAIL: function(e) {
+}) : i[r] = s, t.Z = new c(l.Z, {
+  APP_LAUNCHER_SHOW: function(e) {
     let {
-      appDetail: t
+      entrypoint: t
     } = e;
-    return u.appDetail = t, !0
+    return _.show = !0, _.entrypoint = t, !0
   },
-  APP_LAUNCHER_DISMISS_APP_DETAIL: function() {
-    return u.appDetail = null, !0
-  },
+  APP_LAUNCHER_DISMISS: d,
   CONNECTION_OPEN: d,
   LOGOUT: d,
   CHANNEL_SELECT: d,

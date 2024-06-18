@@ -81,10 +81,10 @@ function S(e) {
 }
 
 function x(e, n) {
-  g = !1, _ && (_ = !1, v(C), C = -1), m = !0;
+  g = !1, _ && (_ = !1, v(T), T = -1), m = !0;
   var a = h;
   try {
-    for (E(n), p = r(l); null !== p && (!(p.expirationTime > n) || e && !M());) {
+    for (E(n), p = r(l); null !== p && (!(p.expirationTime > n) || e && !O());) {
       var o = p.callback;
       if ("function" == typeof o) {
         p.callback = null, h = p.priorityLevel;
@@ -105,24 +105,24 @@ function x(e, n) {
 }
 "undefined" != typeof navigator && void 0 !== navigator.scheduling && void 0 !== navigator.scheduling.isInputPending && navigator.scheduling.isInputPending.bind(navigator.scheduling);
 var w = !1,
-  T = null,
-  C = -1,
+  C = null,
+  T = -1,
   D = 5,
-  O = -1;
+  M = -1;
 
-function M() {
-  return !(t.unstable_now() - O < D)
+function O() {
+  return !(t.unstable_now() - M < D)
 }
 
 function A() {
-  if (null !== T) {
+  if (null !== C) {
     var e = t.unstable_now();
-    O = e;
+    M = e;
     var n = !0;
     try {
-      n = T(!0, e)
+      n = C(!0, e)
     } finally {
-      n ? o() : (w = !1, T = null)
+      n ? o() : (w = !1, C = null)
     }
   } else w = !1
 }
@@ -140,11 +140,11 @@ else if ("undefined" != typeof MessageChannel) {
 };
 
 function N(e) {
-  T = e, w || (w = !0, o())
+  C = e, w || (w = !0, o())
 }
 
 function I(e, n) {
-  C = b(function() {
+  T = b(function() {
     e(t.unstable_now())
   }, n)
 }
@@ -218,8 +218,8 @@ t.unstable_IdlePriority = 5, t.unstable_ImmediatePriority = 1, t.unstable_LowPri
     startTime: a,
     expirationTime: s,
     sortIndex: -1
-  }, a > o ? (e.sortIndex = a, n(d, e), null === r(l) && e === r(d) && (_ ? (v(C), C = -1) : _ = !0, I(S, a - o))) : (e.sortIndex = s, n(l, e), g || m || (g = !0, N(x))), e
-}, t.unstable_shouldYield = M, t.unstable_wrapCallback = function(e) {
+  }, a > o ? (e.sortIndex = a, n(d, e), null === r(l) && e === r(d) && (_ ? (v(T), T = -1) : _ = !0, I(S, a - o))) : (e.sortIndex = s, n(l, e), g || m || (g = !0, N(x))), e
+}, t.unstable_shouldYield = O, t.unstable_wrapCallback = function(e) {
   var t = h;
   return function() {
     var n = h;

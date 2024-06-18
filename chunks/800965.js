@@ -1,32 +1,32 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return d
+n.d(t, {
+  Z: function() {
+    return _
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("803997"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("441957"),
-  o = n("871499"),
-  l = n("689938"),
-  u = n("461143");
+  o = n(441957),
+  a = n(871499),
+  l = n(689938),
+  u = n(188156);
 
-function d(e) {
+function _(e) {
   let {
     popoutOpen: t,
     onClosePopout: n,
     onOpenPopout: r,
-    ...d
-  } = e, _ = t ? l.default.Messages.POPOUT_RETURN : l.default.Messages.POPOUT_PLAYER;
-  return (0, i.jsx)(o.default, {
-    label: _,
+    ..._
+  } = e, d = t ? l.Z.Messages.POPOUT_RETURN : l.Z.Messages.POPOUT_PLAYER;
+  return (0, i.jsx)(a.Z, {
+    label: d,
     onClick: t ? n : r,
-    iconComponent: a.default,
+    iconComponent: o.Z,
     iconClassName: s()({
       [u.popIn]: t
     }),
-    ...d
+    ..._
   })
 }

@@ -9,8 +9,8 @@ function r(e) {
   }
   return n.join("")
 }
-n.r(t), n.d(t, {
-  lowerCamelCase: function() {
+n.d(t, {
+  c: function() {
     return r
   }
 })

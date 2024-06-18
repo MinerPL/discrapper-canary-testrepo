@@ -1,6 +1,6 @@
-var r = n("413135").Buffer,
-  i = n("28704"),
-  a = n("706178");
+var r = n(413135).Buffer,
+  i = n(28704),
+  a = n(706178);
 
 function o(e) {
   var t, n = e.modulus.byteLength();

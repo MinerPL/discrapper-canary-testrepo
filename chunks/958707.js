@@ -1,21 +1,21 @@
 "use strict";
-l.r(t), l.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 });
-var a = l("735250");
-l("470079");
-var n = l("120356"),
-  s = l.n(n),
-  i = l("804763");
+var l = n(735250);
+n(470079);
+var s = n(120356),
+  a = n.n(s),
+  i = n(200578);
 
 function r(e) {
   let {
     separator: t = !1
   } = e;
-  return (0, a.jsx)("div", {
-    className: s()(i.divider, {
+  return (0, l.jsx)("div", {
+    className: a()(i.divider, {
       [i.separator]: t
     })
   })

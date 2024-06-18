@@ -1,12 +1,11 @@
 "use strict";
-n.r(t);
-var i = n("735250"),
-  r = n("470079"),
-  s = n("392711"),
-  a = n.n(s),
-  o = n("826298"),
-  l = n("314850");
-t.default = e => {
+var i = n(735250),
+  r = n(470079),
+  s = n(392711),
+  o = n.n(s),
+  a = n(826298),
+  l = n(699973);
+t.Z = e => {
   let {
     showImage: t
   } = e, {
@@ -14,9 +13,9 @@ t.default = e => {
     descriptionWidth: s,
     sourceWidth: u
   } = r.useMemo(() => ({
-    usageWidth: a().random(60, 120),
-    descriptionWidth: a().random(200, 600),
-    sourceWidth: a().random(45, 90)
+    usageWidth: o().random(60, 120),
+    descriptionWidth: o().random(200, 600),
+    sourceWidth: o().random(45, 90)
   }), []);
   return (0, i.jsxs)("div", {
     className: l.wrapper,
@@ -26,18 +25,18 @@ t.default = e => {
       className: l.infoWrapper,
       children: [(0, i.jsx)("div", {
         style: {
-          maxWidth: (0, o.pxToRem)(n)
+          maxWidth: (0, a.Q1)(n)
         },
         className: l.usageWrapper
       }), (0, i.jsx)("div", {
         style: {
-          maxWidth: (0, o.pxToRem)(s)
+          maxWidth: (0, a.Q1)(s)
         },
         className: l.description
       })]
     }), (0, i.jsx)("div", {
       style: {
-        width: (0, o.pxToRem)(u)
+        width: (0, a.Q1)(u)
       },
       className: l.source
     })]

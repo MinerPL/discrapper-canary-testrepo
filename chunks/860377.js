@@ -1,4 +1,4 @@
-var o = r("933982");
+var o = r(933982);
 
 function n(t, e) {
   this.totalCount = t, this.dataCount = e

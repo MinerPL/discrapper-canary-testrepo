@@ -1,46 +1,46 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
+t.d(s, {
+  Z: function() {
     return r
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("481060"),
-  n = s("41542"),
-  i = s("296229");
+var n = t(735250);
+t(470079);
+var i = t(481060),
+  l = t(41542),
+  a = t(719440);
 
 function r(e) {
   let {
-    label: t,
-    sublabel: s,
+    label: s,
+    sublabel: t,
     value: r,
     additionalContent: o,
-    tooltip: d
+    tooltip: c
   } = e;
-  return (0, a.jsxs)("div", {
-    className: i.metricCard,
-    "aria-label": t,
-    children: [(0, a.jsxs)("div", {
-      className: i.metricCardLabelContainer,
-      children: [(0, a.jsx)(l.Text, {
-        className: i.metricCardLabel,
+  return (0, n.jsxs)("div", {
+    className: a.metricCard,
+    "aria-label": s,
+    children: [(0, n.jsxs)("div", {
+      className: a.metricCardLabelContainer,
+      children: [(0, n.jsx)(i.Text, {
+        className: a.metricCardLabel,
         variant: "text-xs/medium",
         color: "interactive-normal",
         "aria-hidden": !0,
-        children: t
-      }), null != d && (0, a.jsx)(l.Tooltip, {
-        text: d,
-        children: e => (0, a.jsx)(n.default, {
-          className: i.__invalid_labelTooltipIcon,
+        children: s
+      }), null != c && (0, n.jsx)(i.Tooltip, {
+        text: c,
+        children: e => (0, n.jsx)(l.Z, {
+          className: a.__invalid_labelTooltipIcon,
           ...e
         })
-      }), null != s ? (0, a.jsx)(l.Text, {
+      }), null != t ? (0, n.jsx)(i.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
-        children: s
+        children: t
       }) : null]
-    }), (0, a.jsx)(l.Text, {
+    }), (0, n.jsx)(i.Text, {
       tag: "span",
       variant: "heading-xl/medium",
       color: "header-primary",

@@ -1,28 +1,28 @@
 "use strict";
-n.r(t), n.d(t, {
-  useDragSourceConnector: function() {
-    return s
+n.d(t, {
+  Y: function() {
+    return a
   }
 });
-var r = n("470079"),
-  i = n("805518"),
-  a = n("209851"),
-  o = n("175806");
+var r = n(470079),
+  i = n(446555),
+  o = n(209851),
+  u = n(175806);
 
-function s(e, t) {
-  var n = (0, a.useDragDropManager)(),
-    s = (0, r.useMemo)(function() {
-      return new i.SourceConnector(n.getBackend())
+function a(e, t) {
+  var n = (0, o.N)(),
+    a = (0, r.useMemo)(function() {
+      return new i.x(n.getBackend())
     }, [n]);
-  return (0, o.useIsomorphicLayoutEffect)(function() {
-    return s.dragSourceOptions = e || null, s.reconnect(),
+  return (0, u.L)(function() {
+    return a.dragSourceOptions = e || null, a.reconnect(),
       function() {
-        return s.disconnectDragSource()
+        return a.disconnectDragSource()
       }
-  }, [s, e]), (0, o.useIsomorphicLayoutEffect)(function() {
-    return s.dragPreviewOptions = t || null, s.reconnect(),
+  }, [a, e]), (0, u.L)(function() {
+    return a.dragPreviewOptions = t || null, a.reconnect(),
       function() {
-        return s.disconnectDragPreview()
+        return a.disconnectDragPreview()
       }
-  }, [s, t]), s
+  }, [a, t]), a
 }

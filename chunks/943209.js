@@ -1,60 +1,60 @@
 "use strict";
-n.r(t), n.d(t, {
-  deletePrivateChannelIntegration: function() {
-    return d
+n.d(t, {
+  GB: function() {
+    return _
   },
-  fetchApplicationsShelf: function() {
+  Rh: function() {
     return l
   },
-  fetchPrivateChannelIntegrations: function() {
+  Yz: function() {
     return u
   }
-}), n("411104"), n("729594");
-var i = n("261470");
-n("243814");
-var r = n("544891"),
-  a = n("570140");
-n("591759");
-var s = n("628566"),
-  o = n("981631");
-n("689938");
+}), n(411104), n(729594);
+var i = n(261470);
+n(243814);
+var r = n(544891),
+  s = n(570140);
+n(591759);
+var o = n(628566),
+  a = n(981631);
+n(689938);
 
 function l() {
-  s.default.getApplicationsShelfFetchState() === s.FetchState.NOT_FETCHED && (a.default.dispatch({
+  o.Z.getApplicationsShelfFetchState() === o.M.NOT_FETCHED && (s.Z.dispatch({
     type: "APPLICATIONS_SHELF_FETCH_START"
-  }), r.HTTP.get(o.Endpoints.APPLICATIONS_SHELF).then(e => a.default.dispatch({
+  }), r.tn.get(a.ANM.APPLICATIONS_SHELF).then(e => s.Z.dispatch({
     type: "APPLICATIONS_SHELF_FETCH_SUCCESS",
     applications: e.body.applications
-  })).catch(e => a.default.dispatch({
+  })).catch(e => s.Z.dispatch({
     type: "APPLICATIONS_SHELF_FETCH_FAIL"
   })))
 }
 
 function u(e) {
-  let t = new i.default(1e3, 5e3);
-  a.default.dispatch({
+  let t = new i.Z(1e3, 5e3);
+  s.Z.dispatch({
     type: "FETCH_PRIVATE_CHANNEL_INTEGRATIONS_START",
     channelId: e
-  }), r.HTTP.get({
-    url: o.Endpoints.CHANNEL_INTEGRATIONS(e),
+  }), r.tn.get({
+    url: a.ANM.CHANNEL_INTEGRATIONS(e),
     backoff: t,
     retries: 10
   }).then(t => {
-    a.default.dispatch({
+    s.Z.dispatch({
       type: "FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS",
       channelId: e,
       integrations: t.body
     })
   }).catch(() => {
-    a.default.dispatch({
+    s.Z.dispatch({
       type: "FETCH_PRIVATE_CHANNEL_INTEGRATIONS_FAIL",
       channelId: e
     })
   })
 }
 
-function d(e, t) {
-  return r.HTTP.del(o.Endpoints.CHANNEL_INTEGRATION(e, t)).then(e => {
+function _(e, t) {
+  return r.tn.del(a.ANM.CHANNEL_INTEGRATION(e, t)).then(e => {
     var t;
     if (null === (t = e.body) || void 0 === t ? void 0 : t.message) throw Error(e.body.message)
   })

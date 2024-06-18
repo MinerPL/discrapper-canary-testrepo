@@ -25,7 +25,7 @@ function i(e, t, n) {
   }
   let r = e >>> 28 & 15 | (7 & t) << 4,
     i = t >> 3 != 0;
-  if (n.push((i ? 128 | r : r) & 255), i) {
+  if (n.push((i ? 128 | r : r) & 255), !!i) {
     for (let e = 3; e < 31; e += 7) {
       let r = t >>> e,
         i = r >>> 7 != 0,
@@ -35,24 +35,24 @@ function i(e, t, n) {
     n.push(t >>> 31 & 1)
   }
 }
-n.r(t), n.d(t, {
-  int64fromString: function() {
+n.d(t, {
+  IL: function() {
     return a
   },
-  int64toString: function() {
-    return o
+  _y: function() {
+    return i
   },
-  varint32read: function() {
-    return u
-  },
-  varint32write: function() {
+  fC: function() {
     return s
   },
-  varint64read: function() {
-    return r
+  gn: function() {
+    return o
   },
-  varint64write: function() {
-    return i
+  jI: function() {
+    return u
+  },
+  sg: function() {
+    return r
   }
 });
 

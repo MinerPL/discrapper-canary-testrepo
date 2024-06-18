@@ -1,37 +1,37 @@
 "use strict";
-n.r(t), n.d(t, {
-  fromSerializedGuildRole: function() {
+n.d(t, {
+  C5: function() {
+    return u
+  },
+  CL: function() {
     return a
   },
-  fromServerRole: function() {
+  cf: function() {
     return o
   },
-  sortClientRoles: function() {
+  iw: function() {
     return l
-  },
-  sortServerRoles: function() {
-    return u
   }
-}), n("789020");
-var i = n("149765"),
-  r = n("866442"),
-  s = n("709054");
-
-function a(e) {
-  e.permissions = i.deserialize(e.permissions)
-}
+}), n(789020);
+var i = n(149765),
+  r = n(866442),
+  s = n(709054);
 
 function o(e) {
+  e.permissions = i.vB(e.permissions)
+}
+
+function a(e) {
   var t;
   return {
     id: e.id,
     name: e.name,
-    permissions: i.deserialize(e.permissions),
+    permissions: i.vB(e.permissions),
     mentionable: e.mentionable,
     position: e.position,
     originalPosition: e.position,
     color: e.color,
-    colorString: null != e.color && 0 !== e.color ? (0, r.int2hex)(e.color) : null,
+    colorString: null != e.color && 0 !== e.color ? (0, r.Rf)(e.color) : null,
     hoist: e.hoist,
     managed: e.managed,
     tags: e.tags,
@@ -47,14 +47,14 @@ function l(e, t) {
     i = {};
   return t.sort((t, n) => {
     var i, r;
-    let a = e === t.id ? 1 / 0 : -(null !== (i = t.originalPosition) && void 0 !== i ? i : t.position),
-      o = e === n.id ? 1 / 0 : -(null !== (r = n.originalPosition) && void 0 !== r ? r : n.position);
-    return a === o ? s.default.compare(t.id, n.id) : a < o ? -1 : a === o ? 0 : 1
+    let o = e === t.id ? 1 / 0 : -(null !== (i = t.originalPosition) && void 0 !== i ? i : t.position),
+      a = e === n.id ? 1 / 0 : -(null !== (r = n.originalPosition) && void 0 !== r ? r : n.position);
+    return o === a ? s.default.compare(t.id, n.id) : o < a ? -1 : o === a ? 0 : 1
   }).forEach((e, t) => {
     e.position = n - t, i[e.id] = e
   }), i
 }
 
 function u(e, t) {
-  return null == t ? {} : l(e, t.map(o))
+  return null == t ? {} : l(e, t.map(a))
 }

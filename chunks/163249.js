@@ -1,210 +1,210 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return N
+t.d(s, {
+  Z: function() {
+    return h
   }
-}), s("47120");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("120356"),
-  i = s.n(n),
-  r = s("442837"),
-  o = s("481060"),
-  d = s("749210"),
-  u = s("493544"),
-  c = s("607070"),
-  E = s("714939"),
-  _ = s("981631"),
-  I = s("689938"),
-  T = s("229999");
+}), t(47120);
+var n = t(735250),
+  i = t(470079),
+  l = t(120356),
+  a = t.n(l),
+  r = t(442837),
+  o = t(481060),
+  c = t(749210),
+  d = t(493544),
+  u = t(607070),
+  E = t(714939),
+  _ = t(981631),
+  I = t(689938),
+  T = t(447283);
 
-function S(e) {
+function N(e) {
   let {
-    color: t,
-    children: s
+    color: s,
+    children: t
   } = e;
-  return (0, a.jsxs)("div", {
+  return (0, n.jsxs)("div", {
     className: T.roleTag,
-    children: [(0, a.jsx)(o.RoleCircle, {
+    children: [(0, n.jsx)(o.RoleCircle, {
       className: T.roleDot,
-      color: t
-    }), (0, a.jsx)("span", {
+      color: s
+    }), (0, n.jsx)("span", {
       className: T.roleText,
-      children: s
+      children: t
     })]
   })
 }
 
-function f(e) {
+function m(e) {
   let {
-    guild: t,
-    display: s
+    guild: s,
+    display: t
   } = e;
-  return (0, a.jsxs)("div", {
-    className: i()(T.banner, t.backgroundClass, {
-      [T.bannerOut]: !s
+  return (0, n.jsxs)("div", {
+    className: a()(T.banner, s.backgroundClass, {
+      [T.bannerOut]: !t
     }),
-    children: [(0, a.jsx)("div", {
+    children: [(0, n.jsx)("div", {
       className: T.roles,
-      children: t.roles.map((e, t) => (0, a.jsx)("div", {
+      children: s.roles.map((e, s) => (0, n.jsx)("div", {
         className: T.rolesRow,
-        children: e.map(e => (0, a.jsx)(S, {
+        children: e.map(e => (0, n.jsx)(N, {
           color: e.color,
           children: e.name
         }, e.name))
-      }, t))
-    }), (0, a.jsx)("div", {
+      }, s))
+    }), (0, n.jsx)("div", {
       className: T.profileCard,
-      children: (0, a.jsxs)("div", {
+      children: (0, n.jsxs)("div", {
         className: T.avatarContainer,
-        children: [(0, a.jsx)(o.Avatar, {
+        children: [(0, n.jsx)(o.Avatar, {
           size: o.AvatarSizes.SIZE_56,
           "aria-hidden": !0,
-          status: _.StatusTypes.ONLINE,
-          src: t.avatar
-        }), (0, a.jsx)(o.Text, {
+          status: _.Skl.ONLINE,
+          src: s.avatar
+        }), (0, n.jsx)(o.Text, {
           color: "header-primary",
           variant: "text-md/bold",
           className: T.avatarName,
-          children: t.username
+          children: s.username
         })]
       })
     })]
   })
 }
 
-function m() {
-  let e = (0, r.useStateFromStores)([c.default], () => c.default.useReducedMotion),
-    t = l.useMemo(() => [{
+function S() {
+  let e = (0, r.e7)([u.Z], () => u.Z.useReducedMotion),
+    s = i.useMemo(() => [{
       backgroundClass: T.bannerClubs,
       username: "Wumpus#0000",
-      avatar: s("91055"),
+      avatar: t(91055),
       roles: [
         [{
-          name: I.default.Messages.ROLE_EMPTY_STATE_CLUBS_ROLE_1,
+          name: I.Z.Messages.ROLE_EMPTY_STATE_CLUBS_ROLE_1,
           color: "#7e00fc"
         }, {
-          name: I.default.Messages.ROLE_EMPTY_STATE_CLUBS_ROLE_2,
+          name: I.Z.Messages.ROLE_EMPTY_STATE_CLUBS_ROLE_2,
           color: "#faa61a"
         }, {
-          name: I.default.Messages.ROLE_EMPTY_STATE_CLUBS_ROLE_3,
+          name: I.Z.Messages.ROLE_EMPTY_STATE_CLUBS_ROLE_3,
           color: "#f06ea8"
         }],
         [{
-          name: I.default.Messages.ROLE_EMPTY_STATE_CLUBS_ROLE_4,
+          name: I.Z.Messages.ROLE_EMPTY_STATE_CLUBS_ROLE_4,
           color: "#45ddc0"
         }, {
-          name: I.default.Messages.ROLE_EMPTY_STATE_CLUBS_ROLE_5,
+          name: I.Z.Messages.ROLE_EMPTY_STATE_CLUBS_ROLE_5,
           color: "#00b0f4"
         }, {
-          name: I.default.Messages.ROLE_EMPTY_STATE_CLUBS_ROLE_6,
+          name: I.Z.Messages.ROLE_EMPTY_STATE_CLUBS_ROLE_6,
           color: "#ba1616"
         }]
       ]
     }, {
       backgroundClass: T.bannerGaming,
       username: "Graggle#0000",
-      avatar: s("507003"),
+      avatar: t(507003),
       roles: [
         [{
-          name: I.default.Messages.ROLE_EMPTY_STATE_GAMING_ROLE_1,
+          name: I.Z.Messages.ROLE_EMPTY_STATE_GAMING_ROLE_1,
           color: "#4a76e6"
         }, {
-          name: I.default.Messages.ROLE_EMPTY_STATE_GAMING_ROLE_2,
+          name: I.Z.Messages.ROLE_EMPTY_STATE_GAMING_ROLE_2,
           color: "#ad87ff"
         }, {
-          name: I.default.Messages.ROLE_EMPTY_STATE_GAMING_ROLE_3,
+          name: I.Z.Messages.ROLE_EMPTY_STATE_GAMING_ROLE_3,
           color: "#6defcf"
         }],
         [{
-          name: I.default.Messages.ROLE_EMPTY_STATE_GAMING_ROLE_4,
+          name: I.Z.Messages.ROLE_EMPTY_STATE_GAMING_ROLE_4,
           color: "#ff73fa"
         }, {
-          name: I.default.Messages.ROLE_EMPTY_STATE_GAMING_ROLE_5,
+          name: I.Z.Messages.ROLE_EMPTY_STATE_GAMING_ROLE_5,
           color: "#3ba55c"
         }, {
-          name: I.default.Messages.ROLE_EMPTY_STATE_GAMING_ROLE_6,
+          name: I.Z.Messages.ROLE_EMPTY_STATE_GAMING_ROLE_6,
           color: "#ff1b66"
         }]
       ]
     }, {
       backgroundClass: T.bannerHobbies,
       username: "Mallow#0000",
-      avatar: s("552557"),
+      avatar: t(552557),
       roles: [
         [{
-          name: I.default.Messages.ROLE_EMPTY_STATE_HOBBIES_ROLE_1,
+          name: I.Z.Messages.ROLE_EMPTY_STATE_HOBBIES_ROLE_1,
           color: "#20d6b8"
         }, {
-          name: I.default.Messages.ROLE_EMPTY_STATE_HOBBIES_ROLE_2,
+          name: I.Z.Messages.ROLE_EMPTY_STATE_HOBBIES_ROLE_2,
           color: "#236136"
         }, {
-          name: I.default.Messages.ROLE_EMPTY_STATE_HOBBIES_ROLE_3,
+          name: I.Z.Messages.ROLE_EMPTY_STATE_HOBBIES_ROLE_3,
           color: "#ff9a15"
         }],
         [{
-          name: I.default.Messages.ROLE_EMPTY_STATE_HOBBIES_ROLE_4,
+          name: I.Z.Messages.ROLE_EMPTY_STATE_HOBBIES_ROLE_4,
           color: "#ff78b9"
         }, {
-          name: I.default.Messages.ROLE_EMPTY_STATE_HOBBIES_ROLE_5,
+          name: I.Z.Messages.ROLE_EMPTY_STATE_HOBBIES_ROLE_5,
           color: "#00b0f4"
         }, {
-          name: I.default.Messages.ROLE_EMPTY_STATE_HOBBIES_ROLE_6,
+          name: I.Z.Messages.ROLE_EMPTY_STATE_HOBBIES_ROLE_6,
           color: "#6f52e4"
         }]
       ]
     }], []),
-    [n, i] = l.useState(0);
-  return l.useEffect(() => {
+    [l, a] = i.useState(0);
+  return i.useEffect(() => {
     if (e) return;
-    let s = setTimeout(() => i((n + 1) % t.length), 6332);
-    return () => clearTimeout(s)
-  }, [n]), (0, a.jsx)("div", {
+    let t = setTimeout(() => a((l + 1) % s.length), 6332);
+    return () => clearTimeout(t)
+  }, [l]), (0, n.jsx)("div", {
     className: T.bannerContainer,
     "aria-hidden": !0,
-    children: t.map((e, t) => (0, a.jsx)(f, {
+    children: s.map((e, s) => (0, n.jsx)(m, {
       guild: e,
-      display: t === n
-    }, t))
+      display: s === l
+    }, s))
   })
 }
 
-function N(e) {
+function h(e) {
   let {
-    guild: t,
-    everyoneRole: s,
-    setEditRoleId: n
-  } = e, [i, r] = l.useState(!1), c = async () => {
-    r(!0), await d.default.createRole(t.id), r(!1)
-  }, _ = l.useCallback(() => {
-    n(s.id)
-  }, [n, s.id]);
-  return (0, a.jsx)(u.DefaultCustomContentScroller, {
-    children: (0, a.jsxs)(o.FormSection, {
+    guild: s,
+    everyoneRole: t,
+    setEditRoleId: l
+  } = e, [a, r] = i.useState(!1), u = async () => {
+    r(!0), await c.Z.createRole(s.id), r(!1)
+  }, _ = i.useCallback(() => {
+    l(t.id)
+  }, [l, t.id]);
+  return (0, n.jsx)(d.NM, {
+    children: (0, n.jsxs)(o.FormSection, {
       className: T.section,
-      title: I.default.Messages.ROLES,
+      title: I.Z.Messages.ROLES,
       tag: o.FormTitleTags.H2,
-      children: [(0, a.jsxs)("div", {
+      children: [(0, n.jsxs)("div", {
         className: T.container,
-        children: [(0, a.jsx)(m, {}), (0, a.jsx)(o.Heading, {
+        children: [(0, n.jsx)(S, {}), (0, n.jsx)(o.Heading, {
           variant: "heading-xl/semibold",
-          children: I.default.Messages.ROLE_OVERVIEW_EMPTY_SUBHEADER
-        }), (0, a.jsx)(o.Text, {
+          children: I.Z.Messages.ROLE_OVERVIEW_EMPTY_SUBHEADER
+        }), (0, n.jsx)(o.Text, {
           color: "header-secondary",
           variant: "text-md/normal",
           className: T.introBody,
-          children: I.default.Messages.ROLE_OVERVIEW_DESCRIPTION
-        }), (0, a.jsx)(o.Button, {
+          children: I.Z.Messages.ROLE_OVERVIEW_DESCRIPTION
+        }), (0, n.jsx)(o.Button, {
           className: T.button,
           size: o.Button.Sizes.MEDIUM,
-          onClick: c,
-          submitting: i,
-          children: I.default.Messages.ROLE_CREATE_CTA
+          onClick: u,
+          submitting: a,
+          children: I.Z.Messages.ROLE_CREATE_CTA
         })]
-      }), (0, a.jsx)(o.FormDivider, {
+      }), (0, n.jsx)(o.FormDivider, {
         className: T.divider
-      }), (0, a.jsx)(E.default, {
-        role: s,
+      }), (0, n.jsx)(E.Z, {
+        role: t,
         onClick: _
       })]
     })

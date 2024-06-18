@@ -1,7 +1,7 @@
-var r = n("657398"),
-  i = n("706627");
+var n = e(657398),
+  o = e(706627);
 t.exports = function(t) {
-  if (!i(t)) return !1;
-  var e = r(t);
-  return "[object Function]" == e || "[object GeneratorFunction]" == e || "[object AsyncFunction]" == e || "[object Proxy]" == e
+  if (!o(t)) return !1;
+  var r = n(t);
+  return "[object Function]" == r || "[object GeneratorFunction]" == r || "[object AsyncFunction]" == r || "[object Proxy]" == r
 }

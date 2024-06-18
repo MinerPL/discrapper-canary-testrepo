@@ -1,8 +1,8 @@
 "use strict";
-var e = r("581031"),
-  i = r("959318"),
-  u = r("714050"),
-  c = r("676125"),
+var e = r(581031),
+  i = r(959318),
+  u = r(714050),
+  c = r(676125),
   o = e("".charAt),
   s = e("".charCodeAt),
   a = e("".slice),

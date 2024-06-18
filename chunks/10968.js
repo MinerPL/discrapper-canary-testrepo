@@ -21,7 +21,7 @@ e.exports = function(e) {
     },
     removeAllListeners: function(e) {
       var t = n(e);
-      t && (t.length = 0)
+      if (!!t) t.length = 0
     }
   }
 }

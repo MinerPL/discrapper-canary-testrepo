@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 });
-var i = n("735250");
-n("470079");
-var a = n("547881"),
-  l = n("382790"),
-  s = n("430036"),
-  o = n("149352");
+var i = n(735250);
+n(470079);
+var s = n(547881),
+  l = n(382790),
+  a = n(430036),
+  o = n(773839);
 
 function r(e) {
   let {
@@ -18,13 +18,13 @@ function r(e) {
     pinned: r,
     locked: d
   } = e;
-  return (0, i.jsxs)(a.default, {
+  return (0, i.jsxs)(s.ZP, {
     className: o.wrapper,
-    children: [(0, i.jsx)(l.default, {
+    children: [(0, i.jsx)(l.Z, {
       contained: !0,
       dragStart: t,
       locked: d
-    }), (0, i.jsx)(s.default, {
+    }), (0, i.jsx)(a.Z, {
       dragStart: t,
       locked: d,
       pinned: r,

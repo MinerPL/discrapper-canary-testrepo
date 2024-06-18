@@ -1,17 +1,17 @@
 "use strict";
 let i;
-n.r(t), n.d(t, {
-  TextAreaAutosize: function() {
+n.d(t, {
+  l: function() {
     return I
   }
 });
-var r, s = n("735250"),
-  a = n("470079"),
-  o = n("803997"),
-  l = n.n(o),
-  u = n("58654"),
-  d = n("84735"),
-  _ = n("633353");
+var r, s = n(735250),
+  o = n(470079),
+  a = n(120356),
+  l = n.n(a),
+  u = n(58654),
+  _ = n(84735),
+  d = n(842648);
 
 function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function c(e, t, n) {
   }) : e[t] = n, e
 }
 let E = ["letter-spacing", "line-height", "padding-top", "padding-bottom", "font-family", "font-weight", "font-size", "text-transform", "width", "padding-left", "padding-right", "border-width", "box-sizing"];
-class I extends(r = a.PureComponent) {
+class I extends(r = o.PureComponent) {
   componentDidMount() {
     Promise.resolve().then(() => this.calculateSize())
   }
@@ -51,20 +51,20 @@ class I extends(r = a.PureComponent) {
     }
     null == i && null != document.body && (i = document.createElement("textarea"), document.body.appendChild(i));
     let {
-      paddingSize: a,
-      borderSize: o,
+      paddingSize: o,
+      borderSize: a,
       boxSizing: l,
       sizingStyle: u
     } = this.calculateNodeStyling(t);
     i.setAttribute("style", u + ";\n  visibility:hidden;\n  overflow:hidden;\n  position:absolute;\n  z-index:-1000;\n  top:0;\n  right:0;\n"), i.value = s, null != r ? i.setAttribute("rows", "".concat(r)) : i.removeAttribute("rows");
-    let d = i.scrollHeight;
-    "border-box" === l ? d += o : "content-box" === l && (d -= a), this.setState({
-      height: d
+    let _ = i.scrollHeight;
+    "border-box" === l ? _ += a : "content-box" === l && (_ -= o), this.setState({
+      height: _
     })
   }
   calculateNodeStyling(e) {
     let t = window.getComputedStyle(e),
-      n = (0, u.getFirstTruthyValue)(t.getPropertyValue("box-sizing"), t.getPropertyValue("-moz-box-sizing"), t.getPropertyValue("-webkit-box-sizing")),
+      n = (0, u.L)(t.getPropertyValue("box-sizing"), t.getPropertyValue("-moz-box-sizing"), t.getPropertyValue("-webkit-box-sizing")),
       i = parseFloat(t.getPropertyValue("padding-bottom")) + parseFloat(t.getPropertyValue("padding-top")),
       r = parseFloat(t.getPropertyValue("border-bottom-width")) + parseFloat(t.getPropertyValue("border-top-width"));
     return {
@@ -115,10 +115,10 @@ class I extends(r = a.PureComponent) {
       ...this.state,
       ...e
     };
-    return (0, s.jsx)(d.FocusRing, {
+    return (0, s.jsx)(_.t, {
       children: (0, s.jsx)("textarea", {
         ...n,
-        className: l()(t, _.scrollbarGhostHairline),
+        className: l()(t, d.scrollbarGhostHairline),
         ref: this.handleSetRef,
         style: i,
         onChange: this.handleChange

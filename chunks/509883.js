@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
-  createDrop: function() {
+n.d(t, {
+  _: function() {
     return u
   }
 });
-var r = n("573654"),
-  i = n("964742"),
-  a = n("144459");
+var r = n(573654),
+  i = n(964742),
+  a = n(144459);
 
 function o(e, t) {
   var n = Object.keys(e);
@@ -44,7 +44,7 @@ function u(e) {
       n = e.getMonitor(),
       o = e.getRegistry();
     (function(e) {
-      (0, r.invariant)(e.isDragging(), "Cannot call drop while not dragging."), (0, r.invariant)(!e.didDrop(), "Cannot call drop twice during one drag operation.")
+      (0, r.k)(e.isDragging(), "Cannot call drop while not dragging."), (0, r.k)(!e.didDrop(), "Cannot call drop twice during one drag operation.")
     })(n), (function(e) {
       var t = e.getTargetIds().filter(e.canDropOnTarget, e);
       return t.reverse(), t
@@ -53,11 +53,11 @@ function u(e) {
           var o = n.getTarget(e),
             s = o ? o.drop(i, e) : void 0;
           return function(e) {
-            (0, r.invariant)(void 0 === e || (0, a.isObject)(e), "Drop result must either be an object or undefined.")
+            (0, r.k)(void 0 === e || (0, a.Kn)(e), "Drop result must either be an object or undefined.")
           }(s), void 0 === s && (s = 0 === t ? {} : i.getDropResult()), s
         }(u, c, o, n),
         d = {
-          type: i.DROP,
+          type: i.rp,
           payload: {
             dropResult: s(s({}, t), l)
           }

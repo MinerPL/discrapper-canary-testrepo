@@ -1,9 +1,9 @@
 "use strict";
-n.r(t), n.d(t, {
-  addGlobalTag: function() {
+n.d(t, {
+  M: function() {
     return r
   },
-  getGlobalTagsArray: function() {
+  d: function() {
     return s
   }
 });

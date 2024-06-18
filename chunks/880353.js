@@ -1,6 +1,6 @@
 "use strict";
-var n = r("297326"),
-  i = r("467159");
+var n = r(297326),
+  i = r(467159);
 t.exports = function(t, e, r, o, a) {
   var u = i(t.getSelection()),
     s = n.decode(e),

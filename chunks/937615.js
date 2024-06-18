@@ -1,34 +1,34 @@
 "use strict";
-n.r(t), n.d(t, {
-  formatPercent: function() {
+n.d(t, {
+  T3: function() {
     return u
   },
-  formatPrice: function() {
-    return o
+  T4: function() {
+    return a
   },
-  formatRate: function() {
+  og: function() {
     return l
   }
-}), n("411104");
-var i = n("221513"),
-  r = n("706454"),
-  s = n("474936"),
-  a = n("689938");
+}), n(411104);
+var i = n(221513),
+  r = n(706454),
+  s = n(474936),
+  o = n(689938);
 
-function o(e, t, n) {
+function a(e, t, n) {
   var s;
-  let a = null !== (s = null == n ? void 0 : n.localeOverride) && void 0 !== s ? s : r.default.locale;
-  return (0, i.formatPrice)(e, t, a, n)
+  let o = null !== (s = null == n ? void 0 : n.localeOverride) && void 0 !== s ? s : r.default.locale;
+  return (0, i.T4)(e, t, o, n)
 }
 
 function l(e, t, n) {
-  if (t === s.SubscriptionIntervalTypes.YEAR) return a.default.Messages.BILLING_PRICE_PER_YEAR.format({
+  if (t === s.rV.YEAR) return o.Z.Messages.BILLING_PRICE_PER_YEAR.format({
     price: e
   });
-  if (t === s.SubscriptionIntervalTypes.MONTH && 1 === n) return a.default.Messages.BILLING_PRICE_PER_MONTH.format({
+  if (t === s.rV.MONTH && 1 === n) return o.Z.Messages.BILLING_PRICE_PER_MONTH.format({
     price: e
   });
-  if (t === s.SubscriptionIntervalTypes.MONTH && n > 1) return a.default.Messages.BILLING_PRICE_PER_MULTI_MONTHS.format({
+  if (t === s.rV.MONTH && n > 1) return o.Z.Messages.BILLING_PRICE_PER_MULTI_MONTHS.format({
     price: e,
     intervalCount: n
   });

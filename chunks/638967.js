@@ -1,8 +1,8 @@
 "use strict";
-var r = n("67867"),
-  a = n("476508"),
-  o = n("228042"),
-  i = n("292137");
+var r = n(67867),
+  o = n(476508),
+  a = n(228042),
+  i = n(292137);
 r({
   target: "Map",
   proto: !0,
@@ -10,8 +10,8 @@ r({
   forced: !0
 }, {
   findKey: function(e) {
-    var t = o(this),
-      n = a(e, arguments.length > 1 ? arguments[1] : void 0),
+    var t = a(this),
+      n = o(e, arguments.length > 1 ? arguments[1] : void 0),
       r = i(t, function(e, r) {
         if (n(e, r, t)) return {
           key: r

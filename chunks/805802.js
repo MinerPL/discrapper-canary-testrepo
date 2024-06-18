@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  rrulestr: function() {
+n.d(t, {
+  S: function() {
     return l
   }
 });
-var r = n("146150"),
-  i = n("812975"),
-  a = n("531171"),
-  o = n("695170"),
-  s = n("686942"),
-  u = n("200734"),
+var r = n(146150),
+  i = n(812975),
+  a = n(531171),
+  o = n(695170),
+  s = n(686942),
+  u = n(200734),
   c = {
     dtstart: null,
     cache: !1,
@@ -22,7 +22,7 @@ var r = n("146150"),
 function l(e, t) {
   return void 0 === t && (t = {}),
     function(e, t) {
-      var n, r, o, c, l, p, h, m, g, _ = (n = e, r = t, o = [], c = [], l = [], p = [], m = (h = (0, u.parseDtstart)(n)).dtstart, g = h.tzid, (function(e, t) {
+      var n, r, o, c, l, p, h, m, g, _ = (n = e, r = t, o = [], c = [], l = [], p = [], m = (h = (0, u.o)(n)).dtstart, g = h.tzid, (function(e, t) {
           if (void 0 === t && (t = !1), !(e = e && e.trim())) throw Error("Invalid empty string");
           if (!t) return e.split(/\s/);
           for (var n = e.split("\n"), r = 0; r < n.length;) {
@@ -38,7 +38,7 @@ function l(e, t) {
                       name: "RRULE",
                       value: e
                     };
-                    var t = (0, s.split)(e, ":", 1);
+                    var t = (0, s.Vl)(e, ":", 1);
                     return {
                       name: t[0],
                       value: t[1]
@@ -60,7 +60,7 @@ function l(e, t) {
             switch (r.toUpperCase()) {
               case "RRULE":
                 if (i.length) throw Error("unsupported RRULE parm: ".concat(i.join(",")));
-                o.push((0, u.parseString)(e));
+                o.push((0, u.B)(e));
                 break;
               case "RDATE":
                 var d = (null !== (t = /RDATE(?:;TZID=([^:=]+))?/i.exec(e)) && void 0 !== t ? t : [])[1];
@@ -68,7 +68,7 @@ function l(e, t) {
                 break;
               case "EXRULE":
                 if (i.length) throw Error("unsupported EXRULE parm: ".concat(i.join(",")));
-                l.push((0, u.parseString)(a));
+                l.push((0, u.B)(a));
                 break;
               case "EXDATE":
                 p = p.concat(f(a, i));
@@ -95,32 +95,32 @@ function l(e, t) {
         x = _.tzid,
         w = !1 === t.cache;
       if (t.compatible && (t.forceset = !0, t.unfold = !0), t.forceset || b.length > 1 || v.length || y.length || E.length) {
-        var T = new a.RRuleSet(w);
-        return T.dtstart(S), T.tzid(x || void 0), b.forEach(function(e) {
-          T.rrule(new i.RRule(d(e, S, x), w))
+        var C = new a.p(w);
+        return C.dtstart(S), C.tzid(x || void 0), b.forEach(function(e) {
+          C.rrule(new i.Ci(d(e, S, x), w))
         }), v.forEach(function(e) {
-          T.rdate(e)
+          C.rdate(e)
         }), y.forEach(function(e) {
-          T.exrule(new i.RRule(d(e, S, x), w))
+          C.exrule(new i.Ci(d(e, S, x), w))
         }), E.forEach(function(e) {
-          T.exdate(e)
-        }), t.compatible && t.dtstart && T.rdate(S), T
+          C.exdate(e)
+        }), t.compatible && t.dtstart && C.rdate(S), C
       }
-      var C = b[0] || {};
-      return new i.RRule(d(C, C.dtstart || t.dtstart || S, C.tzid || t.tzid || x), w)
+      var T = b[0] || {};
+      return new i.Ci(d(T, T.dtstart || t.dtstart || S, T.tzid || t.tzid || x), w)
     }(e, function(e) {
       var t = [],
         n = Object.keys(e),
         i = Object.keys(c);
       if (n.forEach(function(e) {
-          !(0, s.includes)(i, e) && t.push(e)
+          !(0, s.q9)(i, e) && t.push(e)
         }), t.length) throw Error("Invalid options: " + t.join(", "));
-      return (0, r.__assign)((0, r.__assign)({}, c), e)
+      return (0, r.pi)((0, r.pi)({}, c), e)
     }(t))
 }
 
 function d(e, t, n) {
-  return (0, r.__assign)((0, r.__assign)({}, e), {
+  return (0, r.pi)((0, r.pi)({}, e), {
     dtstart: t,
     tzid: n
   })
@@ -132,6 +132,6 @@ function f(e, t) {
       if (!/(VALUE=DATE(-TIME)?)|(TZID=)/.test(e)) throw Error("unsupported RDATE/EXDATE parm: " + e)
     })
   }(t), e.split(",").map(function(e) {
-    return (0, o.untilStringToDate)(e)
+    return (0, o.gE)(e)
   })
 }

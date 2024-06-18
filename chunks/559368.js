@@ -1,78 +1,77 @@
 "use strict";
-s.r(t);
-var a, l, n, i, r = s("877921"),
-  o = s.n(r),
-  d = s("442837"),
-  u = s("570140");
-let c = ["pct_retained", "new_members", "visitors", "communicators"],
+var n, i, l, a, r = t(877921),
+  o = t.n(r),
+  c = t(442837),
+  d = t(570140);
+let u = ["pct_retained", "new_members", "visitors", "communicators"],
   E = {},
   _ = {},
   I = null;
 
 function T(e) {
   let {
-    guildId: t,
-    stats: s
+    guildId: s,
+    stats: t
   } = e;
   I = null;
-  let a = {},
-    l = {},
-    n = s[0],
-    i = s[1];
-  null != n && c.forEach(e => {
-    if (null != n[e]) {
-      let t = o()(e);
-      null != i && 0 !== i[e] && (a["".concat(t, "Change")] = (n[e] - i[e]) * 100 / i[e]), l[t] = n[e]
+  let n = {},
+    i = {},
+    l = t[0],
+    a = t[1];
+  null != l && u.forEach(e => {
+    if (null != l[e]) {
+      let s = o()(e);
+      null != a && 0 !== a[e] && (n["".concat(s, "Change")] = (l[e] - a[e]) * 100 / a[e]), i[s] = l[e]
     }
-  }), E[t] = {
-    ...l,
-    ...a,
-    ...E[t]
+  }), E[s] = {
+    ...i,
+    ...n,
+    ...E[s]
   }
 }
 
-function S(e) {
+function N(e) {
   let {
-    error: t
+    error: s
   } = e;
-  I = t.code
+  I = s.code
 }
-class f extends(i = d.default.Store) {
+class m extends(a = c.ZP.Store) {
   getOverviewAnalytics(e) {
     return E[e]
   }
   getMemberInsights(e) {
-    var t;
-    return null !== (t = _[e]) && void 0 !== t ? t : {}
+    var s;
+    return null !== (s = _[e]) && void 0 !== s ? s : {}
   }
   shouldFetchMemberInsights(e) {
-    var t;
-    let s = null === (t = _[e]) || void 0 === t ? void 0 : t.fetchedAt;
-    return null == s || Date.now() - s > 432e5
+    var s;
+    let t = null === (s = _[e]) || void 0 === s ? void 0 : s.fetchedAt;
+    return null == t || Date.now() - t > 432e5
   }
   getError() {
     return I
   }
 }
-n = "GuildSettingsAnalyticsStore", (l = "displayName") in(a = f) ? Object.defineProperty(a, l, {
-  value: n,
+l = "GuildSettingsAnalyticsStore", (i = "displayName") in(n = m) ? Object.defineProperty(n, i, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = n, t.default = new f(u.default, {
+}) : n[i] = l, s.Z = new m(d.Z, {
   GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_SUCCESS: T,
   GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS: T,
   GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_SUCCESS: T,
-  GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE: S,
-  GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE: S,
-  GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE: S,
+  GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE: N,
+  GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE: N,
+  GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE: N,
   GUILD_ANALYTICS_MEMBER_INSIGHTS_FETCH_SUCCESS: function(e) {
     let {
-      guildId: t,
-      ...s
+      guildId: s,
+      ...t
     } = e;
-    _[t] = {
-      ...s,
+    _[s] = {
+      ...t,
       fetchedAt: Date.now()
     }
   }

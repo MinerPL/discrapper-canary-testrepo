@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
-  Dispatcher: function() {
+n.d(t, {
+  U: function() {
     return T
   }
-}), n("47120"), n("653041"), n("411104");
-var i = n("121014"),
-  r = n("512722"),
+}), n(47120), n(653041), n(411104);
+var i = n(121014),
+  r = n(512722),
   s = n.n(r),
-  a = n("956067");
-n("17089");
-var o = n("259443"),
-  l = n("986529"),
-  u = n("153102"),
-  d = n("625306"),
-  _ = n("420970");
+  o = n(956067);
+n(17089);
+var a = n(259443),
+  l = n(986529),
+  u = n(153102),
+  _ = n(625306),
+  d = n(420970);
 
 function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function c(e, t, n) {
   }) : e[t] = n, e
 }
 let E = new Set(["APP_STATE_UPDATE", "CLEAR_CACHES", "CONNECTION_CLOSED", "CONNECTION_OPEN", "CONNECTION_RESUMED", "LOGIN_SUCCESS", "LOGIN", "LOGOUT", "MESSAGE_SEND_FAILED", "PUSH_NOTIFICATION_CLICK", "RESET_SOCKET", "SESSION_START", "UPLOAD_FAIL", "WRITE_CACHES"]),
-  I = new o.Logger("Flux");
+  I = new a.Y("Flux");
 class T {
   isDispatching() {
     return null != this._currentDispatchActionType
@@ -42,12 +42,12 @@ class T {
   }
   flushWaitQueue() {
     if (!this._processingWaitQueue) try {
-      this._processingWaitQueue = !0, u.default.isDispatching = !0;
+      this._processingWaitQueue = !0, u.Z.isDispatching = !0;
       let t = 0;
       for (; this._waitQueue.length > 0;) {
         if (++t > 100) {
           var e;
-          let t = d.serialize();
+          let t = _.qC();
           throw I.error("LastFewActions", t), null === (e = this._sentryUtils) || void 0 === e || e.addBreadcrumb({
             message: "Dispatcher: Dispatch loop detected",
             data: {
@@ -56,17 +56,17 @@ class T {
           }), Error("Dispatch loop detected, aborting")
         }
         for (; this._waitQueue.length > 0;) this._waitQueue.shift()();
-        u.default.emit()
+        u.Z.emit()
       }
     } finally {
-      this._processingWaitQueue = !1, u.default.isDispatching = !1
+      this._processingWaitQueue = !1, u.Z.isDispatching = !1
     }
   }
   _dispatchWithDevtools(e) {
     this._dispatchWithLogging(e)
   }
   _dispatchWithLogging(e) {
-    s()(null == this._currentDispatchActionType, "Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: ".concat(e.type, " Already dispatching: ").concat(this._currentDispatchActionType)), s()(e.type, "Dispatch.dispatch(...) called without an action type"), E.has(e.type) && I.log("Dispatching ".concat(e.type)), (0, l.mark)(e.type), d.add(e.type);
+    s()(null == this._currentDispatchActionType, "Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: ".concat(e.type, " Already dispatching: ").concat(this._currentDispatchActionType)), s()(e.type, "Dispatch.dispatch(...) called without an action type"), E.has(e.type) && I.log("Dispatching ".concat(e.type)), (0, l.B1)(e.type), _.IH(e.type);
     let t = this.actionLogger.log(e, t => {
       try {
         this._currentDispatchActionType = e.type, this._dispatch(e, t)
@@ -76,7 +76,7 @@ class T {
     });
     t.totalTime > 100 && I.verbose("Slow dispatch on ".concat(e.type, ": ").concat(t.totalTime, "ms"));
     try {
-      (0, l.measure)("DISPATCH[".concat(e.type, "]"), e.type)
+      (0, l.L8)("DISPATCH[".concat(e.type, "]"), e.type)
     } catch (e) {}
   }
   _dispatch(e, t) {
@@ -87,9 +87,9 @@ class T {
       let {
         name: r,
         actionHandler: s,
-        storeDidChange: a
+        storeDidChange: o
       } = n[i];
-      !1 !== t(r, () => s(e)) && a(e)
+      !1 !== t(r, () => s(e)) && o(e)
     }
     let i = this._subscriptions[e.type];
     null != i && t("__subscriptions", () => {
@@ -120,12 +120,14 @@ class T {
     this._actionHandlers.addDependencies(e, t)
   }
   constructor(e = 0, t, n) {
-    c(this, "_defaultBand", void 0), c(this, "_interceptors", []), c(this, "_subscriptions", {}), c(this, "_waitQueue", []), c(this, "_processingWaitQueue", !1), c(this, "_currentDispatchActionType", null), c(this, "_actionHandlers", new f), c(this, "_sentryUtils", void 0), c(this, "actionLogger", void 0), c(this, "functionCache", {}), this._defaultBand = e, this._sentryUtils = n, null != t ? this.actionLogger = t : this.actionLogger = new _.ActionLogger, this.actionLogger.on("trace", (e, t, n) => {
-      a.default.isTracing && n >= 10 && a.default.mark("\uD83E\uDDA5", t, n)
+    if (c(this, "_defaultBand", void 0), c(this, "_interceptors", []), c(this, "_subscriptions", {}), c(this, "_waitQueue", []), c(this, "_processingWaitQueue", !1), c(this, "_currentDispatchActionType", null), c(this, "_actionHandlers", new h), c(this, "_sentryUtils", void 0), c(this, "actionLogger", void 0), c(this, "functionCache", {}), this._defaultBand = e, this._sentryUtils = n, null != t) this.actionLogger = t;
+    else this.actionLogger = new d.Z;
+    this.actionLogger.on("trace", (e, t, n) => {
+      o.Z.isTracing && n >= 10 && o.Z.mark("\uD83E\uDDA5", t, n)
     })
   }
 }
-class f {
+class h {
   getOrderedActionHandlers(e) {
     var t;
     return null !== (t = this._orderedActionHandlers[e.type]) && void 0 !== t ? t : this._computeOrderedActionHandlers(e.type)
@@ -133,16 +135,16 @@ class f {
   register(e, t, n, i) {
     let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : this.createToken();
     s()(i >= 0 && Number.isInteger(i), "band must be a non-negative integer.");
-    let a = {};
+    let o = {};
     for (let n in t) {
       let i = t[n],
         r = e => i(e);
-      S(r, "".concat(e, "_").concat(n)), a[n] = r
+      S(r, "".concat(e, "_").concat(n)), o[n] = r
     }
     return this._dependencyGraph.addNode(r, {
       name: e,
       band: i,
-      actionHandler: a,
+      actionHandler: o,
       storeDidChange: n
     }), this._addToBand(r, i), this._invalidateCaches(), r
   }
@@ -177,12 +179,12 @@ class f {
       let {
         name: r,
         actionHandler: s,
-        storeDidChange: a
-      } = this._dependencyGraph.getNodeData(n[t]), o = s[e];
-      null != o && i.push({
+        storeDidChange: o
+      } = this._dependencyGraph.getNodeData(n[t]), a = s[e];
+      null != a && i.push({
         name: r,
-        actionHandler: o,
-        storeDidChange: a
+        actionHandler: a,
+        storeDidChange: o
       })
     }
     return this._orderedActionHandlers[e] = i, i

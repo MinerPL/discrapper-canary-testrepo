@@ -1,9 +1,8 @@
 "use strict";
-n.r(t);
-var i = n("570140");
-t.default = {
+var i = n(570140);
+t.Z = {
   show(e, t, n, r, s) {
-    i.default.dispatch({
+    i.Z.dispatch({
       type: "NOTICE_SHOW",
       notice: {
         id: s,
@@ -15,7 +14,7 @@ t.default = {
     })
   },
   dismiss(e) {
-    i.default.dispatch({
+    i.Z.dispatch({
       type: "NOTICE_DISMISS",
       ...e
     })

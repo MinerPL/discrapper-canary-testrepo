@@ -1,49 +1,49 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return u
+n.d(t, {
+  Z: function() {
+    return _
   }
 });
-var a = n("735250");
-n("470079");
-var l = n("481060"),
-  r = n("782568"),
-  s = n("441957"),
-  i = n("689938"),
-  d = n("265945");
-let o = e => {
+var i = n(735250);
+n(470079);
+var r = n(481060),
+  s = n(782568),
+  o = n(441957),
+  a = n(689938),
+  l = n(831124);
+let u = e => {
   let {
     data: {
       url: t,
       link_text: n,
-      link_description: i,
-      is_localized: o
+      link_description: a,
+      is_localized: u
     }
   } = e;
-  return o ? (0, a.jsxs)(l.Clickable, {
+  return u ? (0, i.jsxs)(r.Clickable, {
     role: "link",
-    className: d.linkButton,
+    className: l.linkButton,
     onClick: () => {
-      (0, r.default)(t)
+      (0, s.Z)(t)
     },
-    children: [(0, a.jsxs)("div", {
-      className: d.linkTextContainer,
-      children: [(0, a.jsx)(l.Text, {
-        className: d.__invalid_linkText,
+    children: [(0, i.jsxs)("div", {
+      className: l.linkTextContainer,
+      children: [(0, i.jsx)(r.Text, {
+        className: l.__invalid_linkText,
         variant: "text-md/semibold",
         children: n
-      }), null != i && "" !== i && (0, a.jsx)(l.Text, {
+      }), null != a && "" !== a && (0, i.jsx)(r.Text, {
         variant: "text-md/normal",
         color: "text-muted",
-        children: i
+        children: a
       })]
-    }), (0, a.jsx)(s.default, {
-      className: d.linkIcon
+    }), (0, i.jsx)(o.Z, {
+      className: l.linkIcon
     })]
   }) : null
 };
 
-function u(e) {
+function _(e) {
   let {
     elements: t
   } = e;
@@ -57,23 +57,23 @@ function u(e) {
       let {
         data: n
       } = e;
-      return (0, a.jsx)(o, {
+      return (0, i.jsx)(u, {
         data: n
       }, "external-link+".concat(t))
     }),
-    r = t.some(e => {
+    s = t.some(e => {
       let {
         data: t
       } = e;
       return t.is_header_hidden
     });
-  return (0, a.jsxs)("div", {
-    className: d.linksContainer,
-    children: [!r && (0, a.jsx)(l.Heading, {
+  return (0, i.jsxs)("div", {
+    className: l.linksContainer,
+    children: [!s && (0, i.jsx)(r.Heading, {
       variant: "heading-sm/semibold",
       color: "header-secondary",
-      className: d.header,
-      children: i.default.Messages.LEARN_MORE
+      className: l.header,
+      children: a.Z.Messages.LEARN_MORE
     }), n]
   })
 }

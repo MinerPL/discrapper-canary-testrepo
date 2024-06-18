@@ -1,67 +1,67 @@
 "use strict";
-n.r(t), n.d(t, {
-  getHangStatusDetails: function() {
-    return E
+n.d(t, {
+  O8: function() {
+    return I
   },
-  getHangStatusOptions: function() {
+  V: function() {
     return c
   },
-  getHangStatusText: function() {
-    return I
+  tV: function() {
+    return E
   }
 });
-var i = n("981631"),
-  r = n("689938"),
-  s = n("337258"),
-  a = n("705196"),
-  o = n("190878"),
-  l = n("991254"),
-  u = n("485686"),
-  d = n("400976"),
-  _ = n("443909");
+var i = n(981631),
+  r = n(689938),
+  s = n(337258),
+  o = n(705196),
+  a = n(190878),
+  l = n(991254),
+  u = n(485686),
+  _ = n(400976),
+  d = n(443909);
 let c = () => ({
-    [i.HangStatusTypes.CHILLING]: {
-      title: r.default.Messages.STATUS_CHILLING,
-      icon: a,
+    [i.tNA.CHILLING]: {
+      title: r.Z.Messages.STATUS_CHILLING,
+      icon: o,
       color: "#567C7E"
     },
-    [i.HangStatusTypes.GAMING]: {
-      title: r.default.Messages.STATUS_GAMING,
-      icon: o,
+    [i.tNA.GAMING]: {
+      title: r.Z.Messages.STATUS_GAMING,
+      icon: a,
       color: "#685F8C"
     },
-    [i.HangStatusTypes.FOCUSING]: {
-      title: r.default.Messages.STATUS_FOCUSING,
+    [i.tNA.FOCUSING]: {
+      title: r.Z.Messages.STATUS_FOCUSING,
       icon: u,
       color: "#7F6956"
     },
-    [i.HangStatusTypes.BRB]: {
-      title: r.default.Messages.STATUS_BRB,
+    [i.tNA.BRB]: {
+      title: r.Z.Messages.STATUS_BRB,
       icon: s,
       color: "#76567E"
     },
-    [i.HangStatusTypes.EATING]: {
-      title: r.default.Messages.STATUS_EATING,
+    [i.tNA.EATING]: {
+      title: r.Z.Messages.STATUS_EATING,
       icon: l,
       color: "#717B54"
     },
-    [i.HangStatusTypes.IN_TRANSIT]: {
-      title: r.default.Messages.STATUS_IN_TRANSIT,
-      icon: d,
+    [i.tNA.IN_TRANSIT]: {
+      title: r.Z.Messages.STATUS_IN_TRANSIT,
+      icon: _,
       color: "#56697F"
     },
-    [i.HangStatusTypes.WATCHING]: {
-      title: r.default.Messages.STATUS_WATCHING,
-      icon: _,
+    [i.tNA.WATCHING]: {
+      title: r.Z.Messages.STATUS_WATCHING,
+      icon: d,
       color: "#7C5571"
     }
   }),
   E = e => {
-    if ((null == e ? void 0 : e.type) !== i.ActivityTypes.HANG_STATUS || (null == e ? void 0 : e.state) == null) return null;
+    if ((null == e ? void 0 : e.type) !== i.IIU.HANG_STATUS || (null == e ? void 0 : e.state) == null) return null;
     let t = e.state;
-    return t === i.HangStatusTypes.CUSTOM ? null : c()[t]
+    return t === i.tNA.CUSTOM ? null : c()[t]
   },
   I = e => {
     var t;
-    return ((null == e ? void 0 : e.state) != null ? e.state : null) === i.HangStatusTypes.CUSTOM ? null == e ? void 0 : e.details : null === (t = E(e)) || void 0 === t ? void 0 : t.title
+    return ((null == e ? void 0 : e.state) != null ? e.state : null) === i.tNA.CUSTOM ? null == e ? void 0 : e.details : null === (t = E(e)) || void 0 === t ? void 0 : t.title
   }

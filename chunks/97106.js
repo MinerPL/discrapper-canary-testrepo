@@ -1,35 +1,34 @@
 "use strict";
-r.r(t);
-var n = r("347941"),
-  a = Object.prototype.hasOwnProperty;
-t.default = function(e, t, r, o, i, l) {
-  var u = 1 & r,
-    s = (0, n.default)(e),
-    f = s.length;
-  if (f != (0, n.default)(t).length && !u) return !1;
-  for (var c = f; c--;) {
-    var d = s[c];
-    if (!(u ? d in t : a.call(t, d))) return !1
+var r = n(347941),
+  i = Object.prototype.hasOwnProperty;
+t.Z = function(e, t, n, a, o, s) {
+  var u = 1 & n,
+    c = (0, r.Z)(e),
+    l = c.length;
+  if (l != (0, r.Z)(t).length && !u) return !1;
+  for (var d = l; d--;) {
+    var f = c[d];
+    if (!(u ? f in t : i.call(t, f))) return !1
   }
-  var p = l.get(e),
-    h = l.get(t);
+  var p = s.get(e),
+    h = s.get(t);
   if (p && h) return p == t && h == e;
-  var b = !0;
-  l.set(e, t), l.set(t, e);
-  for (var v = u; ++c < f;) {
-    var g = e[d = s[c]],
-      x = t[d];
-    if (o) var y = u ? o(x, g, d, t, e, l) : o(g, x, d, e, t, l);
-    if (!(void 0 === y ? g === x || i(g, x, r, o, l) : y)) {
-      b = !1;
+  var m = !0;
+  s.set(e, t), s.set(t, e);
+  for (var g = u; ++d < l;) {
+    var _ = e[f = c[d]],
+      b = t[f];
+    if (a) var v = u ? a(b, _, f, t, e, s) : a(_, b, f, e, t, s);
+    if (!(void 0 === v ? _ === b || o(_, b, n, a, s) : v)) {
+      m = !1;
       break
     }
-    v || (v = "constructor" == d)
+    g || (g = "constructor" == f)
   }
-  if (b && !v) {
-    var m = e.constructor,
-      w = t.constructor;
-    m != w && "constructor" in e && "constructor" in t && !("function" == typeof m && m instanceof m && "function" == typeof w && w instanceof w) && (b = !1)
+  if (m && !g) {
+    var y = e.constructor,
+      E = t.constructor;
+    y != E && "constructor" in e && "constructor" in t && !("function" == typeof y && y instanceof y && "function" == typeof E && E instanceof E) && (m = !1)
   }
-  return l.delete(e), l.delete(t), b
+  return s.delete(e), s.delete(t), m
 }

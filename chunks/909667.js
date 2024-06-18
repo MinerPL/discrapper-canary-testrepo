@@ -1,36 +1,35 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return u
+t.d(s, {
+  Z: function() {
+    return c
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("481060"),
-  n = s("723047"),
-  i = s("682864"),
-  r = s("463939"),
-  o = s("981631"),
-  d = s("689938");
+var n = t(735250);
+t(470079);
+var i = t(481060),
+  l = t(723047),
+  a = t(463939),
+  r = t(981631),
+  o = t(689938);
 
-function u(e) {
+function c(e) {
   let {
-    team: t,
-    ...s
-  } = e, u = (0, n.useRoleSubscriptionSettingsDisabled)() || null == t ? null : d.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EDIT_PAYMENT_METHOD_LINK.format({
-    url: o.MarketingURLs.DEVELOPER_PORTAL_PAYOUT_SETTINGS(t.id)
+    team: s,
+    ...t
+  } = e, c = (0, l.mY)() || null == s ? null : o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EDIT_PAYMENT_METHOD_LINK.format({
+    url: r.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(s.id)
   });
-  return 0 === s.payoutsByPeriod.length ? (0, a.jsxs)(l.FormText, {
-    type: l.FormText.Types.DESCRIPTION,
-    children: [d.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EARNINGS_HISTORY_EMPTY, " ", u]
-  }) : (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsxs)(l.FormText, {
-      type: l.FormText.Types.DESCRIPTION,
-      children: [d.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EARNINGS_HISTORY_DESCRIPTION, " ", u]
-    }), (0, a.jsx)(i.default, {
+  return 0 === t.payoutsByPeriod.length ? (0, n.jsxs)(i.FormText, {
+    type: i.FormText.Types.DESCRIPTION,
+    children: [o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EARNINGS_HISTORY_EMPTY, " ", c]
+  }) : (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsxs)(i.FormText, {
+      type: i.FormText.Types.DESCRIPTION,
+      children: [o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EARNINGS_HISTORY_DESCRIPTION, " ", c]
+    }), (0, n.jsx)(i.Spacer, {
       size: 16
-    }), (0, a.jsx)(r.default, {
-      ...s
+    }), (0, n.jsx)(a.Z, {
+      ...t
     })]
   })
 }

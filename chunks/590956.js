@@ -1,49 +1,49 @@
 "use strict";
-n.r(t), n.d(t, {
-  MessageCustomEmoji: function() {
-    return m
-  },
-  MessageStandardEmoji: function() {
+n.d(t, {
+  Y: function() {
     return A
+  },
+  c: function() {
+    return N
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
-  o = n("153832"),
-  l = n("481060"),
-  u = n("596454"),
-  d = n("367907"),
-  _ = n("130402"),
-  c = n("626135"),
-  E = n("183023"),
-  I = n("524444"),
-  T = n("981631"),
-  f = n("185923"),
-  S = n("474936"),
-  h = n("824939");
-let A = e => {
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(772848),
+  l = n(481060),
+  u = n(596454),
+  _ = n(367907),
+  d = n(130402),
+  c = n(626135),
+  E = n(183023),
+  I = n(524444),
+  T = n(981631),
+  h = n(185923),
+  S = n(474936),
+  f = n(140989);
+let N = e => {
     var t;
     let {
       node: n,
-      tooltipPosition: a = I.EXPRESSION_TOOLTIP_PROPS.position,
-      enableClick: o = !0
-    } = e, d = null === (t = n.originalMatch) || void 0 === t ? void 0 : t[0], _ = null != d ? d : n.name, [c, T] = r.useState(!1), f = e => (0, i.jsx)(u.default, {
+      tooltipPosition: s = I.b_.position,
+      enableClick: a = !0
+    } = e, _ = null === (t = n.originalMatch) || void 0 === t ? void 0 : t[0], d = null != _ ? _ : n.name, [c, T] = r.useState(!1), h = e => (0, i.jsx)(u.Z, {
       ...e,
       emojiName: n.name,
       size: n.jumboable ? "jumbo" : "default",
       src: n.src,
-      alt: d,
+      alt: _,
       animated: !1
     }), S = e => (0, i.jsx)(l.Tooltip, {
-      text: (0, I.renderClickableTooltipNode)(n.name, o),
-      "aria-label": _,
-      ...I.EXPRESSION_TOOLTIP_PROPS,
-      position: a,
+      text: (0, I.Y)(n.name, a),
+      "aria-label": d,
+      ...I.b_,
+      position: s,
       shouldShow: !c,
       onTooltipShow: () => {
-        o && N({
+        a && m({
           emojiNode: n,
           isCustomEmoji: !1
         })
@@ -55,13 +55,13 @@ let A = e => {
           var n;
           T(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
         },
-        className: s()(h.emojiContainer, {
-          [h.emojiContainerClickable]: o
+        className: o()(f.emojiContainer, {
+          [f.emojiContainerClickable]: a
         }),
-        children: f(t)
+        children: h(t)
       })
     });
-    return o ? (0, i.jsx)(l.Popout, {
+    return a ? (0, i.jsx)(l.Popout, {
       animation: l.Popout.Animation.TRANSLATE,
       align: "center",
       autoInvert: !0,
@@ -70,22 +70,22 @@ let A = e => {
       onRequestClose: () => {
         T(!1)
       },
-      renderPopout: e => (0, i.jsx)(E.MessageStandardEmojiPopout, {
+      renderPopout: e => (0, i.jsx)(E.Az, {
         ...e,
         node: n
       }),
       children: S
     }) : S()
   },
-  m = e => {
+  A = e => {
     let {
       node: t,
       isInteracting: n,
-      tooltipPosition: a = I.EXPRESSION_TOOLTIP_PROPS.position,
-      enableClick: d = !0
-    } = e, [S, A] = r.useState(String(Date.now())), [m, p] = r.useState(!1), [O, R] = r.useState(!1), C = function() {
+      tooltipPosition: s = I.b_.position,
+      enableClick: _ = !0
+    } = e, [S, N] = r.useState(String(Date.now())), [A, O] = r.useState(!1), [R, C] = r.useState(!1), p = function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return (0, i.jsx)(u.default, {
+      return (0, i.jsx)(u.Z, {
         ...e,
         emojiName: t.name,
         size: t.jumboable ? "jumbo" : "default",
@@ -93,18 +93,18 @@ let A = e => {
         animated: t.animated,
         isInteracting: n
       })
-    }, g = (0, o.v4)(), L = e => (0, i.jsx)(l.Tooltip, {
-      text: (0, I.renderClickableTooltipNode)(t.name, d),
+    }, g = (0, a.Z)(), L = e => (0, i.jsx)(l.Tooltip, {
+      text: (0, I.Y)(t.name, _),
       "aria-label": t.name,
-      ...I.EXPRESSION_TOOLTIP_PROPS,
-      position: a,
-      shouldShow: !O,
+      ...I.b_,
+      position: s,
+      shouldShow: !R,
       onTooltipShow: () => {
-        p(!0), d && (N({
+        O(!0), _ && (m({
           emojiNode: t,
           isCustomEmoji: !0,
           nonce: g
-        }), (0, _.initiateEmojiInteraction)(f.EmojiInteractionPoint.CustomEmojiTooltipShown))
+        }), (0, d.x)(h.qR.CustomEmojiTooltipShown))
       },
       children: t => (0, i.jsx)(l.Clickable, {
         ...e,
@@ -114,49 +114,49 @@ let A = e => {
         },
         onClick: t => {
           var n;
-          p(!1), R(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
+          O(!1), C(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
         },
         onMouseLeave: () => {
-          m && (c.default.track(T.AnalyticEvents.CLOSE_POPOUT, {
+          A && (c.default.track(T.rMx.CLOSE_POPOUT, {
             nonce: g
-          }), p(!1))
+          }), O(!1))
         },
         tag: "span",
-        className: s()(h.emojiContainer, {
-          [h.emojiContainerClickable]: d
+        className: o()(f.emojiContainer, {
+          [f.emojiContainerClickable]: _
         }),
-        children: C(t)
+        children: p(t)
       })
     });
-    return d ? (0, i.jsx)(l.Popout, {
+    return _ ? (0, i.jsx)(l.Popout, {
       animation: l.Popout.Animation.FADE,
       align: "center",
       onRequestClose: () => {
-        c.default.track(T.AnalyticEvents.CLOSE_POPOUT, {
+        c.default.track(T.rMx.CLOSE_POPOUT, {
           nonce: g
-        }), p(!1), R(!1)
+        }), O(!1), C(!1)
       },
       autoInvert: !0,
       nudgeAlignIntoViewport: !0,
       position: "right",
-      renderPopout: e => (0, i.jsx)(E.MessageCustomEmojiPopout, {
+      renderPopout: e => (0, i.jsx)(E.vk, {
         ...e,
         node: t,
-        refreshPositionKey: () => A(String(Date.now())),
+        refreshPositionKey: () => N(String(Date.now())),
         nonce: g
       }),
       positionKey: S,
       children: L
     }) : L()
   },
-  N = e => {
+  m = e => {
     let {
       emojiNode: t,
       isCustomEmoji: n,
       nonce: i
     } = e;
-    d.default.trackWithMetadata(T.AnalyticEvents.EXPRESSION_TOOLTIP_VIEWED, {
-      type: S.PremiumUpsellTypes.EMOJI_IN_MESSAGE_HOVER,
+    _.ZP.trackWithMetadata(T.rMx.EXPRESSION_TOOLTIP_VIEWED, {
+      type: S.cd.EMOJI_IN_MESSAGE_HOVER,
       expression_id: t.emojiId,
       expression_name: t.name,
       is_animated: t.animated,

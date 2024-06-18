@@ -1,6 +1,6 @@
 "use strict";
-var n = r("310176"),
-  i = r("316103")("draft_tree_data_support");
+var n = r(310176),
+  i = r(316103)("draft_tree_data_support");
 t.exports = function(t, e, r) {
   var o = t.getSelection(),
     a = t.getCurrentContent(),

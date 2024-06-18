@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return I
   }
-}), n("411104");
-var i = n("836560"),
-  r = n("259443"),
-  s = n("740197"),
-  a = n("106617"),
-  o = n("290488"),
-  l = n("830795"),
-  u = n("65154"),
-  d = n("231338");
+}), n(411104);
+var i = n(836560),
+  r = n(259443),
+  s = n(740197),
+  o = n(106617),
+  a = n(290488),
+  l = n(830795),
+  u = n(65154),
+  _ = n(231338);
 
-function _(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -21,8 +21,8 @@ function _(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let c = new r.Logger("Output"),
-  E = new a.default;
+let c = new r.Y("Output"),
+  E = new o.Z;
 class I extends i.EventEmitter {
   destroy() {
     var e, t;
@@ -78,7 +78,7 @@ class I extends i.EventEmitter {
   }
   async enable() {
     null != this.cleanup && (this.cleanup(), this.cleanup = void 0), null != this.stream && (E.release(this.stream), this.stream = void 0);
-    let e = await (0, s.getAudioInputDevices)(),
+    let e = await (0, s.Hg)(),
       t = {
         echoCancellation: this.echoCancellation,
         noiseSuppression: this.noiseSuppression,
@@ -91,7 +91,7 @@ class I extends i.EventEmitter {
       });
       if (this.destroyed) throw E.release(e), Error("AudioInput: Already destroyed");
       if (this._noiseCancellation) try {
-        let t = await (0, o.getKrispSDK)();
+        let t = await (0, a.n)();
         this._audioFilter = await t.createNoiseFilter(this.context), this._audioFilter.addEventListener("ready", e => {
           var t;
           null === (t = this._audioFilter) || void 0 === t || t.enable()
@@ -109,12 +109,12 @@ class I extends i.EventEmitter {
       if ("string" != typeof e) switch (e.name) {
         case "PermissionDeniedError":
         case "NotAllowedError":
-          throw this.emit("permission", !1), d.UserMediaErrors.PERMISSION_DENIED;
+          throw this.emit("permission", !1), _.ET.PERMISSION_DENIED;
         case "PermissionDismissedError":
-          throw this.emit("permission", !1), d.UserMediaErrors.PERMISSION_DISMISSED;
+          throw this.emit("permission", !1), _.ET.PERMISSION_DISMISSED;
         case "DevicesNotFoundError":
         case "NotFoundError":
-          throw d.UserMediaErrors.NO_DEVICES_FOUND;
+          throw _.ET.NO_DEVICES_FOUND;
         default:
           throw e.name || "UNKNOWN"
       }
@@ -122,18 +122,18 @@ class I extends i.EventEmitter {
     }
   }
   setSource(e) {
-    this.sourceId !== e && (this.sourceId = e, null != this.stream && this.enable())
+    if (this.sourceId !== e) this.sourceId = e, null != this.stream && this.enable()
   }
   setPTTActive(e) {
-    if (!this.mute) this.speaking !== e && (null != this.pttReleaseDelayTimeout && (window.clearTimeout(this.pttReleaseDelayTimeout), this.pttReleaseDelayTimeout = void 0), e ? this.setSpeaking(e) : this.pttReleaseDelayTimeout = window.setTimeout(() => {
+    if (!this.mute && this.speaking !== e) null != this.pttReleaseDelayTimeout && (window.clearTimeout(this.pttReleaseDelayTimeout), this.pttReleaseDelayTimeout = void 0), e ? this.setSpeaking(e) : this.pttReleaseDelayTimeout = window.setTimeout(() => {
       this.setSpeaking(!1), this.pttReleaseDelayTimeout = void 0
-    }, this.modeOptions.delay))
+    }, this.modeOptions.delay)
   }
   setMode(e, t) {
     this.mode = e, this.modeOptions = t, null != this.stream && this.enable()
   }
   updateMode() {
-    null != this.cleanup && (this.cleanup(), this.cleanup = void 0), null != this.stream && this.mode === u.InputModes.VOICE_ACTIVITY && (this.cleanup = this.setupVoiceActivity(this.modeOptions))
+    null != this.cleanup && (this.cleanup(), this.cleanup = void 0), null != this.stream && this.mode === u.pM.VOICE_ACTIVITY && (this.cleanup = this.setupVoiceActivity(this.modeOptions))
   }
   setupVoiceActivity(e) {
     let {
@@ -141,7 +141,7 @@ class I extends i.EventEmitter {
     } = e;
     if (null == this.stream) throw Error("stream cannot be null");
     null == t && (t = -40);
-    let n = new l.default(this.context, this.stream, t);
+    let n = new l.Z(this.context, this.stream, t);
     return n.onProcess = (e, t) => {
       !this.mute && this.setSpeaking(e), this.emit("voiceactivity", t)
     }, () => {
@@ -158,9 +158,9 @@ class I extends i.EventEmitter {
     }
   }
   constructor(e) {
-    super(), _(this, "stream", void 0), _(this, "context", void 0), _(this, "sourceId", void 0), _(this, "_mute", !1), _(this, "_echoCancellation", !0), _(this, "_noiseSuppression", !0), _(this, "_automaticGainControl", !0), _(this, "_noiseCancellation", !1), _(this, "_audioFilter", void 0), _(this, "speaking", !1), _(this, "mode", u.InputModes.VOICE_ACTIVITY), _(this, "modeOptions", {
+    super(), d(this, "stream", void 0), d(this, "context", void 0), d(this, "sourceId", void 0), d(this, "_mute", !1), d(this, "_echoCancellation", !0), d(this, "_noiseSuppression", !0), d(this, "_automaticGainControl", !0), d(this, "_noiseCancellation", !1), d(this, "_audioFilter", void 0), d(this, "speaking", !1), d(this, "mode", u.pM.VOICE_ACTIVITY), d(this, "modeOptions", {
       delay: 20,
       threshold: -40
-    }), _(this, "cleanup", void 0), _(this, "pttReleaseDelayTimeout", void 0), _(this, "destroyed", !1), this.context = e
+    }), d(this, "cleanup", void 0), d(this, "pttReleaseDelayTimeout", void 0), d(this, "destroyed", !1), this.context = e
   }
 }

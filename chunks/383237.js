@@ -1,14 +1,14 @@
 "use strict";
-r.r(t), r.d(t, {
-  default: function() {
+r.d(t, {
+  Z: function() {
     return n
   }
 });
-var a = r("781212");
+var a = r(781212);
 
 function n(e, t) {
   if (null == e) return {};
-  var r, n, s = (0, a.default)(e, t);
+  var r, n, s = (0, a.Z)(e, t);
   if (Object.getOwnPropertySymbols) {
     var o = Object.getOwnPropertySymbols(e);
     for (n = 0; n < o.length; n++) {

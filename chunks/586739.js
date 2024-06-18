@@ -1,12 +1,11 @@
 "use strict";
-s.r(t);
-var a = s("544891"),
-  l = s("981631");
-t.default = {
+var n = t(544891),
+  i = t(981631);
+s.Z = {
   fetchTeams() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return a.HTTP.get({
-      url: l.Endpoints.TEAMS,
+    return n.tn.get({
+      url: i.ANM.TEAMS,
       query: {
         include_payout_account_status: e
       }

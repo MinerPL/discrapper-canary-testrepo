@@ -1,16 +1,16 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return n
+t.d(s, {
+  Z: function() {
+    return l
   }
 });
-var a = s("470079"),
-  l = s("689938");
+var n = t(470079),
+  i = t(689938);
 
-function n() {
-  return a.useMemo(() => [{
+function l() {
+  return n.useMemo(() => [{
     value: null,
-    label: l.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ACTIVE_TRIAL_USER_LIMIT_NONE_OPTION
+    label: i.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ACTIVE_TRIAL_USER_LIMIT_NONE_OPTION
   }, {
     value: 10,
     label: "10"

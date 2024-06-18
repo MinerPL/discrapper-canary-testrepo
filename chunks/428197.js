@@ -1,12 +1,12 @@
 "use strict";
-n("621271");
-var r = n("67867"),
-  a = n("38548");
+n(621271);
+var r = n(67867),
+  o = n(38548);
 r({
   target: "String",
   proto: !0,
   name: "trimStart",
-  forced: "".trimStart !== a
+  forced: "".trimStart !== o
 }, {
-  trimStart: a
+  trimStart: o
 })

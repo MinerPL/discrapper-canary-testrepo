@@ -1,31 +1,31 @@
 "use strict";
-n.r(t), n.d(t, {
-  getPointFromPosition: function() {
+n.d(t, {
+  t: function() {
     return r
   }
 });
-var i = n("887490");
+var i = n(887490);
 
 function r(e, t, n, r) {
-  var s, a;
-  let o = 0;
+  var s, o;
+  let a = 0;
   for (let s = 0; s < n.length; s++) {
-    let a = n[s];
-    if (null == a) continue;
-    let l = o + a.length;
+    let o = n[s];
+    if (null == o) continue;
+    let l = a + o.length;
     if (r <= l) {
-      let n = i.PathUtils.child(t, s),
-        a = i.EditorUtils.node(e, n)[0];
-      if (i.TextUtils.isText(a)) return {
+      let n = i.C0.child(t, s),
+        o = i.bN.node(e, n)[0];
+      if (i.LC.isText(o)) return {
         path: n,
-        offset: Math.min(Math.max(r - o, 0), a.text.length)
+        offset: Math.min(Math.max(r - a, 0), o.text.length)
       }
     }
-    o = l
+    a = l
   }
   let l = n.length - 1;
   return {
-    path: i.PathUtils.child(t, l),
-    offset: null !== (a = null === (s = n[l]) || void 0 === s ? void 0 : s.length) && void 0 !== a ? a : 0
+    path: i.C0.child(t, l),
+    offset: null !== (o = null === (s = n[l]) || void 0 === s ? void 0 : s.length) && void 0 !== o ? o : 0
   }
 }

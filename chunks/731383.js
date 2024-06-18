@@ -1,7 +1,7 @@
 "use strict";
-var r = n("728804"),
-  i = n("505388"),
-  a = n("363406"),
+var r = n(728804),
+  i = n(505388),
+  a = n(363406),
   o = Object.prototype.hasOwnProperty,
   s = {
     brackets: function(e) {
@@ -42,39 +42,39 @@ var r = n("728804"),
   },
   h = {},
   m = function e(t, n, a, o, s, c, d, f, m, g, _, b, v, y, E, S) {
-    for (var x, w, T = t, C = S, D = 0, O = !1; void 0 !== (C = C.get(h)) && !O;) {
-      var M = C.get(t);
-      if (D += 1, void 0 !== M) {
-        if (M === D) throw RangeError("Cyclic object value");
-        O = !0
+    for (var x, w, C = t, T = S, D = 0, M = !1; void 0 !== (T = T.get(h)) && !M;) {
+      var O = T.get(t);
+      if (D += 1, void 0 !== O) {
+        if (O === D) throw RangeError("Cyclic object value");
+        M = !0
       }
-      void 0 === C.get(h) && (D = 0)
+      void 0 === T.get(h) && (D = 0)
     }
-    if ("function" == typeof f ? T = f(n, T) : T instanceof Date ? T = _(T) : "comma" === a && u(T) && (T = i.maybeMap(T, function(e) {
+    if ("function" == typeof f ? C = f(n, C) : C instanceof Date ? C = _(C) : "comma" === a && u(C) && (C = i.maybeMap(C, function(e) {
         return e instanceof Date ? _(e) : e
-      })), null === T) {
+      })), null === C) {
       if (s) return d && !y ? d(n, p.encoder, E, "key", b) : n;
-      T = ""
+      C = ""
     }
-    if ("string" == typeof(x = T) || "number" == typeof x || "boolean" == typeof x || "symbol" == typeof x || "bigint" == typeof x || i.isBuffer(T)) return d ? [v(y ? n : d(n, p.encoder, E, "key", b)) + "=" + v(d(T, p.encoder, E, "value", b))] : [v(n) + "=" + v(String(T))];
+    if ("string" == typeof(x = C) || "number" == typeof x || "boolean" == typeof x || "symbol" == typeof x || "bigint" == typeof x || i.isBuffer(C)) return d ? [v(y ? n : d(n, p.encoder, E, "key", b)) + "=" + v(d(C, p.encoder, E, "value", b))] : [v(n) + "=" + v(String(C))];
     var A = [];
-    if (void 0 === T) return A;
-    if ("comma" === a && u(T)) y && d && (T = i.maybeMap(T, d)), w = [{
-      value: T.length > 0 ? T.join(",") || null : void 0
+    if (void 0 === C) return A;
+    if ("comma" === a && u(C)) y && d && (C = i.maybeMap(C, d)), w = [{
+      value: C.length > 0 ? C.join(",") || null : void 0
     }];
     else if (u(f)) w = f;
     else {
-      var k = Object.keys(T);
+      var k = Object.keys(C);
       w = m ? k.sort(m) : k
     }
-    for (var R = o && u(T) && 1 === T.length ? n + "[]" : n, N = 0; N < w.length; ++N) {
+    for (var R = o && u(C) && 1 === C.length ? n + "[]" : n, N = 0; N < w.length; ++N) {
       var I = w[N],
-        L = "object" == typeof I && void 0 !== I.value ? I.value : T[I];
+        L = "object" == typeof I && void 0 !== I.value ? I.value : C[I];
       if (!c || null !== L) {
-        var P = u(T) ? "function" == typeof a ? a(R, I) : R : R + (g ? "." + I : "[" + I + "]");
+        var P = u(C) ? "function" == typeof a ? a(R, I) : R : R + (g ? "." + I : "[" + I + "]");
         S.set(t, D);
-        var F = r();
-        F.set(h, S), l(A, e(L, P, a, o, s, c, "comma" === a && y && u(T) ? null : d, f, m, g, _, b, v, y, E, F))
+        var B = r();
+        B.set(h, S), l(A, e(L, P, a, o, s, c, "comma" === a && y && u(C) ? null : d, f, m, g, _, b, v, y, E, B))
       }
     }
     return A
@@ -122,7 +122,7 @@ e.exports = function(e, t) {
   !n && (n = Object.keys(o)), c.sort && n.sort(c.sort);
   for (var h = r(), _ = 0; _ < n.length; ++_) {
     var b = n[_];
-    (!c.skipNulls || null !== o[b]) && l(d, m(o[b], b, f, p, c.strictNullHandling, c.skipNulls, c.encode ? c.encoder : null, c.filter, c.sort, c.allowDots, c.serializeDate, c.format, c.formatter, c.encodeValuesOnly, c.charset, h))
+    if (!c.skipNulls || null !== o[b]) l(d, m(o[b], b, f, p, c.strictNullHandling, c.skipNulls, c.encode ? c.encoder : null, c.filter, c.sort, c.allowDots, c.serializeDate, c.format, c.formatter, c.encodeValuesOnly, c.charset, h))
   }
   var v = d.join(c.delimiter),
     y = !0 === c.addQueryPrefix ? "?" : "";

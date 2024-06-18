@@ -1,7 +1,7 @@
 "use strict";
-var r = n("903799"),
-  i = n("847651"),
-  a = n("21841");
+var r = n(903799),
+  i = n(847651),
+  a = n(21841);
 
 function o(e) {
   if (!(this instanceof o)) return new o(e);

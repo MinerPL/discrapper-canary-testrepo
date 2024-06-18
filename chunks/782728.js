@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
-  useDropTargetConnector: function() {
-    return s
+n.d(t, {
+  H: function() {
+    return a
   }
 });
-var r = n("470079"),
-  i = n("805518"),
-  a = n("209851"),
-  o = n("175806");
+var r = n(470079),
+  i = n(210422),
+  o = n(209851),
+  u = n(175806);
 
-function s(e) {
-  var t = (0, a.useDragDropManager)(),
+function a(e) {
+  var t = (0, o.N)(),
     n = (0, r.useMemo)(function() {
-      return new i.TargetConnector(t.getBackend())
+      return new i.Y(t.getBackend())
     }, [t]);
-  return (0, o.useIsomorphicLayoutEffect)(function() {
+  return (0, u.L)(function() {
     return n.dropTargetOptions = e || null, n.reconnect(),
       function() {
         return n.disconnectDropTarget()

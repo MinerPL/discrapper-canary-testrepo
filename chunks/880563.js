@@ -1,9 +1,8 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("539277");
-t.default = e => {
+var i = n(735250);
+n(470079);
+var r = n(478763);
+t.Z = e => {
   let {
     children: t,
     shouldAnimate: n

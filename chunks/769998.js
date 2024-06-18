@@ -1,84 +1,84 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
+t.d(s, {
+  Z: function() {
     return I
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("442837"),
-  n = s("481060"),
-  i = s("430824"),
-  r = s("496675"),
-  o = s("556012"),
-  d = s("273504"),
-  u = s("981631"),
-  c = s("590433"),
-  E = s("689938"),
-  _ = s("39097");
+var n = t(735250);
+t(470079);
+var i = t(442837),
+  l = t(481060),
+  a = t(430824),
+  r = t(496675),
+  o = t(556012),
+  c = t(273504),
+  d = t(981631),
+  u = t(590433),
+  E = t(689938),
+  _ = t(39097);
 
 function I(e) {
-  var t;
+  var s;
   let {
-    action: s,
+    action: t,
     triggerType: I,
     guildId: T,
-    toggled: S,
-    onToggleAction: f
-  } = e, m = e => () => f(e), N = (0, o.getActionInfo)(s.type, s, I), g = null === (t = s.metadata) || void 0 === t ? void 0 : t.durationSeconds, h = null != g ? (0, c.getFriendlyDurationString)(g) : null, C = (0, l.useStateFromStores)([r.default, i.default], () => r.default.can(u.Permissions.MODERATE_MEMBERS, i.default.getGuild(T)), [T]);
-  if (null == N) return null;
+    toggled: N,
+    onToggleAction: m
+  } = e, S = e => () => m(e), h = (0, o.c)(t.type, t, I), g = null === (s = t.metadata) || void 0 === s ? void 0 : s.durationSeconds, x = null != g ? (0, u.L9)(g) : null, C = (0, i.e7)([r.Z, a.Z], () => r.Z.can(d.Plq.MODERATE_MEMBERS, a.Z.getGuild(T)), [T]);
+  if (null == h) return null;
   let {
     headerText: R,
-    descriptionText: x,
-    icon: L
-  } = N;
-  return (0, a.jsxs)("div", {
+    descriptionText: L,
+    icon: O
+  } = h;
+  return (0, n.jsxs)("div", {
     className: _.actionContainer,
-    children: [(0, a.jsx)("div", {
+    children: [(0, n.jsx)("div", {
       className: _.actionIconContainer,
-      children: (0, a.jsx)(L, {
+      children: (0, n.jsx)(O, {
         width: 24,
         height: 24,
         className: _.actionIcon
       })
-    }), (0, a.jsxs)("div", {
+    }), (0, n.jsxs)("div", {
       className: _.actionTextContainer,
-      children: [(0, a.jsx)(n.Heading, {
+      children: [(0, n.jsx)(l.Heading, {
         variant: "heading-sm/semibold",
         children: R
-      }), (0, a.jsx)(n.Text, {
+      }), (0, n.jsx)(l.Text, {
         color: "interactive-normal",
         variant: "text-xs/medium",
-        children: x
-      }), S && (0, a.jsxs)(n.Text, {
+        children: L
+      }), N && (0, n.jsxs)(l.Text, {
         color: "interactive-normal",
         variant: "text-xs/medium",
-        children: [function(e, t) {
-          if (null === t) return null;
-          if (e === d.AutomodTriggerType.MENTION_SPAM) return E.default.Messages.GUILD_AUTOMOD_ACTIONS_TIMEOUT_EDIT_HELPER_MENTION_SPAM.format({
-            friendlyDurationString: t
+        children: [function(e, s) {
+          if (null === s) return null;
+          if (e === c.fX.MENTION_SPAM) return E.Z.Messages.GUILD_AUTOMOD_ACTIONS_TIMEOUT_EDIT_HELPER_MENTION_SPAM.format({
+            friendlyDurationString: s
           });
-          return E.default.Messages.GUILD_AUTOMOD_ACTIONS_TIMEOUT_EDIT_HELPER.format({
-            friendlyDurationString: t
+          return E.Z.Messages.GUILD_AUTOMOD_ACTIONS_TIMEOUT_EDIT_HELPER.format({
+            friendlyDurationString: s
           })
-        }(I, h), C && (0, a.jsx)(n.Clickable, {
-          onClick: m(!0),
+        }(I, x), C && (0, n.jsx)(l.Clickable, {
+          onClick: S(!0),
           className: _.editChannel,
           tag: "span",
           role: "link",
-          children: E.default.Messages.GUILD_AUTOMOD_ACTIONS_TIMEOUT_UPDATE_DURATION
+          children: E.Z.Messages.GUILD_AUTOMOD_ACTIONS_TIMEOUT_UPDATE_DURATION
         })]
       })]
-    }), (0, a.jsx)(n.Tooltip, {
-      text: E.default.Messages.GUILD_AUTOMOD_MISSING_TIMEOUT_PERMISSIONS.format(),
-      "aria-label": E.default.Messages.GUILD_AUTOMOD_MISSING_TIMEOUT_PERMISSIONS.plainFormat(),
+    }), (0, n.jsx)(l.Tooltip, {
+      text: E.Z.Messages.GUILD_AUTOMOD_MISSING_TIMEOUT_PERMISSIONS.format(),
+      "aria-label": E.Z.Messages.GUILD_AUTOMOD_MISSING_TIMEOUT_PERMISSIONS.plainFormat(),
       shouldShow: !C,
-      children: e => (0, a.jsx)("div", {
+      children: e => (0, n.jsx)("div", {
         ...e,
-        children: (0, a.jsx)(n.Checkbox, {
-          type: n.Checkbox.Types.INVERTED,
-          value: S,
-          onChange: m(!1),
+        children: (0, n.jsx)(l.Checkbox, {
+          type: l.Checkbox.Types.INVERTED,
+          value: N,
+          onChange: S(!1),
           disabled: !C,
           className: _.__invalid_actionCheckbox
         })

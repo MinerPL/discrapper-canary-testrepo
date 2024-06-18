@@ -1,23 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
-  closeContextMenu: function() {
+n.d(t, {
+  Zy: function() {
     return u
   },
-  openContextMenu: function() {
+  jW: function() {
     return d
   },
-  openContextMenuLazy: function() {
+  vq: function() {
     return _
   }
-}), n("773603");
-var i = n("570140"),
-  r = n("40851"),
-  s = n("358085"),
-  a = n("601993"),
-  o = n("981631");
+}), n(773603);
+var i = n(570140),
+  r = n(40851),
+  s = n(358085),
+  o = n(601993),
+  a = n(981631);
 
 function l(e) {
-  i.default.dispatch({
+  i.Z.dispatch({
     type: "CONTEXT_MENU_OPEN",
     contextMenu: e
   })
@@ -27,10 +27,10 @@ function u(e) {
   {
     let {
       flushSync: t
-    } = n("699581");
+    } = n(699581);
     t(() => {
-      i.default.wait(() => {
-        i.default.dispatch({
+      i.Z.wait(() => {
+        i.Z.dispatch({
           type: "CONTEXT_MENU_CLOSE"
         }).finally(e)
       })
@@ -38,8 +38,8 @@ function u(e) {
   }
 }
 
-function d(e, t, n, i) {
-  var u, d, _;
+function _(e, t, n, i) {
+  var u, _, d;
   if (e.stopPropagation(), null != e.currentTarget.contains && !e.currentTarget.contains(e.target)) return;
   let c = 0,
     E = 0;
@@ -56,20 +56,20 @@ function d(e, t, n, i) {
   let I = {
     render: t,
     renderLazy: i,
-    target: null !== (d = e.target) && void 0 !== d ? d : e.currentTarget,
+    target: null !== (_ = e.target) && void 0 !== _ ? _ : e.currentTarget,
     rect: new DOMRect(c, E, 0, 0),
     config: {
-      context: __OVERLAY__ ? o.AppContext.OVERLAY : null !== (_ = (0, r.getCurrentlyInteractingAppContext)()) && void 0 !== _ ? _ : o.AppContext.APP,
+      context: __OVERLAY__ ? a.IlC.OVERLAY : null !== (d = (0, r.GB)()) && void 0 !== d ? d : a.IlC.APP,
       ...n
     }
   };
   if ((null == n ? void 0 : n.enableSpellCheck) && (0, s.isDesktop)()) {
-    let e = (0, a.addResultListener)(() => {
+    let e = (0, o.RD)(() => {
       e(), l(I)
     })
   } else e.preventDefault(), l(I)
 }
 
-function _(e, t, n) {
-  d(e, void 0, n, t)
+function d(e, t, n) {
+  _(e, void 0, n, t)
 }

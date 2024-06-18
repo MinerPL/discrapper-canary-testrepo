@@ -1,7 +1,7 @@
 "use strict";
-var r = n("546299"),
-  i = n("261638"),
-  a = n("21841"),
+var r = n(546299),
+  i = n(261638),
+  a = n(21841),
   o = r.rotr64_hi,
   s = r.rotr64_lo,
   u = r.shr64_hi,
@@ -62,12 +62,12 @@ r.inherits(v, _), e.exports = v, v.blockSize = 1024, v.outSize = 512, v.hmacStre
     S = this.h[11],
     x = this.h[12],
     w = this.h[13],
-    T = this.h[14],
-    C = this.h[15];
+    C = this.h[14],
+    T = this.h[15];
   a(this.k.length === n.length);
   for (var D = 0; D < n.length; D += 2) {
-    var O = T,
-      M = C,
+    var M = C,
+      O = T,
       A = function(e, t) {
         var n = o(e, t, 14) ^ o(e, t, 18) ^ o(t, e, 9);
         return n < 0 && (n += 4294967296), n
@@ -87,27 +87,27 @@ r.inherits(v, _), e.exports = v, v.blockSize = 1024, v.outSize = 512, v.hmacStre
       I = this.k[D],
       L = this.k[D + 1],
       P = n[D],
-      F = n[D + 1],
-      B = m(O, M, A, k, R, N, I, L, P, F),
-      U = g(O, M, A, k, R, N, I, L, P, F);
-    O = function(e, t) {
+      B = n[D + 1],
+      F = m(M, O, A, k, R, N, I, L, P, B),
+      U = g(M, O, A, k, R, N, I, L, P, B);
+    M = function(e, t) {
       var n = o(e, t, 28) ^ o(t, e, 2) ^ o(t, e, 7);
       return n < 0 && (n += 4294967296), n
-    }(r, i), M = function(e, t) {
+    }(r, i), O = function(e, t) {
       var n = s(e, t, 28) ^ s(t, e, 2) ^ s(t, e, 7);
       return n < 0 && (n += 4294967296), n
     }(r, i), A = function(e, t, n, r, i) {
       var a = e & n ^ e & i ^ n & i;
       return a < 0 && (a += 4294967296), a
     }(r, i, u, c, p, h);
-    var Y = d(O, M, A, k = function(e, t, n, r, i, a) {
+    var j = d(M, O, A, k = function(e, t, n, r, i, a) {
         var o = t & r ^ t & a ^ r & a;
         return o < 0 && (o += 4294967296), o
       }(r, i, u, c, p, h)),
-      j = f(O, M, A, k);
-    T = x, C = w, x = E, w = S, E = v, S = y, v = d(_, b, B, U), y = f(b, b, B, U), _ = p, b = h, p = u, h = c, u = r, c = i, r = d(B, U, Y, j), i = f(B, U, Y, j)
+      Y = f(M, O, A, k);
+    C = x, T = w, x = E, w = S, E = v, S = y, v = d(_, b, F, U), y = f(b, b, F, U), _ = p, b = h, p = u, h = c, u = r, c = i, r = d(F, U, j, Y), i = f(F, U, j, Y)
   }
-  l(this.h, 0, r, i), l(this.h, 2, u, c), l(this.h, 4, p, h), l(this.h, 6, _, b), l(this.h, 8, v, y), l(this.h, 10, E, S), l(this.h, 12, x, w), l(this.h, 14, T, C)
+  l(this.h, 0, r, i), l(this.h, 2, u, c), l(this.h, 4, p, h), l(this.h, 6, _, b), l(this.h, 8, v, y), l(this.h, 10, E, S), l(this.h, 12, x, w), l(this.h, 14, C, T)
 }, v.prototype._digest = function(e) {
   return "hex" === e ? r.toHex32(this.h, "big") : r.split32(this.h, "big")
 }

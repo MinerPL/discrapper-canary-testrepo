@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
-  useBlockedPaymentsConfig: function() {
-    return o
+n.d(t, {
+  Q: function() {
+    return a
   }
 });
-var i = n("818083"),
-  r = n("847903");
-let s = (0, i.createExperiment)({
+var i = n(818083),
+  r = n(847903);
+let s = (0, i.B)({
     kind: "user",
     id: "2022-03_block_russian_purchases",
     label: "Block purchases based on country",
@@ -21,7 +21,7 @@ let s = (0, i.createExperiment)({
       }
     }]
   }),
-  a = (0, i.createExperiment)({
+  o = (0, i.B)({
     kind: "user",
     id: "2022-03_block_russian_purchases_desktop",
     label: "Block purchases based on country (desktop specific flags)",
@@ -37,7 +37,7 @@ let s = (0, i.createExperiment)({
     }]
   });
 
-function o() {
+function a() {
   let {
     paymentsBlocked: e
   } = s.useExperiment({
@@ -46,13 +46,13 @@ function o() {
     autoTrackExposure: !1
   }), {
     checkPaymentSource: t
-  } = a.useExperiment({
+  } = o.useExperiment({
     location: "c519a9_2"
   }, {
     autoTrackExposure: !1
   }), {
     defaultBillingCountryCode: n
-  } = (0, r.default)();
+  } = (0, r.Z)();
   return e || t && "RU" === n
 }
-t.default = s
+t.Z = s

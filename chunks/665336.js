@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return o
+n.d(t, {
+  Z: function() {
+    return a
   }
 });
-var r = n("824523"),
-  a = n("141371");
+var r = n(824523),
+  o = n(141371);
 
-function o(e) {
-  var t = (0, a.default)(e, "string");
-  return "symbol" === (0, r.default)(t) ? t : String(t)
+function a(e) {
+  var t = (0, o.Z)(e, "string");
+  return "symbol" === (0, r.Z)(t) ? t : String(t)
 }

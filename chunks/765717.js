@@ -1,30 +1,30 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return o
+n.d(t, {
+  Z: function() {
+    return a
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("613828"),
-  s = n("990547"),
-  a = n("213609");
+var i = n(735250);
+n(470079);
+var r = n(266067),
+  s = n(990547),
+  o = n(213609);
 
-function o(e) {
+function a(e) {
   var t;
   let {
     impressionName: n,
-    impressionProperties: o,
+    impressionProperties: a,
     disableTrack: l,
     ...u
-  } = e, d = o;
-  return "function" == typeof d && (d = d(u)), (0, a.default)({
+  } = e, _ = a;
+  return "function" == typeof _ && (_ = _(u)), (0, o.Z)({
     type: s.ImpressionTypes.PAGE,
     name: n,
-    properties: d
+    properties: _
   }, {
     disableTrack: l
-  }, [null === (t = u.location) || void 0 === t ? void 0 : t.pathname]), (0, i.jsx)(r.Route, {
+  }, [null === (t = u.location) || void 0 === t ? void 0 : t.pathname]), (0, i.jsx)(r.AW, {
     ...u
   })
 }

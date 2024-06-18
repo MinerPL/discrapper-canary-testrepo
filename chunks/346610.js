@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  MessageForwardingExperiment: function() {
+n.d(t, {
+  w: function() {
     return i
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-05_message_forwarding",
   label: "Message forwarding",

@@ -1,102 +1,102 @@
 "use strict";
-s.r(t), s.d(t, {
-  SCHEMA_ERROR_KEY: function() {
-    return o
-  },
-  default: function() {
+t.d(s, {
+  Z: function() {
     return E
+  },
+  r: function() {
+    return o
   }
-}), s("47120"), s("653041");
-var a = s("470079"),
-  l = s("392711"),
-  n = s("881052"),
-  i = s("36459"),
-  r = s("689938");
+}), t(47120), t(653041);
+var n = t(470079),
+  i = t(392711),
+  l = t(881052),
+  a = t(36459),
+  r = t(689938);
 let o = "_errors",
-  d = "GENERIC_REGEX_ERROR";
-async function u(e, t) {
+  c = "GENERIC_REGEX_ERROR";
+async function d(e, s) {
   if (null == e.triggerMetadata.regexPatterns || 0 === e.triggerMetadata.regexPatterns.length) {
-    t([]);
+    s([]);
     return
   }
   try {
-    await (0, i.validateAutomodRule)(e), t([])
-  } catch (i) {
-    var s, a;
-    let e = new n.APIError(i).errors;
-    if (!("object" == typeof(s = e) && (null == s ? void 0 : null === (a = s.trigger_metadata) || void 0 === a ? void 0 : a.regex_patterns) != null)) return;
-    let l = function(e) {
-      var t;
-      let s = null == e ? void 0 : null === (t = e.trigger_metadata) || void 0 === t ? void 0 : t.regex_patterns;
-      return null == s ? [] : function(e) {
+    await (0, a.qY)(e), s([])
+  } catch (a) {
+    var t, n;
+    let e = new l.Hx(a).errors;
+    if (!("object" == typeof(t = e) && (null == t ? void 0 : null === (n = t.trigger_metadata) || void 0 === n ? void 0 : n.regex_patterns) != null)) return;
+    let i = function(e) {
+      var s;
+      let t = null == e ? void 0 : null === (s = e.trigger_metadata) || void 0 === s ? void 0 : s.regex_patterns;
+      return null == t ? [] : function(e) {
         let {
-          [o]: t = [], ...s
-        } = e, a = Object.entries(s).map(e => {
-          var t;
-          let [s, a] = e, l = a[o], {
-            code: n,
-            message: i
-          } = null !== (t = null == l ? void 0 : l[0]) && void 0 !== t ? t : {
-            code: d,
-            message: r.default.Messages.GUILD_AUTOMOD_REGEX_GENERIC_SAVE_ERROR
+          [o]: s = [], ...t
+        } = e, n = Object.entries(t).map(e => {
+          var s;
+          let [t, n] = e, i = n[o], {
+            code: l,
+            message: a
+          } = null !== (s = null == i ? void 0 : i[0]) && void 0 !== s ? s : {
+            code: c,
+            message: r.Z.Messages.GUILD_AUTOMOD_REGEX_GENERIC_SAVE_ERROR
           };
           return {
-            pattern: s,
-            message: i,
-            code: n,
-            description: null == a ? void 0 : a.description,
-            erroringCharacterLength: null == a ? void 0 : a.erroring_character_length,
-            erroringCharacterOffset: null == a ? void 0 : a.erroring_character_offset,
-            regexErrorCode: null == a ? void 0 : a.regex_error_code
+            pattern: t,
+            message: a,
+            code: l,
+            description: null == n ? void 0 : n.description,
+            erroringCharacterLength: null == n ? void 0 : n.erroring_character_length,
+            erroringCharacterOffset: null == n ? void 0 : n.erroring_character_offset,
+            regexErrorCode: null == n ? void 0 : n.regex_error_code
           }
         });
-        if (t.length > 0) {
-          var l, n, i, u;
-          a.push({
+        if (s.length > 0) {
+          var i, l, a, d;
+          n.push({
             pattern: o,
-            message: null !== (i = null === (l = t[0]) || void 0 === l ? void 0 : l.message) && void 0 !== i ? i : r.default.Messages.GUILD_AUTOMOD_REGEX_GENERIC_SAVE_ERROR,
-            code: null !== (u = null === (n = t[0]) || void 0 === n ? void 0 : n.code) && void 0 !== u ? u : d
+            message: null !== (a = null === (i = s[0]) || void 0 === i ? void 0 : i.message) && void 0 !== a ? a : r.Z.Messages.GUILD_AUTOMOD_REGEX_GENERIC_SAVE_ERROR,
+            code: null !== (d = null === (l = s[0]) || void 0 === l ? void 0 : l.code) && void 0 !== d ? d : c
           })
         }
-        return a
-      }(s)
+        return n
+      }(t)
     }(e);
-    l.length > 0 && t(l)
+    i.length > 0 && s(i)
   }
 }
-let c = (0, l.throttle)(u, 1e3, {
+let u = (0, i.throttle)(d, 1e3, {
   leading: !1
 });
 
-function E(e, t) {
-  var s, n;
-  let [i, r] = a.useState([]), [o, d] = a.useState(null), [E, _] = a.useState(null !== (n = null == e ? void 0 : null === (s = e.triggerMetadata) || void 0 === s ? void 0 : s.regexPatterns) && void 0 !== n ? n : []), I = a.useCallback(t => {
-    !(t.length < 3) && c({
+function E(e, s) {
+  var t, l;
+  let [a, r] = n.useState([]), [o, c] = n.useState(null), [E, _] = n.useState(null !== (l = null == e ? void 0 : null === (t = e.triggerMetadata) || void 0 === t ? void 0 : t.regexPatterns) && void 0 !== l ? l : []), I = n.useCallback(s => {
+    if (!(s.length < 3)) u({
       ...e,
       triggerMetadata: {
         ...e.triggerMetadata,
-        regexPatterns: [t]
+        regexPatterns: [s]
       }
     }, e => {
-      var t;
-      return d(null !== (t = e[0]) && void 0 !== t ? t : null)
+      var s;
+      return c(null !== (s = e[0]) && void 0 !== s ? s : null)
     })
   }, [e]);
   return {
     patterns: E,
-    errors: i,
+    errors: a,
     valueError: o,
-    validatePatternsChanged: a.useCallback((s, a) => {
-      !(0, l.isEqual)(s, a) && (c.cancel(), u({
+    validatePatternsChanged: n.useCallback((t, n) => {
+      if (!(0, i.isEqual)(t, n)) u.cancel(), d({
         ...e,
         triggerMetadata: {
           ...e.triggerMetadata,
-          regexPatterns: s
+          regexPatterns: t
         }
       }, e => {
-        r(e), 0 === e.length && d(null)
-      }), _(s), null == t || t(s))
-    }, [e, t]),
+        r(e), 0 === e.length && c(null)
+      }), _(t), null == s || s(t)
+    }, [e, s]),
     validateEditingValueChanged: I
   }
 }

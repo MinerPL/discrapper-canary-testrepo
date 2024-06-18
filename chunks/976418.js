@@ -1,10 +1,10 @@
 "use strict";
-var e = n("175440"),
+var e = n(175440),
   o = Math.floor,
   i = function(t, r) {
     var n = t.length,
-      c = o(n / 2);
-    return n < 8 ? u(t, r) : f(t, i(e(t, 0, c), r), i(e(t, c), r), r)
+      f = o(n / 2);
+    return n < 8 ? u(t, r) : c(t, i(e(t, 0, f), r), i(e(t, f), r), r)
   },
   u = function(t, r) {
     for (var n, e, o = t.length, i = 1; i < o;) {
@@ -13,8 +13,8 @@ var e = n("175440"),
     }
     return t
   },
-  f = function(t, r, n, e) {
-    for (var o = r.length, i = n.length, u = 0, f = 0; u < o || f < i;) t[u + f] = u < o && f < i ? 0 >= e(r[u], n[f]) ? r[u++] : n[f++] : u < o ? r[u++] : n[f++];
+  c = function(t, r, n, e) {
+    for (var o = r.length, i = n.length, u = 0, c = 0; u < o || c < i;) t[u + c] = u < o && c < i ? 0 >= e(r[u], n[c]) ? r[u++] : n[c++] : u < o ? r[u++] : n[c++];
     return t
   };
 t.exports = i

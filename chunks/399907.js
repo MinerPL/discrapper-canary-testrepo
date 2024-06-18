@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("956067"),
-  r = n("147913"),
-  s = n("70956"),
-  a = n("640795"),
-  o = n("139674");
-let l = 4 * s.default.Millis.HOUR;
-class u extends r.default {
+n(47120);
+var i = n(956067),
+  r = n(147913),
+  s = n(70956),
+  o = n(640795),
+  a = n(139674);
+let l = 4 * s.Z.Millis.HOUR;
+class u extends r.Z {
   _initialize() {
-    setTimeout(() => i.default.timeAsync("\uD83D\uDCBE", "getBlockedDomainList", () => o.default.getBlockedDomainList()), 1e3), setTimeout(() => (0, a.fetchBlockedDomainList)(), 10 * s.default.Millis.SECOND), this.intervalID = setInterval(a.fetchBlockedDomainList, l)
+    setTimeout(() => i.Z.timeAsync("\uD83D\uDCBE", "getBlockedDomainList", () => a.Z.getBlockedDomainList()), 1e3), setTimeout(() => (0, o.q)(), 10 * s.Z.Millis.SECOND), this.intervalID = setInterval(o.q, l)
   }
   _terminate() {
     clearInterval(this.intervalID)
@@ -23,4 +23,4 @@ class u extends r.default {
     }) : t[n] = i
   }
 }
-t.default = new u
+t.Z = new u

@@ -1,23 +1,22 @@
 "use strict";
-a.r(s);
-var t = a("735250");
-a("470079");
-var l = a("803997"),
-  i = a.n(l),
-  r = a("481060"),
-  d = a("450474"),
-  n = a("987134"),
-  o = a("296386"),
-  c = a("150192"),
-  E = a("731455"),
-  u = a("689938"),
-  S = a("190500");
-s.default = e => {
+var t = a(735250);
+a(470079);
+var i = a(120356),
+  r = a.n(i),
+  l = a(481060),
+  n = a(450474),
+  o = a(987134),
+  d = a(296386),
+  c = a(150192),
+  E = a(731455),
+  R = a(689938),
+  S = a(353964);
+s.Z = e => {
   let {
     guild: s,
     guildMetadata: a,
-    headerId: l
-  } = e, R = c.default.getPrimaryCategories().map(e => {
+    headerId: i
+  } = e, m = c.Z.getPrimaryCategories().map(e => {
     let {
       categoryId: s,
       name: a
@@ -32,51 +31,51 @@ s.default = e => {
     children: [(0, t.jsxs)("div", {
       className: S.content,
       children: [(0, t.jsx)("div", {
-        className: i()(S.stepImage, S.tagImage)
-      }), (0, t.jsx)(r.Heading, {
+        className: r()(S.stepImage, S.tagImage)
+      }), (0, t.jsx)(l.Heading, {
         variant: "heading-xl/semibold",
         className: S.header,
-        id: l,
-        children: u.default.Messages.SERVER_DISCOVERY_CATEGORY
-      }), (0, t.jsx)(r.Text, {
+        id: i,
+        children: R.Z.Messages.SERVER_DISCOVERY_CATEGORY
+      }), (0, t.jsx)(l.Text, {
         color: "none",
         variant: "text-md/normal",
         className: S.headerCaption,
-        children: u.default.Messages.SERVER_DISCOVERY_SEARCH_SUBHEADING
+        children: R.Z.Messages.SERVER_DISCOVERY_SEARCH_SUBHEADING
       })]
-    }), (0, t.jsxs)(r.FormSection, {
+    }), (0, t.jsxs)(l.FormSection, {
       className: S.form,
-      children: [(0, t.jsx)(r.FormTitle, {
+      children: [(0, t.jsx)(l.FormTitle, {
         required: !0,
-        children: u.default.Messages.SERVER_DISCOVERY_CATEGORY
-      }), (0, t.jsx)(r.FormText, {
-        type: r.FormTextTypes.DESCRIPTION,
+        children: R.Z.Messages.SERVER_DISCOVERY_CATEGORY
+      }), (0, t.jsx)(l.FormText, {
+        type: l.FormTextTypes.DESCRIPTION,
         className: S.description,
-        children: u.default.Messages.SERVER_DISCOVERY_CATEGORY_INPUT_SUBLABEL
-      }), (0, t.jsx)(n.default, {
-        value: a.primaryCategoryId === E.DEFAULT_DISCOVERY_CATEGORY_ID ? null : a.primaryCategoryId,
-        placeholder: u.default.Messages.SELECT,
+        children: R.Z.Messages.SERVER_DISCOVERY_CATEGORY_INPUT_SUBLABEL
+      }), (0, t.jsx)(o.Z, {
+        value: a.primaryCategoryId === E.o3 ? null : a.primaryCategoryId,
+        placeholder: R.Z.Messages.SELECT,
         searchable: !0,
         clearable: !1,
-        options: R,
+        options: m,
         onChange: e => {
           var a;
-          (null == s ? void 0 : s.id) != null && o.updateGuildPrimaryCategory(null == s ? void 0 : s.id, null !== (a = null == e ? void 0 : e.value) && void 0 !== a ? a : E.DEFAULT_DISCOVERY_CATEGORY_ID)
+          (null == s ? void 0 : s.id) != null && d.TA(null == s ? void 0 : s.id, null !== (a = null == e ? void 0 : e.value) && void 0 !== a ? a : E.o3)
         },
         maxMenuHeight: 250
       })]
-    }), (0, t.jsxs)(r.FormSection, {
+    }), (0, t.jsxs)(l.FormSection, {
       className: S.form,
-      children: [(0, t.jsx)(r.FormTitle, {
-        children: u.default.Messages.SERVER_DISCOVERY_SUBCATEGORY_INPUT_LABEL
-      }), (0, t.jsx)(r.FormText, {
-        type: r.FormTextTypes.DESCRIPTION,
+      children: [(0, t.jsx)(l.FormTitle, {
+        children: R.Z.Messages.SERVER_DISCOVERY_SUBCATEGORY_INPUT_LABEL
+      }), (0, t.jsx)(l.FormText, {
+        type: l.FormTextTypes.DESCRIPTION,
         className: S.description,
-        children: u.default.Messages.SERVER_DISCOVERY_SUBCATEGORY_INPUT_SUBLABEL
-      }), (0, t.jsx)(d.default, {
+        children: R.Z.Messages.SERVER_DISCOVERY_SUBCATEGORY_INPUT_SUBLABEL
+      }), (0, t.jsx)(n.Z, {
         guild: s,
         guildMetadata: a,
-        menuPlacement: n.default.MenuPlacements.TOP
+        menuPlacement: o.Z.MenuPlacements.TOP
       })]
     })]
   })

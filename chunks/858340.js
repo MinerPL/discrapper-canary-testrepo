@@ -1,32 +1,31 @@
 "use strict";
-n.r(t);
-var i, r, s, a, o = n("442837"),
-  l = n("570140"),
-  u = n("981631");
-let d = {};
-class _ extends(a = o.default.Store) {
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(981631);
+let _ = {};
+class d extends(o = a.ZP.Store) {
   getHookError(e) {
-    return d[e]
+    return _[e]
   }
 }
-s = "HookErrorStore", (r = "displayName") in(i = _) ? Object.defineProperty(i, r, {
+s = "HookErrorStore", (r = "displayName") in(i = d) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new _(l.default, {
+}) : i[r] = s, t.Z = new d(l.Z, {
   MEDIA_ENGINE_SET_GO_LIVE_SOURCE: function() {
-    d = {}
+    _ = {}
   },
   MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING: function() {
-    delete d[u.MediaEngineHookTypes.SOUND]
+    delete _[u.K3D.SOUND]
   },
   MEDIA_ENGINE_SOUNDSHARE_FAILED: function(e) {
     let {
       errorMessage: t,
       errorCode: n
     } = e;
-    d[u.MediaEngineHookTypes.SOUND] = {
+    _[u.K3D.SOUND] = {
       errorMessage: t,
       errorCode: n
     }

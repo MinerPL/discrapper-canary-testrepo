@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return i
   }
-}), n("47120");
-var r = n("470079"),
-  o = n("817080"),
-  s = n("579806"),
-  a = n("358085");
+}), n(47120);
+var r = n(470079),
+  o = n(817080),
+  s = n(579806),
+  a = n(358085);
 class i extends r.Component {
   getFileContents() {
     let {
@@ -16,7 +16,7 @@ class i extends r.Component {
     return "function" == typeof e && (e = e()), e
   }
   downloadNative(e, t) {
-    s.default.fileManager.saveWithDialog(e, t)
+    s.Z.fileManager.saveWithDialog(e, t)
   }
   downloadHtml5(e, t) {
     let n = new Blob([e], {

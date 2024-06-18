@@ -1,9 +1,9 @@
 "use strict";
-n.r(t), n("47120");
-var i, r = n("442837"),
-  a = n("570140");
+n(47120);
+var i, r = n(442837),
+  s = n(570140);
 
-function s(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -11,7 +11,7 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let o = {
+let a = {
     use_topic_dividers_in_chat: "Use summary topics as divider content in chat instead of string formatted dates.",
     highlight_redesigned_icons: "Highlight redesigned icons",
     alt_clips_1: "Use alt clip icon 1",
@@ -28,14 +28,14 @@ let o = {
     ss04: "Italic - alternate figures (3,4,5,6,7,8,9)"
   },
   l = {};
-class u extends(i = r.default.DeviceSettingsStore) {
+class u extends(i = r.ZP.DeviceSettingsStore) {
   getUserAgnosticState() {
     return {
       toggleStates: l
     }
   }
   initialize(e) {
-    for (var t in o) {
+    for (var t in a) {
       var n, i;
       let r = null !== (i = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== i && i;
       l[t] = r
@@ -54,11 +54,11 @@ class u extends(i = r.default.DeviceSettingsStore) {
   allWithDescriptions() {
     return Object.entries(l).map(e => {
       let [t, n] = e;
-      return [t, n, o[t]]
+      return [t, n, a[t]]
     })
   }
 }
-s(u, "displayName", "DevToolsDesignTogglesStore"), s(u, "persistKey", "DevToolsDesignTogglesStore"), t.default = new u(a.default, {
+o(u, "displayName", "DevToolsDesignTogglesStore"), o(u, "persistKey", "DevToolsDesignTogglesStore"), t.Z = new u(s.Z, {
   DEV_TOOLS_DESIGN_TOGGLE_WEB_SET: function(e) {
     l[e.toggle] = e.value
   }

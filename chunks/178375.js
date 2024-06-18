@@ -1,10 +1,10 @@
 "use strict";
-var n = r("310176"),
-  i = r("379846"),
-  o = r("292489"),
-  a = r("586968"),
-  u = r("685536"),
-  s = r("840513");
+var n = r(310176),
+  i = r(379846),
+  o = r(292489),
+  a = r(586968),
+  u = r(685536),
+  s = r(840513);
 t.exports = function(t, e) {
   var r, c = t._latestEditorState,
     l = c.getSelection(),

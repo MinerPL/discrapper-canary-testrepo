@@ -1,7 +1,7 @@
 "use strict";
-var r, i = n("903799"),
-  a = n("814084"),
-  o = n("685053").assert;
+var r, i = n(903799),
+  a = n(814084),
+  o = n(685053).assert;
 
 function s(e) {
   "short" === e.type ? this.curve = new a.short(e) : "edwards" === e.type ? this.curve = new a.edwards(e) : this.curve = new a.mont(e), this.g = this.curve.g, this.n = this.curve.n, this.hash = e.hash, o(this.g.validate(), "Invalid curve"), o(this.g.mul(this.n).isInfinity(), "Invalid curve, G*N != O")
@@ -94,7 +94,7 @@ t.PresetCurve = s, u("p192", {
   g: ["216936d3cd6e53fec0a4e231fdd6dc5c692cc7609525a7b2c9562d608f25d51a", "6666666666666666666666666666666666666666666666666666666666666658"]
 });
 try {
-  r = n("542610")
+  r = n(542610)
 } catch (e) {
   r = void 0
 }

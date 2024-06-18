@@ -1,23 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
-  createDragDropActions: function() {
-    return c
+n.d(t, {
+  W1: function() {
+    return u
   }
 });
-var r = n("59973"),
-  i = n("202373"),
-  a = n("556532"),
-  o = n("509883"),
-  s = n("713011"),
-  u = n("964742");
+var r = n(59973),
+  i = n(202373),
+  a = n(556532),
+  o = n(509883),
+  s = n(713011);
 
-function c(e) {
+function u(e) {
   return {
-    beginDrag: (0, r.createBeginDrag)(e),
-    publishDragSource: (0, i.createPublishDragSource)(e),
-    hover: (0, a.createHover)(e),
-    drop: (0, o.createDrop)(e),
-    endDrag: (0, s.createEndDrag)(e)
+    beginDrag: (0, r.m)(e),
+    publishDragSource: (0, i.U)(e),
+    hover: (0, a.s)(e),
+    drop: (0, o._)(e),
+    endDrag: (0, s.F)(e)
   }
 }
-n.es(u, t)

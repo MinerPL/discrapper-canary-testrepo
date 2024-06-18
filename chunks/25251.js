@@ -1,25 +1,27 @@
 "use strict";
 let i, r;
-n.r(t);
-var a, s, o, l, u = n("392711"),
-  d = n("442837"),
-  _ = n("570140"),
-  c = n("358085"),
-  E = n("729436");
+var s, o, a, l, u = n(392711),
+  _ = n(442837),
+  d = n(570140),
+  c = n(358085),
+  E = n(729436);
 let I = [],
   T = !1;
-let f = I,
+let h = I,
   S = {},
-  h = null;
-let A = 0,
-  m = e => {
-    f = (0, u.cloneDeep)(e);
+  f = null;
+let N = 0,
+  A = e => {
+    h = (0, u.cloneDeep)(e);
     let t = {};
-    f.forEach(e => {
-      t[e.id] = (0, c.isAndroid)() ? (0, E.applyPatches)(e) : e
+    h.forEach(e => {
+      t[e.id] = (0, c.isAndroid)() ? (0, E.Q)(e) : e
     }), S = t
+  },
+  m = () => {
+    T = !1, A(I), f = null, r = void 0
   };
-class N extends(l = d.default.Store) {
+class O extends(l = _.ZP.Store) {
   get isFetching() {
     return T
   }
@@ -27,10 +29,10 @@ class N extends(l = d.default.Store) {
     return i
   }
   get profileEffects() {
-    return f
+    return h
   }
   get tryItOutId() {
-    return h
+    return f
   }
   canFetch() {
     return null == r || Date.now() >= r
@@ -42,12 +44,12 @@ class N extends(l = d.default.Store) {
     return null != e ? S[e] : void 0
   }
 }
-o = "ProfileEffectStore", (s = "displayName") in(a = N) ? Object.defineProperty(a, s, {
-  value: o,
+a = "ProfileEffectStore", (o = "displayName") in(s = O) ? Object.defineProperty(s, o, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = o, t.default = new N(_.default, {
+}) : s[o] = a, t.Z = new O(d.Z, {
   USER_PROFILE_EFFECTS_FETCH: () => {
     T = !0
   },
@@ -55,21 +57,21 @@ o = "ProfileEffectStore", (s = "displayName") in(a = N) ? Object.defineProperty(
     let {
       profileEffects: t
     } = e;
-    T = !1, i = void 0, r = Date.now() + 3e5, A = 0, m(0 === t.length ? I : t)
+    T = !1, i = void 0, r = Date.now() + 3e5, N = 0, A(0 === t.length ? I : t)
   },
   USER_PROFILE_EFFECTS_FETCH_FAILURE: e => {
     let {
       error: t
     } = e;
-    T = !1, i = t, r = Date.now() + Math.min(6e4 * 2 ** A, 36e5), ++A, m(I)
+    T = !1, i = t, r = Date.now() + Math.min(6e4 * 2 ** N, 36e5), ++N, A(I)
   },
   PROFILE_EFFECTS_SET_TRY_IT_OUT: e => {
     let {
       id: t
     } = e;
-    h = t
+    f = t
   },
   LOGOUT: e => {
-    T = !1, m(I), h = null
+    m()
   }
 })

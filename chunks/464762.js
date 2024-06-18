@@ -1,5 +1,5 @@
 "use strict";
-var n = r("581079");
+var n = r(581079);
 t.exports = function(t, e) {
   var r = [];
   return t.findEntityRanges(function(t) {

@@ -1,130 +1,130 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return h
+n.d(t, {
+  Z: function() {
+    return f
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
-  o = n("481060"),
-  l = n("166459"),
-  u = n("53281"),
-  d = n("476326"),
-  _ = n("703558"),
-  c = n("117530"),
-  E = n("859235"),
-  I = n("898463"),
-  T = n("981631"),
-  f = n("790544"),
-  S = n("451328");
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(481060),
+  l = n(166459),
+  u = n(53281),
+  _ = n(476326),
+  d = n(703558),
+  c = n(117530),
+  E = n(859235),
+  I = n(898463),
+  T = n(981631),
+  h = n(790544),
+  S = n(451328);
 
-function h(e) {
+function f(e) {
   let {
     channelId: t,
     option: n,
-    keyboardModeEnabled: a
-  } = e, h = r.useRef(null), [A, m] = r.useState(!1), N = c.default.getUpload(t, n.name, _.DraftType.SlashCommand), p = r.useRef(null), O = r.useCallback(() => {
-    m(!0)
+    keyboardModeEnabled: s
+  } = e, f = r.useRef(null), [N, A] = r.useState(!1), m = c.Z.getUpload(t, n.name, d.d.SlashCommand), O = r.useRef(null), R = r.useCallback(() => {
+    A(!0)
   }, []), C = r.useCallback(() => {
-    m(!1)
-  }, []), R = r.useCallback(e => {
+    A(!1)
+  }, []), p = r.useCallback(e => {
     var i;
-    m(!1);
+    A(!1);
     let r = {
       id: n.name,
       file: null === (i = e.dataTransfer) || void 0 === i ? void 0 : i.files[0],
-      platform: d.UploadPlatform.WEB
+      platform: _.ow.WEB
     };
-    l.default.setFile({
+    l.Z.setFile({
       channelId: t,
       id: n.name,
       file: r,
-      draftType: _.DraftType.SlashCommand
+      draftType: d.d.SlashCommand
     })
   }, [t, n]);
   return (r.useEffect(() => {
-    let e = p.current;
-    return null == N && (null == e || e.addEventListener("dragover", O, !1), null == e || e.addEventListener("dragleave", C, !1), null == e || e.addEventListener("drop", R, !1)), () => {
-      null == e || e.removeEventListener("dragover", O, !1), null == e || e.removeEventListener("dragleave", C, !1), null == e || e.removeEventListener("drop", R, !1)
+    let e = O.current;
+    return null == m && (null == e || e.addEventListener("dragover", R, !1), null == e || e.addEventListener("dragleave", C, !1), null == e || e.addEventListener("drop", p, !1)), () => {
+      null == e || e.removeEventListener("dragover", R, !1), null == e || e.removeEventListener("dragleave", C, !1), null == e || e.removeEventListener("drop", p, !1)
     }
-  }, [N, O, C, R]), null != N) ? (0, i.jsx)(I.default, {
+  }, [m, R, C, p]), null != m) ? (0, i.jsx)(I.Z, {
     channelId: t,
-    upload: N,
-    keyboardModeEnabled: a,
-    draftType: _.DraftType.SlashCommand,
+    upload: m,
+    keyboardModeEnabled: s,
+    draftType: d.d.SlashCommand,
     label: (0, i.jsxs)(r.Fragment, {
-      children: [(0, i.jsxs)(o.Text, {
+      children: [(0, i.jsxs)(a.Text, {
         tag: "span",
         variant: "text-md/normal",
         children: [n.name, ": "]
-      }), (0, i.jsx)(o.Text, {
+      }), (0, i.jsx)(a.Text, {
         tag: "span",
         variant: "text-md/normal",
         color: "text-brand",
-        children: N.filename
+        children: m.filename
       })]
     }),
     canEdit: !1
-  }) : (0, i.jsxs)(E.default, {
+  }) : (0, i.jsxs)(E.Z, {
     id: n.name,
     channelId: t,
-    keyboardModeEnabled: a,
+    keyboardModeEnabled: s,
     onKeyDown: e => {
-      if (e.which === T.KeyboardKeys.ENTER) {
+      if (e.which === T.yXg.ENTER) {
         var t;
-        e.preventDefault(), null === (t = h.current) || void 0 === t || t.activateUploadDialogue()
+        e.preventDefault(), null === (t = f.current) || void 0 === t || t.activateUploadDialogue()
       }
     },
-    className: s()(f.emptyOption, {
-      [f.emptyOptionActive]: A
+    className: o()(h.emptyOption, {
+      [h.emptyOptionActive]: N
     }),
-    draftType: _.DraftType.SlashCommand,
-    ref: p,
+    draftType: d.d.SlashCommand,
+    ref: O,
     children: [(0, i.jsx)("span", {
-      className: s()(f.optionName, {
-        [f.optionNameActive]: A
+      className: o()(h.optionName, {
+        [h.optionNameActive]: N
       }),
       children: n.name
-    }), (0, i.jsx)(o.Clickable, {
-      className: f.clickContainer,
+    }), (0, i.jsx)(a.Clickable, {
+      className: h.clickContainer,
       onClick: () => {
         var e;
-        return null === (e = h.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
+        return null === (e = f.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
       },
       children: (0, i.jsxs)("div", {
-        className: f.commandOptionContainer,
+        className: h.commandOptionContainer,
         children: [(0, i.jsx)("img", {
           src: S,
-          className: f.optionIcon,
+          className: h.optionIcon,
           alt: ""
-        }), (0, i.jsx)(o.Text, {
-          className: f.optionHelp,
+        }), (0, i.jsx)(a.Text, {
+          className: h.optionHelp,
           variant: "text-sm/normal",
           children: "Drag and drop or click to upload file"
-        }), (0, i.jsx)(u.default, {
-          ref: h,
+        }), (0, i.jsx)(u.Z, {
+          ref: f,
           onChange: e => {
             var i, r;
             if (null != t && (null === (r = e.currentTarget) || void 0 === r ? void 0 : null === (i = r.files) || void 0 === i ? void 0 : i[0]) != null) {
               let i = {
                 id: n.name,
                 file: e.currentTarget.files[0],
-                platform: d.UploadPlatform.WEB
+                platform: _.ow.WEB
               };
-              l.default.setFile({
+              l.Z.setFile({
                 channelId: t,
                 id: n.name,
                 file: i,
-                draftType: _.DraftType.SlashCommand
+                draftType: d.d.SlashCommand
               }), e.currentTarget.value = ""
             }
           },
           multiple: !1,
           tabIndex: -1,
           "aria-hidden": !0,
-          className: f.fileInput
+          className: h.fileInput
         })]
       })
     })]

@@ -1,18 +1,18 @@
 "use strict";
-s.r(t), s("47120");
-var r = s("735250"),
-  n = s("470079"),
-  a = s("481060"),
-  i = s("816814"),
-  l = s("200483"),
-  o = s("594174"),
-  d = s("285952"),
-  c = s("277390"),
-  u = s("287880"),
-  h = s("689938"),
-  f = s("177679");
+s.r(t), s(47120);
+var n = s(735250),
+  r = s(470079),
+  i = s(481060),
+  a = s(816814),
+  o = s(200483),
+  l = s(594174),
+  c = s(285952),
+  d = s(277390),
+  u = s(287880),
+  h = s(689938),
+  g = s(225576);
 
-function g(e, t, s) {
+function f(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -24,173 +24,173 @@ let p = e => {
   let {
     image: t,
     label: s,
-    text: n,
-    children: i
+    text: r,
+    children: a
   } = e;
-  return (0, r.jsxs)(d.default, {
-    className: f.spacing,
-    children: [(0, r.jsx)(d.default, {
+  return (0, n.jsxs)(c.Z, {
+    className: g.spacing,
+    children: [(0, n.jsx)(c.Z, {
       grow: 0,
       shrink: 0,
       basis: "156px",
-      justify: d.default.Justify.CENTER,
-      className: f.image,
+      justify: c.Z.Justify.CENTER,
+      className: g.image,
       children: t
-    }), (0, r.jsx)(d.default, {
-      direction: d.default.Direction.VERTICAL,
-      justify: d.default.Justify.CENTER,
-      children: (0, r.jsxs)("div", {
-        children: [(0, r.jsx)(a.FormTitle, {
+    }), (0, n.jsx)(c.Z, {
+      direction: c.Z.Direction.VERTICAL,
+      justify: c.Z.Justify.CENTER,
+      children: (0, n.jsxs)("div", {
+        children: [(0, n.jsx)(i.FormTitle, {
           tag: "h5",
-          className: f.headerSpacing,
+          className: g.headerSpacing,
           children: s
-        }), (0, r.jsx)(a.FormText, {
-          type: a.FormText.Types.DESCRIPTION,
-          children: n
-        }), i]
+        }), (0, n.jsx)(i.FormText, {
+          type: i.FormText.Types.DESCRIPTION,
+          children: r
+        }), a]
       })
     })]
   })
 };
-class m extends n.PureComponent {
+class m extends r.PureComponent {
   render() {
     var e;
     let {
       transitionState: t,
-      onClose: n
+      onClose: r
     } = this.props, {
-      totpSecret: i,
-      code: l,
-      isVerifying: g
-    } = this.state, m = null === (e = o.default.getCurrentUser()) || void 0 === e ? void 0 : e.email, x = (0, u.encodeTotpSecretAsUrl)(null != m ? m : "", i), v = (0, r.jsx)("form", {
+      totpSecret: a,
+      code: o,
+      isVerifying: f
+    } = this.state, m = null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.email, x = (0, u.U0)(null != m ? m : "", a), v = (0, n.jsx)("form", {
       onSubmit: this.handleActivate,
-      children: (0, r.jsxs)(d.default, {
-        className: f.inputContainer,
-        align: d.default.Align.START,
-        children: [(0, r.jsx)(a.TextInput, {
-          value: l,
-          className: f.input,
+      children: (0, n.jsxs)(c.Z, {
+        className: g.inputContainer,
+        align: c.Z.Align.START,
+        children: [(0, n.jsx)(i.TextInput, {
+          value: o,
+          className: g.input,
           placeholder: "000 000",
           maxLength: 7,
           autoComplete: "one-time-code",
           onChange: this.handleCodeChange,
           error: this.state.error,
           autoFocus: !0
-        }), (0, r.jsx)(d.default.Child, {
+        }), (0, n.jsx)(c.Z.Child, {
           grow: 0,
           shrink: 0,
-          children: (0, r.jsx)(a.Button, {
+          children: (0, n.jsx)(i.Button, {
             type: "submit",
-            submitting: g,
-            children: h.default.Messages.TWO_FA_ACTIVATE
+            submitting: f,
+            children: h.Z.Messages.TWO_FA_ACTIVATE
           })
         })]
       })
     });
-    return (0, r.jsxs)(a.ModalRoot, {
+    return (0, n.jsxs)(i.ModalRoot, {
       transitionState: t,
-      size: a.ModalSize.DYNAMIC,
-      className: f.customWidth,
-      children: [(0, r.jsxs)(a.ModalHeader, {
+      size: i.ModalSize.DYNAMIC,
+      className: g.customWidth,
+      children: [(0, n.jsxs)(i.ModalHeader, {
         separator: !1,
-        children: [(0, r.jsxs)(d.default.Child, {
+        children: [(0, n.jsxs)(c.Z.Child, {
           grow: 1,
           shrink: 1,
-          children: [(0, r.jsx)(a.Heading, {
+          children: [(0, n.jsx)(i.Heading, {
             variant: "heading-lg/semibold",
-            children: h.default.Messages.TWO_FA_ENABLE
-          }), (0, r.jsx)(a.Text, {
+            children: h.Z.Messages.TWO_FA_ENABLE
+          }), (0, n.jsx)(i.Text, {
             variant: "text-xs/normal",
-            className: f.subHeader,
-            children: h.default.Messages.TWO_FA_ENABLE_SUBHEADER
+            className: g.subHeader,
+            children: h.Z.Messages.TWO_FA_ENABLE_SUBHEADER
           })]
-        }), (0, r.jsx)(d.default.Child, {
+        }), (0, n.jsx)(c.Z.Child, {
           grow: 0,
-          children: (0, r.jsx)(a.ModalCloseButton, {
-            onClick: n
+          children: (0, n.jsx)(i.ModalCloseButton, {
+            onClick: r
           })
         })]
-      }), (0, r.jsxs)(a.ModalContent, {
-        children: [(0, r.jsx)(p, {
-          image: (0, r.jsx)("img", {
+      }), (0, n.jsxs)(i.ModalContent, {
+        children: [(0, n.jsx)(p, {
+          image: (0, n.jsx)("img", {
             alt: "",
-            src: s("340061"),
+            src: s(340061),
             width: 100,
             height: 100
           }),
-          label: h.default.Messages.TWO_FA_DOWNLOAD_APP_LABEL,
-          text: h.default.Messages.TWO_FA_DOWNLOAD_APP_BODY.format({
+          label: h.Z.Messages.TWO_FA_DOWNLOAD_APP_LABEL,
+          text: h.Z.Messages.TWO_FA_DOWNLOAD_APP_BODY.format({
             googleAuthURL: "https://support.google.com/accounts/answer/1066447?hl=en",
             authyURL: "https://www.authy.com/"
           })
-        }), (0, r.jsx)(a.FormDivider, {
-          className: f.divider
-        }), (0, r.jsx)(p, {
-          image: (0, r.jsx)(c.default, {
+        }), (0, n.jsx)(i.FormDivider, {
+          className: g.divider
+        }), (0, n.jsx)(p, {
+          image: (0, n.jsx)(d.ZP, {
             text: x
           }),
-          label: h.default.Messages.TWO_FA_QR_LABEL,
-          text: h.default.Messages.TWO_FA_QR_BODY,
-          children: (0, r.jsxs)("div", {
-            className: f.topSpacing,
-            children: [(0, r.jsx)(a.FormTitle, {
+          label: h.Z.Messages.TWO_FA_QR_LABEL,
+          text: h.Z.Messages.TWO_FA_QR_BODY,
+          children: (0, n.jsxs)("div", {
+            className: g.topSpacing,
+            children: [(0, n.jsx)(i.FormTitle, {
               tag: "h5",
-              className: f.headerSpacing,
-              children: h.default.Messages.TWO_FA_KEY
-            }), (0, r.jsx)(a.Text, {
+              className: g.headerSpacing,
+              children: h.Z.Messages.TWO_FA_KEY
+            }), (0, n.jsx)(i.Text, {
               variant: "text-md/normal",
-              className: f.secret,
+              className: g.secret,
               selectable: !0,
-              children: i
+              children: a
             })]
           })
-        }), (0, r.jsx)(a.FormDivider, {
-          className: f.divider
-        }), (0, r.jsx)(p, {
-          image: (0, r.jsx)("img", {
+        }), (0, n.jsx)(i.FormDivider, {
+          className: g.divider
+        }), (0, n.jsx)(p, {
+          image: (0, n.jsx)("img", {
             alt: "",
-            src: s("308777")
+            src: s(308777)
           }),
-          label: h.default.Messages._TWO_FA_LOGIN_LABEL,
-          text: h.default.Messages.TWO_FA_LOGIN_BODY,
+          label: h.Z.Messages._TWO_FA_LOGIN_LABEL,
+          text: h.Z.Messages.TWO_FA_LOGIN_BODY,
           children: v
         })]
       })]
     })
   }
   constructor(...e) {
-    super(...e), g(this, "state", {
+    super(...e), f(this, "state", {
       code: "",
-      totpSecret: (0, u.generateTotpSecret)(),
+      totpSecret: (0, u.bV)(),
       error: null,
       isVerifying: !1
-    }), g(this, "handleCodeChange", e => {
+    }), f(this, "handleCodeChange", e => {
       this.setState({
         code: e
       })
-    }), g(this, "handleActivate", e => {
+    }), f(this, "handleActivate", e => {
       e.preventDefault();
       let {
         password: t,
         emailToken: s
       } = this.props, {
-        totpSecret: r,
-        code: n
+        totpSecret: n,
+        code: r
       } = this.state;
       this.setState({
         isVerifying: !0
-      }), i.default.enable({
+      }), a.Z.enable({
         password: t,
-        code: n,
-        secret: (0, u.encodeTotpSecret)(r),
-        ...(0, l.isMfaEmailVerificationEnabled)() && {
+        code: r,
+        secret: (0, u.Qe)(n),
+        ...(0, o.j)() && {
           emailToken: s
         }
       }).then(this.handleActivateSuccess, e => this.setState({
         error: e.body.message,
         isVerifying: !1
       }))
-    }), g(this, "handleActivateSuccess", () => {
+    }), f(this, "handleActivateSuccess", () => {
       let {
         onClose: e,
         handleEnableMFASuccess: t

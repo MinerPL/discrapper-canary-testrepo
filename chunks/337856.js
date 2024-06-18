@@ -1,7 +1,7 @@
 "use strict";
-var e = n("926515"),
-  o = n("354848"),
-  i = n("622281"),
+var e = n(926515),
+  o = n(354848),
+  i = n(622281),
   u = TypeError;
 t.exports = function(t, r) {
   var n, c;

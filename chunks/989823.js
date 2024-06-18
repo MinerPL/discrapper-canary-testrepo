@@ -1,7 +1,6 @@
 "use strict";
-n.r(t);
-var i = n("888618"),
-  r = n("482682");
+var i = n(888618),
+  r = n(482682);
 
 function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -11,7 +10,7 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-t.default = class e {
+t.Z = class e {
   initialize() {
     this.img = new Image, this.img.onload = () => {
       this.loaded = !0
@@ -27,13 +26,13 @@ t.default = class e {
     this.img = null, this.loaded = !1, this.isFilled = !1, this.alpha = 0, this.unbind()
   }
   update(e) {
-    this.loaded && (!this.isFilled && this.alpha < 1 ? this.alpha = Math.min(1, this.alpha + e) : this.isFilled && this.alpha > 0 && (this.alpha = Math.max(0, this.alpha - 3 * e)), this.velX += (0, i.applySpringForce)(this.targetX, this.x, this.velX, this.spring) * e, this.velY += (0, i.applySpringForce)(this.targetY, this.y, this.velY, this.spring) * e, this.x += this.velX * e, this.y += this.velY * e)
+    if (!!this.loaded) !this.isFilled && this.alpha < 1 ? this.alpha = Math.min(1, this.alpha + e) : this.isFilled && this.alpha > 0 && (this.alpha = Math.max(0, this.alpha - 3 * e)), this.velX += (0, i.B)(this.targetX, this.x, this.velX, this.spring) * e, this.velY += (0, i.B)(this.targetY, this.y, this.velY, this.spring) * e, this.x += this.velX * e, this.y += this.velY * e
   }
   render(e) {
     let {
       img: t
     } = this;
-    this.loaded && null != t && (e.save(), e.globalCompositeOperation = "source-atop", e.globalAlpha = this.alpha, e.drawImage(t, this.x + 20, this.y + 20), e.restore())
+    if (!!this.loaded && null != t) e.save(), e.globalCompositeOperation = "source-atop", e.globalAlpha = this.alpha, e.drawImage(t, this.x + 20, this.y + 20), e.restore()
   }
   fill() {
     this.isFilled = !0

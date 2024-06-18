@@ -1,45 +1,45 @@
 "use strict";
-n.r(e), n.d(e, {
-  addItemToEnvelope: function() {
-    return s
-  },
-  createAttachmentEnvelopeItem: function() {
-    return p
-  },
-  createEnvelope: function() {
+n.d(e, {
+  BO: function() {
     return o
   },
-  createEventEnvelopeHeaders: function() {
-    return m
-  },
-  envelopeContainsItemType: function() {
-    return c
-  },
-  envelopeItemTypeToDataCategory: function() {
-    return _
-  },
-  forEachEnvelopeItem: function() {
-    return u
-  },
-  getSdkMetadataForEnvelopeHeader: function() {
+  Cd: function() {
     return g
   },
-  parseEnvelope: function() {
-    return f
+  HY: function() {
+    return m
   },
-  serializeEnvelope: function() {
+  Jd: function() {
+    return a
+  },
+  R: function() {
+    return l
+  },
+  V$: function() {
     return d
+  },
+  f4: function() {
+    return h
+  },
+  gv: function() {
+    return u
+  },
+  mL: function() {
+    return p
+  },
+  zQ: function() {
+    return _
   }
 });
-var r = n("177668"),
-  i = n("10674"),
-  a = n("442853");
+var r = n(177668),
+  i = n(10674),
+  s = n(442853);
 
-function o(t, e = []) {
+function a(t, e = []) {
   return [t, e]
 }
 
-function s(t, e) {
+function o(t, e) {
   let [n, r] = t;
   return [n, [...r, e]]
 }
@@ -52,45 +52,44 @@ function u(t, e) {
   return !1
 }
 
-function c(t, e) {
+function l(t, e) {
   return u(t, (t, n) => e.includes(n))
 }
 
-function l(t, e) {
+function c(t, e) {
   return (e || new TextEncoder).encode(t)
 }
 
 function d(t, e) {
-  let [n, r] = t, a = JSON.stringify(n);
+  let [n, r] = t, s = JSON.stringify(n);
 
-  function o(t) {
-    "string" == typeof a ? a = "string" == typeof t ? a + t : [l(a, e), t] : a.push("string" == typeof t ? l(t, e) : t)
+  function a(t) {
+    "string" == typeof s ? s = "string" == typeof t ? s + t : [c(s, e), t] : s.push("string" == typeof t ? c(t, e) : t)
   }
   for (let t of r) {
     let [e, n] = t;
-    if (o(`
+    if (a(`
 ${JSON.stringify(e)}
-`), "string" == typeof n || n instanceof Uint8Array) o(n);
+`), "string" == typeof n || n instanceof Uint8Array) a(n);
     else {
       let t;
       try {
         t = JSON.stringify(n)
       } catch (e) {
-        t = JSON.stringify((0, i.normalize)(n))
+        t = JSON.stringify((0, i.Fv)(n))
       }
-      o(t)
+      a(t)
     }
   }
-  return "string" == typeof a ? a : function(t) {
-    let e = t.reduce((t, e) => t + e.length, 0),
-      n = new Uint8Array(e),
-      r = 0;
-    for (let e of t) n.set(e, r), r += e.length;
-    return n
-  }(a)
+  return "string" == typeof s ? s : function(t) {
+    let e = new Uint8Array(t.reduce((t, e) => t + e.length, 0)),
+      n = 0;
+    for (let r of t) e.set(r, n), n += r.length;
+    return e
+  }(s)
 }
 
-function f(t, e, n) {
+function h(t, e, n) {
   let r = "string" == typeof t ? e.encode(t) : t;
 
   function i(t) {
@@ -98,23 +97,23 @@ function f(t, e, n) {
     return r = r.subarray(t + 1), e
   }
 
-  function a() {
+  function s() {
     let t = r.indexOf(10);
     return t < 0 && (t = r.length), JSON.parse(n.decode(i(t)))
   }
-  let o = a(),
-    s = [];
+  let a = s(),
+    o = [];
   for (; r.length;) {
-    let t = a(),
+    let t = s(),
       e = "number" == typeof t.length ? t.length : void 0;
-    s.push([t, e ? i(e) : a()])
+    o.push([t, e ? i(e) : s()])
   }
-  return [o, s]
+  return [a, o]
 }
 
-function p(t, e) {
-  let n = "string" == typeof t.data ? l(t.data, e) : t.data;
-  return [(0, a.dropUndefinedKeys)({
+function _(t, e) {
+  let n = "string" == typeof t.data ? c(t.data, e) : t.data;
+  return [(0, s.Jr)({
     type: "attachment",
     length: n.length,
     filename: t.filename,
@@ -122,7 +121,7 @@ function p(t, e) {
     attachment_type: t.attachmentType
   }), n]
 }
-let h = {
+let f = {
   session: "session",
   sessions: "session",
   attachment: "attachment",
@@ -136,11 +135,11 @@ let h = {
   check_in: "monitor"
 };
 
-function _(t) {
-  return h[t]
+function p(t) {
+  return f[t]
 }
 
-function g(t) {
+function m(t) {
   if (!t || !t.sdk) return;
   let {
     name: e,
@@ -152,8 +151,8 @@ function g(t) {
   }
 }
 
-function m(t, e, n, i) {
-  let o = t.sdkProcessingMetadata && t.sdkProcessingMetadata.dynamicSamplingContext;
+function g(t, e, n, i) {
+  let a = t.sdkProcessingMetadata && t.sdkProcessingMetadata.dynamicSamplingContext;
   return {
     event_id: t.event_id,
     sent_at: new Date().toISOString(),
@@ -161,11 +160,11 @@ function m(t, e, n, i) {
       sdk: e
     },
     ...!!n && {
-      dsn: (0, r.dsnToString)(i)
+      dsn: (0, r.RA)(i)
     },
-    ...o && {
-      trace: (0, a.dropUndefinedKeys)({
-        ...o
+    ...a && {
+      trace: (0, s.Jr)({
+        ...a
       })
     }
   }

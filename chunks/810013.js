@@ -1,36 +1,36 @@
 "use strict";
-l.r(t), l.d(t, {
-  default: function() {
-    return f
+n.d(t, {
+  Z: function() {
+    return m
   }
 });
-var a = l("735250");
-l("470079");
-var s = l("442837"),
-  n = l("481060"),
-  i = l("314897"),
-  r = l("938475"),
-  u = l("499596"),
-  o = l("537135"),
-  d = l("689938"),
-  c = l("223318");
+var l = n(735250);
+n(470079);
+var s = n(442837),
+  a = n(481060),
+  i = n(314897),
+  r = n(938475),
+  o = n(499596),
+  u = n(537135),
+  c = n(689938),
+  d = n(555066);
 
-function f(e) {
+function m(e) {
   let {
     channel: t
-  } = e, l = (0, s.useStateFromStores)([i.default], () => i.default.getId()), f = (0, s.useStateFromStores)([r.default], () => r.default.getVoiceStatesForChannel(t), [t]);
-  return (0, a.jsx)(n.FormItem, {
-    title: d.default.Messages.GO_LIVE_MODAL_CURRENT_CHANNEL_FORM_TITLE,
-    className: c.modalContent,
-    titleClassName: c.formItemTitle,
-    children: (0, a.jsx)(o.default, {
-      children: (0, a.jsx)(u.default, {
+  } = e, n = (0, s.e7)([i.default], () => i.default.getId()), m = (0, s.e7)([r.ZP], () => r.ZP.getVoiceStatesForChannel(t), [t]);
+  return (0, l.jsx)(a.FormItem, {
+    title: c.Z.Messages.GO_LIVE_MODAL_CURRENT_CHANNEL_FORM_TITLE,
+    className: d.modalContent,
+    titleClassName: d.formItemTitle,
+    children: (0, l.jsx)(u.Z, {
+      children: (0, l.jsx)(o.Z, {
         channel: t,
-        users: f.filter(e => {
+        users: m.filter(e => {
           let {
             user: t
           } = e;
-          return t.id !== l
+          return t.id !== n
         }).map(e => {
           let {
             user: t

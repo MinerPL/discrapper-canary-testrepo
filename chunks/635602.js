@@ -1,20 +1,20 @@
 "use strict";
-n.r(e), n.d(e, {
-  dynamicRequire: function() {
-    return o
+n.d(e, {
+  KV: function() {
+    return s
   },
-  isNodeEnv: function() {
+  l$: function() {
     return a
   }
 });
-var r = n("776914");
+var r = n(468391);
 t = n.hmd(t);
-var i = n("444675");
+var i = n(444675);
 
-function a() {
-  return !(0, r.isBrowserBundle)() && "[object process]" === Object.prototype.toString.call(void 0 !== i ? i : 0)
+function s() {
+  return !(0, r.n)() && "[object process]" === Object.prototype.toString.call(void 0 !== i ? i : 0)
 }
 
-function o(t, e) {
+function a(t, e) {
   return t.require(e)
 }

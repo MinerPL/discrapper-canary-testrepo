@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  reducedPaymentInfoExperiment: function() {
+n.d(t, {
+  _: function() {
     return r
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   id: "2023-06_reduced_payment_method_address_info",
   label: "Reduced Payment Method Address Info",
   kind: "user",

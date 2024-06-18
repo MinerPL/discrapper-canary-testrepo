@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  useOptionalFactory: function() {
-    return a
+n.d(t, {
+  w: function() {
+    return o
   }
 });
-var r = n("470079");
+var r = n(470079);
 
 function i(e, t) {
   (null == t || t > e.length) && (t = e.length);
@@ -12,8 +12,8 @@ function i(e, t) {
   return r
 }
 
-function a(e, t) {
-  var n, a = function(e) {
+function o(e, t) {
+  var n, o = function(e) {
     if (Array.isArray(e)) return i(e)
   }(n = t || []) || function(e) {
     if ("undefined" != typeof Symbol && null != e[Symbol.iterator] || null != e["@@iterator"]) return Array.from(e)
@@ -27,7 +27,7 @@ function a(e, t) {
   }(n) || function() {
     throw TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
   }();
-  return null == t && "function" != typeof e && a.push(e), (0, r.useMemo)(function() {
+  return null == t && "function" != typeof e && o.push(e), (0, r.useMemo)(function() {
     return "function" == typeof e ? e() : e
-  }, a)
+  }, o)
 }

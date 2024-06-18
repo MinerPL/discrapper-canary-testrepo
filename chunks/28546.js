@@ -1,32 +1,32 @@
 "use strict";
-n.r(t), n.d(t, {
-  closeExpressionPicker: function() {
+n.d(t, {
+  Iu: function() {
+    return h
+  },
+  PG: function() {
     return _
   },
-  openExpressionPicker: function() {
-    return d
-  },
-  setExpressionPickerView: function() {
-    return I
-  },
-  setSearchQuery: function() {
-    return T
-  },
-  toggleExpressionPicker: function() {
+  RO: function() {
     return E
   },
-  toggleMultiExpressionPicker: function() {
+  _Q: function() {
+    return d
+  },
+  hr: function() {
+    return I
+  },
+  j9: function() {
     return c
   },
-  useExpressionPickerStore: function() {
-    return f
+  ql: function() {
+    return T
   }
 });
-var i = n("97613"),
+var i = n(97613),
   r = n.n(i),
-  s = n("652874"),
-  a = n("868888"),
-  o = n("957825");
+  s = n(652874),
+  o = n(868888),
+  a = n(957825);
 let l = Object.freeze({
     activeView: null,
     lastActiveView: null,
@@ -38,22 +38,22 @@ let l = Object.freeze({
       return r()(e)
     }()
   }),
-  u = (0, s.default)((0, a.persist)((e, t) => l, {
+  u = (0, s.Z)((0, o.tJ)((e, t) => l, {
     name: "expression-picker-last-active-view",
     partialize: e => ({
       lastActiveView: e.lastActiveView
     })
   })),
-  d = (e, t) => {
+  _ = (e, t) => {
     u.setState({
       activeView: e,
       activeViewType: t,
       lastActiveView: u.getState().activeView
     })
   },
-  _ = e => {
+  d = e => {
     let t = u.getState();
-    if (void 0 === e || e === t.activeViewType) null !== t.activeView && u.setState({
+    if ((void 0 === e || e === t.activeViewType) && null !== t.activeView) u.setState({
       activeView: null,
       activeViewType: null,
       lastActiveView: t.activeView
@@ -63,11 +63,11 @@ let l = Object.freeze({
     let t = u.getState();
     if (null == t.activeView) {
       var n;
-      d(null !== (n = t.lastActiveView) && void 0 !== n ? n : o.ExpressionPickerViewType.EMOJI, e)
-    } else _()
+      _(null !== (n = t.lastActiveView) && void 0 !== n ? n : a.X1.EMOJI, e)
+    } else d()
   },
   E = (e, t) => {
-    u.getState().activeView === e ? _() : d(e, t)
+    u.getState().activeView === e ? d() : _(e, t)
   },
   I = e => {
     u.setState({
@@ -82,4 +82,4 @@ let l = Object.freeze({
       isSearchSuggestion: t
     })
   },
-  f = u
+  h = u

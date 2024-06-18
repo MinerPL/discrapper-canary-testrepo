@@ -1,75 +1,75 @@
 "use strict";
-n.r(t), n.d(t, {
-  calculateButtonColor: function() {
-    return h
-  },
-  getProfileTheme: function() {
-    return I
-  },
-  getValueInColorGradientByPercentage: function() {
+n.d(t, {
+  J2: function() {
     return T
   },
-  useAvatarBorderColor: function() {
-    return S
+  V3: function() {
+    return I
   },
-  useDividerColor: function() {
-    return m
+  ZB: function() {
+    return f
   },
-  useMessageInputBorderColor: function() {
+  e4: function() {
+    return N
+  },
+  fq: function() {
+    return E
+  },
+  lM: function() {
     return A
   },
-  useProfileThemeValues: function() {
-    return E
+  wu: function() {
+    return S
   }
-}), n("47120");
-var i = n("470079"),
-  r = n("392711"),
-  s = n("866442"),
-  a = n("399606"),
-  o = n("692547"),
-  l = n("780384"),
-  u = n("607070"),
-  d = n("44315"),
-  _ = n("564334"),
-  c = n("981631");
+}), n(47120);
+var i = n(470079),
+  r = n(392711),
+  s = n(866442),
+  o = n(399606),
+  a = n(692547),
+  l = n(780384),
+  u = n(607070),
+  _ = n(44315),
+  d = n(564334),
+  c = n(981631);
 
 function E(e) {
-  let t = (0, a.useStateFromStores)([u.default], () => u.default.saturation);
+  let t = (0, o.e7)([u.Z], () => u.Z.saturation);
   return (0, i.useMemo)(() => null == e ? null : {
-    overlaySyncedWithUserTheme: o.default.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME.resolve({
+    overlaySyncedWithUserTheme: a.Z.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME.resolve({
       theme: e,
       saturation: t
     }).hsl(),
-    overlay: o.default.colors.PROFILE_GRADIENT_OVERLAY.resolve({
+    overlay: a.Z.colors.PROFILE_GRADIENT_OVERLAY.resolve({
       theme: e,
       saturation: t
     }).hsl(),
-    sectionBox: o.default.colors.PROFILE_GRADIENT_SECTION_BOX.resolve({
+    sectionBox: a.Z.colors.PROFILE_GRADIENT_SECTION_BOX.resolve({
       theme: e,
       saturation: t
     }).hsl(),
-    messageInputBorder: o.default.colors.PROFILE_GRADIENT_MESSAGE_INPUT_BORDER.resolve({
+    messageInputBorder: a.Z.colors.PROFILE_GRADIENT_MESSAGE_INPUT_BORDER.resolve({
       theme: e,
       saturation: t
     }).hsl(),
-    dividerOpacity: e === o.default.themes.DARK ? .24 : .12,
-    noteBackgroundColor: o.default.colors.PROFILE_GRADIENT_NOTE_BACKGROUND.resolve({
+    dividerOpacity: e === a.Z.themes.DARK ? .24 : .12,
+    noteBackgroundColor: a.Z.colors.PROFILE_GRADIENT_NOTE_BACKGROUND.resolve({
       theme: e,
       saturation: t
     }).hsl(),
-    profileBodyBackgroundHover: o.default.colors.PROFILE_GRADIENT_PROFILE_BODY_BACKGROUND_HOVER.resolve({
+    profileBodyBackgroundHover: a.Z.colors.PROFILE_GRADIENT_PROFILE_BODY_BACKGROUND_HOVER.resolve({
       theme: e,
       saturation: t
     }).hsl(),
-    rolePillBackgroundColor: o.default.colors.PROFILE_GRADIENT_ROLE_PILL_BACKGROUND.resolve({
+    rolePillBackgroundColor: a.Z.colors.PROFILE_GRADIENT_ROLE_PILL_BACKGROUND.resolve({
       theme: e,
       saturation: t
     }).hsl(),
-    rolePillBorderColor: o.default.colors.PROFILE_GRADIENT_ROLE_PILL_BORDER.resolve({
+    rolePillBorderColor: a.Z.colors.PROFILE_GRADIENT_ROLE_PILL_BORDER.resolve({
       theme: e,
       saturation: t
     }).hsl(),
-    icon: o.default.colors.INTERACTIVE_NORMAL.resolve({
+    icon: a.Z.colors.INTERACTIVE_NORMAL.resolve({
       theme: e,
       saturation: t
     }).hsl()
@@ -77,7 +77,7 @@ function E(e) {
 }
 
 function I(e) {
-  return null == e ? null : (0, s.getDarkness)(e) > .5 ? c.ThemeTypes.DARK : c.ThemeTypes.LIGHT
+  return null == e ? null : (0, s.Bd)(e) > .5 ? c.BRd.DARK : c.BRd.LIGHT
 }
 
 function T(e, t, n) {
@@ -86,36 +86,36 @@ function T(e, t, n) {
   return [Math.round(e[0] * r + t[0] * i), Math.round(e[1] * r + t[1] * i), Math.round(e[2] * r + t[2] * i)]
 }
 
-function f(e, t) {
-  let n = (0, s.int2rgbArray)(e);
+function h(e, t) {
+  let n = (0, s.px)(e);
   if (null == t) return 0;
-  let i = _.default.parseString(t);
+  let i = d.Z.parseString(t);
   if (null == i) return 0;
   let r = [i.red, i.green, i.blue],
-    a = [n[0], n[1], n[2]],
-    o = i.alpha,
-    [l, u, d] = r.map((e, t) => Math.floor(o * e + (1 - o) * a[t]));
-  return (0, s.rgb2int)("rgba(".concat(l, ", ").concat(u, ", ").concat(d, ")"))
+    o = [n[0], n[1], n[2]],
+    a = i.alpha,
+    [l, u, _] = r.map((e, t) => Math.floor(a * e + (1 - a) * o[t]));
+  return (0, s.QT)("rgba(".concat(l, ", ").concat(u, ", ").concat(_, ")"))
 }
 
 function S(e, t, n) {
   let i = E(e);
-  return null == i || null == t ? null : f(t, n ? i.overlaySyncedWithUserTheme : i.overlay)
+  return null == i || null == t ? null : h(t, n ? i.overlaySyncedWithUserTheme : i.overlay)
 }
-let h = (0, r.memoize)(e => {
-  let t = (0, l.getContrastingColor)(e, {
+let f = (0, r.memoize)(e => {
+  let t = (0, l.Qg)(e, {
     base: "#ffffff",
-    contrastRatio: l.WCAGContrastRatios.HighContrastText
+    contrastRatio: l.S3.HighContrastText
   });
-  return (0, s.hex2int)(t)
+  return (0, s._i)(t)
 }, e => e);
 
-function A(e, t) {
+function N(e, t) {
   let n = E(e);
-  return null != n && null != t ? f(t, null == n ? void 0 : n.messageInputBorder) : null
+  return null != n && null != t ? h(t, null == n ? void 0 : n.messageInputBorder) : null
 }
 
-function m(e, t) {
-  let n = (0, d.useColorValue)(c.Color.WHITE_500).hex;
-  return (0, l.isThemeDark)(e) ? (0, s.hex2int)(n) : null != t ? h(t) : null
+function A(e, t) {
+  let n = (0, _.Sl)(c.Ilk.WHITE_500).hex;
+  return (0, l.wj)(e) ? (0, s._i)(n) : null != t ? f(t) : null
 }

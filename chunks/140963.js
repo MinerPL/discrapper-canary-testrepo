@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n("47120"), n("757143");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
-  o = n("481060"),
-  l = n("239091"),
-  u = n("555573"),
-  d = n("998698"),
-  _ = n("459273"),
-  c = n("358085"),
-  E = n("62883"),
-  I = n("752305"),
-  T = n("981631");
+n(47120), n(757143);
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(481060),
+  l = n(239091),
+  u = n(555573),
+  _ = n(998698),
+  d = n(459273),
+  c = n(358085),
+  E = n(62883),
+  I = n(752305),
+  T = n(981631);
 
-function f(e, t, n) {
+function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -23,7 +23,7 @@ function f(e, t, n) {
   }) : e[t] = n, e
 }
 let S = /(\t|\s)/;
-class h extends r.PureComponent {
+class f extends r.PureComponent {
   componentDidMount() {
     !this.props.disableAutoFocus && (Promise.resolve().then(() => {
       var e;
@@ -31,7 +31,7 @@ class h extends r.PureComponent {
         value: t
       } = this.props;
       null === (e = this._ref) || void 0 === e || e.setSelection(t.length, t.length)
-    }), this.focus()), null != d.default.getActiveCommand(this.props.channel.id) && u.setActiveCommand({
+    }), this.focus()), null != _.Z.getActiveCommand(this.props.channel.id) && u.Po({
       channelId: this.props.channel.id,
       command: null,
       section: null
@@ -102,10 +102,10 @@ class h extends r.PureComponent {
       {
         onChange: s
       } = this.props;
-    null == s || s(null, r, (0, I.toRichValue)(r));
-    let a = t.length + e.length;
+    null == s || s(null, r, (0, I.JM)(r));
+    let o = t.length + e.length;
     this.setState({
-      nextSelection: a
+      nextSelection: o
     }, () => {
       this.props.maybeShowAutocomplete()
     })
@@ -125,25 +125,25 @@ class h extends r.PureComponent {
       onResize: s,
       className: l,
       id: u,
-      submitting: d,
+      submitting: _,
       textAreaPaddingClassName: c,
       spellcheckEnabled: E,
       "aria-controls": I,
-      "aria-expanded": f,
+      "aria-expanded": h,
       "aria-activedescendant": S
     } = this.props;
     return (0, i.jsxs)(i.Fragment, {
-      children: [(0, i.jsx)(_.ComponentAction, {
-        event: T.ComponentActions.GLOBAL_CLIPBOARD_PASTE,
+      children: [(0, i.jsx)(d.d9, {
+        event: T.CkL.GLOBAL_CLIPBOARD_PASTE,
         handler: this.handleGlobalPaste
-      }), (0, i.jsx)(o.TextAreaAutosize, {
+      }), (0, i.jsx)(a.TextAreaAutosize, {
         ref: this.handleSetRef,
-        className: a()(l, c),
+        className: o()(l, c),
         id: u,
         rows: 1,
         fontWidthEstimate: 6,
         placeholder: n,
-        disabled: t || d,
+        disabled: t || _,
         required: r,
         onChange: this.handleOnChange,
         onResize: s,
@@ -159,7 +159,7 @@ class h extends r.PureComponent {
         tabIndex: 0,
         spellCheck: E,
         "aria-controls": I,
-        "aria-expanded": f,
+        "aria-expanded": h,
         "aria-activedescendant": S,
         "aria-haspopup": "listbox",
         "aria-autocomplete": "list",
@@ -168,7 +168,7 @@ class h extends r.PureComponent {
     })
   }
   handleTabOrEnterDown(e) {
-    e.which === T.KeyboardKeys.TAB && this.props.onTab() ? (e.preventDefault(), e.stopPropagation()) : e.which === T.KeyboardKeys.ENTER && this.props.onEnter(e) ? (e.preventDefault(), e.stopPropagation()) : e.which === T.KeyboardKeys.ESCAPE ? (e.preventDefault(), e.stopPropagation(), this.props.hideAutocomplete()) : e.which === T.KeyboardKeys.TAB && this.hasOpenCodeBlock() && (e.preventDefault(), e.stopPropagation(), this.insertText("	", void 0, !1))
+    e.which === T.yXg.TAB && this.props.onTab() ? (e.preventDefault(), e.stopPropagation()) : e.which === T.yXg.ENTER && this.props.onEnter(e) ? (e.preventDefault(), e.stopPropagation()) : e.which === T.yXg.ESCAPE ? (e.preventDefault(), e.stopPropagation(), this.props.hideAutocomplete()) : e.which === T.yXg.TAB && this.hasOpenCodeBlock() && (e.preventDefault(), e.stopPropagation(), this.insertText("	", void 0, !1))
   }
   insertEmoji(e, t) {
     this.insertText("".concat(":").concat(e.name).concat(":"), void 0, t)
@@ -177,68 +177,68 @@ class h extends r.PureComponent {
     return this.props.value
   }
   constructor(...e) {
-    super(...e), f(this, "_ref", void 0), f(this, "state", {
+    super(...e), h(this, "_ref", void 0), h(this, "state", {
       nextSelection: -1
-    }), f(this, "focus", () => {
+    }), h(this, "focus", () => {
       let {
         _ref: e
       } = this;
       null != e && e.focus()
-    }), f(this, "handleSetRef", e => {
+    }), h(this, "handleSetRef", e => {
       this._ref = e
-    }), f(this, "handleKeyPress", e => {
-      if (e.which === T.KeyboardKeys.ENTER) {
+    }), h(this, "handleKeyPress", e => {
+      if (e.which === T.yXg.ENTER) {
         if (!e.shiftKey && !this.hasOpenCodeBlock() && (!this.props.disableEnterToSubmit || e.ctrlKey)) return e.preventDefault(), this.props.onSubmit(this.props.value)
       }
-    }), f(this, "handleKeyDown", e => {
+    }), h(this, "handleKeyDown", e => {
       switch (e.which) {
-        case T.KeyboardKeys.ARROW_DOWN:
+        case T.yXg.ARROW_DOWN:
           this.props.moveSelection(1) && e.preventDefault();
           break;
-        case T.KeyboardKeys.N:
+        case T.yXg.N:
           e.ctrlKey && this.props.moveSelection(1) && e.preventDefault();
           break;
-        case T.KeyboardKeys.ARROW_UP:
+        case T.yXg.ARROW_UP:
           this.props.moveSelection(-1) && e.preventDefault();
           break;
-        case T.KeyboardKeys.P:
+        case T.yXg.P:
           e.ctrlKey && this.props.moveSelection(-1) && e.preventDefault();
           break;
-        case T.KeyboardKeys.TAB:
-        case T.KeyboardKeys.ENTER:
+        case T.yXg.TAB:
+        case T.yXg.ENTER:
           this.handleTabOrEnterDown(e)
       }
       let {
         onKeyDown: t
       } = this.props;
       null == t || t(e)
-    }), f(this, "handleKeyUp", e => {
+    }), h(this, "handleKeyUp", e => {
       switch (e.which) {
-        case T.KeyboardKeys.ARROW_RIGHT:
-        case T.KeyboardKeys.ARROW_LEFT:
-        case T.KeyboardKeys.HOME:
-        case T.KeyboardKeys.END:
+        case T.yXg.ARROW_RIGHT:
+        case T.yXg.ARROW_LEFT:
+        case T.yXg.HOME:
+        case T.yXg.END:
           this.props.maybeShowAutocomplete()
       }
       let {
         onKeyUp: t
       } = this.props;
       null == t || t(e)
-    }), f(this, "handleGlobalPaste", e => {
+    }), h(this, "handleGlobalPaste", e => {
       let {
         event: t
       } = e;
       !this.handlePaste(t) && this.focus()
-    }), f(this, "handlePaste", e => {
+    }), h(this, "handlePaste", e => {
       let t = this.props.onPaste(e);
       return t && e.preventDefault(), t
-    }), f(this, "handleClick", () => {
+    }), h(this, "handleClick", () => {
       this.props.maybeShowAutocomplete()
-    }), f(this, "handleContextMenu", e => {
-      c.isPlatformEmbedded && (0, l.openContextMenuLazy)(e, async () => {
+    }), h(this, "handleContextMenu", e => {
+      c.isPlatformEmbedded && (0, l.jW)(e, async () => {
         let {
           default: e
-        } = await n.e("99989").then(n.bind(n, "889662"));
+        } = await n.e("99989").then(n.bind(n, 889662));
         return t => (0, i.jsx)(e, {
           ...t,
           isChannelTextArea: !0,
@@ -248,13 +248,13 @@ class h extends r.PureComponent {
         align: "bottom",
         enableSpellCheck: !0
       })
-    }), f(this, "handleOnChange", e => {
+    }), h(this, "handleOnChange", e => {
       let {
         onChange: t,
         allowNewLines: n
       } = this.props, i = e.currentTarget.value, r = n ? i : i.replace("\n", "");
-      null == t || t(e, r, (0, I.toRichValue)(r))
+      null == t || t(e, r, (0, I.JM)(r))
     })
   }
 }
-t.default = h
+t.Z = f

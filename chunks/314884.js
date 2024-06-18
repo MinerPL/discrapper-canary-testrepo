@@ -1,58 +1,58 @@
 "use strict";
-n.r(t), n("47120");
-var i, r, s, a, o = n("442837"),
-  l = n("570140"),
-  u = n("78839");
-let d = !1,
-  _ = {};
+n(47120);
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(78839);
+let _ = !1,
+  d = {};
 
 function c(e) {
   let {
     guildBoostSlot: t
   } = e;
-  _ = {
-    ..._,
+  d = {
+    ...d,
     [t.id]: t
   }
 }
 
 function E() {
   let e = {};
-  for (let t of Object.values(_)) e[t.id] = t, t.subscription = u.default.getSubscriptionById(t.subscriptionId);
-  _ = e
+  for (let t of Object.values(d)) e[t.id] = t, t.subscription = u.ZP.getSubscriptionById(t.subscriptionId);
+  d = e
 }
-class I extends(i = o.default.Store) {
+class I extends(i = a.ZP.Store) {
   initialize() {
-    this.syncWith([u.default], E)
+    this.syncWith([u.ZP], E)
   }
   get hasFetched() {
-    return d
-  }
-  get boostSlots() {
     return _
   }
+  get boostSlots() {
+    return d
+  }
   getGuildBoostSlot(e) {
-    return _[e]
+    return d[e]
   }
 }
-a = "GuildBoostSlotStore", (s = "displayName") in(r = I) ? Object.defineProperty(r, s, {
-  value: a,
+o = "GuildBoostSlotStore", (s = "displayName") in(r = I) ? Object.defineProperty(r, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new I(l.default, {
+}) : r[s] = o, t.Z = new I(l.Z, {
   GUILD_BOOST_SLOTS_FETCH_SUCCESS: function(e) {
     let {
       guildBoostSlots: t
     } = e;
-    _ = {}, t.forEach(e => {
-      _[e.id] = e
-    }), d = !0
+    d = {}, t.forEach(e => {
+      d[e.id] = e
+    }), _ = !0
   },
   GUILD_BOOST_SLOT_UPDATE_SUCCESS: c,
   GUILD_BOOST_SLOT_CREATE: c,
   GUILD_BOOST_SLOT_UPDATE: c,
   LOGOUT: function() {
-    _ = {}, d = !1
+    d = {}, _ = !1
   }
 })

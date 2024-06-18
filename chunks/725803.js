@@ -1,40 +1,40 @@
 "use strict";
-A.r(t), A.d(t, {
-  default: function() {
-    return i
+t.d(s, {
+  Z: function() {
+    return o
   }
-}), A("47120");
-var a = A("470079"),
-  l = A("442837"),
-  s = A("881052"),
-  n = A("728345"),
-  r = A("812206");
+}), t(47120);
+var n = t(470079),
+  i = t(442837),
+  l = t(881052),
+  a = t(728345),
+  r = t(812206);
 
-function i(e, t) {
-  let A = (0, l.useStateFromStores)([r.default], () => r.default.getGuildApplication(e, t)),
-    [i, o] = a.useState(null == A),
-    [d, u] = a.useState(),
-    [c, f] = a.useState(!1),
-    g = a.useCallback(async () => {
-      if (null == A && null != e) {
-        f(!0), o(!0);
+function o(e, s) {
+  let t = (0, i.e7)([r.Z], () => r.Z.getGuildApplication(e, s)),
+    [o, c] = n.useState(null == t),
+    [d, u] = n.useState(),
+    [E, _] = n.useState(!1),
+    I = n.useCallback(async () => {
+      if (null == t && null != e) {
+        _(!0), c(!0);
         try {
-          await n.default.getApplicationsForGuild(e, {
-            type: t,
+          await a.Z.getApplicationsForGuild(e, {
+            type: s,
             includeTeam: !0
           })
         } catch (e) {
-          u(new s.APIError(e))
+          u(new l.Hx(e))
         } finally {
-          o(!1)
+          c(!1)
         }
       }
-    }, [A, t, e]);
-  return a.useEffect(() => {
-    !c && g()
-  }, [c, g]), {
-    application: A,
+    }, [t, s, e]);
+  return n.useEffect(() => {
+    !E && I()
+  }, [E, I]), {
+    application: t,
     error: d,
-    loading: i
+    loading: o
   }
 }

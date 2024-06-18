@@ -1,7 +1,6 @@
 "use strict";
-n.r(t);
-var i = n("818083");
-t.default = (0, i.createExperiment)({
+var i = n(818083);
+t.Z = (0, i.B)({
   kind: "user",
   id: "2023-12_nv_relaxed_rate_control",
   label: "Alternative rate control proposal for Nvidia encoder",

@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  buildHeaderRows: function() {
+n.d(t, {
+  GL: function() {
     return u
   },
-  useTableState: function() {
+  oy: function() {
     return d
   }
 });
-var r = n("648709"),
-  i = n("470079"),
-  a = n("466324");
+var r = n(648709),
+  i = n(470079),
+  a = n(466324);
 let o = "row-header-column-" + Math.random().toString(36).slice(2),
   s = "row-header-column-" + Math.random().toString(36).slice(2);
 for (; o === s;) s = "row-header-column-" + Math.random().toString(36).slice(2);
@@ -104,7 +104,7 @@ function u(e, t) {
     textValue: null
   }))
 }
-class c extends a.GridCollection {
+class c extends a.V {
   *[Symbol.iterator]() {
     yield* this.body.childNodes
   }
@@ -124,11 +124,11 @@ class c extends a.GridCollection {
   }
   getFirstKey() {
     var e;
-    return null === (e = (0, r.getFirstItem)(this.body.childNodes)) || void 0 === e ? void 0 : e.key
+    return null === (e = (0, r.l8)(this.body.childNodes)) || void 0 === e ? void 0 : e.key
   }
   getLastKey() {
     var e;
-    return null === (e = (0, r.getLastItem)(this.body.childNodes)) || void 0 === e ? void 0 : e.key
+    return null === (e = (0, r.s)(this.body.childNodes)) || void 0 === e ? void 0 : e.key
   }
   getItem(e) {
     return this.keyMap.get(e)
@@ -229,10 +229,10 @@ function d(e) {
     showDragButtons: u,
     selectionMode: o,
     columns: []
-  }), [e.children, s, o, u]), f = (0, r.useCollection)(e, (0, i.useCallback)(e => new c(e, null, d), [d]), d), {
+  }), [e.children, s, o, u]), f = (0, r.Kx)(e, (0, i.useCallback)(e => new c(e, null, d), [d]), d), {
     disabledKeys: p,
     selectionManager: h
-  } = (0, a.useGridState)({
+  } = (0, a.S)({
     ...e,
     collection: f,
     disabledBehavior: e.disabledBehavior || "selection"

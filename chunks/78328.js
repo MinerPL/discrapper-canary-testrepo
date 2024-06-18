@@ -1,8 +1,8 @@
 "use strict";
-var r = n("859209"),
-  i = n("581031"),
-  a = n("714050"),
-  o = n("202934"),
+var r = n(859209),
+  i = n(581031),
+  a = n(714050),
+  o = n(202934),
   s = URLSearchParams,
   u = s.prototype,
   c = i(u.getAll),

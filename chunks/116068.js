@@ -2,66 +2,66 @@
 Object.defineProperty(t, "__esModule", {
   value: !0
 }), t.EditableInput = void 0;
-var n = function() {
+var r = function() {
     function e(e, t) {
-      for (var r = 0; r < t.length; r++) {
-        var n = t[r];
-        n.enumerable = n.enumerable || !1, n.configurable = !0, "value" in n && (n.writable = !0), Object.defineProperty(e, n.key, n)
+      for (var n = 0; n < t.length; n++) {
+        var r = t[n];
+        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
       }
     }
-    return function(t, r, n) {
-      return r && e(t.prototype, r), n && e(t, n), t
+    return function(t, n, r) {
+      return n && e(t.prototype, n), r && e(t, r), t
     }
   }(),
-  a = r("470079"),
-  o = l(a),
-  i = l(r("844303"));
+  i = n(470079),
+  a = s(i),
+  o = s(n(844303));
 
-function l(e) {
+function s(e) {
   return e && e.__esModule ? e : {
     default: e
   }
 }
 var u = [38, 40],
-  s = 1,
-  f = t.EditableInput = function(e) {
+  c = 1,
+  l = t.EditableInput = function(e) {
     function t(e) {
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
       }(this, t);
-      var r = function(e, t) {
+      var n = function(e, t) {
         if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
         return t && ("object" == typeof t || "function" == typeof t) ? t : e
       }(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-      return r.handleBlur = function() {
-        r.state.blurValue && r.setState({
-          value: r.state.blurValue,
+      return n.handleBlur = function() {
+        n.state.blurValue && n.setState({
+          value: n.state.blurValue,
           blurValue: null
         })
-      }, r.handleChange = function(e) {
-        r.setUpdatedValue(e.target.value, e)
-      }, r.handleKeyDown = function(e) {
-        var t, n = Number(String(e.target.value).replace(/%/g, ""));
-        if (!isNaN(n) && (t = e.keyCode, u.indexOf(t) > -1)) {
-          var a = r.getArrowOffset(),
-            o = 38 === e.keyCode ? n + a : n - a;
-          r.setUpdatedValue(o, e)
+      }, n.handleChange = function(e) {
+        n.setUpdatedValue(e.target.value, e)
+      }, n.handleKeyDown = function(e) {
+        var t, r = Number(String(e.target.value).replace(/%/g, ""));
+        if (!isNaN(r) && (t = e.keyCode, u.indexOf(t) > -1)) {
+          var i = n.getArrowOffset(),
+            a = 38 === e.keyCode ? r + i : r - i;
+          n.setUpdatedValue(a, e)
         }
-      }, r.handleDrag = function(e) {
-        if (r.props.dragLabel) {
-          var t = Math.round(r.props.value + e.movementX);
-          t >= 0 && t <= r.props.dragMax && r.props.onChange && r.props.onChange(r.getValueObjectWithLabel(t), e)
+      }, n.handleDrag = function(e) {
+        if (n.props.dragLabel) {
+          var t = Math.round(n.props.value + e.movementX);
+          t >= 0 && t <= n.props.dragMax && n.props.onChange && n.props.onChange(n.getValueObjectWithLabel(t), e)
         }
-      }, r.handleMouseDown = function(e) {
-        r.props.dragLabel && (e.preventDefault(), r.handleDrag(e), window.addEventListener("mousemove", r.handleDrag), window.addEventListener("mouseup", r.handleMouseUp))
-      }, r.handleMouseUp = function() {
-        r.unbindEventListeners()
-      }, r.unbindEventListeners = function() {
-        window.removeEventListener("mousemove", r.handleDrag), window.removeEventListener("mouseup", r.handleMouseUp)
-      }, r.state = {
+      }, n.handleMouseDown = function(e) {
+        n.props.dragLabel && (e.preventDefault(), n.handleDrag(e), window.addEventListener("mousemove", n.handleDrag), window.addEventListener("mouseup", n.handleMouseUp))
+      }, n.handleMouseUp = function() {
+        n.unbindEventListeners()
+      }, n.unbindEventListeners = function() {
+        window.removeEventListener("mousemove", n.handleDrag), window.removeEventListener("mouseup", n.handleMouseUp)
+      }, n.state = {
         value: String(e.value).toUpperCase(),
         blurValue: String(e.value).toUpperCase()
-      }, r.inputId = "rc-editable-input-" + s++, r
+      }, n.inputId = "rc-editable-input-" + c++, n
     }
     return ! function(e, t) {
       if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function, not " + typeof t);
@@ -73,7 +73,7 @@ var u = [38, 40],
           configurable: !0
         }
       }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-    }(t, e), n(t, [{
+    }(t, e), r(t, [{
       key: "componentDidUpdate",
       value: function(e, t) {
         this.props.value !== this.state.value && (e.value !== this.props.value || t.value !== this.state.value) && (this.input === document.activeElement ? this.setState({
@@ -91,13 +91,13 @@ var u = [38, 40],
     }, {
       key: "getValueObjectWithLabel",
       value: function(e) {
-        var t, r, n;
-        return t = {}, r = this.props.label, n = e, r in t ? Object.defineProperty(t, r, {
-          value: n,
+        var t, n, r;
+        return t = {}, n = this.props.label, r = e, n in t ? Object.defineProperty(t, n, {
+          value: r,
           enumerable: !0,
           configurable: !0,
           writable: !0
-        }) : t[r] = n, t
+        }) : t[n] = r, t
       }
     }, {
       key: "getArrowOffset",
@@ -107,8 +107,8 @@ var u = [38, 40],
     }, {
       key: "setUpdatedValue",
       value: function(e, t) {
-        var r = this.props.label ? this.getValueObjectWithLabel(e) : e;
-        this.props.onChange && this.props.onChange(r, t), this.setState({
+        var n = this.props.label ? this.getValueObjectWithLabel(e) : e;
+        this.props.onChange && this.props.onChange(n, t), this.setState({
           value: e
         })
       }
@@ -116,7 +116,7 @@ var u = [38, 40],
       key: "render",
       value: function() {
         var e = this,
-          t = (0, i.default)({
+          t = (0, o.default)({
             default: {
               wrap: {
                 position: "relative"
@@ -135,9 +135,9 @@ var u = [38, 40],
           }, {
             "user-override": !0
           }, this.props);
-        return o.default.createElement("div", {
+        return a.default.createElement("div", {
           style: t.wrap
-        }, o.default.createElement("input", {
+        }, a.default.createElement("input", {
           id: this.inputId,
           style: t.input,
           ref: function(t) {
@@ -149,12 +149,12 @@ var u = [38, 40],
           onBlur: this.handleBlur,
           placeholder: this.props.placeholder,
           spellCheck: "false"
-        }), this.props.label && !this.props.hideLabel ? o.default.createElement("label", {
+        }), this.props.label && !this.props.hideLabel ? a.default.createElement("label", {
           htmlFor: this.inputId,
           style: t.label,
           onMouseDown: this.handleMouseDown
         }, this.props.label) : null)
       }
     }]), t
-  }(a.PureComponent || a.Component);
-t.default = f
+  }(i.PureComponent || i.Component);
+t.default = l

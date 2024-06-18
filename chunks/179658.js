@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  setDeveloperOptionSettings: function() {
+n.d(t, {
+  y: function() {
     return r
   }
 });
-var i = n("570140");
+var i = n(570140);
 
 function r(e) {
-  i.default.dispatch({
+  i.Z.dispatch({
     type: "DEVELOPER_OPTIONS_UPDATE_SETTINGS",
     settings: e
   })

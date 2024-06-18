@@ -1,37 +1,37 @@
 "use strict";
-var r, i, a, o, s, u = n("444675");
-e.exports = T, T.ReadableState = w, n("836560").EventEmitter;
+var r, i, a, o, s, u = n(444675);
+e.exports = C, C.ReadableState = w, n(836560).EventEmitter;
 var c = function(e, t) {
     return e.listeners(t).length
   },
-  l = n("138772"),
-  d = n("413135").Buffer,
+  l = n(138772),
+  d = n(413135).Buffer,
   f = (void 0 !== n.g ? n.g : "undefined" != typeof window ? window : "undefined" != typeof self ? self : {}).Uint8Array || function() {},
-  p = n("260907");
+  p = n(260907);
 i = p && p.debuglog ? p.debuglog("stream") : function() {};
-var h = n("443551"),
-  m = n("887866"),
-  g = n("97703").getHighWaterMark,
-  _ = n("531478").codes,
+var h = n(443551),
+  m = n(887866),
+  g = n(97703).getHighWaterMark,
+  _ = n(531478).codes,
   b = _.ERR_INVALID_ARG_TYPE,
   v = _.ERR_STREAM_PUSH_AFTER_EOF,
   y = _.ERR_METHOD_NOT_IMPLEMENTED,
   E = _.ERR_STREAM_UNSHIFT_AFTER_END_EVENT;
-n("689118")(T, l);
+n(689118)(C, l);
 var S = m.errorOrDestroy,
   x = ["error", "close", "destroy", "pause", "resume"];
 
 function w(e, t, i) {
-  r = r || n("827664"), e = e || {}, "boolean" != typeof i && (i = t instanceof r), this.objectMode = !!e.objectMode, i && (this.objectMode = this.objectMode || !!e.readableObjectMode), this.highWaterMark = g(this, e, "readableHighWaterMark", i), this.buffer = new h, this.length = 0, this.pipes = null, this.pipesCount = 0, this.flowing = null, this.ended = !1, this.endEmitted = !1, this.reading = !1, this.sync = !0, this.needReadable = !1, this.emittedReadable = !1, this.readableListening = !1, this.resumeScheduled = !1, this.paused = !0, this.emitClose = !1 !== e.emitClose, this.autoDestroy = !!e.autoDestroy, this.destroyed = !1, this.defaultEncoding = e.defaultEncoding || "utf8", this.awaitDrain = 0, this.readingMore = !1, this.decoder = null, this.encoding = null, e.encoding && (!a && (a = n("2682").StringDecoder), this.decoder = new a(e.encoding), this.encoding = e.encoding)
+  r = r || n(827664), e = e || {}, "boolean" != typeof i && (i = t instanceof r), this.objectMode = !!e.objectMode, i && (this.objectMode = this.objectMode || !!e.readableObjectMode), this.highWaterMark = g(this, e, "readableHighWaterMark", i), this.buffer = new h, this.length = 0, this.pipes = null, this.pipesCount = 0, this.flowing = null, this.ended = !1, this.endEmitted = !1, this.reading = !1, this.sync = !0, this.needReadable = !1, this.emittedReadable = !1, this.readableListening = !1, this.resumeScheduled = !1, this.paused = !0, this.emitClose = !1 !== e.emitClose, this.autoDestroy = !!e.autoDestroy, this.destroyed = !1, this.defaultEncoding = e.defaultEncoding || "utf8", this.awaitDrain = 0, this.readingMore = !1, this.decoder = null, this.encoding = null, e.encoding && (!a && (a = n(2682).StringDecoder), this.decoder = new a(e.encoding), this.encoding = e.encoding)
 }
 
-function T(e) {
-  if (r = r || n("827664"), !(this instanceof T)) return new T(e);
+function C(e) {
+  if (r = r || n(827664), !(this instanceof C)) return new C(e);
   var t = this instanceof r;
   this._readableState = new w(e, this, t), this.readable = !0, e && ("function" == typeof e.read && (this._read = e.read), "function" == typeof e.destroy && (this._destroy = e.destroy)), l.call(this)
 }
 
-function C(e, t, n, r, a) {
+function T(e, t, n, r, a) {
   i("readableAddChunk", t);
   var o, s, u = e._readableState;
   if (null === t) u.reading = !1,
@@ -41,7 +41,7 @@ function C(e, t, n, r, a) {
           var n = t.decoder.end();
           n && n.length && (t.buffer.push(n), t.length += t.objectMode ? 1 : n.length)
         }
-        t.ended = !0, t.sync ? M(e) : (t.needReadable = !1, !t.emittedReadable && (t.emittedReadable = !0, A(e)))
+        t.ended = !0, t.sync ? O(e) : (t.needReadable = !1, !t.emittedReadable && (t.emittedReadable = !0, A(e)))
       }
     }(e, u);
   else if (!a && (s = function(e, t) {
@@ -65,35 +65,35 @@ function C(e, t, n, r, a) {
 }
 
 function D(e, t, n, r) {
-  t.flowing && 0 === t.length && !t.sync ? (t.awaitDrain = 0, e.emit("data", n)) : (t.length += t.objectMode ? 1 : n.length, r ? t.buffer.unshift(n) : t.buffer.push(n), t.needReadable && M(e)), k(e, t)
+  t.flowing && 0 === t.length && !t.sync ? (t.awaitDrain = 0, e.emit("data", n)) : (t.length += t.objectMode ? 1 : n.length, r ? t.buffer.unshift(n) : t.buffer.push(n), t.needReadable && O(e)), k(e, t)
 }
-Object.defineProperty(T.prototype, "destroyed", {
+Object.defineProperty(C.prototype, "destroyed", {
   enumerable: !1,
   get: function() {
     return void 0 !== this._readableState && this._readableState.destroyed
   },
   set: function(e) {
-    this._readableState && (this._readableState.destroyed = e)
+    if (!!this._readableState) this._readableState.destroyed = e
   }
-}), T.prototype.destroy = m.destroy, T.prototype._undestroy = m.undestroy, T.prototype._destroy = function(e, t) {
+}), C.prototype.destroy = m.destroy, C.prototype._undestroy = m.undestroy, C.prototype._destroy = function(e, t) {
   t(e)
-}, T.prototype.push = function(e, t) {
+}, C.prototype.push = function(e, t) {
   var n, r = this._readableState;
-  return r.objectMode ? n = !0 : "string" == typeof e && ((t = t || r.defaultEncoding) !== r.encoding && (e = d.from(e, t), t = ""), n = !0), C(this, e, t, !1, n)
-}, T.prototype.unshift = function(e) {
-  return C(this, e, null, !0, !1)
+  return r.objectMode ? n = !0 : "string" == typeof e && ((t = t || r.defaultEncoding) !== r.encoding && (e = d.from(e, t), t = ""), n = !0), T(this, e, t, !1, n)
+}, C.prototype.unshift = function(e) {
+  return T(this, e, null, !0, !1)
 };
-T.prototype.isPaused = function() {
+C.prototype.isPaused = function() {
   return !1 === this._readableState.flowing
-}, T.prototype.setEncoding = function(e) {
-  !a && (a = n("2682").StringDecoder);
+}, C.prototype.setEncoding = function(e) {
+  !a && (a = n(2682).StringDecoder);
   var t = new a(e);
   this._readableState.decoder = t, this._readableState.encoding = this._readableState.decoder.encoding;
   for (var r = this._readableState.buffer.head, i = ""; null !== r;) i += t.write(r.data), r = r.next;
   return this._readableState.buffer.clear(), "" !== i && this._readableState.buffer.push(i), this._readableState.length = i.length, this
 };
 
-function O(e, t) {
+function M(e, t) {
   if (e <= 0 || 0 === t.length && t.ended) return 0;
   if (t.objectMode) return 1;
   if (e != e) return t.flowing && t.length ? t.buffer.head.data.length : t.length;
@@ -103,17 +103,17 @@ function O(e, t) {
   }
   return e <= t.length ? e : t.ended ? t.length : (t.needReadable = !0, 0)
 }
-T.prototype.read = function(e) {
+C.prototype.read = function(e) {
   i("read", e), e = parseInt(e, 10);
   var t, n = this._readableState,
     r = e;
-  if (0 !== e && (n.emittedReadable = !1), 0 === e && n.needReadable && ((0 !== n.highWaterMark ? n.length >= n.highWaterMark : n.length > 0) || n.ended)) return i("read: emitReadable", n.length, n.ended), 0 === n.length && n.ended ? B(this) : M(this), null;
-  if (0 === (e = O(e, n)) && n.ended) return 0 === n.length && B(this), null;
+  if (0 !== e && (n.emittedReadable = !1), 0 === e && n.needReadable && ((0 !== n.highWaterMark ? n.length >= n.highWaterMark : n.length > 0) || n.ended)) return i("read: emitReadable", n.length, n.ended), 0 === n.length && n.ended ? F(this) : O(this), null;
+  if (0 === (e = M(e, n)) && n.ended) return 0 === n.length && F(this), null;
   var a = n.needReadable;
-  return i("need readable", a), (0 === n.length || n.length - e < n.highWaterMark) && i("length less than watermark", a = !0), n.ended || n.reading ? i("reading or ended", a = !1) : a && (i("do read"), n.reading = !0, n.sync = !0, 0 === n.length && (n.needReadable = !0), this._read(n.highWaterMark), n.sync = !1, !n.reading && (e = O(r, n))), null === (t = e > 0 ? F(e, n) : null) ? (n.needReadable = n.length <= n.highWaterMark, e = 0) : (n.length -= e, n.awaitDrain = 0), 0 === n.length && (!n.ended && (n.needReadable = !0), r !== e && n.ended && B(this)), null !== t && this.emit("data", t), t
+  return i("need readable", a), (0 === n.length || n.length - e < n.highWaterMark) && i("length less than watermark", a = !0), n.ended || n.reading ? i("reading or ended", a = !1) : a && (i("do read"), n.reading = !0, n.sync = !0, 0 === n.length && (n.needReadable = !0), this._read(n.highWaterMark), n.sync = !1, !n.reading && (e = M(r, n))), null === (t = e > 0 ? B(e, n) : null) ? (n.needReadable = n.length <= n.highWaterMark, e = 0) : (n.length -= e, n.awaitDrain = 0), 0 === n.length && (!n.ended && (n.needReadable = !0), r !== e && n.ended && F(this)), null !== t && this.emit("data", t), t
 };
 
-function M(e) {
+function O(e) {
   var t = e._readableState;
   i("emitReadable", t.needReadable, t.emittedReadable), t.needReadable = !1, !t.emittedReadable && (i("emitReadable", t.flowing), t.emittedReadable = !0, u.nextTick(A, e))
 }
@@ -134,9 +134,9 @@ function R(e, t) {
   }
   t.readingMore = !1
 }
-T.prototype._read = function(e) {
+C.prototype._read = function(e) {
   S(this, new y("_read()"))
-}, T.prototype.pipe = function(e, t) {
+}, C.prototype.pipe = function(e, t) {
   var n = this,
     r = this._readableState;
   switch (r.pipesCount) {
@@ -174,7 +174,7 @@ T.prototype._read = function(e) {
   function f(t) {
     i("ondata");
     var a = e.write(t);
-    i("dest.write", a), !1 === a && ((1 === r.pipesCount && r.pipes === e || r.pipesCount > 1 && -1 !== Y(r.pipes, e)) && !d && (i("false write response, pause", r.awaitDrain), r.awaitDrain++), n.pause())
+    i("dest.write", a), !1 === a && ((1 === r.pipesCount && r.pipes === e || r.pipesCount > 1 && -1 !== j(r.pipes, e)) && !d && (i("false write response, pause", r.awaitDrain), r.awaitDrain++), n.pause())
   }
 
   function p(t) {
@@ -206,7 +206,7 @@ function N(e) {
 function I(e) {
   i("readable nexttick read 0"), e.read(0)
 }
-T.prototype.unpipe = function(e) {
+C.prototype.unpipe = function(e) {
   var t = this._readableState,
     n = {
       hasUnpiped: !1
@@ -222,19 +222,19 @@ T.prototype.unpipe = function(e) {
     });
     return this
   }
-  var o = Y(t.pipes, e);
+  var o = j(t.pipes, e);
   return -1 === o ? this : (t.pipes.splice(o, 1), t.pipesCount -= 1, 1 === t.pipesCount && (t.pipes = t.pipes[0]), e.emit("unpipe", this, n), this)
-}, T.prototype.on = function(e, t) {
+}, C.prototype.on = function(e, t) {
   var n = l.prototype.on.call(this, e, t),
     r = this._readableState;
-  return "data" === e ? (r.readableListening = this.listenerCount("readable") > 0, !1 !== r.flowing && this.resume()) : "readable" === e && !r.endEmitted && !r.readableListening && (r.readableListening = r.needReadable = !0, r.flowing = !1, r.emittedReadable = !1, i("on readable", r.length, r.reading), r.length ? M(this) : !r.reading && u.nextTick(I, this)), n
-}, T.prototype.addListener = T.prototype.on, T.prototype.removeListener = function(e, t) {
+  return "data" === e ? (r.readableListening = this.listenerCount("readable") > 0, !1 !== r.flowing && this.resume()) : "readable" === e && !r.endEmitted && !r.readableListening && (r.readableListening = r.needReadable = !0, r.flowing = !1, r.emittedReadable = !1, i("on readable", r.length, r.reading), r.length ? O(this) : !r.reading && u.nextTick(I, this)), n
+}, C.prototype.addListener = C.prototype.on, C.prototype.removeListener = function(e, t) {
   var n = l.prototype.removeListener.call(this, e, t);
   return "readable" === e && u.nextTick(N, this), n
-}, T.prototype.removeAllListeners = function(e) {
+}, C.prototype.removeAllListeners = function(e) {
   var t = l.prototype.removeAllListeners.apply(this, arguments);
   return ("readable" === e || void 0 === e) && u.nextTick(N, this), t
-}, T.prototype.resume = function() {
+}, C.prototype.resume = function() {
   var e = this._readableState;
   return !e.flowing && (i("resume"), e.flowing = !e.readableListening, function(e, t) {
     !t.resumeScheduled && (t.resumeScheduled = !0, u.nextTick(L, e, t))
@@ -250,12 +250,12 @@ function P(e) {
   for (i("flow", t.flowing); t.flowing && null !== e.read(););
 }
 
-function F(e, t) {
+function B(e, t) {
   var n;
   return 0 === t.length ? null : (t.objectMode ? n = t.buffer.shift() : !e || e >= t.length ? (n = t.decoder ? t.buffer.join("") : 1 === t.buffer.length ? t.buffer.first() : t.buffer.concat(t.length), t.buffer.clear()) : n = t.buffer.consume(e, t.decoder), n)
 }
 
-function B(e) {
+function F(e) {
   var t = e._readableState;
   i("endReadable", t.endEmitted), !t.endEmitted && (t.ended = !0, u.nextTick(U, t, e))
 }
@@ -267,14 +267,14 @@ function U(e, t) {
   }
 }
 
-function Y(e, t) {
+function j(e, t) {
   for (var n = 0, r = e.length; n < r; n++)
     if (e[n] === t) return n;
   return -1
 }
-T.prototype.pause = function() {
+C.prototype.pause = function() {
   return i("call pause flowing=%j", this._readableState.flowing), !1 !== this._readableState.flowing && (i("pause"), this._readableState.flowing = !1, this.emit("pause")), this._readableState.paused = !0, this
-}, T.prototype.wrap = function(e) {
+}, C.prototype.wrap = function(e) {
   var t = this,
     n = this._readableState,
     r = !1;
@@ -296,19 +296,19 @@ T.prototype.pause = function() {
   return this._read = function(t) {
     i("wrapped _read", t), r && (r = !1, e.resume())
   }, this
-}, "function" == typeof Symbol && (T.prototype[Symbol.asyncIterator] = function() {
-  return void 0 === o && (o = n("634587")), o(this)
-}), Object.defineProperty(T.prototype, "readableHighWaterMark", {
+}, "function" == typeof Symbol && (C.prototype[Symbol.asyncIterator] = function() {
+  return void 0 === o && (o = n(634587)), o(this)
+}), Object.defineProperty(C.prototype, "readableHighWaterMark", {
   enumerable: !1,
   get: function() {
     return this._readableState.highWaterMark
   }
-}), Object.defineProperty(T.prototype, "readableBuffer", {
+}), Object.defineProperty(C.prototype, "readableBuffer", {
   enumerable: !1,
   get: function() {
     return this._readableState && this._readableState.buffer
   }
-}), Object.defineProperty(T.prototype, "readableFlowing", {
+}), Object.defineProperty(C.prototype, "readableFlowing", {
   enumerable: !1,
   get: function() {
     return this._readableState.flowing
@@ -316,11 +316,11 @@ T.prototype.pause = function() {
   set: function(e) {
     this._readableState && (this._readableState.flowing = e)
   }
-}), T._fromList = F, Object.defineProperty(T.prototype, "readableLength", {
+}), C._fromList = B, Object.defineProperty(C.prototype, "readableLength", {
   enumerable: !1,
   get: function() {
     return this._readableState.length
   }
-}), "function" == typeof Symbol && (T.from = function(e, t) {
-  return void 0 === s && (s = n("787838")), s(T, e, t)
+}), "function" == typeof Symbol && (C.from = function(e, t) {
+  return void 0 === s && (s = n(787838)), s(C, e, t)
 })

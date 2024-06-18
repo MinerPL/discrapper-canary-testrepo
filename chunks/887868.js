@@ -1,7 +1,7 @@
 "use strict";
-var n = r("310176"),
-  i = r("379846"),
-  o = r("624001");
+var n = r(310176),
+  i = r(379846),
+  o = r(624001);
 t.exports = function(t) {
   var e, r, a = t.getSelection();
   if (!a.isCollapsed()) return t;

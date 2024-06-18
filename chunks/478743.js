@@ -1,9 +1,9 @@
 "use strict";
-n.r(t), n.d(t, {
-  MemberSafetyPagePermissions: function() {
+n.d(t, {
+  N: function() {
     return s
   }
 });
-var i = n("149765"),
-  r = n("981631");
-let s = i.combine(r.Permissions.ADMINISTRATOR, r.Permissions.MANAGE_GUILD, r.Permissions.BAN_MEMBERS, r.Permissions.KICK_MEMBERS, r.Permissions.MODERATE_MEMBERS, r.Permissions.MANAGE_ROLES, r.Permissions.MANAGE_NICKNAMES)
+var i = n(149765),
+  r = n(981631);
+let s = i.$e(r.Plq.ADMINISTRATOR, r.Plq.MANAGE_GUILD, r.Plq.BAN_MEMBERS, r.Plq.KICK_MEMBERS, r.Plq.MODERATE_MEMBERS, r.Plq.MANAGE_ROLES, r.Plq.MANAGE_NICKNAMES)

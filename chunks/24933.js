@@ -1,9 +1,8 @@
 "use strict";
-n.r(t);
-var i, r = n("442837"),
-  s = n("570140");
+var i, r = n(442837),
+  s = n(570140);
 
-function a(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -12,17 +11,17 @@ function a(e, t, n) {
   }) : e[t] = n, e
 }
 
-function o() {
+function a() {
   return {
     usageByApplicationId: {},
     shelfOrder: []
   }
 }
-let l = o();
-class u extends(i = r.default.PersistedStore) {
+let l = a();
+class u extends(i = r.ZP.PersistedStore) {
   initialize(e) {
     l = {
-      ...o(),
+      ...a(),
       ...null != e ? e : {}
     }
   }
@@ -30,8 +29,8 @@ class u extends(i = r.default.PersistedStore) {
     return l
   }
 }
-a(u, "displayName", "ActivityShelfStore"), a(u, "persistKey", "ActivityShelfStore"), t.default = new u(s.default, {
+o(u, "displayName", "ActivityShelfStore"), o(u, "persistKey", "ActivityShelfStore"), t.Z = new u(s.Z, {
   LOGOUT: function() {
-    l = o()
+    l = a()
   }
 })

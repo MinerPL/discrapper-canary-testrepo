@@ -1,6 +1,6 @@
 "use strict";
-var e = n("354848"),
-  o = n("938507"),
+var e = n(354848),
+  o = n(938507),
   i = TypeError;
 t.exports = function(t) {
   if (e(t)) return t;

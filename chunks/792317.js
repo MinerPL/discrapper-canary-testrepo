@@ -1,15 +1,15 @@
 "use strict";
-var n = r("73009"),
-  i = r("837512"),
-  o = r("198392"),
-  a = r("310176"),
-  u = r("768784"),
-  s = r("379846"),
-  c = r("639256"),
-  l = r("563751"),
-  f = r("952616"),
-  p = r("121868"),
-  h = r("158971");
+var n = r(73009),
+  i = r(837512),
+  o = r(198392),
+  a = r(310176),
+  u = r(768784),
+  s = r(379846),
+  c = r(639256),
+  l = r(563751),
+  f = r(952616),
+  p = r(121868),
+  h = r(158971);
 
 function d(t, e, r) {
   var n = a.replaceWithFragment(t.getCurrentContent(), t.getSelection(), e);
@@ -24,7 +24,7 @@ t.exports = function(t, e) {
     if (g.length > 0) {
       if (t.props.handlePastedFiles && p(t.props.handlePastedFiles(g))) return;
       f(g, function(e) {
-        if (e = e || y) {
+        if (!!(e = e || y)) {
           var r = t._latestEditorState,
             o = h(e),
             f = i.create({

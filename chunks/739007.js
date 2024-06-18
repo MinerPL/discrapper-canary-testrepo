@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
-  MenuSliderControl: function() {
+n.d(t, {
+  _: function() {
     return l
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("561779"),
-  a = n("291720");
-let o = e => "".concat(e.toFixed(0), "%"),
+var i = n(735250),
+  r = n(470079),
+  s = n(561779),
+  o = n(623509);
+let a = e => "".concat(e.toFixed(0), "%"),
   l = r.forwardRef(function(e, t) {
     let {
       value: n,
       minValue: l = 0,
       maxValue: u = 100,
-      onChange: d,
-      renderValue: _ = o,
+      onChange: _,
+      renderValue: d = a,
       "aria-label": c
     } = e, E = r.useRef(null);
     return r.useImperativeHandle(t, () => ({
@@ -29,18 +29,18 @@ let o = e => "".concat(e.toFixed(0), "%"),
       },
       activate: () => !1
     }), []), (0, i.jsx)("div", {
-      className: a.sliderContainer,
-      children: (0, i.jsx)(s.Slider, {
+      className: o.sliderContainer,
+      children: (0, i.jsx)(s.i, {
         ref: E,
         mini: !0,
         handleSize: 16,
-        className: a.slider,
+        className: o.slider,
         initialValue: n,
         minValue: l,
         maxValue: u,
-        onValueChange: d,
-        asValueChanges: d,
-        onValueRender: _,
+        onValueChange: _,
+        asValueChanges: _,
+        onValueRender: d,
         orientation: "horizontal",
         "aria-label": c
       })

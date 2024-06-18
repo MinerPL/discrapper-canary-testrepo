@@ -1,88 +1,88 @@
 "use strict";
-n.r(t), n.d(t, {
-  StickersPremiumUpsell: function() {
+n.d(t, {
+  C: function() {
     return C
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
-  o = n("481060"),
-  l = n("100527"),
-  u = n("906732"),
-  d = n("104494"),
-  _ = n("639119"),
-  c = n("165583"),
-  E = n("465670"),
-  I = n("626135"),
-  T = n("74538"),
-  f = n("191177"),
-  S = n("27733"),
-  h = n("981631"),
-  A = n("474936"),
-  m = n("689938"),
-  N = n("60135"),
-  p = n("867250");
-let O = () => (0, f.setShowPremiumUpsell)(!1),
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(481060),
+  l = n(100527),
+  u = n(906732),
+  _ = n(104494),
+  d = n(639119),
+  c = n(165583),
+  E = n(465670),
+  I = n(626135),
+  T = n(74538),
+  h = n(191177),
+  S = n(27733),
+  f = n(981631),
+  N = n(474936),
+  A = n(689938),
+  m = n(60135),
+  O = n(867250);
+let R = () => (0, h.f)(!1),
   C = e => {
-    var t, n, a;
+    var t, n, s;
     let {
-      onLearnMore: f
+      onLearnMore: h
     } = e, {
       analyticsLocations: C
-    } = (0, u.default)(l.default.PREMIUM_UPSELL);
+    } = (0, u.ZP)(l.Z.PREMIUM_UPSELL);
     r.useEffect(() => {
-      I.default.track(h.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-        location_section: h.AnalyticsSections.STICKER_PICKER_UPSELL,
-        type: A.PremiumUpsellTypes.STICKER_PICKER_UPSELL,
+      I.default.track(f.rMx.PREMIUM_UPSELL_VIEWED, {
+        location_section: f.jXE.STICKER_PICKER_UPSELL,
+        type: N.cd.STICKER_PICKER_UPSELL,
         location_stack: C
       })
     }, [C]);
-    let R = (0, _.usePremiumTrialOffer)(),
-      g = (0, d.usePremiumDiscountOffer)(),
-      L = (null == R ? void 0 : null === (t = R.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === A.PremiumSubscriptionSKUs.TIER_0,
-      v = null != R || null != g;
+    let p = (0, d.N)(),
+      g = (0, _.Ng)(),
+      L = (null == p ? void 0 : null === (t = p.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === N.Si.TIER_0,
+      v = null != p || null != g;
     return (0, i.jsxs)("div", {
-      className: s()(N.upsellWrapper, {
-        [N.unifyTrialUpsell]: v
+      className: o()(m.upsellWrapper, {
+        [m.unifyTrialUpsell]: v
       }),
-      children: [v ? (0, i.jsx)(c.default, {
-        trialOffer: R,
+      children: [v ? (0, i.jsx)(c.ZP, {
+        trialOffer: p,
         discountOffer: g,
-        onClose: O,
-        type: A.PremiumUpsellTypes.STICKER_PICKER_UPSELL,
-        subscriptionTier: null !== (a = null == R ? void 0 : null === (n = R.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : A.PremiumSubscriptionSKUs.TIER_2,
-        children: L ? m.default.Messages.STICKER_PICKER_PREMIUM_TIER_UPSELL_DESCRIPTION.format({
-          planName: (0, T.getTierDisplayName)(A.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-          onClick: f
-        }) : m.default.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION.format({
-          onClick: f
+        onClose: R,
+        type: N.cd.STICKER_PICKER_UPSELL,
+        subscriptionTier: null !== (s = null == p ? void 0 : null === (n = p.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== s ? s : N.Si.TIER_2,
+        children: L ? A.Z.Messages.STICKER_PICKER_PREMIUM_TIER_UPSELL_DESCRIPTION.format({
+          planName: (0, T.aq)(N.Xh.PREMIUM_MONTH_TIER_0),
+          onClick: h
+        }) : A.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION.format({
+          onClick: h
         })
       }) : (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)("img", {
-          className: N.upsellImage,
-          src: p,
-          alt: m.default.Messages.STICKER_PICKER_PREMIUM_UPSELL_ALT
-        }), (0, i.jsx)(o.Text, {
-          className: N.upsellTitle,
+          className: m.upsellImage,
+          src: O,
+          alt: A.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_ALT
+        }), (0, i.jsx)(a.Text, {
+          className: m.upsellTitle,
           color: "header-primary",
           variant: "text-lg/semibold",
-          children: m.default.Messages.STICKER_PICKER_PREMIUM_UPSELL_TITLE
-        }), (0, i.jsx)(o.Text, {
-          className: N.upsellDescription,
+          children: A.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_TITLE
+        }), (0, i.jsx)(a.Text, {
+          className: m.upsellDescription,
           variant: "text-md/normal",
-          children: m.default.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION.format({
-            onClick: f
+          children: A.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION.format({
+            onClick: h
           })
         })]
-      }), !v && (0, i.jsx)(S.default, {
-        analyticsSection: h.AnalyticsSections.EXPRESSION_PICKER,
-        buttonText: v ? L ? m.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : m.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
-      }), (0, i.jsx)(o.Clickable, {
-        className: N.upsellClose,
-        onClick: O,
-        children: (0, i.jsx)(E.default, {})
+      }), !v && (0, i.jsx)(S.Z, {
+        analyticsSection: f.jXE.EXPRESSION_PICKER,
+        buttonText: v ? L ? A.Z.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : A.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
+      }), (0, i.jsx)(a.Clickable, {
+        className: m.upsellClose,
+        onClick: R,
+        children: (0, i.jsx)(E.Z, {})
       })]
     })
   }

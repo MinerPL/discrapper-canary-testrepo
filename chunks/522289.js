@@ -1,58 +1,58 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return _
+n.d(t, {
+  Z: function() {
+    return d
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("803997"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("392711"),
-  o = n.n(a),
-  l = n("481060"),
-  u = n("346656"),
-  d = n("849056");
+  o = n(392711),
+  a = n.n(o),
+  l = n(481060),
+  u = n(346656),
+  _ = n(901540);
 
-function _(e) {
+function d(e) {
   let {
     className: t,
     maxGuilds: n,
     guilds: r,
-    onFocus: a,
-    onClick: _,
-    size: c = u.default.Sizes.SMALLER,
+    onFocus: o,
+    onClick: d,
+    size: c = u.Z.Sizes.SMALLER,
     hideOverflowCount: E = !1,
     disableGuildNameTooltip: I = !1
   } = e;
   return r.length <= 0 ? null : (0, i.jsx)("div", {
-    className: s()(t, d.avatars),
+    className: s()(t, _.avatars),
     children: function() {
-      let e = o()(r).take(n).map(e => {
+      let e = a()(r).take(n).map(e => {
           let t = e.name;
           return I ? (0, i.jsx)("div", {
-            className: d.avatar,
-            children: (0, i.jsx)(u.default, {
+            className: _.avatar,
+            children: (0, i.jsx)(u.Z, {
               guild: e,
-              onClick: _,
+              onClick: d,
               size: c,
               showTooltip: !1
             })
           }) : (0, i.jsx)(l.TooltipContainer, {
             text: t,
-            className: d.avatar,
-            children: (0, i.jsx)(u.default, {
+            className: _.avatar,
+            children: (0, i.jsx)(u.Z, {
               guild: e,
-              onClick: _,
+              onClick: d,
               size: c
             })
           }, e.id)
         }).value(),
         t = r.length - n;
       return t > 0 && !E && (e[e.length - 1] = (0, i.jsxs)(l.Button, {
-        className: s()(d.avatar, d.overflow),
-        onFocus: a,
-        onClick: e => null == _ ? void 0 : _(e),
+        className: s()(_.avatar, _.overflow),
+        onFocus: o,
+        onClick: e => null == d ? void 0 : d(e),
         look: l.Button.Looks.BLANK,
         size: l.Button.Sizes.NONE,
         children: ["+", t + 1]

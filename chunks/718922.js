@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return i
   }
 });
-var r = n("470079");
+var r = n(470079);
 
 function i() {
   let [, e] = (0, r.useState)({});

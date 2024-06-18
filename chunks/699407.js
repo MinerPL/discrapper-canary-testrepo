@@ -1,19 +1,19 @@
 "use strict";
 let i, r, s;
-n.r(t), n.d(t, {
-  AnalyticsActionHandlers: function() {
+n.d(t, {
+  X: function() {
     return T
   },
-  analyticsTrackingStoreMaker: function() {
-    return h
+  l: function() {
+    return f
   }
-}), n("177593"), n("733860"), n("47120"), n("653041"), n("17089");
-var a, o = n("756647"),
-  l = n("442837"),
-  u = n("544891"),
-  d = n("761609");
+}), n(177593), n(733860), n(47120), n(653041), n(17089);
+var o, a = n(756647),
+  l = n(442837),
+  u = n(544891),
+  _ = n(761609);
 
-function _(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -22,50 +22,50 @@ function _(e, t, n) {
   }) : e[t] = n, e
 }
 let c = 1500,
-  E = null !== (a = window.requestIdleCallback) && void 0 !== a ? a : e => setImmediate(() => e()),
-  I = new d.IdGenerator,
+  E = null !== (o = window.requestIdleCallback) && void 0 !== o ? o : e => setImmediate(() => e()),
+  I = new _.R,
   T = {
     handleConnectionOpen: () => {},
     handleConnectionClosed: () => {},
     handleFingerprint: () => {},
     handleTrack: () => {}
   },
-  f = [],
+  h = [],
   S = () => Promise.resolve({
     sessionId: void 0
   }),
-  h = e => {
+  f = e => {
     let {
       dispatcher: t,
       actionHandler: n,
-      getFingerprint: a,
-      getSessionId: d = S,
-      TRACKING_URL: h,
-      drainTimeoutOverride: A,
-      waitFor: m
+      getFingerprint: o,
+      getSessionId: _ = S,
+      TRACKING_URL: f,
+      drainTimeoutOverride: N,
+      waitFor: A
     } = e;
-    c = null != A ? A : 1500;
+    c = null != N ? N : 1500;
 
-    function N() {
-      return 0 !== f.length && (null != r ? null != i : null != a())
+    function m() {
+      return 0 !== h.length && (null != r ? null != i : null != o())
     }
 
     function O() {
-      null == s && N() && (s = E(p, {
+      null == s && m() && (s = E(R, {
         timeout: c
       }))
     }
 
-    function p() {
-      if (s = null, !N()) return;
-      let e = f.slice();
-      f = [], R(e).then(() => {
+    function R() {
+      if (s = null, !m()) return;
+      let e = h.slice();
+      h = [], C(e).then(() => {
         e.forEach(e => {
           var t;
           null === (t = e.resolve) || void 0 === t || t.call(e)
         })
       }, t => {
-        f.unshift(...e);
+        h.unshift(...e);
         let {
           message: n
         } = t.body || t;
@@ -73,7 +73,7 @@ let c = 1500,
       })
     }
 
-    function R(e) {
+    function C(e) {
       let t = Date.now(),
         n = e.map(e => ({
           ...e,
@@ -82,8 +82,8 @@ let c = 1500,
             client_send_timestamp: t
           }
         }));
-      return u.HTTP.post({
-        url: h,
+      return u.tn.post({
+        url: f,
         body: {
           token: i,
           events: n
@@ -98,9 +98,9 @@ let c = 1500,
       } = e;
       return null != t && (i = t), null != n.id && (r = n.id), O(), !1
     }, T.handleConnectionClosed = function() {
-      return p(), i = null, r = null, !1
+      return R(), i = null, r = null, !1
     }, T.handleFingerprint = function() {
-      return p(), !1
+      return R(), !1
     }, T.handleTrack = function(e) {
       let {
         event: t,
@@ -109,10 +109,10 @@ let c = 1500,
         fingerprint: s,
         resolve: l
       } = e;
-      return d().then(e => {
+      return _().then(e => {
         let {
           sessionId: u
-        } = e, d = {
+        } = e, _ = {
           type: t,
           fingerprint: s,
           properties: {
@@ -121,21 +121,22 @@ let c = 1500,
             ...n
           },
           resolve: l
-        }, _ = function(e) {
+        }, d = function(e) {
           if (null != r) return r;
-          let t = e.fingerprint || a();
-          return null != t ? (0, o.extractId)(t) : null
-        }(d);
-        null != _ && (d.properties.client_uuid = I.generate(_)), f.push(d), f.length > 1e4 && (f = f.slice(-1e4)), i ? p() : O()
+          let t = e.fingerprint || o();
+          return null != t ? (0, a.s)(t) : null
+        }(_);
+        null != d && (_.properties.client_uuid = I.generate(d)), h.push(_);
+        h.length > 1e4 && (h = h.slice(-1e4)), i ? R() : O()
       }), !1
     };
-    class C extends l.Store {
+    class p extends l.yh {
       initialize() {
-        null != m && this.waitFor(...m)
+        null != A && this.waitFor(...A)
       }
       constructor(...e) {
-        super(...e), _(this, "submitEventsImmediately", R)
+        super(...e), d(this, "submitEventsImmediately", C)
       }
     }
-    return _(C, "displayName", "AnalyticsTrackingStore"), new C(t, n)
+    return d(p, "displayName", "AnalyticsTrackingStore"), new p(t, n)
   }

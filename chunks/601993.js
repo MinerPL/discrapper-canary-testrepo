@@ -1,51 +1,51 @@
 "use strict";
-n.r(t), n.d(t, {
-  addResultListener: function() {
+n.d(t, {
+  Gb: function() {
+    return a
+  },
+  RD: function() {
     return T
   },
-  getCorrections: function() {
-    return c
-  },
-  isMisspelled: function() {
-    return _
-  },
-  isSupported: function() {
-    return o
-  },
-  replaceWithCorrection: function() {
+  Rs: function() {
     return E
   },
-  setAppLocale: function() {
+  WA: function() {
+    return c
+  },
+  _2: function() {
     return I
   },
-  setEnabled: function() {
-    return u
-  },
-  setLearnedWords: function() {
+  f5: function() {
     return d
+  },
+  fG: function() {
+    return _
+  },
+  gL: function() {
+    return u
   }
 });
-var i = n("579806"),
-  r = n("405826"),
-  s = n("358085");
-
-function a() {
-  return (null === i.default || void 0 === i.default ? void 0 : i.default.spellCheck) != null
-}
+var i = n(579806),
+  r = n(405826),
+  s = n(358085);
 
 function o() {
-  return (0, s.isDesktop)() && a()
+  return (null === i.Z || void 0 === i.Z ? void 0 : i.Z.spellCheck) != null
 }
-let l = o() ? (0, r.install)() : null;
+
+function a() {
+  return (0, s.isDesktop)() && o()
+}
+let l = a() ? (0, r.N)() : null;
 async function u(e) {
   let t = await l;
-  null != t && (t.enabled = e)
-}
-async function d(e) {
-  let t = await l;
-  null != t && t.setLearnedWords(e)
+  if (null != t) t.enabled = e
 }
 async function _(e) {
+  let t = await l;
+  if (null != t) t.setLearnedWords(e)
+}
+async function d(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = await l;
   return null != n && n.isMisspelled(e, t)
@@ -58,15 +58,15 @@ async function c(e) {
 }
 async function E(e) {
   let t = await l;
-  null != t && t.replaceMisspelling(e)
+  if (null != t) t.replaceMisspelling(e)
 }
 async function I(e) {
   let t = await l;
-  null != t && t.setAppLocale(e)
+  if (null != t) t.setAppLocale(e)
 }
 
 function T(e) {
-  if (!a()) return () => {};
-  let t = i.default.spellCheck.on("spellcheck-result", e);
+  if (!o()) return () => {};
+  let t = i.Z.spellCheck.on("spellcheck-result", e);
   return null != t ? t : () => {}
 }

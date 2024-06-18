@@ -1,64 +1,64 @@
 "use strict";
-n.r(t), n.d(t, {
-  isEligibleForGuildShopStorefront: function() {
-    return a
-  },
-  isEligibleForSubscriptionsInGuildShop: function() {
+n.d(t, {
+  C4: function() {
     return l
   },
-  useIsEligibleForGuildShopPreview: function() {
-    return u
+  RF: function() {
+    return a
   },
-  useIsEligibleForGuildShopStorefront: function() {
+  pX: function() {
     return s
   },
-  useIsEligibleForSubscriptionsInGuildShop: function() {
+  vw: function() {
     return o
+  },
+  yV: function() {
+    return u
   }
 });
-var i = n("352981"),
-  r = n("732845");
+var i = n(352981),
+  r = n(732845);
 
 function s() {
   let {
     enabled: e
-  } = r.GuildShopStorefrontExperiment.useExperiment({
+  } = r.mv.useExperiment({
     location: "adf3ea_1"
   });
   return e
 }
 
-function a() {
+function o() {
   let {
     enabled: e
-  } = r.GuildShopStorefrontExperiment.getCurrentConfig({
+  } = r.mv.getCurrentConfig({
     location: "adf3ea_2"
   });
   return e
 }
 
-function o(e, t) {
+function a(e, t) {
   let {
     enabled: n
-  } = r.ShowGuildRoleSubInGuildShopExperiment.useExperiment({
+  } = r.xB.useExperiment({
     location: t
-  }), s = (0, i.useGuildEligibleForGuildProducts)(e, t);
+  }), s = (0, i.y)(e, t);
   return n && s
 }
 
 function l(e, t) {
   let {
     enabled: n
-  } = r.ShowGuildRoleSubInGuildShopExperiment.getCurrentConfig({
+  } = r.xB.getCurrentConfig({
     location: t
-  }), s = (0, i.isGuildEligibleForGuildProducts)(e, t);
+  }), s = (0, i.p)(e, t);
   return n && s
 }
 
 function u(e) {
   let {
     enabled: t
-  } = r.GuildShopPreviewExperiment.useExperiment({
+  } = r.ac.useExperiment({
     location: e
   });
   return t

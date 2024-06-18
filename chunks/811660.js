@@ -8,11 +8,11 @@ function i() {
 function r() {
   return null
 }
-n.r(t), n.d(t, {
-  getMediaPerformanceClass: function() {
+n.d(t, {
+  R: function() {
     return r
   },
-  hasPerformanceForKrispFullband: function() {
+  b: function() {
     return i
   }
 })

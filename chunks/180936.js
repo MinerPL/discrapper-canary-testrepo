@@ -1,5 +1,5 @@
 "use strict";
-var n = r("489727");
+var n = r(489727);
 t.exports = function(t) {
   var e = t.getSelection();
   if (!e.rangeCount) return null;

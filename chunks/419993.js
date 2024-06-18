@@ -1,25 +1,25 @@
 "use strict";
-n.r(t), n.d(t, {
-  TextArea: function() {
-    return p
+n.d(t, {
+  K: function() {
+    return O
   }
-}), n("653041");
-var i, r = n("735250"),
-  a = n("470079"),
-  s = n("120356"),
-  o = n.n(s),
-  l = n("153832"),
-  u = n("84735"),
-  d = n("15127"),
-  _ = n("766646"),
-  c = n("993365"),
-  E = n("179240"),
-  I = n("689938"),
-  T = n("709944"),
-  f = n("12349"),
-  S = n("842648");
+}), n(653041);
+var i, r = n(735250),
+  s = n(470079),
+  o = n(120356),
+  a = n.n(o),
+  l = n(772848),
+  u = n(84735),
+  _ = n(15127),
+  d = n(766646),
+  c = n(993365),
+  E = n(179240),
+  I = n(689938),
+  T = n(709944),
+  h = n(12349),
+  S = n(842648);
 
-function h(e, t, n) {
+function f(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -27,10 +27,10 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let A = (0, l.v4)(),
-  m = (0, l.v4)(),
-  N = (0, l.v4)();
-class p extends(i = a.Component) {
+let N = (0, l.Z)(),
+  A = (0, l.Z)(),
+  m = (0, l.Z)();
+class O extends(i = s.Component) {
   getPaddingRight() {
     let {
       maxLength: e,
@@ -66,7 +66,7 @@ class p extends(i = a.Component) {
         maxLength: n
       } = this.props;
       return (0, r.jsxs)("div", {
-        className: o()(T.maxLength, {
+        className: a()(T.maxLength, {
           [T.errorOverflow]: this.hasError()
         }),
         "aria-hidden": "true",
@@ -79,7 +79,7 @@ class p extends(i = a.Component) {
     if (this.props.showCharacterCount || !1 === this.props.showRemainingCharacterCount) return null;
     let e = this.getCharsLeftLength();
     return null == e ? null : (0, r.jsx)("div", {
-      className: o()(T.maxLength, {
+      className: a()(T.maxLength, {
         [T.errorOverflow]: e < 0
       }),
       "aria-hidden": "true",
@@ -94,17 +94,17 @@ class p extends(i = a.Component) {
       error: e,
       maxLength: t,
       minLength: n
-    } = this.props, i = this.getIsOverflowing() ? I.default.Messages.MAXIMUM_LENGTH_ERROR.format({
+    } = this.props, i = this.getIsOverflowing() ? I.Z.Messages.MAXIMUM_LENGTH_ERROR.format({
       maxLength: t
-    }) : null, r = this.getIsUnderflowing() ? I.default.Messages.MINIMUM_LENGTH_ERROR.format({
+    }) : null, r = this.getIsUnderflowing() ? I.Z.Messages.MINIMUM_LENGTH_ERROR.format({
       minLength: n
     }) : null;
     return null != e && e.length < 1 || null === e ? null : void 0 !== e ? e : !1 === this.state.dirty ? null : null != i ? i : r
   }
   renderErrorMessage() {
     let e = this.getErrorMessage();
-    return null == e ? null : (0, r.jsx)(c.Text, {
-      id: A,
+    return null == e ? null : (0, r.jsx)(c.x, {
+      id: N,
       variant: "text-xs/normal",
       color: "text-danger",
       className: T.errorMessage,
@@ -116,52 +116,52 @@ class p extends(i = a.Component) {
     let {
       disabled: n,
       value: i,
-      placeholder: a,
-      autoFocus: s,
+      placeholder: s,
+      autoFocus: o,
       minLength: l,
-      maxLength: d,
+      maxLength: _,
       allowOverflow: c,
-      spellCheck: h,
-      resizeable: A,
-      className: p,
-      id: O,
+      spellCheck: f,
+      resizeable: N,
+      className: O,
+      id: R,
       rows: C,
-      flex: R,
+      flex: p,
       autosize: g,
       required: L,
       onInvalid: v,
       inputRef: D
-    } = this.props, M = g ? E.TextAreaAutosize : "textarea", y = this.hasError(), P = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, U = this.getAriaDescribedBy();
+    } = this.props, M = g ? E.l : "textarea", P = this.hasError(), y = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, U = this.getAriaDescribedBy();
     return (0, r.jsxs)("div", {
-      className: o()(f.inputWrapper, {
-        [T.flex]: R
+      className: a()(h.inputWrapper, {
+        [T.flex]: p
       }),
       children: [(0, r.jsxs)("div", {
-        className: o()(T.inputMaxLength, {
-          [T.flex]: R
+        className: a()(T.inputMaxLength, {
+          [T.flex]: p
         }),
-        children: [(0, r.jsx)(u.FocusRing, {
+        children: [(0, r.jsx)(u.t, {
           children: (0, r.jsx)(M, {
             type: "text",
-            className: o()(f.inputDefault, T.textArea, S.scrollbarDefault, p, {
-              [f.error]: y,
-              [f.disabled]: n,
-              [T.resizeable]: A
+            className: a()(h.inputDefault, T.textArea, S.scrollbarDefault, O, {
+              [h.error]: P,
+              [h.disabled]: n,
+              [T.resizeable]: N
             }),
-            "aria-labelledby": P,
+            "aria-labelledby": y,
             "aria-describedby": U,
-            "aria-invalid": y,
+            "aria-invalid": P,
             style: {
               paddingRight: this.getPaddingRight()
             },
-            id: O,
+            id: R,
             disabled: n,
-            placeholder: a,
+            placeholder: s,
             value: i,
-            autoFocus: s,
+            autoFocus: o,
             minLength: l,
-            maxLength: c ? void 0 : d,
-            spellCheck: h,
+            maxLength: c ? void 0 : _,
+            spellCheck: f,
             required: L,
             onChange: this.onChange,
             onBlur: this.onBlur,
@@ -171,15 +171,15 @@ class p extends(i = a.Component) {
             rows: C,
             ref: D
           })
-        }), null != l && (0, r.jsx)(_.HiddenVisually, {
-          id: m,
-          children: I.default.Messages.MINIMUM_LENGTH.format({
+        }), null != l && (0, r.jsx)(d.n, {
+          id: A,
+          children: I.Z.Messages.MINIMUM_LENGTH.format({
             minLength: l
           })
-        }), null != d && (0, r.jsx)(_.HiddenVisually, {
-          id: N,
-          children: I.default.Messages.MAXIMUM_LENGTH.format({
-            maxLength: d
+        }), null != _ && (0, r.jsx)(d.n, {
+          id: m,
+          children: I.Z.Messages.MAXIMUM_LENGTH.format({
+            maxLength: _
           })
         }), this.renderCharacterCount(), this.renderMaxLength()]
       }), this.renderErrorMessage()]
@@ -187,15 +187,15 @@ class p extends(i = a.Component) {
   }
   constructor(e) {
     var t;
-    super(e), h(this, "getAriaDescribedBy", () => {
+    super(e), f(this, "getAriaDescribedBy", () => {
       var e;
       let {
         maxLength: t,
         minLength: n,
         error: i
-      } = this.props, r = [], a = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
-      return null != a && r.push(a), null != i ? r.push(A) : (null != t && r.push(N), null != n && r.push(m)), r.length > 0 ? r.join(" ") : void 0
-    }), h(this, "onChange", e => {
+      } = this.props, r = [], s = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
+      return null != s && r.push(s), null != i ? r.push(N) : (null != t && r.push(m), null != n && r.push(A)), r.length > 0 ? r.join(" ") : void 0
+    }), f(this, "onChange", e => {
       let {
         onChange: t,
         name: n
@@ -203,19 +203,19 @@ class p extends(i = a.Component) {
       null == t || t(e.currentTarget.value, n), this.setState({
         dirty: !0
       })
-    }), h(this, "onFocus", e => {
+    }), f(this, "onFocus", e => {
       let {
         onFocus: t,
         name: n
       } = this.props;
       null == t || t(e, n)
-    }), h(this, "onBlur", e => {
+    }), f(this, "onBlur", e => {
       let {
         onBlur: t,
         name: n
       } = this.props;
       null == t || t(e, n)
-    }), h(this, "onKeyDown", e => {
+    }), f(this, "onKeyDown", e => {
       let {
         onKeyDown: t
       } = this.props;
@@ -225,7 +225,7 @@ class p extends(i = a.Component) {
     }
   }
 }
-h(p, "contextType", d.FormContext), h(p, "defaultProps", {
+f(O, "contextType", _.q3), f(O, "defaultProps", {
   name: "",
   disabled: !1,
   placeholder: "",

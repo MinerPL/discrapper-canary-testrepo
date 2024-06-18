@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n("47120");
-var i, r, s, a, o = n("442837"),
-  l = n("570140");
+n(47120);
+var i, r, s, o, a = n(442837),
+  l = n(570140);
 let u = [];
 
-function d() {
+function _() {
   u = []
 }
-class _ extends(i = o.default.Store) {
+class d extends(i = a.ZP.Store) {
   hasLayers() {
     return u.length > 0
   }
@@ -15,12 +15,12 @@ class _ extends(i = o.default.Store) {
     return u
   }
 }
-a = "LayerStore", (s = "displayName") in(r = _) ? Object.defineProperty(r, s, {
-  value: a,
+o = "LayerStore", (s = "displayName") in(r = d) ? Object.defineProperty(r, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new _(l.default, {
+}) : r[s] = o, t.Z = new d(l.Z, {
   LAYER_PUSH: function(e) {
     let {
       component: t
@@ -32,7 +32,7 @@ a = "LayerStore", (s = "displayName") in(r = _) ? Object.defineProperty(r, s, {
     if (0 === u.length) return !1;
     u = u.slice(0, -1)
   },
-  LAYER_POP_ALL: d,
-  LOGOUT: d,
-  NOTIFICATION_CLICK: d
+  LAYER_POP_ALL: _,
+  LOGOUT: _,
+  NOTIFICATION_CLICK: _
 })

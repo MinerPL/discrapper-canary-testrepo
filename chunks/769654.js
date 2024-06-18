@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  transitionToGuild: function() {
-    return s
+n.d(t, {
+  X: function() {
+    return o
   }
 });
-var i = n("35225"),
-  r = n("703656"),
-  a = n("981631");
+var i = n(35225),
+  r = n(703656),
+  s = n(981631);
 
-function s(e, t) {
-  (0, r.transitionTo)(a.Routes.CHANNEL(e, (0, i.getChannelIdForGuildTransition)(e)), t)
+function o(e, t) {
+  (0, r.uL)(s.Z5c.CHANNEL(e, (0, i.V)(e)), t)
 }

@@ -1,103 +1,103 @@
 "use strict";
-n.r(t), n.d(t, {
-  getTimestampString: function() {
-    return T.default
+n.d(t, {
+  A_: function() {
+    return f
   },
-  trackActiveThreadsPopoutOpened: function() {
-    return m
+  Ok: function() {
+    return O
   },
-  trackThreadBrowserOpened: function() {
-    return A
-  },
-  trackThreadBrowserTab: function() {
-    return h
-  },
-  trackThreadNotificationSettingsUpdated: function() {
+  U4: function() {
     return N
   },
-  useLastMessageTimestamp: function() {
-    return O
+  Ye: function() {
+    return T.Z
+  },
+  ZJ: function() {
+    return m
+  },
+  q: function() {
+    return A
   }
-}), n("789020");
-var i = n("913527"),
+}), n(789020);
+var i = n(913527),
   r = n.n(i),
-  s = n("442837"),
-  a = n("367907"),
-  o = n("731429"),
-  l = n("306680"),
-  u = n("9156"),
-  d = n("626135"),
-  _ = n("630388"),
-  c = n("621600"),
-  E = n("709054"),
-  I = n("569471"),
-  T = n("814391"),
-  f = n("124368"),
-  S = n("981631");
+  s = n(442837),
+  o = n(367907),
+  a = n(731429),
+  l = n(306680),
+  u = n(9156),
+  _ = n(626135),
+  d = n(630388),
+  c = n(621600),
+  E = n(709054),
+  I = n(569471),
+  T = n(814391),
+  h = n(124368),
+  S = n(981631);
 
-function h() {
-  (0, a.trackWithMetadata)(S.AnalyticEvents.THREAD_BROWSER_TAB_CHANGED)
+function f() {
+  (0, o.yw)(S.rMx.THREAD_BROWSER_TAB_CHANGED)
 }
 
-function A() {
+function N() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "Modal";
-  (0, a.trackWithMetadata)(S.AnalyticEvents.OPEN_MODAL, {
+  (0, o.yw)(S.rMx.OPEN_MODAL, {
     type: "Thread Browser",
     location_section: e
   })
 }
 
-function m() {
-  d.default.track(S.AnalyticEvents.OPEN_POPOUT, {
+function A() {
+  _.default.track(S.rMx.OPEN_POPOUT, {
     type: "Active Threads Popout"
   })
 }
 
-function N(e, t) {
+function m(e, t) {
   var n, i;
-  let r = (0, o.collectThreadMetadata)(e);
+  let r = (0, a.K)(e);
   if (null == r) return;
   let s = e.getGuildId(),
-    a = e.parent_id,
-    l = (0, c.getCurrentChannelSettings)(s, a),
+    o = e.parent_id,
+    l = (0, c.I)(s, o),
     E = e => {
-      if ((0, _.hasFlag)(e, f.ThreadMemberFlags.ALL_MESSAGES)) return c.MessageNotificationSettings[S.UserNotificationSettings.ALL_MESSAGES];
-      if ((0, _.hasFlag)(e, f.ThreadMemberFlags.ONLY_MENTIONS)) return c.MessageNotificationSettings[S.UserNotificationSettings.ONLY_MENTIONS];
-      if ((0, _.hasFlag)(e, f.ThreadMemberFlags.NO_MESSAGES)) return c.MessageNotificationSettings[S.UserNotificationSettings.NO_MESSAGES];
-      return c.MessageNotificationSettings[S.UserNotificationSettings.NULL]
+      if ((0, d.yE)(e, h.iN.ALL_MESSAGES)) return c.$R[S.bL.ALL_MESSAGES];
+      if ((0, d.yE)(e, h.iN.ONLY_MENTIONS)) return c.$R[S.bL.ONLY_MENTIONS];
+      if ((0, d.yE)(e, h.iN.NO_MESSAGES)) return c.$R[S.bL.NO_MESSAGES];
+      return c.$R[S.bL.NULL]
     },
-    T = null !== (n = I.default.flags(e.id)) && void 0 !== n ? n : 0,
-    h = E(T),
-    A = I.default.isMuted(e.id),
-    m = (0, c.muteConfigToTimestamp)(I.default.getMuteConfig(e.id)),
+    T = null !== (n = I.Z.flags(e.id)) && void 0 !== n ? n : 0,
+    f = E(T),
+    N = I.Z.isMuted(e.id),
+    A = (0, c.sK)(I.Z.getMuteConfig(e.id)),
     {
-      can_send_message: N,
+      can_send_message: m,
       ...O
     } = r,
-    p = {
+    R = {
       ...O,
       channel_id: e.id,
       guild_id: s,
-      parent_id: a,
+      parent_id: o,
       channel_type: e.type,
-      has_interacted_with_thread: (T & f.ThreadMemberFlags.HAS_INTERACTED) != 0,
-      parent_is_muted: u.default.isGuildOrCategoryOrChannelMuted(s, a),
-      old_thread_notification_setting: h,
-      new_thread_notification_setting: null != t.flags ? E(t.flags) : h,
+      has_interacted_with_thread: (T & h.iN.HAS_INTERACTED) != 0,
+      parent_is_muted: u.ZP.isGuildOrCategoryOrChannelMuted(s, o),
+      old_thread_notification_setting: f,
+      new_thread_notification_setting: null != t.flags ? E(t.flags) : f,
       parent_notification_setting: l.channel_message_notification_settings,
-      old_thread_is_muted: A,
-      new_thread_is_muted: null !== (i = t.muted) && void 0 !== i ? i : A,
-      old_thread_muted_until: m,
-      new_thread_muted_until: null != t.mute_config ? (0, c.muteConfigToTimestamp)(t.mute_config) : m
+      old_thread_is_muted: N,
+      new_thread_is_muted: null !== (i = t.muted) && void 0 !== i ? i : N,
+      old_thread_muted_until: A,
+      new_thread_muted_until: null != t.mute_config ? (0, c.sK)(t.mute_config) : A
     };
-  d.default.track(S.AnalyticEvents.THREAD_NOTIFICATION_SETTINGS_UPDATED, p)
+  _.default.track(S.rMx.THREAD_NOTIFICATION_SETTINGS_UPDATED, R)
 }
-n("689938");
+n(689938);
 let O = e => {
   var t, n;
-  let i = (0, s.useStateFromStores)([l.default], () => l.default.lastMessageId(e.id)),
-    a = null != i ? E.default.extractTimestamp(i) : null,
-    o = null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.createTimestamp,
-    u = null != o ? r()(o).valueOf() : null;
-  return null !== (n = null != a ? a : u) && void 0 !== n ? n : E.default.extractTimestamp(e.id)
+  let i = (0, s.e7)([l.ZP], () => l.ZP.lastMessageId(e.id)),
+    o = null != i ? E.default.extractTimestamp(i) : null,
+    a = null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.createTimestamp,
+    u = null != a ? r()(a).valueOf() : null;
+  return null !== (n = null != o ? o : u) && void 0 !== n ? n : E.default.extractTimestamp(e.id)
 }

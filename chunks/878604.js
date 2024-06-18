@@ -9,11 +9,11 @@ function r(e, t) {
   let n = e[t];
   return null == n ? e.any : n
 }
-n.r(t), n.d(t, {
-  formatSinkWantAsInt: function() {
+n.d(t, {
+  F: function() {
     return r
   },
-  formatSinkWantStat: function() {
+  f: function() {
     return i
   }
 })

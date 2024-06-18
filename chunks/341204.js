@@ -1,5 +1,4 @@
 "use strict";
-r.r(t);
-var n = r("145907"),
-  a = (0, r("163541").default)(n.default);
-t.default = a
+var r = n(145907),
+  i = (0, n(163541).Z)(r.Z);
+t.Z = i

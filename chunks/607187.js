@@ -1,11 +1,10 @@
 "use strict";
-n.r(t);
-var i = n("735250"),
-  r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
-  o = n("492223");
-t.default = r.forwardRef(function(e, t) {
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(546502);
+t.Z = r.forwardRef(function(e, t) {
   let {
     children: n,
     className: r,
@@ -14,8 +13,8 @@ t.default = r.forwardRef(function(e, t) {
     participantUserId: u
   } = e;
   return (0, i.jsx)("div", {
-    className: a()(r, o.tile, {
-      [o.noBorder]: l
+    className: o()(r, a.tile, {
+      [a.noBorder]: l
     }),
     style: s,
     ref: t,

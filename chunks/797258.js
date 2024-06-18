@@ -1,10 +1,9 @@
 "use strict";
-n.r(t);
-var i, r, s, a, o = n("392711"),
-  l = n.n(o),
-  u = n("442837"),
-  d = n("570140"),
-  _ = n("314897");
+var i, r, s, o, a = n(392711),
+  l = n.n(a),
+  u = n(442837),
+  _ = n(570140),
+  d = n(314897);
 let c = Object.freeze([]),
   E = {};
 
@@ -13,19 +12,19 @@ function I(e) {
     E[e.sessionId] = e
   })
 }
-class T extends(a = u.default.Store) {
+class T extends(o = u.ZP.Store) {
   initialize() {
-    this.waitFor(_.default)
+    this.waitFor(d.default)
   }
   getSessions() {
     return E
   }
   getSession() {
-    let e = _.default.getSessionId();
+    let e = d.default.getSessionId();
     return null != e ? this.getSessionById(e) : null
   }
   getRemoteActivities() {
-    let e = _.default.getSessionId(),
+    let e = d.default.getSessionId(),
       t = l().find(E, t => t.active && t.sessionId !== e);
     return null != t ? t.activities : c
   }
@@ -46,7 +45,7 @@ s = "SessionsStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new T(d.default, {
+}) : i[r] = s, t.Z = new T(_.Z, {
   CONNECTION_OPEN: I,
   SESSIONS_REPLACE: I
 })

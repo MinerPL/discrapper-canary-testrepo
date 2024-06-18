@@ -5,16 +5,16 @@ n.r(t), n.d(t, {
     return i
   },
   getNativePlatform: function() {
-    return A
+    return N
   },
   getOS: function() {
-    return m
+    return A
   },
   getPlatform: function() {
     return S
   },
   getPlatformName: function() {
-    return h
+    return f
   },
   isAndroid: function() {
     return T
@@ -26,19 +26,19 @@ n.r(t), n.d(t, {
     return I
   },
   isDesktop: function() {
-    return _
+    return d
   },
   isIOS: function() {
-    return f
+    return h
   },
   isLinux: function() {
-    return d
+    return _
   },
   isMac: function() {
     return u
   },
   isPlatformEmbedded: function() {
-    return a
+    return o
   },
   isWeb: function() {
     return c
@@ -48,23 +48,23 @@ n.r(t), n.d(t, {
   }
 }), (r = i || (i = {})).WINDOWS = "WINDOWS", r.OSX = "OSX", r.LINUX = "LINUX", r.WEB = "WEB";
 let s = window.DiscordNative,
-  a = null != s,
-  o = null != s ? s.process.platform : "";
+  o = null != s,
+  a = null != s ? s.process.platform : "";
 
 function l() {
-  return /^win/.test(o)
+  return /^win/.test(a)
 }
 
 function u() {
-  return "darwin" === o
-}
-
-function d() {
-  return "linux" === o
+  return "darwin" === a
 }
 
 function _() {
-  return l() || u() || d()
+  return "linux" === a
+}
+
+function d() {
+  return l() || u() || _()
 }
 
 function c() {
@@ -81,32 +81,32 @@ function I() {
 }
 
 function T() {
-  return "android" === o
-}
-
-function f() {
-  return "ios" === o
-}
-
-function S() {
-  return l() ? "WINDOWS" : u() ? "OSX" : d() ? "LINUX" : "WEB"
+  return "android" === a
 }
 
 function h() {
-  return o
+  return "ios" === a
 }
 
-function A() {
-  switch (o) {
+function S() {
+  return l() ? "WINDOWS" : u() ? "OSX" : _() ? "LINUX" : "WEB"
+}
+
+function f() {
+  return a
+}
+
+function N() {
+  switch (a) {
     case "ios":
     case "android":
-      return o;
+      return a;
     default:
       return "web"
   }
 }
 
-function m() {
+function A() {
   let {
     userAgent: e
   } = window.navigator;

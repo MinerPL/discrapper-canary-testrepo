@@ -1,4 +1,4 @@
-var r = n("718043").default;
+var r = n(718043).default;
 e.exports = function(e, t) {
   if ("object" != r(e) || !e) return e;
   var n = e[Symbol.toPrimitive];

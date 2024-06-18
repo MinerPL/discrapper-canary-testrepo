@@ -1,7 +1,7 @@
 "use strict";
-var i, r, s, a;
+var i, r, s, o;
 
-function o(e, t) {
+function a(e, t) {
   return {
     id: e.id,
     topic: e.topic,
@@ -15,8 +15,8 @@ function o(e, t) {
     type: e.type
   }
 }
-n.r(t), n.d(t, {
-  createSummaryFromServer: function() {
-    return o
+n.d(t, {
+  b: function() {
+    return a
   }
-}), n("47120"), (s = i || (i = {}))[s.SOURCE_0 = 0] = "SOURCE_0", s[s.SOURCE_1 = 1] = "SOURCE_1", (a = r || (r = {}))[a.UNSET = 0] = "UNSET", a[a.SOURCE_1 = 1] = "SOURCE_1", a[a.SOURCE_2 = 2] = "SOURCE_2"
+}), n(47120), (s = i || (i = {}))[s.SOURCE_0 = 0] = "SOURCE_0", s[s.SOURCE_1 = 1] = "SOURCE_1", (o = r || (r = {}))[o.UNSET = 0] = "UNSET", o[o.SOURCE_1 = 1] = "SOURCE_1", o[o.SOURCE_2 = 2] = "SOURCE_2"

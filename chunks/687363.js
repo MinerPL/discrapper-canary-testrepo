@@ -1,5 +1,5 @@
-var r = n("814033"),
-  i = n("526808");
+var r = n(814033),
+  i = n(526808);
 
 function a(e) {
   this.rand = e || new i.Rand

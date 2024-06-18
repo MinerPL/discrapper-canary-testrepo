@@ -1,101 +1,101 @@
 "use strict";
-i.r(e);
-var l = i("735250"),
-  r = i("470079"),
-  a = i("442837"),
-  n = i("481060"),
-  s = i("367907"),
-  o = i("829883"),
-  d = i("623624"),
-  c = i("973542"),
-  h = i("703656"),
-  u = i("592125"),
-  f = i("430824"),
-  x = i("944486"),
-  m = i("514342"),
-  g = i("709586"),
-  j = i("176278"),
-  w = i("626135"),
-  p = i("524444"),
-  v = i("981631"),
-  C = i("176505"),
-  N = i("689938"),
-  y = i("523462");
-e.default = t => {
+var i = n(735250),
+  r = n(470079),
+  s = n(442837),
+  o = n(481060),
+  a = n(367907),
+  l = n(829883),
+  u = n(623624),
+  _ = n(973542),
+  d = n(703656),
+  c = n(592125),
+  E = n(430824),
+  I = n(944486),
+  T = n(514342),
+  h = n(709586),
+  S = n(176278),
+  f = n(626135),
+  N = n(524444),
+  A = n(981631),
+  m = n(176505),
+  O = n(689938),
+  R = n(846745);
+t.Z = e => {
   let {
-    roleIcon: e,
-    guild: i
-  } = t, {
-    name: T
-  } = e;
+    roleIcon: t,
+    guild: n
+  } = e, {
+    name: C
+  } = t;
   r.useEffect(() => {
-    w.default.track(v.AnalyticEvents.OPEN_POPOUT, {
+    f.default.track(A.rMx.OPEN_POPOUT, {
       type: "Role Icon Popout",
-      guild_id: i.id,
-      ...(0, s.collectChannelAnalyticsMetadata)(u.default.getChannel(x.default.getChannelId(i.id)))
+      guild_id: n.id,
+      ...(0, a.v_)(c.Z.getChannel(I.Z.getChannelId(n.id)))
     })
   }, []);
-  let I = (0, a.useStateFromStores)([f.default], () => null != e.roleId ? f.default.getRole(i.id, e.roleId) : void 0),
-    _ = (0, c.isSubscriptionRole)(I),
-    E = _ ? N.default.Messages.ROLE_ICON_POPOUT_DESCRIPTION_ROLE_SUBSCRIPTIONS.format({
-      name: T
-    }) : N.default.Messages.ROLE_ICON_POPOUT_DESCRIPTION.format({
-      name: T
+  let p = (0, s.e7)([E.Z], () => null != t.roleId ? E.Z.getRole(n.id, t.roleId) : void 0),
+    g = (0, _.Z)(p),
+    L = g ? O.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION_ROLE_SUBSCRIPTIONS.format({
+      name: C
+    }) : O.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION.format({
+      name: C
     }),
-    O = {
-      ...e,
-      src: null == e.src ? e.src : (0, o.replaceRoleIconSourceSize)(e.src, 40),
+    v = {
+      ...t,
+      src: null == t.src ? t.src : (0, l.o)(t.src, 40),
       size: 40
+    },
+    D = g ? () => {
+      (0, d.uL)(A.Z5c.CHANNEL(n.id, m.oC.ROLE_SUBSCRIPTIONS))
+    } : () => {
+      (0, u.f)({
+        guildId: n.id,
+        location: {
+          section: A.jXE.ROLE_ICON_POPOUT
+        }
+      })
     };
-  return (0, l.jsx)(n.Dialog, {
-    children: (0, l.jsx)(p.MessagePopoutContent, {
-      children: (0, l.jsxs)("div", {
-        className: y.popoutContainer,
-        children: [(0, l.jsxs)("div", {
-          className: y.mainContent,
-          children: [(0, l.jsx)("div", {
-            className: y.roleIconContainer,
-            children: (0, l.jsx)(j.default, {
-              ...O,
+  return (0, i.jsx)(o.Dialog, {
+    children: (0, i.jsx)(N.W_, {
+      children: (0, i.jsxs)("div", {
+        className: R.popoutContainer,
+        children: [(0, i.jsxs)("div", {
+          className: R.mainContent,
+          children: [(0, i.jsx)("div", {
+            className: R.roleIconContainer,
+            children: (0, i.jsx)(S.Z, {
+              ...v,
               enableTooltip: !1,
-              className: y.__invalid_roleIcon,
+              className: R.__invalid_roleIcon,
               enableHeight: !1
             })
-          }), (0, l.jsxs)("div", {
-            className: y.truncatingText,
-            children: [(0, l.jsx)(n.Heading, {
+          }), (0, i.jsxs)("div", {
+            className: R.truncatingText,
+            children: [(0, i.jsx)(o.Heading, {
               variant: "heading-md/semibold",
-              className: y.roleName,
-              children: (0, l.jsx)(m.default, {
-                children: T
+              className: R.roleName,
+              children: (0, i.jsx)(T.Z, {
+                children: C
               })
-            }), (0, l.jsx)(n.Text, {
+            }), (0, i.jsx)(o.Text, {
               variant: "text-sm/normal",
-              children: E
+              children: L
             })]
           })]
-        }), (0, l.jsxs)(n.Button, {
-          size: n.Button.Sizes.SMALL,
-          color: n.Button.Colors.PRIMARY,
-          className: y.ctaButton,
-          innerClassName: y.ctaButtonContent,
+        }), (0, i.jsxs)(o.Button, {
+          size: o.Button.Sizes.SMALL,
+          color: o.Button.Colors.PRIMARY,
+          className: R.ctaButton,
+          innerClassName: R.ctaButtonContent,
           fullWidth: !0,
-          onClick: _ ? () => {
-            (0, h.transitionTo)(v.Routes.CHANNEL(i.id, C.StaticChannelRoute.ROLE_SUBSCRIPTIONS))
-          } : () => {
-            (0, d.openGuildBoostingMarketingModal)({
-              guildId: i.id,
-              location: {
-                section: v.AnalyticsSections.ROLE_ICON_POPOUT
-              }
-            })
-          },
+          onClick: D,
           autoFocus: !0,
-          children: [(0, l.jsx)(g.default, {
+          children: [(0, i.jsx)(h.Z, {
             width: 14,
             height: 14,
-            className: y.boosterBadge
-          }), N.default.Messages.ROLE_ICON_POPOUT_CTA]
+            className: R.boosterBadge
+          }), O.Z.Messages.ROLE_ICON_POPOUT_CTA]
         })]
       })
     })

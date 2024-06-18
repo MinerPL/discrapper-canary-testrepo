@@ -1,10 +1,10 @@
 "use strict";
-n.r(e), n.d(e, {
-  supportsHistory: function() {
+n.d(e, {
+  B: function() {
     return i
   }
 });
-let r = (0, n("24716").getGlobalObject)();
+let r = (0, n(24716).Rf)();
 
 function i() {
   let t = r.chrome,

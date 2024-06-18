@@ -1,31 +1,31 @@
 "use strict";
-i.r(t), i.d(t, {
-  useDeveloperActivityShelfItems: function() {
-    return u
+n.d(t, {
+  o: function() {
+    return a
   }
 });
-var l = i("470079"),
-  n = i("442837"),
-  a = i("115130"),
-  d = i("701488");
-let u = () => {
+var i = n(470079),
+  r = n(442837),
+  s = n(115130),
+  o = n(701488);
+let a = () => {
   let {
     isEnabled: e,
     lastUsedObject: t
-  } = (0, n.useStateFromStoresObject)([a.default], () => ({
-    isEnabled: a.default.getIsEnabled(),
-    lastUsedObject: a.default.getLastUsedObject()
-  }), []), i = (0, n.useStateFromStoresArray)([a.default], () => a.default.getDeveloperShelfItems(), []);
-  return l.useMemo(() => e ? i.map(e => ({
+  } = (0, r.cj)([s.Z], () => ({
+    isEnabled: s.Z.getIsEnabled(),
+    lastUsedObject: s.Z.getLastUsedObject()
+  }), []), n = (0, r.Wu)([s.Z], () => s.Z.getDeveloperShelfItems(), []);
+  return i.useMemo(() => e ? n.map(e => ({
     application: e,
     activity: {
-      ...d.DEFAULT_EMBEDDED_ACTIVITY_CONFIG,
+      ...o.wT,
       ...e.embeddedActivityConfig,
       application_id: e.id
     }
-  })).sort((e, i) => {
-    let l = t[e.application.id],
-      n = t[i.application.id];
-    return null == l ? 1 : null == n ? -1 : n - l
-  }) : [], [i, e, t])
+  })).sort((e, n) => {
+    let i = t[e.application.id],
+      r = t[n.application.id];
+    return null == i ? 1 : null == r ? -1 : r - i
+  }) : [], [n, e, t])
 }

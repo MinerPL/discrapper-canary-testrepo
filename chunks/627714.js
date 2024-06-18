@@ -3,8 +3,8 @@
 function i(e) {
   return !1
 }
-n.r(t), n.d(t, {
-  shouldShowLinkNotDiscordWarning: function() {
+n.d(t, {
+  I: function() {
     return i
   }
 })

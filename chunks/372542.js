@@ -6,23 +6,23 @@ function r(e) {
 Object.defineProperty(t, "__esModule", {
   value: !0
 });
-var i = n("672268"),
-  a = n("698091"),
-  o = r(n("248766")),
-  s = n("470079"),
-  u = r(n("222675")),
-  c = r(n("309496")),
-  l = r(n("572677")),
-  d = r(n("624482")),
-  f = n("560656"),
-  p = n("239189"),
-  h = n("482033"),
-  m = r(n("956845")),
-  g = n("640809"),
-  _ = r(n("449686")),
-  b = r(n("102386")),
-  v = n("179237"),
-  y = n("467568"),
+var i = n(672268),
+  a = n(698091),
+  o = r(n(248766)),
+  s = n(470079),
+  u = r(n(222675)),
+  c = r(n(309496)),
+  l = r(n(572677)),
+  d = r(n(624482)),
+  f = n(560656),
+  p = n(239189),
+  h = n(482033),
+  m = r(n(956845)),
+  g = n(640809),
+  _ = r(n(449686)),
+  b = r(n(102386)),
+  v = n(179237),
+  y = n(467568),
   E = {
     default: {
       tension: 170,
@@ -67,9 +67,9 @@ function w(e, t) {
     (n || !a.is.und(t.frequency) || !a.is.und(t.damping) || !a.is.und(t.mass)) && (e.duration = void 0, e.decay = void 0), n && (e.frequency = void 0)
   } else e.duration = void 0
 }
-var T = [],
-  C = function() {
-    this.changed = !1, this.values = T, this.toValues = null, this.fromValues = T, this.to = void 0, this.from = void 0, this.config = new x, this.immediate = !1, this.onStart = void 0, this.onChange = void 0, this.onRest = []
+var C = [],
+  T = function() {
+    this.changed = !1, this.values = C, this.toValues = null, this.fromValues = C, this.to = void 0, this.from = void 0, this.config = new x, this.immediate = !1, this.onStart = void 0, this.onChange = void 0, this.onRest = []
   };
 
 function D(e, t) {
@@ -77,11 +77,11 @@ function D(e, t) {
   for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
   return r
 }
-var O = function(e, t) {
+var M = function(e, t) {
   return h.useMemoOne(e, t || [{}])
 };
 
-function M(e) {
+function O(e) {
   for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
   return a.is.fun(e) ? e.apply(void 0, n) : e
 }
@@ -179,15 +179,15 @@ function P(e) {
   return o({}, e)
 }
 
-function F(e) {
+function B(e) {
   var t = a.getFluidConfig(e);
-  return t ? F(t.get()) : a.is.arr(e) ? e.map(F) : a.isAnimatedString(e) ? p.createStringInterpolator({
+  return t ? B(t.get()) : a.is.arr(e) ? e.map(B) : a.isAnimatedString(e) ? p.createStringInterpolator({
     range: [0, 1],
     output: [e, e]
   })(1) : e
 }
 
-function B(e, t) {
+function F(e, t) {
   var n = t.key,
     r = t.props,
     i = t.state,
@@ -217,7 +217,7 @@ function B(e, t) {
         u(e)
       }
     }
-    f ? m() : (c = M(r.delay || 0, n), (d = A(r.pause, n)) ? (i.resumeQueue.add(h), s.pause()) : (s.resume(), h()))
+    f ? m() : (c = O(r.delay || 0, n), (d = A(r.pause, n)) ? (i.resumeQueue.add(h), s.pause()) : (s.resume(), h()))
   })
 }
 var U = function(e, t) {
@@ -225,11 +225,11 @@ var U = function(e, t) {
       return e.cancelled
     }) ? z(e) : t.every(function(e) {
       return e.noop
-    }) ? Y(e) : j(e, t.every(function(e) {
+    }) ? j(e) : Y(e, t.every(function(e) {
       return e.finished
     }))
   },
-  Y = function(e, t) {
+  j = function(e, t) {
     return void 0 === t && (t = e.get()), {
       value: t,
       noop: !0,
@@ -237,7 +237,7 @@ var U = function(e, t) {
       target: e
     }
   },
-  j = function(e, t, n) {
+  Y = function(e, t, n) {
     return void 0 === n && (n = e.get()), {
       value: n,
       finished: t,
@@ -292,7 +292,7 @@ function V() {
                   }), v = function(e) {
                     return function() {
                       var t = function(e) {
-                        throw e instanceof W && _(e), e
+                        throw e instanceof Z && _(e), e
                       };
                       try {
                         return e.apply(void 0, arguments).catch(t)
@@ -301,10 +301,10 @@ function V() {
                       }
                     }
                   }, y = function(e) {
-                    var t = s <= (r.cancelId || 0) && z(i) || s !== r.asyncId && j(i, !1);
+                    var t = s <= (r.cancelId || 0) && z(i) || s !== r.asyncId && Y(i, !1);
                     if (t) throw e.result = t, e
                   }, E = v(function(e, t) {
-                    var n = new W;
+                    var n = new Z;
                     y(n);
                     var l = a.is.obj(e) ? o({}, e) : o(o({}, t), {}, {
                       to: e
@@ -383,10 +383,10 @@ function V() {
                     }
                   })()(t) : a.is.fun(t) && (x = Promise.resolve(t(E, i.stop.bind(i)))), e.next = 11, Promise.all([x.then(g), b]);
                 case 11:
-                  S = j(i, !0), e.next = 21;
+                  S = Y(i, !0), e.next = 21;
                   break;
                 case 14:
-                  if (e.prev = 14, e.t0 = e.catch(7), !(e.t0 instanceof W)) {
+                  if (e.prev = 14, e.t0 = e.catch(7), !(e.t0 instanceof Z)) {
                     e.next = 20;
                     break
                   }
@@ -419,7 +419,7 @@ function V() {
 function $(e, t) {
   e.cancelId = t, e.asyncId = e.asyncTo = e.promise = void 0
 }
-var W = function(e) {
+var Z = function(e) {
     function t() {
       var t;
       return (t = e.call(this, "An async animation has been interrupted. You see this error because you forgot to use `await` or `.catch(...)` on its returned promise.") || this).result = void 0, t
@@ -427,13 +427,13 @@ var W = function(e) {
     return d(t, e), t
   }(m(Error)),
   K = function(e) {
-    return e instanceof Q
+    return e instanceof q
   },
-  q = 1,
-  Q = function(e) {
+  W = 1,
+  q = function(e) {
     function t() {
       for (var t, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
-      return (t = e.call.apply(e, [this].concat(r)) || this).id = q++, t.key = void 0, t._priority = 0, t._children = new Set, t
+      return (t = e.call.apply(e, [this].concat(r)) || this).id = W++, t.key = void 0, t._priority = 0, t._children = new Set, t
     }
     d(t, e);
     var n = t.prototype;
@@ -491,7 +491,7 @@ var W = function(e) {
       }
     }]), t
   }(a.FluidValue),
-  Z = "CREATED",
+  Q = "CREATED",
   X = "IDLE",
   J = "ACTIVE",
   ee = "PAUSED",
@@ -499,7 +499,7 @@ var W = function(e) {
   en = function(e) {
     function t(t, n) {
       var r;
-      if ((r = e.call(this) || this).key = void 0, r.animation = new C, r.queue = void 0, r._phase = Z, r._state = {
+      if ((r = e.call(this) || this).key = void 0, r.animation = new T, r.queue = void 0, r._phase = Q, r._state = {
           pauseQueue: new Set,
           resumeQueue: new Set
         }, r._defaultProps = {}, r._lastCallId = 0, r._lastToId = 0, !a.is.und(t) || !a.is.und(n)) {
@@ -544,16 +544,16 @@ var W = function(e) {
                 p = m + g / (1 - _) * (1 - b), f = .1 > Math.abs(c.lastPosition - p), v = g * b
               } else {
                 v = null == c.lastVelocity ? g : c.lastVelocity;
-                for (var v, y = o.precision || (m == d ? .005 : Math.min(1, .001 * Math.abs(d - m))), E = o.restVelocity || y / 10, S = o.clamp ? 0 : o.bounce, x = !a.is.und(S), w = m == d ? c.v0 > 0 : m < d, T = !1, C = Math.ceil(e / 1), D = 0; D < C && !(!(Math.abs(v) > E) && (f = Math.abs(d - p) <= y)); ++D) {
+                for (var v, y = o.precision || (m == d ? .005 : Math.min(1, .001 * Math.abs(d - m))), E = o.restVelocity || y / 10, S = o.clamp ? 0 : o.bounce, x = !a.is.und(S), w = m == d ? c.v0 > 0 : m < d, C = !1, T = Math.ceil(e / 1), D = 0; D < T && !(!(Math.abs(v) > E) && (f = Math.abs(d - p) <= y)); ++D) {
                   ;
-                  x && (T = p == d || p > d == w) && (v = -v * S, p = d);
-                  var O = (-(1e-6 * o.tension) * (p - d) + -(.001 * o.friction) * v) / o.mass;
-                  v += 1 * O, p += 1 * v
+                  x && (C = p == d || p > d == w) && (v = -v * S, p = d);
+                  var M = (-(1e-6 * o.tension) * (p - d) + -(.001 * o.friction) * v) / o.mass;
+                  v += 1 * M, p += 1 * v
                 }
               }
             } else {
-              var M = o.progress || 0;
-              o.duration <= 0 ? M = 1 : M += (1 - M) * Math.min(1, h / o.duration), v = ((p = m + o.easing(M) * (d - m)) - c.lastPosition) / e, f = 1 == M
+              var O = o.progress || 0;
+              o.duration <= 0 ? O = 1 : O += (1 - O) * Math.min(1, h / o.duration), v = ((p = m + o.easing(O) * (d - m)) - c.lastPosition) / e, f = 1 == O
             }
             c.lastVelocity = v, Number.isNaN(p) && (console.warn("Got NaN while animating:", t), f = !0)
           }
@@ -629,7 +629,7 @@ var W = function(e) {
         to: t,
         from: n = !a.is.obj(n) || a.getFluidConfig(n) ? n : n[i]
       };
-      if (this.is(Z)) {
+      if (this.is(Q)) {
         if (r) {
           var s = [n, t];
           t = s[0], n = s[1]
@@ -658,7 +658,7 @@ var W = function(e) {
         };
       i("cancel"), i("pause");
       var o = this._prepareNode(e);
-      return B(++this._lastCallId, {
+      return F(++this._lastCallId, {
         key: this.key,
         props: e,
         state: this._state,
@@ -704,59 +704,59 @@ var W = function(e) {
       E && (i.from = v);
       var x = !a.isEqual(_, h);
       x && this._focus(_);
-      var T = a.getFluidConfig(_),
-        C = a.getFluidConfig(v);
-      C && (v = C.get());
+      var C = a.getFluidConfig(_),
+        T = a.getFluidConfig(v);
+      T && (v = T.get());
       var D = a.is.arr(t.to) || a.is.fun(t.to),
-        O = i.config,
-        k = O.decay,
-        R = O.velocity;
+        M = i.config,
+        k = M.decay,
+        R = M.velocity;
       t.config && !D && ! function(e, t, n) {
         for (var r in n && (w(n = o({}, n), t), t = o(o({}, n), t)), w(e, t), Object.assign(e, t), S) null == e[r] && (e[r] = S[r]);
         var i = e.mass,
           s = e.frequency,
           u = e.damping;
         !a.is.und(s) && (s < .01 && (s = .01), u < 0 && (u = 0), e.tension = Math.pow(2 * Math.PI / s, 2) * i, e.friction = 4 * Math.PI * u * i / s)
-      }(O, M(t.config, r), t.config !== s.config ? M(s.config, r) : void 0);
+      }(M, O(t.config, r), t.config !== s.config ? O(s.config, r) : void 0);
       var I = f.getAnimated(this);
-      if (!I || a.is.und(_)) return n(j(this, !0));
+      if (!I || a.is.und(_)) return n(Y(this, !0));
       var L = a.is.und(t.reset) ? c && !t.default : !a.is.und(v) && A(t.reset, r),
         P = L ? v : this.get(),
-        B = F(_),
-        U = a.is.num(B) || a.is.arr(B) || a.isAnimatedString(B),
+        F = B(_),
+        U = a.is.num(F) || a.is.arr(F) || a.isAnimatedString(F),
         H = !D && (!U || A(s.immediate || t.immediate, r));
       if (x) {
-        if (H) I = this._updateNode(B);
+        if (H) I = this._updateNode(F);
         else {
           var V = this._getNodeType(_);
           if (V !== I.constructor) throw Error("Cannot animate between " + I.constructor.name + " and " + V.name + ', as the "to" prop suggests')
         }
       }
       var $ = I.constructor,
-        W = !!T,
+        Z = !!C,
         K = !1;
-      if (!W) {
-        var q = L || this.is(Z) && E;
-        (x || q) && (W = !(K = a.isEqual(F(P), B))), (!a.isEqual(O.decay, k) || !a.isEqual(O.velocity, R)) && (W = !0)
+      if (!Z) {
+        var W = L || this.is(Q) && E;
+        (x || W) && (Z = !(K = a.isEqual(B(P), F))), (!a.isEqual(M.decay, k) || !a.isEqual(M.velocity, R)) && (Z = !0)
       }
-      if (K && this.is(J) && (i.changed && !L ? W = !0 : !W && this._stop()), !D) {
-        (W || a.getFluidConfig(h)) && (i.values = I.getPayload(), i.toValues = T ? null : $ == f.AnimatedString ? [1] : a.toArray(B)), i.immediate = H, i.onStart = ei(l("onStart"), r), i.onChange = ei(l("onChange"), r);
-        var Q = i.onRest,
-          ee = L && !t.onRest ? Q[0] || a.noop : ea(ei(l("onRest"), r), this);
-        if (W) {
+      if (K && this.is(J) && (i.changed && !L ? Z = !0 : !Z && this._stop()), !D) {
+        (Z || a.getFluidConfig(h)) && (i.values = I.getPayload(), i.toValues = C ? null : $ == f.AnimatedString ? [1] : a.toArray(F)), i.immediate = H, i.onStart = ei(l("onStart"), r), i.onChange = ei(l("onChange"), r);
+        var q = i.onRest,
+          ee = L && !t.onRest ? q[0] || a.noop : ea(ei(l("onRest"), r), this);
+        if (Z) {
           i.onRest = [ee, ea(n, this)];
           var et = L ? 0 : 1;
-          et < Q.length && p.batchedUpdates(function() {
-            for (; et < Q.length; et++) Q[et]()
+          et < q.length && p.batchedUpdates(function() {
+            for (; et < q.length; et++) q[et]()
           })
         } else(L || t.onRest) && (i.onRest[0] = ee)
       }
       var en = ei(l("onProps"), r);
       if (en && en(t, this), L && I.setValue(P), D) n(G(t.to, t, this._state, this));
-      else if (W) L && (this._phase = X), this._reset(), this._start();
+      else if (Z) L && (this._phase = X), this._reset(), this._start();
       else if (this.is(J) && !x) i.onRest.push(ea(n, this));
       else {
-        let e = Y(this, P),
+        let e = j(this, P),
           t = ei(l("onNoopRest"), r);
         null != t && t(e), n(e)
       }
@@ -816,7 +816,7 @@ var W = function(e) {
         })
       }
     }]), t
-  }(Q);
+  }(q);
 
 function er(e, t) {
   if (e.is(et)) throw Error('Cannot call "' + t + '" of disposed "' + e.constructor.name + '" object')
@@ -830,16 +830,16 @@ var ea = function(e, t) {
   return e ? function(r) {
     if (r) e(z(t));
     else {
-      var i = F(n),
-        o = F(t.get());
-      e(j(t, a.isEqual(o, i)))
+      var i = B(n),
+        o = B(t.get());
+      e(Y(t, a.isEqual(o, i)))
     }
   } : a.noop
 };
 
 function eo(e, t, n) {
   void 0 === t && (t = e.loop), void 0 === n && (n = e.to);
-  var r = M(t);
+  var r = O(t);
   if (r) {
     var i = !0 !== r && P(r),
       s = (i || e).reverse,
@@ -871,7 +871,7 @@ var ec = ["onStart", "onChange", "onRest"],
   el = 1,
   ed = function() {
     function e(e, t) {
-      this.id = el++, this.springs = {}, this.queue = [], this._flush = void 0, this._initialProps = void 0, this._phase = Z, this._lastAsyncId = 0, this._active = new Set, this._state = {
+      this.id = el++, this.springs = {}, this.queue = [], this._flush = void 0, this._initialProps = void 0, this._phase = Q, this._lastAsyncId = 0, this._active = new Set, this._state = {
         pauseQueue: new Set,
         resumeQueue: new Set
       }, this._events = {
@@ -996,7 +996,7 @@ function ef(e, t) {
           return t.springs[e].start(n)
         }),
         l = t._state;
-      return u ? c.push(B(++t._lastAsyncId, {
+      return u ? c.push(F(++t._lastAsyncId, {
         props: n,
         state: l,
         actions: {
@@ -1063,7 +1063,7 @@ var eb = s.createContext({}),
     var t = e.children,
       n = _(e, ["children"]),
       r = s.useContext(eb);
-    n = O(function() {
+    n = M(function() {
       return o(o({}, r), n)
     }, [r, n.pause, n.cancel, n.immediate, n.config]);
     var i = eb.Provider;
@@ -1168,9 +1168,9 @@ function eS(e, t, n) {
       }(s), 0 == i && (d.current = s.ref, s.ref = void 0))
     }
   }
-  O(function() {
+  M(function() {
     f.length = e, g(h, e)
-  }, [e]), O(function() {
+  }, [e]), M(function() {
     g(0, Math.min(h, e))
   }, n);
   var _ = s.useMemo(function() {
@@ -1245,12 +1245,12 @@ function ew(e, t, n) {
   }
   return s[0]
 }
-var eT = "mount",
-  eC = "enter",
+var eC = "mount",
+  eT = "enter",
   eD = "update",
-  eO = "leave";
+  eM = "leave";
 
-function eM(e, t, n) {
+function eO(e, t, n) {
   var r = t.ref,
     u = t.reset,
     c = t.sort,
@@ -1284,7 +1284,7 @@ function eM(e, t, n) {
       m[t] || (m[t] = {
         key: g[t],
         item: e,
-        phase: eT,
+        phase: eC,
         ctrl: new ed
       })
     }), v.length) {
@@ -1306,33 +1306,33 @@ function eM(e, t, n) {
   a.each(m, function(e, n) {
     var r, i, s = e.key,
       u = e.phase;
-    if (u == eT) r = t.enter, i = eC;
+    if (u == eC) r = t.enter, i = eT;
     else {
       var c = 0 > g.indexOf(s);
-      if (u != eO) {
-        if (c) r = t.leave, i = eO;
+      if (u != eM) {
+        if (c) r = t.leave, i = eM;
         else {
           if (!(r = t.update)) return;
           i = eD
         }
       } else {
         if (c) return;
-        r = t.enter, i = eC
+        r = t.enter, i = eT
       }
     }
-    if (r = M(r, e.item, n), !(r = a.is.obj(r) ? P(r) : {
+    if (r = O(r, e.item, n), !(r = a.is.obj(r) ? P(r) : {
         to: r
       }).config) {
       var l = t.config || x.config;
-      r.config = M(l, e.item, n)
+      r.config = O(l, e.item, n)
     }
     var f = o(o({}, x), {}, {
       delay: E += d,
       reset: !1
     }, r);
-    if (i == eC && a.is.und(f.from)) {
+    if (i == eT && a.is.und(f.from)) {
       var h = a.is.und(t.initial) || b ? t.from : t.initial;
-      f.from = M(h, e.item, n)
+      f.from = O(h, e.item, n)
     }
     var m = f.onRest;
     f.onRest = f.onNoopRest = function(e) {
@@ -1349,8 +1349,8 @@ function eM(e, t, n) {
           var r = t.every(function(e) {
             return e.ctrl.idle
           });
-          if (n.phase == eO) {
-            var i = M(p, n.item);
+          if (n.phase == eM) {
+            var i = O(p, n.item);
             if (!1 !== i) {
               var o = !0 === i ? 0 : i;
               if (n.expired = !0, !r && o > 0) {
@@ -1372,15 +1372,15 @@ function eM(e, t, n) {
       payload: f
     })
   });
-  var T = ey();
+  var C = ey();
   i.useLayoutEffect(function() {
     a.each(m, function(e) {
       e.ctrl.start({
-        default: T
+        default: C
       })
     })
-  }, [T]);
-  var C = s.useMemo(function() {
+  }, [C]);
+  var T = s.useMemo(function() {
     return eE.create(function() {
       return _.current.map(function(e) {
         return e.ctrl
@@ -1388,14 +1388,14 @@ function eM(e, t, n) {
     })
   }, []);
   s.useImperativeHandle(r, function() {
-    return C
+    return T
   }), i.useLayoutEffect(function() {
     a.each(w, function(e, t) {
       var n = e.phase,
         i = e.springs,
         a = e.payload;
-      eh(t.ctrl, i), !T.cancel && (t.phase = n, n == eC && t.ctrl.start({
-        default: T
+      eh(t.ctrl, i), !C.cancel && (t.phase = n, n == eT && t.ctrl.start({
+        default: C
       }), t.ctrl[r ? "update" : "start"](a))
     })
   }, u ? void 0 : n);
@@ -1408,7 +1408,7 @@ function eM(e, t, n) {
       })) : r
     }))
   };
-  return 3 == arguments.length ? [D, C.start, C.stop] : D
+  return 3 == arguments.length ? [D, T.start, T.stop] : D
 }
 var eA = function(e) {
   function t(t, n) {
@@ -1455,7 +1455,7 @@ var eA = function(e) {
       return Math.max(e, (t.priority || 0) + 1)
     }, 0)), e.prototype.onParentChange.call(this, t)
   }, t
-}(Q);
+}(q);
 a.Globals.assign({
   createStringInterpolator: v.createStringInterpolator,
   to: function(e, t) {
@@ -1484,7 +1484,7 @@ Object.keys(y).forEach(function(e) {
   get: function() {
     return a.createInterpolator
   }
-}), t.BailSignal = W, t.Controller = ed, t.FrameValue = Q, t.Interpolation = eA, t.Spring = function(e) {
+}), t.BailSignal = Z, t.Controller = ed, t.FrameValue = q, t.Interpolation = eA, t.Spring = function(e) {
   return (0, e.children)(ex(_(e, ["children"])))
 }, t.SpringContext = ev, t.SpringHandle = eE, t.SpringValue = en, t.Trail = function(e) {
   var t = e.items,
@@ -1499,7 +1499,7 @@ Object.keys(y).forEach(function(e) {
   var t = e.items,
     n = e.children,
     r = _(e, ["items", "children"]);
-  return s.createElement(s.Fragment, null, eM(t, r)(n))
+  return s.createElement(s.Fragment, null, eO(t, r)(n))
 }, t.config = E, t.inferTo = P, t.interpolate = function(e) {
   for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
   return g.deprecateInterpolate(), new eA(e, n)
@@ -1546,4 +1546,4 @@ Object.keys(y).forEach(function(e) {
       })
     }
   })
-}, t.useSpring = ex, t.useSprings = eS, t.useTrail = ew, t.useTransition = eM
+}, t.useSpring = ex, t.useSprings = eS, t.useTrail = ew, t.useTransition = eO

@@ -1,9 +1,9 @@
 "use strict";
-n.r(t), n.d(t, {
-  MIDJOURNEY_BOT_ID: function() {
+n.d(t, {
+  g: function() {
     return r
   },
-  MIDJOURNEY_GUILD_ID: function() {
+  y: function() {
     return i
   }
 });

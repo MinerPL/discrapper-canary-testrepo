@@ -1,44 +1,45 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return W
   }
-}), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("47120"), n("177593");
-var i = n("512722"),
+}), n(315314), n(610138), n(216116), n(78328), n(815648), n(47120), n(653041), n(177593);
+var i = n(512722),
   r = n.n(i),
-  a = n("457854"),
-  s = n("261470"),
-  o = n("956067"),
-  l = n("286379"),
-  u = n("442837"),
-  d = n("544891"),
-  _ = n("570140"),
-  c = n("406966"),
-  E = n("795513"),
-  I = n("266750"),
-  T = n("250407"),
-  f = n("710845"),
-  S = n("797614"),
-  h = n("218543"),
-  A = n("857192"),
-  m = n("626135"),
-  N = n("12647"),
-  p = n("70956"),
-  O = n("358085"),
-  C = n("960048"),
-  R = n("138859"),
-  g = n("14639"),
-  L = n("639655"),
-  v = n("610308"),
-  D = n("91247"),
-  M = n("508569"),
-  y = n("183139"),
-  P = n("420491"),
-  U = n("645436"),
-  b = n("833508"),
-  G = n("981631");
+  s = n(457854),
+  o = n(261470),
+  a = n(956067),
+  l = n(286379),
+  u = n(442837),
+  _ = n(544891),
+  d = n(570140),
+  c = n(317381),
+  E = n(406966),
+  I = n(795513),
+  T = n(266750),
+  h = n(250407),
+  S = n(710845),
+  f = n(797614),
+  N = n(218543),
+  A = n(857192),
+  m = n(626135),
+  O = n(12647),
+  R = n(70956),
+  C = n(358085),
+  p = n(960048),
+  g = n(138859),
+  L = n(14639),
+  v = n(639655),
+  D = n(610308),
+  M = n(91247),
+  P = n(508569),
+  y = n(183139),
+  U = n(420491),
+  b = n(645436),
+  G = n(833508),
+  w = n(981631);
 
-function w(e, t, n) {
+function k(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -46,24 +47,24 @@ function w(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let k = new f.default("GatewaySocket"),
-  B = new v.default;
+let B = new S.Z("GatewaySocket"),
+  x = new D.Z;
 
 function V() {}
-let x = 30 * p.default.Millis.SECOND,
-  F = 3 * p.default.Millis.MINUTE,
-  H = 1 * p.default.Millis.MINUTE;
+let Z = 30 * R.Z.Millis.SECOND,
+  H = 3 * R.Z.Millis.MINUTE,
+  F = 1 * R.Z.Millis.MINUTE;
 
 function Y(e) {
   return null == e ? 0 : "string" == typeof e ? e.length : e.byteLength
 }
 let j = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
-class W extends y.default {
+class W extends y.Z {
   get connectionState() {
     return this.connectionState_
   }
   set connectionState(e) {
-    k.verbose("Setting connection state to ".concat(e)), this.connectionState_ = e
+    B.verbose("Setting connection state to ".concat(e)), this.connectionState_ = e
   }
   addAnalytics(e) {
     this.analytics = {
@@ -72,43 +73,43 @@ class W extends y.default {
     }
   }
   setResumeUrl(e) {
-    null != e && e.endsWith("/") && (e = e.substring(0, e.length - 1)), null !== e && k.verbose("Updating resume url to ".concat(e)), this.resumeUrl = e
+    null != e && e.endsWith("/") && (e = e.substring(0, e.length - 1)), null !== e && B.verbose("Updating resume url to ".concat(e)), this.resumeUrl = e
   }
   _connect() {
     if (!this.willReconnect()) {
-      k.verbose("Skipping _connect because willReconnect is false");
+      B.verbose("Skipping _connect because willReconnect is false");
       return
     }
-    if (U.getIsPaused()) {
-      k.info("Skipping _connect because socket is paused");
+    if (b.a()) {
+      B.info("Skipping _connect because socket is paused");
       return
     }
-    this.connectionState = R.default.CONNECTING, this.nextReconnectIsImmediate = !1, P.default.disableFailureTracking();
+    this.connectionState = g.Z.CONNECTING, this.nextReconnectIsImmediate = !1, U.Z.disableFailureTracking();
     let e = this.compressionHandler.getAlgorithm(),
-      t = B.getName(),
+      t = x.getName(),
       n = this._getGatewayUrl(),
       i = window.GLOBAL_ENV.API_VERSION;
-    o.default.mark("\uD83C\uDF10", "Socket._connect"), k.info("[CONNECT] ".concat(n, ", ") + "encoding: ".concat(t, ", ") + "version: ".concat(i, ", ") + "compression: ".concat(null != e ? e : "none")), null !== this.webSocket && (k.error("_connect called with already existing websocket"), this._cleanup(e => e.close(4e3))), this.connectionStartTime = Date.now(), this.helloTimeout = setTimeout(() => {
+    a.Z.mark("\uD83C\uDF10", "Socket._connect"), B.info("[CONNECT] ".concat(n, ", ") + "encoding: ".concat(t, ", ") + "version: ".concat(i, ", ") + "compression: ".concat(null != e ? e : "none")), null !== this.webSocket && (B.error("_connect called with already existing websocket"), this._cleanup(e => e.close(4e3))), this.connectionStartTime = Date.now(), this.helloTimeout = setTimeout(() => {
       let e = Date.now() - this.connectionStartTime;
       this._handleClose(!1, 0, "The connection timed out after ".concat(e, " ms - did not receive OP_HELLO in time.")), this.setResumeUrl(null)
-    }, x);
+    }, Z);
     let r = new URL(n);
     r.searchParams.append("encoding", t), r.searchParams.append("v", i.toString()), null != e && r.searchParams.append("compress", e), ! function(e) {
       let t, {
           gatewayURL: n,
           newCallback: i,
           onOpen: r,
-          onMessage: a,
-          onError: s,
-          onClose: o
+          onMessage: s,
+          onError: o,
+          onClose: a
         } = e,
         l = window._ws,
         u = !1,
-        d = !1,
-        _ = null,
+        _ = !1,
+        d = null,
         c = null;
       if (window._ws = null, null != l) {
-        if (t = l.ws, l.state.gateway !== n) k.verbose("[FAST CONNECT] gatewayURL mismatch: ".concat(l.state.gateway, " !== ").concat(n)), t.close(1e3), t = null;
+        if (t = l.ws, l.state.gateway !== n) B.verbose("[FAST CONNECT] gatewayURL mismatch: ".concat(l.state.gateway, " !== ").concat(n)), t.close(1e3), t = null;
         else {
           var E;
           let e = {
@@ -117,22 +118,22 @@ class W extends y.default {
           null != e.messages && (e.messages = e.messages.map(e => null != e.data && "string" == typeof e.data ? {
             ...e,
             data: e.data.substring(0, 100)
-          } : e)), k.log("[FAST CONNECT] successfully took over websocket, state:", {
+          } : e)), B.log("[FAST CONNECT] successfully took over websocket, state:", {
             ...e,
             messages: null === (E = e.messages) || void 0 === E ? void 0 : E.length
-          }), u = l.state.open, d = l.state.identify, _ = l.state.messages, c = l.state.clientState
+          }), u = l.state.open, _ = l.state.identify, d = l.state.messages, c = l.state.clientState
         }
       }
-      null == t && ((t = (0, b.default)(n)).binaryType = "arraybuffer"), i(t), u && r(d, c), null != _ && _.forEach(a), t.onopen = () => r(d, c), t.onmessage = a, t.onclose = o, t.onerror = s
+      null == t && ((t = (0, G.Z)(n)).binaryType = "arraybuffer"), i(t), u && r(_, c), null != d && d.forEach(s), t.onopen = () => r(_, c), t.onmessage = s, t.onclose = a, t.onerror = o
     }({
       gatewayURL: r.toString(),
       newCallback: e => {
         this.webSocket = e, this.compressionHandler.bindWebSocket(e)
       },
       onOpen: e => {
-        o.default.mark("\uD83C\uDF10", "GatewaySocket.onOpen ".concat(e)), P.default.enableFailureTracking();
+        a.Z.mark("\uD83C\uDF10", "GatewaySocket.onOpen ".concat(e)), U.Z.enableFailureTracking();
         let t = Date.now() - this.connectionStartTime;
-        k.info("[CONNECTED] ".concat(r.toString(), " in ").concat(t, " ms")), this.isFastConnect = e, e ? this._doFastConnectIdentify() : this._doResumeOrIdentify()
+        B.info("[CONNECTED] ".concat(r.toString(), " in ").concat(t, " ms")), this.isFastConnect = e, e ? this._doFastConnectIdentify() : this._doResumeOrIdentify()
       },
       onMessage: function(e, t, n) {
         let i = 0;
@@ -145,10 +146,10 @@ class W extends y.default {
         });
         let r = !1;
         return n => {
-          let a = n.data;
-          null != n.raw_length ? i += n.raw_length : i += Y(a);
+          let s = n.data;
+          null != n.raw_length ? i += n.raw_length : i += Y(s);
           try {
-            e.feed(a)
+            e.feed(s)
           } catch (e) {
             throw !r && (r = !0, t(!1, 0, "A decompression error occurred")), e
           }
@@ -158,43 +159,46 @@ class W extends y.default {
           {
             op: i,
             s: r,
-            t: a,
-            d: s
-          } = B.unpack(e);
-        i !== y.Opcode.DISPATCH && o.default.mark("\uD83C\uDF10", "GatewaySocket.onMessage ".concat(i, " ").concat(y.Opcode[i]));
+            t: s,
+            d: o
+          } = x.unpack(e);
+        if (i !== y.j.DISPATCH && a.Z.mark("\uD83C\uDF10", "GatewaySocket.onMessage ".concat(i, " ").concat(y.j[i])), A.default.isLoggingGatewayEvents) {
+          let e = [i];
+          i === y.j.DISPATCH && e.push(s), e.push(o), B.verboseDangerously("<~", ...e)
+        }
         let l = Date.now() - n;
-        switch ("READY" === a ? h.default.parseReady.set(n, l) : "READY_SUPPLEMENTAL" === a ? h.default.parseReadySupplemental.set(n, l) : l > 10 && o.default.mark("\uD83C\uDF10", "Parse " + a, l), null != r && (this.seq = r), i) {
-          case y.Opcode.HELLO:
-            this._clearHelloTimeout(), this._handleHello(s);
+        switch ("READY" === s ? N.Z.parseReady.set(n, l) : "READY_SUPPLEMENTAL" === s ? N.Z.parseReadySupplemental.set(n, l) : l > 10 && a.Z.mark("\uD83C\uDF10", "Parse " + s, l), null != r && (this.seq = r), i) {
+          case y.j.HELLO:
+            this._clearHelloTimeout(), this._handleHello(o);
             break;
-          case y.Opcode.RECONNECT:
+          case y.j.RECONNECT:
             this._handleReconnect();
             break;
-          case y.Opcode.INVALID_SESSION:
-            this._handleInvalidSession(s);
+          case y.j.INVALID_SESSION:
+            this._handleInvalidSession(o);
             break;
-          case y.Opcode.HEARTBEAT:
-            this._sendHeartbeat();
+          case y.j.HEARTBEAT:
+            this._handleHeartbeatReceive();
             break;
-          case y.Opcode.HEARTBEAT_ACK:
-            this._handleHeartbeatAck(s);
+          case y.j.HEARTBEAT_ACK:
+            this._handleHeartbeatAck(o);
             break;
-          case y.Opcode.DISPATCH:
-            this._handleDispatch(s, a, "READY" === a ? {
+          case y.j.DISPATCH:
+            this._handleDispatch(o, s, "READY" === s ? {
               compressed_byte_size: t,
               uncompressed_byte_size: Y(e),
               compression_algorithm: this.compressionHandler.getAlgorithm(),
-              packing_algorithm: B.getName(),
+              packing_algorithm: x.getName(),
               unpack_duration_ms: l
             } : null);
             break;
           default:
-            k.info("Unhandled op ".concat(i))
+            B.info("Unhandled op ".concat(i))
         }
         this._sendHeartbeatIfDue()
       }),
       onError: () => {
-        this.setResumeUrl(null), N.default.flushDNSCache(), this._handleClose(!1, 0, "An error with the websocket occurred")
+        this.setResumeUrl(null), O.Z.flushDNSCache(), this._handleClose(!1, 0, "An error with the websocket occurred")
       },
       onClose: e => {
         let {
@@ -209,27 +213,27 @@ class W extends y.default {
   _handleHello(e) {
     let t = this.heartbeatInterval = e.heartbeat_interval,
       n = Date.now() - this.connectionStartTime;
-    k.verbose("[HELLO] via ".concat((0, D.getConnectionPath)(e), ", ") + "heartbeat interval: ".concat(t, ", ") + "took ".concat(n, " ms")), this._startHeartbeater()
+    B.verbose("[HELLO] via ".concat((0, M.TO)(e), ", ") + "heartbeat interval: ".concat(t, ", ") + "took ".concat(n, " ms")), this._startHeartbeater()
   }
   _handleReconnect() {
-    k.verbose("[RECONNECT] gateway requested I reconnect."), P.default.disableFailureTracking(), this._cleanup(e => e.close(4e3)), this.connectionState = R.default.WILL_RECONNECT, this._connect()
+    B.verbose("[RECONNECT] gateway requested I reconnect."), U.Z.disableFailureTracking(), this._cleanup(e => e.close(4e3)), this.connectionState = g.Z.WILL_RECONNECT, this._connect()
   }
   _handleInvalidSession(e) {
-    k.info("[INVALID_SESSION]".concat(e ? " can resume)" : "")), e ? this._doResumeOrIdentify() : this._doIdentify()
+    B.info("[INVALID_SESSION]".concat(e ? " can resume)" : "")), e ? this._doResumeOrIdentify() : this._doIdentify()
   }
   _handleDispatch(e, t, n) {
     let i = Date.now() - this.connectionStartTime;
     if ("READY" === t) {
       let t = e.session_id;
       this.sessionId = t;
-      let n = (0, D.getConnectionPath)(e);
-      o.default.setServerTrace(n), k.info("[READY] took ".concat(i, "ms, as ").concat(t)), k.verbose("".concat(n)), this.connectionState = R.default.SESSION_ESTABLISHED, this.gatewayBackoff.succeed(), this.iosGoingAwayEventCount = 0, this.setResumeUrl(e.resume_gateway_url)
-    } else "READY_SUPPLEMENTAL" === t ? (k.info("[READY_SUPPLEMENTAL] took ".concat(i, "ms")), this.connectionState = R.default.SESSION_ESTABLISHED, this.gatewayBackoff.succeed(), this.iosGoingAwayEventCount = 0) : "RESUMED" === t && (k.verbose((0, D.getConnectionPath)(e)), this.connectionState = R.default.SESSION_ESTABLISHED, this.gatewayBackoff.succeed(), this.iosGoingAwayEventCount = 0);
+      let n = (0, M.TO)(e);
+      a.Z.setServerTrace(n), B.info("[READY] took ".concat(i, "ms, as ").concat(t)), B.verbose("".concat(n)), this.connectionState = g.Z.SESSION_ESTABLISHED, this.gatewayBackoff.succeed(), this.iosGoingAwayEventCount = 0, this.setResumeUrl(e.resume_gateway_url)
+    } else "READY_SUPPLEMENTAL" === t ? (B.info("[READY_SUPPLEMENTAL] took ".concat(i, "ms")), this.connectionState = g.Z.SESSION_ESTABLISHED, this.gatewayBackoff.succeed(), this.iosGoingAwayEventCount = 0) : "RESUMED" === t && (B.verbose((0, M.TO)(e)), this.connectionState = g.Z.SESSION_ESTABLISHED, this.gatewayBackoff.succeed(), this.iosGoingAwayEventCount = 0);
     this.dispatcher.receiveDispatch(e, t, n)
   }
   handleResumeDispatched() {
     let e = Date.now() - this.connectionStartTime;
-    k.info("[RESUMED] took ".concat(e, "ms, replayed ").concat(this.dispatcher.resumeAnalytics.numEvents, " events, new seq: ").concat(this.seq))
+    B.info("[RESUMED] took ".concat(e, "ms, replayed ").concat(this.dispatcher.resumeAnalytics.numEvents, " events, new seq: ").concat(this.seq))
   }
   handleReadyDispatched() {
     this.didForceClearGuildHashes = !1, this.hasConnectedOnce = !0
@@ -237,28 +241,53 @@ class W extends y.default {
   _getGatewayUrl() {
     return null != this.resumeUrl ? this.resumeUrl : j
   }
+  _handleHeartbeatReceive() {
+    this._sendHeartbeat(), null != this.heartbeater && null != this.heartbeatInterval && (clearInterval(this.heartbeater), this.heartbeater = setInterval(this._doHeartbeatInterval.bind(this), this.heartbeatInterval))
+  }
   _handleHeartbeatAck(e) {
-    this.lastHeartbeatAckTime = Date.now(), this.heartbeatAck = !0, null !== this.expeditedHeartbeatTimeout && (clearTimeout(this.expeditedHeartbeatTimeout), this.expeditedHeartbeatTimeout = null, k.verbose("Expedited heartbeat succeeded"))
+    this.lastHeartbeatAckTime = Date.now(), this.heartbeatAck = !0, null !== this.expeditedHeartbeatTimeout && (clearTimeout(this.expeditedHeartbeatTimeout), this.expeditedHeartbeatTimeout = null, B.verbose("Expedited heartbeat succeeded"))
   }
   _handleHeartbeatTimeout() {
-    this._cleanup(e => e.close(4e3)), this.connectionState = R.default.WILL_RECONNECT;
+    this._cleanup(e => e.close(4e3)), this.connectionState = g.Z.WILL_RECONNECT;
     let e = this.gatewayBackoff.fail(() => this._connect());
-    k.warn("[ACK TIMEOUT] reconnecting in ".concat((e / 1e3).toFixed(2), " seconds."))
+    B.warn("[ACK TIMEOUT] reconnecting in ".concat((e / 1e3).toFixed(2), " seconds."))
   }
   _handleClose(e, t, n) {
     if (e = e || !1, this._cleanup(), this.emit("close", {
         code: t,
         reason: n
-      }), 4004 === t) return this.connectionState = R.default.CLOSED, k.warn("[WS CLOSED] because of authentication failure, marking as closed."), this._reset(e, t, n);
-    if (this._tryDetectInvalidIOSToken(t, n, e), this.connectionState = R.default.WILL_RECONNECT, this.nextReconnectIsImmediate) k.info("[WS CLOSED] (".concat(e.toString(), ", ").concat(t, ", ").concat(n, ") retrying immediately.")), this._connect();
+      }), 4004 === t) return this.connectionState = g.Z.CLOSED, B.warn("[WS CLOSED] because of authentication failure, marking as closed."), this._reset(e, t, n);
+    if (this._tryDetectInvalidIOSToken(t, n, e), 0 !== t && c.ZP.getSelfEmbeddedActivities().size > 0) {
+      var i;
+      let [r, s] = null !== (i = Array.from(c.ZP.getSelfEmbeddedActivities().entries())[0]) && void 0 !== i ? i : [];
+      null != r && null != s && (p.Z.addBreadcrumb({
+        message: "Gateway close during Activity",
+        data: {
+          application_id: r,
+          channel_id: s.channelId,
+          guild_id: s.guildId,
+          code: t,
+          reason: n,
+          was_clean: e
+        }
+      }), m.default.track(w.rMx.ACTIVITIES_GATEWAY_CLOSED, {
+        application_id: r,
+        channel_id: s.channelId,
+        guild_id: s.guildId,
+        code: t,
+        reason: n,
+        was_clean: e
+      }))
+    }
+    if (this.connectionState = g.Z.WILL_RECONNECT, this.nextReconnectIsImmediate) B.info("[WS CLOSED] (".concat(e.toString(), ", ").concat(t, ", ").concat(n, ") retrying immediately.")), this._connect();
     else {
       let i = this.gatewayBackoff.fail(() => this._connect());
-      k.info("[WS CLOSED] (".concat(e.toString(), ", ").concat(t, ", ").concat(n, ") retrying in ").concat((i / 1e3).toFixed(2), " seconds.")), this.gatewayBackoff.fails > 4 && this._reset(e, t, n)
+      B.info("[WS CLOSED] (".concat(e.toString(), ", ").concat(t, ", ").concat(n, ") retrying in ").concat((i / 1e3).toFixed(2), " seconds.")), this.gatewayBackoff.fails > 4 && this._reset(e, t, n)
     }
   }
   _tryDetectInvalidIOSToken(e, t, n) {
-    (0, O.isIOS)() && null != this.token && 1001 === e && "Stream end encountered" === t && (this.iosGoingAwayEventCount += 1, 3 === this.iosGoingAwayEventCount && d.HTTP.get({
-      url: G.Endpoints.ME,
+    (0, C.isIOS)() && null != this.token && 1001 === e && "Stream end encountered" === t && (this.iosGoingAwayEventCount += 1, 3 === this.iosGoingAwayEventCount && _.tn.get({
+      url: w.ANM.ME,
       headers: {
         authorization: this.token
       }
@@ -266,20 +295,20 @@ class W extends y.default {
       let {
         status: t
       } = e;
-      m.default.track(G.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
+      m.default.track(w.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
         api_status_code: t
       })
     }, e => {
       let {
         status: t
       } = e;
-      401 === t && (this.connectionState = R.default.CLOSED, k.warn("[WS CLOSED] because of manual authentication failure, marking as closed."), this._reset(n, 4004, "invalid token manually detected")), m.default.track(G.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
+      401 === t && (this.connectionState = g.Z.CLOSED, B.warn("[WS CLOSED] because of manual authentication failure, marking as closed."), this._reset(n, 4004, "invalid token manually detected")), m.default.track(w.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
         api_status_code: t
       })
     }))
   }
   _reset(e, t, n) {
-    this.sessionId = null, this.seq = 0, k.warn("[RESET] (".concat(e.toString(), ", ").concat(t, ", ").concat(n, ")")), this.emit("disconnect", {
+    this.sessionId = null, this.seq = 0, B.warn("[RESET] (".concat(e.toString(), ", ").concat(t, ", ").concat(n, ")")), this.emit("disconnect", {
       wasClean: e,
       code: t,
       reason: n
@@ -290,16 +319,15 @@ class W extends y.default {
     let e = this.lastHeartbeatTime;
     null != e && Date.now() - e > this.heartbeatInterval + 5e3 && this._sendHeartbeat()
   }
+  _doHeartbeatInterval() {
+    this.heartbeatAck ? (this.heartbeatAck = !1, this._sendHeartbeat()) : null === this.expeditedHeartbeatTimeout && this._handleHeartbeatTimeout()
+  }
   _startHeartbeater() {
     let {
       heartbeatInterval: e
     } = this;
-    r()(null != e, "GatewaySocket: Heartbeat interval should never null here."), null !== this.initialHeartbeatTimeout && clearTimeout(this.initialHeartbeatTimeout), null !== this.heartbeater && (clearInterval(this.heartbeater), this.heartbeater = null);
-    let t = () => {
-      this.heartbeatAck ? (this.heartbeatAck = !1, this._sendHeartbeat()) : null === this.expeditedHeartbeatTimeout && this._handleHeartbeatTimeout()
-    };
-    this.initialHeartbeatTimeout = setTimeout(() => {
-      this.initialHeartbeatTimeout = null, this.heartbeatAck = !0, this.heartbeater = setInterval(t, e), t()
+    r()(null != e, "GatewaySocket: Heartbeat interval should never null here."), null !== this.initialHeartbeatTimeout && clearTimeout(this.initialHeartbeatTimeout), null !== this.heartbeater && (clearInterval(this.heartbeater), this.heartbeater = null), this.initialHeartbeatTimeout = setTimeout(() => {
+      this.initialHeartbeatTimeout = null, this.heartbeatAck = !0, this.heartbeater = setInterval(this._doHeartbeatInterval.bind(this), e), this._doHeartbeatInterval()
     }, Math.floor(Math.random() * e))
   }
   _stopHeartbeater() {
@@ -309,13 +337,13 @@ class W extends y.default {
     null != this.helloTimeout && (clearTimeout(this.helloTimeout), this.helloTimeout = null)
   }
   _cleanup(e) {
-    u.default.Emitter.resume(), this._stopHeartbeater(), this._clearHelloTimeout();
+    u.ZP.Emitter.resume(), this._stopHeartbeater(), this._clearHelloTimeout();
     let t = this.webSocket;
-    this.webSocket = null, null != t && (t.onopen = V, t.onmessage = V, t.onerror = V, t.onclose = V, null == e || e(t)), this.gatewayBackoff.cancel(), this.compressionHandler.close(), this.compressionHandler = (0, L.getCompressionHandler)(B)
+    this.webSocket = null, null != t && (t.onopen = V, t.onmessage = V, t.onerror = V, t.onclose = V, null == e || e(t)), this.gatewayBackoff.cancel(), this.compressionHandler.close(), this.compressionHandler = (0, v.I)(x)
   }
   _doResume() {
     var e;
-    this.connectionState = R.default.RESUMING, this.dispatcher.resumeAnalytics = (0, D.createResumeAnalytics)(Date.now() - this.connectionStartTime), k.info("[RESUME] resuming session ".concat(null !== (e = this.sessionId) && void 0 !== e ? e : "", ", seq: ").concat(this.seq)), this.send(y.Opcode.RESUME, {
+    this.connectionState = g.Z.RESUMING, this.dispatcher.resumeAnalytics = (0, M.zH)(Date.now() - this.connectionStartTime), B.info("[RESUME] resuming session ".concat(null !== (e = this.sessionId) && void 0 !== e ? e : "", ", seq: ").concat(this.seq)), this.send(y.j.RESUME, {
       token: this.token,
       session_id: this.sessionId,
       seq: this.seq
@@ -328,10 +356,10 @@ class W extends y.default {
       this._handleClose(!0, 4004, "No connection info provided");
       return
     }
-    this.connectionState = R.default.IDENTIFYING;
+    this.connectionState = g.Z.IDENTIFYING;
     let t = Date.now();
     this.identifyStartTime = t;
-    let [n, i, r] = await Promise.all([(0, T.isCacheEnabled)() ? c.default.getCommittedVersions() : {}, (0, T.isCacheEnabled)() ? I.default.getCommittedVersions() : {}, !!(0, T.isCacheEnabled)() && E.default.canUseGuildVersions()]), s = r ? {
+    let [n, i, r] = await Promise.all([(0, h.O)() ? E.Z.getCommittedVersions() : {}, (0, h.O)() ? T.Z.getCommittedVersions() : {}, !!(0, h.O)() && I.Z.canUseGuildVersions()]), o = r ? {
       guild_versions: n,
       highest_last_message_id: i.highest_last_message_id,
       read_state_version: i.read_state_version,
@@ -343,26 +371,26 @@ class W extends y.default {
     } : {
       guild_versions: {}
     };
-    if (this.connectionState !== R.default.IDENTIFYING || this.identifyStartTime !== t) {
-      k.warn("Skipping identify because connectionState or identifyStartTime has changed");
+    if (this.connectionState !== g.Z.IDENTIFYING || this.identifyStartTime !== t) {
+      B.warn("Skipping identify because connectionState or identifyStartTime has changed");
       return
     }
     let {
-      token: o,
+      token: a,
       properties: l = {},
       presence: u
     } = e;
-    this.token = o, k.verbose("[IDENTIFY]");
-    let d = {
-        token: o,
-        capabilities: g.default,
+    this.token = a, B.verbose("[IDENTIFY]");
+    let _ = {
+        token: a,
+        capabilities: L.Z,
         properties: l,
         presence: u,
         compress: this.compressionHandler.usesLegacyCompression(),
-        client_state: s
+        client_state: o
       },
-      _ = JSON.stringify(d);
-    this.identifyUncompressedByteSize = _.length, this.identifyCompressedByteSize = a.deflate(_).length, this.identifyCount += 1, this.send(y.Opcode.IDENTIFY, d, !1)
+      d = JSON.stringify(_);
+    this.identifyUncompressedByteSize = d.length, this.identifyCompressedByteSize = s.deflate(d).length, this.identifyCount += 1, this.send(y.j.IDENTIFY, _, !1)
   }
   _doFastConnectIdentify() {
     this.seq = 0, this.sessionId = null;
@@ -374,35 +402,35 @@ class W extends y.default {
     let {
       token: t
     } = e;
-    this.token = t, this.connectionState = R.default.IDENTIFYING, this.identifyStartTime = Date.now(), this.identifyCount += 1, k.verbose("[IDENTIFY, fast-connect]"), this._updateLastHeartbeatAckTime()
+    this.token = t, this.connectionState = g.Z.IDENTIFYING, this.identifyStartTime = Date.now(), this.identifyCount += 1, B.verbose("[IDENTIFY, fast-connect]"), this._updateLastHeartbeatAckTime()
   }
   _doResumeOrIdentify() {
     let e = Date.now();
-    null !== this.sessionId && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= F) ? this._doResume() : this._doIdentify(), this._updateLastHeartbeatAckTime()
+    null !== this.sessionId && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= H) ? this._doResume() : this._doIdentify(), this._updateLastHeartbeatAckTime()
   }
   _updateLastHeartbeatAckTime() {
     this.lastHeartbeatAckTime = Date.now()
   }
   _sendHeartbeat() {
-    this.send(y.Opcode.HEARTBEAT, this.seq, !1), this.lastHeartbeatTime = Date.now()
+    this.send(y.j.HEARTBEAT, this.seq, !1), this.lastHeartbeatTime = Date.now()
   }
   getLogger() {
-    return k
+    return B
   }
   willReconnect() {
-    return this.connectionState === R.default.WILL_RECONNECT
+    return this.connectionState === g.Z.WILL_RECONNECT
   }
   isClosed() {
-    return this.connectionState === R.default.CLOSED
+    return this.connectionState === g.Z.CLOSED
   }
   isSessionEstablished() {
-    return this.connectionState === R.default.SESSION_ESTABLISHED || this.connectionState === R.default.RESUMING
+    return this.connectionState === g.Z.SESSION_ESTABLISHED || this.connectionState === g.Z.RESUMING
   }
   isConnected() {
-    return this.connectionState === R.default.IDENTIFYING || this.connectionState === R.default.RESUMING || this.connectionState === R.default.SESSION_ESTABLISHED
+    return this.connectionState === g.Z.IDENTIFYING || this.connectionState === g.Z.RESUMING || this.connectionState === g.Z.SESSION_ESTABLISHED
   }
   connect() {
-    return this.isClosed() ? (k.verbose(".connect() called, new state is WILL_RECONNECT"), this.connectionState = R.default.WILL_RECONNECT, this._connect(), !0) : (k.error("Cannot start a new connection, connection state is not closed"), !1)
+    return this.isClosed() ? (B.verbose(".connect() called, new state is WILL_RECONNECT"), this.connectionState = g.Z.WILL_RECONNECT, this._connect(), !0) : (B.error("Cannot start a new connection, connection state is not closed"), !1)
   }
   resetSocketOnError(e) {
     let {
@@ -410,23 +438,23 @@ class W extends y.default {
       error: n,
       metricAction: i
     } = e;
-    k.error("resetSocketOnError during ".concat(t, ": ").concat(n.message), n.stack), S.default.increment({
-      name: l.MetricEvents.SOCKET_CRASHED,
+    B.error("resetSocketOnError during ".concat(t, ": ").concat(n.message), n.stack), f.Z.increment({
+      name: l.V.SOCKET_CRASHED,
       tags: ["action:".concat(null != i ? i : t)]
-    }, !0), !1 !== e.sentry && C.default.captureException(n, {
+    }, !0), !1 !== e.sentry && p.Z.captureException(n, {
       tags: {
         socketCrashedAction: t
       }
-    }), m.default.track(G.AnalyticEvents.GATEWAY_SOCKET_RESET, {
+    }), m.default.track(w.rMx.GATEWAY_SOCKET_RESET, {
       error_message: n.message,
       error_stack: n.stack,
       action: t
-    }), this._cleanup(e => e.close()), this._reset(!0, 1e3, "Resetting socket due to error."), this.dispatcher.clear(), this.connectionState = R.default.WILL_RECONNECT, this.dispatchExceptionBackoff.cancel();
+    }), this._cleanup(e => e.close()), this._reset(!0, 1e3, "Resetting socket due to error."), this.dispatcher.clear(), this.connectionState = g.Z.WILL_RECONNECT, this.dispatchExceptionBackoff.cancel();
     let r = e.clearCache || this.dispatchExceptionBackoff._fails > 0;
-    0 === this.dispatchExceptionBackoff._fails ? (k.verbose("Triggering fast reconnect"), this.dispatchExceptionBackoff.fail(() => {}), setTimeout(() => this._connect(), 0)) : this.dispatchExceptionBackoff.fail(() => this._connect()), r && (this.didForceClearGuildHashes = !0, _.default.dispatch({
+    0 === this.dispatchExceptionBackoff._fails ? (B.verbose("Triggering fast reconnect"), this.dispatchExceptionBackoff.fail(() => {}), setTimeout(() => this._connect(), 0)) : this.dispatchExceptionBackoff.fail(() => this._connect()), r && (this.didForceClearGuildHashes = !0, d.Z.dispatch({
       type: "CLEAR_CACHES",
       reason: "Socket reset during ".concat(t)
-    })), clearTimeout(this.dispatchSuccessTimer), this.dispatchSuccessTimer = setTimeout(() => this.dispatchExceptionBackoff.succeed(), 2 * H)
+    })), clearTimeout(this.dispatchSuccessTimer), this.dispatchSuccessTimer = setTimeout(() => this.dispatchExceptionBackoff.succeed(), 2 * F)
   }
   resetSocketOnDispatchError(e) {
     let t = null != e.error.message && e.error.message.indexOf("Guild data was missing from store") >= 0;
@@ -439,12 +467,12 @@ class W extends y.default {
   close() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     if (this.isClosed()) {
-      k.verbose("close() called, but socket is already closed.");
+      B.verbose("close() called, but socket is already closed.");
       return
     }
-    k.info("Closing connection, current state is ".concat(this.connectionState));
+    B.info("Closing connection, current state is ".concat(this.connectionState));
     let t = e ? 4e3 : void 0;
-    this._cleanup(e => e.close(t)), this.connectionState = R.default.CLOSED, !e && setImmediate(() => {
+    this._cleanup(e => e.close(t)), this.connectionState = g.Z.CLOSED, !e && setImmediate(() => {
       this._reset(!0, 1e3, "Disconnect requested by user")
     })
   }
@@ -458,29 +486,29 @@ class W extends y.default {
       i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
     if (!this.isClosed()) {
       if (this.isConnected()) {
-        k.verbose("Performing an expedited heartbeat ".concat(null != t && "" !== t ? "reason: " + t : "")), this.heartbeatAck = !1, this._sendHeartbeat(), null !== this.expeditedHeartbeatTimeout && clearTimeout(this.expeditedHeartbeatTimeout), this.expeditedHeartbeatTimeout = setTimeout(() => {
+        B.verbose("Performing an expedited heartbeat ".concat(null != t && "" !== t ? "reason: " + t : "")), this.heartbeatAck = !1, this._sendHeartbeat(), null !== this.expeditedHeartbeatTimeout && clearTimeout(this.expeditedHeartbeatTimeout), this.expeditedHeartbeatTimeout = setTimeout(() => {
           this.expeditedHeartbeatTimeout = null, !1 === this.heartbeatAck && this._handleHeartbeatTimeout()
         }, e);
         return
       }
-      n ? this.resetBackoff(t, i) : k.verbose("Expedited heartbeat requested, but, connection state is ".concat(this.connectionState, " and reconnectImmediately was not requested ").concat(null != t && "" !== t ? "reason: " + t : ""))
+      n ? this.resetBackoff(t, i) : B.verbose("Expedited heartbeat requested, but, connection state is ".concat(this.connectionState, " and reconnectImmediately was not requested ").concat(null != t && "" !== t ? "reason: " + t : ""))
     }
   }
   resetBackoff() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
       t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    k.verbose("Connection has reset backoff".concat(null != e && "" !== e ? " for reason: " + e : "")), this.gatewayBackoff.succeed(), this.iosGoingAwayEventCount = 0, this.nextReconnectIsImmediate = !0, this.willReconnect() ? this._connect() : t && this.connectionState !== R.default.SESSION_ESTABLISHED && this._handleClose(!0, 0, e)
+    B.verbose("Connection has reset backoff".concat(null != e && "" !== e ? " for reason: " + e : "")), this.gatewayBackoff.succeed(), this.iosGoingAwayEventCount = 0, this.nextReconnectIsImmediate = !0, this.willReconnect() ? this._connect() : t && this.connectionState !== g.Z.SESSION_ESTABLISHED && this._handleClose(!0, 0, e)
   }
   constructor() {
-    super(), w(this, "gatewayBackoff", void 0), w(this, "handleIdentify", void 0), w(this, "dispatchExceptionBackoff", new s.default(1e3, H)), w(this, "dispatchSuccessTimer", 0), w(this, "connectionState_", void 0), w(this, "webSocket", void 0), w(this, "seq", void 0), w(this, "sessionId", void 0), w(this, "token", void 0), w(this, "initialHeartbeatTimeout", void 0), w(this, "expeditedHeartbeatTimeout", void 0), w(this, "heartbeatInterval", void 0), w(this, "helloTimeout", void 0), w(this, "heartbeater", void 0), w(this, "lastHeartbeatTime", void 0), w(this, "lastHeartbeatAckTime", void 0), w(this, "heartbeatAck", void 0), w(this, "connectionStartTime", void 0), w(this, "identifyStartTime", void 0), w(this, "nextReconnectIsImmediate", void 0), w(this, "compressionHandler", void 0), w(this, "hasConnectedOnce", void 0), w(this, "isFastConnect", void 0), w(this, "didForceClearGuildHashes", !1), w(this, "identifyUncompressedByteSize", 0), w(this, "identifyCompressedByteSize", 0), w(this, "analytics", {}), w(this, "identifyCount", 0), w(this, "resumeUrl", null), w(this, "iosGoingAwayEventCount", 0), w(this, "dispatcher", void 0), w(this, "send", (e, t, n) => {
-      A.default.isLoggingGatewayEvents && k.verboseDangerously("~>", e, t);
-      let i = B.pack({
+    super(), k(this, "gatewayBackoff", void 0), k(this, "handleIdentify", void 0), k(this, "dispatchExceptionBackoff", new o.Z(1e3, F)), k(this, "dispatchSuccessTimer", 0), k(this, "connectionState_", void 0), k(this, "webSocket", void 0), k(this, "seq", void 0), k(this, "sessionId", void 0), k(this, "token", void 0), k(this, "initialHeartbeatTimeout", void 0), k(this, "expeditedHeartbeatTimeout", void 0), k(this, "heartbeatInterval", void 0), k(this, "helloTimeout", void 0), k(this, "heartbeater", void 0), k(this, "lastHeartbeatTime", void 0), k(this, "lastHeartbeatAckTime", void 0), k(this, "heartbeatAck", void 0), k(this, "connectionStartTime", void 0), k(this, "identifyStartTime", void 0), k(this, "nextReconnectIsImmediate", void 0), k(this, "compressionHandler", void 0), k(this, "hasConnectedOnce", void 0), k(this, "isFastConnect", void 0), k(this, "didForceClearGuildHashes", !1), k(this, "identifyUncompressedByteSize", 0), k(this, "identifyCompressedByteSize", 0), k(this, "analytics", {}), k(this, "identifyCount", 0), k(this, "resumeUrl", null), k(this, "iosGoingAwayEventCount", 0), k(this, "dispatcher", void 0), k(this, "send", (e, t, n) => {
+      A.default.isLoggingGatewayEvents && B.verboseDangerously("~>", e, t);
+      let i = x.pack({
         op: e,
         d: t
       });
       if (!n || this.isSessionEstablished()) try {
-        null != this.webSocket ? this.webSocket.send(i) : k.warn("Attempted to send without a websocket that exists. Opcode: ".concat(e))
-      } catch (e) {} else k.warn("Attempted to send while not being in a connected state opcode: ".concat(e))
-    }), this.dispatcher = new M.default(this), this.gatewayBackoff = new s.default(1e3, 6e4), this.connectionState_ = R.default.CLOSED, this.webSocket = null, this.seq = 0, this.sessionId = null, this.token = null, this.initialHeartbeatTimeout = null, this.expeditedHeartbeatTimeout = null, this.lastHeartbeatTime = null, this.lastHeartbeatAckTime = null, this.helloTimeout = null, this.heartbeatInterval = null, this.heartbeater = null, this.heartbeatAck = !0, this.connectionStartTime = 0, this.identifyStartTime = 0, this.nextReconnectIsImmediate = !1, this.compressionHandler = (0, L.getCompressionHandler)(B), this.hasConnectedOnce = !1, this.isFastConnect = !1, this.identifyCount = 0, this.iosGoingAwayEventCount = 0
+        null != this.webSocket ? this.webSocket.send(i) : B.warn("Attempted to send without a websocket that exists. Opcode: ".concat(e))
+      } catch (e) {} else B.warn("Attempted to send while not being in a connected state opcode: ".concat(e))
+    }), this.dispatcher = new P.Z(this), this.gatewayBackoff = new o.Z(1e3, 6e4), this.connectionState_ = g.Z.CLOSED, this.webSocket = null, this.seq = 0, this.sessionId = null, this.token = null, this.initialHeartbeatTimeout = null, this.expeditedHeartbeatTimeout = null, this.lastHeartbeatTime = null, this.lastHeartbeatAckTime = null, this.helloTimeout = null, this.heartbeatInterval = null, this.heartbeater = null, this.heartbeatAck = !0, this.connectionStartTime = 0, this.identifyStartTime = 0, this.nextReconnectIsImmediate = !1, this.compressionHandler = (0, v.I)(x), this.hasConnectedOnce = !1, this.isFastConnect = !1, this.identifyCount = 0, this.iosGoingAwayEventCount = 0
   }
 }

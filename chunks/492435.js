@@ -1,25 +1,25 @@
 "use strict";
-n.r(t), n.d(t, {
-  overrideBucket: function() {
-    return u
-  },
-  registerGuildExperiment: function() {
-    return l
-  },
-  registerUserExperiment: function() {
+n.d(t, {
+  W9: function() {
     return o
   },
-  trackExposureToExperiment: function() {
+  Xz: function() {
     return a
+  },
+  gK: function() {
+    return l
+  },
+  rX: function() {
+    return u
   }
 });
-var i = n("570140"),
-  r = n("353926"),
-  s = n("987338");
+var i = n(570140),
+  r = n(353926),
+  s = n(987338);
 
-function a(e, t, n) {
+function o(e, t, n) {
   var i, s;
-  r.default.trackExposure({
+  r.Z.trackExposure({
     experimentId: e,
     descriptor: t,
     location: null == n ? void 0 : n.location,
@@ -30,19 +30,21 @@ function a(e, t, n) {
   })
 }
 
-function o(e) {
+function a(e) {
   let {
     id: t,
     title: n,
     description: i,
-    buckets: a
+    buckets: o,
+    commonTriggerPoint: a
   } = e;
-  return (0, r.registerExperiment)({
+  return (0, r.V)({
     experimentId: t,
-    experimentType: s.ExperimentTypes.USER,
+    experimentType: s.xY.USER,
     title: n,
     description: i,
-    buckets: a
+    buckets: o,
+    commonTriggerPoint: a
   }), {
     id: t
   }
@@ -53,21 +55,23 @@ function l(e) {
     id: t,
     title: n,
     description: i,
-    buckets: a
+    buckets: o,
+    commonTriggerPoint: a
   } = e;
-  return (0, r.registerExperiment)({
+  return (0, r.V)({
     experimentId: t,
-    experimentType: s.ExperimentTypes.GUILD,
+    experimentType: s.xY.GUILD,
     title: n,
     description: i,
-    buckets: a
+    buckets: o,
+    commonTriggerPoint: a
   }), {
     id: t
   }
 }
 
 function u(e, t) {
-  i.default.dispatch({
+  i.Z.dispatch({
     type: "EXPERIMENT_OVERRIDE_BUCKET",
     experimentId: e,
     experimentBucket: t

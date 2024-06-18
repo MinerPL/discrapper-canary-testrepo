@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 });
-var i = n("470079");
+var i = n(470079);
 
 function r() {
   let e = i.useRef(null);

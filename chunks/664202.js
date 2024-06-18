@@ -1,55 +1,55 @@
 "use strict";
-n.r(t), n.d(t, {
-  useShouldShowUserPopoutCollectiblesUpsell: function() {
-    return f
+n.d(t, {
+  J: function() {
+    return h
   }
-}), n("47120");
-var i = n("470079"),
-  r = n("512722"),
+}), n(47120);
+var i = n(470079),
+  r = n(512722),
   s = n.n(r),
-  a = n("399606"),
-  o = n("524437"),
-  l = n("232567"),
-  u = n("634894"),
-  d = n("211242"),
-  _ = n("410154"),
-  c = n("243778"),
-  E = n("594174"),
-  I = n("318661"),
-  T = n("436478");
-let f = e => {
+  o = n(399606),
+  a = n(704215),
+  l = n(232567),
+  u = n(634894),
+  _ = n(211242),
+  d = n(410154),
+  c = n(243778),
+  E = n(594174),
+  I = n(318661),
+  T = n(436478);
+let h = e => {
   let {
     popoutUser: t,
     source: n,
     guildId: r
-  } = e, f = "useShouldShowUserPopoutCollectiblesUpsell";
-  (0, u.useTriggerDebuggingAA)({
-    location: f + "auto on",
+  } = e, h = "useShouldShowUserPopoutCollectiblesUpsell";
+  (0, u.j)({
+    location: h + "auto on",
     autoTrackExposure: !0
-  }), (0, u.useTriggerDebuggingAA)({
-    location: f + "auto off",
+  }), (0, u.j)({
+    location: h + "auto off",
     autoTrackExposure: !1
   });
-  let S = (0, _.default)(f),
+  let S = (0, d.ZP)(h),
     {
-      upsellSource: h
-    } = (0, T.useUserPopoutCollectiblesUpsellStore)(),
-    A = (0, a.useStateFromStores)([E.default], () => E.default.getCurrentUser());
-  s()(null != A, "currentUser should not be null");
-  let m = (0, d.useBlockedPaymentsConfig)(),
-    N = (0, I.default)(A.id, r),
-    O = (0, I.default)(t.id, r);
+      upsellSource: f
+    } = (0, T.k)(),
+    N = (0, o.e7)([E.default], () => E.default.getCurrentUser());
+  s()(null != N, "currentUser should not be null");
+  let A = (0, _.Q)(),
+    m = (0, I.ZP)(N.id, r),
+    O = (0, I.ZP)(t.id, r);
   i.useEffect(() => {
-    null == N && (0, l.fetchProfile)(A.id)
-  }, [N, A]);
-  let p = S !== _.CollectiblesShopMarketingVariants.DEFAULT && (null == A ? void 0 : A.id) !== t.id && !m && !(null != h && h !== n),
-    R = p && (null == A ? void 0 : A.avatarDecoration) == null && (null == t ? void 0 : t.avatarDecoration) != null,
-    C = p && null != N && null == N.profileEffectId && (null == O ? void 0 : O.profileEffectId) != null,
-    [g, L] = (0, c.useSelectedDismissibleContent)((R, []), void 0, !0);
+    null == m && (0, l.In)(N.id)
+  }, [m, N]);
+  let R = S !== d.C5.DEFAULT && (null == N ? void 0 : N.id) !== t.id && !A && !(null != f && f !== n),
+    C = R && (null == N ? void 0 : N.avatarDecoration) == null && (null == t ? void 0 : t.avatarDecoration) != null,
+    p = R && null != m && null == m.profileEffectId && (null == O ? void 0 : O.profileEffectId) != null,
+    [g, L] = (0, c.U)((C, []), void 0, !0);
   return {
-    shouldShow: g === o.DismissibleContent.SHOP_FOR_ALL_USER_POPOUT_UPSELL,
-    canShowAvatarDecorationUpsell: R,
-    canShowProfileEffectUpsell: C,
+    shouldShow: g === a.z.SHOP_FOR_ALL_USER_POPOUT_UPSELL,
+    canShowAvatarDecorationUpsell: C,
+    canShowProfileEffectUpsell: p,
     onDismiss: L
   }
 }

@@ -1,7 +1,7 @@
 "use strict";
-var r = n("690244"),
-  i = n("706165"),
-  a = n("478497")(),
+var r = n(690244),
+  i = n(706165),
+  a = n(478497)(),
   o = r("%TypeError%"),
   s = {
     assert: function(e, t) {

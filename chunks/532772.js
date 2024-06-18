@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  useStickerLottie: function() {
-    return o
+n.d(t, {
+  z: function() {
+    return a
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("709014");
-let a = {
+var i = n(735250),
+  r = n(470079),
+  s = n(709014);
+let o = {
     click: {
       name: "click",
       start: 0,
@@ -19,12 +19,12 @@ let a = {
       duration: 40
     }
   },
-  o = () => {
+  a = () => {
     let e = r.useRef(null),
       t = r.useCallback(() => {
         null != e.current && e.current.play("click")
       }, []),
-      o = r.useCallback(() => {
+      a = r.useCallback(() => {
         null != e.current && e.current.play("hover")
       }, []),
       l = r.useCallback(() => {
@@ -32,15 +32,15 @@ let a = {
       }, []);
     return {
       events: {
-        onMouseEnter: o,
+        onMouseEnter: a,
         onMouseLeave: l
       },
       play: t,
-      Component: r.useCallback(t => (0, i.jsx)(s.LottieIcon, {
+      Component: r.useCallback(t => (0, i.jsx)(s.L, {
         ...t,
-        src: () => n.e("36995").then(n.t.bind(n, "737962", 19)),
+        src: () => n.e("36995").then(n.t.bind(n, 737962, 19)),
         ref: e,
-        markers: a
+        markers: o
       }), [])
     }
   }

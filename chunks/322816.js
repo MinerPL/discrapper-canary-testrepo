@@ -1,73 +1,72 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
+t.d(s, {
+  ZP: function() {
     return M
   }
-}), s("411104"), s("47120");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("803997"),
-  i = s.n(n),
-  r = s("149765"),
-  o = s("442837"),
-  d = s("481060"),
-  u = s("144991"),
-  c = s("496675"),
-  E = s("594174"),
-  _ = s("6048"),
-  I = s("626135"),
-  T = s("233608"),
-  S = s("700785"),
-  f = s("764260"),
-  m = s("631969"),
-  N = s("95242"),
-  g = s("420966"),
-  h = s("275296"),
-  C = s("203377"),
-  R = s("981631"),
-  x = s("689938"),
-  L = s("473794"),
-  O = s("790492");
+}), t(411104), t(47120);
+var n = t(735250),
+  i = t(470079),
+  l = t(120356),
+  a = t.n(l),
+  r = t(149765),
+  o = t(442837),
+  c = t(481060),
+  d = t(144991),
+  u = t(496675),
+  E = t(594174),
+  _ = t(626135),
+  I = t(233608),
+  T = t(700785),
+  N = t(764260),
+  m = t(631969),
+  S = t(95242),
+  h = t(420966),
+  g = t(275296),
+  x = t(203377),
+  C = t(981631),
+  R = t(689938),
+  L = t(318745),
+  O = t(585512);
 
 function A(e) {
   let {
-    guild: t,
-    role: s,
-    locked: n
-  } = e, i = (0, o.useStateFromStores)([E.default], () => E.default.getCurrentUser()), u = l.useMemo(() => S.computePermissions({
-    user: i,
-    context: t
-  }), [i, t]), c = l.useMemo(() => ({
-    [s.id]: {
-      ...s,
-      permissions: S.NONE
+    guild: s,
+    role: t,
+    locked: l
+  } = e, a = (0, o.e7)([E.default], () => E.default.getCurrentUser()), d = i.useMemo(() => T.uB({
+    user: a,
+    context: s
+  }), [a, s]), u = i.useMemo(() => ({
+    [t.id]: {
+      ...t,
+      permissions: T.Hn
     }
-  }), [s]), _ = l.useMemo(() => S.computePermissions({
-    user: i,
-    context: t,
-    roles: c
-  }), [i, t, c]), I = !r.equals(u, _);
-  return (0, a.jsx)("div", {
+  }), [t]), _ = i.useMemo(() => T.uB({
+    user: a,
+    context: s,
+    roles: u
+  }), [a, s, u]), I = !r.fS(d, _);
+  return (0, n.jsx)("div", {
     className: L.clearButtonWrapper,
-    children: (0, a.jsx)(d.Tooltip, {
-      text: I ? x.default.Messages.HELP_CLEAR_PERMISSIONS : null,
+    children: (0, n.jsx)(c.Tooltip, {
+      text: I ? R.Z.Messages.HELP_CLEAR_PERMISSIONS : null,
       position: "top",
-      color: d.Tooltip.Colors.RED,
+      color: c.Tooltip.Colors.RED,
       children: e => {
         let {
-          onMouseEnter: t,
-          onMouseLeave: l
+          onMouseEnter: s,
+          onMouseLeave: i
         } = e;
-        return (0, a.jsx)(d.Button, {
+        return (0, n.jsx)(c.Button, {
           className: L.clearButton,
-          size: d.Button.Sizes.TINY,
-          look: d.Button.Looks.LINK,
-          color: d.Button.Colors.LINK,
-          onClick: () => (0, f.clearRolePermissions)(s.id),
-          onMouseEnter: t,
-          onMouseLeave: l,
-          disabled: r.equals(s.permissions, S.NONE) || I || n,
-          children: x.default.Messages.ROLE_PERMISSIONS_CLEAR_PERMISSIONS
+          size: c.Button.Sizes.TINY,
+          look: c.Button.Looks.LINK,
+          color: c.Button.Colors.LINK,
+          onClick: () => (0, N.TY)(t.id),
+          onMouseEnter: s,
+          onMouseLeave: i,
+          disabled: r.fS(t.permissions, T.Hn) || I || l,
+          children: R.Z.Messages.ROLE_PERMISSIONS_CLEAR_PERMISSIONS
         })
       }
     })
@@ -76,112 +75,112 @@ function A(e) {
 
 function p(e) {
   let {
-    guild: t,
-    role: s,
-    specs: l,
-    locked: n
+    guild: s,
+    role: t,
+    specs: i,
+    locked: l
   } = e;
-  if (0 === l.length) return (0, a.jsxs)("div", {
+  if (0 === i.length) return (0, n.jsxs)("div", {
     className: L.noResultsContainer,
-    children: [(0, a.jsx)(m.default, {
+    children: [(0, n.jsx)(m.Z, {
       className: L.noResults
-    }), (0, a.jsx)(d.Text, {
+    }), (0, n.jsx)(c.Text, {
       variant: "text-sm/normal",
-      children: x.default.Messages.ROLE_PERMISSIONS_EMPTY_TEXT
+      children: R.Z.Messages.ROLE_PERMISSIONS_EMPTY_TEXT
     })]
   });
 
-  function i(e) {
-    return c.default.can(e, t) ? !c.default.can(e, t, null, {
-      [s.id]: {
-        ...s,
-        permissions: r.remove(s.permissions, e)
+  function a(e) {
+    return u.Z.can(e, s) ? !u.Z.can(e, s, null, {
+      [t.id]: {
+        ...t,
+        permissions: r.Od(t.permissions, e)
       }
-    }) && x.default.Messages.HELP_SINGULAR_PERMISSION : x.default.Messages.HELP_MISSING_PERMISSION
+    }) && R.Z.Messages.HELP_SINGULAR_PERMISSION : R.Z.Messages.HELP_MISSING_PERMISSION
   }
-  return (0, a.jsxs)("div", {
+  return (0, n.jsxs)("div", {
     className: L.permissionsWrapper,
-    children: [(0, a.jsx)(A, {
-      guild: t,
-      role: s,
-      locked: n
-    }), l.map((e, t) => (0, a.jsx)(u.default, {
+    children: [(0, n.jsx)(A, {
+      guild: s,
+      role: t,
+      locked: l
+    }), i.map((e, s) => (0, n.jsx)(d.Z, {
       className: L.permissionsForm,
       spec: e,
-      permissions: s.permissions,
-      locked: n,
-      onChange: (e, t) => {
-        if ("string" == typeof t) throw Error("Unexpected string `allow`");
-        (0, f.updateRolePermissions)(s.id, e, t)
+      permissions: t.permissions,
+      locked: l,
+      onChange: (e, s) => {
+        if ("string" == typeof s) throw Error("Unexpected string `allow`");
+        (0, N.lO)(t.id, e, s)
       },
-      permissionRender: i
-    }, t))]
+      permissionRender: a
+    }, s))]
   })
 }
 
 function M(e) {
   let {
-    guild: t,
-    role: s,
-    locked: n,
+    guild: s,
+    role: t,
+    locked: l,
     setSelectedSection: r,
     initialSearchQuery: o
-  } = e, [u, c] = l.useState(null != o ? o : ""), E = l.useMemo(() => T.default.generateGuildPermissionSpec(t), [t]).map(e => ({
+  } = e, [d, u] = i.useState(null != o ? o : ""), E = i.useMemo(() => I.Z.generateGuildPermissionSpec(s), [s]).map(e => ({
     ...e,
     permissions: e.permissions.filter(e => {
-      let t = u.trimStart().toLowerCase();
-      return e.title.toLowerCase().includes(t) || null != e.description && e.description.toString().toLowerCase().includes(t)
+      let s = d.trimStart().toLowerCase();
+      return e.title.toLowerCase().includes(s) || null != e.description && e.description.toString().toLowerCase().includes(s)
     })
   })).filter(e => e.permissions.length > 0), {
-    headerHeight: S,
-    headerRef: f
-  } = (0, N.default)(0), {
+    headerHeight: T,
+    headerRef: N
+  } = (0, S.Z)(0), {
     scrolledToTop: m,
     handleScroll: A
-  } = (0, g.useScrolledToTop)(), M = l.useRef(!1);
-  return l.useEffect(() => {
-    !M.current && "" !== u.trimStart() && (I.default.track(R.AnalyticEvents.SEARCH_STARTED, {
+  } = (0, h.V)(), M = i.useRef(!1);
+  return i.useEffect(() => {
+    if (!M.current && "" !== d.trimStart()) _.default.track(C.rMx.SEARCH_STARTED, {
       search_type: "Permissions"
-    }), M.current = !0)
-  }, [u]), (0, a.jsx)(d.AdvancedScrollerAuto, {
+    }), M.current = !0
+  }, [d]), (0, n.jsx)(c.AdvancedScrollerAuto, {
     className: L.scroller,
     style: {
-      scrollPaddingTop: S
+      scrollPaddingTop: T
     },
     onScroll: A,
-    children: (0, a.jsxs)("div", {
+    children: (0, n.jsxs)("div", {
       className: O.contentWidth,
-      children: [(0, a.jsxs)("div", {
-        className: i()(O.header, O.stickyHeader, {
+      children: [(0, n.jsxs)("div", {
+        className: a()(O.header, O.stickyHeader, {
           [O.stickyHeaderElevated]: !m
         }),
-        ref: f,
-        children: [(0, a.jsx)(g.default, {
-          guild: t,
-          role: s,
-          selectedSection: C.GuildSettingsRoleEditSections.PERMISSIONS,
+        ref: N,
+        children: [(0, n.jsx)(h.Z, {
+          guild: s,
+          role: t,
+          selectedSection: x.ZI.PERMISSIONS,
           setSelectedSection: r
-        }), (0, a.jsx)("div", {
+        }), (0, n.jsx)("div", {
           className: L.noticeContainer,
-          children: (0, a.jsx)(h.default, {
-            role: s
+          children: (0, n.jsx)(g.Z, {
+            role: t
           })
-        }), (0, a.jsx)("div", {
+        }), (0, n.jsx)("div", {
           className: L.searchContainer,
-          children: (0, a.jsx)(_.default, {
-            size: _.default.Sizes.MEDIUM,
-            query: u,
-            onChange: c,
-            onClear: () => c(""),
-            placeholder: x.default.Messages.ROLE_PERMISSIONS_SEARCH_PLACEHOLDER,
-            "aria-label": x.default.Messages.ROLE_PERMISSIONS_SEARCH_PLACEHOLDER
+          children: (0, n.jsx)(c.SearchBar, {
+            size: c.SearchBar.Sizes.MEDIUM,
+            query: d,
+            onChange: u,
+            onClear: () => u(""),
+            placeholder: R.Z.Messages.ROLE_PERMISSIONS_SEARCH_PLACEHOLDER,
+            "aria-label": R.Z.Messages.ROLE_PERMISSIONS_SEARCH_PLACEHOLDER
           })
         })]
-      }), (0, a.jsx)(p, {
-        guild: t,
-        role: s,
+      }), (0, n.jsx)(p, {
+        guild: s,
+        role: t,
         specs: E,
-        locked: n
+        locked: l
       })]
     })
   })

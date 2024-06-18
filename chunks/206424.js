@@ -1,8 +1,8 @@
 "use strict";
-let r = n("761655").Reporter,
-  i = n("873994").EncoderBuffer,
-  a = n("873994").DecoderBuffer,
-  o = n("21841"),
+let r = n(761655).Reporter,
+  i = n(873994).EncoderBuffer,
+  a = n(873994).DecoderBuffer,
+  o = n(21841),
   s = ["seq", "seqof", "set", "setof", "objid", "bool", "gentime", "utctime", "null_", "enum", "int", "objDesc", "bitstr", "bmpstr", "charstr", "genstr", "graphstr", "ia5str", "iso646str", "numstr", "octstr", "printstr", "t61str", "unistr", "utf8str", "videostr"],
   u = ["key", "obj", "use", "optional", "explicit", "implicit", "def", "choice", "any", "contains"].concat(s);
 

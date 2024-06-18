@@ -1,42 +1,42 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return _
+n.d(t, {
+  Z: function() {
+    return d
   }
 });
-var i = n("727429"),
-  r = n("703656"),
-  a = n("769654"),
-  s = n("592125"),
-  o = n("754688"),
-  l = n("849027"),
-  u = n("927723"),
-  d = n("981631");
-async function _(e, t, n) {
-  let _ = (0, o.tryParseChannelPath)(e);
-  if (null != _ && !await (0, l.default)(_)) {
-    (0, u.showInaccessibleLinkModal)({
+var i = n(727429),
+  r = n(703656),
+  s = n(769654),
+  o = n(592125),
+  a = n(754688),
+  l = n(849027),
+  u = n(927723),
+  _ = n(981631);
+async function d(e, t, n) {
+  let d = (0, a.Qj)(e);
+  if (null != d && !await (0, l.Z)(d)) {
+    (0, u.k)({
       kind: "channel"
     });
     return
   }
-  if (null == _) {
-    (0, r.transitionTo)(e, t, n);
+  if (null == d) {
+    (0, r.uL)(e, t, n);
     return
   }
   let c = function(e) {
     if (null == e.channelId) return e;
-    let t = s.default.getChannel(e.channelId);
+    let t = o.Z.getChannel(e.channelId);
     if (null == t) return e;
-    let n = (0, i.getGuildIdForGenericRedirect)(t);
+    let n = (0, i.e)(t);
     return {
       ...e,
-      guildId: null != n ? n : d.ME
+      guildId: null != n ? n : _.ME
     }
-  }(_);
+  }(d);
   if (null == c.channelId) {
-    (0, a.transitionToGuild)(c.guildId);
+    (0, s.X)(c.guildId);
     return
   }
-  null != c.threadId ? (0, r.transitionTo)(d.Routes.CHANNEL_THREAD_VIEW(c.guildId, c.channelId, c.threadId, c.messageId), t, n) : (0, r.transitionTo)(d.Routes.CHANNEL(c.guildId, c.channelId, c.messageId), t, n)
+  null != c.threadId ? (0, r.uL)(_.Z5c.CHANNEL_THREAD_VIEW(c.guildId, c.channelId, c.threadId, c.messageId), t, n) : (0, r.uL)(_.Z5c.CHANNEL(c.guildId, c.channelId, c.messageId), t, n)
 }

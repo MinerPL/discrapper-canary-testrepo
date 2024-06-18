@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  useScreenshareLottie: function() {
-    return o
+n.d(t, {
+  P: function() {
+    return a
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("709014");
-let a = {
+var i = n(735250),
+  r = n(470079),
+  s = n(709014);
+let o = {
     enable: {
       name: "enable",
       start: 0,
@@ -29,9 +29,9 @@ let a = {
       duration: 40
     }
   },
-  o = e => {
+  a = e => {
     let t = r.useRef(null),
-      o = r.useRef(e),
+      a = r.useRef(e),
       l = r.useMemo(() => () => {
         null != t.current && t.current.play(e)
       }, [e]),
@@ -40,7 +40,7 @@ let a = {
         let n = "enable" === e ? "hover_disabled" : "hover_enabled";
         t.current.play(n)
       }, [e]),
-      d = r.useCallback(() => {
+      _ = r.useCallback(() => {
         if (null == t.current) return;
         let n = "enable" === e ? "hover_disabled" : "hover_enabled";
         t.current.stopIfPlaying(n)
@@ -49,15 +49,15 @@ let a = {
       events: {
         onClick: l,
         onMouseEnter: u,
-        onMouseLeave: d
+        onMouseLeave: _
       },
       play: l,
-      Component: r.useCallback(e => (0, i.jsx)(s.LottieIcon, {
+      Component: r.useCallback(e => (0, i.jsx)(s.L, {
         ...e,
-        src: () => n.e("59682").then(n.t.bind(n, "126683", 19)),
+        src: () => n.e("59682").then(n.t.bind(n, 126683, 19)),
         ref: t,
-        initialAnimation: o.current,
-        markers: a
+        initialAnimation: a.current,
+        markers: o
       }), [])
     }
   }

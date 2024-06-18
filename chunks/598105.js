@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return s
   }
-}), n("411104");
-var i = n("998502");
+}), n(411104);
+var i = n(998502);
 
 function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -31,10 +31,10 @@ class s {
         this._processEnd();
         return
       }
-      e.length > 256 && (e = e.slice(0, 256)), (n = e, r = this._languageHint, i.default.ensureModule("discord_spellcheck").then(() => {
+      e.length > 256 && (e = e.slice(0, 256)), (n = e, r = this._languageHint, i.ZP.ensureModule("discord_spellcheck").then(() => {
         let {
           cld: e
-        } = i.default.requireModule("discord_spellcheck");
+        } = i.ZP.requireModule("discord_spellcheck");
         return new Promise((t, i) => {
           e.detect(n, {
             httpHint: r,

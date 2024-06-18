@@ -12,8 +12,8 @@ function r(e) {
     return t[e]
   })
 }
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return r
   }
 })

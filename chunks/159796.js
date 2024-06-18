@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  YearParser: function() {
+n.d(t, {
+  q: function() {
     return d
   }
 });
-var r = n("717029"),
-  i = n("846042");
+var r = n(717029),
+  i = n(846042);
 
 function a(e) {
   return (a = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
@@ -68,13 +68,10 @@ var d = function(e) {
     }
   }(), function() {
     var e, r = c(t);
-    if (n) {
-      var i = c(this).constructor;
-      e = Reflect.construct(r, arguments, i)
-    } else e = r.apply(this, arguments);
-    return function(e, t) {
-      return t && ("object" === a(t) || "function" == typeof t) ? t : u(e)
-    }(this, e)
+    return e = n ? Reflect.construct(r, arguments, c(this).constructor) : r.apply(this, arguments),
+      function(e, t) {
+        return t && ("object" === a(t) || "function" == typeof t) ? t : u(e)
+      }(this, e)
   });
 
   function h() {
@@ -96,13 +93,13 @@ var d = function(e) {
       };
       switch (t) {
         case "y":
-          return (0, i.mapValue)((0, i.parseNDigits)(4, e), r);
+          return (0, i.jg)((0, i.ZL)(4, e), r);
         case "yo":
-          return (0, i.mapValue)(n.ordinalNumber(e, {
+          return (0, i.jg)(n.ordinalNumber(e, {
             unit: "year"
           }), r);
         default:
-          return (0, i.mapValue)((0, i.parseNDigits)(t.length, e), r)
+          return (0, i.jg)((0, i.ZL)(t.length, e), r)
       }
     }
   }, {
@@ -115,11 +112,11 @@ var d = function(e) {
     value: function(e, t, n) {
       var r = e.getUTCFullYear();
       if (n.isTwoDigitYear) {
-        var a = (0, i.normalizeTwoDigitYear)(n.year, r);
+        var a = (0, i.WG)(n.year, r);
         return e.setUTCFullYear(a, 0, 1), e.setUTCHours(0, 0, 0, 0), e
       }
       var o = "era" in t && 1 !== t.era ? 1 - n.year : n.year;
       return e.setUTCFullYear(o, 0, 1), e.setUTCHours(0, 0, 0, 0), e
     }
-  }], o(r.prototype, d), f && o(r, f), h
-}(r.Parser)
+  }], o(r.prototype, d), h
+}(r._)

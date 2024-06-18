@@ -1,55 +1,55 @@
 "use strict";
-n.r(t), n.d(t, {
-  useGetAnnualDiscountInvoicePreview: function() {
+n.d(t, {
+  g: function() {
     return u
   }
-}), n("47120");
-var i = n("442837"),
-  r = n("509545"),
-  a = n("74538"),
-  s = n("374649"),
-  o = n("104494"),
-  l = n("474936");
+}), n(47120);
+var i = n(442837),
+  r = n(509545),
+  s = n(74538),
+  o = n(374649),
+  a = n(104494),
+  l = n(474936);
 
 function u(e) {
   var t, n;
   let {
     priceOptions: u,
-    preventFetch: d,
-    selectedSkuId: _,
+    preventFetch: _,
+    selectedSkuId: d,
     isGift: c = !1,
     planGroup: E,
     activeSubscription: I
-  } = e, T = (0, o.usePremiumAnnualDiscountOffer)(), f = (0, i.useStateFromStores)([r.default], () => r.default.get(l.SubscriptionPlans.PREMIUM_YEAR_TIER_2)), S = null == T ? void 0 : null === (t = T.discount) || void 0 === t ? void 0 : t.plan_ids.some(e => l.SubscriptionPlanInfo[e].skuId === _), h = null != I && null != f ? (0, a.getItemsWithUpsertedPlanIdForGroup)(I, f.id, 1, new Set(E)) : null, A = !c && null != T && null != _ && S, [m, N] = (0, s.useSubscriptionInvoicePreview)({
+  } = e, T = (0, a.z1)(), h = (0, i.e7)([r.Z], () => r.Z.get(l.Xh.PREMIUM_YEAR_TIER_2)), S = null == T ? void 0 : null === (t = T.discount) || void 0 === t ? void 0 : t.plan_ids.some(e => l.GP[e].skuId === d), f = null != I && null != h ? (0, s.al)(I, h.id, 1, new Set(E)) : null, N = !c && null != T && null != d && S, [A, m] = (0, o.ED)({
     subscriptionId: null !== (n = null == I ? void 0 : I.id) && void 0 !== n ? n : "null",
-    items: h,
+    items: f,
     renewal: !1,
     applyEntitlements: !0,
     paymentSourceId: u.paymentSourceId,
     currency: u.currency,
-    preventFetch: !A || null == I || d
-  }), [p, O] = (0, s.useSubscriptionInvoicePreview)({
+    preventFetch: !N || null == I || _
+  }), [O, R] = (0, o.ED)({
     items: [{
-      planId: l.SubscriptionPlans.PREMIUM_YEAR_TIER_2,
+      planId: l.Xh.PREMIUM_YEAR_TIER_2,
       quantity: 1
     }],
     renewal: !1,
     applyEntitlements: !0,
     paymentSourceId: u.paymentSourceId,
     currency: u.currency,
-    preventFetch: !A || null != I || d
+    preventFetch: !N || null != I || _
   });
-  return null != m ? {
-    annualInvoicePreview: m,
-    annualInvoicePreviewError: N,
-    isEligibleForAnnualDiscount: A
-  } : null != p ? {
-    annualInvoicePreview: p,
-    annualInvoicePreviewError: O,
-    isEligibleForAnnualDiscount: A
+  return null != A ? {
+    annualInvoicePreview: A,
+    annualInvoicePreviewError: m,
+    isEligibleForAnnualDiscount: N
+  } : null != O ? {
+    annualInvoicePreview: O,
+    annualInvoicePreviewError: R,
+    isEligibleForAnnualDiscount: N
   } : {
     annualInvoicePreview: null,
     annualInvoicePreviewError: null,
-    isEligibleForAnnualDiscount: A
+    isEligibleForAnnualDiscount: N
   }
 }

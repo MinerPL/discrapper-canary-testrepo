@@ -1,143 +1,143 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return S
   }
-}), n("47120"), n("757143");
-var i = n("470079"),
-  r = n("136035"),
-  s = n("911969"),
-  a = n("998698"),
-  o = n("91313"),
-  l = n("53529"),
-  u = n("436660"),
-  d = n("887490"),
-  _ = n("515270"),
-  c = n("847302"),
-  E = n("42530");
+}), n(47120), n(757143);
+var i = n(470079),
+  r = n(519953),
+  s = n(911969),
+  o = n(998698),
+  a = n(91313),
+  l = n(53529),
+  u = n(436660),
+  _ = n(887490),
+  d = n(515270),
+  c = n(847302),
+  E = n(42530);
 let I = (e, t, n) => ({
   getSlateEditor: () => e,
   submit(e) {
     e.preventDefault(), n()
   },
   focus() {
-    d.EditorUtils.focus(e)
+    _.bN.focus(e)
   },
   blur() {
-    r.ReactEditor.blur(e)
+    r.F3.blur(e)
   },
   getCurrentWord() {
     let t = e.selection;
-    if (null == t || !d.SelectionUtils.isValid(e, t) || d.RangeUtils.isExpanded(t) || (0, _.hasOpenPlainTextCodeBlock)(e)) return {
+    if (null == t || !_.Ew.isValid(e, t) || _.M8.isExpanded(t) || (0, d.L6)(e)) return {
       word: null,
       isAtStart: !1
     };
-    let [n, i] = d.EditorUtils.node(e, d.PathUtils.parent(t.anchor.path)), [r, s] = d.EditorUtils.node(e, t.anchor.path), a = t.anchor.offset;
-    if (!d.PathUtils.hasPrevious(s) && d.TextUtils.isText(r)) {
-      let e = r.text.substring(0, a);
-      if (d.NodeUtils.isType(n, "applicationCommand") && a < n.command.displayName.length + 2) return {
+    let [n, i] = _.bN.node(e, _.C0.parent(t.anchor.path)), [r, s] = _.bN.node(e, t.anchor.path), o = t.anchor.offset;
+    if (!_.C0.hasPrevious(s) && _.LC.isText(r)) {
+      let e = r.text.substring(0, o);
+      if (_.aj.isType(n, "applicationCommand") && o < n.command.displayName.length + 2) return {
         word: e,
         isAtStart: !0
       }
     }
-    let o = "",
+    let a = "",
       l = !1;
     for (;;) {
-      if (--a < 0) {
-        if (!d.PathUtils.hasPrevious(s)) {
+      if (--o < 0) {
+        if (!_.C0.hasPrevious(s)) {
           l = !0;
           break
-        } [r, s] = d.EditorUtils.node(e, d.PathUtils.previous(s))
+        } [r, s] = _.bN.node(e, _.C0.previous(s))
       }
-      if (!d.TextUtils.isText(r)) break;
-      let t = r.text[a];
-      if (E.WHITESPACE_RE.test(t)) break;
-      o = t + o
+      if (!_.LC.isText(r)) break;
+      let t = r.text[o];
+      if (E.i$.test(t)) break;
+      a = t + a
     }
     return {
-      word: o,
-      isAtStart: l && d.PathUtils.isFirstEditorBlock(i)
+      word: a,
+      isAtStart: l && _.C0.isFirstEditorBlock(i)
     }
   },
   getFirstText() {
     var t, n;
-    return null !== (n = null === (t = d.EditorUtils.getFirstText(e)) || void 0 === t ? void 0 : t.text) && void 0 !== n ? n : ""
+    return null !== (n = null === (t = _.bN.getFirstText(e)) || void 0 === t ? void 0 : t.text) && void 0 !== n ? n : ""
   },
   getCurrentCommandOption() {
-    let t = o.getCurrentCommandOption(e);
+    let t = a.HZ(e);
     return null == t ? null : t[0].optionName
   },
   getCurrentCommandOptionValue() {
     var n;
-    let i = o.getCurrentCommandOption(e);
+    let i = a.HZ(e);
     if (null == i) return [];
-    let r = a.default.getActiveCommand(t.id),
+    let r = o.Z.getActiveCommand(t.id),
       s = null == r ? void 0 : null === (n = r.options) || void 0 === n ? void 0 : n.find(e => e.name === i[0].optionName);
-    return null == s ? [] : o.optionToValues(e, s, i[0])
+    return null == s ? [] : a.IB(e, s, i[0], t.id)
   },
   getCommandOptionValues() {
-    let n = a.default.getActiveCommand(t.id);
-    return null == n ? {} : o.getOptionValues(e, n)
+    let n = o.Z.getActiveCommand(t.id);
+    return null == n ? {} : a.tM(e, n, t.id)
   },
   insertText(n) {
     let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
       r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    l.HistoryUtils.withSingleEntry(e, () => {
-      let s = o.getCurrentCommandOption(e),
-        a = null != s && T(t, s[0]);
-      if (null != i && a && (u.SlateTransforms.removeInlineChildren(e, s), r = !1), f(e, n, i, r), null != i && a) {
-        let n = o.getCommandBlock(e);
-        if (s = d.ElementUtils.updateElement(e, s), null != n) {
-          let i = d.ElementUtils.markdown(n[0], t.guild_id);
-          (0, c.convertRawToInlineVoids)(e, s, t.id, i) && (s = d.ElementUtils.updateElement(e, s))
+    l.T.withSingleEntry(e, () => {
+      let s = a.HZ(e),
+        o = null != s && T(t, s[0]);
+      if (null != i && o && (u.Q.removeInlineChildren(e, s), r = !1), h(e, n, i, r), null != i && o) {
+        let n = a.cr(e);
+        if (s = _.q.updateElement(e, s), null != n) {
+          let i = _.q.markdown(n[0], t.guild_id);
+          (0, c.Gg)(e, s, t.id, i) && (s = _.q.updateElement(e, s))
         }
-        o.validateOption(e, t.guild_id, t.id, d.ElementUtils.updateElement(e, s), !1), u.SlateTransforms.selectNextCommandOption(e)
+        a.xi(e, t.guild_id, t.id, _.q.updateElement(e, s), !1), u.Q.selectNextCommandOption(e)
       }
     })
   },
   insertAutocomplete(n) {
     let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
       r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-    l.HistoryUtils.withSingleEntry(e, () => {
-      let s = o.getCurrentCommandOption(e),
-        a = null != s && T(t, s[0]);
-      if (a) u.SlateTransforms.removeInlineChildren(e, s), r = !1;
+    l.T.withSingleEntry(e, () => {
+      let s = a.HZ(e),
+        o = null != s && T(t, s[0]);
+      if (o) u.Q.removeInlineChildren(e, s), r = !1;
       else {
         let {
           word: t
         } = this.getCurrentWord();
-        null != t && t.length > 0 && u.SlateTransforms.delete(e, {
+        null != t && t.length > 0 && u.Q.delete(e, {
           distance: t.length,
           unit: "character",
           reverse: !0
         })
       }
-      f(e, n, i, r), a && u.SlateTransforms.selectNextCommandOption(e)
+      h(e, n, i, r), o && u.Q.selectNextCommandOption(e)
     })
   },
   insertEmoji(t) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    l.HistoryUtils.withSingleEntry(e, () => {
+    l.T.withSingleEntry(e, () => {
       var i, r;
       let s = t.animated ? "a" : "",
-        a = null !== (r = null !== (i = t.originalName) && void 0 !== i ? i : t.name) && void 0 !== r ? r : "",
-        o = ":".concat(t.name, ":");
-      f(e, o, null != t.id ? "<".concat(s, ":").concat(a.replace(/:/g, ""), ":").concat(t.id, ">") : null, n)
+        o = null !== (r = null !== (i = t.originalName) && void 0 !== i ? i : t.name) && void 0 !== r ? r : "",
+        a = ":".concat(t.name, ":");
+      h(e, a, null != t.id ? "<".concat(s, ":").concat(o.replace(/:/g, ""), ":").concat(t.id, ">") : null, n)
     })
   }
 });
 
 function T(e, t) {
   var n;
-  let i = a.default.getActiveCommand(e.id),
+  let i = o.Z.getActiveCommand(e.id),
     r = null == i ? void 0 : null === (n = i.options) || void 0 === n ? void 0 : n.find(e => e.name === t.optionName);
-  return null != r && (r.type !== s.ApplicationCommandOptionType.STRING || (null == r ? void 0 : r.choices) != null || (null == r ? void 0 : r.autocomplete))
+  return null != r && (r.type !== s.jw.STRING || (null == r ? void 0 : r.choices) != null || (null == r ? void 0 : r.autocomplete))
 }
 
-function f(e, t, n, i) {
-  let r = d.EditorUtils.areStylesDisabled(e) || null == n ? t : n;
-  l.HistoryUtils.withSingleEntry(e, () => {
-    u.SlateTransforms.insertText(e, i ? r + " " : r)
+function h(e, t, n, i) {
+  let r = _.bN.areStylesDisabled(e) || null == n ? t : n;
+  l.T.withSingleEntry(e, () => {
+    u.Q.insertText(e, i ? r + " " : r)
   })
 }
 

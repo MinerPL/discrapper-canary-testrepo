@@ -1,7 +1,7 @@
 "use strict";
-var r = n("814033"),
-  i = n("21841"),
-  a = n("847651");
+var r = n(814033),
+  i = n(21841),
+  a = n(847651);
 t.assert = i, t.toArray = a.toArray, t.zero2 = a.zero2, t.toHex = a.toHex, t.encode = a.encode;
 t.getNAF = function(e, t, n) {
   var r = Array(Math.max(e.bitLength(), n) + 1);

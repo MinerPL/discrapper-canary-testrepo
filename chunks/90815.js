@@ -1,25 +1,25 @@
 "use strict";
-s.r(t), s.d(t, {
-  showNewTerms: function() {
-    return n
+t.d(s, {
+  q: function() {
+    return l
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("952265");
+var n = t(735250);
+t(470079);
+var i = t(952265);
 
-function n(e) {
+function l(e) {
   let {
-    demonetized: t = !1
+    demonetized: s = !1
   } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-  (0, l.openModalLazy)(async () => {
+  (0, i.ZD)(async () => {
     let {
-      default: l
-    } = await Promise.all([s.e("99387"), s.e("90220")]).then(s.bind(s, "418225"));
-    return s => (0, a.jsx)(l, {
+      default: i
+    } = await Promise.all([t.e("99387"), t.e("90220")]).then(t.bind(t, 418225));
+    return t => (0, n.jsx)(i, {
       guildId: e,
-      demonetized: t,
-      ...s
+      demonetized: s,
+      ...t
     })
   }, {
     onCloseRequest: () => {}

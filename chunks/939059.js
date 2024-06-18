@@ -3,7 +3,8 @@ function e() {
 }
 e.prototype = {
   get: function(t) {
-    return (this.buffer[Math.floor(t / 8)] >>> 7 - t % 8 & 1) == 1
+    var e = Math.floor(t / 8);
+    return (this.buffer[e] >>> 7 - t % 8 & 1) == 1
   },
   put: function(t, e) {
     for (var r = 0; r < e; r++) this.putBit((t >>> e - r - 1 & 1) == 1)

@@ -1,34 +1,34 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return c
+t.d(s, {
+  Z: function() {
+    return u
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("120356"),
-  n = s.n(l),
-  i = s("442837"),
-  r = s("607070"),
-  o = s("976644"),
-  d = s("307537"),
-  u = s("85853");
+var n = t(735250);
+t(470079);
+var i = t(120356),
+  l = t.n(i),
+  a = t(442837),
+  r = t(481060),
+  o = t(607070),
+  c = t(307537),
+  d = t(59072);
 
-function c(e) {
+function u(e) {
   let {
-    className: t,
-    shouldShine: s = !0,
-    size: l = 14
-  } = e, c = (0, i.useStateFromStores)([r.default], () => r.default.useReducedMotion);
-  return (0, a.jsxs)("div", {
-    className: n()([u.guildProductRoleIcon, t]),
-    children: [(0, a.jsx)(d.default, {
-      height: l,
-      width: l
-    }), (0, a.jsx)(o.Shine, {
-      className: u.shine,
-      shinePaused: c || !s,
-      shineSize: o.default.ShineSizes.SMALL
+    className: s,
+    shouldShine: t = !0,
+    size: i = 14
+  } = e, u = (0, a.e7)([o.Z], () => o.Z.useReducedMotion);
+  return (0, n.jsxs)("div", {
+    className: l()([d.guildProductRoleIcon, s]),
+    children: [(0, n.jsx)(c.Z, {
+      height: i,
+      width: i
+    }), (0, n.jsx)(r.Shine, {
+      className: d.shine,
+      shinePaused: u || !t,
+      shineSize: r.ShinyButton.ShineSizes.SMALL
     })]
   })
 }

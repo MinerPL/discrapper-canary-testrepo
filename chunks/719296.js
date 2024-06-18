@@ -1,10 +1,10 @@
 "use strict";
 
-function a(e, t) {
+function i(e, t) {
   return "activityembed:".concat(e, ":").concat(t)
 }
-n.r(t), n.d(t, {
-  default: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return i
   }
 })

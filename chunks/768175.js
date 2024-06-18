@@ -1,5 +1,5 @@
 "use strict";
-var r = n("690244")("%Object.defineProperty%", !0),
+var r = n(690244)("%Object.defineProperty%", !0),
   i = function() {
     if (r) try {
       return r({}, "a", {

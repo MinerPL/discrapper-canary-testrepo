@@ -1,26 +1,26 @@
 "use strict";
-n.r(t), n.d(t, {
-  commandName: function() {
+n.d(t, {
+  gw: function() {
     return r
   },
-  keyPermissions: function() {
-    return a
-  },
-  toPermissionKey: function() {
+  rE: function() {
     return s
+  },
+  tk: function() {
+    return o
   }
-}), n("47120");
-var i = n("911969");
+}), n(47120);
+var i = n(911969);
 
 function r(e, t) {
-  return e === i.ApplicationCommandType.CHAT ? "/" + t : t
+  return e === i.yU.CHAT ? "/" + t : t
 }
 
 function s(e, t) {
   return "".concat(e, ":").concat(t)
 }
 
-function a(e) {
+function o(e) {
   return Object.fromEntries(e.map(e => [s(e.id, e.type), e]))
 }
-n("895924")
+n(895924)

@@ -4,11 +4,11 @@ var i;
 function r(e) {}
 
 function s(e, t) {}
-n.r(t), n.d(t, {
-  mark: function() {
+n.d(t, {
+  B1: function() {
     return r
   },
-  measure: function() {
+  L8: function() {
     return s
   }
-}), n.g.performance
+}), i = n.g.performance

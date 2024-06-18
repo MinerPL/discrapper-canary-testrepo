@@ -1,85 +1,85 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return f
+t.d(s, {
+  Z: function() {
+    return m
   }
-}), s("47120");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("920906"),
-  i = s("722770"),
-  r = s("442837"),
-  o = s("481060"),
-  d = s("607070"),
-  u = s("151785"),
-  c = s("236413"),
-  E = s("85960"),
-  _ = s("65912"),
-  I = s("564488"),
-  T = s("689938"),
-  S = s("31067");
+}), t(47120);
+var n = t(735250),
+  i = t(470079),
+  l = t(920906),
+  a = t(722770),
+  r = t(442837),
+  o = t(481060),
+  c = t(607070),
+  d = t(151785),
+  u = t(236413),
+  E = t(85960),
+  _ = t(65912),
+  I = t(564488),
+  T = t(689938),
+  N = t(31067);
 
-function f(e) {
+function m(e) {
   let {
-    guildId: t,
-    triggerType: s
-  } = e, f = l.useMemo(() => () => (0, c.createDefaultRule)(t, s), [t, s]), [m] = l.useState(f), [N, g] = l.useState(!1), {
-    editingRule: h,
+    guildId: s,
+    triggerType: t
+  } = e, m = i.useMemo(() => () => (0, u.ep)(s, t), [s, t]), [S] = i.useState(m), [h, g] = i.useState(!1), {
+    editingRule: x,
     createNewEditingRule: C
-  } = (0, _.useAutomodEditingRuleState)(), {
+  } = (0, _.V)(), {
     getDefaultRuleName: R
-  } = E.triggerConfigs[s], x = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), L = !(0, c.isBackendPersistedRule)(h) && (null == h ? void 0 : h.triggerType) === s, [O, A] = l.useState(L ? h : m), p = (0, n.useSpring)({
-    opacity: L ? 0 : 1,
-    pointerEvents: L ? "none" : "all",
+  } = E.I6[t], L = (0, r.e7)([c.Z], () => c.Z.useReducedMotion), O = !(0, u.Vb)(x) && (null == x ? void 0 : x.triggerType) === t, [A, p] = i.useState(O ? x : S), M = (0, l.useSpring)({
+    opacity: O ? 0 : 1,
+    pointerEvents: O ? "none" : "all",
     config: {
-      ...n.config.stiff,
+      ...l.config.stiff,
       clamp: !0
     },
-    immediate: x
-  }), M = (0, n.useSpring)({
-    opacity: L ? 1 : 0,
-    pointerEvents: L ? "all" : "none",
+    immediate: L
+  }), f = (0, l.useSpring)({
+    opacity: O ? 1 : 0,
+    pointerEvents: O ? "all" : "none",
     config: {
-      ...n.config.stiff,
+      ...l.config.stiff,
       clamp: !0
     },
-    immediate: x,
+    immediate: L,
     onStart: () => {
-      A(L ? h : m)
+      p(O ? x : S)
     },
     onRest: () => {
-      A(L ? h : m), g(L)
+      p(O ? x : S), g(O)
     }
   });
-  return null == h || L ? (0, a.jsxs)("div", {
-    className: S.mainRuleContainer,
+  return null == x || O ? (0, n.jsxs)("div", {
+    className: N.mainRuleContainer,
     style: {
-      height: L ? "auto" : "60px"
+      height: O ? "auto" : "60px"
     },
-    children: [(0, a.jsx)(n.animated.div, {
-      className: S.animatedRuleCardContainer,
-      style: M,
-      children: (0, a.jsx)(I.default, {
-        rule: O,
-        persistEdit: N
+    children: [(0, n.jsx)(l.animated.div, {
+      className: N.animatedRuleCardContainer,
+      style: f,
+      children: (0, n.jsx)(I.Z, {
+        rule: A,
+        persistEdit: h
       })
-    }), (0, a.jsx)(n.animated.div, {
-      className: S.animatedNewRuleContainer,
-      style: p,
-      children: (0, a.jsxs)(o.Clickable, {
-        className: S.addAnotherRuleCardContainer,
+    }), (0, n.jsx)(l.animated.div, {
+      className: N.animatedNewRuleContainer,
+      style: M,
+      children: (0, n.jsxs)(o.Clickable, {
+        className: N.addAnotherRuleCardContainer,
         onClick: () => {
-          C(t, s)
+          C(s, t)
         },
-        children: [(0, a.jsx)(u.default, {
+        children: [(0, n.jsx)(d.Z, {
           width: 20,
           height: 20,
-          color: i.default.BLUE_345,
-          className: S.plusIcon
-        }), (0, a.jsx)(o.Text, {
+          color: a.Z.BLUE_345,
+          className: N.plusIcon
+        }), (0, n.jsx)(o.Text, {
           variant: "text-md/semibold",
           color: "text-link",
-          children: T.default.Messages.GUILD_AUTOMOD_ADD_ADDITIONAL_RULE.format({
+          children: T.Z.Messages.GUILD_AUTOMOD_ADD_ADDITIONAL_RULE.format({
             ruleName: R()
           })
         })]

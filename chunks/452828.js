@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return s
   }
 });
-var i = n("470079");
+var i = n(470079);
 let r = Object.freeze({
   scrollTop: 0,
   scrollLeft: 0,
@@ -42,16 +42,16 @@ function s() {
           scrollLeft: i,
           scrollHeight: r,
           scrollWidth: s,
-          offsetHeight: a,
-          offsetWidth: o
+          offsetHeight: o,
+          offsetWidth: a
         } = n;
         t.current = {
           scrollTop: e,
           scrollLeft: i,
           scrollHeight: r,
           scrollWidth: s,
-          offsetHeight: a,
-          offsetWidth: o,
+          offsetHeight: o,
+          offsetWidth: a,
           dirty: 0
         }
       }

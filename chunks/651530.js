@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  isEligibleForExplicitMediaRedaction: function() {
-    return a
-  },
-  useIsEligibleForExplicitMediaRedaction: function() {
+n.d(t, {
+  Kh: function() {
     return o
+  },
+  yh: function() {
+    return a
   }
 });
-var i = n("818083");
-let r = (0, i.createExperiment)({
+var i = n(818083);
+let r = (0, i.B)({
     kind: "user",
     id: "2023-08_explicit_media_redaction",
     label: "Explicit Media Redaction",
@@ -23,7 +23,7 @@ let r = (0, i.createExperiment)({
       }
     }]
   }),
-  s = (0, i.createExperiment)({
+  s = (0, i.B)({
     kind: "user",
     id: "2023-08_explicit_media_redaction_teen",
     label: "Explicit Media Redaction for Teens",
@@ -39,7 +39,7 @@ let r = (0, i.createExperiment)({
     }]
   });
 
-function a() {
+function o() {
   let {
     enabled: e
   } = r.getCurrentConfig({
@@ -56,7 +56,7 @@ function a() {
   return e || t
 }
 
-function o() {
+function a() {
   let {
     enabled: e
   } = r.useExperiment({

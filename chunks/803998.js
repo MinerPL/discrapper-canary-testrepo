@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return s
   }
-}), n("47120");
-var i = n("470079"),
-  r = n("920103");
+}), n(47120);
+var i = n(470079),
+  r = n(920103);
 
 function s(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "vertical",
-    [n] = (0, i.useState)(() => new r.default({
+    [n] = (0, i.useState)(() => new r.Z({
       tension: 200,
       friction: 35,
       mass: 2,

@@ -1,7 +1,4 @@
 "use strict";
-Object.defineProperty(t, "__esModule", {
-  value: !0
-});
 var r = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
       var n = arguments[t];
@@ -20,12 +17,12 @@ var r = Object.assign || function(e) {
       return n && e(t.prototype, n), r && e(t, r), t
     }
   }(),
-  a = n("470079"),
+  a = n(470079),
   o = d(a),
-  s = d(n("476400")),
-  u = d(n("699581")),
-  c = d(n("726351")),
-  l = d(n("512722"));
+  s = d(n(476400)),
+  u = d(n(699581)),
+  c = d(n(726351)),
+  l = d(n(512722));
 
 function d(e) {
   return e && e.__esModule ? e : {

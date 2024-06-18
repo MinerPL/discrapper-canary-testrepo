@@ -1,7 +1,7 @@
 "use strict";
-var r = n("492476"),
-  i = n("381538"),
-  a = n("26018");
+var r = n(492476),
+  i = n(381538),
+  a = n(26018);
 
 function o(e, t) {
   return t.encode ? t.strict ? r(e) : encodeURIComponent(e) : e
@@ -89,7 +89,7 @@ t.extract = function(e) {
     if (Array.isArray(i)) {
       var a = [];
       return i.slice().forEach(function(e) {
-        void 0 !== e && a.push(n(r, e, a.length))
+        if (void 0 !== e) a.push(n(r, e, a.length))
       }), a.join("&")
     }
     return o(r, t) + "=" + o(i, t)

@@ -1,6 +1,6 @@
-var r = n("796581"),
-  i = n("402428");
-t.exports = function(t, e, n) {
-  var a = e(t);
-  return i(t) ? a : r(a, n(t))
+var n = e(796581),
+  o = e(402428);
+t.exports = function(t, r, e) {
+  var i = r(t);
+  return o(t) ? i : n(i, e(t))
 }

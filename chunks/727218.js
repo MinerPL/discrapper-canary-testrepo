@@ -1,12 +1,11 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("803997"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("481060"),
-  o = n("621292"),
-  l = n("527166");
+  o = n(481060),
+  a = n(323626),
+  l = n(928217);
 let u = Object.freeze({
     SIZE_10: l.size10,
     SIZE_12: l.size12,
@@ -16,39 +15,39 @@ let u = Object.freeze({
     SIZE_24: l.size24,
     SIZE_32: l.size32
   }),
-  d = e => {
+  _ = e => {
     let {
       id: t,
       muted: n = !1,
-      className: r = o.wrapper,
+      className: r = a.wrapper,
       size: l = u.SIZE_14,
-      selectable: d = !1,
-      children: _,
+      selectable: _ = !1,
+      children: d,
       color: c,
       onClick: E,
       onContextMenu: I,
       style: T,
-      title: f,
+      title: h,
       uppercase: S
     } = e;
-    return (0, i.jsx)(a.H, {
+    return (0, i.jsx)(o.H, {
       role: null != E ? "button" : void 0,
       onClick: E,
       onContextMenu: I,
       id: t,
       className: s()(r, {
-        [o.base]: !0,
+        [a.base]: !0,
         [l]: !0,
-        [o.selectable]: d,
-        [o.muted]: n,
-        [o.uppercase]: S
+        [a.selectable]: _,
+        [a.muted]: n,
+        [a.uppercase]: S
       }),
-      title: f,
+      title: h,
       style: null != c ? {
         ...T,
         color: c
       } : T,
-      children: _
+      children: d
     })
   };
-d.Sizes = u, t.default = d
+_.Sizes = u, t.Z = _

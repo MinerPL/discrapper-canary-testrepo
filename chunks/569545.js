@@ -1,26 +1,26 @@
 "use strict";
-n.r(t), n.d(t, {
-  decodeStreamKey: function() {
-    return s
-  },
-  encodeStreamKey: function() {
-    return a
-  },
-  isStreamKey: function() {
+n.d(t, {
+  DB: function() {
     return r
+  },
+  V9: function() {
+    return o
+  },
+  my: function() {
+    return s
   }
-}), n("47120"), n("411104");
-var i = n("70722");
+}), n(47120), n(411104);
+var i = n(70722);
 
 function r(e) {
-  return null != e && (e.startsWith(i.StreamTypes.GUILD) || e.startsWith(i.StreamTypes.CALL))
+  return null != e && (e.startsWith(i.lo.GUILD) || e.startsWith(i.lo.CALL))
 }
 
 function s(e) {
   let t = e.split(":"),
     n = t[0];
   switch (n) {
-    case i.StreamTypes.GUILD: {
+    case i.lo.GUILD: {
       let [e, n, i, r] = t;
       return {
         streamType: e,
@@ -29,7 +29,7 @@ function s(e) {
         ownerId: r
       }
     }
-    case i.StreamTypes.CALL: {
+    case i.lo.CALL: {
       let [e, n, i] = t;
       return {
         streamType: e,
@@ -42,7 +42,7 @@ function s(e) {
   }
 }
 
-function a(e) {
+function o(e) {
   let {
     streamType: t,
     guildId: n,
@@ -50,9 +50,9 @@ function a(e) {
     ownerId: s
   } = e;
   switch (t) {
-    case i.StreamTypes.GUILD:
+    case i.lo.GUILD:
       return [t, n, r, s].join(":");
-    case i.StreamTypes.CALL:
+    case i.lo.CALL:
       return [t, r, s].join(":");
     default:
       throw Error("Unknown stream type ".concat(t))

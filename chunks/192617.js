@@ -5,8 +5,8 @@ function n(e, t) {
   for (var r = 0, n = Array(t); r < t; r++) n[r] = e[r];
   return n
 }
-r.r(t), r.d(t, {
-  default: function() {
+r.d(t, {
+  Z: function() {
     return n
   }
 })

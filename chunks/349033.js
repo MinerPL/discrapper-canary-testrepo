@@ -8,30 +8,30 @@ function i(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-n.r(t), n.d(t, {
-  NON_TOKEN_TYPE: function() {
-    return s
-  },
-  Token: function() {
+n.d(t, {
+  WU: function() {
     return u
+  },
+  Xe: function() {
+    return s
   }
-}), n("47120"), n("789020"), n("653041");
+}), n(47120), n(789020), n(653041);
 let r = /.+/g,
   s = "NON_TOKEN";
 
-function a(e, t, n) {
+function o(e, t, n) {
   if (null == t) return null;
   for (let i = 0; i < t.length; i++) {
     let r;
     let s = t[i],
-      a = o(e.match(s.regex), n);
-    if (null != a) {
+      o = a(e.match(s.regex), n);
+    if (null != o) {
       let {
         cache: e
       } = s;
-      if (null != e && null != (r = e.get(a[0])) && ((r = new u(r)).start = a.index), null == r) {
-        if (r = new u(a, s.type), null != s.validator && !s.validator(r)) continue;
-        null != e && !(null == e ? void 0 : e.has(a[0])) && e.set(a[0], r)
+      if (null != e && null != (r = e.get(o[0])) && ((r = new u(r)).start = o.index), null == r) {
+        if (r = new u(o, s.type), null != s.validator && !s.validator(r)) continue;
+        null != e && !(null == e ? void 0 : e.has(o[0])) && e.set(o[0], r)
       }
       return r
     }
@@ -39,7 +39,7 @@ function a(e, t, n) {
   return null
 }
 
-function o(e, t) {
+function a(e, t) {
   if (null == e) return null;
   let n = [...e];
   return n.index = t, n
@@ -79,12 +79,12 @@ class l {
     let t, n = e,
       i = "",
       s = 0,
-      a = [];
+      o = [];
     for (; n.length > 0;) {
       let e = this._getMatch(n, t, s + i.length);
-      null != e ? (null != i && "" !== i && a.push(new u(o(i.match(r), s), this._nonTokenType)), t = e, a.push(e), s += t.length + i.length, n = n.substring(t.length), i = "") : (i += n[0], n = n.substring(1))
+      null != e ? (null != i && "" !== i && o.push(new u(a(i.match(r), s), this._nonTokenType)), t = e, o.push(e), s += t.length + i.length, n = n.substring(t.length), i = "") : (i += n[0], n = n.substring(1))
     }
-    return null != i && "" !== i && a.push(new u(o(i.match(r), s), this._nonTokenType)), a
+    return null != i && "" !== i && o.push(new u(a(i.match(r), s), this._nonTokenType)), o
   }
   clearCache() {
     for (let e in this._rules.forEach(e => {
@@ -98,7 +98,7 @@ class l {
   _getMatch(e, t, n) {
     let i;
     let r = null != t ? t.type : null;
-    return (null == t ? void 0 : t.end) === n && (i = a(e, this._followers[String(r)], n)), null == i && (i = a(e, this._rules, n)), i
+    return (null == t ? void 0 : t.end) === n && (i = o(e, this._followers[String(r)], n)), null == i && (i = o(e, this._rules, n)), i
   }
   constructor(e = [], t) {
     i(this, "_rules", []), i(this, "_followers", {}), i(this, "_nonTokenType", s), this.reset(t), e.forEach(e => this.addRule(e))
@@ -136,4 +136,4 @@ class u {
     } else this.match = [], this.start = 0, this.type = t
   }
 }
-l.NON_TOKEN_TYPE = s, l.Token = u, t.default = l
+l.NON_TOKEN_TYPE = s, l.Token = u, t.ZP = l

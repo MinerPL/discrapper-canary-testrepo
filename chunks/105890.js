@@ -1,4 +1,4 @@
-var r = n("373640");
+var r = n(373640);
 e.exports = function(e) {
   var t = r(e),
     n = t % 1;

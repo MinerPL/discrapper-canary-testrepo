@@ -1,103 +1,103 @@
 "use strict";
-n.r(e), n.d(e, {
-  addBreadcrumb: function() {
-    return u
-  },
-  captureEvent: function() {
-    return o
-  },
-  captureException: function() {
-    return i
-  },
-  captureMessage: function() {
-    return a
-  },
-  configureScope: function() {
-    return s
-  },
-  setContext: function() {
-    return c
-  },
-  setExtra: function() {
-    return d
-  },
-  setExtras: function() {
-    return l
-  },
-  setTag: function() {
+n.d(e, {
+  $e: function() {
     return p
   },
-  setTags: function() {
+  Tb: function() {
+    return i
+  },
+  YA: function() {
+    return _
+  },
+  Yr: function() {
+    return m
+  },
+  av: function() {
     return f
   },
-  setUser: function() {
+  e: function() {
+    return o
+  },
+  eN: function() {
+    return a
+  },
+  mG: function() {
     return h
   },
-  startTransaction: function() {
-    return g
+  n_: function() {
+    return u
   },
-  withScope: function() {
-    return _
+  rJ: function() {
+    return c
+  },
+  sU: function() {
+    return d
+  },
+  uT: function() {
+    return s
+  },
+  v: function() {
+    return l
   }
 });
-var r = n("876122");
+var r = n(876122);
 
 function i(t, e) {
-  return (0, r.getCurrentHub)().captureException(t, {
+  return (0, r.Gd)().captureException(t, {
     captureContext: e
   })
 }
 
-function a(t, e) {
+function s(t, e) {
   let n = "string" == typeof e ? e : void 0,
     i = "string" != typeof e ? {
       captureContext: e
     } : void 0;
-  return (0, r.getCurrentHub)().captureMessage(t, n, i)
+  return (0, r.Gd)().captureMessage(t, n, i)
 }
 
-function o(t, e) {
-  return (0, r.getCurrentHub)().captureEvent(t, e)
+function a(t, e) {
+  return (0, r.Gd)().captureEvent(t, e)
 }
 
-function s(t) {
-  (0, r.getCurrentHub)().configureScope(t)
+function o(t) {
+  (0, r.Gd)().configureScope(t)
 }
 
 function u(t) {
-  (0, r.getCurrentHub)().addBreadcrumb(t)
+  (0, r.Gd)().addBreadcrumb(t)
 }
 
-function c(t, e) {
-  (0, r.getCurrentHub)().setContext(t, e)
+function l(t, e) {
+  (0, r.Gd)().setContext(t, e)
 }
 
-function l(t) {
-  (0, r.getCurrentHub)().setExtras(t)
+function c(t) {
+  (0, r.Gd)().setExtras(t)
 }
 
 function d(t, e) {
-  (0, r.getCurrentHub)().setExtra(t, e)
-}
-
-function f(t) {
-  (0, r.getCurrentHub)().setTags(t)
-}
-
-function p(t, e) {
-  (0, r.getCurrentHub)().setTag(t, e)
+  (0, r.Gd)().setExtra(t, e)
 }
 
 function h(t) {
-  (0, r.getCurrentHub)().setUser(t)
+  (0, r.Gd)().setTags(t)
 }
 
-function _(t) {
-  (0, r.getCurrentHub)().withScope(t)
+function _(t, e) {
+  (0, r.Gd)().setTag(t, e)
 }
 
-function g(t, e) {
-  return (0, r.getCurrentHub)().startTransaction({
+function f(t) {
+  (0, r.Gd)().setUser(t)
+}
+
+function p(t) {
+  (0, r.Gd)().withScope(t)
+}
+
+function m(t, e) {
+  return (0, r.Gd)().startTransaction({
     ...t
   }, e)
 }

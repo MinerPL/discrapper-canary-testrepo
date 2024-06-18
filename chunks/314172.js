@@ -1,64 +1,55 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return h
+n.d(t, {
+  Z: function() {
+    return T
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("120356"),
-  a = n.n(r),
-  s = n("442837"),
-  o = n("693789"),
-  l = n("235874"),
-  u = n("481060"),
-  d = n("944613"),
-  _ = n("607070"),
-  c = n("605436"),
-  E = n("496675"),
-  I = n("729285"),
-  T = n("993409"),
-  f = n("689938"),
-  S = n("129372");
+var i = n(735250);
+n(470079);
+var r = n(442837),
+  s = n(693789),
+  o = n(235874),
+  a = n(944613),
+  l = n(607070),
+  u = n(605436),
+  _ = n(496675),
+  d = n(729285),
+  c = n(993409),
+  E = n(689938),
+  I = n(129372);
 
-function h(e) {
+function T(e) {
   let {
     guild: t,
     guildMember: n,
-    highestRole: r,
+    highestRole: T,
     onAddRole: h,
-    compact: A = !0,
-    ...m
-  } = e, N = (0, s.useStateFromStores)([_.default], () => _.default.roleStyle), p = e => (0, c.isNotEveryoneRoleId)(t.id, e.id) && !e.managed && E.default.isRoleHigher(t, r, e) && -1 === n.roles.indexOf(e.id);
-  return (0, i.jsx)(l.Popout, {
+    ...S
+  } = e, f = (0, r.e7)([l.Z], () => l.Z.roleStyle), N = e => (0, u.Gy)(t.id, e.id) && !e.managed && _.Z.isRoleHigher(t, T, e) && -1 === n.roles.indexOf(e.id);
+  return (0, i.jsx)(o.y, {
     position: "bottom",
     align: "center",
     renderPopout: e => {
       let {
         closePopout: n
       } = e;
-      return (0, i.jsx)(d.default, {
+      return (0, i.jsx)(a.Z, {
         guild: t,
-        roleStyle: N,
-        roleFilter: p,
+        roleStyle: f,
+        roleFilter: N,
         onSelect: h,
         onClose: n
       })
     },
-    children: e => (0, i.jsx)(T.default, {
-      className: a()(S.button),
-      text: (0, i.jsx)(u.Text, {
-        variant: "text-xs/medium",
-        children: f.default.Messages.USER_PROFILE_ADD_ROLE
-      }),
-      "aria-label": f.default.Messages.USER_PROFILE_ADD_ROLE,
-      icon: I.default,
-      color: o.Button.Colors.CUSTOM,
-      size: o.Button.Sizes.NONE,
-      compact: A,
+    children: e => (0, i.jsx)(c.Z, {
+      className: I.button,
+      text: E.Z.Messages.USER_PROFILE_ADD_ROLE,
+      icon: d.Z,
+      color: s.zx.Colors.CUSTOM,
+      size: s.zx.Sizes.NONE,
       grow: !1,
       ...e,
-      ...m
+      ...S
     })
   })
 }

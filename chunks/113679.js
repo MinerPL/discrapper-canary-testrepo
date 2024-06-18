@@ -1,46 +1,46 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
+t.d(s, {
+  Z: function() {
     return _
   }
-}), s("47120");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("399606"),
-  i = s("481060"),
-  r = s("279542"),
-  o = s("496675"),
-  d = s("140031"),
-  u = s("981631"),
-  c = s("689938"),
-  E = s("683000");
+}), t(47120);
+var n = t(735250),
+  i = t(470079),
+  l = t(399606),
+  a = t(481060),
+  r = t(279542),
+  o = t(496675),
+  c = t(140031),
+  d = t(981631),
+  u = t(689938),
+  E = t(740637);
 
 function _(e) {
   let {
-    guild: t
-  } = e, s = l.useId(), _ = (0, n.useStateFromStores)([o.default], () => null != t && o.default.can(u.Permissions.MANAGE_GUILD, t), [t]), I = t.hasFeature(u.GuildFeatures.COMMUNITY), [T, S] = l.useState(t.hasFeature(u.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)), f = l.useCallback(async e => {
-    S(e), await (0, r.toggleModerationExperienceGuildFeature)(t, e)
-  }, [t]);
-  return I ? null : (0, a.jsxs)("div", {
+    guild: s
+  } = e, t = i.useId(), _ = (0, l.e7)([o.Z], () => null != s && o.Z.can(d.Plq.MANAGE_GUILD, s), [s]), I = s.hasFeature(d.oNc.COMMUNITY), [T, N] = i.useState(s.hasFeature(d.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)), m = i.useCallback(async e => {
+    N(e), await (0, r.fp)(s, e)
+  }, [s]);
+  return I ? null : (0, n.jsxs)("div", {
     className: E.bannerContainer,
-    children: [(0, a.jsx)(d.default, {
+    children: [(0, n.jsx)(c.Z, {
       width: 64,
       height: 64
-    }), (0, a.jsxs)("div", {
+    }), (0, n.jsxs)("div", {
       className: E.headingContainer,
-      children: [(0, a.jsx)(i.Heading, {
+      children: [(0, n.jsx)(a.Heading, {
         variant: "heading-lg/semibold",
-        children: c.default.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE
-      }), (0, a.jsx)(i.Text, {
+        children: u.Z.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE
+      }), (0, n.jsx)(a.Text, {
         variant: "text-sm/medium",
-        children: c.default.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE_DESCRIPTION
+        children: u.Z.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE_DESCRIPTION
       })]
-    }), (0, a.jsx)("div", {
+    }), (0, n.jsx)("div", {
       className: E.buttonContainer,
-      children: (0, a.jsx)(i.Switch, {
-        id: s,
+      children: (0, n.jsx)(a.Switch, {
+        id: t,
         checked: T,
-        onChange: f,
+        onChange: m,
         disabled: !_
       })
     })]

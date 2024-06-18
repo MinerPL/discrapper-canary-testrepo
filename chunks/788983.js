@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
-  close: function() {
-    return o
-  },
-  open: function() {
+n.d(t, {
+  bA: function() {
     return s
   },
-  openChannelCallPopout: function() {
-    return a
+  hP: function() {
+    return o
   },
-  setAlwaysOnTop: function() {
+  hY: function() {
     return l
+  },
+  xv: function() {
+    return a
   }
 });
-var i = n("570140");
+var i = n(570140);
 let r = {
   menubar: !1,
   toolbar: !1,
@@ -22,7 +22,7 @@ let r = {
 };
 
 function s(e, t, n) {
-  return i.default.dispatch({
+  return i.Z.dispatch({
     type: "POPOUT_WINDOW_OPEN",
     key: e,
     features: {
@@ -33,22 +33,22 @@ function s(e, t, n) {
   })
 }
 
-function a(e) {
-  return i.default.dispatch({
+function o(e) {
+  return i.Z.dispatch({
     type: "CHANNEL_CALL_POPOUT_WINDOW_OPEN",
     channel: e
   })
 }
 
-function o(e) {
-  return i.default.dispatch({
+function a(e) {
+  return i.Z.dispatch({
     type: "POPOUT_WINDOW_CLOSE",
     key: e
   })
 }
 
 function l(e, t) {
-  return i.default.dispatch({
+  return i.Z.dispatch({
     type: "POPOUT_WINDOW_SET_ALWAYS_ON_TOP",
     alwaysOnTop: t,
     key: e

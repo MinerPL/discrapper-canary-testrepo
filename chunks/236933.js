@@ -1,17 +1,16 @@
 "use strict";
-r.r(t);
-var n = r("334389");
+var r = n(334389);
 
-function a(e, t) {
+function i(e, t) {
   if ("function" != typeof e || null != t && "function" != typeof t) throw TypeError("Expected a function");
-  var r = function() {
-    var n = arguments,
-      a = t ? t.apply(this, n) : n[0],
-      o = r.cache;
-    if (o.has(a)) return o.get(a);
-    var i = e.apply(this, n);
-    return r.cache = o.set(a, i) || o, i
+  var n = function() {
+    var r = arguments,
+      i = t ? t.apply(this, r) : r[0],
+      a = n.cache;
+    if (a.has(i)) return a.get(i);
+    var o = e.apply(this, r);
+    return n.cache = a.set(i, o) || a, o
   };
-  return r.cache = new(a.Cache || n.default), r
+  return n.cache = new(i.Cache || r.Z), n
 }
-a.Cache = n.default, t.default = a
+i.Cache = r.Z, t.Z = i

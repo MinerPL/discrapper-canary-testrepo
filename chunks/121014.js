@@ -89,7 +89,7 @@ r.prototype = {
     }), r
   }
 };
-var i = t.DepGraphCycleError = function(e) {
+var i = function(e) {
   var t = Error("Dependency Cycle Found: " + e.join(" -> "));
   return t.cyclePath = e, Object.setPrototypeOf(t, Object.getPrototypeOf(this)), Error.captureStackTrace && Error.captureStackTrace(t, i), t
 };

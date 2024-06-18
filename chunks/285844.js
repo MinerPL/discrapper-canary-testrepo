@@ -1,4 +1,4 @@
-var r = n("957578").Buffer,
+var r = n(957578).Buffer,
   i = r.alloc(16, 0);
 
 function a(e) {

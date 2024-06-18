@@ -1,46 +1,46 @@
 "use strict";
-n.r(e), n.d(e, {
-  isDOMError: function() {
-    return s
-  },
-  isDOMException: function() {
-    return u
-  },
-  isElement: function() {
-    return p
-  },
-  isError: function() {
-    return i
-  },
-  isErrorEvent: function() {
-    return o
-  },
-  isEvent: function() {
-    return f
-  },
-  isInstanceOf: function() {
-    return y
-  },
-  isNaN: function() {
+n.d(e, {
+  Cy: function() {
     return m
   },
-  isPlainObject: function() {
-    return d
-  },
-  isPrimitive: function() {
+  HD: function() {
     return l
   },
-  isRegExp: function() {
+  J8: function() {
+    return p
+  },
+  Kj: function() {
+    return f
+  },
+  PO: function() {
+    return d
+  },
+  TX: function() {
+    return o
+  },
+  V9: function() {
+    return y
+  },
+  VW: function() {
+    return a
+  },
+  VZ: function() {
+    return i
+  },
+  cO: function() {
     return h
   },
-  isString: function() {
-    return c
+  fm: function() {
+    return u
   },
-  isSyntheticEvent: function() {
+  i2: function() {
     return g
   },
-  isThenable: function() {
+  kK: function() {
     return _
+  },
+  pt: function() {
+    return c
   }
 });
 let r = Object.prototype.toString;
@@ -56,55 +56,55 @@ function i(t) {
   }
 }
 
-function a(t, e) {
+function s(t, e) {
   return r.call(t) === `[object ${e}]`
 }
 
-function o(t) {
-  return a(t, "ErrorEvent")
+function a(t) {
+  return s(t, "ErrorEvent")
 }
 
-function s(t) {
-  return a(t, "DOMError")
+function o(t) {
+  return s(t, "DOMError")
 }
 
 function u(t) {
-  return a(t, "DOMException")
-}
-
-function c(t) {
-  return a(t, "String")
+  return s(t, "DOMException")
 }
 
 function l(t) {
+  return s(t, "String")
+}
+
+function c(t) {
   return null === t || "object" != typeof t && "function" != typeof t
 }
 
 function d(t) {
-  return a(t, "Object")
-}
-
-function f(t) {
-  return "undefined" != typeof Event && y(t, Event)
-}
-
-function p(t) {
-  return "undefined" != typeof Element && y(t, Element)
+  return s(t, "Object")
 }
 
 function h(t) {
-  return a(t, "RegExp")
+  return "undefined" != typeof Event && y(t, Event)
 }
 
 function _(t) {
+  return "undefined" != typeof Element && y(t, Element)
+}
+
+function f(t) {
+  return s(t, "RegExp")
+}
+
+function p(t) {
   return !!(t && t.then && "function" == typeof t.then)
 }
 
-function g(t) {
+function m(t) {
   return d(t) && "nativeEvent" in t && "preventDefault" in t && "stopPropagation" in t
 }
 
-function m(t) {
+function g(t) {
   return "number" == typeof t && t != t
 }
 

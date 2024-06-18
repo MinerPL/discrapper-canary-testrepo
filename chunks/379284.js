@@ -1,17 +1,17 @@
 "use strict";
-var r = n("690244"),
-  i = n("49662"),
+var r = n(690244),
+  i = n(49662),
   a = r("%SyntaxError%"),
   o = r("%TypeError%"),
-  s = n("395238"),
-  u = n("75150"),
-  c = n("860438"),
-  l = n("365916"),
-  d = n("828148"),
-  f = n("240919"),
-  p = n("148309"),
-  h = n("632384"),
-  m = n("905125");
+  s = n(395238),
+  u = n(75150),
+  c = n(860438),
+  l = n(365916),
+  d = n(828148),
+  f = n(240919),
+  p = n(148309),
+  h = n(632384),
+  m = n(905125);
 e.exports = function(e, t, n) {
   if ("Object" !== h(e)) throw new o("Assertion failed: O must be an Object");
   if (!d(t)) throw new o("Assertion failed: P must be a Property Key");

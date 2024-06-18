@@ -1,36 +1,36 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("392711"),
+n(47120);
+var i = n(392711),
   r = n.n(i),
-  s = n("626135"),
-  a = n("524484"),
-  o = n("981631");
+  s = n(626135),
+  o = n(524484),
+  a = n(981631);
 
 function l(e) {
   switch (e) {
-    case a.ShakeLocation.CHAT_INPUT:
+    case o.oZ.CHAT_INPUT:
       return "chat_input";
-    case a.ShakeLocation.MENTION:
+    case o.oZ.MENTION:
       return "mention";
-    case a.ShakeLocation.VOICE_USER:
+    case o.oZ.VOICE_USER:
       return "voice_user"
   }
 }
 
 function u(e) {
   switch (e) {
-    case a.ConfettiLocation.CHAT_INPUT:
+    case o.Hn.CHAT_INPUT:
       return "chat_input";
-    case a.ConfettiLocation.MEMBER_USER:
+    case o.Hn.MEMBER_USER:
       return "member_user";
-    case a.ConfettiLocation.REACTION:
+    case o.Hn.REACTION:
       return "reaction";
-    case a.ConfettiLocation.CALL_TILE:
+    case o.Hn.CALL_TILE:
       return "call_tile"
   }
 }
 
-function d(e, t) {
+function _(e, t) {
   return Object.entries(e).filter(e => {
     let [t, n] = e;
     return n
@@ -39,30 +39,30 @@ function d(e, t) {
     return t(Number.parseInt(n))
   })
 }
-let _ = r().throttle(e => {
+let d = r().throttle(e => {
   let {
     enabled: t,
     combosEnabled: n,
     combosRequiredCount: i,
     screenshakeEnabled: r,
-    shakeIntensity: a,
-    screenshakeEnabledLocations: _,
+    shakeIntensity: o,
+    screenshakeEnabledLocations: d,
     confettiEnabled: c,
     confettiSize: E,
     confettiCount: I,
     confettiEnabledLocations: T
   } = e;
-  s.default.track(o.AnalyticEvents.POGGERMODE_SETTINGS_UPDATED, {
+  s.default.track(a.rMx.POGGERMODE_SETTINGS_UPDATED, {
     enabled: t,
     combos_enabled: n,
     combos_required_count: i,
     screenshake_enabled: r,
-    shake_intensity: a,
-    screenshake_enabled_locations: d(_, l),
+    shake_intensity: o,
+    screenshake_enabled_locations: _(d, l),
     confetti_enabled: c,
     confetti_size: E,
     confetti_count: I,
-    confetti_enabled_locations: d(T, u)
+    confetti_enabled_locations: _(T, u)
   })
 }, 5e3);
-t.default = _
+t.Z = d

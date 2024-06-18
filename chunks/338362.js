@@ -1,6 +1,5 @@
 "use strict";
-r.r(t);
-t.default = function(e) {
+t.Z = function(e) {
   return function() {
     return e
   }

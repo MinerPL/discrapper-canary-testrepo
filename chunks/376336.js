@@ -1,8 +1,8 @@
 "use strict";
-var r = n("67867"),
-  a = n("228042"),
-  o = n("730427"),
-  i = n("146321").set;
+var r = n(67867),
+  o = n(228042),
+  a = n(730427),
+  i = n(146321).set;
 r({
   target: "Map",
   proto: !0,
@@ -11,7 +11,7 @@ r({
   forced: !0
 }, {
   merge: function(e) {
-    for (var t = a(this), n = arguments.length, r = 0; r < n;) o(arguments[r++], function(e, n) {
+    for (var t = o(this), n = arguments.length, r = 0; r < n;) a(arguments[r++], function(e, n) {
       i(t, e, n)
     }, {
       AS_ENTRIES: !0

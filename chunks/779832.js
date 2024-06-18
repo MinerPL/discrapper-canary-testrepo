@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-t.default = {
+t.ZP = {
   backgroundTaskIdentifierInvalid: -1,
   backgroundify: function(e, t) {
     return e

@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  useObservePreviews: function() {
+n.d(t, {
+  R: function() {
     return o
   }
 });
-var r = n("470079"),
-  i = n("176617");
+var r = n(470079),
+  i = n(84562);
 
 function a(e, t) {
   (null == t || t > e.length) && (t = e.length);
@@ -34,7 +34,7 @@ var o = function() {
         }
         return n
       }
-    }(e, t) || function(e, t) {
+    }(e, 2) || function(e, t) {
       if (e) {
         if ("string" == typeof e) return a(e, t);
         var n = Object.prototype.toString.call(e).slice(8, -1);
@@ -46,7 +46,7 @@ var o = function() {
     }()),
     o = n[0],
     s = n[1],
-    u = (0, r.useContext)(i.DndContext);
+    u = (0, r.useContext)(i.L);
   return (0, r.useEffect)(function() {
     var e, t = null == u ? void 0 : null === (e = u.dragDropManager) || void 0 === e ? void 0 : e.getBackend(),
       n = {

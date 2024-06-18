@@ -131,7 +131,7 @@ var o = function(e, t, n) {
 o.prototype = {}, o.prototype.getPosition = function() {
   return this.position
 }, o.prototype._realloc = function(e) {
-  if (this._dynamicSize) {
+  if (!!this._dynamicSize) {
     var t = this._byteOffset + this.position + e,
       n = this._buffer.byteLength;
     if (t <= n) {
@@ -185,36 +185,28 @@ o.prototype = {}, o.prototype.getPosition = function() {
   var t = new Uint8Array(this._buffer, this.byteOffset + this.position, e);
   return this.position += 1 * e, t
 }, o.prototype.readInt32Array = function(e, t) {
-  e = null == e ? this.byteLength - this.position / 4 : e;
-  var n = new Int32Array(e);
+  var n = new Int32Array(e = null == e ? this.byteLength - this.position / 4 : e);
   return o.memcpy(n.buffer, 0, this.buffer, this.byteOffset + this.position, e * n.BYTES_PER_ELEMENT), o.arrayToNative(n, null == t ? this.endianness : t), this.position += n.byteLength, n
 }, o.prototype.readInt16Array = function(e, t) {
-  e = null == e ? this.byteLength - this.position / 2 : e;
-  var n = new Int16Array(e);
+  var n = new Int16Array(e = null == e ? this.byteLength - this.position / 2 : e);
   return o.memcpy(n.buffer, 0, this.buffer, this.byteOffset + this.position, e * n.BYTES_PER_ELEMENT), o.arrayToNative(n, null == t ? this.endianness : t), this.position += n.byteLength, n
 }, o.prototype.readInt8Array = function(e) {
-  e = null == e ? this.byteLength - this.position : e;
-  var t = new Int8Array(e);
+  var t = new Int8Array(e = null == e ? this.byteLength - this.position : e);
   return o.memcpy(t.buffer, 0, this.buffer, this.byteOffset + this.position, e * t.BYTES_PER_ELEMENT), this.position += t.byteLength, t
 }, o.prototype.readUint32Array = function(e, t) {
-  e = null == e ? this.byteLength - this.position / 4 : e;
-  var n = new Uint32Array(e);
+  var n = new Uint32Array(e = null == e ? this.byteLength - this.position / 4 : e);
   return o.memcpy(n.buffer, 0, this.buffer, this.byteOffset + this.position, e * n.BYTES_PER_ELEMENT), o.arrayToNative(n, null == t ? this.endianness : t), this.position += n.byteLength, n
 }, o.prototype.readUint16Array = function(e, t) {
-  e = null == e ? this.byteLength - this.position / 2 : e;
-  var n = new Uint16Array(e);
+  var n = new Uint16Array(e = null == e ? this.byteLength - this.position / 2 : e);
   return o.memcpy(n.buffer, 0, this.buffer, this.byteOffset + this.position, e * n.BYTES_PER_ELEMENT), o.arrayToNative(n, null == t ? this.endianness : t), this.position += n.byteLength, n
 }, o.prototype.readUint8Array = function(e) {
-  e = null == e ? this.byteLength - this.position : e;
-  var t = new Uint8Array(e);
+  var t = new Uint8Array(e = null == e ? this.byteLength - this.position : e);
   return o.memcpy(t.buffer, 0, this.buffer, this.byteOffset + this.position, e * t.BYTES_PER_ELEMENT), this.position += t.byteLength, t
 }, o.prototype.readFloat64Array = function(e, t) {
-  e = null == e ? this.byteLength - this.position / 8 : e;
-  var n = new Float64Array(e);
+  var n = new Float64Array(e = null == e ? this.byteLength - this.position / 8 : e);
   return o.memcpy(n.buffer, 0, this.buffer, this.byteOffset + this.position, e * n.BYTES_PER_ELEMENT), o.arrayToNative(n, null == t ? this.endianness : t), this.position += n.byteLength, n
 }, o.prototype.readFloat32Array = function(e, t) {
-  e = null == e ? this.byteLength - this.position / 4 : e;
-  var n = new Float32Array(e);
+  var n = new Float32Array(e = null == e ? this.byteLength - this.position / 4 : e);
   return o.memcpy(n.buffer, 0, this.buffer, this.byteOffset + this.position, e * n.BYTES_PER_ELEMENT), o.arrayToNative(n, null == t ? this.endianness : t), this.position += n.byteLength, n
 }, o.prototype.readInt32 = function(e) {
   var t = this._dataView.getInt32(this.position, null == e ? this.endianness : e);
@@ -464,7 +456,8 @@ o.prototype.readInt64 = function() {
   }
   null != i && (this.position = s, this._realloc(i), this.position = s + i)
 }, o.prototype.writeUint64 = function(e) {
-  this.writeUint32(Math.floor(e / 4294967296)), this.writeUint32(4294967295 & e)
+  var t = Math.floor(e / 4294967296);
+  this.writeUint32(t), this.writeUint32(4294967295 & e)
 }, o.prototype.writeUint24 = function(e) {
   this.writeUint8((16711680 & e) >> 16), this.writeUint8((65280 & e) >> 8), this.writeUint8(255 & e)
 }, o.prototype.adjustUint32 = function(e, t) {
@@ -881,7 +874,7 @@ c.initialize(), c.TKHD_FLAG_ENABLED = 1, c.TKHD_FLAG_IN_MOVIE = 2, c.TKHD_FLAG_I
 }), c.createMediaSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_AUDIO, function(e) {
   this.parseHeader(e), e.readUint32Array(2), this.channel_count = e.readUint16(), this.samplesize = e.readUint16(), e.readUint16(), e.readUint16(), this.samplerate = e.readUint32() / 65536, this.parseFooter(e)
 }), c.createSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_VISUAL, "avc1"), c.createSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_VISUAL, "avc2"), c.createSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_VISUAL, "avc3"), c.createSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_VISUAL, "avc4"), c.createSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_VISUAL, "av01"), c.createSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_VISUAL, "hvc1"), c.createSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_VISUAL, "hev1"), c.createSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_VISUAL, "vvc1"), c.createSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_VISUAL, "vvi1"), c.createSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_VISUAL, "vvs1"), c.createSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_VISUAL, "vvcN"), c.createSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_VISUAL, "vp08"), c.createSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_VISUAL, "vp09"), c.createSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_AUDIO, "mp4a"), c.createSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_AUDIO, "ac-3"), c.createSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_AUDIO, "ec-3"), c.createSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_AUDIO, "Opus"), c.createEncryptedSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_VISUAL, "encv"), c.createEncryptedSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_AUDIO, "enca"), c.createEncryptedSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_SUBTITLE, "encu"), c.createEncryptedSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_SYSTEM, "encs"), c.createEncryptedSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_TEXT, "enct"), c.createEncryptedSampleEntryCtor(c.SAMPLE_ENTRY_TYPE_METADATA, "encm"), c.createBoxCtor("a1lx", function(e) {
-  var t = ((1 & e.readUint8() & 1) + 1) * 16;
+  var t = ((1 & (1 & e.readUint8())) + 1) * 16;
   this.layer_size = [];
   for (var n = 0; n < 3; n++) 16 == t ? this.layer_size[n] = e.readUint16() : this.layer_size[n] = e.readUint32()
 }), c.createBoxCtor("a1op", function(e) {
@@ -892,6 +885,10 @@ c.initialize(), c.TKHD_FLAG_ENABLED = 1, c.TKHD_FLAG_IN_MOVIE = 2, c.TKHD_FLAG_I
   this.aux_subtype = e.readUint8Array(t)
 }), c.createBoxCtor("av1C", function(e) {
   var t = e.readUint8();
+  if (t >> 7 & !1) {
+    i.error("av1C marker problem");
+    return
+  }
   if (this.version = 127 & t, 1 !== this.version) {
     i.error("av1C version " + this.version + " not supported");
     return
@@ -1799,12 +1796,13 @@ c.initialize(), c.TKHD_FLAG_ENABLED = 1, c.TKHD_FLAG_IN_MOVIE = 2, c.TKHD_FLAG_I
 }, c.stszBox.prototype.write = function(e) {
   var t, n = !0;
   if (this.version = 0, this.flags = 0, this.sample_sizes.length > 0)
-    for (t = 0; t + 1 < this.sample_sizes.length;)
+    for (t = 0; t + 1 < this.sample_sizes.length;) {
       if (this.sample_sizes[t + 1] !== this.sample_sizes[0]) {
         n = !1;
         break
-      } else t++;
-  else n = !1;
+      }
+      t++
+    } else n = !1;
   this.size = 8, !n && (this.size += 4 * this.sample_sizes.length), this.writeHeader(e), n ? e.writeUint32(this.sample_sizes[0]) : e.writeUint32(0), e.writeUint32(this.sample_sizes.length), !n && e.writeUint32Array(this.sample_sizes)
 }, c.sttsBox.prototype.write = function(e) {
   var t;
@@ -1853,12 +1851,16 @@ c.initialize(), c.TKHD_FLAG_ENABLED = 1, c.TKHD_FLAG_IN_MOVIE = 2, c.TKHD_FLAG_I
   var n;
   if (e && !t) return !1;
   for (n in e) {
-    if (c.DIFF_BOXES_PROP_NAMES.indexOf(n) > -1) continue;
-    if (e[n] instanceof c.Box || t[n] instanceof c.Box || void 0 === e[n] || void 0 === t[n] || "function" == typeof e[n] || "function" == typeof t[n] || e.subBoxNames && e.subBoxNames.indexOf(n.slice(0, 4)) > -1 || t.subBoxNames && t.subBoxNames.indexOf(n.slice(0, 4)) > -1) continue;
-    if ("data" === n || "start" === n || "size" === n || "creation_time" === n || "modification_time" === n) continue;
-    if (!(c.DIFF_PRIMITIVE_ARRAY_PROP_NAMES.indexOf(n) > -1)) {
-      if (e[n] !== t[n]) return !1
-    }
+    if (!(c.DIFF_BOXES_PROP_NAMES.indexOf(n) > -1))
+      if (e[n] instanceof c.Box || t[n] instanceof c.Box) continue;
+      else {
+        if (void 0 === e[n] || void 0 === t[n]) continue;
+        if ("function" == typeof e[n] || "function" == typeof t[n]) continue;
+        if (e.subBoxNames && e.subBoxNames.indexOf(n.slice(0, 4)) > -1 || t.subBoxNames && t.subBoxNames.indexOf(n.slice(0, 4)) > -1) continue;
+        if ("data" === n || "start" === n || "size" === n || "creation_time" === n || "modification_time" === n) continue;
+        if (c.DIFF_PRIMITIVE_ARRAY_PROP_NAMES.indexOf(n) > -1) continue;
+        else if (e[n] !== t[n]) return !1
+      }
   }
   return !0
 }, c.boxEqual = function(e, t) {
@@ -1882,12 +1884,13 @@ l.prototype.parseSample = function(e) {
   function i(e) {
     var t = Math.floor(e / 3600),
       n = Math.floor((e - 3600 * t) / 60),
-      i = Math.floor(e - 3600 * t - 60 * n);
-    return "" + r(t, 2) + ":" + r(n, 2) + ":" + r(i, 2) + "." + r(Math.floor((e - 3600 * t - 60 * n - i) * 1e3), 3)
+      i = Math.floor(e - 3600 * t - 60 * n),
+      a = Math.floor((e - 3600 * t - 60 * n - i) * 1e3);
+    return "" + r(t, 2) + ":" + r(n, 2) + ":" + r(i, 2) + "." + r(a, 3)
   }
   for (var a = this.parseSample(n), o = "", s = 0; s < a.length; s++) {
     var u = a[s];
-    o += i(e) + " --> " + i(t) + "\r\n" + u.payl.text
+    o += i(e) + " --\x3e " + i(t) + "\r\n" + u.payl.text
   }
   return o
 };
@@ -1933,37 +1936,37 @@ p.prototype.setSegmentOptions = function(e, t, n) {
 }, p.prototype.parse = function() {
   var e, t, n;
   if (!this.restoreParsePosition || !!this.restoreParsePosition())
-    for (;;)
+    for (;;) {
       if (this.hasIncompleteMdat && this.hasIncompleteMdat()) {
         if (this.processIncompleteMdat()) continue;
         return
-      } else {
-        if (this.saveParsePosition && this.saveParsePosition(), (e = c.parseOneBox(this.stream, !1)).code === c.ERR_NOT_ENOUGH_DATA) {
-          if (!this.processIncompleteBox) return;
-          if (this.processIncompleteBox(e)) continue;
-          return
-        }
-        switch (n = "uuid" !== (t = e.box).type ? t.type : t.uuid, this.boxes.push(t), n) {
-          case "mdat":
-            this.mdats.push(t);
-            break;
-          case "moof":
-            this.moofs.push(t);
-            break;
-          case "moov":
-            this.moovStartFound = !0, 0 === this.mdats.length && (this.isProgressive = !0);
-          default:
-            void 0 !== this[n] && i.warn("ISOFile", "Duplicate Box of type: " + n + ", overriding previous occurrence"), this[n] = t
-        }
-        this.updateUsedBytes && this.updateUsedBytes(t, e)
       }
+      if (this.saveParsePosition && this.saveParsePosition(), (e = c.parseOneBox(this.stream, !1)).code === c.ERR_NOT_ENOUGH_DATA) {
+        if (!this.processIncompleteBox) return;
+        if (this.processIncompleteBox(e)) continue;
+        return
+      }
+      switch (n = "uuid" !== (t = e.box).type ? t.type : t.uuid, this.boxes.push(t), n) {
+        case "mdat":
+          this.mdats.push(t);
+          break;
+        case "moof":
+          this.moofs.push(t);
+          break;
+        case "moov":
+          this.moovStartFound = !0, 0 === this.mdats.length && (this.isProgressive = !0);
+        default:
+          void 0 !== this[n] && i.warn("ISOFile", "Duplicate Box of type: " + n + ", overriding previous occurrence"), this[n] = t
+      }
+      this.updateUsedBytes && this.updateUsedBytes(t, e)
+    }
 }, p.prototype.checkBuffer = function(e) {
   if (null == e) throw "Buffer must be defined and non empty";
   if (void 0 === e.fileStart) throw "Buffer must have a fileStart property";
   return 0 === e.byteLength ? (i.warn("ISOFile", "Ignoring empty buffer (fileStart: " + e.fileStart + ")"), this.stream.logBufferLevel(), !1) : (i.info("ISOFile", "Processing buffer (fileStart: " + e.fileStart + ")"), e.usedBytes = 0, this.stream.insertBuffer(e), this.stream.logBufferLevel(), !!this.stream.initialized() || (i.warn("ISOFile", "Not ready to start parsing"), !1))
 }, p.prototype.appendBuffer = function(e, t) {
   var n;
-  if (this.checkBuffer(e)) return this.parse(), this.moovStartFound && !this.moovStartSent && (this.moovStartSent = !0, this.onMoovStart && this.onMoovStart()), this.moov ? (!this.sampleListBuilt && (this.buildSampleLists(), this.sampleListBuilt = !0), this.updateSampleLists(), this.onReady && !this.readySent && (this.readySent = !0, this.onReady(this.getInfo())), this.processSamples(t), this.nextSeekPosition ? (n = this.nextSeekPosition, this.nextSeekPosition = void 0) : n = this.nextParsePosition, this.stream.getEndFilePositionAfter && (n = this.stream.getEndFilePositionAfter(n))) : n = this.nextParsePosition ? this.nextParsePosition : 0, this.sidx && this.onSidx && !this.sidxSent && (this.onSidx(this.sidx), this.sidxSent = !0), this.meta && (this.flattenItemInfo && !this.itemListBuilt && (this.flattenItemInfo(), this.itemListBuilt = !0), this.processItems && this.processItems(this.onItem)), this.stream.cleanBuffers && (i.info("ISOFile", "Done processing buffer (fileStart: " + e.fileStart + ") - next buffer to fetch should have a fileStart position of " + n), this.stream.logBufferLevel(), this.stream.cleanBuffers(), this.stream.logBufferLevel(!0), i.info("ISOFile", "Sample data size in memory: " + this.getAllocatedSampleDataSize())), n
+  if (!!this.checkBuffer(e)) return this.parse(), this.moovStartFound && !this.moovStartSent && (this.moovStartSent = !0, this.onMoovStart && this.onMoovStart()), this.moov ? (!this.sampleListBuilt && (this.buildSampleLists(), this.sampleListBuilt = !0), this.updateSampleLists(), this.onReady && !this.readySent && (this.readySent = !0, this.onReady(this.getInfo())), this.processSamples(t), this.nextSeekPosition ? (n = this.nextSeekPosition, this.nextSeekPosition = void 0) : n = this.nextParsePosition, this.stream.getEndFilePositionAfter && (n = this.stream.getEndFilePositionAfter(n))) : n = this.nextParsePosition ? this.nextParsePosition : 0, this.sidx && this.onSidx && !this.sidxSent && (this.onSidx(this.sidx), this.sidxSent = !0), this.meta && (this.flattenItemInfo && !this.itemListBuilt && (this.flattenItemInfo(), this.itemListBuilt = !0), this.processItems && this.processItems(this.onItem)), this.stream.cleanBuffers && (i.info("ISOFile", "Done processing buffer (fileStart: " + e.fileStart + ") - next buffer to fetch should have a fileStart position of " + n), this.stream.logBufferLevel(), this.stream.cleanBuffers(), this.stream.logBufferLevel(!0), i.info("ISOFile", "Sample data size in memory: " + this.getAllocatedSampleDataSize())), n
 }, p.prototype.getInfo = function() {
   var e, t, n, r, i, a, o = {},
     s = new Date("1904-01-01T00:00:00Z").getTime();
@@ -2196,15 +2199,15 @@ p.prototype.setSegmentOptions = function(e, t, n) {
   var i, a, o;
   for (i in t.sample_groups = [], r) t.sample_groups[i] = {}, t.sample_groups[i].grouping_type = r[i].grouping_type, t.sample_groups[i].grouping_type_parameter = r[i].grouping_type_parameter, n >= r[i].last_sample_in_run && (r[i].last_sample_in_run < 0 && (r[i].last_sample_in_run = 0), r[i].entry_index++, r[i].entry_index <= r[i].sbgp.entries.length - 1 && (r[i].last_sample_in_run += r[i].sbgp.entries[r[i].entry_index].sample_count)), r[i].entry_index <= r[i].sbgp.entries.length - 1 ? t.sample_groups[i].group_description_index = r[i].sbgp.entries[r[i].entry_index].group_description_index : t.sample_groups[i].group_description_index = -1, 0 !== t.sample_groups[i].group_description_index && (o = r[i].fragment_description ? r[i].fragment_description : r[i].description, t.sample_groups[i].group_description_index > 0 ? (a = t.sample_groups[i].group_description_index > 65535 ? (t.sample_groups[i].group_description_index >> 16) - 1 : t.sample_groups[i].group_description_index - 1, o && a >= 0 && (t.sample_groups[i].description = o.entries[a])) : o && o.version >= 2 && o.default_group_description_index > 0 && (t.sample_groups[i].description = o.entries[o.default_group_description_index - 1]))
 }, p.process_sdtp = function(e, t, n) {
-  t && (e ? (t.is_leading = e.is_leading[n], t.depends_on = e.sample_depends_on[n], t.is_depended_on = e.sample_is_depended_on[n], t.has_redundancy = e.sample_has_redundancy[n]) : (t.is_leading = 0, t.depends_on = 0, t.is_depended_on = 0, t.has_redundancy = 0))
+  if (!!t) e ? (t.is_leading = e.is_leading[n], t.depends_on = e.sample_depends_on[n], t.is_depended_on = e.sample_is_depended_on[n], t.has_redundancy = e.sample_has_redundancy[n]) : (t.is_leading = 0, t.depends_on = 0, t.is_depended_on = 0, t.has_redundancy = 0)
 }, p.prototype.buildSampleLists = function() {
   var e, t;
   for (e = 0; e < this.moov.traks.length; e++) t = this.moov.traks[e], this.buildTrakSampleLists(t)
 }, p.prototype.buildTrakSampleLists = function(e) {
-  if (e.samples = [], e.samples_duration = 0, e.samples_size = 0, n = e.mdia.minf.stbl.stco || e.mdia.minf.stbl.co64, r = e.mdia.minf.stbl.stsc, i = e.mdia.minf.stbl.stsz || e.mdia.minf.stbl.stz2, a = e.mdia.minf.stbl.stts, o = e.mdia.minf.stbl.ctts, s = e.mdia.minf.stbl.stss, u = e.mdia.minf.stbl.stsd, c = e.mdia.minf.stbl.subs, f = e.mdia.minf.stbl.stdp, l = e.mdia.minf.stbl.sbgps, d = e.mdia.minf.stbl.sgpds, v = -1, y = -1, E = -1, S = -1, x = 0, w = 0, T = 0, p.initSampleGroups(e, null, l, d), void 0 !== i) {
+  if (e.samples = [], e.samples_duration = 0, e.samples_size = 0, n = e.mdia.minf.stbl.stco || e.mdia.minf.stbl.co64, r = e.mdia.minf.stbl.stsc, i = e.mdia.minf.stbl.stsz || e.mdia.minf.stbl.stz2, a = e.mdia.minf.stbl.stts, o = e.mdia.minf.stbl.ctts, s = e.mdia.minf.stbl.stss, u = e.mdia.minf.stbl.stsd, c = e.mdia.minf.stbl.subs, f = e.mdia.minf.stbl.stdp, l = e.mdia.minf.stbl.sbgps, d = e.mdia.minf.stbl.sgpds, v = -1, y = -1, E = -1, S = -1, x = 0, w = 0, C = 0, p.initSampleGroups(e, null, l, d), void 0 !== i) {
     for (t = 0; t < i.sample_sizes.length; t++) {
-      var t, n, r, i, a, o, s, u, c, l, d, f, h, m, g, _, b, v, y, E, S, x, w, T, C = {};
-      C.number = t, C.track_id = e.tkhd.track_id, C.timescale = e.mdia.mdhd.timescale, C.alreadyRead = 0, e.samples[t] = C, C.size = i.sample_sizes[t], e.samples_size += C.size, 0 === t ? (m = 1, h = 0, C.chunk_index = m, C.chunk_run_index = h, b = r.samples_per_chunk[h], _ = 0, g = h + 1 < r.first_chunk.length ? r.first_chunk[h + 1] - 1 : 1 / 0) : t < b ? (C.chunk_index = m, C.chunk_run_index = h) : (m++, C.chunk_index = m, _ = 0, m <= g || (g = ++h + 1 < r.first_chunk.length ? r.first_chunk[h + 1] - 1 : 1 / 0), C.chunk_run_index = h, b += r.samples_per_chunk[h]), C.description_index = r.sample_description_index[C.chunk_run_index] - 1, C.description = u.entries[C.description_index], C.offset = n.chunk_offsets[C.chunk_index - 1] + _, _ += C.size, t > v && (y++, v < 0 && (v = 0), v += a.sample_counts[y]), t > 0 ? (e.samples[t - 1].duration = a.sample_deltas[y], e.samples_duration += e.samples[t - 1].duration, C.dts = e.samples[t - 1].dts + e.samples[t - 1].duration) : C.dts = 0, o ? (t >= E && (S++, E < 0 && (E = 0), E += o.sample_counts[S]), C.cts = e.samples[t].dts + o.sample_offsets[S]) : C.cts = C.dts, s ? (t == s.sample_numbers[x] - 1 ? (C.is_sync = !0, x++) : (C.is_sync = !1, C.degradation_priority = 0), c && c.entries[w].sample_delta + T == t + 1 && (C.subsamples = c.entries[w].subsamples, T += c.entries[w].sample_delta, w++)) : C.is_sync = !0, p.process_sdtp(e.mdia.minf.stbl.sdtp, C, C.number), f ? C.degradation_priority = f.priority[t] : C.degradation_priority = 0, c && c.entries[w].sample_delta + T == t && (C.subsamples = c.entries[w].subsamples, T += c.entries[w].sample_delta), (l.length > 0 || d.length > 0) && p.setSampleGroupProperties(e, C, t, e.sample_groups_info)
+      var t, n, r, i, a, o, s, u, c, l, d, f, h, m, g, _, b, v, y, E, S, x, w, C, T = {};
+      T.number = t, T.track_id = e.tkhd.track_id, T.timescale = e.mdia.mdhd.timescale, T.alreadyRead = 0, e.samples[t] = T, T.size = i.sample_sizes[t], e.samples_size += T.size, 0 === t ? (m = 1, h = 0, T.chunk_index = m, T.chunk_run_index = h, b = r.samples_per_chunk[h], _ = 0, g = h + 1 < r.first_chunk.length ? r.first_chunk[h + 1] - 1 : 1 / 0) : t < b ? (T.chunk_index = m, T.chunk_run_index = h) : (m++, T.chunk_index = m, _ = 0, m <= g || (g = ++h + 1 < r.first_chunk.length ? r.first_chunk[h + 1] - 1 : 1 / 0), T.chunk_run_index = h, b += r.samples_per_chunk[h]), T.description_index = r.sample_description_index[T.chunk_run_index] - 1, T.description = u.entries[T.description_index], T.offset = n.chunk_offsets[T.chunk_index - 1] + _, _ += T.size, t > v && (y++, v < 0 && (v = 0), v += a.sample_counts[y]), t > 0 ? (e.samples[t - 1].duration = a.sample_deltas[y], e.samples_duration += e.samples[t - 1].duration, T.dts = e.samples[t - 1].dts + e.samples[t - 1].duration) : T.dts = 0, o ? (t >= E && (S++, E < 0 && (E = 0), E += o.sample_counts[S]), T.cts = e.samples[t].dts + o.sample_offsets[S]) : T.cts = T.dts, s ? (t == s.sample_numbers[x] - 1 ? (T.is_sync = !0, x++) : (T.is_sync = !1, T.degradation_priority = 0), c && c.entries[w].sample_delta + C == t + 1 && (T.subsamples = c.entries[w].subsamples, C += c.entries[w].sample_delta, w++)) : T.is_sync = !0, p.process_sdtp(e.mdia.minf.stbl.sdtp, T, T.number), f ? T.degradation_priority = f.priority[t] : T.degradation_priority = 0, c && c.entries[w].sample_delta + C == t && (T.subsamples = c.entries[w].subsamples, C += c.entries[w].sample_delta), (l.length > 0 || d.length > 0) && p.setSampleGroupProperties(e, T, t, e.sample_groups_info)
     }
     t > 0 && (e.samples[t - 1].duration = Math.max(e.mdia.mdhd.duration - e.samples[t - 1].dts, 0), e.samples_duration += e.samples[t - 1].duration)
   }

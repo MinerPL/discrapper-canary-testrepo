@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
-  clear: function() {
+n.d(t, {
+  Hj: function() {
     return o
   },
-  report: function() {
-    return s
-  },
-  stringify: function() {
+  Pz: function() {
     return l
+  },
+  ZH: function() {
+    return a
   }
-}), n("653041"), n("411104"), n("47120");
-var i = n("427786"),
+}), n(653041), n(411104), n(47120);
+var i = n(427786),
   r = n.n(i);
-let a = new(r())(5e3);
+let s = new(r())(5e3);
 
-function s(e) {
+function o(e) {
   for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
   let r = function(e) {
     let t = "";
@@ -24,24 +24,24 @@ function s(e) {
     }
     return t
   }(n);
-  for ("string" == typeof e ? a.push({
+  for ("string" == typeof e ? s.push({
       time: Date.now(),
       category: e,
       message: r
-    }) : a.push({
+    }) : s.push({
       time: Date.now(),
       category: e.name,
       timing: e.timing,
       message: r
-    }); a.length > 5e3;) a.shift()
+    }); s.length > 5e3;) s.shift()
 }
 
-function o() {
-  a.clear()
+function a() {
+  s.clear()
 }
 
 function l(e) {
-  return a.toArray().filter(t => null == e || e.includes(t.category)).map(e => {
+  return s.toArray().filter(t => null == e || e.includes(t.category)).map(e => {
     let t = [];
     return t.push(new Date(e.time).toISOString()), null != e.timing && t.push(e.timing), t.push(e.category, e.message), t.join(" -> ")
   }).join("\n")

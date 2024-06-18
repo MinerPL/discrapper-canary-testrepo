@@ -1,28 +1,26 @@
 "use strict";
-r.r(t);
-var a = r("870271"),
-  n = r("470079"),
-  s = r.n(n),
-  o = r("639519"),
-  i = r.n(o),
-  u = function(e) {
+var a = r(870271),
+  n = r(470079),
+  s = r(639519),
+  o = r.n(s),
+  i = function(e) {
     var t = e.nodeType,
       r = e.styling,
-      n = e.labelRenderer,
+      s = e.labelRenderer,
       o = e.keyPath,
       i = e.valueRenderer,
-      u = e.value,
-      c = e.valueGetter;
-    return s().createElement("li", r("value", t, o), s().createElement("label", r(["label", "valueLabel"], t, o), n(o, t, !1, !1)), s().createElement("span", r("valueText", t, o), i.apply(void 0, [(void 0 === c ? function(e) {
+      c = e.value,
+      u = e.valueGetter;
+    return n.createElement("li", r("value", t, o), n.createElement("label", r(["label", "valueLabel"], t, o), s(o, t, !1, !1)), n.createElement("span", r("valueText", t, o), i.apply(void 0, [(void 0 === u ? function(e) {
       return e
-    } : c)(u), u].concat((0, a.default)(o)))))
+    } : u)(c), c].concat((0, a.Z)(o)))))
   };
-u.propTypes = {
-  nodeType: i().string.isRequired,
-  styling: i().func.isRequired,
-  labelRenderer: i().func.isRequired,
-  keyPath: i().arrayOf(i().oneOfType([i().string, i().number]).isRequired).isRequired,
-  valueRenderer: i().func.isRequired,
-  value: i().any,
-  valueGetter: i().func
-}, t.default = u
+i.propTypes = {
+  nodeType: o().string.isRequired,
+  styling: o().func.isRequired,
+  labelRenderer: o().func.isRequired,
+  keyPath: o().arrayOf(o().oneOfType([o().string, o().number]).isRequired).isRequired,
+  valueRenderer: o().func.isRequired,
+  value: o().any,
+  valueGetter: o().func
+}, t.Z = i
