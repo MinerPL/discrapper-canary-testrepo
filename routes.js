@@ -1061,7 +1061,6 @@
                     GUILD_FEED_MESSAGE_REMOVE: (_, E) => "/channels/".concat(_, "/messages/").concat(E, "/hide-guild-feed"),
                     GUILD_FEED_MESSAGE_SET_PREFERENCE: _ => "/guilds/".concat(_, "/guild-feed/preference"),
                     GUILD_FEED_FEATURE_ITEM: _ => "/guilds/".concat(_, "/guild-feed/feature"),
-                    GUILD_FEED_MARK_SEEN: _ => "/guilds/".concat(_, "/guild-feed/mark-seen"),
                     PINS_ACK: _ => "/channels/".concat(_, "/pins/ack"),
                     PINS: _ => "/channels/".concat(_, "/pins"),
                     PIN: (_, E) => "/channels/".concat(_, "/pins/").concat(E),
