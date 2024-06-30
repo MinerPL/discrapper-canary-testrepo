@@ -1,157 +1,151 @@
-"use strict";
 n.d(t, {
-  M9: function() {
-    return M
-  },
-  QA: function() {
-    return y
-  },
-  UZ: function() {
-    return P
-  }
+    M9: function () {
+        return L;
+    },
+    QA: function () {
+        return M;
+    },
+    UZ: function () {
+        return b;
+    }
 });
-var i = n(392711),
-  r = n.n(i),
-  s = n(105797),
-  o = n(63725),
-  a = n(924997),
-  l = n(861498),
-  u = n(749834),
-  _ = n(760260),
-  d = n(448578),
-  c = n(946185),
-  E = n(480423),
-  I = n(273593),
-  T = n(665801),
-  h = n(818143),
-  S = n(666475),
-  f = n(591304),
-  N = n(73375),
-  A = n(328664),
-  m = n(328259),
-  O = n(19009),
-  R = n(234912),
-  C = n(405571),
-  p = n(730886),
-  g = n(473974),
-  L = n(563856),
-  v = n(997945),
-  D = n(689938);
-let M = 60,
-  P = [{
-    id: v.aH.DEFAULT,
-    iconSource: o,
-    name: D.Z.Messages.APP_ICON_DEFAULT,
-    isPremium: !1
-  }].concat([{
-    id: v.Ru.BRAND_DARK,
-    iconSource: _,
-    name: D.Z.Messages.APP_ICON_BRAND_DARK,
-    isPremium: !0
-  }, {
-    id: v.Ru.MANGA,
-    iconSource: A,
-    isPremium: !0,
-    name: D.Z.Messages.APP_ICON_MANGA
-  }, {
-    id: v.Ru.MATTE_DARK,
-    iconSource: m,
-    isPremium: !0,
-    name: D.Z.Messages.APP_ICON_MATTE_DARK
-  }, {
-    id: v.Ru.MATTE_LIGHT,
-    iconSource: O,
-    name: D.Z.Messages.APP_ICON_MATTE_LIGHT,
-    isPremium: !0
-  }, {
-    id: v.Ru.PASTEL,
-    iconSource: C,
-    isPremium: !0,
-    name: D.Z.Messages.APP_ICON_PASTEL
-  }, {
-    id: v.Ru.PIRATE,
-    iconSource: p,
-    isPremium: !0,
-    name: D.Z.Messages.APP_ICON_PIRATE
-  }, {
-    id: v.Ru.CAMO,
-    iconSource: d,
-    isPremium: !0,
-    name: D.Z.Messages.APP_ICON_CAMO
-  }, {
-    id: v.Ru.SUNSET,
-    iconSource: g,
-    isPremium: !0,
-    name: D.Z.Messages.APP_ICON_SUNSET
-  }, {
-    id: v.Ru.GALAXY,
-    iconSource: h,
-    isPremium: !0,
-    name: D.Z.Messages.APP_ICON_GALAXY
-  }, {
-    id: v.Ru.Y2K,
-    iconSource: L,
-    isPremium: !0,
-    name: D.Z.Messages.APP_ICON_Y2K
-  }, {
-    id: v.Ru.CHERRY_BLOSSOM,
-    iconSource: c,
-    isPremium: !0,
-    name: D.Z.Messages.APP_ICON_CHERRY_BLOSSOM
-  }, {
-    id: v.Ru.BEANIE,
-    iconSource: a,
-    isPremium: !0,
-    name: D.Z.Messages.APP_ICON_BEANIE
-  }, {
-    id: v.Ru.GAMING,
-    iconSource: S,
-    isPremium: !0,
-    name: D.Z.Messages.APP_ICON_GAMING
-  }, {
-    id: v.Ru.CIRCUIT,
-    iconSource: E,
-    isPremium: !0,
-    name: D.Z.Messages.APP_ICON_CIRCUIT
-  }, {
-    id: v.Ru.HOLO_WAVES,
-    iconSource: f,
-    isPremium: !0,
-    name: D.Z.Messages.APP_ICON_HOLO_WAVES
-  }, {
-    id: v.Ru.BLUSH,
-    iconSource: u,
-    isPremium: !0,
-    name: D.Z.Messages.APP_ICON_BLUSH
-  }, {
-    id: v.Ru.ANGRY,
-    iconSource: s,
-    isPremium: !0,
-    name: D.Z.Messages.APP_ICON_ANGRY
-  }, {
-    id: v.Ru.CONTROLLER,
-    iconSource: T,
-    isPremium: !0,
-    name: D.Z.Messages.APP_ICON_CONTROLLER
-  }, {
-    id: v.Ru.BLURPLE_TWILIGHT,
-    iconSource: l,
-    isPremium: !0,
-    name: D.Z.Messages.CLIENT_THEMES_GRADIENT_BLURPLE_TWILIGHT
-  }, {
-    id: v.Ru.IN_RAINBOWS,
-    iconSource: N,
-    isPremium: !0,
-    name: D.Z.Messages.APP_ICON_IN_RAINBOWS
-  }, {
-    id: v.Ru.MIDNIGHT_PRISM,
-    iconSource: R,
-    isPremium: !0,
-    name: D.Z.Messages.APP_ICON_MIDNIGHT_PRISM
-  }, {
-    id: v.Ru.COLOR_WAVE,
-    iconSource: I,
-    isPremium: !0,
-    name: D.Z.Messages.APP_ICON_COLOR_WAVE
-  }]),
-  y = r().keyBy(P, "id")
+var r = n(392711), i = n.n(r), a = n(105797), o = n(63725), s = n(924997), l = n(861498), u = n(749834), c = n(760260), d = n(448578), _ = n(946185), E = n(480423), f = n(273593), h = n(665801), p = n(818143), m = n(666475), I = n(591304), T = n(73375), g = n(328664), S = n(328259), A = n(19009), N = n(234912), v = n(405571), O = n(730886), R = n(473974), C = n(563856), y = n(997945), D = n(689938);
+let L = 60, b = [{
+            id: y.aH.DEFAULT,
+            iconSource: o,
+            name: D.Z.Messages.APP_ICON_DEFAULT,
+            isPremium: !1
+        }].concat([
+        {
+            id: y.Ru.BRAND_DARK,
+            iconSource: c,
+            name: D.Z.Messages.APP_ICON_BRAND_DARK,
+            isPremium: !0
+        },
+        {
+            id: y.Ru.MANGA,
+            iconSource: g,
+            isPremium: !0,
+            name: D.Z.Messages.APP_ICON_MANGA
+        },
+        {
+            id: y.Ru.MATTE_DARK,
+            iconSource: S,
+            isPremium: !0,
+            name: D.Z.Messages.APP_ICON_MATTE_DARK
+        },
+        {
+            id: y.Ru.MATTE_LIGHT,
+            iconSource: A,
+            name: D.Z.Messages.APP_ICON_MATTE_LIGHT,
+            isPremium: !0
+        },
+        {
+            id: y.Ru.PASTEL,
+            iconSource: v,
+            isPremium: !0,
+            name: D.Z.Messages.APP_ICON_PASTEL
+        },
+        {
+            id: y.Ru.PIRATE,
+            iconSource: O,
+            isPremium: !0,
+            name: D.Z.Messages.APP_ICON_PIRATE
+        },
+        {
+            id: y.Ru.CAMO,
+            iconSource: d,
+            isPremium: !0,
+            name: D.Z.Messages.APP_ICON_CAMO
+        },
+        {
+            id: y.Ru.SUNSET,
+            iconSource: R,
+            isPremium: !0,
+            name: D.Z.Messages.APP_ICON_SUNSET
+        },
+        {
+            id: y.Ru.GALAXY,
+            iconSource: p,
+            isPremium: !0,
+            name: D.Z.Messages.APP_ICON_GALAXY
+        },
+        {
+            id: y.Ru.Y2K,
+            iconSource: C,
+            isPremium: !0,
+            name: D.Z.Messages.APP_ICON_Y2K
+        },
+        {
+            id: y.Ru.CHERRY_BLOSSOM,
+            iconSource: _,
+            isPremium: !0,
+            name: D.Z.Messages.APP_ICON_CHERRY_BLOSSOM
+        },
+        {
+            id: y.Ru.BEANIE,
+            iconSource: s,
+            isPremium: !0,
+            name: D.Z.Messages.APP_ICON_BEANIE
+        },
+        {
+            id: y.Ru.GAMING,
+            iconSource: m,
+            isPremium: !0,
+            name: D.Z.Messages.APP_ICON_GAMING
+        },
+        {
+            id: y.Ru.CIRCUIT,
+            iconSource: E,
+            isPremium: !0,
+            name: D.Z.Messages.APP_ICON_CIRCUIT
+        },
+        {
+            id: y.Ru.HOLO_WAVES,
+            iconSource: I,
+            isPremium: !0,
+            name: D.Z.Messages.APP_ICON_HOLO_WAVES
+        },
+        {
+            id: y.Ru.BLUSH,
+            iconSource: u,
+            isPremium: !0,
+            name: D.Z.Messages.APP_ICON_BLUSH
+        },
+        {
+            id: y.Ru.ANGRY,
+            iconSource: a,
+            isPremium: !0,
+            name: D.Z.Messages.APP_ICON_ANGRY
+        },
+        {
+            id: y.Ru.CONTROLLER,
+            iconSource: h,
+            isPremium: !0,
+            name: D.Z.Messages.APP_ICON_CONTROLLER
+        },
+        {
+            id: y.Ru.BLURPLE_TWILIGHT,
+            iconSource: l,
+            isPremium: !0,
+            name: D.Z.Messages.CLIENT_THEMES_GRADIENT_BLURPLE_TWILIGHT
+        },
+        {
+            id: y.Ru.IN_RAINBOWS,
+            iconSource: T,
+            isPremium: !0,
+            name: D.Z.Messages.APP_ICON_IN_RAINBOWS
+        },
+        {
+            id: y.Ru.MIDNIGHT_PRISM,
+            iconSource: N,
+            isPremium: !0,
+            name: D.Z.Messages.APP_ICON_MIDNIGHT_PRISM
+        },
+        {
+            id: y.Ru.COLOR_WAVE,
+            iconSource: f,
+            isPremium: !0,
+            name: D.Z.Messages.APP_ICON_COLOR_WAVE
+        }
+    ]), M = i().keyBy(b, 'id');

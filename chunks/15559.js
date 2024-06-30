@@ -1,33 +1,30 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return i
-  }
+    Z: function () {
+        return r;
+    }
 });
-
-function i(e, t, n) {
-  let {
-    onChange: i
-  } = e, r = !1, s = !1;
-  return e.onChange = () => {
-    if (r) {
-      s = !0;
-      return
-    }
-    r = !0;
-    try {
-      let e = 0;
-      do {
-        if (s = !1, e++ >= 5) break;
-        null == t || t();
-        try {
-          i()
-        } finally {
-          null == n || n()
+function r(e, t, n) {
+    let {onChange: r} = e, i = !1, a = !1;
+    return e.onChange = () => {
+        if (i) {
+            a = !0;
+            return;
         }
-      } while (s)
-    } finally {
-      r = !1
-    }
-  }, e
+        i = !0;
+        try {
+            let e = 0;
+            do {
+                if (a = !1, e++ >= 5)
+                    break;
+                null == t || t();
+                try {
+                    r();
+                } finally {
+                    null == n || n();
+                }
+            } while (a);
+        } finally {
+            i = !1;
+        }
+    }, e;
 }

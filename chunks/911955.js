@@ -1,14 +1,12 @@
-"use strict";
 n.d(t, {
-  F: function() {
-    return r
-  }
+    F: function () {
+        return i;
+    }
 });
-var i = n(973616);
-
-function r(e) {
-  return {
-    ...e,
-    application: i.Z.createFromServer(e.application)
-  }
+var r = n(973616);
+function i(e) {
+    return {
+        ...e,
+        application: r.Z.createFromServer(e.application)
+    };
 }

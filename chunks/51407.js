@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  h: function() {
-    return i
-  }
-}), (r = i || (i = {}))[r.USER = 100] = "USER", r[r.STREAM = 18] = "STREAM"
+    h: function () {
+        return r;
+    }
+}), (i = r || (r = {}))[i.USER = 100] = 'USER', i[i.STREAM = 18] = 'STREAM';

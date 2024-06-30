@@ -1,29 +1,33 @@
-"use strict";
 n.d(t, {
-  GR: function() {
-    return s
-  },
-  HQ: function() {
-    return a
-  },
-  gK: function() {
-    return o
-  },
-  wu: function() {
-    return i
-  }
+    GR: function () {
+        return a;
+    },
+    HQ: function () {
+        return s;
+    },
+    gK: function () {
+        return o;
+    },
+    wu: function () {
+        return r;
+    }
 });
-let i = ["click", "mousedown", "mouseup", "keydown", "keyup", "keypress", "contextmenu"],
-  r = null;
-
-function s() {
-  return r
+let r = [
+        'click',
+        'mousedown',
+        'mouseup',
+        'keydown',
+        'keyup',
+        'keypress',
+        'contextmenu'
+    ], i = null;
+function a() {
+    return i;
 }
-
 function o(e) {
-  r = e
+    i = e;
 }
-
-function a(e) {
-  if (r === e) r = null
+function s(e) {
+    if (i === e)
+        i = null;
 }

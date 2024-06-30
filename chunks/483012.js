@@ -1,36 +1,33 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return a;
+    }
 }), n(47120), n(653041);
-var i = n(570140);
-
-function r(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: n,
-    enumerable: !0,
-    configurable: !0,
-    writable: !0
-  }) : e[t] = n, e
+var r = n(570140);
+function i(e, t, n) {
+    return t in e ? Object.defineProperty(e, t, {
+        value: n,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+    }) : e[t] = n, e;
 }
-class s {
-  static flush(e, t) {
-    for (let n of s.batchers) null != n.action && (null == e || n.shouldFlush(e, t)) && n.flush()
-  }
-  flush() {
-    let {
-      action: e
-    } = this;
-    this.action = null, null != e && i.Z.dispatch(e).catch(t => this.socket.resetSocketOnError({
-      error: t,
-      action: e.type
-    }))
-  }
-  constructor(e, t, n) {
-    r(this, "socket", void 0), r(this, "action", void 0), r(this, "add", void 0), r(this, "shouldFlush", void 0), this.socket = e, this.action = null, this.shouldFlush = n, this.add = e => {
-      this.action = t(this.action, e)
-    }, s.batchers.push(this)
-  }
+class a {
+    static flush(e, t) {
+        for (let n of a.batchers)
+            null != n.action && (null == e || n.shouldFlush(e, t)) && n.flush();
+    }
+    flush() {
+        let {action: e} = this;
+        this.action = null, null != e && r.Z.dispatch(e).catch(t => this.socket.resetSocketOnError({
+            error: t,
+            action: e.type
+        }));
+    }
+    constructor(e, t, n) {
+        i(this, 'socket', void 0), i(this, 'action', void 0), i(this, 'add', void 0), i(this, 'shouldFlush', void 0), this.socket = e, this.action = null, this.shouldFlush = n, this.add = e => {
+            this.action = t(this.action, e);
+        }, a.batchers.push(this);
+    }
 }
-r(s, "batchers", [])
+i(a, 'batchers', []);

@@ -1,22 +1,19 @@
-"use strict";
 n.d(t, {
-  $8: function() {
-    return s
-  },
-  LP: function() {
-    return r
-  },
-  gK: function() {
-    return o
-  }
+    $8: function () {
+        return a;
+    },
+    LP: function () {
+        return i;
+    },
+    gK: function () {
+        return o;
+    }
 });
-var i = n(213919);
-
-function r() {
-  return i.getToken()
+var r = n(213919);
+function i() {
+    return r.getToken();
 }
-
-function s() {
-  return null != r()
+function a() {
+    return null != i();
 }
-let o = e => null != e && /^\/developers/.test(e) ? n(376665) : null
+let o = e => null != e && /^\/developers/.test(e) ? n(376665) : null;

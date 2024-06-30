@@ -1,18 +1,16 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return i;
+    }
 });
-var i = n(911969);
-
-function r(e) {
-  switch (e) {
-    case "android":
-      return i.C3.ANDROID;
-    case "ios":
-      return i.C3.IOS;
+var r = n(911969);
+function i(e) {
+    switch (e) {
+    case 'android':
+        return r.C3.ANDROID;
+    case 'ios':
+        return r.C3.IOS;
     default:
-      return i.C3.WEB
-  }
+        return r.C3.WEB;
+    }
 }

@@ -1,31 +1,23 @@
-"use strict";
 n.d(t, {
-  p: function() {
-    return o
-  },
-  y: function() {
-    return s
-  }
+    p: function () {
+        return o;
+    },
+    y: function () {
+        return a;
+    }
 });
-var i = n(482833),
-  r = n(981631);
-
-function s(e, t) {
-  let {
-    enabled: n
-  } = i.c.useExperiment({
-    guildId: null != e ? e : r.lds,
-    location: t
-  });
-  return n
+var r = n(482833), i = n(981631);
+function a(e, t) {
+    let {enabled: n} = r.c.useExperiment({
+        guildId: null != e ? e : i.lds,
+        location: t
+    });
+    return n;
 }
-
 function o(e, t) {
-  let {
-    enabled: n
-  } = i.c.getCurrentConfig({
-    guildId: null != e ? e : r.lds,
-    location: t
-  });
-  return n
+    let {enabled: n} = r.c.getCurrentConfig({
+        guildId: null != e ? e : i.lds,
+        location: t
+    });
+    return n;
 }

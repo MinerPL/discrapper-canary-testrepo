@@ -1,12 +1,10 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return a;
+    }
 }), n(757143);
-var i = n(379082);
-let r = /🏻|🏼|🏽|🏾|🏿|\uFE0F/g;
-
-function s(e) {
-  return i.h.has(e.replace(r, ""))
+var r = n(379082);
+let i = /🏻|🏼|🏽|🏾|🏿|\uFE0F/g;
+function a(e) {
+    return r.h.has(e.replace(i, ''));
 }

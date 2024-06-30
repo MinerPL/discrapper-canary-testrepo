@@ -1,86 +1,78 @@
-"use strict";
 n.d(t, {
-  u: function() {
-    return I
-  }
+    u: function () {
+        return f;
+    }
 }), n(47120);
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(920906),
-  l = n(481060),
-  u = n(130402),
-  _ = n(153066),
-  d = n(185923),
-  c = n(689938),
-  E = n(525011);
-let I = {
-  tension: 800,
-  friction: 24
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(920906), l = n(481060), u = n(130402), c = n(153066), d = n(185923), _ = n(689938), E = n(595958);
+let f = {
+    tension: 800,
+    friction: 24
 };
-t.Z = function(e) {
-  var t;
-  let {
-    tabIndex: n,
-    className: s,
-    renderButtonContents: T,
-    active: h,
-    onClick: S,
-    "aria-controls": f,
-    focusProps: N
-  } = e, [A, m] = r.useState(!1), [O, R] = r.useState(50), C = A || h, p = (0, _.l)(E, "emojiButton", C ? "Hovered" : "Normal");
-  let g = (t = O, {
-      "--custom-emoji-sprite-size": "".concat(24, "px"),
-      "--custom-emoji-sprite-row": Math.floor(t / 20),
-      "--custom-emoji-sprite-col": t % 20
-    }),
-    L = r.useCallback(() => {
-      if (C) return;
-      let e = Math.floor(77 * Math.random());
-      m(!0), R(e), (0, u.x)(d.qR.EmojiButtonMouseEntered)
-    }, [C, m, R]),
-    v = r.useCallback(() => {
-      m(!1)
-    }, [m]),
-    D = r.useCallback(() => (0, u.x)(d.qR.EmojiButtonFocused), []);
-  return (0, i.jsx)(l.Button, {
-    look: l.Button.Looks.BLANK,
-    size: l.Button.Sizes.NONE,
-    tabIndex: n,
-    className: o()(p, s),
-    onMouseEnter: L,
-    onMouseOver: L,
-    onMouseLeave: v,
-    onFocus: D,
-    onClick: S,
-    "aria-label": c.Z.Messages.SELECT_EMOJI,
-    "aria-controls": f,
-    "aria-expanded": h,
-    "aria-haspopup": "dialog",
-    focusProps: N,
-    children: null != T ? T() : (0, i.jsx)(a.Spring, {
-      config: I,
-      to: {
-        value: C ? 1 : 0
-      },
-      children: e => {
-        let {
-          value: t
-        } = e;
-        return (0, i.jsxs)(a.animated.div, {
-          className: E.spriteContainer,
-          style: {
-            ...g,
-            transform: t.to([0, 1], [1, 1.14]).to(e => "scale(".concat(e, ")"))
-          },
-          children: [(0, i.jsx)("div", {
-            className: o()(E.sprite, E.spriteColored, C ? E.active : E.inactive)
-          }), (0, i.jsx)("div", {
-            className: o()(E.sprite, E.spriteGreyscale, C ? E.inactive : E.active)
-          })]
+t.Z = function (e) {
+    var t;
+    let {
+            tabIndex: n,
+            className: a,
+            renderButtonContents: h,
+            active: p,
+            onClick: m,
+            'aria-controls': I,
+            focusProps: T
+        } = e, [g, S] = i.useState(!1), [A, N] = i.useState(50), v = g || p, O = (0, c.l)(E, 'emojiButton', v ? 'Hovered' : 'Normal');
+    let R = (t = A, {
+            '--custom-emoji-sprite-size': ''.concat(24, 'px'),
+            '--custom-emoji-sprite-row': Math.floor(t / 20),
+            '--custom-emoji-sprite-col': t % 20
+        }), C = i.useCallback(() => {
+            if (v)
+                return;
+            let e = Math.floor(77 * Math.random());
+            S(!0), N(e), (0, u.x)(d.qR.EmojiButtonMouseEntered);
+        }, [
+            v,
+            S,
+            N
+        ]), y = i.useCallback(() => {
+            S(!1);
+        }, [S]), D = i.useCallback(() => (0, u.x)(d.qR.EmojiButtonFocused), []);
+    return (0, r.jsx)(l.Button, {
+        look: l.Button.Looks.BLANK,
+        size: l.Button.Sizes.NONE,
+        tabIndex: n,
+        className: o()(O, a),
+        onMouseEnter: C,
+        onMouseOver: C,
+        onMouseLeave: y,
+        onFocus: D,
+        onClick: m,
+        'aria-label': _.Z.Messages.SELECT_EMOJI,
+        'aria-controls': I,
+        'aria-expanded': p,
+        'aria-haspopup': 'dialog',
+        focusProps: T,
+        children: null != h ? h() : (0, r.jsx)(s.Spring, {
+            config: f,
+            to: { value: v ? 1 : 0 },
+            children: e => {
+                let {value: t} = e;
+                return (0, r.jsxs)(s.animated.div, {
+                    className: E.spriteContainer,
+                    style: {
+                        ...R,
+                        transform: t.to([
+                            0,
+                            1
+                        ], [
+                            1,
+                            1.14
+                        ]).to(e => 'scale('.concat(e, ')'))
+                    },
+                    children: [
+                        (0, r.jsx)('div', { className: o()(E.sprite, E.spriteColored, v ? E.active : E.inactive) }),
+                        (0, r.jsx)('div', { className: o()(E.sprite, E.spriteGreyscale, v ? E.inactive : E.active) })
+                    ]
+                });
+            }
         })
-      }
-    })
-  })
-}
+    });
+};

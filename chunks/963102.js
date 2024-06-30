@@ -1,73 +1,50 @@
-"use strict";
-t.d(s, {
-  I: function() {
-    return h
-  }
+n.d(t, {
+    I: function () {
+        return _;
+    }
 });
-var n = t(735250),
-  a = t(470079),
-  i = t(120356),
-  l = t.n(i),
-  r = t(425493),
-  o = t(410030),
-  c = t(984370),
-  u = t(471731),
-  d = t(486620),
-  C = t(792125),
-  E = t(335131),
-  f = t(994896),
-  m = t(689938),
-  p = t(424681);
-
-function g(e) {
-  let {
-    isLayer: s,
-    onClose: t,
-    isFullScreen: i = !1
-  } = e;
-  return (0, n.jsxs)(c.Z, {
-    className: l()(p.headerBar, {
-      [p.fullscreenHeaderBar]: i
-    }),
-    innerClassname: p.shopLogoContainer,
-    toolbar: i ? null : (0, n.jsx)(a.Fragment, {}),
-    children: [(0, n.jsx)(d.Z, {
-      className: p.shopLogo
-    }), i && (0, n.jsx)(r.Z, {
-      className: p.closeIcon,
-      closeAction: s ? E.DR : t,
-      keybind: "ESC"
-    })]
-  })
-}
-
+var s = n(735250), r = n(470079), a = n(120356), o = n.n(a), i = n(425493), l = n(410030), c = n(984370), d = n(471731), u = n(486620), p = n(792125), g = n(335131), f = n(994896), C = n(689938), m = n(313858);
 function h(e) {
-  let {
-    isFullScreen: s,
-    isLayer: t,
-    onClose: i
-  } = e, {
-    newShopLogoEnabled: d
-  } = (0, f.O)({
-    location: "CollectiblesShop"
-  }), h = (0, o.ZP)();
-  return d ? (0, n.jsx)(g, {
-    isLayer: t,
-    onClose: i,
-    isFullScreen: s
-  }) : (0, n.jsxs)(c.Z, {
-    className: l()((0, C.Q)(h), p.headerBar, {
-      [p.fullscreenHeaderBar]: s
-    }),
-    toolbar: s ? null : (0, n.jsx)(a.Fragment, {}),
-    children: [(0, n.jsx)(u.Z, {
-      className: p.discordLogo
-    }), (0, n.jsx)(c.Z.Title, {
-      children: m.Z.Messages.COLLECTIBLES_SHOP
-    }), s && (0, n.jsx)(r.Z, {
-      className: p.closeIcon,
-      closeAction: t ? E.DR : i,
-      keybind: "ESC"
-    })]
-  })
+    let {
+        isLayer: t,
+        onClose: n,
+        isFullScreen: a = !1
+    } = e;
+    return (0, s.jsxs)(c.Z, {
+        className: o()(m.headerBar, { [m.fullscreenHeaderBar]: a }),
+        innerClassname: m.shopLogoContainer,
+        toolbar: a ? null : (0, s.jsx)(r.Fragment, {}),
+        children: [
+            (0, s.jsx)(u.Z, { className: m.shopLogo }),
+            a && (0, s.jsx)(i.Z, {
+                className: m.closeIcon,
+                closeAction: t ? g.DR : n,
+                keybind: 'ESC'
+            })
+        ]
+    });
+}
+function _(e) {
+    let {
+            isFullScreen: t,
+            isLayer: n,
+            onClose: a
+        } = e, {newShopLogoEnabled: u} = (0, f.O)({ location: 'CollectiblesShop' }), _ = (0, l.ZP)();
+    return u ? (0, s.jsx)(h, {
+        isLayer: n,
+        onClose: a,
+        isFullScreen: t
+    }) : (0, s.jsxs)(c.Z, {
+        className: o()((0, p.Q)(_), m.headerBar, { [m.fullscreenHeaderBar]: t }),
+        toolbar: t ? null : (0, s.jsx)(r.Fragment, {}),
+        children: [
+            (0, s.jsx)(d.Z, { className: m.discordLogo }),
+            (0, s.jsx)(c.Z.Title, { children: C.Z.Messages.COLLECTIBLES_SHOP }),
+            t && (0, s.jsx)(i.Z, {
+                className: m.closeIcon,
+                closeAction: n ? g.DR : a,
+                keybind: 'ESC'
+            })
+        ]
+    });
 }

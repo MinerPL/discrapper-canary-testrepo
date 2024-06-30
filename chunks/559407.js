@@ -1,26 +1,17 @@
-"use strict";
 n.d(t, {
-  F: function() {
-    return r
-  },
-  Z: function() {
-    return o
-  }
+    F: function () {
+        return i;
+    },
+    Z: function () {
+        return o;
+    }
 });
-var i = n(735250);
-n(470079), n(637515);
-let r = "cash-app-pay-container";
-
-function s() {
-  return (0, i.jsx)(i.Fragment, {
-    children: (0, i.jsx)("div", {
-      id: r
-    })
-  })
+var r = n(735250);
+n(470079), n(269936);
+let i = 'cash-app-pay-container';
+function a() {
+    return (0, r.jsx)(r.Fragment, { children: (0, r.jsx)('div', { id: i }) });
 }
-
 function o() {
-  return (0, i.jsx)(i.Fragment, {
-    children: (0, i.jsx)(s, {})
-  })
+    return (0, r.jsx)(r.Fragment, { children: (0, r.jsx)(a, {}) });
 }

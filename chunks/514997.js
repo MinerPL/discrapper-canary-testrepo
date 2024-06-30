@@ -1,8 +1,7 @@
-"use strict";
-e.exports = function(e) {
-  if (e.stopPropagation) {
-    e.stopPropagation();
-    return
-  }
-  e.cancelBubble = !0
-}
+e.exports = function (e) {
+    if (e.stopPropagation) {
+        e.stopPropagation();
+        return;
+    }
+    e.cancelBubble = !0;
+};

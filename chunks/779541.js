@@ -1,10 +1,9 @@
-"use strict";
-
 function n(e) {
-  if ("undefined" != typeof Symbol && null != e[Symbol.iterator] || null != e["@@iterator"]) return Array.from(e)
+    if ('undefined' != typeof Symbol && null != e[Symbol.iterator] || null != e['@@iterator'])
+        return Array.from(e);
 }
 r.d(t, {
-  Z: function() {
-    return n
-  }
-})
+    Z: function () {
+        return n;
+    }
+});

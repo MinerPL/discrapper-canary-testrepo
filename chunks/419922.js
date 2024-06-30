@@ -1,303 +1,305 @@
-"use strict";
 n.d(t, {
-  Co: function() {
-    return L
-  }
+    Co: function () {
+        return R;
+    }
 }), n(47120);
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(512722),
-  l = n.n(a),
-  u = n(920906),
-  _ = n(442837),
-  d = n(622535),
-  c = n(481060),
-  E = n(607070),
-  I = n(134432),
-  T = n(641749),
-  h = n(153850),
-  S = n(506071),
-  f = n(453070),
-  N = n(373228),
-  A = n(378233),
-  m = n(689938),
-  O = n(680413);
-let R = e => e.preventDefault(),
-  C = {
-    tension: 1100,
-    friction: 40
-  },
-  p = {
-    tension: 1600,
-    friction: 60
-  };
-
-function g(e, t) {
-  return r.cloneElement(e, {
-    "data-type": "sticker",
-    "data-id": t
-  })
-}
-
-function L(e) {
-  let t = "description" in e && null != e.description ? "".concat(e.name, ", ").concat(e.description) : e.name;
-  return m.Z.Messages.STICKER_A11Y_LABEL.format({
-    stickerName: t
-  })
-}
-let v = e => {
-    let {
-      children: t,
-      hasError: n,
-      isLoading: r,
-      maskAsset: s,
-      size: a,
-      withLoadingIndicator: l = !0
-    } = e, u = a >= 33;
-    return (0, i.jsxs)("div", {
-      className: o()(O.assetWrapper, {
-        [O.assetWrapperMasked]: n || s
-      }),
-      style: {
-        height: a,
-        width: a
-      },
-      children: [n ? (0, i.jsxs)("div", {
-        className: O.error,
-        children: [(0, i.jsx)(T.Z, {
-          className: O.errorIcon
-        }), u && (0, i.jsx)(c.Text, {
-          className: O.errorText,
-          color: "header-secondary",
-          variant: "text-sm/normal",
-          children: m.Z.Messages.STICKER_ASSET_LOAD_ERROR
-        })]
-      }) : t, l && r && (0, i.jsx)("div", {
-        className: O.loadingIndicator
-      })]
-    })
-  },
-  D = e => {
-    let {
-      shouldAnimate: t,
-      size: s,
-      sticker: o,
-      fileUri: a,
-      assetData: u,
-      isFocused: _,
-      className: d,
-      maskAsset: c,
-      positionRef: E,
-      withLoadingIndicator: T,
-      onError: h
-    } = e, S = r.useRef(null), f = r.useRef(null), [N, R] = r.useState(!0), [C, p] = r.useState(!1), D = r.useRef(!1);
-    D.current = t && _;
-    let M = null == a ? (0, A.Q6)(o) : a;
-    return (l()(null != M, "Unable to determine sticker asset URL. Sticker ID: ".concat(o.id)), r.useEffect(() => {
-      if (null == S.current || null == M) return;
-      let e = Math.min(2, (0, I.x_)());
-      S.current.width = s * e, S.current.height = s * e;
-      let t = !1;
-      return (async () => {
-        let {
-          default: e
-        } = await n.e("21617").then(n.bind(n, 186952));
-        null != S.current && (f.current = new e({
-          canvas: S.current,
-          animationId: o.id,
-          assetUrl: M,
-          assetData: u,
-          onInitialDraw: () => {
-            !t && R(!1)
-          },
-          onError: () => {
-            !t && (R(!1), p(!0), null == h || h())
-          }
-        }), D.current && f.current.setState(!0))
-      })(), () => {
-        var e;
-        null === (e = f.current) || void 0 === e || e.drop(), f.current = null, t = !0
-      }
-    }, [M, s, o.id, u, h]), r.useEffect(() => {
-      var e;
-      let n;
-      !t && (n = 0), null === (e = f.current) || void 0 === e || e.setState(t && _, n)
-    }, [o, t, _]), null == M) ? null : (0, i.jsx)("div", {
-      role: "img",
-      className: d,
-      "aria-label": C ? m.Z.Messages.ERROR_LOADING_STICKER : L(o),
-      ref: E,
-      children: (0, i.jsx)(v, {
-        hasError: C,
-        isLoading: N,
-        maskAsset: c,
-        size: s,
-        withLoadingIndicator: T,
-        children: g((0, i.jsx)("canvas", {
-          className: O.lottieCanvas,
-          ref: S
-        }), o.id)
-      })
-    })
-  },
-  M = e => {
-    let {
-      shouldAnimate: t,
-      sticker: n,
-      isFocused: s,
-      size: a,
-      className: l,
-      maskAsset: u,
-      positionRef: _,
-      withLoadingIndicator: c,
-      fileUri: E
-    } = e, [I, T] = r.useState(!1), [h, S] = r.useState(!0), [f, N] = r.useState(!1), m = r.useRef(null), C = r.useRef(null), p = null != E ? E : (0, A.Q6)(n, {
-      isPreview: !t || !I || !s,
-      size: a
-    }), D = r.useCallback(() => {
-      S(!1)
-    }, []), M = r.useCallback(() => {
-      N(!0)
-    }, []);
-    return (r.useEffect(() => {
-      if (null != m.current) {
-        let {
-          isVisible: e
-        } = m.current;
-        T(e)
-      }
-    }, []), r.useLayoutEffect(() => {
-      var e;
-      (null === (e = C.current) || void 0 === e ? void 0 : e.complete) === !0 && S(!1)
-    }, []), null == p) ? null : (0, i.jsx)(d.$, {
-      ref: m,
-      onChange: T,
-      threshold: .7,
-      children: (0, i.jsx)("div", {
-        className: o()(l, O.__invalid_pngImageWrapper),
-        ref: _,
-        children: (0, i.jsx)(v, {
-          hasError: f,
-          isLoading: h,
-          maskAsset: u,
-          size: a,
-          withLoadingIndicator: c,
-          children: g((0, i.jsx)("img", {
-            className: O.pngImage,
-            alt: L(n),
-            src: p,
-            draggable: !1,
-            onError: M,
-            onLoad: D,
-            onContextMenu: R,
-            ref: C
-          }), n.id)
-        })
-      })
-    })
-  },
-  P = e => {
-    let {
-      disableAnimation: t,
-      enlargeScaleFactor: n,
-      enlargeWithName: s,
-      isInteracting: o,
-      positionRef: a,
-      size: l,
-      sticker: d
-    } = e, I = (0, _.e7)([E.Z], () => E.Z.useReducedMotion), T = r.useRef(null), S = {
-      transform: "scale(".concat(I ? 1 : 1 / n, ")"),
-      opacity: 0
-    }, f = (0, u.useTransition)(o, {
-      ref: T,
-      from: S,
-      enter: {
-        transform: "scale(1)",
-        opacity: 1
-      },
-      leave: S,
-      config: C
-    }), N = r.useRef(null), A = (0, u.useSpring)({
-      ref: N,
-      transform: o || I ? "translateY(0)" : "translateY(-25px)",
-      opacity: o ? 1 : 0,
-      config: p
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(512722), l = n.n(s), u = n(920906), c = n(442837), d = n(622535), _ = n(481060), E = n(607070), f = n(134432), h = n(153850), p = n(506071), m = n(453070), I = n(373228), T = n(378233), g = n(689938), S = n(800429);
+let A = e => e.preventDefault(), N = {
+        tension: 1100,
+        friction: 40
+    }, v = {
+        tension: 1600,
+        friction: 60
+    };
+function O(e, t) {
+    return i.cloneElement(e, {
+        'data-type': 'sticker',
+        'data-id': t
     });
-    return (0, u.useChain)(o ? [T, N] : [N, T], o ? [0, .0625] : [0, 0]), f((e, r) => r && (0, i.jsx)(h.W5, {
-      className: O.positionedLayer,
-      fixed: !0,
-      align: "center",
-      position: "center",
-      targetRef: a,
-      children: () => (0, i.jsxs)("div", {
-        className: O.overlayWrapper,
-        children: [(0, i.jsx)(u.animated.div, {
-          className: O.overlayStickerWrapper,
-          style: e,
-          children: (0, i.jsx)(y, {
-            className: O.__invalid_overlaySticker,
-            disableAnimation: t,
-            enlargeOnInteraction: !1,
-            isInteracting: o,
-            maskAsset: !1,
-            sticker: d,
-            size: Math.round(l * n),
-            withLoadingIndicator: !1
-          })
-        }), s && (0, i.jsx)(u.animated.div, {
-          className: O.overlayLabelWrapper,
-          style: A,
-          children: (0, i.jsx)(c.Text, {
-            variant: "text-sm/medium",
-            className: O.overlayLabel,
-            children: d.name
-          })
-        })]
-      })
-    }))
-  },
-  y = e => {
-    let {
-      isInteracting: t = !1,
-      disableAnimation: n = !1,
-      enlargeOnInteraction: s = !1,
-      enlargeWithName: o = !0,
-      enlargeScaleFactor: a = 1.55,
-      maskAsset: l = !1,
-      size: u,
-      sticker: _,
-      className: d,
-      withLoadingIndicator: c,
-      assetData: E,
-      fileUri: I,
-      onError: T
-    } = e, h = (0, S.n)(), A = (0, f.t$)(t) && !n, m = r.useRef(null);
-    if (null == _) return null;
-    let O = _.format_type === N.u3.LOTTIE ? D : M;
-    return (0, i.jsxs)(r.Fragment, {
-      children: [(0, i.jsx)(O, {
-        shouldAnimate: A,
-        isFocused: h,
-        size: u,
-        sticker: _,
-        className: d,
-        maskAsset: l,
-        positionRef: m,
-        withLoadingIndicator: c,
-        assetData: E,
-        fileUri: I,
-        onError: T
-      }), s && (0, i.jsx)(P, {
-        disableAnimation: n,
-        enlargeScaleFactor: a,
-        enlargeWithName: o,
-        isInteracting: t,
-        positionRef: m,
-        size: u,
-        sticker: _
-      })]
-    }, "".concat(_.id, ",").concat(u))
-  };
-t.ZP = y
+}
+function R(e) {
+    let t = 'description' in e && null != e.description ? ''.concat(e.name, ', ').concat(e.description) : e.name;
+    return g.Z.Messages.STICKER_A11Y_LABEL.format({ stickerName: t });
+}
+let C = e => {
+        let {
+                children: t,
+                hasError: n,
+                isLoading: i,
+                maskAsset: a,
+                size: s,
+                withLoadingIndicator: l = !0
+            } = e, u = s >= 33;
+        return (0, r.jsxs)('div', {
+            className: o()(S.assetWrapper, { [S.assetWrapperMasked]: n || a }),
+            style: {
+                height: s,
+                width: s
+            },
+            children: [
+                n ? (0, r.jsxs)('div', {
+                    className: S.error,
+                    children: [
+                        (0, r.jsx)(_.StickerSadIcon, {
+                            size: 'custom',
+                            width: 20,
+                            height: 20,
+                            color: 'currentColor',
+                            className: S.errorIcon
+                        }),
+                        u && (0, r.jsx)(_.Text, {
+                            className: S.errorText,
+                            color: 'header-secondary',
+                            variant: 'text-sm/normal',
+                            children: g.Z.Messages.STICKER_ASSET_LOAD_ERROR
+                        })
+                    ]
+                }) : t,
+                l && i && (0, r.jsx)('div', { className: S.loadingIndicator })
+            ]
+        });
+    }, y = e => {
+        let {
+                shouldAnimate: t,
+                size: a,
+                sticker: o,
+                fileUri: s,
+                assetData: u,
+                isFocused: c,
+                className: d,
+                maskAsset: _,
+                positionRef: E,
+                withLoadingIndicator: h,
+                onError: p
+            } = e, m = i.useRef(null), I = i.useRef(null), [A, N] = i.useState(!0), [v, y] = i.useState(!1), D = i.useRef(!1);
+        D.current = t && c;
+        let L = null == s ? (0, T.Q6)(o) : s;
+        return (l()(null != L, 'Unable to determine sticker asset URL. Sticker ID: '.concat(o.id)), i.useEffect(() => {
+            if (null == m.current || null == L)
+                return;
+            let e = Math.min(2, (0, f.x_)());
+            m.current.width = a * e, m.current.height = a * e;
+            let t = !1;
+            return (async () => {
+                let {default: e} = await n.e('21617').then(n.bind(n, 186952));
+                null != m.current && (I.current = new e({
+                    canvas: m.current,
+                    animationId: o.id,
+                    assetUrl: L,
+                    assetData: u,
+                    onInitialDraw: () => {
+                        !t && N(!1);
+                    },
+                    onError: () => {
+                        !t && (N(!1), y(!0), null == p || p());
+                    }
+                }), D.current && I.current.setState(!0));
+            })(), () => {
+                var e;
+                null === (e = I.current) || void 0 === e || e.drop(), I.current = null, t = !0;
+            };
+        }, [
+            L,
+            a,
+            o.id,
+            u,
+            p
+        ]), i.useEffect(() => {
+            var e;
+            let n;
+            !t && (n = 0), null === (e = I.current) || void 0 === e || e.setState(t && c, n);
+        }, [
+            o,
+            t,
+            c
+        ]), null == L) ? null : (0, r.jsx)('div', {
+            role: 'img',
+            className: d,
+            'aria-label': v ? g.Z.Messages.ERROR_LOADING_STICKER : R(o),
+            ref: E,
+            children: (0, r.jsx)(C, {
+                hasError: v,
+                isLoading: A,
+                maskAsset: _,
+                size: a,
+                withLoadingIndicator: h,
+                children: O((0, r.jsx)('canvas', {
+                    className: S.lottieCanvas,
+                    ref: m
+                }), o.id)
+            })
+        });
+    }, D = e => {
+        let {
+                shouldAnimate: t,
+                sticker: n,
+                isFocused: a,
+                size: s,
+                className: l,
+                maskAsset: u,
+                positionRef: c,
+                withLoadingIndicator: _,
+                fileUri: E
+            } = e, [f, h] = i.useState(!1), [p, m] = i.useState(!0), [I, g] = i.useState(!1), N = i.useRef(null), v = i.useRef(null), y = null != E ? E : (0, T.Q6)(n, {
+                isPreview: !t || !f || !a,
+                size: s
+            }), D = i.useCallback(() => {
+                m(!1);
+            }, []), L = i.useCallback(() => {
+                g(!0);
+            }, []);
+        return (i.useEffect(() => {
+            if (null != N.current) {
+                let {isVisible: e} = N.current;
+                h(e);
+            }
+        }, []), i.useLayoutEffect(() => {
+            var e;
+            (null === (e = v.current) || void 0 === e ? void 0 : e.complete) === !0 && m(!1);
+        }, []), null == y) ? null : (0, r.jsx)(d.$, {
+            ref: N,
+            onChange: h,
+            threshold: 0.7,
+            children: (0, r.jsx)('div', {
+                className: o()(l, S.__invalid_pngImageWrapper),
+                ref: c,
+                children: (0, r.jsx)(C, {
+                    hasError: I,
+                    isLoading: p,
+                    maskAsset: u,
+                    size: s,
+                    withLoadingIndicator: _,
+                    children: O((0, r.jsx)('img', {
+                        className: S.pngImage,
+                        alt: R(n),
+                        src: y,
+                        draggable: !1,
+                        onError: L,
+                        onLoad: D,
+                        onContextMenu: A,
+                        ref: v
+                    }), n.id)
+                })
+            })
+        });
+    }, L = e => {
+        let {
+                disableAnimation: t,
+                enlargeScaleFactor: n,
+                enlargeWithName: a,
+                isInteracting: o,
+                positionRef: s,
+                size: l,
+                sticker: d
+            } = e, f = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), p = i.useRef(null), m = {
+                transform: 'scale('.concat(f ? 1 : 1 / n, ')'),
+                opacity: 0
+            }, I = (0, u.useTransition)(o, {
+                ref: p,
+                from: m,
+                enter: {
+                    transform: 'scale(1)',
+                    opacity: 1
+                },
+                leave: m,
+                config: N
+            }), T = i.useRef(null), g = (0, u.useSpring)({
+                ref: T,
+                transform: o || f ? 'translateY(0)' : 'translateY(-25px)',
+                opacity: o ? 1 : 0,
+                config: v
+            });
+        return (0, u.useChain)(o ? [
+            p,
+            T
+        ] : [
+            T,
+            p
+        ], o ? [
+            0,
+            0.0625
+        ] : [
+            0,
+            0
+        ]), I((e, i) => i && (0, r.jsx)(h.W5, {
+            className: S.positionedLayer,
+            fixed: !0,
+            align: 'center',
+            position: 'center',
+            targetRef: s,
+            children: () => (0, r.jsxs)('div', {
+                className: S.overlayWrapper,
+                children: [
+                    (0, r.jsx)(u.animated.div, {
+                        className: S.overlayStickerWrapper,
+                        style: e,
+                        children: (0, r.jsx)(b, {
+                            className: S.__invalid_overlaySticker,
+                            disableAnimation: t,
+                            enlargeOnInteraction: !1,
+                            isInteracting: o,
+                            maskAsset: !1,
+                            sticker: d,
+                            size: Math.round(l * n),
+                            withLoadingIndicator: !1
+                        })
+                    }),
+                    a && (0, r.jsx)(u.animated.div, {
+                        className: S.overlayLabelWrapper,
+                        style: g,
+                        children: (0, r.jsx)(_.Text, {
+                            variant: 'text-sm/medium',
+                            className: S.overlayLabel,
+                            children: d.name
+                        })
+                    })
+                ]
+            })
+        }));
+    }, b = e => {
+        let {
+                isInteracting: t = !1,
+                disableAnimation: n = !1,
+                enlargeOnInteraction: a = !1,
+                enlargeWithName: o = !0,
+                enlargeScaleFactor: s = 1.55,
+                maskAsset: l = !1,
+                size: u,
+                sticker: c,
+                className: d,
+                withLoadingIndicator: _,
+                assetData: E,
+                fileUri: f,
+                onError: h
+            } = e, T = (0, p.n)(), g = (0, m.t$)(t) && !n, S = i.useRef(null);
+        if (null == c)
+            return null;
+        let A = c.format_type === I.u3.LOTTIE ? y : D;
+        return (0, r.jsxs)(i.Fragment, {
+            children: [
+                (0, r.jsx)(A, {
+                    shouldAnimate: g,
+                    isFocused: T,
+                    size: u,
+                    sticker: c,
+                    className: d,
+                    maskAsset: l,
+                    positionRef: S,
+                    withLoadingIndicator: _,
+                    assetData: E,
+                    fileUri: f,
+                    onError: h
+                }),
+                a && (0, r.jsx)(L, {
+                    disableAnimation: n,
+                    enlargeScaleFactor: s,
+                    enlargeWithName: o,
+                    isInteracting: t,
+                    positionRef: S,
+                    size: u,
+                    sticker: c
+                })
+            ]
+        }, ''.concat(c.id, ',').concat(u));
+    };
+t.ZP = b;

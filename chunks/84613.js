@@ -1,14 +1,12 @@
-"use strict";
-t.d(s, {
-  K: function() {
-    return i
-  }
+n.d(t, {
+    K: function () {
+        return a;
+    }
 });
-var n = t(570140);
-
-function i(e) {
-  n.Z.dispatch({
-    type: "GUILD_SETTINGS_SAFETY_PAGE",
-    page: e
-  })
+var s = n(570140);
+function a(e) {
+    s.Z.dispatch({
+        type: 'GUILD_SETTINGS_SAFETY_PAGE',
+        page: e
+    });
 }

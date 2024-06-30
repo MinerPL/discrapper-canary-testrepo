@@ -1,7 +1,9 @@
-t.exports = function(t) {
-  var r = -1,
-    e = Array(t.size);
-  return t.forEach(function(t, n) {
-    e[++r] = [n, t]
-  }), e
-}
+t.exports = function (t) {
+    var e = -1, r = Array(t.size);
+    return t.forEach(function (t, n) {
+        r[++e] = [
+            n,
+            t
+        ];
+    }), r;
+};

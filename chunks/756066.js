@@ -1,32 +1,27 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return r
-  }
+n.d(t, {
+    Z: function () {
+        return l;
+    }
 });
-var n = t(735250);
-t(470079);
-var i = t(587431),
-  l = t(539290),
-  a = t(689938);
-
-function r(e) {
-  let s, {
-    resubmittingEnableRequest: t,
-    resubmissionError: r,
-    createEnableRequest: o,
-    requestRejectedNoticeText: c,
-    reapplyNoticeText: d,
-    isApplicationPending: u
-  } = e;
-  if (null != r) return (0, n.jsx)(i.Z, {
-    children: r.getAnyErrorMessage()
-  });
-  let E = null;
-  return u ? E = a.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_RECEIVED_AND_PENDING : null != c ? E = c : null != d && (E = d, s = a.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SUBMIT_APPEAL_CTA), null != E ? (0, n.jsx)(l.Z, {
-    notice: E,
-    ctaLabel: s,
-    ctaLoading: t,
-    onClick: o
-  }) : null
+var s = n(735250);
+n(470079);
+var a = n(587431), i = n(539290), r = n(689938);
+function l(e) {
+    let t, {
+            resubmittingEnableRequest: n,
+            resubmissionError: l,
+            createEnableRequest: o,
+            requestRejectedNoticeText: c,
+            reapplyNoticeText: d,
+            isApplicationPending: u
+        } = e;
+    if (null != l)
+        return (0, s.jsx)(a.Z, { children: l.getAnyErrorMessage() });
+    let _ = null;
+    return u ? _ = r.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_RECEIVED_AND_PENDING : null != c ? _ = c : null != d && (_ = d, t = r.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SUBMIT_APPEAL_CTA), null != _ ? (0, s.jsx)(i.Z, {
+        notice: _,
+        ctaLabel: t,
+        ctaLoading: n,
+        onClick: o
+    }) : null;
 }

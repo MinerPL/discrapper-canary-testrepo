@@ -1,169 +1,136 @@
-"use strict";
-n.d(e, {
-  gE: function() {
-    return p
-  }
-});
-var r = n(376097),
-  i = n(90668),
-  s = n(147816),
-  a = n(529866),
-  o = n(874230),
-  u = n(829919),
-  l = n(321611),
-  c = n(799821),
-  d = n(722994),
-  h = n(263951),
-  _ = n(607190);
-let f = {
-  ...r.AT,
-  markBackgroundTransactions: !0,
-  routingInstrumentation: h.R,
-  startTransactionOnLocationChange: !0,
-  startTransactionOnPageLoad: !0,
-  enableLongTask: !0,
-  _experiments: {},
-  ...d.k3
-};
-class p {
-  __init() {
-    this.name = "BrowserTracing"
-  }
-  __init2() {
-    this._hasSetTracePropagationTargets = !1
-  }
-  constructor(t) {
-    p.prototype.__init.call(this), p.prototype.__init2.call(this), (0, i.T)(), ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && (this._hasSetTracePropagationTargets = !!(t && (t.tracePropagationTargets || t.tracingOrigins))), this.options = {
-      ...f,
-      ...t
-    }, void 0 !== this.options._experiments.enableLongTask && (this.options.enableLongTask = this.options._experiments.enableLongTask), t && !t.tracePropagationTargets && t.tracingOrigins && (this.options.tracePropagationTargets = t.tracingOrigins), this._collectWebVitals = (0, c.PR)(), this.options.enableLongTask && (0, c.Fv)(), this.options._experiments.enableInteractions && (0, c.sn)()
-  }
-  setupOnce(t, e) {
-    this._getCurrentHub = e;
-    let n = e().getClient(),
-      r = n && n.getOptions(),
-      {
-        routingInstrumentation: i,
-        startTransactionOnLocationChange: s,
-        startTransactionOnPageLoad: o,
-        markBackgroundTransactions: u,
-        traceFetch: c,
-        traceXHR: h,
-        shouldCreateSpanForRequest: _,
-        enableHTTPTimings: f,
-        _experiments: p
-      } = this.options,
-      m = r && r.tracePropagationTargets,
-      g = m || this.options.tracePropagationTargets;
-    ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && this._hasSetTracePropagationTargets && m && a.kg.warn("[Tracing] The `tracePropagationTargets` option was set in the BrowserTracing integration and top level `Sentry.init`. The top level `Sentry.init` value is being used."), i(t => {
-      let n = this._createRouteTransaction(t);
-      return this.options._experiments.onStartRouteTransaction && this.options._experiments.onStartRouteTransaction(n, t, e), n
-    }, o, s), u && (0, l.j)(), p.enableInteractions && this._registerInteractionListener(), (0, d.L7)({
-      traceFetch: c,
-      traceXHR: h,
-      tracePropagationTargets: g,
-      shouldCreateSpanForRequest: _,
-      enableHTTPTimings: f
-    })
-  }
-  _createRouteTransaction(t) {
-    if (!this._getCurrentHub) {
-      ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && a.kg.warn(`[Tracing] Did not create ${t.op} transaction because _getCurrentHub is invalid.`);
-      return
+r.d(e, {
+    gE: function () {
+        return l;
     }
-    let e = this._getCurrentHub(),
-      {
-        beforeNavigate: n,
-        idleTimeout: r,
-        finalTimeout: s,
-        heartbeatInterval: u
-      } = this.options,
-      l = "pageload" === t.op,
-      d = l ? m("sentry-trace") : "",
-      h = l ? m("baggage") : "",
-      {
-        traceparentData: f,
-        dynamicSamplingContext: p,
-        propagationContext: g
-      } = (0, o.KA)(d, h),
-      y = {
-        ...t,
-        ...f,
-        metadata: {
-          ...t.metadata,
-          dynamicSamplingContext: f && !p ? {} : p
-        },
-        trimEnd: !0
-      },
-      v = "function" == typeof n ? n(y) : y,
-      b = void 0 === v ? {
-        ...y,
-        sampled: !1
-      } : v;
-    b.metadata = b.name !== y.name ? {
-      ...b.metadata,
-      source: "custom"
-    } : b.metadata, this._latestRouteName = b.name, this._latestRouteSource = b.metadata && b.metadata.source, !1 === b.sampled && ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && a.kg.log(`[Tracing] Will not send ${b.op} transaction because of beforeNavigate.`), ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && a.kg.log(`[Tracing] Starting ${b.op} transaction on scope`);
-    let {
-      location: E
-    } = _.m, S = (0, i.l)(e, b, r, s, !0, {
-      location: E
-    }, u), w = e.getScope();
-    return l && f ? w.setPropagationContext(g) : w.setPropagationContext({
-      traceId: S.traceId,
-      spanId: S.spanId,
-      parentSpanId: S.parentSpanId,
-      sampled: !!S.sampled
-    }), S.registerBeforeFinishCallback(t => {
-      this._collectWebVitals(), (0, c.f7)(t)
-    }), S
-  }
-  _registerInteractionListener() {
-    let t;
-    let e = () => {
-      let {
-        idleTimeout: e,
-        finalTimeout: n,
-        heartbeatInterval: r
-      } = this.options, o = "ui.action.click", u = (0, s.x1)();
-      if (u && u.op && ["navigation", "pageload"].includes(u.op)) {
-        ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && a.kg.warn(`[Tracing] Did not create ${o} transaction because a pageload or navigation transaction is in progress.`);
-        return
-      }
-      if (t && (t.setFinishReason("interactionInterrupted"), t.finish(), t = void 0), !this._getCurrentHub) {
-        ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && a.kg.warn(`[Tracing] Did not create ${o} transaction because _getCurrentHub is invalid.`);
-        return
-      }
-      if (!this._latestRouteName) {
-        ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && a.kg.warn(`[Tracing] Did not create ${o} transaction because _latestRouteName is missing.`);
-        return
-      }
-      let l = this._getCurrentHub(),
-        {
-          location: c
-        } = _.m,
-        d = {
-          name: this._latestRouteName,
-          op: o,
-          trimEnd: !0,
-          metadata: {
-            source: this._latestRouteSource || "url"
-          }
+});
+var n = r(376097), _ = r(90668), a = r(147816), i = r(529866), o = r(874230), E = r(829919), s = r(321611), c = r(799821), I = r(722994), R = r(263951), u = r(607190);
+let T = {
+    ...n.AT,
+    markBackgroundTransactions: !0,
+    routingInstrumentation: R.R,
+    startTransactionOnLocationChange: !0,
+    startTransactionOnPageLoad: !0,
+    enableLongTask: !0,
+    _experiments: {},
+    ...I.k3
+};
+class l {
+    __init() {
+        this.name = 'BrowserTracing';
+    }
+    __init2() {
+        this._hasSetTracePropagationTargets = !1;
+    }
+    constructor(t) {
+        l.prototype.__init.call(this), l.prototype.__init2.call(this), (0, _.T)(), ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && (this._hasSetTracePropagationTargets = !!(t && (t.tracePropagationTargets || t.tracingOrigins))), this.options = {
+            ...T,
+            ...t
+        }, void 0 !== this.options._experiments.enableLongTask && (this.options.enableLongTask = this.options._experiments.enableLongTask), t && !t.tracePropagationTargets && t.tracingOrigins && (this.options.tracePropagationTargets = t.tracingOrigins), this._collectWebVitals = (0, c.PR)(), this.options.enableLongTask && (0, c.Fv)(), this.options._experiments.enableInteractions && (0, c.sn)();
+    }
+    setupOnce(t, e) {
+        this._getCurrentHub = e;
+        let r = e().getClient(), n = r && r.getOptions(), {
+                routingInstrumentation: _,
+                startTransactionOnLocationChange: a,
+                startTransactionOnPageLoad: o,
+                markBackgroundTransactions: E,
+                traceFetch: c,
+                traceXHR: R,
+                shouldCreateSpanForRequest: u,
+                enableHTTPTimings: T,
+                _experiments: l
+            } = this.options, A = n && n.tracePropagationTargets, N = A || this.options.tracePropagationTargets;
+        ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && this._hasSetTracePropagationTargets && A && i.kg.warn('[Tracing] The `tracePropagationTargets` option was set in the BrowserTracing integration and top level `Sentry.init`. The top level `Sentry.init` value is being used.'), _(t => {
+            let r = this._createRouteTransaction(t);
+            return this.options._experiments.onStartRouteTransaction && this.options._experiments.onStartRouteTransaction(r, t, e), r;
+        }, o, a), E && (0, s.j)(), l.enableInteractions && this._registerInteractionListener(), (0, I.L7)({
+            traceFetch: c,
+            traceXHR: R,
+            tracePropagationTargets: N,
+            shouldCreateSpanForRequest: u,
+            enableHTTPTimings: T
+        });
+    }
+    _createRouteTransaction(t) {
+        if (!this._getCurrentHub) {
+            ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.warn(`[Tracing] Did not create ${ t.op } transaction because _getCurrentHub is invalid.`);
+            return;
+        }
+        let e = this._getCurrentHub(), {
+                beforeNavigate: r,
+                idleTimeout: n,
+                finalTimeout: a,
+                heartbeatInterval: E
+            } = this.options, s = 'pageload' === t.op, I = s ? A('sentry-trace') : '', R = s ? A('baggage') : '', {
+                traceparentData: T,
+                dynamicSamplingContext: l,
+                propagationContext: N
+            } = (0, o.KA)(I, R), d = {
+                ...t,
+                ...T,
+                metadata: {
+                    ...t.metadata,
+                    dynamicSamplingContext: T && !l ? {} : l
+                },
+                trimEnd: !0
+            }, O = 'function' == typeof r ? r(d) : d, p = void 0 === O ? {
+                ...d,
+                sampled: !1
+            } : O;
+        p.metadata = p.name !== d.name ? {
+            ...p.metadata,
+            source: 'custom'
+        } : p.metadata, this._latestRouteName = p.name, this._latestRouteSource = p.metadata && p.metadata.source, !1 === p.sampled && ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.log(`[Tracing] Will not send ${ p.op } transaction because of beforeNavigate.`), ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.log(`[Tracing] Starting ${ p.op } transaction on scope`);
+        let {location: S} = u.m, D = (0, _.l)(e, p, n, a, !0, { location: S }, E), f = e.getScope();
+        return s && T ? f.setPropagationContext(N) : f.setPropagationContext({
+            traceId: D.traceId,
+            spanId: D.spanId,
+            parentSpanId: D.parentSpanId,
+            sampled: !!D.sampled
+        }), D.registerBeforeFinishCallback(t => {
+            this._collectWebVitals(), (0, c.f7)(t);
+        }), D;
+    }
+    _registerInteractionListener() {
+        let t;
+        let e = () => {
+            let {
+                    idleTimeout: e,
+                    finalTimeout: r,
+                    heartbeatInterval: n
+                } = this.options, o = 'ui.action.click', E = (0, a.x1)();
+            if (E && E.op && [
+                    'navigation',
+                    'pageload'
+                ].includes(E.op)) {
+                ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.warn(`[Tracing] Did not create ${ o } transaction because a pageload or navigation transaction is in progress.`);
+                return;
+            }
+            if (t && (t.setFinishReason('interactionInterrupted'), t.finish(), t = void 0), !this._getCurrentHub) {
+                ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.warn(`[Tracing] Did not create ${ o } transaction because _getCurrentHub is invalid.`);
+                return;
+            }
+            if (!this._latestRouteName) {
+                ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.warn(`[Tracing] Did not create ${ o } transaction because _latestRouteName is missing.`);
+                return;
+            }
+            let s = this._getCurrentHub(), {location: c} = u.m, I = {
+                    name: this._latestRouteName,
+                    op: o,
+                    trimEnd: !0,
+                    metadata: { source: this._latestRouteSource || 'url' }
+                };
+            t = (0, _.l)(s, I, e, r, !0, { location: c }, n);
         };
-      t = (0, i.l)(l, d, e, n, !0, {
-        location: c
-      }, r)
-    };
-    ["click"].forEach(t => {
-      addEventListener(t, e, {
-        once: !1,
-        capture: !0
-      })
-    })
-  }
+        ['click'].forEach(t => {
+            addEventListener(t, e, {
+                once: !1,
+                capture: !0
+            });
+        });
+    }
 }
-
-function m(t) {
-  let e = (0, u.qT)(`meta[name=${t}]`);
-  return e ? e.getAttribute("content") : void 0
+function A(t) {
+    let e = (0, E.qT)(`meta[name=${ t }]`);
+    return e ? e.getAttribute('content') : void 0;
 }

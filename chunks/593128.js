@@ -1,368 +1,354 @@
-"use strict";
-t(47120);
-var n = t(735250),
-  i = t(470079),
-  l = t(920906),
-  a = t(442837),
-  r = t(215569),
-  o = t(481060),
-  c = t(224706),
-  d = t(425493),
-  u = t(852860),
-  E = t(493544),
-  _ = t(740727),
-  I = t(729017),
-  T = t(585483),
-  N = t(931240),
-  m = t(970606),
-  S = t(389134),
-  h = t(432632),
-  g = t(35313),
-  x = t(94963),
-  C = t(745628),
-  R = t(950279),
-  L = t(796918),
-  O = t(513532),
-  A = t(741595),
-  p = t(974842),
-  M = t(359380),
-  f = t(308083),
-  v = t(981631),
-  D = t(231338),
-  Z = t(689938),
-  j = t(943303);
-let U = e => [{
-    section: E.ID.HEADER,
-    label: Z.Z.Messages.CLAN_SETTINGS_BASIC_INFO
-  }, {
-    section: f.Wy.GAMES,
-    label: Z.Z.Messages.CLAN_SETTTINGS_SELECT_GAMES,
-    hasError: (null == e ? void 0 : e.gameApplicationIds) != null
-  }, {
-    section: f.Wy.PLAYSTYLE,
-    label: Z.Z.Messages.CLAN_SETTTINGS_SELECT_PLAYSTYLE,
-    hasError: (null == e ? void 0 : e.playstyle) != null
-  }, {
-    section: E.ID.DIVIDER
-  }, {
-    section: E.ID.HEADER,
-    label: Z.Z.Messages.CLAN_SETTINGS_PERSONALITY_INFO
-  }, {
-    section: f.Wy.UTILITY_TRAITS,
-    label: Z.Z.Messages.CLAN_SETTINGS_SELECT_TRAITS
-  }, {
-    section: f.Wy.INTERESTS,
-    label: Z.Z.Messages.CLAN_SETTINGS_SELECT_INTERESTS,
-    hasError: (null == e ? void 0 : e.interests) != null
-  }, {
-    section: f.Wy.DESCRIPTION,
-    label: Z.Z.Messages.CLAN_SETTINGS_WRITE_DESCRIPTION,
-    hasError: (null == e ? void 0 : e.description) != null || (null == e ? void 0 : e.wildcardDescriptors) != null
-  }, {
-    section: E.ID.DIVIDER
-  }, {
-    section: E.ID.HEADER,
-    label: Z.Z.Messages.CLAN_SETTINGS_CUSTOMIZE_IDENTITY
-  }, {
-    section: f.Wy.CUSTOMIZE_TAG_BADGE,
-    label: Z.Z.Messages.CLAN_SETTINGS_CLAN_BADGE,
-    hasError: (null == e ? void 0 : e.tag) != null || (null == e ? void 0 : e.badgeKind) != null || (null == e ? void 0 : e.badgePrimaryColor) != null || (null == e ? void 0 : e.badgeSecondaryColor) != null
-  }, {
-    section: f.Wy.CUSTOMIZE_BANNER,
-    label: Z.Z.Messages.CLAN_SETTINGS_CLAN_PROFILE,
-    hasError: (null == e ? void 0 : e.banner) != null || (null == e ? void 0 : e.brandPrimaryColor) != null || (null == e ? void 0 : e.brandSecondaryColor) != null
-  }, {
-    section: E.ID.DIVIDER
-  }, {
-    section: f.Wy.MEMBER_APPLICATION,
-    label: Z.Z.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION_SETUP,
-    hasError: (null == e ? void 0 : e.verificationForm) != null
-  }, {
-    section: E.ID.DIVIDER
-  }, {
-    section: E.ID.CUSTOM,
-    label: Z.Z.Messages.CLAN_SETTINGS_DISABLE_CLAN,
-    element: G
-  }],
-  G = e => {
-    let {
-      guildId: s,
-      onClose: l,
-      dirty: a
-    } = e, [r, c] = i.useState(!1), d = async () => {
-      c(!0);
-      try {
-        await (0, N.nr)(s), l()
-      } catch (e) {
-        throw c(!1), e
-      }
+n(47120);
+var s = n(735250), a = n(470079), i = n(920906), r = n(442837), l = n(215569), o = n(481060), c = n(224706), d = n(425493), u = n(852860), _ = n(493544), E = n(585483), I = n(931240), T = n(970606), m = n(389134), N = n(432632), S = n(35313), h = n(94963), g = n(745628), C = n(950279), x = n(796918), p = n(513532), R = n(741595), f = n(974842), L = n(359380), O = n(308083), A = n(981631), M = n(231338), v = n(689938), D = n(740268);
+let j = e => [
+        {
+            section: _.ID.HEADER,
+            label: v.Z.Messages.CLAN_SETTINGS_BASIC_INFO
+        },
+        {
+            section: O.Wy.GAMES,
+            label: v.Z.Messages.CLAN_SETTTINGS_SELECT_GAMES,
+            hasError: (null == e ? void 0 : e.gameApplicationIds) != null
+        },
+        {
+            section: O.Wy.PLAYSTYLE,
+            label: v.Z.Messages.CLAN_SETTTINGS_SELECT_PLAYSTYLE,
+            hasError: (null == e ? void 0 : e.playstyle) != null
+        },
+        { section: _.ID.DIVIDER },
+        {
+            section: _.ID.HEADER,
+            label: v.Z.Messages.CLAN_SETTINGS_PERSONALITY_INFO
+        },
+        {
+            section: O.Wy.UTILITY_TRAITS,
+            label: v.Z.Messages.CLAN_SETTINGS_SELECT_TRAITS
+        },
+        {
+            section: O.Wy.INTERESTS,
+            label: v.Z.Messages.CLAN_SETTINGS_SELECT_INTERESTS,
+            hasError: (null == e ? void 0 : e.interests) != null
+        },
+        {
+            section: O.Wy.DESCRIPTION,
+            label: v.Z.Messages.CLAN_SETTINGS_WRITE_DESCRIPTION,
+            hasError: (null == e ? void 0 : e.description) != null || (null == e ? void 0 : e.wildcardDescriptors) != null
+        },
+        { section: _.ID.DIVIDER },
+        {
+            section: _.ID.HEADER,
+            label: v.Z.Messages.CLAN_SETTINGS_CUSTOMIZE_IDENTITY
+        },
+        {
+            section: O.Wy.CUSTOMIZE_TAG_BADGE,
+            label: v.Z.Messages.CLAN_SETTINGS_CLAN_BADGE,
+            hasError: (null == e ? void 0 : e.tag) != null || (null == e ? void 0 : e.badgeKind) != null || (null == e ? void 0 : e.badgePrimaryColor) != null || (null == e ? void 0 : e.badgeSecondaryColor) != null
+        },
+        {
+            section: O.Wy.CUSTOMIZE_BANNER,
+            label: v.Z.Messages.CLAN_SETTINGS_CLAN_PROFILE,
+            hasError: (null == e ? void 0 : e.banner) != null || (null == e ? void 0 : e.brandPrimaryColor) != null || (null == e ? void 0 : e.brandSecondaryColor) != null
+        },
+        { section: _.ID.DIVIDER },
+        {
+            section: O.Wy.MEMBER_APPLICATION,
+            label: v.Z.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION_SETUP,
+            hasError: (null == e ? void 0 : e.verificationForm) != null
+        },
+        { section: _.ID.DIVIDER },
+        {
+            section: _.ID.CUSTOM,
+            label: v.Z.Messages.CLAN_SETTINGS_DISABLE_CLAN,
+            element: Z
+        }
+    ], Z = e => {
+        let {
+                guildId: t,
+                onClose: i,
+                dirty: r
+            } = e, [l, c] = a.useState(!1), d = async () => {
+                c(!0);
+                try {
+                    await (0, I.nr)(t), i();
+                } catch (e) {
+                    throw c(!1), e;
+                }
+            };
+        return (0, s.jsxs)(o.TabBar.Item, {
+            selectedItem: !1,
+            className: D.deleteItem,
+            'aria-label': v.Z.Messages.CLAN_SETTINGS_DISABLE_CLAN,
+            onClick: () => {
+                if (r) {
+                    E.S.dispatch(A.CkL.EMPHASIZE_NOTICE);
+                    return;
+                }
+                (0, o.openModalLazy)(async () => {
+                    let {ConfirmModal: e} = await Promise.resolve().then(n.bind(n, 481060));
+                    return t => (0, s.jsx)(e, {
+                        ...t,
+                        header: v.Z.Messages.CLAN_SETTINGS_DISABLE_CONFIRM_TITLE,
+                        confirmText: v.Z.Messages.CONFIRM,
+                        cancelText: v.Z.Messages.CANCEL,
+                        loading: l,
+                        onConfirm: d,
+                        children: (0, s.jsx)(o.Text, {
+                            variant: 'text-md/normal',
+                            children: v.Z.Messages.CLAN_SETTINGS_DISABLE_CONFIRM_BODY
+                        })
+                    });
+                });
+            },
+            children: [
+                (0, s.jsx)(o.TrashIcon, {
+                    size: 'xs',
+                    color: 'currentColor',
+                    className: D.statusDanger
+                }),
+                (0, s.jsx)(o.Text, {
+                    variant: 'text-md/medium',
+                    color: 'status-danger',
+                    children: v.Z.Messages.CLAN_SETTINGS_DISABLE_CLAN
+                })
+            ]
+        });
+    }, b = e => {
+        let {isErrorVisible: t} = e, n = (0, o.useToken)(o.tokens.colors.HEADER_PRIMARY, M.BR.DARK), a = (0, o.useToken)(o.tokens.colors.TEXT_MUTED, M.BR.DARK);
+        return t ? (0, s.jsxs)('div', {
+            className: D.tooltipContents,
+            children: [
+                (0, s.jsx)(o.WarningIcon, {
+                    size: 'xs',
+                    color: 'currentColor',
+                    className: D.errorIconTooltip
+                }),
+                (0, s.jsxs)('div', {
+                    children: [
+                        (0, s.jsx)(o.Text, {
+                            variant: 'text-sm/medium',
+                            style: { color: n.hex() },
+                            children: v.Z.Messages.CLAN_SUBMIT_ERROR_TITLE
+                        }),
+                        (0, s.jsx)(o.Text, {
+                            variant: 'text-xs/normal',
+                            style: { color: a.hex() },
+                            children: v.Z.Messages.CLAN_SUBMIT_ERROR_SUBTITLE
+                        })
+                    ]
+                })
+            ]
+        }) : null;
     };
-    return (0, n.jsxs)(o.TabBar.Item, {
-      selectedItem: !1,
-      className: j.deleteItem,
-      "aria-label": Z.Z.Messages.CLAN_SETTINGS_DISABLE_CLAN,
-      onClick: () => {
-        if (a) {
-          T.S.dispatch(v.CkL.EMPHASIZE_NOTICE);
-          return
-        }(0, o.openModalLazy)(async () => {
-          let {
-            ConfirmModal: e
-          } = await Promise.resolve().then(t.bind(t, 481060));
-          return s => (0, n.jsx)(e, {
-            ...s,
-            header: Z.Z.Messages.CLAN_SETTINGS_DISABLE_CONFIRM_TITLE,
-            confirmText: Z.Z.Messages.CONFIRM,
-            cancelText: Z.Z.Messages.CANCEL,
-            loading: r,
-            onConfirm: d,
-            children: (0, n.jsx)(o.Text, {
-              variant: "text-md/normal",
-              children: Z.Z.Messages.CLAN_SETTINGS_DISABLE_CONFIRM_BODY
-            })
-          })
-        })
-      },
-      children: [(0, n.jsx)(_.Z, {
-        className: j.statusDanger,
-        width: 16,
-        height: 16
-      }), (0, n.jsx)(o.Text, {
-        variant: "text-md/medium",
-        color: "status-danger",
-        children: Z.Z.Messages.CLAN_SETTINGS_DISABLE_CLAN
-      })]
-    })
-  },
-  P = e => {
+t.Z = e => {
     let {
-      isErrorVisible: s
-    } = e, t = (0, o.useToken)(o.tokens.colors.HEADER_PRIMARY, D.BR.DARK), i = (0, o.useToken)(o.tokens.colors.TEXT_MUTED, D.BR.DARK);
-    return s ? (0, n.jsxs)("div", {
-      className: j.tooltipContents,
-      children: [(0, n.jsx)(I.Z, {
-        className: j.errorIconTooltip
-      }), (0, n.jsxs)("div", {
-        children: [(0, n.jsx)(o.Text, {
-          variant: "text-sm/medium",
-          style: {
-            color: t.hex()
-          },
-          children: Z.Z.Messages.CLAN_SUBMIT_ERROR_TITLE
-        }), (0, n.jsx)(o.Text, {
-          variant: "text-xs/normal",
-          style: {
-            color: i.hex()
-          },
-          children: Z.Z.Messages.CLAN_SUBMIT_ERROR_SUBTITLE
-        })]
-      })]
-    }) : null
-  };
-s.Z = e => {
-  let {
-    guildId: s,
-    onClose: t
-  } = e, [_, D] = i.useState(f.Wy.GAMES), {
-    initialSettings: G,
-    settings: b,
-    errors: B,
-    submitting: y,
-    dirty: F
-  } = (0, a.cj)([S.Z], () => {
-    var e;
-    let s = S.Z.getState();
-    return {
-      initialSettings: s.initialSettings,
-      settings: s.settings,
-      errors: null !== (e = s.errors) && void 0 !== e ? e : {},
-      submitting: s.submitting,
-      dirty: s.dirty
-    }
-  }), w = i.useCallback(e => {
-    F ? T.S.dispatch(v.CkL.EMPHASIZE_NOTICE) : D(e)
-  }, [F]), k = (0, h.N)(s, "ClanSettingsModal"), H = (0, g.f)(), V = i.useCallback(e => {
-    "Escape" === e.key && (e.stopPropagation(), t())
-  }, [t]);
-  i.useEffect(() => {
-    (0, m.GO)(s, (0, m.Qh)(_))
-  }, [s, _]), i.useEffect(() => (window.addEventListener("keydown", V), () => {
-    window.removeEventListener("keydown", V)
-  }), [V]), i.useEffect(() => {
-    c.Z.getDetectableGames()
-  }, []), i.useEffect(() => {
-    (0, N.aH)(s)
-  }, [s]);
-  let Y = i.useCallback(e => (0, N.mf)(s, {
-      gameApplicationIds: e
-    }), [s]),
-    W = i.useCallback(e => (0, N.mf)(s, {
-      playstyle: e
-    }), [s]),
-    K = i.useCallback(e => (0, N.mf)(s, {
-      interests: e
-    }), [s]),
-    z = i.useCallback(e => (0, N.mf)(s, e), [s]),
-    q = i.useCallback(() => {
-      F ? T.S.dispatch(v.CkL.EMPHASIZE_NOTICE) : t()
-    }, [F, t]),
-    X = async () => {
-      await (0, N.Ii)(s, b), (0, m.Af)(s)
-    }, Q = i.useMemo(() => null != B && Object.values(B).some(e => null != e), [B]);
-  if (null == b) return null;
-  let J = U(B);
-  return (0, n.jsxs)(l.animated.div, {
-    style: H,
-    className: j.modal,
-    children: [(0, n.jsx)(o.Tooltip, {
-      color: o.Tooltip.Colors.GREY,
-      tooltipClassName: j.tooltip,
-      text: (0, n.jsx)(P, {
-        isErrorVisible: Q
-      }),
-      position: "left",
-      "aria-label": null != Q ? Z.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : void 0,
-      shouldShow: Q,
-      forceOpen: Q,
-      children: e => (0, n.jsx)(d.Z, {
-        ...e,
-        className: j.closeButton,
-        closeAction: q,
-        keybind: "ESC"
-      })
-    }), (0, n.jsxs)("div", {
-      className: j.modalContents,
-      children: [(0, n.jsx)("div", {
-        className: j.sidebarWrapper,
-        children: (0, n.jsx)(o.TabBar, {
-          className: j.sidebar,
-          selectedItem: _,
-          onItemSelect: w,
-          orientation: "vertical",
-          children: J.map((e, i) => {
-            switch (e.section) {
-              case E.ID.HEADER:
-                return (0, n.jsx)(o.TabBar.Header, {
-                  children: e.label
-                }, "header-".concat(i));
-              case E.ID.DIVIDER:
-                return (0, n.jsx)(o.TabBar.Separator, {}, "divider-".concat(i));
-              case E.ID.CUSTOM:
-                let l = e.element;
-                return (0, n.jsx)(l, {
-                  dirty: F,
-                  guildId: s,
-                  onClose: t
-                }, e.label);
-              default:
-                return (0, n.jsx)(o.TabBar.Item, {
-                  className: j.settingsTab,
-                  "aria-label": e.label,
-                  id: e.section,
-                  children: (0, n.jsxs)(n.Fragment, {
-                    children: [e.label, e.hasError && (0, n.jsx)(o.Tooltip, {
-                      color: o.Tooltip.Colors.GREY,
-                      position: "right",
-                      text: Z.Z.Messages.CLAN_SUBMIT_ERROR_TITLE,
-                      children: e => (0, n.jsx)(I.Z, {
-                        ...e,
-                        className: j.errorIcon
-                      })
-                    })]
-                  })
-                }, e.section)
-            }
-          })
-        })
-      }), (0, n.jsxs)("div", {
-        className: j.mainContent,
-        children: [(0, n.jsx)(o.ScrollerThin, {
-          children: (() => {
-            switch (_) {
-              case f.Wy.GAMES:
-                var e;
-                return (0, n.jsx)(R.Z, {
-                  title: Z.Z.Messages.CLAN_SETUP_GAMES_TITLE,
-                  description: Z.Z.Messages.CLAN_SETUP_GAMES_SUBTITLE,
-                  handleUpdate: Y,
-                  gameApplicationIds: null !== (e = b.gameApplicationIds) && void 0 !== e ? e : new Set,
-                  requiredGameId: null != k ? k : void 0,
-                  error: B.gameApplicationIds,
-                  inSettings: !0
-                });
-              case f.Wy.PLAYSTYLE:
-                return (0, n.jsx)(A.Z, {
-                  title: Z.Z.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
-                  description: Z.Z.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
-                  handleUpdate: W,
-                  playstyle: b.playstyle,
-                  error: B.playstyle
-                });
-              case f.Wy.UTILITY_TRAITS:
-                return (0, n.jsx)(M.Z, {
-                  guildId: s,
-                  title: Z.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
-                  description: Z.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
-                  handleUpdate: K,
-                  progress: b,
-                  requiredGameId: null != k ? k : void 0
-                });
-              case f.Wy.INTERESTS:
-                return (0, n.jsx)(L.Z, {
-                  guildId: s,
-                  handleUpdate: z,
-                  progress: b,
-                  error: B.interests
-                });
-              case f.Wy.DESCRIPTION:
-                return (0, n.jsx)(C.Z, {
-                  guildId: s,
-                  handleUpdate: z,
-                  progress: b,
-                  errors: B
-                });
-              case f.Wy.CUSTOMIZE_TAG_BADGE:
-                return (0, n.jsx)(p.Z, {
-                  handleUpdate: z,
-                  tag: b.tag,
-                  error: B.tag,
-                  badge: b.badgeKind,
-                  primaryColor: b.badgePrimaryColor,
-                  secondaryColor: b.badgeSecondaryColor,
-                  furthestStep: f.Wy.CUSTOMIZE_TAG_BADGE,
-                  inSettings: !0
-                });
-              case f.Wy.MEMBER_APPLICATION:
-                return (0, n.jsx)(O.Z, {
-                  guildId: s,
-                  inSettings: !0,
-                  error: B.verificationForm
-                });
-              case f.Wy.CUSTOMIZE_BANNER:
-                return (0, n.jsx)(x.Z, {
-                  guildId: s,
-                  handleUpdate: z,
-                  progress: b
-                });
-              default:
-                return null
-            }
-          })()
-        }), (0, n.jsx)(r.W, {
-          component: "div",
-          children: F && (0, n.jsx)(o.SlideIn, {
-            className: j.noticeRegion,
-            children: (0, n.jsx)(u.Z, {
-              onSave: X,
-              submitting: y,
-              onReset: () => {
-                (0, N.mf)(s, G)
-              },
-              errorMessage: Object.values(B).find(e => null != e)
+            guildId: t,
+            onClose: n
+        } = e, [M, Z] = a.useState(O.Wy.GAMES), {
+            initialSettings: U,
+            settings: G,
+            errors: P,
+            submitting: B,
+            dirty: y
+        } = (0, r.cj)([m.Z], () => {
+            var e;
+            let t = m.Z.getState();
+            return {
+                initialSettings: t.initialSettings,
+                settings: t.settings,
+                errors: null !== (e = t.errors) && void 0 !== e ? e : {},
+                submitting: t.submitting,
+                dirty: t.dirty
+            };
+        }), F = a.useCallback(e => {
+            y ? E.S.dispatch(A.CkL.EMPHASIZE_NOTICE) : Z(e);
+        }, [y]), k = (0, N.N)(t, 'ClanSettingsModal'), w = (0, S.f)(), H = a.useCallback(e => {
+            'Escape' === e.key && (e.stopPropagation(), n());
+        }, [n]);
+    a.useEffect(() => {
+        (0, T.GO)(t, (0, T.Qh)(M));
+    }, [
+        t,
+        M
+    ]), a.useEffect(() => (window.addEventListener('keydown', H), () => {
+        window.removeEventListener('keydown', H);
+    }), [H]), a.useEffect(() => {
+        c.Z.getDetectableGames();
+    }, []), a.useEffect(() => {
+        (0, I.aH)(t);
+    }, [t]);
+    let V = a.useCallback(e => (0, I.mf)(t, { gameApplicationIds: e }), [t]), Y = a.useCallback(e => (0, I.mf)(t, { playstyle: e }), [t]), W = a.useCallback(e => (0, I.mf)(t, { interests: e }), [t]), z = a.useCallback(e => (0, I.mf)(t, e), [t]), K = a.useCallback(() => {
+            y ? E.S.dispatch(A.CkL.EMPHASIZE_NOTICE) : n();
+        }, [
+            y,
+            n
+        ]), q = async () => {
+            await (0, I.Ii)(t, G), (0, T.Af)(t);
+        }, X = a.useMemo(() => null != P && Object.values(P).some(e => null != e), [P]);
+    if (null == G)
+        return null;
+    let Q = j(P);
+    return (0, s.jsxs)(i.animated.div, {
+        style: w,
+        className: D.modal,
+        children: [
+            (0, s.jsx)(o.Tooltip, {
+                color: o.Tooltip.Colors.GREY,
+                tooltipClassName: D.tooltip,
+                text: (0, s.jsx)(b, { isErrorVisible: X }),
+                position: 'left',
+                'aria-label': null != X ? v.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : void 0,
+                shouldShow: X,
+                forceOpen: X,
+                children: e => (0, s.jsx)(d.Z, {
+                    ...e,
+                    className: D.closeButton,
+                    closeAction: K,
+                    keybind: 'ESC'
+                })
+            }),
+            (0, s.jsxs)('div', {
+                className: D.modalContents,
+                children: [
+                    (0, s.jsx)('div', {
+                        className: D.sidebarWrapper,
+                        children: (0, s.jsx)(o.TabBar, {
+                            className: D.sidebar,
+                            selectedItem: M,
+                            onItemSelect: F,
+                            orientation: 'vertical',
+                            children: Q.map((e, a) => {
+                                switch (e.section) {
+                                case _.ID.HEADER:
+                                    return (0, s.jsx)(o.TabBar.Header, { children: e.label }, 'header-'.concat(a));
+                                case _.ID.DIVIDER:
+                                    return (0, s.jsx)(o.TabBar.Separator, {}, 'divider-'.concat(a));
+                                case _.ID.CUSTOM:
+                                    let i = e.element;
+                                    return (0, s.jsx)(i, {
+                                        dirty: y,
+                                        guildId: t,
+                                        onClose: n
+                                    }, e.label);
+                                default:
+                                    return (0, s.jsx)(o.TabBar.Item, {
+                                        className: D.settingsTab,
+                                        'aria-label': e.label,
+                                        id: e.section,
+                                        children: (0, s.jsxs)(s.Fragment, {
+                                            children: [
+                                                e.label,
+                                                e.hasError && (0, s.jsx)(o.Tooltip, {
+                                                    color: o.Tooltip.Colors.GREY,
+                                                    position: 'right',
+                                                    text: v.Z.Messages.CLAN_SUBMIT_ERROR_TITLE,
+                                                    children: e => (0, s.jsx)(o.WarningIcon, {
+                                                        size: 'xs',
+                                                        color: 'currentColor',
+                                                        ...e,
+                                                        className: D.errorIcon
+                                                    })
+                                                })
+                                            ]
+                                        })
+                                    }, e.section);
+                                }
+                            })
+                        })
+                    }),
+                    (0, s.jsxs)('div', {
+                        className: D.mainContent,
+                        children: [
+                            (0, s.jsx)(o.ScrollerThin, {
+                                children: (() => {
+                                    switch (M) {
+                                    case O.Wy.GAMES:
+                                        var e;
+                                        return (0, s.jsx)(C.Z, {
+                                            title: v.Z.Messages.CLAN_SETUP_GAMES_TITLE,
+                                            description: v.Z.Messages.CLAN_SETUP_GAMES_SUBTITLE,
+                                            handleUpdate: V,
+                                            gameApplicationIds: null !== (e = G.gameApplicationIds) && void 0 !== e ? e : new Set(),
+                                            requiredGameId: null != k ? k : void 0,
+                                            error: P.gameApplicationIds,
+                                            inSettings: !0
+                                        });
+                                    case O.Wy.PLAYSTYLE:
+                                        return (0, s.jsx)(R.Z, {
+                                            title: v.Z.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
+                                            description: v.Z.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
+                                            handleUpdate: Y,
+                                            playstyle: G.playstyle,
+                                            error: P.playstyle
+                                        });
+                                    case O.Wy.UTILITY_TRAITS:
+                                        return (0, s.jsx)(L.Z, {
+                                            guildId: t,
+                                            title: v.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
+                                            description: v.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
+                                            handleUpdate: W,
+                                            progress: G,
+                                            requiredGameId: null != k ? k : void 0
+                                        });
+                                    case O.Wy.INTERESTS:
+                                        return (0, s.jsx)(x.Z, {
+                                            guildId: t,
+                                            handleUpdate: z,
+                                            progress: G,
+                                            error: P.interests
+                                        });
+                                    case O.Wy.DESCRIPTION:
+                                        return (0, s.jsx)(g.Z, {
+                                            guildId: t,
+                                            handleUpdate: z,
+                                            progress: G,
+                                            errors: P
+                                        });
+                                    case O.Wy.CUSTOMIZE_TAG_BADGE:
+                                        return (0, s.jsx)(f.Z, {
+                                            handleUpdate: z,
+                                            tag: G.tag,
+                                            error: P.tag,
+                                            badge: G.badgeKind,
+                                            primaryColor: G.badgePrimaryColor,
+                                            secondaryColor: G.badgeSecondaryColor,
+                                            furthestStep: O.Wy.CUSTOMIZE_TAG_BADGE,
+                                            inSettings: !0
+                                        });
+                                    case O.Wy.MEMBER_APPLICATION:
+                                        return (0, s.jsx)(p.Z, {
+                                            guildId: t,
+                                            inSettings: !0,
+                                            error: P.verificationForm
+                                        });
+                                    case O.Wy.CUSTOMIZE_BANNER:
+                                        return (0, s.jsx)(h.Z, {
+                                            guildId: t,
+                                            handleUpdate: z,
+                                            progress: G
+                                        });
+                                    default:
+                                        return null;
+                                    }
+                                })()
+                            }),
+                            (0, s.jsx)(l.W, {
+                                component: 'div',
+                                children: y && (0, s.jsx)(o.SlideIn, {
+                                    className: D.noticeRegion,
+                                    children: (0, s.jsx)(u.Z, {
+                                        onSave: q,
+                                        submitting: B,
+                                        onReset: () => {
+                                            (0, I.mf)(t, U);
+                                        },
+                                        errorMessage: Object.values(P).find(e => null != e)
+                                    })
+                                })
+                            })
+                        ]
+                    })
+                ]
             })
-          })
-        })]
-      })]
-    })]
-  })
-}
+        ]
+    });
+};

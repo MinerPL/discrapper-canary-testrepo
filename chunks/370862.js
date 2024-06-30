@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  d: function() {
-    return i
-  }
-}), (r = i || (i = {})).LAUNCHER = "LAUNCHER", r.LIBRARY_APPLICATION = "LIBRARY_APPLICATION", r.USER_OVERRIDE = "USER_OVERRIDE", r.DATABASE = "DATABASE", r.DEFAULT = "DEFAULT"
+    d: function () {
+        return r;
+    }
+}), (i = r || (r = {})).LAUNCHER = 'LAUNCHER', i.LIBRARY_APPLICATION = 'LIBRARY_APPLICATION', i.USER_OVERRIDE = 'USER_OVERRIDE', i.DATABASE = 'DATABASE', i.DEFAULT = 'DEFAULT';

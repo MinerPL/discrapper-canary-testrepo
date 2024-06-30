@@ -1,89 +1,89 @@
-var r, e, n, o = t.exports = {};
-
-function i() {
-  throw Error("setTimeout has not been defined")
-}
-
+var e, r, n, _ = t.exports = {};
 function a() {
-  throw Error("clearTimeout has not been defined")
+    throw Error('setTimeout has not been defined');
 }
-
-function u(t) {
-  if (r === setTimeout) return setTimeout(t, 0);
-  if ((r === i || !r) && setTimeout) return r = setTimeout, setTimeout(t, 0);
-  try {
-    return r(t, 0)
-  } catch (e) {
+function i() {
+    throw Error('clearTimeout has not been defined');
+}
+function o(t) {
+    if (e === setTimeout)
+        return setTimeout(t, 0);
+    if ((e === a || !e) && setTimeout)
+        return e = setTimeout, setTimeout(t, 0);
     try {
-      return r.call(null, t, 0)
-    } catch (e) {
-      return r.call(this, t, 0)
-    }
-  }
-}! function() {
-  try {
-    r = "function" == typeof setTimeout ? setTimeout : i
-  } catch (t) {
-    r = i
-  }
-  try {
-    e = "function" == typeof clearTimeout ? clearTimeout : a
-  } catch (t) {
-    e = a
-  }
-}();
-var f = [],
-  c = !1,
-  s = -1;
-
-function p() {
-  if (!!c && !!n) c = !1, n.length ? f = n.concat(f) : s = -1, f.length && l()
-}
-
-function l() {
-  if (!c) {
-    var t = u(p);
-    c = !0;
-    for (var r = f.length; r;) {
-      for (n = f, f = []; ++s < r;) n && n[s].run();
-      s = -1, r = f.length
-    }
-    n = null, c = !1, ! function(t) {
-      if (e === clearTimeout) return clearTimeout(t);
-      if ((e === a || !e) && clearTimeout) return e = clearTimeout, clearTimeout(t);
-      try {
-        e(t)
-      } catch (r) {
+        return e(t, 0);
+    } catch (r) {
         try {
-          return e.call(null, t)
+            return e.call(null, t, 0);
         } catch (r) {
-          return e.call(this, t)
+            return e.call(this, t, 0);
         }
-      }
-    }(t)
-  }
+    }
 }
-
-function h(t, r) {
-  this.fun = t, this.array = r
+!function () {
+    try {
+        e = 'function' == typeof setTimeout ? setTimeout : a;
+    } catch (t) {
+        e = a;
+    }
+    try {
+        r = 'function' == typeof clearTimeout ? clearTimeout : i;
+    } catch (t) {
+        r = i;
+    }
+}();
+var E = [], s = !1, c = -1;
+function I() {
+    if (!!s && !!n)
+        s = !1, n.length ? E = n.concat(E) : c = -1, E.length && R();
 }
-
-function v() {}
-o.nextTick = function(t) {
-  var r = Array(arguments.length - 1);
-  if (arguments.length > 1)
-    for (var e = 1; e < arguments.length; e++) r[e - 1] = arguments[e];
-  f.push(new h(t, r)), 1 === f.length && !c && u(l)
-}, h.prototype.run = function() {
-  this.fun.apply(null, this.array)
-}, o.title = "browser", o.browser = !0, o.env = {}, o.argv = [], o.version = "", o.versions = {}, o.on = v, o.addListener = v, o.once = v, o.off = v, o.removeListener = v, o.removeAllListeners = v, o.emit = v, o.prependListener = v, o.prependOnceListener = v, o.listeners = function(t) {
-  return []
-}, o.binding = function(t) {
-  throw Error("process.binding is not supported")
-}, o.cwd = function() {
-  return "/"
-}, o.chdir = function(t) {
-  throw Error("process.chdir is not supported")
-}, o.umask = function() {
-  return 0
+function R() {
+    if (!s) {
+        var t = o(I);
+        s = !0;
+        for (var e = E.length; e;) {
+            for (n = E, E = []; ++c < e;)
+                n && n[c].run();
+            c = -1, e = E.length;
+        }
+        n = null, s = !1, !function (t) {
+            if (r === clearTimeout)
+                return clearTimeout(t);
+            if ((r === i || !r) && clearTimeout)
+                return r = clearTimeout, clearTimeout(t);
+            try {
+                r(t);
+            } catch (e) {
+                try {
+                    return r.call(null, t);
+                } catch (e) {
+                    return r.call(this, t);
+                }
+            }
+        }(t);
+    }
 }
+function u(t, e) {
+    this.fun = t, this.array = e;
+}
+function T() {
+}
+_.nextTick = function (t) {
+    var e = Array(arguments.length - 1);
+    if (arguments.length > 1)
+        for (var r = 1; r < arguments.length; r++)
+            e[r - 1] = arguments[r];
+    E.push(new u(t, e)), 1 === E.length && !s && o(R);
+}, u.prototype.run = function () {
+    this.fun.apply(null, this.array);
+}, _.title = 'browser', _.browser = !0, _.env = {}, _.argv = [], _.version = '', _.versions = {}, _.on = T, _.addListener = T, _.once = T, _.off = T, _.removeListener = T, _.removeAllListeners = T, _.emit = T, _.prependListener = T, _.prependOnceListener = T, _.listeners = function (t) {
+    return [];
+}, _.binding = function (t) {
+    throw Error('process.binding is not supported');
+}, _.cwd = function () {
+    return '/';
+}, _.chdir = function (t) {
+    throw Error('process.chdir is not supported');
+}, _.umask = function () {
+    return 0;
+};

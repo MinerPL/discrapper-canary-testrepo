@@ -1,10 +1,9 @@
-"use strict";
 var t = {
-  current: function(e) {
-    return e
-  },
-  inject: function(e) {
-    t.current = e
-  }
+    current: function (e) {
+        return e;
+    },
+    inject: function (e) {
+        t.current = e;
+    }
 };
-e.exports = t
+e.exports = t;

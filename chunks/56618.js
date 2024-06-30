@@ -1,33 +1,30 @@
-"use strict";
-let r;
-n.d(e, {
-  c: function() {
-    return u
-  },
-  x: function() {
-    return o
-  }
+let n;
+r.d(e, {
+    c: function () {
+        return E;
+    },
+    x: function () {
+        return o;
+    }
 });
-var i = n(698892),
-  s = n(529866),
-  a = n(643487);
-
+var _ = r(698892), a = r(529866), i = r(643487);
 function o() {
-  if (r) return r;
-  if ((0, i.Du)(a.m9.fetch)) return r = a.m9.fetch.bind(a.m9);
-  let t = a.m9.document,
-    e = a.m9.fetch;
-  if (t && "function" == typeof t.createElement) try {
-    let n = t.createElement("iframe");
-    n.hidden = !0, t.head.appendChild(n);
-    let r = n.contentWindow;
-    r && r.fetch && (e = r.fetch), t.head.removeChild(n)
-  } catch (t) {
-    ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && s.kg.warn("Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ", t)
-  }
-  return r = e.bind(a.m9)
+    if (n)
+        return n;
+    if ((0, _.Du)(i.m9.fetch))
+        return n = i.m9.fetch.bind(i.m9);
+    let t = i.m9.document, e = i.m9.fetch;
+    if (t && 'function' == typeof t.createElement)
+        try {
+            let r = t.createElement('iframe');
+            r.hidden = !0, t.head.appendChild(r);
+            let n = r.contentWindow;
+            n && n.fetch && (e = n.fetch), t.head.removeChild(r);
+        } catch (t) {
+            ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && a.kg.warn('Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ', t);
+        }
+    return n = e.bind(i.m9);
 }
-
-function u() {
-  r = void 0
+function E() {
+    n = void 0;
 }

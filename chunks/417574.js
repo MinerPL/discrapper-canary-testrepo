@@ -1,7 +1,6 @@
-"use strict";
 n.d(t, {
-  X: function() {
-    return i
-  }
+    X: function () {
+        return r;
+    }
 });
-let i = /^<@!?(\d+)>/u
+let r = /^<@!?(\d+)>/u;

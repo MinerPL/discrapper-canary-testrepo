@@ -1,11 +1,9 @@
-"use strict";
 n.d(t, {
-  I: function() {
-    return i
-  },
-  _: function() {
-    return r
-  }
+    I: function () {
+        return r;
+    },
+    _: function () {
+        return i;
+    }
 });
-let i = "643945264868098049",
-  r = "URGENT_MESSAGE_MODAL"
+let r = '643945264868098049', i = 'URGENT_MESSAGE_MODAL';

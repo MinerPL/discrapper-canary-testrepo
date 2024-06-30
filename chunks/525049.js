@@ -1,19 +1,15 @@
-"use strict";
 n.d(t, {
-  $V: function() {
-    return i
-  },
-  jR: function() {
-    return o
-  },
-  o: function() {
-    return r
-  },
-  z3: function() {
-    return s
-  }
+    $V: function () {
+        return r;
+    },
+    jR: function () {
+        return o;
+    },
+    o: function () {
+        return i;
+    },
+    z3: function () {
+        return a;
+    }
 });
-let i = 3,
-  r = .5,
-  s = 1,
-  o = 2.5
+let r = 3, i = 0.5, a = 1, o = 2.5;

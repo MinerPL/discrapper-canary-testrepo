@@ -1,50 +1,36 @@
-"use strict";
 n.d(t, {
-  Qg: function() {
-    return a
-  },
-  S3: function() {
-    return s
-  },
-  r5: function() {
-    return l
-  }
+    Qg: function () {
+        return s;
+    },
+    S3: function () {
+        return a;
+    },
+    r5: function () {
+        return l;
+    }
 }), n(47120), n(411104);
-var i = n(688619),
-  r = n.n(i);
-let s = {
-  NonText: 3,
-  Text: 4.5,
-  HighContrastText: 7
+var r = n(688619), i = n.n(r);
+let a = {
+    NonText: 3,
+    Text: 4.5,
+    HighContrastText: 7
 };
-
 function o(e) {
-  let [t, n, i, r] = e.rgba();
-  return "rgba(".concat(t, ", ").concat(n, ", ").concat(i, ", ").concat(r, ")")
+    let [t, n, r, i] = e.rgba();
+    return 'rgba('.concat(t, ', ').concat(n, ', ').concat(r, ', ').concat(i, ')');
 }
-
-function a(e) {
-  var t, n, i;
-  let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-    l = null !== (t = a.contrastRatio) && void 0 !== t ? t : s.NonText,
-    u = null !== (n = a.tolerance) && void 0 !== n ? n : 3,
-    _ = r()(null !== (i = a.base) && void 0 !== i ? i : e),
-    d = r()(e),
-    c = _.luminance(),
-    E = d,
-    I = l + u,
-    T = r().contrast(_, d),
-    h = 100;
-  for (; h-- > 0;) {
-    let e = T < l,
-      t = T > I;
-    if (!e && !t) break;
-    let n = E.luminance() > c;
-    E = t && n || e && !n ? E.darken() : E.brighten(), T = r().contrast(_, E)
-  }
-  return o(E)
+function s(e) {
+    var t, n, r;
+    let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, l = null !== (t = s.contrastRatio) && void 0 !== t ? t : a.NonText, u = null !== (n = s.tolerance) && void 0 !== n ? n : 3, c = i()(null !== (r = s.base) && void 0 !== r ? r : e), d = i()(e), _ = c.luminance(), E = d, f = l + u, h = i().contrast(c, d), p = 100;
+    for (; p-- > 0;) {
+        let e = h < l, t = h > f;
+        if (!e && !t)
+            break;
+        let n = E.luminance() > _;
+        E = t && n || e && !n ? E.darken() : E.brighten(), h = i().contrast(c, E);
+    }
+    return o(E);
 }
-
 function l(e, t) {
-  return o(r()(e).darken(t))
+    return o(i()(e).darken(t));
 }

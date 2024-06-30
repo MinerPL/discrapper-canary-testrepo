@@ -1,42 +1,32 @@
-"use strict";
 n.d(t, {
-  hY: function() {
-    return T
-  },
-  og: function() {
-    return S
-  },
-  rO: function() {
-    return f
-  },
-  vu: function() {
-    return c
-  }
+    hY: function () {
+        return h;
+    },
+    og: function () {
+        return m;
+    },
+    rO: function () {
+        return I;
+    },
+    vu: function () {
+        return _;
+    }
 });
-var i, r, s, o, a, l = n(525654),
-  u = n.n(l);
-let _ = (null !== (i = u().name) && void 0 !== i ? i : "unknown").toLowerCase(),
-  d = "chrome" === _.toLowerCase() ? parseInt(null !== (r = u().version) && void 0 !== r ? r : "", 10) : -1;
-
-function c() {
-  return d
+var r, i, a, o, s, l = n(525654), u = n.n(l);
+let c = (null !== (r = u().name) && void 0 !== r ? r : 'unknown').toLowerCase(), d = 'chrome' === c.toLowerCase() ? parseInt(null !== (i = u().version) && void 0 !== i ? i : '', 10) : -1;
+function _() {
+    return d;
 }
-let E = "electron" === _.toLowerCase() ? parseInt(null !== (s = u().version) && void 0 !== s ? s : "", 10) : -1,
-  I = "firefox" === _.toLowerCase() ? parseInt(null !== (o = u().version) && void 0 !== o ? o : "", 10) : -1;
-
-function T() {
-  return I
+let E = 'electron' === c.toLowerCase() ? parseInt(null !== (a = u().version) && void 0 !== a ? a : '', 10) : -1, f = 'firefox' === c.toLowerCase() ? parseInt(null !== (o = u().version) && void 0 !== o ? o : '', 10) : -1;
+function h() {
+    return f;
 }
-let h = "edge" === _.toLowerCase() ? parseInt(null !== (a = u().version) && void 0 !== a ? a : "", 10) : -1;
-
-function S() {
-  return -1 !== d || -1 !== E || -1 !== I || -1 !== h
+let p = 'edge' === c.toLowerCase() ? parseInt(null !== (s = u().version) && void 0 !== s ? s : '', 10) : -1;
+function m() {
+    return -1 !== d || -1 !== E || -1 !== f || -1 !== p;
 }
-
-function f() {
-  var e;
-  let t = window.navigator,
-    n = t.userAgent.toLowerCase(),
-    i = (null === (e = t.mediaCapabilities) || void 0 === e ? void 0 : e.decodingInfo) != null;
-  return -1 !== n.indexOf("safari") && !(-1 !== n.indexOf("chrome")) && -1 !== n.indexOf("version/") && i
+function I() {
+    var e;
+    let t = window.navigator, n = t.userAgent.toLowerCase(), r = (null === (e = t.mediaCapabilities) || void 0 === e ? void 0 : e.decodingInfo) != null;
+    return -1 !== n.indexOf('safari') && !(-1 !== n.indexOf('chrome')) && -1 !== n.indexOf('version/') && r;
 }

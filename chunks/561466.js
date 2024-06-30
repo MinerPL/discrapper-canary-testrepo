@@ -1,19 +1,18 @@
-"use strict";
-var i, r, s, o;
+var r, i, a, o;
 n.d(t, {
-  az: function() {
-    return r
-  },
-  pC: function() {
-    return i
-  },
-  si: function() {
-    return a
-  }
+    az: function () {
+        return i;
+    },
+    pC: function () {
+        return r;
+    },
+    si: function () {
+        return s;
+    }
 });
-(s = i || (i = {}))[s.MESSAGE = 0] = "MESSAGE", s[s.SUCCESS = 1] = "SUCCESS", s[s.FAILURE = 2] = "FAILURE", s[s.CUSTOM = 3] = "CUSTOM", s[s.CLIP = 4] = "CLIP", s[s.LINK = 5] = "LINK", s[s.FORWARD = 6] = "FORWARD", (o = r || (r = {}))[o.TOP = 0] = "TOP", o[o.BOTTOM = 1] = "BOTTOM";
-let a = {
-  position: 0,
-  component: null,
-  duration: 3e3
-}
+(a = r || (r = {}))[a.MESSAGE = 0] = 'MESSAGE', a[a.SUCCESS = 1] = 'SUCCESS', a[a.FAILURE = 2] = 'FAILURE', a[a.CUSTOM = 3] = 'CUSTOM', a[a.CLIP = 4] = 'CLIP', a[a.LINK = 5] = 'LINK', a[a.FORWARD = 6] = 'FORWARD', (o = i || (i = {}))[o.TOP = 0] = 'TOP', o[o.BOTTOM = 1] = 'BOTTOM';
+let s = {
+    position: 0,
+    component: null,
+    duration: 3000
+};

@@ -1,19 +1,19 @@
-"use strict";
 n.d(t, {
-  J: function() {
-    return r
-  }
+    J: function () {
+        return i;
+    }
 });
-let i = "_errors";
-
-function r(e) {
-  let t = {};
-  for (let n in e) {
-    let r = e[n];
-    if (null == r) continue;
-    if (n === i && (t._misc = e[n].map(e => e.message)), Array.isArray(r)) continue;
-    let s = r[i];
-    null != s ? t[n] = s.map(e => e.message) : t[n] = [Object.keys(r)[0]]
-  }
-  return t
+let r = '_errors';
+function i(e) {
+    let t = {};
+    for (let n in e) {
+        let i = e[n];
+        if (null == i)
+            continue;
+        if (n === r && (t._misc = e[n].map(e => e.message)), Array.isArray(i))
+            continue;
+        let a = i[r];
+        null != a ? t[n] = a.map(e => e.message) : t[n] = [Object.keys(i)[0]];
+    }
+    return t;
 }

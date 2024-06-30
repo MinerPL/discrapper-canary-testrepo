@@ -1,60 +1,46 @@
-"use strict";
 n.d(t, {
-  e: function() {
-    return E
-  }
+    e: function () {
+        return E;
+    }
 }), n(411104);
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(532712),
-  l = n(1561),
-  u = n(84735),
-  _ = n(335854),
-  d = n(645499),
-  c = n(433426);
-
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(532712), l = n(1561), u = n(84735), c = n(335854), d = n(645499), _ = n(372835);
 function E(e) {
-  let {
-    href: t,
-    onClick: n,
-    className: s,
-    children: E,
-    rel: I,
-    target: T,
-    useDefaultUnderlineStyles: h = !0,
-    title: S,
-    style: f,
-    focusProps: N,
-    ...A
-  } = e;
-  null != t && null == n && (n = _.X.getDefaultLinkInterceptor(t));
-  let m = r.useContext(a.g),
-    O = {
-      className: o()(c.anchor, {
-        [c.anchorUnderlineOnHover]: h
-      }, s),
-      href: t,
-      onClick: n,
-      rel: null != I ? I : void 0,
-      target: null != T ? T : void 0,
-      title: null != S ? S : void 0,
-      style: null != f ? f : void 0
-    };
-  return (null != t && !(0, d.B)(t) && (O.rel = "noreferrer noopener", O.target = "_blank"), m && delete O.href, null != n) ? (0, i.jsx)(l.P, {
-    tag: "a",
-    ...A,
-    ...O,
-    onClick: n,
-    focusProps: N,
-    children: E
-  }) : (0, i.jsx)(u.t, {
-    ...N,
-    children: (0, i.jsx)("a", {
-      ...A,
-      ...O,
-      children: E
-    })
-  })
+    let {
+        href: t,
+        onClick: n,
+        className: a,
+        children: E,
+        rel: f,
+        target: h,
+        useDefaultUnderlineStyles: p = !0,
+        title: m,
+        style: I,
+        focusProps: T,
+        ...g
+    } = e;
+    null != t && null == n && (n = c.X.getDefaultLinkInterceptor(t));
+    let S = i.useContext(s.g), A = {
+            className: o()(_.anchor, { [_.anchorUnderlineOnHover]: p }, a),
+            href: t,
+            onClick: n,
+            rel: null != f ? f : void 0,
+            target: null != h ? h : void 0,
+            title: null != m ? m : void 0,
+            style: null != I ? I : void 0
+        };
+    return (null != t && !(0, d.B)(t) && (A.rel = 'noreferrer noopener', A.target = '_blank'), S && delete A.href, null != n) ? (0, r.jsx)(l.P, {
+        tag: 'a',
+        ...g,
+        ...A,
+        onClick: n,
+        focusProps: T,
+        children: E
+    }) : (0, r.jsx)(u.t, {
+        ...T,
+        children: (0, r.jsx)('a', {
+            ...g,
+            ...A,
+            children: E
+        })
+    });
 }

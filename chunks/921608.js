@@ -1,11 +1,9 @@
-"use strict";
 n.d(t, {
-  F: function() {
-    return i
-  },
-  n: function() {
-    return r
-  }
+    F: function () {
+        return r;
+    },
+    n: function () {
+        return i;
+    }
 });
-let i = 12,
-  r = 24
+let r = 12, i = 24;

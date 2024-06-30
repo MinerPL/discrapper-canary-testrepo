@@ -1,37 +1,21 @@
-var n = e(620014),
-  o = e(501979),
-  i = e(575473),
-  a = e(907287),
-  u = e(65064),
-  f = e(402428),
-  c = e(207757),
-  s = e(556868),
-  p = "[object Arguments]",
-  l = "[object Array]",
-  h = "[object Object]",
-  v = Object.prototype.hasOwnProperty;
-t.exports = function(t, r, e, d, b, g) {
-  var y = f(t),
-    m = f(r),
-    w = y ? l : u(t),
-    _ = m ? l : u(r);
-  w = w == p ? h : w, _ = _ == p ? h : _;
-  var x = w == h,
-    k = _ == h,
-    M = w == _;
-  if (M && c(t)) {
-    if (!c(r)) return !1;
-    y = !0, x = !1
-  }
-  if (M && !x) return g || (g = new n), y || s(t) ? o(t, r, e, d, b, g) : i(t, r, w, e, d, b, g);
-  if (!(1 & e)) {
-    var j = x && v.call(t, "__wrapped__"),
-      O = k && v.call(r, "__wrapped__");
-    if (j || O) {
-      var E = j ? t.value() : t,
-        N = O ? r.value() : r;
-      return g || (g = new n), b(E, N, e, d, g)
+var n = r(620014), _ = r(501979), a = r(575473), i = r(907287), o = r(65064), E = r(402428), s = r(207757), c = r(556868), I = '[object Arguments]', R = '[object Array]', u = '[object Object]', T = Object.prototype.hasOwnProperty;
+t.exports = function (t, e, r, l, A, N) {
+    var d = E(t), O = E(e), p = d ? R : o(t), S = O ? R : o(e);
+    p = p == I ? u : p, S = S == I ? u : S;
+    var D = p == u, f = S == u, L = p == S;
+    if (L && s(t)) {
+        if (!s(e))
+            return !1;
+        d = !0, D = !1;
     }
-  }
-  return !!M && (g || (g = new n), a(t, r, e, d, b, g))
-}
+    if (L && !D)
+        return N || (N = new n()), d || c(t) ? _(t, e, r, l, A, N) : a(t, e, p, r, l, A, N);
+    if (!(1 & r)) {
+        var h = D && T.call(t, '__wrapped__'), C = f && T.call(e, '__wrapped__');
+        if (h || C) {
+            var g = h ? t.value() : t, P = C ? e.value() : e;
+            return N || (N = new n()), A(g, P, r, l, N);
+        }
+    }
+    return !!L && (N || (N = new n()), i(t, e, r, l, A, N));
+};

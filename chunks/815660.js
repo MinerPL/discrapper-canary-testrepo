@@ -1,11 +1,9 @@
-"use strict";
-n.d(t, {
-  M: function() {
-    return r
-  },
-  z: function() {
-    return o
-  }
+t.d(n, {
+    M: function () {
+        return o;
+    },
+    z: function () {
+        return r;
+    }
 });
-let r = "PHONE_VERIFICATION_MODAL_KEY",
-  o = 6
+let o = 'PHONE_VERIFICATION_MODAL_KEY', r = 6;

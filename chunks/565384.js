@@ -1,58 +1,50 @@
-"use strict";
 n.d(t, {
-  Ez: function() {
-    return c
-  },
-  Ps: function() {
-    return a
-  },
-  Xo: function() {
-    return _
-  },
-  dT: function() {
-    return u
-  },
-  dw: function() {
-    return l
-  },
-  k$: function() {
-    return d
-  }
+    Ez: function () {
+        return _;
+    },
+    Ps: function () {
+        return s;
+    },
+    Xo: function () {
+        return c;
+    },
+    dT: function () {
+        return u;
+    },
+    dw: function () {
+        return l;
+    },
+    k$: function () {
+        return d;
+    }
 }), n(47120);
-var i = n(652874),
-  r = n(990547);
-let s = Object.freeze({
-    debugTrackedData: null,
-    impressions: []
-  }),
-  o = (0, i.Z)(e => s),
-  a = e => {
-    o.setState(t => ({
-      impressions: [...t.impressions, e]
-    }))
-  },
-  l = e => {
-    o.setState(t => ({
-      impressions: t.impressions.filter(t => t.sequenceId !== e.sequenceId)
-    }))
-  },
-  u = (e, t) => {
-    o.setState(() => ({
-      debugTrackedData: {
-        name: e,
-        ...t
-      }
-    }))
-  },
-  _ = o;
-
+var r = n(652874), i = n(990547);
+let a = Object.freeze({
+        debugTrackedData: null,
+        impressions: []
+    }), o = (0, r.Z)(e => a), s = e => {
+        o.setState(t => ({
+            impressions: [
+                ...t.impressions,
+                e
+            ]
+        }));
+    }, l = e => {
+        o.setState(t => ({ impressions: t.impressions.filter(t => t.sequenceId !== e.sequenceId) }));
+    }, u = (e, t) => {
+        o.setState(() => ({
+            debugTrackedData: {
+                name: e,
+                ...t
+            }
+        }));
+    }, c = o;
 function d() {
-  let e = {};
-  return o.getState().impressions.forEach(t => {
-    t.type === r.ImpressionTypes.PAGE ? e.page = t.name : e.section = t.name
-  }), e
+    let e = {};
+    return o.getState().impressions.forEach(t => {
+        t.type === i.ImpressionTypes.PAGE ? e.page = t.name : e.section = t.name;
+    }), e;
 }
-
-function c() {
-  return o.getState().impressions
+function _() {
+    return o.getState().impressions;
 }

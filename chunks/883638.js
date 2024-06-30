@@ -1,5 +1,5 @@
-var n = e(961499);
-t.exports = function(t) {
-  var r = n(this, t).delete(t);
-  return this.size -= r ? 1 : 0, r
-}
+var n = r(961499);
+t.exports = function (t) {
+    var e = n(this, t).delete(t);
+    return this.size -= e ? 1 : 0, e;
+};

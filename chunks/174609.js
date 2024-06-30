@@ -1,12 +1,9 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return a;
+    }
 });
-var i = n(358085),
-  r = n(998502);
-
-function s(e) {
-  i.isPlatformEmbedded ? r.ZP.focus(e) : window.focus()
+var r = n(358085), i = n(998502);
+function a(e) {
+    r.isPlatformEmbedded ? i.ZP.focus(e) : window.focus();
 }

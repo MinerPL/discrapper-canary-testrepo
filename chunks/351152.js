@@ -1,72 +1,55 @@
-"use strict";
-n.d(t, {
-  Z: function() {
-    return x
-  }
-}), n(390547);
-var l = n(735250);
-n(470079);
-var s = n(120356),
-  a = n.n(s),
-  i = n(392711),
-  r = n.n(i),
-  o = n(442837),
-  u = n(481060),
-  c = n(984933),
-  d = n(430824),
-  m = n(496675),
-  E = n(771845),
-  _ = n(346656),
-  S = n(259580),
-  h = n(102172),
-  g = n(148381),
-  Z = n(689938),
-  C = n(555066),
-  f = n(386475);
-
-function N(e) {
-  let {
-    guildId: t,
-    onClick: n
-  } = e, s = (0, o.e7)([d.Z], () => d.Z.getGuild(t)), a = (0, o.e7)([c.ZP, d.Z, m.Z], () => c.ZP.getChannels(t)[c.Zb].some(e => {
+t.d(n, {
+    Z: function () {
+        return x;
+    }
+}), t(390547);
+var l = t(735250);
+t(470079);
+var s = t(120356), a = t.n(s), i = t(392711), r = t.n(i), o = t(442837), u = t(481060), c = t(984933), d = t(430824), m = t(496675), E = t(771845), _ = t(346656), S = t(259580), g = t(382182), h = t(148381), C = t(689938), N = t(278768), Z = t(96499);
+function I(e) {
     let {
-      channel: t
-    } = e;
-    return (0, h.JL)(t, d.Z, m.Z)
-  }));
-  return null != s && a ? (0, l.jsxs)(u.Clickable, {
-    onClick: () => n(t),
-    className: f.guildRow,
-    children: [(0, l.jsx)(_.Z, {
-      guild: s,
-      size: _.Z.Sizes.SMALL,
-      className: f.guildIcon
-    }), (0, l.jsx)(u.Text, {
-      variant: "text-md/normal",
-      className: f.guildName,
-      children: s.toString()
-    }), (0, l.jsx)(S.Z, {
-      direction: S.Z.Directions.RIGHT,
-      className: f.guildArrow
-    })]
-  }) : null
+            guildId: n,
+            onClick: t
+        } = e, s = (0, o.e7)([d.Z], () => d.Z.getGuild(n)), a = (0, o.e7)([
+            c.ZP,
+            d.Z,
+            m.Z
+        ], () => c.ZP.getChannels(n)[c.Zb].some(e => {
+            let {channel: n} = e;
+            return (0, g.JL)(n, d.Z, m.Z);
+        }));
+    return null != s && a ? (0, l.jsxs)(u.Clickable, {
+        onClick: () => t(n),
+        className: Z.guildRow,
+        children: [
+            (0, l.jsx)(_.Z, {
+                guild: s,
+                size: _.Z.Sizes.SMALL,
+                className: Z.guildIcon
+            }),
+            (0, l.jsx)(u.Text, {
+                variant: 'text-md/normal',
+                className: Z.guildName,
+                children: s.toString()
+            }),
+            (0, l.jsx)(S.Z, {
+                direction: S.Z.Directions.RIGHT,
+                className: Z.guildArrow
+            })
+        ]
+    }) : null;
 }
-
 function x(e) {
-  let {
-    onSelectGuild: t
-  } = e, n = (0, o.e7)([E.ZP], () => E.ZP.getGuildFolders());
-  return (0, l.jsx)(g.Z, {
-    title: Z.Z.Messages.GO_LIVE_MODAL_SELECT_GUILD_FORM_TITLE,
-    scrollerClassName: a()(f.guildScroller, C.marginBottom),
-    children: r().flatMap(n, e => {
-      let {
-        guildIds: n
-      } = e;
-      return n.map(e => (0, l.jsx)(N, {
-        guildId: e,
-        onClick: t
-      }, e))
-    })
-  })
+    let {onSelectGuild: n} = e, t = (0, o.e7)([E.ZP], () => E.ZP.getGuildFolders());
+    return (0, l.jsx)(h.Z, {
+        title: C.Z.Messages.GO_LIVE_MODAL_SELECT_GUILD_FORM_TITLE,
+        scrollerClassName: a()(Z.guildScroller, N.marginBottom),
+        children: r().flatMap(t, e => {
+            let {guildIds: t} = e;
+            return t.map(e => (0, l.jsx)(I, {
+                guildId: e,
+                onClick: n
+            }, e));
+        })
+    });
 }

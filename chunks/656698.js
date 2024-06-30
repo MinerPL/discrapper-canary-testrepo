@@ -1,31 +1,29 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return a;
+    }
 });
-var i = n(81825);
-
-function r(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: n,
-    enumerable: !0,
-    configurable: !0,
-    writable: !0
-  }) : e[t] = n, e
+var r = n(81825);
+function i(e, t, n) {
+    return t in e ? Object.defineProperty(e, t, {
+        value: n,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+    }) : e[t] = n, e;
 }
-class s extends i.Z {
-  static fromServer(e) {
-    let {
-      sku_id: t,
-      ...n
-    } = e;
-    return new s({
-      ...n,
-      skuId: t
-    })
-  }
-  constructor(e) {
-    super(), r(this, "id", void 0), r(this, "skuId", void 0), this.id = e.id, this.skuId = e.skuId
-  }
+class a extends r.Z {
+    static fromServer(e) {
+        let {
+            sku_id: t,
+            ...n
+        } = e;
+        return new a({
+            ...n,
+            skuId: t
+        });
+    }
+    constructor(e) {
+        super(), i(this, 'id', void 0), i(this, 'skuId', void 0), this.id = e.id, this.skuId = e.skuId;
+    }
 }

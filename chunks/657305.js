@@ -1,11 +1,9 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return i;
+    }
 });
-var i = n(689938);
-
-function r(e) {
-  return null != e && "" !== e ? e : i.Z.Messages.EMBEDDED_ACTIVITIES_IN_ACTIVITY
+var r = n(689938);
+function i(e) {
+    return null != e && '' !== e ? e : r.Z.Messages.EMBEDDED_ACTIVITIES_IN_ACTIVITY;
 }

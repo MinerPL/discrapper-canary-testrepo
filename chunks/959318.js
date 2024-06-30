@@ -1,6 +1,5 @@
-"use strict";
-var e = n(680625);
-t.exports = function(t) {
-  var r = +t;
-  return r != r || 0 === r ? 0 : e(r)
-}
+var e = r(680625);
+t.exports = function (t) {
+    var n = +t;
+    return n != n || 0 === n ? 0 : e(n);
+};

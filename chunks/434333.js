@@ -1,50 +1,48 @@
-"use strict";
 n.d(t, {
-  k: function() {
-    return c
-  },
-  m: function() {
-    return d
-  }
+    k: function () {
+        return d;
+    },
+    m: function () {
+        return c;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(1561),
-  l = n(465670),
-  u = n(759231),
-  _ = n(835023);
-let d = {
-    RED: _.backgroundRed,
-    BACKGROUND_TERTIARY: _.backgroundTertiary,
-    BACKGROUND_ACCENT: _.backgroundAccent
-  },
-  c = r.forwardRef(function(e, t) {
-    let {
-      role: n,
-      children: r,
-      className: s,
-      onDismiss: c,
-      backgroundColor: E = d.RED,
-      icon: I = u.Z,
-      iconClassName: T
-    } = e;
-    return (0, i.jsxs)("div", {
-      className: o()(_.error, s, E),
-      ref: t,
-      children: [(0, i.jsx)(I, {
-        className: o()(_.icon, T)
-      }), (0, i.jsx)("div", {
-        role: n,
-        className: _.text,
-        children: r
-      }), null != c ? (0, i.jsx)(a.P, {
-        onClick: c,
-        className: _.errorClose,
-        children: (0, i.jsx)(l.Z, {
-          className: _.errorCloseIcon
-        })
-      }) : null]
-    })
-  })
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(1561), l = n(481060), u = n(122085);
+let c = {
+        RED: u.backgroundRed,
+        BACKGROUND_TERTIARY: u.backgroundTertiary,
+        BACKGROUND_ACCENT: u.backgroundAccent
+    }, d = i.forwardRef(function (e, t) {
+        let {
+            role: n,
+            children: i,
+            className: a,
+            onDismiss: d,
+            backgroundColor: _ = c.RED,
+            icon: E = l.CircleExclamationPointIcon,
+            iconClassName: f
+        } = e;
+        return (0, r.jsxs)('div', {
+            className: o()(u.error, a, _),
+            ref: t,
+            children: [
+                (0, r.jsx)(E, {
+                    className: o()(u.icon, f),
+                    color: 'currentColor'
+                }),
+                (0, r.jsx)('div', {
+                    role: n,
+                    className: u.text,
+                    children: i
+                }),
+                null != d ? (0, r.jsx)(s.P, {
+                    onClick: d,
+                    className: u.errorClose,
+                    children: (0, r.jsx)(l.CloseSmallIcon, {
+                        size: 'md',
+                        color: 'currentColor',
+                        className: u.errorCloseIcon
+                    })
+                }) : null
+            ]
+        });
+    });

@@ -1,40 +1,39 @@
-"use strict";
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(38068),
-  l = n(689938),
-  u = n(975681);
-t.Z = r.forwardRef(function(e, t) {
-  let {
-    className: n,
-    contentClassName: r,
-    isUnread: s,
-    children: _,
-    id: d,
-    role: c,
-    "aria-label": E
-  } = e;
-  return (0, i.jsxs)("div", {
-    className: o()(n, {
-      [u.divider]: !0,
-      [u.isUnread]: s,
-      [u.hasContent]: null != _
-    }),
-    ref: t,
-    id: d,
-    role: c,
-    "aria-label": E,
-    children: [null != _ ? (0, i.jsx)("span", {
-      className: o()(u.content, r),
-      children: _
-    }) : null, s ? (0, i.jsxs)("span", {
-      className: u.unreadPill,
-      children: [(0, i.jsx)(a.Z, {
-        foreground: u.unreadPillCapStroke,
-        className: u.unreadPillCap
-      }), l.Z.Messages.NEW]
-    }) : null]
-  })
-})
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(38068), l = n(689938), u = n(759861);
+t.Z = i.forwardRef(function (e, t) {
+    let {
+        className: n,
+        contentClassName: i,
+        isUnread: a,
+        children: c,
+        id: d,
+        role: _,
+        'aria-label': E
+    } = e;
+    return (0, r.jsxs)('div', {
+        className: o()(n, {
+            [u.divider]: !0,
+            [u.isUnread]: a,
+            [u.hasContent]: null != c
+        }),
+        ref: t,
+        id: d,
+        role: _,
+        'aria-label': E,
+        children: [
+            null != c ? (0, r.jsx)('span', {
+                className: o()(u.content, i),
+                children: c
+            }) : null,
+            a ? (0, r.jsxs)('span', {
+                className: u.unreadPill,
+                children: [
+                    (0, r.jsx)(s.Z, {
+                        foreground: u.unreadPillCapStroke,
+                        className: u.unreadPillCap
+                    }),
+                    l.Z.Messages.NEW
+                ]
+            }) : null
+        ]
+    });
+});

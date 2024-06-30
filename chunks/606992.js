@@ -1,55 +1,63 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return o
-  }
+    Z: function () {
+        return o;
+    }
 }), n(47120);
-var i = n(470079),
-  r = n(40851),
-  s = n(590921);
-
+var r = n(470079), i = n(40851), a = n(590921);
 function o(e) {
-  let {
-    editorHeight: t,
-    type: n,
-    state: o,
-    isInPopoutExperiment: a = !1
-  } = e, [l, u] = i.useState(void 0), _ = null == o ? void 0 : o.query, d = null == o ? void 0 : o.isVisible, {
-    renderWindow: c
-  } = i.useContext(r.ZP), E = i.useCallback(() => {
-    var e, t, i, r;
-    if (null != o && (null == _ || !d)) {
-      u(void 0);
-      return
-    }
-    if ((null == _ ? void 0 : _.type) === s.eq.GIFS || null != n && !a && !(null === (e = n.autocomplete) || void 0 === e ? void 0 : e.alwaysUseLayer)) {
-      u(null);
-      return
-    }
-    let l = c.document.getSelection(),
-      E = null != l && l.rangeCount > 0 ? l.getRangeAt(0) : null;
-    if (null == E) return;
-    let I = E.startContainer,
-      T = E.startOffset;
-    for (; null != I;) {
-      if (I.nodeType !== Node.TEXT_NODE || null == I.nodeValue) {
-        u(null);
-        return
-      }
-      if ((null === (t = I.nodeValue) || void 0 === t ? void 0 : t.length) === 0) {
-        T = null !== (r = null == (I = I.previousSibling) ? void 0 : null === (i = I.nodeValue) || void 0 === i ? void 0 : i.length) && void 0 !== r ? r : 0;
-        continue
-      }
-      null != _ && (T >= _.queryText.length ? T -= _.queryText.length : T = 0);
-      break
-    }
-    if (null == I) return;
-    let h = c.document.createRange();
-    h.setStart(I, T), h.setEnd(I, T);
-    let S = h.getBoundingClientRect();
-    if ((null == S ? void 0 : S.height) !== 0) u(null != S ? S : null)
-  }, [a, c.document, o, d, _, n]);
-  return i.useEffect(() => (c.document.addEventListener("selectionchange", E), () => c.document.removeEventListener("selectionchange", E)), [c.document, E]), i.useEffect(() => {
-    E()
-  }, [E, t]), l
+    let {
+            editorHeight: t,
+            type: n,
+            state: o,
+            isInPopoutExperiment: s = !1
+        } = e, [l, u] = r.useState(void 0), c = null == o ? void 0 : o.query, d = null == o ? void 0 : o.isVisible, {renderWindow: _} = r.useContext(i.ZP), E = r.useCallback(() => {
+            var e, t, r, i;
+            if (null != o && (null == c || !d)) {
+                u(void 0);
+                return;
+            }
+            if ((null == c ? void 0 : c.type) === a.eq.GIFS || null != n && !s && !(null === (e = n.autocomplete) || void 0 === e ? void 0 : e.alwaysUseLayer)) {
+                u(null);
+                return;
+            }
+            let l = _.document.getSelection(), E = null != l && l.rangeCount > 0 ? l.getRangeAt(0) : null;
+            if (null == E)
+                return;
+            let f = E.startContainer, h = E.startOffset;
+            for (; null != f;) {
+                if (f.nodeType !== Node.TEXT_NODE || null == f.nodeValue) {
+                    u(null);
+                    return;
+                }
+                if ((null === (t = f.nodeValue) || void 0 === t ? void 0 : t.length) === 0) {
+                    h = null !== (i = null == (f = f.previousSibling) ? void 0 : null === (r = f.nodeValue) || void 0 === r ? void 0 : r.length) && void 0 !== i ? i : 0;
+                    continue;
+                }
+                null != c && (h >= c.queryText.length ? h -= c.queryText.length : h = 0);
+                break;
+            }
+            if (null == f)
+                return;
+            let p = _.document.createRange();
+            p.setStart(f, h), p.setEnd(f, h);
+            let m = p.getBoundingClientRect();
+            if ((null == m ? void 0 : m.height) !== 0)
+                u(null != m ? m : null);
+        }, [
+            s,
+            _.document,
+            o,
+            d,
+            c,
+            n
+        ]);
+    return r.useEffect(() => (_.document.addEventListener('selectionchange', E), () => _.document.removeEventListener('selectionchange', E)), [
+        _.document,
+        E
+    ]), r.useEffect(() => {
+        E();
+    }, [
+        E,
+        t
+    ]), l;
 }

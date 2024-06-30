@@ -1,48 +1,44 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return a
-  }
+    Z: function () {
+        return s;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(403182),
-  o = n(715246);
-class a extends r.PureComponent {
-  render() {
-    let {
-      src: e,
-      fileSize: t,
-      fileName: n,
-      className: r,
-      playable: a,
-      volume: l,
-      renderLinkComponent: u,
-      onVolumeChange: _,
-      onVolumeShow: d,
-      onVolumeHide: c,
-      autoMute: E,
-      onMute: I,
-      mimeType: T,
-      onPlay: h
-    } = this.props;
-    return (0, i.jsx)(o.ZP, {
-      src: e,
-      fileName: n,
-      fileSize: (0, s.Ng)(t),
-      fileSizeBytes: t,
-      type: o.ZP.Types.AUDIO,
-      className: r,
-      playable: a,
-      volume: l,
-      onMute: I,
-      autoMute: E,
-      onVolumeChange: _,
-      onVolumeShow: d,
-      onVolumeHide: c,
-      renderLinkComponent: u,
-      mimeType: T,
-      onPlay: h
-    })
-  }
+var r = n(735250), i = n(470079), a = n(640108), o = n(403182);
+class s extends i.PureComponent {
+    render() {
+        let {
+            src: e,
+            fileSize: t,
+            fileName: n,
+            className: i,
+            playable: s,
+            volume: l,
+            renderLinkComponent: u,
+            onVolumeChange: c,
+            onVolumeShow: d,
+            onVolumeHide: _,
+            autoMute: E,
+            onMute: f,
+            mimeType: h,
+            onPlay: p
+        } = this.props;
+        return (0, r.jsx)(a.ZP, {
+            src: e,
+            fileName: n,
+            fileSize: (0, o.Ng)(t),
+            fileSizeBytes: t,
+            type: a.ZP.Types.AUDIO,
+            className: i,
+            playable: s,
+            volume: l,
+            onMute: f,
+            autoMute: E,
+            onVolumeChange: c,
+            onVolumeShow: d,
+            onVolumeHide: _,
+            renderLinkComponent: u,
+            mimeType: h,
+            onPlay: p
+        });
+    }
 }

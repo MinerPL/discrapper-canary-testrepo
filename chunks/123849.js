@@ -1,0 +1,21 @@
+e.exports = {
+    scrollContainer: 'scrollContainer_a9c32f',
+    scroller: 'scroller_a9c32f',
+    activityDetailsContainer: 'activityDetailsContainer_a9c32f',
+    heroVideoContainer: 'heroVideoContainer_a9c32f',
+    heroVideo: 'heroVideo_a9c32f',
+    detailsTitle: 'detailsTitle_a9c32f',
+    detailsDetails: 'detailsDetails_a9c32f',
+    detailItem: 'detailItem_a9c32f',
+    detailItemText: 'detailItemText_a9c32f',
+    detailsDescription: 'detailsDescription_a9c32f',
+    divider: 'divider_a9c32f',
+    imagesContainer: 'imagesContainer_a9c32f',
+    activityImage: 'activityImage_a9c32f',
+    launcherOuterContainer: 'launcherOuterContainer_a9c32f',
+    launcherInnerContainer: 'launcherInnerContainer_a9c32f',
+    launchImage: 'launchImage_a9c32f',
+    brokenLaunchImage: 'brokenLaunchImage_a9c32f',
+    singleRowShareContainer: 'singleRowShareContainer_a9c32f',
+    shareIconButton: 'shareIconButton_a9c32f'
+};

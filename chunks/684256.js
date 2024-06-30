@@ -1,56 +1,55 @@
-"use strict";
-n.d(t, {
-  Z: function() {
-    return u
-  }
+t.d(n, {
+    Z: function () {
+        return p;
+    }
 });
-var i = n(735250),
-  r = n(481060),
-  s = n(695676),
-  o = n(98880),
-  a = n(772606),
-  l = n(274017);
-
-function u(e) {
-  let {
-    title: t,
-    look: n,
-    items: u
-  } = e, {
-    pushHistory: _
-  } = (0, s.hH)();
-  return (0, i.jsxs)("div", {
-    className: l.container,
-    children: [(0, i.jsxs)("div", {
-      className: l.header,
-      children: [(0, i.jsx)(a.Z, {
-        className: l.backButton
-      }), (0, i.jsx)(r.Heading, {
-        variant: "heading-md/medium",
-        color: "header-primary",
-        children: t
-      })]
-    }), (0, i.jsx)(r.Scroller, {
-      children: (0, i.jsx)("div", {
-        className: l.appGrid,
-        children: u.map(e => {
-          let {
-            application: t,
-            isPartner: r
-          } = e;
-          return (0, i.jsx)(o.Z, {
-            application: t,
-            look: n,
-            onClick: e => {
-              e.stopPropagation(), _({
-                type: s.gc.APPLICATION,
-                application: t
-              })
-            },
-            isPartner: r
-          }, t.id)
-        })
-      })
-    })]
-  })
+var i = t(735250), l = t(470079), a = t(481060), r = t(895924), s = t(424602), o = t(827498), c = t(98880), u = t(772606), d = t(689938), m = t(838246);
+function p(e) {
+    let {
+            channel: n,
+            entrypoint: t,
+            title: p,
+            look: _,
+            items: E,
+            sectionName: A
+        } = e, {clickOnHomeActivityOpensAppDetail: N} = s.m1.getCurrentConfig({ location: 'AppLauncherApplicationListViewScreen' }, { autoTrackExposure: !1 }), h = l.useMemo(() => t === o._b.TEXT || N ? c.kA : c.qR, [
+            N,
+            t
+        ]);
+    return (0, i.jsxs)('section', {
+        className: m.container,
+        'aria-label': d.Z.Messages.APP_LAUNCHER_SECTION_VIEW_MORE_ARIA_LABEL.format({ sectionTitle: p }),
+        children: [
+            (0, i.jsxs)('div', {
+                className: m.header,
+                children: [
+                    (0, i.jsx)(u.Z, { className: m.backButton }),
+                    (0, i.jsx)(a.Heading, {
+                        variant: 'heading-md/medium',
+                        color: 'header-primary',
+                        children: p
+                    })
+                ]
+            }),
+            (0, i.jsx)(a.Scroller, {
+                children: (0, i.jsx)('div', {
+                    className: m.appGrid,
+                    children: E.map(e => {
+                        let {
+                            application: t,
+                            isPartner: l
+                        } = e;
+                        return (0, i.jsx)(h, {
+                            channel: n,
+                            application: t,
+                            look: _,
+                            isPartner: l,
+                            sectionName: A,
+                            location: r.Vh.APP_LAUNCHER_LIST_VIEW_ALL
+                        }, t.id);
+                    })
+                })
+            })
+        ]
+    });
 }

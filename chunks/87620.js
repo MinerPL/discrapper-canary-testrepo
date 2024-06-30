@@ -1,29 +1,19 @@
-"use strict";
 n.d(t, {
-  oV: function() {
-    return r
-  }
-});
-let i = (0, n(818083).B)({
-  kind: "user",
-  id: "2023-09_iar_user_reporting",
-  label: "Safety Experience IAR User Reporting",
-  defaultConfig: {
-    enabled: !1
-  },
-  treatments: [{
-    id: 1,
-    label: "Enabled",
-    config: {
-      enabled: !0
+    oV: function () {
+        return i;
     }
-  }]
 });
-
-function r(e) {
-  return i.useExperiment({
-    location: e
-  }, {
-    autoTrackExposure: !0
-  }).enabled
+let r = (0, n(818083).B)({
+    kind: 'user',
+    id: '2023-09_iar_user_reporting',
+    label: 'Safety Experience IAR User Reporting',
+    defaultConfig: { enabled: !1 },
+    treatments: [{
+            id: 1,
+            label: 'Enabled',
+            config: { enabled: !0 }
+        }]
+});
+function i(e) {
+    return r.useExperiment({ location: e }, { autoTrackExposure: !0 }).enabled;
 }

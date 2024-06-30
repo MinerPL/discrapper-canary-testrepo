@@ -1,13 +1,12 @@
-"use strict";
-n.d(e, {
-  u: function() {
-    return i
-  }
+r.d(e, {
+    u: function () {
+        return _;
+    }
 });
-var r = n(607190);
-let i = (t, e) => {
-  let n = i => {
-    ("pagehide" === i.type || "hidden" === r.m.document.visibilityState) && (t(i), e && (removeEventListener("visibilitychange", n, !0), removeEventListener("pagehide", n, !0)))
-  };
-  addEventListener("visibilitychange", n, !0), addEventListener("pagehide", n, !0)
-}
+var n = r(607190);
+let _ = (t, e) => {
+    let r = _ => {
+        ('pagehide' === _.type || 'hidden' === n.m.document.visibilityState) && (t(_), e && (removeEventListener('visibilitychange', r, !0), removeEventListener('pagehide', r, !0)));
+    };
+    addEventListener('visibilitychange', r, !0), addEventListener('pagehide', r, !0);
+};

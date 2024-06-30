@@ -1,11 +1,10 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return i;
+    }
 });
-var i = n(701488);
-
-function r(e) {
-  if (null != e && null != e.url && i.Fr.test(e.url)) return e.url
+var r = n(701488);
+function i(e) {
+    if (null != e && null != e.url && r.Fr.test(e.url))
+        return e.url;
 }

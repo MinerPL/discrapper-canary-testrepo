@@ -1,7 +1,6 @@
-"use strict";
-n.d(e, {
-  f: function() {
-    return r
-  }
+r.d(e, {
+    f: function () {
+        return n;
+    }
 });
-let r = () => `v3-${Date.now()}-${Math.floor(Math.random()*(9e12-1))+1e12}`
+let n = () => `v3-${ Date.now() }-${ Math.floor(Math.random() * (9000000000000 - 1)) + 1000000000000 }`;

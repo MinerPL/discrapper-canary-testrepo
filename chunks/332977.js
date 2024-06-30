@@ -1,2 +1,1 @@
-"use strict";
-n(187203)("hasInstance")
+n(187203)('hasInstance');

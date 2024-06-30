@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  z: function() {
-    return i
-  }
-}), n(47120), (r = i || (i = {})).MATCH_ALL = "match_all", r.MATCH_SOME = "match_some"
+    z: function () {
+        return r;
+    }
+}), n(47120), (i = r || (r = {})).MATCH_ALL = 'match_all', i.MATCH_SOME = 'match_some';

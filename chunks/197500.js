@@ -1,7 +1,0 @@
-"use strict";
-n.d(t, {
-  M: function() {
-    return i.M
-  }
-});
-var i = n(492631)

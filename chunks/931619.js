@@ -1,20 +1,20 @@
-"use strict";
-let i;
+let r;
 n(653041);
-i = n(538036).Z;
-let r = [],
-  s = !1;
+r = n(538036).Z;
+let i = [], a = !1;
 t.Z = {
-  ...i,
-  awaitOnline: () => new Promise(e => {
-    if (i.isOnline()) return e();
-    {
-      if (r.push(e), s) return;
-      s = !0;
-      let t = () => {
-        r.forEach(e => e()), r.length = 0, s = !1, i.removeOnlineCallback(t)
-      };
-      i.addOnlineCallback(t)
-    }
-  })
-}
+    ...r,
+    awaitOnline: () => new Promise(e => {
+        if (r.isOnline())
+            return e();
+        {
+            if (i.push(e), a)
+                return;
+            a = !0;
+            let t = () => {
+                i.forEach(e => e()), i.length = 0, a = !1, r.removeOnlineCallback(t);
+            };
+            r.addOnlineCallback(t);
+        }
+    })
+};

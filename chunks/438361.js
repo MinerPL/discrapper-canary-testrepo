@@ -1,2 +1,1 @@
-"use strict";
-e(77623)("createBrowserHistory"), t.exports = e(792661).createBrowserHistory
+n(77623)('createBrowserHistory'), e.exports = n(792661).createBrowserHistory;

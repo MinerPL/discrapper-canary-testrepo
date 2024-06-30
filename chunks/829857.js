@@ -1,7 +1,6 @@
-"use strict";
-var n, i;
-t.d(s, {
-  C: function() {
-    return n
-  }
-}), (i = n || (n = {}))[i.UNSUBMITTED = 1] = "UNSUBMITTED", i[i.PENDING = 2] = "PENDING", i[i.ACTION_REQUIRED = 3] = "ACTION_REQUIRED", i[i.ACTIVE = 4] = "ACTIVE", i[i.BLOCKED = 5] = "BLOCKED", i[i.SUSPENDED = 6] = "SUSPENDED"
+var s, a;
+n.d(t, {
+    C: function () {
+        return s;
+    }
+}), (a = s || (s = {}))[a.UNSUBMITTED = 1] = 'UNSUBMITTED', a[a.PENDING = 2] = 'PENDING', a[a.ACTION_REQUIRED = 3] = 'ACTION_REQUIRED', a[a.ACTIVE = 4] = 'ACTIVE', a[a.BLOCKED = 5] = 'BLOCKED', a[a.SUSPENDED = 6] = 'SUSPENDED';

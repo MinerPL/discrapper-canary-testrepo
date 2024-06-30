@@ -1,10 +1,8 @@
-"use strict";
-
-function i(e, t) {
-  return "activityembed:".concat(e, ":").concat(t)
+function r(e, t) {
+    return 'activityembed:'.concat(e, ':').concat(t);
 }
 n.d(t, {
-  Z: function() {
-    return i
-  }
-})
+    Z: function () {
+        return r;
+    }
+});

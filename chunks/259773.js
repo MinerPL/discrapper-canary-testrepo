@@ -1,54 +1,52 @@
-"use strict";
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(120356),
-  s = n.n(r),
-  o = n(481060),
-  a = n(278297),
-  l = n(138599),
-  u = n(897353),
-  _ = n(689938),
-  d = n(875170);
+var i = n(120356), a = n.n(i), o = n(481060), s = n(278297), l = n(138599), u = n(689938), c = n(404261);
 t.Z = e => {
-  let {
-    onPlay: t,
-    externalURL: n,
-    className: r,
-    renderLinkComponent: c,
-    inactive: E,
-    messageId: I,
-    channelId: T
-  } = e;
-  return (0, i.jsx)(a.G.Consumer, {
-    children: e => (0, i.jsxs)("div", {
-      className: s()(r, d.wrapper, {
-        [d.disableInteractions]: e.disableInteractions
-      }),
-      children: [E && null == t ? (0, i.jsx)("div", {
-        className: d.iconWrapper,
-        children: (0, i.jsx)(u.Z, {
-          className: d.iconPlay
+    let {
+        onPlay: t,
+        externalURL: n,
+        className: i,
+        renderLinkComponent: d,
+        inactive: _,
+        messageId: E,
+        channelId: f
+    } = e;
+    return (0, r.jsx)(s.G.Consumer, {
+        children: e => (0, r.jsxs)('div', {
+            className: a()(i, c.wrapper, { [c.disableInteractions]: e.disableInteractions }),
+            children: [
+                _ && null == t ? (0, r.jsx)('div', {
+                    className: c.iconWrapper,
+                    children: (0, r.jsx)(o.PlayIcon, {
+                        size: 'xs',
+                        color: 'currentColor',
+                        className: c.iconPlay
+                    })
+                }) : null,
+                null != t ? (0, r.jsx)(o.Clickable, {
+                    onClick: t,
+                    className: a()(c.iconWrapperActive),
+                    tabIndex: _ ? -1 : 0,
+                    'aria-label': u.Z.Messages.PLAY,
+                    children: (0, r.jsx)(o.PlayIcon, {
+                        size: 'xs',
+                        color: 'currentColor',
+                        className: c.iconPlay
+                    })
+                }) : null,
+                null != n ? d({
+                    href: n,
+                    target: '_blank',
+                    rel: 'noreferrer noopener',
+                    className: c.iconWrapperActive,
+                    children: (0, r.jsx)(l.Z, {
+                        'aria-label': u.Z.Messages.OPEN_LINK,
+                        className: null != t ? c.iconExternalMargins : c.iconExternal
+                    }),
+                    messageId: E,
+                    channelId: f
+                }) : null
+            ]
         })
-      }) : null, null != t ? (0, i.jsx)(o.Clickable, {
-        onClick: t,
-        className: s()(d.iconWrapperActive),
-        tabIndex: E ? -1 : 0,
-        "aria-label": _.Z.Messages.PLAY,
-        children: (0, i.jsx)(u.Z, {
-          className: d.iconPlay
-        })
-      }) : null, null != n ? c({
-        href: n,
-        target: "_blank",
-        rel: "noreferrer noopener",
-        className: d.iconWrapperActive,
-        children: (0, i.jsx)(l.Z, {
-          "aria-label": _.Z.Messages.OPEN_LINK,
-          className: null != t ? d.iconExternalMargins : d.iconExternal
-        }),
-        messageId: I,
-        channelId: T
-      }) : null]
-    })
-  })
-}
+    });
+};

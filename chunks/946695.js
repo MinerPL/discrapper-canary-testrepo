@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  a: function() {
-    return i
-  }
-}), (r = i || (i = {})).Destroy = "destroy", r.Silence = "silence", r.Connection = "connection", r.DeviceChange = "devicechange", r.VolumeChange = "volumechange", r.VoiceActivity = "voiceactivity", r.WatchdogTimeout = "watchdogtimeout", r.AudioPermission = "audio-permission", r.VideoPermission = "video-permission", r.DesktopSourceEnd = "desktopsourceend", r.ConnectionStats = "connection-stats", r.VideoInputInitialized = "video-input-initialized", r.ClipsRecordingRestartNeeded = "clips-recording-restart-needed", r.ClipsInitFailure = "clips-init-failure", r.ClipsRecordingEnded = "clips-recording-ended"
+    a: function () {
+        return r;
+    }
+}), (i = r || (r = {})).Destroy = 'destroy', i.Silence = 'silence', i.Connection = 'connection', i.DeviceChange = 'devicechange', i.VolumeChange = 'volumechange', i.VoiceActivity = 'voiceactivity', i.WatchdogTimeout = 'watchdogtimeout', i.AudioPermission = 'audio-permission', i.VideoPermission = 'video-permission', i.DesktopSourceEnd = 'desktopsourceend', i.ConnectionStats = 'connection-stats', i.VideoInputInitialized = 'video-input-initialized', i.ClipsRecordingRestartNeeded = 'clips-recording-restart-needed', i.ClipsInitFailure = 'clips-init-failure', i.ClipsRecordingEnded = 'clips-recording-ended';

@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  q: function() {
-    return i
-  }
-}), (r = i || (i = {}))[r.FILLED = 0] = "FILLED", r[r.CUSTOM = 1] = "CUSTOM"
+    q: function () {
+        return r;
+    }
+}), (i = r || (r = {}))[i.FILLED = 0] = 'FILLED', i[i.CUSTOM = 1] = 'CUSTOM';

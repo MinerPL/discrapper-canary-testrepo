@@ -1,90 +1,75 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return N
-  }
-}), t(47120);
-var n = t(735250);
-t(470079);
-var i = t(442837),
-  l = t(481060),
-  a = t(430824),
-  r = t(723047),
-  o = t(727843),
-  c = t(290348),
-  d = t(971792),
-  u = t(155758),
-  E = t(331146),
-  _ = t(798680),
-  I = t(689938),
-  T = t(169769);
-
-function N() {
-  let {
-    editStateId: e,
-    guildId: s
-  } = (0, o.N)(), [N, m] = c.XZ(e, s), S = (0, d.Z)(s, e), {
-    setCurrentTab: h
-  } = (0, _.dw)(), g = () => h(_.ue.EMOJIS), x = (0, i.e7)([a.Z], () => a.Z.getGuild(s)), C = null == x ? void 0 : x.getMaxRoleSubscriptionEmojiSlots();
-
-  function R(e) {
-    null == N ? m(new Set(e)) : m(new Set([...N, ...e]))
-  }
-
-  function L(e) {
-    let s = new Set(N);
-    s.delete(e), m(s)
-  }
-  let O = (0, r.mY)();
-  return (0, n.jsxs)(l.FormSection, {
-    title: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_TITLE,
-    disabled: O,
-    children: [(0, n.jsxs)(l.FormText, {
-      type: l.FormText.Types.DESCRIPTION,
-      className: T.formDescription,
-      disabled: O,
-      children: [I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_DESCRIPTION.format({
-        premiumEmojiMaximum: C
-      }), (0, n.jsx)("br", {}), I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_MANAGE_LINK.format({
-        handleTransitionToManageEmoji: g
-      })]
-    }), (0, n.jsx)(E.E, {
-      tierEmojiIds: N,
-      guildId: s,
-      onRemoveEmoji: function(e) {
-        e.roles.filter(e => e !== (null == S ? void 0 : S.id)).length > 0 ? L(e.id) : (0, l.openModalLazy)(async () => {
-          let {
-            default: s
-          } = await t.e("59128").then(t.bind(t, 28564));
-          return t => (0, n.jsx)(s, {
-            ...t,
-            onConfirmDelete: () => {
-              L(e.id), t.onClose()
-            }
-          })
-        })
-      }
-    }), null != N && N.size > 0 ? (0, n.jsx)(l.Spacer, {
-      size: 8
-    }) : null, (0, n.jsx)(u.s, {
-      onClick: function() {
-        (0, l.openModalLazy)(async () => {
-          let {
-            EmojiAddModal: e
-          } = await Promise.all([t.e("99387"), t.e("21112")]).then(t.bind(t, 301160));
-          return t => (0, n.jsx)(e, {
-            ...t,
-            guildId: s,
-            initialTierEmojiIds: N,
-            onSubmit: R,
-            transitionToManageEmoji: () => {
-              g(), t.onClose()
-            }
-          })
-        })
-      },
-      disabled: O,
-      children: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_ADD_BUTTON_TEXT
-    })]
-  })
+n.d(t, {
+    Z: function () {
+        return m;
+    }
+}), n(47120);
+var s = n(735250);
+n(470079);
+var a = n(442837), i = n(481060), r = n(430824), l = n(723047), o = n(727843), c = n(290348), d = n(971792), u = n(155758), _ = n(331146), E = n(798680), I = n(689938), T = n(849456);
+function m() {
+    let {
+            editStateId: e,
+            guildId: t
+        } = (0, o.N)(), [m, N] = c.XZ(e, t), S = (0, d.Z)(t, e), {setCurrentTab: h} = (0, E.dw)(), g = () => h(E.ue.EMOJIS), C = (0, a.e7)([r.Z], () => r.Z.getGuild(t)), x = null == C ? void 0 : C.getMaxRoleSubscriptionEmojiSlots();
+    function p(e) {
+        null == m ? N(new Set(e)) : N(new Set([
+            ...m,
+            ...e
+        ]));
+    }
+    function R(e) {
+        let t = new Set(m);
+        t.delete(e), N(t);
+    }
+    let f = (0, l.mY)();
+    return (0, s.jsxs)(i.FormSection, {
+        title: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_TITLE,
+        disabled: f,
+        children: [
+            (0, s.jsxs)(i.FormText, {
+                type: i.FormText.Types.DESCRIPTION,
+                className: T.formDescription,
+                disabled: f,
+                children: [
+                    I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_DESCRIPTION.format({ premiumEmojiMaximum: x }),
+                    (0, s.jsx)('br', {}),
+                    I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_MANAGE_LINK.format({ handleTransitionToManageEmoji: g })
+                ]
+            }),
+            (0, s.jsx)(_.E, {
+                tierEmojiIds: m,
+                guildId: t,
+                onRemoveEmoji: function (e) {
+                    e.roles.filter(e => e !== (null == S ? void 0 : S.id)).length > 0 ? R(e.id) : (0, i.openModalLazy)(async () => {
+                        let {default: t} = await n.e('59128').then(n.bind(n, 28564));
+                        return n => (0, s.jsx)(t, {
+                            ...n,
+                            onConfirmDelete: () => {
+                                R(e.id), n.onClose();
+                            }
+                        });
+                    });
+                }
+            }),
+            null != m && m.size > 0 ? (0, s.jsx)(i.Spacer, { size: 8 }) : null,
+            (0, s.jsx)(u.s, {
+                onClick: function () {
+                    (0, i.openModalLazy)(async () => {
+                        let {EmojiAddModal: e} = await n.e('21112').then(n.bind(n, 301160));
+                        return n => (0, s.jsx)(e, {
+                            ...n,
+                            guildId: t,
+                            initialTierEmojiIds: m,
+                            onSubmit: p,
+                            transitionToManageEmoji: () => {
+                                g(), n.onClose();
+                            }
+                        });
+                    });
+                },
+                disabled: f,
+                children: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_ADD_BUTTON_TEXT
+            })
+        ]
+    });
 }

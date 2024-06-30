@@ -1,139 +1,119 @@
-"use strict";
 n.d(t, {
-  Hg: function() {
-    return f
-  },
-  KC: function() {
-    return d
-  },
-  QX: function() {
-    return m
-  },
-  TD: function() {
-    return A
-  },
-  Xf: function() {
-    return T
-  },
-  Y4: function() {
-    return I
-  },
-  _w: function() {
-    return c
-  },
-  vc: function() {
-    return E
-  }
+    Hg: function () {
+        return I;
+    },
+    KC: function () {
+        return d;
+    },
+    QX: function () {
+        return S;
+    },
+    TD: function () {
+        return g;
+    },
+    Xf: function () {
+        return h;
+    },
+    Y4: function () {
+        return f;
+    },
+    _w: function () {
+        return _;
+    },
+    vc: function () {
+        return E;
+    }
 });
-var i = n(913527),
-  r = n.n(i),
-  s = n(232551),
-  o = n(706454);
-let a = 864e5,
-  l = Object.create(null);
-
+var r = n(913527), i = n.n(r), a = n(232551), o = n(706454);
+let s = 86400000, l = Object.create(null);
 function u(e) {
-  let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-    n = e.getTime();
-  return !t && (n -= 6e4 * e.getTimezoneOffset()), Math.floor(n / a) * a
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1], n = e.getTime();
+    return !t && (n -= 60000 * e.getTimezoneOffset()), Math.floor(n / s) * s;
 }
-
-function _(e, t) {
-  return Math.floor((u(e, !1) - u(t, !1)) / a)
+function c(e, t) {
+    return Math.floor((u(e, !1) - u(t, !1)) / s);
 }
-
 function d(e, t) {
-  return Math.abs(+e - +t) <= a && e.getDate() === t.getDate()
+    return Math.abs(+e - +t) <= s && e.getDate() === t.getDate();
 }
-
-function c(e, t, n) {
-  return Math.abs(e.valueOf() - t.valueOf()) < n
+function _(e, t, n) {
+    return Math.abs(e.valueOf() - t.valueOf()) < n;
 }
-
 function E(e, t) {
-  let n = h(e).locale(),
-    i = "".concat(n, ":").concat(t),
-    r = l[i];
-  return null == r && (r = l[i] = (0, s.Z)(t)), r(S(e))
+    let n = p(e).locale(), r = ''.concat(n, ':').concat(t), i = l[r];
+    return null == i && (i = l[r] = (0, a.Z)(t)), i(m(e));
 }
-
-function I(e) {
-  let t;
-  let n = r().localeData(),
-    i = r()(),
-    s = _(S(e), i.toDate());
-  return s < -1 ? E(e, "L LT") : (t = s < 0 ? "lastDay" : s < 1 ? "sameDay" : s < 2 ? "nextDay" : "sameElse", E(e, n.calendar(t, h(e), i)))
-}
-
-function T(e) {
-  let t = r().localeData(),
-    n = r()(),
-    i = _(S(e), n.toDate());
-  if (0 === i) return E(e, t.longDateFormat("LT"));
-  if (-1 === i) return E(e, t.calendar("lastDay", h(e), n));
-  if (i > -7) return E(e, "dddd");
-  return E(e, t.longDateFormat("l"))
-}
-
-function h(e) {
-  return r().isMoment(e) ? e : r()(e)
-}
-
-function S(e) {
-  return r().isMoment(e) ? e.toDate() : e
-}
-
 function f(e) {
-  let t;
-  let n = r().localeData(),
-    i = new Date,
-    s = _(e, i);
-  return "sameElse" == (t = s < -1 ? "sameElse" : s < 0 ? "lastDay" : s < 1 ? "sameDay" : s < 2 ? "nextDay" : "sameElse") ? E(e, "LLL") : E(e, n.calendar(t, r()(e), r()(i)))
+    let t;
+    let n = i().localeData(), r = i()(), a = c(m(e), r.toDate());
+    return a < -1 ? E(e, 'L LT') : (t = a < 0 ? 'lastDay' : a < 1 ? 'sameDay' : a < 2 ? 'nextDay' : 'sameElse', E(e, n.calendar(t, p(e), r)));
+}
+function h(e) {
+    let t = i().localeData(), n = i()(), r = c(m(e), n.toDate());
+    if (0 === r)
+        return E(e, t.longDateFormat('LT'));
+    if (-1 === r)
+        return E(e, t.calendar('lastDay', p(e), n));
+    if (r > -7)
+        return E(e, 'dddd');
+    return E(e, t.longDateFormat('l'));
+}
+function p(e) {
+    return i().isMoment(e) ? e : i()(e);
+}
+function m(e) {
+    return i().isMoment(e) ? e.toDate() : e;
+}
+function I(e) {
+    let t;
+    let n = i().localeData(), r = new Date(), a = c(e, r);
+    return 'sameElse' == (t = a < -1 ? 'sameElse' : a < 0 ? 'lastDay' : a < 1 ? 'sameDay' : a < 2 ? 'nextDay' : 'sameElse') ? E(e, 'LLL') : E(e, n.calendar(t, i()(e), i()(r)));
 }
 o.default.addChangeListener(() => {
-  l = Object.create(null)
+    l = Object.create(null);
 });
-let N = [{
-  key: "days",
-  millisecondsInUnit: 864e5
-}, {
-  key: "hours",
-  millisecondsInUnit: 36e5
-}, {
-  key: "minutes",
-  millisecondsInUnit: 6e4
-}, {
-  key: "seconds",
-  millisecondsInUnit: 1e3
-}];
-
-function A(e, t) {
-  let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    i = {
-      days: 0,
-      hours: 0,
-      minutes: 0,
-      seconds: n ? 1 : 0
-    };
-  if (e > t || n && Number(e) + 1200 > Number(t)) return i;
-  let r = Number(t) - Number(e);
-  return N.forEach(e => {
-    let {
-      key: t,
-      millisecondsInUnit: n
-    } = e;
-    i[t] = Math.floor(r / n), r -= i[t] * n
-  }), i
+let T = [
+    {
+        key: 'days',
+        millisecondsInUnit: 86400000
+    },
+    {
+        key: 'hours',
+        millisecondsInUnit: 3600000
+    },
+    {
+        key: 'minutes',
+        millisecondsInUnit: 60000
+    },
+    {
+        key: 'seconds',
+        millisecondsInUnit: 1000
+    }
+];
+function g(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], r = {
+            days: 0,
+            hours: 0,
+            minutes: 0,
+            seconds: n ? 1 : 0
+        };
+    if (e > t || n && Number(e) + 1200 > Number(t))
+        return r;
+    let i = Number(t) - Number(e);
+    return T.forEach(e => {
+        let {
+            key: t,
+            millisecondsInUnit: n
+        } = e;
+        r[t] = Math.floor(i / n), i -= r[t] * n;
+    }), r;
 }
-
-function m(e, t) {
-  return e.days > 0 ? t.days.format({
-    days: e.days,
-    hours: e.hours
-  }) : e.hours > 0 ? t.hours.format({
-    hours: e.hours,
-    minutes: e.minutes
-  }) : t.minutes.format({
-    minutes: Math.max(1, e.minutes)
-  })
+function S(e, t) {
+    return e.days > 0 ? t.days.format({
+        days: e.days,
+        hours: e.hours
+    }) : e.hours > 0 ? t.hours.format({
+        hours: e.hours,
+        minutes: e.minutes
+    }) : t.minutes.format({ minutes: Math.max(1, e.minutes) });
 }

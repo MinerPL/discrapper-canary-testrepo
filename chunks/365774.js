@@ -1,24 +1,18 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return a
-  }
+n.d(t, {
+    Z: function () {
+        return r;
+    }
 });
-var n = t(735250);
-t(470079);
-var i = t(689938),
-  l = t(444981);
-
-function a(e) {
-  let {
-    showDirtyIndicator: s
-  } = e;
-  return s ? (0, n.jsxs)("div", {
-    className: l.container,
-    children: [i.Z.Messages.GUILD_TEMPLATES, (0, n.jsx)("div", {
-      className: l.dot
-    })]
-  }) : (0, n.jsx)(n.Fragment, {
-    children: i.Z.Messages.GUILD_TEMPLATES
-  })
+var s = n(735250);
+n(470079);
+var a = n(689938), i = n(654567);
+function r(e) {
+    let {showDirtyIndicator: t} = e;
+    return t ? (0, s.jsxs)('div', {
+        className: i.container,
+        children: [
+            a.Z.Messages.GUILD_TEMPLATES,
+            (0, s.jsx)('div', { className: i.dot })
+        ]
+    }) : (0, s.jsx)(s.Fragment, { children: a.Z.Messages.GUILD_TEMPLATES });
 }

@@ -1,7 +1,4 @@
-"use strict";
-n.d(t, {
-  e: function() {
-    return i.e
-  }
-});
-var i = n(11890)
+e.exports = {
+    venmoIcon: 'venmoIcon_b0022c',
+    connectionInstructions: 'connectionInstructions_b0022c'
+};

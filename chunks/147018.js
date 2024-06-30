@@ -1,20 +1,13 @@
-"use strict";
-var e = n(161581),
-  o = n(347722).f,
-  i = n(251069),
-  u = n(859209),
-  c = n(492424),
-  s = n(381740),
-  f = n(474180);
-t.exports = function(t, r) {
-  var n, a, p, l, v, y = t.target,
-    b = t.global,
-    h = t.stat;
-  if (n = b ? e : h ? e[y] || c(y, {}) : (e[y] || {}).prototype)
-    for (a in r) {
-      if (l = r[a], p = t.dontCallGetSet ? (v = o(n, a)) && v.value : n[a], !f(b ? a : y + (h ? "." : "#") + a, t.forced) && void 0 !== p) {
-        if (typeof l == typeof p) continue;
-        s(l, p)
-      }(t.sham || p && p.sham) && i(l, "sham", !0), u(n, a, l, t)
-    }
-}
+var e = r(161581), o = r(347722).f, i = r(251069), u = r(859209), c = r(492424), f = r(381740), a = r(474180);
+t.exports = function (t, n) {
+    var r, s, p, l, v, b = t.target, y = t.global, g = t.stat;
+    if (r = y ? e : g ? e[b] || c(b, {}) : (e[b] || {}).prototype)
+        for (s in n) {
+            if (l = n[s], p = t.dontCallGetSet ? (v = o(r, s)) && v.value : r[s], !a(y ? s : b + (g ? '.' : '#') + s, t.forced) && void 0 !== p) {
+                if (typeof l == typeof p)
+                    continue;
+                f(l, p);
+            }
+            (t.sham || p && p.sham) && i(l, 'sham', !0), u(r, s, l, t);
+        }
+};

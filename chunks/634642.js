@@ -1,0 +1,21 @@
+e.exports = {
+    contentNarrowWithMedia: 'contentNarrowWithMedia_fcfd05 contentWithMedia_fcfd05 content_fcfd05',
+    contentNarrowNoMedia: 'contentNarrowNoMedia_fcfd05 contentNoMedia_fcfd05 content_fcfd05',
+    contentWideWithMedia: 'contentWideWithMedia_fcfd05 contentWithMedia_fcfd05 content_fcfd05',
+    contentWideNoMedia: 'contentWideNoMedia_fcfd05 contentNoMedia_fcfd05 content_fcfd05',
+    mediaContainer: 'mediaContainer_fcfd05',
+    titleCenter: 'titleCenter_fcfd05 title_fcfd05',
+    titleLeft: 'titleLeft_fcfd05 title_fcfd05',
+    buttonSkipLeftAlign: 'buttonSkipLeftAlign_fcfd05',
+    buttonSkipCenterAlign: 'buttonSkipCenterAlign_fcfd05',
+    bodyCenter: 'bodyCenter_fcfd05 body_fcfd05',
+    bodyLeft: 'bodyLeft_fcfd05 body_fcfd05',
+    buttonContainer: 'buttonContainer_fcfd05',
+    popoutRoot: 'popoutRoot_fcfd05',
+    arrowAlignmentTop: 'arrowAlignmentTop_fcfd05',
+    arrowAlignmentMiddle: 'arrowAlignmentMiddle_fcfd05',
+    top: 'top_fcfd05',
+    right: 'right_fcfd05',
+    left: 'left_fcfd05',
+    bottom: 'bottom_fcfd05'
+};

@@ -1,9 +1,9 @@
 e.exports = Object.freeze({
-  CHANGE_LANGUAGE_MODAL_TITLE_SPANISH: "\xbfCambiar idioma?",
-  CHANGE_LANGUAGE_MODAL_SUBTITLE_SPANISH: "\xbfTe gustar\xeda configurar Discord en Espa\xf1ol?",
-  YES_TEXT_SPANISH: "S\xed",
-  NO_TEXT_SPANISH: "No",
-  GOT_IT_TEXT_SPANISH: "Entendido",
-  LANGUAGE_CHANGED_CONFIRMATION_TITLE_SPANISH: "\xa1El cambio fue hecho!",
-  LANGUAGE_CHANGED_CONFIRMATION_SUBTITLE_SPANISH: 'Discord est\xe1 configurado en Espa\xf1ol. Puedes elegir otro idioma en "Ajustes de aplicaci\xf3n" > "Idioma".'
-})
+    CHANGE_LANGUAGE_MODAL_TITLE_SPANISH: '\xBFCambiar idioma?',
+    CHANGE_LANGUAGE_MODAL_SUBTITLE_SPANISH: '\xBFTe gustaría configurar Discord en Español?',
+    YES_TEXT_SPANISH: 'Sí',
+    NO_TEXT_SPANISH: 'No',
+    GOT_IT_TEXT_SPANISH: 'Entendido',
+    LANGUAGE_CHANGED_CONFIRMATION_TITLE_SPANISH: '\xA1El cambio fue hecho!',
+    LANGUAGE_CHANGED_CONFIRMATION_SUBTITLE_SPANISH: 'Discord está configurado en Español. Puedes elegir otro idioma en "Ajustes de aplicación" > "Idioma".'
+});

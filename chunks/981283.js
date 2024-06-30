@@ -1,78 +1,54 @@
-"use strict";
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(392711),
-  s = n(481060),
-  o = n(570140),
-  a = n(846027),
-  l = n(872810),
-  u = n(695346),
-  _ = n(199902),
-  d = n(314897),
-  c = n(650774),
-  E = n(19780),
-  I = n(594174),
-  T = n(449753),
-  h = n(569545),
-  S = n(803647),
-  f = n(70722),
-  N = n(981631);
-let A = (0, r.debounce)(l.xc, 1e3);
+var i = n(392711), a = n(481060), o = n(570140), s = n(846027), l = n(872810), u = n(695346), c = n(199902), d = n(314897), _ = n(650774), E = n(19780), f = n(594174), h = n(449753), p = n(569545), m = n(803647), I = n(70722), T = n(981631);
+let g = (0, i.debounce)(l.xc, 1000);
 t.Z = {
-  init() {
-    T.Z.init(), o.Z.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
-      let {
-        videoState: t
-      } = e, n = _.Z.getCurrentUserActiveStream();
-      if (null != n) {
-        let e = t === N.FQ1.PAUSED;
-        (0, l.tK)(n, e)
-      }
-    }), o.Z.subscribe("STREAM_DELETE", e => {
-      e.reason === N.si2.STREAM_FULL && ((0, l.aP)(e.streamKey, !1), (0, s.openModalLazy)(async () => {
-        let {
-          default: e
-        } = await Promise.all([n.e("99387"), n.e("12222")]).then(n.bind(n, 309690));
-        return t => (0, i.jsx)(e, {
-          ...t
-        })
-      }))
-    }), o.Z.subscribe("STREAM_WATCH", e => {
-      let {
-        streamKey: t,
-        allowMultiple: n
-      } = e;
-      if (n) return;
-      let i = (0, h.my)(t);
-      _.Z.getAllActiveStreams().forEach(e => {
-        if (e.ownerId !== i.ownerId && e.ownerId !== d.default.getId()) e.ownerId === d.default.getId() && a.Z.setGoLiveSource(null), (0, l.aP)((0, h.V9)(e), !1)
-      })
-    }), o.Z.subscribe("VOICE_STATE_UPDATES", e => {
-      let {
-        voiceStates: t
-      } = e;
-      t.forEach(e => {
-        let {
-          userId: t
-        } = e;
-        if (t !== d.default.getId()) return;
-        let n = _.Z.getAllActiveStreams(),
-          i = E.Z.getChannelId();
-        n.forEach(e => {
-          e.channelId !== i && (0, S.Z)(e, !1)
-        })
-      })
-    }), o.Z.subscribe("STREAM_CREATE", e => {
-      var t;
-      let {
-        streamKey: n
-      } = e, {
-        ownerId: i,
-        guildId: r
-      } = (0, h.my)(n);
-      if (null == r || null == i || i !== (null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return;
-      let s = c.Z.getMemberCount(r);
-      if (null != s && !(s < 2) && !(s > f.tB)) u.eo.getSetting() && A(n)
-    })
-  }
-}
+    init() {
+        h.Z.init(), o.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', e => {
+            let {videoState: t} = e, n = c.Z.getCurrentUserActiveStream();
+            if (null != n) {
+                let e = t === T.FQ1.PAUSED;
+                (0, l.tK)(n, e);
+            }
+        }), o.Z.subscribe('STREAM_DELETE', e => {
+            e.reason === T.si2.STREAM_FULL && ((0, l.aP)(e.streamKey, !1), (0, a.openModalLazy)(async () => {
+                let {default: e} = await n.e('63757').then(n.bind(n, 309690));
+                return t => (0, r.jsx)(e, { ...t });
+            }));
+        }), o.Z.subscribe('STREAM_WATCH', e => {
+            let {
+                streamKey: t,
+                allowMultiple: n
+            } = e;
+            if (n)
+                return;
+            let r = (0, p.my)(t);
+            c.Z.getAllActiveStreams().forEach(e => {
+                if (e.ownerId !== r.ownerId && e.ownerId !== d.default.getId())
+                    e.ownerId === d.default.getId() && s.Z.setGoLiveSource(null), (0, l.aP)((0, p.V9)(e), !1);
+            });
+        }), o.Z.subscribe('VOICE_STATE_UPDATES', e => {
+            let {voiceStates: t} = e;
+            t.forEach(e => {
+                let {userId: t} = e;
+                if (t !== d.default.getId())
+                    return;
+                let n = c.Z.getAllActiveStreams(), r = E.Z.getChannelId();
+                n.forEach(e => {
+                    e.channelId !== r && (0, m.Z)(e, !1);
+                });
+            });
+        }), o.Z.subscribe('STREAM_CREATE', e => {
+            var t;
+            let {streamKey: n} = e, {
+                    ownerId: r,
+                    guildId: i
+                } = (0, p.my)(n);
+            if (null == i || null == r || r !== (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id))
+                return;
+            let a = _.Z.getMemberCount(i);
+            if (null != a && !(a < 2) && !(a > I.tB))
+                u.eo.getSetting() && g(n);
+        });
+    }
+};

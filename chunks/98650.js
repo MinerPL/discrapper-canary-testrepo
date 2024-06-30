@@ -1,19 +1,16 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return a;
+    }
 });
-var i = n(470079),
-  r = n(863840);
-
-function s(e) {
-  let t = (0, r.Z)(e);
-  (0, i.useEffect)(() => {
-    let e = requestAnimationFrame(function n() {
-      var i;
-      null === (i = t.current) || void 0 === i || i.call(t), e = requestAnimationFrame(n)
-    });
-    return () => cancelAnimationFrame(e)
-  }, [])
+var r = n(470079), i = n(863840);
+function a(e) {
+    let t = (0, i.Z)(e);
+    (0, r.useEffect)(() => {
+        let e = requestAnimationFrame(function n() {
+            var r;
+            null === (r = t.current) || void 0 === r || r.call(t), e = requestAnimationFrame(n);
+        });
+        return () => cancelAnimationFrame(e);
+    }, []);
 }

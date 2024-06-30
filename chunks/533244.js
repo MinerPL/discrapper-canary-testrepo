@@ -1,112 +1,97 @@
-"use strict";
 n.d(t, {
-  CG: function() {
-    return _
-  },
-  OY: function() {
-    return f
-  },
-  SG: function() {
-    return S
-  },
-  T1: function() {
-    return c
-  },
-  i9: function() {
-    return u
-  },
-  kk: function() {
-    return d
-  },
-  lk: function() {
-    return I
-  },
-  pQ: function() {
-    return l
-  },
-  sN: function() {
-    return h
-  },
-  sO: function() {
-    return E
-  },
-  ur: function() {
-    return T
-  }
+    CG: function () {
+        return c;
+    },
+    OY: function () {
+        return I;
+    },
+    SG: function () {
+        return m;
+    },
+    T1: function () {
+        return _;
+    },
+    i9: function () {
+        return u;
+    },
+    kk: function () {
+        return d;
+    },
+    lk: function () {
+        return f;
+    },
+    pQ: function () {
+        return l;
+    },
+    sN: function () {
+        return p;
+    },
+    sO: function () {
+        return E;
+    },
+    ur: function () {
+        return h;
+    }
 }), n(653041);
-var i = n(913527),
-  r = n.n(i),
-  s = n(666657),
-  o = n(676770),
-  a = n(689938);
+var r = n(913527), i = n.n(r), a = n(666657), o = n(676770), s = n(689938);
 let l = {
-  month: "numeric",
-  day: "numeric",
-  hour: "numeric",
-  minute: "2-digit"
+    month: 'numeric',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit'
 };
-
 function u(e) {
-  return null != e.dmSpamDetectedAt && r()(e.dmSpamDetectedAt).add(o.lp, "hours") > r()() || null != e.raidDetectedAt && r()(e.raidDetectedAt).add(o.lp, "hours") > r()()
+    return null != e.dmSpamDetectedAt && i()(e.dmSpamDetectedAt).add(o.lp, 'hours') > i()() || null != e.raidDetectedAt && i()(e.raidDetectedAt).add(o.lp, 'hours') > i()();
 }
-
-function _(e) {
-  return null != e.raidDetectedAt && r()(e.raidDetectedAt).add(o.lp, "hours") > r()()
-}
-
-function d(e) {
-  return null != e.dmSpamDetectedAt && r()(e.dmSpamDetectedAt).add(o.lp, "hours") > r()()
-}
-
 function c(e) {
-  return null == e ? void 0 : _(e) ? s.Hl.JOIN_RAID : s.Hl.DM_RAID
+    return null != e.raidDetectedAt && i()(e.raidDetectedAt).add(o.lp, 'hours') > i()();
 }
-
+function d(e) {
+    return null != e.dmSpamDetectedAt && i()(e.dmSpamDetectedAt).add(o.lp, 'hours') > i()();
+}
+function _(e) {
+    return null == e ? void 0 : c(e) ? a.Hl.JOIN_RAID : a.Hl.DM_RAID;
+}
 function E(e, t) {
-  let n = [];
-  return e && n.push(s.dj.INVITES_DISABLED), t && n.push(s.dj.DMS_DISABLED), n
+    let n = [];
+    return e && n.push(a.dj.INVITES_DISABLED), t && n.push(a.dj.DMS_DISABLED), n;
 }
-
-function I(e, t) {
-  let n = [];
-  return !e && n.push(s.dj.INVITES_DISABLED), !t && n.push(s.dj.DMS_DISABLED), n
-}
-
-function T(e) {
-  return null != e.dmsDisabledUntil && new Date(e.dmsDisabledUntil) > new Date || null != e.invitesDisabledUntil && new Date(e.invitesDisabledUntil) > new Date
-}
-
-function h(e) {
-  return (null == e ? void 0 : e.dmsDisabledUntil) != null && new Date(e.dmsDisabledUntil) > new Date
-}
-
-function S(e) {
-  return (null == e ? void 0 : e.invitesDisabledUntil) != null && new Date(e.invitesDisabledUntil) > new Date
-}
-
 function f(e, t) {
-  var n;
-  let i = null !== (n = e.dmsDisabledUntil) && void 0 !== n ? n : e.invitesDisabledUntil;
-  if (null == i) return "";
-  let r = null != e.dmsDisabledUntil,
-    s = null != e.invitesDisabledUntil;
-  switch (!0) {
-    case r && s:
-      return a.Z.Messages.GUILD_ANTIRAID_PAUSE_DMS_AND_JOINS_NAGBAR_MESSAGE_NEW.format({
-        guildName: t,
-        time: new Date(i).toLocaleString(a.Z.getLocale(), l)
-      });
-    case r:
-      return a.Z.Messages.GUILD_ANTIRAID_PAUSE_DMS_NAGBAR_MESSAGE_NEW.format({
-        guildName: t,
-        time: new Date(i).toLocaleString(a.Z.getLocale(), l)
-      });
-    case s:
-      return a.Z.Messages.GUILD_ANTIRAID_PAUSE_JOINS_NAGBAR_MESSAGE_NEW.format({
-        guildName: t,
-        time: new Date(i).toLocaleString(a.Z.getLocale(), l)
-      });
+    let n = [];
+    return !e && n.push(a.dj.INVITES_DISABLED), !t && n.push(a.dj.DMS_DISABLED), n;
+}
+function h(e) {
+    return null != e.dmsDisabledUntil && new Date(e.dmsDisabledUntil) > new Date() || null != e.invitesDisabledUntil && new Date(e.invitesDisabledUntil) > new Date();
+}
+function p(e) {
+    return (null == e ? void 0 : e.dmsDisabledUntil) != null && new Date(e.dmsDisabledUntil) > new Date();
+}
+function m(e) {
+    return (null == e ? void 0 : e.invitesDisabledUntil) != null && new Date(e.invitesDisabledUntil) > new Date();
+}
+function I(e, t) {
+    var n;
+    let r = null !== (n = e.dmsDisabledUntil) && void 0 !== n ? n : e.invitesDisabledUntil;
+    if (null == r)
+        return '';
+    let i = null != e.dmsDisabledUntil, a = null != e.invitesDisabledUntil;
+    switch (!0) {
+    case i && a:
+        return s.Z.Messages.GUILD_ANTIRAID_PAUSE_DMS_AND_JOINS_NAGBAR_MESSAGE_NEW.format({
+            guildName: t,
+            time: new Date(r).toLocaleString(s.Z.getLocale(), l)
+        });
+    case i:
+        return s.Z.Messages.GUILD_ANTIRAID_PAUSE_DMS_NAGBAR_MESSAGE_NEW.format({
+            guildName: t,
+            time: new Date(r).toLocaleString(s.Z.getLocale(), l)
+        });
+    case a:
+        return s.Z.Messages.GUILD_ANTIRAID_PAUSE_JOINS_NAGBAR_MESSAGE_NEW.format({
+            guildName: t,
+            time: new Date(r).toLocaleString(s.Z.getLocale(), l)
+        });
     default:
-      return ""
-  }
+        return '';
+    }
 }

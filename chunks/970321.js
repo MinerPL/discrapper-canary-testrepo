@@ -1,17 +1,16 @@
-"use strict";
 n.d(t, {
-  R: function() {
-    return a
-  }
+    R: function () {
+        return s;
+    }
 });
-var i = n(442837),
-  r = n(264043),
-  s = n(812206),
-  o = n(621853);
-
-function a(e) {
-  return (0, i.e7)([s.Z, o.Z, r.Z], () => {
-    var t, n, i, a, l, u, _;
-    return null !== (_ = null !== (u = null !== (l = null === (t = s.Z.getApplication(e)) || void 0 === t ? void 0 : t.storefront_available) && void 0 !== l ? l : null === (i = o.Z.getUserProfile(e)) || void 0 === i ? void 0 : null === (n = i.application) || void 0 === n ? void 0 : n.storefront_available) && void 0 !== u ? u : null === (a = r.Z.getApplication(e)) || void 0 === a ? void 0 : a.storefront_available) && void 0 !== _ && _
-  }, [e])
+var r = n(442837), i = n(264043), a = n(812206), o = n(621853);
+function s(e) {
+    return (0, r.e7)([
+        a.Z,
+        o.Z,
+        i.Z
+    ], () => {
+        var t, n, r, s, l, u, c;
+        return null !== (c = null !== (u = null !== (l = null === (t = a.Z.getApplication(e)) || void 0 === t ? void 0 : t.storefront_available) && void 0 !== l ? l : null === (r = o.Z.getUserProfile(e)) || void 0 === r ? void 0 : null === (n = r.application) || void 0 === n ? void 0 : n.storefront_available) && void 0 !== u ? u : null === (s = i.Z.getApplication(e)) || void 0 === s ? void 0 : s.storefront_available) && void 0 !== c && c;
+    }, [e]);
 }

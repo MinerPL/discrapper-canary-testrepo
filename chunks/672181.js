@@ -1,8 +1,7 @@
-"use strict";
-
-function i(e) {}
+function r(e) {
+}
 n.d(t, {
-  Z: function() {
-    return i
-  }
-})
+    Z: function () {
+        return r;
+    }
+});

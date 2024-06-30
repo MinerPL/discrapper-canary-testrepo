@@ -1,7 +1,6 @@
-"use strict";
 n.d(t, {
-  A: function() {
-    return i
-  }
+    A: function () {
+        return r;
+    }
 });
-let i = .4
+let r = 0.4;

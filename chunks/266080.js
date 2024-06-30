@@ -1,77 +1,76 @@
-"use strict";
 n(47120);
-var i = n(735250),
-  r = n(470079),
-  s = n(481060),
-  o = n(367907),
-  a = n(434404),
-  l = n(430824),
-  u = n(346656),
-  _ = n(981631),
-  d = n(689938),
-  c = n(93138);
+var r = n(735250), i = n(470079), a = n(481060), o = n(367907), s = n(434404), l = n(430824), u = n(346656), c = n(981631), d = n(689938), _ = n(532516);
 t.Z = e => {
-  let {
-    guildId: t,
-    reportId: n
-  } = e, [E, I] = r.useState(!1), T = l.Z.getGuild(t), h = null != T;
-  r.useEffect(() => {
-    I(!h)
-  }, [h]);
-  let S = r.useCallback(() => {
-    I(!0), o.ZP.trackWithMetadata(_.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
-      guild_id: t,
-      report_id: n
-    }), a.Z.leaveGuild(t)
-  }, [t, n]);
-  if (null == T) return null;
-  let f = () => {
-    (0, s.openModal)(e => (0, i.jsx)(s.ConfirmModal, {
-      header: d.Z.Messages.LEAVE_SERVER_TITLE.format({
-        name: T.name
-      }),
-      confirmText: d.Z.Messages.LEAVE_SERVER,
-      cancelText: d.Z.Messages.CANCEL,
-      onConfirm: S,
-      ...e,
-      children: (0, i.jsx)(s.Text, {
-        variant: "text-md/normal",
-        children: d.Z.Messages.LEAVE_SERVER_BODY.format({
-          name: T.name
-        })
-      })
-    }))
-  };
-  return (0, i.jsxs)("div", {
-    className: c.container,
-    children: [(0, i.jsx)(s.Text, {
-      className: c.description,
-      variant: "text-sm/normal",
-      children: d.Z.Messages.MOBILE_REPORTS_LEAVE_ELEMENT_DESCRIPTION
-    }), (0, i.jsxs)("div", {
-      className: c.guildContainer,
-      children: [(0, i.jsxs)("div", {
-        className: c.guildInfo,
-        children: [(0, i.jsx)(u.Z, {
-          guild: T,
-          showBadge: !1,
-          animate: !1,
-          size: u.Z.Sizes.SMALL,
-          "aria-label": T.name,
-          className: c.icon,
-          active: !0
-        }), (0, i.jsx)(s.Text, {
-          className: c.guildName,
-          variant: "text-sm/semibold",
-          children: T.name
-        })]
-      }), (0, i.jsx)(s.Button, {
-        onClick: () => f(),
-        disabled: E,
-        size: s.Button.Sizes.SMALL,
-        color: s.Button.Colors.RED,
-        children: E ? d.Z.Messages.MOBILE_REPORTS_LEFT_SERVER : d.Z.Messages.LEAVE_SERVER
-      })]
-    })]
-  })
-}
+    let {
+            guildId: t,
+            reportId: n
+        } = e, [E, f] = i.useState(!1), h = l.Z.getGuild(t), p = null != h;
+    i.useEffect(() => {
+        f(!p);
+    }, [p]);
+    let m = i.useCallback(() => {
+        f(!0), o.ZP.trackWithMetadata(c.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
+            guild_id: t,
+            report_id: n
+        }), s.Z.leaveGuild(t);
+    }, [
+        t,
+        n
+    ]);
+    if (null == h)
+        return null;
+    let I = () => {
+        (0, a.openModal)(e => (0, r.jsx)(a.ConfirmModal, {
+            header: d.Z.Messages.LEAVE_SERVER_TITLE.format({ name: h.name }),
+            confirmText: d.Z.Messages.LEAVE_SERVER,
+            cancelText: d.Z.Messages.CANCEL,
+            onConfirm: m,
+            ...e,
+            children: (0, r.jsx)(a.Text, {
+                variant: 'text-md/normal',
+                children: d.Z.Messages.LEAVE_SERVER_BODY.format({ name: h.name })
+            })
+        }));
+    };
+    return (0, r.jsxs)('div', {
+        className: _.container,
+        children: [
+            (0, r.jsx)(a.Text, {
+                className: _.description,
+                variant: 'text-sm/normal',
+                children: d.Z.Messages.MOBILE_REPORTS_LEAVE_ELEMENT_DESCRIPTION
+            }),
+            (0, r.jsxs)('div', {
+                className: _.guildContainer,
+                children: [
+                    (0, r.jsxs)('div', {
+                        className: _.guildInfo,
+                        children: [
+                            (0, r.jsx)(u.Z, {
+                                guild: h,
+                                showBadge: !1,
+                                animate: !1,
+                                size: u.Z.Sizes.SMALL,
+                                'aria-label': h.name,
+                                className: _.icon,
+                                active: !0
+                            }),
+                            (0, r.jsx)(a.Text, {
+                                className: _.guildName,
+                                variant: 'text-sm/semibold',
+                                children: h.name
+                            })
+                        ]
+                    }),
+                    (0, r.jsx)(a.Button, {
+                        onClick: () => I(),
+                        disabled: E,
+                        size: a.Button.Sizes.SMALL,
+                        color: a.Button.Colors.RED,
+                        children: E ? d.Z.Messages.MOBILE_REPORTS_LEFT_SERVER : d.Z.Messages.LEAVE_SERVER
+                    })
+                ]
+            })
+        ]
+    });
+};

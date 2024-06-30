@@ -1,2 +1,1 @@
-"use strict";
-t.exports = "undefined" != typeof navigator && String(navigator.userAgent) || ""
+t.exports = 'undefined' != typeof navigator && String(navigator.userAgent) || '';

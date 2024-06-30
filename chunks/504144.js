@@ -1,11 +1,12 @@
-"use strict";
 var t = {
-  current: {
-    createInteractionHandle: function() {},
-    clearInteractionHandle: function() {}
-  },
-  inject: function(e) {
-    t.current = e
-  }
+    current: {
+        createInteractionHandle: function () {
+        },
+        clearInteractionHandle: function () {
+        }
+    },
+    inject: function (e) {
+        t.current = e;
+    }
 };
-e.exports = t
+e.exports = t;

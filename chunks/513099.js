@@ -1,90 +1,70 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return C
-  }
-});
-var i = n(735250),
-  r = n(470079),
-  s = n(442837),
-  o = n(481060),
-  a = n(420660),
-  l = n(100527),
-  u = n(906732),
-  _ = n(233440),
-  d = n(199902),
-  c = n(158776),
-  E = n(74538),
-  I = n(998502),
-  T = n(785717),
-  h = n(204197),
-  S = n(652853),
-  f = n(228168),
-  N = n(981631),
-  A = n(474936),
-  m = n(579935);
-let O = o.AvatarSizes.SIZE_80,
-  R = I.ZP.getEnableHardwareAcceleration() ? o.AnimatedAvatar : o.Avatar;
-
-function C(e) {
-  let {
-    user: t,
-    displayProfile: n,
-    guildId: I,
-    channelId: C,
-    animateOnHover: p,
-    onOpenProfile: g
-  } = e, {
-    theme: L
-  } = (0, S.z)(), {
-    analyticsLocations: v
-  } = (0, u.ZP)(l.Z.AVATAR), {
-    trackUserProfileAction: D
-  } = (0, T.KZ)(), M = E.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, A.p9.TIER_2), P = r.useMemo(() => (0, _.W)(t, C), [t, C]), {
-    status: y,
-    isMobileOnline: U
-  } = (0, s.cj)([d.Z, c.Z], () => {
-    let e = null != d.Z.getAnyStreamForUser(t.id),
-      n = c.Z.findActivity(t.id, t => {
-        let {
-          type: n
-        } = t;
-        return e ? n === N.IIU.PLAYING : n !== N.IIU.CUSTOM_STATUS
-      });
-    return {
-      status: (0, a.Z)(n) ? N.Skl.STREAMING : c.Z.getStatus(t.id),
-      isMobileOnline: c.Z.isMobileOnline(t.id)
+    Z: function () {
+        return R;
     }
-  }), {
-    avatarDecorationSrc: b,
-    avatarSrc: G,
-    eventHandlers: w
-  } = (0, h.Z)({
-    user: t,
-    guildId: I,
-    size: O,
-    animateOnHover: p
-  });
-  return (0, i.jsx)(o.Clickable, {
-    ...w,
-    className: m.clickable,
-    onClick: null == g ? void 0 : () => {
-      D({
-        action: "PRESS_VIEW_PROFILE",
-        analyticsLocations: v
-      }), null == g || g()
-    },
-    children: (0, i.jsx)(R, {
-      src: G,
-      avatarDecoration: b,
-      size: O,
-      "aria-label": t.username,
-      imageClassName: null != g ? m.overlay : void 0,
-      status: P ? N.Skl.UNKNOWN : y,
-      statusBackdropColor: M && !P ? (0, o.getStatusBackdropColor)(L) : void 0,
-      isMobile: U,
-      statusTooltip: !0,
-      statusTooltipDelay: f.vB
-    })
-  })
+});
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(442837), l = n(481060), u = n(420660), c = n(100527), d = n(906732), _ = n(233440), E = n(199902), f = n(158776), h = n(74538), p = n(998502), m = n(785717), I = n(204197), T = n(652853), g = n(228168), S = n(981631), A = n(474936), N = n(148443);
+let v = l.AvatarSizes.SIZE_80, O = p.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+function R(e) {
+    let {
+            user: t,
+            displayProfile: n,
+            guildId: a,
+            channelId: p,
+            animateOnHover: R,
+            onOpenProfile: C
+        } = e, {theme: y} = (0, T.z)(), {analyticsLocations: D} = (0, d.ZP)(c.Z.AVATAR), {trackUserProfileAction: L} = (0, m.KZ)(), b = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, A.p9.TIER_2), M = i.useMemo(() => (0, _.W)(t, p), [
+            t,
+            p
+        ]), {
+            status: P,
+            isMobileOnline: U
+        } = (0, s.cj)([
+            E.Z,
+            f.Z
+        ], () => {
+            let e = null != E.Z.getAnyStreamForUser(t.id), n = f.Z.findActivity(t.id, t => {
+                    let {type: n} = t;
+                    return e ? n === S.IIU.PLAYING : n !== S.IIU.CUSTOM_STATUS;
+                });
+            return {
+                status: (0, u.Z)(n) ? S.Skl.STREAMING : f.Z.getStatus(t.id),
+                isMobileOnline: f.Z.isMobileOnline(t.id)
+            };
+        }), {
+            avatarDecorationSrc: w,
+            avatarSrc: x,
+            eventHandlers: G
+        } = (0, I.Z)({
+            user: t,
+            guildId: a,
+            size: v,
+            animateOnHover: R
+        }), k = (0, r.jsx)(O, {
+            src: x,
+            avatarDecoration: w,
+            size: v,
+            'aria-label': t.username,
+            imageClassName: null != C ? N.overlay : void 0,
+            status: M ? S.Skl.UNKNOWN : P,
+            statusBackdropColor: b && !M ? (0, l.getStatusBackdropColor)(y) : void 0,
+            isMobile: U,
+            statusTooltip: !0,
+            statusTooltipDelay: g.vB
+        });
+    return null == C ? (0, r.jsx)('div', {
+        ...G,
+        className: N.avatar,
+        children: k
+    }) : (0, r.jsx)(l.Clickable, {
+        ...G,
+        className: o()(N.avatar, N.clickable),
+        onClick: () => {
+            L({
+                action: 'PRESS_VIEW_PROFILE',
+                analyticsLocations: D
+            }), null == C || C();
+        },
+        children: k
+    });
 }

@@ -1,10 +1,9 @@
-"use strict";
 n.d(t, {
-  G: function() {
-    return i
-  }
+    G: function () {
+        return r;
+    }
 });
-let i = n(470079).createContext({
-  disableInteractions: !1,
-  disableAnimations: !1
-})
+let r = n(470079).createContext({
+    disableInteractions: !1,
+    disableAnimations: !1
+});

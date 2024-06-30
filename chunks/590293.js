@@ -1,12 +1,9 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return a;
+    }
 });
-var i = n(442837),
-  r = n(258609);
-
-function s() {
-  return (0, i.e7)([r.Z], () => null != r.Z.getRemoteSessionId() || null != r.Z.getAwaitingRemoteSessionInfo())
+var r = n(442837), i = n(258609);
+function a() {
+    return (0, r.e7)([i.Z], () => null != i.Z.getRemoteSessionId() || null != i.Z.getAwaitingRemoteSessionInfo());
 }

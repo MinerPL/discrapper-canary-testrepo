@@ -1,26 +1,23 @@
-"use strict";
 n.d(t, {
-  _: function() {
-    return s
-  },
-  g: function() {
-    return o
-  }
+    _: function () {
+        return a;
+    },
+    g: function () {
+        return o;
+    }
 });
-var i = n(601964),
-  r = n(981631);
-let s = "373",
-  o = new i.ZP({
-    id: s,
-    name: "Favorites",
-    description: "The place for all your favorite channels!",
-    ownerId: "234",
-    verificationLevel: r.sFg.NONE,
-    region: "",
-    joinedAt: new Date,
-    defaultMessageNotifications: 0,
-    mfaLevel: r.BpS.NONE,
-    explicitContentFilter: 0,
-    maxMembers: 5e5,
-    nsfwLevel: r.V_K.DEFAULT
-  })
+var r = n(601964), i = n(981631);
+let a = '373', o = new r.ZP({
+        id: a,
+        name: 'Favorites',
+        description: 'The place for all your favorite channels!',
+        ownerId: '234',
+        verificationLevel: i.sFg.NONE,
+        region: '',
+        joinedAt: new Date(),
+        defaultMessageNotifications: 0,
+        mfaLevel: i.BpS.NONE,
+        explicitContentFilter: 0,
+        maxMembers: 500000,
+        nsfwLevel: i.V_K.DEFAULT
+    });

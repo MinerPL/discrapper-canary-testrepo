@@ -1,9 +1,7 @@
-var n = e(580897),
-  o = e(289399),
-  i = e(161757);
-t.exports = function(t, r) {
-  var e = {};
-  return r = i(r, 3), o(t, function(t, o, i) {
-    n(e, o, r(t, o, i))
-  }), e
-}
+var n = r(580897), _ = r(289399), a = r(161757);
+t.exports = function (t, e) {
+    var r = {};
+    return e = a(e, 3), _(t, function (t, _, a) {
+        n(r, _, e(t, _, a));
+    }), r;
+};

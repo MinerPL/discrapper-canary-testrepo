@@ -1,6 +1,5 @@
-var n = e(524556),
-  o = Object.prototype.hasOwnProperty;
-t.exports = function(t) {
-  var r = this.__data__;
-  return n ? void 0 !== r[t] : o.call(r, t)
-}
+var n = r(524556), _ = Object.prototype.hasOwnProperty;
+t.exports = function (t) {
+    var e = this.__data__;
+    return n ? void 0 !== e[t] : _.call(e, t);
+};

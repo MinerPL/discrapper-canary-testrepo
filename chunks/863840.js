@@ -1,12 +1,10 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return i;
+    }
 });
-var i = n(470079);
-
-function r(e) {
-  let t = i.useRef(e);
-  return t.current = e, t
+var r = n(470079);
+function i(e) {
+    let t = r.useRef(e);
+    return t.current = e, t;
 }

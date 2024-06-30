@@ -1,22 +1,22 @@
-"use strict";
-n.d(t, {
-  Z: function() {
-    return a
-  }
-}), n(724458);
-var i = n(470079),
-  r = n(700089),
-  s = n(654455),
-  o = n(496158);
-
-function a(e) {
-  let {
-    channel: t,
-    commands: n,
-    limit: a = n.length
-  } = e, l = (0, o.D)(t), u = (0, r.R)(l), _ = i.useMemo(() => n.reduce((e, t) => (e[t.id] = t, e), {}), [n]);
-  return i.useMemo(() => u.map(e => _[e]).filter(e => null != e).sort((e, t) => {
-    let n = s.ZP.getScoreWithoutLoadingLatest(l, e);
-    return s.ZP.getScoreWithoutLoadingLatest(l, t) - n
-  }).slice(0, a), [u, _, l, a])
+t.d(n, {
+    Z: function () {
+        return s;
+    }
+}), t(724458);
+var i = t(470079), l = t(700089), a = t(654455), r = t(496158);
+function s(e) {
+    let {
+            channel: n,
+            commands: t,
+            limit: s = t.length
+        } = e, o = (0, r.D)(n), c = (0, l.R)(o), u = i.useMemo(() => t.reduce((e, n) => (e[n.id] = n, e), {}), [t]);
+    return i.useMemo(() => c.map(e => u[e]).filter(e => null != e).sort((e, n) => {
+        let t = a.ZP.getScoreWithoutLoadingLatest(o, e);
+        return a.ZP.getScoreWithoutLoadingLatest(o, n) - t;
+    }).slice(0, s), [
+        c,
+        u,
+        o,
+        s
+    ]);
 }

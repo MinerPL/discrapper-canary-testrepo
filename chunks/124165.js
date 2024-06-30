@@ -1,58 +1,46 @@
-"use strict";
 n.d(t, {
-  KX: function() {
-    return r
-  },
-  X2: function() {
-    return c
-  },
-  cg: function() {
-    return I
-  },
-  pF: function() {
-    return E
-  }
+    KX: function () {
+        return i;
+    },
+    X2: function () {
+        return _;
+    },
+    cg: function () {
+        return f;
+    },
+    pF: function () {
+        return E;
+    }
 });
-var i, r, s = n(314897),
-  o = n(924301),
-  a = n(894017),
-  l = n(79874),
-  u = n(854698),
-  _ = n(765305),
-  d = n(689938);
-
-function c(e, t) {
-  let n = s.default.getId();
-  return o.ZP.getRsvp(e, t, n)
+var r, i, a = n(314897), o = n(924301), s = n(894017), l = n(79874), u = n(854698), c = n(765305), d = n(689938);
+function _(e, t) {
+    let n = a.default.getId();
+    return o.ZP.getRsvp(e, t, n);
 }
-
 function E() {
-  return [{
-    name: d.Z.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_SERIES,
-    value: 0
-  }, {
-    name: d.Z.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_RECURRENCE,
-    value: 1
-  }]
+    return [
+        {
+            name: d.Z.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_SERIES,
+            value: 0
+        },
+        {
+            name: d.Z.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_RECURRENCE,
+            value: 1
+        }
+    ];
 }
-
-function I(e) {
-  let {
-    eventId: t,
-    recurrenceId: n,
-    guildId: i,
-    updateRsvp: r,
-    openRsvpPicker: s,
-    onRsvp: d
-  } = e, E = o.ZP.getGuildScheduledEvent(t);
-  if (null == E) return;
-  let I = (0, a.c)(n, t),
-    {
-      startTime: T
-    } = (0, l.Kq)(E, n),
-    h = (null == E ? void 0 : E.scheduled_start_time) != null ? (0, u.lh)(I, T, new Date(null == E ? void 0 : E.scheduled_start_time)) : null,
-    S = null != h && _.$I.has(h) ? null : null != n ? n : (0, u.DK)(E),
-    f = c(E.id),
-    N = c(E.id, S);
-  null == S ? (r(t, null, i, null != f ? _.gv.UNINTERESTED : _.gv.INTERESTED), null == d || d()) : null != N ? (r(t, S, i, null != f ? _.gv.INTERESTED : _.gv.UNINTERESTED), null == d || d()) : s(E, S)
-}(i = r || (r = {}))[i.SERIES = 0] = "SERIES", i[i.RECURRENCE = 1] = "RECURRENCE"
+function f(e) {
+    let {
+            eventId: t,
+            recurrenceId: n,
+            guildId: r,
+            updateRsvp: i,
+            openRsvpPicker: a,
+            onRsvp: d
+        } = e, E = o.ZP.getGuildScheduledEvent(t);
+    if (null == E)
+        return;
+    let f = (0, s.c)(n, t), {startTime: h} = (0, l.Kq)(E, n), p = (null == E ? void 0 : E.scheduled_start_time) != null ? (0, u.lh)(f, h, new Date(null == E ? void 0 : E.scheduled_start_time)) : null, m = null != p && c.$I.has(p) ? null : null != n ? n : (0, u.DK)(E), I = _(E.id), T = _(E.id, m);
+    null == m ? (i(t, null, r, null != I ? c.gv.UNINTERESTED : c.gv.INTERESTED), null == d || d()) : null != T ? (i(t, m, r, null != I ? c.gv.INTERESTED : c.gv.UNINTERESTED), null == d || d()) : a(E, m);
+}
+(r = i || (i = {}))[r.SERIES = 0] = 'SERIES', r[r.RECURRENCE = 1] = 'RECURRENCE';

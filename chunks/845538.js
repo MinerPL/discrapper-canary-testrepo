@@ -1,104 +1,98 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return I
-  },
-  i: function() {
-    return c
-  }
+    Z: function () {
+        return f;
+    },
+    i: function () {
+        return _;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(873546),
-  o = n(481060),
-  a = n(626135),
-  l = n(981631),
-  u = n(921944),
-  _ = n(689938),
-  d = n(628842);
-
-function c(e) {
-  return e || !(s.tq || s.Em) ? _.Z.Messages.SEASONAL_GIFTING_DM_POPUP_BODY : _.Z.Messages.SEASONAL_GIFTING_MAKE_SOMEONES_DAY_TOOLTIP
+var r = n(735250), i = n(470079), a = n(873546), o = n(481060), s = n(626135), l = n(981631), u = n(921944), c = n(689938), d = n(995006);
+function _(e) {
+    return e || !(a.tq || a.Em) ? c.Z.Messages.SEASONAL_GIFTING_DM_POPUP_BODY : c.Z.Messages.SEASONAL_GIFTING_MAKE_SOMEONES_DAY_TOOLTIP;
 }
-
 function E(e) {
-  let {
-    onComplete: t,
-    onDMCheckItOutClick: u,
-    isDM: E
-  } = e;
-  r.useEffect(() => {
-    a.default.track(l.rMx.PREMIUM_GIFT_UPSELL_VIEWED, {
-      type: "holiday_gifting_tip"
-    })
-  }, []);
-  let I = r.useMemo(() => [() => n.e("36278").then(n.t.bind(n, 268147, 19)), () => n.e("66902").then(n.t.bind(n, 7171, 19)), () => n.e("99694").then(n.t.bind(n, 55562, 19))], []),
-    T = E || !(s.tq || s.Em),
-    h = T ? _.Z.Messages.SEASONAL_GIFTING_DM_POPUP_HEADER : _.Z.Messages.SEASONAL_GIFTING_POPUP_HEADER,
-    S = T ? _.Z.Messages.SEASONAL_GIFTING_DM_POPUP_CTA : _.Z.Messages.SEASONAL_GIFTING_SEND_GIFT_CTA;
-  return (0, i.jsxs)("div", {
-    className: d.container,
-    children: [(0, i.jsx)(o.ChainedLottieAnimation, {
-      className: d.image,
-      animationData: I
-    }), (0, i.jsxs)("div", {
-      className: d.body,
-      children: [(0, i.jsx)(o.Heading, {
-        className: d.text,
-        variant: "heading-sm/semibold",
-        children: h
-      }), (0, i.jsx)(o.Text, {
-        className: d.text,
-        variant: "text-sm/normal",
-        children: c(E)
-      })]
-    }), (0, i.jsxs)("div", {
-      className: d.dmButtonContainer,
-      children: [(0, i.jsx)(o.Button, {
-        className: d.dmButton,
-        look: o.Button.Looks.FILLED,
-        color: o.Button.Colors.BRAND,
-        onClick: () => t(),
-        children: _.Z.Messages.GOT_IT
-      }), (0, i.jsx)(o.Button, {
-        className: d.dmButton,
-        color: o.Button.Colors.BRAND_INVERTED,
-        onClick: () => u(),
-        children: S
-      })]
-    }), (0, i.jsx)("div", {
-      className: d.pointer
-    })]
-  })
+    let {
+        onComplete: t,
+        onDMCheckItOutClick: u,
+        isDM: E
+    } = e;
+    i.useEffect(() => {
+        s.default.track(l.rMx.PREMIUM_GIFT_UPSELL_VIEWED, { type: 'holiday_gifting_tip' });
+    }, []);
+    let f = i.useMemo(() => [
+            () => n.e('36278').then(n.t.bind(n, 268147, 19)),
+            () => n.e('66902').then(n.t.bind(n, 7171, 19)),
+            () => n.e('99694').then(n.t.bind(n, 55562, 19))
+        ], []), h = E || !(a.tq || a.Em), p = h ? c.Z.Messages.SEASONAL_GIFTING_DM_POPUP_HEADER : c.Z.Messages.SEASONAL_GIFTING_POPUP_HEADER, m = h ? c.Z.Messages.SEASONAL_GIFTING_DM_POPUP_CTA : c.Z.Messages.SEASONAL_GIFTING_SEND_GIFT_CTA;
+    return (0, r.jsxs)('div', {
+        className: d.container,
+        children: [
+            (0, r.jsx)(o.ChainedLottieAnimation, {
+                className: d.image,
+                animationData: f
+            }),
+            (0, r.jsxs)('div', {
+                className: d.body,
+                children: [
+                    (0, r.jsx)(o.Heading, {
+                        className: d.text,
+                        variant: 'heading-sm/semibold',
+                        children: p
+                    }),
+                    (0, r.jsx)(o.Text, {
+                        className: d.text,
+                        variant: 'text-sm/normal',
+                        children: _(E)
+                    })
+                ]
+            }),
+            (0, r.jsxs)('div', {
+                className: d.dmButtonContainer,
+                children: [
+                    (0, r.jsx)(o.Button, {
+                        className: d.dmButton,
+                        look: o.Button.Looks.FILLED,
+                        color: o.Button.Colors.BRAND,
+                        onClick: () => t(),
+                        children: c.Z.Messages.GOT_IT
+                    }),
+                    (0, r.jsx)(o.Button, {
+                        className: d.dmButton,
+                        color: o.Button.Colors.BRAND_INVERTED,
+                        onClick: () => u(),
+                        children: m
+                    })
+                ]
+            }),
+            (0, r.jsx)('div', { className: d.pointer })
+        ]
+    });
 }
-
-function I(e) {
-  let {
-    onComplete: t,
-    onDMCheckItOutClick: n,
-    markAsDismissed: r,
-    isDM: s
-  } = e;
-  return (0, i.jsx)(o.Popout, {
-    spacing: 0,
-    shouldShow: !0,
-    position: "top",
-    align: "center",
-    renderPopout: e => (0, i.jsx)(E, {
-      ...e,
-      onComplete: () => {
-        t(), r(u.L.USER_DISMISS)
-      },
-      onDMCheckItOutClick: () => {
-        n(), t(), r(u.L.TAKE_ACTION)
-      },
-      isDM: s
-    }),
-    onRequestClose: () => void 0,
-    closeOnScroll: !1,
-    ignoreModalClicks: !0,
-    children: () => (0, i.jsx)("div", {
-      className: d.popoutTarget
-    })
-  })
+function f(e) {
+    let {
+        onComplete: t,
+        onDMCheckItOutClick: n,
+        markAsDismissed: i,
+        isDM: a
+    } = e;
+    return (0, r.jsx)(o.Popout, {
+        spacing: 0,
+        shouldShow: !0,
+        position: 'top',
+        align: 'center',
+        renderPopout: e => (0, r.jsx)(E, {
+            ...e,
+            onComplete: () => {
+                t(), i(u.L.USER_DISMISS);
+            },
+            onDMCheckItOutClick: () => {
+                n(), t(), i(u.L.TAKE_ACTION);
+            },
+            isDM: a
+        }),
+        onRequestClose: () => void 0,
+        closeOnScroll: !1,
+        ignoreModalClicks: !0,
+        children: () => (0, r.jsx)('div', { className: d.popoutTarget })
+    });
 }

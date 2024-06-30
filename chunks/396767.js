@@ -1,0 +1,1 @@
+e.exports = l.p + 'dabe612d0838b2380b62.svg';

@@ -1,11 +1,9 @@
-"use strict";
 n.d(t, {
-  $: function() {
-    return r
-  }
+    $: function () {
+        return i;
+    }
 });
-var i = n(881824);
-
-function r(e) {
-  i.$Q(e)
+var r = n(881824);
+function i(e) {
+    r.$Q(e);
 }

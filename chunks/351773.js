@@ -1,19 +1,20 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return i;
+    }
 });
-var i = n(470079);
-
-function r(e, t) {
-  let n = i.useRef(e);
-  return i.useEffect(() => {
-    function e(e) {
-      null != n.current && !n.current.contains(e.target) && t()
-    }
-    return document.addEventListener("mousedown", e), () => {
-      document.removeEventListener("mousedown", e)
-    }
-  }, [n, t]), n
+var r = n(470079);
+function i(e, t) {
+    let n = r.useRef(e);
+    return r.useEffect(() => {
+        function e(e) {
+            null != n.current && !n.current.contains(e.target) && t();
+        }
+        return document.addEventListener('mousedown', e), () => {
+            document.removeEventListener('mousedown', e);
+        };
+    }, [
+        n,
+        t
+    ]), n;
 }

@@ -1,52 +1,44 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return u
-  }
+    Z: function () {
+        return u;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(481060),
-  s = n(784712),
-  o = n(531578),
-  a = n(689938);
-
+var i = n(481060), a = n(784712), o = n(531578), s = n(689938);
 function l(e, t, n) {
-  let {
-    rating: i,
-    problem: o,
-    feedback: l
-  } = n;
-  (0, s.Z)({
-    problem: o,
-    summary: e,
-    feedback: l,
-    guildId: t.guild_id,
-    channelId: t.id,
-    location: "Summary divider",
-    rating: i
-  }), (0, r.showToast)((0, r.createToast)(a.Z.Messages.CALL_FEEDBACK_CONFIRMATION, r.ToastType.SUCCESS))
-}
-
-function u(e) {
-  let {
-    summary: t,
-    channel: s,
-    rating: a
-  } = e;
-  null != t && (a === o.aZ.BAD ? (0, r.openModalLazy)(async () => {
     let {
-      default: e
-    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("22377")]).then(n.bind(n, 580584));
-    return n => (0, i.jsx)(e, {
-      ...n,
-      onSubmit: e => l(t, s, e),
-      startRating: a
-    })
-  }) : l(t, s, {
-    rating: a,
-    problem: null,
-    feedback: "",
-    dontShowAgain: !1
-  }))
+        rating: r,
+        problem: o,
+        feedback: l
+    } = n;
+    (0, a.Z)({
+        problem: o,
+        summary: e,
+        feedback: l,
+        guildId: t.guild_id,
+        channelId: t.id,
+        location: 'Summary divider',
+        rating: r
+    }), (0, i.showToast)((0, i.createToast)(s.Z.Messages.CALL_FEEDBACK_CONFIRMATION, i.ToastType.SUCCESS));
+}
+function u(e) {
+    let {
+        summary: t,
+        channel: a,
+        rating: s
+    } = e;
+    null != t && (s === o.aZ.BAD ? (0, i.openModalLazy)(async () => {
+        let {default: e} = await n.e('62104').then(n.bind(n, 580584));
+        return n => (0, r.jsx)(e, {
+            ...n,
+            onSubmit: e => l(t, a, e),
+            startRating: s
+        });
+    }) : l(t, a, {
+        rating: s,
+        problem: null,
+        feedback: '',
+        dontShowAgain: !1
+    }));
 }

@@ -1,15 +1,13 @@
-"use strict";
-var e = n(161581),
-  o = Object.defineProperty;
-t.exports = function(t, r) {
-  try {
-    o(e, t, {
-      value: r,
-      configurable: !0,
-      writable: !0
-    })
-  } catch (n) {
-    e[t] = r
-  }
-  return r
-}
+var e = r(161581), o = Object.defineProperty;
+t.exports = function (t, n) {
+    try {
+        o(e, t, {
+            value: n,
+            configurable: !0,
+            writable: !0
+        });
+    } catch (r) {
+        e[t] = n;
+    }
+    return n;
+};

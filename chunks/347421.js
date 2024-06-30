@@ -1,50 +1,42 @@
-"use strict";
-n.d(e, {
-  q: function() {
-    return l
-  }
+r.d(e, {
+    q: function () {
+        return s;
+    }
 });
-var r = n(765497),
-  i = n(50074),
-  s = n(128603),
-  a = n(880803),
-  o = n(529866),
-  u = n(303155);
-
-function l(t, e, n = (0, r.x)(t.bufferSize || 30)) {
-  let l = {};
-
-  function d(r) {
-    let d = [];
-    if ((0, i.gv)(r, (e, n) => {
-        let r = (0, i.mL)(n);
-        if ((0, s.Q)(l, r)) {
-          let i = c(e, n);
-          t.recordDroppedEvent("ratelimit_backoff", r, i)
-        } else d.push(e)
-      }), 0 === d.length) return (0, a.WD)();
-    let h = (0, i.Jd)(r[0], d),
-      _ = e => {
-        (0, i.gv)(h, (n, r) => {
-          let s = c(n, r);
-          t.recordDroppedEvent(e, (0, i.mL)(r), s)
-        })
-      };
-    return n.add(() => e({
-      body: (0, i.V$)(h, t.textEncoder)
-    }).then(t => (void 0 !== t.statusCode && (t.statusCode < 200 || t.statusCode >= 300) && ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && o.kg.warn(`Sentry responded with status code ${t.statusCode} to sent event.`), l = (0, s.WG)(l, t), t), t => {
-      throw _("network_error"), t
-    })).then(t => t, t => {
-      if (t instanceof u.b) return ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && o.kg.error("Skipped sending event because buffer is full."), _("queue_overflow"), (0, a.WD)();
-      throw t
-    })
-  }
-  return d.__sentry__baseTransport__ = !0, {
-    send: d,
-    flush: t => n.drain(t)
-  }
+var n = r(765497), _ = r(50074), a = r(128603), i = r(880803), o = r(529866), E = r(303155);
+function s(t, e, r = (0, n.x)(t.bufferSize || 30)) {
+    let s = {};
+    function I(n) {
+        let I = [];
+        if ((0, _.gv)(n, (e, r) => {
+                let n = (0, _.mL)(r);
+                if ((0, a.Q)(s, n)) {
+                    let _ = c(e, r);
+                    t.recordDroppedEvent('ratelimit_backoff', n, _);
+                } else
+                    I.push(e);
+            }), 0 === I.length)
+            return (0, i.WD)();
+        let R = (0, _.Jd)(n[0], I), u = e => {
+                (0, _.gv)(R, (r, n) => {
+                    let a = c(r, n);
+                    t.recordDroppedEvent(e, (0, _.mL)(n), a);
+                });
+            };
+        return r.add(() => e({ body: (0, _.V$)(R, t.textEncoder) }).then(t => (void 0 !== t.statusCode && (t.statusCode < 200 || t.statusCode >= 300) && ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && o.kg.warn(`Sentry responded with status code ${ t.statusCode } to sent event.`), s = (0, a.WG)(s, t), t), t => {
+            throw u('network_error'), t;
+        })).then(t => t, t => {
+            if (t instanceof E.b)
+                return ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && o.kg.error('Skipped sending event because buffer is full.'), u('queue_overflow'), (0, i.WD)();
+            throw t;
+        });
+    }
+    return I.__sentry__baseTransport__ = !0, {
+        send: I,
+        flush: t => r.drain(t)
+    };
 }
-
 function c(t, e) {
-  if ("event" === e || "transaction" === e) return Array.isArray(t) ? t[1] : void 0
+    if ('event' === e || 'transaction' === e)
+        return Array.isArray(t) ? t[1] : void 0;
 }

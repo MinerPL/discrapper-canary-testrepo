@@ -1,10 +1,7 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return r;
+    }
 });
 var r = {};
-r = {
-  Empty: `\u{641}\u{627}\u{631}\u{63A}`
-}
+r = { Empty: `\u{641}\u{627}\u{631}\u{63A}` };

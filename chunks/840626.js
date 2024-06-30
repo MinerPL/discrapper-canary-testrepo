@@ -1,0 +1,22 @@
+e.exports = {
+    content: 'content_aa99af',
+    contentNoArt: 'contentNoArt_aa99af',
+    contentPremium: 'contentPremium_aa99af',
+    artAbsolute: 'artAbsolute_aa99af art_aa99af',
+    artInline: 'artInline_aa99af art_aa99af',
+    body: 'body_aa99af',
+    header: 'header_aa99af',
+    headerWithPremiumIcon: 'headerWithPremiumIcon_aa99af header_aa99af',
+    premiumIcon: 'premiumIcon_aa99af',
+    button: 'button_aa99af',
+    buttonContainerHorizontal: 'buttonContainerHorizontal_aa99af',
+    buttonContainerVertical: 'buttonContainerVertical_aa99af',
+    pointer: 'pointer_aa99af',
+    bottomPointer: 'bottomPointer_aa99af',
+    centerLeftPointer: 'centerLeftPointer_aa99af',
+    topLeftPointer: 'topLeftPointer_aa99af',
+    gifTag: 'gifTag_aa99af',
+    earlyAccessText: 'earlyAccessText_aa99af',
+    earlyAccessIcon: 'earlyAccessIcon_aa99af',
+    earlyAccessBadgeContainer: 'earlyAccessBadgeContainer_aa99af'
+};

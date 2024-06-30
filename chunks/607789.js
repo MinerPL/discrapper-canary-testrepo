@@ -1,28 +1,24 @@
-"use strict";
 n(47120), n(724458);
-var i = n(470079),
-  r = n(442837),
-  s = n(25251),
-  o = n(731896);
+var r = n(470079), i = n(442837), a = n(25251), o = n(731896);
 t.Z = e => {
-  let [t, n] = i.useState(e), [a, l] = i.useState(s.Z.getProfileEffectById(e));
-  (0, o.V)(e);
-  let u = (0, r.e7)([s.Z], () => s.Z.profileEffects),
-    _ = u.reduce((t, n, i) => (n.id === e && (t = i), t), 0),
-    [, d] = i.useState(_),
-    c = i.useRef(_);
-  return i.useEffect(() => {
-    n(e), l(s.Z.getProfileEffectById(e))
-  }, [e, u]), {
-    increment: () => {
-      let e = (c.current + 1) % u.length;
-      c.current = e, d(e), n(u[e].id), l(u[e])
-    },
-    decrement: () => {
-      let e = 0 === c.current ? u.length - 1 : c.current - 1;
-      c.current = e, d(e), n(u[e].id), l(u[e])
-    },
-    id: t,
-    preset: a
-  }
-}
+    let [t, n] = r.useState(e), [s, l] = r.useState(a.Z.getProfileEffectById(e));
+    (0, o.V)(e);
+    let u = (0, i.e7)([a.Z], () => a.Z.profileEffects), c = u.reduce((t, n, r) => (n.id === e && (t = r), t), 0), [, d] = r.useState(c), _ = r.useRef(c);
+    return r.useEffect(() => {
+        n(e), l(a.Z.getProfileEffectById(e));
+    }, [
+        e,
+        u
+    ]), {
+        increment: () => {
+            let e = (_.current + 1) % u.length;
+            _.current = e, d(e), n(u[e].id), l(u[e]);
+        },
+        decrement: () => {
+            let e = 0 === _.current ? u.length - 1 : _.current - 1;
+            _.current = e, d(e), n(u[e].id), l(u[e]);
+        },
+        id: t,
+        preset: s
+    };
+};

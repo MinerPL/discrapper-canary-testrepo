@@ -1,62 +1,57 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return c
-  }
-}), n(47120);
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(481060),
-  l = n(454585),
-  u = n(572004),
-  _ = n(689938),
-  d = n(501496);
-
-function c(e) {
-  let {
-    element: {
-      data: {
-        title: t,
-        body: n,
-        sms: s,
-        is_localized: c
-      }
+    Z: function () {
+        return _;
     }
-  } = e, [E, I] = r.useState(!1), T = r.useRef(l.Z.reactParserFor(l.Z.defaultRules));
-  return c ? (0, i.jsxs)("div", {
-    className: d.container,
-    children: [(0, i.jsx)(a.Heading, {
-      variant: "heading-sm/semibold",
-      color: "header-secondary",
-      className: d.header,
-      children: t
-    }), (0, i.jsx)(a.Text, {
-      variant: "text-sm/normal",
-      className: d.bodyText,
-      children: T.current(n)
-    }), (0, i.jsx)("div", {
-      className: d.__invalid_smsInfoContainer,
-      children: (0, i.jsxs)("div", {
-        className: o()(d.smsNumberContainer, {
-          [d.copied]: E
-        }),
-        children: [(0, i.jsx)(a.Text, {
-          variant: "text-md/normal",
-          selectable: !0,
-          className: d.smsNumberText,
-          children: s
-        }), (0, i.jsx)(a.Button, {
-          size: a.Button.Sizes.SMALL,
-          className: d.__invalid_trailingButton,
-          onClick: () => {
-            (0, u.JG)(s) && I(!0)
-          },
-          color: a.Button.Colors.PRIMARY,
-          children: E ? _.Z.Messages.COPIED : _.Z.Messages.COPY
-        })]
-      })
-    })]
-  }) : null
+}), n(47120);
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(481060), l = n(454585), u = n(572004), c = n(689938), d = n(75493);
+function _(e) {
+    let {
+            element: {
+                data: {
+                    title: t,
+                    body: n,
+                    sms: a,
+                    is_localized: _
+                }
+            }
+        } = e, [E, f] = i.useState(!1), h = i.useRef(l.Z.reactParserFor(l.Z.defaultRules));
+    return _ ? (0, r.jsxs)('div', {
+        className: d.container,
+        children: [
+            (0, r.jsx)(s.Heading, {
+                variant: 'heading-sm/semibold',
+                color: 'header-secondary',
+                className: d.header,
+                children: t
+            }),
+            (0, r.jsx)(s.Text, {
+                variant: 'text-sm/normal',
+                className: d.bodyText,
+                children: h.current(n)
+            }),
+            (0, r.jsx)('div', {
+                className: d.__invalid_smsInfoContainer,
+                children: (0, r.jsxs)('div', {
+                    className: o()(d.smsNumberContainer, { [d.copied]: E }),
+                    children: [
+                        (0, r.jsx)(s.Text, {
+                            variant: 'text-md/normal',
+                            selectable: !0,
+                            className: d.smsNumberText,
+                            children: a
+                        }),
+                        (0, r.jsx)(s.Button, {
+                            size: s.Button.Sizes.SMALL,
+                            className: d.__invalid_trailingButton,
+                            onClick: () => {
+                                (0, u.JG)(a) && f(!0);
+                            },
+                            color: s.Button.Colors.PRIMARY,
+                            children: E ? c.Z.Messages.COPIED : c.Z.Messages.COPY
+                        })
+                    ]
+                })
+            })
+        ]
+    }) : null;
 }

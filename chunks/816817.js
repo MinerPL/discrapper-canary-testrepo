@@ -1,152 +1,148 @@
-"use strict";
-t(47120);
-var n = t(735250),
-  i = t(470079),
-  l = t(120356),
-  a = t.n(l),
-  r = t(780384),
-  o = t(481060),
-  c = t(410030),
-  d = t(134432),
-  u = t(940627),
-  E = t(806519),
-  _ = t(768581),
-  I = t(624138),
-  T = t(689938),
-  N = t(494439),
-  m = t(129512),
-  S = t(330065);
-let h = [16, 16, 14, 14, 12, 10, 8];
-s.Z = function(e) {
-  var s, t;
-  let {
-    guild: l,
-    disabled: g,
-    small: x,
-    loading: C = !1,
-    description: R,
-    memberCount: L,
-    presenceCount: O,
-    className: A
-  } = e, p = (0, c.ZP)(), [M, f] = i.useState(!1);
-  if (null == l || C) return (0, n.jsx)("div", {
-    className: a()(A, N.card, N.cardPlaceholder, {
-      [N.cardSmall]: x,
-      [N.cardDisabled]: g
-    })
-  });
-  let {
-    name: v
-  } = l, D = null != l.discoverySplash && /^data:/.test(l.discoverySplash) ? l.discoverySplash : _.ZP.getGuildDiscoverySplashURL({
-    id: l.id,
-    splash: l.discoverySplash,
-    size: 240 * (0, d.x_)()
-  }), Z = (0, r.wj)(p) ? m : S, j = null !== (s = _.ZP.getGuildIconURL({
-    id: l.id,
-    icon: l.icon,
-    size: 40
-  })) && void 0 !== s ? s : void 0, U = null != l.description ? l.description : R, G = null != L ? L : null == l ? void 0 : l.memberCount, P = null != O ? O : null == l ? void 0 : l.presenceCount, b = null;
-  if (null != j) b = (0, n.jsx)("img", {
-    src: j,
-    alt: "",
-    className: N.avatar
-  });
-  else {
-    let e = (0, I.Zg)(l.name);
-    b = (0, n.jsx)("div", {
-      className: N.defaultIcon,
-      children: (0, n.jsx)(o.Text, {
-        className: N.acronym,
-        style: {
-          fontSize: null !== (t = h[e.length]) && void 0 !== t ? t : h[h.length - 1]
-        },
-        variant: "text-sm/normal",
-        children: e
-      })
-    })
-  }
-  return (0, n.jsxs)("div", {
-    className: a()(A, N.card, {
-      [N.cardSmall]: x,
-      [N.cardDisabled]: g,
-      [N.splashLoaded]: M
-    }),
-    children: [(0, n.jsxs)("div", {
-      className: N.cardHeader,
-      children: [(0, n.jsx)("div", {
-        className: N.splash,
-        children: (0, n.jsx)("img", {
-          src: null != D ? D : Z,
-          alt: "",
-          className: N.splashImage,
-          onLoad: () => f(!0)
-        })
-      }), (0, n.jsx)("div", {
-        className: N.guildIcon,
-        children: (0, n.jsx)(E.ZP, {
-          mask: E.ZP.Masks.SQUIRCLE,
-          width: 48,
-          height: 48,
-          children: (0, n.jsx)("div", {
-            className: N.iconMask,
-            children: (0, n.jsx)(E.ZP, {
-              mask: E.ZP.Masks.SQUIRCLE,
-              width: 40,
-              height: 40,
-              children: null != b ? b : null
+n(47120);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(780384), o = n(481060), c = n(410030), d = n(134432), u = n(940627), _ = n(806519), E = n(768581), I = n(624138), T = n(689938), m = n(751377), N = n(129512), S = n(330065);
+let h = [
+    16,
+    16,
+    14,
+    14,
+    12,
+    10,
+    8
+];
+t.Z = function (e) {
+    var t, n;
+    let {
+            guild: i,
+            disabled: g,
+            small: C,
+            loading: x = !1,
+            description: p,
+            memberCount: R,
+            presenceCount: f,
+            className: L
+        } = e, O = (0, c.ZP)(), [A, M] = a.useState(!1);
+    if (null == i || x)
+        return (0, s.jsx)('div', {
+            className: r()(L, m.card, m.cardPlaceholder, {
+                [m.cardSmall]: C,
+                [m.cardDisabled]: g
             })
-          })
-        })
-      })]
-    }), (0, n.jsxs)("div", {
-      className: N.guildInfo,
-      children: [(0, n.jsxs)("div", {
-        className: N.title,
-        children: [(0, n.jsx)(u.Z, {
-          className: N.verifiedIcon,
-          guild: l,
-          tooltipColor: o.Tooltip.Colors.PRIMARY
-        }), (0, n.jsx)(o.Text, {
-          className: N.guildName,
-          variant: "text-md/normal",
-          children: (0, n.jsx)("span", {
-            children: v
-          })
-        })]
-      }), (0, n.jsx)(o.Text, {
-        className: N.description,
-        variant: "text-sm/normal",
-        children: (0, n.jsx)("span", {
-          children: U
-        })
-      }), (0, n.jsxs)("div", {
-        className: N.memberInfo,
-        children: [null != P && (0, n.jsxs)("div", {
-          className: N.memberCount,
-          children: [(0, n.jsx)("div", {
-            className: N.dotOnline
-          }), (0, n.jsx)(o.Text, {
-            variant: "text-xs/normal",
-            children: x ? T.Z.Messages.NUMBERS_ONLY.format({
-              count: P
-            }) : T.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
-              membersOnline: P
+        });
+    let {name: v} = i, D = null != i.discoverySplash && /^data:/.test(i.discoverySplash) ? i.discoverySplash : E.ZP.getGuildDiscoverySplashURL({
+            id: i.id,
+            splash: i.discoverySplash,
+            size: 240 * (0, d.x_)()
+        }), j = (0, l.wj)(O) ? N : S, Z = null !== (t = E.ZP.getGuildIconURL({
+            id: i.id,
+            icon: i.icon,
+            size: 40
+        })) && void 0 !== t ? t : void 0, b = null != i.description ? i.description : p, U = null != R ? R : null == i ? void 0 : i.memberCount, G = null != f ? f : null == i ? void 0 : i.presenceCount, P = null;
+    if (null != Z)
+        P = (0, s.jsx)('img', {
+            src: Z,
+            alt: '',
+            className: m.avatar
+        });
+    else {
+        let e = (0, I.Zg)(i.name);
+        P = (0, s.jsx)('div', {
+            className: m.defaultIcon,
+            children: (0, s.jsx)(o.Text, {
+                className: m.acronym,
+                style: { fontSize: null !== (n = h[e.length]) && void 0 !== n ? n : h[h.length - 1] },
+                variant: 'text-sm/normal',
+                children: e
             })
-          })]
-        }), null != G && (0, n.jsxs)("div", {
-          className: N.memberCount,
-          children: [(0, n.jsx)("div", {
-            className: N.dotOffline
-          }), (0, n.jsx)(o.Text, {
-            variant: "text-xs/normal",
-            children: x ? T.Z.Messages.NUMBERS_ONLY.format({
-              count: G
-            }) : T.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
-              count: G
+        });
+    }
+    return (0, s.jsxs)('div', {
+        className: r()(L, m.card, {
+            [m.cardSmall]: C,
+            [m.cardDisabled]: g,
+            [m.splashLoaded]: A
+        }),
+        children: [
+            (0, s.jsxs)('div', {
+                className: m.cardHeader,
+                children: [
+                    (0, s.jsx)('div', {
+                        className: m.splash,
+                        children: (0, s.jsx)('img', {
+                            src: null != D ? D : j,
+                            alt: '',
+                            className: m.splashImage,
+                            onLoad: () => M(!0)
+                        })
+                    }),
+                    (0, s.jsx)('div', {
+                        className: m.guildIcon,
+                        children: (0, s.jsx)(_.ZP, {
+                            mask: _.ZP.Masks.SQUIRCLE,
+                            width: 48,
+                            height: 48,
+                            children: (0, s.jsx)('div', {
+                                className: m.iconMask,
+                                children: (0, s.jsx)(_.ZP, {
+                                    mask: _.ZP.Masks.SQUIRCLE,
+                                    width: 40,
+                                    height: 40,
+                                    children: null != P ? P : null
+                                })
+                            })
+                        })
+                    })
+                ]
+            }),
+            (0, s.jsxs)('div', {
+                className: m.guildInfo,
+                children: [
+                    (0, s.jsxs)('div', {
+                        className: m.title,
+                        children: [
+                            (0, s.jsx)(u.Z, {
+                                className: m.verifiedIcon,
+                                guild: i,
+                                tooltipColor: o.Tooltip.Colors.PRIMARY
+                            }),
+                            (0, s.jsx)(o.Text, {
+                                className: m.guildName,
+                                variant: 'text-md/normal',
+                                children: (0, s.jsx)('span', { children: v })
+                            })
+                        ]
+                    }),
+                    (0, s.jsx)(o.Text, {
+                        className: m.description,
+                        variant: 'text-sm/normal',
+                        children: (0, s.jsx)('span', { children: b })
+                    }),
+                    (0, s.jsxs)('div', {
+                        className: m.memberInfo,
+                        children: [
+                            null != G && (0, s.jsxs)('div', {
+                                className: m.memberCount,
+                                children: [
+                                    (0, s.jsx)('div', { className: m.dotOnline }),
+                                    (0, s.jsx)(o.Text, {
+                                        variant: 'text-xs/normal',
+                                        children: C ? T.Z.Messages.NUMBERS_ONLY.format({ count: G }) : T.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: G })
+                                    })
+                                ]
+                            }),
+                            null != U && (0, s.jsxs)('div', {
+                                className: m.memberCount,
+                                children: [
+                                    (0, s.jsx)('div', { className: m.dotOffline }),
+                                    (0, s.jsx)(o.Text, {
+                                        variant: 'text-xs/normal',
+                                        children: C ? T.Z.Messages.NUMBERS_ONLY.format({ count: U }) : T.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: U })
+                                    })
+                                ]
+                            })
+                        ]
+                    })
+                ]
             })
-          })]
-        })]
-      })]
-    })]
-  })
-}
+        ]
+    });
+};

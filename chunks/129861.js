@@ -1,90 +1,81 @@
-"use strict";
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(120356),
-  s = n.n(r),
-  o = n(442837),
-  a = n(481060),
-  l = n(246946),
-  u = n(467679),
-  _ = n(180828),
-  d = n(51144),
-  c = n(689938),
-  E = n(635889);
-
-function I(e) {
-  if (e.isSystemUser()) return _.J.SYSTEM_DM;
-  if (e.isClyde()) return _.J.AI;
-  if (e.bot) return _.J.BOT;
-  return null
+var i = n(120356), a = n.n(i), o = n(442837), s = n(481060), l = n(246946), u = n(467679), c = n(180828), d = n(51144), _ = n(689938), E = n(81364);
+function f(e) {
+    if (e.isSystemUser())
+        return c.J.SYSTEM_DM;
+    if (e.isClyde())
+        return c.J.AI;
+    if (e.bot)
+        return c.J.BOT;
+    return null;
 }
-let T = e => {
-  let {
-    primary: t,
-    secondary: n,
-    botType: r,
-    botVerified: o,
-    discriminatorClass: l,
-    className: _,
-    usernameClass: d,
-    color: I,
-    botClass: T,
-    showStreamerModeTooltip: h
-  } = e;
-  return (0, i.jsxs)("div", {
-    className: s()(E.info, _),
-    children: [(0, i.jsx)(a.Tooltip, {
-      text: c.Z.Messages.STREAMER_MODE_ENABLED,
-      shouldShow: h,
-      "aria-label": !!h && void 0,
-      children: e => (0, i.jsx)("span", {
-        ...e,
-        className: s()(E.__invalid_username, d),
-        style: null != I ? {
-          color: I
-        } : void 0,
-        children: t
-      })
-    }), null != n ? (0, i.jsx)("span", {
-      className: s()(E.infoSpacing, l),
-      children: n
-    }) : void 0, null != r && (0, i.jsx)(u.Z, {
-      type: r,
-      className: s()(E.infoSpacing, T),
-      verified: o
-    })]
-  })
+let h = e => {
+    let {
+        primary: t,
+        secondary: n,
+        botType: i,
+        botVerified: o,
+        discriminatorClass: l,
+        className: c,
+        usernameClass: d,
+        color: f,
+        botClass: h,
+        showStreamerModeTooltip: p
+    } = e;
+    return (0, r.jsxs)('div', {
+        className: a()(E.info, c),
+        children: [
+            (0, r.jsx)(s.Tooltip, {
+                text: _.Z.Messages.STREAMER_MODE_ENABLED,
+                shouldShow: p,
+                'aria-label': !!p && void 0,
+                children: e => (0, r.jsx)('span', {
+                    ...e,
+                    className: a()(E.__invalid_username, d),
+                    style: null != f ? { color: f } : void 0,
+                    children: t
+                })
+            }),
+            null != n ? (0, r.jsx)('span', {
+                className: a()(E.infoSpacing, l),
+                children: n
+            }) : void 0,
+            null != i && (0, r.jsx)(u.Z, {
+                type: i,
+                className: a()(E.infoSpacing, h),
+                verified: o
+            })
+        ]
+    });
 };
 t.Z = e => {
-  let {
-    hideDiscriminator: t = !1,
-    user: n,
-    nick: r,
-    forceUsername: s,
-    showAccountIdentifier: a,
-    overrideDiscriminator: u,
-    forcePomelo: c,
-    ...E
-  } = e, h = (0, o.e7)([l.Z], () => l.Z.hidePersonalInformation), S = h || t || n.isNonUserBot(), f = n.toString(), N = d.ZP.getName(n), A = s ? f : null != r ? r : N, m = n.isPomelo() || c;
-  if (m || A !== f) {
-    let e = A === f && m && s ? d.ZP.getUserTag(n, {
-        forcePomelo: c
-      }) : A,
-      t = a && e !== "@".concat(f) ? d.ZP.getUserTag(n) : void 0;
-    return (0, i.jsx)(T, {
-      primary: e,
-      secondary: t,
-      botVerified: n.isVerifiedBot(),
-      botType: I(n),
-      showStreamerModeTooltip: h && e !== N,
-      ...E
-    })
-  }
-  return (0, i.jsx)(_.Z, {
-    name: A,
-    botType: I(n),
-    botVerified: n.isVerifiedBot(),
-    discriminator: S || A !== f ? null : null != u ? u : n.discriminator,
-    ...E
-  })
-}
+    let {
+            hideDiscriminator: t = !1,
+            user: n,
+            nick: i,
+            forceUsername: a,
+            showAccountIdentifier: s,
+            overrideDiscriminator: u,
+            forcePomelo: _,
+            ...E
+        } = e, p = (0, o.e7)([l.Z], () => l.Z.hidePersonalInformation), m = p || t || n.isNonUserBot(), I = n.toString(), T = d.ZP.getName(n), g = a ? I : null != i ? i : T, S = n.isPomelo() || _;
+    if (S || g !== I) {
+        let e = g === I && S && a ? d.ZP.getUserTag(n, { forcePomelo: _ }) : g, t = s && e !== '@'.concat(I) ? d.ZP.getUserTag(n) : void 0;
+        return (0, r.jsx)(h, {
+            primary: e,
+            secondary: t,
+            botVerified: n.isVerifiedBot(),
+            botType: f(n),
+            showStreamerModeTooltip: p && e !== T,
+            ...E
+        });
+    }
+    return (0, r.jsx)(c.Z, {
+        name: g,
+        botType: f(n),
+        botVerified: n.isVerifiedBot(),
+        discriminator: m || g !== I ? null : null != u ? u : n.discriminator,
+        ...E
+    });
+};

@@ -1,43 +1,41 @@
-"use strict";
-n.d(e, {
-  M: function() {
-    return a
-  },
-  Q: function() {
-    return s
-  }
-});
-var r = n(50074),
-  i = n(177668);
-
-function s(t, e, n, s) {
-  let a = (0, r.HY)(n),
-    o = {
-      sent_at: new Date().toISOString(),
-      ...a && {
-        sdk: a
-      },
-      ...!!s && {
-        dsn: (0, i.RA)(e)
-      }
+r.d(e, {
+    M: function () {
+        return i;
     },
-    u = "aggregates" in t ? [{
-      type: "sessions"
-    }, t] : [{
-      type: "session"
-    }, t.toJSON()];
-  return (0, r.Jd)(o, [u])
+    Q: function () {
+        return a;
+    }
+});
+var n = r(50074), _ = r(177668);
+function a(t, e, r, a) {
+    let i = (0, n.HY)(r), o = {
+            sent_at: new Date().toISOString(),
+            ...i && { sdk: i },
+            ...!!a && { dsn: (0, _.RA)(e) }
+        }, E = 'aggregates' in t ? [
+            { type: 'sessions' },
+            t
+        ] : [
+            { type: 'session' },
+            t.toJSON()
+        ];
+    return (0, n.Jd)(o, [E]);
 }
-
-function a(t, e, n, i) {
-  var s, a;
-  let o = (0, r.HY)(n),
-    u = t.type && "replay_event" !== t.type ? t.type : "event";
-  s = t, !(a = n && n.sdk) || (s.sdk = s.sdk || {}, s.sdk.name = s.sdk.name || a.name, s.sdk.version = s.sdk.version || a.version, s.sdk.integrations = [...s.sdk.integrations || [], ...a.integrations || []], s.sdk.packages = [...s.sdk.packages || [], ...a.packages || []]);
-  let l = (0, r.Cd)(t, o, i, e);
-  delete t.sdkProcessingMetadata;
-  let c = [{
-    type: u
-  }, t];
-  return (0, r.Jd)(l, [c])
+function i(t, e, r, _) {
+    var a, i;
+    let o = (0, n.HY)(r), E = t.type && 'replay_event' !== t.type ? t.type : 'event';
+    a = t, !(i = r && r.sdk) || (a.sdk = a.sdk || {}, a.sdk.name = a.sdk.name || i.name, a.sdk.version = a.sdk.version || i.version, a.sdk.integrations = [
+        ...a.sdk.integrations || [],
+        ...i.integrations || []
+    ], a.sdk.packages = [
+        ...a.sdk.packages || [],
+        ...i.packages || []
+    ]);
+    let s = (0, n.Cd)(t, o, _, e);
+    delete t.sdkProcessingMetadata;
+    let c = [
+        { type: E },
+        t
+    ];
+    return (0, n.Jd)(s, [c]);
 }

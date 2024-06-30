@@ -1,14 +1,10 @@
-"use strict";
-n.d(e, {
-  B: function() {
-    return i
-  }
+r.d(e, {
+    B: function () {
+        return _;
+    }
 });
-let r = (0, n(24716).Rf)();
-
-function i() {
-  let t = r.chrome,
-    e = t && t.app && t.app.runtime,
-    n = "history" in r && !!r.history.pushState && !!r.history.replaceState;
-  return !e && n
+let n = (0, r(24716).Rf)();
+function _() {
+    let t = n.chrome, e = t && t.app && t.app.runtime, r = 'history' in n && !!n.history.pushState && !!n.history.replaceState;
+    return !e && r;
 }

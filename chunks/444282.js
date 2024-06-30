@@ -1,132 +1,133 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return f
-  }
-}), n(47120);
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(481060),
-  l = n(166459),
-  u = n(53281),
-  _ = n(476326),
-  d = n(703558),
-  c = n(117530),
-  E = n(859235),
-  I = n(898463),
-  T = n(981631),
-  h = n(790544),
-  S = n(451328);
-
-function f(e) {
-  let {
-    channelId: t,
-    option: n,
-    keyboardModeEnabled: s
-  } = e, f = r.useRef(null), [N, A] = r.useState(!1), m = c.Z.getUpload(t, n.name, d.d.SlashCommand), O = r.useRef(null), R = r.useCallback(() => {
-    A(!0)
-  }, []), C = r.useCallback(() => {
-    A(!1)
-  }, []), p = r.useCallback(e => {
-    var i;
-    A(!1);
-    let r = {
-      id: n.name,
-      file: null === (i = e.dataTransfer) || void 0 === i ? void 0 : i.files[0],
-      platform: _.ow.WEB
-    };
-    l.Z.setFile({
-      channelId: t,
-      id: n.name,
-      file: r,
-      draftType: d.d.SlashCommand
-    })
-  }, [t, n]);
-  return (r.useEffect(() => {
-    let e = O.current;
-    return null == m && (null == e || e.addEventListener("dragover", R, !1), null == e || e.addEventListener("dragleave", C, !1), null == e || e.addEventListener("drop", p, !1)), () => {
-      null == e || e.removeEventListener("dragover", R, !1), null == e || e.removeEventListener("dragleave", C, !1), null == e || e.removeEventListener("drop", p, !1)
+    Z: function () {
+        return I;
     }
-  }, [m, R, C, p]), null != m) ? (0, i.jsx)(I.Z, {
-    channelId: t,
-    upload: m,
-    keyboardModeEnabled: s,
-    draftType: d.d.SlashCommand,
-    label: (0, i.jsxs)(r.Fragment, {
-      children: [(0, i.jsxs)(a.Text, {
-        tag: "span",
-        variant: "text-md/normal",
-        children: [n.name, ": "]
-      }), (0, i.jsx)(a.Text, {
-        tag: "span",
-        variant: "text-md/normal",
-        color: "text-brand",
-        children: m.filename
-      })]
-    }),
-    canEdit: !1
-  }) : (0, i.jsxs)(E.Z, {
-    id: n.name,
-    channelId: t,
-    keyboardModeEnabled: s,
-    onKeyDown: e => {
-      if (e.which === T.yXg.ENTER) {
-        var t;
-        e.preventDefault(), null === (t = f.current) || void 0 === t || t.activateUploadDialogue()
-      }
-    },
-    className: o()(h.emptyOption, {
-      [h.emptyOptionActive]: N
-    }),
-    draftType: d.d.SlashCommand,
-    ref: O,
-    children: [(0, i.jsx)("span", {
-      className: o()(h.optionName, {
-        [h.optionNameActive]: N
-      }),
-      children: n.name
-    }), (0, i.jsx)(a.Clickable, {
-      className: h.clickContainer,
-      onClick: () => {
-        var e;
-        return null === (e = f.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
-      },
-      children: (0, i.jsxs)("div", {
-        className: h.commandOptionContainer,
-        children: [(0, i.jsx)("img", {
-          src: S,
-          className: h.optionIcon,
-          alt: ""
-        }), (0, i.jsx)(a.Text, {
-          className: h.optionHelp,
-          variant: "text-sm/normal",
-          children: "Drag and drop or click to upload file"
-        }), (0, i.jsx)(u.Z, {
-          ref: f,
-          onChange: e => {
-            var i, r;
-            if (null != t && (null === (r = e.currentTarget) || void 0 === r ? void 0 : null === (i = r.files) || void 0 === i ? void 0 : i[0]) != null) {
-              let i = {
+}), n(47120);
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(481060), l = n(166459), u = n(53281), c = n(476326), d = n(703558), _ = n(117530), E = n(859235), f = n(898463), h = n(981631), p = n(701921), m = n(451328);
+function I(e) {
+    let {
+            channelId: t,
+            option: n,
+            keyboardModeEnabled: a
+        } = e, I = i.useRef(null), [T, g] = i.useState(!1), S = _.Z.getUpload(t, n.name, d.d.SlashCommand), A = i.useRef(null), N = i.useCallback(() => {
+            g(!0);
+        }, []), v = i.useCallback(() => {
+            g(!1);
+        }, []), O = i.useCallback(e => {
+            var r;
+            g(!1);
+            let i = {
                 id: n.name,
-                file: e.currentTarget.files[0],
-                platform: _.ow.WEB
-              };
-              l.Z.setFile({
+                file: null === (r = e.dataTransfer) || void 0 === r ? void 0 : r.files[0],
+                platform: c.ow.WEB
+            };
+            l.Z.setFile({
                 channelId: t,
                 id: n.name,
                 file: i,
                 draftType: d.d.SlashCommand
-              }), e.currentTarget.value = ""
+            });
+        }, [
+            t,
+            n
+        ]);
+    return (i.useEffect(() => {
+        let e = A.current;
+        return null == S && (null == e || e.addEventListener('dragover', N, !1), null == e || e.addEventListener('dragleave', v, !1), null == e || e.addEventListener('drop', O, !1)), () => {
+            null == e || e.removeEventListener('dragover', N, !1), null == e || e.removeEventListener('dragleave', v, !1), null == e || e.removeEventListener('drop', O, !1);
+        };
+    }, [
+        S,
+        N,
+        v,
+        O
+    ]), null != S) ? (0, r.jsx)(f.Z, {
+        channelId: t,
+        upload: S,
+        keyboardModeEnabled: a,
+        draftType: d.d.SlashCommand,
+        label: (0, r.jsxs)(i.Fragment, {
+            children: [
+                (0, r.jsxs)(s.Text, {
+                    tag: 'span',
+                    variant: 'text-md/normal',
+                    children: [
+                        n.name,
+                        ': '
+                    ]
+                }),
+                (0, r.jsx)(s.Text, {
+                    tag: 'span',
+                    variant: 'text-md/normal',
+                    color: 'text-brand',
+                    children: S.filename
+                })
+            ]
+        }),
+        canEdit: !1
+    }) : (0, r.jsxs)(E.Z, {
+        id: n.name,
+        channelId: t,
+        keyboardModeEnabled: a,
+        onKeyDown: e => {
+            if (e.which === h.yXg.ENTER) {
+                var t;
+                e.preventDefault(), null === (t = I.current) || void 0 === t || t.activateUploadDialogue();
             }
-          },
-          multiple: !1,
-          tabIndex: -1,
-          "aria-hidden": !0,
-          className: h.fileInput
-        })]
-      })
-    })]
-  })
+        },
+        className: o()(p.emptyOption, { [p.emptyOptionActive]: T }),
+        draftType: d.d.SlashCommand,
+        ref: A,
+        children: [
+            (0, r.jsx)('span', {
+                className: o()(p.optionName, { [p.optionNameActive]: T }),
+                children: n.name
+            }),
+            (0, r.jsx)(s.Clickable, {
+                className: p.clickContainer,
+                onClick: () => {
+                    var e;
+                    return null === (e = I.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
+                },
+                children: (0, r.jsxs)('div', {
+                    className: p.commandOptionContainer,
+                    children: [
+                        (0, r.jsx)('img', {
+                            src: m,
+                            className: p.optionIcon,
+                            alt: ''
+                        }),
+                        (0, r.jsx)(s.Text, {
+                            className: p.optionHelp,
+                            variant: 'text-sm/normal',
+                            children: 'Drag and drop or click to upload file'
+                        }),
+                        (0, r.jsx)(u.Z, {
+                            ref: I,
+                            onChange: e => {
+                                var r, i;
+                                if (null != t && (null === (i = e.currentTarget) || void 0 === i ? void 0 : null === (r = i.files) || void 0 === r ? void 0 : r[0]) != null) {
+                                    let r = {
+                                        id: n.name,
+                                        file: e.currentTarget.files[0],
+                                        platform: c.ow.WEB
+                                    };
+                                    l.Z.setFile({
+                                        channelId: t,
+                                        id: n.name,
+                                        file: r,
+                                        draftType: d.d.SlashCommand
+                                    }), e.currentTarget.value = '';
+                                }
+                            },
+                            multiple: !1,
+                            tabIndex: -1,
+                            'aria-hidden': !0,
+                            className: p.fileInput
+                        })
+                    ]
+                })
+            })
+        ]
+    });
 }

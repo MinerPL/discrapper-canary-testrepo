@@ -1,11 +1,9 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return i;
+    }
 });
-var i = n(359110);
-
-function r(e) {
-  (0, i.Kh)(e.channelId)
+var r = n(359110);
+function i(e) {
+    (0, r.Kh)(e.channelId);
 }

@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  a: function() {
-    return i
-  }
-}), (r = i || (i = {})).Destroy = "destroy", r.ConnectionStateChange = "connectionstatechange", r.Error = "error", r.Connected = "connected", r.Ping = "ping", r.PingTimeout = "pingtimeout"
+    a: function () {
+        return r;
+    }
+}), (i = r || (r = {})).Destroy = 'destroy', i.ConnectionStateChange = 'connectionstatechange', i.Error = 'error', i.Connected = 'connected', i.Ping = 'ping', i.PingTimeout = 'pingtimeout';

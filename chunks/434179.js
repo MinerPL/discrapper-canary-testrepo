@@ -1,7 +1,6 @@
-"use strict";
-var i;
+var r;
 n.d(t, {
-  n: function() {
-    return i
-  }
-}), n(47120), (i || (i = {})).CONNECT_VOICE = "connect_voice"
+    n: function () {
+        return r;
+    }
+}), n(47120), (r || (r = {})).CONNECT_VOICE = 'connect_voice';

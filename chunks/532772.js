@@ -1,46 +1,39 @@
-"use strict";
 n.d(t, {
-  z: function() {
-    return a
-  }
+    z: function () {
+        return s;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(709014);
+var r = n(735250), i = n(470079), a = n(709014);
 let o = {
-    click: {
-      name: "click",
-      start: 0,
-      duration: 66
-    },
-    hover: {
-      name: "hover",
-      start: 90,
-      duration: 40
-    }
-  },
-  a = () => {
-    let e = r.useRef(null),
-      t = r.useCallback(() => {
-        null != e.current && e.current.play("click")
-      }, []),
-      a = r.useCallback(() => {
-        null != e.current && e.current.play("hover")
-      }, []),
-      l = r.useCallback(() => {
-        null != e.current && e.current.stopIfPlaying("hover")
-      }, []);
-    return {
-      events: {
-        onMouseEnter: a,
-        onMouseLeave: l
-      },
-      play: t,
-      Component: r.useCallback(t => (0, i.jsx)(s.L, {
-        ...t,
-        src: () => n.e("36995").then(n.t.bind(n, 737962, 19)),
-        ref: e,
-        markers: o
-      }), [])
-    }
-  }
+        click: {
+            name: 'click',
+            start: 0,
+            duration: 66
+        },
+        hover: {
+            name: 'hover',
+            start: 90,
+            duration: 40
+        }
+    }, s = () => {
+        let e = i.useRef(null), t = i.useCallback(() => {
+                null != e.current && e.current.play('click');
+            }, []), s = i.useCallback(() => {
+                null != e.current && e.current.play('hover');
+            }, []), l = i.useCallback(() => {
+                null != e.current && e.current.stopIfPlaying('hover');
+            }, []);
+        return {
+            events: {
+                onMouseEnter: s,
+                onMouseLeave: l
+            },
+            play: t,
+            Component: i.useCallback(t => (0, r.jsx)(a.L, {
+                ...t,
+                src: () => n.e('36995').then(n.t.bind(n, 737962, 19)),
+                ref: e,
+                markers: o
+            }), [])
+        };
+    };

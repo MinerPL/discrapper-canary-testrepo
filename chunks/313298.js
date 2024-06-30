@@ -1,91 +1,87 @@
-"use strict";
 n(47120);
-var i = n(570140),
-  r = n(147913),
-  s = n(650774),
-  o = n(709054),
-  a = n(893966);
-let l = {},
-  u = {},
-  _ = null;
+var r = n(570140), i = n(147913), a = n(650774), o = n(709054), s = n(893966);
+let l = {}, u = {}, c = null;
 async function d(e, t) {
-  null == l[e] && (l[e] = new Set), l[e].add(t), null == u[e] && (u[e] = Date.now()), E(e) && await c(e)
+    null == l[e] && (l[e] = new Set()), l[e].add(t), null == u[e] && (u[e] = Date.now()), E(e) && await _(e);
 }
-
-function c(e) {
-  if (null == l[e]) return;
-  let t = Array.from(l[e]);
-  l[e] = new Set, u[e] = Date.now(), requestAnimationFrame(async () => {
-    await i.Z.dispatch({
-      type: "MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH",
-      guildId: e,
-      userIds: t
-    })
-  })
+function _(e) {
+    if (null == l[e])
+        return;
+    let t = Array.from(l[e]);
+    l[e] = new Set(), u[e] = Date.now(), requestAnimationFrame(async () => {
+        await r.Z.dispatch({
+            type: 'MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH',
+            guildId: e,
+            userIds: t
+        });
+    });
 }
-
 function E(e) {
-  let t = l[e];
-  if (null == t) return !1;
-  let n = t.size >= function(e) {
-      var t;
-      let n = null !== (t = s.Z.getMemberCount(e)) && void 0 !== t ? t : 0;
-      return n >= 75e3 ? 10 : 2
-    }(e),
-    i = u[e];
-  if (n) return !0;
-  if (null == i) return !1;
-  let r = Date.now() - i;
-  return null != i && r >= function(e) {
-    var t;
-    let n = null !== (t = s.Z.getMemberCount(e)) && void 0 !== t ? t : 0;
-    return n >= 75e3 ? 5e3 : 2e3
-  }(e)
+    let t = l[e];
+    if (null == t)
+        return !1;
+    let n = t.size >= function (e) {
+            var t;
+            let n = null !== (t = a.Z.getMemberCount(e)) && void 0 !== t ? t : 0;
+            return n >= 75000 ? 10 : 2;
+        }(e), r = u[e];
+    if (n)
+        return !0;
+    if (null == r)
+        return !1;
+    let i = Date.now() - r;
+    return null != r && i >= function (e) {
+        var t;
+        let n = null !== (t = a.Z.getMemberCount(e)) && void 0 !== t ? t : 0;
+        return n >= 75000 ? 5000 : 2000;
+    }(e);
 }
-
-function I(e) {
-  l[e] = new Set, u[e] = null
+function f(e) {
+    l[e] = new Set(), u[e] = null;
 }
-class T extends r.Z {
-  handleInitialize() {
-    null == _ && ! function() {
-      if (null == _) _ = setInterval(() => {
-        o.default.forEachKey(l, e => {
-          E(e) && c(e)
-        })
-      }, 1e4)
-    }()
-  }
-  handleGuildMemberUpdate(e, t) {
-    if (!!a.Z.isInitialized(e)) return d(e, t)
-  }
-  handleGuildMemberRemove(e, t) {
-    if (!!a.Z.isInitialized(e)) return d(e, t)
-  }
-  handleGuildDelete(e) {
-    let t = e.guild.id;
-    if (!!a.Z.isInitialized(t)) I(t)
-  }
-  handleGuildMemberSearchSuccess(e) {
-    let {
-      guildId: t
-    } = e;
-    if (!!a.Z.isInitialized(t)) I(t)
-  }
-  constructor(...e) {
-    var t, n, i;
-    super(...e), t = this, n = "actions", i = {
-      INITIALIZE_MEMBER_SAFETY_STORE: () => this.handleInitialize(),
-      GUILD_MEMBER_ADD: e => this.handleGuildMemberUpdate(e.guildId, e.user.id),
-      GUILD_MEMBER_UPDATE: e => this.handleGuildMemberUpdate(e.guildId, e.user.id),
-      GUILD_MEMBER_REMOVE: e => this.handleGuildMemberRemove(e.guildId, e.user.id),
-      MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: e => this.handleGuildMemberSearchSuccess(e)
-    }, n in t ? Object.defineProperty(t, n, {
-      value: i,
-      enumerable: !0,
-      configurable: !0,
-      writable: !0
-    }) : t[n] = i
-  }
+class h extends i.Z {
+    handleInitialize() {
+        null == c && !function () {
+            if (null == c)
+                c = setInterval(() => {
+                    o.default.forEachKey(l, e => {
+                        E(e) && _(e);
+                    });
+                }, 10000);
+        }();
+    }
+    handleGuildMemberUpdate(e, t) {
+        if (!!s.Z.isInitialized(e))
+            return d(e, t);
+    }
+    handleGuildMemberRemove(e, t) {
+        if (!!s.Z.isInitialized(e))
+            return d(e, t);
+    }
+    handleGuildDelete(e) {
+        let t = e.guild.id;
+        if (!!s.Z.isInitialized(t))
+            f(t);
+    }
+    handleGuildMemberSearchSuccess(e) {
+        let {guildId: t} = e;
+        if (!!s.Z.isInitialized(t))
+            f(t);
+    }
+    constructor(...e) {
+        var t, n, r;
+        super(...e), t = this, n = 'actions', r = {
+            INITIALIZE_MEMBER_SAFETY_STORE: () => this.handleInitialize(),
+            GUILD_MEMBER_ADD: e => this.handleGuildMemberUpdate(e.guildId, e.user.id),
+            GUILD_MEMBER_UPDATE: e => this.handleGuildMemberUpdate(e.guildId, e.user.id),
+            GUILD_MEMBER_REMOVE: e => this.handleGuildMemberRemove(e.guildId, e.user.id),
+            MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: e => this.handleGuildMemberSearchSuccess(e)
+        }, n in t ? Object.defineProperty(t, n, {
+            value: r,
+            enumerable: !0,
+            configurable: !0,
+            writable: !0
+        }) : t[n] = r;
+    }
 }
-t.Z = new T
+t.Z = new h();

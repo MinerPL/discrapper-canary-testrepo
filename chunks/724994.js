@@ -1,24 +1,17 @@
-"use strict";
-t.d(s, {
-  L: function() {
-    return o
-  },
-  U: function() {
-    return r
-  }
-});
-var n = t(24217),
-  a = t.n(n),
-  i = t(442837),
-  l = t(1870);
-let r = (e, s) => {
-    var t;
-    let n = null != e.getPurchase(s.skuId),
-      i = null !== (t = s.items) && void 0 !== t ? t : [],
-      l = a()(i.map(s => e.getPurchase(s.skuId)));
-    return {
-      isPurchased: n || i.length > 0 && l.length === i.length,
-      isPartiallyPurchased: l.length > 0 && l.length < i.length
+n.d(t, {
+    L: function () {
+        return l;
+    },
+    U: function () {
+        return i;
     }
-  },
-  o = e => (0, i.cj)([l.Z], () => r(l.Z, e))
+});
+var s = n(24217), r = n.n(s), a = n(442837), o = n(1870);
+let i = (e, t) => {
+        var n;
+        let s = null != e.getPurchase(t.skuId), a = null !== (n = t.items) && void 0 !== n ? n : [], o = r()(a.map(t => e.getPurchase(t.skuId)));
+        return {
+            isPurchased: s || a.length > 0 && o.length === a.length,
+            isPartiallyPurchased: o.length > 0 && o.length < a.length
+        };
+    }, l = e => (0, a.cj)([o.Z], () => i(o.Z, e));

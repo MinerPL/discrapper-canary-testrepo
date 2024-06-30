@@ -1,26 +1,30 @@
-"use strict";
 n(47120);
-var i = n(147913),
-  r = n(430871),
-  s = n(185923);
-let o = new Set([s.qR.EmojiButtonMouseEntered, s.qR.ChatInputExpressionPressed, s.qR.ChatInputSuggestionsShown, s.qR.SearchEmojiKeybindPressed, s.qR.AutocompleteTyped, s.qR.GuildLeaveModalShown, s.qR.AddReactionPopoutMouseEntered, s.qR.AddReactionPopoutFocused, s.qR.MessageContextMenuMouseEntered, s.qR.AutocompleteWrapperShown]);
-class a extends i.Z {
-  handleInteraction(e) {
-    let {
-      interaction: t
-    } = e;
-    o.has(t) && (0, r.x)(t)
-  }
-  constructor(...e) {
-    var t, n, i;
-    super(...e), t = this, n = "actions", i = {
-      EMOJI_INTERACTION_INITIATED: this.handleInteraction
-    }, n in t ? Object.defineProperty(t, n, {
-      value: i,
-      enumerable: !0,
-      configurable: !0,
-      writable: !0
-    }) : t[n] = i
-  }
+var r = n(147913), i = n(430871), a = n(185923);
+let o = new Set([
+    a.qR.EmojiButtonMouseEntered,
+    a.qR.ChatInputExpressionPressed,
+    a.qR.ChatInputSuggestionsShown,
+    a.qR.SearchEmojiKeybindPressed,
+    a.qR.AutocompleteTyped,
+    a.qR.GuildLeaveModalShown,
+    a.qR.AddReactionPopoutMouseEntered,
+    a.qR.AddReactionPopoutFocused,
+    a.qR.MessageContextMenuMouseEntered,
+    a.qR.AutocompleteWrapperShown
+]);
+class s extends r.Z {
+    handleInteraction(e) {
+        let {interaction: t} = e;
+        o.has(t) && (0, i.x)(t);
+    }
+    constructor(...e) {
+        var t, n, r;
+        super(...e), t = this, n = 'actions', r = { EMOJI_INTERACTION_INITIATED: this.handleInteraction }, n in t ? Object.defineProperty(t, n, {
+            value: r,
+            enumerable: !0,
+            configurable: !0,
+            writable: !0
+        }) : t[n] = r;
+    }
 }
-t.Z = new a
+t.Z = new s();

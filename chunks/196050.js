@@ -1,51 +1,49 @@
-"use strict";
-var i = n(735250),
-  r = n(470079),
-  s = n(335854),
-  o = n(481060),
-  a = n(626135),
-  l = n(943461),
-  u = n(981631),
-  _ = n(689938);
+var r = n(735250), i = n(470079), a = n(335854), o = n(481060), s = n(626135), l = n(981631), u = n(689938);
 t.Z = e => {
-  let {
-    href: t,
-    className: n,
-    iconClassName: d,
-    rel: c,
-    target: E,
-    mimeType: I,
-    fileName: T,
-    focusProps: h,
-    onClick: S,
-    ...f
-  } = e, N = r.useMemo(() => s.X.getDefaultLinkInterceptor(t), [t]), A = r.useCallback(e => {
-    a.default.track(u.rMx.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
-      attachment_type: null == I ? void 0 : I[0],
-      attachment_subtype: null == I ? void 0 : I[1]
-    }), null == S || S(), null == N || N(e)
-  }, [N, I, S]);
-  return null != T ? (0, i.jsx)(o.Anchor, {
-    href: t,
-    onClick: A,
-    target: E,
-    rel: c,
-    className: n,
-    "aria-label": _.Z.Messages.DOWNLOAD,
-    focusProps: h,
-    ...f,
-    children: T
-  }) : (0, i.jsx)(o.Anchor, {
-    href: t,
-    onClick: A,
-    target: E,
-    rel: c,
-    className: n,
-    "aria-label": _.Z.Messages.DOWNLOAD,
-    focusProps: h,
-    ...f,
-    children: (0, i.jsx)(l.Z, {
-      className: d
-    })
-  })
-}
+    let {
+            href: t,
+            className: n,
+            iconClassName: c,
+            rel: d,
+            target: _,
+            mimeType: E,
+            fileName: f,
+            focusProps: h,
+            onClick: p,
+            ...m
+        } = e, I = i.useMemo(() => a.X.getDefaultLinkInterceptor(t), [t]), T = i.useCallback(e => {
+            s.default.track(l.rMx.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
+                attachment_type: null == E ? void 0 : E[0],
+                attachment_subtype: null == E ? void 0 : E[1]
+            }), null == p || p(), null == I || I(e);
+        }, [
+            I,
+            E,
+            p
+        ]);
+    return null != f ? (0, r.jsx)(o.Anchor, {
+        href: t,
+        onClick: T,
+        target: _,
+        rel: d,
+        className: n,
+        'aria-label': u.Z.Messages.DOWNLOAD,
+        focusProps: h,
+        ...m,
+        children: f
+    }) : (0, r.jsx)(o.Anchor, {
+        href: t,
+        onClick: T,
+        target: _,
+        rel: d,
+        className: n,
+        'aria-label': u.Z.Messages.DOWNLOAD,
+        focusProps: h,
+        ...m,
+        children: (0, r.jsx)(o.DownloadIcon, {
+            size: 'md',
+            color: 'currentColor',
+            className: c
+        })
+    });
+};

@@ -1,17 +1,12 @@
-"use strict";
-let n = (0, t(818083).B)({
-  kind: "user",
-  id: "2020-12_guild_delete_feedback",
-  label: "Guild Delete Feedback experiment",
-  defaultConfig: {
-    showFeedback: !1
-  },
-  treatments: [{
-    id: 1,
-    label: "Show guild delete feedback",
-    config: {
-      showFeedback: !0
-    }
-  }]
+let s = (0, n(818083).B)({
+    kind: 'user',
+    id: '2020-12_guild_delete_feedback',
+    label: 'Guild Delete Feedback experiment',
+    defaultConfig: { showFeedback: !1 },
+    treatments: [{
+            id: 1,
+            label: 'Show guild delete feedback',
+            config: { showFeedback: !0 }
+        }]
 });
-s.Z = n
+t.Z = s;

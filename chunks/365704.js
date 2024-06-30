@@ -1,31 +1,30 @@
-"use strict";
 n.d(t, {
-  R: function() {
-    return E
-  },
-  W: function() {
-    return I
-  }
+    R: function () {
+        return E;
+    },
+    W: function () {
+        return f;
+    }
 });
-var i = n(590921),
-  r = n(521090),
-  s = n(126226),
-  o = n(116364),
-  a = n(290401),
-  l = n(341561),
-  u = n(277981),
-  _ = n(420001),
-  d = n(65090),
-  c = n(591236);
-let E = [i.eq.CHOICES, i.eq.GIFS, i.eq.COMMAND_OPTIONS, i.eq.EMOJIS_AND_STICKERS, i.eq.REACTIONS, i.eq.CHANNELS, i.eq.MENTIONS, i.eq.COMMANDS, i.eq.LEGACY_COMMANDS],
-  I = {
-    [i.eq.CHANNELS]: r.Z,
-    [i.eq.COMMANDS]: s.Z,
-    [i.eq.COMMAND_OPTIONS]: a.Z,
-    [i.eq.CHOICES]: o.Z,
-    [i.eq.EMOJIS_AND_STICKERS]: l.Z,
-    [i.eq.GIFS]: u.Z,
-    [i.eq.LEGACY_COMMANDS]: _.Z,
-    [i.eq.MENTIONS]: d.Z,
-    [i.eq.REACTIONS]: c.Z
-  }
+var r = n(590921), i = n(521090), a = n(126226), o = n(116364), s = n(941140), l = n(341561), u = n(277981), c = n(420001), d = n(65090), _ = n(591236);
+let E = [
+        r.eq.CHOICES,
+        r.eq.GIFS,
+        r.eq.COMMAND_OPTIONS,
+        r.eq.EMOJIS_AND_STICKERS,
+        r.eq.REACTIONS,
+        r.eq.CHANNELS,
+        r.eq.MENTIONS,
+        r.eq.COMMANDS,
+        r.eq.LEGACY_COMMANDS
+    ], f = {
+        [r.eq.CHANNELS]: i.Z,
+        [r.eq.COMMANDS]: a.Z,
+        [r.eq.COMMAND_OPTIONS]: s.Z,
+        [r.eq.CHOICES]: o.Z,
+        [r.eq.EMOJIS_AND_STICKERS]: l.Z,
+        [r.eq.GIFS]: u.Z,
+        [r.eq.LEGACY_COMMANDS]: c.Z,
+        [r.eq.MENTIONS]: d.Z,
+        [r.eq.REACTIONS]: _.Z
+    };

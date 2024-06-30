@@ -1,25 +1,26 @@
-"use strict";
-n.d(t, {
-  gc: function() {
-    return r
-  },
-  hH: function() {
-    return a
-  },
-  uX: function() {
-    return o
-  }
+t.d(n, {
+    gc: function () {
+        return l;
+    },
+    hH: function () {
+        return s;
+    },
+    uX: function () {
+        return r;
+    }
 });
-var i, r, s = n(470079);
-(i = r || (r = {})).HOME = "home", i.LIST = "list", i.APPLICATION = "application";
-let o = s.createContext({
-  history: [],
-  setHistory: () => {},
-  currentView: void 0,
-  pushHistory: () => {},
-  goBack: () => {}
+var i, l, a = t(470079);
+(i = l || (l = {})).HOME = 'home', i.LIST = 'list', i.APPLICATION = 'application';
+let r = a.createContext({
+    history: [],
+    setHistory: () => {
+    },
+    currentView: void 0,
+    pushHistory: () => {
+    },
+    goBack: () => {
+    }
 });
-
-function a() {
-  return s.useContext(o)
+function s() {
+    return a.useContext(r);
 }

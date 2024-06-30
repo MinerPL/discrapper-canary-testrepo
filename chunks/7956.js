@@ -1,37 +1,35 @@
-"use strict";
 n.d(t, {
-  i: function() {
-    return s
-  }
+    i: function () {
+        return a;
+    }
 });
-var i = n(804739),
-  r = n(981631);
-
-function s(e, t, n) {
-  let s = t.getState(e.id, e.branchId),
-    o = n.getQueuePosition(e.id, e.branchId),
-    a = n.paused;
-  if (null != s) {
-    if (null == o || -1 === o) switch (s.type) {
-      case r.vxO.INSTALLING:
-        return r.apO.INSTALL;
-      case r.vxO.UPDATING:
-      case r.vxO.UPDATE_REQUIRED:
-        return r.apO.UPDATE
+var r = n(804739), i = n(981631);
+function a(e, t, n) {
+    let a = t.getState(e.id, e.branchId), o = n.getQueuePosition(e.id, e.branchId), s = n.paused;
+    if (null != a) {
+        if (null == o || -1 === o)
+            switch (a.type) {
+            case i.vxO.INSTALLING:
+                return i.apO.INSTALL;
+            case i.vxO.UPDATING:
+            case i.vxO.UPDATE_REQUIRED:
+                return i.apO.UPDATE;
+            }
+        switch (a.type) {
+        case i.vxO.INSTALLING:
+        case i.vxO.UPDATING:
+        case i.vxO.UPDATE_REQUIRED:
+        case i.vxO.REPAIRING:
+            if (o > 0)
+                return i.apO.MOVE_UP;
+            if (s)
+                return i.apO.RESUME;
+            return i.apO.PAUSE;
+        case i.vxO.UP_TO_DATE:
+            return i.apO.PLAY;
+        case i.vxO.UNINSTALLING:
+            return null;
+        }
     }
-    switch (s.type) {
-      case r.vxO.INSTALLING:
-      case r.vxO.UPDATING:
-      case r.vxO.UPDATE_REQUIRED:
-      case r.vxO.REPAIRING:
-        if (o > 0) return r.apO.MOVE_UP;
-        if (a) return r.apO.RESUME;
-        return r.apO.PAUSE;
-      case r.vxO.UP_TO_DATE:
-        return r.apO.PLAY;
-      case r.vxO.UNINSTALLING:
-        return null
-    }
-  }
-  return null != o && o > 0 ? r.apO.MOVE_UP : (0, i.Q)() ? r.apO.INSTALL : null
+    return null != o && o > 0 ? i.apO.MOVE_UP : (0, r.Q)() ? i.apO.INSTALL : null;
 }

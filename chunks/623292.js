@@ -1,46 +1,42 @@
-"use strict";
 n.d(t, {
-  A6: function() {
-    return o
-  },
-  fE: function() {
-    return r
-  },
-  qx: function() {
-    return s
-  }
+    A6: function () {
+        return o;
+    },
+    fE: function () {
+        return i;
+    },
+    qx: function () {
+        return a;
+    }
 });
-var i = n(570140);
-
-function r(e) {
-  let {
-    message: t,
-    channel: n,
-    shouldMention: r,
-    showMentionToggle: s,
-    source: o
-  } = e;
-  i.Z.dispatch({
-    type: "CREATE_PENDING_REPLY",
-    message: t,
-    channel: n,
-    shouldMention: r,
-    showMentionToggle: s,
-    source: o
-  })
+var r = n(570140);
+function i(e) {
+    let {
+        message: t,
+        channel: n,
+        shouldMention: i,
+        showMentionToggle: a,
+        source: o
+    } = e;
+    r.Z.dispatch({
+        type: 'CREATE_PENDING_REPLY',
+        message: t,
+        channel: n,
+        shouldMention: i,
+        showMentionToggle: a,
+        source: o
+    });
 }
-
-function s(e, t) {
-  i.Z.dispatch({
-    type: "SET_PENDING_REPLY_SHOULD_MENTION",
-    channelId: e,
-    shouldMention: t
-  })
+function a(e, t) {
+    r.Z.dispatch({
+        type: 'SET_PENDING_REPLY_SHOULD_MENTION',
+        channelId: e,
+        shouldMention: t
+    });
 }
-
 function o(e) {
-  i.Z.dispatch({
-    type: "DELETE_PENDING_REPLY",
-    channelId: e
-  })
+    r.Z.dispatch({
+        type: 'DELETE_PENDING_REPLY',
+        channelId: e
+    });
 }

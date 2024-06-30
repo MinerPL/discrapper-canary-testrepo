@@ -1,8 +1,16 @@
-"use strict";
 n.d(t, {
-  $: function() {
-    return r
-  }
+    $: function () {
+        return i;
+    }
 }), n(47120);
-var i = n(704215);
-let r = new Set([i.z.AUTH_SESSIONS_NEW, i.z.CHANNEL_NOTICE_CLYDE_NUX, i.z.CHANNEL_NOTICE_QUICKSWITCHER, i.z.NAGBAR_NOTICE_MFA_SMS_BACKUP, i.z.NAGBAR_NOTICE_POMELO, i.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP, i.z.SEEN_OLD_DESIGN, i.z.SEEN_LAUNCH_WELCOME])
+var r = n(704215);
+let i = new Set([
+    r.z.AUTH_SESSIONS_NEW,
+    r.z.CHANNEL_NOTICE_CLYDE_NUX,
+    r.z.CHANNEL_NOTICE_QUICKSWITCHER,
+    r.z.NAGBAR_NOTICE_MFA_SMS_BACKUP,
+    r.z.NAGBAR_NOTICE_POMELO,
+    r.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP,
+    r.z.SEEN_OLD_DESIGN,
+    r.z.SEEN_LAUNCH_WELCOME
+]);

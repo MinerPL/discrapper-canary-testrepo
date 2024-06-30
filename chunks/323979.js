@@ -1,12 +1,7 @@
-"use strict";
-var e = n(545576),
-  o = n(354848),
-  i = n(838957),
-  u = n(769992),
-  c = Object;
-t.exports = u ? function(t) {
-  return "symbol" == typeof t
-} : function(t) {
-  var r = e("Symbol");
-  return o(r) && i(r.prototype, c(t))
-}
+var e = r(545576), o = r(354848), i = r(838957), u = r(769992), c = Object;
+t.exports = u ? function (t) {
+    return 'symbol' == typeof t;
+} : function (t) {
+    var n = e('Symbol');
+    return o(n) && i(n.prototype, c(t));
+};

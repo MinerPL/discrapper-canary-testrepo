@@ -1,60 +1,39 @@
-var r = n(687249),
-  i = n(48889),
-  a = n(11537),
-  o = n(806867),
-  s = n(542334),
-  u = n(829815),
-  c = n(566131),
-  l = n(773151),
-  d = n(893741),
-  f = n(821164),
-  p = n(993106),
-  h = n(53919),
-  m = n(247323),
-  g = n(609511),
-  _ = n(292548),
-  b = n(290677),
-  v = n(551023),
-  y = n(118788),
-  E = n(661233),
-  S = n(357361),
-  x = n(438330),
-  w = "[object Arguments]",
-  C = "[object Function]",
-  T = "[object Object]",
-  D = {};
-D[w] = D["[object Array]"] = D["[object ArrayBuffer]"] = D["[object DataView]"] = D["[object Boolean]"] = D["[object Date]"] = D["[object Float32Array]"] = D["[object Float64Array]"] = D["[object Int8Array]"] = D["[object Int16Array]"] = D["[object Int32Array]"] = D["[object Map]"] = D["[object Number]"] = D[T] = D["[object RegExp]"] = D["[object Set]"] = D["[object String]"] = D["[object Symbol]"] = D["[object Uint8Array]"] = D["[object Uint8ClampedArray]"] = D["[object Uint16Array]"] = D["[object Uint32Array]"] = !0, D["[object Error]"] = D[C] = D["[object WeakMap]"] = !1;
-e.exports = function e(t, n, M, O, A, k) {
-  var R, N = 1 & n,
-    I = 2 & n,
-    L = 4 & n;
-  if (M && (R = A ? M(t, O, A, k) : M(t)), void 0 !== R) return R;
-  if (!E(t)) return t;
-  var P = b(t);
-  if (P) {
-    if (R = m(t), !N) return c(t, R)
-  } else {
-    var B = h(t),
-      F = B == C || "[object GeneratorFunction]" == B;
-    if (v(t)) return u(t, N);
-    if (B == T || B == w || F && !A) {
-      if (R = I || F ? {} : _(t), !N) return I ? d(t, s(R, t)) : l(t, o(R, t))
+var r = n(687249), i = n(48889), a = n(11537), o = n(806867), s = n(542334), l = n(829815), u = n(566131), c = n(773151), d = n(893741), _ = n(821164), E = n(993106), f = n(53919), h = n(247323), p = n(609511), m = n(292548), I = n(290677), T = n(551023), g = n(118788), S = n(661233), A = n(357361), N = n(438330), v = '[object Arguments]', O = '[object Function]', R = '[object Object]', C = {};
+C[v] = C['[object Array]'] = C['[object ArrayBuffer]'] = C['[object DataView]'] = C['[object Boolean]'] = C['[object Date]'] = C['[object Float32Array]'] = C['[object Float64Array]'] = C['[object Int8Array]'] = C['[object Int16Array]'] = C['[object Int32Array]'] = C['[object Map]'] = C['[object Number]'] = C[R] = C['[object RegExp]'] = C['[object Set]'] = C['[object String]'] = C['[object Symbol]'] = C['[object Uint8Array]'] = C['[object Uint8ClampedArray]'] = C['[object Uint16Array]'] = C['[object Uint32Array]'] = !0, C['[object Error]'] = C[O] = C['[object WeakMap]'] = !1;
+e.exports = function e(t, n, y, D, L, b) {
+    var M, P = 1 & n, U = 2 & n, w = 4 & n;
+    if (y && (M = L ? y(t, D, L, b) : y(t)), void 0 !== M)
+        return M;
+    if (!S(t))
+        return t;
+    var x = I(t);
+    if (x) {
+        if (M = h(t), !P)
+            return u(t, M);
     } else {
-      if (!D[B]) return A ? t : {};
-      R = g(t, B, N)
+        var G = f(t), k = G == O || '[object GeneratorFunction]' == G;
+        if (T(t))
+            return l(t, P);
+        if (G == R || G == v || k && !L) {
+            if (M = U || k ? {} : m(t), !P)
+                return U ? d(t, s(M, t)) : c(t, o(M, t));
+        } else {
+            if (!C[G])
+                return L ? t : {};
+            M = p(t, G, P);
+        }
     }
-  }
-  k || (k = new r);
-  var U = k.get(t);
-  if (U) return U;
-  k.set(t, R), S(t) ? t.forEach(function(r) {
-    R.add(e(r, n, M, r, t, k))
-  }) : y(t) && t.forEach(function(r, i) {
-    R.set(i, e(r, n, M, i, t, k))
-  });
-  var j = L ? I ? p : f : I ? keysIn : x,
-    Y = P ? void 0 : j(t);
-  return i(Y || t, function(r, i) {
-    Y && (r = t[i = r]), a(R, i, e(r, n, M, i, t, k))
-  }), R
-}
+    b || (b = new r());
+    var B = b.get(t);
+    if (B)
+        return B;
+    b.set(t, M), A(t) ? t.forEach(function (r) {
+        M.add(e(r, n, y, r, t, b));
+    }) : g(t) && t.forEach(function (r, i) {
+        M.set(i, e(r, n, y, i, t, b));
+    });
+    var F = w ? U ? E : _ : U ? keysIn : N, V = x ? void 0 : F(t);
+    return i(V || t, function (r, i) {
+        V && (r = t[i = r]), a(M, i, e(r, n, y, i, t, b));
+    }), M;
+};

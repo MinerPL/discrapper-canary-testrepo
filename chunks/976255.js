@@ -1,58 +1,48 @@
-"use strict";
 n.d(t, {
-  Ow: function() {
-    return a
-  },
-  Xt: function() {
-    return r
-  },
-  fw: function() {
-    return l
-  },
-  sn: function() {
-    return s
-  },
-  tt: function() {
-    return o
-  }
-});
-var i = n(570140);
-
-function r(e) {
-  i.Z.dispatch({
-    type: "NEW_PAYMENT_SOURCE_STRIPE_PAYMENT_REQUEST_UPDATE",
-    stripePaymentMethod: e
-  })
-}
-
-function s(e, t) {
-  i.Z.dispatch({
-    type: "NEW_PAYMENT_SOURCE_CARD_INFO_UPDATE",
-    info: e,
-    isValid: t
-  })
-}
-
-function o() {
-  i.Z.dispatch({
-    type: "NEW_PAYMENT_SOURCE_CARD_INFO_UPDATE",
-    info: {
-      name: ""
+    Ow: function () {
+        return s;
     },
-    isValid: !1
-  })
+    Xt: function () {
+        return i;
+    },
+    fw: function () {
+        return l;
+    },
+    sn: function () {
+        return a;
+    },
+    tt: function () {
+        return o;
+    }
+});
+var r = n(570140);
+function i(e) {
+    r.Z.dispatch({
+        type: 'NEW_PAYMENT_SOURCE_STRIPE_PAYMENT_REQUEST_UPDATE',
+        stripePaymentMethod: e
+    });
 }
-
 function a(e, t) {
-  i.Z.dispatch({
-    type: "NEW_PAYMENT_SOURCE_ADDRESS_INFO_UPDATE",
-    info: e,
-    isValid: t
-  })
+    r.Z.dispatch({
+        type: 'NEW_PAYMENT_SOURCE_CARD_INFO_UPDATE',
+        info: e,
+        isValid: t
+    });
 }
-
+function o() {
+    r.Z.dispatch({
+        type: 'NEW_PAYMENT_SOURCE_CARD_INFO_UPDATE',
+        info: { name: '' },
+        isValid: !1
+    });
+}
+function s(e, t) {
+    r.Z.dispatch({
+        type: 'NEW_PAYMENT_SOURCE_ADDRESS_INFO_UPDATE',
+        info: e,
+        isValid: t
+    });
+}
 function l() {
-  i.Z.wait(() => i.Z.dispatch({
-    type: "NEW_PAYMENT_SOURCE_CLEAR_ERROR"
-  }))
+    r.Z.wait(() => r.Z.dispatch({ type: 'NEW_PAYMENT_SOURCE_CLEAR_ERROR' }));
 }

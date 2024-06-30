@@ -1,54 +1,49 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return d
-  }
+    Z: function () {
+        return c;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(120356),
-  s = n.n(r),
-  o = n(377617),
-  a = n(855693),
-  l = n(689079),
-  u = n(977202);
-let _ = e => {
-  switch (e.id) {
-    case l.bi.BUILT_IN:
-      return o.Z;
-    case l.bi.FRECENCY:
-      return a.Z;
+var i = n(120356), a = n.n(i), o = n(481060), s = n(689079), l = n(524737);
+let u = e => {
+    switch (e.id) {
+    case s.bi.BUILT_IN:
+        return o.SlashBoxIcon;
+    case s.bi.FRECENCY:
+        return o.ClockIcon;
     default:
-      return
-  }
+        return;
+    }
 };
-
-function d(e) {
-  let {
-    section: t,
-    className: n,
-    width: r,
-    height: o,
-    padding: a,
-    isSelected: l,
-    selectable: d = !1,
-    ...c
-  } = e, E = _(t);
-  return (0, i.jsx)("div", {
-    className: s()(u.wrapper, n, {
-      [u.selectable]: d,
-      [u.selected]: d && l
-    }),
-    style: {
-      width: r,
-      height: o,
-      padding: null != a ? a : 0
-    },
-    children: null != E ? (0, i.jsx)(E, {
-      className: u.icon,
-      width: r,
-      height: o,
-      ...c
-    }) : null
-  })
+function c(e) {
+    let {
+            section: t,
+            className: n,
+            width: i,
+            height: o,
+            padding: s,
+            isSelected: c,
+            selectable: d = !1,
+            ..._
+        } = e, E = u(t);
+    return (0, r.jsx)('div', {
+        className: a()(l.wrapper, n, {
+            [l.selectable]: d,
+            [l.selected]: d && c
+        }),
+        style: {
+            width: i,
+            height: o,
+            padding: null != s ? s : 0
+        },
+        children: null != E ? (0, r.jsx)(E, {
+            className: l.icon,
+            color: 'currentColor',
+            size: 'custom',
+            width: i,
+            height: o,
+            ..._
+        }) : null
+    });
 }

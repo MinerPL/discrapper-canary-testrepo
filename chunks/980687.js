@@ -1,4 +1,3 @@
-"use strict";
-t.Z = function() {
-  return !1
-}
+t.Z = function () {
+    return !1;
+};

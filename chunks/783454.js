@@ -1,70 +1,63 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return _
-  }
-}), t(47120);
-var n = t(735250),
-  i = t(470079),
-  l = t(120356),
-  a = t.n(l),
-  r = t(481060),
-  o = t(153124),
-  c = t(259580),
-  d = t(404203),
-  u = t(689938),
-  E = t(831085);
-
-function _(e) {
-  let {
-    intiallyExpanded: s = !1,
-    title: t,
-    description: l,
-    children: _
-  } = e, [I, T] = i.useState(s), N = () => T(e => !e), m = (0, o.Dt)();
-  return (0, n.jsxs)("div", {
-    className: E.container,
-    children: [(0, n.jsx)(d.Z, {
-      className: a()(E.header, {
-        [E.headerWithDescription]: I && null != l
-      }),
-      onClick: N,
-      children: e => {
-        let {
-          areaRef: s,
-          handleStopPropagation: i
-        } = e;
-        return (0, n.jsxs)(n.Fragment, {
-          children: [(0, n.jsx)(r.Heading, {
-            variant: "heading-md/semibold",
-            children: t
-          }), (0, n.jsx)(r.Clickable, {
-            onClick: i(N),
-            "aria-label": u.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TOGGLE_SECTION_LABEL,
-            "aria-controls": m,
-            "aria-expanded": I,
-            focusProps: {
-              ringTarget: s
-            },
-            children: (0, n.jsx)(c.Z, {
-              className: E.caret,
-              direction: I ? c.Z.Directions.UP : c.Z.Directions.DOWN
+n.d(t, {
+    Z: function () {
+        return E;
+    }
+}), n(47120);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(481060), o = n(153124), c = n(259580), d = n(404203), u = n(689938), _ = n(495178);
+function E(e) {
+    let {
+            intiallyExpanded: t = !1,
+            title: n,
+            description: i,
+            children: E
+        } = e, [I, T] = a.useState(t), m = () => T(e => !e), N = (0, o.Dt)();
+    return (0, s.jsxs)('div', {
+        className: _.container,
+        children: [
+            (0, s.jsx)(d.Z, {
+                className: r()(_.header, { [_.headerWithDescription]: I && null != i }),
+                onClick: m,
+                children: e => {
+                    let {
+                        areaRef: t,
+                        handleStopPropagation: a
+                    } = e;
+                    return (0, s.jsxs)(s.Fragment, {
+                        children: [
+                            (0, s.jsx)(l.Heading, {
+                                variant: 'heading-md/semibold',
+                                children: n
+                            }),
+                            (0, s.jsx)(l.Clickable, {
+                                onClick: a(m),
+                                'aria-label': u.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TOGGLE_SECTION_LABEL,
+                                'aria-controls': N,
+                                'aria-expanded': I,
+                                focusProps: { ringTarget: t },
+                                children: (0, s.jsx)(c.Z, {
+                                    className: _.caret,
+                                    direction: I ? c.Z.Directions.UP : c.Z.Directions.DOWN
+                                })
+                            })
+                        ]
+                    });
+                }
+            }),
+            I && (0, s.jsxs)('div', {
+                id: N,
+                children: [
+                    null != i && (0, s.jsx)(l.FormText, {
+                        type: l.FormText.Types.DESCRIPTION,
+                        className: _.description,
+                        children: i
+                    }),
+                    (0, s.jsx)('div', { className: _.divider }),
+                    (0, s.jsx)('div', {
+                        className: _.content,
+                        children: E
+                    })
+                ]
             })
-          })]
-        })
-      }
-    }), I && (0, n.jsxs)("div", {
-      id: m,
-      children: [null != l && (0, n.jsx)(r.FormText, {
-        type: r.FormText.Types.DESCRIPTION,
-        className: E.description,
-        children: l
-      }), (0, n.jsx)("div", {
-        className: E.divider
-      }), (0, n.jsx)("div", {
-        className: E.content,
-        children: _
-      })]
-    })]
-  })
+        ]
+    });
 }

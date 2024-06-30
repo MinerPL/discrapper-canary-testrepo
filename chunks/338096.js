@@ -1,11 +1,9 @@
-"use strict";
 n.d(t, {
-  G: function() {
-    return i
-  },
-  k: function() {
-    return r
-  }
+    G: function () {
+        return r;
+    },
+    k: function () {
+        return i;
+    }
 });
-let i = "dmSettingsUpsellLastShown",
-  r = 6048e5
+let r = 'dmSettingsUpsellLastShown', i = 604800000;

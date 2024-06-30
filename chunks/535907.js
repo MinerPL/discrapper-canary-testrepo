@@ -1,10 +1,9 @@
-"use strict";
-t.d(s, {
-  z: function() {
-    return n
-  }
+n.d(t, {
+    z: function () {
+        return s;
+    }
 });
-let n = {
-  authorIds: [],
-  message: ""
-}
+let s = {
+    authorIds: [],
+    message: ''
+};

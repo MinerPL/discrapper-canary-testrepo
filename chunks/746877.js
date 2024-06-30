@@ -1,35 +1,34 @@
-"use strict";
 n.d(t, {
-  S: function() {
-    return c
-  }
-}), n(47120);
-var i = n(470079),
-  r = n(392711),
-  s = n.n(r),
-  o = n(941028),
-  a = n(509848),
-  l = n(849522),
-  u = n(439170);
-let _ = "@here";
-
-function d(e) {
-  return !!(e.length > 1) || !(1 === e.length && "GROUP" === e[0].type && "unknown" === e[0].id)
-}
-
-function c(e, t, n) {
-  let r = (0, l.Z)(),
-    [c, E] = i.useState(!1),
-    I = i.useMemo(() => s().debounce(e => {
-      var i, s, l, c;
-      if (i = e, s = r, l = t, c = n, d(u.ZP.getProps(l, c).groups) || !(i.length < _.length) && !(i.length > s) && -1 !== i.indexOf(_) && ((0, o.b8)(l, c, a.KV), 1)) E(!0)
-    }, 200, {
-      maxWait: 500
-    }), [r, t, n]);
-  i.useEffect(() => {
-    let i = u.ZP.getProps(t, n).groups;
-    if (null != t && !d(i) && !c) return e.addListener("text-changed", I), () => {
-      e.removeListener("text-changed", I), I.cancel()
+    S: function () {
+        return _;
     }
-  }, [c, I, e, t, n])
+}), n(47120);
+var r = n(470079), i = n(392711), a = n.n(i), o = n(941028), s = n(509848), l = n(849522), u = n(439170);
+let c = '@here';
+function d(e) {
+    return !!(e.length > 1) || !(1 === e.length && 'GROUP' === e[0].type && 'unknown' === e[0].id);
+}
+function _(e, t, n) {
+    let i = (0, l.Z)(), [_, E] = r.useState(!1), f = r.useMemo(() => a().debounce(e => {
+            var r, a, l, _;
+            if (r = e, a = i, l = t, _ = n, d(u.ZP.getProps(l, _).groups) || !(r.length < c.length) && !(r.length > a) && -1 !== r.indexOf(c) && ((0, o.b8)(l, _, s.KV), 1))
+                E(!0);
+        }, 200, { maxWait: 500 }), [
+            i,
+            t,
+            n
+        ]);
+    r.useEffect(() => {
+        let r = u.ZP.getProps(t, n).groups;
+        if (null != t && !d(r) && !_)
+            return e.addListener('text-changed', f), () => {
+                e.removeListener('text-changed', f), f.cancel();
+            };
+    }, [
+        _,
+        f,
+        e,
+        t,
+        n
+    ]);
 }

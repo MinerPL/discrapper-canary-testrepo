@@ -1,60 +1,48 @@
-"use strict";
 n.d(t, {
-  G: function() {
-    return N
-  },
-  S: function() {
-    return f
-  }
+    G: function () {
+        return T;
+    },
+    S: function () {
+        return I;
+    }
 }), n(47120);
-var i = n(913527),
-  r = n.n(i),
-  s = n(704215),
-  o = n(835913),
-  a = n(605236),
-  l = n(675478),
-  u = n(581883),
-  _ = n(430824),
-  d = n(709054),
-  c = n(866817),
-  E = n(637853),
-  I = n(981631),
-  T = n(921944);
-let h = [s.z.GUILD_ONBOARDING_UPSELL_MODAL_V2, s.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE, s.z.GUILD_ONBOARDING_UPSELL_NAGBAR],
-  S = [0, 1, 7];
-
-function f(e, t) {
-  var n;
-  let i = _.Z.getGuilds(),
-    s = d.default.entries(i).some(e => {
-      let [t, n] = e, i = (0, E.wC)(t), r = n.hasFeature(I.oNc.GUILD_ONBOARDING_EVER_ENABLED);
-      return i && r
+var r = n(913527), i = n.n(r), a = n(704215), o = n(835913), s = n(605236), l = n(675478), u = n(581883), c = n(430824), d = n(709054), _ = n(866817), E = n(637853), f = n(981631), h = n(921944);
+let p = [
+        a.z.GUILD_ONBOARDING_UPSELL_MODAL_V2,
+        a.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE,
+        a.z.GUILD_ONBOARDING_UPSELL_NAGBAR
+    ], m = [
+        0,
+        1,
+        7
+    ];
+function I(e, t) {
+    var n;
+    let r = c.Z.getGuilds(), a = d.default.entries(r).some(e => {
+            let [t, n] = e, r = (0, E.wC)(t), i = n.hasFeature(f.oNc.GUILD_ONBOARDING_EVER_ENABLED);
+            return r && i;
+        });
+    if (a || !(0, E.wC)(e))
+        return !1;
+    let l = null === (n = u.Z.settings.userContent) || void 0 === n ? void 0 : n.guildOnboardingUpsellDismissedAt, h = null != l ? o.E.toDate(l) : void 0, I = null != h ? i()().diff(h, 'days') : null, T = p.indexOf(t);
+    if (-1 === T || !(null == I || I > m[T]) || p.find(e => !(0, s.un)(e)) !== t)
+        return !1;
+    let {showLifecycleUpsells: g} = _.Z.getCurrentConfig({
+        guildId: e,
+        location: '7f5b67_1'
+    }, {
+        disable: a || !(0, E.wC)(e),
+        autoTrackExposure: !0
     });
-  if (s || !(0, E.wC)(e)) return !1;
-  let l = null === (n = u.Z.settings.userContent) || void 0 === n ? void 0 : n.guildOnboardingUpsellDismissedAt,
-    T = null != l ? o.E.toDate(l) : void 0,
-    f = null != T ? r()().diff(T, "days") : null,
-    N = h.indexOf(t);
-  if (-1 === N || !(null == f || f > S[N]) || h.find(e => !(0, a.un)(e)) !== t) return !1;
-  let {
-    showLifecycleUpsells: A
-  } = c.Z.getCurrentConfig({
-    guildId: e,
-    location: "7f5b67_1"
-  }, {
-    disable: s || !(0, E.wC)(e),
-    autoTrackExposure: !0
-  });
-  return A
+    return g;
 }
-
-function N(e, t) {
-  let n = o.E.now();
-  l.hW.updateAsync("userContent", e => {
-    e.guildOnboardingUpsellDismissedAt = n
-  }, l.fy.INFREQUENT_USER_ACTION), null != t && (0, a.EW)(t, {
-    forceTrack: !0,
-    dismissAction: T.L.AUTO,
-    guildId: e
-  })
+function T(e, t) {
+    let n = o.E.now();
+    l.hW.updateAsync('userContent', e => {
+        e.guildOnboardingUpsellDismissedAt = n;
+    }, l.fy.INFREQUENT_USER_ACTION), null != t && (0, s.EW)(t, {
+        forceTrack: !0,
+        dismissAction: h.L.AUTO,
+        guildId: e
+    });
 }

@@ -1,48 +1,43 @@
-"use strict";
 n.d(t, {
-  X: function() {
-    return o
-  }
+    X: function () {
+        return o;
+    }
 });
-var r = n(829105),
-  i = n(150076),
-  a = n(695170);
-
-function o(e, t, n, o, s, u) {
-  var c = {},
-    l = e.accept;
-
-  function d(e, t) {
-    n.forEach(function(n) {
-      n.between(e, t, !0).forEach(function(e) {
-        c[Number(e)] = !0
-      })
-    })
-  }
-  s.forEach(function(e) {
-    c[Number(new r.M(e, u).rezonedDate())] = !0
-  }), e.accept = function(e) {
-    var t = Number(e);
-    return isNaN(t) ? l.call(this, e) : !!c[t] || (d(new Date(t - 1), new Date(t + 1)), !!c[t]) || (c[t] = !0, l.call(this, e))
-  }, "between" === e.method && (d(e.args.after, e.args.before), e.accept = function(e) {
-    var t = Number(e);
-    return !!c[t] || (c[t] = !0, l.call(this, e))
-  });
-  for (var f = 0; f < o.length; f++) {
-    var p = new r.M(o[f], u).rezonedDate();
-    if (!e.accept(new Date(p.getTime()))) break
-  }
-  t.forEach(function(t) {
-    (0, i.h)(e, t.options)
-  });
-  var h = e._result;
-  switch ((0, a.DY)(h), e.method) {
-    case "all":
-    case "between":
-      return h;
-    case "before":
-      return h.length && h[h.length - 1] || null;
+var r = n(829105), i = n(150076), a = n(695170);
+function o(e, t, n, o, s, l) {
+    var u = {}, c = e.accept;
+    function d(e, t) {
+        n.forEach(function (n) {
+            n.between(e, t, !0).forEach(function (e) {
+                u[Number(e)] = !0;
+            });
+        });
+    }
+    s.forEach(function (e) {
+        u[Number(new r.M(e, l).rezonedDate())] = !0;
+    }), e.accept = function (e) {
+        var t = Number(e);
+        return isNaN(t) ? c.call(this, e) : !!u[t] || (d(new Date(t - 1), new Date(t + 1)), !!u[t]) || (u[t] = !0, c.call(this, e));
+    }, 'between' === e.method && (d(e.args.after, e.args.before), e.accept = function (e) {
+        var t = Number(e);
+        return !!u[t] || (u[t] = !0, c.call(this, e));
+    });
+    for (var _ = 0; _ < o.length; _++) {
+        var E = new r.M(o[_], l).rezonedDate();
+        if (!e.accept(new Date(E.getTime())))
+            break;
+    }
+    t.forEach(function (t) {
+        (0, i.h)(e, t.options);
+    });
+    var f = e._result;
+    switch ((0, a.DY)(f), e.method) {
+    case 'all':
+    case 'between':
+        return f;
+    case 'before':
+        return f.length && f[f.length - 1] || null;
     default:
-      return h.length && h[0] || null
-  }
+        return f.length && f[0] || null;
+    }
 }

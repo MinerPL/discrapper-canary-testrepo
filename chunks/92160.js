@@ -1,71 +1,73 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return u
-  }
+n.d(t, {
+    Z: function () {
+        return c;
+    }
 });
-var n = t(735250);
-t(470079);
-var i = t(120356),
-  l = t.n(i),
-  a = t(481060),
-  r = t(263704),
-  o = t(185403),
-  c = t(689938),
-  d = t(348621);
-
-function u(e) {
-  let {
-    className: s,
-    enabled: t,
-    previewCTA: i,
-    onPreview: u,
-    onToggle: E,
-    animateStatus: _,
-    firstLine: I,
-    secondLine: T,
-    disabled: N
-  } = e;
-  return (0, n.jsxs)("div", {
-    className: l()(s, d.enableContainer),
-    children: [t ? (0, n.jsx)(r.Z, {
-      width: 24,
-      height: 24,
-      className: l()(d.activeCircle, {
-        [d.animate]: _
-      })
-    }) : (0, n.jsx)(o.Z, {
-      width: 24,
-      height: 24,
-      className: l()(d.editCircle, {
-        [d.animate]: _
-      })
-    }), (0, n.jsxs)("div", {
-      className: d.enableDescription,
-      children: [(0, n.jsx)(a.Text, {
-        variant: "text-sm/normal",
-        children: I
-      }), (0, n.jsx)(a.Text, {
-        variant: "text-sm/normal",
-        children: T
-      })]
-    }), (0, n.jsxs)("div", {
-      className: d.buttonContainer,
-      children: [null == u ? null : (0, n.jsx)(a.Button, {
-        className: d.previewButton,
-        look: a.Button.Looks.LINK,
-        size: a.Button.Sizes.SMALL,
-        onClick: u,
-        disabled: N,
-        color: a.Button.Colors.PRIMARY,
-        children: null != i ? i : c.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PREVIEW
-      }), (0, n.jsx)(a.Button, {
-        disabled: null == E || N,
-        size: a.Button.Sizes.SMALL,
-        color: t ? a.Button.Colors.RED : a.Button.Colors.BRAND,
-        onClick: E,
-        children: t ? c.Z.Messages.DISABLE : c.Z.Messages.ENABLE
-      })]
-    })]
-  })
+var s = n(735250);
+n(470079);
+var a = n(120356), i = n.n(a), r = n(481060), l = n(689938), o = n(297951);
+function c(e) {
+    let {
+        className: t,
+        enabled: n,
+        previewCTA: a,
+        onPreview: c,
+        onToggle: d,
+        animateStatus: u,
+        firstLine: _,
+        secondLine: E,
+        disabled: I
+    } = e;
+    return (0, s.jsxs)('div', {
+        className: i()(t, o.enableContainer),
+        children: [
+            n ? (0, s.jsx)(r.CheckmarkLargeIcon, {
+                size: 'custom',
+                color: 'currentColor',
+                width: 24,
+                height: 24,
+                className: i()(o.activeCircle, { [o.animate]: u })
+            }) : (0, s.jsx)(r.PencilIcon, {
+                size: 'custom',
+                color: 'currentColor',
+                width: 24,
+                height: 24,
+                className: i()(o.editCircle, { [o.animate]: u })
+            }),
+            (0, s.jsxs)('div', {
+                className: o.enableDescription,
+                children: [
+                    (0, s.jsx)(r.Text, {
+                        variant: 'text-sm/normal',
+                        children: _
+                    }),
+                    (0, s.jsx)(r.Text, {
+                        variant: 'text-sm/normal',
+                        children: E
+                    })
+                ]
+            }),
+            (0, s.jsxs)('div', {
+                className: o.buttonContainer,
+                children: [
+                    null == c ? null : (0, s.jsx)(r.Button, {
+                        className: o.previewButton,
+                        look: r.Button.Looks.LINK,
+                        size: r.Button.Sizes.SMALL,
+                        onClick: c,
+                        disabled: I,
+                        color: r.Button.Colors.PRIMARY,
+                        children: null != a ? a : l.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PREVIEW
+                    }),
+                    (0, s.jsx)(r.Button, {
+                        disabled: null == d || I,
+                        size: r.Button.Sizes.SMALL,
+                        color: n ? r.Button.Colors.RED : r.Button.Colors.BRAND,
+                        onClick: d,
+                        children: n ? l.Z.Messages.DISABLE : l.Z.Messages.ENABLE
+                    })
+                ]
+            })
+        ]
+    });
 }

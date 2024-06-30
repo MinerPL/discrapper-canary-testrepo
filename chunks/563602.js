@@ -1,3 +1,2 @@
-"use strict";
 var r = (0, n(593856).Z)();
-t.Z = r
+t.Z = r;

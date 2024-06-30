@@ -1,66 +1,44 @@
-"use strict";
-let i;
+let r;
 n.d(t, {
-  RI: function() {
-    return N
-  },
-  jy: function() {
-    return A
-  }
+    RI: function () {
+        return T;
+    },
+    jy: function () {
+        return g;
+    }
 });
-var r = n(570140),
-  s = n(519938),
-  o = n(317770),
-  a = n(928518),
-  l = n(592125),
-  u = n(819640),
-  _ = n(366050),
-  d = n(19780),
-  c = n(944486),
-  E = n(914010),
-  I = n(979651),
-  T = n(317381),
-  h = n(719296),
-  S = n(958185),
-  f = n(981631);
-
-function N(e) {
-  let t = null != e ? e : i;
-  null != t && _.Z.isOpen(t) && r.Z.wait(() => s.Cp(t))
+var i = n(570140), a = n(519938), o = n(317770), s = n(928518), l = n(592125), u = n(819640), c = n(366050), d = n(19780), _ = n(944486), E = n(914010), f = n(979651), h = n(317381), p = n(719296), m = n(958185), I = n(981631);
+function T(e) {
+    let t = null != e ? e : r;
+    null != t && c.Z.isOpen(t) && i.Z.wait(() => a.Cp(t));
 }
-
-function A(e) {
-  let t = null != e ? e : i;
-  null != t && _.Z.isOpen(t) && r.Z.wait(() => s.$Z(t))
+function g(e) {
+    let t = null != e ? e : r;
+    null != t && c.Z.isOpen(t) && i.Z.wait(() => a.$Z(t));
 }
-
-function m() {
-  let e = T.ZP.getConnectedActivityChannelId(),
-    t = T.ZP.getSelfEmbeddedActivityForChannel(null != e ? e : f.lds),
-    n = l.Z.getChannel(e);
-  return null == e || null == n || null == t ? function() {
-    let e = i;
-    null != e && _.Z.isOpen(e) && (r.Z.wait(() => s.xv(e)), i = null)
-  }() : function(e, t) {
-    if (_.Z.isOpen(t)) return !1;
-    r.Z.wait(() => s.bA(t, f.NYg.EMBED_IFRAME, {
-      channel: e
-    })), i = t
-  }(n, (0, h.Z)(e, t.applicationId))
+function S() {
+    let e = h.ZP.getConnectedActivityChannelId(), t = h.ZP.getSelfEmbeddedActivityForChannel(null != e ? e : I.lds), n = l.Z.getChannel(e);
+    return null == e || null == n || null == t ? function () {
+        let e = r;
+        null != e && c.Z.isOpen(e) && (i.Z.wait(() => a.xv(e)), r = null);
+    }() : function (e, t) {
+        if (c.Z.isOpen(t))
+            return !1;
+        i.Z.wait(() => a.bA(t, I.NYg.EMBED_IFRAME, { channel: e })), r = t;
+    }(n, (0, p.Z)(e, t.applicationId));
 }
-
-function O() {
-  return (0, S.Z)({
-    LayerStore: u.Z,
-    PopoutWindowStore: a.Z
-  }) ? N() : A()
+function A() {
+    return (0, m.Z)({
+        LayerStore: u.Z,
+        PopoutWindowStore: s.Z
+    }) ? T() : g();
 }
-class R extends o.Z {
-  _initialize() {
-    c.Z.addChangeListener(m), E.Z.addChangeListener(m), d.Z.addChangeListener(m), I.Z.addChangeListener(m), a.Z.addChangeListener(m), T.ZP.addChangeListener(m), u.Z.addChangeListener(O)
-  }
-  _terminate() {
-    c.Z.removeChangeListener(m), E.Z.removeChangeListener(m), d.Z.removeChangeListener(m), I.Z.removeChangeListener(m), a.Z.removeChangeListener(m), T.ZP.removeChangeListener(m), u.Z.removeChangeListener(O)
-  }
+class N extends o.Z {
+    _initialize() {
+        _.Z.addChangeListener(S), E.Z.addChangeListener(S), d.Z.addChangeListener(S), f.Z.addChangeListener(S), s.Z.addChangeListener(S), h.ZP.addChangeListener(S), u.Z.addChangeListener(A);
+    }
+    _terminate() {
+        _.Z.removeChangeListener(S), E.Z.removeChangeListener(S), d.Z.removeChangeListener(S), f.Z.removeChangeListener(S), s.Z.removeChangeListener(S), h.ZP.removeChangeListener(S), u.Z.removeChangeListener(A);
+    }
 }
-t.ZP = new R
+t.ZP = new N();

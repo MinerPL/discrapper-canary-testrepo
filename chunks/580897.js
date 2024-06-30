@@ -1,9 +1,9 @@
-var n = e(457965);
-t.exports = function(t, r, e) {
-  "__proto__" == r && n ? n(t, r, {
-    configurable: !0,
-    enumerable: !0,
-    value: e,
-    writable: !0
-  }) : t[r] = e
-}
+var n = r(457965);
+t.exports = function (t, e, r) {
+    '__proto__' == e && n ? n(t, e, {
+        configurable: !0,
+        enumerable: !0,
+        value: r,
+        writable: !0
+    }) : t[e] = r;
+};

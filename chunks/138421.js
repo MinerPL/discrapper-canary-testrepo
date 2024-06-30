@@ -1,14 +1,11 @@
-"use strict";
 n.d(t, {
-  WL: function() {
-    return r
-  }
+    WL: function () {
+        return i;
+    }
 });
-var i = n(483360);
+var r = n(483360);
 n(285651);
-let r = e => i.ZP.queryStickers([e], !0).map(e => {
-  let {
-    sticker: t
-  } = e;
-  return t
-})
+let i = e => r.ZP.queryStickers([e], !0).map(e => {
+    let {sticker: t} = e;
+    return t;
+});

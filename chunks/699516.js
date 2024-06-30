@@ -1,118 +1,107 @@
-"use strict";
 n(47120);
-var i, r, s, o, a = n(392711),
-  l = n.n(a),
-  u = n(442837),
-  _ = n(570140),
-  d = n(709054),
-  c = n(594174),
-  E = n(981631);
-let I = {},
-  T = {},
-  h = {},
-  S = 0,
-  f = 0,
-  N = 0,
-  A = 0;
-
-function m() {
-  A = Object.values(I).length;
-  let {
-    [E.OGo.PENDING_INCOMING]: e = 0, [E.OGo.PENDING_OUTGOING]: t = 0, [E.OGo.FRIEND]: n = 0
-  } = l().countBy(Object.values(I), e => e);
-  S = e, f = t, N = n
+var r, i, a, o, s = n(392711), l = n.n(s), u = n(442837), c = n(570140), d = n(23750), _ = n(709054), E = n(594174), f = n(981631);
+let h = {}, p = {}, m = {}, I = 0, T = 0, g = 0, S = 0;
+function A() {
+    S = Object.values(h).length;
+    let {
+        [f.OGo.PENDING_INCOMING]: e = 0,
+        [f.OGo.PENDING_OUTGOING]: t = 0,
+        [f.OGo.FRIEND]: n = 0
+    } = l().countBy(Object.values(h), e => e);
+    I = e, T = t, g = n;
 }
-class O extends(i = u.ZP.Store) {
-  initialize() {
-    this.waitFor(c.default)
-  }
-  isFriend(e) {
-    return I[e] === E.OGo.FRIEND
-  }
-  isBlocked(e) {
-    return I[e] === E.OGo.BLOCKED
-  }
-  getPendingCount() {
-    return S
-  }
-  getOutgoingCount() {
-    return f
-  }
-  getFriendCount() {
-    return N
-  }
-  getRelationshipCount() {
-    return A
-  }
-  getRelationships() {
-    return I
-  }
-  getRelationshipType(e) {
-    let t = I[e];
-    return null != t ? t : E.OGo.NONE
-  }
-  getNickname(e) {
-    return T[e]
-  }
-  getSince(e) {
-    return h[e]
-  }
-  getSinces() {
-    return h
-  }
-  getFriendIDs() {
-    return d.default.keys(I).filter(e => I[e] === E.OGo.FRIEND)
-  }
+class N extends (r = u.ZP.Store) {
+    initialize() {
+        this.waitFor(E.default);
+    }
+    isFriend(e) {
+        return null != e && h[e] === f.OGo.FRIEND;
+    }
+    isBlocked(e) {
+        return null != e && h[e] === f.OGo.BLOCKED;
+    }
+    isBlockedForMessage(e) {
+        var t, n, r, i;
+        if (null != e.author && h[e.author.id] === f.OGo.BLOCKED)
+            return !0;
+        if (e instanceof d.ZP) {
+            if (this.isBlocked(null === (i = e.interactionMetadata) || void 0 === i ? void 0 : null === (r = i.user) || void 0 === r ? void 0 : r.id))
+                return !0;
+        } else if (this.isBlocked(null === (n = e.interaction_metadata) || void 0 === n ? void 0 : null === (t = n.user) || void 0 === t ? void 0 : t.id))
+            return !0;
+        return !1;
+    }
+    getPendingCount() {
+        return I;
+    }
+    getOutgoingCount() {
+        return T;
+    }
+    getFriendCount() {
+        return g;
+    }
+    getRelationshipCount() {
+        return S;
+    }
+    getRelationships() {
+        return h;
+    }
+    getRelationshipType(e) {
+        let t = h[e];
+        return null != t ? t : f.OGo.NONE;
+    }
+    getNickname(e) {
+        return p[e];
+    }
+    getSince(e) {
+        return m[e];
+    }
+    getSinces() {
+        return m;
+    }
+    getFriendIDs() {
+        return _.default.keys(h).filter(e => h[e] === f.OGo.FRIEND);
+    }
 }
-o = "RelationshipStore", (s = "displayName") in(r = O) ? Object.defineProperty(r, s, {
-  value: o,
-  enumerable: !0,
-  configurable: !0,
-  writable: !0
-}) : r[s] = o, t.Z = new O(_.Z, {
-  CONNECTION_OPEN: function(e) {
-    I = {}, T = {}, h = {}, e.relationships.forEach(e => {
-      I[e.id] = e.type, null != e.nickname && (T[e.id] = e.nickname), null != e.since && (h[e.id] = e.since)
-    }), m()
-  },
-  OVERLAY_INITIALIZE: function(e) {
-    I = {
-      ...e.relationships
-    }, m()
-  },
-  RELATIONSHIP_ADD: function(e) {
-    let t = I[e.relationship.id];
-    I = {
-      ...I,
-      [e.relationship.id]: e.relationship.type
-    }, null != e.relationship.nickname && (T = {
-      ...T,
-      [e.relationship.id]: e.relationship.nickname
-    }), null != e.relationship.since && (h = {
-      ...h,
-      [e.relationship.id]: e.relationship.since
-    }), m(), e.relationship.type === E.OGo.FRIEND && t === E.OGo.PENDING_OUTGOING && _.Z.dispatch({
-      type: "FRIEND_REQUEST_ACCEPTED",
-      user: e.relationship.user
-    })
-  },
-  RELATIONSHIP_REMOVE: function(e) {
-    I = {
-      ...I
-    }, delete I[e.relationship.id], null != T[e.relationship.id] && (T = {
-      ...T
-    }, delete T[e.relationship.id]), null != h[e.relationship.id] && (h = {
-      ...h
-    }, delete h[e.relationship.id]), m()
-  },
-  RELATIONSHIP_UPDATE: function(e) {
-    null == e.relationship.since ? delete h[e.relationship.id] : h[e.relationship.id] = e.relationship.since, null == e.relationship.nickname ? delete T[e.relationship.id] : T[e.relationship.id] = e.relationship.nickname
-  },
-  RELATIONSHIP_PENDING_INCOMING_REMOVED: function(e) {
-    I = {
-      ...I
-    }, d.default.keys(I).forEach(e => {
-      I[e] === E.OGo.PENDING_INCOMING && delete I[e]
-    }), m()
-  }
-})
+o = 'RelationshipStore', (a = 'displayName') in (i = N) ? Object.defineProperty(i, a, {
+    value: o,
+    enumerable: !0,
+    configurable: !0,
+    writable: !0
+}) : i[a] = o, t.Z = new N(c.Z, {
+    CONNECTION_OPEN: function (e) {
+        h = {}, p = {}, m = {}, e.relationships.forEach(e => {
+            h[e.id] = e.type, null != e.nickname && (p[e.id] = e.nickname), null != e.since && (m[e.id] = e.since);
+        }), A();
+    },
+    OVERLAY_INITIALIZE: function (e) {
+        h = { ...e.relationships }, A();
+    },
+    RELATIONSHIP_ADD: function (e) {
+        let t = h[e.relationship.id];
+        h = {
+            ...h,
+            [e.relationship.id]: e.relationship.type
+        }, null != e.relationship.nickname && (p = {
+            ...p,
+            [e.relationship.id]: e.relationship.nickname
+        }), null != e.relationship.since && (m = {
+            ...m,
+            [e.relationship.id]: e.relationship.since
+        }), A(), e.relationship.type === f.OGo.FRIEND && t === f.OGo.PENDING_OUTGOING && c.Z.dispatch({
+            type: 'FRIEND_REQUEST_ACCEPTED',
+            user: e.relationship.user
+        });
+    },
+    RELATIONSHIP_REMOVE: function (e) {
+        h = { ...h }, delete h[e.relationship.id], null != p[e.relationship.id] && (p = { ...p }, delete p[e.relationship.id]), null != m[e.relationship.id] && (m = { ...m }, delete m[e.relationship.id]), A();
+    },
+    RELATIONSHIP_UPDATE: function (e) {
+        null == e.relationship.since ? delete m[e.relationship.id] : m[e.relationship.id] = e.relationship.since, null == e.relationship.nickname ? delete p[e.relationship.id] : p[e.relationship.id] = e.relationship.nickname;
+    },
+    RELATIONSHIP_PENDING_INCOMING_REMOVED: function (e) {
+        h = { ...h }, _.default.keys(h).forEach(e => {
+            h[e] === f.OGo.PENDING_INCOMING && delete h[e];
+        }), A();
+    }
+});

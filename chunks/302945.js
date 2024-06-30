@@ -1,44 +1,38 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return c
-  }
+    Z: function () {
+        return _;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(793030),
-  l = n(422034),
-  u = n(182294),
-  _ = n(689938),
-  d = n(600541);
-
-function c(e) {
-  let {
-    affinities: t,
-    className: n
-  } = e, s = e => null != e.globalName ? e.globalName : e.username, c = r.useMemo(() => t.length > 1 ? _.Z.Messages.NITRO_AFFINITY_UPSELL.format({
-    username: s(t[0]),
-    numFriends: t.length - 1
-  }) : "", [t]);
-  if (t.length <= 1) return null;
-  let E = t.map((e, n) => (0, i.jsx)(l.O, {
-    affinity: e,
-    applyMask: n !== t.length - 1,
-    size: u.EF.SIZE_20
-  }, e.id));
-  return (0, i.jsxs)("div", {
-    className: o()(d.container, n),
-    children: [(0, i.jsx)("div", {
-      className: d.iconContainer,
-      children: E
-    }), (0, i.jsx)("div", {
-      className: d.textContainer,
-      children: (0, i.jsx)(a.x, {
-        variant: "text-sm/medium",
-        children: c
-      })
-    })]
-  })
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(793030), l = n(422034), u = n(182294), c = n(689938), d = n(286548);
+function _(e) {
+    let {
+            affinities: t,
+            className: n
+        } = e, a = e => null != e.globalName ? e.globalName : e.username, _ = i.useMemo(() => t.length > 1 ? c.Z.Messages.NITRO_AFFINITY_UPSELL.format({
+            username: a(t[0]),
+            numFriends: t.length - 1
+        }) : '', [t]);
+    if (t.length <= 1)
+        return null;
+    let E = t.map((e, n) => (0, r.jsx)(l.O, {
+        affinity: e,
+        applyMask: n !== t.length - 1,
+        size: u.EF.SIZE_20
+    }, e.id));
+    return (0, r.jsxs)('div', {
+        className: o()(d.container, n),
+        children: [
+            (0, r.jsx)('div', {
+                className: d.iconContainer,
+                children: E
+            }),
+            (0, r.jsx)('div', {
+                className: d.textContainer,
+                children: (0, r.jsx)(s.x, {
+                    variant: 'text-sm/medium',
+                    children: _
+                })
+            })
+        ]
+    });
 }

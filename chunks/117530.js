@@ -1,150 +1,130 @@
-"use strict";
 n(47120), n(653041);
-var i, r, s, o, a = n(392711),
-  l = n.n(a),
-  u = n(442837),
-  _ = n(570140),
-  d = n(668781),
-  c = n(141795),
-  E = n(596956),
-  I = n(703558),
-  T = n(981631),
-  h = n(689938);
-let S = new Map,
-  f = [];
-
-function N(e, t) {
-  var n, i;
-  return null !== (i = null === (n = A(e)) || void 0 === n ? void 0 : n.get(t)) && void 0 !== i ? i : f
+var r, i, a, o, s = n(392711), l = n.n(s), u = n(442837), c = n(570140), d = n(668781), _ = n(141795), E = n(596956), f = n(703558), h = n(981631), p = n(689938);
+let m = new Map(), I = [];
+function T(e, t) {
+    var n, r;
+    return null !== (r = null === (n = g(e)) || void 0 === n ? void 0 : n.get(t)) && void 0 !== r ? r : I;
 }
-
-function A(e) {
-  var t;
-  return null !== (t = S.get(e)) && void 0 !== t ? t : new Map
+function g(e) {
+    var t;
+    return null !== (t = m.get(e)) && void 0 !== t ? t : new Map();
 }
-
-function m(e, t, n) {
-  let i = A(e);
-  i.set(t, n), S.set(e, i)
+function S(e, t, n) {
+    let r = g(e);
+    r.set(t, n), m.set(e, r);
 }
-class O extends(i = u.ZP.Store) {
-  getFirstUpload(e, t) {
-    let n = N(e, t);
-    return n.length > 0 ? n[0] : null
-  }
-  hasAdditionalUploads(e, t) {
-    var n;
-    return (null !== (n = N(e, t).length) && void 0 !== n ? n : 0) > 1
-  }
-  getUploads(e, t) {
-    return N(e, t)
-  }
-  getUploadCount(e, t) {
-    var n;
-    return null !== (n = N(e, t).length) && void 0 !== n ? n : 0
-  }
-  getUpload(e, t, n) {
-    return N(e, n).find(e => e.id === t)
-  }
-  findUpload(e, t, n) {
-    return N(e, t).find(n)
-  }
-}
-o = "UploadAttachmentStore", (s = "displayName") in(r = O) ? Object.defineProperty(r, s, {
-  value: o,
-  enumerable: !0,
-  configurable: !0,
-  writable: !0
-}) : r[s] = o, t.Z = new O(_.Z, {
-  UPLOAD_ATTACHMENT_POP_FILE: function(e) {
-    let {
-      channelId: t
-    } = e, n = [...N(t, I.d.ChannelMessage)];
-    n.shift(), m(t, I.d.ChannelMessage, n)
-  },
-  UPLOAD_ATTACHMENT_ADD_FILES: e => {
-    let {
-      files: t,
-      channelId: n,
-      showLargeMessageDialog: i,
-      draftType: r
-    } = e, s = [...N(n, r)];
-    if (s.length + t.length > T.dN1 && r !== I.d.SlashCommand && r !== I.d.ApplicationLauncherCommand) {
-      d.Z.show({
-        title: h.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
-        body: h.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
-          limit: T.dN1
-        })
-      });
-      return
+class A extends (r = u.ZP.Store) {
+    getFirstUpload(e, t) {
+        let n = T(e, t);
+        return n.length > 0 ? n[0] : null;
     }
-    l().forEach(t, e => {
-      let t = new c.n(e, n, i, s.length);
-      t.upload(), s.push(t)
-    }), m(n, r, s)
-  },
-  UPLOAD_ATTACHMENT_UPDATE_FILE: function(e) {
-    let {
-      channelId: t,
-      id: n,
-      filename: i,
-      description: r,
-      spoiler: s,
-      thumbnail: o,
-      draftType: a
-    } = e, l = [...N(t, a)].map(e => (e.id === n && (void 0 !== i && (e.filename = i), void 0 !== s && (e.spoiler = s), void 0 !== r && (e.description = r), void 0 !== o && (e.isThumbnail = o)), e));
-    m(t, a, l)
-  },
-  UPLOAD_ATTACHMENT_REMOVE_FILE: function(e) {
-    let {
-      channelId: t,
-      id: n,
-      draftType: i
-    } = e, r = [...N(t, i)], s = r.findIndex(e => (0, E.T)({
-      uri: n,
-      filename: n
-    }, e));
-    s > -1 && (r.splice(s, 1)[0].cancel(), m(t, i, r))
-  },
-  UPLOAD_ATTACHMENT_REMOVE_FILES: function(e) {
-    let {
-      channelId: t,
-      attachmentIds: n,
-      draftType: i
-    } = e, r = [...N(t, i)];
-    n.forEach(e => {
-      let t = r.findIndex(t => e === t.id);
-      t > -1 && r.splice(t, 1)[0].cancel()
-    }), m(t, i, r)
-  },
-  UPLOAD_ATTACHMENT_CLEAR_ALL_FILES: function(e) {
-    let {
-      channelId: t,
-      draftType: n
-    } = e;
-    m(t, n, [])
-  },
-  UPLOAD_ATTACHMENT_SET_UPLOADS: function(e) {
-    let {
-      channelId: t,
-      uploads: n,
-      draftType: i
-    } = e;
-    m(t, i, n)
-  },
-  UPLOAD_ATTACHMENT_SET_FILE: function(e) {
-    let {
-      channelId: t,
-      id: n,
-      file: i,
-      draftType: r
-    } = e, s = [...N(t, r)].filter(e => e.id !== n), o = new c.n(i, t);
-    o.upload(), s.push(o), m(t, r, s)
-  },
-  SIDEBAR_CLOSE: function(e) {
-    let {
-      baseChannelId: t
-    } = e;
-    m(t, I.d.FirstThreadMessage, [])
-  }
-})
+    hasAdditionalUploads(e, t) {
+        var n;
+        return (null !== (n = T(e, t).length) && void 0 !== n ? n : 0) > 1;
+    }
+    getUploads(e, t) {
+        return T(e, t);
+    }
+    getUploadCount(e, t) {
+        var n;
+        return null !== (n = T(e, t).length) && void 0 !== n ? n : 0;
+    }
+    getUpload(e, t, n) {
+        return T(e, n).find(e => e.id === t);
+    }
+    findUpload(e, t, n) {
+        return T(e, t).find(n);
+    }
+}
+o = 'UploadAttachmentStore', (a = 'displayName') in (i = A) ? Object.defineProperty(i, a, {
+    value: o,
+    enumerable: !0,
+    configurable: !0,
+    writable: !0
+}) : i[a] = o, t.Z = new A(c.Z, {
+    UPLOAD_ATTACHMENT_POP_FILE: function (e) {
+        let {channelId: t} = e, n = [...T(t, f.d.ChannelMessage)];
+        n.shift(), S(t, f.d.ChannelMessage, n);
+    },
+    UPLOAD_ATTACHMENT_ADD_FILES: e => {
+        let {
+                files: t,
+                channelId: n,
+                showLargeMessageDialog: r,
+                draftType: i
+            } = e, a = [...T(n, i)];
+        if (a.length + t.length > h.dN1 && i !== f.d.SlashCommand && i !== f.d.ApplicationLauncherCommand) {
+            d.Z.show({
+                title: p.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
+                body: p.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({ limit: h.dN1 })
+            });
+            return;
+        }
+        l().forEach(t, e => {
+            let t = new _.n(e, n, r, a.length);
+            t.upload(), a.push(t);
+        }), S(n, i, a);
+    },
+    UPLOAD_ATTACHMENT_UPDATE_FILE: function (e) {
+        let {
+                channelId: t,
+                id: n,
+                filename: r,
+                description: i,
+                spoiler: a,
+                thumbnail: o,
+                draftType: s
+            } = e, l = [...T(t, s)].map(e => (e.id === n && (void 0 !== r && (e.filename = r), void 0 !== a && (e.spoiler = a), void 0 !== i && (e.description = i), void 0 !== o && (e.isThumbnail = o)), e));
+        S(t, s, l);
+    },
+    UPLOAD_ATTACHMENT_REMOVE_FILE: function (e) {
+        let {
+                channelId: t,
+                id: n,
+                draftType: r
+            } = e, i = [...T(t, r)], a = i.findIndex(e => (0, E.T)({
+                uri: n,
+                filename: n
+            }, e));
+        a > -1 && (i.splice(a, 1)[0].cancel(), S(t, r, i));
+    },
+    UPLOAD_ATTACHMENT_REMOVE_FILES: function (e) {
+        let {
+                channelId: t,
+                attachmentIds: n,
+                draftType: r
+            } = e, i = [...T(t, r)];
+        n.forEach(e => {
+            let t = i.findIndex(t => e === t.id);
+            t > -1 && i.splice(t, 1)[0].cancel();
+        }), S(t, r, i);
+    },
+    UPLOAD_ATTACHMENT_CLEAR_ALL_FILES: function (e) {
+        let {
+            channelId: t,
+            draftType: n
+        } = e;
+        S(t, n, []);
+    },
+    UPLOAD_ATTACHMENT_SET_UPLOADS: function (e) {
+        let {
+            channelId: t,
+            uploads: n,
+            draftType: r
+        } = e;
+        S(t, r, n);
+    },
+    UPLOAD_ATTACHMENT_SET_FILE: function (e) {
+        let {
+                channelId: t,
+                id: n,
+                file: r,
+                draftType: i
+            } = e, a = [...T(t, i)].filter(e => e.id !== n), o = new _.n(r, t);
+        o.upload(), a.push(o), S(t, i, a);
+    },
+    SIDEBAR_CLOSE: function (e) {
+        let {baseChannelId: t} = e;
+        S(t, f.d.FirstThreadMessage, []);
+    }
+});

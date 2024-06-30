@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  a: function() {
-    return i
-  }
-}), (r = i || (i = {}))[r.GIFT_INVENTORY_SETTINGS_BADGE = 1] = "GIFT_INVENTORY_SETTINGS_BADGE", r[r.QUEST_BAR = 2] = "QUEST_BAR", r[r.ACTIVITY_PANEL = 4] = "ACTIVITY_PANEL", r[r.QUEST_LIVE_STREAM = 8] = "QUEST_LIVE_STREAM"
+    a: function () {
+        return r;
+    }
+}), (i = r || (r = {}))[i.GIFT_INVENTORY_SETTINGS_BADGE = 1] = 'GIFT_INVENTORY_SETTINGS_BADGE', i[i.QUEST_BAR = 2] = 'QUEST_BAR', i[i.ACTIVITY_PANEL = 4] = 'ACTIVITY_PANEL', i[i.QUEST_LIVE_STREAM = 8] = 'QUEST_LIVE_STREAM';

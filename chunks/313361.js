@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  X: function() {
-    return i
-  }
-}), n(47120), (r = i || (i = {}))[r.DEFAULT = 0] = "DEFAULT", r[r.LIST = 1] = "LIST", r[r.GRID = 2] = "GRID"
+    X: function () {
+        return r;
+    }
+}), n(47120), (i = r || (r = {}))[i.DEFAULT = 0] = 'DEFAULT', i[i.LIST = 1] = 'LIST', i[i.GRID = 2] = 'GRID';

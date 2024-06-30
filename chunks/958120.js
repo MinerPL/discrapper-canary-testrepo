@@ -1,118 +1,86 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return L
-  }
+    Z: function () {
+        return O;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(442837),
-  o = n(954138),
-  a = n(979264),
-  l = n(699516),
-  u = n(246946),
-  _ = n(5192),
-  d = n(447452),
-  c = n(877485),
-  E = n(741308),
-  I = n(681837),
-  T = n(91433),
-  h = n(724593),
-  S = n(502762),
-  f = n(530),
-  N = n(790711),
-  A = n(580512),
-  m = n(67152),
-  O = n(579285),
-  R = n(287612),
-  C = n(228168),
-  p = n(981631),
-  g = n(153362);
-
-function L(e) {
-  let {
-    user: t,
-    currentUser: n,
-    displayProfile: L,
-    guild: v,
-    isHovering: D,
-    onOpenProfile: M,
-    channelId: P,
-    onClose: y
-  } = e, {
-    moreUserDetailsEnabled: U
-  } = (0, d.t)({
-    location: "BiteSizeProfileBody"
-  }), {
-    originalFriendingEnabled: b,
-    improvedFriendingEnabled: G
-  } = (0, c.V)({
-    location: "BiteSizeProfileBody"
-  }), w = _.ZP.getName(null == v ? void 0 : v.id, P, t), k = (0, s.e7)([l.Z], () => l.Z.getRelationshipType(t.id)), B = (0, s.e7)([u.Z], () => u.Z.hidePersonalInformation), x = (0, o.Z)("username"), V = r.useMemo(() => ({
-    source: p.jXE.PROFILE_POPOUT,
-    tagUserId: t.id
-  }), [t.id]);
-  return (0, i.jsxs)("div", {
-    className: g.body,
-    children: [(0, i.jsx)(f.Z, {
-      user: t,
-      profileType: C.y0.BITE_SIZE,
-      onOpenProfile: M,
-      usernameIcon: t.hasAvatarForGuild(null == v ? void 0 : v.id) && (0, i.jsx)(N.Z, {
-        user: t,
-        nickname: w
-      }),
-      nickname: w,
-      pronouns: null == L ? void 0 : L.pronouns,
-      tags: (0, i.jsx)(E.Z, {
-        displayProfile: L,
-        profileType: C.y0.BITE_SIZE,
-        onClose: y
-      }),
-      nicknameIcons: (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(I.Z, {
-          userId: t.id
-        }), (U || b || G) && !B && (0, i.jsx)(h.Z, {
-          user: t,
-          isHovering: D,
-          onOpenProfile: () => M({
-            subsection: C.Tb.NOTE
-          })
-        })]
-      })
-    }), (G || b) && k === p.OGo.PENDING_INCOMING && (0, i.jsx)(S.Z.Overlay, {
-      children: (0, i.jsx)(T.Z, {
-        user: t,
-        guildId: null == v ? void 0 : v.id,
-        channelId: P,
-        className: g.banner
-      })
-    }), t.id !== n.id && (0, i.jsx)(R.Z, {
-      user: t,
-      onOpenProfile: e => M({
-        section: e
-      })
-    }), x && (0, i.jsx)(a.ZP, {
-      userId: t.id,
-      inline: !1,
-      profileViewedAnalytics: V
-    }), (U || b || G) && (0, i.jsx)(m.Z, {
-      user: t,
-      bio: null == L ? void 0 : L.bio,
-      hidePersonalInformation: B,
-      onClose: y
-    }), (0, i.jsx)(A.Z, {
-      user: t,
-      guild: v,
-      channelId: P,
-      onClose: y
-    }), null != v && (0, i.jsx)(O.Z, {
-      user: t,
-      currentUser: n,
-      guild: v,
-      onOpenProfile: () => M({
-        subsection: C.Tb.ROLES
-      })
-    })]
-  })
+var r = n(735250), i = n(470079), a = n(442837), o = n(954138), s = n(979264), l = n(699516), u = n(246946), c = n(5192), d = n(741308), _ = n(681837), E = n(91433), f = n(724593), h = n(502762), p = n(530), m = n(790711), I = n(580512), T = n(67152), g = n(579285), S = n(287612), A = n(228168), N = n(981631), v = n(472375);
+function O(e) {
+    let {
+            user: t,
+            currentUser: n,
+            displayProfile: O,
+            guild: R,
+            isHovering: C,
+            onOpenProfile: y,
+            channelId: D,
+            onClose: L
+        } = e, b = c.ZP.getName(null == R ? void 0 : R.id, D, t), M = (0, a.e7)([l.Z], () => l.Z.getRelationshipType(t.id)), P = (0, a.e7)([u.Z], () => u.Z.hidePersonalInformation), U = (0, o.Z)('username'), w = i.useMemo(() => ({
+            source: N.jXE.PROFILE_POPOUT,
+            tagUserId: t.id
+        }), [t.id]);
+    return (0, r.jsxs)('div', {
+        className: v.body,
+        children: [
+            (0, r.jsx)(p.Z, {
+                user: t,
+                profileType: A.y0.BITE_SIZE,
+                onOpenProfile: y,
+                usernameIcon: t.hasAvatarForGuild(null == R ? void 0 : R.id) && (0, r.jsx)(m.Z, {
+                    user: t,
+                    nickname: b
+                }),
+                nickname: b,
+                pronouns: null == O ? void 0 : O.pronouns,
+                tags: (0, r.jsx)(d.Z, {
+                    displayProfile: O,
+                    profileType: A.y0.BITE_SIZE,
+                    onClose: L
+                }),
+                nicknameIcons: (0, r.jsxs)(r.Fragment, {
+                    children: [
+                        (0, r.jsx)(_.Z, { userId: t.id }),
+                        !P && (0, r.jsx)(f.Z, {
+                            user: t,
+                            isHovering: C,
+                            onOpenProfile: () => null == y ? void 0 : y({ subsection: A.Tb.NOTE })
+                        })
+                    ]
+                })
+            }),
+            M === N.OGo.PENDING_INCOMING && (0, r.jsx)(h.Z.Overlay, {
+                children: (0, r.jsx)(E.Z, {
+                    user: t,
+                    guildId: null == R ? void 0 : R.id,
+                    channelId: D
+                })
+            }),
+            t.id !== n.id && (0, r.jsx)(S.Z, {
+                user: t,
+                onOpenProfile: e => null == y ? void 0 : y({ section: e })
+            }),
+            U && (0, r.jsx)(s.ZP, {
+                userId: t.id,
+                inline: !1,
+                profileViewedAnalytics: w
+            }),
+            (0, r.jsx)(T.Z, {
+                user: t,
+                bio: null == O ? void 0 : O.bio,
+                hidePersonalInformation: P,
+                onClose: L
+            }),
+            (0, r.jsx)(I.Z, {
+                user: t,
+                guild: R,
+                channelId: D,
+                onClose: L
+            }),
+            null != R && (0, r.jsx)(g.Z, {
+                user: t,
+                currentUser: n,
+                guild: R,
+                onOpenProfile: () => null == y ? void 0 : y({ subsection: A.Tb.ROLES })
+            })
+        ]
+    });
 }

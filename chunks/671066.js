@@ -1,76 +1,80 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return _
-  }
+n.d(t, {
+    Z: function () {
+        return E;
+    }
 });
-var n = t(735250);
-t(470079);
-var i = t(442837),
-  l = t(481060),
-  a = t(933557),
-  r = t(592125),
-  o = t(699516),
-  c = t(594174),
-  d = t(556012),
-  u = t(689938),
-  E = t(39097);
-
-function _(e) {
-  var s;
-  let {
-    action: t,
-    triggerType: _,
-    toggled: I,
-    onToggleAction: T
-  } = e, N = e => () => T(e), m = (0, d.c)(t.type, t, _), S = null === (s = t.metadata) || void 0 === s ? void 0 : s.channelId, h = (0, i.e7)([c.default, o.Z, r.Z], () => {
-    let e = r.Z.getChannel(S);
-    return null == e ? null : (0, a.F6)(e, c.default, o.Z)
-  }, [S]);
-  if (null == m) return null;
-  let {
-    headerText: g,
-    descriptionText: x,
-    icon: C
-  } = m;
-  return (0, n.jsxs)("div", {
-    className: E.actionContainer,
-    children: [(0, n.jsx)("div", {
-      className: E.actionIconContainer,
-      children: (0, n.jsx)(C, {
-        width: 24,
-        height: 24,
-        className: E.actionIcon
-      })
-    }), (0, n.jsxs)("div", {
-      className: E.actionTextContainer,
-      children: [(0, n.jsx)(l.Heading, {
-        variant: "heading-sm/semibold",
-        children: g
-      }), (0, n.jsx)(l.Text, {
-        color: "interactive-normal",
-        variant: "text-xs/medium",
-        children: x
-      }), I && (0, n.jsxs)(l.Text, {
-        color: "text-muted",
-        variant: "text-xs/medium",
-        children: [null != h && u.Z.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_EDIT_HELPER.format({
-          channelName: h
-        }), (0, n.jsx)(l.Clickable, {
-          onClick: N(!0),
-          className: E.editChannel,
-          tag: "span",
-          role: "link",
-          children: u.Z.Messages.EDIT_CHANNEL
-        })]
-      })]
-    }), (0, n.jsx)("div", {
-      children: (0, n.jsx)(l.Checkbox, {
-        type: l.Checkbox.Types.INVERTED,
-        value: I,
-        onChange: N(!1),
-        className: E.__invalid_actionCheckbox
-      })
-    })]
-  })
+var s = n(735250);
+n(470079);
+var a = n(442837), i = n(481060), r = n(933557), l = n(592125), o = n(699516), c = n(594174), d = n(556012), u = n(689938), _ = n(716054);
+function E(e) {
+    var t;
+    let {
+            action: n,
+            triggerType: E,
+            toggled: I,
+            onToggleAction: T
+        } = e, m = e => () => T(e), N = (0, d.c)(n.type, n, E), S = null === (t = n.metadata) || void 0 === t ? void 0 : t.channelId, h = (0, a.e7)([
+            c.default,
+            o.Z,
+            l.Z
+        ], () => {
+            let e = l.Z.getChannel(S);
+            return null == e ? null : (0, r.F6)(e, c.default, o.Z);
+        }, [S]);
+    if (null == N)
+        return null;
+    let {
+        headerText: g,
+        descriptionText: C,
+        icon: x
+    } = N;
+    return (0, s.jsxs)('div', {
+        className: _.actionContainer,
+        children: [
+            (0, s.jsx)('div', {
+                className: _.actionIconContainer,
+                children: (0, s.jsx)(x, {
+                    size: 'md',
+                    color: 'currentColor',
+                    className: _.actionIcon
+                })
+            }),
+            (0, s.jsxs)('div', {
+                className: _.actionTextContainer,
+                children: [
+                    (0, s.jsx)(i.Heading, {
+                        variant: 'heading-sm/semibold',
+                        children: g
+                    }),
+                    (0, s.jsx)(i.Text, {
+                        color: 'interactive-normal',
+                        variant: 'text-xs/medium',
+                        children: C
+                    }),
+                    I && (0, s.jsxs)(i.Text, {
+                        color: 'text-muted',
+                        variant: 'text-xs/medium',
+                        children: [
+                            null != h && u.Z.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_EDIT_HELPER.format({ channelName: h }),
+                            (0, s.jsx)(i.Clickable, {
+                                onClick: m(!0),
+                                className: _.editChannel,
+                                tag: 'span',
+                                role: 'link',
+                                children: u.Z.Messages.EDIT_CHANNEL
+                            })
+                        ]
+                    })
+                ]
+            }),
+            (0, s.jsx)('div', {
+                children: (0, s.jsx)(i.Checkbox, {
+                    type: i.Checkbox.Types.INVERTED,
+                    value: I,
+                    onChange: m(!1),
+                    className: _.__invalid_actionCheckbox
+                })
+            })
+        ]
+    });
 }

@@ -1,9 +1,10 @@
-t.exports = function(t) {
-  return function(r, e, n) {
-    for (var o = -1, i = Object(r), a = n(r), u = a.length; u--;) {
-      var f = a[t ? u : ++o];
-      if (!1 === e(i[f], f, i)) break
-    }
-    return r
-  }
-}
+t.exports = function (t) {
+    return function (e, r, n) {
+        for (var _ = -1, a = Object(e), i = n(e), o = i.length; o--;) {
+            var E = i[t ? o : ++_];
+            if (!1 === r(a[E], E, a))
+                break;
+        }
+        return e;
+    };
+};

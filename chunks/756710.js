@@ -1,51 +1,45 @@
-"use strict";
 n.d(t, {
-  o: function() {
-    return d
-  }
+    o: function () {
+        return d;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(1561),
-  l = n(743236),
-  u = n(939350),
-  _ = n(768160);
-
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(1561), l = n(743236), u = n(939350), c = n(639897);
 function d(e) {
-  let {
-    children: t,
-    color: n = "default",
-    isFocused: s = !1,
-    disabled: d = !1,
-    keepItemStyles: c = !1,
-    menuItemProps: E,
-    action: I,
-    dontCloseOnActionIfHoldingShiftKey: T,
-    dontCloseOnAction: h,
-    onClose: S
-  } = e, f = r.useRef(null);
-  r.useEffect(() => {
-    s && (0, l.F)(f)
-  }, [s]);
-  let N = r.useCallback(e => {
-      if (null == I) return !1;
-      !(e.shiftKey && T) && !h && S(), e.persist(), requestAnimationFrame(() => I(e))
-    }, [I, S, T, h]),
-    A = c ? o()(_.item, u._[n], {
-      [_.focused]: s
-    }) : _.customItem;
-  return (0, i.jsx)(a.P, {
-    innerRef: f,
-    className: A,
-    onClick: d ? void 0 : N,
-    "aria-disabled": d,
-    ...E,
-    children: t({
-      color: n,
-      disabled: d,
-      isFocused: s
-    })
-  })
+    let {
+            children: t,
+            color: n = 'default',
+            isFocused: a = !1,
+            disabled: d = !1,
+            keepItemStyles: _ = !1,
+            menuItemProps: E,
+            action: f,
+            dontCloseOnActionIfHoldingShiftKey: h,
+            dontCloseOnAction: p,
+            onClose: m
+        } = e, I = i.useRef(null);
+    i.useEffect(() => {
+        a && (0, l.F)(I);
+    }, [a]);
+    let T = i.useCallback(e => {
+            if (null == f)
+                return !1;
+            !(e.shiftKey && h) && !p && m(), e.persist(), requestAnimationFrame(() => f(e));
+        }, [
+            f,
+            m,
+            h,
+            p
+        ]), g = _ ? o()(c.item, u._[n], { [c.focused]: a }) : c.customItem;
+    return (0, r.jsx)(s.P, {
+        innerRef: I,
+        className: g,
+        onClick: d ? void 0 : T,
+        'aria-disabled': d,
+        ...E,
+        children: t({
+            color: n,
+            disabled: d,
+            isFocused: a
+        })
+    });
 }

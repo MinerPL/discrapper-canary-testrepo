@@ -1,15 +1,8 @@
-"use strict";
-var n = r(740362),
-  o = r(354848),
-  i = r(339718),
-  c = r(883539),
-  s = r(442975),
-  u = c("IE_PROTO"),
-  a = Object,
-  f = a.prototype;
-t.exports = s ? a.getPrototypeOf : function(t) {
-  var e = i(t);
-  if (n(e, u)) return e[u];
-  var r = e.constructor;
-  return o(r) && e instanceof r ? r.prototype : e instanceof a ? f : null
-}
+var e = o(740362), n = o(354848), c = o(339718), i = o(883539), u = o(442975), a = i('IE_PROTO'), f = Object, E = f.prototype;
+r.exports = u ? f.getPrototypeOf : function (r) {
+    var t = c(r);
+    if (e(t, a))
+        return t[a];
+    var o = t.constructor;
+    return n(o) && t instanceof o ? o.prototype : t instanceof f ? E : null;
+};

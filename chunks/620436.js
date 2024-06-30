@@ -1,43 +1,37 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return c
-  }
+n.d(t, {
+    Z: function () {
+        return o;
+    }
 });
-var n, i, l = t(735250);
-t(470079);
-var a = t(50199),
-  r = t(465670),
-  o = t(229546);
-(n = i || (i = {})).ARROW_DOWN = "arrow_down", n.CROSS = "cross";
-
-function c(e) {
-  let {
-    type: s
-  } = e;
-  return (0, l.jsx)("div", {
-    className: o.dividerContainer,
-    children: (0, l.jsx)("div", {
-      className: o.dividerIconContainer,
-      children: function(e) {
-        switch (e) {
-          case "arrow_down":
-            return (0, l.jsx)(a.Z, {
-              width: 24,
-              height: 24,
-              className: o.dividierIcon
-            });
-          case "cross":
-            return (0, l.jsx)(r.Z, {
-              width: 24,
-              height: 24,
-              className: o.dividierIcon
-            });
-          default:
-            return null
-        }
-      }(s)
-    })
-  })
+var s, a, i = n(735250);
+n(470079);
+var r = n(481060), l = n(346122);
+(s = a || (a = {})).ARROW_DOWN = 'arrow_down', s.CROSS = 'cross';
+function o(e) {
+    let {type: t} = e;
+    return (0, i.jsx)('div', {
+        className: l.dividerContainer,
+        children: (0, i.jsx)('div', {
+            className: l.dividerIconContainer,
+            children: function (e) {
+                switch (e) {
+                case 'arrow_down':
+                    return (0, i.jsx)(r.ArrowSmallDownIcon, {
+                        size: 'md',
+                        color: 'currentColor',
+                        className: l.dividierIcon
+                    });
+                case 'cross':
+                    return (0, i.jsx)(r.CloseSmallIcon, {
+                        size: 'md',
+                        color: 'currentColor',
+                        className: l.dividierIcon
+                    });
+                default:
+                    return null;
+                }
+            }(t)
+        })
+    });
 }
-c.Type = i
+o.Type = a;

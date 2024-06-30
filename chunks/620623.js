@@ -1,3 +1,2 @@
-"use strict";
-var n = r(545576);
-t.exports = n("document", "documentElement")
+var e = o(545576);
+r.exports = e('document', 'documentElement');

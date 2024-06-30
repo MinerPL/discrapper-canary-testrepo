@@ -1,25 +1,20 @@
-"use strict";
 n.d(t, {
-  H: function() {
-    return o
-  }
+    H: function () {
+        return o;
+    }
 });
-var i = n(913527),
-  r = n.n(i),
-  s = n(689938);
-
+var r = n(913527), i = n.n(r), a = n(689938);
 function o(e) {
-  let t = function(e) {
-    let t = r().duration(r()().diff(e)),
-      n = Math.floor(t.asDays()),
-      i = Math.floor(t.asHours()),
-      s = Math.floor(t.asMinutes());
-    if (n > 0) return "".concat(n, "d");
-    if (i > 0) return "".concat(i, "h");
-    if (s > 0) return "".concat(s, "m");
-    else return "1m"
-  }(new Date(e));
-  return s.Z.Messages.RECENTLY_ONLINE_STATUS.format({
-    time: t
-  })
+    let t = function (e) {
+        let t = i().duration(i()().diff(e)), n = Math.floor(t.asDays()), r = Math.floor(t.asHours()), a = Math.floor(t.asMinutes());
+        if (n > 0)
+            return ''.concat(n, 'd');
+        if (r > 0)
+            return ''.concat(r, 'h');
+        if (a > 0)
+            return ''.concat(a, 'm');
+        else
+            return '1m';
+    }(new Date(e));
+    return a.Z.Messages.RECENTLY_ONLINE_STATUS.format({ time: t });
 }

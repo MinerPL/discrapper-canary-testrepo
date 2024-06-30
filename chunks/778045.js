@@ -1,113 +1,112 @@
-"use strict";
 n(733860);
-var i = n(735250),
-  r = n(470079),
-  s = n(481060),
-  o = n(353093),
-  a = n(785008);
-
+var r = n(735250), i = n(470079), a = n(481060), o = n(353093), s = n(519788);
 function l(e) {
-  let {
-    games: t
-  } = e;
-  return (0, i.jsx)("div", {
-    className: a.tooltipGames,
-    children: t.map(e => {
-      let t = e.getIconURL(24);
-      return null == t ? null : (0, i.jsxs)("div", {
-        className: a.tooltipGame,
-        children: [(0, i.jsx)("div", {
-          className: a.tooltipGameImageContainer,
-          children: (0, i.jsx)("img", {
-            src: t,
-            alt: e.name,
-            className: a.tooltipGameImage
-          })
-        }), (0, i.jsx)(s.Text, {
-          variant: "text-xs/medium",
-          color: "text-normal",
-          className: a.tooltipGameName,
-          children: e.name
-        })]
-      }, e.id)
-    })
-  })
+    let {games: t} = e;
+    return (0, r.jsx)('div', {
+        className: s.tooltipGames,
+        children: t.map(e => {
+            let t = e.getIconURL(24);
+            return null == t ? null : (0, r.jsxs)('div', {
+                className: s.tooltipGame,
+                children: [
+                    (0, r.jsx)('div', {
+                        className: s.tooltipGameImageContainer,
+                        children: (0, r.jsx)('img', {
+                            src: t,
+                            alt: e.name,
+                            className: s.tooltipGameImage
+                        })
+                    }),
+                    (0, r.jsx)(a.Text, {
+                        variant: 'text-xs/medium',
+                        color: 'text-normal',
+                        className: s.tooltipGameName,
+                        children: e.name
+                    })
+                ]
+            }, e.id);
+        })
+    });
 }
-t.Z = r.memo(function(e) {
-  let {
-    games: t,
-    prioritizedGameIds: n
-  } = e, u = t.filter(e => null != e && null != e.icon);
-  if (null != n && n.size > 0) {
-    for (let e = 0; e < u.length; e++)
-      if (n.has(u[e].id)) {
-        let t = u.splice(e, 1)[0];
-        u.unshift(t)
-      }
-  }
-  let _ = u.slice(0, 3),
-    d = r.useMemo(() => {
-      let e = u[3];
-      if (null == e) return null;
-      let t = e.getIconURL(24);
-      if (null == t) return null;
-      if (u.length > 4) {
-        let n = u.slice(3),
-          r = (0, o.f6)(n.map(e => e.name));
-        return (0, i.jsx)(s.Tooltip, {
-          "aria-label": null != r ? r : "",
-          text: (0, i.jsx)(l, {
-            games: n
-          }),
-          position: "bottom",
-          children: r => (0, i.jsxs)("div", {
-            ...r,
-            className: a.gameImageContainer,
-            children: [(0, i.jsx)("img", {
-              src: t,
-              alt: e.name,
-              className: a.gameImage
-            }), (0, i.jsx)("div", {
-              className: a.extraGameCount,
-              children: (0, i.jsx)(s.Text, {
-                variant: "text-xs/medium",
-                color: "always-white",
-                children: "+".concat(n.length)
-              })
-            })]
-          })
-        })
-      }
-      return (0, i.jsx)(s.Tooltip, {
-        text: e.name,
-        position: "bottom",
-        children: n => (0, i.jsx)("div", {
-          ...n,
-          className: a.gameImageContainer,
-          children: (0, i.jsx)("img", {
-            src: t,
-            alt: e.name,
-            className: a.gameImage
-          })
-        })
-      })
-    }, [u]);
-  return (0, i.jsxs)(i.Fragment, {
-    children: [_.map(e => {
-      let t = e.getIconURL(24);
-      return null == t ? null : (0, i.jsx)(s.Tooltip, {
-        text: e.name,
-        position: "bottom",
-        children: n => (0, i.jsx)("div", {
-          ...n,
-          className: a.gameImageContainer,
-          children: (0, i.jsx)("img", {
-            src: t,
-            alt: e.name,
-            className: a.gameImage
-          })
-        })
-      }, e.id)
-    }), d]
-  })
-})
+t.Z = i.memo(function (e) {
+    let {
+            games: t,
+            prioritizedGameIds: n
+        } = e, u = t.filter(e => null != e && null != e.icon);
+    if (null != n && n.size > 0) {
+        for (let e = 0; e < u.length; e++)
+            if (n.has(u[e].id)) {
+                let t = u.splice(e, 1)[0];
+                u.unshift(t);
+            }
+    }
+    let c = u.slice(0, 3), d = i.useMemo(() => {
+            let e = u[3];
+            if (null == e)
+                return null;
+            let t = e.getIconURL(24);
+            if (null == t)
+                return null;
+            if (u.length > 4) {
+                let n = u.slice(3), i = (0, o.f6)(n.map(e => e.name));
+                return (0, r.jsx)(a.Tooltip, {
+                    'aria-label': null != i ? i : '',
+                    text: (0, r.jsx)(l, { games: n }),
+                    position: 'bottom',
+                    children: i => (0, r.jsxs)('div', {
+                        ...i,
+                        className: s.gameImageContainer,
+                        children: [
+                            (0, r.jsx)('img', {
+                                src: t,
+                                alt: e.name,
+                                className: s.gameImage
+                            }),
+                            (0, r.jsx)('div', {
+                                className: s.extraGameCount,
+                                children: (0, r.jsx)(a.Text, {
+                                    variant: 'text-xs/medium',
+                                    color: 'always-white',
+                                    children: '+'.concat(n.length)
+                                })
+                            })
+                        ]
+                    })
+                });
+            }
+            return (0, r.jsx)(a.Tooltip, {
+                text: e.name,
+                position: 'bottom',
+                children: n => (0, r.jsx)('div', {
+                    ...n,
+                    className: s.gameImageContainer,
+                    children: (0, r.jsx)('img', {
+                        src: t,
+                        alt: e.name,
+                        className: s.gameImage
+                    })
+                })
+            });
+        }, [u]);
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            c.map(e => {
+                let t = e.getIconURL(24);
+                return null == t ? null : (0, r.jsx)(a.Tooltip, {
+                    text: e.name,
+                    position: 'bottom',
+                    children: n => (0, r.jsx)('div', {
+                        ...n,
+                        className: s.gameImageContainer,
+                        children: (0, r.jsx)('img', {
+                            src: t,
+                            alt: e.name,
+                            className: s.gameImage
+                        })
+                    })
+                }, e.id);
+            }),
+            d
+        ]
+    });
+});

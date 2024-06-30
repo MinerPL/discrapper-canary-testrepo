@@ -1,11 +1,9 @@
-"use strict";
 n.d(t, {
-  fL: function() {
-    return i
-  },
-  jM: function() {
-    return r
-  }
+    fL: function () {
+        return r;
+    },
+    jM: function () {
+        return i;
+    }
 });
-let i = "1081004946872352958",
-  r = 3000177
+let r = '1081004946872352958', i = 3000177;

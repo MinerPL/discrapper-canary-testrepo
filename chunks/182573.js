@@ -1,35 +1,26 @@
-"use strict";
 n(47120);
-var i = n(147913),
-  r = n(710845),
-  s = n(880027);
-let o = new r.Z("LeagueOfLegendsLifecycleManager");
-class a extends i.Z {
-  handleRunningGameChange(e) {
-    let {
-      added: t,
-      removed: n
-    } = e;
-    if (!!(0, s.J)("LeagueOfLegendsLifecycleManager")) i(t) && o.info("League of Legends Match Started", {
-      added: t
-    }), i(n) && o.info("League of Legends Match Ended", {
-      removed: n
-    });
-
-    function i(e) {
-      return e.some(e => "League of Legends" === e.name)
+var r = n(147913), i = n(710845), a = n(880027);
+let o = new i.Z('LeagueOfLegendsLifecycleManager');
+class s extends r.Z {
+    handleRunningGameChange(e) {
+        let {
+            added: t,
+            removed: n
+        } = e;
+        if (!!(0, a.J)('LeagueOfLegendsLifecycleManager'))
+            r(t) && o.info('League of Legends Match Started', { added: t }), r(n) && o.info('League of Legends Match Ended', { removed: n });
+        function r(e) {
+            return e.some(e => 'League of Legends' === e.name);
+        }
     }
-  }
-  constructor(...e) {
-    var t, n, i;
-    super(...e), t = this, n = "actions", i = {
-      RUNNING_GAMES_CHANGE: this.handleRunningGameChange
-    }, n in t ? Object.defineProperty(t, n, {
-      value: i,
-      enumerable: !0,
-      configurable: !0,
-      writable: !0
-    }) : t[n] = i
-  }
+    constructor(...e) {
+        var t, n, r;
+        super(...e), t = this, n = 'actions', r = { RUNNING_GAMES_CHANGE: this.handleRunningGameChange }, n in t ? Object.defineProperty(t, n, {
+            value: r,
+            enumerable: !0,
+            configurable: !0,
+            writable: !0
+        }) : t[n] = r;
+    }
 }
-t.Z = new a
+t.Z = new s();

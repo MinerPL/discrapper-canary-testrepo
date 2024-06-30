@@ -1,28 +1,28 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return d
-  }
+n.d(t, {
+    Z: function () {
+        return d;
+    }
 });
-var n = t(470079),
-  i = t(442837),
-  l = t(80932),
-  a = t(110924),
-  r = t(471613),
-  o = t(889564);
+var s = n(470079), a = n(442837), i = n(80932), r = n(110924), l = n(471613), o = n(889564);
 let c = [];
-
 function d(e) {
-  let {
-    revision: s,
-    emojis: t
-  } = (0, i.cj)([r.Z], () => ({
-    revision: r.Z.getEmojiRevision(e),
-    emojis: r.Z.getEmojis(e)
-  })), d = (0, a.Z)(s);
-  return n.useEffect(() => {
-    (0, l.OQ)(e)
-  }, [e]), n.useEffect(() => {
-    null != d && d < s && (0, l.OQ)(e)
-  }, [s, d, e]), n.useMemo(() => null == t ? c : t.filter(s => (0, o.Kt)(s, e)), [t, e])
+    let {
+            revision: t,
+            emojis: n
+        } = (0, a.cj)([l.Z], () => ({
+            revision: l.Z.getEmojiRevision(e),
+            emojis: l.Z.getEmojis(e)
+        })), d = (0, r.Z)(t);
+    return s.useEffect(() => {
+        (0, i.OQ)(e);
+    }, [e]), s.useEffect(() => {
+        null != d && d < t && (0, i.OQ)(e);
+    }, [
+        t,
+        d,
+        e
+    ]), s.useMemo(() => null == n ? c : n.filter(t => (0, o.Kt)(t, e)), [
+        n,
+        e
+    ]);
 }

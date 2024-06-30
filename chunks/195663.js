@@ -1,13 +1,11 @@
-"use strict";
 n.d(t, {
-  s: function() {
-    return r
-  }
+    s: function () {
+        return i;
+    }
 });
-var i = n(314897);
-
-function r(e) {
-  var t, n;
-  let r = i.default.getId();
-  return null != r && (!!((null === (t = e.removedMemberIds) || void 0 === t ? void 0 : t.includes(r)) || (null === (n = e.addedMembers) || void 0 === n ? void 0 : n.some(e => e.userId === r))) || !1)
+var r = n(314897);
+function i(e) {
+    var t, n;
+    let i = r.default.getId();
+    return null != i && (!!((null === (t = e.removedMemberIds) || void 0 === t ? void 0 : t.includes(i)) || (null === (n = e.addedMembers) || void 0 === n ? void 0 : n.some(e => e.userId === i))) || !1);
 }

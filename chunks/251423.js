@@ -1,23 +1,17 @@
-"use strict";
-n.d(t, {
-  L: function() {
-    return o
-  }
+n.d(e, {
+    L: function () {
+        return a;
+    }
 });
-var s = n(470079),
-  r = n(442837),
-  i = n(570140),
-  a = n(480387),
-  l = n(726745);
-
-function o() {
-  let e = (0, r.cj)([l.Z], () => ({
-    isLoading: l.Z.getIsValidatingUsers(),
-    multiAccountUsers: l.Z.getUsers()
-  }));
-  return s.useEffect(() => {
-    i.Z.wait(() => {
-      a.HJ()
-    })
-  }, []), e
+var r = n(470079), i = n(442837), l = n(570140), u = n(480387), o = n(726745);
+function a() {
+    let t = (0, i.cj)([o.Z], () => ({
+        isLoading: o.Z.getIsValidatingUsers(),
+        multiAccountUsers: o.Z.getUsers()
+    }));
+    return r.useEffect(() => {
+        l.Z.wait(() => {
+            u.HJ();
+        });
+    }, []), t;
 }

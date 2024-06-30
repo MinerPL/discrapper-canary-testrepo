@@ -1,7 +1,6 @@
-"use strict";
-n.d(e, {
-  J: function() {
-    return r
-  }
+r.d(e, {
+    J: function () {
+        return n;
+    }
 });
-let r = "production"
+let n = 'production';

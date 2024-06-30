@@ -1,12 +1,10 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return i;
+    }
 });
-var i = n(689938);
-
-function r(e) {
-  let t = i.Z.getLocale().toLowerCase();
-  return t in e ? e[t] : e.default
+var r = n(689938);
+function i(e) {
+    let t = r.Z.getLocale().toLowerCase();
+    return t in e ? e[t] : e.default;
 }

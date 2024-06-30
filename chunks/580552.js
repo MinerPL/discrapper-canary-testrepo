@@ -1,11 +1,9 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return i;
+    }
 });
-var i = n(596401);
-
-function r(e) {
-  return null != e && e === i.sP
+var r = n(596401);
+function i(e) {
+    return null != e && e === r.sP;
 }

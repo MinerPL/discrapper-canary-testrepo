@@ -1,114 +1,106 @@
-"use strict";
 n(47120);
-var i, r = n(735250),
-  s = n(470079),
-  o = n(120356),
-  a = n.n(o),
-  l = n(904969);
-
+var r, i = n(735250), a = n(470079), o = n(120356), s = n.n(o), l = n(982433);
 function u(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: n,
-    enumerable: !0,
-    configurable: !0,
-    writable: !0
-  }) : e[t] = n, e
+    return t in e ? Object.defineProperty(e, t, {
+        value: n,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+    }) : e[t] = n, e;
 }
-class _ extends(i = s.PureComponent) {
-  static getDerivedStateFromProps(e, t) {
-    let {
-      streamId: n
-    } = e;
-    if (t.aReady) {
-      if (n !== t.aStreamId) return null == n ? {
-        bStreamId: n,
-        bReady: !0,
-        aStreamId: null,
-        aReady: !1
-      } : {
-        bStreamId: n,
-        bReady: !1
-      }
-    } else if (n !== t.bStreamId) return null == n ? {
-      aStreamId: n,
-      aReady: !0,
-      bStreamId: null,
-      bReady: !1
-    } : {
-      aStreamId: n,
-      aReady: !1
-    };
-    return null
-  }
-  renderVideo(e, t) {
-    let {
-      children: n,
-      mirror: i,
-      paused: o,
-      component: a
-    } = this.props;
-    if (null == e) {
-      if (null == n) return null;
-      let e = s.Children.only(n);
-      return s.cloneElement(e, {
-        style: {
-          display: t && !i ? void 0 : "none"
-        },
-        ...e.props
-      })
+class c extends (r = a.PureComponent) {
+    static getDerivedStateFromProps(e, t) {
+        let {streamId: n} = e;
+        if (t.aReady) {
+            if (n !== t.aStreamId)
+                return null == n ? {
+                    bStreamId: n,
+                    bReady: !0,
+                    aStreamId: null,
+                    aReady: !1
+                } : {
+                    bStreamId: n,
+                    bReady: !1
+                };
+        } else if (n !== t.bStreamId)
+            return null == n ? {
+                aStreamId: n,
+                aReady: !0,
+                bStreamId: null,
+                bReady: !1
+            } : {
+                aStreamId: n,
+                aReady: !1
+            };
+        return null;
     }
-    return (0, r.jsx)(a, {
-      paused: o,
-      className: l.media,
-      streamId: e,
-      onReady: t ? null : this.handleReady
-    })
-  }
-  render() {
-    let {
-      mirror: e,
-      className: t
-    } = this.props;
-    return (0, r.jsxs)("div", {
-      className: a()(l.video, t, {
-        [l.mirror]: e
-      }),
-      onDoubleClick: this.handleDoubleClick,
-      onContextMenu: this.handleContextMenu,
-      children: [this.renderVideo(this.state.aStreamId, this.state.aReady), this.renderVideo(this.state.bStreamId, this.state.bReady)]
-    })
-  }
-  constructor(...e) {
-    super(...e), u(this, "state", {
-      aStreamId: null,
-      aReady: !1,
-      bStreamId: this.props.streamId,
-      bReady: !0
-    }), u(this, "handleReady", () => {
-      this.state.aReady ? this.setState({
-        bReady: !0,
-        aStreamId: null,
-        aReady: !1
-      }) : this.setState({
-        aReady: !0,
-        bStreamId: null,
-        bReady: !1
-      })
-    }), u(this, "handleDoubleClick", e => {
-      let {
-        onDoubleClick: t,
-        id: n
-      } = this.props;
-      null == t || t(e, n)
-    }), u(this, "handleContextMenu", e => {
-      let {
-        onContextMenu: t,
-        id: n
-      } = this.props;
-      null == t || t(e, n)
-    })
-  }
+    renderVideo(e, t) {
+        let {
+            children: n,
+            mirror: r,
+            paused: o,
+            component: s
+        } = this.props;
+        if (null == e) {
+            if (null == n)
+                return null;
+            let e = a.Children.only(n);
+            return a.cloneElement(e, {
+                style: { display: t && !r ? void 0 : 'none' },
+                ...e.props
+            });
+        }
+        return (0, i.jsx)(s, {
+            paused: o,
+            className: l.media,
+            streamId: e,
+            onReady: t ? null : this.handleReady
+        });
+    }
+    render() {
+        let {
+            mirror: e,
+            className: t
+        } = this.props;
+        return (0, i.jsxs)('div', {
+            className: s()(l.video, t, { [l.mirror]: e }),
+            onDoubleClick: this.handleDoubleClick,
+            onContextMenu: this.handleContextMenu,
+            children: [
+                this.renderVideo(this.state.aStreamId, this.state.aReady),
+                this.renderVideo(this.state.bStreamId, this.state.bReady)
+            ]
+        });
+    }
+    constructor(...e) {
+        super(...e), u(this, 'state', {
+            aStreamId: null,
+            aReady: !1,
+            bStreamId: this.props.streamId,
+            bReady: !0
+        }), u(this, 'handleReady', () => {
+            this.state.aReady ? this.setState({
+                bReady: !0,
+                aStreamId: null,
+                aReady: !1
+            }) : this.setState({
+                aReady: !0,
+                bStreamId: null,
+                bReady: !1
+            });
+        }), u(this, 'handleDoubleClick', e => {
+            let {
+                onDoubleClick: t,
+                id: n
+            } = this.props;
+            null == t || t(e, n);
+        }), u(this, 'handleContextMenu', e => {
+            let {
+                onContextMenu: t,
+                id: n
+            } = this.props;
+            null == t || t(e, n);
+        });
+    }
 }
-u(_, "defaultProps", {
-  paused: !0
-}), t.Z = _
+u(c, 'defaultProps', { paused: !0 }), t.Z = c;

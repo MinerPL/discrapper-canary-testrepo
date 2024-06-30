@@ -1,50 +1,35 @@
-"use strict";
-var r = n(566885),
-  i = n(926515),
-  a = n(24033),
-  o = n(938507),
-  s = n(908355),
-  u = n(49693),
-  c = n(838957),
-  l = n(981971),
-  d = n(11697),
-  f = n(776245),
-  p = TypeError,
-  h = function(e, t) {
-    this.stopped = e, this.result = t
-  },
-  m = h.prototype;
-e.exports = function(e, t, n) {
-  var g, _, b, v, y, E, S, x = n && n.that,
-    w = !!(n && n.AS_ENTRIES),
-    C = !!(n && n.IS_RECORD),
-    T = !!(n && n.IS_ITERATOR),
-    D = !!(n && n.INTERRUPTED),
-    M = r(t, x),
-    O = function(e) {
-      return g && f(g, "normal", e), new h(!0, e)
-    },
-    A = function(e) {
-      return w ? (a(e), D ? M(e[0], e[1], O) : M(e[0], e[1])) : D ? M(e, O) : M(e)
-    };
-  if (C) g = e.iterator;
-  else if (T) g = e;
-  else {
-    if (!(_ = d(e))) throw p(o(e) + " is not iterable");
-    if (s(_)) {
-      for (b = 0, v = u(e); v > b; b++)
-        if ((y = A(e[b])) && c(m, y)) return y;
-      return new h(!1)
+var r = n(566885), i = n(926515), a = n(24033), o = n(938507), s = n(908355), l = n(49693), u = n(838957), c = n(981971), d = n(11697), _ = n(776245), E = TypeError, f = function (e, t) {
+        this.stopped = e, this.result = t;
+    }, h = f.prototype;
+e.exports = function (e, t, n) {
+    var p, m, I, T, g, S, A, N = n && n.that, v = !!(n && n.AS_ENTRIES), O = !!(n && n.IS_RECORD), R = !!(n && n.IS_ITERATOR), C = !!(n && n.INTERRUPTED), y = r(t, N), D = function (e) {
+            return p && _(p, 'normal', e), new f(!0, e);
+        }, L = function (e) {
+            return v ? (a(e), C ? y(e[0], e[1], D) : y(e[0], e[1])) : C ? y(e, D) : y(e);
+        };
+    if (O)
+        p = e.iterator;
+    else if (R)
+        p = e;
+    else {
+        if (!(m = d(e)))
+            throw E(o(e) + ' is not iterable');
+        if (s(m)) {
+            for (I = 0, T = l(e); T > I; I++)
+                if ((g = L(e[I])) && u(h, g))
+                    return g;
+            return new f(!1);
+        }
+        p = c(e, m);
     }
-    g = l(e, _)
-  }
-  for (E = C ? e.next : g.next; !(S = i(E, g)).done;) {
-    try {
-      y = A(S.value)
-    } catch (e) {
-      f(g, "throw", e)
+    for (S = O ? e.next : p.next; !(A = i(S, p)).done;) {
+        try {
+            g = L(A.value);
+        } catch (e) {
+            _(p, 'throw', e);
+        }
+        if ('object' == typeof g && g && u(h, g))
+            return g;
     }
-    if ("object" == typeof y && y && c(m, y)) return y
-  }
-  return new h(!1)
-}
+    return new f(!1);
+};

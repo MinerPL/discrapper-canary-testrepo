@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  q: function() {
-    return i
-  }
-}), (r = i || (i = {})).ANIMATED_EMOJIS = "animatedEmojis", r.EMOJIS_EVERYWHERE = "emojisEverywhere", r.STICKERS_EVERYWHERE = "stickersEverywhere", r.SOUNDBOARD_EVERYWHERE = "soundboardEverywhere", r.ANIMATED_AVATAR = "animatedAvatar", r.CUSTOM_DISCRIMINATOR = "customDiscriminator", r.PREMIUM_GUILD_MEMBER_PROFILE = "premiumGuildMemberProfile", r.PROFILE_PREMIUM_FEATURES = "profilePremiumFeatures", r.STREAM_MID_QUALITY = "streamMidQuality", r.STREAM_HIGH_QUALITY = "streamHighQuality", r.VIDEO_FILTER_ASSETS = "videoFilterAssets", r.INCREASED_FILE_UPLOAD_SIZE = "increasedFileUploadSize", r.INCREASED_GUILD_LIMIT = "increasedGuildLimit", r.INCREASED_MESSAGE_LENGTH = "increasedMessageLength", r.NITRO_REACTION_TOGGLE = "nitroReactionToggle", r.CLIENT_THEMES = "clientThemes", r.PREMIUM_COLLECTIBLES = "premiumCollectibles", r.CUSTOM_CALL_SOUNDS = "customCallSounds", r.CUSTOM_NOTIFICATION_SOUNDS = "customNotificationSounds"
+    q: function () {
+        return r;
+    }
+}), (i = r || (r = {})).ANIMATED_EMOJIS = 'animatedEmojis', i.EMOJIS_EVERYWHERE = 'emojisEverywhere', i.STICKERS_EVERYWHERE = 'stickersEverywhere', i.SOUNDBOARD_EVERYWHERE = 'soundboardEverywhere', i.ANIMATED_AVATAR = 'animatedAvatar', i.CUSTOM_DISCRIMINATOR = 'customDiscriminator', i.PREMIUM_GUILD_MEMBER_PROFILE = 'premiumGuildMemberProfile', i.PROFILE_PREMIUM_FEATURES = 'profilePremiumFeatures', i.STREAM_MID_QUALITY = 'streamMidQuality', i.STREAM_HIGH_QUALITY = 'streamHighQuality', i.VIDEO_FILTER_ASSETS = 'videoFilterAssets', i.INCREASED_FILE_UPLOAD_SIZE = 'increasedFileUploadSize', i.INCREASED_GUILD_LIMIT = 'increasedGuildLimit', i.INCREASED_MESSAGE_LENGTH = 'increasedMessageLength', i.NITRO_REACTION_TOGGLE = 'nitroReactionToggle', i.CLIENT_THEMES = 'clientThemes', i.PREMIUM_COLLECTIBLES = 'premiumCollectibles', i.CUSTOM_CALL_SOUNDS = 'customCallSounds', i.CUSTOM_NOTIFICATION_SOUNDS = 'customNotificationSounds';

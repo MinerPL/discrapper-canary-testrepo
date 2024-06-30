@@ -1,10 +1,7 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return r;
+    }
 });
 var r = {};
-r = {
-  breadcrumbs: `S\xf6kv\xe4gar`
-}
+r = { breadcrumbs: `S\xf6kv\xe4gar` };

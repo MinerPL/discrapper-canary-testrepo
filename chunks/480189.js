@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  e: function() {
-    return i
-  }
-}), (r = i || (i = {}))[r.DEFAULT = 0] = "DEFAULT", r[r.OUT_OF_PROCESS = 1] = "OUT_OF_PROCESS"
+    e: function () {
+        return r;
+    }
+}), (i = r || (r = {}))[i.DEFAULT = 0] = 'DEFAULT', i[i.OUT_OF_PROCESS = 1] = 'OUT_OF_PROCESS';

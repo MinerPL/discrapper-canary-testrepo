@@ -1,13 +1,12 @@
-"use strict";
 n.d(t, {
-  Q: function() {
-    return r
-  }
+    Q: function () {
+        return i;
+    }
 });
-var i = n(981631);
-
-function r(e) {
-  if (null == e) return;
-  let t = i.AlD.get(e);
-  return null != t ? "theme-".concat(t, " theme-").concat(e) : "theme-".concat(e)
+var r = n(981631);
+function i(e) {
+    if (null == e)
+        return;
+    let t = r.AlD.get(e);
+    return null != t ? 'theme-'.concat(t, ' theme-').concat(e) : 'theme-'.concat(e);
 }

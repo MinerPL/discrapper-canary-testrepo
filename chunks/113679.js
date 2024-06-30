@@ -1,48 +1,42 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return _
-  }
-}), t(47120);
-var n = t(735250),
-  i = t(470079),
-  l = t(399606),
-  a = t(481060),
-  r = t(279542),
-  o = t(496675),
-  c = t(140031),
-  d = t(981631),
-  u = t(689938),
-  E = t(740637);
-
-function _(e) {
-  let {
-    guild: s
-  } = e, t = i.useId(), _ = (0, l.e7)([o.Z], () => null != s && o.Z.can(d.Plq.MANAGE_GUILD, s), [s]), I = s.hasFeature(d.oNc.COMMUNITY), [T, N] = i.useState(s.hasFeature(d.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)), m = i.useCallback(async e => {
-    N(e), await (0, r.fp)(s, e)
-  }, [s]);
-  return I ? null : (0, n.jsxs)("div", {
-    className: E.bannerContainer,
-    children: [(0, n.jsx)(c.Z, {
-      width: 64,
-      height: 64
-    }), (0, n.jsxs)("div", {
-      className: E.headingContainer,
-      children: [(0, n.jsx)(a.Heading, {
-        variant: "heading-lg/semibold",
-        children: u.Z.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE
-      }), (0, n.jsx)(a.Text, {
-        variant: "text-sm/medium",
-        children: u.Z.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE_DESCRIPTION
-      })]
-    }), (0, n.jsx)("div", {
-      className: E.buttonContainer,
-      children: (0, n.jsx)(a.Switch, {
-        id: t,
-        checked: T,
-        onChange: m,
-        disabled: !_
-      })
-    })]
-  })
+n.d(t, {
+    Z: function () {
+        return E;
+    }
+}), n(47120);
+var s = n(735250), a = n(470079), i = n(399606), r = n(481060), l = n(279542), o = n(496675), c = n(140031), d = n(981631), u = n(689938), _ = n(374834);
+function E(e) {
+    let {guild: t} = e, n = a.useId(), E = (0, i.e7)([o.Z], () => null != t && o.Z.can(d.Plq.MANAGE_GUILD, t), [t]), I = t.hasFeature(d.oNc.COMMUNITY), [T, m] = a.useState(t.hasFeature(d.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)), N = a.useCallback(async e => {
+            m(e), await (0, l.fp)(t, e);
+        }, [t]);
+    return I ? null : (0, s.jsxs)('div', {
+        className: _.bannerContainer,
+        children: [
+            (0, s.jsx)(c.Z, {
+                width: 64,
+                height: 64
+            }),
+            (0, s.jsxs)('div', {
+                className: _.headingContainer,
+                children: [
+                    (0, s.jsx)(r.Heading, {
+                        variant: 'heading-lg/semibold',
+                        children: u.Z.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE
+                    }),
+                    (0, s.jsx)(r.Text, {
+                        variant: 'text-sm/medium',
+                        children: u.Z.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE_DESCRIPTION
+                    })
+                ]
+            }),
+            (0, s.jsx)('div', {
+                className: _.buttonContainer,
+                children: (0, s.jsx)(r.Switch, {
+                    id: n,
+                    checked: T,
+                    onChange: N,
+                    disabled: !E
+                })
+            })
+        ]
+    });
 }

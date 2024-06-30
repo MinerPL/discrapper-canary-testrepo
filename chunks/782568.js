@@ -1,21 +1,20 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return i;
+    }
 });
-var i = n(358085);
-async function r(e, t) {
-  let {
-    default: r
-  } = await Promise.resolve().then(n.bind(n, 315263)), s = r(e, {
-    skipExtensionCheck: t,
-    analyticsLocations: []
-  });
-  if (null != s) s(null);
-  else if (i.isPlatformEmbedded) window.open(e);
-  else {
-    let t = document.createElement("a");
-    t.href = e, t.target = "_blank", t.rel = "noreferrer noopener", t.click()
-  }
+var r = n(358085);
+async function i(e, t) {
+    let {default: i} = await Promise.resolve().then(n.bind(n, 315263)), a = i(e, {
+            skipExtensionCheck: t,
+            analyticsLocations: []
+        });
+    if (null != a)
+        a(null);
+    else if (r.isPlatformEmbedded)
+        window.open(e);
+    else {
+        let t = document.createElement('a');
+        t.href = e, t.target = '_blank', t.rel = 'noreferrer noopener', t.click();
+    }
 }

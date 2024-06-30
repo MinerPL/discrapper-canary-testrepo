@@ -1,14 +1,12 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return a;
+    }
 }), n(47120);
-var i = n(280098),
-  r = n(37113);
-
-function s(e, t, n, s, o) {
-  for (let a of r.ND)
-    if ((null == a.preset || e === a.preset) && t === a.resolution && n === a.fps && (0, i.Z)(a, s, o)) return !0;
-  return !1
+var r = n(280098), i = n(37113);
+function a(e, t, n, a, o) {
+    for (let s of i.ND)
+        if ((null == s.preset || e === s.preset) && t === s.resolution && n === s.fps && (0, r.Z)(s, a, o))
+            return !0;
+    return !1;
 }

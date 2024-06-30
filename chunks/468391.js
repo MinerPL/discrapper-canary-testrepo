@@ -1,17 +1,14 @@
-"use strict";
-
-function r() {
-  return "undefined" != typeof __SENTRY_BROWSER_BUNDLE__ && !!__SENTRY_BROWSER_BUNDLE__
+function n() {
+    return 'undefined' != typeof __SENTRY_BROWSER_BUNDLE__ && !!__SENTRY_BROWSER_BUNDLE__;
 }
-
-function i() {
-  return "npm"
+function _() {
+    return 'npm';
 }
-n.d(e, {
-  S: function() {
-    return i
-  },
-  n: function() {
-    return r
-  }
-})
+r.d(e, {
+    S: function () {
+        return _;
+    },
+    n: function () {
+        return n;
+    }
+});

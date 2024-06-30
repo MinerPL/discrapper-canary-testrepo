@@ -1,8 +1,7 @@
-"use strict";
-let i;
+let r;
 n.d(t, {
-  x: function() {
-    return i
-  }
+    x: function () {
+        return r;
+    }
 });
-i = n(701117).y
+r = n(701117).y;

@@ -1,70 +1,83 @@
-"use strict";
-e.exports = function(e, t) {
-  var n, r, i, a, o, s, u, c, l, d, f, p, h, m, g, _, b, v, y, E, S, x, w, C, T;
-  n = e.state, r = e.next_in, C = e.input, i = r + (e.avail_in - 5), a = e.next_out, T = e.output, o = a - (t - e.avail_out), s = a + (e.avail_out - 257), u = n.dmax, c = n.wsize, l = n.whave, d = n.wnext, f = n.window, p = n.hold, h = n.bits, m = n.lencode, g = n.distcode, _ = (1 << n.lenbits) - 1, b = (1 << n.distbits) - 1;
-  t: do
-      for (h < 15 && (p += C[r++] << h, h += 8, p += C[r++] << h, h += 8), v = m[p & _];;) {
-        if (p >>>= y = v >>> 24, h -= y, 0 == (y = v >>> 16 & 255)) T[a++] = 65535 & v;
-        else if (16 & y)
-          for (E = 65535 & v, (y &= 15) && (h < y && (p += C[r++] << h, h += 8), E += p & (1 << y) - 1, p >>>= y, h -= y), h < 15 && (p += C[r++] << h, h += 8, p += C[r++] << h, h += 8), v = g[p & b];;) {
-            if (p >>>= y = v >>> 24, h -= y, 16 & (y = v >>> 16 & 255)) {
-              if (S = 65535 & v, h < (y &= 15) && (p += C[r++] << h, (h += 8) < y && (p += C[r++] << h, h += 8)), (S += p & (1 << y) - 1) > u) {
-                e.msg = "invalid distance too far back", n.mode = 30;
-                break t
-              }
-              if (p >>>= y, h -= y, S > (y = a - o)) {
-                if ((y = S - y) > l && n.sane) {
-                  e.msg = "invalid distance too far back", n.mode = 30;
-                  break t
-                }
-                if (x = 0, w = f, 0 === d) {
-                  if (x += c - y, y < E) {
-                    E -= y;
-                    do T[a++] = f[x++]; while (--y);
-                    x = a - S, w = T
-                  }
-                } else if (d < y) {
-                  if (x += c + d - y, (y -= d) < E) {
-                    E -= y;
-                    do T[a++] = f[x++]; while (--y);
-                    if (x = 0, d < E) {
-                      E -= y = d;
-                      do T[a++] = f[x++]; while (--y);
-                      x = a - S, w = T
+e.exports = function (e, t) {
+    var n, r, i, a, o, s, l, u, c, d, _, E, f, h, p, m, I, T, g, S, A, N, v, O, R;
+    n = e.state, r = e.next_in, O = e.input, i = r + (e.avail_in - 5), a = e.next_out, R = e.output, o = a - (t - e.avail_out), s = a + (e.avail_out - 257), l = n.dmax, u = n.wsize, c = n.whave, d = n.wnext, _ = n.window, E = n.hold, f = n.bits, h = n.lencode, p = n.distcode, m = (1 << n.lenbits) - 1, I = (1 << n.distbits) - 1;
+    n:
+        do
+            for (f < 15 && (E += O[r++] << f, f += 8, E += O[r++] << f, f += 8), T = h[E & m];;) {
+                if (E >>>= g = T >>> 24, f -= g, 0 == (g = T >>> 16 & 255))
+                    R[a++] = 65535 & T;
+                else if (16 & g)
+                    for (S = 65535 & T, (g &= 15) && (f < g && (E += O[r++] << f, f += 8), S += E & (1 << g) - 1, E >>>= g, f -= g), f < 15 && (E += O[r++] << f, f += 8, E += O[r++] << f, f += 8), T = p[E & I];;) {
+                        if (E >>>= g = T >>> 24, f -= g, 16 & (g = T >>> 16 & 255)) {
+                            if (A = 65535 & T, f < (g &= 15) && (E += O[r++] << f, (f += 8) < g && (E += O[r++] << f, f += 8)), (A += E & (1 << g) - 1) > l) {
+                                e.msg = 'invalid distance too far back', n.mode = 30;
+                                break n;
+                            }
+                            if (E >>>= g, f -= g, A > (g = a - o)) {
+                                if ((g = A - g) > c && n.sane) {
+                                    e.msg = 'invalid distance too far back', n.mode = 30;
+                                    break n;
+                                }
+                                if (N = 0, v = _, 0 === d) {
+                                    if (N += u - g, g < S) {
+                                        S -= g;
+                                        do
+                                            R[a++] = _[N++];
+                                        while (--g);
+                                        N = a - A, v = R;
+                                    }
+                                } else if (d < g) {
+                                    if (N += u + d - g, (g -= d) < S) {
+                                        S -= g;
+                                        do
+                                            R[a++] = _[N++];
+                                        while (--g);
+                                        if (N = 0, d < S) {
+                                            S -= g = d;
+                                            do
+                                                R[a++] = _[N++];
+                                            while (--g);
+                                            N = a - A, v = R;
+                                        }
+                                    }
+                                } else if (N += d - g, g < S) {
+                                    S -= g;
+                                    do
+                                        R[a++] = _[N++];
+                                    while (--g);
+                                    N = a - A, v = R;
+                                }
+                                for (; S > 2;)
+                                    R[a++] = v[N++], R[a++] = v[N++], R[a++] = v[N++], S -= 3;
+                                S && (R[a++] = v[N++], S > 1 && (R[a++] = v[N++]));
+                            } else {
+                                N = a - A;
+                                do
+                                    R[a++] = R[N++], R[a++] = R[N++], R[a++] = R[N++], S -= 3;
+                                while (S > 2);
+                                S && (R[a++] = R[N++], S > 1 && (R[a++] = R[N++]));
+                            }
+                        } else if ((64 & g) == 0) {
+                            T = p[(65535 & T) + (E & (1 << g) - 1)];
+                            continue;
+                        } else {
+                            e.msg = 'invalid distance code', n.mode = 30;
+                            break n;
+                        }
+                        break;
                     }
-                  }
-                } else if (x += d - y, y < E) {
-                  E -= y;
-                  do T[a++] = f[x++]; while (--y);
-                  x = a - S, w = T
+                else if ((64 & g) == 0) {
+                    T = h[(65535 & T) + (E & (1 << g) - 1)];
+                    continue;
+                } else if (32 & g) {
+                    n.mode = 12;
+                    break n;
+                } else {
+                    e.msg = 'invalid literal/length code', n.mode = 30;
+                    break n;
                 }
-                for (; E > 2;) T[a++] = w[x++], T[a++] = w[x++], T[a++] = w[x++], E -= 3;
-                E && (T[a++] = w[x++], E > 1 && (T[a++] = w[x++]))
-              } else {
-                x = a - S;
-                do T[a++] = T[x++], T[a++] = T[x++], T[a++] = T[x++], E -= 3; while (E > 2);
-                E && (T[a++] = T[x++], E > 1 && (T[a++] = T[x++]))
-              }
-            } else if ((64 & y) == 0) {
-              v = g[(65535 & v) + (p & (1 << y) - 1)];
-              continue
-            } else {
-              e.msg = "invalid distance code", n.mode = 30;
-              break t
+                break;
             }
-            break
-          } else if ((64 & y) == 0) {
-            v = m[(65535 & v) + (p & (1 << y) - 1)];
-            continue
-          } else if (32 & y) {
-          n.mode = 12;
-          break t
-        } else {
-          e.msg = "invalid literal/length code", n.mode = 30;
-          break t
-        }
-        break
-      }
-    while (r < i && a < s);
-  r -= E = h >> 3, h -= E << 3, p &= (1 << h) - 1, e.next_in = r, e.next_out = a, e.avail_in = r < i ? 5 + (i - r) : 5 - (r - i), e.avail_out = a < s ? 257 + (s - a) : 257 - (a - s), n.hold = p, n.bits = h
-}
+        while (r < i && a < s);
+    r -= S = f >> 3, f -= S << 3, E &= (1 << f) - 1, e.next_in = r, e.next_out = a, e.avail_in = r < i ? 5 + (i - r) : 5 - (r - i), e.avail_out = a < s ? 257 + (s - a) : 257 - (a - s), n.hold = E, n.bits = f;
+};

@@ -1,36 +1,30 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return a
-  }
+    Z: function () {
+        return s;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(302454),
-  s = n.n(r),
-  o = n(481060);
-
-function a(e) {
-  return e.paragraph = {
-    ...e.paragraph,
-    react: function(e, t, n) {
-      return (0, i.jsx)("p", {
-        children: t(e.content, n)
-      }, n.key)
-    }
-  }, e.link = {
-    ...e.link,
-    react: function(e, t, n) {
-      let r = {};
-      if (null != e.context) {
-        let t = e.context[e.target];
-        t && t.onClick ? (r.onClick = t.onClick, r.onContextMenu = t.onContextMenu) : r.onClick = t
-      }
-      return null == r.onClick && (r.href = s().sanitizeUrl(e.target)), (0, i.jsx)(o.Anchor, {
-        title: e.title,
-        ...r,
-        children: t(e.content, n)
-      }, n.key)
-    }
-  }, e
+var i = n(302454), a = n.n(i), o = n(481060);
+function s(e) {
+    return e.paragraph = {
+        ...e.paragraph,
+        react: function (e, t, n) {
+            return (0, r.jsx)('p', { children: t(e.content, n) }, n.key);
+        }
+    }, e.link = {
+        ...e.link,
+        react: function (e, t, n) {
+            let i = {};
+            if (null != e.context) {
+                let t = e.context[e.target];
+                t && t.onClick ? (i.onClick = t.onClick, i.onContextMenu = t.onContextMenu) : i.onClick = t;
+            }
+            return null == i.onClick && (i.href = a().sanitizeUrl(e.target)), (0, r.jsx)(o.Anchor, {
+                title: e.title,
+                ...i,
+                children: t(e.content, n)
+            }, n.key);
+        }
+    }, e;
 }

@@ -1,196 +1,179 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return L
-  }
+    Z: function () {
+        return C;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(442837),
-  l = n(481060),
-  u = n(355467),
-  _ = n(100527),
-  d = n(906732),
-  c = n(678558),
-  E = n(626135),
-  I = n(74538),
-  T = n(357355),
-  h = n(104494),
-  S = n(639119),
-  f = n(165583),
-  N = n(197115),
-  A = n(302945),
-  m = n(631771),
-  O = n(474936),
-  R = n(981631),
-  C = n(689938),
-  p = n(991566),
-  g = n(769860);
-
-function L(e) {
-  var t, n, s;
-  let {
-    title: L,
-    type: v,
-    guildBoostProps: D,
-    analyticsSource: M,
-    analyticsLocation: P,
-    body: y,
-    context: U,
-    glowUp: b,
-    modalClassName: G,
-    artContainerClassName: w,
-    headerClassName: k,
-    bodyClassName: B,
-    transitionState: x,
-    onClose: V,
-    onSubscribeClick: Z,
-    onSecondaryClick: H,
-    secondaryCTA: F,
-    subscribeButtonText: Y,
-    showNewBadge: j = !1,
-    enableArtBoxShadow: W = !0,
-    subscriptionTier: K = O.Si.TIER_2,
-    isLoading: z = !1,
-    hideBackButton: q,
-    backButtonText: X,
-    showEnhancedUpsell: Q,
-    children: J,
-    ...$
-  } = e, ee = null != D, et = (0, S.N)(), en = (0, h.Ng)(), ei = ((null == et ? void 0 : null === (t = et.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === K || (0, h.Wp)(en, K)) && !ee, {
-    analyticsLocations: er
-  } = (0, d.ZP)(_.Z.PREMIUM_UPSELL_MODAL);
-  r.useEffect(() => {
-    !z && (ee ? E.default.track(R.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
-      type: "".concat(v, " - Tier ").concat(D.boostedGuildTier),
-      guild_id: D.guild.id,
-      channel_id: D.channelId,
-      location: P,
-      location_stack: er
-    }) : E.default.track(R.rMx.PREMIUM_UPSELL_VIEWED, {
-      type: v,
-      source: M,
-      location: P,
-      location_stack: er,
-      sku_id: (0, I.Wz)(K)
-    }))
-  }, [ee, K, z]);
-  let es = (0, a.e7)([T.Z], () => T.Z.affinities),
-    eo = es.length > 1 && (0, m.YN)(v),
-    ea = (0, a.e7)([T.Z], () => T.Z.hasFetched);
-  r.useEffect(() => {
-    !ea && u.MH()
-  }, [ea]);
-  let el = W ? o()(p.artContainer, p.artContainerBoxShadow, w) : o()(p.artContainer, w),
-    eu = null;
-  return eu = "artURL" in $ ? (0, i.jsx)("img", {
-    className: p.art,
-    alt: "",
-    src: $.artURL
-  }) : $.artElement, (0, i.jsxs)(l.ModalRoot, {
-    className: o()(p.root, G),
-    "aria-label": L,
-    transitionState: x,
-    children: [(0, i.jsxs)("div", {
-      className: el,
-      children: [eu, j ? (0, i.jsx)("img", {
-        className: p.sparkleBadge,
-        alt: "",
-        src: g
-      }) : null]
-    }), Q ? (0, i.jsx)(l.ModalCloseButton, {
-      onClick: V,
-      className: p.closeButton
-    }) : null, (0, i.jsx)(l.ModalContent, {
-      scrollbarType: "none",
-      className: Q ? p.enhancedContent : p.content,
-      children: z ? (0, i.jsx)(l.Spinner, {}) : (0, i.jsx)(i.Fragment, {
-        children: ei ? (0, i.jsx)(i.Fragment, {
-          children: (0, i.jsx)(f.ZP, {
-            onClose: V,
-            type: v,
-            subscriptionTier: null !== (s = null == et ? void 0 : null === (n = et.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== s ? s : O.Si.TIER_2,
-            headingText: L,
-            context: U,
-            analyticsLocationObject: P,
-            discountOffer: en,
-            trialOffer: et,
-            children: b
-          })
-        }) : (0, i.jsxs)(i.Fragment, {
-          children: [(0, i.jsx)(l.Heading, {
-            className: o()(p.header, {
-              [p.enhancedHeader]: Q
-            }, k),
-            variant: "heading-xl/bold",
-            children: L
-          }), eo ? (0, i.jsx)(A.Z, {
-            affinities: es
-          }) : void 0, J, (0, i.jsx)(l.Text, {
-            variant: "text-md/normal",
-            className: o()(B, p.subHeader),
-            children: y
-          })]
-        })
-      })
-    }), (0, i.jsxs)(l.ModalFooter, {
-      className: o()(p.footer, {
-        [p.enhancedFooter]: Q
-      }),
-      children: [(0, i.jsxs)("div", {
-        className: o()(p.primaryActions, {
-          [p.enhancedPrimaryActions]: Q
-        }),
-        children: [null != F ? (0, i.jsx)(l.Button, {
-          className: o()(p.secondaryAction, {
-            [p.enhancedSecondaryAction]: Q
-          }),
-          onClick: H,
-          size: l.Button.Sizes.SMALL,
-          color: Q ? l.Button.Colors.CUSTOM : l.Button.Colors.PRIMARY,
-          look: l.Button.Looks.LINK,
-          children: F
-        }) : null, (() => {
-          let e;
-          if (ee) return (0, i.jsx)(c.Z, {
-            analyticsLocation: P,
-            guild: D.guild,
-            onClose: V
-          });
-          let t = Q ? C.Z.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
-          if (ei) {
-            if (null != et) {
-              var n, r;
-              t = (0, I.Rt)({
-                intervalType: null == et ? void 0 : null === (n = et.subscription_trial) || void 0 === n ? void 0 : n.interval,
-                intervalCount: null == et ? void 0 : null === (r = et.subscription_trial) || void 0 === r ? void 0 : r.interval_count
-              }), e = null == et ? void 0 : et.trial_id
-            } else null != en && (t = C.Z.Messages.PREMIUM_DISCOUNT_CTA.format({
-              percent: en.discount.amount
-            }))
-          }
-          return (0, i.jsx)(N.Z, {
-            showGradient: Q,
-            premiumModalAnalyticsLocation: P,
-            subscriptionTier: K,
-            trialId: e,
-            size: l.Button.Sizes.SMALL,
-            color: Q ? l.Button.Colors.CUSTOM : l.Button.Colors.GREEN,
-            onClick: () => {
-              null == Z || Z(), V()
-            },
-            buttonText: null != Y ? Y : t
-          })
-        })()]
-      }), !q && !Q && (0, i.jsx)(l.Button, {
-        onClick: V,
-        size: l.Button.Sizes.SMALL,
-        color: l.Button.Colors.PRIMARY,
-        look: l.Button.Looks.LINK,
-        children: null != X ? X : C.Z.Messages.BACK
-      })]
-    })]
-  })
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(442837), l = n(481060), u = n(355467), c = n(100527), d = n(906732), _ = n(678558), E = n(626135), f = n(74538), h = n(357355), p = n(104494), m = n(639119), I = n(165583), T = n(197115), g = n(302945), S = n(631771), A = n(474936), N = n(981631), v = n(689938), O = n(935777), R = n(769860);
+function C(e) {
+    var t, n, a;
+    let {
+            title: C,
+            type: y,
+            guildBoostProps: D,
+            analyticsSource: L,
+            analyticsLocation: b,
+            body: M,
+            context: P,
+            glowUp: U,
+            modalClassName: w,
+            artContainerClassName: x,
+            headerClassName: G,
+            bodyClassName: k,
+            transitionState: B,
+            onClose: F,
+            onSubscribeClick: V,
+            onSecondaryClick: H,
+            secondaryCTA: Z,
+            subscribeButtonText: Y,
+            showNewBadge: j = !1,
+            enableArtBoxShadow: W = !0,
+            subscriptionTier: K = A.Si.TIER_2,
+            isLoading: z = !1,
+            hideBackButton: q,
+            backButtonText: Q,
+            showEnhancedUpsell: X,
+            children: $,
+            ...J
+        } = e, ee = null != D, et = (0, m.N)(), en = (0, p.Ng)(), er = ((null == et ? void 0 : null === (t = et.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === K || (0, p.Wp)(en, K)) && !ee, {analyticsLocations: ei} = (0, d.ZP)(c.Z.PREMIUM_UPSELL_MODAL);
+    i.useEffect(() => {
+        !z && (ee ? E.default.track(N.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
+            type: ''.concat(y, ' - Tier ').concat(D.boostedGuildTier),
+            guild_id: D.guild.id,
+            channel_id: D.channelId,
+            location: b,
+            location_stack: ei
+        }) : E.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
+            type: y,
+            source: L,
+            location: b,
+            location_stack: ei,
+            sku_id: (0, f.Wz)(K)
+        }));
+    }, [
+        ee,
+        K,
+        z
+    ]);
+    let ea = (0, s.e7)([h.Z], () => h.Z.affinities), eo = ea.length > 1 && (0, S.YN)(y), es = (0, s.e7)([h.Z], () => h.Z.hasFetched);
+    i.useEffect(() => {
+        !es && u.MH();
+    }, [es]);
+    let el = W ? o()(O.artContainer, O.artContainerBoxShadow, x) : o()(O.artContainer, x), eu = null;
+    return eu = 'artURL' in J ? (0, r.jsx)('img', {
+        className: O.art,
+        alt: '',
+        src: J.artURL
+    }) : J.artElement, (0, r.jsxs)(l.ModalRoot, {
+        className: o()(O.root, w),
+        'aria-label': C,
+        transitionState: B,
+        children: [
+            (0, r.jsxs)('div', {
+                className: el,
+                children: [
+                    eu,
+                    j ? (0, r.jsx)('img', {
+                        className: O.sparkleBadge,
+                        alt: '',
+                        src: R
+                    }) : null
+                ]
+            }),
+            X ? (0, r.jsx)(l.ModalCloseButton, {
+                onClick: F,
+                className: O.closeButton
+            }) : null,
+            (0, r.jsx)(l.ModalContent, {
+                scrollbarType: 'none',
+                className: X ? O.enhancedContent : O.content,
+                children: z ? (0, r.jsx)(l.Spinner, {}) : (0, r.jsx)(r.Fragment, {
+                    children: er ? (0, r.jsx)(r.Fragment, {
+                        children: (0, r.jsx)(I.ZP, {
+                            onClose: F,
+                            type: y,
+                            subscriptionTier: null !== (a = null == et ? void 0 : null === (n = et.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : A.Si.TIER_2,
+                            headingText: C,
+                            context: P,
+                            analyticsLocationObject: b,
+                            discountOffer: en,
+                            trialOffer: et,
+                            children: U
+                        })
+                    }) : (0, r.jsxs)(r.Fragment, {
+                        children: [
+                            (0, r.jsx)(l.Heading, {
+                                className: o()(O.header, { [O.enhancedHeader]: X }, G),
+                                variant: 'heading-xl/bold',
+                                children: C
+                            }),
+                            eo ? (0, r.jsx)(g.Z, { affinities: ea }) : void 0,
+                            $,
+                            (0, r.jsx)(l.Text, {
+                                variant: 'text-md/normal',
+                                className: o()(k, O.subHeader),
+                                children: M
+                            })
+                        ]
+                    })
+                })
+            }),
+            (0, r.jsxs)(l.ModalFooter, {
+                className: o()(O.footer, { [O.enhancedFooter]: X }),
+                children: [
+                    (0, r.jsxs)('div', {
+                        className: o()(O.primaryActions, { [O.enhancedPrimaryActions]: X }),
+                        children: [
+                            null != Z ? (0, r.jsx)(l.Button, {
+                                className: o()(O.secondaryAction, { [O.enhancedSecondaryAction]: X }),
+                                onClick: H,
+                                size: l.Button.Sizes.SMALL,
+                                color: X ? l.Button.Colors.CUSTOM : l.Button.Colors.PRIMARY,
+                                look: l.Button.Looks.LINK,
+                                children: Z
+                            }) : null,
+                            (() => {
+                                let e;
+                                if (ee)
+                                    return (0, r.jsx)(_.Z, {
+                                        analyticsLocation: b,
+                                        guild: D.guild,
+                                        onClose: F
+                                    });
+                                let t = X ? v.Z.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
+                                if (er) {
+                                    if (null != et) {
+                                        var n, i;
+                                        t = (0, f.Rt)({
+                                            intervalType: null == et ? void 0 : null === (n = et.subscription_trial) || void 0 === n ? void 0 : n.interval,
+                                            intervalCount: null == et ? void 0 : null === (i = et.subscription_trial) || void 0 === i ? void 0 : i.interval_count
+                                        }), e = null == et ? void 0 : et.trial_id;
+                                    } else
+                                        null != en && (t = v.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: en.discount.amount }));
+                                }
+                                return (0, r.jsx)(T.Z, {
+                                    showGradient: X,
+                                    premiumModalAnalyticsLocation: b,
+                                    subscriptionTier: K,
+                                    trialId: e,
+                                    size: l.Button.Sizes.SMALL,
+                                    color: X ? l.Button.Colors.CUSTOM : l.Button.Colors.GREEN,
+                                    onClick: () => {
+                                        null == V || V(), F();
+                                    },
+                                    buttonText: null != Y ? Y : t
+                                });
+                            })()
+                        ]
+                    }),
+                    !q && !X && (0, r.jsx)(l.Button, {
+                        onClick: F,
+                        size: l.Button.Sizes.SMALL,
+                        color: l.Button.Colors.PRIMARY,
+                        look: l.Button.Looks.LINK,
+                        children: null != Q ? Q : v.Z.Messages.BACK
+                    })
+                ]
+            })
+        ]
+    });
 }

@@ -1,35 +1,34 @@
-"use strict";
 n.d(t, {
-  KR: function() {
-    return a
-  },
-  p8: function() {
-    return o
-  },
-  sJ: function() {
-    return l
-  }
+    KR: function () {
+        return s;
+    },
+    p8: function () {
+        return o;
+    },
+    sJ: function () {
+        return l;
+    }
 });
-var i = n(470079),
-  r = n(652874);
-let s = Object.freeze({
-    id: null,
-    activeDescendant: null
-  }),
-  o = (0, r.Z)(() => s);
-
-function a(e, t, n) {
-  (0, i.useEffect)(() => {
-    t ? o.setState({
-      id: e,
-      activeDescendant: n
-    }) : o.setState({
-      id: null,
-      activeDescendant: null
-    })
-  }, [e, t, n])
+var r = n(470079), i = n(652874);
+let a = Object.freeze({
+        id: null,
+        activeDescendant: null
+    }), o = (0, i.Z)(() => a);
+function s(e, t, n) {
+    (0, r.useEffect)(() => {
+        t ? o.setState({
+            id: e,
+            activeDescendant: n
+        }) : o.setState({
+            id: null,
+            activeDescendant: null
+        });
+    }, [
+        e,
+        t,
+        n
+    ]);
 }
-
 function l() {
-  o.setState(() => s)
+    o.setState(() => a);
 }

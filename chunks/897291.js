@@ -1,57 +1,41 @@
-"use strict";
-var i = n(735250),
-  r = n(470079),
-  s = n(996146),
-  o = n(481060),
-  a = n(100527),
-  l = n(906732),
-  u = n(963249),
-  _ = n(147915),
-  d = n(51144),
-  c = n(981631),
-  E = n(474936),
-  I = n(689938),
-  T = n(838329);
-t.Z = r.memo(function(e) {
-  let {
-    disabled: t,
-    channel: n
-  } = e, {
-    analyticsLocations: r
-  } = (0, l.ZP)(a.Z.GIFT_BUTTON), h = (0, d.Ft)(n), {
-    Component: S,
-    events: f,
-    play: N
-  } = (0, s.$)();
-  if (t) return null;
-  let A = () => (0, u.Z)({
-    isGift: !0,
-    giftRecipient: null === h ? void 0 : h,
-    initialPlanId: null,
-    subscriptionTier: E.Si.TIER_2,
-    analyticsLocations: r,
-    analyticsObject: {
-      page: n.isPrivate() ? c.ZY5.DM_CHANNEL : c.ZY5.GUILD_CHANNEL,
-      section: c.jXE.CHANNEL_TEXT_AREA,
-      object: c.qAy.BUTTON_ICON,
-      objectType: c.Qqv.GIFT
-    }
-  });
-  return (0, i.jsx)(o.Tooltip, {
-    text: I.Z.Messages.PREMIUM_GIFT_BUTTON_TOOLTIP,
-    children: e => (0, i.jsx)(_.Z, {
-      ...e,
-      innerClassName: T.button,
-      isActive: !1,
-      "aria-label": I.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
-      "aria-haspopup": "dialog",
-      onClick: () => {
-        A(), N()
-      },
-      ...f,
-      children: (0, i.jsx)(S, {
-        color: "currentColor"
-      })
-    })
-  })
-})
+var r = n(735250), i = n(470079), a = n(996146), o = n(481060), s = n(100527), l = n(906732), u = n(963249), c = n(147915), d = n(51144), _ = n(981631), E = n(474936), f = n(689938), h = n(573809);
+t.Z = i.memo(function (e) {
+    let {
+            disabled: t,
+            channel: n
+        } = e, {analyticsLocations: i} = (0, l.ZP)(s.Z.GIFT_BUTTON), p = (0, d.Ft)(n), {
+            Component: m,
+            events: I,
+            play: T
+        } = (0, a.$)();
+    if (t)
+        return null;
+    let g = () => (0, u.Z)({
+        isGift: !0,
+        giftRecipient: null === p ? void 0 : p,
+        initialPlanId: null,
+        subscriptionTier: E.Si.TIER_2,
+        analyticsLocations: i,
+        analyticsObject: {
+            page: n.isPrivate() ? _.ZY5.DM_CHANNEL : _.ZY5.GUILD_CHANNEL,
+            section: _.jXE.CHANNEL_TEXT_AREA,
+            object: _.qAy.BUTTON_ICON,
+            objectType: _.Qqv.GIFT
+        }
+    });
+    return (0, r.jsx)(o.Tooltip, {
+        text: f.Z.Messages.PREMIUM_GIFT_BUTTON_TOOLTIP,
+        children: e => (0, r.jsx)(c.Z, {
+            ...e,
+            innerClassName: h.button,
+            isActive: !1,
+            'aria-label': f.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
+            'aria-haspopup': 'dialog',
+            onClick: () => {
+                g(), T();
+            },
+            ...I,
+            children: (0, r.jsx)(m, { color: 'currentColor' })
+        })
+    });
+});

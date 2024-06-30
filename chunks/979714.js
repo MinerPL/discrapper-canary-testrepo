@@ -1,10 +1,8 @@
-"use strict";
 n.d(t, {
-  PD: function() {
-    return i
-  }
+    PD: function () {
+        return i;
+    }
 });
-var r = n(367646),
-  i = function(e, t, n) {
-    return new r.z(e, t, n)
-  }
+var r = n(367646), i = function (e, t, n) {
+        return new r.z(e, t, n);
+    };

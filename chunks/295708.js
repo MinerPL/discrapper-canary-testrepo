@@ -1,43 +1,37 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return u
-  }
-}), t(47120);
-var n = t(735250),
-  i = t(470079),
-  l = t(481060),
-  a = t(273504),
-  r = t(981631),
-  o = t(689938),
-  c = t(407483),
-  d = t(139123);
-
+n.d(t, {
+    Z: function () {
+        return u;
+    }
+}), n(47120);
+var s = n(735250), a = n(470079), i = n(481060), r = n(273504), l = n(981631), o = n(689938), c = n(946363), d = n(489847);
 function u(e) {
-  let {
-    rule: s,
-    onChangeRule: t
-  } = e, [u, E] = i.useState(s.name);
-  return (0, n.jsxs)(l.FormItem, {
-    children: [(0, n.jsx)(l.Text, {
-      className: d.triggerHeader,
-      variant: "text-sm/semibold",
-      children: o.Z.Messages.GUILD_AUTOMOD_INPUT_FILTER_NAME
-    }), (0, n.jsx)(l.TextInput, {
-      className: c.ruleNameInput,
-      onChange: e => {
-        E(e), t({
-          ...s,
-          name: e
-        })
-      },
-      onClick: e => e.stopPropagation(),
-      onKeyPress: e => {
-        e.which === r.yXg.SPACE && e.stopPropagation()
-      },
-      placeholder: o.Z.Messages.GUILD_AUTOMOD_INPUT_FILTER_NAME_PLACEHOLDER,
-      maxLength: a.OU,
-      value: u
-    })]
-  })
+    let {
+            rule: t,
+            onChangeRule: n
+        } = e, [u, _] = a.useState(t.name);
+    return (0, s.jsxs)(i.FormItem, {
+        children: [
+            (0, s.jsx)(i.Text, {
+                className: d.triggerHeader,
+                variant: 'text-sm/semibold',
+                children: o.Z.Messages.GUILD_AUTOMOD_INPUT_FILTER_NAME
+            }),
+            (0, s.jsx)(i.TextInput, {
+                className: c.ruleNameInput,
+                onChange: e => {
+                    _(e), n({
+                        ...t,
+                        name: e
+                    });
+                },
+                onClick: e => e.stopPropagation(),
+                onKeyPress: e => {
+                    e.which === l.yXg.SPACE && e.stopPropagation();
+                },
+                placeholder: o.Z.Messages.GUILD_AUTOMOD_INPUT_FILTER_NAME_PLACEHOLDER,
+                maxLength: r.OU,
+                value: u
+            })
+        ]
+    });
 }

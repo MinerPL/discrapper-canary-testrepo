@@ -1,19 +1,18 @@
-"use strict";
 n.d(t, {
-  $: function() {
-    return i
-  }
+    $: function () {
+        return r;
+    }
 });
-let i = (e, t) => function(n, i, r) {
-  return new Promise(s => {
-    var o;
-    e.dispatch({
-      type: t,
-      event: n,
-      properties: i,
-      flush: null !== (o = null == r ? void 0 : r.flush) && void 0 !== o && o,
-      fingerprint: null == r ? void 0 : r.fingerprint,
-      resolve: s
-    })
-  })
-}
+let r = (e, t) => function (n, r, i) {
+    return new Promise(a => {
+        var o;
+        e.dispatch({
+            type: t,
+            event: n,
+            properties: r,
+            flush: null !== (o = null == i ? void 0 : i.flush) && void 0 !== o && o,
+            fingerprint: null == i ? void 0 : i.fingerprint,
+            resolve: a
+        });
+    });
+};

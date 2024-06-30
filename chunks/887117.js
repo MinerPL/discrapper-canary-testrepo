@@ -1,236 +1,214 @@
-"use strict";
-n.r(e), n.d(e, {
-  Breadcrumbs: function() {
-    return E.O
-  },
-  BrowserClient: function() {
-    return a.R
-  },
-  BrowserProfilingIntegration: function() {
-    return y._
-  },
-  BrowserTracing: function() {
-    return p.gE
-  },
-  Dedupe: function() {
-    return k.I
-  },
-  FunctionToString: function() {
-    return i.cq
-  },
-  GlobalHandlers: function() {
-    return v.d
-  },
-  HttpContext: function() {
-    return w.q
-  },
-  Hub: function() {
-    return i.Xb
-  },
-  InboundFilters: function() {
-    return i.QD
-  },
-  Integrations: function() {
-    return R
-  },
-  LinkedErrors: function() {
-    return S.i
-  },
-  ModuleMetadata: function() {
-    return i._e
-  },
-  Replay: function() {
-    return f.U
-  },
-  SDK_VERSION: function() {
-    return i.Jn
-  },
-  Scope: function() {
-    return i.sX
-  },
-  TryCatch: function() {
-    return b.p
-  },
-  WINDOW: function() {
-    return s.m9
-  },
-  addBreadcrumb: function() {
-    return i.n_
-  },
-  addGlobalEventProcessor: function() {
-    return i.cc
-  },
-  addTracingExtensions: function() {
-    return i.Ts
-  },
-  captureEvent: function() {
-    return i.eN
-  },
-  captureException: function() {
-    return i.Tb
-  },
-  captureMessage: function() {
-    return i.uT
-  },
-  captureUserFeedback: function() {
-    return h.Jd
-  },
-  chromeStackLineParser: function() {
-    return l.$3
-  },
-  close: function() {
-    return h.xv
-  },
-  configureScope: function() {
-    return i.e
-  },
-  createTransport: function() {
-    return i.qv
-  },
-  createUserFeedbackEnvelope: function() {
-    return d.r
-  },
-  defaultIntegrations: function() {
-    return h.SS
-  },
-  defaultRequestInstrumentationOptions: function() {
-    return p.k3
-  },
-  defaultStackLineParsers: function() {
-    return l.d8
-  },
-  defaultStackParser: function() {
-    return l.Dt
-  },
-  eventFromException: function() {
-    return c.dr
-  },
-  eventFromMessage: function() {
-    return c.aB
-  },
-  extractTraceparentData: function() {
-    return i.qG
-  },
-  flush: function() {
-    return h.yl
-  },
-  forceLoad: function() {
-    return h.Eg
-  },
-  geckoStackLineParser: function() {
-    return l.$Q
-  },
-  getActiveTransaction: function() {
-    return i.x1
-  },
-  getCurrentHub: function() {
-    return i.Gd
-  },
-  getHubFromCarrier: function() {
-    return i.vi
-  },
-  init: function() {
-    return h.S1
-  },
-  instrumentOutgoingRequests: function() {
-    return p.L7
-  },
-  lastEventId: function() {
-    return h.eW
-  },
-  makeBrowserOfflineTransport: function() {
-    return m.O1
-  },
-  makeFetchTransport: function() {
-    return o.f
-  },
-  makeMain: function() {
-    return i.pj
-  },
-  makeMultiplexedTransport: function() {
-    return i.Wq
-  },
-  makeXHRTransport: function() {
-    return u.K
-  },
-  onLoad: function() {
-    return h.lA
-  },
-  onProfilingStartRouteTransaction: function() {
-    return g.Uv
-  },
-  opera10StackLineParser: function() {
-    return l.NP
-  },
-  opera11StackLineParser: function() {
-    return l.HH
-  },
-  setContext: function() {
-    return i.v
-  },
-  setExtra: function() {
-    return i.sU
-  },
-  setExtras: function() {
-    return i.rJ
-  },
-  setTag: function() {
-    return i.YA
-  },
-  setTags: function() {
-    return i.mG
-  },
-  setUser: function() {
-    return i.av
-  },
-  showReportDialog: function() {
-    return h.jp
-  },
-  spanStatusfromHttpCode: function() {
-    return i.Zd
-  },
-  startTransaction: function() {
-    return i.Yr
-  },
-  trace: function() {
-    return i.g4
-  },
-  winjsStackLineParser: function() {
-    return l.R2
-  },
-  withScope: function() {
-    return i.$e
-  },
-  wrap: function() {
-    return h.re
-  }
+r.r(e), r.d(e, {
+    Breadcrumbs: function () {
+        return S.O;
+    },
+    BrowserClient: function () {
+        return i.R;
+    },
+    BrowserProfilingIntegration: function () {
+        return d._;
+    },
+    BrowserTracing: function () {
+        return l.gE;
+    },
+    Dedupe: function () {
+        return L.I;
+    },
+    FunctionToString: function () {
+        return _.cq;
+    },
+    GlobalHandlers: function () {
+        return O.d;
+    },
+    HttpContext: function () {
+        return f.q;
+    },
+    Hub: function () {
+        return _.Xb;
+    },
+    InboundFilters: function () {
+        return _.QD;
+    },
+    Integrations: function () {
+        return C;
+    },
+    LinkedErrors: function () {
+        return D.i;
+    },
+    ModuleMetadata: function () {
+        return _._e;
+    },
+    Replay: function () {
+        return T.U;
+    },
+    SDK_VERSION: function () {
+        return _.Jn;
+    },
+    Scope: function () {
+        return _.sX;
+    },
+    TryCatch: function () {
+        return p.p;
+    },
+    WINDOW: function () {
+        return a.m9;
+    },
+    addBreadcrumb: function () {
+        return _.n_;
+    },
+    addGlobalEventProcessor: function () {
+        return _.cc;
+    },
+    addTracingExtensions: function () {
+        return _.Ts;
+    },
+    captureEvent: function () {
+        return _.eN;
+    },
+    captureException: function () {
+        return _.Tb;
+    },
+    captureMessage: function () {
+        return _.uT;
+    },
+    captureUserFeedback: function () {
+        return R.Jd;
+    },
+    chromeStackLineParser: function () {
+        return s.$3;
+    },
+    close: function () {
+        return R.xv;
+    },
+    configureScope: function () {
+        return _.e;
+    },
+    createTransport: function () {
+        return _.qv;
+    },
+    createUserFeedbackEnvelope: function () {
+        return I.r;
+    },
+    defaultIntegrations: function () {
+        return R.SS;
+    },
+    defaultRequestInstrumentationOptions: function () {
+        return l.k3;
+    },
+    defaultStackLineParsers: function () {
+        return s.d8;
+    },
+    defaultStackParser: function () {
+        return s.Dt;
+    },
+    eventFromException: function () {
+        return c.dr;
+    },
+    eventFromMessage: function () {
+        return c.aB;
+    },
+    extractTraceparentData: function () {
+        return _.qG;
+    },
+    flush: function () {
+        return R.yl;
+    },
+    forceLoad: function () {
+        return R.Eg;
+    },
+    geckoStackLineParser: function () {
+        return s.$Q;
+    },
+    getActiveTransaction: function () {
+        return _.x1;
+    },
+    getCurrentHub: function () {
+        return _.Gd;
+    },
+    getHubFromCarrier: function () {
+        return _.vi;
+    },
+    init: function () {
+        return R.S1;
+    },
+    instrumentOutgoingRequests: function () {
+        return l.L7;
+    },
+    lastEventId: function () {
+        return R.eW;
+    },
+    makeBrowserOfflineTransport: function () {
+        return A.O1;
+    },
+    makeFetchTransport: function () {
+        return o.f;
+    },
+    makeMain: function () {
+        return _.pj;
+    },
+    makeMultiplexedTransport: function () {
+        return _.Wq;
+    },
+    makeXHRTransport: function () {
+        return E.K;
+    },
+    onLoad: function () {
+        return R.lA;
+    },
+    onProfilingStartRouteTransaction: function () {
+        return N.Uv;
+    },
+    opera10StackLineParser: function () {
+        return s.NP;
+    },
+    opera11StackLineParser: function () {
+        return s.HH;
+    },
+    setContext: function () {
+        return _.v;
+    },
+    setExtra: function () {
+        return _.sU;
+    },
+    setExtras: function () {
+        return _.rJ;
+    },
+    setTag: function () {
+        return _.YA;
+    },
+    setTags: function () {
+        return _.mG;
+    },
+    setUser: function () {
+        return _.av;
+    },
+    showReportDialog: function () {
+        return R.jp;
+    },
+    spanStatusfromHttpCode: function () {
+        return _.Zd;
+    },
+    startTransaction: function () {
+        return _.Yr;
+    },
+    trace: function () {
+        return _.g4;
+    },
+    winjsStackLineParser: function () {
+        return s.R2;
+    },
+    withScope: function () {
+        return _.$e;
+    },
+    wrap: function () {
+        return R.re;
+    }
 });
-var r = n(89837),
-  i = n(91320),
-  s = n(643487),
-  a = n(903204),
-  o = n(393746),
-  u = n(975927),
-  l = n(202406),
-  c = n(590171),
-  d = n(184612),
-  h = n(846297),
-  _ = n(53383),
-  f = n(438142),
-  p = n(752875),
-  m = n(490753),
-  g = n(65534),
-  y = n(643714),
-  v = n(297280),
-  b = n(382078),
-  E = n(124969),
-  S = n(140735),
-  w = n(612568),
-  k = n(683900);
-let T = {};
-s.m9.Sentry && s.m9.Sentry.Integrations && (T = s.m9.Sentry.Integrations);
-let R = {
-  ...T,
-  ...r,
-  ..._
-}
+var n = r(89837), _ = r(91320), a = r(643487), i = r(903204), o = r(393746), E = r(975927), s = r(202406), c = r(590171), I = r(184612), R = r(846297), u = r(53383), T = r(438142), l = r(752875), A = r(490753), N = r(65534), d = r(643714), O = r(297280), p = r(382078), S = r(124969), D = r(140735), f = r(612568), L = r(683900);
+let h = {};
+a.m9.Sentry && a.m9.Sentry.Integrations && (h = a.m9.Sentry.Integrations);
+let C = {
+    ...h,
+    ...n,
+    ...u
+};

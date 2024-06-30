@@ -1,2 +1,1 @@
-"use strict";
-n(187203)("match")
+n(187203)('match');

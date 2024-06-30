@@ -1,10 +1,8 @@
-"use strict";
-
-function i(e) {
-  return null == e.guild_id
+function r(e) {
+    return null == e.guild_id;
 }
 n.d(t, {
-  p: function() {
-    return i
-  }
-})
+    p: function () {
+        return r;
+    }
+});

@@ -1,130 +1,143 @@
-"use strict";
 n(47120);
-var r = n(735250),
-  i = n(470079),
-  l = n(120356),
-  s = n.n(l),
-  a = n(481060),
-  o = n(393238),
-  u = n(605236),
-  c = n(311715),
-  d = n(466111),
-  f = n(921944),
-  v = n(689938),
-  h = n(255372);
-t.Z = i.forwardRef(function(e, t) {
-  let {
-    body: n,
-    header: l,
-    artClassName: C,
-    headerClassName: Z,
-    contentClassName: N,
-    tryItText: p,
-    dismissText: m,
-    onTryFeature: E,
-    onClose: I,
-    className: g,
-    inlineArt: H = !1,
-    isPremiumFeature: L = !1,
-    shouldUseHorizontalButtons: x = !1,
-    showGIFTag: A = !1,
-    dismissibleContent: R,
-    position: w = "top",
-    align: _ = "center",
-    art: V,
-    isPremiumEarlyAccess: M = !1,
-    maxWidth: j = 280
-  } = e, T = x ? a.Button.Sizes.LARGE : a.Button.Sizes.MAX, [D, S] = i.useState(!1), {
-    ref: O,
-    width: P
-  } = (0, o.Z)();
-
-  function W(e) {
-    (0, u.EW)(R, {
-      dismissAction: e
-    })
-  }
-  return i.useEffect(() => {
-    var e, t;
-    let n = (null !== (t = null === (e = O.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
-    !D && n > j && S(!0)
-  }, [D, P, O, j]), i.useEffect(() => {
-    (0, u.kk)(R)
-  }, [R]), (0, r.jsx)("div", {
-    className: g,
-    ref: t,
-    children: (0, r.jsxs)("div", {
-      className: s()(h.content, N, {
-        [h.contentNoArt]: null == C || H,
-        [h.contentPremium]: L || M
-      }),
-      children: [(0, r.jsxs)("div", {
-        className: s()(C, H ? h.artInline : h.artAbsolute),
-        children: [A && (0, r.jsx)(c.Z, {
-          className: h.gifTag
-        }), V]
-      }), (0, r.jsxs)("div", {
-        className: h.body,
-        children: [(0, r.jsxs)(a.Heading, {
-          className: s()(L ? h.headerWithPremiumIcon : h.header, Z),
-          variant: "heading-md/bold",
-          color: "always-white",
-          children: [L && !M ? (0, r.jsx)(d.Z, {
-            className: h.premiumIcon
-          }) : null, M ? (0, r.jsxs)(a.Text, {
-            color: "always-white",
-            variant: "eyebrow",
-            className: h.earlyAccessBadgeContainer,
-            children: [(0, r.jsx)(d.Z, {
-              className: h.earlyAccessIcon
-            }), (0, r.jsx)("span", {
-              className: h.earlyAccessText,
-              children: v.Z.Messages.REMIXING_TOOLTIP_NITRO_EARLY_ACCESS
-            })]
-          }) : null, l]
-        }), null == n ? null : "string" == typeof n ? (0, r.jsx)(a.Text, {
-          variant: "text-sm/normal",
-          color: "always-white",
-          children: n
-        }) : n]
-      }), (0, r.jsx)("div", {
-        ref: O,
-        className: D || !x ? h.buttonContainerVertical : h.buttonContainerHorizontal,
-        children: null != E ? (0, r.jsxs)(r.Fragment, {
-          children: [(0, r.jsx)(a.Button, {
-            className: h.button,
-            size: T,
-            onClick: e => {
-              null == I || I(e), E(e), W(f.L.PRIMARY)
-            },
-            color: L || M ? a.Button.Colors.BRAND_INVERTED : a.Button.Colors.WHITE,
-            children: null != p ? p : v.Z.Messages.EDUCATION_NEW_FEATURE_TRY_IT
-          }), (0, r.jsx)(a.Button, {
-            className: h.button,
-            size: T,
-            onClick: e => {
-              null == I || I(e), W(f.L.DISMISS)
-            },
-            color: L || M ? a.Button.Colors.WHITE : a.Button.Colors.BRAND,
-            look: L || M ? a.Button.Looks.LINK : a.Button.Looks.FILLED,
-            children: null != m ? m : v.Z.Messages.EDUCATION_NEW_FEATURE_DISMISS
-          })]
-        }) : (0, r.jsx)(a.Button, {
-          className: h.button,
-          size: a.Button.Sizes.MAX,
-          onClick: e => {
-            null == I || I(e), W(f.L.PRIMARY)
-          },
-          color: a.Button.Colors.WHITE,
-          children: v.Z.Messages.EDUCATION_NEW_FEATURE_CONFIRM
+var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(481060), o = n(393238), c = n(605236), u = n(311715), d = n(921944), h = n(689938), p = n(840626);
+t.Z = l.forwardRef(function (e, t) {
+    let {
+            body: n,
+            header: r,
+            artClassName: _,
+            headerClassName: f,
+            contentClassName: m,
+            tryItText: g,
+            dismissText: C,
+            onTryFeature: I,
+            onClose: E,
+            className: N,
+            inlineArt: x = !1,
+            isPremiumFeature: S = !1,
+            shouldUseHorizontalButtons: Z = !1,
+            showGIFTag: v = !1,
+            dismissibleContent: T,
+            position: L = 'top',
+            align: A = 'center',
+            art: b,
+            isPremiumEarlyAccess: M = !1,
+            maxWidth: R = 280
+        } = e, y = Z ? s.Button.Sizes.LARGE : s.Button.Sizes.MAX, [O, P] = l.useState(!1), {
+            ref: j,
+            width: D
+        } = (0, o.Z)();
+    function U(e) {
+        (0, c.EW)(T, { dismissAction: e });
+    }
+    return l.useEffect(() => {
+        var e, t;
+        let n = (null !== (t = null === (e = j.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
+        !O && n > R && P(!0);
+    }, [
+        O,
+        D,
+        j,
+        R
+    ]), l.useEffect(() => {
+        (0, c.kk)(T);
+    }, [T]), (0, i.jsx)('div', {
+        className: N,
+        ref: t,
+        children: (0, i.jsxs)('div', {
+            className: a()(p.content, m, {
+                [p.contentNoArt]: null == _ || x,
+                [p.contentPremium]: S || M
+            }),
+            children: [
+                (0, i.jsxs)('div', {
+                    className: a()(_, x ? p.artInline : p.artAbsolute),
+                    children: [
+                        v && (0, i.jsx)(u.Z, { className: p.gifTag }),
+                        b
+                    ]
+                }),
+                (0, i.jsxs)('div', {
+                    className: p.body,
+                    children: [
+                        (0, i.jsxs)(s.Heading, {
+                            className: a()(S ? p.headerWithPremiumIcon : p.header, f),
+                            variant: 'heading-md/bold',
+                            color: 'always-white',
+                            children: [
+                                S && !M ? (0, i.jsx)(s.NitroWheelIcon, {
+                                    size: 'md',
+                                    color: 'currentColor',
+                                    className: p.premiumIcon
+                                }) : null,
+                                M ? (0, i.jsxs)(s.Text, {
+                                    color: 'always-white',
+                                    variant: 'eyebrow',
+                                    className: p.earlyAccessBadgeContainer,
+                                    children: [
+                                        (0, i.jsx)(s.NitroWheelIcon, {
+                                            size: 'md',
+                                            color: 'currentColor',
+                                            className: p.earlyAccessIcon
+                                        }),
+                                        (0, i.jsx)('span', {
+                                            className: p.earlyAccessText,
+                                            children: h.Z.Messages.REMIXING_TOOLTIP_NITRO_EARLY_ACCESS
+                                        })
+                                    ]
+                                }) : null,
+                                r
+                            ]
+                        }),
+                        null == n ? null : 'string' == typeof n ? (0, i.jsx)(s.Text, {
+                            variant: 'text-sm/normal',
+                            color: 'always-white',
+                            children: n
+                        }) : n
+                    ]
+                }),
+                (0, i.jsx)('div', {
+                    ref: j,
+                    className: O || !Z ? p.buttonContainerVertical : p.buttonContainerHorizontal,
+                    children: null != I ? (0, i.jsxs)(i.Fragment, {
+                        children: [
+                            (0, i.jsx)(s.Button, {
+                                className: p.button,
+                                size: y,
+                                onClick: e => {
+                                    null == E || E(e), I(e), U(d.L.PRIMARY);
+                                },
+                                color: S || M ? s.Button.Colors.BRAND_INVERTED : s.Button.Colors.WHITE,
+                                children: null != g ? g : h.Z.Messages.EDUCATION_NEW_FEATURE_TRY_IT
+                            }),
+                            (0, i.jsx)(s.Button, {
+                                className: p.button,
+                                size: y,
+                                onClick: e => {
+                                    null == E || E(e), U(d.L.DISMISS);
+                                },
+                                color: S || M ? s.Button.Colors.WHITE : s.Button.Colors.BRAND,
+                                look: S || M ? s.Button.Looks.LINK : s.Button.Looks.FILLED,
+                                children: null != C ? C : h.Z.Messages.EDUCATION_NEW_FEATURE_DISMISS
+                            })
+                        ]
+                    }) : (0, i.jsx)(s.Button, {
+                        className: p.button,
+                        size: s.Button.Sizes.MAX,
+                        onClick: e => {
+                            null == E || E(e), U(d.L.PRIMARY);
+                        },
+                        color: s.Button.Colors.WHITE,
+                        children: h.Z.Messages.EDUCATION_NEW_FEATURE_CONFIRM
+                    })
+                }),
+                (0, i.jsx)('div', {
+                    className: a()(p.pointer, {
+                        [p.bottomPointer]: 'top' === L,
+                        [p.centerLeftPointer]: 'right' === L && 'center' === A,
+                        [p.topLeftPointer]: 'right' === L && 'top' === A
+                    })
+                })
+            ]
         })
-      }), (0, r.jsx)("div", {
-        className: s()(h.pointer, {
-          [h.bottomPointer]: "top" === w,
-          [h.centerLeftPointer]: "right" === w && "center" === _,
-          [h.topLeftPointer]: "right" === w && "top" === _
-        })
-      })]
-    })
-  })
-})
+    });
+});

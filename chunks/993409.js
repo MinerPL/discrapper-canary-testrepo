@@ -1,51 +1,49 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return u
-  }
+    Z: function () {
+        return u;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(120356),
-  s = n.n(r),
-  o = n(693789),
-  a = n(481060),
-  l = n(47200);
-
+var i = n(120356), a = n.n(i), o = n(693789), s = n(481060), l = n(717633);
 function u(e) {
-  let {
-    variant: t,
-    text: n,
-    icon: r,
-    tooltipDelay: u,
-    tooltipClassName: _,
-    className: d,
-    innerClassName: c,
-    ...E
-  } = e, I = {
-    [l.text]: "text" === t,
-    [l.icon]: "icon" === t,
-    [l.banner]: "banner" === t
-  };
-  return (0, i.jsx)(a.TooltipContainer, {
-    text: n,
-    "aria-label": E["aria-label"],
-    delay: u,
-    tooltipClassName: _,
-    shouldShow: "text" !== t,
-    children: (0, i.jsxs)(o.zx, {
-      className: s()(l.button, I, d),
-      innerClassName: s()(l.buttonInner, I, c),
-      color: s()(o.Tt.PRIMARY, l.color, I),
-      look: o.zx.Looks.FILLED,
-      size: "text" === t ? o.zx.Sizes.SMALL : o.zx.Sizes.NONE,
-      grow: "text" === t,
-      ...E,
-      children: [null != r && (0, i.jsx)(r, {
-        width: 16,
-        height: 16,
-        color: "currentColor"
-      }), "text" === t && n]
-    })
-  })
+    let {
+            variant: t,
+            text: n,
+            icon: i,
+            tooltipDelay: u,
+            tooltipClassName: c,
+            tooltipContainerClassName: d,
+            className: _,
+            innerClassName: E,
+            ...f
+        } = e, h = {
+            [l.text]: 'text' === t,
+            [l.icon]: 'icon' === t,
+            [l.banner]: 'banner' === t
+        };
+    return (0, r.jsx)(s.TooltipContainer, {
+        text: n,
+        'aria-label': f['aria-label'],
+        delay: u,
+        className: d,
+        tooltipClassName: c,
+        shouldShow: 'text' !== t,
+        children: (0, r.jsxs)(o.zx, {
+            className: a()(l.button, h, _),
+            innerClassName: a()(l.buttonInner, h, E),
+            color: a()(o.Tt.PRIMARY, l.color, h),
+            look: o.zx.Looks.FILLED,
+            size: 'text' === t ? o.zx.Sizes.SMALL : o.zx.Sizes.NONE,
+            grow: 'text' === t,
+            ...f,
+            children: [
+                null != i && (0, r.jsx)(i, {
+                    size: 'xs',
+                    color: 'currentColor'
+                }),
+                'text' === t && n
+            ]
+        })
+    });
 }

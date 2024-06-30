@@ -1,11 +1,7 @@
-var t = E(785902),
-  I = E(800128),
-  _ = E(256098),
-  i = E(290677);
-n.exports = function(n, e) {
-  return function(E, r) {
-    var N = i(E) ? t : I,
-      S = e ? e() : {};
-    return N(E, n, _(r, 2), S)
-  }
-}
+var E = n(785902), _ = n(800128), i = n(256098), r = n(290677);
+e.exports = function (e, t) {
+    return function (n, I) {
+        var S = r(n) ? E : _, a = t ? t() : {};
+        return S(n, e, i(I, 2), a);
+    };
+};

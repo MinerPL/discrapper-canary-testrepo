@@ -1,46 +1,34 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return c
-  }
+    Z: function () {
+        return d;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(481060),
-  l = n(278297),
-  u = n(897353),
-  _ = n(689938),
-  d = n(954886);
-
-function c(e) {
-  let {
-    onPlay: t,
-    className: n,
-    inactive: s
-  } = e, c = r.useRef(null), E = (0, i.jsx)("div", {
-    className: d.iconWrapper,
-    ref: c,
-    children: (0, i.jsx)(u.Z, {
-      className: o()(d.icon)
-    })
-  });
-  return (0, i.jsx)(l.G.Consumer, {
-    children: e => s || null == t ? (0, i.jsx)("div", {
-      className: d.cover,
-      children: E
-    }) : (0, i.jsx)(a.Clickable, {
-      className: o()(n, d.cover, {
-        [d.active]: !e.disableInteractions
-      }),
-      onClick: t,
-      tabIndex: 0,
-      "aria-label": _.Z.Messages.PLAY,
-      focusProps: {
-        ringTarget: c
-      },
-      children: E
-    })
-  })
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(481060), l = n(278297), u = n(689938), c = n(262931);
+function d(e) {
+    let {
+            onPlay: t,
+            className: n,
+            inactive: a
+        } = e, d = i.useRef(null), _ = (0, r.jsx)('div', {
+            className: c.iconWrapper,
+            ref: d,
+            children: (0, r.jsx)(s.PlayIcon, {
+                size: 'xs',
+                color: 'currentColor',
+                className: o()(c.icon)
+            })
+        });
+    return (0, r.jsx)(l.G.Consumer, {
+        children: e => a || null == t ? (0, r.jsx)('div', {
+            className: c.cover,
+            children: _
+        }) : (0, r.jsx)(s.Clickable, {
+            className: o()(n, c.cover, { [c.active]: !e.disableInteractions }),
+            onClick: t,
+            tabIndex: 0,
+            'aria-label': u.Z.Messages.PLAY,
+            focusProps: { ringTarget: d },
+            children: _
+        })
+    });
 }

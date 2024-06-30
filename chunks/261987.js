@@ -1,37 +1,19 @@
-"use strict";
-var n = e(545576),
-  o = e(740362),
-  i = e(251069),
-  a = e(838957),
-  u = e(276321),
-  f = e(381740),
-  c = e(504559),
-  s = e(95948),
-  p = e(892725),
-  l = e(668788),
-  h = e(154154),
-  v = e(325008),
-  d = e(992051);
-t.exports = function(t, r, e, b) {
-  var g = "stackTraceLimit",
-    y = b ? 2 : 1,
-    m = t.split("."),
-    w = m[m.length - 1],
-    _ = n.apply(null, m);
-  if (_) {
-    var x = _.prototype;
-    if (!d && o(x, "cause") && delete x.cause, !e) return _;
-    var k = n("Error"),
-      M = r(function(t, r) {
-        var e = p(b ? r : t, void 0),
-          n = b ? new _(t) : new _;
-        return void 0 !== e && i(n, "message", e), h(n, M, n.stack, 2), this && a(x, this) && s(n, this, M), arguments.length > y && l(n, arguments[y]), n
-      });
-    if (M.prototype = x, "Error" !== w ? u ? u(M, k) : f(M, k, {
-        name: !0
-      }) : v && g in _ && (c(M, _, g), c(M, _, "prepareStackTrace")), f(M, _), !d) try {
-      x.name !== w && i(x, "name", w), x.constructor = M
-    } catch (t) {}
-    return M
-  }
-}
+var e = n(545576), i = n(740362), o = n(251069), u = n(838957), c = n(276321), a = n(381740), s = n(504559), f = n(95948), l = n(892725), p = n(668788), v = n(154154), h = n(325008), d = n(992051);
+t.exports = function (t, r, n, g) {
+    var x = 'stackTraceLimit', y = g ? 2 : 1, b = t.split('.'), E = b[b.length - 1], m = e.apply(null, b);
+    if (m) {
+        var T = m.prototype;
+        if (!d && i(T, 'cause') && delete T.cause, !n)
+            return m;
+        var S = e('Error'), I = r(function (t, r) {
+                var n = l(g ? r : t, void 0), e = g ? new m(t) : new m();
+                return void 0 !== n && o(e, 'message', n), v(e, I, e.stack, 2), this && u(T, this) && f(e, this, I), arguments.length > y && p(e, arguments[y]), e;
+            });
+        if (I.prototype = T, 'Error' !== E ? c ? c(I, S) : a(I, S, { name: !0 }) : h && x in m && (s(I, m, x), s(I, m, 'prepareStackTrace')), a(I, m), !d)
+            try {
+                T.name !== E && o(T, 'name', E), T.constructor = I;
+            } catch (t) {
+            }
+        return I;
+    }
+};

@@ -1,66 +1,57 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return E
-  }
-});
-var i = n(735250),
-  r = n(470079),
-  s = n(665443),
-  o = n.n(s),
-  a = n(39383),
-  l = n.n(a),
-  u = n(992774),
-  _ = n(672784),
-  d = n(369711),
-  c = n(649754);
-
-function E(e) {
-  let {
-    streamId: t,
-    paused: n,
-    onReady: s,
-    onResize: a,
-    className: E,
-    ...I
-  } = e, T = r.useRef(null), {
-    current: h
-  } = r.useRef(l()("media-engine-video-"));
-  return r.useEffect(() => {
-    let e = T.current;
-    if (!n && null != e) {
-      let n = !1,
-        i = (t, i) => {
-          !n && (null == s || s(), n = !0), (e.width !== t || e.height !== i) && (e.width = t, e.height = i, null == a || a({
-            width: t,
-            height: i
-          }))
-        },
-        r = (0, u.zS)();
-      if (null != r.addVideoOutputSink) return r.addVideoOutputSink(h, t, i), () => {
-        r.removeVideoOutputSink(h, t)
-      };
-      {
-        let n = function(e) {
-          var t, n, i, r;
-          let s = null === (r = window) || void 0 === r ? void 0 : null === (i = r.DiscordNative) || void 0 === i ? void 0 : null === (n = i.app) || void 0 === n ? void 0 : null === (t = n.getReleaseChannel) || void 0 === t ? void 0 : t.call(n);
-          return "canary" === s || "development" === s ? (0, d.m)(e) : (0, _.y)(e)
-        }(e);
-        if (null == n) return;
-        return c.Z.addSink(t, T, e => {
-          i(e.width, e.height), n.render(e)
-        }), () => {
-          c.Z.removeSink(t, T)
-        }
-      }
+    Z: function () {
+        return E;
     }
-  }, [t, n, a, s, h]), (0, i.jsx)("canvas", {
-    id: h,
-    className: o()("media-engine-video", E),
-    ref: T,
-    ...I
-  })
+});
+var r = n(735250), i = n(470079), a = n(665443), o = n.n(a), s = n(39383), l = n.n(s), u = n(992774), c = n(672784), d = n(369711), _ = n(649754);
+function E(e) {
+    let {
+            streamId: t,
+            paused: n,
+            onReady: a,
+            onResize: s,
+            className: E,
+            ...f
+        } = e, h = i.useRef(null), {current: p} = i.useRef(l()('media-engine-video-'));
+    return i.useEffect(() => {
+        let e = h.current;
+        if (!n && null != e) {
+            let n = !1, r = (t, r) => {
+                    !n && (null == a || a(), n = !0), (e.width !== t || e.height !== r) && (e.width = t, e.height = r, null == s || s({
+                        width: t,
+                        height: r
+                    }));
+                }, i = (0, u.zS)();
+            if (null != i.addVideoOutputSink)
+                return i.addVideoOutputSink(p, t, r), () => {
+                    i.removeVideoOutputSink(p, t);
+                };
+            {
+                let n = function (e) {
+                    var t, n, r, i;
+                    let a = null === (i = window) || void 0 === i ? void 0 : null === (r = i.DiscordNative) || void 0 === r ? void 0 : null === (n = r.app) || void 0 === n ? void 0 : null === (t = n.getReleaseChannel) || void 0 === t ? void 0 : t.call(n);
+                    return 'canary' === a || 'development' === a ? (0, d.m)(e) : (0, c.y)(e);
+                }(e);
+                if (null == n)
+                    return;
+                return _.Z.addSink(t, h, e => {
+                    r(e.width, e.height), n.render(e);
+                }), () => {
+                    _.Z.removeSink(t, h);
+                };
+            }
+        }
+    }, [
+        t,
+        n,
+        s,
+        a,
+        p
+    ]), (0, r.jsx)('canvas', {
+        id: p,
+        className: o()('media-engine-video', E),
+        ref: h,
+        ...f
+    });
 }
-E.defaultProps = {
-  paused: !1
-}
+E.defaultProps = { paused: !1 };

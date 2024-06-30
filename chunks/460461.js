@@ -1,531 +1,564 @@
-"use strict";
-t.d(s, {
-  J: function() {
-    return j
-  }
-}), t(47120), t(315314), t(610138), t(216116), t(78328), t(815648), t(627494), t(757143);
-var n = t(735250),
-  i = t(470079),
-  l = t(442837),
-  a = t(692547),
-  r = t(481060),
-  o = t(225433),
-  c = t(484614),
-  d = t(852860),
-  u = t(296386),
-  E = t(150192),
-  _ = t(688465),
-  I = t(134432),
-  T = t(813197),
-  N = t(208567),
-  m = t(496675),
-  S = t(315507),
-  h = t(987134),
-  g = t(441674),
-  x = t(696202),
-  C = t(768581),
-  R = t(63063),
-  L = t(434404),
-  O = t(999382),
-  A = t(450474),
-  p = t(190287),
-  M = t(981631),
-  f = t(731455),
-  v = t(689938),
-  D = t(845978);
-let Z = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
-  j = () => {
-    let {
-      guild: e,
-      guildMetadata: s,
-      submitting: t
-    } = (0, l.cj)([O.Z], () => ({
-      submitting: O.Z.isSubmitting(),
-      guild: O.Z.getGuild(),
-      guildMetadata: O.Z.getMetadata()
-    }));
-    return (0, n.jsx)(d.Z, {
-      submitting: t,
-      onReset: () => {
-        if (null != e) L.Z.init(e.id)
-      },
-      onSave: () => {
-        if (null != e) L.Z.saveGuild(e.id, {
-          discoverySplash: e.discoverySplash,
-          description: e.description
-        }), u.Vv({
-          guildId: e.id,
-          primaryCategoryId: s.primaryCategoryId,
-          keywords: s.keywords,
-          emojiDiscoverabilityEnabled: s.emojiDiscoverabilityEnabled,
-          partnerActionedTimestamp: s.partnerActionedTimestamp,
-          partnerApplicationTimestamp: s.partnerApplicationTimestamp,
-          isPublished: s.isPublished,
-          reasonsToJoin: s.reasonsToJoin,
-          socialLinks: s.socialLinks.filter(e => e),
-          about: s.about
-        })
-      }
-    })
-  },
-  U = () => {
-    var e;
-    let s = i.useRef(null),
-      t = (0, l.e7)([O.Z], () => O.Z.getGuild()),
-      [d, j] = i.useState(!1);
-    i.useEffect(() => {
-      !d && null != t && (u.le(), u.aC(t.id), u.i3(t.id), j(!0))
-    }, [t, d]);
-    let {
-      canManageGuild: U
-    } = (0, l.cj)([m.Z], () => ({
-      canManageGuild: m.Z.can(M.Plq.MANAGE_GUILD, t)
-    })), G = (0, l.e7)([O.Z], () => O.Z.isGuildMetadataLoaded()), P = (0, l.e7)([O.Z], () => null != t ? O.Z.getMetadata() : null), b = (0, l.e7)([O.Z], () => null != t && (null == P ? void 0 : P.isPublished) ? O.Z.getSlug() : null), [B, y] = i.useState([!0]), [F, w] = i.useState(!0), [k, H] = i.useState([!1]), [V, Y] = i.useState([""]), W = e => {
-      let s = Object.entries(f.zo).filter(e => !V.includes(e[1].presentation)).map(e => ({
-        label: e[1].presentation,
-        value: e[0]
-      }));
-      return null == e || "" === e ? s : s.concat({
-        label: e,
-        value: e
-      })
-    }, K = e => {
-      try {
-        var s, t, n, i;
-        let l = new URL(e).hostname.split(".");
-        if (3 === l.length && "bandcamp" === l[1].toLowerCase()) return f.zo.bandcamp.presentation;
-        let a = null !== (t = null === (s = l.shift()) || void 0 === s ? void 0 : s.toLowerCase()) && void 0 !== t ? t : "";
-        if ("www" === a && (a = null !== (i = null === (n = l.shift()) || void 0 === n ? void 0 : n.toLowerCase()) && void 0 !== i ? i : ""), a in f.zo) return f.zo[a].presentation;
-        return null
-      } catch {
-        return null
-      }
-    };
-    i.useEffect(() => {
-      if (null !== P) {
-        let e = [],
-          s = [];
-        P.socialLinks.forEach((t, n) => {
-          if ("" !== t) {
-            let i = K(t);
-            null !== i ? (s[n] = i, e[n] = !0) : e[n] = !1
-          } else e[n] = !0
-        }), Y(s), y(e), w(e.every(e => !0 === e))
-      }
-    }, [P]);
-    let z = (0, l.e7)([O.Z], () => null != t ? O.Z.getErrors() : null),
-      q = (0, l.e7)([E.Z], () => E.Z.getPrimaryCategories(), [], E.j);
-    if (null == t || null == P) return null;
-    let X = e => {
-        L.Z.updateGuild({
-          discoverySplash: e
-        })
-      },
-      Q = e => {
-        var s;
-        (null == t ? void 0 : t.id) != null && u.TA(null == t ? void 0 : t.id, null !== (s = null == e ? void 0 : e.value) && void 0 !== s ? s : f.o3)
-      },
-      J = e => {
-        var s;
-        L.Z.updateGuild({
-          description: null !== (s = null == e ? void 0 : e.replaceAll("\n", "")) && void 0 !== s ? s : ""
-        })
-      },
-      $ = e => {
-        u.mA(t.id, e)
-      },
-      ee = e => {
-        u.W1(t.id, e), e ? u.Vv({
-          guildId: t.id,
-          primaryCategoryId: P.primaryCategoryId,
-          keywords: P.keywords,
-          emojiDiscoverabilityEnabled: P.emojiDiscoverabilityEnabled,
-          partnerActionedTimestamp: P.partnerActionedTimestamp,
-          partnerApplicationTimestamp: P.partnerApplicationTimestamp,
-          isPublished: !0,
-          reasonsToJoin: P.reasonsToJoin,
-          socialLinks: P.socialLinks,
-          about: P.about
-        }) : u.Vv({
-          guildId: t.id,
-          primaryCategoryId: P.primaryCategoryId,
-          keywords: P.keywords,
-          emojiDiscoverabilityEnabled: P.emojiDiscoverabilityEnabled,
-          partnerActionedTimestamp: P.partnerActionedTimestamp,
-          partnerApplicationTimestamp: P.partnerApplicationTimestamp,
-          isPublished: !1,
-          reasonsToJoin: P.reasonsToJoin,
-          socialLinks: P.socialLinks,
-          about: P.about
-        }), L.Z.saveGuild(t.id, {
-          discoverySplash: t.discoverySplash,
-          description: t.description
-        })
-      },
-      es = () => {
-        if (P.socialLinks.length < 9) {
-          let e = [...P.socialLinks];
-          u.t$(t.id, e.concat("")), Y(V.concat(""))
-        }
-      },
-      et = (e, s) => {
-        let n = [...P.socialLinks],
-          i = [...V],
-          l = [...B];
-        i[s] = e, n[s] = f.zo[e].baseUrl, l[s] = !0, y(l), Y(i), w(l.every(e => !0 === e)), u.t$(t.id, n)
-      },
-      en = (e, s) => {
-        let n = [...P.socialLinks],
-          i = n[s],
-          l = e;
-        0 === i.length && l.length > 1 && !1 === RegExp("^https?:").test(l) && (l = "https://" + l), n[s] = l, u.t$(t.id, n)
-      },
-      ei = e => {
-        let s = [...k];
-        s.splice(e, 1), H(s);
-        let n = [...B];
-        n.splice(e, 1), y(n);
-        let i = [...V];
-        i.splice(e, 1), Y(i);
-        let l = [...P.socialLinks];
-        l.splice(e, 1), u.t$(t.id, l)
-      },
-      el = e => {
+n.d(t, {
+    J: function () {
+        return D;
+    }
+}), n(47120), n(315314), n(610138), n(216116), n(78328), n(815648), n(627494), n(757143);
+var s = n(735250), a = n(470079), i = n(442837), r = n(692547), l = n(481060), o = n(225433), c = n(484614), d = n(852860), u = n(296386), _ = n(150192), E = n(688465), I = n(134432), T = n(813197), m = n(208567), N = n(496675), S = n(315507), h = n(987134), g = n(768581), C = n(63063), x = n(434404), p = n(999382), R = n(450474), f = n(190287), L = n(981631), O = n(731455), A = n(689938), M = n(659124);
+let v = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/', D = () => {
         let {
-          reason: s = "",
-          emoji_name: t = ""
-        } = e;
-        return null !== s && s.length >= 10 && s.length <= 128 && null !== t
-      },
-      ea = e => {
-        let {
-          reason: s = "",
-          emoji_name: t = ""
-        } = e;
-        return (null === s || "" === s) && null === t
-      },
-      er = [{
-        title: v.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_REQUIREMENTS,
-        items: [{
-          description: v.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_UPLOAD_COVER_IMAGE,
-          completed: null !== t.discoverySplash && "" !== t.discoverySplash
-        }, {
-          description: v.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_SHORT_DESCRIPTION,
-          completed: null !== t.description && "" !== t.description
-        }, {
-          description: v.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_ABOUT,
-          completed: null !== P.about && P.about.length >= 300 && P.about.length <= 2400
-        }, {
-          description: v.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_REASONS,
-          completed: null !== P.reasonsToJoin && P.reasonsToJoin.every(e => ea(e) || el(e)) && P.reasonsToJoin.filter(el).length >= 2
-        }]
-      }],
-      eo = q.map(e => ({
-        label: e.name,
-        value: e.categoryId
-      })),
-      ec = (e, s) => {
-        let t = [...k];
-        t[e] = s, H(t)
-      };
-    return (0, n.jsx)("div", {
-      className: D.settingsColumn,
-      children: (0, n.jsx)("div", {
-        className: D.settingsContainer,
-        children: (0, n.jsx)(r.ScrollerAuto, {
-          className: D.settingsScroller,
-          children: (0, n.jsx)("main", {
-            ref: s,
-            className: D.settingsContent,
-            children: (0, n.jsx)(r.FocusRingScope, {
-              containerRef: s,
-              children: (0, n.jsxs)("div", {
-                className: D.container,
-                children: [(0, n.jsxs)(r.FormSection, {
-                  className: D.mainContent,
-                  title: (0, n.jsxs)("div", {
-                    children: [v.Z.Messages.DISCOVERY_LANDING_PAGE, " ", (0, n.jsx)(_.Z, {
-                      className: D.betaTag
-                    })]
-                  }),
-                  tag: r.FormTitleTags.H1,
-                  children: [(0, n.jsxs)(r.FormText, {
-                    className: D.tabMainDescription,
-                    type: r.FormTextTypes.DESCRIPTION,
-                    children: [v.Z.Messages.DISCOVERY_LANDING_PAGE_DESCRIPTION.format({
-                      discordURL: window.GLOBAL_ENV.MARKETING_ENDPOINT
-                    }), " ", v.Z.Messages.DISCOVERY_LANDING_PAGE_LEARN_MORE.format({
-                      learnMoreURL: R.Z.getArticleURL(M.BhN.SERVER_WEB_PAGES)
-                    })]
-                  }), (() => {
-                    if (!P.isPublished || null == b) return;
-                    let e = Z + b;
-                    return (0, n.jsx)(n.Fragment, {
-                      children: (0, n.jsxs)(r.FormSection, {
-                        className: D.noDividerFormSection,
-                        children: [(0, n.jsx)(r.FormTitle, {
-                          className: D.formTitle,
-                          children: v.Z.Messages.DISCOVERY_LANDING_PAGE_PUBLISHED_URL_TITLE
-                        }), (0, n.jsx)(c.Z, {
-                          value: e
-                        }), (0, n.jsx)(r.Button, {
-                          className: D.viewPageButton,
-                          size: r.Button.Sizes.SMALL,
-                          color: r.Button.Colors.BRAND,
-                          onClick: () => window.open(e),
-                          children: v.Z.Messages.DISCOVERY_LANDING_PAGE_PUBLISHED_URL_VIEW_PAGE_BUTTON
-                        })]
-                      })
-                    })
-                  })(), (0, n.jsx)(r.FormDivider, {
-                    className: D.divider
-                  }), (() => {
-                    if (null != t) return (0, n.jsxs)(n.Fragment, {
-                      children: [(0, n.jsxs)(r.FormSection, {
-                        children: [(0, n.jsx)(r.FormTitle, {
-                          className: D.formTitle,
-                          children: v.Z.Messages.DISCOVERY_LANDING_PAGE_CATEGORY_TITLE
-                        }), (0, n.jsx)(r.FormText, {
-                          type: r.FormTextTypes.DESCRIPTION,
-                          className: D.description,
-                          children: v.Z.Messages.DISCOVERY_LANDING_PAGE_CATEGORY_DESCRIPTION
-                        })]
-                      }), (0, n.jsx)(h.Z, {
-                        value: P.primaryCategoryId === f.o3 ? null : null == P ? void 0 : P.primaryCategoryId,
-                        placeholder: v.Z.Messages.SELECT,
-                        options: eo,
-                        onChange: Q,
-                        disabled: !U,
-                        searchable: !0,
-                        clearable: !0
-                      }), (0, n.jsxs)(r.FormSection, {
-                        className: D.noDividerFormSection,
-                        children: [(0, n.jsx)(r.FormTitle, {
-                          className: D.formTitle,
-                          children: v.Z.Messages.GUILD_SETTINGS_DISCOVERY_SUBCATEGORY_TITLE
-                        }), (0, n.jsx)(A.Z, {
-                          guild: t,
-                          guildMetadata: P,
-                          disabled: !U
-                        })]
-                      }), (null == z ? void 0 : z.category) != null ? (0, n.jsx)(r.Text, {
-                        color: "text-danger",
-                        className: D.error,
-                        variant: "text-sm/normal",
-                        children: z.category
-                      }) : null]
-                    })
-                  })(), (0, n.jsx)(r.FormDivider, {
-                    className: D.divider
-                  }), (() => {
-                    if (null != t) return (0, n.jsxs)(n.Fragment, {
-                      children: [(0, n.jsxs)(r.FormSection, {
-                        className: D.twoColumnFormSection,
-                        children: [(0, n.jsxs)("div", {
-                          children: [(0, n.jsx)(r.FormTitle, {
-                            className: D.formTitle,
-                            children: v.Z.Messages.FORM_LABEL_DISCOVERY_COVER_IMAGE
-                          }), (0, n.jsx)(r.FormText, {
-                            type: r.FormTextTypes.DESCRIPTION,
-                            className: D.formDescription,
-                            children: v.Z.Messages.DISCOVERY_LANDING_PAGE_COVER_IMAGE_DESCRIPTION
-                          }), (0, n.jsxs)(r.Button, {
-                            size: r.Button.Sizes.SMALL,
-                            color: r.Button.Colors.PRIMARY,
-                            children: [v.Z.Messages.UPLOAD_BACKGROUND, (0, n.jsx)(T.ZP, {
-                              disabled: !U,
-                              onChange: X
-                            })]
-                          })]
-                        }), (0, n.jsx)(N.Z, {
-                          image: t.discoverySplash,
-                          makeURL: e => C.ZP.getGuildDiscoverySplashURL({
-                            id: t.id,
-                            splash: e,
-                            size: 512 * (0, I.x_)()
-                          }),
-                          disabled: !U,
-                          onChange: X,
-                          hint: v.Z.Messages.CHANGE_SPLASH,
-                          imageClassName: D.imageUploaderInnerSquare,
-                          hideSize: !0
-                        })]
-                      }), (null == z ? void 0 : z.discovery_splash) != null ? (0, n.jsx)(r.Text, {
-                        color: "text-danger",
-                        variant: "text-sm/normal",
-                        children: z.discovery_splash
-                      }) : null]
-                    })
-                  })(), (0, n.jsx)(r.FormDivider, {
-                    className: D.divider
-                  }), (0, n.jsxs)(r.FormSection, {
-                    children: [(0, n.jsx)(r.FormTitle, {
-                      className: D.formTitle,
-                      children: v.Z.Messages.FORM_LABEL_SERVER_DESCRIPTION
-                    }), (0, n.jsx)(r.FormText, {
-                      className: D.description,
-                      type: r.FormTextTypes.DESCRIPTION,
-                      children: v.Z.Messages.DISCOVERY_LANDING_PAGE_SERVER_DESCRIPTION
-                    }), (0, n.jsx)(r.TextArea, {
-                      value: null !== t.description ? t.description : "",
-                      placeholder: v.Z.Messages.DISCOVERY_LANDING_PAGE_SERVER_DESCRIPTION_HINT,
-                      onChange: J,
-                      maxLength: 120,
-                      disabled: !U
-                    })]
-                  }), (0, n.jsx)(r.FormDivider, {
-                    className: D.divider
-                  }), (() => {
-                    if (null == P) return null;
-                    let e = 0 === P.reasonsToJoin.length ? [, , , , ].fill({
-                      reason: "",
-                      emoji_name: null
-                    }) : P.reasonsToJoin;
-                    return (0, n.jsxs)(r.FormSection, {
-                      children: [(0, n.jsx)(r.FormTitle, {
-                        className: D.formTitle,
-                        children: v.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_TITLE
-                      }), (0, n.jsx)(r.FormText, {
-                        type: r.FormTextTypes.DESCRIPTION,
-                        className: D.description,
-                        children: v.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_DESCRIPTION
-                      }), (0, n.jsx)("div", {
-                        className: D.reasonToJoin,
-                        children: (0, n.jsx)(p.Z, {
-                          reasonMinLength: 10,
-                          reasonMaxLength: 128,
-                          guildId: t.id,
-                          reasons: e
+            guild: e,
+            guildMetadata: t,
+            submitting: n
+        } = (0, i.cj)([p.Z], () => ({
+            submitting: p.Z.isSubmitting(),
+            guild: p.Z.getGuild(),
+            guildMetadata: p.Z.getMetadata()
+        }));
+        return (0, s.jsx)(d.Z, {
+            submitting: n,
+            onReset: () => {
+                if (null != e)
+                    x.Z.init(e.id);
+            },
+            onSave: () => {
+                if (null != e)
+                    x.Z.saveGuild(e.id, {
+                        discoverySplash: e.discoverySplash,
+                        description: e.description
+                    }), u.Vv({
+                        guildId: e.id,
+                        primaryCategoryId: t.primaryCategoryId,
+                        keywords: t.keywords,
+                        emojiDiscoverabilityEnabled: t.emojiDiscoverabilityEnabled,
+                        partnerActionedTimestamp: t.partnerActionedTimestamp,
+                        partnerApplicationTimestamp: t.partnerApplicationTimestamp,
+                        isPublished: t.isPublished,
+                        reasonsToJoin: t.reasonsToJoin,
+                        socialLinks: t.socialLinks.filter(e => e),
+                        about: t.about
+                    });
+            }
+        });
+    }, j = () => {
+        var e;
+        let t = a.useRef(null), n = (0, i.e7)([p.Z], () => p.Z.getGuild()), [d, D] = a.useState(!1);
+        a.useEffect(() => {
+            !d && null != n && (u.le(), u.aC(n.id), u.i3(n.id), D(!0));
+        }, [
+            n,
+            d
+        ]);
+        let {canManageGuild: j} = (0, i.cj)([N.Z], () => ({ canManageGuild: N.Z.can(L.Plq.MANAGE_GUILD, n) })), Z = (0, i.e7)([p.Z], () => p.Z.isGuildMetadataLoaded()), b = (0, i.e7)([p.Z], () => null != n ? p.Z.getMetadata() : null), U = (0, i.e7)([p.Z], () => null != n && (null == b ? void 0 : b.isPublished) ? p.Z.getSlug() : null), [G, P] = a.useState([!0]), [B, y] = a.useState(!0), [F, k] = a.useState([!1]), [w, H] = a.useState(['']), V = e => {
+                let t = Object.entries(O.zo).filter(e => !w.includes(e[1].presentation)).map(e => ({
+                    label: e[1].presentation,
+                    value: e[0]
+                }));
+                return null == e || '' === e ? t : t.concat({
+                    label: e,
+                    value: e
+                });
+            }, Y = e => {
+                try {
+                    var t, n, s, a;
+                    let i = new URL(e).hostname.split('.');
+                    if (3 === i.length && 'bandcamp' === i[1].toLowerCase())
+                        return O.zo.bandcamp.presentation;
+                    let r = null !== (n = null === (t = i.shift()) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== n ? n : '';
+                    if ('www' === r && (r = null !== (a = null === (s = i.shift()) || void 0 === s ? void 0 : s.toLowerCase()) && void 0 !== a ? a : ''), r in O.zo)
+                        return O.zo[r].presentation;
+                    return null;
+                } catch {
+                    return null;
+                }
+            };
+        a.useEffect(() => {
+            if (null !== b) {
+                let e = [], t = [];
+                b.socialLinks.forEach((n, s) => {
+                    if ('' !== n) {
+                        let a = Y(n);
+                        null !== a ? (t[s] = a, e[s] = !0) : e[s] = !1;
+                    } else
+                        e[s] = !0;
+                }), H(t), P(e), y(e.every(e => !0 === e));
+            }
+        }, [b]);
+        let W = (0, i.e7)([p.Z], () => null != n ? p.Z.getErrors() : null), z = (0, i.e7)([_.Z], () => _.Z.getPrimaryCategories(), [], _.j);
+        if (null == n || null == b)
+            return null;
+        let K = e => {
+                x.Z.updateGuild({ discoverySplash: e });
+            }, q = e => {
+                var t;
+                (null == n ? void 0 : n.id) != null && u.TA(null == n ? void 0 : n.id, null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : O.o3);
+            }, X = e => {
+                var t;
+                x.Z.updateGuild({ description: null !== (t = null == e ? void 0 : e.replaceAll('\n', '')) && void 0 !== t ? t : '' });
+            }, Q = e => {
+                u.mA(n.id, e);
+            }, J = e => {
+                u.W1(n.id, e), e ? u.Vv({
+                    guildId: n.id,
+                    primaryCategoryId: b.primaryCategoryId,
+                    keywords: b.keywords,
+                    emojiDiscoverabilityEnabled: b.emojiDiscoverabilityEnabled,
+                    partnerActionedTimestamp: b.partnerActionedTimestamp,
+                    partnerApplicationTimestamp: b.partnerApplicationTimestamp,
+                    isPublished: !0,
+                    reasonsToJoin: b.reasonsToJoin,
+                    socialLinks: b.socialLinks,
+                    about: b.about
+                }) : u.Vv({
+                    guildId: n.id,
+                    primaryCategoryId: b.primaryCategoryId,
+                    keywords: b.keywords,
+                    emojiDiscoverabilityEnabled: b.emojiDiscoverabilityEnabled,
+                    partnerActionedTimestamp: b.partnerActionedTimestamp,
+                    partnerApplicationTimestamp: b.partnerApplicationTimestamp,
+                    isPublished: !1,
+                    reasonsToJoin: b.reasonsToJoin,
+                    socialLinks: b.socialLinks,
+                    about: b.about
+                }), x.Z.saveGuild(n.id, {
+                    discoverySplash: n.discoverySplash,
+                    description: n.description
+                });
+            }, $ = () => {
+                if (b.socialLinks.length < 9) {
+                    let e = [...b.socialLinks];
+                    u.t$(n.id, e.concat('')), H(w.concat(''));
+                }
+            }, ee = (e, t) => {
+                let s = [...b.socialLinks], a = [...w], i = [...G];
+                a[t] = e, s[t] = O.zo[e].baseUrl, i[t] = !0, P(i), H(a), y(i.every(e => !0 === e)), u.t$(n.id, s);
+            }, et = (e, t) => {
+                let s = [...b.socialLinks], a = s[t], i = e;
+                0 === a.length && i.length > 1 && !1 === RegExp('^https?:').test(i) && (i = 'https://' + i), s[t] = i, u.t$(n.id, s);
+            }, en = e => {
+                let t = [...F];
+                t.splice(e, 1), k(t);
+                let s = [...G];
+                s.splice(e, 1), P(s);
+                let a = [...w];
+                a.splice(e, 1), H(a);
+                let i = [...b.socialLinks];
+                i.splice(e, 1), u.t$(n.id, i);
+            }, es = e => {
+                let {
+                    reason: t = '',
+                    emoji_name: n = ''
+                } = e;
+                return null !== t && t.length >= 10 && t.length <= 128 && null !== n;
+            }, ea = e => {
+                let {
+                    reason: t = '',
+                    emoji_name: n = ''
+                } = e;
+                return (null === t || '' === t) && null === n;
+            }, ei = [{
+                    title: A.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_REQUIREMENTS,
+                    items: [
+                        {
+                            description: A.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_UPLOAD_COVER_IMAGE,
+                            completed: null !== n.discoverySplash && '' !== n.discoverySplash
+                        },
+                        {
+                            description: A.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_SHORT_DESCRIPTION,
+                            completed: null !== n.description && '' !== n.description
+                        },
+                        {
+                            description: A.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_ABOUT,
+                            completed: null !== b.about && b.about.length >= 300 && b.about.length <= 2400
+                        },
+                        {
+                            description: A.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_REASONS,
+                            completed: null !== b.reasonsToJoin && b.reasonsToJoin.every(e => ea(e) || es(e)) && b.reasonsToJoin.filter(es).length >= 2
+                        }
+                    ]
+                }], er = z.map(e => ({
+                label: e.name,
+                value: e.categoryId
+            })), el = (e, t) => {
+                let n = [...F];
+                n[e] = t, k(n);
+            };
+        return (0, s.jsx)('div', {
+            className: M.settingsColumn,
+            children: (0, s.jsx)('div', {
+                className: M.settingsContainer,
+                children: (0, s.jsx)(l.ScrollerAuto, {
+                    className: M.settingsScroller,
+                    children: (0, s.jsx)('main', {
+                        ref: t,
+                        className: M.settingsContent,
+                        children: (0, s.jsx)(l.FocusRingScope, {
+                            containerRef: t,
+                            children: (0, s.jsxs)('div', {
+                                className: M.container,
+                                children: [
+                                    (0, s.jsxs)(l.FormSection, {
+                                        className: M.mainContent,
+                                        title: (0, s.jsxs)('div', {
+                                            children: [
+                                                A.Z.Messages.DISCOVERY_LANDING_PAGE,
+                                                ' ',
+                                                (0, s.jsx)(E.Z, { className: M.betaTag })
+                                            ]
+                                        }),
+                                        tag: l.FormTitleTags.H1,
+                                        children: [
+                                            (0, s.jsxs)(l.FormText, {
+                                                className: M.tabMainDescription,
+                                                type: l.FormTextTypes.DESCRIPTION,
+                                                children: [
+                                                    A.Z.Messages.DISCOVERY_LANDING_PAGE_DESCRIPTION.format({ discordURL: window.GLOBAL_ENV.MARKETING_ENDPOINT }),
+                                                    ' ',
+                                                    A.Z.Messages.DISCOVERY_LANDING_PAGE_LEARN_MORE.format({ learnMoreURL: C.Z.getArticleURL(L.BhN.SERVER_WEB_PAGES) })
+                                                ]
+                                            }),
+                                            (() => {
+                                                if (!b.isPublished || null == U)
+                                                    return;
+                                                let e = v + U;
+                                                return (0, s.jsx)(s.Fragment, {
+                                                    children: (0, s.jsxs)(l.FormSection, {
+                                                        className: M.noDividerFormSection,
+                                                        children: [
+                                                            (0, s.jsx)(l.FormTitle, {
+                                                                className: M.formTitle,
+                                                                children: A.Z.Messages.DISCOVERY_LANDING_PAGE_PUBLISHED_URL_TITLE
+                                                            }),
+                                                            (0, s.jsx)(c.Z, { value: e }),
+                                                            (0, s.jsx)(l.Button, {
+                                                                className: M.viewPageButton,
+                                                                size: l.Button.Sizes.SMALL,
+                                                                color: l.Button.Colors.BRAND,
+                                                                onClick: () => window.open(e),
+                                                                children: A.Z.Messages.DISCOVERY_LANDING_PAGE_PUBLISHED_URL_VIEW_PAGE_BUTTON
+                                                            })
+                                                        ]
+                                                    })
+                                                });
+                                            })(),
+                                            (0, s.jsx)(l.FormDivider, { className: M.divider }),
+                                            (() => {
+                                                if (null != n)
+                                                    return (0, s.jsxs)(s.Fragment, {
+                                                        children: [
+                                                            (0, s.jsxs)(l.FormSection, {
+                                                                children: [
+                                                                    (0, s.jsx)(l.FormTitle, {
+                                                                        className: M.formTitle,
+                                                                        children: A.Z.Messages.DISCOVERY_LANDING_PAGE_CATEGORY_TITLE
+                                                                    }),
+                                                                    (0, s.jsx)(l.FormText, {
+                                                                        type: l.FormTextTypes.DESCRIPTION,
+                                                                        className: M.description,
+                                                                        children: A.Z.Messages.DISCOVERY_LANDING_PAGE_CATEGORY_DESCRIPTION
+                                                                    })
+                                                                ]
+                                                            }),
+                                                            (0, s.jsx)(h.Z, {
+                                                                value: b.primaryCategoryId === O.o3 ? null : null == b ? void 0 : b.primaryCategoryId,
+                                                                placeholder: A.Z.Messages.SELECT,
+                                                                options: er,
+                                                                onChange: q,
+                                                                disabled: !j,
+                                                                searchable: !0,
+                                                                clearable: !0
+                                                            }),
+                                                            (0, s.jsxs)(l.FormSection, {
+                                                                className: M.noDividerFormSection,
+                                                                children: [
+                                                                    (0, s.jsx)(l.FormTitle, {
+                                                                        className: M.formTitle,
+                                                                        children: A.Z.Messages.GUILD_SETTINGS_DISCOVERY_SUBCATEGORY_TITLE
+                                                                    }),
+                                                                    (0, s.jsx)(R.Z, {
+                                                                        guild: n,
+                                                                        guildMetadata: b,
+                                                                        disabled: !j
+                                                                    })
+                                                                ]
+                                                            }),
+                                                            (null == W ? void 0 : W.category) != null ? (0, s.jsx)(l.Text, {
+                                                                color: 'text-danger',
+                                                                className: M.error,
+                                                                variant: 'text-sm/normal',
+                                                                children: W.category
+                                                            }) : null
+                                                        ]
+                                                    });
+                                            })(),
+                                            (0, s.jsx)(l.FormDivider, { className: M.divider }),
+                                            (() => {
+                                                if (null != n)
+                                                    return (0, s.jsxs)(s.Fragment, {
+                                                        children: [
+                                                            (0, s.jsxs)(l.FormSection, {
+                                                                className: M.twoColumnFormSection,
+                                                                children: [
+                                                                    (0, s.jsxs)('div', {
+                                                                        children: [
+                                                                            (0, s.jsx)(l.FormTitle, {
+                                                                                className: M.formTitle,
+                                                                                children: A.Z.Messages.FORM_LABEL_DISCOVERY_COVER_IMAGE
+                                                                            }),
+                                                                            (0, s.jsx)(l.FormText, {
+                                                                                type: l.FormTextTypes.DESCRIPTION,
+                                                                                className: M.formDescription,
+                                                                                children: A.Z.Messages.DISCOVERY_LANDING_PAGE_COVER_IMAGE_DESCRIPTION
+                                                                            }),
+                                                                            (0, s.jsxs)(l.Button, {
+                                                                                size: l.Button.Sizes.SMALL,
+                                                                                color: l.Button.Colors.PRIMARY,
+                                                                                children: [
+                                                                                    A.Z.Messages.UPLOAD_BACKGROUND,
+                                                                                    (0, s.jsx)(T.ZP, {
+                                                                                        disabled: !j,
+                                                                                        onChange: K
+                                                                                    })
+                                                                                ]
+                                                                            })
+                                                                        ]
+                                                                    }),
+                                                                    (0, s.jsx)(m.Z, {
+                                                                        image: n.discoverySplash,
+                                                                        makeURL: e => g.ZP.getGuildDiscoverySplashURL({
+                                                                            id: n.id,
+                                                                            splash: e,
+                                                                            size: 512 * (0, I.x_)()
+                                                                        }),
+                                                                        disabled: !j,
+                                                                        onChange: K,
+                                                                        hint: A.Z.Messages.CHANGE_SPLASH,
+                                                                        imageClassName: M.imageUploaderInnerSquare,
+                                                                        hideSize: !0
+                                                                    })
+                                                                ]
+                                                            }),
+                                                            (null == W ? void 0 : W.discovery_splash) != null ? (0, s.jsx)(l.Text, {
+                                                                color: 'text-danger',
+                                                                variant: 'text-sm/normal',
+                                                                children: W.discovery_splash
+                                                            }) : null
+                                                        ]
+                                                    });
+                                            })(),
+                                            (0, s.jsx)(l.FormDivider, { className: M.divider }),
+                                            (0, s.jsxs)(l.FormSection, {
+                                                children: [
+                                                    (0, s.jsx)(l.FormTitle, {
+                                                        className: M.formTitle,
+                                                        children: A.Z.Messages.FORM_LABEL_SERVER_DESCRIPTION
+                                                    }),
+                                                    (0, s.jsx)(l.FormText, {
+                                                        className: M.description,
+                                                        type: l.FormTextTypes.DESCRIPTION,
+                                                        children: A.Z.Messages.DISCOVERY_LANDING_PAGE_SERVER_DESCRIPTION
+                                                    }),
+                                                    (0, s.jsx)(l.TextArea, {
+                                                        value: null !== n.description ? n.description : '',
+                                                        placeholder: A.Z.Messages.DISCOVERY_LANDING_PAGE_SERVER_DESCRIPTION_HINT,
+                                                        onChange: X,
+                                                        maxLength: 120,
+                                                        disabled: !j
+                                                    })
+                                                ]
+                                            }),
+                                            (0, s.jsx)(l.FormDivider, { className: M.divider }),
+                                            (() => {
+                                                if (null == b)
+                                                    return null;
+                                                let e = 0 === b.reasonsToJoin.length ? [
+                                                    ,
+                                                    ,
+                                                    ,
+                                                    ,
+                                                ].fill({
+                                                    reason: '',
+                                                    emoji_name: null
+                                                }) : b.reasonsToJoin;
+                                                return (0, s.jsxs)(l.FormSection, {
+                                                    children: [
+                                                        (0, s.jsx)(l.FormTitle, {
+                                                            className: M.formTitle,
+                                                            children: A.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_TITLE
+                                                        }),
+                                                        (0, s.jsx)(l.FormText, {
+                                                            type: l.FormTextTypes.DESCRIPTION,
+                                                            className: M.description,
+                                                            children: A.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_DESCRIPTION
+                                                        }),
+                                                        (0, s.jsx)('div', {
+                                                            className: M.reasonToJoin,
+                                                            children: (0, s.jsx)(f.Z, {
+                                                                reasonMinLength: 10,
+                                                                reasonMaxLength: 128,
+                                                                guildId: n.id,
+                                                                reasons: e
+                                                            })
+                                                        }),
+                                                        (null == W ? void 0 : W.reasons_to_join) != null ? (0, s.jsx)(l.Text, {
+                                                            color: 'text-danger',
+                                                            variant: 'text-sm/normal',
+                                                            children: W.reasons_to_join
+                                                        }) : null
+                                                    ]
+                                                });
+                                            })(),
+                                            (0, s.jsx)(l.FormDivider, { className: M.divider }),
+                                            (0, s.jsxs)(s.Fragment, {
+                                                children: [
+                                                    (0, s.jsxs)(l.FormSection, {
+                                                        children: [
+                                                            (0, s.jsx)(l.FormTitle, {
+                                                                className: M.formTitle,
+                                                                children: A.Z.Messages.DISCOVERY_LANDING_PAGE_ABOUT_TITLE
+                                                            }),
+                                                            (0, s.jsx)(l.FormText, {
+                                                                className: M.description,
+                                                                type: l.FormTextTypes.DESCRIPTION,
+                                                                children: A.Z.Messages.DISCOVERY_LANDING_PAGE_ABOUT_DESCRIPTION
+                                                            }),
+                                                            (0, s.jsx)(l.TextArea, {
+                                                                showCharacterCount: !0,
+                                                                className: M.textArea,
+                                                                value: b.about,
+                                                                placeholder: A.Z.Messages.DISCOVERY_LANDING_PAGE_ABOUT_HINT,
+                                                                onChange: Q,
+                                                                minLength: 300,
+                                                                maxLength: 2400,
+                                                                disabled: !j,
+                                                                defaultDirty: (null === (e = b.about) || void 0 === e ? void 0 : e.length) > 0
+                                                            }, 'text-area-'.concat(Z))
+                                                        ]
+                                                    }),
+                                                    (null == W ? void 0 : W.about) != null ? (0, s.jsx)(l.Text, {
+                                                        color: 'text-danger',
+                                                        variant: 'text-sm/normal',
+                                                        children: W.about
+                                                    }) : null
+                                                ]
+                                            }),
+                                            (0, s.jsx)(l.FormDivider, { className: M.divider }),
+                                            (0, s.jsx)(s.Fragment, {
+                                                children: (0, s.jsxs)(l.FormSection, {
+                                                    children: [
+                                                        (0, s.jsx)(l.FormTitle, {
+                                                            className: M.formTitle,
+                                                            children: A.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_TITLE
+                                                        }),
+                                                        (0, s.jsx)(l.FormText, {
+                                                            className: M.description,
+                                                            type: l.FormTextTypes.DESCRIPTION,
+                                                            children: A.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_DESCRIPTION
+                                                        }),
+                                                        b.socialLinks.map((e, t) => (0, s.jsxs)('div', {
+                                                            className: M.socialLinksContainer,
+                                                            onMouseOver: () => el(t, !0),
+                                                            onFocus: () => el(t, !0),
+                                                            onMouseOut: () => el(t, !1),
+                                                            onBlur: () => el(t, !1),
+                                                            children: [
+                                                                (0, s.jsx)(l.SingleSelect, {
+                                                                    className: b.isPublished ? M.socialLinksDropdownMax : M.socialLinksDropdownMin,
+                                                                    options: V(w[t]),
+                                                                    placeholder: A.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_DROPDOWN_PLACEHOLDER,
+                                                                    value: w[t],
+                                                                    onChange: e => ee(e, t),
+                                                                    isDisabled: !j
+                                                                }, 'dropdown-' + t),
+                                                                (0, s.jsx)(l.TextInput, {
+                                                                    value: e,
+                                                                    className: b.isPublished ? M.socialLinksMax : M.socialLinksMin,
+                                                                    onChange: e => et(e, t),
+                                                                    placeholder: A.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_HINT,
+                                                                    maxLength: 150,
+                                                                    disabled: !j
+                                                                }, 'link-' + t),
+                                                                G[t] ? (0, s.jsx)(l.CircleCheckIcon, {
+                                                                    size: 'custom',
+                                                                    className: b.isPublished ? M.validationButtonMax : M.validationButtonMin,
+                                                                    color: r.Z.unsafe_rawColors.GREEN_230.css,
+                                                                    width: 20,
+                                                                    height: 20
+                                                                }, 'validation-passed-' + t) : (0, s.jsx)(l.CircleXIcon, {
+                                                                    size: 'custom',
+                                                                    className: b.isPublished ? M.validationButtonMax : M.validationButtonMin,
+                                                                    color: r.Z.unsafe_rawColors.RED_400.css,
+                                                                    width: 20,
+                                                                    height: 20
+                                                                }, 'validation-failed-' + t),
+                                                                j && (0, s.jsx)(o.Z, {
+                                                                    className: F[t] ? b.isPublished ? M.deleteButtonMax : M.deleteButtonMin : b.isPublished ? M.deleteButtonHiddenMax : M.deleteButtonHiddenMin,
+                                                                    onClick: () => en(t)
+                                                                }, 'delete-button-' + t)
+                                                            ]
+                                                        }, 'social-container-' + t)),
+                                                        (null == W ? void 0 : W.social_links) != null ? (0, s.jsx)(l.Text, {
+                                                            color: 'text-danger',
+                                                            variant: 'text-sm/normal',
+                                                            children: W.social_links
+                                                        }) : null,
+                                                        (0, s.jsx)(l.Button, {
+                                                            size: l.Button.Sizes.SMALL,
+                                                            color: l.Button.Colors.PRIMARY,
+                                                            onClick: $,
+                                                            disabled: !j || b.socialLinks.length >= 9,
+                                                            children: A.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_BUTTON_ADD_ANOTHER
+                                                        })
+                                                    ]
+                                                })
+                                            }),
+                                            b.isPublished && (0, s.jsxs)(s.Fragment, {
+                                                children: [
+                                                    (0, s.jsx)(l.FormDivider, { className: M.divider }),
+                                                    (0, s.jsxs)(l.FormSection, {
+                                                        children: [
+                                                            (0, s.jsx)(l.FormTitle, {
+                                                                className: M.formTitle,
+                                                                children: A.Z.Messages.DISCOVERY_LANDING_PAGE_DISABLE_TITLE
+                                                            }),
+                                                            (0, s.jsx)(l.FormText, {
+                                                                className: M.description,
+                                                                type: l.FormTextTypes.DESCRIPTION,
+                                                                children: A.Z.Messages.DISCOVERY_LANDING_PAGE_DISABLE_DESCRIPTION
+                                                            }),
+                                                            (0, s.jsx)(l.Button, {
+                                                                size: l.Button.Sizes.SMALL,
+                                                                color: l.Button.Colors.RED,
+                                                                onClick: () => J(!1),
+                                                                disabled: !j,
+                                                                children: A.Z.Messages.DISCOVERY_LANDING_PAGE_DISABLE_BUTTON
+                                                            })
+                                                        ]
+                                                    })
+                                                ]
+                                            }),
+                                            (null == W ? void 0 : W.is_published) != null ? (0, s.jsx)(l.Text, {
+                                                color: 'text-danger',
+                                                variant: 'text-sm/normal',
+                                                children: W.is_published
+                                            }) : null
+                                        ]
+                                    }),
+                                    !b.isPublished && (0, s.jsx)('div', {
+                                        className: M.checklist,
+                                        children: (0, s.jsx)(S.Z, {
+                                            title: A.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_TITLE,
+                                            children: ei,
+                                            buttonLabel: A.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_PUBLISH,
+                                            buttonCallback: () => J(!0),
+                                            disabled: !j || !B
+                                        })
+                                    })
+                                ]
+                            })
                         })
-                      }), (null == z ? void 0 : z.reasons_to_join) != null ? (0, n.jsx)(r.Text, {
-                        color: "text-danger",
-                        variant: "text-sm/normal",
-                        children: z.reasons_to_join
-                      }) : null]
                     })
-                  })(), (0, n.jsx)(r.FormDivider, {
-                    className: D.divider
-                  }), (0, n.jsxs)(n.Fragment, {
-                    children: [(0, n.jsxs)(r.FormSection, {
-                      children: [(0, n.jsx)(r.FormTitle, {
-                        className: D.formTitle,
-                        children: v.Z.Messages.DISCOVERY_LANDING_PAGE_ABOUT_TITLE
-                      }), (0, n.jsx)(r.FormText, {
-                        className: D.description,
-                        type: r.FormTextTypes.DESCRIPTION,
-                        children: v.Z.Messages.DISCOVERY_LANDING_PAGE_ABOUT_DESCRIPTION
-                      }), (0, n.jsx)(r.TextArea, {
-                        showCharacterCount: !0,
-                        className: D.textArea,
-                        value: P.about,
-                        placeholder: v.Z.Messages.DISCOVERY_LANDING_PAGE_ABOUT_HINT,
-                        onChange: $,
-                        minLength: 300,
-                        maxLength: 2400,
-                        disabled: !U,
-                        defaultDirty: (null === (e = P.about) || void 0 === e ? void 0 : e.length) > 0
-                      }, "text-area-".concat(G))]
-                    }), (null == z ? void 0 : z.about) != null ? (0, n.jsx)(r.Text, {
-                      color: "text-danger",
-                      variant: "text-sm/normal",
-                      children: z.about
-                    }) : null]
-                  }), (0, n.jsx)(r.FormDivider, {
-                    className: D.divider
-                  }), (0, n.jsx)(n.Fragment, {
-                    children: (0, n.jsxs)(r.FormSection, {
-                      children: [(0, n.jsx)(r.FormTitle, {
-                        className: D.formTitle,
-                        children: v.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_TITLE
-                      }), (0, n.jsx)(r.FormText, {
-                        className: D.description,
-                        type: r.FormTextTypes.DESCRIPTION,
-                        children: v.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_DESCRIPTION
-                      }), P.socialLinks.map((e, s) => (0, n.jsxs)("div", {
-                        className: D.socialLinksContainer,
-                        onMouseOver: () => ec(s, !0),
-                        onFocus: () => ec(s, !0),
-                        onMouseOut: () => ec(s, !1),
-                        onBlur: () => ec(s, !1),
-                        children: [(0, n.jsx)(r.SingleSelect, {
-                          className: P.isPublished ? D.socialLinksDropdownMax : D.socialLinksDropdownMin,
-                          options: W(V[s]),
-                          placeholder: v.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_DROPDOWN_PLACEHOLDER,
-                          value: V[s],
-                          onChange: e => et(e, s),
-                          isDisabled: !U
-                        }, "dropdown-" + s), (0, n.jsx)(r.TextInput, {
-                          value: e,
-                          className: P.isPublished ? D.socialLinksMax : D.socialLinksMin,
-                          onChange: e => en(e, s),
-                          placeholder: v.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_HINT,
-                          maxLength: 150,
-                          disabled: !U
-                        }, "link-" + s), B[s] ? (0, n.jsx)(g.Z, {
-                          className: P.isPublished ? D.validationButtonMax : D.validationButtonMin,
-                          color: a.Z.unsafe_rawColors.GREEN_230.css,
-                          width: 20,
-                          height: 20
-                        }, "validation-passed-" + s) : (0, n.jsx)(x.Z, {
-                          className: P.isPublished ? D.validationButtonMax : D.validationButtonMin,
-                          color: a.Z.unsafe_rawColors.RED_400.css,
-                          width: 20,
-                          height: 20
-                        }, "validation-failed-" + s), U && (0, n.jsx)(o.Z, {
-                          className: k[s] ? P.isPublished ? D.deleteButtonMax : D.deleteButtonMin : P.isPublished ? D.deleteButtonHiddenMax : D.deleteButtonHiddenMin,
-                          onClick: () => ei(s)
-                        }, "delete-button-" + s)]
-                      }, "social-container-" + s)), (null == z ? void 0 : z.social_links) != null ? (0, n.jsx)(r.Text, {
-                        color: "text-danger",
-                        variant: "text-sm/normal",
-                        children: z.social_links
-                      }) : null, (0, n.jsx)(r.Button, {
-                        size: r.Button.Sizes.SMALL,
-                        color: r.Button.Colors.PRIMARY,
-                        onClick: es,
-                        disabled: !U || P.socialLinks.length >= 9,
-                        children: v.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_BUTTON_ADD_ANOTHER
-                      })]
-                    })
-                  }), P.isPublished && (0, n.jsxs)(n.Fragment, {
-                    children: [(0, n.jsx)(r.FormDivider, {
-                      className: D.divider
-                    }), (0, n.jsxs)(r.FormSection, {
-                      children: [(0, n.jsx)(r.FormTitle, {
-                        className: D.formTitle,
-                        children: v.Z.Messages.DISCOVERY_LANDING_PAGE_DISABLE_TITLE
-                      }), (0, n.jsx)(r.FormText, {
-                        className: D.description,
-                        type: r.FormTextTypes.DESCRIPTION,
-                        children: v.Z.Messages.DISCOVERY_LANDING_PAGE_DISABLE_DESCRIPTION
-                      }), (0, n.jsx)(r.Button, {
-                        size: r.Button.Sizes.SMALL,
-                        color: r.Button.Colors.RED,
-                        onClick: () => ee(!1),
-                        disabled: !U,
-                        children: v.Z.Messages.DISCOVERY_LANDING_PAGE_DISABLE_BUTTON
-                      })]
-                    })]
-                  }), (null == z ? void 0 : z.is_published) != null ? (0, n.jsx)(r.Text, {
-                    color: "text-danger",
-                    variant: "text-sm/normal",
-                    children: z.is_published
-                  }) : null]
-                }), !P.isPublished && (0, n.jsx)("div", {
-                  className: D.checklist,
-                  children: (0, n.jsx)(S.Z, {
-                    title: v.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_TITLE,
-                    children: er,
-                    buttonLabel: v.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_PUBLISH,
-                    buttonCallback: () => ee(!0),
-                    disabled: !U || !F
-                  })
-                })]
-              })
+                })
             })
-          })
-        })
-      })
-    })
-  };
-s.Z = () => null == (0, l.e7)([O.Z], () => O.Z.getGuild()) ? null : (0, n.jsx)(U, {})
+        });
+    };
+t.Z = () => null == (0, i.e7)([p.Z], () => p.Z.getGuild()) ? null : (0, s.jsx)(j, {});

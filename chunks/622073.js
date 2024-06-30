@@ -1,4 +1,3 @@
-"use strict";
-t.Z = function(e) {
-  return this.__data__.has(e)
-}
+t.Z = function (e) {
+    return this.__data__.has(e);
+};

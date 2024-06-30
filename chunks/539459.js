@@ -1,12 +1,7 @@
-"use strict";
-var e = n(325008),
-  o = n(740362),
-  i = Function.prototype,
-  u = e && Object.getOwnPropertyDescriptor,
-  c = o(i, "name"),
-  s = c && (!e || e && u(i, "name").configurable);
+var e = r(325008), o = r(740362), i = Function.prototype, u = e && Object.getOwnPropertyDescriptor, c = o(i, 'name'), f = c && (!e || e && u(i, 'name').configurable);
 t.exports = {
-  EXISTS: c,
-  PROPER: c && "something" === (function() {}).name,
-  CONFIGURABLE: s
-}
+    EXISTS: c,
+    PROPER: c && 'something' === function () {
+    }.name,
+    CONFIGURABLE: f
+};

@@ -1,18 +1,16 @@
-"use strict";
 n.d(t, {
-  R: function() {
-    return a
-  }
+    R: function () {
+        return s;
+    }
 });
-var i = n(470079),
-  r = n(442837),
-  s = n(675478),
-  o = n(654455);
-
-function a(e) {
-  i.useEffect(() => {
-    s.DZ.loadIfNecessary()
-  }, []);
-  let t = (0, r.e7)([o.ZP], () => o.ZP.getTopCommandsWithoutLoadingLatest());
-  return i.useMemo(() => (0, o.LU)(t, e), [t, e])
+var r = n(470079), i = n(442837), a = n(675478), o = n(654455);
+function s(e) {
+    r.useEffect(() => {
+        a.DZ.loadIfNecessary();
+    }, []);
+    let t = (0, i.e7)([o.ZP], () => o.ZP.getTopCommandsWithoutLoadingLatest());
+    return r.useMemo(() => (0, o.LU)(t, e), [
+        t,
+        e
+    ]);
 }

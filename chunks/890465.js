@@ -1,20 +1,19 @@
-"use strict";
 n.d(t, {
-  V: function() {
-    return r
-  }
+    V: function () {
+        return r;
+    }
 });
 class r {
-  call() {
-    try {
-      this.task && this.task()
-    } catch (e) {
-      this.onError(e)
-    } finally {
-      this.task = null, this.release(this)
+    call() {
+        try {
+            this.task && this.task();
+        } catch (e) {
+            this.onError(e);
+        } finally {
+            this.task = null, this.release(this);
+        }
     }
-  }
-  constructor(e, t) {
-    this.onError = e, this.release = t, this.task = null
-  }
+    constructor(e, t) {
+        this.onError = e, this.release = t, this.task = null;
+    }
 }

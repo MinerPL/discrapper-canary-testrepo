@@ -1,23 +1,18 @@
-"use strict";
 n.d(t, {
-  DQ: function() {
-    return i
-  },
-  LH: function() {
-    return s
-  },
-  Wj: function() {
-    return o
-  },
-  aQ: function() {
-    return r
-  },
-  pL: function() {
-    return a
-  }
+    DQ: function () {
+        return r;
+    },
+    LH: function () {
+        return a;
+    },
+    Wj: function () {
+        return o;
+    },
+    aQ: function () {
+        return i;
+    },
+    pL: function () {
+        return s;
+    }
 });
-let i = "hello",
-  r = "version",
-  s = "force-resync-version",
-  o = 3,
-  a = "stable-53"
+let r = 'hello', i = 'version', a = 'force-resync-version', o = 3, s = 'stable-53';

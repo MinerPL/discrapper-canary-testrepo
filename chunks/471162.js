@@ -1,10 +1,7 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return r;
+    }
 });
 var r = {};
-r = {
-  "Clear search": `Tyhjenn\xe4 haku`
-}
+r = { 'Clear search': `Tyhjenn\xe4 haku` };

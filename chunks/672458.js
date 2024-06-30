@@ -1,12 +1,11 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  d: function() {
-    return i
-  },
-  t: function() {
-    return s
-  }
+    d: function () {
+        return r;
+    },
+    t: function () {
+        return a;
+    }
 });
-let s = 202;
-(r = i || (i = {}))[r.SUCCESSFUL_QUERY = 1] = "SUCCESSFUL_QUERY", r[r.ERROR = 2] = "ERROR"
+let a = 202;
+(i = r || (r = {}))[i.SUCCESSFUL_QUERY = 1] = 'SUCCESSFUL_QUERY', i[i.ERROR = 2] = 'ERROR';

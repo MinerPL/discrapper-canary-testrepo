@@ -1,53 +1,47 @@
-"use strict";
 n.d(t, {
-  n: function() {
-    return o
-  }
+    n: function () {
+        return o;
+    }
 });
-var r = n(182823),
-  i = n(706682),
-  a = n(612001);
-
+var r = n(182823), i = n(706682), a = n(612001);
 function o(e, t) {
-  let {
-    elementType: n = "a",
-    onPress: o,
-    onPressStart: s,
-    onPressEnd: u,
-    onClick: c,
-    isDisabled: l,
-    ...d
-  } = e, f = {};
-  "a" !== n && (f = {
-    role: "link",
-    tabIndex: l ? void 0 : 0
-  });
-  let {
-    focusableProps: p
-  } = (0, i.kc)(e, t), {
-    pressProps: h,
-    isPressed: m
-  } = (0, a.r7)({
-    onPress: o,
-    onPressStart: s,
-    onPressEnd: u,
-    isDisabled: l,
-    ref: t
-  }), g = (0, r.zL)(d, {
-    labelable: !0,
-    isLink: "a" === n
-  }), _ = (0, r.dG)(p, h), b = (0, r.tv)();
-  return {
-    isPressed: m,
-    linkProps: (0, r.dG)(g, {
-      ..._,
-      ...f,
-      "aria-disabled": l || void 0,
-      "aria-current": e["aria-current"],
-      onClick: e => {
-        var t;
-        null === (t = h.onClick) || void 0 === t || t.call(h, e), c && (c(e), console.warn("onClick is deprecated, please use onPress")), !b.isNative && e.currentTarget instanceof HTMLAnchorElement && e.currentTarget.href && !e.isDefaultPrevented() && (0, r.b0)(e.currentTarget, e) && (e.preventDefault(), b.open(e.currentTarget, e))
-      }
-    })
-  }
+    let {
+            elementType: n = 'a',
+            onPress: o,
+            onPressStart: s,
+            onPressEnd: l,
+            onClick: u,
+            isDisabled: c,
+            ...d
+        } = e, _ = {};
+    'a' !== n && (_ = {
+        role: 'link',
+        tabIndex: c ? void 0 : 0
+    });
+    let {focusableProps: E} = (0, i.kc)(e, t), {
+            pressProps: f,
+            isPressed: h
+        } = (0, a.r7)({
+            onPress: o,
+            onPressStart: s,
+            onPressEnd: l,
+            isDisabled: c,
+            ref: t
+        }), p = (0, r.zL)(d, {
+            labelable: !0,
+            isLink: 'a' === n
+        }), m = (0, r.dG)(E, f), I = (0, r.tv)();
+    return {
+        isPressed: h,
+        linkProps: (0, r.dG)(p, {
+            ...m,
+            ..._,
+            'aria-disabled': c || void 0,
+            'aria-current': e['aria-current'],
+            onClick: e => {
+                var t;
+                null === (t = f.onClick) || void 0 === t || t.call(f, e), u && (u(e), console.warn('onClick is deprecated, please use onPress')), !I.isNative && e.currentTarget instanceof HTMLAnchorElement && e.currentTarget.href && !e.isDefaultPrevented() && (0, r.b0)(e.currentTarget, e) && (e.preventDefault(), I.open(e.currentTarget, e));
+            }
+        })
+    };
 }

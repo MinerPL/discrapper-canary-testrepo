@@ -1,34 +1,22 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return s;
+    }
 });
-var r = n(882159),
-  i = n(894417),
-  a = n(49691),
-  o = n(436857);
-
+var r = n(882159), i = n(894417), a = n(49691), o = n(436857);
 function s(e, t, n) {
-  void 0 === t && (t = !1), void 0 === n && (n = !1);
-  var s = e.getBoundingClientRect(),
-    u = 1,
-    c = 1;
-  t && (0, r.Re)(e) && (u = e.offsetWidth > 0 && (0, i.NM)(s.width) / e.offsetWidth || 1, c = e.offsetHeight > 0 && (0, i.NM)(s.height) / e.offsetHeight || 1);
-  var l = ((0, r.kK)(e) ? (0, a.Z)(e) : window).visualViewport,
-    d = !(0, o.Z)() && n,
-    f = (s.left + (d && l ? l.offsetLeft : 0)) / u,
-    p = (s.top + (d && l ? l.offsetTop : 0)) / c,
-    h = s.width / u,
-    m = s.height / c;
-  return {
-    width: h,
-    height: m,
-    top: p,
-    right: f + h,
-    bottom: p + m,
-    left: f,
-    x: f,
-    y: p
-  }
+    void 0 === t && (t = !1), void 0 === n && (n = !1);
+    var s = e.getBoundingClientRect(), l = 1, u = 1;
+    t && (0, r.Re)(e) && (l = e.offsetWidth > 0 && (0, i.NM)(s.width) / e.offsetWidth || 1, u = e.offsetHeight > 0 && (0, i.NM)(s.height) / e.offsetHeight || 1);
+    var c = ((0, r.kK)(e) ? (0, a.Z)(e) : window).visualViewport, d = !(0, o.Z)() && n, _ = (s.left + (d && c ? c.offsetLeft : 0)) / l, E = (s.top + (d && c ? c.offsetTop : 0)) / u, f = s.width / l, h = s.height / u;
+    return {
+        width: f,
+        height: h,
+        top: E,
+        right: _ + f,
+        bottom: E + h,
+        left: _,
+        x: _,
+        y: E
+    };
 }

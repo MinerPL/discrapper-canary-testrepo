@@ -1,89 +1,67 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return C
-  }
+n.d(t, {
+    Z: function () {
+        return x;
+    }
 });
-var n = t(735250),
-  i = t(470079),
-  l = t(442837),
-  a = t(704215),
-  r = t(481060),
-  o = t(605236),
-  c = t(874993),
-  d = t(430824),
-  u = t(996753),
-  E = t(999382),
-  _ = t(84613),
-  I = t(392885),
-  T = t(740903),
-  N = t(464610),
-  m = t(733629),
-  S = t(598622),
-  h = t(921944),
-  g = t(689938),
-  x = t(212723);
-
-function C(e) {
-  let s, {
-      hideChangelog: t
-    } = e,
-    C = (0, l.e7)([E.Z], () => E.Z.getGuildId()),
-    R = (0, l.e7)([d.Z], () => d.Z.getGuild(C)),
-    L = (0, l.e7)([I.Z], () => I.Z.getCurrentPage());
-  if (i.useEffect(() => {
-      (0, o.EW)(a.z.COMMUNITY_GUILD_SETTINGS_SAFETY, {
-        dismissAction: h.L.AUTO
-      })
-    }, []), null == R) return null;
-  let O = (0, S.Q)(R);
-  switch (L) {
+var s = n(735250), a = n(470079), i = n(442837), r = n(704215), l = n(481060), o = n(605236), c = n(874993), d = n(430824), u = n(996753), _ = n(999382), E = n(84613), I = n(392885), T = n(740903), m = n(464610), N = n(733629), S = n(598622), h = n(921944), g = n(689938), C = n(609191);
+function x(e) {
+    let t, {hideChangelog: n} = e, x = (0, i.e7)([_.Z], () => _.Z.getGuildId()), p = (0, i.e7)([d.Z], () => d.Z.getGuild(x)), R = (0, i.e7)([I.Z], () => I.Z.getCurrentPage());
+    if (a.useEffect(() => {
+            (0, o.EW)(r.z.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: h.L.AUTO });
+        }, []), null == p)
+        return null;
+    let f = (0, S.Q)(p);
+    switch (R) {
     case T.u.OVERVIEW:
-      s = (0, n.jsx)(N.Z, {
-        guild: R,
-        hideChangelog: t
-      });
-      break;
+        t = (0, s.jsx)(m.Z, {
+            guild: p,
+            hideChangelog: n
+        });
+        break;
     case T.u.CAPTCHA_AND_RAID_PROTECTION:
-      s = (0, n.jsx)(m.Z, {
-        title: g.Z.Messages.GUILD_SETTINGS_SAFETY_CAPTCHA_RAID_PROTECTION,
-        settings: O[T.u.CAPTCHA_AND_RAID_PROTECTION]
-      });
-      break;
+        t = (0, s.jsx)(N.Z, {
+            title: g.Z.Messages.GUILD_SETTINGS_SAFETY_CAPTCHA_RAID_PROTECTION,
+            settings: f[T.u.CAPTCHA_AND_RAID_PROTECTION]
+        });
+        break;
     case T.u.DM_AND_SPAM_PROTECTION:
-      s = (0, n.jsx)(m.Z, {
-        title: g.Z.Messages.GUILD_SETTINGS_SAFETY_DM_SPAM_PROTECTION,
-        settings: O[T.u.DM_AND_SPAM_PROTECTION]
-      });
-      break;
+        t = (0, s.jsx)(N.Z, {
+            title: g.Z.Messages.GUILD_SETTINGS_SAFETY_DM_SPAM_PROTECTION,
+            settings: f[T.u.DM_AND_SPAM_PROTECTION]
+        });
+        break;
     case T.u.AUTOMOD:
-      s = (0, n.jsx)(c.Z, {
-        guildId: R.id
-      });
-      break;
+        t = (0, s.jsx)(c.Z, { guildId: p.id });
+        break;
     case T.u.PERMISSIONS:
-      s = (0, n.jsx)(m.Z, {
-        title: g.Z.Messages.GUILD_SETTINGS_SAFETY_PERMISSIONS_TITLE,
-        settings: O[T.u.PERMISSIONS]
-      })
-  }
-  return (0, n.jsxs)(n.Fragment, {
-    children: [L !== T.u.OVERVIEW && (0, n.jsxs)(r.Button, {
-      className: x.back,
-      innerClassName: x.backButton,
-      look: r.Button.Looks.BLANK,
-      size: r.Button.Sizes.MIN,
-      onClick: () => {
-        (0, _.K)(T.u.OVERVIEW)
-      },
-      children: [(0, n.jsx)(u.Z, {
-        className: x.__invalid_arrow,
-        direction: u.Z.Directions.LEFT
-      }), (0, n.jsx)(r.Text, {
-        variant: "text-sm/semibold",
-        color: "interactive-normal",
-        children: g.Z.Messages.BACK
-      })]
-    }), s]
-  })
+        t = (0, s.jsx)(N.Z, {
+            title: g.Z.Messages.GUILD_SETTINGS_SAFETY_PERMISSIONS_TITLE,
+            settings: f[T.u.PERMISSIONS]
+        });
+    }
+    return (0, s.jsxs)(s.Fragment, {
+        children: [
+            R !== T.u.OVERVIEW && (0, s.jsxs)(l.Button, {
+                className: C.back,
+                innerClassName: C.backButton,
+                look: l.Button.Looks.BLANK,
+                size: l.Button.Sizes.MIN,
+                onClick: () => {
+                    (0, E.K)(T.u.OVERVIEW);
+                },
+                children: [
+                    (0, s.jsx)(u.Z, {
+                        className: C.__invalid_arrow,
+                        direction: u.Z.Directions.LEFT
+                    }),
+                    (0, s.jsx)(l.Text, {
+                        variant: 'text-sm/semibold',
+                        color: 'interactive-normal',
+                        children: g.Z.Messages.BACK
+                    })
+                ]
+            }),
+            t
+        ]
+    });
 }

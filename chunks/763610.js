@@ -1,48 +1,46 @@
-"use strict";
-t.d(n, {
-  Z: function() {
-    return c
-  }
+s.d(l, {
+    Z: function () {
+        return d;
+    }
 });
-var l = t(735250),
-  a = t(470079),
-  s = t(120356),
-  i = t.n(s),
-  r = t(481060),
-  u = t(53281),
-  o = t(383638);
-
-function c(e) {
-  let {
-    filename: n,
-    className: t,
-    filters: s,
-    buttonText: c,
-    placeholder: d,
-    onFileSelect: f
-  } = e, m = a.useRef(null);
-  return (0, l.jsxs)("div", {
-    className: i()(t, o.fileUpload),
-    children: [(0, l.jsx)("input", {
-      className: o.fileUploadInput,
-      tabIndex: -1,
-      readOnly: !0,
-      placeholder: d,
-      type: "text",
-      value: n
-    }), (0, l.jsxs)(r.Button, {
-      size: r.Button.Sizes.MIN,
-      className: o.fileUploadButton,
-      children: [c, (0, l.jsx)(u.Z, {
-        ref: m,
-        tabIndex: -1,
-        onChange: e => {
-          var n;
-          f(null === (n = e.currentTarget.files) || void 0 === n ? void 0 : n[0])
-        },
-        multiple: !1,
-        filters: s
-      })]
-    })]
-  })
+var t = s(735250), n = s(470079), i = s(120356), a = s.n(i), o = s(481060), r = s(53281), u = s(831001);
+function d(e) {
+    let {
+            filename: l,
+            className: s,
+            filters: i,
+            buttonText: d,
+            placeholder: c,
+            onFileSelect: I
+        } = e, m = n.useRef(null);
+    return (0, t.jsxs)('div', {
+        className: a()(s, u.fileUpload),
+        children: [
+            (0, t.jsx)('input', {
+                className: u.fileUploadInput,
+                tabIndex: -1,
+                readOnly: !0,
+                placeholder: c,
+                type: 'text',
+                value: l
+            }),
+            (0, t.jsxs)(o.Button, {
+                size: o.Button.Sizes.MIN,
+                className: u.fileUploadButton,
+                children: [
+                    d,
+                    (0, t.jsx)(r.Z, {
+                        ref: m,
+                        tabIndex: -1,
+                        onChange: e => {
+                            var l;
+                            I(null === (l = e.currentTarget.files) || void 0 === l ? void 0 : l[0]);
+                        },
+                        multiple: !1,
+                        filters: i
+                    })
+                ]
+            })
+        ]
+    });
 }

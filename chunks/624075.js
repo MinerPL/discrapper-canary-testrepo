@@ -1,38 +1,33 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
-}), n(47120);
-var i = n(191532);
-
-function r(e, t, n, r) {
-  let s = (0, i.Z)(e, t, r),
-    o = (e, t) => n.computeScrollPosition(e, t);
-  return {
-    ...s,
-    getScrollPosition: o,
-    isItemVisible(e, n) {
-      let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        [r, s] = o(e, n),
-        a = t();
-      return i ? r >= a.scrollTop && r + s <= a.scrollTop + a.offsetHeight : r + s >= a.scrollTop && r <= a.scrollTop + a.offsetHeight
-    },
-    scrollToIndex(e) {
-      let {
-        section: t,
-        row: n,
-        animate: i,
-        callback: r,
-        padding: a = 0
-      } = e, [l, u] = o(t, n);
-      s.scrollIntoViewRect({
-        start: l,
-        end: l + u,
-        padding: a,
-        animate: i,
-        callback: r
-      })
+    Z: function () {
+        return i;
     }
-  }
+}), n(47120);
+var r = n(191532);
+function i(e, t, n, i) {
+    let a = (0, r.Z)(e, t, i), o = (e, t) => n.computeScrollPosition(e, t);
+    return {
+        ...a,
+        getScrollPosition: o,
+        isItemVisible(e, n) {
+            let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], [i, a] = o(e, n), s = t();
+            return r ? i >= s.scrollTop && i + a <= s.scrollTop + s.offsetHeight : i + a >= s.scrollTop && i <= s.scrollTop + s.offsetHeight;
+        },
+        scrollToIndex(e) {
+            let {
+                    section: t,
+                    row: n,
+                    animate: r,
+                    callback: i,
+                    padding: s = 0
+                } = e, [l, u] = o(t, n);
+            a.scrollIntoViewRect({
+                start: l,
+                end: l + u,
+                padding: s,
+                animate: r,
+                callback: i
+            });
+        }
+    };
 }

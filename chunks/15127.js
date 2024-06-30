@@ -1,34 +1,30 @@
-"use strict";
 n.d(t, {
-  Gc: function() {
-    return o
-  },
-  ol: function() {
-    return a
-  },
-  q3: function() {
-    return s
-  }
+    Gc: function () {
+        return o;
+    },
+    ol: function () {
+        return s;
+    },
+    q3: function () {
+        return a;
+    }
 });
-var i = n(735250),
-  r = n(470079);
-let s = r.createContext({
-  titleId: void 0,
-  errorId: void 0,
-  error: void 0
+var r = n(735250), i = n(470079);
+let a = i.createContext({
+    titleId: void 0,
+    errorId: void 0,
+    error: void 0
 });
-
 function o() {
-  return r.useContext(s)
+    return i.useContext(a);
 }
-
-function a(e) {
-  let {
-    children: t,
-    ...n
-  } = e;
-  return (0, i.jsx)(s.Provider, {
-    value: n,
-    children: t
-  })
+function s(e) {
+    let {
+        children: t,
+        ...n
+    } = e;
+    return (0, r.jsx)(a.Provider, {
+        value: n,
+        children: t
+    });
 }

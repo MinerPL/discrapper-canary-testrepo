@@ -1,11 +1,9 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return i;
+    }
 });
-var i = n(963202);
-
-function r(e) {
-  return (0, i.It)(e).clanTagsVisible
+var r = n(963202);
+function i(e) {
+    return (0, r.It)(e).clanTagsVisible;
 }

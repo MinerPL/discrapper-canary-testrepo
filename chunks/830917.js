@@ -1,26 +1,22 @@
-"use strict";
 n.d(t, {
-  Ig: function() {
-    return s
-  },
-  UU: function() {
-    return o
-  },
-  ZY: function() {
-    return r
-  }
+    Ig: function () {
+        return a;
+    },
+    UU: function () {
+        return o;
+    },
+    ZY: function () {
+        return i;
+    }
 });
-var i = n(392711);
-
-function r(e) {
-  return e.__DISCORD_WINDOW_ID
+var r = n(392711);
+function i(e) {
+    return e.__DISCORD_WINDOW_ID;
 }
-
-function s(e) {
-  let t = (0, i.uniqueId)("window-");
-  return e.__DISCORD_WINDOW_ID = t, t
+function a(e) {
+    let t = (0, r.uniqueId)('window-');
+    return e.__DISCORD_WINDOW_ID = t, t;
 }
-
 function o() {
-  return r(window)
+    return i(window);
 }

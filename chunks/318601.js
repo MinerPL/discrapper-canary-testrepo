@@ -1,0 +1,1 @@
+e.exports = t.p + 'b757b0a279a0228ff837.svg';

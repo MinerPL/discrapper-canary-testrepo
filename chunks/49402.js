@@ -1,60 +1,61 @@
-"use strict";
 n.d(t, {
-  I: function() {
-    return u
-  }
+    I: function () {
+        return u;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(803997),
-  o = n.n(s),
-  a = n(789978),
-  l = n(780900);
-
+var r = n(735250), i = n(470079), a = n(803997), o = n.n(a), s = n(789978), l = n(780900);
 function u(e, t, n) {
-  let s = (0, l.G6)(e);
-  return r.forwardRef(function(u, _) {
-    let {
-      children: d,
-      className: c,
-      dir: E = "ltr",
-      orientation: I = "vertical",
-      fade: T = !1,
-      customTheme: h = !1,
-      paddingFix: S = !0,
-      style: f,
-      ...N
-    } = u, {
-      scrollerRef: A,
-      getScrollerState: m
-    } = (0, l.Ke)(), O = (0, l.t2)(A, I);
-    r.useImperativeHandle(_, () => ({
-      getScrollerNode: () => A.current,
-      getScrollerState: m,
-      ...(0, l.Ue)(A, m, O, I)
-    }), [A, m, I, O]);
-    let R = (0, l.tT)({
-      paddingFix: S,
-      orientation: I,
-      dir: E,
-      className: c,
-      scrollerRef: A,
-      specs: s
+    let a = (0, l.G6)(e);
+    return i.forwardRef(function (u, c) {
+        let {
+                children: d,
+                className: _,
+                dir: E = 'ltr',
+                orientation: f = 'vertical',
+                fade: h = !1,
+                customTheme: p = !1,
+                paddingFix: m = !0,
+                style: I,
+                ...T
+            } = u, {
+                scrollerRef: g,
+                getScrollerState: S
+            } = (0, l.Ke)(), A = (0, l.t2)(g, f);
+        i.useImperativeHandle(c, () => ({
+            getScrollerNode: () => g.current,
+            getScrollerState: S,
+            ...(0, l.Ue)(g, S, A, f)
+        }), [
+            g,
+            S,
+            f,
+            A
+        ]);
+        let N = (0, l.tT)({
+            paddingFix: m,
+            orientation: f,
+            dir: E,
+            className: _,
+            scrollerRef: g,
+            specs: a
+        });
+        return (0, r.jsx)('div', {
+            ref: g,
+            className: o()(_, {
+                [e]: !0,
+                [t]: h,
+                [n]: p
+            }),
+            style: (0, l.uT)(I, f),
+            dir: E,
+            ...T,
+            children: (0, r.jsxs)(s.Jc, {
+                containerRef: g,
+                children: [
+                    d,
+                    N
+                ]
+            })
+        });
     });
-    return (0, i.jsx)("div", {
-      ref: A,
-      className: o()(c, {
-        [e]: !0,
-        [t]: T,
-        [n]: h
-      }),
-      style: (0, l.uT)(f, I),
-      dir: E,
-      ...N,
-      children: (0, i.jsxs)(a.Jc, {
-        containerRef: A,
-        children: [d, R]
-      })
-    })
-  })
 }

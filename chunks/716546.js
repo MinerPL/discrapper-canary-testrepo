@@ -1,64 +1,60 @@
-"use strict";
 n(47120);
-var i = n(668781),
-  r = n(998502),
-  s = n(58406),
-  o = n(761274);
-
-function a(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: n,
-    enumerable: !0,
-    configurable: !0,
-    writable: !0
-  }) : e[t] = n, e
+var r = n(668781), i = n(998502), a = n(58406), o = n(761274);
+function s(e, t, n) {
+    return t in e ? Object.defineProperty(e, t, {
+        value: n,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+    }) : e[t] = n, e;
 }
-class l extends s.g {
-  requestPermissionCore(e, t) {
-    var n;
-    return this.asyncify(null === (n = this.nativeUtils) || void 0 === n ? void 0 : n.nativePermssionRequestAuthorization, e, t)
-  }
-  hasPermissionCore(e, t) {
-    var n;
-    return this.asyncify(null === (n = this.nativeUtils) || void 0 === n ? void 0 : n.nativePermssionHasAuthorization, e, t)
-  }
-  asyncify(e, t, n) {
-    let i = l.requestTypeLookup[t];
-    return void 0 === i ? Promise.resolve(!0) : this.requestAuthorization(t, () => null == e ? Promise.resolve(o.NZ.AUTHORIZED) : new Promise((t, n) => e(t, i)), n)
-  }
-  openSettings(e) {
-    var t;
-    if ((null === (t = this.nativeUtils) || void 0 === t ? void 0 : t.nativePermissionOpenSettings) == null) return;
-    let n = l.requestTypeLookup[e];
-    void 0 !== n && this.nativeUtils.nativePermissionOpenSettings(n)
-  }
-  didHavePermission(e) {
-    return this.storage.hasPermission(e)
-  }
-  openAlertModal(e) {
-    let {
-      title: t,
-      body: n,
-      onConfirm: r,
-      cancelText: s,
-      confirmText: o
-    } = e;
-    i.Z.show({
-      title: t,
-      body: n,
-      onConfirm: r,
-      cancelText: s,
-      confirmText: o
-    })
-  }
-  constructor(...e) {
-    super(...e), a(this, "nativeUtils", r.ZP.getDiscordUtils())
-  }
+class l extends a.g {
+    requestPermissionCore(e, t) {
+        var n;
+        return this.asyncify(null === (n = this.nativeUtils) || void 0 === n ? void 0 : n.nativePermssionRequestAuthorization, e, t);
+    }
+    hasPermissionCore(e, t) {
+        var n;
+        return this.asyncify(null === (n = this.nativeUtils) || void 0 === n ? void 0 : n.nativePermssionHasAuthorization, e, t);
+    }
+    asyncify(e, t, n) {
+        let r = l.requestTypeLookup[t];
+        return void 0 === r ? Promise.resolve(!0) : this.requestAuthorization(t, () => null == e ? Promise.resolve(o.NZ.AUTHORIZED) : new Promise((t, n) => e(t, r)), n);
+    }
+    openSettings(e) {
+        var t;
+        if ((null === (t = this.nativeUtils) || void 0 === t ? void 0 : t.nativePermissionOpenSettings) == null)
+            return;
+        let n = l.requestTypeLookup[e];
+        void 0 !== n && this.nativeUtils.nativePermissionOpenSettings(n);
+    }
+    didHavePermission(e) {
+        return this.storage.hasPermission(e);
+    }
+    openAlertModal(e) {
+        let {
+            title: t,
+            body: n,
+            onConfirm: i,
+            cancelText: a,
+            confirmText: o
+        } = e;
+        r.Z.show({
+            title: t,
+            body: n,
+            onConfirm: i,
+            cancelText: a,
+            confirmText: o
+        });
+    }
+    constructor(...e) {
+        super(...e), s(this, 'nativeUtils', i.ZP.getDiscordUtils());
+    }
 }
-a(l, "requestTypeLookup", {
-  [o.Eu.CAMERA]: r.jK.Camera,
-  [o.Eu.AUDIO]: r.jK.Microphone,
-  [o.Eu.PHOTOS]: r.jK.Photo,
-  [o.Eu.INPUT_MONITORING]: r.jK.InputMonitoring,
-  [o.Eu.SCREEN_RECORDING]: r.jK.ScreenRecording
-}), t.Z = new l
+s(l, 'requestTypeLookup', {
+    [o.Eu.CAMERA]: i.jK.Camera,
+    [o.Eu.AUDIO]: i.jK.Microphone,
+    [o.Eu.PHOTOS]: i.jK.Photo,
+    [o.Eu.INPUT_MONITORING]: i.jK.InputMonitoring,
+    [o.Eu.SCREEN_RECORDING]: i.jK.ScreenRecording
+}), t.Z = new l();

@@ -1,44 +1,38 @@
-"use strict";
 n.d(t, {
-  D: function() {
-    return _
-  }
+    D: function () {
+        return c;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(507274),
-  l = n(838331),
-  u = n(837507);
-
-function _(e) {
-  let {
-    children: t,
-    placeholder: n,
-    value: s,
-    onChange: _,
-    onClose: d,
-    showScrollbar: c,
-    className: E,
-    multiSelect: I,
-    ...T
-  } = e, h = r.useCallback(e => {
-    _(e), !I && (null == d || d())
-  }, [_, d, I]);
-  return (0, i.jsx)(a.V, {
-    className: o()(u.container, E, {
-      [u.scroller]: c
-    }),
-    children: (0, i.jsx)(l.hQ, {
-      ...T,
-      showScrollbar: c,
-      value: s,
-      multiSelect: I,
-      onChange: h,
-      placeholder: n,
-      children: t,
-      listClassName: u.list
-    })
-  })
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(507274), l = n(838331), u = n(990736);
+function c(e) {
+    let {
+            children: t,
+            placeholder: n,
+            value: a,
+            onChange: c,
+            onClose: d,
+            showScrollbar: _,
+            className: E,
+            multiSelect: f,
+            ...h
+        } = e, p = i.useCallback(e => {
+            c(e), !f && (null == d || d());
+        }, [
+            c,
+            d,
+            f
+        ]);
+    return (0, r.jsx)(s.V, {
+        className: o()(u.container, E, { [u.scroller]: _ }),
+        children: (0, r.jsx)(l.hQ, {
+            ...h,
+            showScrollbar: _,
+            value: a,
+            multiSelect: f,
+            onChange: p,
+            placeholder: n,
+            children: t,
+            listClassName: u.list
+        })
+    });
 }

@@ -1,185 +1,34 @@
-"use strict";
-n(47120);
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(442837),
-  l = n(481060),
-  u = n(570140),
-  _ = n(475179),
-  d = n(925549),
-  c = n(37234),
-  E = n(835473),
-  I = n(358221),
-  T = n(928518),
-  h = n(703656),
-  S = n(607187),
-  f = n(937995),
-  N = n(366050),
-  A = n(944486),
-  m = n(594174),
-  O = n(566620),
-  R = n(317381),
-  C = n(963614),
-  p = n(917107),
-  g = n(208156),
-  L = n(748492),
-  v = n(350064),
-  D = n(701488),
-  M = n(918559),
-  P = n(981631),
-  y = n(354459),
-  U = n(323926),
-  b = n(376838),
-  G = n(661781);
-
-function w(e) {
-  var t, n;
-  let {
-    channel: s,
-    isLoading: v
-  } = e, [w, k] = r.useState(!1), B = (0, a.e7)([R.ZP], () => R.ZP.getSelfEmbeddedActivityForChannel(s.id)), x = (0, a.e7)([R.ZP], () => R.ZP.getActivityPanelMode()), V = (0, E.q)(null == B ? void 0 : B.applicationId), Z = null == B ? void 0 : B.launchId, H = (0, a.e7)([A.Z], () => A.Z.getChannelId() === s.id), {
-    dockedRect: F,
-    isHidden: Y
-  } = (0, a.cj)([N.Z], () => {
-    let e = N.Z.pipWindow;
-    return {
-      dockedRect: null != e ? N.Z.getDockedRect(e.id) : null,
-      isHidden: N.Z.isEmbeddedActivityHidden()
+n.d(t, {
+    I: function () {
+        return s;
     }
-  }), j = (0, a.e7)([T.Z], () => T.Z.getWindow(P.KJ3.CHANNEL_CALL_POPOUT)), {
-    activityParticipant: W,
-    selectedParticipant: K,
-    participantsOpen: z
-  } = (0, a.cj)([I.Z], () => ({
-    activityParticipant: null != B ? I.Z.getParticipant(s.id, B.applicationId) : null,
-    selectedParticipant: I.Z.getSelectedParticipant(s.id),
-    participantsOpen: I.Z.getParticipantsOpen(s.id)
-  })), q = H || null != j, X = (0, p.Z)(s.id), Q = X && (null == K ? void 0 : K.type) !== y.fO.ACTIVITY, J = !X && x === M.Ez.PIP, $ = (!q || q && (Q || J) && null == F) && !Y, ee = $ && null != N.Z.pipVideoWindow && null != N.Z.pipActivityWindow;
-
-  function et() {
-    var e;
-    null != B && _.Z.selectParticipant(s.id, B.applicationId);
-    let t = null !== (e = s.getGuildId()) && void 0 !== e ? e : P.ME;
-    d.Z.channelListScrollTo(t, s.id), (0, h.XU)(t, s.id), null == j && (0, c.Ou)()
-  }
-
-  function en() {
-    k(!w)
-  }
-  r.useEffect(() => {
-    if ((null == B ? void 0 : B.applicationId) != null) {
-      let e = $ ? D.cE.PIP : D.cE.FOCUSED;
-      u.Z.dispatch({
-        type: "ACTIVITY_LAYOUT_MODE_UPDATE",
-        layoutMode: e,
-        applicationId: B.applicationId
-      })
-    }
-  }, [null == B ? void 0 : B.applicationId, $]);
-  if (null == B || null == Z || null == W && (0, p.Z)(s.id) || null == V) return null;
-  let ei = Array.from(B.userIds).map(e => m.default.getUser(e)).filter(e => null != e),
-    er = {
-      instance_id: null !== (n = null !== (t = B.compositeInstanceId) && void 0 !== t ? t : B.launchId) && void 0 !== n ? n : "",
-      channel_id: s.id
-    };
-  return null != s.guild_id && "" !== s.guild_id && (er.guild_id = s.guild_id), (0, i.jsx)(f.ZP, {
-    timeout: 2e3,
-    children: e => {
-      var t, n, r, a, u, _, d, c;
-      let {
-        idle: E,
-        onActive: I,
-        onForceIdle: T
-      } = e;
-      return (0, i.jsxs)(S.Z, {
-        className: o()(U.root, {
-          [U.pipMode]: $,
-          [G.elevationHigh]: $,
-          [b.idle]: E && !(null === (t = B.config) || void 0 === t ? void 0 : t.useInteractivePIP),
-          [U.pipModeShort]: $ && !w,
-          [U.pipModeTall]: $ && w,
-          [U.hidden]: Y,
-          [U.multiPIPMode]: ee
-        }),
-        noBorder: !$,
-        children: [(r = I, a = T, u = E, _ = J, d = ei, $ && null != B && ((null == W ? void 0 : W.type) === y.fO.ACTIVITY || _) ? (null === (c = B.config) || void 0 === c ? void 0 : c.useInteractivePIP) ? (0, i.jsx)(L.of, {
-          onJumpToChannel: et,
-          applicationId: B.applicationId,
-          channel: s,
-          showControls: !u,
-          onMouseDown: r,
-          onMouseMove: r,
-          onMouseLeave: a,
-          onToggleHeight: en,
-          isExpanded: w,
-          hideExpandedButton: _
-        }) : _ ? (0, i.jsx)(i.Fragment, {
-          children: (0, i.jsx)(L.q5, {
-            idle: u,
-            onMouseMove: r,
-            onMouseDown: r,
-            onMouseLeave: a,
-            onJumpToChannel: () => {
-              et(), (0, O.tg)(M.Ez.PANEL)
-            },
-            channel: s,
-            applicationId: B.applicationId,
-            users: d
-          })
-        }) : null == W ? null : (0, i.jsxs)(i.Fragment, {
-          children: [(0, i.jsx)("div", {
-            onMouseMove: r,
-            onMouseDown: r,
-            onMouseLeave: a,
-            className: U.clickShield,
-            onDoubleClick: et
-          }), (0, i.jsx)(L.YB, {
-            idle: u,
-            onMouseMove: r,
-            onMouseDown: r,
-            onMouseLeave: a,
-            onJumpToChannel: et,
-            channel: s,
-            applicationId: B.applicationId,
-            selectedParticipant: W
-          })]
-        }) : null), v ? (0, i.jsx)(l.Spinner, {
-          className: o()(U.iframe, {
-            [U.pipModeShort]: $ && !w,
-            [U.pipModeTall]: $ && w
-          })
-        }) : (0, i.jsx)(g.J, {
-          allowPopups: (0, C.h)(V),
-          referrerPolicy: D.um.has(B.applicationId) ? "no-referrer" : "origin",
-          url: B.url,
-          queryParams: er,
-          className: o()(U.iframe, {
-            [U.pipModeShort]: $ && !w,
-            [U.pipModeTall]: $ && w,
-            [U.pipNonInteractive]: $ && !(null === (n = B.config) || void 0 === n ? void 0 : n.useInteractivePIP)
-          }),
-          shouldRefocus: !$ && H
-        }), !$ && (0, i.jsx)(L.Ds, {
-          participantsOpen: z,
-          showToggleParticipants: !1,
-          channelId: s.id
-        })]
-      })
-    }
-  })
-}
-t.Z = e => {
-  let {
-    channel: t,
-    ...n
-  } = e, {
-    isLoading: r
-  } = (0, v.$)(t);
-  return (0, i.jsx)(w, {
-    channel: t,
-    isLoading: r,
-    ...n
-  })
-}
+});
+var r = n(735250);
+n(470079);
+var i = n(692547), a = n(331595), o = n(267843);
+let s = e => {
+    var t, n;
+    let {
+            size: s = 'md',
+            width: l,
+            height: u,
+            color: c = i.Z.colors.INTERACTIVE_NORMAL,
+            colorClass: d = '',
+            ..._
+        } = e, E = (0, o.m)(s), f = null !== (t = null == E ? void 0 : E.width) && void 0 !== t ? t : l, h = null !== (n = null == E ? void 0 : E.height) && void 0 !== n ? n : u;
+    return (0, r.jsx)('svg', {
+        ...(0, a.Z)(_),
+        xmlns: 'http://www.w3.org/2000/svg',
+        width: f,
+        height: h,
+        fill: 'none',
+        viewBox: '0 0 24 24',
+        children: (0, r.jsx)('path', {
+            fill: 'string' == typeof c ? c : c.css,
+            fillRule: 'evenodd',
+            d: 'M5 2a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3H5Zm6.81 7c-.54 0-1 .26-1.23.61A1 1 0 0 1 8.92 8.5 3.49 3.49 0 0 1 11.82 7c1.81 0 3.43 1.38 3.43 3.25 0 1.45-.98 2.61-2.27 3.06a1 1 0 0 1-1.96.37l-.19-1a1 1 0 0 1 .98-1.18c.87 0 1.44-.63 1.44-1.25S12.68 9 11.81 9ZM13 16a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm7-10.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM18.5 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM7 18.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM5.5 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z',
+            clipRule: 'evenodd',
+            className: d
+        })
+    });
+};

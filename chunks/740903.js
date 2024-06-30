@@ -1,7 +1,6 @@
-"use strict";
-var n, i;
-t.d(s, {
-  u: function() {
-    return n
-  }
-}), (i = n || (n = {}))[i.OVERVIEW = 0] = "OVERVIEW", i[i.CAPTCHA_AND_RAID_PROTECTION = 1] = "CAPTCHA_AND_RAID_PROTECTION", i[i.DM_AND_SPAM_PROTECTION = 2] = "DM_AND_SPAM_PROTECTION", i[i.AUTOMOD = 3] = "AUTOMOD", i[i.PERMISSIONS = 4] = "PERMISSIONS"
+var s, a;
+n.d(t, {
+    u: function () {
+        return s;
+    }
+}), (a = s || (s = {}))[a.OVERVIEW = 0] = 'OVERVIEW', a[a.CAPTCHA_AND_RAID_PROTECTION = 1] = 'CAPTCHA_AND_RAID_PROTECTION', a[a.DM_AND_SPAM_PROTECTION = 2] = 'DM_AND_SPAM_PROTECTION', a[a.AUTOMOD = 3] = 'AUTOMOD', a[a.PERMISSIONS = 4] = 'PERMISSIONS';

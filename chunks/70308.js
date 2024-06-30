@@ -1,111 +1,94 @@
-"use strict";
 n.d(t, {
-  I: function() {
-    return I
-  }
+    I: function () {
+        return f;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(920906),
-  o = n(442837),
-  a = n(607070),
-  l = n(345332),
-  u = n(417153),
-  _ = n(561466),
-  d = n(775725);
-let c = {
-    duration: 300,
-    friction: 24,
-    tension: 280
-  },
-  E = {
-    [_.az.TOP]: {
-      styles: d.containerTop,
-      transition: {
-        trail: 400,
-        from: {
-          transform: "translate3d(0, -100%, 0)",
-          opacity: 0,
-          config: c
+var r = n(735250), i = n(470079), a = n(920906), o = n(442837), s = n(607070), l = n(345332), u = n(417153), c = n(561466), d = n(550919);
+let _ = {
+        duration: 300,
+        friction: 24,
+        tension: 280
+    }, E = {
+        [c.az.TOP]: {
+            styles: d.containerTop,
+            transition: {
+                trail: 400,
+                from: {
+                    transform: 'translate3d(0, -100%, 0)',
+                    opacity: 0,
+                    config: _
+                },
+                enter: {
+                    transform: 'translate3d(0, -0px, 0)',
+                    opacity: 1,
+                    config: _
+                },
+                leave: {
+                    transform: 'translate3d(0, -100%, 0)',
+                    opacity: 0,
+                    config: {
+                        ..._,
+                        friction: 40,
+                        clamp: !0
+                    }
+                }
+            }
         },
-        enter: {
-          transform: "translate3d(0, -0px, 0)",
-          opacity: 1,
-          config: c
-        },
-        leave: {
-          transform: "translate3d(0, -100%, 0)",
-          opacity: 0,
-          config: {
-            ...c,
-            friction: 40,
-            clamp: !0
-          }
+        [c.az.BOTTOM]: {
+            styles: d.containerBottom,
+            transition: {
+                trail: 400,
+                from: {
+                    transform: 'translate3d(0, 100%, 0)',
+                    opacity: 0,
+                    config: _
+                },
+                enter: {
+                    transform: 'translate3d(0, 0px, 0)',
+                    opacity: 1,
+                    config: _
+                },
+                leave: {
+                    transform: 'translate3d(0, 100%, 0)',
+                    opacity: 0,
+                    config: {
+                        ..._,
+                        friction: 40,
+                        clamp: !0
+                    }
+                }
+            }
         }
-      }
-    },
-    [_.az.BOTTOM]: {
-      styles: d.containerBottom,
-      transition: {
-        trail: 400,
-        from: {
-          transform: "translate3d(0, 100%, 0)",
-          opacity: 0,
-          config: c
-        },
-        enter: {
-          transform: "translate3d(0, 0px, 0)",
-          opacity: 1,
-          config: c
-        },
-        leave: {
-          transform: "translate3d(0, 100%, 0)",
-          opacity: 0,
-          config: {
-            ...c,
-            friction: 40,
-            clamp: !0
-          }
+    };
+function f() {
+    var e, t, n, d;
+    let _ = (0, u.Es)(e => e.currentToast), f = i.useRef(null !== (n = null == _ ? void 0 : null === (e = _.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : c.si.position), h = i.useRef(null !== (d = null == _ ? void 0 : null === (t = _.options) || void 0 === t ? void 0 : t.duration) && void 0 !== d ? d : c.si.duration), p = (0, o.e7)([s.Z], () => s.Z.useReducedMotion);
+    i.useEffect(() => {
+        if (null != _) {
+            var e, t, n, r;
+            f.current = null !== (n = null === (e = _.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : c.si.position, h.current = null !== (r = null === (t = _.options) || void 0 === t ? void 0 : t.duration) && void 0 !== r ? r : c.si.duration;
         }
-      }
-    }
-  };
-
-function I() {
-  var e, t, n, d;
-  let c = (0, u.Es)(e => e.currentToast),
-    I = r.useRef(null !== (n = null == c ? void 0 : null === (e = c.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : _.si.position),
-    T = r.useRef(null !== (d = null == c ? void 0 : null === (t = c.options) || void 0 === t ? void 0 : t.duration) && void 0 !== d ? d : _.si.duration),
-    h = (0, o.e7)([a.Z], () => a.Z.useReducedMotion);
-  r.useEffect(() => {
-    if (null != c) {
-      var e, t, n, i;
-      I.current = null !== (n = null === (e = c.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : _.si.position, T.current = null !== (i = null === (t = c.options) || void 0 === t ? void 0 : t.duration) && void 0 !== i ? i : _.si.duration
-    }
-  }, [c]);
-  let S = r.useMemo(() => {
-      var e, t;
-      return E[null !== (t = null == c ? void 0 : null === (e = c.options) || void 0 === e ? void 0 : e.position) && void 0 !== t ? t : I.current]
-    }, [c]),
-    f = (0, s.useTransition)(c, {
-      keys: e => {
-        var t;
-        return null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : ""
-      },
-      immediate: h,
-      ...S.transition
+    }, [_]);
+    let m = i.useMemo(() => {
+            var e, t;
+            return E[null !== (t = null == _ ? void 0 : null === (e = _.options) || void 0 === e ? void 0 : e.position) && void 0 !== t ? t : f.current];
+        }, [_]), I = (0, a.useTransition)(_, {
+            keys: e => {
+                var t;
+                return null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : '';
+            },
+            immediate: p,
+            ...m.transition
+        });
+    return i.useEffect(() => {
+        null != _ && setTimeout(() => {
+            (0, u.z5)();
+        }, h.current);
+    }, [_]), (0, r.jsx)('div', {
+        className: m.styles,
+        children: I((e, t) => null === t ? null : (0, r.jsx)(a.animated.div, {
+            style: e,
+            children: (0, r.jsx)(l.F, { ...t })
+        }, t.id))
     });
-  return r.useEffect(() => {
-    null != c && setTimeout(() => {
-      (0, u.z5)()
-    }, T.current)
-  }, [c]), (0, i.jsx)("div", {
-    className: S.styles,
-    children: f((e, t) => null === t ? null : (0, i.jsx)(s.animated.div, {
-      style: e,
-      children: (0, i.jsx)(l.F, {
-        ...t
-      })
-    }, t.id))
-  })
 }

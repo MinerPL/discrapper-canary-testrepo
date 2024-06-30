@@ -1,34 +1,31 @@
-"use strict";
-var r = n(347941),
-  i = Object.prototype.hasOwnProperty;
-t.Z = function(e, t, n, a, o, s) {
-  var u = 1 & n,
-    c = (0, r.Z)(e),
-    l = c.length;
-  if (l != (0, r.Z)(t).length && !u) return !1;
-  for (var d = l; d--;) {
-    var f = c[d];
-    if (!(u ? f in t : i.call(t, f))) return !1
-  }
-  var p = s.get(e),
-    h = s.get(t);
-  if (p && h) return p == t && h == e;
-  var m = !0;
-  s.set(e, t), s.set(t, e);
-  for (var g = u; ++d < l;) {
-    var _ = e[f = c[d]],
-      b = t[f];
-    if (a) var v = u ? a(b, _, f, t, e, s) : a(_, b, f, e, t, s);
-    if (!(void 0 === v ? _ === b || o(_, b, n, a, s) : v)) {
-      m = !1;
-      break
+var r = n(347941), i = Object.prototype.hasOwnProperty;
+t.Z = function (e, t, n, a, o, s) {
+    var l = 1 & n, u = (0, r.Z)(e), c = u.length;
+    if (c != (0, r.Z)(t).length && !l)
+        return !1;
+    for (var d = c; d--;) {
+        var _ = u[d];
+        if (!(l ? _ in t : i.call(t, _)))
+            return !1;
     }
-    g || (g = "constructor" == f)
-  }
-  if (m && !g) {
-    var y = e.constructor,
-      E = t.constructor;
-    y != E && "constructor" in e && "constructor" in t && !("function" == typeof y && y instanceof y && "function" == typeof E && E instanceof E) && (m = !1)
-  }
-  return s.delete(e), s.delete(t), m
-}
+    var E = s.get(e), f = s.get(t);
+    if (E && f)
+        return E == t && f == e;
+    var h = !0;
+    s.set(e, t), s.set(t, e);
+    for (var p = l; ++d < c;) {
+        var m = e[_ = u[d]], I = t[_];
+        if (a)
+            var T = l ? a(I, m, _, t, e, s) : a(m, I, _, e, t, s);
+        if (!(void 0 === T ? m === I || o(m, I, n, a, s) : T)) {
+            h = !1;
+            break;
+        }
+        p || (p = 'constructor' == _);
+    }
+    if (h && !p) {
+        var g = e.constructor, S = t.constructor;
+        g != S && 'constructor' in e && 'constructor' in t && !('function' == typeof g && g instanceof g && 'function' == typeof S && S instanceof S) && (h = !1);
+    }
+    return s.delete(e), s.delete(t), h;
+};

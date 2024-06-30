@@ -1,63 +1,55 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return d
-  }
-});
-var i = n(735250);
-n(470079);
-var r = n(120356),
-  s = n.n(r),
-  o = n(481060),
-  a = n(432247),
-  l = n(5192),
-  u = n(829820),
-  _ = n(22387);
-
-function d(e) {
-  let {
-    activity: t,
-    user: n,
-    channelId: r,
-    guildId: d,
-    source: c,
-    size: E,
-    look: I,
-    color: T,
-    className: h,
-    onAction: S
-  } = e, {
-    tooltip: f,
-    loading: N,
-    disabled: A,
-    onClick: m
-  } = (0, u.Fe)(t, n, c, l.ZP.getNickname(d, r, n)), O = () => {
-    null == S || S(), m()
-  };
-  return (0, i.jsx)(o.Tooltip, {
-    text: f,
-    children: e => {
-      let {
-        onMouseEnter: n,
-        onMouseLeave: r
-      } = e;
-      return (0, i.jsx)(o.Button, {
-        size: E,
-        className: s()(_.syncButton, h),
-        innerClassName: _.syncButtonInner,
-        look: I,
-        color: T,
-        onClick: O,
-        onMouseEnter: n,
-        onMouseLeave: r,
-        disabled: A,
-        submitting: N,
-        "aria-label": null != f ? f : t.name,
-        children: (0, i.jsx)(a.Z, {
-          width: 16,
-          height: 16
-        })
-      })
+    Z: function () {
+        return c;
     }
-  })
+});
+var r = n(735250);
+n(470079);
+var i = n(120356), a = n.n(i), o = n(481060), s = n(5192), l = n(829820), u = n(171509);
+function c(e) {
+    let {
+            activity: t,
+            user: n,
+            channelId: i,
+            guildId: c,
+            source: d,
+            size: _,
+            look: E,
+            color: f,
+            className: h,
+            onAction: p
+        } = e, {
+            tooltip: m,
+            loading: I,
+            disabled: T,
+            onClick: g
+        } = (0, l.Fe)(t, n, d, s.ZP.getNickname(c, i, n)), S = () => {
+            null == p || p(), g();
+        };
+    return (0, r.jsx)(o.Tooltip, {
+        text: m,
+        children: e => {
+            let {
+                onMouseEnter: n,
+                onMouseLeave: i
+            } = e;
+            return (0, r.jsx)(o.Button, {
+                size: _,
+                className: a()(u.syncButton, h),
+                innerClassName: u.syncButtonInner,
+                look: E,
+                color: f,
+                onClick: S,
+                onMouseEnter: n,
+                onMouseLeave: i,
+                disabled: T,
+                submitting: I,
+                'aria-label': null != m ? m : t.name,
+                children: (0, r.jsx)(o.UserPlayIcon, {
+                    size: 'xs',
+                    color: 'currentColor'
+                })
+            });
+        }
+    });
 }

@@ -1,113 +1,94 @@
-"use strict";
 n(47120);
-var i, r = n(442837),
-  s = n(570140),
-  o = n(797258),
-  a = n(979651);
-
+var r, i = n(442837), a = n(570140), o = n(797258), s = n(979651);
 function l(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: n,
-    enumerable: !0,
-    configurable: !0,
-    writable: !0
-  }) : e[t] = n, e
+    return t in e ? Object.defineProperty(e, t, {
+        value: n,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+    }) : e[t] = n, e;
 }
-let u = null,
-  _ = null,
-  d = new Set,
-  c = {},
-  E = {},
-  I = new Set,
-  T = Object.freeze({});
-class h extends(i = r.ZP.DeviceSettingsStore) {
-  initialize(e) {
-    null != e && (E = e.lastSelectedDeviceByPlatform), this.waitFor(o.Z, a.Z)
-  }
-  getUserAgnosticState() {
-    return {
-      lastSelectedDeviceByPlatform: E
+let u = null, c = null, d = new Set(), _ = {}, E = {}, f = new Set(), h = Object.freeze({});
+class p extends (r = i.ZP.DeviceSettingsStore) {
+    initialize(e) {
+        null != e && (E = e.lastSelectedDeviceByPlatform), this.waitFor(o.Z, s.Z);
     }
-  }
-  getDevicesForPlatform(e) {
-    var t;
-    return null !== (t = c[e]) && void 0 !== t ? t : T
-  }
-  getLastSelectedDeviceByPlatform(e) {
-    return E[e]
-  }
-  getDevice(e, t) {
-    var n;
-    return null === (n = c[e]) || void 0 === n ? void 0 : n[t]
-  }
-  getFetchingDevices(e) {
-    return I.has(e)
-  }
-  getPendingDeviceCommands() {
-    return d
-  }
-  getRemoteSessionId() {
-    return u
-  }
-  getAwaitingRemoteSessionInfo() {
-    return _
-  }
+    getUserAgnosticState() {
+        return { lastSelectedDeviceByPlatform: E };
+    }
+    getDevicesForPlatform(e) {
+        var t;
+        return null !== (t = _[e]) && void 0 !== t ? t : h;
+    }
+    getLastSelectedDeviceByPlatform(e) {
+        return E[e];
+    }
+    getDevice(e, t) {
+        var n;
+        return null === (n = _[e]) || void 0 === n ? void 0 : n[t];
+    }
+    getFetchingDevices(e) {
+        return f.has(e);
+    }
+    getPendingDeviceCommands() {
+        return d;
+    }
+    getRemoteSessionId() {
+        return u;
+    }
+    getAwaitingRemoteSessionInfo() {
+        return c;
+    }
 }
-l(h, "displayName", "GameConsoleStore"), l(h, "persistKey", "GameConsoleStore"), t.Z = new h(s.Z, {
-  REMOTE_SESSION_CONNECT: function(e) {
-    let {
-      sessionId: t
-    } = e;
-    u = t, _ = null
-  },
-  REMOTE_SESSION_DISCONNECT: function() {
-    u = null, _ = null
-  },
-  WAIT_FOR_REMOTE_SESSION: function(e) {
-    let {
-      sessionType: t,
-      nonce: n,
-      channelId: i,
-      deviceId: r,
-      commandId: s
-    } = e;
-    _ = {
-      type: t,
-      nonce: n,
-      channelId: i,
-      startedAt: Date.now(),
-      deviceId: r,
-      commandId: s
+l(p, 'displayName', 'GameConsoleStore'), l(p, 'persistKey', 'GameConsoleStore'), t.Z = new p(a.Z, {
+    REMOTE_SESSION_CONNECT: function (e) {
+        let {sessionId: t} = e;
+        u = t, c = null;
+    },
+    REMOTE_SESSION_DISCONNECT: function () {
+        u = null, c = null;
+    },
+    WAIT_FOR_REMOTE_SESSION: function (e) {
+        let {
+            sessionType: t,
+            nonce: n,
+            channelId: r,
+            deviceId: i,
+            commandId: a
+        } = e;
+        c = {
+            type: t,
+            nonce: n,
+            channelId: r,
+            startedAt: Date.now(),
+            deviceId: i,
+            commandId: a
+        };
+    },
+    GAME_CONSOLE_FETCH_DEVICES_START: function (e) {
+        let {platform: t} = e;
+        f.add(t);
+    },
+    GAME_CONSOLE_FETCH_DEVICES_SUCCESS: function (e) {
+        let {
+            platform: t,
+            devices: n
+        } = e;
+        f.delete(t);
+        let r = _[t] = {}, i = {};
+        for (let e of n)
+            r[e.id] = e, E[t] === e.id && (i[t] = e.id);
+        E = i;
+    },
+    GAME_CONSOLE_FETCH_DEVICES_FAIL: function (e) {
+        let {platform: t} = e;
+        f.delete(t);
+    },
+    GAME_CONSOLE_SELECT_DEVICE: function (e) {
+        let {
+            platform: t,
+            deviceId: n
+        } = e;
+        E[t] = n;
     }
-  },
-  GAME_CONSOLE_FETCH_DEVICES_START: function(e) {
-    let {
-      platform: t
-    } = e;
-    I.add(t)
-  },
-  GAME_CONSOLE_FETCH_DEVICES_SUCCESS: function(e) {
-    let {
-      platform: t,
-      devices: n
-    } = e;
-    I.delete(t);
-    let i = c[t] = {},
-      r = {};
-    for (let e of n) i[e.id] = e, E[t] === e.id && (r[t] = e.id);
-    E = r
-  },
-  GAME_CONSOLE_FETCH_DEVICES_FAIL: function(e) {
-    let {
-      platform: t
-    } = e;
-    I.delete(t)
-  },
-  GAME_CONSOLE_SELECT_DEVICE: function(e) {
-    let {
-      platform: t,
-      deviceId: n
-    } = e;
-    E[t] = n
-  }
-})
+});

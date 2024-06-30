@@ -1,0 +1,21 @@
+e.exports = {
+    premiumPromo: 'premiumPromo_ca9b56',
+    unifyTrialUpsell: 'unifyTrialUpsell_ca9b56',
+    premiumPromoClose: 'premiumPromoClose_ca9b56',
+    premiumPromoImage: 'premiumPromoImage_ca9b56',
+    premiumPromoImageSmaller: 'premiumPromoImageSmaller_ca9b56',
+    premiumPromoTitle: 'premiumPromoTitle_ca9b56',
+    premiumPromoDescription: 'premiumPromoDescription_ca9b56',
+    container: 'container_ca9b56',
+    noParentContainer: 'noParentContainer_ca9b56',
+    hasParentContainer: 'hasParentContainer_ca9b56',
+    hasTabParentContainer: 'hasTabParentContainer_ca9b56',
+    contentContainer: 'contentContainer_ca9b56',
+    upsellClose: 'upsellClose_ca9b56',
+    upsellArt: 'upsellArt_ca9b56',
+    upsellTitle: 'upsellTitle_ca9b56',
+    upsellTitleNoSocialProof: 'upsellTitleNoSocialProof_ca9b56',
+    upsellBody: 'upsellBody_ca9b56',
+    upsellCTAContainer: 'upsellCTAContainer_ca9b56',
+    upsellSecondaryCTA: 'upsellSecondaryCTA_ca9b56'
+};

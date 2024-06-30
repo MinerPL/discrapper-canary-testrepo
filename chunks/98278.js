@@ -1,14 +1,10 @@
-"use strict";
 n.d(t, {
-  z: function() {
-    return s
-  }
+    z: function () {
+        return a;
+    }
 });
-var i = n(230711),
-  r = n(981631);
-let s = function() {
-  let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  i.Z.open(r.oAB.PREMIUM, null, {
-    openWithoutBackstack: e
-  })
-}
+var r = n(230711), i = n(981631);
+let a = function () {
+    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+    r.Z.open(i.oAB.PREMIUM, null, { openWithoutBackstack: e });
+};

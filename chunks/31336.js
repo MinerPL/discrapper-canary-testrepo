@@ -1,33 +1,24 @@
-"use strict";
 n.d(t, {
-  Qh: function() {
-    return s
-  },
-  SO: function() {
-    return o
-  },
-  Zw: function() {
-    return a
-  }
+    Qh: function () {
+        return a;
+    },
+    SO: function () {
+        return o;
+    },
+    Zw: function () {
+        return s;
+    }
 });
-var i = n(570140),
-  r = n(19759);
-
-function s(e) {
-  i.Z.dispatch({
-    type: "DEV_TOOLS_SETTINGS_UPDATE",
-    settings: e
-  })
+var r = n(570140), i = n(19759);
+function a(e) {
+    r.Z.dispatch({
+        type: 'DEV_TOOLS_SETTINGS_UPDATE',
+        settings: e
+    });
 }
-
 function o() {
-  s({
-    displayTools: !r.Z.displayTools
-  })
+    a({ displayTools: !i.Z.displayTools });
 }
-
-function a() {
-  i.Z.dispatch({
-    type: "ANALYTICS_LOG_CLEAR"
-  })
+function s() {
+    r.Z.dispatch({ type: 'ANALYTICS_LOG_CLEAR' });
 }

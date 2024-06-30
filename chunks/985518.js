@@ -1,85 +1,74 @@
-"use strict";
 n.d(t, {
-  Ct: function() {
-    return _
-  },
-  UP: function() {
-    return l
-  },
-  ZP: function() {
-    return d
-  },
-  rj: function() {
-    return u
-  }
+    Ct: function () {
+        return c;
+    },
+    UP: function () {
+        return l;
+    },
+    ZP: function () {
+        return d;
+    },
+    rj: function () {
+        return u;
+    }
 }), n(653041), n(47120);
-var i = n(929991),
-  r = n(480739),
-  s = n(228392),
-  o = n(6496);
-
-function a(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: n,
-    enumerable: !0,
-    configurable: !0,
-    writable: !0
-  }) : e[t] = n, e
+var r = n(929991), i = n(480739), a = n(228392), o = n(6496);
+function s(e, t, n) {
+    return t in e ? Object.defineProperty(e, t, {
+        value: n,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+    }) : e[t] = n, e;
 }
-
 function l(e) {
-  return "".concat(r.AT.FORUM_CHANNEL, "_").concat(e)
+    return ''.concat(i.AT.FORUM_CHANNEL, '_').concat(e);
 }
-
 function u(e, t, n) {
-  (0, i.a8)(l(e), t, n)
+    (0, r.a8)(l(e), t, n);
 }
-
-function _(e, t, n) {
-  (0, i.FL)(l(e), t, n)
+function c(e, t, n) {
+    (0, r.FL)(l(e), t, n);
 }
-class d extends r.zQ {
-  constructor({
-    guildId: e,
-    channelId: t,
-    windowId: n,
-    isPaused: i
-  }) {
-    super({
-      windowId: n,
-      isPaused: i,
-      id: l(t)
-    }), a(this, "guildId", void 0), a(this, "channelId", void 0), a(this, "sessionId", void 0), a(this, "createFlushSeenItemsFunction", e => {
-      let t = this.trackedFeedItems,
-        n = this.channelId,
-        i = this.guildId,
-        r = {
-          guildId: i,
-          channelId: n,
-          sessionId: this.sessionId,
-          trackedFeedItems: t,
-          isForcedFlush: null != e
-        };
-      return () => (function(e) {
-        let {
-          guildId: t,
-          channelId: n,
-          sessionId: i,
-          trackedFeedItems: r,
-          isForcedFlush: o
-        } = e, a = [], l = [];
-        for (let e of Object.keys(r)) {
-          let t = r[e].computeSeenTimeDestructive(o);
-          t > 0 && (a.push(e), l.push(t))
-        }
-        0 !== a.length && (0, s.qs)({
-          guildId: t,
-          channelId: n,
-          sessionId: i,
-          postIds: a,
-          additionalTimes: l
-        })
-      })(r)
-    }), this.guildId = e, this.channelId = t, this.sessionId = (0, o.WW)(t)
-  }
+class d extends i.zQ {
+    constructor({
+        guildId: e,
+        channelId: t,
+        windowId: n,
+        isPaused: r
+    }) {
+        super({
+            windowId: n,
+            isPaused: r,
+            id: l(t)
+        }), s(this, 'guildId', void 0), s(this, 'channelId', void 0), s(this, 'sessionId', void 0), s(this, 'createFlushSeenItemsFunction', e => {
+            let t = this.trackedFeedItems, n = this.channelId, r = this.guildId, i = {
+                    guildId: r,
+                    channelId: n,
+                    sessionId: this.sessionId,
+                    trackedFeedItems: t,
+                    isForcedFlush: null != e
+                };
+            return () => function (e) {
+                let {
+                        guildId: t,
+                        channelId: n,
+                        sessionId: r,
+                        trackedFeedItems: i,
+                        isForcedFlush: o
+                    } = e, s = [], l = [];
+                for (let e of Object.keys(i)) {
+                    let t = i[e].computeSeenTimeDestructive(o);
+                    t > 0 && (s.push(e), l.push(t));
+                }
+                0 !== s.length && (0, a.qs)({
+                    guildId: t,
+                    channelId: n,
+                    sessionId: r,
+                    postIds: s,
+                    additionalTimes: l
+                });
+            }(i);
+        }), this.guildId = e, this.channelId = t, this.sessionId = (0, o.WW)(t);
+    }
 }

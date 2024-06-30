@@ -1,88 +1,65 @@
-"use strict";
 n.d(t, {
-  C: function() {
-    return C
-  }
+    C: function () {
+        return N;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(481060),
-  l = n(100527),
-  u = n(906732),
-  _ = n(104494),
-  d = n(639119),
-  c = n(165583),
-  E = n(465670),
-  I = n(626135),
-  T = n(74538),
-  h = n(191177),
-  S = n(27733),
-  f = n(981631),
-  N = n(474936),
-  A = n(689938),
-  m = n(60135),
-  O = n(867250);
-let R = () => (0, h.f)(!1),
-  C = e => {
-    var t, n, s;
-    let {
-      onLearnMore: h
-    } = e, {
-      analyticsLocations: C
-    } = (0, u.ZP)(l.Z.PREMIUM_UPSELL);
-    r.useEffect(() => {
-      I.default.track(f.rMx.PREMIUM_UPSELL_VIEWED, {
-        location_section: f.jXE.STICKER_PICKER_UPSELL,
-        type: N.cd.STICKER_PICKER_UPSELL,
-        location_stack: C
-      })
-    }, [C]);
-    let p = (0, d.N)(),
-      g = (0, _.Ng)(),
-      L = (null == p ? void 0 : null === (t = p.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === N.Si.TIER_0,
-      v = null != p || null != g;
-    return (0, i.jsxs)("div", {
-      className: o()(m.upsellWrapper, {
-        [m.unifyTrialUpsell]: v
-      }),
-      children: [v ? (0, i.jsx)(c.ZP, {
-        trialOffer: p,
-        discountOffer: g,
-        onClose: R,
-        type: N.cd.STICKER_PICKER_UPSELL,
-        subscriptionTier: null !== (s = null == p ? void 0 : null === (n = p.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== s ? s : N.Si.TIER_2,
-        children: L ? A.Z.Messages.STICKER_PICKER_PREMIUM_TIER_UPSELL_DESCRIPTION.format({
-          planName: (0, T.aq)(N.Xh.PREMIUM_MONTH_TIER_0),
-          onClick: h
-        }) : A.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION.format({
-          onClick: h
-        })
-      }) : (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)("img", {
-          className: m.upsellImage,
-          src: O,
-          alt: A.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_ALT
-        }), (0, i.jsx)(a.Text, {
-          className: m.upsellTitle,
-          color: "header-primary",
-          variant: "text-lg/semibold",
-          children: A.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_TITLE
-        }), (0, i.jsx)(a.Text, {
-          className: m.upsellDescription,
-          variant: "text-md/normal",
-          children: A.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION.format({
-            onClick: h
-          })
-        })]
-      }), !v && (0, i.jsx)(S.Z, {
-        analyticsSection: f.jXE.EXPRESSION_PICKER,
-        buttonText: v ? L ? A.Z.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : A.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
-      }), (0, i.jsx)(a.Clickable, {
-        className: m.upsellClose,
-        onClick: R,
-        children: (0, i.jsx)(E.Z, {})
-      })]
-    })
-  }
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(481060), l = n(100527), u = n(906732), c = n(104494), d = n(639119), _ = n(165583), E = n(626135), f = n(74538), h = n(191177), p = n(27733), m = n(981631), I = n(474936), T = n(689938), g = n(30785), S = n(867250);
+let A = () => (0, h.f)(!1), N = e => {
+        var t, n, a;
+        let {onLearnMore: h} = e, {analyticsLocations: N} = (0, u.ZP)(l.Z.PREMIUM_UPSELL);
+        i.useEffect(() => {
+            E.default.track(m.rMx.PREMIUM_UPSELL_VIEWED, {
+                location_section: m.jXE.STICKER_PICKER_UPSELL,
+                type: I.cd.STICKER_PICKER_UPSELL,
+                location_stack: N
+            });
+        }, [N]);
+        let v = (0, d.N)(), O = (0, c.Ng)(), R = (null == v ? void 0 : null === (t = v.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === I.Si.TIER_0, C = null != v || null != O;
+        return (0, r.jsxs)('div', {
+            className: o()(g.upsellWrapper, { [g.unifyTrialUpsell]: C }),
+            children: [
+                C ? (0, r.jsx)(_.ZP, {
+                    trialOffer: v,
+                    discountOffer: O,
+                    onClose: A,
+                    type: I.cd.STICKER_PICKER_UPSELL,
+                    subscriptionTier: null !== (a = null == v ? void 0 : null === (n = v.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : I.Si.TIER_2,
+                    children: R ? T.Z.Messages.STICKER_PICKER_PREMIUM_TIER_UPSELL_DESCRIPTION.format({
+                        planName: (0, f.aq)(I.Xh.PREMIUM_MONTH_TIER_0),
+                        onClick: h
+                    }) : T.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION.format({ onClick: h })
+                }) : (0, r.jsxs)(r.Fragment, {
+                    children: [
+                        (0, r.jsx)('img', {
+                            className: g.upsellImage,
+                            src: S,
+                            alt: T.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_ALT
+                        }),
+                        (0, r.jsx)(s.Text, {
+                            className: g.upsellTitle,
+                            color: 'header-primary',
+                            variant: 'text-lg/semibold',
+                            children: T.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_TITLE
+                        }),
+                        (0, r.jsx)(s.Text, {
+                            className: g.upsellDescription,
+                            variant: 'text-md/normal',
+                            children: T.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION.format({ onClick: h })
+                        })
+                    ]
+                }),
+                !C && (0, r.jsx)(p.Z, {
+                    analyticsSection: m.jXE.EXPRESSION_PICKER,
+                    buttonText: C ? R ? T.Z.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : T.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
+                }),
+                (0, r.jsx)(s.Clickable, {
+                    className: g.upsellClose,
+                    onClick: A,
+                    children: (0, r.jsx)(s.CloseSmallIcon, {
+                        size: 'md',
+                        color: 'currentColor'
+                    })
+                })
+            ]
+        });
+    };

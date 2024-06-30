@@ -1,10 +1,8 @@
-"use strict";
-
-function i(e, t) {
-  return "function" == typeof e ? e(t) : e
+function r(e, t) {
+    return 'function' == typeof e ? e(t) : e;
 }
 n.d(t, {
-  I: function() {
-    return i
-  }
-})
+    I: function () {
+        return r;
+    }
+});

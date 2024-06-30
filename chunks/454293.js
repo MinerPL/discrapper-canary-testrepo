@@ -1,17 +1,13 @@
-"use strict";
 n.d(t, {
-  M: function() {
-    return s
-  }
+    M: function () {
+        return a;
+    }
 });
-var i = n(960048),
-  r = n(536150);
-async function s(e, t) {
-  try {
-    await (0, r.i)(e, {
-      is_sharing: t
-    })
-  } catch (e) {
-    i.Z.captureException(e)
-  }
+var r = n(960048), i = n(536150);
+async function a(e, t) {
+    try {
+        await (0, i.i)(e, { is_sharing: t });
+    } catch (e) {
+        r.Z.captureException(e);
+    }
 }

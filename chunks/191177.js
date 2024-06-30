@@ -1,20 +1,12 @@
-"use strict";
 n.d(t, {
-  Q: function() {
-    return a
-  },
-  f: function() {
-    return o
-  }
+    Q: function () {
+        return s;
+    },
+    f: function () {
+        return o;
+    }
 });
-var i = n(652874);
-let r = Object.freeze({
-    showPremiumUpsell: !1
-  }),
-  s = (0, i.Z)(e => r),
-  o = e => {
-    s.setState({
-      showPremiumUpsell: e
-    })
-  },
-  a = s
+var r = n(652874);
+let i = Object.freeze({ showPremiumUpsell: !1 }), a = (0, r.Z)(e => i), o = e => {
+        a.setState({ showPremiumUpsell: e });
+    }, s = a;

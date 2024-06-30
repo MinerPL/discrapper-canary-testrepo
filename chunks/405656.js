@@ -1,237 +1,218 @@
-"use strict";
 n.d(t, {
-  $G: function() {
-    return T
-  },
-  BU: function() {
-    return N
-  },
-  Fr: function() {
-    return p
-  },
-  Fz: function() {
-    return C
-  },
-  Ko: function() {
-    return c
-  },
-  Pe: function() {
-    return g
-  },
-  WU: function() {
-    return R
-  },
-  cl: function() {
-    return A
-  },
-  g9: function() {
-    return h
-  },
-  jW: function() {
-    return I
-  },
-  kG: function() {
-    return O
-  },
-  qc: function() {
-    return S
-  },
-  zV: function() {
-    return f
-  }
+    $G: function () {
+        return h;
+    },
+    BU: function () {
+        return T;
+    },
+    Fr: function () {
+        return O;
+    },
+    Fz: function () {
+        return v;
+    },
+    Ko: function () {
+        return _;
+    },
+    Pe: function () {
+        return R;
+    },
+    WU: function () {
+        return N;
+    },
+    cl: function () {
+        return g;
+    },
+    g9: function () {
+        return p;
+    },
+    jW: function () {
+        return f;
+    },
+    kG: function () {
+        return A;
+    },
+    qc: function () {
+        return m;
+    },
+    zV: function () {
+        return I;
+    }
 }), n(47120), n(724458);
-var i = n(392711),
-  r = n.n(i),
-  s = n(349033),
-  o = n(999650),
-  a = n(731290),
-  l = n(594174),
-  u = n(709054),
-  _ = n(981631),
-  d = n(689938);
-
-function c(e) {
-  switch (e) {
-    case _.dCx.FILTER_FROM:
-      return d.Z.Messages.SEARCH_ANSWER_FROM;
-    case _.dCx.FILTER_MENTIONS:
-      return d.Z.Messages.SEARCH_ANSWER_MENTIONS;
-    case _.dCx.FILTER_HAS:
-      return d.Z.Messages.SEARCH_ANSWER_HAS;
-    case _.dCx.FILTER_BEFORE:
-    case _.dCx.FILTER_ON:
-    case _.dCx.FILTER_AFTER:
-      return d.Z.Messages.SEARCH_ANSWER_DATE;
-    case _.dCx.FILTER_IN:
-      return d.Z.Messages.SEARCH_ANSWER_IN;
-    case _.dCx.FILTER_FILE_TYPE:
-      return d.Z.Messages.SEARCH_ANSWER_FILE_TYPE;
-    case _.dCx.FILTER_FILE_NAME:
-      return d.Z.Messages.SEARCH_ANSWER_FILE_NAME;
-    case _.dCx.FILTER_PINNED:
-      return d.Z.Messages.SEARCH_ANSWER_BOOLEAN
-  }
+var r = n(392711), i = n.n(r), a = n(349033), o = n(999650), s = n(731290), l = n(594174), u = n(709054), c = n(981631), d = n(689938);
+function _(e) {
+    switch (e) {
+    case c.dCx.FILTER_FROM:
+        return d.Z.Messages.SEARCH_ANSWER_FROM;
+    case c.dCx.FILTER_MENTIONS:
+        return d.Z.Messages.SEARCH_ANSWER_MENTIONS;
+    case c.dCx.FILTER_HAS:
+        return d.Z.Messages.SEARCH_ANSWER_HAS;
+    case c.dCx.FILTER_BEFORE:
+    case c.dCx.FILTER_ON:
+    case c.dCx.FILTER_AFTER:
+        return d.Z.Messages.SEARCH_ANSWER_DATE;
+    case c.dCx.FILTER_IN:
+        return d.Z.Messages.SEARCH_ANSWER_IN;
+    case c.dCx.FILTER_FILE_TYPE:
+        return d.Z.Messages.SEARCH_ANSWER_FILE_TYPE;
+    case c.dCx.FILTER_FILE_NAME:
+        return d.Z.Messages.SEARCH_ANSWER_FILE_NAME;
+    case c.dCx.FILTER_PINNED:
+        return d.Z.Messages.SEARCH_ANSWER_BOOLEAN;
+    }
 }
 let E = {
-  [_.dCx.FILTER_BEFORE]: !0,
-  [_.dCx.FILTER_AFTER]: !0,
-  [_.dCx.FILTER_ON]: !0
+    [c.dCx.FILTER_BEFORE]: !0,
+    [c.dCx.FILTER_AFTER]: !0,
+    [c.dCx.FILTER_ON]: !0
 };
-
-function I(e, t) {
-  if (a.Z.didAgree(t)) {
-    let t = l.default.getCurrentUser();
-    null != t && (e.include_nsfw = null == t.nsfwAllowed || t.nsfwAllowed)
-  }
-}
-
-function T(e) {
-  let t = {};
-  for (let [n, i] of(e.forEach(e => {
-      let {
-        type: n
-      } = e;
-      if (_.TNx.test(n)) return;
-      switch (n) {
-        case _.dCx.ANSWER_BEFORE:
-        case _.dCx.ANSWER_ON:
-        case _.dCx.ANSWER_AFTER:
-          let i = e.getData("start"),
-            r = e.getData("end");
-          i && (t.min_id = u.default.fromTimestamp(i)), r && (t.max_id = u.default.fromTimestamp(r));
-          return
-      }
-      let s = function(e) {
-        let t = o.ZP[e],
-          n = null != t ? t.queryKey : null;
-        return null == n && (n = "content"), n
-      }(n);
-      null == t[s] && (t[s] = new Set);
-      let a = t[s];
-      switch (n) {
-        case _.dCx.ANSWER_USERNAME_FROM:
-        case _.dCx.ANSWER_USERNAME_MENTIONS:
-          a.add(e.getData("userId"));
-          break;
-        case _.dCx.ANSWER_FILE_TYPE:
-        case _.dCx.ANSWER_FILE_NAME:
-          a.add(e.getMatch(1));
-          break;
-        case _.dCx.ANSWER_IN:
-          a.add(e.getData("channel").id);
-          break;
-        case _.dCx.ANSWER_HAS:
-          a.add(e.getData("has"));
-          break;
-        case _.dCx.ANSWER_PINNED:
-          a.add(e.getData("pinned"));
-          break;
-        default:
-          a.add(e.getFullMatch().trim())
-      }
-    }), Object.entries(t))) i instanceof Set && (t[n] = Array.from(i));
-  return t.content && (t.content = t.content.join(" ").trim(), !t.content && delete t.content), t
-}
-
-function h(e, t, n) {
-  let i, r;
-  let s = e.find((s, o) => t >= s.start && t <= s.end && n >= s.start && n <= s.end ? (null != e[o + 1] && (r = e[o + 1]), !0) : (i = s, !1));
-  return null == s ? null : {
-    previousToken: i,
-    currentToken: s,
-    nextToken: r,
-    focusOffset: t,
-    anchorOffset: n
-  }
-}
-
-function S(e, t) {
-  let n;
-  let {
-    currentToken: i,
-    nextToken: r,
-    previousToken: o
-  } = e = null != e ? e : {};
-  if (0 === t.length) return {
-    type: _.Sap.EMPTY,
-    filter: null,
-    token: null
-  };
-  if (null == i) return {
-    type: _.Sap.FILTER_ALL,
-    filter: null,
-    token: null
-  };
-  if (_.TNx.test(i.type)) {
-    if (null == r || r.type === s.ZP.NON_TOKEN_TYPE) return {
-      type: _.Sap.FILTER,
-      filter: i.type,
-      token: r
-    };
-    if (null != r && !_.KA4.test(r.type)) return {
-      type: _.Sap.FILTER,
-      filter: i.type,
-      token: null
-    }
-  }
-  return i.type === s.ZP.NON_TOKEN_TYPE && null != o && _.TNx.test(o.type) ? {
-    type: _.Sap.FILTER,
-    filter: o.type,
-    token: i
-  } : (i.type === s.ZP.NON_TOKEN_TYPE && (n = i), {
-    type: _.Sap.FILTER_ALL,
-    filter: null,
-    token: n
-  })
-}
-
 function f(e, t) {
-  let n = [];
-  return r()(e).forEach(e => {
-    if (null == e || 0 === e.results.length) return;
-    let i = e.group;
-    n = n.concat(e.results.map(e => {
-      let n = e.text;
-      if (t === _.Sap.FILTER_ALL) {
-        var r;
-        i = null !== (r = e.group) && void 0 !== r ? r : i;
-        let t = o.ZP[i];
-        (null == t ? void 0 : t.key) != null && (null == t ? void 0 : t.key) !== "" && (n = "".concat(t.key, " ").concat(n))
-      }
-      return n
-    }))
-  }), n.filter(e => e)
+    if (s.Z.didAgree(t)) {
+        let t = l.default.getCurrentUser();
+        null != t && (e.include_nsfw = null == t.nsfwAllowed || t.nsfwAllowed);
+    }
 }
-
-function N(e) {
-  return e.reduce((e, t) => null == t ? e : t.results.length + e, 0)
+function h(e) {
+    let t = {};
+    for (let [n, r] of (e.forEach(e => {
+            let {type: n} = e;
+            if (c.TNx.test(n))
+                return;
+            switch (n) {
+            case c.dCx.ANSWER_BEFORE:
+            case c.dCx.ANSWER_ON:
+            case c.dCx.ANSWER_AFTER:
+                let r = e.getData('start'), i = e.getData('end');
+                r && (t.min_id = u.default.fromTimestamp(r)), i && (t.max_id = u.default.fromTimestamp(i));
+                return;
+            }
+            let a = function (e) {
+                let t = o.ZP[e], n = null != t ? t.queryKey : null;
+                return null == n && (n = 'content'), n;
+            }(n);
+            null == t[a] && (t[a] = new Set());
+            let s = t[a];
+            switch (n) {
+            case c.dCx.ANSWER_USERNAME_FROM:
+            case c.dCx.ANSWER_USERNAME_MENTIONS:
+                s.add(e.getData('userId'));
+                break;
+            case c.dCx.ANSWER_FILE_TYPE:
+            case c.dCx.ANSWER_FILE_NAME:
+                s.add(e.getMatch(1));
+                break;
+            case c.dCx.ANSWER_IN:
+                s.add(e.getData('channel').id);
+                break;
+            case c.dCx.ANSWER_HAS:
+                s.add(e.getData('has'));
+                break;
+            case c.dCx.ANSWER_PINNED:
+                s.add(e.getData('pinned'));
+                break;
+            default:
+                s.add(e.getFullMatch().trim());
+            }
+        }), Object.entries(t)))
+        r instanceof Set && (t[n] = Array.from(r));
+    return t.content && (t.content = t.content.join(' ').trim(), !t.content && delete t.content), t;
 }
-
+function p(e, t, n) {
+    let r, i;
+    let a = e.find((a, o) => t >= a.start && t <= a.end && n >= a.start && n <= a.end ? (null != e[o + 1] && (i = e[o + 1]), !0) : (r = a, !1));
+    return null == a ? null : {
+        previousToken: r,
+        currentToken: a,
+        nextToken: i,
+        focusOffset: t,
+        anchorOffset: n
+    };
+}
+function m(e, t) {
+    let n;
+    let {
+        currentToken: r,
+        nextToken: i,
+        previousToken: o
+    } = e = null != e ? e : {};
+    if (0 === t.length)
+        return {
+            type: c.Sap.EMPTY,
+            filter: null,
+            token: null
+        };
+    if (null == r)
+        return {
+            type: c.Sap.FILTER_ALL,
+            filter: null,
+            token: null
+        };
+    if (c.TNx.test(r.type)) {
+        if (null == i || i.type === a.ZP.NON_TOKEN_TYPE)
+            return {
+                type: c.Sap.FILTER,
+                filter: r.type,
+                token: i
+            };
+        if (null != i && !c.KA4.test(i.type))
+            return {
+                type: c.Sap.FILTER,
+                filter: r.type,
+                token: null
+            };
+    }
+    return r.type === a.ZP.NON_TOKEN_TYPE && null != o && c.TNx.test(o.type) ? {
+        type: c.Sap.FILTER,
+        filter: o.type,
+        token: r
+    } : (r.type === a.ZP.NON_TOKEN_TYPE && (n = r), {
+        type: c.Sap.FILTER_ALL,
+        filter: null,
+        token: n
+    });
+}
+function I(e, t) {
+    let n = [];
+    return i()(e).forEach(e => {
+        if (null == e || 0 === e.results.length)
+            return;
+        let r = e.group;
+        n = n.concat(e.results.map(e => {
+            let n = e.text;
+            if (t === c.Sap.FILTER_ALL) {
+                var i;
+                r = null !== (i = e.group) && void 0 !== i ? i : r;
+                let t = o.ZP[r];
+                (null == t ? void 0 : t.key) != null && (null == t ? void 0 : t.key) !== '' && (n = ''.concat(t.key, ' ').concat(n));
+            }
+            return n;
+        }));
+    }), n.filter(e => e);
+}
+function T(e) {
+    return e.reduce((e, t) => null == t ? e : t.results.length + e, 0);
+}
+function g(e) {
+    return null == e ? '' : e.map(e => e.getFullMatch()).join('');
+}
+let S = new a.ZP();
 function A(e) {
-  return null == e ? "" : e.map(e => e.getFullMatch()).join("")
+    return S.tokenize(e);
 }
-let m = new s.ZP;
-
-function O(e) {
-  return m.tokenize(e)
+function N() {
+    return S.clearCache();
 }
-
+function v(e) {
+    return null != e ? E[e] : null;
+}
+function O(e, t) {
+    let n = c.TNx.test(e.type);
+    return (null != t || !n) && (null == t || !n || !!c.KA4.test(t.type)) && !0;
+}
 function R() {
-  return m.clearCache()
-}
-
-function C(e) {
-  return null != e ? E[e] : null
-}
-
-function p(e, t) {
-  let n = _.TNx.test(e.type);
-  return (null != t || !n) && (null == t || !n || !!_.KA4.test(t.type)) && !0
-}
-
-function g() {
-  (0, o.Pe)(), m.reset(), r()(o.ZP).forOwn((e, t) => m.addRule({
-    type: t,
-    ...e
-  }))
+    (0, o.Pe)(), S.reset(), i()(o.ZP).forOwn((e, t) => S.addRule({
+        type: t,
+        ...e
+    }));
 }

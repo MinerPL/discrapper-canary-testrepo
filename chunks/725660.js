@@ -1,16 +1,9 @@
-"use strict";
-var r = n(220272),
-  i = n(383390),
-  a = n(119685),
-  o = n(366930),
-  s = n(949793);
-
-function u(e) {
-  var t = -1,
-    n = null == e ? 0 : e.length;
-  for (this.clear(); ++t < n;) {
-    var r = e[t];
-    this.set(r[0], r[1])
-  }
+var r = n(220272), i = n(383390), a = n(119685), o = n(366930), s = n(949793);
+function l(e) {
+    var t = -1, n = null == e ? 0 : e.length;
+    for (this.clear(); ++t < n;) {
+        var r = e[t];
+        this.set(r[0], r[1]);
+    }
 }
-u.prototype.clear = r.Z, u.prototype.delete = i.Z, u.prototype.get = a.Z, u.prototype.has = o.Z, u.prototype.set = s.Z, t.Z = u
+l.prototype.clear = r.Z, l.prototype.delete = i.Z, l.prototype.get = a.Z, l.prototype.has = o.Z, l.prototype.set = s.Z, t.Z = l;

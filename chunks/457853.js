@@ -1,12 +1,14 @@
-var n = e(900624),
-  o = e(117973),
-  i = e(302767);
-t.exports = function(t, r) {
-  var e = this.__data__;
-  if (e instanceof n) {
-    var a = e.__data__;
-    if (!o || a.length < 199) return a.push([t, r]), this.size = ++e.size, this;
-    e = this.__data__ = new i(a)
-  }
-  return e.set(t, r), this.size = e.size, this
-}
+var n = r(900624), _ = r(117973), a = r(302767);
+t.exports = function (t, e) {
+    var r = this.__data__;
+    if (r instanceof n) {
+        var i = r.__data__;
+        if (!_ || i.length < 199)
+            return i.push([
+                t,
+                e
+            ]), this.size = ++r.size, this;
+        r = this.__data__ = new a(i);
+    }
+    return r.set(t, e), this.size = r.size, this;
+};

@@ -1,28 +1,23 @@
-"use strict";
 n.d(t, {
-  Bw: function() {
-    return o
-  },
-  px: function() {
-    return a
-  },
-  rY: function() {
-    return s
-  }
+    Bw: function () {
+        return o;
+    },
+    px: function () {
+        return s;
+    },
+    rY: function () {
+        return a;
+    }
 });
-let i = {},
-  r = null;
-
-function s(e) {
-  var t;
-  let n = null !== (t = i[e]) && void 0 !== t ? t : 0;
-  0 === n && (null == r || r(e, !0)), i[e] = n + 1
-}
-
-function o(e) {
-  i[e]--, 0 === i[e] && (null == r || r(e, !1))
-}
-
+let r = {}, i = null;
 function a(e) {
-  r = null != e ? e : null
+    var t;
+    let n = null !== (t = r[e]) && void 0 !== t ? t : 0;
+    0 === n && (null == i || i(e, !0)), r[e] = n + 1;
+}
+function o(e) {
+    r[e]--, 0 === r[e] && (null == i || i(e, !1));
+}
+function s(e) {
+    i = null != e ? e : null;
 }

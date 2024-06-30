@@ -1,26 +1,20 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return o
-  }
+n.d(t, {
+    Z: function () {
+        return o;
+    }
 });
-var n = t(735250);
-t(470079);
-var i = t(442837),
-  l = t(246946),
-  a = t(999382),
-  r = t(270394);
-
+var s = n(735250);
+n(470079);
+var a = n(442837), i = n(246946), r = n(999382), l = n(270394);
 function o() {
-  let e = (0, i.e7)([l.Z], () => l.Z.hideInstantInvites),
-    {
-      invites: s,
-      guild: t
-    } = (0, i.cj)([a.Z], () => a.Z.getProps(), []);
-  return (0, n.jsx)(r.Z, {
-    invites: s,
-    guild: t,
-    showChannel: !0,
-    hide: e
-  })
+    let e = (0, a.e7)([i.Z], () => i.Z.hideInstantInvites), {
+            invites: t,
+            guild: n
+        } = (0, a.cj)([r.Z], () => r.Z.getProps(), []);
+    return (0, s.jsx)(l.Z, {
+        invites: t,
+        guild: n,
+        showChannel: !0,
+        hide: e
+    });
 }

@@ -1,12 +1,10 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  Xi: function() {
-    return o
-  },
-  e3: function() {
-    return s
-  }
-}), (r = i || (i = {}))[r.SENDING = 0] = "SENDING", r[r.CANCELLING = 1] = "CANCELLING", r[r.LOCKING = 2] = "LOCKING", r[r.LOCKED = 3] = "LOCKED";
-let s = 500,
-  o = 255
+    Xi: function () {
+        return o;
+    },
+    e3: function () {
+        return a;
+    }
+}), (i = r || (r = {}))[i.SENDING = 0] = 'SENDING', i[i.CANCELLING = 1] = 'CANCELLING', i[i.LOCKING = 2] = 'LOCKING', i[i.LOCKED = 3] = 'LOCKED';
+let a = 500, o = 255;

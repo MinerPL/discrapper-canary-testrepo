@@ -1,36 +1,34 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return a;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(650886);
-
-function s(e) {
-  let {
-    disabled: t,
-    deviceId: n,
-    width: s,
-    height: o
-  } = e;
-  return t ? (0, i.jsx)("div", {
-    className: "media-engine-video",
-    style: {
-      width: s,
-      height: o
-    }
-  }) : (0, i.jsx)(r.Z, {
-    streamId: n,
-    style: {
-      width: s,
-      height: o
-    }
-  })
+var i = n(650886);
+function a(e) {
+    let {
+        disabled: t,
+        deviceId: n,
+        width: a,
+        height: o
+    } = e;
+    return t ? (0, r.jsx)('div', {
+        className: 'media-engine-video',
+        style: {
+            width: a,
+            height: o
+        }
+    }) : (0, r.jsx)(i.Z, {
+        streamId: n,
+        style: {
+            width: a,
+            height: o
+        }
+    });
 }
-s.defaultProps = {
-  disabled: !1,
-  width: 320,
-  height: 180
-}
+a.defaultProps = {
+    disabled: !1,
+    width: 320,
+    height: 180
+};

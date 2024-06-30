@@ -1,50 +1,53 @@
-"use strict";
 n.d(t, {
-  J: function() {
-    return a.Hb
-  }
+    J: function () {
+        return s.Hb;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(120356),
-  s = n.n(r),
-  o = n(467679),
-  a = n(674563),
-  l = n(77351);
+var i = n(120356), a = n.n(i), o = n(467679), s = n(674563), l = n(818060);
 t.Z = e => {
-  let {
-    name: t,
-    discriminator: n,
-    invertBotTagColor: r,
-    nameColor: a,
-    className: u,
-    botType: _,
-    usernameClass: d,
-    discriminatorClass: c,
-    botClass: E,
-    botVerified: I = !1,
-    style: T,
-    useRemSizes: h = !1,
-    usernameIcon: S
-  } = e;
-  return (0, i.jsxs)("div", {
-    className: s()(u, l.nameTag),
-    style: T,
-    children: [(0, i.jsxs)("span", {
-      className: s()(l.username, d),
-      style: null != a ? {
-        color: a
-      } : void 0,
-      children: [S, t]
-    }), null != n ? (0, i.jsxs)("span", {
-      className: null != c ? c : void 0,
-      children: ["#", n]
-    }) : null, null != _ ? (0, i.jsx)(o.Z, {
-      type: _,
-      invertColor: r,
-      className: s()(E, l.bot),
-      verified: I,
-      useRemSizes: h
-    }) : null]
-  })
-}
+    let {
+        name: t,
+        discriminator: n,
+        invertBotTagColor: i,
+        nameColor: s,
+        className: u,
+        botType: c,
+        usernameClass: d,
+        discriminatorClass: _,
+        botClass: E,
+        botVerified: f = !1,
+        style: h,
+        useRemSizes: p = !1,
+        usernameIcon: m
+    } = e;
+    return (0, r.jsxs)('div', {
+        className: a()(u, l.nameTag),
+        style: h,
+        children: [
+            (0, r.jsxs)('span', {
+                className: a()(l.username, d),
+                style: null != s ? { color: s } : void 0,
+                children: [
+                    m,
+                    t
+                ]
+            }),
+            null != n ? (0, r.jsxs)('span', {
+                className: null != _ ? _ : void 0,
+                children: [
+                    '#',
+                    n
+                ]
+            }) : null,
+            null != c ? (0, r.jsx)(o.Z, {
+                type: c,
+                invertColor: i,
+                className: a()(E, l.bot),
+                verified: f,
+                useRemSizes: p
+            }) : null
+        ]
+    });
+};

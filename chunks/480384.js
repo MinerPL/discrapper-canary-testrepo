@@ -1,31 +1,29 @@
-"use strict";
 n(653041);
-var i, r, s, o, a = n(442837),
-  l = n(570140),
-  u = n(650774),
-  _ = n(771845);
+var r, i, a, o, s = n(442837), l = n(570140), u = n(650774), c = n(771845);
 let d = [];
-
-function c() {
-  d = [];
-  let e = _.ZP.getFlattenedGuildIds();
-  for (let t = 0; t < e.length; t++) {
-    let n = e[t],
-      i = u.Z.getMemberCount(n);
-    if (null != i && i >= 2 && i <= 95 && (d.push(n), d.length >= 5)) return
-  }
+function _() {
+    d = [];
+    let e = c.ZP.getFlattenedGuildIds();
+    for (let t = 0; t < e.length; t++) {
+        let n = e[t], r = u.Z.getMemberCount(n);
+        if (null != r && r >= 2 && r <= 95 && (d.push(n), d.length >= 5))
+            return;
+    }
 }
-class E extends(i = a.ZP.Store) {
-  initialize() {
-    this.syncWith([u.Z, _.ZP], c), c()
-  }
-  getPriorityGuilds() {
-    return d
-  }
+class E extends (r = s.ZP.Store) {
+    initialize() {
+        this.syncWith([
+            u.Z,
+            c.ZP
+        ], _), _();
+    }
+    getPriorityGuilds() {
+        return d;
+    }
 }
-o = "RecentlyOnlineExperimentPriorityGuildsStore", (s = "displayName") in(r = E) ? Object.defineProperty(r, s, {
-  value: o,
-  enumerable: !0,
-  configurable: !0,
-  writable: !0
-}) : r[s] = o, t.Z = new E(l.Z, {})
+o = 'RecentlyOnlineExperimentPriorityGuildsStore', (a = 'displayName') in (i = E) ? Object.defineProperty(i, a, {
+    value: o,
+    enumerable: !0,
+    configurable: !0,
+    writable: !0
+}) : i[a] = o, t.Z = new E(l.Z, {});

@@ -1,78 +1,68 @@
-"use strict";
 n.d(t, {
-  E: function() {
-    return u
-  },
-  L: function() {
-    return _
-  }
+    E: function () {
+        return u;
+    },
+    L: function () {
+        return c;
+    }
 });
-var i = n(873546),
-  r = n(149765),
-  s = n(69580),
-  o = n(626135),
-  a = n(49012),
-  l = n(981631);
-
+var r = n(873546), i = n(149765), a = n(69580), o = n(626135), s = n(49012), l = n(981631);
 function u(e) {
-  let {
-    customInstallUrl: t,
-    installParams: n,
-    integrationTypesConfig: i
-  } = e;
-  return null != t || null != n || null != i && Object.values(i).some(e => null != e && null != e.oauth2_install_params)
+    let {
+        customInstallUrl: t,
+        installParams: n,
+        integrationTypesConfig: r
+    } = e;
+    return null != t || null != n || null != r && Object.values(r).some(e => null != e && null != e.oauth2_install_params);
 }
-
-function _(e) {
-  let {
-    applicationId: t,
-    customInstallUrl: n,
-    installParams: u,
-    integrationTypesConfig: _,
-    guildId: d,
-    channelId: c,
-    disableGuildSelect: E,
-    source: I
-  } = e;
-  if (null != n) {
-    o.default.track(l.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
-      application_id: t,
-      guild_id: d,
-      auth_type: "custom_url",
-      source: I,
-      device_platform: i.tq ? "mobile_web" : "desktop_web"
-    }), (0, a.q)({
-      href: n
-    });
-    return
-  }
-  if (null != _ && Object.values(_).some(e => null != e && null != e.oauth2_install_params)) {
-    o.default.track(l.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
-      application_id: t,
-      guild_id: d,
-      auth_type: "in_app",
-      source: I,
-      device_platform: i.tq ? "mobile_web" : "desktop_web"
-    }), (0, s.openOAuth2Modal)({
-      clientId: t,
-      guildId: d,
-      channelId: c,
-      disableGuildSelect: E
-    });
-    return
-  }
-  null != u && (o.default.track(l.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
-    application_id: t,
-    guild_id: d,
-    auth_type: "in_app",
-    source: I,
-    device_platform: i.tq ? "mobile_web" : "desktop_web"
-  }), (0, s.openOAuth2Modal)({
-    clientId: t,
-    guildId: d,
-    channelId: c,
-    disableGuildSelect: E,
-    scopes: u.scopes,
-    permissions: null != u.permissions ? r.vB(u.permissions) : void 0
-  }))
+function c(e) {
+    let {
+        applicationId: t,
+        customInstallUrl: n,
+        installParams: u,
+        integrationTypesConfig: c,
+        guildId: d,
+        channelId: _,
+        disableGuildSelect: E,
+        source: f
+    } = e;
+    if (null != n) {
+        o.default.track(l.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
+            application_id: t,
+            guild_id: d,
+            auth_type: 'custom_url',
+            source: f,
+            device_platform: r.tq ? 'mobile_web' : 'desktop_web'
+        }), (0, s.q)({ href: n });
+        return;
+    }
+    if (null != c && Object.values(c).some(e => null != e && null != e.oauth2_install_params)) {
+        o.default.track(l.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
+            application_id: t,
+            guild_id: d,
+            auth_type: 'in_app',
+            source: f,
+            device_platform: r.tq ? 'mobile_web' : 'desktop_web'
+        }), (0, a.openOAuth2Modal)({
+            clientId: t,
+            guildId: d,
+            channelId: _,
+            disableGuildSelect: E
+        });
+        return;
+    }
+    null != u && (o.default.track(l.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
+        application_id: t,
+        guild_id: d,
+        auth_type: 'in_app',
+        source: f,
+        device_platform: r.tq ? 'mobile_web' : 'desktop_web'
+    }), (0, a.openOAuth2Modal)({
+        clientId: t,
+        guildId: d,
+        channelId: _,
+        disableGuildSelect: E,
+        scopes: u.scopes,
+        permissions: null != u.permissions ? i.vB(u.permissions) : void 0
+    }));
 }

@@ -1,39 +1,33 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return i
-  }
+    Z: function () {
+        return r;
+    }
 }), n(47120);
-class i {
-  toJS() {
-    return {
-      ...this
+class r {
+    toJS() {
+        return { ...this };
     }
-  }
-  set(e, t) {
-    let n = this[e];
-    return t instanceof Date && n instanceof Date && t.getTime() === n.getTime() ? this : n !== t ? new this.constructor({
-      ...this,
-      [e]: t
-    }) : this
-  }
-  merge(e) {
-    let t = null;
-    for (let n in e) {
-      if (!e.hasOwnProperty(n)) continue;
-      let i = this[n],
-        r = e[n];
-      if (!(r instanceof Date) || !(i instanceof Date) || r.getTime() !== i.getTime()) i !== r && (null == t && (t = {
-        ...this
-      }), t[n] = e[n])
+    set(e, t) {
+        let n = this[e];
+        return t instanceof Date && n instanceof Date && t.getTime() === n.getTime() ? this : n !== t ? new this.constructor({
+            ...this,
+            [e]: t
+        }) : this;
     }
-    return null != t ? new this.constructor(t) : this
-  }
-  update(e, t, n) {
-    null == n && (n = t, t = void 0);
-    let r = this[e];
-    return r instanceof i || (r instanceof Array ? r = [...r] : r instanceof Object && (r = {
-      ...r
-    })), void 0 === r && (r = t), this.set(e, n(r))
-  }
+    merge(e) {
+        let t = null;
+        for (let n in e) {
+            if (!e.hasOwnProperty(n))
+                continue;
+            let r = this[n], i = e[n];
+            if (!(i instanceof Date) || !(r instanceof Date) || i.getTime() !== r.getTime())
+                r !== i && (null == t && (t = { ...this }), t[n] = e[n]);
+        }
+        return null != t ? new this.constructor(t) : this;
+    }
+    update(e, t, n) {
+        null == n && (n = t, t = void 0);
+        let i = this[e];
+        return i instanceof r || (i instanceof Array ? i = [...i] : i instanceof Object && (i = { ...i })), void 0 === i && (i = t), this.set(e, n(i));
+    }
 }

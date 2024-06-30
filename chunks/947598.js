@@ -1,2 +1,1 @@
-"use strict";
-n(187203)("dispose")
+n(187203)('dispose');

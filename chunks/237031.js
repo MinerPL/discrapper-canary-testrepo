@@ -1,40 +1,33 @@
-"use strict";
-t.d(s, {
-  T: function() {
-    return l
-  },
-  v: function() {
-    return r
-  }
+n.d(t, {
+    T: function () {
+        return o;
+    },
+    v: function () {
+        return i;
+    }
 });
-var n = t(735250);
-t(470079);
-var a = t(481060);
-let i = "collectibles shop product details modal",
-  l = e => {
-    let {
-      product: s,
-      category: l,
-      analyticsSource: r,
-      analyticsLocations: o,
-      returnRef: c
-    } = e;
-    (0, a.openModalLazy)(async () => {
-      let {
-        default: e
-      } = await Promise.all([t.e("99387"), t.e("2026")]).then(t.bind(t, 702370));
-      return t => (0, n.jsx)(e, {
-        ...t,
-        product: s,
-        category: l,
-        analyticsSource: r,
-        analyticsLocations: o,
-        returnRef: c
-      })
-    }, {
-      modalKey: i
-    })
-  },
-  r = () => {
-    (0, a.closeModal)(i)
-  }
+var s = n(735250);
+n(470079);
+var r = n(481060);
+let a = 'collectibles shop product details modal', o = e => {
+        let {
+            product: t,
+            category: o,
+            analyticsSource: i,
+            analyticsLocations: l,
+            returnRef: c
+        } = e;
+        (0, r.openModalLazy)(async () => {
+            let {default: e} = await n.e('2026').then(n.bind(n, 702370));
+            return n => (0, s.jsx)(e, {
+                ...n,
+                product: t,
+                category: o,
+                analyticsSource: i,
+                analyticsLocations: l,
+                returnRef: c
+            });
+        }, { modalKey: a });
+    }, i = () => {
+        (0, r.closeModal)(a);
+    };

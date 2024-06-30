@@ -1,7 +1,6 @@
-"use strict";
 n.d(t, {
-  n: function() {
-    return i
-  }
+    n: function () {
+        return r;
+    }
 });
-let i = "getThermalState not implemented for this client platform"
+let r = 'getThermalState not implemented for this client platform';

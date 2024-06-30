@@ -1,64 +1,56 @@
-"use strict";
 n.d(t, {
-  Vb: function() {
-    return l
-  },
-  Yz: function() {
-    return o
-  },
-  by: function() {
-    return a
-  },
-  is: function() {
-    return r
-  },
-  lx: function() {
-    return s
-  }
+    Vb: function () {
+        return l;
+    },
+    Yz: function () {
+        return o;
+    },
+    by: function () {
+        return s;
+    },
+    is: function () {
+        return i;
+    },
+    lx: function () {
+        return a;
+    }
 });
-var i = n(570140);
-
-function r() {
-  let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1e4;
-  i.Z.dispatch({
-    type: "BROWSER_HANDOFF_BEGIN",
-    timeout: e
-  })
+var r = n(570140);
+function i() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10000;
+    r.Z.dispatch({
+        type: 'BROWSER_HANDOFF_BEGIN',
+        timeout: e
+    });
 }
-
-function s(e, t) {
-  i.Z.dispatch({
-    type: "BROWSER_HANDOFF_END",
-    handoffToken: e,
-    fingerprint: t
-  })
+function a(e, t) {
+    r.Z.dispatch({
+        type: 'BROWSER_HANDOFF_END',
+        handoffToken: e,
+        fingerprint: t
+    });
 }
-
 function o(e) {
-  let {
-    handoffKey: t,
-    handoffToken: n,
-    handoffSource: r,
-    timeout: s = 1e4
-  } = e;
-  i.Z.dispatch({
-    type: "BROWSER_HANDOFF_FROM_APP",
-    handoffKey: t,
-    handoffToken: n,
-    handoffSource: r,
-    timeout: s
-  })
+    let {
+        handoffKey: t,
+        handoffToken: n,
+        handoffSource: i,
+        timeout: a = 10000
+    } = e;
+    r.Z.dispatch({
+        type: 'BROWSER_HANDOFF_FROM_APP',
+        handoffKey: t,
+        handoffToken: n,
+        handoffSource: i,
+        timeout: a
+    });
 }
-
-function a() {
-  i.Z.dispatch({
-    type: "BROWSER_HANDOFF_UNAVAILABLE"
-  })
+function s() {
+    r.Z.dispatch({ type: 'BROWSER_HANDOFF_UNAVAILABLE' });
 }
-
 function l(e) {
-  i.Z.dispatch({
-    type: "BROWSER_HANDOFF_SET_USER",
-    user: e
-  })
+    r.Z.dispatch({
+        type: 'BROWSER_HANDOFF_SET_USER',
+        user: e
+    });
 }

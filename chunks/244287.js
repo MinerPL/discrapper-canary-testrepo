@@ -1,18 +1,16 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return i
-  }
+    Z: function () {
+        return i;
+    }
 });
 var r = {
-  left: "right",
-  right: "left",
-  bottom: "top",
-  top: "bottom"
+    left: 'right',
+    right: 'left',
+    bottom: 'top',
+    top: 'bottom'
 };
-
 function i(e) {
-  return e.replace(/left|right|bottom|top/g, function(e) {
-    return r[e]
-  })
+    return e.replace(/left|right|bottom|top/g, function (e) {
+        return r[e];
+    });
 }

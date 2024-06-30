@@ -1,192 +1,210 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return m
-  }
-}), t(536091);
-var n = t(735250),
-  i = t(470079),
-  l = t(481060),
-  a = t(727072),
-  r = t(85960),
-  o = t(676317),
-  c = t(823379),
-  d = t(84613),
-  u = t(740903),
-  E = t(598622),
-  _ = t(689938),
-  I = t(19957);
-
+n.d(t, {
+    Z: function () {
+        return N;
+    }
+}), n(536091);
+var s = n(735250), a = n(470079), i = n(481060), r = n(727072), l = n(85960), o = n(676317), c = n(823379), d = n(84613), u = n(740903), _ = n(598622), E = n(689938), I = n(854252);
 function T() {
-  let e = "• ";
-  return (0, n.jsxs)("div", {
-    className: I.changelog,
-    children: [(0, n.jsx)("img", {
-      className: I.changelogImage,
-      src: t(531945),
-      alt: "changelog"
-    }), (0, n.jsxs)("div", {
-      children: [(0, n.jsx)(l.Heading, {
-        variant: "heading-md/semibold",
-        color: "header-primary",
-        className: I.updatesHeader,
-        children: _.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_HEADER
-      }), (0, n.jsx)(l.Text, {
-        variant: "text-sm/medium",
-        color: "header-secondary",
-        className: I.updatesDescription,
-        children: _.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_LINE_1
-      }), (0, n.jsx)(l.Text, {
-        variant: "text-sm/medium",
-        color: "header-secondary",
-        className: I.updatesDescription,
-        children: _.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_LINE_2
-      }), (0, n.jsxs)(l.Text, {
-        variant: "text-sm/medium",
-        color: "header-secondary",
-        children: [e, _.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_1]
-      }), (0, n.jsxs)(l.Text, {
-        variant: "text-sm/medium",
-        color: "header-secondary",
-        children: [e, _.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_2]
-      }), (0, n.jsxs)(l.Text, {
-        variant: "text-sm/medium",
-        color: "header-secondary",
-        children: [e, _.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_3]
-      }), (0, n.jsxs)(l.Text, {
-        variant: "text-sm/medium",
-        color: "header-secondary",
-        children: [e, _.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_4]
-      })]
-    })]
-  })
+    let e = '\u2022 ';
+    return (0, s.jsxs)('div', {
+        className: I.changelog,
+        children: [
+            (0, s.jsx)('img', {
+                className: I.changelogImage,
+                src: n(531945),
+                alt: 'changelog'
+            }),
+            (0, s.jsxs)('div', {
+                children: [
+                    (0, s.jsx)(i.Heading, {
+                        variant: 'heading-md/semibold',
+                        color: 'header-primary',
+                        className: I.updatesHeader,
+                        children: E.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_HEADER
+                    }),
+                    (0, s.jsx)(i.Text, {
+                        variant: 'text-sm/medium',
+                        color: 'header-secondary',
+                        className: I.updatesDescription,
+                        children: E.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_LINE_1
+                    }),
+                    (0, s.jsx)(i.Text, {
+                        variant: 'text-sm/medium',
+                        color: 'header-secondary',
+                        className: I.updatesDescription,
+                        children: E.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_LINE_2
+                    }),
+                    (0, s.jsxs)(i.Text, {
+                        variant: 'text-sm/medium',
+                        color: 'header-secondary',
+                        children: [
+                            e,
+                            E.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_1
+                        ]
+                    }),
+                    (0, s.jsxs)(i.Text, {
+                        variant: 'text-sm/medium',
+                        color: 'header-secondary',
+                        children: [
+                            e,
+                            E.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_2
+                        ]
+                    }),
+                    (0, s.jsxs)(i.Text, {
+                        variant: 'text-sm/medium',
+                        color: 'header-secondary',
+                        children: [
+                            e,
+                            E.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_3
+                        ]
+                    }),
+                    (0, s.jsxs)(i.Text, {
+                        variant: 'text-sm/medium',
+                        color: 'header-secondary',
+                        children: [
+                            e,
+                            E.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_4
+                        ]
+                    })
+                ]
+            })
+        ]
+    });
 }
-
-function N(e) {
-  let {
-    title: s,
-    subtitle: t,
-    icon: i,
-    page: a
-  } = e;
-  return (0, n.jsxs)("div", {
-    className: I.safetyStepRow,
-    children: [(0, n.jsxs)("div", {
-      className: I.safetyStepContent,
-      children: [(0, n.jsx)(l.Avatar, {
-        src: i,
-        size: l.AvatarSizes.SIZE_40,
-        "aria-label": s
-      }), (0, n.jsxs)("div", {
-        children: [(0, n.jsx)(l.Heading, {
-          variant: "heading-md/semibold",
-          color: "header-primary",
-          children: s
-        }), (0, n.jsx)(l.Text, {
-          variant: "text-xs/medium",
-          color: "header-secondary",
-          children: t
-        })]
-      })]
-    }), (0, n.jsx)(l.Button, {
-      className: I.__invalid_editButton,
-      size: l.Button.Sizes.SMALL,
-      color: l.Button.Colors.PRIMARY,
-      look: l.Button.Looks.OUTLINED,
-      onClick: () => (0, d.K)(a),
-      children: _.Z.Messages.EDIT
-    })]
-  })
-}
-
 function m(e) {
-  let {
-    guild: s,
-    hideChangelog: d
-  } = e;
-  (0, a.RD)(s.id);
-  let m = (0, r.Z6)(s.id),
-    {
-      rulesByTriggerType: S
-    } = (0, a.pH)(s.id),
-    {
-      numEnabledRules: h,
-      numRules: g
-    } = i.useMemo(() => {
-      let e = 0,
-        s = 0;
-      return null == S ? {
-        numEnabledRules: e,
-        numRules: s
-      } : (Object.values(m).flat().forEach(t => {
-        var n;
-        let i = null === (n = S[t]) || void 0 === n ? void 0 : n.filter(c.lm);
-        if (null == i || 0 === i.length) {
-          s++;
-          return
-        }
-        i.forEach(t => {
-          t.enabled && e++, s++
-        })
-      }), {
-        numEnabledRules: e,
-        numRules: s
-      })
-    }, [m, S]),
-    x = (0, E.Q)(s),
-    C = x[u.u.CAPTCHA_AND_RAID_PROTECTION],
-    R = x[u.u.DM_AND_SPAM_PROTECTION],
-    L = x[u.u.PERMISSIONS],
-    O = (0, o.pr)(s.id);
-  return (0, n.jsxs)("div", {
-    children: [(0, n.jsx)(l.Heading, {
-      variant: "heading-lg/semibold",
-      color: "header-primary",
-      className: I.header,
-      children: _.Z.Messages.GUILD_SETTINGS_SAFETY_SETUP_HEADER
-    }), !d && (0, n.jsx)(T, {}), (0, n.jsxs)("div", {
-      className: I.safetyChecklist,
-      children: [(0, n.jsx)(N, {
-        icon: t(14215),
-        title: _.Z.Messages.GUILD_SETTINGS_SAFETY_CAPTCHA_RAID_PROTECTION,
-        subtitle: _.Z.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
-          enabled: C.filter(e => e.enabled).length,
-          total: C.length
-        }),
-        page: u.u.CAPTCHA_AND_RAID_PROTECTION
-      }), (0, n.jsx)("div", {
-        className: I.divider
-      }), (0, n.jsx)(N, {
-        icon: t(128724),
-        title: _.Z.Messages.GUILD_SETTINGS_SAFETY_DM_SPAM_PROTECTION,
-        subtitle: _.Z.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
-          enabled: R.filter(e => e.enabled).length,
-          total: R.length
-        }),
-        page: u.u.DM_AND_SPAM_PROTECTION
-      }), (0, n.jsx)("div", {
-        className: I.divider
-      }), O && (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)(N, {
-          icon: t(145136),
-          title: _.Z.Messages.GUILD_SETTINGS_AUTOMOD_TITLE,
-          subtitle: _.Z.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
-            enabled: h,
-            total: g
-          }),
-          page: u.u.AUTOMOD
-        }), (0, n.jsx)("div", {
-          className: I.divider
-        })]
-      }), (0, n.jsx)(N, {
-        icon: t(913414),
-        title: _.Z.Messages.PERMISSIONS,
-        subtitle: _.Z.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
-          enabled: L.filter(e => e.enabled).length,
-          total: L.length
-        }),
-        page: u.u.PERMISSIONS
-      })]
-    })]
-  })
+    let {
+        title: t,
+        subtitle: n,
+        icon: a,
+        page: r
+    } = e;
+    return (0, s.jsxs)('div', {
+        className: I.safetyStepRow,
+        children: [
+            (0, s.jsxs)('div', {
+                className: I.safetyStepContent,
+                children: [
+                    (0, s.jsx)(i.Avatar, {
+                        src: a,
+                        size: i.AvatarSizes.SIZE_40,
+                        'aria-label': t
+                    }),
+                    (0, s.jsxs)('div', {
+                        children: [
+                            (0, s.jsx)(i.Heading, {
+                                variant: 'heading-md/semibold',
+                                color: 'header-primary',
+                                children: t
+                            }),
+                            (0, s.jsx)(i.Text, {
+                                variant: 'text-xs/medium',
+                                color: 'header-secondary',
+                                children: n
+                            })
+                        ]
+                    })
+                ]
+            }),
+            (0, s.jsx)(i.Button, {
+                className: I.__invalid_editButton,
+                size: i.Button.Sizes.SMALL,
+                color: i.Button.Colors.PRIMARY,
+                look: i.Button.Looks.OUTLINED,
+                onClick: () => (0, d.K)(r),
+                children: E.Z.Messages.EDIT
+            })
+        ]
+    });
+}
+function N(e) {
+    let {
+        guild: t,
+        hideChangelog: d
+    } = e;
+    (0, r.RD)(t.id);
+    let N = (0, l.Z6)(t.id), {rulesByTriggerType: S} = (0, r.pH)(t.id), {
+            numEnabledRules: h,
+            numRules: g
+        } = a.useMemo(() => {
+            let e = 0, t = 0;
+            return null == S ? {
+                numEnabledRules: e,
+                numRules: t
+            } : (Object.values(N).flat().forEach(n => {
+                var s;
+                let a = null === (s = S[n]) || void 0 === s ? void 0 : s.filter(c.lm);
+                if (null == a || 0 === a.length) {
+                    t++;
+                    return;
+                }
+                a.forEach(n => {
+                    n.enabled && e++, t++;
+                });
+            }), {
+                numEnabledRules: e,
+                numRules: t
+            });
+        }, [
+            N,
+            S
+        ]), C = (0, _.Q)(t), x = C[u.u.CAPTCHA_AND_RAID_PROTECTION], p = C[u.u.DM_AND_SPAM_PROTECTION], R = C[u.u.PERMISSIONS], f = (0, o.pr)(t.id);
+    return (0, s.jsxs)('div', {
+        children: [
+            (0, s.jsx)(i.Heading, {
+                variant: 'heading-lg/semibold',
+                color: 'header-primary',
+                className: I.header,
+                children: E.Z.Messages.GUILD_SETTINGS_SAFETY_SETUP_HEADER
+            }),
+            !d && (0, s.jsx)(T, {}),
+            (0, s.jsxs)('div', {
+                className: I.safetyChecklist,
+                children: [
+                    (0, s.jsx)(m, {
+                        icon: n(14215),
+                        title: E.Z.Messages.GUILD_SETTINGS_SAFETY_CAPTCHA_RAID_PROTECTION,
+                        subtitle: E.Z.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
+                            enabled: x.filter(e => e.enabled).length,
+                            total: x.length
+                        }),
+                        page: u.u.CAPTCHA_AND_RAID_PROTECTION
+                    }),
+                    (0, s.jsx)('div', { className: I.divider }),
+                    (0, s.jsx)(m, {
+                        icon: n(128724),
+                        title: E.Z.Messages.GUILD_SETTINGS_SAFETY_DM_SPAM_PROTECTION,
+                        subtitle: E.Z.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
+                            enabled: p.filter(e => e.enabled).length,
+                            total: p.length
+                        }),
+                        page: u.u.DM_AND_SPAM_PROTECTION
+                    }),
+                    (0, s.jsx)('div', { className: I.divider }),
+                    f && (0, s.jsxs)(s.Fragment, {
+                        children: [
+                            (0, s.jsx)(m, {
+                                icon: n(145136),
+                                title: E.Z.Messages.GUILD_SETTINGS_AUTOMOD_TITLE,
+                                subtitle: E.Z.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
+                                    enabled: h,
+                                    total: g
+                                }),
+                                page: u.u.AUTOMOD
+                            }),
+                            (0, s.jsx)('div', { className: I.divider })
+                        ]
+                    }),
+                    (0, s.jsx)(m, {
+                        icon: n(913414),
+                        title: E.Z.Messages.PERMISSIONS,
+                        subtitle: E.Z.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
+                            enabled: R.filter(e => e.enabled).length,
+                            total: R.length
+                        }),
+                        page: u.u.PERMISSIONS
+                    })
+                ]
+            })
+        ]
+    });
 }

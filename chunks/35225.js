@@ -1,19 +1,11 @@
-"use strict";
 n.d(t, {
-  V: function() {
-    return u
-  }
+    V: function () {
+        return u;
+    }
 });
-var i = n(819553),
-  r = n(931261),
-  s = n(592125),
-  o = n(984933),
-  a = n(944486),
-  l = n(176505);
-
+var r = n(819553), i = n(931261), a = n(592125), o = n(984933), s = n(944486), l = n(176505);
 function u(e) {
-  var t;
-  let n = a.Z.getChannelId(e),
-    u = null === (t = o.ZP.getDefaultChannel(e)) || void 0 === t ? void 0 : t.id;
-  return (n !== l.oC.GUILD_ONBOARDING || i.ZP.shouldShowOnboarding(e)) && (n !== l.oC.GUILD_HOME || (0, r.s)(e)) && null != s.Z.getChannel(n) ? n : u
+    var t;
+    let n = s.Z.getChannelId(e), u = null === (t = o.ZP.getDefaultChannel(e)) || void 0 === t ? void 0 : t.id;
+    return (n !== l.oC.GUILD_ONBOARDING || r.ZP.shouldShowOnboarding(e)) && (n !== l.oC.GUILD_HOME || (0, i.s)(e)) && null != a.Z.getChannel(n) ? n : u;
 }

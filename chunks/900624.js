@@ -1,15 +1,9 @@
-var n = e(853647),
-  o = e(440073),
-  i = e(497903),
-  a = e(843832),
-  u = e(687074);
-
-function f(t) {
-  var r = -1,
-    e = null == t ? 0 : t.length;
-  for (this.clear(); ++r < e;) {
-    var n = t[r];
-    this.set(n[0], n[1])
-  }
+var n = r(853647), _ = r(440073), a = r(497903), i = r(843832), o = r(687074);
+function E(t) {
+    var e = -1, r = null == t ? 0 : t.length;
+    for (this.clear(); ++e < r;) {
+        var n = t[e];
+        this.set(n[0], n[1]);
+    }
 }
-f.prototype.clear = n, f.prototype.delete = o, f.prototype.get = i, f.prototype.has = a, f.prototype.set = u, t.exports = f
+E.prototype.clear = n, E.prototype.delete = _, E.prototype.get = a, E.prototype.has = i, E.prototype.set = o, t.exports = E;

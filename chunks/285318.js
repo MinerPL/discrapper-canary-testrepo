@@ -1,102 +1,100 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return d
-  }
-}), t(47120);
-var n = t(735250),
-  i = t(470079),
-  l = t(481060),
-  a = t(273504),
-  r = t(689938),
-  o = t(789398);
-
+n.d(t, {
+    Z: function () {
+        return d;
+    }
+}), n(47120);
+var s = n(735250), a = n(470079), i = n(481060), r = n(273504), l = n(689938), o = n(548442);
 function c(e) {
-  let {
-    preset: s,
-    toggled: t,
-    onToggle: i
-  } = e, {
-    headerText: c,
-    subtitleText: d
-  } = function(e) {
-    let s = null,
-      t = null;
-    switch (e) {
-      case a.Ux.PROFANITY:
-        s = r.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_PROFANITY_HEADER, t = (0, n.jsx)(n.Fragment, {
-          children: r.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_PROFANITY_SUBTITLE
-        });
-        break;
-      case a.Ux.SEXUAL_CONTENT:
-        s = r.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SEXUAL_CONTENT_HEADER, t = (0, n.jsx)(n.Fragment, {
-          children: r.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SEXUAL_CONTENT_SUBTITLE
-        });
-        break;
-      case a.Ux.SLURS:
-        s = r.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SLURS_HEADER, t = (0, n.jsx)(n.Fragment, {
-          children: r.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SLURS_SUBTITLE
-        });
-        break;
-      default:
-        s = "Error", t = "Unrecognized list"
-    }
-    return {
-      headerText: s,
-      subtitleText: t
-    }
-  }(s);
-  return (0, n.jsxs)("div", {
-    className: o.keywordListContainer,
-    children: [(0, n.jsxs)("div", {
-      className: o.keywordListTextContainer,
-      children: [(0, n.jsx)(l.Heading, {
-        variant: "heading-sm/semibold",
-        children: c
-      }), (0, n.jsx)(l.Text, {
-        color: "interactive-normal",
-        variant: "text-xs/medium",
-        children: d
-      })]
-    }), (0, n.jsx)(l.Checkbox, {
-      className: o.toggle,
-      type: l.Checkbox.Types.INVERTED,
-      value: t,
-      onChange: () => i(s)
-    })]
-  })
+    let {
+            preset: t,
+            toggled: n,
+            onToggle: a
+        } = e, {
+            headerText: c,
+            subtitleText: d
+        } = function (e) {
+            let t = null, n = null;
+            switch (e) {
+            case r.Ux.PROFANITY:
+                t = l.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_PROFANITY_HEADER, n = (0, s.jsx)(s.Fragment, { children: l.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_PROFANITY_SUBTITLE });
+                break;
+            case r.Ux.SEXUAL_CONTENT:
+                t = l.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SEXUAL_CONTENT_HEADER, n = (0, s.jsx)(s.Fragment, { children: l.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SEXUAL_CONTENT_SUBTITLE });
+                break;
+            case r.Ux.SLURS:
+                t = l.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SLURS_HEADER, n = (0, s.jsx)(s.Fragment, { children: l.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SLURS_SUBTITLE });
+                break;
+            default:
+                t = 'Error', n = 'Unrecognized list';
+            }
+            return {
+                headerText: t,
+                subtitleText: n
+            };
+        }(t);
+    return (0, s.jsxs)('div', {
+        className: o.keywordListContainer,
+        children: [
+            (0, s.jsxs)('div', {
+                className: o.keywordListTextContainer,
+                children: [
+                    (0, s.jsx)(i.Heading, {
+                        variant: 'heading-sm/semibold',
+                        children: c
+                    }),
+                    (0, s.jsx)(i.Text, {
+                        color: 'interactive-normal',
+                        variant: 'text-xs/medium',
+                        children: d
+                    })
+                ]
+            }),
+            (0, s.jsx)(i.Checkbox, {
+                className: o.toggle,
+                type: i.Checkbox.Types.INVERTED,
+                value: n,
+                onChange: () => a(t)
+            })
+        ]
+    });
 }
-
 function d(e) {
-  var s;
-  let {
-    rule: t,
-    onChangeRule: l
-  } = e, [r, o] = i.useState(new Set(null == t ? void 0 : null === (s = t.triggerMetadata) || void 0 === s ? void 0 : s.presets)), d = i.useMemo(() => e => {
-    l({
-      ...t,
-      triggerMetadata: {
-        ...t.triggerMetadata,
-        presets: e
-      }
-    })
-  }, [l, t]), u = e => {
-    let s = new Set(r);
-    s.has(e) ? s.delete(e) : s.add(e), o(s), d(Array.from(s))
-  };
-  return (0, n.jsxs)("div", {
-    children: [(0, n.jsx)(c, {
-      preset: a.Ux.PROFANITY,
-      toggled: r.has(a.Ux.PROFANITY),
-      onToggle: u
-    }), (0, n.jsx)(c, {
-      preset: a.Ux.SLURS,
-      toggled: r.has(a.Ux.SLURS),
-      onToggle: u
-    }), (0, n.jsx)(c, {
-      preset: a.Ux.SEXUAL_CONTENT,
-      toggled: r.has(a.Ux.SEXUAL_CONTENT),
-      onToggle: u
-    })]
-  })
+    var t;
+    let {
+            rule: n,
+            onChangeRule: i
+        } = e, [l, o] = a.useState(new Set(null == n ? void 0 : null === (t = n.triggerMetadata) || void 0 === t ? void 0 : t.presets)), d = a.useMemo(() => e => {
+            i({
+                ...n,
+                triggerMetadata: {
+                    ...n.triggerMetadata,
+                    presets: e
+                }
+            });
+        }, [
+            i,
+            n
+        ]), u = e => {
+            let t = new Set(l);
+            t.has(e) ? t.delete(e) : t.add(e), o(t), d(Array.from(t));
+        };
+    return (0, s.jsxs)('div', {
+        children: [
+            (0, s.jsx)(c, {
+                preset: r.Ux.PROFANITY,
+                toggled: l.has(r.Ux.PROFANITY),
+                onToggle: u
+            }),
+            (0, s.jsx)(c, {
+                preset: r.Ux.SLURS,
+                toggled: l.has(r.Ux.SLURS),
+                onToggle: u
+            }),
+            (0, s.jsx)(c, {
+                preset: r.Ux.SEXUAL_CONTENT,
+                toggled: l.has(r.Ux.SEXUAL_CONTENT),
+                onToggle: u
+            })
+        ]
+    });
 }

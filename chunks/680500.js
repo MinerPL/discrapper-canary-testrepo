@@ -1,8 +1,7 @@
-"use strict";
-var n = r(581031),
-  o = r(526988);
-t.exports = function(t, e, r) {
-  try {
-    return n(o(Object.getOwnPropertyDescriptor(t, e)[r]))
-  } catch (t) {}
-}
+var e = o(581031), n = o(526988);
+r.exports = function (r, t, o) {
+    try {
+        return e(n(Object.getOwnPropertyDescriptor(r, t)[o]));
+    } catch (r) {
+    }
+};

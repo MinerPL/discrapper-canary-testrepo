@@ -1,12 +1,9 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return a;
+    }
 });
-var i = n(592125),
-  r = n(596401);
-
-function s(e) {
-  return null != e && e === i.Z.getDMFromUserId(r.sP)
+var r = n(592125), i = n(596401);
+function a(e) {
+    return null != e && e === r.Z.getDMFromUserId(i.sP);
 }

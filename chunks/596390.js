@@ -1,23 +1,24 @@
-"use strict";
-t.d(s, {
-  Bd: function() {
-    return i
-  },
-  I5: function() {
-    return l
-  },
-  tq: function() {
-    return a
-  },
-  uz: function() {
-    return r
-  },
-  ye: function() {
-    return n
-  }
-}), t(47120);
-let n = new Set(["Enter", "Tab"]),
-  i = new Set(["z", "y"]),
-  l = 5e3,
-  a = 100,
-  r = /[\n\t\r\f\v\x10]/
+n.d(t, {
+    Bd: function () {
+        return a;
+    },
+    I5: function () {
+        return i;
+    },
+    tq: function () {
+        return r;
+    },
+    uz: function () {
+        return l;
+    },
+    ye: function () {
+        return s;
+    }
+}), n(47120);
+let s = new Set([
+        'Enter',
+        'Tab'
+    ]), a = new Set([
+        'z',
+        'y'
+    ]), i = 5000, r = 100, l = /[\n\t\r\f\v\x10]/;

@@ -1,18 +1,12 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return a
-  }
+    Z: function () {
+        return s;
+    }
 });
-var i = n(470079),
-  r = n(442837),
-  s = n(693546),
-  o = n(937111);
-
-function a(e) {
-  let t = (0, r.e7)([o.Z], () => null == e ? null : o.Z.getRequest(e)),
-    n = (0, r.e7)([o.Z], () => o.Z.hasFetchedRequestToJoinGuilds);
-  return i.useEffect(() => {
-    !n && s.Z.fetchRequestToJoinGuilds()
-  }, [n]), t
+var r = n(470079), i = n(442837), a = n(693546), o = n(937111);
+function s(e) {
+    let t = (0, i.e7)([o.Z], () => null == e ? null : o.Z.getRequest(e)), n = (0, i.e7)([o.Z], () => o.Z.hasFetchedRequestToJoinGuilds);
+    return r.useEffect(() => {
+        !n && a.Z.fetchRequestToJoinGuilds();
+    }, [n]), t;
 }

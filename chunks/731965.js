@@ -1,11 +1,9 @@
-"use strict";
 n.d(t, {
-  j: function() {
-    return r
-  }
+    j: function () {
+        return i;
+    }
 });
-var i = n(699581);
-
-function r(e) {
-  (0, i.unstable_batchedUpdates)(e)
+var r = n(699581);
+function i(e) {
+    (0, r.unstable_batchedUpdates)(e);
 }

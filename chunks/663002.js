@@ -1,25 +1,22 @@
-"use strict";
 n.d(t, {
-  a: function() {
-    return r
-  },
-  w: function() {
-    return s
-  }
+    a: function () {
+        return i;
+    },
+    w: function () {
+        return a;
+    }
 });
-var i = n(231338);
-
-function r(e) {
-  return e === i.BR.LIGHT
+var r = n(231338);
+function i(e) {
+    return e === r.BR.LIGHT;
 }
-
-function s(e) {
-  switch (e) {
-    case i.BR.DARK:
-    case i.BR.MIDNIGHT:
-    case i.BR.DARKER:
-      return !0;
+function a(e) {
+    switch (e) {
+    case r.BR.DARK:
+    case r.BR.MIDNIGHT:
+    case r.BR.DARKER:
+        return !0;
     default:
-      return !1
-  }
+        return !1;
+    }
 }

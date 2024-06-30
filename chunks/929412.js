@@ -1,18 +1,16 @@
-"use strict";
 n.d(t, {
-  _: function() {
-    return i
-  }
+    _: function () {
+        return i;
+    }
 });
 var r = n(36056);
-
 function i(e, t) {
-  switch (t) {
+    switch (t) {
     case r.pz.BIGINT:
-      return e.toBigInt();
+        return e.toBigInt();
     case r.pz.NUMBER:
-      return e.toNumber();
+        return e.toNumber();
     default:
-      return e.toString()
-  }
+        return e.toString();
+    }
 }

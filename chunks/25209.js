@@ -1,16 +1,14 @@
-"use strict";
-let i;
+let r;
 n.d(t, {
-  Rp: function() {
-    return r.Rp
-  },
-  _p: function() {
-    return o
-  },
-  w4: function() {
-    return s
-  }
+    Rp: function () {
+        return i.Rp;
+    },
+    _p: function () {
+        return o;
+    },
+    w4: function () {
+        return a;
+    }
 });
-var r = n(840498);
-let s = (i = n(842091).Z).reactParserFor,
-  o = i.astParserFor
+var i = n(840498);
+let a = (r = n(842091).Z).reactParserFor, o = r.astParserFor;

@@ -1,280 +1,315 @@
-"use strict";
-t.d(s, {
-  Q: function() {
-    return c
-  },
-  V: function() {
-    return o
-  }
-}), t(47120), t(653041), t(177593);
-var n = t(470079),
-  i = t(348327),
-  l = t.n(i),
-  a = t(699581),
-  r = t(596390);
-
-function o(e) {
-  let [s, t] = n.useState([e]), [i, a] = n.useState(0), r = n.useMemo(() => s[i], [s, i]), o = n.useCallback(e => {
-    let n = e(r);
-    if (l()(r, n)) return;
-    let o = s.slice(0, i + 1);
-    o.push(n), t(o), a(o.length - 1)
-  }, [i, r, s]), c = n.useCallback(function() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-      t = Math.max(0, i - e);
-    return a(t), s[t]
-  }, [i, s]);
-  return {
-    state: r,
-    setState: o,
-    goBack: c,
-    goForward: n.useCallback(function() {
-      let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-        t = Math.min(s.length - 1, i + e);
-      return a(t), s[t]
-    }, [i, s])
-  }
-}
-
-function c(e, s) {
-  let {
-    scrollerRef: t,
-    mainInputRef: i,
-    mainContainerRef: l
-  } = s, {
-    state: {
-      value: o,
-      tags: c,
-      selections: d
+n.d(t, {
+    Q: function () {
+        return c;
     },
-    setState: u,
-    goBack: E,
-    goForward: _
-  } = e;
-  n.useLayoutEffect(() => {
-    let e = e => s => {
-        ("Meta" === s.key || "Control" === s.key) && u(s => ({
-          ...s,
-          isSelecting: e
-        }))
-      },
-      s = e(!0),
-      t = e(!1);
-    return document.addEventListener("keydown", s), document.addEventListener("keyup", t), () => {
-      document.removeEventListener("keydown", s), document.removeEventListener("keyup", t)
+    V: function () {
+        return o;
     }
-  }, [u]);
-  let I = n.useCallback(e => {
-      var s, n;
-      let i = (null !== (n = e.clipboardData.getData("text")) && void 0 !== n ? n : "").split(r.uz).map(e => e.trim()).filter(e => e.length > 0);
-      if (!(i.length <= 1))(0, a.flushSync)(() => {
-        u(e => {
-          let {
-            tags: s,
-            value: t
-          } = e;
-          return {
-            value: t,
-            tags: [...s, ...i],
-            selections: [],
-            isSelecting: !1
-          }
-        })
-      }), e.preventDefault(), e.stopPropagation(), null === (s = t.current) || void 0 === s || s.scrollToBottom()
-    }, [u, t]),
-    T = n.useCallback(e => {
-      u(s => {
-        let {
-          tags: t,
-          value: n
-        } = s;
-        return {
-          value: n,
-          tags: [...t.filter((s, t) => t !== e)],
-          selections: [],
-          isSelecting: !1
-        }
-      })
-    }, [u]),
-    N = n.useCallback(e => s => {
-      u(t => {
-        let {
-          tags: n,
-          value: i
-        } = t, l = [...n];
-        return l[e] = s, {
-          value: i,
-          tags: l,
-          selections: [],
-          isSelecting: !1
-        }
-      })
-    }, [u]),
-    m = n.useCallback(e => {
-      u(s => {
-        let {
-          tags: t,
-          value: n,
-          selections: i,
-          isSelecting: l
-        } = s;
-        return {
-          value: n,
-          tags: t,
-          selections: [...i, t[e]],
-          isSelecting: l
-        }
-      })
-    }, [u]),
-    S = n.useCallback(function(e) {
-      let s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      u(t => {
-        let {
-          tags: n,
-          value: i,
-          selections: l,
-          isSelecting: a
-        } = t;
-        return {
-          value: i,
-          tags: n,
-          selections: s ? [] : l.filter(s => s !== n[e]),
-          isSelecting: a
-        }
-      })
-    }, [u]),
-    h = n.useCallback(e => {
-      var s;
-      u(e => {
-        let {
-          tags: s,
-          value: t
+}), n(47120), n(653041), n(177593);
+var s = n(470079), a = n(348327), i = n.n(a), r = n(699581), l = n(596390);
+function o(e) {
+    let [t, n] = s.useState([e]), [a, r] = s.useState(0), l = s.useMemo(() => t[a], [
+            t,
+            a
+        ]), o = s.useCallback(e => {
+            let s = e(l);
+            if (i()(l, s))
+                return;
+            let o = t.slice(0, a + 1);
+            o.push(s), n(o), r(o.length - 1);
+        }, [
+            a,
+            l,
+            t
+        ]), c = s.useCallback(function () {
+            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, n = Math.max(0, a - e);
+            return r(n), t[n];
+        }, [
+            a,
+            t
+        ]);
+    return {
+        state: l,
+        setState: o,
+        goBack: c,
+        goForward: s.useCallback(function () {
+            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, n = Math.min(t.length - 1, a + e);
+            return r(n), t[n];
+        }, [
+            a,
+            t
+        ])
+    };
+}
+function c(e, t) {
+    let {
+            scrollerRef: n,
+            mainInputRef: a,
+            mainContainerRef: i
+        } = t, {
+            state: {
+                value: o,
+                tags: c,
+                selections: d
+            },
+            setState: u,
+            goBack: _,
+            goForward: E
         } = e;
-        return {
-          value: t,
-          tags: s,
-          selections: [],
-          isSelecting: !1
-        }
-      }), null != e && (e.preventDefault(), e.stopPropagation()), null === (s = i.current) || void 0 === s || s.focus()
-    }, [i, u]),
-    g = n.useCallback(e => {
-      u(s => {
-        let {
-          tags: t
-        } = s;
-        return {
-          value: e.target.value,
-          tags: t,
-          selections: [],
-          isSelecting: !1
-        }
-      })
-    }, [u]),
-    x = n.useCallback(function(e) {
-      let s = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-      if (!(o.trim().length <= 0))(0, a.flushSync)(() => {
-        u(e => {
-          let {
-            tags: s
-          } = e;
-          return {
-            value: "",
-            tags: [...s, o],
-            selections: [],
-            isSelecting: !1
-          }
-        })
-      }), n && null != t.current && t.current.scrollToBottom(), s && (e.preventDefault(), e.stopPropagation())
-    }, [t, u, o]),
-    C = n.useCallback(e => {
-      let s = o.trim().length <= 0;
-      if (d.length > 0) {
-        var t;
-        (0, a.flushSync)(() => {
-          u(e => {
-            let {
-              tags: s,
-              value: t,
-              selections: n
-            } = e;
-            return {
-              value: t,
-              tags: s.filter(e => !n.includes(e)),
-              selections: [],
-              isSelecting: !1
-            }
-          })
-        }), null === (t = i.current) || void 0 === t || t.focus(), e.preventDefault(), e.stopPropagation()
-      } else s && ((0, a.flushSync)(() => {
-        u(e => {
-          let {
-            tags: s
-          } = e, t = [...s], n = t.pop();
-          return {
-            value: null != n ? n : "",
-            tags: [...t],
-            selections: [],
-            isSelecting: !1
-          }
-        })
-      }), e.preventDefault(), e.stopPropagation())
-    }, [i, d.length, u, o]),
-    R = n.useCallback(e => {
-      var s, t, n, l;
-      let a = e.metaKey || e.ctrlKey;
-      "z" === e.key && a ? (E().selections.length > 0 ? null === (s = i.current) || void 0 === s || s.blur() : null === (t = i.current) || void 0 === t || t.focus(), e.preventDefault(), e.stopPropagation()) : "y" === e.key && a && (_().selections.length > 0 ? null === (n = i.current) || void 0 === n || n.blur() : null === (l = i.current) || void 0 === l || l.focus(), e.preventDefault(), e.stopPropagation())
-    }, [E, _, i]),
-    L = n.useCallback(e => {
-      var s;
-      let t = o.trim().length > 0,
-        {
-          selectionStart: n = 0,
-          selectionEnd: r = 0
-        } = null !== (s = i.current) && void 0 !== s ? s : {};
-      if (0 !== c.length && (!t || !!(n !== r)))(0, a.flushSync)(() => {
-        u(e => {
-          let {
-            tags: s,
-            value: t
-          } = e;
-          return {
-            value: t,
-            tags: s,
-            selections: [...s],
-            isSelecting: !1
-          }
-        })
-      }), setImmediate(() => {
-        var e;
-        null === (e = i.current) || void 0 === e || e.blur(), setTimeout(() => {
-          var e;
-          null === (e = l.current) || void 0 === e || e.focus()
-        }, 16)
-      }), e.preventDefault(), e.stopPropagation()
-    }, [l, i, u, c.length, o]),
-    O = n.useCallback(e => {
-      e.relatedTarget !== e.currentTarget && x(e, !1, !1)
-    }, [x]),
-    A = n.useCallback(e => {
-      let s = e.metaKey || e.ctrlKey;
-      if ("Meta" !== e.key) r.ye.has(e.key) ? x(e) : "Backspace" === e.key ? C(e) : "Escape" === e.key ? h(e) : "a" === e.key && s ? L(e) : r.Bd.has(e.key) && s && R(e)
-    }, [x, C, h, L, R]);
-  return {
-    handlePasteEvent: I,
-    handleInputChange: g,
-    handleKeyDown: A,
-    handleContainerKeyUp: n.useCallback(e => {
-      if (document.activeElement !== l.current) return;
-      let s = e.metaKey || e.ctrlKey;
-      "Backspace" === e.key ? C(e) : "a" === e.key && s ? L(e) : "Escape" === e.key ? h(e) : r.Bd.has(e.key) && s ? R(e) : "Meta" !== e.key && h(e)
-    }, [R, C, L, h, l]),
-    handleRemoveTag: T,
-    handleTagChangeEvent: N,
-    handleSelectTag: m,
-    handleUnselectTag: S,
-    handleResetTagSelections: h,
-    handleInputBlurEvent: O
-  }
+    s.useLayoutEffect(() => {
+        let e = e => t => {
+                ('Meta' === t.key || 'Control' === t.key) && u(t => ({
+                    ...t,
+                    isSelecting: e
+                }));
+            }, t = e(!0), n = e(!1);
+        return document.addEventListener('keydown', t), document.addEventListener('keyup', n), () => {
+            document.removeEventListener('keydown', t), document.removeEventListener('keyup', n);
+        };
+    }, [u]);
+    let I = s.useCallback(e => {
+            var t, s;
+            let a = (null !== (s = e.clipboardData.getData('text')) && void 0 !== s ? s : '').split(l.uz).map(e => e.trim()).filter(e => e.length > 0);
+            if (!(a.length <= 1))
+                (0, r.flushSync)(() => {
+                    u(e => {
+                        let {
+                            tags: t,
+                            value: n
+                        } = e;
+                        return {
+                            value: n,
+                            tags: [
+                                ...t,
+                                ...a
+                            ],
+                            selections: [],
+                            isSelecting: !1
+                        };
+                    });
+                }), e.preventDefault(), e.stopPropagation(), null === (t = n.current) || void 0 === t || t.scrollToBottom();
+        }, [
+            u,
+            n
+        ]), T = s.useCallback(e => {
+            u(t => {
+                let {
+                    tags: n,
+                    value: s
+                } = t;
+                return {
+                    value: s,
+                    tags: [...n.filter((t, n) => n !== e)],
+                    selections: [],
+                    isSelecting: !1
+                };
+            });
+        }, [u]), m = s.useCallback(e => t => {
+            u(n => {
+                let {
+                        tags: s,
+                        value: a
+                    } = n, i = [...s];
+                return i[e] = t, {
+                    value: a,
+                    tags: i,
+                    selections: [],
+                    isSelecting: !1
+                };
+            });
+        }, [u]), N = s.useCallback(e => {
+            u(t => {
+                let {
+                    tags: n,
+                    value: s,
+                    selections: a,
+                    isSelecting: i
+                } = t;
+                return {
+                    value: s,
+                    tags: n,
+                    selections: [
+                        ...a,
+                        n[e]
+                    ],
+                    isSelecting: i
+                };
+            });
+        }, [u]), S = s.useCallback(function (e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            u(n => {
+                let {
+                    tags: s,
+                    value: a,
+                    selections: i,
+                    isSelecting: r
+                } = n;
+                return {
+                    value: a,
+                    tags: s,
+                    selections: t ? [] : i.filter(t => t !== s[e]),
+                    isSelecting: r
+                };
+            });
+        }, [u]), h = s.useCallback(e => {
+            var t;
+            u(e => {
+                let {
+                    tags: t,
+                    value: n
+                } = e;
+                return {
+                    value: n,
+                    tags: t,
+                    selections: [],
+                    isSelecting: !1
+                };
+            }), null != e && (e.preventDefault(), e.stopPropagation()), null === (t = a.current) || void 0 === t || t.focus();
+        }, [
+            a,
+            u
+        ]), g = s.useCallback(e => {
+            u(t => {
+                let {tags: n} = t;
+                return {
+                    value: e.target.value,
+                    tags: n,
+                    selections: [],
+                    isSelecting: !1
+                };
+            });
+        }, [u]), C = s.useCallback(function (e) {
+            let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1], s = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+            if (!(o.trim().length <= 0))
+                (0, r.flushSync)(() => {
+                    u(e => {
+                        let {tags: t} = e;
+                        return {
+                            value: '',
+                            tags: [
+                                ...t,
+                                o
+                            ],
+                            selections: [],
+                            isSelecting: !1
+                        };
+                    });
+                }), s && null != n.current && n.current.scrollToBottom(), t && (e.preventDefault(), e.stopPropagation());
+        }, [
+            n,
+            u,
+            o
+        ]), x = s.useCallback(e => {
+            let t = o.trim().length <= 0;
+            if (d.length > 0) {
+                var n;
+                (0, r.flushSync)(() => {
+                    u(e => {
+                        let {
+                            tags: t,
+                            value: n,
+                            selections: s
+                        } = e;
+                        return {
+                            value: n,
+                            tags: t.filter(e => !s.includes(e)),
+                            selections: [],
+                            isSelecting: !1
+                        };
+                    });
+                }), null === (n = a.current) || void 0 === n || n.focus(), e.preventDefault(), e.stopPropagation();
+            } else
+                t && ((0, r.flushSync)(() => {
+                    u(e => {
+                        let {tags: t} = e, n = [...t], s = n.pop();
+                        return {
+                            value: null != s ? s : '',
+                            tags: [...n],
+                            selections: [],
+                            isSelecting: !1
+                        };
+                    });
+                }), e.preventDefault(), e.stopPropagation());
+        }, [
+            a,
+            d.length,
+            u,
+            o
+        ]), p = s.useCallback(e => {
+            var t, n, s, i;
+            let r = e.metaKey || e.ctrlKey;
+            'z' === e.key && r ? (_().selections.length > 0 ? null === (t = a.current) || void 0 === t || t.blur() : null === (n = a.current) || void 0 === n || n.focus(), e.preventDefault(), e.stopPropagation()) : 'y' === e.key && r && (E().selections.length > 0 ? null === (s = a.current) || void 0 === s || s.blur() : null === (i = a.current) || void 0 === i || i.focus(), e.preventDefault(), e.stopPropagation());
+        }, [
+            _,
+            E,
+            a
+        ]), R = s.useCallback(e => {
+            var t;
+            let n = o.trim().length > 0, {
+                    selectionStart: s = 0,
+                    selectionEnd: l = 0
+                } = null !== (t = a.current) && void 0 !== t ? t : {};
+            if (0 !== c.length && (!n || !!(s !== l)))
+                (0, r.flushSync)(() => {
+                    u(e => {
+                        let {
+                            tags: t,
+                            value: n
+                        } = e;
+                        return {
+                            value: n,
+                            tags: t,
+                            selections: [...t],
+                            isSelecting: !1
+                        };
+                    });
+                }), setImmediate(() => {
+                    var e;
+                    null === (e = a.current) || void 0 === e || e.blur(), setTimeout(() => {
+                        var e;
+                        null === (e = i.current) || void 0 === e || e.focus();
+                    }, 16);
+                }), e.preventDefault(), e.stopPropagation();
+        }, [
+            i,
+            a,
+            u,
+            c.length,
+            o
+        ]), f = s.useCallback(e => {
+            e.relatedTarget !== e.currentTarget && C(e, !1, !1);
+        }, [C]), L = s.useCallback(e => {
+            let t = e.metaKey || e.ctrlKey;
+            if ('Meta' !== e.key)
+                l.ye.has(e.key) ? C(e) : 'Backspace' === e.key ? x(e) : 'Escape' === e.key ? h(e) : 'a' === e.key && t ? R(e) : l.Bd.has(e.key) && t && p(e);
+        }, [
+            C,
+            x,
+            h,
+            R,
+            p
+        ]);
+    return {
+        handlePasteEvent: I,
+        handleInputChange: g,
+        handleKeyDown: L,
+        handleContainerKeyUp: s.useCallback(e => {
+            if (document.activeElement !== i.current)
+                return;
+            let t = e.metaKey || e.ctrlKey;
+            'Backspace' === e.key ? x(e) : 'a' === e.key && t ? R(e) : 'Escape' === e.key ? h(e) : l.Bd.has(e.key) && t ? p(e) : 'Meta' !== e.key && h(e);
+        }, [
+            p,
+            x,
+            R,
+            h,
+            i
+        ]),
+        handleRemoveTag: T,
+        handleTagChangeEvent: m,
+        handleSelectTag: N,
+        handleUnselectTag: S,
+        handleResetTagSelections: h,
+        handleInputBlurEvent: f
+    };
 }

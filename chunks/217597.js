@@ -1,50 +1,56 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return r
-  }
+n.d(t, {
+    Z: function () {
+        return r;
+    }
 });
-var n = t(735250);
-t(470079);
-var i = t(481060),
-  l = t(41542),
-  a = t(719440);
-
+var s = n(735250);
+n(470079);
+var a = n(481060), i = n(316185);
 function r(e) {
-  let {
-    label: s,
-    sublabel: t,
-    value: r,
-    additionalContent: o,
-    tooltip: c
-  } = e;
-  return (0, n.jsxs)("div", {
-    className: a.metricCard,
-    "aria-label": s,
-    children: [(0, n.jsxs)("div", {
-      className: a.metricCardLabelContainer,
-      children: [(0, n.jsx)(i.Text, {
-        className: a.metricCardLabel,
-        variant: "text-xs/medium",
-        color: "interactive-normal",
-        "aria-hidden": !0,
-        children: s
-      }), null != c && (0, n.jsx)(i.Tooltip, {
-        text: c,
-        children: e => (0, n.jsx)(l.Z, {
-          className: a.__invalid_labelTooltipIcon,
-          ...e
-        })
-      }), null != t ? (0, n.jsx)(i.Text, {
-        variant: "text-xs/normal",
-        color: "text-muted",
-        children: t
-      }) : null]
-    }), (0, n.jsx)(i.Text, {
-      tag: "span",
-      variant: "heading-xl/medium",
-      color: "header-primary",
-      children: r
-    }), o]
-  })
+    let {
+        label: t,
+        sublabel: n,
+        value: r,
+        additionalContent: l,
+        tooltip: o
+    } = e;
+    return (0, s.jsxs)('div', {
+        className: i.metricCard,
+        'aria-label': t,
+        children: [
+            (0, s.jsxs)('div', {
+                className: i.metricCardLabelContainer,
+                children: [
+                    (0, s.jsx)(a.Text, {
+                        className: i.metricCardLabel,
+                        variant: 'text-xs/medium',
+                        color: 'interactive-normal',
+                        'aria-hidden': !0,
+                        children: t
+                    }),
+                    null != o && (0, s.jsx)(a.Tooltip, {
+                        text: o,
+                        children: e => (0, s.jsx)(a.CircleInformationIcon, {
+                            size: 'xs',
+                            color: 'currentColor',
+                            className: i.__invalid_labelTooltipIcon,
+                            ...e
+                        })
+                    }),
+                    null != n ? (0, s.jsx)(a.Text, {
+                        variant: 'text-xs/normal',
+                        color: 'text-muted',
+                        children: n
+                    }) : null
+                ]
+            }),
+            (0, s.jsx)(a.Text, {
+                tag: 'span',
+                variant: 'heading-xl/medium',
+                color: 'header-primary',
+                children: r
+            }),
+            l
+        ]
+    });
 }

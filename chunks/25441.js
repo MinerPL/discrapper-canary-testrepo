@@ -1,21 +1,19 @@
-"use strict";
 n.d(t, {
-  N: function() {
-    return r
-  },
-  h: function() {
-    return s
-  }
+    N: function () {
+        return i;
+    },
+    h: function () {
+        return a;
+    }
 }), n(47120);
-let i = new Map;
-
-function r(e, t) {
-  let n = i.get(e);
-  return null == n && (n = new Set, i.set(e, n)), n.add(t), () => null == n ? void 0 : n.delete(t)
+let r = new Map();
+function i(e, t) {
+    let n = r.get(e);
+    return null == n && (n = new Set(), r.set(e, n)), n.add(t), () => null == n ? void 0 : n.delete(t);
 }
-
-function s(e, t, n) {
-  let r = i.get(e);
-  if (null != r)
-    for (let e of r) e(t, n)
+function a(e, t, n) {
+    let i = r.get(e);
+    if (null != i)
+        for (let e of i)
+            e(t, n);
 }

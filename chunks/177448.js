@@ -1,2 +1,1 @@
-"use strict";
-e.exports = "function" == typeof Bun && Bun && "string" == typeof Bun.version
+e.exports = 'function' == typeof Bun && Bun && 'string' == typeof Bun.version;

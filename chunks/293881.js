@@ -1,4 +1,3 @@
-"use strict";
-t.Z = function(e, t) {
-  return null != e && t in Object(e)
-}
+t.Z = function (e, t) {
+    return null != e && t in Object(e);
+};

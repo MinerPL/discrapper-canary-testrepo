@@ -1,12 +1,10 @@
-"use strict";
-
 function r(e, t) {
-  return (r = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function(e, t) {
-    return e.__proto__ = t, e
-  })(e, t)
+    return (r = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (e, t) {
+        return e.__proto__ = t, e;
+    })(e, t);
 }
 n.d(t, {
-  Z: function() {
-    return r
-  }
-})
+    Z: function () {
+        return r;
+    }
+});

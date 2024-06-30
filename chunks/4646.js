@@ -1,39 +1,39 @@
-"use strict";
-
-function i(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: n,
-    enumerable: !0,
-    configurable: !0,
-    writable: !0
-  }) : e[t] = n, e
-}
-async function r(e) {
-  let t = new s,
-    n = [];
-  for (let i of Object.keys(e)) n.push(t.loadRemoteImage(i, e[i]));
-  return await Promise.all(n), t
+function r(e, t, n) {
+    return t in e ? Object.defineProperty(e, t, {
+        value: n,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+    }) : e[t] = n, e;
 }
 n.d(t, {
-  k2: function() {
-    return r
-  }
-}), n(653041), n(47120);
-class s {
-  loadFonts() {
-    return Promise.resolve()
-  }
-  async loadRemoteImage(e, t) {
-    let n = new Image;
-    return n.src = t, n.crossOrigin = "anonymous", await n.decode(), this.assets[e] = n, Promise.resolve()
-  }
-  get(e) {
-    return this.assets[e]
-  }
-  has(e) {
-    return null != this.assets[e]
-  }
-  constructor() {
-    i(this, "assets", {}), i(this, "fontManager", void 0)
-  }
+    k2: function () {
+        return a;
+    }
+}), n(47120);
+let i = new (n(259443)).Y('AssetMap');
+async function a(e) {
+    let t = new o(), n = Object.entries(e).map(e => {
+            let [n, r] = e;
+            return t.loadRemoteImage(n, r).catch(e => i.warn('Failed to load canvas asset', e, n, r));
+        });
+    return await Promise.all(n), t;
+}
+class o {
+    loadFonts() {
+        return Promise.resolve();
+    }
+    async loadRemoteImage(e, t) {
+        let n = new Image();
+        return n.src = t, n.crossOrigin = 'anonymous', await n.decode(), this.assets[e] = n, Promise.resolve();
+    }
+    get(e) {
+        return this.assets[e];
+    }
+    has(e) {
+        return null != this.assets[e];
+    }
+    constructor() {
+        r(this, 'assets', {}), r(this, 'fontManager', void 0);
+    }
 }

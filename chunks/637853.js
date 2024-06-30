@@ -1,200 +1,166 @@
-"use strict";
 n.d(t, {
-  Ee: function() {
-    return m
-  },
-  L6: function() {
-    return P
-  },
-  V7: function() {
-    return R
-  },
-  VF: function() {
-    return M
-  },
-  b$: function() {
-    return S
-  },
-  d9: function() {
-    return v
-  },
-  dF: function() {
-    return O
-  },
-  dX: function() {
-    return y
-  },
-  iF: function() {
-    return C
-  },
-  kl: function() {
-    return g
-  },
-  mn: function() {
-    return p
-  },
-  p3: function() {
-    return N
-  },
-  wC: function() {
-    return f
-  }
-}), n(789020), n(47120), n(724458), n(653041), n(536091);
-var i = n(442837),
-  r = n(902704),
-  s = n(447003),
-  o = n(592125),
-  a = n(984933),
-  l = n(430824),
-  u = n(496675),
-  _ = n(630388),
-  d = n(823379),
-  c = n(700785),
-  E = n(977258),
-  I = n(981631),
-  T = n(372897);
-let h = new Date(16824888e5);
-
-function S(e) {
-  return (0, i.e7)([l.Z, u.Z], () => {
-    let t = l.Z.getGuild(e),
-      n = !!(null == t ? void 0 : t.hasFeature(I.oNc.COMMUNITY)),
-      i = u.Z.can(I.Plq.MANAGE_GUILD, t),
-      r = u.Z.can(I.Plq.MANAGE_ROLES, t);
-    return n && i && r
-  })
-}
-
-function f(e) {
-  let t = l.Z.getGuild(e),
-    n = !!(null == t ? void 0 : t.hasFeature(I.oNc.COMMUNITY)),
-    i = u.Z.can(I.Plq.MANAGE_GUILD, t),
-    r = u.Z.can(I.Plq.MANAGE_ROLES, t);
-  return n && i && r
-}
-
-function N(e, t) {
-  var n;
-  if (null == e || !e.hasFeature(I.oNc.GUILD_ONBOARDING) || null == t || null == t.joinedAt || new Date(t.joinedAt) < h) return !1;
-  let i = null !== (n = t.flags) && void 0 !== n ? n : 0;
-  return _.yE(i, T.q.STARTED_ONBOARDING) && !_.yE(i, T.q.COMPLETED_ONBOARDING)
-}
-
-function A(e, t, n) {
-  let i = new Set;
-  e.forEach(e => {
-    e.options.forEach(e => {
-      var t;
-      null == e || null === (t = e.channelIds) || void 0 === t || t.forEach(e => {
-        i.add(e)
-      })
-    })
-  }), t.forEach(e => i.add(e));
-  let r = n.filter(e => !e.isCategory() && !e.isThread() && !(0, s.Z)(e)),
-    o = r.filter(e => i.has(e.id) || null != e.parent_id && i.has(e.parent_id));
-  return [o, r.filter(e => !i.has(e.id) && !(null != e.parent_id && i.has(e.parent_id)))]
-}
-
-function m(e, t, n) {
-  return A(t, n, a.ZP.getChannels(e)[a.sH].map(e => {
-    let {
-      channel: t
-    } = e;
-    return t
-  }))
-}
-
-function O(e, t, n) {
-  return A(t, n, (0, i.e7)([a.ZP], () => a.ZP.getChannels(e))[a.sH].map(e => {
-    let {
-      channel: t
-    } = e;
-    return t
-  }))
-}
-
-function R(e) {
-  return C(o.Z.getChannel(e))
-}
-
-function C(e) {
-  return !!(null != e && (0, E.s)(e.guild_id, e.id)) && (e.isForumChannel() ? c.Uu(I.Plq.SEND_MESSAGES_IN_THREADS, e) : c.Uu(I.Plq.SEND_MESSAGES, e))
-}
-
-function p(e) {
-  return (0, i.e7)([o.Z], () => {
-    let t = o.Z.getChannel(e);
-    return (0, d.lm)(t) && C(t)
-  })
-}
-
-function g(e, t, n) {
-  let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !0,
-    r = L(e, t, e => e.id, i);
-  return n.forEach(t => {
-    var n, s;
-    if (!t.required) return;
-    let o = L(e, null !== (s = null === (n = t.options[0]) || void 0 === n ? void 0 : n.channelIds) && void 0 !== s ? s : [], e => e.id),
-      a = t.options.reduce((t, n) => {
-        if (null == n.channelIds) return [];
-        let s = L(e, n.channelIds, e => e.id, e => i(e) && !r.includes(e));
-        return s.length < t.length ? s : t
-      }, o);
-    r.push(...a)
-  }), r
-}
-
-function L(e, t) {
-  let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e => e,
-    i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !0,
-    r = a.ZP.getChannels(e)[a.sH],
-    s = [];
-  for (let {
-      channel: e
+    Ee: function () {
+        return S;
+    },
+    L6: function () {
+        return b;
+    },
+    V7: function () {
+        return N;
+    },
+    VF: function () {
+        return L;
+    },
+    b$: function () {
+        return m;
+    },
+    d9: function () {
+        return y;
+    },
+    dF: function () {
+        return A;
+    },
+    dX: function () {
+        return M;
+    },
+    iF: function () {
+        return v;
+    },
+    kl: function () {
+        return R;
+    },
+    mn: function () {
+        return O;
+    },
+    p3: function () {
+        return T;
+    },
+    wC: function () {
+        return I;
     }
-    of r)
-    if ((0, E.s)(e.guild_id, e.id) && (t.includes(e.id) && !e.isCategory() || !e.isThread() && null != e.parent_id && t.includes(e.parent_id))) {
-      let t = n(e);
-      i(t) && s.push(t)
-    } return s
+}), n(789020), n(47120), n(724458), n(653041), n(536091);
+var r = n(442837), i = n(902704), a = n(447003), o = n(592125), s = n(984933), l = n(430824), u = n(496675), c = n(630388), d = n(823379), _ = n(700785), E = n(977258), f = n(981631), h = n(372897);
+let p = new Date(1682488800000);
+function m(e) {
+    return (0, r.e7)([
+        l.Z,
+        u.Z
+    ], () => {
+        let t = l.Z.getGuild(e), n = !!(null == t ? void 0 : t.hasFeature(f.oNc.COMMUNITY)), r = u.Z.can(f.Plq.MANAGE_GUILD, t), i = u.Z.can(f.Plq.MANAGE_ROLES, t);
+        return n && r && i;
+    });
 }
-
-function v(e, t) {
-  var n, i;
-  let r = L(e, t),
-    s = a.ZP.getChannels(e)[a.sH],
-    o = {};
-  for (let e of s) o[e.channel.id] = e;
-  return [(n = r.map(e => {
-    let {
-      id: t
-    } = e;
-    return t
-  }), i = o, n.filter(e => {
-    var t;
-    return C(null === (t = i[e]) || void 0 === t ? void 0 : t.channel)
-  })), r]
+function I(e) {
+    let t = l.Z.getGuild(e), n = !!(null == t ? void 0 : t.hasFeature(f.oNc.COMMUNITY)), r = u.Z.can(f.Plq.MANAGE_GUILD, t), i = u.Z.can(f.Plq.MANAGE_ROLES, t);
+    return n && r && i;
 }
-
+function T(e, t) {
+    var n;
+    if (null == e || !e.hasFeature(f.oNc.GUILD_ONBOARDING) || null == t || null == t.joinedAt || new Date(t.joinedAt) < p)
+        return !1;
+    let r = null !== (n = t.flags) && void 0 !== n ? n : 0;
+    return c.yE(r, h.q.STARTED_ONBOARDING) && !c.yE(r, h.q.COMPLETED_ONBOARDING);
+}
+function g(e, t, n) {
+    let r = new Set();
+    e.forEach(e => {
+        e.options.forEach(e => {
+            var t;
+            null == e || null === (t = e.channelIds) || void 0 === t || t.forEach(e => {
+                r.add(e);
+            });
+        });
+    }), t.forEach(e => r.add(e));
+    let i = n.filter(e => !e.isCategory() && !e.isThread() && !(0, a.Z)(e)), o = i.filter(e => r.has(e.id) || null != e.parent_id && r.has(e.parent_id));
+    return [
+        o,
+        i.filter(e => !r.has(e.id) && !(null != e.parent_id && r.has(e.parent_id)))
+    ];
+}
+function S(e, t, n) {
+    return g(t, n, s.ZP.getChannels(e)[s.sH].map(e => {
+        let {channel: t} = e;
+        return t;
+    }));
+}
+function A(e, t, n) {
+    return g(t, n, (0, r.e7)([s.ZP], () => s.ZP.getChannels(e))[s.sH].map(e => {
+        let {channel: t} = e;
+        return t;
+    }));
+}
+function N(e) {
+    return v(o.Z.getChannel(e));
+}
+function v(e) {
+    return !!(null != e && (0, E.s)(e.guild_id, e.id)) && (e.isForumChannel() ? _.Uu(f.Plq.SEND_MESSAGES_IN_THREADS, e) : _.Uu(f.Plq.SEND_MESSAGES, e));
+}
+function O(e) {
+    return (0, r.e7)([o.Z], () => {
+        let t = o.Z.getChannel(e);
+        return (0, d.lm)(t) && v(t);
+    });
+}
+function R(e, t, n) {
+    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !0, i = C(e, t, e => e.id, r);
+    return n.forEach(t => {
+        var n, a;
+        if (!t.required)
+            return;
+        let o = C(e, null !== (a = null === (n = t.options[0]) || void 0 === n ? void 0 : n.channelIds) && void 0 !== a ? a : [], e => e.id), s = t.options.reduce((t, n) => {
+                if (null == n.channelIds)
+                    return [];
+                let a = C(e, n.channelIds, e => e.id, e => r(e) && !i.includes(e));
+                return a.length < t.length ? a : t;
+            }, o);
+        i.push(...s);
+    }), i;
+}
+function C(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e => e, r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !0, i = s.ZP.getChannels(e)[s.sH], a = [];
+    for (let {channel: e} of i)
+        if ((0, E.s)(e.guild_id, e.id) && (t.includes(e.id) && !e.isCategory() || !e.isThread() && null != e.parent_id && t.includes(e.parent_id))) {
+            let t = n(e);
+            r(t) && a.push(t);
+        }
+    return a;
+}
+function y(e, t) {
+    var n, r;
+    let i = C(e, t), a = s.ZP.getChannels(e)[s.sH], o = {};
+    for (let e of a)
+        o[e.channel.id] = e;
+    return [
+        (n = i.map(e => {
+            let {id: t} = e;
+            return t;
+        }), r = o, n.filter(e => {
+            var t;
+            return v(null === (t = r[e]) || void 0 === t ? void 0 : t.channel);
+        })),
+        i
+    ];
+}
 function D(e, t) {
-  return e[0].length === t[0].length && e[1].length === t[1].length && (0, r.Z)(e[0], t[0]) && (0, r.Z)(e[1], t[1])
+    return e[0].length === t[0].length && e[1].length === t[1].length && (0, i.Z)(e[0], t[0]) && (0, i.Z)(e[1], t[1]);
 }
-
-function M(e, t) {
-  return (0, i.e7)([a.ZP], () => {
-    let n = a.ZP.getChannels(e),
-      i = [],
-      r = [],
-      s = {};
-    for (let e of n[a.sH])(0, E.s)(e.channel.guild_id, e.channel.id) && (t.has(e.channel.id) && !e.channel.isCategory() || !e.channel.isThread() && null != e.channel.parent_id && t.has(e.channel.parent_id)) && (s[e.channel.id] = e, i.push(e.channel), C(e.channel) && r.push(e.channel.id));
-    return [r, i]
-  }, [e, t], D)
+function L(e, t) {
+    return (0, r.e7)([s.ZP], () => {
+        let n = s.ZP.getChannels(e), r = [], i = [], a = {};
+        for (let e of n[s.sH])
+            (0, E.s)(e.channel.guild_id, e.channel.id) && (t.has(e.channel.id) && !e.channel.isCategory() || !e.channel.isThread() && null != e.channel.parent_id && t.has(e.channel.parent_id)) && (a[e.channel.id] = e, r.push(e.channel), v(e.channel) && i.push(e.channel.id));
+        return [
+            i,
+            r
+        ];
+    }, [
+        e,
+        t
+    ], D);
 }
-
-function P(e) {
-  return new Set(e.map(e => e.roleIds).flat().filter(d.lm))
+function b(e) {
+    return new Set(e.map(e => e.roleIds).flat().filter(d.lm));
 }
-
-function y(e) {
-  return new Set(e.map(e => e.channelIds).flat().filter(d.lm))
+function M(e) {
+    return new Set(e.map(e => e.channelIds).flat().filter(d.lm));
 }

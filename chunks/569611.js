@@ -1,48 +1,45 @@
-"use strict";
 n.d(t, {
-  Hj: function() {
-    return o
-  },
-  Pz: function() {
-    return l
-  },
-  ZH: function() {
-    return a
-  }
-}), n(653041), n(411104), n(47120);
-var i = n(427786),
-  r = n.n(i);
-let s = new(r())(5e3);
-
-function o(e) {
-  for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
-  let r = function(e) {
-    let t = "";
-    for (let n of e) {
-      let e = typeof n;
-      "string" === e || "number" === e || "boolean" === e ? t += n + " " : n instanceof Error ? t += n.message + "\n" + n.stack + " " : t += JSON.stringify(n) + " "
+    Hj: function () {
+        return o;
+    },
+    Pz: function () {
+        return l;
+    },
+    ZH: function () {
+        return s;
     }
-    return t
-  }(n);
-  for ("string" == typeof e ? s.push({
-      time: Date.now(),
-      category: e,
-      message: r
-    }) : s.push({
-      time: Date.now(),
-      category: e.name,
-      timing: e.timing,
-      message: r
-    }); s.length > 5e3;) s.shift()
+}), n(653041), n(411104), n(47120);
+var r = n(427786), i = n.n(r);
+let a = new (i())(5000);
+function o(e) {
+    for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++)
+        n[r - 1] = arguments[r];
+    let i = function (e) {
+        let t = '';
+        for (let n of e) {
+            let e = typeof n;
+            'string' === e || 'number' === e || 'boolean' === e ? t += n + ' ' : n instanceof Error ? t += n.message + '\n' + n.stack + ' ' : t += JSON.stringify(n) + ' ';
+        }
+        return t;
+    }(n);
+    for ('string' == typeof e ? a.push({
+            time: Date.now(),
+            category: e,
+            message: i
+        }) : a.push({
+            time: Date.now(),
+            category: e.name,
+            timing: e.timing,
+            message: i
+        }); a.length > 5000;)
+        a.shift();
 }
-
-function a() {
-  s.clear()
+function s() {
+    a.clear();
 }
-
 function l(e) {
-  return s.toArray().filter(t => null == e || e.includes(t.category)).map(e => {
-    let t = [];
-    return t.push(new Date(e.time).toISOString()), null != e.timing && t.push(e.timing), t.push(e.category, e.message), t.join(" -> ")
-  }).join("\n")
+    return a.toArray().filter(t => null == e || e.includes(t.category)).map(e => {
+        let t = [];
+        return t.push(new Date(e.time).toISOString()), null != e.timing && t.push(e.timing), t.push(e.category, e.message), t.join(' -> ');
+    }).join('\n');
 }

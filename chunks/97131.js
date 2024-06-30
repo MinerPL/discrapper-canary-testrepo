@@ -1,29 +1,21 @@
-"use strict";
-var e = n(325008),
-  o = n(34924),
-  i = n(733669),
-  u = n(24033),
-  c = n(966606),
-  s = TypeError,
-  f = Object.defineProperty,
-  a = Object.getOwnPropertyDescriptor,
-  p = "enumerable",
-  l = "configurable",
-  v = "writable";
-r.f = e ? i ? function(t, r, n) {
-  if (u(t), r = c(r), u(n), "function" == typeof t && "prototype" === r && "value" in n && v in n && !n[v]) {
-    var e = a(t, r);
-    e && e[v] && (t[r] = n.value, n = {
-      configurable: l in n ? n[l] : e[l],
-      enumerable: p in n ? n[p] : e[p],
-      writable: !1
-    })
-  }
-  return f(t, r, n)
-} : f : function(t, r, n) {
-  if (u(t), r = c(r), u(n), o) try {
-    return f(t, r, n)
-  } catch (t) {}
-  if ("get" in n || "set" in n) throw s("Accessors not supported");
-  return "value" in n && (t[r] = n.value), t
-}
+var e = r(325008), o = r(34924), i = r(733669), u = r(24033), c = r(966606), f = TypeError, a = Object.defineProperty, s = Object.getOwnPropertyDescriptor, p = 'enumerable', l = 'configurable', v = 'writable';
+n.f = e ? i ? function (t, n, r) {
+    if (u(t), n = c(n), u(r), 'function' == typeof t && 'prototype' === n && 'value' in r && v in r && !r[v]) {
+        var e = s(t, n);
+        e && e[v] && (t[n] = r.value, r = {
+            configurable: l in r ? r[l] : e[l],
+            enumerable: p in r ? r[p] : e[p],
+            writable: !1
+        });
+    }
+    return a(t, n, r);
+} : a : function (t, n, r) {
+    if (u(t), n = c(n), u(r), o)
+        try {
+            return a(t, n, r);
+        } catch (t) {
+        }
+    if ('get' in r || 'set' in r)
+        throw f('Accessors not supported');
+    return 'value' in r && (t[n] = r.value), t;
+};

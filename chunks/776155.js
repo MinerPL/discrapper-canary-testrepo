@@ -1,29 +1,29 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return l
-  }
-}), t(47120);
-var n = t(470079),
-  i = t(295141);
-
-function l(e) {
-  let [s, t] = n.useState(!0), [l, a] = n.useState(), [r, o] = n.useState(), c = n.useCallback(async e => {
-    t(!0), a(void 0);
-    try {
-      let s = await i.HT(e);
-      o(s)
-    } catch (e) {
-      a(e)
-    } finally {
-      t(!1)
+n.d(t, {
+    Z: function () {
+        return i;
     }
-  }, []);
-  return n.useEffect(() => {
-    c(e)
-  }, [e, c]), {
-    isLoading: s,
-    error: l,
-    highlightedCreatorDetails: r
-  }
+}), n(47120);
+var s = n(470079), a = n(295141);
+function i(e) {
+    let [t, n] = s.useState(!0), [i, r] = s.useState(), [l, o] = s.useState(), c = s.useCallback(async e => {
+            n(!0), r(void 0);
+            try {
+                let t = await a.HT(e);
+                o(t);
+            } catch (e) {
+                r(e);
+            } finally {
+                n(!1);
+            }
+        }, []);
+    return s.useEffect(() => {
+        c(e);
+    }, [
+        e,
+        c
+    ]), {
+        isLoading: t,
+        error: i,
+        highlightedCreatorDetails: l
+    };
 }

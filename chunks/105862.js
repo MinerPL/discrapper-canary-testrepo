@@ -1,46 +1,46 @@
-"use strict";
-n.d(t, {
-  Z: function() {
-    return c
-  }
+t.d(n, {
+    Z: function () {
+        return E;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(481060),
-  o = n(782568),
-  a = n(63063),
-  l = n(981631),
-  u = n(689938),
-  _ = n(54674),
-  d = n(224275);
-
-function c() {
-  let e = r.useCallback(() => {
-    (0, o.Z)(a.Z.getArticleURL(l.BhN.LAUNCHING_APPS_WITH_SHAPES_BUTTON))
-  }, []);
-  return (0, i.jsxs)("div", {
-    className: _.container,
-    children: [(0, i.jsx)("img", {
-      className: _.image,
-      src: d,
-      alt: "",
-      "aria-hidden": !0
-    }), (0, i.jsxs)("div", {
-      className: _.body,
-      children: [(0, i.jsx)(s.Heading, {
-        variant: "heading-lg/bold",
-        color: "header-primary",
-        children: u.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_TITLE
-      }), (0, i.jsx)(s.Text, {
-        variant: "text-xs/normal",
-        color: "text-normal",
-        children: u.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_BODY
-      })]
-    }), (0, i.jsx)(s.Button, {
-      size: s.Button.Sizes.MEDIUM,
-      "aria-label": u.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_TITLE,
-      onClick: e,
-      children: u.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_LEARN_MORE
-    })]
-  })
+var i = t(735250), l = t(470079), a = t(780384), r = t(481060), s = t(410030), o = t(782568), c = t(63063), u = t(981631), d = t(689938), m = t(427010), p = t(983008), _ = t(478408);
+function E() {
+    let e = (0, s.ZP)(), n = (0, a.ap)(e) ? _ : p, t = l.useCallback(() => {
+            (0, o.Z)(c.Z.getArticleURL(u.BhN.LAUNCHING_APPS_WITH_SHAPES_BUTTON));
+        }, []);
+    return (0, i.jsxs)('div', {
+        className: m.container,
+        children: [
+            (0, i.jsx)('img', {
+                className: m.image,
+                src: n,
+                alt: '',
+                'aria-hidden': !0
+            }),
+            (0, i.jsxs)('div', {
+                className: m.body,
+                children: [
+                    (0, i.jsx)(r.Heading, {
+                        variant: 'heading-lg/bold',
+                        color: 'header-primary',
+                        children: d.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_TITLE
+                    }),
+                    (0, i.jsx)(r.Text, {
+                        variant: 'text-xs/normal',
+                        color: 'text-normal',
+                        children: d.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_BODY
+                    })
+                ]
+            }),
+            (0, i.jsx)(r.Button, {
+                size: r.Button.Sizes.MEDIUM,
+                'aria-label': d.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_LEARN_MORE_ARIA_LABEL.format({
+                    sectionTitle: d.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_TITLE,
+                    sectionBody: d.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_BODY
+                }),
+                onClick: t,
+                children: d.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_LEARN_MORE
+            })
+        ]
+    });
 }

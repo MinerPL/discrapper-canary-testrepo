@@ -1,32 +1,27 @@
-"use strict";
 n.d(t, {
-  Nd: function() {
-    return s
-  },
-  bk: function() {
-    return r
-  },
-  d3: function() {
-    return o
-  },
-  oP: function() {
-    return a
-  }
+    Nd: function () {
+        return a;
+    },
+    bk: function () {
+        return i;
+    },
+    d3: function () {
+        return o;
+    },
+    oP: function () {
+        return s;
+    }
 });
-var i = n(246364);
-
-function r(e) {
-  return e === i.wB.APPROVED || e === i.wB.REJECTED
+var r = n(246364);
+function i(e) {
+    return e === r.wB.APPROVED || e === r.wB.REJECTED;
 }
-
-function s(e) {
-  return e === i.wB.SUBMITTED
-}
-
-function o(e) {
-  return e.applicationStatus === i.wB.APPROVED && null != e.lastSeen
-}
-
 function a(e) {
-  return r(e.applicationStatus) && null == e.lastSeen
+    return e === r.wB.SUBMITTED;
+}
+function o(e) {
+    return e.applicationStatus === r.wB.APPROVED && null != e.lastSeen;
+}
+function s(e) {
+    return i(e.applicationStatus) && null == e.lastSeen;
 }

@@ -1,15 +1,13 @@
-"use strict";
 n.d(t, {
-  o: function() {
-    return r
-  }
+    o: function () {
+        return i;
+    }
 });
-var i = n(727785);
-
-function r(e) {
-  return {
-    type: i.h8.HEADER,
-    record: new i.X5(e),
-    score: 0
-  }
+var r = n(727785);
+function i(e) {
+    return {
+        type: r.h8.HEADER,
+        record: new r.X5(e),
+        score: 0
+    };
 }

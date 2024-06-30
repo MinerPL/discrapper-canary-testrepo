@@ -1,10 +1,8 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return i
-  }
+    Z: function () {
+        return r;
+    }
 });
-
-function i(e, t) {
-  return "".concat(e.toLowerCase().padEnd(32, "!")).concat(t.id)
+function r(e, t) {
+    return ''.concat(e.toLowerCase().padEnd(32, '!')).concat(t.id);
 }

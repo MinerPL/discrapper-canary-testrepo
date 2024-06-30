@@ -1,53 +1,36 @@
-"use strict";
-let r;
-n.d(e, {
-  Z1: function() {
-    return h
-  },
-  ph: function() {
-    return d
-  },
-  yW: function() {
-    return c
-  }
+let n;
+r.d(e, {
+    Z1: function () {
+        return R;
+    },
+    ph: function () {
+        return I;
+    },
+    yW: function () {
+        return c;
+    }
 });
-var i = n(635602),
-  s = n(24716);
-t = n.hmd(t);
-let a = (0, s.Rf)(),
-  o = {
-    nowSeconds: () => Date.now() / 1e3
-  },
-  u = (0, i.KV)() ? function() {
-    try {
-      return (0, i.l$)(t, "perf_hooks").performance
-    } catch (t) {
-      return
-    }
-  }() : function() {
-    let {
-      performance: t
-    } = a;
-    if (!!t && !!t.now) return {
-      now: () => t.now(),
-      timeOrigin: Date.now() - t.now()
-    }
-  }(),
-  l = void 0 === u ? o : {
-    nowSeconds: () => (u.timeOrigin + u.now()) / 1e3
-  },
-  c = o.nowSeconds.bind(o),
-  d = l.nowSeconds.bind(l),
-  h = (() => {
-    let {
-      performance: t
-    } = a;
-    if (!t || !t.now) return;
-    let e = t.now(),
-      n = Date.now(),
-      r = t.timeOrigin ? Math.abs(t.timeOrigin + e - n) : 36e5,
-      i = t.timing && t.timing.navigationStart,
-      s = "number" == typeof i ? Math.abs(i + e - n) : 36e5;
-    if (r < 36e5 || s < 36e5) return r <= s ? t.timeOrigin : i;
-    return n
-  })()
+var _ = r(635602), a = r(24716);
+t = r.hmd(t);
+let i = (0, a.Rf)(), o = { nowSeconds: () => Date.now() / 1000 }, E = (0, _.KV)() ? function () {
+        try {
+            return (0, _.l$)(t, 'perf_hooks').performance;
+        } catch (t) {
+            return;
+        }
+    }() : function () {
+        let {performance: t} = i;
+        if (!!t && !!t.now)
+            return {
+                now: () => t.now(),
+                timeOrigin: Date.now() - t.now()
+            };
+    }(), s = void 0 === E ? o : { nowSeconds: () => (E.timeOrigin + E.now()) / 1000 }, c = o.nowSeconds.bind(o), I = s.nowSeconds.bind(s), R = (() => {
+        let {performance: t} = i;
+        if (!t || !t.now)
+            return;
+        let e = t.now(), r = Date.now(), n = t.timeOrigin ? Math.abs(t.timeOrigin + e - r) : 3600000, _ = t.timing && t.timing.navigationStart, a = 'number' == typeof _ ? Math.abs(_ + e - r) : 3600000;
+        if (n < 3600000 || a < 3600000)
+            return n <= a ? t.timeOrigin : _;
+        return r;
+    })();

@@ -1,10 +1,9 @@
-"use strict";
-t.d(s, {
-  in: function() {
-    return n.AL
-  },
-  mY: function() {
-    return n.f3
-  }
+n.d(t, {
+    in: function () {
+        return s.AL;
+    },
+    mY: function () {
+        return s.f3;
+    }
 });
-var n = t(395586)
+var s = n(395586);

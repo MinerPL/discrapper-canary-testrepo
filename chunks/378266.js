@@ -1,12 +1,11 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return r;
+    }
 });
 var r = {};
 r = {
-  decrease: e => `Diminuer ${e.fieldLabel}`,
-  increase: e => `Augmenter ${e.fieldLabel}`,
-  numberField: "Champ de nombre"
-}
+    decrease: e => `Diminuer ${ e.fieldLabel }`,
+    increase: e => `Augmenter ${ e.fieldLabel }`,
+    numberField: 'Champ de nombre'
+};

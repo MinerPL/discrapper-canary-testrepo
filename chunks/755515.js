@@ -1,10 +1,9 @@
-"use strict";
-
 function r(e, t) {
-  if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
+    if (!(e instanceof t))
+        throw TypeError('Cannot call a class as a function');
 }
 n.d(t, {
-  Z: function() {
-    return r
-  }
-})
+    Z: function () {
+        return r;
+    }
+});

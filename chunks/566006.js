@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  O: function() {
-    return i
-  }
-}), (r = i || (i = {}))[r.NORMAL = 0] = "NORMAL", r[r.BURST = 1] = "BURST", r[r.VOTE = 2] = "VOTE"
+    O: function () {
+        return r;
+    }
+}), (i = r || (r = {}))[i.NORMAL = 0] = 'NORMAL', i[i.BURST = 1] = 'BURST', i[i.VOTE = 2] = 'VOTE';

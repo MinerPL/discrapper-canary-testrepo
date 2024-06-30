@@ -1,20 +1,20 @@
-"use strict";
 n.d(t, {
-  e: function() {
-    return r
-  }
-}), n(47120);
-let i = "_errors";
-
-function r(e) {
-  return function e(t, n) {
-    let r = t[i];
-    if (null != r && Array.isArray(r)) return r[0];
-    for (let [r, s] of Object.entries(t)) {
-      if (r !== i && null != s) {
-        if ("object" == typeof s) return e(s, null != n ? n : r)
-      }
+    e: function () {
+        return i;
     }
-    return null
-  }(e, void 0)
+}), n(47120);
+let r = '_errors';
+function i(e) {
+    return function e(t, n) {
+        let i = t[r];
+        if (null != i && Array.isArray(i))
+            return i[0];
+        for (let [i, a] of Object.entries(t)) {
+            if (i !== r && null != a) {
+                if ('object' == typeof a)
+                    return e(a, null != n ? n : i);
+            }
+        }
+        return null;
+    }(e, void 0);
 }

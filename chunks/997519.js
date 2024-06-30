@@ -1,52 +1,44 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return c
-  }
+n.d(t, {
+    Z: function () {
+        return c;
+    }
 });
-var n = t(470079),
-  i = t(766434),
-  l = t(310291),
-  a = t(730647),
-  r = t(495298),
-  o = t(198139);
-
-function c(e, s) {
-  let t = null == s ? void 0 : s.team,
-    {
-      payoutsByPeriod: c,
-      loading: d
-    } = (0, l.Z)(null == s ? void 0 : s.id, {
-      groupType: o.uw.SERVER_ROLE_SUBSCRIPTION,
-      teamId: null == t ? void 0 : t.id
-    }),
-    u = (0, a.f)("useEarningMetrics"),
-    E = (0, r.Z)(e),
-    {
-      currentPeriod: _,
-      previousPeriods: I,
-      metrics: T
-    } = n.useMemo(() => {
-      let {
-        currentPeriod: e,
-        previousPeriods: s
-      } = (0, i.Br)(c), t = (0, i.Uj)(e, s[0]);
-      return {
-        currentPeriod: e,
-        previousPeriods: s,
-        metrics: {
-          ...t,
-          subscribers: E,
-          subscriberChange: t.paymentsCountChange
-        }
-      }
-    }, [c, E]);
-  return {
-    loading: d || !u,
-    team: t,
-    currentPeriod: _,
-    previousPeriods: I,
-    allPeriods: c,
-    metrics: T
-  }
+var s = n(470079), a = n(766434), i = n(310291), r = n(730647), l = n(495298), o = n(198139);
+function c(e, t) {
+    let n = null == t ? void 0 : t.team, {
+            payoutsByPeriod: c,
+            loading: d
+        } = (0, i.Z)(null == t ? void 0 : t.id, {
+            groupType: o.uw.SERVER_ROLE_SUBSCRIPTION,
+            teamId: null == n ? void 0 : n.id
+        }), u = (0, r.f)('useEarningMetrics'), _ = (0, l.Z)(e), {
+            currentPeriod: E,
+            previousPeriods: I,
+            metrics: T
+        } = s.useMemo(() => {
+            let {
+                    currentPeriod: e,
+                    previousPeriods: t
+                } = (0, a.Br)(c), n = (0, a.Uj)(e, t[0]);
+            return {
+                currentPeriod: e,
+                previousPeriods: t,
+                metrics: {
+                    ...n,
+                    subscribers: _,
+                    subscriberChange: n.paymentsCountChange
+                }
+            };
+        }, [
+            c,
+            _
+        ]);
+    return {
+        loading: d || !u,
+        team: n,
+        currentPeriod: E,
+        previousPeriods: I,
+        allPeriods: c,
+        metrics: T
+    };
 }

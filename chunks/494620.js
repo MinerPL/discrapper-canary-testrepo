@@ -1,45 +1,38 @@
-"use strict";
-n.d(t, {
-  Z: function() {
-    return _
-  },
-  z: function() {
-    return s
-  }
+t.d(n, {
+    Z: function () {
+        return m;
+    },
+    z: function () {
+        return s;
+    }
 });
-var l, s, a = n(735250);
-n(470079);
-var i = n(120356),
-  r = n.n(i),
-  o = n(481060),
-  u = n(507893),
-  c = n(759231),
-  d = n(239260);
-(l = s || (s = {})).INFO = "info", l.WARNING = "warning";
-let m = {
-    info: d.info,
-    warning: d.warning
-  },
-  E = {
-    info: u.Z,
-    warning: c.Z
-  };
-
-function _(e) {
-  let {
-    children: t,
-    className: n,
-    look: l = "info"
-  } = e, s = E[l];
-  return (0, a.jsxs)("div", {
-    className: r()(d.root, n, m[l]),
-    children: [(0, a.jsx)(s, {
-      className: d.icon
-    }), (0, a.jsx)(o.Text, {
-      className: d.text,
-      variant: "text-sm/medium",
-      color: "text-normal",
-      children: t
-    })]
-  })
+var l, s, a = t(735250);
+t(470079);
+var i = t(120356), r = t.n(i), o = t(481060), u = t(873773);
+(l = s || (s = {})).INFO = 'info', l.WARNING = 'warning';
+let c = {
+        info: u.info,
+        warning: u.warning
+    }, d = {
+        info: o.CircleInformationIcon,
+        warning: o.CircleExclamationPointIcon
+    };
+function m(e) {
+    let {
+            children: n,
+            className: t,
+            look: l = 'info'
+        } = e, s = d[l];
+    return (0, a.jsxs)('div', {
+        className: r()(u.root, t, c[l]),
+        children: [
+            (0, a.jsx)(s, { className: u.icon }),
+            (0, a.jsx)(o.Text, {
+                className: u.text,
+                variant: 'text-sm/medium',
+                color: 'text-normal',
+                children: n
+            })
+        ]
+    });
 }

@@ -1,50 +1,48 @@
-"use strict";
 n(47120);
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(242411),
-  l = n(806519),
-  u = n(687669);
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(481060), l = n(806519), u = n(879146);
 t.Z = e => {
-  let {
-    className: t,
-    guild: n,
-    isSelected: s = !0,
-    width: _ = 32,
-    height: d = 32,
-    shouldAnimate: c = !0,
-    isLocked: E = !1
-  } = e, [I, T] = r.useState(!1), h = n.getIconURL(32, c && s), S = () => T(!0), f = () => T(!1);
-  return (0, i.jsxs)("div", {
-    onFocus: S,
-    onBlur: f,
-    onMouseOver: S,
-    onMouseLeave: f,
-    children: [(0, i.jsx)(l.ZP, {
-      className: o()(u.mask, t),
-      mask: s || I ? l.QS.SQUIRCLE : l.QS.AVATAR_DEFAULT,
-      width: _,
-      height: d,
-      children: null == h ? (0, i.jsx)("div", {
-        className: o()(u.guildIcon, u.guildIconWithoutImage),
-        children: (0, i.jsx)("div", {
-          className: u.guildAcronym,
-          children: n.acronym
-        })
-      }) : (0, i.jsx)("img", {
-        alt: n.toString(),
-        src: h,
-        className: u.guildIcon
-      })
-    }), E ? (0, i.jsx)("div", {
-      className: u.categoryItemLockIconContainer,
-      children: (0, i.jsx)(a.Z, {
-        width: 10,
-        height: 10,
-        className: u.categoryItemLockIcon
-      })
-    }) : null]
-  })
-}
+    let {
+            className: t,
+            guild: n,
+            isSelected: a = !0,
+            width: c = 32,
+            height: d = 32,
+            shouldAnimate: _ = !0,
+            isLocked: E = !1
+        } = e, [f, h] = i.useState(!1), p = n.getIconURL(32, _ && a), m = () => h(!0), I = () => h(!1);
+    return (0, r.jsxs)('div', {
+        onFocus: m,
+        onBlur: I,
+        onMouseOver: m,
+        onMouseLeave: I,
+        children: [
+            (0, r.jsx)(l.ZP, {
+                className: o()(u.mask, t),
+                mask: a || f ? l.QS.SQUIRCLE : l.QS.AVATAR_DEFAULT,
+                width: c,
+                height: d,
+                children: null == p ? (0, r.jsx)('div', {
+                    className: o()(u.guildIcon, u.guildIconWithoutImage),
+                    children: (0, r.jsx)('div', {
+                        className: u.guildAcronym,
+                        children: n.acronym
+                    })
+                }) : (0, r.jsx)('img', {
+                    alt: n.toString(),
+                    src: p,
+                    className: u.guildIcon
+                })
+            }),
+            E ? (0, r.jsx)('div', {
+                className: u.categoryItemLockIconContainer,
+                children: (0, r.jsx)(s.LockIcon, {
+                    size: 'custom',
+                    color: 'currentColor',
+                    width: 10,
+                    height: 10,
+                    className: u.categoryItemLockIcon
+                })
+            }) : null
+        ]
+    });
+};

@@ -1,7 +1,10 @@
-"use strict";
 n.d(t, {
-  O: function() {
-    return i
-  }
+    O: function () {
+        return r;
+    }
 });
-let i = ["block_users", "leave_guild", "delete_message"]
+let r = [
+    'block_users',
+    'leave_guild',
+    'delete_message'
+];

@@ -1,40 +1,38 @@
-var n = e(466293),
-  o = e(139069),
-  i = e(703284),
-  a = e(501979),
-  u = e(98368),
-  f = e(433005),
-  c = n ? n.prototype : void 0,
-  s = c ? c.valueOf : void 0;
-t.exports = function(t, r, e, n, c, p, l) {
-  switch (e) {
-    case "[object DataView]":
-      if (t.byteLength != r.byteLength || t.byteOffset != r.byteOffset) break;
-      t = t.buffer, r = r.buffer;
-    case "[object ArrayBuffer]":
-      if (t.byteLength != r.byteLength || !p(new o(t), new o(r))) break;
-      return !0;
-    case "[object Boolean]":
-    case "[object Date]":
-    case "[object Number]":
-      return i(+t, +r);
-    case "[object Error]":
-      return t.name == r.name && t.message == r.message;
-    case "[object RegExp]":
-    case "[object String]":
-      return t == r + "";
-    case "[object Map]":
-      var h = u;
-    case "[object Set]":
-      var v = 1 & n;
-      if (h || (h = f), t.size != r.size && !v) break;
-      var d = l.get(t);
-      if (d) return d == r;
-      n |= 2, l.set(t, r);
-      var b = a(h(t), h(r), n, c, p, l);
-      return l.delete(t), b;
-    case "[object Symbol]":
-      if (s) return s.call(t) == s.call(r)
-  }
-  return !1
-}
+var n = r(466293), _ = r(139069), a = r(703284), i = r(501979), o = r(98368), E = r(433005), s = n ? n.prototype : void 0, c = s ? s.valueOf : void 0;
+t.exports = function (t, e, r, n, s, I, R) {
+    switch (r) {
+    case '[object DataView]':
+        if (t.byteLength != e.byteLength || t.byteOffset != e.byteOffset)
+            break;
+        t = t.buffer, e = e.buffer;
+    case '[object ArrayBuffer]':
+        if (t.byteLength != e.byteLength || !I(new _(t), new _(e)))
+            break;
+        return !0;
+    case '[object Boolean]':
+    case '[object Date]':
+    case '[object Number]':
+        return a(+t, +e);
+    case '[object Error]':
+        return t.name == e.name && t.message == e.message;
+    case '[object RegExp]':
+    case '[object String]':
+        return t == e + '';
+    case '[object Map]':
+        var u = o;
+    case '[object Set]':
+        var T = 1 & n;
+        if (u || (u = E), t.size != e.size && !T)
+            break;
+        var l = R.get(t);
+        if (l)
+            return l == e;
+        n |= 2, R.set(t, e);
+        var A = i(u(t), u(e), n, s, I, R);
+        return R.delete(t), A;
+    case '[object Symbol]':
+        if (c)
+            return c.call(t) == c.call(e);
+    }
+    return !1;
+};

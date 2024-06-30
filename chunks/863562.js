@@ -1,98 +1,100 @@
-"use strict";
-t(47120);
-var n = t(735250),
-  i = t(470079),
-  l = t(120356),
-  a = t.n(l),
-  r = t(481060),
-  o = t(700582),
-  c = t(330726),
-  d = t(465670),
-  u = t(185403),
-  E = t(268350),
-  _ = t(419922),
-  I = t(689938),
-  T = t(886659);
-s.Z = e => {
-  let {
-    className: s,
-    isDisabled: l,
-    sticker: N,
-    canManageSticker: m
-  } = e, [S, h] = i.useState(!1), [g, x] = (0, c.Z)(null, 4e3), C = () => {
-    (0, r.openModalLazy)(async () => {
-      let {
-        default: e
-      } = await Promise.all([t.e("49237"), t.e("99387"), t.e("93626")]).then(t.bind(t, 136735));
-      return s => (0, n.jsx)(e, {
-        sticker: N,
-        guildId: N.guild_id,
-        ...s
-      })
-    })
-  }, R = async () => {
-    x(null), h(!0);
-    try {
-      await (0, E.Um)(N)
-    } catch (e) {
-      x(e.body.message), h(!1)
-    }
-  };
-  return (0, n.jsx)(r.Tooltip, {
-    color: r.Tooltip.Colors.RED,
-    forceOpen: null != g,
-    text: g,
-    children: () => (0, n.jsxs)("div", {
-      className: a()(T.wrapper, s, {
-        [T.wrapperDisabled]: l
-      }),
-      children: [(0, n.jsxs)("div", {
-        className: a()(T.content, {
-          [T.contentRemoving]: S
-        }),
-        children: [(0, n.jsx)(_.ZP, {
-          className: T.sticker,
-          size: 72,
-          sticker: N
-        }), (0, n.jsxs)("div", {
-          children: [(0, n.jsx)(r.Text, {
-            color: "header-primary",
-            variant: "text-xs/semibold",
-            className: T.stickerName,
-            children: N.name
-          }), null != N.user && (0, n.jsxs)("div", {
-            className: T.user,
-            children: [(0, n.jsx)(o.Z, {
-              className: T.userAvatar,
-              size: r.AvatarSizes.SIZE_16,
-              user: N.user
-            }), (0, n.jsx)(r.Text, {
-              color: "header-secondary",
-              variant: "text-xs/normal",
-              children: N.user.username
-            })]
-          })]
-        }), m ? (0, n.jsxs)("div", {
-          className: T.actions,
-          children: [(0, n.jsx)(r.Clickable, {
-            className: a()(T.action, T.__invalid_actionEdit),
-            onClick: C,
-            "aria-label": I.Z.Messages.EDIT,
-            children: (0, n.jsx)(u.Z, {
-              className: T.icon
-            })
-          }), (0, n.jsx)(r.Clickable, {
-            className: a()(T.action, T.actionRemove),
-            onClick: R,
-            "aria-label": I.Z.Messages.REMOVE,
-            children: (0, n.jsx)(d.Z, {
-              className: T.icon
-            })
-          })]
-        }) : null]
-      }), S && (0, n.jsx)(r.Spinner, {
-        className: T.spinner
-      })]
-    })
-  })
-}
+n(47120);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(481060), o = n(700582), c = n(330726), d = n(268350), u = n(419922), _ = n(689938), E = n(42225);
+t.Z = e => {
+    let {
+            className: t,
+            isDisabled: i,
+            sticker: I,
+            canManageSticker: T
+        } = e, [m, N] = a.useState(!1), [S, h] = (0, c.Z)(null, 4000), g = () => {
+            (0, l.openModalLazy)(async () => {
+                let {default: e} = await Promise.all([
+                    n.e('93626'),
+                    n.e('41094')
+                ]).then(n.bind(n, 136735));
+                return t => (0, s.jsx)(e, {
+                    sticker: I,
+                    guildId: I.guild_id,
+                    ...t
+                });
+            });
+        }, C = async () => {
+            h(null), N(!0);
+            try {
+                await (0, d.Um)(I);
+            } catch (e) {
+                h(e.body.message), N(!1);
+            }
+        };
+    return (0, s.jsx)(l.Tooltip, {
+        color: l.Tooltip.Colors.RED,
+        forceOpen: null != S,
+        text: S,
+        children: () => (0, s.jsxs)('div', {
+            className: r()(E.wrapper, t, { [E.wrapperDisabled]: i }),
+            children: [
+                (0, s.jsxs)('div', {
+                    className: r()(E.content, { [E.contentRemoving]: m }),
+                    children: [
+                        (0, s.jsx)(u.ZP, {
+                            className: E.sticker,
+                            size: 72,
+                            sticker: I
+                        }),
+                        (0, s.jsxs)('div', {
+                            children: [
+                                (0, s.jsx)(l.Text, {
+                                    color: 'header-primary',
+                                    variant: 'text-xs/semibold',
+                                    className: E.stickerName,
+                                    children: I.name
+                                }),
+                                null != I.user && (0, s.jsxs)('div', {
+                                    className: E.user,
+                                    children: [
+                                        (0, s.jsx)(o.Z, {
+                                            className: E.userAvatar,
+                                            size: l.AvatarSizes.SIZE_16,
+                                            user: I.user
+                                        }),
+                                        (0, s.jsx)(l.Text, {
+                                            color: 'header-secondary',
+                                            variant: 'text-xs/normal',
+                                            children: I.user.username
+                                        })
+                                    ]
+                                })
+                            ]
+                        }),
+                        T ? (0, s.jsxs)('div', {
+                            className: E.actions,
+                            children: [
+                                (0, s.jsx)(l.Clickable, {
+                                    className: r()(E.action, E.__invalid_actionEdit),
+                                    onClick: g,
+                                    'aria-label': _.Z.Messages.EDIT,
+                                    children: (0, s.jsx)(l.PencilIcon, {
+                                        size: 'xs',
+                                        color: 'currentColor',
+                                        className: E.icon
+                                    })
+                                }),
+                                (0, s.jsx)(l.Clickable, {
+                                    className: r()(E.action, E.actionRemove),
+                                    onClick: C,
+                                    'aria-label': _.Z.Messages.REMOVE,
+                                    children: (0, s.jsx)(l.CloseSmallIcon, {
+                                        size: 'md',
+                                        color: 'currentColor',
+                                        className: E.icon
+                                    })
+                                })
+                            ]
+                        }) : null
+                    ]
+                }),
+                m && (0, s.jsx)(l.Spinner, { className: E.spinner })
+            ]
+        })
+    });
+};

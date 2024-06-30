@@ -1,129 +1,113 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return S
-  }
+n.d(t, {
+    Z: function () {
+        return S;
+    }
 });
-var n = t(735250),
-  i = t(470079),
-  l = t(512722),
-  a = t.n(l),
-  r = t(442837),
-  o = t(481060),
-  c = t(674180),
-  d = t(584825),
-  u = t(289393),
-  E = t(727843),
-  _ = t(14263),
-  I = t(783454),
-  T = t(689938),
-  N = t(169769),
-  m = t(492171);
-
+var s = n(735250), a = n(470079), i = n(512722), r = n.n(i), l = n(442837), o = n(481060), c = n(674180), d = n(584825), u = n(289393), _ = n(727843), E = n(14263), I = n(783454), T = n(689938), m = n(849456), N = n(483224);
 function S(e) {
-  var s;
-  let {
-    onDeleteEditState: l
-  } = e, {
-    editStateId: S,
-    guildId: h,
-    groupListingId: g
-  } = (0, E.N)(), x = (0, r.e7)([u.Z], () => u.Z.getSubscriptionListing(S)), C = null == x ? void 0 : x.id, R = (0, _.Z)(h), L = i.useMemo(() => {
-    var e;
-    return null != R && null != x && (null !== (e = R[x.role_id]) && void 0 !== e ? e : 0)
-  }, [R, x]), O = 0 === L, A = null == C, p = null !== (s = null == x ? void 0 : x.archived) && void 0 !== s && s, {
-    deleteSubscriptionListing: M,
-    submitting: f
-  } = (0, d.r4)(), {
-    archiveSubscriptionListing: v,
-    submitting: D
-  } = (0, d._1)(), Z = () => {
-    let e = async () => {
-      if (!!A || (a()(null != g, "group listing doesnt exist"), a()(null != C, "subscription listing doesnt exist"), !!await M(h, g, C))) null == l || l()
-    };
-    (0, o.openModalLazy)(async () => {
-      let {
-        ConfirmModal: s
-      } = await Promise.resolve().then(t.bind(t, 481060));
-      return t => (0, n.jsx)(s, {
-        header: T.Z.Messages.DEFAULT_CONFIRMATION_MODAL_HEADER,
-        confirmText: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_BUTTON,
-        cancelText: T.Z.Messages.CANCEL,
-        onConfirm: () => {
-          e()
-        },
-        confirmButtonColor: o.Button.Colors.RED,
-        ...t,
-        children: (0, n.jsx)(o.Text, {
-          variant: "text-md/normal",
-          children: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_DESCRIPTION
+    var t;
+    let {onDeleteEditState: i} = e, {
+            editStateId: S,
+            guildId: h,
+            groupListingId: g
+        } = (0, _.N)(), C = (0, l.e7)([u.Z], () => u.Z.getSubscriptionListing(S)), x = null == C ? void 0 : C.id, p = (0, E.Z)(h), R = a.useMemo(() => {
+            var e;
+            return null != p && null != C && (null !== (e = p[C.role_id]) && void 0 !== e ? e : 0);
+        }, [
+            p,
+            C
+        ]), f = 0 === R, L = null == x, O = null !== (t = null == C ? void 0 : C.archived) && void 0 !== t && t, {
+            deleteSubscriptionListing: A,
+            submitting: M
+        } = (0, d.r4)(), {
+            archiveSubscriptionListing: v,
+            submitting: D
+        } = (0, d._1)(), j = () => {
+            let e = async () => {
+                if (!!L || (r()(null != g, 'group listing doesnt exist'), r()(null != x, 'subscription listing doesnt exist'), !!await A(h, g, x)))
+                    null == i || i();
+            };
+            (0, o.openModalLazy)(async () => {
+                let {ConfirmModal: t} = await Promise.resolve().then(n.bind(n, 481060));
+                return n => (0, s.jsx)(t, {
+                    header: T.Z.Messages.DEFAULT_CONFIRMATION_MODAL_HEADER,
+                    confirmText: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_BUTTON,
+                    cancelText: T.Z.Messages.CANCEL,
+                    onConfirm: () => {
+                        e();
+                    },
+                    confirmButtonColor: o.Button.Colors.RED,
+                    ...n,
+                    children: (0, s.jsx)(o.Text, {
+                        variant: 'text-md/normal',
+                        children: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_DESCRIPTION
+                    })
+                });
+            });
+        }, {allowSelfRemoveMonetization: Z} = (0, c.gX)(h);
+    return null == C ? null : (0, s.jsx)(I.Z, {
+        title: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ADVANCE_SECTION_TITLE,
+        children: O ? (0, s.jsxs)(o.FormSection, {
+            title: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_LABEL,
+            disabled: !Z,
+            children: [
+                (0, s.jsx)(o.FormText, {
+                    type: o.FormText.Types.DESCRIPTION,
+                    className: m.formDescription,
+                    disabled: !Z,
+                    children: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_DESCRIPTION
+                }),
+                (0, s.jsx)(o.Tooltip, {
+                    shouldShow: !f,
+                    text: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_TOOLTIP.format({ listingMemberCount: R }),
+                    children: e => (0, s.jsx)(o.Button, {
+                        ...e,
+                        wrapperClassName: N.deleteListingButton,
+                        color: o.Button.Colors.RED,
+                        onClick: j,
+                        submitting: M,
+                        disabled: !Z || !f,
+                        children: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_BUTTON
+                    })
+                })
+            ]
+        }) : (0, s.jsxs)(o.FormSection, {
+            title: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_LABEL,
+            disabled: !Z,
+            children: [
+                (0, s.jsx)(o.FormText, {
+                    type: o.FormText.Types.DESCRIPTION,
+                    className: m.formDescription,
+                    disabled: !Z,
+                    children: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_DESCRIPTION
+                }),
+                (0, s.jsx)(o.Button, {
+                    wrapperClassName: N.deleteListingButton,
+                    color: o.Button.Colors.RED,
+                    onClick: () => {
+                        r()(null != g, 'group listing doesnt exist'), r()(null != x, 'subscription listing doesnt exist'), (0, o.openModalLazy)(async () => {
+                            let {ConfirmModal: e} = await Promise.resolve().then(n.bind(n, 481060));
+                            return t => (0, s.jsx)(e, {
+                                header: T.Z.Messages.DEFAULT_CONFIRMATION_MODAL_HEADER,
+                                confirmText: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_BUTTON,
+                                cancelText: T.Z.Messages.CANCEL,
+                                onConfirm: () => {
+                                    v(h, g, x);
+                                },
+                                confirmButtonColor: o.Button.Colors.RED,
+                                ...t,
+                                children: (0, s.jsx)(o.Text, {
+                                    variant: 'text-md/normal',
+                                    children: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_DESCRIPTION
+                                })
+                            });
+                        });
+                    },
+                    submitting: D,
+                    disabled: !Z,
+                    children: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_BUTTON
+                })
+            ]
         })
-      })
-    })
-  }, {
-    allowSelfRemoveMonetization: j
-  } = (0, c.gX)(h);
-  return null == x ? null : (0, n.jsx)(I.Z, {
-    title: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ADVANCE_SECTION_TITLE,
-    children: p ? (0, n.jsxs)(o.FormSection, {
-      title: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_LABEL,
-      disabled: !j,
-      children: [(0, n.jsx)(o.FormText, {
-        type: o.FormText.Types.DESCRIPTION,
-        className: N.formDescription,
-        disabled: !j,
-        children: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_DESCRIPTION
-      }), (0, n.jsx)(o.Tooltip, {
-        shouldShow: !O,
-        text: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_TOOLTIP.format({
-          listingMemberCount: L
-        }),
-        children: e => (0, n.jsx)(o.Button, {
-          ...e,
-          wrapperClassName: m.deleteListingButton,
-          color: o.Button.Colors.RED,
-          onClick: Z,
-          submitting: f,
-          disabled: !j || !O,
-          children: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_BUTTON
-        })
-      })]
-    }) : (0, n.jsxs)(o.FormSection, {
-      title: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_LABEL,
-      disabled: !j,
-      children: [(0, n.jsx)(o.FormText, {
-        type: o.FormText.Types.DESCRIPTION,
-        className: N.formDescription,
-        disabled: !j,
-        children: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_DESCRIPTION
-      }), (0, n.jsx)(o.Button, {
-        wrapperClassName: m.deleteListingButton,
-        color: o.Button.Colors.RED,
-        onClick: () => {
-          a()(null != g, "group listing doesnt exist"), a()(null != C, "subscription listing doesnt exist"), (0, o.openModalLazy)(async () => {
-            let {
-              ConfirmModal: e
-            } = await Promise.resolve().then(t.bind(t, 481060));
-            return s => (0, n.jsx)(e, {
-              header: T.Z.Messages.DEFAULT_CONFIRMATION_MODAL_HEADER,
-              confirmText: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_BUTTON,
-              cancelText: T.Z.Messages.CANCEL,
-              onConfirm: () => {
-                v(h, g, C)
-              },
-              confirmButtonColor: o.Button.Colors.RED,
-              ...s,
-              children: (0, n.jsx)(o.Text, {
-                variant: "text-md/normal",
-                children: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_DESCRIPTION
-              })
-            })
-          })
-        },
-        submitting: D,
-        disabled: !j,
-        children: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_BUTTON
-      })]
-    })
-  })
+    });
 }

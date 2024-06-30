@@ -1,10 +1,1 @@
-"use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return r
-  }
-});
-var r = {};
-r = {
-  Empty: `\u{BE44}\u{C5B4} \u{C788}\u{C74C}`
-}
+e.exports = n.p + '2c7e0375199243f0f5c6.svg';

@@ -1,34 +1,34 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return d
-  }
+n.d(t, {
+    Z: function () {
+        return d;
+    }
 });
-var n = t(512722),
-  i = t.n(n),
-  l = t(782568),
-  a = t(434404),
-  r = t(144507),
-  o = t(981631),
-  c = t(689938);
-
+var s = n(512722), a = n.n(s), i = n(782568), r = n(434404), l = n(144507), o = n(981631), c = n(689938);
 function d(e) {
-  let s = (0, r.MO)(e);
-  switch (s) {
-    case r.d5.NEEDS_COMMUNITY:
-      return {
-        visibility: s, noticeText: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_COMMUNITY_REQUIREMENT_NOTICE, ctaLabel: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_COMMUNITY_REQUIREMENT_CTA_LABEL, ctaClickable: null != e, onCtaClicked() {
-          var s;
-          i()(null != e, "Guild must be not null open COMMUNITY settings"), a.Z.open(null !== (s = null == e ? void 0 : e.id) && void 0 !== s ? s : "", o.pNK.COMMUNITY)
-        }
-      };
-    case r.d5.WAITLIST_ONLY:
-      return {
-        visibility: s, noticeText: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WAITLIST_NOTICE, ctaLabel: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WAITLIST_CTA_LABEL, ctaClickable: !0, onCtaClicked() {
-          (0, l.Z)("https://dis.gd/creators-waitlist")
-        }
-      };
+    let t = (0, l.MO)(e);
+    switch (t) {
+    case l.d5.NEEDS_COMMUNITY:
+        return {
+            visibility: t,
+            noticeText: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_COMMUNITY_REQUIREMENT_NOTICE,
+            ctaLabel: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_COMMUNITY_REQUIREMENT_CTA_LABEL,
+            ctaClickable: null != e,
+            onCtaClicked() {
+                var t;
+                a()(null != e, 'Guild must be not null open COMMUNITY settings'), r.Z.open(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : '', o.pNK.COMMUNITY);
+            }
+        };
+    case l.d5.WAITLIST_ONLY:
+        return {
+            visibility: t,
+            noticeText: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WAITLIST_NOTICE,
+            ctaLabel: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WAITLIST_CTA_LABEL,
+            ctaClickable: !0,
+            onCtaClicked() {
+                (0, i.Z)('https://dis.gd/creators-waitlist');
+            }
+        };
     default:
-      return
-  }
+        return;
+    }
 }

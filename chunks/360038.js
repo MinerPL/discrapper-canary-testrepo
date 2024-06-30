@@ -1,27 +1,19 @@
-"use strict";
 n.d(t, {
-  u: function() {
-    return c
-  }
+    u: function () {
+        return _;
+    }
 }), n(653041);
-var i = n(853856),
-  r = n(706590),
-  s = n(703656),
-  o = n(769654),
-  a = n(592125),
-  l = n(496675),
-  u = n(914010),
-  _ = n(771845),
-  d = n(981631);
-let c = {
-  binds: (() => {
-    let e = [];
-    for (let t = 1; t < 10; t++) e.push("mod+".concat(t));
-    return e
-  })(),
-  comboKeysBindGlobal: !0,
-  action(e, t) {
-    let n, c = parseInt(t.split("+")[1], 10);
-    return (0 === c && (c = 10), isNaN(c) || 0 === c || null == (n = 1 === c ? d.ME : (0, r.z)(i.Z, a.Z, l.Z) ? 2 === c ? d.I_8 : _.ZP.getFlattenedGuildIds()[c - 3] : _.ZP.getFlattenedGuildIds()[c - 2])) ? void 0 : n === d.ME && null == u.Z.getGuildId() ? ((0, s.uL)(d.Z5c.CHANNEL(n)), !1) : ((0, o.X)(n), !1)
-  }
-}
+var r = n(853856), i = n(706590), a = n(703656), o = n(769654), s = n(592125), l = n(496675), u = n(914010), c = n(771845), d = n(981631);
+let _ = {
+    binds: (() => {
+        let e = [];
+        for (let t = 1; t < 10; t++)
+            e.push('mod+'.concat(t));
+        return e;
+    })(),
+    comboKeysBindGlobal: !0,
+    action(e, t) {
+        let n, _ = parseInt(t.split('+')[1], 10);
+        return (0 === _ && (_ = 10), isNaN(_) || 0 === _ || null == (n = 1 === _ ? d.ME : (0, i.z)(r.Z, s.Z, l.Z) ? 2 === _ ? d.I_8 : c.ZP.getFlattenedGuildIds()[_ - 3] : c.ZP.getFlattenedGuildIds()[_ - 2])) ? void 0 : n === d.ME && null == u.Z.getGuildId() ? ((0, a.uL)(d.Z5c.CHANNEL(n)), !1) : ((0, o.X)(n), !1);
+    }
+};

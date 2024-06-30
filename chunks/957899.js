@@ -1,30 +1,31 @@
-"use strict";
 n(47120);
-var i = n(147913),
-  r = n(202511),
-  s = n(828354);
-class o extends i.Z {
-  handlePostConnectionOpen() {
-    r.d.trigger()
-  }
-  handleVoiceChannelSelect() {
-    s.M.trigger()
-  }
-  handleCallCreate() {
-    s.M.trigger()
-  }
-  constructor(...e) {
-    var t, n, i;
-    super(...e), t = this, n = "actions", i = {
-      POST_CONNECTION_OPEN: this.handlePostConnectionOpen,
-      VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect,
-      CALL_CREATE: this.handleCallCreate
-    }, n in t ? Object.defineProperty(t, n, {
-      value: i,
-      enumerable: !0,
-      configurable: !0,
-      writable: !0
-    }) : t[n] = i
-  }
+var r = n(147913), i = n(604375), a = n(202511), o = n(828354);
+class s extends r.Z {
+    handlePostConnectionOpen() {
+        a.d.trigger();
+    }
+    handleVoiceChannelSelect() {
+        o.M.trigger();
+    }
+    handleCallCreate() {
+        o.M.trigger();
+    }
+    handleUserSettingsModalOpen() {
+        i.X.trigger();
+    }
+    constructor(...e) {
+        var t, n, r;
+        super(...e), t = this, n = 'actions', r = {
+            POST_CONNECTION_OPEN: this.handlePostConnectionOpen,
+            VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect,
+            CALL_CREATE: this.handleCallCreate,
+            USER_SETTINGS_MODAL_OPEN: this.handleUserSettingsModalOpen
+        }, n in t ? Object.defineProperty(t, n, {
+            value: r,
+            enumerable: !0,
+            configurable: !0,
+            writable: !0
+        }) : t[n] = r;
+    }
 }
-t.Z = new o
+t.Z = new s();

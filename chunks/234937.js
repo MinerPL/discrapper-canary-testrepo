@@ -1,40 +1,41 @@
-"use strict";
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(442837),
-  s = n(481060),
-  o = n(430824),
-  a = n(346656),
-  l = n(689938),
-  u = n(294485);
+var i = n(442837), a = n(481060), o = n(430824), s = n(346656), l = n(689938), u = n(973404);
 t.Z = e => {
-  let {
-    event: t
-  } = e, n = (0, r.e7)([o.Z], () => o.Z.getGuild(t.guild_id));
-  return null == n ? null : (0, i.jsxs)("div", {
-    className: u.container,
-    children: [(0, i.jsx)(s.Heading, {
-      className: u.header,
-      variant: "heading-sm/semibold",
-      children: l.Z.Messages.MOBILE_REPORTS_EVENT_PREVIEW_TITLE
-    }), (0, i.jsxs)("div", {
-      className: u.guildContainer,
-      children: [(0, i.jsxs)("div", {
-        className: u.guildInfo,
-        children: [(0, i.jsx)(a.Z, {
-          guild: n,
-          size: a.Z.Sizes.MINI,
-          className: u.guildIcon
-        }), (0, i.jsx)(s.Text, {
-          color: "header-secondary",
-          variant: "text-sm/normal",
-          children: n.name
-        })]
-      }), (0, i.jsx)(s.Text, {
-        variant: "text-md/semibold",
-        color: "header-primary",
-        children: t.name
-      })]
-    })]
-  })
-}
+    let {event: t} = e, n = (0, i.e7)([o.Z], () => o.Z.getGuild(t.guild_id));
+    return null == n ? null : (0, r.jsxs)('div', {
+        className: u.container,
+        children: [
+            (0, r.jsx)(a.Heading, {
+                className: u.header,
+                variant: 'heading-sm/semibold',
+                children: l.Z.Messages.MOBILE_REPORTS_EVENT_PREVIEW_TITLE
+            }),
+            (0, r.jsxs)('div', {
+                className: u.guildContainer,
+                children: [
+                    (0, r.jsxs)('div', {
+                        className: u.guildInfo,
+                        children: [
+                            (0, r.jsx)(s.Z, {
+                                guild: n,
+                                size: s.Z.Sizes.MINI,
+                                className: u.guildIcon
+                            }),
+                            (0, r.jsx)(a.Text, {
+                                color: 'header-secondary',
+                                variant: 'text-sm/normal',
+                                children: n.name
+                            })
+                        ]
+                    }),
+                    (0, r.jsx)(a.Text, {
+                        variant: 'text-md/semibold',
+                        color: 'header-primary',
+                        children: t.name
+                    })
+                ]
+            })
+        ]
+    });
+};

@@ -1,18 +1,15 @@
-"use strict";
 n.d(t, {
-  M: function() {
-    return r
-  },
-  d: function() {
-    return s
-  }
+    M: function () {
+        return i;
+    },
+    d: function () {
+        return a;
+    }
 });
-let i = {};
-
-function r(e, t) {
-  i[e] = t
+let r = {};
+function i(e, t) {
+    r[e] = t;
 }
-
-function s() {
-  return Object.keys(i).map(e => "".concat(e, ":").concat(i[e]))
+function a() {
+    return Object.keys(r).map(e => ''.concat(e, ':').concat(r[e]));
 }

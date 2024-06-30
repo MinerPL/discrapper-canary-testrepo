@@ -1,31 +1,24 @@
-"use strict";
-t.d(s, {
-  P: function() {
-    return c
-  }
+n.d(t, {
+    P: function () {
+        return c;
+    }
 });
-var n = t(735250),
-  i = t(470079),
-  l = t(442837),
-  a = t(481060),
-  r = t(594174),
-  o = t(981631);
-
+var s = n(735250), a = n(470079), i = n(442837), r = n(481060), l = n(594174), o = n(981631);
 function c(e) {
-  let s = (null == e ? void 0 : e.hasFeature(o.oNc.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING)) === !0,
-    c = (null == e ? void 0 : e.hasFeature(o.oNc.ROLE_SUBSCRIPTIONS_ENABLED)) === !0,
-    d = (0, l.e7)([r.default], () => r.default.getCurrentUser()),
-    u = (null == e ? void 0 : e.isOwner(d)) === !0;
-  i.useEffect(() => {
-    null != e && s && u && (0, a.openModalLazy)(async () => {
-      let {
-        default: s
-      } = await Promise.all([t.e("99387"), t.e("710")]).then(t.bind(t, 32342));
-      return t => (0, n.jsx)(s, {
-        ...t,
-        guildId: e.id,
-        requireTeamSetup: c
-      })
-    })
-  }, [s, c, e, u])
+    let t = (null == e ? void 0 : e.hasFeature(o.oNc.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING)) === !0, c = (null == e ? void 0 : e.hasFeature(o.oNc.ROLE_SUBSCRIPTIONS_ENABLED)) === !0, d = (0, i.e7)([l.default], () => l.default.getCurrentUser()), u = (null == e ? void 0 : e.isOwner(d)) === !0;
+    a.useEffect(() => {
+        null != e && t && u && (0, r.openModalLazy)(async () => {
+            let {default: t} = await n.e('710').then(n.bind(n, 32342));
+            return n => (0, s.jsx)(t, {
+                ...n,
+                guildId: e.id,
+                requireTeamSetup: c
+            });
+        });
+    }, [
+        t,
+        c,
+        e,
+        u
+    ]);
 }

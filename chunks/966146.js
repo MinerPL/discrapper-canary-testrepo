@@ -1,109 +1,113 @@
-"use strict";
 n.d(t, {
-  x: function() {
-    return s
-  }
+    x: function () {
+        return a;
+    }
 }), n(411104), n(47120), n(653041);
-var i = n(65154);
-
-function r(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: n,
-    enumerable: !0,
-    configurable: !0,
-    writable: !0
-  }) : e[t] = n, e
+var r = n(65154);
+function i(e, t, n) {
+    return t in e ? Object.defineProperty(e, t, {
+        value: n,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+    }) : e[t] = n, e;
 }
-class s {
-  getMaxSinkValue(e) {
-    if (e < 0) throw Error("getMaxSinkValue: Requested " + e);
-    let t = this.orderedLadder[0].wantValue;
-    for (let {
-        pixelCount: n,
-        wantValue: i
-      }
-      of this.orderedLadder) {
-      if (n * e > this.pixelBudget) break;
-      t = i
+class a {
+    getMaxSinkValue(e) {
+        if (e < 0)
+            throw Error('getMaxSinkValue: Requested ' + e);
+        let t = this.orderedLadder[0].wantValue;
+        for (let {
+                    pixelCount: n,
+                    wantValue: r
+                } of this.orderedLadder) {
+            if (n * e > this.pixelBudget)
+                break;
+            t = r;
+        }
+        return t;
     }
-    return t
-  }
-  getResolution(e) {
-    let t = null;
-    for (let n of this.orderedLadder)
-      if (e >= n.wantValue) t = n;
-      else break;
-    return {
-      width: (t = null != t ? t : this.orderedLadder[0]).width,
-      height: t.height,
-      budgetPortion: t.budgetPortion,
-      mutedFramerate: t.mutedFramerate,
-      framerate: t.framerate
+    getResolution(e) {
+        let t = null;
+        for (let n of this.orderedLadder)
+            if (e >= n.wantValue)
+                t = n;
+            else
+                break;
+        return {
+            width: (t = null != t ? t : this.orderedLadder[0]).width,
+            height: t.height,
+            budgetPortion: t.budgetPortion,
+            mutedFramerate: t.mutedFramerate,
+            framerate: t.framerate
+        };
     }
-  }
-  static calculateLadder(e) {
-    let t = new Set([0, 4, 8, 10]),
-      n = [];
-    for (let i = 1; i < 4096; ++i) {
-      let r = 16 * i / 9;
-      if (t.has(r % 16) && t.has(i % 16)) {
-        let t = r * i;
-        n.push({
-          pixelCount: t,
-          width: r,
-          height: i,
-          budgetPortion: t / e,
-          wantValue: 0
-        })
-      }
+    static calculateLadder(e) {
+        let t = new Set([
+                0,
+                4,
+                8,
+                10
+            ]), n = [];
+        for (let r = 1; r < 4096; ++r) {
+            let i = 16 * r / 9;
+            if (t.has(i % 16) && t.has(r % 16)) {
+                let t = i * r;
+                n.push({
+                    pixelCount: t,
+                    width: i,
+                    height: r,
+                    budgetPortion: t / e,
+                    wantValue: 0
+                });
+            }
+        }
+        let i = {}, o = 0, s = 100;
+        for (let t = 1; t <= 25; ++t) {
+            let l = 0, u = 0, c = 0;
+            for (let r of n) {
+                if (r.pixelCount * t > e)
+                    break;
+                l = r.width, u = r.height, c = r.budgetPortion;
+            }
+            if (o !== l) {
+                let e = a.getMutedFramerate(s);
+                i[s] = {
+                    width: l,
+                    height: u,
+                    budgetPortion: c,
+                    mutedFramerate: e,
+                    framerate: r.Gs
+                }, s -= 10, o = l;
+            }
+        }
+        return i;
     }
-    let r = {},
-      o = 0,
-      a = 100;
-    for (let t = 1; t <= 25; ++t) {
-      let l = 0,
-        u = 0,
-        _ = 0;
-      for (let i of n) {
-        if (i.pixelCount * t > e) break;
-        l = i.width, u = i.height, _ = i.budgetPortion
-      }
-      if (o !== l) {
-        let e = s.getMutedFramerate(a);
-        r[a] = {
-          width: l,
-          height: u,
-          budgetPortion: _,
-          mutedFramerate: e,
-          framerate: i.Gs
-        }, a -= 10, o = l
-      }
+    static getMutedFramerate(e) {
+        return e <= 20 ? r.Er : r.P8;
     }
-    return r
-  }
-  static getMutedFramerate(e) {
-    return e <= 20 ? i.Er : i.P8
-  }
-  static calculateOrderedLadder(e) {
-    let t = [];
-    for (let n of Object.keys(e).map(e => Number(e)).sort((e, t) => e - t)) {
-      if (0 === n) continue;
-      let i = e[n];
-      t.push({
-        pixelCount: i.width * i.height,
-        wantValue: n,
-        ...i
-      })
+    static calculateOrderedLadder(e) {
+        let t = [];
+        for (let n of Object.keys(e).map(e => Number(e)).sort((e, t) => e - t)) {
+            if (0 === n)
+                continue;
+            let r = e[n];
+            t.push({
+                pixelCount: r.width * r.height,
+                wantValue: n,
+                ...r
+            });
+        }
+        return t;
     }
-    return t
-  }
-  constructor(e = i.kS) {
-    r(this, "pixelBudget", void 0), r(this, "ladder", void 0), r(this, "orderedLadder", void 0);
-    let {
-      width: t,
-      height: n
-    } = e.videoBudget;
-    if (t <= 0 || n <= 0) throw Error("Invalid argument");
-    this.pixelBudget = t * n, this.ladder = s.calculateLadder(this.pixelBudget), this.orderedLadder = s.calculateOrderedLadder(this.ladder)
-  }
+    constructor(e = r.kS) {
+        i(this, 'pixelBudget', void 0), i(this, 'ladder', void 0), i(this, 'orderedLadder', void 0);
+        let {
+            width: t,
+            height: n
+        } = e.videoBudget;
+        if (t <= 0 || n <= 0)
+            throw Error('Invalid argument');
+        this.pixelBudget = t * n, this.ladder = a.calculateLadder(this.pixelBudget), this.orderedLadder = a.calculateOrderedLadder(this.ladder);
+    }
 }

@@ -1,3 +1,2 @@
-"use strict";
 var r = n(161581);
-e.exports = r.Promise
+e.exports = r.Promise;

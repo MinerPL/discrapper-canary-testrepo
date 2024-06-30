@@ -1,12 +1,9 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return a;
+    }
 });
-var i = n(442837),
-  r = n(427679);
-
-function s(e) {
-  return (0, i.e7)([r.Z], () => r.Z.isLive(e), [e])
+var r = n(442837), i = n(427679);
+function a(e) {
+    return (0, r.e7)([i.Z], () => i.Z.isLive(e), [e]);
 }

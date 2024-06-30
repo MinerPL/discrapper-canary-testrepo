@@ -1,78 +1,67 @@
-"use strict";
 n(47120);
-var i = n(147913),
-  r = n(57132),
-  s = n(914010),
-  o = n(924301),
-  a = n(482241);
-let l = {},
-  u = new Set,
-  _ = async e => {
-    if (!(0 === o.ZP.getGuildScheduledEventsForGuild(e).length || u.has(e))) try {
-      await a.Z.getGuildEventsForCurrentUser(e), u.add(e)
-    } catch (e) {}
-  };
-class d extends i.Z {
-  async getGuildEventUserCounts(e, t, n) {
-    let i = n.filter(n => null == l["".concat(e, "-").concat(t, "-").concat(n)] || Date.now() - l["".concat(e, "-").concat(t, "-").concat(n)] > 18e5);
-    if (!(Date.now() - l["".concat(e, "-").concat(t)] < 18e5) || 0 !== i.length) {
-      l["".concat(e, "-").concat(t)] = Date.now(), i.forEach(n => l["".concat(e, "-").concat(t, "-").concat(n)] = Date.now());
-      try {
-        await a.Z.fetchGuildEventUserCounts(e, t, i)
-      } catch (e) {}
+var r = n(147913), i = n(57132), a = n(914010), o = n(924301), s = n(482241);
+let l = {}, u = new Set(), c = async e => {
+        if (!(0 === o.ZP.getGuildScheduledEventsForGuild(e).length || u.has(e)))
+            try {
+                await s.Z.getGuildEventsForCurrentUser(e), u.add(e);
+            } catch (e) {
+            }
+    };
+class d extends r.Z {
+    async getGuildEventUserCounts(e, t, n) {
+        let r = n.filter(n => null == l[''.concat(e, '-').concat(t, '-').concat(n)] || Date.now() - l[''.concat(e, '-').concat(t, '-').concat(n)] > 1800000);
+        if (!(Date.now() - l[''.concat(e, '-').concat(t)] < 1800000) || 0 !== r.length) {
+            l[''.concat(e, '-').concat(t)] = Date.now(), r.forEach(n => l[''.concat(e, '-').concat(t, '-').concat(n)] = Date.now());
+            try {
+                await s.Z.fetchGuildEventUserCounts(e, t, r);
+            } catch (e) {
+            }
+        }
     }
-  }
-  getGuildEventUsers(e, t, n) {
-    return a.Z.fetchUsersForGuildEvent(e, t, n)
-  }
-  getGuildEventsForCurrentUser(e) {
-    return _(e)
-  }
-  handleConnectionOpen() {
-    u.clear(), l = {};
-    let e = (0, r.cn)(),
-      t = s.Z.getLastSelectedGuildId();
-    e && null != t && o.ZP.getGuildScheduledEventsForGuild(t).forEach(e => this.getGuildEventUserCounts(t, e.id, []))
-  }
-  handleGuildUnavailable(e) {
-    let {
-      guildId: t
-    } = e;
-    u.delete(t), delete l[t]
-  }
-  handleGuildDelete(e) {
-    let {
-      guild: t
-    } = e, n = t.id;
-    u.delete(n), delete l[n]
-  }
-  handleInviteResolveSuccess(e) {
-    var t;
-    let {
-      invite: n
-    } = e, i = n.guild_scheduled_event, r = null === (t = n.guild) || void 0 === t ? void 0 : t.id;
-    if (null != i && null != r) _(r)
-  }
-  handleChannelSelect(e) {
-    let {
-      guildId: t
-    } = e;
-    if (null != t) o.ZP.getGuildScheduledEventsForGuild(t).forEach(e => this.getGuildEventUserCounts(t, e.id, []))
-  }
-  constructor(...e) {
-    var t, n, i;
-    super(...e), t = this, n = "actions", i = {
-      POST_CONNECTION_OPEN: () => this.handleConnectionOpen(),
-      GUILD_DELETE: e => this.handleGuildDelete(e),
-      GUILD_UNAVAILABLE: e => this.handleGuildUnavailable(e),
-      INVITE_RESOLVE_SUCCESS: e => this.handleInviteResolveSuccess(e),
-      CHANNEL_SELECT: e => this.handleChannelSelect(e)
-    }, n in t ? Object.defineProperty(t, n, {
-      value: i,
-      enumerable: !0,
-      configurable: !0,
-      writable: !0
-    }) : t[n] = i
-  }
+    getGuildEventUsers(e, t, n) {
+        return s.Z.fetchUsersForGuildEvent(e, t, n);
+    }
+    getGuildEventsForCurrentUser(e) {
+        return c(e);
+    }
+    handleConnectionOpen() {
+        u.clear(), l = {};
+        let e = (0, i.cn)(), t = a.Z.getLastSelectedGuildId();
+        e && null != t && o.ZP.getGuildScheduledEventsForGuild(t).forEach(e => this.getGuildEventUserCounts(t, e.id, []));
+    }
+    handleGuildUnavailable(e) {
+        let {guildId: t} = e;
+        u.delete(t), delete l[t];
+    }
+    handleGuildDelete(e) {
+        let {guild: t} = e, n = t.id;
+        u.delete(n), delete l[n];
+    }
+    handleInviteResolveSuccess(e) {
+        var t;
+        let {invite: n} = e, r = n.guild_scheduled_event, i = null === (t = n.guild) || void 0 === t ? void 0 : t.id;
+        if (null != r && null != i)
+            c(i);
+    }
+    handleChannelSelect(e) {
+        let {guildId: t} = e;
+        if (null != t)
+            o.ZP.getGuildScheduledEventsForGuild(t).forEach(e => this.getGuildEventUserCounts(t, e.id, []));
+    }
+    constructor(...e) {
+        var t, n, r;
+        super(...e), t = this, n = 'actions', r = {
+            POST_CONNECTION_OPEN: () => this.handleConnectionOpen(),
+            GUILD_DELETE: e => this.handleGuildDelete(e),
+            GUILD_UNAVAILABLE: e => this.handleGuildUnavailable(e),
+            INVITE_RESOLVE_SUCCESS: e => this.handleInviteResolveSuccess(e),
+            CHANNEL_SELECT: e => this.handleChannelSelect(e)
+        }, n in t ? Object.defineProperty(t, n, {
+            value: r,
+            enumerable: !0,
+            configurable: !0,
+            writable: !0
+        }) : t[n] = r;
+    }
 }
-t.Z = new d
+t.Z = new d();

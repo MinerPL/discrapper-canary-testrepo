@@ -1,197 +1,165 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return A
-  }
+    Z: function () {
+        return g;
+    }
 }), n(47120);
-var i = n(735250),
-  r = n(470079),
-  s = n(699581),
-  o = n(990547),
-  a = n(442837),
-  l = n(481060),
-  u = n(239091),
-  _ = n(40851),
-  d = n(213609),
-  c = n(210887),
-  E = n(574254),
-  I = n(153850),
-  T = n(585483),
-  h = n(981631);
-
-function S(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: n,
-    enumerable: !0,
-    configurable: !0,
-    writable: !0
-  }) : e[t] = n, e
+var r = n(735250), i = n(470079), a = n(699581), o = n(990547), s = n(442837), l = n(481060), u = n(239091), c = n(40851), d = n(213609), _ = n(210887), E = n(574254), f = n(153850), h = n(585483), p = n(981631);
+function m(e, t, n) {
+    return t in e ? Object.defineProperty(e, t, {
+        value: n,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+    }) : e[t] = n, e;
 }
-let f = e => {
-  let {
-    children: t,
-    close: n,
-    onUnmount: a,
-    target: u,
-    rect: c,
-    position: E,
-    align: T,
-    impressionName: S,
-    impressionProperties: f
-  } = e, N = r.useRef(null), A = r.useMemo(() => ({
-    current: u
-  }), [u]);
-  r.useEffect(() => {
-    var e, t;
-    let i = (0, s.findDOMNode)(N.current);
-    if (null == i) return;
-    let r = e => {
-      let t = e.target,
-        i = (0, s.findDOMNode)(N.current);
-      if (!(null != i && (0, l.referencePortalAwareContains)(i, t))) window.getSelection().removeAllRanges(), n()
-    };
-    return null === (e = i.ownerDocument) || void 0 === e || e.addEventListener("click", r, !0), null === (t = i.ownerDocument) || void 0 === t || t.addEventListener("contextmenu", r, !0), () => {
-      var e, t;
-      null === (e = i.ownerDocument) || void 0 === e || e.removeEventListener("click", r, !0), null === (t = i.ownerDocument) || void 0 === t || t.removeEventListener("contextmenu", r, !0)
-    }
-  }, [n]);
-  let m = r.useRef(a);
-  r.useEffect(() => void(m.current = a)), r.useEffect(() => () => {
-    var e;
-    return null === (e = m.current) || void 0 === e ? void 0 : e.call(m)
-  }, []), r.useLayoutEffect(() => {
-    var e;
-    null === (e = N.current) || void 0 === e || e.updatePosition()
-  }), (0, d.Z)({
-    type: o.ImpressionTypes.MENU,
-    name: S,
-    properties: f
-  });
-  let O = (0, _.Aq)(),
-    R = r.useCallback(() => {
-      O.dispatch(h.CkL.POPOUT_SHOW)
-    }, [O]),
-    C = r.useCallback(() => {
-      O.dispatch(h.CkL.POPOUT_HIDE)
-    }, [O]);
-  return (0, i.jsx)(I.W5, {
-    onMount: R,
-    onUnmount: C,
-    targetRef: A,
-    overrideTargetRect: c,
-    position: null != E ? E : "right",
-    align: null != T ? T : "top",
-    autoInvert: !0,
-    ref: N,
-    nudgeAlignIntoViewport: !0,
-    children: t
-  })
+let I = e => {
+    let {
+            children: t,
+            close: n,
+            onUnmount: s,
+            target: u,
+            rect: _,
+            position: E,
+            align: h,
+            impressionName: m,
+            impressionProperties: I
+        } = e, T = i.useRef(null), g = i.useMemo(() => ({ current: u }), [u]);
+    i.useEffect(() => {
+        var e, t;
+        let r = (0, a.findDOMNode)(T.current);
+        if (null == r)
+            return;
+        let i = e => {
+            let t = e.target, r = (0, a.findDOMNode)(T.current);
+            if (!(null != r && (0, l.referencePortalAwareContains)(r, t)))
+                window.getSelection().removeAllRanges(), n();
+        };
+        return null === (e = r.ownerDocument) || void 0 === e || e.addEventListener('click', i, !0), null === (t = r.ownerDocument) || void 0 === t || t.addEventListener('contextmenu', i, !0), () => {
+            var e, t;
+            null === (e = r.ownerDocument) || void 0 === e || e.removeEventListener('click', i, !0), null === (t = r.ownerDocument) || void 0 === t || t.removeEventListener('contextmenu', i, !0);
+        };
+    }, [n]);
+    let S = i.useRef(s);
+    i.useEffect(() => void (S.current = s)), i.useEffect(() => () => {
+        var e;
+        return null === (e = S.current) || void 0 === e ? void 0 : e.call(S);
+    }, []), i.useLayoutEffect(() => {
+        var e;
+        null === (e = T.current) || void 0 === e || e.updatePosition();
+    }), (0, d.Z)({
+        type: o.ImpressionTypes.MENU,
+        name: m,
+        properties: I
+    });
+    let A = (0, c.Aq)(), N = i.useCallback(() => {
+            A.dispatch(p.CkL.POPOUT_SHOW);
+        }, [A]), v = i.useCallback(() => {
+            A.dispatch(p.CkL.POPOUT_HIDE);
+        }, [A]);
+    return (0, r.jsx)(f.W5, {
+        onMount: N,
+        onUnmount: v,
+        targetRef: g,
+        overrideTargetRect: _,
+        position: null != E ? E : 'right',
+        align: null != h ? h : 'top',
+        autoInvert: !0,
+        ref: T,
+        nudgeAlignIntoViewport: !0,
+        children: t
+    });
 };
-class N extends r.PureComponent {
-  componentDidMount() {
-    let {
-      renderLazy: e,
-      renderWindow: t
-    } = this.props;
-    if (t.addEventListener("resize", this.closeResize, !0), T.S.subscribe(h.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu), null != e) {
-      let t = setTimeout(() => {
-        this.setState({
-          render: () => (0, i.jsx)(l.MenuSpinner, {})
-        })
-      }, 300);
-      e().then(e => {
-        this.setState({
-          render: e
-        }), clearTimeout(t)
-      })
-    }
-  }
-  componentDidUpdate(e) {
-    let {
-      isOpen: t
-    } = this.props;
-    if (!t && e.isOpen) {
-      var n, i;
-      null === (i = e.config) || void 0 === i || null === (n = i.onClose) || void 0 === n || n.call(i)
-    }
-  }
-  componentWillUnmount() {
-    let {
-      renderWindow: e
-    } = this.props;
-    e.removeEventListener("resize", this.closeResize, !0), T.S.unsubscribe(h.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu)
-  }
-  render() {
-    var e;
-    let {
-      appContext: t,
-      target: n,
-      isOpen: r,
-      theme: s,
-      config: o,
-      rect: a
-    } = this.props, l = null !== (e = this.state.render) && void 0 !== e ? e : this.props.render;
-    return r && null != a && null != o && null != n && null != l && o.context === t ? (0, i.jsx)(f, {
-      target: n,
-      rect: a,
-      close: this.close,
-      onUnmount: o.onClose,
-      align: o.align,
-      position: o.position,
-      impressionName: o.impressionName,
-      impressionProperties: o.impressionProperties,
-      children: (e, i) => {
+class T extends i.PureComponent {
+    componentDidMount() {
         let {
-          position: r
-        } = e;
-        return l({
-          position: r,
-          theme: s,
-          onHeightUpdate: i,
-          config: o,
-          target: n,
-          context: t
-        })
-      }
-    }) : null
-  }
-  constructor(...e) {
-    super(...e), S(this, "state", {
-      render: void 0
-    }), S(this, "closeResize", e => {
-      let {
-        renderWindow: t
-      } = this.props;
-      if (e.target === t) this.close()
-    }), S(this, "close", () => {
-      let {
-        isOpen: e,
-        closeContextMenu: t
-      } = this.props;
-      e && t()
-    })
-  }
+            renderLazy: e,
+            renderWindow: t
+        } = this.props;
+        if (t.addEventListener('resize', this.closeResize, !0), h.S.subscribe(p.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu), null != e) {
+            let t = setTimeout(() => {
+                this.setState({ render: () => (0, r.jsx)(l.MenuSpinner, {}) });
+            }, 300);
+            e().then(e => {
+                this.setState({ render: e }), clearTimeout(t);
+            });
+        }
+    }
+    componentDidUpdate(e) {
+        let {isOpen: t} = this.props;
+        if (!t && e.isOpen) {
+            var n, r;
+            null === (r = e.config) || void 0 === r || null === (n = r.onClose) || void 0 === n || n.call(r);
+        }
+    }
+    componentWillUnmount() {
+        let {renderWindow: e} = this.props;
+        e.removeEventListener('resize', this.closeResize, !0), h.S.unsubscribe(p.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu);
+    }
+    render() {
+        var e;
+        let {
+                appContext: t,
+                target: n,
+                isOpen: i,
+                theme: a,
+                config: o,
+                rect: s
+            } = this.props, l = null !== (e = this.state.render) && void 0 !== e ? e : this.props.render;
+        return i && null != s && null != o && null != n && null != l && o.context === t ? (0, r.jsx)(I, {
+            target: n,
+            rect: s,
+            close: this.close,
+            onUnmount: o.onClose,
+            align: o.align,
+            position: o.position,
+            impressionName: o.impressionName,
+            impressionProperties: o.impressionProperties,
+            children: (e, r) => {
+                let {position: i} = e;
+                return l({
+                    position: i,
+                    theme: a,
+                    onHeightUpdate: r,
+                    config: o,
+                    target: n,
+                    context: t
+                });
+            }
+        }) : null;
+    }
+    constructor(...e) {
+        super(...e), m(this, 'state', { render: void 0 }), m(this, 'closeResize', e => {
+            let {renderWindow: t} = this.props;
+            if (e.target === t)
+                this.close();
+        }), m(this, 'close', () => {
+            let {
+                isOpen: e,
+                closeContextMenu: t
+            } = this.props;
+            e && t();
+        });
+    }
 }
-
-function A() {
-  let {
-    contextMenu: e,
-    version: t,
-    isOpen: n
-  } = (0, a.cj)([E.Z], () => ({
-    contextMenu: E.Z.getContextMenu(),
-    version: E.Z.version,
-    isOpen: E.Z.isOpen()
-  })), s = (0, a.e7)([c.Z], () => c.Z.theme), {
-    appContext: o,
-    renderWindow: l
-  } = r.useContext(_.ZP);
-  return (0, i.jsx)(N, {
-    appContext: o,
-    renderWindow: l,
-    ...e,
-    isOpen: n,
-    theme: s,
-    closeContextMenu: u.Zy
-  }, t)
+function g() {
+    let {
+            contextMenu: e,
+            version: t,
+            isOpen: n
+        } = (0, s.cj)([E.Z], () => ({
+            contextMenu: E.Z.getContextMenu(),
+            version: E.Z.version,
+            isOpen: E.Z.isOpen()
+        })), a = (0, s.e7)([_.Z], () => _.Z.theme), {
+            appContext: o,
+            renderWindow: l
+        } = i.useContext(c.ZP);
+    return (0, r.jsx)(T, {
+        appContext: o,
+        renderWindow: l,
+        ...e,
+        isOpen: n,
+        theme: a,
+        closeContextMenu: u.Zy
+    }, t);
 }

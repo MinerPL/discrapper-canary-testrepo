@@ -1,12 +1,11 @@
-"use strict";
-n.d(e, {
-  _: function() {
-    return r
-  }
+r.d(e, {
+    _: function () {
+        return n;
+    }
 });
-let r = (t, e, n) => {
-  let r, i;
-  return s => {
-    e.value >= 0 && (s || n) && ((i = e.value - (r || 0)) || void 0 === r) && (r = e.value, e.delta = i, t(e))
-  }
-}
+let n = (t, e, r) => {
+    let n, _;
+    return a => {
+        e.value >= 0 && (a || r) && ((_ = e.value - (n || 0)) || void 0 === n) && (n = e.value, e.delta = _, t(e));
+    };
+};

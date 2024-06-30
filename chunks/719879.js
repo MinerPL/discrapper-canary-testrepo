@@ -1,22 +1,18 @@
-"use strict";
-t.d(s, {
-  VP: function() {
-    return o
-  }
-}), t(653041);
-var n, i, l = t(626135),
-  a = t(946314),
-  r = t(981631);
-
+n.d(t, {
+    VP: function () {
+        return o;
+    }
+}), n(653041);
+var s, a, i = n(626135), r = n(946314), l = n(981631);
 function o(e) {
-  let s = a.ZP.getDiscoveryChecklist(e),
-    t = [];
-  if (!(null == s ? void 0 : s.sufficient)) {
-    var n;
-    !(null == s ? void 0 : s.safeEnvironment) && t.push("TNS"), (!(null == s ? void 0 : s.healthy) || (null == s ? void 0 : s.healthScorePending)) && t.push("HEALTH"), !(null == s ? void 0 : s.size) && t.push("MEMBER_COUNT"), Object.keys(null !== (n = null == s ? void 0 : s.nsfwProperties) && void 0 !== n ? n : {}).length > 0 && t.push("BAD_WORDS"), !(null == s ? void 0 : s.protected) && t.push("2FA")
-  }
-  l.default.track(r.rMx.GUILD_SETTINGS_DISCOVERY_VIEWED, {
-    guild_id: e,
-    failed_reasons: t
-  })
-}(i = n || (n = {})).SAFE_ENVIRONMENT = "TNS", i.HEALTHY = "HEALTH", i.SIZE = "MEMBER_COUNT", i.NSFW = "BAD_WORDS", i.PROTECTED = "2FA"
+    let t = r.ZP.getDiscoveryChecklist(e), n = [];
+    if (!(null == t ? void 0 : t.sufficient)) {
+        var s;
+        !(null == t ? void 0 : t.safeEnvironment) && n.push('TNS'), (!(null == t ? void 0 : t.healthy) || (null == t ? void 0 : t.healthScorePending)) && n.push('HEALTH'), !(null == t ? void 0 : t.size) && n.push('MEMBER_COUNT'), Object.keys(null !== (s = null == t ? void 0 : t.nsfwProperties) && void 0 !== s ? s : {}).length > 0 && n.push('BAD_WORDS'), !(null == t ? void 0 : t.protected) && n.push('2FA');
+    }
+    i.default.track(l.rMx.GUILD_SETTINGS_DISCOVERY_VIEWED, {
+        guild_id: e,
+        failed_reasons: n
+    });
+}
+(a = s || (s = {})).SAFE_ENVIRONMENT = 'TNS', a.HEALTHY = 'HEALTH', a.SIZE = 'MEMBER_COUNT', a.NSFW = 'BAD_WORDS', a.PROTECTED = '2FA';

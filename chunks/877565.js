@@ -1,74 +1,72 @@
-"use strict";
 n.d(t, {
-  HI: function() {
-    return a
-  },
-  gm: function() {
-    return o
-  }
+    HI: function () {
+        return s;
+    },
+    gm: function () {
+        return o;
+    }
 });
-var i = n(735250),
-  r = n(470079);
+var r = n(735250), i = n(470079);
 n(419922);
-var s = n(156361);
-
+var a = n(156361);
 function o(e) {
-  let {
-    titleWithQuery: t,
-    titleWithoutQuery: n,
-    query: r,
-    getQuery: o,
-    headerClassName: a,
-    headerTrailingContent: l
-  } = e, u = r.length > 0 ? t.format({
-    prefix: o(r)
-  }) : n;
-  return (0, i.jsx)(s.ZP.Title, {
-    className: a,
-    title: u,
-    children: l
-  }, "autocomplete-title-".concat(u))
+    let {
+            titleWithQuery: t,
+            titleWithoutQuery: n,
+            query: i,
+            getQuery: o,
+            headerClassName: s,
+            headerTrailingContent: l
+        } = e, u = i.length > 0 ? t.format({ prefix: o(i) }) : n;
+    return (0, r.jsx)(a.ZP.Title, {
+        className: s,
+        title: u,
+        children: l
+    }, 'autocomplete-title-'.concat(u));
 }
-
-function a(e) {
-  let {
-    query: t,
-    selectedIndex: n,
-    autocompletes: s,
-    onHover: a,
-    onClick: l,
-    titleWithQuery: u,
-    titleWithoutQuery: _,
-    Component: d,
-    getProps: c,
-    getQuery: E,
-    key: I,
-    indexOffset: T = 0,
-    headerClassName: h,
-    headerTrailingContent: S,
-    footer: f
-  } = e;
-  if (null == f && (null == s || 0 === s.length)) return null;
-  let N = null == s ? void 0 : s.map((e, t) => {
-    let i = t + T,
-      s = c(e, i);
-    return (0, r.createElement)(d, {
-      onClick: l,
-      onHover: a,
-      selected: n === i,
-      index: i,
-      ...s,
-      key: s.key
-    })
-  });
-  return (0, i.jsxs)(r.Fragment, {
-    children: [null != u && null != _ ? o({
-      titleWithQuery: u,
-      titleWithoutQuery: _,
-      query: t,
-      getQuery: E,
-      headerClassName: h,
-      headerTrailingContent: S
-    }) : null, N, f]
-  }, I)
+function s(e) {
+    let {
+        query: t,
+        selectedIndex: n,
+        autocompletes: a,
+        onHover: s,
+        onClick: l,
+        titleWithQuery: u,
+        titleWithoutQuery: c,
+        Component: d,
+        getProps: _,
+        getQuery: E,
+        key: f,
+        indexOffset: h = 0,
+        headerClassName: p,
+        headerTrailingContent: m,
+        footer: I
+    } = e;
+    if (null == I && (null == a || 0 === a.length))
+        return null;
+    let T = null == a ? void 0 : a.map((e, t) => {
+        let r = t + h, a = _(e, r);
+        return (0, i.createElement)(d, {
+            onClick: l,
+            onHover: s,
+            selected: n === r,
+            index: r,
+            ...a,
+            key: a.key
+        });
+    });
+    return (0, r.jsxs)(i.Fragment, {
+        children: [
+            null != u && null != c ? o({
+                titleWithQuery: u,
+                titleWithoutQuery: c,
+                query: t,
+                getQuery: E,
+                headerClassName: p,
+                headerTrailingContent: m
+            }) : null,
+            T,
+            I
+        ]
+    }, f);
 }

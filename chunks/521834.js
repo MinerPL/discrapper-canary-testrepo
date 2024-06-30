@@ -1,6 +1,6 @@
-var n = e(187856);
-t.exports = function(t) {
-  return function(r) {
-    return n(r, t)
-  }
-}
+var n = r(187856);
+t.exports = function (t) {
+    return function (e) {
+        return n(e, t);
+    };
+};

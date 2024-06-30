@@ -1,12 +1,10 @@
-"use strict";
 n.d(t, {
-  W: function() {
-    return r
-  }
+    W: function () {
+        return i;
+    }
 });
-var i = n(592125);
-
-function r(e, t) {
-  let n = i.Z.getChannel(t);
-  return null != n && e.bot && n.isPrivate() && null == n.rawRecipients.find(t => t.id === e.id)
+var r = n(592125);
+function i(e, t) {
+    let n = r.Z.getChannel(t);
+    return null != n && e.bot && n.isPrivate() && null == n.rawRecipients.find(t => t.id === e.id);
 }

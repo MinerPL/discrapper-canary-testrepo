@@ -1,31 +1,28 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return a;
+    }
 });
-var i = n(626135),
-  r = n(981631);
-
-function s(e) {
-  let {
-    type: t,
-    source: n,
-    userId: s,
-    applicationId: o,
-    partyId: a,
-    messageId: l,
-    locationObject: u,
-    analyticsLocations: _
-  } = e;
-  i.default.track(r.rMx.APPLICATION_OPENED, {
-    type: t,
-    source: n,
-    application_id: o,
-    party_id: null != a ? a : void 0,
-    other_user_id: s,
-    message_id: l,
-    location: u,
-    location_stack: _
-  })
+var r = n(626135), i = n(981631);
+function a(e) {
+    let {
+        type: t,
+        source: n,
+        userId: a,
+        applicationId: o,
+        partyId: s,
+        messageId: l,
+        locationObject: u,
+        analyticsLocations: c
+    } = e;
+    r.default.track(i.rMx.APPLICATION_OPENED, {
+        type: t,
+        source: n,
+        application_id: o,
+        party_id: null != s ? s : void 0,
+        other_user_id: a,
+        message_id: l,
+        location: u,
+        location_stack: c
+    });
 }

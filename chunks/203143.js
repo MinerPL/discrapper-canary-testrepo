@@ -1,0 +1,433 @@
+n.d(t, {
+    n: function () {
+        return D;
+    }
+}), n(411104), n(47120), n(390547), n(724458);
+var i = n(512722), a = n.n(i), s = n(392711), l = n.n(s), r = n(263568), o = n(442837), c = n(570140), d = n(668781), u = n(749210), _ = n(904245), E = n(881052), m = n(367907), I = n(41776), T = n(566006), h = n(48854), N = n(869765), f = n(314897), p = n(592125), C = n(703558), g = n(607744), S = n(375954), A = n(117530), x = n(553803), O = n(316758), R = n(467531), M = n(798628), v = n(918088), L = n(981631), Z = n(689938);
+function P(e, t) {
+    let n = [...t], i = 0, a = 0;
+    for (let t of n) {
+        var s;
+        let n = null == e ? void 0 : null === (s = e.find(e => e.answer_id === parseInt(t))) || void 0 === s ? void 0 : s.poll_media;
+        (null == n ? void 0 : n.text) != null && (i += 1), (null == n ? void 0 : n.emoji) != null && (a += 1);
+    }
+    return {
+        analyticsSelectedAnswerIds: n,
+        selectedTextAnswersCount: i,
+        selectedEmojiAnswersCount: a
+    };
+}
+function b(e) {
+    let {
+        guildId: t,
+        title: n,
+        body: i
+    } = e;
+    d.Z.show({
+        title: n,
+        body: i,
+        confirmText: Z.Z.Messages.LURKER_MODE_POPOUT_JOIN,
+        cancelText: Z.Z.Messages.LURKER_MODE_POPOUT_CANCEL,
+        onConfirm: () => {
+            u.Z.joinGuild(t, { source: L.vtS.POLL_ALERT });
+        }
+    });
+}
+function D(e) {
+    let {
+            channelId: t,
+            messageId: n,
+            answerId: i
+        } = e, a = p.Z.getChannel(t);
+    if (null == a)
+        return;
+    if (I.Z.isLurking(a.guild_id)) {
+        b({
+            guildId: a.guild_id,
+            title: Z.Z.Messages.POLL_LURKING_SEE_VOTES_TITLE,
+            body: Z.Z.Messages.POLL_LURKING_VOTE_SUBTITLE
+        });
+        return;
+    }
+    let s = S.Z.getMessage(t, n);
+    if (null == s || null == s.poll || 0 === s.poll.answers.length)
+        return;
+    let l = null != i ? i : String(s.poll.answers[0].answer_id);
+    x.A({
+        message: s,
+        initialAnswerId: l
+    });
+}
+function j(e) {
+    let {
+        channelId: t,
+        messageId: n,
+        isEditing: i
+    } = e;
+    (0, M.eu)(t, n, e => {
+        var n;
+        return {
+            channelId: t,
+            selectedAnswerIds: new Set(),
+            submitting: !1,
+            editing: i,
+            showResults: null !== (n = null == e ? void 0 : e.showResults) && void 0 !== n && n
+        };
+    });
+}
+function U(e) {
+    let {
+            channelId: t,
+            messageId: n
+        } = e, i = S.Z.getMessage(t, n);
+    return null == i ? [] : i.reactions.flatMap(e => !0 === e.me_vote ? e.emoji.name : []);
+}
+async function y(e) {
+    let {
+            channelId: t,
+            messageId: n,
+            answerIds: i
+        } = e, a = U({
+            channelId: t,
+            messageId: n
+        }), s = l().difference(a, i), r = l().difference(i, a), d = f.default.getId(), u = [
+            ...s.map(e => ({
+                type: 'MESSAGE_REACTION_REMOVE',
+                id: e
+            })),
+            ...r.map(e => ({
+                type: 'MESSAGE_REACTION_ADD',
+                id: e
+            }))
+        ], _ = o.ZP.Emitter.batched(() => {
+            let e;
+            for (let {
+                        id: i,
+                        type: a
+                    } of u)
+                e = c.Z.dispatch({
+                    type: a,
+                    channelId: t,
+                    messageId: n,
+                    emoji: {
+                        id: i,
+                        name: i
+                    },
+                    userId: d,
+                    optimistic: !0,
+                    reactionType: T.O.VOTE
+                });
+            return e;
+        });
+    null != _ && await _;
+}
+async function B(e) {
+    let {
+            channelId: t,
+            messageId: n
+        } = e, i = p.Z.getChannel(t);
+    if (null == i)
+        return;
+    if (I.Z.isLurking(i.guild_id)) {
+        b({
+            guildId: i.guild_id,
+            title: Z.Z.Messages.POLL_LURKING_VOTE_TITLE,
+            body: Z.Z.Messages.POLL_LURKING_VOTE_SUBTITLE
+        });
+        return;
+    }
+    if (!g.Z.canChatInGuild(i.guild_id)) {
+        d.Z.show({
+            title: Z.Z.Messages.POLL_GUILD_MEMBER_UNVERIFIED_TITLE,
+            body: Z.Z.Messages.POLL_GUILD_MEMBER_UNVERIFIED_SUBTITLE
+        });
+        return;
+    }
+    let s = (0, M.fU)(t, n);
+    a()(null != s, 'Must not be able to vote without existing state!');
+    let l = U({
+        channelId: t,
+        messageId: n
+    });
+    try {
+        let e = [...s.selectedAnswerIds.values()];
+        (0, M.eu)(t, n, e => (a()(null != e, 'Must not be able to vote without existing state!'), {
+            ...e,
+            submitting: !0,
+            editing: !1
+        })), await y({
+            channelId: t,
+            messageId: n,
+            answerIds: e
+        }), await R.B({
+            channelId: t,
+            messageId: n,
+            answerIds: e
+        }), (0, M.eu)(t, n, () => void 0);
+    } catch (e) {
+        var r, o, c;
+        d.Z.show({
+            title: Z.Z.Messages.GENERIC_ERROR_TITLE,
+            body: null !== (c = null !== (o = null === (r = e.getAnyErrorMessage) || void 0 === r ? void 0 : r.call(e)) && void 0 !== o ? o : e.message) && void 0 !== c ? c : Z.Z.Messages.GENERIC_ERROR_BODY
+        }), await y({
+            channelId: t,
+            messageId: n,
+            answerIds: l
+        }), (0, M.eu)(t, n, e => {
+            if (null != e)
+                return {
+                    ...e,
+                    submitting: !1,
+                    editing: !1
+                };
+        });
+    }
+}
+async function k(e) {
+    let {
+            channelId: t,
+            messageId: n
+        } = e, i = p.Z.getChannel(t);
+    if (null != i) {
+        if (I.Z.isLurking(i.guild_id)) {
+            b({
+                guildId: i.guild_id,
+                title: Z.Z.Messages.POLL_LURKING_UNVOTE_TITLE,
+                body: Z.Z.Messages.POLL_LURKING_UNVOTE_SUBTITLE
+            });
+            return;
+        }
+        return (0, M.eu)(t, n, e => {
+            var n;
+            return {
+                channelId: t,
+                selectedAnswerIds: new Set(),
+                submitting: !1,
+                editing: !1,
+                showResults: null !== (n = null == e ? void 0 : e.showResults) && void 0 !== n && n
+            };
+        }), await B({
+            channelId: t,
+            messageId: n
+        });
+    }
+}
+async function G(e) {
+    let {
+        channelId: t,
+        messageId: n,
+        type: i
+    } = e;
+    switch (i) {
+    case 'submit':
+        await B({
+            channelId: t,
+            messageId: n
+        });
+        break;
+    case 'remove':
+        await k({
+            channelId: t,
+            messageId: n
+        });
+        break;
+    case 'cancel':
+        j({
+            channelId: t,
+            messageId: n,
+            isEditing: !1
+        });
+        break;
+    case 'showVotes':
+        !function (e) {
+            let {
+                channelId: t,
+                messageId: n
+            } = e;
+            (0, M.eu)(t, n, e => {
+                var i, a;
+                let s = null == e || !e.showResults, l = S.Z.getMessage(t, n), r = null != l ? l.reactions.reduce((e, t) => {
+                        var n, i;
+                        return e + (null !== (i = null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== i ? i : 0);
+                    }, 0) : 0;
+                return m.ZP.trackWithMetadata(L.rMx.POLL_SHOW_RESULTS_CLICKED, {
+                    channel_id: t,
+                    message_id: n,
+                    show_results: s,
+                    votes_count: r
+                }), {
+                    channelId: t,
+                    selectedAnswerIds: new Set(),
+                    submitting: null !== (i = null == e ? void 0 : e.submitting) && void 0 !== i && i,
+                    editing: null !== (a = null == e ? void 0 : e.submitting) && void 0 !== a && a,
+                    showResults: s
+                };
+            });
+        }({
+            channelId: t,
+            messageId: n
+        });
+        break;
+    case 'showVoterDetails':
+        D({
+            channelId: t,
+            messageId: n
+        });
+        break;
+    default:
+        a()(!1, 'Unknown poll action type: '.concat(i));
+    }
+}
+async function F(e) {
+    let {
+            channel: t,
+            question: n,
+            answers: i,
+            allowMultiSelect: a,
+            duration: s,
+            layout: l,
+            onClose: o
+        } = e, c = A.Z.getUploads(t.id, C.d.Poll), d = i.map(e => {
+            var t, n;
+            let i = null == c ? void 0 : c.findIndex(t => t.id === e.localCreationAnswerId), a = { attachment_ids: -1 !== i ? [''.concat(i)] : void 0 };
+            l === r.C.DEFAULT && (a.text = null === (n = e.text) || void 0 === n ? void 0 : n.trim());
+            let s = null === (t = e.image) || void 0 === t ? void 0 : t.emoji;
+            return null != s && (null != s.id ? a.emoji = {
+                id: s.id,
+                name: ''
+            } : null != s.optionallyDiverseSequence && (a.emoji = { name: s.optionallyDiverseSequence })), { poll_media: a };
+        }), u = {
+            question: { text: n.trim() },
+            answers: d,
+            allow_multiselect: a,
+            duration: s,
+            layout_type: l
+        };
+    try {
+        if (null != c && c.length > 0) {
+            var m;
+            let e = null !== (m = f.default.getToken()) && void 0 !== m ? m : '';
+            await O.sk({
+                channel: t,
+                items: c,
+                token: e,
+                poll: u,
+                nonce: (0, h.r)(),
+                maxSizeCallback: () => {
+                }
+            });
+        } else
+            await _.Z.sendPollMessage(t.id, u);
+        null == o || o();
+    } catch (e) {
+        if ('poll' === (e instanceof E.Hx ? e : new E.Hx(e)).getAnyErrorMessage() && null != e.text)
+            throw {
+                ...e,
+                body: JSON.parse(e.text)
+            };
+        throw e;
+    }
+}
+async function w(e) {
+    let {
+        channelId: t,
+        messageId: n
+    } = e;
+    await d.Z.confirm({
+        title: Z.Z.Messages.POLL_END_EARLY_CONFIRMATION_TITLE,
+        body: Z.Z.Messages.POLL_END_EARLY_CONFIRMATION_TEXT
+    }) && await R.W({
+        channelId: t,
+        messageId: n
+    });
+}
+t.Z = {
+    handlePollAnswerTapped: function (e) {
+        var t, n;
+        let {
+                answerId: i,
+                ...s
+            } = e, {
+                channelId: l,
+                messageId: r,
+                message: o
+            } = function (e) {
+                let {
+                        channelId: t,
+                        messageId: n
+                    } = e, i = S.Z.getMessage(t, n);
+                if (null != i)
+                    return {
+                        message: i,
+                        channelId: t,
+                        messageId: n
+                    };
+                let s = N.Z.getMessage(t, n);
+                if (null != s.message)
+                    return {
+                        channelId: t,
+                        messageId: n,
+                        message: s.message
+                    };
+                throw a()(null != i, 'Tapped on a non-existent poll message'), Error();
+            }(s), {tapShouldOpenVotersModal: c} = null !== (n = (0, v.Tk)(o)) && void 0 !== n ? n : {};
+        if (!0 === c) {
+            D({
+                channelId: l,
+                messageId: r,
+                answerId: i
+            });
+            return;
+        }
+        let d = null === (t = o.poll) || void 0 === t ? void 0 : t.allow_multiselect;
+        (0, M.eu)(l, r, e => {
+            var t, n;
+            if (null == e) {
+                let e = new Set([i]), {
+                        analyticsSelectedAnswerIds: t,
+                        selectedTextAnswersCount: a,
+                        selectedEmojiAnswersCount: s
+                    } = P(null === (n = o.poll) || void 0 === n ? void 0 : n.answers, e);
+                return m.ZP.trackWithMetadata(L.rMx.POLL_VOTE_SELECTED, {
+                    channel_id: l,
+                    message_id: r,
+                    selected_answer_ids: t,
+                    selected_text_answers_count: a,
+                    selected_emoji_answers_count: s
+                }), {
+                    channelId: l,
+                    selectedAnswerIds: e,
+                    submitting: !1,
+                    editing: !1,
+                    showResults: !1
+                };
+            }
+            let a = { ...e }, s = new Set(a.selectedAnswerIds);
+            if (a.selectedAnswerIds = s, s.has(i))
+                s.delete(i);
+            else {
+                if (!d)
+                    for (let e of s)
+                        s.delete(e);
+                s.add(i);
+            }
+            let {
+                analyticsSelectedAnswerIds: c,
+                selectedTextAnswersCount: u,
+                selectedEmojiAnswersCount: _
+            } = P(null === (t = o.poll) || void 0 === t ? void 0 : t.answers, s);
+            return m.ZP.trackWithMetadata(L.rMx.POLL_VOTE_SELECTED, {
+                channel_id: l,
+                message_id: r,
+                selected_answer_ids: c,
+                selected_text_answers_count: u,
+                selected_emoji_answers_count: _
+            }), a;
+        });
+    },
+    handlePollSubmitVote: B,
+    handleUpdateVoteEditingState: j,
+    handlePollActionTapped: G,
+    createPoll: F,
+    endPollEarly: w
+};

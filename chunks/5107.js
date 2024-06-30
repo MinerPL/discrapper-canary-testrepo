@@ -1,4 +1,1 @@
-"use strict";
-e.exports = {
-  i8: "6.5.4"
-}
+e.exports = { i8: '6.5.4' };

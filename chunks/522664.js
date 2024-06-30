@@ -1,63 +1,53 @@
-"use strict";
 n.d(t, {
-  Eq: function() {
-    return o
-  },
-  Uj: function() {
-    return s
-  },
-  gx: function() {
-    return l
-  },
-  qO: function() {
-    return a
-  }
+    Eq: function () {
+        return o;
+    },
+    Uj: function () {
+        return a;
+    },
+    gx: function () {
+        return l;
+    },
+    qO: function () {
+        return s;
+    }
 });
-var i = n(544891),
-  r = n(981631);
-
-function s(e, t, n, s) {
-  return i.tn.post({
-    url: r.ANM.EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE,
-    body: {
-      channel_id: e,
-      message_id: t,
-      attachment_ids: n,
-      embed_ids: s
-    }
-  })
+var r = n(544891), i = n(981631);
+function a(e, t, n, a) {
+    return r.tn.post({
+        url: i.ANM.EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE,
+        body: {
+            channel_id: e,
+            message_id: t,
+            attachment_ids: n,
+            embed_ids: a
+        }
+    });
 }
-
-function o(e, t, n, s) {
-  return i.tn.post({
-    url: r.ANM.EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE,
-    body: {
-      channel_id: e,
-      message_id: t,
-      attachment_ids: n,
-      filenames: s
-    }
-  })
+function o(e, t, n, a) {
+    return r.tn.post({
+        url: i.ANM.EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE,
+        body: {
+            channel_id: e,
+            message_id: t,
+            attachment_ids: n,
+            filenames: a
+        }
+    });
 }
-
-function a(e, t) {
-  return i.tn.patch({
-    url: r.ANM.EXPLICIT_MEDIA_SCAN_MESSAGES(e),
-    body: {
-      message_ids: t
-    }
-  })
+function s(e, t) {
+    return r.tn.patch({
+        url: i.ANM.EXPLICIT_MEDIA_SCAN_MESSAGES(e),
+        body: { message_ids: t }
+    });
 }
-
 function l(e) {
-  let t = e.map(e => ({
-    channel_id: e.channel_id,
-    message_id: e.id
-  }));
-  return i.tn.patch({
-    url: r.ANM.EXPLICIT_MEDIA_SCAN_MULTI_CHANNEL_MESSAGES,
-    body: {
-      messages: t
-    }
-  })
+    let t = e.map(e => ({
+        channel_id: e.channel_id,
+        message_id: e.id
+    }));
+    return r.tn.patch({
+        url: i.ANM.EXPLICIT_MEDIA_SCAN_MULTI_CHANNEL_MESSAGES,
+        body: { messages: t }
+    });
 }

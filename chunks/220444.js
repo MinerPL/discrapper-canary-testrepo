@@ -1,13 +1,9 @@
-"use strict";
 n.d(t, {
-  d: function() {
-    return o
-  }
+    d: function () {
+        return o;
+    }
 }), n(442837);
-var i = n(306680),
-  r = n(9156),
-  s = n(490897);
-
+var r = n(306680), i = n(9156), a = n(490897);
 function o(e) {
-  return i.ZP.hasUnread(e.id) && r.ZP.resolveUnreadSetting(e) === s.i.ALL_MESSAGES
+    return r.ZP.hasUnread(e.id) && i.ZP.resolveUnreadSetting(e) === a.i.ALL_MESSAGES;
 }

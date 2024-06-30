@@ -1,11 +1,10 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  q: function() {
-    return i
-  },
-  v: function() {
-    return s
-  }
-}), (r = i || (i = {}))[r.PREMIUM = 0] = "PREMIUM", r[r.BASIC = 1] = "BASIC";
-let s = 32
+    q: function () {
+        return r;
+    },
+    v: function () {
+        return a;
+    }
+}), (i = r || (r = {}))[i.PREMIUM = 0] = 'PREMIUM', i[i.BASIC = 1] = 'BASIC';
+let a = 32;

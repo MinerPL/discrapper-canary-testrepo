@@ -1,17 +1,14 @@
-"use strict";
-
-function i() {
-  return !1
-}
-
 function r() {
-  return null
+    return !1;
+}
+function i() {
+    return null;
 }
 n.d(t, {
-  K: function() {
-    return i
-  },
-  d: function() {
-    return r
-  }
-})
+    K: function () {
+        return r;
+    },
+    d: function () {
+        return i;
+    }
+});

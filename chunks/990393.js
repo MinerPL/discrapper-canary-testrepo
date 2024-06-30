@@ -1,6 +1,4 @@
-var n = e(214755),
-  o = e(469128),
-  i = e(58834);
-t.exports = function(t) {
-  return n(t, i, o)
-}
+var n = r(214755), _ = r(469128), a = r(58834);
+t.exports = function (t) {
+    return n(t, a, _);
+};

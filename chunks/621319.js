@@ -1,62 +1,49 @@
-"use strict";
-t.d(s, {
-  Gy: function() {
-    return o
-  },
-  H7: function() {
-    return r
-  },
-  en: function() {
-    return c
-  },
-  xv: function() {
-    return a
-  }
-});
-var n = t(544891),
-  i = t(570140),
-  l = t(981631);
-
-function a() {
-  i.Z.dispatch({
-    type: "GUILD_SETTINGS_VANITY_URL_CLOSE"
-  })
-}
-
-function r() {
-  i.Z.dispatch({
-    type: "GUILD_SETTINGS_VANITY_URL_RESET"
-  })
-}
-
-function o(e) {
-  i.Z.dispatch({
-    type: "GUILD_SETTINGS_VANITY_URL_SET",
-    code: e
-  })
-}
-
-function c(e, s) {
-  return n.tn.patch({
-    url: l.ANM.GUILD_VANITY_URL(e),
-    body: {
-      code: s
+n.d(t, {
+    Gy: function () {
+        return o;
     },
-    oldFormErrors: !0
-  }).then(e => {
-    let {
-      body: {
-        code: s,
-        uses: t
-      }
-    } = e;
-    i.Z.dispatch({
-      type: "GUILD_SETTINGS_SET_VANITY_URL",
-      code: s,
-      uses: t
-    })
-  }, e => (i.Z.dispatch({
-    type: "GUILD_SETTINGS_VANITY_URL_ERROR",
-    error: e.body
-  }), e))
+    H7: function () {
+        return l;
+    },
+    en: function () {
+        return c;
+    },
+    xv: function () {
+        return r;
+    }
+});
+var s = n(544891), a = n(570140), i = n(981631);
+function r() {
+    a.Z.dispatch({ type: 'GUILD_SETTINGS_VANITY_URL_CLOSE' });
+}
+function l() {
+    a.Z.dispatch({ type: 'GUILD_SETTINGS_VANITY_URL_RESET' });
+}
+function o(e) {
+    a.Z.dispatch({
+        type: 'GUILD_SETTINGS_VANITY_URL_SET',
+        code: e
+    });
+}
+function c(e, t) {
+    return s.tn.patch({
+        url: i.ANM.GUILD_VANITY_URL(e),
+        body: { code: t },
+        oldFormErrors: !0
+    }).then(e => {
+        let {
+            body: {
+                code: t,
+                uses: n
+            }
+        } = e;
+        a.Z.dispatch({
+            type: 'GUILD_SETTINGS_SET_VANITY_URL',
+            code: t,
+            uses: n
+        });
+    }, e => (a.Z.dispatch({
+        type: 'GUILD_SETTINGS_VANITY_URL_ERROR',
+        error: e.body
+    }), e));
 }

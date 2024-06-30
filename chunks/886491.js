@@ -1,31 +1,28 @@
-"use strict";
 n.d(t, {
-  Q: function() {
-    return u
-  }
+    Q: function () {
+        return l;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(555730),
-  s = n(481060),
-  o = n(359610),
-  a = n(689938),
-  l = n(502249);
-
-function u(e) {
-  return (0, i.jsx)(o.Z, {
-    size: s.ButtonSizes.MEDIUM,
-    ...e,
-    children: (0, i.jsxs)("div", {
-      className: l.storeBtn,
-      children: [(0, i.jsx)(r.Q, {
-        width: 16,
-        height: 16,
-        color: "#fff"
-      }), (0, i.jsx)(s.Spacer, {
-        size: 4,
-        horizontal: !0
-      }), a.Z.Messages.STOREFRONT]
-    })
-  })
+var i = n(481060), a = n(359610), o = n(689938), s = n(86932);
+function l(e) {
+    return (0, r.jsx)(a.Z, {
+        size: i.ButtonSizes.MEDIUM,
+        ...e,
+        children: (0, r.jsxs)('div', {
+            className: s.storeBtn,
+            children: [
+                (0, r.jsx)(i.ShopSparkleIcon, {
+                    size: 'xs',
+                    color: '#fff'
+                }),
+                (0, r.jsx)(i.Spacer, {
+                    size: 4,
+                    horizontal: !0
+                }),
+                o.Z.Messages.STOREFRONT
+            ]
+        })
+    });
 }

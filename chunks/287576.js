@@ -1,48 +1,41 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return c
-  }
-});
-var n = t(470079),
-  i = t(725803),
-  l = t(766434),
-  a = t(310291),
-  r = t(674563),
-  o = t(198139);
-
-function c(e) {
-  var s;
-  let {
-    application: t,
-    loading: c
-  } = (0, i.Z)(e, r.wW.GUILD_ROLE_SUBSCRIPTIONS), {
-    payoutsByPeriod: d,
-    loading: u
-  } = (0, a.Z)(null == t ? void 0 : t.id, {
-    groupType: o.uw.GUILD_PRODUCT,
-    teamId: null == t ? void 0 : null === (s = t.team) || void 0 === s ? void 0 : s.id
-  }), {
-    currentPeriod: E,
-    previousPeriods: _,
-    metrics: I
-  } = n.useMemo(() => {
-    let {
-      currentPeriod: e,
-      previousPeriods: s
-    } = (0, l.Br)(d), t = (0, l.Uj)(e, s[0]);
-    return {
-      currentPeriod: e,
-      previousPeriods: s,
-      metrics: t
+n.d(t, {
+    Z: function () {
+        return c;
     }
-  }, [d]);
-  return {
-    loading: c || u,
-    payoutsByPeriod: d,
-    currentPeriod: E,
-    previousPeriods: _,
-    metrics: I,
-    application: t
-  }
+});
+var s = n(470079), a = n(725803), i = n(766434), r = n(310291), l = n(674563), o = n(198139);
+function c(e) {
+    var t;
+    let {
+            application: n,
+            loading: c
+        } = (0, a.Z)(e, l.wW.GUILD_ROLE_SUBSCRIPTIONS), {
+            payoutsByPeriod: d,
+            loading: u
+        } = (0, r.Z)(null == n ? void 0 : n.id, {
+            groupType: o.uw.GUILD_PRODUCT,
+            teamId: null == n ? void 0 : null === (t = n.team) || void 0 === t ? void 0 : t.id
+        }), {
+            currentPeriod: _,
+            previousPeriods: E,
+            metrics: I
+        } = s.useMemo(() => {
+            let {
+                    currentPeriod: e,
+                    previousPeriods: t
+                } = (0, i.Br)(d), n = (0, i.Uj)(e, t[0]);
+            return {
+                currentPeriod: e,
+                previousPeriods: t,
+                metrics: n
+            };
+        }, [d]);
+    return {
+        loading: c || u,
+        payoutsByPeriod: d,
+        currentPeriod: _,
+        previousPeriods: E,
+        metrics: I,
+        application: n
+    };
 }

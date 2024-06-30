@@ -1,100 +1,95 @@
-"use strict";
 n(653041);
-var i = n(269054),
-  r = n(217209),
-  s = n.n(r),
-  o = n(78650),
-  a = n.n(o),
-  l = n(505444),
-  u = n.n(l);
-
-function _(e) {
-  let t = Object.keys(e)[0];
-  return "".concat(t, "(").concat(e[t], ")")
+var r = n(269054), i = n(217209), a = n.n(i), o = n(78650), s = n.n(o), l = n(505444), u = n.n(l);
+function c(e) {
+    let t = Object.keys(e)[0];
+    return ''.concat(t, '(').concat(e[t], ')');
 }
 let d = /rgba\(([\d.]+), ([\d.]+), ([\d.]+), ([\d.]+)\)/;
-
-function c(e) {
-  let t = e.match(d);
-  return null != t && (e = "rgba(".concat(0 | t[1], ", ").concat(0 | t[2], ", ").concat(0 | t[3], ", ").concat(t[4], ")")), e
+function _(e) {
+    let t = e.match(d);
+    return null != t && (e = 'rgba('.concat(0 | t[1], ', ').concat(0 | t[2], ', ').concat(0 | t[3], ', ').concat(t[4], ')')), e;
 }
-i.inject.ApplyAnimatedValues(function(e, t, n) {
-  if (e.setNativeProps) e.setNativeProps(t);
-  else {
-    if (!e.nodeType || void 0 === e.setAttribute) return !1;
-    var i;
-    u().setValueForStyles(e, ((i = t.style) && (i.transform && (i.transform = i.WebkitTransform = i.MozTransform = i.transform.map(_).join(" ")), i.color && (i.color = c(i.color)), i.backgroundColor && (i.backgroundColor = c(i.backgroundColor))), i), n._reactInternalInstance)
-  }
+r.inject.ApplyAnimatedValues(function (e, t, n) {
+    if (e.setNativeProps)
+        e.setNativeProps(t);
+    else {
+        if (!e.nodeType || void 0 === e.setAttribute)
+            return !1;
+        var r;
+        u().setValueForStyles(e, ((r = t.style) && (r.transform && (r.transform = r.WebkitTransform = r.MozTransform = r.transform.map(c).join(' ')), r.color && (r.color = _(r.color)), r.backgroundColor && (r.backgroundColor = _(r.backgroundColor))), r), n._reactInternalInstance);
+    }
 }, e => e);
-
 function E(e, t, n) {
-  return void 0 !== t && void 0 != n ? a()(t, n) : e
+    return void 0 !== t && void 0 != n ? s()(t, n) : e;
 }
 t.Z = {
-  ...i,
-  Easing: s(),
-  accelerate: function(e) {
-    return e.transform = e.transform || [], e.transform.push({
-      translateZ: 0
-    }), e
-  },
-  animate: function e(t, n) {
-    let r;
-    let {
-      toValueMin: s,
-      toValueMax: o,
-      tension: a = 0,
-      friction: l = 0,
-      loop: u,
-      reverse: _,
-      invert: d,
-      callback: c,
-      type: I = "spring",
-      shouldLoop: T,
-      durationMin: h,
-      durationMax: S,
-      ...f
-    } = n, N = t._value, A = E(n.duration, h, S), m = E(n.toValue, s, o), O = i[I](t, {
-      ...f,
-      toValue: m,
-      tension: a,
-      friction: l,
-      duration: A
-    }), R = O;
-    if (_ || d) {
-      let e = E(n.duration, h, S);
-      r = i[I](t, {
-        ...f,
-        toValue: _ ? N : -m,
-        tension: a,
-        friction: l,
-        duration: e
-      }), R = i.sequence([O, r])
-    }
-    u ? R.start(() => {
-      (!T || T && T()) && (c ? c(e.bind(null, t, n)) : e(t, n))
-    }) : R.start(c)
-  },
-  interpolate: function(e) {
-    for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
-    return e.interpolate({
-      inputRange: [0, 1],
-      outputRange: n
-    })
-  },
-  Extrapolate: {
-    CLAMP: "clamp"
-  },
-  div: i.createAnimatedComponent("div"),
-  span: i.createAnimatedComponent("span"),
-  img: i.createAnimatedComponent("img"),
-  a: i.createAnimatedComponent("a"),
-  form: i.createAnimatedComponent("form"),
-  ul: i.createAnimatedComponent("ul"),
-  li: i.createAnimatedComponent("li"),
-  g: i.createAnimatedComponent("g"),
-  use: i.createAnimatedComponent("use"),
-  path: i.createAnimatedComponent("path"),
-  section: i.createAnimatedComponent("section"),
-  video: i.createAnimatedComponent("video")
-}
+    ...r,
+    Easing: a(),
+    accelerate: function (e) {
+        return e.transform = e.transform || [], e.transform.push({ translateZ: 0 }), e;
+    },
+    animate: function e(t, n) {
+        let i;
+        let {
+                toValueMin: a,
+                toValueMax: o,
+                tension: s = 0,
+                friction: l = 0,
+                loop: u,
+                reverse: c,
+                invert: d,
+                callback: _,
+                type: f = 'spring',
+                shouldLoop: h,
+                durationMin: p,
+                durationMax: m,
+                ...I
+            } = n, T = t._value, g = E(n.duration, p, m), S = E(n.toValue, a, o), A = r[f](t, {
+                ...I,
+                toValue: S,
+                tension: s,
+                friction: l,
+                duration: g
+            }), N = A;
+        if (c || d) {
+            let e = E(n.duration, p, m);
+            i = r[f](t, {
+                ...I,
+                toValue: c ? T : -S,
+                tension: s,
+                friction: l,
+                duration: e
+            }), N = r.sequence([
+                A,
+                i
+            ]);
+        }
+        u ? N.start(() => {
+            (!h || h && h()) && (_ ? _(e.bind(null, t, n)) : e(t, n));
+        }) : N.start(_);
+    },
+    interpolate: function (e) {
+        for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++)
+            n[r - 1] = arguments[r];
+        return e.interpolate({
+            inputRange: [
+                0,
+                1
+            ],
+            outputRange: n
+        });
+    },
+    Extrapolate: { CLAMP: 'clamp' },
+    div: r.createAnimatedComponent('div'),
+    span: r.createAnimatedComponent('span'),
+    img: r.createAnimatedComponent('img'),
+    a: r.createAnimatedComponent('a'),
+    form: r.createAnimatedComponent('form'),
+    ul: r.createAnimatedComponent('ul'),
+    li: r.createAnimatedComponent('li'),
+    g: r.createAnimatedComponent('g'),
+    use: r.createAnimatedComponent('use'),
+    path: r.createAnimatedComponent('path'),
+    section: r.createAnimatedComponent('section'),
+    video: r.createAnimatedComponent('video')
+};

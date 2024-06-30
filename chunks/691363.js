@@ -1,7 +1,4 @@
-var n = e(181515),
-  o = e(521834),
-  i = e(844781),
-  a = e(828091);
-t.exports = function(t) {
-  return i(t) ? n(a(t)) : o(t)
-}
+var n = r(181515), _ = r(521834), a = r(844781), i = r(828091);
+t.exports = function (t) {
+    return a(t) ? n(i(t)) : _(t);
+};

@@ -1,14 +1,21 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  T: function() {
-    return s
-  },
-  X: function() {
-    return i
-  }
-}), n(47120), (r = i || (i = {})).STREAM_ON_DESKTOP = "STREAM_ON_DESKTOP", r.PLAY_ON_DESKTOP = "PLAY_ON_DESKTOP", r.PLAY_ON_XBOX = "PLAY_ON_XBOX", r.PLAY_ON_PLAYSTATION = "PLAY_ON_PLAYSTATION";
-let s = {
-  ALL: new Set(["PLAY_ON_DESKTOP", "PLAY_ON_PLAYSTATION", "PLAY_ON_XBOX", "STREAM_ON_DESKTOP"]),
-  CONSOLE: new Set(["PLAY_ON_PLAYSTATION", "PLAY_ON_XBOX"])
-}
+    T: function () {
+        return a;
+    },
+    X: function () {
+        return r;
+    }
+}), n(47120), (i = r || (r = {})).STREAM_ON_DESKTOP = 'STREAM_ON_DESKTOP', i.PLAY_ON_DESKTOP = 'PLAY_ON_DESKTOP', i.PLAY_ON_XBOX = 'PLAY_ON_XBOX', i.PLAY_ON_PLAYSTATION = 'PLAY_ON_PLAYSTATION';
+let a = {
+    ALL: new Set([
+        'PLAY_ON_DESKTOP',
+        'PLAY_ON_PLAYSTATION',
+        'PLAY_ON_XBOX',
+        'STREAM_ON_DESKTOP'
+    ]),
+    CONSOLE: new Set([
+        'PLAY_ON_PLAYSTATION',
+        'PLAY_ON_XBOX'
+    ])
+};

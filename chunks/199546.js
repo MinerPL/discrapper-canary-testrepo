@@ -1,2 +1,1 @@
-"use strict";
-e.exports = t.p + "3e0928d4a453a9603cf4.mp4"
+e.exports = n.p + '3e0928d4a453a9603cf4.mp4';

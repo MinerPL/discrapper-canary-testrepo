@@ -1,33 +1,31 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return a;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(325767);
-
-function s(e) {
-  let {
-    width: t = 12,
-    height: n = 12,
-    color: s = "currentColor",
-    foreground: o,
-    ...a
-  } = e;
-  return (0, i.jsx)("svg", {
-    ...(0, r.Z)(a),
-    width: t,
-    height: n,
-    viewBox: "0 0 12 12",
-    children: (0, i.jsx)("rect", {
-      className: o,
-      fill: s,
-      width: "10",
-      height: "1",
-      x: "1",
-      y: "6"
-    })
-  })
+var i = n(325767);
+function a(e) {
+    let {
+        width: t = 12,
+        height: n = 12,
+        color: a = 'currentColor',
+        foreground: o,
+        ...s
+    } = e;
+    return (0, r.jsx)('svg', {
+        ...(0, i.Z)(s),
+        width: t,
+        height: n,
+        viewBox: '0 0 12 12',
+        children: (0, r.jsx)('rect', {
+            className: o,
+            fill: a,
+            width: '10',
+            height: '1',
+            x: '1',
+            y: '6'
+        })
+    });
 }

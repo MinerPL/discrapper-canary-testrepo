@@ -1,36 +1,27 @@
-"use strict";
-t.d(s, {
-  z: function() {
-    return r
-  }
+n.d(t, {
+    z: function () {
+        return l;
+    }
 });
-var n = t(664751),
-  i = t(544891),
-  l = t(570140);
-t(900849), t(719879);
-var a = t(981631);
-async function r(e) {
-  l.Z.dispatch({
-    type: "DISCOVER_GUILDS_FETCH_START",
-    guildIds: e
-  });
-  try {
-    let {
-      guilds: s
-    } = (await i.tn.get({
-      url: a.ANM.GUILD_DISCOVERY,
-      query: n.stringify({
-        guild_ids: e
-      }),
-      oldFormErrors: !0
-    })).body;
-    l.Z.dispatch({
-      type: "DISCOVER_GUILDS_FETCH_SUCCESS",
-      guilds: s
-    })
-  } catch (e) {
-    l.Z.dispatch({
-      type: "DISCOVER_GUILDS_FETCH_FAILURE"
-    })
-  }
+var s = n(664751), a = n(544891), i = n(570140);
+n(900849), n(719879);
+var r = n(981631);
+async function l(e) {
+    i.Z.dispatch({
+        type: 'DISCOVER_GUILDS_FETCH_START',
+        guildIds: e
+    });
+    try {
+        let {guilds: t} = (await a.tn.get({
+            url: r.ANM.GUILD_DISCOVERY,
+            query: s.stringify({ guild_ids: e }),
+            oldFormErrors: !0
+        })).body;
+        i.Z.dispatch({
+            type: 'DISCOVER_GUILDS_FETCH_SUCCESS',
+            guilds: t
+        });
+    } catch (e) {
+        i.Z.dispatch({ type: 'DISCOVER_GUILDS_FETCH_FAILURE' });
+    }
 }

@@ -1,12 +1,10 @@
-"use strict";
 n.d(t, {
-  H: function() {
-    return i
-  }
+    H: function () {
+        return i;
+    }
 });
-var r = n(876026),
-  i = function() {
-    return r.C.some(function(e) {
-      return e.skippedTargets.length > 0
-    })
-  }
+var r = n(876026), i = function () {
+        return r.C.some(function (e) {
+            return e.skippedTargets.length > 0;
+        });
+    };

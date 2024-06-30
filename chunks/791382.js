@@ -1,77 +1,79 @@
-"use strict";
-t.d(s, {
-  H: function() {
-    return E
-  }
+n.d(t, {
+    H: function () {
+        return u;
+    }
 });
-var n = t(735250);
-t(470079);
-var i = t(120356),
-  l = t.n(i),
-  a = t(481060),
-  r = t(41542),
-  o = t(264451),
-  c = t(75775),
-  d = t(689938),
-  u = t(364141);
-let E = e => {
-  let {
-    value: s,
-    isPercent: t
-  } = e;
-  if (null == s) return null;
-  let {
-    formattedValue: i,
-    isPositive: r
-  } = (0, o.m5)(s, t);
-  return (0, n.jsxs)("div", {
-    className: u.trendContainer,
-    children: [(0, n.jsx)(c.Z, {
-      className: l()(u.chartLineIcon, {
-        [u.chartLineIconNegative]: !r
-      })
-    }), (0, n.jsx)(a.Text, {
-      variant: "text-md/normal",
-      className: u.trendDescription,
-      children: d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_METRIC_TREND_DESCRIPTION.format({
-        value: i
-      })
-    })]
-  })
+var s = n(735250);
+n(470079);
+var a = n(120356), i = n.n(a), r = n(481060), l = n(264451), o = n(75775), c = n(689938), d = n(932405);
+let u = e => {
+    let {
+        value: t,
+        isPercent: n
+    } = e;
+    if (null == t)
+        return null;
+    let {
+        formattedValue: a,
+        isPositive: u
+    } = (0, l.m5)(t, n);
+    return (0, s.jsxs)('div', {
+        className: d.trendContainer,
+        children: [
+            (0, s.jsx)(o.Z, { className: i()(d.chartLineIcon, { [d.chartLineIconNegative]: !u }) }),
+            (0, s.jsx)(r.Text, {
+                variant: 'text-md/normal',
+                className: d.trendDescription,
+                children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_METRIC_TREND_DESCRIPTION.format({ value: a })
+            })
+        ]
+    });
 };
-s.Z = e => {
-  let {
-    label: s,
-    sublabel: t,
-    value: i,
-    additionalContent: l,
-    tooltip: o
-  } = e;
-  return (0, n.jsxs)("div", {
-    className: u.container,
-    children: [(0, n.jsxs)("div", {
-      children: [(0, n.jsxs)("div", {
-        className: u.labelContainer,
-        children: [(0, n.jsx)(a.Text, {
-          variant: "text-xs/medium",
-          className: u.label,
-          children: s
-        }), null != o && (0, n.jsx)(a.Tooltip, {
-          text: o,
-          children: e => (0, n.jsx)(r.Z, {
-            className: u.labelTooltipIcon,
-            ...e
-          })
-        }), null != t ? (0, n.jsx)(a.Text, {
-          variant: "text-xs/normal",
-          className: u.sublabel,
-          children: t
-        }) : null]
-      }), (0, n.jsx)(a.Text, {
-        className: u.value,
-        variant: "text-sm/normal",
-        children: i
-      })]
-    }), l]
-  })
-}
+t.Z = e => {
+    let {
+        label: t,
+        sublabel: n,
+        value: a,
+        additionalContent: i,
+        tooltip: l
+    } = e;
+    return (0, s.jsxs)('div', {
+        className: d.container,
+        children: [
+            (0, s.jsxs)('div', {
+                children: [
+                    (0, s.jsxs)('div', {
+                        className: d.labelContainer,
+                        children: [
+                            (0, s.jsx)(r.Text, {
+                                variant: 'text-xs/medium',
+                                className: d.label,
+                                children: t
+                            }),
+                            null != l && (0, s.jsx)(r.Tooltip, {
+                                text: l,
+                                children: e => (0, s.jsx)(r.CircleInformationIcon, {
+                                    size: 'xs',
+                                    color: 'currentColor',
+                                    className: d.labelTooltipIcon,
+                                    ...e
+                                })
+                            }),
+                            null != n ? (0, s.jsx)(r.Text, {
+                                variant: 'text-xs/normal',
+                                className: d.sublabel,
+                                children: n
+                            }) : null
+                        ]
+                    }),
+                    (0, s.jsx)(r.Text, {
+                        className: d.value,
+                        variant: 'text-sm/normal',
+                        children: a
+                    })
+                ]
+            }),
+            i
+        ]
+    });
+};

@@ -1,20 +1,16 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return r
-  }
-}), t(47120);
-var n = t(735250),
-  i = t(470079),
-  l = t(236413),
-  a = t(564488);
-
-function r(e) {
-  let {
-    guildId: s,
-    triggerType: t
-  } = e, r = i.useMemo(() => () => (0, l.ep)(s, t), [s, t]), [o] = i.useState(r);
-  return (0, n.jsx)(a.Z, {
-    rule: o
-  })
+n.d(t, {
+    Z: function () {
+        return l;
+    }
+}), n(47120);
+var s = n(735250), a = n(470079), i = n(236413), r = n(564488);
+function l(e) {
+    let {
+            guildId: t,
+            triggerType: n
+        } = e, l = a.useMemo(() => () => (0, i.ep)(t, n), [
+            t,
+            n
+        ]), [o] = a.useState(l);
+    return (0, s.jsx)(r.Z, { rule: o });
 }

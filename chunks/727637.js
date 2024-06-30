@@ -1,22 +1,20 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
-}), n(47120);
-var i = n(470079);
-
-function r(e) {
-  let [t, n] = (0, i.useState)(!1), r = (0, i.useRef)(e.current);
-  return (0, i.useEffect)(() => {
-    r.current = e.current
-  }, [e]), (0, i.useEffect)(() => {
-    let e = r.current;
-    if (null == e) return;
-    let t = () => n(!0),
-      i = () => n(!1);
-    return e.addEventListener("mouseenter", t), e.addEventListener("mouseleave", i), () => {
-      e.removeEventListener("mouseenter", t), e.removeEventListener("mouseleave", i)
+    Z: function () {
+        return i;
     }
-  }, [r]), t
+}), n(47120);
+var r = n(470079);
+function i(e) {
+    let [t, n] = (0, r.useState)(!1), i = (0, r.useRef)(e.current);
+    return (0, r.useEffect)(() => {
+        i.current = e.current;
+    }, [e]), (0, r.useEffect)(() => {
+        let e = i.current;
+        if (null == e)
+            return;
+        let t = () => n(!0), r = () => n(!1);
+        return e.addEventListener('mouseenter', t), e.addEventListener('mouseleave', r), () => {
+            e.removeEventListener('mouseenter', t), e.removeEventListener('mouseleave', r);
+        };
+    }, [i]), t;
 }

@@ -1,317 +1,274 @@
-"use strict";
 n.d(t, {
-  $7: function() {
-    return Y
-  },
-  $e: function() {
-    return x
-  },
-  GJ: function() {
-    return f
-  },
-  Gy: function() {
-    return C
-  },
-  RD: function() {
-    return H
-  },
-  RZ: function() {
-    return D
-  },
-  Tj: function() {
-    return j
-  },
-  W: function() {
-    return A
-  },
-  Wx: function() {
-    return L
-  },
-  X0: function() {
-    return N
-  },
-  Yh: function() {
-    return V
-  },
-  Yk: function() {
-    return Z
-  },
-  _A: function() {
-    return B
-  },
-  aq: function() {
-    return m
-  },
-  cR: function() {
-    return G
-  },
-  iI: function() {
-    return b
-  },
-  ik: function() {
-    return g
-  },
-  kA: function() {
-    return v
-  },
-  nT: function() {
-    return F
-  },
-  pM: function() {
-    return R
-  },
-  yv: function() {
-    return k
-  },
-  zB: function() {
-    return w
-  }
+    $7: function () {
+        return Y;
+    },
+    $e: function () {
+        return B;
+    },
+    GJ: function () {
+        return I;
+    },
+    Gy: function () {
+        return v;
+    },
+    RD: function () {
+        return H;
+    },
+    RZ: function () {
+        return D;
+    },
+    Tj: function () {
+        return j;
+    },
+    W: function () {
+        return g;
+    },
+    Wx: function () {
+        return C;
+    },
+    X0: function () {
+        return T;
+    },
+    Yh: function () {
+        return F;
+    },
+    Yk: function () {
+        return V;
+    },
+    _A: function () {
+        return k;
+    },
+    aq: function () {
+        return S;
+    },
+    cR: function () {
+        return w;
+    },
+    iI: function () {
+        return U;
+    },
+    ik: function () {
+        return R;
+    },
+    kA: function () {
+        return y;
+    },
+    nT: function () {
+        return Z;
+    },
+    pM: function () {
+        return N;
+    },
+    yv: function () {
+        return G;
+    },
+    zB: function () {
+        return x;
+    }
 }), n(653041);
-var i = n(149765),
-  r = n(866442),
-  s = n(741361),
-  o = n(911969),
-  a = n(131704),
-  l = n(271383),
-  u = n(594174),
-  _ = n(934415),
-  d = n(823379),
-  c = n(700785),
-  E = n(709054),
-  I = n(51144),
-  T = n(71080),
-  h = n(981631),
-  S = n(689938);
-
-function f(e) {
-  return i.e$(e.permissions, h.Plq.ADMINISTRATOR)
+var r = n(149765), i = n(866442), a = n(741361), o = n(911969), s = n(131704), l = n(271383), u = n(594174), c = n(934415), d = n(823379), _ = n(700785), E = n(709054), f = n(51144), h = n(71080), p = n(981631), m = n(689938);
+function I(e) {
+    return r.e$(e.permissions, p.Plq.ADMINISTRATOR);
 }
-
-function N(e) {
-  var t, n;
-  let s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  let o = (n = e, i.e$(n.permissions, h.Plq.ADMINISTRATOR) ? T.aC.ADMINISTRATOR : T.aC.ROLE);
-  return {
-    rowType: o,
-    colorString: null !== (t = e.colorString) && void 0 !== t ? t : (0, r.Rf)(h.p6O),
-    name: e.name,
-    id: e.id,
-    disabled: f(e) || s,
-    key: "".concat(o, ":").concat(e.id),
-    tags: e.tags
-  }
-}
-
-function A(e, t) {
-  let n = f(e) ? 0 : 1,
-    i = f(t) ? 0 : 1;
-  return n !== i ? n - i : t.position - e.position
-}
-
-function m() {
-  let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_NO_ROLES;
-  return [{
-    rowType: T.aC.EMPTY_STATE,
-    colorString: (0, r.Rf)(h.p6O),
-    name: e,
-    disabled: !0,
-    id: "EMPTY_STATE"
-  }]
-}
-
-function O(e, t, n, r) {
-  let s = u.default.getCurrentUser();
-  if (null == s) return !1;
-  if (null == e) return s.id !== t;
-  let o = e.permissionOverwrites[t];
-  return (null == r ? void 0 : r[t]) != null && (o = r[t]), null == o || !i.e$(o.allow, n)
-}
-
-function R(e, t) {
-  return E.default.castGuildIdAsEveryoneGuildRoleId(e) === t
-}
-
-function C(e, t) {
-  return !R(e, t)
-}
-
-function p(e, t) {
-  return !R(e.id, t.id)
-}
-
-function g(e, t, n, i) {
-  let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
-  return Object.values(t).filter(t => !f(t) && O(n, t.id, i) && p(e, t) && r(t.name)).sort(A).map(e => N(e))
-}
-
-function L(e, t, n, r) {
-  let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
-  return Object.values(t).filter(t => !f(t) && O(n, t.id, r) && p(e, t) && s(t.name)).sort(A).map(e => N(e, i.e$(e.permissions, r)))
-}
-
-function v(e, t, n, i, r) {
-  var s, o, a, l, u;
-  let _ = [];
-  return 0 === (_ = (s = e, o = t, a = n, l = i, u = r, Object.values(o).filter(e => f(e) || !O(a, e.id, l, u) && p(s, e))).sort(A).map(e => N(e))).length ? m(S.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : _
-}
-
-function D(e, t, n, r, s) {
-  var o, a, l, u, _;
-  let d = [];
-  return 0 === (d = (o = e, a = t, l = n, u = r, _ = s, Object.values(a).filter(e => {
-    var t;
-    return f(e) || !O(l, e.id, u, _) && p(o, e) || i.e$(i.$e(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u)
-  })).sort(A).map(e => N(e, i.e$(e.permissions, r)))).length ? m(S.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : d
-}
-
-function M(e, t) {
-  var n;
-  return null !== (n = l.ZP.getNick(t.id, e.id)) && void 0 !== n ? n : I.ZP.getName(e)
-}
-
-function P(e, t) {
-  return t.isOwner(e)
-}
-
-function y(e, t) {
-  var n, i, r;
-  let s = (i = e, t.isOwner(i) ? T.aC.OWNER : T.aC.MEMBER);
-  return {
-    rowType: s,
-    name: M(e, t),
-    nickname: null !== (n = l.ZP.getNick(t.id, e.id)) && void 0 !== n ? n : null,
-    username: I.ZP.getName(e),
-    id: e.id,
-    avatarURL: e.getAvatarURL(t.id, 24),
-    bot: e.bot,
-    verifiedBot: e.isVerifiedBot(),
-    disabled: (r = e, t.isOwner(r)),
-    key: "".concat(s, ":").concat(e.id)
-  }
-}
-
-function U(e, t) {
-  return e.rowType !== t.rowType ? e.rowType - t.rowType : e.name.toLocaleLowerCase().localeCompare(t.name.toLocaleLowerCase())
-}
-
-function b(e, t, n, i) {
-  let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
-  return e.map(u.default.getUser).filter(d.lm).filter(e => !n.isOwner(e) && O(t, e.id, i) && (r(M(e, n)) || r(e.username) || r(e.discriminator))).map(e => y(e, n)).sort(U)
-}
-
-function G(e, t, n, i, r) {
-  var s, o, a, l, _;
-  return (s = e, o = t, a = n, l = i, _ = r, s.map(u.default.getUser).filter(d.lm).filter(e => {
-    var t;
-    return !O(o, e.id, l, _) || (t = e, a.isOwner(t))
-  })).map(e => y(e, n)).sort(U)
-}
-
-function w(e, t) {
-  switch (e) {
-    case T.aC.ROLE:
-      return S.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ROLE;
-    case T.aC.OWNER:
-      return S.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_OWNER;
-    case T.aC.ADMINISTRATOR:
-      return S.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ADMINISTRATOR;
-    case T.aC.MEMBER:
-      return t ? S.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_MEMBER : null;
-    case T.aC.USER:
-      return S.Z.Messages.USER;
-    case T.aC.GUILD:
-      return S.Z.Messages.SERVER;
-    case T.aC.EMPTY_STATE:
-      return null
-  }
-}
-
-function k(e) {
-  switch (e) {
-    case T.aC.ROLE:
-      return S.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
-    case T.aC.OWNER:
-      return S.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
-    case T.aC.ADMINISTRATOR:
-      return S.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
-    case T.aC.MEMBER:
-      return S.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
-    case T.aC.EMPTY_STATE:
-    default:
-      return null
-  }
-}
-
-function B(e, t, n) {
-  let r = e.permissionOverwrites[e.guild_id];
-  null == r && (r = c.we(e.guild_id));
-  let s = {
-    ...r
-  };
-  return s.deny = i.Od(s.deny, t), s.allow = i.Od(s.allow, t), !n && (s.deny = i.IH(s.deny, t)), s
-}
-
-function x(e, t, n) {
-  let i = B(e, t, n);
-  (0, s.kY)(e, i.id, i.allow, i.deny)
-}
-
-function V(e, t) {
-  let n = u.default.getCurrentUser();
-  if (null == n) return;
-  let r = e.permissionOverwrites[n.id];
-  if (null == r) {
-    let r = {
-      id: n.id,
-      type: o.BN.MEMBER,
-      allow: i.IH(c.Hn, t),
-      deny: c.Hn
+function T(e) {
+    var t, n;
+    let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    let o = (n = e, r.e$(n.permissions, p.Plq.ADMINISTRATOR) ? h.aC.ADMINISTRATOR : h.aC.ROLE);
+    return {
+        rowType: o,
+        colorString: null !== (t = e.colorString) && void 0 !== t ? t : (0, i.Rf)(p.p6O),
+        name: e.name,
+        id: e.id,
+        disabled: I(e) || a,
+        key: ''.concat(o, ':').concat(e.id),
+        tags: e.tags
     };
-    return (0, s.hw)(e.id, [r], !0)
-  } {
-    let {
-      allow: n,
-      deny: o
-    } = r;
-    return n = i.IH(n, t), (0, s.kY)(e, r.id, n, o)
-  }
 }
-
-function Z(e, t) {
-  if (null == e) return !1;
-  let n = e.permissionOverwrites[e.guild_id];
-  return (null == t ? void 0 : t[e.guild_id]) != null && (n = t[e.guild_id]), null != n && i.e$(n.deny, e.accessPermissions)
+function g(e, t) {
+    let n = I(e) ? 0 : 1, r = I(t) ? 0 : 1;
+    return n !== r ? n - r : t.position - e.position;
 }
-
-function H(e, t) {
-  let n = Object.keys(t);
-  return 0 !== n.length && (1 !== n.length || n[0] !== e.id)
+function S() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_NO_ROLES;
+    return [{
+            rowType: h.aC.EMPTY_STATE,
+            colorString: (0, i.Rf)(p.p6O),
+            name: e,
+            disabled: !0,
+            id: 'EMPTY_STATE'
+        }];
 }
-
-function F(e, t, n) {
-  return e === h.d4z.GUILD_TEXT || e === h.d4z.GUILD_ANNOUNCEMENT ? t : !(0, a.bw)(e) && e !== h.d4z.GUILD_CATEGORY || t && n
+function A(e, t, n, i) {
+    let a = u.default.getCurrentUser();
+    if (null == a)
+        return !1;
+    if (null == e)
+        return a.id !== t;
+    let o = e.permissionOverwrites[t];
+    return (null == i ? void 0 : i[t]) != null && (o = i[t]), null == o || !r.e$(o.allow, n);
 }
-
-function Y(e) {
-  switch (e) {
-    case h.d4z.GUILD_TEXT:
-    case h.d4z.GUILD_ANNOUNCEMENT:
-      return S.Z.Messages.PRIVATE_TEXT_CHANNEL_CREATION_PERMISSION_MISSING_HINT.format();
-    case h.d4z.GUILD_VOICE:
-      return S.Z.Messages.PRIVATE_VOICE_CHANNEL_CREATION_PERMISSION_MISSING_HINT.format();
-    case h.d4z.GUILD_CATEGORY:
-      return S.Z.Messages.PRIVATE_CATEGORY_CREATION_PERMISSION_MISSING_HINT.format();
+function N(e, t) {
+    return E.default.castGuildIdAsEveryoneGuildRoleId(e) === t;
+}
+function v(e, t) {
+    return !N(e, t);
+}
+function O(e, t) {
+    return !N(e.id, t.id);
+}
+function R(e, t, n, r) {
+    let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
+    return Object.values(t).filter(t => !I(t) && A(n, t.id, r) && O(e, t) && i(t.name)).sort(g).map(e => T(e));
+}
+function C(e, t, n, i) {
+    let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
+    return Object.values(t).filter(t => !I(t) && A(n, t.id, i) && O(e, t) && a(t.name)).sort(g).map(e => T(e, r.e$(e.permissions, i)));
+}
+function y(e, t, n, r, i) {
+    var a, o, s, l, u;
+    let c = [];
+    return 0 === (c = (a = e, o = t, s = n, l = r, u = i, Object.values(o).filter(e => I(e) || !A(s, e.id, l, u) && O(a, e))).sort(g).map(e => T(e))).length ? S(m.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : c;
+}
+function D(e, t, n, i, a) {
+    var o, s, l, u, c;
+    let d = [];
+    return 0 === (d = (o = e, s = t, l = n, u = i, c = a, Object.values(s).filter(e => {
+        var t;
+        return I(e) || !A(l, e.id, u, c) && O(o, e) || r.e$(r.$e(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u);
+    })).sort(g).map(e => T(e, r.e$(e.permissions, i)))).length ? S(m.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : d;
+}
+function L(e, t) {
+    var n;
+    return null !== (n = l.ZP.getNick(t.id, e.id)) && void 0 !== n ? n : f.ZP.getName(e);
+}
+function b(e, t) {
+    return t.isOwner(e);
+}
+function M(e, t) {
+    var n, r, i;
+    let a = (r = e, t.isOwner(r) ? h.aC.OWNER : h.aC.MEMBER);
+    return {
+        rowType: a,
+        name: L(e, t),
+        nickname: null !== (n = l.ZP.getNick(t.id, e.id)) && void 0 !== n ? n : null,
+        username: f.ZP.getName(e),
+        id: e.id,
+        avatarURL: e.getAvatarURL(t.id, 24),
+        bot: e.bot,
+        verifiedBot: e.isVerifiedBot(),
+        disabled: (i = e, t.isOwner(i)),
+        key: ''.concat(a, ':').concat(e.id)
+    };
+}
+function P(e, t) {
+    return e.rowType !== t.rowType ? e.rowType - t.rowType : e.name.toLocaleLowerCase().localeCompare(t.name.toLocaleLowerCase());
+}
+function U(e, t, n, r) {
+    let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
+    return e.map(u.default.getUser).filter(d.lm).filter(e => !n.isOwner(e) && A(t, e.id, r) && (i(L(e, n)) || i(e.username) || i(e.discriminator))).map(e => M(e, n)).sort(P);
+}
+function w(e, t, n, r, i) {
+    var a, o, s, l, c;
+    return (a = e, o = t, s = n, l = r, c = i, a.map(u.default.getUser).filter(d.lm).filter(e => {
+        var t;
+        return !A(o, e.id, l, c) || (t = e, s.isOwner(t));
+    })).map(e => M(e, n)).sort(P);
+}
+function x(e, t) {
+    switch (e) {
+    case h.aC.ROLE:
+        return m.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ROLE;
+    case h.aC.OWNER:
+        return m.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_OWNER;
+    case h.aC.ADMINISTRATOR:
+        return m.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ADMINISTRATOR;
+    case h.aC.MEMBER:
+        return t ? m.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_MEMBER : null;
+    case h.aC.USER:
+        return m.Z.Messages.USER;
+    case h.aC.GUILD:
+        return m.Z.Messages.SERVER;
+    case h.aC.EMPTY_STATE:
+        return null;
+    }
+}
+function G(e) {
+    switch (e) {
+    case h.aC.ROLE:
+        return m.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
+    case h.aC.OWNER:
+        return m.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
+    case h.aC.ADMINISTRATOR:
+        return m.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
+    case h.aC.MEMBER:
+        return m.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
+    case h.aC.EMPTY_STATE:
     default:
-      return null
-  }
+        return null;
+    }
 }
-
+function k(e, t, n) {
+    let i = e.permissionOverwrites[e.guild_id];
+    null == i && (i = _.we(e.guild_id));
+    let a = { ...i };
+    return a.deny = r.Od(a.deny, t), a.allow = r.Od(a.allow, t), !n && (a.deny = r.IH(a.deny, t)), a;
+}
+function B(e, t, n) {
+    let r = k(e, t, n);
+    (0, a.kY)(e, r.id, r.allow, r.deny);
+}
+function F(e, t) {
+    let n = u.default.getCurrentUser();
+    if (null == n)
+        return;
+    let i = e.permissionOverwrites[n.id];
+    if (null == i) {
+        let i = {
+            id: n.id,
+            type: o.BN.MEMBER,
+            allow: r.IH(_.Hn, t),
+            deny: _.Hn
+        };
+        return (0, a.hw)(e.id, [i], !0);
+    }
+    {
+        let {
+            allow: n,
+            deny: o
+        } = i;
+        return n = r.IH(n, t), (0, a.kY)(e, i.id, n, o);
+    }
+}
+function V(e, t) {
+    if (null == e)
+        return !1;
+    let n = e.permissionOverwrites[e.guild_id];
+    return (null == t ? void 0 : t[e.guild_id]) != null && (n = t[e.guild_id]), null != n && r.e$(n.deny, e.accessPermissions);
+}
+function H(e, t) {
+    let n = Object.keys(t);
+    return 0 !== n.length && (1 !== n.length || n[0] !== e.id);
+}
+function Z(e, t, n) {
+    return e === p.d4z.GUILD_TEXT || e === p.d4z.GUILD_ANNOUNCEMENT ? t : !(0, s.bw)(e) && e !== p.d4z.GUILD_CATEGORY || t && n;
+}
+function Y(e) {
+    switch (e) {
+    case p.d4z.GUILD_TEXT:
+    case p.d4z.GUILD_ANNOUNCEMENT:
+        return m.Z.Messages.PRIVATE_TEXT_CHANNEL_CREATION_PERMISSION_MISSING_HINT.format();
+    case p.d4z.GUILD_VOICE:
+        return m.Z.Messages.PRIVATE_VOICE_CHANNEL_CREATION_PERMISSION_MISSING_HINT.format();
+    case p.d4z.GUILD_CATEGORY:
+        return m.Z.Messages.PRIVATE_CATEGORY_CREATION_PERMISSION_MISSING_HINT.format();
+    default:
+        return null;
+    }
+}
 function j(e, t) {
-  let n = [];
-  return Object.values(e).forEach(e => {
-    let {
-      row: i
-    } = e;
-    null != i.id && "" !== i.id && (i.rowType === T.aC.ROLE ? n.push((0, _.rX)(i.id, t)) : i.rowType === T.aC.MEMBER && n.push((0, _.jZ)(i.id, t)))
-  }), n
+    let n = [];
+    return Object.values(e).forEach(e => {
+        let {row: r} = e;
+        null != r.id && '' !== r.id && (r.rowType === h.aC.ROLE ? n.push((0, c.rX)(r.id, t)) : r.rowType === h.aC.MEMBER && n.push((0, c.jZ)(r.id, t)));
+    }), n;
 }

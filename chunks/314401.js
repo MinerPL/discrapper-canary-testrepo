@@ -1,2 +1,1 @@
 var r;
-"use strict"

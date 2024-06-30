@@ -1,26 +1,24 @@
-"use strict";
-n.d(e, {
-  K: function() {
-    return s
-  }
+r.d(e, {
+    K: function () {
+        return a;
+    }
 });
-var r = n(347421),
-  i = n(880803);
-
-function s(t) {
-  return (0, r.q)(t, function(e) {
-    return new i.cW((n, r) => {
-      let i = new XMLHttpRequest;
-      for (let e in i.onerror = r, i.onreadystatechange = () => {
-          4 === i.readyState && n({
-            statusCode: i.status,
-            headers: {
-              "x-sentry-rate-limits": i.getResponseHeader("X-Sentry-Rate-Limits"),
-              "retry-after": i.getResponseHeader("Retry-After")
-            }
-          })
-        }, i.open("POST", t.url), t.headers) Object.prototype.hasOwnProperty.call(t.headers, e) && i.setRequestHeader(e, t.headers[e]);
-      i.send(e.body)
-    })
-  })
+var n = r(347421), _ = r(880803);
+function a(t) {
+    return (0, n.q)(t, function (e) {
+        return new _.cW((r, n) => {
+            let _ = new XMLHttpRequest();
+            for (let e in (_.onerror = n, _.onreadystatechange = () => {
+                    4 === _.readyState && r({
+                        statusCode: _.status,
+                        headers: {
+                            'x-sentry-rate-limits': _.getResponseHeader('X-Sentry-Rate-Limits'),
+                            'retry-after': _.getResponseHeader('Retry-After')
+                        }
+                    });
+                }, _.open('POST', t.url), t.headers))
+                Object.prototype.hasOwnProperty.call(t.headers, e) && _.setRequestHeader(e, t.headers[e]);
+            _.send(e.body);
+        });
+    });
 }

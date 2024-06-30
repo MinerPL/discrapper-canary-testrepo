@@ -1,47 +1,33 @@
-"use strict";
 r(301563);
-var e = r(173850),
-  i = r(859209),
-  u = r(213265),
-  c = r(936940),
-  o = r(641236),
-  s = r(251069),
-  a = o("species"),
-  f = RegExp.prototype;
-t.exports = function(t, n, r, l) {
-  var h = o(t),
-    v = !c(function() {
-      var n = {};
-      return n[h] = function() {
-        return 7
-      }, 7 !== "" [t](n)
-    }),
-    p = v && !c(function() {
-      var n = !1,
-        r = /a/;
-      return "split" === t && ((r = {}).constructor = {}, r.constructor[a] = function() {
-        return r
-      }, r.flags = "", r[h] = /./ [h]), r.exec = function() {
-        return n = !0, null
-      }, r[h](""), !n
-    });
-  if (!v || !p || r) {
-    var d = e(/./ [h]),
-      x = n(h, "" [t], function(t, n, r, i, c) {
-        var o = e(t),
-          s = n.exec;
-        if (s === u || s === f.exec) return v && !c ? {
-          done: !0,
-          value: d(n, r, i)
-        } : {
-          done: !0,
-          value: o(r, n, i)
-        };
-        return {
-          done: !1
-        }
-      });
-    i(String.prototype, t, x[0]), i(f, h, x[1])
-  }
-  l && s(f[h], "sham", !0)
-}
+var e = r(173850), i = r(859209), u = r(213265), o = r(936940), a = r(641236), c = r(251069), s = a('species'), f = RegExp.prototype;
+n.exports = function (n, t, r, l) {
+    var h = a(n), v = !o(function () {
+            var t = {};
+            return t[h] = function () {
+                return 7;
+            }, 7 !== ''[n](t);
+        }), p = v && !o(function () {
+            var t = !1, r = /a/;
+            return 'split' === n && ((r = {}).constructor = {}, r.constructor[s] = function () {
+                return r;
+            }, r.flags = '', r[h] = /./[h]), r.exec = function () {
+                return t = !0, null;
+            }, r[h](''), !t;
+        });
+    if (!v || !p || r) {
+        var d = e(/./[h]), x = t(h, ''[n], function (n, t, r, i, o) {
+                var a = e(n), c = t.exec;
+                if (c === u || c === f.exec)
+                    return v && !o ? {
+                        done: !0,
+                        value: d(t, r, i)
+                    } : {
+                        done: !0,
+                        value: a(r, t, i)
+                    };
+                return { done: !1 };
+            });
+        i(String.prototype, n, x[0]), i(f, h, x[1]);
+    }
+    l && c(f[h], 'sham', !0);
+};

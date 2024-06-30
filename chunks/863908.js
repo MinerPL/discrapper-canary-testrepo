@@ -1,29 +1,25 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return o
-  }
+    Z: function () {
+        return o;
+    }
 });
-var i = n(5192),
-  r = n(981631),
-  s = n(689938);
-
+var r = n(5192), i = n(981631), a = n(689938);
 function o(e, t, n, o) {
-  if (e.state === r.jm8.RECONNECTING) return {
-    mainText: s.Z.Messages.STREAM_RECONNECTING_ERROR,
-    supportingText: s.Z.Messages.STREAM_RECONNECTING_ERROR_SUBTEXT
-  };
-  if (e.state === r.jm8.PAUSED) return n ? {
-    mainText: s.Z.Messages.STREAM_CAPTURE_PAUSED,
-    supportingText: s.Z.Messages.STREAM_CAPTURE_PAUSED_DETAILS
-  } : {
-    mainText: s.Z.Messages.STREAM_CAPTURE_PAUSED,
-    supportingText: s.Z.Messages.STREAM_CAPTURE_PAUSED_DETAILS_VIEWER.format({
-      username: i.ZP.getName(e.guildId, e.channelId, t)
-    })
-  };
-  return o ? {
-    mainText: s.Z.Messages.STREAM_PREVIEW_PAUSED,
-    supportingText: s.Z.Messages.STREAM_PREVIEW_PAUSED_SUBTEXT
-  } : null
+    if (e.state === i.jm8.RECONNECTING)
+        return {
+            mainText: a.Z.Messages.STREAM_RECONNECTING_ERROR,
+            supportingText: a.Z.Messages.STREAM_RECONNECTING_ERROR_SUBTEXT
+        };
+    if (e.state === i.jm8.PAUSED)
+        return n ? {
+            mainText: a.Z.Messages.STREAM_CAPTURE_PAUSED,
+            supportingText: a.Z.Messages.STREAM_CAPTURE_PAUSED_DETAILS
+        } : {
+            mainText: a.Z.Messages.STREAM_CAPTURE_PAUSED,
+            supportingText: a.Z.Messages.STREAM_CAPTURE_PAUSED_DETAILS_VIEWER.format({ username: r.ZP.getName(e.guildId, e.channelId, t) })
+        };
+    return o ? {
+        mainText: a.Z.Messages.STREAM_PREVIEW_PAUSED,
+        supportingText: a.Z.Messages.STREAM_PREVIEW_PAUSED_SUBTEXT
+    } : null;
 }

@@ -1,32 +1,22 @@
-"use strict";
 n.d(t, {
-  Q: function() {
-    return u
-  },
-  Z: function() {
-    return l
-  }
+    Q: function () {
+        return u;
+    },
+    Z: function () {
+        return l;
+    }
 });
-var i = n(442837),
-  r = n(314897),
-  s = n(592125),
-  o = n(944486),
-  a = n(885110);
-
+var r = n(442837), i = n(314897), a = n(592125), o = n(944486), s = n(885110);
 function l() {
-  let e = (0, i.e7)([r.default], () => r.default.getId()),
-    t = (0, i.e7)([o.Z], () => o.Z.getVoiceChannelId()),
-    n = (0, i.e7)([s.Z], () => s.Z.getChannel(t), [t]),
-    l = (0, i.e7)([a.Z], () => null != a.Z.getBroadcast()),
-    u = (null == n ? void 0 : n.isOwner(e)) && (null == n ? void 0 : n.isBroadcastChannel()) || null == t;
-  return !l && u
+    let e = (0, r.e7)([i.default], () => i.default.getId()), t = (0, r.e7)([o.Z], () => o.Z.getVoiceChannelId()), n = (0, r.e7)([a.Z], () => a.Z.getChannel(t), [t]), l = (0, r.e7)([s.Z], () => null != s.Z.getBroadcast()), u = (null == n ? void 0 : n.isOwner(e)) && (null == n ? void 0 : n.isBroadcastChannel()) || null == t;
+    return !l && u;
 }
-
 function u() {
-  if (null != a.Z.getBroadcast()) return !1;
-  let e = o.Z.getVoiceChannelId();
-  if (null == e) return !0;
-  let t = r.default.getId(),
-    n = s.Z.getChannel(e);
-  return (null == n ? void 0 : n.isOwner(t)) && (null == n ? void 0 : n.isBroadcastChannel())
+    if (null != s.Z.getBroadcast())
+        return !1;
+    let e = o.Z.getVoiceChannelId();
+    if (null == e)
+        return !0;
+    let t = i.default.getId(), n = a.Z.getChannel(e);
+    return (null == n ? void 0 : n.isOwner(t)) && (null == n ? void 0 : n.isBroadcastChannel());
 }

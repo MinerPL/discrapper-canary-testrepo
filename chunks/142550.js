@@ -1,12 +1,11 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  L: function() {
-    return i
-  },
-  z: function() {
-    return s
-  }
+    L: function () {
+        return r;
+    },
+    z: function () {
+        return a;
+    }
 });
-let s = 200;
-(r = i || (i = {})).ReactBegin = "React Begin", r.ReplyBegin = "Reply Begin", r.ReactSubmit = "React Submit", r.ReplySubmit = "Reply Submit", r.ReactSend = "React Send", r.ReplySend = "Reply Send"
+let a = 200;
+(i = r || (r = {})).ReactBegin = 'React Begin', i.ReplyBegin = 'Reply Begin', i.ReactSubmit = 'React Submit', i.ReplySubmit = 'Reply Submit', i.ReactSend = 'React Send', i.ReplySend = 'Reply Send';

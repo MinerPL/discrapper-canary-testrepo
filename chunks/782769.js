@@ -1,22 +1,18 @@
-"use strict";
 n.d(t, {
-  a: function() {
-    return o
-  },
-  z: function() {
-    return s
-  }
+    a: function () {
+        return o;
+    },
+    z: function () {
+        return a;
+    }
 });
-var i = n(873546);
-
-function r() {
-  return !i.tq && !i.Em && !0
+var r = n(873546);
+function i() {
+    return !r.tq && !r.Em && !0;
 }
-
-function s(e) {
-  return r()
+function a(e) {
+    return i();
 }
-
 function o(e) {
-  return r()
+    return i();
 }

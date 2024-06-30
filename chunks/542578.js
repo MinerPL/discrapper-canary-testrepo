@@ -1,76 +1,68 @@
-"use strict";
-var i, r = n(442837),
-  s = n(570140),
-  o = n(41776),
-  a = n(222677),
-  l = n(598077),
-  u = n(592125),
-  _ = n(594174);
-
+var r, i = n(442837), a = n(570140), o = n(41776), s = n(222677), l = n(598077), u = n(592125), c = n(594174);
 function d(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: n,
-    enumerable: !0,
-    configurable: !0,
-    writable: !0
-  }) : e[t] = n, e
+    return t in e ? Object.defineProperty(e, t, {
+        value: n,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+    }) : e[t] = n, e;
 }
-let c = {};
+let _ = {};
 class E {
-  static ensure(e, t, n) {
-    var i, r;
-    let s = "".concat(e, ":").concat(t.name, ":").concat(null !== (i = t.id) && void 0 !== i ? i : "", ":").concat(n);
-    return c[s] = null !== (r = c[s]) && void 0 !== r ? r : new E
-  }
-  constructor() {
-    d(this, "users", void 0), d(this, "fetched", void 0), this.fetched = !1, this.users = {}
-  }
-}
-
-function I(e) {
-  let {
-    type: t,
-    messageId: n,
-    userId: i,
-    emoji: r,
-    reactionType: s
-  } = e, o = E.ensure(n, r, s);
-  if ("MESSAGE_REACTION_ADD" === t) {
-    let e = _.default.getUser(i);
-    null != e && (o.users[i] = e)
-  } else delete o.users[i]
-}
-class T extends(i = r.ZP.Store) {
-  getReactions(e, t, n, i, r) {
-    let s = E.ensure(t, n, r);
-    if (!s.fetched) {
-      let l = u.Z.getChannel(e),
-        _ = null != l ? l.getGuildId() : null;
-      if (null != _ && o.Z.isLurking(_)) return;
-      a.U0({
-        channelId: e,
-        messageId: t,
-        emoji: n,
-        limit: i,
-        type: r
-      }), s.fetched = !0
+    static ensure(e, t, n) {
+        var r, i;
+        let a = ''.concat(e, ':').concat(t.name, ':').concat(null !== (r = t.id) && void 0 !== r ? r : '', ':').concat(n);
+        return _[a] = null !== (i = _[a]) && void 0 !== i ? i : new E();
     }
-    return s.users
-  }
+    constructor() {
+        d(this, 'users', void 0), d(this, 'fetched', void 0), this.fetched = !1, this.users = {};
+    }
 }
-d(T, "displayName", "MessageReactionsStore"), t.Z = new T(s.Z, {
-  CONNECTION_OPEN: function() {
-    c = {}
-  },
-  MESSAGE_REACTION_ADD: I,
-  MESSAGE_REACTION_REMOVE: I,
-  MESSAGE_REACTION_ADD_USERS: function(e) {
+function f(e) {
     let {
-      messageId: t,
-      users: n,
-      emoji: i,
-      reactionType: r
-    } = e, s = E.ensure(t, i, r);
-    n.forEach(e => s.users[e.id] = new l.Z(e))
-  }
-})
+            type: t,
+            messageId: n,
+            userId: r,
+            emoji: i,
+            reactionType: a
+        } = e, o = E.ensure(n, i, a);
+    if ('MESSAGE_REACTION_ADD' === t) {
+        let e = c.default.getUser(r);
+        null != e && (o.users[r] = e);
+    } else
+        delete o.users[r];
+}
+class h extends (r = i.ZP.Store) {
+    getReactions(e, t, n, r, i) {
+        let a = E.ensure(t, n, i);
+        if (!a.fetched) {
+            let l = u.Z.getChannel(e), c = null != l ? l.getGuildId() : null;
+            if (null != c && o.Z.isLurking(c))
+                return;
+            s.U0({
+                channelId: e,
+                messageId: t,
+                emoji: n,
+                limit: r,
+                type: i
+            }), a.fetched = !0;
+        }
+        return a.users;
+    }
+}
+d(h, 'displayName', 'MessageReactionsStore'), t.Z = new h(a.Z, {
+    CONNECTION_OPEN: function () {
+        _ = {};
+    },
+    MESSAGE_REACTION_ADD: f,
+    MESSAGE_REACTION_REMOVE: f,
+    MESSAGE_REACTION_ADD_USERS: function (e) {
+        let {
+                messageId: t,
+                users: n,
+                emoji: r,
+                reactionType: i
+            } = e, a = E.ensure(t, r, i);
+        n.forEach(e => a.users[e.id] = new l.Z(e));
+    }
+});

@@ -1,11 +1,9 @@
-"use strict";
-
-function i(e, t) {
-  let [, n] = e, [, i] = t;
-  return n === i
+function r(e, t) {
+    let [, n] = e, [, r] = t;
+    return n === r;
 }
 n.d(t, {
-  Q: function() {
-    return i
-  }
-}), n(47120)
+    Q: function () {
+        return r;
+    }
+}), n(47120);

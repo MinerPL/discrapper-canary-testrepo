@@ -1,30 +1,28 @@
-"use strict";
 n.d(t, {
-  Q: function() {
-    return s
-  },
-  t: function() {
-    return o
-  }
+    Q: function () {
+        return a;
+    },
+    t: function () {
+        return o;
+    }
 });
-var i = n(780570),
-  r = n(358085);
-
-function s() {
-  return (0, r.isWindows)() || (0, r.isMac)()
+var r = n(780570), i = n(358085);
+function a() {
+    return (0, i.isWindows)() || (0, i.isMac)();
 }
-
 function o(e) {
-  let {
-    LibraryApplicationStore: t,
-    LaunchableGameStore: n,
-    DispatchApplicationStore: r,
-    ConnectedAppsStore: s,
-    applicationId: o,
-    branchId: a
-  } = e;
-  if (s.isConnected(o)) return !0;
-  if (null == a && (a = o), r.isLaunchable(o, a)) return !0;
-  let l = t.getLibraryApplication(o, a);
-  return !(null != l && (0, i.Je)(l)) && n.isLaunchable(o)
+    let {
+        LibraryApplicationStore: t,
+        LaunchableGameStore: n,
+        DispatchApplicationStore: i,
+        ConnectedAppsStore: a,
+        applicationId: o,
+        branchId: s
+    } = e;
+    if (a.isConnected(o))
+        return !0;
+    if (null == s && (s = o), i.isLaunchable(o, s))
+        return !0;
+    let l = t.getLibraryApplication(o, s);
+    return !(null != l && (0, r.Je)(l)) && n.isLaunchable(o);
 }

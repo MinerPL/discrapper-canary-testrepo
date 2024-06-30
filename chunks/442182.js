@@ -1,334 +1,313 @@
-"use strict";
-t.d(s, {
-  ZP: function() {
-    return B
-  }
-}), t(47120);
-var n = t(735250),
-  i = t(470079),
-  l = t(120356),
-  a = t.n(l),
-  r = t(442837),
-  o = t(481060),
-  c = t(239091),
-  d = t(479531),
-  u = t(58540),
-  E = t(100527),
-  _ = t(906732),
-  I = t(484459),
-  T = t(103575),
-  N = t(594174),
-  m = t(474333),
-  S = t(696202),
-  h = t(158010),
-  g = t(626135),
-  x = t(243730),
-  C = t(434404),
-  R = t(946724),
-  L = t(130341),
-  O = t(95242),
-  A = t(420966),
-  p = t(566476),
-  M = t(203377),
-  f = t(981631),
-  v = t(689938),
-  D = t(245660),
-  Z = t(585512);
-async function j(e, s, t) {
-  let i = e.roles.filter(e => e !== t);
-  try {
-    await C.Z.updateMemberRoles(s, e.id, i, [], [t])
-  } catch (s) {
-    let e = new d.Z(s);
-    (0, o.openModal)(s => (0, n.jsx)(o.ConfirmModal, {
-      ...s,
-      header: v.Z.Messages.ERROR_GENERIC_TITLE,
-      confirmText: v.Z.Messages.OKAY,
-      confirmButtonColor: o.Button.Colors.BRAND,
-      children: (0, n.jsx)(o.Text, {
-        color: "text-normal",
-        variant: "text-md/normal",
-        children: e.getAnyErrorMessage()
-      })
-    }))
-  }
-}
-
-function U(e) {
-  let {
-    member: s,
-    guildId: l,
-    roleId: r,
-    locked: d
-  } = e, E = i.useMemo(() => ({
-    [l]: [s.id]
-  }), [l, s.id]);
-
-  function _(e) {
-    if (e.stopPropagation(), !d) {
-      if (e.shiftKey) {
-        j(s, l, r);
-        return
-      }! function(e, s, t) {
-        let i = R.Z.getRole(t);
-        (0, o.openModal)(l => (0, n.jsxs)(o.ConfirmModal, {
-          ...l,
-          header: v.Z.Messages.ROLE_REMOVE_MEMBER_CONFIRM_TITLE,
-          confirmText: v.Z.Messages.REMOVE,
-          cancelText: v.Z.Messages.CANCEL,
-          onConfirm: () => j(e, s, t),
-          children: [(0, n.jsx)(o.Text, {
-            color: "text-normal",
-            variant: "text-md/normal",
-            children: v.Z.Messages.ROLE_REMOVE_MEMBER_CONFIRM_BODY.format({
-              username: e.name,
-              roleName: null == i ? void 0 : i.name
-            })
-          }), (0, n.jsx)(o.Text, {
-            className: D.removeTip,
-            color: "text-muted",
-            variant: "text-md/normal",
-            children: v.Z.Messages.ROLE_REMOVE_MEMBER_CONFIRM_TIP
-          })]
-        }))
-      }(s, l, r)
+n.d(t, {
+    ZP: function () {
+        return G;
     }
-  }
-
-  function m(e) {
-    let i = N.default.getUser(s.id);
-    if (null != i)(0, c.jW)(e, async () => {
-      let {
-        default: e
-      } = await Promise.all([t.e("99387"), t.e("79695"), t.e("32006"), t.e("12435"), t.e("51068")]).then(t.bind(t, 415118));
-      return s => (0, n.jsx)(e, {
-        ...s,
-        user: i,
-        guildId: l,
-        showChatItems: !1
-      })
-    })
-  }
-  return (0, u.$)(E), (0, n.jsx)("div", {
-    className: Z.contentWidth,
-    children: (0, n.jsx)(o.Popout, {
-      renderPopout: e => (0, n.jsx)(T.Z, {
-        location: "GuildSettingsRolesEditMembers",
-        guildId: l,
-        userId: s.id,
-        roleId: r,
-        ...e
-      }),
-      position: "left",
-      preload: () => (0, I.W)(s.id, s.avatarURL, {
-        guildId: l
-      }),
-      children: e => (0, n.jsxs)(o.Clickable, {
-        ...e,
-        className: D.memberRow,
-        onContextMenu: m,
-        children: [(0, n.jsx)(p.Z, {
-          className: D.memberDetails,
-          avatarURL: s.avatarURL,
-          name: s.name,
-          bot: s.bot,
-          verifiedBot: s.verifiedBot,
-          userTag: s.userTag
-        }), (0, n.jsx)("div", {
-          className: D.removeButtonContainer,
-          children: (0, n.jsx)(o.Tooltip, {
-            text: d ? v.Z.Messages.ROLE_REMOVE_MEMBER_MANAGED : v.Z.Messages.ROLE_REMOVE_MEMBER_CONFIRM_TITLE,
-            position: "top",
-            children: e => (0, n.jsx)(o.Clickable, {
-              ...e,
-              className: a()(D.removeButton, {
-                [D.removeButtonDisabled]: d
-              }),
-              onClick: _,
-              children: (0, n.jsx)(S.Z, {
-                width: 16,
-                height: 16
-              })
+}), n(47120);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(442837), o = n(481060), c = n(239091), d = n(479531), u = n(58540), _ = n(100527), E = n(906732), I = n(484459), T = n(103575), m = n(594174), N = n(474333), S = n(626135), h = n(243730), g = n(434404), C = n(946724), x = n(130341), p = n(95242), R = n(420966), f = n(566476), L = n(203377), O = n(981631), A = n(689938), M = n(980751), v = n(412200);
+async function D(e, t, n) {
+    let a = e.roles.filter(e => e !== n);
+    try {
+        await g.Z.updateMemberRoles(t, e.id, a, [], [n]);
+    } catch (t) {
+        let e = new d.Z(t);
+        (0, o.openModal)(t => (0, s.jsx)(o.ConfirmModal, {
+            ...t,
+            header: A.Z.Messages.ERROR_GENERIC_TITLE,
+            confirmText: A.Z.Messages.OKAY,
+            confirmButtonColor: o.Button.Colors.BRAND,
+            children: (0, s.jsx)(o.Text, {
+                color: 'text-normal',
+                variant: 'text-md/normal',
+                children: e.getAnyErrorMessage()
             })
-          })
-        })]
-      })
-    })
-  })
+        }));
+    }
 }
-
-function G(e) {
-  let {
-    handleAddClick: s,
-    locked: t
-  } = e;
-  return (0, n.jsx)("div", {
-    className: Z.contentWidth,
-    children: (0, n.jsxs)("div", {
-      className: a()(D.memberRow, D.emptyRowContainer),
-      children: [(0, n.jsx)(h.Z, {}), (0, n.jsx)(o.Text, {
-        className: D.emptyRowText,
-        variant: "text-sm/semibold",
-        color: "text-muted",
-        children: v.Z.Messages.ROLE_EDIT_MEMBERS_NO_SEARCH_RESULTS.format({
-          addMembersHook: function(e, i) {
-            return t ? null : (0, n.jsx)(o.Anchor, {
-              onClick: s,
-              children: e
-            }, i)
-          }
-        })
-      })]
-    })
-  })
-}
-
-function P(e) {
-  let {
-    guildId: s,
-    roleId: t,
-    query: l,
-    headerHeight: a,
-    locked: r,
-    onScroll: c,
-    roleMembers: d,
-    handleAddClick: u
-  } = e, {
-    analyticsLocations: I
-  } = (0, _.ZP)(E.Z.MEMBER_LIST), T = i.useMemo(() => l.trim().toLowerCase(), [l]);
-  (0, L.rY)(s, T);
-  let N = i.useMemo(() => d.filter(e => (0, L.eg)(T, e)), [d, T]),
-    m = i.useMemo(() => N.sort((e, s) => e.name.localeCompare(s.name)), [N]);
-  return (0, n.jsx)(_.Gt, {
-    value: I,
-    children: (0, n.jsx)(o.ListAuto, {
-      className: D.list,
-      sections: [Math.max(N.length, 1)],
-      sectionHeight: a,
-      renderSection: () => (0, n.jsx)("div", {
-        style: {
-          height: a
+function j(e) {
+    let {
+            member: t,
+            guildId: i,
+            roleId: l,
+            locked: d
+        } = e, _ = a.useMemo(() => ({ [i]: [t.id] }), [
+            i,
+            t.id
+        ]);
+    function E(e) {
+        if (e.stopPropagation(), !d) {
+            if (e.shiftKey) {
+                D(t, i, l);
+                return;
+            }
+            !function (e, t, n) {
+                let a = C.Z.getRole(n);
+                (0, o.openModal)(i => (0, s.jsxs)(o.ConfirmModal, {
+                    ...i,
+                    header: A.Z.Messages.ROLE_REMOVE_MEMBER_CONFIRM_TITLE,
+                    confirmText: A.Z.Messages.REMOVE,
+                    cancelText: A.Z.Messages.CANCEL,
+                    onConfirm: () => D(e, t, n),
+                    children: [
+                        (0, s.jsx)(o.Text, {
+                            color: 'text-normal',
+                            variant: 'text-md/normal',
+                            children: A.Z.Messages.ROLE_REMOVE_MEMBER_CONFIRM_BODY.format({
+                                username: e.name,
+                                roleName: null == a ? void 0 : a.name
+                            })
+                        }),
+                        (0, s.jsx)(o.Text, {
+                            className: M.removeTip,
+                            color: 'text-muted',
+                            variant: 'text-md/normal',
+                            children: A.Z.Messages.ROLE_REMOVE_MEMBER_CONFIRM_TIP
+                        })
+                    ]
+                }));
+            }(t, i, l);
         }
-      }, "section"),
-      style: {
-        scrollPaddingTop: a
-      },
-      rowHeight: 40,
-      renderRow: function(e) {
-        let {
-          row: i
-        } = e;
-        if (0 === m.length) return (0, n.jsx)(G, {
-          handleAddClick: u,
-          locked: r
-        }, "empty");
-        let l = m[i];
-        return (0, n.jsx)(U, {
-          member: l,
-          guildId: s,
-          roleId: t,
-          locked: r
-        }, l.id)
-      },
-      onScroll: c
-    })
-  })
-}
-
-function b(e) {
-  let {
-    query: s,
-    setQuery: t,
-    locked: i,
-    handleAddClick: l
-  } = e;
-  return (0, n.jsxs)("div", {
-    className: D.searchContainer,
-    children: [(0, n.jsx)(o.SearchBar, {
-      size: o.SearchBar.Sizes.MEDIUM,
-      query: s,
-      onChange: t,
-      onClear: () => t(""),
-      placeholder: v.Z.Messages.SEARCH_MEMBERS,
-      "aria-label": v.Z.Messages.SEARCH_MEMBERS
-    }), (0, n.jsx)(o.Button, {
-      className: D.addButton,
-      size: o.Button.Sizes.SMALL,
-      onClick: l,
-      disabled: i,
-      children: v.Z.Messages.ROLE_ADD_MEMBERS_BUTTON
-    })]
-  })
-}
-
-function B(e) {
-  let {
-    guild: s,
-    role: l,
-    locked: c,
-    setSelectedSection: d
-  } = e, [u, E] = i.useState(""), {
-    headerHeight: _,
-    headerRef: I
-  } = (0, O.Z)(0), {
-    scrolledToTop: T,
-    handleScroll: N
-  } = (0, A.V)(), S = l.managed || c, h = (0, L.e)(s.id, l.id), C = (0, r.e7)([x.Z], () => {
-    var e, t;
-    return null !== (t = null === (e = x.Z.getRoleMemberCount(s.id)) || void 0 === e ? void 0 : e[l.id]) && void 0 !== t ? t : 0
-  }) > h.length, R = () => {
-    g.default.track(f.rMx.OPEN_MODAL, {
-      type: "Add Role Members",
-      location_page: "Role Settings",
-      location_section: "Members"
-    }), (0, o.openModalLazy)(async () => {
-      let {
-        default: e
-      } = await Promise.all([t.e("99387"), t.e("7590"), t.e("15968")]).then(t.bind(t, 24722));
-      return t => (0, n.jsx)(e, {
-        ...t,
-        roleId: l.id,
-        guildId: s.id
-      })
-    })
-  };
-  return (0, n.jsxs)("div", {
-    className: D.container,
-    children: [(0, n.jsx)("div", {
-      className: D.headerContainer,
-      ref: I,
-      children: (0, n.jsx)("div", {
-        className: Z.contentWidth,
-        children: (0, n.jsxs)("div", {
-          className: a()(Z.header, {
-            [Z.stickyHeaderElevated]: !T
-          }),
-          children: [(0, n.jsx)(A.Z, {
-            guild: s,
-            role: l,
-            selectedSection: M.ZI.MEMBERS,
-            setSelectedSection: d
-          }), (0, n.jsx)(b, {
-            query: u,
-            setQuery: E,
-            locked: S,
-            handleAddClick: R
-          }), C ? (0, n.jsx)(m.Z, {
-            className: D.searchWarning,
-            messageType: m.Q.INFO,
-            children: v.Z.Messages.ROLE_EDIT_MEMBERS_MISSING
-          }) : null]
+    }
+    function N(e) {
+        let a = m.default.getUser(t.id);
+        if (null != a)
+            (0, c.jW)(e, async () => {
+                let {default: e} = await Promise.all([
+                    n.e('79695'),
+                    n.e('17400'),
+                    n.e('12435'),
+                    n.e('49128')
+                ]).then(n.bind(n, 415118));
+                return t => (0, s.jsx)(e, {
+                    ...t,
+                    user: a,
+                    guildId: i,
+                    showChatItems: !1
+                });
+            });
+    }
+    return (0, u.$)(_), (0, s.jsx)('div', {
+        className: v.contentWidth,
+        children: (0, s.jsx)(o.Popout, {
+            renderPopout: e => (0, s.jsx)(T.Z, {
+                location: 'GuildSettingsRolesEditMembers',
+                guildId: i,
+                userId: t.id,
+                roleId: l,
+                ...e
+            }),
+            position: 'left',
+            preload: () => (0, I.W)(t.id, t.avatarURL, { guildId: i }),
+            children: e => (0, s.jsxs)(o.Clickable, {
+                ...e,
+                className: M.memberRow,
+                onContextMenu: N,
+                children: [
+                    (0, s.jsx)(f.Z, {
+                        className: M.memberDetails,
+                        avatarURL: t.avatarURL,
+                        name: t.name,
+                        bot: t.bot,
+                        verifiedBot: t.verifiedBot,
+                        userTag: t.userTag
+                    }),
+                    (0, s.jsx)('div', {
+                        className: M.removeButtonContainer,
+                        children: (0, s.jsx)(o.Tooltip, {
+                            text: d ? A.Z.Messages.ROLE_REMOVE_MEMBER_MANAGED : A.Z.Messages.ROLE_REMOVE_MEMBER_CONFIRM_TITLE,
+                            position: 'top',
+                            children: e => (0, s.jsx)(o.Clickable, {
+                                ...e,
+                                className: r()(M.removeButton, { [M.removeButtonDisabled]: d }),
+                                onClick: E,
+                                children: (0, s.jsx)(o.CircleXIcon, {
+                                    size: 'xs',
+                                    color: 'currentColor'
+                                })
+                            })
+                        })
+                    })
+                ]
+            })
         })
-      })
-    }), (0, n.jsx)(P, {
-      headerHeight: _ + 8,
-      query: u,
-      guildId: s.id,
-      roleId: l.id,
-      locked: S,
-      onScroll: N,
-      roleMembers: h,
-      handleAddClick: R
-    })]
-  })
+    });
+}
+function Z(e) {
+    let {
+        handleAddClick: t,
+        locked: n
+    } = e;
+    return (0, s.jsx)('div', {
+        className: v.contentWidth,
+        children: (0, s.jsxs)('div', {
+            className: r()(M.memberRow, M.emptyRowContainer),
+            children: [
+                (0, s.jsx)(o.GroupIcon, {
+                    size: 'md',
+                    color: 'currentColor'
+                }),
+                (0, s.jsx)(o.Text, {
+                    className: M.emptyRowText,
+                    variant: 'text-sm/semibold',
+                    color: 'text-muted',
+                    children: A.Z.Messages.ROLE_EDIT_MEMBERS_NO_SEARCH_RESULTS.format({
+                        addMembersHook: function (e, a) {
+                            return n ? null : (0, s.jsx)(o.Anchor, {
+                                onClick: t,
+                                children: e
+                            }, a);
+                        }
+                    })
+                })
+            ]
+        })
+    });
+}
+function b(e) {
+    let {
+            guildId: t,
+            roleId: n,
+            query: i,
+            headerHeight: r,
+            locked: l,
+            onScroll: c,
+            roleMembers: d,
+            handleAddClick: u
+        } = e, {analyticsLocations: I} = (0, E.ZP)(_.Z.MEMBER_LIST), T = a.useMemo(() => i.trim().toLowerCase(), [i]);
+    (0, x.rY)(t, T);
+    let m = a.useMemo(() => d.filter(e => (0, x.eg)(T, e)), [
+            d,
+            T
+        ]), N = a.useMemo(() => m.sort((e, t) => e.name.localeCompare(t.name)), [m]);
+    return (0, s.jsx)(E.Gt, {
+        value: I,
+        children: (0, s.jsx)(o.ListAuto, {
+            className: M.list,
+            sections: [Math.max(m.length, 1)],
+            sectionHeight: r,
+            renderSection: () => (0, s.jsx)('div', { style: { height: r } }, 'section'),
+            style: { scrollPaddingTop: r },
+            rowHeight: 40,
+            renderRow: function (e) {
+                let {row: a} = e;
+                if (0 === N.length)
+                    return (0, s.jsx)(Z, {
+                        handleAddClick: u,
+                        locked: l
+                    }, 'empty');
+                let i = N[a];
+                return (0, s.jsx)(j, {
+                    member: i,
+                    guildId: t,
+                    roleId: n,
+                    locked: l
+                }, i.id);
+            },
+            onScroll: c
+        })
+    });
+}
+function U(e) {
+    let {
+        query: t,
+        setQuery: n,
+        locked: a,
+        handleAddClick: i
+    } = e;
+    return (0, s.jsxs)('div', {
+        className: M.searchContainer,
+        children: [
+            (0, s.jsx)(o.SearchBar, {
+                size: o.SearchBar.Sizes.MEDIUM,
+                query: t,
+                onChange: n,
+                onClear: () => n(''),
+                placeholder: A.Z.Messages.SEARCH_MEMBERS,
+                'aria-label': A.Z.Messages.SEARCH_MEMBERS
+            }),
+            (0, s.jsx)(o.Button, {
+                className: M.addButton,
+                size: o.Button.Sizes.SMALL,
+                onClick: i,
+                disabled: a,
+                children: A.Z.Messages.ROLE_ADD_MEMBERS_BUTTON
+            })
+        ]
+    });
+}
+function G(e) {
+    let {
+            guild: t,
+            role: i,
+            locked: c,
+            setSelectedSection: d
+        } = e, [u, _] = a.useState(''), {
+            headerHeight: E,
+            headerRef: I
+        } = (0, p.Z)(0), {
+            scrolledToTop: T,
+            handleScroll: m
+        } = (0, R.V)(), g = i.managed || c, C = (0, x.e)(t.id, i.id), f = (0, l.e7)([h.Z], () => {
+            var e, n;
+            return null !== (n = null === (e = h.Z.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[i.id]) && void 0 !== n ? n : 0;
+        }) > C.length, D = () => {
+            S.default.track(O.rMx.OPEN_MODAL, {
+                type: 'Add Role Members',
+                location_page: 'Role Settings',
+                location_section: 'Members'
+            }), (0, o.openModalLazy)(async () => {
+                let {default: e} = await Promise.all([
+                    n.e('7590'),
+                    n.e('90591')
+                ]).then(n.bind(n, 24722));
+                return n => (0, s.jsx)(e, {
+                    ...n,
+                    roleId: i.id,
+                    guildId: t.id
+                });
+            });
+        };
+    return (0, s.jsxs)('div', {
+        className: M.container,
+        children: [
+            (0, s.jsx)('div', {
+                className: M.headerContainer,
+                ref: I,
+                children: (0, s.jsx)('div', {
+                    className: v.contentWidth,
+                    children: (0, s.jsxs)('div', {
+                        className: r()(v.header, { [v.stickyHeaderElevated]: !T }),
+                        children: [
+                            (0, s.jsx)(R.Z, {
+                                guild: t,
+                                role: i,
+                                selectedSection: L.ZI.MEMBERS,
+                                setSelectedSection: d
+                            }),
+                            (0, s.jsx)(U, {
+                                query: u,
+                                setQuery: _,
+                                locked: g,
+                                handleAddClick: D
+                            }),
+                            f ? (0, s.jsx)(N.Z, {
+                                className: M.searchWarning,
+                                messageType: N.Q.INFO,
+                                children: A.Z.Messages.ROLE_EDIT_MEMBERS_MISSING
+                            }) : null
+                        ]
+                    })
+                })
+            }),
+            (0, s.jsx)(b, {
+                headerHeight: E + 8,
+                query: u,
+                guildId: t.id,
+                roleId: i.id,
+                locked: g,
+                onScroll: m,
+                roleMembers: C,
+                handleAddClick: D
+            })
+        ]
+    });
 }

@@ -1,10 +1,8 @@
-"use strict";
-
 function r(e) {
-  return "x" === e ? "y" : "x"
+    return 'x' === e ? 'y' : 'x';
 }
 n.d(t, {
-  Z: function() {
-    return r
-  }
-})
+    Z: function () {
+        return r;
+    }
+});

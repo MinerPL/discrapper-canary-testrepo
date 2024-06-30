@@ -1,2 +1,1 @@
-"use strict";
-n(187203)("search")
+n(187203)('search');

@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  z: function() {
-    return i
-  }
-}), n(47120), (r = i || (i = {}))[r.LATEST_ACTIVITY = 0] = "LATEST_ACTIVITY", r[r.CREATION_DATE = 1] = "CREATION_DATE"
+    z: function () {
+        return r;
+    }
+}), n(47120), (i = r || (r = {}))[i.LATEST_ACTIVITY = 0] = 'LATEST_ACTIVITY', i[i.CREATION_DATE = 1] = 'CREATION_DATE';

@@ -1,15 +1,13 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return i;
+    }
 });
-var i = n(413135).Buffer;
-
-function r(e) {
-  try {
-    return i.from(JSON.stringify(e)).toString("base64")
-  } catch (e) {
-    return null
-  }
+var r = n(413135).Buffer;
+function i(e) {
+    try {
+        return r.from(JSON.stringify(e)).toString('base64');
+    } catch (e) {
+        return null;
+    }
 }

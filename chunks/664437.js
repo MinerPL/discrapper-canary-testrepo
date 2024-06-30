@@ -1,53 +1,45 @@
-"use strict";
 n.d(t, {
-  Zg: function() {
-    return l
-  },
-  pj: function() {
-    return o
-  },
-  pr: function() {
-    return a
-  }
+    Zg: function () {
+        return l;
+    },
+    pj: function () {
+        return o;
+    },
+    pr: function () {
+        return s;
+    }
 });
-var i = n(544891),
-  r = n(570140),
-  s = n(981631);
-
+var r = n(544891), i = n(570140), a = n(981631);
 function o(e) {
-  r.Z.dispatch({
-    type: "TOP_EMOJIS_FETCH",
-    guildId: e
-  }), i.tn.get({
-    url: s.ANM.TOP_EMOJIS_FOR_GUILD(e),
-    oldFormErrors: !0
-  }).then(t => r.Z.dispatch({
-    type: "TOP_EMOJIS_FETCH_SUCCESS",
-    guildId: e,
-    topEmojisMetadata: t.body.items.map(e => ({
-      emojiId: e.emoji_id,
-      rank: e.emoji_rank
-    })).sort((e, t) => e.rank - t.rank)
-  }), () => r.Z.dispatch({
-    type: "TOP_EMOJIS_FETCH_FAILURE",
-    guildId: e
-  }))
+    i.Z.dispatch({
+        type: 'TOP_EMOJIS_FETCH',
+        guildId: e
+    }), r.tn.get({
+        url: a.ANM.TOP_EMOJIS_FOR_GUILD(e),
+        oldFormErrors: !0
+    }).then(t => i.Z.dispatch({
+        type: 'TOP_EMOJIS_FETCH_SUCCESS',
+        guildId: e,
+        topEmojisMetadata: t.body.items.map(e => ({
+            emojiId: e.emoji_id,
+            rank: e.emoji_rank
+        })).sort((e, t) => e.rank - t.rank)
+    }), () => i.Z.dispatch({
+        type: 'TOP_EMOJIS_FETCH_FAILURE',
+        guildId: e
+    }));
 }
-
-function a(e, t) {
-  r.Z.dispatch({
-    type: "NEWLY_ADDED_EMOJI_SEEN_UPDATED"
-  }), null != e && null != t && r.Z.dispatch({
-    type: "NEWLY_ADDED_EMOJI_SEEN_PENDING",
-    guildId: e,
-    emojiId: t
-  })
+function s(e, t) {
+    i.Z.dispatch({ type: 'NEWLY_ADDED_EMOJI_SEEN_UPDATED' }), null != e && null != t && i.Z.dispatch({
+        type: 'NEWLY_ADDED_EMOJI_SEEN_PENDING',
+        guildId: e,
+        emojiId: t
+    });
 }
-
 function l(e, t) {
-  null != e && null != t && r.Z.dispatch({
-    type: "NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED",
-    guildId: e,
-    emojiId: t
-  })
+    null != e && null != t && i.Z.dispatch({
+        type: 'NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED',
+        guildId: e,
+        emojiId: t
+    });
 }

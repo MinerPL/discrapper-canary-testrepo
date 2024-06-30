@@ -1,7 +1,6 @@
-"use strict";
-var n, i;
-t.d(s, {
-  T: function() {
-    return n
-  }
-}), (i = n || (n = {})).ADMIN = "admin", i.DEVELOPER = "developer", i.READ_ONLY = "read_only"
+var s, a;
+n.d(t, {
+    T: function () {
+        return s;
+    }
+}), (a = s || (s = {})).ADMIN = 'admin', a.DEVELOPER = 'developer', a.READ_ONLY = 'read_only';

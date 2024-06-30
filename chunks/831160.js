@@ -1,10 +1,8 @@
-"use strict";
 n.d(t, {
-  d: function() {
-    return s
-  }
+    d: function () {
+        return a;
+    }
 });
-var i = n(392711),
-  r = n.n(i);
-let s = e => "function" == typeof e ? e() : e;
-r().curry((e, t, n) => s(t) ? e(n) : n({}))
+var r = n(392711), i = n.n(r);
+let a = e => 'function' == typeof e ? e() : e;
+i().curry((e, t, n) => a(t) ? e(n) : n({}));

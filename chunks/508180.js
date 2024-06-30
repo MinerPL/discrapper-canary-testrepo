@@ -1,30 +1,19 @@
-"use strict";
-var i = n(735250),
-  r = n(470079),
-  s = n(442837),
-  o = n(481060),
-  a = n(846027),
-  l = n(468026),
-  u = n(131951),
-  _ = n(689938);
+var r = n(735250), i = n(470079), a = n(442837), o = n(481060), s = n(846027), l = n(468026), u = n(131951), c = n(689938);
 t.Z = () => {
-  let e = (0, s.e7)([u.Z], () => u.Z.isInteractionRequired(), []),
-    t = r.useRef(null);
-
-  function n() {
-    null !== t.current && ((0, o.closeModal)(t.current), t.current = null)
-  }
-
-  function d() {
-    a.Z.interact()
-  }
-  return r.useEffect(() => (e ? t.current = (0, o.openModal)(e => (0, i.jsx)(l.default, {
-    title: _.Z.Messages.INTERACTION_REQUIRED_TITLE,
-    body: _.Z.Messages.INTERACTION_REQUIRED_BODY,
-    onConfirm: d,
-    confirmText: _.Z.Messages.OKAY,
-    ...e
-  })) : n(), () => {
-    n()
-  }), [e]), null
-}
+    let e = (0, a.e7)([u.Z], () => u.Z.isInteractionRequired(), []), t = i.useRef(null);
+    function n() {
+        null !== t.current && ((0, o.closeModal)(t.current), t.current = null);
+    }
+    function d() {
+        s.Z.interact();
+    }
+    return i.useEffect(() => (e ? t.current = (0, o.openModal)(e => (0, r.jsx)(l.default, {
+        title: c.Z.Messages.INTERACTION_REQUIRED_TITLE,
+        body: c.Z.Messages.INTERACTION_REQUIRED_BODY,
+        onConfirm: d,
+        confirmText: c.Z.Messages.OKAY,
+        ...e
+    })) : n(), () => {
+        n();
+    }), [e]), null;
+};

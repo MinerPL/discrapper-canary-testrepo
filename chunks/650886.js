@@ -1,13 +1,10 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return a;
+    }
 });
-var i = n(718798),
-  r = n(558065);
-
-function s(e) {
-  return s.useDirectVideo ? (0, r.Z)(e) : (0, i.Z)(e)
+var r = n(718798), i = n(558065);
+function a(e) {
+    return a.useDirectVideo ? (0, i.Z)(e) : (0, r.Z)(e);
 }
-s.defaultProps = i.Z.defaultProps, s.useDirectVideo = !1
+a.defaultProps = r.Z.defaultProps, a.useDirectVideo = !1;

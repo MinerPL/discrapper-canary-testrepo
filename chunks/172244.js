@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  b: function() {
-    return i
-  }
-}), (r = i || (i = {})).TEXT = "text", r.STRIKETHROUGH = "s", r.UNDERLINE = "u", r.STRONG = "strong", r.ITALICS = "em", r.IMAGE = "image", r.EMOJI = "emoji", r.CUSTOM_EMOJI = "customEmoji", r.LINK = "link", r.URL = "url", r.AUTOLINK = "autolink", r.HIGHLIGHT = "highlight", r.PARAGRAPH = "paragraph", r.LINE_BREAK = "br", r.NEWLINE = "newline", r.ESCAPE = "escape", r.SPOILER = "spoiler", r.BLOCK_QUOTE = "blockQuote", r.INLINE_CODE = "inlineCode", r.CODE_BLOCK = "codeBlock", r.MENTION = "mention", r.CHANNEL_MENTION = "channelMention", r.CHANNEL = "channel", r.GUILD = "guild", r.ATTACHMENT_LINK = "attachmentLink", r.SOUNDBOARD = "soundboard", r.STATIC_ROUTE_LINK = "staticRouteLink", r.ROLE_MENTION = "roleMention", r.COMMAND_MENTION = "commandMention", r.TIMESTAMP = "timestamp", r.LIST = "list", r.HEADING = "heading", r.SUBTEXT = "subtext"
+    b: function () {
+        return r;
+    }
+}), (i = r || (r = {})).TEXT = 'text', i.STRIKETHROUGH = 's', i.UNDERLINE = 'u', i.STRONG = 'strong', i.ITALICS = 'em', i.IMAGE = 'image', i.EMOJI = 'emoji', i.CUSTOM_EMOJI = 'customEmoji', i.LINK = 'link', i.URL = 'url', i.AUTOLINK = 'autolink', i.HIGHLIGHT = 'highlight', i.PARAGRAPH = 'paragraph', i.LINE_BREAK = 'br', i.NEWLINE = 'newline', i.ESCAPE = 'escape', i.SPOILER = 'spoiler', i.BLOCK_QUOTE = 'blockQuote', i.INLINE_CODE = 'inlineCode', i.CODE_BLOCK = 'codeBlock', i.MENTION = 'mention', i.CHANNEL_MENTION = 'channelMention', i.CHANNEL = 'channel', i.GUILD = 'guild', i.ATTACHMENT_LINK = 'attachmentLink', i.SOUNDBOARD = 'soundboard', i.STATIC_ROUTE_LINK = 'staticRouteLink', i.ROLE_MENTION = 'roleMention', i.COMMAND_MENTION = 'commandMention', i.TIMESTAMP = 'timestamp', i.LIST = 'list', i.HEADING = 'heading', i.SUBTEXT = 'subtext';

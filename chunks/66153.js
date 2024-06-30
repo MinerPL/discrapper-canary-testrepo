@@ -1,6 +1,5 @@
-"use strict";
-n(250668)("Uint8", function(e) {
-  return function(t, n, r) {
-    return e(this, t, n, r)
-  }
-}, !0)
+n(250668)('Uint8', function (r) {
+    return function (t, n, e) {
+        return r(this, t, n, e);
+    };
+}, !0);

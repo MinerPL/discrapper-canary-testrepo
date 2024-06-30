@@ -1,33 +1,33 @@
-"use strict";
 n(177593), n(47120);
-var i = n(147913),
-  r = n(695346);
-let s = !1;
-class o extends i.Z {
-  maybeShowChangeLanguageToast() {}
-  setVerifyTimezone() {
-    s = !0
-  }
-  ensureTimezoneUpdated() {
-    if (!s) return;
-    s = !1;
-    let e = new Date().getTimezoneOffset();
-    r.rN.getSetting() !== e && setImmediate(() => r.rN.updateSetting(e))
-  }
-  constructor(...e) {
-    var t, n, i;
-    super(...e), t = this, n = "actions", i = {
-      POST_CONNECTION_OPEN: () => {
-        this.setVerifyTimezone(), this.maybeShowChangeLanguageToast()
-      },
-      OVERLAY_INITIALIZE: this.setVerifyTimezone,
-      USER_SETTINGS_PROTO_UPDATE: this.ensureTimezoneUpdated
-    }, n in t ? Object.defineProperty(t, n, {
-      value: i,
-      enumerable: !0,
-      configurable: !0,
-      writable: !0
-    }) : t[n] = i
-  }
+var r = n(147913), i = n(695346);
+let a = !1;
+class o extends r.Z {
+    maybeShowChangeLanguageToast() {
+    }
+    setVerifyTimezone() {
+        a = !0;
+    }
+    ensureTimezoneUpdated() {
+        if (!a)
+            return;
+        a = !1;
+        let e = new Date().getTimezoneOffset();
+        i.rN.getSetting() !== e && setImmediate(() => i.rN.updateSetting(e));
+    }
+    constructor(...e) {
+        var t, n, r;
+        super(...e), t = this, n = 'actions', r = {
+            POST_CONNECTION_OPEN: () => {
+                this.setVerifyTimezone(), this.maybeShowChangeLanguageToast();
+            },
+            OVERLAY_INITIALIZE: this.setVerifyTimezone,
+            USER_SETTINGS_PROTO_UPDATE: this.ensureTimezoneUpdated
+        }, n in t ? Object.defineProperty(t, n, {
+            value: r,
+            enumerable: !0,
+            configurable: !0,
+            writable: !0
+        }) : t[n] = r;
+    }
 }
-t.Z = new o
+t.Z = new o();

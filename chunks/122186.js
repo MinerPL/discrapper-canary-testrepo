@@ -1,61 +1,66 @@
-"use strict";
-n.d(t, {
-  Z: function() {
-    return _
-  }
+t.d(n, {
+    Z: function () {
+        return S;
+    }
 });
-var l = n(735250);
-n(470079);
-var s = n(120356),
-  a = n.n(s),
-  i = n(481060),
-  r = n(197115),
-  o = n(672752),
-  u = n(466111),
-  c = n(981631),
-  d = n(474936),
-  m = n(689938),
-  E = n(441157);
-
-function _(e) {
-  let {
-    message: t,
-    onClose: n,
-    openStreamUpsellModal: s,
-    glow: _ = !1
-  } = e, S = {
-    section: c.jXE.STREAM_SETTINGS,
-    object: c.qAy.PREMIUM_UPSELL_BANNER,
-    objectType: c.Qqv.BUY
-  };
-  return (0, l.jsxs)("div", {
-    className: a()(E.upsellBanner, E.enhancedBanner, {
-      [E.gradientGlow]: _
-    }),
-    children: [(0, l.jsxs)("div", {
-      className: E.iconTextContainer,
-      children: [(0, l.jsx)(u.Z, {
-        color: o.JX.PREMIUM_TIER_2
-      }), (0, l.jsx)(i.Text, {
-        variant: "text-sm/medium",
-        className: a()(E.upsellText, E.enhancedUpsellText),
-        children: null != t ? t : m.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_LEARN_MORE_V3.format({
-          onClick: () => s({
-            analyticsLocation: S,
-            onClose: n
-          })
-        })
-      })]
-    }), (0, l.jsx)("div", {
-      className: E.enhancedCTAs,
-      children: (0, l.jsx)(r.Z, {
-        className: a()(E.enhancedCTA, E.ctaGradientBackground),
-        iconClassName: E.premiumIcon,
-        subscriptionTier: d.Si.TIER_2,
-        buttonText: m.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA,
-        size: i.Button.Sizes.TINY,
-        premiumModalAnalyticsLocation: S
-      })
-    })]
-  })
+var l = t(735250);
+t(470079);
+var s = t(120356), a = t.n(s), i = t(848246), r = t(481060), o = t(197115), u = t(672752), c = t(74538), d = t(981631), m = t(474936), E = t(689938), _ = t(323021);
+function S(e) {
+    let {
+            message: n,
+            onClose: t,
+            openStreamUpsellModal: s,
+            glow: S = !1
+        } = e, g = {
+            section: d.jXE.STREAM_SETTINGS,
+            object: d.qAy.PREMIUM_UPSELL_BANNER,
+            objectType: d.Qqv.BUY
+        }, h = (0, c.So)(i.q.STREAM_HIGH_QUALITY);
+    return (0, l.jsxs)('div', {
+        className: a()(_.upsellBanner, _.enhancedBanner, { [_.gradientGlow]: S }),
+        children: [
+            (0, l.jsxs)('div', {
+                className: _.iconTextContainer,
+                children: [
+                    (0, l.jsx)(r.NitroWheelIcon, {
+                        size: 'md',
+                        color: u.JX.PREMIUM_TIER_2
+                    }),
+                    (0, l.jsx)(r.Text, {
+                        variant: 'text-sm/medium',
+                        className: a()(_.upsellText, _.enhancedUpsellText),
+                        children: null != n ? n : h ? (0, l.jsxs)(l.Fragment, {
+                            children: [
+                                E.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_UPSELL_BODY,
+                                ' ',
+                                E.Z.Messages.LEARN_MORE_CLICK.format({
+                                    onClick: () => s({
+                                        analyticsLocation: g,
+                                        onClose: t
+                                    })
+                                })
+                            ]
+                        }) : E.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_LEARN_MORE_V3.format({
+                            onClick: () => s({
+                                analyticsLocation: g,
+                                onClose: t
+                            })
+                        })
+                    })
+                ]
+            }),
+            (0, l.jsx)('div', {
+                className: _.enhancedCTAs,
+                children: (0, l.jsx)(o.Z, {
+                    className: a()(_.enhancedCTA, _.ctaGradientBackground),
+                    iconClassName: _.premiumIcon,
+                    subscriptionTier: m.Si.TIER_2,
+                    buttonText: E.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA,
+                    size: r.Button.Sizes.TINY,
+                    premiumModalAnalyticsLocation: g
+                })
+            })
+        ]
+    });
 }

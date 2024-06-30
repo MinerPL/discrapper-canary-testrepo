@@ -1,4 +1,4 @@
-var n = e(900624);
-t.exports = function() {
-  this.__data__ = new n, this.size = 0
-}
+var n = r(900624);
+t.exports = function () {
+    this.__data__ = new n(), this.size = 0;
+};

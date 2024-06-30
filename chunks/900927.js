@@ -1,67 +1,67 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return T
-  }
+    Z: function () {
+        return f;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(399606),
-  s = n(481060),
-  o = n(275759),
-  a = n(706454),
-  l = n(271383),
-  u = n(430824),
-  _ = n(346656),
-  d = n(68972),
-  c = n(709054),
-  E = n(689938),
-  I = n(60963);
-
-function T(e) {
-  let {
-    userId: t,
-    guildId: n,
-    textClassName: T,
-    tooltipDelay: h
-  } = e, S = (0, r.e7)([a.default], () => a.default.locale), f = (0, r.e7)([u.Z], () => null != n ? u.Z.getGuild(n) : null), N = (0, r.e7)([l.ZP], () => null != n ? l.ZP.getMember(n, t) : null), A = (0, o.FI)(c.default.extractTimestamp(t), S), m = (0, o.FI)(null == N ? void 0 : N.joinedAt, S);
-  return null == f || null == N ? (0, i.jsx)(s.Text, {
-    variant: "text-sm/normal",
-    className: T,
-    children: A
-  }) : (0, i.jsxs)("div", {
-    className: I.memberSinceWrapper,
-    children: [(0, i.jsxs)("div", {
-      className: I.memberSince,
-      children: [(0, i.jsx)(s.Tooltip, {
-        text: E.Z.Messages.DISCORD_NAME,
-        delay: h,
-        children: e => (0, i.jsx)(d.Z, {
-          ...e,
-          className: I.discordIcon
-        })
-      }), (0, i.jsx)(s.Text, {
-        variant: "text-sm/normal",
-        className: T,
-        children: A
-      })]
-    }), (0, i.jsx)("div", {
-      className: I.divider
-    }), (0, i.jsxs)("div", {
-      className: I.memberSince,
-      children: [(0, i.jsx)(s.Tooltip, {
-        text: f.name,
-        delay: h,
-        children: e => (0, i.jsx)(_.Z, {
-          ...e,
-          guild: f,
-          size: _.Z.Sizes.SMOL
-        })
-      }), (0, i.jsx)(s.Text, {
-        variant: "text-sm/normal",
-        className: T,
-        children: m
-      })]
-    })]
-  })
+var i = n(399606), a = n(481060), o = n(275759), s = n(706454), l = n(271383), u = n(430824), c = n(346656), d = n(709054), _ = n(689938), E = n(949846);
+function f(e) {
+    let {
+            userId: t,
+            guildId: n,
+            textClassName: f,
+            tooltipDelay: h
+        } = e, p = (0, i.e7)([s.default], () => s.default.locale), m = (0, i.e7)([u.Z], () => null != n ? u.Z.getGuild(n) : null), I = (0, i.e7)([l.ZP], () => null != n ? l.ZP.getMember(n, t) : null), T = (0, o.FI)(d.default.extractTimestamp(t), p), g = (0, o.FI)(null == I ? void 0 : I.joinedAt, p);
+    return null == m || null == I ? (0, r.jsx)(a.Text, {
+        variant: 'text-sm/normal',
+        className: f,
+        children: T
+    }) : (0, r.jsxs)('div', {
+        className: E.memberSinceWrapper,
+        children: [
+            (0, r.jsxs)('div', {
+                className: E.memberSince,
+                children: [
+                    (0, r.jsx)(a.Tooltip, {
+                        text: _.Z.Messages.DISCORD_NAME,
+                        delay: h,
+                        children: e => (0, r.jsx)(a.ClydeIcon, {
+                            size: 'custom',
+                            width: 28,
+                            height: 28,
+                            color: 'currentColor',
+                            ...e,
+                            className: E.discordIcon
+                        })
+                    }),
+                    (0, r.jsx)(a.Text, {
+                        variant: 'text-sm/normal',
+                        className: f,
+                        children: T
+                    })
+                ]
+            }),
+            (0, r.jsx)('div', { className: E.divider }),
+            (0, r.jsxs)('div', {
+                className: E.memberSince,
+                children: [
+                    (0, r.jsx)(a.Tooltip, {
+                        text: m.name,
+                        delay: h,
+                        children: e => (0, r.jsx)(c.Z, {
+                            ...e,
+                            guild: m,
+                            size: c.Z.Sizes.SMOL
+                        })
+                    }),
+                    (0, r.jsx)(a.Text, {
+                        variant: 'text-sm/normal',
+                        className: f,
+                        children: g
+                    })
+                ]
+            })
+        ]
+    });
 }

@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  j: function() {
-    return i
-  }
-}), (r = i || (i = {}))[r.ALL = 1] = "ALL", r[r.TIERED = 2] = "TIERED"
+    j: function () {
+        return r;
+    }
+}), (i = r || (r = {}))[i.ALL = 1] = 'ALL', i[i.TIERED = 2] = 'TIERED';

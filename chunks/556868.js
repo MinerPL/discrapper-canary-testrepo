@@ -1,6 +1,2 @@
-var n = e(289126),
-  o = e(652715),
-  i = e(220126),
-  a = i && i.isTypedArray,
-  u = a ? o(a) : n;
-t.exports = u
+var n = r(289126), _ = r(652715), a = r(220126), i = a && a.isTypedArray, o = i ? _(i) : n;
+t.exports = o;

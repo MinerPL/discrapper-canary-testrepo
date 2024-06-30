@@ -1,40 +1,34 @@
-"use strict";
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(120356),
-  s = n.n(r),
-  o = n(242411),
-  a = n(12517);
-t.Z = function(e) {
-  let {
-    glowOpacity: t,
-    className: n
-  } = e;
-  return (0, i.jsxs)("div", {
-    className: s()(a.nitroTopDividerContainer, n),
-    children: [(0, i.jsx)("div", {
-      className: a.nitroTopDividerUpper
-    }), (0, i.jsx)("div", {
-      style: {
-        opacity: t
-      },
-      className: a.nitroTopDividerShadow
-    }), (0, i.jsxs)("div", {
-      className: s()(a.nitroTopDividerLockContainer),
-      children: [(0, i.jsx)("div", {
-        className: a.nitroTopDividerLockBorder
-      }), (0, i.jsx)("div", {
-        className: a.nitroTopDividerLockCircle,
-        children: (0, i.jsx)(o.Z, {
-          width: 16,
-          height: 16,
-          color: "white"
-        })
-      }), (0, i.jsx)("div", {
-        className: a.nitroTopDividerLockBorderReversed
-      })]
-    }), (0, i.jsx)("div", {
-      className: a.nitroTopDividerLower
-    })]
-  })
-}
+var i = n(120356), a = n.n(i), o = n(481060), s = n(715953);
+t.Z = function (e) {
+    let {
+        glowOpacity: t,
+        className: n
+    } = e;
+    return (0, r.jsxs)('div', {
+        className: a()(s.nitroTopDividerContainer, n),
+        children: [
+            (0, r.jsx)('div', { className: s.nitroTopDividerUpper }),
+            (0, r.jsx)('div', {
+                style: { opacity: t },
+                className: s.nitroTopDividerShadow
+            }),
+            (0, r.jsxs)('div', {
+                className: a()(s.nitroTopDividerLockContainer),
+                children: [
+                    (0, r.jsx)('div', { className: s.nitroTopDividerLockBorder }),
+                    (0, r.jsx)('div', {
+                        className: s.nitroTopDividerLockCircle,
+                        children: (0, r.jsx)(o.LockIcon, {
+                            size: 'xs',
+                            color: 'white'
+                        })
+                    }),
+                    (0, r.jsx)('div', { className: s.nitroTopDividerLockBorderReversed })
+                ]
+            }),
+            (0, r.jsx)('div', { className: s.nitroTopDividerLower })
+        ]
+    });
+};

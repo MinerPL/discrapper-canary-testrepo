@@ -1,102 +1,75 @@
-"use strict";
-t.d(s, {
-  C: function() {
-    return S
-  },
-  Z: function() {
-    return h
-  }
-});
-var n = t(735250);
-t(470079);
-var i = t(990547),
-  l = t(481060),
-  a = t(213609),
-  r = t(605288),
-  o = t(787051),
-  c = t(346163),
-  d = t(587431),
-  u = t(271267),
-  E = t(320893),
-  _ = t(81509),
-  I = t(662379),
-  T = t(60533),
-  N = t(581050),
-  m = t(744493);
-
-function S(e) {
-  let {
-    onboardingMarketing: s,
-    onboardingMarketingError: t
-  } = e, i = e => {
-    let {
-      children: s
-    } = e;
-    return (0, n.jsxs)(n.Fragment, {
-      children: [(0, n.jsx)(l.FormDivider, {
-        className: m.sectionDivider
-      }), s]
-    })
-  }, a = (0, n.jsx)(i, {
-    children: (0, n.jsx)(I.Z, {})
-  }, N.q.HOW_IT_WORKS), r = (0, n.jsx)(i, {
-    children: (0, n.jsx)(E.Z, {})
-  }, N.q.BENEFITS);
-  return null != t || (null == s ? void 0 : s.sections) == null ? (0, n.jsxs)(n.Fragment, {
-    children: [a, r]
-  }) : (0, n.jsx)(n.Fragment, {
-    children: s.sections.map(e => {
-      switch (e.type) {
-        case N.q.HOW_IT_WORKS:
-          return a;
-        case N.q.BENEFITS:
-          return r;
-        case N.q.OTHER_CREATORS:
-          return (0, n.jsx)(i, {
-            children: (0, n.jsx)(_.Z, {
-              highlightedCreators: e.creators
-            })
-          }, N.q.OTHER_CREATORS)
-      }
-    })
-  })
-}
-
-function h(e) {
-  let {
-    guild: s
-  } = e, t = (0, c.Z)(s), {
-    eligibilityLoading: E,
-    eligibilityError: _,
-    eligibility: I
-  } = t, N = (0, r.j)(I), {
-    isLoading: h,
-    error: g,
-    creatorMonetizationOnboardingMarketing: x
-  } = (0, o.Z)(s.id);
-  return ((0, a.Z)({
-    type: i.ImpressionTypes.PANE,
-    name: i.ImpressionNames.ENABLE_CREATOR_MONETIZATION_ACCEPT_TERMS_LANDING,
-    properties: {
-      guild_id: s.id,
-      is_owner: t.isGuildOwner,
-      is_eligible: t.eligibleForMonetization,
-      ineligible_reasons: N
+n.d(t, {
+    C: function () {
+        return S;
+    },
+    Z: function () {
+        return h;
     }
-  }, {
-    disableTrack: null == s.id || null == I
-  }), E || null == I || h) ? (0, n.jsx)(l.Spinner, {}) : I.actionRequired ? (0, n.jsx)(T.Z, {
-    guild: s
-  }) : null != _ ? (0, n.jsx)(d.Z, {
-    children: _.message
-  }) : (0, n.jsxs)("div", {
-    className: m.container,
-    children: [(0, n.jsx)(u.Z, {
-      guild: s,
-      monetizationEligibility: t
-    }), (0, n.jsx)(S, {
-      onboardingMarketing: x,
-      onboardingMarketingError: g
-    })]
-  })
+});
+var s = n(735250);
+n(470079);
+var a = n(990547), i = n(481060), r = n(213609), l = n(605288), o = n(787051), c = n(346163), d = n(587431), u = n(271267), _ = n(320893), E = n(81509), I = n(662379), T = n(60533), m = n(581050), N = n(293811);
+function S(e) {
+    let {
+            onboardingMarketing: t,
+            onboardingMarketingError: n
+        } = e, a = e => {
+            let {children: t} = e;
+            return (0, s.jsxs)(s.Fragment, {
+                children: [
+                    (0, s.jsx)(i.FormDivider, { className: N.sectionDivider }),
+                    t
+                ]
+            });
+        }, r = (0, s.jsx)(a, { children: (0, s.jsx)(I.Z, {}) }, m.q.HOW_IT_WORKS), l = (0, s.jsx)(a, { children: (0, s.jsx)(_.Z, {}) }, m.q.BENEFITS);
+    return null != n || (null == t ? void 0 : t.sections) == null ? (0, s.jsxs)(s.Fragment, {
+        children: [
+            r,
+            l
+        ]
+    }) : (0, s.jsx)(s.Fragment, {
+        children: t.sections.map(e => {
+            switch (e.type) {
+            case m.q.HOW_IT_WORKS:
+                return r;
+            case m.q.BENEFITS:
+                return l;
+            case m.q.OTHER_CREATORS:
+                return (0, s.jsx)(a, { children: (0, s.jsx)(E.Z, { highlightedCreators: e.creators }) }, m.q.OTHER_CREATORS);
+            }
+        })
+    });
+}
+function h(e) {
+    let {guild: t} = e, n = (0, c.Z)(t), {
+            eligibilityLoading: _,
+            eligibilityError: E,
+            eligibility: I
+        } = n, m = (0, l.j)(I), {
+            isLoading: h,
+            error: g,
+            creatorMonetizationOnboardingMarketing: C
+        } = (0, o.Z)(t.id);
+    return ((0, r.Z)({
+        type: a.ImpressionTypes.PANE,
+        name: a.ImpressionNames.ENABLE_CREATOR_MONETIZATION_ACCEPT_TERMS_LANDING,
+        properties: {
+            guild_id: t.id,
+            is_owner: n.isGuildOwner,
+            is_eligible: n.eligibleForMonetization,
+            ineligible_reasons: m
+        }
+    }, { disableTrack: null == t.id || null == I }), _ || null == I || h) ? (0, s.jsx)(i.Spinner, {}) : I.actionRequired ? (0, s.jsx)(T.Z, { guild: t }) : null != E ? (0, s.jsx)(d.Z, { children: E.message }) : (0, s.jsxs)('div', {
+        className: N.container,
+        children: [
+            (0, s.jsx)(u.Z, {
+                guild: t,
+                monetizationEligibility: n
+            }),
+            (0, s.jsx)(S, {
+                onboardingMarketing: C,
+                onboardingMarketingError: g
+            })
+        ]
+    });
 }

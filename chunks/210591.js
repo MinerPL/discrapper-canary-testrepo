@@ -1,111 +1,105 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return S
-  }
-}), t(47120), t(390547);
-var n = t(735250),
-  i = t(470079),
-  l = t(120356),
-  a = t.n(l),
-  r = t(920906),
-  o = t(442837),
-  c = t(692547),
-  d = t(481060),
-  u = t(607070),
-  E = t(259580),
-  _ = t(441674),
-  I = t(293810),
-  T = t(689938),
-  N = t(147962);
-
+n.d(t, {
+    Z: function () {
+        return N;
+    }
+}), n(47120), n(390547);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(920906), o = n(442837), c = n(692547), d = n(481060), u = n(607070), _ = n(259580), E = n(293810), I = n(689938), T = n(211340);
 function m(e) {
-  let {
-    checked: s,
-    children: t
-  } = e;
-  return (0, n.jsxs)("div", {
-    className: N.row,
-    children: [(0, n.jsx)(d.Text, {
-      variant: "text-md/normal",
-      color: "interactive-active",
-      className: N.rowText,
-      children: t
-    }), s ? (0, n.jsx)(_.Z, {
-      backgroundColor: c.Z.unsafe_rawColors.WHITE_500.css,
-      className: a()(N.rowIcon, N.rowIconChecked)
-    }) : (0, n.jsx)("div", {
-      className: a()(N.rowIcon, N.rowIconEmpty)
-    })]
-  })
+    let {
+        checked: t,
+        children: n
+    } = e;
+    return (0, s.jsxs)('div', {
+        className: T.row,
+        children: [
+            (0, s.jsx)(d.Text, {
+                variant: 'text-md/normal',
+                color: 'interactive-active',
+                className: T.rowText,
+                children: n
+            }),
+            t ? (0, s.jsx)(d.CircleCheckIcon, {
+                size: 'md',
+                color: 'currentColor',
+                secondaryColor: c.Z.unsafe_rawColors.WHITE_500.css,
+                className: r()(T.rowIcon, T.rowIconChecked)
+            }) : (0, s.jsx)('div', { className: r()(T.rowIcon, T.rowIconEmpty) })
+        ]
+    });
 }
-
-function S(e) {
-  let {
-    children: s
-  } = e, [t, l] = i.useState(!1), a = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), c = s.flatMap(e => e.items.map(e => e.completed)), _ = c.filter(e => e).length / c.length, S = 1 === _, h = (0, r.useSpring)({
-    width: "".concat(100 * _, "%"),
-    immediate: a
-  }), g = [T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_PROMO_PAGE.format({
-    promoPageGuideUrl: I.iv.PROMO_PAGE_GUIDE
-  }), T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_CASE_STUDIES.format({
-    caseStudiesUrl: I.iv.CASE_STUDIES
-  }), T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_SUBSCRIPTION_OFFERING.format({
-    subscriptionOfferingGuideUrl: I.iv.SUBSCRIPTION_OFFERING_GUIDE
-  }), T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_TIER_STRUCTURE.format({
-    tierStructureGuideUrl: I.iv.TIER_STRUCTURE_GUIDE
-  })], x = t ? null : (0, n.jsxs)(n.Fragment, {
-    children: [!S && s.map((e, s) => {
-      let {
-        title: t,
-        items: l
-      } = e;
-      return (0, n.jsxs)(i.Fragment, {
-        children: [s > 0 && (0, n.jsx)(d.FormDivider, {
-          className: N.divider
-        }), (0, n.jsx)(d.FormTitle, {
-          className: N.categoryTitle,
-          children: t
-        }), l.map((e, s) => (0, n.jsx)(m, {
-          children: e.description,
-          checked: e.completed
-        }, s))]
-      }, s)
-    }), (0, n.jsx)(d.FormDivider, {
-      className: N.divider
-    }), (0, n.jsx)(d.FormTitle, {
-      className: N.categoryTitle,
-      children: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LEARN_MORE_SECTION_TITLE
-    }), g.map((e, s) => (0, n.jsx)("div", {
-      className: N.row,
-      children: (0, n.jsx)(d.Text, {
-        variant: "text-md/normal",
-        children: e
-      })
-    }, s))]
-  });
-  return (0, n.jsx)("div", {
-    className: N.checklist,
-    children: (0, n.jsxs)("div", {
-      className: N.container,
-      children: [(0, n.jsxs)(d.Clickable, {
-        className: N.headerBar,
-        onClick: () => l(e => !e),
-        children: [(0, n.jsx)(d.Heading, {
-          variant: "heading-md/semibold",
-          className: N.headerText,
-          children: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_HEADER
-        }), (0, n.jsx)(E.Z, {
-          direction: t ? E.Z.Directions.DOWN : E.Z.Directions.UP,
-          className: N.headerCaret
-        })]
-      }), !S && (0, n.jsx)("div", {
-        className: N.progressBarOuter,
-        children: (0, n.jsx)(r.animated.div, {
-          className: N.progressBarInner,
-          style: h
+function N(e) {
+    let {children: t} = e, [n, i] = a.useState(!1), r = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), c = t.flatMap(e => e.items.map(e => e.completed)), N = c.filter(e => e).length / c.length, S = 1 === N, h = (0, l.useSpring)({
+            width: ''.concat(100 * N, '%'),
+            immediate: r
+        }), g = [
+            I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_PROMO_PAGE.format({ promoPageGuideUrl: E.iv.PROMO_PAGE_GUIDE }),
+            I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_CASE_STUDIES.format({ caseStudiesUrl: E.iv.CASE_STUDIES }),
+            I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_SUBSCRIPTION_OFFERING.format({ subscriptionOfferingGuideUrl: E.iv.SUBSCRIPTION_OFFERING_GUIDE }),
+            I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_TIER_STRUCTURE.format({ tierStructureGuideUrl: E.iv.TIER_STRUCTURE_GUIDE })
+        ], C = n ? null : (0, s.jsxs)(s.Fragment, {
+            children: [
+                !S && t.map((e, t) => {
+                    let {
+                        title: n,
+                        items: i
+                    } = e;
+                    return (0, s.jsxs)(a.Fragment, {
+                        children: [
+                            t > 0 && (0, s.jsx)(d.FormDivider, { className: T.divider }),
+                            (0, s.jsx)(d.FormTitle, {
+                                className: T.categoryTitle,
+                                children: n
+                            }),
+                            i.map((e, t) => (0, s.jsx)(m, {
+                                children: e.description,
+                                checked: e.completed
+                            }, t))
+                        ]
+                    }, t);
+                }),
+                (0, s.jsx)(d.FormDivider, { className: T.divider }),
+                (0, s.jsx)(d.FormTitle, {
+                    className: T.categoryTitle,
+                    children: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LEARN_MORE_SECTION_TITLE
+                }),
+                g.map((e, t) => (0, s.jsx)('div', {
+                    className: T.row,
+                    children: (0, s.jsx)(d.Text, {
+                        variant: 'text-md/normal',
+                        children: e
+                    })
+                }, t))
+            ]
+        });
+    return (0, s.jsx)('div', {
+        className: T.checklist,
+        children: (0, s.jsxs)('div', {
+            className: T.container,
+            children: [
+                (0, s.jsxs)(d.Clickable, {
+                    className: T.headerBar,
+                    onClick: () => i(e => !e),
+                    children: [
+                        (0, s.jsx)(d.Heading, {
+                            variant: 'heading-md/semibold',
+                            className: T.headerText,
+                            children: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_HEADER
+                        }),
+                        (0, s.jsx)(_.Z, {
+                            direction: n ? _.Z.Directions.DOWN : _.Z.Directions.UP,
+                            className: T.headerCaret
+                        })
+                    ]
+                }),
+                !S && (0, s.jsx)('div', {
+                    className: T.progressBarOuter,
+                    children: (0, s.jsx)(l.animated.div, {
+                        className: T.progressBarInner,
+                        style: h
+                    })
+                }),
+                C
+            ]
         })
-      }), x]
-    })
-  })
+    });
 }

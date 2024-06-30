@@ -1,2 +1,1 @@
-"use strict";
-e.exports = t.p + "666dedbc382faa521e61.png"
+e.exports = n.p + '666dedbc382faa521e61.png';

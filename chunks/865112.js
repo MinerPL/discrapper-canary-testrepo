@@ -1,0 +1,113 @@
+n.d(t, {
+    RB: function () {
+        return O;
+    },
+    VH: function () {
+        return S;
+    },
+    Vi: function () {
+        return R;
+    },
+    Vu: function () {
+        return M;
+    },
+    q7: function () {
+        return x;
+    }
+});
+var i, a, s, l, r = n(692547), o = n(497089), c = n(650473), d = n(389765), u = n(137492), _ = n(387661), E = n(659953), m = n(319707), I = n(584914), T = n(334702), h = n(333722), N = n(549931), f = n(178561), p = n(39863), C = n(130312);
+(i = s || (s = {})).CHECKED = 'CHECKED', i.FRIENDS = 'FRIENDS', i.SHARE_SCREEN = 'SHARE_SCREEN', i.NEW_MESSAGE = 'NEW_MESSAGE';
+let g = {
+    CHECKED: _,
+    FRIENDS: m,
+    SHARE_SCREEN: p,
+    NEW_MESSAGE: N
+};
+(a = l || (l = {})).MISSED_MESSAGES = 'MISSED_MESSAGES', a.FRIEND_REQUEST_REMINDER = 'FRIEND_REQUEST_REMINDER', a.SCHEDULED_GUILD_EVENT = 'SCHEDULED_GUILD_EVENT', a.TOP_MESSAGES = 'TOP_MESSAGES', a.NOTIFICATION_CENTER = 'NOTIFICATION_CENTER', a.UPDATE_PROFILE = 'UPDATE_PROFILE', a.FIND_FRIENDS = 'FIND_FRIENDS', a.ADD_FRIEND = 'ADD_FRIEND', a.FIRST_MESSAGE = 'FIRST_MESSAGE';
+let S = {
+        MISSED_MESSAGES: h,
+        FRIEND_REQUEST_REMINDER: I,
+        SCHEDULED_GUILD_EVENT: E,
+        TOP_MESSAGES: T,
+        NOTIFICATION_CENTER: u,
+        UPDATE_PROFILE: C,
+        FIND_FRIENDS: d,
+        ADD_FRIEND: d,
+        FIRST_MESSAGE: f
+    }, A = e => {
+        switch (e.item_enum) {
+        case o.AM.ADD_FRIEND:
+            return 'ADD_FRIEND';
+        case o.AM.FIND_FRIENDS:
+            return 'FIND_FRIENDS';
+        case o.AM.FIRST_MESSAGE:
+            return 'FIRST_MESSAGE';
+        case o.AM.UPDATE_PROFILE:
+            return 'UPDATE_PROFILE';
+        default:
+            return 'NOTIFICATION_CENTER';
+        }
+    }, x = e => {
+        switch (e.type) {
+        case 'lifecycle_item':
+            return A(e);
+        case 'missed_messages':
+            return 'MISSED_MESSAGES';
+        case 'friend_request_reminder':
+            return 'FRIEND_REQUEST_REMINDER';
+        case 'scheduled_guild_event_started':
+            return 'SCHEDULED_GUILD_EVENT';
+        case 'top_messages':
+            return 'TOP_MESSAGES';
+        default:
+            return 'NOTIFICATION_CENTER';
+        }
+    }, O = e => {
+        if ('icHighlight' === e)
+            return 'TOP_MESSAGES';
+        return 'NOTIFICATION_CENTER';
+    }, R = e => {
+        switch (e) {
+        case o.DY.GO_LIVE_PUSH:
+            return {
+                icon: g.SHARE_SCREEN,
+                color: r.Z.colors.BACKGROUND_ACCENT
+            };
+        case o.DY.FRIEND_REQUEST_ACCEPTED:
+            return {
+                icon: g.CHECKED,
+                color: r.Z.colors.STATUS_POSITIVE_BACKGROUND
+            };
+        case o.DY.FRIEND_REQUEST_PENDING:
+        case o.DY.FRIEND_SUGGESTION_CREATED:
+            return {
+                icon: g.FRIENDS,
+                color: r.Z.colors.BACKGROUND_ACCENT
+            };
+        case o.DY.DM_FRIEND_NUDGE:
+            return {
+                icon: g.NEW_MESSAGE,
+                color: r.Z.colors.BACKGROUND_ACCENT
+            };
+        case o.O7.INCOMING_FRIEND_REQUESTS:
+        case o.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED:
+            return {
+                icon: g.FRIENDS,
+                color: r.Z.colors.BACKGROUND_ACCENT
+            };
+        default:
+            return null;
+        }
+    }, M = e => {
+        switch (e.item_enum) {
+        case o.AM.UPDATE_PROFILE:
+            return c.Y9;
+        case o.AM.ADD_FRIEND:
+        case o.AM.FIND_FRIENDS:
+            return c.AZ;
+        case o.AM.FIRST_MESSAGE:
+            return c.bj;
+        default:
+            return r.Z.unsafe_rawColors.BRAND_500.css;
+        }
+    };

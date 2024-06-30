@@ -1,13 +1,12 @@
-"use strict";
 n.d(t, {
-  h2: function() {
-    return i.h2
-  },
-  xV: function() {
-    return i.xV
-  },
-  yW: function() {
-    return i.yW
-  }
+    h2: function () {
+        return r.h2;
+    },
+    xV: function () {
+        return r.xV;
+    },
+    yW: function () {
+        return r.yW;
+    }
 });
-var i = n(349361)
+var r = n(349361);

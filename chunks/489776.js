@@ -1,89 +1,78 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return m
-  }
-}), t(47120);
-var n = t(735250),
-  i = t(470079),
-  l = t(920906),
-  a = t(722770),
-  r = t(442837),
-  o = t(481060),
-  c = t(607070),
-  d = t(151785),
-  u = t(236413),
-  E = t(85960),
-  _ = t(65912),
-  I = t(564488),
-  T = t(689938),
-  N = t(31067);
-
-function m(e) {
-  let {
-    guildId: s,
-    triggerType: t
-  } = e, m = i.useMemo(() => () => (0, u.ep)(s, t), [s, t]), [S] = i.useState(m), [h, g] = i.useState(!1), {
-    editingRule: x,
-    createNewEditingRule: C
-  } = (0, _.V)(), {
-    getDefaultRuleName: R
-  } = E.I6[t], L = (0, r.e7)([c.Z], () => c.Z.useReducedMotion), O = !(0, u.Vb)(x) && (null == x ? void 0 : x.triggerType) === t, [A, p] = i.useState(O ? x : S), M = (0, l.useSpring)({
-    opacity: O ? 0 : 1,
-    pointerEvents: O ? "none" : "all",
-    config: {
-      ...l.config.stiff,
-      clamp: !0
-    },
-    immediate: L
-  }), f = (0, l.useSpring)({
-    opacity: O ? 1 : 0,
-    pointerEvents: O ? "all" : "none",
-    config: {
-      ...l.config.stiff,
-      clamp: !0
-    },
-    immediate: L,
-    onStart: () => {
-      p(O ? x : S)
-    },
-    onRest: () => {
-      p(O ? x : S), g(O)
+n.d(t, {
+    Z: function () {
+        return m;
     }
-  });
-  return null == x || O ? (0, n.jsxs)("div", {
-    className: N.mainRuleContainer,
-    style: {
-      height: O ? "auto" : "60px"
-    },
-    children: [(0, n.jsx)(l.animated.div, {
-      className: N.animatedRuleCardContainer,
-      style: f,
-      children: (0, n.jsx)(I.Z, {
-        rule: A,
-        persistEdit: h
-      })
-    }), (0, n.jsx)(l.animated.div, {
-      className: N.animatedNewRuleContainer,
-      style: M,
-      children: (0, n.jsxs)(o.Clickable, {
-        className: N.addAnotherRuleCardContainer,
-        onClick: () => {
-          C(s, t)
-        },
-        children: [(0, n.jsx)(d.Z, {
-          width: 20,
-          height: 20,
-          color: a.Z.BLUE_345,
-          className: N.plusIcon
-        }), (0, n.jsx)(o.Text, {
-          variant: "text-md/semibold",
-          color: "text-link",
-          children: T.Z.Messages.GUILD_AUTOMOD_ADD_ADDITIONAL_RULE.format({
-            ruleName: R()
-          })
-        })]
-      })
-    })]
-  }) : null
+}), n(47120);
+var s = n(735250), a = n(470079), i = n(920906), r = n(722770), l = n(442837), o = n(481060), c = n(607070), d = n(236413), u = n(85960), _ = n(65912), E = n(564488), I = n(689938), T = n(463011);
+function m(e) {
+    let {
+            guildId: t,
+            triggerType: n
+        } = e, m = a.useMemo(() => () => (0, d.ep)(t, n), [
+            t,
+            n
+        ]), [N] = a.useState(m), [S, h] = a.useState(!1), {
+            editingRule: g,
+            createNewEditingRule: C
+        } = (0, _.V)(), {getDefaultRuleName: x} = u.I6[n], p = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), R = !(0, d.Vb)(g) && (null == g ? void 0 : g.triggerType) === n, [f, L] = a.useState(R ? g : N), O = (0, i.useSpring)({
+            opacity: R ? 0 : 1,
+            pointerEvents: R ? 'none' : 'all',
+            config: {
+                ...i.config.stiff,
+                clamp: !0
+            },
+            immediate: p
+        }), A = (0, i.useSpring)({
+            opacity: R ? 1 : 0,
+            pointerEvents: R ? 'all' : 'none',
+            config: {
+                ...i.config.stiff,
+                clamp: !0
+            },
+            immediate: p,
+            onStart: () => {
+                L(R ? g : N);
+            },
+            onRest: () => {
+                L(R ? g : N), h(R);
+            }
+        });
+    return null == g || R ? (0, s.jsxs)('div', {
+        className: T.mainRuleContainer,
+        style: { height: R ? 'auto' : '60px' },
+        children: [
+            (0, s.jsx)(i.animated.div, {
+                className: T.animatedRuleCardContainer,
+                style: A,
+                children: (0, s.jsx)(E.Z, {
+                    rule: f,
+                    persistEdit: S
+                })
+            }),
+            (0, s.jsx)(i.animated.div, {
+                className: T.animatedNewRuleContainer,
+                style: O,
+                children: (0, s.jsxs)(o.Clickable, {
+                    className: T.addAnotherRuleCardContainer,
+                    onClick: () => {
+                        C(t, n);
+                    },
+                    children: [
+                        (0, s.jsx)(o.CirclePlusIcon, {
+                            size: 'custom',
+                            width: 20,
+                            height: 20,
+                            color: r.Z.BLUE_345,
+                            className: T.plusIcon
+                        }),
+                        (0, s.jsx)(o.Text, {
+                            variant: 'text-md/semibold',
+                            color: 'text-link',
+                            children: I.Z.Messages.GUILD_AUTOMOD_ADD_ADDITIONAL_RULE.format({ ruleName: x() })
+                        })
+                    ]
+                })
+            })
+        ]
+    }) : null;
 }

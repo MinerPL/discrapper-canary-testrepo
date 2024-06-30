@@ -1,31 +1,28 @@
-"use strict";
 n.d(t, {
-  f6: function() {
-    return a
-  }
+    f6: function () {
+        return s;
+    }
 }), n(411104);
-var i = n(470079),
-  r = n(836560);
-class s extends r.EventEmitter {
-  on() {
-    return this
-  }
-  once() {
-    return this
-  }
-  addListener() {
-    return this
-  }
-  removeListener() {
-    return this
-  }
-  emit() {
-    return !1
-  }
+var r = n(470079), i = n(836560);
+class a extends i.EventEmitter {
+    on() {
+        return this;
+    }
+    once() {
+        return this;
+    }
+    addListener() {
+        return this;
+    }
+    removeListener() {
+        return this;
+    }
+    emit() {
+        return !1;
+    }
 }
-let o = i.createContext(new s),
-  {
-    Provider: a,
-    Consumer: l
-  } = o;
-t.ZP = o
+let o = r.createContext(new a()), {
+        Provider: s,
+        Consumer: l
+    } = o;
+t.ZP = o;

@@ -1,15 +1,9 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return i
-  }
+n.d(t, {
+    Z: function () {
+        return a;
+    }
 });
-var n = t(689938);
-
-function i(e) {
-  return e > 0 && e % 7 == 0 ? n.Z.Messages.DURATION_WEEKS.format({
-    weeks: e / 7
-  }) : n.Z.Messages.DURATION_DAYS.format({
-    days: e
-  })
+var s = n(689938);
+function a(e) {
+    return e > 0 && e % 7 == 0 ? s.Z.Messages.DURATION_WEEKS.format({ weeks: e / 7 }) : s.Z.Messages.DURATION_DAYS.format({ days: e });
 }

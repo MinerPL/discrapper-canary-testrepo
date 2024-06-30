@@ -1,49 +1,18 @@
-"use strict";
-var r = n(147018),
-  i = n(161581),
-  a = n(545576),
-  o = n(879),
-  s = n(97131).f,
-  u = n(740362),
-  c = n(603528),
-  l = n(95948),
-  d = n(892725),
-  f = n(33995),
-  p = n(905145),
-  h = n(325008),
-  m = n(992051),
-  g = "DOMException",
-  _ = a("Error"),
-  b = a(g),
-  v = function() {
-    c(this, y);
-    var e = arguments.length,
-      t = d(e < 1 ? void 0 : arguments[0]),
-      n = d(e < 2 ? void 0 : arguments[1], "Error"),
-      r = new b(t, n),
-      i = _(t);
-    return i.name = g, s(r, "stack", o(1, p(i.stack, 1))), l(r, this, v), r
-  },
-  y = v.prototype = b.prototype,
-  E = "stack" in _(g),
-  S = "stack" in new b(1, 2),
-  x = b && h && Object.getOwnPropertyDescriptor(i, g),
-  w = !!x && !(x.writable && x.configurable),
-  C = E && !w && !S;
-r({
-  global: !0,
-  constructor: !0,
-  forced: m || C
-}, {
-  DOMException: C ? v : b
-});
-var T = a(g),
-  D = T.prototype;
-if (D.constructor !== T) {
-  for (var M in !m && s(D, "constructor", o(1, T)), f)
-    if (u(f, M)) {
-      var O = f[M],
-        A = O.s;
-      !u(T, A) && s(T, A, o(6, O.c))
-    }
+var e = o(147018), n = o(161581), c = o(545576), i = o(879), u = o(97131).f, a = o(740362), f = o(603528), E = o(95948), s = o(892725), p = o(33995), R = o(905145), l = o(325008), _ = o(992051), d = 'DOMException', O = c('Error'), m = c(d), I = function () {
+        f(this, A);
+        var r = arguments.length, t = s(r < 1 ? void 0 : arguments[0]), o = s(r < 2 ? void 0 : arguments[1], 'Error'), e = new m(t, o), n = O(t);
+        return n.name = d, u(e, 'stack', i(1, R(n.stack, 1))), E(e, this, I), e;
+    }, A = I.prototype = m.prototype, v = 'stack' in O(d), T = 'stack' in new m(1, 2), y = m && l && Object.getOwnPropertyDescriptor(n, d), N = !!y && !(y.writable && y.configurable), h = v && !N && !T;
+e({
+    global: !0,
+    constructor: !0,
+    forced: _ || h
+}, { DOMException: h ? I : m });
+var D = c(d), S = D.prototype;
+if (S.constructor !== D) {
+    for (var b in (!_ && u(S, 'constructor', i(1, D)), p))
+        if (a(p, b)) {
+            var C = p[b], g = C.s;
+            !a(D, g) && u(D, g, i(6, C.c));
+        }
 }

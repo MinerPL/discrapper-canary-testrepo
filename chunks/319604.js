@@ -1,7 +1,5 @@
-"use strict";
-
 function a(e) {
-  return e && e.__esModule ? e.default : e
+    return e && e.__esModule ? e.default : e;
 }
 t.__esModule = !0;
 var n = r(61729);
@@ -77,4 +75,4 @@ t.tomorrow = a(N);
 var I = r(848042);
 t.tube = a(I);
 var L = r(796160);
-t.twilight = a(L)
+t.twilight = a(L);

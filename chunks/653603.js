@@ -1,8 +1,4 @@
-"use strict";
-e.exports = function(e) {
-  return (e = String(e || ""), r.test(e)) ? "rtl" : i.test(e) ? "ltr" : "neutral"
+e.exports = function (e) {
+    return (e = String(e || ''), r.test(e)) ? 'rtl' : i.test(e) ? 'ltr' : 'neutral';
 };
-var t = "֑-߿יִ-﷽ﹰ-ﻼ",
-  n = "A-Za-z\xc0-\xd6\xd8-\xf6\xf8-ʸ̀-֐ࠀ-῿‎Ⰰ-﬜︀-﹯﻽-￿",
-  r = RegExp("^[^" + n + "]*[" + t + "]"),
-  i = RegExp("^[^" + t + "]*[" + n + "]")
+var t = '֑-\u07FFיִ-\uFDFDﹰ-ﻼ', n = 'A-Za-zÀ-ÖØ-öø-ʸ̀-\u0590ࠀ-\u1FFF\u200EⰀ-\uFB1C︀-\uFE6F\uFEFD-\uFFFF', r = RegExp('^[^' + n + ']*[' + t + ']'), i = RegExp('^[^' + t + ']*[' + n + ']');

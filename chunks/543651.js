@@ -1,60 +1,56 @@
-"use strict";
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(120356),
-  s = n.n(r),
-  o = n(913527),
-  a = n.n(o),
-  l = n(442837),
-  u = n(481060),
-  _ = n(835473),
-  d = n(318374),
-  c = n(594174),
-  E = n(366695),
-  I = n(823379),
-  T = n(689938),
-  h = n(471387);
-t.Z = function(e) {
-  let {
-    createdAt: t,
-    participantIds: n,
-    applicationId: r,
-    title: o,
-    guildId: S,
-    className: f
-  } = e, N = (0, _.q)(r), A = (0, l.Wu)([c.default], () => {
-    var e;
-    return null !== (e = n.map(e => c.default.getUser(e)).filter(I.lm)) && void 0 !== e ? e : []
-  }), m = null == N ? void 0 : N.name, O = a()(t).fromNow();
-  return null == t ? null : (0, i.jsxs)("div", {
-    className: s()(f, h.container),
-    children: [(0, i.jsx)(E.Z, {
-      game: N
-    }), (0, i.jsxs)("div", {
-      className: h.textSection,
-      children: [null != o && "" !== o ? (0, i.jsx)(u.Text, {
-        variant: "text-md/semibold",
-        color: "interactive-active",
-        children: o
-      }) : (0, i.jsx)(u.Text, {
-        variant: "text-md/semibold",
-        color: "text-muted",
-        children: T.Z.Messages.CLIPS_UNTITLED
-      }), (0, i.jsxs)(u.Text, {
-        variant: "text-xs/medium",
-        color: "text-muted",
-        className: h.__invalid_subtitle,
-        children: [null != m ? "".concat(m, " • ") : null, O]
-      }), (0, i.jsx)(u.Text, {
-        variant: "text-xs/medium",
-        color: "text-muted",
-        className: h.__invalid_subtitle
-      })]
-    }), null != A && A.length > 0 && (0, i.jsx)(d.Z, {
-      maxUsers: 4,
-      users: A,
-      className: h.__invalid_facePile,
-      guildId: S
-    })]
-  })
-}
+var i = n(120356), a = n.n(i), o = n(913527), s = n.n(o), l = n(442837), u = n(481060), c = n(835473), d = n(318374), _ = n(594174), E = n(366695), f = n(823379), h = n(689938), p = n(755154);
+t.Z = function (e) {
+    let {
+            createdAt: t,
+            participantIds: n,
+            applicationId: i,
+            title: o,
+            guildId: m,
+            className: I
+        } = e, T = (0, c.q)(i), g = (0, l.Wu)([_.default], () => {
+            var e;
+            return null !== (e = n.map(e => _.default.getUser(e)).filter(f.lm)) && void 0 !== e ? e : [];
+        }), S = null == T ? void 0 : T.name, A = s()(t).fromNow();
+    return null == t ? null : (0, r.jsxs)('div', {
+        className: a()(I, p.container),
+        children: [
+            (0, r.jsx)(E.Z, { game: T }),
+            (0, r.jsxs)('div', {
+                className: p.textSection,
+                children: [
+                    null != o && '' !== o ? (0, r.jsx)(u.Text, {
+                        variant: 'text-md/semibold',
+                        color: 'interactive-active',
+                        children: o
+                    }) : (0, r.jsx)(u.Text, {
+                        variant: 'text-md/semibold',
+                        color: 'text-muted',
+                        children: h.Z.Messages.CLIPS_UNTITLED
+                    }),
+                    (0, r.jsxs)(u.Text, {
+                        variant: 'text-xs/medium',
+                        color: 'text-muted',
+                        className: p.__invalid_subtitle,
+                        children: [
+                            null != S ? ''.concat(S, ' \u2022 ') : null,
+                            A
+                        ]
+                    }),
+                    (0, r.jsx)(u.Text, {
+                        variant: 'text-xs/medium',
+                        color: 'text-muted',
+                        className: p.__invalid_subtitle
+                    })
+                ]
+            }),
+            null != g && g.length > 0 && (0, r.jsx)(d.Z, {
+                maxUsers: 4,
+                users: g,
+                className: p.__invalid_facePile,
+                guildId: m
+            })
+        ]
+    });
+};

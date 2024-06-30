@@ -1,12 +1,10 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return i;
+    }
 });
-var i = n(358085);
-
-function r() {
-  let e = "";
-  return (0, i.isWindows)() ? e = "platform-win" : (0, i.isMac)() ? e = "platform-osx" : (0, i.isLinux)() ? e = "platform-linux" : (0, i.isWeb)() && (e = "platform-web"), __OVERLAY__ ? "".concat(e, " platform-overlay") : e
+var r = n(358085);
+function i() {
+    let e = '';
+    return (0, r.isWindows)() ? e = 'platform-win' : (0, r.isMac)() ? e = 'platform-osx' : (0, r.isLinux)() ? e = 'platform-linux' : (0, r.isWeb)() && (e = 'platform-web'), __OVERLAY__ ? ''.concat(e, ' platform-overlay') : e;
 }

@@ -1,9 +1,6 @@
-"use strict";
-var e = n(325008),
-  o = n(97131),
-  i = n(879);
-t.exports = e ? function(t, r, n) {
-  return o.f(t, r, i(1, n))
-} : function(t, r, n) {
-  return t[r] = n, t
-}
+var e = r(325008), o = r(97131), i = r(879);
+t.exports = e ? function (t, n, r) {
+    return o.f(t, n, i(1, r));
+} : function (t, n, r) {
+    return t[n] = r, t;
+};

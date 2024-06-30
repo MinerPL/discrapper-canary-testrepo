@@ -1,57 +1,34 @@
-"use strict";
 n(757143);
-var i = n(512722),
-  r = n.n(i),
-  s = n(302454),
-  o = n.n(s);
-let a = /\n{2,}$/,
-  l = /(?:^|\n)( *)$/,
-  u = "(?:[*-]|\\d+\\.)",
-  _ = "( *)(" + u + ") +",
-  d = RegExp("^" + _),
-  c = RegExp(_ + "[^\\n]*(?:\\n(?!\\1" + u + " )[^\\n]*)*(\n|$)", "gm"),
-  E = / *\n$/,
-  I = RegExp("^( *)(" + u + ") [\\s\\S]+?(?:\\n(?! )(?!\\1" + u + " )|$)"),
-  T = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
-  h = e => e.map(e => ("text" === e.type && null != e.content && (e.content = e.content.replace(/\n+\s*$/, "")), e)),
-  S = {
-    ...o().defaultRules.list,
-    requiredFirstCharacters: " *-0123456789".split(""),
-    match: (e, t) => {
-      if (!t.allowList || t._listLevel >= 11) return null;
-      let n = null == t.prevCapture ? "" : t.prevCapture[0],
-        i = l.exec(n);
-      return null == i || T.test(i[0]) ? null : I.exec(e)
-    },
-    parse: (e, t, n) => {
-      let i = e[2],
-        s = i.length > 1,
-        o = s ? Math.min(1e9, Math.max(1, +i)) : void 0,
-        l = e[0].replace(a, "\n").match(c);
-      r()(null != l, "markup list items can not be parsed.");
-      let u = !1;
-      return {
-        ordered: s,
-        start: o,
-        items: l.map((e, i) => {
-          let r;
-          let s = d.exec(e),
-            o = RegExp("^ {1," + (null != s ? s[0].length : 0) + "}", "gm"),
-            a = e.replace(o, "").replace(d, ""),
-            _ = i === l.length - 1,
-            c = -1 !== a.indexOf("\n\n") || _ && u;
-          u = c;
-          let I = n.inline,
-            T = n._list,
-            S = n._listLevel;
-          n._list = !0, n._listLevel = (null != S ? S : 0) + 1, c ? (n.inline = !1, r = a.replace(E, "\n\n")) : (n.inline = !0, r = a.replace(E, ""));
-          let f = h(t(r, {
-            ...n,
-            allowHeading: !1
-          }));
-          return n.inline = I, n._list = T, n._listLevel = S, f
-        })
-      }
-    }
-  };
-t.Z = S
+var r = n(512722), i = n.n(r), a = n(302454), o = n.n(a);
+let s = /\n{2,}$/, l = /(?:^|\n)( *)$/, u = '(?:[*-]|\\d+\\.)', c = '( *)(' + u + ') +', d = RegExp('^' + c), _ = RegExp(c + '[^\\n]*(?:\\n(?!\\1' + u + ' )[^\\n]*)*(\n|$)', 'gm'), E = / *\n$/, f = RegExp('^( *)(' + u + ') [\\s\\S]+?(?:\\n(?! )(?!\\1' + u + ' )|$)'), h = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/, p = e => e.map(e => ('text' === e.type && null != e.content && (e.content = e.content.replace(/\n+\s*$/, '')), e)), m = {
+        ...o().defaultRules.list,
+        requiredFirstCharacters: ' *-0123456789'.split(''),
+        match: (e, t) => {
+            if (!t.allowList || t._listLevel >= 11)
+                return null;
+            let n = null == t.prevCapture ? '' : t.prevCapture[0], r = l.exec(n);
+            return null == r || h.test(r[0]) ? null : f.exec(e);
+        },
+        parse: (e, t, n) => {
+            let r = e[2], a = r.length > 1, o = a ? Math.min(1000000000, Math.max(1, +r)) : void 0, l = e[0].replace(s, '\n').match(_);
+            i()(null != l, 'markup list items can not be parsed.');
+            let u = !1;
+            return {
+                ordered: a,
+                start: o,
+                items: l.map((e, r) => {
+                    let i;
+                    let a = d.exec(e), o = RegExp('^ {1,' + (null != a ? a[0].length : 0) + '}', 'gm'), s = e.replace(o, '').replace(d, ''), c = r === l.length - 1, _ = -1 !== s.indexOf('\n\n') || c && u;
+                    u = _;
+                    let f = n.inline, h = n._list, m = n._listLevel;
+                    n._list = !0, n._listLevel = (null != m ? m : 0) + 1, _ ? (n.inline = !1, i = s.replace(E, '\n\n')) : (n.inline = !0, i = s.replace(E, ''));
+                    let I = p(t(i, {
+                        ...n,
+                        allowHeading: !1
+                    }));
+                    return n.inline = f, n._list = h, n._listLevel = m, I;
+                })
+            };
+        }
+    };
+t.Z = m;

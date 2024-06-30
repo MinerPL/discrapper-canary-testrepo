@@ -1,40 +1,48 @@
-"use strict";
 n.d(t, {
-  $Z: function() {
-    return r
-  },
-  M0: function() {
-    return a
-  },
-  Od: function() {
-    return l
-  },
-  vG: function() {
-    return o
-  }
+    $Z: function () {
+        return i;
+    },
+    M0: function () {
+        return s;
+    },
+    Od: function () {
+        return l;
+    },
+    vG: function () {
+        return o;
+    }
 });
-var i, r, s = n(689938);
-let o = "emails";
-(i = r || (r = {})).COMMUNICATION = "communication", i.SOCIAL = "social", i.TIPS = "tips", i.RECOMMENDATIONS_AND_EVENTS = "recommendations_and_events", i.UPDATES_AND_ANNOUNCEMENTS = "updates_and_announcements", i.FAMILY_CENTER_DIGEST = "family_center_digest";
-let a = ["tips", "recommendations_and_events", "updates_and_announcements"],
-  l = [{
-    category: "communication",
-    label: () => s.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_COMMUNICATION,
-    subLabel: () => s.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_COMMUNICATION_SUBLABEL
-  }, {
-    category: "social",
-    label: () => s.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_SOCIAL,
-    subLabel: () => s.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_SOCIAL_SUBLABEL
-  }, {
-    category: "updates_and_announcements",
-    label: () => s.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_UPDATES_AND_ANNOUNCEMENTS,
-    subLabel: () => s.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_UPDATES_AND_ANNOUNCEMENTS_SUBLABEL
-  }, {
-    category: "tips",
-    label: () => s.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_TIPS,
-    subLabel: () => s.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_TIPS_SUBLABEL
-  }, {
-    category: "recommendations_and_events",
-    label: () => s.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_RECOMMENDATIONS_AND_EVENTS,
-    subLabel: () => s.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_RECOMMENDATIONS_AND_EVENTS_SUBLABEL
-  }]
+var r, i, a = n(689938);
+let o = 'emails';
+(r = i || (i = {})).COMMUNICATION = 'communication', r.SOCIAL = 'social', r.TIPS = 'tips', r.RECOMMENDATIONS_AND_EVENTS = 'recommendations_and_events', r.UPDATES_AND_ANNOUNCEMENTS = 'updates_and_announcements', r.FAMILY_CENTER_DIGEST = 'family_center_digest';
+let s = [
+        'tips',
+        'recommendations_and_events',
+        'updates_and_announcements'
+    ], l = [
+        {
+            category: 'communication',
+            label: () => a.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_COMMUNICATION,
+            subLabel: () => a.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_COMMUNICATION_SUBLABEL
+        },
+        {
+            category: 'social',
+            label: () => a.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_SOCIAL,
+            subLabel: () => a.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_SOCIAL_SUBLABEL
+        },
+        {
+            category: 'updates_and_announcements',
+            label: () => a.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_UPDATES_AND_ANNOUNCEMENTS,
+            subLabel: () => a.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_UPDATES_AND_ANNOUNCEMENTS_SUBLABEL
+        },
+        {
+            category: 'tips',
+            label: () => a.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_TIPS,
+            subLabel: () => a.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_TIPS_SUBLABEL
+        },
+        {
+            category: 'recommendations_and_events',
+            label: () => a.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_RECOMMENDATIONS_AND_EVENTS,
+            subLabel: () => a.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_RECOMMENDATIONS_AND_EVENTS_SUBLABEL
+        }
+    ];

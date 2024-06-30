@@ -1,946 +1,922 @@
-"use strict";
 n.d(t, {
-  N3: function() {
-    return g
-  },
-  OV: function() {
-    return S
-  },
-  P$: function() {
-    return x
-  },
-  RM: function() {
-    return E
-  }
+    N3: function () {
+        return p;
+    },
+    OV: function () {
+        return A;
+    },
+    P$: function () {
+        return N;
+    },
+    RM: function () {
+        return S;
+    }
 });
-var r = n(387103),
-  i = n(99047),
-  a = n(697898),
-  o = n(470079),
-  s = n(133886);
-
-function u(e, t, n) {
-  return null != e && (null != t && 0 > e.compare(t) || null != n && e.compare(n) > 0)
+var r = n(387103), i = n(99047), a = n(697898), o = n(470079), s = n(133886);
+function l(e, t, n) {
+    return null != e && (null != t && 0 > e.compare(t) || null != n && e.compare(n) > 0);
 }
-let c = {
-    year: "numeric",
-    month: "numeric",
-    day: "numeric",
-    hour: "numeric",
-    minute: "2-digit",
-    second: "2-digit"
-  },
-  l = {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit"
-  };
-
+let u = {
+        year: 'numeric',
+        month: 'numeric',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: '2-digit',
+        second: '2-digit'
+    }, c = {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    };
 function d(e, t) {
-  var n;
-  e = {
-    ...t.shouldForceLeadingZeros ? l : c,
-    ...e
-  };
-  let r = t.granularity || "minute",
-    i = Object.keys(e),
-    a = i.indexOf(null !== (n = t.maxGranularity) && void 0 !== n ? n : "year");
-  a < 0 && (a = 0);
-  let o = i.indexOf(r);
-  if (o < 0 && (o = 2), a > o) throw Error("maxGranularity must be greater than granularity");
-  let s = i.slice(a, o + 1).reduce((t, n) => (t[n] = e[n], t), {});
-  return null != t.hourCycle && (s.hour12 = 12 === t.hourCycle), s.timeZone = t.timeZone || "UTC", ("hour" === r || "minute" === r || "second" === r) && t.timeZone && !t.hideTimeZone && (s.timeZoneName = "short"), t.showEra && 0 === a && (s.era = "short"), s
+    var n;
+    e = {
+        ...t.shouldForceLeadingZeros ? c : u,
+        ...e
+    };
+    let r = t.granularity || 'minute', i = Object.keys(e), a = i.indexOf(null !== (n = t.maxGranularity) && void 0 !== n ? n : 'year');
+    a < 0 && (a = 0);
+    let o = i.indexOf(r);
+    if (o < 0 && (o = 2), a > o)
+        throw Error('maxGranularity must be greater than granularity');
+    let s = i.slice(a, o + 1).reduce((t, n) => (t[n] = e[n], t), {});
+    return null != t.hourCycle && (s.hour12 = 12 === t.hourCycle), s.timeZone = t.timeZone || 'UTC', ('hour' === r || 'minute' === r || 'second' === r) && t.timeZone && !t.hideTimeZone && (s.timeZoneName = 'short'), t.showEra && 0 === a && (s.era = 'short'), s;
 }
-
-function f(e) {
-  return e && "hour" in e ? e : new r.qp
+function _(e) {
+    return e && 'hour' in e ? e : new r.qp();
 }
-
-function p(e, t) {
-  return null === e ? null : e ? (0, r.Mw)(e, t) : void 0
+function E(e, t) {
+    return null === e ? null : e ? (0, r.Mw)(e, t) : void 0;
 }
-
-function h(e, t, n, i) {
-  if (e) return p(e, n);
-  let a = (0, r.Mw)((0, r.zO)(i).set({
-    hour: 0,
-    minute: 0,
-    second: 0,
-    millisecond: 0
-  }), n);
-  return "year" === t || "month" === t || "day" === t ? (0, r.WG)(a) : i ? a : (0, r.IO)(a)
+function f(e, t, n, i) {
+    if (e)
+        return E(e, n);
+    let a = (0, r.Mw)((0, r.zO)(i).set({
+        hour: 0,
+        minute: 0,
+        second: 0,
+        millisecond: 0
+    }), n);
+    return 'year' === t || 'month' === t || 'day' === t ? (0, r.WG)(a) : i ? a : (0, r.IO)(a);
 }
-
-function m(e, t) {
-  let n = e && "timeZone" in e ? e.timeZone : void 0,
-    r = e && "minute" in e ? "minute" : "day";
-  if (e && t && !(t in e)) throw Error("Invalid granularity " + t + " for value " + e.toString());
-  let [i, a] = (0, o.useState)([r, n]);
-  return e && (i[0] !== r || i[1] !== n) && a([r, n]), !t && (t = e ? r : i[0]), [t, e ? n : i[1]]
+function h(e, t) {
+    let n = e && 'timeZone' in e ? e.timeZone : void 0, r = e && 'minute' in e ? 'minute' : 'day';
+    if (e && t && !(t in e))
+        throw Error('Invalid granularity ' + t + ' for value ' + e.toString());
+    let [i, a] = (0, o.useState)([
+        r,
+        n
+    ]);
+    return e && (i[0] !== r || i[1] !== n) && a([
+        r,
+        n
+    ]), !t && (t = e ? r : i[0]), [
+        t,
+        e ? n : i[1]
+    ];
 }
-
-function g(e) {
-  var t, n;
-  let s = (0, i.d)(e),
-    [c, l] = (0, a.zk)(e.value, e.defaultValue || null, e.onChange),
-    p = c || e.placeholderValue,
-    [h, g] = m(p, e.granularity),
-    _ = null != c ? c.toDate(null != g ? g : "UTC") : null,
-    b = "hour" === h || "minute" === h || "second" === h,
-    v = null === (n = e.shouldCloseOnSelect) || void 0 === n || n,
-    [y, E] = (0, o.useState)(null),
-    [S, x] = (0, o.useState)(null);
-  if (c && (y = c, "hour" in c && (S = c)), p && !(h in p)) throw Error("Invalid granularity " + h + " for value " + p.toString());
-  let w = (e, t) => {
-      l("timeZone" in t ? t.set((0, r.WG)(e)) : (0, r.IO)(e, t)), E(null), x(null)
-    },
-    C = e.isInvalid || "invalid" === e.validationState || u(c, e.minValue, e.maxValue) || c && (null === (t = e.isDateUnavailable) || void 0 === t ? void 0 : t.call(e, c)),
-    T = e.validationState || (C ? "invalid" : null);
-  return {
-    value: c,
-    setValue: l,
-    dateValue: y,
-    timeValue: S,
-    setDateValue: t => {
-      let n = "function" == typeof v ? v() : v;
-      b ? S || n ? w(t, S || f(e.placeholderValue)) : E(t) : l(t), n && s.setOpen(!1)
-    },
-    setTimeValue: e => {
-      y && e ? w(y, e) : x(e)
-    },
-    granularity: h,
-    hasTime: b,
-    ...s,
-    setOpen(t) {
-      !t && !c && y && b && w(y, S || f(e.placeholderValue)), s.setOpen(t)
-    },
-    validationState: T,
-    isInvalid: C,
-    formatValue(t, n) {
-      if (!_) return "";
-      let i = d(n, {
-        granularity: h,
-        timeZone: g,
-        hideTimeZone: e.hideTimeZone,
-        hourCycle: e.hourCycle,
-        showEra: "gregory" === c.calendar.identifier && "BC" === c.era
-      });
-      return new r.CN(t, i).format(_)
-    }
-  }
-}
-let _ = new s.J({
-    ach: {
-      year: "mwaka",
-      month: "dwe",
-      day: "nino"
-    },
-    af: {
-      year: "jjjj",
-      month: "mm",
-      day: "dd"
-    },
-    am: {
-      year: "ዓዓዓዓ",
-      month: "ሚሜ",
-      day: "ቀቀ"
-    },
-    an: {
-      year: "aaaa",
-      month: "mm",
-      day: "dd"
-    },
-    ar: {
-      year: "سنة",
-      month: "شهر",
-      day: "يوم"
-    },
-    ast: {
-      year: "aaaa",
-      month: "mm",
-      day: "dd"
-    },
-    az: {
-      year: "iiii",
-      month: "aa",
-      day: "gg"
-    },
-    be: {
-      year: "гггг",
-      month: "мм",
-      day: "дд"
-    },
-    bg: {
-      year: "гггг",
-      month: "мм",
-      day: "дд"
-    },
-    bn: {
-      year: "yyyy",
-      month: "মিমি",
-      day: "dd"
-    },
-    br: {
-      year: "bbbb",
-      month: "mm",
-      day: "dd"
-    },
-    bs: {
-      year: "gggg",
-      month: "mm",
-      day: "dd"
-    },
-    ca: {
-      year: "aaaa",
-      month: "mm",
-      day: "dd"
-    },
-    cak: {
-      year: "jjjj",
-      month: "ii",
-      day: "q'q'"
-    },
-    ckb: {
-      year: "ساڵ",
-      month: "مانگ",
-      day: "ڕۆژ"
-    },
-    cs: {
-      year: "rrrr",
-      month: "mm",
-      day: "dd"
-    },
-    cy: {
-      year: "bbbb",
-      month: "mm",
-      day: "dd"
-    },
-    da: {
-      year: "\xe5\xe5\xe5\xe5",
-      month: "mm",
-      day: "dd"
-    },
-    de: {
-      year: "jjjj",
-      month: "mm",
-      day: "tt"
-    },
-    dsb: {
-      year: "llll",
-      month: "mm",
-      day: "źź"
-    },
-    el: {
-      year: "εεεε",
-      month: "μμ",
-      day: "ηη"
-    },
-    en: {
-      year: "yyyy",
-      month: "mm",
-      day: "dd"
-    },
-    eo: {
-      year: "jjjj",
-      month: "mm",
-      day: "tt"
-    },
-    es: {
-      year: "aaaa",
-      month: "mm",
-      day: "dd"
-    },
-    et: {
-      year: "aaaa",
-      month: "kk",
-      day: "pp"
-    },
-    eu: {
-      year: "uuuu",
-      month: "hh",
-      day: "ee"
-    },
-    fa: {
-      year: "سال",
-      month: "ماه",
-      day: "روز"
-    },
-    ff: {
-      year: "hhhh",
-      month: "ll",
-      day: "\xf1\xf1"
-    },
-    fi: {
-      year: "vvvv",
-      month: "kk",
-      day: "pp"
-    },
-    fr: {
-      year: "aaaa",
-      month: "mm",
-      day: "jj"
-    },
-    fy: {
-      year: "jjjj",
-      month: "mm",
-      day: "dd"
-    },
-    ga: {
-      year: "bbbb",
-      month: "mm",
-      day: "ll"
-    },
-    gd: {
-      year: "bbbb",
-      month: "mm",
-      day: "ll"
-    },
-    gl: {
-      year: "aaaa",
-      month: "mm",
-      day: "dd"
-    },
-    he: {
-      year: "שנה",
-      month: "חודש",
-      day: "יום"
-    },
-    hr: {
-      year: "gggg",
-      month: "mm",
-      day: "dd"
-    },
-    hsb: {
-      year: "llll",
-      month: "mm",
-      day: "dd"
-    },
-    hu: {
-      year: "\xe9\xe9\xe9\xe9",
-      month: "hh",
-      day: "nn"
-    },
-    ia: {
-      year: "aaaa",
-      month: "mm",
-      day: "dd"
-    },
-    id: {
-      year: "tttt",
-      month: "bb",
-      day: "hh"
-    },
-    it: {
-      year: "aaaa",
-      month: "mm",
-      day: "gg"
-    },
-    ja: {
-      year: " 年 ",
-      month: "月",
-      day: "日"
-    },
-    ka: {
-      year: "წწწწ",
-      month: "თთ",
-      day: "რრ"
-    },
-    kk: {
-      year: "жжжж",
-      month: "аа",
-      day: "кк"
-    },
-    kn: {
-      year: "ವವವವ",
-      month: "ಮಿಮೀ",
-      day: "ದಿದಿ"
-    },
-    ko: {
-      year: "연도",
-      month: "월",
-      day: "일"
-    },
-    lb: {
-      year: "jjjj",
-      month: "mm",
-      day: "dd"
-    },
-    lo: {
-      year: "ປປປປ",
-      month: "ດດ",
-      day: "ວວ"
-    },
-    lt: {
-      year: "mmmm",
-      month: "mm",
-      day: "dd"
-    },
-    lv: {
-      year: "gggg",
-      month: "mm",
-      day: "dd"
-    },
-    meh: {
-      year: "aaaa",
-      month: "mm",
-      day: "dd"
-    },
-    ml: {
-      year: "വർഷം",
-      month: "മാസം",
-      day: "തീയതി"
-    },
-    ms: {
-      year: "tttt",
-      month: "mm",
-      day: "hh"
-    },
-    nl: {
-      year: "jjjj",
-      month: "mm",
-      day: "dd"
-    },
-    nn: {
-      year: "\xe5\xe5\xe5\xe5",
-      month: "mm",
-      day: "dd"
-    },
-    no: {
-      year: "\xe5\xe5\xe5\xe5",
-      month: "mm",
-      day: "dd"
-    },
-    oc: {
-      year: "aaaa",
-      month: "mm",
-      day: "jj"
-    },
-    pl: {
-      year: "rrrr",
-      month: "mm",
-      day: "dd"
-    },
-    pt: {
-      year: "aaaa",
-      month: "mm",
-      day: "dd"
-    },
-    rm: {
-      year: "oooo",
-      month: "mm",
-      day: "dd"
-    },
-    ro: {
-      year: "aaaa",
-      month: "ll",
-      day: "zz"
-    },
-    ru: {
-      year: "гггг",
-      month: "мм",
-      day: "дд"
-    },
-    sc: {
-      year: "aaaa",
-      month: "mm",
-      day: "dd"
-    },
-    scn: {
-      year: "aaaa",
-      month: "mm",
-      day: "jj"
-    },
-    sk: {
-      year: "rrrr",
-      month: "mm",
-      day: "dd"
-    },
-    sl: {
-      year: "llll",
-      month: "mm",
-      day: "dd"
-    },
-    sr: {
-      year: "гггг",
-      month: "мм",
-      day: "дд"
-    },
-    sv: {
-      year: "\xe5\xe5\xe5\xe5",
-      month: "mm",
-      day: "dd"
-    },
-    szl: {
-      year: "rrrr",
-      month: "mm",
-      day: "dd"
-    },
-    tg: {
-      year: "сссс",
-      month: "мм",
-      day: "рр"
-    },
-    th: {
-      year: "ปปปป",
-      month: "ดด",
-      day: "วว"
-    },
-    tr: {
-      year: "yyyy",
-      month: "aa",
-      day: "gg"
-    },
-    uk: {
-      year: "рррр",
-      month: "мм",
-      day: "дд"
-    },
-    "zh-CN": {
-      year: "年",
-      month: "月",
-      day: "日"
-    },
-    "zh-TW": {
-      year: "年",
-      month: "月",
-      day: "日"
-    }
-  }, "en"),
-  b = {
-    year: !0,
-    month: !0,
-    day: !0,
-    hour: !0,
-    minute: !0,
-    second: !0,
-    dayPeriod: !0,
-    era: !0
-  },
-  v = {
-    year: 5,
-    month: 2,
-    day: 7,
-    hour: 2,
-    minute: 15,
-    second: 15
-  },
-  y = {
-    dayperiod: "dayPeriod"
-  };
-
-function E(e) {
-  var t, n;
-  let {
-    locale: i,
-    createCalendar: s,
-    hideTimeZone: c,
-    isDisabled: l,
-    isReadOnly: f,
-    isRequired: g
-  } = e, E = e.value || e.defaultValue || e.placeholderValue, [S, x] = m(E, e.granularity), w = x || "UTC";
-  if (E && !(S in E)) throw Error("Invalid granularity " + S + " for value " + E.toString());
-  let C = (0, o.useMemo)(() => new r.CN(i), [i]),
-    T = (0, o.useMemo)(() => s(C.resolvedOptions().calendar), [s, C]),
-    [D, M] = (0, a.zk)(e.value, e.defaultValue, e.onChange),
-    O = (0, o.useMemo)(() => p(D, T), [D, T]),
-    [A, k] = (0, o.useState)(() => h(e.placeholderValue, S, T, x)),
-    R = O || A,
-    N = "gregory" === T.identifier && "BC" === R.era,
-    I = (0, o.useMemo)(() => ({
-      granularity: S,
-      maxGranularity: null !== (t = e.maxGranularity) && void 0 !== t ? t : "year",
-      timeZone: x,
-      hideTimeZone: c,
-      hourCycle: e.hourCycle,
-      showEra: N,
-      shouldForceLeadingZeros: e.shouldForceLeadingZeros
-    }), [e.maxGranularity, S, e.hourCycle, e.shouldForceLeadingZeros, x, c, N]),
-    L = (0, o.useMemo)(() => d({}, I), [I]),
-    P = (0, o.useMemo)(() => new r.CN(i, L), [i, L]),
-    B = (0, o.useMemo)(() => P.resolvedOptions(), [P]),
-    F = (0, o.useMemo)(() => P.formatToParts(new Date).filter(e => b[e.type]).reduce((e, t) => (e[t.type] = !0, e), {}), [P]),
-    [U, j] = (0, o.useState)(() => e.value || e.defaultValue ? {
-      ...F
-    } : {}),
-    Y = (0, o.useRef)(),
-    z = (0, o.useRef)(T.identifier);
-  (0, o.useEffect)(() => {
-    T.identifier !== z.current && (z.current = T.identifier, k(t => Object.keys(U).length > 0 ? (0, r.Mw)(t, T) : h(e.placeholderValue, S, T, x)))
-  }, [T, S, U, x, e.placeholderValue]), D && Object.keys(U).length < Object.keys(F).length && j(U = {
-    ...F
-  }), null == D && Object.keys(U).length === Object.keys(F).length && (j(U = {}), k(h(e.placeholderValue, S, T, x)));
-  let H = O && Object.keys(U).length >= Object.keys(F).length ? O : A,
-    G = t => {
-      if (e.isDisabled || e.isReadOnly) return;
-      let n = Object.keys(U),
-        i = Object.keys(F);
-      null == t ? (M(null), k(h(e.placeholderValue, S, T, x)), j({})) : n.length >= i.length || n.length === i.length - 1 && F.dayPeriod && !U.dayPeriod && "dayPeriod" !== Y.current ? M(t = (0, r.Mw)(t, (null == E ? void 0 : E.calendar) || new r.IQ)) : k(t), Y.current = null
-    },
-    V = (0, o.useMemo)(() => H.toDate(w), [H, w]),
-    $ = (0, o.useMemo)(() => P.formatToParts(V).map(e => {
-      var t, n, a;
-      let o = b[e.type];
-      "era" === e.type && 1 === T.getEras().length && (o = !1);
-      let s = b[e.type] && !U[e.type];
-      let u = b[e.type] ? (t = e.type, n = e.value, a = i, "era" === t || "dayPeriod" === t ? n : "year" === t || "month" === t || "day" === t ? _.getStringForLocale(t, a) : "––") : null;
-      return {
-        type: y[e.type] || e.type,
-        text: s ? u : e.value,
-        ... function(e, t, n) {
-          switch (t) {
-            case "era": {
-              let t = e.calendar.getEras();
-              return {
-                value: t.indexOf(e.era),
-                minValue: 0,
-                maxValue: t.length - 1
-              }
-            }
-            case "year":
-              return {
-                value: e.year, minValue: 1, maxValue: e.calendar.getYearsInEra(e)
-              };
-            case "month":
-              return {
-                value: e.month, minValue: (0, r.jx)(e), maxValue: e.calendar.getMonthsInYear(e)
-              };
-            case "day":
-              return {
-                value: e.day, minValue: (0, r.PA)(e), maxValue: e.calendar.getDaysInMonth(e)
-              }
-          }
-          if ("hour" in e) switch (t) {
-            case "dayPeriod":
-              return {
-                value: e.hour >= 12 ? 12 : 0, minValue: 0, maxValue: 12
-              };
-            case "hour":
-              if (n.hour12) {
-                let t = e.hour >= 12;
-                return {
-                  value: e.hour,
-                  minValue: t ? 12 : 0,
-                  maxValue: t ? 23 : 11
-                }
-              }
-              return {
-                value: e.hour, minValue: 0, maxValue: 23
-              };
-            case "minute":
-              return {
-                value: e.minute, minValue: 0, maxValue: 59
-              };
-            case "second":
-              return {
-                value: e.second, minValue: 0, maxValue: 59
-              }
-          }
-          return {}
-        }(H, e.type, B),
-        isPlaceholder: s,
-        placeholder: u,
-        isEditable: o
-      }
-    }), [V, U, P, B, H, T, i]);
-  F.era && U.year && !U.era ? (U.era = !0, j({
-    ...U
-  })) : !F.era && U.era && (delete U.era, j({
-    ...U
-  }));
-  let Z = e => {
-      U[e] = !0, "year" === e && F.era && (U.era = !0), j({
-        ...U
-      })
-    },
-    K = (e, t) => {
-      if (U[e]) G(function(e, t, n, r) {
-        switch (t) {
-          case "era":
-          case "year":
-          case "month":
-          case "day":
-            return e.cycle(t, n, {
-              round: "year" === t
-            })
+function p(e) {
+    var t, n;
+    let s = (0, i.d)(e), [u, c] = (0, a.zk)(e.value, e.defaultValue || null, e.onChange), E = u || e.placeholderValue, [f, p] = h(E, e.granularity), m = null != u ? u.toDate(null != p ? p : 'UTC') : null, I = 'hour' === f || 'minute' === f || 'second' === f, T = null === (n = e.shouldCloseOnSelect) || void 0 === n || n, [g, S] = (0, o.useState)(null), [A, N] = (0, o.useState)(null);
+    if (u && (g = u, 'hour' in u && (A = u)), E && !(f in E))
+        throw Error('Invalid granularity ' + f + ' for value ' + E.toString());
+    let v = (e, t) => {
+            c('timeZone' in t ? t.set((0, r.WG)(e)) : (0, r.IO)(e, t)), S(null), N(null);
+        }, O = e.isInvalid || 'invalid' === e.validationState || l(u, e.minValue, e.maxValue) || u && (null === (t = e.isDateUnavailable) || void 0 === t ? void 0 : t.call(e, u)), R = e.validationState || (O ? 'invalid' : null);
+    return {
+        value: u,
+        setValue: c,
+        dateValue: g,
+        timeValue: A,
+        setDateValue: t => {
+            let n = 'function' == typeof T ? T() : T;
+            I ? A || n ? v(t, A || _(e.placeholderValue)) : S(t) : c(t), n && s.setOpen(!1);
+        },
+        setTimeValue: e => {
+            g && e ? v(g, e) : N(e);
+        },
+        granularity: f,
+        hasTime: I,
+        ...s,
+        setOpen(t) {
+            !t && !u && g && I && v(g, A || _(e.placeholderValue)), s.setOpen(t);
+        },
+        validationState: R,
+        isInvalid: O,
+        formatValue(t, n) {
+            if (!m)
+                return '';
+            let i = d(n, {
+                granularity: f,
+                timeZone: p,
+                hideTimeZone: e.hideTimeZone,
+                hourCycle: e.hourCycle,
+                showEra: 'gregory' === u.calendar.identifier && 'BC' === u.era
+            });
+            return new r.CN(t, i).format(m);
         }
-        if ("hour" in e) switch (t) {
-          case "dayPeriod": {
-            let t = e.hour;
-            return e.set({
-              hour: t >= 12 ? t - 12 : t + 12
-            })
-          }
-          case "hour":
-          case "minute":
-          case "second":
-            return e.cycle(t, n, {
-              round: "hour" !== t,
-              hourCycle: r.hour12 ? 12 : 24
-            })
-        }
-      }(H, e, t, B));
-      else {
-        Z(e);
-        let t = Object.keys(U),
-          n = Object.keys(F);
-        (t.length >= n.length || t.length === n.length - 1 && F.dayPeriod && !U.dayPeriod) && G(H)
-      }
-    },
-    W = e.isInvalid || "invalid" === e.validationState || u(O, e.minValue, e.maxValue);
-  return {
-    value: O,
-    dateValue: V,
-    calendar: T,
-    setValue: G,
-    segments: $,
-    dateFormatter: P,
-    validationState: e.validationState || (W ? "invalid" : null),
-    isInvalid: W,
-    granularity: S,
-    maxGranularity: null !== (n = e.maxGranularity) && void 0 !== n ? n : "year",
-    isDisabled: l,
-    isReadOnly: f,
-    isRequired: g,
-    increment(e) {
-      K(e, 1)
-    },
-    decrement(e) {
-      K(e, -1)
-    },
-    incrementPage(e) {
-      K(e, v[e] || 1)
-    },
-    decrementPage(e) {
-      K(e, -(v[e] || 1))
-    },
-    setSegment(e, t) {
-      Z(e), G(function(e, t, n, r) {
-        switch (t) {
-          case "day":
-          case "month":
-          case "year":
-          case "era":
-            return e.set({
-              [t]: n
-            })
-        }
-        if ("hour" in e) switch (t) {
-          case "dayPeriod": {
-            let t = e.hour,
-              r = t >= 12;
-            if (n >= 12 === r) return e;
-            return e.set({
-              hour: r ? t - 12 : t + 12
-            })
-          }
-          case "hour":
-            if (r.hour12) {
-              let t = e.hour >= 12;
-              !t && 12 === n && (n = 0), t && n < 12 && (n += 12)
-            }
-          case "minute":
-          case "second":
-            return e.set({
-              [t]: n
-            })
-        }
-      }(H, e, t, B))
-    },
-    confirmPlaceholder() {
-      if (e.isDisabled || e.isReadOnly) return;
-      let t = Object.keys(U),
-        n = Object.keys(F);
-      t.length === n.length - 1 && F.dayPeriod && !U.dayPeriod && (j(U = {
-        ...F
-      }), G(H.copy()))
-    },
-    clearSegment(t) {
-      delete U[t], Y.current = t, j({
-        ...U
-      });
-      let n = h(e.placeholderValue, S, T, x),
-        r = H;
-      if ("dayPeriod" === t && "hour" in H && "hour" in n) {
-        let e = H.hour >= 12,
-          t = n.hour >= 12;
-        e && !t ? r = H.set({
-          hour: H.hour - 12
-        }) : !e && t && (r = H.set({
-          hour: H.hour + 12
-        }))
-      } else t in H && (r = H.set({
-        [t]: n[t]
-      }));
-      M(null), G(r)
-    },
-    formatValue(e) {
-      if (!O) return "";
-      let t = d(e, I);
-      return new r.CN(i, t).format(V)
-    }
-  }
+    };
 }
-
+let m = new s.J({
+        ach: {
+            year: 'mwaka',
+            month: 'dwe',
+            day: 'nino'
+        },
+        af: {
+            year: 'jjjj',
+            month: 'mm',
+            day: 'dd'
+        },
+        am: {
+            year: 'ዓዓዓዓ',
+            month: 'ሚሜ',
+            day: 'ቀቀ'
+        },
+        an: {
+            year: 'aaaa',
+            month: 'mm',
+            day: 'dd'
+        },
+        ar: {
+            year: 'سنة',
+            month: 'شهر',
+            day: 'يوم'
+        },
+        ast: {
+            year: 'aaaa',
+            month: 'mm',
+            day: 'dd'
+        },
+        az: {
+            year: 'iiii',
+            month: 'aa',
+            day: 'gg'
+        },
+        be: {
+            year: 'гггг',
+            month: 'мм',
+            day: 'дд'
+        },
+        bg: {
+            year: 'гггг',
+            month: 'мм',
+            day: 'дд'
+        },
+        bn: {
+            year: 'yyyy',
+            month: 'মিমি',
+            day: 'dd'
+        },
+        br: {
+            year: 'bbbb',
+            month: 'mm',
+            day: 'dd'
+        },
+        bs: {
+            year: 'gggg',
+            month: 'mm',
+            day: 'dd'
+        },
+        ca: {
+            year: 'aaaa',
+            month: 'mm',
+            day: 'dd'
+        },
+        cak: {
+            year: 'jjjj',
+            month: 'ii',
+            day: 'q\'q\''
+        },
+        ckb: {
+            year: 'ساڵ',
+            month: 'مانگ',
+            day: 'ڕۆژ'
+        },
+        cs: {
+            year: 'rrrr',
+            month: 'mm',
+            day: 'dd'
+        },
+        cy: {
+            year: 'bbbb',
+            month: 'mm',
+            day: 'dd'
+        },
+        da: {
+            year: 'åååå',
+            month: 'mm',
+            day: 'dd'
+        },
+        de: {
+            year: 'jjjj',
+            month: 'mm',
+            day: 'tt'
+        },
+        dsb: {
+            year: 'llll',
+            month: 'mm',
+            day: 'źź'
+        },
+        el: {
+            year: 'εεεε',
+            month: 'μμ',
+            day: 'ηη'
+        },
+        en: {
+            year: 'yyyy',
+            month: 'mm',
+            day: 'dd'
+        },
+        eo: {
+            year: 'jjjj',
+            month: 'mm',
+            day: 'tt'
+        },
+        es: {
+            year: 'aaaa',
+            month: 'mm',
+            day: 'dd'
+        },
+        et: {
+            year: 'aaaa',
+            month: 'kk',
+            day: 'pp'
+        },
+        eu: {
+            year: 'uuuu',
+            month: 'hh',
+            day: 'ee'
+        },
+        fa: {
+            year: 'سال',
+            month: 'ماه',
+            day: 'روز'
+        },
+        ff: {
+            year: 'hhhh',
+            month: 'll',
+            day: 'ññ'
+        },
+        fi: {
+            year: 'vvvv',
+            month: 'kk',
+            day: 'pp'
+        },
+        fr: {
+            year: 'aaaa',
+            month: 'mm',
+            day: 'jj'
+        },
+        fy: {
+            year: 'jjjj',
+            month: 'mm',
+            day: 'dd'
+        },
+        ga: {
+            year: 'bbbb',
+            month: 'mm',
+            day: 'll'
+        },
+        gd: {
+            year: 'bbbb',
+            month: 'mm',
+            day: 'll'
+        },
+        gl: {
+            year: 'aaaa',
+            month: 'mm',
+            day: 'dd'
+        },
+        he: {
+            year: 'שנה',
+            month: 'חודש',
+            day: 'יום'
+        },
+        hr: {
+            year: 'gggg',
+            month: 'mm',
+            day: 'dd'
+        },
+        hsb: {
+            year: 'llll',
+            month: 'mm',
+            day: 'dd'
+        },
+        hu: {
+            year: 'éééé',
+            month: 'hh',
+            day: 'nn'
+        },
+        ia: {
+            year: 'aaaa',
+            month: 'mm',
+            day: 'dd'
+        },
+        id: {
+            year: 'tttt',
+            month: 'bb',
+            day: 'hh'
+        },
+        it: {
+            year: 'aaaa',
+            month: 'mm',
+            day: 'gg'
+        },
+        ja: {
+            year: ' 年 ',
+            month: '月',
+            day: '日'
+        },
+        ka: {
+            year: 'წწწწ',
+            month: 'თთ',
+            day: 'რრ'
+        },
+        kk: {
+            year: 'жжжж',
+            month: 'аа',
+            day: 'кк'
+        },
+        kn: {
+            year: 'ವವವವ',
+            month: 'ಮಿಮೀ',
+            day: 'ದಿದಿ'
+        },
+        ko: {
+            year: '연도',
+            month: '월',
+            day: '일'
+        },
+        lb: {
+            year: 'jjjj',
+            month: 'mm',
+            day: 'dd'
+        },
+        lo: {
+            year: 'ປປປປ',
+            month: 'ດດ',
+            day: 'ວວ'
+        },
+        lt: {
+            year: 'mmmm',
+            month: 'mm',
+            day: 'dd'
+        },
+        lv: {
+            year: 'gggg',
+            month: 'mm',
+            day: 'dd'
+        },
+        meh: {
+            year: 'aaaa',
+            month: 'mm',
+            day: 'dd'
+        },
+        ml: {
+            year: 'വർഷം',
+            month: 'മാസം',
+            day: 'തീയതി'
+        },
+        ms: {
+            year: 'tttt',
+            month: 'mm',
+            day: 'hh'
+        },
+        nl: {
+            year: 'jjjj',
+            month: 'mm',
+            day: 'dd'
+        },
+        nn: {
+            year: 'åååå',
+            month: 'mm',
+            day: 'dd'
+        },
+        no: {
+            year: 'åååå',
+            month: 'mm',
+            day: 'dd'
+        },
+        oc: {
+            year: 'aaaa',
+            month: 'mm',
+            day: 'jj'
+        },
+        pl: {
+            year: 'rrrr',
+            month: 'mm',
+            day: 'dd'
+        },
+        pt: {
+            year: 'aaaa',
+            month: 'mm',
+            day: 'dd'
+        },
+        rm: {
+            year: 'oooo',
+            month: 'mm',
+            day: 'dd'
+        },
+        ro: {
+            year: 'aaaa',
+            month: 'll',
+            day: 'zz'
+        },
+        ru: {
+            year: 'гггг',
+            month: 'мм',
+            day: 'дд'
+        },
+        sc: {
+            year: 'aaaa',
+            month: 'mm',
+            day: 'dd'
+        },
+        scn: {
+            year: 'aaaa',
+            month: 'mm',
+            day: 'jj'
+        },
+        sk: {
+            year: 'rrrr',
+            month: 'mm',
+            day: 'dd'
+        },
+        sl: {
+            year: 'llll',
+            month: 'mm',
+            day: 'dd'
+        },
+        sr: {
+            year: 'гггг',
+            month: 'мм',
+            day: 'дд'
+        },
+        sv: {
+            year: 'åååå',
+            month: 'mm',
+            day: 'dd'
+        },
+        szl: {
+            year: 'rrrr',
+            month: 'mm',
+            day: 'dd'
+        },
+        tg: {
+            year: 'сссс',
+            month: 'мм',
+            day: 'рр'
+        },
+        th: {
+            year: 'ปปปป',
+            month: 'ดด',
+            day: 'วว'
+        },
+        tr: {
+            year: 'yyyy',
+            month: 'aa',
+            day: 'gg'
+        },
+        uk: {
+            year: 'рррр',
+            month: 'мм',
+            day: 'дд'
+        },
+        'zh-CN': {
+            year: '年',
+            month: '月',
+            day: '日'
+        },
+        'zh-TW': {
+            year: '年',
+            month: '月',
+            day: '日'
+        }
+    }, 'en'), I = {
+        year: !0,
+        month: !0,
+        day: !0,
+        hour: !0,
+        minute: !0,
+        second: !0,
+        dayPeriod: !0,
+        era: !0
+    }, T = {
+        year: 5,
+        month: 2,
+        day: 7,
+        hour: 2,
+        minute: 15,
+        second: 15
+    }, g = { dayperiod: 'dayPeriod' };
 function S(e) {
-  var t, n, s;
-  let c = (0, i.d)(e),
-    [l, p] = (0, a.zk)(e.value, e.defaultValue || null, e.onChange),
-    [h, g] = (0, o.useState)(() => l || {
-      start: null,
-      end: null
-    });
-  null == l && h.start && h.end && g(h = {
-    start: null,
-    end: null
-  });
-  let _ = l || h,
-    b = e => {
-      g(e), (null == e ? void 0 : e.start) && e.end ? p(e) : p(null)
-    },
-    [v] = m((null == _ ? void 0 : _.start) || (null == _ ? void 0 : _.end) || e.placeholderValue, e.granularity),
-    y = "hour" === v || "minute" === v || "second" === v,
-    E = null === (s = e.shouldCloseOnSelect) || void 0 === s || s,
-    [S, x] = (0, o.useState)(null),
-    [w, C] = (0, o.useState)(null);
-  _ && _.start && _.end && (S = _, "hour" in _.start && (w = _));
-  let T = (e, t) => {
-      b({
-        start: "timeZone" in t.start ? t.start.set((0, r.WG)(e.start)) : (0, r.IO)(e.start, t.start),
-        end: "timeZone" in t.end ? t.end.set((0, r.WG)(e.end)) : (0, r.IO)(e.end, t.end)
-      }), x(null), C(null)
-    },
-    D = t => {
-      let n = "function" == typeof E ? E() : E;
-      y ? n || t.start && t.end && (null == w ? void 0 : w.start) && (null == w ? void 0 : w.end) ? T(t, {
-        start: (null == w ? void 0 : w.start) || f(e.placeholderValue),
-        end: (null == w ? void 0 : w.end) || f(e.placeholderValue)
-      }) : x(t) : t.start && t.end ? b(t) : x(t), n && c.setOpen(!1)
-    },
-    M = e => {
-      (null == S ? void 0 : S.start) && (null == S ? void 0 : S.end) && e.start && e.end ? T(S, e) : C(e)
-    },
-    O = e.isInvalid || "invalid" === e.validationState || null != _ && (u(_.start, e.minValue, e.maxValue) || u(_.end, e.minValue, e.maxValue) || null != _.end && null != _.start && 0 > _.end.compare(_.start) || (null == _ ? void 0 : _.start) && (null === (t = e.isDateUnavailable) || void 0 === t ? void 0 : t.call(e, _.start)) || (null == _ ? void 0 : _.end) && (null === (n = e.isDateUnavailable) || void 0 === n ? void 0 : n.call(e, _.end))),
-    A = e.validationState || (O ? "invalid" : null);
-  return {
-    value: _,
-    setValue: b,
-    dateRange: S,
-    timeRange: w,
-    granularity: v,
-    hasTime: y,
-    setDate(e, t) {
-      D({
-        ...S,
-        [e]: t
-      })
-    },
-    setTime(e, t) {
-      M({
-        ...w,
-        [e]: t
-      })
-    },
-    setDateTime(e, t) {
-      b({
-        ..._,
-        [e]: t
-      })
-    },
-    setDateRange: D,
-    setTimeRange: M,
-    ...c,
-    setOpen(t) {
-      !t && !((null == _ ? void 0 : _.start) && (null == _ ? void 0 : _.end)) && (null == S ? void 0 : S.start) && (null == S ? void 0 : S.end) && y && T(S, {
-        start: (null == w ? void 0 : w.start) || f(e.placeholderValue),
-        end: (null == w ? void 0 : w.end) || f(e.placeholderValue)
-      }), c.setOpen(t)
-    },
-    validationState: A,
-    isInvalid: O,
-    formatValue(t, n) {
-      let i;
-      if (!_ || !_.start || !_.end) return null;
-      let a = "timeZone" in _.start ? _.start.timeZone : void 0,
-        o = e.granularity || (_.start && "minute" in _.start ? "minute" : "day"),
-        s = "timeZone" in _.end ? _.end.timeZone : void 0,
-        u = e.granularity || (_.end && "minute" in _.end ? "minute" : "day"),
-        c = d(n, {
-          granularity: o,
-          timeZone: a,
-          hideTimeZone: e.hideTimeZone,
-          hourCycle: e.hourCycle,
-          showEra: "gregory" === _.start.calendar.identifier && "BC" === _.start.era || "gregory" === _.end.calendar.identifier && "BC" === _.end.era
-        }),
-        l = _.start.toDate(a || "UTC"),
-        f = _.end.toDate(s || "UTC"),
-        p = new r.CN(t, c);
-      if (a === s && o === u && 0 !== _.start.compare(_.end)) {
-        try {
-          let e = p.formatRangeToParts(l, f),
-            t = -1;
-          for (let n = 0; n < e.length; n++) {
-            let r = e[n];
-            if ("shared" === r.source && "literal" === r.type) t = n;
-            else if ("endRange" === r.source) break
-          }
-          let n = "",
-            r = "";
-          for (let i = 0; i < e.length; i++) i < t ? n += e[i].value : i > t && (r += e[i].value);
-          return {
-            start: n,
-            end: r
-          }
-        } catch (e) {}
-        i = p
-      } else {
-        let a = d(n, {
-          granularity: u,
-          timeZone: s,
-          hideTimeZone: e.hideTimeZone,
-          hourCycle: e.hourCycle
+    var t, n;
+    let {
+            locale: i,
+            createCalendar: s,
+            hideTimeZone: u,
+            isDisabled: c,
+            isReadOnly: _,
+            isRequired: p
+        } = e, S = e.value || e.defaultValue || e.placeholderValue, [A, N] = h(S, e.granularity), v = N || 'UTC';
+    if (S && !(A in S))
+        throw Error('Invalid granularity ' + A + ' for value ' + S.toString());
+    let O = (0, o.useMemo)(() => new r.CN(i), [i]), R = (0, o.useMemo)(() => s(O.resolvedOptions().calendar), [
+            s,
+            O
+        ]), [C, y] = (0, a.zk)(e.value, e.defaultValue, e.onChange), D = (0, o.useMemo)(() => E(C, R), [
+            C,
+            R
+        ]), [L, b] = (0, o.useState)(() => f(e.placeholderValue, A, R, N)), M = D || L, P = 'gregory' === R.identifier && 'BC' === M.era, U = (0, o.useMemo)(() => ({
+            granularity: A,
+            maxGranularity: null !== (t = e.maxGranularity) && void 0 !== t ? t : 'year',
+            timeZone: N,
+            hideTimeZone: u,
+            hourCycle: e.hourCycle,
+            showEra: P,
+            shouldForceLeadingZeros: e.shouldForceLeadingZeros
+        }), [
+            e.maxGranularity,
+            A,
+            e.hourCycle,
+            e.shouldForceLeadingZeros,
+            N,
+            u,
+            P
+        ]), w = (0, o.useMemo)(() => d({}, U), [U]), x = (0, o.useMemo)(() => new r.CN(i, w), [
+            i,
+            w
+        ]), G = (0, o.useMemo)(() => x.resolvedOptions(), [x]), k = (0, o.useMemo)(() => x.formatToParts(new Date()).filter(e => I[e.type]).reduce((e, t) => (e[t.type] = !0, e), {}), [x]), [B, F] = (0, o.useState)(() => e.value || e.defaultValue ? { ...k } : {}), V = (0, o.useRef)(), H = (0, o.useRef)(R.identifier);
+    (0, o.useEffect)(() => {
+        R.identifier !== H.current && (H.current = R.identifier, b(t => Object.keys(B).length > 0 ? (0, r.Mw)(t, R) : f(e.placeholderValue, A, R, N)));
+    }, [
+        R,
+        A,
+        B,
+        N,
+        e.placeholderValue
+    ]), C && Object.keys(B).length < Object.keys(k).length && F(B = { ...k }), null == C && Object.keys(B).length === Object.keys(k).length && (F(B = {}), b(f(e.placeholderValue, A, R, N)));
+    let Z = D && Object.keys(B).length >= Object.keys(k).length ? D : L, Y = t => {
+            if (e.isDisabled || e.isReadOnly)
+                return;
+            let n = Object.keys(B), i = Object.keys(k);
+            null == t ? (y(null), b(f(e.placeholderValue, A, R, N)), F({})) : n.length >= i.length || n.length === i.length - 1 && k.dayPeriod && !B.dayPeriod && 'dayPeriod' !== V.current ? y(t = (0, r.Mw)(t, (null == S ? void 0 : S.calendar) || new r.IQ())) : b(t), V.current = null;
+        }, j = (0, o.useMemo)(() => Z.toDate(v), [
+            Z,
+            v
+        ]), W = (0, o.useMemo)(() => x.formatToParts(j).map(e => {
+            var t, n, a;
+            let o = I[e.type];
+            'era' === e.type && 1 === R.getEras().length && (o = !1);
+            let s = I[e.type] && !B[e.type];
+            let l = I[e.type] ? (t = e.type, n = e.value, a = i, 'era' === t || 'dayPeriod' === t ? n : 'year' === t || 'month' === t || 'day' === t ? m.getStringForLocale(t, a) : '\u2013\u2013') : null;
+            return {
+                type: g[e.type] || e.type,
+                text: s ? l : e.value,
+                ...function (e, t, n) {
+                    switch (t) {
+                    case 'era': {
+                            let t = e.calendar.getEras();
+                            return {
+                                value: t.indexOf(e.era),
+                                minValue: 0,
+                                maxValue: t.length - 1
+                            };
+                        }
+                    case 'year':
+                        return {
+                            value: e.year,
+                            minValue: 1,
+                            maxValue: e.calendar.getYearsInEra(e)
+                        };
+                    case 'month':
+                        return {
+                            value: e.month,
+                            minValue: (0, r.jx)(e),
+                            maxValue: e.calendar.getMonthsInYear(e)
+                        };
+                    case 'day':
+                        return {
+                            value: e.day,
+                            minValue: (0, r.PA)(e),
+                            maxValue: e.calendar.getDaysInMonth(e)
+                        };
+                    }
+                    if ('hour' in e)
+                        switch (t) {
+                        case 'dayPeriod':
+                            return {
+                                value: e.hour >= 12 ? 12 : 0,
+                                minValue: 0,
+                                maxValue: 12
+                            };
+                        case 'hour':
+                            if (n.hour12) {
+                                let t = e.hour >= 12;
+                                return {
+                                    value: e.hour,
+                                    minValue: t ? 12 : 0,
+                                    maxValue: t ? 23 : 11
+                                };
+                            }
+                            return {
+                                value: e.hour,
+                                minValue: 0,
+                                maxValue: 23
+                            };
+                        case 'minute':
+                            return {
+                                value: e.minute,
+                                minValue: 0,
+                                maxValue: 59
+                            };
+                        case 'second':
+                            return {
+                                value: e.second,
+                                minValue: 0,
+                                maxValue: 59
+                            };
+                        }
+                    return {};
+                }(Z, e.type, G),
+                isPlaceholder: s,
+                placeholder: l,
+                isEditable: o
+            };
+        }), [
+            j,
+            B,
+            x,
+            G,
+            Z,
+            R,
+            i
+        ]);
+    k.era && B.year && !B.era ? (B.era = !0, F({ ...B })) : !k.era && B.era && (delete B.era, F({ ...B }));
+    let K = e => {
+            B[e] = !0, 'year' === e && k.era && (B.era = !0), F({ ...B });
+        }, z = (e, t) => {
+            if (B[e])
+                Y(function (e, t, n, r) {
+                    switch (t) {
+                    case 'era':
+                    case 'year':
+                    case 'month':
+                    case 'day':
+                        return e.cycle(t, n, { round: 'year' === t });
+                    }
+                    if ('hour' in e)
+                        switch (t) {
+                        case 'dayPeriod': {
+                                let t = e.hour;
+                                return e.set({ hour: t >= 12 ? t - 12 : t + 12 });
+                            }
+                        case 'hour':
+                        case 'minute':
+                        case 'second':
+                            return e.cycle(t, n, {
+                                round: 'hour' !== t,
+                                hourCycle: r.hour12 ? 12 : 24
+                            });
+                        }
+                }(Z, e, t, G));
+            else {
+                K(e);
+                let t = Object.keys(B), n = Object.keys(k);
+                (t.length >= n.length || t.length === n.length - 1 && k.dayPeriod && !B.dayPeriod) && Y(Z);
+            }
+        }, q = e.isInvalid || 'invalid' === e.validationState || l(D, e.minValue, e.maxValue);
+    return {
+        value: D,
+        dateValue: j,
+        calendar: R,
+        setValue: Y,
+        segments: W,
+        dateFormatter: x,
+        validationState: e.validationState || (q ? 'invalid' : null),
+        isInvalid: q,
+        granularity: A,
+        maxGranularity: null !== (n = e.maxGranularity) && void 0 !== n ? n : 'year',
+        isDisabled: c,
+        isReadOnly: _,
+        isRequired: p,
+        increment(e) {
+            z(e, 1);
+        },
+        decrement(e) {
+            z(e, -1);
+        },
+        incrementPage(e) {
+            z(e, T[e] || 1);
+        },
+        decrementPage(e) {
+            z(e, -(T[e] || 1));
+        },
+        setSegment(e, t) {
+            K(e), Y(function (e, t, n, r) {
+                switch (t) {
+                case 'day':
+                case 'month':
+                case 'year':
+                case 'era':
+                    return e.set({ [t]: n });
+                }
+                if ('hour' in e)
+                    switch (t) {
+                    case 'dayPeriod': {
+                            let t = e.hour, r = t >= 12;
+                            if (n >= 12 === r)
+                                return e;
+                            return e.set({ hour: r ? t - 12 : t + 12 });
+                        }
+                    case 'hour':
+                        if (r.hour12) {
+                            let t = e.hour >= 12;
+                            !t && 12 === n && (n = 0), t && n < 12 && (n += 12);
+                        }
+                    case 'minute':
+                    case 'second':
+                        return e.set({ [t]: n });
+                    }
+            }(Z, e, t, G));
+        },
+        confirmPlaceholder() {
+            if (e.isDisabled || e.isReadOnly)
+                return;
+            let t = Object.keys(B), n = Object.keys(k);
+            t.length === n.length - 1 && k.dayPeriod && !B.dayPeriod && (F(B = { ...k }), Y(Z.copy()));
+        },
+        clearSegment(t) {
+            delete B[t], V.current = t, F({ ...B });
+            let n = f(e.placeholderValue, A, R, N), r = Z;
+            if ('dayPeriod' === t && 'hour' in Z && 'hour' in n) {
+                let e = Z.hour >= 12, t = n.hour >= 12;
+                e && !t ? r = Z.set({ hour: Z.hour - 12 }) : !e && t && (r = Z.set({ hour: Z.hour + 12 }));
+            } else
+                t in Z && (r = Z.set({ [t]: n[t] }));
+            y(null), Y(r);
+        },
+        formatValue(e) {
+            if (!D)
+                return '';
+            let t = d(e, U);
+            return new r.CN(i, t).format(j);
+        }
+    };
+}
+function A(e) {
+    var t, n, s;
+    let u = (0, i.d)(e), [c, E] = (0, a.zk)(e.value, e.defaultValue || null, e.onChange), [f, p] = (0, o.useState)(() => c || {
+            start: null,
+            end: null
         });
-        i = new r.CN(t, a)
-      }
-      return {
-        start: p.format(l),
-        end: i.format(f)
-      }
-    }
-  }
+    null == c && f.start && f.end && p(f = {
+        start: null,
+        end: null
+    });
+    let m = c || f, I = e => {
+            p(e), (null == e ? void 0 : e.start) && e.end ? E(e) : E(null);
+        }, [T] = h((null == m ? void 0 : m.start) || (null == m ? void 0 : m.end) || e.placeholderValue, e.granularity), g = 'hour' === T || 'minute' === T || 'second' === T, S = null === (s = e.shouldCloseOnSelect) || void 0 === s || s, [A, N] = (0, o.useState)(null), [v, O] = (0, o.useState)(null);
+    m && m.start && m.end && (A = m, 'hour' in m.start && (v = m));
+    let R = (e, t) => {
+            I({
+                start: 'timeZone' in t.start ? t.start.set((0, r.WG)(e.start)) : (0, r.IO)(e.start, t.start),
+                end: 'timeZone' in t.end ? t.end.set((0, r.WG)(e.end)) : (0, r.IO)(e.end, t.end)
+            }), N(null), O(null);
+        }, C = t => {
+            let n = 'function' == typeof S ? S() : S;
+            g ? n || t.start && t.end && (null == v ? void 0 : v.start) && (null == v ? void 0 : v.end) ? R(t, {
+                start: (null == v ? void 0 : v.start) || _(e.placeholderValue),
+                end: (null == v ? void 0 : v.end) || _(e.placeholderValue)
+            }) : N(t) : t.start && t.end ? I(t) : N(t), n && u.setOpen(!1);
+        }, y = e => {
+            (null == A ? void 0 : A.start) && (null == A ? void 0 : A.end) && e.start && e.end ? R(A, e) : O(e);
+        }, D = e.isInvalid || 'invalid' === e.validationState || null != m && (l(m.start, e.minValue, e.maxValue) || l(m.end, e.minValue, e.maxValue) || null != m.end && null != m.start && 0 > m.end.compare(m.start) || (null == m ? void 0 : m.start) && (null === (t = e.isDateUnavailable) || void 0 === t ? void 0 : t.call(e, m.start)) || (null == m ? void 0 : m.end) && (null === (n = e.isDateUnavailable) || void 0 === n ? void 0 : n.call(e, m.end))), L = e.validationState || (D ? 'invalid' : null);
+    return {
+        value: m,
+        setValue: I,
+        dateRange: A,
+        timeRange: v,
+        granularity: T,
+        hasTime: g,
+        setDate(e, t) {
+            C({
+                ...A,
+                [e]: t
+            });
+        },
+        setTime(e, t) {
+            y({
+                ...v,
+                [e]: t
+            });
+        },
+        setDateTime(e, t) {
+            I({
+                ...m,
+                [e]: t
+            });
+        },
+        setDateRange: C,
+        setTimeRange: y,
+        ...u,
+        setOpen(t) {
+            !t && !((null == m ? void 0 : m.start) && (null == m ? void 0 : m.end)) && (null == A ? void 0 : A.start) && (null == A ? void 0 : A.end) && g && R(A, {
+                start: (null == v ? void 0 : v.start) || _(e.placeholderValue),
+                end: (null == v ? void 0 : v.end) || _(e.placeholderValue)
+            }), u.setOpen(t);
+        },
+        validationState: L,
+        isInvalid: D,
+        formatValue(t, n) {
+            let i;
+            if (!m || !m.start || !m.end)
+                return null;
+            let a = 'timeZone' in m.start ? m.start.timeZone : void 0, o = e.granularity || (m.start && 'minute' in m.start ? 'minute' : 'day'), s = 'timeZone' in m.end ? m.end.timeZone : void 0, l = e.granularity || (m.end && 'minute' in m.end ? 'minute' : 'day'), u = d(n, {
+                    granularity: o,
+                    timeZone: a,
+                    hideTimeZone: e.hideTimeZone,
+                    hourCycle: e.hourCycle,
+                    showEra: 'gregory' === m.start.calendar.identifier && 'BC' === m.start.era || 'gregory' === m.end.calendar.identifier && 'BC' === m.end.era
+                }), c = m.start.toDate(a || 'UTC'), _ = m.end.toDate(s || 'UTC'), E = new r.CN(t, u);
+            if (a === s && o === l && 0 !== m.start.compare(m.end)) {
+                try {
+                    let e = E.formatRangeToParts(c, _), t = -1;
+                    for (let n = 0; n < e.length; n++) {
+                        let r = e[n];
+                        if ('shared' === r.source && 'literal' === r.type)
+                            t = n;
+                        else if ('endRange' === r.source)
+                            break;
+                    }
+                    let n = '', r = '';
+                    for (let i = 0; i < e.length; i++)
+                        i < t ? n += e[i].value : i > t && (r += e[i].value);
+                    return {
+                        start: n,
+                        end: r
+                    };
+                } catch (e) {
+                }
+                i = E;
+            } else {
+                let a = d(n, {
+                    granularity: l,
+                    timeZone: s,
+                    hideTimeZone: e.hideTimeZone,
+                    hourCycle: e.hourCycle
+                });
+                i = new r.CN(t, a);
+            }
+            return {
+                start: E.format(c),
+                end: i.format(_)
+            };
+        }
+    };
 }
-
-function x(e) {
-  let {
-    placeholderValue: t = new r.qp,
-    minValue: n,
-    maxValue: i,
-    granularity: s
-  } = e, [u, c] = (0, a.zk)(e.value, e.defaultValue, e.onChange), l = u || t, d = l && "day" in l ? l : void 0, f = e.defaultValue && "timeZone" in e.defaultValue ? e.defaultValue.timeZone : void 0, p = (0, o.useMemo)(() => {
-    let e = l && "timeZone" in l ? l.timeZone : void 0;
-    return (e || f) && t ? (0, r.fW)(w(t), e || f) : w(t)
-  }, [t, l, f]), h = (0, o.useMemo)(() => w(n, d), [n, d]), m = (0, o.useMemo)(() => w(i, d), [i, d]), g = (0, o.useMemo)(() => u && "day" in u ? (0, r.ZB)(u) : u, [u]), _ = (0, o.useMemo)(() => null == u ? null : w(u), [u]);
-  return {
-    ...E({
-      ...e,
-      value: _,
-      defaultValue: void 0,
-      minValue: h,
-      maxValue: m,
-      onChange: e => {
-        c(d || f ? e : e && (0, r.ZB)(e))
-      },
-      granularity: s || "minute",
-      maxGranularity: "hour",
-      placeholderValue: p,
-      createCalendar: () => new r.IQ
-    }),
-    timeValue: g
-  }
+function N(e) {
+    let {
+            placeholderValue: t = new r.qp(),
+            minValue: n,
+            maxValue: i,
+            granularity: s
+        } = e, [l, u] = (0, a.zk)(e.value, e.defaultValue, e.onChange), c = l || t, d = c && 'day' in c ? c : void 0, _ = e.defaultValue && 'timeZone' in e.defaultValue ? e.defaultValue.timeZone : void 0, E = (0, o.useMemo)(() => {
+            let e = c && 'timeZone' in c ? c.timeZone : void 0;
+            return (e || _) && t ? (0, r.fW)(v(t), e || _) : v(t);
+        }, [
+            t,
+            c,
+            _
+        ]), f = (0, o.useMemo)(() => v(n, d), [
+            n,
+            d
+        ]), h = (0, o.useMemo)(() => v(i, d), [
+            i,
+            d
+        ]), p = (0, o.useMemo)(() => l && 'day' in l ? (0, r.ZB)(l) : l, [l]), m = (0, o.useMemo)(() => null == l ? null : v(l), [l]);
+    return {
+        ...S({
+            ...e,
+            value: m,
+            defaultValue: void 0,
+            minValue: f,
+            maxValue: h,
+            onChange: e => {
+                u(d || _ ? e : e && (0, r.ZB)(e));
+            },
+            granularity: s || 'minute',
+            maxGranularity: 'hour',
+            placeholderValue: E,
+            createCalendar: () => new r.IQ()
+        }),
+        timeValue: p
+    };
 }
-
-function w(e, t = (0, r.Lg)((0, r.iT)())) {
-  return e ? "day" in e ? e : (0, r.IO)(t, e) : null
+function v(e, t = (0, r.Lg)((0, r.iT)())) {
+    return e ? 'day' in e ? e : (0, r.IO)(t, e) : null;
 }

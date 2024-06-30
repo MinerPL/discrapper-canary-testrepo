@@ -1,11 +1,9 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return i;
+    }
 }), n(789020);
-var i = n(981631);
-
-function r(e, t) {
-  return t !== i.xjy.INSTANCE && null != e && null != e.flags && !!(e.flags & t)
+var r = n(981631);
+function i(e, t) {
+    return t !== r.xjy.INSTANCE && null != e && null != e.flags && !!(e.flags & t);
 }

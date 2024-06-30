@@ -1,9 +1,7 @@
-"use strict";
 n.d(t, {
-  O: function() {
-    return s
-  }
+    O: function () {
+        return a;
+    }
 });
-var i = n(470079),
-  r = n(626135);
-let s = () => i.useContext(r.AnalyticsContext)
+var r = n(470079), i = n(626135);
+let a = () => r.useContext(i.AnalyticsContext);

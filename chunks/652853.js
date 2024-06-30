@@ -1,39 +1,39 @@
-"use strict";
 n.d(t, {
-  X: function() {
-    return u
-  },
-  z: function() {
-    return _
-  }
+    X: function () {
+        return u;
+    },
+    z: function () {
+        return c;
+    }
 });
-var i, r = n(735250),
-  s = n(470079),
-  o = n(541049),
-  a = n(231338);
-let l = s.createContext({
-  profileType: null,
-  theme: null !== (i = (0, o.Z)()) && void 0 !== i ? i : a.BR.DARK,
-  primaryColor: null,
-  secondaryColor: null
+var r, i = n(735250), a = n(470079), o = n(541049), s = n(231338);
+let l = a.createContext({
+    profileType: null,
+    theme: null !== (r = (0, o.Z)()) && void 0 !== r ? r : s.BR.DARK,
+    primaryColor: null,
+    secondaryColor: null
 });
-
 function u(e) {
-  let {
-    profileType: t,
-    theme: n,
-    primaryColor: i,
-    secondaryColor: o,
-    children: a
-  } = e, u = s.useMemo(() => ({
-    profileType: t,
-    theme: n,
-    primaryColor: i,
-    secondaryColor: o
-  }), [t, n, i, o]);
-  return (0, r.jsx)(l.Provider, {
-    value: u,
-    children: a
-  })
+    let {
+            profileType: t,
+            theme: n,
+            primaryColor: r,
+            secondaryColor: o,
+            children: s
+        } = e, u = a.useMemo(() => ({
+            profileType: t,
+            theme: n,
+            primaryColor: r,
+            secondaryColor: o
+        }), [
+            t,
+            n,
+            r,
+            o
+        ]);
+    return (0, i.jsx)(l.Provider, {
+        value: u,
+        children: s
+    });
 }
-let _ = () => s.useContext(l)
+let c = () => a.useContext(l);

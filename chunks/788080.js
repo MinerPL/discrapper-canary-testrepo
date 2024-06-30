@@ -1,93 +1,82 @@
-"use strict";
-E.d(e, {
-  FB: function() {
-    return l
-  },
-  Pu: function() {
-    return O
-  },
-  Vt: function() {
-    return L
-  },
-  XX: function() {
-    return o
-  },
-  Zs: function() {
-    return C
-  },
-  c7: function() {
-    return T
-  },
-  eS: function() {
-    return s
-  },
-  fr: function() {
-    return c
-  },
-  ox: function() {
-    return u
-  }
-}), E(724458);
-var t = E(913527),
-  I = E.n(t),
-  _ = E(118139),
-  i = E(531441),
-  r = E(800530),
-  N = E(981631),
-  S = E(959517),
-  A = E(689938);
-
-function o(n) {
-  return I()().to(I()(n))
+n.d(t, {
+    FB: function () {
+        return T;
+    },
+    Pu: function () {
+        return O;
+    },
+    Vt: function () {
+        return s;
+    },
+    XX: function () {
+        return o;
+    },
+    Zs: function () {
+        return l;
+    },
+    c7: function () {
+        return L;
+    },
+    eS: function () {
+        return A;
+    },
+    fr: function () {
+        return c;
+    },
+    ox: function () {
+        return u;
+    }
+}), n(724458);
+var E = n(913527), _ = n.n(E), i = n(406432), r = n(531441), I = n(800530), S = n(981631), a = n(959517), N = n(689938);
+function o(e) {
+    return _()().to(_()(e));
 }
-
-function s(n) {
-  var e, E;
-  return (0, _.CO)(n.filename) || (0, _.NU)(n.filename) ? "".concat(S._j).concat(null !== (e = n.filename) && void 0 !== e ? e : ".png") : null !== (E = n.filename) && void 0 !== E ? E : ""
+function A(e) {
+    var t, n;
+    return (0, i.CO)(e.filename) || (0, i.NU)(e.filename) ? ''.concat(a._j).concat(null !== (t = e.filename) && void 0 !== t ? t : '.png') : null !== (n = e.filename) && void 0 !== n ? n : '';
 }
-
-function c(n) {
-  var e, E, t, I;
-  if (null == n.fields) return;
-  let _ = n.fields.reduce((n, e) => (n[e.rawName] = e.rawValue, n), {});
-  return {
-    header: null !== (e = _[r.I5.HEADER]) && void 0 !== e ? e : "",
-    icon: _[r.I5.ICON_TYPE],
-    body: null !== (E = _[r.I5.BODY]) && void 0 !== E ? E : "",
-    ctas: (null !== (t = _[r.I5.CTAS]) && void 0 !== t ? t : "").split(",").filter(n => "" !== n),
-    timestamp: parseFloat(null !== (I = _[r.I5.TIMESTAMP]) && void 0 !== I ? I : 0),
-    theme: _[r.I5.THEME],
-    learn_more_link: _[r.I5.LEARN_MORE_LINK],
-    classification_id: _[r.I5.CLASSIFICATION_ID]
-  }
+function c(e) {
+    var t, n, E, _;
+    if (null == e.fields)
+        return;
+    let i = e.fields.reduce((e, t) => (e[t.rawName] = t.rawValue, e), {});
+    return {
+        header: null !== (t = i[I.I5.HEADER]) && void 0 !== t ? t : '',
+        icon: i[I.I5.ICON_TYPE],
+        body: null !== (n = i[I.I5.BODY]) && void 0 !== n ? n : '',
+        ctas: (null !== (E = i[I.I5.CTAS]) && void 0 !== E ? E : '').split(',').filter(e => '' !== e),
+        timestamp: parseFloat(null !== (_ = i[I.I5.TIMESTAMP]) && void 0 !== _ ? _ : 0),
+        theme: i[I.I5.THEME],
+        learn_more_link: i[I.I5.LEARN_MORE_LINK],
+        classification_id: i[I.I5.CLASSIFICATION_ID]
+    };
 }
-
-function L(n) {
-  if (n.type === i.lK.MESSAGE) return "" === n.content && 0 === n.attachments.length;
-  return !0
+function s(e) {
+    if (e.type === r.lK.MESSAGE)
+        return '' === e.content && 0 === e.attachments.length;
+    return !0;
 }
-let u = n => ({
-    [r.bK.DIDNT_VIOLATE_POLICY]: A.Z.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DIDNT_VIOLATE_POLICY,
-    [r.bK.TOO_STRICT_UNFAIR]: A.Z.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_TOO_STRICT_UNFAIR,
-    [r.bK.DONT_AGREE_PENALTY]: A.Z.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DONT_AGREE_PENALTY,
-    [r.bK.SOMETHING_ELSE]: A.Z.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_SOMETHING_ELSE
-  })[n],
-  T = n => null == n || 0 === n.length ? "" : 1 === n.length ? n.toUpperCase() : "".concat(n.charAt(0).toUpperCase()).concat(n.slice(1));
-
-function l(n) {
-  return null != n && null != n.guild_metadata
+let u = e => ({
+        [I.bK.DIDNT_VIOLATE_POLICY]: N.Z.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DIDNT_VIOLATE_POLICY,
+        [I.bK.TOO_STRICT_UNFAIR]: N.Z.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_TOO_STRICT_UNFAIR,
+        [I.bK.DONT_AGREE_PENALTY]: N.Z.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DONT_AGREE_PENALTY,
+        [I.bK.SOMETHING_ELSE]: N.Z.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_SOMETHING_ELSE
+    }[e]), L = e => null == e || 0 === e.length ? '' : 1 === e.length ? e.toUpperCase() : ''.concat(e.charAt(0).toUpperCase()).concat(e.slice(1));
+function T(e) {
+    return null != e && null != e.guild_metadata;
 }
-let C = n => {
-  if (n === N.evJ.DSA_APPEAL_REQUEST_DEFLECTION) return A.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_DEFLECTION_ERROR;
-  return A.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ERROR
+let l = e => {
+    if (e === S.evJ.DSA_APPEAL_REQUEST_DEFLECTION)
+        return N.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_DEFLECTION_ERROR;
+    return N.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ERROR;
 };
-
-function O(n) {
-  let e = n.max_expiration_time;
-  if (null == e) return null;
-  try {
-    return new Date(e)
-  } catch {
-    return null
-  }
+function O(e) {
+    let t = e.max_expiration_time;
+    if (null == t)
+        return null;
+    try {
+        return new Date(t);
+    } catch {
+        return null;
+    }
 }

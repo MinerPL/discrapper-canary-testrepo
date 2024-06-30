@@ -1,67 +1,63 @@
-"use strict";
-n.d(t, {
-  Z: function() {
-    return c
-  }
-});
-var i = n(735250),
-  r = n(481060),
-  s = n(86813),
-  o = n(826026),
-  a = n(135163),
-  l = n(984168),
-  u = n(314734),
-  _ = n(689938),
-  d = n(36e3);
-
-function c(e) {
-  let t, {
-    sortOrder: n,
-    onSortOptionClick: c
-  } = e;
-  switch (n) {
-    case u.bS.POPULAR:
-      t = _.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR;
-      break;
-    case u.bS.ALPHABETICAL:
-      t = _.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_ALPHABETICAL
-  }
-  return (0, i.jsx)(r.Popout, {
-    renderPopout: e => {
-      let {
-        closePopout: t
-      } = e;
-      return (0, i.jsx)(l.Z, {
-        sortOrder: n,
-        onSortOptionClick: c,
-        closePopout: t
-      })
-    },
-    position: "bottom",
-    align: "left",
-    children: (e, n) => {
-      let {
-        isShown: l
-      } = n;
-      return (0, i.jsxs)(r.Button, {
-        ...e,
-        size: r.Button.Sizes.MIN,
-        color: r.Button.Colors.CUSTOM,
-        className: d.sortDropdown,
-        innerClassName: d.sortDropdownInner,
-        "aria-label": _.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_HEADER,
-        children: [(0, i.jsx)(a.Z, {
-          className: d.sortIconMargin
-        }), (0, i.jsx)(r.Text, {
-          variant: "text-sm/medium",
-          color: "text-normal",
-          children: t
-        }), l ? (0, i.jsx)(o.Z, {
-          width: 20
-        }) : (0, i.jsx)(s.Z, {
-          width: 20
-        })]
-      })
+t.d(n, {
+    Z: function () {
+        return c;
     }
-  })
+});
+var i = t(735250), l = t(481060), a = t(984168), r = t(314734), s = t(689938), o = t(506485);
+function c(e) {
+    let n, {
+            sortOrder: t,
+            onSortOptionClick: c
+        } = e;
+    switch (t) {
+    case r.bS.POPULAR:
+        n = s.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR;
+        break;
+    case r.bS.ALPHABETICAL:
+        n = s.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_ALPHABETICAL;
+    }
+    return (0, i.jsx)(l.Popout, {
+        renderPopout: e => {
+            let {closePopout: n} = e;
+            return (0, i.jsx)(a.Z, {
+                sortOrder: t,
+                onSortOptionClick: c,
+                closePopout: n
+            });
+        },
+        position: 'bottom',
+        align: 'left',
+        children: (e, t) => {
+            let {isShown: a} = t;
+            return (0, i.jsxs)(l.Button, {
+                ...e,
+                size: l.Button.Sizes.MIN,
+                color: l.Button.Colors.CUSTOM,
+                className: o.sortDropdown,
+                innerClassName: o.sortDropdownInner,
+                'aria-label': s.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_HEADER,
+                children: [
+                    (0, i.jsx)(l.ArrowsUpDownIcon, {
+                        size: 'xs',
+                        color: 'currentColor',
+                        className: o.sortIconMargin
+                    }),
+                    (0, i.jsx)(l.Text, {
+                        variant: 'text-sm/medium',
+                        color: 'text-normal',
+                        children: n
+                    }),
+                    a ? (0, i.jsx)(l.ChevronSmallUpIcon, {
+                        size: 'custom',
+                        color: 'currentColor',
+                        width: 20
+                    }) : (0, i.jsx)(l.ChevronSmallDownIcon, {
+                        size: 'custom',
+                        color: 'currentColor',
+                        width: 20
+                    })
+                ]
+            });
+        }
+    });
 }

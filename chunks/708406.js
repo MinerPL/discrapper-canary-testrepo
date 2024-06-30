@@ -1,30 +1,25 @@
-"use strict";
 n.d(t, {
-  _: function() {
-    return r
-  }
+    _: function () {
+        return i;
+    }
 });
-var i = n(981631);
-
-function r(e, t, n) {
-  let r = null != t ? {
-      [t]: 1
-    } : {},
-    {
-      offset: s,
-      limit: o,
-      results: a,
-      totalResults: l
-    } = null != n ? n : {};
-  return {
-    search_type: i.aib.GIF,
-    load_id: e,
-    limit: o,
-    offset: s,
-    page: null != o && null != s ? Math.floor(s / o) + 1 : 1,
-    total_results: l,
-    page_results: null != a ? a.length : null,
-    num_modifiers: Object.keys(r).length,
-    modifiers: r
-  }
+var r = n(981631);
+function i(e, t, n) {
+    let i = null != t ? { [t]: 1 } : {}, {
+            offset: a,
+            limit: o,
+            results: s,
+            totalResults: l
+        } = null != n ? n : {};
+    return {
+        search_type: r.aib.GIF,
+        load_id: e,
+        limit: o,
+        offset: a,
+        page: null != o && null != a ? Math.floor(a / o) + 1 : 1,
+        total_results: l,
+        page_results: null != s ? s.length : null,
+        num_modifiers: Object.keys(i).length,
+        modifiers: i
+    };
 }

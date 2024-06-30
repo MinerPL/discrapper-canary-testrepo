@@ -1,67 +1,46 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return R
-  }
-});
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(512722),
-  l = n.n(a),
-  u = n(442837),
-  _ = n(481060),
-  d = n(493683),
-  c = n(37234),
-  E = n(904245),
-  I = n(541716),
-  T = n(957730),
-  h = n(592125),
-  S = n(699516),
-  f = n(51144),
-  N = n(838440),
-  A = n(981631),
-  m = n(689938),
-  O = n(760);
-
-function R(e) {
-  let {
-    user: t,
-    autoFocus: n = !1,
-    className: s,
-    inputClassName: a,
-    onSend: R
-  } = e, C = r.useRef(null), p = (0, u.e7)([S.Z], () => S.Z.isBlocked(t.id)), g = r.useCallback(e => {
-    if ("Enter" === e.key) {
-      e.preventDefault(), l()(null != C.current, "Keypress on Input when not mounted");
-      let n = C.current.value.trim();
-      return (0, N.v)({
-        type: I.I.NORMAL,
-        content: n,
-        channel: null
-      }).then(e => {
-        let {
-          valid: i
-        } = e;
-        if (!!i) d.Z.openPrivateChannel(t.id, !1, !1, "Quick Message Input").then(e => {
-          let t = h.Z.getChannel(e);
-          l()(null != t, "Newly created PrivateChannel is null"), E.Z.sendMessage(t.id, T.ZP.parse(t, n)), (0, c.xf)()
-        }), null == R || R()
-      }), !0
+    Z: function () {
+        return N;
     }
-    e.which === A.yXg.SPACE && e.stopPropagation()
-  }, [t, R]), L = p ? m.Z.Messages.QUICK_DM_BLOCKED : m.Z.Messages.QUICK_DM_USER.format({
-    name: f.ZP.getName(t)
-  });
-  return (0, i.jsx)(_.TextInput, {
-    className: s,
-    inputClassName: o()(a, O.input),
-    inputRef: C,
-    autoFocus: n,
-    placeholder: L,
-    "aria-label": L,
-    onKeyPress: g,
-    disabled: p
-  })
+});
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(512722), l = n.n(s), u = n(442837), c = n(481060), d = n(493683), _ = n(37234), E = n(904245), f = n(541716), h = n(957730), p = n(592125), m = n(699516), I = n(51144), T = n(838440), g = n(981631), S = n(689938), A = n(151915);
+function N(e) {
+    let {
+            user: t,
+            autoFocus: n = !1,
+            className: a,
+            inputClassName: s,
+            onSend: N
+        } = e, v = i.useRef(null), O = (0, u.e7)([m.Z], () => m.Z.isBlocked(t.id)), R = i.useCallback(e => {
+            if ('Enter' === e.key) {
+                e.preventDefault(), l()(null != v.current, 'Keypress on Input when not mounted');
+                let n = v.current.value.trim();
+                return (0, T.v)({
+                    type: f.I.NORMAL,
+                    content: n,
+                    channel: null
+                }).then(e => {
+                    let {valid: r} = e;
+                    if (!!r)
+                        d.Z.openPrivateChannel(t.id, !1, !1, 'Quick Message Input').then(e => {
+                            let t = p.Z.getChannel(e);
+                            l()(null != t, 'Newly created PrivateChannel is null'), E.Z.sendMessage(t.id, h.ZP.parse(t, n)), (0, _.xf)();
+                        }), null == N || N();
+                }), !0;
+            }
+            e.which === g.yXg.SPACE && e.stopPropagation();
+        }, [
+            t,
+            N
+        ]), C = O ? S.Z.Messages.QUICK_DM_BLOCKED : S.Z.Messages.QUICK_DM_USER.format({ name: I.ZP.getName(t) });
+    return (0, r.jsx)(c.TextInput, {
+        className: a,
+        inputClassName: o()(s, A.input),
+        inputRef: v,
+        autoFocus: n,
+        placeholder: C,
+        'aria-label': C,
+        onKeyPress: R,
+        disabled: O
+    });
 }

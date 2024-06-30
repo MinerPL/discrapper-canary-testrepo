@@ -1,51 +1,43 @@
-"use strict";
 n(47120);
-var i, r = n(442837),
-  s = n(570140),
-  o = n(168232),
-  a = n(430824),
-  l = n(594174),
-  u = n(987338),
-  _ = n(48541);
-
+var r, i = n(442837), a = n(570140), o = n(168232), s = n(430824), l = n(594174), u = n(987338), c = n(48541);
 function d(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: n,
-    enumerable: !0,
-    configurable: !0,
-    writable: !0
-  }) : e[t] = n, e
+    return t in e ? Object.defineProperty(e, t, {
+        value: n,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+    }) : e[t] = n, e;
 }
-let c = "production" === _.C.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === _.C.STAGING;
-
+let _ = 'production' === c.C.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === c.C.STAGING;
 function E() {
-  c = (0, o.QI)(l.default.getCurrentUser())
+    _ = (0, o.QI)(l.default.getCurrentUser());
 }
-class I extends(i = r.ZP.Store) {
-  initialize() {
-    this.waitFor(l.default, a.Z), Object.defineProperties(this, {
-      isDeveloper: {
-        configurable: !1,
-        get: () => c,
-        set: () => {}
-      }
-    }), E(), setTimeout(() => Object.freeze(this))
-  }
-  getExperimentDescriptor() {
-    return c ? {
-      type: "developer",
-      name: "discord_dev_testing",
-      revision: 1,
-      override: !0,
-      bucket: u.NZ.TREATMENT_1
-    } : null
-  }
-  constructor(...e) {
-    super(...e), d(this, "isDeveloper", !1)
-  }
+class f extends (r = i.ZP.Store) {
+    initialize() {
+        this.waitFor(l.default, s.Z), Object.defineProperties(this, {
+            isDeveloper: {
+                configurable: !1,
+                get: () => _,
+                set: () => {
+                }
+            }
+        }), E(), setTimeout(() => Object.freeze(this));
+    }
+    getExperimentDescriptor() {
+        return _ ? {
+            type: 'developer',
+            name: 'discord_dev_testing',
+            revision: 1,
+            override: !0,
+            bucket: u.NZ.TREATMENT_1
+        } : null;
+    }
+    constructor(...e) {
+        super(...e), d(this, 'isDeveloper', !1);
+    }
 }
-d(I, "displayName", "DeveloperExperimentStore"), t.Z = new I(s.Z, {
-  CONNECTION_OPEN: E,
-  OVERLAY_INITIALIZE: E,
-  CURRENT_USER_UPDATE: E
-})
+d(f, 'displayName', 'DeveloperExperimentStore'), t.Z = new f(a.Z, {
+    CONNECTION_OPEN: E,
+    OVERLAY_INITIALIZE: E,
+    CURRENT_USER_UPDATE: E
+});

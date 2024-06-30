@@ -1,13 +1,9 @@
-"use strict";
-
-function n() {
-  let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
-    s = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-    t = window.GLOBAL_ENV.GUILD_TEMPLATE_HOST;
-  return "".concat(s ? "".concat(location.protocol) : "", "//").concat(t).concat("/".concat(e))
+function s() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : '', t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1], n = window.GLOBAL_ENV.GUILD_TEMPLATE_HOST;
+    return ''.concat(t ? ''.concat(location.protocol) : '', '//').concat(n).concat('/'.concat(e));
 }
-t.d(s, {
-  Z: function() {
-    return n
-  }
-})
+n.d(t, {
+    Z: function () {
+        return s;
+    }
+});

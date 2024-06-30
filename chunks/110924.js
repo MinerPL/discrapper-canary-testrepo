@@ -1,14 +1,12 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return i;
+    }
 });
-var i = n(470079);
-
-function r(e) {
-  let t = (0, i.useRef)();
-  return (0, i.useEffect)(() => {
-    t.current = e
-  }, [e]), t.current
+var r = n(470079);
+function i(e) {
+    let t = (0, r.useRef)();
+    return (0, r.useEffect)(() => {
+        t.current = e;
+    }, [e]), t.current;
 }

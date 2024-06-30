@@ -1,55 +1,51 @@
-"use strict";
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(952265),
-  s = n(468026),
-  o = n(689938);
+var i = n(952265), a = n(468026), o = n(689938);
 t.Z = {
-  show(e) {
-    let {
-      title: t,
-      body: n,
-      confirmColor: o,
-      confirmText: a,
-      cancelText: l,
-      onConfirm: u,
-      onCancel: _,
-      onCloseCallback: d,
-      secondaryConfirmText: c,
-      onConfirmSecondary: E,
-      className: I,
-      titleClassName: T
-    } = e;
-    (0, r.h7)(e => (0, i.jsx)(s.default, {
-      ...e,
-      title: t,
-      body: n,
-      confirmColor: o,
-      confirmText: a,
-      cancelText: l,
-      onConfirm: u,
-      onCancel: _,
-      secondaryConfirmText: c,
-      onConfirmSecondary: E,
-      className: I,
-      titleClassName: T
-    }), {
-      onCloseCallback: d
-    })
-  },
-  close() {},
-  confirm(e) {
-    return new Promise(t => {
-      this.show({
-        onConfirm() {
-          t(!0)
-        },
-        cancelText: o.Z.Messages.CANCEL,
-        onCancel() {
-          t(!1)
-        },
-        ...e
-      })
-    })
-  }
-}
+    show(e) {
+        let {
+            title: t,
+            body: n,
+            confirmColor: o,
+            confirmText: s,
+            cancelText: l,
+            onConfirm: u,
+            onCancel: c,
+            onCloseCallback: d,
+            secondaryConfirmText: _,
+            onConfirmSecondary: E,
+            className: f,
+            titleClassName: h
+        } = e;
+        (0, i.h7)(e => (0, r.jsx)(a.default, {
+            ...e,
+            title: t,
+            body: n,
+            confirmColor: o,
+            confirmText: s,
+            cancelText: l,
+            onConfirm: u,
+            onCancel: c,
+            secondaryConfirmText: _,
+            onConfirmSecondary: E,
+            className: f,
+            titleClassName: h
+        }), { onCloseCallback: d });
+    },
+    close() {
+    },
+    confirm(e) {
+        return new Promise(t => {
+            this.show({
+                onConfirm() {
+                    t(!0);
+                },
+                cancelText: o.Z.Messages.CANCEL,
+                onCancel() {
+                    t(!1);
+                },
+                ...e
+            });
+        });
+    }
+};

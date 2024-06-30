@@ -1,7 +1,6 @@
-"use strict";
 n.d(t, {
-  e: function() {
-    return i.e
-  }
+    e: function () {
+        return r.e;
+    }
 });
-var i = n(260305)
+var r = n(260305);

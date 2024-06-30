@@ -1,21 +1,17 @@
-"use strict";
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(120356),
-  s = n.n(r),
-  o = n(481060),
-  a = n(447960);
+var i = n(120356), a = n.n(i), o = n(481060), s = n(693382);
 t.Z = e => {
-  let {
-    className: t,
-    children: n,
-    "aria-label": r,
-    id: l
-  } = e;
-  return (0, i.jsx)(o.H, {
-    className: s()(t, a.container),
-    "aria-label": r,
-    id: l,
-    children: n
-  })
-}
+    let {
+        className: t,
+        children: n,
+        'aria-label': i,
+        id: l
+    } = e;
+    return (0, r.jsx)(o.H, {
+        className: a()(t, s.container),
+        'aria-label': i,
+        id: l,
+        children: n
+    });
+};

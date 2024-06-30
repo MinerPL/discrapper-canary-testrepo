@@ -1,40 +1,38 @@
-"use strict";
 n.d(t, {
-  $E: function() {
-    return a
-  },
-  Ky: function() {
-    return s
-  },
-  RF: function() {
-    return o
-  }
+    $E: function () {
+        return s;
+    },
+    Ky: function () {
+        return a;
+    },
+    RF: function () {
+        return o;
+    }
 }), n(47120);
-let i = {};
-
-function r(e, t) {
-  return "".concat(e, ":").concat(t)
+let r = {};
+function i(e, t) {
+    return ''.concat(e, ':').concat(t);
 }
-
-function s(e, t) {
-  return i[r(e, t)]
+function a(e, t) {
+    return r[i(e, t)];
 }
-
 function o(e, t, n) {
-  let s = r(e, t);
-  i[s] = {
-    ...i[s],
-    ...n
-  }
+    let a = i(e, t);
+    r[a] = {
+        ...r[a],
+        ...n
+    };
 }
-
-function a(e) {
-  for (let t in i) {
-    let [n, r] = function(e) {
-      let [t, n] = e.split(":");
-      return [t, n]
-    }(t);
-    e(n, r, i[t])
-  }
-  i = {}
+function s(e) {
+    for (let t in r) {
+        let [n, i] = function (e) {
+            let [t, n] = e.split(':');
+            return [
+                t,
+                n
+            ];
+        }(t);
+        e(n, i, r[t]);
+    }
+    r = {};
 }

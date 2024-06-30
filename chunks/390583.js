@@ -1,79 +1,69 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return _
-  }
-}), t(47120), t(653041);
-var n = t(735250),
-  i = t(470079),
-  l = t(481060);
-t(674180);
-var a = t(723047),
-  r = t(727843),
-  o = t(290348),
-  c = t(764163),
-  d = t(155758),
-  u = t(293810),
-  E = t(689938);
-
-function _() {
-  let {
-    editStateId: e,
-    guildId: s
-  } = (0, r.N)(), [t, _] = o.UE(e), I = i.useMemo(() => new Set(t.map(e => e.ref_id)), [t]);
-
-  function T(e, s) {
+n.d(t, {
+    Z: function () {
+        return E;
+    }
+}), n(47120), n(653041);
+var s = n(735250), a = n(470079), i = n(481060);
+n(674180);
+var r = n(723047), l = n(727843), o = n(290348), c = n(764163), d = n(155758), u = n(293810), _ = n(689938);
+function E() {
     let {
-      channelId: n,
-      description: i,
-      emojiId: l,
-      emojiName: a
-    } = e, r = [...t], o = {
-      name: "",
-      description: i,
-      emoji_id: l,
-      emoji_name: a,
-      ref_type: u.Qs.CHANNEL,
-      ref_id: n
-    };
-    null != s ? r[s] = o : r.push(o), _(r)
-  }
-  let N = (0, a.mY)();
-  return (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsx)(d.p, {
-      benefits: t,
-      onEdit: function(e) {
-        (0, l.openModal)(i => (0, n.jsx)(c.x3, {
-          ...i,
-          guildId: s,
-          omitChannelIds: I,
-          initialData: t[e],
-          onSave: s => T(s, e),
-          onDelete: () => (function(e) {
-            let s = [...t];
-            s.splice(e, 1), _(s)
-          })(e)
-        }))
-      },
-      onMove: function(e, s) {
-        let n = [...t],
-          [i] = n.splice(e, 1);
-        n.splice(s, 0, i), _(n)
-      },
-      guildId: s
-    }), t.length > 0 && (0, n.jsx)(l.Spacer, {
-      size: 8
-    }), (0, n.jsx)(d.s, {
-      onClick: function() {
-        (0, l.openModal)(e => (0, n.jsx)(c.x3, {
-          ...e,
-          guildId: s,
-          omitChannelIds: I,
-          onSave: e => T(e)
-        }))
-      },
-      disabled: N,
-      children: E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_CHANNEL_BENEFITS_ADD_BUTTON_TEXT
-    })]
-  })
+            editStateId: e,
+            guildId: t
+        } = (0, l.N)(), [n, E] = o.UE(e), I = a.useMemo(() => new Set(n.map(e => e.ref_id)), [n]);
+    function T(e, t) {
+        let {
+                channelId: s,
+                description: a,
+                emojiId: i,
+                emojiName: r
+            } = e, l = [...n], o = {
+                name: '',
+                description: a,
+                emoji_id: i,
+                emoji_name: r,
+                ref_type: u.Qs.CHANNEL,
+                ref_id: s
+            };
+        null != t ? l[t] = o : l.push(o), E(l);
+    }
+    let m = (0, r.mY)();
+    return (0, s.jsxs)(s.Fragment, {
+        children: [
+            (0, s.jsx)(d.p, {
+                benefits: n,
+                onEdit: function (e) {
+                    (0, i.openModal)(a => (0, s.jsx)(c.x3, {
+                        ...a,
+                        guildId: t,
+                        omitChannelIds: I,
+                        initialData: n[e],
+                        onSave: t => T(t, e),
+                        onDelete: () => function (e) {
+                            let t = [...n];
+                            t.splice(e, 1), E(t);
+                        }(e)
+                    }));
+                },
+                onMove: function (e, t) {
+                    let s = [...n], [a] = s.splice(e, 1);
+                    s.splice(t, 0, a), E(s);
+                },
+                guildId: t
+            }),
+            n.length > 0 && (0, s.jsx)(i.Spacer, { size: 8 }),
+            (0, s.jsx)(d.s, {
+                onClick: function () {
+                    (0, i.openModal)(e => (0, s.jsx)(c.x3, {
+                        ...e,
+                        guildId: t,
+                        omitChannelIds: I,
+                        onSave: e => T(e)
+                    }));
+                },
+                disabled: m,
+                children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_CHANNEL_BENEFITS_ADD_BUTTON_TEXT
+            })
+        ]
+    });
 }

@@ -1,112 +1,102 @@
-"use strict";
-t.d(s, {
-  UT: function() {
-    return C
-  },
-  _4: function() {
-    return N
-  },
-  cm: function() {
-    return m
-  },
-  e: function() {
-    return h
-  },
-  eg: function() {
-    return x
-  },
-  lJ: function() {
-    return S
-  },
-  rY: function() {
-    return g
-  },
-  uo: function() {
-    return R
-  }
-}), t(724458), t(653041), t(47120);
-var n = t(470079),
-  i = t(658722),
-  l = t.n(i),
-  a = t(442837),
-  r = t(271383),
-  o = t(594174),
-  c = t(626135),
-  d = t(823379),
-  u = t(892880),
-  E = t(51144),
-  _ = t(480608),
-  I = t(203377),
-  T = t(981631);
-let N = 50,
-  m = 1e3;
-
-function S(e, s) {
-  let t = (0, a.Wu)([r.ZP], () => {
-      let t = r.ZP.getMembers(e);
-      return null == s ? t : t.filter(s)
-    }, [e, s]),
-    i = (0, a.cj)([o.default], () => t.reduce((e, s) => {
-      let t = o.default.getUser(s.userId);
-      return null == t ? e : (e[s.userId] = t, e)
-    }, {}), [t]);
-  return n.useMemo(() => {
-    let s = [];
-    for (let l of t) {
-      var n;
-      let t = i[l.userId];
-      null != t && s.push({
-        name: null !== (n = l.nick) && void 0 !== n ? n : E.ZP.getName(t),
-        userTag: E.ZP.getUserTag(t),
-        id: l.userId,
-        avatarSource: t.getAvatarSource(e),
-        avatarURL: t.getAvatarURL(e, 80),
-        bot: t.bot,
-        verifiedBot: t.isVerifiedBot(),
-        roles: l.roles,
-        key: l.userId,
-        user: t
-      })
+n.d(t, {
+    UT: function () {
+        return x;
+    },
+    _4: function () {
+        return m;
+    },
+    cm: function () {
+        return N;
+    },
+    e: function () {
+        return h;
+    },
+    eg: function () {
+        return C;
+    },
+    lJ: function () {
+        return S;
+    },
+    rY: function () {
+        return g;
+    },
+    uo: function () {
+        return p;
     }
-    return s
-  }, [t, i, e])
+}), n(724458), n(653041), n(47120);
+var s = n(470079), a = n(658722), i = n.n(a), r = n(442837), l = n(271383), o = n(594174), c = n(626135), d = n(823379), u = n(892880), _ = n(51144), E = n(480608), I = n(203377), T = n(981631);
+let m = 50, N = 1000;
+function S(e, t) {
+    let n = (0, r.Wu)([l.ZP], () => {
+            let n = l.ZP.getMembers(e);
+            return null == t ? n : n.filter(t);
+        }, [
+            e,
+            t
+        ]), a = (0, r.cj)([o.default], () => n.reduce((e, t) => {
+            let n = o.default.getUser(t.userId);
+            return null == n ? e : (e[t.userId] = n, e);
+        }, {}), [n]);
+    return s.useMemo(() => {
+        let t = [];
+        for (let i of n) {
+            var s;
+            let n = a[i.userId];
+            null != n && t.push({
+                name: null !== (s = i.nick) && void 0 !== s ? s : _.ZP.getName(n),
+                userTag: _.ZP.getUserTag(n),
+                id: i.userId,
+                avatarSource: n.getAvatarSource(e),
+                avatarURL: n.getAvatarURL(e, 80),
+                bot: n.bot,
+                verifiedBot: n.isVerifiedBot(),
+                roles: i.roles,
+                key: i.userId,
+                user: n
+            });
+        }
+        return t;
+    }, [
+        n,
+        a,
+        e
+    ]);
 }
-
-function h(e, s, t) {
-  return n.useEffect(() => {
-    (0, _.H)(e, s).catch(t)
-  }, [e, s]), S(e, n.useCallback(e => e.roles.includes(s), [s]))
+function h(e, t, n) {
+    return s.useEffect(() => {
+        (0, E.H)(e, t).catch(n);
+    }, [
+        e,
+        t
+    ]), S(e, s.useCallback(e => e.roles.includes(t), [t]));
 }
-
-function g(e, s) {
-  let t = n.useRef(!1);
-  n.useEffect(() => {
-    u.Z.requestMembers(e, s, 200), "" !== s && !t.current && (c.default.track(T.rMx.SEARCH_STARTED, {
-      search_type: "Role Members"
-    }), t.current = !0)
-  }, [e, s])
+function g(e, t) {
+    let n = s.useRef(!1);
+    s.useEffect(() => {
+        u.Z.requestMembers(e, t, 200), '' !== t && !n.current && (c.default.track(T.rMx.SEARCH_STARTED, { search_type: 'Role Members' }), n.current = !0);
+    }, [
+        e,
+        t
+    ]);
 }
-
-function x(e, s) {
-  let t = e.trim().toLowerCase();
-  return s.id === t || l()(t, s.name.toLowerCase()) || l()(t, s.userTag.toLowerCase())
+function C(e, t) {
+    let n = e.trim().toLowerCase();
+    return t.id === n || i()(n, t.name.toLowerCase()) || i()(n, t.userTag.toLowerCase());
 }
-
-function C(e) {
-  switch (e) {
+function x(e) {
+    switch (e) {
     case I.ZI.MEMBERS:
-      return "Members";
+        return 'Members';
     case I.ZI.PERMISSIONS:
-      return "Permissions";
+        return 'Permissions';
     case I.ZI.DISPLAY:
-      return "Role Settings";
+        return 'Role Settings';
     case I.ZI.VERIFICATIONS:
-      return "Connections";
+        return 'Connections';
     default:
-      (0, d.vE)(e)
-  }
+        (0, d.vE)(e);
+    }
 }
-
-function R(e, s) {
-  return "" === s || e.name.toLowerCase().includes(s.toLowerCase())
+function p(e, t) {
+    return '' === t || e.name.toLowerCase().includes(t.toLowerCase());
 }

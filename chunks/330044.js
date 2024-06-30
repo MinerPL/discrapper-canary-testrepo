@@ -1,15 +1,12 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return a;
+    }
 });
-var i = n(913527),
-  r = n.n(i);
-
-function s(e) {
-  return {
-    ...e,
-    expiry: r()(e.expiry)
-  }
+var r = n(913527), i = n.n(r);
+function a(e) {
+    return {
+        ...e,
+        expiry: i()(e.expiry)
+    };
 }

@@ -1,32 +1,23 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return _
-  }
+    Z: function () {
+        return c;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(120356),
-  s = n.n(r),
-  o = n(441957),
-  a = n(871499),
-  l = n(689938),
-  u = n(188156);
-
-function _(e) {
-  let {
-    popoutOpen: t,
-    onClosePopout: n,
-    onOpenPopout: r,
-    ..._
-  } = e, d = t ? l.Z.Messages.POPOUT_RETURN : l.Z.Messages.POPOUT_PLAYER;
-  return (0, i.jsx)(a.Z, {
-    label: d,
-    onClick: t ? n : r,
-    iconComponent: o.Z,
-    iconClassName: s()({
-      [u.popIn]: t
-    }),
-    ..._
-  })
+var i = n(120356), a = n.n(i), o = n(481060), s = n(871499), l = n(689938), u = n(499544);
+function c(e) {
+    let {
+            popoutOpen: t,
+            onClosePopout: n,
+            onOpenPopout: i,
+            ...c
+        } = e, d = t ? l.Z.Messages.POPOUT_RETURN : l.Z.Messages.POPOUT_PLAYER;
+    return (0, r.jsx)(s.Z, {
+        label: d,
+        onClick: t ? n : i,
+        iconComponent: o.WindowLaunchIcon,
+        iconClassName: a()({ [u.popIn]: t }),
+        ...c
+    });
 }

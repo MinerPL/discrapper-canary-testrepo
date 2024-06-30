@@ -1,51 +1,48 @@
-"use strict";
 t(47120);
-var l = t(735250),
-  a = t(470079),
-  s = t(481060),
-  i = t(897353),
-  r = t(936908),
-  u = t(22382),
-  o = t(747071),
-  c = t(586826),
-  d = t(174727),
-  f = t(990792),
-  m = t(689938),
-  h = t(330875);
-n.Z = a.memo(function(e) {
-  let {
-    sound: n,
-    volume: t,
-    disabled: g
-  } = e, [p, N] = a.useState(!1), v = a.useRef(null), {
-    file: _,
-    audio: D,
-    loadAudioFromFile: O
-  } = (0, c.p)(), x = a.useMemo(() => (0, u.Z)(n.soundId), [n]);
-  return a.useEffect(() => {
-    null == v.current && (v.current = (0, d.XG)(x, n.name).then(O))
-  }, [x, O, n.name]), (0, l.jsxs)("div", {
-    className: h.previewContainer,
-    children: [(0, l.jsx)(s.Clickable, {
-      onClick: g ? void 0 : function() {
-        null != D && (D.paused ? (D.volume = (0, o.Z)(t), D.currentTime = 0, D.play(), N(!0), D.addEventListener("ended", () => N(!1), {
-          once: !0
-        })) : (D.pause(), N(!1)))
-      },
-      className: h.playButton,
-      "aria-label": p ? m.Z.Messages.STOP : m.Z.Messages.PLAY,
-      children: p ? (0, l.jsx)(r.Z, {
-        className: h.playIcon
-      }) : (0, l.jsx)(i.Z, {
-        className: h.playIcon
-      })
-    }), (0, l.jsx)("div", {
-      className: h.waveformContainer,
-      children: (0, l.jsx)(f.Z, {
-        className: h.waveform,
-        file: _,
-        audio: D
-      })
-    })]
-  })
-})
+var l = t(735250), a = t(470079), i = t(481060), s = t(22382), r = t(747071), u = t(586826), o = t(174727), c = t(990792), d = t(689938), f = t(648635);
+n.Z = a.memo(function (e) {
+    let {
+            sound: n,
+            volume: t,
+            disabled: m
+        } = e, [h, g] = a.useState(!1), p = a.useRef(null), {
+            file: N,
+            audio: _,
+            loadAudioFromFile: v
+        } = (0, u.p)(), D = a.useMemo(() => (0, s.Z)(n.soundId), [n]);
+    return a.useEffect(() => {
+        null == p.current && (p.current = (0, o.XG)(D, n.name).then(v));
+    }, [
+        D,
+        v,
+        n.name
+    ]), (0, l.jsxs)('div', {
+        className: f.previewContainer,
+        children: [
+            (0, l.jsx)(i.Clickable, {
+                onClick: m ? void 0 : function () {
+                    null != _ && (_.paused ? (_.volume = (0, r.Z)(t), _.currentTime = 0, _.play(), g(!0), _.addEventListener('ended', () => g(!1), { once: !0 })) : (_.pause(), g(!1)));
+                },
+                className: f.playButton,
+                'aria-label': h ? d.Z.Messages.STOP : d.Z.Messages.PLAY,
+                children: h ? (0, l.jsx)(i.StopIcon, {
+                    size: 'xs',
+                    color: 'currentColor',
+                    className: f.playIcon
+                }) : (0, l.jsx)(i.PlayIcon, {
+                    size: 'xs',
+                    color: 'currentColor',
+                    className: f.playIcon
+                })
+            }),
+            (0, l.jsx)('div', {
+                className: f.waveformContainer,
+                children: (0, l.jsx)(c.Z, {
+                    className: f.waveform,
+                    file: N,
+                    audio: _
+                })
+            })
+        ]
+    });
+});

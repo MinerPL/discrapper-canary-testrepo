@@ -1,10 +1,8 @@
-"use strict";
-
-function i(e) {
-  return Array.isArray(e) ? e[0] : e
+function r(e) {
+    return Array.isArray(e) ? e[0] : e;
 }
 n.d(t, {
-  d: function() {
-    return i
-  }
-})
+    d: function () {
+        return r;
+    }
+});

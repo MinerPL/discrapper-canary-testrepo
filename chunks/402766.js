@@ -1,37 +1,26 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return o
-  }
-}), t(411104);
-var n = t(735250);
-t(470079);
-var i = t(67523),
-  l = t(865267),
-  a = t(125664),
-  r = t(981631);
-
+n.d(t, {
+    Z: function () {
+        return o;
+    }
+}), n(411104);
+var s = n(735250);
+n(470079);
+var a = n(67523), i = n(865267), r = n(125664), l = n(981631);
 function o(e) {
-  let {
-    tier: s,
-    ...t
-  } = e;
-  switch (s) {
-    case r.Eu4.TIER_1:
-      return (0, n.jsx)(i.Z, {
-        ...t
-      });
-    case r.Eu4.TIER_2:
-      return (0, n.jsx)(l.Z, {
-        ...t
-      });
-    case r.Eu4.TIER_3:
-      return (0, n.jsx)(a.Z, {
-        ...t
-      });
-    case r.Eu4.NONE:
-      return null;
+    let {
+        tier: t,
+        ...n
+    } = e;
+    switch (t) {
+    case l.Eu4.TIER_1:
+        return (0, s.jsx)(a.Z, { ...n });
+    case l.Eu4.TIER_2:
+        return (0, s.jsx)(i.Z, { ...n });
+    case l.Eu4.TIER_3:
+        return (0, s.jsx)(r.Z, { ...n });
+    case l.Eu4.NONE:
+        return null;
     default:
-      throw Error("Not a valid tier type")
-  }
+        throw Error('Not a valid tier type');
+    }
 }

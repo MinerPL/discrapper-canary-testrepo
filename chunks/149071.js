@@ -1,84 +1,61 @@
-"use strict";
 n(47120);
-var i = n(544891),
-  r = n(147913),
-  s = n(680089),
-  o = n(592125),
-  a = n(70956),
-  l = n(981631);
-
+var r = n(544891), i = n(147913), a = n(680089), o = n(592125), s = n(70956), l = n(981631);
 function u(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: n,
-    enumerable: !0,
-    configurable: !0,
-    writable: !0
-  }) : e[t] = n, e
+    return t in e ? Object.defineProperty(e, t, {
+        value: n,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+    }) : e[t] = n, e;
 }
-let _ = {},
-  d = 0,
-  c = 15 * a.Z.Millis.SECOND;
-
+let c = {}, d = 0, _ = 15 * s.Z.Millis.SECOND;
 function E() {
-  _ = {
-    ...s.Z.getCollapsedCategories()
-  }
+    c = { ...a.Z.getCollapsedCategories() };
 }
-
-function I() {
-  !__OVERLAY__ && (clearTimeout(d), d = setTimeout(() => h({}), c))
+function f() {
+    !__OVERLAY__ && (clearTimeout(d), d = setTimeout(() => p({}), _));
 }
-async function T(e, t) {
-  null == e || e === l.ME ? await i.tn.patch({
-    url: l.ANM.USER_GUILD_SETTINGS(l.ME),
-    body: t
-  }) : await h(null != t ? {
-    [null != e ? e : l.ME]: t
-  } : {})
+async function h(e, t) {
+    null == e || e === l.ME ? await r.tn.patch({
+        url: l.ANM.USER_GUILD_SETTINGS(l.ME),
+        body: t
+    }) : await p(null != t ? { [null != e ? e : l.ME]: t } : {});
 }
-async function h(e) {
-  clearTimeout(d);
-  let t = 0 !== Object.keys(e).length,
-    n = s.Z.getCollapsedCategories(),
-    r = function() {
-      let e = {},
-        t = s.Z.getCollapsedCategories();
-      for (let n in t) t[n] !== _[n] && (e[n] = !0);
-      for (let n in _) t[n] !== _[n] && (e[n] = !0);
-      return e
-    }();
-  for (let i in r) {
-    let r = o.Z.getChannel(i);
-    null != r && null != r.guild_id && (!(r.guild_id in e) && (e[r.guild_id] = {}), null == e[r.guild_id].channel_overrides && (e[r.guild_id].channel_overrides = {}), e[r.guild_id].channel_overrides[r.id] = {
-      ...e[r.guild_id].channel_overrides[r.id],
-      collapsed: r.id in n
-    }, t = !0)
-  }
-  return t ? (_ = {
-    ...n
-  }, delete e[l.I_8], (await i.tn.patch({
-    url: l.ANM.USER_GUILD_SETTINGS_BULK,
-    body: {
-      guilds: e
+async function p(e) {
+    clearTimeout(d);
+    let t = 0 !== Object.keys(e).length, n = a.Z.getCollapsedCategories(), i = function () {
+            let e = {}, t = a.Z.getCollapsedCategories();
+            for (let n in t)
+                t[n] !== c[n] && (e[n] = !0);
+            for (let n in c)
+                t[n] !== c[n] && (e[n] = !0);
+            return e;
+        }();
+    for (let r in i) {
+        let i = o.Z.getChannel(r);
+        null != i && null != i.guild_id && (!(i.guild_id in e) && (e[i.guild_id] = {}), null == e[i.guild_id].channel_overrides && (e[i.guild_id].channel_overrides = {}), e[i.guild_id].channel_overrides[i.id] = {
+            ...e[i.guild_id].channel_overrides[i.id],
+            collapsed: i.id in n
+        }, t = !0);
     }
-  })).body) : []
+    return t ? (c = { ...n }, delete e[l.I_8], (await r.tn.patch({
+        url: l.ANM.USER_GUILD_SETTINGS_BULK,
+        body: { guilds: e }
+    })).body) : [];
 }
-
-function S() {
-  _ = {
-    ...s.Z.getCollapsedCategories()
-  }
+function m() {
+    c = { ...a.Z.getCollapsedCategories() };
 }
-class f extends r.Z {
-  constructor(...e) {
-    super(...e), u(this, "actions", {
-      CATEGORY_COLLAPSE: I,
-      CATEGORY_EXPAND: I,
-      CATEGORY_COLLAPSE_ALL: I,
-      CATEGORY_EXPAND_ALL: I,
-      POST_CONNECTION_OPEN: E,
-      USER_GUILD_SETTINGS_FULL_UPDATE: S
-    }), u(this, "saveUserGuildSettings", T), u(this, "saveUserGuildSettingsBulk", h)
-  }
+class I extends i.Z {
+    constructor(...e) {
+        super(...e), u(this, 'actions', {
+            CATEGORY_COLLAPSE: f,
+            CATEGORY_EXPAND: f,
+            CATEGORY_COLLAPSE_ALL: f,
+            CATEGORY_EXPAND_ALL: f,
+            POST_CONNECTION_OPEN: E,
+            USER_GUILD_SETTINGS_FULL_UPDATE: m
+        }), u(this, 'saveUserGuildSettings', h), u(this, 'saveUserGuildSettingsBulk', p);
+    }
 }
-t.Z = new f
+t.Z = new I();

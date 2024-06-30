@@ -1,10 +1,8 @@
-"use strict";
-
-function i() {
-  return !1
+function r() {
+    return !1;
 }
 n.d(t, {
-  O: function() {
-    return i
-  }
-})
+    O: function () {
+        return r;
+    }
+});

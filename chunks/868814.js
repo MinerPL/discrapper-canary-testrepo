@@ -1,27 +1,23 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return o
-  }
-}), t(653041);
-var n = t(442837),
-  i = t(977258),
-  l = t(958832),
-  a = t(592125),
-  r = t(981631);
-
+n.d(t, {
+    Z: function () {
+        return o;
+    }
+}), n(653041);
+var s = n(442837), a = n(977258), i = n(958832), r = n(592125), l = n(981631);
 function o(e) {
-  return (0, n.Wu)([l.Z, a.Z], () => {
-    var s;
-    let t = (null !== (s = l.Z.getTopChannelIds(e.id)) && void 0 !== s ? s : []).map(e => a.Z.getChannel(e)).filter(s => null == s || s.id !== e.rulesChannelId),
-      n = [],
-      o = 0;
-    return t.forEach(e => {
-      if (e.type === r.d4z.GUILD_ANNOUNCEMENT) {
-        if (o >= 2) return;
-        o++
-      }
-      n.length < 5 && !n.includes(e) && n.push(e)
-    }), n.sort((s, t) => ((0, i.s)(e.id, t.id) ? 1 : 0) - ((0, i.s)(e.id, s.id) ? 1 : 0)), n
-  })
+    return (0, s.Wu)([
+        i.Z,
+        r.Z
+    ], () => {
+        var t;
+        let n = (null !== (t = i.Z.getTopChannelIds(e.id)) && void 0 !== t ? t : []).map(e => r.Z.getChannel(e)).filter(t => null == t || t.id !== e.rulesChannelId), s = [], o = 0;
+        return n.forEach(e => {
+            if (e.type === l.d4z.GUILD_ANNOUNCEMENT) {
+                if (o >= 2)
+                    return;
+                o++;
+            }
+            s.length < 5 && !s.includes(e) && s.push(e);
+        }), s.sort((t, n) => ((0, a.s)(e.id, n.id) ? 1 : 0) - ((0, a.s)(e.id, t.id) ? 1 : 0)), s;
+    });
 }

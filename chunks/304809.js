@@ -1,11 +1,9 @@
-"use strict";
 n.d(t, {
-  N: function() {
-    return r
-  }
+    N: function () {
+        return i;
+    }
 });
-let i = null;
-
-function r() {
-  return null == i && (i = new AudioContext), i
+let r = null;
+function i() {
+    return null == r && (r = new AudioContext()), r;
 }

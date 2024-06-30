@@ -1,2 +1,1 @@
-"use strict";
-n(187203)("isConcatSpreadable")
+n(187203)('isConcatSpreadable');

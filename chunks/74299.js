@@ -1,11 +1,9 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return i;
+    }
 });
-var i = n(65154);
-
-function r(e) {
-  return e.supportsInApp(i.AN.VIDEO) && e.supportsInApp(i.AN.DESKTOP_CAPTURE)
+var r = n(65154);
+function i(e) {
+    return e.supportsInApp(r.AN.VIDEO) && e.supportsInApp(r.AN.DESKTOP_CAPTURE);
 }

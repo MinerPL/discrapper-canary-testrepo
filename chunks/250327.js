@@ -1,15 +1,12 @@
-"use strict";
 n.d(t, {
-  qk: function() {
-    return a
-  },
-  vh: function() {
-    return i
-  },
-  yJ: function() {
-    return r
-  }
+    qk: function () {
+        return a;
+    },
+    vh: function () {
+        return i;
+    },
+    yJ: function () {
+        return r;
+    }
 });
-var r = 6e4,
-  i = 36e5,
-  a = 1e3
+var r = 60000, i = 3600000, a = 1000;

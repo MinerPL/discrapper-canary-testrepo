@@ -1,21 +1,20 @@
-"use strict";
-var n = t(735250);
-t(470079);
-s.Z = e => {
-  let {
-    width: s = 24,
-    height: t = 24,
-    color: i = "currentColor",
-    className: l
-  } = e;
-  return (0, n.jsx)("svg", {
-    className: l,
-    width: s,
-    height: t,
-    viewBox: "0 0 14 12",
-    children: (0, n.jsx)("path", {
-      d: "M7 0L13.9282 12H0.0717969L7 0Z",
-      fill: i
-    })
-  })
-}
+var s = n(735250);
+n(470079);
+t.Z = e => {
+    let {
+        width: t = 24,
+        height: n = 24,
+        color: a = 'currentColor',
+        className: i
+    } = e;
+    return (0, s.jsx)('svg', {
+        className: i,
+        width: t,
+        height: n,
+        viewBox: '0 0 14 12',
+        children: (0, s.jsx)('path', {
+            d: 'M7 0L13.9282 12H0.0717969L7 0Z',
+            fill: a
+        })
+    });
+};

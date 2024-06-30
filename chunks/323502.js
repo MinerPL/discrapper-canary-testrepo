@@ -1,25 +1,19 @@
-"use strict";
-t.d(s, {
-  S: function() {
-    return a
-  }
+n.d(t, {
+    S: function () {
+        return r;
+    }
 });
-var n = t(544891),
-  i = t(570140),
-  l = t(981631);
-
-function a(e) {
-  return n.tn.get({
-    url: l.ANM.GUILD_TOP_READ_CHANNELS(e),
-    oldFormErrors: !0
-  }).then(s => {
-    let {
-      body: t
-    } = s;
-    i.Z.dispatch({
-      type: "GUILD_TOP_READ_CHANNELS_FETCH_SUCCESS",
-      guildId: e,
-      topChannelIds: t
-    })
-  })
+var s = n(544891), a = n(570140), i = n(981631);
+function r(e) {
+    return s.tn.get({
+        url: i.ANM.GUILD_TOP_READ_CHANNELS(e),
+        oldFormErrors: !0
+    }).then(t => {
+        let {body: n} = t;
+        a.Z.dispatch({
+            type: 'GUILD_TOP_READ_CHANNELS_FETCH_SUCCESS',
+            guildId: e,
+            topChannelIds: n
+        });
+    });
 }

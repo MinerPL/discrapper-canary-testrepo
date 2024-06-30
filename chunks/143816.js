@@ -1,9 +1,11 @@
-"use strict";
 n.d(t, {
-  Hb: function() {
-    return s
-  }
+    Hb: function () {
+        return a;
+    }
 }), n(47120);
-var i, r = n(124368);
-(i || (i = {})).INVITE_ACCEPT = "invite_accept", t.ZP = i;
-let s = new Set([r.on.EMBED, r.on.FORUM])
+var r, i = n(124368);
+(r || (r = {})).INVITE_ACCEPT = 'invite_accept', t.ZP = r;
+let a = new Set([
+    i.on.EMBED,
+    i.on.FORUM
+]);

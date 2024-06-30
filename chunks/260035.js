@@ -1,43 +1,39 @@
-"use strict";
 n.d(t, {
-  m: function() {
-    return u
-  }
+    m: function () {
+        return u;
+    }
 }), n(47120);
-var i = n(735250),
-  r = n(470079),
-  s = n(887024),
-  o = n(745510),
-  a = n(675654),
-  l = n(724734);
-
+var r = n(735250), i = n(470079), a = n(887024), o = n(745510), s = n(675654), l = n(610092);
 function u(e) {
-  let {
-    children: t
-  } = e, [n, u] = r.useState(null), [_, d] = r.useState(null), c = r.useRef(new Set), [E, I] = r.useState(!1), T = r.useCallback(e => {
-    c.current.delete(e), I(c.current.size > 0)
-  }, []), h = r.useCallback(e => (c.current.add(e), I(!0), () => T(e)), [T]), S = r.useCallback((e, t) => {
-    for (let n of c.current) n(e, t)
-  }, []);
-  return (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(o.d, {
-      confettiCanvas: _,
-      spriteCanvas: n,
-      baseConfig: a.We,
-      addClickListener: h,
-      removeClickListener: T,
-      children: t
-    }), (0, i.jsx)(s.O_, {
-      ref: d,
-      className: l.canvas,
-      environment: a.rq,
-      onClick: E ? S : void 0
-    }), (0, i.jsx)(s.Ji, {
-      ref: u,
-      colors: a.Br,
-      sprites: a.CA,
-      spriteWidth: a.Ko,
-      spriteHeight: a.Ko
-    })]
-  })
+    let {children: t} = e, [n, u] = i.useState(null), [c, d] = i.useState(null), _ = i.useRef(new Set()), [E, f] = i.useState(!1), h = i.useCallback(e => {
+            _.current.delete(e), f(_.current.size > 0);
+        }, []), p = i.useCallback(e => (_.current.add(e), f(!0), () => h(e)), [h]), m = i.useCallback((e, t) => {
+            for (let n of _.current)
+                n(e, t);
+        }, []);
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            (0, r.jsx)(o.d, {
+                confettiCanvas: c,
+                spriteCanvas: n,
+                baseConfig: s.We,
+                addClickListener: p,
+                removeClickListener: h,
+                children: t
+            }),
+            (0, r.jsx)(a.O_, {
+                ref: d,
+                className: l.canvas,
+                environment: s.rq,
+                onClick: E ? m : void 0
+            }),
+            (0, r.jsx)(a.Ji, {
+                ref: u,
+                colors: s.Br,
+                sprites: s.CA,
+                spriteWidth: s.Ko,
+                spriteHeight: s.Ko
+            })
+        ]
+    });
 }

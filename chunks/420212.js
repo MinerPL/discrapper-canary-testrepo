@@ -1,32 +1,62 @@
-"use strict";
 n.d(t, {
-  LT: function() {
-    return o
-  },
-  Sp: function() {
-    return l
-  },
-  el: function() {
-    return a
-  },
-  mR: function() {
-    return s.Key
-  },
-  vn: function() {
-    return i
-  }
+    LT: function () {
+        return o;
+    },
+    Sp: function () {
+        return l;
+    },
+    el: function () {
+        return s;
+    },
+    mR: function () {
+        return a.Key;
+    },
+    vn: function () {
+        return r;
+    }
 }), n(47120);
-var i, r, s = n(15858);
-let o = s.Key.F6,
-  a = new Map([
-    [s.Key.F6, "f6"],
-    [s.Key.Tab, "tab"],
-    [s.Key.ArrowDown, "down"],
-    [s.Key.ArrowUp, "up"],
-    [s.Key.ArrowLeft, "left"],
-    [s.Key.ArrowRight, "right"],
-    [s.Key.Home, "home"],
-    [s.Key.End, "end"]
-  ]),
-  l = new Set(["tab", "shift+tab", "down", "up", "left", "right", "home", "end"]);
-(r = i || (i = {})).ENTER = "Enter", r.TAB = "Tab", r.SPACE = " ", r.ESCAPE = "Escape", r.SHIFT = "Shift"
+var r, i, a = n(15858);
+let o = a.Key.F6, s = new Map([
+        [
+            a.Key.F6,
+            'f6'
+        ],
+        [
+            a.Key.Tab,
+            'tab'
+        ],
+        [
+            a.Key.ArrowDown,
+            'down'
+        ],
+        [
+            a.Key.ArrowUp,
+            'up'
+        ],
+        [
+            a.Key.ArrowLeft,
+            'left'
+        ],
+        [
+            a.Key.ArrowRight,
+            'right'
+        ],
+        [
+            a.Key.Home,
+            'home'
+        ],
+        [
+            a.Key.End,
+            'end'
+        ]
+    ]), l = new Set([
+        'tab',
+        'shift+tab',
+        'down',
+        'up',
+        'left',
+        'right',
+        'home',
+        'end'
+    ]);
+(i = r || (r = {})).ENTER = 'Enter', i.TAB = 'Tab', i.SPACE = ' ', i.ESCAPE = 'Escape', i.SHIFT = 'Shift';

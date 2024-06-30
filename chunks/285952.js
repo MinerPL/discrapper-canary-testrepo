@@ -1,100 +1,90 @@
-"use strict";
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(335607),
-  l = n(961047);
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(151366), l = n(83922);
 let u = {
-    VERTICAL: l.vertical,
-    HORIZONTAL: a.horizontal,
-    HORIZONTAL_REVERSE: a.horizontalReverse
-  },
-  _ = {
-    START: l.justifyStart,
-    END: l.justifyEnd,
-    CENTER: l.justifyCenter,
-    BETWEEN: l.justifyBetween,
-    AROUND: l.justifyAround
-  },
-  d = {
-    START: l.alignStart,
-    END: l.alignEnd,
-    CENTER: l.alignCenter,
-    STRETCH: l.alignStretch,
-    BASELINE: l.alignBaseline
-  },
-  c = {
-    NO_WRAP: l.noWrap,
-    WRAP: l.wrap,
-    WRAP_REVERSE: l.wrapReverse
-  },
-  E = e => {
-    let {
-      children: t,
-      className: n,
-      shrink: s,
-      grow: l,
-      basis: u,
-      style: _,
-      wrap: d = !1,
-      ...c
-    } = e, E = {
-      className: n = null != n ? n : a.flexChild,
-      style: {
-        flexGrow: l,
-        flexShrink: s,
-        flexBasis: u,
-        ..._
-      },
-      ...c
+        VERTICAL: l.vertical,
+        HORIZONTAL: s.horizontal,
+        HORIZONTAL_REVERSE: s.horizontalReverse
+    }, c = {
+        START: l.justifyStart,
+        END: l.justifyEnd,
+        CENTER: l.justifyCenter,
+        BETWEEN: l.justifyBetween,
+        AROUND: l.justifyAround
+    }, d = {
+        START: l.alignStart,
+        END: l.alignEnd,
+        CENTER: l.alignCenter,
+        STRETCH: l.alignStretch,
+        BASELINE: l.alignBaseline
+    }, _ = {
+        NO_WRAP: l.noWrap,
+        WRAP: l.wrap,
+        WRAP_REVERSE: l.wrapReverse
+    }, E = e => {
+        let {
+                children: t,
+                className: n,
+                shrink: a,
+                grow: l,
+                basis: u,
+                style: c,
+                wrap: d = !1,
+                ..._
+            } = e, E = {
+                className: n = null != n ? n : s.flexChild,
+                style: {
+                    flexGrow: l,
+                    flexShrink: a,
+                    flexBasis: u,
+                    ...c
+                },
+                ..._
+            };
+        if (!d && 'string' != typeof t && 1 === i.Children.count(t)) {
+            let e = i.Children.only(t);
+            return E.style = {
+                ...E.style,
+                ...e.props.style
+            }, E.className = o()(e.props.className, n), i.cloneElement(e, E);
+        }
+        return (0, r.jsx)('div', {
+            ...E,
+            children: t
+        });
     };
-    if (!d && "string" != typeof t && 1 === r.Children.count(t)) {
-      let e = r.Children.only(t);
-      return E.style = {
-        ...E.style,
-        ...e.props.style
-      }, E.className = o()(e.props.className, n), r.cloneElement(e, E)
-    }
-    return (0, i.jsx)("div", {
-      ...E,
-      children: t
-    })
-  };
 E.defaultProps = {
-  shrink: 1,
-  grow: 1,
-  basis: "auto",
-  wrap: !1
+    shrink: 1,
+    grow: 1,
+    basis: 'auto',
+    wrap: !1
 };
-let I = e => {
-  let {
-    children: t,
-    className: n,
-    direction: r = u.HORIZONTAL,
-    justify: s = _.START,
-    align: l = d.STRETCH,
-    wrap: E = c.NO_WRAP,
-    shrink: I,
-    grow: T,
-    basis: h,
-    style: S,
-    ...f
-  } = e;
-  return (0, i.jsx)("div", {
-    style: {
-      flexShrink: I,
-      flexGrow: T,
-      flexBasis: h,
-      ...S
-    },
-    className: o()(a.flex, r, s, l, E, n),
-    ...f,
-    children: t
-  })
+let f = e => {
+    let {
+        children: t,
+        className: n,
+        direction: i = u.HORIZONTAL,
+        justify: a = c.START,
+        align: l = d.STRETCH,
+        wrap: E = _.NO_WRAP,
+        shrink: f,
+        grow: h,
+        basis: p,
+        style: m,
+        ...I
+    } = e;
+    return (0, r.jsx)('div', {
+        style: {
+            flexShrink: f,
+            flexGrow: h,
+            flexBasis: p,
+            ...m
+        },
+        className: o()(s.flex, i, a, l, E, n),
+        ...I,
+        children: t
+    });
 };
-I.defaultProps = {
-  shrink: 1,
-  grow: 1,
-  basis: "auto"
-}, I.Child = E, I.Direction = u, I.Align = d, I.Justify = _, I.Wrap = c, t.Z = I
+f.defaultProps = {
+    shrink: 1,
+    grow: 1,
+    basis: 'auto'
+}, f.Child = E, f.Direction = u, f.Align = d, f.Justify = c, f.Wrap = _, t.Z = f;

@@ -1,85 +1,159 @@
-"use strict";
 n(653041), n(47120);
-var i = n(147913),
-  r = n(579806),
-  s = n(818083),
-  o = n(998502);
-let a = [0, 0];
-
+var r = n(147913), i = n(579806), a = n(818083), o = n(998502);
+let s = [
+    0,
+    0
+];
 function l(e) {
-  let t = e.toString(16);
-  for (; t.length < 4;) t = "0" + t;
-  return t
+    let t = e.toString(16);
+    for (; t.length < 4;)
+        t = '0' + t;
+    return t;
 }
-
-function u(e) {
-  return [4098, e]
+function u(e, t, n, r) {
+    let i = [], o = n.map(e => e.map(l).join(':')).join(', ');
+    for (let e = 0; e < r.length; e++) {
+        let t = {};
+        t[r[e]] = '1', i.push({
+            id: e + 1,
+            label: r[e],
+            config: t
+        });
+    }
+    return {
+        gpus: n,
+        experiment: (0, a.B)({
+            kind: 'user',
+            id: e,
+            label: 'GPU Workarounds: '.concat(t, ' (').concat(o, ')'),
+            defaultConfig: {},
+            treatments: i
+        })
+    };
 }
-let _ = [function(e, t, n, i) {
-  let r = [],
-    o = n.map(e => e.map(l).join(":")).join(", ");
-  for (let e = 0; e < i.length; e++) {
-    let t = {};
-    t[i[e]] = "1", r.push({
-      id: e + 1,
-      label: i[e],
-      config: t
-    })
-  }
-  return {
-    gpus: n,
-    experiment: (0, s.B)({
-      kind: "user",
-      id: e,
-      label: "GPU Workarounds: ".concat(t, " (").concat(o, ")"),
-      defaultConfig: {},
-      treatments: r
-    })
-  }
-}("2024-03_amd_vdec_tests_1", "AMD video decode tests 1", [u(5592), u(5597), u(5686), u(5688), u(5708), u(5761), u(26607), u(26591), u(29471), u(29504), u(29631), u(29679), u(29663), u(29695), u(29759), u(29772), u(29822), u(29824)], ["disable_media_foundation_clear_playback", "disable_d3d11_video_decoder"])];
-
-function d(e) {
-  for (let t of e)
-    if (t[0] === a[0] && t[1] === a[1]) return !0;
-  return !1
+function c(e) {
+    return [
+        4318,
+        e
+    ];
 }
-let c = !1;
-
-function E() {
-  let e = {};
-  for (let t of _)
-    if (d(t.gpus)) {
-      let n = t.experiment.getCurrentConfig({
-        location: "updateFlags"
-      });
-      e = {
-        ...e,
-        ...n
-      }
-    } o.ZP.setChromiumSwitches(e)
+let d = [
+    u('2024-06_hardware_hevc_nv_gtx_970', 'NVIDIA hardware HEVC decode on GTX 970', [c(5058)], ['disable_accelerated_hevc_decode']),
+    u('2024-06_hardware_hevc_nv_maxwell', 'NVIDIA hardware HEVC decode on Maxwell (except 970)', [
+        c(4928),
+        c(4929),
+        c(4932),
+        c(4934),
+        c(4935),
+        c(4936),
+        c(4937),
+        c(4939),
+        c(4941),
+        c(4942),
+        c(4943),
+        c(4986),
+        c(4987),
+        c(4992),
+        c(4993),
+        c(4994),
+        c(5008),
+        c(5009),
+        c(5010),
+        c(5011),
+        c(5016),
+        c(5017),
+        c(5018),
+        c(5019),
+        c(5020),
+        c(5021),
+        c(5040),
+        c(5041),
+        c(5042),
+        c(5043),
+        c(5044),
+        c(5046),
+        c(5049),
+        c(5050),
+        c(5051),
+        c(5052),
+        c(5056),
+        c(5079),
+        c(5080),
+        c(5081),
+        c(5082),
+        c(5104),
+        c(5105),
+        c(5106),
+        c(5107),
+        c(5112),
+        c(5113),
+        c(5114),
+        c(5115),
+        c(5121),
+        c(5126),
+        c(5127),
+        c(5159),
+        c(5655),
+        c(5656),
+        c(5657),
+        c(5658),
+        c(5735),
+        c(5965),
+        c(5966),
+        c(6044),
+        c(6082),
+        c(6088),
+        c(6128),
+        c(6129),
+        c(6141)
+    ], ['disable_accelerated_hevc_decode'])
+];
+function _(e) {
+    for (let t of e)
+        if (t[0] === s[0] && t[1] === s[1])
+            return !0;
+    return !1;
 }
-class I extends i.Z {
-  constructor(...e) {
-    var t, n, i;
-    super(...e), t = this, n = "actions", i = {
-      POST_CONNECTION_OPEN: async () => {
-        try {
-          var e, t, n, i;
-          if (c || (null === (t = window.DiscordNative) || void 0 === t ? void 0 : null === (e = t.gpuSettings) || void 0 === e ? void 0 : e.setChromiumSwitches) == null) return;
-          let s = await r.Z.processUtils.getSystemInfo();
-          for (let e of null !== (i = null === (n = s.electronGPUInfo) || void 0 === n ? void 0 : n.gpuDevice) && void 0 !== i ? i : []) !0 === e.active && (a = [e.vendorId, e.deviceId]);
-          for (let e of (c = !0, _)) d(e.gpus) && e.experiment.subscribe({
-            location: "GPU experiment subscription"
-          }, E);
-          E()
-        } catch (e) {}
-      }
-    }, n in t ? Object.defineProperty(t, n, {
-      value: i,
-      enumerable: !0,
-      configurable: !0,
-      writable: !0
-    }) : t[n] = i
-  }
+let E = !1;
+function f() {
+    let e = {};
+    for (let t of d)
+        if (_(t.gpus)) {
+            let n = t.experiment.getCurrentConfig({ location: 'updateFlags' });
+            e = {
+                ...e,
+                ...n
+            };
+        }
+    o.ZP.setChromiumSwitches(e);
 }
-t.Z = new I
+class h extends r.Z {
+    constructor(...e) {
+        var t, n, r;
+        super(...e), t = this, n = 'actions', r = {
+            POST_CONNECTION_OPEN: async () => {
+                try {
+                    var e, t, n, r;
+                    if (E || (null === (t = window.DiscordNative) || void 0 === t ? void 0 : null === (e = t.gpuSettings) || void 0 === e ? void 0 : e.setChromiumSwitches) == null)
+                        return;
+                    let a = await i.Z.processUtils.getSystemInfo();
+                    for (let e of null !== (r = null === (n = a.electronGPUInfo) || void 0 === n ? void 0 : n.gpuDevice) && void 0 !== r ? r : [])
+                        !0 === e.active && (s = [
+                            e.vendorId,
+                            e.deviceId
+                        ]);
+                    for (let e of (E = !0, d))
+                        _(e.gpus) && e.experiment.subscribe({ location: 'GPU experiment subscription' }, f);
+                    f();
+                } catch (e) {
+                }
+            }
+        }, n in t ? Object.defineProperty(t, n, {
+            value: r,
+            enumerable: !0,
+            configurable: !0,
+            writable: !0
+        }) : t[n] = r;
+    }
+}
+t.Z = new h();

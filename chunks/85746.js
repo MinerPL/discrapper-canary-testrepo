@@ -1,10 +1,9 @@
-"use strict";
-var i, r, s, o;
+var r, i, a, o;
 n.d(t, {
-  Z: function() {
-    return r
-  },
-  l: function() {
-    return i
-  }
-}), (s = i || (i = {})).COZY = "cozy", s.COZY_DRAWER = "cozy-drawer", s.COZY_DRAWER_SMOL = "cozy-drawer-smol", s.COMPACT = "compact", s.MINIMAL = "minimal", (o = r || (r = {})).ALL = "all", o.UNREADS = "unreads", o.NONE = "none"
+    Z: function () {
+        return i;
+    },
+    l: function () {
+        return r;
+    }
+}), (a = r || (r = {})).COZY = 'cozy', a.COZY_DRAWER = 'cozy-drawer', a.COZY_DRAWER_SMOL = 'cozy-drawer-smol', a.COMPACT = 'compact', a.MINIMAL = 'minimal', (o = i || (i = {})).ALL = 'all', o.UNREADS = 'unreads', o.NONE = 'none';

@@ -1,11 +1,9 @@
-"use strict";
 n.d(t, {
-  g: function() {
-    return r
-  },
-  y: function() {
-    return i
-  }
+    g: function () {
+        return i;
+    },
+    y: function () {
+        return r;
+    }
 });
-let i = "662267976984297473",
-  r = "936929561302675456"
+let r = '662267976984297473', i = '936929561302675456';

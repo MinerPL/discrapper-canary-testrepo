@@ -1,6 +1,5 @@
-var n = e(815869);
-t.exports = function(t) {
-  var r = this.__data__,
-    e = n(r, t);
-  return e < 0 ? void 0 : r[e][1]
-}
+var n = r(815869);
+t.exports = function (t) {
+    var e = this.__data__, r = n(e, t);
+    return r < 0 ? void 0 : e[r][1];
+};

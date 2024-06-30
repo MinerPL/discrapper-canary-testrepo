@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
-n.d(t, {
-  i: function() {
-    return i
-  }
-}), (r = i || (i = {}))[r.EXPANDABLE_LIST = 1] = "EXPANDABLE_LIST", r[r.BANNER_CARDS = 2] = "BANNER_CARDS"
+var i, l;
+t.d(n, {
+    i: function () {
+        return i;
+    }
+}), (l = i || (i = {}))[l.EXPANDABLE_LIST = 1] = 'EXPANDABLE_LIST', l[l.BANNER_CARDS = 2] = 'BANNER_CARDS';

@@ -1,19 +1,14 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return a
-  }
+n.d(t, {
+    Z: function () {
+        return r;
+    }
 });
-var n = t(735250);
-t(470079);
-var i = t(481060),
-  l = t(388817);
-
-function a() {
-  return (0, n.jsx)("div", {
-    className: l.centerContainer,
-    children: (0, n.jsx)(i.Spinner, {
-      type: i.Spinner.Type.SPINNING_CIRCLE
-    })
-  })
+var s = n(735250);
+n(470079);
+var a = n(481060), i = n(102136);
+function r() {
+    return (0, s.jsx)('div', {
+        className: i.centerContainer,
+        children: (0, s.jsx)(a.Spinner, { type: a.Spinner.Type.SPINNING_CIRCLE })
+    });
 }

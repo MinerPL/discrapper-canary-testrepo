@@ -1,22 +1,15 @@
-"use strict";
-n.d(e, {
-  Y: function() {
-    return u
-  }
-});
-var r = n(607190),
-  i = n(527475);
-let s = -1,
-  a = () => "hidden" !== r.m.document.visibilityState || r.m.document.prerendering ? 1 / 0 : 0,
-  o = () => {
-    (0, i.u)(({
-      timeStamp: t
-    }) => {
-      s = t
-    }, !0)
-  },
-  u = () => (s < 0 && (s = a(), o()), {
-    get firstHiddenTime() {
-      return s
+r.d(e, {
+    Y: function () {
+        return E;
     }
-  })
+});
+var n = r(607190), _ = r(527475);
+let a = -1, i = () => 'hidden' !== n.m.document.visibilityState || n.m.document.prerendering ? 1 / 0 : 0, o = () => {
+        (0, _.u)(({timeStamp: t}) => {
+            a = t;
+        }, !0);
+    }, E = () => (a < 0 && (a = i(), o()), {
+        get firstHiddenTime() {
+            return a;
+        }
+    });

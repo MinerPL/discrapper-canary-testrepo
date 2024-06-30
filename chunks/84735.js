@@ -1,10 +1,9 @@
-"use strict";
 n.d(t, {
-  J: function() {
-    return i.Jc
-  },
-  t: function() {
-    return i.tE
-  }
+    J: function () {
+        return r.Jc;
+    },
+    t: function () {
+        return r.tE;
+    }
 });
-var i = n(789978)
+var r = n(789978);

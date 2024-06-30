@@ -1,58 +1,49 @@
-"use strict";
-var i = n(913527),
-  r = n.n(i),
-  s = n(689938);
-let o = 3600,
-  a = 86400,
-  l = 2592e3,
-  u = 31104e3,
-  _ = () => ({
-    seconds: s.Z.Messages.THREAD_BROWSER_TIMESTAMP_SECONDS,
-    minutes: s.Z.Messages.THREAD_BROWSER_TIMESTAMP_MINUTES,
-    hours: s.Z.Messages.THREAD_BROWSER_TIMESTAMP_HOURS,
-    days: s.Z.Messages.THREAD_BROWSER_TIMESTAMP_DAYS,
-    months: s.Z.Messages.THREAD_BROWSER_TIMESTAMP_MORE_THAN_MONTH,
-    years: s.Z.Messages.THREAD_BROWSER_TIMESTAMP_MORE_THAN_YEAR
-  }),
-  d = (e, t) => null != t && null != t[e],
-  c = (e, t, n) => {
-    var i, r, s;
-    return d(e, t) ? null !== (r = null !== (i = t[e]) && void 0 !== i ? i : null == n ? void 0 : n[e]) && void 0 !== r ? r : null : null !== (s = null == n ? void 0 : n[e]) && void 0 !== s ? s : null
-  };
-t.Z = function(e, t) {
-  let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-    i = r()().diff(r()(e), "s"),
-    s = null != t ? t() : void 0,
-    d = _(),
-    E = (e, t) => {
-      let i = c(e, s, n ? d : void 0);
-      return null == i ? null : "string" == typeof i ? i : i.format({
-        count: t
-      })
+var r = n(913527), i = n.n(r), a = n(689938);
+let o = 3600, s = 86400, l = 2592000, u = 31104000, c = () => ({
+        seconds: a.Z.Messages.THREAD_BROWSER_TIMESTAMP_SECONDS,
+        minutes: a.Z.Messages.THREAD_BROWSER_TIMESTAMP_MINUTES,
+        hours: a.Z.Messages.THREAD_BROWSER_TIMESTAMP_HOURS,
+        days: a.Z.Messages.THREAD_BROWSER_TIMESTAMP_DAYS,
+        months: a.Z.Messages.THREAD_BROWSER_TIMESTAMP_MORE_THAN_MONTH,
+        years: a.Z.Messages.THREAD_BROWSER_TIMESTAMP_MORE_THAN_YEAR
+    }), d = (e, t) => null != t && null != t[e], _ = (e, t, n) => {
+        var r, i, a;
+        return d(e, t) ? null !== (i = null !== (r = t[e]) && void 0 !== r ? r : null == n ? void 0 : n[e]) && void 0 !== i ? i : null : null !== (a = null == n ? void 0 : n[e]) && void 0 !== a ? a : null;
     };
-  if (i < 60) {
-    let e = (null == s ? void 0 : s.seconds) != null ? E("seconds", i) : E("minutes", 1);
-    if (null != e) return e
-  }
-  if (i < o) {
-    let e = E("minutes", Math.floor(i / 60));
-    if (null != e) return e
-  }
-  if (i < a) {
-    let e = E("hours", Math.floor(i / o));
-    if (null != e) return e
-  }
-  if (i < l) {
-    let e = E("days", Math.floor(i / a));
-    if (null != e) return e
-  }
-  if (i < u) {
-    let e = E("months", Math.floor(i / l));
-    if (null != e) return e
-  }
-  if (i >= u && (null == s ? void 0 : s.years) != null) {
-    let e = E("years", Math.floor(i / u));
-    if (null != e) return e
-  }
-  return r()(e).format("LL")
-}
+t.Z = function (e, t) {
+    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2], r = i()().diff(i()(e), 's'), a = null != t ? t() : void 0, d = c(), E = (e, t) => {
+            let r = _(e, a, n ? d : void 0);
+            return null == r ? null : 'string' == typeof r ? r : r.format({ count: t });
+        };
+    if (r < 60) {
+        let e = (null == a ? void 0 : a.seconds) != null ? E('seconds', r) : E('minutes', 1);
+        if (null != e)
+            return e;
+    }
+    if (r < o) {
+        let e = E('minutes', Math.floor(r / 60));
+        if (null != e)
+            return e;
+    }
+    if (r < s) {
+        let e = E('hours', Math.floor(r / o));
+        if (null != e)
+            return e;
+    }
+    if (r < l) {
+        let e = E('days', Math.floor(r / s));
+        if (null != e)
+            return e;
+    }
+    if (r < u) {
+        let e = E('months', Math.floor(r / l));
+        if (null != e)
+            return e;
+    }
+    if (r >= u && (null == a ? void 0 : a.years) != null) {
+        let e = E('years', Math.floor(r / u));
+        if (null != e)
+            return e;
+    }
+    return i()(e).format('LL');
+};

@@ -1,16 +1,10 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return i;
+    }
 });
-var i = n(395322);
-
-function r(e) {
-  let {
-    enabled: t
-  } = i.L.getCurrentConfig({
-    location: e
-  });
-  return t
+var r = n(395322);
+function i(e) {
+    let {enabled: t} = r.L.getCurrentConfig({ location: e });
+    return t;
 }

@@ -1,3 +1,2 @@
-"use strict";
-var n = "object" == typeof global && global && global.Object === Object && global;
-t.Z = n
+var n = 'object' == typeof global && global && global.Object === Object && global;
+t.Z = n;

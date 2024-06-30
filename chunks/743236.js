@@ -1,14 +1,10 @@
-"use strict";
 n.d(t, {
-  F: function() {
-    return r
-  }
+    F: function () {
+        return i;
+    }
 });
-var i = n(607070);
-
-function r(e) {
-  var t;
-  i.Z.keyboardModeEnabled && (null === (t = e.current) || void 0 === t || t.scrollIntoView({
-    block: "nearest"
-  }))
+var r = n(607070);
+function i(e) {
+    var t;
+    r.Z.keyboardModeEnabled && (null === (t = e.current) || void 0 === t || t.scrollIntoView({ block: 'nearest' }));
 }

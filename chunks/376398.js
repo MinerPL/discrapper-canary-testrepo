@@ -1,28 +1,23 @@
-"use strict";
 n.d(t, {
-  N7: function() {
-    return o
-  },
-  aG: function() {
-    return l
-  },
-  jC: function() {
-    return a
-  }
+    N7: function () {
+        return o;
+    },
+    aG: function () {
+        return l;
+    },
+    jC: function () {
+        return s;
+    }
 });
-var i = n(39383),
-  r = n.n(i);
-let s = {};
-
+var r = n(39383), i = n.n(r);
+let a = {};
 function o(e) {
-  let t = r()("VideoStream");
-  return s[t] = e, t
+    let t = i()('VideoStream');
+    return a[t] = e, t;
 }
-
-function a(e) {
-  delete s[e]
+function s(e) {
+    delete a[e];
 }
-
 function l(e) {
-  return s[e]
+    return a[e];
 }

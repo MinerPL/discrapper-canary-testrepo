@@ -1,62 +1,52 @@
-"use strict";
 n.d(t, {
-  Wq: function() {
-    return u
-  },
-  Xn: function() {
-    return _
-  },
-  ZN: function() {
-    return l
-  },
-  c: function() {
-    return r
-  },
-  kJ: function() {
-    return a
-  }
-});
-var i = n(652874);
-let r = -1,
-  s = Object.freeze({
-    inspectedExpressionPosition: {
-      rowIndex: 0,
-      columnIndex: 0
+    Wq: function () {
+        return u;
     },
-    activeCategoryIndex: 0,
-    searchPlaceholder: null
-  });
-
-function o() {
-  let e = (0, i.Z)(e => s);
-  return {
-    useStore: e,
-    getState: () => e.getState(),
-    setInspectedExpressionPosition: (t, n, i) => {
-      e.setState({
-        inspectedExpressionPosition: {
-          rowIndex: n,
-          columnIndex: t,
-          source: i
-        }
-      })
+    Xn: function () {
+        return c;
     },
-    setActiveCategoryIndex: t => {
-      e.setState({
-        activeCategoryIndex: t
-      })
+    ZN: function () {
+        return l;
     },
-    setSearchPlaceholder: t => {
-      e.setState({
-        searchPlaceholder: t
-      })
+    c: function () {
+        return i;
     },
-    resetStoreState: () => {
-      e.setState(s)
+    kJ: function () {
+        return s;
     }
-  }
+});
+var r = n(652874);
+let i = -1, a = Object.freeze({
+        inspectedExpressionPosition: {
+            rowIndex: 0,
+            columnIndex: 0
+        },
+        activeCategoryIndex: 0,
+        searchPlaceholder: null
+    });
+function o() {
+    let e = (0, r.Z)(e => a);
+    return {
+        useStore: e,
+        getState: () => e.getState(),
+        setInspectedExpressionPosition: (t, n, r) => {
+            e.setState({
+                inspectedExpressionPosition: {
+                    rowIndex: n,
+                    columnIndex: t,
+                    source: r
+                }
+            });
+        },
+        setActiveCategoryIndex: t => {
+            e.setState({ activeCategoryIndex: t });
+        },
+        setSearchPlaceholder: t => {
+            e.setState({ searchPlaceholder: t });
+        },
+        resetStoreState: () => {
+            e.setState(a);
+        }
+    };
 }
-let a = o(),
-  l = o(),
-  u = o(),
-  _ = o()
+let s = o(), l = o(), u = o(), c = o();

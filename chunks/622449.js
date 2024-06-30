@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  F: function() {
-    return i
-  }
-}), (r = i || (i = {}))[r.QUEUED = 0] = "QUEUED", r[r.CREATED = 1] = "CREATED", r[r.FAILED = 2] = "FAILED"
+    F: function () {
+        return r;
+    }
+}), (i = r || (r = {}))[i.QUEUED = 0] = 'QUEUED', i[i.CREATED = 1] = 'CREATED', i[i.FAILED = 2] = 'FAILED';

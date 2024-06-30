@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  B: function() {
-    return i
-  }
-}), (r = i || (i = {}))[r.UNICODE = 0] = "UNICODE", r[r.GUILD = 1] = "GUILD"
+    B: function () {
+        return r;
+    }
+}), (i = r || (r = {}))[i.UNICODE = 0] = 'UNICODE', i[i.GUILD = 1] = 'GUILD';

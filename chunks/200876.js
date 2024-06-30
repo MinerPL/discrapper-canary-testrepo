@@ -1,23 +1,18 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return a
-  },
-  l: function() {
-    return o
-  }
+    Z: function () {
+        return s;
+    },
+    l: function () {
+        return o;
+    }
 });
-var i = n(442837),
-  r = n(430824),
-  s = n(981631);
-
+var r = n(442837), i = n(430824), a = n(981631);
 function o(e) {
-  return !e.hasFeature(s.oNc.CREATOR_MONETIZABLE_DISABLED) && (e.hasFeature(s.oNc.CREATOR_MONETIZABLE) || e.hasFeature(s.oNc.CREATOR_MONETIZABLE_PROVISIONAL))
+    return !e.hasFeature(a.oNc.CREATOR_MONETIZABLE_DISABLED) && (e.hasFeature(a.oNc.CREATOR_MONETIZABLE) || e.hasFeature(a.oNc.CREATOR_MONETIZABLE_PROVISIONAL));
 }
-
-function a(e) {
-  return (0, i.e7)([r.Z], () => {
-    let t = r.Z.getGuild(e);
-    return null != t && o(t)
-  })
+function s(e) {
+    return (0, r.e7)([i.Z], () => {
+        let t = i.Z.getGuild(e);
+        return null != t && o(t);
+    });
 }

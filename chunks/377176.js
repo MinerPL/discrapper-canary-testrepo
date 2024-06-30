@@ -1,16 +1,12 @@
-"use strict";
-t.d(s, {
-  f: function() {
-    return a
-  }
+n.d(t, {
+    f: function () {
+        return r;
+    }
 });
-var n = t(63063),
-  i = t(981631),
-  l = t(689938);
-
-function a() {
-  return l.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_V2_ACCEPT_TERMS_CHECKBOX.format({
-    fullTermsUrl: n.Z.getArticleURL(i.BhN.CREATOR_TERMS),
-    creatorRevenuePolicyUrl: n.Z.getArticleURL(i.BhN.CREATOR_POLICY)
-  })
+var s = n(63063), a = n(981631), i = n(689938);
+function r() {
+    return i.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_V2_ACCEPT_TERMS_CHECKBOX.format({
+        fullTermsUrl: s.Z.getArticleURL(a.BhN.CREATOR_TERMS),
+        creatorRevenuePolicyUrl: s.Z.getArticleURL(a.BhN.CREATOR_POLICY)
+    });
 }

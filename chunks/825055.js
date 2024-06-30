@@ -1,31 +1,32 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return r
-  }
+n.d(t, {
+    Z: function () {
+        return r;
+    }
 });
-var n = t(735250);
-t(470079);
-var i = t(481060),
-  l = t(759231),
-  a = t(618963);
-
+var s = n(735250);
+n(470079);
+var a = n(481060), i = n(429133);
 function r(e) {
-  let {
-    children: s
-  } = e;
-  return (0, n.jsx)("div", {
-    className: a.container,
-    children: (0, n.jsx)(i.Text, {
-      variant: "text-sm/normal",
-      color: "text-normal",
-      className: a.text,
-      children: (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)(l.Z, {
-          className: a.noticeIcon,
-          "aria-hidden": !0
-        }), s]
-      })
-    })
-  })
+    let {children: t} = e;
+    return (0, s.jsx)('div', {
+        className: i.container,
+        children: (0, s.jsx)(a.Text, {
+            variant: 'text-sm/normal',
+            color: 'text-normal',
+            className: i.text,
+            children: (0, s.jsxs)(s.Fragment, {
+                children: [
+                    (0, s.jsx)(a.CircleExclamationPointIcon, {
+                        size: 'custom',
+                        width: 20,
+                        height: 20,
+                        color: 'currentColor',
+                        className: i.noticeIcon,
+                        'aria-hidden': !0
+                    }),
+                    t
+                ]
+            })
+        })
+    });
 }

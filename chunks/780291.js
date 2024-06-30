@@ -1,45 +1,36 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return h
-  }
+    Z: function () {
+        return p;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(442837),
-  o = n(606992),
-  a = n(314897),
-  l = n(944486),
-  u = n(843693),
-  _ = n(576125),
-  d = n(112843),
-  c = n(524484),
-  E = n(981631),
-  I = n(675654);
-
-function T(e) {
-  var t, n;
-  let {
-    editorHeight: i,
-    textValue: _
-  } = e, c = r.useRef(_), T = (0, o.Z)({
-    editorHeight: i
-  }), h = (0, d.Z)(), S = (0, s.e7)([u.ZP, a.default, l.Z], () => {
-    var e;
-    return u.ZP.isComboing(a.default.getId(), null !== (e = l.Z.getChannelId()) && void 0 !== e ? e : E.lds)
-  }), f = null !== (t = null == T ? void 0 : T.left) && void 0 !== t ? t : 0, N = (null !== (n = null == T ? void 0 : T.top) && void 0 !== n ? n : 0) - 16, A = r.useMemo(() => .05 > Math.random(), [0 === _.length]);
-  return r.useEffect(() => {
-    0 !== _.length && _ !== c.current && S && (h.fire(f, N, A ? {
-      sprite: I.vv
-    } : null), c.current = _)
-  }, [_, S, f, N, A, h]), null
-}
-
+var r = n(735250), i = n(470079), a = n(442837), o = n(606992), s = n(314897), l = n(944486), u = n(843693), c = n(576125), d = n(112843), _ = n(524484), E = n(981631), f = n(675654);
 function h(e) {
-  return (0, i.jsx)(_.Z, {
-    confettiLocation: c.Hn.CHAT_INPUT,
-    children: (0, i.jsx)(T, {
-      ...e
-    })
-  })
+    var t, n;
+    let {
+            editorHeight: r,
+            textValue: c
+        } = e, _ = i.useRef(c), h = (0, o.Z)({ editorHeight: r }), p = (0, d.Z)(), m = (0, a.e7)([
+            u.ZP,
+            s.default,
+            l.Z
+        ], () => {
+            var e;
+            return u.ZP.isComboing(s.default.getId(), null !== (e = l.Z.getChannelId()) && void 0 !== e ? e : E.lds);
+        }), I = null !== (t = null == h ? void 0 : h.left) && void 0 !== t ? t : 0, T = (null !== (n = null == h ? void 0 : h.top) && void 0 !== n ? n : 0) - 16, g = i.useMemo(() => 0.05 > Math.random(), [0 === c.length]);
+    return i.useEffect(() => {
+        0 !== c.length && c !== _.current && m && (p.fire(I, T, g ? { sprite: f.vv } : null), _.current = c);
+    }, [
+        c,
+        m,
+        I,
+        T,
+        g,
+        p
+    ]), null;
+}
+function p(e) {
+    return (0, r.jsx)(c.Z, {
+        confettiLocation: _.Hn.CHAT_INPUT,
+        children: (0, r.jsx)(h, { ...e })
+    });
 }

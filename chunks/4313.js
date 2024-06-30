@@ -1,36 +1,23 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return d
-  }
+    Z: function () {
+        return d;
+    }
 });
-var r = n(175922),
-  i = n(759202),
-  a = n(316138),
-  o = n(882159),
-  s = n(977489),
-  u = n(285363),
-  c = n(538018),
-  l = n(894417);
-
+var r = n(175922), i = n(759202), a = n(316138), o = n(882159), s = n(977489), l = n(285363), u = n(538018), c = n(894417);
 function d(e, t, n) {
-  void 0 === n && (n = !1);
-  var d, f, p, h, m = (0, o.Re)(t);
-  var g = (0, o.Re)(t) && (f = (d = t).getBoundingClientRect(), p = (0, l.NM)(f.width) / d.offsetWidth || 1, h = (0, l.NM)(f.height) / d.offsetHeight || 1, 1 !== p || 1 !== h),
-    _ = (0, u.Z)(t),
-    b = (0, r.Z)(e, g, n),
-    v = {
-      scrollLeft: 0,
-      scrollTop: 0
-    },
-    y = {
-      x: 0,
-      y: 0
+    void 0 === n && (n = !1);
+    var d, _, E, f, h = (0, o.Re)(t);
+    var p = (0, o.Re)(t) && (_ = (d = t).getBoundingClientRect(), E = (0, c.NM)(_.width) / d.offsetWidth || 1, f = (0, c.NM)(_.height) / d.offsetHeight || 1, 1 !== E || 1 !== f), m = (0, l.Z)(t), I = (0, r.Z)(e, p, n), T = {
+            scrollLeft: 0,
+            scrollTop: 0
+        }, g = {
+            x: 0,
+            y: 0
+        };
+    return (h || !h && !n) && (('body' !== (0, a.Z)(t) || (0, u.Z)(m)) && (T = (0, i.Z)(t)), (0, o.Re)(t) ? (g = (0, r.Z)(t, !0), g.x += t.clientLeft, g.y += t.clientTop) : m && (g.x = (0, s.Z)(m))), {
+        x: I.left + T.scrollLeft - g.x,
+        y: I.top + T.scrollTop - g.y,
+        width: I.width,
+        height: I.height
     };
-  return (m || !m && !n) && (("body" !== (0, a.Z)(t) || (0, c.Z)(_)) && (v = (0, i.Z)(t)), (0, o.Re)(t) ? (y = (0, r.Z)(t, !0), y.x += t.clientLeft, y.y += t.clientTop) : _ && (y.x = (0, s.Z)(_))), {
-    x: b.left + v.scrollLeft - y.x,
-    y: b.top + v.scrollTop - y.y,
-    width: b.width,
-    height: b.height
-  }
 }

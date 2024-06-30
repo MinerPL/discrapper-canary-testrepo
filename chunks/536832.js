@@ -1,0 +1,21 @@
+e.exports = {
+    container: 'container_dbc5a4',
+    content: 'content_dbc5a4',
+    headerCaption: 'headerCaption_dbc5a4',
+    form: 'form_dbc5a4',
+    description: 'description_dbc5a4',
+    header: 'header_dbc5a4',
+    checkboxTitle: 'checkboxTitle_dbc5a4',
+    textArea: 'textArea_dbc5a4',
+    footerImage: 'footerImage_dbc5a4',
+    stepImage: 'stepImage_dbc5a4',
+    checkImage: 'checkImage_dbc5a4',
+    tagImage: 'tagImage_dbc5a4',
+    pencilImage: 'pencilImage_dbc5a4',
+    tags: 'tags_dbc5a4',
+    error: 'error_dbc5a4',
+    checkboxWrapper: 'checkboxWrapper_dbc5a4',
+    tagContainer: 'tagContainer_dbc5a4',
+    tag: 'tag_dbc5a4',
+    usedTag: 'usedTag_dbc5a4'
+};

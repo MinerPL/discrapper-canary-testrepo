@@ -1,3 +1,2 @@
-"use strict";
 var e = n(96403);
-t.exports = e([].slice)
+t.exports = e([].slice);

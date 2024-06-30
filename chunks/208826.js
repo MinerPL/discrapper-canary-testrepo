@@ -1,36 +1,23 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return _
-  }
+    Z: function () {
+        return c;
+    }
 }), n(47120);
-var i = n(470079),
-  r = n(442837),
-  s = n(481060),
-  o = n(40851),
-  a = n(819640),
-  l = n(574254),
-  u = n(981631);
-
-function _() {
-  let e = (0, s.useModalsStore)(e => !Object.entries(e).every(e => {
-      let [t, n] = e;
-      return 0 === n.length
-    })),
-    t = (0, r.e7)([l.Z], () => l.Z.isOpen()),
-    n = (0, r.e7)([a.Z], () => a.Z.hasLayers()),
-    [_, d] = i.useState(!1),
-    c = (0, o.Aq)();
-  return i.useEffect(() => {
-    function e() {
-      d(!0)
-    }
-
-    function t() {
-      d(!1)
-    }
-    return c.subscribe(u.CkL.POPOUT_SHOW, e), c.subscribe(u.CkL.POPOUT_HIDE, t), () => {
-      c.unsubscribe(u.CkL.POPOUT_SHOW, e), c.unsubscribe(u.CkL.POPOUT_HIDE, t)
-    }
-  }, [c]), e || t || _ || n
+var r = n(470079), i = n(442837), a = n(481060), o = n(40851), s = n(819640), l = n(574254), u = n(981631);
+function c() {
+    let e = (0, a.useModalsStore)(e => !Object.entries(e).every(e => {
+            let [t, n] = e;
+            return 0 === n.length;
+        })), t = (0, i.e7)([l.Z], () => l.Z.isOpen()), n = (0, i.e7)([s.Z], () => s.Z.hasLayers()), [c, d] = r.useState(!1), _ = (0, o.Aq)();
+    return r.useEffect(() => {
+        function e() {
+            d(!0);
+        }
+        function t() {
+            d(!1);
+        }
+        return _.subscribe(u.CkL.POPOUT_SHOW, e), _.subscribe(u.CkL.POPOUT_HIDE, t), () => {
+            _.unsubscribe(u.CkL.POPOUT_SHOW, e), _.unsubscribe(u.CkL.POPOUT_HIDE, t);
+        };
+    }, [_]), e || t || c || n;
 }

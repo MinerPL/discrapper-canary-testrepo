@@ -1,186 +1,169 @@
-"use strict";
-n.d(e, {
-  O: function() {
-    return _
-  },
-  p: function() {
-    return h
-  }
+r.d(e, {
+    O: function () {
+        return u;
+    },
+    p: function () {
+        return R;
+    }
 });
-var r = n(876122),
-  i = n(793884),
-  s = n(862315),
-  a = n(529866),
-  o = n(829919),
-  u = n(869139),
-  l = n(336344),
-  c = n(841866),
-  d = n(643487);
-let h = "Breadcrumbs";
-class _ {
-  static __initStatic() {
-    this.id = h
-  }
-  __init() {
-    this.name = _.id
-  }
-  constructor(t) {
-    _.prototype.__init.call(this), this.options = {
-      console: !0,
-      dom: !0,
-      fetch: !0,
-      history: !0,
-      sentry: !0,
-      xhr: !0,
-      ...t
+var n = r(876122), _ = r(793884), a = r(862315), i = r(529866), o = r(829919), E = r(869139), s = r(336344), c = r(841866), I = r(643487);
+let R = 'Breadcrumbs';
+class u {
+    static __initStatic() {
+        this.id = R;
     }
-  }
-  setupOnce() {
-    this.options.console && (0, i.oq)("console", f), this.options.dom && (0, i.oq)("dom", function(t) {
-      return function(e) {
-        let n;
-        let i = "object" == typeof t ? t.serializeAttribute : void 0,
-          s = "object" == typeof t && "number" == typeof t.maxStringLength ? t.maxStringLength : void 0;
-        s && s > 1024 && (("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && a.kg.warn(`\`dom.maxStringLength\` cannot exceed 1024, but a value of ${s} was configured. Sentry will use 1024 instead.`), s = 1024), "string" == typeof i && (i = [i]);
-        try {
-          let t = e.event;
-          n = function(t) {
-            return !!t && !!t.target
-          }(t) ? (0, o.Rt)(t.target, {
-            keyAttrs: i,
-            maxStringLength: s
-          }) : (0, o.Rt)(t, {
-            keyAttrs: i,
-            maxStringLength: s
-          })
-        } catch (t) {
-          n = "<unknown>"
+    __init() {
+        this.name = u.id;
+    }
+    constructor(t) {
+        u.prototype.__init.call(this), this.options = {
+            console: !0,
+            dom: !0,
+            fetch: !0,
+            history: !0,
+            sentry: !0,
+            xhr: !0,
+            ...t
+        };
+    }
+    setupOnce() {
+        this.options.console && (0, _.oq)('console', T), this.options.dom && (0, _.oq)('dom', function (t) {
+            return function (e) {
+                let r;
+                let _ = 'object' == typeof t ? t.serializeAttribute : void 0, a = 'object' == typeof t && 'number' == typeof t.maxStringLength ? t.maxStringLength : void 0;
+                a && a > 1024 && (('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.warn(`\`dom.maxStringLength\` cannot exceed 1024, but a value of ${ a } was configured. Sentry will use 1024 instead.`), a = 1024), 'string' == typeof _ && (_ = [_]);
+                try {
+                    let t = e.event;
+                    r = function (t) {
+                        return !!t && !!t.target;
+                    }(t) ? (0, o.Rt)(t.target, {
+                        keyAttrs: _,
+                        maxStringLength: a
+                    }) : (0, o.Rt)(t, {
+                        keyAttrs: _,
+                        maxStringLength: a
+                    });
+                } catch (t) {
+                    r = '<unknown>';
+                }
+                if (0 !== r.length)
+                    (0, n.Gd)().addBreadcrumb({
+                        category: `ui.${ e.name }`,
+                        message: r
+                    }, {
+                        event: e.event,
+                        name: e.name,
+                        global: e.global
+                    });
+            };
+        }(this.options.dom)), this.options.xhr && (0, _.oq)('xhr', l), this.options.fetch && (0, _.oq)('fetch', A), this.options.history && (0, _.oq)('history', N);
+    }
+    addSentryBreadcrumb(t) {
+        this.options.sentry && (0, n.Gd)().addBreadcrumb({
+            category: `sentry.${ 'transaction' === t.type ? 'transaction' : 'event' }`,
+            event_id: t.event_id,
+            level: t.level,
+            message: (0, a.jH)(t)
+        }, { event: t });
+    }
+}
+u.__initStatic();
+function T(t) {
+    for (let e = 0; e < t.args.length; e++)
+        if ('ref=Ref<' === t.args[e]) {
+            t.args[e + 1] = 'viewRef';
+            break;
         }
-        if (0 !== n.length)(0, r.Gd)().addBreadcrumb({
-          category: `ui.${e.name}`,
-          message: n
-        }, {
-          event: e.event,
-          name: e.name,
-          global: e.global
-        })
-      }
-    }(this.options.dom)), this.options.xhr && (0, i.oq)("xhr", p), this.options.fetch && (0, i.oq)("fetch", m), this.options.history && (0, i.oq)("history", g)
-  }
-  addSentryBreadcrumb(t) {
-    this.options.sentry && (0, r.Gd)().addBreadcrumb({
-      category: `sentry.${"transaction"===t.type?"transaction":"event"}`,
-      event_id: t.event_id,
-      level: t.level,
-      message: (0, s.jH)(t)
-    }, {
-      event: t
-    })
-  }
-}
-_.__initStatic();
-
-function f(t) {
-  for (let e = 0; e < t.args.length; e++)
-    if ("ref=Ref<" === t.args[e]) {
-      t.args[e + 1] = "viewRef";
-      break
-    } let e = {
-    category: "console",
-    data: {
-      arguments: t.args,
-      logger: "console"
-    },
-    level: (0, u.VT)(t.level),
-    message: (0, l.nK)(t.args, " ")
-  };
-  if ("assert" === t.level) {
-    if (!1 !== t.args[0]) return;
-    e.message = `Assertion failed: ${(0,l.nK)(t.args.slice(1)," ")||"console.assert"}`, e.data.arguments = t.args.slice(1)
-  }(0, r.Gd)().addBreadcrumb(e, {
-    input: t.args,
-    level: t.level
-  })
-}
-
-function p(t) {
-  let {
-    startTimestamp: e,
-    endTimestamp: n
-  } = t, s = t.xhr[i.xU];
-  if (!e || !n || !s) return;
-  let {
-    method: a,
-    url: o,
-    status_code: u,
-    body: l
-  } = s, c = {
-    xhr: t.xhr,
-    input: l,
-    startTimestamp: e,
-    endTimestamp: n
-  };
-  (0, r.Gd)().addBreadcrumb({
-    category: "xhr",
-    data: {
-      method: a,
-      url: o,
-      status_code: u
-    },
-    type: "http"
-  }, c)
-}
-
-function m(t) {
-  let {
-    startTimestamp: e,
-    endTimestamp: n
-  } = t;
-  if (!(!n || t.fetchData.url.match(/sentry_key/) && "POST" === t.fetchData.method))
-    if (t.error) {
-      let i = t.fetchData,
-        s = {
-          data: t.error,
-          input: t.args,
-          startTimestamp: e,
-          endTimestamp: n
-        };
-      (0, r.Gd)().addBreadcrumb({
-        category: "fetch",
-        data: i,
-        level: "error",
-        type: "http"
-      }, s)
-    } else {
-      let i = {
-          ...t.fetchData,
-          status_code: t.response && t.response.status
+    let e = {
+        category: 'console',
+        data: {
+            arguments: t.args,
+            logger: 'console'
         },
-        s = {
-          input: t.args,
-          response: t.response,
-          startTimestamp: e,
-          endTimestamp: n
-        };
-      (0, r.Gd)().addBreadcrumb({
-        category: "fetch",
-        data: i,
-        type: "http"
-      }, s)
+        level: (0, E.VT)(t.level),
+        message: (0, s.nK)(t.args, ' ')
+    };
+    if ('assert' === t.level) {
+        if (!1 !== t.args[0])
+            return;
+        e.message = `Assertion failed: ${ (0, s.nK)(t.args.slice(1), ' ') || 'console.assert' }`, e.data.arguments = t.args.slice(1);
     }
+    (0, n.Gd)().addBreadcrumb(e, {
+        input: t.args,
+        level: t.level
+    });
 }
-
-function g(t) {
-  let e = t.from,
-    n = t.to,
-    i = (0, c.en)(d.m9.location.href),
-    s = (0, c.en)(e),
-    a = (0, c.en)(n);
-  !s.path && (s = i), i.protocol === a.protocol && i.host === a.host && (n = a.relative), i.protocol === s.protocol && i.host === s.host && (e = s.relative), (0, r.Gd)().addBreadcrumb({
-    category: "navigation",
-    data: {
-      from: e,
-      to: n
-    }
-  })
+function l(t) {
+    let {
+            startTimestamp: e,
+            endTimestamp: r
+        } = t, a = t.xhr[_.xU];
+    if (!e || !r || !a)
+        return;
+    let {
+            method: i,
+            url: o,
+            status_code: E,
+            body: s
+        } = a, c = {
+            xhr: t.xhr,
+            input: s,
+            startTimestamp: e,
+            endTimestamp: r
+        };
+    (0, n.Gd)().addBreadcrumb({
+        category: 'xhr',
+        data: {
+            method: i,
+            url: o,
+            status_code: E
+        },
+        type: 'http'
+    }, c);
+}
+function A(t) {
+    let {
+        startTimestamp: e,
+        endTimestamp: r
+    } = t;
+    if (!(!r || t.fetchData.url.match(/sentry_key/) && 'POST' === t.fetchData.method))
+        if (t.error) {
+            let _ = t.fetchData, a = {
+                    data: t.error,
+                    input: t.args,
+                    startTimestamp: e,
+                    endTimestamp: r
+                };
+            (0, n.Gd)().addBreadcrumb({
+                category: 'fetch',
+                data: _,
+                level: 'error',
+                type: 'http'
+            }, a);
+        } else {
+            let _ = {
+                    ...t.fetchData,
+                    status_code: t.response && t.response.status
+                }, a = {
+                    input: t.args,
+                    response: t.response,
+                    startTimestamp: e,
+                    endTimestamp: r
+                };
+            (0, n.Gd)().addBreadcrumb({
+                category: 'fetch',
+                data: _,
+                type: 'http'
+            }, a);
+        }
+}
+function N(t) {
+    let e = t.from, r = t.to, _ = (0, c.en)(I.m9.location.href), a = (0, c.en)(e), i = (0, c.en)(r);
+    !a.path && (a = _), _.protocol === i.protocol && _.host === i.host && (r = i.relative), _.protocol === a.protocol && _.host === a.host && (e = a.relative), (0, n.Gd)().addBreadcrumb({
+        category: 'navigation',
+        data: {
+            from: e,
+            to: r
+        }
+    });
 }

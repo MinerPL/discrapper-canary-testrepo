@@ -1,76 +1,56 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return A
-  }
+    Z: function () {
+        return T;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(120356),
-  s = n.n(r),
-  o = n(442837),
-  a = n(481060),
-  l = n(100527),
-  u = n(906732),
-  _ = n(849522),
-  d = n(639119),
-  c = n(594174),
-  E = n(466111),
-  I = n(74538),
-  T = n(694320),
-  h = n(981631),
-  S = n(474936),
-  f = n(689938),
-  N = n(251827);
-
-function A(e) {
-  var t, n, r, A;
-  let {
-    type: m,
-    textValue: O,
-    maxCharacterCount: R,
-    showRemainingCharsAfterCount: C,
-    className: p
-  } = e, g = (0, o.e7)([c.default], () => I.ZP.canUseIncreasedMessageLength(c.default.getCurrentUser())), L = (0, _.Z)(), v = null != R ? R : L, D = null !== (A = null != C ? C : R) && void 0 !== A ? A : L / 10, M = O.length, P = null != m.upsellLongMessages && (null != M ? M : 0) > h.J6R && g, y = null != m.upsellLongMessages && !g, U = (null === (n = (0, d.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === S.Si.TIER_2, b = v - M, G = b > D, w = b < 0 && U, k = 0 === b ? f.Z.Messages.CHARACTER_COUNT_AT_LIMIT : b > 0 ? f.Z.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
-    count: b
-  }) : f.Z.Messages.CHARACTER_COUNT_OVER_LIMIT, {
-    analyticsLocations: B
-  } = (0, u.ZP)(l.Z.CHARACTER_COUNT);
-  return P && b >= 0 || !G || y && !G ? (0, i.jsx)(u.Gt, {
-    value: B,
-    children: (0, i.jsxs)("div", {
-      className: s()(p, N.characterCount, {
-        [N.error]: b < 0
-      }),
-      children: [(0, i.jsxs)("div", {
-        className: N.flairContainer,
-        children: [P && b >= 0 ? (0, i.jsx)(a.Tooltip, {
-          text: f.Z.Messages.PREMIUM_MESSAGE_LENGTH_CHATBOX_FLAIR.format({
-            maxLength: v
-          }),
-          position: "top",
-          children: e => (0, i.jsx)(E.Z, {
-            className: N.premiumFlair,
-            ...e
-          })
-        }) : null, G || w ? null : (0, i.jsx)(a.Tooltip, {
-          text: k,
-          position: "top",
-          children: e => (0, i.jsx)("span", {
-            "aria-hidden": !0,
-            ...e,
-            children: b
-          })
-        })]
-      }), (0, i.jsx)(a.HiddenVisually, {
-        children: f.Z.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
-          count: b
+var i = n(120356), a = n.n(i), o = n(442837), s = n(481060), l = n(100527), u = n(906732), c = n(849522), d = n(639119), _ = n(594174), E = n(74538), f = n(694320), h = n(981631), p = n(474936), m = n(689938), I = n(471991);
+function T(e) {
+    var t, n, i, T;
+    let {
+            type: g,
+            textValue: S,
+            maxCharacterCount: A,
+            showRemainingCharsAfterCount: N,
+            className: v
+        } = e, O = (0, o.e7)([_.default], () => E.ZP.canUseIncreasedMessageLength(_.default.getCurrentUser())), R = (0, c.Z)(), C = null != A ? A : R, y = null !== (T = null != N ? N : A) && void 0 !== T ? T : R / 10, D = S.length, L = null != g.upsellLongMessages && (null != D ? D : 0) > h.J6R && O, b = null != g.upsellLongMessages && !O, M = (null === (n = (0, d.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === p.Si.TIER_2, P = C - D, U = P > y, w = P < 0 && M, x = 0 === P ? m.Z.Messages.CHARACTER_COUNT_AT_LIMIT : P > 0 ? m.Z.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({ count: P }) : m.Z.Messages.CHARACTER_COUNT_OVER_LIMIT, {analyticsLocations: G} = (0, u.ZP)(l.Z.CHARACTER_COUNT);
+    return L && P >= 0 || !U || b && !U ? (0, r.jsx)(u.Gt, {
+        value: G,
+        children: (0, r.jsxs)('div', {
+            className: a()(v, I.characterCount, { [I.error]: P < 0 }),
+            children: [
+                (0, r.jsxs)('div', {
+                    className: I.flairContainer,
+                    children: [
+                        L && P >= 0 ? (0, r.jsx)(s.Tooltip, {
+                            text: m.Z.Messages.PREMIUM_MESSAGE_LENGTH_CHATBOX_FLAIR.format({ maxLength: C }),
+                            position: 'top',
+                            children: e => (0, r.jsx)(s.NitroWheelIcon, {
+                                size: 'md',
+                                color: 'currentColor',
+                                className: I.premiumFlair,
+                                ...e
+                            })
+                        }) : null,
+                        U || w ? null : (0, r.jsx)(s.Tooltip, {
+                            text: x,
+                            position: 'top',
+                            children: e => (0, r.jsx)('span', {
+                                'aria-hidden': !0,
+                                ...e,
+                                children: P
+                            })
+                        })
+                    ]
+                }),
+                (0, r.jsx)(s.HiddenVisually, { children: m.Z.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({ count: P }) }),
+                b && !U ? (0, r.jsx)(f.Z, {
+                    className: I.upsell,
+                    iconOnly: (null === (i = g.upsellLongMessages) || void 0 === i ? void 0 : i.iconOnly) || !1,
+                    remaining: P
+                }) : null
+            ]
         })
-      }), y && !G ? (0, i.jsx)(T.Z, {
-        className: N.upsell,
-        iconOnly: (null === (r = m.upsellLongMessages) || void 0 === r ? void 0 : r.iconOnly) || !1,
-        remaining: b
-      }) : null]
-    })
-  }) : null
+    }) : null;
 }

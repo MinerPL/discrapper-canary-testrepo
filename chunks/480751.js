@@ -1,6 +1,5 @@
-var n = e(299578),
-  o = e(538027);
-t.exports = function(t, r) {
-  var e = o(t, r);
-  return n(e) ? e : void 0
-}
+var n = r(299578), _ = r(538027);
+t.exports = function (t, e) {
+    var r = _(t, e);
+    return n(r) ? r : void 0;
+};

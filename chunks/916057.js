@@ -1,7 +1,6 @@
-"use strict";
-var i, r, s, o;
+var r, i, a, o;
 n.d(t, {
-  a: function() {
-    return i
-  }
-}), (s = i || (i = {}))[s.DISABLED = -1] = "DISABLED", s[s.NORMAL = 0] = "NORMAL", s[s.LOW_BIRTATE = 1] = "LOW_BIRTATE", s[s.AGGRESSIVE = 2] = "AGGRESSIVE", s[s.VERY_AGGRESSIVE = 3] = "VERY_AGGRESSIVE", (o = r || (r = {}))[o.NONE = 0] = "NONE", o[o.TIMEOUT = 1] = "TIMEOUT"
+    a: function () {
+        return r;
+    }
+}), (a = r || (r = {}))[a.DISABLED = -1] = 'DISABLED', a[a.NORMAL = 0] = 'NORMAL', a[a.LOW_BIRTATE = 1] = 'LOW_BIRTATE', a[a.AGGRESSIVE = 2] = 'AGGRESSIVE', a[a.VERY_AGGRESSIVE = 3] = 'VERY_AGGRESSIVE', (o = i || (i = {}))[o.NONE = 0] = 'NONE', o[o.TIMEOUT = 1] = 'TIMEOUT';

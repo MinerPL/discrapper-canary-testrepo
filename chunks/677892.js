@@ -1,236 +1,229 @@
-"use strict";
-t.d(s, {
-  $$: function() {
-    return O
-  },
-  P_: function() {
-    return M
-  },
-  ap: function() {
-    return p
-  },
-  ku: function() {
-    return A
-  }
-}), t(47120);
-var n = t(735250),
-  i = t(470079),
-  l = t(442837),
-  a = t(481060),
-  r = t(45966),
-  o = t(637853),
-  c = t(734893),
-  d = t(621923),
-  u = t(877453),
-  E = t(93879),
-  _ = t(263704),
-  I = t(988951),
-  T = t(308570),
-  N = t(759231),
-  m = t(8426),
-  S = t(969632),
-  h = t(974513),
-  g = t(290511),
-  x = t(689938),
-  C = t(419894);
-
-function R(e) {
-  let s, {
-    title: t,
-    description: i,
-    icon: l,
-    hasStarted: r,
-    status: o,
-    onEdit: c,
-    extra: d
-  } = e;
-  switch (o) {
-    case "good":
-      s = (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)(_.Z, {
-          width: 16,
-          height: 16,
-          className: C.checkmark
-        }), (0, n.jsx)(a.Text, {
-          variant: "text-xs/semibold",
-          color: "status-positive",
-          className: C.statusText,
-          children: x.Z.Messages.DEFAULT_CHANNELS_GOOD
-        })]
-      });
-      break;
-    case "warning":
-      s = (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)(N.Z, {
-          width: 16,
-          height: 16,
-          className: C.warning
-        }), (0, n.jsx)(a.Text, {
-          variant: "text-xs/semibold",
-          color: "status-warning",
-          className: C.statusText,
-          children: x.Z.Messages.ONBOARDING_PROMPTS_WARNING
-        })]
-      });
-      break;
-    case "required":
-      s = (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)(N.Z, {
-          width: 16,
-          height: 16,
-          className: C.danger
-        }), (0, n.jsx)(a.Text, {
-          variant: "text-xs/semibold",
-          color: "status-danger",
-          className: C.statusText,
-          children: x.Z.Messages.REQUIRED
-        })]
-      })
-  }
-  return (0, n.jsxs)("div", {
-    className: C.onboardingStepContainer,
-    children: [(0, n.jsxs)("div", {
-      className: C.leftContainer,
-      children: [(0, n.jsx)("div", {
-        className: C.iconContainer,
-        children: l
-      }), (0, n.jsxs)("div", {
-        className: C.onboardingStepText,
-        children: [(0, n.jsx)(a.Heading, {
-          variant: "heading-md/semibold",
-          children: t
-        }), (0, n.jsx)(a.Text, {
-          variant: "text-xs/normal",
-          color: r && "required" === o ? "status-danger" : "text-normal",
-          children: i
-        })]
-      })]
-    }), (0, n.jsxs)("div", {
-      className: C.rightContainer,
-      children: [s, d, r ? (0, n.jsx)(a.Button, {
-        className: C.cta,
-        size: a.Button.Sizes.SMALL,
-        color: a.Button.Colors.PRIMARY,
-        look: a.Button.Looks.OUTLINED,
-        onClick: c,
-        children: x.Z.Messages.EDIT
-      }) : (0, n.jsxs)(a.Button, {
-        className: C.cta,
-        innerClassName: C.ctaInner,
-        size: a.Button.Sizes.SMALL,
-        color: a.Button.Colors.PRIMARY,
-        onClick: c,
-        children: [x.Z.Messages.GUILD_ONBOARDING_SETUP_REVIEW_SET_UP, (0, n.jsx)(u.Z, {
-          width: 12,
-          height: 12
-        })]
-      })]
-    })]
-  })
+n.d(t, {
+    $$: function () {
+        return h;
+    },
+    P_: function () {
+        return x;
+    },
+    ap: function () {
+        return C;
+    },
+    ku: function () {
+        return g;
+    }
+}), n(47120);
+var s = n(735250), a = n(470079), i = n(442837), r = n(481060), l = n(45966), o = n(637853), c = n(734893), d = n(621923), u = n(8426), _ = n(969632), E = n(974513), I = n(290511), T = n(689938), m = n(94912);
+function N(e) {
+    let t, {
+            title: n,
+            description: a,
+            icon: i,
+            hasStarted: l,
+            status: o,
+            onEdit: c,
+            extra: d
+        } = e;
+    switch (o) {
+    case 'good':
+        t = (0, s.jsxs)(s.Fragment, {
+            children: [
+                (0, s.jsx)(r.CheckmarkLargeIcon, {
+                    size: 'xs',
+                    color: 'currentColor',
+                    className: m.checkmark
+                }),
+                (0, s.jsx)(r.Text, {
+                    variant: 'text-xs/semibold',
+                    color: 'status-positive',
+                    className: m.statusText,
+                    children: T.Z.Messages.DEFAULT_CHANNELS_GOOD
+                })
+            ]
+        });
+        break;
+    case 'warning':
+        t = (0, s.jsxs)(s.Fragment, {
+            children: [
+                (0, s.jsx)(r.CircleExclamationPointIcon, {
+                    size: 'xs',
+                    color: 'currentColor',
+                    className: m.warning
+                }),
+                (0, s.jsx)(r.Text, {
+                    variant: 'text-xs/semibold',
+                    color: 'status-warning',
+                    className: m.statusText,
+                    children: T.Z.Messages.ONBOARDING_PROMPTS_WARNING
+                })
+            ]
+        });
+        break;
+    case 'required':
+        t = (0, s.jsxs)(s.Fragment, {
+            children: [
+                (0, s.jsx)(r.CircleExclamationPointIcon, {
+                    size: 'xs',
+                    color: 'currentColor',
+                    className: m.danger
+                }),
+                (0, s.jsx)(r.Text, {
+                    variant: 'text-xs/semibold',
+                    color: 'status-danger',
+                    className: m.statusText,
+                    children: T.Z.Messages.REQUIRED
+                })
+            ]
+        });
+    }
+    return (0, s.jsxs)('div', {
+        className: m.onboardingStepContainer,
+        children: [
+            (0, s.jsxs)('div', {
+                className: m.leftContainer,
+                children: [
+                    (0, s.jsx)('div', {
+                        className: m.iconContainer,
+                        children: i
+                    }),
+                    (0, s.jsxs)('div', {
+                        className: m.onboardingStepText,
+                        children: [
+                            (0, s.jsx)(r.Heading, {
+                                variant: 'heading-md/semibold',
+                                children: n
+                            }),
+                            (0, s.jsx)(r.Text, {
+                                variant: 'text-xs/normal',
+                                color: l && 'required' === o ? 'status-danger' : 'text-normal',
+                                children: a
+                            })
+                        ]
+                    })
+                ]
+            }),
+            (0, s.jsxs)('div', {
+                className: m.rightContainer,
+                children: [
+                    t,
+                    d,
+                    l ? (0, s.jsx)(r.Button, {
+                        className: m.cta,
+                        size: r.Button.Sizes.SMALL,
+                        color: r.Button.Colors.PRIMARY,
+                        look: r.Button.Looks.OUTLINED,
+                        onClick: c,
+                        children: T.Z.Messages.EDIT
+                    }) : (0, s.jsxs)(r.Button, {
+                        className: m.cta,
+                        innerClassName: m.ctaInner,
+                        size: r.Button.Sizes.SMALL,
+                        color: r.Button.Colors.PRIMARY,
+                        onClick: c,
+                        children: [
+                            T.Z.Messages.GUILD_ONBOARDING_SETUP_REVIEW_SET_UP,
+                            (0, s.jsx)(r.ArrowSmallRightIcon, {
+                                size: 'xxs',
+                                color: 'currentColor'
+                            })
+                        ]
+                    })
+                ]
+            })
+        ]
+    });
 }
-
-function L(e) {
-  let s = (0, l.e7)([r.Z], () => r.Z.getDefaultChannelIds(e)),
-    t = i.useMemo(() => new Set(s), [s]),
-    [n, a] = (0, o.VF)(e, t);
-  return a.length >= g.md && n.length >= g.X
+function S(e) {
+    let t = (0, i.e7)([l.Z], () => l.Z.getDefaultChannelIds(e)), n = a.useMemo(() => new Set(t), [t]), [s, r] = (0, o.VF)(e, n);
+    return r.length >= I.md && s.length >= I.X;
 }
-
-function O(e) {
-  let s = L(e),
-    t = (0, h.O4)(e);
-  return s || t
+function h(e) {
+    let t = S(e), n = (0, E.O4)(e);
+    return t || n;
 }
-
-function A(e) {
-  var s, t, a, c;
-  let {
-    guildId: d,
-    onEdit: u,
-    disableGoodStatus: _
-  } = e, I = (0, l.Wu)([r.Z], () => r.Z.getDefaultChannelIds(d)), T = (0, l.e7)([r.Z], () => (0, o.kl)(d, r.Z.getDefaultChannelIds(d), r.Z.getOnboardingPrompts(d)).length), N = i.useMemo(() => new Set(I), [I]), [, m] = (0, o.VF)(d, N), S = m.length, O = L(d), A = (0, h.O4)(d), p = (0, l.e7)([r.Z], () => r.Z.isAdvancedMode(d));
-  let M = (s = O, t = p, a = S, c = T, t ? x.Z.Messages.GUILD_ONBOARDING_SETUP_REVIEW_NUM_DEFAULT_CHANNELS_ADVANCED.format({
-    numDefaultChannels: a,
-    numFromQuestions: c - a
-  }) : s ? x.Z.Messages.GUILD_ONBOARDING_SETUP_REVIEW_NUM_DEFAULT_CHANNELS.format({
-    numDefaultChannels: a
-  }) : x.Z.Messages.GUILD_ONBOARDING_SETUP_REVIEW_NOT_ENOUGH_DEFAULT_CHANNELS.format({
-    numDefaultChannels: g.md,
-    numChattableChannels: g.X
-  }));
-  return (0, n.jsx)(R, {
-    title: p ? x.Z.Messages.GUILD_SETTINGS_DEFAULT_CHANNELS_ADVANCED : x.Z.Messages.GUILD_SETTINGS_DEFAULT_CHANNELS,
-    description: M,
-    icon: (0, n.jsx)(E.Z, {
-      width: 24,
-      height: 24,
-      className: C.channelIcon
-    }),
-    hasStarted: S > 0 || p,
-    status: O || A ? _ ? "none" : "good" : "required",
-    onEdit: u
-  })
+function g(e) {
+    var t, n, c, d;
+    let {
+            guildId: u,
+            onEdit: _,
+            disableGoodStatus: h
+        } = e, g = (0, i.Wu)([l.Z], () => l.Z.getDefaultChannelIds(u)), C = (0, i.e7)([l.Z], () => (0, o.kl)(u, l.Z.getDefaultChannelIds(u), l.Z.getOnboardingPrompts(u)).length), x = a.useMemo(() => new Set(g), [g]), [, p] = (0, o.VF)(u, x), R = p.length, f = S(u), L = (0, E.O4)(u), O = (0, i.e7)([l.Z], () => l.Z.isAdvancedMode(u));
+    let A = (t = f, n = O, c = R, d = C, n ? T.Z.Messages.GUILD_ONBOARDING_SETUP_REVIEW_NUM_DEFAULT_CHANNELS_ADVANCED.format({
+        numDefaultChannels: c,
+        numFromQuestions: d - c
+    }) : t ? T.Z.Messages.GUILD_ONBOARDING_SETUP_REVIEW_NUM_DEFAULT_CHANNELS.format({ numDefaultChannels: c }) : T.Z.Messages.GUILD_ONBOARDING_SETUP_REVIEW_NOT_ENOUGH_DEFAULT_CHANNELS.format({
+        numDefaultChannels: I.md,
+        numChattableChannels: I.X
+    }));
+    return (0, s.jsx)(N, {
+        title: O ? T.Z.Messages.GUILD_SETTINGS_DEFAULT_CHANNELS_ADVANCED : T.Z.Messages.GUILD_SETTINGS_DEFAULT_CHANNELS,
+        description: A,
+        icon: (0, s.jsx)(r.TextIcon, {
+            size: 'md',
+            color: 'currentColor',
+            className: m.channelIcon
+        }),
+        hasStarted: R > 0 || O,
+        status: f || L ? h ? 'none' : 'good' : 'required',
+        onEdit: _
+    });
 }
-
-function p(e) {
-  let {
-    guildId: s,
-    onEdit: t,
-    disableGoodStatus: i
-  } = e, a = (0, l.Wu)([r.Z], () => r.Z.getDefaultChannelIds(s)), c = (0, l.Wu)([r.Z], () => r.Z.getOnboardingPrompts(s)), d = c.length, [u, E] = (0, o.dF)(s, c, a), _ = u.length, T = u.length + E.length, N = _ / T * 100, m = (0, l.e7)([r.Z], () => r.Z.isAdvancedMode(s)), S = d > 0, h = "none";
-  return S && (N >= 85 && !i ? h = "good" : N < 85 && (h = "warning")), (0, n.jsx)(R, {
-    title: m ? x.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER_ADVANCED : x.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER,
-    description: x.Z.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE.format({
-      numChannels: _,
-      numTotalChannels: T,
-      channelsHook: (e, s) => (0, n.jsx)("span", {
-        style: {
-          color: N > 85 ? "var(--header-primary)" : "var(--status-warning)"
-        },
-        children: e
-      }, s)
-    }),
-    icon: (0, n.jsx)(I.Z, {
-      width: 24,
-      height: 24,
-      className: C.channelIcon
-    }),
-    hasStarted: S,
-    status: h,
-    onEdit: t
-  })
+function C(e) {
+    let {
+            guildId: t,
+            onEdit: n,
+            disableGoodStatus: a
+        } = e, c = (0, i.Wu)([l.Z], () => l.Z.getDefaultChannelIds(t)), d = (0, i.Wu)([l.Z], () => l.Z.getOnboardingPrompts(t)), u = d.length, [_, E] = (0, o.dF)(t, d, c), I = _.length, S = _.length + E.length, h = I / S * 100, g = (0, i.e7)([l.Z], () => l.Z.isAdvancedMode(t)), C = u > 0, x = 'none';
+    return C && (h >= 85 && !a ? x = 'good' : h < 85 && (x = 'warning')), (0, s.jsx)(N, {
+        title: g ? T.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER_ADVANCED : T.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER,
+        description: T.Z.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE.format({
+            numChannels: I,
+            numTotalChannels: S,
+            channelsHook: (e, t) => (0, s.jsx)('span', {
+                style: { color: h > 85 ? 'var(--header-primary)' : 'var(--status-warning)' },
+                children: e
+            }, t)
+        }),
+        icon: (0, s.jsx)(r.FriendsIcon, {
+            size: 'md',
+            color: 'currentColor',
+            className: m.channelIcon
+        }),
+        hasStarted: C,
+        status: x,
+        onEdit: n
+    });
 }
-
-function M(e) {
-  let {
-    guildId: s,
-    onEdit: t,
-    disableGoodStatus: o
-  } = e, u = (0, l.e7)([S.Z], () => S.Z.getSettings()), E = (0, l.e7)([r.Z], () => r.Z.getEnabled(s)), {
-    serverGuideOptional: _
-  } = (0, d.hl)(s), I = (0, c.uo)(u), N = u.enabled, h = i.useCallback(() => {
-    (0, m.To)(s, !N)
-  }, [s, N]), g = !(0, c.av)(u), L = "none";
-  g && (I && !o ? L = "good" : !I && (L = "required"));
-  let O = x.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_DESCRIPTION;
-  I ? !g && (O = x.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_NOT_STARTED_DESCRIPTION) : O = x.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_INVALID_DESCRIPTION;
-  let A = null;
-  return g && _ && E && (A = (0, n.jsx)(a.Switch, {
-    className: C.inlineSwitch,
-    checked: N,
-    onChange: h,
-    disabled: !I
-  })), (0, n.jsx)(R, {
-    title: x.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_TITLE,
-    description: O,
-    icon: (0, n.jsx)(T.Z, {
-      width: 24,
-      height: 24,
-      className: C.channelIcon
-    }),
-    hasStarted: g,
-    status: L,
-    onEdit: t,
-    extra: A
-  })
+function x(e) {
+    let {
+            guildId: t,
+            onEdit: n,
+            disableGoodStatus: o
+        } = e, E = (0, i.e7)([_.Z], () => _.Z.getSettings()), I = (0, i.e7)([l.Z], () => l.Z.getEnabled(t)), {serverGuideOptional: S} = (0, d.hl)(t), h = (0, c.uo)(E), g = E.enabled, C = a.useCallback(() => {
+            (0, u.To)(t, !g);
+        }, [
+            t,
+            g
+        ]), x = !(0, c.av)(E), p = 'none';
+    x && (h && !o ? p = 'good' : !h && (p = 'required'));
+    let R = T.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_DESCRIPTION;
+    h ? !x && (R = T.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_NOT_STARTED_DESCRIPTION) : R = T.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_INVALID_DESCRIPTION;
+    let f = null;
+    return x && S && I && (f = (0, s.jsx)(r.Switch, {
+        className: m.inlineSwitch,
+        checked: g,
+        onChange: C,
+        disabled: !h
+    })), (0, s.jsx)(N, {
+        title: T.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_TITLE,
+        description: R,
+        icon: (0, s.jsx)(r.SignPostIcon, {
+            size: 'md',
+            color: 'currentColor',
+            className: m.channelIcon
+        }),
+        hasStarted: x,
+        status: p,
+        onEdit: n,
+        extra: f
+    });
 }

@@ -1,19 +1,15 @@
-"use strict";
-n.d(t, {
-  Z: function() {
-    return a
-  }
+t.d(n, {
+    Z: function () {
+        return a;
+    }
 });
-var l = n(735250);
-n(470079);
-var s = n(396334);
-
+var l = t(735250);
+t(470079);
+var s = t(140174);
 function a(e) {
-  let {
-    children: t
-  } = e;
-  return (0, l.jsx)("div", {
-    className: s.card,
-    children: t
-  })
+    let {children: n} = e;
+    return (0, l.jsx)('div', {
+        className: s.card,
+        children: n
+    });
 }

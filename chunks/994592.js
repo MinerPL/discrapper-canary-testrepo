@@ -1,47 +1,39 @@
-"use strict";
 n.d(t, {
-  j0: function() {
-    return I
-  },
-  mY: function() {
-    return E
-  },
-  on: function() {
-    return c
-  }
+    j0: function () {
+        return f;
+    },
+    mY: function () {
+        return E;
+    },
+    on: function () {
+        return _;
+    }
 }), n(47120);
-var i = n(442837),
-  r = n(652515),
-  s = n(200876),
-  o = n(674180),
-  a = n(160404),
-  l = n(430824),
-  u = n(772021),
-  _ = n(981631);
-
+var r = n(442837), i = n(652515), a = n(200876), o = n(674180), s = n(160404), l = n(430824), u = n(772021), c = n(981631);
 function d(e) {
-  let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [l.Z, a.Z], i = t.getGuild(e);
-  if (null == i) return !1;
-  let r = (0, s.l)(i),
-    o = i.hasFeature(_.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
-  return !!(r && o || n.isViewingServerShop(e)) || !1
+    let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [
+            l.Z,
+            s.Z
+        ], r = t.getGuild(e);
+    if (null == r)
+        return !1;
+    let i = (0, a.l)(r), o = r.hasFeature(c.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
+    return !!(i && o || n.isViewingServerShop(e)) || !1;
 }
-
-function c(e, t) {
-  return !!d(e) || (0, u.U)(e, t)
+function _(e, t) {
+    return !!d(e) || (0, u.U)(e, t);
 }
-
 function E(e) {
-  let t = (0, u.Z)(e),
-    n = (0, i.e7)([l.Z, a.Z], () => d(e, [l.Z, a.Z]), [e]),
-    {
-      shouldHideGuildPurchaseEntryPoints: r
-    } = (0, o.uP)(e);
-  return !r && (n || t)
+    let t = (0, u.Z)(e), n = (0, r.e7)([
+            l.Z,
+            s.Z
+        ], () => d(e, [
+            l.Z,
+            s.Z
+        ]), [e]), {shouldHideGuildPurchaseEntryPoints: i} = (0, o.uP)(e);
+    return !i && (n || t);
 }
-
-function I(e) {
-  let t = E(e),
-    n = (0, r.RF)(e, "useShowRoleSubscriptionsInChannelList");
-  return t && !n
+function f(e) {
+    let t = E(e), n = (0, i.RF)(e, 'useShowRoleSubscriptionsInChannelList');
+    return t && !n;
 }

@@ -1,69 +1,65 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return I
-  }
+n.d(t, {
+    Z: function () {
+        return I;
+    }
 });
-var n = t(735250),
-  i = t(470079),
-  l = t(536982),
-  a = t(285318),
-  r = t(456677),
-  o = t(55889),
-  c = t(300453),
-  d = t(620436),
-  u = t(273504),
-  E = t(689938),
-  _ = t(585175);
-
+var s = n(735250), a = n(470079), i = n(536982), r = n(285318), l = n(456677), o = n(55889), c = n(300453), d = n(620436), u = n(273504), _ = n(689938), E = n(921624);
 function I(e) {
-  var s, t, I;
-  let {
-    rule: T,
-    onChangeRule: N
-  } = e, m = i.useCallback(e => {
-    N({
-      ...T,
-      triggerMetadata: {
-        ...T.triggerMetadata,
-        allowList: e
-      }
-    })
-  }, [N, T]);
-  return (0, n.jsx)(n.Fragment, {
-    children: (0, n.jsxs)("div", {
-      className: _.cardContentsContainer,
-      children: [(0, n.jsxs)(c.Z, {
-        step: 1,
-        header: E.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_TRIGGER_DESCRIPTION,
-        children: [(0, n.jsx)(a.Z, {
-          rule: T,
-          onChangeRule: N
-        }), (0, n.jsx)(l.Z, {
-          onChange: m,
-          initialValue: null === (s = T.triggerMetadata) || void 0 === s ? void 0 : s.allowList,
-          maxWordCount: u.I3,
-          collapsed: (null === (t = T.triggerMetadata) || void 0 === t ? void 0 : t.allowList) == null || (null === (I = T.triggerMetadata) || void 0 === I ? void 0 : I.allowList.length) === 0
-        })]
-      }), (0, n.jsx)(d.Z, {
-        type: d.Z.Type.ARROW_DOWN
-      }), (0, n.jsx)(c.Z, {
-        step: 2,
-        header: E.Z.Messages.GUILD_AUTOMOD_ACTIONS_HEADER,
-        children: (0, n.jsx)(r.Z, {
-          rule: T,
-          onChangeRule: N
+    var t, n, I;
+    let {
+            rule: T,
+            onChangeRule: m
+        } = e, N = a.useCallback(e => {
+            m({
+                ...T,
+                triggerMetadata: {
+                    ...T.triggerMetadata,
+                    allowList: e
+                }
+            });
+        }, [
+            m,
+            T
+        ]);
+    return (0, s.jsx)(s.Fragment, {
+        children: (0, s.jsxs)('div', {
+            className: E.cardContentsContainer,
+            children: [
+                (0, s.jsxs)(c.Z, {
+                    step: 1,
+                    header: _.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_TRIGGER_DESCRIPTION,
+                    children: [
+                        (0, s.jsx)(r.Z, {
+                            rule: T,
+                            onChangeRule: m
+                        }),
+                        (0, s.jsx)(i.Z, {
+                            onChange: N,
+                            initialValue: null === (t = T.triggerMetadata) || void 0 === t ? void 0 : t.allowList,
+                            maxWordCount: u.I3,
+                            collapsed: (null === (n = T.triggerMetadata) || void 0 === n ? void 0 : n.allowList) == null || (null === (I = T.triggerMetadata) || void 0 === I ? void 0 : I.allowList.length) === 0
+                        })
+                    ]
+                }),
+                (0, s.jsx)(d.Z, { type: d.Z.Type.ARROW_DOWN }),
+                (0, s.jsx)(c.Z, {
+                    step: 2,
+                    header: _.Z.Messages.GUILD_AUTOMOD_ACTIONS_HEADER,
+                    children: (0, s.jsx)(l.Z, {
+                        rule: T,
+                        onChangeRule: m
+                    })
+                }),
+                (0, s.jsx)(d.Z, { type: d.Z.Type.CROSS }),
+                (0, s.jsx)(c.Z, {
+                    step: 3,
+                    header: _.Z.Messages.GUILD_AUTOMOD_EXEMPTION_HEADER,
+                    children: (0, s.jsx)(o.Z, {
+                        rule: T,
+                        onChangeRule: m
+                    })
+                })
+            ]
         })
-      }), (0, n.jsx)(d.Z, {
-        type: d.Z.Type.CROSS
-      }), (0, n.jsx)(c.Z, {
-        step: 3,
-        header: E.Z.Messages.GUILD_AUTOMOD_EXEMPTION_HEADER,
-        children: (0, n.jsx)(o.Z, {
-          rule: T,
-          onChangeRule: N
-        })
-      })]
-    })
-  })
+    });
 }

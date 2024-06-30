@@ -1,50 +1,39 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return S
-  }
+    Z: function () {
+        return m;
+    }
 });
-var i = n(430198),
-  r = n(897345),
-  s = n(697379),
-  o = n(241559),
-  a = n(819553),
-  l = n(931261),
-  u = n(994592),
-  _ = n(911560),
-  d = n(592125),
-  c = n(430824),
-  E = n(823379),
-  I = n(754688),
-  T = n(981631),
-  h = n(176505);
-async function S(e) {
-  let {
-    guildId: t,
-    channelId: n
-  } = e, S = c.Z.getGuild(t), f = c.Z.getRoles(t);
-  if (null == S && t !== T.ME) return !1;
-  if (null == n) return !0;
-  if ((0, h.AB)(n)) switch (n) {
-    case h.oC.ROLE_SUBSCRIPTIONS:
-      return (0, u.on)(t, f);
-    case h.oC.GUILD_SHOP:
-      return (0, r.r)(S, f);
-    case h.oC.MEMBER_APPLICATIONS:
-      return (0, s.v)(t);
-    case h.oC.GUILD_HOME:
-      return (0, l.s)(t);
-    case h.oC.CHANNEL_BROWSER:
-      return null != S && S.hasFeature(T.oNc.COMMUNITY);
-    case h.oC.GUILD_ONBOARDING:
-      return a.ZP.shouldShowOnboarding(t);
-    case h.oC.CUSTOMIZE_COMMUNITY:
-      return null != S && S.hasFeature(T.oNc.COMMUNITY);
-    case h.oC.MEMBER_SAFETY:
-      return (0, o.lv)(t);
-    default:
-      (0, E.vE)(n)
-  }
-  let N = d.Z.getChannel(n);
-  return (null != N || (await _.Z.loadThread(n), null != (N = d.Z.getChannel(n)))) && ((0, I.YO)(N) || i.Z.isChannelGatedAndVisible(t, n))
+var r = n(430198), i = n(897345), a = n(697379), o = n(241559), s = n(819553), l = n(931261), u = n(994592), c = n(911560), d = n(592125), _ = n(430824), E = n(823379), f = n(754688), h = n(981631), p = n(176505);
+async function m(e) {
+    let {
+            guildId: t,
+            channelId: n
+        } = e, m = _.Z.getGuild(t), I = _.Z.getRoles(t);
+    if (null == m && t !== h.ME)
+        return !1;
+    if (null == n)
+        return !0;
+    if ((0, p.AB)(n))
+        switch (n) {
+        case p.oC.ROLE_SUBSCRIPTIONS:
+            return (0, u.on)(t, I);
+        case p.oC.GUILD_SHOP:
+            return (0, i.r)(m, I);
+        case p.oC.MEMBER_APPLICATIONS:
+            return (0, a.v)(t);
+        case p.oC.GUILD_HOME:
+            return (0, l.s)(t);
+        case p.oC.CHANNEL_BROWSER:
+            return null != m && m.hasFeature(h.oNc.COMMUNITY);
+        case p.oC.GUILD_ONBOARDING:
+            return s.ZP.shouldShowOnboarding(t);
+        case p.oC.CUSTOMIZE_COMMUNITY:
+            return null != m && m.hasFeature(h.oNc.COMMUNITY);
+        case p.oC.MEMBER_SAFETY:
+            return (0, o.lv)(t);
+        default:
+            (0, E.vE)(n);
+        }
+    let T = d.Z.getChannel(n);
+    return (null != T || (await c.Z.loadThread(n), null != (T = d.Z.getChannel(n)))) && ((0, f.YO)(T) || r.Z.isChannelGatedAndVisible(t, n));
 }

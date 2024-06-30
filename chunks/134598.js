@@ -1,23 +1,19 @@
-"use strict";
 n.d(t, {
-  X: function() {
-    return s
-  }
+    X: function () {
+        return a;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(481060);
-
-function s(e, t, s) {
-  (0, r.openModalLazy)(async () => {
-    let {
-      default: r
-    } = await Promise.all([n.e("99387"), n.e("10377")]).then(n.bind(n, 137167));
-    return n => (0, i.jsx)(r, {
-      headerText: e,
-      buttonCTA: t,
-      onSave: s,
-      ...n
-    })
-  })
+var i = n(481060);
+function a(e, t, a) {
+    (0, i.openModalLazy)(async () => {
+        let {default: i} = await n.e('9707').then(n.bind(n, 137167));
+        return n => (0, r.jsx)(i, {
+            headerText: e,
+            buttonCTA: t,
+            onSave: a,
+            ...n
+        });
+    });
 }

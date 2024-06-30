@@ -1,17 +1,14 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return o
-  }
+    Z: function () {
+        return o;
+    }
 });
-var i = n(822545);
-let r = {
-    LATIN12: i.latin12CompactTimeStamp,
-    LATIN24: i.latin24CompactTimeStamp,
-    ASIAN: i.asianCompactTimeStamp
-  },
-  s = /(AM|PM)$/;
-
+var r = n(250050);
+let i = {
+        LATIN12: r.latin12CompactTimeStamp,
+        LATIN24: r.latin24CompactTimeStamp,
+        ASIAN: r.asianCompactTimeStamp
+    }, a = /(AM|PM)$/;
 function o(e) {
-  return null != e.match(s) ? r.LATIN24 : e.length <= 5 ? r.LATIN12 : r.ASIAN
+    return null != e.match(a) ? i.LATIN24 : e.length <= 5 ? i.LATIN12 : i.ASIAN;
 }

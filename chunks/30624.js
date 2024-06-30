@@ -1,13 +1,12 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return i
-  }
+n.d(t, {
+    Z: function () {
+        return a;
+    }
 });
-var n = t(421535);
-
-function i(e, s) {
-  var t, i, l;
-  if (s.owner_user_id === e) return !0;
-  return (null === (i = s, l = e, t = i.members.find(e => e.user.id === l)) || void 0 === t ? void 0 : t.role) === n.T.ADMIN
+var s = n(421535);
+function a(e, t) {
+    var n, a, i;
+    if (t.owner_user_id === e)
+        return !0;
+    return (null === (a = t, i = e, n = a.members.find(e => e.user.id === i)) || void 0 === n ? void 0 : n.role) === s.T.ADMIN;
 }

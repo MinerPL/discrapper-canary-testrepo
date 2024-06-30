@@ -1,27 +1,21 @@
-"use strict";
 n.d(t, {
-  GI: function() {
-    return l
-  },
-  Iv: function() {
-    return s
-  },
-  ME: function() {
-    return i
-  },
-  a4: function() {
-    return o
-  },
-  jp: function() {
-    return a
-  },
-  zy: function() {
-    return r
-  }
+    GI: function () {
+        return l;
+    },
+    Iv: function () {
+        return a;
+    },
+    ME: function () {
+        return r;
+    },
+    a4: function () {
+        return o;
+    },
+    jp: function () {
+        return s;
+    },
+    zy: function () {
+        return i;
+    }
 });
-let i = "@",
-  r = "#",
-  s = ":",
-  o = "+:",
-  a = ":",
-  l = "/"
+let r = '@', i = '#', a = ':', o = '+:', s = ':', l = '/';

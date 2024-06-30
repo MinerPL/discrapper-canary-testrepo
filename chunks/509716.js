@@ -1,45 +1,34 @@
-"use strict";
 n.d(t, {
-  f: function() {
-    return l
-  }
+    f: function () {
+        return l;
+    }
 }), n(47120);
-var i = n(456007),
-  r = n(895924),
-  s = n(351133),
-  o = n(689079),
-  a = n(689938);
-
+var r = n(456007), i = n(895924), a = n(351133), o = n(689079), s = n(689938);
 function l(e) {
-  let {
-    option: t,
-    content: n,
-    guildId: l,
-    channelId: u,
-    allowEmptyValues: _,
-    commandOrigin: d = r.bB.CHAT
-  } = e, c = null != n ? (0, i.KF)({
-    content: n
-  }, "content").trim() : "", E = t.required, I = "" === c;
-  if (!(null != n)) return E ? {
-    success: !1,
-    error: a.Z.Messages.COMMAND_VALIDATION_REQUIRED_ERROR
-  } : {
-    success: !0
-  };
-  if (I) return _ ? {
-    success: !0
-  } : E ? {
-    success: !1,
-    error: a.Z.Messages.COMMAND_VALIDATION_REQUIRED_ERROR
-  } : {
-    success: !1,
-    error: (0, o.al)(t)
-  };
-  let T = n.length > 1 ? {
-      type: "text",
-      text: c
-    } : n[0],
-    h = s.Z[t.type](T, t, u, l, d);
-  return !h.success && null == h.error && (h.error = (0, o.al)(t)), h
+    let {
+            option: t,
+            content: n,
+            guildId: l,
+            channelId: u,
+            allowEmptyValues: c,
+            commandOrigin: d = i.bB.CHAT
+        } = e, _ = null != n ? (0, r.KF)({ content: n }, 'content').trim() : '', E = t.required, f = '' === _;
+    if (!(null != n))
+        return E ? {
+            success: !1,
+            error: s.Z.Messages.COMMAND_VALIDATION_REQUIRED_ERROR
+        } : { success: !0 };
+    if (f)
+        return c ? { success: !0 } : E ? {
+            success: !1,
+            error: s.Z.Messages.COMMAND_VALIDATION_REQUIRED_ERROR
+        } : {
+            success: !1,
+            error: (0, o.al)(t)
+        };
+    let h = n.length > 1 ? {
+            type: 'text',
+            text: _
+        } : n[0], p = a.Z[t.type](h, t, u, l, d);
+    return !p.success && null == p.error && (p.error = (0, o.al)(t)), p;
 }

@@ -1,24 +1,17 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return o
-  },
-  i: function() {
-    return a
-  }
+    Z: function () {
+        return o;
+    },
+    i: function () {
+        return s;
+    }
 });
-var i = n(442837),
-  r = n(592125),
-  s = n(126134);
-
+var r = n(442837), i = n(592125), a = n(126134);
 function o(e) {
-  let t = a(e);
-  return (0, i.e7)([r.Z], () => r.Z.getChannel(t))
+    let t = s(e);
+    return (0, r.e7)([i.Z], () => i.Z.getChannel(t));
 }
-
-function a(e) {
-  let {
-    category: t
-  } = e;
-  return t === s.L.HANGOUT || t === s.L.GAMING ? e.channelId : t === s.L.EVENT ? e.event.channel_id : t === s.L.EMBEDDED_ACTIVITY ? e.embeddedActivities[0].channelId : null
+function s(e) {
+    let {category: t} = e;
+    return t === a.L.HANGOUT || t === a.L.GAMING ? e.channelId : t === a.L.EVENT ? e.event.channel_id : t === a.L.EMBEDDED_ACTIVITY ? e.embeddedActivities[0].channelId : null;
 }

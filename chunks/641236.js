@@ -1,13 +1,4 @@
-"use strict";
-var e = n(161581),
-  o = n(972277),
-  i = n(740362),
-  u = n(457507),
-  c = n(400957),
-  s = n(769992),
-  f = e.Symbol,
-  a = o("wks"),
-  p = s ? f.for || f : f && f.withoutSetter || u;
-t.exports = function(t) {
-  return !i(a, t) && (a[t] = c && i(f, t) ? f[t] : p("Symbol." + t)), a[t]
-}
+var e = r(161581), o = r(972277), i = r(740362), u = r(457507), c = r(400957), f = r(769992), a = e.Symbol, s = o('wks'), p = f ? a.for || a : a && a.withoutSetter || u;
+t.exports = function (t) {
+    return !i(s, t) && (s[t] = c && i(a, t) ? a[t] : p('Symbol.' + t)), s[t];
+};

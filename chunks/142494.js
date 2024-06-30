@@ -1,84 +1,78 @@
-"use strict";
-let i, r;
+let r, i;
 n.d(t, {
-  FC: function() {
-    return I
-  },
-  _H: function() {
-    return c
-  },
-  yR: function() {
-    return E
-  }
+    FC: function () {
+        return f;
+    },
+    _H: function () {
+        return _;
+    },
+    yR: function () {
+        return E;
+    }
 }), n(47120), n(757143);
-var s = n(400053),
-  o = n.n(s),
-  a = n(302454),
-  l = n.n(a),
-  u = n(20970),
-  _ = n(959525);
-
+var a = n(400053), o = n.n(a), s = n(302454), l = n.n(s), u = n(20970), c = n(959525);
 function d(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: n,
-    enumerable: !0,
-    configurable: !0,
-    writable: !0
-  }) : e[t] = n, e
+    return t in e ? Object.defineProperty(e, t, {
+        value: n,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+    }) : e[t] = n, e;
 }
-class c {
-  format(e) {
-    if (!this.hasMarkdown) return this.intlMessage.format(e);
-    let [t, n] = this.getContext(e);
-    return i(this.intlMessage.format(t), t, n)
-  }
-  astFormat(e) {
-    let [t, n] = this.getContext(e);
-    return r(this.intlMessage.format(t), t, n)
-  }
-  plainFormat(e) {
-    return this.intlMessage.format(e)
-  }
-  getContext(e) {
-    let t = _.yF.test(this.message),
-      n = {};
-    if (t) {
-      let t = 0;
-      for (let [i, r] of Object.entries(e)) this.message.includes("!!{".concat(i, "}!!")) && (n[++t] = r, e[i] = t)
+class _ {
+    format(e) {
+        if (!this.hasMarkdown)
+            return this.intlMessage.format(e);
+        let [t, n] = this.getContext(e);
+        return r(this.intlMessage.format(t), t, n);
     }
-    return [e, n]
-  }
-  constructor(e, t, n) {
-    d(this, "message", void 0), d(this, "hasMarkdown", void 0), d(this, "intlMessage", void 0), this.message = n ? e : e.replace(_.hN, ""), this.hasMarkdown = n, this.intlMessage = new(o())(this.message, t)
-  }
+    astFormat(e) {
+        let [t, n] = this.getContext(e);
+        return i(this.intlMessage.format(t), t, n);
+    }
+    plainFormat(e) {
+        return this.intlMessage.format(e);
+    }
+    getContext(e) {
+        let t = c.yF.test(this.message), n = {};
+        if (t) {
+            let t = 0;
+            for (let [r, i] of Object.entries(e))
+                this.message.includes('!!{'.concat(r, '}!!')) && (n[++t] = i, e[r] = t);
+        }
+        return [
+            e,
+            n
+        ];
+    }
+    constructor(e, t, n) {
+        d(this, 'message', void 0), d(this, 'hasMarkdown', void 0), d(this, 'intlMessage', void 0), this.message = n ? e : e.replace(c.hN, ''), this.hasMarkdown = n, this.intlMessage = new (o())(this.message, t);
+    }
 }
-
 function E(e) {
-  i = function(e, t) {
-    let n = l().parserFor(t(e)),
-      i = l().reactFor(l().ruleOutput(e, "react"));
-    return (e, t, r) => {
-      let s = !e.includes("\n\n");
-      return !s && (e += "\n\n"), i(n(e, {
-        inline: s,
-        context: t,
-        unsafeContext: r
-      }))
-    }
-  }(u.j, e), r = function(e) {
-    let t = l().parserFor(e);
-    return (e, n, i) => t(e + "\n\n", {
-      inline: !1,
-      context: n,
-      unsafeContext: i
-    })
-  }(u.j)
+    r = function (e, t) {
+        let n = l().parserFor(t(e)), r = l().reactFor(l().ruleOutput(e, 'react'));
+        return (e, t, i) => {
+            let a = !e.includes('\n\n');
+            return !a && (e += '\n\n'), r(n(e, {
+                inline: a,
+                context: t,
+                unsafeContext: i
+            }));
+        };
+    }(u.j, e), i = function (e) {
+        let t = l().parserFor(e);
+        return (e, n, r) => t(e + '\n\n', {
+            inline: !1,
+            context: n,
+            unsafeContext: r
+        });
+    }(u.j);
 }
-
-function I(e, t) {
-  if (null == e) return "";
-  null == i && E(n(281071).Z), e = e.replace(/^\n+|\n+$/g, "");
-  let r = _.aT.test(e),
-    s = _.b9.test(e);
-  return r || s ? new c(e, t, s) : e
+function f(e, t) {
+    if (null == e)
+        return '';
+    null == r && E(n(281071).Z), e = e.replace(/^\n+|\n+$/g, '');
+    let i = c.aT.test(e), a = c.b9.test(e);
+    return i || a ? new _(e, t, a) : e;
 }

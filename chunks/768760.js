@@ -1,24 +1,21 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  Jj: function() {
-    return o
-  },
-  OF: function() {
-    return a
-  },
-  WW: function() {
-    return l
-  },
-  hV: function() {
-    return i
-  },
-  mT: function() {
-    return s
-  }
+    Jj: function () {
+        return o;
+    },
+    OF: function () {
+        return s;
+    },
+    WW: function () {
+        return l;
+    },
+    hV: function () {
+        return r;
+    },
+    mT: function () {
+        return a;
+    }
 });
-let s = 550,
-  o = 350,
-  a = 40;
-(r = i || (i = {})).STATIC = "STATIC", r.RESPONSIVE = "RESPONSIVE", r.MOSAIC = "MOSAIC";
-let l = 20
+let a = 550, o = 350, s = 40;
+(i = r || (r = {})).STATIC = 'STATIC', i.RESPONSIVE = 'RESPONSIVE', i.MOSAIC = 'MOSAIC';
+let l = 20;

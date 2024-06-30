@@ -1,100 +1,100 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return N
-  }
-}), t(47120), t(390547);
-var n = t(735250),
-  i = t(470079),
-  l = t(120356),
-  a = t.n(l),
-  r = t(920906),
-  o = t(442837),
-  c = t(692547),
-  d = t(481060),
-  u = t(607070),
-  E = t(259580),
-  _ = t(441674),
-  I = t(295612);
-
-function T(e) {
-  let {
-    checked: s,
-    children: t
-  } = e;
-  return (0, n.jsxs)("div", {
-    className: I.row,
-    children: [(0, n.jsx)(d.Text, {
-      variant: "text-md/normal",
-      color: "interactive-active",
-      className: I.rowText,
-      children: t
-    }), s ? (0, n.jsx)(_.Z, {
-      backgroundColor: c.Z.unsafe_rawColors.WHITE_500.css,
-      className: a()(I.rowIcon, I.rowIconChecked)
-    }) : (0, n.jsx)("div", {
-      className: a()(I.rowIcon, I.rowIconEmpty)
-    })]
-  })
+n.d(t, {
+    Z: function () {
+        return T;
+    }
+}), n(47120), n(390547);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(920906), o = n(442837), c = n(692547), d = n(481060), u = n(607070), _ = n(259580), E = n(133857);
+function I(e) {
+    let {
+        checked: t,
+        children: n
+    } = e;
+    return (0, s.jsxs)('div', {
+        className: E.row,
+        children: [
+            (0, s.jsx)(d.Text, {
+                variant: 'text-md/normal',
+                color: 'interactive-active',
+                className: E.rowText,
+                children: n
+            }),
+            t ? (0, s.jsx)(d.CircleCheckIcon, {
+                size: 'md',
+                color: 'currentColor',
+                secondaryColor: c.Z.unsafe_rawColors.WHITE_500.css,
+                className: r()(E.rowIcon, E.rowIconChecked)
+            }) : (0, s.jsx)('div', { className: r()(E.rowIcon, E.rowIconEmpty) })
+        ]
+    });
 }
-
-function N(e) {
-  let {
-    title: s,
-    children: t,
-    buttonLabel: l,
-    buttonCallback: a,
-    disabled: c
-  } = e, [_, N] = i.useState(!1), m = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), S = t.flatMap(e => e.items.map(e => e.completed)), h = S.filter(e => e).length / S.length, g = (0, r.useSpring)({
-    width: "".concat(100 * h, "%"),
-    immediate: m
-  });
-  return (0, n.jsxs)("div", {
-    className: I.container,
-    children: [(0, n.jsxs)(d.Clickable, {
-      className: I.headerBar,
-      onClick: () => N(e => !e),
-      children: [(0, n.jsx)(d.Heading, {
-        variant: "heading-md/semibold",
-        className: I.headerText,
-        children: s
-      }), (0, n.jsx)(E.Z, {
-        direction: _ ? E.Z.Directions.DOWN : E.Z.Directions.UP,
-        className: I.headerCaret
-      })]
-    }), (0, n.jsx)("div", {
-      className: I.progressBarOuter,
-      children: (0, n.jsx)(r.animated.div, {
-        className: I.progressBarInner,
-        style: g
-      })
-    }), !_ && t.map((e, s) => {
-      let {
-        title: t,
-        items: l
-      } = e;
-      return (0, n.jsxs)(i.Fragment, {
-        children: [s > 0 && (0, n.jsx)(d.FormDivider, {
-          className: I.divider
-        }), (0, n.jsx)(d.FormTitle, {
-          className: I.categoryTitle,
-          children: t
-        }), l.map((e, s) => (0, n.jsx)(T, {
-          children: e.description,
-          checked: e.completed
-        }, s))]
-      }, s)
-    }), null !== l && "" !== l && null !== a && (0, n.jsxs)("div", {
-      children: [(0, n.jsx)(d.FormDivider, {
-        className: I.divider
-      }), (0, n.jsx)(d.Button, {
-        className: I.button,
-        size: d.Button.Sizes.SMALL,
-        color: d.Button.Colors.BRAND,
-        onClick: a,
-        disabled: 1 !== h || c,
-        children: l
-      })]
-    })]
-  })
+function T(e) {
+    let {
+            title: t,
+            children: n,
+            buttonLabel: i,
+            buttonCallback: r,
+            disabled: c
+        } = e, [T, m] = a.useState(!1), N = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), S = n.flatMap(e => e.items.map(e => e.completed)), h = S.filter(e => e).length / S.length, g = (0, l.useSpring)({
+            width: ''.concat(100 * h, '%'),
+            immediate: N
+        });
+    return (0, s.jsxs)('div', {
+        className: E.container,
+        children: [
+            (0, s.jsxs)(d.Clickable, {
+                className: E.headerBar,
+                onClick: () => m(e => !e),
+                children: [
+                    (0, s.jsx)(d.Heading, {
+                        variant: 'heading-md/semibold',
+                        className: E.headerText,
+                        children: t
+                    }),
+                    (0, s.jsx)(_.Z, {
+                        direction: T ? _.Z.Directions.DOWN : _.Z.Directions.UP,
+                        className: E.headerCaret
+                    })
+                ]
+            }),
+            (0, s.jsx)('div', {
+                className: E.progressBarOuter,
+                children: (0, s.jsx)(l.animated.div, {
+                    className: E.progressBarInner,
+                    style: g
+                })
+            }),
+            !T && n.map((e, t) => {
+                let {
+                    title: n,
+                    items: i
+                } = e;
+                return (0, s.jsxs)(a.Fragment, {
+                    children: [
+                        t > 0 && (0, s.jsx)(d.FormDivider, { className: E.divider }),
+                        (0, s.jsx)(d.FormTitle, {
+                            className: E.categoryTitle,
+                            children: n
+                        }),
+                        i.map((e, t) => (0, s.jsx)(I, {
+                            children: e.description,
+                            checked: e.completed
+                        }, t))
+                    ]
+                }, t);
+            }),
+            null !== i && '' !== i && null !== r && (0, s.jsxs)('div', {
+                children: [
+                    (0, s.jsx)(d.FormDivider, { className: E.divider }),
+                    (0, s.jsx)(d.Button, {
+                        className: E.button,
+                        size: d.Button.Sizes.SMALL,
+                        color: d.Button.Colors.BRAND,
+                        onClick: r,
+                        disabled: 1 !== h || c,
+                        children: i
+                    })
+                ]
+            })
+        ]
+    });
 }

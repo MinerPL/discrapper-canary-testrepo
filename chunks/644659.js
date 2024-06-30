@@ -1,48 +1,40 @@
-"use strict";
-var e, o, i, u = n(197047),
-  c = n(161581),
-  s = n(622281),
-  f = n(251069),
-  a = n(740362),
-  p = n(801127),
-  l = n(883539),
-  v = n(624906),
-  y = "Object already initialized",
-  b = c.TypeError,
-  h = c.WeakMap;
+var e, o, i, u = r(197047), c = r(161581), f = r(622281), a = r(251069), s = r(740362), p = r(801127), l = r(883539), v = r(624906), b = 'Object already initialized', y = c.TypeError, g = c.WeakMap;
 if (u || p.state) {
-  var g = p.state || (p.state = new h);
-  g.get = g.get, g.has = g.has, g.set = g.set, e = function(t, r) {
-    if (g.has(t)) throw b(y);
-    return r.facade = t, g.set(t, r), r
-  }, o = function(t) {
-    return g.get(t) || {}
-  }, i = function(t) {
-    return g.has(t)
-  }
+    var h = p.state || (p.state = new g());
+    h.get = h.get, h.has = h.has, h.set = h.set, e = function (t, n) {
+        if (h.has(t))
+            throw y(b);
+        return n.facade = t, h.set(t, n), n;
+    }, o = function (t) {
+        return h.get(t) || {};
+    }, i = function (t) {
+        return h.has(t);
+    };
 } else {
-  var x = l("state");
-  v[x] = !0, e = function(t, r) {
-    if (a(t, x)) throw b(y);
-    return r.facade = t, f(t, x, r), r
-  }, o = function(t) {
-    return a(t, x) ? t[x] : {}
-  }, i = function(t) {
-    return a(t, x)
-  }
+    var m = l('state');
+    v[m] = !0, e = function (t, n) {
+        if (s(t, m))
+            throw y(b);
+        return n.facade = t, a(t, m, n), n;
+    }, o = function (t) {
+        return s(t, m) ? t[m] : {};
+    }, i = function (t) {
+        return s(t, m);
+    };
 }
 t.exports = {
-  set: e,
-  get: o,
-  has: i,
-  enforce: function(t) {
-    return i(t) ? o(t) : e(t, {})
-  },
-  getterFor: function(t) {
-    return function(r) {
-      var n;
-      if (!s(r) || (n = o(r)).type !== t) throw b("Incompatible receiver, " + t + " required");
-      return n
+    set: e,
+    get: o,
+    has: i,
+    enforce: function (t) {
+        return i(t) ? o(t) : e(t, {});
+    },
+    getterFor: function (t) {
+        return function (n) {
+            var r;
+            if (!f(n) || (r = o(n)).type !== t)
+                throw y('Incompatible receiver, ' + t + ' required');
+            return r;
+        };
     }
-  }
-}
+};

@@ -1,117 +1,101 @@
-"use strict";
-n.d(e, {
-  Cy: function() {
-    return m
-  },
-  HD: function() {
-    return l
-  },
-  J8: function() {
-    return p
-  },
-  Kj: function() {
-    return f
-  },
-  PO: function() {
-    return d
-  },
-  TX: function() {
-    return o
-  },
-  V9: function() {
-    return y
-  },
-  VW: function() {
-    return a
-  },
-  VZ: function() {
-    return i
-  },
-  cO: function() {
-    return h
-  },
-  fm: function() {
-    return u
-  },
-  i2: function() {
-    return g
-  },
-  kK: function() {
-    return _
-  },
-  pt: function() {
-    return c
-  }
+r.d(e, {
+    Cy: function () {
+        return A;
+    },
+    HD: function () {
+        return s;
+    },
+    J8: function () {
+        return l;
+    },
+    Kj: function () {
+        return T;
+    },
+    PO: function () {
+        return I;
+    },
+    TX: function () {
+        return o;
+    },
+    V9: function () {
+        return d;
+    },
+    VW: function () {
+        return i;
+    },
+    VZ: function () {
+        return _;
+    },
+    cO: function () {
+        return R;
+    },
+    fm: function () {
+        return E;
+    },
+    i2: function () {
+        return N;
+    },
+    kK: function () {
+        return u;
+    },
+    pt: function () {
+        return c;
+    }
 });
-let r = Object.prototype.toString;
-
-function i(t) {
-  switch (r.call(t)) {
-    case "[object Error]":
-    case "[object Exception]":
-    case "[object DOMException]":
-      return !0;
-    default:
-      return y(t, Error)
-  }
-}
-
-function s(t, e) {
-  return r.call(t) === `[object ${e}]`
-}
-
-function a(t) {
-  return s(t, "ErrorEvent")
-}
-
-function o(t) {
-  return s(t, "DOMError")
-}
-
-function u(t) {
-  return s(t, "DOMException")
-}
-
-function l(t) {
-  return s(t, "String")
-}
-
-function c(t) {
-  return null === t || "object" != typeof t && "function" != typeof t
-}
-
-function d(t) {
-  return s(t, "Object")
-}
-
-function h(t) {
-  return "undefined" != typeof Event && y(t, Event)
-}
-
+let n = Object.prototype.toString;
 function _(t) {
-  return "undefined" != typeof Element && y(t, Element)
+    switch (n.call(t)) {
+    case '[object Error]':
+    case '[object Exception]':
+    case '[object DOMException]':
+        return !0;
+    default:
+        return d(t, Error);
+    }
 }
-
-function f(t) {
-  return s(t, "RegExp")
+function a(t, e) {
+    return n.call(t) === `[object ${ e }]`;
 }
-
-function p(t) {
-  return !!(t && t.then && "function" == typeof t.then)
+function i(t) {
+    return a(t, 'ErrorEvent');
 }
-
-function m(t) {
-  return d(t) && "nativeEvent" in t && "preventDefault" in t && "stopPropagation" in t
+function o(t) {
+    return a(t, 'DOMError');
 }
-
-function g(t) {
-  return "number" == typeof t && t != t
+function E(t) {
+    return a(t, 'DOMException');
 }
-
-function y(t, e) {
-  try {
-    return t instanceof e
-  } catch (t) {
-    return !1
-  }
+function s(t) {
+    return a(t, 'String');
+}
+function c(t) {
+    return null === t || 'object' != typeof t && 'function' != typeof t;
+}
+function I(t) {
+    return a(t, 'Object');
+}
+function R(t) {
+    return 'undefined' != typeof Event && d(t, Event);
+}
+function u(t) {
+    return 'undefined' != typeof Element && d(t, Element);
+}
+function T(t) {
+    return a(t, 'RegExp');
+}
+function l(t) {
+    return !!(t && t.then && 'function' == typeof t.then);
+}
+function A(t) {
+    return I(t) && 'nativeEvent' in t && 'preventDefault' in t && 'stopPropagation' in t;
+}
+function N(t) {
+    return 'number' == typeof t && t != t;
+}
+function d(t, e) {
+    try {
+        return t instanceof e;
+    } catch (t) {
+        return !1;
+    }
 }

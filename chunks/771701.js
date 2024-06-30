@@ -1,5 +1,4 @@
-var n = e(807419),
-  o = e(406705);
-t.exports = function(t) {
-  return null != t && o(t.length) && !n(t)
-}
+var n = r(807419), _ = r(406705);
+t.exports = function (t) {
+    return null != t && _(t.length) && !n(t);
+};

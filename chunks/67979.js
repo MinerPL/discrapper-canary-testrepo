@@ -1,73 +1,66 @@
-"use strict";
 n.d(t, {
-  W: function() {
-    return E
-  }
-});
-var i = n(735250);
-n(470079);
-var r = n(120356),
-  s = n.n(r),
-  o = n(547800),
-  a = n(1561),
-  l = n(507274),
-  u = n(235874),
-  _ = n(305878),
-  d = n(745206),
-  c = n(12349);
-
-function E(e) {
-  let {
-    value: t,
-    onSelect: n,
-    dateFormat: r = "MMM D, YYYY",
-    minDate: E,
-    maxDate: I,
-    disabled: T = !1
-  } = e;
-  return (0, i.jsx)(u.y, {
-    renderPopout: function(e) {
-      let {
-        closePopout: r
-      } = e;
-      return (0, i.jsx)(l.V, {
-        children: (0, i.jsx)(o.CalendarPicker, {
-          minDate: E,
-          maxDate: I,
-          value: t,
-          onSelect: e => {
-            n(e), r()
-          },
-          calendarClassName: d.calendarContainer,
-          onClickOutside: r,
-          autoFocus: !0
-        })
-      })
-    },
-    position: "bottom",
-    children: e => {
-      let {
-        onClick: n,
-        ...o
-      } = e;
-      return (0, i.jsx)(a.P, {
-        ...o,
-        className: s()(c.inputDefault, d.container, {
-          [c.disabled]: T,
-          [d.disabled]: T
-        }),
-        onClick: T ? void 0 : n,
-        "aria-disabled": T,
-        children: (0, i.jsxs)("div", {
-          className: d.content,
-          children: [(0, i.jsx)("div", {
-            className: d.text,
-            children: null == t ? void 0 : t.format(r)
-          }), (0, i.jsx)(_.Z, {
-            className: d.icon
-          })]
-        })
-      })
+    W: function () {
+        return E;
     }
-  })
+});
+var r = n(735250);
+n(470079);
+var i = n(120356), a = n.n(i), o = n(547800), s = n(1561), l = n(507274), u = n(235874), c = n(481060), d = n(213291), _ = n(838009);
+function E(e) {
+    let {
+        value: t,
+        onSelect: n,
+        dateFormat: i = 'MMM D, YYYY',
+        minDate: E,
+        maxDate: f,
+        disabled: h = !1
+    } = e;
+    return (0, r.jsx)(u.y, {
+        renderPopout: function (e) {
+            let {closePopout: i} = e;
+            return (0, r.jsx)(l.V, {
+                children: (0, r.jsx)(o.CalendarPicker, {
+                    minDate: E,
+                    maxDate: f,
+                    value: t,
+                    onSelect: e => {
+                        n(e), i();
+                    },
+                    calendarClassName: d.calendarContainer,
+                    onClickOutside: i,
+                    autoFocus: !0
+                })
+            });
+        },
+        position: 'bottom',
+        children: e => {
+            let {
+                onClick: n,
+                ...o
+            } = e;
+            return (0, r.jsx)(s.P, {
+                ...o,
+                className: a()(_.inputDefault, d.container, {
+                    [_.disabled]: h,
+                    [d.disabled]: h
+                }),
+                onClick: h ? void 0 : n,
+                'aria-disabled': h,
+                children: (0, r.jsxs)('div', {
+                    className: d.content,
+                    children: [
+                        (0, r.jsx)('div', {
+                            className: d.text,
+                            children: null == t ? void 0 : t.format(i)
+                        }),
+                        (0, r.jsx)(c.CalendarIcon, {
+                            size: 'md',
+                            color: 'currentColor',
+                            className: d.icon
+                        })
+                    ]
+                })
+            });
+        }
+    });
 }

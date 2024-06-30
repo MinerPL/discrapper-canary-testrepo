@@ -1,38 +1,37 @@
-"use strict";
-n.d(e, {
-  x: function() {
-    return s
-  }
-});
-var r = n(303155),
-  i = n(880803);
-
-function s(t) {
-  let e = [];
-
-  function n(t) {
-    return e.splice(e.indexOf(t), 1)[0]
-  }
-  return {
-    $: e,
-    add: function(s) {
-      if (!(void 0 === t || e.length < t)) return (0, i.$2)(new r.b("Not adding Promise because buffer limit was reached."));
-      let a = s();
-      return -1 === e.indexOf(a) && e.push(a), a.then(() => n(a)).then(null, () => n(a).then(null, () => {})), a
-    },
-    drain: function(t) {
-      return new i.cW((n, r) => {
-        let s = e.length;
-        if (!s) return n(!0);
-        let a = setTimeout(() => {
-          t && t > 0 && n(!1)
-        }, t);
-        e.forEach(t => {
-          (0, i.WD)(t).then(() => {
-            !--s && (clearTimeout(a), n(!0))
-          }, r)
-        })
-      })
+r.d(e, {
+    x: function () {
+        return a;
     }
-  }
+});
+var n = r(303155), _ = r(880803);
+function a(t) {
+    let e = [];
+    function r(t) {
+        return e.splice(e.indexOf(t), 1)[0];
+    }
+    return {
+        $: e,
+        add: function (a) {
+            if (!(void 0 === t || e.length < t))
+                return (0, _.$2)(new n.b('Not adding Promise because buffer limit was reached.'));
+            let i = a();
+            return -1 === e.indexOf(i) && e.push(i), i.then(() => r(i)).then(null, () => r(i).then(null, () => {
+            })), i;
+        },
+        drain: function (t) {
+            return new _.cW((r, n) => {
+                let a = e.length;
+                if (!a)
+                    return r(!0);
+                let i = setTimeout(() => {
+                    t && t > 0 && r(!1);
+                }, t);
+                e.forEach(t => {
+                    (0, _.WD)(t).then(() => {
+                        !--a && (clearTimeout(i), r(!0));
+                    }, n);
+                });
+            });
+        }
+    };
 }

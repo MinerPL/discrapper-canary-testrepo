@@ -1,76 +1,71 @@
-"use strict";
-t.d(s, {
-  t: function() {
-    return h
-  }
-}), t(411104);
-var n = t(120356),
-  i = t.n(n),
-  l = t(263704),
-  a = t(642113),
-  r = t(242315),
-  o = t(115102),
-  c = t(241820),
-  d = t(536952),
-  u = t(503705),
-  E = t(170039),
-  _ = t(898140),
-  I = t(68736),
-  T = t(761374),
-  N = t(363138),
-  m = t(267642),
-  S = t(426305);
-
-function h(e, s) {
-  if (s) return {
-    icon: l.Z,
-    className: S.unlocked
-  };
-  switch (e) {
-    case m.Ro.EMOJI:
-      return {
-        icon: a.Z, className: i()(S.icon, S.emoji)
-      };
-    case m.Ro.AUDIO:
-      return {
-        icon: r.Z, className: i()(S.icon, S.audio)
-      };
-    case m.Ro.ANIMATED:
-      return {
-        icon: o.Z, className: i()(S.icon, S.animated)
-      };
-    case m.Ro.CUSTOMIZATION:
-      return {
-        icon: d.Z, className: i()(S.icon, S.customization)
-      };
-    case m.Ro.UPLOAD:
-      return {
-        icon: N.Z, className: i()(S.icon, S.upload)
-      };
-    case m.Ro.VANITY:
-      return {
-        icon: _.Z, className: i()(S.icon, S.vanity)
-      };
-    case m.Ro.STREAM:
-      return {
-        icon: T.Z, className: i()(S.icon, S.stream)
-      };
-    case m.Ro.STICKER:
-      return {
-        icon: I.Z, className: i()(S.icon, S.sticker)
-      };
-    case m.Ro.CUSTOM_ROLE_ICON:
-      return {
-        icon: c.Z, className: i()(S.icon, S.customRoleIcon)
-      };
-    case m.Ro.STAGE_VIDEO:
-      return {
-        icon: E.Z, className: i()(S.icon, S.stage)
-      };
-    case m.Ro.SOUNDBOARD:
-      return {
-        icon: u.Z, className: i()(S.icon, S.soundboard)
-      }
-  }
-  throw Error("Unexpected perk icon ".concat(e))
+n.d(t, {
+    t: function () {
+        return o;
+    }
+}), n(411104);
+var s = n(120356), a = n.n(s), i = n(481060), r = n(267642), l = n(987174);
+function o(e, t) {
+    if (t)
+        return {
+            icon: i.CheckmarkLargeIcon,
+            className: l.unlocked
+        };
+    switch (e) {
+    case r.Ro.EMOJI:
+        return {
+            icon: i.ReactionIcon,
+            className: a()(l.icon, l.emoji)
+        };
+    case r.Ro.AUDIO:
+        return {
+            icon: i.HeadphonesIcon,
+            className: a()(l.icon, l.audio)
+        };
+    case r.Ro.ANIMATED:
+        return {
+            icon: i.GifIcon,
+            className: a()(l.icon, l.animated)
+        };
+    case r.Ro.CUSTOMIZATION:
+        return {
+            icon: i.ImagesIcon,
+            className: a()(l.icon, l.customization)
+        };
+    case r.Ro.UPLOAD:
+        return {
+            icon: i.UploadIcon,
+            className: a()(l.icon, l.upload)
+        };
+    case r.Ro.VANITY:
+        return {
+            icon: i.StarIcon,
+            className: a()(l.icon, l.vanity)
+        };
+    case r.Ro.STREAM:
+        return {
+            icon: i.ScreenArrowIcon,
+            className: a()(l.icon, l.stream)
+        };
+    case r.Ro.STICKER:
+        return {
+            icon: i.StickerIcon,
+            className: a()(l.icon, l.sticker)
+        };
+    case r.Ro.CUSTOM_ROLE_ICON:
+        return {
+            icon: i.ShieldUserIcon,
+            className: a()(l.icon, l.customRoleIcon)
+        };
+    case r.Ro.STAGE_VIDEO:
+        return {
+            icon: i.StageIcon,
+            className: a()(l.icon, l.stage)
+        };
+    case r.Ro.SOUNDBOARD:
+        return {
+            icon: i.SoundboardIcon,
+            className: a()(l.icon, l.soundboard)
+        };
+    }
+    throw Error('Unexpected perk icon '.concat(e));
 }

@@ -1,7 +1,6 @@
-"use strict";
-n.d(e, {
-  qG: function() {
-    return r.qG
-  }
+r.d(e, {
+    qG: function () {
+        return n.qG;
+    }
 });
-var r = n(874230)
+var n = r(874230);

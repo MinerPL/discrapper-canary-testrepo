@@ -1,18 +1,15 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return o
-  }
+    Z: function () {
+        return o;
+    }
 });
-var i = n(354459),
-  r = n(65154);
-let s = Object.freeze({
-  [i.fO.STREAM]: r.Yn.STREAM,
-  [i.fO.HIDDEN_STREAM]: r.Yn.STREAM,
-  [i.fO.USER]: r.Yn.DEFAULT,
-  [i.fO.ACTIVITY]: r.Yn.DEFAULT
+var r = n(354459), i = n(65154);
+let a = Object.freeze({
+    [r.fO.STREAM]: i.Yn.STREAM,
+    [r.fO.HIDDEN_STREAM]: i.Yn.STREAM,
+    [r.fO.USER]: i.Yn.DEFAULT,
+    [r.fO.ACTIVITY]: i.Yn.DEFAULT
 });
-
 function o(e) {
-  return s[e]
+    return a[e];
 }

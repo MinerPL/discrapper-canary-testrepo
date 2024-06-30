@@ -1,80 +1,81 @@
-"use strict";
-n.d(e, {
-  I: function() {
-    return i
-  }
+r.d(e, {
+    I: function () {
+        return _;
+    }
 });
-var r = n(529866);
-class i {
-  constructor() {
-    i.prototype.__init.call(this)
-  }
-  static __initStatic() {
-    this.id = "Dedupe"
-  }
-  __init() {
-    this.name = i.id
-  }
-  setupOnce(t, e) {
-    let n = t => {
-      if (t.type) return t;
-      let n = e().getIntegration(i);
-      if (n) {
-        try {
-          if (function(t, e) {
-              return !!e && (!!(function(t, e) {
-                let n = t.message,
-                  r = e.message;
-                return !!((n || r) && (!n || r) && (n || !r) && n === r && a(t, e) && s(t, e)) || !1
-              }(t, e) || function(t, e) {
-                let n = o(e),
-                  r = o(t);
-                return !!(n && r && n.type === r.type && n.value === r.value && a(t, e) && s(t, e)) || !1
-              }(t, e)) || !1)
-            }(t, n._previousEvent)) return ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.kg.warn("Event dropped due to being a duplicate of previously captured event."), null
-        } catch (t) {}
-        return n._previousEvent = t
-      }
-      return t
-    };
-    n.id = this.name, t(n)
-  }
+var n = r(529866);
+class _ {
+    constructor() {
+        _.prototype.__init.call(this);
+    }
+    static __initStatic() {
+        this.id = 'Dedupe';
+    }
+    __init() {
+        this.name = _.id;
+    }
+    setupOnce(t, e) {
+        let r = t => {
+            if (t.type)
+                return t;
+            let r = e().getIntegration(_);
+            if (r) {
+                try {
+                    if (function (t, e) {
+                            return !!e && (!!(function (t, e) {
+                                let r = t.message, n = e.message;
+                                return !!((r || n) && (!r || n) && (r || !n) && r === n && i(t, e) && a(t, e)) || !1;
+                            }(t, e) || function (t, e) {
+                                let r = o(e), n = o(t);
+                                return !!(r && n && r.type === n.type && r.value === n.value && i(t, e) && a(t, e)) || !1;
+                            }(t, e)) || !1);
+                        }(t, r._previousEvent))
+                        return ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && n.kg.warn('Event dropped due to being a duplicate of previously captured event.'), null;
+                } catch (t) {
+                }
+                return r._previousEvent = t;
+            }
+            return t;
+        };
+        r.id = this.name, t(r);
+    }
 }
-i.__initStatic();
-
-function s(t, e) {
-  let n = u(t),
-    r = u(e);
-  if (!n && !r) return !0;
-  if (n && !r || !n && r) return !1;
-  if (r.length !== n.length) return !1;
-  for (let t = 0; t < r.length; t++) {
-    let e = r[t],
-      i = n[t];
-    if (e.filename !== i.filename || e.lineno !== i.lineno || e.colno !== i.colno || e.function !== i.function) return !1
-  }
-  return !0
-}
-
+_.__initStatic();
 function a(t, e) {
-  let n = t.fingerprint,
-    r = e.fingerprint;
-  if (!n && !r) return !0;
-  if (n && !r || !n && r) return !1;
-  try {
-    return !(n.join("") !== r.join(""))
-  } catch (t) {
-    return !1
-  }
+    let r = E(t), n = E(e);
+    if (!r && !n)
+        return !0;
+    if (r && !n || !r && n)
+        return !1;
+    if (n.length !== r.length)
+        return !1;
+    for (let t = 0; t < n.length; t++) {
+        let e = n[t], _ = r[t];
+        if (e.filename !== _.filename || e.lineno !== _.lineno || e.colno !== _.colno || e.function !== _.function)
+            return !1;
+    }
+    return !0;
 }
-
+function i(t, e) {
+    let r = t.fingerprint, n = e.fingerprint;
+    if (!r && !n)
+        return !0;
+    if (r && !n || !r && n)
+        return !1;
+    try {
+        return !(r.join('') !== n.join(''));
+    } catch (t) {
+        return !1;
+    }
+}
 function o(t) {
-  return t.exception && t.exception.values && t.exception.values[0]
+    return t.exception && t.exception.values && t.exception.values[0];
 }
-
-function u(t) {
-  let e = t.exception;
-  if (e) try {
-    return e.values[0].stacktrace.frames
-  } catch (t) {}
+function E(t) {
+    let e = t.exception;
+    if (e)
+        try {
+            return e.values[0].stacktrace.frames;
+        } catch (t) {
+        }
 }

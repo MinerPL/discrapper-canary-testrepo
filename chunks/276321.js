@@ -1,14 +1,11 @@
-"use strict";
-var n = r(680500),
-  o = r(24033),
-  i = r(340618);
-t.exports = Object.setPrototypeOf || ("__proto__" in {} ? function() {
-  var t, e = !1,
-    r = {};
-  try {
-    (t = n(Object.prototype, "__proto__", "set"))(r, []), e = r instanceof Array
-  } catch (t) {}
-  return function(r, n) {
-    return o(r), i(n), e ? t(r, n) : r.__proto__ = n, r
-  }
-}() : void 0)
+var e = o(680500), n = o(24033), c = o(340618);
+r.exports = Object.setPrototypeOf || ('__proto__' in {} ? function () {
+    var r, t = !1, o = {};
+    try {
+        (r = e(Object.prototype, '__proto__', 'set'))(o, []), t = o instanceof Array;
+    } catch (r) {
+    }
+    return function (o, e) {
+        return n(o), c(e), t ? r(o, e) : o.__proto__ = e, o;
+    };
+}() : void 0);

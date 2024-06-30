@@ -1,15 +1,13 @@
-"use strict";
 n.d(t, {
-  w: function() {
-    return s
-  }
+    w: function () {
+        return a;
+    }
 });
-var i = n(668781),
-  r = n(689938);
-let s = () => {
-  i.Z.show({
-    title: r.Z.Messages.NO_EMBEDDED_ACTIVITY_PERMISSION_DIALOG_TITLE,
-    body: r.Z.Messages.NO_EMBEDDED_ACTIVITY_PERMISSION_DIALOG_BODY,
-    hideActionSheet: !1
-  })
-}
+var r = n(668781), i = n(689938);
+let a = () => {
+    r.Z.show({
+        title: i.Z.Messages.NO_EMBEDDED_ACTIVITY_PERMISSION_DIALOG_TITLE,
+        body: i.Z.Messages.NO_EMBEDDED_ACTIVITY_PERMISSION_DIALOG_BODY,
+        hideActionSheet: !1
+    });
+};

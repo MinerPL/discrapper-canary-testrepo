@@ -1,19 +1,16 @@
-"use strict";
-n.d(e, {
-  W: function() {
-    return s
-  }
+r.d(e, {
+    W: function () {
+        return a;
+    }
 });
-var r = n(607190);
-let i = () => {
-    let t = r.m.performance.timing,
-      e = r.m.performance.navigation.type,
-      n = {
-        entryType: "navigation",
-        startTime: 0,
-        type: 2 == e ? "back_forward" : 1 === e ? "reload" : "navigate"
-      };
-    for (let e in t) "navigationStart" !== e && "toJSON" !== e && (n[e] = Math.max(t[e] - t.navigationStart, 0));
-    return n
-  },
-  s = () => r.m.__WEB_VITALS_POLYFILL__ ? r.m.performance && (performance.getEntriesByType && performance.getEntriesByType("navigation")[0] || i()) : r.m.performance && performance.getEntriesByType && performance.getEntriesByType("navigation")[0]
+var n = r(607190);
+let _ = () => {
+        let t = n.m.performance.timing, e = n.m.performance.navigation.type, r = {
+                entryType: 'navigation',
+                startTime: 0,
+                type: 2 == e ? 'back_forward' : 1 === e ? 'reload' : 'navigate'
+            };
+        for (let e in t)
+            'navigationStart' !== e && 'toJSON' !== e && (r[e] = Math.max(t[e] - t.navigationStart, 0));
+        return r;
+    }, a = () => n.m.__WEB_VITALS_POLYFILL__ ? n.m.performance && (performance.getEntriesByType && performance.getEntriesByType('navigation')[0] || _()) : n.m.performance && performance.getEntriesByType && performance.getEntriesByType('navigation')[0];

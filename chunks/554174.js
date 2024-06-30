@@ -1,12 +1,10 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return i;
+    }
 });
-var i = n(808506);
-
-function r() {
-  let e = i.Z.getFocusedPID();
-  return null != e && (i.Z.isReady(e) || i.Z.isCrashed(e)) ? e : null
+var r = n(808506);
+function i() {
+    let e = r.Z.getFocusedPID();
+    return null != e && (r.Z.isReady(e) || r.Z.isCrashed(e)) ? e : null;
 }

@@ -1,9 +1,8 @@
-"use strict";
-let i;
+let r;
 n.d(t, {
-  hk: function() {
-    return r
-  }
+    hk: function () {
+        return i;
+    }
 });
-let r = (i = n(66511).Z).openMemberVerificationModal;
-i.closeMemberVerificationModal
+let i = (r = n(66511).Z).openMemberVerificationModal;
+r.closeMemberVerificationModal;

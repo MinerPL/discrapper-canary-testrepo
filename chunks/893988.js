@@ -1,11 +1,9 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return i;
+    }
 }), n(757143);
-let i = /\\/g;
-
-function r(e) {
-  return e.replace(i, "/")
+let r = /\\/g;
+function i(e) {
+    return e.replace(r, '/');
 }

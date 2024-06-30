@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  s: function() {
-    return i
-  }
-}), (r = i || (i = {})).NONE = "none", r.CONSENT = "consent"
+    s: function () {
+        return r;
+    }
+}), (i = r || (r = {})).NONE = 'none', i.CONSENT = 'consent';

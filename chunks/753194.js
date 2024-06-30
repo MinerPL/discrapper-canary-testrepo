@@ -1,46 +1,37 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return c
-  }
+    Z: function () {
+        return d;
+    }
 }), n(47120);
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(866442),
-  s = n(442837),
-  o = n(692547),
-  a = n(481060),
-  l = n(607070),
-  u = n(797717),
-  _ = n(507957),
-  d = n(689938);
-
-function c(e) {
-  let t, {
-      color: n,
-      size: c,
-      forcedIconColor: E,
-      className: I,
-      iconClassName: T,
-      tooltipText: h
-    } = e,
-    [S, f] = (0, s.Wu)([l.Z], () => [l.Z.desaturateUserColors, l.Z.saturation]),
-    N = (0, a.useToken)(o.Z.unsafe_rawColors.PRIMARY_300).hex(),
-    A = (0, r._i)(null != n ? n : N),
-    m = (0, r.ho)(A, !1, S ? f : null);
-  return t = null != E ? E : .3 > (0, r.Bd)(A) ? o.Z.unsafe_rawColors.PRIMARY_630.css : o.Z.unsafe_rawColors.WHITE_500.css, (0, i.jsx)(a.Tooltip, {
-    text: null != h ? h : d.Z.Messages.CONNECTIONS_ROLE_OFFICIAL_ICON_TOOLTIP,
-    children: e => (0, i.jsx)(u.Z, {
-      ...e,
-      className: I,
-      color: m,
-      size: c,
-      children: (0, i.jsx)(_.Z, {
-        color: t,
-        height: c,
-        width: c,
-        className: T
-      })
-    })
-  })
+var i = n(866442), a = n(442837), o = n(692547), s = n(481060), l = n(607070), u = n(797717), c = n(689938);
+function d(e) {
+    let t, {
+            color: n,
+            size: d,
+            forcedIconColor: _,
+            className: E,
+            iconClassName: f,
+            tooltipText: h
+        } = e, [p, m] = (0, a.Wu)([l.Z], () => [
+            l.Z.desaturateUserColors,
+            l.Z.saturation
+        ]), I = (0, s.useToken)(o.Z.unsafe_rawColors.PRIMARY_300).hex(), T = (0, i._i)(null != n ? n : I), g = (0, i.ho)(T, !1, p ? m : null);
+    return t = null != _ ? _ : 0.3 > (0, i.Bd)(T) ? o.Z.unsafe_rawColors.PRIMARY_630.css : o.Z.unsafe_rawColors.WHITE_500.css, (0, r.jsx)(s.Tooltip, {
+        text: null != h ? h : c.Z.Messages.CONNECTIONS_ROLE_OFFICIAL_ICON_TOOLTIP,
+        children: e => (0, r.jsx)(u.Z, {
+            ...e,
+            className: E,
+            color: g,
+            size: d,
+            children: (0, r.jsx)(s.CheckmarkSmallIcon, {
+                size: 'custom',
+                color: t,
+                height: d,
+                width: d,
+                className: f
+            })
+        })
+    });
 }

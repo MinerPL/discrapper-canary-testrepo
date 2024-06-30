@@ -1,8 +1,6 @@
-"use strict";
-var n = r(354848),
-  o = String,
-  i = TypeError;
-t.exports = function(t) {
-  if ("object" == typeof t || n(t)) return t;
-  throw i("Can't set " + o(t) + " as a prototype")
-}
+var e = o(354848), n = String, c = TypeError;
+r.exports = function (r) {
+    if ('object' == typeof r || e(r))
+        return r;
+    throw c('Can\'t set ' + n(r) + ' as a prototype');
+};

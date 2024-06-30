@@ -1,12 +1,9 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return a;
+    }
 });
-var i = n(399606),
-  r = n(314897);
-
-function s() {
-  return (0, i.e7)([r.default], () => r.default.isAuthenticated())
+var r = n(399606), i = n(314897);
+function a() {
+    return (0, r.e7)([i.default], () => i.default.isAuthenticated());
 }

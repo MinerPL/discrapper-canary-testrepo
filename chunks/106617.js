@@ -1,16 +1,16 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return i
-  }
+    Z: function () {
+        return r;
+    }
 });
-class i {
-  acquire(e) {
-    return navigator.mediaDevices.getUserMedia(e)
-  }
-  release(e) {
-    e.getTracks().forEach(e => {
-      e.onended = function() {}, e.stop()
-    })
-  }
+class r {
+    acquire(e) {
+        return navigator.mediaDevices.getUserMedia(e);
+    }
+    release(e) {
+        e.getTracks().forEach(e => {
+            e.onended = function () {
+            }, e.stop();
+        });
+    }
 }

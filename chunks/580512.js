@@ -1,78 +1,64 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return I
-  }
-});
-var i = n(735250);
-n(470079);
-var r = n(442837),
-  s = n(717881),
-  o = n(906732),
-  a = n(199902),
-  l = n(158776),
-  u = n(594174),
-  _ = n(785717),
-  d = n(221292),
-  c = n(981631),
-  E = n(10268);
-
-function I(e) {
-  let {
-    user: t,
-    guild: n,
-    channelId: I,
-    onClose: T
-  } = e, {
-    analyticsLocations: h,
-    newestAnalyticsLocation: S
-  } = (0, o.ZP)(), {
-    trackUserProfileAction: f,
-    ...N
-  } = (0, _.KZ)(), A = (0, r.e7)([u.default], () => u.default.getCurrentUser()), {
-    isApplicationStreaming: m,
-    activity: O
-  } = (0, r.cj)([a.Z, l.Z], () => {
-    let e = null != a.Z.getAnyStreamForUser(t.id);
-    return {
-      isApplicationStreaming: e,
-      activity: e ? l.Z.findActivity(t.id, e => {
-        let {
-          type: t
-        } = e;
-        return t === c.IIU.PLAYING
-      }) : l.Z.findActivity(t.id, e => {
-        let {
-          type: t
-        } = e;
-        return t !== c.IIU.CUSTOM_STATUS
-      })
+    Z: function () {
+        return m;
     }
-  });
-  return (0, i.jsx)(s.Z, {
-    type: s.P.BITE_SIZE_POPOUT,
-    activity: O,
-    className: E.activity,
-    source: S,
-    user: t,
-    guildId: null == n ? void 0 : n.id,
-    channelId: I,
-    onOpenGameProfile: T,
-    onAction: () => {
-      f({
-        action: "JOIN_ACTIVITY"
-      }), (0, d.Ac)({
-        activityType: m ? c.IIU.STREAMING : null == O ? void 0 : O.type,
-        activityName: null == O ? void 0 : O.name,
-        activityPlatform: null == O ? void 0 : O.platform,
-        activitySessionId: null == O ? void 0 : O.session_id,
-        applicationId: null == O ? void 0 : O.application_id,
-        analyticsLocations: h,
-        ...N
-      }), null == T || T()
-    },
-    showActions: t.id !== (null == A ? void 0 : A.id),
-    actionColor: E.buttonColor,
-    showChannelDetails: !0
-  })
+});
+var r = n(735250);
+n(470079);
+var i = n(120356), a = n.n(i), o = n(442837), s = n(717881), l = n(906732), u = n(199902), c = n(158776), d = n(594174), _ = n(332390), E = n(785717), f = n(221292), h = n(981631), p = n(387690);
+function m(e) {
+    let {
+            user: t,
+            guild: n,
+            channelId: i,
+            onClose: m
+        } = e, {
+            analyticsLocations: I,
+            newestAnalyticsLocation: T
+        } = (0, l.ZP)(), {
+            trackUserProfileAction: g,
+            ...S
+        } = (0, E.KZ)(), A = (0, o.e7)([d.default], () => d.default.getCurrentUser()), {messageCtaEnabled: N} = (0, _.l)({ location: 'BiteSizeProfileActivitySection' }), {
+            isApplicationStreaming: v,
+            activity: O
+        } = (0, o.cj)([
+            u.Z,
+            c.Z
+        ], () => {
+            let e = null != u.Z.getAnyStreamForUser(t.id);
+            return {
+                isApplicationStreaming: e,
+                activity: e ? c.Z.findActivity(t.id, e => {
+                    let {type: t} = e;
+                    return t === h.IIU.PLAYING;
+                }) : c.Z.findActivity(t.id, e => {
+                    let {type: t} = e;
+                    return t !== h.IIU.CUSTOM_STATUS;
+                })
+            };
+        });
+    return (0, r.jsx)(s.Z, {
+        type: s.P.BITE_SIZE_POPOUT,
+        activity: O,
+        className: p.activity,
+        source: T,
+        user: t,
+        guildId: null == n ? void 0 : n.id,
+        channelId: i,
+        onOpenGameProfile: m,
+        onAction: () => {
+            g({ action: 'JOIN_ACTIVITY' }), (0, f.Ac)({
+                activityType: v ? h.IIU.STREAMING : null == O ? void 0 : O.type,
+                activityName: null == O ? void 0 : O.name,
+                activityPlatform: null == O ? void 0 : O.platform,
+                activitySessionId: null == O ? void 0 : O.session_id,
+                applicationId: null == O ? void 0 : O.application_id,
+                analyticsLocations: I,
+                ...S
+            }), null == m || m();
+        },
+        showActions: t.id !== (null == A ? void 0 : A.id),
+        actionColor: a()(p.buttonColor, N ? p.engagementExpButtonColor : void 0),
+        showChannelDetails: !0
+    });
 }

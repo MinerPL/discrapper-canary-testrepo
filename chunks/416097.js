@@ -1,23 +1,18 @@
-"use strict";
-n.d(e, {
-  I: function() {
-    return o
-  }
+r.d(e, {
+    I: function () {
+        return o;
+    }
 });
-var r = n(607190),
-  i = n(134954),
-  s = n(726300),
-  a = n(27583);
+var n = r(607190), _ = r(134954), a = r(726300), i = r(27583);
 let o = (t, e) => {
-  let n = (0, a.W)(),
-    o = "navigate";
-  return n && (o = r.m.document.prerendering || (0, s.A)() > 0 ? "prerender" : n.type.replace(/_/g, "-")), {
-    name: t,
-    value: void 0 === e ? -1 : e,
-    rating: "good",
-    delta: 0,
-    entries: [],
-    id: (0, i.f)(),
-    navigationType: o
-  }
-}
+    let r = (0, i.W)(), o = 'navigate';
+    return r && (o = n.m.document.prerendering || (0, a.A)() > 0 ? 'prerender' : r.type.replace(/_/g, '-')), {
+        name: t,
+        value: void 0 === e ? -1 : e,
+        rating: 'good',
+        delta: 0,
+        entries: [],
+        id: (0, _.f)(),
+        navigationType: o
+    };
+};

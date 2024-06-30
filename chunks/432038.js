@@ -1,62 +1,60 @@
-"use strict";
-n.d(e, {
-  $P: function() {
-    return o
-  },
-  Sq: function() {
-    return s
-  },
-  pE: function() {
-    return i
-  }
-});
-let r = /\(error: (.*)\)/;
-
-function i(...t) {
-  let e = t.sort((t, e) => t[0] - e[0]).map(t => t[1]);
-  return (t, n = 0) => {
-    let i = [],
-      s = t.split("\n");
-    for (let t = n; t < s.length; t++) {
-      let n = s[t];
-      if (n.length > 1024) continue;
-      let a = r.test(n) ? n.replace(r, "$1") : n;
-      if (!a.match(/\S*Error: /)) {
-        for (let t of e) {
-          let e = t(a);
-          if (e) {
-            i.push(e);
-            break
-          }
-        }
-        if (i.length >= 50) break
-      }
+r.d(e, {
+    $P: function () {
+        return o;
+    },
+    Sq: function () {
+        return a;
+    },
+    pE: function () {
+        return _;
     }
-    return function(t) {
-      if (!t.length) return [];
-      let e = t.slice(0, 50),
-        n = e[e.length - 1].function;
-      n && /sentryWrapped/.test(n) && e.pop(), e.reverse();
-      let r = e[e.length - 1].function;
-      return r && /captureMessage|captureException/.test(r) && e.pop(), e.map(t => ({
-        ...t,
-        filename: t.filename || e[e.length - 1].filename,
-        function: t.function || "?"
-      }))
-    }(i)
-  }
+});
+let n = /\(error: (.*)\)/;
+function _(...t) {
+    let e = t.sort((t, e) => t[0] - e[0]).map(t => t[1]);
+    return (t, r = 0) => {
+        let _ = [], a = t.split('\n');
+        for (let t = r; t < a.length; t++) {
+            let r = a[t];
+            if (r.length > 1024)
+                continue;
+            let i = n.test(r) ? r.replace(n, '$1') : r;
+            if (!i.match(/\S*Error: /)) {
+                for (let t of e) {
+                    let e = t(i);
+                    if (e) {
+                        _.push(e);
+                        break;
+                    }
+                }
+                if (_.length >= 50)
+                    break;
+            }
+        }
+        return function (t) {
+            if (!t.length)
+                return [];
+            let e = t.slice(0, 50), r = e[e.length - 1].function;
+            r && /sentryWrapped/.test(r) && e.pop(), e.reverse();
+            let n = e[e.length - 1].function;
+            return n && /captureMessage|captureException/.test(n) && e.pop(), e.map(t => ({
+                ...t,
+                filename: t.filename || e[e.length - 1].filename,
+                function: t.function || '?'
+            }));
+        }(_);
+    };
 }
-
-function s(t) {
-  return Array.isArray(t) ? i(...t) : t
+function a(t) {
+    return Array.isArray(t) ? _(...t) : t;
 }
-let a = "<anonymous>";
-
+let i = '<anonymous>';
 function o(t) {
-  try {
-    if (!t || "function" != typeof t) return a;
-    return t.name || a
-  } catch (t) {
-    return a
-  }
+    try {
+        if (!t || 'function' != typeof t)
+            return i;
+        return t.name || i;
+    } catch (t) {
+        return i;
+    }
 }

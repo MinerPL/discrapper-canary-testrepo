@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  Y: function() {
-    return i
-  }
-}), (r = i || (i = {}))[r.GUILD_INSTALL = 0] = "GUILD_INSTALL", r[r.USER_INSTALL = 1] = "USER_INSTALL"
+    Y: function () {
+        return r;
+    }
+}), (i = r || (r = {}))[i.GUILD_INSTALL = 0] = 'GUILD_INSTALL', i[i.USER_INSTALL = 1] = 'USER_INSTALL';

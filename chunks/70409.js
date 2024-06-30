@@ -1,47 +1,40 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return u
-  }
+n.d(t, {
+    Z: function () {
+        return u;
+    }
 });
-var n = t(735250);
-t(470079);
-var i = t(481060),
-  l = t(372444),
-  a = t(267642),
-  r = t(981631),
-  o = t(474936),
-  c = t(689938),
-  d = t(865656);
-
+var s = n(735250);
+n(470079);
+var a = n(481060), i = n(372444), r = n(267642), l = n(981631), o = n(474936), c = n(689938), d = n(872486);
 function u(e) {
-  let {
-    guild: s,
-    numSounds: t,
-    isOutOfSlots: u
-  } = e, E = s.premiumTier, _ = (0, a.FZ)(E, s.id), I = o._k[E] - 2;
-  if (null == _ || E === r.Eu4.TIER_3 || t < I) return null;
-  let T = u ? {
-    color: i.ButtonColors.GREEN,
-    look: i.ButtonLooks.FILLED,
-    text: c.Z.Messages.GUILD_SETTINGS_SOUNDBOARD_CTA
-  } : void 0;
-  return (0, n.jsx)(l.Z, {
-    header: c.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_BANNER_HEADER,
-    text: c.Z.Messages.GUILD_SETTINGS_SOUNDBOARD_UPSELL_BANNER_TEXT.format({
-      level: _,
-      numAdditional: (0, a.Je)(_)
-    }),
-    headerColor: "header-primary",
-    textColor: "text-normal",
-    buttonProps: T,
-    guild: s,
-    analyticsLocation: {
-      page: r.ZY5.GUILD_SETTINGS,
-      section: r.jXE.GUILD_SETTINGS_SOUNDBOARD,
-      object: r.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL,
-      objectType: (0, a.ge)(_)
-    },
-    className: d.container
-  })
+    let {
+            guild: t,
+            numSounds: n,
+            isOutOfSlots: u
+        } = e, _ = t.premiumTier, E = (0, r.FZ)(_, t.id), I = o._k[_] - 2;
+    if (null == E || _ === l.Eu4.TIER_3 || n < I)
+        return null;
+    let T = u ? {
+        color: a.ButtonColors.GREEN,
+        look: a.ButtonLooks.FILLED,
+        text: c.Z.Messages.GUILD_SETTINGS_SOUNDBOARD_CTA
+    } : void 0;
+    return (0, s.jsx)(i.Z, {
+        header: c.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_BANNER_HEADER,
+        text: c.Z.Messages.GUILD_SETTINGS_SOUNDBOARD_UPSELL_BANNER_TEXT.format({
+            level: E,
+            numAdditional: (0, r.Je)(E)
+        }),
+        headerColor: 'header-primary',
+        textColor: 'text-normal',
+        buttonProps: T,
+        guild: t,
+        analyticsLocation: {
+            page: l.ZY5.GUILD_SETTINGS,
+            section: l.jXE.GUILD_SETTINGS_SOUNDBOARD,
+            object: l.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL,
+            objectType: (0, r.ge)(E)
+        },
+        className: d.container
+    });
 }

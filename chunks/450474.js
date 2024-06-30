@@ -1,69 +1,65 @@
-"use strict";
-var n = t(735250);
-t(470079);
-var i = t(481060),
-  l = t(296386),
-  a = t(150192),
-  r = t(987134),
-  o = t(465670),
-  c = t(203377),
-  d = t(71988);
-s.Z = e => {
-  let {
-    guild: s,
-    guildMetadata: t,
-    menuPlacement: u,
-    disabled: E
-  } = e, _ = e => {
+var s = n(735250);
+n(470079);
+var a = n(481060), i = n(296386), r = n(150192), l = n(987134), o = n(203377), c = n(850461);
+t.Z = e => {
     let {
-      secondaryCategoryIds: n
-    } = t, i = e.map(e => e.value);
-    if (e.length < n.length) n.filter(e => !i.includes(e)).forEach(e => (0, l.K0)(s.id, e));
-    else {
-      if (n.length >= c.Pg) return;
-      i.filter(e => !n.includes(e)).forEach(e => (0, l.Kq)(s.id, e))
-    }
-  }, I = e => {
-    (0, l.K0)(s.id, e)
-  }, T = e => {
-    e.preventDefault(), e.stopPropagation()
-  }, N = a.Z.getAllCategories().map(e => {
-    let {
-      categoryId: s,
-      name: t
-    } = e;
-    return {
-      value: s,
-      label: t
-    }
-  });
-  return (0, n.jsx)(r.Z, {
-    value: t.secondaryCategoryIds,
-    searchable: !0,
-    clearable: !1,
-    options: N,
-    onChange: e => _(e),
-    multiValueRenderer: e => {
-      let {
-        label: s,
-        value: t
-      } = e;
-      return (0, n.jsxs)("span", {
-        className: d.subcategory,
-        onMouseDown: T,
-        children: [s, (0, n.jsx)(i.Clickable, {
-          className: d.closeWrapper,
-          onClick: () => I(t),
-          children: (0, n.jsx)(o.Z, {
-            width: 16,
-            height: 16,
-            className: d.close
-          })
-        })]
-      })
-    },
-    menuPlacement: u,
-    disabled: E,
-    isMulti: !0
-  })
-}
+            guild: t,
+            guildMetadata: n,
+            menuPlacement: d,
+            disabled: u
+        } = e, _ = e => {
+            let {secondaryCategoryIds: s} = n, a = e.map(e => e.value);
+            if (e.length < s.length)
+                s.filter(e => !a.includes(e)).forEach(e => (0, i.K0)(t.id, e));
+            else {
+                if (s.length >= o.Pg)
+                    return;
+                a.filter(e => !s.includes(e)).forEach(e => (0, i.Kq)(t.id, e));
+            }
+        }, E = e => {
+            (0, i.K0)(t.id, e);
+        }, I = e => {
+            e.preventDefault(), e.stopPropagation();
+        }, T = r.Z.getAllCategories().map(e => {
+            let {
+                categoryId: t,
+                name: n
+            } = e;
+            return {
+                value: t,
+                label: n
+            };
+        });
+    return (0, s.jsx)(l.Z, {
+        value: n.secondaryCategoryIds,
+        searchable: !0,
+        clearable: !1,
+        options: T,
+        onChange: e => _(e),
+        multiValueRenderer: e => {
+            let {
+                label: t,
+                value: n
+            } = e;
+            return (0, s.jsxs)('span', {
+                className: c.subcategory,
+                onMouseDown: I,
+                children: [
+                    t,
+                    (0, s.jsx)(a.Clickable, {
+                        className: c.closeWrapper,
+                        onClick: () => E(n),
+                        children: (0, s.jsx)(a.CloseSmallIcon, {
+                            size: 'xs',
+                            color: 'currentColor',
+                            className: c.close
+                        })
+                    })
+                ]
+            });
+        },
+        menuPlacement: d,
+        disabled: u,
+        isMulti: !0
+    });
+};

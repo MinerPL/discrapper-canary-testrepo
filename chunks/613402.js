@@ -1,25 +1,21 @@
-"use strict";
 n(47120);
-var i = n(570140),
-  r = n(147913),
-  s = n(885110);
-class o extends r.Z {
-  constructor(...e) {
-    var t, n, i;
-    super(...e), t = this, n = "stores", i = new Map().set(s.Z, a), n in t ? Object.defineProperty(t, n, {
-      value: i,
-      enumerable: !0,
-      configurable: !0,
-      writable: !0
-    }) : t[n] = i
-  }
+var r = n(570140), i = n(147913), a = n(885110);
+class o extends i.Z {
+    constructor(...e) {
+        var t, n, r;
+        super(...e), t = this, n = 'stores', r = new Map().set(a.Z, s), n in t ? Object.defineProperty(t, n, {
+            value: r,
+            enumerable: !0,
+            configurable: !0,
+            writable: !0
+        }) : t[n] = r;
+    }
 }
-
-function a() {
-  i.Z.dispatch({
-    type: "SELF_PRESENCE_STORE_UPDATE",
-    status: s.Z.getStatus(),
-    activities: s.Z.getActivities()
-  })
+function s() {
+    r.Z.dispatch({
+        type: 'SELF_PRESENCE_STORE_UPDATE',
+        status: a.Z.getStatus(),
+        activities: a.Z.getActivities()
+    });
 }
-t.Z = new o
+t.Z = new o();

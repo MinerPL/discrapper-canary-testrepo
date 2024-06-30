@@ -1,51 +1,40 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return d
-  }
-}), t(47120);
-var n = t(735250),
-  i = t(470079),
-  l = t(120356),
-  a = t.n(l),
-  r = t(481060),
-  o = t(717251),
-  c = t(729290);
-
-function d(e) {
-  let {
-    action: s,
-    children: t,
-    className: l,
-    onExpandChange: d,
-    loading: u,
-    ...E
-  } = e, [_, I] = i.useState(!1), T = e => {
-    I(e), null == d || d(e)
-  };
-  return (0, n.jsx)(r.Collapsible, {
-    className: a()(c.groupContainer, l),
-    isExpanded: _,
-    collapsibleContent: (0, n.jsxs)("div", {
-      className: c.groupCollapsedContainer,
-      children: [_ && (0, n.jsx)("div", {
-        className: c.pointer
-      }), t]
-    }),
-    children: e => {
-      let {
-        onClick: t
-      } = e;
-      return (0, n.jsx)(o.Z, {
-        ...E,
-        className: c.groupHeaderRow,
-        action: u ? (0, n.jsx)(r.Spinner, {
-          type: r.Spinner.Type.PULSING_ELLIPSIS
-        }) : s,
-        onClick: e => {
-          T(!_), t(e)
-        }
-      })
+n.d(t, {
+    Z: function () {
+        return d;
     }
-  })
+}), n(47120);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(481060), o = n(717251), c = n(27566);
+function d(e) {
+    let {
+            action: t,
+            children: n,
+            className: i,
+            onExpandChange: d,
+            loading: u,
+            ..._
+        } = e, [E, I] = a.useState(!1), T = e => {
+            I(e), null == d || d(e);
+        };
+    return (0, s.jsx)(l.Collapsible, {
+        className: r()(c.groupContainer, i),
+        isExpanded: E,
+        collapsibleContent: (0, s.jsxs)('div', {
+            className: c.groupCollapsedContainer,
+            children: [
+                E && (0, s.jsx)('div', { className: c.pointer }),
+                n
+            ]
+        }),
+        children: e => {
+            let {onClick: n} = e;
+            return (0, s.jsx)(o.Z, {
+                ..._,
+                className: c.groupHeaderRow,
+                action: u ? (0, s.jsx)(l.Spinner, { type: l.Spinner.Type.PULSING_ELLIPSIS }) : t,
+                onClick: e => {
+                    T(!E), n(e);
+                }
+            });
+        }
+    });
 }

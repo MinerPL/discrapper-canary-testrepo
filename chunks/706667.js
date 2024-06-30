@@ -1,32 +1,29 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return _
-  }
+    Z: function () {
+        return c;
+    }
 });
-var i = n(470079),
-  r = n(442837),
-  s = n(135869),
-  o = n(763296),
-  a = n(242291),
-  l = n(22382),
-  u = n(747071);
-
-function _(e, t) {
-  let {
-    currentPreviewRef: n
-  } = i.useContext(s.Z), _ = (0, r.e7)([o.Z], () => o.Z.isPlayingSound(e.soundId), [e]), d = i.useCallback(i => {
-    null != n.current && n.current.pause(), null != t && (0, a.GN)(e, t, i)
-  }, [e, n, t]), c = i.useCallback(() => {
-    let t = new Audio((0, l.Z)(e.soundId));
-    null != n.current && n.current.pause(), n.current = t, t.currentTime = 0, t.volume = (0, u.Z)(e.volume), t.play()
-  }, [e, n]);
-  return i.useCallback(() => () => {
-    var e;
-    return null === (e = n.current) || void 0 === e ? void 0 : e.pause()
-  }, [n]), {
-    playSoundboardSound: d,
-    isPlayingSound: _,
-    previewSound: c
-  }
+var r = n(470079), i = n(442837), a = n(135869), o = n(763296), s = n(242291), l = n(22382), u = n(747071);
+function c(e, t) {
+    let {currentPreviewRef: n} = r.useContext(a.Z), c = (0, i.e7)([o.Z], () => o.Z.isPlayingSound(e.soundId), [e]), d = r.useCallback(r => {
+            null != n.current && n.current.pause(), null != t && (0, s.GN)(e, t, r);
+        }, [
+            e,
+            n,
+            t
+        ]), _ = r.useCallback(() => {
+            let t = new Audio((0, l.Z)(e.soundId));
+            null != n.current && n.current.pause(), n.current = t, t.currentTime = 0, t.volume = (0, u.Z)(e.volume), t.play();
+        }, [
+            e,
+            n
+        ]);
+    return r.useCallback(() => () => {
+        var e;
+        return null === (e = n.current) || void 0 === e ? void 0 : e.pause();
+    }, [n]), {
+        playSoundboardSound: d,
+        isPlayingSound: c,
+        previewSound: _
+    };
 }

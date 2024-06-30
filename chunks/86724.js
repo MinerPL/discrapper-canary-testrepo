@@ -1,451 +1,398 @@
-"use strict";
 n.d(t, {
-  L: function() {
-    return v
-  },
-  Z: function() {
-    return L
-  }
-}), n(47120), n(653041), n(757143), n(733860);
-var i = n(373793),
-  r = n(911969),
-  s = n(555573),
-  o = n(456007),
-  a = n(10718),
-  l = n(998698),
-  u = n(895924),
-  _ = n(581364),
-  d = n(509716),
-  c = n(826298),
-  E = n(592125),
-  I = n(430824),
-  T = n(594174),
-  h = n(91313),
-  S = n(53529),
-  f = n(925994),
-  N = n(436660),
-  A = n(887490),
-  m = n(42530),
-  O = n(981631),
-  R = n(665692);
-let C = new Set(["applicationCommandOption"]),
-  p = new Set([r.jw.ATTACHMENT]),
-  g = new Set(["line", "applicationCommand"]);
-
-function L(e, t, n, d) {
-  let {
-    insertData: E,
-    isInline: I,
-    isVoid: T,
-    onChange: O,
-    deleteBackward: L,
-    deleteForward: b,
-    deleteFragment: G
-  } = e;
-  e.insertData = n => {
-    if (null != t && A.bN.isEditorEmpty(e) && n.types.includes("application/x-discord-interaction-data")) {
-      let e = JSON.parse(n.getData("application/x-discord-interaction-data")),
-        {
-          commandKey: l,
-          interactionOptions: d
-        } = (0, _.XA)(e),
-        {
-          application: c,
-          command: E
-        } = a.Xq(t, l);
-      if (null != E) {
-        var i, r;
-        let e = null != c ? {
-          type: u.Qi.APPLICATION,
-          id: c.id,
-          icon: c.icon,
-          name: null !== (r = null === (i = c.bot) || void 0 === i ? void 0 : i.username) && void 0 !== r ? r : c.name,
-          application: c
-        } : null;
-        return s.Po({
-          channelId: t.id,
-          command: E,
-          section: e,
-          location: u.Vh.PASTE,
-          initialValues: (0, o.Dw)(E, null != d ? d : [])
-        }), null
-      }
-    }
-    return E(n)
-  }, e.isInline = e => !!C.has(e.type) || I(e), e.isVoid = e => !!("applicationCommandOption" === e.type && p.has(e.optionType)) || T(e), e.deleteBackward = t => {
-    y(e, () => L(t))
-  }, e.deleteForward = t => {
-    y(e, () => b(t))
-  }, e.deleteFragment = t => {
-    y(e, () => G(t))
-  };
-  let w = null,
-    k = null,
-    B = null,
-    x = null,
-    V = null;
-  return e.onChange = () => {
-    if (null != t) {
-      let o = l.Z.getState(t.id),
-        _ = a.Hf(t);
-      if (A.bN.richValue(e) !== w || !A.Ew.equals(e.selection, k) || o.activeCommand !== B || null == V || _.some((e, t) => V[t] !== e)) {
-        let l = S.T.withMergedEntry(e, () => {
-          var l;
-          return function(e) {
-            var t, n;
-            let {
-              editor: o,
-              storeCommandState: l,
-              channel: _,
-              canUseCommands: d,
-              canOnlyUseTextCommands: E,
-              commandChanged: I,
-              previousOptionValues: T
-            } = e, {
-              command: S,
-              commandText: O
-            } = P(o), C = l.activeCommand;
-            if (!d && (null == C ? void 0 : null === (t = C.integration_types) || void 0 === t ? void 0 : t.includes(i.Y.GUILD_INSTALL)) || E && (null == C ? void 0 : C.inputType) !== u.iw.BUILT_IN_TEXT && (null == C ? void 0 : C.inputType) !== u.iw.BUILT_IN_INTEGRATION) return null != S && v(o, _.id, C, !0), null;
-            if (null != S) {
-              if (A.bN.isEditorEmpty(o) || null == C) return v(o, _.id, C, !1), null;
-              let e = "".concat(R.GI).concat(S.displayName);
-              if (null == O || !O.startsWith(e) || 0 === h.cu(o).length && (O.length < e.length + 1 || " " !== O[e.length])) return v(o, _.id, C, !0), null
-            } else {
-              if (null != C && I) {
-                let e = function(e, t, n) {
-                    var i, r, s, o, a;
-                    let l;
-                    let {
-                      initialValues: u,
-                      activeCommand: _
-                    } = n;
-                    if (null == _) return null;
-                    let d = (null !== (s = null === (i = _.options) || void 0 === i ? void 0 : i.length) && void 0 !== s ? s : 0) > 0 ? h.zb(e, _) : null,
-                      c = (0, f.sk)(A.bN.richValue(e), {
-                        mode: "raw",
-                        range: {
-                          anchor: A.bN.start(e, []),
-                          focus: null !== (o = null == d ? void 0 : null === (r = d[0]) || void 0 === r ? void 0 : r.keyRange.anchor) && void 0 !== o ? o : A.bN.end(e, [])
-                        }
-                      }),
-                      E = "",
-                      I = c.toLocaleLowerCase(),
-                      T = "".concat(R.GI).concat(_.displayName).toLocaleLowerCase(),
-                      S = "".concat(R.GI).concat(_.name).toLocaleLowerCase();
-                    I.startsWith(T) && I.length > T.length ? E = c.substring(T.length).trim() : I.startsWith(S) && I.length > S.length && (E = c.substring(S.length).trim());
-                    let O = [],
-                      C = null,
-                      g = null;
-                    if (null != _.options) {
-                      let e = new Set;
-                      if (null != d)
-                        for (let i of d) {
-                          e.add(i.name);
-                          let r = null !== (a = U(n, t, i.name)) && void 0 !== a ? a : i.text,
-                            s = {
-                              type: "applicationCommandOption",
-                              optionName: i.name,
-                              optionDisplayName: i.displayName,
-                              optionType: i.type,
-                              children: [{
-                                text: r
-                              }]
-                            };
-                          O.push(s), 0 === i.text.length && null == C && (C = s)
-                        }
-                      for (let i of _.options)
-                        if (!e.has(i.name) && (i.required || null != u[i.name])) {
-                          let e, r;
-                          E.length > 0 && !p.has(i.type) ? (e = E, E = "") : e = null != (r = U(n, t, i.name)) ? r : "";
-                          let s = {
-                            type: "applicationCommandOption",
-                            optionName: i.name,
-                            optionDisplayName: i.displayName,
-                            optionType: i.type,
-                            children: [{
-                              text: e
-                            }]
-                          };
-                          O.push(s), 0 === e.length && null == C && (C = s), null == r && (g = s)
-                        }
-                    }
-                    l = E.length > 0 ? "".concat(R.GI).concat(_.displayName, " ").concat(E.replace(/\r|\n/g, " ")) : 0 === O.length ? "".concat(R.GI).concat(_.displayName, " ") : "".concat(R.GI).concat(_.displayName), O.unshift({
-                      text: l
-                    });
-                    let L = {
-                      type: "applicationCommand",
-                      children: O,
-                      command: {
-                        id: _.id,
-                        name: _.name,
-                        displayName: _.displayName
-                      }
-                    };
-                    A.bN.withoutNormalizing(e, () => {
-                      for (let [, t] of(N.Q.insertNodes(e, [L], {
-                          at: m.YD
-                        }), A.bN.blocks(e).reverse())) A.C0.isAfter(t, m.YD) && N.Q.removeNodes(e, {
-                        at: t,
-                        voids: !0
-                      })
-                    });
-                    let v = null;
-                    return null != C ? (N.Q.selectCommandOption(e, C.optionName), v = C.optionName) : null != g ? (N.Q.selectCommandOption(e, g.optionName, !1), v = g.optionName) : N.Q.resetSelectionToEnd(e), null == g && D(e, _), v
-                  }(o, _, l),
-                  t = h.tM(o, C, _.id);
-                return M({
-                  guildId: _.guild_id,
-                  channelId: _.id,
-                  command: C,
-                  activeOption: e,
-                  currentOptionValues: t,
-                  previousOptionValues: null,
-                  validateAll: !0,
-                  allowEmpty: !0
-                }), {
-                  commandId: C.id,
-                  optionValues: t
-                }
-              }
-              if (null != C && !I) return s.Po({
-                channelId: _.id,
-                command: null,
-                section: null
-              }), null;
-              let e = A.bN.richValue(o)[0],
-                t = e.children[0];
-              if (g.has(e.type) && A.LC.isText(t)) {
-                let e = function(e, t) {
-                  if (!e.startsWith("/")) return null;
-                  let n = (0, c.hV)(t, e.substring(1));
-                  if (!n.hasSpaceTerminator) return null;
-                  let {
-                    commands: i,
-                    sections: s
-                  } = a.VB(t, r.yU.CHAT, n.text);
-                  if (0 === i.length) return null;
-                  let o = n.text.trim(),
-                    l = o + " ",
-                    _ = i.filter(e => e.inputType !== u.iw.PLACEHOLDER && (e.displayName === o || e.displayName.startsWith(l)));
-                  if (1 === _.length && _[0].displayName === o) {
-                    let e = _[0],
-                      t = s.find(t => {
-                        var n;
-                        return (null === (n = t.application) || void 0 === n ? void 0 : n.id) === e.applicationId
-                      });
-                    return {
-                      command: e,
-                      section: t
-                    }
-                  }
-                  return null
-                }(t.text, _);
-                if (null != e) return s.Po({
-                  channelId: _.id,
-                  command: e.command,
-                  section: e.section
-                }), null
-              }
-            }
-            if (null != C && null != S) {
-              ! function(e, t) {
-                if (null == t.options || 0 === t.options.length) return !1;
-                let n = h.zb(e, t);
-                return 0 !== n.length && (A.bN.withoutNormalizing(e, () => {
-                  for (let t = n.length - 1; t >= 0; t--) {
-                    let i = n[t];
-                    N.Q.textToInline(e, {
-                      type: "applicationCommandOption",
-                      optionName: i.name,
-                      optionDisplayName: i.displayName,
-                      optionType: i.type,
-                      children: [{
-                        text: i.text
-                      }]
-                    }, {
-                      anchor: i.keyRange.anchor,
-                      focus: i.valueRange.focus
-                    })
-                  }
-                  let t = A.bN.getFirstText(e);
-                  if (null == t) return !1;
-                  let i = t.text.trim();
-                  t.text !== i && N.Q.textToText(e, i, {
-                    anchor: {
-                      path: m.u9,
-                      offset: 0
-                    },
-                    focus: {
-                      path: m.u9,
-                      offset: t.text.length
-                    }
-                  })
-                }), !0)
-              }(o, C) && D(o, C);
-              let e = h.tM(o, C, _.id),
-                t = A.bN.above(o, {
-                  match: e => A.bN.isInline(o, e) && "applicationCommandOption" === e.type,
-                  mode: "lowest"
-                }),
-                i = null !== (n = null == t ? void 0 : t[0].optionName) && void 0 !== n ? n : null;
-              return M({
-                guildId: _.guild_id,
-                channelId: _.id,
-                command: C,
-                activeOption: i,
-                currentOptionValues: e,
-                previousOptionValues: T,
-                validateAll: !1,
-                allowEmpty: !1
-              }), {
-                commandId: S.id,
-                optionValues: e
-              }
-            }
-            return null
-          }({
-            editor: e,
-            storeCommandState: o,
-            channel: t,
-            canUseCommands: n,
-            canOnlyUseTextCommands: d,
-            commandChanged: (null === (l = o.activeCommand) || void 0 === l ? void 0 : l.id) !== (null == B ? void 0 : B.id),
-            previousOptionValues: x
-          })
-        });
-        if (null != l) {
-          let t = S.T.currentEntry(e);
-          null != t && (t.commandId = l.commandId), x = l.optionValues
-        } else x = null;
-        w = A.bN.richValue(e), k = e.selection, B = o.activeCommand, V = _
-      }
-    }
-    O()
-  }, e
-}
-
-function v(e, t, n, i) {
-  let [r] = A.bN.blocks(e)[0], o = (i ? (0, f.sg)(r, {
-    mode: "plain"
-  }).trimEnd() : "").split("\n").map(e => ({
-    type: "line",
-    children: [{
-      text: e
-    }]
-  })), a = [o.length - 1];
-  for (let [, t] of(N.Q.insertNodes(e, o, {
-      at: m.YD
-    }), A.bN.blocks(e).reverse())) A.C0.isAfter(t, a) && N.Q.removeNodes(e, {
-    at: t,
-    voids: !0
-  });
-  null != n && s.Po({
-    channelId: t,
-    command: null,
-    section: null
-  })
-}
-
-function D(e, t) {
-  if (null == t.options || 1 !== t.options.length || !0 === t.options[0].required || p.has(t.options[0].type) || h.cu(e).length > 0 || null == h.cr(e)) return !1;
-  let n = A.bN.getFirstText(e);
-  if (null == n) return !1;
-  let i = t.options[0],
-    r = {
-      path: m.u9,
-      offset: t.displayName.length + 2
+    L: function () {
+        return y;
     },
-    s = {
-      path: m.u9,
-      offset: n.text.length
+    Z: function () {
+        return C;
+    }
+}), n(47120), n(653041), n(757143), n(733860);
+var r = n(373793), i = n(911969), a = n(555573), o = n(456007), s = n(10718), l = n(998698), u = n(895924), c = n(581364), d = n(509716), _ = n(826298), E = n(592125), f = n(430824), h = n(594174), p = n(91313), m = n(53529), I = n(925994), T = n(436660), g = n(887490), S = n(42530), A = n(981631), N = n(665692);
+let v = new Set(['applicationCommandOption']), O = new Set([i.jw.ATTACHMENT]), R = new Set([
+        'line',
+        'applicationCommand'
+    ]);
+function C(e, t, n, d) {
+    let {
+        insertData: E,
+        isInline: f,
+        isVoid: h,
+        onChange: A,
+        deleteBackward: C,
+        deleteForward: U,
+        deleteFragment: w
+    } = e;
+    e.insertData = n => {
+        if (null != t && g.bN.isEditorEmpty(e) && n.types.includes('application/x-discord-interaction-data')) {
+            let e = JSON.parse(n.getData('application/x-discord-interaction-data')), {
+                    commandKey: l,
+                    interactionOptions: d
+                } = (0, c.XA)(e), {
+                    application: _,
+                    command: E
+                } = s.Xq(t, l);
+            if (null != E) {
+                var r, i;
+                let e = null != _ ? {
+                    type: u.Qi.APPLICATION,
+                    id: _.id,
+                    icon: _.icon,
+                    name: null !== (i = null === (r = _.bot) || void 0 === r ? void 0 : r.username) && void 0 !== i ? i : _.name,
+                    application: _
+                } : null;
+                return a.Po({
+                    channelId: t.id,
+                    command: E,
+                    section: e,
+                    location: u.Vh.PASTE,
+                    initialValues: (0, o.Dw)(E, null != d ? d : [])
+                }), null;
+            }
+        }
+        return E(n);
+    }, e.isInline = e => !!v.has(e.type) || f(e), e.isVoid = e => !!('applicationCommandOption' === e.type && O.has(e.optionType)) || h(e), e.deleteBackward = t => {
+        M(e, () => C(t));
+    }, e.deleteForward = t => {
+        M(e, () => U(t));
+    }, e.deleteFragment = t => {
+        M(e, () => w(t));
     };
-  return !(!n.text.startsWith("".concat(R.GI).concat(t.displayName, " ").toLocaleLowerCase()) || A.Jz.equals(r, s)) && (N.Q.textToInline(e, {
-    type: "applicationCommandOption",
-    optionName: i.name,
-    optionDisplayName: i.displayName,
-    optionType: i.type,
-    children: [{
-      text: n.text.substring(t.displayName.length + 2)
-    }]
-  }, {
-    anchor: r,
-    focus: s
-  }), !0)
+    let x = null, G = null, k = null, B = null, F = null;
+    return e.onChange = () => {
+        if (null != t) {
+            let o = l.Z.getState(t.id), c = s.Hf(t);
+            if (g.bN.richValue(e) !== x || !g.Ew.equals(e.selection, G) || o.activeCommand !== k || null == F || c.some((e, t) => F[t] !== e)) {
+                let l = m.T.withMergedEntry(e, () => {
+                    var l;
+                    return function (e) {
+                        var t, n;
+                        let {
+                                editor: o,
+                                storeCommandState: l,
+                                channel: c,
+                                canUseCommands: d,
+                                canOnlyUseTextCommands: E,
+                                commandChanged: f,
+                                previousOptionValues: h
+                            } = e, {
+                                command: m,
+                                commandText: A
+                            } = b(o), v = l.activeCommand;
+                        if (!d && (null == v ? void 0 : null === (t = v.integration_types) || void 0 === t ? void 0 : t.includes(r.Y.GUILD_INSTALL)) || E && (null == v ? void 0 : v.inputType) !== u.iw.BUILT_IN_TEXT && (null == v ? void 0 : v.inputType) !== u.iw.BUILT_IN_INTEGRATION)
+                            return null != m && y(o, c.id, v, !0), null;
+                        if (null != m) {
+                            if (g.bN.isEditorEmpty(o) || null == v)
+                                return y(o, c.id, v, !1), null;
+                            let e = ''.concat(N.GI).concat(m.displayName);
+                            if (null == A || !A.startsWith(e) || 0 === p.cu(o).length && (A.length < e.length + 1 || ' ' !== A[e.length]))
+                                return y(o, c.id, v, !0), null;
+                        } else {
+                            if (null != v && f) {
+                                let e = function (e, t, n) {
+                                        var r, i, a, o, s;
+                                        let l;
+                                        let {
+                                            initialValues: u,
+                                            activeCommand: c
+                                        } = n;
+                                        if (null == c)
+                                            return null;
+                                        let d = (null !== (a = null === (r = c.options) || void 0 === r ? void 0 : r.length) && void 0 !== a ? a : 0) > 0 ? p.zb(e, c) : null, _ = (0, I.sk)(g.bN.richValue(e), {
+                                                mode: 'raw',
+                                                range: {
+                                                    anchor: g.bN.start(e, []),
+                                                    focus: null !== (o = null == d ? void 0 : null === (i = d[0]) || void 0 === i ? void 0 : i.keyRange.anchor) && void 0 !== o ? o : g.bN.end(e, [])
+                                                }
+                                            }), E = '', f = _.toLocaleLowerCase(), h = ''.concat(N.GI).concat(c.displayName).toLocaleLowerCase(), m = ''.concat(N.GI).concat(c.name).toLocaleLowerCase();
+                                        f.startsWith(h) && f.length > h.length ? E = _.substring(h.length).trim() : f.startsWith(m) && f.length > m.length && (E = _.substring(m.length).trim());
+                                        let A = [], v = null, R = null;
+                                        if (null != c.options) {
+                                            let e = new Set();
+                                            if (null != d)
+                                                for (let r of d) {
+                                                    e.add(r.name);
+                                                    let i = null !== (s = P(n, t, r.name)) && void 0 !== s ? s : r.text, a = {
+                                                            type: 'applicationCommandOption',
+                                                            optionName: r.name,
+                                                            optionDisplayName: r.displayName,
+                                                            optionType: r.type,
+                                                            children: [{ text: i }]
+                                                        };
+                                                    A.push(a), 0 === r.text.length && null == v && (v = a);
+                                                }
+                                            for (let r of c.options)
+                                                if (!e.has(r.name) && (r.required || null != u[r.name])) {
+                                                    let e, i;
+                                                    E.length > 0 && !O.has(r.type) ? (e = E, E = '') : e = null != (i = P(n, t, r.name)) ? i : '';
+                                                    let a = {
+                                                        type: 'applicationCommandOption',
+                                                        optionName: r.name,
+                                                        optionDisplayName: r.displayName,
+                                                        optionType: r.type,
+                                                        children: [{ text: e }]
+                                                    };
+                                                    A.push(a), 0 === e.length && null == v && (v = a), null == i && (R = a);
+                                                }
+                                        }
+                                        l = E.length > 0 ? ''.concat(N.GI).concat(c.displayName, ' ').concat(E.replace(/\r|\n/g, ' ')) : 0 === A.length ? ''.concat(N.GI).concat(c.displayName, ' ') : ''.concat(N.GI).concat(c.displayName), A.unshift({ text: l });
+                                        let C = {
+                                            type: 'applicationCommand',
+                                            children: A,
+                                            command: {
+                                                id: c.id,
+                                                name: c.name,
+                                                displayName: c.displayName
+                                            }
+                                        };
+                                        g.bN.withoutNormalizing(e, () => {
+                                            for (let [, t] of (T.Q.insertNodes(e, [C], { at: S.YD }), g.bN.blocks(e).reverse()))
+                                                g.C0.isAfter(t, S.YD) && T.Q.removeNodes(e, {
+                                                    at: t,
+                                                    voids: !0
+                                                });
+                                        });
+                                        let y = null;
+                                        return null != v ? (T.Q.selectCommandOption(e, v.optionName), y = v.optionName) : null != R ? (T.Q.selectCommandOption(e, R.optionName, !1), y = R.optionName) : T.Q.resetSelectionToEnd(e), null == R && D(e, c), y;
+                                    }(o, c, l), t = p.tM(o, v, c.id);
+                                return L({
+                                    guildId: c.guild_id,
+                                    channelId: c.id,
+                                    command: v,
+                                    activeOption: e,
+                                    currentOptionValues: t,
+                                    previousOptionValues: null,
+                                    validateAll: !0,
+                                    allowEmpty: !0
+                                }), {
+                                    commandId: v.id,
+                                    optionValues: t
+                                };
+                            }
+                            if (null != v && !f)
+                                return a.Po({
+                                    channelId: c.id,
+                                    command: null,
+                                    section: null
+                                }), null;
+                            let e = g.bN.richValue(o)[0], t = e.children[0];
+                            if (R.has(e.type) && g.LC.isText(t)) {
+                                let e = function (e, t) {
+                                    if (!e.startsWith('/'))
+                                        return null;
+                                    let n = (0, _.hV)(t, e.substring(1));
+                                    if (!n.hasSpaceTerminator)
+                                        return null;
+                                    let {
+                                        commands: r,
+                                        sections: a
+                                    } = s.VB(t, i.yU.CHAT, n.text);
+                                    if (0 === r.length)
+                                        return null;
+                                    let o = n.text.trim(), l = o + ' ', c = r.filter(e => e.inputType !== u.iw.PLACEHOLDER && (e.displayName === o || e.displayName.startsWith(l)));
+                                    if (1 === c.length && c[0].displayName === o) {
+                                        let e = c[0], t = a.find(t => {
+                                                var n;
+                                                return (null === (n = t.application) || void 0 === n ? void 0 : n.id) === e.applicationId;
+                                            });
+                                        return {
+                                            command: e,
+                                            section: t
+                                        };
+                                    }
+                                    return null;
+                                }(t.text, c);
+                                if (null != e)
+                                    return a.Po({
+                                        channelId: c.id,
+                                        command: e.command,
+                                        section: e.section
+                                    }), null;
+                            }
+                        }
+                        if (null != v && null != m) {
+                            !function (e, t) {
+                                if (null == t.options || 0 === t.options.length)
+                                    return !1;
+                                let n = p.zb(e, t);
+                                return 0 !== n.length && (g.bN.withoutNormalizing(e, () => {
+                                    for (let t = n.length - 1; t >= 0; t--) {
+                                        let r = n[t];
+                                        T.Q.textToInline(e, {
+                                            type: 'applicationCommandOption',
+                                            optionName: r.name,
+                                            optionDisplayName: r.displayName,
+                                            optionType: r.type,
+                                            children: [{ text: r.text }]
+                                        }, {
+                                            anchor: r.keyRange.anchor,
+                                            focus: r.valueRange.focus
+                                        });
+                                    }
+                                    let t = g.bN.getFirstText(e);
+                                    if (null == t)
+                                        return !1;
+                                    let r = t.text.trim();
+                                    t.text !== r && T.Q.textToText(e, r, {
+                                        anchor: {
+                                            path: S.u9,
+                                            offset: 0
+                                        },
+                                        focus: {
+                                            path: S.u9,
+                                            offset: t.text.length
+                                        }
+                                    });
+                                }), !0);
+                            }(o, v) && D(o, v);
+                            let e = p.tM(o, v, c.id), t = g.bN.above(o, {
+                                    match: e => g.bN.isInline(o, e) && 'applicationCommandOption' === e.type,
+                                    mode: 'lowest'
+                                }), r = null !== (n = null == t ? void 0 : t[0].optionName) && void 0 !== n ? n : null;
+                            return L({
+                                guildId: c.guild_id,
+                                channelId: c.id,
+                                command: v,
+                                activeOption: r,
+                                currentOptionValues: e,
+                                previousOptionValues: h,
+                                validateAll: !1,
+                                allowEmpty: !1
+                            }), {
+                                commandId: m.id,
+                                optionValues: e
+                            };
+                        }
+                        return null;
+                    }({
+                        editor: e,
+                        storeCommandState: o,
+                        channel: t,
+                        canUseCommands: n,
+                        canOnlyUseTextCommands: d,
+                        commandChanged: (null === (l = o.activeCommand) || void 0 === l ? void 0 : l.id) !== (null == k ? void 0 : k.id),
+                        previousOptionValues: B
+                    });
+                });
+                if (null != l) {
+                    let t = m.T.currentEntry(e);
+                    null != t && (t.commandId = l.commandId), B = l.optionValues;
+                } else
+                    B = null;
+                x = g.bN.richValue(e), G = e.selection, k = o.activeCommand, F = c;
+            }
+        }
+        A();
+    }, e;
 }
-
-function M(e) {
-  let {
-    guildId: t,
-    channelId: n,
-    command: i,
-    activeOption: r,
-    currentOptionValues: o,
-    previousOptionValues: a,
-    validateAll: u,
-    allowEmpty: _
-  } = e;
-  if (null == i.options) return !1;
-  let c = u ? null : l.Z.getActiveOptionName(n),
-    E = {},
-    I = l.Z.getOptionStates(n),
-    T = !1;
-  for (let e of i.options) {
-    var h, S, f;
-    let i = I[e.name],
-      s = u || e.name === c && c !== r || (null == i ? void 0 : null === (h = i.lastValidationResult) || void 0 === h ? void 0 : h.success) === !1 && (null == o ? void 0 : o[e.name]) !== (null == a ? void 0 : a[e.name]),
-      l = {
-        hasValue: null != o && e.name in o,
-        isActive: e.name === r,
-        lastValidationResult: s ? (0, d.f)({
-          option: e,
-          content: null !== (f = null == o ? void 0 : o[e.name]) && void 0 !== f ? f : null,
-          guildId: t,
-          channelId: n,
-          allowEmptyValues: _
-        }) : null == i ? void 0 : i.lastValidationResult
-      };
-    (null == i || i.hasValue !== l.hasValue || i.isActive !== l.isActive || s && (null === (S = i.lastValidationResult) || void 0 === S ? void 0 : S.success) === !1) && (E[e.name] = l, T = !0)
-  }
-  T && s.g7(n, E)
+function y(e, t, n, r) {
+    let [i] = g.bN.blocks(e)[0], o = (r ? (0, I.sg)(i, { mode: 'plain' }).trimEnd() : '').split('\n').map(e => ({
+            type: 'line',
+            children: [{ text: e }]
+        })), s = [o.length - 1];
+    for (let [, t] of (T.Q.insertNodes(e, o, { at: S.YD }), g.bN.blocks(e).reverse()))
+        g.C0.isAfter(t, s) && T.Q.removeNodes(e, {
+            at: t,
+            voids: !0
+        });
+    null != n && a.Po({
+        channelId: t,
+        command: null,
+        section: null
+    });
 }
-
-function P(e) {
-  let t = h.cr(e);
-  if (null == t) return {
-    command: null,
-    commandText: null
-  };
-  let [n] = t, i = n.children[0];
-  return A.LC.isText(i) ? {
-    command: n.command,
-    commandText: i.text
-  } : {
-    command: n.command,
-    commandText: null
-  }
+function D(e, t) {
+    if (null == t.options || 1 !== t.options.length || !0 === t.options[0].required || O.has(t.options[0].type) || p.cu(e).length > 0 || null == p.cr(e))
+        return !1;
+    let n = g.bN.getFirstText(e);
+    if (null == n)
+        return !1;
+    let r = t.options[0], i = {
+            path: S.u9,
+            offset: t.displayName.length + 2
+        }, a = {
+            path: S.u9,
+            offset: n.text.length
+        };
+    return !(!n.text.startsWith(''.concat(N.GI).concat(t.displayName, ' ').toLocaleLowerCase()) || g.Jz.equals(i, a)) && (T.Q.textToInline(e, {
+        type: 'applicationCommandOption',
+        optionName: r.name,
+        optionDisplayName: r.displayName,
+        optionType: r.type,
+        children: [{ text: n.text.substring(t.displayName.length + 2) }]
+    }, {
+        anchor: i,
+        focus: a
+    }), !0);
 }
-
-function y(e, t) {
-  let n = h.cu(e)[0];
-  t();
-  let i = A.M8.toPoint(e.selection);
-  if (null == i || n === h.cu(e)[0]) return;
-  let {
-    command: r,
-    commandText: s
-  } = P(e);
-  if (!(null == r || null == s || s.endsWith(" ")) && !!A.Jz.equals(i, {
-      path: m.u9,
-      offset: r.displayName.length + 1
-    })) N.Q.insertText(e, " ")
+function L(e) {
+    let {
+        guildId: t,
+        channelId: n,
+        command: r,
+        activeOption: i,
+        currentOptionValues: o,
+        previousOptionValues: s,
+        validateAll: u,
+        allowEmpty: c
+    } = e;
+    if (null == r.options)
+        return !1;
+    let _ = u ? null : l.Z.getActiveOptionName(n), E = {}, f = l.Z.getOptionStates(n), h = !1;
+    for (let e of r.options) {
+        var p, m, I;
+        let r = f[e.name], a = u || e.name === _ && _ !== i || (null == r ? void 0 : null === (p = r.lastValidationResult) || void 0 === p ? void 0 : p.success) === !1 && (null == o ? void 0 : o[e.name]) !== (null == s ? void 0 : s[e.name]), l = {
+                hasValue: null != o && e.name in o,
+                isActive: e.name === i,
+                lastValidationResult: a ? (0, d.f)({
+                    option: e,
+                    content: null !== (I = null == o ? void 0 : o[e.name]) && void 0 !== I ? I : null,
+                    guildId: t,
+                    channelId: n,
+                    allowEmptyValues: c
+                }) : null == r ? void 0 : r.lastValidationResult
+            };
+        (null == r || r.hasValue !== l.hasValue || r.isActive !== l.isActive || a && (null === (m = r.lastValidationResult) || void 0 === m ? void 0 : m.success) === !1) && (E[e.name] = l, h = !0);
+    }
+    h && a.g7(n, E);
 }
-
-function U(e, t, n) {
-  var i, s, o, a;
-  let l = null === (s = e.activeCommand) || void 0 === s ? void 0 : null === (i = s.options) || void 0 === i ? void 0 : i.find(e => e.name === n),
-    u = e.initialValues[n];
-  if (null == l || null == u) return null;
-  if (null != l.choices) return null === (a = l.choices.find(e => e.value === u.value)) || void 0 === a ? void 0 : a.displayName;
-  let _ = null === (o = u.value) || void 0 === o ? void 0 : o.toString();
-  return l.type === r.jw.CHANNEL || l.type === r.jw.MENTIONABLE && null != E.Z.getChannel(_) ? "<#".concat(_, ">	") : l.type === r.jw.USER || l.type === r.jw.MENTIONABLE && null != T.default.getUser(_) ? "<@".concat(_, ">") : l.type === r.jw.ROLE || l.type === r.jw.MENTIONABLE && null != I.Z.getRole(t.guild_id, null != _ ? _ : O.lds) ? "<@&".concat(_, ">") : _
+function b(e) {
+    let t = p.cr(e);
+    if (null == t)
+        return {
+            command: null,
+            commandText: null
+        };
+    let [n] = t, r = n.children[0];
+    return g.LC.isText(r) ? {
+        command: n.command,
+        commandText: r.text
+    } : {
+        command: n.command,
+        commandText: null
+    };
+}
+function M(e, t) {
+    let n = p.cu(e)[0];
+    t();
+    let r = g.M8.toPoint(e.selection);
+    if (null == r || n === p.cu(e)[0])
+        return;
+    let {
+        command: i,
+        commandText: a
+    } = b(e);
+    if (!(null == i || null == a || a.endsWith(' ')) && !!g.Jz.equals(r, {
+            path: S.u9,
+            offset: i.displayName.length + 1
+        }))
+        T.Q.insertText(e, ' ');
+}
+function P(e, t, n) {
+    var r, a, o, s;
+    let l = null === (a = e.activeCommand) || void 0 === a ? void 0 : null === (r = a.options) || void 0 === r ? void 0 : r.find(e => e.name === n), u = e.initialValues[n];
+    if (null == l || null == u)
+        return null;
+    if (null != l.choices)
+        return null === (s = l.choices.find(e => e.value === u.value)) || void 0 === s ? void 0 : s.displayName;
+    let c = null === (o = u.value) || void 0 === o ? void 0 : o.toString();
+    return l.type === i.jw.CHANNEL || l.type === i.jw.MENTIONABLE && null != E.Z.getChannel(c) ? '<#'.concat(c, '>\t') : l.type === i.jw.USER || l.type === i.jw.MENTIONABLE && null != h.default.getUser(c) ? '<@'.concat(c, '>') : l.type === i.jw.ROLE || l.type === i.jw.MENTIONABLE && null != f.Z.getRole(t.guild_id, null != c ? c : A.lds) ? '<@&'.concat(c, '>') : c;
 }

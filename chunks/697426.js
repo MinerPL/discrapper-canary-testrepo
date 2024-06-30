@@ -1,70 +1,67 @@
-"use strict";
-var i, r, s, o, a, l, u, _, d, c, E, I, T, h;
-
-function S(e, t) {
-  let {
-    sound_id: n,
-    emoji_id: i,
-    emoji_name: r,
-    user_id: s,
-    available: o,
-    ...a
-  } = e;
-  return {
-    ...a,
-    soundId: n,
-    guildId: t,
-    emojiId: i,
-    emojiName: r,
-    userId: s,
-    available: null == o || o
-  }
+var r, i, a, o, s, l, u, c, d, _, E, f, h, p;
+function m(e, t) {
+    let {
+        sound_id: n,
+        emoji_id: r,
+        emoji_name: i,
+        user_id: a,
+        available: o,
+        ...s
+    } = e;
+    return {
+        ...s,
+        soundId: n,
+        guildId: t,
+        emojiId: r,
+        emojiName: i,
+        userId: a,
+        available: null == o || o
+    };
 }
-
-function f(e) {
-  let {
-    soundId: t,
-    guildId: n,
-    emojiId: i,
-    emojiName: r,
-    userId: s,
-    ...o
-  } = e;
-  return {
-    ...o,
-    sound_id: t,
-    guild_id: n,
-    emoji_id: i,
-    emoji_name: r,
-    user_id: s
-  }
+function I(e) {
+    let {
+        soundId: t,
+        guildId: n,
+        emojiId: r,
+        emojiName: i,
+        userId: a,
+        ...o
+    } = e;
+    return {
+        ...o,
+        sound_id: t,
+        guild_id: n,
+        emoji_id: r,
+        emoji_name: i,
+        user_id: a
+    };
 }
 n.d(t, {
-  H$: function() {
-    return o
-  },
-  MW: function() {
-    return s
-  },
-  Pb: function() {
-    return i
-  },
-  QL: function() {
-    return f
-  },
-  YQ: function() {
-    return u
-  },
-  bg: function() {
-    return a
-  },
-  jy: function() {
-    return r
-  },
-  o3: function() {
-    return S
-  },
-  vB: function() {
-    return l
-  }
-}), (_ = i || (i = {}))[_.PLAY = 0] = "PLAY", _[_.ADD = 1] = "ADD", (d = r || (r = {})).ENTRY = "entry_sound", d.EXIT = "exit_sound", d.DEFAULT = "default", (c = s || (s = {})).ADDED = "added", c.UPDATED = "updated", c.REMOVED = "removed", (E = o || (o = {})).DEFAULT = "default", E.CUSTOM = "custom", (I = a || (a = {}))[I.FAVORITES = 0] = "FAVORITES", I[I.RECENTLY_HEARD = 1] = "RECENTLY_HEARD", I[I.FREQUENTLY_USED = 2] = "FREQUENTLY_USED", I[I.GUILD = 3] = "GUILD", I[I.DEFAULTS = 4] = "DEFAULTS", I[I.SEARCH = 5] = "SEARCH", (T = l || (l = {}))[T.SOUND = 0] = "SOUND", T[T.ADD_SOUND = 1] = "ADD_SOUND", (h = u || (u = {}))[h.GIFT_CODE = 0] = "GIFT_CODE", h[h.SOUNDBOARD = 1] = "SOUNDBOARD", h[h.JOINED_VOICE_CHANNEL = 2] = "JOINED_VOICE_CHANNEL"
+    H$: function () {
+        return o;
+    },
+    MW: function () {
+        return a;
+    },
+    Pb: function () {
+        return r;
+    },
+    QL: function () {
+        return I;
+    },
+    YQ: function () {
+        return u;
+    },
+    bg: function () {
+        return s;
+    },
+    jy: function () {
+        return i;
+    },
+    o3: function () {
+        return m;
+    },
+    vB: function () {
+        return l;
+    }
+}), (c = r || (r = {}))[c.PLAY = 0] = 'PLAY', c[c.ADD = 1] = 'ADD', (d = i || (i = {})).ENTRY = 'entry_sound', d.EXIT = 'exit_sound', d.DEFAULT = 'default', (_ = a || (a = {})).ADDED = 'added', _.UPDATED = 'updated', _.REMOVED = 'removed', (E = o || (o = {})).DEFAULT = 'default', E.CUSTOM = 'custom', (f = s || (s = {}))[f.FAVORITES = 0] = 'FAVORITES', f[f.RECENTLY_HEARD = 1] = 'RECENTLY_HEARD', f[f.FREQUENTLY_USED = 2] = 'FREQUENTLY_USED', f[f.GUILD = 3] = 'GUILD', f[f.DEFAULTS = 4] = 'DEFAULTS', f[f.SEARCH = 5] = 'SEARCH', (h = l || (l = {}))[h.SOUND = 0] = 'SOUND', h[h.ADD_SOUND = 1] = 'ADD_SOUND', (p = u || (u = {}))[p.GIFT_CODE = 0] = 'GIFT_CODE', p[p.SOUNDBOARD = 1] = 'SOUNDBOARD', p[p.JOINED_VOICE_CHANNEL = 2] = 'JOINED_VOICE_CHANNEL';

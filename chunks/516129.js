@@ -1,53 +1,41 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return N
-  }
+n.d(t, {
+    Z: function () {
+        return T;
+    }
 });
-var n = t(735250);
-t(470079);
-var i = t(120356),
-  l = t.n(i),
-  a = t(780384),
-  r = t(410030),
-  o = t(44315),
-  c = t(586791),
-  d = t(54264),
-  u = t(208567),
-  E = t(981631),
-  _ = t(221272);
-let I = E.Ilk.PRIMARY_400,
-  T = E.Ilk.PRIMARY_500;
-
-function N(e) {
-  let {
-    enabled: s,
-    imageClassName: t,
-    iconWrapperClassName: i,
-    ...E
-  } = e, N = (0, r.ZP)(), m = (0, a.wj)(N) ? I : T, S = {
-    height: 18,
-    width: 18,
-    color: (0, o.Lq)(m)
-  };
-  return (0, n.jsx)(u.Z, {
-    className: l()({
-      [_.avatarUploader]: s,
-      [_.avatarUploaderDisabled]: !s
-    }),
-    imageClassName: l()(t, _.avatarUploaderInnerSquare, {
-      [_.avatarUploaderInnerSquareDisabled]: !s
-    }),
-    icon: null != E.image && "" !== E.image ? (0, n.jsx)(c.Z, {
-      ...S
-    }) : (0, n.jsx)(d.Z, {
-      ...S
-    }),
-    iconClassName: l()(_.avatarUploadIcon, _.hideDefaultIcon),
-    iconWrapperClassName: i,
-    showIcon: !0,
-    showIconDisabled: !0,
-    hideSize: !0,
-    ...E
-  })
+var s = n(735250);
+n(470079);
+var a = n(120356), i = n.n(a), r = n(780384), l = n(481060), o = n(410030), c = n(44315), d = n(208567), u = n(981631), _ = n(790689);
+let E = u.Ilk.PRIMARY_400, I = u.Ilk.PRIMARY_500;
+function T(e) {
+    let {
+            enabled: t,
+            imageClassName: n,
+            iconWrapperClassName: a,
+            ...u
+        } = e, T = (0, o.ZP)(), m = (0, r.wj)(T) ? E : I, N = {
+            height: 18,
+            width: 18,
+            color: (0, c.Lq)(m)
+        };
+    return (0, s.jsx)(d.Z, {
+        className: i()({
+            [_.avatarUploader]: t,
+            [_.avatarUploaderDisabled]: !t
+        }),
+        imageClassName: i()(n, _.avatarUploaderInnerSquare, { [_.avatarUploaderInnerSquareDisabled]: !t }),
+        icon: null != u.image && '' !== u.image ? (0, s.jsx)(l.PencilIcon, {
+            size: 'custom',
+            ...N
+        }) : (0, s.jsx)(l.ImagePlusIcon, {
+            size: 'custom',
+            ...N
+        }),
+        iconClassName: i()(_.avatarUploadIcon, _.hideDefaultIcon),
+        iconWrapperClassName: a,
+        showIcon: !0,
+        showIconDisabled: !0,
+        hideSize: !0,
+        ...u
+    });
 }

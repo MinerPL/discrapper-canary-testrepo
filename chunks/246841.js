@@ -1,60 +1,58 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return l
-  }
-});
-var i = n(735250);
-n(470079);
-var r = n(481060),
-  s = n(395361),
-  o = n(829820),
-  a = n(22387);
-
-function l(e) {
-  let {
-    activity: t,
-    user: n,
-    source: l,
-    className: u,
-    size: _,
-    look: d,
-    color: c,
-    fullWidth: E,
-    onAction: I
-  } = e, {
-    label: T,
-    tooltip: h,
-    loading: S,
-    disabled: f,
-    onClick: N
-  } = (0, o.Ih)(t, n, l), A = () => {
-    null == I || I(), N()
-  };
-  return (0, i.jsx)(r.Tooltip, {
-    text: h,
-    children: e => {
-      let {
-        onMouseEnter: t,
-        onMouseLeave: n
-      } = e;
-      return (0, i.jsxs)(r.Button, {
-        className: u,
-        innerClassName: a.playButtonInner,
-        size: _,
-        look: d,
-        color: c,
-        fullWidth: E,
-        onClick: A,
-        onMouseEnter: t,
-        onMouseLeave: n,
-        disabled: f,
-        submitting: S,
-        children: [(0, i.jsx)(s.Z, {
-          width: 16,
-          height: 16
-        }), T]
-      })
+    Z: function () {
+        return l;
     }
-  })
+});
+var r = n(735250);
+n(470079);
+var i = n(481060), a = n(395361), o = n(829820), s = n(171509);
+function l(e) {
+    let {
+            activity: t,
+            user: n,
+            source: l,
+            className: u,
+            size: c,
+            look: d,
+            color: _,
+            fullWidth: E,
+            onAction: f
+        } = e, {
+            label: h,
+            tooltip: p,
+            loading: m,
+            disabled: I,
+            onClick: T
+        } = (0, o.Ih)(t, n, l), g = () => {
+            null == f || f(), T();
+        };
+    return (0, r.jsx)(i.Tooltip, {
+        text: p,
+        children: e => {
+            let {
+                onMouseEnter: t,
+                onMouseLeave: n
+            } = e;
+            return (0, r.jsxs)(i.Button, {
+                className: u,
+                innerClassName: s.playButtonInner,
+                size: c,
+                look: d,
+                color: _,
+                fullWidth: E,
+                onClick: g,
+                onMouseEnter: t,
+                onMouseLeave: n,
+                disabled: I,
+                submitting: m,
+                children: [
+                    (0, r.jsx)(a.Z, {
+                        width: 16,
+                        height: 16
+                    }),
+                    h
+                ]
+            });
+        }
+    });
 }

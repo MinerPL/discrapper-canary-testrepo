@@ -1,112 +1,97 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return h
-  }
+n.d(t, {
+    Z: function () {
+        return S;
+    }
 });
-var n = t(735250);
-t(470079);
-var i = t(852229),
-  l = t(481060),
-  a = t(724598),
-  r = t(674180),
-  o = t(729285),
-  c = t(495437),
-  d = t(267101),
-  u = t(863663),
-  E = t(676651),
-  _ = t(613810),
-  I = t(391181),
-  T = t(689938),
-  N = t(460316);
-let m = "guild-product-listings-header";
-
-function S(e) {
-  let {
-    guildId: s,
-    handleCreateOrEditProduct: o
-  } = e, E = (0, d.ue)(s, {
-    publishedOnly: !1
-  }), {
-    shouldRestrictUpdatingCreatorMonetizationSettings: S
-  } = (0, r.gX)(s), h = e => {
-    (0, c.Je)(s, e, {
-      published: !1
-    })
-  }, g = (e, i) => {
-    (0, l.openModalLazy)(async () => {
-      let {
-        default: l
-      } = await Promise.all([t.e("99387"), t.e("95925")]).then(t.bind(t, 673078));
-      return t => (0, n.jsx)(l, {
-        guildId: s,
-        productId: e,
-        productName: i,
-        ...t
-      })
-    })
-  }, x = (e, s) => {
-    (0, i.J)((0, u.ar)(e, s))
-  }, C = E.length > 0;
-  return (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsx)(l.FormTitle, {
-      className: N.productListingsHeader,
-      id: m,
-      children: C ? T.Z.Messages.GUILD_PRODUCTS_YOUR_PRODUCTS_HEADER : T.Z.Messages.GUILD_PRODUCTS_NO_PRODUCTS_HEADER
-    }), C ? (0, n.jsx)("ul", {
-      className: N.productListings,
-      "aria-labelledby": m,
-      children: E.map(e => (0, n.jsx)("li", {
-        children: (0, n.jsx)(I.Z, {
-          guildId: s,
-          product: e,
-          onEditProduct: () => o(e.id),
-          onUnpublishProduct: () => h(e.id),
-          onDeleteProduct: () => g(e.id, e.name),
-          onCopyProductLink: () => x(s, e.id),
-          onTestDownload: () => _.Z.open({
-            guildId: s,
-            productId: e.id
-          }),
-          onReportProduct: () => {},
-          disabled: S
-        })
-      }, e.id))
-    }) : (0, n.jsx)(a.Z, {
-      guildId: s,
-      showCTA: !1,
-      responsive: !1
-    })]
-  })
+var s = n(735250);
+n(470079);
+var a = n(852229), i = n(481060), r = n(724598), l = n(674180), o = n(495437), c = n(267101), d = n(863663), u = n(676651), _ = n(613810), E = n(391181), I = n(689938), T = n(673817);
+let m = 'guild-product-listings-header';
+function N(e) {
+    let {
+            guildId: t,
+            handleCreateOrEditProduct: u
+        } = e, N = (0, c.ue)(t, { publishedOnly: !1 }), {shouldRestrictUpdatingCreatorMonetizationSettings: S} = (0, l.gX)(t), h = e => {
+            (0, o.Je)(t, e, { published: !1 });
+        }, g = (e, a) => {
+            (0, i.openModalLazy)(async () => {
+                let {default: i} = await n.e('95925').then(n.bind(n, 673078));
+                return n => (0, s.jsx)(i, {
+                    guildId: t,
+                    productId: e,
+                    productName: a,
+                    ...n
+                });
+            });
+        }, C = (e, t) => {
+            (0, a.J)((0, d.ar)(e, t));
+        }, x = N.length > 0;
+    return (0, s.jsxs)(s.Fragment, {
+        children: [
+            (0, s.jsx)(i.FormTitle, {
+                className: T.productListingsHeader,
+                id: m,
+                children: x ? I.Z.Messages.GUILD_PRODUCTS_YOUR_PRODUCTS_HEADER : I.Z.Messages.GUILD_PRODUCTS_NO_PRODUCTS_HEADER
+            }),
+            x ? (0, s.jsx)('ul', {
+                className: T.productListings,
+                'aria-labelledby': m,
+                children: N.map(e => (0, s.jsx)('li', {
+                    children: (0, s.jsx)(E.Z, {
+                        guildId: t,
+                        product: e,
+                        onEditProduct: () => u(e.id),
+                        onUnpublishProduct: () => h(e.id),
+                        onDeleteProduct: () => g(e.id, e.name),
+                        onCopyProductLink: () => C(t, e.id),
+                        onTestDownload: () => _.Z.open({
+                            guildId: t,
+                            productId: e.id
+                        }),
+                        onReportProduct: () => {
+                        },
+                        disabled: S
+                    })
+                }, e.id))
+            }) : (0, s.jsx)(r.Z, {
+                guildId: t,
+                showCTA: !1,
+                responsive: !1
+            })
+        ]
+    });
 }
-
-function h(e) {
-  let {
-    guildId: s
-  } = e, {
-    shouldRestrictUpdatingCreatorMonetizationSettings: t
-  } = (0, r.gX)(s), i = e => {
-    E.h(s, e)
-  };
-  return (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsxs)(l.Button, {
-      className: N.addButton,
-      innerClassName: N.addButtonInner,
-      onClick: () => i(null),
-      disabled: t,
-      children: [(0, n.jsx)(o.Z, {
-        width: 20,
-        height: 20,
-        "aria-hidden": !0
-      }), (0, n.jsx)(l.Spacer, {
-        size: 6,
-        horizontal: !0
-      }), T.Z.Messages.GUILD_PRODUCTS_CREATE_PRODUCT_BUTTON]
-    }), (0, n.jsx)(l.Spacer, {
-      size: 24
-    }), (0, n.jsx)(S, {
-      guildId: s,
-      handleCreateOrEditProduct: i
-    })]
-  })
+function S(e) {
+    let {guildId: t} = e, {shouldRestrictUpdatingCreatorMonetizationSettings: n} = (0, l.gX)(t), a = e => {
+            u.h(t, e);
+        };
+    return (0, s.jsxs)(s.Fragment, {
+        children: [
+            (0, s.jsxs)(i.Button, {
+                className: T.addButton,
+                innerClassName: T.addButtonInner,
+                onClick: () => a(null),
+                disabled: n,
+                children: [
+                    (0, s.jsx)(i.PlusSmallIcon, {
+                        size: 'custom',
+                        color: 'currentColor',
+                        width: 20,
+                        height: 20,
+                        'aria-hidden': !0
+                    }),
+                    (0, s.jsx)(i.Spacer, {
+                        size: 6,
+                        horizontal: !0
+                    }),
+                    I.Z.Messages.GUILD_PRODUCTS_CREATE_PRODUCT_BUTTON
+                ]
+            }),
+            (0, s.jsx)(i.Spacer, { size: 24 }),
+            (0, s.jsx)(N, {
+                guildId: t,
+                handleCreateOrEditProduct: a
+            })
+        ]
+    });
 }

@@ -1,35 +1,35 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return c
-  }
+n.d(t, {
+    Z: function () {
+        return c;
+    }
 });
-var n = t(735250);
-t(470079);
-var i = t(481060),
-  l = t(723047),
-  a = t(463939),
-  r = t(981631),
-  o = t(689938);
-
+var s = n(735250);
+n(470079);
+var a = n(481060), i = n(723047), r = n(463939), l = n(981631), o = n(689938);
 function c(e) {
-  let {
-    team: s,
-    ...t
-  } = e, c = (0, l.mY)() || null == s ? null : o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EDIT_PAYMENT_METHOD_LINK.format({
-    url: r.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(s.id)
-  });
-  return 0 === t.payoutsByPeriod.length ? (0, n.jsxs)(i.FormText, {
-    type: i.FormText.Types.DESCRIPTION,
-    children: [o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EARNINGS_HISTORY_EMPTY, " ", c]
-  }) : (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsxs)(i.FormText, {
-      type: i.FormText.Types.DESCRIPTION,
-      children: [o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EARNINGS_HISTORY_DESCRIPTION, " ", c]
-    }), (0, n.jsx)(i.Spacer, {
-      size: 16
-    }), (0, n.jsx)(a.Z, {
-      ...t
-    })]
-  })
+    let {
+            team: t,
+            ...n
+        } = e, c = (0, i.mY)() || null == t ? null : o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EDIT_PAYMENT_METHOD_LINK.format({ url: l.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(t.id) });
+    return 0 === n.payoutsByPeriod.length ? (0, s.jsxs)(a.FormText, {
+        type: a.FormText.Types.DESCRIPTION,
+        children: [
+            o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EARNINGS_HISTORY_EMPTY,
+            ' ',
+            c
+        ]
+    }) : (0, s.jsxs)(s.Fragment, {
+        children: [
+            (0, s.jsxs)(a.FormText, {
+                type: a.FormText.Types.DESCRIPTION,
+                children: [
+                    o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EARNINGS_HISTORY_DESCRIPTION,
+                    ' ',
+                    c
+                ]
+            }),
+            (0, s.jsx)(a.Spacer, { size: 16 }),
+            (0, s.jsx)(r.Z, { ...n })
+        ]
+    });
 }

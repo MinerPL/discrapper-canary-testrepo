@@ -1,103 +1,98 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return m
-  }
+    Z: function () {
+        return h;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(373793),
-  l = n(974674),
-  u = n(40146),
-  _ = n(780014),
-  d = n(481060),
-  c = n(688465),
-  E = n(692437),
-  I = n(768581),
-  T = n(63063),
-  h = n(981631),
-  S = n(182294),
-  f = n(689079),
-  N = n(689938),
-  A = n(844703);
-
-function m(e) {
-  let {
-    inApp: t,
-    application: n,
-    onSelect: s
-  } = e, m = r.useMemo(() => I.ZP.getApplicationIconURL({
-    id: n.id,
-    icon: n.icon
-  }), [n.icon, n.id]), O = r.useMemo(() => [{
-    type: a.Y.USER_INSTALL,
-    icon: _.o,
-    title: N.Z.Messages.OAUTH2_INTEGRATION_SELECT_USER,
-    subtitle: N.Z.Messages.OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE,
-    beta: !0
-  }, {
-    type: a.Y.GUILD_INSTALL,
-    icon: u.Q,
-    title: N.Z.Messages.OAUTH2_INTEGRATION_SELECT_GUILD,
-    subtitle: N.Z.Messages.OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE,
-    beta: !1
-  }].filter(e => {
-    var t, i;
-    return (null === (i = n.integrationTypesConfig) || void 0 === i ? void 0 : null === (t = i[e.type]) || void 0 === t ? void 0 : t.oauth2InstallParams) != null
-  }), [n.integrationTypesConfig]);
-  return (0, i.jsxs)("div", {
-    className: A.container,
-    children: [(0, i.jsxs)("div", {
-      className: A.header,
-      children: [(0, i.jsx)(l.qE, {
-        src: m,
-        size: S.EF.SIZE_80,
-        "aria-label": n.name
-      }), (0, i.jsx)(d.Heading, {
-        variant: "heading-xl/bold",
-        color: "header-primary",
-        children: n.name
-      })]
-    }), (0, i.jsx)("ul", {
-      className: A.rows,
-      children: O.map(e => (0, i.jsxs)(d.Clickable, {
-        tag: "li",
-        className: o()(A.row, {
-          [A.inApp]: t
-        }),
-        onClick: () => s(e.type),
-        children: [(0, i.jsx)(e.icon, {
-          width: 24,
-          height: 24,
-          className: A.leftIcon
-        }), (0, i.jsxs)("div", {
-          className: A.rowInner,
-          children: [(0, i.jsxs)("div", {
-            className: A.rowDetails,
-            children: [(0, i.jsx)(d.Text, {
-              variant: "text-md/medium",
-              color: "interactive-active",
-              children: e.title
-            }), (0, i.jsx)(d.Text, {
-              variant: "text-xs/medium",
-              color: "text-muted",
-              children: e.subtitle
-            })]
-          }), e.beta && (0, i.jsx)(c.Z, {}), (0, i.jsx)(E.Z, {
-            className: A.rightIcon
-          })]
-        })]
-      }, e.type))
-    }), (0, i.jsx)(d.Text, {
-      variant: "text-xs/normal",
-      color: "text-muted",
-      className: A.learnMore,
-      children: N.Z.Messages.OAUTH2_INTEGRATION_SELECT_DETAILS.format({
-        betaUserLimit: f.um,
-        learnMoreUrl: T.Z.getArticleURL(h.BhN.USING_APPS_FAQ)
-      })
-    })]
-  })
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(373793), l = n(974674), u = n(481060), c = n(688465), d = n(768581), _ = n(182294), E = n(689938), f = n(82849);
+function h(e) {
+    let {
+            inApp: t,
+            application: n,
+            onSelect: a
+        } = e, h = i.useMemo(() => d.ZP.getApplicationIconURL({
+            id: n.id,
+            icon: n.icon
+        }), [
+            n.icon,
+            n.id
+        ]), p = i.useMemo(() => [
+            {
+                type: s.Y.USER_INSTALL,
+                icon: u.UserPlusIcon,
+                title: E.Z.Messages.OAUTH2_INTEGRATION_SELECT_USER,
+                subtitle: E.Z.Messages.OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE,
+                beta: !1
+            },
+            {
+                type: s.Y.GUILD_INSTALL,
+                icon: u.ServerIcon,
+                title: E.Z.Messages.OAUTH2_INTEGRATION_SELECT_GUILD,
+                subtitle: E.Z.Messages.OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE,
+                beta: !1
+            }
+        ].filter(e => {
+            var t, r;
+            return (null === (r = n.integrationTypesConfig) || void 0 === r ? void 0 : null === (t = r[e.type]) || void 0 === t ? void 0 : t.oauth2InstallParams) != null;
+        }), [n.integrationTypesConfig]);
+    return (0, r.jsxs)('div', {
+        className: f.container,
+        children: [
+            (0, r.jsxs)('div', {
+                className: f.header,
+                children: [
+                    (0, r.jsx)(l.qE, {
+                        src: h,
+                        size: _.EF.SIZE_80,
+                        'aria-label': n.name
+                    }),
+                    (0, r.jsx)(u.Heading, {
+                        variant: 'heading-xl/bold',
+                        color: 'header-primary',
+                        children: n.name
+                    })
+                ]
+            }),
+            (0, r.jsx)('ul', {
+                className: f.rows,
+                children: p.map(e => (0, r.jsxs)(u.Clickable, {
+                    tag: 'li',
+                    className: o()(f.row, { [f.inApp]: t }),
+                    onClick: () => a(e.type),
+                    children: [
+                        (0, r.jsx)(e.icon, {
+                            size: 'md',
+                            color: 'currentColor',
+                            className: f.leftIcon
+                        }),
+                        (0, r.jsxs)('div', {
+                            className: f.rowInner,
+                            children: [
+                                (0, r.jsxs)('div', {
+                                    className: f.rowDetails,
+                                    children: [
+                                        (0, r.jsx)(u.Text, {
+                                            variant: 'text-md/medium',
+                                            color: 'interactive-active',
+                                            children: e.title
+                                        }),
+                                        (0, r.jsx)(u.Text, {
+                                            variant: 'text-xs/medium',
+                                            color: 'text-muted',
+                                            children: e.subtitle
+                                        })
+                                    ]
+                                }),
+                                e.beta && (0, r.jsx)(c.Z, {}),
+                                (0, r.jsx)(u.ChevronSmallRightIcon, {
+                                    size: 'md',
+                                    color: 'currentColor',
+                                    className: f.rightIcon
+                                })
+                            ]
+                        })
+                    ]
+                }, e.type))
+            })
+        ]
+    });
 }

@@ -1,39 +1,31 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return l
-  }
-}), t(47120);
-var n = t(225857),
-  i = t(290843);
-
-function l(e, s, t, l) {
-  let [{
-    isDragging: a
-  }, r, o] = (0, n.c)({
-    type: s,
-    item: () => ({
-      index: t
-    }),
-    collect: e => ({
-      isDragging: e.isDragging()
-    })
-  }), [, c] = (0, i.L)({
-    accept: s,
-    hover(s, n) {
-      if (null == e.current) return;
-      let i = s.index;
-      if (i === t) return;
-      let a = e.current.getBoundingClientRect(),
-        r = (a.bottom - a.top) / 2,
-        o = n.getClientOffset().y - a.top;
-      if ((!(i < t) || !(o < r)) && (!(i > t) || !(o > r))) l(i, t), s.index = t
+n.d(t, {
+    Z: function () {
+        return i;
     }
-  });
-  return {
-    drag: r,
-    dragPreview: o,
-    drop: c,
-    isDragging: a
-  }
+}), n(47120);
+var s = n(225857), a = n(290843);
+function i(e, t, n, i) {
+    let [{isDragging: r}, l, o] = (0, s.c)({
+            type: t,
+            item: () => ({ index: n }),
+            collect: e => ({ isDragging: e.isDragging() })
+        }), [, c] = (0, a.L)({
+            accept: t,
+            hover(t, s) {
+                if (null == e.current)
+                    return;
+                let a = t.index;
+                if (a === n)
+                    return;
+                let r = e.current.getBoundingClientRect(), l = (r.bottom - r.top) / 2, o = s.getClientOffset().y - r.top;
+                if ((!(a < n) || !(o < l)) && (!(a > n) || !(o > l)))
+                    i(a, n), t.index = n;
+            }
+        });
+    return {
+        drag: l,
+        dragPreview: o,
+        drop: c,
+        isDragging: r
+    };
 }

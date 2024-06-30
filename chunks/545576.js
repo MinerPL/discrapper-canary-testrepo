@@ -1,7 +1,5 @@
-"use strict";
-var e = n(161581),
-  o = n(354848);
-t.exports = function(t, r) {
-  var n;
-  return arguments.length < 2 ? o(n = e[t]) ? n : void 0 : e[t] && e[t][r]
-}
+var e = r(161581), o = r(354848);
+t.exports = function (t, n) {
+    var r;
+    return arguments.length < 2 ? o(r = e[t]) ? r : void 0 : e[t] && e[t][n];
+};

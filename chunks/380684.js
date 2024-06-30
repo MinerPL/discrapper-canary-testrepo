@@ -1,16 +1,12 @@
-"use strict";
 n.d(t, {
-  h: function() {
-    return a
-  }
+    h: function () {
+        return s;
+    }
 });
-var i = n(502087),
-  r = n(111361),
-  s = n(981631),
-  o = n(474936);
-
-function a(e) {
-  if (null == e) return s.mBz;
-  let t = i.Z.getPremiumTypeOverride();
-  return e.isStaff() && t === o.F_ ? s.PRK : null != e.premiumType && (0, r.I5)(e) ? o.a1[e.premiumType].fileSize : s.mBz
+var r = n(502087), i = n(111361), a = n(981631), o = n(474936);
+function s(e) {
+    if (null == e)
+        return a.mBz;
+    let t = r.Z.getPremiumTypeOverride();
+    return e.isStaff() && t === o.F_ ? a.PRK : null != e.premiumType && (0, i.I5)(e) ? o.a1[e.premiumType].fileSize : a.mBz;
 }

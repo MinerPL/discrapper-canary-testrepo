@@ -1,89 +1,90 @@
-"use strict";
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(613828),
-  l = n(481060),
-  u = n(368488);
-let _ = r.forwardRef(function(e, t) {
-  var n;
-  let {
-    avatar: r,
-    name: s,
-    children: _,
-    subText: d,
-    decorators: c,
-    onClick: E,
-    selected: I,
-    muted: T,
-    to: h,
-    avatarClassName: S,
-    selectedClassName: f,
-    innerClassName: N,
-    wrapContent: A,
-    highlighted: m,
-    focusProps: O,
-    ...R
-  } = e;
-  R.className = o()(R.className, u.container, {
-    [u.selected]: I,
-    [u.highlighted]: m,
-    [null != f ? f : ""]: I,
-    [u.clickable]: !I && (null != h || null != E)
-  }), R["aria-selected"] = null !== (n = R["aria-selected"]) && void 0 !== n ? n : I;
-  let C = (0, i.jsxs)("div", {
-    className: o()(N, u.layout, {
-      [u.muted]: !I && T,
-      [u.wrappedLayout]: A
-    }),
-    children: [(0, i.jsx)("div", {
-      className: o()(u.avatar, S),
-      children: r
-    }), (0, i.jsxs)("div", {
-      className: u.content,
-      children: [(0, i.jsxs)("div", {
-        className: u.nameAndDecorators,
-        children: [(0, i.jsx)("div", {
-          className: o()(u.name, {
-            [u.wrappedName]: A
-          }),
-          children: s
-        }), c]
-      }), null != d ? (0, i.jsx)("div", {
-        className: u.subText,
-        children: d
-      }) : null]
-    }), null != _ ? (0, i.jsx)("div", {
-      className: u.children,
-      children: _
-    }) : null]
-  });
-  return null != h ? (0, i.jsx)(l.FocusRing, {
-    ...O,
-    children: (0, i.jsx)(a.rU, {
-      to: h,
-      onClick: E,
-      ...R,
-      role: "listitem",
-      ref: t,
-      children: C
-    })
-  }) : null != E ? (0, i.jsx)(l.Clickable, {
-    onClick: E,
-    focusProps: O,
-    ...R,
-    role: "listitem",
-    innerRef: t,
-    children: C
-  }) : (0, i.jsx)(l.FocusRing, {
-    ...O,
-    children: (0, i.jsx)("div", {
-      ...R,
-      role: "listitem",
-      ref: t,
-      children: C
-    })
-  })
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(613828), l = n(481060), u = n(110309);
+let c = i.forwardRef(function (e, t) {
+    var n;
+    let {
+        avatar: i,
+        name: a,
+        children: c,
+        subText: d,
+        decorators: _,
+        onClick: E,
+        selected: f,
+        muted: h,
+        to: p,
+        avatarClassName: m,
+        selectedClassName: I,
+        innerClassName: T,
+        wrapContent: g,
+        highlighted: S,
+        focusProps: A,
+        ...N
+    } = e;
+    N.className = o()(N.className, u.container, {
+        [u.selected]: f,
+        [u.highlighted]: S,
+        [null != I ? I : '']: f,
+        [u.clickable]: !f && (null != p || null != E)
+    }), N['aria-selected'] = null !== (n = N['aria-selected']) && void 0 !== n ? n : f;
+    let v = (0, r.jsxs)('div', {
+        className: o()(T, u.layout, {
+            [u.muted]: !f && h,
+            [u.wrappedLayout]: g
+        }),
+        children: [
+            (0, r.jsx)('div', {
+                className: o()(u.avatar, m),
+                children: i
+            }),
+            (0, r.jsxs)('div', {
+                className: u.content,
+                children: [
+                    (0, r.jsxs)('div', {
+                        className: u.nameAndDecorators,
+                        children: [
+                            (0, r.jsx)('div', {
+                                className: o()(u.name, { [u.wrappedName]: g }),
+                                children: a
+                            }),
+                            _
+                        ]
+                    }),
+                    null != d ? (0, r.jsx)('div', {
+                        className: u.subText,
+                        children: d
+                    }) : null
+                ]
+            }),
+            null != c ? (0, r.jsx)('div', {
+                className: u.children,
+                children: c
+            }) : null
+        ]
+    });
+    return null != p ? (0, r.jsx)(l.FocusRing, {
+        ...A,
+        children: (0, r.jsx)(s.rU, {
+            to: p,
+            onClick: E,
+            ...N,
+            role: 'listitem',
+            ref: t,
+            children: v
+        })
+    }) : null != E ? (0, r.jsx)(l.Clickable, {
+        onClick: E,
+        focusProps: A,
+        ...N,
+        role: 'listitem',
+        innerRef: t,
+        children: v
+    }) : (0, r.jsx)(l.FocusRing, {
+        ...A,
+        children: (0, r.jsx)('div', {
+            ...N,
+            role: 'listitem',
+            ref: t,
+            children: v
+        })
+    });
 });
-t.Z = _
+t.Z = c;

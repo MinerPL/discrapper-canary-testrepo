@@ -1,12 +1,9 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return a;
+    }
 });
-var i = n(701488),
-  r = n(981631);
-
-function s(e) {
-  return null != e && (e.application_id === i.Ev || e.platform === r.M7m.XBOX)
+var r = n(701488), i = n(981631);
+function a(e) {
+    return null != e && (e.application_id === r.Ev || e.platform === i.M7m.XBOX);
 }

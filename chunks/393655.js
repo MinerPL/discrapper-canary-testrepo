@@ -1,3 +1,2 @@
-"use strict";
 var r = n(150924);
-t.Z = r.default
+t.Z = r.default;

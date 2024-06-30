@@ -1,5 +1,4 @@
-"use strict";
-e.r(n);
-n.default = function(t, n) {
-  var e, r
-}
+n.r(t);
+t.default = function (e, t) {
+    var n, r;
+};

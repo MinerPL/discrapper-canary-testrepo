@@ -1,65 +1,57 @@
-"use strict";
 n.d(t, {
-  x: function() {
-    return E
-  }
-});
-var i = n(735250),
-  r = n(470079),
-  s = n(803997),
-  o = n.n(s),
-  a = n(696689),
-  l = n.n(a),
-  u = n(692547),
-  _ = n(701717),
-  d = n(24073);
-let c = Object.fromEntries(Object.keys(u.Z.colors).map(e => [l()(e), e])),
-  E = r.forwardRef(function(e, t) {
-    let n, {
-        variant: r,
-        tag: s = "div",
-        selectable: a = !1,
-        className: l,
-        lineClamp: E,
-        color: I,
-        tabularNumbers: T = !1,
-        scaleFontToUserSetting: h = !1,
-        ...S
-      } = e,
-      f = "",
-      N = {};
-    if (null != E && (1 === E ? f = _.lineClamp1 : (f = _.lineClamp2Plus, N = {
-        lineClamp: E,
-        WebkitLineClamp: E
-      })), void 0 !== I) switch (I) {
-      case "currentColor":
-        n = "currentColor";
-        break;
-      case "none":
-        n = void 0;
-        break;
-      case "always-white":
-        n = "white";
-        break;
-      default:
-        var A;
-        n = null === (A = u.Z.colors[c[I]]) || void 0 === A ? void 0 : A.css
+    x: function () {
+        return E;
     }
-    let m = {
-      color: n,
-      ...N,
-      ...S.style
-    };
-    return (0, i.jsx)(s, {
-      ref: t,
-      className: o()({
-        [_.defaultColor]: void 0 === I,
-        [_.selectable]: a,
-        [_.tabularNumbers]: T,
-        [d.fontScaling]: h
-      }, f, d[r], l),
-      ...S,
-      style: Object.values(m).filter(Boolean).length > 0 ? m : void 0,
-      "data-text-variant": r
-    })
-  })
+});
+var r = n(735250), i = n(470079), a = n(803997), o = n.n(a), s = n(696689), l = n.n(s), u = n(692547), c = n(951200), d = n(487204);
+let _ = Object.fromEntries(Object.keys(u.Z.colors).map(e => [
+        l()(e),
+        e
+    ])), E = i.forwardRef(function (e, t) {
+        let n, {
+                variant: i,
+                tag: a = 'div',
+                selectable: s = !1,
+                className: l,
+                lineClamp: E,
+                color: f,
+                tabularNumbers: h = !1,
+                scaleFontToUserSetting: p = !1,
+                ...m
+            } = e, I = '', T = {};
+        if (null != E && (1 === E ? I = c.lineClamp1 : (I = c.lineClamp2Plus, T = {
+                lineClamp: E,
+                WebkitLineClamp: E
+            })), void 0 !== f)
+            switch (f) {
+            case 'currentColor':
+                n = 'currentColor';
+                break;
+            case 'none':
+                n = void 0;
+                break;
+            case 'always-white':
+                n = 'white';
+                break;
+            default:
+                var g;
+                n = null === (g = u.Z.colors[_[f]]) || void 0 === g ? void 0 : g.css;
+            }
+        let S = {
+            color: n,
+            ...T,
+            ...m.style
+        };
+        return (0, r.jsx)(a, {
+            ref: t,
+            className: o()({
+                [c.defaultColor]: void 0 === f,
+                [c.selectable]: s,
+                [c.tabularNumbers]: h,
+                [d.fontScaling]: p
+            }, I, d[i], l),
+            ...m,
+            style: Object.values(S).filter(Boolean).length > 0 ? S : void 0,
+            'data-text-variant': i
+        });
+    });

@@ -1,19 +1,15 @@
-"use strict";
 n.d(t, {
-  U: function() {
-    return s
-  },
-  Z: function() {
-    return o
-  }
+    U: function () {
+        return a;
+    },
+    Z: function () {
+        return o;
+    }
 });
-var i = n(709054),
-  r = n(356659);
-
-function s(e) {
-  return new Date(i.default.extractTimestamp(e)).toISOString()
+var r = n(709054), i = n(356659);
+function a(e) {
+    return new Date(r.default.extractTimestamp(e)).toISOString();
 }
-
 function o(e) {
-  return e.slice(0, r.JO)
+    return e.slice(0, i.JO);
 }

@@ -1,22 +1,18 @@
-"use strict";
 n.d(t, {
-  h: function() {
-    return a
-  }
+    h: function () {
+        return s;
+    }
 }), n(177593), n(653041);
-var i = n(570140),
-  r = n(38618);
-let s = [];
-
+var r = n(570140), i = n(38618);
+let a = [];
 function o(e) {
-  setImmediate(() => e())
+    setImmediate(() => e());
 }
-
-function a(e) {
-  r.Z.isConnectedOrOverlay() ? o(e) : s.push(e)
+function s(e) {
+    i.Z.isConnectedOrOverlay() ? o(e) : a.push(e);
 }
-i.Z.subscribe("CONNECTION_OPEN", () => {
-  s.forEach(e => o(e)), s = []
-}), i.Z.subscribe("CONNECTION_RESUMED", () => {
-  s.forEach(e => o(e)), s = []
-})
+r.Z.subscribe('CONNECTION_OPEN', () => {
+    a.forEach(e => o(e)), a = [];
+}), r.Z.subscribe('CONNECTION_RESUMED', () => {
+    a.forEach(e => o(e)), a = [];
+});

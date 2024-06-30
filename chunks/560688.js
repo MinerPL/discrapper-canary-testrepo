@@ -1,48 +1,37 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return l
-  }
+    Z: function () {
+        return l;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(481060),
-  s = n(131951),
-  o = n(65154),
-  a = n(689938);
-
+var i = n(481060), a = n(131951), o = n(65154), s = n(689938);
 function l(e) {
-  s.Z.supports(o.AN.VIDEO) ? (0, r.openModalLazy)(async () => {
-    let {
-      default: t
-    } = await Promise.all([n.e("99387"), n.e("67753")]).then(n.bind(n, 873809));
-    return n => (0, i.jsx)(t, {
-      ...n,
-      header: a.Z.Messages.CAMERA_UNAVAILABLE,
-      body: a.Z.Messages.CAMERA_NO_DEVICE,
-      confirmText: a.Z.Messages.OKAY,
-      onConfirm: e
-    })
-  }) : (0, r.openModalLazy)(async () => {
-    let {
-      default: t
-    } = await Promise.all([n.e("99387"), n.e("67753")]).then(n.bind(n, 873809));
-    return s => (0, i.jsx)(t, {
-      ...s,
-      header: a.Z.Messages.VIDEO_UNSUPPORTED_BROWSER_TITLE,
-      body: a.Z.Messages.VIDEO_UNSUPPORTED_BROWSER_BODY,
-      confirmText: a.Z.Messages.DOWNLOAD_APP,
-      onConfirm: () => {
-        null == e || e(), (0, r.openModalLazy)(async () => {
-          let {
-            default: e
-          } = await Promise.all([n.e("99387"), n.e("61418")]).then(n.bind(n, 431583));
-          return t => (0, i.jsx)(e, {
-            source: "Video unsupported browser",
-            ...t
-          })
-        })
-      }
-    })
-  })
+    a.Z.supports(o.AN.VIDEO) ? (0, i.openModalLazy)(async () => {
+        let {default: t} = await n.e('67753').then(n.bind(n, 873809));
+        return n => (0, r.jsx)(t, {
+            ...n,
+            header: s.Z.Messages.CAMERA_UNAVAILABLE,
+            body: s.Z.Messages.CAMERA_NO_DEVICE,
+            confirmText: s.Z.Messages.OKAY,
+            onConfirm: e
+        });
+    }) : (0, i.openModalLazy)(async () => {
+        let {default: t} = await n.e('67753').then(n.bind(n, 873809));
+        return a => (0, r.jsx)(t, {
+            ...a,
+            header: s.Z.Messages.VIDEO_UNSUPPORTED_BROWSER_TITLE,
+            body: s.Z.Messages.VIDEO_UNSUPPORTED_BROWSER_BODY,
+            confirmText: s.Z.Messages.DOWNLOAD_APP,
+            onConfirm: () => {
+                null == e || e(), (0, i.openModalLazy)(async () => {
+                    let {default: e} = await n.e('82935').then(n.bind(n, 431583));
+                    return t => (0, r.jsx)(e, {
+                        source: 'Video unsupported browser',
+                        ...t
+                    });
+                });
+            }
+        });
+    });
 }

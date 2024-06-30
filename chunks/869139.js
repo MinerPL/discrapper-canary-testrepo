@@ -1,11 +1,16 @@
-"use strict";
-n.d(e, {
-  VT: function() {
-    return i
-  }
+r.d(e, {
+    VT: function () {
+        return _;
+    }
 });
-let r = ["fatal", "error", "warning", "log", "info", "debug"];
-
-function i(t) {
-  return "warn" === t ? "warning" : r.includes(t) ? t : "log"
+let n = [
+    'fatal',
+    'error',
+    'warning',
+    'log',
+    'info',
+    'debug'
+];
+function _(t) {
+    return 'warn' === t ? 'warning' : n.includes(t) ? t : 'log';
 }

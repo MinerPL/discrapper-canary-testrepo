@@ -1,302 +1,328 @@
-"use strict";
-var s = n(735250),
-  l = n(470079),
-  a = n(120356),
-  i = n.n(a),
-  r = n(920906),
-  o = n(442837),
-  c = n(780384),
-  d = n(481060),
-  u = n(410030),
-  h = n(607070),
-  m = n(961675),
-  g = n(883429),
-  x = n(432771),
-  _ = n(406074),
-  f = n(434404),
-  E = n(430824),
-  N = n(974029),
-  T = n(465670),
-  C = n(41542),
-  p = n(441957),
-  v = n(810090),
-  M = n(63063),
-  S = n(595433),
-  I = n(981631),
-  j = n(689938),
-  A = n(11777),
-  R = n(906739),
-  Z = n(965358),
-  O = n(420196),
-  b = n(433075);
-
-function L(e) {
-  let {
-    handleHide: t
-  } = e;
-  return (0, s.jsx)(d.Clickable, {
-    onClick: t,
-    className: A.closeButton,
-    "aria-label": j.Z.Messages.DISMISS,
-    children: (0, s.jsx)(T.Z, {
-      className: A.closeIcon
-    })
-  })
+var a = n(735250), s = n(470079), r = n(120356), l = n.n(r), i = n(920906), o = n(442837), c = n(780384), d = n(481060), u = n(410030), m = n(607070), h = n(961675), _ = n(883429), g = n(432771), x = n(406074), C = n(434404), f = n(430824), p = n(810090), T = n(63063), I = n(595433), E = n(981631), N = n(689938), b = n(167117), v = n(906739), S = n(965358), M = n(420196), A = n(433075);
+function j(e) {
+    let {handleHide: t} = e;
+    return (0, a.jsx)(d.Clickable, {
+        onClick: t,
+        className: b.closeButton,
+        'aria-label': N.Z.Messages.DISMISS,
+        children: (0, a.jsx)(d.CloseSmallIcon, {
+            size: 'md',
+            color: 'currentColor',
+            className: b.closeIcon
+        })
+    });
 }
-
-function P(e) {
-  let {
-    username: t,
-    title: n,
-    videoSrc: l,
-    messageCount: a,
-    reaction: r,
-    reactionCount: o,
-    classname: c
-  } = e;
-  return (0, s.jsxs)("div", {
-    className: i()(A.videoPreview, c),
-    children: [(0, s.jsx)("div", {
-      className: A.authorRow,
-      children: (0, s.jsxs)("div", {
-        className: A.rowGroup,
-        children: [(0, s.jsx)(d.Text, {
-          tag: "span",
-          className: A.author,
-          variant: "text-sm/semibold",
-          children: t
-        }), (0, s.jsx)(d.Text, {
-          variant: "text-xs/normal",
-          color: "header-secondary",
-          className: A.postCreationTimestamp,
-          children: j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_TIMESTAMP
-        })]
-      })
-    }), (0, s.jsx)(d.Heading, {
-      variant: "heading-md/extrabold",
-      className: A.title,
-      color: "header-primary",
-      "aria-hidden": !0,
-      children: n
-    }), (0, s.jsx)(d.Spacer, {
-      size: 10
-    }), (0, s.jsx)(v.Z, {
-      className: A.video,
-      src: l,
-      autoPlay: !0,
-      loop: !0,
-      muted: !0
-    }), (0, s.jsx)(d.Spacer, {
-      size: 10
-    }), (0, s.jsx)("div", {
-      className: A.footer,
-      children: (0, s.jsxs)("div", {
-        className: A.forumPostControls,
-        children: [(0, s.jsxs)("div", {
-          className: A.messageCountBox,
-          children: [(0, s.jsx)("span", {
-            className: A.messageCountIcon,
-            children: (0, s.jsx)(N.Z, {
-              width: 16,
-              height: 16
+function R(e) {
+    let {
+        username: t,
+        title: n,
+        videoSrc: s,
+        messageCount: r,
+        reaction: i,
+        reactionCount: o,
+        classname: c
+    } = e;
+    return (0, a.jsxs)('div', {
+        className: l()(b.videoPreview, c),
+        children: [
+            (0, a.jsx)('div', {
+                className: b.authorRow,
+                children: (0, a.jsxs)('div', {
+                    className: b.rowGroup,
+                    children: [
+                        (0, a.jsx)(d.Text, {
+                            tag: 'span',
+                            className: b.author,
+                            variant: 'text-sm/semibold',
+                            children: t
+                        }),
+                        (0, a.jsx)(d.Text, {
+                            variant: 'text-xs/normal',
+                            color: 'header-secondary',
+                            className: b.postCreationTimestamp,
+                            children: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_TIMESTAMP
+                        })
+                    ]
+                })
+            }),
+            (0, a.jsx)(d.Heading, {
+                variant: 'heading-md/extrabold',
+                className: b.title,
+                color: 'header-primary',
+                'aria-hidden': !0,
+                children: n
+            }),
+            (0, a.jsx)(d.Spacer, { size: 10 }),
+            (0, a.jsx)(p.Z, {
+                className: b.video,
+                src: s,
+                autoPlay: !0,
+                loop: !0,
+                muted: !0
+            }),
+            (0, a.jsx)(d.Spacer, { size: 10 }),
+            (0, a.jsx)('div', {
+                className: b.footer,
+                children: (0, a.jsxs)('div', {
+                    className: b.forumPostControls,
+                    children: [
+                        (0, a.jsxs)('div', {
+                            className: b.messageCountBox,
+                            children: [
+                                (0, a.jsx)('span', {
+                                    className: b.messageCountIcon,
+                                    children: (0, a.jsx)(d.ChatIcon, {
+                                        size: 'xs',
+                                        color: 'currentColor'
+                                    })
+                                }),
+                                (0, a.jsx)(d.Text, {
+                                    variant: 'text-xs/normal',
+                                    color: 'interactive-normal',
+                                    children: r
+                                })
+                            ]
+                        }),
+                        (0, a.jsxs)('div', {
+                            className: b.reactionBox,
+                            children: [
+                                (0, a.jsx)('span', {
+                                    role: 'img',
+                                    'aria-label': '',
+                                    children: i
+                                }),
+                                (0, a.jsx)(d.Text, {
+                                    variant: 'text-xs/normal',
+                                    color: 'interactive-normal',
+                                    children: o
+                                })
+                            ]
+                        })
+                    ]
+                })
             })
-          }), (0, s.jsx)(d.Text, {
-            variant: "text-xs/normal",
-            color: "interactive-normal",
-            children: a
-          })]
-        }), (0, s.jsxs)("div", {
-          className: A.reactionBox,
-          children: [(0, s.jsx)("span", {
-            role: "img",
-            "aria-label": "",
-            children: r
-          }), (0, s.jsx)(d.Text, {
-            variant: "text-xs/normal",
-            color: "interactive-normal",
-            children: o
-          })]
-        })]
-      })
-    })]
-  })
+        ]
+    });
 }
 t.Z = e => {
-  var t, n;
-  let {
-    channel: a
-  } = e, N = (0, u.ZP)(), T = (0, c.wj)(N), v = (0, o.e7)([E.Z], () => E.Z.getGuild(a.guild_id)), D = (0, o.e7)([h.Z], () => h.Z.useReducedMotion), y = (0, o.e7)([m.Z], () => m.Z.hasHidden(a.id)), H = (0, _.C)({
-    guildId: a.guild_id,
-    channelId: a.id
-  }), {
-    transitions: w,
-    setVisible: F
-  } = (0, S.H)(D), U = l.useCallback(() => {
-    F(!1), g.Z.hideAdminOnboarding(a.id, !0)
-  }, [a, F]);
-  l.useEffect(() => {
-    !(0, x.c)(a.id) && F(!y)
-  }, [a, F, y]);
-  let k = l.useMemo(() => [j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_FAN_ART_TAG, j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_DESK_SETUP_TAG, j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PETS_TAG, j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_HOUSEPLANTS_TAG], []),
-    B = l.useMemo(() => [j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_BEHIND_THE_SCENES_TAG, j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_EXCLUSIVE_ART_TAG, j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PRERELEASES_TAG, j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_TUTORIALS_TAG], []),
-    G = () => {
-      f.Z.open(a.guild_id, I.pNK.ROLE_SUBSCRIPTIONS)
-    },
-    V = null !== (t = null == v ? void 0 : v.hasFeature(I.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && void 0 !== t && t ? j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_HAS_TIERS_CTA : j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_NO_TIERS_CTA,
-    z = null !== (n = (null == v ? void 0 : v.hasFeature(I.oNc.CREATOR_MONETIZABLE)) || (null == v ? void 0 : v.hasFeature(I.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && void 0 !== n && n,
-    W = z ? j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_MONETIZING_TITLE : j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_NON_MONETIZING_TITLE,
-    q = z ? j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_MONETIZING_SUBTITLE : j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_NON_MONETIZING_SUBTITLE;
-  return (0, s.jsx)(s.Fragment, {
-    children: w((e, t) => t ? (0, s.jsxs)(r.animated.div, {
-      style: e,
-      className: A.container,
-      children: [(0, s.jsxs)("div", {
-        className: i()(A.__invalid_wrapper, A.headerRow),
-        children: [(0, s.jsxs)(d.Text, {
-          variant: "text-xs/normal",
-          className: A.visibilityInfo,
-          children: [(0, s.jsx)(C.Z, {
-            width: 12,
-            height: 12,
-            className: A.icon
-          }), j.Z.Messages.FORUM_CHANNEL_ONBOARDING_VISIBILITY]
-        }), (0, s.jsx)(L, {
-          handleHide: U
-        })]
-      }), (0, s.jsxs)("div", {
-        className: A.contentContainer,
-        children: [(0, s.jsxs)("div", {
-          className: i()(A.contentRow, z && A.contentRowOne),
-          children: [(0, s.jsx)("div", {
-            className: i()(A.contentMediaContainer),
-            children: (0, s.jsxs)("div", {
-              className: A.contentVideoContainer,
-              children: [(0, s.jsx)(P, {
-                username: j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_USERNAME_ONE,
-                videoSrc: "https://cdn.discordapp.com/assets/media_channel/admin_edu_discord_birthday.mp4",
-                title: j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_TITLE_ONE,
-                messageCount: "34",
-                reaction: "⚡️",
-                reactionCount: "724",
-                classname: A.backgroundVideo
-              }), (0, s.jsx)(P, {
-                username: j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_USERNAME_TWO,
-                videoSrc: "https://cdn.discordapp.com/assets/media_channel/admin_edu_wumpus_onboarding.mp4",
-                title: j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_TITLE_TWO,
-                messageCount: "34",
-                reactionCount: "84",
-                reaction: "\uD83D\uDC9E",
-                classname: i()(A.backgroundVideo, A.secondaryVideo)
-              }), (0, s.jsx)(P, {
-                username: j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_USERNAME_THREE,
-                videoSrc: "https://cdn.discordapp.com/assets/media_channel/admin_edu_scientist_wumpus.mp4",
-                title: j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_TITLE_THREE,
-                messageCount: "7,103",
-                reaction: "⚡️",
-                reactionCount: "724",
-                classname: A.highlightVideo
-              })]
-            })
-          }), (0, s.jsxs)("article", {
-            className: A.contentTextContainer,
-            children: [(0, s.jsx)(d.Heading, {
-              variant: "heading-lg/semibold",
-              color: "header-primary",
-              children: W
-            }), (0, s.jsx)(d.Spacer, {
-              size: 8
-            }), (0, s.jsx)(d.Text, {
-              variant: "text-md/normal",
-              color: "text-muted",
-              children: q
-            }), (0, s.jsx)(d.Spacer, {
-              size: 16
-            }), (0, s.jsxs)(d.Clickable, {
-              onClick: () => open(M.Z.getCreatorSupportArticleURL(I.BhN.MEDIA_CHANNEL)),
-              className: A.helpCenterLink,
-              children: [(0, s.jsx)(d.Text, {
-                variant: "text-sm/medium",
-                color: "text-link",
-                className: A.__invalid_helpCenterLinkText,
-                children: j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_HELP_CENTER
-              }), (0, s.jsx)(p.Z, {
-                width: 16,
-                height: 16,
-                className: A.helpCenterLinkIcon
-              })]
-            }), (0, s.jsx)(d.Spacer, {
-              size: 16
-            }), (0, s.jsx)("div", {
-              className: A.mediaChannelTagsContainer,
-              children: k.map(e => (0, s.jsx)(d.Text, {
-                variant: "text-sm/medium",
-                color: "text-normal",
-                className: A.mediaChannelTag,
-                children: e
-              }, e))
-            })]
-          })]
-        }), z && (0, s.jsxs)("div", {
-          className: i()(A.contentRow, A.contentRowTwo),
-          children: [(0, s.jsx)("div", {
-            className: i()(A.contentMediaContainer),
-            children: (0, s.jsxs)("div", {
-              className: A.contentImageContainer,
-              children: [(0, s.jsx)("img", {
-                src: T ? O : b,
-                alt: "",
-                className: i()(A.previewEmbedImage, A.secondaryImage)
-              }), (0, s.jsx)("img", {
-                src: T ? R : Z,
-                alt: "",
-                className: A.previewEmbedImage
-              })]
-            })
-          }), (0, s.jsxs)("article", {
-            className: A.contentTextContainer,
-            children: [(0, s.jsxs)(d.Text, {
-              variant: "text-xxs/bold",
-              className: A.serverSubPill,
-              children: [j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_SERVER_SUB_PILL, " ", (0, s.jsx)("span", {
-                role: "img",
-                "aria-label": "",
-                children: "\uD83D\uDD25"
-              })]
-            }), (0, s.jsx)(d.Spacer, {
-              size: 10
-            }), (0, s.jsx)(d.Heading, {
-              variant: "heading-lg/semibold",
-              color: "header-primary",
-              children: j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_SHARE_TITLE
-            }), (0, s.jsx)(d.Spacer, {
-              size: 8
-            }), (0, s.jsx)(d.Text, {
-              variant: "text-md/normal",
-              color: "text-muted",
-              children: j.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_SHARE_SUBTITLE
-            }), (0, s.jsx)(d.Spacer, {
-              size: 16
-            }), (0, s.jsx)("div", {
-              className: A.mediaChannelTagsContainer,
-              children: B.map(e => (0, s.jsx)(d.Text, {
-                variant: "text-sm/medium",
-                color: "text-normal",
-                className: A.mediaChannelTag,
-                children: e
-              }, e))
-            }), (0, s.jsx)(d.Spacer, {
-              size: 16
-            }), 0 === H.length && (0, s.jsx)(d.ShinyButton, {
-              size: d.Button.Sizes.MEDIUM,
-              pauseAnimation: D,
-              onClick: G,
-              className: A.addChannelButton,
-              color: d.Button.Colors.CUSTOM,
-              children: V
-            })]
-          })]
-        })]
-      })]
-    }) : null)
-  })
-}
+    var t, n;
+    let {channel: r} = e, p = (0, u.ZP)(), O = (0, c.wj)(p), Z = (0, o.e7)([f.Z], () => f.Z.getGuild(r.guild_id)), L = (0, o.e7)([m.Z], () => m.Z.useReducedMotion), P = (0, o.e7)([h.Z], () => h.Z.hasHidden(r.id)), w = (0, x.C)({
+            guildId: r.guild_id,
+            channelId: r.id
+        }), {
+            transitions: y,
+            setVisible: D
+        } = (0, I.H)(L), F = s.useCallback(() => {
+            D(!1), _.Z.hideAdminOnboarding(r.id, !0);
+        }, [
+            r,
+            D
+        ]);
+    s.useEffect(() => {
+        !(0, g.c)(r.id) && D(!P);
+    }, [
+        r,
+        D,
+        P
+    ]);
+    let U = s.useMemo(() => [
+            N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_FAN_ART_TAG,
+            N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_DESK_SETUP_TAG,
+            N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PETS_TAG,
+            N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_HOUSEPLANTS_TAG
+        ], []), k = s.useMemo(() => [
+            N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_BEHIND_THE_SCENES_TAG,
+            N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_EXCLUSIVE_ART_TAG,
+            N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PRERELEASES_TAG,
+            N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_TUTORIALS_TAG
+        ], []), H = () => {
+            C.Z.open(r.guild_id, E.pNK.ROLE_SUBSCRIPTIONS);
+        }, B = null !== (t = null == Z ? void 0 : Z.hasFeature(E.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && void 0 !== t && t ? N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_HAS_TIERS_CTA : N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_NO_TIERS_CTA, G = null !== (n = (null == Z ? void 0 : Z.hasFeature(E.oNc.CREATOR_MONETIZABLE)) || (null == Z ? void 0 : Z.hasFeature(E.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && void 0 !== n && n, z = G ? N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_MONETIZING_TITLE : N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_NON_MONETIZING_TITLE, V = G ? N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_MONETIZING_SUBTITLE : N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_NON_MONETIZING_SUBTITLE;
+    return (0, a.jsx)(a.Fragment, {
+        children: y((e, t) => t ? (0, a.jsxs)(i.animated.div, {
+            style: e,
+            className: b.container,
+            children: [
+                (0, a.jsxs)('div', {
+                    className: l()(b.__invalid_wrapper, b.headerRow),
+                    children: [
+                        (0, a.jsxs)(d.Text, {
+                            variant: 'text-xs/normal',
+                            className: b.visibilityInfo,
+                            children: [
+                                (0, a.jsx)(d.CircleInformationIcon, {
+                                    size: 'xxs',
+                                    color: 'currentColor',
+                                    className: b.icon
+                                }),
+                                N.Z.Messages.FORUM_CHANNEL_ONBOARDING_VISIBILITY
+                            ]
+                        }),
+                        (0, a.jsx)(j, { handleHide: F })
+                    ]
+                }),
+                (0, a.jsxs)('div', {
+                    className: b.contentContainer,
+                    children: [
+                        (0, a.jsxs)('div', {
+                            className: l()(b.contentRow, G && b.contentRowOne),
+                            children: [
+                                (0, a.jsx)('div', {
+                                    className: l()(b.contentMediaContainer),
+                                    children: (0, a.jsxs)('div', {
+                                        className: b.contentVideoContainer,
+                                        children: [
+                                            (0, a.jsx)(R, {
+                                                username: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_USERNAME_ONE,
+                                                videoSrc: 'https://cdn.discordapp.com/assets/media_channel/admin_edu_discord_birthday.mp4',
+                                                title: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_TITLE_ONE,
+                                                messageCount: '34',
+                                                reaction: '\u26A1️',
+                                                reactionCount: '724',
+                                                classname: b.backgroundVideo
+                                            }),
+                                            (0, a.jsx)(R, {
+                                                username: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_USERNAME_TWO,
+                                                videoSrc: 'https://cdn.discordapp.com/assets/media_channel/admin_edu_wumpus_onboarding.mp4',
+                                                title: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_TITLE_TWO,
+                                                messageCount: '34',
+                                                reactionCount: '84',
+                                                reaction: '\uD83D\uDC9E',
+                                                classname: l()(b.backgroundVideo, b.secondaryVideo)
+                                            }),
+                                            (0, a.jsx)(R, {
+                                                username: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_USERNAME_THREE,
+                                                videoSrc: 'https://cdn.discordapp.com/assets/media_channel/admin_edu_scientist_wumpus.mp4',
+                                                title: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_TITLE_THREE,
+                                                messageCount: '7,103',
+                                                reaction: '\u26A1️',
+                                                reactionCount: '724',
+                                                classname: b.highlightVideo
+                                            })
+                                        ]
+                                    })
+                                }),
+                                (0, a.jsxs)('article', {
+                                    className: b.contentTextContainer,
+                                    children: [
+                                        (0, a.jsx)(d.Heading, {
+                                            variant: 'heading-lg/semibold',
+                                            color: 'header-primary',
+                                            children: z
+                                        }),
+                                        (0, a.jsx)(d.Spacer, { size: 8 }),
+                                        (0, a.jsx)(d.Text, {
+                                            variant: 'text-md/normal',
+                                            color: 'text-muted',
+                                            children: V
+                                        }),
+                                        (0, a.jsx)(d.Spacer, { size: 16 }),
+                                        (0, a.jsxs)(d.Clickable, {
+                                            onClick: () => open(T.Z.getCreatorSupportArticleURL(E.BhN.MEDIA_CHANNEL)),
+                                            className: b.helpCenterLink,
+                                            children: [
+                                                (0, a.jsx)(d.Text, {
+                                                    variant: 'text-sm/medium',
+                                                    color: 'text-link',
+                                                    className: b.__invalid_helpCenterLinkText,
+                                                    children: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_HELP_CENTER
+                                                }),
+                                                (0, a.jsx)(d.WindowLaunchIcon, {
+                                                    size: 'xs',
+                                                    color: 'currentColor',
+                                                    className: b.helpCenterLinkIcon
+                                                })
+                                            ]
+                                        }),
+                                        (0, a.jsx)(d.Spacer, { size: 16 }),
+                                        (0, a.jsx)('div', {
+                                            className: b.mediaChannelTagsContainer,
+                                            children: U.map(e => (0, a.jsx)(d.Text, {
+                                                variant: 'text-sm/medium',
+                                                color: 'text-normal',
+                                                className: b.mediaChannelTag,
+                                                children: e
+                                            }, e))
+                                        })
+                                    ]
+                                })
+                            ]
+                        }),
+                        G && (0, a.jsxs)('div', {
+                            className: l()(b.contentRow, b.contentRowTwo),
+                            children: [
+                                (0, a.jsx)('div', {
+                                    className: l()(b.contentMediaContainer),
+                                    children: (0, a.jsxs)('div', {
+                                        className: b.contentImageContainer,
+                                        children: [
+                                            (0, a.jsx)('img', {
+                                                src: O ? M : A,
+                                                alt: '',
+                                                className: l()(b.previewEmbedImage, b.secondaryImage)
+                                            }),
+                                            (0, a.jsx)('img', {
+                                                src: O ? v : S,
+                                                alt: '',
+                                                className: b.previewEmbedImage
+                                            })
+                                        ]
+                                    })
+                                }),
+                                (0, a.jsxs)('article', {
+                                    className: b.contentTextContainer,
+                                    children: [
+                                        (0, a.jsxs)(d.Text, {
+                                            variant: 'text-xxs/bold',
+                                            className: b.serverSubPill,
+                                            children: [
+                                                N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_SERVER_SUB_PILL,
+                                                ' ',
+                                                (0, a.jsx)('span', {
+                                                    role: 'img',
+                                                    'aria-label': '',
+                                                    children: '\uD83D\uDD25'
+                                                })
+                                            ]
+                                        }),
+                                        (0, a.jsx)(d.Spacer, { size: 10 }),
+                                        (0, a.jsx)(d.Heading, {
+                                            variant: 'heading-lg/semibold',
+                                            color: 'header-primary',
+                                            children: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_SHARE_TITLE
+                                        }),
+                                        (0, a.jsx)(d.Spacer, { size: 8 }),
+                                        (0, a.jsx)(d.Text, {
+                                            variant: 'text-md/normal',
+                                            color: 'text-muted',
+                                            children: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_SHARE_SUBTITLE
+                                        }),
+                                        (0, a.jsx)(d.Spacer, { size: 16 }),
+                                        (0, a.jsx)('div', {
+                                            className: b.mediaChannelTagsContainer,
+                                            children: k.map(e => (0, a.jsx)(d.Text, {
+                                                variant: 'text-sm/medium',
+                                                color: 'text-normal',
+                                                className: b.mediaChannelTag,
+                                                children: e
+                                            }, e))
+                                        }),
+                                        (0, a.jsx)(d.Spacer, { size: 16 }),
+                                        0 === w.length && (0, a.jsx)(d.ShinyButton, {
+                                            size: d.Button.Sizes.MEDIUM,
+                                            pauseAnimation: L,
+                                            onClick: H,
+                                            className: b.addChannelButton,
+                                            color: d.Button.Colors.CUSTOM,
+                                            children: B
+                                        })
+                                    ]
+                                })
+                            ]
+                        })
+                    ]
+                })
+            ]
+        }) : null)
+    });
+};

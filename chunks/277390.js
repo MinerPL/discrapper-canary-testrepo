@@ -1,81 +1,75 @@
-"use strict";
-n.d(t, {
-  c2: function() {
-    return m
-  },
-  cK: function() {
-    return r
-  }
+s.d(o, {
+    c2: function () {
+        return m;
+    },
+    cK: function () {
+        return t;
+    }
 });
-var s, r, i, a, l = n(735250),
-  o = n(470079),
-  u = n(253483),
-  c = n(81834);
-
-function d(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: n,
-    enumerable: !0,
-    configurable: !0,
-    writable: !0
-  }) : e[t] = n, e
-}(s = r || (r = {})).SIZE_40 = "SIZE_40", s.SIZE_60 = "SIZE_60";
-let h = Object.freeze({
-    SIZE_40: "size-40",
-    SIZE_60: "size-60"
-  }),
-  E = n(515695);
-class _ extends(i = o.PureComponent) {
-  render() {
-    let {
-      className: e,
-      text: t,
-      ...n
-    } = this.props;
-    return (0, l.jsx)("div", {
-      style: {
-        padding: 8,
-        borderRadius: 4,
-        width: n.size,
-        height: n.size,
-        backgroundColor: n.bgColor
-      },
-      className: e,
-      children: (0, l.jsx)(u.default, {
-        value: t,
-        level: "M",
-        ...n
-      })
-    })
-  }
+var r, t, n, a, i = s(735250), c = s(470079), l = s(253483), d = s(655481);
+function C(e, o, s) {
+    return o in e ? Object.defineProperty(e, o, {
+        value: s,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+    }) : e[o] = s, e;
 }
-d(_, "defaultProps", {
-  size: 128,
-  bgColor: "#ffffff",
-  fgColor: "#000000"
+(r = t || (t = {})).SIZE_40 = 'SIZE_40', r.SIZE_60 = 'SIZE_60';
+let _ = Object.freeze({
+        SIZE_40: 'size-40',
+        SIZE_60: 'size-60'
+    }), u = s(515695);
+class f extends (n = c.PureComponent) {
+    render() {
+        let {
+            className: e,
+            text: o,
+            ...s
+        } = this.props;
+        return (0, i.jsx)('div', {
+            style: {
+                padding: 8,
+                borderRadius: 4,
+                width: s.size,
+                height: s.size,
+                backgroundColor: s.bgColor
+            },
+            className: e,
+            children: (0, i.jsx)(l.default, {
+                value: o,
+                level: 'M',
+                ...s
+            })
+        });
+    }
+}
+C(f, 'defaultProps', {
+    size: 128,
+    bgColor: '#ffffff',
+    fgColor: '#000000'
 });
-class m extends(a = o.PureComponent) {
-  render() {
-    let {
-      overlaySize: e
-    } = this.props, t = h[null != e ? e : "SIZE_40"];
-    return (0, l.jsxs)("div", {
-      className: c.qrCodeContainer,
-      children: [(0, l.jsx)(_, {
-        ...this.props
-      }), (0, l.jsx)("div", {
-        className: c.qrCodeOverlay,
-        children: (0, l.jsx)("img", {
-          className: c[t],
-          src: E,
-          alt: ""
-        })
-      })]
-    })
-  }
+class m extends (a = c.PureComponent) {
+    render() {
+        let {overlaySize: e} = this.props, o = _[null != e ? e : 'SIZE_40'];
+        return (0, i.jsxs)('div', {
+            className: d.qrCodeContainer,
+            children: [
+                (0, i.jsx)(f, { ...this.props }),
+                (0, i.jsx)('div', {
+                    className: d.qrCodeOverlay,
+                    children: (0, i.jsx)('img', {
+                        className: d[o],
+                        src: u,
+                        alt: ''
+                    })
+                })
+            ]
+        });
+    }
 }
-d(m, "defaultProps", {
-  size: 144,
-  bgColor: "#ffffff",
-  fgColor: "#000000"
-}), t.ZP = _
+C(m, 'defaultProps', {
+    size: 144,
+    bgColor: '#ffffff',
+    fgColor: '#000000'
+}), o.ZP = f;

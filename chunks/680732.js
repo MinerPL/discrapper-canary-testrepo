@@ -1,11 +1,10 @@
-"use strict";
 n.d(t, {
-  u: function() {
-    return r
-  }
+    u: function () {
+        return i;
+    }
 });
-var i = n(408160);
-let r = {
-  announce: i.announce,
-  clearAnnouncements: i.clearAnnouncer
-}
+var r = n(408160);
+let i = {
+    announce: r.announce,
+    clearAnnouncements: r.clearAnnouncer
+};

@@ -1,18 +1,14 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return a;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(114484);
-
-function s(e) {
-  return {
-    content: (0, i.jsx)(r.ZP, {
-      message: e
-    }),
-    hasSpoilerEmbeds: !1
-  }
+var i = n(114484);
+function a(e) {
+    return {
+        content: (0, r.jsx)(i.ZP, { message: e }),
+        hasSpoilerEmbeds: !1
+    };
 }

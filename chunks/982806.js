@@ -1,26 +1,23 @@
-"use strict";
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(481060);
+var i = n(481060);
 t.Z = {
-  show(e) {
-    let {
-      url: t,
-      trustUrl: s,
-      onConfirm: o,
-      isProtocol: a
-    } = e;
-    (0, r.openModalLazy)(async () => {
-      let {
-        default: e
-      } = await Promise.all([n.e("99387"), n.e("85668")]).then(n.bind(n, 720553));
-      return n => (0, i.jsx)(e, {
-        ...n,
-        url: t,
-        isProtocol: a,
-        trustUrl: s,
-        onConfirm: o
-      })
-    })
-  }
-}
+    show(e) {
+        let {
+            url: t,
+            trustUrl: a,
+            onConfirm: o,
+            isProtocol: s
+        } = e;
+        (0, i.openModalLazy)(async () => {
+            let {default: e} = await n.e('85668').then(n.bind(n, 720553));
+            return n => (0, r.jsx)(e, {
+                ...n,
+                url: t,
+                isProtocol: s,
+                trustUrl: a,
+                onConfirm: o
+            });
+        });
+    }
+};

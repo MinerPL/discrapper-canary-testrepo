@@ -1,21 +1,18 @@
-"use strict";
-var n = t(735250);
-t(470079);
-var i = t(205822),
-  l = t(731994),
-  a = t(689938);
-s.Z = function(e) {
-  let {
-    className: s,
-    style: t,
-    onDrop: r
-  } = e;
-  return (0, n.jsx)(i.Z, {
-    className: s,
-    style: t,
-    title: a.Z.Messages.UPLOAD_EMOJI,
-    description: a.Z.Messages.UPLOAD_EMOJI_INSTRUCTIONS,
-    icons: l.pA,
-    onDrop: r
-  })
-}
+var s = n(735250);
+n(470079);
+var a = n(205822), i = n(731994), r = n(689938);
+t.Z = function (e) {
+    let {
+        className: t,
+        style: n,
+        onDrop: l
+    } = e;
+    return (0, s.jsx)(a.Z, {
+        className: t,
+        style: n,
+        title: r.Z.Messages.UPLOAD_EMOJI,
+        description: r.Z.Messages.UPLOAD_EMOJI_INSTRUCTIONS,
+        icons: i.pA,
+        onDrop: l
+    });
+};

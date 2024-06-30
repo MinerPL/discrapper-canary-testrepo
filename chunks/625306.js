@@ -1,18 +1,16 @@
-"use strict";
 n.d(t, {
-  IH: function() {
-    return r
-  },
-  qC: function() {
-    return s
-  }
+    IH: function () {
+        return i;
+    },
+    qC: function () {
+        return a;
+    }
 }), n(653041);
-let i = [];
-
-function r(e) {
-  for (i.push(e); i.length > 10;) i.shift()
+let r = [];
+function i(e) {
+    for (r.push(e); r.length > 10;)
+        r.shift();
 }
-
-function s() {
-  return i.join(" -> ")
+function a() {
+    return r.join(' -> ');
 }

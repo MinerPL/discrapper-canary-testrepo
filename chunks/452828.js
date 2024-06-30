@@ -1,65 +1,58 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return a;
+    }
 });
-var i = n(470079);
-let r = Object.freeze({
-  scrollTop: 0,
-  scrollLeft: 0,
-  scrollHeight: 0,
-  scrollWidth: 0,
-  offsetHeight: 0,
-  offsetWidth: 0,
-  dirty: 2
+var r = n(470079);
+let i = Object.freeze({
+    scrollTop: 0,
+    scrollLeft: 0,
+    scrollHeight: 0,
+    scrollWidth: 0,
+    offsetHeight: 0,
+    offsetWidth: 0,
+    dirty: 2
 });
-
-function s() {
-  let e = (0, i.useRef)(null),
-    t = (0, i.useRef)(r),
-    n = (0, i.useCallback)(() => {
-      let {
-        current: n
-      } = e, {
-        dirty: i
-      } = t.current;
-      if (null == n || 0 === i) return t.current;
-      if (1 === i) {
-        let {
-          scrollTop: e,
-          scrollLeft: i
-        } = n;
-        t.current = {
-          ...t.current,
-          scrollTop: e,
-          scrollLeft: i,
-          dirty: 0
-        }
-      } else {
-        let {
-          scrollTop: e,
-          scrollLeft: i,
-          scrollHeight: r,
-          scrollWidth: s,
-          offsetHeight: o,
-          offsetWidth: a
-        } = n;
-        t.current = {
-          scrollTop: e,
-          scrollLeft: i,
-          scrollHeight: r,
-          scrollWidth: s,
-          offsetHeight: o,
-          offsetWidth: a,
-          dirty: 0
-        }
-      }
-      return t.current
-    }, []);
-  return {
-    scrollerRef: e,
-    scrollerState: t,
-    getScrollerState: n
-  }
+function a() {
+    let e = (0, r.useRef)(null), t = (0, r.useRef)(i), n = (0, r.useCallback)(() => {
+            let {current: n} = e, {dirty: r} = t.current;
+            if (null == n || 0 === r)
+                return t.current;
+            if (1 === r) {
+                let {
+                    scrollTop: e,
+                    scrollLeft: r
+                } = n;
+                t.current = {
+                    ...t.current,
+                    scrollTop: e,
+                    scrollLeft: r,
+                    dirty: 0
+                };
+            } else {
+                let {
+                    scrollTop: e,
+                    scrollLeft: r,
+                    scrollHeight: i,
+                    scrollWidth: a,
+                    offsetHeight: o,
+                    offsetWidth: s
+                } = n;
+                t.current = {
+                    scrollTop: e,
+                    scrollLeft: r,
+                    scrollHeight: i,
+                    scrollWidth: a,
+                    offsetHeight: o,
+                    offsetWidth: s,
+                    dirty: 0
+                };
+            }
+            return t.current;
+        }, []);
+    return {
+        scrollerRef: e,
+        scrollerState: t,
+        getScrollerState: n
+    };
 }

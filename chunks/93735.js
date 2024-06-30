@@ -1,95 +1,75 @@
-"use strict";
 n.d(t, {
-  CN: function() {
-    return s
-  },
-  N7: function() {
-    return d
-  },
-  ZW: function() {
-    return _
-  },
-  fj: function() {
-    return o
-  },
-  qP: function() {
-    return i
-  },
-  xG: function() {
-    return a
-  }
-});
-
-function i(e) {
-  return null != e && (null != e.attachments && e.attachments.length > 0 || null != e.embeds && e.embeds.length > 0)
-}
-
-function r(e) {
-  return null != e.content_scan_version ? e.content_scan_version : null != e.contentScanVersion ? e.contentScanVersion : null
-}
-
-function s(e, t) {
-  return null == e.content_scan_version || e.content_scan_version < (null != t ? t : 1)
-}
-
-function o(e, t) {
-  var n, i, s, o, a, l, u;
-  let _ = r(e);
-  return !((null === (n = e.video) || void 0 === n ? void 0 : n.width) === 0 && (null === (i = e.video) || void 0 === i ? void 0 : i.height) === 0 || (null === (s = e.thumbnail) || void 0 === s ? void 0 : s.width) === 0 && (null === (o = e.thumbnail) || void 0 === o ? void 0 : o.height) === 0 || (null === (a = e.image) || void 0 === a ? void 0 : a.width) === 0 && (null === (l = e.image) || void 0 === l ? void 0 : l.height) === 0 || "images" in e && (null === (u = e.images) || void 0 === u ? void 0 : u.some(e => 0 === e.width && 0 === e.height))) && (null == _ || _ < (null != t ? t : 1))
-}
-
-function a(e) {
-  let {
-    attachmentIds: t,
-    embedIds: n
-  } = function(e) {
-    var t, n, i, r, a, l, u, _;
-    let d = null !== (a = null == e ? void 0 : null === (t = e.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== a ? a : 0,
-      c = null !== (l = null == e ? void 0 : null === (n = e.embeds) || void 0 === n ? void 0 : n.length) && void 0 !== l ? l : 0;
-    if (0 === d && 0 === c) return {
-      attachmentIds: [],
-      embedIds: []
-    };
-    let E = null !== (u = null == e ? void 0 : null === (i = e.attachments) || void 0 === i ? void 0 : i.filter(s)) && void 0 !== u ? u : [],
-      I = null !== (_ = null == e ? void 0 : null === (r = e.embeds) || void 0 === r ? void 0 : r.filter(o)) && void 0 !== _ ? _ : [];
-    return {
-      attachmentIds: E.map(e => e.id).filter(Boolean),
-      embedIds: I.map((e, t) => "embed_".concat(t)).filter(Boolean)
+    CN: function () {
+        return a;
+    },
+    N7: function () {
+        return d;
+    },
+    ZW: function () {
+        return c;
+    },
+    fj: function () {
+        return o;
+    },
+    qP: function () {
+        return r;
+    },
+    xG: function () {
+        return s;
     }
-  }(e);
-  return t.length > 0 || n.length > 0
+}), n(653041), n(47120);
+function r(e) {
+    return null != e && (null != e.attachments && e.attachments.length > 0 || null != e.embeds && e.embeds.length > 0);
 }
-
+function i(e) {
+    return null != e.content_scan_version ? e.content_scan_version : null != e.contentScanVersion ? e.contentScanVersion : null;
+}
+function a(e, t) {
+    return null == e.content_scan_version || e.content_scan_version < (null != t ? t : 1);
+}
+function o(e, t) {
+    var n, r, a, o, s, l, u;
+    if ((null === (n = e.video) || void 0 === n ? void 0 : n.width) === 0 && (null === (r = e.video) || void 0 === r ? void 0 : r.height) === 0 || (null === (a = e.thumbnail) || void 0 === a ? void 0 : a.width) === 0 && (null === (o = e.thumbnail) || void 0 === o ? void 0 : o.height) === 0 || (null === (s = e.image) || void 0 === s ? void 0 : s.width) === 0 && (null === (l = e.image) || void 0 === l ? void 0 : l.height) === 0 || 'images' in e && (null === (u = e.images) || void 0 === u ? void 0 : u.some(e => 0 === e.width && 0 === e.height)))
+        return !1;
+    let c = i(e);
+    return null == c || c < (null != t ? t : 1);
+}
+function s(e) {
+    var t, n, r, i;
+    let s = null !== (t = e.attachments) && void 0 !== t ? t : [], l = null !== (n = e.embeds) && void 0 !== n ? n : [], u = 'messageSnapshots' in e ? e.messageSnapshots : e.message_snapshots;
+    if (null != u && u.length > 0)
+        for (let e of u) {
+            let t = null !== (r = e.message.attachments) && void 0 !== r ? r : [], n = null !== (i = e.message.embeds) && void 0 !== i ? i : [];
+            s.push(...t), l.push(...n);
+        }
+    return s.some(a) || l.some(o);
+}
 function l(e) {
-  return null == e.content_scan_version
+    return null == e.content_scan_version;
 }
-
 function u(e) {
-  var t, n, i, s, o, a, l;
-  let u = r(e);
-  return !((null === (t = e.video) || void 0 === t ? void 0 : t.width) === 0 && (null === (n = e.video) || void 0 === n ? void 0 : n.height) === 0 || (null === (i = e.thumbnail) || void 0 === i ? void 0 : i.width) === 0 && (null === (s = e.thumbnail) || void 0 === s ? void 0 : s.height) === 0 || (null === (o = e.image) || void 0 === o ? void 0 : o.width) === 0 && (null === (a = e.image) || void 0 === a ? void 0 : a.height) === 0 || "images" in e && (null === (l = e.images) || void 0 === l ? void 0 : l.some(e => 0 === e.width && 0 === e.height))) && null == u
+    var t, n, r, a, o, s, l;
+    let u = i(e);
+    return !((null === (t = e.video) || void 0 === t ? void 0 : t.width) === 0 && (null === (n = e.video) || void 0 === n ? void 0 : n.height) === 0 || (null === (r = e.thumbnail) || void 0 === r ? void 0 : r.width) === 0 && (null === (a = e.thumbnail) || void 0 === a ? void 0 : a.height) === 0 || (null === (o = e.image) || void 0 === o ? void 0 : o.width) === 0 && (null === (s = e.image) || void 0 === s ? void 0 : s.height) === 0 || 'images' in e && (null === (l = e.images) || void 0 === l ? void 0 : l.some(e => 0 === e.width && 0 === e.height))) && null == u;
 }
-
-function _(e) {
-  var t, n, i, r, s, o, a, _;
-  let d = null !== (s = null == e ? void 0 : null === (t = e.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== s ? s : 0,
-    c = null !== (o = null == e ? void 0 : null === (n = e.embeds) || void 0 === n ? void 0 : n.length) && void 0 !== o ? o : 0;
-  if (0 === d && 0 === c) return {
-    attachmentIds: [],
-    embedIds: []
-  };
-  let E = null !== (a = null == e ? void 0 : null === (i = e.attachments) || void 0 === i ? void 0 : i.filter(l)) && void 0 !== a ? a : [],
-    I = null !== (_ = null == e ? void 0 : null === (r = e.embeds) || void 0 === r ? void 0 : r.filter(u)) && void 0 !== _ ? _ : [];
-  return {
-    attachmentIds: E.map(e => e.id).filter(Boolean),
-    embedIds: I.map((e, t) => "embed_".concat(t)).filter(Boolean)
-  }
+function c(e) {
+    var t, n, r, i, a, o, s, c;
+    let d = null !== (a = null == e ? void 0 : null === (t = e.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== a ? a : 0, _ = null !== (o = null == e ? void 0 : null === (n = e.embeds) || void 0 === n ? void 0 : n.length) && void 0 !== o ? o : 0;
+    if (0 === d && 0 === _)
+        return {
+            attachmentIds: [],
+            embedIds: []
+        };
+    let E = null !== (s = null == e ? void 0 : null === (r = e.attachments) || void 0 === r ? void 0 : r.filter(l)) && void 0 !== s ? s : [], f = null !== (c = null == e ? void 0 : null === (i = e.embeds) || void 0 === i ? void 0 : i.filter(u)) && void 0 !== c ? c : [];
+    return {
+        attachmentIds: E.map(e => e.id).filter(Boolean),
+        embedIds: f.map((e, t) => 'embed_'.concat(t)).filter(Boolean)
+    };
 }
-
 function d(e) {
-  let {
-    attachmentIds: t,
-    embedIds: n
-  } = _(e);
-  return t.length > 0 || n.length > 0
+    let {
+        attachmentIds: t,
+        embedIds: n
+    } = c(e);
+    return t.length > 0 || n.length > 0;
 }

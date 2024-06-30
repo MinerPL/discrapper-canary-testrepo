@@ -1,10 +1,7 @@
-"use strict";
-var n = r(97131).f,
-  o = r(740362),
-  i = r(641236)("toStringTag");
-t.exports = function(t, e, r) {
-  t && !r && (t = t.prototype), t && !o(t, i) && n(t, i, {
-    configurable: !0,
-    value: e
-  })
-}
+var e = o(97131).f, n = o(740362), c = o(641236)('toStringTag');
+r.exports = function (r, t, o) {
+    r && !o && (r = r.prototype), r && !n(r, c) && e(r, c, {
+        configurable: !0,
+        value: t
+    });
+};

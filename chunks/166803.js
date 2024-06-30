@@ -1,23 +1,16 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return a
-  }
+n.d(t, {
+    Z: function () {
+        return r;
+    }
 });
-var n = t(149765),
-  i = t(700785),
-  l = t(981631);
-
-function a(e, s) {
-  let t = {
-    [s.id]: s
-  };
-  return e.filter(e => {
-    let s = i.I0({
-        forceRoles: t,
-        context: e
-      }),
-      a = l.Plq.VIEW_CHANNEL;
-    return e.isGuildVocal() && (a = n.IH(a, l.Plq.CONNECT)), n.e$(s, a) && !i.Uu(a, e)
-  })
+var s = n(149765), a = n(700785), i = n(981631);
+function r(e, t) {
+    let n = { [t.id]: t };
+    return e.filter(e => {
+        let t = a.I0({
+                forceRoles: n,
+                context: e
+            }), r = i.Plq.VIEW_CHANNEL;
+        return e.isGuildVocal() && (r = s.IH(r, i.Plq.CONNECT)), s.e$(t, r) && !a.Uu(r, e);
+    });
 }

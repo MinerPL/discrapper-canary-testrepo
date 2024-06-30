@@ -1,7 +1,6 @@
-"use strict";
 n.d(t, {
-  E: function() {
-    return i
-  }
+    E: function () {
+        return r;
+    }
 });
-let i = "DevToolsLogDispatches"
+let r = 'DevToolsLogDispatches';

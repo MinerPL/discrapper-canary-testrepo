@@ -1,47 +1,36 @@
-"use strict";
-var r, i, l, s, a = n(442837),
-  o = n(570140),
-  u = n(358085),
-  c = n(998502),
-  d = n(869614),
-  f = n(281083),
-  v = n(672598);
-let h = !1,
-  C = !0,
-  Z = !1;
-class N extends(s = a.ZP.Store) {
-  initialize() {
-    !(!u.isPlatformEmbedded || __OVERLAY__) && c.ZP.getGPUDriverVersions().then(e => {
-      h = (0, v.Z)(e), C = (0, d.Z)(e), Z = (0, f.Z)(e), this.emitChange()
-    })
-  }
-  get GPUDriversOutdated() {
-    return h
-  }
-  get canUseHardwareAcceleration() {
-    return C
-  }
-  get problematicGPUDriver() {
-    return Z
-  }
-  getState() {
-    return {
-      GPUDriversOutdated: h,
-      canUseHardwareAcceleration: C,
-      problematicGPUDriver: Z
+var i, s, a, r, l = n(442837), o = n(570140), c = n(358085), d = n(998502), u = n(869614), _ = n(281083), E = n(672598);
+let h = !1, I = !0, m = !1;
+class p extends (r = l.ZP.Store) {
+    initialize() {
+        !(!c.isPlatformEmbedded || __OVERLAY__) && d.ZP.getGPUDriverVersions().then(e => {
+            h = (0, E.Z)(e), I = (0, u.Z)(e), m = (0, _.Z)(e), this.emitChange();
+        });
     }
-  }
+    get GPUDriversOutdated() {
+        return h;
+    }
+    get canUseHardwareAcceleration() {
+        return I;
+    }
+    get problematicGPUDriver() {
+        return m;
+    }
+    getState() {
+        return {
+            GPUDriversOutdated: h,
+            canUseHardwareAcceleration: I,
+            problematicGPUDriver: m
+        };
+    }
 }
-l = "StreamingCapabilitiesStore", (i = "displayName") in(r = N) ? Object.defineProperty(r, i, {
-  value: l,
-  enumerable: !0,
-  configurable: !0,
-  writable: !0
-}) : r[i] = l, t.Z = new N(o.Z, {
-  OVERLAY_INITIALIZE: function(e) {
-    let {
-      streamingCapabilitiesStoreState: t
-    } = e;
-    h = t.GPUDriversOutdated, C = t.canUseHardwareAcceleration
-  }
-})
+a = 'StreamingCapabilitiesStore', (s = 'displayName') in (i = p) ? Object.defineProperty(i, s, {
+    value: a,
+    enumerable: !0,
+    configurable: !0,
+    writable: !0
+}) : i[s] = a, t.Z = new p(o.Z, {
+    OVERLAY_INITIALIZE: function (e) {
+        let {streamingCapabilitiesStoreState: t} = e;
+        h = t.GPUDriversOutdated, I = t.canUseHardwareAcceleration;
+    }
+});

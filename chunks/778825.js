@@ -1,168 +1,141 @@
-"use strict";
-let i, r, s, o, a, l, u, _, d, c, E;
-var I, T, h, S, f = n(442837),
-  N = n(570140),
-  A = n(981631);
-let m = A.QZA.CLOSED,
-  O = {};
-
-function R() {
-  m = A.QZA.CLOSED, O = {}, d = null, c = void 0, E = []
+let r, i, a, o, s, l, u, c, d, _, E;
+var f, h, p, m, I = n(442837), T = n(570140), g = n(981631);
+let S = g.QZA.CLOSED, A = {};
+function N() {
+    v(), O(), A = {}, S = g.QZA.OPEN;
 }
-
-function C() {
-  p(), g(), O = {}, m = A.QZA.OPEN
+function v() {
+    r = void 0, u = void 0, i = void 0;
 }
-
-function p() {
-  i = void 0, u = void 0, r = void 0
+function O() {
+    o = void 0, s = void 0, l = void 0, c = void 0, a = void 0;
 }
-
-function g() {
-  o = void 0, a = void 0, l = void 0, _ = void 0, s = void 0
-}
-class L extends(S = f.ZP.Store) {
-  getFormState() {
-    return m
-  }
-  getErrors() {
-    return O
-  }
-  showNotice() {
-    return void 0 !== i || void 0 !== r || void 0 !== s || void 0 !== o || void 0 !== a || void 0 !== l || void 0 !== u || void 0 !== _
-  }
-  getIsSubmitDisabled() {
-    return void 0 !== a && a.length > A.tPV
-  }
-  getPendingAvatar() {
-    return i
-  }
-  getPendingAvatarDecoration() {
-    return r
-  }
-  getPendingProfileEffectId() {
-    return s
-  }
-  getPendingBanner() {
-    return o
-  }
-  getPendingBio() {
-    return a
-  }
-  getPendingNickname() {
-    return u
-  }
-  getPendingPronouns() {
-    return l
-  }
-  getPendingAccentColor() {
-    return u
-  }
-  getPendingThemeColors() {
-    return _
-  }
-  getAllPending() {
-    return {
-      pendingAvatar: i,
-      pendingAvatarDecoration: r,
-      pendingProfileEffectId: s,
-      pendingBanner: o,
-      pendingBio: a,
-      pendingPronouns: l,
-      pendingNickname: u,
-      pendingThemeColors: _
+class R extends (m = I.ZP.Store) {
+    getFormState() {
+        return S;
     }
-  }
-  getGuild() {
-    return d
-  }
-  getSource() {
-    return c
-  }
-  getAnalyticsLocations() {
-    return E
-  }
+    getErrors() {
+        return A;
+    }
+    showNotice() {
+        return void 0 !== r || void 0 !== i || void 0 !== a || void 0 !== o || void 0 !== s || void 0 !== l || void 0 !== u || void 0 !== c;
+    }
+    getIsSubmitDisabled() {
+        return void 0 !== s && s.length > g.tPV;
+    }
+    getPendingAvatar() {
+        return r;
+    }
+    getPendingAvatarDecoration() {
+        return i;
+    }
+    getPendingProfileEffectId() {
+        return a;
+    }
+    getPendingBanner() {
+        return o;
+    }
+    getPendingBio() {
+        return s;
+    }
+    getPendingNickname() {
+        return u;
+    }
+    getPendingPronouns() {
+        return l;
+    }
+    getPendingAccentColor() {
+        return u;
+    }
+    getPendingThemeColors() {
+        return c;
+    }
+    getAllPending() {
+        return {
+            pendingAvatar: r,
+            pendingAvatarDecoration: i,
+            pendingProfileEffectId: a,
+            pendingBanner: o,
+            pendingBio: s,
+            pendingPronouns: l,
+            pendingNickname: u,
+            pendingThemeColors: c
+        };
+    }
+    getGuild() {
+        return d;
+    }
+    getSource() {
+        return _;
+    }
+    getAnalyticsLocations() {
+        return E;
+    }
 }
-h = "GuildIdentitySettingsStore", (T = "displayName") in(I = L) ? Object.defineProperty(I, T, {
-  value: h,
-  enumerable: !0,
-  configurable: !0,
-  writable: !0
-}) : I[T] = h, t.Z = new L(N.Z, {
-  GUILD_IDENTITY_SETTINGS_INIT: function(e) {
-    d = e.guild, m = A.QZA.OPEN, O = {}, c = e.source, E = e.analyticsLocations
-  },
-  GUILD_IDENTITY_SETTINGS_CLOSE: R,
-  GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: function() {
-    C(), R()
-  },
-  GUILD_IDENTITY_SETTINGS_SET_GUILD: function(e) {
-    d = e.guild, O = {}
-  },
-  GUILD_IDENTITY_SETTINGS_SUBMIT: function() {
-    m = A.QZA.SUBMITTING, O = {}
-  },
-  GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE: function(e) {
-    var t;
-    if (m !== A.QZA.SUBMITTING) return !1;
-    m = A.QZA.OPEN, O = null !== (t = e.errors) && void 0 !== t ? t : {}
-  },
-  USER_PROFILE_UPDATE_FAILURE: function(e) {
-    m = A.QZA.OPEN, O = e.errors
-  },
-  GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: function(e) {
-    let {
-      avatar: t
-    } = e;
-    i = t
-  },
-  GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR_DECORATION: function(e) {
-    let {
-      avatarDecoration: t
-    } = e;
-    r = t
-  },
-  GUILD_IDENTITY_SETTINGS_SET_PENDING_PROFILE_EFFECT_ID: function(e) {
-    let {
-      profileEffectId: t
-    } = e;
-    s = t
-  },
-  GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: function(e) {
-    let {
-      banner: t
-    } = e;
-    o = t
-  },
-  GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: function(e) {
-    let {
-      bio: t
-    } = e;
-    a = t
-  },
-  GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: function(e) {
-    let {
-      pronouns: t
-    } = e;
-    l = t
-  },
-  GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: function(e) {
-    let {
-      nickname: t
-    } = e;
-    u = t
-  },
-  GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS: function(e) {
-    let {
-      themeColors: t
-    } = e;
-    _ = t
-  },
-  GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: p,
-  GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: g,
-  GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: C,
-  GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: C,
-  GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: function() {
-    O = {}
-  }
-})
+p = 'GuildIdentitySettingsStore', (h = 'displayName') in (f = R) ? Object.defineProperty(f, h, {
+    value: p,
+    enumerable: !0,
+    configurable: !0,
+    writable: !0
+}) : f[h] = p, t.Z = new R(T.Z, {
+    GUILD_IDENTITY_SETTINGS_INIT: function (e) {
+        d = e.guild, S = g.QZA.OPEN, A = {}, _ = e.source, E = e.analyticsLocations;
+    },
+    GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: function () {
+        N(), S = g.QZA.CLOSED, A = {}, d = null, _ = void 0, E = [];
+    },
+    GUILD_IDENTITY_SETTINGS_SET_GUILD: function (e) {
+        d = e.guild, A = {};
+    },
+    GUILD_IDENTITY_SETTINGS_SUBMIT: function () {
+        S = g.QZA.SUBMITTING, A = {};
+    },
+    GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE: function (e) {
+        var t;
+        if (S !== g.QZA.SUBMITTING)
+            return !1;
+        S = g.QZA.OPEN, A = null !== (t = e.errors) && void 0 !== t ? t : {};
+    },
+    USER_PROFILE_UPDATE_FAILURE: function (e) {
+        S = g.QZA.OPEN, A = e.errors;
+    },
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: function (e) {
+        let {avatar: t} = e;
+        r = t;
+    },
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR_DECORATION: function (e) {
+        let {avatarDecoration: t} = e;
+        i = t;
+    },
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_PROFILE_EFFECT_ID: function (e) {
+        let {profileEffectId: t} = e;
+        a = t;
+    },
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: function (e) {
+        let {banner: t} = e;
+        o = t;
+    },
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: function (e) {
+        let {bio: t} = e;
+        s = t;
+    },
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: function (e) {
+        let {pronouns: t} = e;
+        l = t;
+    },
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: function (e) {
+        let {nickname: t} = e;
+        u = t;
+    },
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS: function (e) {
+        let {themeColors: t} = e;
+        c = t;
+    },
+    GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: v,
+    GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: O,
+    GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: N,
+    GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: N,
+    GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: function () {
+        A = {};
+    }
+});

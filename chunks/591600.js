@@ -1,41 +1,32 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return d
-  }
+    Z: function () {
+        return d;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(481060),
-  s = n(666520),
-  o = n(785717),
-  a = n(659101),
-  l = n(689938),
-  u = n(917943),
-  _ = n(379916);
-
+var i = n(481060), a = n(666520), o = n(785717), s = n(659101), l = n(689938), u = n(52477), c = n(546136);
 function d(e) {
-  let {
-    user: t,
-    setNote: n,
-    autoFocus: d,
-    lastSection: c
-  } = e, {
-    trackUserProfileAction: E
-  } = (0, o.KZ)();
-  return (0, i.jsxs)(a.Z, {
-    lastSection: c,
-    children: [(0, i.jsx)(r.Heading, {
-      variant: "eyebrow",
-      className: _.title,
-      children: l.Z.Messages.NOTE
-    }), (0, i.jsx)(s.Z, {
-      userId: t.id,
-      autoFocus: n || d,
-      className: u.note,
-      onUpdate: () => E({
-        action: "SET_NOTE"
-      })
-    }, "note")]
-  })
+    let {
+            user: t,
+            setNote: n,
+            autoFocus: d,
+            lastSection: _
+        } = e, {trackUserProfileAction: E} = (0, o.KZ)();
+    return (0, r.jsxs)(s.Z, {
+        lastSection: _,
+        children: [
+            (0, r.jsx)(i.Heading, {
+                variant: 'eyebrow',
+                className: c.title,
+                children: l.Z.Messages.NOTE
+            }),
+            (0, r.jsx)(a.Z, {
+                userId: t.id,
+                autoFocus: n || d,
+                className: u.note,
+                onUpdate: () => E({ action: 'SET_NOTE' })
+            }, 'note')
+        ]
+    });
 }

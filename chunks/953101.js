@@ -1,14 +1,19 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return i;
+    }
 }), n(47120);
-let i = ["allow-pointer-lock", "allow-scripts", "allow-same-origin", "allow-forms"];
-
-function r(e) {
-  let {
-    allowPopups: t
-  } = e, n = i;
-  return t && (n = [...i, "allow-popups", "allow-popups-to-escape-sandbox"]), n.join(" ")
+let r = [
+    'allow-pointer-lock',
+    'allow-scripts',
+    'allow-same-origin',
+    'allow-forms'
+];
+function i(e) {
+    let {allowPopups: t} = e, n = r;
+    return t && (n = [
+        ...r,
+        'allow-popups',
+        'allow-popups-to-escape-sandbox'
+    ]), n.join(' ');
 }

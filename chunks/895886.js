@@ -1,20 +1,14 @@
-"use strict";
 n.r(t), n.d(t, {
-  default: function() {
-    return s
-  }
+    default: function () {
+        return a;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(952265);
-
-function s() {
-  (0, r.ZD)(async () => {
-    let {
-      default: e
-    } = await Promise.all([n.e("99387"), n.e("98137")]).then(n.bind(n, 397013));
-    return t => (0, i.jsx)(e, {
-      ...t
-    })
-  })
+var i = n(952265);
+function a() {
+    (0, i.ZD)(async () => {
+        let {default: e} = await n.e('98137').then(n.bind(n, 397013));
+        return t => (0, r.jsx)(e, { ...t });
+    });
 }

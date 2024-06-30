@@ -1,75 +1,65 @@
-"use strict";
 n.d(t, {
-  j: function() {
-    return E
-  }
+    j: function () {
+        return E;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(84735),
-  l = n(437337),
-  u = n(981729),
-  _ = n(770102),
-  d = n(534542),
-  c = n(316049);
-
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(84735), l = n(437337), u = n(981729), c = n(770102), d = n(534542), _ = n(331324);
 function E(e) {
-  let {
-    value: t,
-    disabled: n = !1,
-    hideBorder: s = !1,
-    tooltipNote: E,
-    onChange: I,
-    className: T,
-    style: h,
-    note: S,
-    children: f
-  } = e, N = r.useRef(null), A = r.useRef(null), m = r.useId(), O = (0, i.jsx)(l.r, {
-    id: m,
-    checked: t,
-    onChange: I,
-    disabled: n,
-    focusProps: {
-      enabled: !1
-    },
-    innerRef: N
-  });
-  return (0, i.jsxs)("div", {
-    style: h,
-    className: o()(c.container, T, {
-      [c.disabled]: n
-    }),
-    children: [(0, i.jsx)(a.t, {
-      within: !0,
-      offset: -4,
-      focusTarget: N,
-      ringTarget: A,
-      children: (0, i.jsxs)("div", {
-        className: c.labelRow,
-        ref: A,
-        children: [(0, i.jsx)("label", {
-          htmlFor: m,
-          className: c.title,
-          children: f
-        }), (0, i.jsx)("div", {
-          className: c.control,
-          children: null != E ? (0, i.jsx)(u.DY, {
-            text: E,
-            children: O
-          }) : O
-        })]
-      })
-    }), null != S && (0, i.jsx)("div", {
-      className: c.note,
-      children: (0, i.jsx)(d.R, {
-        disabled: n,
-        type: d.g.DESCRIPTION,
-        children: S
-      })
-    }), !s && (0, i.jsx)(_.$, {
-      className: c.dividerDefault
-    })]
-  })
+    let {
+            value: t,
+            disabled: n = !1,
+            hideBorder: a = !1,
+            tooltipNote: E,
+            onChange: f,
+            className: h,
+            style: p,
+            note: m,
+            children: I
+        } = e, T = i.useRef(null), g = i.useRef(null), S = i.useId(), A = (0, r.jsx)(l.r, {
+            id: S,
+            checked: t,
+            onChange: f,
+            disabled: n,
+            focusProps: { enabled: !1 },
+            innerRef: T
+        });
+    return (0, r.jsxs)('div', {
+        style: p,
+        className: o()(_.container, h, { [_.disabled]: n }),
+        children: [
+            (0, r.jsx)(s.t, {
+                within: !0,
+                offset: -4,
+                focusTarget: T,
+                ringTarget: g,
+                children: (0, r.jsxs)('div', {
+                    className: _.labelRow,
+                    ref: g,
+                    children: [
+                        (0, r.jsx)('label', {
+                            htmlFor: S,
+                            className: _.title,
+                            children: I
+                        }),
+                        (0, r.jsx)('div', {
+                            className: _.control,
+                            children: null != E ? (0, r.jsx)(u.DY, {
+                                text: E,
+                                children: A
+                            }) : A
+                        })
+                    ]
+                })
+            }),
+            null != m && (0, r.jsx)('div', {
+                className: _.note,
+                children: (0, r.jsx)(d.R, {
+                    disabled: n,
+                    type: d.g.DESCRIPTION,
+                    children: m
+                })
+            }),
+            !a && (0, r.jsx)(c.$, { className: _.dividerDefault })
+        ]
+    });
 }

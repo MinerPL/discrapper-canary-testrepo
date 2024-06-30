@@ -1,25 +1,23 @@
-"use strict";
 n.d(t, {
-  j: function() {
-    return r
-  }
+    j: function () {
+        return i;
+    }
 });
-var i = n(570140);
-
-function r(e) {
-  let {
-    imageSrc: t,
-    file: n,
-    uploadType: r,
-    guildId: s,
-    isTryItOutFlow: o = !1
-  } = e;
-  i.Z.dispatch({
-    type: "PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL",
-    imageSrc: t,
-    file: n,
-    uploadType: r,
-    guildId: s,
-    isTryItOutFlow: o
-  })
+var r = n(570140);
+function i(e) {
+    let {
+        imageSrc: t,
+        file: n,
+        uploadType: i,
+        guildId: a,
+        isTryItOutFlow: o = !1
+    } = e;
+    r.Z.dispatch({
+        type: 'PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL',
+        imageSrc: t,
+        file: n,
+        uploadType: i,
+        guildId: a,
+        isTryItOutFlow: o
+    });
 }

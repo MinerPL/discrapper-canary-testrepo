@@ -1,20 +1,17 @@
-"use strict";
 n.d(t, {
-  y: function() {
-    return s
-  }
+    y: function () {
+        return a;
+    }
 });
-var i = n(927923),
-  r = n(981631);
-
-function s(e) {
-  switch (e) {
-    case r.ABu.XBOX:
-      return i.YE.XBOX;
-    case r.ABu.PLAYSTATION:
-    case r.ABu.PLAYSTATION_STAGING:
-      return i.YE.PLAYSTATION;
+var r = n(927923), i = n(981631);
+function a(e) {
+    switch (e) {
+    case i.ABu.XBOX:
+        return r.YE.XBOX;
+    case i.ABu.PLAYSTATION:
+    case i.ABu.PLAYSTATION_STAGING:
+        return r.YE.PLAYSTATION;
     default:
-      return null
-  }
+        return null;
+    }
 }

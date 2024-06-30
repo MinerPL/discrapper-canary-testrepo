@@ -1,7 +1,6 @@
-"use strict";
 n.d(t, {
-  c: function() {
-    return i
-  }
+    c: function () {
+        return r;
+    }
 });
-let i = "Zoomed Lazy Image Modal"
+let r = 'Zoomed Lazy Image Modal';

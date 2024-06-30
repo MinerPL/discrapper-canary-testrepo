@@ -1,42 +1,39 @@
-"use strict";
 n.d(t, {
-  l: function() {
-    return _
-  }
+    l: function () {
+        return c;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(120356),
-  s = n.n(r),
-  o = n(766646),
-  a = n(154921),
-  l = n(689938),
-  u = n(636176);
-
-function _(e) {
-  let {
-    children: t,
-    className: n,
-    disabled: r,
-    required: _ = !1,
-    ...d
-  } = e;
-  return (0, i.jsxs)(a.Z, {
-    tag: "label",
-    color: a.Z.Colors.HEADER_SECONDARY,
-    className: s()(u.label, n, {
-      [u.defaultMargin]: null == n,
-      [u.disabled]: r
-    }),
-    ...d,
-    children: [t, _ && (0, i.jsxs)(i.Fragment, {
-      children: [(0, i.jsx)("span", {
-        className: u.required,
-        "aria-hidden": !0,
-        children: "*"
-      }), (0, i.jsx)(o.n, {
-        children: l.Z.Messages.REQUIRED
-      })]
-    })]
-  })
+var i = n(120356), a = n.n(i), o = n(766646), s = n(154921), l = n(689938), u = n(610546);
+function c(e) {
+    let {
+        children: t,
+        className: n,
+        disabled: i,
+        required: c = !1,
+        ...d
+    } = e;
+    return (0, r.jsxs)(s.Z, {
+        tag: 'label',
+        color: s.Z.Colors.HEADER_SECONDARY,
+        className: a()(u.label, n, {
+            [u.defaultMargin]: null == n,
+            [u.disabled]: i
+        }),
+        ...d,
+        children: [
+            t,
+            c && (0, r.jsxs)(r.Fragment, {
+                children: [
+                    (0, r.jsx)('span', {
+                        className: u.required,
+                        'aria-hidden': !0,
+                        children: '*'
+                    }),
+                    (0, r.jsx)(o.n, { children: l.Z.Messages.REQUIRED })
+                ]
+            })
+        ]
+    });
 }

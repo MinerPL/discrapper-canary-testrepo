@@ -1,11 +1,9 @@
-"use strict";
 n.d(t, {
-  $: function() {
-    return r.$
-  },
-  Z: function() {
-    return i.Z
-  }
+    $: function () {
+        return i.$;
+    },
+    Z: function () {
+        return r.Z;
+    }
 }), n(858685);
-var i = n(324404),
-  r = n(558985)
+var r = n(324404), i = n(558985);

@@ -1,15 +1,12 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return o
-  }
+    Z: function () {
+        return o;
+    }
 });
-var i = n(493683),
-  r = n(592125),
-  s = n(176505);
-
+var r = n(493683), i = n(592125), a = n(176505);
 function o(e) {
-  if (e !== s.V) return null;
-  let t = r.Z.getChannel(e);
-  return null == t ? null : i.Z.ensurePrivateChannel(t.recipients)
+    if (e !== a.V)
+        return null;
+    let t = i.Z.getChannel(e);
+    return null == t ? null : r.Z.ensurePrivateChannel(t.recipients);
 }

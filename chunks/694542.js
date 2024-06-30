@@ -1,7 +1,6 @@
-"use strict";
 n.d(t, {
-  _: function() {
-    return r
-  }
+    _: function () {
+        return r;
+    }
 });
-let r = (0, n(470079).createContext)(void 0)
+let r = (0, n(470079).createContext)(void 0);

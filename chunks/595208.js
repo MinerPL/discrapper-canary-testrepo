@@ -1,56 +1,50 @@
-"use strict";
-n.d(e, {
-  m7: function() {
-    return c
-  },
-  m8: function() {
-    return u
-  },
-  q4: function() {
-    return l
-  }
+r.d(e, {
+    m7: function () {
+        return c;
+    },
+    m8: function () {
+        return E;
+    },
+    q4: function () {
+        return s;
+    }
 });
-var r = n(862315),
-  i = n(529866),
-  s = n(876122),
-  a = n(703498);
+var n = r(862315), _ = r(529866), a = r(876122), i = r(703498);
 let o = [];
-
-function u(t) {
-  let e;
-  let n = t.defaultIntegrations || [],
-    i = t.integrations;
-  n.forEach(t => {
-    t.isDefaultInstance = !0
-  });
-  let s = function(t) {
-      let e = {};
-      return t.forEach(t => {
-        let {
-          name: n
-        } = t, r = e[n];
-        if (!r || !!r.isDefaultInstance || !t.isDefaultInstance) e[n] = t
-      }), Object.keys(e).map(t => e[t])
-    }(e = Array.isArray(i) ? [...n, ...i] : "function" == typeof i ? (0, r.lE)(i(n)) : n),
-    a = function(t, e) {
-      for (let n = 0; n < t.length; n++)
-        if (!0 === e(t[n])) return n;
-      return -1
-    }(s, t => "Debug" === t.name);
-  if (-1 !== a) {
-    let [t] = s.splice(a, 1);
-    s.push(t)
-  }
-  return s
+function E(t) {
+    let e;
+    let r = t.defaultIntegrations || [], _ = t.integrations;
+    r.forEach(t => {
+        t.isDefaultInstance = !0;
+    });
+    let a = function (t) {
+            let e = {};
+            return t.forEach(t => {
+                let {name: r} = t, n = e[r];
+                if (!n || !!n.isDefaultInstance || !t.isDefaultInstance)
+                    e[r] = t;
+            }), Object.keys(e).map(t => e[t]);
+        }(e = Array.isArray(_) ? [
+            ...r,
+            ..._
+        ] : 'function' == typeof _ ? (0, n.lE)(_(r)) : r), i = function (t, e) {
+            for (let r = 0; r < t.length; r++)
+                if (!0 === e(t[r]))
+                    return r;
+            return -1;
+        }(a, t => 'Debug' === t.name);
+    if (-1 !== i) {
+        let [t] = a.splice(i, 1);
+        a.push(t);
+    }
+    return a;
 }
-
-function l(t) {
-  let e = {};
-  return t.forEach(t => {
-    t && c(t, e)
-  }), e
+function s(t) {
+    let e = {};
+    return t.forEach(t => {
+        t && c(t, e);
+    }), e;
 }
-
 function c(t, e) {
-  e[t.name] = t, -1 === o.indexOf(t.name) && (t.setupOnce(a.c, s.Gd), o.push(t.name), ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.log(`Integration installed: ${t.name}`))
+    e[t.name] = t, -1 === o.indexOf(t.name) && (t.setupOnce(i.c, a.Gd), o.push(t.name), ('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && _.kg.log(`Integration installed: ${ t.name }`));
 }

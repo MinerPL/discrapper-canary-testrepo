@@ -1,30 +1,29 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return a
-  }
-}), t(47120);
-var n = t(470079),
-  i = t(881052),
-  l = t(53365);
-
-function a(e) {
-  let [s, t] = n.useState(!0), [a, r] = n.useState(), [o, c] = n.useState(), d = n.useCallback(async e => {
-    t(!0), r(void 0);
-    try {
-      let s = await l.wZ(e);
-      c(s)
-    } catch (e) {
-      r(new i.Hx(e))
-    } finally {
-      t(!1)
+n.d(t, {
+    Z: function () {
+        return r;
     }
-  }, []);
-  return n.useEffect(() => {
-    d(e)
-  }, [e, d]), {
-    isLoading: s,
-    error: a,
-    creatorMonetizationOnboardingMarketing: o
-  }
+}), n(47120);
+var s = n(470079), a = n(881052), i = n(53365);
+function r(e) {
+    let [t, n] = s.useState(!0), [r, l] = s.useState(), [o, c] = s.useState(), d = s.useCallback(async e => {
+            n(!0), l(void 0);
+            try {
+                let t = await i.wZ(e);
+                c(t);
+            } catch (e) {
+                l(new a.Hx(e));
+            } finally {
+                n(!1);
+            }
+        }, []);
+    return s.useEffect(() => {
+        d(e);
+    }, [
+        e,
+        d
+    ]), {
+        isLoading: t,
+        error: r,
+        creatorMonetizationOnboardingMarketing: o
+    };
 }

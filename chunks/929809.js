@@ -1,23 +1,18 @@
-"use strict";
-n.d(t, {
-  H: function() {
-    return i
-  },
-  c: function() {
-    return r
-  }
+n.d(e, {
+    H: function () {
+        return l;
+    },
+    c: function () {
+        return i;
+    }
 });
-var s = n(570140);
-
-function r(e) {
-  s.Z.wait(() => s.Z.dispatch({
-    type: "NUF_NEW_USER",
-    newUserType: e
-  }))
+var r = n(570140);
+function i(t) {
+    r.Z.wait(() => r.Z.dispatch({
+        type: 'NUF_NEW_USER',
+        newUserType: t
+    }));
 }
-
-function i() {
-  s.Z.wait(() => s.Z.dispatch({
-    type: "NUF_COMPLETE"
-  }))
+function l() {
+    r.Z.wait(() => r.Z.dispatch({ type: 'NUF_COMPLETE' }));
 }

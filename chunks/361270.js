@@ -1,3 +1,2 @@
-"use strict";
 var e = n(626544).match(/AppleWebKit\/(\d+)\./);
-t.exports = !!e && +e[1]
+t.exports = !!e && +e[1];

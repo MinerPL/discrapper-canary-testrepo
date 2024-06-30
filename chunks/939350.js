@@ -1,15 +1,14 @@
-"use strict";
 n.d(t, {
-  _: function() {
-    return r
-  }
+    _: function () {
+        return i;
+    }
 });
-var i = n(768160);
-let r = {
-  default: i.colorDefault,
-  brand: i.colorBrand,
-  danger: i.colorDanger,
-  premium: i.colorPremium,
-  "premium-gradient": i.colorPremiumGradient,
-  success: i.colorSuccess
-}
+var r = n(639897);
+let i = {
+    default: r.colorDefault,
+    brand: r.colorBrand,
+    danger: r.colorDanger,
+    premium: r.colorPremium,
+    'premium-gradient': r.colorPremiumGradient,
+    success: r.colorSuccess
+};

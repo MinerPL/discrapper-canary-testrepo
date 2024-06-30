@@ -1,86 +1,82 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return S
-  }
+    Z: function () {
+        return p;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(120356),
-  s = n.n(r),
-  o = n(77866),
-  a = n(373793),
-  l = n(243814),
-  u = n(260034),
-  _ = n(993365),
-  d = n(263704),
-  c = n(465670),
-  E = n(713938),
-  I = n(689938),
-  T = n(361375);
-
+var i = n(120356), a = n.n(i), o = n(77866), s = n(373793), l = n(243814), u = n(260034), c = n(993365), d = n(481060), _ = n(713938), E = n(689938), f = n(684398);
 function h(e) {
-  let {
-    text: t,
-    error: n,
-    isFake: r
-  } = e;
-  return (0, i.jsxs)("div", {
-    className: T.scope,
-    children: [(0, i.jsx)("div", {
-      className: s()(T.iconWrapper, r ? T.fakeScopeIcon : T.scopeIcon),
-      children: r ? (0, i.jsx)(c.Z, {
-        className: T.icon
-      }) : (0, i.jsx)(d.Z, {
-        className: T.icon
-      })
-    }), (0, i.jsxs)("div", {
-      className: T.scopeInner,
-      children: [(0, i.jsx)(_.x, {
-        variant: "text-md/medium",
-        children: t
-      }), null != n ? (0, i.jsx)(_.x, {
-        variant: "text-xs/normal",
-        color: "text-danger",
-        children: n
-      }) : null]
-    })]
-  })
+    let {
+        text: t,
+        error: n,
+        isFake: i
+    } = e;
+    return (0, r.jsxs)('div', {
+        className: f.scope,
+        children: [
+            (0, r.jsx)('div', {
+                className: a()(f.iconWrapper, i ? f.fakeScopeIcon : f.scopeIcon),
+                children: i ? (0, r.jsx)(d.CloseSmallIcon, {
+                    size: 'md',
+                    color: 'currentColor',
+                    className: f.icon
+                }) : (0, r.jsx)(d.CheckmarkLargeIcon, {
+                    size: 'md',
+                    color: 'currentColor',
+                    className: f.icon
+                })
+            }),
+            (0, r.jsxs)('div', {
+                className: f.scopeInner,
+                children: [
+                    (0, r.jsx)(c.x, {
+                        variant: 'text-md/medium',
+                        children: t
+                    }),
+                    null != n ? (0, r.jsx)(c.x, {
+                        variant: 'text-xs/normal',
+                        color: 'text-danger',
+                        children: n
+                    }) : null
+                ]
+            })
+        ]
+    });
 }
-
-function S(e) {
-  var t;
-  let {
-    application: n,
-    accountScopes: r,
-    requestedScopes: s,
-    integrationType: _,
-    errors: d,
-    isTrustedName: c = !1
-  } = e, S = (0, o.Z)(() => E.ZW[Math.floor(Math.random() * E.ZW.length)]);
-  if (0 === r.length) return null;
-  let f = S(),
-    N = c ? I.Z.Messages.OAUTH2_SCOPES_LABEL_TRUSTED_NAME : I.Z.Messages.OAUTH2_SCOPES_LABEL,
-    A = _ === a.Y.USER_INSTALL && s.includes(l.x.APPLICATIONS_COMMANDS);
-  return (0, i.jsxs)("div", {
-    className: T.scopes,
-    children: [(0, i.jsx)(u.X, {
-      variant: "heading-deprecated-12/semibold",
-      className: T.sectionLabel,
-      children: N.format({
-        application: null !== (t = null == n ? void 0 : n.name) && void 0 !== t ? t : ""
-      })
-    }), r.map(e => {
-      var t;
-      return (0, i.jsx)(h, {
-        text: (0, E.jW)(e, r),
-        error: null == d ? void 0 : null === (t = d[e]) || void 0 === t ? void 0 : t[0]
-      }, e)
-    }), A && (0, i.jsx)(h, {
-      text: I.Z.Messages.SCOPE_DM_YOU
-    }), (0, i.jsx)(h, {
-      text: f,
-      isFake: !0
-    })]
-  })
+function p(e) {
+    var t;
+    let {
+            application: n,
+            accountScopes: i,
+            requestedScopes: a,
+            integrationType: c,
+            errors: d,
+            isTrustedName: p = !1
+        } = e, m = (0, o.Z)(() => _.ZW[Math.floor(Math.random() * _.ZW.length)]);
+    if (0 === i.length)
+        return null;
+    let I = m(), T = p ? E.Z.Messages.OAUTH2_SCOPES_LABEL_TRUSTED_NAME : E.Z.Messages.OAUTH2_SCOPES_LABEL, g = c === s.Y.USER_INSTALL && a.includes(l.x.APPLICATIONS_COMMANDS);
+    return (0, r.jsxs)('div', {
+        className: f.scopes,
+        children: [
+            (0, r.jsx)(u.X, {
+                variant: 'heading-deprecated-12/semibold',
+                className: f.sectionLabel,
+                children: T.format({ application: null !== (t = null == n ? void 0 : n.name) && void 0 !== t ? t : '' })
+            }),
+            i.map(e => {
+                var t;
+                return (0, r.jsx)(h, {
+                    text: (0, _.jW)(e, i),
+                    error: null == d ? void 0 : null === (t = d[e]) || void 0 === t ? void 0 : t[0]
+                }, e);
+            }),
+            g && (0, r.jsx)(h, { text: E.Z.Messages.SCOPE_DM_YOU }),
+            (0, r.jsx)(h, {
+                text: I,
+                isFake: !0
+            })
+        ]
+    });
 }

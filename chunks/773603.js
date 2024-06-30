@@ -1,40 +1,29 @@
-"use strict";
-var r = n(147018),
-  i = n(992051),
-  a = n(955903),
-  o = n(936940),
-  s = n(545576),
-  u = n(354848),
-  c = n(344135),
-  l = n(457110),
-  d = n(859209),
-  f = a && a.prototype;
+var r = n(147018), i = n(992051), a = n(955903), o = n(936940), s = n(545576), l = n(354848), u = n(344135), c = n(457110), d = n(859209), _ = a && a.prototype;
 if (r({
-    target: "Promise",
-    proto: !0,
-    real: !0,
-    forced: !!a && o(function() {
-      f.finally.call({
-        then: function() {}
-      }, function() {})
-    })
-  }, {
-    finally: function(e) {
-      var t = c(this, s("Promise")),
-        n = u(e);
-      return this.then(n ? function(n) {
-        return l(t, e()).then(function() {
-          return n
+        target: 'Promise',
+        proto: !0,
+        real: !0,
+        forced: !!a && o(function () {
+            _.finally.call({
+                then: function () {
+                }
+            }, function () {
+            });
         })
-      } : e, n ? function(n) {
-        return l(t, e()).then(function() {
-          throw n
-        })
-      } : e)
-    }
-  }), !i && u(a)) {
-  var p = s("Promise").prototype.finally;
-  f.finally !== p && d(f, "finally", p, {
-    unsafe: !0
-  })
+    }, {
+        finally: function (e) {
+            var t = u(this, s('Promise')), n = l(e);
+            return this.then(n ? function (n) {
+                return c(t, e()).then(function () {
+                    return n;
+                });
+            } : e, n ? function (n) {
+                return c(t, e()).then(function () {
+                    throw n;
+                });
+            } : e);
+        }
+    }), !i && l(a)) {
+    var E = s('Promise').prototype.finally;
+    _.finally !== E && d(_, 'finally', E, { unsafe: !0 });
 }

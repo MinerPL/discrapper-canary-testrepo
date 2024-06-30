@@ -1,73 +1,60 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return S
-  }
+    Z: function () {
+        return p;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(120356),
-  s = n.n(r),
-  o = n(442837),
-  a = n(481060),
-  l = n(872810),
-  u = n(199902),
-  _ = n(314897),
-  d = n(167580),
-  c = n(685203),
-  E = n(112560),
-  I = n(689938),
-  T = n(520025);
+var i = n(120356), a = n.n(i), o = n(442837), s = n(481060), l = n(872810), u = n(199902), c = n(314897), d = n(685203), _ = n(112560), E = n(689938), f = n(53525);
 let h = n(978538);
-
-function S(e) {
-  let {
-    participant: t,
-    width: n,
-    noArt: r = !1,
-    selected: S = !1
-  } = e, f = n < 195, N = (0, o.e7)([u.Z, _.default], () => u.Z.getAllActiveStreams().some(e => {
+function p(e) {
     let {
-      ownerId: t
-    } = e;
-    return t !== _.default.getId()
-  }));
-  return (0, i.jsx)("div", {
-    className: s()(T.content, T.streamHidden, {
-      [T.__invalid_small]: f
-    }),
-    children: (0, i.jsx)(E.Z, {
-      className: T.streamHiddenEmptyState,
-      artURL: h,
-      noArt: r,
-      selected: S,
-      size: (0, E.L)(n),
-      header: f ? null : I.Z.Messages.STREAM_HIDDEN,
-      description: S ? null : (0, i.jsxs)("div", {
-        className: s()(T.streamHiddenCTA, {
-          [T.largePaddingTop]: !f
-        }),
-        children: [(0, i.jsx)(c.a, {
-          isSmall: f,
-          children: (0, i.jsx)(a.Text, {
-            variant: f ? "text-sm/semibold" : "text-md/semibold",
-            color: "none",
-            children: n < 175 ? I.Z.Messages.WATCH : I.Z.Messages.WATCH_STREAM
-          })
-        }), N ? (0, i.jsx)(c.a, {
-          className: T.addCTA,
-          tooltip: I.Z.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
-          onClick: e => {
-            e.stopPropagation(), (0, l.rn)(t.stream, {
-              forceMultiple: !0
+            participant: t,
+            width: n,
+            noArt: i = !1,
+            selected: p = !1
+        } = e, m = n < 195, I = (0, o.e7)([
+            u.Z,
+            c.default
+        ], () => u.Z.getAllActiveStreams().some(e => {
+            let {ownerId: t} = e;
+            return t !== c.default.getId();
+        }));
+    return (0, r.jsx)('div', {
+        className: a()(f.content, f.streamHidden, { [f.__invalid_small]: m }),
+        children: (0, r.jsx)(_.Z, {
+            className: f.streamHiddenEmptyState,
+            artURL: h,
+            noArt: i,
+            selected: p,
+            size: (0, _.L)(n),
+            header: m ? null : E.Z.Messages.STREAM_HIDDEN,
+            description: p ? null : (0, r.jsxs)('div', {
+                className: a()(f.streamHiddenCTA, { [f.largePaddingTop]: !m }),
+                children: [
+                    (0, r.jsx)(d.a, {
+                        isSmall: m,
+                        children: (0, r.jsx)(s.Text, {
+                            variant: m ? 'text-sm/semibold' : 'text-md/semibold',
+                            color: 'none',
+                            children: n < 175 ? E.Z.Messages.WATCH : E.Z.Messages.WATCH_STREAM
+                        })
+                    }),
+                    I ? (0, r.jsx)(d.a, {
+                        className: f.addCTA,
+                        tooltip: E.Z.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
+                        onClick: e => {
+                            e.stopPropagation(), (0, l.rn)(t.stream, { forceMultiple: !0 });
+                        },
+                        isSmall: m,
+                        children: (0, r.jsx)(s.EyePlusIcon, {
+                            size: 'xs',
+                            color: 'currentColor',
+                            className: f.addStreamIcon
+                        })
+                    }) : null
+                ]
             })
-          },
-          isSmall: f,
-          children: (0, i.jsx)(d.Z, {
-            className: T.addStreamIcon
-          })
-        }) : null]
-      })
-    })
-  })
+        })
+    });
 }

@@ -1,16 +1,14 @@
-"use strict";
 n.d(t, {
-  C: function() {
-    return s
-  }
+    C: function () {
+        return a;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(768160);
-
-function s() {
-  return (0, i.jsx)("div", {
-    role: "separator",
-    className: r.separator
-  })
+var i = n(639897);
+function a() {
+    return (0, r.jsx)('div', {
+        role: 'separator',
+        className: i.separator
+    });
 }

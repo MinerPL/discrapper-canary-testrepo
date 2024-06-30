@@ -1,8 +1,4 @@
-"use strict";
-var n = e(251069),
-  o = e(905145),
-  i = e(187684),
-  a = Error.captureStackTrace;
-t.exports = function(t, r, e, u) {
-  i && (a ? a(t, r) : n(t, "stack", o(e, u)))
-}
+var e = n(251069), i = n(905145), o = n(187684), u = Error.captureStackTrace;
+t.exports = function (t, r, n, c) {
+    o && (u ? u(t, r) : e(t, 'stack', i(n, c)));
+};

@@ -1,166 +1,141 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return g
-  }
-}), t(47120);
-var n = t(735250),
-  i = t(470079),
-  l = t(120356),
-  a = t.n(l),
-  r = t(866442),
-  o = t(481060),
-  c = t(393238),
-  d = t(44315),
-  u = t(663993),
-  E = t(263704),
-  _ = t(214623),
-  I = t(981631),
-  T = t(689938),
-  N = t(694036);
-let m = (0, u.Un)({
-  createPromise: () => t.e("5609").then(t.bind(t, 336231)),
-  webpackId: 336231
+n.d(t, {
+    Z: function () {
+        return S;
+    }
+}), n(47120);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(866442), o = n(481060), c = n(393238), d = n(44315), u = n(663993), _ = n(981631), E = n(689938), I = n(570837);
+let T = (0, u.Un)({
+    createPromise: () => n.e('5609').then(n.bind(n, 336231)),
+    webpackId: 336231
 });
-
-function S(e) {
-  let s = (0, r.Bd)(e) > .25;
-  return (0, d.Lq)(s ? I.Ilk.WHITE_500 : I.Ilk.PRIMARY_530)
+function m(e) {
+    let t = (0, l.Bd)(e) > 0.25;
+    return (0, d.Lq)(t ? _.Ilk.WHITE_500 : _.Ilk.PRIMARY_530);
 }
-
-function h(e) {
-  let {
-    value: s,
-    onChange: t,
-    disabled: l = !1
-  } = e, [c, d] = i.useState(s);
-
-  function u() {
-    t(c)
-  }
-
-  function m(e) {
-    t(e), d(e)
-  }
-  let h = s === I.p6O,
-    g = h ? c : s,
-    x = (0, n.jsx)(E.Z, {
-      width: 32,
-      height: 24,
-      color: S(s)
-    }),
-    C = (0, o.useRadioGroup)({
-      orientation: "horizontal",
-      isDisabled: l
-    }),
-    R = (0, o.useRadioItem)({
-      isSelected: h,
-      label: T.Z.Messages.USER_SETTINGS_PROFILE_COLOR_DEFAULT_BUTTON.format({
-        colorHex: (0, r.Rf)(I.p6O)
-      })
-    }),
-    L = (0, o.useRadioItem)({
-      isSelected: !h,
-      label: T.Z.Messages.USER_SETTINGS_PROFILE_COLOR_CUSTOM_BUTTON.format({
-        colorHex: (0, r.Rf)(s)
-      })
+function N(e) {
+    let {
+            value: t,
+            onChange: n,
+            disabled: i = !1
+        } = e, [c, d] = a.useState(t);
+    function u() {
+        n(c);
+    }
+    function T(e) {
+        n(e), d(e);
+    }
+    let N = t === _.p6O, S = N ? c : t, h = (0, s.jsx)(o.CheckmarkLargeIcon, {
+            size: 'custom',
+            width: 32,
+            height: 24,
+            color: m(t)
+        }), g = (0, o.useRadioGroup)({
+            orientation: 'horizontal',
+            isDisabled: i
+        }), C = (0, o.useRadioItem)({
+            isSelected: N,
+            label: E.Z.Messages.USER_SETTINGS_PROFILE_COLOR_DEFAULT_BUTTON.format({ colorHex: (0, l.Rf)(_.p6O) })
+        }), x = (0, o.useRadioItem)({
+            isSelected: !N,
+            label: E.Z.Messages.USER_SETTINGS_PROFILE_COLOR_CUSTOM_BUTTON.format({ colorHex: (0, l.Rf)(t) })
+        });
+    return (0, s.jsxs)('div', {
+        className: I.buttonsContainer,
+        'aria-label': E.Z.Messages.USER_SETTINGS_PROFILE_COLOR,
+        ...g,
+        children: [
+            (0, s.jsx)('div', {
+                className: r()(I.colorSwatch, { [I.disabled]: i }),
+                children: (0, s.jsxs)(o.Clickable, {
+                    onClick: i ? void 0 : function () {
+                        n(_.p6O);
+                    },
+                    'aria-disabled': i,
+                    ...C,
+                    children: [
+                        (0, s.jsx)('div', {
+                            className: I.swatch,
+                            style: { backgroundColor: (0, l.Rf)(_.p6O) },
+                            children: N ? h : null
+                        }),
+                        (0, s.jsx)(o.Text, {
+                            className: I.swatchDescription,
+                            color: 'header-secondary',
+                            variant: 'text-xs/normal',
+                            'aria-hidden': !0,
+                            children: E.Z.Messages.USER_SETTINGS_PROFILE_COLOR_DEFAULT
+                        })
+                    ]
+                })
+            }),
+            (0, s.jsxs)('div', {
+                className: r()(I.colorSwatch, { [I.disabled]: i }),
+                children: [
+                    (0, s.jsxs)(o.Clickable, {
+                        onClick: i ? void 0 : u,
+                        'aria-disabled': i,
+                        ...x,
+                        children: [
+                            (0, s.jsx)('div', {
+                                className: r()(I.customSwatch, { [I.defaultSwatch]: S === _.p6O }),
+                                style: { '--custom-color': (0, l.Rf)(S) },
+                                children: N ? null : h
+                            }),
+                            (0, s.jsx)(o.Text, {
+                                className: I.swatchDescription,
+                                color: 'header-secondary',
+                                variant: 'text-xs/normal',
+                                'aria-hidden': !0,
+                                children: E.Z.Messages.USER_SETTINGS_PROFILE_COLOR_CUSTOM
+                            })
+                        ]
+                    }),
+                    !i && (0, s.jsx)(o.Popout, {
+                        onRequestOpen: u,
+                        renderPopout: e => (0, s.jsx)(o.CustomColorPicker, {
+                            ...e,
+                            value: t,
+                            onChange: T
+                        }),
+                        children: e => (0, s.jsx)(o.Clickable, {
+                            ...e,
+                            className: I.dropperIconButton,
+                            'aria-label': E.Z.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,
+                            children: (0, s.jsx)(o.EyeDropperIcon, {
+                                size: 'custom',
+                                className: I.dropperIcon,
+                                width: 14,
+                                height: 14,
+                                color: m(S)
+                            })
+                        })
+                    })
+                ]
+            })
+        ]
     });
-  return (0, n.jsxs)("div", {
-    className: N.buttonsContainer,
-    "aria-label": T.Z.Messages.USER_SETTINGS_PROFILE_COLOR,
-    ...C,
-    children: [(0, n.jsx)("div", {
-      className: a()(N.colorSwatch, {
-        [N.disabled]: l
-      }),
-      children: (0, n.jsxs)(o.Clickable, {
-        onClick: l ? void 0 : function() {
-          t(I.p6O)
-        },
-        "aria-disabled": l,
-        ...R,
-        children: [(0, n.jsx)("div", {
-          className: N.swatch,
-          style: {
-            backgroundColor: (0, r.Rf)(I.p6O)
-          },
-          children: h ? x : null
-        }), (0, n.jsx)(o.Text, {
-          className: N.swatchDescription,
-          color: "header-secondary",
-          variant: "text-xs/normal",
-          "aria-hidden": !0,
-          children: T.Z.Messages.USER_SETTINGS_PROFILE_COLOR_DEFAULT
-        })]
-      })
-    }), (0, n.jsxs)("div", {
-      className: a()(N.colorSwatch, {
-        [N.disabled]: l
-      }),
-      children: [(0, n.jsxs)(o.Clickable, {
-        onClick: l ? void 0 : u,
-        "aria-disabled": l,
-        ...L,
-        children: [(0, n.jsx)("div", {
-          className: a()(N.customSwatch, {
-            [N.defaultSwatch]: g === I.p6O
-          }),
-          style: {
-            "--custom-color": (0, r.Rf)(g)
-          },
-          children: h ? null : x
-        }), (0, n.jsx)(o.Text, {
-          className: N.swatchDescription,
-          color: "header-secondary",
-          variant: "text-xs/normal",
-          "aria-hidden": !0,
-          children: T.Z.Messages.USER_SETTINGS_PROFILE_COLOR_CUSTOM
-        })]
-      }), !l && (0, n.jsx)(o.Popout, {
-        onRequestOpen: u,
-        renderPopout: e => (0, n.jsx)(o.CustomColorPicker, {
-          ...e,
-          value: s,
-          onChange: m
-        }),
-        children: e => (0, n.jsx)(o.Clickable, {
-          ...e,
-          className: N.dropperIconButton,
-          "aria-label": T.Z.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,
-          children: (0, n.jsx)(_.Z, {
-            className: N.dropperIcon,
-            width: 14,
-            height: 14,
-            color: S(g)
-          })
-        })
-      })]
-    })]
-  })
 }
-
-function g(e) {
-  let s, {
-      value: t,
-      onChange: i,
-      disabled: l = !1
-    } = e,
-    {
-      ref: a,
-      width: r
-    } = (0, c.Z)();
-  return s = null == r || r < 440 ? (0, n.jsx)(h, {
-    value: t,
-    onChange: i,
-    disabled: l
-  }) : (0, n.jsx)(m, {
-    defaultColor: I.p6O,
-    colors: I.pmI,
-    value: t,
-    onChange: i,
-    disabled: l
-  }), (0, n.jsx)("div", {
-    ref: a,
-    children: s
-  })
+function S(e) {
+    let t, {
+            value: n,
+            onChange: a,
+            disabled: i = !1
+        } = e, {
+            ref: r,
+            width: l
+        } = (0, c.Z)();
+    return t = null == l || l < 440 ? (0, s.jsx)(N, {
+        value: n,
+        onChange: a,
+        disabled: i
+    }) : (0, s.jsx)(T, {
+        defaultColor: _.p6O,
+        colors: _.pmI,
+        value: n,
+        onChange: a,
+        disabled: i
+    }), (0, s.jsx)('div', {
+        ref: r,
+        children: t
+    });
 }

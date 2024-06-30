@@ -1,9 +1,8 @@
-"use strict";
 n.d(t, {
-  $L: function() {
-    return r
-  }
+    $L: function () {
+        return i;
+    }
 });
-let i = new(n(226351)).o;
-
-function r() {}
+let r = new (n(226351)).o();
+function i() {
+}

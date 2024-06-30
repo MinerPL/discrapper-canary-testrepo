@@ -1,26 +1,20 @@
-"use strict";
-
-function i(e) {
-  let t = Promise.resolve(null),
-    n = [],
-    i = !1,
-    {
-      onContention: r,
-      onContentionResolved: s,
-      onTimeout: o,
-      timeoutMs: a
-    } = e,
-    l = function(e, l) {
-      n.length > 0 ? (r(l, n), i = !0) : i && (s(), i = !1), n.push(l);
-      let u = null == a || null == o ? null : setTimeout(() => o(l, n), a);
-      return new Promise((i, r) => {
-        t = t.then(e).then(i, r).then(() => n.splice(0, 1)), null != u && (t = t.then(() => clearTimeout(u)))
-      })
-    };
-  return l.isMutexHeld = () => n.length > 0, l.getLockHolders = () => n, l
+function r(e) {
+    let t = Promise.resolve(null), n = [], r = !1, {
+            onContention: i,
+            onContentionResolved: a,
+            onTimeout: o,
+            timeoutMs: s
+        } = e, l = function (e, l) {
+            n.length > 0 ? (i(l, n), r = !0) : r && (a(), r = !1), n.push(l);
+            let u = null == s || null == o ? null : setTimeout(() => o(l, n), s);
+            return new Promise((r, i) => {
+                t = t.then(e).then(r, i).then(() => n.splice(0, 1)), null != u && (t = t.then(() => clearTimeout(u)));
+            });
+        };
+    return l.isMutexHeld = () => n.length > 0, l.getLockHolders = () => n, l;
 }
 n.d(t, {
-  H: function() {
-    return i
-  }
-}), n(653041)
+    H: function () {
+        return r;
+    }
+}), n(653041);

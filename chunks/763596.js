@@ -1,9 +1,17 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  i: function() {
-    return s
-  }
+    i: function () {
+        return a;
+    }
 });
-let s = ["api_connection_error", "api_error", "authentication_error", "card_error", "idempotency_error", "invalid_request_error", "rate_limit_error", "validation_error"];
-(r = i || (i = {})).CREATE = "create", r.CANCEL = "cancel", r.RESUBSCRIBE = "resubscribe", r.CHARGE = "charge"
+let a = [
+    'api_connection_error',
+    'api_error',
+    'authentication_error',
+    'card_error',
+    'idempotency_error',
+    'invalid_request_error',
+    'rate_limit_error',
+    'validation_error'
+];
+(i = r || (r = {})).CREATE = 'create', i.CANCEL = 'cancel', i.RESUBSCRIBE = 'resubscribe', i.CHARGE = 'charge';

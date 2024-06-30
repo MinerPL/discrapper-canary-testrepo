@@ -1,217 +1,235 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return C
-  }
+    Z: function () {
+        return v;
+    }
 }), n(642549), n(47120);
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(692547),
-  l = n(481060),
-  u = n(393238),
-  _ = n(206678),
-  d = n(302221),
-  c = n(328187),
-  E = n(607889),
-  I = n(94432),
-  T = n(456359);
-let h = I.e3 / 1e3,
-  S = 6,
-  f = 2,
-  N = [0, 0, 0, 0, 0];
-
-function A(e) {
-  let {
-    showAll: t,
-    currentTime: n,
-    duration: i,
-    numSegments: r
-  } = e;
-  return t ? r : Math.max(0, Math.round(n / i * r))
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(692547), l = n(481060), u = n(393238), c = n(206678), d = n(302221), _ = n(328187), E = n(607889), f = n(94432), h = n(182737);
+let p = f.e3 / 1000, m = 6, I = 2, T = [
+        0,
+        0,
+        0,
+        0,
+        0
+    ];
+function g(e) {
+    let {
+        showAll: t,
+        currentTime: n,
+        duration: r,
+        numSegments: i
+    } = e;
+    return t ? i : Math.max(0, Math.round(n / r * i));
 }
-
-function m(e) {
-  var t, n, i, r, s;
-  let {
-    context: o,
-    devicePixelRatio: a,
-    canvasHeight: l,
-    segmentValue: u,
-    segmentIndex: _,
-    constrainMin: d
-  } = e, c = d ? (24 - f) * u + f : 24 * u;
-  if (0 !== c) t = o, n = 6 * _ * a, i = (l / 2 - c / 2) * a, r = c * a, s = 1 * a, t.moveTo(n, i + s), t.lineTo(n, i + r - s), t.arc(n + s, i + r - s, s, Math.PI, 0, !0), t.lineTo(n + 2 * s, i + s), t.arc(n + s, i + s, s, 0, Math.PI, !0), t.closePath()
+function S(e) {
+    var t, n, r, i, a;
+    let {
+            context: o,
+            devicePixelRatio: s,
+            canvasHeight: l,
+            segmentValue: u,
+            segmentIndex: c,
+            constrainMin: d
+        } = e, _ = d ? (24 - I) * u + I : 24 * u;
+    if (0 !== _)
+        t = o, n = 6 * c * s, r = (l / 2 - _ / 2) * s, i = _ * s, a = 1 * s, t.moveTo(n, r + a), t.lineTo(n, r + i - a), t.arc(n + a, r + i - a, a, Math.PI, 0, !0), t.lineTo(n + 2 * a, r + a), t.arc(n + a, r + a, a, 0, Math.PI, !0), t.closePath();
 }
-
-function O(e, t, n) {
-  let [i, s] = r.useState(e), [o, a] = r.useState(e);
-  return r.useLayoutEffect(() => {
-    s(o), a(e)
-  }, [e, t, n]), [i, o]
+function A(e, t, n) {
+    let [r, a] = i.useState(e), [o, s] = i.useState(e);
+    return i.useLayoutEffect(() => {
+        a(o), s(e);
+    }, [
+        e,
+        t,
+        n
+    ]), [
+        r,
+        o
+    ];
 }
-
-function R(e, t, n, i) {
-  if (null == i) return [t, !1];
-  let r = Math.min((n - i) / 200, 1);
-  return 1 === r ? [t, !1] : [(0, d.BM)(e, t, r), !0]
+function N(e, t, n, r) {
+    if (null == r)
+        return [
+            t,
+            !1
+        ];
+    let i = Math.min((n - r) / 200, 1);
+    return 1 === i ? [
+        t,
+        !1
+    ] : [
+        (0, d.BM)(e, t, i),
+        !0
+    ];
 }
-
-function C(e) {
-  let {
-    className: t,
-    waveform: n,
-    currentTime: s,
-    duration: d,
-    played: f,
-    playing: C,
-    onDrag: p,
-    onDragStart: g,
-    onDragEnd: L
-  } = e, {
-    ref: v,
-    width: D
-  } = (0, u.Z)(), M = r.useMemo(() => {
-    var e;
-    let t;
-    return Math.floor(((t = (e = d) <= h ? 40 : e >= 45 ? 294 : (Math.min(e, 45) - h) / (45 - h) * 254 + 40) + 4) / S) * S - 4
-  }, [d]), P = r.useRef(), y = function(e, t) {
-    let n = r.useMemo(() => (function(e) {
-        let t;
-        if (null == e) return;
-        try {
-          t = window.atob(e)
-        } catch (e) {
-          return
+function v(e) {
+    let {
+            className: t,
+            waveform: n,
+            currentTime: a,
+            duration: d,
+            played: I,
+            playing: v,
+            onDrag: O,
+            onDragStart: R,
+            onDragEnd: C
+        } = e, {
+            ref: y,
+            width: D
+        } = (0, u.Z)(), L = i.useMemo(() => {
+            var e;
+            let t;
+            return Math.floor(((t = (e = d) <= p ? 40 : e >= 45 ? 294 : (Math.min(e, 45) - p) / (45 - p) * 254 + 40) + 4) / m) * m - 4;
+        }, [d]), b = i.useRef(), M = function (e, t) {
+            let n = i.useMemo(() => function (e) {
+                    let t;
+                    if (null == e)
+                        return;
+                    try {
+                        t = window.atob(e);
+                    } catch (e) {
+                        return;
+                    }
+                    let n = [];
+                    for (let e = 0; e < t.length; e++)
+                        n[e] = t.charCodeAt(e) / f.Xi;
+                    return n;
+                }(e), [e]), r = i.useMemo(() => function (e) {
+                    if (null != e)
+                        return Math.floor((e + 4) / 6);
+                }(t), [t]);
+            return i.useMemo(() => {
+                var e;
+                return null !== (e = function (e, t) {
+                    if (null != e && null != t) {
+                        if (e.length < t) {
+                            let n = t - e.length;
+                            return e.concat(Array(n).fill(0));
+                        }
+                        return (0, _.Z)(e, t);
+                    }
+                }(null != n ? n : [], r)) && void 0 !== e ? e : T;
+            }, [
+                n,
+                r
+            ]);
+        }(n, D), P = i.useRef(I), U = i.useRef(v), w = i.useRef(null), x = window.devicePixelRatio, {
+            lastBackgroundFillColor: G,
+            backgroundFillColor: k,
+            lastActiveFillColor: B,
+            activeFillColor: F,
+            lastInactiveFillColor: V,
+            inactiveFillColor: H
+        } = function (e, t) {
+            let n = (0, l.useToken)(s.Z.colors.INTERACTIVE_MUTED).hex(), r = (0, l.useToken)(s.Z.colors.INTERACTIVE_NORMAL).hex(), i = (0, l.useToken)(s.Z.colors.INTERACTIVE_ACTIVE).hex(), a = (0, l.useToken)(s.Z.unsafe_rawColors.BRAND_430).hex(), o = (0, l.useToken)(s.Z.unsafe_rawColors.WHITE_500).hex(), u = t ? a : n, [c, d] = A(u, t, e), [_, E] = A(t ? o : e ? i : r, t, e), [f, h] = A(e ? u : r, t, e);
+            return {
+                lastBackgroundFillColor: c,
+                backgroundFillColor: d,
+                lastActiveFillColor: _,
+                activeFillColor: E,
+                lastInactiveFillColor: f,
+                inactiveFillColor: h
+            };
+        }(I, v);
+    i.useEffect(() => {
+        let e = g({
+            showAll: !I,
+            currentTime: a,
+            duration: d,
+            numSegments: M.length
+        });
+        b.current = M.map((t, n) => new E.Z(n < e ? t : 0));
+    }, [M]), i.useEffect(() => {
+        let e = b.current;
+        if (null == e)
+            return;
+        let t = g({
+            showAll: !I,
+            currentTime: a,
+            duration: d,
+            numSegments: M.length
+        });
+        for (let n = 0; n < e.length; n++) {
+            let r = e[n];
+            if (n < t) {
+                r.animateTo(M[n]);
+                continue;
+            }
+            r.reset();
         }
-        let n = [];
-        for (let e = 0; e < t.length; e++) n[e] = t.charCodeAt(e) / I.Xi;
-        return n
-      })(e), [e]),
-      i = r.useMemo(() => (function(e) {
-        if (null != e) return Math.floor((e + 4) / 6)
-      })(t), [t]);
-    return r.useMemo(() => {
-      var e;
-      return null !== (e = function(e, t) {
-        if (null != e && null != t) {
-          if (e.length < t) {
-            let n = t - e.length;
-            return e.concat(Array(n).fill(0))
-          }
-          return (0, c.Z)(e, t)
-        }
-      }(null != n ? n : [], i)) && void 0 !== e ? e : N
-    }, [n, i])
-  }(n, D), U = r.useRef(f), b = r.useRef(C), G = r.useRef(null), w = window.devicePixelRatio, {
-    lastBackgroundFillColor: k,
-    backgroundFillColor: B,
-    lastActiveFillColor: x,
-    activeFillColor: V,
-    lastInactiveFillColor: Z,
-    inactiveFillColor: H
-  } = function(e, t) {
-    let n = (0, l.useToken)(a.Z.colors.INTERACTIVE_MUTED).hex(),
-      i = (0, l.useToken)(a.Z.colors.INTERACTIVE_NORMAL).hex(),
-      r = (0, l.useToken)(a.Z.colors.INTERACTIVE_ACTIVE).hex(),
-      s = (0, l.useToken)(a.Z.unsafe_rawColors.BRAND_430).hex(),
-      o = (0, l.useToken)(a.Z.unsafe_rawColors.WHITE_500).hex(),
-      u = t ? s : n,
-      [_, d] = O(u, t, e),
-      [c, E] = O(t ? o : e ? r : i, t, e),
-      [I, T] = O(e ? u : i, t, e);
-    return {
-      lastBackgroundFillColor: _,
-      backgroundFillColor: d,
-      lastActiveFillColor: c,
-      activeFillColor: E,
-      lastInactiveFillColor: I,
-      inactiveFillColor: T
-    }
-  }(f, C);
-  r.useEffect(() => {
-    let e = A({
-      showAll: !f,
-      currentTime: s,
-      duration: d,
-      numSegments: y.length
+    }, [
+        M,
+        a,
+        d,
+        I
+    ]), i.useEffect(() => {
+        let e = null;
+        return e = requestAnimationFrame(function t(n) {
+            let r = y.current, i = null == r ? void 0 : r.getContext('2d'), a = b.current;
+            if (null == r || null == i || null == a)
+                return;
+            let o = !1;
+            (P.current !== I || U.current !== v) && (P.current = I, U.current = v, w.current = n), null != w.current && n > w.current + 200 && (w.current = null);
+            let s = r.height / x;
+            i.clearRect(0, 0, r.width, r.height), i.beginPath();
+            let [l, u] = N(G, k, n, w.current);
+            o = o || u, i.fillStyle = l;
+            for (let e = 0; e < M.length; e++)
+                S({
+                    context: i,
+                    devicePixelRatio: x,
+                    canvasHeight: s,
+                    segmentValue: M[e],
+                    segmentIndex: e,
+                    constrainMin: !0
+                });
+            i.fill();
+            let [c, d] = N(V, H, n, w.current);
+            o = o || d;
+            let [_, E] = N(B, F, n, w.current);
+            o = o || E;
+            for (let e = 0; e < a.length; e++) {
+                let t = a[e], n = Math.max(t.getCurrentValue(), M[e] - 0.1);
+                i.beginPath(), i.fillStyle = t.isReset ? c : _, S({
+                    context: i,
+                    devicePixelRatio: x,
+                    canvasHeight: s,
+                    segmentValue: n,
+                    segmentIndex: e,
+                    constrainMin: !t.isReset
+                }), o = o || t.isAnimating(), i.fill();
+            }
+            o && (e = requestAnimationFrame(t));
+        }), () => {
+            null != e && cancelAnimationFrame(e);
+        };
+    }, [
+        y,
+        x,
+        M,
+        D,
+        a,
+        d,
+        I,
+        v,
+        G,
+        k,
+        B,
+        F,
+        V,
+        H
+    ]);
+    let [, Z] = (0, c.Z)({
+        ref: y,
+        onDrag: O,
+        onDragStart: R,
+        onDragEnd: C
     });
-    P.current = y.map((t, n) => new E.Z(n < e ? t : 0))
-  }, [y]), r.useEffect(() => {
-    let e = P.current;
-    if (null == e) return;
-    let t = A({
-      showAll: !f,
-      currentTime: s,
-      duration: d,
-      numSegments: y.length
+    return (0, r.jsx)('canvas', {
+        onMouseDown: Z,
+        className: o()(h.canvas, t),
+        style: { width: L },
+        ref: y,
+        height: 32 * window.devicePixelRatio,
+        width: (null != D ? D : 0) * window.devicePixelRatio
     });
-    for (let n = 0; n < e.length; n++) {
-      let i = e[n];
-      if (n < t) {
-        i.animateTo(y[n]);
-        continue
-      }
-      i.reset()
-    }
-  }, [y, s, d, f]), r.useEffect(() => {
-    let e = null;
-    return e = requestAnimationFrame(function t(n) {
-      let i = v.current,
-        r = null == i ? void 0 : i.getContext("2d"),
-        s = P.current;
-      if (null == i || null == r || null == s) return;
-      let o = !1;
-      (U.current !== f || b.current !== C) && (U.current = f, b.current = C, G.current = n), null != G.current && n > G.current + 200 && (G.current = null);
-      let a = i.height / w;
-      r.clearRect(0, 0, i.width, i.height), r.beginPath();
-      let [l, u] = R(k, B, n, G.current);
-      o = o || u, r.fillStyle = l;
-      for (let e = 0; e < y.length; e++) m({
-        context: r,
-        devicePixelRatio: w,
-        canvasHeight: a,
-        segmentValue: y[e],
-        segmentIndex: e,
-        constrainMin: !0
-      });
-      r.fill();
-      let [_, d] = R(Z, H, n, G.current);
-      o = o || d;
-      let [c, E] = R(x, V, n, G.current);
-      o = o || E;
-      for (let e = 0; e < s.length; e++) {
-        let t = s[e],
-          n = Math.max(t.getCurrentValue(), y[e] - .1);
-        r.beginPath(), r.fillStyle = t.isReset ? _ : c, m({
-          context: r,
-          devicePixelRatio: w,
-          canvasHeight: a,
-          segmentValue: n,
-          segmentIndex: e,
-          constrainMin: !t.isReset
-        }), o = o || t.isAnimating(), r.fill()
-      }
-      o && (e = requestAnimationFrame(t))
-    }), () => {
-      null != e && cancelAnimationFrame(e)
-    }
-  }, [v, w, y, D, s, d, f, C, k, B, x, V, Z, H]);
-  let [, F] = (0, _.Z)({
-    ref: v,
-    onDrag: p,
-    onDragStart: g,
-    onDragEnd: L
-  });
-  return (0, i.jsx)("canvas", {
-    onMouseDown: F,
-    className: o()(T.canvas, t),
-    style: {
-      width: M
-    },
-    ref: v,
-    height: 32 * window.devicePixelRatio,
-    width: (null != D ? D : 0) * window.devicePixelRatio
-  })
 }

@@ -1,151 +1,148 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return O
-  }
-}), t(47120), t(536091);
-var n = t(735250),
-  i = t(470079),
-  l = t(442837),
-  a = t(692547),
-  r = t(481060),
-  o = t(999382),
-  c = t(279542),
-  d = t(725808),
-  u = t(823379),
-  E = t(63063),
-  _ = t(426563),
-  I = t(727072),
-  T = t(85960),
-  N = t(577330),
-  m = t(65912),
-  S = t(51248),
-  h = t(546513),
-  g = t(572456),
-  x = t(273504),
-  C = t(981631),
-  R = t(689938),
-  L = t(812364);
-
-function O(e) {
-  var s, t;
-  let {
-    guildId: O,
-    setPreventNavigation: A = () => {}
-  } = e, {
-    editingRule: p,
-    setEditingRule: M
-  } = (0, m.V)(), {
-    guild: f,
-    subsection: v
-  } = (0, l.cj)([o.Z], () => o.Z.getProps()), D = null !== (t = null !== (s = null == f ? void 0 : f.id) && void 0 !== s ? s : O) && void 0 !== t ? t : C.lds, Z = null != p, [j] = (0, I.RD)(D), {
-    rulesByTriggerType: U
-  } = (0, I.pH)(D), G = {
-    [T.vh.MEMBERS]: R.Z.Messages.GUILD_SETTINGS_AUTOMOD_MEMBER_CATEGORY_TITLE,
-    [T.vh.CONTENT]: R.Z.Messages.GUILD_SETTINGS_AUTOMOD_CONTENT_CATEGORY_TITLE
-  }, P = i.useMemo(() => Object.values(null != U ? U : {}).flat().filter(u.lm), [U]);
-  i.useEffect(() => {
-    Z && M(null)
-  }, [D]);
-  let b = i.useCallback((e, s) => {
-      if (null != e) {
-        var t, n;
-        return null !== (n = null === (t = P.find(s => {
-          let {
-            id: t
-          } = s;
-          return t === e
-        })) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null
-      }
-      return null != s ? T.I6[s].getDefaultRuleName() : null
-    }, [P]),
-    B = i.useMemo(() => {
-      var e, s;
-      return b(null !== (e = null == p ? void 0 : p.id) && void 0 !== e ? e : null, null !== (s = null == p ? void 0 : p.triggerType) && void 0 !== s ? s : null)
-    }, [b, p]);
-  i.useEffect(() => {
-    A(Z, (0, g.af)(B))
-  }, [A, Z, B]);
-  let y = (0, T.Z6)(D),
-    F = e => (0, n.jsx)(n.Fragment, {
-      children: e.map(e => {
-        var s;
-        return (0, n.jsx)(h.Z, {
-          guildId: D,
-          triggerType: e,
-          rules: null !== (s = U[e]) && void 0 !== s ? s : [],
-          initWithEdit: v === C.KsC.AUTOMOD_MENTION_SPAM && e === x.fX.MENTION_SPAM
-        }, e)
-      })
+n.d(t, {
+    Z: function () {
+        return R;
+    }
+}), n(47120), n(536091);
+var s = n(735250), a = n(470079), i = n(442837), r = n(692547), l = n(481060), o = n(999382), c = n(279542), d = n(823379), u = n(63063), _ = n(426563), E = n(727072), I = n(85960), T = n(577330), m = n(65912), N = n(51248), S = n(546513), h = n(572456), g = n(273504), C = n(981631), x = n(689938), p = n(312831);
+function R(e) {
+    var t, n;
+    let {
+            guildId: R,
+            setPreventNavigation: f = () => {
+            }
+        } = e, {
+            editingRule: L,
+            setEditingRule: O
+        } = (0, m.V)(), {
+            guild: A,
+            subsection: M
+        } = (0, i.cj)([o.Z], () => o.Z.getProps()), v = null !== (n = null !== (t = null == A ? void 0 : A.id) && void 0 !== t ? t : R) && void 0 !== n ? n : C.lds, D = null != L, [j] = (0, E.RD)(v), {rulesByTriggerType: Z} = (0, E.pH)(v), b = {
+            [I.vh.MEMBERS]: x.Z.Messages.GUILD_SETTINGS_AUTOMOD_MEMBER_CATEGORY_TITLE,
+            [I.vh.CONTENT]: x.Z.Messages.GUILD_SETTINGS_AUTOMOD_CONTENT_CATEGORY_TITLE
+        }, U = a.useMemo(() => Object.values(null != Z ? Z : {}).flat().filter(d.lm), [Z]);
+    a.useEffect(() => {
+        D && O(null);
+    }, [v]);
+    let G = a.useCallback((e, t) => {
+            if (null != e) {
+                var n, s;
+                return null !== (s = null === (n = U.find(t => {
+                    let {id: n} = t;
+                    return n === e;
+                })) || void 0 === n ? void 0 : n.name) && void 0 !== s ? s : null;
+            }
+            return null != t ? I.I6[t].getDefaultRuleName() : null;
+        }, [U]), P = a.useMemo(() => {
+            var e, t;
+            return G(null !== (e = null == L ? void 0 : L.id) && void 0 !== e ? e : null, null !== (t = null == L ? void 0 : L.triggerType) && void 0 !== t ? t : null);
+        }, [
+            G,
+            L
+        ]);
+    a.useEffect(() => {
+        f(D, (0, h.af)(P));
+    }, [
+        f,
+        D,
+        P
+    ]);
+    let B = (0, I.Z6)(v), y = e => (0, s.jsx)(s.Fragment, {
+            children: e.map(e => {
+                var t;
+                return (0, s.jsx)(S.Z, {
+                    guildId: v,
+                    triggerType: e,
+                    rules: null !== (t = Z[e]) && void 0 !== t ? t : [],
+                    initWithEdit: M === C.KsC.AUTOMOD_MENTION_SPAM && e === g.fX.MENTION_SPAM
+                }, e);
+            })
+        });
+    return (0, s.jsxs)(l.FormSection, {
+        title: x.Z.Messages.GUILD_SETTINGS_AUTOMOD_TITLE,
+        tag: 'h1',
+        children: [
+            (0, s.jsxs)('div', {
+                className: p.descriptionContainer,
+                children: [
+                    (0, s.jsxs)(l.FormSection, {
+                        tag: 'h3',
+                        className: p.description,
+                        titleClassName: p.descriptionHeader,
+                        children: [
+                            (0, s.jsx)(l.Text, {
+                                variant: 'text-md/medium',
+                                color: 'header-secondary',
+                                children: x.Z.Messages.GUILD_SETTINGS_AUTOMOD_MESSAGE_FILTER_DESCRIPTION
+                            }),
+                            (0, s.jsx)(l.Text, {
+                                variant: 'text-sm/medium',
+                                className: p.helpUrl,
+                                children: x.Z.Messages.GUILD_AUTOMOD_LEARN_MORE_LINK.format({ helpUrl: u.Z.getArticleURL(C.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
+                            })
+                        ]
+                    }),
+                    (0, s.jsxs)('div', {
+                        className: p.descriptionAvatarContainer,
+                        children: [
+                            (0, s.jsx)(l.Avatar, {
+                                src: (0, _.j)(),
+                                size: l.AvatarSizes.SIZE_80,
+                                'aria-label': x.Z.Messages.GUILD_AUTOMOD_USERNAME
+                            }),
+                            (0, s.jsx)(l.TextBadge, {
+                                text: (0, s.jsxs)('div', {
+                                    className: p.automodBadgeText,
+                                    children: [
+                                        (0, s.jsx)(l.CheckmarkBoldIcon, {
+                                            size: 'xxs',
+                                            color: 'currentColor',
+                                            className: p.checkmarkIcon
+                                        }),
+                                        (0, s.jsx)(l.Text, {
+                                            variant: 'text-xs/bold',
+                                            className: p.automodText,
+                                            children: x.Z.Messages.GUILD_AUTOMOD_USERNAME
+                                        })
+                                    ]
+                                }),
+                                color: r.Z.unsafe_rawColors.BRAND_500.css,
+                                className: p.textBadge
+                            })
+                        ]
+                    })
+                ]
+            }),
+            j ? (0, s.jsx)(T.Z, {}) : Object.entries(B).map(e => {
+                let [t, n] = e;
+                if (0 === n.length)
+                    return (0, s.jsx)(a.Fragment, {}, t);
+                let i = null != b[t] ? (0, s.jsx)(l.FormSection, {
+                    tag: 'h3',
+                    className: p.categoryHeader,
+                    children: (0, s.jsx)(l.Text, {
+                        variant: 'text-lg/normal',
+                        color: 'header-primary',
+                        children: b[t]
+                    })
+                }) : null;
+                return (0, s.jsxs)('div', {
+                    className: p.categoryContainer,
+                    children: [
+                        i,
+                        y(n)
+                    ]
+                }, t);
+            }),
+            null != A && (0, s.jsx)(c.k0, {
+                guild: A,
+                withDivider: !1,
+                className: p.explicitContentFilterSection
+            }),
+            (0, s.jsx)(N.Z, {
+                guildId: v,
+                existingRules: U
+            }),
+            D && (0, s.jsx)('div', { className: p.endSpacer })
+        ]
     });
-  return (0, n.jsxs)(r.FormSection, {
-    title: R.Z.Messages.GUILD_SETTINGS_AUTOMOD_TITLE,
-    tag: "h1",
-    children: [(0, n.jsxs)("div", {
-      className: L.descriptionContainer,
-      children: [(0, n.jsxs)(r.FormSection, {
-        tag: "h3",
-        className: L.description,
-        titleClassName: L.descriptionHeader,
-        children: [(0, n.jsx)(r.Text, {
-          variant: "text-md/medium",
-          color: "header-secondary",
-          children: R.Z.Messages.GUILD_SETTINGS_AUTOMOD_MESSAGE_FILTER_DESCRIPTION
-        }), (0, n.jsx)(r.Text, {
-          variant: "text-sm/medium",
-          className: L.helpUrl,
-          children: R.Z.Messages.GUILD_AUTOMOD_LEARN_MORE_LINK.format({
-            helpUrl: E.Z.getArticleURL(C.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE)
-          })
-        })]
-      }), (0, n.jsxs)("div", {
-        className: L.descriptionAvatarContainer,
-        children: [(0, n.jsx)(r.Avatar, {
-          src: (0, _.j)(),
-          size: r.AvatarSizes.SIZE_80,
-          "aria-label": R.Z.Messages.GUILD_AUTOMOD_USERNAME
-        }), (0, n.jsx)(r.TextBadge, {
-          text: (0, n.jsxs)("div", {
-            className: L.automodBadgeText,
-            children: [(0, n.jsx)(d.Z, {
-              width: 12,
-              height: 12,
-              className: L.checkmarkIcon
-            }), (0, n.jsx)(r.Text, {
-              variant: "text-xs/bold",
-              className: L.automodText,
-              children: R.Z.Messages.GUILD_AUTOMOD_USERNAME
-            })]
-          }),
-          color: a.Z.unsafe_rawColors.BRAND_500.css,
-          className: L.textBadge
-        })]
-      })]
-    }), j ? (0, n.jsx)(N.Z, {}) : Object.entries(y).map(e => {
-      let [s, t] = e;
-      if (0 === t.length) return (0, n.jsx)(i.Fragment, {}, s);
-      let l = null != G[s] ? (0, n.jsx)(r.FormSection, {
-        tag: "h3",
-        className: L.categoryHeader,
-        children: (0, n.jsx)(r.Text, {
-          variant: "text-lg/normal",
-          color: "header-primary",
-          children: G[s]
-        })
-      }) : null;
-      return (0, n.jsxs)("div", {
-        className: L.categoryContainer,
-        children: [l, F(t)]
-      }, s)
-    }), null != f && (0, n.jsx)(c.k0, {
-      guild: f,
-      withDivider: !1,
-      className: L.explicitContentFilterSection
-    }), (0, n.jsx)(S.Z, {
-      guildId: D,
-      existingRules: P
-    }), Z && (0, n.jsx)("div", {
-      className: L.endSpacer
-    })]
-  })
 }

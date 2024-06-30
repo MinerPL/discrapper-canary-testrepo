@@ -1,23 +1,18 @@
-"use strict";
 n.d(t, {
-  S5: function() {
-    return s
-  },
-  Yz: function() {
-    return i
-  },
-  dD: function() {
-    return a
-  },
-  pt: function() {
-    return o
-  },
-  ve: function() {
-    return r
-  }
+    S5: function () {
+        return a;
+    },
+    Yz: function () {
+        return r;
+    },
+    dD: function () {
+        return s;
+    },
+    pt: function () {
+        return o;
+    },
+    ve: function () {
+        return i;
+    }
 });
-let i = "guild-product-edit-modal",
-  r = 1073741824,
-  s = 1073741824,
-  o = 10,
-  a = 30
+let r = 'guild-product-edit-modal', i = 1073741824, a = 1073741824, o = 10, s = 30;

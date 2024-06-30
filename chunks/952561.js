@@ -1,14 +1,10 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return a;
+    }
 }), n(47120);
-var i = n(835473),
-  r = n(716600);
-
-function s() {
-  let e = (0, r.Z)(),
-    [t] = (0, i.Z)(null == e ? [] : [e.applicationId]);
-  return null != t ? t : void 0
+var r = n(835473), i = n(716600);
+function a() {
+    let e = (0, i.Z)(), [t] = (0, r.Z)(null == e ? [] : [e.applicationId]);
+    return null != t ? t : void 0;
 }

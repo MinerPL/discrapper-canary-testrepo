@@ -1,15 +1,13 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return r
-  }
+    Z: function () {
+        return i;
+    }
 });
-var i = n(981631);
-
-function r(e) {
-  let {
-    LayerStore: t,
-    PopoutWindowStore: n
-  } = e, r = t.hasLayers(), s = n.getWindowOpen(i.KJ3.CHANNEL_CALL_POPOUT);
-  return r && !s
+var r = n(981631);
+function i(e) {
+    let {
+            LayerStore: t,
+            PopoutWindowStore: n
+        } = e, i = t.hasLayers(), a = n.getWindowOpen(r.KJ3.CHANNEL_CALL_POPOUT);
+    return i && !a;
 }

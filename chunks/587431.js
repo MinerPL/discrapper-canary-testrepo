@@ -1,18 +1,15 @@
-"use strict";
-t.d(s, {
-  Z: function() {
-    return a
-  }
+n.d(t, {
+    Z: function () {
+        return r;
+    }
 });
-var n = t(735250);
-t(470079);
-var i = t(696202),
-  l = t(696936);
-
-function a(e) {
-  return (0, n.jsx)(l.Z, {
-    color: l.W.RED,
-    icon: i.Z,
-    ...e
-  })
+var s = n(735250);
+n(470079);
+var a = n(481060), i = n(696936);
+function r(e) {
+    return (0, s.jsx)(i.Z, {
+        color: i.W.RED,
+        icon: a.CircleXIcon,
+        ...e
+    });
 }

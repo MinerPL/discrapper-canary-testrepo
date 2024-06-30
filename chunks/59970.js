@@ -1,31 +1,28 @@
-"use strict";
-t.d(s, {
-  k: function() {
-    return a
-  }
+n.d(t, {
+    k: function () {
+        return r;
+    }
 });
-var n = t(544891),
-  i = t(570140),
-  l = t(981631);
-async function a(e) {
-  i.Z.dispatch({
-    type: "DISCOVER_CHECKLIST_FETCH_START",
-    guildId: e
-  });
-  try {
-    let s = await n.tn.get({
-      url: l.ANM.GUILD_DISCOVERY_REQUIREMENTS(e),
-      oldFormErrors: !0
+var s = n(544891), a = n(570140), i = n(981631);
+async function r(e) {
+    a.Z.dispatch({
+        type: 'DISCOVER_CHECKLIST_FETCH_START',
+        guildId: e
     });
-    i.Z.dispatch({
-      type: "DISCOVER_CHECKLIST_FETCH_SUCCESS",
-      guildId: e,
-      checklist: s.body
-    })
-  } catch (s) {
-    i.Z.dispatch({
-      type: "DISCOVER_CHECKLIST_FETCH_FAILURE",
-      guildId: e
-    })
-  }
+    try {
+        let t = await s.tn.get({
+            url: i.ANM.GUILD_DISCOVERY_REQUIREMENTS(e),
+            oldFormErrors: !0
+        });
+        a.Z.dispatch({
+            type: 'DISCOVER_CHECKLIST_FETCH_SUCCESS',
+            guildId: e,
+            checklist: t.body
+        });
+    } catch (t) {
+        a.Z.dispatch({
+            type: 'DISCOVER_CHECKLIST_FETCH_FAILURE',
+            guildId: e
+        });
+    }
 }

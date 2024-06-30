@@ -1,21 +1,17 @@
-"use strict";
 n.d(t, {
-  g: function() {
-    return r
-  },
-  n: function() {
-    return s
-  }
+    g: function () {
+        return i;
+    },
+    n: function () {
+        return a;
+    }
 });
-var i = n(735250);
-let r = n(470079).createContext(!1);
-
-function s(e) {
-  let {
-    children: t
-  } = e;
-  return (0, i.jsx)(r.Provider, {
-    value: !0,
-    children: t
-  })
+var r = n(735250);
+let i = n(470079).createContext(!1);
+function a(e) {
+    let {children: t} = e;
+    return (0, r.jsx)(i.Provider, {
+        value: !0,
+        children: t
+    });
 }

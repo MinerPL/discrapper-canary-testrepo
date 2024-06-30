@@ -1,37 +1,33 @@
-"use strict";
-t.d(s, {
-  G7: function() {
-    return r
-  },
-  LG: function() {
-    return d
-  },
-  Pg: function() {
-    return a
-  },
-  ZI: function() {
-    return i
-  },
-  _0: function() {
-    return o
-  }
+n.d(t, {
+    G7: function () {
+        return l;
+    },
+    LG: function () {
+        return d;
+    },
+    Pg: function () {
+        return r;
+    },
+    ZI: function () {
+        return a;
+    },
+    _0: function () {
+        return o;
+    }
 });
-var n, i, l = t(689938);
-let a = 5,
-  r = 10,
-  o = 30;
-(n = i || (i = {}))[n.DISPLAY = 0] = "DISPLAY", n[n.PERMISSIONS = 1] = "PERMISSIONS", n[n.MEMBERS = 2] = "MEMBERS", n[n.VERIFICATIONS = 3] = "VERIFICATIONS";
+var s, a, i = n(689938);
+let r = 5, l = 10, o = 30;
+(s = a || (a = {}))[s.DISPLAY = 0] = 'DISPLAY', s[s.PERMISSIONS = 1] = 'PERMISSIONS', s[s.MEMBERS = 2] = 'MEMBERS', s[s.VERIFICATIONS = 3] = 'VERIFICATIONS';
 let c = {
-  afk_channel_id: () => l.Z.Messages.FORM_LABEL_AFK_CHANNEL,
-  public_updates_channel_id: () => l.Z.Messages.GUILD_SETTINGS_COMMUNITY_MOD_CHANNEL_TITLE,
-  safety_alerts_channel_id: () => l.Z.Messages.GUILD_ANTIRAID_SAFETY_CHANNEL_TITLE,
-  system_channel_id: () => l.Z.Messages.FORM_LABEL_SYSTEM_CHANNEL
+    afk_channel_id: () => i.Z.Messages.FORM_LABEL_AFK_CHANNEL,
+    public_updates_channel_id: () => i.Z.Messages.GUILD_SETTINGS_COMMUNITY_MOD_CHANNEL_TITLE,
+    safety_alerts_channel_id: () => i.Z.Messages.GUILD_ANTIRAID_SAFETY_CHANNEL_TITLE,
+    system_channel_id: () => i.Z.Messages.FORM_LABEL_SYSTEM_CHANNEL
 };
-
 function d(e) {
-  var s;
-  if (0 === Object.keys(e).length) return null;
-  let t = Object.keys(e)[0],
-    n = null === (s = c[t]) || void 0 === s ? void 0 : s.call(c);
-  return null != n ? "(".concat(n, ") ").concat(e[t]) : e[t]
+    var t;
+    if (0 === Object.keys(e).length)
+        return null;
+    let n = Object.keys(e)[0], s = null === (t = c[n]) || void 0 === t ? void 0 : t.call(c);
+    return null != s ? '('.concat(s, ') ').concat(e[n]) : e[n];
 }

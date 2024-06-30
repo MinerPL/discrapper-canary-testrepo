@@ -1,60 +1,54 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return d
-  }
+    Z: function () {
+        return d;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(239091),
-  l = n(665692),
-  u = n(689938),
-  _ = n(603649);
-
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(239091), l = n(665692), u = n(689938), c = n(635195);
 function d(e) {
-  var t;
-  let s, d, c, {
-      className: E,
-      activeCommand: I,
-      activeOption: T,
-      optionStates: h
-    } = e,
-    S = r.useCallback(e => {
-      var t;
-      let r = null == I ? void 0 : null === (t = I.rootCommand) || void 0 === t ? void 0 : t.id;
-      if (null == r) {
-        e.preventDefault();
-        return
-      }(0, a.jW)(e, async () => {
-        let {
-          default: e
-        } = await n.e("5396").then(n.bind(n, 731646));
-        return t => (0, i.jsx)(e, {
-          ...t,
-          id: r,
-          label: u.Z.Messages.COPY_ID_COMMAND
-        })
-      })
-    }, [null == I ? void 0 : null === (t = I.rootCommand) || void 0 === t ? void 0 : t.id]);
-  if (null == I) return null;
-  if (null != T) {
-    let e = h[T.name].lastValidationResult;
-    s = T.displayName, d = T.displayDescription, c = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error
-  } else s = "".concat(l.GI).concat(I.displayName), d = I.displayDescription, c = null;
-  return (0, i.jsxs)("div", {
-    className: o()(E, _.bar),
-    onContextMenu: S,
-    children: [(0, i.jsx)("span", {
-      className: _.name,
-      children: s
-    }), null != c ? (0, i.jsx)("span", {
-      className: _.error,
-      children: c
-    }) : (0, i.jsx)("span", {
-      className: _.description,
-      children: d
-    })]
-  })
+    var t;
+    let a, d, _, {
+            className: E,
+            activeCommand: f,
+            activeOption: h,
+            optionStates: p
+        } = e, m = i.useCallback(e => {
+            var t;
+            let i = null == f ? void 0 : null === (t = f.rootCommand) || void 0 === t ? void 0 : t.id;
+            if (null == i) {
+                e.preventDefault();
+                return;
+            }
+            (0, s.jW)(e, async () => {
+                let {default: e} = await n.e('5396').then(n.bind(n, 731646));
+                return t => (0, r.jsx)(e, {
+                    ...t,
+                    id: i,
+                    label: u.Z.Messages.COPY_ID_COMMAND
+                });
+            });
+        }, [null == f ? void 0 : null === (t = f.rootCommand) || void 0 === t ? void 0 : t.id]);
+    if (null == f)
+        return null;
+    if (null != h) {
+        let e = p[h.name].lastValidationResult;
+        a = h.displayName, d = h.displayDescription, _ = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error;
+    } else
+        a = ''.concat(l.GI).concat(f.displayName), d = f.displayDescription, _ = null;
+    return (0, r.jsxs)('div', {
+        className: o()(E, c.bar),
+        onContextMenu: m,
+        children: [
+            (0, r.jsx)('span', {
+                className: c.name,
+                children: a
+            }),
+            null != _ ? (0, r.jsx)('span', {
+                className: c.error,
+                children: _
+            }) : (0, r.jsx)('span', {
+                className: c.description,
+                children: d
+            })
+        ]
+    });
 }

@@ -1,28 +1,24 @@
-"use strict";
 n.d(t, {
-  n: function() {
-    return a
-  }
+    n: function () {
+        return s;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(120356),
-  s = n.n(r),
-  o = n(159242);
-
-function a(e) {
-  let {
-    id: t,
-    tag: n = "span",
-    showOnFocus: r,
-    children: a
-  } = e;
-  return (0, i.jsx)(n, {
-    id: t,
-    className: s()({
-      [o.hiddenVisually]: !r,
-      [o.showOnFocus]: r
-    }),
-    children: a
-  })
+var i = n(120356), a = n.n(i), o = n(691463);
+function s(e) {
+    let {
+        id: t,
+        tag: n = 'span',
+        showOnFocus: i,
+        children: s
+    } = e;
+    return (0, r.jsx)(n, {
+        id: t,
+        className: a()({
+            [o.hiddenVisually]: !i,
+            [o.showOnFocus]: i
+        }),
+        children: s
+    });
 }

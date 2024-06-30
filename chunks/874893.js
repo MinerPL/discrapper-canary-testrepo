@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  K: function() {
-    return i
-  }
-}), (r = i || (i = {}))[r.UNSET = 0] = "UNSET", r[r.OFF = 1] = "OFF", r[r.ON = 2] = "ON"
+    K: function () {
+        return r;
+    }
+}), (i = r || (r = {}))[i.UNSET = 0] = 'UNSET', i[i.OFF = 1] = 'OFF', i[i.ON = 2] = 'ON';

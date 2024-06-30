@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  z: function() {
-    return i
-  }
-}), (r = i || (i = {}))[r.NONE = 0] = "NONE", r[r.WEEKLY = 1] = "WEEKLY", r[r.MONTHLY = 2] = "MONTHLY", r[r.YEARLY = 3] = "YEARLY", r[r.WEEKDAY_ONLY = 4] = "WEEKDAY_ONLY", r[r.BIWEEKLY = 5] = "BIWEEKLY", r[r.WEEKEND_ONLY = 6] = "WEEKEND_ONLY"
+    z: function () {
+        return r;
+    }
+}), (i = r || (r = {}))[i.NONE = 0] = 'NONE', i[i.WEEKLY = 1] = 'WEEKLY', i[i.MONTHLY = 2] = 'MONTHLY', i[i.YEARLY = 3] = 'YEARLY', i[i.WEEKDAY_ONLY = 4] = 'WEEKDAY_ONLY', i[i.BIWEEKLY = 5] = 'BIWEEKLY', i[i.WEEKEND_ONLY = 6] = 'WEEKEND_ONLY';

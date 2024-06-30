@@ -1,56 +1,45 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return g
-  }
+    Z: function () {
+        return p;
+    }
 });
 var i = n(735250);
 n(470079);
-var s = n(120356),
-  l = n.n(s),
-  a = n(442837),
-  o = n(331650),
-  r = n(278724),
-  d = n(481060),
-  c = n(556296),
-  u = n(357727),
-  h = n(779863),
-  p = n(13140),
-  f = n(981631),
-  E = n(480004);
-let Z = {
-  [f.kg4.TOGGLE_MUTE]: {
-    legacy: {
-      slash: h.Z,
-      default: u.Z
-    },
-    new: {
-      slash: r.n,
-      default: o.S
+var s = n(120356), a = n.n(s), o = n(442837), r = n(481060), l = n(556296), c = n(13140), d = n(981631), u = n(979708);
+let h = {
+    [d.kg4.TOGGLE_MUTE]: {
+        legacy: {
+            slash: r.MicrophoneSlashIcon,
+            default: r.MicrophoneIcon
+        },
+        new: {
+            slash: r.MicrophoneSlashIcon,
+            default: r.MicrophoneIcon
+        }
     }
-  }
 };
-
-function g(e) {
-  let {
-    value: t,
-    action: n,
-    shouldShow: s
-  } = e, o = (0, a.e7)([c.Z], () => c.Z.getKeybindForAction(n, !1, !0)), r = (0, d.useRedesignIconContext)().enabled;
-  if (null == o || !s) return null;
-  let u = p.BB(o.shortcut),
-    h = r ? Z[n].new : Z[n].legacy,
-    f = t ? h.slash : h.default;
-  return (0, i.jsxs)("div", {
-    className: E.keybindIndicator,
-    children: [(0, i.jsx)(f, {
-      className: E.keybindIcon,
-      width: 16,
-      height: 16
-    }), (0, i.jsx)(d.Text, {
-      variant: "text-xxs/semibold",
-      className: l()(E.keybindIndicatorText),
-      children: u
-    })]
-  })
+function p(e) {
+    let {
+            value: t,
+            action: n,
+            shouldShow: s
+        } = e, d = (0, o.e7)([l.Z], () => l.Z.getKeybindForAction(n, !1, !0)), p = (0, r.useRedesignIconContext)().enabled;
+    if (null == d || !s)
+        return null;
+    let f = c.BB(d.shortcut), _ = p ? h[n].new : h[n].legacy, g = t ? _.slash : _.default;
+    return (0, i.jsxs)('div', {
+        className: u.keybindIndicator,
+        children: [
+            (0, i.jsx)(g, {
+                className: u.keybindIcon,
+                size: 'xs',
+                color: 'currentColor'
+            }),
+            (0, i.jsx)(r.Text, {
+                variant: 'text-xxs/semibold',
+                className: a()(u.keybindIndicatorText),
+                children: f
+            })
+        ]
+    });
 }

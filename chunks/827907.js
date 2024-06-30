@@ -1,46 +1,37 @@
-"use strict";
-t.d(s, {
-  EH: function() {
-    return E
-  },
-  Mf: function() {
-    return d
-  },
-  lL: function() {
-    return _
-  },
-  t4: function() {
-    return u
-  }
+n.d(t, {
+    EH: function () {
+        return _;
+    },
+    Mf: function () {
+        return d;
+    },
+    lL: function () {
+        return E;
+    },
+    t4: function () {
+        return u;
+    }
 });
-var n = t(442837),
-  i = t(592125),
-  l = t(430824),
-  a = t(700785),
-  r = t(889369),
-  o = t(981631),
-  c = t(689938);
-
-function d(e, s) {
-  return (0, n.e7)([r.Z], () => r.Z.editedDefaultChannelIds.has(e) || null != s && r.Z.editedDefaultChannelIds.has(s))
+var s = n(442837), a = n(592125), i = n(430824), r = n(700785), l = n(889369), o = n(981631), c = n(689938);
+function d(e, t) {
+    return (0, s.e7)([l.Z], () => l.Z.editedDefaultChannelIds.has(e) || null != t && l.Z.editedDefaultChannelIds.has(t));
 }
-
-function u(e, s) {
-  return (0, n.e7)([r.Z], () => e === s || null != s && r.Z.editedDefaultChannelIds.has(s))
+function u(e, t) {
+    return (0, s.e7)([l.Z], () => e === t || null != t && l.Z.editedDefaultChannelIds.has(t));
 }
-
-function E(e, s) {
-  return (0, n.e7)([r.Z, i.Z], () => null != s && r.Z.editedDefaultChannelIds.has(s) ? c.Z.Messages.CHANNEL_BROWSER_DISABLED_BY_CATEGORY : a.Uu(o.Plq.VIEW_CHANNEL, i.Z.getChannel(e)) ? void 0 : c.Z.Messages.DEFAULT_CHANNELS_DISABLED_PRIVATE)
+function _(e, t) {
+    return (0, s.e7)([
+        l.Z,
+        a.Z
+    ], () => null != t && l.Z.editedDefaultChannelIds.has(t) ? c.Z.Messages.CHANNEL_BROWSER_DISABLED_BY_CATEGORY : r.Uu(o.Plq.VIEW_CHANNEL, a.Z.getChannel(e)) ? void 0 : c.Z.Messages.DEFAULT_CHANNELS_DISABLED_PRIVATE);
 }
-
-function _(e, s) {
-  let t = (0, n.e7)([l.Z], () => {
-      var t;
-      return (null === (t = l.Z.getGuild(e)) || void 0 === t ? void 0 : t.rulesChannelId) === s
-    }),
-    a = (0, n.e7)([i.Z], () => {
-      var e;
-      return null === (e = i.Z.getChannel(s)) || void 0 === e ? void 0 : e.isGuildVocal()
-    });
-  return t ? c.Z.Messages.GUILD_ONBOARDING_DEFAULT_CHANNELS_RULES_DISCOURAGED : a ? c.Z.Messages.GUILD_ONBOARDING_DEFAULT_CHANNELS_VOICE_TOOLTIP : void 0
+function E(e, t) {
+    let n = (0, s.e7)([i.Z], () => {
+            var n;
+            return (null === (n = i.Z.getGuild(e)) || void 0 === n ? void 0 : n.rulesChannelId) === t;
+        }), r = (0, s.e7)([a.Z], () => {
+            var e;
+            return null === (e = a.Z.getChannel(t)) || void 0 === e ? void 0 : e.isGuildVocal();
+        });
+    return n ? c.Z.Messages.GUILD_ONBOARDING_DEFAULT_CHANNELS_RULES_DISCOURAGED : r ? c.Z.Messages.GUILD_ONBOARDING_DEFAULT_CHANNELS_VOICE_TOOLTIP : void 0;
 }

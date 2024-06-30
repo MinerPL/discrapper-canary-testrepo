@@ -1,11 +1,9 @@
-"use strict";
-n.d(e, {
-  x1: function() {
-    return i
-  }
+r.d(e, {
+    x1: function () {
+        return _;
+    }
 });
-var r = n(876122);
-
-function i(t) {
-  return (t || (0, r.Gd)()).getScope().getTransaction()
+var n = r(876122);
+function _(t) {
+    return (t || (0, n.Gd)()).getScope().getTransaction();
 }

@@ -1,85 +1,81 @@
-"use strict";
-t.d(s, {
-  $: function() {
-    return p
-  }
-}), t(653041);
-var n = t(735250),
-  a = t(470079),
-  i = t(120356),
-  l = t.n(i),
-  r = t(920906),
-  o = t(873546),
-  c = t(399606),
-  u = t(481060),
-  d = t(774078),
-  C = t(607070),
-  E = t(689938),
-  f = t(549622);
-
-function m(e) {
-  let {
-    endDate: s
-  } = e, {
-    days: t,
-    hours: a,
-    minutes: i,
-    seconds: l
-  } = (0, d.Z)(s), r = function(e, s, t, n) {
-    let a = (e, s) => "".concat(e.toString().padStart(2, "0")).concat(s),
-      i = [];
-    return e > 0 && i.push(a(e, E.Z.Messages.COUNTDOWN_UNITS_DAYS)), (s > 0 || i.length > 0) && i.push(a(s, E.Z.Messages.COUNTDOWN_UNITS_HOURS)), (t > 0 || i.length > 0) && i.push(a(t, E.Z.Messages.COUNTDOWN_UNITS_MINUTES)), i.push(a(n, E.Z.Messages.COUNTDOWN_UNITS_SECONDS)), i.join(":")
-  }(t, a, i, l);
-  return (0, n.jsx)(u.Text, {
-    variant: "heading-md/medium",
-    className: f.countdown,
-    tag: "div",
-    children: (0, n.jsx)("div", {
-      role: "timer",
-      "aria-relevant": "all",
-      children: r
-    })
-  })
+n.d(t, {
+    $: function () {
+        return _;
+    }
+}), n(653041);
+var s = n(735250), r = n(470079), a = n(120356), o = n.n(a), i = n(920906), l = n(873546), c = n(399606), d = n(481060), u = n(774078), p = n(607070), g = n(689938), f = n(698032), C = n(493978), m = n(932135);
+function h(e) {
+    let {endDate: t} = e, {
+            days: n,
+            hours: r,
+            minutes: a,
+            seconds: o
+        } = (0, u.Z)(t), i = function (e, t, n, s) {
+            let r = (e, t) => ''.concat(e.toString().padStart(2, '0')).concat(t), a = [];
+            return e > 0 && a.push(r(e, g.Z.Messages.COUNTDOWN_UNITS_DAYS)), (t > 0 || a.length > 0) && a.push(r(t, g.Z.Messages.COUNTDOWN_UNITS_HOURS)), (n > 0 || a.length > 0) && a.push(r(n, g.Z.Messages.COUNTDOWN_UNITS_MINUTES)), a.push(r(s, g.Z.Messages.COUNTDOWN_UNITS_SECONDS)), a.join(':');
+        }(n, r, a, o);
+    return (0, s.jsx)(d.Text, {
+        variant: 'heading-md/medium',
+        className: f.countdown,
+        tag: 'div',
+        children: (0, s.jsx)('div', {
+            role: 'timer',
+            'aria-relevant': 'all',
+            children: i
+        })
+    });
 }
-let p = a.memo(function(e) {
-  let {
-    unpublishedAt: s,
-    isVisible: t,
-    displayOptions: a,
-    isFullScreen: i
-  } = e, d = (0, c.e7)([C.Z], () => C.Z.useReducedMotion), E = (0, r.useSpring)({
-    transform: "translateX(-50%) ".concat(t ? "translateY(-100%)" : "translateY(0%)"),
-    opacity: t ? 1 : 0,
-    config: {
-      tension: 120,
-      friction: 12
-    },
-    immediate: d
-  });
-  return (0, n.jsxs)(r.animated.div, {
-    className: l()([f.countDownWrapper, i && f.fullScreenWrapper, o.tq && f.mobileWrapper]),
-    role: "status",
-    style: {
-      backgroundColor: a.backgroundColor,
-      boxShadow: a.boxShadow,
-      color: a.labelColor,
-      ...E
-    },
-    children: [null != a.iconSrc && (0, n.jsx)("img", {
-      src: a.iconSrc,
-      className: f.countdownIcon,
-      alt: "",
-      "aria-hidden": !0
-    }), (0, n.jsx)(u.Heading, {
-      variant: "heading-md/medium",
-      className: f.countdownLabel,
-      children: a.label()
-    }), (0, n.jsx)(u.Heading, {
-      variant: "heading-md/medium",
-      className: f.countdown,
-      children: "—"
-    }), (0, n.jsx)(m, {
-      endDate: s
-    })]
-  })
-})
+let _ = r.memo(function (e) {
+    let {
+            unpublishedAt: t,
+            isVisible: n,
+            displayOptions: r,
+            isFullScreen: a
+        } = e, u = (0, c.e7)([p.Z], () => p.Z.useReducedMotion), g = (0, i.useSpring)({
+            transform: 'translateX(-50%) '.concat(n ? 'translateY(-75%)' : 'translateY(0%)'),
+            opacity: n ? 1 : 0,
+            config: {
+                tension: 120,
+                friction: 12
+            },
+            immediate: u
+        });
+    return (0, s.jsxs)(i.animated.div, {
+        className: o()([
+            f.countDownWrapper,
+            a && f.fullScreenWrapper,
+            l.tq && f.mobileWrapper
+        ]),
+        role: 'status',
+        style: {
+            ...r.style,
+            ...g
+        },
+        children: [
+            (0, s.jsx)(d.Text, {
+                variant: 'text-md/medium',
+                className: f.countdownLabel,
+                children: r.label()
+            }),
+            null != r.iconSrc && (0, s.jsx)('img', {
+                src: r.iconSrc,
+                className: f.countdownIcon,
+                alt: '',
+                'aria-hidden': !0
+            }),
+            (0, s.jsx)(h, { endDate: t }),
+            (0, s.jsx)('img', {
+                src: C,
+                className: o()(f.sparkles, f.left),
+                alt: '',
+                'aria-hidden': !0
+            }),
+            (0, s.jsx)('img', {
+                src: m,
+                className: o()(f.sparkles, f.right),
+                alt: '',
+                'aria-hidden': !0
+            })
+        ]
+    });
+});

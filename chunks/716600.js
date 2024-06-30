@@ -1,12 +1,9 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return a;
+    }
 });
-var i = n(442837),
-  r = n(317381);
-
-function s() {
-  return (0, i.e7)([r.ZP], () => r.ZP.getCurrentEmbeddedActivity())
+var r = n(442837), i = n(317381);
+function a() {
+    return (0, r.e7)([i.ZP], () => i.ZP.getCurrentEmbeddedActivity());
 }

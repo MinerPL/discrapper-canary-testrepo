@@ -1,124 +1,132 @@
-"use strict";
-a(47120);
-var t = a(735250),
-  i = a(470079),
-  r = a(120356),
-  l = a.n(r),
-  n = a(481060),
-  o = a(153124),
-  d = a(689938),
-  c = a(417417);
-let E = e => {
-  let {
-    index: s,
-    title: a,
-    selected: i
-  } = e;
-  return (0, t.jsxs)("div", {
-    className: l()(c.overviewStep, {
-      [c.selected]: i
-    }),
-    children: [(0, t.jsx)(n.Text, {
-      className: c.stepIndex,
-      variant: "text-sm/normal",
-      children: s + 1
-    }), (0, t.jsx)(n.Text, {
-      variant: "text-md/normal",
-      className: c.stepTitle,
-      children: a
-    })]
-  })
+t(47120);
+var a = t(735250), l = t(470079), i = t(120356), n = t.n(i), o = t(481060), r = t(153124), c = t(689938), d = t(574264);
+let _ = e => {
+    let {
+        index: s,
+        title: t,
+        selected: l
+    } = e;
+    return (0, a.jsxs)('div', {
+        className: n()(d.overviewStep, { [d.selected]: l }),
+        children: [
+            (0, a.jsx)(o.Text, {
+                className: d.stepIndex,
+                variant: 'text-sm/normal',
+                children: s + 1
+            }),
+            (0, a.jsx)(o.Text, {
+                variant: 'text-md/normal',
+                className: d.stepTitle,
+                children: t
+            })
+        ]
+    });
 };
 s.Z = e => {
-  let {
-    className: s,
-    title: a,
-    stepData: r,
-    transitionState: R,
-    onClose: S,
-    completeButtonText: m,
-    overviewFooter: x,
-    onNextPressed: _,
-    onPrevPressed: u,
-    onComplete: h,
-    sequencerClassName: I,
-    initialStep: C = 0,
-    forceStep: g,
-    submitting: N = !1,
-    autoCloseOnComplete: T = !0
-  } = e, [p, v] = i.useState([]), [O, D] = i.useState(C), j = (0, o.Dt)();
-  i.useEffect(() => {
-    v([...Array(r.length).keys()])
-  }, [r.length]);
-  let V = null != g ? g : O,
-    A = r[V],
-    M = 0 === V,
-    L = V === r.length - 1,
-    Z = null != m ? m : d.Z.Messages.DONE,
-    b = i.useCallback(() => {
-      null == u || u(), D(V - 1)
-    }, [u, V, D]);
-  return (0, t.jsxs)(n.ModalRoot, {
-    size: n.ModalSize.MEDIUM,
-    className: l()(c.container, s),
-    transitionState: R,
-    "aria-labelledby": j,
-    children: [(0, t.jsxs)("div", {
-      className: c.overviewSidebar,
-      children: [(0, t.jsx)(n.Heading, {
-        id: j,
-        variant: "heading-xl/semibold",
-        className: c.header,
-        children: a
-      }), (0, t.jsx)("div", {
-        className: c.overviewSteps,
-        children: r.map((e, s) => (0, t.jsx)(E, {
-          index: s,
-          title: e.overviewTitle,
-          selected: s === V
-        }, s))
-      }), x]
-    }), (0, t.jsxs)("div", {
-      className: c.modal,
-      children: [(0, t.jsxs)(n.ModalContent, {
-        children: [(0, t.jsx)(n.ModalCloseButton, {
-          focusProps: {
-            offset: {
-              top: 4,
-              right: 4,
-              left: 4
-            }
-          },
-          onClick: S,
-          className: c.closeButton
-        }), (0, t.jsx)(n.Sequencer, {
-          step: V,
-          steps: p,
-          sideMargin: 24,
-          verticalMargin: 24,
-          className: l()(c.sequencer, I),
-          innerClassName: c.innerSequencer,
-          children: A.modalContent
-        })]
-      }), (0, t.jsxs)(n.ModalFooter, {
-        className: c.footer,
-        children: [(0, t.jsx)(n.Button, {
-          type: "submit",
-          submitting: N,
-          onClick: () => {
-            L ? (h(), T && S()) : (null == _ || _(), D(V + 1))
-          },
-          color: n.Button.Colors.GREEN,
-          disabled: A.disableNextStep,
-          children: L ? Z : d.Z.Messages.NEXT
-        }), M ? null : (0, t.jsx)(n.Button, {
-          look: n.Button.Looks.LINK,
-          color: n.Button.Colors.PRIMARY,
-          size: n.Button.Sizes.MIN,
-          onClick: b,
-          children: d.Z.Messages.BACK
-        })]
-      })]
-    })]
-  })
-}
+    let {
+            className: s,
+            title: t,
+            stepData: i,
+            transitionState: E,
+            onClose: N,
+            completeButtonText: I,
+            overviewFooter: T,
+            onNextPressed: M,
+            onPrevPressed: m,
+            onComplete: x,
+            sequencerClassName: u,
+            initialStep: L = 0,
+            forceStep: O,
+            submitting: C = !1,
+            autoCloseOnComplete: h = !0
+        } = e, [p, A] = l.useState([]), [S, f] = l.useState(L), g = (0, r.Dt)();
+    l.useEffect(() => {
+        A([...Array(i.length).keys()]);
+    }, [i.length]);
+    let v = null != O ? O : S, b = i[v], D = 0 === v, j = v === i.length - 1, R = null != I ? I : c.Z.Messages.DONE, U = l.useCallback(() => {
+            null == m || m(), f(v - 1);
+        }, [
+            m,
+            v,
+            f
+        ]);
+    return (0, a.jsxs)(o.ModalRoot, {
+        size: o.ModalSize.MEDIUM,
+        className: n()(d.container, s),
+        transitionState: E,
+        'aria-labelledby': g,
+        children: [
+            (0, a.jsxs)('div', {
+                className: d.overviewSidebar,
+                children: [
+                    (0, a.jsx)(o.Heading, {
+                        id: g,
+                        variant: 'heading-xl/semibold',
+                        className: d.header,
+                        children: t
+                    }),
+                    (0, a.jsx)('div', {
+                        className: d.overviewSteps,
+                        children: i.map((e, s) => (0, a.jsx)(_, {
+                            index: s,
+                            title: e.overviewTitle,
+                            selected: s === v
+                        }, s))
+                    }),
+                    T
+                ]
+            }),
+            (0, a.jsxs)('div', {
+                className: d.modal,
+                children: [
+                    (0, a.jsxs)(o.ModalContent, {
+                        children: [
+                            (0, a.jsx)(o.ModalCloseButton, {
+                                focusProps: {
+                                    offset: {
+                                        top: 4,
+                                        right: 4,
+                                        left: 4
+                                    }
+                                },
+                                onClick: N,
+                                className: d.closeButton
+                            }),
+                            (0, a.jsx)(o.Sequencer, {
+                                step: v,
+                                steps: p,
+                                sideMargin: 24,
+                                verticalMargin: 24,
+                                className: n()(d.sequencer, u),
+                                innerClassName: d.innerSequencer,
+                                children: b.modalContent
+                            })
+                        ]
+                    }),
+                    (0, a.jsxs)(o.ModalFooter, {
+                        className: d.footer,
+                        children: [
+                            (0, a.jsx)(o.Button, {
+                                type: 'submit',
+                                submitting: C,
+                                onClick: () => {
+                                    j ? (x(), h && N()) : (null == M || M(), f(v + 1));
+                                },
+                                color: o.Button.Colors.GREEN,
+                                disabled: b.disableNextStep,
+                                children: j ? R : c.Z.Messages.NEXT
+                            }),
+                            D ? null : (0, a.jsx)(o.Button, {
+                                look: o.Button.Looks.LINK,
+                                color: o.Button.Colors.PRIMARY,
+                                size: o.Button.Sizes.MIN,
+                                onClick: U,
+                                children: c.Z.Messages.BACK
+                            })
+                        ]
+                    })
+                ]
+            })
+        ]
+    });
+};

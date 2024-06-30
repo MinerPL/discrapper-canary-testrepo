@@ -1,65 +1,51 @@
-"use strict";
 n(47120);
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(143927),
-  l = n(532772),
-  u = n(570220),
-  _ = n(28546),
-  d = n(147915),
-  c = n(957825),
-  E = n(689938),
-  I = n(838329);
-t.Z = r.memo(r.forwardRef(function(e, t) {
-  let {
-    disabled: n,
-    type: s
-  } = e, [T, h] = (0, _.Iu)(e => [e.activeView, e.pickerId], a.Z), S = r.useContext(u.ZP), [f, N] = r.useState(!1), A = T === c.X1.STICKER, m = r.useCallback(() => {
-    (0, _.RO)(c.X1.STICKER, s)
-  }, [s]);
-  r.useEffect(() => {
-    let e = () => {
-        requestAnimationFrame(() => {
-          N(!0)
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(143927), l = n(532772), u = n(570220), c = n(28546), d = n(147915), _ = n(957825), E = n(689938), f = n(573809);
+t.Z = i.memo(i.forwardRef(function (e, t) {
+    let {
+            disabled: n,
+            type: a
+        } = e, [h, p] = (0, c.Iu)(e => [
+            e.activeView,
+            e.pickerId
+        ], s.Z), m = i.useContext(u.ZP), [I, T] = i.useState(!1), g = h === _.X1.STICKER, S = i.useCallback(() => {
+            (0, c.RO)(_.X1.STICKER, a);
+        }, [a]);
+    i.useEffect(() => {
+        let e = () => {
+                requestAnimationFrame(() => {
+                    T(!0);
+                });
+            }, t = () => {
+                requestAnimationFrame(() => {
+                    T(!1);
+                });
+            };
+        return m.addListener('sticker-suggestions-shown', e), m.addListener('sticker-suggestions-hidden', t), () => {
+            m.removeListener('sticker-suggestions-shown', e), m.removeListener('sticker-suggestions-hidden', t);
+        };
+    }, [m]);
+    let {
+        Component: A,
+        events: N,
+        play: v
+    } = (0, l.z)();
+    return n ? null : (0, r.jsx)('div', {
+        className: o()(_.CT, f.buttonContainer),
+        ref: t,
+        children: (0, r.jsx)(d.Z, {
+            innerClassName: o()(f.button, f.stickerButton, { [f.stickerButtonTilted]: I && !g }),
+            ...N,
+            onClick: () => {
+                S(), v();
+            },
+            isActive: g,
+            'aria-label': E.Z.Messages.STICKER_BUTTON_LABEL,
+            'aria-expanded': g,
+            'aria-haspopup': 'dialog',
+            'aria-controls': p,
+            sparkle: !1,
+            notification: null,
+            children: (0, r.jsx)(A, { color: 'currentColor' })
         })
-      },
-      t = () => {
-        requestAnimationFrame(() => {
-          N(!1)
-        })
-      };
-    return S.addListener("sticker-suggestions-shown", e), S.addListener("sticker-suggestions-hidden", t), () => {
-      S.removeListener("sticker-suggestions-shown", e), S.removeListener("sticker-suggestions-hidden", t)
-    }
-  }, [S]);
-  let {
-    Component: O,
-    events: R,
-    play: C
-  } = (0, l.z)();
-  return n ? null : (0, i.jsx)("div", {
-    className: o()(c.CT, I.buttonContainer),
-    ref: t,
-    children: (0, i.jsx)(d.Z, {
-      innerClassName: o()(I.button, I.stickerButton, {
-        [I.stickerButtonTilted]: f && !A
-      }),
-      ...R,
-      onClick: () => {
-        m(), C()
-      },
-      isActive: A,
-      "aria-label": E.Z.Messages.STICKER_BUTTON_LABEL,
-      "aria-expanded": A,
-      "aria-haspopup": "dialog",
-      "aria-controls": h,
-      sparkle: !1,
-      notification: null,
-      children: (0, i.jsx)(O, {
-        color: "currentColor"
-      })
-    })
-  })
-}))
+    });
+}));

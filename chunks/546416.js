@@ -1,15 +1,13 @@
-"use strict";
 n.d(t, {
-  V: function() {
-    return r
-  }
+    V: function () {
+        return i;
+    }
 });
-var i = n(594190);
-
-function r() {
-  let e = i.ZP.getCurrentGameForAnalytics();
-  return {
-    game_name: null != e ? e.name : null,
-    game_id: null != e ? e.id : null
-  }
+var r = n(594190);
+function i() {
+    let e = r.ZP.getCurrentGameForAnalytics();
+    return {
+        game_name: null != e ? e.name : null,
+        game_id: null != e ? e.id : null
+    };
 }

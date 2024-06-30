@@ -1,7 +1,6 @@
-"use strict";
-n.d(e, {
-  m: function() {
-    return r
-  }
+r.d(e, {
+    m: function () {
+        return n;
+    }
 });
-let r = n(24716).n2
+let n = r(24716).n2;

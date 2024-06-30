@@ -1,3 +1,3 @@
-e.exports = function(e, t) {
-  return e.has(t)
-}
+e.exports = function (e, t) {
+    return e.has(t);
+};

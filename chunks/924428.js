@@ -1,13 +1,10 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return a;
+    }
 }), n(47120);
-var i = n(470079),
-  r = n(699581);
-
-function s() {
-  let [, e] = (0, i.useState)(0);
-  return (0, i.useCallback)(() => (0, r.flushSync)(() => e(e => e + 1)), [])
+var r = n(470079), i = n(699581);
+function a() {
+    let [, e] = (0, r.useState)(0);
+    return (0, r.useCallback)(() => (0, i.flushSync)(() => e(e => e + 1)), []);
 }

@@ -1,38 +1,28 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return d
-  }
+    Z: function () {
+        return d;
+    }
 }), n(47120);
-var i = n(866442),
-  r = n(442837),
-  s = n(410030),
-  o = n(607070),
-  a = n(220082),
-  l = n(44315),
-  u = n(168631),
-  _ = n(981631);
-
+var r = n(866442), i = n(442837), a = n(410030), o = n(607070), s = n(220082), l = n(44315), u = n(168631), c = n(981631);
 function d(e) {
-  var t, n, d;
-  let {
-    user: c,
-    displayProfile: E,
-    pendingThemeColors: I,
-    pendingAvatar: T,
-    isPreview: h
-  } = e, S = (0, s.ZP)(), f = (0, r.e7)([o.Z], () => o.Z.syncProfileThemeWithUserTheme), N = null != T ? T : null == c ? void 0 : c.getAvatarURL(null == E ? void 0 : E.guildId, 80), A = (0, l.Sl)(_.Ilk.PRIMARY_530).hex, [m, O] = (0, a.Cf)(N, A, !1);
-  if (!(null == E ? void 0 : E.canEditThemes) && !h) return {
-    theme: S,
-    primaryColor: null,
-    secondaryColor: null
-  };
-  let R = null == E ? void 0 : E.getPreviewThemeColors(I),
-    C = null !== (t = null == R ? void 0 : R[0]) && void 0 !== t ? t : (0, i._i)(m),
-    p = null !== (n = null == R ? void 0 : R[1]) && void 0 !== n ? n : (0, i._i)(O);
-  return {
-    theme: f ? S : null !== (d = (0, u.V3)(C)) && void 0 !== d ? d : S,
-    primaryColor: C,
-    secondaryColor: p
-  }
+    var t, n, d;
+    let {
+            user: _,
+            displayProfile: E,
+            pendingThemeColors: f,
+            pendingAvatar: h,
+            isPreview: p
+        } = e, m = (0, a.ZP)(), I = (0, i.e7)([o.Z], () => o.Z.syncProfileThemeWithUserTheme), T = null != h ? h : null == _ ? void 0 : _.getAvatarURL(null == E ? void 0 : E.guildId, 80), g = (0, l.Sl)(c.Ilk.PRIMARY_530).hex, [S, A] = (0, s.Cf)(T, g, !1);
+    if (!(null == E ? void 0 : E.canEditThemes) && !p)
+        return {
+            theme: m,
+            primaryColor: null,
+            secondaryColor: null
+        };
+    let N = null == E ? void 0 : E.getPreviewThemeColors(f), v = null !== (t = null == N ? void 0 : N[0]) && void 0 !== t ? t : (0, r._i)(S), O = null !== (n = null == N ? void 0 : N[1]) && void 0 !== n ? n : (0, r._i)(A);
+    return {
+        theme: I ? m : null !== (d = (0, u.V3)(v)) && void 0 !== d ? d : m,
+        primaryColor: v,
+        secondaryColor: O
+    };
 }

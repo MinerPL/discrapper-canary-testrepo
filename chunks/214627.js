@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  T: function() {
-    return i
-  }
-}), (r = i || (i = {}))[r.StreamNotificationsGuildMaxSize = 50] = "StreamNotificationsGuildMaxSize"
+    T: function () {
+        return r;
+    }
+}), (i = r || (r = {}))[i.StreamNotificationsGuildMaxSize = 50] = 'StreamNotificationsGuildMaxSize';
