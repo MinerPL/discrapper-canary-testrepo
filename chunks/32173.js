@@ -20,8 +20,8 @@ var i = n(399606),
   p = n(424218),
   g = n(63063),
   A = n(380684),
-  N = n(74538),
-  m = n(494127),
+  m = n(74538),
+  N = n(494127),
   f = n(314684),
   S = n(687362),
   h = n(119269),
@@ -29,8 +29,8 @@ var i = n(399606),
   x = n(75077),
   b = n(474936),
   O = n(981631),
-  P = n(526761),
-  L = n(332325),
+  L = n(526761),
+  P = n(332325),
   v = n(689938),
   Z = n(660372),
   D = n(926433),
@@ -66,17 +66,17 @@ t.Z = () => {
 analyticsLocations: e
   } = (0, _.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD), t = (0, c.ZP)(), n = (0, p.BU)(((0, A.Xv)() ? b.wb : b.Uq) / 1024, {
 useKibibytes: !0
-  }), s = (0, i.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()), a = null != s ? N.ZP.getPremiumPlanItem(s) : null, el = null != a ? N.ZP.getSkuIdForPlan(a.planId) : null, eo = el === b.Si.TIER_2, ec = el === b.Si.TIER_0, {
+  }), s = (0, i.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()), a = null != s ? m.ZP.getPremiumPlanItem(s) : null, el = null != a ? m.ZP.getSkuIdForPlan(a.planId) : null, eo = el === b.Si.TIER_2, ec = el === b.Si.TIER_0, {
 flipped: ed
-  } = (0, m.JP)(), {
+  } = (0, N.JP)(), {
 flipped: e_
-  } = (0, m.as)(), eu = (0, f.nY)({
+  } = (0, N.as)(), eu = (0, f.nY)({
 showAnimations: !0
   }), eE = null != eu ? eu.initialPercentage : void 0, eT = null != eu ? eu.percentage : void 0, eI = (0, u.Z)(R.Z), eR = (0, S.Z)(), eC = (0, E.Z)({
-scrollPosition: P.Y_.TRY_IT_OUT,
+scrollPosition: L.Y_.TRY_IT_OUT,
 analyticsLocations: e
   }), ep = () => {
-o.Z.open(O.oAB.VOICE, P.GA, {
+o.Z.open(O.oAB.VOICE, L.GA, {
   openWithoutBackstack: !0,
   analyticsLocations: e
 });
@@ -84,9 +84,9 @@ o.Z.open(O.oAB.VOICE, P.GA, {
 (0, T.uL)(O.Z5c.COLLECTIBLES_SHOP);
   }, eA = () => {
 o.Z.open(O.oAB.APPEARANCE, null, {
-  scrollPosition: P.h1.CUSTOM_APP_ICONS
+  scrollPosition: L.h1.CUSTOM_APP_ICONS
 });
-  }, eN = {
+  }, em = {
 avatarDecorations: eo ? {
   name: 'avatarDecorations',
   title: v.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
@@ -130,7 +130,7 @@ clips: eo ? {
   descriptionCta: eI ? v.Z.Messages.TAKE_ME_THERE : v.Z.Messages.LEARN_MORE,
   pillText: v.Z.Messages.EARLY_ACCESS,
   onCtaClick: eI ? () => {
-    (0, I.Z)(L.Z.CLIPS, {
+    (0, I.Z)(P.Z.CLIPS, {
       openWithoutBackstack: !0,
       analyticsLocations: e
     });
@@ -441,7 +441,7 @@ let {
   percentage: eT,
   initialPercentage: eE
 });
-eN.freeBoost = {
+em.freeBoost = {
   name: 'freeBoost',
   title: t,
   subtitle: n,
@@ -458,5 +458,5 @@ eN.freeBoost = {
   dismissibleContentType: l
 };
   }
-  return eN;
+  return em;
 };

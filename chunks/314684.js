@@ -1,6 +1,6 @@
 n.d(t, {
   $_: function() {
-return L;
+return P;
   },
   FM: function() {
 return B;
@@ -21,7 +21,7 @@ return O;
 return x;
   },
   rM: function() {
-return P;
+return L;
   },
   yQ: function() {
 return M;
@@ -45,8 +45,8 @@ var s = n(470079),
   p = n(111361),
   g = n(595878),
   A = n(944880),
-  N = n(513785),
-  m = n(106255),
+  m = n(513785),
+  N = n(106255),
   f = n(474936),
   S = n(735825),
   h = n(981631);
@@ -54,7 +54,7 @@ var s = n(470079),
 function M() {
   let e = function() {
   var e;
-  let t = (0, i.cj)([N.Z], () => N.Z.getState());
+  let t = (0, i.cj)([m.Z], () => m.Z.getState());
   if (null != t)
     return null !== (e = t.userTenureRewardStatusByRewardId[S.Ft.FREE_GUILD_BOOST_1_MONTH]) && void 0 !== e ? e : t.userTenureRewardStatusByRewardId[S.Ft.FREE_GUILD_BOOST_3_MONTHS];
 }(),
@@ -84,7 +84,7 @@ if (l)
     showNotification: !0,
     showCard: !0
   };
-if (!(null != e && (0, m.u7)(e)))
+if (!(null != e && (0, N.u7)(e)))
   return null;
 else {
   if (null == e.redeemable_at || null == e.next_tenure_reward_id)
@@ -138,13 +138,13 @@ t = (0, i.e7)([E.default], () => {
   let e = E.default.getCurrentUser();
   return null != e && (0, p.M5)(e, f.p9.TIER_2);
 });
-  if (null != (0, m.kG)(e) || !!t)
-return (0, m.MR)([
+  if (null != (0, N.kG)(e) || !!t)
+return (0, N.MR)([
   S.Ft.FREE_GUILD_BOOST_1_MONTH,
   S.Ft.FREE_GUILD_BOOST_3_MONTHS
 ], e);
 }
-let P = e => {
+let L = e => {
 if (null == e || (null == e ? void 0 : e.showNotification) === !1)
   return [];
 switch (e.nitroTenureStatus) {
@@ -156,21 +156,21 @@ switch (e.nitroTenureStatus) {
     return [];
 }
   },
-  L = () => {
+  P = () => {
 let e = M(),
-  [t, n] = s.useState(P(e)),
+  [t, n] = s.useState(L(e)),
   a = (0, g.c)({
     location: 'Home'
   });
 s.useEffect(() => {
   if (!1 !== a)
-    n(P(e));
+    n(L(e));
 }, [
   e,
   a
 ]);
 let [r] = (0, u.U)(a ? t : []);
-return a ? null != e && !0 === e.showNotification && (r === l.z.TENURE_REWARD_REDEEMABLE || r === l.z.TENURE_REWARD_PENDING) ? (0, m.Wb)(e.nitroTenureStatus) : null : null;
+return a ? null != e && !0 === e.showNotification && (r === l.z.TENURE_REWARD_REDEEMABLE || r === l.z.TENURE_REWARD_PENDING) ? (0, N.Wb)(e.nitroTenureStatus) : null : null;
   },
   v = () => {
 var e;
@@ -183,7 +183,7 @@ return !!n && s === l.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
   },
   Z = () => {
 let e = M(),
-  t = s.useMemo(() => P(e), [e]),
+  t = s.useMemo(() => L(e), [e]),
   [n] = (0, _.c)(t),
   a = s.useRef(!1);
 return s.useCallback(() => {

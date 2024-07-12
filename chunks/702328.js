@@ -17,8 +17,8 @@ var s = n(735250),
   p = n(91802),
   g = n(104494),
   A = n(639119),
-  N = n(8647),
-  m = n(568126),
+  m = n(8647),
+  N = n(568126),
   f = n(605289),
   S = n(248042),
   h = n(823188),
@@ -26,8 +26,8 @@ var s = n(735250),
   x = n(498765),
   b = n(635921),
   O = n(177839),
-  P = n(794484),
-  L = n(392521),
+  L = n(794484),
+  P = n(392521),
   v = n(349803),
   Z = n(179984),
   D = n(409100),
@@ -67,24 +67,24 @@ let {
 return t ? (0, s.jsxs)('div', {
   className: i()(H.whatsNewSectionBackground),
   children: [
-    (0, s.jsx)(P.Z, {
+    (0, s.jsx)(L.Z, {
       variant: B.R0.WHATS_NEW,
       isFullScreen: t
     }),
-    (0, s.jsx)(P.Z, {
+    (0, s.jsx)(L.Z, {
       isFullScreen: t,
       showAllPerksButton: t ? (0, s.jsx)(U.Z, {
         setIsAllPerksVisible: a,
         previousComponent: B.MQ.MARKETING
       }) : void 0
     }),
-    n ? (0, s.jsx)(L.ZP, {
+    n ? (0, s.jsx)(P.ZP, {
       className: H.pdSparklesTop,
-      variant: L.u0.TOP
+      variant: P.u0.TOP
     }) : null,
-    n ? (0, s.jsx)(L.ZP, {
+    n ? (0, s.jsx)(P.ZP, {
       className: H.pdSparklesBottom,
-      variant: L.u0.BOTTOM
+      variant: P.u0.BOTTOM
     }) : null
   ]
 }) : null;
@@ -96,7 +96,7 @@ isFullscreen: n,
 entrypoint: r
   } = e, {
 bucket: x
-  } = (0, C.wj)('PremiumMarketingHome'), O = x > 0, P = a.useRef(null), [L, U] = a.useState(!1), [Y, z] = a.useState(!1), [Q, q] = a.useState(!1), [J, X] = a.useState(!1), $ = (0, l.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()), ee = null != $ ? (0, I.Af)($) : null, et = null != ee ? I.ZP.getSkuIdForPlan(ee.planId) : null, en = null !== et && et !== G.Si.TIER_2 ? G.Si.TIER_2 : null, es = (0, p.n)(), ea = null != es, [er, ei] = a.useState(!1), el = (0, g.Ng)(), eo = (0, A.N)(), ec = null == eo ? void 0 : null === (t = eo.subscription_trial) || void 0 === t ? void 0 : t.sku_id, ed = (0, R.Nx)(), e_ = (0, S.Vi)(), {
+  } = (0, C.wj)('PremiumMarketingHome'), O = x > 0, L = a.useRef(null), [P, U] = a.useState(!1), [Y, z] = a.useState(!1), [Q, q] = a.useState(!1), [J, X] = a.useState(!1), $ = (0, l.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()), ee = null != $ ? (0, I.Af)($) : null, et = null != ee ? I.ZP.getSkuIdForPlan(ee.planId) : null, en = null !== et && et !== G.Si.TIER_2 ? G.Si.TIER_2 : null, es = (0, p.n)(), ea = null != es, [er, ei] = a.useState(!1), el = (0, g.Ng)(), eo = (0, A.N)(), ec = null == eo ? void 0 : null === (t = eo.subscription_trial) || void 0 === t ? void 0 : t.sku_id, ed = (0, R.Nx)(), e_ = (0, S.Vi)(), {
 analyticsLocations: eu
   } = (0, u.ZP)(_.Z.PREMIUM_MARKETING), eE = 'PremiumMarketingHome';
   (0, d.j)({
@@ -196,8 +196,8 @@ eI = (0, s.jsxs)('div', {
     (0, s.jsxs)('div', {
       className: H.promoBannerContainer,
       children: [
-        (0, s.jsx)(N.Z, {}),
-        n && ea && (0, s.jsx)(m.Z, {
+        (0, s.jsx)(m.Z, {}),
+        n && ea && (0, s.jsx)(N.Z, {
           localizedPricingPromo: es
         })
       ]
@@ -243,7 +243,7 @@ eI = (0, s.jsxs)('div', {
       className: n ? H.footerSpacingFullscreen : H.footerSpacing
     }),
     (0, s.jsx)(v.Z, {
-      isVisible: !L && !Y && J,
+      isVisible: !P && !Y && J,
       isFullscreen: n,
       subscriptionTier: en
     }),
@@ -270,7 +270,7 @@ eI = (0, s.jsxs)('div', {
 children: [
   (0, s.jsx)(c.AdvancedScrollerAuto, {
     className: H.scroller,
-    ref: P,
+    ref: L,
     children: eI
   }),
   (0, s.jsx)(j.Z, {

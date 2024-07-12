@@ -16,8 +16,8 @@ var a = r(521464),
   d = r(639519),
   h = r.n(d),
   p = r(949179),
-  y = r(261411),
-  g = r(852153),
+  g = r(261411),
+  y = r(852153),
   v = r(703205);
 
 function m(e, t) {
@@ -114,7 +114,7 @@ return (0, a.Z)(this, h), t = d.call(this, e), (0, u.Z)((0, s.Z)(t), 'handleClic
           u = t.postprocessValue,
           d = t.sortObjectKeys,
           h = [];
-        return (0, y.Z)(n, s, d, o, r, a).forEach(function(r) {
+        return (0, g.Z)(n, s, d, o, r, a).forEach(function(r) {
           if (void 0 !== r.to)
             h.push(f.createElement(v.Z, (0, b.Z)({}, t, {
               key: 'ItemRange--'.concat(r.from, '-').concat(r.to),
@@ -126,7 +126,7 @@ return (0, a.Z)(this, h), t = d.call(this, e), (0, u.Z)((0, s.Z)(t), 'handleClic
             var a = r.key,
               n = r.value,
               s = -1 !== i.indexOf(n);
-            h.push(f.createElement(g.Z, (0, b.Z)({}, t, {
+            h.push(f.createElement(y.Z, (0, b.Z)({}, t, {
               postprocessValue: u,
               collectionLimit: o,
               key: 'Node--'.concat(a),

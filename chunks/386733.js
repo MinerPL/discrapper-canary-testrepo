@@ -17,8 +17,8 @@ var s = n(735250),
   p = n(520540),
   g = n(197115),
   A = n(119269),
-  N = n(981631),
-  m = n(689938),
+  m = n(981631),
+  N = n(689938),
   f = n(141253),
   S = n(691766);
 let h = e => {
@@ -43,7 +43,7 @@ let {
   children: n
 });
 return (0, s.jsx)(o.Tooltip, {
-  text: m.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_UNSENT_TOOLTIP,
+  text: N.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_UNSENT_TOOLTIP,
   shouldShow: !i,
   tooltipContentClassName: f.unsentTooltipContent,
   children: e => (0, s.jsx)('div', {
@@ -103,12 +103,12 @@ return (0, s.jsxs)('div', {
   ]
 });
   },
-  b = (e, t, n, s) => e ? m.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_ALL_SHARED_NO_REFRESH.format({
+  b = (e, t, n, s) => e ? N.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_ALL_SHARED_NO_REFRESH.format({
 helpdeskArticle: s
-  }) : t ? m.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_AT_LEAST_ONE_SHARED.format({
+  }) : t ? N.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_AT_LEAST_ONE_SHARED.format({
 numFriends: 3 - n,
 helpdeskArticle: s
-  }) : m.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER.format({
+  }) : N.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER.format({
 numFriends: 3,
 helpdeskArticle: s
   });
@@ -127,10 +127,10 @@ r.forEach(e => {
   (0, c.PR)(e);
 });
   }, [r]);
-  let P = r.length,
-L = 3 === P,
-v = R.Z.getArticleURL(N.BhN.REFERRAL_PROGRAM),
-Z = L ? m.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : m.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
+  let L = r.length,
+P = 3 === L,
+v = R.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM),
+Z = P ? N.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : N.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
 {
   analyticsLocations: D
 } = (0, _.ZP)(d.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
@@ -150,7 +150,7 @@ window.removeEventListener('resize', G);
   let y = (0, s.jsxs)(s.Fragment, {
 children: [
   (0, s.jsx)(A.Z, {
-    percentage: P / 3 * 100,
+    percentage: L / 3 * 100,
     progressCircleVariation: A.Q.NITRO_LOGO,
     iconClassName: i()({
       [f.referralProgressBarIcon]: !t,
@@ -170,7 +170,7 @@ children: [
       }),
       (0, s.jsx)(o.Text, {
         variant: t ? 'text-sm/normal' : 'text-lg/medium',
-        children: b(L, P > 0, r.length, v)
+        children: b(P, L > 0, r.length, v)
       }),
       (0, s.jsxs)('div', {
         className: i()(f.expandedProgressBarButtonContainer, {
@@ -180,7 +180,7 @@ children: [
         children: [
           !t && !O && (0, s.jsx)(g.Z, {
             color: o.ButtonColors.CUSTOM,
-            buttonText: m.Z.Messages.GIFT_NITRO,
+            buttonText: N.Z.Messages.GIFT_NITRO,
             className: i()(f.expandedProgressBarGiftingCTA, {
               [f.expandedProgressBarGiftingCTAMinLayout]: j && !t,
               [f.expandedProgressBarGiftingCTALayout]: !j && !t
@@ -192,7 +192,7 @@ children: [
             className: f.expandedProgressBarSelectFriendsCTA,
             color: o.ButtonColors.CUSTOM,
             onClick: () => {
-              I.default.track(N.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
+              I.default.track(m.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
                 location_stack: D
               }), (0, o.openModalLazy)(async () => {
                 let {
@@ -213,7 +213,7 @@ children: [
                   alt: '',
                   className: f.expandedProgressBarSelectFriendsIcon
                 }),
-                L ? m.Z.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : m.Z.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS
+                P ? N.Z.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : N.Z.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS
               ]
             })
           })

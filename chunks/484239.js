@@ -20,8 +20,8 @@ t.Z = e => {
   perkImage: p,
   isCarousel: g,
   onCtaClick: A,
-  perkComponent: N,
-  subtitle: m = '',
+  perkComponent: m,
+  subtitle: N = '',
   descriptionCta: f = '',
   cardVariant: S,
   subtitleClassName: h
@@ -52,7 +52,7 @@ children: [
     shouldShowElement: e => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
     cardVariantStyleInfo: M,
     titleClassName: R,
-    subtitle: m,
+    subtitle: N,
     subtitleClassName: h
   }),
   null != p && (0, s.jsx)('img', {
@@ -63,13 +63,13 @@ children: [
       [_.carouselCardImage]: g
     })
   }),
-  null != N && (0, s.jsx)(s.Fragment, {
+  null != m && (0, s.jsx)(s.Fragment, {
     children: (0, s.jsxs)('div', {
       className: _.cardIllustrationNoHover,
       children: [
         (0, s.jsx)('div', {
           className: _.cardComponent,
-          children: N
+          children: m
         }),
         0 !== f.length && null != A && (0, s.jsx)(i.Button, {
           className: C,

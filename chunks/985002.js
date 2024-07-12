@@ -13,7 +13,7 @@ function o(e) {
   let {
 onError: t,
 onSuccess: n
-  } = null != e ? e : {}, [o, c] = s.useState(!1), [d, _] = s.useState(!1), [u, E] = s.useState(!1), [T, I] = s.useState(!1), [R, C] = s.useState(!1), [p, g] = s.useState(!1), [A, N] = s.useState(!1), [m, f] = s.useState(!1), S = o || d || u || T || p || m, h = s.useCallback(async e => {
+  } = null != e ? e : {}, [o, c] = s.useState(!1), [d, _] = s.useState(!1), [u, E] = s.useState(!1), [T, I] = s.useState(!1), [R, C] = s.useState(!1), [p, g] = s.useState(!1), [A, m] = s.useState(!1), [N, f] = s.useState(!1), S = o || d || u || T || p || N, h = s.useCallback(async e => {
 if (!S) {
   c(!0);
   try {
@@ -93,23 +93,23 @@ if (!R) {
 R,
 t,
 n
-  ]), P = s.useCallback(async e => {
+  ]), L = s.useCallback(async e => {
 if (!A) {
-  N(!0);
+  m(!0);
   try {
     await r.ZP.fetchTeenActivity(e), null == n || n();
   } catch (n) {
     let e = new a.Hx(n);
     null == t || t(e);
   } finally {
-    N(!1);
+    m(!1);
   }
 }
   }, [
 A,
 t,
 n
-  ]), L = s.useCallback(async (e, s) => {
+  ]), P = s.useCallback(async (e, s) => {
 if (!p) {
   g(!0);
   try {
@@ -131,15 +131,15 @@ acceptLinkRequest: h,
 declineLinkRequest: M,
 disconnectLinkRequest: x,
 cancelLinkRequest: b,
-selectTeenUser: P,
+selectTeenUser: L,
 getLinkCode: O,
-requestLink: L,
+requestLink: P,
 loadMore: s.useCallback(async e => {
   let n = i.Z.getActionsForDisplayType(e),
     s = n[n.length - 1],
     l = i.Z.getStartId(),
     o = i.Z.getSelectedTeenId();
-  if (!m && null != l && null != o) {
+  if (!N && null != l && null != o) {
     f(!0);
     try {
       await r.ZP.fetchMoreTeenActivity(o, e, l, s.event_id);
@@ -151,7 +151,7 @@ loadMore: s.useCallback(async e => {
     }
   }
 }, [
-  m,
+  N,
   t
 ]),
 isAcceptLoading: o,
@@ -161,6 +161,6 @@ isCancelLoading: T,
 isGetLinkCodeLoading: R,
 isSelectTeenUserLoading: A,
 isRequestingLink: p,
-isMoreLoading: m
+isMoreLoading: N
   };
 }

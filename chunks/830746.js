@@ -21,7 +21,7 @@ n = (0, a.e7)([i.default], () => i.default.getCurrentUser()),
 p = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
 g = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_PARENT),
 A = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_PARENT),
-N = (0, r.useRedesignIconContext)().enabled;
+m = (0, r.useRedesignIconContext)().enabled;
   return void 0 === n ? null : (0, s.jsxs)('div', {
 className: C.container,
 children: [
@@ -44,7 +44,7 @@ children: [
         description: g
       }),
       (0, s.jsx)(E.Z, {
-        icon: N ? r.QrCodeCameraIcon : (0, r.makeIconCompat)(T.Z),
+        icon: m ? r.QrCodeCameraIcon : (0, r.makeIconCompat)(T.Z),
         header: R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_HEADER,
         description: A
       })

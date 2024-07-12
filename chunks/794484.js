@@ -50,8 +50,8 @@ className: n,
 variant: r = T.R0.PERKS_DISCOVERABILITY,
 noBackground: g = !1,
 leftAlignHeaders: A = !1,
-showAllPerksButton: N,
-headerClassname: m,
+showAllPerksButton: m,
+headerClassname: N,
 isFullScreen: f = !0
   } = e, S = a.useRef(null), h = (0, _.yQ)(), M = (0, u.Ag)(h), x = (0, c.ZP)('perks-discoverability');
   (0, u.I2)();
@@ -59,11 +59,11 @@ isFullScreen: f = !0
   location: T.R0.PERKS_DISCOVERABILITY
 }),
 O = r === T.R0.WHATS_NEW,
-P = (0, _.IY)();
+L = (0, _.IY)();
   a.useEffect(() => {
-O && !M && P();
+O && !M && L();
   }, [
-P,
+L,
 O,
 M
   ]), a.useEffect(() => {
@@ -73,18 +73,18 @@ if (null == e || !M || !O)
 let t = requestAnimationFrame(() => {
   e.scrollIntoView({
     behavior: 'smooth'
-  }), O && P();
+  }), O && L();
 });
 return () => {
-  cancelAnimationFrame(t), O && P();
+  cancelAnimationFrame(t), O && L();
 };
   }, [
 S,
 M,
 O,
-P
+L
   ]);
-  let L = (0, I.Op)(O),
+  let P = (0, I.Op)(O),
 v = (0, E.Z)(),
 Z = (0, I.mN)(),
 D = (0, I.sP)({
@@ -114,27 +114,27 @@ children: [
     }, n),
     children: [
       (0, s.jsx)(p, {
-        showAllPerksButton: N,
+        showAllPerksButton: m,
         leftAlignHeaders: A,
-        title: L.title,
-        headerClassname: m
+        title: P.title,
+        headerClassname: N
       }),
       (0, s.jsx)(o.Text, {
         variant: 'text-lg/normal',
         color: 'header-primary',
         className: i()(C.subtitle, {
-          [C.subtitle]: null == N || A,
-          [C.subtitleWithButton]: null != N && !A,
+          [C.subtitle]: null == m || A,
+          [C.subtitleWithButton]: null != m && !A,
           [C.fullWidth]: O || A,
           [C.moreSubtitleMargin]: B,
           [C.leftAlignSubtitle]: A,
           [C.centerAlignSubtitle]: !A
         }),
-        children: L.subtitle
+        children: P.subtitle
       }),
-      !A && null != N && (0, s.jsx)('div', {
+      !A && null != m && (0, s.jsx)('div', {
         className: i()(C.showAllPerksButtonCenter),
-        children: N
+        children: m
       }),
       (0, s.jsx)('div', {
         className: i()({

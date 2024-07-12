@@ -17,8 +17,8 @@ var s = n(735250),
   p = n(880257),
   g = n(631885),
   A = n(240351),
-  N = n(792258),
-  m = n(657825),
+  m = n(792258),
+  N = n(657825),
   f = n(198952),
   S = n(329242),
   h = n(895328),
@@ -27,7 +27,7 @@ var s = n(735250),
   b = n(689938),
   O = n(661624);
 
-function P() {
+function L() {
   let e = a.useCallback(() => {
 (0, o.openModalLazy)(async () => {
   let {
@@ -51,7 +51,7 @@ children: (0, s.jsx)(o.CircleInformationIcon, {
   });
 }
 
-function L(e) {
+function P(e) {
   let {
 displayType: t
   } = e, n = a.useCallback(() => {
@@ -75,18 +75,18 @@ x = a.useCallback(e => {
   let {
     row: t
   } = e, n = l[t];
-  return (0, u.iB)(n) ? (0, s.jsx)(m.Z, {
+  return (0, u.iB)(n) ? (0, s.jsx)(N.Z, {
     userId: n.entity_id,
     timestamp: d.default.extractTimestamp(n.event_id),
     timestampFormatter: C.timestampFormatter
-  }, n.event_id) : (0, u.f0)(n) ? (0, s.jsx)(N.Z, {
+  }, n.event_id) : (0, u.f0)(n) ? (0, s.jsx)(m.Z, {
     guildId: n.entity_id
   }, n.event_id) : void 0;
 }, [
   l,
   C.timestampFormatter
 ]),
-P = a.useCallback(() => (0, s.jsxs)(s.Fragment, {
+L = a.useCallback(() => (0, s.jsxs)(s.Fragment, {
   children: [
     (0, s.jsx)(o.Text, {
       className: O.sectionHeader,
@@ -109,21 +109,21 @@ P = a.useCallback(() => (0, s.jsxs)(s.Fragment, {
 ]);
   if (0 === l.length)
 return null;
-  let L = l.slice(0, g);
+  let P = l.slice(0, g);
   return (0, s.jsxs)('div', {
 className: O.actionSection,
 children: [
-  P(),
+  L(),
   (0, s.jsx)('div', {
     className: O.actions,
     style: {
-      maxHeight: 65 * L.length
+      maxHeight: 65 * P.length
     },
-    children: L.map((e, t) => x({
+    children: P.map((e, t) => x({
       row: t
     }))
   }),
-  L.length !== c ? (0, s.jsx)(o.Clickable, {
+  P.length !== c ? (0, s.jsx)(o.Clickable, {
     className: O.loadMoreBar,
     onClick: S,
     role: 'button',
@@ -134,7 +134,7 @@ children: [
       className: O.loadMore,
       variant: 'text-sm/bold',
       children: b.Z.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({
-        pageSize: Math.min(c - L.length, M.iB)
+        pageSize: Math.min(c - P.length, M.iB)
       })
     })
   }) : null
@@ -246,7 +246,7 @@ children: [
     className: O.connectedCounter,
     children: [
       (0, s.jsx)(v, {}),
-      (0, s.jsx)(P, {})
+      (0, s.jsx)(L, {})
     ]
   }),
   (0, s.jsxs)('div', {
@@ -275,7 +275,7 @@ children: [
             className: O.activityOverview,
             children: a ? n.map(e => {
               let [t] = e;
-              return (0, s.jsx)(L, {
+              return (0, s.jsx)(P, {
                 displayType: t
               }, ''.concat(t, '-list'));
             }) : (0, s.jsx)(h.Z, {

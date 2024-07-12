@@ -25,7 +25,7 @@ return null;
   if (c.ZP.isBoostOnlySubscription(a) ? t = E.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION : null != g && (t = c.ZP.getDisplayPremiumType(g.planId)), null == t)
 return null;
   let A = () => l.Z.open(u.oAB.SUBSCRIPTIONS),
-N = (null != g ? c.ZP.getSkuIdForPlan(g.planId) : null) === _.Si.TIER_1;
+m = (null != g ? c.ZP.getSkuIdForPlan(g.planId) : null) === _.Si.TIER_1;
   return n = null != C ? C : p || R ? 'always-white' : 'text-normal', (0, s.jsxs)(i.Card, {
 className: r()(T.container, I, {
   [T.lightTextLink]: R,
@@ -45,7 +45,7 @@ children: [
   (0, s.jsx)(i.Text, {
     variant: 'text-sm/medium',
     color: n,
-    children: N ? E.Z.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
+    children: m ? E.Z.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
       helpdeskArticle: o.Z.getArticleURL(u.BhN.PREMIUM_DETAILS),
       onSubscriptionsClick: A
     }) : E.Z.Messages.PREMIUM_SUBSCRIPTION_MANAGE_YOURS_LINK.format({

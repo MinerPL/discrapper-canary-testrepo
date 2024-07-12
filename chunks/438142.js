@@ -67,8 +67,8 @@ function j(t) {
 function z(t, e, r) {
   return ('string' == typeof r && r.toLowerCase(), 'INPUT' === e && ('radio' === r || 'checkbox' === r)) ? t.getAttribute('value') || '' : t.value;
 }
-let $ = 1,
-  q = RegExp('[^a-z0-9-_:]');
+let q = 1,
+  $ = RegExp('[^a-z0-9-_:]');
 
 function Z(t) {
   return t ? t.replace(/[\S]/g, '*') : '';
@@ -332,7 +332,7 @@ switch (t.nodeType) {
         if (t instanceof HTMLFormElement)
           return 'form';
         let e = t.tagName.toLowerCase().trim();
-        return q.test(e) ? 'div' : e;
+        return $.test(e) ? 'div' : e;
       }(t),
       M = {};
     for (let {
@@ -514,7 +514,7 @@ if (t.type === A.Element) {
   }
 }
 return !1;
-  }(G, D) && (U || G.type !== A.Text || G.isStyle || G.textContent.replace(/^\s+|\s+$/gm, '').length) ? $++ : -2;
+  }(G, D) && (U || G.type !== A.Text || G.isStyle || G.textContent.replace(/^\s+|\s+$/gm, '').length) ? q++ : -2;
   let m = Object.assign(G, {
 id: r
   });
@@ -1675,8 +1675,8 @@ if (t.contentWindow) {
 this.restorePatches.forEach(t => t());
   }
 }
-for (var tz = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/', t$ = 'undefined' == typeof Uint8Array ? [] : new Uint8Array(256), tq = 0; tq < tz.length; tq++)
-  t$[tz.charCodeAt(tq)] = tq;
+for (var tz = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/', tq = 'undefined' == typeof Uint8Array ? [] : new Uint8Array(256), t$ = 0; t$ < tz.length; t$++)
+  tq[tz.charCodeAt(t$)] = t$;
 var tZ = function(t) {
   var e, r = new Uint8Array(t),
 n = r.length,
@@ -3499,7 +3499,7 @@ eP(r.replay, _);
   }
 }
 let ez = null,
-  e$ = t => e => {
+  eq = t => e => {
 if (!t.isEnabled())
   return;
 let r = function(t) {
@@ -3552,7 +3552,7 @@ if (!!r)
   t7(t, r);
   };
 
-function eq(t) {
+function e$(t) {
   return !!(t && t.on);
 }
 async function eZ(t) {
@@ -4239,7 +4239,7 @@ try {
     var e;
     let r = (0, L.Gd)().getScope(),
       n = (0, L.Gd)().getClient();
-    r && r.addScopeListener(e$(t)), (0, b.oq)('dom', ei(t)), (0, b.oq)('history', (e = t, t => {
+    r && r.addScopeListener(eq(t)), (0, b.oq)('dom', ei(t)), (0, b.oq)('history', (e = t, t => {
         if (!e.isEnabled())
           return;
         let r = function(t) {

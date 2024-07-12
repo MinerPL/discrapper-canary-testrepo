@@ -26,12 +26,12 @@ function h(e) {
   return '/' === e.charAt(0) ? e.substr(1) : e;
 }
 
-function d(e, t) {
+function f(e, t) {
   var n, r;
   return (n = e, r = t, 0 === n.toLowerCase().indexOf(r.toLowerCase()) && -1 !== '/?#'.indexOf(n.charAt(r.length))) ? e.substr(t.length) : e;
 }
 
-function f(e) {
+function d(e) {
   return '/' === e.charAt(e.length - 1) ? e.slice(0, -1) : e;
 }
 
@@ -172,7 +172,7 @@ l = i.getUserConfirmation,
 E = void 0 === l ? g : l,
 A = i.keyLength,
 C = void 0 === A ? 6 : A,
-T = e.basename ? f(u(e.basename)) : '';
+T = e.basename ? d(u(e.basename)) : '';
 
   function O(e) {
 var t = e || {},
@@ -180,7 +180,7 @@ var t = e || {},
   r = t.state,
   o = window.location,
   i = o.pathname + o.search + o.hash;
-return T && (i = d(i, T)), y(i, r, n);
+return T && (i = f(i, T)), y(i, r, n);
   }
 
   function R() {
@@ -189,7 +189,7 @@ return Math.random().toString(36).substr(2, C);
   var k = w();
 
   function P(e) {
-s(N, e), N.length = n.length, k.notifyListeners(N.location, N.action);
+s(z, e), z.length = n.length, k.notifyListeners(z.location, z.action);
   }
 
   function I(e) {
@@ -207,7 +207,7 @@ _ ? (_ = !1, P()) : k.confirmTransitionTo(e, 'POP', E, function(t) {
   t ? P({
     action: 'POP',
     location: e
-  }) : (n = e, r = N.location, -1 === (o = S.indexOf(r.key)) && (o = 0), -1 === (i = S.indexOf(n.key)) && (i = 0), (a = o - i) && (_ = !0, B(a)));
+  }) : (n = e, r = z.location, -1 === (o = S.indexOf(r.key)) && (o = 0), -1 === (i = S.indexOf(n.key)) && (i = 0), (a = o - i) && (_ = !0, B(a)));
 });
   }
   var L = O(b()),
@@ -220,19 +220,19 @@ return T + p(e);
   function B(e) {
 n.go(e);
   }
-  var H = 0;
+  var F = 0;
 
-  function z(e) {
-1 === (H += e) && 1 === e ? (window.addEventListener(v, I), o && window.addEventListener(x, M)) : 0 === H && (window.removeEventListener(v, I), o && window.removeEventListener(x, M));
+  function H(e) {
+1 === (F += e) && 1 === e ? (window.addEventListener(v, I), o && window.addEventListener(x, M)) : 0 === F && (window.removeEventListener(v, I), o && window.removeEventListener(x, M));
   }
-  var F = !1,
-N = {
+  var q = !1,
+z = {
   length: n.length,
   action: 'POP',
   location: L,
   createHref: j,
   push: function(e, t) {
-    var o = y(e, t, R(), N.location);
+    var o = y(e, t, R(), z.location);
     k.confirmTransitionTo(o, 'PUSH', E, function(e) {
       if (e) {
         var t = j(o),
@@ -245,7 +245,7 @@ N = {
             }, null, t), h)
             window.location.href = t;
           else {
-            var c = S.indexOf(N.location.key),
+            var c = S.indexOf(z.location.key),
               s = S.slice(0, c + 1);
             s.push(o.key), S = s, P({
               action: 'PUSH',
@@ -259,7 +259,7 @@ N = {
   },
   replace: function(e, t) {
     var o = 'REPLACE',
-      i = y(e, t, R(), N.location);
+      i = y(e, t, R(), z.location);
     k.confirmTransitionTo(i, o, E, function(e) {
       if (e) {
         var t = j(i),
@@ -272,7 +272,7 @@ N = {
             }, null, t), h)
             window.location.replace(t);
           else {
-            var s = S.indexOf(N.location.key); -
+            var s = S.indexOf(z.location.key); -
             1 !== s && (S[s] = i.key), P({
               action: o,
               location: i
@@ -293,18 +293,18 @@ N = {
   block: function(e) {
     void 0 === e && (e = !1);
     var t = k.setPrompt(e);
-    return F || (z(1), F = !0),
+    return q || (H(1), q = !0),
       function() {
-        return F && (F = !1, z(-1)), t();
+        return q && (q = !1, H(-1)), t();
       };
   },
   listen: function(e) {
     var t = k.appendListener(e);
-    return z(1),
+    return H(1),
       function() {
-        z(-1), t();
+        H(-1), t();
       };
   }
 };
-  return N;
+  return z;
 };

@@ -1,11 +1,11 @@
 n.d(t, {
   Z: function() {
-return o;
+return r;
   }
 });
 var i = n(272423);
 
-function o(e) {
+function r(e) {
   let t = (0, i.kf)(e);
   if (null != t)
 return [
@@ -14,10 +14,10 @@ return [
 ];
   let n = (0, i.B3)(e);
   if (null != n) {
-var o, r;
+var r, a;
 return [
-  null === (o = n.params) || void 0 === o ? void 0 : o.guildId,
-  null === (r = n.params) || void 0 === r ? void 0 : r.channelId
+  null === (r = n.params) || void 0 === r ? void 0 : r.guildId,
+  null === (a = n.params) || void 0 === a ? void 0 : a.channelId
 ];
   }
   return [

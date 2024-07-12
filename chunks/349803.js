@@ -18,14 +18,14 @@ t.Z = function(e) {
 isVisible: a,
 isFullscreen: R,
 subscriptionTier: C
-  } = e, p = null === (t = (0, d.N)()) || void 0 === t ? void 0 : t.subscription_trial, g = (0, c.Ng)(), A = (0, c.Wp)(g, E.Si.TIER_2) ? E.Si.TIER_2 : void 0, N = (0, l.e7)([o.Z], () => o.Z.useReducedMotion), m = (0, i.useSpring)({
+  } = e, p = null === (t = (0, d.N)()) || void 0 === t ? void 0 : t.subscription_trial, g = (0, c.Ng)(), A = (0, c.Wp)(g, E.Si.TIER_2) ? E.Si.TIER_2 : void 0, m = (0, l.e7)([o.Z], () => o.Z.useReducedMotion), N = (0, i.useSpring)({
 transform: a ? 'translateY(-100%)' : 'translateY(0%)',
 opacity: a ? 1 : 0,
 config: {
   tension: 120,
   friction: 12
 },
-immediate: N
+immediate: m
   }), f = {
 section: T.jXE.MARKETING_FLOATING_CTA
   };
@@ -34,7 +34,7 @@ className: r()(I.wrapper, {
   [I.fullscreenWrapper]: R,
   [I.invisible]: !a
 }),
-style: m,
+style: N,
 children: (0, s.jsxs)('div', {
   className: I.innerWrapper,
   children: [

@@ -41,12 +41,12 @@ return null;
 {
   color: A
 } = (0, c.F7)(g),
-N = (0, a.wj)(I) ? u : E,
-m = (C.size - C.offset - 2 * C.stroke) * 0.8,
+m = (0, a.wj)(I) ? u : E,
+N = (C.size - C.offset - 2 * C.stroke) * 0.8,
 f = C.size - C.stroke,
 S = {
-  width: 0.4 * m,
-  height: 0.4 * m
+  width: 0.4 * N,
+  height: 0.4 * N
 },
 h = {
   width: S.width + 1,
@@ -68,9 +68,9 @@ children: [
     className: _.trophyIconContainer,
     children: (0, s.jsx)(r.TrophyIcon, {
       size: 'custom',
-      color: d ? A : (0, l.Lq)(N.trophy),
-      width: m,
-      height: m
+      color: d ? A : (0, l.Lq)(m.trophy),
+      width: N,
+      height: N
     })
   }),
   !d && (0, s.jsx)('div', {
@@ -78,7 +78,7 @@ children: [
     style: h,
     children: (0, s.jsx)(r.LockIcon, {
       size: 'custom',
-      color: (0, l.Lq)(N.locked),
+      color: (0, l.Lq)(m.locked),
       ...S
     })
   }),

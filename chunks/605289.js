@@ -28,7 +28,7 @@ smallGap: n
   subscription: p,
   userLocale: C
 }),
-N = a.toLowerCase() + 'Banner';
+m = a.toLowerCase() + 'Banner';
   return (0, s.jsxs)('div', {
 className: r()(R.bannerContainer, {
   [R.smallGap]: n,
@@ -36,7 +36,7 @@ className: r()(R.bannerContainer, {
 }),
 children: [
   (0, s.jsx)('div', {
-    className: r()(R[N], R.bannerImageContainer)
+    className: r()(R[m], R.bannerImageContainer)
   }),
   (0, s.jsx)(l.Heading, {
     className: R.bannerHeading,

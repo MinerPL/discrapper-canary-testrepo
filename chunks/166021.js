@@ -29,11 +29,11 @@ T
   let g = a.useCallback(e => ({
   x: (e - u) * 100
 }), [u]),
-[A, N] = (0, l.useSprings)(t.length, g);
+[A, m] = (0, l.useSprings)(t.length, g);
   return a.useEffect(() => {
-N(g);
+m(g);
   }, [
-N,
+m,
 g
   ]), (0, s.jsx)('div', {
 className: n,

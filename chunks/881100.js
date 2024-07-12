@@ -21,8 +21,8 @@ var s = n(399606),
   p = n(633030),
   g = n(97942),
   A = n(269987),
-  N = n(548629),
-  m = n(507084),
+  m = n(548629),
+  N = n(507084),
   f = n(680313),
   S = n(926433),
   h = n(302036),
@@ -30,8 +30,8 @@ var s = n(399606),
   x = n(1549),
   b = n(13327),
   O = n(59137),
-  P = n(405991),
-  L = n(24615),
+  L = n(405991),
+  P = n(24615),
   v = n(193943),
   Z = n(334347),
   D = n(943734),
@@ -67,7 +67,7 @@ return {
     title: T.Z.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE,
     description: T.Z.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION,
     className: t.clientThemesCard,
-    imageSource: L,
+    imageSource: P,
     imageClassName: t.clientThemesImage
   },
   customAppIcons: {
@@ -115,13 +115,13 @@ return {
   moreGuildsAlt: {
     title: T.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
     description: T.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-    imageSource: H(n, m, f),
+    imageSource: H(n, N, f),
     imageClassName: t.moreGuildsAltImage
   },
   remix: {
     title: T.Z.Messages.REMIXING_PERKS_CARD_TITLE,
     description: T.Z.Messages.REMIXING_PERKS_CARD_DESCRIPTION,
-    imageSource: H(n, A, N),
+    imageSource: H(n, A, m),
     imageClassName: t.remixingImage,
     isEarlyAccess: !0
   },
@@ -174,7 +174,7 @@ return {
   videoBackground: {
     title: T.Z.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_TITLE,
     description: T.Z.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_DESCRIPTION,
-    imageSource: H(n, O, P),
+    imageSource: H(n, O, L),
     imageClassName: t.videoBackgroundImage
   }
 };

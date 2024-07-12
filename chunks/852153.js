@@ -30,7 +30,7 @@ t && (a = a.filter(function(t) {
   return r;
 }
 
-function y(e) {
+function g(e) {
   for (var t = 1; t < arguments.length; t++) {
 var r = null != arguments[t] ? arguments[t] : {};
 t % 2 ? p(Object(r), !0).forEach(function(t) {
@@ -41,16 +41,16 @@ t % 2 ? p(Object(r), !0).forEach(function(t) {
   }
   return e;
 }
-var g = function(e) {
+var y = function(e) {
   var t = e.getItemString,
 r = e.keyPath,
 n = e.labelRenderer,
 i = e.styling,
 c = e.value,
 p = e.valueRenderer,
-g = e.isCustomNode,
+y = e.isCustomNode,
 v = (0, s.Z)(e, h),
-m = g(c) ? 'Custom' : (0, u.Z)(c),
+m = y(c) ? 'Custom' : (0, u.Z)(c),
 O = {
   getItemString: t,
   key: r[0],
@@ -61,9 +61,9 @@ O = {
   value: c,
   valueRenderer: p
 },
-w = y(y(y({}, v), O), {}, {
+w = g(g(g({}, v), O), {}, {
   data: c,
-  isCustomNode: g
+  isCustomNode: y
 });
   switch (m) {
 case 'Object':
@@ -125,7 +125,7 @@ default:
   }));
   }
 };
-g.propTypes = {
+y.propTypes = {
   getItemString: c().func.isRequired,
   keyPath: c().arrayOf(c().oneOfType([
 c().string,
@@ -136,4 +136,4 @@ c().number
   value: c().any,
   valueRenderer: c().func.isRequired,
   isCustomNode: c().func.isRequired
-}, t.Z = g;
+}, t.Z = y;

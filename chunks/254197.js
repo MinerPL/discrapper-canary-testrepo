@@ -28,21 +28,21 @@ var s = n(735250),
   O = n(658590),
   I = n(46140),
   U = n(689938),
-  y = n(689065);
-let M = o.forwardRef(function(e, t) {
+  M = n(689065);
+let y = o.forwardRef(function(e, t) {
   var n;
   let {
 className: r,
-isExpanded: M,
+isExpanded: y,
 isExpansionAnimationComplete: q,
 expansionSpring: Z,
-onCtxMenuOpen: P,
-onCtxMenuClose: k,
+onCtxMenuOpen: k,
+onCtxMenuClose: P,
 onCtxMenuSelect: Q,
 quest: L,
 useReducedMotion: w,
 taskDetails: W
-  } = e, H = o.useRef(null), D = (0, c.e7)([g.Z], () => g.Z.isEnrolling(L.id), [L]), V = (0, m.B6)(L.config.expiresAt), z = o.useMemo(() => (0, f.nP)(L.config.assets.questBarHero), [L]), G = o.useCallback(() => {
+  } = e, D = o.useRef(null), H = (0, c.e7)([g.Z], () => g.Z.isEnrolling(L.id), [L]), V = (0, m.B6)(L.config.expiresAt), z = o.useMemo(() => (0, f.nP)(L.config.assets.questBarHero), [L]), G = o.useCallback(() => {
 (0, x.AH)(L.id, {
   questContent: C.jn.QUEST_BAR_V2,
   questContentCTA: p.jZ.ACCEPT_QUEST
@@ -53,7 +53,7 @@ primaryVariant: F
 location: I.dr.QUESTS_BAR
   }, {
 autoTrackExposure: !1
-  }), X = (null === (n = L.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Y = M && q, {
+  }), X = (null === (n = L.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Y = y && q, {
 questSupportsConsole: K,
 isProgressingOnConsole: J
   } = o.useMemo(() => ({
@@ -68,27 +68,27 @@ useV2Variants: F === _.P.V2 || (0, O.a)(L)
   });
   return (0, s.jsx)('div', {
 'aria-hidden': !Y,
-className: a()(r, y.contentExpanded, {
-  [y.contentInteractable]: Y,
-  [y.contentExpandedAccepted]: X
+className: a()(r, M.contentExpanded, {
+  [M.contentInteractable]: Y,
+  [M.contentExpandedAccepted]: X
 }),
 children: X ? (0, s.jsxs)('div', {
-  className: y.questAcceptedContent,
+  className: M.questAcceptedContent,
   ref: t,
   children: [
     (0, s.jsxs)('div', {
-      className: y.questAcceptedHeader,
+      className: M.questAcceptedHeader,
       children: [
         (0, s.jsx)(d.Text, {
           variant: 'text-xxs/medium',
-          className: a()(y.flex, y.headerText),
+          className: a()(M.flex, M.headerText),
           children: U.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
             expirationDate: V
           })
         }),
         (0, s.jsx)(S.r, {
-          onOpen: P,
-          onClose: k,
+          onOpen: k,
+          onClose: P,
           onSelect: Q,
           questContent: C.jn.QUEST_BAR_V2,
           quest: L,
@@ -96,28 +96,28 @@ children: X ? (0, s.jsxs)('div', {
           showShareLink: !0,
           children: e => (0, s.jsx)(d.Clickable, {
             ...e,
-            className: y.submenuWrapper,
+            className: M.submenuWrapper,
             'aria-label': U.Z.Messages.ACTIONS,
             children: (0, s.jsx)(d.MoreHorizontalIcon, {
               size: 'md',
               color: 'currentColor',
-              className: a()(y.submenuIcon, y.interactiveNormal)
+              className: a()(M.submenuIcon, M.interactiveNormal)
             })
           })
         })
       ]
     }),
     (0, s.jsx)('div', {
-      className: y.divider
+      className: M.divider
     }),
     (0, s.jsx)(B.Z, {
-      progressBarRef: H,
+      progressBarRef: D,
       quest: L,
-      isExpanded: M
+      isExpanded: y
     }),
     (0, s.jsx)(b.Z, {
       quest: L,
-      progressBarRef: H,
+      progressBarRef: D,
       isExpanded: !0,
       taskDetails: W
     }),
@@ -136,7 +136,7 @@ children: X ? (0, s.jsxs)('div', {
       children: (0, s.jsx)(j.y, {
         quest: L,
         useReducedMotion: w,
-        isExpanded: M,
+        isExpanded: y,
         hasMadeProgress: ee
       })
     })
@@ -144,45 +144,45 @@ children: X ? (0, s.jsxs)('div', {
 }) : (0, s.jsxs)('div', {
   children: [
     (0, s.jsxs)('div', {
-      className: y.questPromoContent,
+      className: M.questPromoContent,
       ref: t,
       children: [
         (0, s.jsxs)('div', {
-          className: y.details,
+          className: M.details,
           children: [
             (0, s.jsx)(E.Z, {
-              className: y.rewardTile,
+              className: M.rewardTile,
               learnMoreStyle: 'text',
               quest: L,
               questContent: C.jn.QUEST_BAR_V2
             }),
             (0, s.jsx)(d.Heading, {
-              className: y.title,
+              className: M.title,
               variant: 'heading-md/medium',
               children: U.Z.Messages.QUESTS_TITLE.format({
                 questName: L.config.messages.questName
               })
             }),
             (0, s.jsx)(d.Text, {
-              className: y.description,
+              className: M.description,
               variant: 'text-xs/normal',
               children: es
             })
           ]
         }),
         (0, s.jsx)(d.Button, {
-          className: y.cta,
+          className: M.cta,
           color: d.Button.Colors.BRAND,
           fullWidth: !0,
           onClick: Y ? G : void 0,
           size: d.Button.Sizes.SMALL,
-          submitting: D,
+          submitting: H,
           children: U.Z.Messages.QUESTS_ACCEPT_QUEST
         })
       ]
     }),
     (0, s.jsxs)(i.animated.div, {
-      className: y.heroAssetWrapper,
+      className: M.heroAssetWrapper,
       style: {
         backdropFilter: Z.to([
           0,
@@ -201,7 +201,7 @@ children: X ? (0, s.jsxs)('div', {
       },
       children: [
         (0, s.jsx)(i.animated.div, {
-          className: y.heroAssetDarken,
+          className: M.heroAssetDarken,
           style: {
             opacity: Z.to([
               0,
@@ -213,7 +213,7 @@ children: X ? (0, s.jsxs)('div', {
           }
         }),
         (0, s.jsx)(i.animated.div, {
-          className: y.heroAssetTint,
+          className: M.heroAssetTint,
           style: {
             backgroundColor: L.config.colors.primary,
             opacity: Z.to([
@@ -233,7 +233,7 @@ children: X ? (0, s.jsxs)('div', {
             loop: !0,
             muted: !0,
             playsInline: !0,
-            className: y.heroAsset,
+            className: M.heroAsset,
             controls: !1,
             children: (0, s.jsx)('source', {
               src: en,
@@ -245,12 +245,12 @@ children: X ? (0, s.jsxs)('div', {
           children: e => (0, s.jsx)('img', {
             ref: e,
             alt: '',
-            className: y.heroAsset,
+            className: M.heroAsset,
             src: en
           })
         }),
         (0, s.jsx)(i.animated.div, {
-          className: y.legibilityGradient,
+          className: M.legibilityGradient,
           style: {
             opacity: Z.to({
               range: [
@@ -270,4 +270,4 @@ children: X ? (0, s.jsxs)('div', {
 })
   });
 });
-t.Z = M;
+t.Z = y;
