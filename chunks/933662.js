@@ -1,1 +1,0 @@
-e.exports = n.p + '63fb625147404ad6de71.png';

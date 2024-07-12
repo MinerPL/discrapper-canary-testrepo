@@ -1,1 +1,0 @@
-e.exports = a.p + '45066b829ae4dc5e063c.jpg';

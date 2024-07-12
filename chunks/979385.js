@@ -1,1 +1,0 @@
-e.exports = n.p + '96e9ff7582c0edffc78b.svg';

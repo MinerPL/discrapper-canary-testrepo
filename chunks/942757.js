@@ -1,2 +1,0 @@
-e.exports = function () {
-};

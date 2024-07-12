@@ -1,1 +1,0 @@
-e.exports = s.p + 'f872d739c6da5cb378d5.png';
