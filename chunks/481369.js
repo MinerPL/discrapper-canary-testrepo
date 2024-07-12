@@ -1,0 +1,41 @@
+n.d(t, {
+  Z: function() {
+return u;
+  }
+});
+var i = n(399606),
+  a = n(317381),
+  l = n(917107),
+  s = n(592125),
+  r = n(226027),
+  o = n(918559);
+let c = 'no_text_activity',
+  d = {
+[c]: [
+  r.E.NEW_MESSAGES,
+  r.E.OPT_IN_CHANNEL,
+  r.E.SUMMARIES
+],
+[o.Ez.DISCONNECTED]: [
+  r.E.NEW_MESSAGES,
+  r.E.OPT_IN_CHANNEL,
+  r.E.SUMMARIES
+],
+[o.Ez.LAUNCHING_WITH_ORIENTATION_CHANGE]: [
+  r.E.NEW_MESSAGES,
+  r.E.OPT_IN_CHANNEL,
+  r.E.SUMMARIES
+],
+[o.Ez.PANEL]: [],
+[o.Ez.PIP]: [
+  r.E.NEW_MESSAGES,
+  r.E.OPT_IN_CHANNEL,
+  r.E.SUMMARIES
+]
+  };
+
+function u() {
+  let e = (0, i.e7)([a.ZP], () => a.ZP.getCurrentEmbeddedActivity()),
+t = (0, i.e7)([a.ZP], () => a.ZP.getActivityPanelMode());
+  return void 0 === e || (0, l.Z)(null == e ? void 0 : e.channelId, s.Z) ? d[c] : d[t];
+}

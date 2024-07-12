@@ -1,0 +1,10 @@
+e.d(t, {
+  d: function() {
+return u;
+  }
+});
+var r = e(876215);
+
+function u(n) {
+  return n.content_type === r.s.PLAYED_GAME || n.content_type === r.s.TOP_GAME;
+}

@@ -1,0 +1,1 @@
+e.exports = s.p + 'aa3deb1ceeabcb52c59a.svg';

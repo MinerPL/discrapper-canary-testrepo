@@ -1,0 +1,22 @@
+e.exports = {
+  prompt: 'prompt_cd377c',
+  promptContent: 'promptContent_cd377c',
+  scrollerContent: 'scrollerContent_cd377c',
+  questionHeader: 'questionHeader_cd377c',
+  title: 'title_cd377c',
+  headerSeparator: 'headerSeparator_cd377c',
+  promptOptions: 'promptOptions_cd377c',
+  helpText: 'helpText_cd377c',
+  helpTextItem: 'helpTextItem_cd377c',
+  navButtons: 'navButtons_cd377c',
+  finishEmoji: 'finishEmoji_cd377c',
+  termsFieldBody: 'termsFieldBody_cd377c',
+  termsRow: 'termsRow_cd377c',
+  termsRowContent: 'termsRowContent_cd377c',
+  leftButtons: 'leftButtons_cd377c',
+  rightButtons: 'rightButtons_cd377c',
+  button: 'button_cd377c',
+  buttonInner: 'buttonInner_cd377c',
+  arrow: 'arrow_cd377c',
+  overlay: 'overlay_cd377c'
+};

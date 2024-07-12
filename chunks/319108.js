@@ -1,0 +1,1 @@
+t.exports = s.p + '352809d4995ef015b745.svg';

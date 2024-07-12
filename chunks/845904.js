@@ -1,0 +1,1 @@
+e.exports = s.p + '201107f98fe23eca9096.svg';

@@ -1,0 +1,1 @@
+e.exports = s.p + '8b556390694bce201831.png';
