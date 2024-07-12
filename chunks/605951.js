@@ -7,7 +7,7 @@ var i = n(470079),
   l = n(914010);
 
 function r(e) {
-  i.useLayoutEffect(() => {
+  i.useEffect(() => {
 let t = null;
 
 function n() {
@@ -15,7 +15,7 @@ function n() {
   if (n !== t)
     t = null != n ? n : null, e(null != n ? n : null, !1);
 }
-return l.Z.addChangeListener(n), n(), () => {
+return l.Z.addChangeListener(n), () => {
   l.Z.removeChangeListener(n);
 };
   }, [e]);
