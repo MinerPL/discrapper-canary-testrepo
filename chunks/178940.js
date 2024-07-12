@@ -55,7 +55,7 @@ if (i = {
       i.borderColor = 'var(--control-brand-foreground)';
       break;
     case 'ghost':
-      i.borderColor = 'var(--brand-experiment-15a)', i.backgroundColor = 'var(--brand-experiment-15a)';
+      i.borderColor = 'var(--brand-15a)', i.backgroundColor = 'var(--brand-15a)';
       break;
     case 'row':
     case 'inverted':

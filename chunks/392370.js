@@ -20,8 +20,8 @@ var i = t(470079),
   _ = t(674588),
   E = t(809547),
   A = t(822245),
-  h = t(631827),
-  f = t(783097),
+  f = t(631827),
+  h = t(783097),
   N = t(689079),
   C = t(665692);
 
@@ -31,8 +31,8 @@ function v(e, n) {
 }
 
 function I(e, n) {
-  let t = (0, f.$d)(e),
-i = (0, f.$d)(n);
+  let t = (0, h.$d)(e),
+i = (0, h.$d)(n);
   return (0, d.un)(t, i);
 }
 
@@ -115,7 +115,7 @@ if (null != s.result)
     let n = e.descriptor.application;
     null != n && !u.has(n.id) && (Object.keys(e.commands).length > 0 || !t) && c.push(n);
   }
-return i && c.push(f.Wx), {
+return i && c.push(h.Wx), {
   apps: c,
   loading: (null == r ? void 0 : r.fetchState.fetching) === !0 || (null == s ? void 0 : s.fetchState.fetching) === !0
 };
@@ -130,7 +130,7 @@ channel: n
 var e;
 if (!s)
   return [];
-return (0, h.N)(A, {
+return (0, f.N)(A, {
   limit: l,
   filterPredicates: [function(e) {
     let n = (0, m.k)(e, o.yU.CHAT),
@@ -297,7 +297,7 @@ if (_ && E) {
     } = e;
     return n;
   });
-return (0, h.N)(i, {
+return (0, f.N)(i, {
   limit: r,
   filterPredicates: [function(e) {
     let n = (0, m.k)(e, o.yU.CHAT);
@@ -324,22 +324,22 @@ return (0, h.N)(i, {
   }(n)],
   bucketPredicates: [
     function(e) {
-      return n => (0, f.$d)(n).toLocaleLowerCase().startsWith(e.toLocaleLowerCase());
+      return n => (0, h.$d)(n).toLocaleLowerCase().startsWith(e.toLocaleLowerCase());
     }(e = t),
     function(e) {
-      return n => (0, f.$d)(n).toLocaleLowerCase().includes(e.toLocaleLowerCase());
+      return n => (0, h.$d)(n).toLocaleLowerCase().includes(e.toLocaleLowerCase());
     }(e),
     function(e) {
       return n => {
         var t, i;
-        let l = null === (t = (0, f.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
+        let l = null === (t = (0, h.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
         return null !== (i = null == l ? void 0 : l.startsWith(e.toLocaleLowerCase())) && void 0 !== i && i;
       };
     }(e),
     function(e) {
       return n => {
         var t, i;
-        let l = null === (t = (0, f.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
+        let l = null === (t = (0, h.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
         return null !== (i = null == l ? void 0 : l.includes(e.toLocaleLowerCase())) && void 0 !== i && i;
       };
     }(e)

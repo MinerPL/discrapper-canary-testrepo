@@ -17,8 +17,8 @@ var i = t(735250),
   _ = t(499254),
   E = t(541099),
   A = t(827498),
-  h = t(392370),
-  f = t(98880),
+  f = t(392370),
+  h = t(98880),
   N = t(520315),
   C = t(532309),
   v = t(561160),
@@ -50,9 +50,9 @@ enableActivitiesSearch: o
 loading: p,
 isEmptyState: _,
 commandResults: E,
-hasCommandResults: f,
+hasCommandResults: h,
 applicationResults: N
-  } = (0, h.pe)({
+  } = (0, f.pe)({
 channel: n,
 query: t,
 searchesActivities: c,
@@ -61,7 +61,7 @@ searchesBots: m
   }), {
 fetchState: C,
 applicationResults: I
-  } = (0, h.Q2)({
+  } = (0, f.Q2)({
 query: t,
 channel: n,
 fetches: a !== A._b.VOICE
@@ -96,7 +96,7 @@ searchQuery: t,
 textContent: a === A._b.TEXT ? R.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : R.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
   }) : (0, i.jsxs)('div', {
 children: [
-  f && (0, i.jsx)(b, {
+  h && (0, i.jsx)(b, {
     channel: n,
     commandResults: E,
     query: t
@@ -124,14 +124,14 @@ commandResults: m,
 hasCommandResults: p,
 applicationResults: _,
 hasApplicationResults: E
-  } = (0, h.pe)({
+  } = (0, f.pe)({
 channel: n,
 query: t,
 commandLimit: 10,
 searchesCommands: o,
 searchesBots: c,
 searchesActivities: s
-  }), f = l.useMemo(() => _.map(e => ({
+  }), h = l.useMemo(() => _.map(e => ({
 application: e,
 installOnDemand: !1
   })), [_]);
@@ -147,7 +147,7 @@ children: [
     query: t
   }),
   E && (0, i.jsx)(H, {
-    applicationResults: f,
+    applicationResults: h,
     query: t,
     searchesBots: c
   })
@@ -164,8 +164,8 @@ query: r
   } = e, s = a.length > 4, d = l.useMemo(() => s ? a.slice(0, 4) : a, [
 a,
 s
-  ]), [h, f] = l.useState(!1), C = l.useCallback(() => f(e => !e), []), v = (null !== (n = (0, o.Z)(r)) && void 0 !== n ? n : r)[0] !== r[0], x = h && !v;
-  l.useLayoutEffect(() => f(!1), [v]);
+  ]), [f, h] = l.useState(!1), C = l.useCallback(() => h(e => !e), []), v = (null !== (n = (0, o.Z)(r)) && void 0 !== n ? n : r)[0] !== r[0], x = f && !v;
+  l.useLayoutEffect(() => h(!1), [v]);
   let {
 ref: L,
 isTransitioning: M,
@@ -237,7 +237,7 @@ searchResultsPosition: e.resultsPosition
   return (0, i.jsx)('div', {
 className: S.searchOpenAppDetailAppCard,
 ref: e => n.current = e,
-children: (0, i.jsx)(f.kA, {
+children: (0, i.jsx)(h.kA, {
   ...e,
   tracksImpression: !1
 })
@@ -292,7 +292,7 @@ children: [
         } = e;
         return (0, i.jsx)(Z, {
           application: t,
-          look: f.U4.LARGE_BANNER,
+          look: h.U4.LARGE_BANNER,
           location: u.Vh.APP_LAUNCHER_HOME_SEARCH,
           sectionName: A.L3.SEARCH,
           resultsPosition: n,
@@ -308,7 +308,7 @@ children: [
 }
 
 function U(e) {
-  let n = (0, f.cG)(e);
+  let n = (0, h.cG)(e);
   return (0, i.jsx)(P.Z, {
 application: e.application,
 onClick: n,

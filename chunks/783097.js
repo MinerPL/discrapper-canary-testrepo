@@ -12,7 +12,7 @@ return _;
 return C;
   },
   jD: function() {
-return h;
+return f;
   },
   sl: function() {
 return v;
@@ -21,7 +21,7 @@ return v;
 return N;
   },
   ye: function() {
-return f;
+return h;
   }
 }), t(789020);
 var i = t(668781),
@@ -47,11 +47,11 @@ function A(e) {
   return E(e) ? e.name : p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME;
 }
 
-function h(e) {
+function f(e) {
   return E(e) ? e.description : p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION;
 }
 
-function f(e) {
+function h(e) {
   var n;
   let {
 application: t
@@ -60,7 +60,7 @@ application: t
 }
 
 function N(e) {
-  return E(e) && f({
+  return E(e) && h({
 application: e
   }) ? e instanceof o.Z ? e.embeddedActivityConfig : e.embedded_activity_config : null;
 }
@@ -114,7 +114,10 @@ iconURL: c.ZP.getApplicationIconURL({
   ...i,
   id: e.id,
   icon: e.icon,
-  bot: e.bot
+  bot: e.bot,
+  botIconFirst: !h({
+    application: e
+  })
 }),
 name: e.name,
 description: e.description
