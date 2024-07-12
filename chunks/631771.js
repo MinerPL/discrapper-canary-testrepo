@@ -8,8 +8,11 @@ return s;
   PC: function() {
 return o;
   },
-  YN: function() {
+  Qs: function() {
 return l;
+  },
+  YN: function() {
+return u;
   }
 });
 var r = n(818083),
@@ -91,9 +94,47 @@ treatments: [{
     }
   }
 ]
+  }),
+  l = (0, r.B)({
+id: '2024-06_premium_soundboard_desktop_upsell',
+label: 'Premium Soundboard Desktop Upsell',
+kind: 'user',
+defaultConfig: {
+  enableInlineUpsell: !1,
+  enableRoadblock: !1,
+  enableRoadblockWithSocialProof: !1
+},
+treatments: [{
+    id: 1,
+    label: 'Enable inline upsell only',
+    config: {
+      enableInlineUpsell: !0,
+      enableRoadblock: !1,
+      enableRoadblockWithSocialProof: !1
+    }
+  },
+  {
+    id: 2,
+    label: 'Enable inline and roadblock upsells only',
+    config: {
+      enableInlineUpsell: !0,
+      enableRoadblock: !0,
+      enableRoadblockWithSocialProof: !1
+    }
+  },
+  {
+    id: 3,
+    label: 'Enable inline and roadblock upsells with social proof',
+    config: {
+      enableInlineUpsell: !0,
+      enableRoadblock: !0,
+      enableRoadblockWithSocialProof: !0
+    }
+  }
+]
   });
 
-function l(e) {
+function u(e) {
   switch (e) {
 case i.cd.UPLOAD_ERROR_UPSELL:
   return s.getCurrentConfig({

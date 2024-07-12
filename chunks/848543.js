@@ -61,6 +61,7 @@ events: {
   onMouseLeave: V
 }
   } = (0, c.j)(), F = e => (0, i.jsx)(d.Popout, {
+animation: d.Popout.Animation.FADE,
 shouldShow: P,
 position: 'top',
 onRequestClose: () => M(!1),

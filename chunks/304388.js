@@ -62,6 +62,7 @@ h
   ]);
   let x = p || u;
   return (0, i.jsx)(l.Popout, {
+animation: l.Popout.Animation.FADE,
 shouldShow: x,
 animationPosition: 'top',
 position: 'top',
