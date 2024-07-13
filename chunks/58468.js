@@ -12,26 +12,26 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let o = {},
-  h = o;
+let h = {},
+  o = h;
 
 function u() {
-  r.default.keys(h).forEach(e => {
-null == a.Z.getChannel(e) && delete h[e];
+  r.default.keys(o).forEach(e => {
+null == a.Z.getChannel(e) && delete o[e];
   });
 }
 class c extends(i = s.ZP.PersistedStore) {
   initialize(e) {
-this.waitFor(a.Z), h = null != e ? e : o;
+this.waitFor(a.Z), o = null != e ? e : h;
   }
   getState() {
-return h;
+return o;
   }
   getCollapsed() {
-return h;
+return o;
   }
   isCollapsed(e) {
-return h[e] || !1;
+return o[e] || !1;
   }
 }
 d(c, 'displayName', 'CollapsedVoiceChannelStore'), d(c, 'persistKey', 'collapsedChannels'), t.Z = new c(l.Z, {
@@ -41,8 +41,8 @@ d(c, 'displayName', 'CollapsedVoiceChannelStore'), d(c, 'persistKey', 'collapsed
 let {
   channelId: t
 } = e;
-h[t] ? delete h[t] : h[t] = !0, h = {
-  ...h
+o[t] ? delete o[t] : o[t] = !0, o = {
+  ...o
 };
   }
 });

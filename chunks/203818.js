@@ -18,7 +18,7 @@ expand: n
   } = e;
   n ? a[t] = !0 : delete a[t];
 }
-class o extends(i = s.ZP.PersistedStore) {
+class h extends(i = s.ZP.PersistedStore) {
   initialize(e) {
 a = null != e ? e : {};
   }
@@ -33,7 +33,7 @@ return !this.isVoiceCategoryExpanded(e);
 return a;
   }
 }
-r(o, 'displayName', 'ChannelListVoiceCategoryStore'), r(o, 'persistKey', 'ChannelListVoiceCategoryStore'), t.Z = new o(l.Z, {
+r(h, 'displayName', 'ChannelListVoiceCategoryStore'), r(h, 'persistKey', 'ChannelListVoiceCategoryStore'), t.Z = new h(l.Z, {
   VOICE_CATEGORY_COLLAPSE: d,
   VOICE_CATEGORY_EXPAND: d
 });

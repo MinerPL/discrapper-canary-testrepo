@@ -133,17 +133,13 @@ t.Z = {
   joinGuild: w,
   waitForGuild: x,
   async transitionToGuildSync(e, t, n) {
-let r = function(e, t) {
-    if (null != t)
-      return t;
-    if (!(0, c.cn)() || !!(0, E.JH)())
-      return (0, h.V)(e);
-  }((await x(e)).id, n),
-  i = t;
-(null == t ? void 0 : t.hasOwnProperty('welcomeModalChannelId')) && null == t.welcomeModalChannelId && (i = {
+var r, i;
+let a = (r = (await x(e)).id, null != (i = n) ? i : (0, h.V)(r)),
+  o = t;
+(null == t ? void 0 : t.hasOwnProperty('welcomeModalChannelId')) && null == t.welcomeModalChannelId && (o = {
   ...t,
-  welcomeModalChannelId: null != r ? r : void 0
-}), (0, p.uL)(L.Z5c.CHANNEL(e, r), i), await new Promise(setImmediate);
+  welcomeModalChannelId: null != a ? a : void 0
+}), (0, p.uL)(L.Z5c.CHANNEL(e, a), o), await new Promise(setImmediate);
   },
   deleteGuild: P,
   selectGuild(e) {
@@ -414,7 +410,7 @@ o.Z.dispatch({
 });
   },
   nsfwReturnToSafety(e) {
-if ((0, c.cn)() && !(0, E.JH)()) {
+if ((0, c.cn)() && !(0, E.J)()) {
   let e = (0, d.D)();
   if ((null == e ? void 0 : e.isReady()) !== !0)
     return;

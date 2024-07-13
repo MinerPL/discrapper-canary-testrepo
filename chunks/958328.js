@@ -54,9 +54,9 @@ n = (0, l.e7)([u.Z], () => u.Z.getGuild(t)),
 k = (0, l.e7)([h.Z], () => h.Z.computePermissions(r)),
 v = (0, l.e7)([h.Z], () => h.Z.computePermissions(n)),
 _ = (0, s.ZP)(r, !0),
-C = null != r ? (0, b.IG)(r, !1, !0) : null,
-w = null != n ? p.Z.getGuildPermissionSpecMap(n) : null,
-j = Object.values(null != C ? C : {}).map(e => {
+w = null != r ? (0, b.IG)(r, !1, !0) : null,
+C = null != n ? p.Z.getGuildPermissionSpecMap(n) : null,
+j = Object.values(null != w ? w : {}).map(e => {
   let {
     title: t,
     flag: r
@@ -66,7 +66,7 @@ j = Object.values(null != C ? C : {}).map(e => {
     can: n
   }, t);
 }),
-N = Object.values(null != w ? w : {}).map(e => {
+N = Object.values(null != C ? C : {}).map(e => {
   let {
     title: t,
     flag: r

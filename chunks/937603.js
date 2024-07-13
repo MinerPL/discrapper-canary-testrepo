@@ -45,7 +45,7 @@ l.Z.getMessageReminders().filter(e => null != e.dueAt && new Date() >= e.dueAt).
 let e = l.Z.getMessageReminders().filter(e => null != e.dueAt && new Date() < e.dueAt).sort((e, t) => e.dueAt.getTime() - t.dueAt.getTime());
 null != d && clearTimeout(d), e.length > 0 && (d = setTimeout(() => {
   _();
-}, new Date().getTime() - e[0].dueAt.getTime()));
+}, e[0].dueAt.getTime() - new Date().getTime()));
   }
 }
 class E extends i.Z {

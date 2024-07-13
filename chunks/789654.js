@@ -40,16 +40,16 @@ return e;
   }, e;
 }
 
-function C() {
+function w() {
   let e = v([
 '\n      export const rawPalette = {\n        ',
 '\n      } as const;\n    '
   ]);
-  return C = function() {
+  return w = function() {
 return e;
   }, e;
 }
-let w = {
+let C = {
 ...b.K,
 ...m.J,
 ...g.c
@@ -107,7 +107,7 @@ function I(e) {
 let a = e[r];
 if ('name' in a)
   a = function e(t) {
-    let r = w[t.name];
+    let r = C[t.name];
     return 'name' in r ? e(r) : r;
   }(a);
 t[r] = {
@@ -175,7 +175,7 @@ function Z() {
   semanticTokens: j
 }),
 [g, b] = n.useState(''),
-[v, w] = n.useState({}),
+[v, C] = n.useState({}),
 [S, T] = n.useState({}),
 I = n.useMemo(() => Object.keys(t).reduce((e, t) => [
   ...e,
@@ -238,7 +238,7 @@ R = n.useMemo(() => {
   v,
   S
 ]),
-B = n.useCallback(e => {
+O = n.useCallback(e => {
   let t = '',
     r = '',
     a = !1;
@@ -273,7 +273,7 @@ B = n.useCallback(e => {
     return ''.concat(a ? '\n' : '').concat(u);
   }).join(',\n'));
 }, []),
-O = n.useCallback(e => c()(C(), Object.keys(e).map(t => '"'.concat(t, '": {hex: "').concat(e[t].hex, '"}'))), []),
+B = n.useCallback(e => c()(w(), Object.keys(e).map(t => '"'.concat(t, '": {hex: "').concat(e[t].hex, '"}'))), []),
 P = n.useCallback(e => {
   let t = {};
   Object.keys(e).forEach(r => {
@@ -344,7 +344,7 @@ children: [
           (0, a.jsx)(f.Button, {
             size: f.Button.Sizes.MIN,
             onClick: () => {
-              navigator.clipboard.writeText(O(t));
+              navigator.clipboard.writeText(B(t));
             },
             children: 'Export'
           })
@@ -363,7 +363,7 @@ children: [
           (0, a.jsx)(f.Button, {
             size: f.Button.Sizes.MIN,
             onClick: () => {
-              navigator.clipboard.writeText(B(r));
+              navigator.clipboard.writeText(O(r));
             },
             children: 'Export'
           })
@@ -443,7 +443,7 @@ children: [
               children: (0, a.jsx)(f.Checkbox, {
                 value: v[t],
                 onChange: () => {
-                  w(e => ({
+                  C(e => ({
                     ...e,
                     [t]: !e[t]
                   }));

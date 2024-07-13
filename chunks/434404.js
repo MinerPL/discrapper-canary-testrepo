@@ -54,7 +54,8 @@ async open(e, t, r, i) {
     n.e('55400'),
     n.e('92557'),
     n.e('36439'),
-    n.e('39557')
+    n.e('39557'),
+    n.e('35919')
   ]).then(n.bind(n, 994763)), (null === (a = h.Z.getGuild(e)) || void 0 === a ? void 0 : a.hasFeature(T.oNc.COMMUNITY)) && (t === T.pNK.GUILD_AUTOMOD && (t = T.pNK.SAFETY, i = T.KsC.SAFETY_AUTOMOD), t === T.pNK.MEMBER_VERIFICATION && (t = T.pNK.SAFETY, i = T.KsC.SAFETY_DM_AND_SPAM_PROTECTION)), N.init(e, t, r, i);
   (0, o.jN)(T.S9g.GUILD_SETTINGS);
 },

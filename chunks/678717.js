@@ -24,8 +24,8 @@ var x = r(392750),
   k = r(926976),
   v = r(592197),
   _ = r(860337),
-  C = r(789654),
-  w = r(691867),
+  w = r(789654),
+  C = r(691867),
   j = r(916790),
   N = r(912072),
   S = r(246992),
@@ -34,17 +34,17 @@ var x = r(392750),
   E = r(178821),
   Z = r(248526),
   R = r(958328),
-  B = r(514866),
-  O = r(678639),
+  O = r(514866),
+  B = r(678639),
   P = r(351930),
-  L = r(771751),
-  A = r(596768),
+  A = r(771751),
+  L = r(596768),
   D = r(621060),
   M = r(689938),
   G = r(683597),
   H = r(979756);
 
-function F(e) {
+function z(e) {
   let {
 resizableNode: t,
 onResize: r,
@@ -62,7 +62,7 @@ className: G.resizeHandle
   });
 }
 
-function z() {
+function F() {
   var e;
   let t = n.useMemo(() => {
   let e = [{
@@ -73,12 +73,12 @@ function z() {
     {
       id: 'triggers',
       name: 'Triggers',
-      render: () => (0, a.jsx)(A.Z, {})
+      render: () => (0, a.jsx)(L.Z, {})
     },
     {
       id: 'stores',
       name: 'Stores',
-      render: () => (0, a.jsx)(O.Z, {})
+      render: () => (0, a.jsx)(B.Z, {})
     },
     {
       id: 'dispatcher',
@@ -89,7 +89,7 @@ function z() {
   return g.Z.isDeveloper && (e.push({
     id: 'quick_actions',
     name: 'Quick Actions',
-    render: () => (0, a.jsx)(B.Z, {})
+    render: () => (0, a.jsx)(O.Z, {})
   }), e.push({
     id: 'perks_demos',
     name: 'Perks Demos',
@@ -105,11 +105,11 @@ function z() {
   })), e.push({
     id: 'colors',
     name: 'Colors',
-    render: () => (0, a.jsx)(C.Z, {})
+    render: () => (0, a.jsx)(w.Z, {})
   }), e.push({
     id: 'design_toggles',
     name: 'Design Toggles',
-    render: () => (0, a.jsx)(w.Z, {})
+    render: () => (0, a.jsx)(C.Z, {})
   }), e.push({
     id: 'overlays',
     name: 'Dev Overlays',
@@ -141,7 +141,7 @@ function z() {
   }), window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith('staging') && (e.push({
     id: 'trials',
     name: 'Trials',
-    render: () => (0, a.jsx)(L.Z, {})
+    render: () => (0, a.jsx)(A.Z, {})
   }), e.push({
     id: 'payments',
     name: 'Payments',
@@ -223,14 +223,14 @@ style: {
   width: r
 },
 children: [
-  (0, a.jsx)(F, {
+  (0, a.jsx)(z, {
     resizableNode: e,
     onResize: i,
     onResizeEnd: l
   }),
   (0, a.jsx)('div', {
     className: G.sidebarContent,
-    children: (0, a.jsx)(z, {})
+    children: (0, a.jsx)(F, {})
   })
 ]
   });
@@ -242,7 +242,7 @@ function V() {
 className: o()(G.container, G.mobileContainerExpanded),
 children: (0, a.jsx)('div', {
   className: G.sidebarContent,
-  children: (0, a.jsx)(z, {})
+  children: (0, a.jsx)(F, {})
 })
   }) : (0, a.jsx)('div', {
 className: G.container,
