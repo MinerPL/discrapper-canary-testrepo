@@ -6,8 +6,8 @@ return f;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  o = n(481060),
   l = n(806966),
   u = n(254494),
   c = n(895924),
@@ -42,10 +42,10 @@ return (null === (n = a[e + 1]) || void 0 === n ? void 0 : n.type) === c.Qi.BUIL
 let i = a[t];
 if (null == i)
   return;
-let o = (0, d.ky)(i),
+let s = (0, d.ky)(i),
   l = i.type === c.Qi.BUILT_IN ? 4 : 0,
   u = 32 - 2 * l,
-  E = (0, r.jsx)(o, {
+  E = (0, r.jsx)(s, {
     channel: n,
     section: i,
     isSelected: null != h ? i.id === h : f === t,
@@ -58,7 +58,7 @@ let o = (0, d.ky)(i),
 return (0, r.jsxs)('div', {
   className: _.section,
   children: [
-    (0, r.jsx)(s.Tooltip, {
+    (0, r.jsx)(o.Tooltip, {
       text: i.name,
       position: 'right',
       children: e => {
@@ -66,7 +66,7 @@ return (0, r.jsxs)('div', {
           onClick: t,
           ...n
         } = e;
-        return (0, r.jsx)(s.Clickable, {
+        return (0, r.jsx)(o.Clickable, {
           'aria-label': i.name,
           onClick: () => {
             p(i), null == t || t();
@@ -89,7 +89,7 @@ a,
 h
   ]);
   return 0 === a.length ? null : (0, r.jsx)('div', {
-className: o()(t, _.wrapper),
+className: s()(t, _.wrapper),
 children: (0, r.jsx)(u.Z, {
   categoryListRef: I,
   expressionsListRef: m,

@@ -6,8 +6,8 @@ return C;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  o = n(442837),
   l = n(481060),
   u = n(355467),
   c = n(100527),
@@ -81,20 +81,20 @@ et,
 z,
 q
   ]);
-  let eo = (0, s.e7)([h.Z], () => h.Z.affinities),
-es = eo.length > 1 && (0, S.YN)(y),
-el = (0, s.e7)([h.Z], () => h.Z.hasFetched);
+  let es = (0, o.e7)([h.Z], () => h.Z.affinities),
+eo = es.length > 1 && (0, S.YN)(y),
+el = (0, o.e7)([h.Z], () => h.Z.hasFetched);
   i.useEffect(() => {
 !el && u.MH();
   }, [el]);
-  let eu = K ? o()(O.artContainer, O.artContainerBoxShadow, x) : o()(O.artContainer, x),
+  let eu = K ? s()(O.artContainer, O.artContainerBoxShadow, x) : s()(O.artContainer, x),
 ec = null;
   return ec = 'artURL' in ee ? (0, r.jsx)('img', {
 className: O.art,
 alt: '',
 src: ee.artURL
   }) : ee.artElement, (0, r.jsxs)(l.ModalRoot, {
-className: o()(O.root, w),
+className: s()(O.root, w),
 'aria-label': C,
 transitionState: B,
 children: [
@@ -137,19 +137,19 @@ children: [
       }) : (0, r.jsxs)(r.Fragment, {
         children: [
           (0, r.jsx)(l.Heading, {
-            className: o()(O.header, {
+            className: s()(O.header, {
               [O.enhancedHeader]: $
             }, G),
             variant: 'heading-xl/bold',
             children: C
           }),
-          es ? (0, r.jsx)(g.Z, {
-            affinities: eo
+          eo ? (0, r.jsx)(g.Z, {
+            affinities: es
           }) : void 0,
           J,
           (0, r.jsx)(l.Text, {
             variant: 'text-md/normal',
-            className: o()(k, O.subHeader),
+            className: s()(k, O.subHeader),
             children: M
           })
         ]
@@ -157,17 +157,17 @@ children: [
     })
   }),
   (0, r.jsxs)(l.ModalFooter, {
-    className: o()(O.footer, {
+    className: s()(O.footer, {
       [O.enhancedFooter]: $
     }),
     children: [
       (0, r.jsxs)('div', {
-        className: o()(O.primaryActions, {
+        className: s()(O.primaryActions, {
           [O.enhancedPrimaryActions]: $
         }),
         children: [
           null != Z ? (0, r.jsx)(l.Button, {
-            className: o()(O.secondaryAction, {
+            className: s()(O.secondaryAction, {
               [O.enhancedSecondaryAction]: $
             }),
             onClick: H,
@@ -177,23 +177,22 @@ children: [
             children: Z
           }) : null,
           (() => {
-            let e;
             if (et)
               return (0, r.jsx)(_.Z, {
                 analyticsLocation: b,
                 guild: D.guild,
                 onClose: F
               });
-            let t = $ ? v.Z.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
+            let e = $ ? v.Z.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
             if (ei) {
               if (null != en) {
-                var n, i;
-                t = (0, f.Rt)({
-                  intervalType: null == en ? void 0 : null === (n = en.subscription_trial) || void 0 === n ? void 0 : n.interval,
-                  intervalCount: null == en ? void 0 : null === (i = en.subscription_trial) || void 0 === i ? void 0 : i.interval_count
-                }), e = null == en ? void 0 : en.trial_id;
+                var t, n;
+                e = (0, f.Rt)({
+                  intervalType: null == en ? void 0 : null === (t = en.subscription_trial) || void 0 === t ? void 0 : t.interval,
+                  intervalCount: null == en ? void 0 : null === (n = en.subscription_trial) || void 0 === n ? void 0 : n.interval_count
+                });
               } else
-                null != er && (t = v.Z.Messages.PREMIUM_DISCOUNT_CTA.format({
+                null != er && (e = v.Z.Messages.PREMIUM_DISCOUNT_CTA.format({
                   percent: er.discount.amount
                 }));
             }
@@ -201,13 +200,12 @@ children: [
               showGradient: $,
               premiumModalAnalyticsLocation: b,
               subscriptionTier: z,
-              trialId: e,
               size: l.Button.Sizes.SMALL,
               color: $ ? l.Button.Colors.CUSTOM : l.Button.Colors.GREEN,
               onClick: () => {
                 null == V || V(), F();
               },
-              buttonText: null != Y ? Y : t
+              buttonText: null != Y ? Y : e
             });
           })()
         ]

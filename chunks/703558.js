@@ -3,8 +3,8 @@ n.d(t, {
 return r;
   }
 }), n(47120);
-var r, i, a, o = n(392711),
-  s = n.n(o),
+var r, i, a, s = n(392711),
+  o = n.n(s),
   l = n(442837),
   u = n(570140),
   c = n(823379),
@@ -38,12 +38,12 @@ draft: r,
 draftType: i
   } = e, a = E.Z.getChannel(n);
   r === (null == a ? void 0 : a.template) && (r = '');
-  let o = _.default.getId();
-  if (null != o && null != r && '' !== r) {
-var s, l;
-let e = I(o),
+  let s = _.default.getId();
+  if (null != s && null != r && '' !== r) {
+var o, l;
+let e = I(s),
   t = e[n];
-if (null == t && (t = e[n] = {}), (l = r).length > p && (l = l.substr(0, p)), (r = l) === (null === (s = t[i]) || void 0 === s ? void 0 : s.draft))
+if (null == t && (t = e[n] = {}), (l = r).length > p && (l = l.substr(0, p)), (r = l) === (null === (o = t[i]) || void 0 === o ? void 0 : o.draft))
   return !1;
 t[i] = {
   timestamp: Date.now(),
@@ -62,7 +62,7 @@ return !1;
 i = r[e];
   if (null == i)
 return !1;
-  delete i[t], s().isEmpty(i) && delete r[e];
+  delete i[t], o().isEmpty(i) && delete r[e];
 }
 
 function S() {
@@ -114,7 +114,7 @@ let t = _.default.getId();
 if (null == t)
   return [];
 let n = I(t);
-return s()(n).mapValues(t => null == t ? void 0 : t[e]).pickBy(c.lm).toPairs().map(e => {
+return o()(n).mapValues(t => null == t ? void 0 : t[e]).pickBy(c.lm).toPairs().map(e => {
   let [t, {
     timestamp: n,
     draft: r
@@ -203,11 +203,11 @@ if (null == a)
 if (a.parentMessageId !== d.default.castChannelIdAsMessageId(t.id))
   return !1;
 {
-  var o, s;
+  var s, o;
   let e = r[t.parent_id];
   if (null == e)
     return !1;
-  let n = null !== (s = null === (o = e[2]) || void 0 === o ? void 0 : o.draft) && void 0 !== s ? s : '';
+  let n = null !== (o = null === (s = e[2]) || void 0 === s ? void 0 : s.draft) && void 0 !== o ? o : '';
   '' !== n && (r[t.id] = {
     0: {
       timestamp: Date.now(),

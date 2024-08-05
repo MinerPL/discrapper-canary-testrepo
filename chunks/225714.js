@@ -1,170 +1,141 @@
-i.d(n, {
+i.d(s, {
   Z: function() {
-return m;
+return f;
   }
 });
-var s = i(735250);
+var n = i(735250);
 i(470079);
-var l = i(120356),
-  o = i.n(l),
-  t = i(481060),
-  r = i(194359),
-  a = i(906732),
-  d = i(475413),
-  c = i(261253),
-  u = i(7242),
-  I = i(934861),
-  _ = i(981631),
-  f = i(689938),
-  E = i(682731);
+var l = i(481060),
+  t = i(194359),
+  o = i(906732),
+  a = i(475413),
+  r = i(261253),
+  d = i(7242),
+  c = i(934861),
+  u = i(981631),
+  I = i(689938),
+  _ = i(682731);
 
-function m(e) {
+function f(e) {
   let {
-isCurrentUser: n,
+isCurrentUser: s,
 user: i,
-relationshipType: l,
+relationshipType: f,
 friendToken: m,
-improvedFriendingEnabled: S = !1,
-persistentCallCtaEnabled: Z = !1,
-activeInviteToCallCtaEnabled: x = !1,
-onClose: v
+persistentCallCtaEnabled: E = !1,
+activeInviteToCallCtaEnabled: v = !1,
+onClose: S
   } = e, {
-newestAnalyticsLocation: h
-  } = (0, a.ZP)();
-  if (n || l === _.OGo.BLOCKED)
+newestAnalyticsLocation: x
+  } = (0, o.ZP)();
+  if (s || f === u.OGo.BLOCKED)
 return null;
-  let p = Z ? (0, s.jsx)(c.Z, {
-user: i,
-onClose: v
-  }) : null;
-  if (S) {
-let e = (0, s.jsx)(u.Z, {
+  let Z = E ? (0, n.jsx)(r.Z, {
   user: i,
-  onClose: v
+  onClose: S
+}) : null,
+h = (0, n.jsx)(d.Z, {
+  user: i,
+  onClose: S
 });
-if (l === _.OGo.FRIEND && x && null != e)
-  return (0, s.jsxs)('div', {
-    className: E.multipleButtons,
-    children: [
-      (0, s.jsx)(I.v, {
-        userId: i.id,
-        onClose: v
-      }),
-      e
-    ]
-  });
-if (l === _.OGo.FRIEND || i.bot)
-  return (0, s.jsxs)('div', {
-    className: E.multipleButtons,
-    children: [
-      p,
-      (0, s.jsx)(I.c, {
-        userId: i.id,
-        onClose: v
-      })
-    ]
-  });
-if (l === _.OGo.PENDING_OUTGOING || l === _.OGo.PENDING_INCOMING)
-  return x && null != e ? (0, s.jsxs)('div', {
-    className: E.multipleButtons,
-    children: [
-      (0, s.jsx)(d.ef, {
-        icon: t.UserClockIcon,
-        tooltipText: f.Z.Messages.FRIENDS_SECTION_PENDING,
-        disabled: !0
-      }),
-      (0, s.jsx)(I.v, {
-        userId: i.id,
-        onClose: v
-      }),
-      e
-    ]
-  }) : (0, s.jsxs)('div', {
-    className: E.multipleButtons,
-    children: [
-      (0, s.jsx)(d.ef, {
-        icon: t.UserClockIcon,
-        tooltipText: f.Z.Messages.FRIENDS_SECTION_PENDING,
-        disabled: !0
-      }),
-      p,
-      (0, s.jsx)(I.c, {
-        userId: i.id,
-        onClose: v
-      })
-    ]
-  });
-return x && null != e ? (0, s.jsxs)('div', {
-  className: E.multipleButtons,
+  if (f === u.OGo.FRIEND && v && null != h)
+return (0, n.jsxs)('div', {
+  className: _.multipleButtons,
   children: [
-    (0, s.jsx)(d.ef, {
-      action: 'SEND_FRIEND_REQUEST',
-      icon: t.UserPlusIcon,
-      tooltipText: f.Z.Messages.USER_PROFILE_ADD_FRIEND,
-      onClick: () => {
-        r.Z.addRelationship({
-          userId: i.id,
-          context: {
-            location: h
-          },
-          friendToken: m
-        });
-      }
-    }),
-    (0, s.jsx)(I.v, {
+    (0, n.jsx)(c.v, {
       userId: i.id,
-      onClose: v
+      onClose: S
     }),
-    e
+    h
   ]
-}) : (0, s.jsxs)('div', {
-  className: E.multipleButtons,
+});
+  if (f === u.OGo.FRIEND || i.bot)
+return (0, n.jsxs)('div', {
+  className: _.multipleButtons,
   children: [
-    p,
-    (0, s.jsx)(I.v, {
+    Z,
+    (0, n.jsx)(c.c, {
       userId: i.id,
-      onClose: v
-    }),
-    (0, s.jsx)(d.tG, {
-      action: 'SEND_FRIEND_REQUEST',
-      icon: t.UserPlusIcon,
-      text: f.Z.Messages.USER_PROFILE_ADD_FRIEND,
-      color: o()(t.Button.Colors.BRAND, E.color),
-      onClick: () => {
-        r.Z.addRelationship({
-          userId: i.id,
-          context: {
-            location: h
-          },
-          friendToken: m
-        });
-      }
+      onClose: S
     })
   ]
 });
-  }
-  return l === _.OGo.FRIEND || i.bot ? (0, s.jsx)(I.c, {
-userId: i.id,
-onClose: v
-  }) : l === _.OGo.PENDING_OUTGOING ? (0, s.jsx)(d.tG, {
-text: f.Z.Messages.ADD_FRIEND_BUTTON_AFTER,
-color: t.Button.Colors.GREEN,
-disabled: !0
-  }) : l === _.OGo.PENDING_INCOMING ? (0, s.jsx)(I.c, {
-userId: i.id,
-onClose: v
-  }) : (0, s.jsx)(d.tG, {
-action: 'SEND_FRIEND_REQUEST',
-text: f.Z.Messages.ADD_FRIEND_BUTTON,
-color: t.Button.Colors.GREEN,
-onClick: () => {
-  r.Z.addRelationship({
+  if (f === u.OGo.PENDING_OUTGOING || f === u.OGo.PENDING_INCOMING)
+return v && null != h ? (0, n.jsxs)('div', {
+  className: _.multipleButtons,
+  children: [
+    (0, n.jsx)(a.ef, {
+      icon: l.UserClockIcon,
+      tooltipText: I.Z.Messages.FRIENDS_SECTION_PENDING,
+      disabled: !0
+    }),
+    (0, n.jsx)(c.v, {
+      userId: i.id,
+      onClose: S
+    }),
+    h
+  ]
+}) : (0, n.jsxs)('div', {
+  className: _.multipleButtons,
+  children: [
+    (0, n.jsx)(a.ef, {
+      icon: l.UserClockIcon,
+      tooltipText: I.Z.Messages.FRIENDS_SECTION_PENDING,
+      disabled: !0
+    }),
+    Z,
+    (0, n.jsx)(c.c, {
+      userId: i.id,
+      onClose: S
+    })
+  ]
+});
+  return v && null != h ? (0, n.jsxs)('div', {
+className: _.multipleButtons,
+children: [
+  (0, n.jsx)(a.ef, {
+    action: 'SEND_FRIEND_REQUEST',
+    icon: l.UserPlusIcon,
+    tooltipText: I.Z.Messages.USER_PROFILE_ADD_FRIEND,
+    onClick: () => {
+      t.Z.addRelationship({
+        userId: i.id,
+        context: {
+          location: x
+        },
+        friendToken: m
+      });
+    }
+  }),
+  (0, n.jsx)(c.v, {
     userId: i.id,
-    context: {
-      location: h
-    },
-    friendToken: m
-  });
-}
+    onClose: S
+  }),
+  h
+]
+  }) : (0, n.jsxs)('div', {
+className: _.multipleButtons,
+children: [
+  Z,
+  (0, n.jsx)(c.v, {
+    userId: i.id,
+    onClose: S
+  }),
+  (0, n.jsx)(a.tG, {
+    action: 'SEND_FRIEND_REQUEST',
+    icon: l.UserPlusIcon,
+    text: I.Z.Messages.USER_PROFILE_ADD_FRIEND,
+    color: l.Button.Colors.BRAND,
+    onClick: () => {
+      t.Z.addRelationship({
+        userId: i.id,
+        context: {
+          location: x
+        },
+        friendToken: m
+      });
+    }
+  })
+]
   });
 }

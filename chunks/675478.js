@@ -33,8 +33,8 @@ return D;
 var r = n(512722),
   i = n.n(r),
   a = n(259443),
-  o = n(544891),
-  s = n(704215),
+  s = n(544891),
+  o = n(704215),
   l = n(377108),
   u = n(524437),
   c = n(433517),
@@ -76,22 +76,22 @@ if (null == r)
   throw Error('Unknown proto field name '.concat(String(e)));
 let i = r.T(),
   a = this.getCurrentValue()[e],
-  o = null != a ? i.fromBinary(i.toBinary(a), p.Uc) : i.create();
-if (!1 === t(o))
+  s = null != a ? i.fromBinary(i.toBinary(a), p.Uc) : i.create();
+if (!1 === t(s))
   return;
-let s = this.ProtoClass.create();
-s[e] = o, __OVERLAY__ ? d.Z.dispatch({
+let o = this.ProtoClass.create();
+o[e] = s, __OVERLAY__ ? d.Z.dispatch({
   type: 'USER_SETTINGS_PROTO_ENQUEUE_UPDATE',
   settings: {
     type: this.type,
-    proto: s
+    proto: o
   },
   delaySeconds: n,
   jitter: n === m.fy.AUTOMATED || n === m.fy.DAILY,
   partial: !0,
   resetEditInfo: !1,
   local: !0
-}) : (this.logger.log('Updating '.concat(String(e), ' with delay ').concat(n)), this.markDirty(s, {
+}) : (this.logger.log('Updating '.concat(String(e), ' with delay ').concat(n)), this.markDirty(o, {
   delaySeconds: n,
   jitter: n === m.fy.AUTOMATED || n === m.fy.DAILY
 }));
@@ -115,10 +115,10 @@ if (!r.loaded)
   partial: !0,
   local: !0
 });
-let o = null !== (n = t.delaySeconds) && void 0 !== n ? n : 0;
-if (null != a.timeout && o < r.timeoutDelay && !r.rateLimited && (clearTimeout(a.timeout), a.timeout = void 0), null == a.timeout) {
-  let e = o * _.Z.Millis.SECOND;
-  t.jitter && (e += Math.floor(Math.random() * Math.min(e, 30 * _.Z.Millis.SECOND))), this.logger.log('Scheduling save from markDirty'), a.timeout = setTimeout(this.persistChanges, e), a.timeoutDelay = o;
+let s = null !== (n = t.delaySeconds) && void 0 !== n ? n : 0;
+if (null != a.timeout && s < r.timeoutDelay && !r.rateLimited && (clearTimeout(a.timeout), a.timeout = void 0), null == a.timeout) {
+  let e = s * _.Z.Millis.SECOND;
+  t.jitter && (e += Math.floor(Math.random() * Math.min(e, 30 * _.Z.Millis.SECOND))), this.logger.log('Scheduling save from markDirty'), a.timeout = setTimeout(this.persistChanges, e), a.timeoutDelay = s;
 }
 null != t.cleanup && (a.cleanupFuncs = [
   ...r.cleanupFuncs,
@@ -159,7 +159,7 @@ if (e || !t.loaded && !t.loading) {
       body: {
         settings: t
       }
-    } = await o.tn.get({
+    } = await s.tn.get({
       url: I.ANM.USER_SETTINGS_PROTO(this.type)
     }), n = (0, p.d5)(this.ProtoClass, t);
     if (null == n) {
@@ -173,7 +173,7 @@ if (e || !t.loaded && !t.loading) {
       {
         proto: i,
         isDirty: a,
-        cleanupFuncs: s
+        cleanupFuncs: o
       } = (0, p.xt)(n, r);
     return await d.Z.dispatch({
       type: 'USER_SETTINGS_PROTO_UPDATE',
@@ -183,7 +183,7 @@ if (e || !t.loaded && !t.loading) {
       },
       resetEditInfo: a || e,
       local: !1
-    }), a && this.markDirtyFromMigration(i, s), n;
+    }), a && this.markDirtyFromMigration(i, o), n;
   } catch (e) {
     throw this.dispatchChanges({
       loading: !1
@@ -249,7 +249,7 @@ T(this, 'ProtoClass', void 0), T(this, 'type', void 0), T(this, 'logger', void 0
     this.saveLastSendTime();
     let {
       body: n
-    } = await o.tn.patch({
+    } = await s.tn.patch({
       url: I.ANM.USER_SETTINGS_PROTO(this.type),
       body: {
         settings: t,
@@ -327,8 +327,8 @@ e.dismissedContents = new Uint8Array();
 function b() {
   return N.updateAsync('userContent', e => {
 let t = new Uint8Array();
-for (let e of Object.keys(s.z))
-  t = (0, E.GV)(t, s.z[e]);
+for (let e of Object.keys(o.z))
+  t = (0, E.GV)(t, o.z[e]);
 e.dismissedContents = t;
   }, m.fy.INFREQUENT_USER_ACTION);
 }

@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
   a = n(481060),
-  o = n(906732),
-  s = n(189432),
+  s = n(906732),
+  o = n(189432),
   l = n(189357),
   u = n(434404),
   c = n(314897),
@@ -26,7 +26,7 @@ channelId: p,
 onClose: m
   } = e, {
 newestAnalyticsLocation: I
-  } = (0, o.ZP)(), T = (0, i.e7)([c.default], () => c.default.getId() === (null == t ? void 0 : t.id)), g = (0, l.ms)(null != n ? n : null, !0), S = (0, i.e7)([d.Z], () => null != p ? p : d.Z.getChannelId(n, !0), [
+  } = (0, s.ZP)(), T = (0, i.e7)([c.default], () => c.default.getId() === (null == t ? void 0 : t.id)), g = (0, l.ms)(null != n ? n : null, !0), S = (0, i.e7)([d.Z], () => null != p ? p : d.Z.getChannelId(n, !0), [
 p,
 n
   ]);
@@ -35,7 +35,7 @@ action: 'PRESS_MOD_VIEW',
 icon: a.ModerationIcon,
 tooltipText: h.Z.Messages.GUILD_MEMBER_MOD_VIEW_TITLE,
 onClick: () => {
-  u.Z.close(), (0, s.r)(n, t.id, null != S ? S : E.oC.MEMBER_SAFETY, {
+  u.Z.close(), (0, o.r)(n, t.id, null != S ? S : E.oC.MEMBER_SAFETY, {
     modViewPanel: f.k.INFO,
     sourceLocation: I
   }), null == m || m();

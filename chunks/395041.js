@@ -1,23 +1,25 @@
 n.d(t, {
   O: function() {
-return l;
+return o;
   },
   w: function() {
-return r;
+return l;
   }
 });
 var i = n(735250);
 n(470079);
-var a = n(161768);
+var s = n(481060),
+  a = n(161768);
 
-function s(e, t) {
+function r(e, t) {
   let {
 children: n
   } = e;
-  return (0, i.jsx)('span', {
+  return (0, i.jsx)(s.Text, {
+variant: 'text-sm/medium',
 className: t,
 children: n
   });
 }
-let r = e => s(e, a.searchFilter),
-  l = e => s(e, a.searchAnswer);
+let l = e => r(e, a.searchFilter),
+  o = e => r(e, a.searchAnswer);

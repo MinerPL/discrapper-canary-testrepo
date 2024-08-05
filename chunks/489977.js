@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(570140),
+var a = n(481060),
+  s = n(570140),
   r = n(809206),
   l = n(317770),
   o = n(18438),
@@ -12,7 +12,7 @@ var s = n(481060),
 let h = e => {
 let {
   imageSrc: t,
-  file: a,
+  file: s,
   guildId: l,
   isTryItOutFlow: h
 } = e;
@@ -22,12 +22,12 @@ if (h) {
 }
 let E = d.default.getCurrentUser(),
   I = null != l ? o.I5 : r.I5;
-if (u.ZP.canUseAnimatedAvatar(E) || 'image/gif' !== a.type) {
+if (u.ZP.canUseAnimatedAvatar(E) || 'image/gif' !== s.type) {
   I(t);
   return;
 }
 if (null != E)
-  return (0, s.openModalLazy)(async () => {
+  return (0, a.openModalLazy)(async () => {
     let {
       default: e
     } = await n.e('12736').then(n.bind(n, 844594));
@@ -43,7 +43,7 @@ if (null != E)
   E = e => {
 let {
   imageSrc: t,
-  guildId: a,
+  guildId: s,
   isTryItOutFlow: r
 } = e;
 if (r) {
@@ -51,13 +51,13 @@ if (r) {
   return;
 }
 let l = d.default.getCurrentUser(),
-  h = null != a ? o.g_ : c.g_;
+  h = null != s ? o.g_ : c.g_;
 if (u.ZP.canUsePremiumProfileCustomization(l)) {
   h(t);
   return;
 }
 if (null != l)
-  return (0, s.openModalLazy)(async () => {
+  return (0, a.openModalLazy)(async () => {
     let {
       default: e
     } = await n.e('12736').then(n.bind(n, 844594));
@@ -72,10 +72,10 @@ if (null != l)
   };
 class I extends l.Z {
   _initialize() {
-a.Z.subscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
+s.Z.subscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
   }
   _terminate() {
-a.Z.unsubscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
+s.Z.unsubscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
   }
   maybeOpenProfilePreviewModal(e) {
 return e.uploadType === _.pC.AVATAR ? h(e) : e.uploadType === _.pC.BANNER ? E(e) : void 0;

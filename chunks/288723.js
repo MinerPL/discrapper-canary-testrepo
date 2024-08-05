@@ -1,8 +1,8 @@
 var r = n(244287),
   i = n(126387),
   a = n(885952),
-  o = n(510104),
-  s = n(891734),
+  s = n(510104),
+  o = n(891734),
   l = n(740078),
   u = n(632471);
 t.Z = {
@@ -24,7 +24,7 @@ if (!t.modifiersData[c]._skip) {
         (0, a.Z)(t)
       ];
     }(N)), R = [N].concat(O).reduce(function(e, n) {
-      return e.concat((0, i.Z)(n) === l.d7 ? (0, s.Z)(t, {
+      return e.concat((0, i.Z)(n) === l.d7 ? (0, o.Z)(t, {
         placement: n,
         boundary: m,
         rootBoundary: I,
@@ -41,7 +41,7 @@ if (!t.modifiersData[c]._skip) {
         l.I
       ].indexOf(U) >= 0,
       G = x ? 'width' : 'height',
-      k = (0, o.Z)(t, {
+      k = (0, s.Z)(t, {
         placement: P,
         boundary: m,
         rootBoundary: I,

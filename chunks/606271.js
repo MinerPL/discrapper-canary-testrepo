@@ -4,8 +4,8 @@ return R;
   }
 }), n(47120);
 var i = n(392711),
-  s = n.n(i),
-  a = n(442837),
+  a = n.n(i),
+  s = n(442837),
   r = n(570140),
   l = n(573979),
   o = n(814443),
@@ -21,13 +21,13 @@ var i = n(392711),
   p = n(979651),
   T = n(626135),
   S = n(823379),
-  C = n(358085),
-  f = n(914946),
+  f = n(358085),
+  C = n(914946),
   N = n(238679),
   A = n(863141),
-  Z = n(981631),
-  L = n(701488),
-  v = n(65154);
+  v = n(981631),
+  Z = n(701488),
+  L = n(65154);
 
 function O(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -39,7 +39,7 @@ writable: !0
 }
 class R {
   loadServer() {
-for (let e of (C.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports))
+for (let e of (f.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports))
   this.rpcServer.registerTransport(e);
 for (let [e, t] of Object.entries(this.rpcCommandHandlers))
   this.rpcServer.setCommandHandler(e, t);
@@ -52,7 +52,7 @@ this.rpcServer.getCurrentUser = () => g.default.getCurrentUser(), this.rpcServer
     type: 'RPC_APP_CONNECTED',
     socketId: e.id,
     application: e.application
-  }), T.default.track(Z.rMx.AUTHORIZED_APP_CONNECTED, {
+  }), T.default.track(v.rMx.AUTHORIZED_APP_CONNECTED, {
     app_id: e.application.id,
     transport: e.transport
   });
@@ -72,27 +72,27 @@ let e = [
   _.Z,
   E.Z
 ];
-new a.Fh(e.concat(this.stores), () => this.rpcServer.updateSubscriptions()).attach('RPCServerManager'), r.Z.subscribe('MESSAGE_CREATE', e => this.handleMessage(e)), r.Z.subscribe('MESSAGE_UPDATE', e => this.handleMessage(e)), r.Z.subscribe('MESSAGE_DELETE', e => this.handleMessage(e)), r.Z.subscribe('SPEAKING', e => this.handleSpeaking(e)), r.Z.subscribe('OAUTH2_TOKEN_REVOKE', e => this.handleOAuth2TokenRevoke(e)), r.Z.subscribe('GUILD_CREATE', e => this.handleGuildCreate(e)), r.Z.subscribe('CHANNEL_CREATE', e => this.handleChannelCreate(e)), r.Z.subscribe('LOGOUT', () => this.handleLogout()), r.Z.subscribe('VOICE_CHANNEL_SELECT', e => this.handleVoiceChannelSelect(e)), r.Z.subscribe('RPC_NOTIFICATION_CREATE', e => this.handleNotificationCreate(e)), r.Z.subscribe('ACTIVITY_JOIN', e => this.handleActivityJoin(e)), r.Z.subscribe('ACTIVITY_LAYOUT_MODE_UPDATE', e => this.handleActivityLayoutModeUpdate(e)), r.Z.subscribe('THERMAL_STATE_CHANGE', e => this.handleThermalStateChange(e)), r.Z.subscribe('ACTIVITY_SCREEN_ORIENTATION_UPDATE', e => this.handleScreenOrientationUpdate(e)), (0, N.HU)(e => this.rpcServer.dispatchToSubscriptions(Z.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, e)), r.Z.subscribe('RELATIONSHIP_ADD', e => this.handleRelationshipAdd(e)), r.Z.subscribe('RELATIONSHIP_REMOVE', e => this.handleRelationshipRemove(e)), r.Z.subscribe('PRESENCE_UPDATES', e => this.handlePresenceUpdate(e)), r.Z.subscribe('PRESENCES_REPLACE', () => this.handlePresencesReplace()), r.Z.subscribe('ENTITLEMENT_CREATE', e => this.handleEntitlementCreate(e)), r.Z.subscribe('ENTITLEMENT_DELETE', e => this.handleEntitlementDelete(e)), r.Z.subscribe('USER_ACHIEVEMENT_UPDATE', e => this.handleUserAchievementUpdate(e));
+new s.Fh(e.concat(this.stores), () => this.rpcServer.updateSubscriptions()).attach('RPCServerManager'), r.Z.subscribe('MESSAGE_CREATE', e => this.handleMessage(e)), r.Z.subscribe('MESSAGE_UPDATE', e => this.handleMessage(e)), r.Z.subscribe('MESSAGE_DELETE', e => this.handleMessage(e)), r.Z.subscribe('SPEAKING', e => this.handleSpeaking(e)), r.Z.subscribe('OAUTH2_TOKEN_REVOKE', e => this.handleOAuth2TokenRevoke(e)), r.Z.subscribe('GUILD_CREATE', e => this.handleGuildCreate(e)), r.Z.subscribe('CHANNEL_CREATE', e => this.handleChannelCreate(e)), r.Z.subscribe('LOGOUT', () => this.handleLogout()), r.Z.subscribe('VOICE_CHANNEL_SELECT', e => this.handleVoiceChannelSelect(e)), r.Z.subscribe('RPC_NOTIFICATION_CREATE', e => this.handleNotificationCreate(e)), r.Z.subscribe('ACTIVITY_JOIN', e => this.handleActivityJoin(e)), r.Z.subscribe('ACTIVITY_LAYOUT_MODE_UPDATE', e => this.handleActivityLayoutModeUpdate(e)), r.Z.subscribe('THERMAL_STATE_CHANGE', e => this.handleThermalStateChange(e)), r.Z.subscribe('ACTIVITY_SCREEN_ORIENTATION_UPDATE', e => this.handleScreenOrientationUpdate(e)), (0, N.HU)(e => this.rpcServer.dispatchToSubscriptions(v.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, e)), r.Z.subscribe('RELATIONSHIP_ADD', e => this.handleRelationshipAdd(e)), r.Z.subscribe('RELATIONSHIP_REMOVE', e => this.handleRelationshipRemove(e)), r.Z.subscribe('PRESENCE_UPDATES', e => this.handlePresenceUpdate(e)), r.Z.subscribe('PRESENCES_REPLACE', () => this.handlePresencesReplace()), r.Z.subscribe('ENTITLEMENT_CREATE', e => this.handleEntitlementCreate(e)), r.Z.subscribe('ENTITLEMENT_DELETE', e => this.handleEntitlementDelete(e)), r.Z.subscribe('USER_ACHIEVEMENT_UPDATE', e => this.handleUserAchievementUpdate(e));
   }
   handleMessage(e) {
 let t, n, i;
 if (0 === this.rpcServer.subscriptions.length)
   return;
 'MESSAGE_CREATE' === e.type && this.handleActivityMessage(e);
-let s = null;
+let a = null;
 switch (e.type) {
   case 'MESSAGE_CREATE':
     if ('SENDING' === e.message.state)
       return;
-    t = Z.zMe.MESSAGE_CREATE, n = e.channelId, i = e.message, s = ''.concat(t).concat(e.message.id);
+    t = v.zMe.MESSAGE_CREATE, n = e.channelId, i = e.message, a = ''.concat(t).concat(e.message.id);
     break;
   case 'MESSAGE_UPDATE':
-    t = Z.zMe.MESSAGE_UPDATE, n = e.message.channel_id, i = e.message;
+    t = v.zMe.MESSAGE_UPDATE, n = e.message.channel_id, i = e.message;
     break;
   case 'MESSAGE_DELETE':
-    t = Z.zMe.MESSAGE_DELETE, n = e.channelId, i = {
+    t = v.zMe.MESSAGE_DELETE, n = e.channelId, i = {
       id: e.id
-    }, s = ''.concat(t).concat(e.id);
+    }, a = ''.concat(t).concat(e.id);
     break;
   default:
     return (0, S.vE)(e);
@@ -101,26 +101,26 @@ null != n && this.rpcServer.dispatchToSubscriptions(t, {
   channel_id: n
 }, {
   channel_id: n,
-  message: (0, f.Xb)(i)
-}, s);
+  message: (0, C.Xb)(i)
+}, a);
   }
   handleSpeaking(e) {
 if (0 === this.rpcServer.subscriptions.length)
   return;
-let t = 0 !== e.speakingFlags ? Z.zMe.SPEAKING_START : Z.zMe.SPEAKING_STOP;
-if (e.context === v.Yn.DEFAULT) {
+let t = 0 !== e.speakingFlags ? v.zMe.SPEAKING_START : v.zMe.SPEAKING_STOP;
+if (e.context === L.Yn.DEFAULT) {
   let n = m.Z.getVoiceChannelId();
   if (null != n) {
     let i = c.Z.getChannel(n);
     if (null == i)
       return;
-    let s = p.Z.getVoiceState(i.getGuildId(), e.userId);
-    if (null == s)
+    let a = p.Z.getVoiceState(i.getGuildId(), e.userId);
+    if (null == a)
       return;
     this.rpcServer.dispatchToSubscriptions(t, {
-      channel_id: s.channelId
+      channel_id: a.channelId
     }, {
-      channel_id: s.channelId,
+      channel_id: a.channelId,
       user_id: e.userId
     });
   }
@@ -132,7 +132,7 @@ let {
   channelId: n
 } = e;
 if (0 !== this.rpcServer.subscriptions.length)
-  this.rpcServer.dispatchToSubscriptions(Z.zMe.VOICE_CHANNEL_SELECT, {}, {
+  this.rpcServer.dispatchToSubscriptions(v.zMe.VOICE_CHANNEL_SELECT, {}, {
     channel_id: n,
     guild_id: t
   });
@@ -142,16 +142,16 @@ let {
   channelId: t,
   message: n,
   icon: i,
-  title: s,
-  body: a
+  title: a,
+  body: s
 } = e;
 if (0 !== this.rpcServer.subscriptions.length)
-  this.rpcServer.dispatchToSubscriptions(Z.zMe.NOTIFICATION_CREATE, {}, {
+  this.rpcServer.dispatchToSubscriptions(v.zMe.NOTIFICATION_CREATE, {}, {
     channel_id: t,
-    message: (0, f.Xb)(n),
-    icon_url: null != i ? (0, f.RE)(i) : null,
-    title: s,
-    body: a
+    message: (0, C.Xb)(n),
+    icon_url: null != i ? (0, C.RE)(i) : null,
+    title: a,
+    body: s
   });
   }
   handleActivityJoin(e) {
@@ -159,14 +159,14 @@ let {
   applicationId: t,
   secret: n,
   intent: i,
-  embedded: s
+  embedded: a
 } = e;
 if (0 === this.rpcServer.subscriptions.length)
   return;
-let a = {
+let s = {
   secret: n
 };
-s && (a.intent = i), this.rpcServer.dispatchToSubscriptions(Z.zMe.ACTIVITY_JOIN, e => e.socket.application.id === t, a), this.rpcServer.dispatchToSubscriptions(Z.zMe.GAME_JOIN, e => e.socket.application.id === t, a);
+a && (s.intent = i), this.rpcServer.dispatchToSubscriptions(v.zMe.ACTIVITY_JOIN, e => e.socket.application.id === t, s), this.rpcServer.dispatchToSubscriptions(v.zMe.GAME_JOIN, e => e.socket.application.id === t, s);
   }
   handleActivityLayoutModeUpdate(e) {
 let {
@@ -175,11 +175,11 @@ let {
 } = e;
 if (0 === this.rpcServer.subscriptions.length)
   return;
-let i = n !== L.cE.FOCUSED;
-this.rpcServer.dispatchToSubscriptions(Z.zMe.ACTIVITY_PIP_MODE_UPDATE, e => e.socket.application.id === t, {
+let i = n !== Z.cE.FOCUSED;
+this.rpcServer.dispatchToSubscriptions(v.zMe.ACTIVITY_PIP_MODE_UPDATE, e => e.socket.application.id === t, {
   is_pip_mode: i
 });
-this.rpcServer.dispatchToSubscriptions(Z.zMe.ACTIVITY_LAYOUT_MODE_UPDATE, e => e.socket.application.id === t, {
+this.rpcServer.dispatchToSubscriptions(v.zMe.ACTIVITY_LAYOUT_MODE_UPDATE, e => e.socket.application.id === t, {
   layout_mode: n
 });
   }
@@ -193,14 +193,14 @@ if (0 === this.rpcServer.subscriptions.length || null == t)
 let i = {
   thermal_state: (0, l.Z)(n)
 };
-this.rpcServer.dispatchToSubscriptions(Z.zMe.THERMAL_STATE_UPDATE, e => e.socket.application.id === t, i);
+this.rpcServer.dispatchToSubscriptions(v.zMe.THERMAL_STATE_UPDATE, e => e.socket.application.id === t, i);
   }
   handleScreenOrientationUpdate(e) {
 let {
   screenOrientation: t
 } = e;
 if (0 !== this.rpcServer.subscriptions.length)
-  this.rpcServer.dispatchToSubscriptions(Z.zMe.ORIENTATION_UPDATE, {}, {
+  this.rpcServer.dispatchToSubscriptions(v.zMe.ORIENTATION_UPDATE, {}, {
     screen_orientation: t
   });
   }
@@ -213,10 +213,10 @@ let {
 if (0 === this.rpcServer.subscriptions.length)
   return;
 let {
-  application: s,
-  activity: a
+  application: a,
+  activity: s
 } = i;
-if (null == s || null == a || null == a.party_id)
+if (null == a || null == s || null == s.party_id)
   return;
 let r = g.default.getUser(null === (t = i.author) || void 0 === t ? void 0 : t.id);
 if (null == r)
@@ -224,22 +224,22 @@ if (null == r)
 let l = g.default.getCurrentUser();
 if (null == l || r.id === l.id)
   return;
-let o = a.type === Z.mFx.JOIN_REQUEST ? h.Z.getApplicationActivity(l.id, s.id) : h.Z.getApplicationActivity(r.id, s.id);
-if (null == o || null == o.party || o.party.id !== a.party_id)
+let o = s.type === v.mFx.JOIN_REQUEST ? h.Z.getApplicationActivity(l.id, a.id) : h.Z.getApplicationActivity(r.id, a.id);
+if (null == o || null == o.party || o.party.id !== s.party_id)
   return;
 let c = o.application_id;
-switch (a.type) {
-  case Z.mFx.JOIN:
-    this.rpcServer.dispatchToSubscriptions(Z.zMe.ACTIVITY_INVITE, e => e.socket.application.id === c, {
+switch (s.type) {
+  case v.mFx.JOIN:
+    this.rpcServer.dispatchToSubscriptions(v.zMe.ACTIVITY_INVITE, e => e.socket.application.id === c, {
       user: (0, A.Z)(r),
       activity: o,
-      type: a.type,
+      type: s.type,
       channel_id: n,
       message_id: i.id
     });
     break;
-  case Z.mFx.JOIN_REQUEST:
-    this.rpcServer.dispatchToSubscriptions(Z.zMe.ACTIVITY_JOIN_REQUEST, e => e.socket.application.id === c, {
+  case v.mFx.JOIN_REQUEST:
+    this.rpcServer.dispatchToSubscriptions(v.zMe.ACTIVITY_JOIN_REQUEST, e => e.socket.application.id === c, {
       user: (0, A.Z)(r)
     });
 }
@@ -250,7 +250,7 @@ let {
 } = e;
 this.rpcServer.sockets.forEach(e => {
   if (e.authorization.accessToken === t)
-    e.close(Z.$VG.TOKEN_REVOKED, 'Token revoked');
+    e.close(v.$VG.TOKEN_REVOKED, 'Token revoked');
 });
   }
   handleGuildCreate(e) {
@@ -260,7 +260,7 @@ let {
   }
 } = e, n = u.Z.getGuild(t);
 if (0 !== this.rpcServer.subscriptions.length && null != n)
-  this.rpcServer.dispatchToSubscriptions(Z.zMe.GUILD_CREATE, {}, {
+  this.rpcServer.dispatchToSubscriptions(v.zMe.GUILD_CREATE, {}, {
     id: t,
     name: n.name
   });
@@ -274,14 +274,14 @@ let {
   }
 } = e;
 if (0 !== this.rpcServer.subscriptions.length)
-  this.rpcServer.dispatchToSubscriptions(Z.zMe.CHANNEL_CREATE, {}, {
+  this.rpcServer.dispatchToSubscriptions(v.zMe.CHANNEL_CREATE, {}, {
     id: t,
     name: n,
     type: i
   });
   }
   handleLogout() {
-this.rpcServer.sockets.forEach(e => e.close(Z.$VG.CLOSE_NORMAL, 'User logout'));
+this.rpcServer.sockets.forEach(e => e.close(v.$VG.CLOSE_NORMAL, 'User logout'));
   }
   handleRelationshipAdd(e) {
 let {
@@ -291,7 +291,7 @@ let {
   }
 } = e;
 if (0 !== this.rpcServer.subscriptions.length)
-  this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, f.cD)(n, t));
+  this.rpcServer.dispatchToSubscriptions(v.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(n, t));
   }
   handleRelationshipRemove(e) {
 let {
@@ -300,7 +300,7 @@ let {
   }
 } = e;
 if (0 !== this.rpcServer.subscriptions.length)
-  this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, f.cD)(Z.OGo.NONE, t));
+  this.rpcServer.dispatchToSubscriptions(v.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(v.OGo.NONE, t));
   }
   handlePresenceUpdate(e) {
 let {
@@ -317,13 +317,13 @@ if (0 !== this.rpcServer.subscriptions.length)
     if (null != t)
       return;
     let i = I.Z.getRelationshipType(n);
-    i === Z.OGo.NONE && o.Z.getUserAffinitiesUserIds().has(n) && (i = Z.OGo.IMPLICIT), i !== Z.OGo.NONE && this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, f.cD)(i, n));
+    i === v.OGo.NONE && o.Z.getUserAffinitiesUserIds().has(n) && (i = v.OGo.IMPLICIT), i !== v.OGo.NONE && this.rpcServer.dispatchToSubscriptions(v.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(i, n));
   });
   }
   handlePresencesReplace() {
 if (0 !== this.rpcServer.subscriptions.length)
-  s().forEach(I.Z.getRelationships(), (e, t) => {
-    this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, f.cD)(e, t));
+  a().forEach(I.Z.getRelationships(), (e, t) => {
+    this.rpcServer.dispatchToSubscriptions(v.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(e, t));
   });
   }
   handleEntitlementCreate(e) {
@@ -331,7 +331,7 @@ let {
   entitlement: t
 } = e;
 if (0 !== this.rpcServer.subscriptions.length)
-  this.rpcServer.dispatchToSubscriptions(Z.zMe.ENTITLEMENT_CREATE, e => e.socket.application.id === t.application_id, {
+  this.rpcServer.dispatchToSubscriptions(v.zMe.ENTITLEMENT_CREATE, e => e.socket.application.id === t.application_id, {
     entitlement: t
   });
   }
@@ -340,7 +340,7 @@ let {
   entitlement: t
 } = e;
 if (0 !== this.rpcServer.subscriptions.length)
-  this.rpcServer.dispatchToSubscriptions(Z.zMe.ENTITLEMENT_DELETE, e => e.socket.application.id === t.application_id, {
+  this.rpcServer.dispatchToSubscriptions(v.zMe.ENTITLEMENT_DELETE, e => e.socket.application.id === t.application_id, {
     entitlement: t
   });
   }
@@ -353,7 +353,7 @@ if (0 === this.rpcServer.subscriptions.length)
 let {
   application_id: n
 } = t;
-this.rpcServer.dispatchToSubscriptions(Z.zMe.USER_ACHIEVEMENT_UPDATE, e => e.socket.application.id === n, {
+this.rpcServer.dispatchToSubscriptions(v.zMe.USER_ACHIEVEMENT_UPDATE, e => e.socket.application.id === n, {
   user_achievement: t
 });
   }

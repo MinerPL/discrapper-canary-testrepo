@@ -1,60 +1,57 @@
 n.d(t, {
   Ho: function() {
-return m;
+return E;
   },
   y9: function() {
-return _;
+return f;
   }
 });
-var i = n(735250),
-  a = n(470079),
-  l = n(317261),
+var r = n(735250),
+  i = n(470079),
+  a = n(317261),
   s = n(823379),
-  r = n(162461),
-  o = n(561308),
-  c = n(297781),
-  d = n(443487),
-  u = n(43205),
-  h = n(689938),
-  p = n(827418);
-let m = [c.An],
-  _ = [l._.WEEK];
-t.ZP = a.memo(e => {
+  o = n(162461),
+  l = n(561308),
+  u = n(297781),
+  c = n(443487),
+  d = n(43205),
+  _ = n(827418);
+let E = [u.An],
+  f = [a._.WEEK];
+t.ZP = i.memo(e => {
   let {
 entry: t,
 channel: n,
-selected: a
+selected: i
   } = e;
-  if (!(0, r.Rg)('MemberListTopArtistContent'))
+  if (!(0, o.Rg)('MemberListTopArtistContent'))
 return null;
-  let l = (0, o.Nq)(t);
-  return null != l && (0, s.Hi)(l, _) ? (0, i.jsxs)(d.Zb, {
-selected: a,
+  let a = (0, l.Nq)(t);
+  return null != a && (0, s.Hi)(a, f) ? (0, r.jsxs)(c.Zb, {
+selected: i,
 children: [
-  (0, i.jsxs)(d.e$, {
+  (0, r.jsxs)(c.e$, {
     children: [
-      (0, i.jsx)(d.F9, {
+      (0, r.jsx)(c.F9, {
         entry: t,
         channelId: n.id,
         guildId: n.guild_id
       }),
-      (0, i.jsx)(d.ll, {
-        children: h.Z.Messages.MEMBER_LIST_CONTENT_FEED_LISTENED_TO_MEDIA.format({
-          media: t.extra.artist.name
-        })
+      (0, r.jsx)(c.ll, {
+        children: t.extra.artist.name
       }),
-      (0, i.jsx)(c.Gk, {
-        location: c.Gt.CARD,
-        children: m.map((e, n) => (0, i.jsx)(e, {
+      (0, r.jsx)(u.Gk, {
+        location: u.Gt.CARD,
+        children: E.map((e, n) => (0, r.jsx)(e, {
           entry: t
         }, n))
       })
     ]
   }),
-  (0, i.jsx)(u.f, {
+  (0, r.jsx)(d.f, {
     src: t.extra.media.image_url,
     size: 48,
-    className: p.thumbnail
+    className: _.thumbnail
   })
 ]
   }) : null;

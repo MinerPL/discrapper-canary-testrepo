@@ -1,6 +1,6 @@
 n.d(t, {
   Pg: function() {
-return o;
+return s;
   },
   Te: function() {
 return i;
@@ -23,6 +23,6 @@ type: 'DOMAIN_MIGRATION_FAILURE'
   });
 }
 
-function o() {
+function s() {
   window.location.reload();
 }

@@ -1,8 +1,8 @@
 var r = n(478497),
   i = n(995769),
   a = n(606956),
-  o = Object.prototype.hasOwnProperty,
-  s = {
+  s = Object.prototype.hasOwnProperty,
+  o = {
 brackets: function(e) {
   return e + '[]';
 },
@@ -43,7 +43,7 @@ skipNulls: !1,
 strictNullHandling: !1
   },
   f = {},
-  h = function e(t, n, a, o, s, u, d, _, h, p, m, I, T, g, S, A, N, v) {
+  h = function e(t, n, a, s, o, u, d, _, h, p, m, I, T, g, S, A, N, v) {
 for (var O, R, C = t, y = v, D = 0, L = !1; void 0 !== (y = y.get(f)) && !L;) {
   var b = y.get(t);
   if (D += 1, void 0 !== b) {
@@ -76,8 +76,8 @@ else {
   R = m ? P.sort(m) : P;
 }
 var U = _ ? n.replace(/\./g, '%2E') : n,
-  w = o && l(C) && 1 === C.length ? U + '[]' : U;
-if (s && l(C) && 0 === C.length)
+  w = s && l(C) && 1 === C.length ? U + '[]' : U;
+if (o && l(C) && 0 === C.length)
   return w + '[]';
 for (var x = 0; x < R.length; ++x) {
   var G = R[x],
@@ -87,7 +87,7 @@ for (var x = 0; x < R.length; ++x) {
       F = l(C) ? 'function' == typeof a ? a(w, B) : w : w + (I ? '.' + B : '[' + B + ']');
     v.set(t, D);
     var V = r();
-    V.set(f, v), c(M, e(k, F, a, o, s, u, d, _, 'comma' === a && A && l(C) ? null : h, p, m, I, T, g, S, A, N, V));
+    V.set(f, v), c(M, e(k, F, a, s, o, u, d, _, 'comma' === a && A && l(C) ? null : h, p, m, I, T, g, S, A, N, V));
   }
 }
 return M;
@@ -106,13 +106,13 @@ if (void 0 !== e.charset && 'utf-8' !== e.charset && 'iso-8859-1' !== e.charset)
   throw TypeError('The charset option must be either utf-8, iso-8859-1, or undefined');
 var r = a.default;
 if (void 0 !== e.format) {
-  if (!o.call(a.formatters, e.format))
+  if (!s.call(a.formatters, e.format))
     throw TypeError('Unknown format option provided.');
   r = e.format;
 }
 var i = a.formatters[r],
   u = E.filter;
-if (('function' == typeof e.filter || l(e.filter)) && (u = e.filter), t = e.arrayFormat in s ? e.arrayFormat : 'indices' in e ? e.indices ? 'indices' : 'repeat' : E.arrayFormat, 'commaRoundTrip' in e && 'boolean' != typeof e.commaRoundTrip)
+if (('function' == typeof e.filter || l(e.filter)) && (u = e.filter), t = e.arrayFormat in o ? e.arrayFormat : 'indices' in e ? e.indices ? 'indices' : 'repeat' : E.arrayFormat, 'commaRoundTrip' in e && 'boolean' != typeof e.commaRoundTrip)
   throw TypeError('`commaRoundTrip` must be a boolean, or absent');
 var c = void 0 === e.allowDots ? !0 === e.encodeDotInKeys || E.allowDots : !!e.allowDots;
 return {
@@ -139,20 +139,20 @@ return {
   };
 e.exports = function(e, t) {
   var n, i, a = e,
-o = p(t);
-  'function' == typeof o.filter ? a = (i = o.filter)('', a) : l(o.filter) && (n = i = o.filter);
+s = p(t);
+  'function' == typeof s.filter ? a = (i = s.filter)('', a) : l(s.filter) && (n = i = s.filter);
   var u = [];
   if ('object' != typeof a || null === a)
 return '';
-  var d = s[o.arrayFormat],
-_ = 'comma' === d && o.commaRoundTrip;
-  !n && (n = Object.keys(a)), o.sort && n.sort(o.sort);
+  var d = o[s.arrayFormat],
+_ = 'comma' === d && s.commaRoundTrip;
+  !n && (n = Object.keys(a)), s.sort && n.sort(s.sort);
   for (var E = r(), f = 0; f < n.length; ++f) {
 var m = n[f];
-if (!o.skipNulls || null !== a[m])
-  c(u, h(a[m], m, d, _, o.allowEmptyArrays, o.strictNullHandling, o.skipNulls, o.encodeDotInKeys, o.encode ? o.encoder : null, o.filter, o.sort, o.allowDots, o.serializeDate, o.format, o.formatter, o.encodeValuesOnly, o.charset, E));
+if (!s.skipNulls || null !== a[m])
+  c(u, h(a[m], m, d, _, s.allowEmptyArrays, s.strictNullHandling, s.skipNulls, s.encodeDotInKeys, s.encode ? s.encoder : null, s.filter, s.sort, s.allowDots, s.serializeDate, s.format, s.formatter, s.encodeValuesOnly, s.charset, E));
   }
-  var I = u.join(o.delimiter),
-T = !0 === o.addQueryPrefix ? '?' : '';
-  return o.charsetSentinel && ('iso-8859-1' === o.charset ? T += 'utf8=%26%2310003%3B&' : T += 'utf8=%E2%9C%93&'), I.length > 0 ? T + I : '';
+  var I = u.join(s.delimiter),
+T = !0 === s.addQueryPrefix ? '?' : '';
+  return s.charsetSentinel && ('iso-8859-1' === s.charset ? T += 'utf8=%26%2310003%3B&' : T += 'utf8=%E2%9C%93&'), I.length > 0 ? T + I : '';
 };

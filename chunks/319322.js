@@ -4,7 +4,7 @@ n(2831);
 var i = n(264344),
   a = n.n(i);
 
-function o(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -34,7 +34,7 @@ toJSON() {
   };
 }
 constructor(e = 0, t = 0, n = 0, r = 1) {
-  o(this, 'x', void 0), o(this, 'y', void 0), o(this, 'z', void 0), o(this, 'w', void 0), this.x = e, this.y = t, this.z = n, this.w = r;
+  s(this, 'x', void 0), s(this, 'y', void 0), s(this, 'z', void 0), s(this, 'w', void 0), this.x = e, this.y = t, this.z = n, this.w = r;
 }
   }
   null == window.DOMPoint && (window.DOMPoint = e);
@@ -68,7 +68,7 @@ toJSON() {
   };
 }
 constructor(e = 0, t = 0, n = 0, r = 0) {
-  o(this, 'x', void 0), o(this, 'y', void 0), o(this, 'width', void 0), o(this, 'height', void 0), this.x = e, this.y = t, this.width = n, this.height = r;
+  s(this, 'x', void 0), s(this, 'y', void 0), s(this, 'width', void 0), s(this, 'height', void 0), this.x = e, this.y = t, this.width = n, this.height = r;
 }
   }
   null == window.DOMRect && (window.DOMRect = e);

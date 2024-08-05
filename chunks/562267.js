@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(442837),
-  o = n(481060),
-  s = n(661824),
+  s = n(481060),
+  o = n(661824),
   l = n(913663),
   u = n(268350),
   c = n(419922),
@@ -22,7 +22,7 @@ children: [
     children: p.map(e => (0, r.jsxs)('div', {
       className: _.stickerPreviewContainer,
       children: [
-        (0, r.jsx)(o.Clickable, {
+        (0, r.jsx)(s.Clickable, {
           onFocus: () => h(e.id),
           onBlur: () => h(null),
           className: _.closeButton,
@@ -32,7 +32,7 @@ children: [
           onClick: () => (0, u.qB)(n, E.drafts.type),
           children: (0, r.jsx)('div', {
             className: _.closeIconContainer,
-            children: (0, r.jsx)(o.CircleXIcon, {
+            children: (0, r.jsx)(s.CircleXIcon, {
               size: 'md',
               color: 'currentColor',
               className: _.closeIcon
@@ -48,7 +48,7 @@ children: [
       ]
     }, e.id))
   }),
-  (0, r.jsx)(s.Z, {
+  (0, r.jsx)(o.Z, {
     className: _.stickerPreviewDivider
   })
 ]

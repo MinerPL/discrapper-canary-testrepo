@@ -1,11 +1,11 @@
 a.r(t), a.d(t, {
   default: function() {
-return b;
+return m;
   }
 });
 var n = a(735250),
-  l = a(470079),
-  s = a(481060),
+  s = a(470079),
+  l = a(481060),
   i = a(332664),
   o = a(142497),
   r = a(626135),
@@ -15,22 +15,22 @@ var n = a(735250),
   _ = a(981631),
   T = a(190378),
   I = a(689938);
-let m = [
+let b = [
   u.K8.OTHER,
   u.K8.ADS,
   u.K8.NOT_FUN
 ];
 
-function b(e) {
+function m(e) {
   var t;
   let {
-channel: b,
+channel: m,
 activityApplication: C,
 onClose: A,
 transitionState: f,
 analyticsData: E
   } = e;
-  l.useEffect(() => {
+  s.useEffect(() => {
 r.default.track(_.rMx.OPEN_MODAL, {
   type: 'Activity Feedback Modal',
   application_id: C.id,
@@ -47,11 +47,11 @@ header: I.Z.Messages.ACTIVITY_REPORT_POST_ACTIVITY_HEADER.format({
 body: I.Z.Messages.ACTIVITY_REPORT_ACTIVITY_BODY,
 problemTitle: I.Z.Messages.ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE,
 problems: (0, c.Z)(!0, p),
-feedbackProblems: m,
+feedbackProblems: b,
 onSubmit: function(e) {
   let {
     rating: t,
-    problem: l,
+    problem: s,
     dontShowAgain: i,
     feedback: c
   } = e;
@@ -69,14 +69,14 @@ onSubmit: function(e) {
       applicationId: C.id
     }), null != t)
     (0, d.Z)({
-      problem: l,
-      channel: b,
+      problem: s,
+      channel: m,
       feedback: c,
       activityApplication: C,
       analyticsData: E,
       location: 'Activity End',
       rating: t
-    }), null != l && (0, s.openModalLazy)(async () => {
+    }), null != s && (0, l.openModalLazy)(async () => {
       let {
         default: e
       } = await a.e('14466').then(a.bind(a, 729328));

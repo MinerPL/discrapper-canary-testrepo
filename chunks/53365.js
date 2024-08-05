@@ -6,13 +6,13 @@ return h;
 return l;
   },
   av: function() {
-return f;
+return _;
   },
   df: function() {
 return C;
   },
   hY: function() {
-return _;
+return f;
   },
   oL: function() {
 return g;
@@ -60,7 +60,7 @@ async function m(e) {
 url: s.ANM.CREATOR_MONETIZATION_MARKETING_ONBOARDING(e)
   })).body;
 }
-async function f(e) {
+async function _(e) {
   try {
 let n = await a.tn.get({
   url: s.ANM.CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY,
@@ -87,7 +87,7 @@ application: t.application
   }), t;
 }
 
-function _(e) {
+function f(e) {
   return a.tn.post({
 url: s.ANM.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(e)
   });

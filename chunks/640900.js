@@ -9,8 +9,8 @@ return _;
 var r = n(470079),
   i = n(182823),
   a = n(882932),
-  o = n(251433),
-  s = n(706682),
+  s = n(251433),
+  o = n(706682),
   l = n(705782),
   u = n(201284);
 
@@ -24,7 +24,7 @@ type: E = 'text',
 validationBehavior: f = 'aria'
   } = e, [h, p] = (0, a.zk)(e.value, e.defaultValue || '', e.onChange), {
 focusableProps: m
-  } = (0, s.kc)(e, t), I = (0, u.Q3)({
+  } = (0, o.kc)(e, t), I = (0, u.Q3)({
 ...e,
 value: h
   }), {
@@ -36,7 +36,7 @@ labelProps: A,
 fieldProps: N,
 descriptionProps: v,
 errorMessageProps: O
-  } = (0, o.U)({
+  } = (0, s.U)({
 ...e,
 isInvalid: T,
 errorMessage: e.errorMessage || g
@@ -138,12 +138,12 @@ return e.addEventListener('beforeinput', a, !1), () => {
 n,
 a
   ]);
-  let o = d() ? null : e => {
+  let s = d() ? null : e => {
   let n = e.target.value.slice(0, e.target.selectionStart) + e.data + e.target.value.slice(e.target.selectionEnd);
   !t.validate(n) && e.preventDefault();
 },
 {
-  labelProps: s,
+  labelProps: o,
   inputProps: l,
   descriptionProps: u,
   errorMessageProps: _,
@@ -152,7 +152,7 @@ a
 f = (0, r.useRef)(null);
   return {
 inputProps: (0, i.dG)(l, {
-  onBeforeInput: o,
+  onBeforeInput: s,
   onCompositionStart() {
     let {
       value: e,
@@ -176,7 +176,7 @@ inputProps: (0, i.dG)(l, {
     }
   }
 }),
-labelProps: s,
+labelProps: o,
 descriptionProps: u,
 errorMessageProps: _,
 ...E

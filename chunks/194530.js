@@ -23,14 +23,14 @@ onSuccess: N,
 onClose: C,
 requirementsUpdated: m,
 noSkip: A = !1
-  } = e, [h, g] = a.useState(''), [O, p] = a.useState(''), [R, x] = a.useState(''), [M, D] = a.useState(null), [f, P] = a.useState(null), L = (0, i.e7)([l.Z], () => l.Z.getErrors()), Z = (0, i.e7)([l.Z], () => l.Z.getFormState()), b = a.useRef(null);
+  } = e, [g, h] = a.useState(''), [O, p] = a.useState(''), [R, x] = a.useState(''), [M, f] = a.useState(null), [D, P] = a.useState(null), L = (0, i.e7)([l.Z], () => l.Z.getErrors()), b = (0, i.e7)([l.Z], () => l.Z.getFormState()), Z = a.useRef(null);
   async function v(e) {
 e.preventDefault(), (0, o.b9)();
 let t = !1;
-if ('' === O ? (D(E.Z.Messages.PASSWORD_REQUIREMENTS_EMPTY), t = !0) : D(null), O !== R ? (P(E.Z.Messages.FORM_LABEL_NEW_PASSWORD_MISMATCH), t = !0) : P(null), t)
+if ('' === O ? (f(E.Z.Messages.PASSWORD_REQUIREMENTS_EMPTY), t = !0) : f(null), O !== R ? (P(E.Z.Messages.FORM_LABEL_NEW_PASSWORD_MISMATCH), t = !0) : P(null), t)
   return;
 let s = await (0, o.Mn)({
-  password: h,
+  password: g,
   newPassword: O
 });
 if (null == s ? void 0 : s.ok)
@@ -43,7 +43,7 @@ else {
   return a.useEffect(() => {
 if (S === r.ModalTransitionState.ENTERED) {
   var e;
-  null === (e = b.current) || void 0 === e || e.focus();
+  null === (e = Z.current) || void 0 === e || e.focus();
 }
   }, [S]), (0, n.jsxs)(r.ModalRoot, {
 transitionState: S,
@@ -81,9 +81,9 @@ children: [
             error: null == L ? void 0 : null === (t = L.password) || void 0 === t ? void 0 : t[0],
             children: (0, n.jsx)(r.TextInput, {
               type: 'password',
-              value: h,
-              onChange: g,
-              inputRef: b
+              value: g,
+              onChange: h,
+              inputRef: Z
             })
           }),
           (0, n.jsx)(r.FormItem, {
@@ -99,7 +99,7 @@ children: [
           (0, n.jsx)(r.FormItem, {
             className: u.newPassword,
             title: E.Z.Messages.FORM_LABEL_CONFIRM_NEW_PASSWORD,
-            error: null != f ? f : void 0,
+            error: null != D ? D : void 0,
             children: (0, n.jsx)(r.TextInput, {
               type: 'password',
               value: R,
@@ -114,7 +114,7 @@ children: [
             type: 'submit',
             color: r.Button.Colors.BRAND,
             size: r.Button.Sizes.MEDIUM,
-            submitting: Z === _.QZA.SUBMITTING,
+            submitting: b === _.QZA.SUBMITTING,
             children: E.Z.Messages.DONE
           }),
           !0 !== A && (0, n.jsx)(r.Button, {

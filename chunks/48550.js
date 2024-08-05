@@ -1,9 +1,9 @@
-t.d(s, {
+s.d(t, {
   P: function() {
 return l;
   }
 });
-var n = t(689938);
+var n = s(689938);
 let l = {
   get webauthn() {
 return n.Z.Messages.MFA_V2_WEBAUTHN_NAME;

@@ -17,7 +17,7 @@ t && (r = r.filter(function(t) {
   return n;
 }
 
-function o(e) {
+function s(e) {
   for (var t = 1; t < arguments.length; t++) {
 var n = null != arguments[t] ? arguments[t] : {};
 t % 2 ? a(Object(n), !0).forEach(function(t) {
@@ -35,14 +35,14 @@ t % 2 ? a(Object(n), !0).forEach(function(t) {
   }
   return e;
 }
-var s = {
+var o = {
   initialSourceClientOffset: null,
   initialClientOffset: null,
   clientOffset: null
 };
 
 function l() {
-  var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s,
+  var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o,
 t = arguments.length > 1 ? arguments[1] : void 0,
 n = t.payload;
   switch (t.type) {
@@ -56,12 +56,12 @@ case r.qu:
 case r.$T:
   if ((0, i.YJ)(e.clientOffset, n.clientOffset))
     return e;
-  return o(o({}, e), {}, {
+  return s(s({}, e), {}, {
     clientOffset: n.clientOffset
   });
 case r.Bs:
 case r.rp:
-  return s;
+  return o;
 default:
   return e;
   }

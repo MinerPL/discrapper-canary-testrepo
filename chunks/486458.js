@@ -9,18 +9,18 @@ return a;
 return i;
   }
 }), n(47120);
-var i, a, l, s, r, o = n(735250),
+var i, a, s, l, r, o = n(735250),
   c = n(470079),
-  d = n(120356),
-  u = n.n(d),
+  u = n(120356),
+  d = n.n(u),
   h = n(780384),
   p = n(481060),
   m = n(626135),
   _ = n(792125),
   f = n(285952),
   E = n(981631),
-  C = n(689938),
-  g = n(934046);
+  g = n(689938),
+  C = n(934046);
 
 function I(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -30,7 +30,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-(s = i || (i = {})).CENTER = 'center', s.LEFT = 'left', (r = a || (a = {})).TOP = 'top', r.MIDDLE = 'middle';
+(l = i || (i = {})).CENTER = 'center', l.LEFT = 'left', (r = a || (a = {})).TOP = 'top', r.MIDDLE = 'middle';
 class x extends c.PureComponent {
   componentDidMount() {
 let {
@@ -53,48 +53,48 @@ let {
   isLongText: n,
   title: i,
   body: a,
-  className: l,
-  forceTheme: s,
+  className: s,
+  forceTheme: l,
   onClickSkipAll: r
-} = this.props, c = 'left' === t || n, d = 'center' === t || !c;
+} = this.props, c = 'left' === t || n, u = 'center' === t || !c;
 return (0, o.jsxs)(p.Dialog, {
-  className: u()(g.popoutRoot, l),
+  className: d()(C.popoutRoot, s),
   children: [
     null != e && (0, o.jsx)(f.Z, {
-      className: g.mediaContainer,
+      className: C.mediaContainer,
       justify: c ? f.Z.Justify.START : f.Z.Justify.CENTER,
       children: e()
     }),
     (0, o.jsx)(p.H, {
-      className: u()({
-        [g.titleCenter]: d,
-        [g.titleLeft]: c
+      className: d()({
+        [C.titleCenter]: u,
+        [C.titleLeft]: c
       }),
       children: i
     }),
     (0, o.jsx)('string' == typeof a ? 'p' : 'div', {
-      className: u()({
-        [g.bodyCenter]: d,
-        [g.bodyLeft]: c
+      className: d()({
+        [C.bodyCenter]: u,
+        [C.bodyLeft]: c
       }),
       children: a
     }),
     (0, o.jsxs)(f.Z, {
-      className: g.buttonContainer,
+      className: C.buttonContainer,
       justify: c ? f.Z.Justify.BETWEEN : f.Z.Justify.CENTER,
       children: [
         (0, o.jsx)(p.Button, {
           size: p.ButtonSizes.SMALL,
           onClick: this.handleDismiss,
-          children: C.Z.Messages.TUTORIAL_CLOSE
+          children: g.Z.Messages.TUTORIAL_CLOSE
         }),
         (0, o.jsx)(p.Button, {
           size: p.ButtonSizes.SMALL,
           look: p.Button.Looks.BLANK,
           onClick: r,
-          color: (0, h.ap)(s) ? p.Button.Colors.PRIMARY : p.Button.Colors.WHITE,
-          className: c ? g.buttonSkipLeftAlign : g.buttonSkipCenterAlign,
-          children: C.Z.Messages.SKIP_ALL_TIPS
+          color: (0, h.ap)(l) ? p.Button.Colors.PRIMARY : p.Button.Colors.WHITE,
+          className: c ? C.buttonSkipLeftAlign : C.buttonSkipCenterAlign,
+          children: g.Z.Messages.SKIP_ALL_TIPS
         })
       ]
     })
@@ -114,7 +114,7 @@ super(...e), I(this, 'state', {
 });
   }
 }
-class T extends(l = c.PureComponent) {
+class T extends(s = c.PureComponent) {
   render() {
 let {
   renderMedia: e,
@@ -122,15 +122,15 @@ let {
   onComplete: n,
   onSkipAll: i,
   isLongText: a,
-  title: l,
-  body: s,
+  title: s,
+  body: l,
   children: r,
   spacing: c,
-  forceTheme: d,
-  ...u
-} = this.props, h = 'top' === u.position || 'bottom' === u.position ? 'center' : 'top';
+  forceTheme: u,
+  ...d
+} = this.props, h = 'top' === d.position || 'bottom' === d.position ? 'center' : 'top';
 return (0, o.jsx)(p.Popout, {
-  ...u,
+  ...d,
   align: h,
   spacing: null != c ? c : 0,
   renderPopout: this.renderPopoutContent,
@@ -156,22 +156,22 @@ super(...e), I(this, 'onClickComplete', e => {
   } = e, {
     forceTheme: i,
     isLongText: a,
-    arrowAlignment: l,
-    renderMedia: s
-  } = this.props, r = null != s;
+    arrowAlignment: s,
+    renderMedia: l
+  } = this.props, r = null != l;
   return (0, o.jsx)(x, {
     ...this.props,
-    className: u()({
-      [g.bottom]: 'bottom' === n,
-      [g.contentNarrowNoMedia]: !a && !r,
-      [g.contentNarrowWithMedia]: !a && r,
-      [g.contentWideNoMedia]: a && !r,
-      [g.contentWideWithMedia]: a && r,
-      [g.right]: 'right' === n,
-      [g.top]: 'top' === n,
-      [g.left]: 'left' === n,
-      [g.arrowAlignmentTop]: 'top' === l,
-      [g.arrowAlignmentMiddle]: 'middle' === l,
+    className: d()({
+      [C.bottom]: 'bottom' === n,
+      [C.contentNarrowNoMedia]: !a && !r,
+      [C.contentNarrowWithMedia]: !a && r,
+      [C.contentWideNoMedia]: a && !r,
+      [C.contentWideWithMedia]: a && r,
+      [C.right]: 'right' === n,
+      [C.top]: 'top' === n,
+      [C.left]: 'left' === n,
+      [C.arrowAlignmentTop]: 'top' === s,
+      [C.arrowAlignmentMiddle]: 'middle' === s,
       'force-theme': null != i
     }, (0, _.Q)(i)),
     onClickComplete: () => this.onClickComplete(t),

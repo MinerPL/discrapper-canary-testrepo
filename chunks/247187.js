@@ -25,7 +25,7 @@ spacebar: ' ',
 up: 'arrowup',
 win: 'meta',
 windows: 'meta'
-  }, o = {
+  }, s = {
 backspace: 8,
 tab: 9,
 enter: 13,
@@ -60,8 +60,8 @@ scrolllock: 145,
 '\\': 220,
 ']': 221,
 '\'': 222
-  }, s = 1; s < 20; s++)
-  o['f' + s] = 111 + s;
+  }, o = 1; o < 20; o++)
+  s['f' + o] = 111 + o;
 
 function l(e, t, n) {
   t && !('byKey' in t) && (n = t, t = null), !Array.isArray(e) && (e = [e]);
@@ -80,9 +80,9 @@ function u(e, t) {
   var n = t && t.byKey,
 r = {},
 a = (e = e.replace('++', '+add')).split('+'),
-o = a.length;
-  for (var s in i)
-r[i[s]] = !1;
+s = a.length;
+  for (var o in i)
+r[i[o]] = !1;
   var l = !0,
 u = !1,
 c = void 0;
@@ -93,7 +93,7 @@ for (var E, f = a[Symbol.iterator](); !(l = (E = f.next()).done); l = !0) {
   p && (h = h.slice(0, -1));
   var m = _(h),
     I = i[m];
-  (1 === o || !I) && (n ? r.key = m : r.which = d(h)), I && (r[I] = !p || null);
+  (1 === s || !I) && (n ? r.key = m : r.which = d(h)), I && (r[I] = !p || null);
 }
   } catch (e) {
 u = !0, c = e;
@@ -121,7 +121,7 @@ if (null != r && (null != (i = 'key' === n && null != t.key ? t.key.toLowerCase(
 }
 
 function d(e) {
-  return o[e = _(e)] || e.toUpperCase().charCodeAt(0);
+  return s[e = _(e)] || e.toUpperCase().charCodeAt(0);
 }
 
 function _(e) {

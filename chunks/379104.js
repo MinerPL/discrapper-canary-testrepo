@@ -8,17 +8,17 @@ function a(e) {
   this._root = null, this._comparator = e, this.size = 0;
 }
 
-function o(e) {
+function s(e) {
   return null !== e && e.red;
 }
 
-function s(e, t) {
+function o(e, t) {
   var n = e.get_child(!t);
   return e.set_child(!t, n.get_child(t)), n.set_child(t, e), e.red = !0, n.red = !1, n;
 }
 
 function l(e, t) {
-  return e.set_child(!t, s(e.get_child(!t), !t)), s(e, t);
+  return e.set_child(!t, o(e.get_child(!t), !t)), o(e, t);
 }
 i.prototype.get_child = function(e) {
   return e ? this.right : this.left;
@@ -37,9 +37,9 @@ var n = new i(void 0),
   d = null,
   _ = this._root;
 for (c.right = this._root;;) {
-  if (null === _ ? (_ = new i(e), d.set_child(r, _), t = !0, this.size++) : o(_.left) && o(_.right) && (_.red = !0, _.left.red = !1, _.right.red = !1), o(_) && o(d)) {
+  if (null === _ ? (_ = new i(e), d.set_child(r, _), t = !0, this.size++) : s(_.left) && s(_.right) && (_.red = !0, _.left.red = !1, _.right.red = !1), s(_) && s(d)) {
     var E = c.right === u;
-    _ === d.get_child(a) ? c.set_child(E, s(u, !a)) : c.set_child(E, l(u, !a));
+    _ === d.get_child(a) ? c.set_child(E, o(u, !a)) : c.set_child(E, l(u, !a));
   }
   var f = this._comparator(_.data, e);
   if (0 === f)
@@ -59,16 +59,16 @@ n = t;
 var d = c;
 a = r, r = n, n = n.get_child(c);
 var _ = this._comparator(e, n.data);
-if (c = _ > 0, 0 === _ && (u = n), !o(n) && !o(n.get_child(c))) {
-  if (o(n.get_child(!c))) {
-    var E = s(n, c);
+if (c = _ > 0, 0 === _ && (u = n), !s(n) && !s(n.get_child(c))) {
+  if (s(n.get_child(!c))) {
+    var E = o(n, c);
     r.set_child(d, E), r = E;
-  } else if (!o(n.get_child(!c))) {
+  } else if (!s(n.get_child(!c))) {
     var f = r.get_child(!d);
     if (null !== f) {
-      if (o(f.get_child(!d)) || o(f.get_child(d))) {
+      if (s(f.get_child(!d)) || s(f.get_child(d))) {
         var h = a.right === r;
-        o(f.get_child(d)) ? a.set_child(h, l(r, d)) : o(f.get_child(!d)) && a.set_child(h, s(r, d));
+        s(f.get_child(d)) ? a.set_child(h, l(r, d)) : s(f.get_child(!d)) && a.set_child(h, o(r, d));
         var p = a.get_child(h);
         p.red = !0, n.red = !0, p.left.red = !1, p.right.red = !1;
       } else

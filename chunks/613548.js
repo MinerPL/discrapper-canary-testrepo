@@ -5,26 +5,26 @@ return F;
 }), n(653041);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(392711),
   o = n.n(r),
   c = n(848246),
-  d = n(442837),
-  u = n(481060),
+  u = n(442837),
+  d = n(481060),
   h = n(320007),
   p = n(236091),
   m = n(569545),
   _ = n(517525),
   f = n(665149),
   E = n(6242),
-  C = n(757692),
-  g = n(141321),
+  g = n(757692),
+  C = n(141321),
   I = n(44136),
   x = n(651183),
   T = n(618158),
-  v = n(390322),
-  N = n(616286),
+  N = n(390322),
+  v = n(616286),
   S = n(961048),
   Z = n(179424),
   A = n(786915),
@@ -48,21 +48,21 @@ function V(e) {
   let {
 channelId: t,
 guildId: n
-  } = e, a = Date.now(), l = (0, d.e7)([
+  } = e, a = Date.now(), s = (0, u.e7)([
 R.Z,
 y.Z
   ], () => o()(R.Z.getSpeakers()).map(e => y.Z.getParticipant(t, e)).filter(e => null != e && e.type === w.fO.USER && e.speaking && !(0, I.ZP)(e)).sortBy(e => -R.Z.getSpeakingDuration(e.user.id, a)).slice(0, 3).value());
-  return 0 === l.length ? null : (0, i.jsx)(i.Fragment, {
-children: l.map((e, t) => (0, i.jsx)(u.Tooltip, {
+  return 0 === s.length ? null : (0, i.jsx)(i.Fragment, {
+children: s.map((e, t) => (0, i.jsx)(d.Tooltip, {
   position: 'bottom',
-  color: u.Tooltip.Colors.GREY,
+  color: d.Tooltip.Colors.GREY,
   text: H.Z.Messages.CHANNEL_CALL_CURRENT_SPEAKER.format({
     username: e.user.username
   }),
   children: a => (0, i.jsx)(L.Z, {
     ...a,
-    className: s()(G.speaker, {
-      [G.last]: t === l.length - 1
+    className: l()(G.speaker, {
+      [G.last]: t === s.length - 1
     }),
     user: e.user,
     speaking: !0,
@@ -77,19 +77,19 @@ function F(e) {
   let {
 inPopout: t,
 channel: n,
-appContext: l,
-inCall: s,
+appContext: s,
+inCall: l,
 isChatOpen: r,
 exitFullScreen: o
   } = e, I = n.id, {
 voiceParticipantsHidden: R,
 selectedParticipant: L,
 userParticipantCount: H
-  } = (0, d.cj)([y.Z], () => ({
+  } = (0, u.cj)([y.Z], () => ({
 selectedParticipant: y.Z.getSelectedParticipant(I),
 voiceParticipantsHidden: y.Z.getVoiceParticipantsHidden(I),
 userParticipantCount: y.Z.getUserParticipantCount(I)
-  }), [I]), F = (0, d.e7)([j.default], () => j.default.getCurrentUser()), W = (0, D.Z)(n), z = (0, O.So)(c.q.STREAM_HIGH_QUALITY), Y = (0, C.o)(L, F), K = (0, E.lL)('CallHeader', !0, F, Y), {
+  }), [I]), F = (0, u.e7)([j.default], () => j.default.getCurrentUser()), W = (0, D.Z)(n), z = (0, O.So)(c.q.STREAM_HIGH_QUALITY), Y = (0, g.o)(L, F), K = (0, E.lL)('CallHeader', !0, F, Y), {
 preventIdle: q,
 allowIdle: X
   } = (0, T.Y)('popup'), Q = [];
@@ -120,9 +120,9 @@ className: G.button,
 participant: L,
 showQuality: !0,
 premiumIndicator: z || K.enabled
-  }, 'live-indicator'))), R && Q.push((0, i.jsx)(u.Popout, {
+  }, 'live-indicator'))), R && Q.push((0, i.jsx)(d.Popout, {
 position: 'bottom',
-renderPopout: () => (0, i.jsx)(v.Z, {
+renderPopout: () => (0, i.jsx)(N.Z, {
   children: (0, i.jsx)(U.Z, {
     channel: n
   })
@@ -139,7 +139,7 @@ children: (e, t) => {
     className: G.button
   });
 }
-  }, 'call-members-popout')), s && Q.push(null != L ? (0, i.jsx)(Z.Z, {
+  }, 'call-members-popout')), l && Q.push(null != L ? (0, i.jsx)(Z.Z, {
 className: G.button,
 channelId: I
   }, 'deselect-participant') : (0, i.jsx)(b.Z, {
@@ -148,21 +148,21 @@ channelId: I,
 isHorizontal: !0
   }, 'select-participant')), !t && Q.push((0, i.jsx)(h.Z, {
 className: G.button
-  }, 'clips')), Q.push((0, i.jsx)(g.Z, {
+  }, 'clips')), Q.push((0, i.jsx)(C.Z, {
 onOpen: q,
 onClose: X,
 className: G.button
-  }, 'recents')), Q.push((0, i.jsx)(u.Popout, {
+  }, 'recents')), Q.push((0, i.jsx)(d.Popout, {
 position: 'bottom',
 renderPopout: e => {
   let {
     closePopout: t
   } = e;
-  return (0, i.jsx)(v.Z, {
+  return (0, i.jsx)(N.Z, {
     children: (0, i.jsx)(k.Z, {
       channelId: I,
       onClose: t,
-      appContext: l,
+      appContext: s,
       exitFullScreen: o
     })
   });
@@ -180,7 +180,7 @@ children: (e, t) => {
 }
   }, 'more-options-popout')), !r && (Q.push((0, i.jsx)(f.ZP.Divider, {
 className: G.divider
-  }, 'divider')), Q.push((0, i.jsx)(N.T, {
+  }, 'divider')), Q.push((0, i.jsx)(v.T, {
 channelId: n.id,
 className: G.chatButtonSpacer,
 disabled: !0

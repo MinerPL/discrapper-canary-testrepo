@@ -18,8 +18,8 @@ return u;
 var r = n(182823),
   i = n(612001),
   a = n(251433),
-  o = n(148836),
-  s = n(275857);
+  s = n(148836),
+  o = n(275857);
 let l = new WeakMap();
 
 function u(e, t) {
@@ -31,7 +31,7 @@ throw Error('Unknown list');
 }
 
 function c(e, t, n) {
-  let s = (0, r.zL)(e, {
+  let o = (0, r.zL)(e, {
   labelable: !0
 }),
 u = e.selectionBehavior || 'toggle',
@@ -39,7 +39,7 @@ c = e.linkBehavior || ('replace' === u ? 'action' : 'override');
   'toggle' === u && 'action' === c && (c = 'override');
   let {
 listProps: d
-  } = (0, o._t)({
+  } = (0, s._t)({
 ...e,
 ref: n,
 selectionManager: t.selectionManager,
@@ -72,7 +72,7 @@ labelElementType: 'span'
   });
   return {
 labelProps: f,
-listBoxProps: (0, r.dG)(s, _, 'multiple' === t.selectionManager.selectionMode ? {
+listBoxProps: (0, r.dG)(o, _, 'multiple' === t.selectionManager.selectionMode ? {
   'aria-multiselectable': 'true'
 } : {}, {
   role: 'listbox',
@@ -94,7 +94,7 @@ role: 'option',
   let C = t.collection.getItem(p);
   if (N) {
 let e = Number(null == C ? void 0 : C.index);
-R['aria-posinset'] = Number.isNaN(e) ? void 0 : e + 1, R['aria-setsize'] = (0, s.is)(t.collection);
+R['aria-posinset'] = Number.isNaN(e) ? void 0 : e + 1, R['aria-setsize'] = (0, o.is)(t.collection);
   }
   let {
 itemProps: y,
@@ -102,7 +102,7 @@ isPressed: D,
 isFocused: L,
 hasAction: b,
 allowsSelection: M
-  } = (0, o.Cs)({
+  } = (0, s.Cs)({
 selectionManager: t.selectionManager,
 key: p,
 ref: n,

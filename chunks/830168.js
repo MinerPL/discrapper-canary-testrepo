@@ -1,8 +1,8 @@
 let r, i;
 n(47120), n(411104);
 var a = n(570140),
-  o = n(330516),
-  s = n(710845),
+  s = n(330516),
+  o = n(710845),
   l = n(594174),
   u = n(436181),
   c = n(626135),
@@ -10,7 +10,7 @@ var a = n(570140),
   _ = n(998502),
   E = n(981631),
   f = n(186901);
-let h = new s.Z('NativeDispatchUtils');
+let h = new o.Z('NativeDispatchUtils');
 
 function p() {
   return null == i && h.warn('Tried getting Dispatch instance before instantiated'), i;
@@ -18,7 +18,7 @@ function p() {
 
 function m(e) {
   let t = JSON.parse(e);
-  return h.log('Native Dispatch error', t), new o.Z(t);
+  return h.log('Native Dispatch error', t), new s.Z(t);
 }
 
 function I(e, t) {
@@ -30,8 +30,8 @@ let {
   userToken: t,
   userId: n,
   installPaths: a,
-  platform: o,
-  stateCallback: s,
+  platform: s,
+  stateCallback: o,
   errorCallback: u
 } = e;
 if (null == i)
@@ -46,7 +46,7 @@ if (null == i)
     var r;
     let d = {
         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-        build_number: '309567'
+        build_number: '315452'
       },
       _ = l.default.getCurrentUser();
     null != _ && (d.user_id = _.id, d.user_name = _.tag, null != _.email && (d.email = _.email));
@@ -62,11 +62,11 @@ if (null == i)
       api_endpoint: ''.concat((r = 'https:', 'https:')).concat(window.GLOBAL_ENV.API_ENDPOINT),
       environment: window.GLOBAL_ENV.PROJECT_ENV,
       sentry: d,
-      platform: o
+      platform: s
     };
     i = new e.Dispatch(JSON.stringify(f), e => {
       let t = JSON.parse(e);
-      s({
+      o({
         applications: t.applications,
         paused: t.paused,
         currentTask: null != t.current_task ? {
@@ -110,8 +110,8 @@ let {
   applicationIcon: r,
   branchId: i,
   buildId: a,
-  manifestIds: o,
-  installationPath: s
+  manifestIds: s,
+  installationPath: o
 } = e, l = p();
 if (null != l)
   l.command(JSON.stringify({
@@ -121,8 +121,8 @@ if (null != l)
     application_icon: r,
     branch_id: i,
     build_id: a,
-    manifest_ids: o,
-    install_path: s
+    manifest_ids: s,
+    install_path: o
   }), I);
   },
   setCurrentTask(e, t, n, r, i) {
@@ -237,12 +237,12 @@ i.command(JSON.stringify({
 });
   })),
   launch: (e, t, n, r) => new Promise((i, a) => {
-let o = p();
-if (null == o) {
+let s = p();
+if (null == s) {
   a(Error('native dispatch instance not found'));
   return;
 }
-o.command(JSON.stringify({
+s.command(JSON.stringify({
   command: 'Launch',
   application_id: e,
   branch_id: t,

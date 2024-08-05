@@ -87,8 +87,8 @@ let r = this.prefix;
 this.mark(e, 'Start '.concat(t)), this.prefix += '| ';
 let i = Date.now(),
   a = n(),
-  o = Date.now() - i;
-return this.prefix = r, this.mark(e, 'Finish '.concat(t), o), a;
+  s = Date.now() - i;
+return this.prefix = r, this.mark(e, 'Finish '.concat(t), s), a;
   }
   async timeAsync(e, t, n) {
 if (!this.isTracing)

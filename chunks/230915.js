@@ -8,8 +8,8 @@ return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Sym
 }
 var r, i = 'https://js.stripe.com/v3',
   a = /^https:\/\/js\.stripe\.com\/v3\/?(\?.*)?$/,
-  o = 'loadStripe.setLoadParameters was called but an existing Stripe.js script already exists in the document; existing script parameters will be used',
-  s = function() {
+  s = 'loadStripe.setLoadParameters was called but an existing Stripe.js script already exists in the document; existing script parameters will be used',
+  o = function() {
 for (var e = document.querySelectorAll('script[src^="'.concat(i, '"]')), t = 0; t < e.length; t++) {
   var n = e[t];
   if (!!a.test(n.src))
@@ -62,13 +62,13 @@ return (e = r, null !== c ? c : (c = new Promise(function(t, n) {
     t(null);
     return;
   }
-  if (window.Stripe && e && console.warn(o), window.Stripe) {
+  if (window.Stripe && e && console.warn(s), window.Stripe) {
     t(window.Stripe);
     return;
   }
   try {
-    var r, i, a, u, c = s();
-    c && e ? console.warn(o) : c ? c && null !== _ && null !== d && (c.removeEventListener('load', _), c.removeEventListener('error', d), null === (u = c.parentNode) || void 0 === u || u.removeChild(c), c = l(e)) : c = l(e), r = t, i = n, _ = function() {
+    var r, i, a, u, c = o();
+    c && e ? console.warn(s) : c ? c && null !== _ && null !== d && (c.removeEventListener('load', _), c.removeEventListener('error', d), null === (u = c.parentNode) || void 0 === u || u.removeChild(c), c = l(e)) : c = l(e), r = t, i = n, _ = function() {
       window.Stripe ? r(window.Stripe) : i(Error('Stripe.js not available'));
     }, a = n, d = function() {
       a(Error('Failed to load Stripe.js'));

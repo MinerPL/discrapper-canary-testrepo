@@ -3,19 +3,19 @@ E.d(_, {
 return d;
   },
   KY: function() {
-return f;
-  },
-  Uo: function() {
 return Z;
   },
-  fU: function() {
-return p;
+  Uo: function() {
+return P;
   },
-  qw: function() {
+  fU: function() {
 return H;
   },
+  qw: function() {
+return h;
+  },
   tn: function() {
-return P;
+return f;
   }
 }), E(733860);
 var s = E(470079),
@@ -28,17 +28,17 @@ var s = E(470079),
   r = E(45114),
   N = E(740504),
   L = E(605236),
-  D = E(931261),
-  S = E(540126),
+  S = E(931261),
+  D = E(540126),
   l = E(671098),
   U = E(703656),
   G = E(592125),
   O = E(324067),
-  i = E(306680),
-  M = E(709054),
+  M = E(306680),
+  i = E(709054),
   R = E(981631),
-  o = E(176505),
-  u = E(443063),
+  u = E(176505),
+  o = E(443063),
   c = E(490897),
   C = E(689938);
 
@@ -48,8 +48,8 @@ function g(e, _) {
 
 function d(e, _, E, T) {
   T = T.toLowerCase();
-  let n = (0, D.g)(e),
-A = s.useCallback((e, _) => !(n && e.channel.hasFlag(o.zZ.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== R.d4z.GUILD_DIRECTORY && (0 === _.length || I()(_, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(_)), [n]);
+  let n = (0, S.g)(e),
+A = s.useCallback((e, _) => !(n && e.channel.hasFlag(u.zZ.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== R.d4z.GUILD_DIRECTORY && (0 === _.length || I()(_, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(_)), [n]);
   return s.useMemo(() => {
 let e = {
   null: [],
@@ -69,18 +69,18 @@ T
   ]);
 }
 
-function f(e) {
+function Z(e) {
   let _ = e.getSections();
-  if (_[S.zm] > 0)
+  if (_[D.zm] > 0)
 switch (e.getCommunitySection().getRow(0)) {
-  case u.f.GUILD_HOME:
-    return o.oC.GUILD_HOME;
-  case u.f.GUILD_ROLE_SUBSCRIPTIONS:
-    return o.oC.ROLE_SUBSCRIPTIONS;
-  case u.f.GUILD_MEMBER_APPLICATIONS:
-    return o.oC.MEMBER_APPLICATIONS;
+  case o.f.GUILD_HOME:
+    return u.oC.GUILD_HOME;
+  case o.f.GUILD_ROLE_SUBSCRIPTIONS:
+    return u.oC.ROLE_SUBSCRIPTIONS;
+  case o.f.GUILD_MEMBER_APPLICATIONS:
+    return u.oC.MEMBER_APPLICATIONS;
 }
-  for (let s = S.wd; s < e.voiceChannelsSectionNumber; s++)
+  for (let s = D.wd; s < e.voiceChannelsSectionNumber; s++)
 if (_[s] > 0) {
   var E;
   let _ = null === (E = e.getChannelFromSectionRow(s, 0)) || void 0 === E ? void 0 : E.channel;
@@ -90,16 +90,16 @@ if (_[s] > 0) {
   return null;
 }
 
-function Z(e, _) {
+function P(e, _) {
   let E = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
   (0, l.n)(e, _), (0, r.y5)(_.map(e => ({
 channelId: e,
 readStateType: c.W.CHANNEL,
-messageId: i.ZP.lastMessageId(e)
+messageId: M.ZP.lastMessageId(e)
   }))), null != E && (0, U.uL)(R.Z5c.CHANNEL(e, E));
 }
 
-function P(e, _, E, s) {
+function f(e, _, E, s) {
   let T = (0, L.wE)(a.z.CHANNEL_BROWSER_NUX),
 I = (0, t.cj)([G.Z], () => {
   let _ = {},
@@ -128,7 +128,7 @@ rowHeight: s
   }), n;
 }
 
-function p(e) {
+function H(e) {
   var _, E;
   let s = (0, t.e7)([O.Z], () => O.Z.getCategories(e)),
 T = s._categories.length,
@@ -139,9 +139,9 @@ return 0;
   return null == n ? 0 : 0 === n.length ? I.index + 2 - T : n[n.length - 1].index + 2 - T;
 }
 
-function H(e) {
+function h(e) {
   var _;
   return C.Z.Messages.CHANNEL_BROWSER_ACTIVE_TEXT.format({
-timeAgo: A()(M.default.extractTimestamp(null !== (_ = i.ZP.lastMessageId(e)) && void 0 !== _ ? _ : e)).fromNow()
+timeAgo: A()(i.default.extractTimestamp(null !== (_ = M.ZP.lastMessageId(e)) && void 0 !== _ ? _ : e)).fromNow()
   });
 }

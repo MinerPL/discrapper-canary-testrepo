@@ -2,7 +2,7 @@ n(47120);
 var r = n(433517),
   i = n(147913);
 let a = 'formGuidelinesStorageKey';
-class o extends i.Z {
+class s extends i.Z {
   _initialize() {
 let e = r.K.get(a);
 null != e && (this.seenForumGuidelines = new Set(e));
@@ -26,4 +26,4 @@ super(...e), t = this, n = 'seenForumGuidelines', r = new Set(), n in t ? Object
 }) : t[n] = r;
   }
 }
-t.Z = new o();
+t.Z = new s();

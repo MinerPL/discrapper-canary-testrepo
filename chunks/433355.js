@@ -8,8 +8,8 @@ return g;
 });
 var r, i = n(873546),
   a = n(442837),
-  o = n(570140),
-  s = n(897473),
+  s = n(570140),
+  o = n(897473),
   l = n(585483),
   u = n(709054),
   c = n(592125),
@@ -50,9 +50,9 @@ return null == t ? null : (0, m.Qk)(e, t);
 
 function y(e) {
   return [
-s.tI.VIEW_CHANNEL,
-s.tI.VIEW_THREAD,
-s.tI.VIEW_MESSAGE_REQUEST
+o.tI.VIEW_CHANNEL,
+o.tI.VIEW_THREAD,
+o.tI.VIEW_MESSAGE_REQUEST
   ].includes(e.type);
 }
 
@@ -67,7 +67,7 @@ function L() {
   let e = !1;
   for (let t in O) {
 let n = O[t];
-if (n.type === s.tI.VIEW_THREAD || n.type === s.tI.VIEW_CHANNEL) {
+if (n.type === o.tI.VIEW_THREAD || n.type === o.tI.VIEW_CHANNEL) {
   let r = c.Z.getChannel(n.channelId);
   (null == r || !d.Z.can(I.Pl.VIEW_CHANNEL, r)) && (delete O[t], e = !0);
 }
@@ -115,7 +115,7 @@ let t = C(e);
 if (null == t || v)
   return null;
 let n = O[t];
-return null == n ? null : n.type === s.tI.VIEW_THREAD || n.type === s.tI.VIEW_CHANNEL ? n.channelId : null;
+return null == n ? null : n.type === o.tI.VIEW_THREAD || n.type === o.tI.VIEW_CHANNEL ? n.channelId : null;
   }
   getCurrentSidebarMessageId(e) {
 var t;
@@ -123,10 +123,10 @@ let n = C(e);
 if (null == n || v)
   return null;
 let r = O[n];
-return null == r ? null : r.type === s.tI.VIEW_THREAD || r.type === s.tI.VIEW_CHANNEL ? null === (t = r.details) || void 0 === t ? void 0 : t.initialMessageId : null;
+return null == r ? null : r.type === o.tI.VIEW_THREAD || r.type === o.tI.VIEW_CHANNEL ? null === (t = r.details) || void 0 === t ? void 0 : t.initialMessageId : null;
   }
 }
-T(M, 'displayName', 'ChannelSectionStore'), T(M, 'persistKey', 'ChannelSectionStore2'), t.ZP = new M(o.Z, {
+T(M, 'displayName', 'ChannelSectionStore'), T(M, 'persistKey', 'ChannelSectionStore2'), t.ZP = new M(s.Z, {
   CHANNEL_TOGGLE_MEMBERS_SECTION: function() {
 A && (A = D(A)), S = D(S);
   },
@@ -176,7 +176,7 @@ let {
 v = !1;
 let i = C(t);
 null != i && (O[i] = {
-  type: s.tI.CREATE_THREAD,
+  type: o.tI.CREATE_THREAD,
   parentChannelId: t,
   parentMessageId: n,
   location: r
@@ -203,7 +203,7 @@ if (t.id in O)
 let n = !1;
 for (let e in O) {
   let r = O[e];
-  null != r && r.type === s.tI.VIEW_CHANNEL && r.channelId === t.id && (delete O[e], n = !0);
+  null != r && r.type === o.tI.VIEW_CHANNEL && r.channelId === t.id && (delete O[e], n = !0);
 }
 return n;
   },
@@ -218,8 +218,8 @@ let {
 if (n.ownerId === (null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.id))
   return !1;
 let r = O[n.parent_id];
-null != r && r.type === s.tI.CREATE_THREAD && r.parentMessageId === u.default.castChannelIdAsMessageId(n.id) && (O[n.parent_id] = {
-  type: s.tI.VIEW_THREAD,
+null != r && r.type === o.tI.CREATE_THREAD && r.parentMessageId === u.default.castChannelIdAsMessageId(n.id) && (O[n.parent_id] = {
+  type: o.tI.VIEW_THREAD,
   channelId: n.id
 });
   },
@@ -227,7 +227,7 @@ null != r && r.type === s.tI.CREATE_THREAD && r.parentMessageId === u.default.ca
 let {
   channel: t
 } = e, n = O[t.parent_id];
-if (null == n || n.type !== s.tI.VIEW_THREAD || n.channelId !== t.id)
+if (null == n || n.type !== o.tI.VIEW_THREAD || n.channelId !== t.id)
   return !1;
 delete O[t.parent_id];
   }

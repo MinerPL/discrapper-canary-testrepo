@@ -55,7 +55,7 @@ a = {
     }
   ]
 },
-o = e.inherit(e.COMMENT(null, null), {
+s = e.inherit(e.COMMENT(null, null), {
   variants: [{
       begin: /#/,
       end: /$/
@@ -76,7 +76,7 @@ o = e.inherit(e.COMMENT(null, null), {
     ]
   }]
 }),
-s = {
+o = {
   className: 'class',
   beginKeywords: 'class enum',
   end: /\s*[{]/,
@@ -103,7 +103,7 @@ l = {
 },
 u = [
   l,
-  o,
+  s,
   n,
   e.NUMBER_MODE,
   i,
@@ -150,7 +150,7 @@ aliases: [
 ],
 case_insensitive: !0,
 keywords: t,
-contains: u.concat(s, {
+contains: u.concat(o, {
   className: 'function',
   begin: /function\s+/,
   end: /\s*\{|$/,

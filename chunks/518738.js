@@ -1,6 +1,6 @@
 n.d(t, {
   Kz: function() {
-return s;
+return o;
   },
   oC: function() {
 return u;
@@ -12,14 +12,14 @@ return l;
 var r = n(470079),
   i = n(442837),
   a = n(430824),
-  o = n(829883);
+  s = n(829883);
 
-function s(e, t) {
+function o(e, t) {
   var n;
   let {
 customIconSrc: r,
 unicodeEmoji: i
-  } = null !== (n = (0, o.zy)(e, t)) && void 0 !== n ? n : {};
+  } = null !== (n = (0, s.zy)(e, t)) && void 0 !== n ? n : {};
   if (null != r || null != i)
 return {
   src: r,
@@ -46,8 +46,8 @@ roles: a.Z.getRoles(t)
 if (null == u || null == n)
   return;
 let e = c[n];
-if (!!(0, o._b)(u, e))
-  return s(e, l);
+if (!!(0, s._b)(u, e))
+  return o(e, l);
   }, [
 u,
 c,
@@ -58,6 +58,6 @@ l
 
 function u(e, t) {
   let n = (0, i.e7)([a.Z], () => a.Z.getGuild(e));
-  if (null != n && !!(0, o._b)(n, t))
-return s(t);
+  if (null != n && !!(0, s._b)(n, t))
+return o(t);
 }

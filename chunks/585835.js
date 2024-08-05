@@ -9,8 +9,8 @@ var i = t(735250),
   l = t.n(s),
   o = t(243814),
   r = t(442837),
-  c = t(481060),
-  d = t(367907),
+  d = t(481060),
+  c = t(367907),
   u = t(213459),
   I = t(488915),
   m = t(970731),
@@ -19,8 +19,8 @@ var i = t(735250),
   E = t(626135),
   T = t(486199),
   h = t(929507),
-  p = t(981631),
-  g = t(689938),
+  g = t(981631),
+  p = t(689938),
   C = t(19140);
 
 function f(e) {
@@ -44,11 +44,11 @@ canShowMigrationTooltip: k
   let F = (f = j, x = D, O = P, S = B, null == f || null == S ? null : O ? (0, i.jsxs)(N.Z, {
   align: N.Z.Align.CENTER,
   children: [
-    (0, i.jsx)(c.Text, {
+    (0, i.jsx)(d.Text, {
       variant: 'text-sm/normal',
       children: f
     }),
-    O ? (0, i.jsx)(c.ChevronSmallRightIcon, {
+    O ? (0, i.jsx)(d.ChevronSmallRightIcon, {
       size: 'custom',
       color: 'currentColor',
       width: 10,
@@ -56,18 +56,18 @@ canShowMigrationTooltip: k
       className: C.caret
     }) : null
   ]
-}) : (0, i.jsx)(c.Button, {
-  size: c.Button.Sizes.SMALL,
-  look: O ? c.Button.Looks.LINK : c.Button.Looks.FILLED,
-  color: O ? c.Button.Colors.PRIMARY : c.Button.Colors.BRAND,
+}) : (0, i.jsx)(d.Button, {
+  size: d.Button.Sizes.SMALL,
+  look: O ? d.Button.Looks.LINK : d.Button.Looks.FILLED,
+  color: O ? d.Button.Colors.PRIMARY : d.Button.Colors.BRAND,
   disabled: x,
   onClick: S,
   children: f
 })),
 V = k && !G && !w && void 0 !== y && null != L;
   a.useEffect(() => {
-V && E.default.track(p.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
-  ...(0, d.hH)(y),
+V && E.default.track(g.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
+  ...(0, c.hH)(y),
   application_id: null == L ? void 0 : L.application.id,
   location: 'overview'
 });
@@ -76,19 +76,19 @@ y,
 null == L ? void 0 : L.application.id,
 V
   ]);
-  let K = V ? (0, i.jsx)(c.Popout, {
-  renderPopout: () => (0, i.jsx)(c.Clickable, {
+  let K = V ? (0, i.jsx)(d.Popout, {
+  renderPopout: () => (0, i.jsx)(d.Clickable, {
     onClick: e => {
       e.stopPropagation(), W(!0), h.Z.dismissOverviewTooltip(y, L.integration);
     },
     children: (0, i.jsx)(m.ZP, {
-      content: g.Z.Messages.COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP,
+      content: p.Z.Messages.COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP,
       onClick: () => {}
     })
   }),
   position: 'bottom',
   align: 'center',
-  animation: c.Popout.Animation.TRANSLATE,
+  animation: d.Popout.Animation.TRANSLATE,
   shouldShow: !0,
   children: () => F
 }) : F,
@@ -124,31 +124,31 @@ J = (0, i.jsxs)(N.Z, {
               {
                 application: l,
                 integration: r,
-                webhooks: d
+                webhooks: c
               } = e;
-            return null != l.bot && s.push((0, i.jsx)(c.TooltipContainer, {
+            return null != l.bot && s.push((0, i.jsx)(d.TooltipContainer, {
               forceOpen: n,
-              text: new _.Z(l.bot).isVerifiedBot() ? g.Z.Messages.INTEGRATIONS_APPLICATION_VERIFIED_BOT : g.Z.Messages.INTEGRATIONS_APPLICATION_BOT,
+              text: new _.Z(l.bot).isVerifiedBot() ? p.Z.Messages.INTEGRATIONS_APPLICATION_VERIFIED_BOT : p.Z.Messages.INTEGRATIONS_APPLICATION_BOT,
               className: C.feature,
-              children: (0, i.jsx)(c.RobotIcon, {
+              children: (0, i.jsx)(d.RobotIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: C.featureIcon
               })
-            }, 'bot')), d.length > 0 && s.push((0, i.jsx)(c.TooltipContainer, {
+            }, 'bot')), c.length > 0 && s.push((0, i.jsx)(d.TooltipContainer, {
               forceOpen: n,
-              text: g.Z.Messages.INTEGRATIONS_WEBHOOKS_SUMMARY.format({
-                count: d.length
+              text: p.Z.Messages.INTEGRATIONS_WEBHOOKS_SUMMARY.format({
+                count: c.length
               }),
               className: C.feature,
-              children: (0, i.jsx)(c.WebhookIcon, {
+              children: (0, i.jsx)(d.WebhookIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: C.featureIcon
               })
             }, 'webhooks')), (null == r ? void 0 : null === (a = r.scopes) || void 0 === a ? void 0 : a.includes(o.x.APPLICATIONS_COMMANDS)) === !0 && t && s.push((0, i.jsx)('div', {
               className: C.feature,
-              children: (0, i.jsx)(c.SlashBoxIcon, {
+              children: (0, i.jsx)(d.SlashBoxIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: C.featureIcon
@@ -161,18 +161,18 @@ J = (0, i.jsxs)(N.Z, {
     })
   ]
 });
-  return P ? (0, i.jsx)(c.Clickable, {
+  return P ? (0, i.jsx)(d.Clickable, {
 onClick: () => {
   k && null != y && null != L && h.Z.dismissOverviewTooltip(y, L.integration), null == B || B();
 },
 onFocus: () => H(!0),
 onBlur: () => H(!1),
-children: (0, i.jsx)(c.Card, {
+children: (0, i.jsx)(d.Card, {
   editable: !0,
   className: l()(C.card, C.clickable),
   children: J
 })
-  }) : (0, i.jsx)(c.Card, {
+  }) : (0, i.jsx)(d.Card, {
 editable: !0,
 className: C.card,
 children: J

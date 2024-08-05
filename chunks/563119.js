@@ -2,8 +2,8 @@ var r = n(735250);
 n(470079);
 var i = n(704215),
   a = n(952265),
-  o = n(468026),
-  s = n(231757),
+  s = n(468026),
+  o = n(231757),
   l = n(605236),
   u = n(131951),
   c = n(626135),
@@ -27,14 +27,14 @@ return null == t ? Promise.resolve() : new Promise(e => {
   let n = () => {
       (0, l.EW)(i.z.CONSOLE_PTT_DISABLE_ALERT), e();
     },
-    s = e => (0, r.jsx)(o.default, {
+    o = e => (0, r.jsx)(s.default, {
       ...e,
       title: t,
       body: f.Z.Messages.PTT_NOT_SUPPORTED_ALERT_BODY,
       onConfirm: n,
       titleClassName: h.title
     });
-  (0, a.nf)(m) ? (0, a.o)(m, s) : (0, a.h7)(s, {
+  (0, a.nf)(m) ? (0, a.o)(m, o) : (0, a.h7)(o, {
     modalKey: m
   });
 });
@@ -52,7 +52,7 @@ let {
 });
 
 function f() {
-  null != l && ((0, s.Z)({
+  null != l && ((0, o.Z)({
     platformType: l
   }), c.default.track(E.rMx.ACCOUNT_LINK_STEP, {
     previous_step: _.Lw,
@@ -60,7 +60,7 @@ function f() {
     platform_type: l
   }));
 }
-let h = e => (0, r.jsx)(o.default, {
+let h = e => (0, r.jsx)(s.default, {
   ...e,
   title: t,
   body: u,

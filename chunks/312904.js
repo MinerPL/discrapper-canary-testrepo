@@ -4,7 +4,9 @@ let i = e => {
 let {
   src: t
 } = e, n = document.createElement('link');
-n.rel = 'prefetch', n.href = t, document.body.appendChild(n);
+n.rel = 'prefetch', n.href = t, n.onload = () => {
+  document.body.removeChild(n);
+}, document.body.appendChild(n);
   });
 };
 t.Z = e => {

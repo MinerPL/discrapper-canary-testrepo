@@ -1,8 +1,8 @@
 n(47120), n(411104), n(653041), n(998459);
 var r, i = n(348327),
   a = n.n(i),
-  o = n(442837),
-  s = n(544891),
+  s = n(442837),
+  o = n(544891),
   l = n(570140),
   u = n(457330),
   c = n(726542),
@@ -31,7 +31,7 @@ let m = 1 * _.Z.Millis.MINUTE,
   O = {};
 
 function R(e, t, n) {
-  return s.tn.get({
+  return o.tn.get({
 url: ''.concat('https://api.twitch.tv/helix').concat(e),
 query: t,
 headers: {
@@ -41,17 +41,18 @@ headers: {
   });
 }
 async function C(e, t) {
-  let n = O[e];
-  if (null != n)
-return n;
+  var n;
+  let r = O[e];
+  if (null != r)
+return r;
   let {
 body: {
-  data: r
+  data: i
 }
   } = await R('/games', {
 id: e
-  }, t), i = r[0].name;
-  return O[e] = i, i;
+  }, t), a = null === (n = i[0]) || void 0 === n ? void 0 : n.name;
+  return O[e] = a, a;
 }
 let y = new class e {
   start() {
@@ -68,15 +69,15 @@ let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
 if (e.revoked || null == (t = null != t ? t : e.accessToken))
   return null;
 try {
-  var n, r, i, a, o;
+  var n, r, i, a, s;
   let {
     body: {
-      data: s
+      data: o
     }
   } = await R('/streams', {
     user_id: e.id,
     first: 1
-  }, t), l = s[0];
+  }, t), l = o[0];
   if (null == l || 'live' !== l.type)
     throw Error('no stream');
   let {
@@ -86,7 +87,9 @@ try {
   } = l, f = {
     large_image: null != u && null !== (r = (0, d.getAssetFromImageURL)(h.ABu.TWITCH, u)) && void 0 !== r ? r : void 0
   }, p = await C(_, t), m = c.Z.get(h.ABu.TWITCH);
-  let I = null !== (a = u, i = null === (o = g.exec(a)) || void 0 === o ? void 0 : o[1]) && void 0 !== i ? i : e.name;
+  let I = null !== (a = u, i = null === (s = g.exec(a)) || void 0 === s ? void 0 : s[1]) && void 0 !== i ? i : e.name,
+    T = null != E && '' !== E ? E.slice(0, 128) : void 0,
+    S = null != p && '' !== p ? p.slice(0, 128) : void 0;
   return {
     url: null === (n = m.getPlatformUserUrl) || void 0 === n ? void 0 : n.call(m, {
       id: e.id,
@@ -94,8 +97,8 @@ try {
     }),
     name: m.name,
     assets: f,
-    details: E,
-    state: p
+    details: T,
+    state: S
   };
 } catch (n) {
   if (401 === n.status && null == t)
@@ -113,7 +116,7 @@ try {
     body: {
       items: r
     }
-  } = await s.tn.get({
+  } = await o.tn.get({
     url: 'https://www.googleapis.com/youtube/v3/liveBroadcasts',
     query: {
       part: 'id,snippet',
@@ -131,15 +134,15 @@ try {
     id: i,
     snippet: {
       title: a,
-      thumbnails: o
+      thumbnails: s
     }
   } = r[0], l = {
-    large_image: null !== (n = (0, d.getAssetFromImageURL)(h.ABu.YOUTUBE, o.high.url)) && void 0 !== n ? n : void 0
-  };
+    large_image: null !== (n = (0, d.getAssetFromImageURL)(h.ABu.YOUTUBE, s.high.url)) && void 0 !== n ? n : void 0
+  }, u = null != a && '' !== a ? a.slice(0, 128) : void 0;
   return N = {
     url: I(i),
     name: c.Z.get(h.ABu.YOUTUBE).name,
-    details: a,
+    details: u,
     assets: l
   };
 } catch (n) {
@@ -180,7 +183,7 @@ p(this, '_nextCheck', void 0), p(this, '_started', void 0), this._started = !1;
 function D() {
   f.Z.enabled ? y.start() : y.stop();
 }
-class L extends(r = o.ZP.Store) {
+class L extends(r = s.ZP.Store) {
   initialize() {
 D(), this.waitFor(E.Z), this.syncWith([f.Z], D);
   }

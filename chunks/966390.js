@@ -2,8 +2,8 @@ n(47120), n(789020);
 var r = n(481060),
   i = n(570140),
   a = n(430742),
-  o = n(904245),
-  s = n(166459),
+  s = n(904245),
+  o = n(166459),
   l = n(531643),
   u = n(881052),
   c = n(673750),
@@ -88,7 +88,7 @@ if (i.Z.dispatch({
     failureCode: t,
     errorMessage: null == r ? void 0 : r.msg
   }), t === y.evJ.EXPLICIT_CONTENT) {
-  o.Z.sendExplicitMediaClydeError(_, null == n ? void 0 : n.attachments, f.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
+  s.Z.sendExplicitMediaClydeError(_, null == n ? void 0 : n.attachments, f.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
   return;
 }
 if (t === y.evJ.AUTOMOD_MESSAGE_BLOCKED) {
@@ -109,18 +109,25 @@ if (t === y.evJ.AUTOMOD_MESSAGE_BLOCKED) {
   });
   return;
 }
-if (t !== y.evJ.GUILD_FILE_UPLOAD_RATE_LIMITED_ACCESS)
-  U ? x.reject(new u.Hx({
-    status: t,
-    body: null != n ? n : {}
-  }, t)) : (0, l.openUploadError)({
-    title: D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
-    help: D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
-  }), '' !== G.content && '' === v.Z.getDraft(_, b) && a.Z.saveDraft(_, G.content, b), 0 === O.Z.getUploadCount(_, b) && s.Z.setUploads({
+if (t !== y.evJ.GUILD_FILE_UPLOAD_RATE_LIMITED_ACCESS) {
+  if (U)
+    x.reject(new u.Hx({
+      status: t,
+      body: null != n ? n : {}
+    }, t));
+  else {
+    var E;
+    (0, l.openUploadError)({
+      title: D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
+      help: null !== (E = null == n ? void 0 : n.message) && void 0 !== E ? E : D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
+    });
+  }
+  '' !== G.content && '' === v.Z.getDraft(_, b) && a.Z.saveDraft(_, G.content, b), 0 === O.Z.getUploadCount(_, b) && o.Z.setUploads({
     channelId: _,
     uploads: L,
     draftType: b
   });
+}
   }), w.on('complete', (e, t) => {
 i.Z.dispatch({
   type: 'UPLOAD_COMPLETE',
@@ -139,7 +146,7 @@ let {
   draftType: r,
   isThumbnail: i = !1,
   filesMetadata: a = []
-} = e, o = Array.from(n).map((e, n) => {
+} = e, s = Array.from(n).map((e, n) => {
   let r = null != a ? a[n] : {};
   return new d.n({
     file: e,
@@ -150,14 +157,14 @@ let {
 });
 L({
   channelId: t,
-  uploads: o,
+  uploads: s,
   draftType: r
 });
   },
   upload: function e(t) {
 let {
   channelId: n,
-  file: s,
+  file: o,
   draftType: u,
   message: c,
   hasSpoiler: d,
@@ -172,7 +179,7 @@ if (null != c) {
   h.content = c.content, h.tts = c.tts, h.channel_id = c.channel_id;
   let e = A.Z.getPendingReply(n);
   if (null != e) {
-    let t = o.Z.getSendMessageOptionsForReply(e);
+    let t = s.Z.getSendMessageOptionsForReply(e);
     h.type = y.uaV.REPLY, h.message_reference = t.messageReference, h.allowed_mentions = t.allowedMentions, (0, S.A6)(n);
   }
 }
@@ -199,7 +206,7 @@ p.on('start', e => {
       fileItems: t.items,
       failureCode: d
     }), d === y.evJ.EXPLICIT_CONTENT) {
-    o.Z.sendExplicitMediaClydeError(n, null == _ ? void 0 : _.attachments, f.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
+    s.Z.sendExplicitMediaClydeError(n, null == _ ? void 0 : _.attachments, f.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
     return;
   }
   (0, l.openUploadError)({
@@ -208,7 +215,7 @@ p.on('start', e => {
       onClick: () => {
         (0, r.closeModal)(l.UPLOAD_ERROR_MODAL_KEY), e({
           channelId: n,
-          file: s,
+          file: o,
           draftType: u,
           message: c
         });
@@ -221,7 +228,7 @@ p.on('start', e => {
     channelId: n,
     file: e
   });
-}), p.upload(s, h);
+}), p.upload(o, h);
   },
   uploadFiles: L,
   cancel(e) {

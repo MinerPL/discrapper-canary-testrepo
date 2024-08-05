@@ -2,32 +2,32 @@ n(733860);
 var r = n(735250),
   i = n(470079),
   a = n(481060),
-  o = n(353093),
-  s = n(360794);
+  s = n(353093),
+  o = n(360794);
 
 function l(e) {
   let {
 games: t
   } = e;
   return (0, r.jsx)('div', {
-className: s.tooltipGames,
+className: o.tooltipGames,
 children: t.map(e => {
   let t = e.getIconURL(24);
   return null == t ? null : (0, r.jsxs)('div', {
-    className: s.tooltipGame,
+    className: o.tooltipGame,
     children: [
       (0, r.jsx)('div', {
-        className: s.tooltipGameImageContainer,
+        className: o.tooltipGameImageContainer,
         children: (0, r.jsx)('img', {
           src: t,
           alt: e.name,
-          className: s.tooltipGameImage
+          className: o.tooltipGameImage
         })
       }),
       (0, r.jsx)(a.Text, {
         variant: 'text-xs/medium',
         color: 'text-normal',
-        className: s.tooltipGameName,
+        className: o.tooltipGameName,
         children: e.name
       })
     ]
@@ -57,7 +57,7 @@ d = i.useMemo(() => {
     return null;
   if (u.length > 4) {
     let n = u.slice(3),
-      i = (0, o.f6)(n.map(e => e.name));
+      i = (0, s.f6)(n.map(e => e.name));
     return (0, r.jsx)(a.Tooltip, {
       'aria-label': null != i ? i : '',
       text: (0, r.jsx)(l, {
@@ -66,15 +66,15 @@ d = i.useMemo(() => {
       position: 'bottom',
       children: i => (0, r.jsxs)('div', {
         ...i,
-        className: s.gameImageContainer,
+        className: o.gameImageContainer,
         children: [
           (0, r.jsx)('img', {
             src: t,
             alt: e.name,
-            className: s.gameImage
+            className: o.gameImage
           }),
           (0, r.jsx)('div', {
-            className: s.extraGameCount,
+            className: o.extraGameCount,
             children: (0, r.jsx)(a.Text, {
               variant: 'text-xs/medium',
               color: 'always-white',
@@ -90,11 +90,11 @@ d = i.useMemo(() => {
     position: 'bottom',
     children: n => (0, r.jsx)('div', {
       ...n,
-      className: s.gameImageContainer,
+      className: o.gameImageContainer,
       children: (0, r.jsx)('img', {
         src: t,
         alt: e.name,
-        className: s.gameImage
+        className: o.gameImage
       })
     })
   });
@@ -108,11 +108,11 @@ children: [
       position: 'bottom',
       children: n => (0, r.jsx)('div', {
         ...n,
-        className: s.gameImageContainer,
+        className: o.gameImageContainer,
         children: (0, r.jsx)('img', {
           src: t,
           alt: e.name,
-          className: s.gameImage
+          className: o.gameImage
         })
       })
     }, e.id);

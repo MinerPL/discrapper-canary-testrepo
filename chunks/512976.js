@@ -1,6 +1,6 @@
 n.d(t, {
   R: function() {
-return o;
+return s;
   }
 });
 var r = n(470079),
@@ -12,7 +12,7 @@ function a(e, t) {
 r[n] = e[n];
   return r;
 }
-var o = function() {
+var s = function() {
   var e, t, n = (t = 2, function(e) {
   if (Array.isArray(e))
     return e;
@@ -23,12 +23,12 @@ var o = function() {
       i = !1,
       a = void 0;
     try {
-      for (var o, s = e[Symbol.iterator](); !(r = (o = s.next()).done) && (n.push(o.value), !t || n.length !== t); r = !0);
+      for (var s, o = e[Symbol.iterator](); !(r = (s = o.next()).done) && (n.push(s.value), !t || n.length !== t); r = !0);
     } catch (e) {
       i = !0, a = e;
     } finally {
       try {
-        !r && null != s.return && s.return();
+        !r && null != o.return && o.return();
       } finally {
         if (i)
           throw a;
@@ -49,22 +49,22 @@ var o = function() {
 }(e, t) || function() {
   throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
 }()),
-o = n[0],
-s = n[1],
+s = n[0],
+o = n[1],
 l = (0, r.useContext)(i.L);
   return (0, r.useEffect)(function() {
 var e, t = null == l ? void 0 : null === (e = l.dragDropManager) || void 0 === e ? void 0 : e.getBackend(),
   n = {
     backendChanged: function(e) {
-      s(e.previewEnabled());
+      o(e.previewEnabled());
     }
   };
-return s(t.previewEnabled()), t.previewsList().register(n),
+return o(t.previewEnabled()), t.previewsList().register(n),
   function() {
     t.previewsList().unregister(n);
   };
   }, [
 l,
 l.dragDropManager
-  ]), o;
+  ]), s;
 };

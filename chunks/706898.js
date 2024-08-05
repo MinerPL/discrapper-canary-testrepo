@@ -3,7 +3,7 @@ n.d(t, {
 return v;
   }
 }), n(757143), n(411104), n(47120);
-var r, i, a, o, s = n(735250),
+var r, i, a, s, o = n(735250),
   l = n(470079),
   u = n(120356),
   c = n.n(u),
@@ -34,7 +34,7 @@ let {
   id: r,
   ...i
 } = e;
-return (0, s.jsx)('div', {
+return (0, o.jsx)('div', {
   ...i,
   ref: t,
   role: 'tabpanel',
@@ -54,7 +54,7 @@ return;
   let n = {};
   return 'Selected' === t ? (n.backgroundColor = e, n.color = E.Z.unsafe_rawColors.WHITE_500.css, n) : ('Hover' === t && (n.backgroundColor = (0, _.wK)(e, 0.1)), n.color = e, n);
 }
-(o = r || (r = {})).DEFAULT = 'Default', o.HOVER = 'Hover', o.SELECTED = 'Selected';
+(s = r || (r = {})).DEFAULT = 'Default', s.HOVER = 'Hover', s.SELECTED = 'Selected';
 class N extends(i = l.Component) {
   getStyle() {
 let {
@@ -98,12 +98,12 @@ let {
   selectedItem: r,
   color: i,
   disabled: a,
-  onContextMenu: o,
+  onContextMenu: s,
   clickableRef: l,
   look: u,
   disableItemStyles: d
 } = this.props, _ = this.props['aria-label'], E = r === n;
-return (0, s.jsx)(f.P, {
+return (0, o.jsx)(f.P, {
   className: c()(t, {
     [m.item]: !d,
     [m.brand]: 'brand' === u,
@@ -122,7 +122,7 @@ return (0, s.jsx)(f.P, {
   onMouseLeave: null != i ? this.handleMouseOut : void 0,
   onMouseUp: null != i ? this.handleMouseUp : void 0,
   onMouseDown: this.handleMouseDown,
-  onContextMenu: o,
+  onContextMenu: s,
   'aria-label': _,
   ref: l,
   children: e
@@ -179,7 +179,7 @@ let {
   'aria-label': i,
   orientation: a = 'horizontal'
 } = this.props;
-return (0, s.jsx)('div', {
+return (0, o.jsx)('div', {
   ref: this.tabBarRef,
   className: c()(e, T[n]),
   style: r,
@@ -242,7 +242,7 @@ children: r,
 'aria-expanded': i,
 'aria-controls': a
   } = e;
-  return (0, s.jsx)(f.P, {
+  return (0, o.jsx)(f.P, {
 tabIndex: null == n ? -1 : 0,
 className: c()(m.header, t),
 onClick: n,
@@ -253,7 +253,7 @@ focusProps: {
     top: -6
   }
 },
-children: (0, s.jsx)(h.x, {
+children: (0, o.jsx)(h.x, {
   variant: 'eyebrow',
   color: 'none',
   className: m.headerText,
@@ -264,7 +264,7 @@ children: (0, s.jsx)(h.x, {
   let {
 style: t
   } = e;
-  return (0, s.jsx)('div', {
+  return (0, o.jsx)('div', {
 className: m.separator,
 style: t
   });

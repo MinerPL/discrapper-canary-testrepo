@@ -98,7 +98,7 @@ let t = '[A-Za-z$_][0-9A-Za-z$_]*',
 'TypeError',
 'URIError'
   ],
-  o = [
+  s = [
 'setInterval',
 'setTimeout',
 'clearInterval',
@@ -117,7 +117,7 @@ let t = '[A-Za-z$_][0-9A-Za-z$_]*',
 'escape',
 'unescape'
   ],
-  s = [
+  o = [
 'arguments',
 'this',
 'super',
@@ -128,7 +128,7 @@ let t = '[A-Za-z$_][0-9A-Za-z$_]*',
 'module',
 'global'
   ],
-  l = [].concat(o, i, a);
+  l = [].concat(s, i, a);
 e.exports = function(e) {
   let u = function(e) {
   var u;
@@ -165,7 +165,7 @@ e.exports = function(e) {
       keyword: n,
       literal: r,
       built_in: l,
-      'variable.language': s
+      'variable.language': o
     },
     I = '[0-9](_?[0-9])*',
     T = `\\.(${ I })`,
@@ -352,7 +352,7 @@ e.exports = function(e) {
     };
   let P = {
       match: c.concat(/\b/, (u = [
-        ...o,
+        ...s,
         'super',
         'import'
       ], c.concat('(?!', u.join('|'), ')')), t, c.lookahead(/\(/)),
@@ -625,7 +625,7 @@ E = {
   ]),
   literal: r,
   built_in: l.concat(c),
-  'variable.language': s
+  'variable.language': o
 },
 f = {
   className: 'meta',

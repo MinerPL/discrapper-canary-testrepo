@@ -1,6 +1,6 @@
-var r, i;
+var i, r;
 n.d(t, {
   K: function() {
-return r;
+return i;
   }
-}), (i = r || (r = {})).AVAILABLE = 'AVAILABLE', i.ERROR = 'ERROR', i.RATE_LIMIT = 'RATE_LIMIT', i.INTERNAL_ERROR = 'INTERNAL_ERROR';
+}), (r = i || (i = {})).AVAILABLE = 'AVAILABLE', r.ERROR = 'ERROR', r.RATE_LIMIT = 'RATE_LIMIT', r.INTERNAL_ERROR = 'INTERNAL_ERROR';

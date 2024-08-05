@@ -5,8 +5,8 @@ return o;
 });
 var i = n(735250);
 n(470079);
-var s = n(120356),
-  a = n.n(s),
+var a = n(120356),
+  s = n.n(a),
   r = n(481060),
   l = n(30268);
 
@@ -14,7 +14,7 @@ function o(e) {
   let {
 padded: t = !0,
 inset: n = !1,
-active: s = !1,
+active: a = !1,
 className: o,
 children: c,
 onClick: d,
@@ -23,21 +23,21 @@ onClick: d,
   return null != d ? (0, i.jsx)(r.Clickable, {
 onClick: d,
 tabIndex: null != d ? 0 : -1,
-className: a()(o, {
+className: s()(o, {
   [l.outer]: !n,
   [l.inset]: n,
   [l.padded]: t,
-  [l.active]: s,
+  [l.active]: a,
   [l.interactive]: null != d
 }),
 ...u,
 children: c
   }) : (0, i.jsx)('div', {
-className: a()(o, {
+className: s()(o, {
   [l.outer]: !n,
   [l.inset]: n,
   [l.padded]: t,
-  [l.active]: s
+  [l.active]: a
 }),
 ...u,
 children: c

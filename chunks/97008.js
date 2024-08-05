@@ -2,7 +2,7 @@ n(411104);
 var r = n(141795),
   i = n(476326),
   a = n(956664),
-  o = n(693824);
+  s = n(693824);
 t.Z = class e {
   toDataUrl(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'png',
@@ -12,24 +12,24 @@ return e.toDataURL(t, n);
   async exportCanvas(e, t) {
 let {
   format: n,
-  fileType: s = 'png',
+  fileType: o = 'png',
   quality: l = 1,
   fileName: u
 } = t;
-if (n === o.kH.Base64)
-  return this.toDataUrl(e, s, l);
-if (n === o.kH.Blob) {
-  let t = this.toDataUrl(e, s, l);
+if (n === s.kH.Base64)
+  return this.toDataUrl(e, o, l);
+if (n === s.kH.Blob) {
+  let t = this.toDataUrl(e, o, l);
   return (0, a.kD)(t);
 }
-if (n === o.kH.File) {
-  let t = this.toDataUrl(e, s, l);
+if (n === s.kH.File) {
+  let t = this.toDataUrl(e, o, l);
   return await (0, a.Bo)(t, u, 'image/png');
 }
-if (n === o.kH.CloudUpload) {
+if (n === s.kH.CloudUpload) {
   let {
     channelId: n
-  } = t, o = this.toDataUrl(e, s, l), c = await (0, a.Bo)(o, u, 'image/png');
+  } = t, s = this.toDataUrl(e, o, l), c = await (0, a.Bo)(s, u, 'image/png');
   return new r.n({
     file: c,
     platform: i.ow.WEB,

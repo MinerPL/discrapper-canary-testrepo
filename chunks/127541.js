@@ -1,24 +1,24 @@
 n.d(t, {
   Z: function() {
-return s;
+return a;
   }
 }), n(47120);
 var i = n(470079);
 
-function s(e) {
-  let [t, n] = i.useState(0), s = i.useCallback(() => {
+function a(e) {
+  let [t, n] = i.useState(0), a = i.useCallback(() => {
 let t = window.innerWidth;
 for (let i of e) {
-  let [e, s] = i;
+  let [e, a] = i;
   if (t >= e) {
-    n(s);
+    n(a);
     return;
   }
 }
   }, [e]);
   return i.useEffect(() => {
-s();
-  }, [s]), i.useEffect(() => (window.addEventListener('resize', s), () => {
-window.removeEventListener('resize', s);
+a();
+  }, [a]), i.useEffect(() => (window.addEventListener('resize', a), () => {
+window.removeEventListener('resize', a);
   })), t;
 }

@@ -7,9 +7,9 @@ return r;
   }
 });
 var i = n(470079),
-  s = n(818083),
-  a = n(695346);
-let r = (0, s.B)({
+  a = n(818083),
+  s = n(695346);
+let r = (0, a.B)({
   kind: 'user',
   id: '2022-01_discovery_iar',
   label: 'Ability to report servers in Server Discovery',
@@ -32,7 +32,7 @@ canSeeInAppReportingButtons: e
 location: '7a11e2_1'
   }, {
 autoTrackExposure: !1
-  }), t = a.Sb.useSetting();
+  }), t = s.Sb.useSetting();
   return i.useEffect(() => {
 r.trackExposure({
   location: '7a11e2_2'

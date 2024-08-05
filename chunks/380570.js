@@ -1,7 +1,7 @@
 n(47120);
 var i = n(748780),
-  s = n(570140),
-  a = n(317770),
+  a = n(570140),
+  s = n(317770),
   r = n(716578),
   l = n(928518);
 
@@ -13,12 +13,12 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class c extends a.Z {
+class c extends s.Z {
   _initialize() {
-l.Z.addChangeListener(this.handlePopoutWindowChange), s.Z.subscribe('WINDOW_FOCUS', this.handleMainWindowFocus);
+l.Z.addChangeListener(this.handlePopoutWindowChange), a.Z.subscribe('WINDOW_FOCUS', this.handleMainWindowFocus);
   }
   _terminate() {
-l.Z.removeChangeListener(this.handlePopoutWindowChange), s.Z.unsubscribe('WINDOW_FOCUS', this.handleMainWindowFocus), this.injectWindowAnimationFrame(window);
+l.Z.removeChangeListener(this.handlePopoutWindowChange), a.Z.unsubscribe('WINDOW_FOCUS', this.handleMainWindowFocus), this.injectWindowAnimationFrame(window);
   }
   injectWindowAnimationFrame(e) {
 let t = t => e.requestAnimationFrame(t),

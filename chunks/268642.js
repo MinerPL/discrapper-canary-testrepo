@@ -9,8 +9,8 @@ var r = n(120356),
   i = n.n(r),
   a = n(729594),
   o = n(785992),
-  d = n(616922),
-  s = n(756693);
+  s = n(616922),
+  d = n(108558);
 
 function u(e) {
   let {
@@ -48,8 +48,8 @@ return null;
   'user' === h && 'playlist' === c && null != p && (u = '/playlist/'.concat(p));
   let b = 352;
   return 'track' === h ? b = 80 : ('episode' === h || 'show' === h) && (b = 232), (0, l.jsx)('iframe', {
-className: i()(s.embedSpotify, t),
-src: d.C7.EMBED(u),
+className: i()(d.embedSpotify, t),
+src: s.C7.EMBED(u),
 style: {
   width: 400,
   height: b

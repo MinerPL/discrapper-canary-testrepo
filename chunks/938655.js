@@ -6,10 +6,10 @@ return c;
 return a;
   }
 });
-var i, a, l = n(735250);
+var i, a, s = n(735250);
 n(470079);
-var s = n(120356),
-  r = n.n(s),
+var l = n(120356),
+  r = n.n(l),
   o = n(386773);
 (i = a || (a = {}))[i.POPOUT = 0] = 'POPOUT', i[i.SECONDARY = 1] = 'SECONDARY', i[i.BLACK = 2] = 'BLACK';
 let c = e => {
@@ -18,20 +18,20 @@ left: t,
 top: n = 0,
 right: i = 0,
 bottom: a,
-size: s = 8,
+size: l = 8,
 alert: c = !1,
-maskColor: d = 1
+maskColor: u = 1
   } = e;
-  return (0, l.jsx)('span', {
+  return (0, s.jsx)('span', {
 className: r()(o.dot, {
   [o.alert]: c,
-  [o.maskPopout]: 0 === d,
-  [o.maskSecondary]: 1 === d,
-  [o.maskBlack]: 2 === d
+  [o.maskPopout]: 0 === u,
+  [o.maskSecondary]: 1 === u,
+  [o.maskBlack]: 2 === u
 }),
 style: {
-  height: s,
-  width: s,
+  height: l,
+  width: l,
   left: t,
   top: n,
   right: i,

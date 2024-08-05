@@ -5,8 +5,8 @@ return d;
 });
 var i = n(735250);
 n(470079);
-var s = n(434404),
-  a = n(970731),
+var a = n(434404),
+  s = n(970731),
   r = n(981631),
   l = n(689938),
   o = n(26209),
@@ -17,7 +17,7 @@ function d(e) {
 guild: t,
 markAsDismissed: n
   } = e;
-  return (0, i.jsx)(a.ZP, {
+  return (0, i.jsx)(s.ZP, {
 header: l.Z.Messages.DISCOVERY_LANDING_PAGE_UPSELL_TITLE,
 content: l.Z.Messages.DISCOVERY_LANDING_PAGE_UPSELL_DESCRIPTION,
 asset: (0, i.jsx)('div', {
@@ -30,7 +30,7 @@ asset: (0, i.jsx)('div', {
 buttonCTA: l.Z.Messages.DISCOVERY_LANDING_PAGE_UPSELL_BUTTON_ACCEPT,
 onClick: e => {
   var n;
-  n = t, s.Z.open(n.id, r.pNK.DISCOVERY_LANDING_PAGE);
+  n = t, a.Z.open(n.id, r.pNK.DISCOVERY_LANDING_PAGE);
 },
 secondaryButtonCTA: l.Z.Messages.DISCOVERY_LANDING_PAGE_UPSELL_BUTTON_DISMISS,
 onSecondaryClick: () => {},

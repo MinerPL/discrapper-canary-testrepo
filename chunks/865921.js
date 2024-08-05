@@ -1,65 +1,65 @@
 t.d(n, {
   v: function() {
-return p;
+return f;
   }
 }), t(47120);
-var i = t(735250),
-  r = t(470079),
-  o = t(512722),
-  a = t.n(o),
-  s = t(89057),
-  l = t(987209),
-  c = t(598),
-  d = t(409813),
-  u = t(456251),
-  _ = t(981631);
+var a = t(735250),
+  s = t(470079),
+  i = t(512722),
+  l = t.n(i),
+  r = t(89057),
+  o = t(987209),
+  d = t(598),
+  u = t(409813),
+  c = t(456251),
+  E = t(981631);
 
-function p(e) {
+function f(e) {
   let {
 handleStepChange: n,
 handleClose: t
   } = e, {
-blockedPayments: o,
-hasFetchedSkus: p,
-paymentSources: f,
-hasFetchedPaymentSources: I,
-application: m,
+blockedPayments: i,
+hasFetchedSkus: f,
+paymentSources: h,
+hasFetchedPaymentSources: m,
+application: v,
 skusById: C,
-selectedSkuId: S
-  } = (0, c.usePaymentContext)(), {
-isGift: T
-  } = (0, l.wD)(), [b, h] = r.useState(!0);
-  return (r.useEffect(() => {
-let e = null != m;
-if (!!p && !!I && !!e)
-  h(!1);
+selectedSkuId: p
+  } = (0, d.usePaymentContext)(), {
+isGift: x
+  } = (0, o.wD)(), [I, T] = s.useState(!0);
+  return (s.useEffect(() => {
+let e = null != v;
+if (!!f && !!m && !!e)
+  T(!1);
   }, [
-p,
-I,
-m
-  ]), r.useEffect(() => {
-if (b || o)
-  return;
-a()(null != S, 'Expected selectedSkuId');
-let e = C[S];
-if (T && (null == e ? void 0 : e.productLine) === _.POd.COLLECTIBLES) {
-  n(d.h8.GIFT_CUSTOMIZATION);
-  return;
-}
-if (0 === Object.keys(f).length) {
-  n(d.h8.ADD_PAYMENT_STEPS);
-  return;
-}
-n(d.h8.REVIEW);
-  }, [
-b,
-o,
-n,
 f,
-T,
+m,
+v
+  ]), s.useEffect(() => {
+if (I || i)
+  return;
+l()(null != p, 'Expected selectedSkuId');
+let e = C[p];
+if (x && (null == e ? void 0 : e.productLine) === E.POd.COLLECTIBLES) {
+  n(u.h8.GIFT_CUSTOMIZATION);
+  return;
+}
+if (0 === Object.keys(h).length) {
+  n(u.h8.ADD_PAYMENT_STEPS);
+  return;
+}
+n(u.h8.REVIEW);
+  }, [
+I,
+i,
+n,
+h,
+x,
 C,
-S
-  ]), b) ? (0, i.jsx)(u.Z, {}) : o ? (0, i.jsx)(s.Vq, {
+p
+  ]), I) ? (0, a.jsx)(c.Z, {}) : i ? (0, a.jsx)(r.Vq, {
 onClose: t
   }) : null;
 }

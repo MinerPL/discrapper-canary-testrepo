@@ -4,8 +4,8 @@ return N;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(481060),
   l = n(541716),
   o = n(665149),
@@ -21,22 +21,22 @@ var i = n(735250),
   p = n(933557),
   T = n(287746),
   S = n(689938),
-  C = n(240196),
-  f = n(712759);
+  f = n(240196),
+  C = n(712759);
 
 function N(e) {
   let {
 channel: t,
 baseChannelId: n
-  } = e, N = (0, p.ZP)(t), A = (0, _.K)(), Z = (0, _.V)(), L = (0, a.e7)([d.Z], () => d.Z.isMessageRequest(t.id)), v = (0, a.e7)([u.Z], () => u.Z.isSpam(t.id)), O = (0, E.V)(t.id, t.getRecipientId()), R = s.useCallback(() => {
-m.Z.closeChannelSidebar(g.uZ), L && A && (0, I.Kh)(t.id), v && Z && (0, I.Kh)(t.id);
+  } = e, N = (0, p.ZP)(t), A = (0, _.K)(), v = (0, _.V)(), Z = (0, s.e7)([d.Z], () => d.Z.isMessageRequest(t.id)), L = (0, s.e7)([u.Z], () => u.Z.isSpam(t.id)), O = (0, E.V)(t.id, t.getRecipientId()), R = a.useCallback(() => {
+m.Z.closeChannelSidebar(g.uZ), Z && A && (0, I.Kh)(t.id), L && v && (0, I.Kh)(t.id);
   }, [
 t.id,
+L,
 v,
 Z,
-L,
 A
-  ]), x = s.useCallback(() => {
+  ]), x = a.useCallback(() => {
 (0, r.showToast)((0, r.createToast)(S.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
   }, []), {
 markAsNotSpam: b
@@ -62,16 +62,16 @@ children: [
       inSidebar: !0
     })
   }),
-  v && (0, i.jsxs)('div', {
-    className: f.hamBanner,
+  L && (0, i.jsxs)('div', {
+    className: C.hamBanner,
     children: [
       (0, i.jsx)(r.Text, {
-        className: f.__invalid_hamBannerText,
+        className: C.__invalid_hamBannerText,
         variant: 'text-sm/normal',
         children: S.Z.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_HEADER
       }),
       (0, i.jsx)(r.Button, {
-        className: f.hamBannerButton,
+        className: C.hamBannerButton,
         size: r.ButtonSizes.SMALL,
         onClick: () => b(t, O),
         children: S.Z.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON
@@ -79,7 +79,7 @@ children: [
     ]
   }),
   (0, i.jsx)('div', {
-    className: C.chat,
+    className: f.chat,
     children: (0, i.jsx)(T.Z, {
       channel: t,
       guild: null,

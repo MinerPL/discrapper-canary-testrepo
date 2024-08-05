@@ -5,13 +5,13 @@ return f;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(286379),
-  s = n(442837),
+  s = n(286379),
+  l = n(442837),
   r = n(481060),
   o = n(797614),
   c = n(699516),
-  d = n(378298),
-  u = n(359119),
+  u = n(378298),
+  d = n(359119),
   h = n(473092),
   p = n(177342),
   m = n(134612),
@@ -22,16 +22,16 @@ function f(e) {
 channelId: t,
 warningId: f,
 senderId: E
-  } = e, C = a.useCallback(() => {
-(0, d.T)(t, [f]);
+  } = e, g = a.useCallback(() => {
+(0, u.T)(t, [f]);
   }, [
 t,
 f
-  ]), g = (0, s.e7)([c.Z], () => c.Z.isBlocked(E)), I = a.useMemo(() => ({
+  ]), C = (0, l.e7)([c.Z], () => c.Z.isBlocked(E)), I = a.useMemo(() => ({
 channelId: t,
 warningId: f,
 senderId: E,
-warningType: u.pj.INAPPROPRIATE_CONVERSATION_TIER_2
+warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2
   }), [
 t,
 f,
@@ -42,7 +42,7 @@ E
   ...I,
   viewName: h.pb.SAFETY_WARNING_BANNER
 }), o.Z.increment({
-  name: l.V.SAFETY_WARNING_VIEW
+  name: s.V.SAFETY_WARNING_VIEW
 });
   }, [I]);
   let x = a.useCallback(e => {
@@ -56,21 +56,21 @@ T = a.useCallback(() => {
     let {
       default: e
     } = await Promise.all([
-      n.e('49508'),
+      n.e('37229'),
       n.e('89650')
     ]).then(n.bind(n, 611446));
     return n => {
       let {
         transitionState: a,
-        onClose: l
+        onClose: s
       } = n;
       return (0, i.jsx)(e, {
         otherUserId: E,
         channelId: t,
         warningId: f,
-        warningType: u.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
+        warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
         transitionState: a,
-        onClose: l
+        onClose: s
       });
     };
   }, {
@@ -82,16 +82,16 @@ T = a.useCallback(() => {
   f,
   x
 ]),
-v = a.useCallback(() => {
-  C(), x(h.NM.USER_BANNER_BLOCK_CONFIRM);
+N = a.useCallback(() => {
+  g(), x(h.NM.USER_BANNER_BLOCK_CONFIRM);
 }, [
-  C,
+  g,
   x
 ]),
-N = a.useCallback(() => {
-  C(), x(h.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
+v = a.useCallback(() => {
+  g(), x(h.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
 }, [
-  C,
+  g,
   x
 ]),
 S = a.useCallback(() => {
@@ -102,24 +102,24 @@ S = a.useCallback(() => {
     return n => {
       let {
         transitionState: a,
-        onClose: l
+        onClose: s
       } = n;
       return (0, i.jsx)(e, {
         transitionState: a,
-        onBlock: v,
-        onBlockAndReport: N,
+        onBlock: N,
+        onBlockAndReport: v,
         onCancel: () => {
-          null == l || l(), x(h.NM.USER_BANNER_BLOCK_CANCEL);
+          null == s || s(), x(h.NM.USER_BANNER_BLOCK_CANCEL);
         },
-        onClose: l,
+        onClose: s,
         userId: E,
         channelId: t
       });
     };
   });
 }, [
-  v,
   N,
+  v,
   E,
   t,
   x
@@ -128,16 +128,16 @@ S = a.useCallback(() => {
 channelId: t,
 warningId: f,
 senderId: E,
-warningType: u.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
+warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
 header: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_HEADER,
 description: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_DESCRIPTION,
-onDismiss: C,
+onDismiss: g,
 buttons: [{
     text: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_OPEN_SAFETY_TOOLS_BUTTON,
     color: r.Button.Colors.BRAND,
     onclick: T
   },
-  ...g ? [] : [{
+  ...C ? [] : [{
     text: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_BLOCK_BUTTON,
     color: r.Button.Colors.PRIMARY,
     onclick: S

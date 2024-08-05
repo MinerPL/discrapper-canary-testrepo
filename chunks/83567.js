@@ -1,7 +1,7 @@
 n(47120);
 var i = n(570140),
-  s = n(457330),
-  a = n(726542),
+  a = n(457330),
+  s = n(726542),
   r = n(231757),
   l = n(553795),
   o = n(585483),
@@ -35,7 +35,7 @@ handler: e => {
   } = e;
   (0, d.bu)(t.transport);
   let _ = (0, d._f)(t.application),
-    E = a.Z.get(n);
+    E = s.Z.get(n);
   if (null == E)
     throw new c.Z({
       errorCode: I.lT.INVALID_PROVIDER
@@ -50,8 +50,8 @@ handler: e => {
       errorCode: I.lT.UNAUTHORIZED_FOR_APPLICATION
     }, 'Command not available for this application');
   return new Promise(async (e, t) => {
-    let a = l.Z.getAccount(null, n);
-    if (null == a) {
+    let s = l.Z.getAccount(null, n);
+    if (null == s) {
       function d(t) {
         var n;
         if (null == E)
@@ -78,7 +78,7 @@ handler: e => {
       });
     } else
       try {
-        let t = await s.Z.refreshAccessToken(E.type, a.id);
+        let t = await a.Z.refreshAccessToken(E.type, s.id);
         if (null == t)
           throw new c.Z({
             errorCode: I.lT.OAUTH2_ERROR
@@ -108,7 +108,7 @@ handler: async e => {
   } = e;
   (0, d.bu)(t.transport);
   let i = (0, d._f)(t.application),
-    r = a.Z.get(n);
+    r = s.Z.get(n);
   if (null == r)
     throw new c.Z({
       errorCode: I.lT.INVALID_PROVIDER
@@ -127,7 +127,7 @@ handler: async e => {
     throw new c.Z({
       errorCode: I.lT.NO_CONNECTION_FOUND
     }, 'No connection found');
-  let u = await s.Z.refreshAccessToken(r.type, o.id);
+  let u = await a.Z.refreshAccessToken(r.type, o.id);
   if (null == u)
     throw new c.Z({
       errorCode: I.lT.OAUTH2_ERROR

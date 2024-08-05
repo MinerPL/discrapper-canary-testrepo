@@ -2,14 +2,14 @@ var r = n(735250);
 n(470079);
 var i = n(952265),
   a = n(468026),
-  o = n(689938);
+  s = n(689938);
 t.Z = {
   show(e) {
 let {
   title: t,
   body: n,
-  confirmColor: o,
-  confirmText: s,
+  confirmColor: s,
+  confirmText: o,
   cancelText: l,
   onConfirm: u,
   onCancel: c,
@@ -23,8 +23,8 @@ let {
   ...e,
   title: t,
   body: n,
-  confirmColor: o,
-  confirmText: s,
+  confirmColor: s,
+  confirmText: o,
   cancelText: l,
   onConfirm: u,
   onCancel: c,
@@ -43,7 +43,7 @@ return new Promise(t => {
     onConfirm() {
       t(!0);
     },
-    cancelText: o.Z.Messages.CANCEL,
+    cancelText: s.Z.Messages.CANCEL,
     onCancel() {
       t(!1);
     },

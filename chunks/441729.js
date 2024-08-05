@@ -1,5 +1,5 @@
-var i, a = n(442837),
-  s = n(570140);
+var i, s = n(442837),
+  a = n(570140);
 
 function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ speechRate: 1,
 currentMessage: null
   },
   o = l;
-class c extends(i = a.ZP.DeviceSettingsStore) {
+class c extends(i = s.ZP.DeviceSettingsStore) {
   initialize(e) {
 o = {
   ...l,
@@ -37,7 +37,7 @@ return o.speechRate;
 return o;
   }
 }
-r(c, 'displayName', 'TTSStore'), r(c, 'persistKey', 'TTSStore'), r(c, 'migrations', []), t.Z = new c(s.Z, __OVERLAY__ ? {} : {
+r(c, 'displayName', 'TTSStore'), r(c, 'persistKey', 'TTSStore'), r(c, 'migrations', []), t.Z = new c(a.Z, __OVERLAY__ ? {} : {
   SPEAKING_MESSAGE: function(e) {
 let {
   messageId: t,

@@ -3,34 +3,34 @@ n.d(t, {
 return M;
   },
   Z: function() {
-return O;
+return x;
   }
 }), n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(512722),
-  r = n.n(s),
+  s = n(470079),
+  a = n(512722),
+  r = n.n(a),
   l = n(442837),
   o = n(481060),
   c = n(131388),
-  d = n(357352),
-  u = n(353254),
-  _ = n(695346),
-  E = n(271383),
-  I = n(594174),
-  m = n(346656),
+  u = n(357352),
+  d = n(565138),
+  _ = n(353254),
+  E = n(695346),
+  I = n(271383),
+  m = n(594174),
   T = n(671533),
   h = n(810090),
   N = n(51144),
-  f = n(506071),
-  p = n(696014),
-  C = n(847033),
+  C = n(506071),
+  f = n(696014),
+  p = n(847033),
   g = n(544978),
   S = n(893182),
   A = n(689938),
   R = n(55686);
 
-function x(e) {
+function O(e) {
   let {
 onClick: t
   } = e;
@@ -55,19 +55,19 @@ children: [
   });
 }
 
-function O(e) {
+function x(e) {
   let {
 coverImageAsset: t,
 isPreview: n = !1
-  } = e, a = _.QK.useSetting(), s = (0, f.n)() && a, [r, l] = (0, u.Z)(t, s), o = s ? (0, i.jsx)(h.Z, {
+  } = e, s = E.QK.useSetting(), a = (0, C.n)() && s, [r, l] = (0, _.Z)(t, a), o = a ? (0, i.jsx)(h.Z, {
 autoPlay: !0,
 loop: !0,
 className: R.coverImage,
 width: 655,
-poster: (0, d.b)('server_products/storefront/default-header.png'),
-src: (0, d.b)('server_products/storefront/default-header.mov')
+poster: (0, u.b)('server_products/storefront/default-header.png'),
+src: (0, u.b)('server_products/storefront/default-header.mov')
   }) : (0, i.jsx)('img', {
-src: (0, d.b)('server_products/storefront/default-header.png'),
+src: (0, u.b)('server_products/storefront/default-header.png'),
 alt: '',
 className: R.coverImage
   });
@@ -83,40 +83,40 @@ children: null == l || n ? o : (0, i.jsx)('img', {
 }
 
 function M(e) {
-  var t, n, s;
+  var t, n, a;
   let {
-guild: u,
-subscriptionsSettings: _
-  } = e, T = u.id;
+guild: _,
+subscriptionsSettings: E
+  } = e, T = _.id;
   let {
 nickname: h,
-nickcolor: f
-  } = (s = T, (0, l.cj)([
-E.ZP,
-I.default
+nickcolor: C
+  } = (a = T, (0, l.cj)([
+I.ZP,
+m.default
   ], () => {
 var e, t;
-let n = I.default.getCurrentUser();
+let n = m.default.getCurrentUser();
 r()(null != n, 'user cannot be null');
-let i = E.ZP.getMember(s, n.id);
+let i = I.ZP.getMember(a, n.id);
 return {
   nickname: null !== (e = null == i ? void 0 : i.nick) && void 0 !== e ? e : N.ZP.getName(n),
   nickcolor: null !== (t = null == i ? void 0 : i.colorString) && void 0 !== t ? t : void 0
 };
-  }, [s])), {
+  }, [a])), {
 isTruncated: M,
 ExpandableTextContainer: v
-  } = (0, p.s)(), L = (null !== (n = null == _ ? void 0 : null === (t = _.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [Z, P] = a.useState(1), b = (0, c.Z)('(max-width: 1439px)'), {
-selectedTab: D,
+  } = (0, f.s)(), L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [Z, P] = s.useState(1), D = (0, c.Z)('(max-width: 1439px)'), {
+selectedTab: b,
 isPhantomPreview: j
-  } = (0, C.m)(), U = D === g.y.GUILD_PRODUCTS_PREVIEW ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : A.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, y = L ? (0, i.jsxs)(i.Fragment, {
+  } = (0, p.m)(), U = b === g.y.GUILD_PRODUCTS_PREVIEW ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : A.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, y = L ? (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(v, {
-    lineClamp: b || 2 === Z ? 2 : 3,
+    lineClamp: D || 2 === Z ? 2 : 3,
     children: (0, i.jsx)(o.Text, {
       variant: 'text-sm/normal',
       color: 'text-normal',
-      children: null == _ ? void 0 : _.description
+      children: null == E ? void 0 : E.description
     })
   }),
   M && (0, i.jsxs)(i.Fragment, {
@@ -124,7 +124,7 @@ children: [
       (0, i.jsx)(o.Spacer, {
         size: 4
       }),
-      (0, i.jsx)(x, {
+      (0, i.jsx)(O, {
         onClick: () => (0, S.Z)({
           guildId: T
         })
@@ -144,10 +144,10 @@ children: [
     className: R.infoContainer,
     children: [
       (0, i.jsx)('div', {
-        children: (0, i.jsx)(m.Z, {
-          guild: u,
-          size: m.Z.Sizes.LARGER,
-          iconSrc: null == u.icon || j ? (0, d.b)('server_products/storefront/default-guild-icon.jpg') : void 0
+        children: (0, i.jsx)(d.Z, {
+          guild: _,
+          size: d.Z.Sizes.LARGER,
+          iconSrc: null == _.icon || j ? (0, u.b)('server_products/storefront/default-guild-icon.jpg') : void 0
         })
       }),
       (0, i.jsx)(o.Spacer, {
@@ -165,7 +165,7 @@ children: [
               color: 'header-primary',
               lineClamp: 2,
               children: j ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TITLE : A.Z.Messages.GUILD_STORE_HERO_TITLE.format({
-                guildName: u.name
+                guildName: _.name
               })
             })
           }),
@@ -182,7 +182,7 @@ children: [
                   usernameHook: function(e, t) {
                     return (0, i.jsx)('span', {
                       style: {
-                        color: f
+                        color: C
                       },
                       children: e
                     }, t);
@@ -199,8 +199,8 @@ children: [
       })
     ]
   }),
-  (0, i.jsx)(O, {
-    coverImageAsset: null == _ ? void 0 : _.cover_image_asset,
+  (0, i.jsx)(x, {
+    coverImageAsset: null == E ? void 0 : E.cover_image_asset,
     isPreview: j
   })
 ]

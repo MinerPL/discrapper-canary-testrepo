@@ -4,7 +4,7 @@ n.d(t, {
 return I;
   }
 }), n(47120), n(733860);
-var i, a, o, s, l = n(392711),
+var i, a, s, o, l = n(392711),
   u = n(442837),
   c = n(780384),
   d = n(570140),
@@ -40,12 +40,12 @@ return r;
 return p[e];
   }
 }
-s = 'VoiceChannelEffectsStore', (o = 'displayName') in(a = A) ? Object.defineProperty(a, o, {
-  value: s,
+o = 'VoiceChannelEffectsStore', (s = 'displayName') in(a = A) ? Object.defineProperty(a, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = s, t.Z = new A(d.Z, {
+}) : a[s] = o, t.Z = new A(d.Z, {
   VOICE_CHANNEL_EFFECT_CLEAR: e => {
 let {
   userId: t

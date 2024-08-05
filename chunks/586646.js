@@ -9,7 +9,7 @@ var i = n(735250),
   a = n(481060),
   s = n(19780),
   o = n(571826),
-  c = n(436055),
+  c = n(301107),
   u = n(785792),
   d = n(190054),
   h = n(760373),
@@ -22,8 +22,8 @@ channelId: t
   } = e, n = (0, r.e7)([s.Z], () => {
 var e;
 return null === (e = s.Z.getSecureFramesState()) || void 0 === e ? void 0 : e.epochAuthenticator;
-  }), f = (0, c.E)({
-codeBase64: n,
+  }), f = (0, c.W)({
+fingerprintBase64: n,
 chunkSize: h.y6,
 desiredLength: h.YP
   }), m = l.useCallback(() => {

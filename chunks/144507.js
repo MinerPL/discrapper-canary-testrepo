@@ -16,8 +16,8 @@ return i;
   }
 });
 var r, i, a = n(442837),
-  o = n(223892),
-  s = n(674180),
+  s = n(223892),
+  o = n(674180),
   l = n(496675),
   u = n(594174),
   c = n(923726),
@@ -34,10 +34,10 @@ return 0;
     canManageGuildRoleSubscriptions: r,
     isGuildEligibleForRoleSubscriptions: i,
     isExpeditedMonetizationOnboardingGuild: a,
-    isUserInCreatorMonetizationEligibleCountry: o,
-    shouldRestrictUpdatingRoleSubscriptionSettings: s
+    isUserInCreatorMonetizationEligibleCountry: s,
+    shouldRestrictUpdatingRoleSubscriptionSettings: o
   } = e;
-  return !!t.hasFeature(d.oNc.COMMUNITY) && !!r && (!s || !!n) && (!!(t.hasFeature(d.oNc.CREATOR_MONETIZABLE) || t.hasFeature(d.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) || (!!i || !!a) && n && o);
+  return !!t.hasFeature(d.oNc.COMMUNITY) && !!r && (!o || !!n) && (!!(t.hasFeature(d.oNc.CREATOR_MONETIZABLE) || t.hasFeature(d.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) || (!!i || !!a) && n && s);
 }(e))
 return 3;
   let {
@@ -46,9 +46,9 @@ isOwner: n,
 isUserInCreatorMonetizationEligibleCountry: r,
 isMonetizationWaitlistEnabledForGuild: i,
 isGuildEligibleForRoleSubscriptions: a,
-isExpeditedMonetizationOnboardingGuild: o
+isExpeditedMonetizationOnboardingGuild: s
   } = e;
-  return n && !r && i ? 1 : n && i && (a || o) && !t.hasFeature(d.oNc.COMMUNITY) ? 2 : 0;
+  return n && !r && i ? 1 : n && i && (a || s) && !t.hasFeature(d.oNc.COMMUNITY) ? 2 : 0;
 }
 
 function E(e) {
@@ -57,17 +57,17 @@ function E(e) {
 
 function f(e) {
   let t = (0, c.Bt)(null == e ? void 0 : e.id),
-n = (0, o.Ob)(e),
-r = (0, o.gS)(null == e ? void 0 : e.id),
+n = (0, s.Ob)(e),
+r = (0, s.gS)(null == e ? void 0 : e.id),
 i = h(e),
 l = (0, a.e7)([u.default], () => {
   let t = u.default.getCurrentUser();
   return null != t && (null == e ? void 0 : e.isOwner(t)) === !0;
 }),
-d = (0, o.Sd)(),
+d = (0, s.Sd)(),
 {
   shouldRestrictUpdatingCreatorMonetizationSettings: E
-} = (0, s.gX)(null == e ? void 0 : e.id);
+} = (0, o.gX)(null == e ? void 0 : e.id);
   return null == e ? 0 : _({
 guild: e,
 isOwner: l,

@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  o = n(442837),
   l = n(481060),
   u = n(570140),
   c = n(68405),
@@ -101,8 +101,8 @@ let {
   query: n,
   favorites: i,
   searchOffset: a,
-  searchLimit: o,
-  searchTotalResults: s,
+  searchLimit: s,
+  searchTotalResults: o,
   suggestions: l,
   hideFavorites: u
 } = this.props, {
@@ -118,8 +118,8 @@ return null == c ? (0, r.jsx)(h.Z, {
   resultQuery: t,
   query: n,
   searchOffset: a,
-  searchLimit: o,
-  searchTotalResults: s,
+  searchLimit: s,
+  searchTotalResults: o,
   suggestions: l,
   onSelectSuggestion: this.handleSelectSuggestion
 });
@@ -133,7 +133,7 @@ return (0, r.jsxs)('div', {
   id: I.vO,
   role: 'tabpanel',
   'aria-labelledby': I._3,
-  className: o()(g.container, e),
+  className: s()(g.container, e),
   onClick: A,
   ref: t,
   children: [
@@ -195,8 +195,8 @@ t.Z = i.forwardRef((e, t) => {
 query: n,
 resultQuery: i,
 resultItems: a,
-suggestions: o
-  } = (0, s.cj)([_.Z], () => ({
+suggestions: s
+  } = (0, o.cj)([_.Z], () => ({
 query: _.Z.getQuery(),
 resultQuery: _.Z.getResultQuery(),
 resultItems: _.Z.getResultItems(),
@@ -208,7 +208,7 @@ forwardedRef: t,
 query: null != l && '' !== l ? l : n,
 resultQuery: i,
 resultItems: a,
-suggestions: o,
+suggestions: s,
 favorites: u,
 searchOffset: 0,
 searchTotalResults: _.Z.getResultItems().length,

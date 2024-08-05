@@ -16,8 +16,8 @@ var s = n(735250),
   I = n(404270),
   E = n(386937),
   T = n(316350),
-  m = n(899667),
-  N = n(474333),
+  m = n(777036),
+  N = n(899667),
   S = n(626135),
   h = n(267642),
   g = n(63063),
@@ -56,8 +56,8 @@ guildId: n
   if (null == a || null == i)
 return null;
   let r = (0, h._k)(t, n);
-  return (0, s.jsxs)(N.Z, {
-messageType: N.Q.WARNING,
+  return (0, s.jsxs)(m.Z, {
+messageType: m.Q.WARNING,
 children: [
   (0, s.jsx)('div', {
     className: R.guildBoostingGracePeriodTitle,
@@ -98,7 +98,7 @@ l.Z.wait(() => {
 });
   }, []);
   let e = (0, i.e7)([C.Z], () => C.Z.getGuild()),
-t = (0, i.e7)([m.Z], () => null != e ? m.Z.getAppliedGuildBoostsForGuild(e.id) : null),
+t = (0, i.e7)([N.Z], () => null != e ? N.Z.getAppliedGuildBoostsForGuild(e.id) : null),
 n = (0, u.V)();
   return (0, s.jsxs)(s.Fragment, {
 children: [

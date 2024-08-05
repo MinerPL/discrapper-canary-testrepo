@@ -21,8 +21,8 @@ return function(t, n, r) {
 };
   }(),
   a = n(470079),
-  o = u(a),
-  s = u(n(889678)),
+  s = u(a),
+  o = u(n(889678)),
   l = function(e) {
 if (e && e.__esModule)
   return e;
@@ -60,7 +60,7 @@ function n(e) {
       var r = l.toState(e, e.h || t.state.oldHue);
       t.props.onSwatchHover && t.props.onSwatchHover(r, n);
     }
-  }, t.state = r({}, l.toState(e.color, 0)), t.debounce = (0, s.default)(function(e, t, n) {
+  }, t.state = r({}, l.toState(e.color, 0)), t.debounce = (0, o.default)(function(e, t, n) {
     e(t, n);
   }, 100), t;
 }
@@ -79,7 +79,7 @@ return ! function(e, t) {
   key: 'render',
   value: function() {
     var t = {};
-    return this.props.onSwatchHover && (t.onSwatchHover = this.handleSwatchHover), o.default.createElement(e, r({}, this.props, this.state, {
+    return this.props.onSwatchHover && (t.onSwatchHover = this.handleSwatchHover), s.default.createElement(e, r({}, this.props, this.state, {
       onChange: this.handleChange
     }, t));
   }

@@ -3,7 +3,7 @@ n.d(t, {
 return l;
   },
   O: function() {
-return o;
+return s;
   }
 });
 var r = n(735250);
@@ -11,7 +11,7 @@ n(470079);
 var i = n(772848),
   a = n(944516);
 
-function o() {
+function s() {
   return (0, r.jsx)('svg', {
 className: a.headerWave,
 version: '1.1',
@@ -30,7 +30,7 @@ children: (0, r.jsx)('path', {
 })
   });
 }
-let s = (0, i.Z)();
+let o = (0, i.Z)();
 
 function l() {
   return (0, r.jsxs)('svg', {
@@ -45,7 +45,7 @@ viewBox: '0 0 1512 1619',
 xmlSpace: 'preserve',
 children: [
   (0, r.jsxs)('linearGradient', {
-    id: s,
+    id: o,
     gradientUnits: 'userSpaceOnUse',
     x1: '-13.3959',
     y1: '82.1225',
@@ -68,7 +68,7 @@ children: [
   }),
   (0, r.jsx)('path', {
     style: {
-      fill: 'url(#'.concat(s, ')')
+      fill: 'url(#'.concat(o, ')')
     },
     d: 'M0,1619c507-247.2,1154.7-241,1512-194.7V548.5c-150.9,56.4-400.3,51.2-691-222.6C506.6,29.9,186.8-16.5,0,4.3  V1619z'
   })

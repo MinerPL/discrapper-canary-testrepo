@@ -6,8 +6,8 @@ return f;
 var r = n(735250),
   i = n(470079),
   a = n(772848),
-  o = n(331595),
-  s = n(249849);
+  s = n(331595),
+  o = n(249849);
 let l = [
 '#be0351',
 '#ff2c52',
@@ -64,7 +64,7 @@ let {
 } = e, m = i.useMemo(() => 'badge-force-gradient-'.concat((0, a.Z)()), []), {
   primaryColorsTransformed: I,
   secondaryColorsTransformed: T
-} = (0, s.s)({
+} = (0, o.s)({
   primaryBaseColors: l,
   primaryTintColor: f,
   primaryTintLuminances: c,
@@ -75,7 +75,7 @@ let {
   secondaryLuminanceWeights: E
 });
 return (0, r.jsxs)('svg', {
-  ...(0, o.Z)(p),
+  ...(0, s.Z)(p),
   width: t,
   height: n,
   viewBox: '0 0 16 16',

@@ -42,14 +42,14 @@ var r = n(581364),
   E = n(539573),
   _ = n(727072),
   u = n(85960),
-  s = n(273504),
-  l = n(689938);
+  l = n(273504),
+  s = n(689938);
 let o = (e, t) => ''.concat(e, '-').concat(t, '-new-rule'),
-  I = e => (null == e ? void 0 : e.triggerType) === s.fX.KEYWORD,
-  T = e => (null == e ? void 0 : e.triggerType) === s.fX.ML_SPAM,
-  O = e => (null == e ? void 0 : e.triggerType) === s.fX.DEFAULT_KEYWORD_LIST,
-  A = e => (null == e ? void 0 : e.triggerType) === s.fX.MENTION_SPAM,
-  N = e => (null == e ? void 0 : e.triggerType) === s.fX.USER_PROFILE;
+  I = e => (null == e ? void 0 : e.triggerType) === l.fX.KEYWORD,
+  T = e => (null == e ? void 0 : e.triggerType) === l.fX.ML_SPAM,
+  O = e => (null == e ? void 0 : e.triggerType) === l.fX.DEFAULT_KEYWORD_LIST,
+  A = e => (null == e ? void 0 : e.triggerType) === l.fX.MENTION_SPAM,
+  N = e => (null == e ? void 0 : e.triggerType) === l.fX.USER_PROFILE;
 
 function S(e, t) {
   let n = u.I6[t],
@@ -69,22 +69,22 @@ E = {
   exemptRoles: new Set()
 };
   if (d(E))
-throw Error(l.Z.Messages.GUILD_AUTOMOD_NEW_RULE_ERROR);
-  let s = (0, _.mY)(e, t);
-  return s > 0 && (E.name += ' '.concat(s + 1)), E;
+throw Error(s.Z.Messages.GUILD_AUTOMOD_NEW_RULE_ERROR);
+  let l = (0, _.mY)(e, t);
+  return l > 0 && (E.name += ' '.concat(l + 1)), E;
 }
 
 function c(e, t) {
   if (e.length > t)
-throw Error(l.Z.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_TOO_MANY_KEYWORDS.format({
+throw Error(s.Z.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_TOO_MANY_KEYWORDS.format({
   limit: t
 }));
   e.forEach(e => {
-if (e.length > s.hu || e.length < s.Vk)
-  throw new E.V6(l.Z.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_INVALID_KEYWORD_LENGTH.format({
+if (e.length > l.hu || e.length < l.Vk)
+  throw new E.V6(s.Z.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_INVALID_KEYWORD_LENGTH.format({
     keyword: e,
-    max: s.hu,
-    min: s.Vk
+    max: l.hu,
+    min: l.Vk
   }));
   });
 }
@@ -95,24 +95,24 @@ var t, n;
 let r = null !== (t = e.triggerMetadata.keywordFilter) && void 0 !== t ? t : [],
   a = null !== (n = e.triggerMetadata.regexPatterns) && void 0 !== n ? n : [];
 if (0 === r.length && 0 === a.length)
-  throw Error(l.Z.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_NO_KEYWORDS_OR_REGEX);
-c(r, s.RH), ! function(e) {
-  if (e.length > s.VW)
-    throw Error(l.Z.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_TOO_MANY_REGEX.format({
-      limit: s.VW
+  throw Error(s.Z.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_NO_KEYWORDS_OR_REGEX);
+c(r, l.RH), ! function(e) {
+  if (e.length > l.VW)
+    throw Error(s.Z.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_TOO_MANY_REGEX.format({
+      limit: l.VW
     }));
   e.forEach(e => {
-    if (e.length > s.aj || e.length < s.uE)
-      throw new E.uS(l.Z.Messages.GUILD_AUTOMOD_REGEX_ERROR_INVALID_REGEX_LENGTH.format({
+    if (e.length > l.aj || e.length < l.uE)
+      throw new E.uS(s.Z.Messages.GUILD_AUTOMOD_REGEX_ERROR_INVALID_REGEX_LENGTH.format({
         regex: e,
-        max: s.aj,
-        min: s.uE
+        max: l.aj,
+        min: l.uE
       }));
   });
 }(a);
   }
   if (0 === e.actions.length)
-throw Error(l.Z.Messages.GUILD_AUTOMOD_ERROR_NO_ACTIONS);
+throw Error(s.Z.Messages.GUILD_AUTOMOD_ERROR_NO_ACTIONS);
 }
 
 function d(e) {
@@ -122,43 +122,43 @@ function d(e) {
 
 function R(e) {
   switch (e) {
-case s.q4.MESSAGE_SEND:
-  return l.Z.Messages.GUILD_AUTOMOD_EVENT_TYPE_MESSAGE_SEND;
-case s.q4.GUILD_MEMBER_JOIN_OR_UPDATE:
-  return l.Z.Messages.GUILD_AUTOMOD_EVENT_TYPE_GUILD_MEMBER_JOIN_OR_UPDATE;
+case l.q4.MESSAGE_SEND:
+  return s.Z.Messages.GUILD_AUTOMOD_EVENT_TYPE_MESSAGE_SEND;
+case l.q4.GUILD_MEMBER_JOIN_OR_UPDATE:
+  return s.Z.Messages.GUILD_AUTOMOD_EVENT_TYPE_GUILD_MEMBER_JOIN_OR_UPDATE;
 default:
-  return l.Z.Messages.GUILD_AUTOMOD_UNKNOWN;
+  return s.Z.Messages.GUILD_AUTOMOD_UNKNOWN;
   }
 }
 
 function f(e) {
   switch (e) {
-case s.jj.BLOCK_MESSAGE:
-  return l.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_NAME;
-case s.jj.FLAG_TO_CHANNEL:
-  return l.Z.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_NAME;
-case s.jj.USER_COMMUNICATION_DISABLED:
-  return l.Z.Messages.GUILD_AUTOMOD_ACTIONS_USER_COMMUNICATION_DISABLED;
-case s.jj.QUARANTINE_USER:
-  return l.Z.Messages.GUILD_AUTOMOD_ACTIONS_QUARANTINE_USER;
+case l.jj.BLOCK_MESSAGE:
+  return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_NAME;
+case l.jj.FLAG_TO_CHANNEL:
+  return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_NAME;
+case l.jj.USER_COMMUNICATION_DISABLED:
+  return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_USER_COMMUNICATION_DISABLED;
+case l.jj.QUARANTINE_USER:
+  return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_QUARANTINE_USER;
 default:
-  return l.Z.Messages.GUILD_AUTOMOD_UNKNOWN;
+  return s.Z.Messages.GUILD_AUTOMOD_UNKNOWN;
   }
 }
 
 function L(e) {
   switch (e) {
-case s.fX.KEYWORD:
-  return l.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_NAME;
-case s.fX.ML_SPAM:
-  return l.Z.Messages.GUILD_AUTOMOD_ML_SPAM_FILTER_NAME;
-case s.fX.DEFAULT_KEYWORD_LIST:
-  return l.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_FILTER_NAME;
-case s.fX.MENTION_SPAM:
-  return l.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_NAME;
-case s.fX.USER_PROFILE:
-  return l.Z.Messages.GUILD_AUTOMOD_USER_PROFILE_FILTER_NAME;
+case l.fX.KEYWORD:
+  return s.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_NAME;
+case l.fX.ML_SPAM:
+  return s.Z.Messages.GUILD_AUTOMOD_ML_SPAM_FILTER_NAME;
+case l.fX.DEFAULT_KEYWORD_LIST:
+  return s.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_FILTER_NAME;
+case l.fX.MENTION_SPAM:
+  return s.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_NAME;
+case l.fX.USER_PROFILE:
+  return s.Z.Messages.GUILD_AUTOMOD_USER_PROFILE_FILTER_NAME;
 default:
-  return l.Z.Messages.GUILD_AUTOMOD_UNKNOWN;
+  return s.Z.Messages.GUILD_AUTOMOD_UNKNOWN;
   }
 }

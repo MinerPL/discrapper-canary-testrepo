@@ -1,7 +1,7 @@
 n(653041), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(481060),
   l = n(16084),
   o = n(730749),
@@ -20,7 +20,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class m extends s.PureComponent {
+class m extends a.PureComponent {
   componentDidMount() {
 let {
   sku: e,
@@ -33,10 +33,10 @@ null != t && !n && null != e && (0, l.$N)(e.applicationId, t);
 let {
   sku: e,
   primarySku: t
-} = this.props, n = [], s = null;
+} = this.props, n = [], a = null;
 if (null != e) {
   let i = h.Z5c.APPLICATION_STORE_LISTING_SKU(e.id, e.slug);
-  s = i, null != t && n.push({
+  a = i, null != t && n.push({
     id: h.Z5c.APPLICATION_STORE_LISTING_SKU(t.id, t.slug),
     label: t.name
   }), n.push({
@@ -48,7 +48,7 @@ return (0, i.jsx)(r.Breadcrumbs, {
   renderCustomBreadcrumb: this.renderCustomBreadcrumb,
   onBreadcrumbClick: this.handleClick,
   breadcrumbs: n,
-  activeId: s
+  activeId: a
 });
   }
   constructor(...e) {
@@ -72,7 +72,7 @@ super(...e), I(this, 'handleClick', e => {
 }));
   }
 }
-t.Z = (0, o.Z)(a.ZP.connectStores([
+t.Z = (0, o.Z)(s.ZP.connectStores([
   c.Z,
   _.Z
 ], e => {

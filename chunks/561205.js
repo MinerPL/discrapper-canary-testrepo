@@ -1,12 +1,12 @@
 n.d(t, {
   Z: function() {
-return a;
+return s;
   }
 });
 var i = n(317381),
-  s = n(592125);
+  a = n(592125);
 
-function a() {
+function s() {
   let e = i.ZP.getConnectedActivityChannelId();
-  return s.Z.getChannel(e);
+  return a.Z.getChannel(e);
 }

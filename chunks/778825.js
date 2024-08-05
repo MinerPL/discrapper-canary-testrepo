@@ -1,4 +1,4 @@
-let r, i, a, o, s, l, u, c, d, _, E;
+let r, i, a, s, o, l, u, c, d, _, E;
 var f, h, p, m, I = n(442837),
   T = n(570140),
   g = n(981631);
@@ -14,7 +14,7 @@ function v() {
 }
 
 function O() {
-  o = void 0, s = void 0, l = void 0, c = void 0, a = void 0;
+  s = void 0, o = void 0, l = void 0, c = void 0, a = void 0;
 }
 class R extends(m = I.ZP.Store) {
   getFormState() {
@@ -24,10 +24,10 @@ return S;
 return A;
   }
   showNotice() {
-return void 0 !== r || void 0 !== i || void 0 !== a || void 0 !== o || void 0 !== s || void 0 !== l || void 0 !== u || void 0 !== c;
+return void 0 !== r || void 0 !== i || void 0 !== a || void 0 !== s || void 0 !== o || void 0 !== l || void 0 !== u || void 0 !== c;
   }
   getIsSubmitDisabled() {
-return void 0 !== s && s.length > g.tPV;
+return void 0 !== o && o.length > g.tPV;
   }
   getPendingAvatar() {
 return r;
@@ -39,10 +39,10 @@ return i;
 return a;
   }
   getPendingBanner() {
-return o;
+return s;
   }
   getPendingBio() {
-return s;
+return o;
   }
   getPendingNickname() {
 return u;
@@ -61,8 +61,8 @@ return {
   pendingAvatar: r,
   pendingAvatarDecoration: i,
   pendingProfileEffectId: a,
-  pendingBanner: o,
-  pendingBio: s,
+  pendingBanner: s,
+  pendingBio: o,
   pendingPronouns: l,
   pendingNickname: u,
   pendingThemeColors: c
@@ -127,13 +127,13 @@ a = t;
 let {
   banner: t
 } = e;
-o = t;
+s = t;
   },
   GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: function(e) {
 let {
   bio: t
 } = e;
-s = t;
+o = t;
   },
   GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: function(e) {
 let {

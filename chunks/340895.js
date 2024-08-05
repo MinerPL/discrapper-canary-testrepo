@@ -1,5 +1,5 @@
 n(47120);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(433517),
   u = n(570140),
   c = n(695346),
@@ -60,7 +60,7 @@ A = e.width / 2 - m.width / 2, N = e.height / 2 - m.height / 2;
 function C() {
   v = f.Z.getStatus() === h.Skl.DND || c.QZ.getSetting();
 }
-class y extends(r = s.ZP.Store) {
+class y extends(r = o.ZP.Store) {
   initialize() {
 this.waitFor(E.Z, f.Z), this.syncWith([f.Z], C), this.syncWith([d.Z], C);
   }
@@ -77,12 +77,12 @@ return v ? null : S.values().next().value;
 return !v && S.size > 0;
   }
 }
-o = 'IncomingCallStore', (a = 'displayName') in(i = y) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'IncomingCallStore', (a = 'displayName') in(i = y) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new y(u.Z, {
+}) : i[a] = s, t.Z = new y(u.Z, {
   CALL_CREATE: R,
   CALL_UPDATE: R,
   CALL_DELETE: function(e) {

@@ -1,7 +1,7 @@
 var r, i;
 n.d(t, {
   ED: function() {
-return o;
+return s;
   },
   Ht: function() {
 return _;
@@ -13,7 +13,7 @@ return c;
 return E;
   },
   Vr: function() {
-return s;
+return o;
   },
   Wt: function() {
 return d;
@@ -32,8 +32,8 @@ return r;
   }
 });
 let a = 'sticker-picker-tab-panel',
-  o = 'sticker-picker-tab',
-  s = 'sticker-picker-grid',
+  s = 'sticker-picker-tab',
+  o = 'sticker-picker-grid',
   l = -1,
   u = 160,
   c = '710982414301790216',

@@ -9,8 +9,8 @@ return y;
 return r;
   }
 }), n(724458), n(653041), n(47120);
-var r, i, a, o = n(392711),
-  s = n.n(o),
+var r, i, a, s = n(392711),
+  o = n.n(s),
   l = n(108131),
   u = n.n(l),
   c = n(149765),
@@ -81,16 +81,16 @@ function L(e, t, n) {
   let r = n === p.default.getId(),
 i = S.Z.isMobileOnline(n),
 a = r ? A.Z.getStatus() : S.Z.getStatus(n, e),
-o = r ? A.Z.getActivities() : S.Z.getActivities(n, e),
-s = h.Z.getStreamForUser(n, e),
+s = r ? A.Z.getActivities() : S.Z.getActivities(n, e),
+o = h.Z.getStreamForUser(n, e),
 l = N.default.getUser(n);
   return null == l ? null : {
 type: 'MEMBER',
 ...T.ZP.getMember(e, n),
 user: l,
 status: a,
-activities: o,
-applicationStream: s,
+activities: s,
+applicationStream: o,
 isOwner: t === n,
 isMobileOnline: i
   };
@@ -99,7 +99,7 @@ isMobileOnline: i
 function b(e) {
   let t = m.Z.getChannel(e);
   return null == t ? C : null == t.memberListId ? function(e) {
-return f.oz(v.Plq.VIEW_CHANNEL, e) ? C : u().v3(s()(e.permissionOverwrites).reduce((e, t) => {
+return f.oz(v.Plq.VIEW_CHANNEL, e) ? C : u().v3(o()(e.permissionOverwrites).reduce((e, t) => {
   let {
     id: n,
     allow: r,
@@ -204,12 +204,12 @@ return null == r && ((r = new M(e, t)).setGroups([{
   }
   forEach(e, t) {
 if (null == e)
-  s().forEach(this._guildLists, e => {
-    s().forEach(e, t);
+  o().forEach(this._guildLists, e => {
+    o().forEach(e, t);
   });
 else {
   let n = this._guildLists[e];
-  null != n && s().forEach(n, t);
+  null != n && o().forEach(n, t);
 }
   }
   delete(e) {

@@ -1,4 +1,4 @@
-t.r(s), t.d(s, {
+t.r(e), t.d(e, {
   default: function() {
 return l;
   }
@@ -12,14 +12,14 @@ var n = t(481060),
   r = t(689938),
   c = t(512585);
 
-function l(e) {
+function l(s) {
   let {
-transitionState: s,
+transitionState: e,
 onClose: t
-  } = e, l = (0, o.Dt)();
+  } = s, l = (0, o.Dt)();
   return (0, a.jsxs)(n.ModalRoot, {
 'aria-labelledby': l,
-transitionState: s,
+transitionState: e,
 size: n.ModalSize.SMALL,
 children: [
   (0, a.jsx)(n.ModalHeader, {

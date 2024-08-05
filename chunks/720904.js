@@ -6,13 +6,13 @@ return A;
 var i = t(735250);
 t(470079);
 var a = t(120356),
-  r = t.n(a),
-  l = t(442837),
+  l = t.n(a),
+  r = t(442837),
   o = t(481060),
   s = t(543241),
   u = t(222677),
-  c = t(995774),
-  d = t(665906),
+  d = t(995774),
+  c = t(665906),
   E = t(695346),
   M = t(496675),
   I = t(768581),
@@ -35,13 +35,13 @@ function v(e) {
 emoji: t,
 isFocused: a
   } = e, {
-animated: l,
+animated: r,
 src: s,
 surrogates: u
   } = t;
   return null == s && null != t.id ? s = I.ZP.getEmojiURL({
 id: t.id,
-animated: !!l,
+animated: !!r,
 size: 20
   }) : null == s && (s = m.ZP.getURL(u)), (0, i.jsx)(o.Tooltip, {
 text: t.allNamesString,
@@ -52,12 +52,12 @@ children: e => (0, i.jsx)('div', {
   'aria-label': f.Z.Messages.ADD_REACTION_NAMED.format({
     emojiName: t.name
   }),
-  className: r()(Z.button, {
+  className: l()(Z.button, {
     [Z.focused]: a
   }),
   ...e,
   children: null == s || '' === s.trim() ? (0, i.jsx)('span', {
-    className: r()('emoji', 'emoji-text', Z.icon),
+    className: l()('emoji', 'emoji-text', Z.icon),
     ...e,
     children: u
   }) : (0, i.jsx)('img', {
@@ -80,14 +80,14 @@ return !(e.useSpriteSheet && S.indexOf(null !== (t = e.uniqueName) && void 0 !==
   });
   t.length > 4 && (t.length = 4);
   let a = E.nc.useSetting(),
-r = (0, d.$R)(n),
-I = (0, l.e7)([M.Z], () => a && r && (n.isPrivate() || M.Z.can(_.Plq.ADD_REACTIONS, n)), [
+l = (0, c.$R)(n),
+I = (0, r.e7)([M.Z], () => a && l && (n.isPrivate() || M.Z.can(_.Plq.ADD_REACTIONS, n)), [
   n,
-  r,
+  l,
   a
 ]),
 f = t => {
-  (0, u.rU)(n.id, e.id, (0, c.g1)(t), void 0);
+  (0, u.rU)(n.id, e.id, (0, d.g1)(t), u.TW.MESSAGE_CONTEXT_MENU);
 };
   return I && t.length > 0 ? (0, i.jsx)(o.MenuGroup, {
 className: Z.wrapper,

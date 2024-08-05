@@ -55,8 +55,8 @@ for (let r of a.oneofs) {
     return !1;
   if (void 0 === a.oneofKind)
     continue;
-  let o = this.fields.find(e => e.localName === a.oneofKind);
-  if (!o || !this.field(a[a.oneofKind], o, n, t))
+  let s = this.fields.find(e => e.localName === a.oneofKind);
+  if (!s || !this.field(a[a.oneofKind], s, n, t))
     return !1;
 }
 for (let r of this.fields)

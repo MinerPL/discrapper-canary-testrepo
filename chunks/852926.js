@@ -13,8 +13,8 @@ return _;
   }
 });
 var i = n(13245),
-  s = n(808506),
-  a = n(998502),
+  a = n(808506),
+  s = n(998502),
   r = n(13140),
   l = n(996106),
   o = n(914946),
@@ -23,14 +23,14 @@ var i = n(13245),
 let u = ['207646673902501888'];
 
 function _(e) {
-  return s.Z.isReady(e) ? (i.Z.setLocked(!1, e), {
+  return a.Z.isReady(e) ? (i.Z.setLocked(!1, e), {
 lock() {
   i.Z.setLocked(!0, e);
 },
 context: d.IlC.OVERLAY
-  }) : (a.ZP.focus(null, !0), {
+  }) : (s.ZP.focus(null, !0), {
 lock() {
-  a.ZP.setForegroundProcess(e);
+  s.ZP.setForegroundProcess(e);
 },
 context: d.IlC.APP
   });
@@ -45,7 +45,7 @@ return e.authorization.scopes = [
 return Promise.reject(new l.Z({
   closeCode: d.$VG.INVALID_CLIENTID
 }, 'No Client ID Specified'));
-  let i = a.ZP.releaseChannel !== d.R5N.CANARY && !u.includes(n) && e.transport !== c.He.POST_MESSAGE;
+  let i = s.ZP.releaseChannel !== d.R5N.CANARY && !u.includes(n) && e.transport !== c.He.POST_MESSAGE;
   return await (0, o.vv)(n, i), (0, o.fy)(e, n, t);
 }, E = () => (0, o.tr)(e => {
   let t = [];

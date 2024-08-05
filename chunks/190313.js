@@ -18,7 +18,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 
-function o(e, t) {
+function s(e, t) {
   return 0 === t.length ? e : {
 key: (0, i.m)(t, e.key),
 data: e.data,
@@ -26,8 +26,8 @@ generation: e.generation
   };
 }
 
-function s(e, t) {
-  return 0 === t.length ? e : e.map(e => o(e, t));
+function o(e, t) {
+  return 0 === t.length ? e : e.map(e => s(e, t));
 }
 class l {
   close() {
@@ -101,7 +101,7 @@ let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.Sn.Re
 return this.database.execute({
   type: 'kv.put_one',
   table: this.tableId,
-  cell: o(e, this.prefix),
+  cell: s(e, this.prefix),
   overwrite: t === r.Sn.Replace
 }, this.defaultDebugTag);
   }
@@ -110,7 +110,7 @@ let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.Sn.Re
 return this.database.execute({
   type: 'kv.put_many',
   table: this.tableId,
-  cells: s(e, this.prefix),
+  cells: o(e, this.prefix),
   overwrite: t === r.Sn.Replace
 }, this.defaultDebugTag);
   }
@@ -195,7 +195,7 @@ let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.Sn.Re
 this.transaction.add({
   type: 'kv.put_one',
   table: this.tableId,
-  cell: o(e, this.prefix),
+  cell: s(e, this.prefix),
   overwrite: t === r.Sn.Replace
 });
   }
@@ -204,7 +204,7 @@ let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.Sn.Re
 this.transaction.add({
   type: 'kv.put_many',
   table: this.tableId,
-  cells: s(e, this.prefix),
+  cells: o(e, this.prefix),
   overwrite: t === r.Sn.Replace
 });
   }

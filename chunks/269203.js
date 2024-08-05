@@ -6,13 +6,13 @@ return _;
 var i = n(735250);
 n(470079);
 var a = n(442837),
-  l = n(481060),
-  s = n(805519),
-  r = n(246364),
-  o = n(705563),
-  c = n(594174),
-  d = n(346656),
-  u = n(967128),
+  s = n(481060),
+  l = n(805519),
+  r = n(565138),
+  o = n(246364),
+  c = n(705563),
+  u = n(594174),
+  d = n(967128),
   h = n(689938),
   p = n(684668);
 
@@ -20,41 +20,41 @@ function m(e) {
   var t;
   let {
 joinRequest: n,
-guild: s
-  } = e, o = (0, a.e7)([c.default], () => c.default.getUser(n.userId));
+guild: l
+  } = e, c = (0, a.e7)([u.default], () => u.default.getUser(n.userId));
   return (0, i.jsxs)('div', {
 className: p.summaryContainer,
 children: [
   (0, i.jsxs)('div', {
     className: p.summaryHeader,
     children: [
-      null != s && (0, i.jsxs)('div', {
+      null != l && (0, i.jsxs)('div', {
         className: p.summaryHeaderClanInfo,
         children: [
-          (0, i.jsx)(d.Z, {
-            guild: s,
+          (0, i.jsx)(r.Z, {
+            guild: l,
             active: !0,
-            size: d.Z.Sizes.SMOL,
+            size: r.Z.Sizes.SMOL,
             className: p.guildIcon
           }),
-          (0, i.jsx)(l.Heading, {
+          (0, i.jsx)(s.Heading, {
             variant: 'heading-sm/semibold',
             color: 'header-primary',
-            children: s.name
+            children: l.name
           })
         ]
       }),
-      null != o && (0, i.jsx)(l.Heading, {
+      null != c && (0, i.jsx)(s.Heading, {
         variant: 'heading-xl/semibold',
         color: 'header-primary',
         children: h.Z.Messages.MEMBER_VERIFICATION_USERS_APPLICATION.format({
-          username: o.globalName
+          username: c.globalName
         })
       })
     ]
   }),
-  null === (t = n.formResponses) || void 0 === t ? void 0 : t.filter(e => e.field_type !== r.QJ.TERMS).map(e => {
-    let t = e.field_type === r.QJ.MULTIPLE_CHOICE && null != e.response ? e.choices[e.response] : e.response;
+  null === (t = n.formResponses) || void 0 === t ? void 0 : t.filter(e => e.field_type !== o.QJ.TERMS).map(e => {
+    let t = e.field_type === o.QJ.MULTIPLE_CHOICE && null != e.response ? e.choices[e.response] : e.response;
     return (0, i.jsxs)(i.Fragment, {
       children: [
         (0, i.jsx)('hr', {
@@ -63,12 +63,12 @@ children: [
         (0, i.jsxs)('div', {
           className: p.formResponseContainer,
           children: [
-            (0, i.jsx)(l.Text, {
+            (0, i.jsx)(s.Text, {
               variant: 'text-xs/semibold',
               color: 'text-muted',
               children: e.label
             }),
-            (0, i.jsx)(l.Text, {
+            (0, i.jsx)(s.Text, {
               variant: 'text-md/medium',
               color: 'text-primary',
               children: t
@@ -89,11 +89,11 @@ channel: t
 loading: n,
 joinRequest: a,
 joinRequestGuild: r
-  } = (0, s.Z)(t.id);
-  return (0, i.jsx)(u.ZP, {
+  } = (0, l.Z)(t.id);
+  return (0, i.jsx)(d.ZP, {
 channelId: t.id,
 className: p.container,
-children: (0, i.jsx)(u.jz, {
+children: (0, i.jsx)(d.jz, {
   children: null != a && null != a.formResponses ? (0, i.jsxs)('div', {
     className: p.formContainer,
     children: [
@@ -103,12 +103,12 @@ children: (0, i.jsx)(u.jz, {
           joinRequest: a
         })
       }),
-      (0, i.jsx)(o.Z, {
+      (0, i.jsx)(c.Z, {
         channelId: t.id,
         showProfile: !0
       })
     ]
-  }) : n ? (0, i.jsx)(l.Spinner, {}) : null
+  }) : n ? (0, i.jsx)(s.Spinner, {}) : null
 })
   });
 }

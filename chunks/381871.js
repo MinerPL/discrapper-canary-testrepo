@@ -5,26 +5,26 @@ return w;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(392711),
-  s = n(442837),
+  s = n(392711),
+  l = n(442837),
   r = n(704215),
   o = n(481060),
   c = n(570140),
-  d = n(230711),
-  u = n(607070),
+  u = n(230711),
+  d = n(607070),
   h = n(367907),
   p = n(243778),
   m = n(543241),
   _ = n(633302),
   f = n(970731),
   E = n(594174),
-  C = n(176354),
-  g = n(823379),
+  g = n(176354),
+  C = n(823379),
   I = n(74538),
   x = n(401062),
   T = n(696900),
-  v = n(456631),
-  N = n(963838),
+  N = n(456631),
+  v = n(963838),
   S = n(535879),
   Z = n(310892),
   A = n(12168),
@@ -48,24 +48,24 @@ _.ZP.getByName('laughing'),
 _.ZP.getByName('watermelon'),
 _.ZP.getByName('fork_and_knife'),
 _.ZP.getByName('yum')
-  ].filter(g.lm);
+  ].filter(C.lm);
 
 function w(e) {
   var t;
   let {
 channel: n,
 closePopout: _,
-onFocus: g
-  } = e, j = (0, s.e7)([u.Z], () => u.Z.useReducedMotion), w = (0, s.e7)([E.default], () => E.default.getCurrentUser()), B = I.ZP.canUseFancyVoiceChannelReactions(w), H = (0, s.e7)([T.Z], () => T.Z.getState().animationType), G = a.useRef(!1), V = (0, m.wC)(n.guild_id), F = (0, l.uniqBy)([
+onFocus: C
+  } = e, j = (0, l.e7)([d.Z], () => d.Z.useReducedMotion), w = (0, l.e7)([E.default], () => E.default.getCurrentUser()), B = I.ZP.canUseFancyVoiceChannelReactions(w), H = (0, l.e7)([T.Z], () => T.Z.getState().animationType), G = a.useRef(!1), V = (0, m.wC)(n.guild_id), F = (0, s.uniqBy)([
 ...V,
 ...U
-  ], 'name').filter(e => !C.ZP.isEmojiFilteredOrLocked({
+  ], 'name').filter(e => !g.ZP.isEmojiFilteredOrLocked({
 emoji: e,
 channel: n,
 intention: D
-  })).slice(0, R.e5), W = (null !== (t = v.Z.recentlyUsedEmojis) && void 0 !== t ? t : []).filter(e => !F.slice(0, R.e5 - 1).some(t => t.name === e.name));
+  })).slice(0, R.e5), W = (null !== (t = N.Z.recentlyUsedEmojis) && void 0 !== t ? t : []).filter(e => !F.slice(0, R.e5 - 1).some(t => t.name === e.name));
   W.length > 0 && F.splice(F.length - 1, 1, W[0]);
-  let z = (0, N.Iu)(H),
+  let z = (0, v.Iu)(H),
 Y = e => {
   c.Z.dispatch({
     type: 'VOICE_CHANNEL_EFFECT_RECENT_EMOJI',
@@ -115,19 +115,19 @@ children: e => {
   let {
     visibleContent: t,
     markAsDismissed: a
-  } = e, l = j && t === r.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
+  } = e, s = j && t === r.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
   return (0, i.jsx)(o.Popout, {
     position: 'left',
     'aria-label': O.Z.Messages.VOICE_CHANNEL_EFFECTS_MORE,
-    shouldShow: l,
+    shouldShow: s,
     renderPopout: () => (0, i.jsx)('div', {
-      onMouseEnter: g,
+      onMouseEnter: C,
       children: (0, i.jsx)(f.ZP, {
         className: y.reducedMotionTooltip,
         header: O.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_TITLE,
         content: O.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_BODY,
         onClick: () => {
-          d.Z.open(b.oAB.ACCESSIBILITY, null, {
+          u.Z.open(b.oAB.ACCESSIBILITY, null, {
             scrollPosition: P.rP.REDUCED_MOTION
           }), _();
         },
@@ -143,7 +143,7 @@ children: e => {
       closePopout: _,
       onSelectEmoji: Y,
       onSelectDisabledEmoji: K,
-      onFocus: g,
+      onFocus: C,
       onExpandedToggle: q,
       analyticsOverride: k,
       emojiSearchProps: {

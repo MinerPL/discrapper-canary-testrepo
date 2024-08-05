@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return g;
+return C;
   },
   r: function() {
 return I;
@@ -8,31 +8,31 @@ return I;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(143927),
-  s = n(481060),
+  s = n(143927),
+  l = n(481060),
   r = n(570140),
   o = n(668781),
   c = n(966390),
-  d = n(680287),
-  u = n(470623),
+  u = n(680287),
+  d = n(470623),
   h = n(957730),
   p = n(48854),
   m = n(703558),
   _ = n(403182),
   f = n(928477),
   E = n(981631),
-  C = n(689938);
+  g = n(689938);
 
-function g(e) {
+function C(e) {
   let {
 parentChannel: t,
 parentMessageId: n,
 threadSettings: i,
-privateThreadMode: l,
-location: s,
+privateThreadMode: s,
+location: l,
 onThreadCreated: r,
 useDefaultThreadName: o
-  } = e, d = a.useCallback((e, t, n, i) => {
+  } = e, u = a.useCallback((e, t, n, i) => {
 c.Z.uploadFiles({
   channelId: e.id,
   uploads: t,
@@ -47,11 +47,11 @@ c.Z.uploadFiles({
 parentChannel: t,
 parentMessageId: n,
 threadSettings: i,
-privateThreadMode: l,
-location: s,
+privateThreadMode: s,
+location: l,
 onThreadCreated: r,
 useDefaultThreadName: o,
-uploadHandler: d
+uploadHandler: u
   });
 }
 
@@ -61,7 +61,7 @@ parentChannel: t
   } = e, {
 name: a,
 appliedTags: c
-  } = (0, u.xH)(e => {
+  } = (0, d.xH)(e => {
 let {
   name: t,
   appliedTags: n
@@ -70,23 +70,23 @@ return {
   name: t,
   appliedTags: n
 };
-  }, l.Z);
+  }, s.Z);
   return (0, f.Wj)({
 parentChannel: t,
 name: a,
 appliedTags: c,
-upload: function(e, a, l) {
-  return new Promise((c, u) => {
-    let h = new d.Z(e);
-    h.on('error', (e, a, l) => {
+upload: function(e, a, s) {
+  return new Promise((c, d) => {
+    let h = new u.Z(e);
+    h.on('error', (e, a, s) => {
       if (a === E.evJ.EXPLICIT_CONTENT) {
         let e = (0, p.r)();
-        null != l && null != l.attachments && l.attachments.length > 0 && (r.Z.dispatch({
+        null != s && null != s.attachments && s.attachments.length > 0 && (r.Z.dispatch({
           type: 'MESSAGE_EXPLICIT_CONTENT_FP_CREATE',
           messageId: e,
           channelId: t.id,
-          attachments: l.attachments
-        }), (0, s.openModalLazy)(async () => {
+          attachments: s.attachments
+        }), (0, l.openModalLazy)(async () => {
           let {
             default: a
           } = await n.e('57539').then(n.bind(n, 924188));
@@ -99,26 +99,26 @@ upload: function(e, a, l) {
       } else if (a === E.evJ.ENTITY_TOO_LARGE) {
         let e = (0, _.dg)(t.getGuildId());
         o.Z.show({
-          title: C.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-          body: C.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
+          title: g.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+          body: g.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
             maxSize: (0, _.Ng)(e)
           })
         });
       } else
         a === E.evJ.TOO_MANY_ATTACHMENTS && o.Z.show({
-          title: C.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
-          body: C.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
+          title: g.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
+          body: g.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
             limit: E.dN1
           })
         });
-      u({
-        body: l
+      d({
+        body: s
       });
     }), h.on('complete', (e, t) => {
       c({
         body: t
       });
-    }), h.uploadFiles(l, a, {
+    }), h.uploadFiles(s, a, {
       addFilesTo: 'message.attachments'
     });
   });

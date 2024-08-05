@@ -1,5 +1,5 @@
 n(757143), n(47120);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(377108),
   u = n(552075),
   c = n(570140),
@@ -33,7 +33,7 @@ ORIGINAL_MP4: 'original.mp4'
 function N(e) {
   return e.replace(/^https?:/, '');
 }
-class v extends(r = s.ZP.Store) {
+class v extends(r = o.ZP.Store) {
   getAnalyticsID() {
 return p;
   }
@@ -59,12 +59,12 @@ return S;
 return A;
   }
 }
-o = 'GIFPickerViewStore', (a = 'displayName') in(i = v) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'GIFPickerViewStore', (a = 'displayName') in(i = v) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new v(c.Z, {
+}) : i[a] = s, t.Z = new v(c.Z, {
   GIF_PICKER_INITIALIZE: function(e) {
 p = e.analyticsID;
   },
@@ -81,7 +81,7 @@ null != e.query && (I = e.query), T = e.items.map(e => {
     src: r,
     gif_src: i,
     url: a,
-    id: o
+    id: s
   } = e;
   return {
     width: t,
@@ -89,7 +89,7 @@ null != e.query && (I = e.query), T = e.items.map(e => {
     src: N(r),
     gifSrc: N(i),
     url: a,
-    id: o,
+    id: s,
     format: ! function(e) {
       switch (e) {
         case f.FIXED_HEIGHT_MP4:

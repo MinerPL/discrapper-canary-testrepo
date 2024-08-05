@@ -18,8 +18,8 @@ return h;
 var r = n(544891),
   i = n(570140),
   a = n(594190),
-  o = n(569545),
-  s = n(598077),
+  s = n(569545),
+  o = n(598077),
   l = n(314897),
   u = n(592125),
   c = n(77498),
@@ -47,9 +47,9 @@ autoTrackExposure: !1
 return;
   let {
 ownerId: r,
-channelId: s
-  } = (0, o.my)(e);
-  if (null == r || null == s)
+channelId: o
+  } = (0, s.my)(e);
+  if (null == r || null == o)
 return;
   let _ = l.default.getId();
   if (r !== _)
@@ -57,7 +57,7 @@ return;
   let E = l.default.getSessionId();
   if (null == E)
 return;
-  let h = u.Z.getChannel(s),
+  let h = u.Z.getChannel(o),
 p = null != h && h.isBroadcastChannel();
   if (null == h || r !== h.ownerId || !p)
 return;
@@ -139,7 +139,7 @@ try {
       var t;
       let r = _.Z.getBroadcastByChannel(e.id).userId,
         i = null !== (t = e.recipients) && void 0 !== t ? t : [];
-      n[r] = i.map(e => new s.Z(e)).filter(e => e.id !== r);
+      n[r] = i.map(e => new o.Z(e)).filter(e => e.id !== r);
     }), i.Z.dispatch({
       type: 'BROADCAST_VIEWERS_UPDATE',
       viewers: n

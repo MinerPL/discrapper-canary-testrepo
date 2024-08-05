@@ -6,8 +6,8 @@ return C;
 var r = n(512722),
   i = n.n(r),
   a = n(264344),
-  o = n.n(a),
-  s = n(259443),
+  s = n.n(a),
+  o = n(259443),
   l = n(47770),
   u = n(174498),
   c = n.n(u),
@@ -34,7 +34,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let R = new s.Y('MediaEngineWebRTC');
+let R = new o.Y('MediaEngineWebRTC');
 class C extends l.Z {
   destroy() {
 null != this.voiceActivityInput && (this.voiceActivityInput.destroy(), this.voiceActivityInput = null), this.eachConnection(e => e.destroy()), this.emit(_.aB.Destroy), this.removeAllListeners();
@@ -43,7 +43,7 @@ null != this.voiceActivityInput && (this.voiceActivityInput.destroy(), this.voic
 !this.interacted && (document.createElement('audio').play(), this.interacted = !0), this.eachConnection(e => e.interact());
   }
   static supported() {
-return !__OVERLAY__ && (v.fi && null != window.AudioContext && null != window.RTCPeerConnection ? (n(250678), !0) : (R.info('WebRTC is not supported on', o().name, o().version), !1));
+return !__OVERLAY__ && (v.fi && null != window.AudioContext && null != window.RTCPeerConnection ? (n(250678), !0) : (R.info('WebRTC is not supported on', s().name, s().version), !1));
   }
   supported() {
 return !0;
@@ -60,7 +60,7 @@ switch (e) {
     var t;
     return (null === (t = navigator.mediaDevices) || void 0 === t ? void 0 : t.getDisplayMedia) != null;
   case N.AN.VOICE_PROCESSING:
-    return 'Chrome' === o().name;
+    return 'Chrome' === s().name;
   case N.AN.NATIVE_PING:
   case N.AN.DIAGNOSTICS:
     return v.Fo;
@@ -68,7 +68,7 @@ switch (e) {
   case N.AN.LOOPBACK:
   case N.AN.NOISE_SUPPRESSION:
   case N.AN.AUTOMATIC_GAIN_CONTROL:
-    return 'Safari' !== o().name;
+    return 'Safari' !== s().name;
   case N.AN.NOISE_CANCELLATION:
     return c()();
   case N.AN.QOS:
@@ -99,11 +99,11 @@ let {
   ssrc: r,
   address: i,
   port: a,
-  modes: o,
-  streamUserId: s,
+  modes: s,
+  streamUserId: o,
   streamParameters: l
 } = n, u = (0, p.Q)(e, t, this.getAudioContext(), l);
-return u.streamUserId = s, u.setOutputVolume(this.outputVolume), u.setSinkId(this.sinkId), u.once(d.S.Destroy, e => this.connections.delete(e)), u.on(d.S.Silence, e => this.emit(_.aB.Silence, e)), u.on(d.S.DesktopSourceEnd, this.handleDesktopSourceEnd), u.on(d.S.AudioPermission, this.handleAudioPermission), u.on(d.S.VideoPermission, this.handleVideoPermission), this.interacted && u.interact(), e === N.Yn.DEFAULT && (u.setAudioSource(this.sourceId), this.enabled && u.input.enableAudioInput()), this.connections.add(u), this.emit(_.aB.Connection, u), u;
+return u.streamUserId = o, u.setOutputVolume(this.outputVolume), u.setSinkId(this.sinkId), u.once(d.S.Destroy, e => this.connections.delete(e)), u.on(d.S.Silence, e => this.emit(_.aB.Silence, e)), u.on(d.S.DesktopSourceEnd, this.handleDesktopSourceEnd), u.on(d.S.AudioPermission, this.handleAudioPermission), u.on(d.S.VideoPermission, this.handleVideoPermission), this.interacted && u.interact(), e === N.Yn.DEFAULT && (u.setAudioSource(this.sourceId), this.enabled && u.input.enableAudioInput()), this.connections.add(u), this.emit(_.aB.Connection, u), u;
   }
   findConnection(e) {
 return Array.from(this.connections).find(t => null == e || t.context === e);
@@ -126,7 +126,7 @@ let e = new h.Z(this.getAudioContext());
 e.on('permission', this.handleAudioPermission);
 try {
   var t;
-  await e.enable(), 'Firefox' === o().name && await this.handleDeviceChange(), this.enabled = !0, this.eachConnection(e => e.input.enableAudioInput(), N.Yn.DEFAULT), null === (t = this.voiceActivityInput) || void 0 === t || t.enable();
+  await e.enable(), 'Firefox' === s().name && await this.handleDeviceChange(), this.enabled = !0, this.eachConnection(e => e.input.enableAudioInput(), N.Yn.DEFAULT), null === (t = this.voiceActivityInput) || void 0 === t || t.enable();
 } finally {
   e.destroy();
 }
@@ -263,6 +263,10 @@ e([]);
   getMLSSigningKey(e, t) {
 return Promise.reject(Error('getMLSSigningKey is not supported.'));
   }
+  setSidechainCompression(e) {}
+  setNativeDesktopVideoSourcePickerActive(e) {}
+  presentNativeScreenSharePicker(e) {}
+  releaseNativeDesktopVideoSourcePickerStream() {}
   constructor() {
 super(), O(this, 'Video', A.Z), O(this, 'Camera', S.Z), O(this, '_audioContext', null), O(this, 'outputVolume', N.Qx), O(this, 'sourceId', N.w5), O(this, 'sinkId', N.w5), O(this, 'enabled', !1), O(this, 'connections', new Set()), O(this, 'interacted', !1), O(this, 'loopback', null), O(this, 'voiceActivityInput', null), O(this, 'pendingDesktopInputs', {}), O(this, 'enablePromise', null), O(this, 'handleActiveSinksChange', (e, t) => {
   this.connections.forEach(n => n.setHasActiveVideoOutputSink(e, t));

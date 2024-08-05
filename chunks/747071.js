@@ -1,13 +1,13 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   }
 });
 var r = n(695346),
   i = n(131951),
   a = n(36703);
 
-function o(e) {
+function s(e) {
   let t = function() {
 var e;
 let t = r.kU.getSetting();

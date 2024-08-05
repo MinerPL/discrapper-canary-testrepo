@@ -1,7 +1,7 @@
 var r = n(470079),
   i = n(844303),
   a = n(557011),
-  o = function() {
+  s = function() {
 function e(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
@@ -13,7 +13,7 @@ return function(t, n, r) {
 };
   }();
 
-function s(e, t) {
+function o(e, t) {
   if (!e)
 throw ReferenceError('this hasn\'t been initialised - super() hasn\'t been called');
   return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
@@ -24,16 +24,16 @@ var l = function(e) {
   if (!(e instanceof t))
     throw TypeError('Cannot call a class as a function');
 }(this, t);
-for (var e, n, r, i = arguments.length, o = Array(i), l = 0; l < i; l++)
-  o[l] = arguments[l];
-return n = r = s(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o))), r.handleChange = function(e) {
+for (var e, n, r, i = arguments.length, s = Array(i), l = 0; l < i; l++)
+  s[l] = arguments[l];
+return n = r = o(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(s))), r.handleChange = function(e) {
   var t = a.T(e, r.props.direction, r.props.hsl, r.container);
   t && 'function' == typeof r.props.onChange && r.props.onChange(t, e);
 }, r.handleMouseDown = function(e) {
   r.handleChange(e), window.addEventListener('mousemove', r.handleChange), window.addEventListener('mouseup', r.handleMouseUp);
 }, r.handleMouseUp = function() {
   r.unbindEventListeners();
-}, s(r, n);
+}, o(r, n);
   }
   return ! function(e, t) {
 if ('function' != typeof t && null !== t)
@@ -46,7 +46,7 @@ e.prototype = Object.create(t && t.prototype, {
     configurable: !0
   }
 }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t);
-  }(t, e), o(t, [{
+  }(t, e), s(t, [{
   key: 'componentWillUnmount',
   value: function() {
     this.unbindEventListeners();

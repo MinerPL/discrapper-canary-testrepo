@@ -1,13 +1,13 @@
 n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(442837),
-  s = n(952265),
+  s = n(442837),
+  l = n(952265),
   r = n(481060),
   o = n(378298),
   c = n(444957),
-  d = n(276618),
-  u = n(367408),
+  u = n(276618),
+  d = n(367408),
   h = n(473092),
   p = n(819640),
   m = n(665149),
@@ -17,17 +17,17 @@ var i = n(735250),
 t.Z = a.memo(function(e) {
   let {
 channel: t
-  } = e, C = (0, c.h)(t.id), g = (0, d.o)(t.id), I = (0, u.M)(t.id), x = (0, s.f9)(), T = (0, l.e7)([p.Z], () => p.Z.hasLayers()), v = a.useCallback(() => g ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP : null != I ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP : null, [
-g,
+  } = e, g = (0, c.h)(t.id), C = (0, u.o)(t.id), I = (0, d.M)(t.id), x = (0, l.f9)(), T = (0, s.e7)([p.Z], () => p.Z.hasLayers()), N = a.useCallback(() => C ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP : null != I ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP : null, [
+C,
 I
-  ]), N = a.useMemo(() => (g || null != I) && !x && !T, [
-g,
+  ]), v = a.useMemo(() => (C || null != I) && !x && !T, [
+C,
 I,
 x,
 T
-  ]), [S, Z] = a.useState(v());
+  ]), [S, Z] = a.useState(N());
   a.useEffect(() => {
-null != I && null != C && (r.AccessibilityAnnouncer.announce(f.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT), setTimeout(() => {
+null != I && null != g && (r.AccessibilityAnnouncer.announce(f.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT), setTimeout(() => {
   (0, o.T)(t.id, [I.id]);
 }, 5000), (0, h.KQ)({
   channelId: t.id,
@@ -36,52 +36,52 @@ null != I && null != C && (r.AccessibilityAnnouncer.announce(f.Z.Messages.INAPPR
   warningType: I.type,
   isNudgeWarning: null != I,
   viewName: h.pb.SAFETY_TOOLS_NUDGE_TOOLTIP
-})), g && (r.AccessibilityAnnouncer.announce(f.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT), setTimeout(() => {
+})), C && (r.AccessibilityAnnouncer.announce(f.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT), setTimeout(() => {
   (0, o.Ot)(t.id);
 }, 5000));
   }, [
 t,
 I,
-C,
-g
+g,
+C
   ]), a.useEffect(() => {
-null != C && (0, h.KQ)({
+null != g && (0, h.KQ)({
   channelId: t.id,
   senderId: t.getRecipientId(),
-  warningId: C.id,
-  warningType: C.type,
+  warningId: g.id,
+  warningType: g.type,
   isNudgeWarning: null != I,
   viewName: h.pb.SAFETY_TOOLS_BUTTON
 });
   }, []), a.useEffect(() => {
-let e = v();
+let e = N();
 null != e && Z(e);
   }, [
-g,
+C,
 I,
-v
+N
   ]);
   let A = a.useCallback(() => {
-if (null != I && (0, o.T)(t.id, [I.id]), null != C)
+if (null != I && (0, o.T)(t.id, [I.id]), null != g)
   (0, r.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.all([
-      n.e('49508'),
+      n.e('37229'),
       n.e('89650')
     ]).then(n.bind(n, 611446));
     return n => {
       let {
         onClose: a,
-        transitionState: l
+        transitionState: s
       } = n;
       return (0, i.jsx)(e, {
         otherUserId: t.getRecipientId(),
         channelId: t.id,
-        warningId: C.id,
-        warningType: C.type,
+        warningId: g.id,
+        warningType: g.type,
         onClose: a,
-        transitionState: l
+        transitionState: s
       });
     };
   }, {
@@ -89,18 +89,18 @@ if (null != I && (0, o.T)(t.id, [I.id]), null != C)
   }), (0, h.qc)({
     channelId: t.id,
     senderId: t.getRecipientId(),
-    warningId: C.id,
-    warningType: C.type,
+    warningId: g.id,
+    warningType: g.type,
     cta: h.NM.USER_SAFETY_TOOLS_BUTTON_CLICK,
     isNudgeWarning: null != I
   });
   }, [
 I,
-C,
+g,
 t
   ]);
-  return null == C ? null : (0, i.jsx)(r.Tooltip, {
-forceOpen: N,
+  return null == g ? null : (0, i.jsx)(r.Tooltip, {
+forceOpen: v,
 text: S,
 color: r.TooltipColors.BRAND,
 position: 'bottom',

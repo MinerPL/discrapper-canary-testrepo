@@ -3,10 +3,10 @@ n.d(t, {
 return a;
   },
   ME: function() {
-return o;
+return s;
   },
   Ym: function() {
-return s;
+return o;
   },
   _g: function() {
 return i;
@@ -34,14 +34,14 @@ userId: e
   });
 }
 
-function o(e) {
+function s(e) {
   r.Z.dispatch({
 type: 'HIGH_FIVE_SET_ENABLED',
 enabled: e
   });
 }
 
-function s(e, t, n, i) {
+function o(e, t, n, i) {
   r.Z.dispatch({
 type: 'HIGH_FIVE_COMPLETE',
 waitingUserId: e,

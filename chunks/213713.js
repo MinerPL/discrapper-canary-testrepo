@@ -1,77 +1,77 @@
-r.d(t, {
+t.d(r, {
   Z: function() {
 return S;
   }
-}), r(47120);
-var a = r(735250),
-  n = r(470079),
-  i = r(120356),
-  o = r.n(i),
-  l = r(392711),
-  c = r.n(l),
-  s = r(876215),
-  d = r(442837),
-  u = r(481060),
-  h = r(570140),
-  m = r(812206),
-  g = r(681619),
-  p = r(810568),
-  b = r(168524),
-  f = r(77498),
-  y = r(71585),
-  x = r(146282),
-  k = r(650613),
-  v = r(789086),
-  _ = r(206583),
-  w = r(262737),
-  C = r(979756);
-let j = [{
+}), t(47120);
+var a = t(735250),
+  n = t(470079),
+  i = t(120356),
+  o = t.n(i),
+  l = t(392711),
+  c = t.n(l),
+  s = t(876215),
+  d = t(442837),
+  u = t(481060),
+  h = t(570140),
+  m = t(812206),
+  g = t(681619),
+  p = t(810568),
+  b = t(168524),
+  f = t(77498),
+  y = t(71585),
+  x = t(146282),
+  k = t(650613),
+  v = t(789086),
+  _ = t(206583),
+  j = t(262737),
+  w = t(979756);
+let C = [{
 key: 'type',
-cellClassName: o()(w.cell, w.cellType),
+cellClassName: o()(j.cell, j.cellType),
 render(e) {
   let {
-    type: t
+    type: r
   } = e;
   return (0, a.jsx)(u.Text, {
     variant: 'text-md/semibold',
-    children: s.s[t]
+    children: s.s[r]
   });
 }
   },
   {
 key: 'count',
-cellClassName: o()(w.cell, w.cellCount),
+cellClassName: o()(j.cell, j.cellCount),
 render(e) {
   let {
-    entries: t
+    entries: r
   } = e;
   return (0, a.jsx)('div', {
     children: (0, a.jsx)(u.Text, {
       variant: 'text-md/normal',
-      children: t.length
+      children: r.length
     })
   });
 }
   },
   {
 key: 'only?',
-cellClassName: w.cell,
+cellClassName: j.cell,
 render(e) {
   let {
-    type: t
+    type: r
   } = e;
   return (0, a.jsx)(N, {
-    type: t
+    type: r
   });
 }
   }
 ];
 
 function N(e) {
-  var t, r;
+  var r, t;
   let {
 type: n
-  } = e, i = (0, d.e7)([x.Z], () => x.Z.getFilters()), o = null !== (r = null == i ? void 0 : null === (t = i.types) || void 0 === t ? void 0 : t.has(n)) && void 0 !== r && r;
+  } = e, i = (0, d.e7)([x.Z], () => x.Z.getFilters()), o = null !== (t = null == i ? void 0 : null === (r = i.types) || void 0 === r ? void 0 : r.has(n)) && void 0 !== t && t;
   return (0, a.jsx)(u.Checkbox, {
 value: o,
 onClick: function() {
@@ -90,20 +90,20 @@ onClick: function() {
 
 function S() {
   var e;
-  let t = (0, d.e7)([x.Z], () => x.Z.getFeed(_.YN.GLOBAL_FEED)),
-r = (0, d.e7)([x.Z], () => x.Z.getDebugImpressionCappingDisabled()),
+  let r = (0, d.e7)([x.Z], () => x.Z.getFeed(_.YN.GLOBAL_FEED)),
+t = (0, d.e7)([x.Z], () => x.Z.getDebugImpressionCappingDisabled()),
 i = (0, d.e7)([y.Z], () => y.Z.getDebugFastImpressionCappingEnabled()),
 l = function(e) {
-  let t = c().groupBy(e, e => e.content_type);
-  return Object.keys(t).map(e => {
-    let r = t[e];
+  let r = c().groupBy(e, e => e.content_type);
+  return Object.keys(r).map(e => {
+    let t = r[e];
     return {
       key: ''.concat(e),
-      type: r[0].content_type,
-      entries: r
+      type: t[0].content_type,
+      entries: t
     };
   });
-}(null == t ? void 0 : null === (e = t.entries) || void 0 === e ? void 0 : e.map(e => e.content)),
+}(null == r ? void 0 : null === (e = r.entries) || void 0 === e ? void 0 : e.map(e => e.content)),
 s = (0, d.e7)([x.Z], () => {
   var e;
   return (null === (e = x.Z.getFeedState(_.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
@@ -113,18 +113,18 @@ T = (0, d.e7)([
   f.Z,
   m.Z
 ], () => {
-  var e, t, r;
-  return parseInt(N) > 0 ? N : null !== (r = null === (e = f.Z.getGameByName(N)) || void 0 === e ? void 0 : e.id) && void 0 !== r ? r : null === (t = m.Z.getApplicationByName(N)) || void 0 === t ? void 0 : t.id;
+  var e, r, t;
+  return parseInt(N) > 0 ? N : null !== (t = null === (e = f.Z.getGameByName(N)) || void 0 === e ? void 0 : e.id) && void 0 !== t ? t : null === (r = m.Z.getApplicationByName(N)) || void 0 === r ? void 0 : r.id;
 }, [N]),
-I = (0, b.Z)({
+Z = (0, b.Z)({
   applicationId: T,
   location: 'DevToolsContentInventory',
   source: p.m1.DevTools
 });
   return (0, a.jsx)('div', {
-className: o()(C.panel),
+className: o()(w.panel),
 children: (0, a.jsxs)(u.ScrollerThin, {
-  className: w.content,
+  className: j.content,
   children: [
     (0, a.jsxs)(u.FormSection, {
       children: [
@@ -132,7 +132,7 @@ children: (0, a.jsxs)(u.ScrollerThin, {
           children: 'Inventory'
         }),
         l.length > 0 && (0, a.jsx)(g.Z, {
-          columns: j,
+          columns: C,
           data: l
         }),
         (0, a.jsx)(u.Spacer, {
@@ -188,7 +188,7 @@ children: (0, a.jsxs)(u.ScrollerThin, {
               type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING'
             });
           },
-          children: r ? 'Enable Impression Capping' : 'Disable Impression Capping'
+          children: t ? 'Enable Impression Capping' : 'Disable Impression Capping'
         }),
         (0, a.jsx)(u.Spacer, {
           size: 8
@@ -215,10 +215,10 @@ children: (0, a.jsxs)(u.ScrollerThin, {
           placeholder: 'App ID or full name',
           onChange: e => (0 === e.length || e.length >= 18) && S(e),
           onKeyDown: e => {
-            'Enter' === e.key && (N === e.currentTarget.value ? null == I || I() : S(e.currentTarget.value));
+            'Enter' === e.key && (N === e.currentTarget.value ? null == Z || Z() : S(e.currentTarget.value));
           },
-          error: N.length > 0 && null == I ? 'No game profile for '.concat(null != T ? T : N + ' - try by id', '.') : void 0,
-          style: null != I ? {
+          error: N.length > 0 && null == Z ? 'No game profile for '.concat(null != T ? T : N + ' - try by id', '.') : void 0,
+          style: null != Z ? {
             border: '1px solid green'
           } : {}
         })

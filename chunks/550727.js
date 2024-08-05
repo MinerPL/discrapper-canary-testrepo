@@ -1,11 +1,11 @@
 t.d(n, {
   B: function() {
-return r;
+return l;
   }
 });
 var i = t(70956),
   a = t(689938);
-let r = [{
+let l = [{
 duration: i.Z.Millis.HOUR,
 getLabel: () => a.Z.Messages.MESSAGE_REMINDERS_IN_ONE_HOUR
   },

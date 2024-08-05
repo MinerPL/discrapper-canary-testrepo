@@ -1,14 +1,14 @@
 n.d(t, {
   _: function() {
-return s;
+return l;
   }
 });
 var i = n(442837),
   a = n(897473),
-  l = n(433355);
+  s = n(433355);
 
-function s() {
-  let e = (0, i.e7)([l.ZP], () => l.ZP.getSidebarState(l.uZ)),
+function l() {
+  let e = (0, i.e7)([s.ZP], () => s.ZP.getSidebarState(s.uZ)),
 t = (null == e ? void 0 : e.type) === a.tI.VIEW_MESSAGE_REQUEST ? e : null,
 n = null == t ? void 0 : t.channelId;
   return {

@@ -1,12 +1,12 @@
 n.d(t, {
   Z: function() {
-return s;
+return o;
   }
 });
-var r, i, a, o, s, l, u = n(442837),
+var r, i, a, s, o, l, u = n(442837),
   c = n(570140),
   d = n(865427);
-(r = s || (s = {}))[r.NotResolved = 0] = 'NotResolved', r[r.Resolving = 1] = 'Resolving', r[r.Resolved = 2] = 'Resolved', r[r.Invalid = 3] = 'Invalid';
+(r = o || (o = {}))[r.NotResolved = 0] = 'NotResolved', r[r.Resolving = 1] = 'Resolving', r[r.Resolved = 2] = 'Resolved', r[r.Invalid = 3] = 'Invalid';
 let _ = 0,
   E = null,
   f = {};
@@ -59,12 +59,12 @@ return ! function(e) {
 return f;
   }
 }
-o = 'BuildOverrideStore', (a = 'displayName') in(i = h) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'BuildOverrideStore', (a = 'displayName') in(i = h) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.C = new h(c.Z, {
+}) : i[a] = s, t.C = new h(c.Z, {
   BUILD_OVERRIDE_RESOLVED: function(e) {
 let {
   url: t,

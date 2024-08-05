@@ -2,24 +2,28 @@ s(47120), s(627341);
 var n = s(735250),
   a = s(470079),
   i = s(278074),
-  r = s(481060),
-  o = s(70956),
-  l = s(497505),
-  c = s(210724),
-  d = s(130653),
-  _ = s(78826),
-  E = s(37303),
-  u = s(134483),
-  T = s(478977),
-  I = s(456799),
-  S = s(210851),
-  N = s(602683),
-  C = s(916028),
-  m = s(15033),
-  A = s(899457),
-  h = s(452693);
+  r = s(754700),
+  o = s(887003),
+  l = s(742635),
+  c = s(458708),
+  d = s(481060),
+  _ = s(70956),
+  E = s(497505),
+  u = s(210724),
+  T = s(130653),
+  I = s(78826),
+  S = s(37303),
+  N = s(134483),
+  C = s(478977),
+  m = s(456799),
+  A = s(210851),
+  g = s(602683),
+  h = s(916028),
+  O = s(15033),
+  p = s(899457),
+  R = s(452693);
 
-function g(e, t, s) {
+function x(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
 value: s,
 enumerable: !0,
@@ -27,25 +31,25 @@ configurable: !0,
 writable: !0
   }) : e[t] = s, e;
 }
-let O = [
+let M = [
 'svg',
 'png',
 'gif',
 'webp'
   ],
-  p = [
-...O,
+  f = [
+...M,
 'jpg',
 'jpeg'
   ],
-  R = Array.from(new Set([
-...p,
+  D = Array.from(new Set([
+...f,
 'gif',
 'mp4',
 'webm'
   ]));
 
-function x() {
+function P() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
 {
   streamProgressSeconds: t = 0,
@@ -66,73 +70,83 @@ dismissedQuestContent: 0,
 progress: {}
   };
 }
-let M = {
-  id: '1193992107035983872',
-  preview: !0,
-  config: {
-configVersion: 1,
-expiresAt: '2030-06-01T00:00:00+00:00',
-streamDurationRequirementMinutes: 10,
-getGameLink: 'https://discord.com/',
-applicationId: '123',
-applicationName: 'Sky Runners',
-gameTitle: 'Sky Runners',
-messages: {
-  questName: 'Sky Runners',
-  rewardName: 'Orange Buddy Jetpack',
-  rewardNameWithArticle: 'an Orange Buddy Jetpack',
-  rewardRedemptionInstructionsByPlatform: {
-    0: 'This code can be used on any platform!',
-    1: 'Redeem your code on your Xbox.',
-    2: 'Redeem your code on your Playstation.',
-    3: 'Redeem your code on your Switch.',
-    4: 'Redeem your code on your PC.'
+let L = '1193992107035983872',
+  b = {
+id: L,
+preview: !0,
+config: {
+  id: L,
+  configVersion: 2,
+  startsAt: '2024-01-01T00:00:00+00:00',
+  expiresAt: '2030-01-01T00:00:00+00:00',
+  application: {
+    link: 'https://discord.com/',
+    id: '123',
+    name: 'Sky Runners'
   },
-  gameTitle: 'Sky Runners',
-  gamePublisher: 'Discord'
-},
-colors: {
-  primary: '#B377F3',
-  secondary: '#5865F2'
-},
-rewardsConfig: {
-  assignmentMethod: 1,
-  rewards: []
-},
-rewardCodeExpiresAt: '2030-07-01T00:00:00+00:00',
-rewardCodePlatforms: [
-  0,
-  4,
-  2,
-  3,
-  1
-],
-assets: {
-  rewardTile: 'reward.png',
-  hero: 'hero.png',
-  questBarHero: 'quests_bar_hero.webm',
-  gameTile: 'game_tile.png',
-  logotype: 'game_logotype.png'
-},
-inGameQuestConfig: null,
-variants: [],
-supplementaryApplicationIds: []
+  messages: {
+    questName: 'Sky Runners',
+    gameTitle: 'Sky Runners',
+    gamePublisher: 'Discord'
   },
-  userStatus: null,
-  targetedContent: []
-};
+  colors: {
+    primary: '#B377F3',
+    secondary: '#5865F2'
+  },
+  rewardsConfig: {
+    assignmentMethod: 1,
+    rewards: [{
+      skuId: '',
+      asset: 'reward.png',
+      type: o.w.REWARD_CODE,
+      messages: {
+        name: 'Orange Buddy Jetpack',
+        nameWithArticle: 'an Orange Buddy Jetpack',
+        redemptionInstructionsByPlatform: {
+          0: 'This code can be used on any platform!',
+          1: 'Redeem your code on your Xbox.',
+          2: 'Redeem your code on your Playstation.',
+          3: 'Redeem your code on your Switch.',
+          4: 'Redeem your code on your PC.'
+        }
+      }
+    }],
+    rewardsExpireAt: '2030-01-01T00:00:00+00:00',
+    platforms: [
+      0,
+      4,
+      2,
+      3,
+      1
+    ]
+  },
+  assets: {
+    hero: 'hero.png',
+    questBarHero: 'quests_bar_hero.webm',
+    gameTile: 'game_tile.png',
+    logotype: 'game_logotype.png'
+  },
+  taskConfig: {
+    type: l.L.FIRST_PARTY,
+    joinOperator: c.r.AND,
+    tasks: {
+      [r.X.PLAY_ON_DESKTOP]: {
+        eventName: r.X.PLAY_ON_DESKTOP,
+        target: 300,
+        externalIds: []
+      }
+    }
+  },
+  features: []
+},
+userStatus: null,
+targetedContent: []
+  };
 
-function D() {
+function Z() {
   var e, t, s;
-  let [g, D] = a.useState(M), [f, P] = a.useState(A.a.UNENROLLED), [L, Z] = a.useState([]), [b, v] = a.useState(!1), [j, B] = a.useState(null);
-  let U = (s = g.config, (0, i.EQ)(s).with({
-configVersion: 1
-  }, e => ({
-name: e.messages.rewardName,
-nameWithArticle: e.messages.rewardNameWithArticle,
-redemptionInstructionsByPlatform: e.messages.rewardRedemptionInstructionsByPlatform,
-rewardTile: e.assets.rewardTile
-  })).with({
+  let [r, o] = a.useState(b), [l, c] = a.useState(p.a.UNENROLLED), [x, L] = a.useState([]), [Z, v] = a.useState(!1), [j, B] = a.useState(null);
+  let U = (s = r.config, (0, i.EQ)(s).with({
 configVersion: 2
   }, e => {
 let t = e.rewardsConfig.rewards[0];
@@ -143,29 +157,19 @@ return {
   }).exhaustive());
   a.useEffect(() => {
 var e;
-Z((e = g.config, (0, i.EQ)(e).with({
-  configVersion: 1
-}, e => e.variants).with({
+L((e = r.config, (0, i.EQ)(e).with({
   configVersion: 2
 }, e => e.features).exhaustive()));
-  }, [g]);
+  }, [r]);
 
   function G(e, t) {
 var s, n;
 if ('hero' === e || 'questBarHero' === e || 'gameTile' === e || 'logotype' === e)
-  D({
-    ...g,
-    config: (s = g.config, n = {
+  o({
+    ...r,
+    config: (s = r.config, n = {
       [e]: t
     }, (0, i.EQ)(s).with({
-      configVersion: 1
-    }, e => ({
-      ...e,
-      assets: {
-        ...e.assets,
-        ...n
-      }
-    })).with({
       configVersion: 2
     }, e => ({
       ...e,
@@ -180,19 +184,11 @@ if ('hero' === e || 'questBarHero' === e || 'gameTile' === e || 'logotype' === e
   function F(e, t) {
 var s, n;
 if ('questName' === e || 'gameTitle' === e || 'gamePublisher' === e)
-  D({
-    ...g,
-    config: (s = g.config, n = {
+  o({
+    ...r,
+    config: (s = r.config, n = {
       [e]: t
     }, (0, i.EQ)(s).with({
-      configVersion: 1
-    }, e => ({
-      ...e,
-      messages: {
-        ...e.messages,
-        ...n
-      }
-    })).with({
       configVersion: 2
     }, e => ({
       ...e,
@@ -207,19 +203,11 @@ if ('questName' === e || 'gameTitle' === e || 'gamePublisher' === e)
   function y(e, t) {
 var s, n;
 if ('rewardName' === e || 'rewardNameWithArticle' === e)
-  D({
-    ...g,
-    config: (s = g.config, n = {
+  o({
+    ...r,
+    config: (s = r.config, n = {
       [e]: t
     }, (0, i.EQ)(s).with({
-      configVersion: 1
-    }, e => ({
-      ...e,
-      messages: {
-        ...e.messages,
-        ...n
-      }
-    })).with({
       configVersion: 2
     }, e => ({
       ...e,
@@ -238,12 +226,12 @@ if ('rewardName' === e || 'rewardNameWithArticle' === e)
   }
 
   function V(e, t) {
-D({
-  ...g,
+o({
+  ...r,
   config: {
-    ...g.config,
+    ...r.config,
     colors: {
-      ...g.config.colors,
+      ...r.config.colors,
       [e]: t
     }
   }
@@ -251,48 +239,48 @@ D({
   }
   return (0, n.jsxs)('div', {
 children: [
-  (0, n.jsx)(r.Heading, {
+  (0, n.jsx)(d.Heading, {
     variant: 'heading-lg/bold',
-    className: h.heading,
+    className: R.heading,
     children: 'Quest Preview Tool'
   }),
   (0, n.jsx)('div', {
-    className: h.fields,
-    children: (0, n.jsx)(C.Z, {
+    className: R.fields,
+    children: (0, n.jsx)(h.Z, {
       onSelect: function(e) {
         if (B(e), null != e)
-          D(e);
+          o(e);
       },
       quest: j
     })
   }),
-  (0, n.jsx)(r.Heading, {
+  (0, n.jsx)(d.Heading, {
     variant: 'heading-md/semibold',
-    className: h.subheading,
+    className: R.subheading,
     children: 'Messages'
   }),
   (0, n.jsxs)('div', {
-    className: h.fields,
+    className: R.fields,
     children: [
-      (0, n.jsx)(N.Z, {
+      (0, n.jsx)(g.Z, {
         title: 'Quest Name',
         assetKey: 'questName',
         onMessageChange: F,
-        initialValue: g.config.messages.questName
+        initialValue: r.config.messages.questName
       }),
-      (0, n.jsx)(N.Z, {
+      (0, n.jsx)(g.Z, {
         title: 'Game Title',
         assetKey: 'gameTitle',
         onMessageChange: F,
-        initialValue: g.config.messages.gameTitle
+        initialValue: r.config.messages.gameTitle
       }),
-      (0, n.jsx)(N.Z, {
+      (0, n.jsx)(g.Z, {
         title: 'Reward Name',
         assetKey: 'rewardName',
         onMessageChange: y,
         initialValue: U.name
       }),
-      (0, n.jsx)(N.Z, {
+      (0, n.jsx)(g.Z, {
         title: 'Reward Name With Article',
         assetKey: 'rewardNameWithArticle',
         onMessageChange: y,
@@ -300,54 +288,46 @@ children: [
       })
     ]
   }),
-  (0, n.jsx)(r.Heading, {
+  (0, n.jsx)(d.Heading, {
     variant: 'heading-md/semibold',
-    className: h.subheading,
+    className: R.subheading,
     children: 'Assets'
   }),
   (0, n.jsxs)('div', {
-    className: h.fields,
+    className: R.fields,
     children: [
-      (0, n.jsx)(S.Z, {
+      (0, n.jsx)(A.Z, {
         title: 'Game Tile Asset',
         assetKey: 'gameTile',
         onFileChange: G,
-        filters: p,
-        initialValue: g.config.assets.gameTile
+        filters: f,
+        initialValue: r.config.assets.gameTile
       }),
-      (0, n.jsx)(S.Z, {
+      (0, n.jsx)(A.Z, {
         title: 'Logotype',
         assetKey: 'logotype',
         onFileChange: G,
-        filters: O,
-        initialValue: g.config.assets.logotype
+        filters: M,
+        initialValue: r.config.assets.logotype
       }),
-      (0, n.jsx)(S.Z, {
+      (0, n.jsx)(A.Z, {
         title: 'Quest Bar Hero Asset',
         assetKey: 'questBarHero',
         onFileChange: G,
-        filters: R,
-        initialValue: g.config.assets.questBarHero
+        filters: D,
+        initialValue: r.config.assets.questBarHero
       }),
-      (0, n.jsx)(S.Z, {
+      (0, n.jsx)(A.Z, {
         title: 'Reward Tile Asset',
         assetKey: 'rewardTile',
         onFileChange: function(e, t) {
           var s, n;
           if ('rewardTile' === e)
-            D({
-              ...g,
-              config: (s = g.config, n = {
+            o({
+              ...r,
+              config: (s = r.config, n = {
                 [e]: t
               }, (0, i.EQ)(s).with({
-                configVersion: 1
-              }, e => ({
-                ...e,
-                assets: {
-                  ...e.assets,
-                  ...n
-                }
-              })).with({
                 configVersion: 2
               }, e => ({
                 ...e,
@@ -365,173 +345,168 @@ children: [
               })).exhaustive())
             });
         },
-        filters: R,
+        filters: D,
         initialValue: U.rewardTile
       }),
-      (0, n.jsx)(S.Z, {
+      (0, n.jsx)(A.Z, {
         title: 'Gift Inventory Hero',
         assetKey: 'hero',
         onFileChange: G,
-        filters: R,
-        initialValue: g.config.assets.hero
+        filters: D,
+        initialValue: r.config.assets.hero
       })
     ]
   }),
   (0, n.jsx)('div', {
-    className: h.fields,
+    className: R.fields,
     children: (0, n.jsx)('div', {
-      className: h.fullWidthField,
-      children: (0, n.jsx)(m.Z, {
+      className: R.fullWidthField,
+      children: (0, n.jsx)(O.Z, {
         onChange: function(e) {
           var t, s;
-          D({
-            ...g,
-            config: (t = g.config, s = e, (0, i.EQ)(t).with({
-              configVersion: 1
-            }, e => ({
-              ...e,
-              variants: s
-            })).with({
+          o({
+            ...r,
+            config: (t = r.config, s = e, (0, i.EQ)(t).with({
               configVersion: 2
             }, e => ({
               ...e,
               features: s
             })).exhaustive())
-          }), Z(e);
+          }), L(e);
         },
-        values: L
+        values: x
       })
     })
   }),
-  (0, n.jsx)(r.Heading, {
+  (0, n.jsx)(d.Heading, {
     variant: 'heading-md/semibold',
-    className: h.subheading,
+    className: R.subheading,
     children: 'Colors & Quest States'
   }),
   (0, n.jsxs)('div', {
-    className: h.fields,
+    className: R.fields,
     children: [
       (0, n.jsxs)('div', {
-        className: h.fields,
+        className: R.fields,
         style: {
           marginBottom: 0
         },
         children: [
-          (0, n.jsx)(T.Z, {
+          (0, n.jsx)(C.Z, {
             title: 'Primary',
             colorKey: 'primary',
             onChange: V,
-            value: g.config.colors.primary
+            value: r.config.colors.primary
           }),
-          (0, n.jsx)(T.Z, {
+          (0, n.jsx)(C.Z, {
             title: 'Secondary',
             colorKey: 'secondary',
             onChange: V,
-            value: g.config.colors.secondary
+            value: r.config.colors.secondary
           })
         ]
       }),
-      (0, n.jsx)(A.Z, {
+      (0, n.jsx)(p.Z, {
         onChange: function(e) {
-          switch (P(e), e) {
-            case A.a.UNENROLLED:
-              D({
-                ...g,
+          switch (c(e), e) {
+            case p.a.UNENROLLED:
+              o({
+                ...r,
                 userStatus: null
               });
               break;
-            case A.a.ENROLLED:
-              D({
-                ...g,
-                userStatus: x({
+            case p.a.ENROLLED:
+              o({
+                ...r,
+                userStatus: P({
                   enrolledAt: new Date().toISOString()
                 })
               });
               break;
-            case A.a.COMPLETED_25:
-              D({
-                ...g,
-                userStatus: x({
+            case p.a.COMPLETED_25:
+              o({
+                ...r,
+                userStatus: P({
                   enrolledAt: new Date().toISOString(),
-                  streamProgressSeconds: 10 * o.Z.Seconds.MINUTE * 0.25
+                  streamProgressSeconds: 10 * _.Z.Seconds.MINUTE * 0.25
                 })
               });
               break;
-            case A.a.COMPLETED_50:
-              D({
-                ...g,
-                userStatus: x({
+            case p.a.COMPLETED_50:
+              o({
+                ...r,
+                userStatus: P({
                   enrolledAt: new Date().toISOString(),
-                  streamProgressSeconds: 10 * o.Z.Seconds.MINUTE * 0.5
+                  streamProgressSeconds: 10 * _.Z.Seconds.MINUTE * 0.5
                 })
               });
               break;
-            case A.a.COMPLETED_75:
-              D({
-                ...g,
-                userStatus: x({
+            case p.a.COMPLETED_75:
+              o({
+                ...r,
+                userStatus: P({
                   enrolledAt: new Date().toISOString(),
-                  streamProgressSeconds: 10 * o.Z.Seconds.MINUTE * 0.75
+                  streamProgressSeconds: 10 * _.Z.Seconds.MINUTE * 0.75
                 })
               });
               break;
-            case A.a.COMPLETED_100:
-              D({
-                ...g,
-                userStatus: x({
+            case p.a.COMPLETED_100:
+              o({
+                ...r,
+                userStatus: P({
                   completedAt: new Date().toISOString(),
                   enrolledAt: new Date().toISOString(),
-                  streamProgressSeconds: 10 * o.Z.Seconds.MINUTE
+                  streamProgressSeconds: 10 * _.Z.Seconds.MINUTE
                 })
               });
               break;
-            case A.a.CLAIMED:
-              D({
-                ...g,
-                userStatus: x({
+            case p.a.CLAIMED:
+              o({
+                ...r,
+                userStatus: P({
                   claimedAt: new Date().toISOString(),
                   completedAt: new Date().toISOString(),
                   enrolledAt: new Date().toISOString(),
-                  streamProgressSeconds: 10 * o.Z.Seconds.MINUTE
+                  streamProgressSeconds: 10 * _.Z.Seconds.MINUTE
                 })
               });
           }
         },
-        value: f
+        value: l
       })
     ]
   }),
-  (0, n.jsx)(r.Heading, {
+  (0, n.jsx)(d.Heading, {
     variant: 'heading-lg/bold',
-    className: h.heading,
+    className: R.heading,
     children: 'Component Previews'
   }),
   (0, n.jsxs)('div', {
-    className: h.componentPreviews,
+    className: R.componentPreviews,
     children: [
-      (0, n.jsxs)(I.Z, {
+      (0, n.jsxs)(m.Z, {
         withBorder: !0,
         children: [
-          (0, n.jsx)(r.FormTitle, {
+          (0, n.jsx)(d.FormTitle, {
             children: 'Quest Bar'
           }),
           (0, n.jsxs)('div', {
-            className: h.questBarPreviewWrapper,
+            className: R.questBarPreviewWrapper,
             children: [
-              (null === (e = g.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null && (0, n.jsx)(r.Text, {
+              (null === (e = r.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null && (0, n.jsx)(d.Text, {
                 color: 'text-secondary',
                 variant: 'text-sm/normal',
                 children: 'The Quest Bar is hidden when the user has claimed the reward.'
               }),
               (0, n.jsx)('div', {
-                className: h.questBarPreview,
-                children: (0, n.jsx)(_.p, {
+                className: R.questBarPreview,
+                children: (0, n.jsx)(I.p, {
                   isPreview: !0,
                   source: 'preview',
                   questId: '0',
-                  children: (0, n.jsx)(d.Z, {
-                    children: (0, n.jsx)(c.P, {
-                      quest: g
+                  children: (0, n.jsx)(T.Z, {
+                    children: (0, n.jsx)(u.P, {
+                      quest: r
                     })
                   })
                 })
@@ -540,45 +515,45 @@ children: [
           })
         ]
       }),
-      (0, n.jsxs)(I.Z, {
+      (0, n.jsxs)(m.Z, {
         children: [
-          (0, n.jsx)(r.FormTitle, {
+          (0, n.jsx)(d.FormTitle, {
             children: 'Gift Inventory'
           }),
-          (0, n.jsx)(_.p, {
+          (0, n.jsx)(I.p, {
             isPreview: !0,
             source: 'preview',
             questId: '0',
-            children: (0, n.jsx)(E.Z, {
-              quest: g,
-              location: l.jn.GIFT_INVENTORY_FOR_YOU
+            children: (0, n.jsx)(S.Z, {
+              quest: r,
+              location: E.jn.GIFT_INVENTORY_FOR_YOU
             })
           })
         ]
       }),
-      (0, n.jsxs)(I.Z, {
+      (0, n.jsxs)(m.Z, {
         withBorder: !0,
         children: [
-          (0, n.jsx)(r.FormTitle, {
+          (0, n.jsx)(d.FormTitle, {
             children: 'Channel Call Header'
           }),
-          (null === (t = g.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null && (0, n.jsx)(r.Text, {
+          (null === (t = r.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null && (0, n.jsx)(d.Text, {
             color: 'text-secondary',
             variant: 'text-sm/normal',
             children: 'The Quest Channel Call Header is hidden when the user has claimed the reward.'
           }),
           (0, n.jsx)('div', {
-            className: h.questBarPreviewWrapper,
-            children: (0, n.jsx)(_.p, {
+            className: R.questBarPreviewWrapper,
+            children: (0, n.jsx)(I.p, {
               isPreview: !0,
               source: 'preview',
               questId: '0',
               children: (0, n.jsx)('div', {
-                className: h.questChannelCallHeaderPreview,
-                children: (0, n.jsx)(u.Z, {
+                className: R.questChannelCallHeaderPreview,
+                children: (0, n.jsx)(N.Z, {
                   channelId: '123',
-                  previewQuest: g,
-                  isParticipatingOverride: b
+                  previewQuest: r,
+                  isParticipatingOverride: Z
                 })
               })
             })
@@ -586,10 +561,10 @@ children: [
         ]
       }),
       (0, n.jsx)('div', {
-        className: h.channelCallParticipationToggle,
-        children: (0, n.jsx)(r.FormItem, {
-          children: (0, n.jsx)(r.FormSwitch, {
-            value: b,
+        className: R.channelCallParticipationToggle,
+        children: (0, n.jsx)(d.FormItem, {
+          children: (0, n.jsx)(d.FormSwitch, {
+            value: Z,
             onChange: function(e) {
               v(e);
             },
@@ -603,7 +578,7 @@ children: [
 ]
   });
 }
-class f extends a.Component {
+class v extends a.Component {
   componentDidCatch(e) {
 this.setState({
   error: e
@@ -615,35 +590,35 @@ let {
   renderKey: t
 } = this.state;
 return null != e ? (0, n.jsxs)('div', {
-  className: h.errorBoundary,
+  className: R.errorBoundary,
   children: [
-    (0, n.jsx)(r.CircleExclamationPointIcon, {
-      className: h.errorBoundaryIcon
+    (0, n.jsx)(d.CircleExclamationPointIcon, {
+      className: R.errorBoundaryIcon
     }),
-    (0, n.jsx)(r.Heading, {
+    (0, n.jsx)(d.Heading, {
       variant: 'heading-lg/semibold',
       children: 'Something broke in the Quest preview tool :('
     }),
-    (0, n.jsx)(r.Button, {
-      color: r.ButtonColors.PRIMARY,
+    (0, n.jsx)(d.Button, {
+      color: d.ButtonColors.PRIMARY,
       onClick: this.handleResetState,
       children: 'Reset'
     }),
-    null != e.message && (0, n.jsx)(r.Card, {
-      className: h.errorMessageWrapper,
+    null != e.message && (0, n.jsx)(d.Card, {
+      className: R.errorMessageWrapper,
       children: (0, n.jsx)('code', {
-        className: h.errorMessage,
+        className: R.errorMessage,
         children: e.message
       })
     })
   ]
-}) : (0, n.jsx)(D, {}, t);
+}) : (0, n.jsx)(Z, {}, t);
   }
   constructor(...e) {
-super(...e), g(this, 'state', {
+super(...e), x(this, 'state', {
   error: null,
   renderKey: 0
-}), g(this, 'handleResetState', () => {
+}), x(this, 'handleResetState', () => {
   this.setState(e => ({
     error: null,
     renderKey: e.renderKey + 1
@@ -651,4 +626,4 @@ super(...e), g(this, 'state', {
 });
   }
 }
-t.Z = f;
+t.Z = v;

@@ -67,22 +67,22 @@ let {
   record: a
 } = n, o = e.has(a.id);
 return r()(t.toLowerCase(), a.name.toLowerCase()) ? l.push(H(n, o)) : o && l.push(H(n, o)), l;
-  }, []), A = a.useCallback(e => {
+  }, []), N = a.useCallback(e => {
 (0, x.Dr)(t, {
   selectedRoleIds: e
 }), o(e);
   }, [
 t,
 o
-  ]), N = a.useCallback(c()(A, 300), [A]), R = a.useCallback(e => {
+  ]), A = a.useCallback(c()(N, 300), [N]), R = a.useCallback(e => {
 let t;
 d(t = C.has(e) ? new Set([...C].filter(t => t !== e)) : new Set([
   ...C,
   e
-])), N(t);
+])), A(t);
   }, [
 C,
-N
+A
   ]);
   return (0, n.jsx)(_.ComboboxPopout, {
 className: s()(L.rolePopout),

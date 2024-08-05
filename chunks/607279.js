@@ -1,8 +1,8 @@
 n(47120);
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(481060),
   u = n(689938),
   c = n(289460);
@@ -23,7 +23,7 @@ let {
   placeholder: n,
   searchTerm: r,
   inputClassName: a,
-  className: o,
+  className: s,
   onChange: d,
   onFocus: _,
   onBlur: E,
@@ -38,7 +38,7 @@ return (0, i.jsx)(l.FocusRing, {
   focusTarget: S,
   ringTarget: this._containerRef,
   children: (0, i.jsxs)('div', {
-    className: s()(c.searchBox, o),
+    className: o()(c.searchBox, s),
     ref: this._containerRef,
     children: [
       (0, i.jsx)(l.TextInput, {
@@ -49,7 +49,7 @@ return (0, i.jsx)(l.FocusRing, {
         name: 'search',
         maxLength: 100,
         className: c.searchBoxInputWrapper,
-        inputClassName: s()(c.searchBoxInput, a),
+        inputClassName: o()(c.searchBoxInput, a),
         onChange: d,
         onFocus: _,
         onBlur: E,
@@ -73,12 +73,12 @@ return (0, i.jsx)(l.FocusRing, {
         children: (0, i.jsx)(l.CircleXIcon, {
           size: 'md',
           color: 'currentColor',
-          className: s()(c.clearIcon, m)
+          className: o()(c.clearIcon, m)
         })
       }) : (0, i.jsx)(l.MagnifyingGlassIcon, {
         size: 'md',
         color: 'currentColor',
-        className: s()(c.searchIcon, I),
+        className: o()(c.searchIcon, I),
         'aria-label': u.Z.Messages.SEARCH
       })
     ]

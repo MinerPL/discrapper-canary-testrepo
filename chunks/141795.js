@@ -7,8 +7,8 @@ return R;
   }
 }), n(47120), n(411104);
 var r, i, a = n(392711),
-  o = n.n(a),
-  s = n(261470),
+  s = n.n(a),
+  o = n(261470),
   l = n(544891),
   u = n(710845),
   c = n(432877),
@@ -57,12 +57,12 @@ return 'COMPLETED' !== a.status && (a.status = 'NOT_STARTED'), Object.entries(e)
   retryOpts() {
 return this.item.platform === T.ow.REACT_NATIVE ? {
   timeout: 1 * p.Z.Millis.HOUR,
-  backoff: new s.Z(0.5 * p.Z.Millis.SECOND, 30 * p.Z.Millis.MINUTE),
+  backoff: new o.Z(0.5 * p.Z.Millis.SECOND, 30 * p.Z.Millis.MINUTE),
   retries: 12
 } : {
   timeout: 1 * p.Z.Millis.HOUR,
   retries: 12,
-  backoff: new s.Z()
+  backoff: new o.Z()
 };
   }
   async uploadFileToCloudAsChunks(e) {
@@ -76,14 +76,14 @@ let {
 this.uploadAnalytics.numChunks = i, this.uploadAnalytics.totalRequestCount = 0;
 for (let a = 0; a < i; a++) {
   N.info('Uploading chunk '.concat(a + 1, ' of ').concat(i, ' for file id ').concat(this.id));
-  let o = a * e,
-    s = Math.min(o + e, n),
-    l = await this.getChunk(o, s, r);
+  let s = a * e,
+    o = Math.min(s + e, n),
+    l = await this.getChunk(s, o, r);
   try {
     await this.uploadChunk({
       chunk: l,
-      start: o,
-      end: s,
+      start: s,
+      end: o,
       totalSize: n,
       sessionUrl: this.responseUrl,
       contentType: t
@@ -125,7 +125,7 @@ let t = {
 for (let r = 1; r <= 3; r++) {
   var n;
   this.uploadAnalytics.totalRequestCount = (null !== (n = this.uploadAnalytics.totalRequestCount) && void 0 !== n ? n : 0) + 1, N.log('Attempt '.concat(r, ' for file id ').concat(this.id, ' : Uploading chunk ').concat(e.start, '-').concat(e.end - 1, ' of ').concat(e.totalSize, ' bytes'));
-  let i = o().throttle(t => {
+  let i = s().throttle(t => {
     let n = e.start + t.loaded;
     this.emit('progress', n, e.totalSize, n - this.loaded), this.loaded = n;
   }, 50);
@@ -166,7 +166,7 @@ N.log('Uploading '.concat(this.id)), this.item.platform === T.ow.REACT_NATIVE ? 
   uri: this.item.uri,
   name: this.item.filename
 }).type && 'application/json' !== e.type ? e.type : 'application/octet-stream' : (e = this.item.file, t = 'application/octet-stream');
-let n = o().throttle(e => {
+let n = s().throttle(e => {
     this.emit('progress', e.loaded, e.total, e.loaded - this.loaded), this.loaded = e.loaded;
   }, 50),
   r = {
@@ -333,9 +333,9 @@ f.default.track(S.rMx.ATTACHMENT_UPLOAD_STARTED, {
   }
   trackUploadFinished(e) {
 var t, n, r, i, a;
-let o = null != this.startTime ? performance.now() - this.startTime : -1;
+let s = null != this.startTime ? performance.now() - this.startTime : -1;
 f.default.track(S.rMx.ATTACHMENT_UPLOAD_FINISHED, {
-  duration_ms: o,
+  duration_ms: s,
   file_size: this.currentSize,
   pre_compression_file_size: this.preCompressionSize,
   final_state: e,
@@ -365,7 +365,7 @@ f.default.track(S.rMx.ATTACHMENT_UPLOAD_FINISHED, {
 });
   }
   constructor(e, t, n, r) {
-var i, a, o, s;
-super(e, n), A(this, 'RESUME_INCOMPLETE_CODES', [308]), A(this, 'status', 'NOT_STARTED'), A(this, 'channelId', void 0), A(this, 'responseUrl', void 0), A(this, 'currentSize', void 0), A(this, 'preCompressionSize', void 0), A(this, 'postCompressionSize', void 0), A(this, 'loaded', 0), A(this, 'reactNativeFileIndex', void 0), A(this, 'error', void 0), A(this, 'reactNativeFilePrepped', !1), A(this, 'startTime', void 0), A(this, 'uploadAnalytics', new O()), A(this, '_abortController', void 0), A(this, '_xhr', void 0), A(this, '_aborted', !1), this.channelId = t, this.preCompressionSize = null !== (o = null === (i = e.file) || void 0 === i ? void 0 : i.size) && void 0 !== o ? o : 0, this.currentSize = null !== (s = null === (a = e.file) || void 0 === a ? void 0 : a.size) && void 0 !== s ? s : 0, this.reactNativeFileIndex = r, this._abortController = new AbortController();
+var i, a, s, o;
+super(e, n), A(this, 'RESUME_INCOMPLETE_CODES', [308]), A(this, 'status', 'NOT_STARTED'), A(this, 'channelId', void 0), A(this, 'responseUrl', void 0), A(this, 'currentSize', void 0), A(this, 'preCompressionSize', void 0), A(this, 'postCompressionSize', void 0), A(this, 'loaded', 0), A(this, 'reactNativeFileIndex', void 0), A(this, 'error', void 0), A(this, 'reactNativeFilePrepped', !1), A(this, 'startTime', void 0), A(this, 'uploadAnalytics', new O()), A(this, '_abortController', void 0), A(this, '_xhr', void 0), A(this, '_aborted', !1), this.channelId = t, this.preCompressionSize = null !== (s = null === (i = e.file) || void 0 === i ? void 0 : i.size) && void 0 !== s ? s : 0, this.currentSize = null !== (o = null === (a = e.file) || void 0 === a ? void 0 : a.size) && void 0 !== o ? o : 0, this.reactNativeFileIndex = r, this._abortController = new AbortController();
   }
 }

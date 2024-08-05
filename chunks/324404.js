@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return s;
+return o;
   }
 }), n(47120);
 var r = n(699581),
@@ -14,12 +14,12 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let o = {
+let s = {
   root: null,
   rootMargin: '0px',
   threshold: 0.5
 };
-class s {
+class o {
   isVisible(e) {
 return null == this._observer || this._visibleComponents.has(e);
   }
@@ -38,7 +38,7 @@ if (null == t)
 let n = this._components.get(e);
 null != n && (this._nodes.delete(n), this._components.delete(e), this._visibleComponents.delete(e), t.unobserve(n));
   }
-  constructor(e = o) {
+  constructor(e = s) {
 a(this, '_observer', void 0), a(this, '_options', void 0), a(this, '_nodes', new WeakMap()), a(this, '_components', new WeakMap()), a(this, '_visibleComponents', new WeakSet()), a(this, '_handleEntries', e => {
   e.forEach(e => {
     let t;

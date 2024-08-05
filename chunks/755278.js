@@ -6,8 +6,8 @@ return m;
 var r = n(928801),
   i = n(924557),
   a = n(435064),
-  o = n(779618),
-  s = n(594190),
+  s = n(779618),
+  o = n(594190),
   l = n(836157),
   u = n(441167),
   c = n(695346),
@@ -29,14 +29,14 @@ var e, t, n;
 let r = 0,
   _ = c.tU.getSetting();
 r = (0, h.mB)(r, p.BVn.ALLOW_VOICE_RECORDING, _);
-let f = (0, o.Z)(E.Z),
+let f = (0, s.Z)(E.Z),
   m = (0, i.ln)() && a.Z.getSettings().clipsEnabled && ((null === (e = d.Z.getCurrentUserActiveStream()) || void 0 === e ? void 0 : e.state) === p.jm8.ACTIVE || (null === (t = d.Z.getCurrentUserActiveStream()) || void 0 === t ? void 0 : t.state) === p.jm8.PAUSED),
   {
     enableDecoupledGameClipping: I
   } = l.Z.getCurrentConfig({
     location: 'computeVoiceFlags'
   }),
-  T = f && a.Z.getSettings().decoupledClipsEnabled && (null === (n = s.ZP.getVisibleGame()) || void 0 === n ? void 0 : n.windowHandle) != null && I;
+  T = f && a.Z.getSettings().decoupledClipsEnabled && (null === (n = o.ZP.getVisibleGame()) || void 0 === n ? void 0 : n.windowHandle) != null && I;
 r = (0, h.mB)(r, p.BVn.CLIPS_ENABLED, m || T);
 let {
   enableViewerClipping: g
@@ -87,19 +87,19 @@ let {
   channelId: r,
   selfMute: i,
   selfDeaf: a,
-  selfVideo: o,
-  preferredRegion: s,
+  selfVideo: s,
+  preferredRegion: o,
   preferredRegions: l,
   videoStreamParameters: u,
   flags: c = 0
 } = e;
-o && (null === (t = _.Z.getChannel(r)) || void 0 === t ? void 0 : t.type) === p.d4z.GUILD_STAGE_VOICE ? this.socket.voiceStateUpdate({
+s && (null === (t = _.Z.getChannel(r)) || void 0 === t ? void 0 : t.type) === p.d4z.GUILD_STAGE_VOICE ? this.socket.voiceStateUpdate({
   guildId: n,
   channelId: r,
   selfMute: i,
   selfDeaf: a,
-  selfVideo: o,
-  preferredRegion: s,
+  selfVideo: s,
+  preferredRegion: o,
   preferredRegions: l,
   videoStreamParameters: u,
   flags: c
@@ -108,8 +108,8 @@ o && (null === (t = _.Z.getChannel(r)) || void 0 === t ? void 0 : t.type) === p.
   channelId: r,
   selfMute: i,
   selfDeaf: a,
-  selfVideo: o,
-  preferredRegion: s,
+  selfVideo: s,
+  preferredRegion: o,
   preferredRegions: l,
   flags: c
 });

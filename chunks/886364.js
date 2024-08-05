@@ -4,8 +4,8 @@ t.Z = e => {
   let {
 id: t,
 startColor: n,
-stopColor: s,
-color: a,
+stopColor: a,
+color: s,
 stop: r
   } = e;
   return (0, i.jsxs)('linearGradient', {
@@ -17,15 +17,15 @@ children: [
   }),
   (0, i.jsx)('stop', {
     offset: r,
-    stopColor: s
+    stopColor: a
   }),
   (0, i.jsx)('stop', {
     offset: r,
-    stopColor: a
+    stopColor: s
   }),
   (0, i.jsx)('stop', {
     offset: '1',
-    stopColor: a
+    stopColor: s
   })
 ]
   });

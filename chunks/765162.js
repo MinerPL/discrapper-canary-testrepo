@@ -1,10 +1,10 @@
-var a = r(319301);
+var a = t(319301);
 let n = {
   figma: {
 category: 'embeds'
   }
 };
-t.Z = (0, a.a)({
+r.Z = (0, a.a)({
   'embed-title': {
 name: 'header-primary',
 meta: n

@@ -6,8 +6,8 @@ return C;
 var r = n(735250),
   i = n(470079),
   a = n(481060),
-  o = n(727637),
-  s = n(100527),
+  s = n(727637),
+  o = n(100527),
   l = n(906732),
   u = n(580552),
   c = n(680295),
@@ -43,7 +43,7 @@ newAnalyticsLocations: P = []
 analyticsLocations: w
   } = (0, l.ZP)([
 ...P,
-s.Z.BITE_SIZE_PROFILE_POPOUT
+o.Z.BITE_SIZE_PROFILE_POPOUT
   ]), x = (0, _.Q1)({
 layout: 'BITE_SIZE_POPOUT',
 userId: t.id,
@@ -51,7 +51,7 @@ guildId: n,
 channelId: C,
 messageId: y,
 roleId: D
-  }), G = i.useRef(null), k = (0, o.Z)(G);
+  }), G = i.useRef(null), k = (0, s.Z)(G);
   i.useEffect(() => {
 null == L || L(null == G ? void 0 : G.current);
   }, [

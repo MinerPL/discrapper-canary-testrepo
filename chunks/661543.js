@@ -11,7 +11,7 @@ imageSrc: t,
 file: n,
 uploadType: i,
 guildId: a,
-isTryItOutFlow: o = !1
+isTryItOutFlow: s = !1
   } = e;
   r.Z.dispatch({
 type: 'PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL',
@@ -19,6 +19,6 @@ imageSrc: t,
 file: n,
 uploadType: i,
 guildId: a,
-isTryItOutFlow: o
+isTryItOutFlow: s
   });
 }

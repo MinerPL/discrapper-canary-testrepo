@@ -1,10 +1,10 @@
 var r, i;
 n.d(t, {
   Jj: function() {
-return o;
+return s;
   },
   OF: function() {
-return s;
+return o;
   },
   WW: function() {
 return l;
@@ -17,7 +17,7 @@ return a;
   }
 });
 let a = 550,
-  o = 350,
-  s = 40;
+  s = 350,
+  o = 40;
 (i = r || (r = {})).STATIC = 'STATIC', i.RESPONSIVE = 'RESPONSIVE', i.MOSAIC = 'MOSAIC';
 let l = 20;

@@ -4,8 +4,8 @@ return E;
   }
 }), n(47120);
 var r, i, a = n(735250),
-  o = n(470079),
-  s = n(338545),
+  s = n(470079),
+  o = n(338545),
   l = n(442837),
   u = n(481060),
   c = n(607070),
@@ -19,9 +19,9 @@ confettiTriggerRef: n,
 setConfettiCount: r,
 setShouldFireConfetti: i,
 tooltipProps: d
-  } = e, [E, f] = o.useState(0), h = o.useRef(-1), p = o.useRef(!0), m = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), {
+  } = e, [E, f] = s.useState(0), h = s.useRef(-1), p = s.useRef(!0), m = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), {
 scaleFactor: I
-  } = (0, s.useSpring)({
+  } = (0, u.useSpring)({
 from: {
   scaleFactor: 1
 },
@@ -33,11 +33,11 @@ config: {
   friction: 7
 }
   });
-  return (o.useEffect(() => () => {
+  return (s.useEffect(() => () => {
 p.current = !1;
   }, []), m) ? (0, a.jsx)(a.Fragment, {
 children: t
-  }) : (0, a.jsx)(s.animated.div, {
+  }) : (0, a.jsx)(o.animated.div, {
 className: _.confettiTriggerWrapper,
 style: {
   transform: I.to(e => 'scale('.concat(e, ')'))
@@ -74,11 +74,11 @@ isFiring: r
   } = e, {
 cannon: i,
 createMultipleConfettiAt: a
-  } = o.useContext(d.h), s = (0, l.e7)([c.Z], () => c.Z.useReducedMotion);
-  return o.useEffect(() => () => {
+  } = s.useContext(d.h), o = (0, l.e7)([c.Z], () => c.Z.useReducedMotion);
+  return s.useEffect(() => () => {
 null == i || i.clearConfetti();
-  }, [i]), o.useEffect(() => {
-if (!r || s || null == n.current)
+  }, [i]), s.useEffect(() => {
+if (!r || o || null == n.current)
   return;
 let e = n.current.getBoundingClientRect(),
   i = e.left + e.width / 2;
@@ -100,6 +100,6 @@ t,
 n,
 a,
 r,
-s
+o
   ]), null;
 };

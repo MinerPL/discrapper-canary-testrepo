@@ -4,8 +4,8 @@ return o;
   }
 }), n(47120);
 var i = n(786761),
-  s = n(23750),
-  a = n(306680),
+  a = n(23750),
+  s = n(306680),
   r = n(709054);
 
 function l(e, t, n) {
@@ -22,7 +22,7 @@ return this.messageGeneration(e, t) === t;
   }
   messageGeneration(e, t) {
 let n = this.messages.get(e);
-return null == n ? -1 / 0 : n.generation !== t && null != n.message && n.message.id === a.ZP.lastMessageId(e) ? (this.messages.set(e, {
+return null == n ? -1 / 0 : n.generation !== t && null != n.message && n.message.id === s.ZP.lastMessageId(e) ? (this.messages.set(e, {
   ...n,
   generation: t
 }), t) : n.generation;
@@ -35,7 +35,7 @@ return null !== (n = null == i ? void 0 : null === (t = i.message) || void 0 ===
   messageRecord(e) {
 var t;
 let n = this.messages.get(e);
-return null != n && null != n.message && !(n.message instanceof s.ZP) && (n.message = (0, i.e5)(n.message)), null !== (t = null == n ? void 0 : n.message) && void 0 !== t ? t : null;
+return null != n && null != n.message && !(n.message instanceof a.ZP) && (n.message = (0, i.e5)(n.message)), null !== (t = null == n ? void 0 : n.message) && void 0 !== t ? t : null;
   }
   has(e) {
 return this.messages.has(e);
@@ -48,10 +48,10 @@ this.messages.set(e, {
   }
   putNew(e, t, n) {
 var i;
-let s = this.messages.get(e);
+let a = this.messages.get(e);
 null != t && function(e, t) {
   return null == t || r.default.compare(e, t) > 0;
-}(t.id, null == s ? void 0 : null === (i = s.message) || void 0 === i ? void 0 : i.id) && this.put(e, t, n);
+}(t.id, null == a ? void 0 : null === (i = a.message) || void 0 === i ? void 0 : i.id) && this.put(e, t, n);
   }
   putMany(e, t) {
 for (let n of e)
@@ -62,12 +62,12 @@ var t;
 if (null == e.id || null == e.channel_id)
   return;
 let n = e.channel_id,
-  a = this.messages.get(n);
-if ((null == a ? void 0 : null === (t = a.message) || void 0 === t ? void 0 : t.id) !== e.id)
+  s = this.messages.get(n);
+if ((null == s ? void 0 : null === (t = s.message) || void 0 === t ? void 0 : t.id) !== e.id)
   return;
-let r = a.message instanceof s.ZP ? (0, i.wi)(a.message, e) : (0, i.gx)(a.message, e);
+let r = s.message instanceof a.ZP ? (0, i.wi)(s.message, e) : (0, i.gx)(s.message, e);
 this.messages.set(n, {
-  ...a,
+  ...s,
   message: r
 });
   }

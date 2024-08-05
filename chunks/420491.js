@@ -1,5 +1,5 @@
 let r;
-var i, a, o, s, l = n(259443),
+var i, a, s, o, l = n(259443),
   u = n(442837),
   c = n(570140),
   d = n(818083),
@@ -93,7 +93,7 @@ return;
   }
   (0, E.CG)(e), e !== r && m.info('Setting Zstd to '.concat(e)), r = e;
 }
-class v extends(s = u.ZP.Store) {
+class v extends(o = u.ZP.Store) {
   initialize() {
 this.waitFor(_.Z);
   }
@@ -107,12 +107,12 @@ g = !0;
 g = !1;
   }
 }
-o = 'GatewayZstdStore', (a = 'displayName') in(i = v) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'GatewayZstdStore', (a = 'displayName') in(i = v) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new v(c.Z, {
+}) : i[a] = s, t.Z = new v(c.Z, {
   CONNECTION_OPEN: A,
   CONNECTION_INTERRUPTED: function(e) {
 let {

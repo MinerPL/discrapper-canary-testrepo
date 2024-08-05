@@ -6,8 +6,8 @@ return l;
 var r = n(470079),
   i = n(924826),
   a = n(536895),
-  o = n(40851),
-  s = n(590921);
+  s = n(40851),
+  o = n(590921);
 
 function l(e) {
   var t, n, l;
@@ -18,11 +18,11 @@ state: d,
 onFocus: _
   } = e, {
 renderWindow: E
-  } = r.useContext(o.ZP), f = (e, t) => {
+  } = r.useContext(s.ZP), f = (e, t) => {
 var n;
 if (null === (n = c.current) || void 0 === n || n.scrollToTop(), e && null != d.query) {
   let e = d.query.typeInfo.focusMode,
-    n = !(e === s.QZ.MANUAL || e === s.QZ.AUTO_WHEN_FILTERED && 0 === d.query.queryText.length);
+    n = !(e === o.QZ.MANUAL || e === o.QZ.AUTO_WHEN_FILTERED && 0 === d.query.queryText.length);
   d.isVisible && (!0 !== t || !1 !== n) ? (p.setFocus('0'), null == _ || _(0)) : (p.setFocus(null), null == _ || _(null));
 }
   }, h = e => {

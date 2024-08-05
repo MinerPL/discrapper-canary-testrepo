@@ -9,8 +9,8 @@ var i = t(735250),
   l = t(239091),
   o = t(911969),
   r = t(399860),
-  c = t(689938),
-  d = t(248217);
+  d = t(689938),
+  c = t(248217);
 
 function u(e) {
   let {
@@ -50,42 +50,42 @@ _
   return n => (0, i.jsx)(e, {
     ...n,
     id: m.id,
-    label: c.Z.Messages.COPY_ID_COMMAND
+    label: d.Z.Messages.COPY_ID_COMMAND
   });
 });
-  }, [m]), h = m.type === o.yU.CHAT ? s.SlashBoxIcon : s.PaperIcon, p = (0, r.gw)(m.type, m.displayName);
+  }, [m]), h = m.type === o.yU.CHAT ? s.SlashBoxIcon : s.PaperIcon, g = (0, r.gw)(m.type, m.displayName);
   return (0, i.jsxs)(s.Clickable, {
 onClick: E,
-className: d.item,
+className: c.item,
 onContextMenu: T,
 children: [
   (0, i.jsxs)('div', {
-    className: d.identifier,
+    className: c.identifier,
     children: [
       (0, i.jsx)(h, {
-        className: d.icon,
+        className: c.icon,
         size: 'md',
         color: 'currentColor'
       }),
       (0, i.jsx)(s.Text, {
         variant: 'text-md/normal',
-        children: p
+        children: g
       })
     ]
   }),
   (0, i.jsx)('div', {
-    className: d.statusContainer,
+    className: c.statusContainer,
     children: N ? (0, i.jsxs)('div', {
-      className: d.statusLine,
+      className: c.statusLine,
       children: [
         (0, i.jsx)(s.Text, {
           variant: 'text-md/normal',
-          children: c.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_STATUS_HAS_OVERRIDES
+          children: d.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_STATUS_HAS_OVERRIDES
         }),
         (0, i.jsx)(s.CircleInformationIcon, {
           size: 'sm',
           color: 'currentColor',
-          className: d.statusIcon
+          className: c.statusIcon
         })
       ]
     }) : null

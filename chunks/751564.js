@@ -1,8 +1,8 @@
 var r = n(690244)('%TypeError%'),
   i = n(395238),
   a = n(116298),
-  o = n(441596),
-  s = n(75150),
+  s = n(441596),
+  o = n(75150),
   l = n(860438),
   u = n(828148),
   c = n(148309),
@@ -16,13 +16,13 @@ throw new r('Assertion failed: IsPropertyKey(P) is not true');
   var E = i({
 Type: _,
 IsDataDescriptor: l,
-IsAccessorDescriptor: s
+IsAccessorDescriptor: o
   }, n) ? n : d(n);
   if (!i({
   Type: _,
   IsDataDescriptor: l,
-  IsAccessorDescriptor: s
+  IsAccessorDescriptor: o
 }, E))
 throw new r('Assertion failed: Desc is not a valid Property Descriptor');
-  return a(l, c, o, e, t, E);
+  return a(l, c, s, e, t, E);
 };

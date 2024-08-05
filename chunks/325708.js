@@ -6,13 +6,13 @@ return E;
 return i;
   }
 }), n(47120);
-var i, a, l = n(735250),
-  s = n(470079),
+var i, a, s = n(735250),
+  l = n(470079),
   r = n(120356),
   o = n.n(r),
   c = n(392711),
-  d = n(692547),
-  u = n(153867),
+  u = n(692547),
+  d = n(153867),
   h = n(347469),
   p = n(740492),
   m = n(36645),
@@ -25,7 +25,7 @@ resizableNode: t,
 onResize: n,
 onResizeEnd: i,
 maxWidth: a
-  } = e, s = (0, h.Z)({
+  } = e, l = (0, h.Z)({
 minDimension: m.C,
 maxDimension: a,
 resizableDomNodeRef: t,
@@ -33,8 +33,8 @@ onElementResize: n,
 onElementResizeEnd: i,
 orientation: h.y.HORIZONTAL_LEFT
   });
-  return (0, l.jsx)('div', {
-onMouseDown: s,
+  return (0, s.jsx)('div', {
+onMouseDown: l,
 className: _.resizeHandle
   });
 }
@@ -46,7 +46,7 @@ maxWidth: n,
 onWidthChange: i,
 children: a,
 floatingLayer: r
-  } = e, h = s.useRef(null), E = function(e) {
+  } = e, h = l.useRef(null), E = function(e) {
 switch (e) {
   case 0:
     return 'postSidebarWidth';
@@ -59,38 +59,38 @@ switch (e) {
   case 4:
     return 'homeSidebarWidth';
 }
-  }(t), [C, g] = s.useState(p.ZP[E]), I = s.useCallback(e => {
-u.ZP.updatedUnsyncedSettings({
+  }(t), [g, C] = l.useState(p.ZP[E]), I = l.useCallback(e => {
+d.ZP.updatedUnsyncedSettings({
   [E]: e
 });
   }, [E]), x = (0, m.W)({
 maxWidth: n
-  }), T = (0, c.clamp)(C, m.C, n), v = x ? T : T + d.Z.modules.chat.RESIZE_HANDLE_WIDTH;
-  s.useEffect(() => {
+  }), T = (0, c.clamp)(g, m.C, n), N = x ? T : T + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
+  l.useEffect(() => {
 null == i || i(T, x);
   }, [
 T,
 i,
 x
   ]);
-  let N = (0, l.jsxs)(l.Fragment, {
+  let v = (0, s.jsxs)(s.Fragment, {
 children: [
-  (0, l.jsx)('div', {
+  (0, s.jsx)('div', {
     className: o()(_.chatTarget, {
       [_.floating]: x,
       [_.notFloating]: !x
     }),
     style: {
-      width: v
+      width: N
     }
   }),
-  !x && (0, l.jsx)(f, {
+  !x && (0, s.jsx)(f, {
     maxWidth: n,
     resizableNode: h,
-    onResize: g,
+    onResize: C,
     onResizeEnd: I
   }),
-  (0, l.jsx)('div', {
+  (0, s.jsx)('div', {
     ref: h,
     className: o()(_.container, {
       [_.floating]: x
@@ -103,15 +103,15 @@ children: [
 ]
   });
   if (x) {
-let e = null != r ? r : s.Fragment;
-return (0, l.jsx)(e, {
-  children: (0, l.jsx)('div', {
+let e = null != r ? r : l.Fragment;
+return (0, s.jsx)(e, {
+  children: (0, s.jsx)('div', {
     className: _.chatLayerWrapper,
-    children: N
+    children: v
   })
 });
   }
-  return (0, l.jsx)(l.Fragment, {
-children: N
+  return (0, s.jsx)(s.Fragment, {
+children: v
   });
 }

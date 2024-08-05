@@ -16,8 +16,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(442837),
-  s = n(481060),
+  s = n(442837),
+  o = n(481060),
   l = n(846027),
   u = n(40851),
   c = n(835473),
@@ -52,7 +52,7 @@ iconClassName: a()(D.arrowIcon, {
   [D.arrowIconExpanded]: n
 }),
 onClick: t,
-iconComponent: s.ChevronSmallDownIcon,
+iconComponent: o.ChevronSmallDownIcon,
 label: n ? y.Z.Messages.PICTURE_IN_PICTURE_COLLAPSE : y.Z.Messages.PICTURE_IN_PICTURE_EXPAND
   });
 }
@@ -62,19 +62,19 @@ function M(e) {
   let {
 channel: i,
 applicationId: a,
-onMouseDown: s,
+onMouseDown: o,
 onMouseMove: m,
 onMouseLeave: g,
 onJumpToChannel: v,
 idle: y,
 selectedParticipant: b
-  } = e, M = (0, u.bp)() === R.IlC.POPOUT, P = (0, o.e7)([A.Z], () => A.Z.isVideoEnabled()), U = (0, o.e7)([A.Z], () => Object.values(A.Z.getVideoDevices())[0]), w = !1 === (null === (t = null == U ? void 0 : U.disabled) || void 0 === t || t), x = (0, c.Z)([a])[0], G = (0, E.Z)(i), k = e => {
+  } = e, M = (0, u.bp)() === R.IlC.POPOUT, P = (0, s.e7)([A.Z], () => A.Z.isVideoEnabled()), U = (0, s.e7)([A.Z], () => Object.values(A.Z.getVideoDevices())[0]), w = !1 === (null === (t = null == U ? void 0 : U.disabled) || void 0 === t || t), x = (0, c.Z)([a])[0], G = (0, E.Z)(i), k = e => {
 l.Z.setVideoEnabled(e);
   };
   return (0, r.jsxs)('div', {
 className: L.videoControls,
 onMouseMove: m,
-onMouseDown: s,
+onMouseDown: o,
 onMouseLeave: g,
 children: [
   (0, r.jsx)('div', {
@@ -149,17 +149,17 @@ function P(e) {
   let {
 channel: n,
 applicationId: i,
-onMouseDown: o,
+onMouseDown: s,
 onMouseMove: l,
 onMouseLeave: u,
 onJumpToChannel: d,
 idle: _,
 users: E
   } = e, f = (0, c.Z)([i])[0];
-  return (0, r.jsxs)(s.Clickable, {
+  return (0, r.jsxs)(o.Clickable, {
 className: a()(L.videoControls, L.videoControlsTextActivity),
 onMouseMove: l,
-onMouseDown: o,
+onMouseDown: s,
 onMouseLeave: u,
 onDoubleClick: d,
 children: [
@@ -212,7 +212,7 @@ function w(e) {
   let {
 onMouseDown: n,
 onMouseMove: i,
-onMouseLeave: o,
+onMouseLeave: s,
 showControls: l,
 applicationId: u,
 channel: d,
@@ -225,13 +225,13 @@ hideExpandedButton: m
 className: D.pipHeader,
 onMouseMove: i,
 onMouseDown: n,
-onMouseLeave: o,
+onMouseLeave: s,
 children: (0, r.jsxs)('div', {
   className: a()(L.topControls, D.pipHeaderContent, {
     [D.pipHeaderContentOpen]: l
   }),
   children: [
-    !l && (0, r.jsx)(s.MoreHorizontalIcon, {
+    !l && (0, r.jsx)(o.MoreHorizontalIcon, {
       size: 'xxs',
       color: 'currentColor',
       className: D.menuIcon

@@ -1,14 +1,14 @@
-i.d(n, {
+n.d(t, {
   Z: function() {
-return t;
+return i;
   }
 });
 
-function t(e) {
+function i(e) {
   if (null != e.title && null != e.filename) {
-let n = e.filename.lastIndexOf('.'),
-  i = n > 0 ? e.filename.substr(n) : '';
-return e.title + i;
+let t = e.filename.lastIndexOf('.'),
+  n = t > 0 ? e.filename.substr(t) : '';
+return e.title + n;
   }
   return e.filename;
 }

@@ -5,8 +5,8 @@ return T;
 });
 var l = n(735250),
   o = n(470079),
-  t = n(481060),
-  s = n(100527),
+  s = n(481060),
+  t = n(100527),
   a = n(906732),
   c = n(598),
   i = n(409813),
@@ -29,14 +29,14 @@ image: o
   return (0, l.jsxs)('div', {
 className: N.header,
 children: [
-  (0, l.jsx)(t.Heading, {
+  (0, l.jsx)(s.Heading, {
     variant: 'heading-xl/semibold',
     id: E,
     color: 'header-primary',
     className: h.marginBottom8,
     children: r
   }),
-  (0, l.jsx)(t.Text, {
+  (0, l.jsx)(s.Text, {
     variant: 'text-md/normal',
     className: N.subtitleText,
     children: n
@@ -50,19 +50,19 @@ let {
   onClose: r,
   perks: n,
   perkIntro: o = f.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_MODAL_HEADER,
-  headerProps: s
+  headerProps: t
 } = e;
 return (0, l.jsxs)('div', {
   className: N.wrapper,
   children: [
-    (0, l.jsx)(t.ModalCloseButton, {
+    (0, l.jsx)(s.ModalCloseButton, {
       className: N.closeButton,
       onClick: () => {
         r();
       }
     }),
     (0, l.jsx)(S, {
-      headerProps: s,
+      headerProps: t,
       perkIntro: o
     }),
     (0, l.jsx)('div', {
@@ -71,14 +71,14 @@ return (0, l.jsxs)('div', {
         let {
           icon: n,
           iconClassName: o,
-          description: t,
-          color: s
+          description: s,
+          color: t
         } = e;
         return (0, l.jsx)(u.Z, {
           icon: n,
           iconClassName: o,
-          description: t,
-          color: s
+          description: s,
+          color: t
         }, r);
       })
     })
@@ -88,7 +88,7 @@ return (0, l.jsxs)('div', {
   S = e => {
 let {
   headerProps: r,
-  perkIntro: s
+  perkIntro: t
 } = e;
 return (0, l.jsxs)(o.Fragment, {
   children: [
@@ -99,10 +99,10 @@ return (0, l.jsxs)(o.Fragment, {
       src: n(438471),
       alt: f.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_MODAL_HEADER_IMG_ALT_TEXT
     }),
-    (0, l.jsx)(t.Text, {
+    (0, l.jsx)(s.Text, {
       variant: 'text-md/normal',
       className: N.heading,
-      children: s
+      children: t
     })
   ]
 });
@@ -112,19 +112,19 @@ let {
   guild: r,
   targetBoostedGuildTier: n,
   onClose: o,
-  analyticsSourceLocation: s
+  analyticsSourceLocation: t
 } = e, a = {
   section: m.jXE.PREMIUM_GUILD_UPSELL_MODAL,
   object: m.qAy.BUTTON_CTA,
   objectType: null != n ? (0, p.ge)(n) : null
 };
-return (0, l.jsxs)(t.ModalFooter, {
+return (0, l.jsxs)(s.ModalFooter, {
   className: N.footer,
   children: [
-    (0, l.jsx)(t.Button, {
-      size: t.Button.Sizes.SMALL,
-      color: t.Button.Colors.PRIMARY,
-      look: t.Button.Looks.LINK,
+    (0, l.jsx)(s.Button, {
+      size: s.Button.Sizes.SMALL,
+      color: s.Button.Colors.PRIMARY,
+      look: s.Button.Looks.LINK,
       onClick: () => {
         o();
       },
@@ -132,7 +132,7 @@ return (0, l.jsxs)(t.ModalFooter, {
     }),
     (0, l.jsx)(_.Z, {
       analyticsLocation: a,
-      analyticsSourceLocation: s,
+      analyticsSourceLocation: t,
       guild: r,
       targetBoostedGuildTier: n,
       onClose: () => {
@@ -155,14 +155,14 @@ onClose: m,
 ...f
   } = e, {
 analyticsLocations: N
-  } = (0, a.ZP)(s.Z.ACTIVITY_DIRECTORY);
+  } = (0, a.ZP)(t.Z.ACTIVITY_DIRECTORY);
   return (0, l.jsx)(a.Gt, {
 value: N,
 children: (0, l.jsx)(c.PaymentContextProvider, {
   activeSubscription: null,
   stepConfigs: [],
   skuIDs: [],
-  children: (0, l.jsx)(t.ModalRoot, {
+  children: (0, l.jsx)(s.ModalRoot, {
     ...f,
     'aria-labelledby': E,
     children: (0, l.jsx)(d.Z, {

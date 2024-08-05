@@ -15,10 +15,10 @@ a = 0;
   for (; r.length < t;) {
 let t = Math.round((r.length + 1) * n),
   i = 0,
-  o = 0;
+  s = 0;
 for (let n = a; n < t && n < e.length; n++)
-  i += e[n], o++;
-r[r.length] = i / o, a = t;
+  i += e[n], s++;
+r[r.length] = i / s, a = t;
   }
   return r;
 }

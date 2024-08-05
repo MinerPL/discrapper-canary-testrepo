@@ -218,7 +218,7 @@ CSS_VARIABLE: {
 'slotted',
 'spelling-error'
   ],
-  o = [
+  s = [
 'align-content',
 'align-items',
 'align-self',
@@ -579,7 +579,7 @@ CSS_VARIABLE: {
 'z-index'
   ].reverse();
 e.exports = function(e) {
-  let s = t(e),
+  let o = t(e),
 l = '@[a-z-]+',
 u = {
   className: 'variable',
@@ -593,7 +593,7 @@ illegal: '[=/|\']',
 contains: [
   e.C_LINE_COMMENT_MODE,
   e.C_BLOCK_COMMENT_MODE,
-  s.CSS_NUMBER_MODE,
+  o.CSS_NUMBER_MODE,
   {
     className: 'selector-id',
     begin: '#[A-Za-z0-9_-]+',
@@ -604,7 +604,7 @@ contains: [
     begin: '\\.[A-Za-z0-9_-]+',
     relevance: 0
   },
-  s.ATTRIBUTE_SELECTOR_MODE,
+  o.ATTRIBUTE_SELECTOR_MODE,
   {
     className: 'selector-tag',
     begin: '\\b(' + n.join('|') + ')\\b',
@@ -622,12 +622,12 @@ contains: [
   {
     begin: /\(/,
     end: /\)/,
-    contains: [s.CSS_NUMBER_MODE]
+    contains: [o.CSS_NUMBER_MODE]
   },
-  s.CSS_VARIABLE,
+  o.CSS_VARIABLE,
   {
     className: 'attribute',
-    begin: '\\b(' + o.join('|') + ')\\b'
+    begin: '\\b(' + s.join('|') + ')\\b'
   },
   {
     begin: '\\b(whitespace|wait|w-resize|visible|vertical-text|vertical-ideographic|uppercase|upper-roman|upper-alpha|underline|transparent|top|thin|thick|text|text-top|text-bottom|tb-rl|table-header-group|table-footer-group|sw-resize|super|strict|static|square|solid|small-caps|separate|se-resize|scroll|s-resize|rtl|row-resize|ridge|right|repeat|repeat-y|repeat-x|relative|progress|pointer|overline|outside|outset|oblique|nowrap|not-allowed|normal|none|nw-resize|no-repeat|no-drop|newspaper|ne-resize|n-resize|move|middle|medium|ltr|lr-tb|lowercase|lower-roman|lower-alpha|loose|list-item|line|line-through|line-edge|lighter|left|keep-all|justify|italic|inter-word|inter-ideograph|inside|inset|inline|inline-block|inherit|inactive|ideograph-space|ideograph-parenthesis|ideograph-numeric|ideograph-alpha|horizontal|hidden|help|hand|groove|fixed|ellipsis|e-resize|double|dotted|distribute|distribute-space|distribute-letter|distribute-all-lines|disc|disabled|default|decimal|dashed|crosshair|collapse|col-resize|circle|char|center|capitalize|break-word|break-all|bottom|both|bolder|bold|block|bidi-override|below|baseline|auto|always|all-scroll|absolute|table|table-cell)\\b'
@@ -637,14 +637,14 @@ contains: [
     end: /[;}{]/,
     relevance: 0,
     contains: [
-      s.BLOCK_COMMENT,
+      o.BLOCK_COMMENT,
       u,
-      s.HEXCOLOR,
-      s.CSS_NUMBER_MODE,
+      o.HEXCOLOR,
+      o.CSS_NUMBER_MODE,
       e.QUOTE_STRING_MODE,
       e.APOS_STRING_MODE,
-      s.IMPORTANT,
-      s.FUNCTION_DISPATCH
+      o.IMPORTANT,
+      o.FUNCTION_DISPATCH
     ]
   },
   {
@@ -674,11 +674,11 @@ contains: [
       u,
       e.QUOTE_STRING_MODE,
       e.APOS_STRING_MODE,
-      s.HEXCOLOR,
-      s.CSS_NUMBER_MODE
+      o.HEXCOLOR,
+      o.CSS_NUMBER_MODE
     ]
   },
-  s.FUNCTION_DISPATCH
+  o.FUNCTION_DISPATCH
 ]
   };
 };

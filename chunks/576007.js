@@ -6,8 +6,8 @@ return u;
 var r = n(544891),
   i = n(570140),
   a = n(881052),
-  o = n(70956),
-  s = n(672458),
+  s = n(70956),
+  o = n(672458),
   l = n(981631);
 async function u(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
@@ -25,7 +25,7 @@ let a = await r.tn.post({
   body: t,
   signal: _
 });
-if (a.status === s.t) {
+if (a.status === o.t) {
   if (null == a.body.retry_after)
     throw Error('Indexing response did not include retry_after');
   if (!d)
@@ -33,10 +33,10 @@ if (a.status === s.t) {
   return await i.Z.dispatch({
     type: 'MEMBER_SAFETY_GUILD_MEMBER_SEARCH_STILL_INDEXING',
     guildId: e
-  }), await new Promise(e => setTimeout(e, a.body.retry_after * o.Z.Millis.SECOND)), u(e, t, n, c + 1);
+  }), await new Promise(e => setTimeout(e, a.body.retry_after * s.Z.Millis.SECOND)), u(e, t, n, c + 1);
 }
 return {
-  type: s.d.SUCCESSFUL_QUERY,
+  type: o.d.SUCCESSFUL_QUERY,
   body: {
     guild_id: (E = a.body).guild_id,
     members: E.members,
@@ -47,7 +47,7 @@ return {
   } catch (t) {
 let e = new a.Hx(t);
 return {
-  type: s.d.ERROR,
+  type: o.d.ERROR,
   body: e
 };
   }

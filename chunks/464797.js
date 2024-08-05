@@ -6,16 +6,16 @@ return u;
 return d;
   }
 });
-var o = t(735250),
-  r = t(470079),
-  a = t(512722),
-  i = t.n(a),
-  c = t(442837),
-  s = t(240864);
-let l = r.createContext(void 0);
+var r = t(735250),
+  a = t(470079),
+  o = t(512722),
+  i = t.n(o),
+  s = t(442837),
+  l = t(240864);
+let c = a.createContext(void 0);
 
 function d() {
-  let e = r.useContext(l);
+  let e = a.useContext(c);
   return i()(null != e, 'GuildProductPurchaseContext not found'), e;
 }
 
@@ -23,12 +23,12 @@ function u(e) {
   let {
 children: n,
 guildProductListingId: t,
-...r
-  } = e, a = (0, c.e7)([s.Z], () => s.Z.getGuildProduct(t));
-  return i()(null != a, 'guildProductListing cannot be null'), (0, o.jsx)(l.Provider, {
+...a
+  } = e, o = (0, s.e7)([l.Z], () => l.Z.getGuildProduct(t));
+  return i()(null != o, 'guildProductListing cannot be null'), (0, r.jsx)(c.Provider, {
 value: {
-  guildProductListing: a,
-  ...r
+  guildProductListing: o,
+  ...a
 },
 children: n
   });

@@ -24,8 +24,8 @@ return R;
 var r = n(683860),
   i = n(344185),
   a = n(569471),
-  o = n(260483),
-  s = n(144140),
+  s = n(260483),
+  o = n(144140),
   l = n(592125),
   u = n(703558),
   c = n(496675),
@@ -67,9 +67,9 @@ return [];
 a = null == i ? void 0 : i.availableTags;
   if (null == i || null == a)
 return [];
-  let o = null !== (n = null === (t = u.Z.getThreadSettings(e)) || void 0 === t ? void 0 : t.appliedTags) && void 0 !== n ? n : new Set(),
-s = new Set(a.map(e => e.id));
-  return Array.from(o).filter(e => s.has(e));
+  let s = null !== (n = null === (t = u.Z.getThreadSettings(e)) || void 0 === t ? void 0 : t.appliedTags) && void 0 !== n ? n : new Set(),
+o = new Set(a.map(e => e.id));
+  return Array.from(s).filter(e => o.has(e));
 }
 
 function v(e, t) {
@@ -88,21 +88,21 @@ function R(e) {
   var t, n, r, i;
   let {
 channelId: a,
-sessionId: o
-  } = e, s = l.Z.getChannel(a);
-  return null != s && s.isForumLikeChannel() ? {
-forum_channel_has_guidelines: null != s.topic && s.topic.trim().length > 0,
-forum_channel_default_emoji_reaction_id: null === (t = s.defaultReactionEmoji) || void 0 === t ? void 0 : t.emojiId,
-forum_channel_default_emoji_reaction_name: null === (n = s.defaultReactionEmoji) || void 0 === n ? void 0 : n.emojiName,
-forum_channel_available_tag_ids: null !== (i = null === (r = s.availableTags) || void 0 === r ? void 0 : r.map(e => e.id)) && void 0 !== i ? i : [],
-forum_channel_tag_required: s.hasFlag(I.zZ.REQUIRE_TAG),
-forum_channel_can_create_post: c.Z.can(m.Plq.SEND_MESSAGES, s),
+sessionId: s
+  } = e, o = l.Z.getChannel(a);
+  return null != o && o.isForumLikeChannel() ? {
+forum_channel_has_guidelines: null != o.topic && o.topic.trim().length > 0,
+forum_channel_default_emoji_reaction_id: null === (t = o.defaultReactionEmoji) || void 0 === t ? void 0 : t.emojiId,
+forum_channel_default_emoji_reaction_name: null === (n = o.defaultReactionEmoji) || void 0 === n ? void 0 : n.emojiName,
+forum_channel_available_tag_ids: null !== (i = null === (r = o.availableTags) || void 0 === r ? void 0 : r.map(e => e.id)) && void 0 !== i ? i : [],
+forum_channel_tag_required: o.hasFlag(I.zZ.REQUIRE_TAG),
+forum_channel_can_create_post: c.Z.can(m.Plq.SEND_MESSAGES, o),
 forum_channel_filter_tag_ids: f.Z.getFilterTagIdsAnalytics(),
-forum_channel_sort_order: f.Z.getSortOrderAnalytics(s.id),
-forum_channel_session_id: null != o ? o : g(s.id),
-forum_channel_layout: f.Z.getLayoutAnalytics(s.id),
-forum_channel_default_sort_order: s.defaultSortOrder,
-forum_channel_default_layout: s.defaultForumLayout
+forum_channel_sort_order: f.Z.getSortOrderAnalytics(o.id),
+forum_channel_session_id: null != s ? s : g(o.id),
+forum_channel_layout: f.Z.getLayoutAnalytics(o.id),
+forum_channel_default_sort_order: o.defaultSortOrder,
+forum_channel_default_layout: o.defaultForumLayout
   } : null;
 }
 
@@ -120,8 +120,8 @@ return null;
   channelId: m.id,
   sessionId: f
 }),
-thread_approximate_member_count: o.Z.getMemberCount(E),
-thread_approximate_message_count: s.Z.getCount(E),
+thread_approximate_member_count: s.Z.getMemberCount(E),
+thread_approximate_message_count: o.Z.getCount(E),
 thread_archived: (null === (t = p.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0,
 thread_locked: null !== (c = null === (n = p.threadMetadata) || void 0 === n ? void 0 : n.locked) && void 0 !== c && c,
 thread_auto_archive_duration_minutes: null !== (d = null === (r = p.threadMetadata) || void 0 === r ? void 0 : r.autoArchiveDuration) && void 0 !== d ? d : 0,
@@ -145,8 +145,8 @@ forum_post_applied_tag_ids: function(e) {
     a = null == i ? void 0 : i.availableTags;
   if (null == i || null == a)
     return [];
-  let o = new Set(a.map(e => e.id));
-  return null !== (n = null === (t = r.appliedTags) || void 0 === t ? void 0 : t.filter(e => o.has(e))) && void 0 !== n ? n : [];
+  let s = new Set(a.map(e => e.id));
+  return null !== (n = null === (t = r.appliedTags) || void 0 === t ? void 0 : t.filter(e => s.has(e))) && void 0 !== n ? n : [];
 }(p.id),
 forum_post_is_pinned: p.hasFlag(I.zZ.PINNED),
 forum_post_is_new: null === (i = h.Z.getReadStateSnapshotAnalytics(p.id)) || void 0 === i ? void 0 : i.isNew,

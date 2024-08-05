@@ -73,4 +73,18 @@ clickOnHomeActivityOpensAppDetail: !1
   }
 }
   ]
+}), (0, r.B)({
+  kind: 'user',
+  id: '2024-07_open_platform_app_launcher',
+  label: 'Open Platform App Launcher',
+  defaultConfig: {
+enabled: !1
+  },
+  treatments: [{
+id: 1,
+label: 'Enable the App Launcher changes for Open Platform',
+config: {
+  enabled: !0
+}
+  }]
 });

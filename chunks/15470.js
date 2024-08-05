@@ -10,8 +10,8 @@ var n = s(735250),
   l = s(302454),
   o = s.n(l),
   h = s(481060),
-  d = s(378720),
-  u = s(729035),
+  d = s(241209),
+  u = s(378720),
   c = s(73346),
   p = s(689938),
   m = s(568657);
@@ -26,12 +26,12 @@ writable: !0
 }
 let I = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
   C = {
-...u.Z.rules,
+...d.Z.rules,
 heading: {
-  ...u.Z.rules.heading,
+  ...d.Z.rules.heading,
   react(e, t, s) {
     let i = 'h'.concat(Math.min(Math.max(2, e.level + 1), 4));
-    return (0, n.jsx)(d.Z, {
+    return (0, n.jsx)(u.Z, {
       tag: i,
       children: t(e.content, s)
     }, s.key);
@@ -105,7 +105,7 @@ return (0, n.jsxs)('div', {
             className: m.blurb,
             children: s
           }),
-          (0, n.jsx)(u.Z, {
+          (0, n.jsx)(d.Z, {
             className: m.description,
             parser: x,
             output: f,

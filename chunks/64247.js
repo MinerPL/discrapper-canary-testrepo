@@ -1,47 +1,47 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 });
 var i = n(735250);
 n(470079);
-var a = n(481060),
-  s = n(438536),
+var s = n(481060),
+  a = n(438536),
   r = n(214906),
   l = n(346479),
   o = n(723170),
   c = n(124368);
 
-function d(e) {
+function u(e) {
   let {
 channel: t,
 closePopout: n,
-onSelect: d,
-navId: u,
+onSelect: u,
+navId: d,
 label: _
-  } = e, E = (0, s.Z)(t, 'Notifications Bell'), I = (0, r.Z)(t), m = (0, o.B)(t);
-  return (0, i.jsxs)(a.Menu, {
-navId: u,
+  } = e, E = (0, a.Z)(t, 'Notifications Bell'), I = (0, r.Z)(t), m = (0, o.B)(t);
+  return (0, i.jsxs)(s.Menu, {
+navId: d,
 onClose: n,
 'aria-label': _,
-onSelect: d,
+onSelect: u,
 children: [
-  (0, i.jsxs)(a.MenuGroup, {
+  (0, i.jsxs)(s.MenuGroup, {
     children: [
       t.isForumPost() ? E : null,
       I
     ]
   }),
-  (0, i.jsx)(a.MenuGroup, {
+  (0, i.jsx)(s.MenuGroup, {
     children: (0, c.zb)().map(e => {
       let {
         setting: n,
-        label: s
+        label: a
       } = e;
-      return (0, i.jsx)(a.MenuRadioItem, {
+      return (0, i.jsx)(s.MenuRadioItem, {
         group: 'thread-notifications',
         id: ''.concat(n),
-        label: s,
+        label: a,
         action: () => l.Z.setNotificationSettings(t, {
           flags: n
         }),

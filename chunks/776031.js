@@ -6,8 +6,8 @@ return A;
 var r = n(735250),
   i = n(470079),
   a = n(848246),
-  o = n(442837),
-  s = n(481060),
+  s = n(442837),
+  o = n(481060),
   l = n(846027),
   u = n(2052),
   c = n(451467),
@@ -28,7 +28,7 @@ function A(e, t) {
 preset: A,
 resolution: N,
 fps: v
-  } = (0, o.cj)([f.Z], () => f.Z.getState()), O = (0, o.e7)([p.Z], () => p.Z.getGoLiveSource()), R = (0, o.e7)([m.default], () => m.default.getCurrentUser()), C = (0, o.e7)([h.Z], () => {
+  } = (0, s.cj)([f.Z], () => f.Z.getState()), O = (0, s.e7)([p.Z], () => p.Z.getGoLiveSource()), R = (0, s.e7)([m.default], () => m.default.getCurrentUser()), C = (0, s.e7)([h.Z], () => {
 var t;
 return null === (t = h.Z.getGuild(null == e ? void 0 : e.guildId)) || void 0 === t ? void 0 : t.premiumTier;
   }), {
@@ -36,7 +36,7 @@ location: y
   } = (0, u.O)(), {
 available: D,
 activated: L
-  } = (0, d.k)(a.q.STREAM_HIGH_QUALITY), b = i.useCallback((e, i, a, o) => {
+  } = (0, d.k)(a.q.STREAM_HIGH_QUALITY), b = i.useCallback((e, i, a, s) => {
 if (e) {
   if (null != O) {
     let e = {
@@ -60,8 +60,8 @@ if (e) {
   u = t, c = {
     ...y,
     object: I.qAy.RADIO_ITEM,
-    objectType: o
-  }, (0, s.openModalLazy)(async () => {
+    objectType: s
+  }, (0, o.openModalLazy)(async () => {
     let {
       default: e
     } = await n.e('28479').then(n.bind(n, 78865));
@@ -70,7 +70,7 @@ if (e) {
       analyticsSource: c
     });
   }, {
-    contextKey: u === I.IlC.POPOUT ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT
+    contextKey: u === I.IlC.POPOUT ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT
   });
 }
   }, [
@@ -87,7 +87,7 @@ P = T.af.map(e => {
     value: t,
     label: n
   } = e, i = (0, c.Z)(T.tI.PRESET_CUSTOM, N, t, R, C);
-  return D && !L && (i = !1), (0, r.jsx)(s.MenuRadioItem, {
+  return D && !L && (i = !1), (0, r.jsx)(o.MenuRadioItem, {
     group: 'stream-settings-fps',
     id: 'stream-settings-fps-'.concat(t),
     label: n,
@@ -100,7 +100,7 @@ U = T.km.map(e => {
     value: t,
     label: n
   } = e, i = (0, c.Z)(T.tI.PRESET_CUSTOM, t, M, R, C);
-  return D && !L && (i = !1), (0, r.jsx)(s.MenuRadioItem, {
+  return D && !L && (i = !1), (0, r.jsx)(o.MenuRadioItem, {
     group: 'stream-settings-resolution',
     id: 'stream-settings-resolution-'.concat(t),
     label: n,
@@ -110,11 +110,11 @@ U = T.km.map(e => {
 });
   return (0, r.jsxs)(r.Fragment, {
 children: [
-  (0, r.jsx)(s.MenuGroup, {
+  (0, r.jsx)(o.MenuGroup, {
     label: S.Z.Messages.SCREENSHARE_FRAME_RATE,
     children: P
   }),
-  (0, r.jsx)(s.MenuGroup, {
+  (0, r.jsx)(o.MenuGroup, {
     label: S.Z.Messages.STREAM_RESOLUTION,
     children: U
   })

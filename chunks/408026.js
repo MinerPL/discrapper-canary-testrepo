@@ -1,7 +1,7 @@
 n(47120);
 var i = n(570140),
-  s = n(224706),
-  a = n(710845),
+  a = n(224706),
+  s = n(710845),
   r = n(77498);
 let l = {};
 
@@ -14,10 +14,10 @@ missingData: i
   for (let e of (r.Z.markGameReported(t), i)) {
 if ('icon' === e) {
   let e = l[t];
-  null != e && s.Z.uploadIcon(t, n, e);
+  null != e && a.Z.uploadIcon(t, n, e);
   return;
 }
-new a.Z('GameStoreIconManager').log('Could not find missing data key: '.concat(e));
+new s.Z('GameStoreIconManager').log('Could not find missing data key: '.concat(e));
   }
 }
 

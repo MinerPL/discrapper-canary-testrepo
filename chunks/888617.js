@@ -1,28 +1,28 @@
 t.d(n, {
   Z: function() {
-return r;
+return o;
   }
 });
 var i = t(990547),
-  l = t(213609),
-  a = t(312871);
+  a = t(213609),
+  l = t(312871);
 
-function r(e) {
+function o(e) {
   let {
 sectionName: n,
 numItems: t,
-numVisibleItems: r
+numVisibleItems: o
   } = e;
   return {
-trackSectionImpressionRef: (0, a.Z)({
+trackSectionImpressionRef: (0, l.Z)({
   onVisible: () => {
-    (0, l.h)({
+    (0, a.h)({
       type: i.ImpressionTypes.VIEW,
       name: i.ImpressionNames.APP_LAUNCHER_SECTION,
       properties: {
         section_name: n,
         num_items: t,
-        num_visible_items: r
+        num_visible_items: o
       }
     });
   },

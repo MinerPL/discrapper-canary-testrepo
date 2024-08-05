@@ -1,13 +1,13 @@
 n.d(t, {
   d: function() {
-return o;
+return s;
   }
 });
 var r = n(345926),
   i = n(913122),
   a = n(470079);
 
-function o(e) {
+function s(e) {
   let t = (0, r.W)(e),
 n = (0, i.BA)({
   ...e,
@@ -15,7 +15,7 @@ n = (0, i.BA)({
     null != e.onSelectionChange && e.onSelectionChange(n), t.close();
   }
 }),
-[o, s] = (0, a.useState)(!1);
+[s, o] = (0, a.useState)(!1);
   return {
 ...n,
 ...t,
@@ -25,7 +25,7 @@ open() {
 toggle(e) {
   0 !== n.collection.size && t.toggle(e);
 },
-isFocused: o,
-setFocused: s
+isFocused: s,
+setFocused: o
   };
 }

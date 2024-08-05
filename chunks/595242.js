@@ -1,6 +1,6 @@
 s.d(t, {
   Z: function() {
-return h;
+return g;
   }
 });
 var n = s(735250),
@@ -22,7 +22,7 @@ var n = s(735250),
   m = s(981631),
   A = s(618395);
 
-function h() {
+function g() {
   a.useEffect(() => {
 c.Z.wait(() => {
   d.jg(), d.tZ(), (0, _.X8)(), (0, E.Y2)(null, null, m.JjL.DISCOVERY), (0, _.tH)(!0);
@@ -34,8 +34,8 @@ premiumSubscription: t
   } = (0, o.cj)([N.ZP], () => ({
 hasFetchedSubscriptions: N.ZP.hasFetchedSubscriptions(),
 premiumSubscription: N.ZP.getPremiumTypeSubscription()
-  })), s = (0, u.V)(), i = (0, o.e7)([S.Z], () => S.Z.hasFetchedPaymentSources), h = (0, o.e7)([I.Z], () => I.Z.isFetchingCurrentUserAppliedBoosts);
-  return ((0, T.JR)(), e && s && i && !h) ? (0, n.jsxs)('div', {
+  })), s = (0, u.V)(), i = (0, o.e7)([S.Z], () => S.Z.hasFetchedPaymentSources), g = (0, o.e7)([I.Z], () => I.Z.isFetchingCurrentUserAppliedBoosts);
+  return ((0, T.JR)(), e && s && i && !g) ? (0, n.jsxs)('div', {
 className: A.container,
 children: [
   (0, n.jsx)('div', {

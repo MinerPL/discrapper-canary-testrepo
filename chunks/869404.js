@@ -6,17 +6,17 @@ return u;
 return l;
   },
   k1: function() {
-return o;
+return s;
   },
   tU: function() {
-return s;
+return o;
   }
 }), n(47120), n(724458);
 var r = n(709054),
   i = n(355298),
   a = n(333984);
 
-function o(e) {
+function s(e) {
   let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [
 i.Z,
 a.Z
@@ -39,7 +39,7 @@ return !t.isMessageRequest(r.id) && !n.isSpam(r.id);
   }));
 }
 
-function s(e) {
+function o(e) {
   let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [
 i.Z,
 a.Z

@@ -1,17 +1,17 @@
 n.d(i, {
   Z: function() {
-return l;
+return s;
   }
 });
-var o = n(531643),
-  a = n(403182),
-  t = n(689938);
+var a = n(531643),
+  t = n(403182),
+  o = n(689938);
 
-function l(e) {
-  (0, o.openUploadError)({
-title: t.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-help: t.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
-  maxSize: (0, a.Ng)(e)
+function s(e) {
+  (0, a.openUploadError)({
+title: o.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+help: o.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
+  maxSize: (0, t.Ng)(e)
 })
   });
 }

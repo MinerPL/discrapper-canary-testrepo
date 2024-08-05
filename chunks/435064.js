@@ -1,8 +1,8 @@
 n(47120), n(789020);
 var r, i = n(442837),
   a = n(570140),
-  o = n(579806),
-  s = n(594190),
+  s = n(579806),
+  o = n(594190),
   l = n(569545),
   u = n(314897),
   c = n(630388),
@@ -58,14 +58,14 @@ clipsEducationState: {
 }
   };
 async function D() {
-  if (y.clipsSettings.storageLocation !== p || null == o.Z || null == o.Z.remoteApp)
+  if (y.clipsSettings.storageLocation !== p || null == s.Z || null == s.Z.remoteApp)
 return;
-  let e = await o.Z.remoteApp.getPath('documents');
+  let e = await s.Z.remoteApp.getPath('documents');
   y.clipsSettings.storageLocation = e, b.emitChange();
 }
 class L extends(r = i.ZP.DeviceSettingsStore) {
   initialize(e) {
-null != e && (y = e), D(), this.waitFor(s.ZP);
+null != e && (y = e), D(), this.waitFor(o.ZP);
   }
   getClips() {
 return I;
@@ -330,7 +330,7 @@ if (!y.clipsSettings.clipsEnabled)
 let r = t;
 if (null != n) {
   var i;
-  let e = s.ZP.getGameForPID(n);
+  let e = o.ZP.getGameForPID(n);
   r = null !== (i = null == e ? void 0 : e.name) && void 0 !== i ? i : r;
 }
 if (null == r || '' === r)

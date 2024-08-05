@@ -6,23 +6,23 @@ return i;
 return a;
   },
   destroyAnnouncer: function() {
-return o;
+return s;
   }
 });
 let r = null;
 
 function i(e, t = 'assertive', n = 7000) {
-  !r && (r = new s()), r.announce(e, t, n);
+  !r && (r = new o()), r.announce(e, t, n);
 }
 
 function a(e) {
   r && r.clear(e);
 }
 
-function o() {
+function s() {
   r && (r.destroy(), r = null);
 }
-class s {
+class o {
   createLog(e) {
 let t = document.createElement('div');
 return t.setAttribute('role', 'log'), t.setAttribute('aria-live', e), t.setAttribute('aria-relevant', 'additions'), t;

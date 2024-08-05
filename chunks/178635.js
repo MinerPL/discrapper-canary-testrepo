@@ -6,8 +6,8 @@ return m;
 var r = n(392711),
   i = n.n(r),
   a = n(433517),
-  o = n(147913),
-  s = n(536442),
+  s = n(147913),
+  o = n(536442),
   l = n(810788),
   u = n(19780),
   c = n(531578);
@@ -27,7 +27,7 @@ cooldown: 86400000
   E = {
 [c.nw.VOICE]: {
   ..._,
-  hotspot: s.v6.VOICE_CALL_FEEDBACK,
+  hotspot: o.v6.VOICE_CALL_FEEDBACK,
   storageKey: 'lastVoiceFeedback',
   eligibilityChecks: [function(e) {
     return !u.Z.getWasEverRtcConnected() || u.Z.getWasEverMultiParticipant();
@@ -35,24 +35,24 @@ cooldown: 86400000
 },
 [c.nw.STREAM]: {
   ..._,
-  hotspot: s.v6.REPORT_PROBLEM_POST_STREAM,
+  hotspot: o.v6.REPORT_PROBLEM_POST_STREAM,
   storageKey: 'lastStreamFeedback'
 },
 [c.nw.VIDEO_BACKGROUND]: {
   ..._,
-  hotspot: s.v6.VIDEO_BACKGROUND_FEEDBACK,
+  hotspot: o.v6.VIDEO_BACKGROUND_FEEDBACK,
   storageKey: 'lastVideoBackgroundFeedback'
 },
 [c.nw.ACTIVITY]: {
   cooldown: 0,
   chance: 0.5,
-  hotspot: s.v6.POST_ACTIVITY_FEEDBACK,
+  hotspot: o.v6.POST_ACTIVITY_FEEDBACK,
   storageKey: 'lastActivityFeedback'
 },
 [c.nw.IN_APP_REPORTS]: {
   cooldown: 172800000,
   chance: 0.5,
-  hotspot: s.v6.IN_APP_REPORTS_FEEDBACK,
+  hotspot: o.v6.IN_APP_REPORTS_FEEDBACK,
   storageKey: 'inAppReportsFeedback'
 }
   };
@@ -73,7 +73,7 @@ if (null != t && Date.now() - t < e.cooldown)
   }
   return !0;
 }
-class m extends o.Z {
+class m extends s.Z {
   possiblyShowFeedbackModal(e, t) {
 if (!! function(e) {
     var t;

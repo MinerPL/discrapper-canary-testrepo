@@ -10,8 +10,8 @@ var a = t(120356),
   l = t(481060),
   o = t(285952),
   r = t(727218),
-  c = t(689938),
-  d = t(708048);
+  d = t(689938),
+  c = t(708048);
 
 function u(e) {
   let {
@@ -28,7 +28,7 @@ isPremium: T
   } = e;
   return (0, i.jsxs)(o.Z, {
 justify: o.Z.Justify.CENTER,
-className: d.wrapper,
+className: c.wrapper,
 children: [
   null != a || null != u ? (0, i.jsx)(o.Z.Child, {
     shrink: 0,
@@ -38,15 +38,15 @@ children: [
         return (0, i.jsx)('img', {
           alt: '',
           src: n,
-          className: s()(d.iconWrapper, a)
+          className: s()(c.iconWrapper, a)
         });
       let l = null;
       return null != e && (l = 'string' == typeof e ? (0, i.jsx)('img', {
         alt: '',
         src: e,
-        className: s()(d.icon, a)
+        className: s()(c.icon, a)
       }) : (0, i.jsx)(e, {
-        className: s()(d.icon, a),
+        className: s()(c.icon, a),
         color: 'currentColor'
       })), (0, i.jsx)(o.Z, {
         align: o.Z.Align.CENTER,
@@ -54,7 +54,7 @@ children: [
         style: {
           backgroundColor: t
         },
-        className: d.iconWrapper,
+        className: c.iconWrapper,
         children: l
       });
     }(a, u, I, m)
@@ -73,12 +73,12 @@ children: [
         text: a
       } = e;
       return (0, i.jsxs)('div', {
-        className: s()(d.detailsWrapper, I ? d.headerDetailsWrapper : null),
+        className: s()(c.detailsWrapper, I ? c.headerDetailsWrapper : null),
         children: [
           null != t ? (0, i.jsx)(t, {
             size: 'xs',
             color: 'currentColor',
-            className: d.detailsIcon
+            className: c.detailsIcon
           }) : null,
           (0, i.jsx)(l.Text, {
             variant: 'text-xs/normal',
@@ -94,16 +94,16 @@ children: [
       children: [
         (0, i.jsxs)(r.Z, {
           size: I ? r.Z.Sizes.SIZE_24 : r.Z.Sizes.SIZE_16,
-          className: I ? d.header : d.secondaryHeader,
+          className: I ? c.header : c.secondaryHeader,
           children: [
             n,
             m && (0, i.jsx)(l.Tooltip, {
-              text: c.Z.Messages.APPLICATION_SUBSCRIPTION_PREMIUM,
+              text: d.Z.Messages.APPLICATION_SUBSCRIPTION_PREMIUM,
               children: e => (0, i.jsx)(l.TicketIcon, {
                 size: 'xs',
                 color: 'currentColor',
                 ...e,
-                className: d.premiumIcon
+                className: c.premiumIcon
               })
             })
           ]

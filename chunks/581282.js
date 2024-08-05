@@ -3,7 +3,7 @@ n.d(t, {
 return a;
   },
   m: function() {
-return o;
+return s;
   }
 });
 let r = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'.split(''),
@@ -17,9 +17,9 @@ function a(e) {
   let n = new Uint8Array(t),
 r = 0,
 a = 0,
-o, s = 0;
+s, o = 0;
   for (let t = 0; t < e.length; t++) {
-if (void 0 === (o = i[e.charCodeAt(t)]))
+if (void 0 === (s = i[e.charCodeAt(t)]))
   switch (e[t]) {
     case '=':
       a = 0;
@@ -33,16 +33,16 @@ if (void 0 === (o = i[e.charCodeAt(t)]))
   }
 switch (a) {
   case 0:
-    s = o, a = 1;
+    o = s, a = 1;
     break;
   case 1:
-    n[r++] = s << 2 | (48 & o) >> 4, s = o, a = 2;
+    n[r++] = o << 2 | (48 & s) >> 4, o = s, a = 2;
     break;
   case 2:
-    n[r++] = (15 & s) << 4 | (60 & o) >> 2, s = o, a = 3;
+    n[r++] = (15 & o) << 4 | (60 & s) >> 2, o = s, a = 3;
     break;
   case 3:
-    n[r++] = (3 & s) << 6 | o, a = 0;
+    n[r++] = (3 & o) << 6 | s, a = 0;
 }
   }
   if (1 == a)
@@ -50,12 +50,12 @@ throw Error('invalid base64 string.');
   return n.subarray(0, r);
 }
 
-function o(e) {
+function s(e) {
   let t = '',
 n = 0,
 i, a = 0;
-  for (let o = 0; o < e.length; o++)
-switch (i = e[o], n) {
+  for (let s = 0; s < e.length; s++)
+switch (i = e[s], n) {
   case 0:
     t += r[i >> 2], a = (3 & i) << 4, n = 1;
     break;

@@ -2,8 +2,8 @@ n(47120);
 var r = n(433517),
   i = n(570140),
   a = n(317770),
-  o = n(314897),
-  s = n(944486),
+  s = n(314897),
+  o = n(944486),
   l = n(105372),
   u = n(88751),
   c = n(157925);
@@ -21,11 +21,11 @@ super(...e), t = this, n = 'handleVoiceStateUpdates', i = e => {
     voiceStates: t
   } = e;
   t.forEach(e => {
-    if (null == e.channelId || e.userId !== o.default.getId())
+    if (null == e.channelId || e.userId !== s.default.getId())
       return;
     if (this.terminate(), r.K.get(c.$z, !1))
       return;
-    let t = s.Z.getVoiceChannelId();
+    let t = o.Z.getVoiceChannelId();
     if (null != t && e.channelId === t)
       u.ZP.isAudienceMember(e.userId, t) && (r.K.set(c.$z, !0), l.$(t));
   });

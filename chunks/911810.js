@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(939350),
-  s = n(206227);
+  s = n(939350),
+  o = n(206227);
 
 function l(e) {
   let {
@@ -23,7 +23,7 @@ role: 'group',
 className: i,
 children: [
   null != n ? (0, r.jsx)('div', {
-    className: a()(s.groupLabel, o._[l]),
+    className: a()(o.groupLabel, s._[l]),
     children: n
   }) : null,
   t

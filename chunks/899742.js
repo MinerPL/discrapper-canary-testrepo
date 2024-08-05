@@ -3,10 +3,10 @@ n.d(t, {
 return l;
   },
   Yz: function() {
-return o;
+return s;
   },
   by: function() {
-return s;
+return o;
   },
   is: function() {
 return i;
@@ -33,7 +33,7 @@ fingerprint: t
   });
 }
 
-function o(e) {
+function s(e) {
   let {
 handoffKey: t,
 handoffToken: n,
@@ -49,7 +49,7 @@ timeout: a
   });
 }
 
-function s() {
+function o() {
   r.Z.dispatch({
 type: 'BROWSER_HANDOFF_UNAVAILABLE'
   });

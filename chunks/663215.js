@@ -1,16 +1,16 @@
 n.d(t, {
   FS: function() {
-return A;
+return N;
   },
   ZP: function() {
-return S;
+return A;
   }
 }), n(47120), n(653041);
 var r = n(470079),
   i = n(442837),
   a = n(889161),
-  o = n(675478),
-  s = n(430824),
+  s = n(675478),
+  o = n(430824),
   l = n(496675),
   u = n(594174),
   c = n(74538),
@@ -20,9 +20,10 @@ var r = n(470079),
   f = n(763296),
   h = n(697426),
   p = n(549771),
-  m = n(710111);
+  m = n(710111),
+  I = n(474936);
 
-function I(e) {
+function T(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
 n = e.map(e => ({
   type: h.vB.SOUND,
@@ -31,29 +32,29 @@ n = e.map(e => ({
   return t ? n.sort((e, t) => d.default.compare(e.sound.soundId, t.sound.soundId)) : n;
 }
 
-function T(e) {
+function g(e) {
   let {
 sections: t,
 guildIds: n,
 allSounds: r,
 potentialSoundIdsForSection: i,
 sectionType: a,
-sortById: o
-  } = e, s = {};
+sortById: s
+  } = e, o = {};
   for (let e of [
   ...n,
   m.X8
 ]) {
 var l;
 for (let t of null !== (l = r.get(e)) && void 0 !== l ? l : [])
-  null != i.find(e => e === t.soundId) && (s[t.soundId] = t);
+  null != i.find(e => e === t.soundId) && (o[t.soundId] = t);
   }
   let u = [];
   for (let e of i) {
-let t = s[e];
+let t = o[e];
 null != t && u.push(t);
   }
-  let c = I(u, o);
+  let c = T(u, s);
   c.length > 0 && t.push({
 key: a,
 categoryInfo: {
@@ -63,7 +64,7 @@ items: c
   });
 }
 
-function g(e, t) {
+function S(e, t) {
   var n;
   let r = null !== (n = t.get(m.X8)) && void 0 !== n ? n : m.Hy;
   e.push({
@@ -71,129 +72,132 @@ key: h.bg.DEFAULTS,
 categoryInfo: {
   type: h.bg.DEFAULTS
 },
-items: I(r)
+items: T(r)
   });
 }
 
-function S(e) {
+function A(e) {
   let {
 filterOutEmptyCurrentGuild: t = !1
-  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], d = (0, i.e7)([u.default], () => u.default.getCurrentUser()), [m, S, A] = (0, i.Wu)([f.Z], () => [
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], d = (0, i.e7)([u.default], () => u.default.getCurrentUser()), m = c.ZP.isPremium(d, I.p9.TIER_2), [A, N, v] = (0, i.Wu)([f.Z], () => [
 f.Z.getSounds(),
 f.Z.getFavorites(),
 f.Z.isFetching()
-  ]), N = (0, p.h)(e, !1), v = (0, i.Wu)([s.Z], () => {
+  ]), O = (0, p.h)(e, !1), R = (0, i.Wu)([o.Z], () => {
 let e = [];
-return N.forEach(t => {
-  let n = s.Z.getGuild(t);
+return O.forEach(t => {
+  let n = o.Z.getGuild(t);
   null != n && e.push(n);
 }), e;
-  }), O = c.ZP.canUseSoundboardEverywhere(d), R = (0, i.e7)([s.Z], () => s.Z.getGuild(null == e ? void 0 : e.guild_id)), C = (0, i.e7)([l.Z], () => {
+  }), C = c.ZP.canUseSoundboardEverywhere(d), y = (0, i.e7)([o.Z], () => o.Z.getGuild(null == e ? void 0 : e.guild_id)), D = (0, i.e7)([l.Z], () => {
 let {
   canCreateExpressions: e
-} = (0, a.Gw)(R);
+} = (0, a.Gw)(y);
 return e;
-  }, [R]), {
-canSeeRecentlyHeard: y,
-canSeeFrequentlyPlayed: D
+  }, [y]), {
+canSeeRecentlyHeard: L,
+canSeeFrequentlyPlayed: b
   } = (0, _.k)({
 location: 'soundboard-useSoundGrid',
 autoTrackExposure: !0
-  }), L = function() {
+  }), M = function() {
 return r.useEffect(() => {
-  o.DZ.loadIfNecessary();
+  s.DZ.loadIfNecessary();
 }, []), (0, i.e7)([E.Z], () => E.Z.frecentlyPlayedSounds);
-  }(), b = (0, i.Wu)([E.Z], () => E.Z.recentlyHeardSoundIds);
+  }(), P = (0, i.Wu)([E.Z], () => E.Z.recentlyHeardSoundIds);
   return r.useMemo(() => {
 let e = [];
-return n ? (g(e, m), {
+return n ? (S(e, A), {
   categories: e,
-  isFetching: A
-}) : (T({
+  isFetching: v
+}) : (g({
   sections: e,
-  guildIds: N,
-  allSounds: m,
-  potentialSoundIdsForSection: Array.from(S),
+  guildIds: O,
+  allSounds: A,
+  potentialSoundIdsForSection: Array.from(N),
   sectionType: h.bg.FAVORITES,
   sortById: !0
-}), y && T({
+}), L && g({
   sections: e,
-  guildIds: N,
-  allSounds: m,
-  potentialSoundIdsForSection: b,
+  guildIds: O,
+  allSounds: A,
+  potentialSoundIdsForSection: P,
   sectionType: h.bg.RECENTLY_HEARD,
   sortById: !1
-}), D && T({
+}), b && g({
   sections: e,
-  guildIds: N,
-  allSounds: m,
-  potentialSoundIdsForSection: L.map(e => e.soundId),
+  guildIds: O,
+  allSounds: A,
+  potentialSoundIdsForSection: M.map(e => e.soundId),
   sectionType: h.bg.FREQUENTLY_USED,
   sortById: !1
 }), ! function(e, t, n, r, i) {
   var a;
   if (null == t)
     return;
-  let o = null !== (a = r.get(t.id)) && void 0 !== a ? a : [],
-    s = I(o),
-    l = o.length < t.getMaxSoundboardSlots() && n,
-    u = 0 === s.length;
-  (l || u) && !i && s.push({
+  let s = null !== (a = r.get(t.id)) && void 0 !== a ? a : [],
+    o = T(s),
+    l = s.length < t.getMaxSoundboardSlots() && n,
+    u = 0 === o.length;
+  (l || u) && !i && o.push({
     type: h.vB.ADD_SOUND,
     guild: t
   });
   !(i && u) && e.push({
     categoryInfo: {
       type: h.bg.GUILD,
-      guild: t
+      guild: t,
+      isNitroLocked: !1
     },
     key: t.id,
-    items: s
+    items: o
   });
-}(e, R, C, m, t), !O && g(e, m), ! function(e, t, n, r) {
-  for (let a of t) {
-    var i;
-    if (a.id === n)
+}(e, y, D, A, t), !C && S(e, A), ! function(e, t, n, r, i) {
+  for (let s of t) {
+    var a;
+    if (s.id === n)
       continue;
-    let t = I(null !== (i = r.get(a.id)) && void 0 !== i ? i : []);
+    let t = T(null !== (a = r.get(s.id)) && void 0 !== a ? a : []);
     t.length > 0 && e.push({
       categoryInfo: {
         type: h.bg.GUILD,
-        guild: a
+        guild: s,
+        isNitroLocked: !i
       },
-      key: a.id,
+      key: s.id,
       items: t
     });
   }
-}(e, v, null == R ? void 0 : R.id, m), O && g(e, m), {
+}(e, R, null == y ? void 0 : y.id, A, m), C && S(e, A), {
   categories: e,
-  isFetching: A
+  isFetching: v
 });
   }, [
+O,
+A,
 N,
-m,
-S,
+P,
+M,
 b,
 L,
-D,
 y,
-R,
-C,
+D,
 t,
-O,
-v,
+C,
+R,
 n,
-A
+v,
+m
   ]);
 }
 
-function A(e, t, n) {
+function N(e, t, n) {
   return r.useMemo(() => n.length > 0 ? [{
 key: h.bg.SEARCH,
 categoryInfo: {
   type: h.bg.SEARCH
 },
-items: I(t, !1)
+items: T(t, !1)
   }] : e, [
 e,
 n.length,

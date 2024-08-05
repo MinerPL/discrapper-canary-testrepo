@@ -1,5 +1,5 @@
 n(47120), n(789020), n(724458);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(700785),
   c = n(592125),
@@ -49,7 +49,7 @@ sessionId: n
   } = e;
   m = t.id, I = n, T = null;
 }
-class v extends(r = s.ZP.Store) {
+class v extends(r = o.ZP.Store) {
   initialize() {
 this.mustEmitChanges(e => 'CONNECTION_OPEN' !== e.type && 'VOICE_STATE_UPDATES' !== e.type), this.waitFor(_.Z);
   }
@@ -93,12 +93,12 @@ let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.Yn.DE
 return null != m && this.isPrioritySpeaker(m, e) && this.isSpeaking(m, e);
   }
 }
-o = 'SpeakingStore', (a = 'displayName') in(i = v) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'SpeakingStore', (a = 'displayName') in(i = v) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new v(l.Z, {
+}) : i[a] = s, t.Z = new v(l.Z, {
   CONNECTION_OPEN: N,
   OVERLAY_INITIALIZE: N,
   SPEAKING: function(e) {
@@ -122,15 +122,15 @@ return function(e, t, n) {
         t = p.get(e);
       return null == t && (t = new Map(), p.set(e, t)), t;
     }(e),
-    o = a.get(t),
-    s = null !== (r = null == o ? void 0 : o.flags) && void 0 !== r ? r : 0;
-  if (0 === s && 0 === n)
+    s = a.get(t),
+    o = null !== (r = null == s ? void 0 : s.flags) && void 0 !== r ? r : 0;
+  if (0 === o && 0 === n)
     return !1;
   if (0 === n)
     a.delete(t), 0 === a.size && p.delete(e);
   else {
-    let e = null !== (i = null == o ? void 0 : o.since) && void 0 !== i ? i : null,
-      r = (s & h.Dg.VOICE) === h.Dg.VOICE,
+    let e = null !== (i = null == s ? void 0 : s.since) && void 0 !== i ? i : null,
+      r = (o & h.Dg.VOICE) === h.Dg.VOICE,
       l = (n & h.Dg.VOICE) === h.Dg.VOICE;
     r !== l && (e = l ? Date.now() : null), a.set(t, {
       flags: n,
@@ -149,8 +149,8 @@ return t.reduce((e, t) => {
     userId: n,
     channelId: r,
     sessionId: i
-  } = t, a = !1, o = T;
-  return n === m && i === I && (T = null != r ? r : null), o !== T && (a = p.delete(h.Yn.DEFAULT) || a), null == r ? a = n === m && i === I ? p.delete(h.Yn.DEFAULT) || a : g(h.Yn.DEFAULT, n) || a : n === m && i !== I ? a = p.delete(h.Yn.DEFAULT) || a : n !== m && r !== _.Z.getChannelId() && (a = g(h.Yn.DEFAULT, n) || a), a || e;
+  } = t, a = !1, s = T;
+  return n === m && i === I && (T = null != r ? r : null), s !== T && (a = p.delete(h.Yn.DEFAULT) || a), null == r ? a = n === m && i === I ? p.delete(h.Yn.DEFAULT) || a : g(h.Yn.DEFAULT, n) || a : n === m && i !== I ? a = p.delete(h.Yn.DEFAULT) || a : n !== m && r !== _.Z.getChannelId() && (a = g(h.Yn.DEFAULT, n) || a), a || e;
 }, !1);
   }
 });

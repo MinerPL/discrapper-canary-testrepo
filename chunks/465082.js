@@ -1,118 +1,110 @@
 n.d(t, {
   Z: function() {
-return C;
+return f;
   }
 });
 var a = n(735250),
   i = n(470079),
   l = n(120356),
   r = n.n(l),
-  c = n(91192),
-  s = n(481060),
-  o = n(270144),
-  d = n(768581),
-  u = n(4461),
-  _ = n(924489),
-  g = n(132871),
-  m = n(491576),
-  f = n(689938),
-  p = n(262957);
+  s = n(91192),
+  c = n(481060),
+  o = n(768581),
+  d = n(4461),
+  u = n(924489),
+  _ = n(491576),
+  g = n(689938),
+  m = n(262957);
 
-function C(e) {
-  var t, n, l;
+function f(e) {
+  var t, n, l, f;
   let {
 application: C,
-className: h,
-childrenClassName: x,
-showAdd: I,
-showMutualGuilds: T,
-showPrimaryCategory: R,
-children: A,
+className: p,
+childrenClassName: h,
+showAdd: x,
+showMutualGuilds: I,
+showPrimaryCategory: T,
+children: R,
 onView: b,
-guildCountPosition: v = 'top',
-subheaderTextVariant: E = 'text-sm/normal',
-mutualGuildShownMax: P,
-guildIconSize: N,
-source: S
-  } = e, j = (0, g.useApplicationDirectoryHistory)(e => e.guildId), y = (0, c.JA)(C.id), O = d.ZP.getApplicationIconURL({
+guildCountPosition: A = 'top',
+subheaderTextVariant: v = 'text-sm/normal',
+mutualGuildShownMax: E,
+guildIconSize: P,
+source: N
+  } = e, S = (0, s.JA)(C.id), j = o.ZP.getApplicationIconURL({
 id: C.id,
 icon: C.icon,
 size: 48
   }), {
-canInstall: M,
-install: D
-  } = (0, u.P)(C), Z = (0, m.Z)({
+canInstall: y,
+install: O
+  } = (0, d.P)(C), M = (0, _.Z)({
 application: C,
-showMutualGuilds: T
-  }), L = i.useCallback(e => {
-e.stopPropagation(), D(S);
+showMutualGuilds: I
+  }), D = i.useCallback(e => {
+e.stopPropagation(), O(N);
   }, [
-D,
-S
-  ]), k = null === (t = C.categories) || void 0 === t ? void 0 : t[0], Y = (null !== (l = null === (n = C.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== l ? l : 0) > 0 || Z.length > 0, H = (0, a.jsx)(_.Z, {
+O,
+N
+  ]), Z = null === (t = C.categories) || void 0 === t ? void 0 : t[0], L = (null !== (l = null === (n = C.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== l ? l : 0) > 0 || M.length > 0, Y = (0, a.jsx)(u.Z, {
 application: C,
-textVariant: E,
-mutualGuilds: Z,
-mutualGuildShownMax: P,
-guildIconSize: N,
+textVariant: v,
+mutualGuilds: M,
+mutualGuildShownMax: E,
+guildIconSize: P,
 compact: !0
-  }), U = R && null != k, B = Y && 'top' === v, G = Y && 'bottom' === v, {
-applicationSubscriptionListingsShown: w
-  } = (0, o.ZP)({
-applicationId: C.id,
-groupListingId: C.primary_sku_id,
-guildId: j
-  }), F = (0, a.jsxs)('article', {
+  }), k = T && null != Z, H = L && 'top' === A, U = L && 'bottom' === A, B = null !== (f = C.storefront_available) && void 0 !== f && f, G = (0, a.jsxs)('article', {
 children: [
   (0, a.jsxs)('div', {
-    className: p.topWrapper,
+    className: m.topWrapper,
     children: [
       (0, a.jsx)('img', {
-        className: p.icon,
+        className: m.icon,
         alt: '',
         'aria-hidden': !0,
-        src: O,
+        src: j,
         width: 48,
         height: 48
       }),
       (0, a.jsxs)('div', {
-        className: p.info,
+        className: m.info,
         children: [
-          (0, a.jsx)(s.Heading, {
+          (0, a.jsx)(c.Heading, {
             variant: 'heading-md/medium',
             children: C.name
           }),
-          (U || B) && (0, a.jsxs)('div', {
-            className: p.details,
+          (k || H) && (0, a.jsxs)('div', {
+            className: m.details,
             children: [
-              U ? (0, a.jsx)(s.Text, {
+              k ? (0, a.jsx)(c.Text, {
                 tag: 'span',
                 color: 'header-secondary',
-                variant: E,
-                children: k.name
+                variant: v,
+                children: Z.name
               }) : null,
-              B ? (0, a.jsxs)(a.Fragment, {
+              H ? (0, a.jsxs)(a.Fragment, {
                 children: [
-                  U ? (0, a.jsx)('span', {
-                    className: p.bullet,
+                  k ? (0, a.jsx)('span', {
+                    className: m.bullet,
                     children: '\u2022'
                   }) : null,
-                  H,
-                  w ? (0, a.jsxs)('div', {
-                    className: p.premiumContainer,
+                  Y,
+                  B ? (0, a.jsxs)('div', {
+                    className: m.premiumContainer,
                     children: [
                       (0, a.jsx)('span', {
-                        className: p.bullet,
+                        className: m.bullet,
                         children: '\u2022'
                       }),
-                      (0, a.jsx)(s.TicketIcon, {
+                      (0, a.jsx)(c.TicketIcon, {
                         size: 'xs',
                         color: 'currentColor'
                       }),
-                      (0, a.jsx)(s.Text, {
+                      (0, a.jsx)(c.Text, {
                         variant: 'text-sm/medium',
-                        className: p.premiumText,
-                        children: f.Z.Messages.APPLICATION_DIRECTORY_LISTING_TOOLTIP_PREMIUM
+                        className: m.premiumText,
+                        children: g.Z.Messages.APPLICATION_DIRECTORY_LISTING_TOOLTIP_PREMIUM
                       })
                     ]
                   }) : null
@@ -122,37 +114,37 @@ children: [
           })
         ]
       }),
-      I ? (0, a.jsx)(s.Button, {
-        size: s.Button.Sizes.SMALL,
-        onClick: L,
-        disabled: !M,
-        children: f.Z.Messages.APP_DIRECTORY_LISTING_ADD_BUTTON
+      x ? (0, a.jsx)(c.Button, {
+        size: c.Button.Sizes.SMALL,
+        onClick: D,
+        disabled: !y,
+        children: g.Z.Messages.APP_DIRECTORY_LISTING_ADD_BUTTON
       }) : null
     ]
   }),
-  null != A || null != x ? (0, a.jsx)('div', {
-    className: r()(x, p.__invalid_children),
-    children: A
+  null != R || null != h ? (0, a.jsx)('div', {
+    className: r()(h, m.__invalid_children),
+    children: R
   }) : null,
-  G ? (0, a.jsx)('div', {
-    className: p.bottomGuildCountContainer,
-    children: H
+  U ? (0, a.jsx)('div', {
+    className: m.bottomGuildCountContainer,
+    children: Y
   }) : null
 ]
   });
-  return null != b ? (0, a.jsx)(s.Clickable, {
+  return null != b ? (0, a.jsx)(c.Clickable, {
 tag: 'li',
 onClick: () => b({
-  mutualGuilds: Z
+  mutualGuilds: M
 }),
-className: r()(h, p.listing, p.clickable),
-...y,
-children: F
-  }) : (0, a.jsx)(s.FocusRing, {
+className: r()(p, m.listing, m.clickable),
+...S,
+children: G
+  }) : (0, a.jsx)(c.FocusRing, {
 children: (0, a.jsx)('li', {
-  className: r()(h, p.listing),
-  ...y,
-  children: F
+  className: r()(p, m.listing),
+  ...S,
+  children: G
 })
   });
 }

@@ -11,10 +11,19 @@ e.exports = {
   primaryActionPopoutMessageCloseIcon: 'primaryActionPopoutMessageCloseIcon_a35965',
   shareToChannelButton: 'shareToChannelButton_a35965',
   popoutContentHeader: 'popoutContentHeader_a35965',
-  popoutContentBody: 'popoutContentBody_a35965',
+  popoutContentWrapper: 'popoutContentWrapper_a35965',
+  popoutHeroInner: 'popoutHeroInner_a35965',
   popoutThumbnailContainer: 'popoutThumbnailContainer_a35965',
+  popoutHeroBody: 'popoutHeroBody_a35965',
+  popoutHeroTextPrimary: 'popoutHeroTextPrimary_a35965',
+  popoutHeroTextPrimaryShort: 'popoutHeroTextPrimaryShort_a35965',
+  popoutHeroTextSecondary: 'popoutHeroTextSecondary_a35965',
+  popoutHeaderIcons: 'popoutHeaderIcons_a35965',
   popoutUserContainer: 'popoutUserContainer_a35965',
   popoutUsername: 'popoutUsername_a35965',
+  streamingPopoutHeader: 'streamingPopoutHeader_a35965',
+  streamingPopoutHeaderText: 'streamingPopoutHeaderText_a35965',
+  streamingPopoutImg: 'streamingPopoutImg_a35965',
   voiceChannelPopoutReactorHeader: 'voiceChannelPopoutReactorHeader_a35965',
   voiceChannelPopoutReactorChannel: 'voiceChannelPopoutReactorChannel_a35965',
   voiceChannelName: 'voiceChannelName_a35965',
@@ -33,6 +42,5 @@ e.exports = {
   popoutTextSecondary: 'popoutTextSecondary_a35965',
   streamingPopoutHero: 'streamingPopoutHero_a35965',
   streamCTA: 'streamCTA_a35965',
-  maybeClickable: 'maybeClickable_a35965',
-  popoutHeaderIcons: 'popoutHeaderIcons_a35965'
+  maybeClickable: 'maybeClickable_a35965'
 };

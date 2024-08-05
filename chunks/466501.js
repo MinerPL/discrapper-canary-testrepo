@@ -1,21 +1,21 @@
-t.r(i), t.d(i, {
+i.r(t), i.d(t, {
   default: function() {
 return h;
   }
 });
-var n = t(735250),
-  o = t(470079),
-  a = t(481060),
-  l = t(651711),
-  r = t(434404),
-  s = t(202858),
-  c = t(587431),
-  d = t(400842),
-  u = t(271267),
-  _ = t(981631),
-  E = t(689938),
-  M = t(892463),
-  A = t(653904);
+var n = i(735250),
+  o = i(470079),
+  a = i(481060),
+  l = i(651711),
+  r = i(434404),
+  s = i(202858),
+  c = i(587431),
+  d = i(400842),
+  u = i(271267),
+  _ = i(981631),
+  E = i(689938),
+  M = i(892463),
+  A = i(653904);
 
 function b() {
   return (0, n.jsxs)('div', {
@@ -44,8 +44,8 @@ children: [
 
 function C(e) {
   let {
-eligibility: i,
-eligibilityLoading: t,
+eligibility: t,
+eligibilityLoading: i,
 eligibilityError: E,
 guildId: A,
 onEligibilityBecameStale: b
@@ -61,17 +61,17 @@ actions: {
   }), [
 A,
 b
-  ]), h = (0, l.Z)(i, C);
+  ]), h = (0, l.Z)(t, C);
   return null != E ? (0, n.jsx)('div', {
 className: M.paddedContainer,
 children: (0, n.jsx)(c.Z, {
   children: E.message
 })
-  }) : null == h || t ? (0, n.jsx)('div', {
+  }) : null == h || i ? (0, n.jsx)('div', {
 className: M.paddedContainer,
 children: (0, n.jsx)(a.Spinner, {})
   }) : (0, n.jsx)('div', {
-children: h.map((e, i) => (0, n.jsxs)(o.Fragment, {
+children: h.map((e, t) => (0, n.jsxs)(o.Fragment, {
   children: [
     (0, n.jsx)(d.d, {
       name: e.checked ? e.checkedLabel : e.uncheckedLabel,
@@ -80,7 +80,7 @@ children: h.map((e, i) => (0, n.jsxs)(o.Fragment, {
       actionLabel: e.actionLabel,
       actionHandler: e.actionHandler
     }),
-    i < h.length - 1 ? (0, n.jsx)(a.FormDivider, {}) : null
+    t < h.length - 1 ? (0, n.jsx)(a.FormDivider, {}) : null
   ]
 }, e.checkedLabel))
   });
@@ -88,8 +88,8 @@ children: h.map((e, i) => (0, n.jsxs)(o.Fragment, {
 
 function h(e) {
   let {
-eligibility: i,
-eligibilityLoading: t,
+eligibility: t,
+eligibilityLoading: i,
 eligibilityError: o,
 refreshEligibility: l,
 guildId: r,
@@ -103,8 +103,8 @@ children: [
   (0, n.jsx)(b, {}),
   (0, n.jsx)(a.ModalContent, {
     children: (0, n.jsx)(C, {
-      eligibility: i,
-      eligibilityLoading: t,
+      eligibility: t,
+      eligibilityLoading: i,
       eligibilityError: o,
       guildId: r,
       onEligibilityBecameStale: l

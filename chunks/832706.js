@@ -1,9 +1,9 @@
 var r = n(781212),
   i = n(599295),
   a = n(919499),
-  o = n(15393);
+  s = n(15393);
 n(476400);
-var s = n(470079),
+var o = n(470079),
   l = n(717588),
   u = n(46121),
   c = Object.values || function(e) {
@@ -13,7 +13,7 @@ return Object.keys(e).map(function(t) {
   },
   d = function(e) {
 function t(t, n) {
-  var r, i = (r = e.call(this, t, n) || this).handleExited.bind((0, o.Z)((0, o.Z)(r)));
+  var r, i = (r = e.call(this, t, n) || this).handleExited.bind((0, s.Z)((0, s.Z)(r)));
   return r.state = {
     contextValue: {
       isMounting: !0
@@ -56,14 +56,14 @@ return n.componentDidMount = function() {
       'childFactory'
     ]),
     a = this.state.contextValue,
-    o = c(this.state.children).map(n);
-  return (delete i.appear, delete i.enter, delete i.exit, null === t) ? s.createElement(l.Z.Provider, {
+    s = c(this.state.children).map(n);
+  return (delete i.appear, delete i.enter, delete i.exit, null === t) ? o.createElement(l.Z.Provider, {
     value: a
-  }, o) : s.createElement(l.Z.Provider, {
+  }, s) : o.createElement(l.Z.Provider, {
     value: a
-  }, s.createElement(t, i, o));
+  }, o.createElement(t, i, s));
 }, t;
-  }(s.Component);
+  }(o.Component);
 d.propTypes = {}, d.defaultProps = {
   component: 'div',
   childFactory: function(e) {

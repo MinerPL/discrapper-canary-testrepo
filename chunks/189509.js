@@ -1,12 +1,12 @@
 t.d(n, {
   z: function() {
-return E;
+return r;
   }
 });
 var i = t(607070),
   l = t(585483),
   o = t(981631);
-let E = {
+let r = {
   binds: ['return'],
   action() {
 if (!i.Z.keyboardModeEnabled && l.S.hasSubscribers(o.CkL.MODAL_SUBMIT))

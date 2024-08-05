@@ -161,12 +161,12 @@ a = {
   className: 'string',
   begin: /(#\d+)+/
 },
-o = {
+s = {
   begin: e.IDENT_RE + '\\s*=\\s*class\\s*\\(',
   returnBegin: !0,
   contains: [e.TITLE_MODE]
 },
-s = {
+o = {
   className: 'function',
   beginKeywords: 'function constructor destructor procedure',
   end: /[:;]/,
@@ -216,8 +216,8 @@ contains: [
       }
     ]
   },
-  o,
   s,
+  o,
   r
 ].concat(n)
   };

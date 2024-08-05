@@ -178,7 +178,7 @@ itemHook: (e, n) => (0, l.jsx)(_.Text, {
 }, n)
   }), {
 handleSelectOption: b
-  } = (0, k.Z)(i.id), E = (0, _.useToken)(h.Z.unsafe_rawColors.BRAND_500), Z = (0, c.useSpring)({
+  } = (0, k.Z)(i.id), E = (0, _.useToken)(h.Z.unsafe_rawColors.BRAND_500), Z = (0, _.useSpring)({
 from: {
   color: t.isNew ? E.hex({
     opacity: 1
@@ -193,7 +193,7 @@ config: {
   duration: 300
 },
 delay: 500
-  }), v = t.options.map(e => ({
+  }, 'animate-always'), v = t.options.map(e => ({
 value: e.id,
 ...e
   })), T = t.options.filter(e => x.includes(e.id)).map(e => e.id);
@@ -291,7 +291,7 @@ if (!n && 1 === x.length && t.required) {
   return;
 }
 b(t, e, null != n && n), t.singleSelect && n && t.options.forEach(e => d.delete(e.id)), n ? d.add(e.id) : d.delete(e.id), m(new Set(d)), o(null);
-  }, Z = (0, _.useToken)(h.Z.unsafe_rawColors.BRAND_500), v = (0, c.useSpring)({
+  }, Z = (0, _.useToken)(h.Z.unsafe_rawColors.BRAND_500), v = (0, _.useSpring)({
 from: {
   color: t.isNew ? Z.hex({
     opacity: 1
@@ -306,7 +306,7 @@ config: {
   duration: 300
 },
 delay: 500
-  });
+  }, 'animate-always');
   return (0, l.jsx)(l.Fragment, {
 children: (0, l.jsxs)(c.animated.div, {
   className: X.prompt,

@@ -1,7 +1,7 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(846519),
   l = n(481060),
   o = n(293245),
@@ -24,7 +24,7 @@ u.TzF.PULLING
 [u.TzF.CONFLICT]: h,
 [u.TzF.ERROR]: h
   });
-class g extends s.PureComponent {
+class g extends a.PureComponent {
   componentDidMount() {
 this.getIsRecentlySynced() && this.setRecentlySyncedTimeout();
   }
@@ -85,18 +85,18 @@ let {
   cloudSyncState: e,
   libraryApplication: t,
   className: n
-} = this.props, s = null == e ? {
+} = this.props, a = null == e ? {
   type: u.TzF.DONE
-} : e, a = this.getIsRecentlySynced(), r = {};
-(I.has(s.type) || a) && (r.gradientConfig = {
+} : e, s = this.getIsRecentlySynced(), r = {};
+(I.has(a.type) || s) && (r.gradientConfig = {
   id: t.id,
   startColor: 'rgba(199, 208, 240, 1)',
   stopColor: 'rgba(114, 137, 218, 1)',
-  stop: this.getStop(s, a)
+  stop: this.getStop(a, s)
 });
-let o = a ? E : m[s.type];
+let o = s ? E : m[a.type];
 return (0, i.jsx)(l.Tooltip, {
-  text: this.getTooltip(s, a),
+  text: this.getTooltip(a, s),
   children: e => (0, i.jsx)(o, {
     className: n,
     ...r,
@@ -114,7 +114,7 @@ super(...e), t = this, n = '_doneTimer', i = new r.V7(), n in t ? Object.defineP
 }) : t[n] = i;
   }
 }
-t.Z = a.ZP.connectStores([o.Z], e => {
+t.Z = s.ZP.connectStores([o.Z], e => {
   let {
 libraryApplication: t
   } = e;

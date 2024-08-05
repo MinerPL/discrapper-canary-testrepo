@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250);
 n(470079);
-var s = n(544891),
-  a = n(846519),
+var a = n(544891),
+  s = n(846519),
   r = n(481060),
   l = n(496929),
   o = n(115130),
@@ -22,13 +22,13 @@ scope: m.lH,
 handler(e) {
   let {
     socket: t
-  } = e, s = t.application.id;
+  } = e, a = t.application.id;
   try {
-    if (null == s)
+    if (null == a)
       throw new I.Z({
         errorCode: g.lTL.INVALID_COMMAND
       }, 'No application.');
-    let e = c.Z.getApplication(s);
+    let e = c.Z.getApplication(a);
     if (null == e)
       throw new I.Z({
         errorCode: g.lTL.INVALID_ENTITLEMENT
@@ -48,7 +48,7 @@ handler(e) {
             errorCode: g.lTL.INVALID_ENTITLEMENT
           }, 'User does not have entitlement.');
       }),
-      (0, a.GR)(p).then(() => {
+      (0, s.GR)(p).then(() => {
         throw new I.Z({
           errorCode: g.lTL.INVALID_ENTITLEMENT
         }, 'Timed out fetching entitlement.');
@@ -61,7 +61,7 @@ handler(e) {
       } = await n.e('48748').then(n.bind(n, 52004));
       return t => (0, i.jsx)(e, {
         ...t,
-        applicationId: s
+        applicationId: a
       });
     })), e;
   }
@@ -72,15 +72,15 @@ scope: m.lH,
 handler(e) {
   let {
     socket: t
-  } = e, a = t.application.id;
-  if (null == a)
+  } = e, s = t.application.id;
+  if (null == s)
     throw new I.Z({
       errorCode: g.lTL.INVALID_COMMAND
     }, 'No application.');
-  return s.tn.post({
-    url: g.ANM.ENTITLEMENT_TICKET(a),
+  return a.tn.post({
+    url: g.ANM.ENTITLEMENT_TICKET(s),
     body: {
-      test_mode: _.Z.inTestModeForApplication(a) || o.Z.inDevModeForApplication(a)
+      test_mode: _.Z.inTestModeForApplication(s) || o.Z.inDevModeForApplication(s)
     },
     retries: 3,
     oldFormErrors: !0
@@ -96,7 +96,7 @@ handler(e) {
       } = await n.e('48748').then(n.bind(n, 52004));
       return t => (0, i.jsx)(e, {
         ...t,
-        applicationId: a
+        applicationId: s
       });
     }), e;
   });

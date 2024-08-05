@@ -22,11 +22,11 @@ e = e.concat(function(e, t) {
   if (!n)
     return e;
   var r, i, a = n.call(e),
-    o = [];
+    s = [];
   try {
     for (;
       (void 0 === t || t-- > 0) && !(r = a.next()).done;)
-      o.push(r.value);
+      s.push(r.value);
   } catch (e) {
     i = {
       error: e
@@ -39,7 +39,7 @@ e = e.concat(function(e, t) {
         throw i.error;
     }
   }
-  return o;
+  return s;
 }(arguments[t]));
   return e;
 }

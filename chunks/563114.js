@@ -2,8 +2,8 @@ n(47120), n(757143);
 var r = n(946188),
   i = n(768581),
   a = n(302221),
-  o = n(956664),
-  s = n(753090);
+  s = n(956664),
+  o = n(753090);
 let l = new Set([
   '\u2122',
   '\u2122️',
@@ -34,14 +34,14 @@ id: n,
 size: 32,
 animated: !1
   }) : u(r);
-  let s = await (0, o.OF)(t);
-  return null == s ? void 0 : s.map(e => {
+  let o = await (0, s.OF)(t);
+  return null == o ? void 0 : o.map(e => {
 let [t, n, r] = e;
 return (0, a.vq)(t, n, r);
   });
 }
 t.Z = {
-  getURL: s.Z.makeMemoizer(u),
+  getURL: o.Z.makeMemoizer(u),
   filterUnsupportedEmojis: function(e) {
 return e;
   },

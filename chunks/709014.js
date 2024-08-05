@@ -6,9 +6,9 @@ return f;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(906280),
-  l = n.n(s),
+  s = n.n(a),
+  o = n(906280),
+  l = n.n(o),
   u = n(186325),
   c = n(390507),
   d = n(679400),
@@ -17,7 +17,7 @@ var r = n(735250),
 let f = i.forwardRef(function(e, t) {
   let {
 color: a,
-src: s,
+src: o,
 size: f = 'md',
 width: h,
 height: p,
@@ -57,10 +57,10 @@ D,
 R,
 T
   ]), i.useEffect(() => {
-null == g && s().then(e => S(e.default));
+null == g && o().then(e => S(e.default));
   }, [
 g,
-s
+o
   ]), i.useEffect(() => (n.e('23755').then(n.t.bind(n, 500923, 23)).then(e => {
 var t;
 let n, {
@@ -95,7 +95,7 @@ style: {
   display: 'flex',
   ...O
 },
-className: o()(E.lottieIcon, m),
+className: s()(E.lottieIcon, m),
 ref: A
   });
 });

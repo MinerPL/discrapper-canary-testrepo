@@ -1,7 +1,7 @@
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(692547),
   u = n(477690),
   c = n(481060),
@@ -82,12 +82,12 @@ return (0, i.jsx)(c.AccessibilityPreferencesContext.Consumer, {
       reducedMotion: a
     } = r;
     return a.enabled ? (0, i.jsx)('div', {
-      className: s()(I.fallbackImage, {
+      className: o()(I.fallbackImage, {
         [I.embedded]: n,
         [I.visible]: !t && e >= p.hO.ENTERED
       })
     }) : (0, i.jsx)('canvas', {
-      className: s()(I.canvas, {
+      className: o()(I.canvas, {
         [I.embedded]: n
       }),
       ref: this.setCanvas

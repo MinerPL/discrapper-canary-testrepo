@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(845537),
-  s = n(653309),
+  s = n(845537),
+  o = n(653309),
   l = n(434175),
   u = n(551360),
   c = n(153521);
@@ -26,7 +26,7 @@ return Object.entries(e).filter(e => {
   return 'anchor' !== t && 'focus' !== t;
 }).map(e => {
   let [t, n] = e;
-  return !0 === n && t in s.U ? s.U[t] : null;
+  return !0 === n && t in o.U ? o.U[t] : null;
 }).filter(e => null != e).join(' ');
   }(null !== (i = null == h ? void 0 : h[0]) && void 0 !== i ? i : {});
   switch (f.type) {
@@ -63,7 +63,7 @@ case 'emoji':
     attributes: d,
     className: p,
     children: [
-      (0, r.jsx)(o.dy, {
+      (0, r.jsx)(s.dy, {
         emoji: f.emoji
       }),
       E
@@ -74,7 +74,7 @@ case 'customEmoji':
     attributes: d,
     className: p,
     children: [
-      (0, r.jsx)(o.wP, {
+      (0, r.jsx)(s.wP, {
         emoji: f.emoji
       }),
       E
@@ -85,7 +85,7 @@ case 'textMention':
     attributes: d,
     className: p,
     children: [
-      (0, r.jsx)(o.Ox, {
+      (0, r.jsx)(s.Ox, {
         text: f.name,
         channelId: n,
         guildId: t
@@ -98,7 +98,7 @@ case 'userMention':
     attributes: d,
     className: p,
     children: [
-      (0, r.jsx)(o.cB, {
+      (0, r.jsx)(s.cB, {
         id: f.userId,
         channelId: n,
         guildId: t
@@ -111,7 +111,7 @@ case 'roleMention':
     attributes: d,
     className: p,
     children: [
-      (0, r.jsx)(o.Vq, {
+      (0, r.jsx)(s.Vq, {
         id: f.roleId,
         guildId: t
       }),
@@ -123,7 +123,7 @@ case 'channelMention':
     attributes: d,
     className: p,
     children: [
-      (0, r.jsx)(o.Io, {
+      (0, r.jsx)(s.Io, {
         id: f.channelId
       }),
       E
@@ -134,7 +134,7 @@ case 'staticRouteLink':
     attributes: d,
     className: p,
     children: [
-      (0, r.jsx)(o.NY, {
+      (0, r.jsx)(s.NY, {
         id: f.channelId
       }),
       E
@@ -145,7 +145,7 @@ case 'soundboard':
     attributes: d,
     className: p,
     children: [
-      (0, r.jsx)(o.mb, {
+      (0, r.jsx)(s.mb, {
         id: f.soundId
       }),
       E
@@ -156,7 +156,7 @@ case 'commandMention':
     attributes: d,
     className: p,
     children: [
-      (0, r.jsx)(o.Wf, {
+      (0, r.jsx)(s.Wf, {
         text: f.commandName,
         id: f.commandId
       }),
@@ -168,7 +168,7 @@ case 'timestamp':
     attributes: d,
     className: p,
     children: [
-      (0, r.jsx)(o.EK, {
+      (0, r.jsx)(s.EK, {
         timestamp: f.parsed
       }),
       E
@@ -183,10 +183,10 @@ let _ = e => {
 className: t,
 attributes: n,
 children: i
-  } = e, o = a()(u.inlineElement, u.inlineVoid, t);
+  } = e, s = a()(u.inlineElement, u.inlineVoid, t);
   return (0, r.jsx)('span', {
 ...n,
-className: o,
+className: s,
 contentEditable: !1,
 children: i
   });

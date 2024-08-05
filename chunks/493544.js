@@ -6,7 +6,7 @@ return C;
 return R;
   },
   Xi: function() {
-return T;
+return E;
   },
   bT: function() {
 return a;
@@ -31,8 +31,8 @@ HEADER: 'HEADER',
 DIVIDER: 'DIVIDER',
 CUSTOM: 'CUSTOM'
   },
-  E = u.createContext(null);
-class T extends(o = u.PureComponent) {
+  T = u.createContext(null);
+class E extends(o = u.PureComponent) {
   renderContent() {
 let {
   scrollerRef: e,
@@ -73,20 +73,20 @@ children: (0, c.jsx)('div', {
 l = {
   paddingTop: 60,
   paddingBottom: 60
-}, (s = 'defaultProps') in(i = T) ? Object.defineProperty(i, s, {
+}, (s = 'defaultProps') in(i = E) ? Object.defineProperty(i, s, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : i[s] = l, (r = a || (a = {})).MINIMAL = 'minimal', r.CUSTOM = 'custom', r.DEFAULT = 'default', r.WIDE = 'wide';
-let P = Object.freeze({
+let I = Object.freeze({
   minimal: 'contentColumnMinimal',
   custom: 'contentColumnCustom',
   default: 'contentColumnDefault',
   wide: 'contentColumnWide'
 });
 
-function y(e) {
+function P(e) {
   let {
 isMobile: t,
 mobileSidebarOpen: n,
@@ -128,7 +128,7 @@ scrollerRef: a,
 mobileSidebarOpen: d,
 toggleSidebar: x,
 hideSidebar: N = !1
-  } = e, C = u.useRef(null), T = u.useRef(null), R = (0, v.Z)(s), I = (0, m.useTransition)(N, {
+  } = e, C = u.useRef(null), E = u.useRef(null), R = (0, v.Z)(s), y = (0, S.useTransition)(N, {
 from: {
   position: 'absolute',
   opacity: 0
@@ -138,7 +138,7 @@ enter: {
 },
 reverse: N,
 config: m.config.stiff
-  }), A = u.useCallback(e => {
+  }, 'animate-always'), A = u.useCallback(e => {
 C.current = e, null != a && (a.current = e);
   }, [a]);
   u.useLayoutEffect(() => {
@@ -150,13 +150,13 @@ s,
 R,
 C
   ]);
-  let B = (0, c.jsx)(y, {
+  let Z = (0, c.jsx)(P, {
 isMobile: f.tq,
 mobileSidebarOpen: d,
 closeAction: l
   });
 
-  function Z() {
+  function B() {
 return null == i ? null : (0, c.jsx)(S.SlideIn, {
   className: h()(j.noticeRegion, {
     [j.noticeRegionHiddenSidebar]: N
@@ -165,7 +165,7 @@ return null == i ? null : (0, c.jsx)(S.SlideIn, {
 }, s);
   }
   return (0, c.jsx)(c.Fragment, {
-children: I((e, i) => (0, c.jsxs)(m.animated.div, {
+children: y((e, i) => (0, c.jsxs)(m.animated.div, {
   style: e,
   className: j.standardSidebarView,
   children: [
@@ -184,7 +184,7 @@ children: I((e, i) => (0, c.jsxs)(m.animated.div, {
           children: [
             f.tq && (0, c.jsx)('div', {
               className: j.mobileSidebarHeader,
-              children: B
+              children: Z
             }),
             t
           ]
@@ -201,7 +201,7 @@ children: I((e, i) => (0, c.jsxs)(m.animated.div, {
             e && (0, c.jsx)(p.r, {
               onClick: x
             }),
-            B
+            Z
           ]
         });
       if ('custom' === o)
@@ -211,11 +211,11 @@ children: I((e, i) => (0, c.jsxs)(m.animated.div, {
           children: [
             t,
             n,
-            !f.tq && B,
-            Z()
+            !f.tq && Z,
+            B()
           ]
         });
-      let i = P[null != o ? o : 'default'];
+      let i = I[null != o ? o : 'default'];
       return (0, c.jsxs)(b.W, {
         component: 'div',
         className: h()(j.contentRegion, {
@@ -230,29 +230,29 @@ children: I((e, i) => (0, c.jsxs)(m.animated.div, {
                 className: h()(j.contentRegionScroller, N ? j.contentRegionHiddenSidebar : j.contentRegionShownSidebar),
                 ref: A,
                 children: [
-                  (0, c.jsx)(E.Provider, {
+                  (0, c.jsx)(T.Provider, {
                     value: C.current,
                     children: (0, c.jsx)(S.TabBar.Panel, {
                       id: s,
                       className: h()(j.contentColumn, j[i], {
                         [j.mobileContent]: f.tq
                       }),
-                      ref: T,
+                      ref: E,
                       style: f.tq ? {
                         maxWidth: window.innerWidth
                       } : void 0,
                       children: N ? n : (0, c.jsx)(S.FocusRingScope, {
-                        containerRef: T,
+                        containerRef: E,
                         children: n
                       })
                     })
                   }),
-                  !f.tq && B
+                  !f.tq && Z
                 ]
               })
             ]
           }),
-          Z()
+          B()
         ]
       });
     }()

@@ -1,8 +1,8 @@
 let r;
 var i, a = n(442837),
-  o = n(570140);
+  s = n(570140);
 
-function s(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -25,7 +25,7 @@ return r;
 return r.lastGuildDismissedTime[e];
   }
 }
-s(u, 'displayName', 'ApplicationSubscriptionChannelNoticeStore'), s(u, 'persistKey', 'ApplicationSubscriptionChannelNoticeStore'), t.Z = new u(o.Z, {
+o(u, 'displayName', 'ApplicationSubscriptionChannelNoticeStore'), o(u, 'persistKey', 'ApplicationSubscriptionChannelNoticeStore'), t.Z = new u(s.Z, {
   APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED: function(e) {
 let {
   guildId: t

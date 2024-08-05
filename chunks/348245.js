@@ -2,8 +2,8 @@ let r;
 n(47120);
 var i = n(266067),
   a = n(259443),
-  o = n(433517),
-  s = n(570140),
+  s = n(433517),
+  o = n(570140),
   l = n(668781),
   u = n(904245),
   c = n(593472),
@@ -42,7 +42,7 @@ guildId: t,
 channelId: n,
 messageId: i,
 forceFetch: a,
-isPreload: s,
+isPreload: o,
 jumpType: l,
 skipLocalFetch: d,
 logFailures: h
@@ -71,7 +71,7 @@ jumpType: c.SR.ANIMATED
 focusTargetId: null
   }), _.Z.commit(m));
   let S = a;
-  if (!s || f.Z.isConnected() || m.loadingMore ? m.loadingMore || m.ready && !m.cached ? null != i ? S = !0 : h && L.log('Skipping fetch because no other conditions matched') : null == t || null != T.Z.getGuild(t) ? S = !0 : h && L.log('Skipping fetch we are connected and have loaded messages') : S = !0, (0, E.Z)(n) && g.ZP.hasUnread(n) && (S = !0), S) {
+  if (!o || f.Z.isConnected() || m.loadingMore ? m.loadingMore || m.ready && !m.cached ? null != i ? S = !0 : h && L.log('Skipping fetch because no other conditions matched') : null == t || null != T.Z.getGuild(t) ? S = !0 : h && L.log('Skipping fetch we are connected and have loaded messages') : S = !0, (0, E.Z)(n) && g.ZP.hasUnread(n) && (S = !0), S) {
 if (_.Z.commit(m.mutate({
     loadingMore: !0
   })), null != i)
@@ -79,7 +79,7 @@ if (_.Z.commit(m.mutate({
     channelId: n,
     messageId: i,
     flash: !0,
-    isPreload: s,
+    isPreload: o,
     skipLocalFetch: d,
     jumpType: l
   });
@@ -88,7 +88,7 @@ else if ((null == p ? void 0 : p.isThread()) && function(e) {
       return !1;
     if (null == r) {
       var t;
-      r = null !== (t = o.K.get(P, {})) && void 0 !== t ? t : {};
+      r = null !== (t = s.K.get(P, {})) && void 0 !== t ? t : {};
     }
     if (e in r)
       return !1;
@@ -96,7 +96,7 @@ else if ((null == p ? void 0 : p.isThread()) && function(e) {
     let n = Date.now() - M;
     for (let e in r)
       r[e] < n && delete r[e];
-    return o.K.set(P, r), !0;
+    return s.K.set(P, r), !0;
   }(n))
   L.log('Jumping to start of thread '.concat(p.id)), u.Z.fetchMessages({
     channelId: n,
@@ -105,7 +105,7 @@ else if ((null == p ? void 0 : p.isThread()) && function(e) {
       messageId: n,
       flash: !1
     },
-    isPreload: s,
+    isPreload: o,
     skipLocalFetch: d
   });
 else if ((null == p ? void 0 : p.isThread()) && g.ZP.hasTrackedUnread(p.id) && !m.ready) {
@@ -118,14 +118,14 @@ else if ((null == p ? void 0 : p.isThread()) && g.ZP.hasTrackedUnread(p.id) && !
       flash: !1,
       offset: 1
     },
-    isPreload: s,
+    isPreload: o,
     skipLocalFetch: d
   });
 } else
   u.Z.fetchMessages({
     channelId: n,
     limit: R.AQB,
-    isPreload: s,
+    isPreload: o,
     skipLocalFetch: d,
     jump: {
       jumpType: c.SR.ANIMATED
@@ -282,13 +282,13 @@ isPreview: a = !1
   } = e;
   if (a)
 return;
-  let o = null !== (t = Y[n]) && void 0 !== t ? t : 0;
-  if (Date.now() - o < 10 * N.Z.Millis.SECOND)
+  let s = null !== (t = Y[n]) && void 0 !== t ? t : 0;
+  if (Date.now() - s < 10 * N.Z.Millis.SECOND)
 return;
   Y[n] = Date.now();
-  let s = S.Z.getChannelId(),
-l = m.ZP.getCurrentSidebarChannelId(s),
-c = n === s || n === l;
+  let o = S.Z.getChannelId(),
+l = m.ZP.getCurrentSidebarChannelId(o),
+c = n === o || n === l;
   i && f.Z.isConnected() && c && u.Z.fetchMessages({
 channelId: n,
 limit: R.AQB,
@@ -302,7 +302,7 @@ channelId: t,
 messageRecord: n,
 reason: r
   } = e;
-  null != n && s.Z.dispatch({
+  null != n && o.Z.dispatch({
 type: 'MESSAGE_SEND_FAILED',
 channelId: t,
 messageId: n.id,
@@ -323,10 +323,10 @@ return !1;
 }
 class z extends d.Z {
   _initialize() {
-s.Z.subscribe('CONNECTION_OPEN', U);
+o.Z.subscribe('CONNECTION_OPEN', U);
   }
   _terminate() {
-s.Z.unsubscribe('CONNECTION_OPEN', U);
+o.Z.unsubscribe('CONNECTION_OPEN', U);
   }
   constructor(...e) {
 super(...e), D(this, 'fetchMessages', b), D(this, 'loadSelectedChannelIfNecessary', w), D(this, 'stores', new Map().set(m.ZP, B)), D(this, 'actions', {

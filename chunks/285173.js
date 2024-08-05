@@ -17,13 +17,13 @@ role: t,
 className: a,
 canRemove: r = !1,
 onRemove: N = A.dG
-  } = e, L = (0, I.useToken)(I.tokens.unsafe_rawColors.PRIMARY_300).hex(), D = null !== (_ = null == t ? void 0 : t.colorString) && void 0 !== _ ? _ : L, S = T.useMemo(() => ({
-backgroundColor: ''.concat(D, '27')
-  }), [D]);
+  } = e, L = (0, I.useToken)(I.tokens.unsafe_rawColors.PRIMARY_300).hex(), S = null !== (_ = null == t ? void 0 : t.colorString) && void 0 !== _ ? _ : L, D = T.useMemo(() => ({
+backgroundColor: ''.concat(S, '27')
+  }), [S]);
   return null == t ? null : (0, s.jsx)(I.Clickable, {
 children: (0, s.jsx)(n.UB, {
   className: a,
-  style: S,
+  style: D,
   role: t,
   guildId: E,
   canRemove: r,

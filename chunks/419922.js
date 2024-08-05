@@ -6,9 +6,9 @@ return R;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(512722),
-  l = n.n(s),
+  s = n.n(a),
+  o = n(512722),
+  l = n.n(o),
   u = n(338545),
   c = n(442837),
   d = n(622535),
@@ -51,16 +51,16 @@ let {
   hasError: n,
   isLoading: i,
   maskAsset: a,
-  size: s,
+  size: o,
   withLoadingIndicator: l = !0
-} = e, u = s >= 33;
+} = e, u = o >= 33;
 return (0, r.jsxs)('div', {
-  className: o()(S.assetWrapper, {
+  className: s()(S.assetWrapper, {
     [S.assetWrapperMasked]: n || a
   }),
   style: {
-    height: s,
-    width: s
+    height: o,
+    width: o
   },
   children: [
     n ? (0, r.jsxs)('div', {
@@ -91,8 +91,8 @@ return (0, r.jsxs)('div', {
 let {
   shouldAnimate: t,
   size: a,
-  sticker: o,
-  fileUri: s,
+  sticker: s,
+  fileUri: o,
   assetData: u,
   isFocused: c,
   className: d,
@@ -102,8 +102,8 @@ let {
   onError: p
 } = e, m = i.useRef(null), I = i.useRef(null), [A, N] = i.useState(!0), [v, y] = i.useState(!1), D = i.useRef(!1);
 D.current = t && c;
-let L = null == s ? (0, T.Q6)(o) : s;
-return (l()(null != L, 'Unable to determine sticker asset URL. Sticker ID: '.concat(o.id)), i.useEffect(() => {
+let L = null == o ? (0, T.Q6)(s) : o;
+return (l()(null != L, 'Unable to determine sticker asset URL. Sticker ID: '.concat(s.id)), i.useEffect(() => {
   if (null == m.current || null == L)
     return;
   let e = Math.min(2, (0, f.x_)());
@@ -115,7 +115,7 @@ return (l()(null != L, 'Unable to determine sticker asset URL. Sticker ID: '.con
     } = await n.e('21617').then(n.bind(n, 186952));
     null != m.current && (I.current = new e({
       canvas: m.current,
-      animationId: o.id,
+      animationId: s.id,
       assetUrl: L,
       assetData: u,
       onInitialDraw: () => {
@@ -132,7 +132,7 @@ return (l()(null != L, 'Unable to determine sticker asset URL. Sticker ID: '.con
 }, [
   L,
   a,
-  o.id,
+  s.id,
   u,
   p
 ]), i.useEffect(() => {
@@ -140,13 +140,13 @@ return (l()(null != L, 'Unable to determine sticker asset URL. Sticker ID: '.con
   let n;
   !t && (n = 0), null === (e = I.current) || void 0 === e || e.setState(t && c, n);
 }, [
-  o,
+  s,
   t,
   c
 ]), null == L) ? null : (0, r.jsx)('div', {
   role: 'img',
   className: d,
-  'aria-label': v ? g.Z.Messages.ERROR_LOADING_STICKER : R(o),
+  'aria-label': v ? g.Z.Messages.ERROR_LOADING_STICKER : R(s),
   ref: E,
   children: (0, r.jsx)(C, {
     hasError: v,
@@ -157,7 +157,7 @@ return (l()(null != L, 'Unable to determine sticker asset URL. Sticker ID: '.con
     children: O((0, r.jsx)('canvas', {
       className: S.lottieCanvas,
       ref: m
-    }), o.id)
+    }), s.id)
   })
 });
   },
@@ -166,7 +166,7 @@ let {
   shouldAnimate: t,
   sticker: n,
   isFocused: a,
-  size: s,
+  size: o,
   className: l,
   maskAsset: u,
   positionRef: c,
@@ -174,7 +174,7 @@ let {
   fileUri: E
 } = e, [f, h] = i.useState(!1), [p, m] = i.useState(!0), [I, g] = i.useState(!1), N = i.useRef(null), v = i.useRef(null), y = null != E ? E : (0, T.Q6)(n, {
   isPreview: !t || !f || !a,
-  size: s
+  size: o
 }), D = i.useCallback(() => {
   m(!1);
 }, []), L = i.useCallback(() => {
@@ -195,13 +195,13 @@ return (i.useEffect(() => {
   onChange: h,
   threshold: 0.7,
   children: (0, r.jsx)('div', {
-    className: o()(l, S.__invalid_pngImageWrapper),
+    className: s()(l, S.__invalid_pngImageWrapper),
     ref: c,
     children: (0, r.jsx)(C, {
       hasError: I,
       isLoading: p,
       maskAsset: u,
-      size: s,
+      size: o,
       withLoadingIndicator: _,
       children: O((0, r.jsx)('img', {
         className: S.pngImage,
@@ -222,14 +222,14 @@ let {
   disableAnimation: t,
   enlargeScaleFactor: n,
   enlargeWithName: a,
-  isInteracting: o,
-  positionRef: s,
+  isInteracting: s,
+  positionRef: o,
   size: l,
   sticker: d
 } = e, f = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), p = i.useRef(null), m = {
   transform: 'scale('.concat(f ? 1 : 1 / n, ')'),
   opacity: 0
-}, I = (0, u.useTransition)(o, {
+}, I = (0, _.useTransition)(s, {
   ref: p,
   from: m,
   enter: {
@@ -238,19 +238,19 @@ let {
   },
   leave: m,
   config: N
-}), T = i.useRef(null), g = (0, u.useSpring)({
+}), T = i.useRef(null), g = (0, _.useSpring)({
   ref: T,
-  transform: o || f ? 'translateY(0)' : 'translateY(-25px)',
-  opacity: o ? 1 : 0,
+  transform: s || f ? 'translateY(0)' : 'translateY(-25px)',
+  opacity: s ? 1 : 0,
   config: v
-});
-return (0, u.useChain)(o ? [
+}, 'animate-always');
+return (0, u.useChain)(s ? [
   p,
   T
 ] : [
   T,
   p
-], o ? [
+], s ? [
   0,
   0.0625
 ] : [
@@ -261,7 +261,7 @@ return (0, u.useChain)(o ? [
   fixed: !0,
   align: 'center',
   position: 'center',
-  targetRef: s,
+  targetRef: o,
   children: () => (0, r.jsxs)('div', {
     className: S.overlayWrapper,
     children: [
@@ -272,7 +272,7 @@ return (0, u.useChain)(o ? [
           className: S.__invalid_overlaySticker,
           disableAnimation: t,
           enlargeOnInteraction: !1,
-          isInteracting: o,
+          isInteracting: s,
           maskAsset: !1,
           sticker: d,
           size: Math.round(l * n),
@@ -297,8 +297,8 @@ let {
   isInteracting: t = !1,
   disableAnimation: n = !1,
   enlargeOnInteraction: a = !1,
-  enlargeWithName: o = !0,
-  enlargeScaleFactor: s = 1.55,
+  enlargeWithName: s = !0,
+  enlargeScaleFactor: o = 1.55,
   maskAsset: l = !1,
   size: u,
   sticker: c,
@@ -328,8 +328,8 @@ return (0, r.jsxs)(i.Fragment, {
     }),
     a && (0, r.jsx)(L, {
       disableAnimation: n,
-      enlargeScaleFactor: s,
-      enlargeWithName: o,
+      enlargeScaleFactor: o,
+      enlargeWithName: s,
       isInteracting: t,
       positionRef: S,
       size: u,

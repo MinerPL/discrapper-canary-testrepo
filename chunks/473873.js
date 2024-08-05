@@ -1,19 +1,19 @@
 n.d(t, {
   U: function() {
-return o;
+return s;
   },
   k: function() {
-return s;
+return o;
   }
 });
 var r = n(182823),
   i = n(706682),
   a = n(612001);
 
-function o(e, t) {
+function s(e, t) {
   let n, {
-elementType: o = 'button',
-isDisabled: s,
+elementType: s = 'button',
+isDisabled: o,
 onPress: l,
 onPressStart: u,
 onPressEnd: c,
@@ -27,18 +27,18 @@ target: m,
 rel: I,
 type: T = 'button'
   } = e;
-  n = 'button' === o ? {
+  n = 'button' === s ? {
 type: T,
-disabled: s
+disabled: o
   } : {
 role: 'button',
-tabIndex: s ? void 0 : 0,
-href: 'a' === o && s ? void 0 : p,
-target: 'a' === o ? m : void 0,
-type: 'input' === o ? T : void 0,
-disabled: 'input' === o ? s : void 0,
-'aria-disabled': s && 'input' !== o ? s : void 0,
-rel: 'a' === o ? I : void 0
+tabIndex: o ? void 0 : 0,
+href: 'a' === s && o ? void 0 : p,
+target: 'a' === s ? m : void 0,
+type: 'input' === s ? T : void 0,
+disabled: 'input' === s ? o : void 0,
+'aria-disabled': o && 'input' !== s ? o : void 0,
+rel: 'a' === s ? I : void 0
   };
   let {
 pressProps: g,
@@ -49,13 +49,13 @@ onPressEnd: c,
 onPressChange: _,
 onPress: l,
 onPressUp: d,
-isDisabled: s,
+isDisabled: o,
 preventFocusOnPress: E,
 ref: t
   }), {
 focusableProps: A
   } = (0, i.kc)(e, t);
-  f && (A.tabIndex = s ? -1 : A.tabIndex);
+  f && (A.tabIndex = o ? -1 : A.tabIndex);
   let N = (0, r.dG)(A, g, (0, r.zL)(e, {
 labelable: !0
   }));
@@ -73,19 +73,19 @@ buttonProps: (0, r.dG)(n, N, {
   };
 }
 
-function s(e, t, n) {
+function o(e, t, n) {
   let {
 isSelected: i
   } = t, {
 isPressed: a,
-buttonProps: s
-  } = o({
+buttonProps: o
+  } = s({
 ...e,
 onPress: (0, r.tS)(t.toggle, e.onPress)
   }, n);
   return {
 isPressed: a,
-buttonProps: (0, r.dG)(s, {
+buttonProps: (0, r.dG)(o, {
   'aria-pressed': i
 })
   };

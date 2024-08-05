@@ -2,8 +2,8 @@ n(47120);
 var r = n(392711),
   i = n.n(r),
   a = n(846519),
-  o = n(147913),
-  s = n(314897),
+  s = n(147913),
+  o = n(314897),
   l = n(70956),
   u = n(557177),
   c = n(697492),
@@ -33,7 +33,7 @@ function N(e) {
 emoji: t,
 channelId: n,
 userId: r
-  } = e, o = s.default.getId(), l = d.Z.getEnabled();
+  } = e, s = o.default.getId(), l = d.Z.getEnabled();
   if (null != t) {
 if (l && (0, _.Z)(t.name))
   return function(e, t, n) {
@@ -41,12 +41,12 @@ if (l && (0, _.Z)(t.name))
     let i = m(t, n);
     if (null != d.Z.getWaitingHighFive(n, t))
       return;
-    let [o, s] = null !== (r = Object.entries(g).find(e => {
+    let [s, o] = null !== (r = Object.entries(g).find(e => {
       let [t] = e;
       return t !== i;
     })) && void 0 !== r ? r : [];
-    if (null != o && null != s)
-      s.cancel(), A.play(), delete g[o], (0, c.Ym)(o.split(':')[0], t, n, e);
+    if (null != s && null != o)
+      o.cancel(), A.play(), delete g[s], (0, c.Ym)(s.split(':')[0], t, n, e);
     else {
       (0, c._g)(e, t, n), S.play();
       let r = new a.sW(f, () => {
@@ -55,7 +55,7 @@ if (l && (0, _.Z)(t.name))
       g[t] = r, r.delay();
     }
   }(t.name, r, n);
-r === o && (T = [
+r === s && (T = [
   ...T,
   t.name
 ].slice(-1 * p), i().isEqual(T, h) ? (S.play(), I.stop(), T = [], (0, c.ME)(!l)) : I.start(E, () => T = []));
@@ -72,7 +72,7 @@ channelId: r
 delete g[i], (0, c.hu)(t, n, r);
   }), g[i].delay();
 }
-class O extends o.Z {
+class O extends s.Z {
   _terminate() {
 Object.values(g).forEach(e => e.cancel()), g = {};
   }

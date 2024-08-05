@@ -4,65 +4,72 @@ return r;
   }
 });
 var i = n(818083),
-  s = n(302800);
-let a = (0, i.B)({
+  a = n(302800);
+let s = (0, i.B)({
 kind: 'user',
 id: '2024-04_shop_marketing_badge',
 label: 'Shop Marketing New Badge Design Experiment',
 defaultConfig: {
-  coachtipEdition: s.LM.NONE
+  coachtipEdition: a.LM.NONE
 },
 treatments: [{
     id: 1,
     label: 'Shy',
     config: {
-      coachtipEdition: s.LM.SHY
+      coachtipEdition: a.LM.SHY
     }
   },
   {
     id: 2,
     label: 'Lofi Vibes',
     config: {
-      coachtipEdition: s.LM.LOFI_VIBES
+      coachtipEdition: a.LM.LOFI_VIBES
     }
   },
   {
     id: 3,
     label: 'Galaxy',
     config: {
-      coachtipEdition: s.LM.GALAXY
+      coachtipEdition: a.LM.GALAXY
     }
   },
   {
     id: 4,
     label: 'Retro & Pirates',
     config: {
-      coachtipEdition: s.LM.RETRO_AND_PIRATES
+      coachtipEdition: a.LM.RETRO_AND_PIRATES
     }
   },
   {
     id: 5,
     label: 'Arcade',
     config: {
-      coachtipEdition: s.LM.ARCADE
+      coachtipEdition: a.LM.ARCADE
     }
   },
   {
     id: 6,
     label: 'Tide',
     config: {
-      coachtipEdition: s.LM.TIDE
+      coachtipEdition: a.LM.TIDE
     }
   },
   {
     id: 7,
     label: 'Dark Fantasy',
     config: {
-      coachtipEdition: s.LM.DARK_FANTASY
+      coachtipEdition: a.LM.DARK_FANTASY
+    }
+  },
+  {
+    id: 8,
+    label: 'Robert',
+    config: {
+      coachtipEdition: a.LM.ROBERT
     }
   }
 ]
   }),
-  r = e => a.useExperiment({
+  r = e => s.useExperiment({
 location: e
   }).coachtipEdition;

@@ -5,8 +5,8 @@ return d;
 });
 var i = n(735250);
 n(470079);
-var s = n(990547),
-  a = n(481060),
+var a = n(990547),
+  s = n(481060),
   r = n(153124),
   l = n(758119),
   o = n(689938),
@@ -16,18 +16,18 @@ function d(e) {
   let {
 transitionState: t
   } = e, d = (0, r.Dt)();
-  return (0, i.jsxs)(a.ModalRoot, {
+  return (0, i.jsxs)(s.ModalRoot, {
 transitionState: t,
-size: a.ModalSize.SMALL,
+size: s.ModalSize.SMALL,
 'aria-labelledby': d,
 impression: {
-  impressionName: s.ImpressionNames.USER_AGE_GATE,
+  impressionName: a.ImpressionNames.USER_AGE_GATE,
   impressionProperties: {
     existing_user: !0
   }
 },
 children: [
-  (0, i.jsx)(a.ModalContent, {
+  (0, i.jsx)(s.ModalContent, {
     children: (0, i.jsxs)('div', {
       className: c.container,
       children: [
@@ -36,13 +36,13 @@ children: [
           src: n(863181),
           className: c.img
         }),
-        (0, i.jsx)(a.Heading, {
+        (0, i.jsx)(s.Heading, {
           variant: 'heading-xl/semibold',
           className: c.title,
           id: d,
           children: o.Z.Messages.AGE_GATE_AGE_VERIFIED
         }),
-        (0, i.jsx)(a.Text, {
+        (0, i.jsx)(s.Text, {
           color: 'header-secondary',
           className: c.subtitle,
           variant: 'text-sm/normal',
@@ -51,9 +51,9 @@ children: [
       ]
     })
   }),
-  (0, i.jsx)(a.ModalFooter, {
-    children: (0, i.jsx)(a.Button, {
-      size: a.ButtonSizes.SMALL,
+  (0, i.jsx)(s.ModalFooter, {
+    children: (0, i.jsx)(s.Button, {
+      size: s.ButtonSizes.SMALL,
       fullWidth: !0,
       onClick: function() {
         (0, l.qV)();

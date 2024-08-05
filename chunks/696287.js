@@ -2,8 +2,8 @@ n(47120);
 var r = n(846519),
   i = n(147913),
   a = n(77498),
-  o = n(19780),
-  s = n(626135),
+  s = n(19780),
+  o = n(626135),
   l = n(70956),
   u = n(581567),
   c = n(594190),
@@ -49,16 +49,16 @@ super(...e), _(this, 'heartbeatInterval', new r.Xp()), _(this, 'runningGameKeys'
 }), _(this, 'logRunningGameHeartbeats', () => {
   let e = c.ZP.getRunningGames(),
     t = {
-      rtc_connection_id: o.Z.getRTCConnectionId(),
-      media_session_id: o.Z.getMediaSessionId()
+      rtc_connection_id: s.Z.getRTCConnectionId(),
+      media_session_id: s.Z.getMediaSessionId()
     },
     n = new Set();
   e.forEach(e => {
     var r, i;
-    let o = (0, c.rH)(e),
-      l = !this.runningGameKeys.has(o),
+    let s = (0, c.rH)(e),
+      l = !this.runningGameKeys.has(s),
       _ = null !== (i = e.id) && void 0 !== i ? i : null === (r = a.Z.getGameByName(e.name)) || void 0 === r ? void 0 : r.id;
-    s.default.track(d.rMx.RUNNING_GAME_HEARTBEAT, {
+    o.default.track(d.rMx.RUNNING_GAME_HEARTBEAT, {
       game_id: _,
       game_name: e.name,
       game_distributor: e.distributor,

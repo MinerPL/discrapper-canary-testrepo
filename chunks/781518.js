@@ -16,7 +16,7 @@ return function e(t, n, r) {
     query: {
       connection_id: r
     }
-  }).catch(o => a <= 0 ? Promise.reject(o) : (0, i.GR)(5000).then(() => e(t, n, r, a - 1)));
+  }).catch(s => a <= 0 ? Promise.reject(s) : (0, i.GR)(5000).then(() => e(t, n, r, a - 1)));
 };
   },
   hP: function() {
@@ -38,8 +38,8 @@ return I;
 var r = n(544891),
   i = n(846519),
   a = n(570140),
-  o = n(70956),
-  s = n(877481),
+  s = n(70956),
+  o = n(877481),
   l = n(358085),
   u = n(18323),
   c = n(616922),
@@ -53,8 +53,8 @@ headers: {
   authorization: 'Bearer '.concat(n)
 }
   }).then(e => 202 === e.status ? Promise.reject(e) : e).catch(n => {
-let o = !0 !== r.onlyRetryOnAuthorizationErrors && 202 === n.status;
-return (401 === n.status || o) && a > 0 ? (202 === n.status ? (0, i.GR)(5000) : Promise.resolve()).then(() => f(t)).then(n => {
+let s = !0 !== r.onlyRetryOnAuthorizationErrors && 202 === n.status;
+return (401 === n.status || s) && a > 0 ? (202 === n.status ? (0, i.GR)(5000) : Promise.resolve()).then(() => f(t)).then(n => {
   let {
     body: {
       access_token: i
@@ -81,7 +81,7 @@ if ((null === (n = t.body) || void 0 === n ? void 0 : n.code) === d.evJ.CONNECTI
     accountId: e
   });
 else if (429 === t.status) {
-  let n = t.headers['retry-after'] * o.Z.Millis.SECOND,
+  let n = t.headers['retry-after'] * s.Z.Millis.SECOND,
     r = isNaN(n) || 0 === n ? 5000 : n;
   return (0, i.GR)(r).then(() => f(e));
 }
@@ -120,9 +120,9 @@ devices: t.body.devices
 
 function m(e, t, n, r) {
   let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
-o = c.C7.PLAYER_OPEN(r, n, !1),
+s = c.C7.PLAYER_OPEN(r, n, !1),
 {
-  deviceId: s,
+  deviceId: o,
   position: l,
   contextUri: u,
   repeat: d
@@ -130,20 +130,20 @@ o = c.C7.PLAYER_OPEN(r, n, !1),
   return E.put(e, t, {
 url: c.C7.PLAYER_PLAY,
 query: {
-  device_id: s
+  device_id: o
 },
 body: {
   context_uri: null != u ? u : void 0,
-  uris: null == u ? [o] : void 0,
+  uris: null == u ? [s] : void 0,
   offset: null != u ? {
-    uri: o
+    uri: s
   } : void 0,
   position_ms: null != l ? l : 0
 }
   }).then(n => null == d ? n : E.put(e, t, {
 url: c.C7.PLAYER_REPEAT,
 query: {
-  device_id: s,
+  device_id: o,
   state: d ? 'context' : 'off'
 }
   })).then(e => (a.Z.dispatch({
@@ -163,7 +163,7 @@ type: 'SPOTIFY_PLAYER_PAUSE'
 
 function T() {
   if (!u.Z.isProtocolRegistered())
-(0, l.isDesktop)() && s.Z.isProtocolRegistered(c.M5).then(e => {
+(0, l.isDesktop)() && o.Z.isProtocolRegistered(c.M5).then(e => {
   a.Z.dispatch({
     type: 'SPOTIFY_SET_PROTOCOL_REGISTERED',
     isRegistered: e

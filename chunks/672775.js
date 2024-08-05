@@ -5,8 +5,8 @@ return l;
 });
 var i = n(735250);
 n(470079);
-var s = n(546735),
-  a = n(754961),
+var a = n(546735),
+  s = n(754961),
   r = n(433369);
 
 function l(e) {
@@ -22,7 +22,7 @@ onNextClick: u,
 onBackClick: _,
 isNextDisabled: h,
 isBackDisabled: E
-  } = (0, s.Z)({
+  } = (0, a.Z)({
 progress: n,
 updateCurrentStep: l
   }), {
@@ -33,7 +33,7 @@ brandPrimaryColor: g
   return (0, i.jsxs)('div', {
 className: r.navigation,
 children: [
-  (0, i.jsx)(a.T, {
+  (0, i.jsx)(s.T, {
     animationStyle: o,
     className: c,
     steps: t,
@@ -42,7 +42,7 @@ children: [
     onStepClick: d,
     stepFillColor: g
   }),
-  (0, i.jsx)(a.i, {
+  (0, i.jsx)(s.i, {
     isBackDisabled: E,
     isNextDisabled: h,
     onNextClick: u,

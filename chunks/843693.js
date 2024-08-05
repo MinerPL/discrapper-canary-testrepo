@@ -3,7 +3,7 @@ n.d(t, {
 return A;
   }
 }), n(47120);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(759174),
   u = n(846519),
   c = n(570140),
@@ -65,7 +65,7 @@ return ''.concat(t, '-').concat(n);
 function A(e, t, n, r) {
   return !(e !== t || null == n || r.has(n)) && (r.add(n), !0);
 }
-class N extends(r = s.ZP.Store) {
+class N extends(r = o.ZP.Store) {
   initialize() {
 this.waitFor(d.default, _.Z);
   }
@@ -101,12 +101,12 @@ let i = this.getUserCombo(e, t);
 return null != i ? (0, h.KH)(i, r) * n : 0;
   }
 }
-o = 'PoggermodeStore', (a = 'displayName') in(i = N) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'PoggermodeStore', (a = 'displayName') in(i = N) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o;
+}) : i[a] = s;
 let v = new N(c.Z, {
   POGGERMODE_UPDATE_COMBO: function(e) {
 let {
@@ -116,7 +116,7 @@ let {
 if (!f.Z.isEnabled())
   return !1;
 ! function e(t) {
-  var n, r, i, a, o, s;
+  var n, r, i, a, s, o;
   let l = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     c = T.get(S(t)),
     d = {
@@ -124,9 +124,9 @@ if (!f.Z.isEnabled())
       ...t,
       value: null !== (r = null !== (n = t.value) && void 0 !== n ? n : null == c ? void 0 : c.value) && void 0 !== r ? r : 0,
       multiplier: Math.min(null !== (a = null !== (i = t.multiplier) && void 0 !== i ? i : null == c ? void 0 : c.multiplier) && void 0 !== a ? a : 1, 7),
-      decayInterval: null !== (o = null == c ? void 0 : c.decayInterval) && void 0 !== o ? o : new u.Xp()
+      decayInterval: null !== (s = null == c ? void 0 : c.decayInterval) && void 0 !== s ? s : new u.Xp()
     };
-  T.set(S(t), d), l && (null === (s = d.decayInterval) || void 0 === s || s.start(1000, () => {
+  T.set(S(t), d), l && (null === (o = d.decayInterval) || void 0 === o || o.start(1000, () => {
     let t = T.get(S(d));
     if (null != t) {
       let r = d.multiplier !== t.multiplier && d.value !== t.value;
@@ -162,19 +162,19 @@ let {
   message: {
     mentions: i,
     author: a,
-    nonce: o
+    nonce: s
   }
 } = e;
 if (!f.Z.isEnabled())
   return !1;
-let s = d.default.getId();
-if (!A(null == a ? void 0 : a.id, s, o, I))
+let o = d.default.getId();
+if (!A(null == a ? void 0 : a.id, o, s, I))
   return !1;
 let l = T.get(S({
   userId: null !== (t = null == a ? void 0 : a.id) && void 0 !== t ? t : '???',
   channelId: r
 }));
-if (f.Z.screenshakeEnabled && f.Z.screenshakeEnabledLocations[p.oZ.MENTION] && null != i && null != i.find(e => e.id === s)) {
+if (f.Z.screenshakeEnabled && f.Z.screenshakeEnabledLocations[p.oZ.MENTION] && null != i && null != i.find(e => e.id === o)) {
   let e = null != l ? null !== (n = (0, h.KH)(l, p.qi.LEVEL_4)) && void 0 !== n ? n : 0.001 : 4 * Math.random();
   return E.S.dispatch(m.CkL.SHAKE_APP, {
     duration: 1000,

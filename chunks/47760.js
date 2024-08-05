@@ -3,9 +3,9 @@ n.d(t, {
 return a;
   },
   qu: function() {
-return o;
+return s;
   }
-}), n(47120), n(524437);
+}), n(47120);
 var r = n(44315);
 n(469115);
 var i = n(231338);
@@ -24,6 +24,6 @@ return ''.concat((0, r.Lq)(t), ' ').concat(n, '%');
   }).join(', '), ')');
 }
 
-function o(e, t) {
+function s(e, t) {
   return e === t || e === i.BR.DARK && t === i.BR.DARKER || e === i.BR.DARKER && t === i.BR.DARK || !1;
 }

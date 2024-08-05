@@ -6,12 +6,12 @@ return _;
 var r = n(956067),
   i = n(544891),
   a = n(570140),
-  o = n(710845),
-  s = n(873741),
+  s = n(710845),
+  o = n(873741),
   l = n(139674);
 let {
   WEBAPP_ENDPOINT: u
-} = window.GLOBAL_ENV, c = 'https:'.concat(u, '/bad-hash-delta'), d = new o.Z('FetchBlockedDomain');
+} = window.GLOBAL_ENV, c = 'https:'.concat(u, '/bad-hash-delta'), d = new s.Z('FetchBlockedDomain');
 
 function _() {
   return r.Z.timeAsync('\uD83D\uDCBE', 'fetchBlockedDomainList', E);
@@ -41,20 +41,20 @@ if (d.verbose('Server revision: '.concat(t, ', Client revision: ').concat(n)), n
       return;
     }
     d.verbose('Retrieved delta, domains added: '.concat(a.ADDED.length, ', domains removed: ').concat(a.REMOVED.length));
-    let o = await r.Z.timeAsync('\uD83D\uDCBE', 'getBlockedDomainList', () => l.Z.getBlockedDomainList());
-    if (null === o)
+    let s = await r.Z.timeAsync('\uD83D\uDCBE', 'getBlockedDomainList', () => l.Z.getBlockedDomainList());
+    if (null === s)
       throw Error('Blocked domain list is null');
-    d.verbose('Blocked domains list length: '.concat(o.size, ' before update')), a.ADDED.forEach(e => {
-      if (o.has(e))
+    d.verbose('Blocked domains list length: '.concat(s.size, ' before update')), a.ADDED.forEach(e => {
+      if (s.has(e))
         throw Error('Unable to add domain which is already in the blockedDomains set: '.concat(e));
-      o.add(e);
+      s.add(e);
     }), a.REMOVED.forEach(e => {
-      if (!o.has(e))
+      if (!s.has(e))
         throw Error('Unable to removed domain which is not in the blockedDomains set: '.concat(e));
-      o.delete(e);
-    }), e = Array.from(o), d.verbose('Delta applied successfully');
+      s.delete(e);
+    }), e = Array.from(s), d.verbose('Delta applied successfully');
   } catch (t) {
-    if (d.verbose('Unable to process domain list delta: '.concat(t.message)), (0, s.K)()) {
+    if (d.verbose('Unable to process domain list delta: '.concat(t.message)), (0, o.K)()) {
       d.verbose('Slow network detected, not downloading full list');
       return;
     }

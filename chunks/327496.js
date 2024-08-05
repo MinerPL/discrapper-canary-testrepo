@@ -6,8 +6,8 @@ return E;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(266067),
+  s = n.n(a),
+  o = n(266067),
   l = n(481060),
   u = n(624138),
   c = n(539419);
@@ -22,7 +22,7 @@ let d = [
 ];
 
 function _(e, t) {
-  return o()({
+  return s()({
 [c.childWrapper]: !0,
 [c.childWrapperNoHoverBg]: 'always' === e,
 [c.childWrapperHoverScale]: 'on-hover' === e && t
@@ -42,7 +42,7 @@ let E = e => {
   selected: S = !1,
   ...A
 } = e,
-N = (0, s.k6)();
+N = (0, o.k6)();
   if (null == f && null != h) {
 var v;
 n = null !== (v = d[(t = (0, u.Zg)(h)).length - 1]) && void 0 !== v ? v : d[d.length - 1];
@@ -67,7 +67,7 @@ g
   return (0, r.jsxs)(l.Clickable, {
 ...A,
 onClick: O,
-className: o()(m, c.wrapper, {
+className: s()(m, c.wrapper, {
   [c.selected]: S
 }),
 'aria-label': null != p && '' !== p ? p : null != h ? h : '',
@@ -80,7 +80,7 @@ focusProps: {
 },
 children: [
   null != t ? (0, r.jsx)('div', {
-    className: o()(_(a, !1), c.acronym),
+    className: s()(_(a, !1), c.acronym),
     'aria-hidden': !0,
     children: t
   }) : null,

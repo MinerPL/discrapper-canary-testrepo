@@ -3,7 +3,7 @@ n.d(t, {
 return N;
   }
 }), n(47120);
-var r, i, a, o, s, l = n(735250),
+var r, i, a, s, o, l = n(735250),
   u = n(470079),
   c = n(120356),
   d = n.n(c),
@@ -24,7 +24,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-(o = r || (r = {})).DEFAULT = 'default', o.INVERTED = 'inverted', o.GHOST = 'ghost', o.ROW = 'row', (s = i || (i = {})).TOP = 'top', s.CENTER = 'center';
+(s = r || (r = {})).DEFAULT = 'default', s.INVERTED = 'inverted', s.GHOST = 'ghost', s.ROW = 'row', (o = i || (i = {})).TOP = 'top', o.CENTER = 'center';
 let S = {
 BOX: T.box,
 ROUND: T.round,
@@ -95,20 +95,20 @@ let {
   shape: r,
   align: i = 'center',
   className: a,
-  innerClassName: o,
-  children: s,
+  innerClassName: s,
+  children: o,
   size: u,
   reverse: c,
   checkboxColor: _,
   displayOnly: E,
   type: f,
   onClick: h
-} = this.props, g = null != s ? (0, l.jsx)('div', {
+} = this.props, g = null != o ? (0, l.jsx)('div', {
   className: d()(T.label, e ? T.labelDisabled : T.labelClickable, c ? T.labelReversed : T.labelForward),
   style: {
     lineHeight: ''.concat(u, 'px')
   },
-  children: s
+  children: o
 }) : null, S = this.props.disabled ? T.inputDisabled : this.props.readOnly ? T.inputReadonly : T.inputDefault;
 return (0, l.jsxs)(E ? 'span' : 'label', {
   className: d()(e ? T.checkboxWrapperDisabled : T.checkboxWrapper, A[i], a, {
@@ -119,7 +119,7 @@ return (0, l.jsxs)(E ? 'span' : 'label', {
     c ? g : null,
     !E && (0, l.jsx)(p.t, {
       children: (0, l.jsx)('input', {
-        className: d()(o, S),
+        className: d()(s, S),
         type: 'checkbox',
         onClick: h,
         onChange: e || t ? I.dG4 : this.handleChange,

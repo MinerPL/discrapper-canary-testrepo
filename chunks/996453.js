@@ -33,7 +33,7 @@ onGuildCreated: T,
 isSlideReady: h,
 hasFooter: g = !0,
 isCommunity: N = !1
-  } = e, [B, M] = n.useState(C.Z.getGuildNameSuggestion()), [p, Z] = n.useState(null), [b, j] = n.useState(!1), [S, U] = n.useState(null), R = !!(null === (t = d.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()), [A, D] = n.useState(R), H = (0, m.Dt)(), O = n.useRef(null);
+  } = e, [B, M] = n.useState(C.Z.getGuildNameSuggestion()), [Z, p] = n.useState(null), [b, j] = n.useState(!1), [S, U] = n.useState(null), R = !!(null === (t = d.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()), [A, D] = n.useState(R), H = (0, m.Dt)(), O = n.useRef(null);
   n.useEffect(() => {
 var e;
 h && (null === (e = O.current) || void 0 === e || e.focus());
@@ -43,9 +43,9 @@ h && (null === (e = O.current) || void 0 === e || e.focus());
     j(!0), U(null);
     try {
       if (null != f)
-        f(B, p);
+        f(B, Z);
       else {
-        let e = await _.Z.createGuildFromTemplate(B, p, s, N, A);
+        let e = await _.Z.createGuildFromTemplate(B, Z, s, N, A);
         r.Z.transitionToGuildSync(e.id), null == T || T(e.id);
       }
     } catch (e) {
@@ -57,7 +57,7 @@ h && (null === (e = O.current) || void 0 === e || e.focus());
   s,
   f,
   B,
-  p,
+  Z,
   N,
   A,
   T
@@ -111,8 +111,8 @@ content: (0, a.jsxs)(a.Fragment, {
         (0, a.jsx)('div', {
           className: I.uploadIcon,
           children: (0, a.jsx)(c.Z, {
-            icon: p,
-            onChange: Z
+            icon: Z,
+            onChange: p
           })
         }),
         (0, a.jsxs)('form', {

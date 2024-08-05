@@ -1,6 +1,6 @@
 let r, i;
 n(47120);
-var a, o, s, l, u = n(348327),
+var a, s, o, l, u = n(348327),
   c = n.n(u),
   d = n(392711),
   _ = n.n(d),
@@ -122,12 +122,12 @@ return this.getActivities(t).find(e);
 return r;
   }
 }
-l = 'SelfPresenceStore', (s = 'displayName') in(o = Y) ? Object.defineProperty(o, s, {
+l = 'SelfPresenceStore', (o = 'displayName') in(s = Y) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[s] = l, t.Z = new Y(f.Z, {
+}) : s[o] = l, t.Z = new Y(f.Z, {
   START_SESSION: V,
   CONNECTION_OPEN: function() {
 Z();

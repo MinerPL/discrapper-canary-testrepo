@@ -1,8 +1,8 @@
 n(653041);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(392711),
   o = n.n(l),
   c = n(442837),
@@ -17,14 +17,14 @@ var i = n(735250),
   p = n(215427),
   T = n(820254),
   S = n(838949),
-  C = n(358085),
-  f = n(557177),
+  f = n(358085),
+  C = n(557177),
   N = n(998502),
   A = n(981631),
-  Z = n(689938),
-  L = n(969051);
+  v = n(689938),
+  Z = n(969051);
 
-function v(e, t, n) {
+function L(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -32,11 +32,11 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class O extends s.PureComponent {
+class O extends a.PureComponent {
   createSound() {
 let {
   soundpack: e
-} = this.props, t = (0, f.uk)('discodo', e);
+} = this.props, t = (0, C.uk)('discodo', e);
 return t.volume = 1, t;
   }
   componentDidMount() {
@@ -46,19 +46,19 @@ this.setProblemsTimeout();
 let {
   ready: n,
   hide: i,
-  problems: s
+  problems: a
 } = this.state, {
-  connected: a,
+  connected: s,
   soundpack: r
-} = this.props, l = a && n && !i && !s;
-e.soundpack !== r && (this._connectedSound = this.createSound()), e.connected !== a || l ? (a && null != this.videoRef && d.K.get(A.wli) && this._connectedSound.play(), this.setState({
+} = this.props, l = s && n && !i && !a;
+e.soundpack !== r && (this._connectedSound = this.createSound()), e.connected !== s || l ? (s && null != this.videoRef && d.K.get(A.wli) && this._connectedSound.play(), this.setState({
   problems: !1,
-  hide: a
+  hide: s
 })) : t.hide !== i ? (i ? this.clearProblemsTimeout() : this.setProblemsTimeout(), this.setState({
   shouldRender: !0
 }), setTimeout(() => this.setState({
   shouldRender: !i
-}), 200)) : t.problems !== s && s && _.Z.checkIncidents();
+}), 200)) : t.problems !== a && a && _.Z.checkIncidents();
   }
   componentWillUnmount() {
 this.clearProblemsTimeout();
@@ -73,10 +73,10 @@ let {
 if (!this.state.shouldRender)
   return null;
 {
-  let s = this._loadingText,
-    a = null;
-  return null != this._eventLoadingText && (s = this._eventLoadingText), null != t && (s = t.name, a = t.incident_updates[0].body), (0, i.jsxs)('div', {
-    className: L.container,
+  let a = this._loadingText,
+    s = null;
+  return null != this._eventLoadingText && (a = this._eventLoadingText), null != t && (a = t.name, s = t.incident_updates[0].body), (0, i.jsxs)('div', {
+    className: Z.container,
     'data-fade': n,
     style: {
       '--connecting-container-fade-duration': ''.concat(200, 'ms'),
@@ -84,67 +84,67 @@ if (!this.state.shouldRender)
     },
     children: [
       (0, i.jsxs)('div', {
-        className: L.content,
+        className: Z.content,
         children: [
           (0, i.jsx)(S.Z, {
             autoPlay: !0,
             loop: !e,
             setRef: this.setVideoRef,
             onReady: this.handleReady,
-            className: r()(L.spinner, this.state.ready ? L.ready : '')
+            className: r()(Z.spinner, this.state.ready ? Z.ready : '')
           }),
           (0, i.jsxs)('div', {
-            className: L.text,
+            className: Z.text,
             children: [
               null != t ? null : (0, i.jsx)('div', {
-                className: L.tipTitle,
-                children: Z.Z.Messages.LOADING_DID_YOU_KNOW
+                className: Z.tipTitle,
+                children: v.Z.Messages.LOADING_DID_YOU_KNOW
               }),
               (0, i.jsx)('div', {
-                className: null != t ? L.title : L.tip,
-                children: s
-              }),
-              (0, i.jsx)('div', {
-                className: L.body,
+                className: null != t ? Z.title : Z.tip,
                 children: a
+              }),
+              (0, i.jsx)('div', {
+                className: Z.body,
+                children: s
               })
             ]
           })
         ]
       }),
       (0, i.jsxs)('div', {
-        className: r()(L.problems, {
-          [L.slideIn]: this.state.problems
+        className: r()(Z.problems, {
+          [Z.slideIn]: this.state.problems
         }),
         children: [
           (0, i.jsx)('div', {
-            className: L.problemsText,
-            children: Z.Z.Messages.CONNECTING_PROBLEMS_CTA
+            className: Z.problemsText,
+            children: v.Z.Messages.CONNECTING_PROBLEMS_CTA
           }),
           (0, i.jsxs)('div', {
             children: [
               (0, i.jsxs)(u.Anchor, {
-                className: L.twitterLink,
+                className: Z.twitterLink,
                 href: A.yXt.TWITTER_SUPPORT,
                 target: '_blank',
                 children: [
                   (0, i.jsx)(u.XNeutralIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: L.icon
+                    className: Z.icon
                   }),
-                  Z.Z.Messages.TWEET_US
+                  v.Z.Messages.TWEET_US
                 ]
               }),
               (0, i.jsxs)(u.Anchor, {
-                className: L.statusLink,
+                className: Z.statusLink,
                 href: A.yXt.STATUS,
                 target: '_blank',
                 children: [
                   (0, i.jsx)(T.Z, {
-                    className: L.icon
+                    className: Z.icon
                   }),
-                  Z.Z.Messages.SERVER_STATUS
+                  v.Z.Messages.SERVER_STATUS
                 ]
               })
             ]
@@ -156,144 +156,144 @@ if (!this.state.shouldRender)
 }
   }
   constructor(e) {
-super(e), v(this, 'videoRef', null), v(this, '_noProblemsTimeout', null), v(this, '_problemsTimeout', null), v(this, '_connectedSound', this.createSound()), v(this, '_loadingText', function() {
+super(e), L(this, 'videoRef', null), L(this, '_noProblemsTimeout', null), L(this, '_problemsTimeout', null), L(this, '_connectedSound', this.createSound()), L(this, '_loadingText', function() {
   let e = [
-    Z.Z.Messages.ACCESSIBILITY_LOADING_TIP_1,
-    Z.Z.Messages.ACCESSIBILITY_LOADING_TIP_2,
-    Z.Z.Messages.ACCESSIBILITY_LOADING_TIP_3,
-    Z.Z.Messages.ACCESSIBILITY_LOADING_TIP_4,
-    Z.Z.Messages.ACCESSIBILITY_LOADING_TIP_5,
-    Z.Z.Messages.ACCESSIBILITY_LOADING_TIP_6.format({
+    v.Z.Messages.ACCESSIBILITY_LOADING_TIP_1,
+    v.Z.Messages.ACCESSIBILITY_LOADING_TIP_2,
+    v.Z.Messages.ACCESSIBILITY_LOADING_TIP_3,
+    v.Z.Messages.ACCESSIBILITY_LOADING_TIP_4,
+    v.Z.Messages.ACCESSIBILITY_LOADING_TIP_5,
+    v.Z.Messages.ACCESSIBILITY_LOADING_TIP_6.format({
       tabHook: (e, t) => (0, i.jsx)(u.KeyCombo, {
         shortcut: 'tab',
-        className: L.keybind
+        className: Z.keybind
       }, t)
     }),
-    Z.Z.Messages.ACCESSIBILITY_LOADING_TIP_7,
-    Z.Z.Messages.ACCESSIBILITY_LOADING_TIP_8,
-    Z.Z.Messages.ACCESSIBILITY_LOADING_TIP_9,
-    Z.Z.Messages.ACCESSIBILITY_LOADING_TIP_10.format({
+    v.Z.Messages.ACCESSIBILITY_LOADING_TIP_7,
+    v.Z.Messages.ACCESSIBILITY_LOADING_TIP_8,
+    v.Z.Messages.ACCESSIBILITY_LOADING_TIP_9,
+    v.Z.Messages.ACCESSIBILITY_LOADING_TIP_10.format({
       F6Hook: (e, t) => (0, i.jsx)(u.KeyCombo, {
         shortcut: 'f6',
-        className: L.keybind
+        className: Z.keybind
       }, t),
       tabHook: (e, t) => (0, i.jsx)(u.KeyCombo, {
         shortcut: 'tab',
-        className: L.keybind
+        className: Z.keybind
       }, t)
     }),
-    Z.Z.Messages.LOADING_LINE_1,
-    Z.Z.Messages.LOADING_LINE_2,
-    Z.Z.Messages.LOADING_LINE_4,
-    Z.Z.Messages.LOADING_LINE_5,
-    Z.Z.Messages.LOADING_LINE_6,
-    Z.Z.Messages.LOADING_LINE_7,
-    Z.Z.Messages.LOADING_LINE_8,
-    Z.Z.Messages.LOADING_LINE_9,
-    Z.Z.Messages.LOADING_LINE_10,
-    Z.Z.Messages.LOADING_LINE_11,
-    Z.Z.Messages.LOADING_LINE_12,
-    Z.Z.Messages.LOADING_LINE_13,
-    Z.Z.Messages.LOADING_LINE_14,
-    Z.Z.Messages.LOADING_LINE_15,
-    Z.Z.Messages.LOADING_TIP_1,
-    Z.Z.Messages.LOADING_TIP_2,
-    Z.Z.Messages.LOADING_TIP_3,
-    Z.Z.Messages.LOADING_TIP_4,
-    Z.Z.Messages.LOADING_TIP_5,
-    Z.Z.Messages.LOADING_TIP_6,
-    Z.Z.Messages.LOADING_TIP_7,
-    Z.Z.Messages.LOADING_TIP_8,
-    Z.Z.Messages.LOADING_TIP_9,
-    Z.Z.Messages.LOADING_TIP_10,
-    Z.Z.Messages.LOADING_TIP_11,
-    Z.Z.Messages.LOADING_TIP_12,
-    Z.Z.Messages.LOADING_TIP_13,
-    Z.Z.Messages.LOADING_TIP_14,
-    Z.Z.Messages.LOADING_TIP_15,
-    Z.Z.Messages.LOADING_TIP_16,
-    Z.Z.Messages.LOADING_TIP_17,
-    Z.Z.Messages.LOADING_TIP_18,
-    Z.Z.Messages.LOADING_TIP_19,
-    Z.Z.Messages.LOADING_TIP_20,
-    Z.Z.Messages.LOADING_TIP_21,
-    Z.Z.Messages.LOADING_TIP_22,
-    Z.Z.Messages.LOADING_TIP_23,
-    Z.Z.Messages.LOADING_TIP_24,
-    Z.Z.Messages.LOADING_TIP_25,
-    Z.Z.Messages.LOADING_TIP_26,
-    Z.Z.Messages.LOADING_TIP_27.format({
+    v.Z.Messages.LOADING_LINE_1,
+    v.Z.Messages.LOADING_LINE_2,
+    v.Z.Messages.LOADING_LINE_4,
+    v.Z.Messages.LOADING_LINE_5,
+    v.Z.Messages.LOADING_LINE_6,
+    v.Z.Messages.LOADING_LINE_7,
+    v.Z.Messages.LOADING_LINE_8,
+    v.Z.Messages.LOADING_LINE_9,
+    v.Z.Messages.LOADING_LINE_10,
+    v.Z.Messages.LOADING_LINE_11,
+    v.Z.Messages.LOADING_LINE_12,
+    v.Z.Messages.LOADING_LINE_13,
+    v.Z.Messages.LOADING_LINE_14,
+    v.Z.Messages.LOADING_LINE_15,
+    v.Z.Messages.LOADING_TIP_1,
+    v.Z.Messages.LOADING_TIP_2,
+    v.Z.Messages.LOADING_TIP_3,
+    v.Z.Messages.LOADING_TIP_4,
+    v.Z.Messages.LOADING_TIP_5,
+    v.Z.Messages.LOADING_TIP_6,
+    v.Z.Messages.LOADING_TIP_7,
+    v.Z.Messages.LOADING_TIP_8,
+    v.Z.Messages.LOADING_TIP_9,
+    v.Z.Messages.LOADING_TIP_10,
+    v.Z.Messages.LOADING_TIP_11,
+    v.Z.Messages.LOADING_TIP_12,
+    v.Z.Messages.LOADING_TIP_13,
+    v.Z.Messages.LOADING_TIP_14,
+    v.Z.Messages.LOADING_TIP_15,
+    v.Z.Messages.LOADING_TIP_16,
+    v.Z.Messages.LOADING_TIP_17,
+    v.Z.Messages.LOADING_TIP_18,
+    v.Z.Messages.LOADING_TIP_19,
+    v.Z.Messages.LOADING_TIP_20,
+    v.Z.Messages.LOADING_TIP_21,
+    v.Z.Messages.LOADING_TIP_22,
+    v.Z.Messages.LOADING_TIP_23,
+    v.Z.Messages.LOADING_TIP_24,
+    v.Z.Messages.LOADING_TIP_25,
+    v.Z.Messages.LOADING_TIP_26,
+    v.Z.Messages.LOADING_TIP_27.format({
       asterisks: '**'
     }),
-    Z.Z.Messages.LOADING_KEYBIND_TIP_1.format({
+    v.Z.Messages.LOADING_KEYBIND_TIP_1.format({
       quickSwitcherHook: (e, t) => (0, i.jsx)(u.KeyCombo, {
         shortcut: 'mod+k',
-        className: L.keybind
+        className: Z.keybind
       }, t)
     }),
-    Z.Z.Messages.LOADING_KEYBIND_TIP_2.format({
+    v.Z.Messages.LOADING_KEYBIND_TIP_2.format({
       markUnreadHook: (e, t) => (0, i.jsx)(u.KeyCombo, {
         shortcut: 'alt+click',
-        className: L.keybind
+        className: Z.keybind
       }, t)
     }),
-    Z.Z.Messages.LOADING_KEYBIND_TIP_3.format({
+    v.Z.Messages.LOADING_KEYBIND_TIP_3.format({
       markServerUnreadHook: (e, t) => (0, i.jsx)(u.KeyCombo, {
         shortcut: 'shift+esc',
-        className: L.keybind
+        className: Z.keybind
       }, t)
     }),
-    Z.Z.Messages.LOADING_KEYBIND_TIP_4.format({
+    v.Z.Messages.LOADING_KEYBIND_TIP_4.format({
       navigateUnreadHook: (e, t) => (0, i.jsx)(u.KeyCombo, {
         shortcut: 'shift+alt+up',
-        className: L.keybind
+        className: Z.keybind
       }, t),
       downHook: (e, t) => (0, i.jsx)(u.KeyCombo, {
         shortcut: 'down',
-        className: L.keybind
+        className: Z.keybind
       }, t)
     }),
-    Z.Z.Messages.LOADING_KEYBIND_TIP_5.format({
+    v.Z.Messages.LOADING_KEYBIND_TIP_5.format({
       keyboardShortcutsHook: (e, t) => (0, i.jsx)(u.KeyCombo, {
         shortcut: 'mod+/',
-        className: L.keybind
+        className: Z.keybind
       }, t)
     }),
-    Z.Z.Messages.LOADING_KEYBIND_TIP_6.format({
+    v.Z.Messages.LOADING_KEYBIND_TIP_6.format({
       messageNewlineHook: (e, t) => (0, i.jsx)(u.KeyCombo, {
         shortcut: 'shift+return',
-        className: L.keybind
+        className: Z.keybind
       }, t)
     }),
-    Z.Z.Messages.LOADING_KEYBIND_TIP_7.format({
+    v.Z.Messages.LOADING_KEYBIND_TIP_7.format({
       shiftHook: (e, t) => (0, i.jsx)(u.KeyCombo, {
         shortcut: 'shift',
-        className: L.keybind
+        className: Z.keybind
       }, t)
     }),
-    Z.Z.Messages.LOADING_KEYBIND_TIP_8.format({
+    v.Z.Messages.LOADING_KEYBIND_TIP_8.format({
       upHook: (e, t) => (0, i.jsx)(u.KeyCombo, {
         shortcut: 'up',
-        className: L.keybind
+        className: Z.keybind
       }, t)
     })
   ];
-  return g.default.locale.startsWith('en-') && e.push(Z.Z.Messages.POLLS_MARKETING_EASTER_EGG_LOADING_LINE), e[o().random(e.length - 1)];
-}()), v(this, '_eventLoadingText', function() {
+  return g.default.locale.startsWith('en-') && e.push(v.Z.Messages.POLLS_MARKETING_EASTER_EGG_LOADING_LINE), e[o().random(e.length - 1)];
+}()), L(this, '_eventLoadingText', function() {
   let e = I.Z.getLoadingTips();
   if (null != e && e.length > 0)
     return e[o().random(e.length - 1)];
-}()), v(this, 'handleReady', () => {
+}()), L(this, 'handleReady', () => {
   this.setState({
     ready: !0
-  }), (0, C.isDesktop)() && (N.ZP.send('UPDATED_QUOTES', ['Hold Tight \u2014 Loading Discord']), N.ZP.send('UPDATE_OPEN_ON_STARTUP'));
-}), v(this, 'setVideoRef', e => {
+  }), (0, f.isDesktop)() && (N.ZP.send('UPDATED_QUOTES', ['Hold Tight \u2014 Loading Discord']), N.ZP.send('UPDATE_OPEN_ON_STARTUP'));
+}), L(this, 'setVideoRef', e => {
   this.videoRef = e;
-}), v(this, 'setProblemsTimeout', () => {
+}), L(this, 'setProblemsTimeout', () => {
   null == this._problemsTimeout && (this._problemsTimeout = setTimeout(() => this.setState({
     problems: !0
   }), 10000));
-}), v(this, 'clearProblemsTimeout', () => {
+}), L(this, 'clearProblemsTimeout', () => {
   clearTimeout(this._problemsTimeout), this._problemsTimeout = null;
 });
 let {
@@ -322,14 +322,14 @@ t.Z = c.ZP.connectStores([
   let {
 isTryingToConnect: t,
 connected: n,
-incident: s,
-soundpack: a,
+incident: a,
+soundpack: s,
 reducedMotion: r
   } = e;
   return t ? (0, i.jsx)(O, {
 reducedMotion: r,
-soundpack: a,
+soundpack: s,
 connected: n,
-incident: s
+incident: a
   }) : null;
 });

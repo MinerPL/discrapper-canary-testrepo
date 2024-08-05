@@ -25,18 +25,18 @@ return !0;
 return !1;
   }
 }() ? function(e, i) {
-  for (var a, o, s = function(e) {
+  for (var a, s, o = function(e) {
   if (null == e)
     throw TypeError('Object.assign cannot be called with null or undefined');
   return Object(e);
 }(e), l = 1; l < arguments.length; l++) {
 for (var u in (a = Object(arguments[l]), a))
-  n.call(a, u) && (s[u] = a[u]);
+  n.call(a, u) && (o[u] = a[u]);
 if (t) {
-  o = t(a);
-  for (var c = 0; c < o.length; c++)
-    r.call(a, o[c]) && (s[o[c]] = a[o[c]]);
+  s = t(a);
+  for (var c = 0; c < s.length; c++)
+    r.call(a, s[c]) && (o[s[c]] = a[s[c]]);
 }
   }
-  return s;
+  return o;
 } : Object.assign;

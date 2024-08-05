@@ -1,13 +1,13 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   }
 });
 var r = n(5192),
   i = n(981631),
   a = n(689938);
 
-function o(e, t, n, o) {
+function s(e, t, n, s) {
   if (e.state === i.jm8.RECONNECTING)
 return {
   mainText: a.Z.Messages.STREAM_RECONNECTING_ERROR,
@@ -23,7 +23,7 @@ return n ? {
     username: r.ZP.getName(e.guildId, e.channelId, t)
   })
 };
-  return o ? {
+  return s ? {
 mainText: a.Z.Messages.STREAM_PREVIEW_PAUSED,
 supportingText: a.Z.Messages.STREAM_PREVIEW_PAUSED_SUBTEXT
   } : null;

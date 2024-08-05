@@ -1,21 +1,21 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   },
   i: function() {
-return s;
+return o;
   }
 });
 var r = n(442837),
   i = n(592125),
   a = n(126134);
 
-function o(e) {
-  let t = s(e);
+function s(e) {
+  let t = o(e);
   return (0, r.e7)([i.Z], () => i.Z.getChannel(t));
 }
 
-function s(e) {
+function o(e) {
   let {
 category: t
   } = e;

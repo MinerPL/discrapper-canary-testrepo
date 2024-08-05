@@ -32,9 +32,9 @@ style: r,
 ..._
   } = e, E = (0, d.Z)(t), [{
 spring: h
-  }, M] = (0, i.useSpring)(() => ({
+  }, M] = (0, c.useSpring)(() => ({
 spring: 0
-  })), x = (0, c.useToken)(C.Z.colors.BACKGROUND_PRIMARY).hex(), b = (0, c.useToken)(C.Z.colors.CONTROL_BRAND_FOREGROUND).hex(), T = a.useCallback(() => {
+  }), 'animate-always'), x = (0, c.useToken)(C.Z.colors.BACKGROUND_PRIMARY).hex(), b = (0, c.useToken)(C.Z.colors.CONTROL_BRAND_FOREGROUND).hex(), T = a.useCallback(() => {
 M({
   spring: 1,
   config: u

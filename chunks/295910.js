@@ -147,8 +147,8 @@ e.exports = function(e) {
     'print'
   ])
 },
-o = '[A-Za-z$_][0-9A-Za-z$_]*',
-s = {
+s = '[A-Za-z$_][0-9A-Za-z$_]*',
+o = {
   className: 'subst',
   begin: /#\{/,
   end: /\}/,
@@ -179,7 +179,7 @@ l = [
         end: /"""/,
         contains: [
           e.BACKSLASH_ESCAPE,
-          s
+          o
         ]
       },
       {
@@ -187,7 +187,7 @@ l = [
         end: /"/,
         contains: [
           e.BACKSLASH_ESCAPE,
-          s
+          o
         ]
       }
     ]
@@ -198,7 +198,7 @@ l = [
         begin: '///',
         end: '///',
         contains: [
-          s,
+          o,
           e.HASH_COMMENT_MODE
         ]
       },
@@ -212,7 +212,7 @@ l = [
     ]
   },
   {
-    begin: '@' + o
+    begin: '@' + s
   },
   {
     subLanguage: 'javascript',
@@ -229,9 +229,9 @@ l = [
     ]
   }
 ];
-  s.contains = l;
+  o.contains = l;
   let u = e.inherit(e.TITLE_MODE, {
-  begin: o
+  begin: s
 }),
 c = '(\\(.*\\)\\s*)?\\B[-=]>',
 d = {
@@ -260,7 +260,7 @@ contains: [
   e.HASH_COMMENT_MODE,
   {
     className: 'function',
-    begin: '^\\s*' + o + '\\s*=\\s*' + c,
+    begin: '^\\s*' + s + '\\s*=\\s*' + c,
     end: '[-=]>',
     returnBegin: !0,
     contains: [
@@ -283,15 +283,15 @@ contains: [
     variants: [{
         match: [
           /class\s+/,
-          o,
+          s,
           /\s+extends\s+/,
-          o
+          s
         ]
       },
       {
         match: [
           /class\s+/,
-          o
+          s
         ]
       }
     ],
@@ -302,7 +302,7 @@ contains: [
     keywords: a
   },
   {
-    begin: o + ':',
+    begin: s + ':',
     end: ':',
     returnBegin: !0,
     returnEnd: !0,

@@ -13,11 +13,11 @@ function a(e) {
   return 3 * e;
 }
 
-function o(e, t, n) {
+function s(e, t, n) {
   return (((1 - 3 * n + 3 * t) * e + (3 * n - 6 * t)) * e + 3 * t) * e;
 }
 
-function s(e, t, n) {
+function o(e, t, n) {
   return 3 * (1 - 3 * n + 3 * t) * e * e + 2 * (3 * n - 6 * t) * e + 3 * t;
 }
 e.exports = function(e, r, i, a) {
@@ -26,28 +26,28 @@ throw Error('bezier x values must be in [0, 1] range');
   var l = n ? new Float32Array(11) : Array(11);
   if (e !== r || i !== a)
 for (var u = 0; u < 11; ++u)
-  l[u] = o(u * t, e, i);
+  l[u] = s(u * t, e, i);
   return function(n) {
-return e === r && i === a ? n : 0 === n ? 0 : 1 === n ? 1 : o(function(n) {
+return e === r && i === a ? n : 0 === n ? 0 : 1 === n ? 1 : s(function(n) {
   for (var r = 0, a = 1, u = 10; a !== u && l[a] <= n; ++a)
     r += t;
   var c = r + (n - l[--a]) / (l[a + 1] - l[a]) * t,
-    d = s(c, e, i);
+    d = o(c, e, i);
   return d >= 0.001 ? function(e, t, n, r) {
     for (var i = 0; i < 4; ++i) {
-      var a = s(t, n, r);
+      var a = o(t, n, r);
       if (0 === a)
         break;
-      var l = o(t, n, r) - e;
+      var l = s(t, n, r) - e;
       t -= l / a;
     }
     return t;
   }(n, c, e, i) : 0 === d ? c : function(e, t, n, r, i) {
-    var a, s, l = 0;
+    var a, o, l = 0;
     do
-      (a = o(s = t + (n - t) / 2, r, i) - e) > 0 ? n = s : t = s;
+      (a = s(o = t + (n - t) / 2, r, i) - e) > 0 ? n = o : t = o;
     while (Math.abs(a) > 1e-7 && ++l < 10);
-    return s;
+    return o;
   }(n, r, r + t, e, i);
 }(n), r, a);
   };

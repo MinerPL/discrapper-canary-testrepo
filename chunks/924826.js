@@ -6,8 +6,8 @@ return c;
 var r = n(470079),
   i = n(372817),
   a = n(25441),
-  o = n(585627),
-  s = n(536895),
+  s = n(585627),
+  o = n(536895),
   l = n(260866);
 
 function u(e, t) {
@@ -29,7 +29,7 @@ setFocusOnList: p,
 preserveFocusPosition: m = !0,
 useVirtualFocus: I = !1,
 wrap: T = !1,
-orientation: g = s.hy.VERTICAL,
+orientation: g = o.hy.VERTICAL,
 disableClickOnSpace: S = !1
   } = e, A = r.useRef(n ? (0, l.jb)(t, n) : null), N = r.useRef(!1), v = r.useRef(null), O = r.useRef(c);
 
@@ -112,11 +112,11 @@ async function i() {
     if (null != r) {
       if (!0 !== N.current)
         return y(t, (0, l.x3)(n));
-      if (await (0, o.JJ)(e, r))
+      if (await (0, s.JJ)(e, r))
         return y(t, (0, l.x3)(n));
     }
   }
-  let r = await (0, o.KG)(e, u(t, v));
+  let r = await (0, s.KG)(e, u(t, v));
   null !== r && L(r);
 }
 
@@ -171,8 +171,8 @@ G = r.useCallback(async () => {
 k = r.useCallback(e => {
   if (!O.current || !I && !U.current)
     return;
-  let n = g === s.hy.HORIZONTAL ? s.R8.RIGHT : s.R8.DOWN,
-    r = g === s.hy.HORIZONTAL ? s.R8.LEFT : s.R8.UP;
+  let n = g === o.hy.HORIZONTAL ? o.R8.RIGHT : o.R8.DOWN,
+    r = g === o.hy.HORIZONTAL ? o.R8.LEFT : o.R8.UP;
   switch (e.key) {
     case n:
       e.stopPropagation(), e.preventDefault(), x();
@@ -180,14 +180,14 @@ k = r.useCallback(e => {
     case r:
       e.stopPropagation(), e.preventDefault(), G();
       return;
-    case s.R8.HOME:
+    case o.R8.HOME:
       e.stopPropagation(), e.preventDefault(), d().then(() => {
         var e;
         let n = null === (e = u(t, v)[0]) || void 0 === e ? void 0 : e.getAttribute(l.ie);
         null != n && L(n);
       });
       return;
-    case s.R8.END:
+    case o.R8.END:
       e.stopPropagation(), e.preventDefault(), _().then(() => {
         var e;
         let n = u(t, v),
@@ -195,9 +195,9 @@ k = r.useCallback(e => {
         null != r && L(r);
       });
       return;
-    case s.R8.SPACE:
-    case s.R8.ENTER: {
-      if (e.key === s.R8.SPACE && S || e.repeat)
+    case o.R8.SPACE:
+    case o.R8.ENTER: {
+      if (e.key === o.R8.SPACE && S || e.repeat)
         return;
       let t = A.current;
       if (null != t) {
@@ -234,12 +234,12 @@ orientation: g,
 setFocus: B,
 async focusLastVisibleItem() {
   var e;
-  let n = await (0, o.jo)(null !== (e = v.current) && void 0 !== e ? e : document.body, u(t, v));
+  let n = await (0, s.jo)(null !== (e = v.current) && void 0 !== e ? e : document.body, u(t, v));
   null !== n && L(n);
 },
 async focusFirstVisibleItem() {
   var e;
-  let n = await (0, o.KG)(null !== (e = v.current) && void 0 !== e ? e : document.body, u(t, v));
+  let n = await (0, s.KG)(null !== (e = v.current) && void 0 !== e ? e : document.body, u(t, v));
   null !== n && L(n);
 },
 focusPreviousItem: G,

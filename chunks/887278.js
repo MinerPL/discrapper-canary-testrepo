@@ -10,8 +10,8 @@ return g;
   }
 }), n(411104);
 var r, i, a = n(570140),
-  o = n(923928),
-  s = n(593472),
+  s = n(923928),
+  o = n(593472),
   l = n(594190),
   u = n(77498),
   c = n(594174),
@@ -92,13 +92,13 @@ return new Promise(r => {
     },
     E = l.ZP.getOverlayOptionsForPID(e),
     f = {
-      ...s.r,
+      ...o.r,
       ...E,
       elevate: l.ZP.shouldElevateProcessForPID(e)
     };
   null == f.allowHook || f.allowHook ? (_ = setTimeout(() => {
     n.cancelAttachToProcess(e), u('Timed out waiting for hook response', !1);
-  }, 120000), n.attachToProcess(e, f, u), a.Z.wait(() => o.Z.clearElevatedProcess())) : r('Hook is disabled for this game');
+  }, 120000), n.attachToProcess(e, f, u), a.Z.wait(() => s.Z.clearElevatedProcess())) : r('Hook is disabled for this game');
 });
   });
 }

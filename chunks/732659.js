@@ -1,25 +1,25 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   }
 });
 var r = n(470079),
   i = n(519953),
   a = n(887490);
 
-function o(e, t, n) {
+function s(e, t, n) {
   r.useEffect(() => {
 let r = i.F3.findDocumentOrShadowRoot(e).defaultView;
 if ((null == r ? void 0 : r.ResizeObserver) == null)
   return;
-let o = a.bN.toDOMNode(e, e),
-  s = o.offsetHeight;
-null == n || n(s);
+let s = a.bN.toDOMNode(e, e),
+  o = s.offsetHeight;
+null == n || n(o);
 let l = new r.ResizeObserver(() => {
   let r = a.bN.toDOMNode(e, e).offsetHeight;
-  s !== r && (null != t.current && (t.current.style.height = ''.concat(r, 'px')), s = r, null == n || n(r));
+  o !== r && (null != t.current && (t.current.style.height = ''.concat(r, 'px')), o = r, null == n || n(r));
 });
-return l.observe(o), () => l.disconnect();
+return l.observe(s), () => l.disconnect();
   }, [
 t,
 e,

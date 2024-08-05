@@ -10,14 +10,14 @@ return r;
   }
 }), n(47120), n(653041);
 var r, i, a = n(47770),
-  o = n(46973),
-  s = n(966146),
+  s = n(46973),
+  o = n(966146),
   l = n(902704),
   u = n(846519),
   c = n(526167),
   d = n(70956),
   _ = n(709054),
-  E = n(562319),
+  E = n(798681),
   f = n(981631),
   h = n(65154);
 
@@ -47,15 +47,15 @@ return this.offscreenDisabledUsers[e];
   shouldReceiveFromUser(e) {
 var t, n;
 let r = !((null === (t = this.connection) || void 0 === t ? void 0 : t.getLocalVideoDisabled(e)) || this.userVideoDisabled(e) && (null === (n = this.videoHealthManager) || void 0 === n ? void 0 : n.getCurrentVideoToggleState(e)) !== f.ZUi.AUTO_PROBING);
-return E.Z.isIncomingVideoEnabled() && r;
+return E.w.isIncomingVideoEnabled() && r;
   }
   getAudioSSRCs() {
 return this.audioSsrcs;
   }
   setConnection(e) {
-var t, n, r, i, a, s;
+var t, n, r, i, a, o;
 let l = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-null === (t = this.connection) || void 0 === t || t.removeListener(o.Sh.LocalVideoDisabled, this.handleLocalVideoDisabled), null === (n = this.connection) || void 0 === n || n.removeListener(o.Sh.LocalMute, this.handleLocalMute), null === (r = this.connection) || void 0 === r || r.removeListener(o.Sh.ActiveSinksChange, this.delayedUpdate), this.connection = e, null === (i = this.connection) || void 0 === i || i.addListener(o.Sh.LocalVideoDisabled, this.handleLocalVideoDisabled), null === (a = this.connection) || void 0 === a || a.addListener(o.Sh.LocalMute, this.handleLocalMute), null === (s = this.connection) || void 0 === s || s.addListener(o.Sh.ActiveSinksChange, this.delayedUpdate), l && this.update();
+null === (t = this.connection) || void 0 === t || t.removeListener(s.Sh.LocalVideoDisabled, this.handleLocalVideoDisabled), null === (n = this.connection) || void 0 === n || n.removeListener(s.Sh.LocalMute, this.handleLocalMute), null === (r = this.connection) || void 0 === r || r.removeListener(s.Sh.ActiveSinksChange, this.delayedUpdate), this.connection = e, null === (i = this.connection) || void 0 === i || i.addListener(s.Sh.LocalVideoDisabled, this.handleLocalVideoDisabled), null === (a = this.connection) || void 0 === a || a.addListener(s.Sh.LocalMute, this.handleLocalMute), null === (o = this.connection) || void 0 === o || o.addListener(s.Sh.ActiveSinksChange, this.delayedUpdate), l && this.update();
   }
   setAudioSSRC(e, t) {
 return t > 0 ? this.audioSsrcs[e] = t : delete this.audioSsrcs[e], this.update();
@@ -148,7 +148,7 @@ return this.isStageChannel ? T : I;
   getSimulcastOverrideQuality(e) {
 return this.simulcastDebugOverrides.has(e) ? this.simulcastDebugOverrides.get(e) : h.Z.NO_OVERRIDE;
   }
-  constructor(e, t, n, r = new s.x()) {
+  constructor(e, t, n, r = new o.x()) {
 var i;
 super(), i = this, p(this, 'userId', void 0), p(this, 'isStageChannel', void 0), p(this, 'supportsSeamless', void 0), p(this, 'ladder', void 0), p(this, 'connection', void 0), p(this, 'audioSsrcs', void 0), p(this, 'videoSsrcs', void 0), p(this, 'remoteVideoSsrcs', void 0), p(this, 'framesReceived', void 0), p(this, 'streamIds', void 0), p(this, 'offscreenUsers', void 0), p(this, 'offscreenDisabledUsers', void 0), p(this, 'latestWants', void 0), p(this, 'participants', void 0), p(this, 'selectedParticipantId', void 0), p(this, 'delayedCall', void 0), p(this, 'offscreenTimeout', void 0), p(this, 'pipOpen', void 0), p(this, 'simulcastDebugOverrides', void 0), p(this, 'videoHealthManager', void 0), p(this, 'delayedUpdate', void 0), p(this, 'addLru', void 0), p(this, 'updateOffscreenUsers', void 0), p(this, 'handleLocalVideoDisabled', void 0), p(this, 'handleLocalMute', void 0), p(this, 'update', void 0), this.userId = e, this.isStageChannel = t, this.supportsSeamless = n, this.ladder = r, this.connection = null, this.audioSsrcs = {}, this.videoSsrcs = {}, this.remoteVideoSsrcs = {}, this.framesReceived = {}, this.streamIds = {}, this.offscreenUsers = {}, this.offscreenDisabledUsers = {}, this.latestWants = m, this.participants = new Set(), this.selectedParticipantId = null, this.pipOpen = !1, this.simulcastDebugOverrides = new Map(), this.videoHealthManager = null, this.delayedUpdate = () => {
   this.delayedCall.delay();
@@ -159,8 +159,8 @@ super(), i = this, p(this, 'userId', void 0), p(this, 'isStageChannel', void 0),
     i = -1;
   for (let e = 0; e < n.length; e++) {
     let a = n[e],
-      o = t - this.offscreenUsers[a];
-    o > r && (r = o, i = e);
+      s = t - this.offscreenUsers[a];
+    s > r && (r = s, i = e);
   }
   this.offscreenDisabledUsers[n[i]] = !0, n.splice(i, 1);
 }, this.updateOffscreenUsers = () => {
@@ -191,8 +191,8 @@ super(), i = this, p(this, 'userId', void 0), p(this, 'isStageChannel', void 0),
       any: t
     };
   for (let [r, a] of(i.updateOffscreenUsers(), _.default.entries(i.videoSsrcs))) {
-    let o = [],
-      s = !1,
+    let s = [],
+      o = !1,
       u = a[0].ssrc;
     if (i.shouldReceiveFromUser(r)) {
       let e = r === i.selectedParticipantId && 100 !== t && !i.pipOpen;
@@ -200,24 +200,24 @@ super(), i = this, p(this, 'userId', void 0), p(this, 'isStageChannel', void 0),
         for (let t of a)
           100 === t.quality ? e ? (n[t.ssrc] = 100, u = t.ssrc) : n[t.ssrc] = 0 : e ? n[t.ssrc] = 0 : u = t.ssrc;
         if (i.supportsSeamless && !i.framesReceived[u])
-          for (let e of (s = !0, o = [u], a))
-            e.ssrc !== u && i.framesReceived[e.ssrc] && (100 === e.quality ? n[e.ssrc] = 100 : n[e.ssrc] = t, o.push(e.ssrc));
+          for (let e of (o = !0, s = [u], a))
+            e.ssrc !== u && i.framesReceived[e.ssrc] && (100 === e.quality ? n[e.ssrc] = 100 : n[e.ssrc] = t, s.push(e.ssrc));
       } else
         e && (n[u] = 100);
     } else
       for (let e of a)
         n[e.ssrc] = 0;
     let c = i.getSimulcastOverrideQuality(r);
-    for (let e of (c === h.Z.HIGH ? n[u] = 100 : c === h.Z.LOW && (n[u] = 50), (!i.supportsSeamless || !s) && (o = [u]), a))
-      !o.includes(e.ssrc) && delete i.framesReceived[e.ssrc];
-    (e.includes(r) || void 0 !== i.remoteVideoSsrcs[r] && !(0, l.Z)(i.remoteVideoSsrcs[r], o)) && (i.remoteVideoSsrcs[r] = [...o], i.emit('user-ssrc-update', r, i.audioSsrcs[r], o));
+    for (let e of (c === h.Z.HIGH ? n[u] = 100 : c === h.Z.LOW && (n[u] = 50), (!i.supportsSeamless || !o) && (s = [u]), a))
+      !s.includes(e.ssrc) && delete i.framesReceived[e.ssrc];
+    (e.includes(r) || void 0 !== i.remoteVideoSsrcs[r] && !(0, l.Z)(i.remoteVideoSsrcs[r], s)) && (i.remoteVideoSsrcs[r] = [...s], i.emit('user-ssrc-update', r, i.audioSsrcs[r], s));
   }
   for (let [e, t] of Object.entries(i.audioSsrcs)) {
     var r;
     (null === (r = i.connection) || void 0 === r ? void 0 : r.getLocalMute(e)) && (n[t] = 0);
   }
   return g ? i.latestWants : (null != i.connection && !(0, l.Z)(i.latestWants, n) && (i.latestWants = n, i.emit('update', n)), n);
-}, this.delayedCall = new u.sW(100, this.update), this.offscreenTimeout = new u.V7(), E.Z.subscribe(() => {
+}, this.delayedCall = new u.sW(100, this.update), this.offscreenTimeout = new u.V7(), E.w.on(E.e.IncomingVideoEnabledChanged, () => {
   this.update();
 });
   }

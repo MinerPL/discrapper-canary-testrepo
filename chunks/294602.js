@@ -1,12 +1,12 @@
 n.d(t, {
   B: function() {
-return o;
+return s;
   }
 });
 var r = n(399606),
   i = n(581883),
   a = n(163268);
-let o = () => {
+let s = () => {
   let e = (0, r.cj)([i.Z], () => {
 var e, t;
 return null !== (t = null === (e = i.Z.settings.textAndImages) || void 0 === e ? void 0 : e.explicitContentSettings) && void 0 !== t ? t : (0, a.l4)();

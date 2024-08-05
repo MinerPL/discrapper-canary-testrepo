@@ -1,24 +1,24 @@
-s.d(n, {
+t.d(n, {
   U: function() {
-return p;
+return f;
   }
 });
-var l = s(735250);
-s(470079);
-var t = s(120356),
-  i = s.n(t),
-  r = s(512722),
-  a = s.n(r),
-  c = s(481060),
-  o = s(63063),
-  u = s(631818),
-  d = s(987033),
-  _ = s(53900),
-  m = s(981631),
-  E = s(689938),
-  I = s(180002);
+var i = t(735250);
+t(470079);
+var a = t(120356),
+  r = t.n(a),
+  s = t(512722),
+  l = t.n(s),
+  o = t(481060),
+  c = t(63063),
+  u = t(631818),
+  d = t(987033),
+  _ = t(53900),
+  p = t(981631),
+  m = t(689938),
+  I = t(180002);
 
-function p() {
+function f() {
   let e = (0, _.Z)(),
 {
   enabled: n
@@ -28,28 +28,28 @@ function p() {
   autoTrackExposure: !1
 }),
 {
-  enabled: s
+  enabled: t
 } = d.Z.useExperiment({
   location: '5ebfcf_2'
 }, {
   autoTrackExposure: !1
 });
-  return null != e && ('PL' === e ? n : 'TR' === e && s);
+  return null != e && ('PL' === e ? n : 'TR' === e && t);
 }
 n.Z = e => {
-  var n, s;
+  var n, t;
   let {
-fromBoostCancelModal: t,
-className: r
+fromBoostCancelModal: a,
+className: s
   } = e, u = (0, _.Z)();
-  if (!p())
+  if (!f())
 return null;
-  return a()(null != u, 'Subscription billing country should not be null'), (0, l.jsxs)('div', {
-className: i()(I.noticeRoot, r),
+  return l()(null != u, 'Subscription billing country should not be null'), (0, i.jsxs)('div', {
+className: r()(I.noticeRoot, s),
 children: [
-  (0, l.jsx)('div', {
+  (0, i.jsx)('div', {
     className: I.iconContainer,
-    children: (0, l.jsx)(c.CircleExclamationPointIcon, {
+    children: (0, i.jsx)(o.CircleExclamationPointIcon, {
       size: 'custom',
       width: 20,
       height: 20,
@@ -57,10 +57,10 @@ children: [
       className: I.infoIcon
     })
   }),
-  (0, l.jsx)('div', {
+  (0, i.jsx)('div', {
     className: I.text,
-    children: (n = u, s = t, 'PL' === n ? s ? E.Z.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_BOOST_WARNING : E.Z.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_WARNING : 'TR' === n ? s ? E.Z.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_BOOST_WARNING : E.Z.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_WARNING : s ? E.Z.Messages.LOCALIZED_PRICING_LEGACY_PRICING_BOOST_WARNING : E.Z.Messages.LOCALIZED_PRICING_LEGACY_PRICING_WARNING).format({
-      helpCenterLink: o.Z.getArticleURL(m.BhN.LOCALIZED_PRICING)
+    children: (n = u, t = a, 'PL' === n ? t ? m.Z.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_BOOST_WARNING : m.Z.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_WARNING : 'TR' === n ? t ? m.Z.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_BOOST_WARNING : m.Z.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_WARNING : t ? m.Z.Messages.LOCALIZED_PRICING_LEGACY_PRICING_BOOST_WARNING : m.Z.Messages.LOCALIZED_PRICING_LEGACY_PRICING_WARNING).format({
+      helpCenterLink: c.Z.getArticleURL(p.BhN.LOCALIZED_PRICING)
     })
   })
 ]

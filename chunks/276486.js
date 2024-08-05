@@ -6,26 +6,26 @@ return d;
 return u;
   }
 });
-var l = n(735250);
+var t = n(735250);
 n(470079);
-var t = n(481060),
+var l = n(481060),
   i = n(144114),
-  r = n(489813),
-  a = n(815660),
+  a = n(489813),
+  r = n(815660),
   o = n(689938);
 
 function d() {
-  return (0, l.jsx)(l.Fragment, {
-children: (0, l.jsx)(r.PU, {
-  icon: t.MobilePhoneIcon,
+  return (0, t.jsx)(t.Fragment, {
+children: (0, t.jsx)(a.PU, {
+  icon: l.MobilePhoneIcon,
   text: o.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_LABEL,
   footnote: o.Z.Messages.MEMBER_VERIFICATION_MODAL_PRIVACY_DESCRIPTION,
   meetsRequirement: !1,
-  children: (0, l.jsx)(t.Tooltip, {
+  children: (0, t.jsx)(l.Tooltip, {
     text: o.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_FIELD_SETTINGS_TOOLTIP,
-    children: e => (0, l.jsx)(t.Button, {
+    children: e => (0, t.jsx)(l.Button, {
       ...e,
-      size: t.Button.Sizes.SMALL,
+      size: l.Button.Sizes.SMALL,
       disabled: !0,
       children: o.Z.Messages.VERIFY
     })
@@ -38,28 +38,28 @@ function u(e) {
   let {
 isUserVerified: s
   } = e, d = s ? o.Z.Messages.MEMBER_VERIFICATION_PHONE_VERIFIED : o.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_LABEL;
-  return (0, l.jsx)(l.Fragment, {
-children: (0, l.jsx)(r.PU, {
-  icon: t.MobilePhoneIcon,
+  return (0, t.jsx)(t.Fragment, {
+children: (0, t.jsx)(a.PU, {
+  icon: l.MobilePhoneIcon,
   text: d,
   footnote: o.Z.Messages.MEMBER_VERIFICATION_MODAL_PRIVACY_DESCRIPTION,
   meetsRequirement: s,
-  children: (0, l.jsx)(t.Button, {
-    size: t.Button.Sizes.SMALL,
+  children: (0, t.jsx)(l.Button, {
+    size: l.Button.Sizes.SMALL,
     onClick: () => {
-      (0, t.openModalLazy)(async () => {
+      (0, l.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([
           n.e('76540'),
-          n.e('74072')
+          n.e('67422')
         ]).then(n.bind(n, 607018));
-        return s => (0, l.jsx)(e, {
+        return s => (0, t.jsx)(e, {
           reason: i.L.GUILD_PHONE_REQUIRED,
           ...s
         });
       }, {
-        modalKey: a.M
+        modalKey: r.M
       });
     },
     children: o.Z.Messages.VERIFY

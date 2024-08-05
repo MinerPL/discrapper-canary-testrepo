@@ -1,6 +1,6 @@
 var r, i, a = n(957578).Buffer,
-  o = n(180756),
-  s = n(138031),
+  s = n(180756),
+  o = n(138031),
   l = n(275227),
   u = n(871230),
   c = n.g.crypto && n.g.crypto.subtle,
@@ -52,7 +52,7 @@ E()(function() {
 });
 return;
   }
-  if (o(i, h), e = u(e, s, 'Password'), t = u(t, s, 'Salt'), 'function' != typeof m)
+  if (s(i, h), e = u(e, o, 'Password'), t = u(t, o, 'Salt'), 'function' != typeof m)
 throw Error('No callback provided to pbkdf2');
   ! function(e, t) {
 e.then(function(e) {

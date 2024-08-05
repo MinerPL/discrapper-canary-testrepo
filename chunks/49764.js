@@ -4,8 +4,8 @@ var r = n(470079),
 t.Z = function(e) {
   var t = e.hex,
 n = e.rgb,
-o = e.onChange,
-s = (0, i.default)({
+s = e.onChange,
+o = (0, i.default)({
   default: {
     fields: {
       display: 'flex',
@@ -66,53 +66,53 @@ s = (0, i.default)({
   }
 }),
 l = function(e, t) {
-  e.r || e.g || e.b ? o({
+  e.r || e.g || e.b ? s({
     r: e.r || n.r,
     g: e.g || n.g,
     b: e.b || n.b,
     source: 'rgb'
-  }, t) : o({
+  }, t) : s({
     hex: e.hex,
     source: 'hex'
   }, t);
 };
   return r.createElement('div', {
-style: s.fields,
+style: o.fields,
 className: 'flexbox-fix'
   }, r.createElement('div', {
-style: s.active
+style: o.active
   }), r.createElement(a.Vm, {
 style: {
-  wrap: s.HEXwrap,
-  input: s.HEXinput,
-  label: s.HEXlabel
+  wrap: o.HEXwrap,
+  input: o.HEXinput,
+  label: o.HEXlabel
 },
 label: 'hex',
 value: t,
 onChange: l
   }), r.createElement(a.Vm, {
 style: {
-  wrap: s.RGBwrap,
-  input: s.RGBinput,
-  label: s.RGBlabel
+  wrap: o.RGBwrap,
+  input: o.RGBinput,
+  label: o.RGBlabel
 },
 label: 'r',
 value: n.r,
 onChange: l
   }), r.createElement(a.Vm, {
 style: {
-  wrap: s.RGBwrap,
-  input: s.RGBinput,
-  label: s.RGBlabel
+  wrap: o.RGBwrap,
+  input: o.RGBinput,
+  label: o.RGBlabel
 },
 label: 'g',
 value: n.g,
 onChange: l
   }), r.createElement(a.Vm, {
 style: {
-  wrap: s.RGBwrap,
-  input: s.RGBinput,
-  label: s.RGBlabel
+  wrap: o.RGBwrap,
+  input: o.RGBinput,
+  label: o.RGBlabel
 },
 label: 'b',
 value: n.b,

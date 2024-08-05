@@ -1,9 +1,9 @@
 a.d(s, {
   b: function() {
-return t;
+return n;
   }
 });
-let n = (0, a(818083).B)({
+let t = (0, a(818083).B)({
   kind: 'user',
   id: '2022-08_back_to_school',
   label: 'Back to School Event',
@@ -19,11 +19,11 @@ config: {
   }]
 });
 
-function t() {
-  return n.getCurrentConfig({
+function n() {
+  return t.getCurrentConfig({
 location: '68acbb_1'
   }, {
 autoTrackExposure: !1
   }).enabled;
 }
-s.Z = n;
+s.Z = t;

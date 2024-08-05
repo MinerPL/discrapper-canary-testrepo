@@ -9,9 +9,9 @@ return A;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(392711),
-  l = n.n(s),
+  s = n.n(a),
+  o = n(392711),
+  l = n.n(o),
   u = n(215569),
   c = n(481060),
   d = n(40851),
@@ -47,7 +47,7 @@ let {
 } = this.state;
 return (a === p.Dv.ENTERING || a === p.Dv.ENTERED) && !n && (a = p.Dv.HIDDEN), i && (a = p.Dv.ENTERED), (0, r.jsx)(t, {
   children: (0, r.jsx)('div', {
-    className: o()(I.layer, !n && I.hidden),
+    className: s()(I.layer, !n && I.hidden),
     children: e({
       transitionState: a,
       onClose: this.close
@@ -112,11 +112,11 @@ return f.S.subscribe(m.CkL.MODAL_CLOSE, e), () => {
   f.S.unsubscribe(m.CkL.MODAL_CLOSE, e);
 };
   }, [a]);
-  let o = i.useCallback(() => {
+  let s = i.useCallback(() => {
   let e = n.current;
   null != e && null != e.onCloseRequest && e.onCloseRequest();
 }, []),
-s = i.useCallback(t => {
+o = i.useCallback(t => {
   (0, h.Mr)(t, e);
 }, [e]),
 d = g.map(e => t.some(t => t.Layer === e || null == t.Layer && e === _.ZP));
@@ -129,7 +129,7 @@ children: [
     return (0, r.jsx)(c.Backdrop, {
       isVisible: d[n],
       backdropStyle: null !== (i = null == a ? void 0 : a.backdropStyle) && void 0 !== i ? i : c.BackdropStyles.DARK,
-      onClose: o,
+      onClose: s,
       LayerComponent: e,
       backdropInstant: null == a ? void 0 : a.instant
     }, 'layer-'.concat(n));
@@ -138,15 +138,15 @@ children: [
     let {
       key: i,
       Layer: a,
-      render: o,
+      render: s,
       instant: l
     } = e;
     return (0, r.jsx)(S, {
       modalKey: i,
       LayerComponent: null != a ? a : _.ZP,
       isTopModal: n === t.length - 1,
-      render: o,
-      closeModal: s,
+      render: s,
+      closeModal: o,
       instant: l
     }, i);
   })

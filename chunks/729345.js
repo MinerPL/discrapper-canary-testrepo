@@ -6,8 +6,8 @@ return f;
 var r = n(544891),
   i = n(552871),
   a = n(283080),
-  o = n(592125),
-  s = n(569611),
+  s = n(592125),
+  o = n(569611),
   l = n(710845),
   u = n(705646),
   c = n(104639),
@@ -19,7 +19,7 @@ async function f(e, t) {
 }
 async function h(e) {
   try {
-let t = s.Pz(),
+let t = o.Pz(),
   n = '',
   i = await (0, u.Z)().then(e => (0, u.S)(e, !0)),
   l = t.length + n.length + i.length;
@@ -28,8 +28,8 @@ if (l > 9437184) {
   t = t.slice(t.length - Math.floor(t.length * e)), n = n.slice(n.length - Math.floor(n.length * e)), i = i.slice(i.length - Math.floor(i.length * e));
 }
 let E = null,
-  f = '\n    '.concat((0, d.Z)(E), '\n\n    ').concat((0, a.EA)(), '\n\n    Metadata:\n    ').concat(JSON.stringify((0, c.Z)(), void 0, 2), '\n\n    ChannelStore:\n    ').concat(JSON.stringify(o.Z.getDebugInfo(), void 0, 2), '\n\n    Logs:\n    ').concat(t, '\n\n    System logs:\n    ').concat(n, '\n\n    Push Notifications:\n    ').concat(i, '\n    ');
-s.ZH();
+  f = '\n    '.concat((0, d.Z)(E), '\n\n    ').concat((0, a.EA)(), '\n\n    Metadata:\n    ').concat(JSON.stringify((0, c.Z)(), void 0, 2), '\n\n    ChannelStore:\n    ').concat(JSON.stringify(s.Z.getDebugInfo(), void 0, 2), '\n\n    Logs:\n    ').concat(t, '\n\n    System logs:\n    ').concat(n, '\n\n    Push Notifications:\n    ').concat(i, '\n    ');
+o.ZH();
 let h = _.ANM.DEBUG_LOG(e, 'discord_app_logs');
 await r.tn.post({
   url: h,

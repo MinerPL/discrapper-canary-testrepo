@@ -18,6 +18,6 @@ e.exports = {
   addGamePopout: 'addGamePopout_fd966d',
   actions: 'actions_fd966d',
   detectedApplication: 'detectedApplication_fd966d',
-  toggleIconOn: 'toggleIconOn_fd966d',
-  cancelButton: 'cancelButton_fd966d'
+  cancelButton: 'cancelButton_fd966d',
+  toggleIconOn: 'toggleIconOn_fd966d'
 };

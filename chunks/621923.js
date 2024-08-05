@@ -6,10 +6,10 @@ return u;
 return l;
   },
   kZ: function() {
-return o;
+return s;
   },
   l6: function() {
-return s;
+return o;
   }
 });
 var r = n(818083);
@@ -44,7 +44,7 @@ treatments: [{
 }]
   });
 
-function o(e) {
+function s(e) {
   return i.useExperiment({
 guildId: e,
 location: '259c05_1'
@@ -53,7 +53,7 @@ autoTrackExposure: !0
   });
 }
 
-function s(e) {
+function o(e) {
   return i.getCurrentConfig({
 guildId: e,
 location: '259c05_2'

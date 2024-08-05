@@ -3,8 +3,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(147913),
-  o = n(160404),
-  s = n(314897),
+  s = n(160404),
+  o = n(314897),
   l = n(592125),
   u = n(271383),
   c = n(914010),
@@ -41,13 +41,13 @@ super(...e), T(this, 'onboardingCompleteGuilds', new Set()), T(this, 'actions', 
   let {
     flags: t,
     user: a,
-    guildId: o
+    guildId: s
   } = e;
-  if (a.id === s.default.getId()) {
-    if (!this.onboardingCompleteGuilds.has(o) && (0, d.yE)(null != t ? t : 0, I.q.COMPLETED_HOME_ACTIONS)) {
+  if (a.id === o.default.getId()) {
+    if (!this.onboardingCompleteGuilds.has(s) && (0, d.yE)(null != t ? t : 0, I.q.COMPLETED_HOME_ACTIONS)) {
       var l, u;
-      this.onboardingCompleteGuilds.add(o);
-      let e = null !== (u = null === (l = E.Z.getNewMemberActions(o)) || void 0 === l ? void 0 : l.length) && void 0 !== u ? u : 0;
+      this.onboardingCompleteGuilds.add(s);
+      let e = null !== (u = null === (l = E.Z.getNewMemberActions(s)) || void 0 === l ? void 0 : l.length) && void 0 !== u ? u : 0;
       if (0 === e)
         return;
       (0, i.openModalLazy)(async () => {
@@ -86,7 +86,7 @@ super(...e), T(this, 'onboardingCompleteGuilds', new Set()), T(this, 'actions', 
     channelId: r,
     message: i
   } = e;
-  if (null == n || null == r || (null === (t = i.author) || void 0 === t ? void 0 : t.id) !== s.default.getId())
+  if (null == n || null == r || (null === (t = i.author) || void 0 === t ? void 0 : t.id) !== o.default.getId())
     return;
   let a = l.Z.getChannel(r);
   (null == a ? void 0 : a.isForumPost()) && (null == a ? void 0 : a.parent_id) != null && this._completeChatAction(n, a.parent_id), this._completeChatAction(n, r);
@@ -97,7 +97,7 @@ super(...e), T(this, 'onboardingCompleteGuilds', new Set()), T(this, 'actions', 
     isNewlyCreated: r
   } = e;
   if (!!r && null != n.parent_id && !!(null === (t = l.Z.getChannel(n.parent_id)) || void 0 === t ? void 0 : t.isForumLikeChannel()))
-    n.ownerId === s.default.getId() && this._completeChatAction(n.guild_id, n.parent_id);
+    n.ownerId === o.default.getId() && this._completeChatAction(n.guild_id, n.parent_id);
 }), T(this, '_completeChatAction', async (e, t) => {
   let {
     memberActions: n,
@@ -107,18 +107,18 @@ super(...e), T(this, 'onboardingCompleteGuilds', new Set()), T(this, 'actions', 
 }), T(this, '_getOrLoadOnboardingMemberActions', async e => {
   var t, n;
   let r = (0, p.s)(e),
-    i = o.Z.isFullServerPreview(e);
+    i = s.Z.isFullServerPreview(e);
   if (!r && !i)
     return {};
   let a = u.ZP.getSelfMember(e);
   if (null == a || !(0, m.m)(null !== (t = a.joinedAt) && void 0 !== t ? t : void 0, null !== (n = a.flags) && void 0 !== n ? n : void 0))
     return {};
-  let [s, l] = await Promise.all([
+  let [o, l] = await Promise.all([
     this._getOrLoadOnboardingHomeSettings(e, a),
     this._getOrLoadMemberActions(e, a)
   ]);
   return {
-    memberActions: s,
+    memberActions: o,
     completedActions: l
   };
 }), T(this, '_getOrLoadOnboardingHomeSettings', async (e, t) => {

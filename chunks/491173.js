@@ -1,8 +1,8 @@
 var r = n(735250),
   i = n(470079),
   a = n(477690),
-  o = n(481060),
-  s = n(880949),
+  s = n(481060),
+  o = n(880949),
   l = n(806966),
   u = n(65029),
   c = n(430824),
@@ -22,7 +22,7 @@ if (!(0, f.jl)(e) && !(0, f.J8)(e) || (0, f.J8)(e)) {
   let i = c.Z.getGuild(e.guild_id);
   null != i && (t = p.Z.Messages.STICKER_FROM_SOURCE.format({
     source: i.name
-  }), n = (0, r.jsx)(s.Z, {
+  }), n = (0, r.jsx)(o.Z, {
     guild: i
   }));
 } else if ((0, f.jl)(e)) {
@@ -60,7 +60,7 @@ let {
 if (null == a)
   return null;
 let {
-  graphic: s,
+  graphic: o,
   title: c
 } = g(a), d = (0, f.jl)(a) || (0, f.J8)(a) ? (0, r.jsx)(h.ZP, {
   isInteracting: !0,
@@ -69,7 +69,7 @@ let {
   disableAnimation: !0
 }) : (0, r.jsx)('div', {
   className: m.iconWrapper,
-  children: (0, r.jsx)(o.PlusSmallIcon, {
+  children: (0, r.jsx)(s.PlusSmallIcon, {
     size: 'md',
     color: 'currentColor',
     className: m.icon
@@ -77,7 +77,7 @@ let {
 });
 return (0, r.jsx)(u.Z, {
   graphicPrimary: d,
-  graphicSecondary: s,
+  graphicSecondary: o,
   titlePrimary: a.name,
   titleSecondary: (0, f.jl)(a) || (0, f.J8)(a) ? c : null
 });

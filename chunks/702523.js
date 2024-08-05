@@ -5,19 +5,19 @@ return r;
 });
 var i = n(735250);
 n(470079);
-var o = n(481060),
+var s = n(481060),
   a = n(51025),
-  l = n(850840),
-  s = n(391690);
+  o = n(850840),
+  l = n(391690);
 
 function r(t, e, r, c, d) {
-  let u = s.Z.getInstallationPath(t.id, e),
-p = null != t.eulaId && !l.Z.hasAcceptedEULA(t.eulaId);
-  null == u || p ? (0, o.openModalLazy)(async () => {
+  let u = l.Z.getInstallationPath(t.id, e),
+p = null != t.eulaId && !o.Z.hasAcceptedEULA(t.eulaId);
+  null == u || p ? (0, s.openModalLazy)(async () => {
 let {
-  default: o
+  default: s
 } = await n.e('226').then(n.bind(n, 472064));
-return n => (0, i.jsx)(o, {
+return n => (0, i.jsx)(s, {
   ...n,
   applicationId: t.id,
   branchId: e,

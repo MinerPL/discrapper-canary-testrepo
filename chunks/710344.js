@@ -28,9 +28,9 @@ if (null == a || null == s || a === s)
   return;
 let o = [...e],
   r = o.indexOf(a),
-  c = o.indexOf(s),
-  d = c - r > 0 ? 1 : 0;
-o.splice(r, 1), c = o.indexOf(s), o.splice(c + d, 0, a), n(o);
+  d = o.indexOf(s),
+  c = d - r > 0 ? 1 : 0;
+o.splice(r, 1), d = o.indexOf(s), o.splice(d + c, 0, a), n(o);
   }, [
 e,
 t,

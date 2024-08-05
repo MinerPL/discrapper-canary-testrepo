@@ -1,7 +1,7 @@
 n(47120);
 var i = n(570140),
-  s = n(317770),
-  a = n(314897),
+  a = n(317770),
+  s = n(314897),
   r = n(57562),
   l = n(882029),
   o = n(955204),
@@ -17,7 +17,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 let _ = new Set();
-class h extends s.Z {
+class h extends a.Z {
   _initialize() {
 i.Z.subscribe('MESSAGE_CREATE', this.handleMessageCreate), i.Z.subscribe('POGGERMODE_SETTINGS_UPDATE', this.handleSettingsUpdate);
   }
@@ -36,14 +36,14 @@ super(...e), u(this, 'handleSettingsUpdate', e => {
     channelId: n,
     message: {
       author: i,
-      nonce: s,
+      nonce: a,
       mentions: u
     }
   } = e;
   if (!c.Z.isEnabled())
     return !1;
-  let h = a.default.getId();
-  if ((null == u ? void 0 : u.find(e => e.id === h)) != null ? (0, r.T)(o.hn.PING_ME) : (null !== (t = null == u ? void 0 : u.length) && void 0 !== t ? t : 0) > 0 && (null == i ? void 0 : i.id) === h && (0, r.T)(o.hn.PING_SOMEONE), !(0, d.wU)(null == i ? void 0 : i.id, h, s, _))
+  let h = s.default.getId();
+  if ((null == u ? void 0 : u.find(e => e.id === h)) != null ? (0, r.T)(o.hn.PING_ME) : (null !== (t = null == u ? void 0 : u.length) && void 0 !== t ? t : 0) > 0 && (null == i ? void 0 : i.id) === h && (0, r.T)(o.hn.PING_SOMEONE), !(0, d.wU)(null == i ? void 0 : i.id, h, a, _))
     return !1;
   let E = d.ZP.getMostRecentMessageCombo(n),
     {

@@ -17,7 +17,7 @@ n += String.fromCharCode(e);
 }
 n.d(t, {
   U2: function() {
-return f;
+return I;
   },
   wz: function() {
 return p;
@@ -81,12 +81,12 @@ type: c(i),
 id: c(a),
 transports: u(i)
   },
-  h = {
+  _ = {
 appid: u(i),
 appidExclude: u(i),
 credProps: u(i)
   },
-  _ = {
+  h = {
 appid: u(i),
 appidExclude: u(i),
 credProps: u(i)
@@ -104,7 +104,7 @@ displayName: c(i)
   excludeCredentials: u([d]),
   authenticatorSelection: u(i),
   attestation: u(i),
-  extensions: u(h)
+  extensions: u(_)
 }), u(i), c(i), c(i), c(a), u(i), c({
   clientDataJSON: c(a),
   attestationObject: c(a),
@@ -112,7 +112,7 @@ displayName: c(i)
 var t;
 return (null == (t = e.getTransports) ? void 0 : t.call(e)) || [];
   })
-}), o(_, e => e.getClientExtensionResults());
+}), o(h, e => e.getClientExtensionResults());
 var E = {
 mediation: u(i),
 publicKey: c({
@@ -121,7 +121,7 @@ publicKey: c({
   rpId: u(i),
   allowCredentials: u([d]),
   userVerification: u(i),
-  extensions: u(h)
+  extensions: u(_)
 }),
 signal: u(i)
   },
@@ -136,13 +136,13 @@ response: c({
   signature: c(a),
   userHandle: c(a)
 }),
-clientExtensionResults: o(_, e => e.getClientExtensionResults())
+clientExtensionResults: o(h, e => e.getClientExtensionResults())
   };
 
 function p(e) {
   return l(s, E, e);
 }
-async function f(e) {
+async function I(e) {
   let t = await navigator.credentials.get(e);
   return t.toJSON = () => l(r, g, t), t;
 }

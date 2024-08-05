@@ -64,7 +64,7 @@ let l = [
 0.95,
 1
   ],
-  f = [{
+  _ = [{
   base: 1,
   tint: 2
 },
@@ -79,7 +79,7 @@ function C(e) {
 width: n,
 height: t,
 primaryTintColor: C,
-secondaryTintColor: _,
+secondaryTintColor: f,
 ...h
   } = e, {
 primaryColorsTransformed: x,
@@ -90,9 +90,9 @@ primaryTintColor: C,
 primaryTintLuminances: d,
 primaryLuminanceWeights: u,
 secondaryBaseColors: c,
-secondaryTintColor: _,
+secondaryTintColor: f,
 secondaryTintLuminances: m,
-secondaryLuminanceWeights: f
+secondaryLuminanceWeights: _
   }), {
 styleContent: p,
 containerId: T

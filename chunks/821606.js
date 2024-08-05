@@ -7,8 +7,8 @@ var a = n(735250);
 n(470079);
 var o = n(481060),
   r = n(988158),
-  l = n(285952),
-  s = n(153124),
+  s = n(285952),
+  l = n(153124),
   i = n(689938),
   c = n(729004);
 
@@ -17,7 +17,7 @@ function d(t) {
 url: e,
 onClose: d,
 transitionState: u
-  } = t, x = (0, s.Dt)(), {
+  } = t, x = (0, l.Dt)(), {
 protocol: h,
 hostname: m,
 theRestOfTheUrl: b
@@ -32,9 +32,9 @@ children: [
     alt: ''
   }),
   (0, a.jsx)(o.ModalContent, {
-    children: (0, a.jsxs)(l.Z, {
-      direction: l.Z.Direction.VERTICAL,
-      justify: l.Z.Justify.CENTER,
+    children: (0, a.jsxs)(s.Z, {
+      direction: s.Z.Direction.VERTICAL,
+      justify: s.Z.Justify.CENTER,
       children: [
         (0, a.jsx)(o.Heading, {
           id: x,

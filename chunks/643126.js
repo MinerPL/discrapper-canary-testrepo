@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(512722),
   o = n.n(l),
   c = n(481060),
@@ -17,9 +17,9 @@ var i = n(735250),
   p = n(864441),
   T = n(981631),
   S = n(689938),
-  C = n(235940);
+  f = n(235940);
 
-function f(e, t, n) {
+function C(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -31,7 +31,7 @@ let N = {
   HOST: 5,
   LISTENER: 4
 };
-class A extends s.PureComponent {
+class A extends a.PureComponent {
   isHost() {
 let {
   currentUser: e,
@@ -74,12 +74,12 @@ return this.isHost() ? (0, i.jsx)(m.Z, {
   }
   render() {
 return (0, i.jsxs)('div', {
-  className: C.listeningAlong,
+  className: f.listeningAlong,
   children: [
     this.renderTitle(),
     (0, i.jsx)(h.Z, {
       justify: h.Z.Justify.END,
-      className: C.party,
+      className: f.party,
       children: (0, i.jsx)(E.Z, {
         users: this.props.party,
         max: this.isHost() ? N.HOST : N.LISTENER,
@@ -88,7 +88,7 @@ return (0, i.jsxs)('div', {
       })
     }),
     (0, i.jsxs)('div', {
-      className: C.icons,
+      className: f.icons,
       children: [
         this.renderHelpIcon(),
         this.renderStopListeningButton()
@@ -98,15 +98,15 @@ return (0, i.jsxs)('div', {
 });
   }
   constructor(...e) {
-super(...e), f(this, 'renderPartyMember', (e, t) => {
+super(...e), C(this, 'renderPartyMember', (e, t) => {
   let n;
   if (null == e)
     return null;
   let {
-    host: a,
+    host: s,
     onUserContextMenu: l
   } = this.props;
-  return n = (null == a ? void 0 : a.id) === e.id ? S.Z.Messages.SPOTIFY_LISTEN_ALONG_HOST : S.Z.Messages.SPOTIFY_LISTEN_ALONG_LISTENER, (0, i.jsx)(c.Popout, {
+  return n = (null == s ? void 0 : s.id) === e.id ? S.Z.Messages.SPOTIFY_LISTEN_ALONG_HOST : S.Z.Messages.SPOTIFY_LISTEN_ALONG_LISTENER, (0, i.jsx)(c.Popout, {
     preload: () => (0, u.W)(e.id, e.getAvatarURL(void 0, 80)),
     renderPopout: t => (o()(null != e, ''), (0, i.jsx)(_.Z, {
       ...t,
@@ -116,19 +116,19 @@ super(...e), f(this, 'renderPartyMember', (e, t) => {
     })),
     position: 'top',
     align: 'center',
-    children: a => (0, i.jsx)(c.Tooltip, {
+    children: s => (0, i.jsx)(c.Tooltip, {
       text: n,
       children: n => {
         let {
           onMouseEnter: i,
           onMouseLeave: o
         } = n;
-        return (0, s.createElement)(c.Avatar, {
-          ...a,
+        return (0, a.createElement)(c.Avatar, {
+          ...s,
           key: e.id,
           src: e.getAvatarURL(void 0, 24),
           size: c.AvatarSizes.SIZE_24,
-          className: r()(C.avatar, t),
+          className: r()(f.avatar, t),
           'aria-label': e.username,
           onMouseEnter: i,
           onMouseLeave: o,
@@ -137,17 +137,17 @@ super(...e), f(this, 'renderPartyMember', (e, t) => {
       }
     })
   }, e.id);
-}), f(this, 'renderPartyMemberOverflow', (e, t, n) => {
+}), C(this, 'renderPartyMemberOverflow', (e, t, n) => {
   let {
-    renderOverflowPopout: s
+    renderOverflowPopout: a
   } = this.props;
   return (0, i.jsx)(c.Popout, {
-    renderPopout: s,
+    renderPopout: a,
     children: n => (0, i.jsx)(c.Tooltip, {
       text: S.Z.Messages.SPOTIFY_LISTEN_ALONG_LISTENERS,
-      children: s => (0, i.jsx)('div', {
-        className: r()(C.overflow, t),
-        ...s,
+      children: a => (0, i.jsx)('div', {
+        className: r()(f.overflow, t),
+        ...a,
         ...n,
         children: e
       })

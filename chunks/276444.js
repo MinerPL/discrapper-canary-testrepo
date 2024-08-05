@@ -1,5 +1,5 @@
 n(47120);
-var r, i, a, o, s = n(275726),
+var r, i, a, s, o = n(275726),
   l = n(442837),
   u = n(570140),
   c = n(594174),
@@ -35,7 +35,7 @@ messages: t
 }
 
 function M(e) {
-  let t = e.type === s.u.PREMIUM_REFERRAL ? e.content : null;
+  let t = e.type === o.u.PREMIUM_REFERRAL ? e.content : null;
   if (null == t)
 return !1;
   if (!g.has(t) && !T.has(t)) {
@@ -93,12 +93,12 @@ return S;
 return p;
   }
 }
-o = 'ReferralTrialStore', (a = 'displayName') in(i = P) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'ReferralTrialStore', (a = 'displayName') in(i = P) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new P(u.Z, {
+}) : i[a] = s, t.Z = new P(u.Z, {
   BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function(e) {
 let {
   userTrialOfferId: t,

@@ -3,21 +3,21 @@ t(470079);
 var l = t(120356),
   s = t.n(l),
   i = t(481060),
-  r = t(745263);
+  o = t(745263);
 n.Z = function(e) {
   let {
 count: n,
 className: t
   } = e;
   return (0, a.jsxs)('div', {
-className: s()(r.container, t),
+className: s()(o.container, t),
 children: [
   (0, a.jsx)(i.HeadphonesIcon, {
     size: 'custom',
     color: 'currentColor',
     width: 12,
     height: 12,
-    className: r.icon
+    className: o.icon
   }),
   (0, a.jsx)(i.Text, {
     color: 'header-secondary',

@@ -4,8 +4,8 @@ return u;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(338545),
+  a = n(470079),
+  s = n(338545),
   r = n(481060),
   l = n(532490),
   o = n(620929),
@@ -21,14 +21,14 @@ sidebarWidth: _,
 windowWidth: h,
 transition: E,
 brandPrimaryColor: I
-  } = e, m = s.useMemo(() => (h - _) / 2, [
+  } = e, m = a.useMemo(() => (h - _) / 2, [
 _,
 h
   ]);
   return (0, i.jsxs)('div', {
 className: d.sidebarContent,
 children: [
-  E((e, t) => t && (0, i.jsx)(a.animated.div, {
+  E((e, t) => t && (0, i.jsx)(s.animated.div, {
     className: d.sidebarLeftDecorationContainer,
     style: {
       opacity: e.opacity,

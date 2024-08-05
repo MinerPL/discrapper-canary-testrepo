@@ -10,8 +10,8 @@ var i = n(735250);
 n(470079);
 var s = n(481060),
   a = n(312839),
-  o = n(556296),
-  r = n(454902),
+  o = n(593481),
+  r = n(556296),
   l = n(13140),
   c = n(981631),
   d = n(987650),
@@ -23,12 +23,12 @@ trackView: e,
 trackClick: t
   } = (0, a.R)(d.n0.ClipsReminderNotification, {
 notif_type: d.n0.ClipsReminderNotification
-  }), n = o.Z.getKeybindForAction(c.kg4.SAVE_CLIP);
+  }), n = r.Z.getKeybindForAction(c.kg4.SAVE_CLIP);
   if (null == n)
 return null;
   let h = l.BB(n.shortcut, !0);
   return {
-colorScheme: r.IC.PRIMARY,
+colorScheme: o.IC.PRIMARY,
 title: u.Z.Messages.CLIPS_REMINDER_NOTIFICATION_TITLE.format({
   keybind: h,
   keybindHook: () => (0, i.jsx)('span', {
@@ -61,7 +61,7 @@ trackClick: n
 notif_type: d.n0.ClipsNotification
   });
   return {
-colorScheme: r.IC.PRIMARY,
+colorScheme: o.IC.PRIMARY,
 title: e,
 icon: (0, i.jsx)(s.ClipsIcon, {
   size: 'xs',

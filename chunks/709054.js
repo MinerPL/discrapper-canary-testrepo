@@ -10,7 +10,7 @@ var r = n(392711),
   i = n.n(r),
   a = n(67423);
 
-function o(e) {
+function s(e) {
   return e;
 }
 t.default = {
@@ -54,5 +54,5 @@ return e;
   castGuildIdAsEveryoneGuildRoleId: function(e) {
 return e;
   },
-  cast: o
+  cast: s
 };

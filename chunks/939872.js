@@ -1,53 +1,53 @@
 n.d(t, {
   m: function() {
-return u;
+return d;
   }
 });
 var i = n(735250);
 n(470079);
-var a = n(442837),
-  s = n(481060),
+var s = n(442837),
+  a = n(481060),
   r = n(17894),
   l = n(430824),
   o = n(313550),
   c = n(689938),
-  d = n(752747);
-let u = e => {
+  u = n(752747);
+let d = e => {
   let {
 onClose: t,
 listing: n,
-guildId: u
-  } = e, _ = (0, a.e7)([l.Z], () => l.Z.getGuild(u), [u]), E = (0, o.Z)({
+guildId: d
+  } = e, _ = (0, s.e7)([l.Z], () => l.Z.getGuild(d), [d]), E = (0, o.Z)({
 listing: n,
-guildId: u
+guildId: d
   });
   return (0, i.jsxs)('div', {
-className: d.confirmationContainer,
+className: u.confirmationContainer,
 children: [
-  (0, i.jsx)(s.Heading, {
-    className: d.confirmationHeader,
+  (0, i.jsx)(a.Heading, {
+    className: u.confirmationHeader,
     variant: 'heading-lg/extrabold',
     children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_TITLE.format({
       serverName: null == _ ? void 0 : _.toString(),
       tierName: n.name
     })
   }),
-  !E.isEmpty() && (0, i.jsx)(s.Text, {
-    className: d.confirmationSubtitle,
+  !E.isEmpty() && (0, i.jsx)(a.Text, {
+    className: u.confirmationSubtitle,
     variant: 'text-sm/normal',
     color: 'header-secondary',
     children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_SUBTITLE.format({
       benefits: E.asString()
     })
   }),
-  (0, i.jsx)(s.Button, {
-    className: d.openDiscordButton,
+  (0, i.jsx)(a.Button, {
+    className: u.openDiscordButton,
     onClick: () => (0, r.Z)('role_sub_mweb_success_modal'),
     children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_OPEN_DISCORD_BUTTON
   }),
-  (0, i.jsx)(s.Button, {
-    className: d.doneButton,
-    look: s.Button.Looks.BLANK,
+  (0, i.jsx)(a.Button, {
+    className: u.doneButton,
+    look: a.Button.Looks.BLANK,
     onClick: () => t(!0),
     children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_DONE_BUTTON
   })

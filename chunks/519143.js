@@ -2,7 +2,7 @@ n(47120);
 var r = n(355467),
   i = n(147913),
   a = n(400407);
-class o extends i.Z {
+class s extends i.Z {
   constructor(...e) {
 var t, n, i;
 super(...e), t = this, n = 'actions', i = {
@@ -24,4 +24,4 @@ super(...e), t = this, n = 'actions', i = {
 }) : t[n] = i;
   }
 }
-t.Z = new o();
+t.Z = new s();

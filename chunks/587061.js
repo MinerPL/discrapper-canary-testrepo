@@ -1,8 +1,8 @@
 var r = n(470079),
   i = n(442837),
   a = n(952265),
-  o = n(481060),
-  s = n(714338),
+  s = n(481060),
+  o = n(714338),
   l = n(857595),
   u = n(607070),
   c = n(627845),
@@ -22,7 +22,7 @@ function m() {
 }
 t.Z = function(e, t) {
   let n = (0, i.e7)([u.Z], () => u.Z.keyboardModeEnabled);
-  (0, o.useFocusJumpSectionManager)(n);
+  (0, s.useFocusJumpSectionManager)(n);
   let a = (0, r.useCallback)(e => {
 ! function(e, t) {
   var n, r;
@@ -56,7 +56,7 @@ t.Z = function(e, t) {
     }
     return null;
   }(e);
-  null != a && !d.Z.hasExactKeybind(a) && !s.Z.hasBind(null !== (r = E.H9(a[0])) && void 0 !== r ? r : '') && ((0, l.Qj)(), i && !t && e.preventDefault());
+  null != a && !d.Z.hasExactKeybind(a) && !o.Z.hasBind(null !== (r = E.H9(a[0])) && void 0 !== r ? r : '') && ((0, l.Qj)(), i && !t && e.preventDefault());
 }(e, t);
   }, [t]);
   return (0, r.useLayoutEffect)(() => (n ? (e.addEventListener('mousedown', m), e.addEventListener('keydown', p)) : e.addEventListener('keydown', a), () => {

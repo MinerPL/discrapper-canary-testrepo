@@ -1,8 +1,8 @@
 var r = n(566885),
   i = n(926515),
   a = n(24033),
-  o = n(938507),
-  s = n(908355),
+  s = n(938507),
+  o = n(908355),
   l = n(49693),
   u = n(838957),
   c = n(981971),
@@ -32,8 +32,8 @@ p = e.iterator;
 p = e;
   else {
 if (!(m = d(e)))
-  throw E(o(e) + ' is not iterable');
-if (s(m)) {
+  throw E(s(e) + ' is not iterable');
+if (o(m)) {
   for (I = 0, T = l(e); T > I; I++)
     if ((g = L(e[I])) && u(h, g))
       return g;

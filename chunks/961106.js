@@ -16,8 +16,8 @@ var n = i(735250),
   _ = i(132871),
   p = i(147890),
   m = i(981631),
-  f = i(689938),
-  g = i(659044);
+  g = i(689938),
+  f = i(659044);
 
 function C(e) {
   let {
@@ -37,7 +37,7 @@ c.default.track(m.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
 });
   };
   return (0, n.jsx)('nav', {
-className: o()(g.container, t),
+className: o()(f.container, t),
 children: C.map(e => {
   let t = e.id,
     i = e.name,
@@ -46,14 +46,14 @@ children: C.map(e => {
   return r.set('category_id', t.toString()), (0, n.jsx)(d.Z, {
     href: ''.concat(m.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(r),
     children: (0, n.jsxs)(l.Clickable, {
-      className: g.category,
-      'aria-label': f.Z.Messages.APP_DIRECTORY_CATEGORY_BUTTON_A11Y_LABEL.format({
+      className: f.category,
+      'aria-label': g.Z.Messages.APP_DIRECTORY_CATEGORY_BUTTON_A11Y_LABEL.format({
         categoryName: i
       }),
       onClick: () => I(t),
       children: [
         (0, n.jsx)(a, {
-          className: g.icon,
+          className: f.icon,
           size: 'md',
           color: 'currentColor'
         }),

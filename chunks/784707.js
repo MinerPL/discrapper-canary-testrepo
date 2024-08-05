@@ -1,14 +1,14 @@
-t.d(e, {
+n.d(t, {
   Z: function() {
-return u;
+return i;
   }
 });
-var l = t(598);
+var l = n(598);
 
-function u() {
+function i() {
   let {
-step: n,
-stepConfigs: e
-  } = (0, l.usePaymentContext)(), t = e.find(e => e.key === n);
-  return null == t ? void 0 : t.options;
+step: e,
+stepConfigs: t
+  } = (0, l.usePaymentContext)(), n = t.find(t => t.key === e);
+  return null == n ? void 0 : n.options;
 }

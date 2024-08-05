@@ -1,21 +1,21 @@
 var r = n(706165),
   i = n(690244)('%TypeError%'),
   a = n(632384),
-  o = n(710157),
-  s = n(713720);
+  s = n(710157),
+  o = n(713720);
 e.exports = function(e) {
   if ('Object' !== a(e))
 throw new i('ToPropertyDescriptor requires an object');
   var t = {};
-  if (r(e, 'enumerable') && (t['[[Enumerable]]'] = o(e.enumerable)), r(e, 'configurable') && (t['[[Configurable]]'] = o(e.configurable)), r(e, 'value') && (t['[[Value]]'] = e.value), r(e, 'writable') && (t['[[Writable]]'] = o(e.writable)), r(e, 'get')) {
+  if (r(e, 'enumerable') && (t['[[Enumerable]]'] = s(e.enumerable)), r(e, 'configurable') && (t['[[Configurable]]'] = s(e.configurable)), r(e, 'value') && (t['[[Value]]'] = e.value), r(e, 'writable') && (t['[[Writable]]'] = s(e.writable)), r(e, 'get')) {
 var n = e.get;
-if (void 0 !== n && !s(n))
+if (void 0 !== n && !o(n))
   throw new i('getter must be a function');
 t['[[Get]]'] = n;
   }
   if (r(e, 'set')) {
 var l = e.set;
-if (void 0 !== l && !s(l))
+if (void 0 !== l && !o(l))
   throw new i('setter must be a function');
 t['[[Set]]'] = l;
   }

@@ -56,7 +56,7 @@ case 'utf16le':
   this.text = l, this.end = u, t = 4;
   break;
 case 'utf8':
-  this.fillLast = s, t = 4;
+  this.fillLast = o, t = 4;
   break;
 case 'base64':
   this.text = c, this.end = d, t = 3;
@@ -68,7 +68,7 @@ default:
   this.lastNeed = 0, this.lastTotal = 0, this.lastChar = r.allocUnsafe(t);
 }
 
-function o(e) {
+function s(e) {
   if (e <= 127)
 return 0;
   if (e >> 5 == 6)
@@ -98,8 +98,8 @@ n = 0;
 var r = t.length - 1;
 if (r < n)
   return 0;
-var i = o(t[r]);
-return i >= 0 ? (i > 0 && (e.lastNeed = i - 1), i) : --r < n || -2 === i ? 0 : (i = o(t[r])) >= 0 ? (i > 0 && (e.lastNeed = i - 2), i) : --r < n || -2 === i ? 0 : (i = o(t[r])) >= 0 ? (i > 0 && (2 === i ? i = 0 : e.lastNeed = i - 3), i) : 0;
+var i = s(t[r]);
+return i >= 0 ? (i > 0 && (e.lastNeed = i - 1), i) : --r < n || -2 === i ? 0 : (i = s(t[r])) >= 0 ? (i > 0 && (e.lastNeed = i - 2), i) : --r < n || -2 === i ? 0 : (i = s(t[r])) >= 0 ? (i > 0 && (2 === i ? i = 0 : e.lastNeed = i - 3), i) : 0;
   }(this, e, t);
   if (!this.lastNeed)
 return e.toString('utf8', t);
@@ -112,7 +112,7 @@ return e.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, this.lastNeed), 
   e.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, e.length), this.lastNeed -= e.length;
 };
 
-function s(e) {
+function o(e) {
   var t = this.lastTotal - this.lastNeed,
 n = function(e, t, n) {
   if ((192 & t[0]) != 128)

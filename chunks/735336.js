@@ -6,8 +6,8 @@ return F;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(866442),
+  s = n.n(a),
+  o = n(866442),
   l = n(442837),
   u = n(692547),
   c = n(481060),
@@ -16,13 +16,13 @@ var r = n(735250),
   E = n(906732),
   f = n(220082),
   h = n(583405),
-  p = n(300284),
-  m = n(695346),
-  I = n(314897),
-  T = n(430824),
-  g = n(594174),
-  S = n(451478),
-  A = n(311715),
+  p = n(279745),
+  m = n(300284),
+  I = n(695346),
+  T = n(314897),
+  g = n(430824),
+  S = n(594174),
+  A = n(451478),
   N = n(626135),
   v = n(768581),
   O = n(74538),
@@ -57,9 +57,9 @@ function k(e) {
   let {
 type: t,
 shown: a,
-onClick: s
-  } = e, u = (0, l.e7)([g.default], () => {
-let e = g.default.getCurrentUser();
+onClick: o
+  } = e, u = (0, l.e7)([S.default], () => {
+let e = S.default.getCurrentUser();
 return O.ZP.canUsePremiumProfileCustomization(e);
   }), f = i.useRef(!1), {
 analyticsLocations: h
@@ -108,9 +108,9 @@ children: e => (0, r.jsx)(c.Clickable, {
           ...a
         });
       };
-    }), null == s || s();
+    }), null == o || o();
   },
-  className: o()(w.premiumIconWrapper, {
+  className: s()(w.premiumIconWrapper, {
     [w.visible]: a,
     [w.clickable]: !u
   }),
@@ -132,10 +132,10 @@ darkenOnHover: t,
 profileType: n,
 profileLabel: i,
 icon: a,
-...o
-  } = e, s = x[n], l = 'pencil' === a ? c.PencilIcon : c.SettingsIcon;
+...s
+  } = e, o = x[n], l = 'pencil' === a ? c.PencilIcon : c.SettingsIcon;
   return (0, r.jsx)(c.Clickable, {
-...o,
+...s,
 'aria-label': i,
 className: t ? w.pencilContainerDark : w.pencilContainer,
 children: (0, r.jsx)(c.Tooltip, {
@@ -144,8 +144,8 @@ children: (0, r.jsx)(c.Tooltip, {
     ...e,
     color: 'currentColor',
     size: 'custom',
-    width: s,
-    height: s,
+    width: o,
+    height: o,
     className: w.editIcon
   })
 })
@@ -159,22 +159,22 @@ user: a,
 displayProfile: d,
 onClose: _,
 guildId: E,
-profileType: g,
+profileType: S,
 isHovering: N,
 animateOnHover: x,
 allowEdit: G = !0,
 showPremiumBadgeUpsell: F = !0,
 hasProfileEffect: V = !1
-  } = e, H = (0, l.e7)([T.Z], () => T.Z.getGuild(E)), Z = (0, l.e7)([I.default], () => I.default.getId()) === a.id && G, Y = O.ZP.isPremiumAtLeast(null == d ? void 0 : d.premiumType, P.p9.TIER_2), {
+  } = e, H = (0, l.e7)([g.Z], () => g.Z.getGuild(E)), Z = (0, l.e7)([T.default], () => T.default.getId()) === a.id && G, Y = O.ZP.isPremiumAtLeast(null == d ? void 0 : d.premiumType, P.p9.TIER_2), {
 trackUserProfileAction: j
-  } = (0, R.KZ)(), [W, K] = i.useState(!1), z = (0, l.e7)([S.Z], () => S.Z.isFocused()), q = m.QK.getSetting(), {
+  } = (0, R.KZ)(), [W, K] = i.useState(!1), z = (0, l.e7)([A.Z], () => A.Z.isFocused()), q = I.QK.getSetting(), {
 bannerSrc: Q,
 status: X
   } = (0, C.Z)({
 displayProfile: d,
-size: (0, D.e7)(g),
+size: (0, D.e7)(S),
 canAnimate: x || !q ? W : z
-  }), $ = (0, c.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(), J = (0, c.getAvatarSize)(c.AvatarSizes.SIZE_80), ee = (0, s._i)((0, f.ZP)(a.getAvatarURL(E, J), $, !1)), et = (0, h.Z)(null !== (t = null == d ? void 0 : d.primaryColor) && void 0 !== t ? t : ee).hsl, en = (0, p.Z)({
+  }), $ = (0, c.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(), J = (0, c.getAvatarSize)(c.AvatarSizes.SIZE_80), ee = (0, o._i)((0, f.ZP)(a.getAvatarURL(E, J), $, !1)), et = (0, h.Z)(null !== (t = null == d ? void 0 : d.primaryColor) && void 0 !== t ? t : ee).hsl, en = (0, m.Z)({
 analyticsLocation: {
   page: M.ZY5.USER_POPOUT,
   section: M.jXE.PROFILE_POPOUT
@@ -183,12 +183,12 @@ analyticsLocation: {
   return (0, r.jsx)(y.Z, {
 isPremium: Y,
 hasThemeColors: null !== (n = null == d ? void 0 : d.canEditThemes) && void 0 !== n && n,
-profileType: g,
+profileType: S,
 hasBanner: null != Q,
 hasProfileEffect: V,
 children: (0, r.jsxs)('div', {
-  className: o()(w.banner, (0, D.Ae)({
-    profileType: g,
+  className: s()(w.banner, (0, D.Ae)({
+    profileType: S,
     user: {
       hasBanner: null != Q,
       isPremium: Y,
@@ -206,7 +206,7 @@ children: (0, r.jsxs)('div', {
   children: [
     Z ? null == H ? (0, r.jsx)(B, {
       darkenOnHover: V && N,
-      profileType: g,
+      profileType: S,
       profileLabel: U.Z.Messages.EDIT_PROFILE,
       icon: 'pencil',
       onClick: () => {
@@ -232,10 +232,10 @@ children: (0, r.jsxs)('div', {
         profileLabel: U.Z.Messages.EDIT_PROFILE,
         icon: 'pencil',
         ...e,
-        profileType: g
+        profileType: S
       })
-    }) : F && null != Q && g !== b.y0.SETTINGS ? (0, r.jsx)(k, {
-      type: g,
+    }) : F && null != Q && S !== b.y0.SETTINGS ? (0, r.jsx)(k, {
+      type: S,
       shown: void 0 === N ? W : N,
       onClick: () => {
         j({
@@ -243,7 +243,7 @@ children: (0, r.jsxs)('div', {
         }), null == _ || _();
       }
     }) : null,
-    !q && (0, v.F8)(Q) && (0, r.jsx)(A.Z, {
+    !q && (0, v.F8)(Q) && (0, r.jsx)(p.Z, {
       className: w.gifTag
     })
   ]

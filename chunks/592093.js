@@ -11,8 +11,8 @@ return function(t, n, r) {
   }(),
   i = n(261469),
   a = n(504144),
-  o = n(118403),
-  s = n(59199);
+  s = n(118403),
+  o = n(59199);
 n(464942);
 var l = n(771922),
   u = n.g.Set || n(309332),
@@ -98,7 +98,7 @@ return ! function(e, t) {
   {
     key: 'interpolate',
     value: function(e) {
-      return new o(this, s.create(e));
+      return new s(this, o.create(e));
     }
   },
   {

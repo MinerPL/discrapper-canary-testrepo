@@ -6,8 +6,8 @@ return C;
 var r = n(735250),
   i = n(470079),
   a = n(512722),
-  o = n.n(a),
-  s = n(873546),
+  s = n.n(a),
+  o = n(873546),
   l = n(442837),
   u = n(481060),
   c = n(239091),
@@ -31,8 +31,8 @@ function R(e) {
   let {
 userId: t,
 className: a,
-children: o
-  } = e, s = i.useCallback(() => {
+children: s
+  } = e, o = i.useCallback(() => {
 (0, f.k)({
   kind: 'user'
 });
@@ -50,9 +50,9 @@ if (null != t)
   }, [t]);
   return (0, r.jsx)(h.Z, {
 className: a,
-onClick: s,
+onClick: o,
 onContextMenu: l,
-children: o
+children: s
   });
 }
 
@@ -73,9 +73,9 @@ null != M && (0, c.jW)(e, async () => {
     default: e
   } = await Promise.all([
     n.e('79695'),
-    n.e('17400'),
+    n.e('70474'),
     n.e('12435'),
-    n.e('2462')
+    n.e('70742')
   ]).then(n.bind(n, 757387));
   return t => (0, r.jsx)(e, {
     ...t,
@@ -113,14 +113,14 @@ children: (0, r.jsx)(u.Popout, {
     guildId: null != P ? P : void 0,
     channelId: null != a ? a : void 0
   }),
-  renderPopout: e => (o()(null != b, 'Unexpected missing user'), (0, r.jsx)(m.Z, {
+  renderPopout: e => (s()(null != b, 'Unexpected missing user'), (0, r.jsx)(m.Z, {
     location: 'UserMention',
     userId: b.id,
     guildId: null != P ? P : void 0,
     channelId: a,
     ...e
   })),
-  position: s.tq ? 'top' : 'right',
+  position: o.tq ? 'top' : 'right',
   children: e => B(e)
 })
   });

@@ -6,8 +6,8 @@ return b;
 var r = n(729594),
   i = n(873546),
   a = n(570140),
-  o = n(447543),
-  s = n(230711),
+  s = n(447543),
+  o = n(230711),
   l = n(581364),
   u = n(132871),
   c = n(960904),
@@ -43,7 +43,7 @@ async function D(e) {
   if (null == n) {
 let {
   invite: t
-} = await o.Z.resolveInvite(e.code, 'Markdown Link');
+} = await s.Z.resolveInvite(e.code, 'Markdown Link');
 n = t;
   }
   if (null == n)
@@ -54,7 +54,7 @@ return;
   }
   let r = N.ZP.getFlattenedGuildIds(),
 i = null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id;
-  null != i && r.includes(i) ? o.Z.transitionToInviteSync(n) : await y(n, e.code);
+  null != i && r.includes(i) ? s.Z.transitionToInviteSync(n) : await y(n, e.code);
 }
 let L = {
   skipExtensionCheck: void 0,
@@ -65,16 +65,16 @@ function b(e) {
   let {
 skipExtensionCheck: t,
 analyticsLocations: a
-  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L, o = (0, d.zO)(e);
-  if (null != o && (o.type === c.g.INVITE || o.type === c.g.EMBEDDED_ACTIVITY_INVITE))
-return e => (null == e || e.preventDefault(), D(o), !0);
-  if (null != o && o.type === c.g.APP_DIRECTORY_PROFILE)
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L, s = (0, d.zO)(e);
+  if (null != s && (s.type === c.g.INVITE || s.type === c.g.EMBEDDED_ACTIVITY_INVITE))
+return e => (null == e || e.preventDefault(), D(s), !0);
+  if (null != s && s.type === c.g.APP_DIRECTORY_PROFILE)
 return e => {
   var t;
   null == e || e.preventDefault();
   let {
     code: r
-  } = o, a = null !== (t = A.Z.getGuildId()) && void 0 !== t ? t : void 0;
+  } = s, a = null !== (t = A.Z.getGuildId()) && void 0 !== t ? t : void 0;
   return v.default.track(R.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
     application_id: r,
     device_platform: i.tq ? 'mobile_web' : 'desktop_web',
@@ -96,10 +96,10 @@ return e => {
     });
   }), !0;
 };
-  if (null != o && o.type === c.g.GUILD_PRODUCT)
+  if (null != s && s.type === c.g.GUILD_PRODUCT)
 return e => {
   null == e || e.preventDefault();
-  let [t, r] = o.code.split('-');
+  let [t, r] = s.code.split('-');
   return n.e('84239').then(n.bind(n, 838433)).then(e => {
     let {
       openGuildProductLink: n
@@ -107,10 +107,15 @@ return e => {
     n(t, r);
   }), !0;
 };
-  if (null != o && o.type === c.g.QUESTS_EMBED && (0, m.cB)({
+  if (null != s && s.type === c.g.QUESTS_EMBED && (0, m.cB)({
   location: C.dr.EMBED_MOBILE
 }))
-return e => (null == e || e.preventDefault(), s.Z.open(R.oAB.QUESTS), !0);
+return e => (null == e || e.preventDefault(), Promise.resolve().then(n.bind(n, 341907)).then(e => {
+  let {
+    navigateToQuestHome: t
+  } = e;
+  t(C.dr.CODED_LINK, s.code);
+}), !0);
   let {
 path: g,
 hostname: N = '',
@@ -123,17 +128,17 @@ let e;
 let t = g.split('/'),
   [, , r, a] = t;
 5 === t.length && (e = t[4]);
-let o = null != r && (0, l.BH)(r) ? r : void 0;
+let s = null != r && (0, l.BH)(r) ? r : void 0;
 return t => {
-  var s;
+  var o;
   null == t || t.preventDefault();
   let {
     ApplicationDirectoryProfileSections: l
   } = n(272242), {
     ApplicationDirectoryViews: c
-  } = n(132871), d = null !== (s = A.Z.getGuildId()) && void 0 !== s ? s : void 0, _ = c.HOME;
-  return 'search' === r && (_ = c.SEARCH), null != o && (_ = c.APPLICATION, v.default.track(R.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
-    application_id: o,
+  } = n(132871), d = null !== (o = A.Z.getGuildId()) && void 0 !== o ? o : void 0, _ = c.HOME;
+  return 'search' === r && (_ = c.SEARCH), null != s && (_ = c.APPLICATION, v.default.track(R.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
+    application_id: s,
     device_platform: i.tq ? 'mobile_web' : 'desktop_web',
     guild_id: d,
     channel_id: S.Z.getChannelId()
@@ -143,7 +148,7 @@ return t => {
     } = t;
     n({
       view: _,
-      applicationId: o,
+      applicationId: s,
       guildId: d,
       applicationSection: (0, f.Z)(l, a),
       entrypoint: {
@@ -182,7 +187,7 @@ let {
   default: e
 } = n(357269), t = e(g);
 if (null != t)
-  return e => (null == e || e.preventDefault(), s.Z.open(t.section, t.subsection, {
+  return e => (null == e || e.preventDefault(), o.Z.open(t.section, t.subsection, {
     openWithoutBackstack: !1,
     impressionSource: t.source,
     analyticsLocations: a

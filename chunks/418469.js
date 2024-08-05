@@ -7,17 +7,17 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
   a = n(481060),
-  o = n(569545),
-  s = n(687516),
+  s = n(569545),
+  o = n(687516),
   l = n(314897),
   u = n(959457),
   c = n(689938);
 
 function d(e, t, d) {
   var _;
-  let E = (0, s.Cf)(e),
+  let E = (0, o.Cf)(e),
 f = (0, i.e7)([l.default], () => l.default.getId()),
-h = null != e ? (0, o.V9)(e) : u.Z.getActiveStreamKey(),
+h = null != e ? (0, s.V9)(e) : u.Z.getActiveStreamKey(),
 p = null !== (_ = u.Z.getVideoStats(h)) && void 0 !== _ ? _ : {},
 m = {
   media_session_id: u.Z.getMediaSessionId(h),

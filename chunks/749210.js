@@ -6,8 +6,8 @@ return x;
 var r = n(990547),
   i = n(149765),
   a = n(544891),
-  o = n(570140),
-  s = n(34756),
+  s = n(570140),
+  o = n(34756),
   l = n(408987),
   u = n(280837),
   c = n(57132),
@@ -41,7 +41,7 @@ D.Z.show({
 });
   },
   P = e => {
-o.Z.dispatch({
+s.Z.dispatch({
   type: 'GUILD_DELETE',
   guild: {
     id: e
@@ -55,7 +55,7 @@ D.Z.show({
 });
   };
 async function w(e) {
-  var t, r, i, s, l;
+  var t, r, i, o, l;
   let u = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
 {
   source: c,
@@ -66,7 +66,7 @@ E = null !== (t = u.lurker) && void 0 !== t && t,
 h = v.default.getCurrentUser();
   if (null !== (r = null == h ? void 0 : h.hasFlag(L.xW$.QUARANTINED)) && void 0 !== r && r)
 return (0, f.default)(), new Promise((e, t) => t(Error()));
-  o.Z.wait(() => o.Z.dispatch({
+  s.Z.wait(() => s.Z.dispatch({
 type: 'GUILD_JOIN',
 guildId: e,
 lurker: E,
@@ -90,17 +90,17 @@ let t = N.Z.getGuildId(),
     oldFormErrors: !0,
     body: {}
   });
-if (null != i.body.join_request && o.Z.dispatch({
+if (null != i.body.join_request && s.Z.dispatch({
     type: 'USER_GUILD_JOIN_REQUEST_UPDATE',
     guildId: e,
     request: i.body.join_request
   }), null == S.Z.getGuild(e) && i.body.show_verification_form)
   return (0, p.uL)(L.Z5c.GUILD_MEMBER_VERIFICATION(e)), i;
-if (null != i.body.welcome_screen && o.Z.dispatch({
+if (null != i.body.welcome_screen && s.Z.dispatch({
     type: 'WELCOME_SCREEN_UPDATE',
     guildId: i.body.id,
     welcomeScreen: i.body.welcome_screen
-  }), null != i.body.approximate_presence_count && o.Z.dispatch({
+  }), null != i.body.approximate_presence_count && s.Z.dispatch({
     type: 'ONLINE_GUILD_MEMBER_COUNT_UPDATE',
     guildId: i.body.id,
     count: i.body.approximate_presence_count
@@ -119,7 +119,7 @@ if ((null === (i = t.body) || void 0 === i ? void 0 : i.code) === L.evJ.TOO_MANY
   let e = v.default.getCurrentUser();
   C.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? M(L.tHP) : M(L.DZw);
 }
-throw (null === (s = t.body) || void 0 === s ? void 0 : s.code) === L.evJ.GUILD_AT_CAPACITY && U(), E && (null === (l = t.body) || void 0 === l ? void 0 : l.code) === L.evJ.UNKNOWN_GUILD && P(e), t;
+throw (null === (o = t.body) || void 0 === o ? void 0 : o.code) === L.evJ.GUILD_AT_CAPACITY && U(), E && (null === (l = t.body) || void 0 === l ? void 0 : l.code) === L.evJ.UNKNOWN_GUILD && P(e), t;
   }
 }
 
@@ -135,18 +135,18 @@ t.Z = {
   async transitionToGuildSync(e, t, n) {
 var r, i;
 let a = (r = (await x(e)).id, null != (i = n) ? i : (0, h.V)(r)),
-  o = t;
-(null == t ? void 0 : t.hasOwnProperty('welcomeModalChannelId')) && null == t.welcomeModalChannelId && (o = {
+  s = t;
+(null == t ? void 0 : t.hasOwnProperty('welcomeModalChannelId')) && null == t.welcomeModalChannelId && (s = {
   ...t,
   welcomeModalChannelId: null != a ? a : void 0
-}), (0, p.uL)(L.Z5c.CHANNEL(e, a), o), await new Promise(setImmediate);
+}), (0, p.uL)(L.Z5c.CHANNEL(e, a), s), await new Promise(setImmediate);
   },
   deleteGuild: P,
   selectGuild(e) {
 (0, u.a)(e);
   },
   createGuild(e) {
-o.Z.dispatch({
+s.Z.dispatch({
   type: 'GUILD_CREATE',
   guild: e
 });
@@ -194,12 +194,12 @@ let {
   userId: n,
   communicationDisabledUntilTimestamp: i,
   duration: a,
-  reason: o,
-  location: s
+  reason: s,
+  location: o
 } = e;
 return y.Z.patch({
   url: L.ANM.GUILD_MEMBER(t, n),
-  reason: o,
+  reason: s,
   body: {
     communication_disabled_until: i
   },
@@ -210,9 +210,9 @@ return y.Z.patch({
       guild_id: t,
       target_user_id: n,
       duration: null != a ? a : null,
-      reason: null != o ? o : null,
+      reason: null != s ? s : null,
       communication_disabled_until: i,
-      location: null != s ? s : null
+      location: null != o ? o : null
     }
   }
 });
@@ -251,25 +251,25 @@ try {
       body: r
     }),
     n = t.body;
-  return n.permissions = i.vB(n.permissions), o.Z.dispatch({
+  return n.permissions = i.vB(n.permissions), s.Z.dispatch({
     type: 'GUILD_SETTINGS_ROLE_SELECT',
     roleId: t.body.id,
     role: n
   }), l.Z.checkGuildTemplateDirty(e), n;
 } catch (e) {
-  throw new s.Z(e);
+  throw new o.Z(e);
 }
   },
   async updateRole(e, t, n) {
 let {
   icon: r,
   unicodeEmoji: i,
-  ...o
-} = n, s = null === r || (null == r ? void 0 : r.startsWith('data:')) ? r : void 0, u = await a.tn.patch({
+  ...s
+} = n, o = null === r || (null == r ? void 0 : r.startsWith('data:')) ? r : void 0, u = await a.tn.patch({
   url: L.ANM.GUILD_ROLE(e, t),
   body: {
-    ...o,
-    icon: s,
+    ...s,
+    icon: o,
     unicode_emoji: i
   },
   oldFormErrors: !0
@@ -311,7 +311,7 @@ return l.Z.checkGuildTemplateDirty(e), n;
 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '',
   n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
   r = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
-return o.Z.dispatch({
+return s.Z.dispatch({
   type: 'GUILD_MEMBERS_REQUEST',
   guildIds: Array.isArray(e) ? e : [e],
   query: t,
@@ -324,7 +324,7 @@ let {
   query: n,
   continuationToken: r
 } = null != t ? t : {};
-return o.Z.dispatch({
+return s.Z.dispatch({
   type: 'GUILD_SEARCH_RECENT_MEMBERS',
   guildId: e,
   query: n,
@@ -333,7 +333,7 @@ return o.Z.dispatch({
   },
   requestMembersById(e, t) {
 let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-return o.Z.dispatch({
+return s.Z.dispatch({
   type: 'GUILD_MEMBERS_REQUEST',
   guildIds: Array.isArray(e) ? e : [e],
   userIds: Array.isArray(t) ? t : [t],
@@ -341,7 +341,7 @@ return o.Z.dispatch({
 });
   },
   move(e, t, n, r) {
-o.Z.dispatch({
+s.Z.dispatch({
   type: 'GUILD_MOVE',
   fromIndex: e,
   toIndex: t,
@@ -352,7 +352,9 @@ o.Z.dispatch({
   moveById(e, t) {
 let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
   r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-o.Z.dispatch({
+if (e === t)
+  throw Error('GuildActionCreators.moveById: `sourceId` and `targetId` cannot be the same value: '.concat(e));
+s.Z.dispatch({
   type: 'GUILD_MOVE_BY_ID',
   sourceId: e,
   targetId: t,
@@ -361,14 +363,14 @@ o.Z.dispatch({
 });
   },
   createGuildFolderLocal(e, t) {
-O.default.track(L.rMx.GUILD_FOLDER_CREATED), o.Z.dispatch({
+O.default.track(L.rMx.GUILD_FOLDER_CREATED), s.Z.dispatch({
   type: 'GUILD_FOLDER_CREATE_LOCAL',
   sourceIds: e,
   name: t
 });
   },
   editGuildFolderLocal(e, t, n) {
-o.Z.dispatch({
+s.Z.dispatch({
   type: 'GUILD_FOLDER_EDIT_LOCAL',
   targetId: e,
   sourceIds: t,
@@ -376,7 +378,7 @@ o.Z.dispatch({
 });
   },
   deleteGuildFolderLocal(e) {
-o.Z.dispatch({
+s.Z.dispatch({
   type: 'GUILD_FOLDER_DELETE_LOCAL',
   targetId: e
 });
@@ -386,25 +388,25 @@ let t = T.Z.isFolderExpanded(e);
 O.default.track(L.rMx.GUILD_FOLDER_CLICKED, {
   source: 'sidebar',
   action: t ? 'collapsed' : 'expanded'
-}), o.Z.dispatch({
+}), s.Z.dispatch({
   type: 'TOGGLE_GUILD_FOLDER_EXPAND',
   folderId: e
 });
   },
   setGuildFolderExpanded(e, t) {
-o.Z.dispatch({
+s.Z.dispatch({
   type: 'SET_GUILD_FOLDER_EXPANDED',
   folderId: e,
   expanded: t
 });
   },
   collapseAllFolders() {
-o.Z.dispatch({
+s.Z.dispatch({
   type: 'GUILD_FOLDER_COLLAPSE'
 });
   },
   nsfwAgree(e) {
-o.Z.dispatch({
+s.Z.dispatch({
   type: 'GUILD_NSFW_AGREE',
   guildId: e
 });
@@ -445,7 +447,7 @@ null != t && (n.query = {
   channel_id: t
 });
 let r = (await a.tn.get(n)).body;
-o.Z.dispatch({
+s.Z.dispatch({
   type: 'GUILD_APPLICATIONS_FETCH_SUCCESS',
   guildId: e,
   applications: r
@@ -462,7 +464,7 @@ null != n && (r.after = n), await a.tn.get({
   oldFormErrors: !0,
   query: r
 }).then(t => {
-  o.Z.dispatch({
+  s.Z.dispatch({
     type: 'GUILD_SETTINGS_LOADED_BANS_BATCH',
     bans: t.body,
     guildId: e
@@ -479,7 +481,7 @@ null != n && n.length > 0 && (i.user_ids = n), null != t && t.trim().length > 0 
   oldFormErrors: !0,
   query: i
 }).then(t => {
-  o.Z.dispatch({
+  s.Z.dispatch({
     type: 'GUILD_SETTINGS_LOADED_BANS_BATCH',
     bans: t.body,
     guildId: e
@@ -491,7 +493,7 @@ await a.tn.get({
   url: L.ANM.GUILD_BANS(e),
   oldFormErrors: !0
 }).then(e => {
-  o.Z.dispatch({
+  s.Z.dispatch({
     type: 'GUILD_SETTINGS_LOADED_BANS',
     bans: e.body
   });
@@ -504,7 +506,7 @@ oldFormErrors: !0
 let {
   body: n
 } = e;
-return o.Z.dispatch({
+return s.Z.dispatch({
   type: 'GUILD_ROLE_CONNECTION_ELIGIBILITY_FETCH_SUCCESS',
   roleId: t,
   roleConnectionEligibility: n

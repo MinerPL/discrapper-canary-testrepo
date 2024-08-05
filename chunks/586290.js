@@ -6,19 +6,19 @@ return N;
 var l = t(735250),
   s = t(470079),
   a = t(512722),
-  i = t.n(a),
-  r = t(392711),
-  o = t.n(r),
-  u = t(856901),
-  c = t(442837),
+  r = t.n(a),
+  i = t(392711),
+  o = t.n(i),
+  c = t(856901),
+  u = t(442837),
   d = t(481060),
   m = t(131951),
   E = t(537135),
   _ = t(176940),
   S = t(689938),
   g = t(986499),
-  h = t(1871),
-  C = t(549856);
+  C = t(1871),
+  h = t(549856);
 
 function N(e) {
   let {
@@ -26,26 +26,26 @@ selectedSource: n,
 onChangeVideoDeviceSource: t,
 onChangeAudioDevice: a
   } = e;
-  i()(null != n, 'Camera capture device cannot be null');
-  let r = (0, _.Z)(),
-N = (0, c.e7)([m.Z], () => m.Z.getInputDevices()),
+  r()(null != n, 'Camera capture device cannot be null');
+  let i = (0, _.Z)(),
+N = (0, u.e7)([m.Z], () => m.Z.getInputDevices()),
 [Z, I] = s.useState(function(e, n, t) {
   if (null != n && null != t) {
     let l = n.find(n => n.id === e);
     if (null == l)
       return;
-    let s = o().reduce(t, (e, n) => (0, u.stringSimilarity)(l.name, n.name) > (0, u.stringSimilarity)(l.name, e.name) ? n : e);
+    let s = o().reduce(t, (e, n) => (0, c.stringSimilarity)(l.name, n.name) > (0, c.stringSimilarity)(l.name, e.name) ? n : e);
     if (null != s)
       return s.id;
   }
-}(n.id, r, N));
+}(n.id, i, N));
   return null != Z && a(Z), (0, l.jsx)(s.Fragment, {
 children: (0, l.jsxs)(d.FormItem, {
   title: 'Capture Device',
-  className: h.modalContent,
+  className: C.modalContent,
   children: [
     (0, l.jsx)(d.FormItem, {
-      className: C.marginTop8,
+      className: h.marginTop8,
       children: (0, l.jsxs)(E.Z, {
         children: [
           (0, l.jsx)('span', {
@@ -63,11 +63,11 @@ children: (0, l.jsxs)(d.FormItem, {
       })
     }),
     (0, l.jsx)(d.FormItem, {
-      className: C.marginTop8,
+      className: h.marginTop8,
       title: S.Z.Messages.GO_LIVE_FORM_LABEL_AUDIO_DEVICE,
       children: (0, l.jsx)(d.SingleSelect, {
         value: Z,
-        className: C.__invalid_marginaTop8,
+        className: h.__invalid_marginaTop8,
         onChange: e => {
           I(e), a(e);
         },

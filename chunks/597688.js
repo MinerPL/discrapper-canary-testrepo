@@ -1,6 +1,6 @@
 let r, i;
 n(47120);
-var a, o, s, l, u = n(392711),
+var a, s, o, l, u = n(392711),
   c = n(442837),
   d = n(570140),
   _ = n(706454),
@@ -51,12 +51,12 @@ let t = this.getProduct(e);
 return this.getCategory(null == t ? void 0 : t.categorySkuId);
   }
 }
-l = 'CollectiblesCategoryStore', (s = 'displayName') in(o = A) ? Object.defineProperty(o, s, {
+l = 'CollectiblesCategoryStore', (o = 'displayName') in(s = A) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[s] = l, t.Z = new A(d.Z, {
+}) : s[o] = l, t.Z = new A(d.Z, {
   COLLECTIBLES_CATEGORIES_FETCH: e => {
 I = !0, r = void 0, g = e.options;
   },

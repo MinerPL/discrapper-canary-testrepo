@@ -9,10 +9,10 @@ var a = i(120356),
   r = i.n(a),
   o = i(481060),
   l = i(410030),
-  s = i(134432),
-  c = i(601964),
-  d = i(940627),
-  u = i(346656),
+  s = i(565138),
+  c = i(372769),
+  d = i(134432),
+  u = i(601964),
   _ = i(806519),
   p = i(768581),
   m = i(981631),
@@ -26,13 +26,13 @@ function C(e) {
 guild: n,
 className: i,
 onClick: a
-  } = e, C = (0, l.ZP)(), v = new c.ZP({
+  } = e, C = (0, l.ZP)(), v = new u.ZP({
 name: n.name,
 icon: n.icon
   }), E = p.ZP.getGuildDiscoverySplashURL({
 id: n.id,
 splash: n.discovery_splash,
-size: 192 * (0, s.x_)()
+size: 192 * (0, d.x_)()
   }), x = null != E ? E : function(e) {
 switch (e) {
   case m.BRd.DARK:
@@ -66,11 +66,11 @@ children: [
           height: 58,
           children: (0, t.jsx)('div', {
             className: f.iconMask,
-            children: (0, t.jsx)(u.Z, {
+            children: (0, t.jsx)(s.Z, {
               className: f.__invalid_icon,
               iconSrc: b,
               guild: v,
-              size: u.Z.Sizes.LARGE
+              size: s.Z.Sizes.LARGE
             })
           })
         })
@@ -83,7 +83,7 @@ children: [
       (0, t.jsxs)('div', {
         className: f.guildNameWrapper,
         children: [
-          (0, t.jsx)(d.Z, {
+          (0, t.jsx)(c.Z, {
             className: f.guildBadge,
             guild: n,
             tooltipColor: o.Tooltip.Colors.PRIMARY

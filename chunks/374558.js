@@ -13,8 +13,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(1561),
-  s = n(981729),
+  s = n(1561),
+  o = n(981729),
   l = n(976885);
 let u = {
 TERTIARY: l.tertiary,
@@ -38,15 +38,15 @@ onClick: _,
 disabled: E,
 focusProps: f
   } = e;
-  return (0, r.jsx)(s.u, {
+  return (0, r.jsx)(o.u, {
 text: n,
 shouldShow: !E,
 children: e => {
   let {
-    onClick: s,
+    onClick: o,
     ...c
   } = e;
-  return (0, r.jsx)(o.P, {
+  return (0, r.jsx)(s.P, {
     ...c,
     'aria-label': n,
     'aria-disabled': E,
@@ -54,7 +54,7 @@ children: e => {
       [l.disabled]: E
     }),
     onClick: e => {
-      null == s || s(), _(e);
+      null == o || o(), _(e);
     },
     focusProps: f,
     children: d

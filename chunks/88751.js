@@ -1,5 +1,5 @@
 n(47120), n(724458);
-var r, i, a, o, s, l, u = n(392711),
+var r, i, a, s, o, l, u = n(392711),
   c = n.n(u),
   d = n(442837),
   _ = n(570140),
@@ -25,17 +25,17 @@ function v(e, t) {
   let r = function(e, t) {
 var n, r, i;
 let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-  o = E.Z.getChannel(t),
-  s = null == o ? void 0 : o.getGuildId(),
-  l = p.Z.getGuild(s);
-if (null == l || null == o || !o.isGuildStageVoice())
+  s = E.Z.getChannel(t),
+  o = null == s ? void 0 : s.getGuildId(),
+  l = p.Z.getGuild(o);
+if (null == l || null == s || !s.isGuildStageVoice())
   return N;
 return {
   speaker: function(e, t) {
     let n = I.Z.getVoiceStateForChannel(t, e);
     return (0, S.gf)(n) === S.xO.ON_STAGE;
   }(e, t),
-  moderator: a ? (n = e, r = l, i = o, T.BT({
+  moderator: a ? (n = e, r = l, i = s, T.BT({
     permission: g.yP,
     user: n,
     context: r,
@@ -112,12 +112,12 @@ if (null != i)
 return v(e, t, r);
   }
 }
-l = 'StageChannelRoleStore', (s = 'displayName') in(o = y) ? Object.defineProperty(o, s, {
+l = 'StageChannelRoleStore', (o = 'displayName') in(s = y) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[s] = l, t.ZP = new y(_.Z, {
+}) : s[o] = l, t.ZP = new y(_.Z, {
   CHANNEL_UPDATES: function(e) {
 let {
   channels: t

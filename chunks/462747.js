@@ -5,8 +5,8 @@ return L;
 });
 var i = t(735250);
 t(470079);
-var l = t(120356),
-  a = t.n(l),
+var a = t(120356),
+  l = t.n(a),
   r = t(442837),
   o = t(481060),
   c = t(239091),
@@ -14,31 +14,31 @@ var l = t(120356),
   d = t(939863),
   u = t(484459),
   _ = t(103575),
-  f = t(314897),
-  g = t(158776),
-  v = t(885110),
-  h = t(594174),
-  b = t(315416),
-  I = t(765305),
-  m = t(689938),
-  p = t(918831);
+  g = t(314897),
+  v = t(158776),
+  h = t(885110),
+  f = t(594174),
+  I = t(315416),
+  m = t(765305),
+  p = t(689938),
+  E = t(918831);
 
 function x(e) {
   let {
 children: n
   } = e;
   return (0, i.jsxs)('div', {
-className: p.emptyContainer,
+className: E.emptyContainer,
 children: [
   (0, i.jsx)(d.Z, {
     children: (0, i.jsx)('div', {
-      className: p.circle,
+      className: E.circle,
       children: (0, i.jsx)(o.GroupIcon, {
         size: 'custom',
         color: 'currentColor',
         height: 40,
         width: 40,
-        className: p.icon
+        className: E.icon
       })
     })
   }),
@@ -47,50 +47,50 @@ children: [
   });
 }
 
-function E() {
+function b() {
   return (0, i.jsx)(x, {
 children: (0, i.jsx)(o.Heading, {
   color: 'header-primary',
   variant: 'heading-xl/semibold',
-  className: p.title,
-  children: m.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_EMPTY_TITLE
+  className: E.title,
+  children: p.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_EMPTY_TITLE
 })
   });
 }
 
-function N() {
+function C() {
   return (0, i.jsx)(x, {
 children: (0, i.jsx)(o.Heading, {
   color: 'header-secondary',
   variant: 'heading-md/semibold',
-  className: p.errorTitle,
-  children: m.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_FETCH_ERROR
+  className: E.errorTitle,
+  children: p.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_FETCH_ERROR
 })
   });
 }
 
-function C(e) {
+function N(e) {
   let {
 count: n
   } = e;
   return (0, i.jsx)(i.Fragment, {
 children: (0, i.jsxs)('div', {
-  className: p.listRow,
+  className: E.listRow,
   children: [
     (0, i.jsx)('div', {
-      className: a()(p.listRowCircle, p.listAvatar),
+      className: l()(E.listRowCircle, E.listAvatar),
       children: (0, i.jsx)(o.GroupIcon, {
         size: 'custom',
         color: 'currentColor',
         height: 14,
         width: 14,
-        className: p.icon
+        className: E.icon
       })
     }),
     (0, i.jsx)(o.Text, {
       color: 'text-normal',
       variant: 'text-md/normal',
-      children: m.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_REMAINING.format({
+      children: p.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_REMAINING.format({
         userRemainCount: n
       })
     })
@@ -103,12 +103,12 @@ function T(e) {
   let {
 eventUser: n,
 guildId: t,
-onContextMenu: l
-  } = e, c = (0, r.e7)([h.default], () => h.default.getUser(n.user_id)), d = (0, r.e7)([
+onContextMenu: a
+  } = e, c = (0, r.e7)([f.default], () => f.default.getUser(n.user_id)), d = (0, r.e7)([
+h.Z,
 v.Z,
-g.Z,
-f.default
-  ], () => n.user_id === f.default.getId() ? v.Z.getStatus() : g.Z.getStatus(n.user_id, t), [
+g.default
+  ], () => n.user_id === g.default.getId() ? h.Z.getStatus() : v.Z.getStatus(n.user_id, t), [
 n.user_id,
 t
   ]);
@@ -130,23 +130,23 @@ children: (e, r) => {
     isShown: _
   } = r;
   return (0, i.jsxs)(o.Clickable, {
-    className: a()(p.listRow, p.interactiveRow, {
-      [p.selected]: _
+    className: l()(E.listRow, E.interactiveRow, {
+      [E.selected]: _
     }),
-    onContextMenu: e => l(e, c),
+    onContextMenu: e => a(e, c),
     ...e,
     children: [
       (0, i.jsx)(o.Avatar, {
         src: c.getAvatarURL(t, 24),
         'aria-label': c.username,
         size: o.AvatarSizes.SIZE_24,
-        className: p.listAvatar,
+        className: E.listAvatar,
         status: d
       }),
       (0, i.jsx)(s.Z, {
         user: c,
-        className: p.listName,
-        discriminatorClass: p.listDiscriminator,
+        className: E.listName,
+        discriminatorClass: E.listDiscriminator,
         nick: null === (u = n.member) || void 0 === u ? void 0 : u.nick
       })
     ]
@@ -159,19 +159,19 @@ function Z(e) {
   let {
 eventUsers: n,
 guildId: t,
-usersNotShownCount: l = 0,
-onContextMenu: a
+usersNotShownCount: a = 0,
+onContextMenu: l
   } = e;
   return (0, i.jsxs)(o.ScrollerThin, {
-className: p.listScroller,
+className: E.listScroller,
 children: [
   n.map(e => (0, i.jsx)(T, {
     guildId: t,
     eventUser: e,
-    onContextMenu: a
+    onContextMenu: l
   }, e.user_id)),
-  l > 0 && (0, i.jsx)(C, {
-    count: l
+  a > 0 && (0, i.jsx)(N, {
+    count: a
   })
 ]
   });
@@ -183,7 +183,7 @@ children: n,
 style: t
   } = e;
   return (0, i.jsx)('div', {
-className: p.container,
+className: E.container,
 style: null != t ? t : {},
 children: n
   });
@@ -205,32 +205,32 @@ children: n
 function L(e) {
   let {
 guildEvent: n,
-recurrenceId: l,
-eventUsers: a,
+recurrenceId: a,
+eventUsers: l,
 loading: r,
 error: s,
 containerHeight: d
-  } = e, u = (0, b.Z)(n.guild_id, n.id, l);
-  if (r && 0 === a.length)
+  } = e, u = (0, I.Z)(n.guild_id, n.id, a);
+  if (r && 0 === l.length)
 return (0, i.jsx)(S, {
   height: d,
   children: (0, i.jsx)(o.Spinner, {
     type: o.Spinner.Type.SPINNING_CIRCLE,
-    className: p.spinner
+    className: E.spinner
   })
 });
-  if (null != s && 0 === a.length)
+  if (null != s && 0 === l.length)
 return (0, i.jsx)(S, {
   height: d,
-  children: (0, i.jsx)(N, {})
+  children: (0, i.jsx)(C, {})
 });
   let _ = 0;
-  return a.length >= I.rC && u > I.rC && (_ = Math.max(u - a.length, 0)), 0 === a.length ? (0, i.jsx)(S, {
+  return l.length >= m.rC && u > m.rC && (_ = Math.max(u - l.length, 0)), 0 === l.length ? (0, i.jsx)(S, {
 height: d,
-children: (0, i.jsx)(E, {})
+children: (0, i.jsx)(b, {})
   }) : (0, i.jsx)(j, {
 children: (0, i.jsx)(Z, {
-  eventUsers: a,
+  eventUsers: l,
   guildId: n.guild_id,
   onContextMenu: function(e, n) {
     (0, c.jW)(e, async () => {
@@ -238,8 +238,8 @@ children: (0, i.jsx)(Z, {
         default: e
       } = await Promise.all([
         t.e('79695'),
-        t.e('17400'),
-        t.e('30508')
+        t.e('69220'),
+        t.e('91605')
       ]).then(t.bind(t, 881351));
       return t => (0, i.jsx)(e, {
         ...t,

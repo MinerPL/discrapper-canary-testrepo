@@ -1,51 +1,51 @@
 n.d(t, {
   y: function() {
-return v;
+return N;
   }
 });
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(512722),
   o = n.n(r),
   c = n(442837),
-  d = n(692547),
-  u = n(481060),
+  u = n(692547),
+  d = n(481060),
   h = n(239091),
   p = n(40851),
   m = n(484459),
   _ = n(103575),
   f = n(271383),
   E = n(709586),
-  C = n(5192),
-  g = n(590415),
+  g = n(5192),
+  C = n(590415),
   I = n(822986);
 let x = a.memo(function(e) {
 let {
   guildId: t,
   channelId: n,
   user: a,
-  isPremium: l,
-  isBlocked: s
+  isPremium: s,
+  isBlocked: l
 } = e;
 return (0, i.jsxs)('div', {
   className: I.textContainer,
   children: [
-    s ? (0, i.jsx)(u.DenyIcon, {
+    l ? (0, i.jsx)(d.DenyIcon, {
       size: 'lg',
       className: I.blockedIcon,
-      color: d.Z.unsafe_rawColors.RED_400.css
+      color: u.Z.unsafe_rawColors.RED_400.css
     }) : null,
-    (0, i.jsx)(u.Text, {
+    (0, i.jsx)(d.Text, {
       className: I.text,
       variant: 'text-sm/normal',
       color: 'header-primary',
-      children: C.ZP.getName(t, n, a)
+      children: g.ZP.getName(t, n, a)
     }),
-    l ? (0, i.jsx)(E.Z, {
+    s ? (0, i.jsx)(E.Z, {
       className: I.boost,
-      color: d.Z.unsafe_rawColors.GUILD_BOOSTING_PINK.css
+      color: u.Z.unsafe_rawColors.GUILD_BOOSTING_PINK.css
     }) : null
   ]
 });
@@ -55,30 +55,30 @@ var t;
 let {
   participant: n,
   guildId: a,
-  channel: l,
+  channel: s,
   isPremium: r
 } = e, {
   user: o,
   blocked: c,
-  rtsState: d
-} = n, h = d === g.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK, p = d === g.xO.REQUESTED_TO_SPEAK || h;
+  rtsState: u
+} = n, h = u === C.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK, p = u === C.xO.REQUESTED_TO_SPEAK || h;
 return (0, i.jsxs)(i.Fragment, {
   children: [
     (0, i.jsxs)('div', {
       className: I.avatarContainer,
       children: [
-        p && (0, i.jsx)(u.HandRequestSpeakIcon, {
+        p && (0, i.jsx)(d.HandRequestSpeakIcon, {
           size: 'md',
           color: 'currentColor',
-          className: s()(I.icon, {
+          className: l()(I.icon, {
             [I.invited]: h
           })
         }),
         (0, i.jsx)('img', {
-          src: null !== (t = o.getAvatarURL(l.guild_id, 56, !1)) && void 0 !== t ? t : void 0,
+          src: null !== (t = o.getAvatarURL(s.guild_id, 56, !1)) && void 0 !== t ? t : void 0,
           alt: o.username,
           'aria-label': o.username,
-          className: s()(I.avatar, {
+          className: l()(I.avatar, {
             [I.faded]: c
           })
         })
@@ -86,7 +86,7 @@ return (0, i.jsxs)(i.Fragment, {
     }),
     (0, i.jsx)(x, {
       guildId: a,
-      channelId: l.id,
+      channelId: s.id,
       user: o,
       isPremium: r,
       isBlocked: c
@@ -94,17 +94,17 @@ return (0, i.jsxs)(i.Fragment, {
   ]
 });
   }),
-  v = () => (0, i.jsx)('div', {
+  N = () => (0, i.jsx)('div', {
 className: I.tileBaseContainer
   });
 t.Z = a.memo(function(e) {
   let {
 participant: t,
-channel: l
+channel: s
   } = e, {
 user: r,
-blocked: d
-  } = t, E = l.getGuildId(), C = (0, p.bp)(), g = (0, c.e7)([f.ZP], () => {
+blocked: u
+  } = t, E = s.getGuildId(), g = (0, p.bp)(), C = (0, c.e7)([f.ZP], () => {
 var e;
 return null != E && (null === (e = f.ZP.getMember(E, r.id)) || void 0 === e ? void 0 : e.premiumSince) != null;
   }, [
@@ -118,7 +118,7 @@ r.id
       default: e
     } = await Promise.all([
       n.e('79695'),
-      n.e('17400'),
+      n.e('70474'),
       n.e('12435'),
       n.e('17463')
     ]).then(n.bind(n, 757387));
@@ -126,51 +126,51 @@ r.id
       ...t,
       user: r,
       guildId: E,
-      channel: l,
+      channel: s,
       showMediaItems: !0,
       showStageChannelItems: !0,
       showChatItems: !1
     });
   }, {
-    context: C
+    context: g
   });
 }, [
   r,
   E,
-  l,
-  C
+  s,
+  g
 ]),
-v = a.useCallback(e => (0, i.jsx)(_.Z, {
+N = a.useCallback(e => (0, i.jsx)(_.Z, {
   ...e,
   location: 'AudienceTile',
   guildId: E,
-  channelId: l.id,
+  channelId: s.id,
   userId: r.id
 }), [
-  l.id,
+  s.id,
   E,
   r.id
 ]);
-  return (0, i.jsx)(u.Popout, {
+  return (0, i.jsx)(d.Popout, {
 preload: () => (0, m.W)(r, {
-  guildId: l.guild_id,
-  channelId: l.id
+  guildId: s.guild_id,
+  channelId: s.id
 }),
-renderPopout: v,
+renderPopout: N,
 position: 'right',
 spacing: 8,
-children: e => (0, i.jsx)(u.Clickable, {
-  className: s()(I.tileContainer, {
-    [I.singleIcon]: g || d,
-    [I.doubleIcon]: g && d
+children: e => (0, i.jsx)(d.Clickable, {
+  className: l()(I.tileContainer, {
+    [I.singleIcon]: C || u,
+    [I.doubleIcon]: C && u
   }),
   onContextMenu: x,
   ...e,
   children: (0, i.jsx)(T, {
     participant: t,
     guildId: E,
-    channel: l,
-    isPremium: g
+    channel: s,
+    isPremium: C
   })
 })
   });

@@ -9,10 +9,10 @@ return c;
 return d;
   }
 }), n(653041), n(733860);
-var r, i, a, o, s = n(65154);
+var r, i, a, s, o = n(65154);
 let l = [{
 name: 'H265',
-encode: (null === (i = window) || void 0 === i ? void 0 : null === (r = i.DiscordNative) || void 0 === r ? void 0 : r.process.platform) !== 'darwin' || (null === (o = window) || void 0 === o ? void 0 : null === (a = o.DiscordNative) || void 0 === a ? void 0 : a.os.arch) === 'arm64',
+encode: (null === (i = window) || void 0 === i ? void 0 : null === (r = i.DiscordNative) || void 0 === r ? void 0 : r.process.platform) !== 'darwin' || (null === (s = window) || void 0 === s ? void 0 : null === (a = s.DiscordNative) || void 0 === a ? void 0 : a.os.arch) === 'arm64',
 decode: !0
   },
   {
@@ -47,11 +47,11 @@ null != n && r.push({
 
 function c(e) {
   let t = [];
-  return e.has(s.V8.SIGNAL_AV1_DECODE) ? t.unshift({
+  return e.has(o.V8.SIGNAL_AV1_DECODE) ? t.unshift({
 name: 'AV1',
 encode: !1,
 decode: !0
-  }) : e.has(s.V8.SIGNAL_AV1) && t.unshift({
+  }) : e.has(o.V8.SIGNAL_AV1) && t.unshift({
 name: 'AV1',
 encode: !0,
 decode: !0

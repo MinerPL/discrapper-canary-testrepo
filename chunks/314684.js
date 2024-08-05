@@ -1,12 +1,12 @@
 n.d(t, {
   $_: function() {
-return P;
+return v;
   },
   FM: function() {
 return B;
   },
   IB: function() {
-return v;
+return L;
   },
   IY: function() {
 return Z;
@@ -21,7 +21,7 @@ return O;
 return x;
   },
   rM: function() {
-return L;
+return P;
   },
   yQ: function() {
 return M;
@@ -42,21 +42,21 @@ var s = n(470079),
   I = n(580130),
   R = n(626135),
   C = n(823379),
-  p = n(111361),
-  g = n(595878),
+  g = n(111361),
+  p = n(595878),
   A = n(944880),
   m = n(513785),
   N = n(106255),
   f = n(474936),
-  S = n(735825),
-  h = n(981631);
+  h = n(735825),
+  S = n(981631);
 
 function M() {
   let e = function() {
   var e;
   let t = (0, i.cj)([m.Z], () => m.Z.getState());
   if (null != t)
-    return null !== (e = t.userTenureRewardStatusByRewardId[S.Ft.FREE_GUILD_BOOST_1_MONTH]) && void 0 !== e ? e : t.userTenureRewardStatusByRewardId[S.Ft.FREE_GUILD_BOOST_3_MONTHS];
+    return null !== (e = t.userTenureRewardStatusByRewardId[h.Ft.FREE_GUILD_BOOST_1_MONTH]) && void 0 !== e ? e : t.userTenureRewardStatusByRewardId[h.Ft.FREE_GUILD_BOOST_3_MONTHS];
 }(),
 t = O(),
 n = (0, i.e7)([T.Z], () => T.Z.boostSlots),
@@ -71,7 +71,7 @@ let n = {
 if (o)
   return {
     ...n,
-    nitroTenureStatus: S.EB.REDEEMED,
+    nitroTenureStatus: h.EB.REDEEMED,
     tenureRewardSkuId: t.skuId,
     showNotification: !0,
     showCard: !0
@@ -79,7 +79,7 @@ if (o)
 if (l)
   return {
     ...n,
-    nitroTenureStatus: S.EB.REDEEMABLE,
+    nitroTenureStatus: h.EB.REDEEMABLE,
     tenureRewardSkuId: t.skuId,
     showNotification: !0,
     showCard: !0
@@ -95,9 +95,9 @@ else {
     return null;
   let a = !1,
     i = !1;
-  return e.next_tenure_reward_id === S.Ft.FREE_GUILD_BOOST_1_MONTH ? (i = t <= S.bm, a = t <= S.dF) : e.next_tenure_reward_id === S.Ft.FREE_GUILD_BOOST_3_MONTHS && (i = t <= S.yj, a = t <= S.LJ), {
+  return e.next_tenure_reward_id === h.Ft.FREE_GUILD_BOOST_1_MONTH ? (i = t <= h.bm, a = t <= h.dF) : e.next_tenure_reward_id === h.Ft.FREE_GUILD_BOOST_3_MONTHS && (i = t <= h.yj, a = t <= h.LJ), {
     ...n,
-    nitroTenureStatus: S.EB.PENDING,
+    nitroTenureStatus: h.EB.PENDING,
     tenureRewardSkuId: e.next_tenure_reward_id,
     redeemableInDays: 0 === s ? 1 : s,
     showNotification: i,
@@ -121,7 +121,7 @@ return;
   let {
 redeemableInDays: a = 0,
 tenureRewardSkuId: r
-  } = s, l = S.Ft.FREE_GUILD_BOOST_1_MONTH === r ? S.jW : S.fY, o = Math.min(l, Math.max(l - a, 0)), d = 100 * o / l;
+  } = s, l = h.Ft.FREE_GUILD_BOOST_1_MONTH === r ? h.jW : h.fY, o = Math.min(l, Math.max(l - a, 0)), d = 100 * o / l;
   return {
 initialPercentage: t && !n ? 100 * Math.max(o - 0.25 * l, 0) / l : d,
 percentage: d
@@ -136,35 +136,35 @@ function O() {
 }, [], C.OL),
 t = (0, i.e7)([E.default], () => {
   let e = E.default.getCurrentUser();
-  return null != e && (0, p.M5)(e, f.p9.TIER_2);
+  return null != e && (0, g.M5)(e, f.p9.TIER_2);
 });
   if (null != (0, N.kG)(e) || !!t)
 return (0, N.MR)([
-  S.Ft.FREE_GUILD_BOOST_1_MONTH,
-  S.Ft.FREE_GUILD_BOOST_3_MONTHS
+  h.Ft.FREE_GUILD_BOOST_1_MONTH,
+  h.Ft.FREE_GUILD_BOOST_3_MONTHS
 ], e);
 }
-let L = e => {
+let P = e => {
 if (null == e || (null == e ? void 0 : e.showNotification) === !1)
   return [];
 switch (e.nitroTenureStatus) {
-  case S.EB.PENDING:
+  case h.EB.PENDING:
     return [l.z.TENURE_REWARD_PENDING];
-  case S.EB.REDEEMABLE:
+  case h.EB.REDEEMABLE:
     return [l.z.TENURE_REWARD_REDEEMABLE];
   default:
     return [];
 }
   },
-  P = () => {
+  v = () => {
 let e = M(),
-  [t, n] = s.useState(L(e)),
-  a = (0, g.c)({
+  [t, n] = s.useState(P(e)),
+  a = (0, p.c)({
     location: 'Home'
   });
 s.useEffect(() => {
   if (!1 !== a)
-    n(L(e));
+    n(P(e));
 }, [
   e,
   a
@@ -172,25 +172,25 @@ s.useEffect(() => {
 let [r] = (0, u.U)(a ? t : []);
 return a ? null != e && !0 === e.showNotification && (r === l.z.TENURE_REWARD_REDEEMABLE || r === l.z.TENURE_REWARD_PENDING) ? (0, N.Wb)(e.nitroTenureStatus) : null : null;
   },
-  v = () => {
+  L = () => {
 var e;
 let t = null === (e = M()) || void 0 === e ? void 0 : e.nitroTenureStatus,
-  n = (0, g.c)({
+  n = (0, p.c)({
     location: 'Home'
-  }) && null != t && t === S.EB.REDEEMABLE,
+  }) && null != t && t === h.EB.REDEEMABLE,
   [s] = (0, u.U)(n ? [l.z.TENURE_REWARD_REDEEMABLE_CONFETTI] : []);
 return !!n && s === l.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
   },
   Z = () => {
 let e = M(),
-  t = s.useMemo(() => L(e), [e]),
+  t = s.useMemo(() => P(e), [e]),
   [n] = (0, _.c)(t),
   a = s.useRef(!1);
 return s.useCallback(() => {
-  null != e && !0 === e.showNotification && (n === l.z.TENURE_REWARD_REDEEMABLE || n === l.z.TENURE_REWARD_PENDING) && ((0, d.EW)(n), n === l.z.TENURE_REWARD_PENDING && !1 === a.current && (R.default.track(h.rMx.USER_NITRO_TENURE_REWARD_ACKNOWLEDGED, {
+  null != e && !0 === e.showNotification && (n === l.z.TENURE_REWARD_REDEEMABLE || n === l.z.TENURE_REWARD_PENDING) && ((0, d.EW)(n), n === l.z.TENURE_REWARD_PENDING && !1 === a.current && (R.default.track(S.rMx.USER_NITRO_TENURE_REWARD_ACKNOWLEDGED, {
     user_tenure_reward_id: null == e ? void 0 : e.tenureRewardStatusId,
     tenure_reward_id: e.tenureRewardSkuId,
-    reward_type: S.nW.SERVER_BOOST,
+    reward_type: h.nW.SERVER_BOOST,
     redeemable_at: null == e ? void 0 : e.redeemableAt
   }), a.current = !0));
 }, [
@@ -208,7 +208,7 @@ hasFetchedPremiumApplicationEntitlements: I.Z.isFetchedForApplication(f.RQ),
 isFetchingPremiumApplicationEntitlements: I.Z.isFetchingForApplication(f.RQ)
   })), n = (0, i.e7)([E.default], () => {
 let e = E.default.getCurrentUser();
-return null != e && (0, p.M5)(e, f.p9.TIER_2);
+return null != e && (0, g.M5)(e, f.p9.TIER_2);
   }), a = s.useRef(!1);
   s.useEffect(() => {
 !1 === e && !1 === t && !0 === n && !1 === a.current && (o.yD(f.RQ), a.current = !0);

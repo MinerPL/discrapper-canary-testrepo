@@ -12,9 +12,9 @@ var n = a(735250),
   c = a(66037),
   d = a(787907),
   u = a(643103),
-  p = a(34211),
-  h = a(231338),
-  m = a(436620),
+  h = a(34211),
+  m = a(231338),
+  p = a(436620),
   N = a(431138),
   k = a(309124);
 
@@ -26,21 +26,21 @@ configurable: !0,
 writable: !0
   }) : e[t] = a, e;
 }
-let f = h.j_.MAIN_NAVIGATION_MENU,
+let f = m.j_.MAIN_NAVIGATION_MENU,
   g = () => [{
-  route: (0, o.L)(h.RK.TWITTER),
+  route: (0, o.L)(m.RK.TWITTER),
   linkClicked: 'twitter',
   alt: 'Discord\'s Twitter',
   img: N.r.ASSET_SOCIAL_TWITTER
 },
 {
-  route: h.fK.FACEBOOK_URL,
+  route: m.fK.FACEBOOK_URL,
   linkClicked: 'facebook',
   alt: 'Discord\'s Facebook',
   img: N.r.ASSET_SOCIAL_FACEBOOK
 },
 {
-  route: h.fK.INSTAGRAM_URL,
+  route: m.fK.INSTAGRAM_URL,
   linkClicked: 'instagram',
   alt: 'Discord\'s Instagram',
   img: N.r.ASSET_SOCIAL_INSTAGRAM
@@ -49,7 +49,7 @@ let f = h.j_.MAIN_NAVIGATION_MENU,
 class I extends i.PureComponent {
   componentDidMount() {
 this.setState({
-  isAppCompatible: m.KO
+  isAppCompatible: p.KO
 });
   }
   render() {
@@ -79,8 +79,8 @@ return (0, n.jsxs)('header', {
               },
               children: (0, n.jsx)(c.Z, {
                 avoidRouter: s,
-                to: h.am.INDEX,
-                from: h.j_.MAIN_NAVIGATION_MENU,
+                to: m.am.INDEX,
+                from: m.j_.MAIN_NAVIGATION_MENU,
                 children: (0, n.jsx)(d.O, {})
               })
             }),
@@ -93,7 +93,7 @@ return (0, n.jsxs)('header', {
         }),
         (0, n.jsx)('ul', {
           className: k.headerNav,
-          children: (0, n.jsx)(p.o, {
+          children: (0, n.jsx)(h.o, {
             avoidRouter: s,
             TrackClick: o,
             styles: k,
@@ -130,7 +130,7 @@ super(...e), _(this, 'state', {
   } = this.props, {
     isAppCompatible: r
   } = this.state, l = (0, s.U)(i), o = t.LOGIN;
-  return null != e && (l = h.$w.ME, o = t.OPEN), r ? (0, n.jsx)('li', {
+  return null != e && (l = m.$w.ME, o = t.OPEN), r ? (0, n.jsx)('li', {
     className: k.listItemInactive,
     children: (0, n.jsx)(a, {
       eventName: f,

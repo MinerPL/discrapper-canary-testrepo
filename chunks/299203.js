@@ -9,8 +9,8 @@ n = '(0|[1-9][\\d_]*)',
 r = '(0|[1-9][\\d_]*|\\d[\\d_]*|[\\d_]+?\\d)',
 i = '([\\da-fA-F][\\da-fA-F_]*|_[\\da-fA-F][\\da-fA-F_]*)',
 a = '([eE][+-]?' + r + ')',
-o = '(' + n + '|0[bB][01_]+|0[xX]' + i + ')',
-s = '\\\\([\'"\\?\\\\abfnrtv]|u[\\dA-Fa-f]{4}|[0-7]{1,3}|x[\\dA-Fa-f]{2}|U[\\dA-Fa-f]{8})|&[a-zA-Z\\d]{2,};',
+s = '(' + n + '|0[bB][01_]+|0[xX]' + i + ')',
+o = '\\\\([\'"\\?\\\\abfnrtv]|u[\\dA-Fa-f]{4}|[0-7]{1,3}|x[\\dA-Fa-f]{2}|U[\\dA-Fa-f]{8})|&[a-zA-Z\\d]{2,};',
 l = e.COMMENT('\\/\\+', '\\+\\/', {
   contains: ['self'],
   relevance: 10
@@ -31,7 +31,7 @@ contains: [
     className: 'string',
     begin: '"',
     contains: [{
-      begin: s,
+      begin: o,
       relevance: 0
     }],
     end: '"[cwd]?'
@@ -54,17 +54,17 @@ contains: [
   },
   {
     className: 'number',
-    begin: '\\b(' + ('(' + ('(0[xX](' + i + '\\.' + i + '|\\.?' + i + ')[pP][+-]?' + r) + ')|' + ('(' + r + '(\\.\\d*|' + a + ')|\\d+\\.' + r + '|\\.' + n + a) + '?)') + ')([fF]|L|i|[fF]i|Li)?|' + o + '(i|[fF]i|Li))',
+    begin: '\\b(' + ('(' + ('(0[xX](' + i + '\\.' + i + '|\\.?' + i + ')[pP][+-]?' + r) + ')|' + ('(' + r + '(\\.\\d*|' + a + ')|\\d+\\.' + r + '|\\.' + n + a) + '?)') + ')([fF]|L|i|[fF]i|Li)?|' + s + '(i|[fF]i|Li))',
     relevance: 0
   },
   {
     className: 'number',
-    begin: '\\b' + o + '(L|u|U|Lu|LU|uL|UL)?',
+    begin: '\\b' + s + '(L|u|U|Lu|LU|uL|UL)?',
     relevance: 0
   },
   {
     className: 'string',
-    begin: '\'(' + s + '|.)',
+    begin: '\'(' + o + '|.)',
     end: '\'',
     illegal: '.'
   },

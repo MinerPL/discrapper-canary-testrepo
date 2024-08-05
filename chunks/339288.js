@@ -14,15 +14,15 @@ return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Sym
   })(e);
 }
 
-function o(e, t) {
+function s(e, t) {
   for (var n = 0; n < t.length; n++) {
 var r = t[n];
 r.enumerable = r.enumerable || !1, r.configurable = !0, 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
   }
 }
 
-function s(e, t) {
-  return (s = Object.setPrototypeOf || function(e, t) {
+function o(e, t) {
+  return (o = Object.setPrototypeOf || function(e, t) {
 return e.__proto__ = t, e;
   })(e, t);
 }
@@ -57,7 +57,7 @@ e.prototype = Object.create(t && t.prototype, {
     writable: !0,
     configurable: !0
   }
-}), t && s(e, t);
+}), t && o(e, t);
   }(f, e);
   var t, n, r, d, _, E = (t = f, n = function() {
 if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham)
@@ -153,5 +153,5 @@ return c(l(e = E.call.apply(E, [this].concat(n))), 'priority', 90), c(l(e), 'inc
     return (e = (0, i.Z)(e, n, r)).setUTCHours(0, 0, 0, 0), e;
   }
 }
-  ], o(r.prototype, d), f;
+  ], s(r.prototype, d), f;
 }(r._);

@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250);
 n(470079);
-var s = n(570140),
-  a = n(317770),
+var a = n(570140),
+  s = n(317770),
   r = n(663993),
   l = n(788983),
   o = n(981631);
@@ -25,12 +25,12 @@ createPromise: () => Promise.all([
 webpackId: 945778,
 name: 'PopoutWindowRTCDebug'
   });
-class _ extends a.Z {
+class _ extends s.Z {
   _initialize() {
-s.Z.subscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout), s.Z.subscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout), this.initializeStyleSheetObserver();
+a.Z.subscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout), a.Z.subscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout), this.initializeStyleSheetObserver();
   }
   _terminate() {
-s.Z.unsubscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout), s.Z.unsubscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout), this.terminateStyleSheetObserver();
+a.Z.unsubscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout), a.Z.unsubscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout), this.terminateStyleSheetObserver();
   }
   handleOpenChannelCallPopout(e) {
 let {

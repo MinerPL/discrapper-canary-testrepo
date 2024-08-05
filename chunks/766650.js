@@ -1,6 +1,6 @@
 s.d(t, {
   Z: function() {
-return m;
+return h;
   }
 }), s(47120);
 var n = s(735250),
@@ -8,23 +8,21 @@ var n = s(735250),
   i = s(120356),
   a = s.n(i),
   o = s(338545),
-  l = s(442837),
-  c = s(481060),
-  u = s(607070),
-  d = s(144114),
-  h = s(317175),
-  p = s(183062);
+  l = s(481060),
+  c = s(144114),
+  u = s(317175),
+  d = s(183062);
 
-function m(e) {
+function h(e) {
   let {
 show: t,
 alpha2: s,
 countryCode: i
-  } = e, m = (0, l.e7)([u.Z], () => u.Z.useReducedMotion), f = r.useRef(null), [C, g] = r.useState(0), [x, N] = r.useState(!1);
+  } = e, h = r.useRef(null), [p, m] = r.useState(0), [f, C] = r.useState(!1);
   r.useEffect(() => {
 function e() {
   var e, s;
-  g(t && null !== (s = null === (e = f.current) || void 0 === e ? void 0 : e.getBoundingClientRect().width) && void 0 !== s ? s : 0);
+  m(t && null !== (s = null === (e = h.current) || void 0 === e ? void 0 : e.getBoundingClientRect().width) && void 0 !== s ? s : 0);
 }
 return e(), window.addEventListener('resize', e), () => window.removeEventListener('resize', e);
   }, [
@@ -32,41 +30,40 @@ t,
 s,
 i
   ]);
-  let v = (0, o.useSpring)({
-  width: ''.concat(C, 'px'),
-  immediate: m,
+  let g = (0, l.useSpring)({
+  width: ''.concat(p, 'px'),
   onStart: () => {
-    N(!0);
+    C(!0);
   },
   onRest: () => {
-    N(!1);
+    C(!1);
   }
 }),
-E = e => {
-  d.Z.setCountryCode(e);
+x = e => {
+  c.Z.setCountryCode(e);
 };
-  return (0, n.jsx)(c.Popout, {
+  return (0, n.jsx)(l.Popout, {
 position: 'top',
-renderPopout: e => (0, n.jsx)(h.Z, {
-  className: p.popout,
+renderPopout: e => (0, n.jsx)(u.Z, {
+  className: d.popout,
   onClick: t => {
-    E(t), e.closePopout();
+    x(t), e.closePopout();
   }
 }),
 children: e => (0, n.jsx)('div', {
-  className: a()(p.outerContainer, {
-    [p.hidden]: !(t || x)
+  className: a()(d.outerContainer, {
+    [d.hidden]: !(t || f)
   }),
   children: (0, n.jsx)(o.animated.div, {
-    className: p.container,
-    style: v,
+    className: d.container,
+    style: g,
     children: (0, n.jsxs)('div', {
-      className: p.innerContainer,
-      ref: f,
+      className: d.innerContainer,
+      ref: h,
       children: [
-        (0, n.jsxs)(c.Clickable, {
+        (0, n.jsxs)(l.Clickable, {
           ...e,
-          className: p.countryCode,
+          className: d.countryCode,
           children: [
             s,
             ' ',
@@ -74,7 +71,7 @@ children: e => (0, n.jsx)('div', {
           ]
         }),
         (0, n.jsx)('div', {
-          className: p.separator
+          className: d.separator
         })
       ]
     })

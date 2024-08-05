@@ -1,4 +1,4 @@
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(287734),
   c = n(579806),
@@ -63,7 +63,7 @@ type: 'OVERLAY_SET_NOT_IDLE',
 timestamp: m
   }) : v(), !1);
 }
-class R extends(o = s.ZP.Store) {
+class R extends(s = o.ZP.Store) {
   isIdle() {
 return I;
   }

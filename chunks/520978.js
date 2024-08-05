@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(239091),
-  o = n(311819),
-  s = n(572004),
+  s = n(311819),
+  o = n(572004),
   l = n(591759),
   u = n(135431),
   c = n(689938),
@@ -30,7 +30,7 @@ return null;
 color: i.Button.Colors.PRIMARY,
 look: i.Button.Looks.FILLED,
 size: i.Button.Sizes.SMALL,
-onContextMenu: s.wS ? e => {
+onContextMenu: o.wS ? e => {
   (0, a.vq)(e, e => (0, r.jsx)(i.Menu, {
     navId: 'component-button',
     onClose: a.Zy,
@@ -41,7 +41,7 @@ onContextMenu: s.wS ? e => {
       children: (0, r.jsx)(i.MenuItem, {
         id: 'copy',
         label: c.Z.Messages.APPLICATION_ADD_BUTTON_ACTIONS_COPY,
-        action: () => (0, s.JG)((0, o.J)(t))
+        action: () => (0, o.JG)((0, s.J)(t))
       })
     })
   }));

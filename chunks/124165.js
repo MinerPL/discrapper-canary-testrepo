@@ -13,8 +13,8 @@ return E;
   }
 });
 var r, i, a = n(314897),
-  o = n(924301),
-  s = n(894017),
+  s = n(924301),
+  o = n(894017),
   l = n(79874),
   u = n(854698),
   c = n(765305),
@@ -22,7 +22,7 @@ var r, i, a = n(314897),
 
 function _(e, t) {
   let n = a.default.getId();
-  return o.ZP.getRsvp(e, t, n);
+  return s.ZP.getRsvp(e, t, n);
 }
 
 function E() {
@@ -45,10 +45,10 @@ guildId: r,
 updateRsvp: i,
 openRsvpPicker: a,
 onRsvp: d
-  } = e, E = o.ZP.getGuildScheduledEvent(t);
+  } = e, E = s.ZP.getGuildScheduledEvent(t);
   if (null == E)
 return;
-  let f = (0, s.c)(n, t),
+  let f = (0, o.c)(n, t),
 {
   startTime: h
 } = (0, l.Kq)(E, n),

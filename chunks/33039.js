@@ -1,5 +1,5 @@
 n(47120), n(724458);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(981631),
   c = n(65154);
@@ -19,7 +19,7 @@ for (let e of Object.values(c.Yn))
 E[e][null != t ? t : u.kod] = i;
   }
 }
-class h extends(r = s.ZP.Store) {
+class h extends(r = o.ZP.Store) {
   getStreamId(e, t) {
 var n, r, i;
 let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.Yn.DEFAULT;
@@ -31,12 +31,12 @@ let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.Yn.DE
 return null === (r = E[e]) || void 0 === r ? void 0 : null === (n = r[null != t ? t : u.kod]) || void 0 === n ? void 0 : n[i];
   }
 }
-o = 'VideoStreamStore', (a = 'displayName') in(i = h) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'VideoStreamStore', (a = 'displayName') in(i = h) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new h(l.Z, {
+}) : i[a] = s, t.Z = new h(l.Z, {
   CONNECTION_OPEN: function(e) {
 let {
   user: t,
@@ -80,16 +80,16 @@ return t.reduce((e, t) => {
     userId: r,
     sessionId: i,
     channelId: a,
-    guildId: o
+    guildId: s
   } = t;
   if (null == a && r === d) {
     if (i !== _)
       return e;
     E = {};
   } else {
-    if (null != a || (null === (n = E[r]) || void 0 === n ? void 0 : n[null != o ? o : u.kod]) == null)
+    if (null != a || (null === (n = E[r]) || void 0 === n ? void 0 : n[null != s ? s : u.kod]) == null)
       return e;
-    f(r, o);
+    f(r, s);
   }
   return !0;
 }, !1);

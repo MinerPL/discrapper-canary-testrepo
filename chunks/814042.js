@@ -6,8 +6,8 @@ return N;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  o = n(481060),
   l = n(100527),
   u = n(906732),
   c = n(104494),
@@ -42,7 +42,7 @@ let v = (0, d.N)(),
   R = (null == v ? void 0 : null === (t = v.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === I.Si.TIER_0,
   C = null != v || null != O;
 return (0, r.jsxs)('div', {
-  className: o()(g.upsellWrapper, {
+  className: s()(g.upsellWrapper, {
     [g.unifyTrialUpsell]: C
   }),
   children: [
@@ -65,13 +65,13 @@ return (0, r.jsxs)('div', {
           src: S,
           alt: T.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_ALT
         }),
-        (0, r.jsx)(s.Text, {
+        (0, r.jsx)(o.Text, {
           className: g.upsellTitle,
           color: 'header-primary',
           variant: 'text-lg/semibold',
           children: T.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_TITLE
         }),
-        (0, r.jsx)(s.Text, {
+        (0, r.jsx)(o.Text, {
           className: g.upsellDescription,
           variant: 'text-md/normal',
           children: T.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION.format({
@@ -84,10 +84,10 @@ return (0, r.jsxs)('div', {
       analyticsSection: m.jXE.EXPRESSION_PICKER,
       buttonText: C ? R ? T.Z.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : T.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
     }),
-    (0, r.jsx)(s.Clickable, {
+    (0, r.jsx)(o.Clickable, {
       className: g.upsellClose,
       onClick: A,
-      children: (0, r.jsx)(s.CloseSmallIcon, {
+      children: (0, r.jsx)(o.CloseSmallIcon, {
         size: 'md',
         color: 'currentColor'
       })

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   }
 });
 var r = n(735250);
@@ -8,7 +8,7 @@ n(470079);
 var i = n(399606),
   a = n(351780);
 
-function o(e) {
+function s(e) {
   let {
 children: t,
 confettiLocation: n

@@ -1,4 +1,4 @@
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(881052);
 let c = null,
@@ -15,7 +15,7 @@ error: t
 function f() {
   c = null;
 }
-class h extends(o = s.ZP.Store) {
+class h extends(s = o.ZP.Store) {
   get paymentError() {
 return c;
   }

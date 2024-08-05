@@ -7,8 +7,8 @@ Object.defineProperty(t, '__esModule', {
 });
 var i = n(698091),
   a = r(n(624482)),
-  o = r(n(102386)),
-  s = r(n(248766)),
+  s = r(n(102386)),
+  o = r(n(248766)),
   l = n(239189),
   u = n(470079),
   c = n(672268),
@@ -132,7 +132,7 @@ return n.getValue = function(e) {
   g = function(e) {
 function t(t, n) {
   var r;
-  return (r = e.call(this, null) || this).source = void 0, e.prototype.setValue.call(o(r), r._makeAnimated(t, n)), r;
+  return (r = e.call(this, null) || this).source = void 0, e.prototype.setValue.call(s(r), r._makeAnimated(t, n)), r;
 }
 a(t, e), t.create = function(e, n) {
   return new t(e, n);
@@ -164,7 +164,7 @@ return n.setValue = function(t, n) {
   if (t) {
     if (n && (I.current = n, t.style)) {
       var r = n.host.createAnimatedStyle;
-      t = s(s({}, t), {}, {
+      t = o(o({}, t), {}, {
         style: r(t.style)
       });
     }
@@ -181,11 +181,11 @@ return n.setValue = function(t, n) {
   A = function(e, t) {
 return u.forwardRef(function(n, r) {
   var a = u.useRef(null),
-    o = !i.is.fun(e) || e.prototype && e.prototype.isReactComponent,
+    s = !i.is.fun(e) || e.prototype && e.prototype.isReactComponent,
     l = i.useForceUpdate(),
     d = new S(function() {
       var e = a.current;
-      if (!o || !!e)
+      if (!s || !!e)
         !1 === (!!e && t.applyAnimatedValues(e, d.getValue(!0))) && l();
     }),
     _ = new Set();
@@ -201,8 +201,8 @@ return u.forwardRef(function(n, r) {
           return e.removeChild(d);
         });
       };
-  }), u.createElement(e, s({}, t.getComponentProps(d.getValue()), {
-    ref: o && function(e) {
+  }), u.createElement(e, o({}, t.getComponentProps(d.getValue()), {
+    ref: s && function(e) {
       a.current = function(e, t) {
         return e && (i.is.fun(e) ? e(t) : e.current = t), t;
       }(r, e);
@@ -218,18 +218,18 @@ t.Animated = h, t.AnimatedArray = g, t.AnimatedObject = T, t.AnimatedProps = S, 
   var n = void 0 === t ? {} : t,
 r = n.applyAnimatedValues,
 a = n.createAnimatedStyle,
-o = void 0 === a ? function(e) {
+s = void 0 === a ? function(e) {
   return new T(e);
 } : a,
-s = n.getComponentProps,
+o = n.getComponentProps,
 l = {
   applyAnimatedValues: void 0 === r ? function() {
     return !1;
   } : r,
-  createAnimatedStyle: o,
-  getComponentProps: void 0 === s ? function(e) {
+  createAnimatedStyle: s,
+  getComponentProps: void 0 === o ? function(e) {
     return e;
-  } : s
+  } : o
 },
 u = function(e) {
   var t = v(e) || 'Anonymous';

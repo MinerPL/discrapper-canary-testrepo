@@ -15,8 +15,8 @@ return h;
 var r = n(544891),
   i = n(430742),
   a = n(904245),
-  o = n(623292),
-  s = n(592125),
+  s = n(623292),
+  o = n(592125),
   l = n(703558),
   u = n(375954),
   c = n(585483),
@@ -57,8 +57,8 @@ async function h(e) {
 url: d.ANM.UPDATE_GAMING_STATS(e.channel_id, e.id)
   });
   if (null != t.text && '' !== t.text) {
-let n = s.Z.getChannel(e.channel_id);
-null != n && ((0, o.fE)({
+let n = o.Z.getChannel(e.channel_id);
+null != n && ((0, s.fE)({
   channel: n,
   message: e,
   shouldMention: !1,

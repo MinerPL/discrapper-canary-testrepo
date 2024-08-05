@@ -9,8 +9,8 @@ return _;
 var r = n(392711),
   i = n.n(r),
   a = n(442837),
-  o = n(592125),
-  s = n(496675),
+  s = n(592125),
+  o = n(496675),
   l = n(709054),
   u = n(853856),
   c = n(362658),
@@ -29,14 +29,14 @@ autoTrackExposure: !1
 return !0;
   if (!r)
 return !1;
-  let o = e.getFavoriteChannels();
-  if (i().isEmpty(o))
+  let s = e.getFavoriteChannels();
+  if (i().isEmpty(s))
 return !1;
-  let s = l.default.keys(o).filter(e => {
+  let o = l.default.keys(s).filter(e => {
 let r = t.getChannel(e);
 return null != r && (!!r.isPrivate() || n.can(d.Pl.VIEW_CHANNEL, r));
   });
-  return !i().isEmpty(s) && !0;
+  return !i().isEmpty(o) && !0;
 }
 
 function E() {
@@ -45,8 +45,8 @@ canShow: e,
 isFavoritesPerk: t
   } = (0, c.z)('7993a7_2'), n = (0, a.e7)([
 u.Z,
-o.Z,
-s.Z
-  ], () => e && _(u.Z, o.Z, s.Z));
+s.Z,
+o.Z
+  ], () => e && _(u.Z, s.Z, o.Z));
   return !!t || n;
 }

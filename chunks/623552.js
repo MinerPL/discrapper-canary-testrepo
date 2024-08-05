@@ -6,8 +6,8 @@ return E;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  o = n(481060),
   l = n(410030),
   u = n(718582),
   c = n(981631),
@@ -103,7 +103,7 @@ function E(e) {
   let {
 users: t,
 guildId: n
-  } = e, a = (0, u.fd)(t), s = (0, l.ZP)(), E = i.useRef(!1);
+  } = e, a = (0, u.fd)(t), o = (0, l.ZP)(), E = i.useRef(!1);
   i.useEffect(() => {
 E.current = !0;
   }, []);
@@ -116,14 +116,14 @@ S = m.map((e, t) => {
   let i = a[t];
   if (null == i)
     return null;
-  let s = I && t === g;
+  let o = I && t === g;
   return (0, r.jsx)('div', {
-    className: o()(d.avatarContainer),
+    className: s()(d.avatarContainer),
     style: {
       opacity: 1,
       transform: 'translateX('.concat(e.translateX, 'px) translateY(').concat(e.translateY, 'px) scale(').concat(e.scale, ')')
     },
-    children: s ? (0, r.jsx)(f, {
+    children: o ? (0, r.jsx)(f, {
       count: T
     }) : (0, r.jsx)(h, {
       guildId: n,
@@ -132,7 +132,7 @@ S = m.map((e, t) => {
   }, i.id);
 });
   return (0, r.jsx)('div', {
-className: s === c.BRd.DARK ? d.gradientContainerDark : d.gradientContainer,
+className: o === c.BRd.DARK ? d.gradientContainerDark : d.gradientContainer,
 children: (0, r.jsx)('div', {
   className: d.groupContainer,
   children: S
@@ -148,7 +148,7 @@ count: t
 className: d.avatarWrapper,
 children: (0, r.jsx)('div', {
   className: d.overflowCount,
-  children: (0, r.jsxs)(s.Text, {
+  children: (0, r.jsxs)(o.Text, {
     variant: 'text-sm/semibold',
     children: [
       '+',

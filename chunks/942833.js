@@ -6,12 +6,12 @@ return l;
 return u;
   }
 });
-var i = t(470079),
-  r = t(937615),
+var r = t(470079),
+  i = t(937615),
   o = t(689938);
 
 function l(e) {
-  return i.useMemo(() => {
+  return r.useMemo(() => {
 if (null == e)
   return;
 let n = null != e.role_id,
@@ -26,13 +26,13 @@ if (t)
 }
 
 function u(e) {
-  return i.useMemo(() => {
+  return r.useMemo(() => {
 if ((null == e ? void 0 : e.price) == null)
   return;
 let {
   amount: n,
   currency: t
 } = e.price;
-return (0, r.T4)(n, t);
+return (0, i.T4)(n, t);
   }, [e]);
 }

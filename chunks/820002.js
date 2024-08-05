@@ -1,16 +1,16 @@
 n.d(t, {
   O: function() {
-return o;
+return s;
   }
 });
 var r = n(182823),
   i = n(706682),
   a = n(612001);
 
-function o(e, t, n) {
+function s(e, t, n) {
   let {
-isDisabled: o = !1,
-isReadOnly: s = !1,
+isDisabled: s = !1,
+isReadOnly: o = !1,
 value: l,
 name: u,
 children: c,
@@ -24,12 +24,12 @@ isInvalid: f
 pressProps: h,
 isPressed: p
   } = (0, a.r7)({
-isDisabled: o
+isDisabled: s
   }), {
 pressProps: m,
 isPressed: I
   } = (0, a.r7)({
-isDisabled: o || s,
+isDisabled: s || o,
 onPress() {
   t.toggle();
 }
@@ -46,11 +46,11 @@ inputProps: (0, r.dG)(S, {
   'aria-invalid': f || 'invalid' === E || void 0,
   'aria-errormessage': e['aria-errormessage'],
   'aria-controls': e['aria-controls'],
-  'aria-readonly': s || void 0,
+  'aria-readonly': o || void 0,
   onChange: e => {
     e.stopPropagation(), t.setSelected(e.target.checked);
   },
-  disabled: o,
+  disabled: s,
   ...null == l ? {} : {
     value: l
   },
@@ -60,8 +60,8 @@ inputProps: (0, r.dG)(S, {
 }),
 isSelected: t.isSelected,
 isPressed: p || I,
-isDisabled: o,
-isReadOnly: s,
+isDisabled: s,
+isReadOnly: o,
 isInvalid: f || 'invalid' === E
   };
 }

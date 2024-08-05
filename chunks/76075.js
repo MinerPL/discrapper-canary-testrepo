@@ -4,8 +4,8 @@ o(470079);
 var t = o(442837),
   i = o(481060),
   r = o(100527),
-  l = o(970606),
-  s = o(271383),
+  s = o(970606),
+  l = o(271383),
   c = o(430824),
   u = o(594174),
   d = o(153124),
@@ -24,12 +24,12 @@ transitionState: o,
   } = n, p = (0, d.Dt)(), N = (0, t.e7)([m.Z], () => m.Z.getRequest(e), [e]), g = (0, t.e7)([c.Z], () => c.Z.getGuild(e), [e]), h = (0, t.e7)([u.default], () => {
 var n;
 return null === (n = u.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
-  }), A = (0, t.e7)([s.ZP], () => null != h ? s.ZP.getMember(e, h) : null, [
+  }), A = (0, t.e7)([l.ZP], () => null != h ? l.ZP.getMember(e, h) : null, [
 h,
 e
   ]), B = async () => {
 var n;
-if (null !== (n = null == g ? void 0 : g.hasFeature(C.oNc.CLAN)) && void 0 !== n && n && (0, l.Vr)({
+if (null !== (n = null == g ? void 0 : g.hasFeature(C.oNc.CLAN)) && void 0 !== n && n && (0, s.Vr)({
     guildId: e,
     source: r.Z.CLAN_REAPPLY
   }), null == g ? void 0 : g.hasFeature(C.oNc.PREVIEW_ENABLED)) {

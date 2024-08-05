@@ -1,11 +1,11 @@
 var r = n(470079),
   i = n(844303),
   a = n(13942),
-  o = n(464854);
+  s = n(464854);
 t.Z = function(e) {
   var t = e.onChange,
 n = e.rgb,
-s = e.hsv,
+o = e.hsv,
 l = e.hex,
 u = (0, i.default)({
   default: {
@@ -88,44 +88,44 @@ c = function(e, r) {
     b: e.b || n.b,
     source: 'rgb'
   }, r) : (e.h || e.s || e.v) && t({
-    h: e.h || s.h,
-    s: e.s || s.s,
-    v: e.v || s.v,
+    h: e.h || o.h,
+    s: e.s || o.s,
+    v: e.v || o.v,
     source: 'hsv'
   }, r);
 };
   return r.createElement('div', {
 style: u.fields
-  }, r.createElement(o.Vm, {
+  }, r.createElement(s.Vm, {
 style: {
   wrap: u.RGBwrap,
   input: u.RGBinput,
   label: u.RGBlabel
 },
 label: 'h',
-value: Math.round(s.h),
+value: Math.round(o.h),
 onChange: c
-  }), r.createElement(o.Vm, {
+  }), r.createElement(s.Vm, {
 style: {
   wrap: u.RGBwrap,
   input: u.RGBinput,
   label: u.RGBlabel
 },
 label: 's',
-value: Math.round(100 * s.s),
+value: Math.round(100 * o.s),
 onChange: c
-  }), r.createElement(o.Vm, {
+  }), r.createElement(s.Vm, {
 style: {
   wrap: u.RGBwrap,
   input: u.RGBinput,
   label: u.RGBlabel
 },
 label: 'v',
-value: Math.round(100 * s.v),
+value: Math.round(100 * o.v),
 onChange: c
   }), r.createElement('div', {
 style: u.divider
-  }), r.createElement(o.Vm, {
+  }), r.createElement(s.Vm, {
 style: {
   wrap: u.RGBwrap,
   input: u.RGBinput,
@@ -134,7 +134,7 @@ style: {
 label: 'r',
 value: n.r,
 onChange: c
-  }), r.createElement(o.Vm, {
+  }), r.createElement(s.Vm, {
 style: {
   wrap: u.RGBwrap,
   input: u.RGBinput,
@@ -143,7 +143,7 @@ style: {
 label: 'g',
 value: n.g,
 onChange: c
-  }), r.createElement(o.Vm, {
+  }), r.createElement(s.Vm, {
 style: {
   wrap: u.RGBwrap,
   input: u.RGBinput,
@@ -154,7 +154,7 @@ value: n.b,
 onChange: c
   }), r.createElement('div', {
 style: u.divider
-  }), r.createElement(o.Vm, {
+  }), r.createElement(s.Vm, {
 style: {
   wrap: u.HEXwrap,
   input: u.HEXinput,

@@ -38,7 +38,7 @@ return r(e, null, [{
   {
     key: 'ease',
     value: function(e) {
-      return o(e);
+      return s(e);
     }
   },
   {
@@ -134,5 +134,5 @@ return r(e, null, [{
   }
 ]), e;
   }(),
-  o = a.bezier(0.42, 0, 1, 1);
+  s = a.bezier(0.42, 0, 1, 1);
 e.exports = a;

@@ -1,74 +1,74 @@
-t.d(e, {
+t.d(n, {
   I3: function() {
-return o;
-  },
-  Ic: function() {
-return M;
-  },
-  Lg: function() {
-return D;
-  },
-  OU: function() {
-return s;
-  },
-  RH: function() {
-return A;
-  },
-  Ux: function() {
-return E;
-  },
-  VW: function() {
-return O;
-  },
-  Vg: function() {
 return c;
   },
-  Vk: function() {
-return N;
+  Ic: function() {
+return C;
   },
-  _6: function() {
+  Lg: function() {
+return S;
+  },
+  OU: function() {
+return g;
+  },
+  RH: function() {
+return a;
+  },
+  Ux: function() {
+return i;
+  },
+  VW: function() {
 return d;
   },
+  Vg: function() {
+return p;
+  },
+  Vk: function() {
+return f;
+  },
+  _6: function() {
+return T;
+  },
   aj: function() {
-return l;
+return I;
   },
   dc: function() {
-return L;
+return m;
   },
   fX: function() {
 return u.f;
   },
   hu: function() {
-return T;
+return _;
   },
   jj: function() {
-return r.j;
+return o.j;
   },
   n4: function() {
-return a;
+return s;
   },
   q4: function() {
-return i.q;
+return l.q;
   },
   uE: function() {
-return I;
+return E;
   }
 });
-var _, E, r = t(401653),
-  i = t(95930),
+var r, i, o = t(401653),
+  l = t(95930),
   u = t(41381);
-(_ = E || (E = {}))[_.PROFANITY = 1] = 'PROFANITY', _[_.SEXUAL_CONTENT = 2] = 'SEXUAL_CONTENT', _[_.SLURS = 3] = 'SLURS', u.f.USER_PROFILE, u.f.SERVER_POLICY, u.f.MENTION_SPAM, u.f.ML_SPAM, u.f.DEFAULT_KEYWORD_LIST, u.f.KEYWORD;
-let A = 1000,
-  a = 100,
-  o = 1000,
-  O = 10,
-  T = 60,
-  N = 1,
-  I = 1,
-  l = 260,
+(r = i || (i = {}))[r.PROFANITY = 1] = 'PROFANITY', r[r.SEXUAL_CONTENT = 2] = 'SEXUAL_CONTENT', r[r.SLURS = 3] = 'SLURS', u.f.USER_PROFILE, u.f.SERVER_POLICY, u.f.MENTION_SPAM, u.f.ML_SPAM, u.f.DEFAULT_KEYWORD_LIST, u.f.KEYWORD;
+let a = 1000,
   s = 100,
-  c = 1,
-  D = 50,
-  M = 20,
-  d = 150,
-  L = 'automod-profile-quarantine-alert';
+  c = 1000,
+  d = 10,
+  _ = 60,
+  f = 1,
+  E = 1,
+  I = 260,
+  g = 100,
+  p = 1,
+  S = 50,
+  C = 20,
+  T = 150,
+  m = 'automod-profile-quarantine-alert';

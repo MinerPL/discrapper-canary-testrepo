@@ -6,29 +6,29 @@ return r;
 return o;
   },
   LA: function() {
-return s;
+return a;
   },
   NB: function() {
 return l;
   },
   cP: function() {
-return a;
+return s;
   }
 });
 var i = n(570140);
 
-function a(e, t, n, a, s) {
+function s(e, t, n, s, a) {
   i.Z.dispatch({
 type: 'SPEAK_TEXT',
 text: e,
 interrupt: t,
 maxLength: n,
-onStart: a,
-onEnd: s
+onStart: s,
+onEnd: a
   });
 }
 
-function s(e, t) {
+function a(e, t) {
   i.Z.dispatch({
 type: 'SPEAK_MESSAGE',
 channel: e,

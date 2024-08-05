@@ -1,12 +1,12 @@
 n.d(e, {
   P: function() {
-return i;
+return r;
   }
 });
-var o = n(817718),
-  r = n(981631);
-let i = {
-  [r.EkH.MODAL_CAROUSEL_NEXT]: o.XM,
-  [r.EkH.MODAL_CAROUSEL_PREV]: o.py,
-  [r.EkH.CLOSE_MODAL]: o.U3
+var a = n(817718),
+  o = n(981631);
+let r = {
+  [o.EkH.MODAL_CAROUSEL_NEXT]: a.XM,
+  [o.EkH.MODAL_CAROUSEL_PREV]: a.py,
+  [o.EkH.CLOSE_MODAL]: a.U3
 };

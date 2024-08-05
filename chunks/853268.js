@@ -19,10 +19,10 @@ value: t,
 onChange: n,
 subText: r,
 muted: d,
-marginTopStyle: h
+marginTopStyle: _
   } = e;
   return (0, s.jsx)(l.Z, {
-className: null != h ? h : u.marginTop20,
+className: null != _ ? _ : u.marginTop20,
 align: l.Z.Align.CENTER,
 children: (0, s.jsx)(a.Checkbox, {
   value: t,

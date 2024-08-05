@@ -37,14 +37,14 @@ return m;
 return T;
   }
 }), n(653041), n(757143);
-var o = n(539528),
-  s = n(710845),
+var s = n(539528),
+  o = n(710845),
   l = n(585483),
   u = n(143816),
   c = n(981631);
-let d = new s.Z('Routing/Utils'),
+let d = new o.Z('Routing/Utils'),
   _ = [c.E07.DEVELOPER_PORTAL];
-r = __OVERLAY__ ? (0, o.PP)() : (0, o.lX)();
+r = __OVERLAY__ ? (0, s.PP)() : (0, s.lX)();
 let E = !1,
   f = r.listen((e, t) => {
 'REPLACE' !== t && (E = !0, f());
@@ -64,11 +64,11 @@ return;
   d.log('transitionTo - Transitioning to '.concat(e));
   let n = null == t ? void 0 : t.source;
   null == t || delete t.source;
-  let o = null == t ? void 0 : t.sourceLocationStack;
+  let s = null == t ? void 0 : t.sourceLocationStack;
   null == t || delete t.sourceLocationStack, null == t ? r.push(e) : r.push({
 pathname: e,
 ...t
-  }), i = n, a = o;
+  }), i = n, a = s;
 }
 
 function I(e, t, n, r) {

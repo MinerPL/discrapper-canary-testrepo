@@ -1,6 +1,6 @@
 n.d(t, {
   Qe: function() {
-return o;
+return s;
   },
   W3: function() {
 return c;
@@ -9,7 +9,7 @@ return c;
 return a;
   },
   ak: function() {
-return s;
+return o;
   },
   jW: function() {
 return u;
@@ -30,7 +30,7 @@ let a = [
 () => i.Z.Messages.OAUTH2_FAKE_SCOPE_7,
 () => i.Z.Messages.OAUTH2_FAKE_SCOPE_8
   ],
-  o = [
+  s = [
 r.x.BOT,
 r.x.OPENID,
 r.x.IDENTIFY,
@@ -71,7 +71,7 @@ r.x.PRESENCES_WRITE,
 r.x.GATEWAY_CONNECT,
 r.x.PAYMENT_SOURCES_COUNTRY_CODE
   ],
-  s = o.concat([
+  o = s.concat([
 r.x.WEBHOOK_INCOMING,
 r.x.BOT
   ]),

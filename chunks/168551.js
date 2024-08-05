@@ -9,8 +9,8 @@ return d;
 var r = n(470079),
   i = n(691324),
   a = n(442837),
-  o = n(780384),
-  s = n(813852),
+  s = n(780384),
+  o = n(813852),
   l = n(514361),
   u = n(629935);
 let c = 'data-client-themes',
@@ -19,7 +19,7 @@ let c = 'data-client-themes',
 let e = (0, a.e7)([l.Z], () => l.Z.gradientPreset),
   {
     enabled: t
-  } = s.U.useExperiment({
+  } = o.U.useExperiment({
     location: 'useBackgroundGradientCSS'
   });
 return (0, r.useMemo)(() => {
@@ -28,12 +28,12 @@ return (0, r.useMemo)(() => {
   let n = l.Z.getLinearGradient();
   if (null == n)
     return null;
-  let [r, a] = [...e.colors].sort((e, t) => t.stop - e.stop).slice(0, 2).map(e => i.b[e.token].hex), s = (0, u.W4)({
+  let [r, a] = [...e.colors].sort((e, t) => t.stop - e.stop).slice(0, 2).map(e => i.b[e.token].hex), o = (0, u.W4)({
     enabled: t,
     primaryColor: r,
     secondaryColor: a,
-    isDarkTheme: (0, o.wj)(e.theme)
-  }), c = t ? '\n      '.concat(Object.entries(s).map(e => {
+    isDarkTheme: (0, s.wj)(e.theme)
+  }), c = t ? '\n      '.concat(Object.entries(o).map(e => {
     let [t, n] = e;
     return ''.concat(t, ': ').concat(n, ';');
   }).join('\n'), '\n    ') : '';

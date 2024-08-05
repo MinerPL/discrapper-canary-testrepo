@@ -1,9 +1,6 @@
 n.d(t, {
-  BW: function() {
+  HG: function() {
 return l;
-  },
-  Kp: function() {
-return d;
   },
   Mf: function() {
 return u;
@@ -11,50 +8,40 @@ return u;
   Y_: function() {
 return c;
   },
-  dR: function() {
+  bn: function() {
 return o;
   }
-});
+}), n(47120);
 var i = n(873011),
-  a = n(570140),
-  s = n(192720),
-  r = n(802463);
+  s = n(570140),
+  a = n(192720),
+  r = n(768943);
 
-function l(e, t) {
-  (0, s.L9)([{
+function l(e) {
+  (0, a.gL)({
 type: i.J.REMINDER,
-messageId: e.id,
-channelId: e.channel_id,
-savedAt: new Date(),
-dueAt: t,
-...(0, s.sd)(e)
-  }], []);
+...e
+  });
 }
 
-function o(e, t) {
-  let n = r.Z.getMessageReminders().find(t => t.messageId === e);
-  if (null != n)
-(0, s.L9)([{
-  ...n,
-  savedAt: new Date(),
-  dueAt: t
-}], [n]);
+function o(e) {
+  (0, a.ep)({
+type: i.J.REMINDER,
+...e
+  });
 }
 
 function c(e, t) {
-  a.Z.dispatch({
+  s.Z.dispatch({
 type: 'MESSAGE_REMINDER_TOGGLE',
 messageId: e,
 complete: t
   });
 }
 
-function d(e) {
-  let t = r.Z.getMessageReminders();
-  (0, s.L9)([], t.filter(t => t.messageId === e));
-}
-
 function u() {
-  let e = r.Z.getMessageReminders();
-  e.some(e => e.complete) && (0, s.L9)([], e.filter(e => e.complete));
+  let e = r.Z.getMessageReminders().filter(e => e.complete);
+  if (e.length > 0)
+for (let t of e)
+  o(t.saveData);
 }

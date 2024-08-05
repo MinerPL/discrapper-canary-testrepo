@@ -1,92 +1,88 @@
 n.d(t, {
   Z: function() {
-return m;
+return E;
   }
 }), n(47120);
 var s = n(735250),
   a = n(470079),
   i = n(338545),
   r = n(722770),
-  l = n(442837),
-  o = n(481060),
-  c = n(607070),
-  d = n(236413),
-  u = n(85960),
-  _ = n(65912),
-  I = n(564488),
-  E = n(689938),
-  T = n(203965);
+  l = n(481060),
+  o = n(236413),
+  c = n(85960),
+  d = n(65912),
+  u = n(564488),
+  _ = n(689938),
+  I = n(203965);
 
-function m(e) {
+function E(e) {
   let {
 guildId: t,
 triggerType: n
-  } = e, m = a.useMemo(() => () => (0, d.ep)(t, n), [
+  } = e, E = a.useMemo(() => () => (0, o.ep)(t, n), [
 t,
 n
-  ]), [N] = a.useState(m), [S, h] = a.useState(!1), {
-editingRule: g,
-createNewEditingRule: C
-  } = (0, _.V)(), {
-getDefaultRuleName: x
-  } = u.I6[n], p = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), R = !(0, d.Vb)(g) && (null == g ? void 0 : g.triggerType) === n, [f, L] = a.useState(R ? g : N), O = (0, i.useSpring)({
-opacity: R ? 0 : 1,
-pointerEvents: R ? 'none' : 'all',
+  ]), [T] = a.useState(E), [m, N] = a.useState(!1), {
+editingRule: S,
+createNewEditingRule: h
+  } = (0, d.V)(), {
+getDefaultRuleName: g
+  } = c.I6[n], C = !(0, o.Vb)(S) && (null == S ? void 0 : S.triggerType) === n, [x, p] = a.useState(C ? S : T), R = (0, l.useSpring)({
+opacity: C ? 0 : 1,
+pointerEvents: C ? 'none' : 'all',
+config: {
+  ...i.config.stiff,
+  clamp: !0
+}
+  }), f = (0, l.useSpring)({
+opacity: C ? 1 : 0,
+pointerEvents: C ? 'all' : 'none',
 config: {
   ...i.config.stiff,
   clamp: !0
 },
-immediate: p
-  }), A = (0, i.useSpring)({
-opacity: R ? 1 : 0,
-pointerEvents: R ? 'all' : 'none',
-config: {
-  ...i.config.stiff,
-  clamp: !0
-},
-immediate: p,
 onStart: () => {
-  L(R ? g : N);
+  p(C ? S : T);
 },
 onRest: () => {
-  L(R ? g : N), h(R);
+  p(C ? S : T), N(C);
 }
   });
-  return null == g || R ? (0, s.jsxs)('div', {
-className: T.mainRuleContainer,
+  return null == S || C ? (0, s.jsxs)('div', {
+className: I.mainRuleContainer,
 style: {
-  height: R ? 'auto' : '60px'
+  height: C ? 'auto' : '60px'
 },
 children: [
   (0, s.jsx)(i.animated.div, {
-    className: T.animatedRuleCardContainer,
-    style: A,
-    children: (0, s.jsx)(I.Z, {
-      rule: f,
-      persistEdit: S
+    className: I.animatedRuleCardContainer,
+    style: f,
+    children: (0, s.jsx)(u.Z, {
+      rule: x,
+      persistEdit: m
     })
   }),
   (0, s.jsx)(i.animated.div, {
-    className: T.animatedNewRuleContainer,
-    style: O,
-    children: (0, s.jsxs)(o.Clickable, {
-      className: T.addAnotherRuleCardContainer,
+    className: I.animatedNewRuleContainer,
+    style: R,
+    children: (0, s.jsxs)(l.Clickable, {
+      className: I.addAnotherRuleCardContainer,
       onClick: () => {
-        C(t, n);
+        h(t, n);
       },
       children: [
-        (0, s.jsx)(o.CirclePlusIcon, {
+        (0, s.jsx)(l.CirclePlusIcon, {
           size: 'custom',
           width: 20,
           height: 20,
           color: r.Z.BLUE_345,
-          className: T.plusIcon
+          className: I.plusIcon
         }),
-        (0, s.jsx)(o.Text, {
+        (0, s.jsx)(l.Text, {
           variant: 'text-md/semibold',
           color: 'text-link',
-          children: E.Z.Messages.GUILD_AUTOMOD_ADD_ADDITIONAL_RULE.format({
-            ruleName: x()
+          children: _.Z.Messages.GUILD_AUTOMOD_ADD_ADDITIONAL_RULE.format({
+            ruleName: g()
           })
         })
       ]

@@ -3,9 +3,9 @@ t.d(A, {
 return i;
   }
 });
-var n = t(735250);
+var a = t(735250);
 t(470079);
-var a = t(952265),
+var n = t(952265),
   r = t(776045),
   s = t(871388),
   o = t(981631),
@@ -25,11 +25,11 @@ case o.evJ.GUILD_PRODUCT_LISTING_CANNOT_PUBLISH_WITHOUT_BENEFIT:
   break;
 case o.evJ.MONETIZATION_TERMS_NOT_ACCEPTED:
   ;
-  d = A, (0, a.ZD)(async () => {
+  d = A, (0, n.ZD)(async () => {
     let {
       default: e
     } = await t.e('31835').then(t.bind(t, 393809));
-    return A => (0, n.jsx)(e, {
+    return A => (0, a.jsx)(e, {
       guildId: d,
       ...A
     });

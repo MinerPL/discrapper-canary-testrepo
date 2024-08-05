@@ -1,6 +1,6 @@
 n(47120);
-var r, i, a, o, s = n(392711),
-  l = n.n(s),
+var r, i, a, s, o = n(392711),
+  l = n.n(o),
   u = n(149765),
   c = n(442837),
   d = n(570140),
@@ -52,8 +52,8 @@ return S.Hn;
   if (null == i)
 return S.Hn;
   let a = i.getGuildId(),
-o = null != a && (E.Z.isLurking(a) || (null === (t = v.ZP.getMember(a, r.id)) || void 0 === t ? void 0 : t.isPending));
-  return !i.isScheduledForDeletion() && !o && l().isEmpty(i.permissionOverwrites) && null != a ? P(a) : S.uB({
+s = null != a && (E.Z.isLurking(a) || (null === (t = v.ZP.getMember(a, r.id)) || void 0 === t ? void 0 : t.isPending));
+  return !i.isScheduledForDeletion() && !s && l().isEmpty(i.permissionOverwrites) && null != a ? P(a) : S.uB({
 user: r,
 context: i,
 checkElevated: n
@@ -226,8 +226,8 @@ let i = R.default.getCurrentUser();
 if (!this.can(e, n))
   return !1;
 let a = null != i ? S.e9(n, i.id) : void 0,
-  o = S.e9(n, r);
-return null != i && S.r6(n, i.id, a, o);
+  s = S.e9(n, r);
+return null != i && S.r6(n, i.id, a, s);
   }
   getHighestRole(e) {
 let t = R.default.getCurrentUser();
@@ -256,12 +256,12 @@ return M;
 function z() {
   L = {}, D = {}, b = {}, M = 0;
 }
-o = 'PermissionStore', (a = 'displayName') in(i = K) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'PermissionStore', (a = 'displayName') in(i = K) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new K(d.Z, {
+}) : i[a] = s, t.Z = new K(d.Z, {
   BACKGROUND_SYNC: k,
   CONNECTION_OPEN: k,
   OVERLAY_INITIALIZE: k,

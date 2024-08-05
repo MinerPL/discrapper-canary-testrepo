@@ -1,9 +1,9 @@
 t.d(n, {
   k: function() {
-return i;
+return r;
   }
 });
-let i = {
+let r = {
   id: '0',
   name: '',
   mentionable: !1,

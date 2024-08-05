@@ -24,15 +24,15 @@ return E;
 var r = n(735250),
   i = n(470079),
   a = n(585483),
-  o = n(830917),
-  s = n(919570),
+  s = n(830917),
+  o = n(919570),
   l = n(981631);
 let u = new a.b(),
   c = i.createContext({
 appContext: l.IlC.APP,
 renderWindow: window,
 windowDispatch: u,
-windowId: (0, o.UU)()
+windowId: (0, s.UU)()
   }),
   d = new Map();
 
@@ -41,7 +41,7 @@ function _(e) {
   let n = e.ownerDocument.defaultView;
   if (null == n)
 return;
-  let r = (0, o.ZY)(n);
+  let r = (0, s.ZY)(n);
   return null === (t = d.get(r)) || void 0 === t ? void 0 : t.windowDispatch;
 }
 
@@ -52,7 +52,7 @@ function E(e) {
 function f() {
   let e = function() {
 var e;
-let t = (0, s.GR)();
+let t = (0, o.GR)();
 return null == t ? null : null !== (e = d.get(t)) && void 0 !== e ? e : null;
   }();
   return null != e ? e.appContext : null;
@@ -63,8 +63,8 @@ function h(e) {
 appContext: t,
 renderWindow: n,
 children: i
-  } = e, s = function(e, t) {
-let n = (0, o.ZY)(t),
+  } = e, o = function(e, t) {
+let n = (0, s.ZY)(t),
   r = d.get(n);
 return null == r && (r = {
   appContext: e,
@@ -76,7 +76,7 @@ return null == r && (r = {
 })), r;
   }(t, n);
   return (0, r.jsx)(c.Provider, {
-value: s,
+value: o,
 children: i
   });
 }

@@ -6,35 +6,35 @@ var s = n(735250),
   o = n(481060),
   c = n(812206),
   u = n(388905),
-  d = n(479446),
+  d = n(925329),
+  _ = n(479446),
   h = n(981632),
-  _ = n(594174),
-  E = n(509545),
-  g = n(55563),
-  p = n(366695),
-  f = n(296848),
-  I = n(981631),
-  m = n(474936),
+  E = n(594174),
+  g = n(509545),
+  p = n(55563),
+  I = n(296848),
+  m = n(981631),
+  f = n(474936),
   N = n(689938),
   T = n(607348),
   x = n(483085),
   A = n(549856);
 t.Z = l.ZP.connectStores([
-  g.Z,
+  p.Z,
   c.Z,
-  E.Z,
-  _.default
+  g.Z,
+  E.default
 ], e => {
   let {
 giftCode: t
-  } = e, n = g.Z.get(t.skuId), {
+  } = e, n = p.Z.get(t.skuId), {
 subscriptionPlanId: s
   } = t;
   return {
 sku: n,
-subscriptionPlan: null != s ? (0, f.oE)(s) : null,
+subscriptionPlan: null != s ? (0, I.oE)(s) : null,
 application: c.Z.getApplication(n.applicationId),
-gifter: _.default.getUser(t.userId)
+gifter: E.default.getUser(t.userId)
   };
 })(e => {
   let {
@@ -43,17 +43,17 @@ giftCode: n,
 gifter: i,
 sku: l,
 application: c,
-subscriptionPlan: _
-  } = e, E = null == i ? N.Z.Messages.GIFT_CODE_AUTH_GIFTED : N.Z.Messages.GIFT_CODE_AUTH_GIFTED_BY.format({
+subscriptionPlan: E
+  } = e, g = null == i ? N.Z.Messages.GIFT_CODE_AUTH_GIFTED : N.Z.Messages.GIFT_CODE_AUTH_GIFTED_BY.format({
 username: i.username
-  }), g = l.name;
-  return null != _ && (g = (_.interval === m.rV.MONTH ? N.Z.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_MONTHLY : N.Z.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_YEARLY).format({
+  }), p = l.name;
+  return null != E && (p = (E.interval === f.rV.MONTH ? N.Z.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_MONTHLY : N.Z.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_YEARLY).format({
 skuName: l.name,
-intervalCount: _.intervalCount
+intervalCount: E.intervalCount
   })), (0, s.jsxs)(r.Fragment, {
 children: [
   null != n.giftStyle ? (0, s.jsx)(h.Z, {
-    defaultAnimationState: d.S.LOOP,
+    defaultAnimationState: _.S.LOOP,
     giftStyle: n.giftStyle,
     className: T.seasonalIcon
   }) : (0, s.jsx)(u.qE, {
@@ -73,18 +73,18 @@ children: [
   }) : (0, s.jsxs)(r.Fragment, {
     children: [
       (0, s.jsx)(u.DK, {
-        children: E
+        children: g
       }),
       (0, s.jsxs)(u.Dx, {
         className: a()(A.marginTop8, x.flexCenter),
         children: [
-          l.productLine !== I.POd.COLLECTIBLES && (0, s.jsx)(p.Z, {
-            size: p.Z.Sizes.MEDIUM,
+          l.productLine !== m.POd.COLLECTIBLES && (0, s.jsx)(d.Z, {
+            size: d.Z.Sizes.MEDIUM,
             className: T.applicationIcon,
             game: c,
             skuId: l.id
           }),
-          g
+          p
         ]
       })
     ]

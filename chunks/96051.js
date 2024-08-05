@@ -1,6 +1,6 @@
 var i = n(570140),
-  s = n(317770),
-  a = n(117984);
+  a = n(317770),
+  s = n(117984);
 
 function r(e) {
   let {
@@ -8,9 +8,9 @@ channel: {
   id: t
 }
   } = e;
-  (0, a.oC)(t);
+  (0, s.oC)(t);
 }
-class l extends s.Z {
+class l extends a.Z {
   _initialize() {
 i.Z.subscribe('CHANNEL_DELETE', r);
   }

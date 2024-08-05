@@ -3,7 +3,7 @@ n.d(t, {
 return c;
   },
   e: function() {
-return s;
+return o;
   }
 });
 let r = new Map(),
@@ -20,7 +20,7 @@ style: 'unit',
 unit: 'degree'
   }).resolvedOptions().style;
 } catch (e) {}
-let o = {
+let s = {
   degree: {
 narrow: {
   default: '\xB0',
@@ -30,7 +30,7 @@ narrow: {
 }
   }
 };
-class s {
+class o {
   format(e) {
 let t = '';
 if (t = i || null == this.options.signDisplay ? this.numberFormatter.format(e) : function(e, t, n) {
@@ -58,7 +58,7 @@ if (t = i || null == this.options.signDisplay ? this.numberFormatter.format(e) :
   } = this.resolvedOptions();
   if (!e)
     return t;
-  let a = null === (n = o[e]) || void 0 === n ? void 0 : n[r];
+  let a = null === (n = s[e]) || void 0 === n ? void 0 : n[r];
   t += a[i] || a.default;
 }
 return t;
@@ -121,18 +121,18 @@ this.numberFormatter = function(e, t = {}) {
     } = t;
     if (!e)
       throw Error('unit option must be provided with style: "unit"');
-    if (!(null === (i = o[e]) || void 0 === i ? void 0 : i[n]))
+    if (!(null === (i = s[e]) || void 0 === i ? void 0 : i[n]))
       throw Error(`Unsupported unit ${ e } with unitDisplay = ${ n }`);
     t = {
       ...t,
       style: 'decimal'
     };
   }
-  let s = e + (t ? Object.entries(t).sort((e, t) => e[0] < t[0] ? -1 : 1).join() : '');
-  if (r.has(s))
-    return r.get(s);
+  let o = e + (t ? Object.entries(t).sort((e, t) => e[0] < t[0] ? -1 : 1).join() : '');
+  if (r.has(o))
+    return r.get(o);
   let l = new Intl.NumberFormat(e, t);
-  return r.set(s, l), l;
+  return r.set(o, l), l;
 }(e, t), this.options = t;
   }
 }
@@ -194,7 +194,7 @@ if ('percent' === this.options.style) {
     minimumFractionDigits: Math.min(this.options.minimumFractionDigits + 2, 20),
     maximumFractionDigits: Math.min(this.options.maximumFractionDigits + 2, 20)
   };
-  return new c(this.locale, e).parse(new s(this.locale, e).format(n));
+  return new c(this.locale, e).parse(new o(this.locale, e).format(n));
 }
 return 'accounting' === this.options.currencySign && l.test(e) && (n *= -1), n;
   }
@@ -207,7 +207,7 @@ return e = this.sanitize(e), this.symbols.minusSign && e.startsWith(this.symbols
   constructor(e, t = {}) {
 var n, r;
 this.locale = e, this.formatter = new Intl.NumberFormat(e, t), this.options = this.formatter.resolvedOptions(), this.symbols = function(e, t, n, r) {
-  var i, a, o, s, l;
+  var i, a, s, o, l;
   let u = new Intl.NumberFormat(e, {
       ...n,
       minimumSignificantDigits: 1,
@@ -219,12 +219,12 @@ this.locale = e, this.formatter = new Intl.NumberFormat(e, t), this.options = th
     E = null !== (l = null === (i = c.find(e => 'minusSign' === e.type)) || void 0 === i ? void 0 : i.value) && void 0 !== l ? l : '-',
     f = null === (a = d.find(e => 'plusSign' === e.type)) || void 0 === a ? void 0 : a.value;
   !f && ((null == r ? void 0 : r.signDisplay) === 'exceptZero' || (null == r ? void 0 : r.signDisplay) === 'always') && (f = '+');
-  let m = null === (o = new Intl.NumberFormat(e, {
+  let m = null === (s = new Intl.NumberFormat(e, {
       ...n,
       minimumFractionDigits: 2,
       maximumFractionDigits: 2
-    }).formatToParts(0.001).find(e => 'decimal' === e.type)) || void 0 === o ? void 0 : o.value,
-    T = null === (s = c.find(e => 'group' === e.type)) || void 0 === s ? void 0 : s.value,
+    }).formatToParts(0.001).find(e => 'decimal' === e.type)) || void 0 === s ? void 0 : s.value,
+    T = null === (o = c.find(e => 'group' === e.type)) || void 0 === o ? void 0 : o.value,
     g = [...new Set([
       ...c.filter(e => !h.has(e.type)).map(e => I(e.value)),
       ..._.flatMap(e => e.filter(e => !h.has(e.type)).map(e => I(e.value)))

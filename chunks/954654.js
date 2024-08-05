@@ -1,90 +1,95 @@
-n.d(l, {
+t.d(n, {
   ZP: function() {
-return C;
+return I;
   },
   xX: function() {
-return h;
+return x;
   }
 });
-var t = n(735250);
-n(470079);
-var i = n(120356),
-  r = n.n(i),
-  a = n(911969),
-  s = n(970184),
-  u = n(987106),
-  o = n(927057),
-  d = n(574597),
-  c = n(378975),
-  m = n(413991),
-  p = n(12067),
-  f = n(676149),
-  v = n(861529),
-  E = n(889515),
-  N = n(800062);
+var l = t(735250);
+t(470079);
+var r = t(120356),
+  i = t.n(r),
+  a = t(911969),
+  o = t(970184),
+  s = t(987106),
+  c = t(927057),
+  u = t(574597),
+  d = t(378975),
+  m = t(413991),
+  f = t(12067),
+  _ = t(676149),
+  p = t(861529),
+  v = t(770009),
+  C = t(889515),
+  h = t(800062);
 
-function h(e) {
-  return e.map((e, l) => function(e, l) {
+function x(e) {
+  return e.map((e, n) => function(e, n) {
 switch (e.type) {
   case a.re.ACTION_ROW:
-    return (0, t.jsx)(E.Z, {
+    return (0, l.jsx)(C.Z, {
       ...e,
-      renderComponents: h
-    }, l);
+      renderComponents: x
+    }, n);
   case a.re.BUTTON:
-    return (0, t.jsx)(u.Z, {
+    return (0, l.jsx)(s.Z, {
       ...e
-    }, l);
+    }, n);
   case a.re.STRING_SELECT:
-    return (0, t.jsx)(c.Z, {
+    return (0, l.jsx)(d.Z, {
       ...e
-    }, l);
+    }, n);
   case a.re.CHANNEL_SELECT:
-    return (0, t.jsx)(o.Z, {
+    return (0, l.jsx)(c.Z, {
       ...e
-    }, l);
+    }, n);
   case a.re.USER_SELECT:
   case a.re.ROLE_SELECT:
   case a.re.MENTIONABLE_SELECT:
-    return (0, t.jsx)(d.Z, {
+    return (0, l.jsx)(u.Z, {
       ...e
-    }, l);
+    }, n);
   case a.re.INPUT_TEXT:
-    return (0, t.jsx)(m.Z, {
+    return (0, l.jsx)(m.Z, {
       ...e
-    }, l);
+    }, n);
   case a.re.TEXT:
-    return (0, t.jsx)(v.Z, {
+    return (0, l.jsx)(p.Z, {
       ...e
-    }, l);
+    }, n);
   case a.re.MEDIA_GALLERY:
-    return (0, t.jsx)(p.Z, {
+    return (0, l.jsx)(f.Z, {
       ...e
-    }, l);
+    }, n);
   case a.re.SEPARATOR:
-    return (0, t.jsx)(f.Z, {
+    return (0, l.jsx)(_.Z, {
       ...e
-    }, l);
+    }, n);
+  case a.re.CONTENT_INVENTORY_ENTRY:
+    return (0, l.jsx)(v.Z, {
+      ...e
+    }, n);
 }
-  }(e, l.toString()));
+  }(e, n.toString()));
 }
 
-function C(e) {
+function I(e) {
   let {
-message: l
+message: n
   } = e, {
-components: n
-  } = l;
-  return 0 === n.length ? null : (0, t.jsx)('div', {
-className: r()([
-  N.container,
+components: t
+  } = n;
+  return 0 === t.length ? null : (0, l.jsx)('div', {
+className: i()([
+  h.container,
   {
-    [N.containerUikit]: l.isUIKitComponents()
+    [h.containerUikit]: n.isUIKitComponents()
   }
 ]),
-children: (0, t.jsx)(s.Il, {
-  message: l,
-  children: h(n)
+children: (0, l.jsx)(o.Il, {
+  message: n,
+  children: x(t)
 })
   });
 }

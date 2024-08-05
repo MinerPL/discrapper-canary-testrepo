@@ -2,8 +2,8 @@ var r = n(706178);
 e.exports = m, m.simpleSieve = h, m.fermatTest = p;
 var i = n(814033),
   a = new i(24),
-  o = new(n(687363))(),
-  s = new i(1),
+  s = new(n(687363))(),
+  o = new i(1),
   l = new i(2),
   u = new i(5);
 new i(16), new i(8);
@@ -53,14 +53,14 @@ return 2 === t || 5 === t ? new i([
   for (t = new i(t);;) {
 for (n = new i(r(Math.ceil(e / 8))); n.bitLength() > e;)
   n.ishrn(1);
-if (n.isEven() && n.iadd(s), !n.testn(1) && n.iadd(l), t.cmp(l)) {
+if (n.isEven() && n.iadd(o), !n.testn(1) && n.iadd(l), t.cmp(l)) {
   if (!t.cmp(u))
     for (; n.mod(c).cmp(d);)
       n.iadd(E);
 } else
   for (; n.mod(a).cmp(_);)
     n.iadd(E);
-if (h(f = n.shrn(1)) && h(n) && p(f) && p(n) && o.test(f) && o.test(n))
+if (h(f = n.shrn(1)) && h(n) && p(f) && p(n) && s.test(f) && s.test(n))
   return n;
   }
 }

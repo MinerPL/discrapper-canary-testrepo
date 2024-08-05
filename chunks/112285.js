@@ -1,4 +1,4 @@
-var r, i, a, o, s = n(161581),
+var r, i, a, s, o = n(161581),
   l = n(197187),
   u = n(566885),
   c = n(354848),
@@ -10,18 +10,18 @@ var r, i, a, o, s = n(161581),
   p = n(202934),
   m = n(531460),
   I = n(391673),
-  T = s.setImmediate,
-  g = s.clearImmediate,
-  S = s.process,
-  A = s.Dispatch,
-  N = s.Function,
-  v = s.MessageChannel,
-  O = s.String,
+  T = o.setImmediate,
+  g = o.clearImmediate,
+  S = o.process,
+  A = o.Dispatch,
+  N = o.Function,
+  v = o.MessageChannel,
+  O = o.String,
   R = 0,
   C = {},
   y = 'onreadystatechange';
 _(function() {
-  r = s.location;
+  r = o.location;
 });
 var D = function(e) {
 if (d(C, e)) {
@@ -38,7 +38,7 @@ return function() {
 D(e.data);
   },
   M = function(e) {
-s.postMessage(O(e), r.protocol + '//' + r.host);
+o.postMessage(O(e), r.protocol + '//' + r.host);
   };
 (!T || !g) && (T = function(e) {
   p(arguments.length, 1);
@@ -53,7 +53,7 @@ l(t, void 0, n);
   S.nextTick(L(e));
 } : A && A.now ? i = function(e) {
   A.now(L(e));
-} : v && !m ? (o = (a = new v()).port2, a.port1.onmessage = b, i = u(o.postMessage, o)) : s.addEventListener && c(s.postMessage) && !s.importScripts && r && 'file:' !== r.protocol && !_(M) ? (i = M, s.addEventListener('message', b, !1)) : i = y in h('script') ? function(e) {
+} : v && !m ? (s = (a = new v()).port2, a.port1.onmessage = b, i = u(s.postMessage, s)) : o.addEventListener && c(o.postMessage) && !o.importScripts && r && 'file:' !== r.protocol && !_(M) ? (i = M, o.addEventListener('message', b, !1)) : i = y in h('script') ? function(e) {
   E.appendChild(h('script'))[y] = function() {
 E.removeChild(this), D(e);
   };

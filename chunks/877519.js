@@ -2,8 +2,8 @@ n(47120);
 var r = n(147913),
   i = n(70956),
   a = n(272008),
-  o = n(569984),
-  s = n(977156),
+  s = n(569984),
+  o = n(977156),
   l = n(46140);
 
 function u(e, t, n) {
@@ -21,9 +21,9 @@ let c = i.Z.Millis.DAY,
   f = 12 * i.Z.Millis.HOUR;
 class h extends r.Z {
   _fetch() {
-if (!!(0, s.cB)({
+if (!!(0, o.cB)({
     location: l.dr.QUESTS_MANAGER
-  }) && !o.Z.isFetchingCurrentQuests)
+  }) && !s.Z.isFetchingCurrentQuests)
   (0, a.xw)();
   }
   constructor(...e) {
@@ -33,10 +33,10 @@ super(...e), u(this, 'instantiatedAt', Date.now()), u(this, 'initialFetchTimerId
   window.clearTimeout(this.initialFetchTimerId), window.clearTimeout(this.recurringFetchTimerId), this.recurringFetchTimerId = window.setInterval(() => {
     Date.now() - this.lastFetchAttemptedAt > c && (this.lastFetchAttemptedAt = Date.now(), this._fetch());
   }, d), this.initialFetchTimerId = window.setTimeout(() => {
-    0 === o.Z.lastFetchedCurrentQuests && this._fetch();
+    0 === s.Z.lastFetchedCurrentQuests && this._fetch();
   }, Math.floor(Math.random() * _));
 }), u(this, 'handleRunningGamesChange', () => {
-  if (!(this.instantiatedAt + f > Date.now() || o.Z.lastFetchedCurrentQuests + f > Date.now()))
+  if (!(this.instantiatedAt + f > Date.now() || s.Z.lastFetchedCurrentQuests + f > Date.now()))
     this._fetch();
 }), u(this, 'handleUserSettingsProtoUpdate', e => {
   let {

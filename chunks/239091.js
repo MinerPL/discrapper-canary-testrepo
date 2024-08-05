@@ -12,8 +12,8 @@ return c;
 var r = n(570140),
   i = n(40851),
   a = n(358085),
-  o = n(601993),
-  s = n(981631);
+  s = n(601993),
+  o = n(981631);
 
 function l(e) {
   r.Z.dispatch({
@@ -59,12 +59,12 @@ renderLazy: r,
 target: null !== (c = e.target) && void 0 !== c ? c : e.currentTarget,
 rect: new DOMRect(_, E, 0, 0),
 config: {
-  context: __OVERLAY__ ? s.IlC.OVERLAY : null !== (d = (0, i.GB)()) && void 0 !== d ? d : s.IlC.APP,
+  context: __OVERLAY__ ? o.IlC.OVERLAY : null !== (d = (0, i.GB)()) && void 0 !== d ? d : o.IlC.APP,
   ...n
 }
   };
   if ((null == n ? void 0 : n.enableSpellCheck) && (0, a.isDesktop)()) {
-let e = (0, o.RD)(() => {
+let e = (0, s.RD)(() => {
   e(), l(f);
 });
   } else

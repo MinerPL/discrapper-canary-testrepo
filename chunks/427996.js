@@ -1,59 +1,62 @@
 n.d(t, {
   W: function() {
-return d;
+return p;
   }
 });
 var i = n(735250);
 n(470079);
-var l = n(399606),
-  r = n(481060),
-  a = n(337682),
-  o = n(115130),
-  u = n(689938),
-  c = n(903526);
+var l = n(120356),
+  r = n.n(l),
+  a = n(399606),
+  o = n(481060),
+  u = n(337682),
+  c = n(115130),
+  d = n(689938),
+  s = n(903526);
 
-function d(e) {
+function p(e) {
   let {
-hideSearch: t
+hideSearch: t,
+className: n
   } = e, {
-activityUrlOverride: n,
-useActivityUrlOverride: d,
-filter: s
-  } = (0, l.cj)([o.Z], () => ({
-activityUrlOverride: o.Z.getActivityUrlOverride(),
-useActivityUrlOverride: o.Z.getUseActivityUrlOverride(),
-filter: o.Z.getFilter()
+activityUrlOverride: l,
+useActivityUrlOverride: p,
+filter: f
+  } = (0, a.cj)([c.Z], () => ({
+activityUrlOverride: c.Z.getActivityUrlOverride(),
+useActivityUrlOverride: c.Z.getUseActivityUrlOverride(),
+filter: c.Z.getFilter()
   }), []);
   return (0, i.jsxs)('div', {
-className: c.container,
+className: r()(s.container, n),
 children: [
-  (0, i.jsx)(r.Checkbox, {
-    type: r.Checkbox.Types.INVERTED,
-    className: c.__invalid_checkbox,
-    value: d,
-    onClick: a.Y$,
-    children: (0, i.jsx)(r.Text, {
+  (0, i.jsx)(o.Checkbox, {
+    type: o.Checkbox.Types.INVERTED,
+    className: s.__invalid_checkbox,
+    value: p,
+    onClick: u.Y$,
+    children: (0, i.jsx)(o.Text, {
       variant: 'text-md/semibold',
-      children: u.Z.Messages.EMBEDDED_ACTIVITIES_USE_ACTIVITY_URL_OVERRIDE
+      children: d.Z.Messages.EMBEDDED_ACTIVITIES_USE_ACTIVITY_URL_OVERRIDE
     })
   }),
-  (0, i.jsx)(r.FormItem, {
-    className: c.__invalid_urlOverride,
-    title: u.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_URL_OVERRIDE,
-    children: (0, i.jsx)(r.TextInput, {
-      disabled: !d,
-      value: null != n ? n : void 0,
-      onChange: a.jS,
-      placeholder: 'http://localhost:3000'
+  (0, i.jsx)(o.FormItem, {
+    className: s.__invalid_urlOverride,
+    title: d.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_URL_OVERRIDE,
+    children: (0, i.jsx)(o.TextInput, {
+      disabled: !p,
+      value: null != l ? l : void 0,
+      onChange: u.jS,
+      placeholder: 'https://localhost:3000'
     })
   }),
   !0 === t ? null : (0, i.jsx)('div', {
-    children: (0, i.jsx)(r.SearchBar, {
-      className: c.searchBar,
-      query: s,
-      onChange: a.a8,
+    children: (0, i.jsx)(o.SearchBar, {
+      className: s.searchBar,
+      query: f,
+      onChange: u.a8,
       onClear: function() {
-        a.a8('');
+        u.a8('');
       }
     })
   })

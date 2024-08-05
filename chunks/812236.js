@@ -12,8 +12,8 @@ return l;
 var r = n(911969),
   i = n(592125),
   a = n(963456),
-  o = n(213459),
-  s = n(367790);
+  s = n(213459),
+  o = n(367790);
 let l = 'no primary app command for application';
 async function u(e, t) {
   let n, r = i.Z.getChannel(e);
@@ -35,23 +35,25 @@ return n;
 }
 
 function c(e, t) {
-  return o.ZP.query(e, {
+  return s.ZP.query(e, {
 commandType: r.yU.PRIMARY_ENTRY_POINT
   }, {
 placeholderCount: 1,
-scoreMethod: s.p.COMMAND_ONLY,
+scoreMethod: o.p.COMMAND_ONLY,
 applicationId: t,
-allowFetch: !1
+allowFetch: !1,
+allowApplicationState: !0
   });
 }
 
 function d(e, t) {
-  return (0, o.v1)(e, {
+  return (0, s.v1)(e, {
 commandType: r.yU.PRIMARY_ENTRY_POINT
   }, {
 placeholderCount: 1,
-scoreMethod: s.p.COMMAND_ONLY,
+scoreMethod: o.p.COMMAND_ONLY,
 applicationId: t,
-allowFetch: !1
+allowFetch: !1,
+allowApplicationState: !0
   });
 }

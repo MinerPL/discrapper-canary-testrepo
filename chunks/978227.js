@@ -1,19 +1,19 @@
-n.d(l, {
+l.d(n, {
   Z: function() {
-return r;
+return o;
   }
 });
-var s = n(470079),
-  t = n(442837),
-  a = n(749210),
-  i = n(594174);
+var s = l(470079),
+  t = l(442837),
+  a = l(749210),
+  i = l(594174);
 
-function r(e) {
-  let l = (0, t.e7)([i.default], () => i.default.getUser(null == e ? void 0 : e.creator_id), [e]);
+function o(e) {
+  let n = (0, t.e7)([i.default], () => i.default.getUser(null == e ? void 0 : e.creator_id), [e]);
   return s.useEffect(() => {
-null == l && (null == e ? void 0 : e.creator_id) != null && a.Z.requestMembersById(e.guild_id, e.creator_id);
+null == n && (null == e ? void 0 : e.creator_id) != null && a.Z.requestMembersById(e.guild_id, e.creator_id);
   }, [
 e,
-l
-  ]), l;
+n
+  ]), n;
 }

@@ -1,9 +1,9 @@
 n.d(t, {
   J6: function() {
-return s;
+return o;
   },
   bd: function() {
-return o;
+return s;
   },
   pA: function() {
 return l;
@@ -11,12 +11,12 @@ return l;
 });
 var r, i, a = n(950419);
 (r = i || (i = {}))[r.IMAGE = 0] = 'IMAGE', r[r.DOCUMENT = 1] = 'DOCUMENT', r[r.CODE = 2] = 'CODE';
-let o = {
+let s = {
 0: a.image,
 1: a.document,
 2: a.code
   },
-  s = [
+  o = [
 1,
 0,
 2

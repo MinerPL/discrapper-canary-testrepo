@@ -2,8 +2,8 @@ n(757143), n(653041), n(47120);
 var r = n(392711),
   i = n.n(r),
   a = n(302454),
-  o = n.n(a),
-  s = n(797610),
+  s = n.n(a),
+  o = n(797610),
   l = n(633302),
   u = n(763296),
   c = n(592125),
@@ -57,14 +57,14 @@ return null == t ? void 0 : t.getGuildId();
   },
   w = e => null != e.guildId ? d.Z.getGuild(e.guildId) : null != e.channelId ? d.Z.getGuild(U(e.channelId)) : null,
   x = {
-newline: o().defaultRules.newline,
-paragraph: o().defaultRules.paragraph,
+newline: s().defaultRules.newline,
+paragraph: s().defaultRules.paragraph,
 escape: {
-  ...o().defaultRules.escape,
-  match: (e, t, n) => !1 === t.allowEscape ? null : o().defaultRules.escape.match(e, t, n)
+  ...s().defaultRules.escape,
+  match: (e, t, n) => !1 === t.allowEscape ? null : s().defaultRules.escape.match(e, t, n)
 },
 blockQuote: {
-  ...o().defaultRules.blockQuote,
+  ...s().defaultRules.blockQuote,
   requiredFirstCharacters: [
     ' ',
     '>'
@@ -86,12 +86,12 @@ blockQuote: {
     let r = e[0],
       i = !!b.exec(r),
       a = i ? b : M,
-      o = r.replace(a, ''),
-      s = n.inQuote || !1,
+      s = r.replace(a, ''),
+      o = n.inQuote || !1,
       l = n.inline || !1;
     n.inQuote = !0, !i && (n.inline = !0);
-    let u = t(o, n);
-    return n.inQuote = s, n.inline = l, 0 === u.length && u.push({
+    let u = t(s, n);
+    return n.inQuote = o, n.inline = l, 0 === u.length && u.push({
       type: 'text',
       content: ' '
     }), {
@@ -102,11 +102,11 @@ blockQuote: {
 },
 link: I.ZP,
 autolink: {
-  ...o().defaultRules.autolink,
+  ...s().defaultRules.autolink,
   parse: P
 },
 url: {
-  ...o().defaultRules.url,
+  ...s().defaultRules.url,
   requiredFirstCharacters: [
     'h',
     's'
@@ -133,15 +133,15 @@ url: {
   },
   parse: P
 },
-strong: o().defaultRules.strong,
-em: o().defaultRules.em,
-u: o().defaultRules.u,
-br: o().defaultRules.br,
+strong: s().defaultRules.strong,
+em: s().defaultRules.em,
+u: s().defaultRules.u,
+br: s().defaultRules.br,
 text: S.ZP,
 inlineCode: {
-  ...o().defaultRules.inlineCode,
+  ...s().defaultRules.inlineCode,
   parse(e, t, n) {
-    let r = o().defaultRules.inlineCode.parse(e, t, n);
+    let r = s().defaultRules.inlineCode.parse(e, t, n);
     return !0 === n.parseInlineCodeChildContent ? {
       ...r,
       validationChildContent: t(r.content, n)
@@ -158,7 +158,7 @@ emoticon: {
   })
 },
 codeBlock: {
-  order: o().defaultRules.codeBlock.order,
+  order: s().defaultRules.codeBlock.order,
   requiredFirstCharacters: ['`'],
   match: e => /^```(?:([a-z0-9_+\-.#]+?)\n)?\n*([^\n][^]*?)\n*```/i.exec(e),
   parse(e, t, n) {
@@ -182,8 +182,8 @@ roleMention: {
         id: i
       };
     let a = w(n),
-      o = null != a ? d.Z.getRole(a.id, i) : null;
-    return null == o ? {
+      s = null != a ? d.Z.getRole(a.id, i) : null;
+    return null == s ? {
       type: 'text',
       content: '@'.concat(y.Z.Messages.UNKNOWN_ROLE_PLACEHOLDER)
     } : {
@@ -191,13 +191,13 @@ roleMention: {
       channelId: n.channelId,
       guildId: null != a ? a.id : null,
       roleId: i,
-      roleColor: o.color,
-      roleName: '@'.concat(o.name),
-      color: o.color,
-      colorString: o.colorString,
+      roleColor: s.color,
+      roleName: '@'.concat(s.name),
+      color: s.color,
+      colorString: s.colorString,
       content: [{
         type: 'text',
-        content: '@'.concat(o.name)
+        content: '@'.concat(s.name)
       }]
     };
   }
@@ -210,7 +210,7 @@ mention: {
   ],
   match(e, t) {
     let n = /^<@!?(\d+)>|^(@(?:everyone|here|Clyde))/.exec(e);
-    return null != n && ('@Clyde' !== n[0] || (0, s.gJ)(w(t), c.Z.getChannel(t.channelId))) ? n : null;
+    return null != n && ('@Clyde' !== n[0] || (0, o.gJ)(w(t), c.Z.getChannel(t.channelId))) ? n : null;
   },
   parse(e, t, n) {
     let r, i;
@@ -223,12 +223,12 @@ mention: {
         id: e[1]
       };
     let a = _.default.getUser(e[1]),
-      o = c.Z.getChannel(n.channelId);
-    if (null != a && (i = a.id, r = a.toString(), null != o)) {
+      s = c.Z.getChannel(n.channelId);
+    if (null != a && (i = a.id, r = a.toString(), null != s)) {
       var l;
-      r = null !== (l = E.ZP.getNickname(o.getGuildId(), n.channelId, a)) && void 0 !== l ? l : f.ZP.getName(a);
+      r = null !== (l = E.ZP.getNickname(s.getGuildId(), n.channelId, a)) && void 0 !== l ? l : f.ZP.getName(a);
     }
-    null == a && '@Clyde' === e[0] && (0, s.gJ)(w(n), o) && (i = C.fL);
+    null == a && '@Clyde' === e[0] && (0, o.gJ)(w(n), s) && (i = C.fL);
     let u = e[1],
       d = null != u && O.Xyh.test(u.trim()),
       h = d && n.unknownUserMentionPlaceholder ? '@'.concat(y.Z.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
@@ -236,7 +236,7 @@ mention: {
       userId: i,
       channelId: n.channelId,
       viewingChannelId: n.viewingChannelId,
-      guildId: null == o ? void 0 : o.getGuildId(),
+      guildId: null == s ? void 0 : s.getGuildId(),
       parsedUserId: d ? u : null,
       roleName: e[2],
       content: [{
@@ -251,7 +251,7 @@ channelOrMessageUrl: p.Z.channelOrMessageUrl,
 mediaPostLink: p.Z.mediaPostLink,
 attachmentLink: h.Z.attachmentLink,
 commandMention: {
-  order: o().defaultRules.text.order,
+  order: s().defaultRules.text.order,
   requiredFirstCharacters: ['<'],
   match: e => /^<\/((?:[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})(?: [-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})?(?: [-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})?):(\d+)>/u.exec(e),
   parse(e, t, n) {
@@ -296,13 +296,13 @@ soundboard: {
     var r;
     let i = e[1],
       a = u.Z.getSoundById(i),
-      o = null !== (r = null == a ? void 0 : a.name) && void 0 !== r ? r : i;
+      s = null !== (r = null == a ? void 0 : a.name) && void 0 !== r ? r : i;
     return {
       type: 'soundboard',
       id: i,
       soundId: i,
       channelId: n.channelId,
-      content: o
+      content: s
     };
   }
 },
@@ -328,10 +328,10 @@ timestamp: {
   }
 },
 s: {
-  order: o().defaultRules.u.order,
+  order: s().defaultRules.u.order,
   requiredFirstCharacters: ['~'],
-  match: o().inlineRegex(/^~~([\s\S]+?)~~(?!_)/),
-  parse: o().defaultRules.u.parse
+  match: s().inlineRegex(/^~~([\s\S]+?)~~(?!_)/),
+  parse: s().defaultRules.u.parse
 },
 spoiler: {
   order: S.ZP.order,
@@ -381,6 +381,7 @@ A.Z
 'codeBlock',
 'br',
 'blockQuote',
+'autolink',
 'url',
 'attachmentLink',
 'mention',
@@ -480,15 +481,15 @@ highlightWord: {
         ...n,
         parseDepth: i + 1
       },
-      o = t(e[2], a),
-      s = t(e[3], a);
+      s = t(e[2], a),
+      o = t(e[3], a);
     return [
-      ...o,
+      ...s,
       {
         type: 'highlight',
         content: e[1]
       },
-      ...s
+      ...o
     ];
   }
 }

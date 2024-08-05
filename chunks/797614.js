@@ -1,7 +1,7 @@
 n(47120), n(653041);
 var r, i, a = n(404097),
-  o = n(544891),
-  s = n(358085),
+  s = n(544891),
+  o = n(358085),
   l = n(747268),
   u = n(250471),
   c = n(20186),
@@ -36,15 +36,15 @@ let {
 null != r && r.forEach(e => {
   i.tags.push(e);
 });
-let o = function() {
-  if ((0, s.isWeb)())
+let s = function() {
+  if ((0, o.isWeb)())
     return 'web';
   {
-    let e = (0, s.getPlatformName)();
+    let e = (0, o.getPlatformName)();
     return E.has(e) ? e : null;
   }
 }();
-null != o && i.tags.push('platform:'.concat(o));
+null != s && i.tags.push('platform:'.concat(s));
 let u = function() {
   let e = l.Z;
   return null != e && a.e.ALL.has(e) ? e : null;
@@ -69,13 +69,13 @@ this._metrics.push(r), (n || this._metrics.length >= 100) && this._flush();
   _flush() {
 if (this._metrics.length > 0) {
   let e = [...this._metrics];
-  o.tn.post({
+  s.tn.post({
     url: (0, u.V)('monitoring-agent') ? d.ANM.METRICS_V2 : d.ANM.METRICS,
     body: {
       metrics: e,
       client_info: {
-        built_at: '1720867844312',
-        build_number: '309567'
+        built_at: '1722838912518',
+        build_number: '315452'
       }
     },
     retries: 1

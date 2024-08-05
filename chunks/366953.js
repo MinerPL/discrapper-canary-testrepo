@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   },
   j: function() {
 return a;
@@ -14,7 +14,7 @@ function a() {
   return (null !== (e = r.K.get(i)) && void 0 !== e ? e : []).filter(e => null == e.exp || e.exp > Date.now());
 }
 
-function o(e, t) {
+function s(e, t) {
   if (null == t || null == e || null == e.targetBuildOverride.discord_web)
 return;
   let n = {
@@ -22,9 +22,9 @@ return;
   payload: t,
   exp: Date.parse(e.expiresAt)
 },
-o = [
+s = [
   n,
   ...a().filter(e => n.id !== e.id)
 ].slice(0, 5);
-  r.K.set(i, o);
+  r.K.set(i, s);
 }

@@ -7,7 +7,7 @@ a = {
   scope: 'variable',
   match: '\\$+' + r
 },
-o = {
+s = {
   scope: 'subst',
   variants: [{
       begin: /\$\w+/
@@ -18,24 +18,24 @@ o = {
     }
   ]
 },
-s = e.inherit(e.APOS_STRING_MODE, {
+o = e.inherit(e.APOS_STRING_MODE, {
   illegal: null
 }),
 l = e.inherit(e.QUOTE_STRING_MODE, {
   illegal: null,
-  contains: e.QUOTE_STRING_MODE.contains.concat(o)
+  contains: e.QUOTE_STRING_MODE.contains.concat(s)
 }),
 u = e.END_SAME_AS_BEGIN({
   begin: /<<<[ \t]*(\w+)\n/,
   end: /[ \t]*(\w+)\b/,
-  contains: e.QUOTE_STRING_MODE.contains.concat(o)
+  contains: e.QUOTE_STRING_MODE.contains.concat(s)
 }),
 c = '[ \t\n]',
 d = {
   scope: 'string',
   variants: [
     l,
-    s,
+    o,
     u
   ]
 },

@@ -1,6 +1,6 @@
 n(47120);
-var r, i, a, o, s = n(392711),
-  l = n.n(s),
+var r, i, a, s, o = n(392711),
+  l = n.n(o),
   u = n(442837),
   c = n(570140),
   d = n(23750),
@@ -77,12 +77,12 @@ return m;
 return _.default.keys(h).filter(e => h[e] === f.OGo.FRIEND);
   }
 }
-o = 'RelationshipStore', (a = 'displayName') in(i = N) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'RelationshipStore', (a = 'displayName') in(i = N) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new N(c.Z, {
+}) : i[a] = s, t.Z = new N(c.Z, {
   CONNECTION_OPEN: function(e) {
 h = {}, p = {}, m = {}, e.relationships.forEach(e => {
   h[e.id] = e.type, null != e.nickname && (p[e.id] = e.nickname), null != e.since && (m[e.id] = e.since);

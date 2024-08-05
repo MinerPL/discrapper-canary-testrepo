@@ -1,5 +1,5 @@
 n(653041), n(47120), n(724458);
-var i, s, a, r, l = n(392711),
+var i, a, s, r, l = n(392711),
   o = n.n(l),
   c = n(442837),
   d = n(570140),
@@ -29,8 +29,8 @@ I[e] = o().slice(t, n);
 
 function T(e, t, n, i) {
   E[e].add(t);
-  let s = m[t];
-  (null == s || s + 300000 > Date.now()) && p(t), null == I[t] && (I[t] = []), I[t].push({
+  let a = m[t];
+  (null == a || a + 300000 > Date.now()) && p(t), null == I[t] && (I[t] = []), I[t].push({
 id: n,
 userId: i
   });
@@ -42,7 +42,7 @@ channel: t
   } = e;
   delete I[t.id], delete m[t.id];
 }
-class C extends(i = c.ZP.Store) {
+class f extends(i = c.ZP.Store) {
   getActiveChannelsFetchStatus(e) {
 return g[e];
   }
@@ -57,12 +57,12 @@ var t;
 return null == E[e] && !(null === (t = g[e]) || void 0 === t ? void 0 : t.loading);
   }
 }
-r = 'ActiveChannelsStore', (a = 'displayName') in(s = C) ? Object.defineProperty(s, a, {
+r = 'ActiveChannelsStore', (s = 'displayName') in(a = f) ? Object.defineProperty(a, s, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = r, new C(d.Z, {
+}) : a[s] = r, new f(d.Z, {
   CHANNEL_SELECT: function(e) {
 let {
   channelId: t,
@@ -77,21 +77,21 @@ i.forEach(e => {
   var t;
   p(e), (null === (t = I[e]) || void 0 === t ? void 0 : t.length) === 0 && delete I[e];
 });
-let s = o().chain(Array.from(i)).filter(e => e in I).sortBy(e => {
+let a = o().chain(Array.from(i)).filter(e => e in I).sortBy(e => {
   var t, n;
   return -(null !== (n = null === (t = I[e]) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0);
 }).value();
-E[n] = new Set(s);
+E[n] = new Set(a);
   },
   MESSAGE_CREATE: function(e) {
 var t;
 let {
   channelId: n,
   message: i,
-  optimistic: s,
-  isPushNotification: a
+  optimistic: a,
+  isPushNotification: s
 } = e;
-if (s || a)
+if (a || s)
   return !1;
 let r = u.Z.getChannel(n);
 if (null == r)

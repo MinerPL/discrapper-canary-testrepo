@@ -2,8 +2,8 @@ n(47120), n(653041);
 var r = n(412788),
   i = n(594174),
   a = n(131681),
-  o = n(932941),
-  s = n(363072),
+  s = n(932941),
+  o = n(363072),
   l = n(526761);
 
 function u(e, t, n) {
@@ -18,16 +18,16 @@ let c = null;
 
 function d() {
   let e = (0, a.U)() ? [
-  ...o.pF,
-  ...o.wq,
-  ...o.$u
+  ...s.pF,
+  ...s.wq,
+  ...s.$u
 ] : [],
 t = i.default.getCurrentUser();
   if (null == t ? void 0 : t.isStaff()) {
 let t = n(932941).Bk;
 e.push(...t);
   }
-  (c = new s.B()).addWords(e);
+  (c = new o.B()).addWords(e);
 }
 
 function _() {
@@ -50,7 +50,7 @@ return !1;
 class h extends r.Z {
   loadCache() {
 let e = this.readSnapshot(h.LATEST_SNAPSHOT_VERSION);
-null != e && (c = null != e.keywordTrie ? s.B.fromSnapshot(e.keywordTrie) : null);
+null != e && (c = null != e.keywordTrie ? o.B.fromSnapshot(e.keywordTrie) : null);
   }
   takeSnapshot() {
 return {
@@ -67,7 +67,7 @@ return c;
 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
 ! function() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-  null == c && (c = new s.B()), c.addWords(e);
+  null == c && (c = new o.B()), c.addWords(e);
 }(e);
   }
   constructor() {

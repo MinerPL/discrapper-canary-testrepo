@@ -9,15 +9,15 @@ return d;
 var r = n(392711),
   i = n.n(r),
   a = n(131704),
-  o = n(592125),
-  s = n(580005),
+  s = n(592125),
+  o = n(580005),
   l = n(650774),
   u = n(70956),
   c = n(789662);
 
 function d(e, t, n, r, i) {
-  var a, s, u, d;
-  let E = o.Z.getMutableGuildChannelsForGuild(e.id),
+  var a, o, u, d;
+  let E = s.Z.getMutableGuildChannelsForGuild(e.id),
 f = r.filter(e => e.channel_id in E),
 h = null !== (a = n.filter(t => t.guild_id === e.id)[0]) && void 0 !== a ? a : {},
 p = l.Z.getMemberCount(e.id),
@@ -48,7 +48,7 @@ A = 0;
 var t;
 S++, A += null !== (t = Number(e.num_messages)) && void 0 !== t ? t : 0;
   });
-  let N = '\n**Pain**:\n- Everyones: '.concat(c.XR[null !== (s = h.everyones) && void 0 !== s ? s : 0], '\n- Messages: ').concat(c.XR[null !== (u = h.messages) && void 0 !== u ? u : 0], '\n- Size: ').concat(p, '\n**Remote**:\n- Channels: ').concat(S, '\n- AllVisits: ').concat(g.map(e => e.totalOpensAcrossAllServers).join(' / '), '\n- GuildVisits: ').concat(g.map(e => e.guildOpens).join(' / '), '\n- Biggest Channel (abs): ').concat(g.map(e => e.biggestChannel).join(' / '), '\n- Biggest Channel (%): ').concat(g.map(e => e.biggestChannelFormatted).join(' / '), '\n- Sent Msgs: ').concat(A, '\n'),
+  let N = '\n**Pain**:\n- Everyones: '.concat(c.XR[null !== (o = h.everyones) && void 0 !== o ? o : 0], '\n- Messages: ').concat(c.XR[null !== (u = h.messages) && void 0 !== u ? u : 0], '\n- Size: ').concat(p, '\n**Remote**:\n- Channels: ').concat(S, '\n- AllVisits: ').concat(g.map(e => e.totalOpensAcrossAllServers).join(' / '), '\n- GuildVisits: ').concat(g.map(e => e.guildOpens).join(' / '), '\n- Biggest Channel (abs): ').concat(g.map(e => e.biggestChannel).join(' / '), '\n- Biggest Channel (%): ').concat(g.map(e => e.biggestChannelFormatted).join(' / '), '\n- Sent Msgs: ').concat(A, '\n'),
 v = T.guildOpens >= 0.02 * T.totalOpensAcrossAllServers,
 O = (null !== (d = m.guildOpens) && void 0 !== d ? d : 0) > 0;
   if (h.messages === c.XR.High) {
@@ -74,14 +74,14 @@ v,
 
 function _(e, t, n, r) {
   let a = t.reduce((e, t) => e + r(t), 0),
-o = n.reduce((e, t) => e + r(t), 0),
-s = i().sortBy(n, r).reverse()[0],
-l = null == s ? 0 : r(s),
-u = (l / o * 100).toFixed(1);
+s = n.reduce((e, t) => e + r(t), 0),
+o = i().sortBy(n, r).reverse()[0],
+l = null == o ? 0 : r(o),
+u = (l / s * 100).toFixed(1);
   return {
 label: e,
 totalOpensAcrossAllServers: a,
-guildOpens: o,
+guildOpens: s,
 biggestChannel: l,
 biggestChannelFormatted: u
   };
@@ -90,21 +90,21 @@ biggestChannelFormatted: u
 function E(e, t) {
   var n, r;
   let i = null !== (n = t.filter(t => t.guild_id === e.id)[0]) && void 0 !== n ? n : {},
-o = null !== (r = l.Z.getMemberCount(e.id)) && void 0 !== r ? r : 0,
+s = null !== (r = l.Z.getMemberCount(e.id)) && void 0 !== r ? r : 0,
 d = Date.now() - u.Z.Millis.DAYS_30,
-_ = s.Z.getFrequentlyWithoutFetchingLatest().filter(t => t instanceof a.Sf && t.guild_id === e.id),
+_ = o.Z.getFrequentlyWithoutFetchingLatest().filter(t => t instanceof a.Sf && t.guild_id === e.id),
 E = _.filter(e => {
   var t, n;
-  let r = null !== (n = null === (t = s.Z.frecencyWithoutFetchingLatest.usageHistory[e.id]) || void 0 === t ? void 0 : t.recentUses) && void 0 !== n ? n : [];
+  let r = null !== (n = null === (t = o.Z.frecencyWithoutFetchingLatest.usageHistory[e.id]) || void 0 === t ? void 0 : t.recentUses) && void 0 !== n ? n : [];
   return 0 !== r.length && r[r.length - 1] >= d;
 }),
 f = E.length >= 5,
 h = _.reduce((e, t) => {
   var n, r;
-  return e + (null !== (r = null === (n = s.Z.frecencyWithoutFetchingLatest.usageHistory[t.id]) || void 0 === n ? void 0 : n.totalUses) && void 0 !== r ? r : 0);
+  return e + (null !== (r = null === (n = o.Z.frecencyWithoutFetchingLatest.usageHistory[t.id]) || void 0 === n ? void 0 : n.totalUses) && void 0 !== r ? r : 0);
 }, 0),
 p = '\n- **Local**:\n    - Guild Visits: '.concat(h, '\n    - Channels: ').concat(_.length, '\n    - Recent Channels: ').concat(E.length, '\n');
-  return i.messages === c.XR.High || o > 1000 ? [
+  return i.messages === c.XR.High || s > 1000 ? [
 c.AR.UseGreyDot,
 f,
 'SuggestGreyDot' + p

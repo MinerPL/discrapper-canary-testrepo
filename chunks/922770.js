@@ -7,9 +7,9 @@ return i;
   }
 });
 var r, i, a = n(735250),
-  o = n(470079),
-  s = n(120356),
-  l = n.n(s),
+  s = n(470079),
+  o = n(120356),
+  l = n.n(o),
   u = n(186325),
   c = n(689938),
   d = n(134054);
@@ -21,11 +21,11 @@ type: t = 'wanderingCubes',
 animated: n = !0,
 className: r,
 itemClassName: i,
-'aria-label': s,
+'aria-label': o,
 ..._
   } = e, {
 reducedMotion: E
-  } = o.useContext(u.S), f = E.enabled ? function(e) {
+  } = s.useContext(u.S), f = E.enabled ? function(e) {
 switch (e) {
   case 'wanderingCubes':
   case 'chasingDots':
@@ -34,13 +34,13 @@ switch (e) {
     return e;
 }
   }(t) : t;
-  if (s = null != s ? s : c.Z.Messages.LOADING, 'spinningCircle' === f || 'spinningCircleSimple' === f)
+  if (o = null != o ? o : c.Z.Messages.LOADING, 'spinningCircle' === f || 'spinningCircleSimple' === f)
 return (0, a.jsx)('div', {
   className: l()(d.spinner, d[f], r, {
     [d.stopAnimation]: !n
   }),
   role: 'img',
-  'aria-label': s,
+  'aria-label': o,
   ..._,
   children: (0, a.jsx)('div', {
     className: d.spinningCircleInner,
@@ -80,7 +80,7 @@ className: l()(d.spinner, r, {
   [d.stopAnimation]: !n
 }),
 role: 'img',
-'aria-label': s,
+'aria-label': o,
 ..._,
 children: (0, a.jsxs)('span', {
   className: l()(d.inner, d[f]),

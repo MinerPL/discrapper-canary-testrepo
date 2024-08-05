@@ -9,8 +9,8 @@ return h;
 var r = n(512722),
   i = n.n(r),
   a = n(933557),
-  o = n(660199),
-  s = n(763296),
+  s = n(660199),
+  o = n(763296),
   l = n(592125),
   u = n(430824),
   c = n(699516),
@@ -24,14 +24,14 @@ function h(e, t) {
 mode: n,
 ignoreTrailingEmptyNodes: r,
 preventEmojiSurrogates: i
-  } = null != t ? t : {}, [a, o] = (null == t ? void 0 : t.range) != null ? f.M8.edges(t.range) : [
+  } = null != t ? t : {}, [a, s] = (null == t ? void 0 : t.range) != null ? f.M8.edges(t.range) : [
 void 0,
 void 0
   ];
   return p(e, {
 mode: n,
 start: a,
-end: o,
+end: s,
 ignoreTrailingEmptyNodes: r,
 preventEmojiSurrogates: i
   });
@@ -42,15 +42,15 @@ function p(e, t) {
   let {
 mode: i,
 start: a,
-end: o,
-separator: s,
+end: s,
+separator: o,
 ignoreEmptyNodes: l,
 ignoreTrailingEmptyNodes: u,
 preventEmojiSurrogates: c
   } = null != t ? t : {}, d = e.length > 0 && !f.LC.isText(e[0]);
-  null == s && (s = d ? '\n' : '');
+  null == o && (o = d ? '\n' : '');
   let _ = null !== (n = null == a ? void 0 : a.path[0]) && void 0 !== n ? n : 0,
-E = null !== (r = null == o ? void 0 : o.path[0]) && void 0 !== r ? r : e.length - 1;
+E = null !== (r = null == s ? void 0 : s.path[0]) && void 0 !== r ? r : e.length - 1;
   if (u)
 for (let t = E; t >= _; t--) {
   let n = e[t];
@@ -78,20 +78,20 @@ let r = null != a && t === _ ? {
     path: a.path.slice(1),
     offset: a.offset
   } : void 0,
-  s = null != o && t === E ? {
-    path: o.path.slice(1),
-    offset: o.offset
+  o = null != s && t === E ? {
+    path: s.path.slice(1),
+    offset: s.offset
   } : void 0,
   u = m(n, {
     mode: i,
     start: r,
-    end: s,
-    allowBlockQuotePrefix: null == a || null == o || !h && (!p || I),
+    end: o,
+    allowBlockQuotePrefix: null == a || null == s || !h && (!p || I),
     preventEmojiSurrogates: c
   });
 (!l || u.length > 0) && T.push(u);
   }
-  return T.join(s);
+  return T.join(o);
 }
 
 function m(e, t) {
@@ -106,9 +106,9 @@ return function(e, t) {
   var n, r;
   let {
     start: a,
-    end: o
+    end: s
   } = null != t ? t : {};
-  return i()(null == a || 0 === a.path.length, 'Invalid start provided to serializeText'), i()(null == o || 0 === o.path.length, 'Invalid end provided to serializeText'), e.substring(null !== (n = null == a ? void 0 : a.offset) && void 0 !== n ? n : 0, null !== (r = null == o ? void 0 : o.offset) && void 0 !== r ? r : e.length);
+  return i()(null == a || 0 === a.path.length, 'Invalid start provided to serializeText'), i()(null == s || 0 === s.path.length, 'Invalid end provided to serializeText'), e.substring(null !== (n = null == a ? void 0 : a.offset) && void 0 !== n ? n : 0, null !== (r = null == s ? void 0 : s.offset) && void 0 !== r ? r : e.length);
 }(e.text, t);
   switch (e.type) {
 case 'line':
@@ -153,7 +153,7 @@ case 'soundboard': {
   let t = '<sound:'.concat(e.soundId, '>');
   if ('raw' === n)
     return t;
-  let r = s.Z.getSoundById(e.soundId);
+  let r = o.Z.getSoundById(e.soundId);
   if (null == r)
     return t;
   return r.name;
@@ -191,7 +191,7 @@ case 'userMention': {
 case 'commandMention':
   return '</'.concat(e.commandName, ':').concat(e.commandId, '>');
 case 'timestamp':
-  return (0, o.He)(e.parsed.timestamp, e.parsed.format);
+  return (0, s.He)(e.parsed.timestamp, e.parsed.format);
 case 'applicationCommand':
   return p(e.children, {
     ...t,

@@ -11,8 +11,8 @@ var a = n(120356),
   l = n(596454),
   o = n(782568),
   c = n(377171),
-  d = n(601964),
-  u = n(346656),
+  d = n(565138),
+  u = n(601964),
   _ = n(526717),
   I = n(594278),
   E = n(549631),
@@ -57,18 +57,18 @@ guildName: t,
 guildIcon: n,
 guildAvatarUrl: a,
 subscriberCount: i
-  } = e, l = new d.ZP({
+  } = e, l = new u.ZP({
 name: t,
 icon: n
   });
   return (0, s.jsxs)('div', {
 className: m.guildCardHeader,
 children: [
-  (0, s.jsx)(u.Z, {
+  (0, s.jsx)(d.Z, {
     className: m.guildCardHeaderAvatar,
     iconSrc: a,
     guild: l,
-    size: u.Z.Sizes.LARGE
+    size: d.Z.Sizes.LARGE
   }),
   (0, s.jsxs)('div', {
     className: m.guildCardHeaderTitle,

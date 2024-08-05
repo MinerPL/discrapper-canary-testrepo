@@ -5,9 +5,9 @@ return S;
 }), n(47120), n(411104);
 var l = n(735250),
   o = n(470079),
-  t = n(160612),
-  s = n(120356),
-  a = n.n(s),
+  s = n(160612),
+  t = n(120356),
+  a = n.n(t),
   c = n(846519),
   i = n(481060),
   d = n(609194),
@@ -32,7 +32,7 @@ function S(e) {
   let {
 steps: r,
 currentStep: n,
-body: s,
+body: t,
 paymentError: S,
 header: C,
 footer: T,
@@ -65,7 +65,7 @@ return null != B || e.isStarted() ? null != B && e.stop() : e.start(10 * N.Z.Mil
 };
   }, [B]);
   let U = r.includes(m.h8.PAYMENT_TYPE) ? m.h8.PAYMENT_TYPE : m.h8.ADD_PAYMENT_STEPS;
-  return (0, l.jsxs)(t.Elements, {
+  return (0, l.jsxs)(s.Elements, {
 options: h.OBo,
 stripe: B,
 children: [
@@ -113,7 +113,7 @@ children: [
             children: (0, l.jsx)(i.AdvancedScrollerThin, {
               onScroll: A,
               className: a()(x.scroller, R),
-              children: s
+              children: t
             })
           })
         ]

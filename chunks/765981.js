@@ -55,12 +55,12 @@ var n = this;
       t = this.store.dispatch,
       n = (0, r.W1)(this);
     return Object.keys(n).reduce(function(r, i) {
-      var a, o = n[i];
-      return r[i] = (a = o, function() {
+      var a, s = n[i];
+      return r[i] = (a = s, function() {
         for (var n = arguments.length, r = Array(n), i = 0; i < n; i++)
           r[i] = arguments[i];
-        var o = a.apply(e, r);
-        void 0 !== o && t(o);
+        var s = a.apply(e, r);
+        void 0 !== s && t(s);
       }), r;
     }, {});
   }

@@ -9,8 +9,8 @@ return E;
 var r = n(182823),
   i = n(882932),
   a = n(470079),
-  o = n(612001),
-  s = n(251433),
+  s = n(612001),
+  o = n(251433),
   l = n(616073),
   u = n(706682);
 let c = new WeakMap();
@@ -27,7 +27,7 @@ function _(e, t, n) {
   let {
 labelProps: _,
 fieldProps: E
-  } = (0, s.N)(e), f = 'vertical' === e.orientation;
+  } = (0, o.N)(e), f = 'vertical' === e.orientation;
   c.set(t, {
 id: null !== (u = _.id) && void 0 !== u ? u : E.id,
 'aria-describedby': e['aria-describedby'],
@@ -40,7 +40,7 @@ addGlobalListener: p,
 removeGlobalListener: m
   } = (0, r.xi)(), I = (0, a.useRef)(null), T = 'rtl' === h, g = (0, a.useRef)(null), {
 moveProps: S
-  } = (0, o.r_)({
+  } = (0, s.r_)({
 onMoveStart() {
   g.current = null;
 },
@@ -50,27 +50,27 @@ onMove({
 }) {
   let {
     height: a,
-    width: o
-  } = n.current.getBoundingClientRect(), s = f ? a : o;
-  null == g.current && (g.current = t.getThumbPercent(I.current) * s);
+    width: s
+  } = n.current.getBoundingClientRect(), o = f ? a : s;
+  null == g.current && (g.current = t.getThumbPercent(I.current) * o);
   let l = f ? r : e;
   if ((f || T) && (l = -l), g.current += l, null != I.current && n.current) {
-    let e = (0, i.uZ)(g.current / s, 0, 1);
+    let e = (0, i.uZ)(g.current / o, 0, 1);
     t.setThumbPercent(I.current, e);
   }
 },
 onMoveEnd() {
   null != I.current && (t.setThumbDragging(I.current, !1), I.current = null);
 }
-  }), A = (0, a.useRef)(void 0), N = (r, i, a, o) => {
+  }), A = (0, a.useRef)(void 0), N = (r, i, a, s) => {
 if (n.current && !e.isDisabled && t.values.every((e, n) => !t.isThumbDragging(n))) {
   let e, {
-      height: s,
+      height: o,
       width: l,
       top: u,
       left: c
     } = n.current.getBoundingClientRect(),
-    d = ((f ? o : a) - (f ? u : c)) / (f ? s : l);
+    d = ((f ? s : a) - (f ? u : c)) / (f ? o : l);
   ('rtl' === h || f) && (d = 1 - d);
   let _ = t.getPercentValue(d),
     E = t.values.findIndex(e => _ - e < 0);
@@ -82,7 +82,7 @@ var n, r;
   };
   return 'htmlFor' in _ && _.htmlFor && (delete _.htmlFor, _.onClick = () => {
 var e;
-null === (e = document.getElementById(d(t, 0))) || void 0 === e || e.focus(), (0, o._w)('keyboard');
+null === (e = document.getElementById(d(t, 0))) || void 0 === e || e.focus(), (0, s._w)('keyboard');
   }), {
 labelProps: _,
 groupProps: {
@@ -130,7 +130,7 @@ removeGlobalListener: v
   } = (0, r.xi)(), O = c.get(t), {
 labelProps: R,
 fieldProps: C
-  } = (0, s.N)({
+  } = (0, o.N)({
 ...e,
 id: d(t, _),
 'aria-labelledby': `${ O.id } ${ null !== (n = e['aria-labelledby']) && void 0 !== n ? n : '' }`.trim()
@@ -147,22 +147,22 @@ D
 M = (0, a.useRef)(null),
 {
   keyboardProps: P
-} = (0, o.v5)({
+} = (0, s.v5)({
   onKeyDown(e) {
     let {
       getThumbMaxValue: n,
       getThumbMinValue: r,
       decrementThumb: i,
       incrementThumb: a,
-      setThumbValue: o,
-      setThumbDragging: s,
+      setThumbValue: s,
+      setThumbDragging: o,
       pageSize: l
     } = t;
     if (!/^(PageUp|PageDown|Home|End)$/.test(e.key)) {
       e.continuePropagation();
       return;
     }
-    switch (e.preventDefault(), s(_, !0), e.key) {
+    switch (e.preventDefault(), o(_, !0), e.key) {
       case 'PageUp':
         a(_, l);
         break;
@@ -170,17 +170,17 @@ M = (0, a.useRef)(null),
         i(_, l);
         break;
       case 'Home':
-        o(_, r(_));
+        s(_, r(_));
         break;
       case 'End':
-        o(_, n(_));
+        s(_, n(_));
     }
-    s(_, !1);
+    o(_, !1);
   }
 }),
 {
   moveProps: U
-} = (0, o.r_)({
+} = (0, s.r_)({
   onMoveStart() {
     M.current = null, t.setThumbDragging(_, !0);
   },
@@ -191,8 +191,8 @@ M = (0, a.useRef)(null),
     shiftKey: a
   }) {
     let {
-      getThumbPercent: o,
-      setThumbPercent: s,
+      getThumbPercent: s,
+      setThumbPercent: o,
       decrementThumb: l,
       incrementThumb: u,
       step: c,
@@ -201,11 +201,11 @@ M = (0, a.useRef)(null),
       width: E,
       height: f
     } = p.current.getBoundingClientRect(), h = S ? f : E;
-    if (null == M.current && (M.current = o(_) * h), 'keyboard' === r)
+    if (null == M.current && (M.current = s(_) * h), 'keyboard' === r)
       e > 0 && b || e < 0 && !b || n > 0 ? l(_, a ? d : c) : u(_, a ? d : c);
     else {
       let t = S ? n : e;
-      (S || b) && (t = -t), M.current += t, s(_, (0, i.uZ)(M.current / h, 0, 1));
+      (S || b) && (t = -t), M.current += t, o(_, (0, i.uZ)(M.current / h, 0, 1));
     }
   },
   onMoveEnd() {

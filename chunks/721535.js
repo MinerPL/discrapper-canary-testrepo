@@ -3,31 +3,31 @@ n.d(t, {
 return u;
   },
   q: function() {
-return s;
+return o;
   }
 });
 var r = n(882932),
   i = n(470079),
   a = n(275857);
-class o extends Set {
+class s extends Set {
   constructor(e, t, n) {
-super(e), e instanceof o ? (this.anchorKey = t || e.anchorKey, this.currentKey = n || e.currentKey) : (this.anchorKey = t, this.currentKey = n);
+super(e), e instanceof s ? (this.anchorKey = t || e.anchorKey, this.currentKey = n || e.currentKey) : (this.anchorKey = t, this.currentKey = n);
   }
 }
 
-function s(e) {
+function o(e) {
   let {
 selectionMode: t = 'none',
 disallowEmptySelection: n,
 allowDuplicateSelectionEvents: a,
-selectionBehavior: s = 'toggle',
+selectionBehavior: o = 'toggle',
 disabledBehavior: u = 'all'
-  } = e, c = (0, i.useRef)(!1), [, d] = (0, i.useState)(!1), _ = (0, i.useRef)(null), E = (0, i.useRef)(null), [, f] = (0, i.useState)(null), h = (0, i.useMemo)(() => l(e.selectedKeys), [e.selectedKeys]), p = (0, i.useMemo)(() => l(e.defaultSelectedKeys, new o()), [e.defaultSelectedKeys]), [m, I] = (0, r.zk)(h, p, e.onSelectionChange), T = (0, i.useMemo)(() => e.disabledKeys ? new Set(e.disabledKeys) : new Set(), [e.disabledKeys]), [g, S] = (0, i.useState)(s);
-  'replace' === s && 'toggle' === g && 'object' == typeof m && 0 === m.size && S('replace');
-  let A = (0, i.useRef)(s);
+  } = e, c = (0, i.useRef)(!1), [, d] = (0, i.useState)(!1), _ = (0, i.useRef)(null), E = (0, i.useRef)(null), [, f] = (0, i.useState)(null), h = (0, i.useMemo)(() => l(e.selectedKeys), [e.selectedKeys]), p = (0, i.useMemo)(() => l(e.defaultSelectedKeys, new s()), [e.defaultSelectedKeys]), [m, I] = (0, r.zk)(h, p, e.onSelectionChange), T = (0, i.useMemo)(() => e.disabledKeys ? new Set(e.disabledKeys) : new Set(), [e.disabledKeys]), [g, S] = (0, i.useState)(o);
+  'replace' === o && 'toggle' === g && 'object' == typeof m && 0 === m.size && S('replace');
+  let A = (0, i.useRef)(o);
   return (0, i.useEffect)(() => {
-s !== A.current && (S(s), A.current = s);
-  }, [s]), {
+o !== A.current && (S(o), A.current = o);
+  }, [o]), {
 selectionMode: t,
 disallowEmptySelection: n,
 selectionBehavior: g,
@@ -64,7 +64,7 @@ disabledBehavior: u
 }
 
 function l(e, t) {
-  return e ? 'all' === e ? 'all' : new o(e) : t;
+  return e ? 'all' === e ? 'all' : new s(e) : t;
 }
 class u {
   get selectionMode() {
@@ -147,11 +147,11 @@ if ('none' !== this.selectionMode) {
     return;
   }
   if (e = this.getKey(e), 'all' === this.state.selectedKeys)
-    t = new o([e], e, e);
+    t = new s([e], e, e);
   else {
     let n = this.state.selectedKeys,
       r = n.anchorKey || e;
-    for (let i of (t = new o(n, r, e), this.getKeyRange(r, n.currentKey || e)))
+    for (let i of (t = new s(n, r, e), this.getKeyRange(r, n.currentKey || e)))
       t.delete(i);
     for (let n of this.getKeyRange(e, r))
       this.canSelectItem(n) && t.add(n);
@@ -195,19 +195,19 @@ if ('single' === this.selectionMode && !this.isSelected(e)) {
 }
 if (null == (e = this.getKey(e)))
   return;
-let t = new o('all' === this.state.selectedKeys ? this.getSelectAllKeys() : this.state.selectedKeys);
+let t = new s('all' === this.state.selectedKeys ? this.getSelectAllKeys() : this.state.selectedKeys);
 t.has(e) ? t.delete(e) : this.canSelectItem(e) && (t.add(e), t.anchorKey = e, t.currentKey = e), (!this.disallowEmptySelection || 0 !== t.size) && this.state.setSelectedKeys(t);
   }
   replaceSelection(e) {
 if ('none' === this.selectionMode || null == (e = this.getKey(e)))
   return;
-let t = this.canSelectItem(e) ? new o([e], e, e) : new o();
+let t = this.canSelectItem(e) ? new s([e], e, e) : new s();
 this.state.setSelectedKeys(t);
   }
   setSelectedKeys(e) {
 if ('none' === this.selectionMode)
   return;
-let t = new o();
+let t = new s();
 for (let n of e)
   if (null != (n = this.getKey(n)) && (t.add(n), 'single' === this.selectionMode))
     break;
@@ -230,7 +230,7 @@ return t(this.collection.getFirstKey()), e;
 !this.isSelectAll && 'multiple' === this.selectionMode && this.state.setSelectedKeys('all');
   }
   clearSelection() {
-!this.disallowEmptySelection && ('all' === this.state.selectedKeys || this.state.selectedKeys.size > 0) && this.state.setSelectedKeys(new o());
+!this.disallowEmptySelection && ('all' === this.state.selectedKeys || this.state.selectedKeys.size > 0) && this.state.setSelectedKeys(new s());
   }
   toggleSelectAll() {
 this.isSelectAll ? this.clearSelection() : this.selectAll();

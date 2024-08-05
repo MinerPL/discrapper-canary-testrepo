@@ -6,17 +6,17 @@ return r;
 return a;
   },
   Wj: function() {
-return o;
+return s;
   },
   aQ: function() {
 return i;
   },
   pL: function() {
-return s;
+return o;
   }
 });
 let r = 'hello',
   i = 'version',
   a = 'force-resync-version',
-  o = 3,
-  s = 'stable-53';
+  s = 3,
+  o = 'stable-53';

@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(143927),
+  s = n.n(a),
+  o = n(143927),
   l = n(260866),
   u = n(461745),
   c = n(806966),
@@ -25,7 +25,7 @@ defaultSearchPlaceholder: S
   } = e, A = i.useRef(null), N = (0, d.Iu)(e => e.searchQuery), [v, O] = c.kJ.useStore(e => [
 e.inspectedExpressionPosition,
 e.searchPlaceholder
-  ], s.Z), R = i.useCallback(e => {
+  ], o.Z), R = i.useCallback(e => {
 var t;
 c.kJ.setActiveCategoryIndex('' === e ? 0 : _.c), c.kJ.setInspectedExpressionPosition(0, 0), c.kJ.setSearchPlaceholder(null), (0, d.ql)(e), null === (t = n.current) || void 0 === t || t.scrollTo(0);
   }, [n]), C = i.useCallback(() => {
@@ -55,7 +55,7 @@ onKeyDown: e => {
 },
 onFocus: I,
 onQueryChange: R,
-className: o()(g, {
+className: s()(g, {
   [h.searchBarFullRow]: p
 }),
 preventEscapePropagation: !1,

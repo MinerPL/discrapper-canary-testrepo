@@ -53,7 +53,7 @@ a = {
   className: 'variable',
   begin: '\\$' + e.UNDERSCORE_IDENT_RE
 },
-o = {
+s = {
   className: 'string',
   variants: [{
       begin: '"""',
@@ -81,8 +81,8 @@ o = {
     }
   ]
 };
-  r.contains.push(o);
-  let s = {
+  r.contains.push(s);
+  let o = {
   className: 'meta',
   begin: '@(?:file|property|field|get|set|receiver|param|setparam|delegate)\\s*:(?:\\s*' + e.UNDERSCORE_IDENT_RE + ')?'
 },
@@ -93,7 +93,7 @@ l = {
     begin: /\(/,
     end: /\)/,
     contains: [
-      e.inherit(o, {
+      e.inherit(s, {
         className: 'string'
       }),
       'self'
@@ -143,7 +143,7 @@ contains: [
     }
   },
   n,
-  s,
+  o,
   l,
   {
     className: 'function',
@@ -186,9 +186,9 @@ contains: [
           },
           e.C_LINE_COMMENT_MODE,
           u,
-          s,
-          l,
           o,
+          l,
+          s,
           e.C_NUMBER_MODE
         ]
       },
@@ -227,11 +227,11 @@ contains: [
         excludeBegin: !0,
         returnEnd: !0
       },
-      s,
+      o,
       l
     ]
   },
-  o,
+  s,
   {
     className: 'meta',
     begin: '^#!/usr/bin/env',

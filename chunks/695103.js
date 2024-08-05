@@ -1,6 +1,6 @@
 let r, i, a;
 n(47120), n(177593);
-var o, s = n(442837),
+var s, o = n(442837),
   l = n(570140),
   u = n(238514),
   c = n(695346),
@@ -30,7 +30,7 @@ function I() {
 function T() {
   r = null, i = null, p = new Set(), h.applicationId = null, h.originURL = null, I();
 }
-class g extends(o = s.ZP.PersistedStore) {
+class g extends(s = o.ZP.PersistedStore) {
   initialize(e) {
 r = (h = {
   ...null != e ? e : f

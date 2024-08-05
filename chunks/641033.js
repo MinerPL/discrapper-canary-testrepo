@@ -3,7 +3,7 @@ n.d(t, {
 return _;
   },
   KH: function() {
-return o;
+return s;
   },
   nc: function() {
 return c;
@@ -18,27 +18,27 @@ let a = function(e, t) {
 let {
   multiplier: n,
   value: r
-} = e, [i, a] = t, o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1, s = r * n;
-return s <= 0 ? 0 : Math.min(o, i.reduce((e, t, n) => {
-  if (s > t) {
+} = e, [i, a] = t, s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1, o = r * n;
+return o <= 0 ? 0 : Math.min(s, i.reduce((e, t, n) => {
+  if (o > t) {
     let e = a[n];
     if (n + 1 === i.length)
       return a[n];
     let r = i[n + 1],
-      o = a[n + 1];
-    return (s - t) / (r - t) * (o - e) + e;
+      s = a[n + 1];
+    return (o - t) / (r - t) * (s - e) + e;
   }
-  return s === t ? a[n] : e;
+  return o === t ? a[n] : e;
 }, 0));
   },
-  o = function(e) {
+  s = function(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.qi.LEVEL_3;
 return a(e, [
   r.JR[t],
   r.u4[t]
 ], 100000);
   },
-  s = [
+  o = [
 [
   1,
   0.001
@@ -68,11 +68,11 @@ return a(e, [
   1
 ]
   ],
-  l = s.map(e => {
+  l = o.map(e => {
 let [t] = e;
 return t;
   }),
-  u = s.map(e => {
+  u = o.map(e => {
 let [t, n] = e;
 return n;
   }),

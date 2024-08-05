@@ -1,7 +1,7 @@
 n(47120);
 var i = n(243814),
-  s = n(846027),
-  a = n(131951),
+  a = n(846027),
+  s = n(131951),
   r = n(13140),
   l = n(996106),
   o = n(452426),
@@ -37,11 +37,11 @@ handler(e) {
       self_deaf: l
     }
   } = e, o = _(t);
-  null != n && s.Z.setMode(n.type, {
+  null != n && a.Z.setMode(n.type, {
     shortcut: (0, r.Kd)(n.shortcut)
-  }, o), null != i && i !== a.Z.isSelfMute(o) && s.Z.toggleSelfMute({
+  }, o), null != i && i !== s.Z.isSelfMute(o) && a.Z.toggleSelfMute({
     context: o
-  }), null != l && l !== a.Z.isSelfDeaf(o) && s.Z.toggleSelfDeaf({
+  }), null != l && l !== s.Z.isSelfDeaf(o) && a.Z.toggleSelfDeaf({
     context: o
   });
 }
@@ -62,7 +62,7 @@ handler(e) {
       volume: r
     }
   } = e, l = _(t);
-  null != i && i !== a.Z.isLocalMute(n, l) && s.Z.toggleLocalMute(n, l), null != r && s.Z.setLocalVolume(n, r, l);
+  null != i && i !== s.Z.isLocalMute(n, l) && a.Z.toggleLocalMute(n, l), null != r && a.Z.setLocalVolume(n, r, l);
 }
   },
   [d.Etm.PUSH_TO_TALK]: {
@@ -81,8 +81,8 @@ handler(e) {
       active: t
     }
   } = e;
-  if (a.Z.getMode(u.Yn.DEFAULT) === d.pM4.PUSH_TO_TALK)
-    a.Z.getMediaEngine().eachConnection(e => e.setForceAudioInput(t), u.Yn.DEFAULT);
+  if (s.Z.getMode(u.Yn.DEFAULT) === d.pM4.PUSH_TO_TALK)
+    s.Z.getMediaEngine().eachConnection(e => e.setForceAudioInput(t), u.Yn.DEFAULT);
 }
   }
 };

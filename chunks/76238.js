@@ -4,8 +4,8 @@ return o;
   }
 });
 var i = n(392711),
-  s = n.n(i),
-  a = n(996106),
+  a = n.n(i),
+  s = n(996106),
   r = n(981631);
 
 function l(e, t, n) {
@@ -18,7 +18,7 @@ writable: !0
 }
 class o {
   constructor(e, t, n) {
-if (l(this, 'transport', void 0), l(this, 'version', void 0), l(this, 'encoding', void 0), l(this, 'id', void 0), l(this, 'authorization', void 0), l(this, 'application', void 0), this.transport = e, this.version = t, this.encoding = n, this.id = s().uniqueId(), this.authorization = {
+if (l(this, 'transport', void 0), l(this, 'version', void 0), l(this, 'encoding', void 0), l(this, 'id', void 0), l(this, 'authorization', void 0), l(this, 'application', void 0), this.transport = e, this.version = t, this.encoding = n, this.id = a().uniqueId(), this.authorization = {
     authing: !1,
     scopes: [],
     accessToken: null,
@@ -28,7 +28,7 @@ if (l(this, 'transport', void 0), l(this, 'version', void 0), l(this, 'encoding'
     name: null,
     icon: null
   }, null == t || t > r.X6Q || t < 1)
-  throw new a.Z({
+  throw new s.Z({
     closeCode: r.$VG.INVALID_VERSION
   }, 'Invalid Version: '.concat(t));
   }

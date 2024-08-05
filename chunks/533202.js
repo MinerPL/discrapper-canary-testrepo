@@ -28,7 +28,7 @@ onClose: f,
 directoryGuildName: T,
 directoryGuildId: h,
 currentCategoryId: g
-  } = e, [N, B] = n.useState(L), [M, p] = n.useState(null), [Z, b] = n.useState(null), [j, S] = n.useState(null), [U, R] = n.useState(null), [A, D] = n.useState(null), [H, O] = n.useState(''), [v, G] = n.useState(null != g ? g : E.AR.UNCATEGORIZED), [y, k] = n.useState(!1), {
+  } = e, [N, B] = n.useState(L), [M, Z] = n.useState(null), [p, b] = n.useState(null), [j, S] = n.useState(null), [U, R] = n.useState(null), [A, D] = n.useState(null), [H, O] = n.useState(''), [v, G] = n.useState(null != g ? g : E.AR.UNCATEGORIZED), [y, k] = n.useState(!1), {
 availableGuilds: V,
 addedGuilds: F,
 loading: w
@@ -42,9 +42,9 @@ L
   let P = async () => {
 let e = A;
 if (!y) {
-  if (null == j || null == Z)
+  if (null == j || null == p)
     return;
-  let t = await i.Z.createGuildFromTemplate(j, U, Z);
+  let t = await i.Z.createGuildFromTemplate(j, U, p);
   D(e = new c.ZP(t));
 }
 null != e && (await d.bF(t, e.id, H, v), B(E.VX.CONFIRMATION));
@@ -60,7 +60,7 @@ children: (0, a.jsx)(o.ModalRoot, {
     children: (0, a.jsxs)(o.Slides, {
       activeSlide: N,
       width: 440,
-      onSlideReady: e => p(e),
+      onSlideReady: e => Z(e),
       children: [
         (0, a.jsx)(o.Slide, {
           id: E.VX.CHOOSE_GUILD,
@@ -99,7 +99,7 @@ children: (0, a.jsx)(o.ModalRoot, {
           impressionName: l.ImpressionNames.HUB_CREATE_GUILD_CUSTOMIZE,
           impressionProperties: X,
           children: (0, a.jsx)(r.Z, {
-            guildTemplate: Z,
+            guildTemplate: p,
             onHubGuildInfoSet: (e, t) => {
               S(e), R(t), B(E.VX.CUSTOMIZE_EXISTING_GUILD);
             },

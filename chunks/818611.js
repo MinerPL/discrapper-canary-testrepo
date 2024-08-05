@@ -2,8 +2,8 @@ n(627341);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(278074),
+  s = n.n(a),
+  o = n(278074),
   l = n(831209),
   u = n(399606),
   c = n(481060),
@@ -23,11 +23,11 @@ let {
   className: n,
   onSelect: i,
   isSelected: a = !1,
-  ...s
+  ...o
 } = e;
 return (0, r.jsx)(c.Clickable, {
-  className: o()(T.decorationGridItem, a ? T.selected : void 0, n),
-  ...s,
+  className: s()(T.decorationGridItem, a ? T.selected : void 0, n),
+  ...o,
   onClick: i,
   children: t
 });
@@ -37,13 +37,13 @@ let {
   user: t,
   avatarDecoration: n,
   innerRef: a,
-  section: o,
-  isSelected: s = !1,
+  section: s,
+  isSelected: o = !1,
   ...h
 } = e, g = (0, u.e7)([_.Z], () => {
   let e = _.Z.getProduct(n.skuId);
   return (0, E.G1)(e);
-}), A = (0, E.Yq)(n.skuId), N = f.ZP.canUseCollectibles(t), v = o === p.$0.PREMIUM_PURCHASE && !N, O = i.useRef(null), R = (0, d.Z)(null != a ? a : O), {
+}), A = (0, E.Yq)(n.skuId), N = f.ZP.canUseCollectibles(t), v = s === p.$0.PREMIUM_PURCHASE && !N, O = i.useRef(null), R = (0, d.Z)(null != a ? a : O), {
   avatarDecorationSrc: C
 } = (0, m.Z)({
   user: t,
@@ -54,7 +54,7 @@ let {
 return (0, r.jsxs)(S, {
   className: v ? T.decorationGridItemChurned : void 0,
   innerRef: null != a ? a : O,
-  isSelected: s,
+  isSelected: o,
   ...h,
   children: [
     (0, r.jsx)('img', {
@@ -62,7 +62,7 @@ return (0, r.jsxs)(S, {
       src: C,
       alt: n.label
     }),
-    o === p.$0.PURCHASE || o === p.$0.PREMIUM_PURCHASE && N ? null : A ? (0, r.jsx)(c.PremiumBadge, {
+    s === p.$0.PURCHASE || s === p.$0.PREMIUM_PURCHASE && N ? null : A ? (0, r.jsx)(c.PremiumBadge, {
       className: T.newBadge,
       text: (0, r.jsxs)('div', {
         className: T.newBadgeText,
@@ -95,7 +95,7 @@ t.Z = e => {
 user: t,
 guild: n,
 pendingAvatarDecoration: a,
-selectedAvatarDecorationRef: o,
+selectedAvatarDecorationRef: s,
 onSelect: l,
 onOpenShop: u
   } = e, d = (0, p.ZP)(), _ = i.useCallback(() => {
@@ -121,7 +121,7 @@ renderItem: (e, i, u, E) => {
     section: f,
     items: m
   } = d[e];
-  return (0, s.EQ)(m[i]).with(p.Tm, () => (0, r.jsxs)(S, {
+  return (0, o.EQ)(m[i]).with(p.Tm, () => (0, r.jsxs)(S, {
     style: {
       ...u
     },
@@ -165,7 +165,7 @@ renderItem: (e, i, u, E) => {
       user: t,
       avatarDecoration: e,
       section: f,
-      innerRef: n ? o : void 0,
+      innerRef: n ? s : void 0,
       isSelected: n,
       onSelect: () => l(e)
     }, E);

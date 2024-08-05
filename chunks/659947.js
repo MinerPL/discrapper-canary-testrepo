@@ -28,7 +28,7 @@ voiceChannelGuildFilter: null
   }), e.setLimit(1 / 0);
 }
 
-function h(e) {
+function g(e) {
   let {
 height: t
   } = e;
@@ -39,14 +39,14 @@ style: {
   });
 }
 
-function g() {
-  return (0, n.jsx)(h, {
+function h() {
+  return (0, n.jsx)(g, {
 height: 16
   }, 'footer');
 }
 
 function O() {
-  return (0, n.jsx)(h, {
+  return (0, n.jsx)(g, {
 height: 8
   }, 'header');
 }
@@ -113,7 +113,7 @@ transitionState: t,
 onClose: s,
 onSelect: o
   } = e, u = a.useId(), C = a.useRef(null), {
-mouseFocusEnabled: h,
+mouseFocusEnabled: g,
 enableMouseFocus: R,
 disableMouseFocus: x
   } = function() {
@@ -131,8 +131,8 @@ return {
 };
   }(), {
 query: M,
-updateQuery: D,
-queryResults: f
+updateQuery: f,
+queryResults: D
   } = (0, l.Z)({
 visible: !0,
 autocompleterResultTypes: m,
@@ -157,7 +157,7 @@ let t = '' !== e,
 return t ? null : s;
   }(M), {
 focusedIndex: L,
-setFocusedIndex: Z
+setFocusedIndex: b
   } = function(e) {
 let [t, s] = a.useState(0), n = a.useRef(e);
 return e !== n.current && 0 !== t && s(0), a.useEffect(() => void(n.current = e)), {
@@ -174,13 +174,13 @@ let {
   row: L
 });
   }, [L]);
-  let b = null != P ? P.length : f.length,
+  let Z = null != P ? P.length : D.length,
 v = (() => {
   if (null != P) {
     var e;
     return null === (e = P[L]) || void 0 === e ? void 0 : e.id;
   }
-  let t = f[L];
+  let t = D[L];
   if ((null == t ? void 0 : t.type) === I.h8.VOICE_CHANNEL)
     return t.record.id;
 })();
@@ -196,7 +196,7 @@ children: (0, n.jsxs)(r.ModalRoot, {
       className: N.inputWrapper,
       children: (0, n.jsx)(r.TextInput, {
         value: M,
-        onChange: D,
+        onChange: f,
         onKeyDown: function(e) {
           x();
           let t = e.key.toLowerCase();
@@ -209,7 +209,7 @@ children: (0, n.jsxs)(r.ModalRoot, {
                 let e = (() => {
                   if (null != P)
                     return P[L];
-                  let e = f[L];
+                  let e = D[L];
                   if ((null == e ? void 0 : e.type) === I.h8.VOICE_CHANNEL)
                     return e.record;
                 })();
@@ -217,35 +217,35 @@ children: (0, n.jsxs)(r.ModalRoot, {
                 break;
               }
               case 'arrowup':
-                0 === L ? Z(b - 1) : Z(L - 1);
+                0 === L ? b(Z - 1) : b(L - 1);
                 break;
               case 'arrowdown':
-                L >= b - 1 ? Z(0) : Z(L + 1);
+                L >= Z - 1 ? b(0) : b(L + 1);
             }
         },
         placeholder: S.Z.Messages.USER_SETTINGS_KEYBINDS_SEARCH_VOICE,
         role: 'combobox',
         'aria-controls': u,
-        'aria-expanded': b > 0,
-        'aria-activedescendant': b > 0 && null != v ? v : void 0,
+        'aria-expanded': Z > 0,
+        'aria-activedescendant': Z > 0 && null != v ? v : void 0,
         'aria-autocomplete': 'list',
         spellCheck: !1
       })
     }),
-    0 === b && '' !== M && (0, n.jsx)(p, {}),
-    (b > 0 || '' === M) && (0, n.jsx)(r.ListThin, {
+    0 === Z && '' !== M && (0, n.jsx)(p, {}),
+    (Z > 0 || '' === M) && (0, n.jsx)(r.ListThin, {
       innerId: u,
       innerRole: 'listbox',
       'aria-label': S.Z.Messages.USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS,
       ref: C,
-      sections: [b],
+      sections: [Z],
       renderRow: function(e) {
         let {
           row: t
         } = e, a = (() => {
           if (null != P)
             return P[t];
-          let e = f[t];
+          let e = D[t];
           if ((null == e ? void 0 : e.type) === I.h8.VOICE_CHANNEL)
             return e.record;
         })();
@@ -258,11 +258,11 @@ children: (0, n.jsxs)(r.ModalRoot, {
           channel: a,
           category: i,
           focused: L === t,
-          onMouseEnter: () => h.current && Z(t),
+          onMouseEnter: () => g.current && b(t),
           onClick: () => {
             o(a.id), s();
           },
-          onFocus: () => Z(t),
+          onFocus: () => b(t),
           children: null != r ? (0, n.jsx)('div', {
             className: N.guildName,
             children: r.name
@@ -270,7 +270,7 @@ children: (0, n.jsxs)(r.ModalRoot, {
         }, a.id);
       },
       renderListHeader: O,
-      renderFooter: g,
+      renderFooter: h,
       sectionHeight: 0,
       rowHeight: 34,
       className: N.voiceChannelList,

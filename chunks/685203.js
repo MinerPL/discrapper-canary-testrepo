@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(481060),
-  s = n(296325);
+  s = n(481060),
+  o = n(296325);
 
 function l(e) {
   let {
@@ -17,21 +17,21 @@ onClick: n,
 className: i,
 tooltip: l
   } = e;
-  return (0, r.jsx)(o.Tooltip, {
+  return (0, r.jsx)(s.Tooltip, {
 text: l,
 children: e => {
   let {
     onClick: l,
     ...u
   } = e;
-  return (0, r.jsx)(o.Button, {
+  return (0, r.jsx)(s.Button, {
     ...u,
     onClick: e => {
       null == n || n(e), null == l || l();
     },
-    innerClassName: s.buttonReset,
-    color: a()(s.cta, i),
-    size: o.Button.Sizes.MIN,
+    innerClassName: o.buttonReset,
+    color: a()(o.cta, i),
+    size: s.Button.Sizes.MIN,
     children: t
   });
 }

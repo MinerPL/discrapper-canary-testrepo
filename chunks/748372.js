@@ -4,14 +4,14 @@ e.exports = function(e, t) {
 var n = void 0 !== e,
   i = null === e,
   a = e == e,
-  o = r(e),
-  s = void 0 !== t,
+  s = r(e),
+  o = void 0 !== t,
   l = null === t,
   u = t == t,
   c = r(t);
-if (!l && !c && !o && e > t || o && s && u && !l && !c || i && s && u || !n && u || !a)
+if (!l && !c && !s && e > t || s && o && u && !l && !c || i && o && u || !n && u || !a)
   return 1;
-if (!i && !o && !c && e < t || c && n && a && !i && !o || l && n && a || !s && a || !u)
+if (!i && !s && !c && e < t || c && n && a && !i && !s || l && n && a || !o && a || !u)
   return -1;
   }
   return 0;

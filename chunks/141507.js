@@ -6,8 +6,8 @@ return C;
 var r = n(735250),
   i = n(470079),
   a = n(442837),
-  o = n(481060),
-  s = n(607070),
+  s = n(481060),
+  o = n(607070),
   l = n(906411),
   u = n(438332),
   c = n(664437),
@@ -72,7 +72,7 @@ let t, {
   },
   w = (0, a.e7)([f.Z], () => null !== U && U.type === l.B.GUILD ? f.Z.getGuild(U.guildId) : null, [U]),
   x = (0, a.e7)([h.Z], () => h.Z.isFocused()),
-  G = (0, a.e7)([s.Z], () => s.Z.useReducedMotion, []),
+  G = (0, a.e7)([o.Z], () => o.Z.useReducedMotion, []),
   k = E.Yk.useSetting(),
   B = (0, I.C1)(y, O(U) ? U : null),
   {
@@ -99,7 +99,7 @@ if (O(U)) {
     animated: k && U.animated,
     size: 28
   }) : U.url;
-  t = '' === e ? (0, r.jsx)(o.Text, {
+  t = '' === e ? (0, r.jsx)(s.Text, {
     variant: 'text-md/normal',
     className: v.glyphEmoji,
     children: 'surrogates' in U ? U.surrogates : null
@@ -109,7 +109,7 @@ if (O(U)) {
     className: v.emoji
   });
 } else
-  t = (0, r.jsx)(o.CirclePlusIcon, {
+  t = (0, r.jsx)(s.CirclePlusIcon, {
     size: 'md',
     color: 'currentColor',
     className: v.icon,

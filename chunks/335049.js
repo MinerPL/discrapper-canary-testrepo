@@ -9,8 +9,8 @@ var i = t(735250),
   l = t.n(s),
   o = t(512722),
   r = t.n(o),
-  c = t(866442),
-  d = t(442837),
+  d = t(866442),
+  c = t(442837),
   u = t(481060),
   I = t(239091),
   m = t(895924),
@@ -19,8 +19,8 @@ var i = t(735250),
   E = t(518738),
   T = t(592125),
   h = t(271383),
-  p = t(430824),
-  g = t(246946),
+  g = t(430824),
+  p = t(246946),
   C = t(594174),
   f = t(176278),
   x = t(51144),
@@ -34,9 +34,9 @@ guild: n,
 id: s,
 type: l,
 isLocked: o,
-lockTooltipText: c
-  } = e, d = !o || null != c;
-  r()(d, 'No lockTooltipText provided while isLocked=true');
+lockTooltipText: d
+  } = e, c = !o || null != d;
+  r()(c, 'No lockTooltipText provided while isLocked=true');
   let u = a.useCallback(e => {
 (0, I.jW)(e, async () => {
   let {
@@ -55,7 +55,7 @@ case m.Kw.CHANNEL:
     guild: n,
     id: s,
     isLocked: o,
-    lockTooltipText: c,
+    lockTooltipText: d,
     openEntryContextMenu: u
   });
 case m.Kw.ROLE:
@@ -63,7 +63,7 @@ case m.Kw.ROLE:
     guild: n,
     id: s,
     isLocked: o,
-    lockTooltipText: c,
+    lockTooltipText: d,
     openEntryContextMenu: u
   });
 case m.Kw.USER:
@@ -71,7 +71,7 @@ case m.Kw.USER:
     guild: n,
     id: s,
     isLocked: o,
-    lockTooltipText: c,
+    lockTooltipText: d,
     openEntryContextMenu: u
   });
   }
@@ -84,12 +84,12 @@ id: t,
 isLocked: s,
 lockTooltipText: o,
 openEntryContextMenu: r
-  } = e, c = (0, _.bD)(n.id), {
+  } = e, d = (0, _.bD)(n.id), {
 icon: I,
 name: m,
 categoryName: E
-  } = (0, d.cj)([T.Z], () => {
-if (c === t)
+  } = (0, c.cj)([T.Z], () => {
+if (d === t)
   return {
     name: S.Z.Messages.INTEGRATIONS_APPLICATION_ALL_CHANNELS,
     icon: u.TextIcon
@@ -102,13 +102,13 @@ return {
   categoryName: null == i ? void 0 : i.name
 };
   }, [
-c,
+d,
 n,
 t
   ]), h = a.useCallback(e => {
-t !== c && r(e);
+t !== d && r(e);
   }, [
-c,
+d,
 t,
 r
   ]);
@@ -152,7 +152,7 @@ guild: s,
 id: o,
 isLocked: r,
 lockTooltipText: m
-  } = e, _ = (0, d.e7)([p.Z], () => p.Z.getRole(s.id, o)), N = (0, E.p9)({
+  } = e, _ = (0, c.e7)([g.Z], () => g.Z.getRole(s.id, o)), N = (0, E.p9)({
 guildId: s.id,
 roleId: o,
 size: 24
@@ -184,7 +184,7 @@ children: [
     width: 23,
     height: 23,
     className: l()(A.shield, A.image),
-    color: null !== (n = _.colorString) && void 0 !== n ? n : (0, c.Rf)(O.p6O)
+    color: null !== (n = _.colorString) && void 0 !== n ? n : (0, d.Rf)(O.p6O)
   }),
   (0, i.jsx)(u.Text, {
     className: A.roleName,
@@ -206,13 +206,13 @@ id: t,
 isLocked: a,
 lockTooltipText: s,
 openEntryContextMenu: l
-  } = e, o = (0, d.e7)([C.default], () => C.default.getUser(t)), r = (0, d.e7)([h.ZP], () => {
+  } = e, o = (0, c.e7)([C.default], () => C.default.getUser(t)), r = (0, c.e7)([h.ZP], () => {
 var e;
 return null === (e = h.ZP.getMember(n.id, t)) || void 0 === e ? void 0 : e.nick;
   }, [
 n.id,
 t
-  ]), c = (0, d.e7)([g.Z], () => g.Z.hidePersonalInformation);
+  ]), d = (0, c.e7)([p.Z], () => p.Z.hidePersonalInformation);
   return null == o ? null : (0, i.jsxs)('div', {
 onContextMenu: l,
 className: A.identifier,
@@ -229,7 +229,7 @@ children: [
     variant: 'text-md/normal',
     children: null != r ? r : o.username
   }),
-  c ? null : (0, i.jsx)(u.Text, {
+  d ? null : (0, i.jsx)(u.Text, {
     className: A.tag,
     variant: 'text-sm/normal',
     children: x.ZP.getUserTag(o)

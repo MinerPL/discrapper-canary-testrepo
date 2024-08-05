@@ -1,6 +1,6 @@
 n.d(t, {
   I: function() {
-return s;
+return o;
   }
 });
 var r = n(470079),
@@ -24,22 +24,22 @@ return function(t, n, r) {
 };
   }();
 
-function o(e, t) {
+function s(e, t) {
   if (!e)
 throw ReferenceError('this hasn\'t been initialised - super() hasn\'t been called');
   return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-var s = function(e) {
+var o = function(e) {
   var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'span';
   return function(n) {
-function s() {
+function o() {
   ! function(e, t) {
     if (!(e instanceof t))
       throw TypeError('Cannot call a class as a function');
-  }(this, s);
+  }(this, o);
   for (var e, t, n, r = arguments.length, i = Array(r), a = 0; a < r; a++)
     i[a] = arguments[a];
-  return t = n = o(this, (e = s.__proto__ || Object.getPrototypeOf(s)).call.apply(e, [this].concat(i))), n.state = {
+  return t = n = s(this, (e = o.__proto__ || Object.getPrototypeOf(o)).call.apply(e, [this].concat(i))), n.state = {
     focus: !1
   }, n.handleFocus = function() {
     return n.setState({
@@ -49,7 +49,7 @@ function s() {
     return n.setState({
       focus: !1
     });
-  }, o(n, t);
+  }, s(n, t);
 }
 return ! function(e, t) {
   if ('function' != typeof t && null !== t)
@@ -62,7 +62,7 @@ return ! function(e, t) {
       configurable: !0
     }
   }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t);
-}(s, n), a(s, [{
+}(o, n), a(o, [{
   key: 'render',
   value: function() {
     return r.createElement(t, {
@@ -70,6 +70,6 @@ return ! function(e, t) {
       onBlur: this.handleBlur
     }, r.createElement(e, i({}, this.props, this.state)));
   }
-}]), s;
+}]), o;
   }(r.Component);
 };

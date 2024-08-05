@@ -1,6 +1,6 @@
 n(653041), n(47120);
-var r, i, a, o, s = n(348327),
-  l = n.n(s),
+var r, i, a, s, o = n(348327),
+  l = n.n(o),
   u = n(392711),
   c = n.n(u),
   d = n(442837),
@@ -52,18 +52,18 @@ e.push({
   flags: O.xjy.EMBEDDED
 });
   });
-  let o = p.ZP.getVisibleGame(),
-s = null != o && null != o.name && i.has(o.name),
-u = null != o && o.isLauncher,
+  let s = p.ZP.getVisibleGame(),
+o = null != s && null != s.name && i.has(s.name),
+u = null != s && s.isLauncher,
 d = A.Z.getCurrentUserActiveStream();
-  if (null != o && null != o.name && !(s || u && !(null != d))) {
+  if (null != s && null != s.name && !(o || u && !(null != d))) {
 var _, S;
 e.push({
   type: O.IIU.PLAYING,
-  name: o.name,
-  application_id: null !== (S = o.id) && void 0 !== S ? S : null === (_ = v.Z.getGameByName(o.name)) || void 0 === _ ? void 0 : _.id,
+  name: s.name,
+  application_id: null !== (S = s.id) && void 0 !== S ? S : null === (_ = v.Z.getGameByName(s.name)) || void 0 === _ ? void 0 : _.id,
   timestamps: {
-    start: o.start
+    start: s.start
   }
 });
   }
@@ -110,12 +110,12 @@ return C.find(e);
 return y;
   }
 }
-o = 'LocalActivityStore', (a = 'displayName') in(i = L) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'LocalActivityStore', (a = 'displayName') in(i = L) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new L(_.Z, {
+}) : i[a] = s, t.Z = new L(_.Z, {
   OVERLAY_INITIALIZE: function(e) {
 let {
   localActivities: t

@@ -16,8 +16,8 @@ var a = r(599295),
   d = r(639519),
   h = r.n(d),
   p = r(852153),
-  g = r(140201),
-  y = r(667929),
+  y = r(140201),
+  g = r(667929),
   v = [
 'data',
 'keyPath',
@@ -73,8 +73,8 @@ console.error('Styling method "'.concat(e, '" is deprecated, use "theme" propert
   };
 };
   })), t);
-  return e.invertTheme && (s = (0, y.y7)(s)), {
-styling: (0, g.Z)(s)
+  return e.invertTheme && (s = (0, g.y7)(s)), {
+styling: (0, y.Z)(s)
   };
 }
 var E = function(e) {

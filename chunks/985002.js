@@ -13,8 +13,8 @@ function o(e) {
   let {
 onError: t,
 onSuccess: n
-  } = null != e ? e : {}, [o, c] = s.useState(!1), [d, _] = s.useState(!1), [u, E] = s.useState(!1), [T, I] = s.useState(!1), [R, C] = s.useState(!1), [p, g] = s.useState(!1), [A, m] = s.useState(!1), [N, f] = s.useState(!1), S = o || d || u || T || p || N, h = s.useCallback(async e => {
-if (!S) {
+  } = null != e ? e : {}, [o, c] = s.useState(!1), [d, _] = s.useState(!1), [u, E] = s.useState(!1), [T, I] = s.useState(!1), [R, C] = s.useState(!1), [g, p] = s.useState(!1), [A, m] = s.useState(!1), [N, f] = s.useState(!1), h = o || d || u || T || g || N, S = s.useCallback(async e => {
+if (!h) {
   c(!0);
   try {
     await (0, r.Yw)(e.id, l.ne.ACTIVE), null == n || n();
@@ -26,11 +26,11 @@ if (!S) {
   }
 }
   }, [
-S,
+h,
 t,
 n
   ]), M = s.useCallback(async e => {
-if (!S) {
+if (!h) {
   _(!0);
   try {
     await (0, r.Yw)(e.id, l.ne.DECLINED), null == n || n();
@@ -42,11 +42,11 @@ if (!S) {
   }
 }
   }, [
-S,
+h,
 t,
 n
   ]), x = s.useCallback(async e => {
-if (!S) {
+if (!h) {
   E(!0);
   try {
     await (0, r.Yw)(e.id, l.ne.INACTIVE), null == n || n();
@@ -58,11 +58,11 @@ if (!S) {
   }
 }
   }, [
-S,
+h,
 t,
 n
   ]), b = s.useCallback(async e => {
-if (!S) {
+if (!h) {
   I(!0);
   try {
     await (0, r.fc)(e.id), null == n || n();
@@ -74,7 +74,7 @@ if (!S) {
   }
 }
   }, [
-S,
+h,
 t,
 n
   ]), O = s.useCallback(async () => {
@@ -93,7 +93,7 @@ if (!R) {
 R,
 t,
 n
-  ]), L = s.useCallback(async e => {
+  ]), P = s.useCallback(async e => {
 if (!A) {
   m(!0);
   try {
@@ -109,31 +109,31 @@ if (!A) {
 A,
 t,
 n
-  ]), P = s.useCallback(async (e, s) => {
-if (!p) {
-  g(!0);
+  ]), v = s.useCallback(async (e, s) => {
+if (!g) {
+  p(!0);
   try {
     await r.ZP.requestLink(e, s), null == n || n();
   } catch (n) {
     let e = new a.Hx(n);
     null == t || t(e);
   } finally {
-    g(!1);
+    p(!1);
   }
 }
   }, [
-p,
+g,
 t,
 n
   ]);
   return {
-acceptLinkRequest: h,
+acceptLinkRequest: S,
 declineLinkRequest: M,
 disconnectLinkRequest: x,
 cancelLinkRequest: b,
-selectTeenUser: L,
+selectTeenUser: P,
 getLinkCode: O,
-requestLink: P,
+requestLink: v,
 loadMore: s.useCallback(async e => {
   let n = i.Z.getActionsForDisplayType(e),
     s = n[n.length - 1],
@@ -160,7 +160,7 @@ isDisconnectLoading: u,
 isCancelLoading: T,
 isGetLinkCodeLoading: R,
 isSelectTeenUserLoading: A,
-isRequestingLink: p,
+isRequestingLink: g,
 isMoreLoading: N
   };
 }

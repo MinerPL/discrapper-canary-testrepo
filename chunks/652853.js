@@ -8,11 +8,11 @@ return c;
 });
 var r, i = n(735250),
   a = n(470079),
-  o = n(541049),
-  s = n(231338);
+  s = n(541049),
+  o = n(231338);
 let l = a.createContext({
   profileType: null,
-  theme: null !== (r = (0, o.Z)()) && void 0 !== r ? r : s.BR.DARK,
+  theme: null !== (r = (0, s.Z)()) && void 0 !== r ? r : o.BR.DARK,
   primaryColor: null,
   secondaryColor: null
 });
@@ -22,22 +22,22 @@ function u(e) {
 profileType: t,
 theme: n,
 primaryColor: r,
-secondaryColor: o,
-children: s
+secondaryColor: s,
+children: o
   } = e, u = a.useMemo(() => ({
 profileType: t,
 theme: n,
 primaryColor: r,
-secondaryColor: o
+secondaryColor: s
   }), [
 t,
 n,
 r,
-o
+s
   ]);
   return (0, i.jsx)(l.Provider, {
 value: u,
-children: s
+children: o
   });
 }
 let c = () => a.useContext(l);

@@ -1,18 +1,18 @@
 n.d(t, {
   ZP: function() {
-return s;
+return o;
   }
 }), n(47120);
 var r = n(470079),
   i = n(808629),
   a = n(536895),
-  o = n(260866);
+  s = n(260866);
 
-function s(e) {
+function o(e) {
   let {
 navId: t,
 items: n,
-initialFocusPath: s,
+initialFocusPath: o,
 onSelect: l,
 enabled: u = !0,
 closeMenu: c
@@ -22,9 +22,9 @@ d.current = u;
   }, [u]);
   let [_, E] = r.useReducer(i.Z, {
 items: n,
-focusPath: s,
+focusPath: o,
 focusIndex: -1
-  }), f = r.useMemo(() => (0, o.P2)(E, 30), [E]);
+  }), f = r.useMemo(() => (0, s.P2)(E, 30), [E]);
   r.useEffect(() => {
 E({
   type: i.B.UPDATE_ITEMS,
@@ -37,13 +37,13 @@ focusPath: h
 onItemFocusMemoizer: g,
 onItemMouseEnterMemoizer: S
   }] = r.useState(() => ({
-onItemFocusMemoizer: new o.$o(e => () => {
+onItemFocusMemoizer: new s.$o(e => () => {
   m(!0), E({
     type: i.B.SET_FOCUS_PATH,
     path: e.split('--')
   });
 }),
-onItemMouseEnterMemoizer: new o.$o(e => () => {
+onItemMouseEnterMemoizer: new s.$o(e => () => {
   T(!1), E({
     type: i.B.SET_FOCUS_PATH,
     path: e.split('--')
@@ -78,7 +78,7 @@ switch (n) {
     });
     return;
   case a.Us.SELECT_FOCUSED_ITEM:
-    var r, i, s, u, _;
+    var r, i, o, u, _;
     if (e.repeat)
       return;
     if (e.target.tabIndex >= 0)
@@ -89,7 +89,7 @@ switch (n) {
       l(h);
       return;
     }
-    let E = (u = null !== (r = e.target.ownerDocument) && void 0 !== r ? r : document, _ = (i = t, null != (s = h) ? ''.concat((0, o.qR)(i, s.join('--'))) : i), u.getElementById(_));
+    let E = (u = null !== (r = e.target.ownerDocument) && void 0 !== r ? r : document, _ = (i = t, null != (o = h) ? ''.concat((0, s.qR)(i, o.join('--'))) : i), u.getElementById(_));
     null == E || E.click();
 }
   }, [
@@ -118,7 +118,7 @@ onKeyDown: A,
 onFocus: N,
 onBlur: v,
 onMouseLeave: O,
-'aria-activedescendant': h.length > 0 ? (0, o.qR)(t, h.join('--')) : void 0
+'aria-activedescendant': h.length > 0 ? (0, s.qR)(t, h.join('--')) : void 0
   }), [
 t,
 A,
@@ -133,7 +133,7 @@ let {
 return {
   role: 'menu',
   tabIndex: -1,
-  'aria-activedescendant': R(n) ? (0, o.qR)(t, h.join('--')) : void 0,
+  'aria-activedescendant': R(n) ? (0, s.qR)(t, h.join('--')) : void 0,
   focusIndex: _.focusIndex,
   isUsingKeyboardNavigation: I
 };
@@ -155,7 +155,7 @@ return {
     'aria-haspopup': !0
   } : {},
   role: i,
-  id: (0, o.qR)(t, a),
+  id: (0, s.qR)(t, a),
   tabIndex: -1,
   onFocus: g.get(a),
   onMouseEnter: S.get(a)

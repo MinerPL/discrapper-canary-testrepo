@@ -1,6 +1,6 @@
 n(47120);
-var r, i, a, o, s = n(392711),
-  l = n.n(s),
+var r, i, a, s, o = n(392711),
+  l = n.n(o),
   u = n(442837),
   c = n(570140);
 let d = {};
@@ -18,12 +18,12 @@ return d[e];
 return d;
   }
 }
-o = 'ConnectedAppsStore', (a = 'displayName') in(i = _) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'ConnectedAppsStore', (a = 'displayName') in(i = _) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new _(c.Z, {
+}) : i[a] = s, t.Z = new _(c.Z, {
   OVERLAY_INITIALIZE: function(e) {
 let {
   connectedApps: t

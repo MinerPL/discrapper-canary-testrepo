@@ -12,8 +12,8 @@ return n && e(t.prototype, n), r && e(t, r), t;
 n(968598);
 var i = n(592093),
   a = n(261469),
-  o = n(512722),
-  s = n(771922),
+  s = n(512722),
+  o = n(771922),
   l = function(e) {
 function t(e) {
   ! function(e, t) {
@@ -29,7 +29,7 @@ function t(e) {
       x: 0,
       y: 0
     };
-  return 'number' == typeof r.x && 'number' == typeof r.y ? (n.x = new i(r.x), n.y = new i(r.y)) : (o(r.x instanceof i && r.y instanceof i, 'AnimatedValueXY must be initalized with an object of numbers or AnimatedValues.'), n.x = r.x, n.y = r.y), n._listeners = {}, n;
+  return 'number' == typeof r.x && 'number' == typeof r.y ? (n.x = new i(r.x), n.y = new i(r.y)) : (s(r.x instanceof i && r.y instanceof i, 'AnimatedValueXY must be initalized with an object of numbers or AnimatedValues.'), n.x = r.x, n.y = r.y), n._listeners = {}, n;
 }
 return ! function(e, t) {
   if ('function' != typeof t && null !== t)
@@ -79,7 +79,7 @@ return ! function(e, t) {
     key: 'addListener',
     value: function(e) {
       var t = this,
-        n = s(),
+        n = o(),
         r = function(n) {
           n.value, e(t.__getValue());
         };

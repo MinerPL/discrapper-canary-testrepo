@@ -9,7 +9,7 @@ writable: !0
 }
 n.d(t, {
   m: function() {
-return o;
+return s;
   }
 }), n(951953), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817);
 let i = new(n(259443)).Y('RenderingContextWebGL');
@@ -25,12 +25,12 @@ let r = this.createProgram(e, t, n);
 if (null == r)
   return null;
 let i = e.getAttribLocation(r, 'position'),
-  o = e.getAttribLocation(r, 'texcoord');
-if (-1 === i || -1 === o)
+  s = e.getAttribLocation(r, 'texcoord');
+if (-1 === i || -1 === s)
   return null;
-let s = e.getUniformLocation(r, 'transform'),
+let o = e.getUniformLocation(r, 'transform'),
   l = e.getUniformLocation(r, 'texture');
-if (null == s || null == l)
+if (null == o || null == l)
   return null;
 let u = e.createBuffer();
 if (null == u)
@@ -54,8 +54,8 @@ return null == c ? null : new a({
   gl: e,
   program: r,
   positionLoc: i,
-  texcoordLoc: o,
-  transformLoc: s,
+  texcoordLoc: s,
+  transformLoc: o,
   textureLoc: l,
   vertexBuffer: u,
   texture: c
@@ -99,8 +99,8 @@ program: t,
 positionLoc: n,
 texcoordLoc: i,
 transformLoc: a,
-textureLoc: o,
-vertexBuffer: s,
+textureLoc: s,
+vertexBuffer: o,
 texture: l
   }) {
 r(this, 'transform', new Float32Array([
@@ -120,11 +120,11 @@ r(this, 'transform', new Float32Array([
   1,
   0,
   1
-])), r(this, 'gl', void 0), r(this, 'program', void 0), r(this, 'positionLoc', void 0), r(this, 'texcoordLoc', void 0), r(this, 'transformLoc', void 0), r(this, 'textureLoc', void 0), r(this, 'vertexBuffer', void 0), r(this, 'texture', void 0), this.gl = e, this.program = t, this.positionLoc = n, this.texcoordLoc = i, this.transformLoc = a, this.textureLoc = o, this.vertexBuffer = s, this.texture = l;
+])), r(this, 'gl', void 0), r(this, 'program', void 0), r(this, 'positionLoc', void 0), r(this, 'texcoordLoc', void 0), r(this, 'transformLoc', void 0), r(this, 'textureLoc', void 0), r(this, 'vertexBuffer', void 0), r(this, 'texture', void 0), this.gl = e, this.program = t, this.positionLoc = n, this.texcoordLoc = i, this.transformLoc = a, this.textureLoc = s, this.vertexBuffer = o, this.texture = l;
   }
 }
 
-function o(e) {
+function s(e) {
   let t = e.getContext('webgl2');
   return null == t ? null : a.create(t);
 }

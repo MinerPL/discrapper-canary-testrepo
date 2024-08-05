@@ -1,6 +1,6 @@
 i.r(t), i.d(t, {
   default: function() {
-return f;
+return g;
   }
 });
 var n = i(735250),
@@ -17,7 +17,7 @@ var n = i(735250),
   p = i(981631),
   m = i(721436);
 
-function f() {
+function g() {
   let e = (0, c.useApplicationDirectoryHistory)(e => e.guildId),
 t = (0, r.e7)([s.Z], () => s.Z.getCategories()),
 i = (0, c.getPreviousView)();

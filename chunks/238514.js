@@ -1,7 +1,7 @@
 var r, i = n(392711),
   a = n.n(i),
-  o = n(442837),
-  s = n(433517),
+  s = n(442837),
+  o = n(433517),
   l = n(570140),
   u = n(981631);
 
@@ -14,7 +14,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 let d = {};
-class _ extends(r = o.ZP.PersistedStore) {
+class _ extends(r = s.ZP.PersistedStore) {
   initialize(e) {
 d = null != e ? e : {};
   }
@@ -37,9 +37,9 @@ return null === (e = d.appearance) || void 0 === e ? void 0 : e.settings;
 c(_, 'displayName', 'SelectivelySyncedUserSettingsStore'), c(_, 'persistKey', 'SelectivelySyncedUserSettingsStore'), c(_, 'migrations', [
   () => {
 var e, t;
-let n = null !== (e = s.K.get('UserSettingsSync')) && void 0 !== e ? e : {},
-  r = null !== (t = s.K.get('UserSettingsStore')) && void 0 !== t ? t : {};
-s.K.remove('UserSettingsSync');
+let n = null !== (e = o.K.get('UserSettingsSync')) && void 0 !== e ? e : {},
+  r = null !== (t = o.K.get('UserSettingsStore')) && void 0 !== t ? t : {};
+o.K.remove('UserSettingsSync');
 let i = {};
 return !1 === n[u.oAB.TEXT] && (i.text = {
   shouldSync: !1,

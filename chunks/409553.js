@@ -5,8 +5,8 @@ return _;
 });
 var t = o(735250);
 o(470079);
-var r = o(481060),
-  s = o(63063),
+var s = o(481060),
+  r = o(63063),
   i = o(921869),
   c = o(514161),
   a = o(981631),
@@ -18,14 +18,14 @@ function u() {
 children: [
   (0, t.jsx)(c.Ux, {
     text: l.Z.Messages.CONNECT_XBOX_TRANSFER_VOICE_VALUE_PROP,
-    children: (0, t.jsx)(r.VoiceNormalIcon, {
+    children: (0, t.jsx)(s.VoiceNormalIcon, {
       size: 'md',
       color: 'currentColor'
     })
   }),
   (0, t.jsx)(c.Ux, {
     text: l.Z.Messages.CONNECT_XBOX_DISPLAY_GAME_VALUE_PROP,
-    children: (0, t.jsx)(r.GameControllerIcon, {
+    children: (0, t.jsx)(s.GameControllerIcon, {
       size: 'md',
       color: 'currentColor'
     })
@@ -38,13 +38,13 @@ function _(e) {
   let {
 onContinue: n,
 onClose: o
-  } = e, r = s.Z.getArticleURL(a.BhN.XBOX_CONNECTION);
+  } = e, s = r.Z.getArticleURL(a.BhN.XBOX_CONNECTION);
   return (0, t.jsx)(i.m, {
 platformType: a.ABu.XBOX,
 headerConnect: l.Z.Messages.CONNECT_XBOX_LANDING_TITLE,
 headerReconnect: l.Z.Messages.RECONNECT_XBOX_LANDING_TITLE,
 body: l.Z.Messages.CONNECT_XBOX_LANDING_BODY,
-learnMoreLink: r,
+learnMoreLink: s,
 onClose: o,
 onContinue: n,
 img: (0, t.jsx)('img', {

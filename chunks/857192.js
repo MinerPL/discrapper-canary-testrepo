@@ -1,5 +1,5 @@
 n.r(t), n(789020);
-var r, i, a, o, s = n(261470),
+var r, i, a, s, o = n(261470),
   l = n(213919),
   u = n(442837),
   c = n(544891),
@@ -12,7 +12,7 @@ var r, i, a, o, s = n(261470),
 let m = (() => {
 let e = ''.concat(location.protocol, '//').concat(location.host, '/__development/source_maps'),
   t = null,
-  n = new s.Z(5 * f.Z.Millis.SECOND, 1 * f.Z.Millis.MINUTE, !0),
+  n = new o.Z(5 * f.Z.Millis.SECOND, 1 * f.Z.Millis.MINUTE, !0),
   r = () => {
     c.tn.put({
       url: e,
@@ -50,6 +50,7 @@ logOverlayEvents: !1,
 logAnalyticsEvents: !1,
 sourceMapsEnabled: !1,
 axeEnabled: !1,
+cssDebuggingEnabled: !1,
 analyticsDebuggerEnabled: !1,
 bugReporterEnabled: !0,
 idleStatusIndicatorEnabled: !1,
@@ -92,6 +93,9 @@ return g.logAnalyticsEvents;
   get isAxeEnabled() {
 return g.axeEnabled;
   }
+  get cssDebuggingEnabled() {
+return g.cssDebuggingEnabled;
+  }
   get sourceMapsEnabled() {
 return g.sourceMapsEnabled;
   }
@@ -111,12 +115,12 @@ return g.appDirectoryIncludesInactiveCollections;
 return Object.keys(g).map(e => g[e]), Object.keys(g).filter(e => g[e]).join(',');
   }
 }
-o = 'DeveloperOptionsStore', (a = 'displayName') in(i = A) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'DeveloperOptionsStore', (a = 'displayName') in(i = A) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.default = new A(_.Z, {
+}) : i[a] = s, t.default = new A(_.Z, {
   LOGOUT: function(e) {
 S(T);
   },

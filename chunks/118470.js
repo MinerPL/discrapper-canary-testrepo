@@ -4,8 +4,8 @@ return E;
   }
 }), n(47120), n(653041);
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(812206),
   l = n(82950),
   o = n(434404),
@@ -18,7 +18,7 @@ var i = n(735250),
 function E(e) {
   let {
 guild: t
-  } = e, n = (0, d.h6)(t), E = () => (0, c.sB)(t.id), I = s.useMemo(() => new Set(n.map(e => e.applicationId)), [n]), m = (0, a.Wu)([r.Z], () => {
+  } = e, n = (0, d.h6)(t), E = () => (0, c.sB)(t.id), I = a.useMemo(() => new Set(n.map(e => e.applicationId)), [n]), m = (0, s.Wu)([r.Z], () => {
 let e = [];
 for (let t of I) {
   let n = r.Z.getApplication(t);

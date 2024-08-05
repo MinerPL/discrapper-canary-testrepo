@@ -8,21 +8,21 @@ return I;
 }), n(47120), n(724458);
 var i = n(470079),
   a = n(442837),
-  l = n(570140),
-  s = n(439170),
+  s = n(570140),
+  l = n(439170),
   r = n(592125),
   o = n(430824),
   c = n(451478),
-  d = n(626135),
-  u = n(162461),
+  u = n(626135),
+  d = n(162461),
   h = n(146282),
   p = n(34586),
   m = n(590026),
   _ = n(178762),
   f = n(206583),
   E = n(809017),
-  C = n(981631),
-  g = n(689938);
+  g = n(981631),
+  C = n(689938);
 let I = 0;
 
 function x(e) {
@@ -34,7 +34,7 @@ memberStoreProps: {
 },
 channelId: x,
 guildId: T
-  } = e, [v, N] = i.useState(!1), {
+  } = e, [N, v] = i.useState(!1), {
 requestId: S,
 entries: Z,
 impressionCappedEntryIds: A
@@ -46,44 +46,44 @@ if (null == Z || 0 === Z.length || null == S || !P)
     n,
     I
   ];
-let i = v ? Z.length : 3,
+let i = N ? Z.length : 3,
   a = Z.slice(0, i);
 e = M ? [{
-  type: s.so.HIDDEN_CONTENT_INVENTORY
+  type: l.so.HIDDEN_CONTENT_INVENTORY
 }] : a.map(e => ({
-  type: s.so.CONTENT_INVENTORY,
+  type: l.so.CONTENT_INVENTORY,
   entry: e,
   requestId: S
 }));
-let l = {
+let s = {
   id: E.G,
-  type: s.so.CONTENT_INVENTORY_GROUP,
+  type: l.so.CONTENT_INVENTORY_GROUP,
   key: E.G,
   count: e.length,
   index: n.length,
-  title: g.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE,
+  title: C.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE,
   onToggleExpand: () => {
-    N(e => {
+    v(e => {
       let t = !e;
-      return d.default.track(C.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
+      return u.default.track(g.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
         channel_id: x,
         guild_id: T,
         expanded: t
       }), t;
     });
   },
-  expanded: v,
+  expanded: N,
   expandedCount: Z.length,
   feedHeight: e.map(_.iZ).reduce((e, t) => e + t, 0)
 };
 return [
   [
-    l,
+    s,
     ...t
   ],
   [
     ...n,
-    l,
+    s,
     ...e
   ],
   Math.random(),
@@ -92,7 +92,7 @@ return [
   }, [
 x,
 Z,
-v,
+N,
 t,
 T,
 S,
@@ -121,7 +121,7 @@ if (null == S || null == B.current || Date.now() - B.current < 3000)
 let n = null !== (t = null === (e = w.current) || void 0 === e ? void 0 : e.map(e => e.id)) && void 0 !== t ? t : [],
   i = n.slice(0, U.current);
 if (!M && !!b && !!P)
-  d.default.track(C.rMx.RANKING_ITEMS_SEEN, {
+  u.default.track(g.rMx.RANKING_ITEMS_SEEN, {
     request_id: S,
     first_shown_at: B.current,
     item_ids: i,
@@ -130,7 +130,7 @@ if (!M && !!b && !!P)
     guild_id: T,
     all_item_ids: n,
     impression_capped_item_ids: [...H.current.impressionCappedEntryIds]
-  }), (0, u.wm)('useInjectContentInventoryFeed') && l.Z.dispatch({
+  }), (0, d.wm)('useInjectContentInventoryFeed') && s.Z.dispatch({
     type: 'CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS',
     itemIds: i
   });

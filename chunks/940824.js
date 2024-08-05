@@ -1,45 +1,45 @@
-var l = s(735250);
-s(470079);
-var t = s(481060),
-  i = s(37234),
-  r = s(100527),
-  a = s(906732),
-  c = s(703656),
-  o = s(335131),
-  u = s(981631),
-  d = s(689938),
-  _ = s(840898);
+var i = t(735250);
+t(470079);
+var a = t(481060),
+  r = t(37234),
+  s = t(100527),
+  l = t(906732),
+  o = t(703656),
+  c = t(335131),
+  u = t(981631),
+  d = t(689938),
+  _ = t(840898);
 n.Z = e => {
   let {
 onClose: n
   } = e, {
-analyticsLocations: s
-  } = (0, a.ZP)(), m = () => {
-n(), (0, c.uL)(u.Z5c.COLLECTIBLES_SHOP), (0, o.mK)({
+analyticsLocations: t
+  } = (0, l.ZP)(), p = () => {
+n(), (0, o.uL)(u.Z5c.COLLECTIBLES_SHOP), (0, c.mK)({
   openInLayer: !1,
-  analyticsSource: r.Z.PREMIUM_PAYMENT_MODAL,
-  analyticsLocations: s
-}), (0, i.xf)();
+  analyticsSource: s.Z.PREMIUM_PAYMENT_MODAL,
+  analyticsLocations: t
+}), (0, r.xf)();
   };
-  return (0, l.jsxs)('div', {
+  return (0, i.jsxs)('div', {
 className: _.container,
 children: [
-  (0, l.jsx)('div', {
+  (0, i.jsx)('div', {
     className: _.iconBackground,
-    children: (0, l.jsx)(t.ShopIcon, {
+    children: (0, i.jsx)(a.ShopIcon, {
       size: 'custom',
       width: 20,
       height: 20,
-      color: t.tokens.colors.WHITE
+      color: a.tokens.colors.WHITE
     })
   }),
-  (0, l.jsx)(t.Text, {
+  (0, i.jsx)(a.Text, {
     variant: 'text-sm/normal',
     color: 'header-primary',
     children: d.Z.Messages.COLLECTIBLES_GIFT_CODE_MODAL_UPSELL.format({
-      checkItOut: e => (0, l.jsx)(t.Clickable, {
+      checkItOut: e => (0, i.jsx)(a.Clickable, {
         className: _.link,
-        onClick: m,
+        onClick: p,
         children: e
       })
     })

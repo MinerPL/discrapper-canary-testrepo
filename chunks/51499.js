@@ -6,8 +6,8 @@ return d;
 var l = n(735250);
 n(470079);
 var o = n(120356),
-  t = n.n(o),
-  s = n(481060),
+  s = n.n(o),
+  t = n(481060),
   a = n(598),
   c = n(409813),
   i = n(645701);
@@ -35,8 +35,8 @@ let r = e.id !== c.h8.ADD_PAYMENT_STEPS,
   l = e.id === c.h8.ADD_PAYMENT_STEPS && !u.current;
 return !n || n && (r || l);
   }), (0, l.jsx)('div', {
-className: t()('breadcrumb', i.wrapper, r),
-children: (0, l.jsx)(s.Breadcrumbs, {
+className: s()('breadcrumb', i.wrapper, r),
+children: (0, l.jsx)(t.Breadcrumbs, {
   activeId: o,
   breadcrumbs: p
 })

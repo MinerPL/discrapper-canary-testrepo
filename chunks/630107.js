@@ -16,8 +16,8 @@ var a = t(735250),
   m = t(981631),
   x = t(186901),
   b = t(689938),
-  N = t(521934),
-  _ = t(821744);
+  _ = t(521934),
+  N = t(821744);
 r.ZP.initialize();
 let E = i.tq || i.Em,
   g = 'inventory';
@@ -34,12 +34,12 @@ function h() {
     }) : e === m.kEZ.OPEN_FAIL && (0, p.dL)(m.Z5c.SETTINGS(g));
 }, [e]), E)
 return (0, a.jsxs)('div', {
-  className: N.mobileWebContainer,
+  className: _.mobileWebContainer,
   children: [
     (0, a.jsx)('img', {
-      src: _,
+      src: N,
       alt: '',
-      className: N.mobileWebImage
+      className: _.mobileWebImage
     }),
     (0, a.jsx)(l.Heading, {
       variant: 'display-lg',
@@ -48,8 +48,8 @@ return (0, a.jsxs)('div', {
     }),
     (0, a.jsx)(l.Text, {
       variant: 'text-md/normal',
-      className: N.mobileWebCopy,
-      children: b.Z.Messages.QUESTS_LANDING_PAGE_MOBILE_WEB_BODY.format()
+      className: _.mobileWebCopy,
+      children: b.Z.Messages.QUESTS_LANDING_PAGE_MOBILE_WEB_BODY_DESKTOP_AND_MOBILE
     })
   ]
 });
@@ -57,11 +57,11 @@ return (0, a.jsxs)('div', {
   return (0, a.jsxs)(a.Fragment, {
 children: [
   (0, a.jsx)(o.Z, {
-    className: N.backgroundArtwork,
+    className: _.backgroundArtwork,
     preserveAspectRatio: 'xMinYMin slice'
   }),
   (0, a.jsx)('div', {
-    className: N.container,
+    className: _.container,
     children: (0, a.jsx)(c.ZP, {
       children: n ? (0, a.jsxs)(a.Fragment, {
         children: [
@@ -73,7 +73,7 @@ children: [
       }) : (0, a.jsxs)(a.Fragment, {
         children: [
           (0, a.jsx)(c.Dx, {
-            className: N.appOpenedTitle,
+            className: _.appOpenedTitle,
             children: b.Z.Messages.APP_OPENED_TITLE
           }),
           (0, a.jsx)(c.DK, {

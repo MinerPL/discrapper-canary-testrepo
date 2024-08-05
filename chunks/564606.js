@@ -7,7 +7,6 @@ e.exports = {
   fullscreenOnMobile: 'fullscreenOnMobile_f9a4c9',
   header: 'header_f9a4c9',
   footer: 'footer_f9a4c9',
-  rootWithShadow: 'rootWithShadow_f9a4c9',
   separator: 'separator_f9a4c9',
   footerSeparator: 'footerSeparator_f9a4c9',
   content: 'content_f9a4c9',
@@ -15,5 +14,6 @@ e.exports = {
   closeWithCircleBackground: 'closeWithCircleBackground_f9a4c9',
   closeIcon: 'closeIcon_f9a4c9',
   hideOnFullscreen: 'hideOnFullscreen_f9a4c9',
-  spinnerContainer: 'spinnerContainer_f9a4c9'
+  spinnerContainer: 'spinnerContainer_f9a4c9',
+  rootWithShadow: 'rootWithShadow_f9a4c9'
 };

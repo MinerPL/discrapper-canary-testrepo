@@ -4,7 +4,7 @@ n.d(t, {
 return S;
   }
 }), n(47120);
-var i, a, o, s, l = n(392711),
+var i, a, s, o, l = n(392711),
   u = n.n(l),
   c = n(683860),
   d = n(442837),
@@ -80,12 +80,12 @@ return R === e && C === t && (0, I.OL)(r, n) ? A : (L(), !1);
 return R === e && C === t && (0, I.OL)(r, n) ? y : U;
   }
 }
-s = 'ArchivedThreadsStore', (o = 'displayName') in(a = w) ? Object.defineProperty(a, o, {
-  value: s,
+o = 'ArchivedThreadsStore', (s = 'displayName') in(a = w) ? Object.defineProperty(a, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = s, t.Z = new w(_.Z, {
+}) : a[s] = o, t.Z = new w(_.Z, {
   CONNECTION_OPEN: L,
   THREAD_DELETE: function(e) {
 let {

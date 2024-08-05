@@ -5,8 +5,8 @@ return N;
   }
 }), n(47120), n(653041), n(51350);
 var i, a = n(442837),
-  o = n(570140),
-  s = n(911969),
+  s = n(570140),
+  o = n(911969),
   l = n(314897),
   u = n(592125),
   c = n(944486),
@@ -60,13 +60,13 @@ function B(e) {
   let {
 guildId: i,
 channelId: a,
-location: o,
-applicationId: s,
+location: s,
+applicationId: o,
 launchId: u,
 compositeInstanceId: c,
 participants: d,
 analyticsActivitySessionId: E
-  } = e, m = (0, h.Z)(s);
+  } = e, m = (0, h.Z)(o);
   if (null == m)
 return;
   let I = d.map(e => e.userId),
@@ -75,13 +75,13 @@ S = I.some(e => e === T),
 A = null === (t = d.find(e => e.userId === T)) || void 0 === t ? void 0 : t.sessionId,
 N = d.some(e => (0, p.J)(e)),
 y = null == c,
-D = v.get(s),
+D = v.get(o),
 L = {
   analyticsActivitySessionId: null != E ? E : void 0,
-  applicationId: s,
+  applicationId: o,
   channelId: a,
   guildId: i,
-  location: null != o ? o : void 0,
+  location: null != s ? s : void 0,
   launchId: u,
   compositeInstanceId: c,
   url: m,
@@ -92,22 +92,24 @@ L = {
 ...D,
 ...L
   });
-  null != D && a === D.channelId && s === (null == D ? void 0 : D.applicationId) && (!S && Array.from(D.userIds).some(e => e === T) || !y && !N) ? C.get(a) === s ? C.delete(a) : (v.delete(s), _.S.dispatch(g.CkL.RELEASE_ACTIVITY_WEB_VIEW)) : S && (null == D || D.applicationId !== s || D.channelId !== a) && (A === l.default.getSessionId() && !y || (0, f.$)('EmbeddedActivitiesStore')) && (V({
+  null != D && a === D.channelId && o === (null == D ? void 0 : D.applicationId) && (!S && Array.from(D.userIds).some(e => e === T) || !y && !N) ? C.get(a) === o ? C.delete(a) : (v.delete(o), _.S.dispatch(g.CkL.RELEASE_ACTIVITY_WEB_VIEW)) : S && (null == D || D.applicationId !== o || D.channelId !== a) && (A === l.default.getSessionId() && !y || (0, f.$)('EmbeddedActivitiesStore')) && (V({
 channelId: a,
-applicationId: s,
+applicationId: o,
 launchId: u,
 compositeInstanceId: c
   }), _.S.dispatch(g.CkL.OPEN_EMBEDDED_ACTIVITY, {
 channelId: a
   }));
-  let b = (null !== (n = R.get(a)) && void 0 !== n ? n : []).filter(e => e.applicationId !== s),
+  let b = (null !== (n = R.get(a)) && void 0 !== n ? n : []).filter(e => e.applicationId !== o),
 M = k(i),
-P = (null !== (r = O.get(M)) && void 0 !== r ? r : []).filter(e => !(e.applicationId === s && e.channelId === a));
+P = (null !== (r = O.get(M)) && void 0 !== r ? r : []).filter(e => !(e.applicationId === o && e.channelId === a));
   I.length > 0 && (b.push(L), P.push(L)), R.set(a, b), O.set(M, P);
 }
 
 function F(e) {
-  e.embedded_activities.forEach(t => {
+  let t = e.embedded_activities,
+n = e.activity_instances;
+  null == t || t.forEach(t => {
 let {
   channel_id: n,
   embedded_activity: r,
@@ -124,6 +126,26 @@ B({
   })),
   analyticsActivitySessionId: r.activity_id
 });
+  }), null == n || n.forEach(t => {
+let {
+  location: n,
+  application_id: r,
+  launch_id: i,
+  composite_instance_id: a,
+  participants: s
+} = t;
+B({
+  guildId: e.id,
+  channelId: n.channel_id,
+  location: n,
+  applicationId: r,
+  launchId: i,
+  compositeInstanceId: a,
+  participants: s.map(e => ({
+    userId: e.user_id,
+    sessionId: e.session_id
+  }))
+});
   });
 }
 
@@ -132,8 +154,8 @@ function V(e) {
   let {
 channelId: i,
 applicationId: a,
-launchId: o,
-compositeInstanceId: s
+launchId: s,
+compositeInstanceId: o
   } = e, _ = (0, h.Z)(a), E = l.default.getSessionId();
   if (null == _ || null == E || (null === (t = v.get(a)) || void 0 === t ? void 0 : t.channelId) === i)
 return !1;
@@ -149,8 +171,8 @@ applicationId: a,
 url: _,
 userIds: new Set([m.id]),
 connectedSince: Date.now(),
-launchId: o,
-compositeInstanceId: s
+launchId: s,
+compositeInstanceId: o
   }), x = r !== c.Z.getChannelId() || (0, I.Z)(i) ? T.Ez.PIP : T.Ez.PANEL, w.set(Z(i, a), Date.now());
 }
 
@@ -254,11 +276,11 @@ if (null != t)
   getEmbeddedActivityForUserId(e, t) {
 let n;
 if (void 0 !== t) {
-  o: for (let [r, i] of R)
+  s: for (let [r, i] of R)
     for (let r of i)
       if (r.applicationId === t && r.userIds.has(e)) {
         n = r;
-        break o;
+        break s;
       }
   return n;
 }
@@ -299,7 +321,7 @@ return {
 ...e
   })
 ]);
-let j = new Y(o.Z, {
+let j = new Y(s.Z, {
   ACTIVITY_LAYOUT_MODE_UPDATE: function(e) {
 let {
   applicationId: t,
@@ -485,13 +507,13 @@ let i = Date.now();
     if (i < n)
       return;
     let a = A.seenNewActivities[t],
-      o = Object.hasOwn(A.seenNewActivities, t),
+      s = Object.hasOwn(A.seenNewActivities, t),
       l = new Date(a).getTime() < i;
-    r.label_type === s.ww.NEW && (!o || l) && (A.shouldShowNewActivityIndicator = !0, A.seenNewActivities[t] = r.label_until);
+    r.label_type === o.ww.NEW && (!s || l) && (A.shouldShowNewActivityIndicator = !0, A.seenNewActivities[t] = r.label_until);
     let u = A.seenUpdatedActivities[t],
       c = Object.hasOwn(A.seenUpdatedActivities, t),
       d = new Date(u).getTime() < i;
-    r.label_type === s.ww.UPDATED && (!c || d) && (A.shouldShowNewActivityIndicator = !0, A.seenUpdatedActivities[t] = r.label_until);
+    r.label_type === o.ww.UPDATED && (!c || d) && (A.shouldShowNewActivityIndicator = !0, A.seenUpdatedActivities[t] = r.label_until);
   });
 }({
   activities: n,

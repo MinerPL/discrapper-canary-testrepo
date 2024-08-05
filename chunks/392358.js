@@ -1,23 +1,23 @@
 n.d(t, {
   Z: function() {
-return s;
+return o;
   }
 }), n(47120);
 var r = n(470079),
   i = n(40851),
   a = n(981631);
-let o = [
+let s = [
   'Shift',
   'Alt',
   'Meta',
   'Control'
 ];
 
-function s(e, t) {
-  let [n, s] = r.useState(0), l = (0, i.Aq)();
+function o(e, t) {
+  let [n, o] = r.useState(0), l = (0, i.Aq)();
   r.useEffect(() => {
-let e = () => s(e => e + 1),
-  t = () => s(e => Math.max(0, e - 1));
+let e = () => o(e => e + 1),
+  t = () => o(e => Math.max(0, e - 1));
 return l.subscribe(a.CkL.POPOUT_SHOW, e), l.subscribe(a.CkL.POPOUT_HIDE, t), () => {
   l.unsubscribe(a.CkL.POPOUT_SHOW, e), l.unsubscribe(a.CkL.POPOUT_HIDE, t);
 };
@@ -29,7 +29,7 @@ let r = e => {
       c(!1);
       return;
     }
-    if (!(!u && n > 0 || e instanceof KeyboardEvent && (e.ctrlKey || e.altKey || e.shiftKey || e.metaKey || o.indexOf(e.key) >= 0)))
+    if (!(!u && n > 0 || e instanceof KeyboardEvent && (e.ctrlKey || e.altKey || e.shiftKey || e.metaKey || s.indexOf(e.key) >= 0)))
       c(e => !e);
   },
   i = u ? 'keyup' : 'mousemove';

@@ -1,13 +1,13 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 });
 var i = n(735250);
 n(470079);
 var a = n(338545),
-  l = n(481060),
-  s = n(871499),
+  s = n(481060),
+  l = n(871499),
   r = n(689938),
   o = n(61197);
 let c = (0, a.animated)(e => {
@@ -34,39 +34,39 @@ children: (0, i.jsx)('circle', {
   });
 });
 
-function d(e) {
+function u(e) {
   let {
 totalCooldownSeconds: t,
 remainingCooldownSeconds: n,
-onClick: d,
-onKeyDown: u,
+onClick: u,
+onKeyDown: d,
 onMouseEnter: h,
 onMouseLeave: p,
 isActive: m = !1,
 isCenterButton: _ = !1,
 ...f
-  } = e, E = n > 0, C = (0, a.useSpring)({
+  } = e, E = n > 0, g = (0, s.useSpring)({
 percentComplete: 0 !== n ? (t - n) / t : 0,
 config: {
   ...a.config.molasses,
   duration: 1000
 }
-  }), g = E ? r.Z.Messages.VOICE_CHANNEL_EFFECTS_COOLDOWN.format({
+  }, 'animate-always'), C = E ? r.Z.Messages.VOICE_CHANNEL_EFFECTS_COOLDOWN.format({
 seconds: n
-  }) : void 0, I = _ ? s.d : s.Z;
+  }) : void 0, I = _ ? l.d : l.Z;
   return (0, i.jsxs)('div', {
 className: o.container,
 children: [
   E ? (0, i.jsx)(c, {
-    percentComplete: C.percentComplete
+    percentComplete: g.percentComplete
   }) : null,
   (0, i.jsx)(I, {
     ...f,
     disabled: E,
-    label: g,
-    iconComponent: l.ReactionIcon,
-    onClick: d,
-    onKeyDown: u,
+    label: C,
+    iconComponent: s.ReactionIcon,
+    onClick: u,
+    onKeyDown: d,
     onMouseEnter: h,
     onMouseLeave: p,
     isActive: m,

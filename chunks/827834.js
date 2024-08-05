@@ -10,18 +10,18 @@ n.prototype = t.prototype, e.prototype = new n();
   }(e, Error), {
 SyntaxError: e,
 parse: function(t) {
-  var n, r, i, a, o, s, l, u = arguments.length > 1 ? arguments[1] : {},
+  var n, r, i, a, s, o, l, u = arguments.length > 1 ? arguments[1] : {},
     c = {},
     d = {
       start: ea
     },
     _ = ea,
     E = function(e) {
-      var t, n, r, i, a, o = '';
+      var t, n, r, i, a, s = '';
       for (t = 0, r = e.length; t < r; t += 1)
         for (n = 0, a = (i = e[t]).length; n < a; n += 1)
-          o += i[n];
-      return o;
+          s += i[n];
+      return s;
     },
     f = /^[^ \t\n\r,.+={}#]/,
     h = {
@@ -181,13 +181,13 @@ parse: function(t) {
   }
 
   function ea() {
-    return eo();
+    return es();
   }
 
-  function eo() {
+  function es() {
     var e, t, n;
-    for (e = $, t = [], n = es(); n !== c;)
-      t.push(n), n = es();
+    for (e = $, t = [], n = eo(); n !== c;)
+      t.push(n), n = eo();
     if (t !== c)
       t = {
         type: 'messageFormatPattern',
@@ -196,22 +196,22 @@ parse: function(t) {
     return e = t;
   }
 
-  function es() {
+  function eo() {
     var e;
     return (e = function() {
       var e, n;
       if (e = $, (n = function() {
-          var e, n, r, i, a, o;
-          if (e = $, n = [], r = $, (i = ed()) !== c && (a = ep()) !== c && (o = ed()) !== c ? r = i = [
+          var e, n, r, i, a, s;
+          if (e = $, n = [], r = $, (i = ed()) !== c && (a = ep()) !== c && (s = ed()) !== c ? r = i = [
               i,
               a,
-              o
+              s
             ] : ($ = r, r = c), r !== c)
             for (; r !== c;)
-              n.push(r), r = $, (i = ed()) !== c && (a = ep()) !== c && (o = ed()) !== c ? r = i = [
+              n.push(r), r = $, (i = ed()) !== c && (a = ep()) !== c && (s = ed()) !== c ? r = i = [
                 i,
                 a,
-                o
+                s
               ] : ($ = r, r = c);
           else
             n = c;
@@ -223,7 +223,7 @@ parse: function(t) {
         };
       return e = n;
     }()) === c && (e = function() {
-      var e, n, r, i, a, o, s, l;
+      var e, n, r, i, a, s, o, l;
       if (e = $, 123 === t.charCodeAt($) ? (n = '{', $++) : (n = c, 0 === er && ei(p)), n !== c) {
         if (ed() !== c) {
           if ((r = function() {
@@ -239,21 +239,21 @@ parse: function(t) {
               return e;
             }()) !== c) {
             if (ed() !== c) {
-              if (i = $, 44 === t.charCodeAt($) ? (a = ',', $++) : (a = c, 0 === er && ei(m)), a !== c && (o = ed()) !== c && (s = function() {
+              if (i = $, 44 === t.charCodeAt($) ? (a = ',', $++) : (a = c, 0 === er && ei(m)), a !== c && (s = ed()) !== c && (o = function() {
                   var e;
                   return (e = function() {
-                    var e, n, r, i, a, o, s;
+                    var e, n, r, i, a, s, o;
                     if (e = $, t.substr($, 6) === T ? (n = T, $ += 6) : (n = c, 0 === er && ei(g)), n === c && (t.substr($, 4) === S ? (n = S, $ += 4) : (n = c, 0 === er && ei(A)), n === c && (t.substr($, 4) === N ? (n = N, $ += 4) : (n = c, 0 === er && ei(v)))), n !== c) {
                       if (ed() !== c) {
-                        if (r = $, 44 === t.charCodeAt($) ? (i = ',', $++) : (i = c, 0 === er && ei(m)), i !== c && (a = ed()) !== c && (o = ep()) !== c ? r = i = [
+                        if (r = $, 44 === t.charCodeAt($) ? (i = ',', $++) : (i = c, 0 === er && ei(m)), i !== c && (a = ed()) !== c && (s = ep()) !== c ? r = i = [
                             i,
                             a,
-                            o
+                            s
                           ] : ($ = r, r = c), r === c && (r = null), r !== c) {
                           ;
                           e = n = {
                             type: n + 'Format',
-                            style: (s = r) && s[2]
+                            style: (o = r) && o[2]
                           };
                         } else
                           $ = e, e = c;
@@ -342,11 +342,11 @@ parse: function(t) {
                   }()), e;
                 }()) !== c ? i = a = [
                   a,
-                  o,
-                  s
+                  s,
+                  o
                 ] : ($ = i, i = c), i === c && (i = null), i !== c) {
                 if ((a = ed()) !== c) {
-                  if (125 === t.charCodeAt($) ? (o = '}', $++) : (o = c, 0 === er && ei(I)), o !== c) {
+                  if (125 === t.charCodeAt($) ? (s = '}', $++) : (s = c, 0 === er && ei(I)), s !== c) {
                     ;
                     e = n = {
                       type: 'argumentElement',
@@ -372,19 +372,19 @@ parse: function(t) {
   }
 
   function el() {
-    var e, n, r, i, a, o, s, l, u, d;
+    var e, n, r, i, a, s, o, l, u, d;
     if (e = $, (n = ed()) !== c) {
       ;
-      if (s = $, l = $, 61 === t.charCodeAt($) ? (u = '=', $++) : (u = c, 0 === er && ei(b)), u !== c && (d = ef()) !== c ? l = u = [
+      if (o = $, l = $, 61 === t.charCodeAt($) ? (u = '=', $++) : (u = c, 0 === er && ei(b)), u !== c && (d = ef()) !== c ? l = u = [
           u,
           d
-        ] : ($ = l, l = c), l !== c && (l = t.substring(s, $)), (s = l) === c && (s = ep()), (r = s) !== c) {
+        ] : ($ = l, l = c), l !== c && (l = t.substring(o, $)), (o = l) === c && (o = ep()), (r = o) !== c) {
         if (ed() !== c) {
           if (123 === t.charCodeAt($) ? (i = '{', $++) : (i = c, 0 === er && ei(p)), i !== c) {
             if (ed() !== c) {
-              if ((a = eo()) !== c) {
+              if ((a = es()) !== c) {
                 if (ed() !== c) {
-                  if (125 === t.charCodeAt($) ? (o = '}', $++) : (o = c, 0 === er && ei(I)), o !== c)
+                  if (125 === t.charCodeAt($) ? (s = '}', $++) : (s = c, 0 === er && ei(I)), s !== c)
                     e = n = {
                       type: 'optionalFormatPattern',
                       selector: r,
@@ -474,11 +474,11 @@ parse: function(t) {
   }
 
   function ef() {
-    var e, n, r, i, a, o;
+    var e, n, r, i, a, s;
     if (e = $, 48 === t.charCodeAt($) ? (n = '0', $++) : (n = c, 0 === er && ei(H)), n === c) {
       if (n = $, r = $, Z.test(t.charAt($)) ? (i = t.charAt($), $++) : (i = c, 0 === er && ei(Y)), i !== c) {
-        for (a = [], o = e_(); o !== c;)
-          a.push(o), o = e_();
+        for (a = [], s = e_(); s !== c;)
+          a.push(s), s = e_();
         a !== c ? r = i = [
           i,
           a
@@ -493,13 +493,13 @@ parse: function(t) {
   }
 
   function eh() {
-    var e, n, r, i, a, o, s, l;
+    var e, n, r, i, a, s, o, l;
     if (j.test(t.charAt($)) ? (e = t.charAt($), $++) : (e = c, 0 === er && ei(W)), e === c && (e = $, '\\\\' === t.substr($, 2) ? (n = '\\\\', $ += 2) : (n = c, 0 === er && ei(K)), n !== c && (n = '\\'), (e = n) === c && (e = $, '\\#' === t.substr($, 2) ? (n = '\\#', $ += 2) : (n = c, 0 === er && ei(z)), n !== c && (n = '\\#'), (e = n) === c && (e = $, '\\{' === t.substr($, 2) ? (n = '\\{', $ += 2) : (n = c, 0 === er && ei(q)), n !== c && (n = '{'), (e = n) === c && (e = $, '\\}' === t.substr($, 2) ? (n = '\\}', $ += 2) : (n = c, 0 === er && ei(Q)), n !== c && (n = '}'), (e = n) === c))))) {
       if (e = $, '\\u' === t.substr($, 2) ? (n = '\\u', $ += 2) : (n = c, 0 === er && ei(X)), n !== c) {
-        if (r = $, i = $, (a = eE()) !== c && (o = eE()) !== c && (s = eE()) !== c && (l = eE()) !== c ? i = a = [
+        if (r = $, i = $, (a = eE()) !== c && (s = eE()) !== c && (o = eE()) !== c && (l = eE()) !== c ? i = a = [
             a,
-            o,
             s,
+            o,
             l
           ] : ($ = i, i = c), i !== c && (i = t.substring(r, $)), (r = i) !== c)
           e = n = String.fromCharCode(parseInt(r, 16));
@@ -527,7 +527,7 @@ parse: function(t) {
   throw l !== c && $ < t.length && ei({
     type: 'end',
     description: 'end of input'
-  }), n = null, r = en, o = (J !== (a = i = et) && (J > a && (J = 0, ee = {
+  }), n = null, r = en, s = (J !== (a = i = et) && (J > a && (J = 0, ee = {
     line: 1,
     column: 1,
     seenCR: !1
@@ -535,7 +535,7 @@ parse: function(t) {
     var i, a;
     for (i = n; i < r; i++)
       '\n' === (a = t.charAt(i)) ? (!e.seenCR && e.line++, e.column = 1, e.seenCR = !1) : '\r' === a || '\u2028' === a || '\u2029' === a ? (e.line++, e.column = 1, e.seenCR = !0) : (e.column++, e.seenCR = !1);
-  }(ee, J, a), J = a), ee), s = i < t.length ? t.charAt(i) : null, null !== r && ! function(e) {
+  }(ee, J, a), J = a), ee), o = i < t.length ? t.charAt(i) : null, null !== r && ! function(e) {
     var t = 1;
     for (e.sort(function(e, t) {
         return e.description < t.description ? -1 : e.description > t.description ? 1 : 0;
@@ -559,7 +559,7 @@ parse: function(t) {
         return '\\u' + t(e);
       });
     }(t) + '"' : 'end of input') + ' found.';
-  }(r, s), r, s, i, o.line, o.column);
+  }(r, o), r, o, i, s.line, s.column);
 }
   };
 }();

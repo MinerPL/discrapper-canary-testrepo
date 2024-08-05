@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(481060),
   o = n(378720),
   c = n(285952),
@@ -18,25 +18,25 @@ let g = {
   [E.TaA.MACOS]: _.PlatformTypes.OSX,
   [E.TaA.LINUX]: _.PlatformTypes.LINUX
 };
-class p extends s.PureComponent {
+class p extends a.PureComponent {
   render() {
 let {
   active: e,
   children: t,
   pageSize: n,
-  onClick: s
-} = this.props, a = n === h.b.LARGE;
+  onClick: a
+} = this.props, s = n === h.b.LARGE;
 return (0, i.jsx)(l.Button, {
-  size: a ? l.Button.Sizes.MIN : l.Button.Sizes.LARGE,
-  fullWidth: !a,
+  size: s ? l.Button.Sizes.MIN : l.Button.Sizes.LARGE,
+  fullWidth: !s,
   color: e ? m.tabSelectedColor : m.tabNotSelectedColor,
   className: r()({
-    [m.tabPageLarge]: a,
-    [m.tabPageSmall]: !a,
+    [m.tabPageLarge]: s,
+    [m.tabPageSmall]: !s,
     [m.tabSelected]: e,
     [m.tabNotSelected]: !e
   }),
-  onClick: s,
+  onClick: a,
   children: t
 });
   }
@@ -80,15 +80,15 @@ key: I.Z.Messages.APPLICATION_STORE_SPECS_NOTES,
 value: e.notes
   }
 ];
-class S extends s.PureComponent {
+class S extends a.PureComponent {
   static getDerivedStateFromProps(e, t) {
 let {
   systemRequirements: n
 } = e, {
   selectedOperatingSystem: i
-} = t, s = Object.keys(n);
-return s.includes(i) ? null : {
-  selectedOperatingSystem: s[0]
+} = t, a = Object.keys(n);
+return a.includes(i) ? null : {
+  selectedOperatingSystem: a[0]
 };
   }
   renderTabs() {
@@ -97,14 +97,14 @@ let {
   systemRequirements: t
 } = this.props, {
   selectedOperatingSystem: n
-} = this.state, s = Object.keys(t);
-return 1 === s.length ? null : (0, i.jsxs)(c.Z, {
+} = this.state, a = Object.keys(t);
+return 1 === a.length ? null : (0, i.jsxs)(c.Z, {
   className: m.tabs,
   children: [
     (0, i.jsx)('div', {
       className: m.separator
     }),
-    s.map(t => (0, i.jsx)(p, {
+    a.map(t => (0, i.jsx)(p, {
       active: t === n,
       onClick: () => this.handleSelectOperatingSystem(t),
       pageSize: e,
@@ -189,11 +189,11 @@ super(e), t = this, n = 'handleSelectOperatingSystem', i = e => {
   configurable: !0,
   writable: !0
 }) : t[n] = i;
-let s = (0, _.getPlatform)(),
-  a = Object.keys(e.systemRequirements),
-  r = a[0];
-for (let e of a)
-  g[e] === s && (r = e);
+let a = (0, _.getPlatform)(),
+  s = Object.keys(e.systemRequirements),
+  r = s[0];
+for (let e of s)
+  g[e] === a && (r = e);
 this.state = {
   selectedOperatingSystem: r
 };

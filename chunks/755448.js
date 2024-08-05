@@ -1,6 +1,6 @@
 e.exports = function(e, t) {
-  var n, r, i, a, o, s, l, u, c, d, _, E, f, h, p, m, I, T, g, S, A, N, v, O, R;
-  n = e.state, r = e.next_in, O = e.input, i = r + (e.avail_in - 5), a = e.next_out, R = e.output, o = a - (t - e.avail_out), s = a + (e.avail_out - 257), l = n.dmax, u = n.wsize, c = n.whave, d = n.wnext, _ = n.window, E = n.hold, f = n.bits, h = n.lencode, p = n.distcode, m = (1 << n.lenbits) - 1, I = (1 << n.distbits) - 1;
+  var n, r, i, a, s, o, l, u, c, d, _, E, f, h, p, m, I, T, g, S, A, N, v, O, R;
+  n = e.state, r = e.next_in, O = e.input, i = r + (e.avail_in - 5), a = e.next_out, R = e.output, s = a - (t - e.avail_out), o = a + (e.avail_out - 257), l = n.dmax, u = n.wsize, c = n.whave, d = n.wnext, _ = n.window, E = n.hold, f = n.bits, h = n.lencode, p = n.distcode, m = (1 << n.lenbits) - 1, I = (1 << n.distbits) - 1;
   n:
 do
   for (f < 15 && (E += O[r++] << f, f += 8, E += O[r++] << f, f += 8), T = h[E & m];;) {
@@ -13,7 +13,7 @@ do
             e.msg = 'invalid distance too far back', n.mode = 30;
             break n;
           }
-          if (E >>>= g, f -= g, A > (g = a - o)) {
+          if (E >>>= g, f -= g, A > (g = a - s)) {
             if ((g = A - g) > c && n.sane) {
               e.msg = 'invalid distance too far back', n.mode = 30;
               break n;
@@ -78,6 +78,6 @@ do
     }
     break;
   }
-while (r < i && a < s);
-  r -= S = f >> 3, f -= S << 3, E &= (1 << f) - 1, e.next_in = r, e.next_out = a, e.avail_in = r < i ? 5 + (i - r) : 5 - (r - i), e.avail_out = a < s ? 257 + (s - a) : 257 - (a - s), n.hold = E, n.bits = f;
+while (r < i && a < o);
+  r -= S = f >> 3, f -= S << 3, E &= (1 << f) - 1, e.next_in = r, e.next_out = a, e.avail_in = r < i ? 5 + (i - r) : 5 - (r - i), e.avail_out = a < o ? 257 + (o - a) : 257 - (a - o), n.hold = E, n.bits = f;
 };

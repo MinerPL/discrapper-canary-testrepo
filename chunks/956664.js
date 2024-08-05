@@ -39,9 +39,9 @@ return c;
 var r = n(512722),
   i = n.n(r),
   a = n(392711),
-  o = n.n(a),
-  s = n(950200),
-  l = n.n(s);
+  s = n.n(a),
+  o = n(950200),
+  l = n.n(o);
 
 function u(e) {
   let {
@@ -50,13 +50,13 @@ height: n,
 maxWidth: r,
 maxHeight: i,
 minWidth: a = 0,
-minHeight: o = 0
+minHeight: s = 0
   } = e;
   if (t !== r || n !== i) {
 let e = t > r ? r / t : 1;
 t = Math.max(Math.round(t * e), a);
-let s = (n = Math.max(Math.round(n * e), o)) > i ? i / n : 1;
-t = Math.max(Math.round(t * s), a), n = Math.max(Math.round(n * s), o);
+let o = (n = Math.max(Math.round(n * e), s)) > i ? i / n : 1;
+t = Math.max(Math.round(t * o), a), n = Math.max(Math.round(n * o), s);
   }
   return {
 width: t,
@@ -82,8 +82,8 @@ maxWidth: r,
 maxHeight: i
   } = e, a = 1;
   t > r && (a = r / t), t = Math.round(t * a);
-  let o = 1;
-  return (n = Math.round(n * a)) > i && (o = i / n), Math.min(a * o, 1);
+  let s = 1;
+  return (n = Math.round(n * a)) > i && (s = i / n), Math.min(a * s, 1);
 }
 
 function _(e) {
@@ -113,23 +113,23 @@ i = r.getContext('2d');
   if (null == i)
 return f;
   let a = r.width = 0 === e.width ? 128 : e.width,
-o = r.height = 0 === e.height ? 128 : e.height;
-  i.drawImage(e, 0, 0, a, o);
-  let s = function(e, t, n) {
+s = r.height = 0 === e.height ? 128 : e.height;
+  i.drawImage(e, 0, 0, a, s);
+  let o = function(e, t, n) {
   let r = [];
-  for (let i = 0, a, o, s, l, u; i < t; i += n)
-    o = e[(a = 4 * i) + 0], s = e[a + 1], l = e[a + 2], (void 0 === (u = e[a + 3]) || u >= 125) && !(o > 250 && s > 250 && l > 250) && r.push([
-      o,
+  for (let i = 0, a, s, o, l, u; i < t; i += n)
+    s = e[(a = 4 * i) + 0], o = e[a + 1], l = e[a + 2], (void 0 === (u = e[a + 3]) || u >= 125) && !(s > 250 && o > 250 && l > 250) && r.push([
       s,
+      o,
       l
     ]);
   return r;
-}(i.getImageData(0, 0, a, o).data, a * o, n),
-u = l()(s, t);
+}(i.getImageData(0, 0, a, s).data, a * s, n),
+u = l()(o, t);
   return 'boolean' == typeof u ? f : u.palette();
 }
 let p = e => 'number' == typeof e ? null : m(e),
-  m = o().memoize(e => new Promise((t, n) => {
+  m = s().memoize(e => new Promise((t, n) => {
 let r = new Image();
 r.crossOrigin = 'Anonymous', r.onerror = e => {
   n(e), r.onerror = r.onload = null, r = null;

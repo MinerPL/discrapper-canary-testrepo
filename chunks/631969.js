@@ -1,19 +1,19 @@
-o.d(t, {
+E.d(_, {
   Z: function() {
-return d;
+return A;
   }
 });
-var n = o(735250);
-o(470079);
-var r = o(120356),
-  i = o.n(r),
-  a = o(377352);
+var s = E(735250);
+E(470079);
+var T = E(120356),
+  I = E.n(T),
+  n = E(377352);
 
-function d(e) {
+function A(e) {
   let {
-className: t
+className: _
   } = e;
-  return (0, n.jsx)('div', {
-className: i()(a.image, t)
+  return (0, s.jsx)('div', {
+className: I()(n.image, _)
   });
 }

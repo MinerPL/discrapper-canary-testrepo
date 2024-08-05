@@ -7,8 +7,8 @@ overflow: 'Overflow: input needs wider integers to process',
 'invalid-input': 'Invalid input'
   },
   a = 35,
-  o = Math.floor,
-  s = String.fromCharCode;
+  s = Math.floor,
+  o = String.fromCharCode;
 
 function l(e) {
   throw RangeError(i[e]);
@@ -45,9 +45,9 @@ return e + 22 + 75 * (e < 26) - ((0 != t) << 5);
   },
   _ = function(e, t, n) {
 let r = 0;
-for (e = n ? o(e / 700) : e >> 1, e += o(e / t); e > 26 * a >> 1; r += 36)
-  e = o(e / a);
-return o(r + (a + 1) * e / (e + 38));
+for (e = n ? s(e / 700) : e >> 1, e += s(e / t); e > 26 * a >> 1; r += 36)
+  e = s(e / a);
+return s(r + (a + 1) * e / (e + 38));
   },
   E = function(e) {
 let t = [],
@@ -55,25 +55,25 @@ let t = [],
   r = 0,
   i = 128,
   a = 72,
-  s = e.lastIndexOf('-');
-s < 0 && (s = 0);
-for (let n = 0; n < s; ++n)
+  o = e.lastIndexOf('-');
+o < 0 && (o = 0);
+for (let n = 0; n < o; ++n)
   e.charCodeAt(n) >= 128 && l('not-basic'), t.push(e.charCodeAt(n));
-for (let c = s > 0 ? s + 1 : 0; c < n;) {
-  let s = r;
+for (let c = o > 0 ? o + 1 : 0; c < n;) {
+  let o = r;
   for (let t = 1, i = 36;; i += 36) {
     var u;
     c >= n && l('invalid-input');
-    let s = (u = e.charCodeAt(c++)) - 48 < 10 ? u - 22 : u - 65 < 26 ? u - 65 : u - 97 < 26 ? u - 97 : 36;
-    (s >= 36 || s > o((2147483647 - r) / t)) && l('overflow'), r += s * t;
+    let o = (u = e.charCodeAt(c++)) - 48 < 10 ? u - 22 : u - 65 < 26 ? u - 65 : u - 97 < 26 ? u - 97 : 36;
+    (o >= 36 || o > s((2147483647 - r) / t)) && l('overflow'), r += o * t;
     let d = i <= a ? 1 : i >= a + 26 ? 26 : i - a;
-    if (s < d)
+    if (o < d)
       break;
     let _ = 36 - d;
-    t > o(2147483647 / _) && l('overflow'), t *= _;
+    t > s(2147483647 / _) && l('overflow'), t *= _;
   }
   let d = t.length + 1;
-  a = _(r - s, d, 0 == s), o(r / d) > 2147483647 - i && l('overflow'), i += o(r / d), r %= d, t.splice(r++, 0, i);
+  a = _(r - o, d, 0 == o), s(r / d) > 2147483647 - i && l('overflow'), i += s(r / d), r %= d, t.splice(r++, 0, i);
 }
 return String.fromCodePoint(...t);
   },
@@ -84,7 +84,7 @@ let t = [],
   i = 0,
   a = 72;
 for (let n of e)
-  n < 128 && t.push(s(n));
+  n < 128 && t.push(o(n));
 let u = t.length,
   E = u;
 for (u && t.push('-'); E < n;) {
@@ -92,7 +92,7 @@ for (u && t.push('-'); E < n;) {
   for (let t of e)
     t >= r && t < n && (n = t);
   let c = E + 1;
-  for (let f of (n - r > o((2147483647 - i) / c) && l('overflow'), i += (n - r) * c, r = n, e))
+  for (let f of (n - r > s((2147483647 - i) / c) && l('overflow'), i += (n - r) * c, r = n, e))
     if (f < r && ++i > 2147483647 && l('overflow'), f == r) {
       let e = i;
       for (let n = 36;; n += 36) {
@@ -101,9 +101,9 @@ for (u && t.push('-'); E < n;) {
           break;
         let i = e - r,
           l = 36 - r;
-        t.push(s(d(r + i % l, 0))), e = o(i / l);
+        t.push(o(d(r + i % l, 0))), e = s(i / l);
       }
-      t.push(s(d(e, 0))), a = _(i, c, E == u), i = 0, ++E;
+      t.push(o(d(e, 0))), a = _(i, c, E == u), i = 0, ++E;
     }
     ++ i, ++r;
 }

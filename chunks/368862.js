@@ -1,13 +1,13 @@
 n.d(t, {
   M: function() {
-return s;
+return o;
   }
 });
-var r, i, a, o, s, l, u = n(392711),
+var r, i, a, s, o, l, u = n(392711),
   c = n.n(u),
   d = n(442837),
   _ = n(570140);
-(r = s || (s = {}))[r.FETCHING = 0] = 'FETCHING', r[r.FETCHED = 1] = 'FETCHED', r[r.ERROR = 2] = 'ERROR';
+(r = o || (o = {}))[r.FETCHING = 0] = 'FETCHING', r[r.FETCHED = 1] = 'FETCHED', r[r.ERROR = 2] = 'ERROR';
 let E = {},
   f = {},
   h = {};
@@ -44,12 +44,12 @@ return E[p({
 })];
   }
 }
-o = void 0, (a = 'displayName') in(i = m) ? Object.defineProperty(i, a, {
-  value: o,
+s = void 0, (a = 'displayName') in(i = m) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new m(_.Z, {
+}) : i[a] = s, t.Z = new m(_.Z, {
   APPLICATION_DIRECTORY_FETCH_COLLECTIONS: function(e) {
 let {
   includesInactive: t
@@ -86,10 +86,10 @@ E = {
   ...f,
   [i]: 1
 };
-let o = Date.now();
+let s = Date.now();
 h = {
   ...h,
-  [i]: o
+  [i]: s
 };
   },
   APPLICATION_DIRECTORY_FETCH_COLLECTIONS_FAILURE: function(e) {

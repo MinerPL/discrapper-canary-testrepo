@@ -4,12 +4,12 @@ return r;
   }
 }), n(47120);
 var a = n(470079),
-  s = n(338545);
+  s = n(481060);
 
-function r(e) {
-  let [t, n] = a.useState(!0);
+function r() {
+  let [e, t] = a.useState(!0);
   return {
-transitions: (0, s.useTransition)(t, {
+transitions: (0, s.useTransition)(e, {
   keys: e => e ? 'shown' : 'hidden',
   config: l,
   from: {
@@ -21,10 +21,9 @@ transitions: (0, s.useTransition)(t, {
   leave: {
     opacity: 0
   },
-  unique: !0,
-  immediate: e
+  unique: !0
 }),
-setVisible: n
+setVisible: t
   };
 }
 let l = {

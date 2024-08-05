@@ -3,7 +3,7 @@ n.d(t, {
 return a;
   },
   Z: function() {
-return o;
+return s;
   }
 });
 var r = n(470079),
@@ -22,6 +22,6 @@ allEmojis: a.concat(n)
   };
 }
 
-function o(e) {
+function s(e) {
   return r.useMemo(() => a(e), [e]);
 }

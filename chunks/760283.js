@@ -1,5 +1,5 @@
 e.exports = function(e, t, r) {
-  var i, a, o, s, l = {},
+  var i, a, s, o, l = {},
 u = 0,
 c = !1;
   for (a = 0, i = this.getMatches(e, t, r); a < i.length; ++a)
@@ -12,5 +12,5 @@ if (i[a].seq) {
   continue;
 }!c && this.fireCallback(i[a].callback, r, i[a].combo);
   }
-  s = 'keypress' === r.type && this.ignoreNextKeypress, o = n(64000), r.type === this.nextExpectedAction && !o(e) && !s && this.resetSequences(l), this.ignoreNextKeypress = c && 'keydown' === r.type;
+  o = 'keypress' === r.type && this.ignoreNextKeypress, s = n(64000), r.type === this.nextExpectedAction && !s(e) && !o && this.resetSequences(l), this.ignoreNextKeypress = c && 'keydown' === r.type;
 };

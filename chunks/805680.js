@@ -2,9 +2,9 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(392711),
-  l = n.n(s),
+  s = n.n(a),
+  o = n(392711),
+  l = n.n(o),
   u = n(873546),
   c = n(374470),
   d = n(442837),
@@ -41,13 +41,13 @@ let {
   className: n,
   viewType: i,
   autoFocus: a = !1,
-  'aria-controls': s,
+  'aria-controls': o,
   ...l
 } = e;
 return (0, r.jsx)(E.Button, {
   role: 'tab',
   autoFocus: a,
-  'aria-controls': t ? s : void 0,
+  'aria-controls': t ? o : void 0,
   ...l,
   onClick: () => {
     I.ZP.trackWithMetadata(M.rMx.EXPRESSION_PICKER_TAB_CLICKED, {
@@ -56,7 +56,7 @@ return (0, r.jsx)(E.Button, {
     }), (0, L.hr)(i);
   },
   'aria-current': t ? 'page' : void 0,
-  className: o()(n, G.navButton, G.navItem, {
+  className: s()(n, G.navButton, G.navItem, {
     [G.navButtonActive]: t
   }),
   look: E.Button.Looks.BLANK,
@@ -68,7 +68,7 @@ let {
   positionContainerRef: t,
   drawerRef: n,
   orientation: r
-} = e, a = (0, d.e7)([R.ZP], () => R.ZP.expressionPickerWidth), [o, s] = i.useState(window.innerWidth), [u, c] = i.useState(null != a ? a : b._j.MIN), _ = i.useMemo(() => {
+} = e, a = (0, d.e7)([R.ZP], () => R.ZP.expressionPickerWidth), [s, o] = i.useState(window.innerWidth), [u, c] = i.useState(null != a ? a : b._j.MIN), _ = i.useMemo(() => {
   switch (u) {
     case b._j.MIN:
       return b.Om;
@@ -78,16 +78,16 @@ let {
       return u;
   }
 }, [u]), E = i.useCallback(e => {
-  let t = e >= o ? b._j.MAX : e <= b.Om ? b._j.MIN : e;
+  let t = e >= s ? b._j.MAX : e <= b.Om ? b._j.MIN : e;
   null == t && null != n.current && (n.current.style.width = ''), f.ZP.updatedUnsyncedSettings({
     expressionPickerWidth: t
   }), c(t);
 }, [
   n,
-  o
+  s
 ]), h = (0, p.Z)({
   initialElementDimension: _,
-  maxDimension: o,
+  maxDimension: s,
   minDimension: b.Om,
   resizableDomNodeRef: n,
   onElementResize: E,
@@ -95,17 +95,17 @@ let {
 });
 return i.useEffect(() => {
   let e = l().debounce(() => {
-    null != t.current && s(t.current.offsetWidth);
+    null != t.current && o(t.current.offsetWidth);
   }, 500);
   return window.addEventListener('resize', e), () => {
     window.removeEventListener('resize', e);
   };
 }, [t]), i.useLayoutEffect(() => {
-  null != t.current && s(t.current.offsetWidth);
+  null != t.current && o(t.current.offsetWidth);
 }, [t]), {
   drawerWidth: _,
   handleDrawerResizeHandleMouseDown: i.useCallback(e => {
-    e.stopPropagation(), null != t.current && s(t.current.offsetWidth), h(e);
+    e.stopPropagation(), null != t.current && o(t.current.offsetWidth), h(e);
   }, [
     t,
     h
@@ -115,7 +115,7 @@ return i.useEffect(() => {
 t.Z = i.memo(function(e) {
   var t, n, a;
   let {
-positionTargetRef: s,
+positionTargetRef: o,
 hideGifFavorites: l,
 includeCreateEmojiButton: f,
 onSelectGIF: R,
@@ -138,8 +138,8 @@ drawerRef: ee,
 orientation: 'left' === K ? p.y.HORIZONTAL_RIGHT : p.y.HORIZONTAL_LEFT
   }), er = (0, L.Iu)(e => e.activeView), ei = (0, N.fQ)(Y), {
 renderWindow: ea,
-windowDispatch: eo
-  } = i.useContext(m.ZP), es = (0, d.e7)([v.Z], () => !v.Z.hasLoadedStickerPacks), el = (0, S.P)('expression_picker'), eu = null != Q, ec = (0, _.Jw)(null != Q ? Q : ''), ed = i.useCallback(e => {
+windowDispatch: es
+  } = i.useContext(m.ZP), eo = (0, d.e7)([v.Z], () => !v.Z.hasLoadedStickerPacks), el = (0, S.P)('expression_picker'), eu = null != Q, ec = (0, _.Jw)(null != Q ? Q : ''), ed = i.useCallback(e => {
 var t;
 if (!eu && (0, _.$s)() || eu && !(ec && q))
   return;
@@ -168,15 +168,15 @@ eu
 let e = () => {
   er === b.X1.GIF && (0, L._Q)();
 };
-return ea.addEventListener('mousedown', ed), ea.addEventListener('contextmenu', ed), eo.subscribe(M.CkL.POPOUT_CLOSE, e_), y.S.subscribe(M.CkL.CLOSE_GIF_PICKER, e), () => {
-  ea.removeEventListener('mousedown', ed), ea.removeEventListener('contextmenu', ed), eo.unsubscribe(M.CkL.POPOUT_CLOSE, e_), y.S.unsubscribe(M.CkL.CLOSE_GIF_PICKER, e);
+return ea.addEventListener('mousedown', ed), ea.addEventListener('contextmenu', ed), es.subscribe(M.CkL.POPOUT_CLOSE, e_), y.S.subscribe(M.CkL.CLOSE_GIF_PICKER, e), () => {
+  ea.removeEventListener('mousedown', ed), ea.removeEventListener('contextmenu', ed), es.unsubscribe(M.CkL.POPOUT_CLOSE, e_), y.S.unsubscribe(M.CkL.CLOSE_GIF_PICKER, e);
 };
   }, [
 er,
 e_,
 ed,
 ea,
-eo
+es
   ]), (0, E.useFocusLock)(X), i.useEffect(() => {
 (0, L.ql)('');
   }, []), i.useEffect(() => {
@@ -187,7 +187,7 @@ eu
   ]), i.useEffect(() => {
 if (null != ee.current && !$.current) {
   var e, t, n, r;
-  er === b.X1.EMOJI ? (null == J ? void 0 : null === (e = J.current) || void 0 === e ? void 0 : e.onPickerOpen) != null && (null == J || null === (t = J.current) || void 0 === t || t.onPickerOpen(), $.current = !0) : er === b.X1.STICKER ? (null == J ? void 0 : null === (n = J.current) || void 0 === n ? void 0 : n.onPickerOpen) != null && !es && (null == J || null === (r = J.current) || void 0 === r || r.onPickerOpen(), $.current = !0) : (I.ZP.trackWithMetadata(M.rMx.EXPRESSION_PICKER_OPENED, {
+  er === b.X1.EMOJI ? (null == J ? void 0 : null === (e = J.current) || void 0 === e ? void 0 : e.onPickerOpen) != null && (null == J || null === (t = J.current) || void 0 === t || t.onPickerOpen(), $.current = !0) : er === b.X1.STICKER ? (null == J ? void 0 : null === (n = J.current) || void 0 === n ? void 0 : n.onPickerOpen) != null && !eo && (null == J || null === (r = J.current) || void 0 === r || r.onPickerOpen(), $.current = !0) : (I.ZP.trackWithMetadata(M.rMx.EXPRESSION_PICKER_OPENED, {
     width: ee.current.offsetWidth,
     tab: er,
     badged: !1
@@ -202,8 +202,8 @@ em = null != z ? z : 'left' === K ? G.positionLayerDefaultAlignLeft : G.position
   return (0, r.jsx)(h.Z, {
 section: M.jXE.EXPRESSION_PICKER,
 children: (0, r.jsx)(C.W5, {
-  className: o()(G.positionLayer, em),
-  targetRef: s,
+  className: s()(G.positionLayer, em),
+  targetRef: o,
   position: W,
   align: K,
   spacing: 8,
@@ -213,7 +213,7 @@ children: (0, r.jsx)(C.W5, {
       isPositioned: t
     } = e;
     return (0, r.jsx)('section', {
-      className: o()(G.positionContainer, {
+      className: s()(G.positionContainer, {
         [G.positionContainerOnlyEmoji]: !eh
       }),
       ref: X,
@@ -284,7 +284,7 @@ children: (0, r.jsx)(C.W5, {
                 })
               }) : null,
               er === b.X1.STICKER && ef ? (0, r.jsx)(O.Z, {
-                isLoading: es,
+                isLoading: eo,
                 channel: Y,
                 containerWidth: et,
                 onSelectSticker: H,

@@ -1,10 +1,10 @@
 n.d(t, {
   N9: function() {
-return a;
+return s;
   }
 });
 var i = n(818083);
-let s = (0, i.B)({
+let a = (0, i.B)({
 kind: 'user',
 id: '2024-04_premium_marketing_tab_display_timing_experiment',
 label: '2024 Premium Marketing Tab Display Timing Experiment',
@@ -41,12 +41,12 @@ treatments: [{
   }
 ]
   }),
-  a = e => {
+  s = e => {
 let {
   location: t,
   showTabForOtherReasons: n
 } = e;
-return s.useExperiment({
+return a.useExperiment({
   location: t
 }, {
   autoTrackExposure: !n

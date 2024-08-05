@@ -6,9 +6,9 @@ return l;
 var r = n(573654),
   i = n(158545),
   a = n(144459),
-  o = n(964742),
-  s = {
-type: o.TL,
+  s = n(964742),
+  o = {
+type: s.TL,
 payload: {
   clientOffset: null,
   sourceClientOffset: null
@@ -41,7 +41,7 @@ var E = function(e, t) {
   return n;
 }(t, d);
 if (null === E) {
-  e.dispatch(s);
+  e.dispatch(o);
   return;
 }
 var f = null;
@@ -60,7 +60,7 @@ if (null != h) {
   }(h), _.pinSource(E));
   var p = _.getSourceType(E);
   return {
-    type: o.qu,
+    type: s.qu,
     payload: {
       itemType: p,
       item: h,

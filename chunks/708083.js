@@ -21,8 +21,8 @@ return function(t, n, r) {
 };
   }(),
   a = n(470079),
-  o = c(a),
-  s = c(n(844303)),
+  s = c(a),
+  o = c(n(844303)),
   l = function(e) {
 if (e && e.__esModule)
   return e;
@@ -51,8 +51,8 @@ var _ = t.Alpha = function(e) {
   if (!(e instanceof t))
     throw TypeError('Cannot call a class as a function');
 }(this, t);
-for (var e, n, r, i = arguments.length, a = Array(i), o = 0; o < i; o++)
-  a[o] = arguments[o];
+for (var e, n, r, i = arguments.length, a = Array(i), s = 0; s < i; s++)
+  a[s] = arguments[s];
 return n = r = d(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(a))), r.handleChange = function(e) {
   var t = l.calculateChange(e, r.props.hsl, r.props.direction, r.props.a, r.container);
   t && 'function' == typeof r.props.onChange && r.props.onChange(t, e);
@@ -86,7 +86,7 @@ e.prototype = Object.create(t && t.prototype, {
   value: function() {
     var e = this,
       t = this.props.rgb,
-      n = (0, s.default)({
+      n = (0, o.default)({
         default: {
           alpha: {
             absolute: '0px 0px 0px 0px',
@@ -136,15 +136,15 @@ e.prototype = Object.create(t && t.prototype, {
         vertical: 'vertical' === this.props.direction,
         overwrite: !0
       });
-    return o.default.createElement('div', {
+    return s.default.createElement('div', {
       style: n.alpha
-    }, o.default.createElement('div', {
+    }, s.default.createElement('div', {
       style: n.checkboard
-    }, o.default.createElement(u.default, {
+    }, s.default.createElement(u.default, {
       renderers: this.props.renderers
-    })), o.default.createElement('div', {
+    })), s.default.createElement('div', {
       style: n.gradient
-    }), o.default.createElement('div', {
+    }), s.default.createElement('div', {
       style: n.container,
       ref: function(t) {
         return e.container = t;
@@ -152,9 +152,9 @@ e.prototype = Object.create(t && t.prototype, {
       onMouseDown: this.handleMouseDown,
       onTouchMove: this.handleChange,
       onTouchStart: this.handleChange
-    }, o.default.createElement('div', {
+    }, s.default.createElement('div', {
       style: n.pointer
-    }, this.props.pointer ? o.default.createElement(this.props.pointer, this.props) : o.default.createElement('div', {
+    }, this.props.pointer ? s.default.createElement(this.props.pointer, this.props) : s.default.createElement('div', {
       style: n.slider
     }))));
   }

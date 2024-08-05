@@ -1,9 +1,9 @@
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(433517),
   u = n(570140);
 let c = 'GuildNSFWAgreeStore',
   d = {};
-class _ extends(o = s.ZP.Store) {
+class _ extends(s = o.ZP.Store) {
   initialize() {
 var e;
 d = null !== (e = l.K.get(c)) && void 0 !== e ? e : d;

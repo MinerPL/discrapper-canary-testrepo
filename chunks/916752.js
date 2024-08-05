@@ -6,31 +6,31 @@ return d;
 var r = n(470079),
   i = n(913527),
   a = n.n(i),
-  o = n(718922),
-  s = n(70956),
+  s = n(718922),
+  o = n(70956),
   l = n(660199);
 let u = [
 [
-  2 * s.Z.Seconds.MINUTE,
-  s.Z.Seconds.SECOND
+  2 * o.Z.Seconds.MINUTE,
+  o.Z.Seconds.SECOND
 ],
 [
-  5 * s.Z.Seconds.MINUTE,
-  s.Z.Seconds.MINUTE
+  5 * o.Z.Seconds.MINUTE,
+  o.Z.Seconds.MINUTE
 ],
 [
-  45 * s.Z.Seconds.MINUTE,
-  2 * s.Z.Seconds.MINUTE
+  45 * o.Z.Seconds.MINUTE,
+  2 * o.Z.Seconds.MINUTE
 ],
 [
-  21 * s.Z.Seconds.HOUR,
-  5 * s.Z.Seconds.MINUTE
+  21 * o.Z.Seconds.HOUR,
+  5 * o.Z.Seconds.MINUTE
 ]
   ],
-  c = 2 * s.Z.Seconds.HOUR;
+  c = 2 * o.Z.Seconds.HOUR;
 
 function d(e) {
-  let t = (0, o.Z)();
+  let t = (0, s.Z)();
   return (r.useEffect(() => {
 if ('R' !== e.format)
   return;

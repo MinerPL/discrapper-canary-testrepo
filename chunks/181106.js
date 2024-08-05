@@ -1,4 +1,4 @@
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(846519),
   u = n(570140),
   c = n(981631);
@@ -24,7 +24,7 @@ e.start(120000, () => u.Z.dispatch({
 function f(e) {
   return E(c.OcF.COMPLETE, c.mFx.JOIN, e);
 }
-class h extends(o = s.ZP.Store) {
+class h extends(s = o.ZP.Store) {
   getState(e, t) {
 let n = d[e];
 return null == n ? void 0 : n[t];

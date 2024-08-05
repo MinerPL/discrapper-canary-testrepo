@@ -1,12 +1,12 @@
 n.r(t), n.d(t, {
   useCallback: function() {
-return s;
+return o;
   },
   useCallbackOne: function() {
 return a;
   },
   useMemo: function() {
-return o;
+return s;
   },
   useMemoOne: function() {
 return i;
@@ -23,7 +23,7 @@ function i(e, t) {
 })[0],
 i = (0, r.useRef)(!0),
 a = (0, r.useRef)(n),
-o = i.current || t && a.current.inputs && function(e, t) {
+s = i.current || t && a.current.inputs && function(e, t) {
   if (e.length !== t.length)
     return !1;
   for (var n = 0; n < e.length; n++)
@@ -35,8 +35,8 @@ o = i.current || t && a.current.inputs && function(e, t) {
   result: e()
 };
   return (0, r.useEffect)(function() {
-i.current = !1, a.current = o;
-  }, [o]), o.result;
+i.current = !1, a.current = s;
+  }, [s]), s.result;
 }
 
 function a(e, t) {
@@ -44,5 +44,5 @@ function a(e, t) {
 return e;
   }, t);
 }
-var o = i,
-  s = a;
+var s = i,
+  o = a;

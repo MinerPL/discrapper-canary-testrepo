@@ -6,8 +6,8 @@ return T;
 var r = n(470079),
   i = n(718922),
   a = n(442837),
-  o = n(456007),
-  s = n(998698),
+  s = n(456007),
+  o = n(998698),
   l = n(541716),
   u = n(797610),
   c = n(271383),
@@ -54,9 +54,9 @@ P
   ]), {
 activeCommand: x,
 activeCommandOption: G
-  } = (0, a.cj)([s.Z], () => ({
-activeCommand: s.Z.getActiveCommand(R.id),
-activeCommandOption: s.Z.getActiveOption(R.id)
+  } = (0, a.cj)([o.Z], () => ({
+activeCommand: o.Z.getActiveCommand(R.id),
+activeCommandOption: o.Z.getActiveOption(R.id)
   })), k = (0, h.Z)({
 navId: 'channel-autocomplete',
 scrollerRef: n,
@@ -75,7 +75,7 @@ hideMentionDescription: C === l.I.RULES_INPUT,
 emojiIntention: C === l.I.RULES_INPUT ? I.Hz.COMMUNITY_CONTENT : I.Hz.CHAT,
 currentWord: null !== (v = null == B ? void 0 : B.word) && void 0 !== v ? v : '',
 currentWordIsAtStart: (null == B ? void 0 : B.isAtStart) === !0,
-optionText: null != G ? (0, o.KF)({
+optionText: null != G ? (0, s.KF)({
   [G.name]: null !== (O = null === (S = e.editorRef.current) || void 0 === S ? void 0 : S.getCurrentCommandOptionValue()) && void 0 !== O ? O : []
 }, G.name) : ''
   }, [V] = r.useState(() => new f.Z(F));

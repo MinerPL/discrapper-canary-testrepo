@@ -1,13 +1,13 @@
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(785284),
+  s = n.n(a),
+  o = n(785284),
   l = n(483085);
 let u = {
 VERTICAL: l.vertical,
-HORIZONTAL: s.horizontal,
-HORIZONTAL_REVERSE: s.horizontalReverse
+HORIZONTAL: o.horizontal,
+HORIZONTAL_REVERSE: o.horizontalReverse
   },
   c = {
 START: l.justifyStart,
@@ -39,7 +39,7 @@ let {
   wrap: d = !1,
   ..._
 } = e, E = {
-  className: n = null != n ? n : s.flexChild,
+  className: n = null != n ? n : o.flexChild,
   style: {
     flexGrow: l,
     flexShrink: a,
@@ -53,7 +53,7 @@ if (!d && 'string' != typeof t && 1 === i.Children.count(t)) {
   return E.style = {
     ...E.style,
     ...e.props.style
-  }, E.className = o()(e.props.className, n), i.cloneElement(e, E);
+  }, E.className = s()(e.props.className, n), i.cloneElement(e, E);
 }
 return (0, r.jsx)('div', {
   ...E,
@@ -87,7 +87,7 @@ style: {
   flexBasis: p,
   ...m
 },
-className: o()(s.flex, i, a, l, E, n),
+className: s()(o.flex, i, a, l, E, n),
 ...I,
 children: t
   });

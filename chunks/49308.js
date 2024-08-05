@@ -1,86 +1,86 @@
 t.d(n, {
   x: function() {
-return v;
+return I;
   }
 });
-var i = t(735250),
-  a = t(470079),
-  r = t(512722),
-  o = t.n(r),
-  s = t(399606),
-  l = t(607070),
-  c = t(597688),
-  d = t(624377),
-  u = t(530618),
-  f = t(331042),
-  p = t(372654),
-  _ = t(987209),
+var a = t(735250),
+  s = t(470079),
+  i = t(512722),
+  l = t.n(i),
+  r = t(399606),
+  o = t(607070),
+  d = t(597688),
+  u = t(624377),
+  c = t(530618),
+  E = t(331042),
+  f = t(372654),
+  h = t(987209),
   m = t(598),
-  b = t(179118),
+  v = t(179118),
   C = t(614277),
-  g = t(698708);
+  p = t(698708);
 
 function x(e) {
   let {
 handleClose: n,
 confettiCanvas: t,
-hideConfetti: a = !1,
-analyticsLocations: r
+hideConfetti: s = !1,
+analyticsLocations: i
   } = e, {
-skusById: l,
-selectedSkuId: d,
-application: u
-  } = (0, m.usePaymentContext)(), p = (0, s.e7)([c.Z], () => c.Z.getProduct(d));
-  o()(null != d, 'Expected selectedSkuId'), o()(null != u, 'Expected application');
-  let _ = l[d];
-  return (o()(null != _, 'Expected sku'), null == p) ? null : (0, i.jsxs)(C.C3, {
+skusById: o,
+selectedSkuId: u,
+application: c
+  } = (0, m.usePaymentContext)(), f = (0, r.e7)([d.Z], () => d.Z.getProduct(u));
+  l()(null != u, 'Expected selectedSkuId'), l()(null != c, 'Expected application');
+  let h = o[u];
+  return (l()(null != h, 'Expected sku'), null == f) ? null : (0, a.jsxs)(C.C3, {
 children: [
-  (0, i.jsx)(g.Z, {}),
-  (0, i.jsx)(f.CollectiblesCollectedModalInner, {
-    product: p,
+  (0, a.jsx)(p.Z, {}),
+  (0, a.jsx)(E.CollectiblesCollectedModalInner, {
+    product: f,
     onClose: n,
     confettiCanvas: t,
-    analyticsLocations: r,
-    hideConfetti: a
+    analyticsLocations: i,
+    hideConfetti: s
   })
 ]
   });
 }
 
-function v(e) {
+function I(e) {
   let {
 isGift: n,
 giftCode: t,
-selectedGiftStyle: r,
-hasSentMessage: o,
-giftRecipient: f,
+selectedGiftStyle: i,
+hasSentMessage: l,
+giftRecipient: E,
 giftMessageError: C,
-isSendingMessage: g
-  } = (0, _.wD)(), v = (0, s.e7)([l.Z], () => l.Z.useReducedMotion), h = a.useRef(null), {
-selectedSkuId: E
-  } = (0, m.usePaymentContext)(), T = (0, s.e7)([c.Z], () => c.Z.getProduct(E)), {
-confettiColors: I
-  } = (0, d.Z)(null == T ? void 0 : T.styles);
-  return n ? (0, i.jsxs)('div', {
-ref: h,
+isSendingMessage: p
+  } = (0, h.wD)(), I = (0, r.e7)([o.Z], () => o.Z.useReducedMotion), T = s.useRef(null), {
+selectedSkuId: g
+  } = (0, m.usePaymentContext)(), N = (0, r.e7)([d.Z], () => d.Z.getProduct(g)), {
+confettiColors: S
+  } = (0, u.Z)(null == N ? void 0 : N.styles);
+  return n ? (0, a.jsxs)('div', {
+ref: T,
 children: [
-  (0, i.jsx)(b.Z, {
+  (0, a.jsx)(v.Z, {
     giftCode: t,
     onClose: e.handleClose,
-    selectedGiftStyle: r,
-    hasSentMessage: o,
-    giftRecipient: f,
+    selectedGiftStyle: i,
+    hasSentMessage: l,
+    giftRecipient: E,
     giftMessageError: C,
-    isSendingMessage: g
+    isSendingMessage: p
   }),
-  !e.hideConfetti && !v && (0, i.jsx)(u.Z, {
-    confettiTarget: h.current,
+  !e.hideConfetti && !I && (0, a.jsx)(c.Z, {
+    confettiTarget: T.current,
     confettiCanvas: e.confettiCanvas,
-    sprites: (0, p.vK)(null == T ? void 0 : T.categorySkuId),
-    colors: null == I ? void 0 : I.map(e => e.toHexString())
+    sprites: (0, f.vK)(null == N ? void 0 : N.categorySkuId),
+    colors: null == S ? void 0 : S.map(e => e.toHexString())
   })
 ]
-  }) : (0, i.jsx)(x, {
+  }) : (0, a.jsx)(x, {
 ...e
   });
 }

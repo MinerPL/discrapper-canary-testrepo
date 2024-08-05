@@ -6,8 +6,8 @@ return u;
 var r = n(392711),
   i = n.n(r),
   a = n(314897),
-  o = n(908442),
-  s = n(981631),
+  s = n(908442),
+  o = n(981631),
   l = n(689938);
 
 function u(e, t, n) {
@@ -29,12 +29,12 @@ return {
   reason: l.Z.Messages.BUILD_OVERRIDE_INCOMPATIBLE_TARGETS.format({
     requestedTargets: E.map(e => {
       var t;
-      return null !== (t = o.o0[e]) && void 0 !== t ? t : 'unknown';
+      return null !== (t = s.o0[e]) && void 0 !== t ? t : 'unknown';
     }).join(', ')
   })
 };
   if (null != r && r !== window.GLOBAL_ENV.RELEASE_CHANNEL) {
-let e = r === s.R5N.PTB ? r.toUpperCase() : ''.concat(r.charAt(0).toUpperCase()).concat(r.slice(1));
+let e = r === o.R5N.PTB ? r.toUpperCase() : ''.concat(r.charAt(0).toUpperCase()).concat(r.slice(1));
 return {
   valid: !1,
   reason: l.Z.Messages.BUILD_OVERRIDE_INCOMPATIBLE_CLIENT.format({

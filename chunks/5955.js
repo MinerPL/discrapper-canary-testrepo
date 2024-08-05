@@ -1,6 +1,6 @@
 var i = n(735250),
-  s = n(470079),
-  a = n(481060),
+  a = n(470079),
+  s = n(481060),
   r = n(252618),
   l = n(900849),
   o = n(526383),
@@ -13,7 +13,7 @@ t.Z = e => {
   let {
 loadId: t
   } = e, n = (0, o.Z)();
-  return s.useEffect(() => {
+  return a.useEffect(() => {
 (0, l.Zt)({
   loadId: t,
   gamesYouPlayGuilds: [],
@@ -23,7 +23,7 @@ loadId: t
   }, [t]), (0, r.Tt)({
 subsection: u.Z.Messages.HUB_SCHOOL_HUBS,
 location: u.Z.Messages.HUB_DIRECTORY_SEARCH_TITLE
-  }), (0, i.jsx)(a.Scroller, {
+  }), (0, i.jsx)(s.Scroller, {
 className: _.scroller,
 children: (0, i.jsxs)('div', {
   className: _.viewWrapper,
@@ -39,12 +39,12 @@ children: (0, i.jsxs)('div', {
         (0, i.jsxs)('div', {
           className: _.headerContent,
           children: [
-            (0, i.jsx)(a.Heading, {
+            (0, i.jsx)(s.Heading, {
               className: _.headerText,
               variant: 'heading-xl/semibold',
               children: u.Z.Messages.HUB_DIRECTORY_SEARCH_TITLE
             }),
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(s.Text, {
               className: _.headerDescription,
               variant: 'text-md/normal',
               color: 'none',
@@ -60,7 +60,7 @@ children: (0, i.jsxs)('div', {
     (0, i.jsx)('div', {
       className: _.divider
     }),
-    (0, i.jsx)(a.Text, {
+    (0, i.jsx)(s.Text, {
       className: _.footerDescription,
       variant: 'text-md/medium',
       color: 'header-secondary',

@@ -9,8 +9,8 @@ return b;
 var r = n(512722),
   i = n.n(r),
   a = n(913527),
-  o = n.n(a),
-  s = n(106351),
+  s = n.n(a),
+  o = n(106351),
   l = n(969812),
   u = n(493683),
   c = n(749210),
@@ -346,8 +346,8 @@ return null === (n = e.find(e => e.name === t)) || void 0 === n ? void 0 : n.val
     var n, r;
     let {
       channel: i
-    } = t, a = null !== (n = L(e, 'name')) && void 0 !== n ? n : '', o = null !== (r = L(e, 'message')) && void 0 !== r ? r : '', l = await (0, p.gK)(i, a, s.d.PUBLIC_THREAD, (0, h.WD)(i, null), 'Slash Command');
-    d.Z.sendMessage(l.id, f.ZP.parse(l, o));
+    } = t, a = null !== (n = L(e, 'name')) && void 0 !== n ? n : '', s = null !== (r = L(e, 'message')) && void 0 !== r ? r : '', l = await (0, p.gK)(i, a, o.d.PUBLIC_THREAD, (0, h.WD)(i, null), 'Slash Command');
+    d.Z.sendMessage(l.id, f.ZP.parse(l, s));
   }
 },
 {
@@ -531,10 +531,10 @@ return null === (n = e.find(e => e.name === t)) || void 0 === n ? void 0 : n.val
       var t, n;
       if ('' === a)
         throw Error();
-      let o = null !== (t = L(e, 'delete_messages')) && void 0 !== t ? t : 0,
-        s = null !== (n = L(e, 'reason')) && void 0 !== n ? n : '',
+      let s = null !== (t = L(e, 'delete_messages')) && void 0 !== t ? t : 0,
+        o = null !== (n = L(e, 'reason')) && void 0 !== n ? n : '',
         l = S.default.getUser(a);
-      await c.Z.banUser(r.id, a, o, s), d.Z.sendBotMessage(i.id, y.Z.Messages.COMMAND_BAN_CONFIRMATION.format({
+      await c.Z.banUser(r.id, a, s, o), d.Z.sendBotMessage(i.id, y.Z.Messages.COMMAND_BAN_CONFIRMATION.format({
         user: null != l ? N.ZP.getUserTag(l) : a
       }));
     })().catch(() => {
@@ -619,7 +619,7 @@ return null === (n = e.find(e => e.name === t)) || void 0 === n ? void 0 : n.val
     }
     (async () => {
       var t, a;
-      let s = null !== (t = L(e, 'duration')) && void 0 !== t ? t : '',
+      let o = null !== (t = L(e, 'duration')) && void 0 !== t ? t : '',
         l = null !== (a = L(e, 'reason')) && void 0 !== a ? a : '',
         u = S.default.getUser(i);
       if (null == u)
@@ -627,12 +627,12 @@ return null === (n = e.find(e => e.name === t)) || void 0 === n ? void 0 : n.val
       await c.Z.setCommunicationDisabledUntil({
         guildId: n.id,
         userId: i,
-        communicationDisabledUntilTimestamp: o()().add(s, 's').toISOString(),
-        duration: s,
+        communicationDisabledUntilTimestamp: s()().add(o, 's').toISOString(),
+        duration: o,
         reason: l
       }), d.Z.sendBotMessage(r.id, y.Z.Messages.COMMAND_TIMEOUT_CONFIRMATION.format({
         user: N.ZP.getUserTag(u),
-        duration: s
+        duration: o
       }));
     })().catch(() => {
       d.Z.sendBotMessage(r.id, y.Z.Messages.COMMAND_TIMEOUT_ERROR);
@@ -685,11 +685,11 @@ return null === (n = e.find(e => e.name === t)) || void 0 === n ? void 0 : n.val
     var n;
     let {
       channel: r
-    } = t, a = L(e, 'user'), o = null !== (n = L(e, 'message')) && void 0 !== n ? n : '';
+    } = t, a = L(e, 'user'), s = null !== (n = L(e, 'message')) && void 0 !== n ? n : '';
     (async () => {
       await u.Z.openPrivateChannel(a).then(e => {
         let t = T.Z.getChannel(e);
-        i()(null != t, 'Newly created PrivateChannel is null'), d.Z.sendMessage(t.id, f.ZP.parse(t, o));
+        i()(null != t, 'Newly created PrivateChannel is null'), d.Z.sendMessage(t.id, f.ZP.parse(t, s));
       });
     })().catch(() => {
       d.Z.sendBotMessage(r.id, y.Z.Messages.COMMAND_MSG_ERROR);

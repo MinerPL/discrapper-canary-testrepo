@@ -1,13 +1,13 @@
 n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(399606),
-  s = n(704215),
+  s = n(399606),
+  l = n(704215),
   r = n(952265),
   o = n(481060),
   c = n(243778),
-  d = n(38618),
-  u = n(914010),
+  u = n(38618),
+  d = n(914010),
   h = n(921944);
 
 function p(e) {
@@ -15,7 +15,7 @@ function p(e) {
 }
 t.Z = a.memo(function() {
   return ! function() {
-let e = (0, l.e7)([d.Z], () => d.Z.isConnected()) ? [] : [],
+let e = (0, s.e7)([u.Z], () => u.Z.isConnected()) ? [] : [],
   [t, m] = (0, c.U)(e, h.R.GUILD_TAKEOVER_MODAL),
   _ = (0, r.f9)(),
   f = a.useRef(null);
@@ -29,11 +29,11 @@ a.useEffect(() => {
       let {
         dismissibleContent: t,
         markAsDismissed: a
-      } = e, l = {
+      } = e, s = {
         onCloseCallback: e => a(null != e ? e : h.L.UNKNOWN),
         modalKey: p(t)
-      }, r = u.Z.getGuildId();
-      if (t === s.z.SERVER_SHOP_UPSELL)
+      }, r = d.Z.getGuildId();
+      if (t === l.z.SERVER_SHOP_UPSELL)
         null != r && (0, o.openModalLazy)(async () => {
           let {
             default: e
@@ -43,7 +43,7 @@ a.useEffect(() => {
             guildId: r,
             markAsDismissed: a
           });
-        }, l);
+        }, s);
     }({
       dismissibleContent: t,
       markAsDismissed: m

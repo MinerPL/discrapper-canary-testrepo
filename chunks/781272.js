@@ -1,15 +1,15 @@
 n.d(t, {
   Z: function() {
-return s;
+return o;
   }
 });
 var r = n(735250);
 n(470079);
 var i = n(302454),
   a = n.n(i),
-  o = n(481060);
+  s = n(481060);
 
-function s(e) {
+function o(e) {
   return e.paragraph = {
 ...e.paragraph,
 react: function(e, t, n) {
@@ -25,7 +25,7 @@ react: function(e, t, n) {
     let t = e.context[e.target];
     t && t.onClick ? (i.onClick = t.onClick, i.onContextMenu = t.onContextMenu) : i.onClick = t;
   }
-  return null == i.onClick && (i.href = a().sanitizeUrl(e.target)), (0, r.jsx)(o.Anchor, {
+  return null == i.onClick && (i.href = a().sanitizeUrl(e.target)), (0, r.jsx)(s.Anchor, {
     title: e.title,
     ...i,
     children: t(e.content, n)

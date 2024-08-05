@@ -9,8 +9,8 @@ return f;
 var r = n(735250),
   i = n(470079),
   a = n(442837),
-  o = n(481060),
-  s = n(893776),
+  s = n(481060),
+  o = n(893776),
   l = n(594174),
   u = n(918701),
   c = n(689938),
@@ -30,7 +30,7 @@ status: 'unknown'
   i.useEffect(() => {
 h({
   status: 'loading'
-}), s.Z.verifyResend().then(() => h({
+}), o.Z.verifyResend().then(() => h({
   status: 'success'
 }), e => {
   h({
@@ -42,16 +42,16 @@ h({
   });
 });
   }, []);
-  let p = () => (0, r.jsx)(o.ModalFooter, {
+  let p = () => (0, r.jsx)(s.ModalFooter, {
 className: d.modalFooter,
-children: (0, r.jsx)(o.Button, {
-  color: o.Button.Colors.BRAND,
-  size: o.Button.Sizes.MEDIUM,
+children: (0, r.jsx)(s.Button, {
+  color: s.Button.Colors.BRAND,
+  size: s.Button.Sizes.MEDIUM,
   onClick: n,
   children: c.Z.Messages.CLOSE
 })
   });
-  return (0, r.jsxs)(o.ModalRoot, {
+  return (0, r.jsxs)(s.ModalRoot, {
 transitionState: t,
 disableTrack: !0,
 children: [
@@ -60,30 +60,30 @@ children: [
     className: d.headerImage,
     src: _
   }),
-  (0, r.jsxs)(o.ModalHeader, {
+  (0, r.jsxs)(s.ModalHeader, {
     separator: !1,
     className: d.header,
     children: [
-      (0, r.jsx)(o.Heading, {
+      (0, r.jsx)(s.Heading, {
         className: d.title,
         variant: 'heading-xl/bold',
         children: c.Z.Messages.QUESTS_REWARD_VERIFICATION_TITLE
       }),
-      (0, r.jsx)(o.ModalCloseButton, {
+      (0, r.jsx)(s.ModalCloseButton, {
         onClick: n,
         className: d.modalCloseButton
       })
     ]
   }),
-  'loading' === f.status && (0, r.jsx)(o.ModalContent, {
+  'loading' === f.status && (0, r.jsx)(s.ModalContent, {
     className: d.content,
-    children: (0, r.jsx)(o.Spinner, {})
+    children: (0, r.jsx)(s.Spinner, {})
   }),
   'error' === f.status && (0, r.jsxs)(r.Fragment, {
     children: [
-      (0, r.jsx)(o.ModalContent, {
+      (0, r.jsx)(s.ModalContent, {
         className: d.content,
-        children: (0, r.jsx)(o.Text, {
+        children: (0, r.jsx)(s.Text, {
           variant: 'text-md/normal',
           children: c.Z.Messages.QUESTS_REWARD_VERIFICATION_ERROR
         })
@@ -93,9 +93,9 @@ children: [
   }),
   'success' === f.status && (0, r.jsxs)(r.Fragment, {
     children: [
-      (0, r.jsx)(o.ModalContent, {
+      (0, r.jsx)(s.ModalContent, {
         className: d.content,
-        children: (0, r.jsx)(o.Text, {
+        children: (0, r.jsx)(s.Text, {
           variant: 'text-md/normal',
           children: c.Z.Messages.QUESTS_REWARD_VERIFICATION_BODY.format({
             emailAddress: E,
@@ -103,17 +103,17 @@ children: [
           })
         })
       }),
-      (0, r.jsx)(o.ModalContent, {
+      (0, r.jsx)(s.ModalContent, {
         className: d.content,
         children: (0, r.jsxs)('div', {
           className: d.tooltip,
           children: [
-            (0, r.jsx)(o.CircleInformationIcon, {
+            (0, r.jsx)(s.CircleInformationIcon, {
               size: 'xs',
               color: 'currentColor',
               className: d.infoFilledIcon
             }),
-            (0, r.jsx)(o.Text, {
+            (0, r.jsx)(s.Text, {
               className: d.tooltipText,
               variant: 'text-sm/normal',
               children: c.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CHECK_SPAM
@@ -129,7 +129,7 @@ children: [
 }
 
 function f() {
-  (0, o.openModalLazy)(async () => {
+  (0, s.openModalLazy)(async () => {
 let {
   QuestsRewardModalUnverified: e
 } = await Promise.resolve().then(n.bind(n, 669041));

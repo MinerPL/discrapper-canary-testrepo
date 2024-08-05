@@ -5,8 +5,8 @@ return _;
 }), n(47120);
 var r, i, a = n(735250);
 n(470079);
-var o = n(120356),
-  s = n.n(o),
+var s = n(120356),
+  o = n.n(s),
   l = n(392711),
   u = n.n(l),
   c = n(692547),
@@ -18,16 +18,16 @@ className: t,
 percents: n,
 size: r = 'small',
 foregroundColors: i = [c.Z.unsafe_rawColors.BRAND_500.css],
-backgroundColor: o = 'var(--background-modifier-active)',
+backgroundColor: s = 'var(--background-modifier-active)',
 animate: l = !0
   } = e, _ = u().zip(n, i).map((e, t) => {
-let n, [i, o] = e;
-return n = Array.isArray(o) ? {
-  background: 'linear-gradient(to right, '.concat(o[0], ', ').concat(o[1], ')')
+let n, [i, s] = e;
+return n = Array.isArray(s) ? {
+  background: 'linear-gradient(to right, '.concat(s[0], ', ').concat(s[1], ')')
 } : {
-  backgroundColor: o
+  backgroundColor: s
 }, (0, a.jsx)('div', {
-  className: s()(d.progressBar, d[r], {
+  className: o()(d.progressBar, d[r], {
     [d.animating]: l
   }),
   style: {
@@ -37,9 +37,9 @@ return n = Array.isArray(o) ? {
 }, t);
   }).reverse();
   return (0, a.jsx)('div', {
-className: s()(t, d.progress, d[r]),
+className: o()(t, d.progress, d[r]),
 style: {
-  backgroundColor: o
+  backgroundColor: s
 },
 children: _
   });

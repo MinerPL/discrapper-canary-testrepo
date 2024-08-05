@@ -5,14 +5,14 @@ return m;
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-  s = n.n(a),
+var s = n(120356),
+  a = n.n(s),
   r = n(481060),
   l = n(592125),
   o = n(944486),
   c = n(471253),
-  d = n(623633),
-  u = n(930180),
+  u = n(623633),
+  d = n(930180),
   _ = n(689938),
   E = n(503760);
 
@@ -27,8 +27,8 @@ return;
 
 function m() {
   var e;
-  let t = (0, d.Z)(),
-n = null !== (e = (0, u._d)(null == t ? void 0 : t.id)) && void 0 !== e ? e : 0;
+  let t = (0, u.Z)(),
+n = null !== (e = (0, d._d)(null == t ? void 0 : t.id)) && void 0 !== e ? e : 0;
   return null == t ? null : (0, i.jsxs)(r.Notice, {
 className: E.container,
 color: r.NoticeColors.DEFAULT,
@@ -53,7 +53,7 @@ children: [
     ]
   }) : null,
   (0, i.jsx)(r.Button, {
-    className: s()(E.__invalid_button, E.acceptButton),
+    className: a()(E.__invalid_button, E.acceptButton),
     size: r.Button.Sizes.MIN,
     color: r.Button.Colors.WHITE,
     onClick: () => I(!1),
@@ -65,7 +65,7 @@ children: [
     })
   }),
   (0, i.jsx)(r.Button, {
-    className: s()(E.__invalid_button, E.declineButton),
+    className: a()(E.__invalid_button, E.declineButton),
     look: r.Button.Looks.OUTLINED,
     size: r.Button.Sizes.MIN,
     color: r.Button.Colors.WHITE,

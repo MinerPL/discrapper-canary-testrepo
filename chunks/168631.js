@@ -24,8 +24,8 @@ return m;
 var r = n(470079),
   i = n(392711),
   a = n(866442),
-  o = n(399606),
-  s = n(692547),
+  s = n(399606),
+  o = n(692547),
   l = n(780384),
   u = n(607070),
   c = n(44315),
@@ -33,42 +33,42 @@ var r = n(470079),
   _ = n(981631);
 
 function E(e) {
-  let t = (0, o.e7)([u.Z], () => u.Z.saturation);
+  let t = (0, s.e7)([u.Z], () => u.Z.saturation);
   return (0, r.useMemo)(() => null == e ? null : {
-overlaySyncedWithUserTheme: s.Z.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME.resolve({
+overlaySyncedWithUserTheme: o.Z.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME.resolve({
   theme: e,
   saturation: t
 }).hsl(),
-overlay: s.Z.colors.PROFILE_GRADIENT_OVERLAY.resolve({
+overlay: o.Z.colors.PROFILE_GRADIENT_OVERLAY.resolve({
   theme: e,
   saturation: t
 }).hsl(),
-sectionBox: s.Z.colors.PROFILE_GRADIENT_SECTION_BOX.resolve({
+sectionBox: o.Z.colors.PROFILE_GRADIENT_SECTION_BOX.resolve({
   theme: e,
   saturation: t
 }).hsl(),
-messageInputBorder: s.Z.colors.PROFILE_GRADIENT_MESSAGE_INPUT_BORDER.resolve({
+messageInputBorder: o.Z.colors.PROFILE_GRADIENT_MESSAGE_INPUT_BORDER.resolve({
   theme: e,
   saturation: t
 }).hsl(),
-dividerOpacity: e === s.Z.themes.DARK ? 0.24 : 0.12,
-noteBackgroundColor: s.Z.colors.PROFILE_GRADIENT_NOTE_BACKGROUND.resolve({
+dividerOpacity: e === o.Z.themes.DARK ? 0.24 : 0.12,
+noteBackgroundColor: o.Z.colors.PROFILE_GRADIENT_NOTE_BACKGROUND.resolve({
   theme: e,
   saturation: t
 }).hsl(),
-profileBodyBackgroundHover: s.Z.colors.PROFILE_GRADIENT_PROFILE_BODY_BACKGROUND_HOVER.resolve({
+profileBodyBackgroundHover: o.Z.colors.PROFILE_GRADIENT_PROFILE_BODY_BACKGROUND_HOVER.resolve({
   theme: e,
   saturation: t
 }).hsl(),
-rolePillBackgroundColor: s.Z.colors.PROFILE_GRADIENT_ROLE_PILL_BACKGROUND.resolve({
+rolePillBackgroundColor: o.Z.colors.PROFILE_GRADIENT_ROLE_PILL_BACKGROUND.resolve({
   theme: e,
   saturation: t
 }).hsl(),
-rolePillBorderColor: s.Z.colors.PROFILE_GRADIENT_ROLE_PILL_BORDER.resolve({
+rolePillBorderColor: o.Z.colors.PROFILE_GRADIENT_ROLE_PILL_BORDER.resolve({
   theme: e,
   saturation: t
 }).hsl(),
-icon: s.Z.colors.INTERACTIVE_NORMAL.resolve({
+icon: o.Z.colors.INTERACTIVE_NORMAL.resolve({
   theme: e,
   saturation: t
 }).hsl()
@@ -104,13 +104,13 @@ return 0;
   r.green,
   r.blue
 ],
-o = [
+s = [
   n[0],
   n[1],
   n[2]
 ],
-s = r.alpha,
-[l, u, c] = i.map((e, t) => Math.floor(s * e + (1 - s) * o[t]));
+o = r.alpha,
+[l, u, c] = i.map((e, t) => Math.floor(o * e + (1 - o) * s[t]));
   return (0, a.QT)('rgba('.concat(l, ', ').concat(u, ', ').concat(c, ')'));
 }
 

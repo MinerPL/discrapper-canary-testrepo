@@ -5,8 +5,8 @@ return c;
 }), n(47120);
 var r, i = n(735250),
   a = n(470079),
-  o = n(392711),
-  s = n.n(o),
+  s = n(392711),
+  o = n.n(s),
   l = n(607070);
 
 function u(e, t, n) {
@@ -56,8 +56,8 @@ super(...e), u(this, 'ref', a.createRef()), u(this, 'animationFrame', void 0), u
     return;
   let n = this.ref.current;
   if (this.shouldRenderFrame && null != n) {
-    let t = s().random(-e, e, !0),
-      r = s().random(-e, e, !0);
+    let t = o().random(-e, e, !0),
+      r = o().random(-e, e, !0);
     n.style.transform = l.Z.useReducedMotion ? '' : 'translate3d('.concat(t, 'px,').concat(r, 'px,0px)');
   }
   this.shouldRenderFrame = !this.shouldRenderFrame, this.animationFrame = requestAnimationFrame(this.animate);

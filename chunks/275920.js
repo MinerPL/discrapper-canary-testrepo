@@ -11,8 +11,8 @@ function a(e) {
 type: t,
 source: n,
 userId: a,
-applicationId: o,
-partyId: s,
+applicationId: s,
+partyId: o,
 messageId: l,
 locationObject: u,
 analyticsLocations: c
@@ -20,8 +20,8 @@ analyticsLocations: c
   r.default.track(i.rMx.APPLICATION_OPENED, {
 type: t,
 source: n,
-application_id: o,
-party_id: null != s ? s : void 0,
+application_id: s,
+party_id: null != o ? o : void 0,
 other_user_id: a,
 message_id: l,
 location: u,

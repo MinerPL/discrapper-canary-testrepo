@@ -1,5 +1,5 @@
-var a = r(319301);
-t.Z = (0, a.a)({
+var a = t(319301);
+r.Z = (0, a.a)({
   'android-navigation-bar-background': {
 dark: 'primary.830',
 light: 'primary.100'

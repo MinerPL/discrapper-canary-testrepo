@@ -9,8 +9,8 @@ return I;
 var r, i = n(735250);
 n(470079);
 var a = n(442837),
-  o = n(481060),
-  s = n(570140),
+  s = n(481060),
+  o = n(570140),
   l = n(592125),
   u = n(271383),
   c = n(944486),
@@ -39,7 +39,7 @@ return [...h];
   }
 }
 f(p, 'displayName', 'PTOStore'), f(p, 'persistKey', 'PTOStore');
-let m = new p(s.Z, {}),
+let m = new p(o.Z, {}),
   I = e => (0, a.e7)([
 u.ZP,
 d.default,
@@ -58,7 +58,7 @@ return r ? !m.hasId(n.id) && r : (h.delete(n.id) && m.emitChange(), !1);
 className: E.bar,
 children: [
   _.Z.Messages.STAFF_PTO_NOTICE,
-  (0, i.jsx)(o.Clickable, {
+  (0, i.jsx)(s.Clickable, {
     className: E.closeButton,
     onClick: () => {
       let e = c.Z.getChannelId();
@@ -67,7 +67,7 @@ children: [
       let t = l.Z.getChannel(e);
       null != t && t.isPrivate() && !h.has(t.getRecipientId()) && (h.add(t.getRecipientId()), m.emitChange());
     },
-    children: (0, i.jsx)(o.CircleXIcon, {
+    children: (0, i.jsx)(s.CircleXIcon, {
       size: 'md',
       color: 'currentColor',
       className: E.closeIcon

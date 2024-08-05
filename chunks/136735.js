@@ -22,8 +22,8 @@ var t = s(735250),
   T = s(626135),
   v = s(424218),
   D = s(63063),
-  p = s(956664),
-  x = s(268350),
+  x = s(956664),
+  p = s(268350),
   C = s(373228),
   R = s(378233),
   S = s(419922),
@@ -112,11 +112,11 @@ return (0, t.jsx)(S.ZP, {
 }, i);
   };
 async function b(e) {
-  let l = await (0, p.fD)(e),
+  let l = await (0, x.fD)(e),
 s = new Image();
   s.src = l, await s.decode();
   let t = (0, _.Ae)(s, 320, 320);
-  return (0, p.Bo)(t, e.name, e.type);
+  return (0, x.Bo)(t, e.name, e.type);
 }
 
 function B(e) {
@@ -142,7 +142,7 @@ if (!O.has(s)) {
   return;
 }
 let t = e;
-if ('image/png' === s && e.size > V && !await (0, p.c0)(e)) {
+if ('image/png' === s && e.size > V && !await (0, x.c0)(e)) {
   let l = (t = await b(e)).size > V;
   T.default.track(h.rMx.STICKER_FILE_RESIZED, {
     original_file_size_bytes: e.size,
@@ -184,7 +184,7 @@ if (n === C.u3.LOTTIE) {
     }), er(null);
   }), e.readAsText(t);
 } else {
-  let e = await (0, p.fD)(t);
+  let e = await (0, x.fD)(t);
   q({
     id: (0, o.Z)(),
     formatType: n,
@@ -201,7 +201,7 @@ e.preventDefault();
 let o = null !== (s = null !== (l = null != $ ? $ : el) && void 0 !== l ? l : null == F ? void 0 : F.tags) && void 0 !== s ? s : '';
 try {
   if (ea(!0), ec)
-    await (0, x.Jf)(w, null !== (t = null == F ? void 0 : F.id) && void 0 !== t ? t : '', {
+    await (0, p.Jf)(w, null !== (t = null == F ? void 0 : F.id) && void 0 !== t ? t : '', {
       name: Y,
       tags: o,
       description: et
@@ -211,7 +211,7 @@ try {
     let e = new FormData();
     e.append('name', Y), e.append('tags', o), e.append('description', et), (null == X ? void 0 : X.file) != null && e.append('file', X.file), a = null !== (i = null === (n = X.file) || void 0 === n ? void 0 : n.type) && void 0 !== i ? i : '', T.default.track(h.rMx.STICKER_UPLOAD_STARTED, {
       filetype: a
-    }), await (0, x.lY)(w, e), A(!0);
+    }), await (0, p.lY)(w, e), A(!0);
   }
   y();
 } catch (e) {

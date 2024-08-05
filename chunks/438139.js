@@ -6,9 +6,9 @@ return l;
 var r = n(735250),
   i = n(470079),
   a = n(846519),
-  o = n(689938);
+  s = n(689938);
 
-function s(e) {
+function o(e) {
   return ''.concat(e).length < 13 ? 1000 * e : e;
 }
 
@@ -27,7 +27,7 @@ getUpdatedTime() {
   let {
     timestamps: e
   } = this.props, t = Date.now() / 1000;
-  return null != e.end ? this.getDiff(t, s(e.end) / 1000) : null != e.start ? this.getDiff(s(e.start) / 1000, t) : {
+  return null != e.end ? this.getDiff(t, o(e.end) / 1000) : null != e.start ? this.getDiff(o(e.start) / 1000, t) : {
     hours: 0,
     minutes: 0,
     seconds: 0
@@ -54,18 +54,18 @@ render() {
   } = this.props, {
     hours: i,
     minutes: a,
-    seconds: s
+    seconds: o
   } = this.state, l = {
     hours: this.renderTime(i, !0),
     minutes: this.renderTime(a),
-    seconds: this.renderTime(s)
+    seconds: this.renderTime(o)
   };
   return null != t.end ? (0, r.jsx)(e, {
     ...n,
-    message: o.Z.Messages.USER_ACTIVITY_TIMESTAMP_END.format(l)
+    message: s.Z.Messages.USER_ACTIVITY_TIMESTAMP_END.format(l)
   }) : null != t.start ? (0, r.jsx)(e, {
     ...n,
-    message: o.Z.Messages.USER_ACTIVITY_TIMESTAMP_START.format(l)
+    message: s.Z.Messages.USER_ACTIVITY_TIMESTAMP_START.format(l)
   }) : null;
 }
 constructor(e) {

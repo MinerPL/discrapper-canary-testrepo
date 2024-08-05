@@ -6,14 +6,14 @@ return l;
 var r = n(470079),
   i = n(442837),
   a = n(232567),
-  o = n(110924),
-  s = n(314897);
+  s = n(110924),
+  o = n(314897);
 
 function l() {
-  let [e, t] = (0, i.Wu)([s.default], () => [
-s.default.isAuthenticated(),
-null != s.default.getAnalyticsToken()
-  ]), n = (0, o.Z)(e);
+  let [e, t] = (0, i.Wu)([o.default], () => [
+o.default.isAuthenticated(),
+null != o.default.getAnalyticsToken()
+  ]), n = (0, s.Z)(e);
   r.useEffect(() => {
 !n && e && !t && a.k({
   withAnalyticsToken: !0

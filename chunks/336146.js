@@ -1,8 +1,8 @@
 var r = n(470079),
   i = n(844303),
   a = n(13942),
-  o = n(464854),
-  s = n(191731);
+  s = n(464854),
+  o = n(191731);
 t.Z = function(e) {
   var t = e.color,
 n = e.onClick,
@@ -62,7 +62,7 @@ _ = (0, i.default)({
   'color-#FFFFFF': '#FFFFFF' === t,
   transparent: 'transparent' === t
 });
-  return r.createElement(o.m4, {
+  return r.createElement(s.m4, {
 color: t,
 style: _.color,
 onClick: void 0 === n ? function() {} : n,
@@ -72,5 +72,5 @@ focusStyle: {
 }
   }, r.createElement('div', {
 style: _.check
-  }, r.createElement(s.default, null)));
+  }, r.createElement(o.default, null)));
 };

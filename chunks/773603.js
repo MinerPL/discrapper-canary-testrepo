@@ -1,8 +1,8 @@
 var r = n(147018),
   i = n(992051),
   a = n(955903),
-  o = n(936940),
-  s = n(545576),
+  s = n(936940),
+  o = n(545576),
   l = n(354848),
   u = n(344135),
   c = n(457110),
@@ -12,14 +12,14 @@ if (r({
 target: 'Promise',
 proto: !0,
 real: !0,
-forced: !!a && o(function() {
+forced: !!a && s(function() {
   _.finally.call({
     then: function() {}
   }, function() {});
 })
   }, {
 finally: function(e) {
-  var t = u(this, s('Promise')),
+  var t = u(this, o('Promise')),
     n = l(e);
   return this.then(n ? function(n) {
     return c(t, e()).then(function() {
@@ -32,7 +32,7 @@ finally: function(e) {
   } : e);
 }
   }), !i && l(a)) {
-  var E = s('Promise').prototype.finally;
+  var E = o('Promise').prototype.finally;
   _.finally !== E && d(_, 'finally', E, {
 unsafe: !0
   });

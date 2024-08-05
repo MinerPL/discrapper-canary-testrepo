@@ -10,8 +10,8 @@ var n = t(735250),
   r = t(2052),
   o = t(434650),
   d = t(906732),
-  c = t(672752),
-  u = t(499150),
+  c = t(690221),
+  u = t(672752),
   h = t(626135),
   N = t(197115),
   S = t(474936),
@@ -42,7 +42,7 @@ className: g.container,
 children: [
   (0, n.jsx)(l.NitroWheelIcon, {
     size: 'md',
-    color: c.JX.PREMIUM_TIER_2,
+    color: u.JX.PREMIUM_TIER_2,
     className: g.nitroWheel
   }),
   (0, n.jsxs)(l.Text, {
@@ -51,7 +51,7 @@ children: [
     children: [
       m.Z.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_NOTIFICATION_SETTINGS_UPSELL,
       ' ',
-      (0, n.jsx)(u.Z, {
+      (0, n.jsx)(c.Z, {
         onClick: () => {
           s(), a.Z.open(E.oAB.PREMIUM);
         },

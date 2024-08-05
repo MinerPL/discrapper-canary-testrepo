@@ -6,8 +6,8 @@ return I;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(519953),
+  s = n.n(a),
+  o = n(519953),
   l = n(481060),
   u = n(40851),
   c = n(153850),
@@ -25,7 +25,7 @@ function I(e) {
 editorRef: n,
 options: i,
 iconClassName: a,
-dividerClassName: s
+dividerClassName: o
   } = e, u = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor();
   return null == u ? null : (0, r.jsxs)('div', {
 className: m.buttons,
@@ -36,7 +36,7 @@ children: [
     children: (0, r.jsx)(l.BoldIcon, {
       size: 'md',
       color: 'currentColor',
-      className: o()(m.icon, a)
+      className: s()(m.icon, a)
     })
   }),
   (0, r.jsx)(T, {
@@ -45,7 +45,7 @@ children: [
     children: (0, r.jsx)(l.ItalicIcon, {
       size: 'md',
       color: 'currentColor',
-      className: o()(m.icon, a)
+      className: s()(m.icon, a)
     })
   }),
   (0, r.jsx)(T, {
@@ -54,11 +54,11 @@ children: [
     children: (0, r.jsx)(l.StrikethroughIcon, {
       size: 'md',
       color: 'currentColor',
-      className: o()(m.icon, a)
+      className: s()(m.icon, a)
     })
   }),
   (0, r.jsx)('div', {
-    className: o()(m.divider, s)
+    className: s()(m.divider, o)
   }),
   !(null == i ? void 0 : i.disableBlockQuotes) && (0, r.jsx)(g, {
     slateEditor: u,
@@ -66,7 +66,7 @@ children: [
     children: (0, r.jsx)(l.QuoteIcon, {
       size: 'md',
       color: 'currentColor',
-      className: o()(m.icon, a)
+      className: s()(m.icon, a)
     })
   }),
   (0, r.jsx)(T, {
@@ -77,7 +77,7 @@ children: [
       width: 20,
       height: 20,
       color: 'currentColor',
-      className: o()(m.icon, a)
+      className: s()(m.icon, a)
     })
   }),
   (0, r.jsx)(T, {
@@ -86,7 +86,7 @@ children: [
     children: (0, r.jsx)(l.EyeIcon, {
       size: 'md',
       color: 'currentColor',
-      className: o()(m.icon, a)
+      className: s()(m.icon, a)
     })
   })
 ]
@@ -118,9 +118,9 @@ function g(e) {
 blockType: t,
 slateEditor: n,
 children: i
-  } = e, a = null != n ? h.bN.getCurrentBlock(n) : null, o = null != a && h.aj.isType(a[0], t);
+  } = e, a = null != n ? h.bN.getCurrentBlock(n) : null, s = null != a && h.aj.isType(a[0], t);
   return (0, r.jsx)('button', {
-'aria-pressed': o,
+'aria-pressed': s,
 className: m.button,
 onClick: () => {
   null != n && _.T.withSingleEntry(n, () => (0, E.hm)(n, t));
@@ -136,7 +136,7 @@ slateEditor: n
   } = e, [r, a] = null !== (t = h.bN.getSelectedVoid(n)) && void 0 !== t ? t : [
 null,
 null
-  ], o = i.useCallback(e => {
+  ], s = i.useCallback(e => {
 if ((null == n ? void 0 : n.selection) == null || null == a)
   return;
 let t = n.selection;
@@ -148,14 +148,14 @@ n,
 a
   ]);
   return null == r ? null : (0, p.Z)(r, {
-replace: o
+replace: s
   });
 }
 t.Z = i.forwardRef(function(e, t) {
   var n;
   let {
 editorRef: a,
-containerRef: o,
+containerRef: s,
 options: l
   } = e, _ = i.useRef(null), [E, f] = i.useState(!1), p = i.useRef(), T = i.useContext(u.ZP), g = i.useCallback(() => {
 f(!1), clearTimeout(p.current);
@@ -177,7 +177,7 @@ if (e.target instanceof t.Element) {
     clearTimeout(p.current), p.current = setTimeout(() => {
       var t;
       let n = null === (t = (0, d.uB)(e)) || void 0 === t ? void 0 : t.activeElement,
-        i = o.current;
+        i = s.current;
       f(r || null != n && null != i && i.contains(n));
     }, 100);
   }
@@ -185,7 +185,7 @@ if (e.target instanceof t.Element) {
   g();
   }, [
 T,
-o,
+s,
 g
   ]);
   i.useImperativeHandle(t, () => ({
@@ -212,7 +212,7 @@ if ((null == i ? void 0 : i.selection) == null || h.M8.isCollapsed(i.selection) 
     x: null,
     y: null
   };
-let l = s.F3.findDocumentOrShadowRoot(i),
+let l = o.F3.findDocumentOrShadowRoot(i),
   u = l.getSelection();
 if (null == u || null == u.focusNode || null == u.anchorNode || u.isCollapsed)
   return {
@@ -231,13 +231,13 @@ let m = p.getBoundingClientRect(),
   I = d.x === f.x,
   T = I ? m.x : Math.min(d.x, f.x),
   g = I ? m.x + m.width : Math.max(d.x, f.x),
-  S = null !== (r = null === (n = o.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.y) && void 0 !== r ? r : 0;
+  S = null !== (r = null === (n = s.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.y) && void 0 !== r ? r : 0;
 return {
   x: T + (g - T) / 2,
   y: Math.max(S, Math.min(f.y, d.y))
 };
   }, [
-o,
+s,
 E,
 a
   ]), [R, C] = i.useState(0), [y, D] = i.useState(0);

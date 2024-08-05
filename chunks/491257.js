@@ -5,11 +5,11 @@ e.exports = function(e, t, n, r) {
 return i;
   var a = /\+/g;
   e = e.split(t);
-  var o = 1000;
-  r && 'number' == typeof r.maxKeys && (o = r.maxKeys);
-  var s = e.length;
-  o > 0 && s > o && (s = o);
-  for (var l = 0; l < s; ++l) {
+  var s = 1000;
+  r && 'number' == typeof r.maxKeys && (s = r.maxKeys);
+  var o = e.length;
+  s > 0 && o > s && (o = s);
+  for (var l = 0; l < o; ++l) {
 var u, c, d, _, E, f, h = e[l].replace(a, '%20'),
   p = h.indexOf(n);
 if (p >= 0 ? (d = h.substr(0, p), _ = h.substr(p + 1)) : (d = h, _ = ''), E = decodeURIComponent(d), f = decodeURIComponent(_), u = i, c = E, Object.prototype.hasOwnProperty.call(u, c))

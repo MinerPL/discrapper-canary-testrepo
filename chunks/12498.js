@@ -1,5 +1,5 @@
 n(47120);
-var r, i, a, o, s = n(106351),
+var r, i, a, s, o = n(106351),
   l = n(442837),
   u = n(570140),
   c = n(38618);
@@ -17,17 +17,17 @@ class h extends(r = l.ZP.Store) {
   getChannelStatus(e) {
 var t;
 if (null != e && null != e.guild_id) {
-  if (e.type === s.d.GUILD_VOICE)
+  if (e.type === o.d.GUILD_VOICE)
     return !d.has(e.guild_id) && (d.add(e.guild_id), c.Z.getSocket().requestChannelStatuses(e.guild_id)), null === (t = _[e.guild_id]) || void 0 === t ? void 0 : t[e.id];
 }
   }
 }
-o = 'ChannelStatusStore', (a = 'displayName') in(i = h) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'ChannelStatusStore', (a = 'displayName') in(i = h) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new h(u.Z, {
+}) : i[a] = s, t.Z = new h(u.Z, {
   GUILD_CREATE: f,
   GUILD_DELETE: f,
   CONNECTION_RESUMED: E,

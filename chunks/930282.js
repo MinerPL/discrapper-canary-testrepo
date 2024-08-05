@@ -9,9 +9,9 @@ return p;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(653603),
-  l = n.n(s),
+  s = n.n(a),
+  o = n(653603),
+  l = n.n(o),
   u = n(902704),
   c = n(453687),
   d = n(318713),
@@ -38,7 +38,7 @@ t.ZP = i.memo(function(e) {
   let {
 className: n,
 message: a,
-children: s,
+children: o,
 content: u,
 onUpdate: m,
 contentRef: I
@@ -50,11 +50,11 @@ m,
 a.content,
 u,
 N,
-s
+o
   ]), (0, r.jsxs)('div', {
 id: (0, c.ut)(a),
 ref: I,
-className: o()(n, h.markup, {
+className: s()(n, h.markup, {
   [f.messageContent]: !0,
   [f.isSending]: S && !A,
   [f.markupRtl]: 'rtl' === l()(a.content),
@@ -62,7 +62,7 @@ className: o()(n, h.markup, {
   [f.isUnsupported]: a.isUnsupported
 }),
 children: [
-  null != s ? s : p(a, u),
+  null != o ? o : p(a, u),
   T && null != a.editedTimestamp && (0, r.jsxs)(r.Fragment, {
     children: [
       ' ',

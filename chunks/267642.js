@@ -73,9 +73,9 @@ return B;
   }
 }), n(411104), n(47120), n(724458);
 var r, i, a = n(392711),
-  o = n.n(a);
+  s = n.n(a);
 n(913527);
-var s = n(274136),
+var o = n(274136),
   l = n(314884),
   u = n(78839),
   c = n(424218),
@@ -107,7 +107,7 @@ f.Eu4.TIER_3
 var n;
 return e === f.Eu4.NONE ? f.Eu4.TIER_1 : null === (n = x(t).find(t => t.tier === e)) || void 0 === n ? void 0 : n.nextTier;
   },
-  T = (e, t) => null != t && t.hasFeature(f.oNc.MORE_STICKERS) && e === f.Eu4.TIER_3 ? s.D.MAX_STICKER_SLOTS : h.$8[e],
+  T = (e, t) => null != t && t.hasFeature(f.oNc.MORE_STICKERS) && e === f.Eu4.TIER_3 ? o.D.MAX_STICKER_SLOTS : h.$8[e],
   g = e => h.pH[e],
   S = (e, t) => null != t && t.hasFeature(f.oNc.MORE_SOUNDBOARD) ? 96 : h._k[e],
   A = e => {
@@ -337,7 +337,7 @@ default:
   throw Error('Not a valid tier type');
   }
 }
-let R = o().memoize(e => h.HO[f.Eu4.TIER_1].features.includes(e) ? f.Eu4.TIER_1 : h.HO[f.Eu4.TIER_2].features.includes(e) ? f.Eu4.TIER_2 : h.HO[f.Eu4.TIER_3].features.includes(e) ? f.Eu4.TIER_3 : null),
+let R = s().memoize(e => h.HO[f.Eu4.TIER_1].features.includes(e) ? f.Eu4.TIER_1 : h.HO[f.Eu4.TIER_2].features.includes(e) ? f.Eu4.TIER_2 : h.HO[f.Eu4.TIER_3].features.includes(e) ? f.Eu4.TIER_3 : null),
   C = e => {
 if (e === f.Eu4.NONE)
   return f.Qqv.NONE;
@@ -366,7 +366,7 @@ function L(e, t) {
 }
 
 function b(e) {
-  return o().values(e).filter(e => e.isAvailable());
+  return s().values(e).filter(e => e.isAvailable());
 }
 
 function M() {
@@ -445,8 +445,8 @@ r = m.indexOf(t);
 return 0;
   let i = m[r - 1],
 a = null != i ? T(i) : 0,
-o = T(t);
-  return Math.max(0, n - e.slice(a, o).length);
+s = T(t);
+  return Math.max(0, n - e.slice(a, s).length);
 }
 
 function B(e, t, n) {

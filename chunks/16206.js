@@ -1,12 +1,12 @@
 s.d(n, {
   Z: function() {
-return a;
+return i;
   }
 });
 var t = s(981631),
   r = s(689938);
 
-function a(e) {
+function i(e) {
   if (null == e)
 return null;
   switch (e.type) {

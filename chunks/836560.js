@@ -32,9 +32,9 @@ h(e, t, a, {
 });
   });
 }, a.EventEmitter = a, a.prototype._events = void 0, a.prototype._eventsCount = 0, a.prototype._maxListeners = void 0;
-var o = 10;
+var s = 10;
 
-function s(e) {
+function o(e) {
   if ('function' != typeof e)
 throw TypeError('The "listener" argument must be of type Function. Received type ' + typeof e);
 }
@@ -44,9 +44,9 @@ function l(e) {
 }
 
 function u(e, t, n, r) {
-  if (s(n), void 0 === (o = e._events) ? (o = e._events = Object.create(null), e._eventsCount = 0) : (void 0 !== o.newListener && (e.emit('newListener', t, n.listener ? n.listener : n), o = e._events), u = o[t]), void 0 === u)
-u = o[t] = n, ++e._eventsCount;
-  else if ('function' == typeof u ? u = o[t] = r ? [
+  if (o(n), void 0 === (s = e._events) ? (s = e._events = Object.create(null), e._eventsCount = 0) : (void 0 !== s.newListener && (e.emit('newListener', t, n.listener ? n.listener : n), s = e._events), u = s[t]), void 0 === u)
+u = s[t] = n, ++e._eventsCount;
+  else if ('function' == typeof u ? u = s[t] = r ? [
   n,
   u
 ] : [
@@ -54,7 +54,7 @@ u = o[t] = n, ++e._eventsCount;
   n
 ] : r ? u.unshift(n) : u.push(n), (a = l(e)) > 0 && u.length > a && !u.warned) {
 u.warned = !0;
-var i, a, o, u, c = Error('Possible EventEmitter memory leak detected. ' + u.length + ' ' + String(t) + ' listeners added. Use emitter.setMaxListeners() to increase limit');
+var i, a, s, u, c = Error('Possible EventEmitter memory leak detected. ' + u.length + ' ' + String(t) + ' listeners added. Use emitter.setMaxListeners() to increase limit');
 c.name = 'MaxListenersExceededWarning', c.emitter = e, c.type = t, c.count = u.length, i = c, console && console.warn && console.warn(i);
   }
   return e;
@@ -109,12 +109,12 @@ n[r] = e[r];
 Object.defineProperty(a, 'defaultMaxListeners', {
   enumerable: !0,
   get: function() {
-return o;
+return s;
   },
   set: function(e) {
 if ('number' != typeof e || e < 0 || i(e))
   throw RangeError('The value of "defaultMaxListeners" is out of range. It must be a non-negative number. Received ' + e + '.');
-o = e;
+s = e;
   }
 }), a.init = function() {
   (void 0 === this._events || this._events === Object.getPrototypeOf(this)._events) && (this._events = Object.create(null), this._eventsCount = 0), this._maxListeners = this._maxListeners || void 0;
@@ -134,10 +134,10 @@ i = i && void 0 === a.error;
   else if (!i)
 return !1;
   if (i) {
-if (t.length > 0 && (o = t[0]), o instanceof Error)
-  throw o;
-var o, s = Error('Unhandled error.' + (o ? ' (' + o.message + ')' : ''));
-throw s.context = o, s;
+if (t.length > 0 && (s = t[0]), s instanceof Error)
+  throw s;
+var s, o = Error('Unhandled error.' + (s ? ' (' + s.message + ')' : ''));
+throw o.context = s, o;
   }
   var l = a[e];
   if (void 0 === l)
@@ -154,19 +154,19 @@ for (var u = l.length, c = f(l, u), n = 0; n < u; ++n)
 }, a.prototype.on = a.prototype.addListener, a.prototype.prependListener = function(e, t) {
   return u(this, e, t, !0);
 }, a.prototype.once = function(e, t) {
-  return s(t), this.on(e, d(this, e, t)), this;
+  return o(t), this.on(e, d(this, e, t)), this;
 }, a.prototype.prependOnceListener = function(e, t) {
-  return s(t), this.prependListener(e, d(this, e, t)), this;
+  return o(t), this.prependListener(e, d(this, e, t)), this;
 }, a.prototype.removeListener = function(e, t) {
-  var n, r, i, a, o;
-  if (s(t), void 0 === (r = this._events) || void 0 === (n = r[e]))
+  var n, r, i, a, s;
+  if (o(t), void 0 === (r = this._events) || void 0 === (n = r[e]))
 return this;
   if (n === t || n.listener === t)
 0 == --this._eventsCount ? this._events = Object.create(null) : (delete r[e], r.removeListener && this.emit('removeListener', e, n.listener || t));
   else if ('function' != typeof n) {
 for (i = -1, a = n.length - 1; a >= 0; a--)
   if (n[a] === t || n[a].listener === t) {
-    o = n[a].listener, i = a;
+    s = n[a].listener, i = a;
     break;
   }
 if (i < 0)
@@ -175,7 +175,7 @@ if (i < 0)
   for (; t + 1 < e.length; t++)
     e[t] = e[t + 1];
   e.pop();
-}(n, i), 1 === n.length && (r[e] = n[0]), void 0 !== r.removeListener && this.emit('removeListener', e, o || t);
+}(n, i), 1 === n.length && (r[e] = n[0]), void 0 !== r.removeListener && this.emit('removeListener', e, s || t);
   }
   return this;
 }, a.prototype.off = a.prototype.removeListener, a.prototype.removeAllListeners = function(e) {

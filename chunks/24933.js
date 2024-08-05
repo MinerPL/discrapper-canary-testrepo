@@ -1,7 +1,7 @@
 var r, i = n(442837),
   a = n(570140);
 
-function o(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -10,17 +10,17 @@ writable: !0
   }) : e[t] = n, e;
 }
 
-function s() {
+function o() {
   return {
 usageByApplicationId: {},
 shelfOrder: []
   };
 }
-let l = s();
+let l = o();
 class u extends(r = i.ZP.PersistedStore) {
   initialize(e) {
 l = {
-  ...s(),
+  ...o(),
   ...null != e ? e : {}
 };
   }
@@ -28,8 +28,8 @@ l = {
 return l;
   }
 }
-o(u, 'displayName', 'ActivityShelfStore'), o(u, 'persistKey', 'ActivityShelfStore'), t.Z = new u(a.Z, {
+s(u, 'displayName', 'ActivityShelfStore'), s(u, 'persistKey', 'ActivityShelfStore'), t.Z = new u(a.Z, {
   LOGOUT: function() {
-l = s();
+l = o();
   }
 });

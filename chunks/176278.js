@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(481060),
-  s = n(689938),
+  s = n(481060),
+  o = n(689938),
   l = n(676128);
 
 function u(e) {
@@ -24,14 +24,14 @@ onClick: f
   } = e;
   if (null == i && null == u)
 return null;
-  return (0, r.jsx)(o.TooltipContainer, {
+  return (0, r.jsx)(s.TooltipContainer, {
 text: c,
 'aria-label': !1,
 shouldShow: _,
 element: 'span',
 children: (t = (0, r.jsx)('img', {
   alt: '',
-  'aria-label': s.Z.Messages.ROLE_ICON_ALT_TEXT.format({
+  'aria-label': o.Z.Messages.ROLE_ICON_ALT_TEXT.format({
     name: c
   }),
   className: a()(l.roleIcon, n, {
@@ -49,12 +49,12 @@ children: (t = (0, r.jsx)('img', {
   height: E ? d : void 0,
   src: u.url,
   width: d
-})), null == f) ? (0, r.jsx)(o.FocusRing, {
+})), null == f) ? (0, r.jsx)(s.FocusRing, {
   offset: {
     left: 5
   },
   children: t
-}) : (0, r.jsx)(o.Clickable, {
+}) : (0, r.jsx)(s.Clickable, {
   onClick: f,
   tag: 'span',
   focusProps: {

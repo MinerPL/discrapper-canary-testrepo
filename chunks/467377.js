@@ -35,7 +35,7 @@ a = {
   className: 'literal',
   begin: /\bon|off|true|false|yes|no\b/
 },
-o = {
+s = {
   className: 'string',
   contains: [e.BACKSLASH_ESCAPE],
   variants: [{
@@ -58,7 +58,7 @@ o = {
     }
   ]
 },
-s = t.either(/[A-Za-z0-9_-]+/, /"(\\"|[^"])*"/, /'[^']*'/);
+o = t.either(/[A-Za-z0-9_-]+/, /"(\\"|[^"])*"/, /'[^']*'/);
   return {
 name: 'TOML, also INI',
 aliases: ['toml'],
@@ -72,7 +72,7 @@ contains: [
     end: /\]+/
   },
   {
-    begin: t.concat(s, '(\\s*\\.\\s*', s, ')*', t.lookahead(/\s*=\s*[^#\s]/)),
+    begin: t.concat(o, '(\\s*\\.\\s*', o, ')*', t.lookahead(/\s*=\s*[^#\s]/)),
     className: 'attr',
     starts: {
       end: /$/,
@@ -85,7 +85,7 @@ contains: [
             r,
             a,
             i,
-            o,
+            s,
             n,
             'self'
           ],
@@ -93,7 +93,7 @@ contains: [
         },
         a,
         i,
-        o,
+        s,
         n
       ]
     }

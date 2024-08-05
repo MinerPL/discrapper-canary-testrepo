@@ -1,6 +1,6 @@
 n.d(t, {
   jD: function() {
-return o;
+return s;
   },
   kK: function() {
 return a;
@@ -23,8 +23,8 @@ if (r(e)) {
   return !n && !i;
 }
 var a = e.offsetWidth,
-  o = e.offsetHeight;
-return !(a || o || e.getClientRects().length);
+  s = e.offsetHeight;
+return !(a || s || e.getClientRects().length);
   },
   a = function(e) {
 if (e instanceof Element)
@@ -32,7 +32,7 @@ if (e instanceof Element)
 var t, n = null === (t = null == e ? void 0 : e.ownerDocument) || void 0 === t ? void 0 : t.defaultView;
 return !!(n && e instanceof n.Element);
   },
-  o = function(e) {
+  s = function(e) {
 switch (e.tagName) {
   case 'INPUT':
     if ('image' !== e.type)

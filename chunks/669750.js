@@ -2,8 +2,8 @@ n(47120);
 var r = n(147913),
   i = n(362721),
   a = n(314897),
-  o = n(592125),
-  s = n(979651),
+  s = n(592125),
+  o = n(979651),
   l = n(906605),
   u = n(574176),
   c = n(106301),
@@ -48,8 +48,8 @@ super(...e), E(this, 'previousVoiceChannelId', void 0), E(this, 'actions', {
     return;
   if (this.previousVoiceChannelId = t, null == n || null == t)
     return;
-  let s = o.Z.getChannel(t);
-  if (null == s || s.type !== _.d4z.GUILD_VOICE || !(0, i.w)(s, !0) || null != c.Z.getCurrentHangStatus())
+  let o = s.Z.getChannel(t);
+  if (null == o || o.type !== _.d4z.GUILD_VOICE || !(0, i.w)(o, !0) || null != c.Z.getCurrentHangStatus())
     return;
   let E = c.Z.getCurrentDefaultStatus();
   if ((null == E ? void 0 : E.expiresAt) != null && (null == E ? void 0 : E.expiresAt) >= Date.now()) {
@@ -58,7 +58,7 @@ super(...e), E(this, 'previousVoiceChannelId', void 0), E(this, 'actions', {
         status: e,
         emoji: t
       } = E.customHangStatus;
-      if (null != t && !(0, d.K)(t, s))
+      if (null != t && !(0, d.K)(t, o))
         return;
       (0, l._s)(e, t);
       return;
@@ -78,10 +78,10 @@ super(...e), E(this, 'previousVoiceChannelId', void 0), E(this, 'actions', {
   } = e;
   if (t.id !== a.default.getId())
     return;
-  let r = s.Z.getCurrentClientVoiceChannelId(n);
+  let r = o.Z.getCurrentClientVoiceChannelId(n);
   if (null == r || null == c.Z.getCurrentHangStatus())
     return;
-  let u = o.Z.getChannel(r);
+  let u = s.Z.getChannel(r);
   !(0, i.w)(u, !0) && (0, l.Sc)();
 }), E(this, 'handleDisconnectFromVoiceChannel', () => {
   (0, l.Sc)();

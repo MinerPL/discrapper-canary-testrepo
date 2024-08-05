@@ -1,7 +1,7 @@
 var r, i = n(442837),
   a = n(570140),
-  o = n(41776),
-  s = n(222677),
+  s = n(41776),
+  o = n(222677),
   l = n(598077),
   u = n(592125),
   c = n(594174);
@@ -33,12 +33,12 @@ messageId: n,
 userId: r,
 emoji: i,
 reactionType: a
-  } = e, o = E.ensure(n, i, a);
+  } = e, s = E.ensure(n, i, a);
   if ('MESSAGE_REACTION_ADD' === t) {
 let e = c.default.getUser(r);
-null != e && (o.users[r] = e);
+null != e && (s.users[r] = e);
   } else
-delete o.users[r];
+delete s.users[r];
 }
 class h extends(r = i.ZP.Store) {
   getReactions(e, t, n, r, i) {
@@ -46,9 +46,9 @@ let a = E.ensure(t, n, i);
 if (!a.fetched) {
   let l = u.Z.getChannel(e),
     c = null != l ? l.getGuildId() : null;
-  if (null != c && o.Z.isLurking(c))
+  if (null != c && s.Z.isLurking(c))
     return;
-  s.U0({
+  o.U0({
     channelId: e,
     messageId: t,
     emoji: n,

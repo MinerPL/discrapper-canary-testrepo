@@ -1,58 +1,58 @@
-t.d(n, {
+i.d(n, {
   N: function() {
-return i;
+return t;
   }
-}), t(47120);
-var i, a, o, r, l, s, c = t(442837),
-  d = t(570140),
-  u = t(55563),
-  f = t(551428);
+}), i(47120);
+var t, a, r, o, l, s, c = i(442837),
+  d = i(570140),
+  u = i(55563),
+  _ = i(551428);
 let p = new Map(),
-  C = new Map();
-(o = i || (i = {}))[o.NONE = 0] = 'NONE', o[o.FETCHING = 1] = 'FETCHING', o[o.FETCHED = 2] = 'FETCHED', o[o.FAILED = 3] = 'FAILED';
-let _ = {
+  m = new Map();
+(r = t || (t = {}))[r.NONE = 0] = 'NONE', r[r.FETCHING = 1] = 'FETCHING', r[r.FETCHED = 2] = 'FETCHED', r[r.FAILED = 3] = 'FAILED';
+let I = {
   subscriptions: [],
   otps: []
 };
-class b extends(a = c.ZP.Store) {
+class f extends(a = c.ZP.Store) {
   initialize() {
-this.waitFor(u.Z, f.Z);
+this.waitFor(u.Z, _.Z);
   }
   hasStorefront(e) {
 return p.has(e);
   }
   getStoreLayout(e) {
 var n;
-return null !== (n = p.get(e)) && void 0 !== n ? n : _;
+return null !== (n = p.get(e)) && void 0 !== n ? n : I;
   }
   getFetchStatus(e) {
 var n;
-return p.has(e) ? 2 : null !== (n = C.get(e)) && void 0 !== n ? n : 0;
+return p.has(e) ? 2 : null !== (n = m.get(e)) && void 0 !== n ? n : 0;
   }
 }
-s = 'ApplicationStoreDirectoryStore', (l = 'displayName') in(r = b) ? Object.defineProperty(r, l, {
+s = 'ApplicationStoreDirectoryStore', (l = 'displayName') in(o = f) ? Object.defineProperty(o, l, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[l] = s, n.Z = new b(d.Z, {
+}) : o[l] = s, n.Z = new f(d.Z, {
   APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS: function(e) {
 let {
   applicationId: n,
-  listings: t
+  listings: i
 } = e;
-p.set(n, t), C.delete(n);
+p.set(n, i), m.delete(n);
   },
   APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_FAILED: function(e) {
 let {
   applicationId: n
 } = e;
-C.set(n, 3);
+m.set(n, 3);
   },
   APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING: function(e) {
 let {
   applicationId: n
 } = e;
-C.set(n, 1);
+m.set(n, 1);
   }
 });

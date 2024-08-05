@@ -15,8 +15,8 @@ return C;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(91192),
+  s = n.n(a),
+  o = n(91192),
   l = n(924826),
   u = n(866442),
   c = n(1561),
@@ -43,12 +43,12 @@ disabled: l = !1,
 style: c = {},
 onClick: d,
 'aria-label': E
-  } = e, h = (0, s.JA)('color-'.concat(t)), m = null != t ? (0, u.Rf)(t) : c.backgroundColor, I = !1;
+  } = e, h = (0, o.JA)('color-'.concat(t)), m = null != t ? (0, u.Rf)(t) : c.backgroundColor, I = !1;
   return i && !a ? I = !0 : (i || a) && (I = (0, u.Bd)(t) > 0.1), (0, r.jsx)(_.t, {
 offset: -2,
 children: (0, r.jsxs)('button', {
   type: 'button',
-  className: o()(S.colorPickerSwatch, {
+  className: s()(S.colorPickerSwatch, {
     [S.disabled]: l,
     [S.default]: n,
     [S.custom]: i,
@@ -125,7 +125,7 @@ let R = i.memo(function(e) {
 value: t,
 eagerUpdate: n = !1,
 onChange: a,
-onClose: s,
+onClose: o,
 suggestedColors: l,
 middle: _,
 footer: p,
@@ -162,7 +162,7 @@ L({
   }, [
 O,
 D
-  ]), i.useEffect(() => s, [s]);
+  ]), i.useEffect(() => o, [o]);
   let b = e => {
   let t = '#' === e[0] ? e : '#'.concat(e);
   if (!(0, u.FX)(t)) {
@@ -249,7 +249,7 @@ M = async () => {
 }), x = null != A ? A : d.V;
   return (0, r.jsx)(x, {
 'aria-label': g.Z.Messages.PICK_A_COLOR,
-className: o()(S.customColorPicker, N),
+className: s()(S.customColorPicker, N),
 children: w
   });
 });
@@ -280,21 +280,21 @@ isEnabled: !0,
 scrollToStart: A,
 scrollToEnd: A
   });
-  return (0, r.jsx)(s.bG, {
+  return (0, r.jsx)(o.bG, {
 navigator: I,
-children: (0, r.jsx)(s.SJ, {
+children: (0, r.jsx)(o.SJ, {
   children: e => {
     let {
       ref: a,
-      ...s
+      ...o
     } = e;
     return (0, r.jsxs)('div', {
-      className: o()(S.container, t),
+      className: s()(S.container, t),
       ref: a,
-      ...s,
+      ...o,
       children: [
         (0, r.jsx)('div', {
-          className: o()(S.defaultContainer, f),
+          className: s()(S.defaultContainer, f),
           children: _({
             value: u,
             color: n,
@@ -303,7 +303,7 @@ children: (0, r.jsx)(s.SJ, {
           })
         }),
         (0, r.jsx)('div', {
-          className: o()(S.customContainer, f),
+          className: s()(S.customContainer, f),
           children: E({
             value: u,
             customColor: i,

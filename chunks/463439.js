@@ -1,119 +1,133 @@
 n.d(t, {
   Z: function() {
-return C;
+return h;
   }
 }), n(47120);
-var s = n(735250),
-  o = n(470079),
-  r = n(481060),
-  a = n(442837),
-  i = n(194359),
-  c = n(782568),
-  E = n(726521),
-  N = n(485664),
-  u = n(699516),
-  I = n(473092),
-  T = n(941362),
-  l = n(850165),
-  _ = n(134612),
-  A = n(981631),
-  d = n(689938),
-  R = n(927838),
-  O = n(149355);
+var s, o, r = n(735250),
+  a = n(470079),
+  i = n(481060),
+  c = n(442837),
+  E = n(194359),
+  N = n(782568),
+  u = n(726521),
+  T = n(485664),
+  I = n(699516),
+  _ = n(863653),
+  l = n(473092),
+  A = n(941362),
+  d = n(850165),
+  R = n(134612),
+  O = n(981631),
+  C = n(689938),
+  S = n(927838),
+  P = n(149355);
 
-function C(e) {
+function h(e) {
   let {
 senderId: t,
 channelId: n,
-hasReported: C,
-onReport: S,
-trackAnalyticsEvent: P
-  } = e, h = (0, a.e7)([u.Z], () => u.Z.isBlocked(t)), [f, M] = o.useState(h), p = (0, N.o)(), [g, b] = o.useState(!1), x = (0, T.q)(n), m = () => {
-M(!0), i.Z.addRelationship({
+hasReported: s,
+onReport: o,
+trackAnalyticsEvent: h
+  } = e, f = (0, c.e7)([I.Z], () => I.Z.isBlocked(t)), [M, p] = a.useState(f), g = (0, T.o)(), m = (0, _.zF)('ic-take-action-web'), [b, L] = a.useState(!1), x = (0, A.q)(n), Z = a.useMemo(() => g ? 0 : m ? 2 : 1, [
+g,
+m
+  ]), v = () => {
+p(!0), E.Z.addRelationship({
   userId: t,
   context: {
-    location: _.DL
+    location: R.DL
   },
-  type: A.OGo.BLOCKED
-}), P(I.NM.USER_TAKEOVER_MODAL_BLOCK);
-  }, L = () => {
-M(!1), i.Z.unblockUser(t, {
-  location: _.DL
-}), P(I.NM.USER_TAKEOVER_MODAL_UNBLOCK);
-  }, Z = async () => {
+  type: O.OGo.BLOCKED
+}), h(l.NM.USER_TAKEOVER_MODAL_BLOCK);
+  }, D = () => {
+p(!1), E.Z.unblockUser(t, {
+  location: R.DL
+}), h(l.NM.USER_TAKEOVER_MODAL_UNBLOCK);
+  }, B = async () => {
 if (null != x)
-  b(!0), await (0, E.J7)(x, () => {
-    (0, r.showToast)((0, r.createToast)(d.Z.Messages.INAPPROPRIATE_CONVERSATION_REPORT_TOAST, r.ToastType.SUCCESS)), S();
+  L(!0), await (0, u.J7)(x, () => {
+    (0, i.showToast)((0, i.createToast)(C.Z.Messages.INAPPROPRIATE_CONVERSATION_REPORT_TOAST, i.ToastType.SUCCESS)), o();
   }, () => {
-    (0, r.showToast)((0, r.createToast)(d.Z.Messages.INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST, r.ToastType.FAILURE));
-  }), b(!1), P(I.NM.USER_TAKEOVER_MODAL_REPORT);
-  };
-  return (0, s.jsx)(l.Z, {
-heroImageSrc: O,
-heroImageAlt: d.Z.Messages.INAPPROPRIATE_CONVERSATION_WUMPUS_LIGHTBULB_ALT,
-header: d.Z.Messages.INAPPROPRIATE_CONVERSATION_TAKE_ACTION_HEADER,
-description: d.Z.Messages.INAPPROPRIATE_CONVERSATION_TAKE_ACTION_DESCRIPTION,
-children: (0, s.jsxs)('div', {
-  className: R.buttonContainer,
+    (0, i.showToast)((0, i.createToast)(C.Z.Messages.INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST, i.ToastType.FAILURE));
+  }), L(!1), h(l.NM.USER_TAKEOVER_MODAL_REPORT);
+  }, j = e => {
+0 === e ? ((0, N.Z)(R.EI), h(l.NM.USER_TAKEOVER_MODAL_CTL)) : 2 === e ? ((0, N.Z)(R.$l), h(l.NM.USER_TAKEOVER_MODAL_THROUGHLINE)) : ((0, N.Z)(R.n4), h(l.NM.USER_TAKEOVER_MODAL_NO_FILTR));
+  }, V = a.useMemo(() => {
+switch (Z) {
+  case 0:
+    return C.Z.Messages.INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_CTL;
+  case 2:
+    return C.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_THROUGHLINE_TITLE;
+  default:
+    return C.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_TITLE;
+}
+  }, [Z]);
+  return (0, r.jsx)(d.Z, {
+heroImageSrc: P,
+heroImageAlt: C.Z.Messages.INAPPROPRIATE_CONVERSATION_WUMPUS_LIGHTBULB_ALT,
+header: C.Z.Messages.INAPPROPRIATE_CONVERSATION_TAKE_ACTION_HEADER,
+description: C.Z.Messages.INAPPROPRIATE_CONVERSATION_TAKE_ACTION_DESCRIPTION,
+children: (0, r.jsxs)('div', {
+  className: S.buttonContainer,
   children: [
-    (0, s.jsxs)(r.Button, {
-      color: r.Button.Colors.BRAND,
-      size: r.Button.Sizes.LARGE,
-      className: R.button,
-      innerClassName: R.buttonInner,
+    (0, r.jsxs)(i.Button, {
+      color: i.Button.Colors.BRAND,
+      size: i.Button.Sizes.LARGE,
+      className: S.button,
+      innerClassName: S.buttonInner,
       onClick: () => {
-        f ? L() : m();
+        M ? D() : v();
       },
       children: [
-        (0, s.jsx)(r.CircleXIcon, {
+        (0, r.jsx)(i.CircleXIcon, {
           size: 'custom',
           height: 20,
           width: 20,
-          color: r.tokens.colors.WHITE,
-          className: R.buttonIcon
+          color: i.tokens.colors.WHITE,
+          className: S.buttonIcon
         }),
-        f ? d.Z.Messages.UNBLOCK : d.Z.Messages.BLOCK
+        M ? C.Z.Messages.UNBLOCK : C.Z.Messages.BLOCK
       ]
     }),
-    (0, s.jsxs)(r.Button, {
-      color: r.Button.Colors.PRIMARY,
-      size: r.Button.Sizes.LARGE,
-      className: R.button,
-      innerClassName: R.buttonInner,
-      onClick: Z,
-      submitting: g,
-      disabled: C,
+    (0, r.jsxs)(i.Button, {
+      color: i.Button.Colors.PRIMARY,
+      size: i.Button.Sizes.LARGE,
+      className: S.button,
+      innerClassName: S.buttonInner,
+      onClick: B,
+      submitting: b,
+      disabled: s,
       children: [
-        (0, s.jsx)(r.FlagIcon, {
+        (0, r.jsx)(i.FlagIcon, {
           size: 'custom',
           height: 20,
           width: 20,
-          color: r.tokens.colors.WHITE,
-          className: R.buttonIcon
+          color: i.tokens.colors.WHITE,
+          className: S.buttonIcon
         }),
-        C ? d.Z.Messages.INAPPROPRIATE_CONVERSATION_ACTION_REPORTED : d.Z.Messages.INAPPROPRIATE_CONVERSATION_ACTION_REPORT
+        s ? C.Z.Messages.INAPPROPRIATE_CONVERSATION_ACTION_REPORTED : C.Z.Messages.INAPPROPRIATE_CONVERSATION_ACTION_REPORT
       ]
     }),
-    (0, s.jsxs)(r.Button, {
-      color: r.Button.Colors.PRIMARY,
-      size: r.Button.Sizes.LARGE,
-      className: R.button,
-      innerClassName: R.buttonInner,
-      onClick: () => {
-        p ? ((0, c.Z)(_.EI), P(I.NM.USER_TAKEOVER_MODAL_CTL)) : ((0, c.Z)(_.n4), P(I.NM.USER_TAKEOVER_MODAL_NO_FILTR));
-      },
+    (0, r.jsxs)(i.Button, {
+      color: i.Button.Colors.PRIMARY,
+      size: i.Button.Sizes.LARGE,
+      className: S.button,
+      innerClassName: S.buttonInner,
+      onClick: () => j(Z),
       children: [
-        (0, s.jsx)(r.ChatIcon, {
+        (0, r.jsx)(i.ChatIcon, {
           size: 'custom',
           height: 20,
           width: 20,
-          color: r.tokens.colors.WHITE,
-          className: R.buttonIcon
+          color: i.tokens.colors.WHITE,
+          className: S.buttonIcon
         }),
-        p ? d.Z.Messages.INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_CTL : d.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_TITLE
+        V
       ]
     })
   ]
 })
   });
 }
+(o = s || (s = {}))[o.CTL = 0] = 'CTL', o[o.NO_FILTR = 1] = 'NO_FILTR', o[o.THROUGHLINE = 2] = 'THROUGHLINE';

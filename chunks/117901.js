@@ -1,8 +1,8 @@
 var r = n(566885),
   i = n(926515),
   a = n(339718),
-  o = n(627060),
-  s = n(908355),
+  s = n(627060),
+  o = n(908355),
   l = n(933676),
   u = n(49693),
   c = n(182867),
@@ -18,9 +18,9 @@ A = void 0 !== S;
   A && (S = r(S, g > 2 ? arguments[2] : void 0));
   var N = _(I),
 v = 0;
-  if (N && !(this === E && s(N)))
+  if (N && !(this === E && o(N)))
 for (p = (h = d(I, N)).next, n = T ? new this() : []; !(f = i(p, h)).done; v++)
-  m = A ? o(h, S, [
+  m = A ? s(h, S, [
     f.value,
     v
   ], !0) : f.value, c(n, v, m);

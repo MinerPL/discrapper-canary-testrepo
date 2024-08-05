@@ -13,6 +13,7 @@ e.exports = {
   sansAttachButton: 'sansAttachButton_d0696b',
   sansAttachButtonCreateThread: 'sansAttachButtonCreateThread_d0696b',
   sansAttachButtonCreatePost: 'sansAttachButtonCreatePost_d0696b',
+  sansAttachButtonUserProfileReply: 'sansAttachButtonUserProfileReply_d0696b',
   attachButton: 'attachButton_d0696b',
   textAreaSlate: 'textAreaSlate_d0696b',
   textAreaThreadCreation: 'textAreaThreadCreation_d0696b',

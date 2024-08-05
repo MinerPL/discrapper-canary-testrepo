@@ -2,8 +2,8 @@ var i, a, s = t(735250),
   l = t(470079),
   o = t(120356),
   r = t.n(o),
-  c = t(481060),
-  d = t(285952),
+  d = t(481060),
+  c = t(285952),
   u = t(483758);
 
 function I(e, n, t) {
@@ -22,15 +22,15 @@ let {
 } = this.props;
 return e ? (0, s.jsx)('aside', {
   className: u.sidebarScrollable,
-  children: (0, s.jsx)(c.Scroller, {
+  children: (0, s.jsx)(d.Scroller, {
     fade: !0,
     className: u.scroller,
-    children: (0, s.jsx)(d.Z.Child, {
+    children: (0, s.jsx)(c.Z.Child, {
       ...n,
       wrap: !0
     })
   })
-}) : (0, s.jsx)(d.Z.Child, {
+}) : (0, s.jsx)(c.Z.Child, {
   ...n,
   wrap: !0
 });
@@ -48,7 +48,7 @@ let {
   className: e,
   ...n
 } = this.props;
-return (0, s.jsx)(d.Z.Child, {
+return (0, s.jsx)(c.Z.Child, {
   className: r()(u.content, e),
   wrap: !0,
   ...n
@@ -57,18 +57,18 @@ return (0, s.jsx)(d.Z.Child, {
 }
 class N extends(a = l.PureComponent) {
   render() {
-return (0, s.jsx)(d.Z, {
+return (0, s.jsx)(c.Z, {
   ...this.props
 });
   }
 }
 I(N, 'defaultProps', {
   className: u.layout,
-  direction: d.Z.Direction.HORIZONTAL,
-  justify: d.Z.Justify.START,
-  align: d.Z.Align.START,
-  wrap: d.Z.Wrap.NO_WRAP,
+  direction: c.Z.Direction.HORIZONTAL,
+  justify: c.Z.Justify.START,
+  align: c.Z.Align.START,
+  wrap: c.Z.Wrap.NO_WRAP,
   shrink: 1,
   grow: 1,
   basis: 'auto'
-}), I(N, 'Direction', d.Z.Direction), I(N, 'Justify', d.Z.Justify), I(N, 'Align', d.Z.Align), I(N, 'Wrap', d.Z.Wrap), I(N, 'Sidebar', m), I(N, 'Content', _), n.ZP = N;
+}), I(N, 'Direction', c.Z.Direction), I(N, 'Justify', c.Z.Justify), I(N, 'Align', c.Z.Align), I(N, 'Wrap', c.Z.Wrap), I(N, 'Sidebar', m), I(N, 'Content', _), n.ZP = N;

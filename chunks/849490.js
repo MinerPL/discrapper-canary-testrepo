@@ -1,7 +1,7 @@
 var r = n(689118),
   i = n(676972),
   a = n(957578).Buffer,
-  o = [
+  s = [
 1116352408,
 1899447441,
 3049323471,
@@ -67,27 +67,27 @@ var r = n(689118),
 3204031479,
 3329325298
   ],
-  s = Array(64);
+  o = Array(64);
 
 function l() {
-  this.init(), this._w = s, i.call(this, 64, 56);
+  this.init(), this._w = o, i.call(this, 64, 56);
 }
 r(l, i), l.prototype.init = function() {
   return this._a = 1779033703, this._b = 3144134277, this._c = 1013904242, this._d = 2773480762, this._e = 1359893119, this._f = 2600822924, this._g = 528734635, this._h = 1541459225, this;
 };
 l.prototype._update = function(e) {
-  for (var t = this._w, n = 0 | this._a, r = 0 | this._b, i = 0 | this._c, a = 0 | this._d, s = 0 | this._e, l = 0 | this._f, u = 0 | this._g, c = 0 | this._h, d = 0; d < 16; ++d)
+  for (var t = this._w, n = 0 | this._a, r = 0 | this._b, i = 0 | this._c, a = 0 | this._d, o = 0 | this._e, l = 0 | this._f, u = 0 | this._g, c = 0 | this._h, d = 0; d < 16; ++d)
 t[d] = e.readInt32BE(4 * d);
   for (; d < 64; ++d) {
 ;
 t[d] = (((E = t[d - 2]) >>> 17 | E << 15) ^ (E >>> 19 | E << 13) ^ E >>> 10) + t[d - 7] + (((f = t[d - 15]) >>> 7 | f << 25) ^ (f >>> 18 | f << 14) ^ f >>> 3) + t[d - 16] | 0;
   }
   for (var _ = 0; _ < 64; ++_) {
-var E, f, h, p, m, I, T, g, S, A = c + (((h = s) >>> 6 | h << 26) ^ (h >>> 11 | h << 21) ^ (h >>> 25 | h << 7)) + (p = s, m = l, (I = u) ^ p & (m ^ I)) + o[_] + t[_] | 0;
+var E, f, h, p, m, I, T, g, S, A = c + (((h = o) >>> 6 | h << 26) ^ (h >>> 11 | h << 21) ^ (h >>> 25 | h << 7)) + (p = o, m = l, (I = u) ^ p & (m ^ I)) + s[_] + t[_] | 0;
 var N = (((T = n) >>> 2 | T << 30) ^ (T >>> 13 | T << 19) ^ (T >>> 22 | T << 10)) + ((g = n) & (S = r) | i & (g | S)) | 0;
-c = u, u = l, l = s, s = a + A | 0, a = i, i = r, r = n, n = A + N | 0;
+c = u, u = l, l = o, o = a + A | 0, a = i, i = r, r = n, n = A + N | 0;
   }
-  this._a = n + this._a | 0, this._b = r + this._b | 0, this._c = i + this._c | 0, this._d = a + this._d | 0, this._e = s + this._e | 0, this._f = l + this._f | 0, this._g = u + this._g | 0, this._h = c + this._h | 0;
+  this._a = n + this._a | 0, this._b = r + this._b | 0, this._c = i + this._c | 0, this._d = a + this._d | 0, this._e = o + this._e | 0, this._f = l + this._f | 0, this._g = u + this._g | 0, this._h = c + this._h | 0;
 }, l.prototype._hash = function() {
   var e = a.allocUnsafe(32);
   return e.writeInt32BE(this._a, 0), e.writeInt32BE(this._b, 4), e.writeInt32BE(this._c, 8), e.writeInt32BE(this._d, 12), e.writeInt32BE(this._e, 16), e.writeInt32BE(this._f, 20), e.writeInt32BE(this._g, 24), e.writeInt32BE(this._h, 28), e;

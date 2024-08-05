@@ -2,8 +2,8 @@ n(47120);
 var r = n(147913),
   i = n(592125),
   a = n(699516),
-  o = n(280006),
-  s = n(189275);
+  s = n(280006),
+  o = n(189275);
 
 function l(e) {
   let {
@@ -14,11 +14,11 @@ return;
   let n = i.Z.getChannel(t);
   if (null != n && n.isGroupDM()) {
 let e = n.recipients.filter(e => a.Z.isBlocked(e));
-e.length > 0 && o.E.getCurrentConfig({
+e.length > 0 && s.E.getCurrentConfig({
   location: 'channel_select'
 }, {
   autoTrackExposure: !0
-}).showAsModal && !n.blockedUserWarningDismissed && (0, s.O)({
+}).showAsModal && !n.blockedUserWarningDismissed && (0, o.O)({
   channelId: t,
   blockedUserIds: e
 });
@@ -26,7 +26,7 @@ e.length > 0 && o.E.getCurrentConfig({
 }
 class u extends r.Z {
   intialize() {
-o.E.getCurrentConfig({
+s.E.getCurrentConfig({
   location: 'initializer'
 }, {
   autoTrackExposure: !1

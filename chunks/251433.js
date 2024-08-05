@@ -14,14 +14,14 @@ id: t,
 label: n,
 'aria-labelledby': i,
 'aria-label': a,
-labelElementType: o = 'label'
+labelElementType: s = 'label'
   } = e;
   t = (0, r.Me)(t);
-  let s = (0, r.Me)(),
+  let o = (0, r.Me)(),
 l = {};
-  return n ? (i = i ? `${ s } ${ i }` : s, l = {
-id: s,
-htmlFor: 'label' === o ? t : void 0
+  return n ? (i = i ? `${ o } ${ i }` : o, l = {
+id: o,
+htmlFor: 'label' === s ? t : void 0
   }) : !i && !a && console.warn('If you do not provide a visible label, you must specify an aria-label or aria-labelledby attribute for accessibility'), {
 labelProps: l,
 fieldProps: (0, r.bE)({
@@ -37,23 +37,23 @@ function a(e) {
 description: t,
 errorMessage: n,
 isInvalid: a,
-validationState: o
+validationState: s
   } = e, {
-labelProps: s,
+labelProps: o,
 fieldProps: l
   } = i(e), u = (0, r.mp)([
 !!t,
 !!n,
 a,
-o
+s
   ]), c = (0, r.mp)([
 !!t,
 !!n,
 a,
-o
+s
   ]);
   return {
-labelProps: s,
+labelProps: o,
 fieldProps: l = (0, r.dG)(l, {
   'aria-describedby': [
     u,

@@ -1,22 +1,23 @@
-var l = s(735250);
-s(470079);
-var t = s(987209),
-  i = s(598),
-  r = s(248042),
-  a = s(196567),
-  c = s(474936),
-  o = s(689938),
-  u = s(576688);
+var i = t(735250);
+t(470079);
+var a = t(987209),
+  r = t(598),
+  s = t(248042),
+  l = t(196567),
+  o = t(474936),
+  c = t(689938),
+  u = t(430597);
 n.Z = () => {
-  let e = (0, r.Vi)(),
+  let e = (0, s.Vi)(),
 {
   selectedSkuId: n
-} = (0, i.usePaymentContext)(),
+} = (0, r.usePaymentContext)(),
 {
-  isGift: s
-} = (0, t.wD)();
-  return s || n !== c.Si.TIER_2 || !e ? null : (0, l.jsx)(a.Z, {
-copy: o.Z.Messages.BOGO_PAYMENT_MODAL_BANNER_2024,
-bannerImage: u
+  isGift: t
+} = (0, a.wD)();
+  return t || n !== o.Si.TIER_2 || !e ? null : (0, i.jsx)(l.Z, {
+copy: c.Z.Messages.BOGO_PAYMENT_MODAL_BANNER_2024,
+bannerImage: u,
+hideGiftIcon: !0
   });
 };

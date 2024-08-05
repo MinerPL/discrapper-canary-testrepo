@@ -6,8 +6,8 @@ return B;
 var r = n(735250),
   i = n(470079),
   a = n(338545),
-  o = n(442837),
-  s = n(704215),
+  s = n(442837),
+  o = n(704215),
   l = n(780384),
   u = n(481060),
   c = n(845538),
@@ -20,12 +20,12 @@ var r = n(735250),
   m = n(646476),
   I = n(819640),
   T = n(594174),
-  g = n(147915),
-  S = n(965645),
-  A = n(362061),
-  N = n(70956),
-  v = n(709054),
-  O = n(51144),
+  g = n(965645),
+  S = n(362061),
+  A = n(70956),
+  N = n(709054),
+  v = n(51144),
+  O = n(443603),
   R = n(981631),
   C = n(921944),
   y = n(474936),
@@ -91,21 +91,21 @@ let M = [{
 }
   ],
   U = 1 / 300,
-  w = N.Z.Millis.DAYS_30,
-  x = (0, a.animated)(S.Z),
-  G = (0, a.animated)(A.Z),
+  w = A.Z.Millis.DAYS_30,
+  x = (0, a.animated)(g.Z),
+  G = (0, a.animated)(S.Z),
   k = (0, a.animated)(u.GiftIcon);
 
 function B(e) {
   let {
 themeOverride: t,
 hovered: n,
-isContentDismissed: o,
+isContentDismissed: a,
 boxColors: s = {
   dark: M,
   light: P
 }
-  } = e, u = (0, d.ZP)(), [c, _] = function(e) {
+  } = e, o = (0, d.ZP)(), [c, _] = function(e) {
 let [t, n] = i.useState(!1), [r, a] = i.useState(Math.floor(7 * Math.random()));
 return i.useEffect(() => {
   if (e)
@@ -122,7 +122,7 @@ return i.useEffect(() => {
   t,
   r
 ];
-  }(n), E = (0, a.useSpring)({
+  }(n), E = (0, u.useSpring)({
 reverse: !n,
 reset: !0,
 from: {
@@ -135,9 +135,9 @@ config: {
   tension: 800,
   friction: 24
 }
-  }), f = o ? _ : 0, h = (0, l.wj)(null != t ? t : u) ? s.dark[f] : s.light[f];
-  return !n && o ? (0, r.jsx)(k, {}) : o && c ? (0, r.jsx)(G, {
-isDark: (0, l.wj)(u),
+  }), f = a ? _ : 0, h = (0, l.wj)(null != t ? t : o) ? s.dark[f] : s.light[f];
+  return !n && a ? (0, r.jsx)(k, {}) : a && c ? (0, r.jsx)(G, {
+isDark: (0, l.wj)(o),
 style: E
   }) : (0, r.jsx)(x, {
 boxColor: h.box,
@@ -151,15 +151,15 @@ disabled: t,
 channel: n
   } = e, {
 analyticsLocations: a
-  } = (0, E.ZP)(_.Z.GIFT_BUTTON), [l, d] = i.useState(!1), S = (0, o.e7)([I.Z], () => !(null === I.Z || void 0 === I.Z ? void 0 : I.Z.hasLayers())), A = (0, o.e7)([T.default], () => T.default.getCurrentUser()), N = null != A ? v.default.age(A.id) : 0, M = !t && S && N >= w, {
+  } = (0, E.ZP)(_.Z.GIFT_BUTTON), [l, d] = i.useState(!1), g = (0, s.e7)([I.Z], () => !(null === I.Z || void 0 === I.Z ? void 0 : I.Z.hasLayers())), S = (0, s.e7)([T.default], () => T.default.getCurrentUser()), A = null != S ? N.default.age(S.id) : 0, M = !t && g && A >= w, {
 enabled: P
   } = m.RO.useExperiment({
 location: 'ChannelPremiumGiftButton'
   }, {
 autoTrackExposure: M
   }), U = [];
-  P && M && U.push(s.z.SEASONAL_GIFTING_COACHMARK_2023);
-  let [x, G] = (0, h.U)(U), k = null != x, F = (0, O.Ft)(n), V = null != F;
+  P && M && U.push(o.z.SEASONAL_GIFTING_COACHMARK_2023);
+  let [x, G] = (0, h.U)(U), k = null != x, F = (0, v.Ft)(n), V = null != F;
   if (t)
 return null;
   let H = () => {
@@ -192,12 +192,12 @@ Z = (0, r.jsxs)('div', {
       markAsDismissed: G,
       isDM: V
     }),
-    (0, r.jsx)(g.Z, {
+    (0, r.jsx)(O.Z, {
       innerClassName: b.button,
       'aria-label': D.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
       isActive: !1,
       onClick: () => {
-        d(!1), (0, f.EW)(s.z.SEASONAL_GIFTING_COACHMARK_2023, {
+        d(!1), (0, f.EW)(o.z.SEASONAL_GIFTING_COACHMARK_2023, {
           dismissAction: C.L.TAKE_ACTION
         }), H();
       },

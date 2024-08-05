@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(685072),
   a = n(287734),
-  o = n(67212),
-  s = n(158631),
+  s = n(67212),
+  o = n(158631),
   l = n(871499),
   u = n(689938);
 
@@ -20,14 +20,14 @@ onClick: c,
 onMouseEnter: d,
 onMouseLeave: _,
 ...E
-  } = e, f = t ? l.d : l.Z, h = n.isBroadcastChannel(), p = (0, s.zW)(n.id), {
+  } = e, f = t ? l.d : l.Z, h = n.isBroadcastChannel(), p = (0, o.zW)(n.id), {
 Component: m,
 events: I
   } = (0, i.K)();
   return (0, r.jsx)(f, {
 ...E,
 onClick: () => {
-  p && (0, o.b_)(), a.default.disconnect(), null == c || c();
+  p && (0, s.b_)(), a.default.disconnect(), null == c || c();
 },
 iconComponent: m,
 onMouseEnter: e => {

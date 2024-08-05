@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(378298),
-  o = n(473092),
-  s = n(237292);
+  s = n(473092),
+  o = n(237292);
 
 function l(e) {
   let {
@@ -17,14 +17,14 @@ warningId: l,
 senderId: u,
 warningType: c
   } = e;
-  if (!!(0, s.mG)({
+  if (!!(0, o.mG)({
   location: 'takeover-modal'
 }))
 (0, i.openModalLazy)(async () => {
   let {
     default: e
   } = await Promise.all([
-    n.e('49508'),
+    n.e('37229'),
     n.e('59650')
   ]).then(n.bind(n, 955708));
   return n => (0, r.jsx)(e, {
@@ -37,12 +37,12 @@ warningType: c
 }, {
   backdropStyle: i.BackdropStyles.BLUR,
   onCloseCallback: () => {
-    (0, a.T)(t, [l]), (0, o.qc)({
+    (0, a.T)(t, [l]), (0, s.qc)({
       channelId: t,
       senderId: u,
       warningId: l,
       warningType: c,
-      cta: o.NM.USER_TAKEOVER_MODAL_DISMISS,
+      cta: s.NM.USER_TAKEOVER_MODAL_DISMISS,
       isNudgeWarning: !1
     });
   }

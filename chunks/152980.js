@@ -3,8 +3,8 @@ t.d(A, {
 return f;
   }
 }), t(47120);
-var n = t(735250),
-  a = t(470079),
+var a = t(735250),
+  n = t(470079),
   r = t(120356),
   s = t.n(r),
   o = t(481060),
@@ -27,37 +27,37 @@ function U(e) {
 upload: t,
 progress: r = 0,
 onDeleteAttachment: l
-  } = e, i = a.useCallback(() => {
+  } = e, i = n.useCallback(() => {
 null == l || l(t.id);
   }, [
 l,
 t.id
   ]), c = r >= 1, u = r < 0, C = c || u, T = null !== (A = t.filename) && void 0 !== A ? A : t.id, p = (0, g.kg)(r);
-  return (0, n.jsx)(o.TooltipContainer, {
+  return (0, a.jsx)(o.TooltipContainer, {
 text: p,
-children: (0, n.jsxs)('div', {
+children: (0, a.jsxs)('div', {
   className: s()(m.attachedFileCard, {
     [m.attachedFileCardError]: u,
     [m.attachedFileCardUploading]: !C
   }),
   children: [
-    (0, n.jsx)(o.ImageFileIcon, {
+    (0, a.jsx)(o.ImageFileIcon, {
       size: 'xs',
       color: d.Z.INTERACTIVE_MUTED
     }),
-    (0, n.jsx)(o.Spacer, {
+    (0, a.jsx)(o.Spacer, {
       size: 10,
       horizontal: !0
     }),
-    (0, n.jsx)(o.Text, {
+    (0, a.jsx)(o.Text, {
       variant: 'text-sm/normal',
       children: T
     }),
-    !C && (0, n.jsx)(o.Spinner, {
+    !C && (0, a.jsx)(o.Spinner, {
       className: m.attachedFileCardSpinner,
       type: o.Spinner.Type.SPINNING_CIRCLE
     }),
-    C && null != l && (0, n.jsx)(o.Button, {
+    C && null != l && (0, a.jsx)(o.Button, {
       'aria-label': h.Z.Messages.GUILD_PRODUCT_DELETE_ATTACHMENT.format({
         attachment: T
       }),
@@ -66,7 +66,7 @@ children: (0, n.jsxs)('div', {
       look: o.Button.Looks.BLANK,
       size: o.Button.Sizes.NONE,
       onClick: i,
-      children: (0, n.jsx)(o.CloseSmallIcon, {
+      children: (0, a.jsx)(o.CloseSmallIcon, {
         size: 'xxs',
         color: 'currentColor',
         className: m.__invalid_deleteIcon
@@ -87,7 +87,7 @@ canAttachArchives: s,
 addAttachment: d,
 deleteAttachment: c,
 fileUploadProgresses: g
-  } = (0, C.P)(), f = a.useRef(!1);
+  } = (0, C.P)(), f = n.useRef(!1);
 
   function v(e) {
 try {
@@ -99,19 +99,19 @@ try {
   f.current = !0;
 } catch {}
   }
-  return a.useEffect(() => {
+  return n.useEffect(() => {
 f.current && (A(), f.current = !1);
-  }, [A]), (0, n.jsxs)('div', {
+  }, [A]), (0, a.jsxs)('div', {
 className: m.container,
 children: [
-  (0, n.jsx)(l.Z, {
+  (0, a.jsx)(l.Z, {
     className: m.uploadArea,
     title: h.Z.Messages.GUILD_PRODUCT_UPLOAD_AREA_TITLE,
     description: h.Z.Messages.GUILD_PRODUCT_UPLOAD_AREA_INSTRUCTIONS,
     icons: T.J6,
     onDrop: v
   }),
-  (0, n.jsxs)(u.Z, {
+  (0, a.jsxs)(u.Z, {
     className: m.addFileButtonLook,
     innerClassName: m.addFileButton,
     color: o.Button.Colors.CUSTOM,
@@ -123,23 +123,23 @@ children: [
       null != e.currentTarget.files && v(e.currentTarget.files);
     },
     children: [
-      (0, n.jsx)(o.ImageFileUpIcon, {
+      (0, a.jsx)(o.ImageFileUpIcon, {
         size: 'xs',
         color: 'currentColor',
         className: m.addFileButtonIcon,
         'aria-hidden': !0
       }),
-      (0, n.jsx)(o.Text, {
+      (0, a.jsx)(o.Text, {
         variant: 'text-sm/medium',
         color: 'always-white',
         children: h.Z.Messages.GUILD_PRODUCT_UPLOAD_FILE_BUTTON
       })
     ]
   }),
-  (0, n.jsx)(o.Spacer, {
+  (0, a.jsx)(o.Spacer, {
     size: 12
   }),
-  (0, n.jsx)(o.Text, {
+  (0, a.jsx)(o.Text, {
     id: I,
     color: 'text-muted',
     variant: 'text-xs/normal',
@@ -149,16 +149,16 @@ children: [
       fileUploadLimit: p.TR
     })
   }),
-  t.length > 0 && (0, n.jsxs)(n.Fragment, {
+  t.length > 0 && (0, a.jsxs)(a.Fragment, {
     children: [
-      (0, n.jsx)('div', {
+      (0, a.jsx)('div', {
         className: m.separator
       }),
-      (0, n.jsx)('ul', {
+      (0, a.jsx)('ul', {
         className: m.attachedFilesContainer,
         'aria-label': h.Z.Messages.GUILD_PRODUCT_ATTACHED_FILES_SECTION_LABEL,
-        children: t.map(e => (0, n.jsx)('li', {
-          children: (0, n.jsx)(U, {
+        children: t.map(e => (0, a.jsx)('li', {
+          children: (0, a.jsx)(U, {
             upload: e,
             onDeleteAttachment: c,
             progress: g[e.id]

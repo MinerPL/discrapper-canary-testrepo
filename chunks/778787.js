@@ -6,8 +6,8 @@ return _;
 var r = n(278074),
   i = n(979554),
   a = n(922347),
-  o = n(587177),
-  s = n(311850),
+  s = n(587177),
+  o = n(311850),
   l = n(803358),
   u = n(212161),
   c = n(981631);
@@ -35,13 +35,13 @@ return new _({
   type: t,
   premiumType: n === c.WND ? null : n,
   categorySkuId: l,
-  prices: (0, s.l)(d),
+  prices: (0, o.l)(d),
   items: f.items.reduce((e, t) => (0, r.EQ)(t).with({
     type: i.Z.AVATAR_DECORATION
   }, t => (e.push(a.Z.fromServer(t)), e)).with({
     type: i.Z.PROFILE_EFFECT
   }, t => (e.push(u.Z.fromServer(t)), e)).otherwise(() => e), []),
-  bundledProducts: null == E ? void 0 : E.map(o.Z.fromServer),
+  bundledProducts: null == E ? void 0 : E.map(s.Z.fromServer),
   googleSkuIds: f.google_sku_ids
 });
   }

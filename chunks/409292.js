@@ -1,7 +1,7 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(266067),
+  a = n(470079),
+  s = n(266067),
   r = n(442837),
   l = n(493683),
   o = n(112724),
@@ -21,7 +21,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class g extends s.Component {
+class g extends a.Component {
   componentDidMount() {
 this.fetchStoreListing(), (0, c.e)('channel_store_listing');
   }
@@ -31,7 +31,7 @@ return null != this.props.skuId ? (0, i.jsx)(u.Z, {
   root: !0,
   children: (0, i.jsx)('div', {
     className: I.applicationStore,
-    children: (0, i.jsx)(a.AW, {
+    children: (0, i.jsx)(s.AW, {
       path: '*',
       render: this.renderApplicationListing
     })
@@ -50,15 +50,15 @@ super(...e), m(this, 'fetchStoreListing', e => {
     location: t
   } = e, {
     channel: n,
-    skuId: s,
-    width: a
+    skuId: a,
+    width: s
   } = this.props;
   return (0, i.jsx)(_.Z, {
     channel: n,
-    inputSkuId: s,
+    inputSkuId: a,
     fetchStoreListing: this.fetchStoreListing,
     location: t,
-    pageSize: (0, h.getPageSize)(a)
+    pageSize: (0, h.getPageSize)(s)
   });
 });
   }

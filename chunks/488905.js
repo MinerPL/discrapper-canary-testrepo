@@ -5,16 +5,16 @@ return r;
 });
 var i = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(130273);
+var a = n(481060),
+  s = n(130273);
 
 function r(e) {
   let {
 text: t
   } = e;
-  return (0, i.jsx)(s.Heading, {
+  return (0, i.jsx)(a.Heading, {
 variant: 'heading-xl/semibold',
-className: a.discoverHeader,
+className: s.discoverHeader,
 children: t
   });
 }

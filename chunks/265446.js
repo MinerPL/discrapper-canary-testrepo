@@ -1,14 +1,14 @@
 n.d(t, {
   Z: function() {
-return s;
+return o;
   }
 }), n(47120);
 var r = n(53529),
   i = n(436660),
   a = n(887490);
-let o = ['applicationCommand'];
+let s = ['applicationCommand'];
 
-function s(e) {
+function o(e) {
   let {
 insertBreak: t,
 insertText: n
@@ -39,5 +39,5 @@ r.T.withSingleEntry(e, () => {
 
 function l(e) {
   let t = a.bN.getCurrentBlock(e);
-  return null != t && !o.includes(t[0].type);
+  return null != t && !s.includes(t[0].type);
 }

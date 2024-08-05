@@ -1,6 +1,6 @@
 t.r(n), t.d(n, {
   default: function() {
-return c;
+return d;
   },
   useHasGuildRoleItems: function() {
 return r;
@@ -17,17 +17,17 @@ function r(e, n) {
   return (0, l.Z)(e, n).length > 0;
 }
 
-function c(e) {
+function d(e) {
   let {
 role: n,
 guild: t,
 onSelect: r
-  } = e, c = (0, l.Z)(t, n);
-  return 0 === c.length ? null : (0, i.jsx)(a.Menu, {
+  } = e, d = (0, l.Z)(t, n);
+  return 0 === d.length ? null : (0, i.jsx)(a.Menu, {
 navId: 'guild-settings-role-context',
 'aria-label': o.Z.Messages.GUILD_ROLE_ACTIONS_MENU_LABEL,
 onClose: s.Zy,
 onSelect: r,
-children: c
+children: d
   });
 }

@@ -12,5 +12,6 @@ e.exports = {
   customStatus: 'customStatus_b2ca13',
   strikethrough: 'strikethrough_b2ca13',
   emoji: 'emoji_b2ca13',
-  accountProfilePopoutWrapper: 'accountProfilePopoutWrapper_b2ca13'
+  accountProfilePopoutWrapper: 'accountProfilePopoutWrapper_b2ca13',
+  buttons: 'buttons_b2ca13'
 };

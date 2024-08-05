@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var s = n(120356),
-  a = n.n(s),
+var a = n(120356),
+  s = n.n(a),
   r = n(44315),
   l = n(285952),
   o = n(441996),
@@ -12,7 +12,7 @@ t.Z = function(e) {
   var t;
   let {
 title: n,
-className: s,
+className: a,
 color: _,
 animate: h,
 gradientStopColor: E,
@@ -23,7 +23,7 @@ getHistoricalTotalBytes: I,
 children: (e, t, r) => {
   var c;
   return (0, i.jsx)('div', {
-    className: a()(u.monitor, s),
+    className: s()(u.monitor, a),
     children: (0, i.jsxs)(l.Z, {
       align: l.Z.Align.CENTER,
       children: [

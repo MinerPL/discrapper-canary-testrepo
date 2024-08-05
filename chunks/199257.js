@@ -3,28 +3,28 @@ n.d(t, {
 return l;
   },
   _: function() {
-return s;
+return o;
   }
 });
 var r = n(399606),
   i = n(339085),
   a = n(185923);
-let o = [];
+let s = [];
 
-function s(e) {
+function o(e) {
   let {
 emojiStoreInstance: t = i.Z,
 guildId: n,
 pickerIntention: r
   } = e;
   return {
-topEmojis: r !== a.Hz.REACTION ? t.getTopEmoji(n) : o,
-newlyAddedEmojis: r !== a.Hz.REACTION ? t.getNewlyAddedEmoji(n) : o
+topEmojis: r !== a.Hz.REACTION ? t.getTopEmoji(n) : s,
+newlyAddedEmojis: r !== a.Hz.REACTION ? t.getNewlyAddedEmoji(n) : s
   };
 }
 
 function l(e, t) {
-  return (0, r.cj)([i.Z], () => s({
+  return (0, r.cj)([i.Z], () => o({
 emojiStoreInstance: i.Z,
 guildId: e,
 pickerIntention: t

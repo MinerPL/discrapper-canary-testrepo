@@ -96,7 +96,7 @@ onSelectEndDate: I
   },
   label: E.Z.Messages.MEMBER_SAFETY_DATE_OPTION_LABEL_3_MONTHS
 }
-  ], [H, f] = s.useState(!1), A = function() {
+  ], [H, f] = s.useState(!1), N = function() {
 if (7 !== i)
   return null;
 if (null != t && null != l)
@@ -110,7 +110,7 @@ if (null != l)
     date: l
   });
 return null;
-  }(), N = s.useCallback(() => {
+  }(), A = s.useCallback(() => {
 f(!0), L();
   }, [L]), R = s.useCallback(e => {
 g(e);
@@ -206,7 +206,7 @@ children: (0, o.jsx)(u.MenuGroup, {
       (0, o.jsx)(u.MenuSeparator, {}),
       (0, o.jsx)(u.MenuItem, {
         id: 'guild-member-'.concat(d, '-custom-option}'),
-        action: N,
+        action: A,
         render: e => (0, o.jsxs)('div', {
           className: r()(h.otherDatesContainer, {
             [h.focused]: e.isFocused
@@ -222,13 +222,13 @@ children: (0, o.jsx)(u.MenuGroup, {
                   variant: 'text-sm/medium',
                   children: E.Z.Messages.MEMBER_SAFETY_DATE_OPTION_LABEL_CUSTOM
                 }),
-                null != A && (0, o.jsx)(u.Text, {
+                null != N && (0, o.jsx)(u.Text, {
                   className: r()(h.otherDateLabel, {
                     [h.focused]: e.isFocused
                   }),
                   color: 'text-muted',
                   variant: 'text-xxs/medium',
-                  children: A
+                  children: N
                 })
               ]
             }),

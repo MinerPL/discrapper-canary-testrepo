@@ -1,57 +1,57 @@
-var n, i = l(442837),
-  u = l(433517),
-  a = l(570140),
-  r = l(981631);
+var l, i = t(442837),
+  a = t(433517),
+  r = t(570140),
+  s = t(981631);
 
-function o(e, t, l) {
-  return t in e ? Object.defineProperty(e, t, {
-value: l,
+function o(e, n, t) {
+  return n in e ? Object.defineProperty(e, n, {
+value: t,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : e[t] = l, e;
+  }) : e[n] = t, e;
 }
-let d = {
+let u = {
 lastViewedPath: null,
 lastViewedNonVoicePath: null
   },
-  s = d,
-  c = 'LAST_VIEWED_PATH';
-class h extends(n = i.ZP.PersistedStore) {
+  c = u,
+  d = 'LAST_VIEWED_PATH';
+class p extends(l = i.ZP.PersistedStore) {
   initialize() {
-let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d;
-s = null != e ? e : d;
+let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u;
+c = null != e ? e : u;
   }
   get defaultRoute() {
-return r.Z5c.ME;
+return s.Z5c.ME;
   }
   get lastNonVoiceRoute() {
 var e;
-return null !== (e = s.lastViewedNonVoicePath) && void 0 !== e ? e : r.Z5c.ME;
+return null !== (e = c.lastViewedNonVoicePath) && void 0 !== e ? e : s.Z5c.ME;
   }
   get fallbackRoute() {
-return r.Z5c.ME;
+return s.Z5c.ME;
   }
   getState() {
-return s;
+return c;
   }
 }
-o(h, 'displayName', 'DefaultRouteStore'), o(h, 'persistKey', 'DefaultRouteStore'), o(h, 'migrations', [() => {
-  let e = u.K.get(c, null);
-  return u.K.remove(c), {
+o(p, 'displayName', 'DefaultRouteStore'), o(p, 'persistKey', 'DefaultRouteStore'), o(p, 'migrations', [() => {
+  let e = a.K.get(d, null);
+  return a.K.remove(d), {
 lastViewedPath: e
   };
-}]), t.Z = new h(a.Z, {
+}]), n.Z = new p(r.Z, {
   SAVE_LAST_ROUTE: function(e) {
 let {
-  path: t
+  path: n
 } = e;
-return s.lastViewedPath = t, !0;
+return c.lastViewedPath = n, !0;
   },
   SAVE_LAST_NON_VOICE_ROUTE: function(e) {
 let {
-  path: t
+  path: n
 } = e;
-return s.lastViewedNonVoicePath = t, !0;
+return c.lastViewedNonVoicePath = n, !0;
   }
 });

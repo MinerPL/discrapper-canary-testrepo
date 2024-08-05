@@ -15,14 +15,14 @@ var s = n(735250),
   m = n(933557),
   N = n(471445),
   S = n(339085),
-  h = n(621923),
-  g = n(524329),
-  C = n(575258),
-  x = n(514698),
-  p = n(592125),
-  R = n(940627),
-  f = n(346656),
-  L = n(499150),
+  h = n(565138),
+  g = n(372769),
+  C = n(621923),
+  x = n(690221),
+  p = n(524329),
+  R = n(575258),
+  f = n(514698),
+  L = n(592125),
   O = n(4912),
   A = n(626135),
   M = n(700785),
@@ -39,37 +39,37 @@ let i, {
     guildId: l,
     welcomeChannel: o,
     onEdit: T,
-    onChannelReorder: g,
-    isDropHovered: C,
-    index: R
+    onChannelReorder: h,
+    isDropHovered: g,
+    index: x
   } = e,
-  [f, L] = a.useState(!1),
+  [p, R] = a.useState(!1),
   A = a.useRef(null),
-  D = (0, u.e7)([p.Z], () => p.Z.getChannel(o.channel_id)),
+  D = (0, u.e7)([L.Z], () => L.Z.getChannel(o.channel_id)),
   v = (0, u.e7)([S.Z], () => null != o.emoji_id ? S.Z.getUsableCustomEmojiById(o.emoji_id) : null),
   P = null != D && M.Uu(j.Plq.VIEW_CHANNEL, D),
   B = null !== (t = (0, N.KS)(D)) && void 0 !== t ? t : _.TextIcon,
   y = (0, m.ZP)(D, !1),
   {
     homeSettingsEnabled: F
-  } = (0, h.kZ)(l),
+  } = (0, C.kZ)(l),
   [, w] = (0, c.c)({
     type: G,
     item: {
       channel: o,
-      index: R
+      index: x
     },
     end: (e, t) => {
-      null != e && !t.didDrop() && g(e.channel, null, !0);
+      null != e && !t.didDrop() && h(e.channel, null, !0);
     }
   }),
   [, k] = (0, d.L)({
     accept: G,
     hover: e => {
-      g(e.channel, R, !1);
+      h(e.channel, x, !1);
     },
     drop: e => {
-      g(e.channel, R, !0);
+      h(e.channel, x, !0);
     }
   });
 return a.useLayoutEffect(() => (w(k(A)), () => {
@@ -91,7 +91,7 @@ return a.useLayoutEffect(() => (w(k(A)), () => {
   className: U.warningIcon
 }), (0, s.jsxs)('div', {
   className: r()(U.welcomeChannel, {
-    [U.dragging]: C
+    [U.dragging]: g
   }),
   ref: A,
   'data-dnd-name': o.description,
@@ -104,10 +104,10 @@ return a.useLayoutEffect(() => (w(k(A)), () => {
         ...t,
         guildId: l,
         welcomeChannel: o,
-        onChannelReorder: g,
-        setShowConfirmModal: L,
+        onChannelReorder: h,
+        setShowConfirmModal: R,
         onEdit: T,
-        index: R
+        index: x
       });
     });
   },
@@ -157,9 +157,9 @@ return a.useLayoutEffect(() => (w(k(A)), () => {
       }),
       children: b.Z.Messages.EDIT
     }),
-    f && (0, s.jsx)(x.Z, {
+    p && (0, s.jsx)(f.Z, {
       onConfirm: () => T(),
-      onCancel: () => L(!1),
+      onCancel: () => R(!1),
       channelId: o.channel_id
     })
   ]
@@ -173,27 +173,27 @@ showCreateModal: r
   } = e, {
 welcomeSettings: l,
 originalWelcomeSettings: c
-  } = (0, u.e7)([C.Z], () => C.Z.getSettingsProps()), d = (0, u.e7)([T.Z], () => T.Z.useReducedMotion), [I, E] = a.useState(null), [m, N] = a.useState(!1), [S, x] = a.useState(!1), {
-description: p,
+  } = (0, u.e7)([R.Z], () => R.Z.getSettingsProps()), d = (0, u.e7)([T.Z], () => T.Z.useReducedMotion), [I, E] = a.useState(null), [m, N] = a.useState(!1), [S, f] = a.useState(!1), {
+description: L,
 channels: M,
 enabled: G
   } = l, {
 homeSettingsEnabled: B
-  } = (0, h.kZ)(null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : j.lds), y = () => {
+  } = (0, C.kZ)(null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : j.lds), y = () => {
 if (null != i)
-  p !== c.description && ((0, g.Es)(i.id, {
-    description: null == p ? void 0 : p.trim()
+  L !== c.description && ((0, p.Es)(i.id, {
+    description: null == L ? void 0 : L.trim()
   }), N(!0));
   }, F = e => {
 if (null != i)
-  !o()(e, c.channels) && ((0, g.Es)(i.id, {
+  !o()(e, c.channels) && ((0, p.Es)(i.id, {
     channels: e
   }), N(!0));
   }, w = e => {
 if (null != i)
-  e !== c.enabled && ((0, g.Es)(i.id, {
+  e !== c.enabled && ((0, p.Es)(i.id, {
     enabled: e
-  }), x(!d), N(!0));
+  }), f(!d), N(!0));
   }, k = e => {
 if (null == e)
   return;
@@ -201,14 +201,14 @@ let t = [
   ...null != M ? M : [],
   e
 ];
-(0, g.VP)({
+(0, p.VP)({
   channels: t
 }), F(t);
   }, H = e => t => {
 let n = [...null != M ? M : []];
-null == t ? n.splice(e, 1) : n[e] = t, (0, g.VP)({
+null == t ? n.splice(e, 1) : n[e] = t, (0, p.VP)({
   channels: n
-}), F(n), 0 === n.length && G && ((0, g.VP)({
+}), F(n), 0 === n.length && G && ((0, p.VP)({
   enabled: !1
 }), w(!1));
   }, V = (e, t, n) => {
@@ -216,7 +216,7 @@ if (null == M)
   return;
 let s = M.indexOf(e),
   a = [...M];
-null != t && t !== s && (a.splice(s, 1), a.splice(t, 0, e), (0, g.VP)({
+null != t && t !== s && (a.splice(s, 1), a.splice(t, 0, e), (0, p.VP)({
   channels: a
 })), n ? (F(a), E(null)) : E(t);
   }, Y = a.useRef(!1);
@@ -244,7 +244,7 @@ if (Y.current && m) {
     guild_id: null == i ? void 0 : i.id,
     options: e,
     options_channel_ids: t,
-    guild_description: p,
+    guild_description: L,
     has_custom_emojis: n,
     is_enabled: G
   });
@@ -252,11 +252,11 @@ if (Y.current && m) {
   }, [
 m,
 M,
-p,
+L,
 G,
 i,
 Y
-  ]), a.useEffect(() => () => (0, g.sm)(), []);
+  ]), a.useEffect(() => () => (0, p.sm)(), []);
   let W = a.useCallback(() => {
 null != i && D.Z.open(i.id, j.pNK.ONBOARDING);
   }, [i]);
@@ -273,7 +273,7 @@ children: [
           className: U.noticeIcon
         }),
         b.Z.Messages.WELCOME_SCREEN_DEPRECATED.format({
-          onboardingLink: e => (0, s.jsx)(L.Z, {
+          onboardingLink: e => (0, s.jsx)(x.Z, {
             onClick: W,
             children: e
           })
@@ -313,8 +313,8 @@ children: [
       (0, s.jsxs)('div', {
         className: U.welcomeHeader,
         children: [
-          (0, s.jsx)(f.Z, {
-            size: f.Z.Sizes.LARGER,
+          (0, s.jsx)(h.Z, {
+            size: h.Z.Sizes.LARGER,
             className: U.icon,
             guild: i,
             animate: !0,
@@ -327,7 +327,7 @@ children: [
               guildName: i.name,
               guildNameHook: (e, t) => (0, s.jsxs)('span', {
                 children: [
-                  (0, s.jsx)(R.Z, {
+                  (0, s.jsx)(g.Z, {
                     guild: i,
                     className: U.headerGuildBadge,
                     flowerStarClassName: U.flowerStar
@@ -345,7 +345,7 @@ children: [
               className: U.descriptionInput,
               placeholder: b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_DESCRIPTION_PLACEHOLDER,
               onChange: e => {
-                (0, g.VP)({
+                (0, p.VP)({
                   description: e
                 });
               },
@@ -355,7 +355,7 @@ children: [
               onKeyDown: e => {
                 e.keyCode === j.yXg.ENTER && e.preventDefault();
               },
-              value: p,
+              value: L,
               maxLength: 140,
               disabled: B
             })

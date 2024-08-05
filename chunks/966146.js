@@ -66,8 +66,8 @@ for (let r = 1; r < 4096; ++r) {
   }
 }
 let i = {},
-  o = 0,
-  s = 100;
+  s = 0,
+  o = 100;
 for (let t = 1; t <= 25; ++t) {
   let l = 0,
     u = 0,
@@ -77,15 +77,15 @@ for (let t = 1; t <= 25; ++t) {
       break;
     l = r.width, u = r.height, c = r.budgetPortion;
   }
-  if (o !== l) {
-    let e = a.getMutedFramerate(s);
-    i[s] = {
+  if (s !== l) {
+    let e = a.getMutedFramerate(o);
+    i[o] = {
       width: l,
       height: u,
       budgetPortion: c,
       mutedFramerate: e,
       framerate: r.Gs
-    }, s -= 10, o = l;
+    }, o -= 10, s = l;
   }
 }
 return i;

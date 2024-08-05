@@ -3,7 +3,7 @@ t.parse = function(e, t) {
 throw TypeError('argument str must be a string');
   var r = {},
 a = e.split(i),
-o = (t || {}).decode || n;
+s = (t || {}).decode || n;
   return a.forEach(function(e) {
 var t = e.indexOf('=');
 if (!(t < 0)) {
@@ -15,18 +15,18 @@ if (!(t < 0)) {
     } catch (t) {
       return e;
     }
-  }(i, o));
+  }(i, s));
 }
   }), r;
 }, t.serialize = function(e, t, n) {
   var i = n || {},
-o = i.encode || r;
+s = i.encode || r;
   if (!a.test(e))
 throw TypeError('argument name is invalid');
-  var s = o(t);
-  if (s && !a.test(s))
+  var o = s(t);
+  if (o && !a.test(o))
 throw TypeError('argument val is invalid');
-  var l = [e + '=' + s];
+  var l = [e + '=' + o];
   if (null != i.maxAge) {
 var u = i.maxAge - 0;
 if (isNaN(u))

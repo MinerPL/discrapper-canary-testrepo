@@ -9,9 +9,9 @@ var a = t(735250),
   d = t(565321),
   u = t(297619),
   m = t(456935),
-  f = t(446945),
+  _ = t(446945),
   C = t(700833),
-  _ = t(592286),
+  f = t(592286),
   h = t(689938);
 n.Z = function(e) {
   let {
@@ -21,15 +21,15 @@ onFormFieldUpdate: x,
 hideVerificationLevelField: g,
 isClanContext: p,
 formDescription: T,
-onFieldsSave: I,
-onDescriptionSave: E
+onFieldsSave: E,
+onDescriptionSave: I
   } = e, b = r.useRef(!1), [N, v] = r.useState(null), [y, S] = r.useState(e.formFields);
   r.useEffect(() => S(e.formFields), [e.formFields]);
   let A = r.useRef(e.formFields),
 M = r.useMemo(() => y.filter(l.kT), [y]),
 j = r.useMemo(() => y.filter(l._C), [y]),
 R = j.length,
-L = r.useMemo(() => y.length === _.nx, [y]),
+L = r.useMemo(() => y.length === f.nx, [y]),
 O = r.useMemo(() => y.some(o.J), [y]),
 Z = r.useMemo(() => y.some(e => !(0, o.J)(e)), [y]),
 k = R > 0,
@@ -41,7 +41,7 @@ w = r.useCallback(async e => {
   if (!b.current) {
     b.current = !0, p && (e = e.filter(e => e.field_type !== o.QJ.TERMS));
     try {
-      await I(n.id, e), x(), S(e), A.current = e;
+      await E(n.id, e), x(), S(e), A.current = e;
     } catch (e) {
       throw S(A.current), e;
     } finally {
@@ -52,7 +52,7 @@ w = r.useCallback(async e => {
   N,
   n.id,
   x,
-  I,
+  E,
   p
 ]),
 F = r.useCallback(async e => {
@@ -68,7 +68,7 @@ F = r.useCallback(async e => {
   y,
   w
 ]),
-G = r.useCallback(async (e, n) => {
+B = r.useCallback(async (e, n) => {
   if (y[e] === n)
     return;
   let t = [...y];
@@ -77,7 +77,7 @@ G = r.useCallback(async (e, n) => {
   y,
   w
 ]),
-B = r.useCallback(async (e, n, t) => {
+G = r.useCallback(async (e, n, t) => {
   let a = y.indexOf(e),
     r = [...y];
   if (null != n && n !== a && (r.splice(a, 1), r.splice(n, 0, e), S(r)), t)
@@ -116,7 +116,7 @@ H = (0, a.jsxs)(a.Fragment, {
     (0, a.jsx)(d.Z, {
       formDescription: T,
       guildId: n.id,
-      onSave: E
+      onSave: I
     }),
     !O && !L && (0, a.jsx)(u.Z, {
       addFormField: F,
@@ -130,8 +130,8 @@ H = (0, a.jsxs)(a.Fragment, {
       isDragEnabled: !1,
       submittedGuildJoinRequestsCount: t,
       removeFormField: U,
-      updateFormField: G,
-      updateFormFieldOrder: B,
+      updateFormField: B,
+      updateFormFieldOrder: G,
       canRemove: !0,
       actionsLocation: p ? 'side' : 'footer'
     }))
@@ -154,12 +154,12 @@ children: [
     isDragEnabled: k,
     submittedGuildJoinRequestsCount: t,
     removeFormField: U,
-    updateFormField: G,
-    updateFormFieldOrder: B,
+    updateFormField: B,
+    updateFormFieldOrder: G,
     canRemove: !(p && j.length <= 1),
     actionsLocation: p ? 'side' : 'footer'
   })),
-  Z && !L && (0, a.jsx)(f.Z, {
+  Z && !L && (0, a.jsx)(_.Z, {
     addFormField: F,
     guild: n
   })

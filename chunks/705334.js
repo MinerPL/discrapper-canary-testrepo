@@ -1,86 +1,75 @@
 n.d(t, {
   _: function() {
-return _;
+return m;
   }
 });
 var i = n(735250),
+  a = n(470079),
   s = n(120356),
-  a = n.n(s),
-  r = n(481060),
-  l = n(52689),
-  o = n(49898),
-  c = n(689938),
-  d = n(876425);
+  r = n.n(s),
+  l = n(143927),
+  o = n(731965),
+  c = n(481060),
+  d = n(836768),
+  u = n(766219),
+  _ = n(49898),
+  h = n(689938),
+  E = n(876425);
 
-function u(e) {
+function I(e) {
   let {
-config: t,
-selected: n,
-handleSelectPage: s
-  } = e;
-  return (0, i.jsxs)(r.Clickable, {
-onClick: () => s(t.slug),
-className: a()(d.navItem, {
-  [d.selectedNavItem]: n
+tab: t
+  } = e, n = (0, d.d)(e => e.selectedPage === t, l.Z), s = a.useMemo(() => function(e) {
+switch (e) {
+  case _.F$.SERVERS:
+    return (0, i.jsx)(c.ServerIcon, {
+      color: 'currentColor'
+    });
+  case _.F$.QUESTS:
+    return (0, i.jsx)(c.QuestsIcon, {
+      color: 'currentColor'
+    });
+}
+  }(t), [t]), h = a.useMemo(() => (0, u.sm)(t), [t]), I = a.useCallback(() => {
+(0, o.j)(() => d.d.setState({
+  selectedPage: t
+}));
+  }, [t]);
+  return (0, i.jsxs)(c.Clickable, {
+onClick: I,
+className: r()(E.navItem, {
+  [E.selectedNavItem]: n
 }),
 children: [
   (0, i.jsx)('div', {
-    className: d.navItemIcon,
-    children: function(e) {
-      switch (e) {
-        case o.SM.SERVERS:
-          return (0, i.jsx)(r.ServerIcon, {
-            color: 'currentColor'
-          });
-        case o.SM.APPS:
-          return (0, i.jsx)(r.AppsIcon, {
-            color: 'currentColor'
-          });
-        case o.SM.QUESTS:
-          return (0, i.jsx)(r.QuestsIcon, {
-            color: 'currentColor'
-          });
-        case o.SM.SHOP:
-          return (0, i.jsx)(r.ShopSparkleIcon, {
-            color: 'currentColor'
-          });
-        default:
-          return null;
-      }
-    }(t.slug)
+    className: E.navItemIcon,
+    children: s
   }),
-  (0, i.jsx)(r.Text, {
+  (0, i.jsx)(c.Text, {
     variant: 'text-md/normal',
     color: 'none',
-    children: t.title
+    children: h
   })
 ]
   });
 }
 
-function _() {
-  let {
-config: e,
-selectedPage: t,
-handleSelectPage: n
-  } = (0, l.Z)();
+function m() {
   return (0, i.jsxs)('div', {
-className: d.container,
+className: E.container,
 children: [
   (0, i.jsx)('div', {
-    className: d.header,
-    children: (0, i.jsx)(r.Heading, {
+    className: E.header,
+    children: (0, i.jsx)(c.Heading, {
       variant: 'text-lg/semibold',
-      children: c.Z.Messages.GLOBAL_DISCOVERY_TITLE
+      children: h.Z.Messages.GLOBAL_DISCOVERY_TITLE
     })
   }),
   (0, i.jsx)('nav', {
-    className: d.nav,
-    children: e.map(e => (0, i.jsx)(u, {
-      config: e,
-      selected: t === e.slug,
-      handleSelectPage: n
-    }, e.slug))
+    className: E.nav,
+    children: _.mc.map(e => (0, i.jsx)(I, {
+      tab: e
+    }, e))
   })
 ]
   });

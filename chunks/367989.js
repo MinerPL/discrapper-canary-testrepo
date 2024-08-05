@@ -8,7 +8,7 @@ t.Z = function(e, t) {
   if (i(t) && 'function' == typeof t.behavior)
 return t.behavior(a ? (0, r.Z)(e, t) : []);
   if (!!a) {
-var o = !1 === (n = t) ? {
+var s = !1 === (n = t) ? {
   block: 'end',
   inline: 'nearest'
 } : i(n) ? n : {
@@ -28,6 +28,6 @@ return function(e, t) {
       behavior: t
     }) : (r.scrollTop = i, r.scrollLeft = a);
   });
-}((0, r.Z)(e, o), o.behavior);
+}((0, r.Z)(e, s), s.behavior);
   }
 };

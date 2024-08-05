@@ -4,7 +4,7 @@ n = '[eE][-+]?' + t,
 r = '[A-Za-z](_?[A-Za-z0-9.])*',
 i = '[]\\{\\}%#\'"',
 a = e.COMMENT('--', '$'),
-o = {
+s = {
   begin: '\\s+:\\s+',
   end: '\\s*(:=|;|\\)|=>|$)',
   illegal: i,
@@ -154,7 +154,7 @@ contains: [
         excludeEnd: !0,
         illegal: i
       },
-      o,
+      s,
       {
         className: 'type',
         begin: '\\breturn\\s+',
@@ -175,7 +175,7 @@ contains: [
     excludeBegin: !0,
     illegal: i
   },
-  o
+  s
 ]
   };
 };

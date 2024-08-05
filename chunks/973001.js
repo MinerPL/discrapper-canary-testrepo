@@ -3,8 +3,8 @@ n.d(t, {
 return r;
   }
 }), n(47120);
-var r, i, a, o = n(442837),
-  s = n(570140),
+var r, i, a, s = n(442837),
+  o = n(570140),
   l = n(70956);
 
 function u(e, t, n) {
@@ -30,7 +30,7 @@ guildId: n
   } = e;
   null == c.applicationIdToGuildIds[t] && (c.applicationIdToGuildIds[t] = new Set()), c.applicationIdToGuildIds[t].add(n), c.applicationIdToGuildIds[t] = new Set(c.applicationIdToGuildIds[t]);
 }
-class _ extends(i = o.ZP.PersistedStore) {
+class _ extends(i = s.ZP.PersistedStore) {
   initialize(e) {
 if (null != e)
   for (let t in (c.lastFetchTimeMs = e.lastFetchTimeMs, c.nextFetchRetryTimeMs = e.nextFetchRetryTimeMs, c.fetchState = e.fetchState, e.applicationIdToGuildIds))
@@ -53,7 +53,7 @@ return c.nextFetchRetryTimeMs;
 return c.fetchState;
   }
 }
-u(_, 'displayName', 'MyGuildApplicationsStore'), u(_, 'persistKey', 'MyGuildApplicationsStore'), t.Z = new _(s.Z, {
+u(_, 'displayName', 'MyGuildApplicationsStore'), u(_, 'persistKey', 'MyGuildApplicationsStore'), t.Z = new _(o.Z, {
   LOGOUT: function() {
 c.applicationIdToGuildIds = {}, c.lastFetchTimeMs = null, c.nextFetchRetryTimeMs = null, c.fetchState = 0;
   },

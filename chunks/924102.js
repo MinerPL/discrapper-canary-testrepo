@@ -1,8 +1,8 @@
 var r = n(675717),
   i = n(595250),
   a = n(220955),
-  o = Math.max,
-  s = Math.min;
+  s = Math.max,
+  o = Math.min;
 t.Z = function(e, t, n) {
   var l, u, c, d, _, E, f = 0,
 h = !1,
@@ -16,7 +16,7 @@ var n = l,
   r = u;
 return l = u = void 0, f = t, d = e.apply(r, n);
   }
-  t = (0, a.Z)(t) || 0, (0, r.Z)(n) && (h = !!n.leading, c = (p = 'maxWait' in n) ? o((0, a.Z)(n.maxWait) || 0, t) : c, m = 'trailing' in n ? !!n.trailing : m);
+  t = (0, a.Z)(t) || 0, (0, r.Z)(n) && (h = !!n.leading, c = (p = 'maxWait' in n) ? s((0, a.Z)(n.maxWait) || 0, t) : c, m = 'trailing' in n ? !!n.trailing : m);
 
   function T(e) {
 var n = e - E,
@@ -25,10 +25,10 @@ return void 0 === E || n >= t || n < 0 || p && r >= c;
   }
 
   function g() {
-var e, n, r, a, o = (0, i.Z)();
-if (T(o))
-  return S(o);
-_ = setTimeout(g, (n = (e = o) - E, r = e - f, a = t - n, p ? s(a, c - r) : a));
+var e, n, r, a, s = (0, i.Z)();
+if (T(s))
+  return S(s);
+_ = setTimeout(g, (n = (e = s) - E, r = e - f, a = t - n, p ? o(a, c - r) : a));
   }
 
   function S(e) {

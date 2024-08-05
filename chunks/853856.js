@@ -1,4 +1,4 @@
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(524437),
   u = n(570140),
   c = n(581883),
@@ -24,7 +24,7 @@ E[e] = {
 };
   }
 }
-class p extends(o = s.ZP.Store) {
+class p extends(s = o.ZP.Store) {
   initialize() {
 this.waitFor(c.Z), h(), this.syncWith([c.Z], h);
   }

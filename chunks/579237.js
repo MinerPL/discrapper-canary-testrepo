@@ -6,9 +6,9 @@ return u;
 var r = n(836560),
   i = n(68721),
   a = n(961304),
-  o = n(65154);
+  s = n(65154);
 
-function s(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -39,7 +39,7 @@ this.input.noiseCancellation = e;
   }
   createOutput(e, t) {
 let n = this.outputs[e];
-null == n && ((n = new a.Z(this.userId, this.audioContext)).mute = !1, n.volume = 100, n.setSpeakingFlags(o.Dg.VOICE), n.setSinkId(this.sinkId), this.outputs[e] = n), n.addTrack(t), n.play();
+null == n && ((n = new a.Z(this.userId, this.audioContext)).mute = !1, n.volume = 100, n.setSpeakingFlags(s.Dg.VOICE), n.setSinkId(this.sinkId), this.outputs[e] = n), n.addTrack(t), n.play();
   }
   destroyOutput(e, t) {
 let n = this.outputs[e];
@@ -68,10 +68,10 @@ this.pc1.createOffer(l).then(t => {
 });
   }
   constructor(e, t, n, r = '') {
-super(), s(this, 'userId', void 0), s(this, 'sinkId', void 0), s(this, 'input', void 0), s(this, 'pc1', void 0), s(this, 'pc2', void 0), s(this, 'senders', []), s(this, 'outputs', {}), s(this, 'audioContext', void 0), s(this, 'handleStream', () => {
+super(), o(this, 'userId', void 0), o(this, 'sinkId', void 0), o(this, 'input', void 0), o(this, 'pc1', void 0), o(this, 'pc2', void 0), o(this, 'senders', []), o(this, 'outputs', {}), o(this, 'audioContext', void 0), o(this, 'handleStream', () => {
   let e = this.input.getDelayedStream();
   this.senders.forEach(e => this.pc1.removeTrack(e)), this.senders = [...e.getAudioTracks().map(t => this.pc1.addTrack(t, e))], this.handshake();
-}), s(this, 'handleTrack', e => {
+}), o(this, 'handleTrack', e => {
   e.streams[0].getTracks().forEach(e => {
     this.createOutput(e.id, e), e.onmute = () => {
       this.destroyOutput(e.id, e);

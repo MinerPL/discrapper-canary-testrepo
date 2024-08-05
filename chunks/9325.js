@@ -12,23 +12,23 @@ var s = n(735250),
   c = n(962220),
   u = n(306453),
   d = n(108427),
-  h = n(314897),
-  _ = n(626135),
+  _ = n(314897),
+  h = n(626135),
   E = n(587444),
   g = n(981631),
   p = n(58346),
-  f = n(689938),
-  I = n(549856);
+  I = n(689938),
+  m = n(549856);
 
-function m(e, t, n) {
-  e.preventDefault(), _.default.track(g.rMx.GUILD_TEMPLATE_APP_OPENED, {
+function f(e, t, n) {
+  e.preventDefault(), h.default.track(g.rMx.GUILD_TEMPLATE_APP_OPENED, {
 guild_template_code: t,
 guild_template_name: n.name,
 guild_template_description: n.description,
 guild_template_guild_id: n.sourceGuildId
   });
-  let s = h.default.getFingerprint(),
-r = null != s ? s : h.default.getId();
+  let s = _.default.getFingerprint(),
+r = null != s ? s : _.default.getId();
   c.Z.openMobileApp(n.state === p.Rj.RESOLVED ? t : void 0, r);
 }
 
@@ -47,15 +47,15 @@ children: [
     tall: !0
   }),
   (0, s.jsx)(l.zx, {
-    onClick: e => m(e, t, n),
-    className: I.marginTop20,
-    children: f.Z.Messages.GUILD_TEMPLATE_OPEN
+    onClick: e => f(e, t, n),
+    className: m.marginTop20,
+    children: I.Z.Messages.GUILD_TEMPLATE_OPEN
   })
 ]
   }) : (0, s.jsx)(E.Z, {
-text: f.Z.Messages.GUILD_TEMPLATE_MOBILE_INVALID_ERROR,
-buttonCta: f.Z.Messages.GUILD_TEMPLATE_MOBILE_INVALID_CTA,
-onClick: e => m(e, t, n)
+text: I.Z.Messages.GUILD_TEMPLATE_MOBILE_INVALID_ERROR,
+buttonCta: I.Z.Messages.GUILD_TEMPLATE_MOBILE_INVALID_CTA,
+onClick: e => f(e, t, n)
   });
 }
 i.ZP.initialize();

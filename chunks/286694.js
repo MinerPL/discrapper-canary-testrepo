@@ -1,38 +1,38 @@
-i.d(n, {
+t.d(n, {
   Z: function() {
-return _;
+return I;
   }
 });
-var r = i(735250);
-i(470079);
-var t = i(442837),
-  l = i(481060),
-  a = i(592125),
-  s = i(430824),
-  u = i(496675),
-  o = i(594174),
-  d = i(471253),
-  c = i(88751),
-  Z = i(981631),
-  E = i(689938);
+var i = t(735250);
+t(470079);
+var r = t(442837),
+  u = t(481060),
+  l = t(592125),
+  a = t(430824),
+  o = t(496675),
+  d = t(594174),
+  s = t(471253),
+  c = t(88751),
+  _ = t(981631),
+  E = t(689938);
 
-function _(e, n, i) {
-  var _;
-  let M = a.Z.getChannel(i),
-f = (0, t.e7)([s.Z], () => s.Z.getGuild(n), [n]),
-C = (0, t.e7)([c.ZP], () => c.ZP.getPermissionsForUser(e.id, i), [
-  i,
+function I(e, n, t) {
+  var I;
+  let T = l.Z.getChannel(t),
+N = (0, r.e7)([a.Z], () => a.Z.getGuild(n), [n]),
+S = (0, r.e7)([c.ZP], () => c.ZP.getPermissionsForUser(e.id, t), [
+  t,
   e.id
 ]),
-I = (null === (_ = o.default.getCurrentUser()) || void 0 === _ ? void 0 : _.id) === e.id,
-p = (0, t.e7)([u.Z], () => null != i && u.Z.canWithPartialContext(Z.Plq.MUTE_MEMBERS, {
-  channelId: i
-}), [i]);
-  return null != M && null != f && (p || I) && C.speaker ? (0, r.jsx)(l.MenuItem, {
+A = (null === (I = d.default.getCurrentUser()) || void 0 === I ? void 0 : I.id) === e.id,
+p = (0, r.e7)([o.Z], () => null != t && o.Z.canWithPartialContext(_.Plq.MUTE_MEMBERS, {
+  channelId: t
+}), [t]);
+  return null != T && null != N && (p || A) && S.speaker ? (0, i.jsx)(u.MenuItem, {
 id: 'audience',
-label: I ? E.Z.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE : E.Z.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE_OTHER,
+label: A ? E.Z.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE : E.Z.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE_OTHER,
 action: () => {
-  I ? (0, d.yi)(M) : (0, d.hz)(e, M);
+  A ? (0, s.yi)(T) : (0, s.hz)(e, T);
 }
   }) : null;
 }

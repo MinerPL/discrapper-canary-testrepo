@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var s = n(399606),
-  a = n(607070),
+var a = n(399606),
+  s = n(607070),
   r = n(970731),
   l = n(810090),
   o = n(19199),
@@ -11,7 +11,7 @@ var s = n(399606),
 t.Z = e => {
   let {
 markAsDismissed: t
-  } = e, n = (0, s.e7)([a.Z], () => a.Z.useReducedMotion);
+  } = e, n = (0, a.e7)([s.Z], () => s.Z.useReducedMotion);
   return (0, o.D)() ? (0, i.jsx)(r.ZP, {
 asset: (0, i.jsx)(l.Z, {
   className: u.video,

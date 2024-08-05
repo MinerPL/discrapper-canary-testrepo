@@ -139,14 +139,14 @@ a = {
   className: 'meta',
   begin: /^(>>>|\.\.\.) /
 },
-o = {
+s = {
   className: 'subst',
   begin: /\{/,
   end: /\}/,
   keywords: i,
   illegal: /#/
 },
-s = {
+o = {
   begin: /\{\{/,
   relevance: 0
 },
@@ -177,8 +177,8 @@ l = {
       contains: [
         e.BACKSLASH_ESCAPE,
         a,
-        s,
-        o
+        o,
+        s
       ]
     },
     {
@@ -187,8 +187,8 @@ l = {
       contains: [
         e.BACKSLASH_ESCAPE,
         a,
-        s,
-        o
+        o,
+        s
       ]
     },
     {
@@ -214,8 +214,8 @@ l = {
       end: /'/,
       contains: [
         e.BACKSLASH_ESCAPE,
-        s,
-        o
+        o,
+        s
       ]
     },
     {
@@ -223,8 +223,8 @@ l = {
       end: /"/,
       contains: [
         e.BACKSLASH_ESCAPE,
-        s,
-        o
+        o,
+        s
       ]
     },
     e.APOS_STRING_MODE,
@@ -298,7 +298,7 @@ f = {
     }
   ]
 };
-  return o.contains = [
+  return s.contains = [
 l,
 _,
 a

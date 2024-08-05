@@ -1,13 +1,13 @@
 n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(442837),
+  s = n(470079),
+  a = n(442837),
   r = n(481060),
   l = n(668781),
   o = n(431583),
   c = n(91372),
-  d = n(19780),
-  u = n(35818),
+  u = n(19780),
+  d = n(35818),
   _ = n(665149),
   E = n(689938),
   I = n(139715);
@@ -20,7 +20,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class T extends a.PureComponent {
+class T extends s.PureComponent {
   static getDerivedStateFromProps(e, t) {
 return e.mode !== t.memoizedMode ? {
   memoizedMode: e.mode,
@@ -60,7 +60,7 @@ super(...e), m(this, 'state', {
   memoizedMode: this.props.mode,
   clicked: !1
 }), m(this, 'handleInstallDownload', () => {
-  d.Z.isConnected() ? l.Z.show({
+  u.Z.isConnected() ? l.Z.show({
     title: E.Z.Messages.UPDATE_DURING_CALL_TITLE,
     body: E.Z.Messages.UPDATE_DURING_CALL_BODY,
     onConfirm: this.doUpdate,
@@ -70,10 +70,10 @@ super(...e), m(this, 'state', {
 }), m(this, 'doUpdate', () => {
   !this.state.clicked && (this.setState({
     clicked: !0
-  }), (0, u.Q)());
+  }), (0, d.Q)());
 });
   }
 }
-t.Z = s.ZP.connectStores([c.Z], () => ({
+t.Z = a.ZP.connectStores([c.Z], () => ({
   mode: c.Z.getState()
 }))(T);

@@ -1,5 +1,5 @@
 n(47120);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(786761),
   c = n(797316),
@@ -38,20 +38,20 @@ channelId: n,
 messageId: r,
 userId: i,
 emoji: a,
-optimistic: o,
-reactionType: s
+optimistic: s,
+reactionType: o
   } = e, l = E[n];
   if (null == l || null == l.firstMessage || r !== l.firstMessage.id)
 return !1;
   let u = d.default.getCurrentUser(),
 c = null != u && u.id === i;
-  if (o && !c)
+  if (s && !c)
 return !1;
   E[n] = {
 ...l
-  }, 'MESSAGE_REACTION_ADD' === t ? E[n].firstMessage = l.firstMessage.addReaction(a, c, e.colors, s) : E[n].firstMessage = l.firstMessage.removeReaction(a, c, s);
+  }, 'MESSAGE_REACTION_ADD' === t ? E[n].firstMessage = l.firstMessage.addReaction(a, c, e.colors, o) : E[n].firstMessage = l.firstMessage.removeReaction(a, c, o);
 }
-class m extends(r = s.ZP.Store) {
+class m extends(r = o.ZP.Store) {
   initialize() {
 this.waitFor(c.Z, d.default);
   }
@@ -66,12 +66,12 @@ return !(e in E) && (E[e] = {
 }), E[e];
   }
 }
-o = 'ForumPostMessagesStore', (a = 'displayName') in(i = m) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'ForumPostMessagesStore', (a = 'displayName') in(i = m) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new m(l.Z, {
+}) : i[a] = s, t.Z = new m(l.Z, {
   CONNECTION_OPEN: function() {
 E = {};
   },
@@ -143,10 +143,10 @@ let {
 if (null == i || null == i.firstMessage || n !== i.firstMessage.id)
   return !1;
 let a = d.default.getCurrentUser(),
-  o = i.firstMessage.addReactionBatch(r, null == a ? void 0 : a.id);
+  s = i.firstMessage.addReactionBatch(r, null == a ? void 0 : a.id);
 E[t] = {
   ...i,
-  firstMessage: o
+  firstMessage: s
 };
   },
   LOAD_FORUM_POSTS: function(e) {

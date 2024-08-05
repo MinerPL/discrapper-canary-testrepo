@@ -1,55 +1,55 @@
-s.d(n, {
+t.d(n, {
   m: function() {
-return N;
+return E;
   }
 });
-var l = s(735250),
-  t = s(470079),
-  i = s(481060),
-  r = s(474936),
-  a = s(815642),
-  c = s(426831),
-  o = s(257510),
-  u = s(74838),
-  d = s(720834),
-  _ = s(385925),
-  m = s(588921),
-  E = s(718720),
-  I = s(721513);
-let p = {
-[r.Cj.STANDARD_BOX]: _,
-[r.Cj.CAKE]: m,
-[r.Cj.CHEST]: E,
-[r.Cj.COFFEE]: I,
-[r.Cj.SNOWGLOBE]: '',
-[r.Cj.BOX]: '',
-[r.Cj.CUP]: '',
-[r.Cj.SEASONAL_CAKE]: o,
-[r.Cj.SEASONAL_CHEST]: u,
-[r.Cj.SEASONAL_COFFEE]: d,
-[r.Cj.SEASONAL_STANDARD_BOX]: c
+var i = t(735250),
+  a = t(470079),
+  r = t(481060),
+  s = t(474936),
+  l = t(815642),
+  o = t(426831),
+  c = t(257510),
+  u = t(74838),
+  d = t(720834),
+  _ = t(385925),
+  p = t(588921),
+  m = t(718720),
+  I = t(721513);
+let f = {
+[s.Cj.STANDARD_BOX]: _,
+[s.Cj.CAKE]: p,
+[s.Cj.CHEST]: m,
+[s.Cj.COFFEE]: I,
+[s.Cj.SNOWGLOBE]: '',
+[s.Cj.BOX]: '',
+[s.Cj.CUP]: '',
+[s.Cj.SEASONAL_CAKE]: c,
+[s.Cj.SEASONAL_CHEST]: u,
+[s.Cj.SEASONAL_COFFEE]: d,
+[s.Cj.SEASONAL_STANDARD_BOX]: o
   },
-  N = t.forwardRef(function(e, n) {
+  E = a.forwardRef(function(e, n) {
 let {
-  isSelected: s,
-  giftStyle: t,
-  setSelectedGiftStyle: r,
-  onFocus: c,
-  onBlur: o
+  isSelected: t,
+  giftStyle: a,
+  setSelectedGiftStyle: s,
+  onFocus: o,
+  onBlur: c
 } = e;
-return (0, l.jsx)(i.Clickable, {
+return (0, i.jsx)(r.Clickable, {
   innerRef: n,
-  onClick: () => r(t),
-  onFocus: c,
-  onBlur: o,
-  children: (0, l.jsx)('img', {
+  onClick: () => s(a),
+  onFocus: o,
+  onBlur: c,
+  children: (0, i.jsx)('img', {
     style: {
       width: '100%',
       height: '100%'
     },
     alt: '',
-    src: p[t],
-    className: s ? a.customGiftBoxHighlighted : a.customGiftBox
+    src: f[a],
+    className: t ? l.customGiftBoxHighlighted : l.customGiftBox
   })
 });
   });

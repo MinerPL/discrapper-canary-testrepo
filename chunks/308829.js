@@ -1,26 +1,26 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 });
 var i = n(735250);
 n(470079);
 var a = n(481060),
-  l = n(906732),
-  s = n(785717),
+  s = n(906732),
+  l = n(785717),
   r = n(171368),
   o = n(689938),
   c = n(475174);
 
-function d(e) {
+function u(e) {
   let {
 user: t,
 channelId: n
   } = e, {
-analyticsLocations: d
-  } = (0, l.ZP)(), {
-trackUserProfileAction: u
-  } = (0, s.KZ)();
+analyticsLocations: u
+  } = (0, s.ZP)(), {
+trackUserProfileAction: d
+  } = (0, l.KZ)();
   return (0, i.jsx)('footer', {
 className: c.footer,
 children: (0, i.jsx)(a.Button, {
@@ -29,10 +29,10 @@ children: (0, i.jsx)(a.Button, {
   look: a.Button.Looks.BLANK,
   color: c.buttonColor,
   onClick: () => {
-    u({
+    d({
       action: 'PRESS_VIEW_PROFILE'
     }), (0, r.openUserProfileModal)({
-      sourceAnalyticsLocations: d,
+      sourceAnalyticsLocations: u,
       userId: t.id,
       channelId: n
     });

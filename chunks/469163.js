@@ -6,8 +6,8 @@ return H;
 var r = n(127118),
   i = n(258008),
   a = n(536411),
-  o = n(92981),
-  s = n(129370),
+  s = n(92981),
+  o = n(129370),
   l = n(695249),
   u = n(226259),
   c = n(700830),
@@ -50,8 +50,8 @@ function H(e) {
   value: r,
   textValue: i,
   minValue: a,
-  maxValue: o,
-  isDisabled: s,
+  maxValue: s,
+  isDisabled: o,
   isReadOnly: l,
   isRequired: u,
   onIncrement: c,
@@ -76,7 +76,7 @@ I.current && ((0, G.gb)('assertive'), (0, G.xQ)(i, 'assertive'));
   }, [i]);
   let S = (0, B.iW)(e => {
   m(), c(), n.current = window.setTimeout(() => {
-    (isNaN(o) || isNaN(r) || r < o) && S(60);
+    (isNaN(s) || isNaN(r) || r < s) && S(60);
   }, e);
 }),
 A = (0, B.iW)(e => {
@@ -97,8 +97,8 @@ spinButtonProps: {
   'aria-valuenow': isNaN(r) ? null : r,
   'aria-valuetext': i,
   'aria-valuemin': a,
-  'aria-valuemax': o,
-  'aria-disabled': s || null,
+  'aria-valuemax': s,
+  'aria-disabled': o || null,
   'aria-readonly': l || null,
   'aria-required': u || null,
   onKeyDown: e => {
@@ -158,8 +158,8 @@ V = {
   'ar-AE': r.Z,
   'bg-BG': i.Z,
   'cs-CZ': a.Z,
-  'da-DK': o.Z,
-  'de-DE': s.Z,
+  'da-DK': s.Z,
+  'de-DE': o.Z,
   'el-GR': l.Z,
   'en-US': u.Z,
   'es-ES': c.Z,

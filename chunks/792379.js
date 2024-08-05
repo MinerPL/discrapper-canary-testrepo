@@ -5,26 +5,26 @@ return L;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(597312),
-  s = n(727637),
+  s = n(597312),
+  l = n(727637),
   r = n(410030),
   o = n(100527),
   c = n(906732),
-  d = n(580552),
-  u = n(680295),
+  u = n(580552),
+  d = n(680295),
   h = n(5192),
   p = n(785717),
   m = n(318661),
   _ = n(78675),
   f = n(741308),
   E = n(588822),
-  C = n(899007),
-  g = n(900927),
+  g = n(899007),
+  C = n(900927),
   I = n(678738),
   x = n(502762),
   T = n(530),
-  v = n(256059),
-  N = n(679332),
+  N = n(256059),
+  v = n(679332),
   S = n(544989),
   Z = n(171368),
   A = n(308829),
@@ -37,9 +37,9 @@ function L(e) {
   let {
 user: t,
 channel: n
-  } = e, L = __OVERLAY__ || !(0, d.Z)(t.id), {
+  } = e, L = __OVERLAY__ || !(0, u.Z)(t.id), {
 analyticsLocations: P
-  } = (0, c.ZP)(o.Z.PROFILE_PANEL), O = (0, m.ZP)(t.id), y = (0, r.ZP)(), D = a.useRef(null), k = (0, s.Z)(D), U = e => {
+  } = (0, c.ZP)(o.Z.PROFILE_PANEL), O = (0, m.ZP)(t.id), y = (0, r.ZP)(), D = a.useRef(null), k = (0, l.Z)(D), U = e => {
 (0, Z.openUserProfileModal)({
   sourceAnalyticsLocations: P,
   userId: t.id,
@@ -61,11 +61,11 @@ children: (0, i.jsx)(p.Mt, {
     themeOverride: y,
     className: R.container,
     children: [
-      (0, i.jsxs)(l.u2, {
+      (0, i.jsxs)(s.u2, {
         children: [
           (0, i.jsx)(S.Z, {
             profileType: M.y0.PANEL,
-            children: (0, i.jsx)(N.Z, {
+            children: (0, i.jsx)(v.Z, {
               user: t
             })
           }),
@@ -78,14 +78,14 @@ children: (0, i.jsx)(p.Mt, {
                 profileType: M.y0.PANEL,
                 animateOnHover: !k
               }),
-              (0, i.jsx)(C.Z, {
+              (0, i.jsx)(g.Z, {
                 user: t,
                 displayProfile: O,
                 channelId: n.id,
                 profileType: M.y0.PANEL,
                 onOpenProfile: L ? void 0 : U
               }),
-              (0, i.jsx)(v.Z, {
+              (0, i.jsx)(N.Z, {
                 user: t
               })
             ]
@@ -108,7 +108,7 @@ children: (0, i.jsx)(p.Mt, {
                 className: j.overlay,
                 children: [
                   (0, i.jsx)(I.Z, {
-                    title: b.Z.Messages.USER_POPOUT_ABOUT_ME,
+                    heading: b.Z.Messages.USER_POPOUT_ABOUT_ME,
                     headingColor: 'header-primary',
                     children: (0, i.jsx)(E.Z, {
                       userBio: null == O ? void 0 : O.bio,
@@ -118,9 +118,9 @@ children: (0, i.jsx)(p.Mt, {
                     })
                   }),
                   (0, i.jsx)(I.Z, {
-                    title: b.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+                    heading: b.Z.Messages.BOT_PROFILE_CREATED_ON,
                     headingColor: 'header-primary',
-                    children: (0, i.jsx)(g.Z, {
+                    children: (0, i.jsx)(C.Z, {
                       userId: t.id
                     })
                   })
@@ -134,7 +134,7 @@ children: (0, i.jsx)(p.Mt, {
         user: t,
         channelId: n.id
       }),
-      (null == O ? void 0 : O.profileEffectId) != null && (0, i.jsx)(u.Z, {
+      (null == O ? void 0 : O.profileEffectId) != null && (0, i.jsx)(d.Z, {
         profileEffectId: null == O ? void 0 : O.profileEffectId,
         isHovering: k
       })

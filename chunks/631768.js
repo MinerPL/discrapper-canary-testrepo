@@ -1,8 +1,8 @@
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(981631);
 let c = u.Ucd.AUTO;
-class d extends(o = s.ZP.Store) {
+class d extends(s = o.ZP.Store) {
   get mode() {
 return c;
   }

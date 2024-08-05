@@ -1,7 +1,7 @@
 n(47120);
 var i = n(243814),
-  s = n(846027),
-  a = n(131951),
+  a = n(846027),
+  s = n(131951),
   r = n(594174),
   l = n(996106),
   o = n(452426),
@@ -38,15 +38,15 @@ handler(e) {
     throw new l.Z({
       errorCode: u.lTL.INVALID_USER
     }, 'Invalid user id: '.concat(t));
-  if (null != n && s.Z.setLocalPan(t, n.left, n.right), null != i && s.Z.setLocalVolume(t, i), null != o) {
-    let e = a.Z.isLocalMute(t);
-    (e && !o || !e && o) && s.Z.toggleLocalMute(t);
+  if (null != n && a.Z.setLocalPan(t, n.left, n.right), null != i && a.Z.setLocalVolume(t, i), null != o) {
+    let e = s.Z.isLocalMute(t);
+    (e && !o || !e && o) && a.Z.toggleLocalMute(t);
   }
   return {
     user_id: t,
-    pan: a.Z.getLocalPan(t),
-    volume: a.Z.getLocalVolume(t),
-    mute: a.Z.isLocalMute(t)
+    pan: s.Z.getLocalPan(t),
+    volume: s.Z.getLocalVolume(t),
+    mute: s.Z.isLocalMute(t)
   };
 }
   },
@@ -68,11 +68,11 @@ scope: {
 },
 validation: e => (0, o.Z)(e).required().keys({
   input: (0, o.Z)(e).keys({
-    device_id: e.string().valid(Object.keys(a.Z.getInputDevices())),
+    device_id: e.string().valid(Object.keys(s.Z.getInputDevices())),
     volume: e.number().min(0).max(100)
   }),
   output: (0, o.Z)(e).keys({
-    device_id: e.string().valid(Object.keys(a.Z.getOutputDevices())),
+    device_id: e.string().valid(Object.keys(s.Z.getOutputDevices())),
     volume: e.number().min(0).max(200)
   }),
   mode: (0, o.Z)(e).keys({
@@ -109,21 +109,21 @@ handler(e) {
       mute: h
     }
   } = e;
-  if (t && (null != t.device_id && s.Z.setInputDevice(t.device_id), null != t.volume && s.Z.setInputVolume(t.volume)), n && (null != n.device_id && s.Z.setOutputDevice(n.device_id), null != n.volume && s.Z.setOutputVolume(n.volume)), i) {
-    let e = a.Z.getMode(),
-      t = a.Z.getModeOptions();
+  if (t && (null != t.device_id && a.Z.setInputDevice(t.device_id), null != t.volume && a.Z.setInputVolume(t.volume)), n && (null != n.device_id && a.Z.setOutputDevice(n.device_id), null != n.volume && a.Z.setOutputVolume(n.volume)), i) {
+    let e = s.Z.getMode(),
+      t = s.Z.getModeOptions();
     null != i.type && (e = i.type), null != i.auto_threshold && (t.autoThreshold = i.auto_threshold), null != i.threshold && (t.threshold = i.threshold), null != i.shortcut && (t.shortcut = i.shortcut.map(e => [
       e.type,
       e.code
-    ])), null != i.delay && (t.delay = i.delay), s.Z.setMode(e, t);
+    ])), null != i.delay && (t.delay = i.delay), a.Z.setMode(e, t);
   }
-  if (null != r && s.Z.setAutomaticGainControl(r), null != l && s.Z.setEchoCancellation(l), null != o && s.Z.setNoiseSuppression(o), null != d && s.Z.setQoS(d), null != u && s.Z.setSilenceWarning(u), null != _) {
-    let e = a.Z.isSelfDeaf();
-    (e && !_ || !e && _) && s.Z.toggleSelfDeaf();
+  if (null != r && a.Z.setAutomaticGainControl(r), null != l && a.Z.setEchoCancellation(l), null != o && a.Z.setNoiseSuppression(o), null != d && a.Z.setQoS(d), null != u && a.Z.setSilenceWarning(u), null != _) {
+    let e = s.Z.isSelfDeaf();
+    (e && !_ || !e && _) && a.Z.toggleSelfDeaf();
   }
   if (null != h) {
-    let e = a.Z.isSelfMute();
-    (e && !h || !e && h) && s.Z.toggleSelfMute();
+    let e = s.Z.isSelfMute();
+    (e && !h || !e && h) && a.Z.toggleSelfMute();
   }
   return (0, c._X)();
 }

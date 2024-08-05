@@ -6,11 +6,11 @@ return i;
 return p;
   }
 }), n(47120), n(411104), n(653041);
-var i, s, a = n(230367),
+var i, a, s = n(230367),
   r = n(320215),
   l = n(240773),
   o = n(495852);
-(s = i || (i = {}))[s.UNSPECIFIED = 0] = 'UNSPECIFIED', s[s.OPEN_MARKETING_PAGE = 1] = 'OPEN_MARKETING_PAGE', s[s.OPEN_TIER_2_PAYMENT_MODAL = 2] = 'OPEN_TIER_2_PAYMENT_MODAL';
+(a = i || (i = {}))[a.UNSPECIFIED = 0] = 'UNSPECIFIED', a[a.OPEN_MARKETING_PAGE = 1] = 'OPEN_MARKETING_PAGE', a[a.OPEN_TIER_2_PAYMENT_MODAL = 2] = 'OPEN_TIER_2_PAYMENT_MODAL';
 class c extends o.C {
   create(e) {
 let t = {
@@ -26,40 +26,40 @@ return globalThis.Object.defineProperty(t, l.C, {
 }), void 0 !== e && (0, r.l)(this, t, e), t;
   }
   internalBinaryRead(e, t, n, i) {
-let s = null != i ? i : this.create(),
+let a = null != i ? i : this.create(),
   r = e.pos + t;
 for (; e.pos < r;) {
   let [t, i] = e.tag();
   switch (t) {
     case 1:
-      s.header = e.string();
+      a.header = e.string();
       break;
     case 2:
-      s.pill = e.string();
+      a.pill = e.string();
       break;
     case 3:
-      s.body = e.string();
+      a.body = e.string();
       break;
     case 4:
-      s.imageLink = e.string();
+      a.imageLink = e.string();
       break;
     case 5:
-      s.imageLinkLightTheme = e.string();
+      a.imageLinkLightTheme = e.string();
       break;
     default:
       let r = n.readUnknownField;
       if ('throw' === r)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
       let l = e.skip(i);
-      !1 !== r && (!0 === r ? a.z.onRead : r)(this.typeName, s, t, i, l);
+      !1 !== r && (!0 === r ? s.z.onRead : r)(this.typeName, a, t, i, l);
   }
 }
-return s;
+return a;
   }
   internalBinaryWrite(e, t, n) {
-'' !== e.header && t.tag(1, a.TD.LengthDelimited).string(e.header), '' !== e.pill && t.tag(2, a.TD.LengthDelimited).string(e.pill), '' !== e.body && t.tag(3, a.TD.LengthDelimited).string(e.body), '' !== e.imageLink && t.tag(4, a.TD.LengthDelimited).string(e.imageLink), '' !== e.imageLinkLightTheme && t.tag(5, a.TD.LengthDelimited).string(e.imageLinkLightTheme);
+'' !== e.header && t.tag(1, s.TD.LengthDelimited).string(e.header), '' !== e.pill && t.tag(2, s.TD.LengthDelimited).string(e.pill), '' !== e.body && t.tag(3, s.TD.LengthDelimited).string(e.body), '' !== e.imageLink && t.tag(4, s.TD.LengthDelimited).string(e.imageLink), '' !== e.imageLinkLightTheme && t.tag(5, s.TD.LengthDelimited).string(e.imageLinkLightTheme);
 let i = n.writeUnknownFields;
-return !1 !== i && (!0 == i ? a.z.onWrite : i)(this.typeName, e, t), t;
+return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, t), t;
   }
   constructor() {
 super('discord_protos.premium_marketing.v1.FeatureCard', [{
@@ -108,31 +108,31 @@ return globalThis.Object.defineProperty(t, l.C, {
 }), void 0 !== e && (0, r.l)(this, t, e), t;
   }
   internalBinaryRead(e, t, n, i) {
-let s = null != i ? i : this.create(),
+let a = null != i ? i : this.create(),
   r = e.pos + t;
 for (; e.pos < r;) {
   let [t, i] = e.tag();
   switch (t) {
     case 1:
-      s.copy = e.string();
+      a.copy = e.string();
       break;
     case 2:
-      s.buttonAction = e.int32();
+      a.buttonAction = e.int32();
       break;
     default:
       let r = n.readUnknownField;
       if ('throw' === r)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
       let l = e.skip(i);
-      !1 !== r && (!0 === r ? a.z.onRead : r)(this.typeName, s, t, i, l);
+      !1 !== r && (!0 === r ? s.z.onRead : r)(this.typeName, a, t, i, l);
   }
 }
-return s;
+return a;
   }
   internalBinaryWrite(e, t, n) {
-'' !== e.copy && t.tag(1, a.TD.LengthDelimited).string(e.copy), 0 !== e.buttonAction && t.tag(2, a.TD.Varint).int32(e.buttonAction);
+'' !== e.copy && t.tag(1, s.TD.LengthDelimited).string(e.copy), 0 !== e.buttonAction && t.tag(2, s.TD.Varint).int32(e.buttonAction);
 let i = n.writeUnknownFields;
-return !1 !== i && (!0 == i ? a.z.onWrite : i)(this.typeName, e, t), t;
+return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, t), t;
   }
   constructor() {
 super('discord_protos.premium_marketing.v1.SubscriptionButton', [{
@@ -168,39 +168,39 @@ return globalThis.Object.defineProperty(t, l.C, {
 }), void 0 !== e && (0, r.l)(this, t, e), t;
   }
   internalBinaryRead(e, t, n, i) {
-let s = null != i ? i : this.create(),
+let a = null != i ? i : this.create(),
   r = e.pos + t;
 for (; e.pos < r;) {
   let [t, i] = e.tag();
   switch (t) {
     case 1:
-      this.binaryReadMap1(s.heroArtLocalizedVideoLinksDarkTheme, e, n);
+      this.binaryReadMap1(a.heroArtLocalizedVideoLinksDarkTheme, e, n);
       break;
     case 2:
-      this.binaryReadMap2(s.heroArtLocalizedVideoLinksLightTheme, e, n);
+      this.binaryReadMap2(a.heroArtLocalizedVideoLinksLightTheme, e, n);
       break;
     case 3:
-      this.binaryReadMap3(s.heroArtVideoSubtitleLinks, e, n);
+      this.binaryReadMap3(a.heroArtVideoSubtitleLinks, e, n);
       break;
     default:
       let r = n.readUnknownField;
       if ('throw' === r)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
       let l = e.skip(i);
-      !1 !== r && (!0 === r ? a.z.onRead : r)(this.typeName, s, t, i, l);
+      !1 !== r && (!0 === r ? s.z.onRead : r)(this.typeName, a, t, i, l);
   }
 }
-return s;
+return a;
   }
   binaryReadMap1(e, t, n) {
 let i = t.uint32(),
-  s = t.pos + i,
-  a, r;
-for (; t.pos < s;) {
+  a = t.pos + i,
+  s, r;
+for (; t.pos < a;) {
   let [e, n] = t.tag();
   switch (e) {
     case 1:
-      a = t.string();
+      s = t.string();
       break;
     case 2:
       r = t.string();
@@ -209,17 +209,17 @@ for (; t.pos < s;) {
       throw new globalThis.Error('unknown map entry field for field discord_protos.premium_marketing.v1.Variant1Storage.hero_art_localized_video_links_dark_theme');
   }
 }
-e[null != a ? a : ''] = null != r ? r : '';
+e[null != s ? s : ''] = null != r ? r : '';
   }
   binaryReadMap2(e, t, n) {
 let i = t.uint32(),
-  s = t.pos + i,
-  a, r;
-for (; t.pos < s;) {
+  a = t.pos + i,
+  s, r;
+for (; t.pos < a;) {
   let [e, n] = t.tag();
   switch (e) {
     case 1:
-      a = t.string();
+      s = t.string();
       break;
     case 2:
       r = t.string();
@@ -228,17 +228,17 @@ for (; t.pos < s;) {
       throw new globalThis.Error('unknown map entry field for field discord_protos.premium_marketing.v1.Variant1Storage.hero_art_localized_video_links_light_theme');
   }
 }
-e[null != a ? a : ''] = null != r ? r : '';
+e[null != s ? s : ''] = null != r ? r : '';
   }
   binaryReadMap3(e, t, n) {
 let i = t.uint32(),
-  s = t.pos + i,
-  a, r;
-for (; t.pos < s;) {
+  a = t.pos + i,
+  s, r;
+for (; t.pos < a;) {
   let [e, n] = t.tag();
   switch (e) {
     case 1:
-      a = t.string();
+      s = t.string();
       break;
     case 2:
       r = t.string();
@@ -247,17 +247,17 @@ for (; t.pos < s;) {
       throw new globalThis.Error('unknown map entry field for field discord_protos.premium_marketing.v1.Variant1Storage.hero_art_video_subtitle_links');
   }
 }
-e[null != a ? a : ''] = null != r ? r : '';
+e[null != s ? s : ''] = null != r ? r : '';
   }
   internalBinaryWrite(e, t, n) {
 for (let n of Object.keys(e.heroArtLocalizedVideoLinksDarkTheme))
-  t.tag(1, a.TD.LengthDelimited).fork().tag(1, a.TD.LengthDelimited).string(n).tag(2, a.TD.LengthDelimited).string(e.heroArtLocalizedVideoLinksDarkTheme[n]).join();
+  t.tag(1, s.TD.LengthDelimited).fork().tag(1, s.TD.LengthDelimited).string(n).tag(2, s.TD.LengthDelimited).string(e.heroArtLocalizedVideoLinksDarkTheme[n]).join();
 for (let n of Object.keys(e.heroArtLocalizedVideoLinksLightTheme))
-  t.tag(2, a.TD.LengthDelimited).fork().tag(1, a.TD.LengthDelimited).string(n).tag(2, a.TD.LengthDelimited).string(e.heroArtLocalizedVideoLinksLightTheme[n]).join();
+  t.tag(2, s.TD.LengthDelimited).fork().tag(1, s.TD.LengthDelimited).string(n).tag(2, s.TD.LengthDelimited).string(e.heroArtLocalizedVideoLinksLightTheme[n]).join();
 for (let n of Object.keys(e.heroArtVideoSubtitleLinks))
-  t.tag(3, a.TD.LengthDelimited).fork().tag(1, a.TD.LengthDelimited).string(n).tag(2, a.TD.LengthDelimited).string(e.heroArtVideoSubtitleLinks[n]).join();
+  t.tag(3, s.TD.LengthDelimited).fork().tag(1, s.TD.LengthDelimited).string(n).tag(2, s.TD.LengthDelimited).string(e.heroArtVideoSubtitleLinks[n]).join();
 let i = n.writeUnknownFields;
-return !1 !== i && (!0 == i ? a.z.onWrite : i)(this.typeName, e, t), t;
+return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, t), t;
   }
   constructor() {
 super('discord_protos.premium_marketing.v1.Variant1Storage', [{
@@ -307,34 +307,34 @@ return globalThis.Object.defineProperty(t, l.C, {
 }), void 0 !== e && (0, r.l)(this, t, e), t;
   }
   internalBinaryRead(e, t, n, i) {
-let s = null != i ? i : this.create(),
+let a = null != i ? i : this.create(),
   r = e.pos + t;
 for (; e.pos < r;) {
   let [t, i] = e.tag();
   switch (t) {
     case 1:
-      s.link = e.string();
+      a.link = e.string();
       break;
     case 2:
-      s.locale = e.string();
+      a.locale = e.string();
       break;
     case 3:
-      s.isDefault = e.bool();
+      a.isDefault = e.bool();
       break;
     default:
       let r = n.readUnknownField;
       if ('throw' === r)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
       let l = e.skip(i);
-      !1 !== r && (!0 === r ? a.z.onRead : r)(this.typeName, s, t, i, l);
+      !1 !== r && (!0 === r ? s.z.onRead : r)(this.typeName, a, t, i, l);
   }
 }
-return s;
+return a;
   }
   internalBinaryWrite(e, t, n) {
-'' !== e.link && t.tag(1, a.TD.LengthDelimited).string(e.link), '' !== e.locale && t.tag(2, a.TD.LengthDelimited).string(e.locale), !1 !== e.isDefault && t.tag(3, a.TD.Varint).bool(e.isDefault);
+'' !== e.link && t.tag(1, s.TD.LengthDelimited).string(e.link), '' !== e.locale && t.tag(2, s.TD.LengthDelimited).string(e.locale), !1 !== e.isDefault && t.tag(3, s.TD.Varint).bool(e.isDefault);
 let i = n.writeUnknownFields;
-return !1 !== i && (!0 == i ? a.z.onWrite : i)(this.typeName, e, t), t;
+return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, t), t;
   }
   constructor() {
 super('discord_protos.premium_marketing.v1.Subtitle', [{
@@ -381,73 +381,73 @@ return globalThis.Object.defineProperty(t, l.C, {
 }), void 0 !== e && (0, r.l)(this, t, e), t;
   }
   internalBinaryRead(e, t, n, i) {
-let s = null != i ? i : this.create(),
+let a = null != i ? i : this.create(),
   r = e.pos + t;
 for (; e.pos < r;) {
   let [t, i] = e.tag();
   switch (t) {
     case 1:
-      s.header = e.string();
+      a.header = e.string();
       break;
     case 2:
-      s.subheader = e.string();
+      a.subheader = e.string();
       break;
     case 3:
-      s.videoLink = e.string();
+      a.videoLink = e.string();
       break;
     case 4:
-      s.helpArticleId = e.string();
+      a.helpArticleId = e.string();
       break;
     case 5:
-      s.featureCards.push(d.internalBinaryRead(e, e.uint32(), n));
+      a.featureCards.push(d.internalBinaryRead(e, e.uint32(), n));
       break;
     case 6:
-      s.button = _.internalBinaryRead(e, e.uint32(), n, s.button);
+      a.button = _.internalBinaryRead(e, e.uint32(), n, a.button);
       break;
     case 7:
-      s.dismissKey = e.string();
+      a.dismissKey = e.string();
       break;
     case 8:
-      s.heroArtVideoLinkLightTheme = e.string();
+      a.heroArtVideoLinkLightTheme = e.string();
       break;
     case 9:
-      s.heroArtImageLinkDarkTheme = e.string();
+      a.heroArtImageLinkDarkTheme = e.string();
       break;
     case 10:
-      s.heroArtImageLinkLightTheme = e.string();
+      a.heroArtImageLinkLightTheme = e.string();
       break;
     case 11:
-      s.modalTopPill = e.string();
+      a.modalTopPill = e.string();
       break;
     case 12:
-      s.body = e.string();
+      a.body = e.string();
       break;
     case 13:
-      s.heroArtVideoSubtitles.push(m.internalBinaryRead(e, e.uint32(), n));
+      a.heroArtVideoSubtitles.push(m.internalBinaryRead(e, e.uint32(), n));
       break;
     case 14:
-      s.storage = E.internalBinaryRead(e, e.uint32(), n, s.storage);
+      a.storage = E.internalBinaryRead(e, e.uint32(), n, a.storage);
       break;
     default:
       let r = n.readUnknownField;
       if ('throw' === r)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
       let l = e.skip(i);
-      !1 !== r && (!0 === r ? a.z.onRead : r)(this.typeName, s, t, i, l);
+      !1 !== r && (!0 === r ? s.z.onRead : r)(this.typeName, a, t, i, l);
   }
 }
-return s;
+return a;
   }
   internalBinaryWrite(e, t, n) {
-'' !== e.header && t.tag(1, a.TD.LengthDelimited).string(e.header), '' !== e.subheader && t.tag(2, a.TD.LengthDelimited).string(e.subheader), '' !== e.videoLink && t.tag(3, a.TD.LengthDelimited).string(e.videoLink), '' !== e.helpArticleId && t.tag(4, a.TD.LengthDelimited).string(e.helpArticleId);
+'' !== e.header && t.tag(1, s.TD.LengthDelimited).string(e.header), '' !== e.subheader && t.tag(2, s.TD.LengthDelimited).string(e.subheader), '' !== e.videoLink && t.tag(3, s.TD.LengthDelimited).string(e.videoLink), '' !== e.helpArticleId && t.tag(4, s.TD.LengthDelimited).string(e.helpArticleId);
 for (let i = 0; i < e.featureCards.length; i++)
-  d.internalBinaryWrite(e.featureCards[i], t.tag(5, a.TD.LengthDelimited).fork(), n).join();
-e.button && _.internalBinaryWrite(e.button, t.tag(6, a.TD.LengthDelimited).fork(), n).join(), '' !== e.dismissKey && t.tag(7, a.TD.LengthDelimited).string(e.dismissKey), '' !== e.heroArtVideoLinkLightTheme && t.tag(8, a.TD.LengthDelimited).string(e.heroArtVideoLinkLightTheme), '' !== e.heroArtImageLinkDarkTheme && t.tag(9, a.TD.LengthDelimited).string(e.heroArtImageLinkDarkTheme), '' !== e.heroArtImageLinkLightTheme && t.tag(10, a.TD.LengthDelimited).string(e.heroArtImageLinkLightTheme), '' !== e.modalTopPill && t.tag(11, a.TD.LengthDelimited).string(e.modalTopPill), '' !== e.body && t.tag(12, a.TD.LengthDelimited).string(e.body);
+  d.internalBinaryWrite(e.featureCards[i], t.tag(5, s.TD.LengthDelimited).fork(), n).join();
+e.button && _.internalBinaryWrite(e.button, t.tag(6, s.TD.LengthDelimited).fork(), n).join(), '' !== e.dismissKey && t.tag(7, s.TD.LengthDelimited).string(e.dismissKey), '' !== e.heroArtVideoLinkLightTheme && t.tag(8, s.TD.LengthDelimited).string(e.heroArtVideoLinkLightTheme), '' !== e.heroArtImageLinkDarkTheme && t.tag(9, s.TD.LengthDelimited).string(e.heroArtImageLinkDarkTheme), '' !== e.heroArtImageLinkLightTheme && t.tag(10, s.TD.LengthDelimited).string(e.heroArtImageLinkLightTheme), '' !== e.modalTopPill && t.tag(11, s.TD.LengthDelimited).string(e.modalTopPill), '' !== e.body && t.tag(12, s.TD.LengthDelimited).string(e.body);
 for (let i = 0; i < e.heroArtVideoSubtitles.length; i++)
-  m.internalBinaryWrite(e.heroArtVideoSubtitles[i], t.tag(13, a.TD.LengthDelimited).fork(), n).join();
-e.storage && E.internalBinaryWrite(e.storage, t.tag(14, a.TD.LengthDelimited).fork(), n).join();
+  m.internalBinaryWrite(e.heroArtVideoSubtitles[i], t.tag(13, s.TD.LengthDelimited).fork(), n).join();
+e.storage && E.internalBinaryWrite(e.storage, t.tag(14, s.TD.LengthDelimited).fork(), n).join();
 let i = n.writeUnknownFields;
-return !1 !== i && (!0 == i ? a.z.onWrite : i)(this.typeName, e, t), t;
+return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, t), t;
   }
   constructor() {
 super('discord_protos.premium_marketing.v1.AnnouncementModalVariant1Properties', [{

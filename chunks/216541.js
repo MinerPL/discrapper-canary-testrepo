@@ -1,55 +1,55 @@
 n.d(t, {
   d: function() {
-return v;
+return C;
   }
 });
-var r = n(735250);
+var a = n(735250);
 n(470079);
-var a = n(120356),
-  o = n.n(a),
-  l = n(780384),
+var r = n(120356),
+  s = n.n(r),
+  o = n(780384),
   i = n(481060),
-  s = n(410030),
+  l = n(410030),
   c = n(876917),
   d = n(328456),
   u = n(616066),
   f = n(562643),
-  p = n(63243),
-  g = n(244488);
-let v = e => {
+  g = n(63243),
+  p = n(244488);
+let C = e => {
   let {
 product: t,
 isPurchased: n,
-isHighlighted: a,
-user: v,
-forCollectedModal: C,
-profileEffectClassName: E
+isHighlighted: r,
+user: C,
+forCollectedModal: m,
+profileEffectClassName: v
   } = e, {
-firstProfileEffect: b,
+firstProfileEffect: E,
 firstAvatarDecoration: h
-  } = (0, d.R)(t), m = (0, s.ZP)(), y = (0, l.ap)(m);
-  return (0, r.jsxs)('div', {
+  } = (0, d.R)(t), b = (0, l.ZP)(), y = (0, o.ap)(b);
+  return (0, a.jsxs)('div', {
 className: f.container,
 children: [
-  null != b ? (0, r.jsx)('div', {
-    className: o()(f.profileEffectShopPreview, E),
-    children: (0, r.jsx)(c.Z, {
-      isHovering: a,
-      profileEffectId: b.id,
+  null != E ? (0, a.jsx)('div', {
+    className: s()(f.profileEffectShopPreview, v),
+    children: (0, a.jsx)(c.Z, {
+      isHovering: r,
+      profileEffectId: E.id,
       isPurchased: n,
-      forCollectedModal: C,
+      forCollectedModal: m,
       removeSetHeight: !0
     })
   }) : null,
-  null != h ? (0, r.jsx)('div', {
+  null != h ? (0, a.jsx)('div', {
     className: f.avatarDecorationPreview,
-    children: (0, r.jsx)(u.R, {
+    children: (0, a.jsx)(u.R, {
       item: h,
-      user: v,
+      user: C,
       avatarSize: i.AvatarSizes.SIZE_120,
       isPurchased: n,
-      isHighlighted: a,
-      avatarPlaceholderSrc: y ? g : p
+      isHighlighted: r,
+      avatarPlaceholderSrc: y ? p : g
     })
   }) : null
 ]

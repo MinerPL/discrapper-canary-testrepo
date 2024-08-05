@@ -60,8 +60,8 @@ return Z;
 var r = n(392711),
   i = n(913527),
   a = n.n(i),
-  o = n(859334),
-  s = n(594174),
+  s = n(859334),
+  o = n(594174),
   l = n(70956),
   u = n(709054),
   c = n(849464),
@@ -71,46 +71,46 @@ let E = 365,
   f = 366,
   h = 4,
   p = [
-o.Ci.MO.weekday,
-o.Ci.TU.weekday,
-o.Ci.WE.weekday,
-o.Ci.TH.weekday,
-o.Ci.FR.weekday
+s.Ci.MO.weekday,
+s.Ci.TU.weekday,
+s.Ci.WE.weekday,
+s.Ci.TH.weekday,
+s.Ci.FR.weekday
   ],
   m = [
-o.Ci.SU.weekday,
-o.Ci.MO.weekday,
-o.Ci.TU.weekday,
-o.Ci.WE.weekday,
-o.Ci.TH.weekday
+s.Ci.SU.weekday,
+s.Ci.MO.weekday,
+s.Ci.TU.weekday,
+s.Ci.WE.weekday,
+s.Ci.TH.weekday
   ],
   I = [
-o.Ci.TU.weekday,
-o.Ci.WE.weekday,
-o.Ci.TH.weekday,
-o.Ci.FR.weekday,
-o.Ci.SA.weekday
+s.Ci.TU.weekday,
+s.Ci.WE.weekday,
+s.Ci.TH.weekday,
+s.Ci.FR.weekday,
+s.Ci.SA.weekday
   ],
   T = [
-o.Ci.SA.weekday,
-o.Ci.SU.weekday
+s.Ci.SA.weekday,
+s.Ci.SU.weekday
   ],
   g = [
-o.Ci.FR.weekday,
-o.Ci.SA.weekday
+s.Ci.FR.weekday,
+s.Ci.SA.weekday
   ],
   S = [
-o.Ci.SU.weekday,
-o.Ci.MO.weekday
+s.Ci.SU.weekday,
+s.Ci.MO.weekday
   ],
   A = [
-o.Ci.SU.weekday,
-o.Ci.MO.weekday,
-o.Ci.TU.weekday,
-o.Ci.WE.weekday,
-o.Ci.TH.weekday,
-o.Ci.FR.weekday,
-o.Ci.SA.weekday
+s.Ci.SU.weekday,
+s.Ci.MO.weekday,
+s.Ci.TU.weekday,
+s.Ci.WE.weekday,
+s.Ci.TH.weekday,
+s.Ci.FR.weekday,
+s.Ci.SA.weekday
   ],
   N = new Set([
 0,
@@ -155,7 +155,7 @@ a = [{
     })
   }
 ];
-  return N.has(n.getDay()) ? (null === (t = s.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) && a.push({
+  return N.has(n.getDay()) ? (null === (t = o.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) && a.push({
 value: c.z.WEEKEND_ONLY,
 label: _.Z.Messages.CREATE_EVENT_RECUR_WEEKENDS
   }) : a.push({
@@ -175,10 +175,10 @@ function y(e, t, n) {
   null == n && (n = a()());
   let r = a()(e),
 i = null != t && '' !== t ? a()(t) : void 0,
-o = null != t && r.isSame(i, 'day');
+s = null != t && r.isSame(i, 'day');
   return {
 startDateTimeString: C(r, n),
-endDateTimeString: null != i ? o ? i.format('LT') : R(i, n) : void 0,
+endDateTimeString: null != i ? s ? i.format('LT') : R(i, n) : void 0,
 currentOrPastEvent: r <= n,
 upcomingEvent: r <= a()().add(1, 'hour'),
 withinStartWindow: r <= a()().add(15, 'minute'),
@@ -187,7 +187,7 @@ diffMinutes: r.diff(n, 'minutes')
 }
 
 function D(e) {
-  return new o.OG(A[e]);
+  return new s.OG(A[e]);
 }
 
 function L(e, t) {
@@ -236,9 +236,9 @@ function w(e, t) {
 function x(e) {
   var t;
   let n = null != e.byWeekday ? [...e.byWeekday] : null,
-r = null === (t = e.byNWeekday) || void 0 === t ? void 0 : t.map(e => new o.OG(e.day, e.n)),
+r = null === (t = e.byNWeekday) || void 0 === t ? void 0 : t.map(e => new s.OG(e.day, e.n)),
 i = new Date(e.start);
-  return i.setMilliseconds(0), new o.Ci({
+  return i.setMilliseconds(0), new s.Ci({
 dtstart: i,
 until: null != e.end ? new Date(e.end) : null,
 freq: e.frequency,
@@ -256,9 +256,9 @@ function G(e, t, n) {
 i = [],
 a = n;
   a.setMilliseconds(0);
-  let o = new Date();
-  o.setFullYear(o.getFullYear() + h);
-  for (let n = 0; n < e && a < o; n++) {
+  let s = new Date();
+  s.setFullYear(s.getFullYear() + h);
+  for (let n = 0; n < e && a < s; n++) {
 let e = t.after(a, 0 === n && !r);
 if (null == e)
   break;
@@ -283,9 +283,9 @@ r = new Date(u.default.extractTimestamp(t));
   if (n.getUTCHours() !== r.getUTCHours() || n.getUTCMinutes() !== r.getUTCMinutes() || n.getUTCSeconds() !== r.getUTCSeconds())
 return !1;
   switch (e.frequency) {
-case o.Ci.WEEKLY:
+case s.Ci.WEEKLY:
   return n.getUTCDay() === r.getUTCDay();
-case o.Ci.YEARLY:
+case s.Ci.YEARLY:
   return n.getUTCDate() === r.getUTCDate();
 default:
   return !0;
@@ -310,42 +310,42 @@ let n = F(t),
   r = V(t),
   i = D(t.toDate().getUTCDay()),
   a = Math.ceil(t.toDate().getUTCDate() / 7),
-  s = t.toDate();
-switch (s.setMilliseconds(0), e) {
+  o = t.toDate();
+switch (o.setMilliseconds(0), e) {
   case c.z.NONE:
     return null;
   case c.z.WEEKLY:
-    return new o.Ci({
-      dtstart: s,
-      freq: o.Ci.WEEKLY
+    return new s.Ci({
+      dtstart: o,
+      freq: s.Ci.WEEKLY
     });
   case c.z.BIWEEKLY:
-    return new o.Ci({
-      dtstart: s,
-      freq: o.Ci.WEEKLY,
+    return new s.Ci({
+      dtstart: o,
+      freq: s.Ci.WEEKLY,
       interval: 2
     });
   case c.z.MONTHLY:
-    return new o.Ci({
-      dtstart: s,
-      freq: o.Ci.MONTHLY,
+    return new s.Ci({
+      dtstart: o,
+      freq: s.Ci.MONTHLY,
       byweekday: [i.nth(a)]
     });
   case c.z.YEARLY:
-    return new o.Ci({
-      dtstart: s,
-      freq: o.Ci.YEARLY
+    return new s.Ci({
+      dtstart: o,
+      freq: s.Ci.YEARLY
     });
   case c.z.WEEKDAY_ONLY:
-    return new o.Ci({
-      dtstart: s,
-      freq: o.Ci.DAILY,
+    return new s.Ci({
+      dtstart: o,
+      freq: s.Ci.DAILY,
       byweekday: n
     });
   case c.z.WEEKEND_ONLY:
-    return new o.Ci({
-      dtstart: s,
-      freq: o.Ci.DAILY,
+    return new s.Ci({
+      dtstart: o,
+      freq: s.Ci.DAILY,
       byweekday: r
     });
 }
@@ -356,7 +356,7 @@ return null;
 dtstart: r,
 until: i,
 freq: a,
-interval: s,
+interval: o,
 byweekday: l,
 bynweekday: u,
 bymonth: d,
@@ -371,7 +371,7 @@ day: e[0]
 start: r.toISOString(),
 end: null == i ? void 0 : i.toISOString(),
 frequency: a,
-interval: s,
+interval: o,
 byWeekday: l,
 byNWeekday: h,
 byMonth: d,
@@ -386,15 +386,15 @@ function Z(e, t) {
 return c.z.NONE;
   let n = x(t);
   switch (n.options.freq) {
-case o.Ci.WEEKLY:
+case s.Ci.WEEKLY:
   if (n.options.interval < 1 || n.options.interval > 2)
     return c.z.NONE;
   return 1 === n.options.interval ? c.z.WEEKLY : c.z.BIWEEKLY;
-case o.Ci.YEARLY:
+case s.Ci.YEARLY:
   return c.z.YEARLY;
-case o.Ci.MONTHLY:
+case s.Ci.MONTHLY:
   return c.z.MONTHLY;
-case o.Ci.DAILY:
+case s.Ci.DAILY:
   if ((0, r.isEqual)(n.options.byweekday, F(e)))
     return c.z.WEEKDAY_ONLY;
   if ((0, r.isEqual)(n.options.byweekday, V(e)))

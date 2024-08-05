@@ -1,12 +1,12 @@
 n.d(t, {
   Do: function() {
-return o;
+return s;
   },
   Iu: function() {
 return a;
   },
   qp: function() {
-return s;
+return o;
   }
 });
 var r = [
@@ -22,11 +22,11 @@ function a(e) {
   return -1 !== r.indexOf(e);
 }
 
-function o(e) {
+function s(e) {
   return -1 !== i.indexOf(e);
 }
 
-function s(e, t, n) {
+function o(e, t, n) {
   if ('YYYY' === e)
 throw RangeError('Use `yyyy` instead of `YYYY` (in `'.concat(t, '`) for formatting years to the input `').concat(n, '`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md'));
   if ('YY' === e)

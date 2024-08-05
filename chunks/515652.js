@@ -1,12 +1,12 @@
 n.d(t, {
   s: function() {
-return s;
+return o;
   }
 });
 var r, i = n(778882),
   a = n(401010);
 
-function o(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -14,7 +14,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-var s = (o(r = {}, i.FILE, {
+var o = (s(r = {}, i.FILE, {
   exposeProperties: {
 files: function(e) {
   return Array.prototype.slice.call(e.files);
@@ -24,7 +24,7 @@ items: function(e) {
 }
   },
   matchesTypes: ['Files']
-}), o(r, i.HTML, {
+}), s(r, i.HTML, {
   exposeProperties: {
 html: function(e, t) {
   return (0, a.R)(e, t, '');
@@ -34,7 +34,7 @@ html: function(e, t) {
 'Html',
 'text/html'
   ]
-}), o(r, i.URL, {
+}), s(r, i.URL, {
   exposeProperties: {
 urls: function(e, t) {
   return (0, a.R)(e, t, '').split('\n');
@@ -44,7 +44,7 @@ urls: function(e, t) {
 'Url',
 'text/uri-list'
   ]
-}), o(r, i.TEXT, {
+}), s(r, i.TEXT, {
   exposeProperties: {
 text: function(e, t) {
   return (0, a.R)(e, t, '');

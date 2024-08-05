@@ -8,15 +8,15 @@ var a = r.define('RSAPublicKey', function() {
   this.seq().obj(this.key('modulus').int(), this.key('publicExponent').int());
 });
 t.RSAPublicKey = a;
-var o = r.define('SubjectPublicKeyInfo', function() {
-  this.seq().obj(this.key('algorithm').use(s), this.key('subjectPublicKey').bitstr());
+var s = r.define('SubjectPublicKeyInfo', function() {
+  this.seq().obj(this.key('algorithm').use(o), this.key('subjectPublicKey').bitstr());
 });
-t.PublicKey = o;
-var s = r.define('AlgorithmIdentifier', function() {
+t.PublicKey = s;
+var o = r.define('AlgorithmIdentifier', function() {
 this.seq().obj(this.key('algorithm').objid(), this.key('none').null_().optional(), this.key('curve').objid().optional(), this.key('params').seq().obj(this.key('p').int(), this.key('q').int(), this.key('g').int()).optional());
   }),
   l = r.define('PrivateKeyInfo', function() {
-this.seq().obj(this.key('version').int(), this.key('algorithm').use(s), this.key('subjectPrivateKey').octstr());
+this.seq().obj(this.key('version').int(), this.key('algorithm').use(o), this.key('subjectPrivateKey').octstr());
   });
 t.PrivateKey = l;
 var u = r.define('EncryptedPrivateKeyInfo', function() {

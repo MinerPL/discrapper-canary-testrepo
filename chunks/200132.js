@@ -16,7 +16,7 @@ var t = 'nolla yksi kaksi kolme neljä viisi kuusi seitsemän kahdeksan yhdeksä
   ];
 
 function r(e, r, i, a) {
-  var o = '';
+  var s = '';
   switch (i) {
     case 's':
       return a ? 'muutaman sekunnin' : 'muutama sekunti';
@@ -25,31 +25,31 @@ function r(e, r, i, a) {
     case 'm':
       return a ? 'minuutin' : 'minuutti';
     case 'mm':
-      o = a ? 'minuutin' : 'minuuttia';
+      s = a ? 'minuutin' : 'minuuttia';
       break;
     case 'h':
       return a ? 'tunnin' : 'tunti';
     case 'hh':
-      o = a ? 'tunnin' : 'tuntia';
+      s = a ? 'tunnin' : 'tuntia';
       break;
     case 'd':
       return a ? 'päivän' : 'päivä';
     case 'dd':
-      o = a ? 'päivän' : 'päivää';
+      s = a ? 'päivän' : 'päivää';
       break;
     case 'M':
       return a ? 'kuukauden' : 'kuukausi';
     case 'MM':
-      o = a ? 'kuukauden' : 'kuukautta';
+      s = a ? 'kuukauden' : 'kuukautta';
       break;
     case 'y':
       return a ? 'vuoden' : 'vuosi';
     case 'yy':
-      o = a ? 'vuoden' : 'vuotta';
+      s = a ? 'vuoden' : 'vuotta';
   }
-  return o = function(e, r) {
+  return s = function(e, r) {
     return e < 10 ? r ? n[e] : t[e] : e;
-  }(e, a) + ' ' + o;
+  }(e, a) + ' ' + s;
 }
 e.defineLocale('fi', {
   months: 'tammikuu_helmikuu_maaliskuu_huhtikuu_toukokuu_kesäkuu_heinäkuu_elokuu_syyskuu_lokakuu_marraskuu_joulukuu'.split('_'),

@@ -17,11 +17,11 @@ var s = n(735250),
   u = n(100527),
   _ = n(367907),
   I = n(906732),
-  E = n(807582),
-  T = n(26323),
-  m = n(366980),
-  N = n(246946),
-  S = n(379070),
+  E = n(263145),
+  T = n(807582),
+  m = n(26323),
+  N = n(366980),
+  S = n(246946),
   h = n(709586),
   g = n(267642),
   C = n(999382),
@@ -93,7 +93,7 @@ return (0, s.jsxs)(o.Card, {
         }) : null
       ]
     }),
-    (0, s.jsx)(S.Z, {
+    (0, s.jsx)(E.Z, {
       prefix: ''.concat('https://discord.gg', '/'),
       value: a,
       onChange: this.handleInviteCodeChange,
@@ -145,7 +145,7 @@ if (e)
     children: (0, R.i)(null == t ? void 0 : t.code)
   });
 if (null != n && n.length > 0) {
-  let e = (0, m.Z)(n);
+  let e = (0, N.Z)(n);
   return (0, s.jsx)(o.FormText, {
     className: A.__invalid_marginTop20,
     type: o.FormTextTypes.LABEL_DESCRIPTOR,
@@ -176,7 +176,7 @@ return null == t ? null : e ? (0, s.jsx)(c.Z, {}) : (0, s.jsxs)(o.FormSection, {
         (0, s.jsx)('div', {
           children: O.Z.Messages.VANITY_URL
         }),
-        (0, s.jsx)(E.Z, {
+        (0, s.jsx)(T.Z, {
           guild: t,
           guildFeature: f.oNc.VANITY_URL,
           className: A.guildFeatureAvailabilityIndicator,
@@ -221,7 +221,7 @@ super(...e), M(this, 'state', {
       location_stack: r
     },
     guild_id: null == i ? void 0 : i.id
-  }), (0, T.Z)({
+  }), (0, m.Z)({
     analyticsLocations: r,
     analyticsSourceLocation: {
       section: n,
@@ -248,7 +248,7 @@ t = (0, l.cj)([p.Z], () => ({
   hasError: p.Z.hasError(),
   errorDetails: p.Z.errorDetails
 })),
-n = (0, l.e7)([N.Z], () => N.Z.hideInstantInvites),
+n = (0, l.e7)([S.Z], () => S.Z.hideInstantInvites),
 {
   analyticsLocations: a
 } = (0, I.ZP)(u.Z.VANITY_URL);

@@ -1,6 +1,6 @@
 n.d(t, {
   JJ: function() {
-return o;
+return s;
   },
   KG: function() {
 return i;
@@ -17,18 +17,18 @@ let i = new IntersectionObserver(e => {
   let t = 0,
     a = null;
   for (let {
-      isIntersecting: o,
-      intersectionRatio: s,
+      isIntersecting: s,
+      intersectionRatio: o,
       target: l
     }
     of e) {
-    if (o && 1 === s) {
+    if (s && 1 === o) {
       i.disconnect();
       let e = l.getAttribute(r.ie);
       if (null != e)
         return n(e);
     }
-    s > t && (t = s, a = l.getAttribute(r.ie));
+    o > t && (t = o, a = l.getAttribute(r.ie));
   }
   i.disconnect(), n(a);
 }, {
@@ -44,13 +44,13 @@ function a(e, t) {
 let i = new IntersectionObserver(e => {
   let t = 0,
     a = null;
-  for (let o = e.length - 1; o >= 0; o--) {
+  for (let s = e.length - 1; s >= 0; s--) {
     let {
-      isIntersecting: s,
+      isIntersecting: o,
       intersectionRatio: l,
       target: u
-    } = e[o];
-    if (s && 1 === l) {
+    } = e[s];
+    if (o && 1 === l) {
       i.disconnect();
       let e = u.getAttribute(r.ie);
       if (null != e)
@@ -67,7 +67,7 @@ for (let e of t)
   });
 }
 
-function o(e, t) {
+function s(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0.5;
   return new Promise(r => {
 let i = new IntersectionObserver(e => {

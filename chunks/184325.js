@@ -8,8 +8,8 @@ return O;
 }), n(653041);
 var r, i, a = n(735250);
 n(470079);
-var o = n(120356),
-  s = n.n(o),
+var s = n(120356),
+  o = n.n(s),
   l = n(481060),
   u = n(315263),
   c = n(100527),
@@ -34,7 +34,7 @@ user: t,
 guildId: n,
 className: r,
 shrinkAtCount: i,
-shrinkToSize: o,
+shrinkToSize: s,
 isTryItOutFlow: O,
 onBadgeClick: R,
 size: C = 0
@@ -49,7 +49,7 @@ src: (0, g.jC)(e.icon)
   }));
   if (t.isClyde())
 return (0, a.jsx)('div', {
-  className: s()(r, N.container, N.clydeBadgeList),
+  className: o()(r, N.container, N.clydeBadgeList),
   'aria-label': A.Z.Messages.PROFILE_USER_BADGES,
   role: 'group',
   children: (0, a.jsx)(_.Z, {})
@@ -61,11 +61,11 @@ description: A.Z.Messages.PREMIUM_BADGE_TOOLTIP.format({
   date: new Date()
 })
   });
-  let P = null != i && null != o && M.length > i ? o : C;
+  let P = null != i && null != s && M.length > i ? s : C;
   return (0, a.jsx)(d.Gt, {
 value: D,
 children: (0, a.jsx)('div', {
-  className: s()(r, M.length > 0 ? N.containerWithContent : N.container),
+  className: o()(r, M.length > 0 ? N.containerWithContent : N.container),
   'aria-label': A.Z.Messages.PROFILE_USER_BADGES,
   role: 'group',
   children: M.map(e => (0, a.jsx)(l.Tooltip, {
@@ -104,7 +104,7 @@ children: (0, a.jsx)('div', {
         alt: ' ',
         'aria-hidden': !0,
         src: e.src,
-        className: s()({
+        className: o()({
           [N.profileBadge24]: 0 === P,
           [N.profileBadge22]: 1 === P,
           [N.profileBadge20]: 2 === P,

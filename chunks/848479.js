@@ -2,17 +2,17 @@ n(724458);
 var r = n(259443),
   i = n(579806),
   a = n(77450),
-  o = n(998502);
-let s = new r.Y('ProcessUtilsElectron');
+  s = n(998502);
+let o = new r.Y('ProcessUtilsElectron');
 class l extends a.h {
   setupReportingTimer() {
 var e, t;
 let n = null === i.Z || void 0 === i.Z ? void 0 : null === (e = i.Z.processUtils) || void 0 === e ? void 0 : e.setMemoryInformation;
 if (null == n) {
-  s.log('setMemoryInformation not available.');
+  o.log('setMemoryInformation not available.');
   return;
 }
-(null === (t = performance.memory) || void 0 === t ? void 0 : t.usedJSHeapSize) == null && s.error('usedJSHeapSize is not available.');
+(null === (t = performance.memory) || void 0 === t ? void 0 : t.usedJSHeapSize) == null && o.error('usedJSHeapSize is not available.');
 setInterval(() => {
   var e, t, r;
   let i = null !== (t = null === (e = performance.memory) || void 0 === e ? void 0 : e.usedJSHeapSize) && void 0 !== t ? t : 0;
@@ -40,7 +40,7 @@ return this.lastMemoryUsageKB = e, e;
   }
   static getCurrentMemoryUsageKBCore() {
 try {
-  let e = o.ZP.getDiscordMemoryUsage();
+  let e = s.ZP.getDiscordMemoryUsage();
   if (null == e)
     return 0;
   let t = Object.values(e).reduce((e, t) => e + t, 0);
@@ -50,11 +50,11 @@ try {
 }
   }
   getMemoryUsageDetails() {
-return o.ZP.getDiscordMemoryUsage();
+return s.ZP.getDiscordMemoryUsage();
   }
   getMemoryUsageElectronRenderer() {
 try {
-  return o.ZP.getDiscordMemoryUsageElectronRenderer();
+  return s.ZP.getDiscordMemoryUsageElectronRenderer();
 } catch (e) {
   return null;
 }

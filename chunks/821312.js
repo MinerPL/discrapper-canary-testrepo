@@ -9,8 +9,8 @@ var i = t(735250),
   l = t.n(s),
   o = t(831209),
   r = t(481060),
-  c = t(367907),
-  d = t(177862),
+  d = t(367907),
+  c = t(177862),
   u = t(981631),
   I = t(689938),
   m = t(648005);
@@ -22,31 +22,31 @@ transitionState: t,
 onClose: s
   } = e, [_, N] = a.useState([]), [E, T] = a.useState(), h = [{
   text: I.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_DM_SPAM,
-  value: d.C2.DM_SPAM
+  value: c.C2.DM_SPAM
 },
 {
   text: I.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_MENTION_SPAM,
-  value: d.C2.MENTION_SPAM
+  value: c.C2.MENTION_SPAM
 },
 {
   text: I.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_CHANNEL_SPAM,
-  value: d.C2.CHANNEL_SPAM
+  value: c.C2.CHANNEL_SPAM
 },
 {
   text: I.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_SUS_NEW_MEMBERS,
-  value: d.C2.SUS_NEW_MEMBERS
+  value: c.C2.SUS_NEW_MEMBERS
 },
 {
   text: I.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_CHANGING_SETTINGS,
-  value: d.C2.CHANGING_SETTINGS
+  value: c.C2.CHANGING_SETTINGS
 },
 {
   text: I.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_OTHER,
-  value: d.C2.OTHER
+  value: c.C2.OTHER
 }
   ];
 
-  function p(e) {
+  function g(e) {
 _.includes(e) ? N(n => n.filter(n => n !== e)) : N(n => [
   ...n,
   e
@@ -96,19 +96,19 @@ children: [
         } = e;
         return (0, i.jsxs)('div', {
           className: l()(m.optionContainer, {
-            [m.optionContainerOther]: t === d.C2.OTHER
+            [m.optionContainerOther]: t === c.C2.OTHER
           }),
           children: [
             (0, i.jsxs)(r.Clickable, {
               className: m.optionText,
-              onClick: () => p(t),
+              onClick: () => g(t),
               children: [
                 (0, i.jsx)('div', {
                   children: (0, i.jsx)(r.Checkbox, {
                     type: r.Checkbox.Types.INVERTED,
                     size: 20,
                     value: _.includes(t),
-                    onChange: () => p(t)
+                    onChange: () => g(t)
                   })
                 }),
                 (0, i.jsx)(r.Text, {
@@ -118,7 +118,7 @@ children: [
                 })
               ]
             }),
-            t === d.C2.OTHER && _.includes(d.C2.OTHER) && (0, i.jsx)('div', {
+            t === c.C2.OTHER && _.includes(c.C2.OTHER) && (0, i.jsx)('div', {
               className: m.textboxContainer,
               children: (0, i.jsx)(r.TextArea, {
                 className: m.serverLockdownReasonText,
@@ -138,7 +138,7 @@ children: [
   (0, i.jsx)(r.ModalFooter, {
     children: (0, i.jsx)(r.Button, {
       onClick: function() {
-        (0, c.yw)(u.rMx.GUILD_RAID_LOCKDOWN_FEEDBACK, {
+        (0, d.yw)(u.rMx.GUILD_RAID_LOCKDOWN_FEEDBACK, {
           raid_lockdown_feedback_type: _,
           raid_lockdown_feedback_other_reason: E,
           guild_id: n

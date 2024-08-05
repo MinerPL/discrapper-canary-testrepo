@@ -3,8 +3,8 @@ n.d(t, {
 return c;
   }
 }), n(47120);
-var r, i, a, o = n(735250),
-  s = n(470079),
+var r, i, a, s = n(735250),
+  o = n(470079),
   l = n(846519);
 
 function u(e, t, n) {
@@ -16,7 +16,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 (a = r || (r = {})).SVG = 'svg', a.CANVAS = 'canvas';
-class c extends(i = s.Component) {
+class c extends(i = o.Component) {
   componentDidMount() {
 (null == this.props.versionKey || !(this.props.versionKey < 0)) && this.loadAnimation();
   }
@@ -31,21 +31,21 @@ if (null != this.animation)
   this.props.shouldAnimate && (null == e || !e.shouldAnimate) ? this.props.resetOnPlay ? this.animation.goToAndPlay(0) : this.animation.play() : !this.props.shouldAnimate && (null == e || e.shouldAnimate) && (this.animation.pause(), null != this.props.pauseAtFrame && this.animation.goToAndStop(this.props.pauseAtFrame, !0));
   }
   render() {
-return (0, o.jsx)('div', {
+return (0, s.jsx)('div', {
   className: this.props.className,
   ref: this.animationRef
 });
   }
   constructor(...e) {
-super(...e), u(this, 'animationRef', s.createRef()), u(this, 'animation', void 0), u(this, 'delayTimeout', new l.V7()), u(this, 'loadAnimation', async () => {
+super(...e), u(this, 'animationRef', o.createRef()), u(this, 'animation', void 0), u(this, 'delayTimeout', new l.V7()), u(this, 'loadAnimation', async () => {
   let {
     importData: e,
     loop: t,
     autoplay: r,
     delay: i,
     renderer: a,
-    rendererSettings: o,
-    shouldAnimate: s
+    rendererSettings: s,
+    shouldAnimate: o
   } = this.props;
   null != this.animation && this.animation.destroy();
   let [l, {
@@ -59,9 +59,9 @@ super(...e), u(this, 'animationRef', s.createRef()), u(this, 'animation', void 0
       container: this.animationRef.current,
       renderer: a,
       loop: t,
-      autoplay: r && null == i && s,
+      autoplay: r && null == i && o,
       animationData: l,
-      rendererSettings: o
+      rendererSettings: s
     }), null != i ? this.delayTimeout.start(i, () => {
       var e;
       null === (e = this.animation) || void 0 === e || e.play();

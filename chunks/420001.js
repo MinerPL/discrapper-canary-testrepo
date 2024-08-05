@@ -2,11 +2,11 @@ n(757143);
 var r = n(911969),
   i = n(10718),
   a = n(367790),
-  o = n(895924),
-  s = n(826298),
-  l = n(695346),
-  u = n(594174),
-  c = n(156361),
+  s = n(895924),
+  o = n(826298),
+  l = n(588468),
+  u = n(695346),
+  c = n(594174),
   d = n(5192),
   _ = n(417574),
   E = n(877565),
@@ -18,7 +18,7 @@ function m(e) {
   let t = _.X.exec(e);
   if (null != t) {
 let n = t[1],
-  r = u.default.getUser(n);
+  r = c.default.getUser(n);
 return null == r || !r.bot || r.isClyde() ? null : {
   type: 'mention',
   cleanedQuery: e.substring(t[0].length).trim(),
@@ -32,18 +32,18 @@ let I = {
   sentinel: void 0,
   focusMode: f.QZ.MANUAL,
   matches(e, t, n, r, i) {
-if (i.commands === f.L8.DISABLED || i.commands === f.L8.OLD_BUILT_INS || n.length < 2 || !l.Xk.getSetting())
+if (i.commands === f.L8.DISABLED || i.commands === f.L8.OLD_BUILT_INS || n.length < 2 || !u.Xk.getSetting())
   return !1;
 let a = m(n);
 return null != a && a.cleanedQuery.length > 0;
   },
-  queryResults(e, t, n, o, u) {
-if (!l.Xk.getSetting())
+  queryResults(e, t, n, s, l) {
+if (!u.Xk.getSetting())
   return h.K;
 let c = m(n);
 if (null == c)
   return h.K;
-let d = (0, s.hV)(e, c.cleanedQuery),
+let d = (0, o.hV)(e, c.cleanedQuery),
   {
     commands: _,
     sections: E
@@ -54,11 +54,11 @@ let d = (0, s.hV)(e, c.cleanedQuery),
     limit: f.AQ,
     placeholderCount: f.YP,
     scoreMethod: a.p.COMMAND_OR_APPLICATION,
-    allowFetch: u
+    allowFetch: l
   });
 if (null == _)
   return h.K;
-let p = _;
+let p = _.filter(e => e.section.botId === c.user.id);
 if (d.hasSpaceTerminator) {
   let e = d.text.trim(),
     t = e + ' ';
@@ -82,19 +82,19 @@ let {
   guild: r,
   channel: i,
   query: a,
-  options: o,
-  onHover: s,
-  onClick: l
+  options: s,
+  onHover: o,
+  onClick: u
 } = e;
 return (0, E.HI)({
   query: a,
   selectedIndex: n,
   autocompletes: t,
-  onHover: s,
-  onClick: l,
+  onHover: o,
+  onClick: u,
   titleWithQuery: p.Z.Messages.COMMANDS_MATCHING,
   titleWithoutQuery: p.Z.Messages.COMMANDS,
-  Component: o.commands === f.L8.OLD_BUILT_INS ? c.ZP.Command : c.ZP.NewCommand,
+  Component: s.commands === f.L8.OLD_BUILT_INS ? l.ZP.Command : l.ZP.NewCommand,
   getProps: e => {
     let {
       command: t,
@@ -126,16 +126,16 @@ let {
   type: r,
   options: i,
   channel: a
-} = e, s = h.Z.onSelect({
+} = e, o = h.Z.onSelect({
   results: t,
   index: n,
   type: r,
   options: i,
   channel: a,
-  location: o.Vh.SUGGESTION
+  location: s.Vh.SUGGESTION
 });
-return null == s ? null : {
-  ...s,
+return null == o ? null : {
+  ...o,
   type: f.z2.COMMAND_SUGGESTION
 };
   }

@@ -4,8 +4,8 @@ return g;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(481060),
+  a = n(470079),
+  s = n(481060),
   r = n(212093),
   l = n(703656),
   o = n(769654),
@@ -26,14 +26,14 @@ children: [
     className: I.icon,
     children: (0, i.jsx)(e, {
       className: I.__invalid_iconInner,
-      color: a.tokens.colors.WHITE.css
+      color: s.tokens.colors.WHITE.css
     })
   }) : (0, i.jsx)('img', {
     className: I.icon,
     alt: '',
     src: e
   }),
-  (0, i.jsx)(a.Text, {
+  (0, i.jsx)(s.Text, {
     className: I.text,
     variant: 'text-md/medium',
     children: t
@@ -52,11 +52,11 @@ t = e => {
     guild_id: e
   }), (0, o.X)(e);
 };
-  return (0, i.jsxs)(s.Fragment, {
+  return (0, i.jsxs)(a.Fragment, {
 children: [
   (0, i.jsx)('header', {
     className: I.header,
-    children: (0, i.jsx)(a.FormTitle, {
+    children: (0, i.jsx)(s.FormTitle, {
       tag: 'h2',
       className: I.title,
       children: E.Z.Messages.ADD_FRIEND_MAKE_FRIENDS
@@ -72,7 +72,7 @@ children: [
       }), e.name, () => {
         t(e.id);
       })),
-      m(a.CompassIcon, E.Z.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
+      m(s.CompassIcon, E.Z.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
         (0, r.AQ)(), d.default.track(h.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, l.uL)(h.Z5c.GUILD_DISCOVERY);
       })
     ]

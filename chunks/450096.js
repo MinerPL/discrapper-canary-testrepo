@@ -1,18 +1,18 @@
 n.d(t, {
   L: function() {
-return o;
+return s;
   }
 }), n(315314), n(610138), n(216116), n(78328), n(815648), n(47120);
 var r = n(470079),
   i = n(772848);
-let a = new Worker(new URL(n.p + n.u('77459'), n.b));
+let a = new Worker(new URL('/assets/' + n.u('77459'), n.b));
 
-function o(e, t, n) {
-  let o = n && 1 === t && null != e,
-[s, l] = r.useState(void 0);
+function s(e, t, n) {
+  let s = n && 1 === t && null != e,
+[o, l] = r.useState(void 0);
   return r.useEffect(() => {
 let t = !1;
-if (o) {
+if (s) {
   var n;
   (n = e, new Promise(e => {
     let t = (0, i.Z)(),
@@ -20,10 +20,10 @@ if (o) {
         let {
           data: {
             id: i,
-            png: o
+            png: s
           }
         } = n;
-        t === i && (e(o), a.removeEventListener('message', r));
+        t === i && (e(s), a.removeEventListener('message', r));
       };
     a.addEventListener('message', r), a.postMessage({
       id: t,
@@ -39,6 +39,6 @@ return () => {
 };
   }, [
 e,
-o
-  ]), s;
+s
+  ]), o;
 }

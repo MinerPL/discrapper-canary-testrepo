@@ -6,16 +6,16 @@ return c;
 var r = n(470079),
   i = n(442837),
   a = n(135869),
-  o = n(763296),
-  s = n(242291),
+  s = n(763296),
+  o = n(242291),
   l = n(22382),
   u = n(747071);
 
 function c(e, t) {
   let {
 currentPreviewRef: n
-  } = r.useContext(a.Z), c = (0, i.e7)([o.Z], () => o.Z.isPlayingSound(e.soundId), [e]), d = r.useCallback(r => {
-null != n.current && n.current.pause(), null != t && (0, s.GN)(e, t, r);
+  } = r.useContext(a.Z), c = (0, i.e7)([s.Z], () => s.Z.isPlayingSound(e.soundId), [e]), d = r.useCallback(r => {
+null != n.current && n.current.pause(), null != t && (0, o.GN)(e, t, r);
   }, [
 e,
 n,

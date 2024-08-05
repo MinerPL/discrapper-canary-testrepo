@@ -6,14 +6,14 @@ return l;
 var r = n(442837),
   i = n(570140),
   a = n(271383),
-  o = n(9156),
-  s = n(594174);
+  s = n(9156),
+  o = n(594174);
 
 function l(e, t) {
   var n;
-  let r = null === (n = s.default.getCurrentUser()) || void 0 === n ? void 0 : n.id,
-l = o.ZP.isSuppressEveryoneEnabled(t),
-u = o.ZP.isSuppressRolesEnabled(t),
+  let r = null === (n = o.default.getCurrentUser()) || void 0 === n ? void 0 : n.id,
+l = s.ZP.isSuppressEveryoneEnabled(t),
+u = s.ZP.isSuppressRolesEnabled(t),
 c = null != e.mentions && e.mentions.some(e => e.id === r),
 d = null == t || null == r ? null : a.ZP.getMember(t, r),
 _ = null != e.mention_roles && null != d && null != d.roles && e.mention_roles.some(e => d.roles.includes(e));

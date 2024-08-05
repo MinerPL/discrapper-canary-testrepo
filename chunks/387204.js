@@ -1,8 +1,8 @@
-var i, a, s, r, l = n(735250),
+var i, s, a, r, l = n(735250),
   o = n(470079),
   c = n(120356),
-  d = n.n(c),
-  u = n(481060),
+  u = n.n(c),
+  d = n(481060),
   _ = n(689938),
   E = n(20356);
 let I = {
@@ -16,13 +16,13 @@ let {
   className: t,
   textClassName: n,
   type: i = I.BLOCK,
-  style: a
+  style: s
 } = this.props;
 return (0, l.jsxs)('div', {
-  className: d()(t, i),
-  style: a,
+  className: u()(t, i),
+  style: s,
   children: [
-    (0, l.jsxs)(u.Text, {
+    (0, l.jsxs)(d.Text, {
       variant: 'text-sm/bold',
       tag: 'div',
       color: 'text-positive',
@@ -32,8 +32,8 @@ return (0, l.jsxs)('div', {
         ':'
       ]
     }),
-    (0, l.jsx)(u.Text, {
-      className: d()(E.tip, n),
+    (0, l.jsx)(d.Text, {
+      className: u()(E.tip, n),
       variant: 'text-sm/normal',
       children: e
     })
@@ -41,9 +41,9 @@ return (0, l.jsxs)('div', {
 });
   }
 }
-i = m, a = 'Types', s = I, a in i ? Object.defineProperty(i, a, {
-  value: s,
+i = m, s = 'Types', a = I, s in i ? Object.defineProperty(i, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = s, t.Z = m;
+}) : i[s] = a, t.Z = m;

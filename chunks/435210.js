@@ -11,7 +11,7 @@ for (var t = [], n = 0; n < arguments.length; n++)
   t.push(u(arguments[n]));
 return t.join(' ');
   }
-  for (var n = 1, r = arguments, i = r.length, o = String(e).replace(a, function(e) {
+  for (var n = 1, r = arguments, i = r.length, s = String(e).replace(a, function(e) {
   if ('%%' === e)
     return '%';
   if (n >= i)
@@ -30,9 +30,9 @@ return t.join(' ');
     default:
       return e;
   }
-}), s = r[n]; n < i; s = r[++n])
-m(s) || !A(s) ? o += ' ' + s : o += ' ' + u(s);
-  return o;
+}), o = r[n]; n < i; o = r[++n])
+m(o) || !A(o) ? s += ' ' + o : s += ' ' + u(o);
+  return s;
 }, t.deprecate = function(e, n) {
   if (void 0 !== r && !0 === r.noDeprecation)
 return e;
@@ -51,11 +51,11 @@ if (!i) {
 return e.apply(this, arguments);
   };
 };
-var o = {},
-  s = /^$/;
+var s = {},
+  o = /^$/;
 if (r.env.NODE_DEBUG) {
   var l = r.env.NODE_DEBUG;
-  s = RegExp('^' + (l = l.replace(/[|\\{}()[\]^$+?.]/g, '\\$&').replace(/\*/g, '.*').replace(/,/g, '$|^').toUpperCase()) + '$', 'i');
+  o = RegExp('^' + (l = l.replace(/[|\\{}()[\]^$+?.]/g, '\\$&').replace(/\*/g, '.*').replace(/,/g, '$|^').toUpperCase()) + '$', 'i');
 }
 
 function u(e, n) {
@@ -75,17 +75,17 @@ function d(e, t) {
   return e;
 }
 t.debuglog = function(e) {
-  if (!o[e = e.toUpperCase()]) {
-if (s.test(e)) {
+  if (!s[e = e.toUpperCase()]) {
+if (o.test(e)) {
   var n = r.pid;
-  o[e] = function() {
+  s[e] = function() {
     var r = t.format.apply(t, arguments);
     console.error('%s %d: %s', e, n, r);
   };
 } else
-  o[e] = function() {};
+  s[e] = function() {};
   }
-  return o[e];
+  return s[e];
 }, t.inspect = u, u.colors = {
   bold: [
 1,
@@ -152,10 +152,10 @@ if (s.test(e)) {
 
 function _(e, n, r) {
   if (e.customInspect && n && O(n.inspect) && n.inspect !== t.inspect && !(n.constructor && n.constructor.prototype === n)) {
-var i, a, o = n.inspect(r, e);
-return !T(o) && (o = _(e, o, r)), o;
+var i, a, s = n.inspect(r, e);
+return !T(s) && (s = _(e, s, r)), s;
   }
-  var s = function(e, t) {
+  var o = function(e, t) {
 if (g(t))
   return e.stylize('undefined', 'undefined');
 if (T(t)) {
@@ -164,8 +164,8 @@ if (T(t)) {
 }
 return I(t) ? e.stylize('' + t, 'number') : p(t) ? e.stylize('' + t, 'boolean') : m(t) ? e.stylize('null', 'null') : void 0;
   }(e, n);
-  if (s)
-return s;
+  if (o)
+return o;
   var l = Object.keys(n);
   var u = (i = {}, l.forEach(function(e, t) {
 i[e] = !0;
@@ -198,8 +198,8 @@ return R[0] + d + R[1];
   if (r < 0)
 return S(n) ? e.stylize(RegExp.prototype.toString.call(n), 'regexp') : e.stylize('[Object]', 'special');
   return e.seen.push(n), a = A ? function(e, t, n, r, i) {
-  for (var a = [], o = 0, s = t.length; o < s; ++o)
-    D(t, String(o)) ? a.push(f(e, t, n, r, String(o), !0)) : a.push('');
+  for (var a = [], s = 0, o = t.length; s < o; ++s)
+    D(t, String(s)) ? a.push(f(e, t, n, r, String(s), !0)) : a.push('');
   return i.forEach(function(i) {
     !i.match(/^\d+$/) && a.push(f(e, t, n, r, i, !0));
   }), a;
@@ -219,19 +219,19 @@ function E(e) {
 }
 
 function f(e, t, n, r, i, a) {
-  var o, s, l;
+  var s, o, l;
   if ((l = Object.getOwnPropertyDescriptor(t, i) || {
   value: t[i]
-}).get ? s = l.set ? e.stylize('[Getter/Setter]', 'special') : e.stylize('[Getter]', 'special') : l.set && (s = e.stylize('[Setter]', 'special')), !D(r, i) && (o = '[' + i + ']'), !s && (0 > e.seen.indexOf(l.value) ? (s = m(n) ? _(e, l.value, null) : _(e, l.value, n - 1)).indexOf('\n') > -1 && (s = a ? s.split('\n').map(function(e) {
+}).get ? o = l.set ? e.stylize('[Getter/Setter]', 'special') : e.stylize('[Getter]', 'special') : l.set && (o = e.stylize('[Setter]', 'special')), !D(r, i) && (s = '[' + i + ']'), !o && (0 > e.seen.indexOf(l.value) ? (o = m(n) ? _(e, l.value, null) : _(e, l.value, n - 1)).indexOf('\n') > -1 && (o = a ? o.split('\n').map(function(e) {
   return '  ' + e;
-}).join('\n').slice(2) : '\n' + s.split('\n').map(function(e) {
+}).join('\n').slice(2) : '\n' + o.split('\n').map(function(e) {
   return '   ' + e;
-}).join('\n')) : s = e.stylize('[Circular]', 'special')), g(o)) {
+}).join('\n')) : o = e.stylize('[Circular]', 'special')), g(s)) {
 if (a && i.match(/^\d+$/))
-  return s;
-(o = JSON.stringify('' + i)).match(/^"([a-zA-Z_][a-zA-Z_0-9]*)"$/) ? (o = o.slice(1, -1), o = e.stylize(o, 'name')) : (o = o.replace(/'/g, '\\\'').replace(/\\"/g, '"').replace(/(^"|"$)/g, '\''), o = e.stylize(o, 'string'));
+  return o;
+(s = JSON.stringify('' + i)).match(/^"([a-zA-Z_][a-zA-Z_0-9]*)"$/) ? (s = s.slice(1, -1), s = e.stylize(s, 'name')) : (s = s.replace(/'/g, '\\\'').replace(/\\"/g, '"').replace(/(^"|"$)/g, '\''), s = e.stylize(s, 'string'));
   }
-  return o + ': ' + s;
+  return s + ': ' + o;
 }
 
 function h(e) {
@@ -388,13 +388,13 @@ var i = t.pop();
 if ('function' != typeof i)
   throw TypeError('The last argument must be of type Function');
 var a = this,
-  o = function() {
+  s = function() {
     return i.apply(a, arguments);
   };
 e.apply(this, t).then(function(e) {
-  r.nextTick(o.bind(null, null, e));
+  r.nextTick(s.bind(null, null, e));
 }, function(e) {
-  r.nextTick(b.bind(null, e, o));
+  r.nextTick(b.bind(null, e, s));
 });
   }
   return Object.setPrototypeOf(t, Object.getPrototypeOf(e)), Object.defineProperties(t, i(e)), t;

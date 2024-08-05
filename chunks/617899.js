@@ -1,7 +1,7 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(481060),
+  a = n(470079),
+  s = n(481060),
   r = n(904245),
   l = n(944486),
   o = n(82950),
@@ -18,7 +18,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class E extends s.PureComponent {
+class E extends a.PureComponent {
   render() {
 let e = ''.concat(u.Z.Messages.INVITE_NOTICE_MESSAGE, '\n').concat(u.Z.Messages.INVITE_NOTICE_MESSAGE_PART_2);
 return (0, i.jsx)(o.Z, {
@@ -38,7 +38,7 @@ super(...e), h(this, 'handleInvite', () => {
   let {
     guild: e
   } = this.props;
-  (0, a.openModalLazy)(async () => {
+  (0, s.openModalLazy)(async () => {
     let {
       default: t
     } = await Promise.all([

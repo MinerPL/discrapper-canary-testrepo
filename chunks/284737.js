@@ -9,7 +9,7 @@ return f;
 return E;
   },
   T_: function() {
-return s;
+return o;
   },
   al: function() {
 return l;
@@ -24,12 +24,12 @@ return d;
 var r = n(392711),
   i = n(570140),
   a = n(228488),
-  o = n(830917);
+  s = n(830917);
 
-function s(e, t) {
+function o(e, t) {
   i.Z.dispatch({
 type: 'WINDOW_FOCUS',
-windowId: (0, o.ZY)(e),
+windowId: (0, s.ZY)(e),
 focused: t
   });
 }
@@ -37,7 +37,7 @@ focused: t
 function l(e) {
   i.Z.dispatch({
 type: 'WINDOW_HIDDEN',
-windowId: (0, o.ZY)(e)
+windowId: (0, s.ZY)(e)
   });
 }
 let u = (0, r.memoize)(e => (0, r.debounce)((t, n) => {
@@ -50,11 +50,11 @@ height: n
 }, 100));
 
 function c(e) {
-  u((0, o.ZY)(e))(e.innerWidth, e.innerHeight);
+  u((0, s.ZY)(e))(e.innerWidth, e.innerHeight);
 }
 
 function d(e) {
-  let t = (0, o.ZY)(e);
+  let t = (0, s.ZY)(e);
   i.Z.dispatch({
 type: 'WINDOW_FULLSCREEN_CHANGE',
 windowId: t,
@@ -63,7 +63,7 @@ isElementFullscreen: (0, a.rB)(null, e.document)
 }
 
 function _(e) {
-  let t = (0, o.ZY)(e);
+  let t = (0, s.ZY)(e);
   i.Z.dispatch({
 type: 'WINDOW_VISIBILITY_CHANGE',
 windowId: t,
@@ -72,7 +72,7 @@ visible: 'visible' === e.document.visibilityState
 }
 
 function E(e) {
-  let t = (0, o.ZY)(e),
+  let t = (0, s.ZY)(e),
 n = e.document;
   i.Z.dispatch({
 type: 'WINDOW_INIT',
@@ -88,6 +88,6 @@ visible: 'visible' === n.visibilityState
 function f(e) {
   i.Z.dispatch({
 type: 'WINDOW_UNLOAD',
-windowId: (0, o.ZY)(e)
+windowId: (0, s.ZY)(e)
   });
 }

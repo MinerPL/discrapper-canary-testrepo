@@ -12,8 +12,8 @@ return function(t, n, r) {
   i = n(261469);
 n(968598);
 var a = n(592093),
-  o = n(59199),
-  s = n(118403),
+  s = n(59199),
+  o = n(118403),
   l = function(e) {
 function t(e, n) {
   ! function(e, t) {
@@ -72,7 +72,7 @@ return ! function(e, t) {
   {
     key: 'interpolate',
     value: function(e) {
-      return new s(this, o.create(e));
+      return new o(this, s.create(e));
     }
   },
   {

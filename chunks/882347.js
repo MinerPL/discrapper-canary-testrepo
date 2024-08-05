@@ -6,8 +6,8 @@ return I;
 var r = n(570140),
   i = n(881052),
   a = n(728345),
-  o = n(812206),
-  s = n(973616),
+  s = n(812206),
+  o = n(973616),
   l = n(630388),
   u = n(317381),
   c = n(424291),
@@ -17,7 +17,7 @@ var r = n(570140),
 async function f(e, t) {
   try {
 var n;
-return null !== (n = o.Z.getApplication(e)) && void 0 !== n ? n : s.Z.createFromServer(await a.Z.fetchApplication(e));
+return null !== (n = s.Z.getApplication(e)) && void 0 !== n ? n : o.Z.createFromServer(await a.Z.fetchApplication(e));
   } catch (n) {
 r.Z.dispatch({
   type: 'EMBEDDED_ACTIVITY_LAUNCH_FAIL',
@@ -50,9 +50,9 @@ channel: r,
 user: i
   } = e;
   if (null == i.nsfwAllowed) {
-var a, o;
+var a, s;
 let e = null != t ? t : await f(n, r.getGuildId());
-if (null == e || null !== (o = null === (a = e.embeddedActivityConfig) || void 0 === a ? void 0 : a.requires_age_gate) && void 0 !== o && o && !await new Promise(t => {
+if (null == e || null !== (s = null === (a = e.embeddedActivityConfig) || void 0 === a ? void 0 : a.requires_age_gate) && void 0 !== s && s && !await new Promise(t => {
     (0, c.V)({
       application: e,
       onAgree: () => t(!0),

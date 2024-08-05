@@ -10,18 +10,18 @@ return o;
   }
 });
 var i = n(544891),
-  a = n(570140),
-  s = n(881052),
+  s = n(570140),
+  a = n(881052),
   r = n(981631);
 
 function l(e) {
-  a.Z.dispatch({
+  s.Z.dispatch({
 type: 'DISMISS_MEDIA_POST_SHARE_PROMPT',
 threadId: e
   });
 }
 async function o(e) {
-  a.Z.dispatch({
+  s.Z.dispatch({
 type: 'MEDIA_POST_EMBED_FETCH',
 threadId: e
   });
@@ -29,13 +29,13 @@ threadId: e
 let t = (await i.tn.get({
   url: r.ANM.MEDIA_POST_RESHARE_GET_PREVIEW(e)
 })).body;
-a.Z.dispatch({
+s.Z.dispatch({
   type: 'MEDIA_POST_EMBED_FETCH_SUCCESS',
   threadId: e,
   mediaPostEmbed: t
 });
   } catch (t) {
-a.Z.dispatch({
+s.Z.dispatch({
   type: 'MEDIA_POST_EMBED_FETCH_FAILURE',
   threadId: e
 });
@@ -50,6 +50,6 @@ return (await i.tn.post({
   }
 })).body;
   } catch (e) {
-throw new s.Hx(e);
+throw new a.Hx(e);
   }
 }

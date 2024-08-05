@@ -56,7 +56,7 @@ Z
 });
   }, [t]), y = null;
   return (!T || A || b) && !v && !M && (y = (0, i.jsx)(o.TextBadge, {
-color: s.Z.unsafe_rawColors.BRAND_260.css,
+color: s.Z.colors.BADGE_BRAND_BG.css,
 text: x.Z.Messages.NEW,
 className: S.newChannel
   })), (0, i.jsx)(C.m, {

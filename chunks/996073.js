@@ -1,8 +1,8 @@
 var r = n(470079),
   i = n(442837),
   a = n(230711),
-  o = n(607070),
-  s = n(663389),
+  s = n(607070),
+  o = n(663389),
   l = n(526761),
   u = n(981631);
 let c = Object.freeze({
@@ -18,8 +18,8 @@ let c = Object.freeze({
 });
 t.Z = function(e, t, n) {
   let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-u = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
-d = (0, i.e7)([s.Z], () => s.Z.getScrollPosition());
+u = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
+d = (0, i.e7)([o.Z], () => o.Z.getScrollPosition());
   (0, r.useEffect)(() => {
 let r = e.current;
 if (null != r && t === d)

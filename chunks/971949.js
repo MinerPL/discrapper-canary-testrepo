@@ -1,47 +1,47 @@
-s.r(n), s.d(n, {
+n.r(s), n.d(s, {
   default: function() {
 return d;
   }
 });
-var _ = s(735250);
-s(470079);
-var L = s(692547),
-  a = s(481060),
-  t = s(906732),
-  o = s(98278),
-  r = s(790527),
-  c = s(474936),
-  M = s(981631),
-  i = s(689938),
-  A = s(987089),
-  l = s(535731),
-  D = s(483569);
+var _ = n(735250);
+n(470079);
+var a = n(692547),
+  L = n(481060),
+  t = n(906732),
+  o = n(98278),
+  r = n(790527),
+  c = n(474936),
+  M = n(981631),
+  i = n(689938),
+  A = n(987089),
+  l = n(535731),
+  D = n(483569);
 
-function u(e, n) {
-  return (0, _.jsx)(a.TextBadge, {
+function u(e, s) {
+  return (0, _.jsx)(L.TextBadge, {
 text: e,
 className: l.newBadge,
-color: L.Z.unsafe_rawColors.BRAND_500.css
-  }, n);
+color: a.Z.unsafe_rawColors.BRAND_500.css
+  }, s);
 }
 
 function d(e) {
-  var n;
+  var s;
   let {
-guildCount: s,
-onClose: L,
+guildCount: n,
+onClose: a,
 analyticsLocations: l,
 ...d
   } = e;
-  let f = (n = L, function(e, s) {
-  return (0, _.jsx)(a.Clickable, {
+  let f = (s = a, function(e, n) {
+  return (0, _.jsx)(L.Clickable, {
     className: A.learnMoreLink,
     tag: 'span',
     onClick: () => {
-      n(), (0, o.z)();
+      s(), (0, o.z)();
     },
     children: e
-  }, s);
+  }, n);
 }),
 {
   analyticsLocations: U
@@ -50,19 +50,19 @@ analyticsLocations: l,
 value: U,
 children: (0, _.jsx)(r.Z, {
   artURL: D,
-  onClose: L,
+  onClose: a,
   type: c.cd.GUILD_CAP_MODAL_UPSELL,
   title: i.Z.Messages.GUILD_CAP_UPSELL_MODAL_TITLE,
-  body: s < M.DZw ? i.Z.Messages.GUILD_CAP_UPSELL_MODAL_NEAR_LIMIT_BODY.format({
-    guildCount: s,
+  body: n < M.DZw ? i.Z.Messages.GUILD_CAP_UPSELL_MODAL_NEAR_LIMIT_BODY.format({
+    guildCount: n,
     onAndMore: f,
     newBadgeHook: u
   }) : i.Z.Messages.GUILD_CAP_UPSELL_MODAL_AT_LIMIT_BODY.format({
     onAndMore: f,
     newBadgeHook: u
   }),
-  context: s < M.DZw ? i.Z.Messages.GUILD_CAP_UPSELL_MODAL_NEAR_LIMIT_CONTEXT.format({
-    guildCount: s
+  context: n < M.DZw ? i.Z.Messages.GUILD_CAP_UPSELL_MODAL_NEAR_LIMIT_CONTEXT.format({
+    guildCount: n
   }) : i.Z.Messages.GUILD_CAP_UPSELL_MODAL_AT_LIMIT_CONTEXT,
   glowUp: i.Z.Messages.GUILD_CAP_UPSELL_MODAL_GLOW_UP.format({
     onAndMore: f

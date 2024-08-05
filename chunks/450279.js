@@ -13,7 +13,7 @@ name: e.mimeType.split('/').slice(1)[0]
 }
 
 function a(e, t, n, a) {
-  var o, s, l;
+  var s, o, l;
   let u = {},
 c = {},
 d = [],
@@ -80,11 +80,11 @@ else if ('video' === e.kind) {
   }
   let h = {};
   for (let e of d) {
-let o = c[e.codecId];
-if (null == o)
-  continue;
-let s = t(e.ssrc);
+let s = c[e.codecId];
 if (null == s)
+  continue;
+let o = t(e.ssrc);
+if (null == o)
   continue;
 let l = {
   type: e.kind,
@@ -93,26 +93,26 @@ let l = {
   sinkWant: (0, r.f)(n, e.ssrc, 'video' === e.kind),
   sinkWantAsInt: (0, r.F)(n, e.ssrc),
   sinkWantLocal: (0, r.f)(a, e.ssrc, 'video' === e.kind),
-  codec: i(o),
+  codec: i(s),
   bytesReceived: e.bytesReceived,
   packetsReceived: e.packetsReceived,
   packetsLost: e.packetsLost
 };
 if ('audio' === e.kind) {
   let t = void 0 !== e.jitterBufferDelay && void 0 !== e.jitterBufferEmittedCount ? Math.round(1000 * e.jitterBufferDelay / e.jitterBufferEmittedCount) : 0;
-  null == h[s] && (h[s] = []), h[s].push({
+  null == h[o] && (h[o] = []), h[o].push({
     ...l,
     audioLevel: e.audioLevel,
     jitter: 1000 * e.jitter,
     jitterBuffer: t
   });
 } else if ('video' === e.kind) {
-  null == h[s] && (h[s] = []);
+  null == h[o] && (h[o] = []);
   let t = null !== e.frameWidth ? {
     width: e.frameWidth,
     height: e.frameHeight
   } : void 0;
-  h[s].push({
+  h[o].push({
     ...l,
     resolution: t,
     framesDecoded: e.framesDecoded,
@@ -133,10 +133,10 @@ if ('audio' === e.kind) {
   });
 }
   }
-  let p = (null !== (o = E.currentRoundTripTime) && void 0 !== o ? o : 0) * 1000;
+  let p = (null !== (s = E.currentRoundTripTime) && void 0 !== s ? s : 0) * 1000;
   return {
 transport: {
-  availableOutgoingBitrate: null !== (s = E.availableOutgoingBitrate) && void 0 !== s ? s : 0,
+  availableOutgoingBitrate: null !== (o = E.availableOutgoingBitrate) && void 0 !== o ? o : 0,
   bytesReceived: E.bytesReceived,
   bytesSent: E.bytesSent,
   ping: p

@@ -3,10 +3,10 @@ n.d(t, {
 return _;
   },
   uX: function() {
-return s;
+return o;
   }
 });
-var r, i, a, o, s, l, u = n(442837),
+var r, i, a, s, o, l, u = n(442837),
   c = n(570140),
   d = n(981631);
 
@@ -16,7 +16,7 @@ function _(e) {
 'ready'
   ].includes(e);
 }
-(r = s || (s = {})).STARTED = 'started', r.READY = 'ready', r.COMPLETED = 'completed', r.NOT_APPLICABLE = 'not_applicable';
+(r = o || (o = {})).STARTED = 'started', r.READY = 'ready', r.COMPLETED = 'completed', r.NOT_APPLICABLE = 'not_applicable';
 let E = {},
   f = {};
 class h extends(l = u.ZP.Store) {
@@ -34,12 +34,12 @@ var t;
 return null !== (t = f[e]) && void 0 !== t ? t : 'cover';
   }
 }
-o = 'GuildOnboardingStore', (a = 'displayName') in(i = h) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'GuildOnboardingStore', (a = 'displayName') in(i = h) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.ZP = new h(c.Z, {
+}) : i[a] = s, t.ZP = new h(c.Z, {
   LOGOUT: function() {
 E = {}, f = {};
   },

@@ -39,7 +39,7 @@ return i;
 return I;
   }
 }), n(411104);
-var r, i, a, o, s, l, u = n(981631),
+var r, i, a, s, o, l, u = n(981631),
   c = n(474936),
   d = n(689938);
 
@@ -74,7 +74,7 @@ default:
   throw Error('Unknown frame rate: '.concat(e));
   }
 }
-(o = r || (r = {}))[o.RESOLUTION_480 = 480] = 'RESOLUTION_480', o[o.RESOLUTION_720 = 720] = 'RESOLUTION_720', o[o.RESOLUTION_1080 = 1080] = 'RESOLUTION_1080', o[o.RESOLUTION_1440 = 1440] = 'RESOLUTION_1440', o[o.RESOLUTION_SOURCE = 0] = 'RESOLUTION_SOURCE', (s = i || (i = {}))[s.FPS_5 = 5] = 'FPS_5', s[s.FPS_15 = 15] = 'FPS_15', s[s.FPS_30 = 30] = 'FPS_30', s[s.FPS_60 = 60] = 'FPS_60', (l = a || (a = {}))[l.PRESET_VIDEO = 1] = 'PRESET_VIDEO', l[l.PRESET_DOCUMENTS = 2] = 'PRESET_DOCUMENTS', l[l.PRESET_CUSTOM = 3] = 'PRESET_CUSTOM';
+(s = r || (r = {}))[s.RESOLUTION_480 = 480] = 'RESOLUTION_480', s[s.RESOLUTION_720 = 720] = 'RESOLUTION_720', s[s.RESOLUTION_1080 = 1080] = 'RESOLUTION_1080', s[s.RESOLUTION_1440 = 1440] = 'RESOLUTION_1440', s[s.RESOLUTION_SOURCE = 0] = 'RESOLUTION_SOURCE', (o = i || (i = {}))[o.FPS_5 = 5] = 'FPS_5', o[o.FPS_15 = 15] = 'FPS_15', o[o.FPS_30 = 30] = 'FPS_30', o[o.FPS_60 = 60] = 'FPS_60', (l = a || (a = {}))[l.PRESET_VIDEO = 1] = 'PRESET_VIDEO', l[l.PRESET_DOCUMENTS = 2] = 'PRESET_DOCUMENTS', l[l.PRESET_CUSTOM = 3] = 'PRESET_CUSTOM';
 let f = {
 2: [{
     resolution: 0,

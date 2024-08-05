@@ -1,18 +1,18 @@
 t.d(n, {
   Z: function() {
-return T;
+return O;
   }
 }), t(47120);
 var i = t(735250);
 t(470079);
 var a = t(481060),
-  r = t(668781),
-  l = t(829883),
+  l = t(668781),
+  r = t(829883),
   o = t(976853),
   s = t(626135),
   u = t(358085),
-  c = t(960048),
-  d = t(591759),
+  d = t(960048),
+  c = t(591759),
   E = t(998502),
   M = t(36998),
   I = t(981631),
@@ -37,46 +37,46 @@ let _ = 'https://media.discordapp.net',
   ]),
   A = e => {
 var n, t, i, a;
-return null === (a = d.Z.toURLSafe(e)) || void 0 === a ? void 0 : null === (i = a.pathname) || void 0 === i ? void 0 : null === (t = i.split('.')) || void 0 === t ? void 0 : null === (n = t.pop()) || void 0 === n ? void 0 : n.toLowerCase();
+return null === (a = c.Z.toURLSafe(e)) || void 0 === a ? void 0 : null === (i = a.pathname) || void 0 === i ? void 0 : null === (t = i.split('.')) || void 0 === t ? void 0 : null === (n = t.pop()) || void 0 === n ? void 0 : n.toLowerCase();
   };
 
-function O(e, n) {
-  r.Z.show({
+function T(e, n) {
+  l.Z.show({
 title: m.Z.Messages.ERROR,
 body: e
-  }), c.Z.captureException(n);
+  }), d.Z.captureException(n);
 }
 
-function T(e, n, t) {
+function O(e, n, t) {
   if ((0, o.Z)(null == n ? void 0 : n.getChannelId()) || (null == t ? void 0 : t.shouldHideMediaOptions) === !0 || !u.isPlatformEmbedded || null == e || ! function(e) {
-  let n = d.Z.toURLSafe(e);
+  let n = c.Z.toURLSafe(e);
   if (null == n)
     return !1;
   let t = A(e);
-  return (g.test(n.hostname) || n.host === f) && !e.startsWith(Z) && !(0, l.zt)(e) && null != t && S.has(t);
+  return (g.test(n.hostname) || n.host === f) && !e.startsWith(Z) && !(0, r.zt)(e) && null != t && S.has(t);
 }(e))
 return null;
-  let r = function(e) {
-  let n = d.Z.toURLSafe(e);
+  let l = function(e) {
+  let n = c.Z.toURLSafe(e);
   return null == n || n.host === f ? e : n.origin === _ ? (n.host = f, n.searchParams.delete('size'), n.searchParams.delete('width'), n.searchParams.delete('height'), n.searchParams.delete('quality'), n.searchParams.delete('format'), n.toString()) : (n.searchParams.delete('width'), n.searchParams.delete('height'), n.searchParams.set('quality', 'lossless'), n.toString());
 }(e),
-c = async () => {
+d = async () => {
   try {
-    await E.ZP.saveImage(r), s.default.track(I.rMx.CONTEXT_MENU_IMAGE_SAVED, {
+    await E.ZP.saveImage(l), s.default.track(I.rMx.CONTEXT_MENU_IMAGE_SAVED, {
       ...(0, M.v)()
     });
   } catch (e) {
     s.default.track(I.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, {
       ...(0, M.v)()
-    }), O(m.Z.Messages.ERROR_SAVING_IMAGE, e);
+    }), T(m.Z.Messages.ERROR_SAVING_IMAGE, e);
   }
-}, T = async () => {
+}, O = async () => {
   try {
-    await E.ZP.copyImage(r), s.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPIED, {
+    await E.ZP.copyImage(l), s.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPIED, {
       ...(0, M.v)()
     });
   } catch (e) {
-    O(m.Z.Messages.ERROR_COPYING_IMAGE, e), s.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, {
+    T(m.Z.Messages.ERROR_COPYING_IMAGE, e), s.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, {
       ...(0, M.v)()
     });
   }
@@ -88,12 +88,12 @@ E.ZP.canCopyImage() && function(e) {
 }(e) ? (0, i.jsx)(a.MenuItem, {
   id: 'copy-image',
   label: m.Z.Messages.COPY_IMAGE_MENU_ITEM,
-  action: T
+  action: O
 }, 'copy-image') : null,
 (0, i.jsx)(a.MenuItem, {
   id: 'save-image',
   label: m.Z.Messages.SAVE_IMAGE_MENU_ITEM,
-  action: c
+  action: d
 }, 'save-image')
   ];
 }

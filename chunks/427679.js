@@ -1,4 +1,4 @@
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(765305);
 let c = {},
@@ -30,7 +30,7 @@ return;
   };
   delete r[t], c[e] = r;
 }
-class h extends(o = s.ZP.Store) {
+class h extends(s = o.ZP.Store) {
   getStageInstanceByChannel(e) {
 if (null != e)
   return d[e];

@@ -2,8 +2,8 @@ n(47120), n(653041);
 var r = n(735250),
   i = n(470079),
   a = n(481060),
-  o = n(367907),
-  s = n(153124),
+  s = n(367907),
+  o = n(153124),
   l = n(82554),
   u = n(185625),
   c = n(255514),
@@ -18,7 +18,7 @@ onSubmit: f,
 onNavigate: h,
 emailToken: p,
 isAuthenticated: m = !0
-  } = e, I = (0, s.Dt)(), {
+  } = e, I = (0, o.Dt)(), {
 nodes: T,
 root_node_id: g,
 success_node_id: S,
@@ -41,7 +41,7 @@ if (L([
     e
   ]), null != a.key && (null == h || h(a.key)), R(void 0), y(void 0), t.name === l.b.MESSAGE || t.name === l.b.FIRST_DM) {
   let e = t.record.id;
-  o.ZP.trackWithMetadata(d.rMx.IAR_NAVIGATE, {
+  s.ZP.trackWithMetadata(d.rMx.IAR_NAVIGATE, {
     message_id: e,
     content_type: t.name,
     report_sub_type: a.report_type,
@@ -70,7 +70,7 @@ let r = [...D],
   a = null !== (n = null == i ? void 0 : i.nodeRef) && void 0 !== n ? n : g;
 if (t.name === l.b.MESSAGE || t.name === l.b.FIRST_DM) {
   let e = t.record.id;
-  o.ZP.trackWithMetadata(d.rMx.IAR_NAVIGATE, {
+  s.ZP.trackWithMetadata(d.rMx.IAR_NAVIGATE, {
     message_id: e,
     content_type: t.name,
     report_sub_type: T[a].report_type,
@@ -79,29 +79,37 @@ if (t.name === l.b.MESSAGE || t.name === l.b.FIRST_DM) {
   });
 }
 R(null == i ? void 0 : null === (e = i.multiSelect) || void 0 === e ? void 0 : e.state), y(null == i ? void 0 : i.textInput), v(a), L(r), null == h || h('..');
-  }, x = [], G = [];
-  for (let e in T) {
-var k, B;
-let t = T[e];
-if (t.id !== S && t.id !== A && t.id !== g) {
-  if (t.key.endsWith('_SUBMIT')) {
-    G.push(t);
-    continue;
-  }
-  if (x.push(t), (null === (k = t.button) || void 0 === k ? void 0 : k.type) === 'next') {
-    let e = null === (B = t.button) || void 0 === B ? void 0 : B.target,
-      n = x.indexOf(T[e]); -
-    1 !== n && (x.splice(n, 1), x.push(T[e]));
+  }, x = i.useMemo(() => {
+let e = [],
+  t = [];
+for (let a in T) {
+  var n, r, i;
+  let s = T[a];
+  if (s.id !== S && s.id !== A && s.id !== g) {
+    if (s.key.endsWith('_SUBMIT') || (null === (n = s.button) || void 0 === n ? void 0 : n.type) === 'submit') {
+      t.push(s);
+      continue;
+    }
+    if (e.push(s), (null === (r = s.button) || void 0 === r ? void 0 : r.type) === 'next') {
+      let t = null === (i = s.button) || void 0 === i ? void 0 : i.target,
+        n = e.indexOf(T[t]); -
+      1 !== n && (e.splice(n, 1), e.push(T[t]));
+    }
   }
 }
-  }
-  let F = [
-T[g],
-...x,
-...G,
-T[S],
-T[A]
-  ];
+return [
+  T[g],
+  ...e,
+  ...t,
+  T[S],
+  T[A]
+];
+  }, [
+T,
+g,
+A,
+S
+  ]);
   return (0, r.jsx)(a.ModalRoot, {
 transitionState: E.transitionState,
 'aria-labelledby': I,
@@ -109,7 +117,7 @@ children: (0, r.jsx)(a.Slides, {
   width: 440,
   activeSlide: N,
   centered: !1,
-  children: F.map(e => (0, r.jsx)(a.Slide, {
+  children: x.map(e => (0, r.jsx)(a.Slide, {
     id: e.id,
     children: (0, r.jsx)('div', {
       className: _.slideContainer,

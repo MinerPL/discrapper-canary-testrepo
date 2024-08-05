@@ -1,5 +1,5 @@
-var r, i, a, o, s = n(392711),
-  l = n.n(s),
+var r, i, a, s, o = n(392711),
+  l = n.n(o),
   u = n(442837),
   c = n(433517),
   d = n(570140),
@@ -18,7 +18,7 @@ function I(e, t) {
   let n = f[e];
   null != n && n.forEach(e => delete h[e.id]), f[e] = t, t.forEach(e => h[e.id] = e);
 }
-class T extends(o = u.ZP.Store) {
+class T extends(s = u.ZP.Store) {
   initialize() {
 let e = c.K.get(E);
 null != e && l().forEach(e, (e, t) => {

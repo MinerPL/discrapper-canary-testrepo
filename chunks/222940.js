@@ -4,24 +4,24 @@ return E;
   }
 }), n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(399606),
+  s = n(470079),
+  a = n(399606),
   r = n(846519),
   l = n(481060),
   o = n(317632),
   c = n(174767),
-  d = n(594174),
-  u = n(689938),
+  u = n(594174),
+  d = n(689938),
   _ = n(605310);
 
 function E(e) {
   let {
 inboxIconRef: t,
 recentsPopoutShown: n
-  } = e, [E, I] = a.useState(!1), m = (0, s.e7)([o.Z], () => o.Z.getLastUnseenInvite()), T = (0, s.e7)([d.default], () => null != m ? d.default.getUser(m.inviter_id) : null);
-  return (a.useEffect(() => {
+  } = e, [E, I] = s.useState(!1), m = (0, a.e7)([o.Z], () => o.Z.getLastUnseenInvite()), T = (0, a.e7)([u.default], () => null != m ? u.default.getUser(m.inviter_id) : null);
+  return (s.useEffect(() => {
 n && I(!1);
-  }, [n]), a.useEffect(() => {
+  }, [n]), s.useEffect(() => {
 if (null == m) {
   I(!1);
   return;
@@ -65,7 +65,7 @@ children: [
       (0, i.jsx)(l.Text, {
         className: _.__invalid_title,
         variant: 'text-xs/semibold',
-        children: u.Z.Messages.GAME_INVITES_INVITE_FROM.format({
+        children: d.Z.Messages.GAME_INVITES_INVITE_FROM.format({
           username: T.username
         })
       }),

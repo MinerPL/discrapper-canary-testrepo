@@ -31,8 +31,8 @@ function i(e, t, n) {
   for (let r = 0; r < 28; r += 7) {
 let i = e >>> r,
   a = !(i >>> 7 == 0 && 0 == t),
-  o = (a ? 128 | i : i) & 255;
-if (n.push(o), !a)
+  s = (a ? 128 | i : i) & 255;
+if (n.push(s), !a)
   return;
   }
   let r = e >>> 28 & 15 | (7 & t) << 4,
@@ -56,10 +56,10 @@ return a;
 return i;
   },
   fC: function() {
-return s;
+return o;
   },
   gn: function() {
-return o;
+return s;
   },
   jI: function() {
 return l;
@@ -86,23 +86,23 @@ r
   ];
 }
 
-function o(e, t) {
+function s(e, t) {
   if (t <= 2097151)
 return '' + (4294967296 * t + (e >>> 0));
   let n = (e >>> 24 | t << 8) >>> 0 & 16777215,
 r = t >> 16 & 65535,
 i = (16777215 & e) + 6777216 * n + 6710656 * r,
 a = n + 8147497 * r,
-o = 2 * r;
+s = 2 * r;
 
-  function s(e, t) {
+  function o(e, t) {
 let n = e ? String(e) : '';
 return t ? '0000000'.slice(n.length) + n : n;
   }
-  return i >= 10000000 && (a += Math.floor(i / 10000000), i %= 10000000), a >= 10000000 && (o += Math.floor(a / 10000000), a %= 10000000), s(o, 0) + s(a, o) + s(i, 1);
+  return i >= 10000000 && (a += Math.floor(i / 10000000), i %= 10000000), a >= 10000000 && (s += Math.floor(a / 10000000), a %= 10000000), o(s, 0) + o(a, s) + o(i, 1);
 }
 
-function s(e, t) {
+function o(e, t) {
   if (e >= 0) {
 for (; e > 127;)
   t.push(127 & e | 128), e >>>= 7;

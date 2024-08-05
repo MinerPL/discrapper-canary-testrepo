@@ -2,40 +2,40 @@ t(47120);
 var l = t(735250),
   s = t(470079),
   a = t(512722),
-  i = t.n(a),
-  r = t(442837),
+  r = t.n(a),
+  i = t(442837),
   o = t(704215),
-  u = t(481060),
-  c = t(605236),
+  c = t(481060),
+  u = t(605236),
   d = t(706140),
   m = t(765585),
   E = t(556296),
   _ = t(63063),
   S = t(13140),
   g = t(435064),
-  h = t(894694),
-  C = t(39604),
+  C = t(894694),
+  h = t(39604),
   N = t(981631),
   Z = t(921944),
   I = t(689938),
   x = t(251146),
   f = t(1871);
-let A = e => {
+let R = e => {
   let {
 clipsEnabled: n,
 isAnimationDone: t,
 guildId: a,
-children: i
-  } = e, E = (0, r.e7)([g.Z], () => g.Z.getHardwareClassification()), S = E === h.x.MEETS_MINIMUM || E === h.x.UNKNOWN, f = E === h.x.BELOW_MINIMUM, A = t && (S || f) && !n, [R, T] = (0, d.c)(A ? [o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []), v = R === o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
+children: r
+  } = e, E = (0, i.e7)([g.Z], () => g.Z.getHardwareClassification()), S = E === C.x.MEETS_MINIMUM || E === C.x.UNKNOWN, f = E === C.x.BELOW_MINIMUM, R = t && (S || f) && !n, [A, T] = (0, d.c)(R ? [o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []), v = A === o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
   s.useEffect(() => {
-n && (0, c.EW)(o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK, {
+n && (0, u.EW)(o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK, {
   forceTrack: !0
 });
   }, [n]);
   let L = (e, n) => {
 e.stopPropagation(), e.preventDefault(), null == n || n(), T(Z.L.UNKNOWN);
   };
-  return (0, l.jsx)(u.Popout, {
+  return (0, l.jsx)(c.Popout, {
 shouldShow: v,
 position: 'right',
 align: 'center',
@@ -53,12 +53,12 @@ renderPopout: e => {
     headerClassName: x.clipsEducationHeader,
     body: (0, l.jsxs)(l.Fragment, {
       children: [
-        (0, l.jsx)(u.Text, {
+        (0, l.jsx)(c.Text, {
           variant: 'text-sm/normal',
           color: 'always-white',
           children: I.Z.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_BODY
         }),
-        f ? (0, l.jsx)(u.Text, {
+        f ? (0, l.jsx)(c.Text, {
           variant: 'text-sm/normal',
           color: 'always-white',
           className: x.warningText,
@@ -70,7 +70,7 @@ renderPopout: e => {
     }),
     tryItText: I.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS,
     onTryFeature: e => {
-      (0, C.em)({
+      (0, h.em)({
         clipsEnabled: !0,
         guildId: a,
         trackAnalytics: !0
@@ -81,31 +81,31 @@ renderPopout: e => {
     }
   });
 },
-children: () => i
+children: () => r
   });
 };
 n.Z = function(e) {
   let {
 isAnimationDone: n,
 guildId: t
-  } = e, s = (0, r.e7)([g.Z], () => g.Z.getSettings().clipsEnabled), a = (0, r.e7)([E.Z], () => E.Z.getKeybindForAction(N.kg4.SAVE_CLIP));
-  i()(null != a, 'Clips keybind should be set');
+  } = e, s = (0, i.e7)([g.Z], () => g.Z.getSettings().clipsEnabled), a = (0, i.e7)([E.Z], () => E.Z.getKeybindForAction(N.kg4.SAVE_CLIP));
+  r()(null != a, 'Clips keybind should be set');
   let o = S.BB(a.shortcut, !0);
-  return (0, l.jsx)(u.FormItem, {
+  return (0, l.jsx)(c.FormItem, {
 title: I.Z.Messages.CLIPS_SETTINGS,
 titleClassName: f.formItemTitle,
 className: f.modalContent,
 children: (0, l.jsxs)('div', {
   className: x.container,
   children: [
-    (0, l.jsx)(A, {
+    (0, l.jsx)(R, {
       clipsEnabled: s,
       guildId: t,
       isAnimationDone: n,
-      children: (0, l.jsx)(u.FormSwitch, {
+      children: (0, l.jsx)(c.FormSwitch, {
         className: x.formSwitch,
         value: s,
-        onChange: e => (0, C.em)({
+        onChange: e => (0, h.em)({
           clipsEnabled: e,
           guildId: t,
           trackAnalytics: !0
@@ -114,7 +114,7 @@ children: (0, l.jsxs)('div', {
         children: I.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
       })
     }),
-    (0, l.jsx)(u.Text, {
+    (0, l.jsx)(c.Text, {
       variant: 'text-xs/normal',
       color: 'interactive-normal',
       className: x.description,
@@ -122,7 +122,7 @@ children: (0, l.jsxs)('div', {
         keybind: o,
         keybindHook: () => (0, l.jsx)('span', {
           className: x.keybindHintKeys,
-          children: (0, l.jsx)(u.KeyCombo, {
+          children: (0, l.jsx)(c.KeyCombo, {
             className: x.keybindShortcut,
             shortcut: o
           })

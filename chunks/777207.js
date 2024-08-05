@@ -6,9 +6,9 @@ return E;
 var r = n(735250),
   i = n(470079),
   a = n(803997),
-  o = n.n(a),
-  s = n(696689),
-  l = n.n(s),
+  s = n.n(a),
+  o = n(696689),
+  l = n.n(o),
   u = n(692547),
   c = n(181375),
   d = n(860857);
@@ -20,7 +20,7 @@ e
 let n, {
     variant: i,
     tag: a = 'div',
-    selectable: s = !1,
+    selectable: o = !1,
     className: l,
     lineClamp: E,
     color: f,
@@ -55,9 +55,9 @@ let S = {
 };
 return (0, r.jsx)(a, {
   ref: t,
-  className: o()({
+  className: s()({
     [c.defaultColor]: void 0 === f,
-    [c.selectable]: s,
+    [c.selectable]: o,
     [c.tabularNumbers]: h,
     [d.fontScaling]: p
   }, I, d[i], l),

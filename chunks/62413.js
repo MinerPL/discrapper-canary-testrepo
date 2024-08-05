@@ -16,8 +16,8 @@ var n = i(735250),
   _ = i(125909),
   p = i(185156),
   m = i(87528),
-  f = i(57348),
-  g = i(18620);
+  g = i(57348),
+  f = i(18620);
 
 function C() {
   let e = (0, l.e7)([c.default], () => c.default.appDirectoryIncludesInactiveCollections),
@@ -43,7 +43,7 @@ children: null == i ? void 0 : i.map((e, t) => {
       });
       break;
     case s.o.LIST_WITH_IMAGE:
-      a = (0, n.jsx)(f.Z, {
+      a = (0, n.jsx)(g.Z, {
         collection: e
       });
       break;
@@ -57,7 +57,7 @@ children: null == i ? void 0 : i.map((e, t) => {
   }
   return (0, n.jsx)('div', {
     className: o()({
-      [g.topMargin]: r
+      [f.topMargin]: r
     }),
     children: a
   }, e.id);

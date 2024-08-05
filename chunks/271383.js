@@ -6,7 +6,7 @@ return V;
 return F;
   }
 }), n(47120), n(789020), n(653041);
-var r, i, a, o, s, l, u = n(392711),
+var r, i, a, s, o, l, u = n(392711),
   c = n.n(u),
   d = n(866442),
   _ = n(442837),
@@ -74,7 +74,7 @@ function V(e) {
 }
 
 function H(e, t) {
-  let n, r, i, a, o;
+  let n, r, i, a, s;
   if (0 === t.length)
 return {
   colorString: void 0,
@@ -86,18 +86,18 @@ return {
   for (let n of t) {
 let t = e[n];
 if (null != t)
-  (null == o || t.position > o.position) && (o = t), t.color > 0 && (null == r || t.position > r.position) && (r = t), t.hoist && (null == i || t.position > i.position) && (i = t), (null != t.icon || null != t.unicodeEmoji) && (null == a || t.position > a.position) && (a = t);
+  (null == s || t.position > s.position) && (s = t), t.color > 0 && (null == r || t.position > r.position) && (r = t), t.hoist && (null == i || t.position > i.position) && (i = t), (null != t.icon || null != t.unicodeEmoji) && (null == a || t.position > a.position) && (a = t);
   }
   if (null != r) {
-var s;
-null == r.colorString && r.color > 0 && (r.colorString = (0, d.Rf)(r.color)), n = null !== (s = r.colorString) && void 0 !== s ? s : void 0;
+var o;
+null == r.colorString && r.color > 0 && (r.colorString = (0, d.Rf)(r.color)), n = null !== (o = r.colorString) && void 0 !== o ? o : void 0;
   }
   return {
 colorString: n,
 colorRoleId: null == r ? void 0 : r.id,
 iconRoleId: null == a ? void 0 : a.id,
 hoistRoleId: null == i ? void 0 : i.id,
-highestRoleId: null == o ? void 0 : o.id
+highestRoleId: null == s ? void 0 : s.id
   };
 }
 
@@ -108,8 +108,8 @@ nick: n,
 guildId: r,
 avatar: i,
 avatarDecoration: a,
-guildRoles: o,
-roles: s,
+guildRoles: s,
+roles: o,
 premiumSince: l,
 isPending: u,
 joinedAt: c,
@@ -123,13 +123,13 @@ colorRoleId: p,
 iconRoleId: I,
 hoistRoleId: T,
 highestRoleId: A
-  } = H(o, s), N = {
+  } = H(s, o), N = {
 userId: t,
 nick: n,
 guildId: r,
 avatar: i,
 avatarDecoration: a,
-roles: s,
+roles: o,
 colorString: h,
 colorRoleId: p,
 iconRoleId: I,
@@ -161,20 +161,14 @@ if (m.Z.isViewingRoles(r) || m.Z.isFullServerPreview(r)) {
 (a = r || (r = {}))[a.GUILD = 0] = 'GUILD', a[a.USER = 1] = 'USER';
 
 function Y(e) {
-  e.guilds.forEach(e => {
-z(e);
-  });
-}
-
-function j(e) {
   var t;
   let {
 guildId: n,
 user: r,
 nick: i,
 avatar: a,
-avatarDecoration: o,
-roles: s,
+avatarDecoration: s,
+roles: o,
 premiumSince: l,
 isPending: u,
 joinedAt: c,
@@ -192,12 +186,12 @@ userId: r.id,
 nick: i,
 guildId: n,
 avatar: a,
-avatarDecoration: null != o ? {
-  asset: o.asset,
-  skuId: o.sku_id
+avatarDecoration: null != s ? {
+  asset: s.asset,
+  skuId: s.sku_id
 } : void 0,
 guildRoles: N.Z.getRoles(h.id),
-roles: s,
+roles: o,
 premiumSince: l,
 isPending: u,
 joinedAt: c,
@@ -208,7 +202,7 @@ flags: E
   }), w(n, f[r.id]);
 }
 
-function W(e, t) {
+function j(e, t) {
   let n = R[e];
   if (null == n)
 return !1;
@@ -221,7 +215,7 @@ n[t.user.id] = Z({
   nick: t.nick,
   guildId: e,
   avatar: t.avatar,
-  avatarDecoration: K(t),
+  avatarDecoration: W(t),
   guildRoles: N.Z.getRoles(r.id),
   roles: t.roles,
   premiumSince: t.premium_since,
@@ -235,11 +229,18 @@ n[t.user.id] = Z({
   }), b++, !0);
 }
 
-function K(e) {
+function W(e) {
   return null != e.avatar_decoration_data ? {
 asset: e.avatar_decoration_data.asset,
 skuId: e.avatar_decoration_data.sku_id
   } : void 0;
+}
+
+function K(e, t) {
+  z({
+id: e,
+members: t.map(e => e.member).filter(T.lm)
+  });
 }
 
 function z(e) {
@@ -251,25 +252,25 @@ return !1;
   let r = R[t];
   for (let a of e.members) {
 var i;
-let o = a.user.id,
-  s = r[o],
+let s = a.user.id,
+  o = r[s],
   l = Z({
-    userId: o,
+    userId: s,
     nick: a.nick,
     guildId: e.id,
     avatar: a.avatar,
-    avatarDecoration: K(a),
+    avatarDecoration: W(a),
     guildRoles: N.Z.getRoles(n.id),
     roles: a.roles,
     premiumSince: a.premium_since,
     isPending: a.pending,
     joinedAt: a.joined_at,
     communicationDisabledUntil: a.communication_disabled_until,
-    fullProfileLoadedTimestamp: null == s ? void 0 : s.fullProfileLoadedTimestamp,
+    fullProfileLoadedTimestamp: null == o ? void 0 : o.fullProfileLoadedTimestamp,
     flags: a.flags,
-    unusualDMActivityUntil: null !== (i = a.unusual_dm_activity_until) && void 0 !== i ? i : null == s ? void 0 : s.unusualDMActivityUntil
+    unusualDMActivityUntil: null !== (i = a.unusual_dm_activity_until) && void 0 !== i ? i : null == o ? void 0 : o.unusualDMActivityUntil
   });
-r[o] = l, w(t, l);
+r[s] = l, w(t, l);
   }
   return !0;
 }
@@ -338,11 +339,11 @@ guildId: r
 id: r,
 members: Object.entries(n.resolved.members).map(e => {
   var t, r;
-  let [i, a] = e, o = null === (r = n.resolved) || void 0 === r ? void 0 : null === (t = r.users) || void 0 === t ? void 0 : t[i];
-  if (null != o)
+  let [i, a] = e, s = null === (r = n.resolved) || void 0 === r ? void 0 : null === (t = r.users) || void 0 === t ? void 0 : t[i];
+  if (null != s)
     return {
       ...a,
-      user: o
+      user: s
     };
 }).filter(e => null != e)
   });
@@ -361,11 +362,11 @@ let n = A.Z.getChannel(e.channel_id);
   id: n.guild_id,
   members: Object.entries(e.resolved.members).map(t => {
     var n, r;
-    let [i, a] = t, o = null === (r = e.resolved) || void 0 === r ? void 0 : null === (n = r.users) || void 0 === n ? void 0 : n[i];
-    if (null != o)
+    let [i, a] = t, s = null === (r = e.resolved) || void 0 === r ? void 0 : null === (n = r.users) || void 0 === n ? void 0 : n[i];
+    if (null != s)
       return {
         ...a,
-        user: o
+        user: s
       };
   }).filter(e => null != e)
 });
@@ -485,17 +486,31 @@ return null == a ? i : c().difference(c().union(i, a.added), a.removed);
 return b;
   }
 }
-l = 'GuildMemberStore', (s = 'displayName') in(o = ee) ? Object.defineProperty(o, s, {
+l = 'GuildMemberStore', (o = 'displayName') in(s = ee) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[s] = l, t.ZP = new ee(E.Z, {
+}) : s[o] = l, t.ZP = new ee(E.Z, {
   CONNECTION_OPEN: function(e) {
-D ? D = !1 : R = {}, y = {}, Y(e);
+D ? D = !1 : R = {}, y = {},
+  function(e) {
+    e.guilds.forEach(e => {
+      z(e);
+    });
+  }(e);
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
-Y(e);
+e.guilds.forEach(e => {
+  var t;
+  let n = e.id;
+  z({
+    id: n,
+    members: e.members
+  }), null === (t = e.activity_instances) || void 0 === t || t.forEach(e => {
+    K(n, e.participants);
+  });
+});
   },
   OVERLAY_INITIALIZE: function(e) {
 let {
@@ -525,15 +540,15 @@ let {
 } = e;
 delete R[t.id], x(t.id);
   },
-  GUILD_MEMBER_ADD: j,
-  GUILD_MEMBER_UPDATE: j,
+  GUILD_MEMBER_ADD: Y,
+  GUILD_MEMBER_UPDATE: Y,
   GUILD_MEMBER_UPDATE_LOCAL: function(e) {
 var t, n, r;
 let {
   guildId: i,
   roles: a,
-  addedRoleIds: o,
-  removedRoleIds: s,
+  addedRoleIds: s,
+  removedRoleIds: o,
   flags: l
 } = e, u = S.default.getId(), d = R[i], _ = null != d ? d[u] : null;
 if (null == _)
@@ -543,8 +558,8 @@ if (null == E)
   return !1;
 let f = null !== (t = P[i]) && void 0 !== t ? t : {};
 P[i] = {
-  added: c().difference(c().union(null !== (n = f.added) && void 0 !== n ? n : [], o), null != s ? s : []),
-  removed: c().difference(c().union(null !== (r = f.removed) && void 0 !== r ? r : [], s), null != o ? o : [])
+  added: c().difference(c().union(null !== (n = f.added) && void 0 !== n ? n : [], s), null != o ? o : []),
+  removed: c().difference(c().union(null !== (r = f.removed) && void 0 !== r ? r : [], o), null != s ? s : [])
 }, d[u] = Z({
   userId: u,
   guildId: i,
@@ -563,7 +578,7 @@ P[i] = {
   GUILD_MEMBERS_CHUNK_BATCH: function(e) {
 let t = !1;
 for (let n of e.chunks)
-  t = W(n.guildId, n.members) || t;
+  t = j(n.guildId, n.members) || t;
 return t;
   },
   GUILD_MEMBER_REMOVE: function(e) {
@@ -580,28 +595,28 @@ let {
   guildId: t,
   members: n
 } = e;
-return W(t, n.map(e => e.member).filter(T.lm));
+return j(t, n.map(e => e.member).filter(T.lm));
   },
   THREAD_MEMBERS_UPDATE: function(e) {
 let {
   guildId: t,
   addedMembers: n
 } = e;
-return null != n && W(t, n.map(e => e.member).filter(T.lm));
+return null != n && j(t, n.map(e => e.member).filter(T.lm));
   },
   LOAD_ARCHIVED_THREADS_SUCCESS: function(e) {
 let {
   guildId: t,
   owners: n
 } = e;
-return W(t, n);
+return j(t, n);
   },
   LOAD_FORUM_POSTS: function(e) {
 let {
   guildId: t,
   threads: n
 } = e;
-return W(t, Object.values(n).map(e => e.owner).filter(T.lm));
+return j(t, Object.values(n).map(e => e.owner).filter(T.lm));
   },
   GUILD_ROLE_UPDATE: q,
   GUILD_ROLE_DELETE: q,
@@ -616,14 +631,14 @@ if (null == i)
 let a = N.Z.getGuild(t);
 if (null == a)
   return O.warn('Guild '.concat(t, ' not found during GUILD_MEMBER_UPDATE.')), !1;
-let o = i[n];
-if (null == o || !o.roles.includes(r))
+let s = i[n];
+if (null == s || !s.roles.includes(r))
   return !1;
-o.roles = o.roles.filter(e => e !== r);
-let s = H(N.Z.getRoles(a.id), o.roles);
+s.roles = s.roles.filter(e => e !== r);
+let o = H(N.Z.getRoles(a.id), s.roles);
 return i[n] = {
-  ...o,
-  ...s
+  ...s,
+  ...o
 }, !0;
   },
   GUILD_ROLE_MEMBER_ADD: function(e) {
@@ -637,17 +652,17 @@ if (null == i)
 let a = N.Z.getGuild(t);
 if (null == a)
   return O.warn('Guild '.concat(t, ' not found during GUILD_MEMBER_UPDATE.')), !1;
-let o = i[n];
-if (null == o || o.roles.includes(r))
+let s = i[n];
+if (null == s || s.roles.includes(r))
   return !1;
-o.roles = [
-  ...o.roles,
+s.roles = [
+  ...s.roles,
   r
 ];
-let s = H(N.Z.getRoles(a.id), o.roles);
+let o = H(N.Z.getRoles(a.id), s.roles);
 return i[n] = {
-  ...o,
-  ...s
+  ...s,
+  ...o
 }, !0;
   },
   GUILD_MEMBER_PROFILE_UPDATE: function(e) {
@@ -665,7 +680,7 @@ r[t.user.id] = Z({
   nick: t.nick,
   guildId: n,
   avatar: t.avatar,
-  avatarDecoration: K(t),
+  avatarDecoration: W(t),
   guildRoles: N.Z.getRoles(i.id),
   roles: t.roles,
   premiumSince: t.premium_since,
@@ -680,7 +695,7 @@ r[t.user.id] = Z({
   IMPERSONATE_UPDATE: Q,
   IMPERSONATE_STOP: Q,
   PASSIVE_UPDATE_V2: function(e) {
-return !!(e.members.length > 0) && W(e.guildId, e.members);
+return !!(e.members.length > 0) && j(e.guildId, e.members);
   },
   CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES: function(e) {
 let {
@@ -713,11 +728,18 @@ let {
   guildId: t,
   members: n
 } = e;
-return W(t, n.map(e => {
+return j(t, n.map(e => {
   let {
     member: t
   } = e;
   return t;
 }));
+  },
+  EMBEDDED_ACTIVITY_UPDATE_V2: function(e) {
+let {
+  location: t,
+  participants: n
+} = e;
+null != t.guild_id && K(t.guild_id, n);
   }
 });

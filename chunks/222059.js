@@ -1,6 +1,6 @@
 n.d(t, {
   u: function() {
-return H;
+return V;
   }
 }), n(47120);
 var i = n(735250),
@@ -38,8 +38,8 @@ var i = n(735250),
   j = n(674552),
   D = n(981631),
   U = n(474936),
-  w = n(871465),
-  G = n(689938),
+  G = n(871465),
+  w = n(689938),
   k = n(297627);
 let B = {
   origin: {
@@ -54,7 +54,7 @@ y: 0
   }
 };
 
-function V(e) {
+function H(e) {
   let {
 selected: t,
 user: n,
@@ -62,12 +62,12 @@ badge: h,
 link: _,
 showProgressBadge: f
   } = e, I = (0, a.e7)([u.Z], () => u.Z.isEditorOpen), [N, x] = l.useState(!1), [S, v] = l.useState(!1), [Z, T] = l.useState(null), [L, b] = l.useState(0), [R, U] = l.useState(!1), {
-canViewBroadcasts: V
+canViewBroadcasts: H
   } = p.Z.useExperiment({
 location: 'home_button_no_track'
   }, {
 autoTrackExposure: !1
-  }), H = (0, g.Z)(), F = H.length > 0 && V;
+  }), V = (0, g.Z)(), F = V.length > 0 && H;
   (0, m.P)();
   let W = (0, r.Ie)('home'),
 Y = () => {
@@ -75,8 +75,8 @@ Y = () => {
 };
   if (null == n)
 return null;
-  let z = G.Z.Messages.DIRECT_MESSAGES;
-  S && (z = s.K.get(D.wli) ? G.Z.Messages.DISCODO_ENABLED : G.Z.Messages.DISCODO_DISABLED), H.length > 0 && p.Z.trackExposure({
+  let z = w.Z.Messages.DIRECT_MESSAGES;
+  S && (z = s.K.get(D.wli) ? w.Z.Messages.DISCODO_ENABLED : w.Z.Messages.DISCODO_DISABLED), V.length > 0 && p.Z.trackExposure({
 location: 'home_button'
   });
   let K = null;
@@ -102,13 +102,13 @@ Q = (0, i.jsx)(o.BlobMask, {
       if (!__OVERLAY__ && (null != Z && clearTimeout(Z), T(setTimeout(Y, 500)), b(L + 1), 15 === L)) {
         Y();
         let e = !s.K.get(D.wli);
-        s.K.set(D.wli, e), e && s.K.set(w.O5, !0), e ? (0, M.GN)('discodo') : (0, M.GN)('user_leave'), v(!0), setTimeout(() => {
+        s.K.set(D.wli, e), e && s.K.set(G.O5, !0), e ? (0, M.GN)('discodo') : (0, M.GN)('user_leave'), v(!0), setTimeout(() => {
           v(!1);
         }, 1000);
       }
     },
     selected: q,
-    ariaLabel: G.Z.Messages.DIRECT_MESSAGES,
+    ariaLabel: w.Z.Messages.DIRECT_MESSAGES,
     ...W,
     to: {
       pathname: _,
@@ -174,7 +174,7 @@ children: (0, i.jsx)(E.Z, {
   });
 }
 
-function H() {
+function V() {
   let e = (0, R.n)(),
 t = (0, a.e7)([
   L.Z,
@@ -207,7 +207,7 @@ C = g === d && d > 0 && r + m === 0;
 n.length > 0 && (0, h.E7)();
   }, [n]), (0, f.Z)();
   let E = Z.Z.getHomeLink();
-  return C && (E = D.Z5c.APPLICATION_STORE), (0, i.jsx)(V, {
+  return C && (E = D.Z5c.APPLICATION_STORE), (0, i.jsx)(H, {
 selected: e,
 user: p,
 selectedChannelId: x.Z.getChannelId(D.ME),

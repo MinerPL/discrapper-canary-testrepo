@@ -5,26 +5,26 @@ return b;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(442837),
   o = n(481060),
   c = n(717881),
-  d = n(58540),
-  u = n(850827),
+  u = n(58540),
+  d = n(850827),
   h = n(258609),
   p = n(199902),
   m = n(314897),
   _ = n(430824),
   f = n(496675),
   E = n(158776),
-  C = n(979651),
-  g = n(387204),
+  g = n(979651),
+  C = n(387204),
   I = n(626135),
   x = n(382182),
   T = n(687516),
-  v = n(718805),
-  N = n(871118),
+  N = n(718805),
+  v = n(871118),
   S = n(981631),
   Z = n(689938),
   A = n(482831);
@@ -48,24 +48,24 @@ let {
   onWatch: t,
   activeStream: n,
   currentUserId: a,
-  canWatch: l,
-  unavailableReason: s
+  canWatch: s,
+  unavailableReason: l
 } = this.props;
 return (0, i.jsxs)(o.Clickable, {
   onClick: t,
   className: A.previewContainer,
   children: [
-    (0, i.jsx)(N.Z, {
+    (0, i.jsx)(v.Z, {
       className: A.previewImage,
       stream: e
     }),
-    l ? (0, i.jsx)('div', {
+    s ? (0, i.jsx)('div', {
       className: A.previewHover,
       children: (0, i.jsx)(o.Text, {
         variant: 'text-sm/normal',
         color: 'none',
         className: A.white,
-        children: (0, v.Z)(e, n, a, s)
+        children: (0, N.Z)(e, n, a, l)
       })
     }) : null
   ]
@@ -79,7 +79,7 @@ let {
   previewIsOpen: a
 } = this.props;
 return null == n ? null : (0, i.jsx)('div', {
-  className: s()(A.streamPreviewWrapper, {
+  className: l()(A.streamPreviewWrapper, {
     [A.mounted]: a
   }),
   children: (0, i.jsxs)('div', {
@@ -102,7 +102,7 @@ return null == n ? null : (0, i.jsx)('div', {
                 section: S.jXE.STREAM_VIEWER_POPOUT
               }
             }
-          }) : (0, i.jsx)(u.Z, {
+          }) : (0, i.jsx)(d.Z, {
             type: c.P.STREAM_PREVIEW,
             applicationStream: n,
             user: t,
@@ -111,8 +111,8 @@ return null == n ? null : (0, i.jsx)('div', {
             className: A.activityActions,
             color: A.watchButton
           }),
-          (0, i.jsx)(g.Z, {
-            type: g.Z.Types.INLINE,
+          (0, i.jsx)(C.Z, {
+            type: C.Z.Types.INLINE,
             className: A.protip,
             children: __OVERLAY__ ? Z.Z.Messages.WATCH_STREAM_IN_APP : Z.Z.Messages.WATCH_STREAM_TIP
           })
@@ -128,27 +128,27 @@ function b(e) {
   let {
 user: t,
 channel: n,
-...l
-  } = e, [s, o] = (0, r.Wu)([
-C.Z,
+...s
+  } = e, [l, o] = (0, r.Wu)([
+g.Z,
 _.Z,
 f.Z,
 h.Z
-  ], () => (0, x.p9)(n, C.Z, _.Z, f.Z, h.Z)), c = (0, r.e7)([p.Z], () => p.Z.getStreamForUser(t.id, n.getGuildId())), u = (0, r.e7)([p.Z], () => p.Z.getActiveStreamForApplicationStream(c)), g = (0, r.e7)([m.default], () => m.default.getId()), I = (0, T.Cf)(c), v = (0, r.e7)([E.Z], () => (0, T.Um)(c, E.Z)), N = a.useMemo(() => ({
+  ], () => (0, x.p9)(n, g.Z, _.Z, f.Z, h.Z)), c = (0, r.e7)([p.Z], () => p.Z.getStreamForUser(t.id, n.getGuildId())), d = (0, r.e7)([p.Z], () => p.Z.getActiveStreamForApplicationStream(c)), C = (0, r.e7)([m.default], () => m.default.getId()), I = (0, T.Cf)(c), N = (0, r.e7)([E.Z], () => (0, T.Um)(c, E.Z)), v = a.useMemo(() => ({
 [n.guild_id]: [t.id]
   }), [
 n.guild_id,
 t.id
   ]);
-  return (0, d.$)(N), (0, i.jsx)(M, {
-...l,
-canWatch: s,
+  return (0, u.$)(v), (0, i.jsx)(M, {
+...s,
+canWatch: l,
 unavailableReason: o,
 user: t,
 streamApplication: I,
 stream: c,
-activeStream: u,
-currentUserId: g,
-activity: v
+activeStream: d,
+currentUserId: C,
+activity: N
   });
 }

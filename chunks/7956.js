@@ -8,10 +8,10 @@ var r = n(804739),
 
 function a(e, t, n) {
   let a = t.getState(e.id, e.branchId),
-o = n.getQueuePosition(e.id, e.branchId),
-s = n.paused;
+s = n.getQueuePosition(e.id, e.branchId),
+o = n.paused;
   if (null != a) {
-if (null == o || -1 === o)
+if (null == s || -1 === s)
   switch (a.type) {
     case i.vxO.INSTALLING:
       return i.apO.INSTALL;
@@ -24,9 +24,9 @@ switch (a.type) {
   case i.vxO.UPDATING:
   case i.vxO.UPDATE_REQUIRED:
   case i.vxO.REPAIRING:
-    if (o > 0)
+    if (s > 0)
       return i.apO.MOVE_UP;
-    if (s)
+    if (o)
       return i.apO.RESUME;
     return i.apO.PAUSE;
   case i.vxO.UP_TO_DATE:
@@ -35,5 +35,5 @@ switch (a.type) {
     return null;
 }
   }
-  return null != o && o > 0 ? i.apO.MOVE_UP : (0, r.Q)() ? i.apO.INSTALL : null;
+  return null != s && s > 0 ? i.apO.MOVE_UP : (0, r.Q)() ? i.apO.INSTALL : null;
 }

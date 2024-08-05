@@ -1,46 +1,46 @@
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   default: function() {
 return c;
   }
 });
-var s = a(735250);
-a(470079);
-var o = a(481060),
-  n = a(689938),
-  r = a(197034);
+var a = s(735250);
+s(470079);
+var o = s(481060),
+  n = s(689938),
+  r = s(197034);
 
 function c(e) {
   let {
 transitionState: t,
 onClose: c
   } = e;
-  return (0, s.jsxs)(o.ModalRoot, {
+  return (0, a.jsxs)(o.ModalRoot, {
 className: r.modal,
 transitionState: t,
 size: o.ModalSize.SMALL,
 children: [
-  (0, s.jsx)('img', {
+  (0, a.jsx)('img', {
     'aria-hidden': !0,
     alt: '',
-    src: a(762528),
+    src: s(762528),
     className: r.image
   }),
-  (0, s.jsxs)(o.ModalContent, {
+  (0, a.jsxs)(o.ModalContent, {
     className: r.content,
     children: [
-      (0, s.jsx)(o.Heading, {
+      (0, a.jsx)(o.Heading, {
         variant: 'heading-xl/bold',
         color: 'header-primary',
         className: r.text,
         children: n.Z.Messages.GUILD_AUTOMOD_REPORT_RAID_FEEDBACK_CONFIRM_TITLE
       }),
-      (0, s.jsx)(o.Text, {
+      (0, a.jsx)(o.Text, {
         variant: 'text-sm/normal',
         color: 'header-secondary',
         className: r.text,
         children: n.Z.Messages.GUILD_AUTOMOD_REPORT_RAID_FEEDBACK_CONFIRM_SUBTITLE
       }),
-      (0, s.jsx)(o.Button, {
+      (0, a.jsx)(o.Button, {
         onClick: c,
         color: o.Button.Colors.BRAND,
         look: o.Button.Looks.FILLED,

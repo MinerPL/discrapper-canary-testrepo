@@ -1,6 +1,6 @@
 n(47120), n(724458), n(653041);
-var r, i, a, o, s = n(348327),
-  l = n.n(s),
+var r, i, a, s, o = n(348327),
+  l = n.n(o),
   u = n(392711),
   c = n.n(u),
   d = n(442837),
@@ -163,12 +163,12 @@ var n, r;
 return null !== (r = null === (n = U(e)) || void 0 === n ? void 0 : n.getParticipant(t)) && void 0 !== r ? r : null;
   }
 }
-o = 'StageChannelParticipantStore', (a = 'displayName') in(i = K) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'StageChannelParticipantStore', (a = 'displayName') in(i = K) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new K(E.Z, {
+}) : i[a] = s, t.Z = new K(E.Z, {
   CONNECTION_OPEN: F,
   OVERLAY_INITIALIZE: F,
   VOICE_STATE_UPDATES: function(e) {

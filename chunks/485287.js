@@ -9,8 +9,8 @@ return T;
 var r = n(442837),
   i = n(147913),
   a = n(592125),
-  o = n(131951),
-  s = n(944486),
+  s = n(131951),
+  o = n(944486),
   l = n(979651),
   u = n(557177),
   c = n(565799),
@@ -20,21 +20,21 @@ var r = n(442837),
   f = n(754277);
 let h = e => e / 400,
   p = !1,
-  m = (0, u.tu)('stage_waiting', 'stage_waiting', h(o.Z.getOutputVolume()));
+  m = (0, u.tu)('stage_waiting', 'stage_waiting', h(s.Z.getOutputVolume()));
 
 function I() {
-  let e = s.Z.getVoiceChannelId();
+  let e = o.Z.getVoiceChannelId();
   if (null == e) {
 m.stop(), p = !1;
 return;
   }
   let t = a.Z.getChannel(e);
-  if (!(null == t ? void 0 : t.isGuildStageVoice()) || o.Z.isSelfDeaf()) {
+  if (!(null == t ? void 0 : t.isGuildStageVoice()) || s.Z.isSelfDeaf()) {
 m.stop(), p = !1;
 return;
   }
   if (f.Z.shouldPlay()) {
-m.volume = h(o.Z.getOutputVolume()), m.loop(), p = !0;
+m.volume = h(s.Z.getOutputVolume()), m.loop(), p = !0;
 return;
   }
   if (E.Z.isLive(e)) {
@@ -46,18 +46,18 @@ m.pause(), p = !1;
 return;
   }
   let n = null != Object.values(l.Z.getVoiceStatesForChannel(e)).find(e => !e.suppress && !e.isVoiceMuted());
-  n || p ? n && (m.pause(), p = !1) : (m.volume = h(o.Z.getOutputVolume()), m.loop(), p = !0);
+  n || p ? n && (m.pause(), p = !1) : (m.volume = h(s.Z.getOutputVolume()), m.loop(), p = !0);
 }
 
 function T(e) {
-  let t = (0, r.e7)([s.Z], () => s.Z.getVoiceChannelId() === e),
+  let t = (0, r.e7)([o.Z], () => o.Z.getVoiceChannelId() === e),
 n = null != (0, d.w8)(e, _.pV.SPEAKER).find(e => !e.voiceState.isVoiceMuted()),
 i = (0, r.e7)([E.Z], () => E.Z.getStageInstanceByChannel(e));
   return t && null == i && !n;
 }
 
 function g(e) {
-  let t = s.Z.getVoiceChannelId() === e,
+  let t = o.Z.getVoiceChannelId() === e,
 n = null != c.Z.getMutableParticipants(e, _.pV.SPEAKER).find(e => !e.voiceState.isVoiceMuted()),
 r = E.Z.getStageInstanceByChannel(e);
   return t && null == r && !n;

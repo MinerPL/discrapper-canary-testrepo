@@ -1,53 +1,53 @@
-n.d(t, {
+n.d(s, {
   Z: function() {
-return f;
+return x;
   }
 });
-var i = n(735250);
+var t = n(735250);
 n(470079);
-var r = n(481060),
-  o = n(906732),
-  a = n(522489),
-  s = n(570711),
-  l = n(285952),
-  d = n(669079),
-  c = n(987209),
-  C = n(598),
-  u = n(614277),
+var i = n(481060),
+  r = n(906732),
+  l = n(522489),
+  a = n(570711),
+  o = n(285952),
+  C = n(669079),
+  d = n(987209),
+  u = n(598),
+  c = n(614277),
   _ = n(981631),
   p = n(689938);
 
-function f(e) {
+function x(e) {
   let {
-onClose: t
+onClose: s
   } = e, {
 selectedPlan: n
-  } = (0, C.usePaymentContext)(), {
-selectedGiftStyle: f,
-giftRecipient: x
-  } = (0, c.wD)(), {
+  } = (0, u.usePaymentContext)(), {
+selectedGiftStyle: x,
+giftRecipient: L
+  } = (0, d.wD)(), {
 analyticsLocations: h
-  } = (0, o.ZP)(), b = !__BILLING_STANDALONE__ && (0, d.MY)(x, !1) === d.xr.CUSTOM_STYLE, {
-enabled: g
-  } = a.m.useExperiment({
+  } = (0, r.ZP)(), f = !__BILLING_STANDALONE__ && (0, C.MY)(L, !1) === C.xr.CUSTOM_STYLE, {
+enabled: I
+  } = l.m.useExperiment({
 location: 'GiftPurchaseConfirmationFooter'
   }, {
-autoTrackExposure: b,
-disable: !b
+autoTrackExposure: f,
+disable: !f
   });
-  return g ? (0, i.jsx)(u.O3, {
-children: (0, i.jsx)(r.ModalFooter, {
-  align: l.Z.Align.CENTER,
-  children: (0, i.jsx)(s.Z, {
+  return I ? (0, t.jsx)(c.O3, {
+children: (0, t.jsx)(i.ModalFooter, {
+  align: o.Z.Align.CENTER,
+  children: (0, t.jsx)(a.Z, {
     repeatPurchase: !0,
     initialPlanId: null == n ? void 0 : n.id,
     subscriptionTier: null == n ? void 0 : n.skuId,
     buttonText: p.Z.Messages.PREMIUM_GIFTING_REPEAT_GIFT,
-    giftStyle: f,
+    giftStyle: x,
     analyticsLocation: _.Sbl.REPEAT_GIFT_PURCHASE_BUTTON,
     analyticsLocationsOverride: h.slice(0, -1),
     onClick: () => {
-      t();
+      s();
     }
   })
 })

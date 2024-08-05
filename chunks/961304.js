@@ -7,8 +7,8 @@ return _;
   }
 });
 var r, i, a = n(259443),
-  o = n(47770),
-  s = n(740197),
+  s = n(47770),
+  o = n(740197),
   l = n(376398),
   u = n(65154);
 
@@ -22,7 +22,7 @@ writable: !0
 }
 let d = new a.Y('Output');
 (r = i || (i = {})).InteractionRequired = 'interactionrequired', r.Speaking = 'speaking', r.Video = 'video';
-class _ extends o.Z {
+class _ extends s.Z {
   play() {
 var e;
 null === (e = this.audioElement) || void 0 === e || e.play();
@@ -88,7 +88,7 @@ let e = this.audioElement;
 if (null != e) {
   e.muted = this._mute, e.volume = this._volume / 100;
   let t = this.sinkId;
-  null != t && s.ZA && e.setSinkId(t);
+  null != t && o.ZA && e.setSinkId(t);
 }
   }
   constructor(e, t) {

@@ -13,10 +13,10 @@ var i, l = n(735250),
   d = n(215569),
   h = n(481060),
   p = n(812206),
-  _ = n(703656),
-  f = n(417363),
-  m = n(941128),
-  g = n(366966),
+  _ = n(707409),
+  f = n(703656),
+  m = n(417363),
+  g = n(941128),
   C = n(780570),
   I = n(353042),
   E = n(981631),
@@ -33,52 +33,52 @@ writable: !0
 }
 let v = {
   [E.vxO.INSTALLING]: {
-[g.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
+[_.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
   name: e
 }),
-[g.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_SECONDS.format({
+[_.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_SECONDS.format({
   name: e,
   timeRemaining: t
 }),
-[g.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_MINUTES.format({
+[_.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_MINUTES.format({
   name: e,
   timeRemaining: t
 }),
-[g.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_HOURS.format({
+[_.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_HOURS.format({
   name: e,
   timeRemaining: t
 })
   },
   [E.vxO.UPDATING]: {
-[g.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING.format({
+[_.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING.format({
   name: e
 }),
-[g.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_SECONDS.format({
+[_.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_SECONDS.format({
   name: e,
   timeRemaining: t
 }),
-[g.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_MINUTES.format({
+[_.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_MINUTES.format({
   name: e,
   timeRemaining: t
 }),
-[g.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_HOURS.format({
+[_.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_HOURS.format({
   name: e,
   timeRemaining: t
 })
   },
   [E.vxO.REPAIRING]: {
-[g.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
+[_.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
   name: e
 }),
-[g.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_SECONDS.format({
+[_.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_SECONDS.format({
   name: e,
   timeRemaining: t
 }),
-[g.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_MINUTES.format({
+[_.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_MINUTES.format({
   name: e,
   timeRemaining: t
 }),
-[g.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_HOURS.format({
+[_.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_HOURS.format({
   name: e,
   timeRemaining: t
 })
@@ -95,7 +95,7 @@ if (e.type === E.vxO.UPDATING || e.type === E.vxO.REPAIRING || e.type === E.vxO.
     return N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_PAUSED;
   if (e.stage === E.f07.PATCHING || e.stage === E.f07.REPAIRING)
     return (0, l.jsx)(I.Z, {
-      getHistoricalTotalBytes: f.Z.getHistoricalTotalBytesWritten,
+      getHistoricalTotalBytes: m.Z.getHistoricalTotalBytesWritten,
       updateInterval: 5000,
       children: this.renderProgressBody
     });
@@ -126,7 +126,7 @@ super(...e), S(this, 'renderProgressBody', (e, t) => {
     {
       unit: h,
       time: p
-    } = (0, g.CI)(null != c ? c / 60 : null, d);
+    } = (0, _.CI)(null != c ? c / 60 : null, d);
   if (null != u && null != h) {
     let e = u[h];
     return null != e ? e(i.name, p) : null;
@@ -203,7 +203,7 @@ super(...e), S(this, 'state', {
   let {
     onClick: t
   } = this.props;
-  e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, _.uL)(E.Z5c.APPLICATION_LIBRARY);
+  e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, f.uL)(E.Z5c.APPLICATION_LIBRARY);
 });
   }
 }
@@ -221,19 +221,19 @@ return null != r && e.push(r), e;
   }, []);
 }
 t.Z = c.ZP.connectStores([
+  g.Z,
   m.Z,
-  f.Z,
   p.Z
 ], () => {
-  let e = m.Z.activeItems,
-t = L(e, f.Z),
+  let e = g.Z.activeItems,
+t = L(e, m.Z),
 {
   total: n,
   progress: i
 } = C.lK(t);
   return {
 percent: C.xI(i, n),
-isPaused: m.Z.paused,
+isPaused: g.Z.paused,
 firstApplication: e.length > 0 ? p.Z.getApplication(e[0].applicationId) : null,
 firstState: t.length > 0 ? t[0] : null
   };

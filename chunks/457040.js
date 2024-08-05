@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(954955),
-  o = n.n(a),
-  s = n(143927),
+  s = n.n(a),
+  o = n(143927),
   l = n(442837),
   u = n(477690),
   c = n(481060),
@@ -45,12 +45,12 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
   W = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
   K = Y + 2 * W,
   z = j + 2 * W,
-  q = o()(O.Iw, 200),
-  Q = o()(O.m1, 200),
+  q = s()(O.Iw, 200),
+  Q = s()(O.m1, 200),
   X = i.forwardRef(function(e, t) {
 var a;
 let {
-  containerWidth: o,
+  containerWidth: s,
   channel: u,
   onSelectSticker: A,
   closePopout: Y
@@ -61,16 +61,16 @@ let {
 } = (0, E.ZP)(_.Z.STICKER_PICKER), X = (null === (a = (0, I.N)()) || void 0 === a ? void 0 : a.subscription_trial) != null, $ = i.useRef(null), J = i.useRef(null), ee = i.useRef(null), et = (0, N.Q)(e => e.showPremiumUpsell), [en, er] = (0, h.Iu)(e => [
   e.searchQuery,
   e.isSearchSuggestion
-], s.Z), ei = i.useRef('');
+], o.Z), ei = i.useRef('');
 i.useImperativeHandle(t, () => ({
   onPickerOpen: eb
 }));
 let ea = (0, R.Sd)(u),
-  eo = 0 === ea.filter(e => e.type !== y.Ih.EMPTY_GUILD_UPSELL).length,
-  es = (0, p.ep)({
+  es = 0 === ea.filter(e => e.type !== y.Ih.EMPTY_GUILD_UPSELL).length,
+  eo = (0, p.ep)({
     gridWrapperRef: $,
-    containerWidth: o,
-    showingEmptyState: eo,
+    containerWidth: s,
+    showingEmptyState: es,
     listPaddingLeft: F,
     listScrollbarWidth: 8
   }),
@@ -97,7 +97,7 @@ let ea = (0, R.Sd)(u),
     en,
     em
   ]),
-  eT = null != es && es > B,
+  eT = null != eo && eo > B,
   {
     rowCount: eg,
     rowCountBySection: eS,
@@ -108,7 +108,7 @@ let ea = (0, R.Sd)(u),
     filteredStickers: ed,
     stickersCategories: ea,
     collapsedStickersCategories: eu,
-    listWidth: es,
+    listWidth: eo,
     listPaddingRight: V,
     stickerNodeMargin: eT ? H : Z,
     stickerNodeWidth: eT ? K : z
@@ -171,7 +171,7 @@ let eb = () => {
   null != ef && [...ef.values()].forEach(e => {
     r += e.length;
   }), (0, O.ev)({
-    containerWidth: o,
+    containerWidth: s,
     favoriteStickers: e_,
     frequentlyUsedStickers: eE,
     guildStickers: t,
@@ -198,7 +198,7 @@ let eM = i.useCallback(() => {
 return (0, r.jsxs)(E.Gt, {
   value: W,
   children: [
-    !(X && eo) && (0, r.jsx)('div', {
+    !(X && es) && (0, r.jsx)('div', {
       className: k.header,
       children: (0, r.jsx)(P.Z, {
         ref: ee,
@@ -207,7 +207,7 @@ return (0, r.jsxs)(E.Gt, {
         channel: u
       })
     }),
-    eo ? (0, r.jsx)(b.Z, {
+    es ? (0, r.jsx)(b.Z, {
       className: k.emptyState,
       onClose: Y
     }) : (0, r.jsxs)(r.Fragment, {
@@ -217,13 +217,13 @@ return (0, r.jsxs)(E.Gt, {
           className: k.listWrapper,
           id: x.Vr,
           ...ey,
-          children: null != es ? (0, r.jsx)(M.Z, {
+          children: null != eo ? (0, r.jsx)(M.Z, {
             ref: J,
             collapsedStickersCategories: eu,
             filteredStickers: ed,
             getStickerItemProps: eR,
             getStickerRowProps: eC,
-            gridWidth: es,
+            gridWidth: eo,
             gutterWidth: eN,
             isUsingKeyboardNavigation: eL,
             onSelectSticker: eI,

@@ -1,5 +1,5 @@
 n(724458);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(786761),
   c = n(651530),
@@ -19,7 +19,7 @@ e[E(t)] = (0, u.e5)(t);
 function h() {
   _ = {};
 }
-class p extends(r = s.ZP.Store) {
+class p extends(r = o.ZP.Store) {
   getMessage(e, t) {
 return _[E({
   id: e,
@@ -27,12 +27,12 @@ return _[E({
 })];
   }
 }
-o = 'SearchMessageStore', (a = 'displayName') in(i = p) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'SearchMessageStore', (a = 'displayName') in(i = p) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new p(l.Z, {
+}) : i[a] = s, t.Z = new p(l.Z, {
   SEARCH_FINISH: f,
   MOD_VIEW_SEARCH_FINISH: f,
   MESSAGE_UPDATE: function(e) {

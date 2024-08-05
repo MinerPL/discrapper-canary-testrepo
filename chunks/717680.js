@@ -4,21 +4,21 @@ return l;
   }
 }), n(47120);
 var i = n(470079);
-let a = !1,
-  s = new Set();
+let s = !1,
+  a = new Set();
 
 function r(e) {
-  e !== a && (a = e, s.forEach(e => e(a)));
+  e !== s && (s = e, a.forEach(e => e(s)));
 }
 
 function l() {
-  let [e, t] = i.useState(a);
+  let [e, t] = i.useState(s);
   return i.useEffect(() => {
 let e = e => {
   t(e);
 };
-return s.add(e), () => {
-  s.delete(e);
+return a.add(e), () => {
+  a.delete(e);
 };
   }, []), e;
 }

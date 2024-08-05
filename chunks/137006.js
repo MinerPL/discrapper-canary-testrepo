@@ -1,25 +1,25 @@
 n.d(t, {
   m: function() {
-return a;
+return s;
   }
 }), n(47120);
 var i = n(243814),
-  s = n(103964);
-let a = {
-[s.Q5.INITIATE_IMAGE_UPLOAD]: {
+  a = n(103964);
+let s = {
+[a.Q5.INITIATE_IMAGE_UPLOAD]: {
   request: void 0,
   response: e => e.object({
     image_url: e.string().required()
   })
 },
-[s.Q5.OPEN_SHARE_MOMENT_DIALOG]: {
+[a.Q5.OPEN_SHARE_MOMENT_DIALOG]: {
   response: void 0,
-  request: e => (0, s.C5)(e.object({
+  request: e => (0, a.C5)(e.object({
     mediaUrl: e.string().required().max(1024)
   }))
 },
-[s.Q5.AUTHENTICATE]: {
-  request: e => (0, s.C5)(e.object({
+[a.Q5.AUTHENTICATE]: {
+  request: e => (0, a.C5)(e.object({
     access_token: e.string().allow(null).optional()
   })),
   response: e => e.object({
@@ -32,7 +32,7 @@ let a = {
       public_flags: e.number().required(),
       global_name: e.string().allow(null)
     }).required(),
-    scopes: e.array().items(e.string().valid(...(0, s.no)(i.x))).required(),
+    scopes: e.array().items(e.string().valid(...(0, a.no)(i.x))).required(),
     expires: e.string().required(),
     application: e.object({
       description: e.string().required(),
@@ -43,7 +43,7 @@ let a = {
     }).required()
   })
 },
-[s.Q5.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: {
+[a.Q5.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: {
   request: void 0,
   response: e => e.object({
     participants: e.array().items(r(e).keys({

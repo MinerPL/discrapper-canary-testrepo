@@ -7,33 +7,33 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
   a = n(481060),
-  o = n(287734),
-  s = n(835473),
+  s = n(287734),
+  o = n(835473),
   l = n(67212),
   u = n(493355),
   c = n(134598),
-  d = n(885110),
-  _ = n(366695),
+  d = n(925329),
+  _ = n(885110),
   E = n(689938),
   f = n(140579);
 
 function h() {
-  let e = (0, i.e7)([d.Z], () => d.Z.getBroadcast()),
-t = (0, s.q)(null == e ? void 0 : e.applicationId);
+  let e = (0, i.e7)([_.Z], () => _.Z.getBroadcast()),
+t = (0, o.q)(null == e ? void 0 : e.applicationId);
   if (null == e)
 return null;
   let n = () => {
   (0, c.X)();
 },
 h = () => {
-  (0, l.b_)(), o.default.disconnect();
+  (0, l.b_)(), s.default.disconnect();
 };
   return (0, r.jsxs)('div', {
 className: f.container,
 children: [
-  null != t && (0, r.jsx)(_.Z, {
+  null != t && (0, r.jsx)(d.Z, {
     game: t,
-    size: _.Z.Sizes.LARGE
+    size: d.Z.Sizes.LARGE
   }),
   (0, r.jsxs)('div', {
     className: f.content,

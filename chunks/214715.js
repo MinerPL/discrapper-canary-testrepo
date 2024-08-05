@@ -1,8 +1,8 @@
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  o = n(481060),
   l = n(600997);
 let u = i.memo(function(e) {
   let {
@@ -22,10 +22,10 @@ if (null != f)
 f,
 t
   ]);
-  return (0, r.jsxs)(s.Clickable, {
-className: o()(l.trait, {
+  return (0, r.jsxs)(o.Clickable, {
+className: s()(l.trait, {
   [l.selected]: d,
-  [l.selectable]: null != h,
+  [l.selectable]: null != h && !d,
   [l.clickable]: null != h
 }, c),
 onMouseEnter: _,
@@ -36,7 +36,7 @@ children: [
     size: 'xs',
     color: 'currentColor'
   }),
-  (0, r.jsx)(s.Text, {
+  (0, r.jsx)(o.Text, {
     variant: n,
     color: a,
     lineClamp: 1,

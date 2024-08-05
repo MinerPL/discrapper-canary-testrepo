@@ -1,7 +1,7 @@
 n(47120);
 var r, i, a = n(754700),
-  o = n(147913),
-  s = n(317381),
+  s = n(147913),
+  o = n(317381),
   l = n(594190),
   u = n(569545),
   c = n(199902),
@@ -67,7 +67,7 @@ activity: null
   autoTrackExposure: !1
 }))
 return t;
-  for (let r of s.ZP.getSelfEmbeddedActivities().values()) {
+  for (let r of o.ZP.getSelfEmbeddedActivities().values()) {
 var n;
 if (null != e && r.channelId !== e)
   continue;
@@ -84,7 +84,7 @@ t = {
   }
   return t;
 }
-class M extends o.Z {
+class M extends s.Z {
   constructor(...e) {
 super(...e), N(this, 'streamKeyToHeartbeatState', new Map()), N(this, 'initiateHeartbeat', e => {
   let {
@@ -105,19 +105,19 @@ super(...e), N(this, 'streamKeyToHeartbeatState', new Map()), N(this, 'initiateH
         applicationId: i
       } = e, {
         channelId: a
-      } = (0, u.my)(r), o = D(a), s = p.Z.quests.get(n);
-      if (null == s || !L(s))
+      } = (0, u.my)(r), s = D(a), o = p.Z.quests.get(n);
+      if (null == o || !L(o))
         return 'STOP';
       let d = null === (t = y()) || void 0 === t ? void 0 : t.config,
-        _ = null != c.Z.getRTCStream(r) && null != d && g.r.build(d).application.id === i && o,
+        _ = null != c.Z.getRTCStream(r) && null != d && g.r.build(d).application.id === i && s,
         {
           quest: E,
           activity: f
         } = b(),
         h = null == E ? void 0 : E.config,
-        I = null != h && (null == E ? void 0 : E.id) === n && g.r.build(h).application.id === i && o && (null == f ? void 0 : f.channelId) === a,
+        I = null != h && (null == E ? void 0 : E.id) === n && g.r.build(h).application.id === i && s && (null == f ? void 0 : f.channelId) === a,
         T = l.ZP.getRunningGames().map(e => e.id),
-        S = (0, m.$H)(s) && T.includes(i);
+        S = (0, m.$H)(o) && T.includes(i);
       return _ || I || S ? 'BEAT' : 'BEAT_TERMINAL';
     }({
       questId: t,

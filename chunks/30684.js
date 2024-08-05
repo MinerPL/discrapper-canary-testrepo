@@ -1,32 +1,32 @@
-var i, a, s, r, l = n(442837),
+var i, s, a, r, l = n(442837),
   o = n(570140);
 let c = !1,
-  d = !1,
-  u = !1;
+  u = !1,
+  d = !1;
 class _ extends(r = l.ZP.Store) {
   getIsTargeted() {
-return u;
+return d;
   }
   shouldFetchCheckoutRecovery() {
-return !c && !d;
+return !c && !u;
   }
 }
-s = 'CheckoutRecoveryStore', (a = 'displayName') in(i = _) ? Object.defineProperty(i, a, {
-  value: s,
+a = 'CheckoutRecoveryStore', (s = 'displayName') in(i = _) ? Object.defineProperty(i, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = s, t.Z = new _(o.Z, {
+}) : i[s] = a, t.Z = new _(o.Z, {
   CHECKOUT_RECOVERY_STATUS_FETCH_SUCCESS: function(e) {
-d = !0, c = !1, u = e.isTargeted;
+u = !0, c = !1, d = e.isTargeted;
   },
   CHECKOUT_RECOVERY_STATUS_FETCH_FAILURE: function() {
-d = !0, c = !1;
+u = !0, c = !1;
   },
   CHECKOUT_RECOVERY_STATUS_FETCH: function() {
 c = !0;
   },
   LOGOUT: function() {
-c = !1, d = !1, u = !1;
+c = !1, u = !1, d = !1;
   }
 });

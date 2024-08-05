@@ -1,7 +1,7 @@
 n(47120);
 var i = n(594174),
-  s = n(768581),
-  a = n(956664),
+  a = n(768581),
+  s = n(956664),
   r = n(996106),
   l = n(452426),
   o = n(186901),
@@ -39,7 +39,7 @@ handler(e) {
   if ('user' === n) {
     let e = i.default.getUser(l);
     if (null != e) {
-      t = s.ZP.getUserAvatarURL(e, !1, d, o);
+      t = a.ZP.getUserAvatarURL(e, !1, d, o);
       let n = window.GLOBAL_ENV.CDN_HOST;
       null != n && -1 !== t.indexOf(n) && (t += '&_=');
     } else
@@ -51,7 +51,7 @@ handler(e) {
     throw new r.Z({
       errorCode: c.lTL.INVALID_COMMAND
     }, 'No valid type.');
-  return fetch(t).then(e => e.blob()).then(e => (0, a.fD)(e)).then(e => ({
+  return fetch(t).then(e => e.blob()).then(e => (0, s.fD)(e)).then(e => ({
     data_url: e
   }));
 }

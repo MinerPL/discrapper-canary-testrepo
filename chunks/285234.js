@@ -218,7 +218,7 @@ CSS_VARIABLE: {
 'slotted',
 'spelling-error'
   ],
-  o = [
+  s = [
 'align-content',
 'align-items',
 'align-self',
@@ -579,7 +579,7 @@ CSS_VARIABLE: {
 'z-index'
   ].reverse();
 e.exports = function(e) {
-  let s = t(e),
+  let o = t(e),
 l = {
   className: 'variable',
   begin: '\\$' + e.IDENT_RE
@@ -596,7 +596,7 @@ contains: [
   e.APOS_STRING_MODE,
   e.C_LINE_COMMENT_MODE,
   e.C_BLOCK_COMMENT_MODE,
-  s.HEXCOLOR,
+  o.HEXCOLOR,
   {
     begin: '\\.[a-zA-Z][a-zA-Z0-9_-]*' + u,
     className: 'selector-class'
@@ -617,7 +617,7 @@ contains: [
     className: 'selector-pseudo',
     begin: '&?:(:)?(' + a.join('|') + ')' + u
   },
-  s.ATTRIBUTE_SELECTOR_MODE,
+  o.ATTRIBUTE_SELECTOR_MODE,
   {
     className: 'keyword',
     begin: /@media/,
@@ -628,7 +628,7 @@ contains: [
         keyword: 'and or not only',
         attribute: r.join(' ')
       },
-      contains: [s.CSS_NUMBER_MODE]
+      contains: [o.CSS_NUMBER_MODE]
     }
   },
   {
@@ -636,7 +636,7 @@ contains: [
     begin: '@((-(o|moz|ms|webkit)-)?(' + 'charset|css|debug|extend|font-face|for|import|include|keyframes|media|mixin|page|warn|while))\\b'
   },
   l,
-  s.CSS_NUMBER_MODE,
+  o.CSS_NUMBER_MODE,
   {
     className: 'function',
     begin: '^[a-zA-Z][a-zA-Z0-9_-]*\\(.*\\)',
@@ -651,36 +651,36 @@ contains: [
         begin: /\(/,
         end: /\)/,
         contains: [
-          s.HEXCOLOR,
+          o.HEXCOLOR,
           l,
           e.APOS_STRING_MODE,
-          s.CSS_NUMBER_MODE,
+          o.CSS_NUMBER_MODE,
           e.QUOTE_STRING_MODE
         ]
       }
     ]
   },
-  s.CSS_VARIABLE,
+  o.CSS_VARIABLE,
   {
     className: 'attribute',
-    begin: '\\b(' + o.join('|') + ')\\b',
+    begin: '\\b(' + s.join('|') + ')\\b',
     starts: {
       end: /;|$/,
       contains: [
-        s.HEXCOLOR,
+        o.HEXCOLOR,
         l,
         e.APOS_STRING_MODE,
         e.QUOTE_STRING_MODE,
-        s.CSS_NUMBER_MODE,
+        o.CSS_NUMBER_MODE,
         e.C_BLOCK_COMMENT_MODE,
-        s.IMPORTANT,
-        s.FUNCTION_DISPATCH
+        o.IMPORTANT,
+        o.FUNCTION_DISPATCH
       ],
       illegal: /\./,
       relevance: 0
     }
   },
-  s.FUNCTION_DISPATCH
+  o.FUNCTION_DISPATCH
 ]
   };
 };

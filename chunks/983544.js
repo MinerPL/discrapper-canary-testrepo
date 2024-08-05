@@ -7,8 +7,8 @@ return i;
   }
 });
 var r, i, a = n(277985),
-  o = n(592125),
-  s = n(403182),
+  s = n(592125),
+  o = n(403182),
   l = n(380684),
   u = n(861990),
   c = n(981631);
@@ -20,8 +20,8 @@ return c.ANM.MESSAGE_CREATE_ATTACHMENT_UPLOAD(e);
 return c.ANM.MESSAGE_DELETE_UPLOAD(e);
   }
   getMaxFileSize(e) {
-let t = o.Z.getBasicChannel(e);
-return s.dg(null == t ? void 0 : t.guild_id);
+let t = s.Z.getBasicChannel(e);
+return o.dg(null == t ? void 0 : t.guild_id);
   }
   getMaxAttachmentsCount() {
 return c.dN1;

@@ -10,9 +10,9 @@ var s, o, r = n(735250),
   E = n(473092),
   N = n(684471),
   u = n(745982),
-  I = n(463439),
-  T = n(689938),
-  l = n(567214);
+  T = n(463439),
+  I = n(689938),
+  _ = n(567214);
 (o = s || (s = {}))[o.INTRO = 0] = 'INTRO', o[o.SAFETY_TIPS = 1] = 'SAFETY_TIPS', o[o.TAKE_ACTION = 2] = 'TAKE_ACTION';
 t.default = e => {
   let {
@@ -20,15 +20,15 @@ warningId: t,
 warningType: n,
 senderId: s,
 modalProps: o,
-channelId: _
+channelId: l
   } = e, [A, d] = a.useState(0), R = a.useMemo(() => ({
-channelId: _,
+channelId: l,
 senderId: s,
 warningId: t,
 warningType: n,
 isNudgeWarning: !1
   }), [
-_,
+l,
 s,
 t,
 n
@@ -54,7 +54,7 @@ d(e);
 transitionState: o.transitionState,
 children: [
   (0, r.jsx)('div', {
-    className: l.container,
+    className: _.container,
     children: (0, r.jsxs)(i.Slides, {
       width: 440,
       activeSlide: A,
@@ -81,11 +81,11 @@ children: [
         }),
         (0, r.jsx)(i.Slide, {
           id: 2,
-          children: (0, r.jsx)(I.Z, {
+          children: (0, r.jsx)(T.Z, {
             warningId: t,
             senderId: s,
             trackAnalyticsEvent: O,
-            channelId: _,
+            channelId: l,
             hasReported: C,
             onReport: function() {
               S(!0);
@@ -96,25 +96,25 @@ children: [
     })
   }),
   (0, r.jsxs)(i.ModalFooter, {
-    className: l.footer,
+    className: _.footer,
     children: [
       (0, r.jsx)(i.Button, {
-        className: l.footerButton,
+        className: _.footerButton,
         look: i.Button.Looks.LINK,
         color: i.Button.Colors.CUSTOM,
         size: i.Button.Sizes.MIN,
         onClick: function() {
-          o.onClose(), (0, c.T)(_, [t]), O(E.NM.USER_TAKEOVER_MODAL_DISMISS);
+          o.onClose(), (0, c.T)(l, [t]), O(E.NM.USER_TAKEOVER_MODAL_DISMISS);
         },
-        children: T.Z.Messages.CLOSE
+        children: I.Z.Messages.CLOSE
       }),
       0 !== A && (0, r.jsx)(i.Button, {
-        className: l.footerButton,
+        className: _.footerButton,
         look: i.Button.Looks.LINK,
         color: i.Button.Colors.CUSTOM,
         size: i.Button.Sizes.MIN,
         onClick: () => P(0),
-        children: T.Z.Messages.BACK
+        children: I.Z.Messages.BACK
       })
     ]
   })

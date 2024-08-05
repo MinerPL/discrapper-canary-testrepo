@@ -6,13 +6,13 @@ return c;
 var r = n(470079),
   i = n(699581),
   a = n(978008),
-  o = n(427753),
-  s = n.n(o),
+  s = n(427753),
+  o = n.n(s),
   l = n(705942),
   u = [],
   c = function(e, t, n) {
 void 0 === n && (n = {});
-var o = r.useRef(null),
+var s = r.useRef(null),
   c = {
     onFirstUpdate: n.onFirstUpdate,
     placement: n.placement || 'bottom',
@@ -75,7 +75,7 @@ var o = r.useRef(null),
         }
       ])
     };
-    return s()(o.current, e) ? o.current || e : (o.current = e, e);
+    return o()(s.current, e) ? s.current || e : (s.current = e, e);
   }, [
     c.onFirstUpdate,
     c.placement,

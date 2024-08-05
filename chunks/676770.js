@@ -1,6 +1,6 @@
 n.d(t, {
   Fl: function() {
-return s;
+return o;
   },
   c1: function() {
 return l;
@@ -9,14 +9,14 @@ return l;
 return u;
   },
   lp: function() {
-return o;
+return s;
   }
 });
 var r = n(149765),
   i = n(231338),
   a = n(689938);
-let o = 2,
-  s = 2,
+let s = 2,
+  o = 2,
   l = () => [{
   value: 1,
   label: a.Z.Messages.GUILD_SERVER_LOCKDOWN_DURATION_1_HOUR

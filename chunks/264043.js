@@ -3,7 +3,7 @@ n.d(t, {
 return r;
   }
 }), n(47120);
-var r, i, a, o, s, l, u = n(442837),
+var r, i, a, s, o, l, u = n(442837),
   c = n(570140),
   d = n(973616);
 (a = r || (r = {}))[a.FETCHING = 0] = 'FETCHING', a[a.FETCHED = 1] = 'FETCHED', a[a.ERROR = 2] = 'ERROR';
@@ -47,12 +47,12 @@ if (null != e)
   return h[e];
   }
 }
-l = 'ApplicationDirectoryApplicationsStore', (s = 'displayName') in(o = p) ? Object.defineProperty(o, s, {
+l = 'ApplicationDirectoryApplicationsStore', (o = 'displayName') in(s = p) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[s] = l, t.Z = new p(c.Z, {
+}) : s[o] = l, t.Z = new p(c.Z, {
   APPLICATION_DIRECTORY_FETCH_APPLICATION: function(e) {
 let {
   applicationId: t

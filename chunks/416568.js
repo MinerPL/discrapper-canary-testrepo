@@ -34,12 +34,12 @@ var i = n(735250),
   j = n(792125),
   D = n(727258),
   U = n(605951),
-  w = n(474109),
-  G = n(741616),
+  G = n(474109),
+  w = n(741616),
   k = n(187835),
   B = n(162050),
-  V = n(118122),
-  H = n(193154),
+  H = n(118122),
+  V = n(193154),
   F = n(602147),
   W = n(773182),
   Y = n(222059),
@@ -251,8 +251,8 @@ eM.scrollTo({
   (0, U.Z)(eM.scrollToGuild);
   let eD = o.getRoots(),
 eU = (0, v.Z)(),
-ew = (0, A.U)(),
-eG = ei.map(e => (0, i.jsx)(H.Z, {
+eG = (0, A.U)(),
+ew = ei.map(e => (0, i.jsx)(V.Z, {
   id: e.id,
   name: e.name,
   icon: e.icon
@@ -271,7 +271,7 @@ children: (0, i.jsx)('nav', {
     role: 'tree',
     className: en.tree,
     children: [
-      (0, i.jsx)(w.Z, {
+      (0, i.jsx)(G.Z, {
         ref: ed,
         isVisible: eM.isItemVisible,
         onJumpTo: eM.handleJumpToGuild,
@@ -292,8 +292,8 @@ children: (0, i.jsx)('nav', {
           (0, i.jsx)(z.Z, {
             isOnHubVerificationRoute: eP
           }),
-          (0, i.jsx)(G.Z, {}),
-          ew,
+          (0, i.jsx)(w.Z, {}),
+          eG,
           g.map(e => (0, i.jsx)($.Z, {
             guildId: e
           }, e)),
@@ -329,8 +329,8 @@ children: (0, i.jsx)('nav', {
               }
             })
           }),
-          eG,
-          n ? null : (0, i.jsx)(V.Z, {
+          ew,
+          n ? null : (0, i.jsx)(H.Z, {
             disableTooltip: h.length > 0,
             lastTargetNode: eD[eD.length - 1]
           }),
@@ -347,7 +347,7 @@ children: (0, i.jsx)('nav', {
           })
         ]
       }),
-      n || null == eN || null == ex ? !n && eg ? (0, i.jsx)(W.LW, {
+      n || null == eN ? !n && eg ? (0, i.jsx)(W.LW, {
         hideGradient: ep,
         children: (0, i.jsx)(F.Z, {
           ref: eM.guildDiscoveryRef,
@@ -371,7 +371,7 @@ children: (0, i.jsx)('nav', {
           }
         })
       }),
-      (0, i.jsx)(w.Z, {
+      (0, i.jsx)(G.Z, {
         reverse: !0,
         ref: eh,
         isVisible: eM.isItemVisible,

@@ -1,8 +1,8 @@
 var r = n(735250),
   i = n(470079),
   a = n(481060),
-  o = n(454585),
-  s = n(273744),
+  s = n(454585),
+  o = n(273744),
   l = n(689938),
   u = n(631820);
 t.Z = e => {
@@ -12,9 +12,9 @@ node: {
   subheader: n,
   button: c
 }
-  } = e, d = (null == c ? void 0 : c.type) === 'submit', _ = i.useRef(o.Z.reactParserFor({
-...o.Z.defaultRules,
-link: s.s
+  } = e, d = (null == c ? void 0 : c.type) === 'submit', _ = i.useRef(s.Z.reactParserFor({
+...s.Z.defaultRules,
+link: o.s
   }));
   return (0, r.jsxs)('div', {
 className: u.headerContainer,

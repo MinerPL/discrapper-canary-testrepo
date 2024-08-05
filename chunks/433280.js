@@ -5,8 +5,8 @@ return I;
 });
 var i = n(735250);
 n(470079);
-var s = n(990547),
-  a = n(399606),
+var a = n(990547),
+  s = n(399606),
   r = n(213609),
   l = n(434404),
   o = n(970731),
@@ -21,7 +21,7 @@ function I(e) {
   let {
 guildId: t,
 markAsDismissed: n
-  } = e, I = (0, a.e7)([
+  } = e, I = (0, s.e7)([
 c.Z,
 d.default
   ], () => {
@@ -30,8 +30,8 @@ let e = d.default.getCurrentUser(),
 return (null == n ? void 0 : n.isOwner(e)) === !0;
   });
   return (0, r.Z)({
-type: s.ImpressionTypes.POPOUT,
-name: s.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
+type: a.ImpressionTypes.POPOUT,
+name: a.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
 properties: {
   guild_id: t,
   is_owner: I

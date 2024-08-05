@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(570140),
-  o = n(594174),
-  s = n(626135),
+  s = n(594174),
+  o = n(626135),
   l = n(358085),
   u = n(857595),
   c = n(607070),
@@ -30,18 +30,18 @@ _.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPr
   },
   init() {
 this.initBasic(), a.Z.subscribe('ACCESSIBILITY_COLORBLIND_TOGGLE', () => {
-  s.default.track(d.rMx.LOCAL_SETTINGS_UPDATED, {
+  o.default.track(d.rMx.LOCAL_SETTINGS_UPDATED, {
     colorblind_enabled: c.Z.colorblindMode
   });
 }), a.Z.subscribe('ACCESSIBILITY_SET_SATURATION', e => {
-  s.default.track(d.rMx.LOCAL_SETTINGS_UPDATED, {
+  o.default.track(d.rMx.LOCAL_SETTINGS_UPDATED, {
     saturation_level: e.saturation
   });
 });
   },
   maybeShowKeyboardNavigationExplainerModal() {
 I = Math.max(I - 1, 0), ! function() {
-  let e = o.default.getCurrentUser();
+  let e = s.default.getCurrentUser();
   return null == e || Date.now() - +e.createdAt < 86400000;
 }() && !c.Z.keyboardNavigationExplainerModalSeen && 0 === I && (0, i.openModalLazy)(async () => {
   let {

@@ -43,26 +43,26 @@ m = N.invoiceItems.find(e => {
   if (null == m)
 return null;
   let A = m.subscriptionPlanId,
-h = c.Z.get(A);
-  i()(null != h, 'Missing plan');
-  let g = (0, _.T4)(N.total, N.currency),
+g = c.Z.get(A);
+  i()(null != g, 'Missing plan');
+  let h = (0, _.T4)(N.total, N.currency),
 O = '';
-  return h.interval === u.rV.YEAR ? O = I.Z.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
-price: g,
+  return g.interval === u.rV.YEAR ? O = I.Z.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
+price: h,
 termsUrl: T.EYA.TERMS,
 paidURL: T.EYA.PAID_TERMS,
 privacyUrl: T.EYA.PRIVACY
-  }) : h.interval === u.rV.MONTH && (O = 1 === h.intervalCount ? I.Z.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
-price: g,
+  }) : g.interval === u.rV.MONTH && (O = 1 === g.intervalCount ? I.Z.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
+price: h,
 termsUrl: T.EYA.TERMS,
 paidURL: T.EYA.PAID_TERMS,
 privacyUrl: T.EYA.PRIVACY
   }) : I.Z.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MULTI_MONTH.format({
-price: g,
+price: h,
 termsUrl: T.EYA.TERMS,
 paidURL: T.EYA.PAID_TERMS,
 privacyUrl: T.EYA.PRIVACY,
-intervalCount: h.intervalCount
+intervalCount: g.intervalCount
   })), (0, n.jsx)(r.Text, {
 color: 'text-muted',
 className: C,

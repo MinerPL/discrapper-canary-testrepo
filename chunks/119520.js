@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(558381),
-  r = n(499371),
+  a = n(470079),
+  s = n(558381),
+  r = n(986035),
   l = n(689938),
   o = n(871726);
 
@@ -14,7 +14,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class d extends s.PureComponent {
+class d extends a.PureComponent {
   render() {
 let {
   game: {
@@ -37,9 +37,9 @@ return (0, i.jsx)('div', {
   }
   constructor(...e) {
 super(...e), c(this, 'handleDisagree', () => {
-  (0, a.M9)();
+  (0, s.M9)();
 }), c(this, 'handleAgree', () => {
-  (0, a.cj)();
+  (0, s.cj)();
 });
   }
 }

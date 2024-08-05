@@ -78,8 +78,8 @@ return p;
 var r = n(367907),
   i = n(731429),
   a = n(188471),
-  o = n(592125),
-  s = n(703558),
+  s = n(592125),
+  o = n(703558),
   l = n(626135),
   u = n(358085),
   c = n(660189),
@@ -93,7 +93,7 @@ guildId: t,
 channelId: n,
 sessionId: i,
 postIds: a,
-additionalTimes: o
+additionalTimes: s
   } = e;
   r.ZP.trackWithMetadata(E.rMx.FORUM_CHANNEL_SEEN_BATCH, {
 ...(0, _.xl)({
@@ -103,7 +103,7 @@ additionalTimes: o
 guild_id: t,
 channel_id: n,
 post_ids: a,
-additional_seen_time_millis: o
+additional_seen_time_millis: s
   });
 }
 
@@ -143,8 +143,8 @@ guildId: t,
 channelId: n,
 tagId: i,
 filterTagIds: a,
-added: o,
-location: s
+added: s,
+location: o
   } = e;
   r.ZP.trackWithMetadata(E.rMx.FORUM_CHANNEL_TAG_FILTER_CLICKED, {
 ...(0, _.xl)({
@@ -154,8 +154,8 @@ guild_id: t,
 channel_id: n,
 tag_id: i,
 filter_tag_ids: a,
-added: o,
-location: s
+added: s,
+location: o
   });
 }
 
@@ -192,12 +192,12 @@ function g(e) {
   let {
 guildId: l,
 channelId: u
-  } = e, c = o.Z.getChannel(u);
+  } = e, c = s.Z.getChannel(u);
   if (null == c)
 return;
-  let d = s.Z.getThreadSettings(u),
+  let d = o.Z.getThreadSettings(u),
 f = null === (t = c.template) || void 0 === t ? void 0 : t.trim(),
-h = s.Z.getDraft(u, s.d.FirstThreadMessage),
+h = o.Z.getDraft(u, o.d.FirstThreadMessage),
 p = null == h || 0 === h.length || (null == h ? void 0 : h.trim()) === f,
 m = (null == d ? void 0 : d.appliedTags) == null || (null == d ? void 0 : null === (n = d.appliedTags) || void 0 === n ? void 0 : n.size) === 0,
 I = (null == d ? void 0 : d.name) == null || (null == d ? void 0 : null === (a = d.name) || void 0 === a ? void 0 : null === (i = a.trim()) || void 0 === i ? void 0 : i.length) === 0;
@@ -266,12 +266,12 @@ guildId: t,
 channelId: n,
 numArchivedThreads: i,
 hasMoreThreads: a,
-filterTagIds: s,
+filterTagIds: o,
 sortOrder: u
   } = e;
   l.default.track(E.rMx.FORUM_CHANNEL_MORE_POSTS_LOADED, {
 ...(0, r.hH)(t),
-...(0, r.v_)(o.Z.getChannel(n)),
+...(0, r.v_)(s.Z.getChannel(n)),
 ...(0, _.xl)({
   channelId: n
 }),
@@ -280,7 +280,7 @@ channel_id: n,
 num_archived_threads: i,
 num_active_threads: (0, _.bE)(t, n),
 has_more_threads: a,
-filter_tag_ids: s,
+filter_tag_ids: o,
 sort_order: u
   });
 }
@@ -429,7 +429,7 @@ guildId: t,
 channelId: n
   } = e;
   r.ZP.trackWithMetadata(E.rMx.THREAD_CREATION_STARTED, {
-...(0, i.K)(o.Z.getChannel(n)),
+...(0, i.K)(s.Z.getChannel(n)),
 channel_id: n,
 guild_id: t
   });

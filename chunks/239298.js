@@ -1,6 +1,6 @@
 a.d(L, {
   o: function() {
-return r;
+return s;
   }
 });
 var C = a(735250);
@@ -8,7 +8,7 @@ a(470079);
 var t = a(613828),
   i = a(481060);
 
-function r(e) {
+function s(e) {
   let {
 children: L,
 ...a

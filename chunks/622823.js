@@ -1,8 +1,8 @@
 var r = n(470079),
   i = n(476400),
   a = n.n(i),
-  o = n(844303),
-  s = n(329022),
+  s = n(844303),
+  o = n(329022),
   l = n(829307),
   u = n(705513),
   c = n(464854),
@@ -16,7 +16,7 @@ var t = e.width,
   _ = e.hex,
   E = e.styles,
   f = e.className,
-  h = (0, o.default)((0, l.Z)({
+  h = (0, s.default)((0, l.Z)({
     default: {
       picker: {
         width: t,
@@ -47,7 +47,7 @@ return r.createElement('div', {
   style: h.overflow
 }, r.createElement('div', {
   style: h.body
-}, (0, s.Z)(u, function(e) {
+}, (0, o.Z)(u, function(e) {
   return r.createElement(d.Z, {
     key: e.toString(),
     group: e,

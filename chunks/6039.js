@@ -1,7 +1,7 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(481060),
   l = n(568154),
   o = n(703656),
@@ -17,48 +17,48 @@ var i = n(735250),
   p = n(390500),
   T = n(200305),
   S = n(981631),
-  C = n(898625),
-  f = n(689938),
+  f = n(898625),
+  C = n(689938),
   N = n(131147);
 t.Z = e => {
   var t;
   let n, A;
   let {
-guildId: Z,
-inviteCode: L
-  } = e, [v, O] = s.useState(C.hO.INITIAL), R = (0, a.e7)([E.Z], () => E.Z.get(Z)), x = (0, a.e7)([m.Z], () => m.Z.getRequest(Z)), b = (0, a.e7)([c.Z], () => c.Z.getGuild(Z)), {
+guildId: v,
+inviteCode: Z
+  } = e, [L, O] = a.useState(f.hO.INITIAL), R = (0, s.e7)([E.Z], () => E.Z.get(v)), x = (0, s.e7)([m.Z], () => m.Z.getRequest(v)), b = (0, s.e7)([c.Z], () => c.Z.getGuild(v)), {
 hasFetchedRequestToJoinGuilds: P,
 guildPreviewDisabled: M
-  } = (0, a.cj)([m.Z], () => ({
+  } = (0, s.cj)([m.Z], () => ({
 hasFetchedRequestToJoinGuilds: m.Z.hasFetchedRequestToJoinGuilds,
-guildPreviewDisabled: m.Z.getJoinRequestGuild(Z)
+guildPreviewDisabled: m.Z.getJoinRequestGuild(v)
   }));
-  s.useEffect(() => {
-null != b && (0, o.uL)(S.Z5c.CHANNEL(Z));
+  a.useEffect(() => {
+null != b && (0, o.uL)(S.Z5c.CHANNEL(v));
   }, [
 b,
-Z
-  ]), s.useEffect(() => {
+v
+  ]), a.useEffect(() => {
 !P && _.Z.fetchRequestToJoinGuilds();
   }, [P]);
-  let D = s.useCallback(e => {
+  let D = a.useCallback(e => {
   O(t => Math.max(t, e));
 }, []),
 y = async e => {
-  await h.Z.submitVerificationForm(Z, e);
+  await h.Z.submitVerificationForm(v, e);
 }, j = () => {
-  _.Z.resetGuildJoinRequest(Z);
+  _.Z.resetGuildJoinRequest(v);
 };
-  let U = (n = f.Z.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({
+  let U = (n = C.Z.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({
   name: null == M ? void 0 : M.toString()
 }), A = () => {
-  O(Math.max(v, C.hO.FILLING)), _.Z.removeGuildJoinRequest(Z), (0, o.uL)(S.Z5c.ME);
+  O(Math.max(L, f.hO.FILLING)), _.Z.removeGuildJoinRequest(v), (0, o.uL)(S.Z5c.ME);
 }, () => {
   (0, r.openModal)(e => (0, i.jsx)(r.ConfirmModal, {
-    header: f.Z.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
-    cancelText: f.Z.Messages.NEVERMIND,
+    header: C.Z.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
+    cancelText: C.Z.Messages.NEVERMIND,
     onConfirm: A,
-    confirmText: f.Z.Messages.YES_TEXT,
+    confirmText: C.Z.Messages.YES_TEXT,
     confirmButtonColor: r.Button.Colors.RED,
     ...e,
     children: (0, i.jsx)(r.Text, {
@@ -77,7 +77,7 @@ className: N.page,
 children: (0, i.jsxs)(l.Z, {
   embedded: !0,
   splash: G,
-  waveState: v,
+  waveState: L,
   showLogo: !1,
   updateWaveState: D,
   children: [
@@ -95,17 +95,17 @@ children: (0, i.jsxs)(l.Z, {
             });
           case I.wB.REJECTED:
             return (0, i.jsx)(g.Z, {
-              reapplyText: f.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
+              reapplyText: C.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
               onReapply: j,
-              confirmText: f.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,
+              confirmText: C.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,
               onWithdrawApplication: U,
               rejectionReason: null == x ? void 0 : x.rejectionReason,
               guild: M
             });
           default:
             return (0, i.jsx)(T.Z, {
-              guildId: Z,
-              inviteCode: L,
+              guildId: v,
+              inviteCode: Z,
               onComplete: y
             });
         }

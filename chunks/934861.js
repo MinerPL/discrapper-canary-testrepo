@@ -10,8 +10,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(493683),
-  o = n(475413),
-  s = n(689938);
+  s = n(475413),
+  o = n(689938);
 
 function l(e) {
   let {
@@ -19,10 +19,10 @@ userId: t,
 onClose: n,
 ...l
   } = e;
-  return (0, r.jsx)(o.tG, {
+  return (0, r.jsx)(s.tG, {
 action: 'SEND_MESSAGE',
 icon: i.ChatIcon,
-text: s.Z.Messages.USER_PROFILE_MESSAGE,
+text: o.Z.Messages.USER_PROFILE_MESSAGE,
 onClick: () => {
   a.Z.openPrivateChannel(t), null == n || n();
 },
@@ -36,10 +36,10 @@ userId: t,
 onClose: n,
 ...l
   } = e;
-  return (0, r.jsx)(o.ef, {
+  return (0, r.jsx)(s.ef, {
 action: 'SEND_MESSAGE',
 icon: i.ChatIcon,
-tooltipText: s.Z.Messages.USER_PROFILE_MESSAGE,
+tooltipText: o.Z.Messages.USER_PROFILE_MESSAGE,
 onClick: () => {
   a.Z.openPrivateChannel(t), null == n || n();
 },

@@ -5,8 +5,8 @@ return o;
 });
 var i = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(970731),
+var a = n(481060),
+  s = n(970731),
   r = n(689938),
   l = n(758);
 
@@ -15,7 +15,7 @@ function o(e) {
 guildId: t,
 markAsDismissed: o
   } = e;
-  return (0, i.jsx)(a.ZP, {
+  return (0, i.jsx)(s.ZP, {
 className: l.container,
 asset: (0, i.jsx)('img', {
   className: l.image,
@@ -27,11 +27,11 @@ headerClassName: l.header,
 content: r.Z.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_COACHMARK_DESCRIPTION,
 buttonCTA: r.Z.Messages.CHECK_IT_OUT,
 buttonProps: {
-  color: s.ButtonColors.WHITE,
+  color: a.ButtonColors.WHITE,
   innerClassName: l.primaryButton
 },
 onClick: () => {
-  (0, s.openModalLazy)(async () => {
+  (0, a.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.all([
@@ -46,8 +46,8 @@ onClick: () => {
 },
 secondaryButtonCTA: r.Z.Messages.MAYBE_LATER,
 secondaryButtonProps: {
-  look: s.ButtonLooks.LINK,
-  color: s.ButtonColors.WHITE
+  look: a.ButtonLooks.LINK,
+  color: a.ButtonColors.WHITE
 },
 markAsDismissed: o
   });

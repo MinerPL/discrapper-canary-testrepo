@@ -5,9 +5,9 @@ var n = s(735250),
   l = s(279837),
   a = s(479531),
   r = s(144114),
-  h = s(23434),
-  d = s(594174),
-  u = s(585111),
+  h = s(145454),
+  d = s(23434),
+  u = s(594174),
   c = s(1964),
   p = s(689938);
 t.default = i.forwardRef(function(e, t) {
@@ -16,7 +16,7 @@ onAddedPhone: s,
 onClose: m,
 transitionState: C,
 reason: f
-  } = e, g = (0, o.e7)([d.default], () => d.default.getCurrentUser()), y = (0, o.e7)([h.Z], () => h.Z.getAction()), [N, x] = i.useState(null), [R, E] = i.useState(null), [P, b] = i.useState(null), [j, v] = i.useState(!1), S = i.useCallback(async e => {
+  } = e, g = (0, o.e7)([u.default], () => u.default.getCurrentUser()), y = (0, o.e7)([d.Z], () => d.Z.getAction()), [N, x] = i.useState(null), [R, E] = i.useState(null), [P, b] = i.useState(null), [j, v] = i.useState(!1), S = i.useCallback(async e => {
 v(!0);
 try {
   c.Z.isPhoneReverification(g, y) ? await r.Z.beginReverifyPhone(e, f) : await r.Z.beginAddPhone(e, f), b(null), x(e);
@@ -60,7 +60,7 @@ onClose: m,
 transitionState: C,
 title: p.Z.Messages.USER_SETTINGS_EDIT_ACCOUNT_PASSWORD_LABEL,
 handleSubmit: I
-  }) : (0, n.jsx)(u.Z, {
+  }) : (0, n.jsx)(h.Z, {
 onClose: m,
 transitionState: C,
 error: null == P ? void 0 : P.getAnyErrorMessage(),

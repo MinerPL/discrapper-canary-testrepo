@@ -25,33 +25,33 @@ return u;
   }
 });
 var r, i, a = n(63063),
-  o = n(981631),
-  s = n(689938);
+  s = n(981631),
+  o = n(689938);
 
 function l(e) {
   switch (e) {
 case 60:
-  return s.Z.Messages.DURATION_SECS.format({
+  return o.Z.Messages.DURATION_SECS.format({
     secs: 60
   });
 case 300:
-  return s.Z.Messages.DURATION_MINS.format({
+  return o.Z.Messages.DURATION_MINS.format({
     mins: 5
   });
 case 600:
-  return s.Z.Messages.DURATION_MINS.format({
+  return o.Z.Messages.DURATION_MINS.format({
     mins: 10
   });
 case 3600:
-  return s.Z.Messages.DURATION_HOURS.format({
+  return o.Z.Messages.DURATION_HOURS.format({
     hours: 1
   });
 case 86400:
-  return s.Z.Messages.DURATION_DAYS.format({
+  return o.Z.Messages.DURATION_DAYS.format({
     days: 1
   });
 case 604800:
-  return s.Z.Messages.DURATION_WEEKS.format({
+  return o.Z.Messages.DURATION_WEEKS.format({
     weeks: 1
   });
 default:
@@ -66,7 +66,7 @@ return {
   value: i[e]
 };
   }),
-  c = a.Z.getArticleURL(o.BhN.DISABLE_GUILD_COMMUNICATION),
+  c = a.Z.getArticleURL(s.BhN.DISABLE_GUILD_COMMUNICATION),
   d = 'GuildCommunicationDisabledDismissedGuilds',
   _ = 'Set Communication Disabled Modal',
   E = 'Clear Communication Disabled Modal',

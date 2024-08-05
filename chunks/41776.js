@@ -1,5 +1,5 @@
 n(47120), n(724458);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(271383),
   c = n(430824),
@@ -25,7 +25,7 @@ function I(e) {
 e
   ], !0);
 }
-class T extends(r = s.ZP.Store) {
+class T extends(r = o.ZP.Store) {
   initialize() {
 this.waitFor(c.Z, d.default);
   }
@@ -54,12 +54,12 @@ return p;
 return null != e ? f[e] : null;
   }
 }
-o = 'LurkingStore', (a = 'displayName') in(i = T) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'LurkingStore', (a = 'displayName') in(i = T) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new T(l.Z, {
+}) : i[a] = s, t.Z = new T(l.Z, {
   CONNECTION_OPEN: function() {
 E = Object.values(c.Z.getGuilds()).reduce((e, t) => t.isLurker() ? [
   ...e,
@@ -75,8 +75,8 @@ let {
   loadId: a
 } = e;
 if (n) {
-  var o, s;
-  switch (I(t), o = t, null != (s = a) && (f[o] = s), r) {
+  var s, o;
+  switch (I(t), s = t, null != (o = a) && (f[s] = o), r) {
     case _.vtS.MOBILE_GUILD_DISCOVERY:
       p = {
         type: _.vtS.MOBILE_GUILD_DISCOVERY

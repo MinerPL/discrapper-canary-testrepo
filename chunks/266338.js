@@ -3,10 +3,10 @@ n.d(t, {
 return l;
   },
   YP: function() {
-return s;
+return o;
   },
   c: function() {
-return o;
+return s;
   }
 }), n(47120);
 let r = new WeakMap(),
@@ -20,12 +20,12 @@ null != r && r.call(null, e);
   });
 }
 
-function o(e) {
+function s(e) {
   let t = r.get(e);
   return null == t && (t = new IntersectionObserver(a, e), r.set(e, t), i.set(t, new WeakMap())), t;
 }
 
-function s(e, t, n) {
+function o(e, t, n) {
   var r;
   let a = null !== (r = i.get(e)) && void 0 !== r ? r : new WeakMap();
   !a.has(t) && e.observe(t), a.set(t, n), i.set(e, a);

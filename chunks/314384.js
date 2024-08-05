@@ -6,7 +6,7 @@ return a;
 return i;
   },
   zH: function() {
-return o;
+return s;
   }
 });
 var r = n(470079),
@@ -26,7 +26,7 @@ return i(function() {
   };
   };
 
-function o(e) {
+function s(e) {
   var t = (0, r.useRef)(void 0);
   return (0, r.useEffect)(function() {
 t.current = e;

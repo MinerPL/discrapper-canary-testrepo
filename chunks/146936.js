@@ -6,8 +6,8 @@ return O;
 var r = n(668781),
   i = n(812206),
   a = n(835873),
-  o = n(592125),
-  s = n(430824),
+  s = n(592125),
+  o = n(430824),
   l = n(496675),
   u = n(594174),
   c = n(979651),
@@ -35,7 +35,7 @@ channelId: C,
 guildId: y,
 embeddedActivitiesManager: D,
 analyticsLocations: L
-  } = e, b = s.Z.getGuild(y), M = u.default.getCurrentUser();
+  } = e, b = o.Z.getGuild(y), M = u.default.getCurrentUser();
   if (null == n)
 return !1;
   let P = null !== (t = i.Z.getApplication(n)) && void 0 !== t ? t : await (0, p.Z)(n, C);
@@ -43,13 +43,13 @@ return !1;
 return d.S.dispatch(N.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, {
   applicationId: n
 }), !1;
-  let U = o.Z.getChannel(C);
+  let U = s.Z.getChannel(C);
   if (null == U || null == b && !U.isPrivate() || null == M || null == P)
 return !1;
   let w = null != C ? (0, m.e4)({
 channelId: C,
-ChannelStore: o.Z,
-GuildStore: s.Z,
+ChannelStore: s.Z,
+GuildStore: o.Z,
 PermissionStore: l.Z,
 VoiceStateStore: c.Z
   }) : m.jy.NO_CHANNEL;

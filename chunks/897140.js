@@ -1,8 +1,8 @@
-a.r(s);
-var _ = a(735250);
+a.r(e);
+var t = a(735250);
 a(470079);
-var o = a(392711),
-  t = a.n(o),
+var _ = a(392711),
+  o = a.n(_),
   c = a(792986),
   S = a(780384),
   d = a(481060),
@@ -35,37 +35,37 @@ E
 () => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_09,
 () => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_10
   ];
-s.default = e => {
+e.default = s => {
   let {
-transitionState: s,
+transitionState: e,
 onClose: a
-  } = e, o = (0, O.ZP)(), i = (0, n.Dt)(), r = (0, S.wj)(o) ? f : C, E = (0, c.Z)(() => t().sample(r), [r]), g = (0, c.Z)(() => t().sample(M), []);
-  return (0, _.jsxs)(d.ModalRoot, {
-transitionState: s,
+  } = s, _ = (0, O.ZP)(), i = (0, n.Dt)(), r = (0, S.wj)(_) ? f : C, E = (0, c.Z)(() => o().sample(r), [r]), g = (0, c.Z)(() => o().sample(M), []);
+  return (0, t.jsxs)(d.ModalRoot, {
+transitionState: e,
 className: l.root,
 'aria-labelledby': i,
 children: [
-  (0, _.jsx)('img', {
+  (0, t.jsx)('img', {
     alt: '',
     src: E,
     className: l.image
   }),
-  (0, _.jsxs)(d.ModalContent, {
+  (0, t.jsxs)(d.ModalContent, {
     className: l.modal,
     children: [
-      (0, _.jsx)(d.Heading, {
+      (0, t.jsx)(d.Heading, {
         variant: 'heading-xl/semibold',
         className: l.followSuccessHeader,
         id: i,
         children: g()
       }),
-      (0, _.jsx)(d.Text, {
+      (0, t.jsx)(d.Text, {
         color: 'text-muted',
         variant: 'text-md/medium',
         className: l.body,
         children: L.Z.Messages.FOLLOW_SUCCESS_MODAL_BODY
       }),
-      (0, _.jsx)(d.Button, {
+      (0, t.jsx)(d.Button, {
         onClick: a,
         children: L.Z.Messages.TUTORIAL_CLOSE
       })

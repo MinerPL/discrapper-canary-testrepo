@@ -2,9 +2,9 @@ n(47120);
 var r = n(668781),
   i = n(998502),
   a = n(58406),
-  o = n(761274);
+  s = n(761274);
 
-function s(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -23,7 +23,7 @@ return this.asyncify(null === (n = this.nativeUtils) || void 0 === n ? void 0 : 
   }
   asyncify(e, t, n) {
 let r = l.requestTypeLookup[t];
-return void 0 === r ? Promise.resolve(!0) : this.requestAuthorization(t, () => null == e ? Promise.resolve(o.NZ.AUTHORIZED) : new Promise((t, n) => e(t, r)), n);
+return void 0 === r ? Promise.resolve(!0) : this.requestAuthorization(t, () => null == e ? Promise.resolve(s.NZ.AUTHORIZED) : new Promise((t, n) => e(t, r)), n);
   }
   openSettings(e) {
 var t;
@@ -41,24 +41,24 @@ let {
   body: n,
   onConfirm: i,
   cancelText: a,
-  confirmText: o
+  confirmText: s
 } = e;
 r.Z.show({
   title: t,
   body: n,
   onConfirm: i,
   cancelText: a,
-  confirmText: o
+  confirmText: s
 });
   }
   constructor(...e) {
-super(...e), s(this, 'nativeUtils', i.ZP.getDiscordUtils());
+super(...e), o(this, 'nativeUtils', i.ZP.getDiscordUtils());
   }
 }
-s(l, 'requestTypeLookup', {
-  [o.Eu.CAMERA]: i.jK.Camera,
-  [o.Eu.AUDIO]: i.jK.Microphone,
-  [o.Eu.PHOTOS]: i.jK.Photo,
-  [o.Eu.INPUT_MONITORING]: i.jK.InputMonitoring,
-  [o.Eu.SCREEN_RECORDING]: i.jK.ScreenRecording
+o(l, 'requestTypeLookup', {
+  [s.Eu.CAMERA]: i.jK.Camera,
+  [s.Eu.AUDIO]: i.jK.Microphone,
+  [s.Eu.PHOTOS]: i.jK.Photo,
+  [s.Eu.INPUT_MONITORING]: i.jK.InputMonitoring,
+  [s.Eu.SCREEN_RECORDING]: i.jK.ScreenRecording
 }), t.Z = new l();

@@ -6,8 +6,8 @@ return _;
 var r = n(470079),
   i = n(719711),
   a = n(433517),
-  o = n(579806),
-  s = n(626135),
+  s = n(579806),
+  o = n(626135),
   l = n(998502),
   u = n(286035),
   c = n(981631);
@@ -19,9 +19,9 @@ function d(e) {
 
 function _() {
   return r.useEffect(() => {
-window.location.origin === window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN && !0 !== a.K.get(i.SV) && l.ZP.supportsFeature(c.eRX.USER_DATA_CACHE) && (u.Te(), o.Z.userDataCache.getCached().then(e => {
+window.location.origin === window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN && !0 !== a.K.get(i.SV) && l.ZP.supportsFeature(c.eRX.USER_DATA_CACHE) && (u.Te(), s.Z.userDataCache.getCached().then(e => {
   if (null == e) {
-    u.kb(), s.default.track(c.rMx.DOMAIN_MIGRATED, {
+    u.kb(), o.default.track(c.rMx.DOMAIN_MIGRATED, {
       success: !1,
       has_data: !1
     }, {
@@ -39,13 +39,13 @@ window.location.origin === window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN && !0 
     try {
       a.K.set(t, JSON.parse(n));
     } catch (e) {}
-  })), s.default.track(c.rMx.DOMAIN_MIGRATED, {
+  })), o.default.track(c.rMx.DOMAIN_MIGRATED, {
     success: !0,
     current_is_newer: _,
     has_data: n
   }, {
     flush: !0
-  }), a.K.set(i.SV, !0), o.Z.userDataCache.deleteCache(), u.Pg();
+  }), a.K.set(i.SV, !0), s.Z.userDataCache.deleteCache(), u.Pg();
 }));
   }, []), null;
 }

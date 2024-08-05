@@ -21,8 +21,8 @@ return E;
 var r = n(735250),
   i = n(470079),
   a = n(227879),
-  o = n(260034),
-  s = n(993365),
+  s = n(260034),
+  o = n(993365),
   l = n(133065);
 
 function u(e) {
@@ -40,7 +40,7 @@ children: t,
   return (0, r.jsx)(a.sg, {
 ...n,
 className: l.column,
-children: (0, r.jsx)(s.x, {
+children: (0, r.jsx)(o.x, {
   variant: 'eyebrow',
   className: l.columnText,
   children: t
@@ -73,7 +73,7 @@ function f(e) {
   let {
 title: t,
 header: n,
-footer: s,
+footer: o,
 ...u
   } = e, c = i.useId();
   return (0, r.jsxs)('div', {
@@ -82,7 +82,7 @@ children: [
   (0, r.jsxs)('div', {
     className: l.toolbar,
     children: [
-      (0, r.jsx)(o.X, {
+      (0, r.jsx)(s.X, {
         className: l.__invalid_title,
         variant: 'heading-md/semibold',
         id: c,
@@ -98,9 +98,9 @@ children: [
     'aria-labelledby': c,
     className: l.table
   }),
-  null != s && (0, r.jsx)('div', {
+  null != o && (0, r.jsx)('div', {
     className: l.footer,
-    children: s
+    children: o
   })
 ]
   });

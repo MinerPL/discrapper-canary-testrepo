@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(481060),
-  s = n(436088),
+  s = n(481060),
+  o = n(436088),
   l = n(806519),
   u = n(446066);
 
@@ -25,12 +25,12 @@ children: [
     mask: l.ZP.Masks.STATUS_SCREENSHARE,
     width: t,
     height: n,
-    children: (0, r.jsx)(s.Z, {
+    children: (0, r.jsx)(o.Z, {
       width: t,
       height: n
     })
   }),
-  (0, r.jsx)(o.CloseSmallIcon, {
+  (0, r.jsx)(s.CloseSmallIcon, {
     size: 'md',
     color: 'currentColor',
     className: u.badge

@@ -25,8 +25,8 @@ var i = n(735250),
   I = n(921227),
   x = n(314897),
   C = n(430824),
-  R = n(496675),
-  S = n(699516),
+  S = n(496675),
+  R = n(699516),
   N = n(885110),
   O = n(300429),
   Z = n(111583),
@@ -165,8 +165,8 @@ let {
   isComboing: v
 } = this.props, {
   rateLimitPerUser: b
-} = p, I = j.default.getCurrentUser(), x = C.Z.getGuild(t), R = b > 0, N = f ? [] : r()(l).keys().filter(e => e !== (null == I ? void 0 : I.id)).reject(e => S.Z.isBlocked(e)).map(e => j.default.getUser(e)).filter(L.lm).map(e => w.ZP.getName(t, this.props.channel.id, e)).value();
-if (0 === N.length && !R && !v)
+} = p, I = j.default.getCurrentUser(), x = C.Z.getGuild(t), S = b > 0, N = f ? [] : r()(l).keys().filter(e => e !== (null == I ? void 0 : I.id)).reject(e => R.Z.isBlocked(e)).map(e => j.default.getUser(e)).filter(L.lm).map(e => w.ZP.getName(t, this.props.channel.id, e)).value();
+if (0 === N.length && !S && !v)
   return s && null != n ? (0, i.jsx)(V, {
     activity: n,
     isFocused: o
@@ -177,7 +177,7 @@ if (0 === N.length && !R && !v)
 let O = '',
   Z = null,
   M = '';
-if (R) {
+if (S) {
   if (Z = (0, i.jsx)(g.TimerIcon, {
       size: 'xs',
       color: 'currentColor',
@@ -246,7 +246,7 @@ return e = 0 === N.length ? '' : 1 === N.length ? k.Z.Messages.ONE_USER_TYPING.f
         })
       ]
     }),
-    R && (0, i.jsx)(g.Tooltip, {
+    S && (0, i.jsx)(g.Tooltip, {
       text: M,
       children: e => (0, i.jsxs)(d.Z.div, {
         style: this.getCooldownTextStyle(),
@@ -299,7 +299,7 @@ x.default
   ], () => b.ZP.getUserCombo(x.default.getId(), t.id)), l = (0, m.e7)([
 I.Z,
 _.Z
-  ], () => (0, T.Z)(t, o, I.Z, _.Z)), r = (0, m.e7)([O.Z], () => O.Z.getSlowmodeCooldownGuess(t.id, n ? O.S.CreateThread : O.S.SendMessage)), c = (0, m.e7)([R.Z], () => n ? R.Z.can(U.Plq.MANAGE_THREADS, t) : R.Z.can(U.Plq.MANAGE_CHANNELS, t) || R.Z.can(U.Plq.MANAGE_MESSAGES, t)), u = {
+  ], () => (0, T.Z)(t, o, I.Z, _.Z)), r = (0, m.e7)([O.Z], () => O.Z.getSlowmodeCooldownGuess(t.id, n ? O.S.CreateThread : O.S.SendMessage)), c = (0, m.e7)([S.Z], () => n ? S.Z.can(U.Plq.MANAGE_THREADS, t) : S.Z.can(U.Plq.MANAGE_CHANNELS, t) || S.Z.can(U.Plq.MANAGE_MESSAGES, t)), u = {
 ...s,
 baseTextColor: (0, g.useToken)(p.Z.colors.INTERACTIVE_NORMAL).hex(),
 activeTextColor: (0, g.useToken)(p.Z.colors.INTERACTIVE_NORMAL).hex(),

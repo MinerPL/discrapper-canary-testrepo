@@ -1,72 +1,72 @@
-n.d(l, {
+t.d(n, {
   Z: function() {
-return d;
+return u;
   }
-}), n(47120);
-var t = n(735250),
-  i = n(470079),
-  r = n(481060),
-  a = n(911969),
-  s = n(970184),
-  u = n(293979),
-  o = n(93248);
+}), t(47120);
+var l = t(735250),
+  r = t(470079),
+  i = t(481060),
+  a = t(911969),
+  o = t(970184),
+  s = t(293979),
+  c = t(93248);
 
-function d(e) {
-  let l;
+function u(e) {
+  let n;
   let {
-type: n,
-style: d,
-label: c,
+type: t,
+style: u,
+label: d,
 placeholder: m,
-minLength: p,
-maxLength: f,
-required: v,
-value: E
-  } = e, [N, h] = i.useState(null != E ? E : ''), {
-state: C,
+minLength: f,
+maxLength: _,
+required: p,
+value: v
+  } = e, [C, h] = r.useState(null != v ? v : ''), {
+state: x,
 executeStateUpdate: I,
-error: g
-  } = (0, s.Ee)(e, null != E ? {
-type: n,
-value: E
-  } : void 0), x = (0, u.hz)(e.id);
-  i.useEffect(() => {
-(null == C ? void 0 : C.type) === n && h(C.value);
+error: E
+  } = (0, o.Ee)(e, null != v ? {
+type: t,
+value: v
+  } : void 0), T = (0, s.hz)(e.id);
+  r.useEffect(() => {
+(null == x ? void 0 : x.type) === t && h(x.value);
   }, [
-n,
-C
+t,
+x
   ]);
-  let S = {
-name: c,
-value: N,
+  let N = {
+name: d,
+value: C,
 placeholder: m,
-minLength: p,
-maxLength: f,
-required: v,
+minLength: f,
+maxLength: _,
+required: p,
 onChange: e => {
   h(e), I({
-    type: n,
+    type: t,
     value: e
   });
 },
-autoFocus: x
+autoFocus: T
   };
-  switch (d) {
+  switch (u) {
 case a.FO.SMALL:
-  l = (0, t.jsx)(r.TextInput, {
-    ...S
+  n = (0, l.jsx)(i.TextInput, {
+    ...N
   });
   break;
 case a.FO.PARAGRAPH:
-  l = (0, t.jsx)(r.TextArea, {
-    ...S
+  n = (0, l.jsx)(i.TextArea, {
+    ...N
   });
   }
-  return (0, t.jsx)(r.FormItem, {
-title: c,
-required: v,
-className: o.formItem,
-error: g,
-children: l
+  return (0, l.jsx)(i.FormItem, {
+title: d,
+required: p,
+className: c.formItem,
+error: E,
+children: n
   });
 }

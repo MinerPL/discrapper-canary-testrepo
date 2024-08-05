@@ -2,8 +2,8 @@ n(47120);
 var r = n(544891),
   i = n(780384),
   a = n(570140),
-  o = n(802098),
-  s = n(702321),
+  s = n(802098),
+  o = n(702321),
   l = n(408987),
   u = n(57132),
   c = n(895886),
@@ -23,20 +23,20 @@ let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
   n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
   i = arguments.length > 3 ? arguments[3] : void 0,
   a = arguments.length > 4 ? arguments[4] : void 0,
-  o = this._getRecipients(e),
-  s = e => {
+  s = this._getRecipients(e),
+  o = e => {
     t && m.Z.call(e.id, n, !0, e.isDM() ? e.getRecipientId() : null);
   };
-if (1 === o.length) {
-  let [e] = o, t = this._openCachedDMChannel(e, a);
+if (1 === s.length) {
+  let [e] = s, t = this._openCachedDMChannel(e, a);
   if (null != t)
-    return s(t), Promise.resolve(t.id);
+    return o(t), Promise.resolve(t.id);
 }
 try {
   let e = await r.tn.post({
     url: T.ANM.USER_CHANNELS,
     body: {
-      recipients: o
+      recipients: s
     },
     context: {
       location: i
@@ -45,7 +45,7 @@ try {
   });
   null == a || a();
   let t = this._openPrivateChannel(e.body);
-  return s(t), e.body.id;
+  return o(t), e.body.id;
 } catch (e) {
   var l;
   throw (null == e ? void 0 : null === (l = e.body) || void 0 === l ? void 0 : l.code) === T.evJ.QUARANTINED && (0, c.default)(), e;
@@ -110,8 +110,8 @@ return a.Z.dispatch({
   closePrivateChannel(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
   n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-return (0, s.Z)(e) && h.default.track(T.rMx.CHANGE_LOG_DM_REMOVED, {
-  last_changelog_id: o.Z.latestChangelogId(),
+return (0, o.Z)(e) && h.default.track(T.rMx.CHANGE_LOG_DM_REMOVED, {
+  last_changelog_id: s.Z.latestChangelogId(),
   unread_count: f.ZP.getUnreadCount(e)
 }), a.Z.dispatch({
   type: 'CHANNEL_DELETE',
@@ -219,11 +219,11 @@ let a = {
   permission_overwrites: []
 };
 null != n && (a.parent_id = n), null != i && (a.topic = i);
-let o = await r.tn.post({
+let s = await r.tn.post({
   url: T.ANM.GUILD_CHANNELS(e),
   body: a,
   oldFormErrors: !0
 });
-return l.Z.checkGuildTemplateDirty(e), o;
+return l.Z.checkGuildTemplateDirty(e), s;
   }
 };

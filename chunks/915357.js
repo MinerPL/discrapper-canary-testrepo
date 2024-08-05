@@ -4,8 +4,8 @@ return c;
   }
 });
 var i = n(996106),
-  s = n(631467),
-  a = n(76238),
+  a = n(631467),
+  s = n(76238),
   r = n(186901),
   l = n(981631);
 
@@ -17,11 +17,11 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class c extends a.Z {
+class c extends s.Z {
   send(e) {
 var t;
 null === (t = this.onSendingToRPCClient) || void 0 === t || t.call(this, e, this.id), this.postMessageToRPCClient([
-  s.Z.FRAME,
+  a.Z.FRAME,
   e
 ], this.origin);
   }
@@ -35,20 +35,20 @@ null === (t = this.onSendingToRPCClient) || void 0 === t || t.call(this, e, this
 origin: e,
 postMessageToRPCClient: t,
 frameId: n,
-version: s,
-encoding: a,
+version: a,
+encoding: s,
 logger: c,
 postClose: d,
 onSendingToRPCClient: u
   }) {
-if (super(r.He.POST_MESSAGE, s, a), o(this, 'origin', void 0), o(this, 'frameId', void 0), o(this, 'postMessageToRPCClient', void 0), o(this, 'logger', void 0), o(this, 'postClose', void 0), o(this, 'onSendingToRPCClient', void 0), o(this, 'closed', void 0), -1 === [
+if (super(r.He.POST_MESSAGE, a, s), o(this, 'origin', void 0), o(this, 'frameId', void 0), o(this, 'postMessageToRPCClient', void 0), o(this, 'logger', void 0), o(this, 'postClose', void 0), o(this, 'onSendingToRPCClient', void 0), o(this, 'closed', void 0), -1 === [
     'etf',
     'json'
-  ].indexOf(a))
+  ].indexOf(s))
   throw new i.Z({
     closeCode: l.$VG.INVALID_ENCODING
-  }, 'Invalid Encoding: '.concat(a));
-if ('etf' === a)
+  }, 'Invalid Encoding: '.concat(s));
+if ('etf' === s)
   throw new i.Z({
     closeCode: l.$VG.INVALID_ENCODING
   }, 'Erlpack cannot be used on this client');

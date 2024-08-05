@@ -1,4 +1,4 @@
-var i, s, a, r, l = n(442837),
+var i, a, s, r, l = n(442837),
   o = n(570140);
 let c = {};
 class d extends(r = l.ZP.Store) {
@@ -6,12 +6,12 @@ class d extends(r = l.ZP.Store) {
 return c[e];
   }
 }
-a = 'ChannelSKUStore', (s = 'displayName') in(i = d) ? Object.defineProperty(i, s, {
-  value: a,
+s = 'ChannelSKUStore', (a = 'displayName') in(i = d) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[s] = a, t.Z = new d(o.Z, {
+}) : i[a] = s, t.Z = new d(o.Z, {
   CONNECTION_OPEN: function() {
 c = {};
   },

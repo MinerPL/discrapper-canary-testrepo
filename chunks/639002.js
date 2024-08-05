@@ -8,8 +8,8 @@ n(470079);
 var i = n(481060),
   l = n(782568),
   r = n(626135),
-  c = n(132871),
-  s = n(981631),
+  s = n(132871),
+  c = n(981631),
   o = n(689938),
   d = n(690400);
 
@@ -41,9 +41,9 @@ children: [
   (0, a.jsx)(i.Button, {
     size: i.Button.Sizes.SMALL,
     onClick: function() {
-      r.default.track(s.rMx.APP_DIRECTORY_CTA_CLICKED, {
+      r.default.track(c.rMx.APP_DIRECTORY_CTA_CLICKED, {
         cta: 'submit_music_app',
-        current_page: c.ApplicationDirectoryViews.SEARCH,
+        current_page: s.ApplicationDirectoryViews.SEARCH,
         guild_id: t
       }), (0, l.Z)('https://dis.gd/music-search-page-inclusion');
     },

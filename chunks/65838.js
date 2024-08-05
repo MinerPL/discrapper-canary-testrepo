@@ -20,6 +20,7 @@ let r = new Set([
   'actionscript',
   'as',
   'ass',
+  'ssa',
   'alan',
   'ansi',
   'i',

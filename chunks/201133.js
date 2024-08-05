@@ -9,8 +9,8 @@ return f;
 var r = n(570140),
   i = n(493683),
   a = n(957730),
-  o = n(222677),
-  s = n(995774),
+  s = n(222677),
+  o = n(995774),
   l = n(314897),
   u = n(592125),
   c = n(703558),
@@ -27,8 +27,8 @@ return null == d.Z.getMessageForFile(t.id) ? Promise.reject() : new Promise((e, 
   E = async function(e, t) {
 var r;
 let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-  o = arguments.length > 3 ? arguments[3] : void 0,
-  s = arguments.length > 4 ? arguments[4] : void 0,
+  s = arguments.length > 3 ? arguments[3] : void 0,
+  o = arguments.length > 4 ? arguments[4] : void 0,
   d = u.Z.getChannel(t);
 if (r = l.default.getToken(), a.ZP.parse(d, ''), i);
 else {
@@ -36,11 +36,11 @@ else {
     throw Error('AtomicReactor sendUtils: Couldn\'t resolve channel with id '.concat(t));
   {
     let r = n(966390).Z;
-    e.description = o, await r.uploadFiles({
+    e.description = s, await r.uploadFiles({
       channelId: t,
       uploads: [e],
       draftType: c.d.ChannelMessage,
-      parsedMessage: s
+      parsedMessage: o
     });
   }
 }
@@ -55,8 +55,8 @@ let {
 E(t, u, l, a);
 let c = await _(u);
 if (null != c) {
-  let e = (0, s.g1)(n);
-  await (0, o.rU)(u, c.id, e);
+  let e = (0, o.g1)(n);
+  await (0, s.rU)(u, c.id, e);
 }
   }, h = e => {
 let {
@@ -64,7 +64,7 @@ let {
   reply: n,
   channel: r,
   altText: i,
-  requireConfirmation: o = !1
-} = e, s = a.ZP.parse(r, n);
-return E(t, r.id, o, i, s);
+  requireConfirmation: s = !1
+} = e, o = a.ZP.parse(r, n);
+return E(t, r.id, s, i, o);
   };

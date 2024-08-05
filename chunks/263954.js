@@ -6,8 +6,8 @@ return a;
 var l = n(735250);
 n(470079);
 var o = n(120356),
-  t = n.n(o),
-  s = n(543892);
+  s = n.n(o),
+  t = n(543892);
 
 function a(e) {
   let {
@@ -17,17 +17,17 @@ description: o,
 color: a
   } = e;
   return (0, l.jsxs)('div', {
-className: s.perkRow,
+className: t.perkRow,
 children: [
   (0, l.jsx)('div', {
-    className: s.perkIconContainer,
+    className: t.perkIconContainer,
     children: (0, l.jsx)(r, {
       color: null != a ? a : 'currentColor',
-      className: t()(s.perkIcon, n)
+      className: s()(t.perkIcon, n)
     })
   }),
   (0, l.jsx)('div', {
-    className: s.perkDescription,
+    className: t.perkDescription,
     children: o
   })
 ]

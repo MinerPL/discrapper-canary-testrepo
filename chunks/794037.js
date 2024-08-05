@@ -18,8 +18,8 @@ return function(t, n, r) {
 };
   }(),
   a = n(470079),
-  o = d(a),
-  s = d(n(476400)),
+  s = d(a),
+  o = d(n(476400)),
   l = d(n(699581)),
   u = d(n(726351)),
   c = d(n(512722));
@@ -96,19 +96,19 @@ value: function(e) {
   key: 'render',
   value: function() {
     if ((0, c.default)(this.props.children, 'Expected children to be one of function or React.Element'), !this.state.initiated)
-      return o.default.createElement('div', null);
+      return s.default.createElement('div', null);
     if ('function' == typeof this.props.children) {
       var e = this.props.children(this.state);
       return e && a.Children.only(e);
     }
-    return a.Children.only(o.default.cloneElement(this.props.children, this.state));
+    return a.Children.only(s.default.cloneElement(this.props.children, this.state));
   }
 }
   ]), t;
 }(a.Component);
 _.propTypes = {
-  children: s.default.oneOfType([
-s.default.element,
-s.default.func
+  children: o.default.oneOfType([
+o.default.element,
+o.default.func
   ]).isRequired
 }, t.default = _;

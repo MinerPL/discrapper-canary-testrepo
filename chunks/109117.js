@@ -6,8 +6,8 @@ return _;
 var r = n(268146),
   i = n(433517),
   a = n(131951),
-  o = n(594174),
-  s = n(626135),
+  s = n(594174),
+  o = n(626135),
   l = n(729345),
   u = n(981631);
 let c = window.DiscordNative,
@@ -24,7 +24,7 @@ return;
   let n = await t(),
 {
   didCrashReporterSeeCrash: a,
-  didCrashOrUncleanExit: o
+  didCrashOrUncleanExit: s
 } = function(e, t) {
   var n;
   let r = (null == e ? void 0 : e.lastId) !== (null == t ? void 0 : t.id) && (null == t ? void 0 : t.id) != null,
@@ -35,7 +35,7 @@ return;
   };
 }(i.K.get(d, {}), n),
 l = function(e, t, n) {
-  var i, a, o, s, l, u, c, d, _, E, f, h, p, m, I, T, g, S, A;
+  var i, a, s, o, l, u, c, d, _, E, f, h, p, m, I, T, g, S, A;
 
   function N(e) {
     return (null == n ? void 0 : n.storedInformation) != null && 1 === n.storedInformation[e];
@@ -57,8 +57,8 @@ l = function(e, t, n) {
     stream_media_session_id: v(r.X4.StreamMediaSessionId),
     last_memory_usage_kb: null !== (_ = null == n ? void 0 : null === (i = n.lastMemoryInformation) || void 0 === i ? void 0 : i.memoryUsageKB) && void 0 !== _ ? _ : null,
     last_used_js_heap_size_kb: null !== (E = null == n ? void 0 : null === (a = n.lastMemoryInformation) || void 0 === a ? void 0 : a.usedJSHeapSizeKB) && void 0 !== E ? E : null,
-    last_memory_usage_uptime: null !== (f = null == n ? void 0 : null === (o = n.lastMemoryInformation) || void 0 === o ? void 0 : o.uptimeSeconds) && void 0 !== f ? f : null,
-    highest_memory_usage_kb: null !== (h = null == n ? void 0 : null === (s = n.highestMemoryInformation) || void 0 === s ? void 0 : s.memoryUsageKB) && void 0 !== h ? h : null,
+    last_memory_usage_uptime: null !== (f = null == n ? void 0 : null === (s = n.lastMemoryInformation) || void 0 === s ? void 0 : s.uptimeSeconds) && void 0 !== f ? f : null,
+    highest_memory_usage_kb: null !== (h = null == n ? void 0 : null === (o = n.highestMemoryInformation) || void 0 === o ? void 0 : o.memoryUsageKB) && void 0 !== h ? h : null,
     highest_used_js_heap_size_kb: null !== (p = null == n ? void 0 : null === (l = n.highestMemoryInformation) || void 0 === l ? void 0 : l.usedJSHeapSizeKB) && void 0 !== p ? p : null,
     highest_memory_usage_uptime: null !== (m = null == n ? void 0 : null === (u = n.highestMemoryInformation) || void 0 === u ? void 0 : u.uptimeSeconds) && void 0 !== m ? m : null
   };
@@ -83,14 +83,14 @@ l = function(e, t, n) {
     minidump_exception_module_code_id: null !== (A = null == R ? void 0 : R.exceptionModuleCodeId) && void 0 !== A ? A : null,
     ...O
   };
-}(a, o, n);
-  s.default.track(u.rMx.APP_NATIVE_CRASH, l), i.K.set(d, {
+}(a, s, n);
+  o.default.track(u.rMx.APP_NATIVE_CRASH, l), i.K.set(d, {
 lastId: null == n ? void 0 : n.id
-  }), o && setTimeout(async () => await E(), 10000);
+  }), s && setTimeout(async () => await E(), 10000);
 }
 async function E() {
   var e, t;
-  if (null !== (t = null === (e = o.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t)
+  if (null !== (t = null === (e = s.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t)
 try {
   await a.Z.getMediaEngine().writeAudioDebugState(), await (0, l.E)(u.GU0.RTC), console.log('Successfully uploaded debug files');
 } catch (e) {

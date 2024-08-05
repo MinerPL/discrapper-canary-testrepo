@@ -23,8 +23,8 @@ function a(e) {
   if (!e)
 throw Error('BigInt unavailable, see https://github.com/timostamm/protobuf-ts/blob/v1.0.8/MANUAL.md#bigint-support');
 }
-let o = /^-?[0-9]+$/;
-class s {
+let s = /^-?[0-9]+$/;
+class o {
   constructor(e, t) {
 this.lo = 0 | e, this.hi = 0 | t;
   }
@@ -38,7 +38,7 @@ if (!Number.isSafeInteger(e))
 return e;
   }
 }
-class l extends s {
+class l extends o {
   static from(e) {
 if (i)
   switch (typeof e) {
@@ -66,7 +66,7 @@ else
     case 'string':
       if ('0' == e)
         return this.ZERO;
-      if (e = e.trim(), !o.test(e))
+      if (e = e.trim(), !s.test(e))
         throw Error('string is no integer');
       let [t, n, a] = (0, r.IL)(e);
       if (t)
@@ -91,7 +91,7 @@ return a(i), i.V.setInt32(0, this.lo, !0), i.V.setInt32(4, this.hi, !0), i.V.get
   }
 }
 l.ZERO = new l(0, 0);
-class u extends s {
+class u extends o {
   static from(e) {
 if (i)
   switch (typeof e) {
@@ -119,10 +119,10 @@ else
     case 'string':
       if ('0' == e)
         return this.ZERO;
-      if (e = e.trim(), !o.test(e))
+      if (e = e.trim(), !s.test(e))
         throw Error('string is no integer');
-      let [t, n, a] = (0, r.IL)(e), s = new u(n, a);
-      return t ? s.negate() : s;
+      let [t, n, a] = (0, r.IL)(e), o = new u(n, a);
+      return t ? o.negate() : o;
     case 'number':
       if (0 == e)
         return this.ZERO;

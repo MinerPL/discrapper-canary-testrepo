@@ -6,8 +6,8 @@ return l;
 var r = n(735250),
   i = n(470079),
   a = n(376398),
-  o = n(825040);
-async function s(e) {
+  s = n(825040);
+async function o(e) {
   let {
 deviceId: t,
 width: n,
@@ -39,7 +39,7 @@ height: l,
 disabled: u
   } = e, [c, d] = i.useState();
   return i.useEffect(() => {
-let e = s({
+let e = o({
   deviceId: t,
   width: n,
   height: l,
@@ -72,7 +72,7 @@ style: {
   width: n,
   height: l
 }
-  }) : (0, r.jsx)(o.Z, {
+  }) : (0, r.jsx)(s.Z, {
 streamId: c,
 style: {
   width: n,

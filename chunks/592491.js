@@ -22,15 +22,15 @@ a = {
   built_in: 'array bool bytes char exn|5 float int int32 int64 list lazy_t|5 nativeint|5 ref string unit ',
   literal: 'true false'
 },
-o = '\\b(0[xX][a-fA-F0-9_]+[Lln]?|0[oO][0-7_]+[Lln]?|0[bB][01_]+[Lln]?|[0-9][0-9_]*([Lln]|(\\.[0-9_]*)?([eE][-+]?[0-9_]+)?)?)',
-s = {
+s = '\\b(0[xX][a-fA-F0-9_]+[Lln]?|0[oO][0-7_]+[Lln]?|0[bB][01_]+[Lln]?|[0-9][0-9_]*([Lln]|(\\.[0-9_]*)?([eE][-+]?[0-9_]+)?)?)',
+o = {
   className: 'number',
   relevance: 0,
   variants: [{
-      begin: o
+      begin: s
     },
     {
-      begin: '\\(-' + o + '\\)'
+      begin: '\\(-' + s + '\\)'
     }
   ]
 },
@@ -45,7 +45,7 @@ u = [{
     begin: t
   },
   l,
-  s
+  o
 ],
 c = [
   e.QUOTE_STRING_MODE,
@@ -215,7 +215,7 @@ contains: [
     illegal: '-->',
     relevance: 0
   },
-  s,
+  o,
   e.C_LINE_COMMENT_MODE,
   {
     className: 'pattern-match',

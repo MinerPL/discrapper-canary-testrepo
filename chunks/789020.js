@@ -1,11 +1,11 @@
 var r = n(161581),
   i = n(325008),
   a = n(4340),
-  o = n(572609),
-  s = n(936940),
+  s = n(572609),
+  o = n(936940),
   l = r.RegExp,
   u = l.prototype;
-i && s(function() {
+i && o(function() {
   var e = !0;
   try {
 l('.', 'd');
@@ -29,10 +29,10 @@ a = {
   multiline: 'm',
   sticky: 'y'
 };
-  for (var o in (e && (a.hasIndices = 'd'), a))
-i(o, a[o]);
+  for (var s in (e && (a.hasIndices = 'd'), a))
+i(s, a[s]);
   return Object.getOwnPropertyDescriptor(u, 'flags').get.call(t) !== r || n !== r;
 }) && a(u, 'flags', {
   configurable: !0,
-  get: o
+  get: s
 });

@@ -14,21 +14,21 @@ index: t,
 optionId: l,
 onDragStart: o,
 onDragComplete: r,
-onDragReset: c
-  } = e, [d, u] = i.useState(!1), [, I] = (0, a.c)({
+onDragReset: d
+  } = e, [c, u] = i.useState(!1), [, I] = (0, a.c)({
 type: n,
 item: () => (o(l), {
   id: l,
   position: t
 }),
-canDrag: () => d,
+canDrag: () => c,
 collect: e => ({
   isDragging: e.isDragging()
 }),
 end: (e, n) => {
   let t = n.getDropResult();
   if (null == t) {
-    c();
+    d();
     return;
   }
   r(t.optionId);

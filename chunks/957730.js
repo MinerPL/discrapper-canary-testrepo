@@ -2,8 +2,8 @@ n(47120), n(724458), n(653041), n(390547);
 var r = n(392711),
   i = n.n(r),
   a = n(302454),
-  o = n.n(a),
-  s = n(933557),
+  s = n.n(a),
+  o = n(933557),
   l = n(339085),
   u = n(633302),
   c = n(428595),
@@ -72,7 +72,7 @@ parse: t => ({
 
 function b(e) {
   return {
-match: o().anyScopeRegex(e),
+match: s().anyScopeRegex(e),
 parse: e => ({
   type: 'text',
   content: e[0]
@@ -87,9 +87,9 @@ let M = c.Z.RULES,
   G = /^<a?:(\w+):(\d+)>/,
   k = /(@everyone|@here|@Clyde)\b/,
   B = {
-link: L(o().defaultRules.link),
-autolink: L(o().defaultRules.autolink),
-url: L(o().defaultRules.url),
+link: L(s().defaultRules.link),
+autolink: L(s().defaultRules.autolink),
+url: L(s().defaultRules.url),
 inlineCode: L(M.inlineCode),
 codeBlock: L(M.codeBlock),
 rawUserMention: b(U),
@@ -144,7 +144,7 @@ channel: {
         break;
     }
     let a = t.substring(0, i + 1),
-      o = (0, s.mA)(t.substring(2, i));
+      s = (0, o.mA)(t.substring(2, i));
     return n.sortBy(e => {
       let {
         text: t
@@ -154,7 +154,7 @@ channel: {
       let {
         text: t
       } = e;
-      return o === t;
+      return s === t;
     }).map(e => {
       let {
         id: t
@@ -190,13 +190,13 @@ emoji: {
   parse(e, t, n) {
     let [r, i] = e, {
       customEmoji: a
-    } = n, o = Object.prototype.hasOwnProperty.call(a, i) ? a[i] : null;
-    if (null != o) {
-      var s;
+    } = n, s = Object.prototype.hasOwnProperty.call(a, i) ? a[i] : null;
+    if (null != s) {
+      var o;
       return {
         type: 'customEmoticon',
-        content: '<'.concat(!0 === o.animated ? 'a' : '', ':').concat(null !== (s = o.originalName) && void 0 !== s ? s : o.name, ':').concat(o.id, '>'),
-        emoji: o
+        content: '<'.concat(!0 === s.animated ? 'a' : '', ':').concat(null !== (o = s.originalName) && void 0 !== o ? o : s.name, ':').concat(s.id, '>'),
+        emoji: s
       };
     }
     return {
@@ -213,11 +213,11 @@ customEmoticons: {
   parse(e, t, n) {
     let [r, i] = e, {
       emojiContext: a
-    } = n, o = a.getEmoticonByName(i);
-    return null != o ? {
+    } = n, s = a.getEmoticonByName(i);
+    return null != s ? {
       type: 'customEmoticon',
-      content: '<'.concat(!0 === o.animated ? 'a' : '', ':').concat(o.name, ':').concat(o.id, '>'),
-      emoji: o
+      content: '<'.concat(!0 === s.animated ? 'a' : '', ':').concat(s.name, ':').concat(s.id, '>'),
+      emoji: s
     } : {
       type: 'text',
       content: r
@@ -233,7 +233,7 @@ text: {
 inlineCode: L(M.inlineCode),
 codeBlock: L(M.codeBlock),
 mention: {
-  match: o().anyScopeRegex(U),
+  match: s().anyScopeRegex(U),
   parse(e, t, n) {
     let {
       isNotification: r
@@ -258,7 +258,7 @@ mention: {
   }
 },
 roleMention: {
-  match: o().anyScopeRegex(w),
+  match: s().anyScopeRegex(w),
   parse(e, t, n) {
     let {
       guild: r
@@ -276,27 +276,27 @@ roleMention: {
   }
 },
 channel: {
-  match: o().anyScopeRegex(x),
+  match: s().anyScopeRegex(x),
   parse(e) {
     let t = h.Z.getChannel(e[1]);
     return {
-      content: null == t ? e[0] : (0, s.F6)(t, A.default, g.Z, !0, !0)
+      content: null == t ? e[0] : (0, o.F6)(t, A.default, g.Z, !0, !0)
     };
   }
 },
 emoji: {
-  match: o().anyScopeRegex(G),
+  match: s().anyScopeRegex(G),
   parse(e, t, n) {
     let [r, i, a] = e, {
-      guild: o
-    } = n, s = l.Z.getDisambiguatedEmojiContext(o ? o.id : null).getById(a), u = null != s ? s.name : i;
+      guild: s
+    } = n, o = l.Z.getDisambiguatedEmojiContext(s ? s.id : null).getById(a), u = null != o ? o.name : i;
     return {
       content: ':'.concat(u, ':')
     };
   }
 },
 soundboard: {
-  match: o().anyScopeRegex(/^<sound:(\d+)>/),
+  match: s().anyScopeRegex(/^<sound:(\d+)>/),
   parse(e) {
     let [t, n] = e;
     return {
@@ -305,13 +305,13 @@ soundboard: {
   }
 },
 spoiler: {
-  match: o().anyScopeRegex(R.$92),
+  match: s().anyScopeRegex(R.$92),
   parse: () => ({
     content: '<'.concat(y.Z.Messages.SPOILER.toLowerCase(), '>')
   })
 },
 staticRouteLink: {
-  match: o().anyScopeRegex(R.PEY),
+  match: s().anyScopeRegex(R.PEY),
   parse: e => ({
     content: '<id:'.concat(e[1], '>')
   })
@@ -338,7 +338,7 @@ text: {
 e[t].order = n;
   });
 });
-let V = o().parserFor(B),
+let V = s().parserFor(B),
   H = /(?:<a?:\w+:(\d+)>)|:(?:([^\s:]+?)(?:::skin-tone-\d)?:)/g;
 
 function Z(e, t, n, r) {
@@ -391,7 +391,7 @@ return {
   nick: n
 };
   }) : [];
-  let o = i()(t.reduce((e, t) => {
+  let s = i()(t.reduce((e, t) => {
   let {
     userId: n
   } = t, r = A.default.getUser(n);
@@ -400,7 +400,7 @@ return {
     text: r.tag
   }), e);
 }, [])),
-s = i()(null != r ? I.Z.getRoles(r.id) : {}).values().filter(e => {
+o = i()(null != r ? I.Z.getRoles(r.id) : {}).values().filter(e => {
   let {
     mentionable: t
   } = e;
@@ -439,9 +439,9 @@ h = _.getCustomEmoji(),
 g = _.getCustomEmoticonRegex();
   return {
 inline: !0,
-mentionableRoles: s,
+mentionableRoles: o,
 guild: r,
-users: o,
+users: s,
 channels: u.concat(c).concat(d),
 emojiContext: _,
 customEmoticonsRegex: g,
@@ -458,35 +458,35 @@ t.ZP = {
   parse(e, t) {
 var n, r, i;
 let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
-  o = null != a ? a : Y(e),
-  s = {
+  s = null != a ? a : Y(e),
+  o = {
     content: t,
     tts: !1,
     invalidEmojis: [],
     validNonShortcutEmojis: []
   };
-return s.content = (n = s.content, r = o, i = (t, n) => {
+return o.content = (n = o.content, r = s, i = (t, n) => {
   v.ZP.isEmojiPremiumLocked({
     emoji: t,
     channel: e,
     intention: C.Hz.CHAT
-  }) ? s.invalidEmojis.push(t) : !n && s.validNonShortcutEmojis.push(t);
-}, Z(V(n, r), r, u.ZP.translateInlineEmojiToSurrogates, i)), s;
+  }) ? o.invalidEmojis.push(t) : !n && o.validNonShortcutEmojis.push(t);
+}, Z(V(n, r), r, u.ZP.translateInlineEmojiToSurrogates, i)), o;
   },
   parsePreprocessor: (e, t) => V(t, Y(e)),
   unparse(e, t, n) {
 let r = h.Z.getChannel(t),
   a = null != r ? r.getGuildId() : null,
-  s = null != a ? I.Z.getGuild(a) : null,
+  o = null != a ? I.Z.getGuild(a) : null,
   l = n ? F : i().omit(F, [
     'spoiler',
     'timestamp'
   ]),
   c = n ? j : u.ZP.translateSurrogatesToInlineEmoji,
-  d = o().parserFor(l),
+  d = s().parserFor(l),
   _ = {
     inline: !0,
-    guild: s,
+    guild: o,
     isNotification: n
   };
 return Z(d(e, _), _, c);

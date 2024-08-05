@@ -1,8 +1,8 @@
 var i = n(735250);
 n(470079);
 var a = n(481060),
-  l = n(153124),
-  s = n(689938),
+  s = n(153124),
+  l = n(689938),
   r = n(6444);
 let o = () => n.e('39248').then(n.t.bind(n, 48603, 19)).then(e => {
   let {
@@ -11,7 +11,7 @@ default: t
   return t;
 });
 t.Z = e => {
-  let t = (0, l.Dt)();
+  let t = (0, s.Dt)();
   return (0, i.jsxs)(a.ModalRoot, {
 ...e,
 transitionState: e.transitionState,
@@ -32,21 +32,21 @@ children: [
           variant: 'heading-xl/semibold',
           className: r.header,
           id: t,
-          children: s.Z.Messages.MEMBER_VERIFICATION_APPROVED_APPLICATION_MODAL_TITLE.format({
+          children: l.Z.Messages.MEMBER_VERIFICATION_APPROVED_APPLICATION_MODAL_TITLE.format({
             guildName: e.guildName
           })
         }),
         (0, i.jsx)(a.Text, {
           variant: 'text-sm/normal',
           color: 'header-secondary',
-          children: s.Z.Messages.MEMBER_VERIFICATION_APPROVED_APPLICATION_MODAL_DESC
+          children: l.Z.Messages.MEMBER_VERIFICATION_APPROVED_APPLICATION_MODAL_DESC
         }),
         (0, i.jsx)(a.Button, {
           className: r.button,
           onClick: () => {
             e.onAccept(), e.onClose();
           },
-          children: s.Z.Messages.MEMBER_VERIFICATION_APPROVED_APPLICATION_MODAL_CONFIRM
+          children: l.Z.Messages.MEMBER_VERIFICATION_APPROVED_APPLICATION_MODAL_CONFIRM
         })
       ]
     })

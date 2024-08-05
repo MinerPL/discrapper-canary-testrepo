@@ -6,8 +6,8 @@ return f;
 var r = n(392711),
   i = n.n(r),
   a = n(45114),
-  o = n(45966),
-  s = n(601070),
+  s = n(45966),
+  o = n(601070),
   l = n(984933),
   u = n(306680),
   c = n(626135),
@@ -22,7 +22,7 @@ let t = l.ZP.getSelectableChannelIds(e),
     ...t,
     ...l.ZP.getVocalChannelIds(e)
   ],
-  r = s.Z.getActiveJoinedThreadsForGuild(e);
+  r = o.Z.getActiveJoinedThreadsForGuild(e);
 for (let e of t) {
   var i;
   let t = null !== (i = r[e]) && void 0 !== i ? i : {};
@@ -43,7 +43,7 @@ r.push({
 }), r.push({
   channelId: d.default.cast(e),
   readStateType: E.W.GUILD_ONBOARDING_QUESTION,
-  messageId: o.Z.ackIdForGuild(e)
+  messageId: s.Z.ackIdForGuild(e)
 });
   }), c.default.track(_.rMx.MARK_AS_READ, {
 source: t,

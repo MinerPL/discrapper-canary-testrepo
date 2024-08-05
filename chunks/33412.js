@@ -10,21 +10,21 @@ var r = n(387103),
   i = n(697898),
   a = n(470079);
 
-function o(e, t, n) {
+function s(e, t, n) {
   return null != t && 0 > e.compare(t) || null != n && e.compare(n) > 0;
 }
 
-function s(e, t, n, r, i) {
+function o(e, t, n, r, i) {
   let a = {};
   for (let e in t)
 a[e] = Math.floor(t[e] / 2), a[e] > 0 && t[e] % 2 == 0 && a[e]--;
-  let o = l(e, t, n).subtract(a);
-  return c(e, o, t, n, r, i);
+  let s = l(e, t, n).subtract(a);
+  return c(e, s, t, n, r, i);
 }
 
 function l(e, t, n, i, a) {
-  let o = e;
-  return t.years ? o = (0, r.em)(e) : t.months ? o = (0, r.Nm)(e) : t.weeks && (o = (0, r.zJ)(e, n)), c(e, o, t, n, i, a);
+  let s = e;
+  return t.years ? s = (0, r.em)(e) : t.months ? s = (0, r.Nm)(e) : t.weeks && (s = (0, r.zJ)(e, n)), c(e, s, t, n, i, a);
 }
 
 function u(e, t, n, r, i) {
@@ -32,12 +32,12 @@ function u(e, t, n, r, i) {
 ...t
   };
   t.days ? a.days-- : t.weeks ? a.weeks-- : t.months ? a.months-- : t.years && a.years--;
-  let o = l(e, t, n).subtract(a);
-  return c(e, o, t, n, r, i);
+  let s = l(e, t, n).subtract(a);
+  return c(e, s, t, n, r, i);
 }
 
-function c(e, t, n, i, a, o) {
-  return a && e.compare(a) >= 0 && (t = (0, r.l7)(t, l((0, r.WG)(a), n, i))), o && 0 >= e.compare(o) && (t = (0, r.Mb)(t, u((0, r.WG)(o), n, i))), t;
+function c(e, t, n, i, a, s) {
+  return a && e.compare(a) >= 0 && (t = (0, r.l7)(t, l((0, r.WG)(a), n, i))), s && 0 >= e.compare(s) && (t = (0, r.Mb)(t, u((0, r.WG)(s), n, i))), t;
 }
 
 function d(e, t, n) {
@@ -105,7 +105,7 @@ y = (0, a.useMemo)(() => d(e.defaultFocusedValue ? (0, r.Mw)((0, r.WG)(e.default
     case 'end':
       return u(D, p, E, m, I);
     default:
-      return s(D, p, E, m, I);
+      return o(D, p, E, m, I);
   }
 }),
 [P, U] = (0, a.useState)(e.autoFocus || !1),
@@ -121,7 +121,7 @@ w = (0, a.useMemo)(() => {
 [x, G] = (0, a.useState)(A.identifier);
   if (A.identifier !== x) {
 let e = (0, r.Mw)(D, A);
-M(s(e, p, E, m, I)), L(e), G(A.identifier);
+M(o(e, p, E, m, I)), L(e), G(A.identifier);
   }
 
   function k(e) {
@@ -131,8 +131,8 @@ L(e = d(e, m, I));
   function B(t) {
 !e.isDisabled && !e.isReadOnly && (t = _(t = d(t, m, I), b, g)) && (t = (0, r.Mw)(t, (null == N ? void 0 : N.calendar) || new r.IQ()), N && 'hour' in N ? v(N.set(t)) : v(t));
   }
-  o(D, m, I) ? L(d(D, m, I)) : 0 > D.compare(b) ? M(u(D, p, E, m, I)) : D.compare(w) > 0 && M(l(D, p, E, m, I));
-  let F = (0, a.useMemo)(() => !!O && (!!(g && g(O)) || o(O, m, I)), [
+  s(D, m, I) ? L(d(D, m, I)) : 0 > D.compare(b) ? M(u(D, p, E, m, I)) : D.compare(w) > 0 && M(l(D, p, E, m, I));
+  let F = (0, a.useMemo)(() => !!O && (!!(g && g(O)) || s(O, m, I)), [
   O,
   g,
   m,
@@ -225,7 +225,7 @@ selectDate(e) {
 },
 isFocused: P,
 setFocused: U,
-isInvalid: e => o(e, m, I),
+isInvalid: e => s(e, m, I),
 isSelected(e) {
   return null != O && (0, r.KC)(e, O) && !this.isCellDisabled(e) && !this.isCellUnavailable(e);
 },
@@ -295,7 +295,7 @@ maxValue: T,
 ...g
   } = e, [S, A] = (0, i.zk)(t, n || null, l), [N, v] = (0, a.useState)(null), O = 'center';
   if (S && S.start && S.end) {
-let e = s((0, r.WG)(S.start), f, c, h, T).add(f).subtract({
+let e = o((0, r.WG)(S.start), f, c, h, T).add(f).subtract({
   days: 1
 });
 S.end.compare(e) > 0 && (O = 'start');
@@ -350,7 +350,7 @@ G = t => {
 {
   isDateUnavailable: F
 } = e,
-V = (0, a.useMemo)(() => !!S && !N && (!!(F && (F(S.start) || F(S.end))) || o(S.start, h, T) || o(S.end, h, T)), [
+V = (0, a.useMemo)(() => !!S && !N && (!!(F && (F(S.start) || F(S.end))) || s(S.start, h, T) || s(S.end, h, T)), [
   F,
   S,
   N,
@@ -377,7 +377,7 @@ highlightDate(e) {
 isSelected: e => x && e.compare(x.start) >= 0 && 0 >= e.compare(x.end) && !b.isCellDisabled(e) && !b.isCellUnavailable(e),
 isInvalid(e) {
   var t, n;
-  return b.isInvalid(e) || o(e, null === (t = R.current) || void 0 === t ? void 0 : t.start, null === (n = R.current) || void 0 === n ? void 0 : n.end);
+  return b.isInvalid(e) || s(e, null === (t = R.current) || void 0 === t ? void 0 : t.start, null === (n = R.current) || void 0 === n ? void 0 : n.end);
 },
 isDragging: k,
 setDragging: B

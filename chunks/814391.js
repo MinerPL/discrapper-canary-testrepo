@@ -1,8 +1,8 @@
 var r = n(913527),
   i = n.n(r),
   a = n(689938);
-let o = 3600,
-  s = 86400,
+let s = 3600,
+  o = 86400,
   l = 2592000,
   u = 31104000,
   c = () => ({
@@ -34,18 +34,18 @@ let e = (null == a ? void 0 : a.seconds) != null ? E('seconds', r) : E('minutes'
 if (null != e)
   return e;
   }
-  if (r < o) {
+  if (r < s) {
 let e = E('minutes', Math.floor(r / 60));
 if (null != e)
   return e;
   }
-  if (r < s) {
-let e = E('hours', Math.floor(r / o));
+  if (r < o) {
+let e = E('hours', Math.floor(r / s));
 if (null != e)
   return e;
   }
   if (r < l) {
-let e = E('days', Math.floor(r / s));
+let e = E('days', Math.floor(r / o));
 if (null != e)
   return e;
   }

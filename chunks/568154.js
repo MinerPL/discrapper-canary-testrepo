@@ -5,10 +5,10 @@ return I;
 }), n(47120);
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(477690),
-  u = n(257915),
+  u = n(877604),
   c = n(624138),
   d = n(133853),
   _ = n(686694),
@@ -34,12 +34,12 @@ innerHeight: r
 return null;
   let i = t / e,
 a = n,
-o = Math.round(n * i);
-  return o < r && (o = r, a = Math.round(r * (i = e / t))), {
+s = Math.round(n * i);
+  return s < r && (s = r, a = Math.round(r * (i = e / t))), {
 naturalWidth: e,
 naturalHeight: t,
 width: a,
-height: o
+height: s
   };
 }
 
@@ -49,7 +49,7 @@ splash: t,
 children: n
   } = e, [{
 width: r,
-height: o
+height: s
   }, l] = a.useState({
 width: 0,
 height: 0,
@@ -70,7 +70,7 @@ return window.addEventListener('resize', e), () => window.removeEventListener('r
   }, []), (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(u.Z, {
-    className: s()(f.rightSplit),
+    className: o()(f.rightSplit),
     onLoad: function(e) {
       let {
         currentTarget: t
@@ -82,10 +82,10 @@ children: [
     },
     src: t,
     width: r,
-    height: o
+    height: s
   }),
   (0, i.jsx)('div', {
-    className: s()(f.leftSplit, {
+    className: o()(f.leftSplit, {
       [f.nonEmbeddedLeftSplit]: !0
     }),
     children: n
@@ -109,7 +109,7 @@ let {
   height: r
 } = this.state;
 return null != e ? (0, i.jsx)(u.Z, {
-  className: s()(f.rightSplit, {
+  className: o()(f.rightSplit, {
     [f.embedded]: t
   }),
   src: e,
@@ -142,7 +142,7 @@ let {
   waveState: t,
   showLogo: n,
   logoClassName: r,
-  embedded: o
+  embedded: s
 } = this.props, {
   showWaveAnimation: l
 } = this.state;
@@ -150,13 +150,13 @@ return (0, i.jsxs)(a.Fragment, {
   children: [
     this.renderWave(),
     (0, i.jsxs)('div', {
-      className: s()(f.leftSplit, {
-        [f.nonEmbeddedLeftSplit]: o
+      className: o()(f.leftSplit, {
+        [f.nonEmbeddedLeftSplit]: s
       }),
       children: [
         n ? (0, i.jsx)(d.Z, {
           show: !l || t === E.hO.ENTERED && t !== E.hO.FILLING,
-          className: s()(f.logo, r)
+          className: o()(f.logo, r)
         }) : null,
         e
       ]
@@ -169,7 +169,7 @@ let {
   className: e
 } = this.props;
 return (0, i.jsxs)('div', {
-  className: s()(e, f.wrapper),
+  className: o()(e, f.wrapper),
   children: [
     this.renderSplashArt(),
     this.renderContent()

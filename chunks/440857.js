@@ -68,7 +68,7 @@ children: [
     children: x.Z.Messages.MEMBER_SAFETY_ACTION_NOTICE_CLEAR_SELECTION
   })
 ]
-  }), A = (0, n.jsxs)('span', {
+  }), N = (0, n.jsxs)('span', {
 className: b.buttonContainer,
 children: [
   (0, n.jsx)(r.HammerIcon, {
@@ -108,7 +108,7 @@ children: I && (0, n.jsx)(r.SlideIn, {
         });
       });
     },
-    onSaveText: A,
+    onSaveText: N,
     onSaveButtonColor: r.ButtonColors.RED,
     message: f
   })

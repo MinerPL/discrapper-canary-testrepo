@@ -12,8 +12,8 @@ return u;
 var r = n(735250),
   i = n(470079),
   a = n(906732),
-  o = n(221292);
-let s = i.createContext({}),
+  s = n(221292);
+let o = i.createContext({}),
   l = e => {
 let {
   children: t,
@@ -46,7 +46,7 @@ let {
 ]);
 return i.useEffect(() => {
   if (!!f && null != n && null != l)
-    (0, o.pQ)({
+    (0, s.pQ)({
       action: 'VIEW',
       layout: n,
       userId: l,
@@ -57,7 +57,7 @@ return i.useEffect(() => {
       showGuildProfile: E,
       analyticsLocations: h
     });
-}, [f]), (0, r.jsx)(s.Provider, {
+}, [f]), (0, r.jsx)(o.Provider, {
   value: p,
   children: t
 });
@@ -72,7 +72,7 @@ return i.useCallback(n => {
     userId: i
   } = e;
   if (null != r && null != i)
-    (0, o.pQ)({
+    (0, s.pQ)({
       analyticsLocations: t,
       layout: r,
       userId: i,
@@ -85,7 +85,7 @@ return i.useCallback(n => {
 ]);
   },
   c = () => {
-let e = i.useContext(s);
+let e = i.useContext(o);
 return {
   trackUserProfileAction: u(e),
   ...e

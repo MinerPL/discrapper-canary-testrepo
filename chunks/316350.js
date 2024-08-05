@@ -9,9 +9,9 @@ var s, a, i, r, l = n(735250),
   d = n.n(c),
   u = n(338545),
   _ = n(481060),
-  I = n(119331),
-  E = n(597043),
-  T = n(171042),
+  I = n(205641),
+  E = n(119331),
+  T = n(902807),
   m = n(402766),
   N = n(267642),
   S = n(981631),
@@ -34,12 +34,12 @@ numRequired: a
 n(1);
   }, r = () => {
 n(2);
-  }, c = 2 === t, I = 1 === t;
+  }, c = 2 === t, E = 1 === t;
   if (!(!(s >= a) && s / a >= 0.8) || c)
 return null;
-  let E = I || c ? g.hidden : null,
-m = I ? T.Z.Stages.FLYING : T.Z.Stages.HOVERING;
-  return (0, l.jsx)(u.Spring, {
+  let T = E || c ? g.hidden : null,
+m = E ? I.Z.Stages.FLYING : I.Z.Stages.HOVERING;
+  return (0, l.jsx)(_.Spring, {
 from: {
   opacity: 0
 },
@@ -47,24 +47,25 @@ to: {
   opacity: 1
 },
 config: x,
+shouldAnimate: 'animate-always',
 children: e => (0, l.jsxs)(u.animated.div, {
   className: g.tierClose,
   style: e,
   children: [
-    (0, l.jsx)(T.Z, {
+    (0, l.jsx)(I.Z, {
       className: g.tierCloseMechaWumpus,
       stage: m,
       onFlyingComplete: r
     }),
     (0, l.jsx)('div', {
-      className: d()(g.tierCloseHint, E),
+      className: d()(g.tierCloseHint, T),
       children: h.Z.Messages.GUILD_SETTINGS_PREMIUM_GUILD_CLOSE_HINT.format({
         numLeft: a - s
       })
     }),
     (0, l.jsx)(_.Clickable, {
       onClick: i,
-      className: d()(g.tierCloseClose, E),
+      className: d()(g.tierCloseClose, T),
       children: (0, l.jsx)(_.CircleXIcon, {
         size: 'md',
         color: 'currentColor',
@@ -85,7 +86,7 @@ onSetRef: a,
 tier: i,
 showHeaderLockStatus: r,
 headerButton: c = null,
-subscriptionsRequired: _,
+subscriptionsRequired: u,
 subscriptionCount: I,
 className: E
   } = e, T = e => {
@@ -93,7 +94,7 @@ null == a || a(e);
   }, [N, S] = o.useState(0);
   return o.useLayoutEffect(() => {
 n && S(1);
-  }, [n]), (0, l.jsx)(u.Spring, {
+  }, [n]), (0, l.jsx)(_.Spring, {
 from: {
   unlockedTranslateY: 50
 },
@@ -126,12 +127,12 @@ children: e => (0, l.jsx)('div', {
       r ? (0, l.jsx)(L, {
         transform: null == e ? void 0 : e.unlockedTranslateY.to(e => 'translate3d(0, '.concat(e, 'px, 0)')),
         headerButton: c,
-        subscriptionsRequired: _,
+        subscriptionsRequired: u,
         hasAnimatedUnlocked: s
       }) : null,
       (0, l.jsx)(p, {
         numUnlocked: I,
-        numRequired: _
+        numRequired: u
       })
     ]
   })
@@ -150,16 +151,16 @@ hasBottomMargin: r,
 headerButton: o = null,
 withCardBody: c = !0,
 guildId: u,
-showHeaderLockStatus: T = !0
+showHeaderLockStatus: I = !0
   } = e, m = (0, N.vn)(u)[a.tier], C = i && n >= m, x = a.tier !== S.Eu4.NONE && a.tier !== S.Eu4.TIER_1, p = (e, t) => {
 let {
   icon: n,
   className: s
-} = (0, I.t)(e.icon, t);
+} = (0, E.t)(e.icon, t);
 return (0, l.jsxs)('div', {
   className: g.perk,
   children: [
-    (0, l.jsx)(E.Z, {
+    (0, l.jsx)(T.Z, {
       name: String(e.icon),
       icon: n,
       className: g.perkIcon,
@@ -196,7 +197,7 @@ children: [
     subscriptionCount: n,
     tier: a,
     headerButton: o,
-    showHeaderLockStatus: T,
+    showHeaderLockStatus: I,
     onSetRef: e => {
       null != s && s(e, a);
     },

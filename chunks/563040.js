@@ -13,7 +13,7 @@ var r = n(913527),
   i = n.n(r),
   a = n(55935);
 
-function o(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -21,13 +21,13 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let s = /^[0]+/,
+let o = /^[0]+/,
   l = /:00/,
   u = /(AM|ΠΜ|सुबह)/i,
   c = /(PM|ΜΜ|शाम)/i,
   d = /\s+/,
-  _ = e => e.replace(s, '').replace(l, '').replace(u, '').replace(d, ''),
-  E = e => e.replace(s, '').replace(c, '').replace(d, ''),
+  _ = e => e.replace(o, '').replace(l, '').replace(u, '').replace(d, ''),
+  E = e => e.replace(o, '').replace(c, '').replace(d, ''),
   f = (e, t) => {
 let n = t.toUpperCase().trim();
 if (n.length > 0) {
@@ -109,7 +109,7 @@ return null == t ? this._addNewOption(e) : t;
 intervalInMinutes: e = 15,
 labelFormat: t = 'LT'
   } = {}) {
-if (o(this, 'intervalInMinutes', void 0), o(this, 'labelFormat', void 0), o(this, 'options', []), o(this, '_index', {}), e <= 0)
+if (s(this, 'intervalInMinutes', void 0), s(this, 'labelFormat', void 0), s(this, 'options', []), s(this, '_index', {}), e <= 0)
   throw Error('intervalInMinutes should be positive number, got '.concat(e));
 this.intervalInMinutes = e, this.labelFormat = t, this._generateTimeOptions();
   }

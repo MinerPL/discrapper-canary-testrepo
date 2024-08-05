@@ -66,8 +66,8 @@ return d;
 var r = n(704215),
   i = n(605236),
   a = n(314897),
-  o = n(271383),
-  s = n(626135),
+  s = n(271383),
+  o = n(626135),
   l = n(308083),
   u = n(981631),
   c = n(921944);
@@ -80,8 +80,8 @@ source: r,
 messageId: i,
 tagUserId: l,
 location: c
-  } = e, d = a.default.getId(), _ = o.ZP.getMember(t, a.default.getId()), E = (null == _ ? void 0 : _.joinedAt) != null;
-  s.default.track(u.rMx.CLAN_PROFILE_VIEWED, {
+  } = e, d = a.default.getId(), _ = s.ZP.getMember(t, a.default.getId()), E = (null == _ ? void 0 : _.joinedAt) != null;
+  o.default.track(u.rMx.CLAN_PROFILE_VIEWED, {
 guild_id: t,
 is_member: E,
 has_join_request: n,
@@ -99,14 +99,14 @@ guildId: t,
 source: n,
 location: r,
 messageId: i,
-tagUserId: o
+tagUserId: s
   } = e, l = a.default.getId();
-  s.default.track(u.rMx.CLAN_APPLY_TO_JOIN_VIEWED, {
+  o.default.track(u.rMx.CLAN_APPLY_TO_JOIN_VIEWED, {
 guild_id: t,
 source: n,
 location: r,
 viewing_user_id: l,
-tag_owner_user_id: o,
+tag_owner_user_id: s,
 message_id: i
   });
 }
@@ -117,7 +117,7 @@ guildId: t,
 userId: n,
 source: r
   } = e;
-  s.default.track(u.rMx.CLAN_ADOPT_IDENTITY, {
+  o.default.track(u.rMx.CLAN_ADOPT_IDENTITY, {
 guild_id: t,
 user_id: n,
 source: r
@@ -125,40 +125,40 @@ source: r
 }
 
 function f(e, t) {
-  s.default.track(u.rMx.CLAN_CONVERT_STEP_VIEWED, {
+  o.default.track(u.rMx.CLAN_CONVERT_STEP_VIEWED, {
 guild_id: e,
 step: t
   });
 }
 
 function h(e, t) {
-  s.default.track(u.rMx.CLAN_SETTINGS_VIEWED, {
+  o.default.track(u.rMx.CLAN_SETTINGS_VIEWED, {
 guild_id: e,
 page: t
   });
 }
 
 function p(e) {
-  s.default.track(u.rMx.CLAN_SETTINGS_SAVED, {
+  o.default.track(u.rMx.CLAN_SETTINGS_SAVED, {
 guild_id: e
   });
 }
 
 function m(e) {
-  s.default.track(u.rMx.CLAN_CONVERT_SUCCESS_MODAL_VIEWED, {
+  o.default.track(u.rMx.CLAN_CONVERT_SUCCESS_MODAL_VIEWED, {
 guild_id: e
   });
 }
 
 function I(e, t) {
-  s.default.track(u.rMx.CLAN_CONVERT_SUCCESS_MODAL_CONFIRM, {
+  o.default.track(u.rMx.CLAN_CONVERT_SUCCESS_MODAL_CONFIRM, {
 guild_id: e,
 enable_tag: t
   });
 }
 
 function T(e, t, n) {
-  s.default.track(u.rMx.CLAN_DISCOVERY_VIEWED, {
+  o.default.track(u.rMx.CLAN_DISCOVERY_VIEWED, {
 guild_ids: e,
 section: t,
 application_ids: n.games,
@@ -194,7 +194,7 @@ function S(e) {
   let {
 location: t
   } = e;
-  s.default.track(u.rMx.CLAN_USER_INVITE_VIEWED, {
+  o.default.track(u.rMx.CLAN_USER_INVITE_VIEWED, {
 location: t
   });
 }
@@ -203,7 +203,7 @@ function A(e) {
   let {
 location: t
   } = e;
-  s.default.track(u.rMx.CLAN_USER_INVITE_CLICKED, {
+  o.default.track(u.rMx.CLAN_USER_INVITE_CLICKED, {
 location: t
   });
 }
@@ -213,7 +213,7 @@ function N(e) {
 guildId: t,
 location: n
   } = e;
-  s.default.track(u.rMx.CLAN_ADMIN_INVITE_VIEWED, {
+  o.default.track(u.rMx.CLAN_ADMIN_INVITE_VIEWED, {
 guild_id: t,
 location: n
   });
@@ -224,7 +224,7 @@ function v(e) {
 guildId: t,
 location: n
   } = e;
-  s.default.track(u.rMx.CLAN_ADMIN_INVITE_CLICKED, {
+  o.default.track(u.rMx.CLAN_ADMIN_INVITE_CLICKED, {
 guild_id: t,
 location: n
   });
@@ -238,7 +238,7 @@ hasJoinRequest: r,
 affinity: i,
 index: a
   } = e;
-  s.default.track(u.rMx.CLAN_DISCOVERY_CARD_CLICKED, {
+  o.default.track(u.rMx.CLAN_DISCOVERY_CARD_CLICKED, {
 guild_id: t,
 is_member: n,
 has_join_request: r,
@@ -248,7 +248,7 @@ index: a
 }
 
 function R(e) {
-  s.default.track(u.rMx.MEMBER_VERIFICATION_APPLICATION_VIEWED, {
+  o.default.track(u.rMx.MEMBER_VERIFICATION_APPLICATION_VIEWED, {
 guild_id: e
   });
 }
@@ -261,8 +261,8 @@ messageId: r,
 channelId: i,
 joinRequestStatus: l,
 joinRequestUserId: c
-  } = e, d = a.default.getId(), _ = (null === (t = o.ZP.getMember(n, d)) || void 0 === t ? void 0 : t.joinedAt) != null;
-  s.default.track(u.rMx.CLAN_SEND_INTERVIEW_MESSAGE, {
+  } = e, d = a.default.getId(), _ = (null === (t = s.ZP.getMember(n, d)) || void 0 === t ? void 0 : t.joinedAt) != null;
+  o.default.track(u.rMx.CLAN_SEND_INTERVIEW_MESSAGE, {
 guild_id: n,
 channel_id: i,
 message_id: r,
@@ -279,7 +279,7 @@ guildId: t,
 source: n,
 tab: r
   } = e;
-  s.default.track(u.rMx.CLAN_APPLICATION_NAVIGATION, {
+  o.default.track(u.rMx.CLAN_APPLICATION_NAVIGATION, {
 guild_id: t,
 source: n,
 tab: r
@@ -292,7 +292,7 @@ guildId: t,
 actionType: n,
 applicationUserId: r
   } = e;
-  s.default.track(u.rMx.CLAN_APPLICATION_ACTION, {
+  o.default.track(u.rMx.CLAN_APPLICATION_ACTION, {
 guild_id: t,
 action_type: n,
 application_user_id: r,
@@ -306,7 +306,7 @@ guildId: t,
 applicationUserId: n,
 applicationStatus: r
   } = e;
-  s.default.track(u.rMx.CLAN_APPLICATION_VIEWED, {
+  o.default.track(u.rMx.CLAN_APPLICATION_VIEWED, {
 guild_id: t,
 viewing_user_id: a.default.getId(),
 application_user_id: n,
@@ -318,16 +318,16 @@ function b(e) {
   let {
 originGuildId: t,
 tagGuildId: n,
-tagUserId: o,
+tagUserId: s,
 messageId: l,
 location: d
   } = e;
   if (!(0, i.un)(r.z.CLAN_TAG_WAITLIST))
-s.default.track(u.rMx.CLAN_APPLY_WAITLIST, {
+o.default.track(u.rMx.CLAN_APPLY_WAITLIST, {
   user_id: a.default.getId(),
   origin_guild_id: t,
   tag_guild_id: n,
-  tag_user_id: o,
+  tag_user_id: s,
   message_id: l,
   location: d
 }), (0, i.EW)(r.z.CLAN_TAG_WAITLIST, {

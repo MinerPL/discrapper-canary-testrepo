@@ -151,13 +151,13 @@ i = {
 a = e.inherit(i, {
   illegal: /\n/
 }),
-o = {
+s = {
   className: 'subst',
   begin: /\{/,
   end: /\}/,
   keywords: t
 },
-s = e.inherit(o, {
+o = e.inherit(s, {
   illegal: /\n/
 }),
 l = {
@@ -172,7 +172,7 @@ l = {
       begin: /\}\}/
     },
     e.BACKSLASH_ESCAPE,
-    s
+    o
   ]
 },
 u = {
@@ -188,7 +188,7 @@ u = {
     {
       begin: '""'
     },
-    o
+    s
   ]
 },
 c = e.inherit(u, {
@@ -202,10 +202,10 @@ c = e.inherit(u, {
     {
       begin: '""'
     },
-    s
+    o
   ]
 });
-  o.contains = [
+  s.contains = [
 u,
 l,
 i,
@@ -213,7 +213,7 @@ e.APOS_STRING_MODE,
 e.QUOTE_STRING_MODE,
 r,
 e.C_BLOCK_COMMENT_MODE
-  ], s.contains = [
+  ], o.contains = [
 c,
 l,
 a,

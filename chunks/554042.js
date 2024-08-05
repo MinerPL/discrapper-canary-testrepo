@@ -21,7 +21,7 @@ var n = s(735250),
   C = s(981631),
   m = s(689938),
   A = s(452935);
-let h = [{
+let g = [{
 label: 'Latin alphabet',
 value: 'aBcDeFgHiJkLmNoPqRsTuVwXyZ'
   },
@@ -51,7 +51,7 @@ value: 'custom'
   }
 ];
 
-function g(e, t) {
+function h(e, t) {
   let [s, n] = a.useState(() => {
 let s = l.K.get(e);
 return null != s ? s : t;
@@ -115,18 +115,18 @@ M = (0, o.e7)([T.C], () => {
   var e, t;
   return (0, I.fD)() ? null === (t = T.C.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web : null;
 }),
-[D, f] = g('playground-overrideText', null),
-[P, L] = g('playground-defaultText', h[0].value),
-Z = a.useCallback(e => {
-  let t = h.find(t => {
+[f, D] = h('playground-overrideText', null),
+[P, L] = h('playground-defaultText', g[0].value),
+b = a.useCallback(e => {
+  let t = g.find(t => {
     let {
       value: s
     } = t;
     return s === e;
   });
-  '' === e || null == e ? (L(h[0].value), f(null)) : null != t ? L(t.value) : (L('custom'), f(e));
+  '' === e || null == e ? (L(g[0].value), D(null)) : null != t ? L(t.value) : (L('custom'), D(e));
 }, [
-  f,
+  D,
   L
 ]);
   return (0, n.jsx)('div', {
@@ -174,8 +174,8 @@ children: (0, n.jsxs)(c.FormSection, {
         (0, n.jsx)(c.FormItem, {
           children: (0, n.jsx)(c.SingleSelect, {
             className: A.select,
-            options: h,
-            onChange: e => Z(e),
+            options: g,
+            onChange: e => b(e),
             value: P
           })
         }),
@@ -184,8 +184,8 @@ children: (0, n.jsxs)(c.FormSection, {
             className: A.input,
             children: (0, n.jsx)(c.TextInput, {
               placeholder: 'Enter custom input...',
-              value: null != D ? D : '',
-              onChange: Z
+              value: null != f ? f : '',
+              onChange: b
             })
           })
         }),
@@ -286,7 +286,7 @@ children: (0, n.jsxs)(c.FormSection, {
             }, e),
             p.map(t => {
               var s;
-              let a = null !== (s = 'custom' === P ? D : P) && void 0 !== s ? s : '';
+              let a = null !== (s = 'custom' === P ? f : P) && void 0 !== s ? s : '';
               return (0, n.jsx)('div', {
                 className: A.textSample,
                 children: (0, n.jsxs)('div', {

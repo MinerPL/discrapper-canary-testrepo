@@ -43,13 +43,13 @@ location: 'bd50e8_1'
   }, {
 autoTrackExposure: M
   }), {
-channel_id: p,
-id: R
+channel_id: R,
+id: p
   } = null != A ? A : {}, V = (0, a.e7)([_.Z], () => {
-let e = null != p ? p : f;
+let e = null != R ? R : f;
 return null == e ? null : _.Z.getInvite(e);
   }, [
-p,
+R,
 f
   ]);
   if (null == A)
@@ -57,7 +57,7 @@ return L(), null;
   let G = D && null !== (n = null == j ? void 0 : j.vanityURLCode) && void 0 !== n ? n : null == V ? void 0 : V.code,
 O = null != G ? (0, i.tV)({
   baseCode: G,
-  guildScheduledEventId: R
+  guildScheduledEventId: p
 }) : null,
 U = null == O || null == V,
 y = (0, o.Z)(null != O ? O : ''),
@@ -111,7 +111,7 @@ children: [
           let n = (0, m.xC)(A.entity_type);
           I.default.track(T.rMx.COPY_INSTANT_INVITE, {
             server: A.guild_id,
-            channel: p,
+            channel: R,
             channel_type: n,
             location: T.t4x.GUILD_EVENTS,
             code: V.code,

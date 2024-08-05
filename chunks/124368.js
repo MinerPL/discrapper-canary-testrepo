@@ -33,7 +33,7 @@ return _;
 return h;
   }
 }), n(47120);
-var r, i, a, o, s = n(981631),
+var r, i, a, s, o = n(981631),
   l = n(689938);
 let u = 4320,
   c = 50,
@@ -62,14 +62,14 @@ function h() {
 }
   ];
 }
-(a = r || (r = {})).EMBED = 'Embed', a.BROWSER = 'Thread Browser', a.POPOUT = 'Active Threads Popout', a.CHANNEL_LIST = 'Channel List', a.GUILD_ACTIVE_THREADS_MODAL = 'Guild Active Threads Modal', a.INBOX = 'Inbox', a.FORUM = 'Forum', a.VOICE_AUTO_OPEN = 'Voice Auto Open', (o = i || (i = {})).LATEST_ACTIVITY = 'Last Message', o.CREATION_DATE = 'Creation';
+(a = r || (r = {})).EMBED = 'Embed', a.BROWSER = 'Thread Browser', a.POPOUT = 'Active Threads Popout', a.CHANNEL_LIST = 'Channel List', a.GUILD_ACTIVE_THREADS_MODAL = 'Guild Active Threads Modal', a.INBOX = 'Inbox', a.FORUM = 'Forum', a.VOICE_AUTO_OPEN = 'Voice Auto Open', (s = i || (i = {})).LATEST_ACTIVITY = 'Last Message', s.CREATION_DATE = 'Creation';
 let p = new Set([
-s.evJ.TOO_MANY_ATTACHMENTS,
-s.evJ.EXPLICIT_CONTENT,
-s.evJ.ENTITY_TOO_LARGE,
-s.evJ.EXPLICIT_CONTENT
+o.evJ.TOO_MANY_ATTACHMENTS,
+o.evJ.EXPLICIT_CONTENT,
+o.evJ.ENTITY_TOO_LARGE,
+o.evJ.EXPLICIT_CONTENT
   ]),
   m = new Set([
-s.evJ.AUTOMOD_MESSAGE_BLOCKED,
-s.evJ.AUTOMOD_TITLE_BLOCKED
+o.evJ.AUTOMOD_MESSAGE_BLOCKED,
+o.evJ.AUTOMOD_TITLE_BLOCKED
   ]);

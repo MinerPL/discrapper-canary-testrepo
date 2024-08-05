@@ -3,8 +3,8 @@ t.d(A, {
 return f;
   }
 }), t(47120);
-var n = t(735250),
-  a = t(470079),
+var a = t(735250),
+  n = t(470079),
   r = t(120356),
   s = t.n(r),
   o = t(772848),
@@ -36,10 +36,10 @@ function U(e) {
   var A;
   let {
 hasError: t,
-maxLength: a,
+maxLength: n,
 text: r
   } = e;
-  return (0, n.jsxs)('div', {
+  return (0, a.jsxs)('div', {
 className: s()(p.maxLength, {
   [p.errorOverflow]: t
 }),
@@ -47,7 +47,7 @@ className: s()(p.maxLength, {
 children: [
   null !== (A = null == r ? void 0 : r.length) && void 0 !== A ? A : 0,
   ' ',
-  null != a && '/ '.concat(a)
+  null != n && '/ '.concat(n)
 ]
   });
 }
@@ -68,7 +68,7 @@ required: E,
 value: N,
 enableThemedBackground: D = !1,
 parentModalKey: O
-  } = e, x = (0, l.useFormContext)(), [R, L] = a.useState(() => (0, i.JM)(N)), b = a.useRef(!0 === c), P = null != t ? t : null == x ? void 0 : x.titleId, V = null !== (A = null == x ? void 0 : x.errorId) && void 0 !== A ? A : h, _ = a.useMemo(() => ({
+  } = e, x = (0, l.useFormContext)(), [R, L] = n.useState(() => (0, i.JM)(N)), b = n.useRef(!0 === c), P = null != t ? t : null == x ? void 0 : x.titleId, V = null !== (A = null == x ? void 0 : x.errorId) && void 0 !== A ? A : h, _ = n.useMemo(() => ({
 analyticsName: 'simple',
 autocomplete: {
   alwaysUseLayer: !0,
@@ -89,7 +89,7 @@ submit: {
   disableEnterToSubmit: !0
 }
   }), [c]);
-  return (0, n.jsxs)(d.Z, {
+  return (0, a.jsxs)(d.Z, {
 'aria-describedby': V,
 'aria-labelledby': P,
 innerClassName: s()(r, T.textArea),
@@ -116,12 +116,12 @@ disableThemedBackground: !D,
 parentModalKey: O,
 emojiPickerCloseOnModalOuterClick: !0,
 children: [
-  !0 === v && (0, n.jsx)(U, {
+  !0 === v && (0, a.jsx)(U, {
     hasError: null != x.error || null != C && N.length > C,
     text: N,
     maxLength: C
   }),
-  null != C && (0, n.jsx)(l.HiddenVisually, {
+  null != C && (0, a.jsx)(l.HiddenVisually, {
     id: h,
     children: g.Z.Messages.MAXIMUM_LENGTH.format({
       maxLength: C

@@ -9,11 +9,11 @@ return l;
 var r = n(131704),
   i = n(592125),
   a = n(496675),
-  o = n(981631);
-let s = o.S7T.VIEW_CHANNEL | o.S7T.READ_MESSAGE_HISTORY;
+  s = n(981631);
+let o = s.S7T.VIEW_CHANNEL | s.S7T.READ_MESSAGE_HISTORY;
 
 function l(e) {
-  return null != e && (e.type === o.d4z.DM || e.type === o.d4z.GROUP_DM || (0, r.Qm)(e.type) && a.Z.canBasicChannel(s, e));
+  return null != e && (e.type === s.d4z.DM || e.type === s.d4z.GROUP_DM || (0, r.Qm)(e.type) && a.Z.canBasicChannel(o, e));
 }
 
 function u(e) {

@@ -1,8 +1,8 @@
 n(47120), n(177593);
 var r, i = n(392711),
   a = n.n(i),
-  o = n(525654),
-  s = n.n(o),
+  s = n(525654),
+  o = n.n(s),
   l = n(579806),
   u = n(292959),
   c = n(246946),
@@ -27,7 +27,7 @@ if (m && !I) {
   let [e, , t] = l.Z.os.release.split('.');
   T = parseInt(e) > 10 || parseInt(t) >= 15063;
 }
-let g = m && T || 'Chrome' === s().name && 47 > parseFloat(s().version) || 'Firefox' === s().name && 52 > parseFloat(s().version),
+let g = m && T || 'Chrome' === o().name && 47 > parseFloat(o().version) || 'Firefox' === o().name && 52 > parseFloat(o().version),
   S = a().throttle(E.GN, 1000, {
 leading: !0
   });
@@ -81,10 +81,10 @@ null != N && N.requestPermission(() => {
 });
   },
   showNotification: function(e, t, n, r, i) {
-var o, s, l, c;
+var s, o, l, c;
 let E;
 if (R(i)) {
-  null != i.sound && !1 !== i.playSoundIfDisabled && O(i.sound, null !== (s = i.volume) && void 0 !== s ? s : 1, i.soundpack);
+  null != i.sound && !1 !== i.playSoundIfDisabled && O(i.sound, null !== (o = i.volume) && void 0 !== o ? o : 1, i.soundpack);
   return;
 }
 null != i.sound && O(i.sound, null !== (l = i.volume) && void 0 !== l ? l : 1, i.soundpack);
@@ -102,7 +102,7 @@ try {
 } catch (e) {
   return null;
 }
-return (null === (o = i.onShown) || void 0 === o || o.call(i), !i.omitViewTracking && d.default.track(h.rMx.NOTIFICATION_VIEWED, r), E.onclick = () => {
+return (null === (s = i.onShown) || void 0 === s || s.call(i), !i.omitViewTracking && d.default.track(h.rMx.NOTIFICATION_VIEWED, r), E.onclick = () => {
   var e;
   _.isPlatformEmbedded ? f.ZP.focus() : (window.focus(), E.close()), !i.omitClickTracking && d.default.track(h.rMx.NOTIFICATION_CLICKED, r), null === (e = i.onClick) || void 0 === e || e.call(i);
 }, g && setTimeout(() => E.close(), 5000), T) ? E : {

@@ -9,8 +9,8 @@ return f;
 var r = n(544891),
   i = n(381499),
   a = n(570140),
-  o = n(496929),
-  s = n(706454),
+  s = n(496929),
+  o = n(706454),
   l = n(675478),
   u = n(164207),
   c = n(518638),
@@ -31,14 +31,14 @@ try {
     n = (await r.tn.get({
       url: t,
       query: {
-        locale: s.default.locale
+        locale: o.default.locale
       },
       oldFormErrors: !0
     })).body,
     i = d.Z.consumedInboundPromotionId;
   if (!d.Z.hasFetchedConsumedInboundPromotionId) {
     var e;
-    let t = (await (0, o.yD)(_.RQ, !1)).find(e => null != e.promotion_id && !0 === e.consumed);
+    let t = (await (0, s.yD)(_.RQ, !1)).find(e => null != e.promotion_id && !0 === e.consumed);
     i = null !== (e = null == t ? void 0 : t.promotion_id) && void 0 !== e ? e : null;
   }
   a.Z.dispatch({
@@ -61,7 +61,7 @@ try {
   let e = (await r.tn.get({
     url: E.ANM.BOGO_PROMOTIONS,
     query: {
-      locale: s.default.locale
+      locale: o.default.locale
     }
   })).body;
   a.Z.dispatch({

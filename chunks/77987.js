@@ -5,8 +5,8 @@ return o;
 });
 var i = n(735250);
 n(470079);
-var s = n(314897),
-  a = n(449934),
+var a = n(314897),
+  s = n(449934),
   r = n(857458),
   l = n(981631);
 
@@ -17,7 +17,7 @@ passProps: !0
   };
 
   function d(n) {
-if (!(0, a.$8)() && s.default.getLoginStatus() !== l.u34.LOGGING_IN && s.default.allowLogoutRedirect())
+if (!(0, s.$8)() && a.default.getLoginStatus() !== l.u34.LOGGING_IN && a.default.allowLogoutRedirect())
   return null != t ? (0, i.jsx)(t, {
     renderRedirect: (0, i.jsx)(r.Z, {})
   }) : (0, i.jsx)(r.Z, {});

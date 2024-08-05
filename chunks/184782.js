@@ -7,12 +7,12 @@ var a = n(735250),
   c = n(471445),
   r = n(339085),
   d = n(633302),
-  u = n(703656),
-  m = n(592125),
-  h = n(430824),
-  j = n(496675),
-  x = n(940627),
-  E = n(346656),
+  u = n(565138),
+  m = n(372769),
+  h = n(703656),
+  j = n(592125),
+  x = n(430824),
+  E = n(496675),
   _ = n(153124),
   p = n(259580),
   N = n(806519),
@@ -29,12 +29,12 @@ let M = e => {
   let {
 channelData: n,
 onClose: i,
-trackOptionClick: h
-  } = e, x = (0, s.e7)([m.Z], () => m.Z.getChannel(n.channel_id)), E = (0, s.e7)([j.Z], () => null != x && j.Z.can(I.Pl.VIEW_CHANNEL, x)), _ = (0, s.e7)([r.Z], () => null != n.emoji_id ? r.Z.getCustomEmojiById(n.emoji_id) : null, [n.emoji_id]), N = null != n.emoji_name ? d.ZP.getByName(d.ZP.convertSurrogateToName(n.emoji_name, !1)) : null, C = null !== (l = (0, c.KS)(x)) && void 0 !== l ? l : o.TextIcon;
-  return null != x && E ? (0, a.jsxs)(o.Clickable, {
+trackOptionClick: u
+  } = e, m = (0, s.e7)([j.Z], () => j.Z.getChannel(n.channel_id)), x = (0, s.e7)([E.Z], () => null != m && E.Z.can(I.Pl.VIEW_CHANNEL, m)), _ = (0, s.e7)([r.Z], () => null != n.emoji_id ? r.Z.getCustomEmojiById(n.emoji_id) : null, [n.emoji_id]), N = null != n.emoji_name ? d.ZP.getByName(d.ZP.convertSurrogateToName(n.emoji_name, !1)) : null, C = null !== (l = (0, c.KS)(m)) && void 0 !== l ? l : o.TextIcon;
+  return null != m && x ? (0, a.jsxs)(o.Clickable, {
 className: v.optionContainer,
 onClick: () => {
-  h(), i(), (0, u.XU)(x.guild_id, x.id);
+  u(), i(), (0, h.XU)(m.guild_id, m.id);
 },
 children: [
   null != _ || null != N ? (0, a.jsx)(t.Z, {
@@ -64,7 +64,7 @@ children: [
             color: 'currentColor'
           }),
           (0, a.jsx)('span', {
-            children: x.name
+            children: m.name
           })
         ]
       })
@@ -84,33 +84,33 @@ onClose: n,
 transitionState: t,
 guildId: c,
 isPreview: r
-  } = e, d = (0, s.e7)([h.Z], () => h.Z.getGuild(c)), {
-welcomeScreen: u,
-fetching: m,
-hasError: j
+  } = e, d = (0, s.e7)([x.Z], () => x.Z.getGuild(c)), {
+welcomeScreen: h,
+fetching: j,
+hasError: E
   } = (0, s.cj)([Z.Z], () => ({
 welcomeScreen: Z.Z.get(c),
 fetching: Z.Z.isFetching(),
 hasError: Z.Z.hasError()
   })), p = (0, _.Dt)();
   i.useEffect(() => {
-null == u && (0, g.RM)(c);
+null == h && (0, g.RM)(c);
   }, [
 c,
-u
+h
   ]), i.useEffect(() => {
-!1 === m && !0 === j && null == u && n();
+!1 === j && !0 === E && null == h && n();
   }, [
-m,
 j,
+E,
 n,
-u
+h
   ]), i.useEffect(() => {
-u === Z.a && !1 === m && n();
+h === Z.a && !1 === j && n();
   }, [
 n,
-u,
-m
+h,
+j
   ]), i.useEffect(() => {
 !0 !== r && C.default.track(f.rMx.OPEN_MODAL, {
   type: k._,
@@ -122,27 +122,27 @@ r
   ]);
   let I = i.useCallback(e => {
 var l;
-if (null == u || !0 === r)
+if (null == h || !0 === r)
   return;
 let n = [],
   a = [],
   i = !1;
-null === (l = u.welcome_channels) || void 0 === l || l.forEach(e => {
+null === (l = h.welcome_channels) || void 0 === l || l.forEach(e => {
   n.push(e.description), a.push(e.channel_id), null != e.emoji_id && (i = !0);
 }), C.default.track(f.rMx.GUILD_WELCOME_SCREEN_OPTION_SELECTED, {
   index: e,
   guild_id: c,
   options: n,
   options_channel_ids: a,
-  guild_description: u.description,
+  guild_description: h.description,
   has_custom_emojis: i
 });
   }, [
 c,
 r,
-u
+h
   ]);
-  return null == d ? null : null == u ? (0, a.jsx)(o.ModalRoot, {
+  return null == d ? null : null == h ? (0, a.jsx)(o.ModalRoot, {
 transitionState: t,
 className: v.main,
 'aria-label': S.Z.Messages.LOADING,
@@ -163,8 +163,8 @@ children: [
     width: 64,
     height: 64,
     className: v.guildIcon,
-    children: (0, a.jsx)(E.Z, {
-      size: E.Z.Sizes.LARGER,
+    children: (0, a.jsx)(u.Z, {
+      size: u.Z.Sizes.LARGER,
       guild: d,
       active: !0,
       animate: !0,
@@ -179,7 +179,7 @@ children: [
       guildName: d.name,
       guildNameHook: (e, l) => (0, a.jsxs)('span', {
         children: [
-          (0, a.jsx)(x.Z, {
+          (0, a.jsx)(m.Z, {
             guild: d,
             className: v.headerGuildBadge,
             flowerStarClassName: v.flowerStar,
@@ -193,11 +193,11 @@ children: [
       }, l)
     })
   }),
-  null != u.description ? (0, a.jsx)(o.Text, {
+  null != h.description ? (0, a.jsx)(o.Text, {
     variant: 'text-sm/normal',
     color: 'header-secondary',
     className: v.guildDescription,
-    children: u.description
+    children: h.description
   }) : null,
   (0, a.jsx)(o.FormTitle, {
     className: v.choiceHeader,
@@ -205,7 +205,7 @@ children: [
   }),
   (0, a.jsx)('div', {
     className: v.options,
-    children: null === (l = u.welcome_channels) || void 0 === l ? void 0 : l.map((e, l) => (0, a.jsx)(M, {
+    children: null === (l = h.welcome_channels) || void 0 === l ? void 0 : l.map((e, l) => (0, a.jsx)(M, {
       channelData: e,
       trackOptionClick: () => I(l),
       onClose: n

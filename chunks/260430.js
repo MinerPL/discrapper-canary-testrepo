@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(77866),
-  s = n(373793),
+  s = n(77866),
+  o = n(373793),
   l = n(243814),
   u = n(260034),
   c = n(993365),
@@ -65,12 +65,12 @@ requestedScopes: a,
 integrationType: c,
 errors: d,
 isTrustedName: p = !1
-  } = e, m = (0, o.Z)(() => _.ZW[Math.floor(Math.random() * _.ZW.length)]);
+  } = e, m = (0, s.Z)(() => _.ZW[Math.floor(Math.random() * _.ZW.length)]);
   if (0 === i.length)
 return null;
   let I = m(),
 T = p ? E.Z.Messages.OAUTH2_SCOPES_LABEL_TRUSTED_NAME : E.Z.Messages.OAUTH2_SCOPES_LABEL,
-g = c === s.Y.USER_INSTALL && a.includes(l.x.APPLICATIONS_COMMANDS);
+g = c === o.Y.USER_INSTALL && a.includes(l.x.APPLICATIONS_COMMANDS);
   return (0, r.jsxs)('div', {
 className: f.scopes,
 children: [

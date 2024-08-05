@@ -6,8 +6,8 @@ return O;
 var r = n(735250),
   i = n(470079),
   a = n(442837),
-  o = n(481060),
-  s = n(310752),
+  s = n(481060),
+  o = n(310752),
   l = n(174609),
   u = n(703656),
   c = n(210887),
@@ -41,7 +41,7 @@ disable: L
 className: v.updatedArt,
 alt: 'File Upload Nitro Perk',
 src: 'https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_'.concat(M, '.png')
-  }) : (0, r.jsx)(s.Z, {
+  }) : (0, r.jsx)(o.Z, {
 icons: A.J6
   }), U = i.useMemo(() => {
 let e = h.ZP.getUserMaxFileSize(O);
@@ -67,15 +67,15 @@ return e;
   }, [
 C,
 U
-  ]), x = (0, f.Xv)(), G = (0, E.BU)((x ? g.wb : g.Uq) / 1024, {
+  ]), x = (0, f.XS)(), G = (0, f.Xv)(), k = (0, E.BU)((G ? g.wb : g.Uq) / 1024, {
 useKibibytes: !0
-  }), k = b ? N.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_TIER_2 : N.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_3.format({
-premiumMaxSize: G
-  }), B = b ? (0, r.jsx)('div', {
+  }), B = b ? N.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_TIER_2 : N.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_3.format({
+premiumMaxSize: k
+  }), F = b ? (0, r.jsx)('div', {
 className: v.body,
-children: (0, r.jsx)(o.Text, {
+children: (0, r.jsx)(s.Text, {
   variant: 'text-sm/medium',
-  children: k
+  children: B
 })
   }) : (0, r.jsxs)('div', {
 className: v.body,
@@ -83,9 +83,9 @@ children: [
   (0, r.jsx)('span', {
     children: w
   }),
-  (0, r.jsx)(o.Text, {
+  (0, r.jsx)(s.Text, {
     variant: 'text-md/medium',
-    children: k
+    children: B
   })
 ]
   });
@@ -95,11 +95,11 @@ artContainerClassName: b ? v.updatedArtContainer : v.artContainer,
 enableArtBoxShadow: !1,
 type: g.cd.UPLOAD_ERROR_UPSELL,
 title: N.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-body: B,
+body: F,
 context: N.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
   maxSize: U
 }),
-glowUp: k,
+glowUp: B,
 analyticsLocation: {
   section: S.jXE.FILE_UPLOAD_POPOUT
 },

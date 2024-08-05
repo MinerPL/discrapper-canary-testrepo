@@ -51,7 +51,7 @@ a = {
   begin: /[^0-9\n\t "'(),.`{}\[\]:;][^\n\t "'(),.`{}\[\]:;]+|[^0-9\n\t "'(),.`{}\[\]:;=]/,
   relevance: 0
 },
-o = {
+s = {
   className: 'class',
   beginKeywords: 'class object trait type',
   end: /[:={\[\n;]/,
@@ -83,7 +83,7 @@ o = {
     a
   ]
 },
-s = {
+o = {
   className: 'function',
   beginKeywords: 'def',
   end: t.lookahead(/[:={\[(\n;]/),
@@ -100,8 +100,8 @@ contains: [
   e.C_BLOCK_COMMENT_MODE,
   r,
   i,
-  s,
   o,
+  s,
   e.C_NUMBER_MODE,
   {
     begin: [

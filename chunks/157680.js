@@ -1,19 +1,19 @@
 r.d(t, {
   Z: function() {
-return s;
+return o;
   }
 });
-var a = r(908589);
+var n = r(908589);
 
-function n(e, t) {
+function i(e, t) {
   for (var r = 0; r < t.length; r++) {
-var n = t[r];
-n.enumerable = n.enumerable || !1, n.configurable = !0, 'value' in n && (n.writable = !0), Object.defineProperty(e, (0, a.Z)(n.key), n);
+var i = t[r];
+i.enumerable = i.enumerable || !1, i.configurable = !0, 'value' in i && (i.writable = !0), Object.defineProperty(e, (0, n.Z)(i.key), i);
   }
 }
 
-function s(e, t, r) {
-  return t && n(e.prototype, t), r && n(e, r), Object.defineProperty(e, 'prototype', {
+function o(e, t, r) {
+  return t && i(e.prototype, t), r && i(e, r), Object.defineProperty(e, 'prototype', {
 writable: !1
   }), e;
 }

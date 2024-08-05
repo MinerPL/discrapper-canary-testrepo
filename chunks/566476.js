@@ -9,8 +9,8 @@ var a = n(120356),
   i = n.n(a),
   r = n(399606),
   l = n(481060),
-  o = n(246946),
-  c = n(467679),
+  o = n(385499),
+  c = n(246946),
   d = n(268945);
 
 function u(e) {
@@ -21,7 +21,7 @@ name: a,
 bot: u,
 verifiedBot: _,
 userTag: I
-  } = e, E = (0, r.e7)([o.Z], () => o.Z.hidePersonalInformation);
+  } = e, E = (0, r.e7)([c.Z], () => c.Z.hidePersonalInformation);
   return (0, s.jsxs)('div', {
 className: i()(d.container, t),
 children: [
@@ -41,7 +41,7 @@ children: [
         variant: 'text-sm/semibold',
         children: a
       }),
-      u ? (0, s.jsx)(c.Z, {
+      u ? (0, s.jsx)(o.Z, {
         className: d.botTag,
         verified: _
       }) : null,

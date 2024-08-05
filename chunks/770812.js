@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(990547),
   a = n(442837),
-  o = n(780384),
-  s = n(481060),
+  s = n(780384),
+  o = n(481060),
   l = n(410030),
   u = n(100527),
   c = n(906732),
@@ -23,14 +23,14 @@ var i = n(990547),
   T = n(759195);
 let g = () => {
   let e = (0, l.ZP)();
-  return (0, o.ap)(e) ? n(537381) : n(341048);
+  return (0, s.ap)(e) ? n(537381) : n(341048);
 };
 
 function S(e) {
   let {
 onClose: t,
 guildId: n,
-emojiId: o
+emojiId: s
   } = e, l = g(), {
 analyticsLocations: S
   } = (0, c.ZP)(u.Z.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL);
@@ -40,7 +40,7 @@ name: i.ImpressionNames.ROLE_SUBSCRIPTION_EMOJI_UPSELL,
 properties: {
   location_stack: S,
   emoji_guild_id: n,
-  emoji_id: null != o ? o : null
+  emoji_id: null != s ? s : null
 }
   });
   let A = (0, a.e7)([E.Z], () => E.Z.getGuild(n)),
@@ -58,12 +58,12 @@ children: [
   (0, r.jsxs)('div', {
     className: T.content,
     children: [
-      (0, r.jsx)(s.Button, {
-        look: s.Button.Looks.BLANK,
-        size: s.Button.Sizes.ICON,
+      (0, r.jsx)(o.Button, {
+        look: o.Button.Looks.BLANK,
+        size: o.Button.Sizes.ICON,
         className: T.closeButton,
         onClick: t,
-        children: (0, r.jsx)(s.CloseSmallIcon, {
+        children: (0, r.jsx)(o.CloseSmallIcon, {
           size: 'xs',
           color: 'currentColor',
           'aria-label': I.Z.Messages.CLOSE,
@@ -75,25 +75,25 @@ children: [
         src: l,
         className: T.upsellImage
       }),
-      (0, r.jsx)(s.Spacer, {
+      (0, r.jsx)(o.Spacer, {
         size: 22
       }),
-      (0, r.jsx)(s.Heading, {
+      (0, r.jsx)(o.Heading, {
         color: 'header-primary',
         variant: 'heading-lg/extrabold',
         className: T.header,
         children: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_TITLE
       }),
-      (0, r.jsx)(s.Spacer, {
+      (0, r.jsx)(o.Spacer, {
         size: 4
       }),
-      (0, r.jsx)(s.Text, {
+      (0, r.jsx)(o.Text, {
         color: 'header-secondary',
         variant: 'text-md/normal',
         className: T.description,
         children: v
       }),
-      (0, r.jsx)(s.Spacer, {
+      (0, r.jsx)(o.Spacer, {
         size: 24
       }),
       (0, r.jsx)(h.Z, {

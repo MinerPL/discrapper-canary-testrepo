@@ -4,7 +4,7 @@ n.d(t, {
 return a;
   }
 }), n(653041);
-var a, o, s, l = n(213919),
+var a, s, o, l = n(213919),
   u = n(442837),
   c = n(570140),
   d = n(990492),
@@ -19,7 +19,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-(s = a || (a = {}))[s.INVALID = 0] = 'INVALID', s[s.VALIDATING = 1] = 'VALIDATING', s[s.VALID = 2] = 'VALID';
+(o = a || (a = {}))[o.INVALID = 0] = 'INVALID', o[o.VALIDATING = 1] = 'VALIDATING', o[o.VALID = 2] = 'VALID';
 let h = [],
   p = !1;
 
@@ -42,7 +42,7 @@ r = n.find(t => {
 });
   null != r && (r.tokenStatus = t, h = n);
 }
-class T extends(o = u.ZP.PersistedStore) {
+class T extends(s = u.ZP.PersistedStore) {
   initialize(e) {
 if (null != e) {
   var t;

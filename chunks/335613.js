@@ -1,8 +1,8 @@
 var r = n(413135).Buffer,
   i = n(689118),
   a = n(258922),
-  o = Array(16),
-  s = [
+  s = Array(16),
+  o = [
 0,
 1,
 2,
@@ -353,50 +353,50 @@ function f(e, t) {
   return e << t | e >>> 32 - t;
 }
 
-function h(e, t, n, r, i, a, o, s) {
-  return f(e + (t ^ n ^ r) + a + o | 0, s) + i | 0;
+function h(e, t, n, r, i, a, s, o) {
+  return f(e + (t ^ n ^ r) + a + s | 0, o) + i | 0;
 }
 
-function p(e, t, n, r, i, a, o, s) {
-  return f(e + (t & n | ~t & r) + a + o | 0, s) + i | 0;
+function p(e, t, n, r, i, a, s, o) {
+  return f(e + (t & n | ~t & r) + a + s | 0, o) + i | 0;
 }
 
-function m(e, t, n, r, i, a, o, s) {
-  return f(e + ((t | ~n) ^ r) + a + o | 0, s) + i | 0;
+function m(e, t, n, r, i, a, s, o) {
+  return f(e + ((t | ~n) ^ r) + a + s | 0, o) + i | 0;
 }
 
-function I(e, t, n, r, i, a, o, s) {
-  return f(e + (t & r | n & ~r) + a + o | 0, s) + i | 0;
+function I(e, t, n, r, i, a, s, o) {
+  return f(e + (t & r | n & ~r) + a + s | 0, o) + i | 0;
 }
 
-function T(e, t, n, r, i, a, o, s) {
-  return f(e + (t ^ (n | ~r)) + a + o | 0, s) + i | 0;
+function T(e, t, n, r, i, a, s, o) {
+  return f(e + (t ^ (n | ~r)) + a + s | 0, o) + i | 0;
 }
 i(E, a), E.prototype._update = function() {
   for (var e, t, n = 0; n < 16; ++n)
-o[n] = this._block.readInt32LE(4 * n);
+s[n] = this._block.readInt32LE(4 * n);
   for (var r = 0 | this._a, i = 0 | this._b, a = 0 | this._c, d = 0 | this._d, _ = 0 | this._e, E = 0 | this._a, h = 0 | this._b, p = 0 | this._c, m = 0 | this._d, I = 0 | this._e, T = 0; T < 80; T += 1)
-T < 16 ? (e = function(e, t, n, r, i, a, o, s) {
-  return f(e + (t ^ n ^ r) + a + o | 0, s) + i | 0;
-}(r, i, a, d, _, o[s[T]], 0, u[T]), t = function(e, t, n, r, i, a, o, s) {
-  return f(e + (t ^ (n | ~r)) + a + o | 0, s) + i | 0;
-}(E, h, p, m, I, o[l[T]], 1352829926, c[T])) : T < 32 ? (e = function(e, t, n, r, i, a, o, s) {
-  return f(e + (t & n | ~t & r) + a + o | 0, s) + i | 0;
-}(r, i, a, d, _, o[s[T]], 1518500249, u[T]), t = function(e, t, n, r, i, a, o, s) {
-  return f(e + (t & r | n & ~r) + a + o | 0, s) + i | 0;
-}(E, h, p, m, I, o[l[T]], 1548603684, c[T])) : T < 48 ? (e = function(e, t, n, r, i, a, o, s) {
-  return f(e + ((t | ~n) ^ r) + a + o | 0, s) + i | 0;
-}(r, i, a, d, _, o[s[T]], 1859775393, u[T]), t = function(e, t, n, r, i, a, o, s) {
-  return f(e + ((t | ~n) ^ r) + a + o | 0, s) + i | 0;
-}(E, h, p, m, I, o[l[T]], 1836072691, c[T])) : T < 64 ? (e = function(e, t, n, r, i, a, o, s) {
-  return f(e + (t & r | n & ~r) + a + o | 0, s) + i | 0;
-}(r, i, a, d, _, o[s[T]], 2400959708, u[T]), t = function(e, t, n, r, i, a, o, s) {
-  return f(e + (t & n | ~t & r) + a + o | 0, s) + i | 0;
-}(E, h, p, m, I, o[l[T]], 2053994217, c[T])) : (e = function(e, t, n, r, i, a, o, s) {
-  return f(e + (t ^ (n | ~r)) + a + o | 0, s) + i | 0;
-}(r, i, a, d, _, o[s[T]], 2840853838, u[T]), t = function(e, t, n, r, i, a, o, s) {
-  return f(e + (t ^ n ^ r) + a + o | 0, s) + i | 0;
-}(E, h, p, m, I, o[l[T]], 0, c[T])), r = _, _ = d, d = f(a, 10), a = i, i = e, E = I, I = m, m = f(p, 10), p = h, h = t;
+T < 16 ? (e = function(e, t, n, r, i, a, s, o) {
+  return f(e + (t ^ n ^ r) + a + s | 0, o) + i | 0;
+}(r, i, a, d, _, s[o[T]], 0, u[T]), t = function(e, t, n, r, i, a, s, o) {
+  return f(e + (t ^ (n | ~r)) + a + s | 0, o) + i | 0;
+}(E, h, p, m, I, s[l[T]], 1352829926, c[T])) : T < 32 ? (e = function(e, t, n, r, i, a, s, o) {
+  return f(e + (t & n | ~t & r) + a + s | 0, o) + i | 0;
+}(r, i, a, d, _, s[o[T]], 1518500249, u[T]), t = function(e, t, n, r, i, a, s, o) {
+  return f(e + (t & r | n & ~r) + a + s | 0, o) + i | 0;
+}(E, h, p, m, I, s[l[T]], 1548603684, c[T])) : T < 48 ? (e = function(e, t, n, r, i, a, s, o) {
+  return f(e + ((t | ~n) ^ r) + a + s | 0, o) + i | 0;
+}(r, i, a, d, _, s[o[T]], 1859775393, u[T]), t = function(e, t, n, r, i, a, s, o) {
+  return f(e + ((t | ~n) ^ r) + a + s | 0, o) + i | 0;
+}(E, h, p, m, I, s[l[T]], 1836072691, c[T])) : T < 64 ? (e = function(e, t, n, r, i, a, s, o) {
+  return f(e + (t & r | n & ~r) + a + s | 0, o) + i | 0;
+}(r, i, a, d, _, s[o[T]], 2400959708, u[T]), t = function(e, t, n, r, i, a, s, o) {
+  return f(e + (t & n | ~t & r) + a + s | 0, o) + i | 0;
+}(E, h, p, m, I, s[l[T]], 2053994217, c[T])) : (e = function(e, t, n, r, i, a, s, o) {
+  return f(e + (t ^ (n | ~r)) + a + s | 0, o) + i | 0;
+}(r, i, a, d, _, s[o[T]], 2840853838, u[T]), t = function(e, t, n, r, i, a, s, o) {
+  return f(e + (t ^ n ^ r) + a + s | 0, o) + i | 0;
+}(E, h, p, m, I, s[l[T]], 0, c[T])), r = _, _ = d, d = f(a, 10), a = i, i = e, E = I, I = m, m = f(p, 10), p = h, h = t;
   var g = this._b + a + m | 0;
   this._b = this._c + d + I | 0, this._c = this._d + _ + E | 0, this._d = this._e + r + h | 0, this._e = this._a + i + p | 0, this._a = g;
 }, E.prototype._digest = function() {

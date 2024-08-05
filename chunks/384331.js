@@ -1,12 +1,12 @@
 t.r(i), t.d(i, {
   FailedChannelRow: function() {
-return N;
+return b;
   },
   FailedGroupDMRow: function() {
 return L;
   },
   FailedUserRow: function() {
-return b;
+return N;
   },
   ForwardFailedAlertModal: function() {
 return T;
@@ -19,12 +19,12 @@ var a = t(735250),
   r = t(700582),
   c = t(933557),
   d = t(266076),
-  o = t(592125),
-  u = t(430824),
-  A = t(158776),
-  I = t(699516),
-  _ = t(594174),
-  S = t(104175),
+  o = t(810123),
+  u = t(592125),
+  A = t(430824),
+  I = t(158776),
+  _ = t(699516),
+  S = t(594174),
   E = t(51144),
   f = t(912332),
   h = t(689938),
@@ -64,10 +64,10 @@ label: t
   });
 }
 
-function b(e) {
+function N(e) {
   let {
 user: i
-  } = e, t = E.ZP.useName(i), n = (0, l.e7)([I.Z], () => I.Z.getNickname(i.id)), c = (0, l.e7)([A.Z], () => A.Z.getStatus(i.id));
+  } = e, t = E.ZP.useName(i), n = (0, l.e7)([_.Z], () => _.Z.getNickname(i.id)), c = (0, l.e7)([I.Z], () => I.Z.getStatus(i.id));
   return (0, a.jsx)(p, {
 icon: (0, a.jsx)(r.Z, {
   'aria-hidden': !0,
@@ -79,13 +79,13 @@ label: null != n ? n : t
   });
 }
 
-function N(e) {
+function b(e) {
   let {
 channel: i
-  } = e, t = (0, l.e7)([u.Z], () => u.Z.getGuild(null == i ? void 0 : i.guild_id)), n = (0, c.ZP)(i);
+  } = e, t = (0, l.e7)([A.Z], () => A.Z.getGuild(null == i ? void 0 : i.guild_id)), n = (0, c.ZP)(i);
   return (0, a.jsx)(p, {
-icon: (0, a.jsx)(S.Z, {
-  size: S.E.SMALL_32,
+icon: (0, a.jsx)(o.Z, {
+  size: o.E.SMALL_32,
   guild: t,
   channel: i
 }),
@@ -100,22 +100,22 @@ destination: i
 channel: t,
 user: n
   } = (0, l.cj)([
-o.Z,
-_.default
+u.Z,
+S.default
   ], () => ({
-channel: 'channel' === i.type ? o.Z.getChannel(i.id) : null,
-user: 'user' === i.type ? _.default.getUser(i.id) : null
+channel: 'channel' === i.type ? u.Z.getChannel(i.id) : null,
+user: 'user' === i.type ? S.default.getUser(i.id) : null
   }));
   if (null == t ? void 0 : t.isGroupDM())
 return (0, a.jsx)(L, {
   channel: t
 });
   if (null != n)
-return (0, a.jsx)(b, {
+return (0, a.jsx)(N, {
   user: n
 });
   if (null != t)
-return (0, a.jsx)(N, {
+return (0, a.jsx)(b, {
   channel: t
 });
   return null;

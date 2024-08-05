@@ -6,8 +6,8 @@ return p;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  o = n(442837),
   l = n(481060),
   u = n(906467),
   c = n(857192),
@@ -24,13 +24,13 @@ impressions: t
   } = (0, f.Xo)(e => ({
 debugTrackedData: e.debugTrackedData,
 impressions: e.impressions
-  })), n = (0, s.e7)([c.default], () => c.default.isAnalyticsDebuggerEnabled), a = (0, s.e7)([u.Z], () => u.Z.isDeveloper), [p, m] = i.useState(!1), {
+  })), n = (0, o.e7)([c.default], () => c.default.isAnalyticsDebuggerEnabled), a = (0, o.e7)([u.Z], () => u.Z.isDeveloper), [p, m] = i.useState(!1), {
 name: I,
 ...T
   } = null != e ? e : {}, g = null != I;
   return a && n ? (0, r.jsx)(E.ZP, {
 children: (0, r.jsxs)('div', {
-  className: o()(h.container, {
+  className: s()(h.container, {
     [h.containerMinimized]: p,
     [h.notTracked]: !g
   }),
@@ -43,12 +43,12 @@ children: (0, r.jsxs)('div', {
       children: p ? (0, r.jsx)(d.Z, {}) : (0, r.jsx)(_.Z, {})
     }),
     (0, r.jsxs)('div', {
-      className: o()(h.content, {
+      className: s()(h.content, {
         [h.contentMinimized]: p
       }),
       children: [
         (0, r.jsxs)(l.Text, {
-          className: o()(h.label, {
+          className: s()(h.label, {
             [h.notTracked]: !g
           }),
           variant: 'text-xxs/normal',
@@ -70,7 +70,7 @@ children: (0, r.jsxs)('div', {
           children: JSON.stringify(T, void 0, 2)
         }),
         (0, r.jsx)(l.Text, {
-          className: o()(h.label, {
+          className: s()(h.label, {
             [h.notTracked]: !g
           }),
           variant: 'text-xxs/normal',

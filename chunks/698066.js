@@ -1,22 +1,22 @@
 n.d(a, {
   Z: function() {
-return s;
+return l;
   }
 });
 var t = n(626135),
-  l = n(981631);
+  s = n(981631);
 
-function s(e) {
+function l(e) {
   let {
 problem: a,
 stream: n,
-feedback: s,
+feedback: l,
 streamApplication: r,
 analyticsData: o,
 location: i,
 rating: c = null
   } = e;
-  t.default.track(l.rMx.STREAM_REPORT_PROBLEM, {
+  t.default.track(s.rMx.STREAM_REPORT_PROBLEM, {
 reason: a,
 streamer_user_id: n.ownerId,
 stream_channel_id: n.channelId,
@@ -25,7 +25,7 @@ application_id: null != r ? r.id : null,
 application_name: null != r ? r.name : null,
 location: i,
 rating: c,
-feedback: s,
+feedback: l,
 ...o
   });
 }

@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  o = n(481060),
   l = n(906732),
   u = n(785717),
   c = n(588822),
@@ -32,16 +32,16 @@ children: [
     ref: e => {
       null != e && (N(!v && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > h && O(!0));
     },
-    className: o()(f.descriptionClamp, v && f.maxBioHeight),
+    className: s()(f.descriptionClamp, v && f.maxBioHeight),
     children: (0, r.jsx)(c.Z, {
       userBio: a,
       setLineClamp: !1,
       textColor: 'header-primary'
     })
   }),
-  (A || v) && (0, r.jsx)(s.Button, {
-    look: s.Button.Looks.BLANK,
-    size: s.Button.Sizes.NONE,
+  (A || v) && (0, r.jsx)(o.Button, {
+    look: o.Button.Looks.BLANK,
+    size: o.Button.Sizes.NONE,
     className: f.viewFullBio,
     color: f.viewFullBioColor,
     onClick: () => {
@@ -57,7 +57,7 @@ children: [
         sourceAnalyticsLocations: S
       });
     },
-    children: (0, r.jsx)(s.Text, {
+    children: (0, r.jsx)(o.Text, {
       variant: 'text-xs/normal',
       color: 'none',
       children: E.Z.Messages.USER_PROFILE_VIEW_FULL_BIO

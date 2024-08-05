@@ -5,21 +5,21 @@ return T;
 }), n(47120), n(653041);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(392711),
   o = n(442837),
   c = n(475179),
-  d = n(358221),
-  u = n(306680),
+  u = n(358221),
+  d = n(306680),
   h = n(944486),
   p = n(111583),
   m = n(459273),
   _ = n(880831),
   f = n(774168),
   E = n(871499),
-  C = n(981631),
-  g = n(689938);
+  g = n(981631),
+  C = n(689938);
 
 function I(e) {
   let t = (0, o.e7)([p.Z], () => !(0, r.isEmpty)(p.Z.getTypingUsers(e)), [e]),
@@ -27,9 +27,9 @@ n = (0, o.e7)([h.Z], () => h.Z.getVoiceChannelId() === e, [e]),
 {
   unreadCount: i,
   mentionCount: a
-} = (0, o.cj)([u.ZP], () => ({
-  unreadCount: u.ZP.getUnreadCount(e),
-  mentionCount: u.ZP.getMentionCount(e)
+} = (0, o.cj)([d.ZP], () => ({
+  unreadCount: d.ZP.getUnreadCount(e),
+  mentionCount: d.ZP.getMentionCount(e)
 }), [e]);
   return {
 unreadCount: i,
@@ -45,15 +45,15 @@ className: t,
 channelId: n
   } = e, {
 unreadCount: a,
-mentionCount: l,
-isTyping: s,
+mentionCount: s,
+isTyping: l,
 voiceChannelIsSelected: r
   } = I(n);
   return (0, i.jsx)(f.Z, {
 className: t,
 unreadCount: a,
-mentionCount: l,
-isTyping: s,
+mentionCount: s,
+isTyping: l,
 canBadge: r
   });
 }
@@ -61,19 +61,19 @@ canBadge: r
 function T(e) {
   let t, {
   channelId: n,
-  className: l,
+  className: s,
   showingClassName: r,
-  onClick: u,
+  onClick: d,
   inPopout: h,
   showRequestToSpeakSidebar: p,
   toggleRequestToSpeakSidebar: f,
   ...T
 } = e,
 {
-  disabled: v
+  disabled: N
 } = T,
-N = a.useRef(null),
-S = (0, o.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
+v = a.useRef(null),
+S = (0, o.e7)([u.Z], () => u.Z.getChatOpen(n), [n]),
 {
   isShowing: Z,
   unreadCount: A,
@@ -83,27 +83,27 @@ S = (0, o.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
     unreadCount: t,
     mentionCount: n,
     isTyping: i
-  } = I(e), [l, s] = a.useState(!1);
+  } = I(e), [s, l] = a.useState(!1);
   return a.useEffect(() => {
-    s(t > 0);
+    l(t > 0);
     let e = setTimeout(() => {
-      s(!1);
+      l(!1);
     }, _.z);
     return () => {
-      clearTimeout(e), s(!1);
+      clearTimeout(e), l(!1);
     };
   }, [t]), {
-    isShowing: l || n > 0 || i,
+    isShowing: s || n > 0 || i,
     unreadCount: t,
     mentionCount: n
   };
 }(n),
 b = a.useCallback(() => {
-  null == u || u(), !S && p && (null == f || f()), c.Z.updateChatOpen(n, !S);
+  null == d || d(), !S && p && (null == f || f()), c.Z.updateChatOpen(n, !S);
 }, [
   n,
   S,
-  u,
+  d,
   p,
   f
 ]),
@@ -118,17 +118,17 @@ R = a.useCallback(e => {
 }, [n]),
 j = a.useCallback(() => {
   var e;
-  null === (e = N.current) || void 0 === e || e.focus();
+  null === (e = v.current) || void 0 === e || e.focus();
 }, []);
   (0, m.yp)({
-event: C.CkL.FOCUS_CHAT_BUTTON,
-handler: v ? null : j
+event: g.CkL.FOCUS_CHAT_BUTTON,
+handler: N ? null : j
   });
   let [L, P] = a.useState(!1), O = a.useCallback(() => {
 h && P(!0);
   }, [h]);
   (0, m.yp)({
-event: C.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
+event: g.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
 handler: O
   }), a.useEffect(() => {
 let e;
@@ -138,17 +138,17 @@ return L && (e = setTimeout(() => {
   clearTimeout(e);
 };
   }, [L]);
-  let y = [t = h && v ? g.Z.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : S ? g.Z.Messages.VIDEO_CALL_HIDE_CHAT : g.Z.Messages.VIDEO_CALL_SHOW_CHAT];
-  return M > 0 && y.push(g.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
+  let y = [t = h && N ? C.Z.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : S ? C.Z.Messages.VIDEO_CALL_HIDE_CHAT : C.Z.Messages.VIDEO_CALL_SHOW_CHAT];
+  return M > 0 && y.push(C.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
 mentionCount: M
-  })), A > 0 && y.push(g.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, i.jsx)(E.Z, {
-buttonRef: N,
+  })), A > 0 && y.push(C.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, i.jsx)(E.Z, {
+buttonRef: v,
 onClick: b,
 label: t,
 'aria-label': y.join(', '),
 iconComponent: R,
 tooltipPosition: 'bottom',
-wrapperClassName: s()(l, null != r && {
+wrapperClassName: l()(s, null != r && {
   [r]: Z
 }),
 forceTooltipOpen: L,

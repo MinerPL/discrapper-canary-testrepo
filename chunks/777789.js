@@ -7,8 +7,8 @@ var n = l(735250),
   t = l(470079),
   r = l(120356),
   a = l.n(r),
-  i = l(797717),
-  o = l(346656),
+  i = l(565138),
+  o = l(297700),
   d = l(471885),
   u = l(424625),
   c = l(267642),
@@ -21,7 +21,7 @@ let {
 return (0, n.jsxs)('div', {
   className: C.tierPill,
   children: [
-    (0, n.jsx)(i.Z, {
+    (0, n.jsx)(o.Z, {
       className: C.tierPillStar,
       children: (0, n.jsx)(d.Z, {
         tier: e,
@@ -64,9 +64,9 @@ let {
 return (0, n.jsxs)('div', {
   className: a()(C.subscription, s),
   children: [
-    (0, n.jsx)(o.Z, {
+    (0, n.jsx)(i.Z, {
       guild: e,
-      size: o.Z.Sizes.LARGE
+      size: i.Z.Sizes.LARGE
     }),
     (0, n.jsxs)('div', {
       className: C.subscriptionInfo,

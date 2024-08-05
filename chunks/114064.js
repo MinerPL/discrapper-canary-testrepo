@@ -1,4 +1,4 @@
-var r, i, a, o, s = n(848246),
+var r, i, a, s, o = n(848246),
   l = n(442837),
   u = n(570140),
   c = n(168232),
@@ -11,7 +11,7 @@ lastFetched: null,
 overrides: {}
   },
   f = E;
-class h extends(o = l.ZP.Store) {
+class h extends(s = l.ZP.Store) {
   getPerksDemos() {
 return f.perksDemos;
   }
@@ -78,7 +78,7 @@ void 0 !== t && (0, c.QI)(t) && (f.overrides[n] = {
 }, null == f.perksDemos && (f.perksDemos = {}), f.perksDemos[n] = r || !1, f.activated[n] = !1, f.lastFetched = null);
   },
   STREAM_START: function() {
-if (!!(0, d.vw)(s.q.STREAM_HIGH_QUALITY))
+if (!!(0, d.vw)(o.q.STREAM_HIGH_QUALITY))
   (0, _.cD)(!0);
   },
   STREAM_STOP: function() {

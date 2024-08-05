@@ -1,16 +1,16 @@
 n.d(t, {
   n: function() {
-return s;
+return o;
   }
 });
 var r = n(470079),
   i = n(442837),
   a = n(40851),
-  o = n(451478);
+  s = n(451478);
 
-function s() {
+function o() {
   let {
 windowId: e
   } = r.useContext(a.ZP);
-  return (0, i.e7)([o.Z], () => o.Z.isFocused(e), [e]);
+  return (0, i.e7)([s.Z], () => s.Z.isFocused(e), [e]);
 }

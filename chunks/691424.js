@@ -6,8 +6,8 @@ return G;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(302454),
+  s = n.n(a),
+  o = n(302454),
   l = n(481060),
   u = n(794295),
   c = n(663993),
@@ -97,7 +97,7 @@ react: (e, t, n) => (0, r.jsx)('code', {
   codeBlock: {
 react(e, t, i) {
   let a = () => (0, r.jsx)('code', {
-    className: o()(U.scrollbarGhostHairline, 'hljs'),
+    className: s()(U.scrollbarGhostHairline, 'hljs'),
     children: (0, N.S)(e, t, i)
   });
   return (0, r.jsx)('pre', {
@@ -120,7 +120,7 @@ react(e, t, i) {
             {
               let n = t.highlight(e.lang, e.content, !0);
               return null == n ? a() : (0, r.jsx)('code', {
-                className: o()(U.scrollbarGhostHairline, 'hljs', n.language),
+                className: s()(U.scrollbarGhostHairline, 'hljs', n.language),
                 dangerouslySetInnerHTML: {
                   __html: n.value
                 }
@@ -199,14 +199,14 @@ react(e, t, n) {
     position: 'top',
     children: a => {
       let {
-        onMouseEnter: o,
-        onMouseLeave: s
+        onMouseEnter: s,
+        onMouseLeave: o
       } = a;
       return (0, r.jsx)(f.Z, {
         role: 'link',
         onClick: i,
-        onMouseEnter: o,
-        onMouseLeave: s,
+        onMouseEnter: s,
+        onMouseLeave: o,
         className: 'channelMention',
         iconType: e.channelId,
         children: t(e.content, n)
@@ -224,17 +224,17 @@ react: (e, t, n) => (0, r.jsx)(v.Z, {
 react: (e, t, n) => {
   let r = e.ordered ? 'ol' : 'ul',
     i = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
-  return (0, s.reactElement)(r, ''.concat(n.key), {
+  return (0, o.reactElement)(r, ''.concat(n.key), {
     start: e.start,
     className: n.formatInline ? P.inlineFormat : null,
     style: {
       '--totalCharacters': i
     },
     children: e.items.map((e, r) => {
-      let i = (0, s.reactElement)('span', ''.concat(n.key, '-').concat(r, '-innerSpan'), {
+      let i = (0, o.reactElement)('span', ''.concat(n.key, '-').concat(r, '-innerSpan'), {
         children: t(e, n)
       });
-      return (0, s.reactElement)('li', ''.concat(n.key, '-').concat(r) + r, {
+      return (0, o.reactElement)('li', ''.concat(n.key, '-').concat(r) + r, {
         children: i
       });
     })
@@ -243,10 +243,10 @@ react: (e, t, n) => {
   },
   heading: {
 react: (e, t, n) => {
-  let r = (0, s.reactElement)('span', ''.concat(n.key, '-innerSpan'), {
+  let r = (0, o.reactElement)('span', ''.concat(n.key, '-innerSpan'), {
     children: t(e.content, n)
   });
-  return (0, s.reactElement)('h' + e.level, (null == n ? void 0 : n.key) != null ? ''.concat(n.key) : null, {
+  return (0, o.reactElement)('h' + e.level, (null == n ? void 0 : n.key) != null ? ''.concat(n.key) : null, {
     children: r,
     className: n.formatInline ? P.inlineFormat : null
   });
@@ -272,10 +272,10 @@ react: (e, t, n) => (0, r.jsx)(h.Z, {}, n.key)
   },
   subtext: {
 react: (e, t, n) => {
-  let r = (0, s.reactElement)('span', ''.concat(n.key, '-innerSpan'), {
+  let r = (0, o.reactElement)('span', ''.concat(n.key, '-innerSpan'), {
     children: t(e.content, n)
   });
-  return (0, s.reactElement)('small', (null == n ? void 0 : n.key) != null ? ''.concat(n.key) : null, {
+  return (0, o.reactElement)('small', (null == n ? void 0 : n.key) != null ? ''.concat(n.key) : null, {
     children: r,
     className: n.formatInline ? P.inlineFormat : null
   });
@@ -296,15 +296,15 @@ emoji: function(e) {
   return {
     react(e, i, a) {
       let {
-        key: o
+        key: s
       } = a;
       return e.src ? (0, r.jsx)(m.c, {
         node: e,
         tooltipPosition: t,
         enableClick: n
-      }, o) : (0, r.jsx)('span', {
+      }, s) : (0, r.jsx)('span', {
         children: e.surrogate
-      }, o);
+      }, s);
     }
   };
 }(e),
@@ -316,10 +316,10 @@ customEmoji: function(e) {
   return {
     react(e, i, a) {
       let {
-        key: o,
-        guildId: s,
+        key: s,
+        guildId: o,
         isInteracting: l
-      } = a, u = d.Z.getDisambiguatedEmojiContext(s).getById(e.emojiId);
+      } = a, u = d.Z.getDisambiguatedEmojiContext(o).getById(e.emojiId);
       if (null != u) {
         let t = u.require_colons;
         e = {
@@ -332,7 +332,7 @@ customEmoji: function(e) {
         node: e,
         tooltipPosition: t,
         enableClick: n
-      }, o);
+      }, s);
     }
   };
 }(e),

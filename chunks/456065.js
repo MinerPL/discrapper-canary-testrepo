@@ -1,5 +1,5 @@
 n(47120);
-var i, s, a, r, l = n(442837),
+var i, a, s, r, l = n(442837),
   o = n(570140),
   c = n(810788),
   d = n(430824),
@@ -22,12 +22,12 @@ this.waitFor(d.Z, c.Z), this.syncWith([c.Z], E);
 return !!e.hasFeature(u.oNc.LINKED_TO_HUB) && !_ && !0;
   }
 }
-r = 'HubLinkNoticeStore', (a = 'displayName') in(s = I) ? Object.defineProperty(s, a, {
+r = 'HubLinkNoticeStore', (s = 'displayName') in(a = I) ? Object.defineProperty(a, s, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = r, t.Z = new I(o.Z, {
+}) : a[s] = r, t.Z = new I(o.Z, {
   CONNECTION_OPEN: function(e) {
 for (let t of e.guilds)
   if (h(t.id))

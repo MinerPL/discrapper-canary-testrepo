@@ -1,8 +1,8 @@
 n(47120);
 var r, i = n(442837),
   a = n(570140),
-  o = n(374023),
-  s = n(188785);
+  s = n(374023),
+  o = n(188785);
 
 function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ null != e && (Array.isArray(e.hiddenHotspots) && (u = new Set(e.hiddenHotspots))
   hasHotspot(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
   n = !t && c[e];
-return !(s.a || o.s.isDisallowPopupsSet()) && (n || !u.has(e));
+return !(o.a || s.s.isDisallowPopupsSet()) && (n || !u.has(e));
   }
   hasHiddenHotspot(e) {
 return u.has(e);

@@ -2,8 +2,8 @@ n(47120);
 var r = n(259443),
   i = n(442837),
   a = n(570140),
-  o = n(443296),
-  s = n(873741),
+  s = n(443296),
+  o = n(873741),
   l = n(592125),
   u = n(650774),
   c = n(866960),
@@ -25,9 +25,9 @@ return;
 return;
   let n = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
 r = null == e.gatewaySeenTimestamp ? null : e.gatewaySeenTimestamp - e.initialSendTimestamp,
-i = (0, s.d)();
+i = (0, o.d)();
   d.default.track(_.rMx.SEND_MESSAGE_ROUNDTRIP, {
-...(0, o.Z)(),
+...(0, s.Z)(),
 api_latency_ms: n,
 gateway_latency_ms: r,
 channel_id: t.id,

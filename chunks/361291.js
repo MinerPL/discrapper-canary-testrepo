@@ -1,7 +1,7 @@
 var r, i = n(442837),
   a = n(570140),
-  o = n(37113),
-  s = n(65154);
+  s = n(37113),
+  o = n(65154);
 
 function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -11,15 +11,15 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let u = o.tI.PRESET_VIDEO,
-  c = o.LY.RESOLUTION_720,
-  d = o.ws.FPS_30,
+let u = s.tI.PRESET_VIDEO,
+  c = s.LY.RESOLUTION_720,
+  d = s.ws.FPS_30,
   _ = !0;
 class E extends(r = i.ZP.PersistedStore) {
   initialize(e) {
 if (null != e) {
   var t, n;
-  u = null !== (t = e.preset) && void 0 !== t ? t : o.tI.PRESET_VIDEO, c = e.resolution, d = e.fps, _ = null === (n = e.soundshareEnabled) || void 0 === n || n;
+  u = null !== (t = e.preset) && void 0 !== t ? t : s.tI.PRESET_VIDEO, c = e.resolution, d = e.fps, _ = null === (n = e.soundshareEnabled) || void 0 === n || n;
 }
   }
   getState() {
@@ -36,7 +36,7 @@ l(E, 'displayName', 'ApplicationStreamingSettingsStore'), l(E, 'persistKey', 'Ap
 let {
   settings: t
 } = e;
-if ((null == t ? void 0 : t.context) === s.Yn.STREAM) {
+if ((null == t ? void 0 : t.context) === o.Yn.STREAM) {
   if ((null == t ? void 0 : t.qualityOptions) == null || (null == t ? void 0 : t.qualityOptions.resolution) == null || (null == t ? void 0 : t.qualityOptions.frameRate) == null)
     return !1;
   c = t.qualityOptions.resolution, d = t.qualityOptions.frameRate;

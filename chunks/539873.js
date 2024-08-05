@@ -1,137 +1,143 @@
 n.d(t, {
   Z: function() {
-return A;
+return v;
   }
 }), n(47120);
 var r = n(735250),
   i = n(470079),
-  a = n(442837),
-  o = n(481060),
-  s = n(570140),
-  l = n(605236),
-  u = n(837741),
-  c = n(804545),
-  d = n(587446),
-  _ = n(996073),
-  E = n(153124),
-  f = n(327943),
-  h = n(997945),
-  p = n(401460),
-  m = n(441319),
-  I = n(921944),
-  T = n(526761),
-  g = n(689938),
-  S = n(172415);
+  a = n(120356),
+  s = n.n(a),
+  o = n(442837),
+  l = n(481060),
+  u = n(570140),
+  c = n(100527),
+  d = n(98278),
+  _ = n(311476),
+  E = n(587446),
+  f = n(996073),
+  h = n(153124),
+  p = n(327943),
+  m = n(997945),
+  I = n(401460),
+  T = n(441319),
+  g = n(981631),
+  S = n(526761),
+  A = n(689938),
+  N = n(172415);
 
-function A(e) {
+function v(e) {
   let {
 className: t,
-disabled: n,
-renderCTAButtons: A
-  } = e, [N, v] = (0, a.Wu)([f.Z], () => [
-f.Z.getCurrentDesktopIcon(),
-f.Z.isEditorOpen
-  ]), O = i.useRef(null);
-  (0, _.Z)(O, T.h1.CUSTOM_APP_ICONS);
-  let R = (0, E.Dt)(),
-C = (0, o.useRadioGroup)({
+disabled: a,
+isEditor: v,
+renderCTAButtons: O
+  } = e, [R, C] = (0, o.Wu)([p.Z], () => [
+p.Z.getCurrentDesktopIcon(),
+p.Z.isUpsellPreview
+  ]), {
+enabled: y
+  } = _.Z.getCurrentConfig({
+location: 'UserSettingsAppearanceInAppIcon'
+  }, {
+autoTrackExposure: C,
+disable: !C
+  }), D = i.useRef(null);
+  (0, f.Z)(D, S.h1.CUSTOM_APP_ICONS);
+  let L = (0, h.Dt)(),
+b = (0, l.useRadioGroup)({
   orientation: 'horizontal',
-  labelledBy: R
+  labelledBy: L
 }),
-y = e => {
-  s.Z.dispatch({
+M = e => {
+  if (y && !v && e !== m.aH.DEFAULT) {
+    (0, l.openModalLazy)(async () => {
+      let {
+        default: e
+      } = await n.e('69052').then(n.bind(n, 184250));
+      return t => (0, r.jsx)(e, {
+        analyticsSource: c.Z.APP_ICON_SELECTOR,
+        analyticsLocation: {
+          section: g.jXE.SETTINGS_APPEARANCE_APP_ICON_PICKER,
+          object: g.qAy.BUTTON_ICON
+        },
+        ...t
+      });
+    });
+    return;
+  }
+  u.Z.dispatch({
     type: 'APP_ICON_UPDATED',
     id: e
   });
-  let t = h.Mw.get(e);
-  null != t && (0, l.EW)(t, {
-    dismissAction: I.L.TAKE_ACTION
-  });
-},
-D = 'AppIconSelectionGroup',
-{
-  enabled: L
-} = (0, u.J)({
-  location: D
-}),
-{
-  enabled: b
-} = (0, c._)({
-  location: D
-}),
-M = (e, t) => {
-  let n = !1;
-  switch (t) {
-    case h.Ru.BLURPLE_TWILIGHT:
-      n = L;
-      break;
-    case h.Ru.IN_RAINBOWS:
-    case h.Ru.MIDNIGHT_PRISM:
-    case h.Ru.COLOR_WAVE:
-      n = b;
-      break;
-    default:
-      n = !0;
-  }
-  return n && !0 !== e;
-},
-P = i.useMemo(() => e => {
-  let t = h.Mw.get(e),
-    r = null != t && !(0, l.un)(t);
-  return n && r && setTimeout(() => (0, l.EW)(t, {
-    dismissAction: I.L.AUTO_DISMISS
-  }), 5000), r;
-}, [n]);
+};
   return (0, r.jsx)('div', {
-ref: O,
+ref: D,
 children: (0, r.jsx)('div', {
-  ...C,
-  className: S.__invalid_container,
+  ...b,
+  className: N.__invalid_container,
   children: (0, r.jsxs)('div', {
     className: t,
     children: [
       (0, r.jsxs)('div', {
-        className: S.header,
+        className: N.header,
         children: [
           (0, r.jsxs)('div', {
-            className: S.headings,
+            className: N.headings,
             children: [
-              v ? null : (0, r.jsxs)('div', {
-                className: S.title,
+              !v && (0, r.jsxs)('div', {
+                className: N.title,
                 children: [
-                  (0, r.jsx)(o.Heading, {
+                  (0, r.jsx)(l.Heading, {
                     variant: 'text-md/medium',
-                    children: g.Z.Messages.APP_ICON_SETTINGS_TITLE
+                    children: A.Z.Messages.APP_ICON_SETTINGS_TITLE
                   }),
-                  (0, r.jsx)(d.Z, {
-                    className: S.premiumIcon
+                  !y && (0, r.jsx)(E.Z, {
+                    className: N.premiumIcon
                   })
                 ]
               }),
-              (0, r.jsx)(o.Heading, {
+              y ? v ? null : (0, r.jsxs)('div', {
+                className: N.description,
+                children: [
+                  (0, r.jsx)(l.NitroWheelIcon, {
+                    size: 'md',
+                    color: 'currentColor',
+                    className: N.nitroWheel
+                  }),
+                  (0, r.jsx)(l.Heading, {
+                    variant: 'text-sm/normal',
+                    children: A.Z.Messages.PREMIUM_UPSELL_MAKE_DISCORD_YOURS.format({
+                      onClick: () => {
+                        (0, d.$)();
+                      }
+                    })
+                  })
+                ]
+              }) : (0, r.jsx)(l.Heading, {
                 variant: 'text-sm/normal',
-                children: g.Z.Messages.APP_ICON_SETTINGS_DESCRIPTION
+                children: A.Z.Messages.APP_ICON_SETTINGS_DESCRIPTION
               })
             ]
           }),
-          null == A ? void 0 : A()
+          null == O ? void 0 : O()
         ]
       }),
       (0, r.jsx)('div', {
-        className: S.presets,
-        children: m.UZ.filter(e => {
+        className: s()(N.presets, {
+          [N.presetsJustified]: y && v
+        }),
+        children: T.UZ.filter(e => {
           let {
-            isHidden: t,
-            id: n
+            isHidden: t
           } = e;
-          return M(t, n);
-        }).map((e, t) => (0, r.jsx)(p.Z, {
+          return !t;
+        }).map((e, t) => (0, r.jsx)(I.Z, {
           icon: e,
-          isSelected: N === e.id,
-          onSelect: e => y(e),
-          disabled: n,
-          tabIndex: 0 !== t || n ? void 0 : 0,
-          isNew: P(e.id)
+          isSelected: R === e.id,
+          onSelect: e => M(e),
+          disabled: a,
+          tabIndex: 0 !== t || a ? void 0 : 0,
+          locked: y && !v && e.id !== m.aH.DEFAULT
         }, e.id))
       })
     ]

@@ -1,13 +1,13 @@
 n.d(t, {
   Z: function() {
-return s;
+return o;
   }
 });
 var r = n(81825),
   i = n(74538),
   a = n(981631);
 
-function o(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -15,10 +15,10 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class s extends r.Z {
+class o extends r.Z {
   static createFromServer(e) {
 var t, n;
-return new s({
+return new o({
   id: e.id,
   skuId: e.sku_id,
   applicationId: e.application_id,
@@ -63,6 +63,6 @@ if (null != n) {
 return !0;
   }
   constructor(e) {
-super(), o(this, 'id', void 0), o(this, 'skuId', void 0), o(this, 'applicationId', void 0), o(this, 'userId', void 0), o(this, 'gifterId', void 0), o(this, 'type', void 0), o(this, 'branches', void 0), o(this, 'startsAt', void 0), o(this, 'endsAt', void 0), o(this, 'subscriptionId', void 0), o(this, 'subscriptionPlanId', void 0), o(this, 'parentId', void 0), o(this, 'consumed', void 0), o(this, 'giftCodeBatchId', void 0), o(this, 'giftStyle', void 0), o(this, 'guildId', void 0), o(this, 'deleted', void 0), this.id = e.id, this.skuId = e.skuId, this.applicationId = e.applicationId, this.userId = e.userId, this.gifterId = e.gifterId, this.type = e.type, this.branches = e.branches, this.startsAt = e.startsAt, this.endsAt = e.endsAt, this.subscriptionId = e.subscriptionId, this.subscriptionPlanId = e.subscriptionPlanId, this.parentId = e.parentId, this.consumed = e.consumed, this.giftCodeBatchId = e.giftCodeBatchId, this.giftStyle = e.giftStyle, this.guildId = e.guildId, this.deleted = e.deleted;
+super(), s(this, 'id', void 0), s(this, 'skuId', void 0), s(this, 'applicationId', void 0), s(this, 'userId', void 0), s(this, 'gifterId', void 0), s(this, 'type', void 0), s(this, 'branches', void 0), s(this, 'startsAt', void 0), s(this, 'endsAt', void 0), s(this, 'subscriptionId', void 0), s(this, 'subscriptionPlanId', void 0), s(this, 'parentId', void 0), s(this, 'consumed', void 0), s(this, 'giftCodeBatchId', void 0), s(this, 'giftStyle', void 0), s(this, 'guildId', void 0), s(this, 'deleted', void 0), this.id = e.id, this.skuId = e.skuId, this.applicationId = e.applicationId, this.userId = e.userId, this.gifterId = e.gifterId, this.type = e.type, this.branches = e.branches, this.startsAt = e.startsAt, this.endsAt = e.endsAt, this.subscriptionId = e.subscriptionId, this.subscriptionPlanId = e.subscriptionPlanId, this.parentId = e.parentId, this.consumed = e.consumed, this.giftCodeBatchId = e.giftCodeBatchId, this.giftStyle = e.giftStyle, this.guildId = e.guildId, this.deleted = e.deleted;
   }
 }

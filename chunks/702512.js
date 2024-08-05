@@ -1,6 +1,6 @@
 n.d(t, {
   El: function() {
-return a;
+return s;
   },
   RN: function() {
 return c;
@@ -15,26 +15,26 @@ return _;
 return o;
   },
   fS: function() {
-return d;
+return u;
   },
   kS: function() {
-return s;
+return a;
   },
   n4: function() {
 return r;
   },
   oL: function() {
-return u;
+return d;
   }
 });
 var i = n(689938);
-let a = [
+let s = [
 'XBOX',
 'PLAYSTATION',
 'SWITCH',
 'PC'
   ],
-  s = 25920000,
+  a = 25920000,
   r = 'https://support.discord.com/hc/en-us/articles/9146392276375',
   l = {
 FORTNITE: 'FORTNITE'
@@ -48,8 +48,8 @@ QUEST_COMPLETION: 'QUEST_COMPLETION'
   c = {
 FORTNITE: ['Fortnite']
   },
-  d = 'YYYY-MM-DD HH:mm',
-  u = '1022633972510752774',
+  u = 'YYYY-MM-DD HH:mm',
+  d = '1022633972510752774',
   _ = {
 [l.FORTNITE]: {
   title: 'Fortnite',
@@ -59,7 +59,7 @@ FORTNITE: ['Fortnite']
     tooltipSrc: n(836110),
     rewardSrc: n(945368)
   },
-  dropsQuestId: u,
+  dropsQuestId: d,
   dropsGameId: '432980957394370572',
   endDate: '2023-05-22 23:59',
   finalClaimDate: '2023-5-29 08:00',

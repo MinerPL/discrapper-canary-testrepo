@@ -1,8 +1,8 @@
 n(47120);
 var r, i = n(442837),
   a = n(570140),
-  o = n(168232),
-  s = n(430824),
+  s = n(168232),
+  o = n(430824),
   l = n(594174),
   u = n(987338),
   c = n(48541);
@@ -18,11 +18,11 @@ writable: !0
 let _ = 'production' === c.C.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === c.C.STAGING;
 
 function E() {
-  _ = (0, o.QI)(l.default.getCurrentUser());
+  _ = (0, s.QI)(l.default.getCurrentUser());
 }
 class f extends(r = i.ZP.Store) {
   initialize() {
-this.waitFor(l.default, s.Z), Object.defineProperties(this, {
+this.waitFor(l.default, o.Z), Object.defineProperties(this, {
   isDeveloper: {
     configurable: !1,
     get: () => _,

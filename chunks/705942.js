@@ -9,10 +9,10 @@ return a;
 return l;
   },
   k$: function() {
-return o;
+return s;
   },
   sq: function() {
-return s;
+return o;
   }
 });
 var r = n(470079),
@@ -26,12 +26,12 @@ if ('function' == typeof e) {
   return e.apply(void 0, n);
 }
   },
-  o = function(e, t) {
+  s = function(e, t) {
 if ('function' == typeof e)
   return a(e, t);
 null != e && (e.current = t);
   },
-  s = function(e) {
+  o = function(e) {
 return e.reduce(function(e, t) {
   var n = t[0],
     r = t[1];

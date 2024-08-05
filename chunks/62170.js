@@ -5,8 +5,8 @@ var r = n(735250),
 t.Z = i.forwardRef(function(e, t) {
   let {
 muted: n,
-volume: o,
-playing: s,
+volume: s,
+playing: o,
 ...l
   } = e, [u, c] = (0, a.Z)(t);
   return i.useEffect(() => {
@@ -19,17 +19,17 @@ n
   ]), i.useEffect(() => {
 let e = u.current;
 if (null != e)
-  void 0 !== o && (e.volume = o);
-  }, [
-u,
-o
-  ]), i.useEffect(() => {
-let e = u.current;
-if (null != e)
-  void 0 !== s && (s ? e.play() : e.pause());
+  void 0 !== s && (e.volume = s);
   }, [
 u,
 s
+  ]), i.useEffect(() => {
+let e = u.current;
+if (null != e)
+  void 0 !== o && (o ? e.play() : e.pause());
+  }, [
+u,
+o
   ]), (0, r.jsx)('audio', {
 ref: c,
 ...l

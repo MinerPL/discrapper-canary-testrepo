@@ -6,9 +6,9 @@ return c;
 return r;
   }
 }), n(47120), n(653041);
-var r, i, a, o = n(470079),
-  s = n(392711),
-  l = n.n(s);
+var r, i, a, s = n(470079),
+  o = n(392711),
+  l = n.n(o);
 
 function u(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -19,7 +19,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 (a = r || (r = {})).PAGE = 'PAGE', a.GAP = 'GAP', a.BACK = 'BACK', a.NEXT = 'NEXT';
-class c extends(i = o.PureComponent) {
+class c extends(i = s.PureComponent) {
   getNeighborBounds() {
 let {
   totalPageCount: e,
@@ -28,7 +28,7 @@ let {
 } = this.props, r = Math.ceil(t / 2), i = Math.floor(t / 2), a = [
   1,
   e
-], [o, s] = a = n <= r ? [
+], [s, o] = a = n <= r ? [
   1,
   t
 ] : n > e - i ? [
@@ -39,8 +39,8 @@ let {
   n + i
 ];
 return [
-  Math.max(o, 1),
-  Math.min(s, e)
+  Math.max(s, 1),
+  Math.min(o, e)
 ];
   }
   getPageList() {
@@ -54,14 +54,14 @@ let {
   disabled: 1 === t,
   selected: !1,
   navigateToPage: this.handleBackward
-}, o = {
+}, s = {
   type: 'NEXT',
   key: 'next',
   disabled: t === e,
   selected: !1,
   navigateToPage: this.handleForward
-}, s = [], u = [];
-return r > 1 && (s = [{
+}, o = [], u = [];
+return r > 1 && (o = [{
     type: 'PAGE',
     key: 'page-1',
     targetPage: 1,
@@ -81,7 +81,7 @@ return r > 1 && (s = [{
   navigateToPage: () => this.handleJump(e)
 }), i -= 2), [
   a,
-  ...s,
+  ...o,
   ...l().range(r, i + 1).map(e => ({
     type: 'PAGE',
     key: 'page-'.concat(e),
@@ -91,7 +91,7 @@ return r > 1 && (s = [{
     navigateToPage: () => this.handleJump(e)
   })),
   ...u,
-  o
+  s
 ];
   }
   render() {

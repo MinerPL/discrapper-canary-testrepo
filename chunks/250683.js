@@ -4,28 +4,28 @@ n = t[0],
 r = t[1];
   return (n + r) * 3 / 4 - r;
 }, t.toByteArray = function(e) {
-  var t, n, a, o, s = l(e),
-u = s[0],
-c = s[1];
+  var t, n, a, s, o = l(e),
+u = o[0],
+c = o[1];
   var d = new i((t = 0, (u + (n = c)) * 3 / 4 - n)),
 _ = 0,
 E = c > 0 ? u - 4 : u;
-  for (o = 0; o < E; o += 4)
-a = r[e.charCodeAt(o)] << 18 | r[e.charCodeAt(o + 1)] << 12 | r[e.charCodeAt(o + 2)] << 6 | r[e.charCodeAt(o + 3)], d[_++] = a >> 16 & 255, d[_++] = a >> 8 & 255, d[_++] = 255 & a;
-  return 2 === c && (a = r[e.charCodeAt(o)] << 2 | r[e.charCodeAt(o + 1)] >> 4, d[_++] = 255 & a), 1 === c && (a = r[e.charCodeAt(o)] << 10 | r[e.charCodeAt(o + 1)] << 4 | r[e.charCodeAt(o + 2)] >> 2, d[_++] = a >> 8 & 255, d[_++] = 255 & a), d;
+  for (s = 0; s < E; s += 4)
+a = r[e.charCodeAt(s)] << 18 | r[e.charCodeAt(s + 1)] << 12 | r[e.charCodeAt(s + 2)] << 6 | r[e.charCodeAt(s + 3)], d[_++] = a >> 16 & 255, d[_++] = a >> 8 & 255, d[_++] = 255 & a;
+  return 2 === c && (a = r[e.charCodeAt(s)] << 2 | r[e.charCodeAt(s + 1)] >> 4, d[_++] = 255 & a), 1 === c && (a = r[e.charCodeAt(s)] << 10 | r[e.charCodeAt(s + 1)] << 4 | r[e.charCodeAt(s + 2)] >> 2, d[_++] = a >> 8 & 255, d[_++] = 255 & a), d;
 }, t.fromByteArray = function(e) {
-  for (var t, r = e.length, i = r % 3, a = [], o = 0, s = r - i; o < s; o += 16383)
+  for (var t, r = e.length, i = r % 3, a = [], s = 0, o = r - i; s < o; s += 16383)
 a.push(function(e, t, r) {
-  for (var i, a, o = [], s = t; s < r; s += 3) {
+  for (var i, a, s = [], o = t; o < r; o += 3) {
     ;
-    a = (e[s] << 16 & 16711680) + (e[s + 1] << 8 & 65280) + (255 & e[s + 2]), o.push(n[(i = a) >> 18 & 63] + n[i >> 12 & 63] + n[i >> 6 & 63] + n[63 & i]);
+    a = (e[o] << 16 & 16711680) + (e[o + 1] << 8 & 65280) + (255 & e[o + 2]), s.push(n[(i = a) >> 18 & 63] + n[i >> 12 & 63] + n[i >> 6 & 63] + n[63 & i]);
   }
-  return o.join('');
-}(e, o, o + 16383 > s ? s : o + 16383));
+  return s.join('');
+}(e, s, s + 16383 > o ? o : s + 16383));
   return 1 === i ? (t = e[r - 1], a.push(n[t >> 2] + n[t << 4 & 63] + '==')) : 2 === i && (t = (e[r - 2] << 8) + e[r - 1], a.push(n[t >> 10] + n[t >> 4 & 63] + n[t << 2 & 63] + '=')), a.join('');
 };
-for (var n = [], r = [], i = 'undefined' != typeof Uint8Array ? Uint8Array : Array, a = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/', o = 0, s = a.length; o < s; ++o)
-  n[o] = a[o], r[a.charCodeAt(o)] = o;
+for (var n = [], r = [], i = 'undefined' != typeof Uint8Array ? Uint8Array : Array, a = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/', s = 0, o = a.length; s < o; ++s)
+  n[s] = a[s], r[a.charCodeAt(s)] = s;
 
 function l(e) {
   var t = e.length;

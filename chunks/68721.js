@@ -6,8 +6,8 @@ return f;
 var r = n(836560),
   i = n(259443),
   a = n(740197),
-  o = n(106617),
-  s = n(290488),
+  s = n(106617),
+  o = n(290488),
   l = n(830795),
   u = n(65154),
   c = n(231338);
@@ -21,7 +21,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 let _ = new i.Y('Output'),
-  E = new o.Z();
+  E = new s.Z();
 class f extends r.EventEmitter {
   destroy() {
 var e, t;
@@ -93,7 +93,7 @@ try {
     throw E.release(e), Error('AudioInput: Already destroyed');
   if (this._noiseCancellation)
     try {
-      let t = await (0, s.n)();
+      let t = await (0, o.n)();
       this._audioFilter = await t.createNoiseFilter(this.context), this._audioFilter.addEventListener('ready', e => {
         var t;
         null === (t = this._audioFilter) || void 0 === t || t.enable();

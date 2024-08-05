@@ -280,7 +280,7 @@ a = {
   className: 'variable',
   begin: '\\$' + t
 },
-o = {
+s = {
   className: 'string',
   contains: [
     e.BACKSLASH_ESCAPE,
@@ -298,7 +298,7 @@ o = {
     }
   ]
 },
-s = {
+o = {
   className: 'string',
   contains: [
     e.BACKSLASH_ESCAPE,
@@ -317,8 +317,8 @@ s = {
   className: 'string',
   begin: /'(.|\\[xXuU][a-zA-Z0-9]+)'/
 },
-o,
 s,
+o,
 {
   className: 'meta',
   begin: '@' + t

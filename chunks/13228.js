@@ -4,8 +4,8 @@ return h;
   }
 });
 var i = n(442837),
-  s = n(594190),
-  a = n(836157),
+  a = n(594190),
+  s = n(836157),
   r = n(480294),
   l = n(131951),
   o = n(924557),
@@ -20,14 +20,14 @@ function h(e) {
 }),
 {
   enableDecoupledGameClipping: n
-} = a.Z.useExperiment({
+} = s.Z.useExperiment({
   location: 'useShouldDisplayClipsGuildSidebarEducation'
 }, {
   autoTrackExposure: !1
 });
   return (0, i.e7)([
 c.Z,
-s.ZP,
+a.ZP,
 r.Z,
 l.Z
   ], () => {
@@ -35,12 +35,12 @@ if (!(0, d.Z)(l.Z) || !t || !n)
   return !1;
 if (null != c.Z.getLastClipsError())
   return !0;
-if (!r.Z.hasConsented(_.pjP.PERSONALIZATION) || null == s.ZP.getVisibleGame())
+if (!r.Z.hasConsented(_.pjP.PERSONALIZATION) || null == a.ZP.getVisibleGame())
   return !1;
 let {
   clipsEducationState: {
     dismissedAt: i,
-    numberOfGamesLaunchedSinceDismissal: a,
+    numberOfGamesLaunchedSinceDismissal: s,
     numberOfTimesDismissed: h
   },
   hasTakenDecoupledClip: E,
@@ -53,7 +53,7 @@ if (null === i)
 if (!(null != e && (0, o.xt)(e)))
   return !1;
 let m = Date.now() - i > u.xx,
-  g = a >= u._U,
+  g = s >= u._U,
   p = I ? u.xd : u.A5;
 return m && g && h < p && !E;
   });

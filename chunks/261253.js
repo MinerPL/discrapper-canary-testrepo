@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(24311),
-  o = n(785717),
-  s = n(475413),
+  s = n(785717),
+  o = n(475413),
   l = n(689938),
   u = n(363224);
 
@@ -19,7 +19,7 @@ onClose: n,
 className: c
   } = e, {
 trackUserProfileAction: d
-  } = (0, o.KZ)(), _ = (0, r.jsxs)('div', {
+  } = (0, s.KZ)(), _ = (0, r.jsxs)('div', {
 className: u.menuItemLabel,
 children: [
   (0, r.jsx)(i.PhoneCallIcon, {
@@ -76,7 +76,7 @@ renderPopout: e => {
     })
   });
 },
-children: e => (0, r.jsx)(s.ef, {
+children: e => (0, r.jsx)(o.ef, {
   action: 'PRESS_CALL',
   icon: i.PhoneCallIcon,
   tooltipText: l.Z.Messages.CALL,

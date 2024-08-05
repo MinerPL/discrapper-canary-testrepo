@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
   a = n(481060),
-  o = n(493683),
-  s = n(740492),
+  s = n(493683),
+  o = n(740492),
   l = n(314897),
   u = n(592125),
   c = n(699516),
@@ -31,9 +31,9 @@ u.Z
   if (T === t.id || g || S || t.bot)
 return null;
   let N = () => {
-  null == I || I(), o.Z.openPrivateChannel(t.id, !0, p);
+  null == I || I(), s.Z.openPrivateChannel(t.id, !0, p);
 },
-v = !s.ZP.disableCallUserConfirmationPrompt;
+v = !o.ZP.disableCallUserConfirmationPrompt;
   return (0, r.jsx)(a.MenuItem, {
 id: null != m ? m : 'call',
 label: null != h ? h : E.Z.Messages.CALL,

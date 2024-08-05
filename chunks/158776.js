@@ -1,6 +1,6 @@
 n(47120), n(653041);
-var r, i, a, o, s = n(348327),
-  l = n.n(s),
+var r, i, a, s, o = n(348327),
+  l = n.n(o),
   u = n(392711),
   c = n.n(u),
   d = n(442837),
@@ -39,8 +39,8 @@ switch (e.type) {
   C = e => (0, E.Z)(e) ? 1 : 0;
 
 function y(e, t) {
-  var n, r, i, a, o;
-  return n = e, R(t) - R(n) || (r = e, C(t) - C(r)) || (i = e, (null !== (a = t.created_at) && void 0 !== a ? a : 0) - (null !== (o = i.created_at) && void 0 !== o ? o : 0));
+  var n, r, i, a, s;
+  return n = e, R(t) - R(n) || (r = e, C(t) - C(r)) || (i = e, (null !== (a = t.created_at) && void 0 !== a ? a : 0) - (null !== (s = i.created_at) && void 0 !== s ? s : 0));
 }
 
 function D(e) {
@@ -68,14 +68,14 @@ activities: a
   } = e;
   if (n === p.default.getId())
 return !1;
-  let o = g[n];
-  if (null == o) {
+  let s = g[n];
+  if (null == s) {
 if (r === I.Skl.OFFLINE)
   return !1;
-o = g[n] = {};
+s = g[n] = {};
   }
   if (r === I.Skl.OFFLINE)
-o[t] = {
+s[t] = {
   status: r,
   clientStatus: i,
   activities: T,
@@ -83,8 +83,8 @@ o[t] = {
 };
   else {
 let e = a.length > 1 ? [...a].sort(y) : a,
-  n = o[t];
-a = null != n && l()(n.activities, e) ? n.activities : e, o[t] = {
+  n = s[t];
+a = null != n && l()(n.activities, e) ? n.activities : e, s[t] = {
   status: r,
   clientStatus: i,
   activities: a,
@@ -101,18 +101,18 @@ userId: n,
 status: r,
 clientStatus: i,
 activities: a,
-timestamp: o
+timestamp: s
   } = e;
   if (n === p.default.getId())
 return;
-  let s = g[n];
-  if (null == s) {
+  let o = g[n];
+  if (null == o) {
 if (r === I.Skl.OFFLINE)
   return;
-s = g[n] = {};
+o = g[n] = {};
   }
   if (r === I.Skl.OFFLINE)
-s[t] = {
+o[t] = {
   status: r,
   clientStatus: i,
   activities: T,
@@ -120,11 +120,11 @@ s[t] = {
 };
   else {
 let e = a.length > 1 ? [...a].sort(y) : a;
-s[t] = {
+o[t] = {
   status: r,
   clientStatus: i,
   activities: e,
-  timestamp: o
+  timestamp: s
 };
   }
 }
@@ -158,8 +158,8 @@ if (null != a && a.hasFlag(I.xW$.BOT_HTTP_INTERACTIONS) && (i = I.Skl.UNKNOWN), 
   return I.Skl.ONLINE;
 if (null == r)
   return null !== (t = S[e]) && void 0 !== t ? t : i;
-let o = O(e, r);
-return null !== (n = null == o ? void 0 : o.status) && void 0 !== n ? n : i;
+let s = O(e, r);
+return null !== (n = null == s ? void 0 : s.status) && void 0 !== n ? n : i;
   }
   getActivities(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -215,12 +215,12 @@ return {
 };
   }
 }
-o = 'PresenceStore', (a = 'displayName') in(i = w) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'PresenceStore', (a = 'displayName') in(i = w) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new w(_.Z, {
+}) : i[a] = s, t.Z = new w(_.Z, {
   CONNECTION_OPEN: function() {
 return !0;
   },
@@ -243,15 +243,15 @@ t.forEach(e => {
     let {
       user: n,
       status: r,
-      clientStatus: o,
-      activities: s
+      clientStatus: s,
+      activities: o
     } = t;
     M({
       guildId: e.id,
       userId: n.id,
       status: r,
-      clientStatus: o,
-      activities: s,
+      clientStatus: s,
+      activities: o,
       timestamp: a
     }), i.add(n.id);
   });
@@ -260,14 +260,14 @@ t.forEach(e => {
     user: t,
     status: n,
     clientStatus: r,
-    activities: o
+    activities: s
   } = e;
   null != t && (M({
     guildId: I.ME,
     userId: t.id,
     status: n,
     clientStatus: r,
-    activities: o,
+    activities: s,
     timestamp: a
   }), i.add(t.id));
 }), i.delete(r), i.forEach(L);

@@ -1,14 +1,14 @@
 n.d(t, {
   r: function() {
-return s;
+return o;
   }
 });
 var r = n(735250);
 n(470079);
 var i = n(557533),
   a = n.n(i),
-  o = n(994766);
-let s = e => {
+  s = n(994766);
+let o = e => {
   let {
 open: t = !1,
 className: n,
@@ -16,8 +16,8 @@ className: n,
   } = e;
   return (0, r.jsxs)('button', {
 type: 'button',
-className: a()(o.btnHamburger, {
-  [o.btnHamburgerOpen]: t
+className: a()(s.btnHamburger, {
+  [s.btnHamburgerOpen]: t
 }, n),
 ...i,
 children: [

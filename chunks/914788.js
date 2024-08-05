@@ -27,8 +27,8 @@ var e, E, _, t;
 return (null === (E = window) || void 0 === E ? void 0 : null === (e = E.location) || void 0 === e ? void 0 : e.pathname) === a.ix.FAMILY_CENTER_MY_FAMILY ? a.dG.REQUESTS : (null === (t = window) || void 0 === t ? void 0 : null === (_ = t.location) || void 0 === _ ? void 0 : _.pathname) === a.ix.FAMILY_CENTER_SETTINGS ? a.dG.SETTINGS : a.dG.ACTIVITY;
   }(),
   l = !1,
-  L = !1,
-  d = null,
+  d = !1,
+  L = null,
   D = null,
   Y = {};
 
@@ -80,11 +80,11 @@ function g(e) {
   }), Y);
 }
 
-function y() {
-  L = !0;
+function p() {
+  d = !0;
 }
 
-function p(e) {
+function y(e) {
   let {
 linkedUsers: E,
 familyCenterTeenActivity: _
@@ -95,7 +95,7 @@ totals: I,
 teenId: s,
 rangeStartId: A
   } = _;
-  C = s, N = A, U(t), F(I), g(T), f(E), L = !1, d = n.default.fromTimestamp(Date.now()), l = !0;
+  C = s, N = A, U(t), F(I), g(T), f(E), d = !1, L = n.default.fromTimestamp(Date.now()), l = !0;
 }
 
 function P(e) {
@@ -125,7 +125,7 @@ guilds: T,
 teenId: I,
 rangeStartId: s
   } = E;
-  C = I, N = s, U(_), F(t), g(T), L = !1, d = n.default.fromTimestamp(Date.now());
+  C = I, N = s, U(_), F(t), g(T), d = !1, L = n.default.fromTimestamp(Date.now());
 }
 
 function G(e) {
@@ -138,21 +138,21 @@ guilds: t
   U(_, !0), g(t);
 }
 
-function v(e) {
+function h(e) {
   let {
 linkedUsers: E
   } = e;
   f(E);
 }
 
-function m(e) {
+function v(e) {
   let {
 linkedUsers: E
   } = e;
   f(E, !0);
 }
 
-function h(e) {
+function m(e) {
   let {
 linkCode: E
   } = e;
@@ -166,7 +166,7 @@ tab: E
   R = E;
 }
 
-function w(e) {
+function b(e) {
   let {
 user: E
   } = e;
@@ -181,7 +181,7 @@ return void 0 === _[E];
   }) && E.linked_users.length > Object.keys(o).length ? s.ZP.fetchLinkedUsers() : f(E.linked_users);
 }
 
-function b(e) {
+function w(e) {
   var E;
   let {
 countryCode: _
@@ -191,7 +191,7 @@ D = null !== (E = (0, t.Zz)(_)) && void 0 !== E ? E : null;
 }
 
 function k() {
-  C = null, N = null, o = {}, u = c(), S = O(), Y = {}, L = !1, d = null;
+  C = null, N = null, o = {}, u = c(), S = O(), Y = {}, d = !1, L = null;
 }
 class Q extends T.Z {
   initialize() {
@@ -267,26 +267,26 @@ return l;
 return D;
   }
   isLoading() {
-return L;
+return d;
   }
   canRefetch() {
-return null === d || n.default.age(d) > a.Of;
+return null === L || n.default.age(L) > a.Of;
   }
   constructor() {
 super({
-  CURRENT_USER_UPDATE: w,
+  CURRENT_USER_UPDATE: b,
   CACHE_LOADED_LAZY: () => this.loadCache(),
-  FAMILY_CENTER_INITIAL_LOAD: p,
-  FAMILY_CENTER_FETCH_START: y,
+  FAMILY_CENTER_INITIAL_LOAD: y,
+  FAMILY_CENTER_FETCH_START: p,
   FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: P,
   FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: Z,
   FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: G,
   FAMILY_CENTER_REQUEST_LINK_SUCCESS: V,
-  FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: v,
-  FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: m,
-  FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: h,
+  FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: h,
+  FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: v,
+  FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: m,
   FAMILY_CENTER_HANDLE_TAB_SELECT: H,
-  SET_LOCATION_METADATA: b,
+  SET_LOCATION_METADATA: w,
   LOGOUT: k
 });
   }

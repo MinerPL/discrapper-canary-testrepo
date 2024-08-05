@@ -6,9 +6,9 @@ return l;
 var r = n(573654),
   i = n(778010),
   a = n(112457),
-  o = n(603565);
+  s = n(603565);
 
-function s(e, t) {
+function o(e, t) {
   for (var n = 0; n < t.length; n++) {
 var r = t[n];
 r.enumerable = r.enumerable || !1, r.configurable = !0, 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
@@ -37,7 +37,7 @@ var l = function() {
       var n = t.store.getState(),
         r = n.stateId;
       try {
-        !(r === a || r === a + 1 && !(0, o.co)(n.dirtyHandlerIds, i)) && e();
+        !(r === a || r === a + 1 && !(0, s.co)(n.dirtyHandlerIds, i)) && e();
       } finally {
         a = r;
       }
@@ -109,11 +109,11 @@ var l = function() {
       a = this.getItemType();
     if (a && !(0, i.s)(r, a))
       return !1;
-    var o = this.getTargetIds();
-    if (!o.length)
+    var s = this.getTargetIds();
+    if (!s.length)
       return !1;
-    var s = o.indexOf(e);
-    return n ? s === o.length - 1 : s > -1;
+    var o = s.indexOf(e);
+    return n ? o === s.length - 1 : o > -1;
   }
 },
 {
@@ -188,5 +188,5 @@ var l = function() {
     return (0, a.ar)(this.store.getState().dragOffset);
   }
 }
-  ], s(e.prototype, t), l;
+  ], o(e.prototype, t), l;
 }();

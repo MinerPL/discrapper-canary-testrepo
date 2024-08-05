@@ -5,8 +5,8 @@ return c;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(481060),
-  s = n(689938),
+  s = n(481060),
+  l = n(689938),
   r = n(381881),
   o = n(560580);
 
@@ -15,8 +15,8 @@ function c(e) {
 header: t,
 description: n,
 onDismiss: c,
-buttons: d,
-dismissible: u = !0
+buttons: u,
+dismissible: d = !0
   } = e, h = a.useCallback(() => {
 null == c || c();
   }, [c]);
@@ -33,12 +33,12 @@ children: [
       }),
       (0, i.jsxs)('div', {
         children: [
-          (0, i.jsx)(l.Heading, {
+          (0, i.jsx)(s.Heading, {
             variant: 'heading-md/semibold',
             color: 'text-primary',
             children: t
           }),
-          (0, i.jsx)(l.Text, {
+          (0, i.jsx)(s.Text, {
             variant: 'text-sm/normal',
             color: 'text-primary',
             children: n
@@ -49,10 +49,10 @@ children: [
   }),
   (0, i.jsx)('div', {
     className: r.buttons,
-    children: null == d ? void 0 : d.map((e, t) => {
+    children: null == u ? void 0 : u.map((e, t) => {
       var n;
-      return (0, i.jsx)(l.Button, {
-        size: null !== (n = e.size) && void 0 !== n ? n : l.Button.Sizes.SMALL,
+      return (0, i.jsx)(s.Button, {
+        size: null !== (n = e.size) && void 0 !== n ? n : s.Button.Sizes.SMALL,
         color: e.color,
         'aria-label': e.text,
         onClick: e.onclick,
@@ -61,12 +61,12 @@ children: [
       }, t);
     })
   }),
-  u ? (0, i.jsx)(l.Clickable, {
+  d ? (0, i.jsx)(s.Clickable, {
     className: r.closeButton,
     onClick: h,
     role: 'button',
-    'aria-label': s.Z.Messages.DISMISS,
-    children: (0, i.jsx)(l.CloseSmallIcon, {
+    'aria-label': l.Z.Messages.DISMISS,
+    children: (0, i.jsx)(s.CloseSmallIcon, {
       size: 'md',
       color: 'currentColor',
       className: r.closeButton

@@ -33,8 +33,8 @@ return c;
 var r = n(544891),
   i = n(570140),
   a = n(479531),
-  o = n(314897),
-  s = n(970606),
+  s = n(314897),
+  o = n(970606),
   l = n(981631),
   u = n(976757);
 async function c(e, t) {
@@ -43,15 +43,15 @@ type: 'CLAN_SETUP_SUBMIT',
 guildId: e
   });
   try {
-var n, o, s, u;
+var n, s, o, u;
 await r.tn.post({
   url: l.ANM.GUILD_CONVERT_TO_CLAN(e),
   body: {
     tag: t.tag,
     description: t.description,
     play_style: t.playstyle,
-    search_terms: Array.from(null !== (o = t.interests) && void 0 !== o ? o : new Set()),
-    game_application_ids: Array.from(null !== (s = t.gameApplicationIds) && void 0 !== s ? s : new Set()),
+    search_terms: Array.from(null !== (s = t.interests) && void 0 !== s ? s : new Set()),
+    game_application_ids: Array.from(null !== (o = t.gameApplicationIds) && void 0 !== o ? o : new Set()),
     verification_form: {
       form_fields: null !== (u = null === (n = t.verificationForm) || void 0 === n ? void 0 : n.formFields) && void 0 !== u ? u : []
     },
@@ -83,9 +83,9 @@ url: l.ANM.GUILD_CLAN_DISCOVERY_INFO(e)
 }
 async function _(e, t, n) {
   try {
-null != e && !0 === t && (0, s.hx)({
+null != e && !0 === t && (0, o.hx)({
   guildId: e,
-  userId: o.default.getId(),
+  userId: s.default.getId(),
   source: n
 });
 let a = await r.tn.put({
@@ -126,7 +126,7 @@ updates: t
   });
 }
 let p = e => {
-  var t, n, r, i, a, o;
+  var t, n, r, i, a, s;
   return {
 tag: e.tag,
 gameApplicationIds: new Set(null !== (r = e.game_application_ids) && void 0 !== r ? r : []),
@@ -136,7 +136,7 @@ description: e.description,
 wildcardDescriptors: e.wildcard_descriptors,
 verificationForm: {
   description: null !== (a = null === (t = e.verification_form) || void 0 === t ? void 0 : t.description) && void 0 !== a ? a : '',
-  formFields: null !== (o = null === (n = e.verification_form) || void 0 === n ? void 0 : n.form_fields) && void 0 !== o ? o : [],
+  formFields: null !== (s = null === (n = e.verification_form) || void 0 === n ? void 0 : n.form_fields) && void 0 !== s ? s : [],
   version: ''
 },
 badgeKind: e.badge,
@@ -166,15 +166,15 @@ type: 'CLAN_SETTINGS_SUBMIT',
 guildId: e
   });
   try {
-var n, o, s, u;
+var n, s, o, u;
 let a = await r.tn.patch({
   url: l.ANM.CLAN_SETTINGS(e),
   body: {
     tag: t.tag,
     description: t.description,
     play_style: t.playstyle,
-    search_terms: Array.from(null !== (o = t.interests) && void 0 !== o ? o : new Set()),
-    game_application_ids: Array.from(null !== (s = t.gameApplicationIds) && void 0 !== s ? s : new Set()),
+    search_terms: Array.from(null !== (s = t.interests) && void 0 !== s ? s : new Set()),
+    game_application_ids: Array.from(null !== (o = t.gameApplicationIds) && void 0 !== o ? o : new Set()),
     verification_form: {
       form_fields: null !== (u = null === (n = t.verificationForm) || void 0 === n ? void 0 : n.formFields) && void 0 !== u ? u : []
     },

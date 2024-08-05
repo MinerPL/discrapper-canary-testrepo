@@ -1,5 +1,5 @@
-var i, s = n(442837),
-  a = n(570140);
+var i, a = n(442837),
+  s = n(570140);
 
 function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -19,7 +19,7 @@ hasFetchedRelevance: !1
   },
   d = o,
   u = c;
-class _ extends(i = s.ZP.PersistedStore) {
+class _ extends(i = a.ZP.PersistedStore) {
   initialize(e) {
 u = c, d = o;
 let t = new Date();
@@ -35,7 +35,7 @@ return d.profileThemesRelevanceExceeded;
 return d;
   }
 }
-r(_, 'displayName', 'PerksRelevanceStore'), r(_, 'persistKey', 'PerksRelevanceStore'), t.Z = new _(a.Z, {
+r(_, 'displayName', 'PerksRelevanceStore'), r(_, 'persistKey', 'PerksRelevanceStore'), t.Z = new _(s.Z, {
   BILLING_PERKS_RELEVANCE_FETCH_START: function() {
 u.hasFetchedRelevance = !0;
   },

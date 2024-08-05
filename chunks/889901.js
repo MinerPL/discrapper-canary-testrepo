@@ -1,24 +1,24 @@
 n.d(t, {
   Z: function() {
-return s;
+return a;
   }
 });
 var i = n(735250);
 n(470079);
-var a = n(325767);
+var s = n(325767);
 
-function s(e) {
+function a(e) {
   let {
 width: t = 20,
 height: n = 20,
-className: s,
+className: a,
 ...r
   } = e;
   return (0, i.jsx)('svg', {
 width: t,
 height: n,
-className: s,
-...(0, a.Z)(r),
+className: a,
+...(0, s.Z)(r),
 viewBox: '0 0 20 20',
 children: (0, i.jsxs)('g', {
   clipPath: 'url(#clip0_198_5469)',

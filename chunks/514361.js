@@ -1,7 +1,7 @@
 let r, i;
 n(47120);
-var a, o = n(442837),
-  s = n(704215),
+var a, s = n(442837),
+  o = n(704215),
   l = n(570140),
   u = n(605236),
   c = n(238514),
@@ -64,7 +64,7 @@ let t = A.qt[e],
 if (null != t && !n)
   r = t;
   };
-class P extends(a = o.ZP.PersistedStore) {
+class P extends(a = s.ZP.PersistedStore) {
   initialize(e) {
 null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? A.qt[e.gradientPresetId] : void 0), this.waitFor(I.default, _.Z, m.Z, c.Z, h.Z), this.syncWith([I.default], L), this.syncWith([c.Z], b), this.syncWith([h.Z], M);
   }
@@ -137,14 +137,14 @@ let {
   channelId: t,
   guildId: n
 } = e, r = I.default.getCurrentUser();
-if (null == t || null == n || (0, u.un)(s.z.CLIENT_THEMES_COACHMARK) || !(0, g.Fc)(r))
+if (null == t || null == n || (0, u.un)(o.z.CLIENT_THEMES_COACHMARK) || !(0, g.Fc)(r))
   return;
 let i = m.Z.getChannel(t);
 null != i && (0, p.zi)(i.type) && (C = !0, function() {
   O = !0;
 }());
   },
-  LOGOUT: e => {
+  LOGOUT: function() {
 D();
   }
 });

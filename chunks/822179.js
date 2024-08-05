@@ -1,8 +1,8 @@
 n(653041);
 var r, i = n(392711),
   a = n.n(i),
-  o = n(442837),
-  s = n(570140),
+  s = n(442837),
+  o = n(570140),
   l = n(704907),
   u = n(581883),
   c = n(70956),
@@ -48,7 +48,7 @@ return !1;
 recentUses: e.recentUses.map(Number).filter(e => e > 0)
   })), f.pendingUsages);
 }
-class T extends(r = o.ZP.PersistedStore) {
+class T extends(r = s.ZP.PersistedStore) {
   initialize(e) {
 this.waitFor(d.Z), null != e && (f = e), this.syncWith([d.Z], m), this.syncWith([u.Z], I);
   }
@@ -62,7 +62,7 @@ return f.pendingUsages.length > 0;
 return h;
   }
 }
-E(T, 'displayName', 'StickersPersistedStore'), E(T, 'persistKey', 'StickersPersistedStoreV2'), t.Z = new T(s.Z, {
+E(T, 'displayName', 'StickersPersistedStore'), E(T, 'persistKey', 'StickersPersistedStoreV2'), t.Z = new T(o.Z, {
   STICKER_TRACK_USAGE: e => {
 let {
   stickerIds: t

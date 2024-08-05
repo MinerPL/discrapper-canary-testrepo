@@ -13,12 +13,12 @@ var n = t(735250),
   p = t(129861),
   x = t(700582),
   I = t(367907),
-  g = t(210887),
-  v = t(758449),
-  T = t(598077),
-  b = t(592125),
-  N = t(246946),
-  Z = t(373791),
+  g = t(346486),
+  v = t(210887),
+  T = t(758449),
+  b = t(598077),
+  N = t(592125),
+  Z = t(246946),
   E = t(285952),
   _ = t(626135),
   f = t(981631),
@@ -41,7 +41,7 @@ let {
   invite: e,
   hideDiscriminator: s,
   hideInviteCode: t
-} = this.props, r = new T.Z(e.inviter);
+} = this.props, r = new b.Z(e.inviter);
 return (0, n.jsxs)(E.Z, {
   className: a()(j.row, S.card),
   children: [
@@ -85,7 +85,7 @@ return (0, n.jsxs)(E.Z, {
         (0, n.jsx)(h.Text, {
           className: j.countdown,
           variant: 'text-sm/normal',
-          children: (0, n.jsx)(Z.Z, {
+          children: (0, n.jsx)(g.Z, {
             deadline: e.getExpiresAt(),
             showDays: !1
           })
@@ -119,7 +119,7 @@ d.tn.get({
   retries: 3,
   oldFormErrors: !0
 }).then(e => {
-  let s = e.body.map(e => new v.Z({
+  let s = e.body.map(e => new T.Z({
     ...e,
     maxUses: e.max_uses,
     maxAge: e.max_age,
@@ -130,7 +130,7 @@ d.tn.get({
     invites: s
   });
 }), _.default.track(f.rMx.OPEN_MODAL, {
-  ...(0, I.v_)(b.Z.getChannel(e)),
+  ...(0, I.v_)(N.Z.getChannel(e)),
   type: 'Group DM Invites',
   source: 'Group DM Menu'
 });
@@ -267,10 +267,10 @@ super(...e), M(this, 'state', {
   }
 }
 s.default = c.ZP.connectStores([
-  N.Z,
-  g.Z
+  Z.Z,
+  v.Z
 ], () => ({
-  hideDiscriminators: N.Z.hidePersonalInformation,
-  hideInviteCodes: N.Z.hideInstantInvites,
-  theme: g.Z.theme
+  hideDiscriminators: Z.Z.hidePersonalInformation,
+  hideInviteCodes: Z.Z.hideInstantInvites,
+  theme: v.Z.theme
 }))(R);

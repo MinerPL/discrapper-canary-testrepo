@@ -43,8 +43,8 @@ sourceFile: o,
 existingSound: A,
 onClose: b,
 transitionState: M,
-showGuildPicker: C = !1
-  } = e, [j, I] = s.useState(null !== (t = null !== (n = null == o ? void 0 : o.name) && void 0 !== n ? n : null == A ? void 0 : A.name) && void 0 !== t ? t : ''), [w, U] = s.useState(null !== (l = null == A ? void 0 : A.volume) && void 0 !== l ? l : 1), [L, Z] = s.useState(null == A ? void 0 : A.emojiId), [R, P] = s.useState(null == A ? void 0 : A.emojiName), {
+showGuildPicker: j = !1
+  } = e, [C, I] = s.useState(null !== (t = null !== (n = null == o ? void 0 : o.name) && void 0 !== n ? n : null == A ? void 0 : A.name) && void 0 !== t ? t : ''), [w, U] = s.useState(null !== (l = null == A ? void 0 : A.volume) && void 0 !== l ? l : 1), [L, Z] = s.useState(null == A ? void 0 : A.emojiId), [R, P] = s.useState(null == A ? void 0 : A.emojiName), {
 file: T,
 loadAudioFromFile: B,
 maxVolume: k,
@@ -98,7 +98,7 @@ B
 }(Y),
 en = 'uploading' === Y || 'encoding' === Y,
 et = null != A,
-el = j.length >= 2 && (et || null != T) && null != K && function(e) {
+el = C.length >= 2 && (et || null != T) && null != K && function(e) {
   if (null == e)
     return !0;
   let n = (e.endMs - e.startMs) / 1000;
@@ -130,7 +130,7 @@ ei = s.useCallback(async () => {
     await (0, v.bb)({
       readPromise: n,
       guildId: K,
-      name: j,
+      name: C,
       volume: w,
       emojiId: L,
       emojiName: R
@@ -141,7 +141,7 @@ ei = s.useCallback(async () => {
 }, [
   T,
   K,
-  j,
+  C,
   ea,
   q,
   w,
@@ -154,7 +154,7 @@ es = s.useCallback(async () => {
     et ? await (0, p.$d)({
       guildId: K,
       soundId: A.soundId,
-      name: j,
+      name: C,
       volume: w,
       emojiId: L,
       emojiName: R
@@ -169,7 +169,7 @@ es = s.useCallback(async () => {
   b,
   K,
   A,
-  j,
+  C,
   w,
   L,
   R,
@@ -220,7 +220,7 @@ children: [
         className: y.section,
         children: z.message
       }),
-      C ? (0, i.jsx)(d.FormItem, {
+      j ? (0, i.jsx)(d.FormItem, {
         required: !0,
         className: y.section,
         title: x.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT,
@@ -258,7 +258,7 @@ children: [
             title: x.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_SOUND_NAME,
             children: (0, i.jsx)(d.TextInput, {
               placeholder: x.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_SOUND_NAME,
-              value: j,
+              value: C,
               onChange: I,
               maxLength: O.Ek
             })

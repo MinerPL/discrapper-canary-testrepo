@@ -162,10 +162,10 @@ e.exports = function(e) {
   ])
 },
 a = '[A-Za-z$_](?:-[0-9A-Za-z$_]|[0-9A-Za-z$_])*',
-o = e.inherit(e.TITLE_MODE, {
+s = e.inherit(e.TITLE_MODE, {
   begin: a
 }),
-s = {
+o = {
   className: 'subst',
   begin: /#\{/,
   end: /\}/,
@@ -205,7 +205,7 @@ u = [
         end: /"""/,
         contains: [
           e.BACKSLASH_ESCAPE,
-          s,
+          o,
           l
         ]
       },
@@ -214,7 +214,7 @@ u = [
         end: /"/,
         contains: [
           e.BACKSLASH_ESCAPE,
-          s,
+          o,
           l
         ]
       },
@@ -231,7 +231,7 @@ u = [
         begin: '//',
         end: '//[gim]*',
         contains: [
-          s,
+          o,
           e.HASH_COMMENT_MODE
         ]
       },
@@ -251,7 +251,7 @@ u = [
     subLanguage: 'javascript'
   }
 ];
-  s.contains = u;
+  o.contains = u;
   let c = {
 className: 'params',
 begin: '\\(',
@@ -277,7 +277,7 @@ contains: u.concat([
   {
     className: 'function',
     contains: [
-      o,
+      s,
       c
     ],
     returnBegin: !0,

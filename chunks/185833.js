@@ -1,6 +1,6 @@
 n.d(t, {
   B8: function() {
-return o;
+return s;
   },
   Jn: function() {
 return u;
@@ -15,7 +15,7 @@ return l;
 return _;
   },
   m4: function() {
-return s;
+return o;
   },
   sA: function() {
 return E;
@@ -32,8 +32,8 @@ function a() {
 e[t] = arguments[t];
   return '\\(\\s*(' + e.join(')\\s*,\\s*(') + ')\\s*\\)';
 }
-var o = RegExp('rgb' + a(r, r, r)),
-  s = RegExp('rgba' + a(r, r, r, r)),
+var s = RegExp('rgb' + a(r, r, r)),
+  o = RegExp('rgba' + a(r, r, r, r)),
   l = RegExp('hsl' + a(r, i, i)),
   u = RegExp('hsla' + a(r, i, i, r)),
   c = /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,

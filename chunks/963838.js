@@ -21,8 +21,8 @@ return U;
 var r = n(392711),
   i = n.n(r),
   a = n(490757),
-  o = n(429827),
-  s = n(353928),
+  s = n(429827),
+  o = n(353928),
   l = n(336892),
   u = n(624833),
   c = n(944314),
@@ -55,8 +55,8 @@ end: 15
   },
   w = [a],
   x = [
-o,
 s,
+o,
 l,
 u,
 c,
@@ -126,30 +126,30 @@ return null !== (n = e[t]) && void 0 !== n ? n : null;
 }
 
 function H(e) {
-  var t, n, r, i, a, o;
+  var t, n, r, i, a, s;
   if (e.length < 1)
 return '';
-  let s = V(e, 'userId'),
+  let o = V(e, 'userId'),
 l = V(e, 'emojiName'),
 u = l.length < 2 ? null !== (t = null == l ? void 0 : l[0]) && void 0 !== t ? t : '' : l.join(', ');
-  if (s.length < 1)
+  if (o.length < 1)
 return '';
-  if (1 === s.length)
+  if (1 === o.length)
 return P.Z.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_SINGLE.format({
-  firstUsername: null === (n = D.default.getUser(s[0])) || void 0 === n ? void 0 : n.username,
+  firstUsername: null === (n = D.default.getUser(o[0])) || void 0 === n ? void 0 : n.username,
   emojiNames: u
 });
-  if (2 === s.length)
+  if (2 === o.length)
 return P.Z.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_DOUBLE.format({
-  firstUsername: null === (r = D.default.getUser(s[0])) || void 0 === r ? void 0 : r.username,
-  secondUsername: null === (i = D.default.getUser(s[1])) || void 0 === i ? void 0 : i.username,
+  firstUsername: null === (r = D.default.getUser(o[0])) || void 0 === r ? void 0 : r.username,
+  secondUsername: null === (i = D.default.getUser(o[1])) || void 0 === i ? void 0 : i.username,
   emojiNames: u
 });
   else
 return P.Z.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_MULTIPLE.format({
-  firstUsername: null === (a = D.default.getUser(s[0])) || void 0 === a ? void 0 : a.username,
-  secondUsername: null === (o = D.default.getUser(s[1])) || void 0 === o ? void 0 : o.username,
-  count: s.length - 2,
+  firstUsername: null === (a = D.default.getUser(o[0])) || void 0 === a ? void 0 : a.username,
+  secondUsername: null === (s = D.default.getUser(o[1])) || void 0 === s ? void 0 : s.username,
+  count: o.length - 2,
   emojiNames: u
 });
 }

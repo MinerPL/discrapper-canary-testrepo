@@ -18,14 +18,14 @@ return _;
 var r = n(430824),
   i = n(496675),
   a = n(266090),
-  o = n(981631),
-  s = n(176505);
+  s = n(981631),
+  o = n(176505);
 
 function l(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
 r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : '1e9ccc_1',
-i = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : o.lds;
+i = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : s.lds;
   return a.Z.useExperiment({
 guildId: i,
 location: r
@@ -48,16 +48,16 @@ function c(e, t) {
 function d(e, t, n) {
   if (null == t) {
 if (null != n && n.isPrivate())
-  return !!n.hasFlag(s.zZ.CLYDE_AI) || r.Z.getGuildIds().some(e => E(r.Z.getGuild(e)));
+  return !!n.hasFlag(o.zZ.CLYDE_AI) || r.Z.getGuildIds().some(e => E(r.Z.getGuild(e)));
 return !1;
   }
-  return null != e && e !== a.P.None && i.Z.can(o.Plq.USE_CLYDE_AI, n);
+  return null != e && e !== a.P.None && i.Z.can(s.Plq.USE_CLYDE_AI, n);
 }
 
 function _(e, t) {
   var n;
   let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-i = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : o.lds;
+i = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : s.lds;
   return d(a.Z.getCurrentConfig({
 guildId: i,
 location: '1e9ccc_2'

@@ -21,8 +21,8 @@ r(this, 'message', void 0), r(this, 'code', void 0), r(this, 'retryAfter', void 
 let {
   message: i,
   code: a,
-  retryAfter: o,
-  fields: s,
+  retryAfter: s,
+  fields: o,
   status: l
 } = function(e, t) {
   if ('string' == typeof e)
@@ -50,6 +50,6 @@ let {
   }
   return {};
 }(e, t);
-this.message = i || n, this.retryAfter = o, this.code = a || -1, this.fields = s || {}, this.status = l, this.error = Error(i);
+this.message = i || n, this.retryAfter = s, this.code = a || -1, this.fields = o || {}, this.status = l, this.error = Error(i);
   }
 }

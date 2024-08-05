@@ -23,7 +23,7 @@ disabled: _,
 saveButtonTooltip: S
   } = e, x = l.useRef(null), [{
 spring: f
-  }, C] = (0, a.useSpring)(() => ({
+  }, C] = (0, r.useSpring)(() => ({
 spring: 0
   }));
   l.useEffect(() => {

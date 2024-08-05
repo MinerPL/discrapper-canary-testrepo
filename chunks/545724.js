@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(748780),
   o = n(91192),
   c = n(481060),
@@ -12,7 +12,7 @@ var i = n(735250),
 t.Z = function(e) {
   let {
 index: t,
-children: a,
+children: s,
 user: h,
 channel: E,
 onClick: I,
@@ -20,19 +20,19 @@ isFocused: m,
 isActive: g,
 onOtherHover: p,
 className: T
-  } = e, [S, C] = s.useState(!1), [f, N] = s.useState(!1), A = () => {
-C(!0), m && !g && !f && (null == p || p());
-  }, Z = () => {
-C(!1);
-  }, L = (e, t) => {
+  } = e, [S, f] = a.useState(!1), [C, N] = a.useState(!1), A = () => {
+f(!0), m && !g && !C && (null == p || p());
+  }, v = () => {
+f(!1);
+  }, Z = (e, t) => {
 if (null != t)
   N(!0), (0, d.jW)(e, async () => {
     let {
       default: e
     } = await Promise.all([
       n.e('79695'),
-      n.e('17400'),
-      n.e('13806')
+      n.e('69220'),
+      n.e('86541')
     ]).then(n.bind(n, 881351));
     return n => (0, i.jsx)(e, {
       ...n,
@@ -53,19 +53,19 @@ children: e => (0, i.jsx)(c.FocusRing, {
   },
   children: (0, i.jsx)(l.Z.div, {
     className: r()(_.messageRequestItem, T, {
-      [_.active]: g || f,
+      [_.active]: g || C,
       [_.firstItem]: 0 === t
     }),
-    onContextMenu: e => L(e, h),
+    onContextMenu: e => Z(e, h),
     onMouseEnter: A,
-    onMouseLeave: Z,
+    onMouseLeave: v,
     onClick: null != I ? I : void 0,
     style: {
       LIST_ROW_HEIGHT: u.WN,
       opacity: 1
     },
     ...e,
-    children: a(S || g || f)
+    children: s(S || g || C)
   })
 })
   });

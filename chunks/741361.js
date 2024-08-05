@@ -1,6 +1,6 @@
 n.d(t, {
   Aj: function() {
-return s;
+return o;
   },
   S1: function() {
 return u;
@@ -15,15 +15,15 @@ return c;
 return d;
   },
   kY: function() {
-return o;
+return s;
   }
 });
 var r = n(570140),
   i = n(156699),
   a = n(493683);
-async function o(e, t, n, a) {
-  let o = e.getGuildId();
-  if (null != o && t === o && !await (0, i.u)(e, a, n))
+async function s(e, t, n, a) {
+  let s = e.getGuildId();
+  if (null != s && t === s && !await (0, i.u)(e, a, n))
 return !1;
   r.Z.dispatch({
 type: 'CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION',
@@ -33,7 +33,7 @@ deny: a
   });
 }
 
-function s(e) {
+function o(e) {
   r.Z.dispatch({
 type: 'CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION',
 id: e

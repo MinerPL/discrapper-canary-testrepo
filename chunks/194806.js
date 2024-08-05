@@ -6,9 +6,9 @@ return l;
 var r = n(956067),
   i = n(930145),
   a = n(350167),
-  o = n(503461);
+  s = n(503461);
 
-function s(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -28,10 +28,10 @@ return i.A.delete(e);
   }
   close() {
 var e;
-this.lastState = o.hi.Closed, null === (e = this.raw) || void 0 === e || e.close(), this.raw = null, a.r.removeCompletionCallback(this.databaseStateCallback);
+this.lastState = s.hi.Closed, null === (e = this.raw) || void 0 === e || e.close(), this.raw = null, a.r.removeCompletionCallback(this.databaseStateCallback);
   }
   disable(e) {
-return null == this.raw ? Promise.resolve() : (this.lastState = o.hi.Disabled, this.execute({
+return null == this.raw ? Promise.resolve() : (this.lastState = s.hi.Disabled, this.execute({
   type: 'db.disable',
   handle: 0,
   reason: e
@@ -81,12 +81,12 @@ return this.execute({
 });
   }
   instantaneousState() {
-return null == this.raw ? o.hi.Closed : this.lastState = this.executeSync({
+return null == this.raw ? s.hi.Closed : this.lastState = this.executeSync({
   type: 'db.state'
 });
   }
   async instantaneousStateAsync() {
-return null == this.raw ? o.hi.Closed : this.lastState = await this.execute({
+return null == this.raw ? s.hi.Closed : this.lastState = await this.execute({
   type: 'db.state'
 });
   }
@@ -101,7 +101,7 @@ return Promise.resolve(e(n)).then(() => n.operations.length > 0 ? this.execute({
 }, t) : Promise.resolve());
   }
   constructor(e) {
-s(this, 'name', void 0), s(this, 'handle', void 0), s(this, 'raw', void 0), s(this, 'lastState', void 0), s(this, 'databaseStateCallback', void 0), this.raw = e, this.name = e.name, this.lastState = o.hi.Open, this.handle = e.handle, this.databaseStateCallback = a.r.addDatabaseStateCallback((e, t) => {
+o(this, 'name', void 0), o(this, 'handle', void 0), o(this, 'raw', void 0), o(this, 'lastState', void 0), o(this, 'databaseStateCallback', void 0), this.raw = e, this.name = e.name, this.lastState = s.hi.Open, this.handle = e.handle, this.databaseStateCallback = a.r.addDatabaseStateCallback((e, t) => {
   this.handle === e && (this.lastState = t);
 });
   }
@@ -119,6 +119,6 @@ return this.operations;
 return '[DatabaseTransaction '.concat(this.database.handle, ': ').concat(this.operations.length, ' ops]');
   }
   constructor(e) {
-s(this, 'database', void 0), s(this, 'operations', void 0), this.database = e, this.operations = [];
+o(this, 'database', void 0), o(this, 'operations', void 0), this.database = e, this.operations = [];
   }
 }

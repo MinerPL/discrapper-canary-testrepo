@@ -10,20 +10,20 @@ function a(e, t) {
   let {
 get: n,
 getIsLoading: a,
-load: o
+load: s
   } = t;
   return function() {
-for (var t = arguments.length, s = Array(t), l = 0; l < t; l++)
-  s[l] = arguments[l];
-let u = (0, i.e7)([e], () => n(...s), s),
-  c = (0, i.e7)([e], () => a(...s), s),
+for (var t = arguments.length, o = Array(t), l = 0; l < t; l++)
+  o[l] = arguments[l];
+let u = (0, i.e7)([e], () => n(...o), o),
+  c = (0, i.e7)([e], () => a(...o), o),
   [d, _] = (0, r.useState)();
 return (0, r.useEffect)(() => {
-  if (a(...s) || null != n(...s))
+  if (a(...o) || null != n(...o))
     return;
   let e = new AbortController();
-  return o(e.signal, ...s).catch(_), () => e.abort();
-}, s), {
+  return s(e.signal, ...o).catch(_), () => e.abort();
+}, o), {
   data: u,
   error: d,
   isLoading: c

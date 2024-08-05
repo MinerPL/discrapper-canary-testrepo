@@ -22,8 +22,8 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-var o = n(133495),
-  s = Symbol('lastResolve'),
+var s = n(133495),
+  o = Symbol('lastResolve'),
   l = Symbol('lastReject'),
   u = Symbol('error'),
   c = Symbol('ended'),
@@ -39,10 +39,10 @@ done: t
 }
 
 function h(e) {
-  var t = e[s];
+  var t = e[o];
   if (null !== t) {
 var n = e[E].read();
-null !== n && (e[d] = null, e[s] = null, e[l] = null, t(f(n, !1)));
+null !== n && (e[d] = null, e[o] = null, e[l] = null, t(f(n, !1)));
   }
 }
 
@@ -67,10 +67,10 @@ next: function() {
         r[u] ? t(r[u]) : e(f(void 0, !0));
       });
     });
-  var o = this[d];
-  if (o) {
+  var s = this[d];
+  if (s) {
     ;
-    n = new Promise((e = o, t = this, function(n, r) {
+    n = new Promise((e = s, t = this, function(n, r) {
       e.then(function() {
         if (t[c]) {
           n(f(void 0, !0));
@@ -80,9 +80,9 @@ next: function() {
       }, r);
     }));
   } else {
-    var s = this[E].read();
-    if (null !== s)
-      return Promise.resolve(f(s, !1));
+    var o = this[E].read();
+    if (null !== o)
+      return Promise.resolve(f(o, !1));
     n = new Promise(this[_]);
   }
   return this[d] = n, n;
@@ -105,7 +105,7 @@ e.exports = function(e) {
   var t, n = Object.create(I, (a(t = {}, E, {
 value: e,
 writable: !0
-  }), a(t, s, {
+  }), a(t, o, {
 value: null,
 writable: !0
   }), a(t, l, {
@@ -120,17 +120,17 @@ writable: !0
   }), a(t, _, {
 value: function(e, t) {
   var r = n[E].read();
-  r ? (n[d] = null, n[s] = null, n[l] = null, e(f(r, !1))) : (n[s] = e, n[l] = t);
+  r ? (n[d] = null, n[o] = null, n[l] = null, e(f(r, !1))) : (n[o] = e, n[l] = t);
 },
 writable: !0
   }), t));
-  return n[d] = null, o(e, function(e) {
+  return n[d] = null, s(e, function(e) {
 if (e && 'ERR_STREAM_PREMATURE_CLOSE' !== e.code) {
   var t = n[l];
-  null !== t && (n[d] = null, n[s] = null, n[l] = null, t(e)), n[u] = e;
+  null !== t && (n[d] = null, n[o] = null, n[l] = null, t(e)), n[u] = e;
   return;
 }
-var r = n[s];
-null !== r && (n[d] = null, n[s] = null, n[l] = null, r(f(void 0, !0))), n[c] = !0;
+var r = n[o];
+null !== r && (n[d] = null, n[o] = null, n[l] = null, r(f(void 0, !0))), n[c] = !0;
   }), e.on('readable', p.bind(null, n)), n;
 };

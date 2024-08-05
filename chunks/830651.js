@@ -7,7 +7,7 @@ var r = n(964742),
   i = n(40284),
   a = n(144459);
 
-function o(e, t) {
+function s(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
 var r = Object.getOwnPropertySymbols(e);
@@ -18,10 +18,10 @@ t && (r = r.filter(function(t) {
   return n;
 }
 
-function s(e) {
+function o(e) {
   for (var t = 1; t < arguments.length; t++) {
 var n = null != arguments[t] ? arguments[t] : {};
-t % 2 ? o(Object(n), !0).forEach(function(t) {
+t % 2 ? s(Object(n), !0).forEach(function(t) {
   (function(e, t, n) {
     t in e ? Object.defineProperty(e, t, {
       value: n,
@@ -30,7 +30,7 @@ t % 2 ? o(Object(n), !0).forEach(function(t) {
       writable: !0
     }) : e[t] = n;
   }(e, t, n[t]));
-}) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : o(Object(n)).forEach(function(t) {
+}) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : s(Object(n)).forEach(function(t) {
   Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
 });
   }
@@ -52,7 +52,7 @@ t = arguments.length > 1 ? arguments[1] : void 0,
 n = t.payload;
   switch (t.type) {
 case r.qu:
-  return s(s({}, e), {}, {
+  return o(o({}, e), {}, {
     itemType: n.itemType,
     item: n.item,
     sourceId: n.sourceId,
@@ -61,27 +61,27 @@ case r.qu:
     didDrop: !1
   });
 case r.js:
-  return s(s({}, e), {}, {
+  return o(o({}, e), {}, {
     isSourcePublic: !0
   });
 case r.$T:
-  return s(s({}, e), {}, {
+  return o(o({}, e), {}, {
     targetIds: n.targetIds
   });
 case i.IS:
   if (-1 === e.targetIds.indexOf(n.targetId))
     return e;
-  return s(s({}, e), {}, {
+  return o(o({}, e), {}, {
     targetIds: (0, a.zu)(e.targetIds, n.targetId)
   });
 case r.rp:
-  return s(s({}, e), {}, {
+  return o(o({}, e), {}, {
     dropResult: n.dropResult,
     didDrop: !0,
     targetIds: []
   });
 case r.Bs:
-  return s(s({}, e), {}, {
+  return o(o({}, e), {}, {
     itemType: null,
     item: null,
     sourceId: null,

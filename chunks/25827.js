@@ -9,8 +9,8 @@ return _;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(75735),
+  s = n.n(a),
+  o = n(75735),
   l = n(40851),
   u = n(67844),
   c = n(871499),
@@ -21,7 +21,7 @@ function _(e) {
 {
   enabled: n,
   cameraUnavailable: a,
-  onChange: o,
+  onChange: s,
   onCameraUnavailable: c,
   hasPermission: d,
   children: _,
@@ -29,12 +29,12 @@ function _(e) {
   join: f
 } = e,
 h = (0, l.bp)(),
-p = a ? () => c() : () => o(!e.enabled, h),
+p = a ? () => c() : () => s(!e.enabled, h),
 {
   Component: m,
   play: I,
   events: T
-} = (0, s.o)(f || n ? 'disable' : 'enable');
+} = (0, o.o)(f || n ? 'disable' : 'enable');
   return i.useEffect(() => () => I(), [
 n,
 I
@@ -58,7 +58,7 @@ enabled: t,
 join: n,
 channel: i,
 onChange: a,
-onCameraUnavailable: s,
+onCameraUnavailable: o,
 cameraUnavailable: l,
 hasPermission: u,
 className: E,
@@ -73,7 +73,7 @@ enabled: t,
 join: n,
 channel: i,
 onChange: a,
-onCameraUnavailable: s,
+onCameraUnavailable: o,
 cameraUnavailable: l,
 hasPermission: u,
 channelLimitReached: f,
@@ -83,10 +83,10 @@ children: e => {
     unavailable: n,
     onMouseEnter: i,
     onMouseLeave: a,
-    ...s
+    ...o
   } = e;
   return (0, r.jsx)(T, {
-    ...s,
+    ...o,
     ...I,
     onMouseEnter: e => {
       var t;
@@ -97,7 +97,7 @@ children: e => {
       null === (t = I.onMouseLeave) || void 0 === t || t.call(I, e), null == a || a();
     },
     isActive: t,
-    className: o()(E, {
+    className: s()(E, {
       [d.fauxDisabled]: n
     }),
     onPopoutClick: m

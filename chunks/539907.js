@@ -8,8 +8,8 @@ return g;
 }), n(47120), n(411104);
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(512722),
   u = n.n(l),
   c = n(84735),
@@ -138,13 +138,13 @@ switch (i) {
   case 'center': {
     let i = e.left + (e.width - t.offsetWidth) / 2,
       a = this.formatDimension(this.nudgeLeftAlignment(i, t, n)),
-      o = this.formatDimension(i) - a;
+      s = this.formatDimension(i) - a;
     return {
       style: {
         ...r,
         left: a
       },
-      nudge: o
+      nudge: s
     };
   }
   default:
@@ -161,8 +161,8 @@ if (e < 0)
   return 0;
 let i = t.getBoundingClientRect().height,
   a = n.offsetHeight,
-  o = e + i - a + 12;
-return o > 0 ? Math.max(12, e - o) : e;
+  s = e + i - a + 12;
+return s > 0 ? Math.max(12, e - s) : e;
   }
   nudgeBottomAlignment(e, t, n) {
 let {
@@ -170,8 +170,8 @@ let {
 } = this.props, i = n.offsetHeight, a = i - e;
 if (!r)
   return a;
-let o = a + t.offsetHeight - i + 12;
-return o > 0 ? Math.max(12, a - o) : a;
+let s = a + t.offsetHeight - i + 12;
+return s > 0 ? Math.max(12, a - s) : a;
   }
   getVerticalAlignmentStyle(e, t, n, r) {
 let {
@@ -203,13 +203,13 @@ switch (i) {
   case 'center': {
     let i = e.top + (e.height - t.offsetHeight) / 2,
       a = this.formatDimension(this.nudgeTopAlignment(i, t, n)),
-      o = this.formatDimension(i) - a;
+      s = this.formatDimension(i) - a;
     return {
       style: {
         ...r,
         top: a
       },
-      nudge: o
+      nudge: s
     };
   }
   default:
@@ -219,9 +219,9 @@ switch (i) {
   calculatePositionStyle(e, t, n) {
 var r, i, a;
 let {
-  spacing: o = 0
-} = this.props, s = v(this.props), l = n.getBoundingClientRect();
-let u = (r = s, i = l.left, a = l.top, {
+  spacing: s = 0
+} = this.props, o = v(this.props), l = n.getBoundingClientRect();
+let u = (r = o, i = l.left, a = l.top, {
   top: r.top - a,
   left: r.left - i,
   bottom: r.bottom - a,
@@ -232,23 +232,23 @@ let u = (r = s, i = l.left, a = l.top, {
 switch (e) {
   case 'top':
     return this.getHorizontalAlignmentStyle(u, t, n, {
-      bottom: n.offsetHeight - u.top + o
+      bottom: n.offsetHeight - u.top + s
     });
   case 'bottom':
     return this.getHorizontalAlignmentStyle(u, t, n, {
-      top: u.bottom + o
+      top: u.bottom + s
     });
   case 'left':
     return this.getVerticalAlignmentStyle(u, t, n, {
-      right: n.offsetWidth - u.left + o
+      right: n.offsetWidth - u.left + s
     });
   case 'right':
     return this.getVerticalAlignmentStyle(u, t, n, {
-      left: u.right + o
+      left: u.right + s
     });
   case 'center':
     return this.getVerticalAlignmentStyle(u, t, n, {
-      left: u.left + u.width / 2 - t.offsetWidth / 2 + o
+      left: u.left + u.width / 2 - t.offsetWidth / 2 + s
     });
   case 'window_center':
     return this.getVerticalAlignmentStyle(u, t, n, {
@@ -269,9 +269,9 @@ let r = (0, h.wL)(n),
     style: i,
     nudge: a
   } = this.calculatePositionStyle(e, n, r),
-  o = null,
-  s = null;
-if (t && (o = A(e, i, n, r)) < 0) {
+  s = null,
+  o = null;
+if (t && (s = A(e, i, n, r)) < 0) {
   let t = function(e) {
       switch (e) {
         case 'top':
@@ -294,14 +294,14 @@ if (t && (o = A(e, i, n, r)) < 0) {
       style: i,
       nudge: a
     } = this.calculatePositionStyle(t, n, r);
-  if ((s = A(t, i, n, r)) > o)
-    return N(s, n, {
+  if ((o = A(t, i, n, r)) > s)
+    return N(o, n, {
       position: t,
       nudge: a,
       style: i
     });
 }
-return N(o, n, {
+return N(s, n, {
   position: e,
   nudge: a,
   style: i
@@ -343,7 +343,7 @@ let {
   fixed: r,
   disablePointerEvents: a
 } = this.props, {
-  position: o,
+  position: s,
   isPositioned: l,
   isSettingsLayerTransitioning: u,
   nudge: _
@@ -355,7 +355,7 @@ return (0, i.jsx)(d.C1, {
     } = d;
     return (0, i.jsx)('div', {
       id: e,
-      className: s()(t, (0, E.Q)(f), m.layer, {
+      className: o()(t, (0, E.Q)(f), m.layer, {
         [m.emptyError]: !1,
         [m.layerHidden]: u,
         [m.disabledPointerEvents]: a
@@ -368,7 +368,7 @@ return (0, i.jsx)(d.C1, {
       children: (0, i.jsx)(c.J, {
         containerRef: this.elementRef,
         children: n({
-          position: o,
+          position: s,
           nudge: _,
           isPositioned: l
         }, this.updatePosition)

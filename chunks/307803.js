@@ -13,7 +13,7 @@ a = {
   end: /\}/,
   keywords: i
 },
-o = {
+s = {
   className: 'template-variable',
   variants: [{
       begin: '\\{\\{',
@@ -27,7 +27,7 @@ o = {
   keywords: i
 };
 
-  function s(e, t) {
+  function o(e, t) {
 let n = [{
   begin: e,
   end: t
@@ -55,22 +55,22 @@ return n[0].contains = n, n;
     {
       begin: '%[Qwi]?\\(',
       end: '\\)',
-      contains: s('\\(', '\\)')
+      contains: o('\\(', '\\)')
     },
     {
       begin: '%[Qwi]?\\[',
       end: '\\]',
-      contains: s('\\[', '\\]')
+      contains: o('\\[', '\\]')
     },
     {
       begin: '%[Qwi]?\\{',
       end: /\}/,
-      contains: s(/\{/, /\}/)
+      contains: o(/\{/, /\}/)
     },
     {
       begin: '%[Qwi]?<',
       end: '>',
-      contains: s('<', '>')
+      contains: o('<', '>')
     },
     {
       begin: '%[Qwi]?\\|',
@@ -88,22 +88,22 @@ u = {
   variants: [{
       begin: '%q\\(',
       end: '\\)',
-      contains: s('\\(', '\\)')
+      contains: o('\\(', '\\)')
     },
     {
       begin: '%q\\[',
       end: '\\]',
-      contains: s('\\[', '\\]')
+      contains: o('\\[', '\\]')
     },
     {
       begin: '%q\\{',
       end: /\}/,
-      contains: s(/\{/, /\}/)
+      contains: o(/\{/, /\}/)
     },
     {
       begin: '%q<',
       end: '>',
-      contains: s('<', '>')
+      contains: o('<', '>')
     },
     {
       begin: '%q\\|',
@@ -146,22 +146,22 @@ d = {
   variants: [{
       begin: '%r\\(',
       end: '\\)',
-      contains: s('\\(', '\\)')
+      contains: o('\\(', '\\)')
     },
     {
       begin: '%r\\[',
       end: '\\]',
-      contains: s('\\[', '\\]')
+      contains: o('\\[', '\\]')
     },
     {
       begin: '%r\\{',
       end: /\}/,
-      contains: s(/\{/, /\}/)
+      contains: o(/\{/, /\}/)
     },
     {
       begin: '%r<',
       end: '>',
-      contains: s('<', '>')
+      contains: o('<', '>')
     },
     {
       begin: '%r\\|',
@@ -171,7 +171,7 @@ d = {
   relevance: 0
 },
 _ = [
-  o,
+  s,
   l,
   u,
   d,
@@ -284,7 +284,7 @@ _ = [
     relevance: 0
   }
 ];
-  return a.contains = _, o.contains = _.slice(1), {
+  return a.contains = _, s.contains = _.slice(1), {
 name: 'Crystal',
 aliases: ['cr'],
 keywords: i,

@@ -21,8 +21,8 @@ return _;
 var r = n(430824),
   i = n(19780),
   a = n(594174),
-  o = n(626135),
-  s = n(981631),
+  s = n(626135),
+  o = n(981631),
   l = n(37113),
   u = n(474936),
   c = n(65154),
@@ -72,7 +72,7 @@ function I(e, t, n) {
 f = a.default.getCurrentUser(),
 h = i.Z.getGuildId(),
 p = null != h ? r.Z.getGuild(h) : null;
-  o.default.track(s.rMx.STREAM_SETTINGS_UPDATE, {
+  s.default.track(o.rMx.STREAM_SETTINGS_UPDATE, {
 user_premium_tier: null == f ? void 0 : f.premiumType,
 guild_premium_tier: null == p ? void 0 : p.premiumTier,
 stream_quality_user_premium_tier: (null == E ? void 0 : E.quality) != null ? u.bg[E.quality] : null,

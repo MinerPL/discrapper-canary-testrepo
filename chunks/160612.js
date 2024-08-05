@@ -42,7 +42,7 @@ function a(e, t, n) {
   }) : e[t] = n, e;
 }
 
-function o(e, t) {
+function s(e, t) {
   return function(e) {
     if (Array.isArray(e))
       return e;
@@ -50,17 +50,17 @@ function o(e, t) {
     var n, r, i = e && ('undefined' != typeof Symbol && e[Symbol.iterator] || e['@@iterator']);
     if (null != i) {
       var a = [],
-        o = !0,
-        s = !1;
+        s = !0,
+        o = !1;
       try {
-        for (i = i.call(e); !(o = (n = i.next()).done) && (a.push(n.value), !t || a.length !== t); o = !0);
+        for (i = i.call(e); !(s = (n = i.next()).done) && (a.push(n.value), !t || a.length !== t); s = !0);
       } catch (e) {
-        s = !0, r = e;
+        o = !0, r = e;
       } finally {
         try {
-          !o && null != i.return && i.return();
+          !s && null != i.return && i.return();
         } finally {
-          if (s)
+          if (o)
             throw r;
         }
       }
@@ -69,19 +69,19 @@ function o(e, t) {
   }(e, t) || function(e, t) {
     if (e) {
       if ('string' == typeof e)
-        return s(e, t);
+        return o(e, t);
       var n = Object.prototype.toString.call(e).slice(8, -1);
       if ('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n)
         return Array.from(e);
       if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))
-        return s(e, t);
+        return o(e, t);
     }
   }(e, t) || function() {
     throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
   }();
 }
 
-function s(e, t) {
+function o(e, t) {
   (null == t || t > e.length) && (t = e.length);
   for (var n = 0, r = Array(t); n < t; n++)
     r[n] = e[n];
@@ -100,10 +100,10 @@ E.exports = function() {
 
   function n() {}
   return n.resetWarningCache = t, d = function() {
-    function r(t, n, r, i, a, o) {
-      if (o !== e) {
-        var s = Error('Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types');
-        throw s.name = 'Invariant Violation', s;
+    function r(t, n, r, i, a, s) {
+      if (s !== e) {
+        var o = Error('Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types');
+        throw o.name = 'Invariant Violation', o;
       }
     }
 
@@ -181,22 +181,22 @@ var f = (l = E.exports) && l.__esModule && Object.prototype.hasOwnProperty.call(
     if (!i && !r)
       return t === n;
     var a = Object.keys(t),
-      o = Object.keys(n);
-    if (a.length !== o.length)
+      s = Object.keys(n);
+    if (a.length !== s.length)
       return !1;
-    for (var s = {}, l = 0; l < a.length; l += 1)
-      s[a[l]] = !0;
-    for (var u = 0; u < o.length; u += 1)
-      s[o[u]] = !0;
-    var c = Object.keys(s);
+    for (var o = {}, l = 0; l < a.length; l += 1)
+      o[a[l]] = !0;
+    for (var u = 0; u < s.length; u += 1)
+      o[s[u]] = !0;
+    var c = Object.keys(o);
     return c.length === a.length && c.every(function(r) {
       return e(t[r], n[r]);
     });
   },
   g = function(e, t, n) {
-    return m(e) ? Object.keys(e).reduce(function(i, o) {
-      var s = !m(t) || !T(e[o], t[o]);
-      return n.includes(o) ? (s && console.warn('Unsupported prop change: options.'.concat(o, ' is not a mutable property.')), i) : s ? r(r({}, i || {}), {}, a({}, o, e[o])) : i;
+    return m(e) ? Object.keys(e).reduce(function(i, s) {
+      var o = !m(t) || !T(e[s], t[s]);
+      return n.includes(s) ? (o && console.warn('Unsupported prop change: options.'.concat(s, ' is not a mutable property.')), i) : o ? r(r({}, i || {}), {}, a({}, s, e[s])) : i;
     }, null) : null;
   },
   S = 'Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
@@ -248,14 +248,14 @@ var R = function(e, t) {
       a = t.useMemo(function() {
         return N(n);
       }, [n]),
-      s = o(t.useState(function() {
+      o = s(t.useState(function() {
         return {
           stripe: 'sync' === a.tag ? a.stripe : null,
           elements: 'sync' === a.tag ? a.stripe.elements(r) : null
         };
       }), 2),
-      l = s[0],
-      u = s[1];
+      l = o[0],
+      u = o[1];
     t.useEffect(function() {
       var e = !0,
         t = function(e) {
@@ -363,10 +363,10 @@ var U = function(e, t) {
       a = t.useMemo(function() {
         return N(n, 'Invalid prop `stripe` supplied to `CustomCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.');
       }, [n]),
-      s = o(t.useState(null), 2),
-      l = s[0],
-      u = s[1],
-      c = o(t.useState(function() {
+      o = s(t.useState(null), 2),
+      l = o[0],
+      u = o[1],
+      c = s(t.useState(function() {
         return {
           stripe: 'sync' === a.tag ? a.stripe : null,
           customCheckoutSdk: null
@@ -461,7 +461,7 @@ var x = function(e) {
         });
       } : function(n) {
         var r, a = n.id,
-          s = n.className,
+          o = n.className,
           l = n.options,
           u = void 0 === l ? {} : l,
           c = n.onBlur,
@@ -480,7 +480,7 @@ var x = function(e) {
           R = x('mounts <'.concat(i, '>')),
           C = 'elements' in R ? R.elements : null,
           y = 'customCheckoutSdk' in R ? R.customCheckoutSdk : null,
-          D = o(t.useState(null), 2),
+          D = s(t.useState(null), 2),
           L = D[0],
           b = D[1],
           M = t.useRef(null),
@@ -515,7 +515,7 @@ var x = function(e) {
           };
         }, []), t.createElement('div', {
           id: a,
-          className: s,
+          className: o,
           ref: P
         });
       };
@@ -559,9 +559,9 @@ var F = function() {
       r = e.className,
       i = F().embeddedCheckout,
       a = t.useRef(!1),
-      o = t.useRef(null);
+      s = t.useRef(null);
     return t.useLayoutEffect(function() {
-      return !a.current && i && null !== o.current && (i.mount(o.current), a.current = !0),
+      return !a.current && i && null !== s.current && (i.mount(s.current), a.current = !0),
         function() {
           if (a.current && i)
             try {
@@ -569,7 +569,7 @@ var F = function() {
             } catch (e) {}
         };
     }, [i]), t.createElement('div', {
-      ref: o,
+      ref: s,
       id: n,
       className: r
     });
@@ -592,25 +592,25 @@ var F = function() {
   er = G('shippingAddress', k),
   ei = G('paymentMethodMessaging', k),
   ea = G('affirmMessage', k),
-  eo = G('afterpayClearpayMessage', k);
-e.AddressElement = en, e.AffirmMessageElement = ea, e.AfterpayClearpayMessageElement = eo, e.AuBankAccountElement = H, e.CardCvcElement = W, e.CardElement = Z, e.CardExpiryElement = j, e.CardNumberElement = Y, e.CustomCheckoutProvider = w, e.Elements = C, e.ElementsConsumer = D, e.EmbeddedCheckout = V, e.EmbeddedCheckoutProvider = function(e) {
+  es = G('afterpayClearpayMessage', k);
+e.AddressElement = en, e.AffirmMessageElement = ea, e.AfterpayClearpayMessageElement = es, e.AuBankAccountElement = H, e.CardCvcElement = W, e.CardElement = Z, e.CardExpiryElement = j, e.CardNumberElement = Y, e.CustomCheckoutProvider = w, e.Elements = C, e.ElementsConsumer = D, e.EmbeddedCheckout = V, e.EmbeddedCheckoutProvider = function(e) {
   var n = e.stripe,
     r = e.options,
     i = e.children,
     a = t.useMemo(function() {
       return N(n, 'Invalid prop `stripe` supplied to `EmbeddedCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.');
     }, [n]),
-    s = t.useRef(null),
+    o = t.useRef(null),
     l = t.useRef(null),
-    u = o(t.useState({
+    u = s(t.useState({
       embeddedCheckout: null
     }), 2),
     c = u[0],
     d = u[1];
   t.useEffect(function() {
-    if (!l.current && !s.current) {
+    if (!l.current && !o.current) {
       var e = function(e) {
-        !l.current && !s.current && (l.current = e, s.current = l.current.initEmbeddedCheckout(r).then(function(e) {
+        !l.current && !o.current && (l.current = e, o.current = l.current.initEmbeddedCheckout(r).then(function(e) {
           d({
             embeddedCheckout: e
           });
@@ -627,8 +627,8 @@ e.AddressElement = en, e.AffirmMessageElement = ea, e.AfterpayClearpayMessageEle
     l
   ]), t.useEffect(function() {
     return function() {
-      c.embeddedCheckout ? (s.current = null, c.embeddedCheckout.destroy()) : s.current && s.current.then(function() {
-        s.current = null, c.embeddedCheckout && c.embeddedCheckout.destroy();
+      c.embeddedCheckout ? (o.current = null, c.embeddedCheckout.destroy()) : o.current && o.current.then(function() {
+        o.current = null, c.embeddedCheckout && c.embeddedCheckout.destroy();
       });
     };
   }, [c.embeddedCheckout]), t.useEffect(function() {

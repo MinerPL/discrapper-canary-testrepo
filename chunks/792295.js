@@ -1,7 +1,7 @@
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(481060),
   u = n(905999);
 
@@ -56,13 +56,13 @@ let {
   tag: n,
   size: r,
   fullscreenOnMobile: a,
-  ...o
+  ...s
 } = this.props;
 return (0, i.jsx)(n, {
-  className: s()(u.modal, e, r, {
+  className: o()(u.modal, e, r, {
     [u.fullscreenOnMobile]: a
   }),
-  ...o,
+  ...s,
   children: this.renderChildren()
 });
   }

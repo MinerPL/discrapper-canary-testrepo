@@ -10,8 +10,8 @@ function a(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
 n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
 a = r.Z.getApplication(e.applicationId),
-o = e.getPrice(),
-s = e.getPrice(null, !1),
+s = e.getPrice(),
+o = e.getPrice(null, !1),
 l = {
   sku_id: e.id,
   sku_type: e.type,
@@ -22,9 +22,9 @@ l = {
 },
 u = null;
   n && (u = {
-price: null != o ? o.amount : null,
-regular_price: null != s ? s.amount : null,
-currency: null != o ? o.currency : null
+price: null != s ? s.amount : null,
+regular_price: null != o ? o.amount : null,
+currency: null != s ? s.currency : null
   });
   let c = null;
   return t && (c = {

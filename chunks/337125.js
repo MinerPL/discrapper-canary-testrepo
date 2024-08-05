@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(245561),
-  o = n(523034),
-  s = n(659101),
+  s = n(523034),
+  o = n(659101),
   l = n(689938),
   u = n(969772),
   c = n(655899);
@@ -21,11 +21,11 @@ guildId: d
   } = e, {
 botUpgraded: _,
 activeSubscriptionListing: E
-  } = (0, o.Z)({
+  } = (0, s.Z)({
 user: n,
 guildId: d
   }), f = null == E ? void 0 : null === (t = E.sku_benefits) || void 0 === t ? void 0 : t.benefits;
-  return null != d && _ && null != f && 0 !== f.length ? (0, r.jsxs)(s.Z, {
+  return null != d && _ && null != f && 0 !== f.length ? (0, r.jsxs)(o.Z, {
 children: [
   (0, r.jsx)(i.Heading, {
     variant: 'eyebrow',

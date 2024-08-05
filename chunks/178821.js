@@ -1,23 +1,23 @@
-r.d(t, {
+t.d(r, {
   Z: function() {
 return g;
   }
-}), r(47120);
-var a = r(735250),
-  n = r(470079),
-  i = r(120356),
-  o = r.n(i),
-  l = r(481060),
-  c = r(855954),
-  s = r(979756);
+}), t(47120);
+var a = t(735250),
+  n = t(470079),
+  i = t(120356),
+  o = t.n(i),
+  l = t(481060),
+  c = t(855954),
+  s = t(979756);
 let d = 1000 / 60,
   u = 1000 / 60 * 3,
   h = Math.ceil(3000 / d);
 
 function m() {
   let e = n.useRef(Array(h).fill(0)),
-t = n.useRef(performance.now()),
-r = n.useRef(0),
+r = n.useRef(performance.now()),
+t = n.useRef(0),
 i = n.useRef(0),
 o = n.useRef(0),
 c = n.useRef(0),
@@ -27,18 +27,18 @@ m = n.useRef(null),
   n.useEffect(() => {
 let a = () => {
     let n = performance.now(),
-      l = n - t.current;
-    if (t.current = n, i.current -= e.current[c.current], e.current[c.current] = l, i.current += l, o.current < h && (o.current += 1), c.current = (c.current + 1) % h, l > u) {
+      l = n - r.current;
+    if (r.current = n, i.current -= e.current[c.current], e.current[c.current] = l, i.current += l, o.current < h && (o.current += 1), c.current = (c.current + 1) % h, l > u) {
       let e = 0 === o.current ? d : i.current / o.current,
-        t = Math.min(2 * d, e),
-        a = Math.floor(l / (g ? t : d));
-      r.current += a;
+        r = Math.min(2 * d, e),
+        a = Math.floor(l / (g ? r : d));
+      t.current += a;
     }
     m.current = setTimeout(() => requestAnimationFrame(a), 12);
   },
   n = requestAnimationFrame(a);
 return () => {
-  cancelAnimationFrame(n), e.current.fill(0), r.current = 0, i.current = 0, o.current = 0, c.current = 0, null != m.current && clearTimeout(m.current);
+  cancelAnimationFrame(n), e.current.fill(0), t.current = 0, i.current = 0, o.current = 0, c.current = 0, null != m.current && clearTimeout(m.current);
 };
   }, [g]), n.useEffect(() => {
 let e = setInterval(() => {
@@ -62,7 +62,7 @@ children: [
         tag: 'span',
         variant: 'text-md/bold',
         color: 'text-primary',
-        children: r.current
+        children: t.current
       })
     ]
   }),
@@ -119,7 +119,7 @@ children: [
   (0, a.jsx)(l.Button, {
     size: l.Button.Sizes.SMALL,
     onClick: () => {
-      e.current.fill(0), r.current = 0, i.current = 0, o.current = 0, c.current = 0, t.current = performance.now();
+      e.current.fill(0), t.current = 0, i.current = 0, o.current = 0, c.current = 0, r.current = performance.now();
     },
     children: 'Reset Frame Data'
   })

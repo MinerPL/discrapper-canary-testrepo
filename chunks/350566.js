@@ -1,8 +1,8 @@
 var E = a(544891),
   _ = a(570140),
-  n = a(38618),
-  r = a(769654),
-  t = a(430824),
+  t = a(38618),
+  n = a(769654),
+  r = a(430824),
   L = a(981631);
 s.Z = {
   acceptGuildTemplate: (e, s, a) => (_.Z.dispatch({
@@ -22,10 +22,10 @@ E.tn.post({
     type: 'GUILD_TEMPLATE_ACCEPT_SUCCESS',
     code: e,
     guild: a
-  }), n.Z.isConnected() ? t.Z.addConditionalChangeListener(() => {
-    if (null != t.Z.getGuild(a.id))
-      return (0, r.X)(a.id), l(a), !1;
-  }) : ((0, r.X)(a.id), l(a));
+  }), t.Z.isConnected() ? r.Z.addConditionalChangeListener(() => {
+    if (null != r.Z.getGuild(a.id))
+      return (0, n.X)(a.id), l(a), !1;
+  }) : ((0, n.X)(a.id), l(a));
 }, s => {
   _.Z.dispatch({
     type: 'GUILD_TEMPLATE_ACCEPT_FAILURE',

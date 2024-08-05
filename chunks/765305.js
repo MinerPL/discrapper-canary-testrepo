@@ -21,7 +21,7 @@ return l;
 return R;
   },
   fL: function() {
-return s;
+return o;
   },
   gG: function() {
 return S;
@@ -30,7 +30,7 @@ return S;
 return u;
   },
   j8: function() {
-return o;
+return s;
   },
   nz: function() {
 return O;
@@ -60,7 +60,7 @@ return b;
 return A;
   }
 }), n(47120);
-var r, i, a, o, s, l, u, c, d, _, E, f, h, p, m = n(70956),
+var r, i, a, s, o, l, u, c, d, _, E, f, h, p, m = n(70956),
   I = n(981631);
 let T = 100,
   g = 1000,
@@ -72,7 +72,7 @@ let v = new Set([
   3,
   4
 ]);
-(d = i || (i = {}))[d.NONE = 0] = 'NONE', d[d.STAGE_INSTANCE = 1] = 'STAGE_INSTANCE', d[d.VOICE = 2] = 'VOICE', d[d.EXTERNAL = 3] = 'EXTERNAL', d[d.PRIME_TIME = 4] = 'PRIME_TIME', (_ = a || (a = {}))[_.EVENT_START = 1] = 'EVENT_START', (E = o || (o = {}))[E.PUBLIC = 1] = 'PUBLIC', E[E.GUILD_ONLY = 2] = 'GUILD_ONLY';
+(d = i || (i = {}))[d.NONE = 0] = 'NONE', d[d.STAGE_INSTANCE = 1] = 'STAGE_INSTANCE', d[d.VOICE = 2] = 'VOICE', d[d.EXTERNAL = 3] = 'EXTERNAL', d[d.PRIME_TIME = 4] = 'PRIME_TIME', (_ = a || (a = {}))[_.EVENT_START = 1] = 'EVENT_START', (E = s || (s = {}))[E.PUBLIC = 1] = 'PUBLIC', E[E.GUILD_ONLY = 2] = 'GUILD_ONLY';
 let O = {
 1: I.d4z.GUILD_STAGE_VOICE,
 2: I.d4z.GUILD_VOICE
@@ -82,7 +82,7 @@ let O = {
 1,
 2
   ]);
-(f = s || (s = {}))[f.EVENT_INFO = 0] = 'EVENT_INFO', f[f.RSVP_LIST = 1] = 'RSVP_LIST';
+(f = o || (o = {}))[f.EVENT_INFO = 0] = 'EVENT_INFO', f[f.RSVP_LIST = 1] = 'RSVP_LIST';
 let y = 100,
   D = 2 * m.Z.Millis.DAY,
   L = 12 * m.Z.Millis.HOUR,

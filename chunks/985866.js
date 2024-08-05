@@ -14,18 +14,18 @@ var r = n(735250),
   u = n(481060),
   p = n(484614),
   m = n(410030),
-  C = n(607070),
-  _ = n(530618),
+  _ = n(607070),
+  C = n(530618),
   E = n(454585),
   S = n(246946),
   R = n(572004),
   g = n(302221),
   T = n(617136),
-  f = n(272008),
-  h = n(569984),
+  h = n(272008),
+  f = n(569984),
   A = n(497505),
-  b = n(918701),
-  D = n(566078),
+  D = n(918701),
+  b = n(566078),
   I = n(617889),
   x = n(644646),
   v = n(78826),
@@ -43,8 +43,8 @@ hasTieredRewardCodes: a
   } = e, l = (0, c.wj)((0, m.ZP)()), i = {
 border: '1px solid '.concat(n.config.colors.primary),
 background: '\n    linear-gradient(\n      150deg,\n      transparent 68%,\n      '.concat((0, g.aD)(n.config.colors.primary, 0.2), ' 85%,\n      transparent 100%\n    ),\n    linear-gradient(\n      150deg,\n      transparent 13%,\n      ').concat((0, g.aD)(n.config.colors.primary, 0.6), ' 44%,\n      transparent 76%\n    ),\n    ').concat(l ? 'var(--black)' : 'var(--white)', '\n    ')
-  }, p = (0, I.B)(n, !1), C = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null || null != s, {
-header: _,
+  }, p = (0, I.B)(n, !1), _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null || null != s, {
+header: C,
 subHeader: E
   } = function(e) {
 var t, n, r, s;
@@ -52,10 +52,10 @@ let {
   quest: a,
   rewardCode: o,
   hasTieredRewardCodes: l
-} = e, i = (null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null || null != o, d = l ? '' : y.Z.Messages.QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER, c = l ? (0, b.o9)({
+} = e, i = (null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null || null != o, d = l ? '' : y.Z.Messages.QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER, c = l ? (0, D.o9)({
   quest: a,
   idx: null !== (r = null == o ? void 0 : o.tier) && void 0 !== r ? r : null === (n = a.userStatus) || void 0 === n ? void 0 : n.claimedTier
-}) : null, u = D.r.build(a.config), p = null != c && null !== (s = c.messages.name) && void 0 !== s ? s : u.defaultReward.messages.name, m = l ? y.Z.Messages.QUESTS_CLAIM_REWARD : u.defaultReward.messages.name;
+}) : null, u = b.r.build(a.config), p = null != c && null !== (s = c.messages.name) && void 0 !== s ? s : u.defaultReward.messages.name, m = l ? y.Z.Messages.QUESTS_CLAIM_REWARD : u.defaultReward.messages.name;
 return {
   subHeader: i ? y.Z.Messages.QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER : d,
   header: i ? p : m
@@ -90,14 +90,15 @@ children: [
           [j.rewardTileAssetLoading]: R || S
         }),
         quest: n,
-        questContent: p.trackingCtx.content
+        questContent: p.trackingCtx.content,
+        location: O.dr.REWARD_CODE_MODAL
       })
     ]
   }),
   (0, r.jsxs)('div', {
     className: j.rewardSubheading,
     children: [
-      C && (0, r.jsx)(u.CheckmarkSmallIcon, {
+      _ && (0, r.jsx)(u.CheckmarkSmallIcon, {
         size: 'xs',
         color: d.Z.colors.TEXT_MUTED,
         className: j.rewardSubheadingIcon
@@ -114,14 +115,14 @@ children: [
     variant: 'display-sm',
     color: 'header-primary',
     className: j.rewardHeading,
-    children: _
+    children: C
   })
 ]
   });
 }
 
 function M(e) {
-  let t = (0, i.e7)([h.Z], () => h.Z.getQuest(e.questId));
+  let t = (0, i.e7)([f.Z], () => f.Z.getQuest(e.questId));
   return null != t ? (0, r.jsx)(L, {
 ...e,
 quest: t
@@ -139,28 +140,25 @@ questContentPosition: c
   } = e, m = s.useMemo(() => {
 var e;
 return (null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null;
-  }, []), g = D.r.build(o.config).rewardPlatforms, I = g.length > 1, [x, M] = s.useState(I ? null : g[0]), L = s.useRef(new l.qA()), B = s.useRef(null), [Z, W] = s.useState(null), U = (0, i.e7)([C.Z], () => C.Z.useReducedMotion), k = (0, i.e7)([S.Z], () => S.Z.hidePersonalInformation), {
+  }, []), g = b.r.build(o.config).rewardPlatforms, I = g.length > 1, [x, M] = s.useState(I ? null : g[0]), L = s.useRef(new l.qA()), B = s.useRef(null), [Z, W] = s.useState(null), U = (0, i.e7)([_.Z], () => _.Z.useReducedMotion), k = (0, i.e7)([S.Z], () => S.Z.hidePersonalInformation), {
 rewardCode: P,
 isFetchingRewardCode: Q,
-isClaimingRewardCode: F
-  } = (0, i.cj)([h.Z], () => ({
-rewardCode: h.Z.getRewardCode(o.id),
-isFetchingRewardCode: h.Z.isFetchingRewardCode(o.id),
-isClaimingRewardCode: h.Z.isClaimingRewardCode(o.id) || h.Z.isClaimingReward(o.id)
-  })), q = (0, b.oo)({
+isClaimingReward: F
+  } = (0, i.cj)([f.Z], () => ({
+rewardCode: f.Z.getRewardCode(o.id),
+isFetchingRewardCode: f.Z.isFetchingRewardCode(o.id),
+isClaimingReward: f.Z.isClaimingReward(o.id)
+  })), q = (0, D.oo)({
 quest: o
-  }), [H, G] = s.useState(!1), z = I && (null === (t = o.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null && null == P, V = s.useCallback((e, t, n) => {
-G(!1), q || 2 === o.config.configVersion ? (0, f.QB)(e, t, n).catch(() => G(!0)) : (0, f.Tj)(e, t, n).catch(() => G(!0));
-  }, [
-q,
-o.config.configVersion
-  ]), $ = s.useCallback(e => {
-G(!1), (0, f.pf)(e).catch(() => G(!0));
+  }), [H, G] = s.useState(!1), z = I && (null === (t = o.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null && null == P, $ = s.useCallback((e, t, n) => {
+G(!1), (0, h.QB)(e, t, n).catch(() => G(!0));
+  }, []), V = s.useCallback(e => {
+G(!1), (0, h.pf)(e).catch(() => G(!0));
   }, []);
   s.useEffect(() => {
 var e, t;
 if (null == P && !H && !F && !Q && !z)
-  (null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && null != x ? V(o.id, x, d) : (null === (t = o.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null && $(o.id);
+  (null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && null != x ? $(o.id, x, d) : (null === (t = o.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null && V(o.id);
   }, [
 o,
 P,
@@ -170,8 +168,8 @@ H,
 z,
 x,
 d,
-V,
-$
+$,
+V
   ]);
   let X = null;
   m && null != P ? X = y.Z.Messages.QUESTS_REWARD_CODE_HEADER : null != P ? X = y.Z.Messages.QUESTS_REWARD_CODE_CONGRATS : z && (X = y.Z.Messages.QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER);
@@ -189,7 +187,7 @@ J = function(e) {
     needsToConfirmPlatform: i,
     rewardCode: d,
     hasTieredRewardCodes: c
-  } = e, p = D.r.build(o.config);
+  } = e, p = b.r.build(o.config);
   if (i)
     return (0, r.jsx)(u.Text, {
       variant: 'text-sm/normal',
@@ -200,12 +198,12 @@ J = function(e) {
       })
     });
   let m = null != l ? l : null == d ? void 0 : d.platform,
-    C = c ? (0, b.o9)({
+    _ = c ? (0, D.o9)({
       quest: o,
       idx: null !== (s = null == d ? void 0 : d.tier) && void 0 !== s ? s : null === (t = o.userStatus) || void 0 === t ? void 0 : t.claimedTier
     }) : null,
-    _ = null !== (a = null == C ? void 0 : null === (n = C.messages) || void 0 === n ? void 0 : n.redemptionInstructionsByPlatform) && void 0 !== a ? a : p.defaultRewardRedemptionInstructionsByPlatform,
-    S = null != m ? _[m] : void 0;
+    C = null !== (a = null == _ ? void 0 : null === (n = _.messages) || void 0 === n ? void 0 : n.redemptionInstructionsByPlatform) && void 0 !== a ? a : p.defaultRewardRedemptionInstructionsByPlatform,
+    S = null != m ? C[m] : void 0;
   return null != d && null != S ? (0, r.jsx)(u.Text, {
     variant: 'text-sm/normal',
     color: 'text-normal',
@@ -222,7 +220,7 @@ J = function(e) {
   hasTieredRewardCodes: q
 }),
 K = s.useMemo(() => g.map(e => ({
-  label: (0, b.t2)(e),
+  label: (0, D.t2)(e),
   value: e
 })), [g]),
 ee = null;
@@ -236,7 +234,7 @@ children: [
       G(!1), M(e);
     },
     isSelected: e => e === x,
-    serialize: e => (0, b.t2)(e),
+    serialize: e => (0, D.t2)(e),
     className: H ? j.errorInput : '',
     isDisabled: F,
     renderOptionLabel: e => {
@@ -306,12 +304,12 @@ children: (0, r.jsx)(u.TextInput, {
   }));
   let es = () => {
   var e;
-  z && null != x ? (V(o.id, x, d), (0, T._3)({
+  z && null != x ? ($(o.id, x, d), (0, T._3)({
     questId: o.id,
     questContent: d,
     questContentCTA: T.jZ.GET_REWARD_CODE,
     questContentPosition: c
-  })) : H ? (null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null ? $(o.id) : null != x && (V(o.id, x, d), (0, T._3)({
+  })) : H ? (null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null ? V(o.id) : null != x && ($(o.id, x, d), (0, T._3)({
     questId: o.id,
     questContent: d,
     questContentCTA: T.jZ.GET_REWARD_CODE,
@@ -377,7 +375,7 @@ children: [
       ]
     })
   }),
-  ei && (0, r.jsx)(_.Z, {
+  ei && (0, r.jsx)(C.Z, {
     confettiTarget: B.current,
     confettiCanvas: Z,
     sprites: w.CA,

@@ -1,7 +1,7 @@
 n(47120), n(315314), n(610138), n(216116), n(78328), n(815648);
 var i = n(230711),
-  s = n(12647),
-  a = n(49012),
+  a = n(12647),
+  s = n(49012),
   r = n(358085),
   l = n(996106),
   o = n(914946),
@@ -31,7 +31,7 @@ handler(e) {
   (0, o.bu)(t.transport);
   try {
     let e = new URL(n);
-    r.isPlatformEmbedded && s.Z.focus(null, !0), (0, a.q)({
+    r.isPlatformEmbedded && a.Z.focus(null, !0), (0, s.q)({
       href: e.toString()
     });
   } catch (e) {

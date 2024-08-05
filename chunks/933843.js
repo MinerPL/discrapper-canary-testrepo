@@ -1,41 +1,34 @@
 n.d(t, {
   F4: function() {
-return d;
+return c;
   },
   mc: function() {
-return E;
+return _;
   },
   vw: function() {
-return _;
+return d;
   }
 });
 var r = n(594174),
   i = n(111361),
-  a = n(736871),
-  o = n(114064),
+  a = n(114064),
   s = n(1163),
-  l = n(474936),
-  u = n(37113);
+  o = n(474936),
+  l = n(37113);
 
-function c() {
+function u() {
   let e = r.default.getCurrentUser();
-  return null != e && !(0, i.I5)(e, l.p9.TIER_1);
+  return null != e && !(0, i.I5)(e, o.p9.TIER_1);
 }
-let d = () => {
+let c = () => {
 let {
-  inPerksDemosExperiment: e
-} = a.Z.getCurrentConfig({
-  location: 'shouldFetchPerksDemos'
-}, {
-  autoTrackExposure: !1
-}), {
-  enabled: t
+  enabled: e
 } = s.Z.getCurrentConfig({
   location: 'shouldFetchPerksDemos'
 }, {
   autoTrackExposure: !1
 });
-return c() && o.Z.shouldFetch() && e && t;
+return u() && a.Z.shouldFetch() && e;
   },
-  _ = e => c() && o.Z.shouldActivate(e),
-  E = (e, t) => e === u.LY.RESOLUTION_720 && t !== u.ws.FPS_60;
+  d = e => u() && a.Z.shouldActivate(e),
+  _ = (e, t) => e === l.LY.RESOLUTION_720 && t !== l.ws.FPS_60;

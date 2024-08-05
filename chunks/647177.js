@@ -30,8 +30,8 @@ return d;
 var r = n(367907),
   i = n(592125),
   a = n(19780),
-  o = n(626135),
-  s = n(768581),
+  s = n(626135),
+  o = n(768581),
   l = n(678916),
   u = n(981631);
 
@@ -44,7 +44,7 @@ function d(e) {
 }
 
 function _(e) {
-  return d(e) ? l.X7.includes(e) : !!c(e) && ((0, s.xR)(e.asset) || (0, s.ay)(e.asset));
+  return d(e) ? l.X7.includes(e) : !!c(e) && ((0, o.xR)(e.asset) || (0, o.ay)(e.asset));
 }
 
 function E(e) {
@@ -82,18 +82,18 @@ return 'Preset - '.concat(function(e) {
 }
 
 function h(e, t, n) {
-  let s = a.Z.getGuildId(),
+  let o = a.Z.getGuildId(),
 l = a.Z.getChannelId(),
 c = i.Z.getChannel(l),
-d = (0, r.kO)(s, l, !0);
-  o.default.track(u.rMx.VIDEO_EFFECT_UPDATED, {
+d = (0, r.kO)(o, l, !0);
+  s.default.track(u.rMx.VIDEO_EFFECT_UPDATED, {
 location: t,
 effect_type: E(e),
 effect_detail: f(e),
 effect_state: n,
 channel_id: l,
 channel_type: null == c ? void 0 : c.type,
-guild_id: s,
+guild_id: o,
 voice_state_count: d.voice_state_count,
 video_stream_count: d.video_stream_count,
 media_session_id: a.Z.getMediaSessionId(),
@@ -103,7 +103,7 @@ is_animated: _(e)
 }
 
 function p(e, t, n) {
-  o.default.track(u.rMx.VIDEO_BACKGROUND_ADDED, {
+  s.default.track(u.rMx.VIDEO_BACKGROUND_ADDED, {
 is_animated: _(e),
 is_video: t,
 is_from_tenor: n
@@ -111,7 +111,7 @@ is_from_tenor: n
 }
 
 function m(e) {
-  o.default.track(u.rMx.VIDEO_BACKGROUND_DELETED, {
+  s.default.track(u.rMx.VIDEO_BACKGROUND_DELETED, {
 is_animated: _(e)
   });
 }

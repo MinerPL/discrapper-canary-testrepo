@@ -12,18 +12,18 @@ function a(e) {
 width: t = 24,
 height: n = 24,
 color: a = 'currentColor',
-className: o,
-foreground: s,
+className: s,
+foreground: o,
 ...l
   } = e;
   return (0, r.jsx)('svg', {
 ...(0, i.Z)(l),
-className: o,
+className: s,
 width: t,
 height: n,
 viewBox: '0 0 24 24',
 children: (0, r.jsx)('path', {
-  className: s,
+  className: o,
   fill: a,
   fillRule: 'evenodd',
   clipRule: 'evenodd',

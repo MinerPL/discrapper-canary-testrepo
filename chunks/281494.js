@@ -24,7 +24,7 @@ return p;
 return T;
   }
 }), n(47120), n(653041);
-var r, i, a, o, s = n(544891),
+var r, i, a, s, o = n(544891),
   l = n(570140),
   u = n(904245),
   c = n(598077),
@@ -40,7 +40,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-(a = r || (r = {}))[a.REDEEMED = 1] = 'REDEEMED', a[a.PENDING = 2] = 'PENDING', (o = i || (i = {}))[o.SUCCESS = 1] = 'SUCCESS', o[o.FAIL = 2] = 'FAIL';
+(a = r || (r = {}))[a.REDEEMED = 1] = 'REDEEMED', a[a.PENDING = 2] = 'PENDING', (s = i || (i = {}))[s.SUCCESS = 1] = 'SUCCESS', s[s.FAIL = 2] = 'FAIL';
 let h = new class e {
   set(e, t) {
 this.cache.set(e, t);
@@ -68,7 +68,7 @@ return h.get(n);
   let {
 users: r,
 next_index: i
-  } = (await s.tn.post({
+  } = (await o.tn.post({
 url: E.ANM.GET_REFERRAL_ELIGIBLE_USERS,
 body: {
   index: e,
@@ -84,7 +84,7 @@ nextIndex: i
 }
 let m = () => (l.Z.dispatch({
 type: 'BILLING_REFERRALS_REMAINING_FETCH_START'
-  }), s.tn.get({
+  }), o.tn.get({
 url: E.ANM.GET_REFERRALS_REMAINING,
 oldFormErrors: !0
   }).then(e => {
@@ -111,7 +111,7 @@ l.Z.dispatch({
   I = e => (l.Z.dispatch({
 type: 'BILLING_CREATE_REFERRAL_PREVIEW_START',
 recipientId: e
-  }), s.tn.post({
+  }), o.tn.post({
 url: E.ANM.CREATE_REFERRAL_PREVIEW(e),
 oldFormErrors: !0
   }).then(t => {
@@ -132,7 +132,7 @@ n = new Map();
   for (let i of e)
 try {
   var r;
-  let e = await s.tn.post({
+  let e = await o.tn.post({
       url: E.ANM.CREATE_REFERRAL(i),
       oldFormErrors: !0
     }),
@@ -149,7 +149,7 @@ userTrialOffers: t
 async function g(e) {
   try {
 var t;
-let n = await s.tn.post({
+let n = await o.tn.post({
     url: E.ANM.CREATE_REFERRAL(e),
     oldFormErrors: !0
   }),
@@ -172,7 +172,7 @@ if (l.Z.dispatch({
 async function S(e) {
   try {
 var t;
-let n = await s.tn.get({
+let n = await o.tn.get({
     url: E.ANM.REFERRAL_OFFER_ID_RESOLVE(e),
     oldFormErrors: !0
   }),

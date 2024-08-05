@@ -5,8 +5,8 @@ return u;
 });
 var i = n(735250);
 n(470079);
-var s = n(704215),
-  a = n(230711),
+var a = n(704215),
+  s = n(230711),
   r = n(765585),
   l = n(981631),
   o = n(921944),
@@ -21,10 +21,10 @@ markAsDismissed: t
 header: c.Z.Messages.SOUNDBOARD_VOLUME_TOOLTIP_HEADER,
 body: c.Z.Messages.SOUNDBOARD_VOLUME_TOOLTIP_BODY,
 tryItText: c.Z.Messages.TAKE_ME_THERE,
-dismissibleContent: s.z.SOUNDBOARD_VOLUME_EDUCATION,
+dismissibleContent: a.z.SOUNDBOARD_VOLUME_EDUCATION,
 artClassName: d.art,
 onTryFeature: () => {
-  a.Z.open(l.oAB.VOICE), t(o.L.UNKNOWN);
+  s.Z.open(l.oAB.VOICE), t(o.L.UNKNOWN);
 },
 onClose: () => t(o.L.UNKNOWN),
 shouldUseHorizontalButtons: !0,

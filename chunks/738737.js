@@ -5,8 +5,8 @@ return l;
 });
 var i = n(735250);
 n(470079);
-var a = n(481060),
-  s = n(987209),
+var s = n(481060),
+  a = n(987209),
   r = n(981631);
 
 function l(e) {
@@ -15,8 +15,8 @@ initialPlanId: t,
 activeSubscription: l,
 trialId: o,
 trialFooterMessageOverride: c,
-onClose: d,
-analyticsObject: u,
+onClose: u,
+analyticsObject: d,
 analyticsLocation: _,
 analyticsLocations: E,
 analyticsSubscriptionType: I,
@@ -24,13 +24,13 @@ renderHeader: m,
 renderPurchaseConfirmation: T,
 planGroup: h,
 reviewWarningMessage: N,
-skuId: f
+skuId: C
   } = e;
-  (0, a.openModalLazy)(async () => {
+  (0, s.openModalLazy)(async () => {
 let {
   PaymentContextProvider: e
 } = await Promise.resolve().then(n.bind(n, 598)), {
-  PaymentModal: a
+  PaymentModal: s
 } = await Promise.all([
   n.e('15972'),
   n.e('47006'),
@@ -40,39 +40,38 @@ let {
   STEPS: r
 } = await Promise.all([
   n.e('96427'),
-  n.e('77298'),
-  n.e('23357'),
   n.e('15972'),
-  n.e('12013'),
+  n.e('13682'),
+  n.e('15685'),
   n.e('47006'),
-  n.e('29609'),
   n.e('32776'),
-  n.e('95900'),
+  n.e('94915'),
   n.e('8016'),
   n.e('68136'),
-  n.e('44442')
+  n.e('62761'),
+  n.e('83683')
 ]).then(n.bind(n, 7305));
 return n => {
   let {
-    onClose: p,
-    ...C
+    onClose: f,
+    ...p
   } = n;
   return (0, i.jsx)(e, {
     activeSubscription: l,
     stepConfigs: r,
-    skuIDs: [f],
-    children: (0, i.jsx)(s.KB, {
-      children: (0, i.jsx)(a, {
-        ...C,
+    skuIDs: [C],
+    children: (0, i.jsx)(a.KB, {
+      children: (0, i.jsx)(s, {
+        ...p,
         initialPlanId: t,
         onClose: e => {
-          p(), null == d || d(e);
+          f(), null == u || u(e);
         },
         analyticsLocations: E,
-        analyticsObject: u,
+        analyticsObject: d,
         analyticsLocation: _,
         analyticsSubscriptionType: I,
-        skuId: f,
+        skuId: C,
         renderHeader: m,
         renderPurchaseConfirmation: T,
         planGroup: h,
@@ -85,7 +84,7 @@ return n => {
 };
   }, {
 onCloseCallback: () => {
-  null == d || d(!1);
+  null == u || u(!1);
 },
 onCloseRequest: r.dG4
   });

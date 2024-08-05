@@ -6,15 +6,15 @@ return l;
 var r = n(735250),
   i = n(470079),
   a = n(442837),
-  o = n(258609),
-  s = n(536773);
+  s = n(258609),
+  o = n(536773);
 
 function l(e) {
   let {
 body: t,
 dismissCallback: n,
 errorCodeMessage: l
-  } = e, u = (0, a.e7)([o.Z], () => o.Z.getRemoteSessionId());
+  } = e, u = (0, a.e7)([s.Z], () => s.Z.getRemoteSessionId());
   return (i.useEffect(() => {
 null != u && n();
   }, [
@@ -26,7 +26,7 @@ children: t
 children: [
   t,
   (0, r.jsx)('div', {
-    className: s.errorCodeMessage,
+    className: o.errorCodeMessage,
     children: l
   })
 ]

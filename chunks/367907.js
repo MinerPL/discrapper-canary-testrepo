@@ -27,8 +27,8 @@ return w;
 var r = n(392711),
   i = n.n(r),
   a = n(149765),
-  o = n(50244),
-  s = n(686660),
+  s = n(50244),
+  o = n(686660),
   l = n(131704),
   u = n(314897),
   c = n(592125),
@@ -69,15 +69,15 @@ return null;
   let r = f.Z.getRoles(n.id),
 i = u.default.getId(),
 a = E.ZP.getMember(e, i),
-o = d.ZP.getChannels(e),
-s = o[d.sH].length,
-l = o[d.Zb].length,
+s = d.ZP.getChannels(e),
+o = s[d.sH].length,
+l = s[d.Zb].length,
 c = N.Z.getVoiceStates(e);
   return {
 guild_id: n.id,
 guild_size_total: _.Z.getMemberCount(e),
-guild_num_channels: s + l,
-guild_num_text_channels: s,
+guild_num_channels: o + l,
+guild_num_text_channels: o,
 guild_num_voice_channels: l,
 guild_num_roles: L(r),
 guild_member_num_roles: null != a ? a.roles.length : 0,
@@ -139,17 +139,17 @@ media_session_id: r,
 
 function w(e) {
   var t, n, r, i, a;
-  let o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+  let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+o = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   if (v.default.isThrottled(e))
 return;
-  let l = !('location' in o) || o.location !== y.Sbl.GUILD_CREATE_INVITE_SUGGESTION,
-u = 'guild_id' in o ? o.guild_id : l ? S.Z.getGuildId() : null,
-d = 'channel_id' in o ? o.channel_id : l ? g.Z.getChannelId(u) : null,
+  let l = !('location' in s) || s.location !== y.Sbl.GUILD_CREATE_INVITE_SUGGESTION,
+u = 'guild_id' in s ? s.guild_id : l ? S.Z.getGuildId() : null,
+d = 'channel_id' in s ? s.channel_id : l ? g.Z.getChannelId(u) : null,
 _ = c.Z.getChannel(d);
   let E = (t = _, n = u, null == t ? null != n ? n : null : t.isPrivate() ? null : null !== (i = null !== (r = t.getGuildId()) && void 0 !== r ? r : n) && void 0 !== i ? i : null);
   let f = {
-...o,
+...s,
 ...b(E),
 ...null != u && null != d && (0, D.AB)(d) ? (a = 0, {
   channel_static_route: d,
@@ -157,7 +157,7 @@ _ = c.Z.getChannel(d);
 }) : P(_)
   };
   v.default.track(e, f, {
-flush: s
+flush: o
   });
 }
 
@@ -180,16 +180,16 @@ channel_mention_count: r.mentionCount,
 channel_is_muted: A.ZP.isChannelMuted(t.guild_id, t.id),
 channel_is_nsfw: t.isNSFW(),
 channel_resolved_unread_setting: A.ZP.resolveUnreadSetting(t),
-channel_preset: (0, s.gs)(A.ZP.resolveUnreadSetting(t), A.ZP.resolvedMessageNotifications(t)),
+channel_preset: (0, o.gs)(A.ZP.resolveUnreadSetting(t), A.ZP.resolvedMessageNotifications(t)),
 guild_id: t.guild_id,
 guild_was_unread: r.guildUnread,
 guild_mention_count: r.guildMentionCount,
 guild_is_muted: A.ZP.isMuted(t.guild_id),
 guild_resolved_unread_setting: A.ZP.resolveGuildUnreadSetting(n),
-guild_preset: (0, s.gs)(A.ZP.resolveGuildUnreadSetting(n), A.ZP.getMessageNotifications(t.guild_id)),
+guild_preset: (0, o.gs)(A.ZP.resolveGuildUnreadSetting(n), A.ZP.getMessageNotifications(t.guild_id)),
 parent_id: t.parent_id,
 parent_channel_type: t.parentChannelThreadType,
-has_pending_member_action: (0, o.P)(t.guild_id, e),
+has_pending_member_action: (0, s.P)(t.guild_id, e),
 can_send_message: p.Z.can(y.Plq.SEND_MESSAGES, t)
   };
 }

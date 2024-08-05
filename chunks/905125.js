@@ -1,8 +1,8 @@
 var r = n(690244)('%TypeError%'),
   i = n(116298),
   a = n(125179),
-  o = n(395238),
-  s = n(441596),
+  s = n(395238),
+  o = n(441596),
   l = n(75150),
   u = n(860438),
   c = n(465555),
@@ -17,20 +17,20 @@ throw new r('Assertion failed: O must be undefined or an Object');
 throw new r('Assertion failed: P must be a Property Key');
   if ('Boolean' !== E(n))
 throw new r('Assertion failed: extensible must be a Boolean');
-  if (!o({
+  if (!s({
   Type: E,
   IsDataDescriptor: u,
   IsAccessorDescriptor: l
 }, f))
 throw new r('Assertion failed: Desc must be a Property Descriptor');
-  if ('Undefined' !== E(h) && !o({
+  if ('Undefined' !== E(h) && !s({
   Type: E,
   IsDataDescriptor: u,
   IsAccessorDescriptor: l
 }, h))
 throw new r('Assertion failed: current must be a Property Descriptor, or undefined');
   if ('Undefined' === E(h))
-return !!n && ('Undefined' === I || (l(f) ? i(u, _, s, e, t, f) : i(u, _, s, e, t, {
+return !!n && ('Undefined' === I || (l(f) ? i(u, _, o, e, t, f) : i(u, _, o, e, t, {
   '[[Configurable]]': !!f['[[Configurable]]'],
   '[[Enumerable]]': !!f['[[Enumerable]]'],
   '[[Value]]': f['[[Value]]'],
@@ -51,16 +51,16 @@ if (l(h)) {
   return !1;
   }
   if ('Undefined' !== I)
-return u(h) && l(f) ? (p = ('[[Configurable]]' in f ? f : h)['[[Configurable]]'], i(u, _, s, e, t, {
+return u(h) && l(f) ? (p = ('[[Configurable]]' in f ? f : h)['[[Configurable]]'], i(u, _, o, e, t, {
   '[[Configurable]]': !!p,
   '[[Enumerable]]': !!(m = ('[[Enumerable]]' in f ? f : h)['[[Enumerable]]']),
   '[[Get]]': ('[[Get]]' in f ? f : h)['[[Get]]'],
   '[[Set]]': ('[[Set]]' in f ? f : h)['[[Set]]']
-})) : l(h) && u(f) ? (p = ('[[Configurable]]' in f ? f : h)['[[Configurable]]'], i(u, _, s, e, t, {
+})) : l(h) && u(f) ? (p = ('[[Configurable]]' in f ? f : h)['[[Configurable]]'], i(u, _, o, e, t, {
   '[[Configurable]]': !!p,
   '[[Enumerable]]': !!(m = ('[[Enumerable]]' in f ? f : h)['[[Enumerable]]']),
   '[[Value]]': ('[[Value]]' in f ? f : h)['[[Value]]'],
   '[[Writable]]': !!('[[Writable]]' in f ? f : h)['[[Writable]]']
-})) : i(u, _, s, e, t, f);
+})) : i(u, _, o, e, t, f);
   return !0;
 };

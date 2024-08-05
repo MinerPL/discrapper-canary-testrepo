@@ -3,105 +3,96 @@ var s = o(735250);
 o(470079);
 var a = o(481060),
   c = o(493683),
-  E = o(239091),
-  i = o(108843),
-  r = o(100527),
-  t = o(299206),
+  i = o(239091),
+  E = o(108843),
+  t = o(100527),
+  r = o(299206),
   u = o(87620),
-  l = o(505737),
-  O = o(389052),
-  _ = o(822972),
+  _ = o(505737),
+  l = o(389052),
+  O = o(822972),
   N = o(622724),
-  I = o(981631),
-  S = o(689938);
-e.default = (0, i.Z)(function(n) {
+  S = o(981631),
+  I = o(689938);
+e.default = (0, E.Z)(function(n) {
   let {
 user: e,
 isCurrentUser: o,
-guildId: i,
+guildId: E,
 relationshipType: U,
-originalFriendingEnabled: d = !1,
-viewProfileItem: R,
-trackUserProfileAction: Z,
-onClose: M,
-onSelect: h
-  } = n, p = e.isNonUserBot(), C = (0, u.oV)(r.Z.USER_PROFILE_ACTIONS_MENU), G = (0, l.Z)(e.id, i), P = (0, O.Z)({
+trackUserProfileAction: R,
+onClose: Z,
+onSelect: d
+  } = n, M = e.isNonUserBot(), h = (0, u.oV)(t.Z.USER_PROFILE_ACTIONS_MENU), p = (0, _.Z)(e.id, E), C = (0, l.Z)({
 user: e,
 color: 'danger',
-location: r.Z.USER_PROFILE_ACTIONS_MENU,
-onBlock: () => Z({
+location: t.Z.USER_PROFILE_ACTIONS_MENU,
+onBlock: () => R({
   action: 'BLOCK'
 }),
-onUnblock: () => Z({
+onUnblock: () => R({
   action: 'UNBLOCK'
 })
-  }), A = (0, _.Z)({
+  }), P = (0, O.Z)({
 user: e,
 color: 'danger',
-location: r.Z.USER_PROFILE_ACTIONS_MENU,
-onAction: () => Z({
+location: t.Z.USER_PROFILE_ACTIONS_MENU,
+onAction: () => R({
   action: 'REMOVE_FRIEND'
 })
-  }), T = (0, N.Z)({
+  }), A = (0, N.Z)({
 user: e,
-guildId: i,
+guildId: E,
 color: 'danger',
-location: r.Z.USER_PROFILE_ACTIONS_MENU,
-onAction: () => Z({
+location: t.Z.USER_PROFILE_ACTIONS_MENU,
+onAction: () => R({
   action: 'REPORT'
 })
-  }), L = (0, t.Z)({
+  }), G = (0, r.Z)({
 id: e.id,
-label: S.Z.Messages.COPY_ID_USER,
+label: I.Z.Messages.COPY_ID_USER,
 onSuccess: () => {
-  Z({
+  R({
     action: 'COPY_USER_ID'
-  }), (0, E.Zy)();
+  }), (0, i.Zy)();
 }
-  }), f = (0, s.jsx)(a.MenuItem, {
+  }), L = (0, s.jsx)(a.MenuItem, {
 id: 'user-message',
-label: S.Z.Messages.USER_POPOUT_MESSAGE,
+label: I.Z.Messages.USER_POPOUT_MESSAGE,
 action: () => {
-  Z({
+  R({
     action: 'SEND_MESSAGE'
-  }), c.Z.openPrivateChannel(e.id, !1, !1, r.Z.USER_PROFILE_ACTIONS_MENU), M();
+  }), c.Z.openPrivateChannel(e.id, !1, !1, t.Z.USER_PROFILE_ACTIONS_MENU), Z();
 }
-  }), b = [];
-  if (!p && !o)
+  }), T = [];
+  if (!M && !o)
 switch (U) {
-  case I.OGo.BLOCKED:
-    b.push(P);
+  case S.OGo.BLOCKED:
+    T.push(C);
     break;
-  case I.OGo.FRIEND:
-    b.push(A), b.push(P), C && b.push(T);
+  case S.OGo.FRIEND:
+    T.push(P), T.push(C), h && T.push(A);
     break;
-  case I.OGo.NONE:
-  case I.OGo.PENDING_INCOMING:
+  case S.OGo.NONE:
+  case S.OGo.PENDING_INCOMING:
   default:
-    b.push(P), C && b.push(T);
-}!d && G && b.push(f);
-  let k = G && (U === I.OGo.NONE || U === I.OGo.PENDING_OUTGOING);
-  return (0, s.jsxs)(a.Menu, {
+    T.push(C), h && T.push(A);
+}
+  return p && T.push(L), (0, s.jsxs)(a.Menu, {
 navId: 'user-profile-actions',
-'aria-label': S.Z.Messages.USER_ACTIONS_MENU_LABEL,
-onClose: E.Zy,
-onSelect: h,
+'aria-label': I.Z.Messages.USER_ACTIONS_MENU_LABEL,
+onClose: i.Zy,
+onSelect: d,
 children: [
-  d && (0, s.jsxs)(a.MenuGroup, {
-    children: [
-      R,
-      k ? f : null
-    ]
-  }),
   (0, s.jsx)(a.MenuGroup, {
-    children: b
+    children: T
   }),
-  null != L ? (0, s.jsx)(a.MenuGroup, {
-    children: L
+  null != G ? (0, s.jsx)(a.MenuGroup, {
+    children: G
   }) : null
 ]
   });
 }, [
-  r.Z.CONTEXT_MENU,
-  r.Z.USER_PROFILE_ACTIONS_MENU
+  t.Z.CONTEXT_MENU,
+  t.Z.USER_PROFILE_ACTIONS_MENU
 ]);

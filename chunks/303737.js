@@ -24,8 +24,8 @@ return N;
 var r = n(991637),
   i = n.n(r),
   a = n(399606),
-  o = n(570140),
-  s = n(333848),
+  s = n(570140),
+  o = n(333848),
   l = n(592125),
   u = n(923726),
   c = n(289393),
@@ -46,17 +46,17 @@ n = (0, a.e7)([E.Z], () => E.Z.getChannel(e));
 function I(e, t, n) {
   let r = (0, a.e7)([c.Z], () => c.Z.getSubscriptionListingsForGuild(e)),
 i = (0, d.n)(t => t.editStateIdsForGroup[e]),
-o = (0, d.n)(e => e.listings);
+s = (0, d.n)(e => e.listings);
   if (void 0 === n || void 0 === t)
 return null;
-  let s = r.filter(e => !e.soft_deleted && !e.archived).map(e => e.subscription_plans[0].price),
+  let o = r.filter(e => !e.soft_deleted && !e.archived).map(e => e.subscription_plans[0].price),
 l = [];
   void 0 !== i && i.forEach(e => {
-let t = o[e],
+let t = s[e],
   n = null == t ? void 0 : t.priceTier;
 null != n && l.push(n);
   });
-  let u = new Set(l.concat(s));
+  let u = new Set(l.concat(o));
   if (!u.has(n))
 return null;
   let _ = t.indexOf(n);
@@ -93,7 +93,7 @@ function g(e) {
   let t = T(e);
   p[e] = t, t.forEach(e => {
 let t = e.set('flags', h.zZ.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
-o.Z.dispatch({
+s.Z.dispatch({
   type: 'CHANNEL_CREATE',
   channel: t
 });
@@ -103,7 +103,7 @@ o.Z.dispatch({
 function S(e) {
   var t;
   (null !== (t = p[e]) && void 0 !== t ? t : T(e)).forEach(e => {
-o.Z.dispatch({
+s.Z.dispatch({
   type: 'CHANNEL_DELETE',
   channel: e
 });
@@ -114,7 +114,7 @@ async function A(e, t) {
 r = [];
   if (t.forEach(t => {
   let i = E.Z.getChannel(t.ref_id);
-  null != i && (n.push(s.Z.createRoleSubscriptionTemplateChannel(e, i.name, i.type, i.topic)), r.push(i));
+  null != i && (n.push(o.Z.createRoleSubscriptionTemplateChannel(e, i.name, i.type, i.topic)), r.push(i));
 }), 0 !== n.length)
 (await Promise.allSettled(n)).forEach((n, i) => {
   let a = r[i].id;
@@ -145,38 +145,38 @@ return {
   templateCategory: null,
   hasChangeFromTemplate: null
 };
-  let o = E.Z.getTemplateWithCategory(t, a);
-  if (null == o)
+  let s = E.Z.getTemplateWithCategory(t, a);
+  if (null == s)
 return {
   templateCategory: null,
   hasChangeFromTemplate: null
 };
-  let s = o.listings[0];
-  if ((null == i ? void 0 : i.name) !== s.name || (null == i ? void 0 : i.description) !== s.description || (null == i ? void 0 : i.priceTier) !== s.price_tier || (null == i ? void 0 : i.image) !== s.image || (null == i ? void 0 : i.roleColor) !== s.role_color || (null == i ? void 0 : null === (n = i.channelBenefits) || void 0 === n ? void 0 : n.length) !== s.channels.length || (null == i ? void 0 : null === (r = i.intangibleBenefits) || void 0 === r ? void 0 : r.length) !== s.additional_perks.length)
+  let o = s.listings[0];
+  if ((null == i ? void 0 : i.name) !== o.name || (null == i ? void 0 : i.description) !== o.description || (null == i ? void 0 : i.priceTier) !== o.price_tier || (null == i ? void 0 : i.image) !== o.image || (null == i ? void 0 : i.roleColor) !== o.role_color || (null == i ? void 0 : null === (n = i.channelBenefits) || void 0 === n ? void 0 : n.length) !== o.channels.length || (null == i ? void 0 : null === (r = i.intangibleBenefits) || void 0 === r ? void 0 : r.length) !== o.additional_perks.length)
 return {
-  templateCategory: o.category,
+  templateCategory: s.category,
   hasChangeFromTemplate: !0
 };
-  for (let e = 0; e < s.channels.length; e++) {
+  for (let e = 0; e < o.channels.length; e++) {
 let t = i.channelBenefits[e],
-  n = s.channels[e];
+  n = o.channels[e];
 if (t.name !== n.name || t.description !== n.description || t.emoji_name !== n.emoji_name)
   return {
-    templateCategory: o.category,
+    templateCategory: s.category,
     hasChangeFromTemplate: !0
   };
   }
-  for (let e = 0; e < s.additional_perks.length; e++) {
+  for (let e = 0; e < o.additional_perks.length; e++) {
 let t = i.intangibleBenefits[e],
-  n = s.additional_perks[e];
+  n = o.additional_perks[e];
 if (t.name !== n.name || t.description !== n.description || t.emoji_name !== n.emoji_name)
   return {
-    templateCategory: o.category,
+    templateCategory: s.category,
     hasChangeFromTemplate: !0
   };
   }
   return {
-templateCategory: o.category,
+templateCategory: s.category,
 hasChangeFromTemplate: !1
   };
 }

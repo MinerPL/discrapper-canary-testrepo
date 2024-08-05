@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(100527),
-  o = n(906732),
-  s = n(299206),
+  s = n(906732),
+  o = n(299206),
   l = n(785717),
   u = n(475413),
   c = n(689938);
@@ -21,9 +21,9 @@ viewProfileItem: n
 trackUserProfileAction: d
   } = (0, l.KZ)(), {
 analyticsLocations: _
-  } = (0, o.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU), E = [
+  } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU), E = [
 [n],
-[(0, s.Z)({
+[(0, o.Z)({
   id: t.id,
   label: c.Z.Messages.COPY_ID_USER,
   onSuccess: () => d({

@@ -6,8 +6,8 @@ return c;
 var r = n(442837),
   i = n(544891),
   a = n(570140),
-  o = n(630388),
-  s = n(812206),
+  s = n(630388),
+  o = n(812206),
   l = n(981631);
 async function u(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -42,20 +42,20 @@ let {
   name: t,
   guildId: n,
   type: r,
-  teamId: o
-} = e, s = (await i.tn.post({
+  teamId: s
+} = e, o = (await i.tn.post({
   url: l.ANM.APPLICATIONS,
   body: {
     name: t,
     type: r,
     guild_id: n,
-    team_id: o
+    team_id: s
   }
 })).body;
 return null != n && null != r && a.Z.dispatch({
   type: 'APPLICATION_FETCH_SUCCESS',
-  application: s
-}), s;
+  application: o
+}), o;
   },
   async getApplicationsForGuild(e) {
 let {
@@ -93,9 +93,9 @@ let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
   n = e;
 if (!t && (n = e.filter(e => {
     var t, n;
-    let r = s.Z.getApplication(e),
-      i = (0, o.yE)(null !== (n = null == r ? void 0 : r.flags) && void 0 !== n ? n : 0, l.udG.EMBEDDED) && (null == r ? void 0 : null === (t = r.embeddedActivityConfig) || void 0 === t ? void 0 : t.supported_platforms) == null;
-    return !(null != r && !i) && !s.Z.isFetchingApplication(e) && !s.Z.didFetchingApplicationFail(e) && e.length > 0;
+    let r = o.Z.getApplication(e),
+      i = (0, s.yE)(null !== (n = null == r ? void 0 : r.flags) && void 0 !== n ? n : 0, l.udG.EMBEDDED) && (null == r ? void 0 : null === (t = r.embeddedActivityConfig) || void 0 === t ? void 0 : t.supported_platforms) == null;
+    return !(null != r && !i) && !o.Z.isFetchingApplication(e) && !o.Z.didFetchingApplicationFail(e) && e.length > 0;
   })), n.length > 0) {
   let e;
   a.Z.dispatch({
@@ -125,8 +125,8 @@ if (!t && (n = e.filter(e => {
   },
   fetchApplication: u
 };
-let c = (0, r.Kb)(s.Z, {
-  get: e => null != e ? s.Z.getApplication(e) : null,
+let c = (0, r.Kb)(o.Z, {
+  get: e => null != e ? o.Z.getApplication(e) : null,
   load: (e, t) => null != t ? u(t, !1, e).then(l.dG4) : Promise.resolve(),
-  getIsLoading: e => null != e && s.Z.isFetchingApplication(e)
+  getIsLoading: e => null != e && o.Z.isFetchingApplication(e)
 });

@@ -1,14 +1,14 @@
 n.d(t, {
   _: function() {
-return a;
+return s;
   },
   y: function() {
-return s;
+return a;
   }
 });
 var i = n(570140);
 
-function a(e, t) {
+function s(e, t) {
   i.Z.dispatch({
 type: 'APP_LAUNCHER_SHOW',
 entrypoint: e,
@@ -16,7 +16,7 @@ activeViewType: t
   });
 }
 
-function s(e) {
+function a(e) {
   i.Z.dispatch({
 type: 'APP_LAUNCHER_DISMISS',
 closeReason: e

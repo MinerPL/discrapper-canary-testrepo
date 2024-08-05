@@ -48,9 +48,9 @@ initialStep: L = 0,
 forceStep: O,
 submitting: C = !1,
 autoCloseOnComplete: h = !0
-  } = e, [p, A] = l.useState([]), [S, f] = l.useState(L), g = (0, r.Dt)();
+  } = e, [A, p] = l.useState([]), [S, f] = l.useState(L), g = (0, r.Dt)();
   l.useEffect(() => {
-A([...Array(i.length).keys()]);
+p([...Array(i.length).keys()]);
   }, [i.length]);
   let v = null != O ? O : S,
 b = i[v],
@@ -108,7 +108,7 @@ children: [
           }),
           (0, a.jsx)(o.Sequencer, {
             step: v,
-            steps: p,
+            steps: A,
             sideMargin: 24,
             verticalMargin: 24,
             className: n()(d.sequencer, u),

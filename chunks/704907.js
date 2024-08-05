@@ -2,9 +2,9 @@ n(653041), n(47120);
 var r = n(392711),
   i = n.n(r),
   a = n(913527),
-  o = n.n(a);
+  s = n.n(a);
 
-function s(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -59,20 +59,20 @@ let t = this.getEntry(e);
 return null != t ? t.frecency : null;
   }
   compute() {
-let e = o()();
+let e = s()();
 i().forEach(this.usageHistory, (t, n) => {
   let {
     totalUses: r,
     recentUses: a,
-    frecency: s
+    frecency: o
   } = t;
-  if (-1 !== s)
+  if (-1 !== o)
     return;
   let l = this.computeBonus(n) / 100;
   t.score = 0, i().forEach(a, (n, r) => {
     if (r >= this.maxSamples)
       return !1;
-    let i = this.computeWeight(e.diff(o()(n), 'days'));
+    let i = this.computeWeight(e.diff(s()(n), 'days'));
     t.score += l * i;
   }), t.score > 0 ? (t.recentUses.length > 0 && (t.frecency = Math.ceil(r * (t.score / a.length))), this.usageHistory[n] = t) : delete this.usageHistory[n];
 }), this.frequently = i()(this.usageHistory).map((e, t) => {
@@ -103,6 +103,6 @@ afterCompute: r,
 numFrequentlyItems: i = 32,
 maxSamples: a = 10
   }) {
-s(this, 'dirty', void 0), s(this, '_frequently', void 0), s(this, 'numFrequentlyItems', void 0), s(this, 'maxSamples', void 0), s(this, 'computeBonus', void 0), s(this, 'computeWeight', void 0), s(this, 'lookupKey', void 0), s(this, 'usageHistory', void 0), s(this, 'afterCompute', void 0), this.computeBonus = e, this.computeWeight = t, this.afterCompute = r, this.lookupKey = n, this.usageHistory = {}, this.frequently = [], this.maxSamples = a, this.numFrequentlyItems = i, this.dirty = !1;
+o(this, 'dirty', void 0), o(this, '_frequently', void 0), o(this, 'numFrequentlyItems', void 0), o(this, 'maxSamples', void 0), o(this, 'computeBonus', void 0), o(this, 'computeWeight', void 0), o(this, 'lookupKey', void 0), o(this, 'usageHistory', void 0), o(this, 'afterCompute', void 0), this.computeBonus = e, this.computeWeight = t, this.afterCompute = r, this.lookupKey = n, this.usageHistory = {}, this.frequently = [], this.maxSamples = a, this.numFrequentlyItems = i, this.dirty = !1;
   }
 };

@@ -19,18 +19,18 @@ return function(t, n, r) {
   }(),
   a = n(968598);
 n(592093);
-var o = function(e) {
+var s = function(e) {
   function t(e, n, r, i, a) {
 ! function(e, t) {
   if (!(e instanceof t))
     throw TypeError('Cannot call a class as a function');
 }(this, t);
-var o = function(e, t) {
+var s = function(e, t) {
   if (!e)
     throw ReferenceError('this hasn\'t been initialised - super() hasn\'t been called');
   return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-return o._value = e, o._parent = n, o._animationClass = r, o._animationConfig = i, o._callback = a, o.__attach(), o;
+return s._value = e, s._parent = n, s._animationClass = r, s._animationConfig = i, s._callback = a, s.__attach(), s;
   }
   return ! function(e, t) {
 if ('function' != typeof t && null !== t)
@@ -71,4 +71,4 @@ e.prototype = Object.create(t && t.prototype, {
 }
   ]), t;
 }(a);
-e.exports = o;
+e.exports = s;

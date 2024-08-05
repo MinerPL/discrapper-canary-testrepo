@@ -16,10 +16,10 @@ var n = l(735250),
   i = l(442837),
   o = l(481060),
   d = l(37234),
-  u = l(703656),
-  c = l(430824),
-  C = l(771845),
-  m = l(346656),
+  u = l(565138),
+  c = l(703656),
+  C = l(430824),
+  m = l(771845),
   S = l(267642),
   I = l(981631),
   M = l(689938),
@@ -59,13 +59,13 @@ selectedSlotGuilds: l,
 onClose: t,
 onSelectGuild: r,
 query: x
-  } = e, E = (0, i.e7)([C.ZP], () => C.ZP.getFlattenedGuildIds()), U = (0, i.Wu)([c.Z], () => E.reduce((e, s) => {
-let n = c.Z.getGuild(s);
+  } = e, E = (0, i.e7)([m.ZP], () => m.ZP.getFlattenedGuildIds()), U = (0, i.Wu)([C.Z], () => E.reduce((e, s) => {
+let n = C.Z.getGuild(s);
 return null == n || null != l && l.some(e => e.id === s) ? e : ((x.length <= 0 || a()(x.toLowerCase(), null == n ? void 0 : n.name.toLowerCase())) && e.push(n), e);
   }, []));
 
   function R() {
-t(), (0, d.xf)(), (0, u.uL)(I.Z5c.GUILD_DISCOVERY);
+t(), (0, d.xf)(), (0, c.uL)(I.Z5c.GUILD_DISCOVERY);
   }
   return (0, n.jsxs)(n.Fragment, {
 children: [
@@ -88,10 +88,10 @@ children: [
       r(e);
     },
     children: [
-      (0, n.jsx)(m.Z, {
+      (0, n.jsx)(u.Z, {
         className: _.selectGuildIcon,
         guild: e,
-        size: m.Z.Sizes.SMALL
+        size: u.Z.Sizes.SMALL
       }),
       (0, n.jsxs)('div', {
         className: _.selectGuildCopy,

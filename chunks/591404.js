@@ -1,10 +1,10 @@
-var a = r(319301);
+var a = t(319301);
 let n = {
   figma: {
 category: 'feedback'
   }
 };
-t.Z = (0, a.a)({
+r.Z = (0, a.a)({
   'info-positive-background': {
 dark: {
   color: 'green.360',

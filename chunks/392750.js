@@ -1,27 +1,27 @@
-r.d(t, {
+t.d(r, {
   Z: function() {
 return h;
   }
 });
-var a = r(735250);
-r(470079);
-var n = r(442837),
-  i = r(481060),
-  o = r(814443),
-  l = r(594174),
-  c = r(681619),
-  s = r(86864),
-  d = r(979756);
+var a = t(735250);
+t(470079);
+var n = t(442837),
+  i = t(481060),
+  o = t(814443),
+  l = t(594174),
+  c = t(681619),
+  s = t(86864),
+  d = t(979756);
 let u = [{
 key: 'user',
 cellClassName: s.userCell,
 render(e) {
-  var t;
+  var r;
   let {
-    user: r,
+    user: t,
     key: a
   } = e;
-  return null !== (t = null == r ? void 0 : r.username) && void 0 !== t ? t : a;
+  return null !== (r = null == t ? void 0 : t.username) && void 0 !== r ? r : a;
 }
   },
   {
@@ -29,9 +29,9 @@ key: 'affinity',
 cellClassName: s.affinityCell,
 render(e) {
   let {
-    affinity: t
+    affinity: r
   } = e;
-  return ''.concat(t);
+  return ''.concat(r);
 }
   }
 ];
@@ -42,13 +42,13 @@ o.Z,
 l.default
   ], () => o.Z.getUserAffinities().map(e => {
 let {
-  user_id: t,
-  affinity: r
+  user_id: r,
+  affinity: t
 } = e;
 return {
-  user: l.default.getUser(t),
-  affinity: r,
-  key: t
+  user: l.default.getUser(r),
+  affinity: t,
+  key: r
 };
   }));
   return 0 === e.length ? null : (0, a.jsx)(i.ScrollerThin, {

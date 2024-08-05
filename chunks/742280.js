@@ -284,7 +284,20 @@ let u = {
 'GU',
 'MP',
 'PR',
+'UM',
 'VI'
+  ]),
+  FRENCH_REGIONS: new Set([
+'GF',
+'GP',
+'MQ',
+'NC',
+'PF',
+'PM',
+'RE',
+'TF',
+'WF',
+'YT'
   ]),
   FRANCE_AND_FRENCH_REGION: new Set([
 'FR',

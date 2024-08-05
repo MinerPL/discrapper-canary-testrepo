@@ -8,8 +8,8 @@ return r;
 });
 var i = n(735250);
 n(470079);
-var a = n(275344),
-  s = n(938353);
+var s = n(275344),
+  a = n(938353);
 
 function r(e) {
   let {
@@ -21,24 +21,24 @@ channelMessageProps: {
 hasSpoilerEmbeds: l,
 handleContextMenu: o,
 isInteracting: c,
-isAutomodBlockedMessage: d,
-isMessageSnapshot: u,
+isAutomodBlockedMessage: u,
+isMessageSnapshot: d,
 renderThreadAccessory: _,
 renderComponentAccessory: E,
 renderSuppressEmbeds: I,
 forceAddReactions: m,
 className: T
   } = e;
-  return d ? null : (0, i.jsx)(a.Z, {
+  return u ? null : (0, i.jsx)(s.Z, {
 message: t,
-children: (0, i.jsx)(s.ZP, {
+children: (0, i.jsx)(a.ZP, {
   className: T,
   isInteracting: c,
   message: t,
   channel: n,
   compact: r,
   hasSpoilerEmbeds: l,
-  isMessageSnapshot: u,
+  isMessageSnapshot: d,
   onMediaItemContextMenu: o,
   renderThreadAccessory: _,
   renderComponentAccessory: E,
@@ -51,15 +51,15 @@ children: (0, i.jsx)(s.ZP, {
 function l(e, t) {
   let {
 message: n,
-channel: a,
+channel: s,
 compact: r = !1,
 renderThreadAccessory: l,
 disableReactionCreates: o,
 disableReactionUpdates: c
   } = e;
-  return (0, i.jsx)(s.$p, {
+  return (0, i.jsx)(a.$p, {
 message: n,
-channel: a,
+channel: s,
 compact: r,
 hasSpoilerEmbeds: t,
 renderThreadAccessory: l,

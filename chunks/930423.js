@@ -6,8 +6,8 @@ return j;
 var r = n(939421),
   i = n(434514),
   a = n(609059),
-  o = n(3587),
-  s = n(793766),
+  s = n(3587),
+  o = n(793766),
   l = n(267480),
   u = n(227241),
   c = n(613488),
@@ -50,8 +50,8 @@ function j(e, t, n) {
   var r;
   let i, {
   id: a,
-  decrementAriaLabel: o,
-  incrementAriaLabel: s,
+  decrementAriaLabel: s,
+  incrementAriaLabel: o,
   isDisabled: l,
   isReadOnly: u,
   isRequired: c,
@@ -145,8 +145,8 @@ ea = (0, k.useCallback)(e => {
   b
 ]),
 {
-  isInvalid: eo,
-  validationErrors: es,
+  isInvalid: es,
+  validationErrors: eo,
   validationDetails: el
 } = t.displayValidation,
 {
@@ -207,11 +207,11 @@ eh = e['aria-label'] || ('string' == typeof e.label ? e.label : '');
   let ep = (0, G.Me)(),
 em = (0, G.Me)(),
 eI = (0, G.dG)(z, {
-  'aria-label': s || M.format('increase', {
+  'aria-label': o || M.format('increase', {
     fieldLabel: eh
   }).trim(),
-  id: i && !s ? ep : null,
-  'aria-labelledby': i && !s ? `${ ep } ${ i }` : null,
+  id: i && !o ? ep : null,
+  'aria-labelledby': i && !o ? `${ ep } ${ i }` : null,
   'aria-controls': P,
   excludeFromTabOrder: !0,
   preventFocusOnPress: !0,
@@ -220,11 +220,11 @@ eI = (0, G.dG)(z, {
   onPressStart: ef
 }),
 eT = (0, G.dG)(q, {
-  'aria-label': o || M.format('decrease', {
+  'aria-label': s || M.format('decrease', {
     fieldLabel: eh
   }).trim(),
-  id: i && !o ? em : null,
-  'aria-labelledby': i && !o ? `${ em } ${ i }` : null,
+  id: i && !s ? em : null,
+  'aria-labelledby': i && !s ? `${ em } ${ i }` : null,
   'aria-controls': P,
   excludeFromTabOrder: !0,
   preventFocusOnPress: !0,
@@ -237,7 +237,7 @@ groupProps: {
   ...$,
   role: 'group',
   'aria-disabled': l,
-  'aria-invalid': eo ? 'true' : void 0
+  'aria-invalid': es ? 'true' : void 0
 },
 labelProps: eu,
 inputProps: eE,
@@ -245,8 +245,8 @@ incrementButtonProps: eI,
 decrementButtonProps: eT,
 errorMessageProps: e_,
 descriptionProps: ed,
-isInvalid: eo,
-validationErrors: es,
+isInvalid: es,
+validationErrors: eo,
 validationDetails: el
   };
 }
@@ -254,8 +254,8 @@ Y = {
   'ar-AE': r.Z,
   'bg-BG': i.Z,
   'cs-CZ': a.Z,
-  'da-DK': o.Z,
-  'de-DE': s.Z,
+  'da-DK': s.Z,
+  'de-DE': o.Z,
   'el-GR': l.Z,
   'en-US': u.Z,
   'es-ES': c.Z,

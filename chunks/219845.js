@@ -1,6 +1,6 @@
 n.d(t, {
   Fs: function() {
-return s;
+return o;
   },
   Y9: function() {
 return h;
@@ -12,11 +12,11 @@ return f;
 var r = n(644387),
   i = n(582661),
   a = n(383466),
-  o = n(559972),
-  s = new Map(),
+  s = n(559972),
+  o = new Map(),
   l = /auto|scroll/,
   u = /^tb|vertical/,
-  c = /msie|trident/i.test(o.C.navigator && o.C.navigator.userAgent),
+  c = /msie|trident/i.test(s.C.navigator && s.C.navigator.userAgent),
   d = function(e) {
 return parseFloat(e || '0');
   },
@@ -33,14 +33,14 @@ contentBoxSize: _(),
 contentRect: new i.N(0, 0, 0, 0)
   }),
   f = function(e) {
-if (s.has(e))
-  return s.get(e);
+if (o.has(e))
+  return o.get(e);
 if ((0, a.xj)(e))
-  return s.set(e, E), E;
+  return o.set(e, E), E;
 var t = getComputedStyle(e),
   n = (0, a.zd)(e) && e.ownerSVGElement && e.getBBox(),
   r = !c && 'border-box' === t.boxSizing,
-  o = u.test(t.writingMode || ''),
+  s = u.test(t.writingMode || ''),
   f = !n && l.test(t.overflowY || ''),
   h = !n && l.test(t.overflowX || ''),
   p = n ? 0 : d(t.paddingTop),
@@ -62,21 +62,21 @@ var t = getComputedStyle(e),
   M = L + v + D + R,
   P = b + O + y + C,
   U = Object.freeze({
-    devicePixelContentBoxSize: _(Math.round(L * devicePixelRatio), Math.round(b * devicePixelRatio), o),
-    borderBoxSize: _(M, P, o),
-    contentBoxSize: _(L, b, o),
+    devicePixelContentBoxSize: _(Math.round(L * devicePixelRatio), Math.round(b * devicePixelRatio), s),
+    borderBoxSize: _(M, P, s),
+    contentBoxSize: _(L, b, s),
     contentRect: new i.N(T, p, L, b)
   });
-return s.set(e, U), U;
+return o.set(e, U), U;
   },
   h = function(e, t) {
 var n = f(e),
   i = n.borderBoxSize,
   a = n.contentBoxSize,
-  o = n.devicePixelContentBoxSize;
+  s = n.devicePixelContentBoxSize;
 switch (t) {
   case r.z.DEVICE_PIXEL_CONTENT_BOX:
-    return o;
+    return s;
   case r.z.BORDER_BOX:
     return i;
   default:

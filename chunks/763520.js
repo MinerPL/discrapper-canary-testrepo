@@ -6,13 +6,13 @@ return i;
 return f;
   }
 }), n(47120);
-var i, a, l = n(259443),
-  s = n(379649),
+var i, a, s = n(259443),
+  l = n(379649),
   r = n(314897),
   o = n(592125),
   c = n(866960),
-  d = n(19780),
-  u = n(979651),
+  u = n(19780),
+  d = n(979651),
   h = n(626135),
   p = n(981631);
 
@@ -28,7 +28,7 @@ writable: !0
 let _ = new Map();
 class f {
   onSpinnerStarted() {
-null == this.spinnerVisibleStart && (this.spinnerVisibleStart = (0, s.zO)());
+null == this.spinnerVisibleStart && (this.spinnerVisibleStart = (0, l.zO)());
   }
   trackSpinnerDuration(e, t, n) {
 if (null == this.spinnerVisibleStart)
@@ -38,14 +38,14 @@ let i = function(e) {
     let n = (null !== (t = _.get(e)) && void 0 !== t ? t : 0) + 1;
     return _.set(e, n), n;
   }(n),
-  a = (0, s.zO)() - this.spinnerVisibleStart;
+  a = (0, l.zO)() - this.spinnerVisibleStart;
 if (this.spinnerVisibleStart = null, a < 0) {
   this.logger.warn('spinner duration is negative: '.concat(a, ' ms\n        [').concat(e, ', count for stream: ').concat(i, ']'));
   return;
 }
 this.logger.info('spinner visible for '.concat(a, ' ms\n      [').concat(e, ', count for stream: ').concat(i, ']'));
-let l = d.Z.getGuildId(),
-  m = u.Z.getUserVoiceChannelId(l, r.default.getId()),
+let s = u.Z.getGuildId(),
+  m = d.Z.getUserVoiceChannelId(s, r.default.getId()),
   f = function(e) {
     if (null != e) {
       if (e.isGuildVoice())
@@ -62,10 +62,10 @@ let l = d.Z.getGuildId(),
 h.default.track(p.rMx.VIDEO_SPINNER_SHOWN_V2, {
   video_spinner_context: e,
   duration_video_spinner_visible_ms: a,
-  rtc_connection_id: d.Z.getRTCConnectionId(),
-  media_session_id: d.Z.getMediaSessionId(),
+  rtc_connection_id: u.Z.getRTCConnectionId(),
+  media_session_id: u.Z.getMediaSessionId(),
   event_count_for_stream: i,
-  guild_id: l,
+  guild_id: s,
   channel_id: m,
   channel_type: f,
   spinning_user_id: t,
@@ -75,6 +75,6 @@ h.default.track(p.rMx.VIDEO_SPINNER_SHOWN_V2, {
 });
   }
   constructor(e) {
-m(this, 'logger', void 0), m(this, 'spinnerVisibleStart', null), this.logger = new l.Y(e);
+m(this, 'logger', void 0), m(this, 'spinnerVisibleStart', null), this.logger = new s.Y(e);
   }
 }

@@ -1,7 +1,7 @@
 let r;
 n(47120);
-var i, a, o = n(442837),
-  s = n(433517),
+var i, a, s = n(442837),
+  o = n(433517),
   l = n(570140),
   u = n(642047),
   c = n(695346),
@@ -20,7 +20,7 @@ let f = 'GameStoreReportedGames',
   h = new u.Z(),
   p = {},
   m = {},
-  I = null !== (i = s.K.get(f)) && void 0 !== i ? i : {},
+  I = null !== (i = o.K.get(f)) && void 0 !== i ? i : {},
   T = '';
 let g = null;
 
@@ -46,7 +46,7 @@ p[n.toLowerCase()] = t;
 for (let n of e.executables)
   m[n.name] = t;
 }
-class N extends(a = o.ZP.PersistedStore) {
+class N extends(a = s.ZP.PersistedStore) {
   initialize(e) {
 var t;
 null != e && (null != e.detectableGamesEtag && (T = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach(e => A(e)));
@@ -110,7 +110,7 @@ let t = null != this.getGameByName(e),
 return c.G6.getSetting() && !r && !(t || n);
   }
   markGameReported(e) {
-I[e] = !0, s.K.set(f, I);
+I[e] = !0, o.K.set(f, I);
   }
 }
 E(N, 'displayName', 'GameStore'), E(N, 'persistKey', 'GameStore'), E(N, 'migrations', [
@@ -151,7 +151,7 @@ let {
 } = e;
 for (let e of (null != n && T !== n && (T = n), t))
   A(function(e) {
-    var t, n, r, i, a, o;
+    var t, n, r, i, a, s;
     return {
       id: e.id,
       name: e.name,
@@ -160,7 +160,7 @@ for (let e of (null != n && T !== n && (T = n), t))
       overlayWarn: null !== (r = e.overlay_warn) && void 0 !== r && r,
       overlayCompatibilityHook: null !== (i = e.overlay_compatibility_hook) && void 0 !== i && i,
       hook: null === (a = e.hook) || void 0 === a || a,
-      aliases: null !== (o = e.aliases) && void 0 !== o ? o : [],
+      aliases: null !== (s = e.aliases) && void 0 !== s ? s : [],
       supportsOutOfProcessOverlay: d.Z.supportsOutOfProcessOverlay(e.overlay_methods)
     };
   }(e));

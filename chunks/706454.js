@@ -1,5 +1,5 @@
 n.r(t);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(209185),
   c = n(581883),
@@ -11,7 +11,7 @@ function E() {
   let n = null === (t = c.Z.settings.localization) || void 0 === t ? void 0 : null === (e = t.locale) || void 0 === e ? void 0 : e.value;
   return null != n && '' !== n && n !== _ && (_ = n, u.i(_), !0);
 }
-class f extends(o = s.ZP.Store) {
+class f extends(s = o.ZP.Store) {
   initialize() {
 this.waitFor(c.Z), E(), u.i(_);
   }

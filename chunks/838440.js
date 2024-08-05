@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(570140),
-  o = n(468026),
-  s = n(673750),
+  s = n(468026),
+  o = n(673750),
   l = n(300429),
   u = n(594174),
   c = n(626135),
@@ -53,7 +53,7 @@ let v = A ? E.en1 : E.J6R;
 if (p.length > v) {
   if (A || null == T) {
     ;
-    n = p.length, u = v, (0, i.openModal)(e => (0, r.jsx)(o.default, {
+    n = p.length, u = v, (0, i.openModal)(e => (0, r.jsx)(s.default, {
       title: f.Z.Messages.MESSAGE_TOO_LONG_HEADER,
       body: f.Z.Messages.MESSAGE_TOO_LONG_BODY_TEXT.format({
         currentLength: n,
@@ -111,8 +111,8 @@ if (null != T) {
       }
     }
 }
-if (s.ZP.isFull()) {
-  (0, i.openModal)(e => (0, r.jsx)(o.default, {
+if (o.ZP.isFull()) {
+  (0, i.openModal)(e => (0, r.jsx)(s.default, {
     title: f.Z.Messages.MESSAGE_RATE_LIMITED_HEADER,
     body: f.Z.Messages.MESSAGE_RATE_LIMITED_BODY,
     confirmText: f.Z.Messages.MESSAGE_RATE_LIMITED_BUTTON,

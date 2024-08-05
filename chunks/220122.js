@@ -1,8 +1,8 @@
 var r = n(481060),
   i = n(570140),
   a = n(594190),
-  o = n(199902),
-  s = n(131951),
+  s = n(199902),
+  o = n(131951),
   l = n(924557),
   u = n(474639),
   c = n(435064),
@@ -22,12 +22,12 @@ class h extends u.Z {
 });
   }
   applyNativeClipsSettings(e) {
-if (!(0, d.Z)(s.Z))
+if (!(0, d.Z)(o.Z))
   return;
 let t = (0, l.ln)(),
   n = c.Z.getSettings(),
   r = (n.clipsEnabled || n.decoupledClipsEnabled) && t,
-  i = s.Z.getMediaEngine();
+  i = o.Z.getMediaEngine();
 if (i.setClipBufferLength(r ? n.clipsLength / 1000 : 0), (null == e ? void 0 : e.settings.decoupledClipsEnabled) === !0 && this.fireClipsInitEvent(), null == e || (null == e ? void 0 : e.settings.clipsQuality) != null) {
   let {
     frameRate: t,
@@ -46,11 +46,11 @@ if (null != t)
   e.added.find(e => e.pid === t.pid) ? setTimeout(() => this.fireClipsInitEvent(), E.jp) : this.fireClipsInitEvent();
   }
   fireClipsInitEvent() {
-if (!(0, d.Z)(s.Z))
+if (!(0, d.Z)(o.Z))
   return;
 let e = (0, l.ln)(),
   t = c.Z.getSettings();
-if (!(t.clipsEnabled && e) || null != o.Z.getCurrentUserActiveStream())
+if (!(t.clipsEnabled && e) || null != s.Z.getCurrentUserActiveStream())
   return;
 let n = a.ZP.getVisibleGame();
 if ((null == n ? void 0 : n.pid) != null && (null == n ? void 0 : n.windowHandle) != null && null != n.name && '' !== n.name)

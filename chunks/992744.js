@@ -1,21 +1,21 @@
 var i = n(735250),
   a = n(470079),
-  l = n(780384),
-  s = n(481060),
+  s = n(780384),
+  l = n(481060),
   r = n(410030),
   o = n(367907),
   c = n(984370),
-  d = n(981631),
-  u = n(689938),
+  u = n(981631),
+  d = n(689938),
   h = n(983059),
   p = n(66737),
   m = n(525377);
 t.Z = () => {
   let e = (0, r.ZP)();
   a.useEffect(() => {
-o.ZP.trackWithMetadata(d.rMx.GUILD_OUTAGE_VIEWED, {});
+o.ZP.trackWithMetadata(u.rMx.GUILD_OUTAGE_VIEWED, {});
   }, []);
-  let t = (0, l.wj)(e) ? p : m;
+  let t = (0, s.wj)(e) ? p : m;
   return (0, i.jsxs)('div', {
 className: h.container,
 children: [
@@ -23,11 +23,11 @@ children: [
     toolbar: (0, i.jsx)(a.Fragment, {}),
     children: [
       (0, i.jsx)(c.Z.Icon, {
-        icon: s.TextIcon,
+        icon: l.TextIcon,
         'aria-hidden': !0
       }),
       (0, i.jsx)(c.Z.Title, {
-        children: u.Z.Messages.GUILD_UNAVAILABLE_HEADER
+        children: d.Z.Messages.GUILD_UNAVAILABLE_HEADER
       })
     ]
   }),
@@ -39,15 +39,15 @@ children: [
         className: h.splashImage,
         src: t
       }),
-      (0, i.jsx)(s.Heading, {
+      (0, i.jsx)(l.Heading, {
         className: h.splashHeader,
         variant: 'heading-lg/medium',
-        children: u.Z.Messages.GUILD_UNAVAILABLE_TITLE
+        children: d.Z.Messages.GUILD_UNAVAILABLE_TITLE
       }),
-      (0, i.jsx)(s.Text, {
+      (0, i.jsx)(l.Text, {
         className: h.splashText,
         variant: 'text-md/normal',
-        children: u.Z.Messages.GUILD_UNAVAILABLE_BODY
+        children: d.Z.Messages.GUILD_UNAVAILABLE_BODY
       })
     ]
   })

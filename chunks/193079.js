@@ -1,8 +1,8 @@
 var r = n(548015),
   i = n(74748),
   a = n(572657),
-  o = n(318670),
-  s = n(252798),
+  s = n(318670),
+  o = n(252798),
   l = n(396379),
   u = r.Z ? r.Z.prototype : void 0,
   c = u ? u.valueOf : void 0;
@@ -26,7 +26,7 @@ case '[object RegExp]':
 case '[object String]':
   return e == t + '';
 case '[object Map]':
-  var E = s.Z;
+  var E = o.Z;
 case '[object Set]':
   var f = 1 & r;
   if (E || (E = l.Z), e.size != t.size && !f)
@@ -35,7 +35,7 @@ case '[object Set]':
   if (h)
     return h == t;
   r |= 2, _.set(e, t);
-  var p = (0, o.Z)(E(e), E(t), r, u, d, _);
+  var p = (0, s.Z)(E(e), E(t), r, u, d, _);
   return _.delete(e), p;
 case '[object Symbol]':
   if (c)

@@ -1,11 +1,11 @@
 n.d(t, {
   Y: function() {
-return s;
+return a;
   }
 });
 var i = n(570140);
 
-function s(e) {
+function a(e) {
   i.Z.wait(() => i.Z.dispatch({
 type: 'APPLICATION_STORE_LOCATION_CHANGE',
 location: e

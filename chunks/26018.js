@@ -39,8 +39,8 @@ return function(e) {
     i = r.exec(e);
   }
   t['%C2'] = '\uFFFD';
-  for (var o = Object.keys(t), s = 0; s < o.length; s++) {
-    var l = o[s];
+  for (var s = Object.keys(t), o = 0; o < s.length; o++) {
+    var l = s[o];
     e = e.replace(RegExp(l, 'g'), t[l]);
   }
   return e;

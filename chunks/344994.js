@@ -7,15 +7,15 @@ var r = n(717029),
   i = n(846042),
   a = n(894149);
 
-function o(e) {
-  return (o = 'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator ? function(e) {
+function s(e) {
+  return (s = 'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator ? function(e) {
 return typeof e;
   } : function(e) {
 return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
   })(e);
 }
 
-function s(e, t) {
+function o(e, t) {
   for (var n = 0; n < t.length; n++) {
 var r = t[n];
 r.enumerable = r.enumerable || !1, r.configurable = !0, 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
@@ -74,7 +74,7 @@ try {
 var e, r = c(t);
 return e = n ? Reflect.construct(r, arguments, c(this).constructor) : r.apply(this, arguments),
   function(e, t) {
-    return t && ('object' === o(t) || 'function' == typeof t) ? t : u(e);
+    return t && ('object' === s(t) || 'function' == typeof t) ? t : u(e);
   }(this, e);
   });
 
@@ -171,5 +171,5 @@ return d(u(e = f.call.apply(f, [this].concat(n))), 'priority', 90), d(u(e), 'inc
     return (e = (0, a.Z)(e, n)).setUTCHours(0, 0, 0, 0), e;
   }
 }
-  ], s(r.prototype, _), h;
+  ], o(r.prototype, _), h;
 }(r._);

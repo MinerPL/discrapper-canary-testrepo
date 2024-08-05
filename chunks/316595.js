@@ -1,31 +1,48 @@
 n.d(t, {
   Z: function() {
-return d;
+return h;
   }
 }), n(653041);
 var i = n(735250),
   a = n(470079),
-  l = n(442837),
-  s = n(704215),
-  r = n(243778),
-  o = n(375954),
-  c = n(423490);
+  s = n(442837),
+  l = n(704215),
+  r = n(890977),
+  o = n(605236),
+  c = n(243778),
+  u = n(375954),
+  d = n(921944);
 
-function d(e) {
+function h(e) {
   let {
-children: t
-  } = e, n = (0, l.e7)([o.Z], () => o.Z.hasCurrentUserSentMessageSinceAppStart()), d = a.useMemo(() => {
+children: t,
+enabled: n,
+animationContainerClassName: h,
+glowClassName: p,
+trinketsClassName: m
+  } = e, _ = (0, s.e7)([u.Z], () => u.Z.hasCurrentUserSentMessageSinceAppStart()), f = a.useMemo(() => {
 let e = [];
-return n && e.push(s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2), e;
-  }, [n]);
-  return (0, i.jsx)(r.Z, {
-contentTypes: d,
+return _ && n && e.push(l.z.ACTIVITIES_CHAT_BUTTON_NUX_V2), e;
+  }, [
+_,
+n
+  ]), E = () => {
+setTimeout(() => (0, o.EW)(l.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, {
+  dismissAction: d.L.AUTO_DISMISS
+}), 10000);
+  };
+  return (0, i.jsx)(c.Z, {
+contentTypes: f,
 children: e => {
   let {
     visibleContent: n
   } = e;
-  if (n === s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2)
-    return (0, i.jsx)(c.Q, {
+  if (n === l.z.ACTIVITIES_CHAT_BUTTON_NUX_V2)
+    return (0, i.jsx)(r.b, {
+      animationContainerClassName: h,
+      glowClassName: p,
+      trinketsClassName: m,
+      onMount: E,
       children: t
     });
   return t;

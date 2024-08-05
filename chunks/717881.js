@@ -6,8 +6,8 @@ return P;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  o = n(442837),
   l = n(481060),
   u = n(620662),
   c = n(841784),
@@ -39,8 +39,8 @@ type: t,
 source: n,
 activity: i,
 applicationStream: a,
-user: o,
-guildId: s,
+user: s,
+guildId: o,
 channelId: u,
 onAction: d,
 isEmbedded: E = (0, c.Z)(i),
@@ -52,8 +52,8 @@ type: t,
 source: n,
 activity: i,
 applicationStream: a,
-user: o,
-guildId: s,
+user: s,
+guildId: o,
 look: l.Button.Looks.FILLED,
 color: null != f ? f : l.Button.Colors.PRIMARY,
 channelId: u,
@@ -72,7 +72,7 @@ hideHeader: c = !1,
 showChannelDetails: _ = !1,
 analyticsParams: y,
 ...P
-  } = e, U = (0, s.e7)([
+  } = e, U = (0, o.e7)([
 R.Z,
 N.Z
   ], () => {
@@ -85,14 +85,14 @@ guildId: null == U ? void 0 : U.guild_id,
 location: 'UserActivityContainer'
   }, {
 autoTrackExposure: !1
-  }), x = (0, s.e7)([A.Z], () => a ? A.Z.getAnyStreamForUser(n.id) : null), G = w && O.Z.can(D.Plq.CONNECT, U), k = (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && G ? U : null, B = (0, s.e7)([
+  }), x = (0, o.e7)([A.Z], () => a ? A.Z.getAnyStreamForUser(n.id) : null), G = w && O.Z.can(D.Plq.CONNECT, U), k = (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && G ? U : null, B = (0, o.e7)([
 v.Z,
 R.Z,
 N.Z
   ], () => {
 var e, r;
 return (0, u.Z)(t, D.xjy.EMBEDDED) ? v.Z.getGuild(null === (e = N.Z.getChannel(null === (r = R.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === r ? void 0 : r.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != k ? v.Z.getGuild(k.getGuildId()) : null;
-  }), F = (0, s.e7)([v.Z], () => null != x ? v.Z.getGuild(x.guildId) : null), V = (0, s.e7)([E.Z], () => {
+  }), F = (0, o.e7)([v.Z], () => null != x ? v.Z.getGuild(x.guildId) : null), V = (0, o.e7)([E.Z], () => {
 if (null != t)
   return null != t.application_id ? E.Z.getApplication(t.application_id) : E.Z.getApplicationByName(t.name);
 return null;
@@ -118,7 +118,7 @@ showReactions: Y,
 showChannelDetails: _,
 channel: _ ? U : void 0,
 renderActions: l ? () => (0, r.jsxs)('div', {
-  className: o()(Y && b.actionsWrapper),
+  className: s()(Y && b.actionsWrapper),
   children: [
     (0, r.jsx)(M, {
       ...P,

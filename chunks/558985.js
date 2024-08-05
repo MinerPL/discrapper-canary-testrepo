@@ -5,9 +5,9 @@ return d;
 }), n(47120), n(411104);
 var r, i = n(470079),
   a = n(772848),
-  o = n(324404);
+  s = n(324404);
 
-function s(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -51,7 +51,7 @@ return t;
 return i.Children.only(this.props.children);
   }
   constructor(e) {
-super(e), s(this, 'elementId', void 0), s(this, 'isVisible', !1);
+super(e), o(this, 'elementId', void 0), o(this, 'isVisible', !1);
 let {
   root: t,
   rootMargin: n,
@@ -59,14 +59,14 @@ let {
 } = e;
 t ? u.has(t) ? this.elementId = u.get(t) || '' : u.set(t, (0, a.Z)()) : this.elementId = l;
 let i = this.getVisibilityObserverId();
-!c.has(i) && c.set(i, new o.Z({
+!c.has(i) && c.set(i, new s.Z({
   root: t,
   rootMargin: n,
   threshold: r
 }));
   }
 }
-s(d, 'defaultProps', {
+o(d, 'defaultProps', {
   active: !0,
   children: i.createElement('span'),
   root: null,

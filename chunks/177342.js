@@ -5,8 +5,8 @@ return c;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(286379),
-  s = n(797614),
+  s = n(286379),
+  l = n(797614),
   r = n(596739),
   o = n(473092);
 
@@ -15,15 +15,15 @@ function c(e) {
 channelId: t,
 warningId: n,
 senderId: c,
-warningType: d,
-header: u,
+warningType: u,
+header: d,
 description: h,
 onDismiss: p,
 buttons: m
   } = e;
   a.useEffect(() => {
-s.Z.increment({
-  name: l.V.SAFETY_WARNING_VIEW
+l.Z.increment({
+  name: s.V.SAFETY_WARNING_VIEW
 });
   }, []);
   let _ = a.useCallback(() => {
@@ -31,7 +31,7 @@ null == p || p(), (0, o.qc)({
   channelId: t,
   warningId: n,
   senderId: c,
-  warningType: d,
+  warningType: u,
   cta: o.NM.USER_BANNER_DISMISS
 });
   }, [
@@ -39,12 +39,12 @@ p,
 t,
 n,
 c,
-d
+u
   ]);
   return (0, i.jsx)(r.W, {
 buttons: m,
 description: h,
-header: u,
+header: d,
 onDismiss: _
   });
 }

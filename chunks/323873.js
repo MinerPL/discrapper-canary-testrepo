@@ -1,4 +1,4 @@
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(752305),
   c = n(957730),
@@ -6,7 +6,7 @@ var r, i, a, o, s = n(442837),
   _ = n(375954);
 let E = {},
   f = {};
-class h extends(o = s.ZP.Store) {
+class h extends(s = o.ZP.Store) {
   isEditing(e, t) {
 var n;
 return (null === (n = E[e]) || void 0 === n ? void 0 : n.messageId) === t;
@@ -46,12 +46,12 @@ let {
   messageId: n,
   content: r,
   source: i
-} = e, a = d.dN.getSetting(), o = c.ZP.unparse(r, t);
+} = e, a = d.dN.getSetting(), s = c.ZP.unparse(r, t);
 E[t] = {
   channelId: t,
   messageId: n,
-  textValue: o,
-  richValue: (0, u.JM)(a ? o : r)
+  textValue: s,
+  richValue: (0, u.JM)(a ? s : r)
 }, f[t] = i;
   },
   MESSAGE_UPDATE_EDIT: function(e) {

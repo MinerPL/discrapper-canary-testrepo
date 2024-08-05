@@ -1,6 +1,6 @@
 let r, i;
 n(411104);
-var a, o, s, l, u = n(442837),
+var a, s, o, l, u = n(442837),
   c = n(544891),
   d = n(570140),
   _ = n(358085),
@@ -32,12 +32,12 @@ return p;
 return i;
   }
 }
-l = 'BraintreeStore', (s = 'displayName') in(o = m) ? Object.defineProperty(o, s, {
+l = 'BraintreeStore', (o = 'displayName') in(s = m) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[s] = l;
+}) : s[o] = l;
 let I = new m(d.Z, {
   BRAINTREE_CREATE_CLIENT_SUCCESS: function(e) {
 let {
@@ -60,8 +60,8 @@ let {
 } = e;
 if (t !== E.HeQ.PAYPAL || n !== r)
   return;
-let o = window.popupBridge.onComplete;
-'function' == typeof o && o(null, {
+let s = window.popupBridge.onComplete;
+'function' == typeof s && s(null, {
   path: i,
   queryItems: a
 });

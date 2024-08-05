@@ -6,9 +6,9 @@ return f;
 var a = n(735250),
   r = n(470079),
   i = n(481060),
-  o = n(841074),
-  c = n(585483),
-  s = n(637538),
+  o = n(585483),
+  c = n(637538),
+  s = n(747387),
   p = n(981631),
   d = n(689938),
   h = n(817454),
@@ -28,9 +28,9 @@ headerText: m,
 bodyText: y,
 rqtoken: C,
 ...E
-  } = e, R = (0, s.Z)(f);
+  } = e, R = (0, c.Z)(f);
   return (r.useEffect(() => {
-c.S.subscribe(p.CkL.LAYER_POP_ESCAPE_KEY, t);
+o.S.subscribe(p.CkL.LAYER_POP_ESCAPE_KEY, t);
   }, [t]), null != v && u.has(v)) ? (0, a.jsx)(i.ModalRoot, {
 transitionState: v,
 'aria-label': 'CAPTCHA',
@@ -64,7 +64,7 @@ children: (0, a.jsxs)(i.ModalContent, {
           }),
           (0, a.jsx)('div', {
             className: h.captchaContainer,
-            children: (0, a.jsx)(o.Z, {
+            children: (0, a.jsx)(s.Z, {
               onVerify: e => {
                 R(), n(e, C), t();
               },

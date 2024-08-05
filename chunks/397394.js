@@ -21,8 +21,8 @@ return C;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(593473),
+  s = n.n(a),
+  o = n(593473),
   l = n(266067),
   u = n(729594),
   c = n(466377),
@@ -44,7 +44,7 @@ message: t,
 footer: n,
 headerClassName: i,
 showsCloseWindowText: a,
-spinner: s,
+spinner: o,
 onClose: l
   } = e;
   return (0, f.Tt)({
@@ -58,9 +58,9 @@ children: [
   (0, r.jsxs)('div', {
     className: S.wrapper,
     children: [
-      s ? (0, r.jsx)(d.$, {}) : null,
+      o ? (0, r.jsx)(d.$, {}) : null,
       (0, r.jsx)('div', {
-        className: o()(S.header, i)
+        className: s()(S.header, i)
       }),
       (0, r.jsx)(_.x, {
         variant: 'text-md/normal',
@@ -93,23 +93,23 @@ guild: t,
 application: n,
 ...a
   } = e, {
-onClose: o
-  } = a, s = g.Z.Messages.AUTHORIZED_SUCCESS, l = i.useCallback(() => {
+onClose: s
+  } = a, o = g.Z.Messages.AUTHORIZED_SUCCESS, l = i.useCallback(() => {
 if ((null == t ? void 0 : t.id) != null)
-  (0, p.X)(null == t ? void 0 : t.id), null == o || o(), m.default.track(T.rMx.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
+  (0, p.X)(null == t ? void 0 : t.id), null == s || s(), m.default.track(T.rMx.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
     application_id: null == n ? void 0 : n.id,
     guild_id: null == t ? void 0 : t.id
   });
   }, [
-o,
+s,
 null == n ? void 0 : n.id,
 null == t ? void 0 : t.id
   ]), u = i.useCallback(() => {
-null == o || o(), m.default.track(T.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, {
+null == s || s(), m.default.track(T.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, {
   application_id: null == n ? void 0 : n.id
 });
   }, [
-o,
+s,
 null == n ? void 0 : n.id
   ]), c = i.useMemo(() => {
 if (null != n)
@@ -130,7 +130,7 @@ children: [
     className: S.authorizedSuccessSubtext,
     children: c
   }),
-  (null != t || null != o) && (0, r.jsxs)('div', {
+  (null != t || null != s) && (0, r.jsxs)('div', {
     className: S.buttonsContainer,
     children: [
       null != t && (0, r.jsx)(E.Button, {
@@ -142,7 +142,7 @@ children: [
           guildName: null == t ? void 0 : t.name
         })
       }),
-      null != o && (0, r.jsx)(E.Button, {
+      null != s && (0, r.jsx)(E.Button, {
         fullWidth: !0,
         color: E.Button.Colors.PRIMARY,
         onClick: u,
@@ -160,7 +160,7 @@ m.default.track(T.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, {
   }, [null == n ? void 0 : n.id]), (0, r.jsx)('div', {
 className: S.authorizedSuccessWrapper,
 children: (0, r.jsx)(N, {
-  message: s,
+  message: o,
   footer: d,
   ...a
 })
@@ -197,8 +197,8 @@ if (null == a)
 let e = null != document.referrer && '' !== document.referrer ? u.parse(document.referrer) : null;
 (null == e || e.host !== window.location.host || e.pathname !== T.Z5c.OAUTH2_AUTHORIZE) && (0, h.uL)(T.Z5c.INDEX);
   }, [a]);
-  let o = null != a ? (0, s.parse)(a.search) : {},
-l = null !== (n = null !== (t = o.error_description) && void 0 !== t ? t : o.error) && void 0 !== n ? n : g.Z.Messages.OAUTH2_UNKNOWN_ERROR;
+  let s = null != a ? (0, o.parse)(a.search) : {},
+l = null !== (n = null !== (t = s.error_description) && void 0 !== t ? t : s.error) && void 0 !== n ? n : g.Z.Messages.OAUTH2_UNKNOWN_ERROR;
   return (0, r.jsx)(I.G, {
 children: (0, r.jsx)(O, {
   message: l,

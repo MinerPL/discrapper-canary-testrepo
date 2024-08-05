@@ -5,8 +5,8 @@ return T;
 }), n(653041), n(47120);
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(512722),
   u = n.n(l),
   c = n(481060),
@@ -45,48 +45,48 @@ let {
   renderUser: n = this.defaultRenderUser,
   size: r,
   extraDetail: a
-} = this.props, o = [], s = e.length === t ? e.length : t - 1, l = this.renderMoreUsers(s), u = 0;
-for (; u < s && u < e.length;) {
+} = this.props, s = [], o = e.length === t ? e.length : t - 1, l = this.renderMoreUsers(o), u = 0;
+for (; u < o && u < e.length;) {
   var c;
   let t = null == l && null == a && u === e.length - 1,
-    s = n(e[u], t, u);
-  o.push(t ? (0, i.jsx)('div', {
+    o = n(e[u], t, u);
+  s.push(t ? (0, i.jsx)('div', {
     className: m.avatarContainer,
-    children: s
+    children: o
   }, g(null !== (c = e[u]) && void 0 !== c ? c : null, u)) : (0, i.jsx)(h.ZP, {
     className: m.avatarContainerMasked,
     height: r,
     width: r,
     mask: h.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
-    children: s
+    children: o
   }, g(e[u], u))), u++;
 }
-return null != a ? o.push(a) : null != l && o.push(l), o;
+return null != a ? s.push(a) : null != l && s.push(l), s;
   }
   renderMoreUsers(e) {
 let {
   max: t,
   count: n,
   hideMoreUsers: r,
-  renderMoreUsers: o,
-  users: s
-} = this.props, l = Math.min(e, s.length);
+  renderMoreUsers: s,
+  users: o
+} = this.props, l = Math.min(e, o.length);
 if (!r) {
   if (null != n) {
     if (n >= t)
       return (0, i.jsx)(a.Fragment, {
-        children: o(''.concat(t, '+'), t)
+        children: s(''.concat(t, '+'), t)
       }, 'more-users');
-    if (n > s.length) {
-      let e = n - s.length;
+    if (n > o.length) {
+      let e = n - o.length;
       return (0, i.jsx)(a.Fragment, {
-        children: o('+'.concat(e), e)
+        children: s('+'.concat(e), e)
       }, 'more-users');
     }
-  } else if (l < s.length) {
-    let e = Math.min(s.length - l, 99);
+  } else if (l < o.length) {
+    let e = Math.min(o.length - l, 99);
     return (0, i.jsx)(a.Fragment, {
-      children: o('+'.concat(e), e)
+      children: s('+'.concat(e), e)
     }, 'more-users');
   }
 }
@@ -106,10 +106,10 @@ let {
   users: n,
   guildId: r,
   showUserPopout: a,
-  useFallbackUserForPopout: o
+  useFallbackUserForPopout: s
 } = this.props, {
   popoutUserId: l
-} = this.state, E = n.find(e => null != e && e.id === l), h = o && null == f.default.getUser(l);
+} = this.state, E = n.find(e => null != e && e.id === l), h = s && null == f.default.getUser(l);
 return (0, i.jsx)(c.Popout, {
   position: 'right',
   preload: null == E ? void 0 : () => (0, d.W)(E.id, E.getAvatarURL(r, 80), {
@@ -129,7 +129,7 @@ return (0, i.jsx)(c.Popout, {
     popoutUserId: null
   }),
   children: n => (0, i.jsxs)('div', {
-    className: s()(e, m.container, function() {
+    className: o()(e, m.container, function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : T.SIZE_24;
       switch (e) {
         case T.SIZE_16:
@@ -160,7 +160,7 @@ super(...e), I(this, 'state', {
   let {
     showUserPopout: r,
     guildId: a,
-    size: o
+    size: s
   } = this.props;
   if (null == e) {
     if (!this.props.showDefaultAvatarsForNullUsers)
@@ -177,8 +177,8 @@ super(...e), I(this, 'state', {
       });
     }
   }
-  let s = (0, i.jsx)('img', {
-    src: e.getAvatarURL(a, o),
+  let o = (0, i.jsx)('img', {
+    src: e.getAvatarURL(a, s),
     alt: e.username,
     className: m.avatar
   }, e.id);
@@ -190,8 +190,8 @@ super(...e), I(this, 'state', {
       });
     },
     tabIndex: -1,
-    children: s
-  }, e.id) : s;
+    children: o
+  }, e.id) : o;
 });
   }
 }

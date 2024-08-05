@@ -1,6 +1,6 @@
 n.d(t, {
   Kx: function() {
-return s;
+return o;
   },
   l8: function() {
 return l;
@@ -63,29 +63,29 @@ return r ? `${ r }.${ t.index }` : `$.${ t.index }`;
   };
 }
 * getFullNode(e, t, n, i) {
-  let s = e.element;
-  if (!s && e.value && t && t.renderer) {
+  let o = e.element;
+  if (!o && e.value && t && t.renderer) {
     let n = this.cache.get(e.value);
     if (n && (!n.shouldInvalidate || !n.shouldInvalidate(this.context))) {
       n.index = e.index, n.parentKey = i ? i.key : null, yield n;
       return;
     }
-    s = t.renderer(e.value);
+    o = t.renderer(e.value);
   }
-  if (r.isValidElement(s)) {
-    let r = s.type;
+  if (r.isValidElement(o)) {
+    let r = o.type;
     if ('function' != typeof r && 'function' != typeof r.getCollectionNode) {
-      let e = 'function' == typeof s.type ? s.type.name : s.type;
+      let e = 'function' == typeof o.type ? o.type.name : o.type;
       throw Error(`Unknown element <${ e }> in collection.`);
     }
-    let a = r.getCollectionNode(s.props, this.context),
+    let a = r.getCollectionNode(o.props, this.context),
       l = e.index,
       u = a.next();
     for (; !u.done && u.value;) {
       let r = u.value;
       e.index = l;
       let c = r.key;
-      !c && (c = r.element ? null : this.getKey(s, e, t, n));
+      !c && (c = r.element ? null : this.getKey(o, e, t, n));
       let d = [...this.getFullNode({
         ...r,
         key: c,
@@ -93,10 +93,10 @@ return r ? `${ r }.${ t.index }` : `$.${ t.index }`;
         wrapper: function(e, t) {
           return e && t ? n => e(t(n)) : e ? e : t ? t : void 0;
         }(e.wrapper, r.wrapper)
-      }, this.getChildState(t, r), n ? `${ n }${ s.key }` : s.key, i)];
+      }, this.getChildState(t, r), n ? `${ n }${ o.key }` : o.key, i)];
       for (let t of d) {
         if (t.value = r.value || e.value, t.value && this.cache.set(t.value, t), e.type && t.type !== e.type)
-          throw Error(`Unsupported type <${ o(t.type) }> in <${ o(i.type) }>. Only <${ o(e.type) }> is supported.`);
+          throw Error(`Unsupported type <${ s(t.type) }> in <${ s(i.type) }>. Only <${ s(e.type) }> is supported.`);
         l++, yield t;
       }
       u = a.next(d);
@@ -149,24 +149,24 @@ n = null;
   };
 }
 
-function o(e) {
+function s(e) {
   return e[0].toUpperCase() + e.slice(1);
 }
 
-function s(e, t, n) {
+function o(e, t, n) {
   let a = (0, r.useMemo)(() => new i(), []),
 {
-  children: o,
-  items: s,
+  children: s,
+  items: o,
   collection: l
 } = e;
   return (0, r.useMemo)(() => l ? l : t(a.build({
-children: o,
-items: s
+children: s,
+items: o
   }, n)), [
 a,
-o,
 s,
+o,
 l,
 n,
 t

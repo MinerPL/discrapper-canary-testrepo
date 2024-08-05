@@ -10,8 +10,8 @@ var a = t(442837),
   l = t(749210),
   o = t(240872),
   r = t(605436),
-  c = t(228643),
-  d = t(299206),
+  d = t(228643),
+  c = t(299206),
   u = t(496675),
   I = t(867108),
   m = t(689938);
@@ -25,15 +25,15 @@ function _(e, n) {
 N = [],
 E = (0, I.Z)(e, n);
   null != E && N.push(E);
-  let T = (0, d.Z)({
+  let T = (0, c.Z)({
 id: n.id,
 label: m.Z.Messages.COPY_ID_ROLE
   });
   null != T && N.push(T);
   let h = (null === (t = n.tags) || void 0 === t ? void 0 : t.guild_connections) === null,
-p = n.managed && !h,
-g = null != n && (0, r.pM)(e.id, n.id);
-  return !_ && !p && !g && N.push((0, i.jsx)(s.MenuGroup, {
+g = n.managed && !h,
+p = null != n && (0, r.pM)(e.id, n.id);
+  return !_ && !g && !p && N.push((0, i.jsx)(s.MenuGroup, {
 children: (0, i.jsx)(s.MenuItem, {
   id: 'delete-role',
   label: m.Z.Messages.DELETE,
@@ -47,7 +47,7 @@ children: (0, i.jsx)(s.MenuItem, {
       }),
       cancelText: m.Z.Messages.CANCEL,
       onConfirm: async () => {
-        h && await (0, c.L_)(e.id, n.id, []), l.Z.deleteRole(e.id, n.id);
+        h && await (0, d.L_)(e.id, n.id, []), l.Z.deleteRole(e.id, n.id);
       }
     });
   }

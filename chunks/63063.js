@@ -1,17 +1,17 @@
 n.d(t, {
   w: function() {
-return s;
+return o;
   }
 });
 var r = n(299379),
   i = n(706454),
   a = n(358085),
-  o = n(981631);
-let s = 'https://'.concat(o.xr4),
-  l = 'https://'.concat(o.rxP);
+  s = n(981631);
+let o = 'https://'.concat(s.xr4),
+  l = 'https://'.concat(s.rxP);
 
 function u(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s;
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o;
   return t + e;
 }
 
@@ -22,7 +22,7 @@ t.Z = {
   getArticleURL: e => u('/hc/'.concat(c(), '/articles/').concat(e)),
   getDevArticleURL: e => u('/hc/'.concat(c(), '/articles/').concat(e), l),
   getCreatorSupportArticleURL: e => u('/hc/'.concat(c(), '/articles/').concat(e), 'https://creator-support.discord.com'),
-  getTwitterURL: () => (0, r.Z)(o.RK.TWITTER),
+  getTwitterURL: () => (0, r.Z)(s.RK.TWITTER),
   getCommunityURL: () => u('/hc/'.concat(c())),
   getSubmitRequestURL(e) {
 let t = u('/hc/'.concat(c(), '/requests/new?platform=').concat(encodeURIComponent((0, a.getPlatformName)())));

@@ -1,20 +1,20 @@
 var i = n(735250),
-  s = n(470079),
-  a = n(143927),
+  a = n(470079),
+  s = n(143927),
   r = n(481060),
   l = n(100527),
   o = n(970606),
   c = n(207796),
   d = n(689938),
   u = n(284471);
-t.Z = s.memo(function() {
-  let e = (0, c.GN)(e => e.setUserUpsellScreen, a.Z);
-  s.useEffect(() => {
+t.Z = a.memo(function() {
+  let e = (0, c.GN)(e => e.setUserUpsellScreen, s.Z);
+  a.useEffect(() => {
 (0, o.tv)({
   location: l.Z.CLAN_DISCOVERY
 });
   }, []);
-  let t = s.useCallback(() => {
+  let t = a.useCallback(() => {
 (0, o.GS)({
   location: l.Z.CLAN_DISCOVERY
 }), e(c.o2.USER_ONBOARDING);

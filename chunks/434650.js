@@ -6,8 +6,8 @@ return l;
 var r = n(470079),
   i = n(863840),
   a = n(266338);
-let o = {},
-  s = new Map([
+let s = {},
+  o = new Map([
 [
   1,
   {
@@ -25,20 +25,20 @@ l = (0, i.Z)(t => {
 u = (0, r.useMemo)(() => {
   var e;
   let n;
-  return e = t, null != (n = s.get(e)) ? n : (n = {
+  return e = t, null != (n = o.get(e)) ? n : (n = {
     threshold: e
-  }, s.set(e, n), n);
+  }, o.set(e, n), n);
 }, [t]);
   return function(e, t) {
 let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-  s = (0, r.useRef)(null),
-  l = (0, i.Z)(null != t ? t : o),
+  o = (0, r.useRef)(null),
+  l = (0, i.Z)(null != t ? t : s),
   u = (0, r.useRef)(null);
 return (0, r.useLayoutEffect)(() => {
   if (!n)
     return;
   null == u.current && (u.current = (0, a.c)(l.current));
-  let t = s.current,
+  let t = o.current,
     r = u.current;
   if (null != t && null != r)
     (0, a.YP)(r, t, e);
@@ -48,7 +48,7 @@ return (0, r.useLayoutEffect)(() => {
 ]), (0, r.useEffect)(() => {
   if (!n)
     return;
-  let e = s.current,
+  let e = o.current,
     t = u.current;
   if (null != e && null != t)
     return () => {
@@ -57,6 +57,6 @@ return (0, r.useLayoutEffect)(() => {
 }, [
   n,
   t
-]), s;
+]), o;
   }(l.current, u, n);
 }

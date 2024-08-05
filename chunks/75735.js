@@ -1,12 +1,12 @@
 n.d(t, {
   o: function() {
-return s;
+return o;
   }
 });
 var r = n(735250),
   i = n(470079),
   a = n(709014);
-let o = {
+let s = {
 disable: {
   name: 'disable',
   start: 0,
@@ -28,9 +28,9 @@ hover_disabled: {
   duration: 70
 }
   },
-  s = e => {
+  o = e => {
 let t = i.useRef(null),
-  s = i.useRef(e),
+  o = i.useRef(e),
   l = i.useMemo(() => () => {
     null != t.current && t.current.play(e);
   }, [e]),
@@ -57,8 +57,8 @@ return {
     ...e,
     src: () => n.e('8366').then(n.t.bind(n, 553427, 19)),
     ref: t,
-    initialAnimation: s.current,
-    markers: o
+    initialAnimation: o.current,
+    markers: s
   }), [])
 };
   };

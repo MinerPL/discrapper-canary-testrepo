@@ -2,8 +2,8 @@ n(47120), n(653041);
 var r = n(31775),
   i = n.n(r),
   a = n(147913),
-  o = n(626135),
-  s = n(709054),
+  s = n(626135),
+  o = n(709054),
   l = n(981631);
 
 function u(e, t, n) {
@@ -37,7 +37,7 @@ null != t && (clearTimeout(t), delete this.currentlyVisibleMessageTimers[e]);
 for (let t of e)
   this.handleMessageBecameVisible(t);
 let t = new Set(e.map(e => e.messageId));
-for (let e of s.default.keys(this.currentlyVisibleMessageTimers))
+for (let e of o.default.keys(this.currentlyVisibleMessageTimers))
   !t.has(e) && this.handleMessageLostVisibility(e);
   }
   handleChannelSelect() {
@@ -47,7 +47,7 @@ this.currentlyVisibleMessageTimers = {}, this.viewsInCurrentChannel.clear(), thi
   }
   drainBuffer() {
 for (let e of this.batchBuffer)
-  o.default.track(l.rMx.ANNOUNCEMENT_MESSAGE_VIEWED, {
+  s.default.track(l.rMx.ANNOUNCEMENT_MESSAGE_VIEWED, {
     message_id: e.messageId,
     channel_id: e.channelId,
     guild_id: e.guildId,

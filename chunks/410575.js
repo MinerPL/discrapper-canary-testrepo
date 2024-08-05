@@ -5,8 +5,8 @@ return d;
 });
 var r, i = n(735250),
   a = n(470079),
-  o = n(772848),
-  s = n(626135),
+  s = n(772848),
+  o = n(626135),
   l = n(251625),
   u = n(981631);
 
@@ -24,11 +24,11 @@ var t, n;
 let {
   section: r,
   page: a,
-  object: o,
+  object: s,
   objectType: l,
   children: u
-} = this.props, c = this.mergeLocation(e.location, this.getLocation(a, r, o, l)), d = this.getContext(c, null !== (t = this._loadDate) && void 0 !== t ? t : e.loadDate, null !== (n = this._loadId) && void 0 !== n ? n : e.loadId);
-return (0, i.jsx)(s.AnalyticsContext.Provider, {
+} = this.props, c = this.mergeLocation(e.location, this.getLocation(a, r, s, l)), d = this.getContext(c, null !== (t = this._loadDate) && void 0 !== t ? t : e.loadDate, null !== (n = this._loadId) && void 0 !== n ? n : e.loadId);
+return (0, i.jsx)(o.AnalyticsContext.Provider, {
   value: d,
   children: u
 });
@@ -37,7 +37,7 @@ return (0, i.jsx)(s.AnalyticsContext.Provider, {
 let {
   context: e
 } = this.props;
-return null != e ? this.renderProvider(e) : (0, i.jsx)(s.AnalyticsContext.Consumer, {
+return null != e ? this.renderProvider(e) : (0, i.jsx)(o.AnalyticsContext.Consumer, {
   children: e => this.renderProvider(e)
 });
   }
@@ -52,7 +52,7 @@ super(e), c(this, '_loadId', null), c(this, '_loadDate', this.props.root ? Date.
   location: e,
   loadDate: t,
   loadId: n
-}))), null != e.loadId ? this._loadId = e.loadId : e.root && (this._loadId = (0, o.Z)());
+}))), null != e.loadId ? this._loadId = e.loadId : e.root && (this._loadId = (0, s.Z)());
   }
 }
 c(d, 'Pages', u.ZY5), c(d, 'Sections', u.jXE), c(d, 'Objects', u.qAy), c(d, 'ObjectTypes', u.Qqv), c(d, 'defaultProps', {

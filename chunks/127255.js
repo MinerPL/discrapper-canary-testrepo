@@ -1,46 +1,37 @@
 n.d(t, {
   Z: function() {
-return p;
+return c;
   }
-}), n(789020), n(47120), n(653041);
+}), n(47120), n(653041);
 var i = n(470079),
   l = n(442837),
-  r = n(630388),
-  a = n(115130),
-  o = n(844797),
-  u = n(694312),
-  c = n(405625),
-  d = n(664097),
-  s = n(981631);
+  r = n(115130),
+  a = n(694312),
+  o = n(405625),
+  u = n(664097);
 
-function p(e) {
+function c(e) {
   let {
 guildId: t,
-enableFilter: n = !1,
-channel: p
+enableFilter: n = !1
   } = e, {
-filter: f
-  } = (0, l.cj)([a.Z], () => ({
-filter: a.Z.getFilter()
-  })), v = (0, u.E)(t), h = (0, c.Z)(v), Z = (0, d.o)(), _ = (0, o.oy)(p);
+filter: c
+  } = (0, l.cj)([r.Z], () => ({
+filter: r.Z.getFilter()
+  })), d = (0, a.E)(t), s = (0, o.Z)(d), p = (0, u.o)();
   return i.useMemo(() => {
 function e(e) {
-  return !!(!n || '' === f || e.application.name.toLowerCase().includes(f.toLowerCase())) || !1;
+  return !!(!n || '' === c || e.application.name.toLowerCase().includes(c.toLowerCase())) || !1;
 }
-
-function t(e) {
-  return !_ || (0, r.yE)(e.application.flags, s.udG.EMBEDDED_RELEASED);
-}
-let i = [...Z].filter(e).filter(t),
-  l = new Set(i.map(e => e.application.id));
-for (let n of h)
-  !l.has(n.application.id) && e(n) && t(n) && i.push(n);
-return i;
+let t = [...p].filter(e),
+  i = new Set(t.map(e => e.application.id));
+for (let n of s)
+  !i.has(n.application.id) && e(n) && t.push(n);
+return t;
   }, [
-Z,
+p,
 n,
-f,
-h,
-_
+c,
+s
   ]);
 }

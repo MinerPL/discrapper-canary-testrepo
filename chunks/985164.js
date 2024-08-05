@@ -13,5 +13,7 @@ e.exports = {
   submenuWrapper: 'submenuWrapper_f2bc91',
   submenuIcon: 'submenuIcon_f2bc91',
   partnerBranding: 'partnerBranding_f2bc91',
-  bottomRow: 'bottomRow_f2bc91'
+  bottomRow: 'bottomRow_f2bc91',
+  defibrillatorHints: 'defibrillatorHints_f2bc91',
+  hintsContainer: 'hintsContainer_f2bc91'
 };

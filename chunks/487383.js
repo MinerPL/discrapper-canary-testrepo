@@ -4,5 +4,6 @@ e.exports = {
   wrapperVisible: 'wrapperVisible_c721cc',
   contentWrapper: 'contentWrapper_c721cc',
   contentWrapperExpanded: 'contentWrapperExpanded_c721cc',
-  contentWrapperAccepted: 'contentWrapperAccepted_c721cc'
+  contentWrapperAccepted: 'contentWrapperAccepted_c721cc',
+  mask: 'mask_c721cc'
 };

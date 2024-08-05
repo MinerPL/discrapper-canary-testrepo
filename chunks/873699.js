@@ -5,13 +5,13 @@ return _;
 }), t(724458), t(47120);
 var i = t(735250),
   a = t(470079),
-  r = t(442837),
-  l = t(481060),
+  l = t(442837),
+  r = t(481060),
   o = t(668781),
   s = t(79390),
   u = t(222677),
-  c = t(665906),
-  d = t(496675),
+  d = t(665906),
+  c = t(496675),
   E = t(768581),
   M = t(176354),
   I = t(981631),
@@ -20,7 +20,7 @@ var i = t(735250),
 function _(e, n) {
   let {
 reducedMotion: t
-  } = a.useContext(l.AccessibilityPreferencesContext), _ = (0, c.$R)(n), g = (0, r.e7)([d.Z], () => d.Z.can(I.Plq.MANAGE_MESSAGES, n) && _, [
+  } = a.useContext(r.AccessibilityPreferencesContext), _ = (0, d.$R)(n), g = (0, l.e7)([c.Z], () => c.Z.can(I.Plq.MANAGE_MESSAGES, n) && _, [
 n,
 _
   ]), f = e.reactions.reduce((e, n) => {
@@ -40,13 +40,13 @@ t.shiftKey ? (0, u.$E)(n.id, e.id, i) : o.Z.show({
   }
 });
   };
-  return !g || null == e.reactions || 0 === e.reactions.length || e.isPoll() && !(0, s.eQ)(e) ? null : (0, i.jsx)(l.MenuItem, {
+  return !g || null == e.reactions || 0 === e.reactions.length || e.isPoll() && !(0, s.eQ)(e) ? null : (0, i.jsx)(r.MenuItem, {
 id: 'remove-emoji-reactions',
 label: m.Z.Messages.REMOVE_EMOJI_REACTIONS,
 color: 'danger',
 children: f.map(e => {
   var n, a;
-  return (0, i.jsx)(l.MenuItem, {
+  return (0, i.jsx)(r.MenuItem, {
     id: 'remove-emoji-reactions-'.concat(null !== (n = e.name) && void 0 !== n ? n : e.id),
     label: null == e.id ? e.name : ':'.concat(e.name, ':'),
     action: n => Z(n, e),

@@ -6,11 +6,11 @@ return c;
 var r = n(470079),
   i = n(611144),
   a = n(536895),
-  o = n(260866);
-let s = [a.R8.TAB];
+  s = n(260866);
+let o = [a.R8.TAB];
 
 function l(e, t, n) {
-  return null != t && null != n ? '#'.concat((0, o.NE)(e, t, n)) : '[data-ref-id='.concat(e, ']');
+  return null != t && null != n ? '#'.concat((0, s.NE)(e, t, n)) : '[data-ref-id='.concat(e, ']');
 }
 
 function u(e) {
@@ -42,7 +42,7 @@ columnCounts: n
 columnCounts: N,
 focusedX: v,
 focusedY: O
-  } = S, [R] = r.useState(() => (0, o.P2)(A, 16));
+  } = S, [R] = r.useState(() => (0, s.P2)(A, 16));
   return r.useEffect(() => {
   A({
     type: i.s.UPDATE_COLUMN_COUNTS,
@@ -69,7 +69,7 @@ function(e) {
     [A, N] = r.useState(!1),
     [v, O] = r.useState(!1),
     [R, C] = r.useState(!1),
-    [y] = r.useState(() => new o.$o(e => {
+    [y] = r.useState(() => new s.$o(e => {
       let [t, n] = e.split(',').map(Number);
       return () => {
         N(!0), h({
@@ -158,7 +158,7 @@ function(e) {
   let w = r.useCallback(e => {
       if (!g.current)
         return;
-      if (!T && s.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
+      if (!T && o.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
         e.preventDefault(), e.stopPropagation(), b();
         return;
       }
@@ -255,7 +255,7 @@ function(e) {
         role: 'gridcell',
         'aria-rowindex': n + 1,
         'aria-colindex': e + 1,
-        id: (0, o.NE)(t, e, n),
+        id: (0, s.NE)(t, e, n),
         tabIndex: p && e === c && n === d ? 0 : -1,
         onFocus: y.get(''.concat(e, ',').concat(n))
       };

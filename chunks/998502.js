@@ -1,12 +1,12 @@
 n.d(t, {
   jK: function() {
-return s;
+return o;
   },
   tS: function() {
 return l;
   }
 }), n(47120), n(411104), n(653041);
-var r, i, a, o, s, l, u, c, d = n(512722),
+var r, i, a, s, o, l, u, c, d = n(512722),
   _ = n.n(d),
   E = n(719711),
   f = n(544891),
@@ -27,7 +27,7 @@ let A = window.DiscordNative,
   O = null,
   R = null,
   C = {};
-null != A && (v = A.remoteApp.getVersion().split('.').map(e => parseInt(e)), R = null === (r = (i = A.remoteApp).getModuleVersions) || void 0 === r ? void 0 : r.call(i), O = null === (a = (o = A.remoteApp).getBuildNumber) || void 0 === a ? void 0 : a.call(o));
+null != A && (v = A.remoteApp.getVersion().split('.').map(e => parseInt(e)), R = null === (r = (i = A.remoteApp).getModuleVersions) || void 0 === r ? void 0 : r.call(i), O = null === (a = (s = A.remoteApp).getBuildNumber) || void 0 === a ? void 0 : a.call(s));
 let y = new Set([
 'discord_erlpack',
 'discord_game_utils',
@@ -52,7 +52,7 @@ function b(e) {
 }
 
 function M(e) {
-  var t, n, r, i, a, o, s, l;
+  var t, n, r, i, a, s, o, l;
   return {
 id: C[null !== (t = e.id) && void 0 !== t ? t : ''],
 nativeProcessObserverId: parseInt(null !== (n = e.id) && void 0 !== n ? n : '', 10),
@@ -68,12 +68,12 @@ cmdLine: e.cmdLine,
 distributor: e.distributor,
 sku: e.sku,
 pid: e.pid,
-pidPath: null !== (o = e.pidPath) && void 0 !== o ? o : [],
-windowHandle: null !== (s = e.windowHandle) && void 0 !== s ? s : null,
+pidPath: null !== (s = e.pidPath) && void 0 !== s ? s : [],
+windowHandle: null !== (o = e.windowHandle) && void 0 !== o ? o : null,
 fullscreenType: null !== (l = e.fullscreenType) && void 0 !== l ? l : p.Jx.UNKNOWN
   };
 }
-(u = s || (s = {}))[u.Camera = 0] = 'Camera', u[u.Microphone = 1] = 'Microphone', u[u.Photo = 2] = 'Photo', u[u.InputMonitoring = 3] = 'InputMonitoring', u[u.ScreenRecording = 4] = 'ScreenRecording', (c = l || (l = {})).VIDEO = 'VIDEO', c.MUTE = 'MUTE', c.DEAFEN = 'DEAFEN', c.DISCONNECT = 'DISCONNECT', t.ZP = {
+(u = o || (o = {}))[u.Camera = 0] = 'Camera', u[u.Microphone = 1] = 'Microphone', u[u.Photo = 2] = 'Photo', u[u.InputMonitoring = 3] = 'InputMonitoring', u[u.ScreenRecording = 4] = 'ScreenRecording', (c = l || (l = {})).VIDEO = 'VIDEO', c.MUTE = 'MUTE', c.DEAFEN = 'DEAFEN', c.DISCONNECT = 'DISCONNECT', t.ZP = {
   requireModule: e => A.nativeModules.requireModule(e),
   ensureModule: e => I.isPlatformEmbedded ? __OVERLAY__ && y.has(e) ? Promise.resolve() : A.nativeModules.ensureModule(e) : Promise.reject(Error('not embedded')),
   get canBootstrapNewUpdater() {
@@ -252,8 +252,8 @@ if (null == r)
   return;
 let i = null !== (n = null != t ? t : r.pathname.split('/').pop()) && void 0 !== n ? n : 'unknown',
   a = await L(e),
-  o = S.from(a);
-A.fileManager.saveWithDialog(o, i);
+  s = S.from(a);
+A.fileManager.saveWithDialog(s, i);
   },
   canCopyImage() {
 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0;
@@ -443,8 +443,8 @@ if (null == A.http)
 let {
   method: i,
   maxBps: a,
-  token: o,
-  chunkInterval: s,
+  token: s,
+  chunkInterval: o,
   contentType: l
 } = {
   maxBps: 8000,
@@ -453,7 +453,7 @@ let {
   ...n
 }, u = t;
 'application/json' === l && (u = JSON.stringify(t));
-let c = s / 1000 * a,
+let c = o / 1000 * a,
   d = Math.ceil(u.length / c),
   _ = Array(d);
 for (let e = 0; e < d; e++) {
@@ -463,9 +463,9 @@ for (let e = 0; e < d; e++) {
 return new Promise((e, t) => {
   null != A.http && A.http.makeChunkedRequest(r, _, {
     method: i,
-    chunkInterval: s,
+    chunkInterval: o,
     contentType: l,
-    token: o
+    token: s
   }, (n, r) => null != n ? t(n) : r.status >= 400 ? t(Error(r.body)) : void e(r));
 });
   },
@@ -529,11 +529,11 @@ let a = [...null != v ? v : [
   0
 ]];
 a.push(null !== (r = null === (n = this.moduleVersions) || void 0 === n ? void 0 : n[e]) && void 0 !== r ? r : 0);
-let o = null !== (i = t[this.releaseChannel]) && void 0 !== i ? i : t.stable;
+let s = null !== (i = t[this.releaseChannel]) && void 0 !== i ? i : t.stable;
 for (let [e, t] of a.entries()) {
-  if (t > o[e])
+  if (t > s[e])
     break;
-  if (t < o[e])
+  if (t < s[e])
     return !1;
 }
 return !0;

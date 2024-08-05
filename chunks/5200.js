@@ -3,21 +3,21 @@ n.d(t, {
 return x;
   }
 }), n(47120);
-var i, a, l = n(735250),
-  s = n(470079),
+var i, a, s = n(735250),
+  l = n(470079),
   r = n(120356),
   o = n.n(r),
   c = n(338545),
-  d = n(481060),
-  u = n(792125),
+  u = n(481060),
+  d = n(792125),
   h = n(542094),
   p = n(182906),
   m = n(556505),
   _ = n(513202),
   f = n(981631),
   E = n(689938),
-  C = n(478880);
-let g = ['embedded_cover'],
+  g = n(478880);
+let C = ['embedded_cover'],
   I = {
 tension: 800,
 friction: 24
@@ -33,8 +33,8 @@ aspectRatio: r = 0,
 animatedDivClass: x
   } = e, {
 onActivityItemSelected: T,
-imageBackground: v,
-activityAction: N,
+imageBackground: N,
+activityAction: v,
 labelType: S
   } = (0, h.ZP)({
 channel: n,
@@ -43,16 +43,16 @@ guildId: null !== (t = n.getGuildId()) && void 0 !== t ? t : void 0,
 locationObject: {},
 onActivityItemSelected: a,
 embeddedActivitiesManager: _.Z,
-assetNames: g
-  }), [Z, A] = s.useState(!1), M = s.useCallback(() => {
+assetNames: C
+  }), [Z, A] = l.useState(!1), M = l.useCallback(() => {
 A(!0);
-  }, [A]), b = s.useCallback(() => {
+  }, [A]), b = l.useCallback(() => {
 A(!1);
-  }, [A]), R = s.useMemo(() => (0, l.jsx)('div', {
-className: C.overlayBadge,
-children: (0, l.jsx)('div', {
-  className: C.badgeContainer,
-  children: (0, l.jsx)(m.Z, {
+  }, [A]), R = l.useMemo(() => (0, s.jsx)('div', {
+className: g.overlayBadge,
+children: (0, s.jsx)('div', {
+  className: g.badgeContainer,
+  children: (0, s.jsx)(m.Z, {
     name: i.application.name,
     labelType: S
   })
@@ -60,14 +60,14 @@ children: (0, l.jsx)('div', {
   }), [
 i.application.name,
 S
-  ]), j = s.useMemo(() => {
-switch (N) {
+  ]), j = l.useMemo(() => {
+switch (v) {
   case h.JS.JOIN:
-    return (0, l.jsx)('div', {
-      className: C.activityAction,
-      children: (0, l.jsx)('div', {
-        className: C.activityActionButton,
-        children: (0, l.jsx)(d.Text, {
+    return (0, s.jsx)('div', {
+      className: g.activityAction,
+      children: (0, s.jsx)('div', {
+        className: g.activityActionButton,
+        children: (0, s.jsx)(u.Text, {
           variant: 'text-sm/medium',
           color: 'always-white',
           children: E.Z.Messages.JOIN
@@ -75,11 +75,11 @@ switch (N) {
       })
     });
   case h.JS.LEAVE:
-    return (0, l.jsx)('div', {
-      className: C.activityAction,
-      children: (0, l.jsx)('div', {
-        className: o()(C.activityActionButton, C.activityActionButtonDanger),
-        children: (0, l.jsx)(d.Text, {
+    return (0, s.jsx)('div', {
+      className: g.activityAction,
+      children: (0, s.jsx)('div', {
+        className: o()(g.activityActionButton, g.activityActionButtonDanger),
+        children: (0, s.jsx)(u.Text, {
           variant: 'text-sm/medium',
           color: 'always-white',
           children: E.Z.Messages.EMBEDDED_ACTIVITIES_LEAVE
@@ -88,20 +88,20 @@ switch (N) {
     });
   case h.JS.START:
   default:
-    return (0, l.jsx)(l.Fragment, {});
+    return (0, s.jsx)(s.Fragment, {});
 }
-  }, [N]);
-  return (0, l.jsx)(d.Button, {
+  }, [v]);
+  return (0, s.jsx)(u.Button, {
 onClick: T,
 color: 'transparent',
-look: d.Button.Looks.BLANK,
-size: d.Button.Sizes.NONE,
+look: u.Button.Looks.BLANK,
+size: u.Button.Sizes.NONE,
 onFocus: M,
 onBlur: b,
 onMouseEnter: M,
 onMouseLeave: b,
-innerClassName: C.activityItemButtonInnerClass,
-children: (0, l.jsx)(c.Spring, {
+innerClassName: g.activityItemButtonInnerClass,
+children: (0, s.jsx)(u.Spring, {
   config: I,
   from: {
     value: 0
@@ -113,10 +113,10 @@ children: (0, l.jsx)(c.Spring, {
     let {
       value: t
     } = e;
-    return (0, l.jsx)(c.animated.div, {
-      className: o()((0, u.Q)(f.BRd.DARK), C.activityItem, x, {
-        [C.activityItem_13_11]: 0 === r,
-        [C.activityItem_16_9]: 1 === r
+    return (0, s.jsx)(c.animated.div, {
+      className: o()((0, d.Q)(f.BRd.DARK), g.activityItem, x, {
+        [g.activityItem_13_11]: 0 === r,
+        [g.activityItem_16_9]: 1 === r
       }),
       style: {
         transform: t.to([
@@ -127,13 +127,13 @@ children: (0, l.jsx)(c.Spring, {
           1.05
         ]).to(e => 'scale('.concat(e, ')'))
       },
-      children: (0, l.jsxs)(l.Fragment, {
+      children: (0, s.jsxs)(s.Fragment, {
         children: [
-          (0, l.jsx)(p.Z, {
-            imageBackground: v,
+          (0, s.jsx)(p.Z, {
+            imageBackground: N,
             applicationName: i.application.name,
-            imageClassName: C.activitySuggestionImage,
-            imageNotFoundClassName: C.brokenImageIconWrapper
+            imageClassName: g.activitySuggestionImage,
+            imageNotFoundClassName: g.brokenImageIconWrapper
           }),
           R,
           j

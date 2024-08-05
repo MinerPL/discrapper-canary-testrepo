@@ -6,8 +6,8 @@ return m;
 var r = n(430198),
   i = n(897345),
   a = n(697379),
-  o = n(241559),
-  s = n(819553),
+  s = n(241559),
+  o = n(819553),
   l = n(931261),
   u = n(994592),
   c = n(911560),
@@ -39,11 +39,11 @@ switch (n) {
   case p.oC.CHANNEL_BROWSER:
     return null != m && m.hasFeature(h.oNc.COMMUNITY);
   case p.oC.GUILD_ONBOARDING:
-    return s.ZP.shouldShowOnboarding(t);
+    return o.ZP.shouldShowOnboarding(t);
   case p.oC.CUSTOMIZE_COMMUNITY:
     return null != m && m.hasFeature(h.oNc.COMMUNITY);
   case p.oC.MEMBER_SAFETY:
-    return (0, o.lv)(t);
+    return (0, s.lv)(t);
   default:
     (0, E.vE)(n);
 }

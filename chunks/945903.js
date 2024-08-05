@@ -22,7 +22,7 @@ function f(e) {
 transitionState: t,
 onClose: f,
 guildId: D
-  } = e, p = (0, a.Z)(d.e);
+  } = e, x = (0, a.Z)(d.e);
   return o.useEffect(() => {
 u.default.track(_.rMx.OPEN_MODAL, {
   type: 'Guild Delete Report'
@@ -30,7 +30,7 @@ u.default.track(_.rMx.OPEN_MODAL, {
   }, []), (0, s.jsx)(c.Z, {
 header: b.Z.Messages.GUILD_DELETE_FEEDBACK_HEADER,
 body: b.Z.Messages.GUILD_DELETE_FEEDBACK_BODY,
-problems: p,
+problems: x,
 feedbackProblems: m,
 onSubmit: function(e) {
   let {

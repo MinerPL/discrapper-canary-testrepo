@@ -9,5 +9,5 @@ function i(e) {
   if (null == e)
 return;
   let t = r.AlD.get(e);
-  return null != t ? 'theme-'.concat(t, ' theme-').concat(e) : 'theme-'.concat(e);
+  return null != t ? 'theme-'.concat(t, ' theme-').concat(e, ' images-').concat(t) : 'theme-'.concat(e, ' images-').concat(e);
 }

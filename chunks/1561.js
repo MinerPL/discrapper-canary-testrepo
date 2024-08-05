@@ -5,8 +5,8 @@ return _;
 }), n(47120);
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(532712),
   u = n(84735),
   c = n(981631);
@@ -27,12 +27,12 @@ let {
   innerRef: n,
   onClick: r,
   role: i,
-  tabIndex: o,
-  ...s
+  tabIndex: s,
+  ...o
 } = this.props;
 return a.createElement(e, {
   ref: this.setRef,
-  ...s
+  ...o
 });
   }
   renderInner() {
@@ -42,18 +42,18 @@ let {
   className: n,
   children: r,
   focusProps: i,
-  innerRef: o,
+  innerRef: s,
   ...l
 } = this.props;
 return null == t ? a.createElement(e, {
   ref: this.setRef,
-  className: s()(n),
+  className: o()(n),
   ...l
 }, r) : a.createElement(e, {
   onClick: t,
   ref: this.setRef,
   onKeyPress: this.handleKeyPress,
-  className: s()(n),
+  className: o()(n),
   ...l
 }, r);
   }

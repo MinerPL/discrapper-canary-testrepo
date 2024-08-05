@@ -6,8 +6,8 @@ return m;
 var r = n(470079),
   i = n(519953),
   a = n(911969),
-  o = n(998698),
-  s = n(91313),
+  s = n(998698),
+  o = n(91313),
   l = n(53529),
   u = n(436660),
   c = n(887490),
@@ -32,19 +32,19 @@ if (null == t || !c.Ew.isValid(e, t) || c.M8.isExpanded(t) || (0, d.L6)(e))
     word: null,
     isAtStart: !1
   };
-let [n, r] = c.bN.node(e, c.C0.parent(t.anchor.path)), [i, a] = c.bN.node(e, t.anchor.path), o = t.anchor.offset;
+let [n, r] = c.bN.node(e, c.C0.parent(t.anchor.path)), [i, a] = c.bN.node(e, t.anchor.path), s = t.anchor.offset;
 if (!c.C0.hasPrevious(a) && c.LC.isText(i)) {
-  let e = i.text.substring(0, o);
-  if (c.aj.isType(n, 'applicationCommand') && o < n.command.displayName.length + 2)
+  let e = i.text.substring(0, s);
+  if (c.aj.isType(n, 'applicationCommand') && s < n.command.displayName.length + 2)
     return {
       word: e,
       isAtStart: !0
     };
 }
-let s = '',
+let o = '',
   l = !1;
 for (;;) {
-  if (--o < 0) {
+  if (--s < 0) {
     if (!c.C0.hasPrevious(a)) {
       l = !0;
       break;
@@ -53,13 +53,13 @@ for (;;) {
   }
   if (!c.LC.isText(i))
     break;
-  let t = i.text[o];
+  let t = i.text[s];
   if (E.i$.test(t))
     break;
-  s = t + s;
+  o = t + o;
 }
 return {
-  word: s,
+  word: o,
   isAtStart: l && c.C0.isFirstEditorBlock(r)
 };
   },
@@ -68,35 +68,35 @@ var t, n;
 return null !== (n = null === (t = c.bN.getFirstText(e)) || void 0 === t ? void 0 : t.text) && void 0 !== n ? n : '';
   },
   getCurrentCommandOption() {
-let t = s.HZ(e);
+let t = o.HZ(e);
 return null == t ? null : t[0].optionName;
   },
   getCurrentCommandOptionValue() {
 var n;
-let r = s.HZ(e);
+let r = o.HZ(e);
 if (null == r)
   return [];
-let i = o.Z.getActiveCommand(t.id),
+let i = s.Z.getActiveCommand(t.id),
   a = null == i ? void 0 : null === (n = i.options) || void 0 === n ? void 0 : n.find(e => e.name === r[0].optionName);
-return null == a ? [] : s.IB(e, a, r[0], t.id);
+return null == a ? [] : o.IB(e, a, r[0], t.id);
   },
   getCommandOptionValues() {
-let n = o.Z.getActiveCommand(t.id);
-return null == n ? {} : s.tM(e, n, t.id);
+let n = s.Z.getActiveCommand(t.id);
+return null == n ? {} : o.tM(e, n, t.id);
   },
   insertText(n) {
 let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
   i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
 l.T.withSingleEntry(e, () => {
-  let a = s.HZ(e),
-    o = null != a && h(t, a[0]);
-  if (null != r && o && (u.Q.removeInlineChildren(e, a), i = !1), p(e, n, r, i), null != r && o) {
-    let n = s.cr(e);
+  let a = o.HZ(e),
+    s = null != a && h(t, a[0]);
+  if (null != r && s && (u.Q.removeInlineChildren(e, a), i = !1), p(e, n, r, i), null != r && s) {
+    let n = o.cr(e);
     if (a = c.q.updateElement(e, a), null != n) {
       let r = c.q.markdown(n[0], t.guild_id);
       (0, _.Gg)(e, a, t.id, r) && (a = c.q.updateElement(e, a));
     }
-    s.xi(e, t.guild_id, t.id, c.q.updateElement(e, a), !1), u.Q.selectNextCommandOption(e);
+    o.xi(e, t.guild_id, t.id, c.q.updateElement(e, a), !1), u.Q.selectNextCommandOption(e);
   }
 });
   },
@@ -104,9 +104,9 @@ l.T.withSingleEntry(e, () => {
 let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
   i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
 l.T.withSingleEntry(e, () => {
-  let a = s.HZ(e),
-    o = null != a && h(t, a[0]);
-  if (o)
+  let a = o.HZ(e),
+    s = null != a && h(t, a[0]);
+  if (s)
     u.Q.removeInlineChildren(e, a), i = !1;
   else {
     let {
@@ -118,7 +118,7 @@ l.T.withSingleEntry(e, () => {
       reverse: !0
     });
   }
-  p(e, n, r, i), o && u.Q.selectNextCommandOption(e);
+  p(e, n, r, i), s && u.Q.selectNextCommandOption(e);
 });
   },
   insertEmoji(t) {
@@ -126,16 +126,16 @@ let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
 l.T.withSingleEntry(e, () => {
   var r, i;
   let a = t.animated ? 'a' : '',
-    o = null !== (i = null !== (r = t.originalName) && void 0 !== r ? r : t.name) && void 0 !== i ? i : '',
-    s = ':'.concat(t.name, ':');
-  p(e, s, null != t.id ? '<'.concat(a, ':').concat(o.replace(/:/g, ''), ':').concat(t.id, '>') : null, n);
+    s = null !== (i = null !== (r = t.originalName) && void 0 !== r ? r : t.name) && void 0 !== i ? i : '',
+    o = ':'.concat(t.name, ':');
+  p(e, o, null != t.id ? '<'.concat(a, ':').concat(s.replace(/:/g, ''), ':').concat(t.id, '>') : null, n);
 });
   }
 });
 
 function h(e, t) {
   var n;
-  let r = o.Z.getActiveCommand(e.id),
+  let r = s.Z.getActiveCommand(e.id),
 i = null == r ? void 0 : null === (n = r.options) || void 0 === n ? void 0 : n.find(e => e.name === t.optionName);
   return null != i && (i.type !== a.jw.STRING || (null == i ? void 0 : i.choices) != null || (null == i ? void 0 : i.autocomplete));
 }

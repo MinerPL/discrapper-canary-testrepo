@@ -10,14 +10,14 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let o = new r.Y('Flux'),
-  s = e => e();
+let s = new r.Y('Flux'),
+  o = e => e();
 t.Z = new class e {
   destroy() {
-this.changedStores.clear(), this.reactChangedStores.clear(), s = e => e();
+this.changedStores.clear(), this.reactChangedStores.clear(), o = e => e();
   }
   injectBatchEmitChanges(e) {
-s = e;
+o = e;
   }
   pause() {
 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
@@ -39,7 +39,7 @@ try {
 }
   }
   emit() {
-!this.isBatchEmitting && !this.isPaused && s(() => {
+!this.isBatchEmitting && !this.isPaused && o(() => {
   try {
     this.isBatchEmitting = !0, this.changeSentinel++;
     let e = 0,
@@ -47,12 +47,12 @@ try {
       n = new Set();
     for (; this.changedStores.size > 0;) {
       if (++e > 100)
-        throw o.error('LastFewActions', i.qC()), Error('change emit loop detected, aborting');
+        throw s.error('LastFewActions', i.qC()), Error('change emit loop detected, aborting');
       this.emitNonReactOnce(t, n);
     }
     for (; this.reactChangedStores.size > 0;) {
       if (++e > 100)
-        throw o.error('LastFewActions', i.qC()), Error('react change emit loop detected, aborting');
+        throw s.error('LastFewActions', i.qC()), Error('react change emit loop detected, aborting');
       this.emitReactOnce();
     }
   } finally {
@@ -85,7 +85,7 @@ this.changedStores = new Set(), r.forEach(e => {
   });
 });
 let a = Date.now();
-a - n > 100 && o.verbose('Slow batch emitChanges took '.concat(a - n, 'ms recentActions:'), i.qC());
+a - n > 100 && s.verbose('Slow batch emitChanges took '.concat(a - n, 'ms recentActions:'), i.qC());
   }
   emitReactOnce() {
 let e = Date.now(),
@@ -94,7 +94,7 @@ this.reactChangedStores = new Set(), t.forEach(e => {
   e._reactChangeCallbacks.invokeAll(), this.reactChangedStores.delete(e);
 });
 let n = Date.now();
-n - e > 100 && o.verbose('Slow batch emitReactChanges took '.concat(n - e, 'ms recentActions:'), i.qC());
+n - e > 100 && s.verbose('Slow batch emitReactChanges took '.concat(n - e, 'ms recentActions:'), i.qC());
   }
   constructor() {
 a(this, 'changedStores', new Set()), a(this, 'reactChangedStores', new Set()), a(this, 'changeSentinel', 0), a(this, 'isBatchEmitting', !1), a(this, 'isDispatching', !1), a(this, 'isPaused', !1), a(this, 'pauseTimer', null);

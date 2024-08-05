@@ -1,10 +1,10 @@
 n.d(t, {
   Z: function() {
-return a;
+return s;
   }
 });
 var i = n(981631);
 
-function a(e, t) {
+function s(e, t) {
   return e.type === i.uaV.GUILD_INVITE_REMINDER && !t;
 }

@@ -11,8 +11,8 @@ return e;
   },
   i = l(n(470079)),
   a = l(n(844303)),
-  o = n(207545),
-  s = l(n(263081));
+  s = n(207545),
+  o = l(n(263081));
 
 function l(e) {
   return e && e.__esModule ? e : {
@@ -22,8 +22,8 @@ default: e
 var u = t.Swatch = function(e) {
   var t = e.color,
 n = e.style,
-o = e.onClick,
-l = void 0 === o ? function() {} : o,
+s = e.onClick,
+l = void 0 === s ? function() {} : s,
 u = e.onHover,
 c = e.title,
 d = void 0 === c ? t : c,
@@ -56,9 +56,9 @@ tabIndex: 0,
 onKeyDown: function(e) {
   return 13 === e.keyCode && l(t, e);
 }
-  }, m), _, h && i.default.createElement(s.default, {
+  }, m), _, h && i.default.createElement(o.default, {
 borderRadius: p.swatch.borderRadius,
 boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.1)'
   }));
 };
-t.default = (0, o.handleFocus)(u);
+t.default = (0, s.handleFocus)(u);

@@ -2,7 +2,7 @@ n.d(t, {
   EJ: function() {
 return p;
   },
-  SS: function() {
+  XV: function() {
 return f;
   },
   Z4: function() {
@@ -26,12 +26,12 @@ return A;
   vh: function() {
 return h;
   }
-}), n(47120);
+});
 var r = n(108131),
   i = n.n(r),
   a = n(442837),
-  o = n(607070),
-  s = n(715903),
+  s = n(607070),
+  o = n(715903),
   l = n(271383),
   u = n(594174);
 n(963202);
@@ -45,7 +45,7 @@ function f(e, t) {
   return n.sort((e, n) => {
 let r = i().v3(''.concat(e).concat(t));
 return r - i().v3(''.concat(n).concat(t));
-  }), new Set(n);
+  }), n;
 }
 
 function h(e) {
@@ -128,13 +128,13 @@ return ''.concat(location.protocol, '//').concat(n, '/clan-banners/').concat(e, 
 }
 
 function N(e, t) {
-  let n = (0, a.e7)([o.Z], () => o.Z.hideTags),
+  let n = (0, a.e7)([s.Z], () => s.Z.hideTags),
 r = (0, a.e7)([u.default], () => u.default.getUser(e), [e]),
 i = (0, a.e7)([l.ZP], () => {
   if (null == t || null == e)
     return null;
   let n = l.ZP.getMember(t, e);
-  return (0, s.EY)(n);
+  return (0, o.EY)(n);
 }, [
   t,
   e

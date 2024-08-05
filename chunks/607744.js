@@ -1,5 +1,5 @@
 n(47120), n(789020), n(653041);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(630388),
   c = n(709054),
@@ -41,16 +41,16 @@ let t = new Date('2022-12-02 00:00:00'),
 if (!(n.hasFeature(f.oNc.GUILD_ONBOARDING_EVER_ENABLED) && !r) && e.size > 0)
   return;
   }
-  let o = +r.createdAt + 60000 * f.YeM.ACCOUNT_AGE - Date.now(),
-s = +n.joinedAt + 60000 * f.YeM.MEMBER_AGE - Date.now(),
+  let s = +r.createdAt + 60000 * f.YeM.ACCOUNT_AGE - Date.now(),
+o = +n.joinedAt + 60000 * f.YeM.MEMBER_AGE - Date.now(),
 c = n.verificationLevel >= f.sFg.LOW && !r.isClaimed(),
 p = !1,
 T = !1,
 S = !1,
 A = !1;
-  !r.isPhoneVerified() && !r.isStaff() && (p = n.verificationLevel >= f.sFg.LOW && !r.verified, T = n.verificationLevel >= f.sFg.VERY_HIGH, S = n.verificationLevel >= f.sFg.MEDIUM && o > 0, A = n.verificationLevel >= f.sFg.HIGH && s > 0);
+  !r.isPhoneVerified() && !r.isStaff() && (p = n.verificationLevel >= f.sFg.LOW && !r.verified, T = n.verificationLevel >= f.sFg.VERY_HIGH, S = n.verificationLevel >= f.sFg.MEDIUM && s > 0, A = n.verificationLevel >= f.sFg.HIGH && o > 0);
   let N = [];
-  A && N.push(s), S && N.push(o), N.length > 0 && (t = setTimeout(() => l.Z.dispatch({
+  A && N.push(o), S && N.push(s), N.length > 0 && (t = setTimeout(() => l.Z.dispatch({
 type: 'GUILD_VERIFICATION_CHECK',
 guildId: e
   }), Math.max(...N))), I[e] = {
@@ -60,8 +60,8 @@ notPhoneVerified: T,
 newAccount: S,
 newMember: A,
 canChat: !(c || p || T || S || A),
-accountDeadline: new Date(Date.now() + o),
-memberDeadline: new Date(Date.now() + s),
+accountDeadline: new Date(Date.now() + s),
+memberDeadline: new Date(Date.now() + o),
 timeoutRef: t
   };
 }
@@ -74,7 +74,7 @@ function g(e) {
 function S(e) {
   m.delete(e.guild.id), T(e.guild.id);
 }
-class A extends(r = s.ZP.Store) {
+class A extends(r = o.ZP.Store) {
   initialize() {
 this.waitFor(_.Z, E.default);
   }
@@ -86,12 +86,12 @@ return !m.has(e) && T(e), null !== (t = I[e]) && void 0 !== t ? t : p;
 return this.getCheck(e).canChat;
   }
 }
-o = 'GuildVerificationStore', (a = 'displayName') in(i = A) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'GuildVerificationStore', (a = 'displayName') in(i = A) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new A(l.Z, {
+}) : i[a] = s, t.Z = new A(l.Z, {
   CONNECTION_OPEN: function() {
 for (let e in (m.clear(), I))
   g(e);

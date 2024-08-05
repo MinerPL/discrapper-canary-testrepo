@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(442837),
   o = n(433517),
   c = n(481060),
@@ -14,7 +14,7 @@ var i = n(735250),
 let I = 'isHideDevBanner';
 t.Z = () => {
   var e;
-  let [t, n] = (0, s.useState)((null === (e = o.K.get(I, 'false')) || void 0 === e ? void 0 : e.toString()) === 'true'), a = (0, l.e7)([d.C], () => {
+  let [t, n] = (0, a.useState)((null === (e = o.K.get(I, 'false')) || void 0 === e ? void 0 : e.toString()) === 'true'), s = (0, l.e7)([d.C], () => {
 var e;
 return (0, u.fD)() ? null === (e = d.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null;
   });
@@ -33,7 +33,7 @@ g = () => (0, i.jsx)(c.Clickable, {
     className: E.closeIcon
   })
 });
-  return null != a ? (0, i.jsxs)('div', {
+  return null != s ? (0, i.jsxs)('div', {
 className: r()(E.devBanner, E.buildOverride),
 children: [
   (0, i.jsx)(_.Z, {
@@ -49,7 +49,7 @@ children: [
     className: E.icon
   }),
   h.Z.Messages.DEV_NOTICE_STAGING.format({
-    buildNumber: '309567'
+    buildNumber: '315452'
   }),
   (0, i.jsx)(g, {})
 ]

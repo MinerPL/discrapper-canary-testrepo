@@ -1,7 +1,7 @@
 var r, i, a = n(735250);
 n(470079);
-var o = n(120356),
-  s = n.n(o),
+var s = n(120356),
+  o = n.n(s),
   l = n(873546),
   u = n(481060),
   c = n(689938),
@@ -15,10 +15,10 @@ keybind: r,
 className: i
   } = e;
   return (0, a.jsxs)('div', {
-className: s()(d.container, i),
+className: o()(d.container, i),
 children: [
   (0, a.jsx)(u.Clickable, {
-    className: s()(d.closeButton, {
+    className: o()(d.closeButton, {
       [d.closeButtonBold]: 'Bold' === n,
       [d.closeButtonSolid]: 'Solid' === n
     }),
@@ -35,7 +35,7 @@ children: [
     })
   }),
   l.tq ? null : (0, a.jsx)('div', {
-    className: s()(d.keybind),
+    className: o()(d.keybind),
     'aria-hidden': !0,
     children: r
   })

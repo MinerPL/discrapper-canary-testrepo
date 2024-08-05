@@ -1,62 +1,62 @@
-i.d(n, {
+n.d(t, {
   s: function() {
-return h;
+return T;
   }
 });
-var t = i(735250),
-  o = i(470079),
-  a = i(120356),
-  c = i.n(a),
-  r = i(481060),
-  l = i(346610),
-  s = i(868643),
-  d = i(912332),
-  u = i(503349),
-  _ = i(689938),
-  f = i(691523);
+var i = n(735250),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
+  l = n(481060),
+  o = n(346610),
+  c = n(868643),
+  u = n(912332),
+  d = n(503349),
+  _ = n(689938),
+  E = n(691523);
 
-function m() {
-  (0, r.closeModal)(u.c);
+function I() {
+  (0, l.closeModal)(d.c);
 }
 
-function I(e) {
+function m(e) {
   let {
-className: n,
-channelId: i,
+className: t,
+channelId: n,
 messageId: a,
-target: l
-  } = e, s = o.useCallback(() => {
-if ('embed' === l.type) {
-  (0, d.l8)({
+target: o
+  } = e, c = s.useCallback(() => {
+if ('embed' === o.type) {
+  (0, u.l8)({
     messageId: a,
-    channelId: i,
+    channelId: n,
     source: 'media-viewer',
     forwardOptions: {
-      onlyEmbedIndices: [l.embedIndex]
+      onlyEmbedIndices: [o.embedIndex]
     },
-    onRequestSent: m
+    onRequestSent: I
   });
   return;
 }
-(0, d.l8)({
+(0, u.l8)({
   messageId: a,
-  channelId: i,
+  channelId: n,
   source: 'media-viewer',
   forwardOptions: {
-    onlyAttachmentIds: [l.attachmentId]
+    onlyAttachmentIds: [o.attachmentId]
   },
-  onRequestSent: m
+  onRequestSent: I
 });
   }, [
-i,
+n,
 a,
-l
+o
   ]);
-  return (0, t.jsx)(r.Clickable, {
-className: c()(f.container, n),
-onClick: s,
-children: (0, t.jsx)(r.Text, {
-  className: f.text,
+  return (0, i.jsx)(l.Clickable, {
+className: r()(E.container, t),
+onClick: c,
+children: (0, i.jsx)(l.Text, {
+  className: E.text,
   variant: 'text-sm/medium',
   color: 'always-white',
   children: _.Z.Messages.MESSAGE_ACTION_FORWARD
@@ -64,23 +64,23 @@ children: (0, t.jsx)(r.Text, {
   });
 }
 
-function h(e, n) {
+function T(e, t) {
   let {
-canForwardMessages: i
-  } = l.w.getCurrentConfig({
+canForwardMessages: n
+  } = (0, o.WT)({
 location: 'ForwardLink'
   }, {
 autoTrackExposure: !1
   });
-  return i && (0, s.h)(e) ? i => {
+  return n && (0, c.h)(e) ? n => {
 let {
-  className: o
-} = i;
-return (0, t.jsx)(I, {
-  className: o,
+  className: s
+} = n;
+return (0, i.jsx)(m, {
+  className: s,
   channelId: e.channel_id,
   messageId: e.id,
-  target: n
+  target: t
 });
   } : () => null;
 }

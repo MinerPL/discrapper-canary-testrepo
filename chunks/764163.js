@@ -13,13 +13,13 @@ var s = n(735250),
   l = n(442837),
   o = n(481060),
   c = n(596454),
-  d = n(907040),
-  u = n(339085),
-  _ = n(633302),
-  I = n(984933),
-  E = n(401227),
-  T = n(285952),
-  m = n(474333),
+  d = n(318766),
+  u = n(907040),
+  _ = n(339085),
+  I = n(633302),
+  E = n(777036),
+  T = n(984933),
+  m = n(285952),
   N = n(153124),
   S = n(691886),
   h = n(185923),
@@ -32,11 +32,11 @@ guildId: t,
 emojiData: n,
 'aria-labelledby': i,
 onSelectEmoji: r
-  } = e, T = (0, l.e7)([u.Z], () => null != n.id ? u.Z.getCustomEmojiById(n.id) : void 0), m = (0, l.e7)([I.ZP], () => I.ZP.getDefaultChannel(t)), N = a.useCallback(e => {
+  } = e, E = (0, l.e7)([_.Z], () => null != n.id ? _.Z.getCustomEmojiById(n.id) : void 0), m = (0, l.e7)([T.ZP], () => T.ZP.getDefaultChannel(t)), N = a.useCallback(e => {
 let {
   closePopout: t
 } = e;
-return (0, s.jsx)(d.Z, {
+return (0, s.jsx)(u.Z, {
   pickerIntention: h.Hz.GUILD_ROLE_BENEFIT_EMOJI,
   channel: m,
   closePopout: t,
@@ -54,18 +54,18 @@ return (0, s.jsx)(d.Z, {
   }, [
 r,
 m
-  ]), S = a.useMemo(() => null == T && null == n.name ? null : function() {
+  ]), S = a.useMemo(() => null == E && null == n.name ? null : function() {
 return (0, s.jsx)(c.Z, {
   className: C.emoji,
   emojiId: n.id,
   emojiName: n.name,
-  animated: null == T ? void 0 : T.animated
+  animated: null == E ? void 0 : E.animated
 });
   }, [
 n,
-T
+E
   ]), x = '';
-  return null != T ? x = ':'.concat(T.name, ':') : null != n.name && (x = _.ZP.convertSurrogateToName(n.name)), (0, s.jsx)(o.Popout, {
+  return null != E ? x = ':'.concat(E.name, ':') : null != n.name && (x = I.ZP.convertSurrogateToName(n.name)), (0, s.jsx)(o.Popout, {
 animation: o.Popout.Animation.NONE,
 position: 'top',
 renderPopout: N,
@@ -77,7 +77,7 @@ children: (e, t) => {
     className: C.emojiInputContainer,
     ...e,
     children: [
-      (0, s.jsx)(E.Z, {
+      (0, s.jsx)(d.Z, {
         className: C.emojiButton,
         active: n,
         tabIndex: 0,
@@ -108,7 +108,7 @@ onSave: d,
 onDelete: u,
 transitionState: _,
 onClose: I
-  } = e, E = (0, N.Dt)(), m = (0, N.Dt)(), S = (0, N.Dt)(), [h, p] = a.useState(null !== (t = null == i ? void 0 : i.description) && void 0 !== t ? t : ''), [R, f] = a.useState(() => ({
+  } = e, E = (0, N.Dt)(), T = (0, N.Dt)(), S = (0, N.Dt)(), [h, p] = a.useState(null !== (t = null == i ? void 0 : i.description) && void 0 !== t ? t : ''), [R, f] = a.useState(() => ({
 id: null == i ? void 0 : i.emoji_id,
 name: null == i ? void 0 : i.emoji_name
   })), L = c && '' !== h && (null != R.id || null != R.name);
@@ -146,14 +146,14 @@ children: (0, s.jsxs)(o.ModalRoot, {
         }),
         (0, s.jsx)(o.FormSection, {
           title: g.Z.Messages.DESCRIPTION,
-          titleId: m,
+          titleId: T,
           children: (0, s.jsx)(o.TextArea, {
             placeholder: l,
             value: h,
             rows: 1,
             autosize: !0,
             onChange: p,
-            'aria-labelledby': m
+            'aria-labelledby': T
           })
         }),
         (0, s.jsx)(o.Spacer, {
@@ -172,7 +172,7 @@ children: (0, s.jsxs)(o.ModalRoot, {
       ]
     }),
     (0, s.jsxs)(o.ModalFooter, {
-      justify: T.Z.Justify.BETWEEN,
+      justify: m.Z.Justify.BETWEEN,
       children: [
         (0, s.jsxs)('div', {
           className: C.primaryButtons,
@@ -220,10 +220,10 @@ onSave: l,
 onDelete: c,
 transitionState: d,
 onClose: u
-  } = e, [_, I] = a.useState(null == i ? void 0 : i.ref_id), E = (0, N.Dt)(), T = (0, s.jsxs)(s.Fragment, {
+  } = e, [_, I] = a.useState(null == i ? void 0 : i.ref_id), T = (0, N.Dt)(), m = (0, s.jsxs)(s.Fragment, {
 children: [
-  (0, s.jsx)(m.Z, {
-    messageType: m.Q.WARNING,
+  (0, s.jsx)(E.Z, {
+    messageType: E.Q.WARNING,
     children: g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_MODAL_WARNING
   }),
   (0, s.jsx)(o.Spacer, {
@@ -231,7 +231,7 @@ children: [
   }),
   (0, s.jsx)(o.FormSection, {
     title: g.Z.Messages.CHANNEL,
-    titleId: E,
+    titleId: T,
     children: (0, s.jsx)(S.Z, {
       guildId: t,
       value: _,
@@ -240,7 +240,7 @@ children: [
       onChange: function(e) {
         I(e);
       },
-      'aria-labelledby': E
+      'aria-labelledby': T
     })
   })
 ]
@@ -248,7 +248,7 @@ children: [
   return (0, s.jsx)(p, {
 guildId: t,
 initialData: i,
-benefitTypeInput: T,
+benefitTypeInput: m,
 descriptionPlaceholder: g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_DESCRIPTION_PLACEHOLDER,
 canSubmit: null != _,
 onSave: function(e) {

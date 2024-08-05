@@ -2,10 +2,10 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(481060),
-  o = n(367907),
-  s = n(434404),
-  l = n(430824),
-  u = n(346656),
+  s = n(367907),
+  o = n(565138),
+  l = n(434404),
+  u = n(430824),
   c = n(981631),
   d = n(689938),
   _ = n(329631);
@@ -13,15 +13,15 @@ t.Z = e => {
   let {
 guildId: t,
 reportId: n
-  } = e, [E, f] = i.useState(!1), h = l.Z.getGuild(t), p = null != h;
+  } = e, [E, f] = i.useState(!1), h = u.Z.getGuild(t), p = null != h;
   i.useEffect(() => {
 f(!p);
   }, [p]);
   let m = i.useCallback(() => {
-f(!0), o.ZP.trackWithMetadata(c.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
+f(!0), s.ZP.trackWithMetadata(c.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
   guild_id: t,
   report_id: n
-}), s.Z.leaveGuild(t);
+}), l.Z.leaveGuild(t);
   }, [
 t,
 n
@@ -59,11 +59,11 @@ children: [
       (0, r.jsxs)('div', {
         className: _.guildInfo,
         children: [
-          (0, r.jsx)(u.Z, {
+          (0, r.jsx)(o.Z, {
             guild: h,
             showBadge: !1,
             animate: !1,
-            size: u.Z.Sizes.SMALL,
+            size: o.Z.Sizes.SMALL,
             'aria-label': h.name,
             className: _.icon,
             active: !0

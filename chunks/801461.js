@@ -1,10 +1,10 @@
-var r, i, a, o;
+var r, i, a, s;
 n.d(t, {
   Kq: function() {
 return i;
   },
   RN: function() {
-return s;
+return o;
   },
   Wq: function() {
 return r;
@@ -25,9 +25,9 @@ return d;
 return c;
   }
 });
-let s = /([^A-Za-z0-9_.]+)/g,
+let o = /([^A-Za-z0-9_.]+)/g,
   l = /\.+/g;
-(a = r || (r = {})).NONE = 'none', a.EDIT_DISPLAY_NAME = 'display-name', a.EDIT_USERNAME = 'username', a.PREVIEW = 'preview', a.SUGGESTION = 'suggestion', (o = i || (i = {})).APP_START = 'app start', o.NOTICE = 'notice', o.USER_SETTINGS = 'user settings', o.USER_SETTINGS_EDIT = 'user settings edit', o.YOU_TAB = 'you tab';
+(a = r || (r = {})).NONE = 'none', a.EDIT_DISPLAY_NAME = 'display-name', a.EDIT_USERNAME = 'username', a.PREVIEW = 'preview', a.SUGGESTION = 'suggestion', (s = i || (i = {})).APP_START = 'app start', s.NOTICE = 'notice', s.USER_SETTINGS = 'user settings', s.USER_SETTINGS_EDIT = 'user settings edit', s.YOU_TAB = 'you tab';
 let u = 32,
   c = 'pomelo',
   d = [

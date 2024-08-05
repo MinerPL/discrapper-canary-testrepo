@@ -1,6 +1,6 @@
 i.d(t, {
   Z: function() {
-return g;
+return f;
   }
 }), i(47120), i(724458), i(653041);
 var n = i(735250),
@@ -16,14 +16,14 @@ var n = i(735250),
   _ = i(216547),
   p = i(57716),
   m = i(981631),
-  f = i(285061);
+  g = i(285061);
 
-function g(e) {
+function f(e) {
   let {
 collection: t,
 collection: {
   id: i,
-  title: g,
+  title: f,
   application_directory_collection_items: C
 }
   } = e, [x, I] = a.useState(300), [b, N] = a.useState(4), v = parseFloat(o.Z.COLLECTION_LIST_CARD_GAP), A = (0, u.useApplicationDirectoryHistory)(e => e.guildId), E = (0, p.Z)({
@@ -53,7 +53,7 @@ E
   return (0, n.jsx)('div', {
 ref: E,
 children: (0, n.jsx)(_.Z, {
-  header: g,
+  header: f,
   headerId: T,
   tileWidth: x,
   tileMargin: v,
@@ -76,7 +76,7 @@ children: (0, n.jsx)(_.Z, {
   },
   children: (0, n.jsx)('ul', {
     'aria-labelledby': T,
-    className: f.itemsContainer,
+    className: g.itemsContainer,
     children: C.map(e => {
       let {
         id: t,
@@ -88,9 +88,9 @@ children: (0, n.jsx)(_.Z, {
           style: {
             width: x
           },
-          className: f.itemContainer,
+          className: g.itemContainer,
           children: (0, n.jsx)(c.Z, {
-            className: f.seoAnchor,
+            className: g.seoAnchor,
             href: m.Z5c.APPLICATION_DIRECTORY_PROFILE(o.id),
             children: (0, n.jsx)(d.Z, {
               application: o,

@@ -6,8 +6,8 @@ return c;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  o = n(481060),
   l = n(404975),
   u = n(576379);
 
@@ -20,17 +20,17 @@ dangerous: c = !1,
 className: d,
 'aria-label': _
   } = e;
-  return (0, r.jsx)(s.Tooltip, {
+  return (0, r.jsx)(o.Tooltip, {
 text: a,
 hideOnClick: !0,
 children: e => {
   let {
-    onMouseEnter: s,
+    onMouseEnter: o,
     onMouseLeave: E,
     onClick: f
   } = e;
   return (0, r.jsx)(l.zx, {
-    onMouseEnter: s,
+    onMouseEnter: o,
     onMouseLeave: E,
     onClick: e => {
       e.stopPropagation(), null == f || f(), t(e);
@@ -39,7 +39,7 @@ children: e => {
     'aria-label': null != _ ? _ : a,
     className: d,
     children: i.Children.map(n, e => i.isValidElement(e) ? i.cloneElement(e, {
-      className: o()(e.props.className, u.actionBarIcon)
+      className: s()(e.props.className, u.actionBarIcon)
     }) : e)
   });
 }

@@ -3,28 +3,28 @@ n.d(t, {
 return l;
   },
   u: function() {
-return s;
+return o;
   }
 });
 var r = n(564334),
   i = n(302221),
   a = n(563114);
-let o = e => {
+let s = e => {
 var t, n;
 let {
   colors: a,
-  saturationFactor: o = 1
+  saturationFactor: s = 1
 } = e;
 if (null == a || a.length < 1)
   return null;
-let s = (0, i.YD)(a),
+let o = (0, i.YD)(a),
   l = r.Z.parseString('#ffffff');
 if (null == l)
   return null;
 let u = r.Z.parseString('#36393e');
 if (null == u)
   return null;
-let c = r.Z.parseString(s);
+let c = r.Z.parseString(o);
 if (null == c)
   return null;
 let d = (0, i.AZ)(c.red, c.blue, c.green),
@@ -34,7 +34,7 @@ let d = (0, i.AZ)(c.red, c.blue, c.green),
       l
     ],
     ratio: 3,
-    saturationFactor: o
+    saturationFactor: s
   })) && void 0 !== t ? t : c,
   E = null !== (n = (0, i.k8)({
     colors: [
@@ -42,7 +42,7 @@ let d = (0, i.AZ)(c.red, c.blue, c.green),
       u
     ],
     ratio: 5,
-    saturationFactor: o
+    saturationFactor: s
   })) && void 0 !== n ? n : c,
   f = (0, i.k8)({
     colors: [
@@ -50,7 +50,7 @@ let d = (0, i.AZ)(c.red, c.blue, c.green),
       l
     ],
     ratio: 7,
-    saturationFactor: o
+    saturationFactor: s
   }),
   h = (0, i.k8)({
     colors: [
@@ -58,14 +58,14 @@ let d = (0, i.AZ)(c.red, c.blue, c.green),
       u
     ],
     ratio: 7,
-    saturationFactor: o
+    saturationFactor: s
   });
 return {
   LIGHT: {
     accentColor: null == f ? void 0 : f.toHexString(),
     backgroundColor: (0, i.xj)({
       colorRGB: _,
-      saturationFactor: o
+      saturationFactor: s
     }),
     highlightColor: null == c ? void 0 : c.toHexString(),
     opacity: (null == d ? void 0 : d.saturation) < 0.1 ? 0.35 : 0.1
@@ -74,19 +74,19 @@ return {
     accentColor: null == h ? void 0 : h.toHexString(),
     backgroundColor: (0, i.xj)({
       colorRGB: E,
-      saturationFactor: o
+      saturationFactor: s
     }),
     highlightColor: null == c ? void 0 : c.toHexString(),
     opacity: (null == d ? void 0 : d.saturation) < 0.1 ? 0.5 : 0.2
   }
 };
   },
-  s = e => {
+  o = e => {
 let {
   colors: t,
   saturationFactor: n = 1,
   shouldProcessMobileColors: r = !1
-} = e, i = o({
+} = e, i = s({
   colors: t,
   saturationFactor: n
 });
@@ -99,7 +99,7 @@ return a.Z.applyPlatformToThemedEmojiColorPalette({
 var r;
 if (null == e || e.length < 1)
   return null;
-let i = s({
+let i = o({
     colors: e,
     saturationFactor: t
   }),

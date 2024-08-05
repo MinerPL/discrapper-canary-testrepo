@@ -3,7 +3,7 @@ t.d(n, {
 return r;
   },
   K: function() {
-return u;
+return o;
   }
 });
 var l = t(735250);
@@ -23,7 +23,7 @@ return t => (0, l.jsx)(n, {
   });
 }
 
-function u(e) {
+function o(e) {
   (0, a.openModalLazy)(async () => n => (0, l.jsx)(i.Z, {
 ...n,
 guildId: e

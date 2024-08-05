@@ -1,19 +1,19 @@
 n.d(t, {
   Hl: function() {
-return s;
+return o;
   },
   Sz: function() {
 return l;
   },
   ZP: function() {
-return o;
+return s;
   }
 });
 var r = n(592125),
   i = n(271383),
   a = n(430824);
 
-function o(e) {
+function s(e) {
   let {
 message: t,
 userId: n,
@@ -31,21 +31,21 @@ suppressRoles: i
   });
 }
 
-function s(e) {
+function o(e) {
   var t, n, r, i;
   let {
 rawMessage: a,
-userId: o,
-suppressEveryone: s = !1,
+userId: s,
+suppressEveryone: o = !1,
 suppressRoles: u = !1
   } = e;
   return l({
-userId: o,
+userId: s,
 channelId: a.channel_id,
 mentionEveryone: null !== (n = a.mention_everyone) && void 0 !== n && n,
 mentionUsers: null !== (r = null === (t = a.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== r ? r : [],
 mentionRoles: null !== (i = a.mention_roles) && void 0 !== i ? i : [],
-suppressEveryone: s,
+suppressEveryone: o,
 suppressRoles: u
   });
 }
@@ -54,13 +54,13 @@ function l(e) {
   let {
 userId: t,
 channelId: n,
-mentionEveryone: o,
-mentionUsers: s,
+mentionEveryone: s,
+mentionUsers: o,
 mentionRoles: l,
 suppressEveryone: u = !1,
 suppressRoles: c = !1
   } = e;
-  if (o && !u || s.includes(t))
+  if (s && !u || o.includes(t))
 return !0;
   if (c || null == l || 0 === l.length)
 return !1;

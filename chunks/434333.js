@@ -9,8 +9,8 @@ return c;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(1561),
+  s = n.n(a),
+  o = n(1561),
   l = n(481060),
   u = n(29726);
 let c = {
@@ -29,11 +29,11 @@ let {
   iconClassName: f
 } = e;
 return (0, r.jsxs)('div', {
-  className: o()(u.error, a, _),
+  className: s()(u.error, a, _),
   ref: t,
   children: [
     (0, r.jsx)(E, {
-      className: o()(u.icon, f),
+      className: s()(u.icon, f),
       color: 'currentColor'
     }),
     (0, r.jsx)('div', {
@@ -41,7 +41,7 @@ return (0, r.jsxs)('div', {
       className: u.text,
       children: i
     }),
-    null != d ? (0, r.jsx)(s.P, {
+    null != d ? (0, r.jsx)(o.P, {
       onClick: d,
       className: u.errorClose,
       children: (0, r.jsx)(l.CloseSmallIcon, {

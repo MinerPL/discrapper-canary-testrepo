@@ -2,17 +2,17 @@ n(47120);
 var r = n(147913),
   i = n(710845),
   a = n(880027);
-let o = new i.Z('LeagueOfLegendsLifecycleManager');
-class s extends r.Z {
+let s = new i.Z('LeagueOfLegendsLifecycleManager');
+class o extends r.Z {
   handleRunningGameChange(e) {
 let {
   added: t,
   removed: n
 } = e;
 if (!!(0, a.J)('LeagueOfLegendsLifecycleManager'))
-  r(t) && o.info('League of Legends Match Started', {
+  r(t) && s.info('League of Legends Match Started', {
     added: t
-  }), r(n) && o.info('League of Legends Match Ended', {
+  }), r(n) && s.info('League of Legends Match Ended', {
     removed: n
   });
 
@@ -32,4 +32,4 @@ super(...e), t = this, n = 'actions', r = {
 }) : t[n] = r;
   }
 }
-t.Z = new s();
+t.Z = new o();

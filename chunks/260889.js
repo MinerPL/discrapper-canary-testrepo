@@ -4,8 +4,8 @@ return I;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(481060),
   l = n(287734),
   o = n(367907),
@@ -17,9 +17,9 @@ var i = n(735250),
   E = n(689938);
 
 function I(e) {
-  let t = s.useContext(_.AnalyticsContext),
+  let t = a.useContext(_.AnalyticsContext),
 n = e.voiceChannels[0],
-I = (0, a.e7)([d.Z], () => null != n && d.Z.can(h.Plq.CONNECT, n.channel));
+I = (0, s.e7)([d.Z], () => null != n && d.Z.can(h.Plq.CONNECT, n.channel));
   return null == n ? null : [
 (0, i.jsx)(r.MenuItem, {
   id: 'join-voice',

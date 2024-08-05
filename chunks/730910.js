@@ -15,7 +15,7 @@ var s = n(735250),
   _ = n(481060),
   I = n(410030),
   E = n(367907),
-  T = n(996753),
+  T = n(768762),
   m = n(626135),
   N = n(585483),
   S = n(999382),
@@ -59,9 +59,9 @@ let e = (0, L.lg)(S);
 return null != e && !f.Z.isEducationUpsellDismissed(e);
   }), F = (0, I.ZP)(), w = a.useRef(null), [{
 spring: k
-  }, H] = (0, l.useSpring)(() => ({
+  }, H] = (0, _.useSpring)(() => ({
 spring: 0
-  }));
+  }), 'animate-always');
   a.useEffect(() => {
 function e() {
   H({

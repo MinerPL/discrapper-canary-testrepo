@@ -2,12 +2,12 @@ var r = n(735250);
 n(470079);
 var i = n(433517),
   a = n(481060),
-  o = n(704587),
-  s = n(920133),
+  s = n(704587),
+  o = n(920133),
   l = n(338096);
 t.Z = {
   openDmSettingsUpsellModal(e) {
-if (!(0, o.G)({
+if (!(0, s.G)({
     location: 'DmSettingsUpsellManager'
   }))
   return;
@@ -21,6 +21,6 @@ null == t || u - t > l.k ? (i.K.set(l.G, u), (0, a.openModalLazy)(async () => {
     ...n,
     guildId: e
   });
-})) : (0, s.L)(s.Q.SUPPRESSED_BY_COOLDOWN, e);
+})) : (0, o.L)(o.Q.SUPPRESSED_BY_COOLDOWN, e);
   }
 };

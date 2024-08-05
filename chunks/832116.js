@@ -3,6 +3,6 @@ e.exports = {
   inputContainer: 'inputContainer_d16341',
   input: 'input_d16341',
   clickableGame: 'clickableGame_d16341',
-  defaultGame: 'defaultGame_d16341',
-  pills: 'pills_d16341'
+  pills: 'pills_d16341',
+  tooltip: 'tooltip_d16341'
 };

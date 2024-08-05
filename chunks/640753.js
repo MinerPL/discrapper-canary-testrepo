@@ -29,7 +29,7 @@ b,
 f,
 t,
 n
-  ]), [x, C] = s.useState(!1), R = (0, o.e7)([l.Z], () => l.Z.useReducedMotion), S = c.Yk.useSetting(), N = s.useCallback(() => {
+  ]), [x, C] = s.useState(!1), S = (0, o.e7)([l.Z], () => l.Z.useReducedMotion), R = c.Yk.useSetting(), N = s.useCallback(() => {
 a.Z.dispatch({
   type: 'BURST_REACTION_EFFECT_CLEAR',
   channelId: t,
@@ -53,7 +53,7 @@ let e = () => {
     key: u.I.RANDOM
   }));
 };
-if (x || R && !S || !S)
+if (x || S && !R || !R)
   return;
 e();
 let i = setInterval(e, 5000);
@@ -61,14 +61,14 @@ return () => {
   clearInterval(i);
 };
   }, [
-S,
+R,
 t,
 v,
 f,
 f.name,
 x,
 n,
-R
+S
   ]), null == b) ? null : (0, i.jsx)(h.Z, {
 className: E.effect,
 effect: I,

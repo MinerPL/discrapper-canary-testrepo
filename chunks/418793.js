@@ -1,6 +1,6 @@
 n.d(t, {
   v: function() {
-return s;
+return o;
   }
 }), n(47120);
 var r = n(887003),
@@ -14,7 +14,7 @@ i.xw.has(r) && (t[r] = e[n]);
   }
   return t;
 }
-let o = e => {
+let s = e => {
 let t = {
   skuId: e.sku_id,
   asset: e.asset
@@ -54,9 +54,9 @@ switch (e.type) {
     };
 }
   },
-  s = e => ({
+  o = e => ({
 assignmentMethod: e.assignment_method,
-rewards: e.rewards.map(o),
+rewards: e.rewards.map(s),
 rewardsExpireAt: e.rewards_expire_at,
 platforms: e.platforms
   });

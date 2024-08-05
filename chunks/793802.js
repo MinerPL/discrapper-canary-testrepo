@@ -2,8 +2,8 @@ var n = 'function' == typeof Symbol && Symbol.for,
   r = n ? Symbol.for('react.element') : 60103,
   i = n ? Symbol.for('react.portal') : 60106,
   a = n ? Symbol.for('react.fragment') : 60107,
-  o = n ? Symbol.for('react.strict_mode') : 60108,
-  s = n ? Symbol.for('react.profiler') : 60114,
+  s = n ? Symbol.for('react.strict_mode') : 60108,
+  o = n ? Symbol.for('react.profiler') : 60114,
   l = n ? Symbol.for('react.provider') : 60109,
   u = n ? Symbol.for('react.context') : 60110,
   c = n ? Symbol.for('react.async_mode') : 60111,
@@ -27,8 +27,8 @@ switch (t) {
       case c:
       case d:
       case a:
-      case s:
       case o:
+      case s:
       case E:
         return e;
       default:
@@ -52,7 +52,7 @@ switch (t) {
 function A(e) {
   return S(e) === d;
 }
-t.AsyncMode = c, t.ConcurrentMode = d, t.ContextConsumer = u, t.ContextProvider = l, t.Element = r, t.ForwardRef = _, t.Fragment = a, t.Lazy = p, t.Memo = h, t.Portal = i, t.Profiler = s, t.StrictMode = o, t.Suspense = E, t.isAsyncMode = function(e) {
+t.AsyncMode = c, t.ConcurrentMode = d, t.ContextConsumer = u, t.ContextProvider = l, t.Element = r, t.ForwardRef = _, t.Fragment = a, t.Lazy = p, t.Memo = h, t.Portal = i, t.Profiler = o, t.StrictMode = s, t.Suspense = E, t.isAsyncMode = function(e) {
   return A(e) || S(e) === c;
 }, t.isConcurrentMode = A, t.isContextConsumer = function(e) {
   return S(e) === u;
@@ -71,11 +71,11 @@ t.AsyncMode = c, t.ConcurrentMode = d, t.ContextConsumer = u, t.ContextProvider 
 }, t.isPortal = function(e) {
   return S(e) === i;
 }, t.isProfiler = function(e) {
-  return S(e) === s;
-}, t.isStrictMode = function(e) {
   return S(e) === o;
+}, t.isStrictMode = function(e) {
+  return S(e) === s;
 }, t.isSuspense = function(e) {
   return S(e) === E;
 }, t.isValidElementType = function(e) {
-  return 'string' == typeof e || 'function' == typeof e || e === a || e === d || e === s || e === o || e === E || e === f || 'object' == typeof e && null !== e && (e.$$typeof === p || e.$$typeof === h || e.$$typeof === l || e.$$typeof === u || e.$$typeof === _ || e.$$typeof === I || e.$$typeof === T || e.$$typeof === g || e.$$typeof === m);
+  return 'string' == typeof e || 'function' == typeof e || e === a || e === d || e === o || e === s || e === E || e === f || 'object' == typeof e && null !== e && (e.$$typeof === p || e.$$typeof === h || e.$$typeof === l || e.$$typeof === u || e.$$typeof === _ || e.$$typeof === I || e.$$typeof === T || e.$$typeof === g || e.$$typeof === m);
 }, t.typeOf = S;

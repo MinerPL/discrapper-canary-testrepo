@@ -40,8 +40,8 @@ return A;
   }
 }), n(47120);
 var r, i, a = n(664751),
-  o = n(544891),
-  s = n(749210),
+  s = n(544891),
+  o = n(749210),
   l = n(41776),
   u = n(703656),
   c = n(769654),
@@ -57,7 +57,7 @@ async function p(e, t) {
   channelId: r,
   onSuccess: i,
   joinSource: a,
-  loadId: o,
+  loadId: s,
   setsHistorySnapshot: d = !0,
   shouldNavigate: E = !0
 } = n,
@@ -71,12 +71,12 @@ p = {
     analyticsSource: t
   }
 };
-  null != h && null != h.joinedAt ? E && (0, c.X)(e, p) : (await s.Z.joinGuild(e, {
+  null != h && null != h.joinedAt ? E && (0, c.X)(e, p) : (await o.Z.joinGuild(e, {
 lurker: !0,
 source: a,
-loadId: o,
+loadId: s,
 lurkLocation: null == t ? void 0 : t.page
-  }), E && await s.Z.transitionToGuildSync(e, {
+  }), E && await o.Z.transitionToGuildSync(e, {
 ...p,
 welcomeModalChannelId: r,
 search: f.location.search
@@ -87,10 +87,10 @@ async function m(e) {
 loadId: n,
 guildId: i,
 index: a,
-analyticsContext: o,
-categoryId: s
+analyticsContext: s,
+categoryId: o
   } = e;
-  'string' == typeof o && o in r && (t = o);
+  'string' == typeof s && s in r && (t = s);
   let l = {
 page: f.ZY5.GUILD_DISCOVERY,
 object: f.qAy.CARD,
@@ -106,12 +106,12 @@ function(e) {
     index: r,
     analyticsContext: i,
     categoryId: a
-  } = e, o = {
+  } = e, s = {
     page: f.ZY5.GUILD_DISCOVERY,
     section: i
   };
-  'string' != typeof i && null != i.location && (o = i.location), E.default.track(f.rMx.GUILD_DISCOVERY_GUILD_SELECTED, {
-    location: o,
+  'string' != typeof i && null != i.location && (s = i.location), E.default.track(f.rMx.GUILD_DISCOVERY_GUILD_SELECTED, {
+    location: s,
     guild_id: n,
     load_id: t,
     card_index: r,
@@ -122,8 +122,8 @@ function(e) {
   loadId: n,
   guildId: i,
   index: a,
-  analyticsContext: o,
-  categoryId: s
+  analyticsContext: s,
+  categoryId: o
 });
 }
 
@@ -156,12 +156,12 @@ gamesYouPlayGuilds: n,
 allGuilds: r,
 categoryId: i,
 recommendationsSource: a = null
-  } = e, o = n.length, s = r.length;
+  } = e, s = n.length, o = r.length;
   E.default.track(f.rMx.GUILD_DISCOVERY_VIEWED, {
 load_id: t,
-num_guilds: o + s,
-num_guilds_recommended: o,
-num_guilds_popular: s,
+num_guilds: s + o,
+num_guilds_recommended: s,
+num_guilds_popular: o,
 recommended_guild_ids: n.map(e => e.id),
 category_id: i,
 recommendations_source: a
@@ -213,18 +213,18 @@ searchId: n,
 query: r,
 guildResults: i,
 analyticsContext: a,
-categoryId: o,
-isTagSearch: s
+categoryId: s,
+isTagSearch: o
   } = e;
   E.default.track(f.rMx.SEARCH_RESULT_VIEWED, {
-search_type: s ? f.aib.GUILD_DISCOVERY_TAG : f.aib.GUILD_DISCOVERY,
+search_type: o ? f.aib.GUILD_DISCOVERY_TAG : f.aib.GUILD_DISCOVERY,
 load_id: t,
 search_id: n,
 total_results: void 0 !== i ? i.length : null,
 guild_ids: void 0 !== i ? i.map(e => e.id) : null,
 query: r,
 location: a.location,
-category_id: o
+category_id: s
   });
 }
 
@@ -239,7 +239,7 @@ guild_size: d.Z.getMemberCount(e)
 async function R(e) {
   try {
 var t, n;
-let r = await o.tn.get({
+let r = await s.tn.get({
     url: f.ANM.GUILD_DISCOVERY,
     query: a.stringify({
       guild_ids: e

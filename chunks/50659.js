@@ -12,8 +12,8 @@ return h;
 var r = n(512722),
   i = n.n(r),
   a = n(53529),
-  o = n(436660),
-  s = n(887490);
+  s = n(436660),
+  o = n(887490);
 let l = new Set([
 '*',
 '_',
@@ -49,8 +49,8 @@ after: i
 }
 
 function d(e, t) {
-  let [n] = s.bN.node(e, t.path);
-  if (!s.LC.isText(n))
+  let [n] = o.bN.node(e, t.path);
+  if (!o.LC.isText(n))
 return {};
   let r = n.text,
 i = t.offset;
@@ -65,23 +65,23 @@ if (l.has(r.charAt(e)))
   a++;
 else
   break;
-  let o = r.substring(i, a),
+  let s = r.substring(i, a),
 u = {};
   return E({
 result: u,
-text: o,
+text: s,
 startIndex: i,
 syntax: '***',
 type1: 'italics',
 type2: 'bold'
   }), E({
 result: u,
-text: o,
+text: s,
 startIndex: i,
 syntax: '___',
 type1: 'italics',
 type2: 'underline'
-  }), _(u, o, i, '**', 'bold'), _(u, o, i, '*', 'italics'), _(u, o, i, '_', 'italics'), _(u, o, i, '__', 'underline'), _(u, o, i, '`', 'inlineCode'), _(u, o, i, '~~', 'strikethrough'), _(u, o, i, '||', 'spoiler'), u;
+  }), _(u, s, i, '**', 'bold'), _(u, s, i, '*', 'italics'), _(u, s, i, '_', 'italics'), _(u, s, i, '__', 'underline'), _(u, s, i, '`', 'inlineCode'), _(u, s, i, '~~', 'strikethrough'), _(u, s, i, '||', 'spoiler'), u;
 }
 
 function _(e, t, n, r, i) {
@@ -99,14 +99,14 @@ text: n,
 startIndex: r,
 syntax: i,
 type1: a,
-type2: o
-  } = e, s = f(n, i);
-  s >= 0 && (t[a] = {
+type2: s
+  } = e, o = f(n, i);
+  o >= 0 && (t[a] = {
 chars: i.substring(0, 1),
-location: s + r
-  }, t[o] = {
+location: o + r
+  }, t[s] = {
 chars: i.substring(1),
-location: s + r + 1
+location: o + r + 1
   });
 }
 
@@ -122,12 +122,12 @@ if (n > 0 && e.charAt(n - 1) === r || n < e.length - 1 && e.charAt(n + t.length)
 
 function h(e, t) {
   a.T.withSingleEntry(e, () => {
-s.bN.withoutNormalizing(e, () => {
+o.bN.withoutNormalizing(e, () => {
   i()(null != e.selection, 'Editor has no selection');
-  let [n, r] = s.M8.edges(e.selection), a = c(e, n, r), l = a.before[t], d = a.after[t], _ = s.bN.node(e, n.path), E = s.bN.node(e, r.path);
-  if (null == _ || null == E || !s.LC.isText(_[0]) || !s.LC.isText(E[0]))
+  let [n, r] = o.M8.edges(e.selection), a = c(e, n, r), l = a.before[t], d = a.after[t], _ = o.bN.node(e, n.path), E = o.bN.node(e, r.path);
+  if (null == _ || null == E || !o.LC.isText(_[0]) || !o.LC.isText(E[0]))
     return;
-  let f = s.C0.equals(_[1], E[1]);
+  let f = o.C0.equals(_[1], E[1]);
   if (null != l && null != d) {
     let t = {
         path: n.path,
@@ -137,16 +137,16 @@ s.bN.withoutNormalizing(e, () => {
         path: r.path,
         offset: d.location
       };
-    o.Q.delete(e, {
+    s.Q.delete(e, {
       at: i,
       distance: d.chars.length
-    }), o.Q.delete(e, {
+    }), s.Q.delete(e, {
       at: t,
       distance: l.chars.length
     });
     let a = n.offset,
       u = r.offset;
-    !s.Jz.isBefore(n, t) && (a -= l.chars.length), f && !s.Jz.isBefore(r, t) && (u -= l.chars.length), s.Jz.isAfter(r, i) && (u -= d.chars.length), o.Q.select(e, {
+    !o.Jz.isBefore(n, t) && (a -= l.chars.length), f && !o.Jz.isBefore(r, t) && (u -= l.chars.length), o.Jz.isAfter(r, i) && (u -= d.chars.length), s.Q.select(e, {
       anchor: {
         path: n.path,
         offset: Math.max(0, a)
@@ -158,26 +158,26 @@ s.bN.withoutNormalizing(e, () => {
     });
   } else {
     let i = u[t];
-    o.Q.insertText(e, i, {
+    s.Q.insertText(e, i, {
       at: r
-    }), o.Q.insertText(e, i, {
+    }), s.Q.insertText(e, i, {
       at: n
     });
     let a = _[0].text.length + i.length,
-      s = E[0].text.length + (f ? 2 * i.length : i.length);
-    o.Q.select(e, {
+      o = E[0].text.length + (f ? 2 * i.length : i.length);
+    s.Q.select(e, {
       anchor: {
         path: n.path,
         offset: Math.min(a, n.offset + i.length)
       },
       focus: {
         path: r.path,
-        offset: Math.min(s, r.offset + (f ? i.length : 0))
+        offset: Math.min(o, r.offset + (f ? i.length : 0))
       }
     });
   }
 });
-  }), s.bN.focus(e);
+  }), o.bN.focus(e);
 }
 
 function p(e, t) {
@@ -185,18 +185,18 @@ function p(e, t) {
   if (null == n)
 return;
   let r = !0;
-  for (let [i, a] of s.bN.blocks(e))
-('line' === i.type || i.type === t) && s.M8.includes(n, a) && (r = r && i.type === t);
-  s.bN.withoutNormalizing(e, () => {
-for (let [i, a] of s.bN.blocks(e))
-  s.M8.includes(n, a) && (r || 'line' !== i.type ? r && i.type === t && o.Q.setNodes(e, {
+  for (let [i, a] of o.bN.blocks(e))
+('line' === i.type || i.type === t) && o.M8.includes(n, a) && (r = r && i.type === t);
+  o.bN.withoutNormalizing(e, () => {
+for (let [i, a] of o.bN.blocks(e))
+  o.M8.includes(n, a) && (r || 'line' !== i.type ? r && i.type === t && s.Q.setNodes(e, {
     type: 'line'
   }, {
     at: a
-  }) : o.Q.setNodes(e, {
+  }) : s.Q.setNodes(e, {
     type: t
   }, {
     at: a
   }));
-  }), s.bN.focus(e);
+  }), o.bN.focus(e);
 }

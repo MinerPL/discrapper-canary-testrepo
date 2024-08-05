@@ -6,7 +6,7 @@ return c;
 return u;
   },
   V6: function() {
-return s;
+return o;
   },
   uF: function() {
 return d;
@@ -18,8 +18,8 @@ return l;
 var r = n(673750),
   i = n(592125),
   a = n(981631),
-  o = n(689938);
-class s extends Error {}
+  s = n(689938);
+class o extends Error {}
 class l extends Error {}
 let u = new Set([
   a.evJ.AUTOMOD_MESSAGE_BLOCKED,
@@ -40,14 +40,14 @@ return null;
 return r;
   if (null == t)
 return null;
-  let s = i.Z.getChannel(t);
-  return (null == s ? void 0 : s.isThread()) ? o.Z.Messages.THREAD_AUTOMOD_ERROR : ((null == s ? void 0 : s.isForumPost()) || (null == s ? void 0 : s.isForumLikeChannel())) && (n === a.evJ.AUTOMOD_TITLE_BLOCKED || n === a.evJ.AUTOMOD_MESSAGE_BLOCKED) ? o.Z.Messages.FORUM_POST_AUTOMOD_ERROR : null;
+  let o = i.Z.getChannel(t);
+  return (null == o ? void 0 : o.isThread()) ? s.Z.Messages.THREAD_AUTOMOD_ERROR : ((null == o ? void 0 : o.isForumPost()) || (null == o ? void 0 : o.isForumLikeChannel())) && (n === a.evJ.AUTOMOD_TITLE_BLOCKED || n === a.evJ.AUTOMOD_MESSAGE_BLOCKED) ? s.Z.Messages.FORUM_POST_AUTOMOD_ERROR : null;
 }
 
 function d(e, t) {
   let n = c(t);
-  return null != n ? n : null == e ? o.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE : function(e) {
+  return null != n ? n : null == e ? s.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE : function(e) {
 let t = i.Z.getChannel(e.message.channelId);
-return (0, r.Bz)(e) ? o.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_EDIT_NOTICE : (null == t ? void 0 : t.isThread()) ? o.Z.Messages.THREAD_AUTOMOD_ERROR : (null == t ? void 0 : t.isForumPost()) || (null == t ? void 0 : t.isForumLikeChannel()) ? o.Z.Messages.FORUM_POST_AUTOMOD_ERROR : o.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE;
+return (0, r.Bz)(e) ? s.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_EDIT_NOTICE : (null == t ? void 0 : t.isThread()) ? s.Z.Messages.THREAD_AUTOMOD_ERROR : (null == t ? void 0 : t.isForumPost()) || (null == t ? void 0 : t.isForumLikeChannel()) ? s.Z.Messages.FORUM_POST_AUTOMOD_ERROR : s.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE;
   }(e);
 }

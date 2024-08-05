@@ -1,35 +1,35 @@
-t.d(e, {
+t.d(n, {
   Z: function() {
-return u;
+return d;
   }
 });
 var i = t(735250);
 t(470079);
-var l = t(120356),
-  s = t.n(l),
-  a = t(689938),
-  r = t(739720),
+var a = t(120356),
+  l = t.n(a),
+  r = t(689938),
+  o = t(739720),
   c = t(296507),
-  o = t(866402);
+  s = t(866402);
 
-function u(n) {
+function d(e) {
   let {
-className: e,
+className: n,
 children: t
-  } = n;
+  } = e;
   return (0, i.jsxs)('div', {
-className: s()(r.container, e),
+className: l()(o.container, n),
 children: [
   (0, i.jsx)('img', {
-    alt: a.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
-    src: o,
-    className: s()(r.sparkleIcon, r.sparkleBottom)
+    alt: r.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
+    src: s,
+    className: l()(o.sparkleIcon, o.sparkleBottom)
   }),
   t,
   (0, i.jsx)('img', {
-    alt: a.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
+    alt: r.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
     src: c,
-    className: s()(r.sparkleIcon, r.sparkleTop)
+    className: l()(o.sparkleIcon, o.sparkleTop)
   })
 ]
   });

@@ -17,8 +17,8 @@ function d(e) {
 application: _,
 onClick: p,
 imageSrc: m,
-className: f,
-animatesOnHover: g
+className: g,
+animatesOnHover: f
   } = e, C = (0, l.Z)({
 application: _
   }), x = null === (t = _.categories) || void 0 === t ? void 0 : t[0], I = (null !== (u = null === (i = _.directory_entry) || void 0 === i ? void 0 : i.guild_count) && void 0 !== u ? u : 0) > 0 || C.length > 0, b = a.useCallback(() => {
@@ -37,7 +37,7 @@ guildIconSize: o.x.SMALL,
 compact: !0
   });
   return (0, n.jsx)(s.Z, {
-className: f,
+className: g,
 imageSrc: m,
 onClick: b,
 header: _.name,
@@ -61,7 +61,7 @@ subheader: (0, n.jsxs)('div', {
     })
   ]
 }),
-animatesOnHover: g,
+animatesOnHover: f,
 children: null != _.description && (0, n.jsx)('div', {
   className: c.__invalid_children,
   children: (0, n.jsx)(r.Text, {

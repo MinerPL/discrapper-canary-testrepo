@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var s = n(266067),
-  a = n(442837),
+var a = n(266067),
+  s = n(442837),
   r = n(481060),
   l = n(410575),
   o = n(730749),
@@ -16,14 +16,14 @@ var s = n(266067),
   g = n(474936),
   p = n(689938),
   T = n(314974);
-let S = a.ZP.connectStores([E.default], () => ({
+let S = s.ZP.connectStores([E.default], () => ({
   user: E.default.getCurrentUser()
 }))((0, c.Z)((0, o.Z)(e => {
   let {
 analyticsLocations: t
   } = (0, u.ZP)(d.Z.HOME_PAGE_PREMIUM_TAB), {
 isAuthenticated: n,
-user: a
+user: s
   } = e;
   return n ? (0, i.jsxs)('div', {
 className: T.homeWrapperNormal,
@@ -46,7 +46,7 @@ children: [
   }),
   (0, i.jsx)(u.Gt, {
     value: t,
-    children: null == a ? (0, i.jsx)(I.Z, {
+    children: null == s ? (0, i.jsx)(I.Z, {
       align: I.Z.Align.CENTER,
       justify: I.Z.Justify.CENTER,
       children: (0, i.jsx)(r.Spinner, {
@@ -57,7 +57,7 @@ children: [
     })
   })
 ]
-  }) : (0, i.jsx)(s.l_, {
+  }) : (0, i.jsx)(a.l_, {
 to: m.Z5c.LOGIN
   });
 })));

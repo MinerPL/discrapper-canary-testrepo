@@ -1,41 +1,44 @@
 t.d(n, {
-  Z: function() {
+  H: function() {
+return b;
+  },
+  o: function() {
 return U;
   }
-}), t(47120), t(518263), t(970173), t(520712), t(268111), t(941497), t(32026), t(480839), t(744285), t(492257), t(873817), t(863942), t(642549), t(653041);
+}), t(47120), t(518263), t(970173), t(520712), t(268111), t(941497), t(32026), t(480839), t(744285), t(492257), t(873817), t(863942), t(642549), t(653041), t(724458);
 var l = t(735250),
   s = t(470079),
   a = t(120356),
-  i = t.n(a),
-  r = t(788900),
+  r = t.n(a),
+  i = t(788900),
   o = t(268146),
-  u = t(442837),
-  c = t(141038),
+  c = t(442837),
+  u = t(141038),
   d = t(846519),
   m = t(481060),
   E = t(224706),
   _ = t(594190),
   S = t(569984),
   g = t(918701),
-  h = t(977156),
-  C = t(433811),
+  C = t(977156),
+  h = t(28798),
   N = t(131951),
   Z = t(449224),
   I = t(285952),
   x = t(643095),
   f = t(358085),
-  A = t(463727),
-  R = t(855403),
+  R = t(463727),
+  A = t(855403),
   T = t(989941),
   v = t(958707),
   L = t(133179),
-  M = t(46140),
-  p = t(65154),
+  p = t(46140),
+  M = t(65154),
   O = t(689938),
   j = t(511923);
 async function P() {
   let e = N.Z.getVideoDevices(),
-n = (0, c.Z)(N.Z.getMediaEngine(), [
+n = (0, u.Z)(N.Z.getMediaEngine(), [
   o.vA.WINDOW,
   o.vA.SCREEN
 ], {
@@ -46,7 +49,7 @@ t = D(),
 l = await t,
 s = await n,
 a = s.filter(e => e.id.startsWith(o.vA.SCREEN)),
-i = function(e, n) {
+r = function(e, n) {
   let t = {};
   return n.forEach(e => {
     t[e.id] = e;
@@ -54,7 +57,7 @@ i = function(e, n) {
     t[e.id] = e;
   }), Object.values(t);
 }(s.filter(e => e.id.startsWith(o.vA.WINDOW)), l),
-u = [
+c = [
   'GQgGHISKZ5aYqYeYhX9isDUHGw',
   'bAgKFITWhoVvmHVRuokCdjVQaA',
   'XAgGDIJ/ipadd3iCiYUcWpCZBA',
@@ -68,17 +71,17 @@ u = [
   '4PgJJIJVl3eAaod2iJeHj7tE8Q'
 ];
   return {
-windowSources: i,
+windowSources: r,
 screenSources: a,
 cameraSources: Object.entries(e).filter(e => {
   let [n, t] = e;
   return !t.disabled;
 }).map((e, n) => {
-  let [t, l] = e, s = u[n % u.length], a = Uint8Array.from(atob(s), e => e.charCodeAt(0)), i = (0, r.xS)(a);
+  let [t, l] = e, s = c[n % c.length], a = Uint8Array.from(atob(s), e => e.charCodeAt(0)), r = (0, i.xS)(a);
   return {
     id: 'camera:' + l.id,
     name: l.name,
-    url: i
+    url: r
   };
 })
   };
@@ -108,7 +111,7 @@ return null != t && null != l && null != s ? {
 function G(e) {
   let n = (0, f.isWindows)() ? (0, T.Z)(_.ZP, Z.Z) : null,
 t = _.ZP.getRunningGames();
-  return null != n && (0, R.Z)(e.id, n.windowHandle) ? 2 : null != t.find(n => (0, R.Z)(e.id, n.windowHandle)) ? 1 : 0;
+  return null != n && (0, A.Z)(e.id, n.windowHandle) ? 2 : null != t.find(n => (0, A.Z)(e.id, n.windowHandle)) ? 1 : 0;
 }
 
 function U(e) {
@@ -117,25 +120,25 @@ selectedSource: n,
 onChangeSelectedSource: t
   } = e, {
 enableGoLiveCaptureCard: a
-  } = A.Z.useExperiment({
+  } = R.Z.useExperiment({
 location: 'GoLive_Source_Select'
-  }), r = N.Z.supports(p.AN.GO_LIVE_HARDWARE), [c, E] = s.useState(null), [Z, f] = s.useState(null), [T, D] = s.useState(null), U = null != T && T.length > 0, [b, w] = s.useState(o.vA.WINDOW), [B, y] = s.useState(!1), V = s.useRef(null), k = s.useRef(new d.Xp()), H = (0, u.e7)([_.ZP], () => _.ZP.getRunningGames()), W = function(e, n, t) {
-let l = (0, h.Zy)({
-  location: M.dr.STREAM_SOURCE_SELECT
+  }), i = N.Z.supports(M.AN.GO_LIVE_HARDWARE), [u, E] = s.useState(null), [Z, f] = s.useState(null), [T, D] = s.useState(null), U = null != T && T.length > 0, [b, w] = s.useState(o.vA.WINDOW), [k, B] = s.useState(!1), V = s.useRef(null), y = s.useRef(new d.Xp()), W = (0, c.e7)([_.ZP], () => _.ZP.getRunningGames()), H = function(e, n, t) {
+let l = (0, C.Zy)({
+  location: p.dr.STREAM_SOURCE_SELECT
 });
 return s.useMemo(() => {
   if (null == t || !l)
     return null;
   for (let l of t) {
     var s, a;
-    let t = n.find(e => (0, R.Z)(l.id, e.windowHandle));
+    let t = n.find(e => (0, A.Z)(l.id, e.windowHandle));
     if ((null == t ? void 0 : t.id) == null)
       continue;
-    let i = (0, g.lQ)(e, t.id);
-    if (null != i && (null === (s = i.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null && (null === (a = i.userStatus) || void 0 === a ? void 0 : a.completedAt) == null)
+    let r = (0, g.lQ)(e, t.id);
+    if (null != r && (null === (s = r.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null && (null === (a = r.userStatus) || void 0 === a ? void 0 : a.completedAt) == null)
       return {
         source: l,
-        quest: i
+        quest: r
       };
   }
   return null;
@@ -145,12 +148,12 @@ return s.useMemo(() => {
   n,
   t
 ]);
-  }((0, u.e7)([S.Z], () => S.Z.quests), H, Z), F = s.useMemo(() => null == Z ? null : [...Z].sort((e, n) => (null == W ? void 0 : W.source.id) === e.id ? -1 : (null == W ? void 0 : W.source.id) === n.id ? 1 : G(n) - G(e)), [
-W,
+  }((0, c.e7)([S.Z], () => S.Z.quests), W, Z), F = s.useMemo(() => null == Z ? null : [...Z].sort((e, n) => (null == H ? void 0 : H.source.id) === e.id ? -1 : (null == H ? void 0 : H.source.id) === n.id ? 1 : G(n) - G(e)), [
+H,
 Z
   ]);
   s.useEffect(() => {
-let e = k.current;
+let e = y.current;
 return P().then(e => {
   let {
     screenSources: n,
@@ -172,7 +175,7 @@ return P().then(e => {
   let z = s.useCallback(e => {
   if (null !== e) {
     var n;
-    V.current = e, y((n = !e.isScrolledToTop(), n));
+    V.current = e, B((n = !e.isScrolledToTop(), n));
   }
 }, []),
 K = function(e) {
@@ -180,7 +183,7 @@ K = function(e) {
     case o.vA.WINDOW:
       return F;
     case o.vA.SCREEN:
-      return c;
+      return u;
     case o.vA.CAMERA:
       return T;
   }
@@ -197,7 +200,7 @@ let {
   id: s
 } = e, a = (null == n ? void 0 : n.id) === s;
 return (0, l.jsx)(m.Clickable, {
-  className: i()(j.tile, {
+  className: r()(j.tile, {
     [j.selected]: a
   }),
   onClick: () => t(e, null),
@@ -210,7 +213,7 @@ return (0, l.jsx)(m.Clickable, {
 
   function J() {
 let e = V.current;
-null != e && y(!e.isScrolledToTop());
+null != e && B(!e.isScrolledToTop());
   }
   return (0, l.jsxs)(s.Fragment, {
 children: [
@@ -218,7 +221,7 @@ children: [
     className: j.segmentContainer,
     children: [
       (0, l.jsx)(v.Z, {
-        separator: B
+        separator: k
       }),
       (0, l.jsx)(m.SegmentedControl, {
         options: function() {
@@ -231,7 +234,7 @@ children: [
               value: o.vA.SCREEN
             }
           ];
-          return a && r && U && e.push({
+          return a && i && U && e.push({
             name: O.Z.Messages.GO_LIVE_MODAL_CAPTURE,
             value: o.vA.CAMERA
           }), e;
@@ -266,14 +269,102 @@ children: [
     className: j.sourceScroller,
     onScroll: J,
     children: [
-      b === o.vA.WINDOW && null != W && (0, l.jsx)(C.Z, {
-        quest: W.quest
+      b === o.vA.WINDOW && null != H && (0, l.jsx)(h.Z, {
+        quest: H.quest
       }),
       (0, l.jsx)(x.Z, {
         layout: x.Z.Layout.WRAP,
         columns: 2,
         className: j.sourceContainer,
         children: Y
+      })
+    ]
+  })
+]
+  });
+}
+
+function b(e) {
+  let {
+onSourceSelect: n
+  } = e, t = s.useMemo(() => ({
+'prepicked:window': O.Z.Messages.GO_LIVE_MODAL_WINDOW,
+'prepicked:screen': O.Z.Messages.GO_LIVE_MODAL_SCREEN
+  }), []), [a, r] = s.useState([]), [i, o] = s.useState(t), c = s.useRef(new d.Xp());
+  s.useEffect(() => {
+let e = c.current,
+  n = () => {
+    let e = Object.entries(N.Z.getVideoDevices()).filter(e => {
+      let [n, t] = e;
+      return !t.disabled;
+    });
+    r(e), o({
+      ...t,
+      ...e.reduce((e, n) => {
+        let [t, l] = n;
+        return {
+          ...e,
+          ['camera:' + t]: l.name
+        };
+      }, {})
+    });
+  };
+return n(), e.start(1000, n), () => {
+  e.stop();
+};
+  }, [t]);
+  let u = s.useRef({}),
+E = s.useCallback(e => {
+  var t;
+  let {
+    value: l
+  } = e;
+  n({
+    id: l,
+    name: null !== (t = i[l]) && void 0 !== t ? t : '',
+    url: ''
+  });
+}, [
+  n,
+  i
+]);
+  return u.current = {
+'prepicked:window': O.Z.Messages.GO_LIVE_MODAL_WINDOW,
+'prepicked:screen': O.Z.Messages.GO_LIVE_MODAL_SCREEN,
+...a
+  }, (0, l.jsxs)('div', {
+children: [
+  (0, l.jsx)(m.RadioGroup, {
+    className: j.nativePickerContainer,
+    onChange: E,
+    options: [{
+        name: O.Z.Messages.GO_LIVE_MODAL_WINDOW,
+        value: 'prepicked:window'
+      },
+      {
+        name: O.Z.Messages.GO_LIVE_MODAL_SCREEN,
+        value: 'prepicked:screen'
+      }
+    ]
+  }),
+  0 === a.length ? null : (0, l.jsxs)('div', {
+    children: [
+      (0, l.jsx)(m.Text, {
+        className: j.nativePickerLabel,
+        variant: 'text-sm/bold',
+        color: 'interactive-normal',
+        children: O.Z.Messages.GO_LIVE_MODAL_CAPTURE
+      }),
+      (0, l.jsx)(m.RadioGroup, {
+        className: j.nativePickerContainer,
+        onChange: E,
+        options: a.map(e => {
+          let [n, t] = e;
+          return {
+            name: t.name,
+            value: 'camera:' + t.id
+          };
+        })
       })
     ]
   })

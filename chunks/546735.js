@@ -4,8 +4,8 @@ return r;
   }
 });
 var i = n(470079),
-  s = n(246364),
-  a = n(308083);
+  a = n(246364),
+  s = n(308083);
 
 function r(e) {
   let {
@@ -19,7 +19,7 @@ interests: c,
 description: d,
 tag: u,
 verificationForm: _
-  } = t, h = i.useMemo(() => null != _ && _.formFields.some(e => !(0, s.J)(e)), [_]), E = i.useMemo(() => Array.from(c).filter(e => !a.WZ.has(e) && !a.gh.has(e)), [c]), I = i.useCallback(() => {
+  } = t, h = i.useMemo(() => null != _ && _.formFields.some(e => !(0, a.J)(e)), [_]), E = i.useMemo(() => Array.from(c).filter(e => !s.WZ.has(e) && !s.gh.has(e)), [c]), I = i.useCallback(() => {
 n(r + 1);
   }, [
 r,
@@ -31,17 +31,17 @@ r,
 n
   ]), g = i.useCallback(e => n(e), [n]), p = i.useMemo(() => {
 switch (r) {
-  case a.Wy.GAMES:
+  case s.Wy.GAMES:
     return 0 === l.size;
-  case a.Wy.PLAYSTYLE:
-    return o === a.zv.NONE;
-  case a.Wy.INTERESTS:
+  case s.Wy.PLAYSTYLE:
+    return o === s.zv.NONE;
+  case s.Wy.INTERESTS:
     return E.length < 3;
-  case a.Wy.DESCRIPTION:
+  case s.Wy.DESCRIPTION:
     return 0 === d.length;
-  case a.Wy.CUSTOMIZE_TAG_BADGE:
+  case s.Wy.CUSTOMIZE_TAG_BADGE:
     return u.length < 2;
-  case a.Wy.MEMBER_APPLICATION:
+  case s.Wy.MEMBER_APPLICATION:
     return !h;
   default:
     return !1;

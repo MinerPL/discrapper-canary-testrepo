@@ -22,6 +22,7 @@ n.r(e.exports = {
   secondaryButton: 'secondaryButton_f40049',
   secondaryIcon: 'secondaryIcon_f40049',
   favoriteIconFavorite: 'favoriteIconFavorite_f40049',
-  playIcon: 'playIcon_f40049',
+  primaryIcon: 'primaryIcon_f40049',
+  primaryIconTopLevel: 'primaryIconTopLevel_f40049',
   unavailableTooltip: 'unavailableTooltip_f40049'
 });

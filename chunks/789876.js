@@ -1,8 +1,8 @@
 var r;
 r = function() {
   var e, t, r, i, a = 'undefined' != typeof window ? window : (n.g, n.g),
-o = a.cancelRequestAnimationFrame && a.requestAnimationFrame || setTimeout,
-s = a.cancelRequestAnimationFrame || clearTimeout,
+s = a.cancelRequestAnimationFrame && a.requestAnimationFrame || setTimeout,
+o = a.cancelRequestAnimationFrame || clearTimeout,
 l = [],
 u = 0,
 c = !1,
@@ -34,7 +34,7 @@ I = function(e) {
 });
 
   function T() {
-125 != E && (d = 7, E = 125, _ = 35, c && (c && (i && s(i), r && clearTimeout(r), c = !1), A())), I();
+125 != E && (d = 7, E = 125, _ = 35, c && (c && (i && o(i), r && clearTimeout(r), c = !1), A())), I();
   }
 
   function g() {
@@ -42,7 +42,7 @@ i = null, r = setTimeout(N, 0);
   }
 
   function S() {
-r = null, o(g);
+r = null, s(g);
   }
 
   function A() {
@@ -51,9 +51,9 @@ if (!c)
   }
 
   function N() {
-var n, i, a, o = d > 9 ? 9 : 1;
+var n, i, a, s = d > 9 ? 9 : 1;
 if (h = Date.now(), c = !1, r = null, u > 2 || h - t - 50 < e)
-  for (i = 0, a = l.length; i < a && m.timeRemaining() > o; i++)
+  for (i = 0, a = l.length; i < a && m.timeRemaining() > s; i++)
     n = l.shift(), p++, n && n(m);
 l.length ? A() : u = 0;
   }

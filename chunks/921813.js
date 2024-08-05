@@ -5,8 +5,8 @@ return v;
 });
 var r = n(735250);
 n(470079);
-var i = n(481060),
-  s = n(680295),
+var s = n(481060),
+  i = n(680295),
   l = n(481046),
   o = n(318661),
   a = n(721987),
@@ -52,7 +52,7 @@ user: t,
 guildId: null == n ? void 0 : n.id,
 avatarDecorationOverride: T,
 avatarOverride: A,
-size: i.AvatarSizes.SIZE_80,
+size: s.AvatarSizes.SIZE_80,
 showPending: !0
   }), G = (0, f.ZT)({
 pendingProfileEffectId: R,
@@ -137,7 +137,7 @@ children: [
     hideMessageInput: L,
     hideExampleButton: U
   }),
-  null != G && (0, r.jsx)(s.Z, {
+  null != G && (0, r.jsx)(i.Z, {
     profileEffectId: G
   })
 ]

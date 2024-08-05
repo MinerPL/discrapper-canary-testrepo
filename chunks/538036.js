@@ -3,7 +3,7 @@ var r = n(981631);
 let i = [],
   a = !1;
 
-function o() {
+function s() {
   let e = window.navigator.connection;
   return null == e ? {
 type: r.IWh.UNKNOWN,
@@ -14,8 +14,8 @@ effectiveSpeed: e.effectiveType
   };
 }
 
-function s() {
-  let e = o();
+function o() {
+  let e = s();
   i.forEach(t => t(e));
 }
 t.Z = {
@@ -38,7 +38,7 @@ t = e, i.push(t),
     if (!0 === a)
       return;
     let e = window.navigator.connection;
-    null != e && (a = !0, e.addEventListener('change', s));
+    null != e && (a = !0, e.addEventListener('change', o));
   }();
   },
   removeChangeCallback(e) {
@@ -48,11 +48,11 @@ t = e, i.push(t),
     if (!1 === a)
       return;
     let e = window.navigator.connection;
-    null != e && 0 === i.length && null != e && (e.removeEventListener('change', s), a = !1);
+    null != e && 0 === i.length && null != e && (e.removeEventListener('change', o), a = !1);
   }());
 }(e);
   },
-  getNetworkInformation: () => Promise.resolve(o()),
+  getNetworkInformation: () => Promise.resolve(s()),
   isOnline() {
 let e = navigator.onLine;
 return void 0 === e || e;

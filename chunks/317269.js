@@ -1,230 +1,230 @@
-a.d(n, {
+n.d(s, {
   TB: function() {
-return m;
+return j;
   },
   VY: function() {
-return p;
+return T;
   },
   ZP: function() {
-return L;
+return N;
   }
-}), a(47120), a(411104);
-var t = a(735250),
-  o = a(470079),
-  r = a(512722),
-  i = a.n(r),
-  _ = a(442837),
-  s = a(481060),
-  I = a(16084),
-  l = a(987209),
-  c = a(179118),
-  u = a(912788),
-  d = a(509545),
-  f = a(55563),
-  N = a(74538),
-  T = a(741245),
-  C = a(474936),
-  E = a(981631),
-  R = a(689938),
-  M = a(308445);
+}), n(47120), n(411104);
+var t = n(735250),
+  i = n(470079),
+  r = n(512722),
+  l = n.n(r),
+  a = n(442837),
+  o = n(481060),
+  C = n(16084),
+  d = n(987209),
+  u = n(179118),
+  c = n(912788),
+  _ = n(509545),
+  p = n(55563),
+  x = n(74538),
+  L = n(741245),
+  h = n(474936),
+  f = n(981631),
+  I = n(689938),
+  E = n(308445);
 
-function O(e) {
-  var n, a;
-  let o, {
+function M(e) {
+  var s, n;
+  let i, {
   planId: r,
-  startingPremiumSubscriptionPlanId: s,
-  paymentSourceType: I
+  startingPremiumSubscriptionPlanId: o,
+  paymentSourceType: C
 } = e,
-[l, c] = (0, _.Wu)([d.Z], () => [
-  d.Z.get(s),
-  d.Z.get(r)
+[d, u] = (0, a.Wu)([_.Z], () => [
+  _.Z.get(o),
+  _.Z.get(r)
 ]);
-  if (i()(null != l && null != c, 'Missing startingPlan or newPlan'), n = s, a = r, C.Y1.indexOf(n) < C.Y1.indexOf(a))
+  if (l()(null != d && null != u, 'Missing startingPlan or newPlan'), s = o, n = r, h.Y1.indexOf(s) < h.Y1.indexOf(n))
 switch (r) {
-  case C.Xh.PREMIUM_MONTH_TIER_1:
-    o = R.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1, E.X7u.has(null != I ? I : E.HeQ.UNKNOWN) && (o = R.Z.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format());
+  case h.Xh.PREMIUM_MONTH_TIER_1:
+    i = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1, f.X7u.has(null != C ? C : f.HeQ.UNKNOWN) && (i = I.Z.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format());
     break;
-  case C.Xh.PREMIUM_MONTH_TIER_2:
-    o = R.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_MONTH, E.X7u.has(null != I ? I : E.HeQ.UNKNOWN) && (o = R.Z.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_2.format());
+  case h.Xh.PREMIUM_MONTH_TIER_2:
+    i = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_MONTH, f.X7u.has(null != C ? C : f.HeQ.UNKNOWN) && (i = I.Z.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_2.format());
     break;
-  case C.Xh.PREMIUM_YEAR_TIER_1:
-    o = R.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_1_YEAR, E.X7u.has(null != I ? I : E.HeQ.UNKNOWN) && (o = R.Z.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_UPGRADE_TIER_1_YEAR.format());
+  case h.Xh.PREMIUM_YEAR_TIER_1:
+    i = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_1_YEAR, f.X7u.has(null != C ? C : f.HeQ.UNKNOWN) && (i = I.Z.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_UPGRADE_TIER_1_YEAR.format());
     break;
-  case C.Xh.PREMIUM_YEAR_TIER_2:
-    o = R.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_YEAR.format({
-      numFreeGuildSubscriptions: C.cb
-    }), E.X7u.has(null != I ? I : E.HeQ.UNKNOWN) && (o = R.Z.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_UPGRADE_TIER_2_YEAR.format({
-      numFreeGuildSubscriptions: C.cb
+  case h.Xh.PREMIUM_YEAR_TIER_2:
+    i = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_YEAR.format({
+      numFreeGuildSubscriptions: h.cb
+    }), f.X7u.has(null != C ? C : f.HeQ.UNKNOWN) && (i = I.Z.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_UPGRADE_TIER_2_YEAR.format({
+      numFreeGuildSubscriptions: h.cb
     }));
     break;
-  case C.Xh.PREMIUM_3_MONTH_TIER_2:
-  case C.Xh.PREMIUM_6_MONTH_TIER_2:
-    o = R.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_MULTI_MONTH;
+  case h.Xh.PREMIUM_3_MONTH_TIER_2:
+  case h.Xh.PREMIUM_6_MONTH_TIER_2:
+    i = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_MULTI_MONTH;
     break;
-  case C.Xh.PREMIUM_MONTH_TIER_0:
-  case C.Xh.PREMIUM_YEAR_TIER_0:
-    o = R.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TO_TIER_0;
+  case h.Xh.PREMIUM_MONTH_TIER_0:
+  case h.Xh.PREMIUM_YEAR_TIER_0:
+    i = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TO_TIER_0;
     break;
   default:
     throw Error('Unexpected planId: '.concat(r));
 }
-  else if (l.skuId === C.Si.TIER_2 && c.skuId === C.Si.TIER_1)
-o = R.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_TO_TIER_1;
+  else if (d.skuId === h.Si.TIER_2 && u.skuId === h.Si.TIER_1)
+i = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_TO_TIER_1;
   else
-switch (c.skuId) {
-  case C.Si.TIER_0:
-    o = R.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TO_TIER_0;
+switch (u.skuId) {
+  case h.Si.TIER_0:
+    i = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TO_TIER_0;
     break;
-  case C.Si.TIER_1:
-    o = R.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1_YEAR_TO_MONTH;
+  case h.Si.TIER_1:
+    i = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1_YEAR_TO_MONTH;
     break;
-  case C.Si.TIER_2:
-    o = 1 !== l.intervalCount ? R.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_GENERIC_TO_MONTH : R.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_YEAR_TO_MONTH;
+  case h.Si.TIER_2:
+    i = 1 !== d.intervalCount ? I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_GENERIC_TO_MONTH : I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_YEAR_TO_MONTH;
     break;
   default:
-    throw Error('Unexpected skuId: '.concat(c.skuId));
+    throw Error('Unexpected skuId: '.concat(u.skuId));
 }
   return (0, t.jsx)('div', {
-className: M.text,
-children: o
+className: E.text,
+children: i
   });
 }
 
-function L(e) {
-  let n, a, {
+function N(e) {
+  let s, n, {
   planId: r,
-  enableNoPaymentTrial: l,
-  startingPremiumSubscriptionPlanId: c,
-  onClose: u,
-  followupSKUInfo: L,
-  isDowngrade: m,
-  hideClose: p,
+  enableNoPaymentTrial: d,
+  startingPremiumSubscriptionPlanId: u,
+  onClose: c,
+  followupSKUInfo: N,
+  isDowngrade: j,
+  hideClose: T,
   postSuccessGuild: g,
-  paymentSourceType: A
+  paymentSourceType: m
 } = e,
 {
-  theme: P
-} = (0, s.useThemeContext)(),
-S = (0, _.e7)([f.Z], () => null != L ? f.Z.get(L.id) : null);
-  o.useEffect(() => {
-if (null == L || null != S)
+  theme: A
+} = (0, o.useThemeContext)(),
+O = (0, a.e7)([p.Z], () => null != N ? p.Z.get(N.id) : null);
+  i.useEffect(() => {
+if (null == N || null != O)
   return;
 let {
   applicationId: e,
-  id: n
-} = L;
-(0, I.$N)(e, n).catch(E.VqG);
+  id: s
+} = N;
+(0, C.$N)(e, s).catch(f.VqG);
   }, [
-L,
-S
+N,
+O
   ]);
-  let h = e => {
-if (e.skuId === C.Si.TIER_0)
-  return E.X7u.has(null != A ? A : E.HeQ.UNKNOWN) ? R.Z.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format() : R.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_0;
-if (e.skuId === C.Si.TIER_1)
-  return E.X7u.has(null != A ? A : E.HeQ.UNKNOWN) ? R.Z.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format() : R.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1;
-return E.X7u.has(null != A ? A : E.HeQ.UNKNOWN) ? R.Z.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_2.format() : l ? R.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_NO_PAYMENT_TRIAL : R.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2;
+  let S = e => {
+if (e.skuId === h.Si.TIER_0)
+  return f.X7u.has(null != m ? m : f.HeQ.UNKNOWN) ? I.Z.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format() : I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_0;
+if (e.skuId === h.Si.TIER_1)
+  return f.X7u.has(null != m ? m : f.HeQ.UNKNOWN) ? I.Z.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format() : I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1;
+return f.X7u.has(null != m ? m : f.HeQ.UNKNOWN) ? I.Z.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_2.format() : d ? I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_NO_PAYMENT_TRIAL : I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2;
   };
-  if (null != S)
-n = (0, t.jsx)('div', {
-  className: M.text,
-  children: R.Z.Messages.PREMIUM_PAYMENT_CONFIRMATION_BLURB_IAP.format({
-    skuName: S.name
+  if (null != O)
+s = (0, t.jsx)('div', {
+  className: E.text,
+  children: I.Z.Messages.PREMIUM_PAYMENT_CONFIRMATION_BLURB_IAP.format({
+    skuName: O.name
   })
 });
-  else if (null != c)
-n = (0, t.jsx)(O, {
+  else if (null != u)
+s = (0, t.jsx)(M, {
   planId: r,
-  startingPremiumSubscriptionPlanId: c
+  startingPremiumSubscriptionPlanId: u
 });
   else if (null != g) {
-let e = d.Z.get(r);
-i()(null != e, 'Missing plan'), n = (0, t.jsxs)(t.Fragment, {
+let e = _.Z.get(r);
+l()(null != e, 'Missing plan'), s = (0, t.jsxs)(t.Fragment, {
   children: [
     (0, t.jsx)('div', {
-      className: M.text,
-      children: h(e)
+      className: E.text,
+      children: S(e)
     }),
     (0, t.jsx)('div', {
-      className: M.text,
-      children: R.Z.Messages.BILLING_POST_PURCHASE_JOIN_GUILD_FOR_EMOJI.format({
+      className: E.text,
+      children: I.Z.Messages.BILLING_POST_PURCHASE_JOIN_GUILD_FOR_EMOJI.format({
         guildName: g.name
       })
     })
   ]
 });
   } else {
-let e = d.Z.get(r);
-i()(null != e, 'Missing plan'), n = (0, t.jsx)('div', {
-  className: M.text,
-  children: h(e)
+let e = _.Z.get(r);
+l()(null != e, 'Missing plan'), s = (0, t.jsx)('div', {
+  className: E.text,
+  children: S(e)
 });
   }
-  let b = N.ZP.getPremiumType(r);
-  return i()(null != b, 'premium type should not be null in purchase confirmation'), a = null != S ? R.Z.Messages.PREMIUM_PAYMENT_CONFIRMATION_BUTTON_IAP.format({
-skuName: S.name
-  }) : m ? R.Z.Messages.PREMIUM_DOWNGRADE_DONE_BUTTON : null != g ? R.Z.Messages.BILLING_POST_PURCHASE_JOIN_GUILD_FOR_EMOJI_CTA : R.Z.Messages.PREMIUM_UPGRADE_DONE_BUTTON, (0, t.jsxs)('div', {
-className: M.confirmation,
+  let R = x.ZP.getPremiumType(r);
+  return l()(null != R, 'premium type should not be null in purchase confirmation'), n = null != O ? I.Z.Messages.PREMIUM_PAYMENT_CONFIRMATION_BUTTON_IAP.format({
+skuName: O.name
+  }) : j ? I.Z.Messages.PREMIUM_DOWNGRADE_DONE_BUTTON : null != g ? I.Z.Messages.BILLING_POST_PURCHASE_JOIN_GUILD_FOR_EMOJI_CTA : I.Z.Messages.PREMIUM_UPGRADE_DONE_BUTTON, (0, t.jsxs)('div', {
+className: E.confirmation,
 children: [
-  (0, t.jsx)(T.C, {
-    className: M.banner,
-    theme: P,
-    premiumType: b,
-    type: E.X7u.has(null != A ? A : E.HeQ.UNKNOWN) ? T.C.Types.PREMIUM_PAYMENT_STARTED : null != c ? T.C.Types.PREMIUM_UPDATED : T.C.Types.PREMIUM_ACTIVATED
+  (0, t.jsx)(L.C, {
+    className: E.banner,
+    theme: A,
+    premiumType: R,
+    type: f.X7u.has(null != m ? m : f.HeQ.UNKNOWN) ? L.C.Types.PREMIUM_PAYMENT_STARTED : null != u ? L.C.Types.PREMIUM_UPDATED : L.C.Types.PREMIUM_ACTIVATED
   }),
-  n,
-  p ? null : (0, t.jsx)(s.Button, {
-    onClick: u,
-    children: a
+  s,
+  T ? null : (0, t.jsx)(o.Button, {
+    onClick: c,
+    children: n
   })
 ]
   });
 }
 
-function m(e) {
+function j(e) {
   let {
-planId: n,
-onClose: a
+planId: s,
+onClose: n
   } = e, {
-giftRecipient: o,
+giftRecipient: i,
 selectedGiftStyle: r,
-hasSentMessage: s,
-giftMessageError: I,
-isSendingMessage: f
-  } = (0, l.wD)(), N = (0, _.e7)([d.Z], () => d.Z.get(n));
-  i()(null != N, 'Missing plan');
-  let T = (0, _.e7)([u.Z], () => u.Z.getGiftCode(N.skuId));
-  return (0, t.jsx)(c.Z, {
-giftCode: T,
-subscriptionPlan: N,
-onClose: a,
+hasSentMessage: o,
+giftMessageError: C,
+isSendingMessage: p
+  } = (0, d.wD)(), x = (0, a.e7)([_.Z], () => _.Z.get(s));
+  l()(null != x, 'Missing plan');
+  let L = (0, a.e7)([c.Z], () => c.Z.getGiftCode(x.skuId));
+  return (0, t.jsx)(u.Z, {
+giftCode: L,
+subscriptionPlan: x,
+onClose: n,
 selectedGiftStyle: r,
-hasSentMessage: s,
-giftRecipient: o,
-giftMessageError: I,
-isSendingMessage: f
+hasSentMessage: o,
+giftRecipient: i,
+giftMessageError: C,
+isSendingMessage: p
   });
 }
 
-function p() {
+function T() {
   return (0, t.jsxs)('div', {
-className: M.redirectConfirmation,
+className: E.redirectConfirmation,
 children: [
-  (0, t.jsx)(s.Heading, {
+  (0, t.jsx)(o.Heading, {
     variant: 'heading-xl/bold',
-    children: R.Z.Messages.PAYMENT_WAITING_FOR_BROWSER_CHECKOUT_CONFIRM_MODAL_HEADER
+    children: I.Z.Messages.PAYMENT_WAITING_FOR_BROWSER_CHECKOUT_CONFIRM_MODAL_HEADER
   }),
   (0, t.jsxs)('div', {
-    className: M.redirectBody,
+    className: E.redirectBody,
     children: [
-      (0, t.jsx)(s.Text, {
+      (0, t.jsx)(o.Text, {
         variant: 'text-md/normal',
-        children: R.Z.Messages.PAYMENT_WAITING_FOR_BROWSER_CHECKOUT_CONFIRM_MODAL_BODY
+        children: I.Z.Messages.PAYMENT_WAITING_FOR_BROWSER_CHECKOUT_CONFIRM_MODAL_BODY
       }),
       (0, t.jsx)('br', {}),
-      (0, t.jsx)(s.Text, {
+      (0, t.jsx)(o.Text, {
         variant: 'text-md/normal',
-        children: R.Z.Messages.PAYMENT_WAITING_FOR_BROWSER_CHECKOUT_CONFIRM_MODAL_INSTRUCTIONS
+        children: I.Z.Messages.PAYMENT_WAITING_FOR_BROWSER_CHECKOUT_CONFIRM_MODAL_INSTRUCTIONS
       })
     ]
   })

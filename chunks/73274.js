@@ -1,28 +1,28 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 });
 var i = n(470079),
   a = n(924826),
-  l = n(459273),
-  s = n(585483),
+  s = n(459273),
+  l = n(585483),
   r = n(534091),
   o = n(959517),
   c = n(981631);
 
-function d(e) {
+function u(e) {
   let {
 scrollerRef: t,
 ...n
-  } = e, d = i.useCallback(() => {
+  } = e, u = i.useCallback(() => {
 let e = t.current;
 return null == e ? Promise.resolve() : new Promise(t => {
   e.scrollToBottom({
     callback: () => requestAnimationFrame(t)
   });
 });
-  }, []), u = i.useCallback(() => {
+  }, []), d = i.useCallback(() => {
 let e = t.current;
 return null == e ? Promise.resolve() : new Promise(t => {
   e.scrollToTop({
@@ -30,25 +30,25 @@ return null == e ? Promise.resolve() : new Promise(t => {
   });
 });
   }, []), h = i.useCallback(e => {
-var i, a, l;
+var i, a, s;
 if (!n.keyboardModeEnabled)
   return;
-let s = null === (a = t.current) || void 0 === a ? void 0 : null === (i = a.getScrollerNode()) || void 0 === i ? void 0 : i.ownerDocument,
-  r = null == s ? void 0 : s.querySelector(e);
-null != r && (null === (l = t.current) || void 0 === l || l.scrollIntoViewNode({
+let l = null === (a = t.current) || void 0 === a ? void 0 : null === (i = a.getScrollerNode()) || void 0 === i ? void 0 : i.ownerDocument,
+  r = null == l ? void 0 : l.querySelector(e);
+null != r && (null === (s = t.current) || void 0 === s || s.scrollIntoViewNode({
   node: r,
   padding: 4 * o.kQ,
   callback: () => null == r ? void 0 : r.focus()
 }));
   }, [n.keyboardModeEnabled]), p = i.useCallback(() => {
-!n.hasMoreAfter && s.S.dispatchToLastSubscribed(c.CkL.TEXTAREA_FOCUS);
+!n.hasMoreAfter && l.S.dispatchToLastSubscribed(c.CkL.TEXTAREA_FOCUS);
   }, [n.hasMoreAfter]), m = (0, a.ZP)({
 id: r.W,
 preserveFocusPosition: !1,
 setFocus: h,
 isEnabled: n.keyboardModeEnabled && !n.isEditing,
-scrollToStart: u,
-scrollToEnd: d,
+scrollToStart: d,
+scrollToEnd: u,
 onNavigateNextAtEnd: p
   }), _ = i.useCallback(e => {
 let {
@@ -56,7 +56,7 @@ let {
 } = e;
 t ? m.focusLastVisibleItem() : m.focusFirstVisibleItem();
   }, [m]);
-  return (0, l.yp)({
+  return (0, s.yp)({
 event: c.CkL.FOCUS_MESSAGES,
 handler: _
   }), m;

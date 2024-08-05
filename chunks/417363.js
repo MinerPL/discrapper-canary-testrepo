@@ -1,5 +1,5 @@
 n(47120), n(411104), n(177593);
-var r, i, a, o, s, l = n(392711),
+var r, i, a, s, o, l = n(392711),
   u = n.n(l),
   c = n(442837),
   d = n(570140),
@@ -136,12 +136,12 @@ this.addConditionalChangeListener(() => {
 });
   }
 }
-s = 'DispatchApplicationStore', (o = 'displayName') in(a = H) ? Object.defineProperty(a, o, {
-  value: s,
+o = 'DispatchApplicationStore', (s = 'displayName') in(a = H) ? Object.defineProperty(a, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = s, t.Z = new H(d.Z, {
+}) : a[s] = o, t.Z = new H(d.Z, {
   CONNECTION_OPEN: function() {
 C = !1;
   },
@@ -156,16 +156,16 @@ let n = {},
   a = !1;
 for (let e in r)
   for (let t in r[e]) {
-    let o = (0, I.Tu)(e, t);
-    if (n[o] = function(e) {
+    let s = (0, I.Tu)(e, t);
+    if (n[s] = function(e) {
         let {
           build_id: t,
           target_build_id: n,
           manifest_ids: r,
           target_manifest_ids: i,
           application_id: a,
-          branch_id: o,
-          launch_commands: s,
+          branch_id: s,
+          launch_commands: o,
           launch_options: l,
           storage: c,
           install_path: d,
@@ -199,17 +199,17 @@ for (let e in r)
                       executable: r,
                       name: i,
                       working_dir: a
-                    } = n, o = _.Z.fileManager.join(e, r);
-                    (0, T.isMac)() && !o.startsWith(R) && (o = ''.concat(R).concat(o)), t = null != a ? _.Z.fileManager.join(e, a) : _.Z.fileManager.dirname(o), I[i] = {
+                    } = n, s = _.Z.fileManager.join(e, r);
+                    (0, T.isMac)() && !s.startsWith(R) && (s = ''.concat(R).concat(s)), t = null != a ? _.Z.fileManager.join(e, a) : _.Z.fileManager.dirname(s), I[i] = {
                       ...n,
                       id: i,
-                      fullExecutablePath: o,
+                      fullExecutablePath: s,
                       fullWorkingDir: t
                     }, null == g && (g = i);
                   }
-              } else if (null != s) {
-                t === N.QR$.WIN64 && null == s[t] && (t = N.QR$.WIN32);
-                let n = s[t];
+              } else if (null != o) {
+                t === N.QR$.WIN64 && null == o[t] && (t = N.QR$.WIN32);
+                let n = o[t];
                 if (null != n) {
                   let {
                     executable: r
@@ -228,7 +228,7 @@ for (let e in r)
             return {
               type: e,
               applicationId: a,
-              branchId: o,
+              branchId: s,
               buildId: t,
               manifestIds: r,
               targetBuildId: n,
@@ -242,7 +242,7 @@ for (let e in r)
             };
           }
           case N.DJE.TRANSITION: {
-            let s;
+            let o;
             let {
               stage: l,
               disk_progress: u,
@@ -253,10 +253,10 @@ for (let e in r)
               paused: I
             } = e.state, T = l.type;
             return {
-              type: s = T === N.f07.UNINSTALLING ? N.vxO.UNINSTALLING : f ? N.vxO.REPAIRING : null == t ? N.vxO.INSTALLING : N.vxO.UPDATING,
+              type: o = T === N.f07.UNINSTALLING ? N.vxO.UNINSTALLING : f ? N.vxO.REPAIRING : null == t ? N.vxO.INSTALLING : N.vxO.UPDATING,
               stage: T,
               applicationId: a,
-              branchId: o,
+              branchId: s,
               buildId: t,
               manifestIds: r,
               targetBuildId: n,
@@ -274,14 +274,14 @@ for (let e in r)
           }
         }
         throw Error('Invalid Dispatch State. state='.concat(e.state.type));
-      }(r[e][t]), null != O[o]) {
-      let e = V(n, o, w);
+      }(r[e][t]), null != O[s]) {
+      let e = V(n, s, w);
       e > 0 && k(y += e);
-      let r = V(n, o, x);
+      let r = V(n, s, x);
       r > 0 && F(D += r);
-      let s = V(n, o, G);
-      if (s > 0 && B(L += s), i === t) {
-        let e = n[o];
+      let o = V(n, s, G);
+      if (o > 0 && B(L += o), i === t) {
+        let e = n[s];
         if (!0 !== e.paused && (e.type === N.vxO.UNINSTALLING || e.type === N.vxO.INSTALLING || e.type === N.vxO.UPDATING))
           switch (e.stage) {
             case N.f07.PATCHING:
@@ -294,7 +294,7 @@ for (let e in r)
       }
     }
     if (!U) {
-      let r = _.Z.fileManager.dirname(n[o].installPath);
+      let r = _.Z.fileManager.dirname(n[s].installPath);
       A.Z.getInstallationPath(e, t) !== r && d.Z.wait(() => {
         d.Z.dispatch({
           type: 'DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS',
@@ -302,7 +302,7 @@ for (let e in r)
           branchId: t,
           installationPath: r
         });
-      }), -1 === S.Z.getQueuePosition(e, t) && (n[o].type === N.vxO.INSTALLING || n[o].type === N.vxO.UPDATING) && h.Z.hasApplication(e, t) && A.Z.shouldBeInstalled(e, t) && d.Z.wait(() => {
+      }), -1 === S.Z.getQueuePosition(e, t) && (n[s].type === N.vxO.INSTALLING || n[s].type === N.vxO.UPDATING) && h.Z.hasApplication(e, t) && A.Z.shouldBeInstalled(e, t) && d.Z.wait(() => {
         d.Z.dispatch({
           type: 'DISPATCH_APPLICATION_UPDATE',
           applicationId: e,

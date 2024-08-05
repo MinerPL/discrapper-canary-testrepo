@@ -147,7 +147,8 @@ neverLoadBeforeConnectionOpen: !0
 actions: [
   'POST_CONNECTION_OPEN',
   'CONNECTION_RESUMED',
-  'CONNECTION_CLOSED'
+  'CONNECTION_CLOSED',
+  'APP_STATE_UPDATE'
 ],
 inlineRequire: () => n(888875).Z
   },
@@ -363,7 +364,9 @@ neverLoadBeforeConnectionOpen: !0
   MessageRemindersNotificationManager: {
 actions: [
   'POST_CONNECTION_OPEN',
-  'SAVED_MESSAGES_UPDATE'
+  'SAVED_MESSAGES_UPDATE',
+  'SAVED_MESSAGE_CREATE',
+  'SAVED_MESSAGE_DELETE'
 ],
 inlineRequire: () => n(937603).Z,
 neverLoadBeforeConnectionOpen: !0

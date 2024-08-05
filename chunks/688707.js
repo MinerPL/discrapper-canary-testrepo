@@ -1,7 +1,7 @@
 n(47120);
 var i = n(243814),
-  s = n(920456),
-  a = n(996106),
+  a = n(920456),
+  s = n(996106),
   r = n(452426),
   l = n(186901),
   o = n(981631);
@@ -26,29 +26,29 @@ handler(e) {
     }
   } = e, r = t.application.id;
   if (null == r)
-    throw new a.Z({
+    throw new s.Z({
       errorCode: o.lTL.INVALID_COMMAND
     }, 'No application.');
-  return s.Z.setUserAchievement(r, n, i).catch(e => {
+  return a.Z.setUserAchievement(r, n, i).catch(e => {
     let {
       status: t,
       body: n
     } = e;
     switch (t) {
       case 429:
-        throw new a.Z({
+        throw new s.Z({
           errorCode: o.lTL.RATE_LIMITED
         }, 'You are being rate limited.');
       case 403:
         if (null != n && n.code === o.evJ.USER_NOT_AUTHORIZED_FOR_APPLICATION)
-          throw new a.Z({
+          throw new s.Z({
             errorCode: o.lTL.UNAUTHORIZED_FOR_ACHIEVEMENT
           }, 'Not authorized to update this achievement.');
-        throw new a.Z({
+        throw new s.Z({
           errorCode: o.lTL.UNKNOWN_ERROR
         }, 'Unknown error from API. status='.concat(t, '.'));
       default:
-        throw new a.Z({
+        throw new s.Z({
           errorCode: o.lTL.UNKNOWN_ERROR
         }, 'Unknown error from API. status='.concat(t, '.'));
     }
@@ -67,10 +67,10 @@ handler(e) {
     socket: t
   } = e, n = t.application.id;
   if (null == n)
-    throw new a.Z({
+    throw new s.Z({
       errorCode: o.lTL.INVALID_COMMAND
     }, 'No application.');
-  return s.Z.fetchForApplication(n).then(e => e || []);
+  return a.Z.fetchForApplication(n).then(e => e || []);
 }
   }
 };

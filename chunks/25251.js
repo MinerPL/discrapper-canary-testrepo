@@ -1,5 +1,5 @@
 let r, i;
-var a, o, s, l, u = n(392711),
+var a, s, o, l, u = n(392711),
   c = n(442837),
   d = n(570140),
   _ = n(358085),
@@ -14,7 +14,7 @@ let T = 0,
 p = (0, u.cloneDeep)(e);
 let t = {};
 p.forEach(e => {
-  t[e.id] = (0, _.isAndroid)() ? (0, E.Q)(e) : e;
+  t[e.id] = (0, _.isAndroid)() ? (0, E.QE)(e) : e;
 }), m = t;
   },
   S = () => {
@@ -43,12 +43,12 @@ return null != i && null == r;
 return null != e ? m[e] : void 0;
   }
 }
-s = 'ProfileEffectStore', (o = 'displayName') in(a = A) ? Object.defineProperty(a, o, {
-  value: s,
+o = 'ProfileEffectStore', (s = 'displayName') in(a = A) ? Object.defineProperty(a, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = s, t.Z = new A(d.Z, {
+}) : a[s] = o, t.Z = new A(d.Z, {
   USER_PROFILE_EFFECTS_FETCH: () => {
 h = !0;
   },

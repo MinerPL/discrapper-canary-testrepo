@@ -11,10 +11,10 @@ width: t = 24,
 height: n = 24,
 boxColor: i,
 ribbonColor: a,
-style: o
+style: s
   } = e;
   return (0, r.jsxs)('svg', {
-style: o,
+style: s,
 width: t,
 height: n,
 viewBox: '0 0 24 24',

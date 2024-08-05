@@ -1,9 +1,9 @@
 var r, i = n(903799),
   a = n(814084),
-  o = n(685053).assert;
+  s = n(685053).assert;
 
-function s(e) {
-  'short' === e.type ? this.curve = new a.short(e) : 'edwards' === e.type ? this.curve = new a.edwards(e) : this.curve = new a.mont(e), this.g = this.curve.g, this.n = this.curve.n, this.hash = e.hash, o(this.g.validate(), 'Invalid curve'), o(this.g.mul(this.n).isInfinity(), 'Invalid curve, G*N != O');
+function o(e) {
+  'short' === e.type ? this.curve = new a.short(e) : 'edwards' === e.type ? this.curve = new a.edwards(e) : this.curve = new a.mont(e), this.g = this.curve.g, this.n = this.curve.n, this.hash = e.hash, s(this.g.validate(), 'Invalid curve'), s(this.g.mul(this.n).isInfinity(), 'Invalid curve, G*N != O');
 }
 
 function l(e, n) {
@@ -11,7 +11,7 @@ function l(e, n) {
 configurable: !0,
 enumerable: !0,
 get: function() {
-  var r = new s(n);
+  var r = new o(n);
   return Object.defineProperty(t, e, {
     configurable: !0,
     enumerable: !0,
@@ -20,7 +20,7 @@ get: function() {
 }
   });
 }
-t.PresetCurve = s, l('p192', {
+t.PresetCurve = o, l('p192', {
   type: 'short',
   prime: 'p192',
   p: 'ffffffff ffffffff ffffffff fffffffe ffffffff ffffffff',

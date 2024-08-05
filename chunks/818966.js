@@ -4,8 +4,8 @@ t.Z = function(e) {
   var t = e.hsl,
 n = e.offset,
 a = e.onClick,
-o = void 0 === a ? function() {} : a,
-s = e.active,
+s = void 0 === a ? function() {} : a,
+o = e.active,
 l = e.first,
 u = e.last,
 c = (0, i.default)({
@@ -33,14 +33,14 @@ c = (0, i.default)({
     }
   }
 }, {
-  active: s,
+  active: o,
   first: l,
   last: u
 });
   return r.createElement('div', {
 style: c.swatch,
 onClick: function(e) {
-  return o({
+  return s({
     h: t.h,
     s: 0.5,
     l: n,

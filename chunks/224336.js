@@ -1,14 +1,14 @@
 n.d(t, {
   Z: function() {
-return a;
+return s;
   }
 });
 var i = n(735250);
 n(470079);
-var s = n(783104);
+var a = n(783104);
 
-function a() {
+function s() {
   return (0, i.jsx)('div', {
-className: s.divider
+className: a.divider
   });
 }

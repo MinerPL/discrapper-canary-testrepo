@@ -6,11 +6,11 @@ return u;
 return d;
   }
 });
-var n = t(735250);
+var s = t(735250);
 t(470079);
-var r = t(512722),
-  s = t.n(r),
-  l = t(481060),
+var n = t(512722),
+  l = t.n(n),
+  r = t(481060),
   o = t(598),
   i = t(185139),
   c = t(689938);
@@ -18,9 +18,9 @@ let u = e => {
   let {
 className: a
   } = e;
-  return (0, n.jsx)(l.FormSection, {
+  return (0, s.jsx)(r.FormSection, {
 className: a,
-children: (0, n.jsx)(l.FormTitle, {
+children: (0, s.jsx)(r.FormTitle, {
   children: c.Z.Messages.PAYMENT_WAITING_FOR_AUTHENTICATION
 })
   });
@@ -30,19 +30,19 @@ function d(e) {
   let {
 steps: a,
 currentStep: t,
-paymentError: r,
-className: l
+paymentError: n,
+className: r
   } = e, {
 steps: c,
 step: d,
 paymentError: E
   } = (0, o.usePaymentContext)();
-  return a = null != a ? a : c, null == t && null != d && (t = d), s()(t, 'step should be set'), s()(a, 'step should be set'), r = null != r ? r : E, (0, n.jsx)(i.Z, {
+  return a = null != a ? a : c, null == t && null != d && (t = d), l()(t, 'step should be set'), l()(a, 'step should be set'), n = null != n ? n : E, (0, s.jsx)(i.Z, {
 steps: a,
 currentStep: t,
-paymentError: r,
-body: (0, n.jsx)(u, {
-  className: l
+paymentError: n,
+body: (0, s.jsx)(u, {
+  className: r
 }),
 footer: null
   });

@@ -4,10 +4,10 @@ return E;
   }
 }), n(411104), n(47120);
 var i = n(735250),
-  o = n(470079),
+  s = n(470079),
   a = n(913527),
-  l = n.n(a),
-  s = n(442837),
+  o = n.n(a),
+  l = n(442837),
   r = n(481060),
   c = n(372123),
   d = n(224706),
@@ -28,12 +28,12 @@ configurable: !0,
 writable: !0
   }) : t[e] = n, t;
 }
-class T extends o.PureComponent {
-  renderConflictButton(t, e, n, o) {
+class T extends s.PureComponent {
+  renderConflictButton(t, e, n, s) {
 return (0, i.jsxs)(r.Button, {
   className: O.conflictButton,
   innerClassName: O.conflictButtonInner,
-  onClick: o,
+  onClick: s,
   children: [
     (0, i.jsx)('div', {
       className: n
@@ -50,7 +50,7 @@ return (0, i.jsxs)(r.Button, {
         }),
         (0, i.jsx)('div', {
           className: O.timestamp,
-          children: l()(e).calendar()
+          children: o()(e).calendar()
         })
       ]
     })
@@ -61,7 +61,7 @@ return (0, i.jsxs)(r.Button, {
 let {
   application: t
 } = this.props;
-return (0, i.jsxs)(o.Fragment, {
+return (0, i.jsxs)(s.Fragment, {
   children: [
     (0, i.jsxs)(r.ModalContent, {
       children: [
@@ -188,10 +188,10 @@ super(...t), e = this, _(this, 'onClose', () => {
     n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
     {
       libraryApplication: i,
-      analyticsParams: o
+      analyticsParams: s
     } = e.props;
   e.onClose(), E(i.id, i, {
-    analyticsParams: o,
+    analyticsParams: s,
     cloudSync: t,
     cloudSyncForceHash: n
   });
@@ -208,7 +208,7 @@ super(...t), e = this, _(this, 'onClose', () => {
 });
   }
 }
-let L = s.ZP.connectStores([
+let L = l.ZP.connectStores([
   p.Z,
   u.Z
 ], t => {
@@ -222,22 +222,22 @@ application: u.Z.getApplication(e.id)
   };
 })(T);
 async function E(t, e, n) {
-  let o = u.Z.getApplication(t);
-  if (null == o)
+  let s = u.Z.getApplication(t);
+  if (null == s)
 return;
   let {
 cloudSync: a = !0,
-cloudSyncForceHash: l = null,
-analyticsParams: s
+cloudSyncForceHash: o = null,
+analyticsParams: l
   } = n;
   if (a && null != e) {
 let t = e.branchId;
 try {
-  await c.Z(e.id, t, l);
+  await c.Z(e.id, t, o);
 } catch (n) {
   (0, r.openModal)(n => (0, i.jsx)(L, {
     libraryApplication: e,
-    analyticsParams: s,
+    analyticsParams: l,
     branchId: t,
     ...n
   }));
@@ -245,10 +245,10 @@ try {
 }
   }
   return C.default.track(f.rMx.APPLICATION_OPENED, {
-application_id: o.id,
-application_name: o.name,
+application_id: s.id,
+application_name: s.name,
 type: f.q5t.LAUNCH,
 distributor: null != e ? e.getDistributor() : null,
-...s
-  }), d.Z.launch(o.id, null == e ? void 0 : e.branchId);
+...l
+  }), d.Z.launch(s.id, null == e ? void 0 : e.branchId);
 }

@@ -49,7 +49,7 @@ a = {
   className: 'string',
   begin: /(#\d+)+/
 },
-o = {
+s = {
   match: [
     /procedure/,
     /\s+/,
@@ -74,7 +74,7 @@ o = {
     ...r
   ]
 },
-s = {
+o = {
   match: [
     /OBJECT/,
     /\s+/,
@@ -119,8 +119,8 @@ contains: [{
     end: '"'
   },
   e.NUMBER_MODE,
-  s,
-  o
+  o,
+  s
 ]
   };
 };

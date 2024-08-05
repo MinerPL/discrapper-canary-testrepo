@@ -5,13 +5,13 @@ return _;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(392711),
-  s = n.n(l),
+  s = n(392711),
+  l = n.n(s),
   r = n(374470),
   o = n(481060),
   c = n(239091),
-  d = n(294218),
-  u = n(592125),
+  u = n(294218),
+  d = n(592125),
   h = n(689938),
   p = n(183528);
 
@@ -30,11 +30,11 @@ let {
   listItemProps: t,
   searchOffset: n,
   index: a,
-  totalResults: l
-} = this.props, r = s().find(e, e => e.isSearchHit);
+  totalResults: s
+} = this.props, r = l().find(e, e => e.isSearchHit);
 if (null == r)
   return null;
-let c = u.Z.getChannel(r.channel_id);
+let c = d.Z.getChannel(r.channel_id);
 if (null == c)
   return null;
 let m = 'search-result-'.concat(r.id);
@@ -46,7 +46,7 @@ return (0, i.jsx)(o.FocusRing, {
     className: p.container,
     ...t,
     'aria-posinset': 1 + n + a,
-    'aria-setsize': l,
+    'aria-setsize': s,
     'aria-labelledby': m,
     children: [
       (0, i.jsx)(o.Clickable, {
@@ -60,7 +60,7 @@ return (0, i.jsx)(o.FocusRing, {
         children: (0, i.jsx)('div', {
           ref: this.hitRef,
           className: p.message,
-          children: (0, i.jsx)(d.Z, {
+          children: (0, i.jsx)(u.Z, {
             id: m,
             message: r,
             channel: c,
@@ -86,7 +86,7 @@ return (0, i.jsx)(o.FocusRing, {
   }
   constructor(...e) {
 super(...e), m(this, 'containerRef', a.createRef()), m(this, 'hitRef', a.createRef()), m(this, 'handleContextMenu', (e, t) => {
-  let a = u.Z.getChannel(t.channel_id);
+  let a = d.Z.getChannel(t.channel_id);
   if (null != a)
     e.stopPropagation(), (0, c.jW)(e, async () => {
       let {

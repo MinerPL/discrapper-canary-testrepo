@@ -1,15 +1,15 @@
 var i = n(45792),
-  s = n(914946),
-  a = n(238679),
+  a = n(914946),
+  s = n(238679),
   r = n(981631);
 t.Z = {
   [r.Etm.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: (0, i.S)(r.Etm.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, {
-scope: a.KW,
+scope: s.KW,
 handler(e) {
   let {
     socket: t
   } = e;
-  return (0, s.bu)(t.transport), (0, a.dO)();
+  return (0, a.bu)(t.transport), (0, s.dO)();
 }
   })
 };

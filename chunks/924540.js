@@ -1,4 +1,4 @@
-n.d(t, {
+t.d(s, {
   $H: function() {
 return b;
   },
@@ -6,49 +6,49 @@ return b;
 return v;
   }
 });
-var s = n(735250),
-  r = n(470079),
-  o = n(120356),
-  i = n.n(o),
-  c = n(481060),
-  a = n(774078),
-  l = n(55935),
-  u = n(74538),
-  d = n(639119),
-  p = n(474936),
-  f = n(689938),
-  g = n(176731);
+var n = t(735250),
+  r = t(470079),
+  a = t(120356),
+  o = t.n(a),
+  i = t(481060),
+  c = t(774078),
+  l = t(55935),
+  u = t(74538),
+  d = t(639119),
+  f = t(474936),
+  p = t(689938),
+  g = t(176731);
 
 function x(e) {
   let {
-isTabSelected: t,
-expiresAt: n,
-trialDuration: o
-  } = e, u = r.useMemo(() => Date.parse(n), [n]), d = (0, a.Z)(u, 60000);
-  return Object.values(d).every(e => 0 === e) ? null : (0, s.jsx)(c.Tooltip, {
+isTabSelected: s,
+expiresAt: t,
+trialDuration: a
+  } = e, u = r.useMemo(() => Date.parse(t), [t]), d = (0, c.Z)(u, 60000);
+  return Object.values(d).every(e => 0 === e) ? null : (0, n.jsx)(i.Tooltip, {
 text: (0, l.QX)(d, {
-  days: f.Z.Messages.PREMIUM_TRIAL_REMAINING_AVAILABILITY_DAYS,
-  hours: f.Z.Messages.PREMIUM_TRIAL_REMAINING_AVAILABILITY_HOURS,
-  minutes: f.Z.Messages.PREMIUM_TRIAL_REMAINING_AVAILABILITY_MINUTES
+  days: p.Z.Messages.PREMIUM_TRIAL_REMAINING_AVAILABILITY_DAYS,
+  hours: p.Z.Messages.PREMIUM_TRIAL_REMAINING_AVAILABILITY_HOURS,
+  minutes: p.Z.Messages.PREMIUM_TRIAL_REMAINING_AVAILABILITY_MINUTES
 }),
-children: e => (0, s.jsxs)('div', {
+children: e => (0, n.jsxs)('div', {
   ...e,
-  className: i()(g.premiumTrialBadge, g.premiumTrialAcknowledgedBadge, {
-    [g.premiumTrialBadgeSelected]: t
+  className: o()(g.premiumTrialBadge, g.premiumTrialAcknowledgedBadge, {
+    [g.premiumTrialBadgeSelected]: s
   }),
   children: [
-    (0, s.jsx)(c.ClockIcon, {
+    (0, n.jsx)(i.ClockIcon, {
       size: 'custom',
       width: 20,
       height: 20,
       color: 'currentColor',
       className: g.premiumTrialBadgeIcon
     }),
-    (0, s.jsxs)(c.Text, {
+    (0, n.jsxs)(i.Text, {
       variant: 'eyebrow',
       children: [
         ' ',
-        o,
+        a,
         ' '
       ]
     })
@@ -58,56 +58,56 @@ children: e => (0, s.jsxs)('div', {
 }
 
 function b(e) {
-  var t;
+  var s;
   let {
-isTabSelected: n,
+isTabSelected: t,
 trialOffer: r
-  } = e, o = null === (t = (0, d.N)()) || void 0 === t ? void 0 : t.subscription_trial, i = (0, u.a5)({
-intervalType: null == o ? void 0 : o.interval,
-intervalCount: null == o ? void 0 : o.interval_count
+  } = e, a = null === (s = (0, d.N)()) || void 0 === s ? void 0 : s.subscription_trial, o = (0, u.a5)({
+intervalType: null == a ? void 0 : a.interval,
+intervalCount: null == a ? void 0 : a.interval_count
   });
-  return (0, s.jsx)(_, {
-isTabSelected: n,
-badgeCopy: i,
+  return (0, n.jsx)(_, {
+isTabSelected: t,
+badgeCopy: o,
 offerExpiresAt: r.expires_at,
-className: (null == o ? void 0 : o.sku_id) === p.Si.TIER_2 ? g.premiumTrialTier2UnacknowledgedBadge : g.premiumTrialTier0UnacknowledgedBadge
+className: (null == a ? void 0 : a.sku_id) === f.Si.TIER_2 ? g.premiumTrialTier2UnacknowledgedBadge : g.premiumTrialTier0UnacknowledgedBadge
   });
 }
 
 function v(e) {
   let {
-isTabSelected: t,
-userDiscount: n,
+isTabSelected: s,
+userDiscount: t,
 includesAmountOff: r
-  } = e, o = f.Z.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
-percent: n.discount.amount
+  } = e, a = p.Z.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
+percent: t.discount.amount
   });
-  return (0, s.jsx)(_, {
-isTabSelected: t,
-badgeCopy: r ? o : f.Z.Messages.PREMIUM_DISCOUNT_BADGE,
-offerExpiresAt: n.expires_at,
+  return (0, n.jsx)(_, {
+isTabSelected: s,
+badgeCopy: r ? a : p.Z.Messages.PREMIUM_DISCOUNT_BADGE,
+offerExpiresAt: t.expires_at,
 className: g.premiumDiscountUnacknowledgedBadge
   });
 }
 
 function _(e) {
   let {
-isTabSelected: t,
-badgeCopy: n,
+isTabSelected: s,
+badgeCopy: t,
 offerExpiresAt: r,
-className: o
+className: a
   } = e;
-  return null != r ? (0, s.jsx)(x, {
+  return null != r ? (0, n.jsx)(x, {
 expiresAt: r,
-isTabSelected: t,
-trialDuration: n
-  }) : (0, s.jsx)('div', {
-className: i()(g.premiumTrialBadge, o),
-children: (0, s.jsxs)(c.Text, {
+isTabSelected: s,
+trialDuration: t
+  }) : (0, n.jsx)('div', {
+className: o()(g.premiumTrialBadge, a),
+children: (0, n.jsxs)(i.Text, {
   variant: 'eyebrow',
   children: [
     ' ',
-    n,
+    t,
     ' '
   ]
 })

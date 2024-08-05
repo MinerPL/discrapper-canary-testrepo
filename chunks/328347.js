@@ -1,5 +1,5 @@
 let r;
-var i, a, o, s, l = n(442837),
+var i, a, s, o, l = n(442837),
   u = n(570140);
 let c = [],
   d = c,
@@ -7,7 +7,7 @@ let c = [],
   E = e => {
 d = c, _ = null;
   };
-class f extends(s = l.ZP.Store) {
+class f extends(o = l.ZP.Store) {
   get analyticsLocations() {
 return d;
   }
@@ -24,12 +24,12 @@ return {
 };
   }
 }
-o = 'CollectiblesShopStore', (a = 'displayName') in(i = f) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'CollectiblesShopStore', (a = 'displayName') in(i = f) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new f(u.Z, {
+}) : i[a] = s, t.Z = new f(u.Z, {
   COLLECTIBLES_SHOP_OPEN: e => {
 var t, n;
 d = null !== (t = e.analyticsLocations) && void 0 !== t ? t : c, _ = null !== (n = e.analyticsSource) && void 0 !== n ? n : null, r = e.initialProductSkuId;

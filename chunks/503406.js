@@ -1,6 +1,6 @@
 a(47120);
-var n = a(735250),
-  t = a(470079),
+var t = a(735250),
+  n = a(470079),
   l = a(120356),
   i = a.n(l),
   r = a(392711),
@@ -19,7 +19,7 @@ s.Z = e => {
 email: s,
 guildId: a,
 onClose: l
-  } = e, [r, _] = t.useState(''), [h, C] = t.useState(null), T = t.useCallback(async () => {
+  } = e, [r, _] = n.useState(''), [h, C] = n.useState(null), T = n.useCallback(async () => {
 if (null != a)
   try {
     let e = await d.Z.verifyCode(r, a, s);
@@ -37,20 +37,20 @@ d.Z.sendVerificationEmail(s, !0, a);
   }, 1000), O = async e => {
 null != r && '' !== r && e.charCode === m.yXg.ENTER && await T();
   };
-  return (0, n.jsxs)('div', {
+  return (0, t.jsxs)('div', {
 className: I.container,
 children: [
-  (0, n.jsx)('div', {
+  (0, t.jsx)('div', {
     className: I.topImage
   }),
-  (0, n.jsx)(c.Heading, {
+  (0, t.jsx)(c.Heading, {
     className: i()(I.centerText, I.header),
     variant: 'heading-xl/semibold',
     children: E.Z.Messages.HUB_VERIFY_EMAIL_ADDRESS
   }),
-  (0, n.jsx)('div', {
+  (0, t.jsx)('div', {
     className: I.descriptionWidth,
-    children: (0, n.jsx)(c.Text, {
+    children: (0, t.jsx)(c.Text, {
       className: I.centerText,
       variant: 'text-sm/normal',
       color: 'header-secondary',
@@ -60,14 +60,14 @@ children: [
       })
     })
   }),
-  (0, n.jsxs)(c.FormItem, {
+  (0, t.jsxs)(c.FormItem, {
     className: I.formItem,
     children: [
-      (0, n.jsx)(c.FormTitle, {
+      (0, t.jsx)(c.FormTitle, {
         id: x,
         children: E.Z.Messages.HUB_ENTER_PIN
       }),
-      (0, n.jsx)(c.TextInput, {
+      (0, t.jsx)(c.TextInput, {
         onKeyPress: O,
         onChange: e => {
           null != e && '' !== e && _(e);
@@ -77,12 +77,12 @@ children: [
       })
     ]
   }),
-  (0, n.jsx)(c.Button, {
+  (0, t.jsx)(c.Button, {
     fullWidth: !0,
     onClick: T,
     size: c.Button.Sizes.LARGE,
     color: c.Button.Colors.BRAND,
-    children: (0, n.jsx)(c.Text, {
+    children: (0, t.jsx)(c.Text, {
       className: I.submitText,
       variant: 'text-sm/normal',
       children: E.Z.Messages.SUBMIT

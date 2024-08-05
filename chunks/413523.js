@@ -10,8 +10,8 @@ return r;
   }
 }), n(47120), n(724458), n(653041);
 var r, i, a = n(392711),
-  o = n(759174),
-  s = n(586902),
+  s = n(759174),
+  o = n(586902),
   l = n(317381),
   u = n(569545),
   c = n(199902),
@@ -101,7 +101,7 @@ return (null != t || 0 !== n.length) && (null == t || t.forEach(e => {
 var t, n;
 return null !== (n = null === (t = this.participants[e]) || void 0 === t ? void 0 : t.reduce((t, n) => {
   if (n.type === S.fO.USER) {
-    let t = (0, s.O)({
+    let t = (0, o.O)({
       userId: e,
       checkIsMuted: !0
     });
@@ -146,7 +146,7 @@ return this._getEmbeddedActivities().map((e, t) => {
 });
   }
   _getParticipantsForUser(e) {
-var t, n, r, i, a, o;
+var t, n, r, i, a, s;
 let l, _;
 let g = [],
   A = p.default.getUser(e);
@@ -163,7 +163,7 @@ let v = I.Z.getVoiceStateForChannel(this.channelId, e),
   id: A.id,
   voiceState: v,
   voicePlatform: O,
-  speaking: (0, s.O)({
+  speaking: (0, o.O)({
     userId: e,
     checkIsMuted: !0
   }),
@@ -189,7 +189,7 @@ if (null != y && y.channelId === this.channelId) {
     ...i,
     type: r ? S.fO.HIDDEN_STREAM : S.fO.STREAM,
     id: t,
-    userVideo: null !== (o = null == v ? void 0 : v.selfVideo) && void 0 !== o && o,
+    userVideo: null !== (s = null == v ? void 0 : v.selfVideo) && void 0 !== s && s,
     user: A,
     userNick: T.ZP.getName(null == R ? void 0 : R.getGuildId(), this.channelId, A),
     stream: y
@@ -198,7 +198,7 @@ if (null != y && y.channelId === this.channelId) {
 return g;
   }
   constructor(e) {
-v(this, 'channelId', void 0), v(this, 'call', void 0), v(this, 'participants', {}), v(this, 'lastSpoke', {}), v(this, 'participantByIndex', new o.h(e => {
+v(this, 'channelId', void 0), v(this, 'call', void 0), v(this, 'participants', {}), v(this, 'lastSpoke', {}), v(this, 'participantByIndex', new s.h(e => {
   var t;
   let n = [];
   return e.type === S.fO.USER && e.speaking && n.push('SPEAKING'), e.type === S.fO.USER && (null === (t = e.voiceState) || void 0 === t ? void 0 : t.selfVideo) ? (n.push('VIDEO'), !e.localVideoDisabled && n.push('FILTERED')) : (0, S._5)(e) && (n.push('STREAM'), e.type !== S.fO.HIDDEN_STREAM && null != e.streamId && n.push('FILTERED')), e.type === S.fO.ACTIVITY && (n.push('ACTIVITY'), n.push('FILTERED')), n;

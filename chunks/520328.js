@@ -25,11 +25,11 @@ a = {
   begin: /~?\/[^\/\n]+\//,
   contains: [e.BACKSLASH_ESCAPE]
 },
-o = t([
+s = t([
   e.BINARY_NUMBER_MODE,
   e.C_NUMBER_MODE
 ]),
-s = t([{
+o = t([{
     begin: /"""/,
     end: /"""/
   },
@@ -121,9 +121,9 @@ contains: [
     relevance: 10
   }),
   i,
-  s,
-  a,
   o,
+  a,
+  s,
   l,
   {
     className: 'meta',
@@ -141,9 +141,9 @@ contains: [
     relevance: 0,
     contains: [
       i,
-      s,
-      a,
       o,
+      a,
+      s,
       'self'
     ]
   },

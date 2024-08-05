@@ -1,52 +1,52 @@
-s.d(n, {
+t.d(n, {
   C: function() {
-return c;
+return o;
   },
   N: function() {
-return o;
+return c;
   }
 });
-var l = s(735250);
-s(470079);
-var t = s(481060),
-  i = s(285952),
-  r = s(689938),
-  a = s(454234);
-let c = e => {
+var i = t(735250);
+t(470079);
+var a = t(481060),
+  r = t(285952),
+  s = t(689938),
+  l = t(454234);
+let o = e => {
 let {
   className: n,
-  isEmailResent: s,
-  resendEmail: i
+  isEmailResent: t,
+  resendEmail: r
 } = e;
-return (0, l.jsx)('div', {
+return (0, i.jsx)('div', {
   className: n,
-  children: (0, l.jsxs)('div', {
-    className: a.awaitingWrapper,
+  children: (0, i.jsxs)('div', {
+    className: l.awaitingWrapper,
     children: [
-      (0, l.jsx)(t.Heading, {
+      (0, i.jsx)(a.Heading, {
         variant: 'heading-xl/bold',
-        children: r.Z.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_HEADER
+        children: s.Z.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_HEADER
       }),
-      (0, l.jsxs)('p', {
+      (0, i.jsxs)('p', {
         children: [
-          (0, l.jsx)(t.Text, {
+          (0, i.jsx)(a.Text, {
             variant: 'text-md/normal',
-            children: r.Z.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL
+            children: s.Z.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL
           }),
-          (0, l.jsx)('br', {}),
-          (0, l.jsx)(t.Text, {
+          (0, i.jsx)('br', {}),
+          (0, i.jsx)(a.Text, {
             variant: 'text-md/normal',
-            children: r.Z.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_INSTRUCTIONS
+            children: s.Z.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_INSTRUCTIONS
           }),
-          (0, l.jsx)('br', {}),
-          (0, l.jsxs)(t.Text, {
+          (0, i.jsx)('br', {}),
+          (0, i.jsxs)(a.Text, {
             variant: 'text-md/normal',
             children: [
-              r.Z.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT,
+              s.Z.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT,
               '\xA0',
-              s ? r.Z.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT : (0, l.jsx)(t.Anchor, {
-                onClick: i,
-                children: r.Z.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION
+              t ? s.Z.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT : (0, i.jsx)(a.Anchor, {
+                onClick: r,
+                children: s.Z.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION
               })
             ]
           })
@@ -56,15 +56,15 @@ return (0, l.jsx)('div', {
   })
 });
   },
-  o = () => (0, l.jsx)('div', {
-children: (0, l.jsx)(t.ModalFooter, {
-  justify: i.Z.Justify.BETWEEN,
-  align: i.Z.Align.CENTER,
-  children: (0, l.jsx)(t.Button, {
+  c = () => (0, i.jsx)('div', {
+children: (0, i.jsx)(a.ModalFooter, {
+  justify: r.Z.Justify.BETWEEN,
+  align: r.Z.Align.CENTER,
+  children: (0, i.jsx)(a.Button, {
     'data-testid': 'continue',
-    color: t.Button.Colors.BRAND,
+    color: a.Button.Colors.BRAND,
     disabled: !0,
-    children: r.Z.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON
+    children: s.Z.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON
   })
 })
   });

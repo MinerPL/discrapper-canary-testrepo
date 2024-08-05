@@ -1,6 +1,6 @@
 n(47120);
-var r, i, a, o, s = n(392711),
-  l = n.n(s),
+var r, i, a, s, o = n(392711),
+  l = n.n(o),
   u = n(442837),
   c = n(570140),
   d = n(131704),
@@ -78,12 +78,12 @@ return null !== (n = null === (t = E[e]) || void 0 === t ? void 0 : t.memberIdsP
 return E;
   }
 }
-o = 'ThreadMembersStore', (a = 'displayName') in(i = g) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'ThreadMembersStore', (a = 'displayName') in(i = g) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new g(c.Z, {
+}) : i[a] = s, t.Z = new g(c.Z, {
   CONNECTION_OPEN: function(e) {
 E = {}, e.guilds.forEach(f);
   },

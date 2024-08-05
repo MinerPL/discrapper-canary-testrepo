@@ -1,6 +1,6 @@
 n(47120), n(653041);
-var r, i, a, o, s = n(392711),
-  l = n.n(s),
+var r, i, a, s, o = n(392711),
+  l = n.n(o),
   u = n(442837),
   c = n(570140),
   d = n(131704),
@@ -149,9 +149,9 @@ if (W(S, t)) {
     isTimedRelevant: a
   } = V(t);
   H(t, a);
-  let o = W(A, t),
-    s = W(O, t);
-  if (n === o && i === s)
+  let s = W(A, t),
+    o = W(O, t);
+  if (n === s && i === o)
     return !1;
   let l = S[e][r][t.id],
     u = n ? l : null,
@@ -175,9 +175,9 @@ for (let t in S[e])
       {
         isUnread: i,
         isRelevant: a,
-        isTimedRelevant: o
+        isTimedRelevant: s
       } = V(r.channel);
-    i && Y(A, r.channel, r, !1), a && Y(O, r.channel, r, !1), H(r.channel, o);
+    i && Y(A, r.channel, r, !1), a && Y(O, r.channel, r, !1), H(r.channel, s);
   }
   for (let e in (v = {}, N))
 for (let t in N[e])
@@ -228,14 +228,14 @@ function Y(e, t, n, r) {
   let {
 guild_id: i,
 parent_id: a,
-id: o
+id: s
   } = t;
-  null != i && null != a && null != o && (!(i in e) && (e[i] = {}), !(a in e[i]) && (e[i][a] = {}), r && (e[i] = {
+  null != i && null != a && null != s && (!(i in e) && (e[i] = {}), !(a in e[i]) && (e[i][a] = {}), r && (e[i] = {
 ...e[i],
 [a]: {
   ...e[i][a]
 }
-  }), null === n ? (delete e[i][a][o], l().isEmpty(e[i][a]) && delete e[i][a]) : e[i][a][o] = n);
+  }), null === n ? (delete e[i][a][s], l().isEmpty(e[i][a]) && delete e[i][a]) : e[i][a][s] = n);
 }
 
 function j(e, t, n, r) {
@@ -326,16 +326,16 @@ return null !== (r = null === (n = R[e]) || void 0 === n ? void 0 : n[t]) && voi
   }
   getActiveThreadCount(e, t) {
 var n, r, i, a;
-let o = l().size(null !== (i = null === (n = S[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== i ? i : {});
-return o + l().size(null !== (a = null === (r = N[e]) || void 0 === r ? void 0 : r[t]) && void 0 !== a ? a : {});
+let s = l().size(null !== (i = null === (n = S[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== i ? i : {});
+return s + l().size(null !== (a = null === (r = N[e]) || void 0 === r ? void 0 : r[t]) && void 0 !== a ? a : {});
   }
 }
-o = 'ActiveJoinedThreadsStore', (a = 'displayName') in(i = J) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'ActiveJoinedThreadsStore', (a = 'displayName') in(i = J) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new J(c.Z, {
+}) : i[a] = s, t.Z = new J(c.Z, {
   CONNECTION_OPEN: D,
   OVERLAY_INITIALIZE: D,
   THREAD_LIST_SYNC: function(e) {

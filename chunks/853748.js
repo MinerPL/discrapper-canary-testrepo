@@ -3,94 +3,91 @@ n.d(t, {
 return _;
   }
 }), n(653041);
-var r = n(735250),
-  s = n(470079),
+var s = n(735250),
+  r = n(470079),
   a = n(120356),
   o = n.n(a),
   i = n(338545),
-  l = n(873546),
-  c = n(399606),
-  d = n(481060),
-  u = n(774078),
-  p = n(607070),
-  g = n(689938),
+  c = n(873546),
+  l = n(481060),
+  d = n(774078),
+  u = n(689938),
   f = n(447986),
-  C = n(493978),
-  m = n(932135);
+  p = n(493978),
+  g = n(932135);
 
-function h(e) {
+function C(e) {
   let {
 endDate: t
   } = e, {
 days: n,
-hours: s,
+hours: r,
 minutes: a,
 seconds: o
-  } = (0, u.Z)(t), i = function(e, t, n, r) {
-let s = (e, t) => ''.concat(e.toString().padStart(2, '0')).concat(t),
+  } = (0, d.Z)(t), i = function(e, t, n, s) {
+let r = (e, t) => ''.concat(e.toString().padStart(2, '0')).concat(t),
   a = [];
-return e > 0 && a.push(s(e, g.Z.Messages.COUNTDOWN_UNITS_DAYS)), (t > 0 || a.length > 0) && a.push(s(t, g.Z.Messages.COUNTDOWN_UNITS_HOURS)), (n > 0 || a.length > 0) && a.push(s(n, g.Z.Messages.COUNTDOWN_UNITS_MINUTES)), a.push(s(r, g.Z.Messages.COUNTDOWN_UNITS_SECONDS)), a.join(':');
-  }(n, s, a, o);
-  return (0, r.jsx)(d.Text, {
+return e > 0 && a.push(r(e, u.Z.Messages.COUNTDOWN_UNITS_DAYS)), (t > 0 || a.length > 0) && a.push(r(t, u.Z.Messages.COUNTDOWN_UNITS_HOURS)), (n > 0 || a.length > 0) && a.push(r(n, u.Z.Messages.COUNTDOWN_UNITS_MINUTES)), a.push(r(s, u.Z.Messages.COUNTDOWN_UNITS_SECONDS)), a.join(':');
+  }(n, r, a, o);
+  return (0, s.jsx)(l.Text, {
 variant: 'heading-md/medium',
 className: f.countdown,
 tag: 'div',
-children: (0, r.jsx)('div', {
+children: (0, s.jsx)('div', {
   role: 'timer',
   'aria-relevant': 'all',
   children: i
 })
   });
 }
-let _ = s.memo(function(e) {
+let _ = r.memo(function(e) {
   let {
 unpublishedAt: t,
 isVisible: n,
-displayOptions: s,
+displayOptions: r,
 isFullScreen: a
-  } = e, u = (0, c.e7)([p.Z], () => p.Z.useReducedMotion), g = (0, i.useSpring)({
+  } = e, d = (0, l.useSpring)({
 transform: 'translateX(-50%) '.concat(n ? 'translateY(-75%)' : 'translateY(0%)'),
 opacity: n ? 1 : 0,
 config: {
   tension: 120,
   friction: 12
-},
-immediate: u
+}
   });
-  return (0, r.jsxs)(i.animated.div, {
+  return (0, s.jsxs)(i.animated.div, {
 className: o()([
   f.countDownWrapper,
   a && f.fullScreenWrapper,
-  l.tq && f.mobileWrapper
+  c.tq && f.mobileWrapper
 ]),
 role: 'status',
 style: {
-  ...s.style,
-  ...g
+  ...r.style,
+  ...d
 },
 children: [
-  (0, r.jsx)(d.Text, {
+  (0, s.jsx)(l.Text, {
     variant: 'text-md/medium',
     className: f.countdownLabel,
-    children: s.label()
+    children: r.label()
   }),
-  null != s.iconSrc && (0, r.jsx)('img', {
-    src: s.iconSrc,
+  null != r.iconSrc && (0, s.jsx)('img', {
+    src: r.iconSrc,
     className: f.countdownIcon,
     alt: '',
     'aria-hidden': !0
   }),
-  (0, r.jsx)(h, {
+  (0, s.jsx)(C, {
     endDate: t
   }),
-  (0, r.jsx)('img', {
-    src: C,
+  (0, s.jsx)('img', {
+    src: p,
     className: o()(f.sparkles, f.left),
     alt: '',
     'aria-hidden': !0
   }),
-  (0, r.jsx)('img', {
-    src: m,
+  (0, s.jsx)('img', {
+    src: g,
     className: o()(f.sparkles, f.right),
     alt: '',
     'aria-hidden': !0

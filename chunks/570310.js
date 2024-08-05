@@ -2,7 +2,7 @@ n(47120);
 var r = n(147913),
   i = n(430871),
   a = n(185923);
-let o = new Set([
+let s = new Set([
   a.qR.EmojiButtonMouseEntered,
   a.qR.ChatInputExpressionPressed,
   a.qR.ChatInputSuggestionsShown,
@@ -14,12 +14,12 @@ let o = new Set([
   a.qR.MessageContextMenuMouseEntered,
   a.qR.AutocompleteWrapperShown
 ]);
-class s extends r.Z {
+class o extends r.Z {
   handleInteraction(e) {
 let {
   interaction: t
 } = e;
-o.has(t) && (0, i.x)(t);
+s.has(t) && (0, i.x)(t);
   }
   constructor(...e) {
 var t, n, r;
@@ -33,4 +33,4 @@ super(...e), t = this, n = 'actions', r = {
 }) : t[n] = r;
   }
 }
-t.Z = new s();
+t.Z = new o();

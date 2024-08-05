@@ -87,7 +87,7 @@ super(...e), U(this, 'handleHeaderClick', () => {
     log: t,
     guildId: a
   } = this.props, i = g.Z.getGuild(a);
-  null != t.options.channel && null != i && (0, I.jW)(e, async () => {
+  null != t.options.channel && 'string' != typeof t.options.channel && null != i && (0, I.jW)(e, async () => {
     let {
       default: e
     } = await n.e('51529').then(n.bind(n, 911053));

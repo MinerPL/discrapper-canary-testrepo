@@ -4,7 +4,7 @@ n = /\d{1,2}\/\d{1,2}\/\d{4}/,
 r = /\d{4}-\d{1,2}-\d{1,2}/,
 i = /(\d|1[012])(:\d+){0,2} *(AM|PM)/,
 a = /\d{1,2}(:\d{1,2}){1,2}/,
-o = {
+s = {
   className: 'literal',
   variants: [{
       begin: t.concat(/# */, t.either(r, n), / *#/)
@@ -20,7 +20,7 @@ o = {
     }
   ]
 },
-s = e.COMMENT(/'''/, /$/, {
+o = e.COMMENT(/'''/, /$/, {
   contains: [{
     className: 'doctag',
     begin: /<\/?/,
@@ -63,7 +63,7 @@ contains: [{
       begin: /""/
     }]
   },
-  o,
+  s,
   {
     className: 'number',
     relevance: 0,
@@ -88,7 +88,7 @@ contains: [{
     className: 'label',
     begin: /^\w+:/
   },
-  s,
+  o,
   l,
   {
     className: 'meta',

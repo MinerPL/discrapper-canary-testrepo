@@ -11,7 +11,7 @@ i = {
 a = e.COMMENT('<!--', '-->', {
   relevance: 0
 }),
-o = {
+s = {
   className: 'meta',
   begin: '\\[noprocess\\]',
   starts: {
@@ -20,7 +20,7 @@ o = {
     contains: [a]
   }
 },
-s = {
+o = {
   className: 'meta',
   begin: '\\[/noprocess|' + n
 },
@@ -106,8 +106,8 @@ contains: [{
       contains: [a]
     }
   },
-  o,
   s,
+  o,
   {
     className: 'meta',
     begin: '\\[no_square_brackets',
@@ -124,8 +124,8 @@ contains: [{
             contains: [a]
           }
         },
-        o,
-        s
+        s,
+        o
       ].concat(l)
     }
   },

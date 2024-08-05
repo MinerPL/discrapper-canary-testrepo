@@ -8,7 +8,7 @@ n = e.COMMENT('//', '$', {
 r = 'decltype\\(auto\\)',
 i = '[a-zA-Z_]\\w*::',
 a = '(' + r + '|' + t.optional(i) + '[a-zA-Z_]\\w*' + t.optional('<[^<>]+>') + ')',
-o = {
+s = {
   className: 'type',
   variants: [{
       begin: '\\b[a-z\\d_]*_t\\b'
@@ -18,7 +18,7 @@ o = {
     }
   ]
 },
-s = {
+o = {
   className: 'string',
   variants: [{
       begin: '(u8?|U|L)?"',
@@ -62,7 +62,7 @@ u = {
       begin: /\\\n/,
       relevance: 0
     },
-    e.inherit(s, {
+    e.inherit(o, {
       className: 'string'
     }),
     {
@@ -147,11 +147,11 @@ _ = {
 },
 E = [
   u,
-  o,
+  s,
   n,
   e.C_BLOCK_COMMENT_MODE,
   l,
-  s
+  o
 ],
 f = {
   variants: [{
@@ -210,9 +210,9 @@ h = {
       contains: [
         n,
         e.C_BLOCK_COMMENT_MODE,
-        s,
-        l,
         o,
+        l,
+        s,
         {
           begin: /\(/,
           end: /\)/,
@@ -222,14 +222,14 @@ h = {
             'self',
             n,
             e.C_BLOCK_COMMENT_MODE,
-            s,
+            o,
             l,
-            o
+            s
           ]
         }
       ]
     },
-    o,
+    s,
     n,
     e.C_BLOCK_COMMENT_MODE,
     u
@@ -260,7 +260,7 @@ contains: [].concat(f, h, E, [
 ]),
 exports: {
   preprocessor: u,
-  strings: s,
+  strings: o,
   keywords: _
 }
   };

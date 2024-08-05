@@ -9,8 +9,8 @@ return k;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(278074),
+  s = n.n(a),
+  o = n(278074),
   l = n(442837),
   u = n(692547),
   c = n(481060),
@@ -46,11 +46,11 @@ user: t,
 guildId: n,
 isTryItOutFlow: i,
 forProfileEffectModal: a,
-onClick: o
-  } = e, s = (0, l.e7)([A.Z], () => A.Z.getUserProfile(t.id), [t]), d = (0, l.e7)([p.Z], () => p.Z.getGuild(n), [n]), _ = (0, E.OR)(d);
+onClick: s
+  } = e, o = (0, l.e7)([A.Z], () => A.Z.getUserProfile(t.id), [t]), d = (0, l.e7)([p.Z], () => p.Z.getGuild(n), [n]), _ = (0, E.OR)(d);
   return (0, r.jsxs)(r.Fragment, {
 children: [
-  (null == s ? void 0 : s.profileFetchFailed) && (!t.isClyde() || _) && (0, r.jsx)(c.Tooltip, {
+  (null == o ? void 0 : o.profileFetchFailed) && (!t.isClyde() || _) && (0, r.jsx)(c.Tooltip, {
     text: M.Z.Messages.USER_PROFILE_LOAD_ERROR,
     spacing: 16,
     children: e => (0, r.jsx)(c.CircleExclamationPointIcon, {
@@ -68,7 +68,7 @@ children: [
     guildId: n,
     isTryItOutFlow: i,
     size: R.V.SIZE_22,
-    onBadgeClick: o
+    onBadgeClick: s
   })
 ]
   });
@@ -125,7 +125,7 @@ children: (0, r.jsx)(G, {
   statusTooltip: !0,
   statusTooltipDelay: x
 })
-  }), $ = (0, s.EQ)(A).with(D.y0.POPOUT, () => (0, O.zW)({
+  }), $ = (0, o.EQ)(A).with(D.y0.POPOUT, () => (0, O.zW)({
 premiumUserWithBanner: P.avatarPositionPremiumBanner,
 premiumUserWithoutBanner: P.avatarPositionPremiumNoBanner,
 default: P.avatarPositionNormal
@@ -136,7 +136,7 @@ hasProfileEffect: R
   })).with(D.y0.POMELO_POPOUT, () => P.avatarPositionPomelo).with(D.y0.PANEL, () => P.avatarPositionPanel).with(D.y0.BITE_SIZE, () => P.avatarPositionBiteSize).exhaustive();
   return (0, r.jsx)(r.Fragment, {
 children: (0, r.jsxs)(c.Clickable, {
-  className: o()({
+  className: s()({
     [P.clickable]: !K,
     [P.avatarWrapperNonUserBot]: F,
     [P.avatarWrapperNormal]: !F
@@ -160,7 +160,7 @@ children: (0, r.jsxs)(c.Clickable, {
       let e = null != z,
         t = e ? w : (0, c.getAvatarSize)(U);
       return (0, r.jsx)(m.ZP, {
-        mask: null == u || u === L.Skl.UNKNOWN || H ? m.ZP.Masks.AVATAR_DEFAULT : (0, s.EQ)([
+        mask: null == u || u === L.Skl.UNKNOWN || H ? m.ZP.Masks.AVATAR_DEFAULT : (0, o.EQ)([
           e,
           _
         ]).with([
@@ -199,8 +199,8 @@ user: t,
 displayProfile: n,
 guildId: i,
 channelId: a,
-onClose: o,
-isMobile: s,
+onClose: s,
+isMobile: o,
 isStreaming: l,
 status: u,
 disableUserProfileLink: c,
@@ -214,7 +214,7 @@ children: [
   (0, r.jsx)(v.Z, {
     user: t,
     displayProfile: n,
-    onClose: o,
+    onClose: s,
     guildId: i,
     profileType: D.y0.POPOUT,
     showPremiumBadgeUpsell: _,
@@ -230,10 +230,10 @@ children: [
     user: t,
     displayProfile: n,
     status: l ? L.Skl.STREAMING : u,
-    isMobile: s,
+    isMobile: o,
     guildId: i,
     channelId: a,
-    onClose: o,
+    onClose: s,
     disableUserProfileLink: c,
     hasBanner: (null == n ? void 0 : n.banner) != null,
     hasProfileEffect: (null == n ? void 0 : n.profileEffectId) != null,
@@ -242,7 +242,7 @@ children: [
   (0, r.jsx)(x, {
     user: t,
     guildId: i,
-    onClick: o
+    onClick: s
   })
 ]
   });

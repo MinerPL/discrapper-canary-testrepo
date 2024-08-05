@@ -8,8 +8,8 @@ return e;
   },
   i = n(512722),
   a = n(968598),
-  o = n(592093),
-  s = n(409940),
+  s = n(592093),
+  o = n(409940),
   l = n(763808),
   u = n(812797),
   c = n(683968),
@@ -21,14 +21,14 @@ var f = n(538605),
   h = n(19109),
   p = n(816479),
   m = function(e, t, n) {
-if (e instanceof s) {
+if (e instanceof o) {
   var i = r({}, t),
     a = r({}, t);
-  for (var o in t) {
-    var l = t[o],
+  for (var s in t) {
+    var l = t[s],
       u = l.x,
       c = l.y;
-    void 0 !== u && void 0 !== c && (i[o] = u, a[o] = c);
+    void 0 !== u && void 0 !== c && (i[s] = u, a[s] = c);
   }
   return g([
     n(e.x, i),
@@ -80,14 +80,14 @@ var n = 0,
         });
         return;
       }
-      e.forEach(function(o, s) {
-        var l = function(o) {
-          if (r[s] = !0, ++n === e.length) {
-            n = 0, t && t(o);
+      e.forEach(function(s, o) {
+        var l = function(s) {
+          if (r[o] = !0, ++n === e.length) {
+            n = 0, t && t(s);
             return;
-          }!o.finished && i && a.stop();
+          }!s.finished && i && a.stop();
         };
-        o ? o.start(l) : l({
+        s ? s.start(l) : l({
           finished: !0
         });
       });
@@ -101,15 +101,15 @@ var n = 0,
 return a;
   },
   S = function(e) {
-return I(new o(0), {
+return I(new s(0), {
   toValue: 0,
   delay: e,
   duration: 0
 });
   };
 e.exports = {
-  Value: o,
-  ValueXY: s,
+  Value: s,
+  ValueXY: o,
   decay: function e(t, n) {
 return m(t, n, e) || {
   start: function(e) {
@@ -160,16 +160,16 @@ return g(t.map(function(t, n) {
 return function() {
   for (var n = arguments.length, r = Array(n), a = 0; a < n; a++)
     r[a] = arguments[a];
-  var s = function e(t, n, r) {
+  var o = function e(t, n, r) {
     if ('number' == typeof n) {
-      i(t instanceof o, 'Bad mapping of type ' + typeof t + ' for key ' + r + ', event value must map to AnimatedValue'), t.setValue(n);
+      i(t instanceof s, 'Bad mapping of type ' + typeof t + ' for key ' + r + ', event value must map to AnimatedValue'), t.setValue(n);
       return;
     }
     for (var r in (i('object' == typeof t, 'Bad mapping of type ' + typeof t + ' for key ' + r), i('object' == typeof n, 'Bad event of type ' + typeof n + ' for key ' + r), t))
       e(t[r], n[r], r);
   };
   e.forEach(function(e, t) {
-    s(e, r[t], 'arg' + t);
+    o(e, r[t], 'arg' + t);
   }), t && t.listener && t.listener.apply(null, r);
 };
   },

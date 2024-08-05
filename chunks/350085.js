@@ -4,8 +4,8 @@ return d;
   }
 });
 var i = n(392711),
-  s = n.n(i),
-  a = n(283595),
+  a = n.n(i),
+  s = n(283595),
   r = n(808506),
   l = n(996106),
   o = n(186901),
@@ -30,14 +30,14 @@ handler(e) {
       dispatch: l
     } = e, o = r.Z.enabled, c = !0, d = n.application.id;
     if (null != d) {
-      let e = a.Z.getActiveLibraryApplication(d);
+      let e = s.Z.getActiveLibraryApplication(d);
       null != e && (o = o && e.isOverlayEnabled()), c = r.Z.isInputLocked(t);
     }
     let u = {
       enabled: o,
       locked: c
     };
-    return !s().isEqual(u, i) && l(u), u;
+    return !a().isEqual(u, i) && l(u), u;
   };
 }
   }

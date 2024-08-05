@@ -19,13 +19,13 @@ localizedPricingPromo: t,
 smallGap: n
   } = e, a = t.countryCode, C = (0, i.e7)([o.default], () => o.default.locale);
   (0, _.U)(I.jXE.SETTINGS_PREMIUM_BANNER, a);
-  let p = (0, i.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription()),
+  let g = (0, i.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription()),
 {
-  localizedPricingBannerHeader: g,
+  localizedPricingBannerHeader: p,
   localizedPricingBannerBody: A
 } = (0, d.vB)({
   localizedPricingPromo: t,
-  subscription: p,
+  subscription: g,
   userLocale: C
 }),
 m = a.toLowerCase() + 'Banner';
@@ -41,7 +41,7 @@ children: [
   (0, s.jsx)(l.Heading, {
     className: R.bannerHeading,
     variant: 'heading-xl/semibold',
-    children: g
+    children: p
   }),
   (0, s.jsx)('div', {
     className: R.textContainer,

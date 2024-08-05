@@ -18,8 +18,8 @@ return function(t, n, r) {
 };
   }(),
   a = n(968598),
-  o = n(261469),
-  s = n(213749),
+  s = n(261469),
+  o = n(213749),
   l = n(661493),
   u = function(e) {
 function t(e) {
@@ -33,7 +33,7 @@ function t(e) {
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
   }(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
   return (e = l.current(e) || {}).transform && !(e.transform instanceof a) && (e = r({}, e, {
-    transform: new s(e.transform)
+    transform: new o(e.transform)
   })), n._style = e, n;
 }
 return ! function(e, t) {
@@ -88,5 +88,5 @@ return ! function(e, t) {
     }
   }
 ]), t;
-  }(o);
+  }(s);
 e.exports = u;

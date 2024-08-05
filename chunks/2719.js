@@ -21,19 +21,19 @@ var n = s(735250),
   C = s(144114),
   m = s(918505),
   A = s(332473),
-  h = s(921801),
-  g = s(290421),
+  g = s(921801),
+  h = s(290421),
   O = s(318661),
   p = s(80132),
   R = s(735336),
   x = s(204197),
   M = s(25990),
-  D = s(594174),
-  f = s(572004),
+  f = s(594174),
+  D = s(572004),
   P = s(51144),
   L = s(998502),
-  Z = s(695346),
-  b = s(461877),
+  b = s(695346),
+  Z = s(461877),
   v = s(726985),
   j = s(981631),
   B = s(815660),
@@ -52,9 +52,9 @@ user: l
   a.useEffect(() => {
 C(null != c.current && c.current.scrollWidth > c.current.clientWidth);
   }, [l.username]);
-  let h = !l.isClaimed(),
-g = E && !l.isPomelo() && !l.hasVerifiedEmailOrPhone() || h,
-O = g ? F.Z.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
+  let g = !l.isClaimed(),
+h = E && !l.isPomelo() && !l.hasVerifiedEmailOrPhone() || g,
+O = h ? F.Z.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
   return (0, n.jsxs)('div', {
 className: r()(y.field, o),
 children: [
@@ -122,7 +122,7 @@ children: [
     text: O,
     children: e => (0, n.jsx)(_.Button, {
       ...e,
-      disabled: g,
+      disabled: h,
       size: _.Button.Sizes.SMALL,
       className: y.fieldButton,
       color: _.Button.Colors.PRIMARY,
@@ -257,7 +257,7 @@ if (null == i.email)
         default: e
       } = await Promise.all([
         s.e('9343'),
-        s.e('22303')
+        s.e('45863')
       ]).then(s.bind(s, 642298));
       return t => (0, n.jsx)(e, {
         ...t
@@ -274,7 +274,7 @@ else {
     buttonColor: _.Button.Colors.PRIMARY,
     valueMessage: (0, n.jsx)(k, {
       text: e,
-      censor: b.E,
+      censor: Z.E,
       revealLabel: F.Z.Messages.USER_SETTINGS_ACCOUNT_REVEAL_EMAIL_A11Y_LABEL,
       hideLabel: F.Z.Messages.USER_SETTINGS_ACCOUNT_HIDE_EMAIL_A11Y_LABEL
     }),
@@ -283,7 +283,7 @@ else {
         default: e
       } = await Promise.all([
         s.e('9343'),
-        s.e('22303')
+        s.e('45863')
       ]).then(s.bind(s, 642298));
       return t => (0, n.jsx)(e, {
         ...t
@@ -346,7 +346,7 @@ email: l
   } = i, c = null != o;
   return t = c ? (0, n.jsx)(k, {
 text: o,
-censor: b.n,
+censor: Z.n,
 revealLabel: F.Z.Messages.USER_SETTINGS_ACCOUNT_REVEAL_PHONE_A11Y_LABEL,
 hideLabel: F.Z.Messages.USER_SETTINGS_ACCOUNT_HIDE_PHONE_A11Y_LABEL
   }) : F.Z.Messages.USER_SETTINGS_NO_PHONE_PLACEHOLDER, (0, n.jsxs)('div', {
@@ -424,7 +424,7 @@ user: t
 id: t.id,
 label: F.Z.Messages.COPY_ID_USER
   });
-  return Z.Sb.useSetting() && f.wS ? (0, n.jsx)(_.Popout, {
+  return b.Sb.useSetting() && D.wS ? (0, n.jsx)(_.Popout, {
 renderPopout: e => {
   let {
     closePopout: t
@@ -456,13 +456,13 @@ function z() {
 
 function Q() {
   var e;
-  let t = (0, c.e7)([D.default], () => {
-  let e = D.default.getCurrentUser();
+  let t = (0, c.e7)([f.default], () => {
+  let e = f.default.getCurrentUser();
   return l()(null != e, 'UserSettingsAccountProfileCard: currentUser cannot be undefined'), e;
 }),
 s = (0, O.ZP)(t.id),
-a = (0, g.Z)(s),
-i = Z.co.useSetting(),
+a = (0, h.Z)(s),
+i = b.co.useSetting(),
 r = (0, c.e7)([M.Z], () => M.Z.getErrors()),
 o = null == r ? void 0 : null === (e = r.avatar) || void 0 === e ? void 0 : e[0],
 {
@@ -534,27 +534,27 @@ children: [
       (0, n.jsxs)('div', {
         className: y.fieldList,
         children: [
-          (0, n.jsx)(h.F, {
+          (0, n.jsx)(g.F, {
             setting: v.s6.ACCOUNT_DISPLAY_NAME,
             children: (0, n.jsx)(w, {
               className: y.fieldSpacerBottom,
               user: t
             })
           }),
-          (0, n.jsx)(h.F, {
+          (0, n.jsx)(g.F, {
             setting: v.s6.ACCOUNT_USERNAME,
             children: (0, n.jsx)(Y, {
               user: t
             })
           }),
-          (0, n.jsx)(h.F, {
+          (0, n.jsx)(g.F, {
             setting: v.s6.ACCOUNT_EMAIL,
             children: (0, n.jsx)(H, {
               className: y.fieldSpacer,
               user: t
             })
           }),
-          (0, n.jsx)(h.F, {
+          (0, n.jsx)(g.F, {
             setting: v.s6.ACCOUNT_PHONE_NUMBER,
             children: (0, n.jsx)(W, {
               className: y.fieldSpacer,

@@ -1,8 +1,8 @@
 var r = n(740078),
   i = n(343713),
   a = n(49691),
-  o = n(285363),
-  s = n(874900),
+  s = n(285363),
+  o = n(874900),
   l = n(126387),
   u = n(632471),
   c = n(894417),
@@ -45,7 +45,7 @@ U = window;
 var w = (0, i.Z)(h),
   x = 'clientHeight',
   G = 'clientWidth';
-w === (0, a.Z)(h) && (w = (0, o.Z)(h), 'static' !== (0, s.Z)(w).position && 'absolute' === g && (x = 'scrollHeight', G = 'scrollWidth'));
+w === (0, a.Z)(h) && (w = (0, s.Z)(h), 'static' !== (0, o.Z)(w).position && 'absolute' === g && (x = 'scrollHeight', G = 'scrollWidth'));
 (m === r.we || (m === r.t$ || m === r.F2) && I === r.ut) && (P = r.I, y -= (v && w === U && U.visualViewport ? U.visualViewport.height : w[x]) - p.height, y *= S ? 1 : -1), (m === r.t$ || (m === r.we || m === r.I) && I === r.ut) && (M = r.F2, R -= (v && w === U && U.visualViewport ? U.visualViewport.width : w[G]) - p.width, R *= S ? 1 : -1);
   }
   var k = Object.assign({
@@ -73,8 +73,8 @@ var t = e.state,
   r = n.gpuAcceleration,
   i = n.adaptive,
   a = n.roundOffsets,
-  o = void 0 === a || a,
-  s = {
+  s = void 0 === a || a,
+  o = {
     placement: (0, l.Z)(t.placement),
     variation: (0, u.Z)(t.placement),
     popper: t.elements.popper,
@@ -82,16 +82,16 @@ var t = e.state,
     gpuAcceleration: void 0 === r || r,
     isFixed: 'fixed' === t.options.strategy
   };
-null != t.modifiersData.popperOffsets && (t.styles.popper = Object.assign({}, t.styles.popper, _(Object.assign({}, s, {
+null != t.modifiersData.popperOffsets && (t.styles.popper = Object.assign({}, t.styles.popper, _(Object.assign({}, o, {
   offsets: t.modifiersData.popperOffsets,
   position: t.options.strategy,
   adaptive: void 0 === i || i,
-  roundOffsets: o
-})))), null != t.modifiersData.arrow && (t.styles.arrow = Object.assign({}, t.styles.arrow, _(Object.assign({}, s, {
+  roundOffsets: s
+})))), null != t.modifiersData.arrow && (t.styles.arrow = Object.assign({}, t.styles.arrow, _(Object.assign({}, o, {
   offsets: t.modifiersData.arrow,
   position: 'absolute',
   adaptive: !1,
-  roundOffsets: o
+  roundOffsets: s
 })))), t.attributes.popper = Object.assign({}, t.attributes.popper, {
   'data-popper-placement': t.placement
 });

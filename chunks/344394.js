@@ -1,10 +1,10 @@
-var a = r(319301);
+var a = t(319301);
 let n = {
   figma: {
 category: 'chat'
   }
 };
-t.Z = (0, a.a)({
+r.Z = (0, a.a)({
   'channel-text-area-placeholder': {
 dark: 'primary.430',
 light: 'primary.400',

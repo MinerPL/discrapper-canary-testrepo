@@ -9,6 +9,6 @@ e.exports = {
   changePasswordButton: 'changePasswordButton_ad4a7c',
   accountWarningBodyText: 'accountWarningBodyText_ad4a7c',
   backupCode: 'backupCode_ad4a7c',
-  codeCheckbox: 'codeCheckbox_ad4a7c',
-  noticeTextButton: 'noticeTextButton_ad4a7c'
+  noticeTextButton: 'noticeTextButton_ad4a7c',
+  codeCheckbox: 'codeCheckbox_ad4a7c'
 };

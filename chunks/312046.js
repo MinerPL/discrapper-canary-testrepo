@@ -11,11 +11,6 @@ let a = e => ({
   startsAt: e.starts_at,
   expiresAt: e.expires_at,
   features: e.features,
-  experiments: {
-rollout: e.experiments.rollout,
-targeting: e.experiments.targeting,
-preview: e.experiments.preview
-  },
   application: {
 id: e.application.id,
 name: e.application.name,

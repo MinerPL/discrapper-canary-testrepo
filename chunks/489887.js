@@ -3,7 +3,7 @@ n.d(t, {
 return d;
   },
   $z: function() {
-return o;
+return s;
   },
   Az: function() {
 return u;
@@ -18,15 +18,15 @@ return c;
 return l;
   },
   gY: function() {
-return s;
+return o;
   },
   lc: function() {
 return r;
   }
 }), n(47120);
 var r, i, a = n(957825);
-let o = 'POLL_CREATION_MODAL_KEY',
-  s = 1,
+let s = 'POLL_CREATION_MODAL_KEY',
+  o = 1,
   l = 10,
   u = 300,
   c = 55,

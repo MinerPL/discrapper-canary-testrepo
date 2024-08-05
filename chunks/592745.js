@@ -1,5 +1,5 @@
 n(47120);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140);
 let u = new Set(),
   c = {};
@@ -17,7 +17,7 @@ applicationId: t
   } = e;
   u.delete(t);
 }
-class E extends(r = s.ZP.Store) {
+class E extends(r = o.ZP.Store) {
   get launchingGames() {
 return u;
   }
@@ -31,12 +31,12 @@ return null != c[e] ? c[e] : (c[e] = !1, l.Z.dispatch({
 }), !1);
   }
 }
-o = 'LaunchableGameStore', (a = 'displayName') in(i = E) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'LaunchableGameStore', (a = 'displayName') in(i = E) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new E(l.Z, {
+}) : i[a] = s, t.Z = new E(l.Z, {
   GAME_LAUNCHABLE_UPDATE: function(e) {
 let {
   gameId: t,

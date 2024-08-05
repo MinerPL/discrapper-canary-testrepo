@@ -6,9 +6,9 @@ return E;
 var r = n(735250),
   i = n(470079),
   a = n(665443),
-  o = n.n(a),
-  s = n(39383),
-  l = n.n(s),
+  s = n.n(a),
+  o = n(39383),
+  l = n.n(o),
   u = n(992774),
   c = n(672784),
   d = n(369711),
@@ -19,7 +19,7 @@ function E(e) {
 streamId: t,
 paused: n,
 onReady: a,
-onResize: s,
+onResize: o,
 className: E,
 ...f
   } = e, h = i.useRef(null), {
@@ -30,7 +30,7 @@ let e = h.current;
 if (!n && null != e) {
   let n = !1,
     r = (t, r) => {
-      !n && (null == a || a(), n = !0), (e.width !== t || e.height !== r) && (e.width = t, e.height = r, null == s || s({
+      !n && (null == a || a(), n = !0), (e.width !== t || e.height !== r) && (e.width = t, e.height = r, null == o || o({
         width: t,
         height: r
       }));
@@ -58,12 +58,12 @@ if (!n && null != e) {
   }, [
 t,
 n,
-s,
+o,
 a,
 p
   ]), (0, r.jsx)('canvas', {
 id: p,
-className: o()('media-engine-video', E),
+className: s()('media-engine-video', E),
 ref: h,
 ...f
   });

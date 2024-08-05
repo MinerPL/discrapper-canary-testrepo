@@ -25,7 +25,7 @@ e.exports = function(e) {
   scope: 'keyword',
   match: /\b(yield|return|let|do|match|use)!/
 },
-o = [
+s = [
   'bool',
   'byte',
   'sbyte',
@@ -64,7 +64,7 @@ o = [
   'voidptr',
   'Result'
 ],
-s = {
+o = {
   keyword: [
     'abstract',
     'and',
@@ -211,10 +211,10 @@ _ = function({
   includeEqual: e
 }) {
   let n;
-  let o = i('[', ...Array.from(n = e ? '!%&*+-/<=>@^|~?' : '!%&*+-/<>@^|~?').map(t), ']'),
-    s = a(o, /\./),
-    l = i(s, r(s)),
-    u = a(i(l, s, '*'), i(o, '+'));
+  let s = i('[', ...Array.from(n = e ? '!%&*+-/<=>@^|~?' : '!%&*+-/<>@^|~?').map(t), ']'),
+    o = a(s, /\./),
+    l = i(o, r(o)),
+    u = a(i(l, o, '*'), i(s, '+'));
   return {
     scope: 'operator',
     match: a(u, /:\?>/, /:\?/, /:>/, /:=/, /::?/, /\$/),
@@ -233,8 +233,8 @@ h = function(t, n) {
     beginScope: n,
     end: r(a(/\n/, /=/)),
     relevance: 0,
-    keywords: e.inherit(s, {
-      type: o
+    keywords: e.inherit(o, {
+      type: s
     }),
     contains: [
       l,
@@ -260,7 +260,7 @@ I = {
     4: 'title.class'
   },
   end: r(/\(|=|$/),
-  keywords: s,
+  keywords: o,
   contains: [
     l,
     e.inherit(u, {
@@ -321,7 +321,7 @@ O = {
   scope: 'subst',
   begin: /\{/,
   end: /\}/,
-  keywords: s
+  keywords: o
 },
 R = {
   scope: 'string',
@@ -379,7 +379,7 @@ aliases: [
   'fs',
   'f#'
 ],
-keywords: s,
+keywords: o,
 illegal: /\/\*/,
 classNameAliases: {
   'computation-expression': 'keyword'

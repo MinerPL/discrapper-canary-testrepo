@@ -10,8 +10,5 @@ e.exports = {
   header: 'header_a3bc57',
   inactiveNitroHeader: 'inactiveNitroHeader_a3bc57',
   activeNitroHeader: 'activeNitroHeader_a3bc57',
-  nitroBottomDivider: 'nitroBottomDivider_a3bc57',
-  upsellContainer: 'upsellContainer_a3bc57',
-  upsellText: 'upsellText_a3bc57',
-  upsellButton: 'upsellButton_a3bc57'
+  nitroBottomDivider: 'nitroBottomDivider_a3bc57'
 };

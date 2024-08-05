@@ -5,21 +5,21 @@ return x;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(399606),
-  s = n(704215),
+  s = n(399606),
+  l = n(704215),
   r = n(481060),
   o = n(239091),
   c = n(706140),
-  d = n(242291),
-  u = n(792165),
+  u = n(242291),
+  d = n(792165),
   h = n(603074),
   p = n(294629),
   m = n(390322),
   _ = n(871499),
   f = n(131951),
   E = n(459273),
-  C = n(304388),
-  g = n(981631),
+  g = n(304388),
+  C = n(981631),
   I = n(689938);
 
 function x(e) {
@@ -27,9 +27,9 @@ function x(e) {
 channel: t,
 themeable: x
   } = e, T = t.getGuildId(), {
-mute: v,
-suppress: N
-  } = (0, p.Z)(t), S = (0, l.e7)([f.Z], () => f.Z.isDeaf()), Z = v || N || S, A = (0, d.sR)({
+mute: N,
+suppress: v
+  } = (0, p.Z)(t), S = (0, s.e7)([f.Z], () => f.Z.isDeaf()), Z = N || v || S, A = (0, u.sR)({
 isSoundboardButtonDisabled: Z
   }), [M, b] = (0, c.c)(A);
 
@@ -50,9 +50,9 @@ L = a.useCallback(() => {
   null === (e = j.current) || void 0 === e || e.hidePopout();
 }, []);
   return (0, E.yp)({
-event: g.CkL.TOGGLE_SOUNDBOARD,
+event: C.CkL.TOGGLE_SOUNDBOARD,
 handler: L
-  }), (0, i.jsx)(C.Z, {
+  }), (0, i.jsx)(g.Z, {
 ref: j,
 renderPopout: e => {
   let {
@@ -63,7 +63,7 @@ renderPopout: e => {
       guildId: T,
       channel: t,
       onClose: n,
-      gridNotice: M === s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, i.jsx)(u.o, {
+      gridNotice: M === l.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, i.jsx)(d.o, {
         onClose: n,
         markAsDismissed: b
       }),
@@ -74,9 +74,9 @@ renderPopout: e => {
 children: e => (0, i.jsx)(_.Z, {
   themeable: x,
   label: function() {
-    if (v)
-      return I.Z.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
     if (N)
+      return I.Z.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
+    if (v)
       return I.Z.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
     if (S)
       return I.Z.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;

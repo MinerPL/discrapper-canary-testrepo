@@ -1,6 +1,6 @@
 n.d(t, {
   Ou: function() {
-return o;
+return s;
   },
   jN: function() {
 return i;
@@ -24,7 +24,7 @@ type: 'LAYER_POP'
   });
 }
 
-function o() {
+function s() {
   r.Z.dispatch({
 type: 'LAYER_POP_ALL'
   });

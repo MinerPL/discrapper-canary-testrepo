@@ -11,9 +11,9 @@ var i = n(735250),
   o = n(758059),
   c = n(367907),
   u = n(835473),
-  d = n(703656),
-  h = n(594174),
-  p = n(366695),
+  d = n(925329),
+  h = n(703656),
+  p = n(594174),
   _ = n(436088),
   f = n(51144),
   m = n(158631),
@@ -28,7 +28,7 @@ function x(e) {
   let {
 userId: n,
 applicationId: l
-  } = e, a = (0, r.e7)([h.default], () => h.default.getUser(n)), o = null !== (t = f.ZP.getGlobalName(a)) && void 0 !== t ? t : f.ZP.getUserTag(a), c = (0, u.q)(l);
+  } = e, a = (0, r.e7)([p.default], () => p.default.getUser(n)), o = null !== (t = f.ZP.getGlobalName(a)) && void 0 !== t ? t : f.ZP.getUserTag(a), c = (0, u.q)(l);
   return null == a ? null : (0, i.jsxs)('div', {
 className: N.broadcast,
 children: [
@@ -57,7 +57,7 @@ children: [
       })
     ]
   }),
-  (0, i.jsx)(p.Z, {
+  (0, i.jsx)(d.Z, {
     game: c
   })
 ]
@@ -67,7 +67,7 @@ children: [
 function S(e) {
   let {
 closePopout: t
-  } = e, n = (0, g.Z)(), r = n.slice(0, 3), u = (0, m.ZP)(), h = n.length - r.length;
+  } = e, n = (0, g.Z)(), r = n.slice(0, 3), u = (0, m.ZP)(), d = n.length - r.length;
   return l.useEffect(() => {
 c.ZP.trackWithMetadata(I.rMx.BROADCAST_POPOUT_VIEWED, {
   num_broadcasts_shown: r.length,
@@ -112,7 +112,7 @@ children: [
       })
     ]
   })),
-  h > 0 && (0, i.jsxs)(i.Fragment, {
+  d > 0 && (0, i.jsxs)(i.Fragment, {
     children: [
       (0, i.jsx)('hr', {
         className: N.separator
@@ -121,14 +121,14 @@ children: [
         variant: 'text-xs/medium',
         color: 'header-secondary',
         children: E.Z.Messages.MORE_OPEN_BROADCASTS.format({
-          count: h
+          count: d
         })
       })
     ]
   }),
   (0, i.jsx)(s.Button, {
     onClick: () => {
-      (0, d.uL)(I.Z5c.ME), o.Z.setSection(I.pJs.ONLINE), c.ZP.trackWithMetadata(I.rMx.BROADCAST_LIST_VISITED, {
+      (0, h.uL)(I.Z5c.ME), o.Z.setSection(I.pJs.ONLINE), c.ZP.trackWithMetadata(I.rMx.BROADCAST_LIST_VISITED, {
         num_active_broadcasts: n.length,
         friends_tab_clicked: !1,
         is_broadcasting: u

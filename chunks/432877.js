@@ -3,8 +3,8 @@ n.d(t, {
 return r;
   }
 }), n(47120);
-var r, i, a, o = n(442837),
-  s = n(570140);
+var r, i, a, s = n(442837),
+  o = n(570140);
 
 function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ premium_roadblocks: {
 }
   },
   c = {};
-class d extends(i = o.ZP.DeviceSettingsStore) {
+class d extends(i = s.ZP.DeviceSettingsStore) {
   getUserAgnosticState() {
 return {
   toggleStates: c
@@ -79,7 +79,7 @@ return Object.entries(u).filter(t => {
 });
   }
 }
-l(d, 'displayName', 'DevToolsDevSettingsStore'), l(d, 'persistKey', 'DevToolsDevSettingsStore'), t.ZP = new d(s.Z, {
+l(d, 'displayName', 'DevToolsDevSettingsStore'), l(d, 'persistKey', 'DevToolsDevSettingsStore'), t.ZP = new d(o.Z, {
   DEV_TOOLS_DEV_SETTING_SET: function(e) {
 c[e.toggle] = e.value;
   }

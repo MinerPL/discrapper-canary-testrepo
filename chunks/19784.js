@@ -13,16 +13,16 @@ void 0 === e && (e = i);
 var t = !0,
   n = !1,
   a = 0,
-  s = [],
+  o = [],
   l = 0,
   u = new Set(),
   c = new Set(),
   d = new Set(),
   _ = function(e) {
-    var t = s.indexOf(e);
-    t < 0 && (t = s.findIndex(function(t) {
+    var t = o.indexOf(e);
+    t < 0 && (t = o.findIndex(function(t) {
       return t.priority > e.priority;
-    }), s.splice(~t ? t : s.length, 0, e));
+    }), o.splice(~t ? t : o.length, 0, e));
   },
   E = function() {
     if (!t)
@@ -44,20 +44,20 @@ this.setTimeout = function(e, t) {
       });
       e >= 0 && h.splice(e, 1);
     },
-    a = o(h, function(e) {
+    a = s(h, function(e) {
       return e.time > n;
     }),
-    s = {
+    o = {
       time: n,
       handler: e,
       cancel: i
     };
-  return h.splice(a, 0, s), f(), s;
+  return h.splice(a, 0, o), f(), o;
 };
 var p = this.advance = function() {
   var e = r.now();
   if (u.size && (u.forEach(_), u.clear()), h.length && r.batchedUpdates(function() {
-      var t = o(h, function(t) {
+      var t = s(h, function(t) {
         return t.time > e;
       });
       h.splice(0, t).forEach(function(e) {
@@ -66,7 +66,7 @@ var p = this.advance = function() {
     }), e > a) {
     var t = Math.min(64, e - a);
     a = e, r.batchedUpdates(function() {
-      s.length && (r.willAdvance(s), s = s.filter(function(e) {
+      o.length && (r.willAdvance(o), o = o.filter(function(e) {
         return l = e.priority, !e.idle && e.advance(t), !e.idle;
       }), l = 0), c.size && (c.forEach(function(t) {
         return t(e);
@@ -85,7 +85,7 @@ this.start = function(e) {
 };
   };
 
-function o(e, t) {
+function s(e, t) {
   var n = e.findIndex(t);
   return n < 0 ? e.length : n;
 }

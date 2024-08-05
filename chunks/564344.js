@@ -21,8 +21,8 @@ var n = s(735250),
   C = s(585483),
   m = s(16703),
   A = s(785145),
-  h = s(981631),
-  g = s(526761),
+  g = s(981631),
+  h = s(526761),
   O = s(726985),
   p = s(689938),
   R = s(537865);
@@ -40,27 +40,27 @@ s = (0, i.e7)([
 x = null != e ? e : t,
 M = (0, i.e7)([N.default], () => N.default.getCurrentUser()),
 {
-  subsection: D,
-  setSubsection: f
+  subsection: f,
+  setSubsection: D
 } = (0, A.Z)(),
 {
   analyticsLocations: P
 } = (0, l.ZP)(),
 {
   hasSearchResults: L,
-  searchResults: Z
+  searchResults: b
 } = (0, I.E)();
 
-  function b(t) {
-if (D !== t) {
+  function Z(t) {
+if (f !== t) {
   if (s) {
-    C.S.dispatch(h.CkL.SHAKE_APP, {
+    C.S.dispatch(g.CkL.SHAKE_APP, {
       duration: 300,
       intensity: o.$x
-    }), C.S.dispatch(h.CkL.EMPHASIZE_NOTICE);
+    }), C.S.dispatch(g.CkL.EMPHASIZE_NOTICE);
     return;
   }
-  t === g.NB.GUILD && null == e && null != x && (0, d.Fq)(x, P), f(t);
+  t === h.NB.GUILD && null == e && null != x && (0, d.Fq)(x, P), D(t);
 }
   }
   a.useEffect(() => {
@@ -73,7 +73,7 @@ M
   ]);
   let v = !0,
 j = !0;
-  return L && 1 === Z.length && (Z.includes(O.s6.PROFILE_SERVER_PROFILES) ? (b(g.NB.GUILD), j = !1) : Z.includes(O.s6.PROFILE_USER_PROFILE) && (b(g.NB.USER_PROFILE), v = !1)), (0, n.jsx)(l.Gt, {
+  return L && 1 === b.length && (b.includes(O.s6.PROFILE_SERVER_PROFILES) ? (Z(h.NB.GUILD), j = !1) : b.includes(O.s6.PROFILE_USER_PROFILE) && (Z(h.NB.USER_PROFILE), v = !1)), (0, n.jsx)(l.Gt, {
 value: P,
 children: (0, n.jsxs)(r.HeadingLevel, {
   component: (0, n.jsx)(r.Heading, {
@@ -85,22 +85,22 @@ children: (0, n.jsxs)(r.HeadingLevel, {
       className: R.tabBar,
       type: 'top',
       look: 'brand',
-      selectedItem: D,
-      onItemSelect: b,
+      selectedItem: f,
+      onItemSelect: Z,
       children: [
         j ? (0, n.jsx)(r.TabBar.Item, {
           className: R.tabBarItem,
-          id: g.NB.USER_PROFILE,
+          id: h.NB.USER_PROFILE,
           children: p.Z.Messages.EDIT_PROFILE_CATEGORY_USER_PROFILE
-        }, g.NB.USER_PROFILE) : null,
+        }, h.NB.USER_PROFILE) : null,
         v ? (0, n.jsx)(r.TabBar.Item, {
           className: R.tabBarItem,
-          id: g.NB.GUILD,
+          id: h.NB.GUILD,
           children: p.Z.Messages.EDIT_PROFILE_CATEGORY_GUILD_IDENTITY
-        }, g.NB.GUILD) : null
+        }, h.NB.GUILD) : null
       ]
     }),
-    D === g.NB.GUILD ? (0, n.jsx)(E.Z, {
+    f === h.NB.GUILD ? (0, n.jsx)(E.Z, {
       selectedGuild: x
     }) : (0, n.jsx)(T.Z, {})
   ]

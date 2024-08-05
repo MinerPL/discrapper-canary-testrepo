@@ -9,8 +9,8 @@ return G;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(887024),
+  s = n.n(a),
+  o = n(887024),
   l = n(979554),
   u = n(442837),
   c = n(481060),
@@ -53,7 +53,7 @@ location: d,
 reward: E,
 decoration: f,
 onUseNow: h
-  } = e, m = i.useRef(null), [I, T] = i.useState(null), g = i.useRef(new s.qA()), A = (0, u.e7)([_.Z], () => _.Z.useReducedMotion), R = (0, u.e7)([S.default], () => S.default.getCurrentUser()), y = (0, O.j8)(l), L = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, [M, P] = i.useState(L ? 'claimed' : 'loading');
+  } = e, m = i.useRef(null), [I, T] = i.useState(null), g = i.useRef(new o.qA()), A = (0, u.e7)([_.Z], () => _.Z.useReducedMotion), R = (0, u.e7)([S.default], () => S.default.getCurrentUser()), y = (0, O.j8)(l), L = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, [M, P] = i.useState(L ? 'claimed' : 'loading');
   i.useEffect(() => {
 !L && (0, N.QB)(l.id, v.y$.CROSS_PLATFORM, d).then(() => P('claimed')).catch(() => P('error'));
   }, [
@@ -64,7 +64,7 @@ L
   let U = null == R || null == f || 'loading' === M;
   return (0, r.jsxs)(r.Fragment, {
 children: [
-  (0, r.jsx)(s.O_, {
+  (0, r.jsx)(o.O_, {
     ref: T,
     className: b.confettiCanvas,
     environment: g.current
@@ -74,7 +74,7 @@ children: [
     children: (0, r.jsx)(c.ModalRoot, {
       transitionState: n,
       size: c.ModalSize.DYNAMIC,
-      className: o()(b.rootContainer, {
+      className: s()(b.rootContainer, {
         [b.rootContainerLoading]: U
       }),
       hideShadow: !0,
@@ -114,8 +114,8 @@ quest: t,
 user: n,
 decoration: i,
 decorationName: a,
-primaryColor: o,
-secondaryColor: s,
+primaryColor: s,
+secondaryColor: o,
 backgroundUrl: l,
 isSaving: u,
 onClose: d,
@@ -167,7 +167,7 @@ children: [
     children: (0, r.jsxs)('div', {
       className: b.gradient,
       style: {
-        backgroundImage: 'linear-gradient(180deg, '.concat(o, ', ').concat(s, ')')
+        backgroundImage: 'linear-gradient(180deg, '.concat(s, ', ').concat(o, ')')
       },
       children: [
         (0, r.jsx)(c.Heading, {
@@ -222,8 +222,8 @@ function x(e) {
   var t, n;
   let {
 quest: a,
-location: o,
-onClose: s,
+location: s,
+onClose: o,
 transitionState: u
   } = e, c = i.useMemo(() => (0, O.xn)(a.config), [a]), [_, f] = function(e) {
 let {
@@ -247,17 +247,17 @@ return [
 return null;
   let p = (0, O.zK)(a, y.S7.IN_HOUSE_CONSOLE_QUEST);
   return (null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null || p ? (0, r.jsx)(U, {
-onClose: s,
+onClose: o,
 transitionState: u,
 quest: a,
-location: o,
+location: s,
 reward: c,
 decoration: _,
 onUseNow: f
   }) : (0, r.jsx)(E.default, {
 transitionState: u,
 onCloseModal: P,
-onClose: s,
+onClose: o,
 analyticsLocations: [],
 initialSelectedDecoration: _
   });

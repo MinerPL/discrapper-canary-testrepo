@@ -1,18 +1,18 @@
 n.d(t, {
   Z: function() {
-return C;
+return g;
   }
 });
 var i = n(735250);
 n(470079);
 var a = n(410030),
-  l = n(906732),
-  s = n(769654),
+  s = n(906732),
+  l = n(769654),
   r = n(785717),
   o = n(726059),
   c = n(162267),
-  d = n(483517),
-  u = n(502762),
+  u = n(483517),
+  d = n(502762),
   h = n(171368),
   p = n(944546),
   m = n(470900),
@@ -20,37 +20,37 @@ var a = n(410030),
   f = n(689938),
   E = n(271234);
 
-function C(e) {
+function g(e) {
   let {
 user: t,
 channelId: n
   } = e, {
-analyticsLocations: C
-  } = (0, l.ZP)(), {
-trackUserProfileAction: g
+analyticsLocations: g
+  } = (0, s.ZP)(), {
+trackUserProfileAction: C
   } = (0, r.KZ)(), I = (0, a.ZP)(), {
 mutualFriends: x,
 isFetching: T
   } = (0, o.Z)(t.id, !t.bot), {
-mutualGuilds: v,
-isFetching: N
-  } = (0, c.Z)(t.id, !0), S = !t.bot && null != x && x.length > 0, Z = null != v && v.length > 0;
-  return S || Z ? (0, i.jsxs)(u.Z.Overlay, {
+mutualGuilds: N,
+isFetching: v
+  } = (0, c.Z)(t.id, !0), S = !t.bot && null != x && x.length > 0, Z = null != N && N.length > 0;
+  return S || Z ? (0, i.jsxs)(d.Z.Overlay, {
 className: E.overlay,
 children: [
   Z && (0, i.jsx)(_.Z, {
     className: E.list,
     header: f.Z.Messages.MUTUAL_GUILDS_COUNT.format({
-      count: v.length
+      count: N.length
     }),
-    isLoadingHeader: N,
-    loadingContentsCount: v.length,
+    isLoadingHeader: v,
+    loadingContentsCount: N.length,
     itemType: _.R.MutualGuildList,
-    onExpand: () => g({
+    onExpand: () => C({
       action: 'PRESS_SECTION',
       section: 'MUTUAL_GUILDS'
     }),
-    children: v.map(e => {
+    children: N.map(e => {
       let {
         guild: n,
         nick: a
@@ -60,11 +60,11 @@ children: [
         guild: n,
         nick: a,
         theme: I,
-        onSelect: () => (0, s.X)(n.id)
+        onSelect: () => (0, l.X)(n.id)
       }, n.id);
     })
   }),
-  Z && S && (0, i.jsx)(d.Z, {
+  Z && S && (0, i.jsx)(u.Z, {
     className: E.divider
   }),
   S && (0, i.jsx)(_.Z, {
@@ -75,7 +75,7 @@ children: [
     isLoadingHeader: T,
     loadingContentsCount: x.length,
     itemType: _.R.MutualFriendsList,
-    onExpand: () => g({
+    onExpand: () => C({
       action: 'PRESS_SECTION',
       section: 'MUTUAL_FRIENDS'
     }),
@@ -83,14 +83,14 @@ children: [
       let {
         key: t,
         user: a,
-        status: l
+        status: s
       } = e;
       return (0, i.jsx)(p.T, {
         user: a,
-        status: l,
+        status: s,
         onSelect: () => {
           (0, h.openUserProfileModal)({
-            sourceAnalyticsLocations: C,
+            sourceAnalyticsLocations: g,
             userId: a.id,
             channelId: n
           });

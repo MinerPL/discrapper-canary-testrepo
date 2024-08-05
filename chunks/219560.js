@@ -15,8 +15,8 @@ return X;
 var r = n(594438),
   i = n(314559),
   a = n(647635),
-  o = n(282902),
-  s = n(817256),
+  s = n(282902),
+  o = n(817256),
   l = n(84631),
   u = n(286287),
   c = n(62356),
@@ -61,8 +61,8 @@ Y = {
   'ar-AE': r.Z,
   'bg-BG': i.Z,
   'cs-CZ': a.Z,
-  'da-DK': o.Z,
-  'de-DE': s.Z,
+  'da-DK': s.Z,
+  'de-DE': o.Z,
   'el-GR': l.Z,
   'en-US': u.Z,
   'es-ES': c.Z,
@@ -102,14 +102,14 @@ function W(e) {
 function K(e, t, n, r) {
   let i = (0, B.qb)(Z(Y), '@react-aria/calendar'),
 a = W(e) || W(t),
-o = (0, B.aQ)({
+s = (0, B.aQ)({
   month: 'long',
   year: 'numeric',
   era: a,
   calendar: e.calendar.identifier,
   timeZone: n
 }),
-s = (0, B.aQ)({
+o = (0, B.aQ)({
   month: 'long',
   year: 'numeric',
   day: 'numeric',
@@ -120,16 +120,16 @@ s = (0, B.aQ)({
   return (0, F.useMemo)(() => {
 if ((0, V.KC)(e, (0, V.Nm)(e))) {
   if ((0, V.KC)(t, (0, V.Vf)(e)))
-    return o.format(e.toDate(n));
+    return s.format(e.toDate(n));
   if ((0, V.KC)(t, (0, V.Vf)(t)))
-    return r ? z(o, i, e, t, n) : o.formatRange(e.toDate(n), t.toDate(n));
+    return r ? z(s, i, e, t, n) : s.formatRange(e.toDate(n), t.toDate(n));
 }
-return r ? z(s, i, e, t, n) : s.formatRange(e.toDate(n), t.toDate(n));
+return r ? z(o, i, e, t, n) : o.formatRange(e.toDate(n), t.toDate(n));
   }, [
 e,
 t,
-o,
 s,
+o,
 i,
 n,
 r
@@ -138,27 +138,27 @@ r
 
 function z(e, t, n, r, i) {
   let a = e.formatRangeToParts(n.toDate(i), r.toDate(i)),
-o = -1;
+s = -1;
   for (let e = 0; e < a.length; e++) {
 let t = a[e];
 if ('shared' === t.source && 'literal' === t.type)
-  o = e;
+  s = e;
 else if ('endRange' === t.source)
   break;
   }
-  let s = '',
+  let o = '',
 l = '';
   for (let e = 0; e < a.length; e++)
-e < o ? s += a[e].value : e > o && (l += a[e].value);
+e < s ? o += a[e].value : e > s && (l += a[e].value);
   return t.format('dateRange', {
-startDate: s,
+startDate: o,
 endDate: l
   });
 }
 
 function q(e, t) {
   var n;
-  let r, i, a, o, s, l = (0, B.qb)(Z(Y), '@react-aria/calendar'),
+  let r, i, a, s, o, l = (0, B.qb)(Z(Y), '@react-aria/calendar'),
 u = (0, k.zL)(e),
 c = K(t.visibleRange.start, t.visibleRange.end, t.timeZone, !1),
 d = K(t.visibleRange.start, t.visibleRange.end, t.timeZone, !0);
@@ -168,22 +168,22 @@ d = K(t.visibleRange.start, t.visibleRange.end, t.timeZone, !0);
   let _ = (n = t, a = (0, B.qb)(Z(Y), '@react-aria/calendar'), 'highlightedRange' in n ? {
 start: r,
 end: i
-  } = n.highlightedRange || {} : r = i = n.value, o = (0, B.aQ)({
+  } = n.highlightedRange || {} : r = i = n.value, s = (0, B.aQ)({
 weekday: 'long',
 month: 'long',
 year: 'numeric',
 day: 'numeric',
 era: W(r) || W(i),
 timeZone: n.timeZone
-  }), s = 'anchorDate' in n ? n.anchorDate : null, (0, F.useMemo)(() => {
-if (!s && r && i) {
+  }), o = 'anchorDate' in n ? n.anchorDate : null, (0, F.useMemo)(() => {
+if (!o && r && i) {
   if ((0, V.KC)(r, i)) {
-    let e = o.format(r.toDate(n.timeZone));
+    let e = s.format(r.toDate(n.timeZone));
     return a.format('selectedDateDescription', {
       date: e
     });
   } {
-    let e = z(o, a, r, i, n.timeZone);
+    let e = z(s, a, r, i, n.timeZone);
     return a.format('selectedRangeDescription', {
       dateRange: e
     });
@@ -193,10 +193,10 @@ return '';
   }, [
 r,
 i,
-s,
+o,
 n.timeZone,
 a,
-o
+s
   ]));
   (0, k.rf)(() => {
 _ && (0, G.xQ)(_, 'polite', 4000);
@@ -259,7 +259,7 @@ a = (0, F.useRef)('undefined' != typeof window ? window : null);
   (0, k.zX)(a, 'pointerdown', e => {
 i.current = 0 === e.width && 0 === e.height;
   });
-  let o = e => {
+  let s = e => {
 if (i.current) {
   i.current = !1;
   return;
@@ -270,7 +270,7 @@ let n = e.target,
   a = document.getElementById(r.calendarProps.id);
 a && a.contains(document.activeElement) && (!a.contains(n) || !n.closest('button, [role="button"]')) && t.selectFocusedDate();
   };
-  return (0, k.zX)(a, 'pointerup', o), (0, k.zX)(a, 'pointercancel', o), r.calendarProps.onBlur = e => {
+  return (0, k.zX)(a, 'pointerup', s), (0, k.zX)(a, 'pointercancel', s), r.calendarProps.onBlur = e => {
 (!e.relatedTarget || !n.current.contains(e.relatedTarget)) && t.anchorDate && t.selectFocusedDate();
   }, (0, k.zX)(n, 'touchmove', e => {
 t.isDragging && e.preventDefault();
@@ -287,14 +287,14 @@ endDate: r = t.visibleRange.end
   } = e, {
 direction: i
   } = (0, B.bU)(), a = K(n, r, t.timeZone, !0), {
-ariaLabel: o,
-ariaLabelledBy: s
+ariaLabel: s,
+ariaLabelledBy: o
   } = j.get(t), l = (0, k.bE)({
 'aria-label': [
-  o,
+  s,
   a
 ].filter(Boolean).join(', '),
-'aria-labelledby': s
+'aria-labelledby': o
   }), u = (0, B.aQ)({
 weekday: e.weekdayStyle || 'narrow',
 timeZone: t.timeZone
@@ -369,8 +369,8 @@ date: r,
 isDisabled: i
   } = e, {
 errorMessageId: a,
-selectedDateDescription: o
-  } = j.get(t), s = (0, B.qb)(Z(Y), '@react-aria/calendar'), l = (0, B.aQ)({
+selectedDateDescription: s
+  } = j.get(t), o = (0, B.qb)(Z(Y), '@react-aria/calendar'), l = (0, B.aQ)({
 weekday: 'long',
 day: 'numeric',
 month: 'long',
@@ -390,23 +390,23 @@ E = t.isValueInvalid && ('highlightedRange' in t ? !t.anchorDate && t.highlighte
 h = (0, V.zk)(r, t.timeZone),
 p = (0, F.useMemo)(() => {
   let e = '';
-  return 'highlightedRange' in t && t.value && !t.anchorDate && ((0, V.KC)(r, t.value.start) || (0, V.KC)(r, t.value.end)) && (e = o + ', '), e += l.format(f), h ? e = s.format(u ? 'todayDateSelected' : 'todayDate', {
+  return 'highlightedRange' in t && t.value && !t.anchorDate && ((0, V.KC)(r, t.value.start) || (0, V.KC)(r, t.value.end)) && (e = s + ', '), e += l.format(f), h ? e = o.format(u ? 'todayDateSelected' : 'todayDate', {
     date: e
-  }) : u && (e = s.format('dateSelected', {
+  }) : u && (e = o.format('dateSelected', {
     date: e
-  })), t.minValue && (0, V.KC)(r, t.minValue) ? e += ', ' + s.format('minimumDate') : t.maxValue && (0, V.KC)(r, t.maxValue) && (e += ', ' + s.format('maximumDate')), e;
+  })), t.minValue && (0, V.KC)(r, t.minValue) ? e += ', ' + o.format('minimumDate') : t.maxValue && (0, V.KC)(r, t.maxValue) && (e += ', ' + o.format('maximumDate')), e;
 }, [
   l,
   f,
-  s,
+  o,
   u,
   h,
   r,
   t,
-  o
+  s
 ]),
 m = '';
-  'anchorDate' in t && c && !t.isReadOnly && _ && (m = t.anchorDate ? s.format('finishRangeSelectionPrompt') : s.format('startRangeSelectionPrompt'));
+  'anchorDate' in t && c && !t.isReadOnly && _ && (m = t.anchorDate ? o.format('finishRangeSelectionPrompt') : o.format('startRangeSelectionPrompt'));
   let I = (0, k.PK)(m),
 T = (0, F.useRef)(!1),
 g = (0, F.useRef)(!1),

@@ -7,10 +7,10 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(481060),
-  s = n(129861),
+  s = n(481060),
+  o = n(129861),
   l = n(970854),
-  u = n(467679),
+  u = n(385499),
   c = n(228168),
   d = n(689938),
   _ = n(330888);
@@ -33,7 +33,7 @@ pronounsVariant: S = 'text-sm/medium'
 [_.biteSize]: n === c.y0.BITE_SIZE,
 [_.fullSize]: n === c.y0.FULL_SIZE,
 [_.panel]: n === c.y0.PANEL
-  }, N = e => null == T ? e : (0, r.jsx)(o.Clickable, {
+  }, N = e => null == T ? e : (0, r.jsx)(s.Clickable, {
 onClick: T,
 className: _.clickableUsername,
 children: e
@@ -46,7 +46,7 @@ children: [
   (0, r.jsxs)('div', {
     className: _.usernameRow,
     children: [
-      N((0, r.jsx)(o.Heading, {
+      N((0, r.jsx)(s.Heading, {
         className: a()(_.nickname, A),
         variant: g,
         children: f
@@ -67,7 +67,7 @@ children: [
       [_.bot]: null != O
     }),
     children: [
-      N((0, r.jsx)(s.Z, {
+      N((0, r.jsx)(o.Z, {
         user: t,
         usernameIcon: i,
         forceUsername: !0,
@@ -83,13 +83,13 @@ children: [
             'aria-hidden': 'true',
             className: _.dotSpacer
           }),
-          (0, r.jsx)(o.TooltipContainer, {
+          (0, r.jsx)(s.TooltipContainer, {
             className: _.pronounsTooltip,
             text: d.Z.Messages.USER_PROFILE_PRONOUNS,
             delay: c.vB,
-            children: (0, r.jsx)(o.Text, {
+            children: (0, r.jsx)(s.Text, {
               variant: S,
-              className: _.pronouns,
+              className: _.pronounsText,
               color: 'header-primary',
               children: p
             })

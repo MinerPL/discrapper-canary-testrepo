@@ -27,10 +27,10 @@ a = {
     }
   ]
 },
-o = e.inherit(e.QUOTE_STRING_MODE, {
+s = e.inherit(e.QUOTE_STRING_MODE, {
   illegal: null
 }),
-s = e.COMMENT(';', '$', {
+o = e.COMMENT(';', '$', {
   relevance: 0
 }),
 l = {
@@ -48,7 +48,7 @@ c = {
 d = {
   contains: [
     a,
-    o,
+    s,
     l,
     u,
     {
@@ -57,7 +57,7 @@ d = {
       contains: [
         'self',
         i,
-        o,
+        s,
         a,
         c
       ]
@@ -115,8 +115,8 @@ _,
 E,
 i,
 a,
-o,
 s,
+o,
 l,
 u,
 {
@@ -130,8 +130,8 @@ contains: [
   a,
   e.SHEBANG(),
   i,
-  o,
   s,
+  o,
   d,
   _,
   E,

@@ -1,24 +1,24 @@
 n(319322), n(743606);
-var r = n(960048);
+var r, i = n(960048);
 n(789876), n(643191), n(323716), n(716578), n(314897), n(353926), n(450795), n(208258), n(528224);
-var i = n(213919),
-  a = n(902866),
+var a = n(213919),
+  s = n(902866),
   o = n(731965),
-  s = n(442837),
-  l = n(627420),
-  u = n(347016),
-  c = n(781272),
-  d = n(579806),
-  _ = n(627845),
-  E = n(675896);
+  l = n(442837),
+  u = n(627420),
+  c = n(347016),
+  d = n(781272),
+  _ = n(579806),
+  E = n(627845),
+  f = n(675896);
 n(308765);
-var f = n(109117),
-  h = n(710845);
+var h = n(109117),
+  p = n(710845);
 n(729345);
-var p = n(981631),
-  m = n(689938);
-(0, l.yR)(c.Z), (0, a.Y)(m.Z, i, d.Z), s.ZP.Emitter.injectBatchEmitChanges(o.j), s.ZP.PersistedStore.disableWrites = __OVERLAY__, s.ZP.initialize();
-let I = window.GLOBAL_ENV.RELEASE_CHANNEL;
-new h.Z().log('[BUILD INFO] Release Channel: '.concat(I, ', Build Number: ').concat('309567', ', Version Hash: ').concat('2c1de47a73231628c74c6f23483760a11676c660')), r.Z.setTags({
-  appContext: p.e3s
-}), _.Z.initBasic(), E.Z.init(), u.d.init(), f.S1();
+var m = n(981631),
+  I = n(689938);
+n.p = (null !== (r = window.GLOBAL_ENV.STATIC_ENDPOINT) && void 0 !== r ? r : '') + window.GLOBAL_ENV.PUBLIC_PATH, (0, u.yR)(d.Z), (0, s.Y)(I.Z, a, _.Z), l.ZP.Emitter.injectBatchEmitChanges(o.j), l.ZP.PersistedStore.disableWrites = __OVERLAY__, l.ZP.initialize();
+let T = window.GLOBAL_ENV.RELEASE_CHANNEL;
+new p.Z().log('[BUILD INFO] Release Channel: '.concat(T, ', Build Number: ').concat('315452', ', Version Hash: ').concat('67a37e2dc8a5774c99c996a4ad49e39b072266d6')), i.Z.setTags({
+  appContext: m.e3s
+}), E.Z.initBasic(), f.Z.init(), c.d.init(), h.S1();

@@ -1,43 +1,46 @@
 var i = n(735250),
   a = n(470079),
-  l = n(374470),
-  s = n(952265),
+  s = n(374470),
+  l = n(952265),
   r = n(481060),
   o = n(40851),
   c = n(153850),
-  d = n(585483),
-  u = n(5967),
+  u = n(585483),
+  d = n(5967),
   h = n(499254),
   p = n(827498),
   m = n(421591),
   _ = n(314734),
   f = n(981631),
   E = n(689938),
-  C = n(406709);
+  g = n(406709);
+let C = {
+  height: _.lv
+};
 
-function g() {
+function I() {
   h.y(p.ti.DISMISSED);
 }
 
-function I(e) {
+function x(e) {
   let {
 channel: t,
 closeOnModalOuterClick: n = !1,
 parentModalKey: c
   } = e, h = a.useRef(null), {
 renderWindow: E,
-windowDispatch: C
-  } = a.useContext(o.ZP), I = null != c, x = (0, s.Jw)(null != c ? c : ''), T = a.useCallback(e => {
+windowDispatch: g
+  } = a.useContext(o.ZP), C = null != c, x = (0, l.Jw)(null != c ? c : ''), T = a.useCallback(e => {
 var t;
-if (!I && (0, s.$s)() || I && !(x && n))
+if (!C && (0, l.$s)() || C && !(x && n))
   return;
 let {
   target: i
 } = e;
-if ((0, l.k)(i) && null != i.closest('.' + _.Jh))
+if ((0, s.k)(i) && null != i.closest('.' + _.Jh))
   return;
 for (;
-  (0, l.k)(i);) {
+  (0, s.k)(i);) {
   if (i === h.current)
     return;
   if (i.classList.contains(_.t4)) {
@@ -46,25 +49,25 @@ for (;
   }
   i = i.parentNode;
 }
-g();
-let a = null === (t = (0, u.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
-(null == a || 'BODY' === a.tagName) && d.S.dispatchToLastSubscribed(f.CkL.TEXTAREA_FOCUS);
+I();
+let a = null === (t = (0, d.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
+(null == a || 'BODY' === a.tagName) && u.S.dispatchToLastSubscribed(f.CkL.TEXTAREA_FOCUS);
   }, [
 n,
 x,
-I
+C
   ]);
-  return a.useLayoutEffect(() => (E.addEventListener('mousedown', T), E.addEventListener('contextmenu', T), C.subscribe(f.CkL.POPOUT_CLOSE, g), () => {
-E.removeEventListener('mousedown', T), E.removeEventListener('contextmenu', T), C.unsubscribe(f.CkL.POPOUT_CLOSE, g);
+  return a.useLayoutEffect(() => (E.addEventListener('mousedown', T), E.addEventListener('contextmenu', T), g.subscribe(f.CkL.POPOUT_CLOSE, I), () => {
+E.removeEventListener('mousedown', T), E.removeEventListener('contextmenu', T), g.unsubscribe(f.CkL.POPOUT_CLOSE, I);
   }), [
 T,
 E,
-C
+g
   ]), (0, r.useFocusLock)(h), a.useEffect(() => {
-(!I && (0, s.$s)() || I && !x) && g();
+(!C && (0, l.$s)() || C && !x) && I();
   }, [
 x,
-I
+C
   ]), (0, i.jsx)(m.Z, {
 ref: h,
 channel: t,
@@ -79,7 +82,7 @@ positionTargetRef: t,
   return (0, i.jsx)('span', {
 style: _.u$,
 children: (0, i.jsx)(c.W5, {
-  className: C.positionLayer,
+  className: g.positionLayer,
   targetRef: t,
   position: 'top',
   align: 'right',
@@ -90,10 +93,11 @@ children: (0, i.jsx)(c.W5, {
       isPositioned: t
     } = e;
     return (0, i.jsx)('section', {
-      className: C.positionContainer,
+      className: g.positionContainer,
       role: 'dialog',
+      style: C,
       'aria-label': E.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_LAUNCHER_ARIA_LABEL,
-      children: t && (0, i.jsx)(I, {
+      children: t && (0, i.jsx)(x, {
         ...n
       })
     });

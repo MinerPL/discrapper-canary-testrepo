@@ -1,8 +1,8 @@
 var r = n(413135).Buffer,
   i = n(814033),
   a = new(n(687363))(),
-  o = new i(24),
-  s = new i(11),
+  s = new i(24),
+  o = new i(11),
   l = new i(10),
   u = new i(3),
   c = new i(7),
@@ -43,7 +43,7 @@ return 'number' != typeof this._primeCode && (this._primeCode = function(e, t) {
     return _ += 1, '02' === r || '05' === r ? _ += 8 : _ += 4, h[i] = _, _;
   switch (!a.test(e.shrn(1)) && (_ += 2), r) {
     case '02':
-      e.mod(o).cmp(s) && (_ += 8);
+      e.mod(s).cmp(o) && (_ += 8);
       break;
     case '05':
       (n = e.mod(l)).cmp(u) && n.cmp(c) && (_ += 8);

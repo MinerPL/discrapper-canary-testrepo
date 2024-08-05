@@ -81,16 +81,16 @@ N.addSample(s), null == C && (C = s), s > C && (C = s);
   }
   let m = null != u && null != T ? (T - u) / 1000 : 0,
 A = 1 - c / l,
-h = 8 * d / m,
-g = 8 * _ / m,
+g = 8 * d / m,
+h = 8 * _ / m,
 O = N.getReport([
   50,
   95,
   99
 ]);
   return {
-payloadBandwidth: h,
-networkBandwidth: g,
+payloadBandwidth: g,
+networkBandwidth: h,
 loss: A,
 iatP50: O.percentiles[50],
 iatP95: O.percentiles[95],

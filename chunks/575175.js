@@ -6,8 +6,8 @@ return c;
 var i = n(735250);
 n(470079);
 var a = n(481060),
-  l = n(846027),
-  s = n(468026),
+  s = n(846027),
+  l = n(468026),
   r = n(503856),
   o = n(689938);
 
@@ -24,7 +24,7 @@ function c(e, t) {
 return;
   }
   if (t) {
-(0, a.openModal)(e => (0, i.jsx)(s.default, {
+(0, a.openModal)(e => (0, i.jsx)(l.default, {
   ...e,
   title: o.Z.Messages.SUPPRESSED,
   body: o.Z.Messages.SUPPRESSED_PERMISSION_BODY
@@ -32,12 +32,12 @@ return;
 return;
   }
   if (e) {
-(0, a.openModal)(e => (0, i.jsx)(s.default, {
+(0, a.openModal)(e => (0, i.jsx)(l.default, {
   ...e,
   title: o.Z.Messages.SERVER_MUTED_DIALOG_TITLE,
   body: o.Z.Messages.SERVER_MUTED_DIALOG_BODY
 }));
 return;
   }
-  l.Z.toggleSelfMute();
+  s.Z.toggleSelfMute();
 }

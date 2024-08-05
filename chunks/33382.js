@@ -1,26 +1,26 @@
 var r = n(660566);
 e.exports = _, e.exports.parse = a, e.exports.compile = function(e, t) {
-  return s(a(e, t));
-}, e.exports.tokensToFunction = s, e.exports.tokensToRegExp = d;
+  return o(a(e, t));
+}, e.exports.tokensToFunction = o, e.exports.tokensToRegExp = d;
 var i = RegExp('(\\\\.)|([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))', 'g');
 
 function a(e, t) {
-  for (var n, r = [], a = 0, o = 0, s = '', u = t && t.delimiter || '/'; null != (n = i.exec(e));) {
+  for (var n, r = [], a = 0, s = 0, o = '', u = t && t.delimiter || '/'; null != (n = i.exec(e));) {
 var c = n[0],
   d = n[1],
   _ = n.index;
-if (s += e.slice(o, _), o = _ + c.length, d) {
-  s += d[1];
+if (o += e.slice(s, _), s = _ + c.length, d) {
+  o += d[1];
   continue;
 }
-var E = e[o],
+var E = e[s],
   f = n[2],
   h = n[3],
   p = n[4],
   m = n[5],
   I = n[6],
   T = n[7];
-s && (r.push(s), s = '');
+o && (r.push(o), o = '');
 var g = null != f && null != E && E !== f,
   S = '+' === I || '*' === I,
   A = '?' === I || '*' === I,
@@ -39,26 +39,26 @@ r.push({
   }(v) : T ? '.*' : '[^' + l(N) + ']+?'
 });
   }
-  return o < e.length && (s += e.substr(o)), s && r.push(s), r;
+  return s < e.length && (o += e.substr(s)), o && r.push(o), r;
 }
 
-function o(e) {
+function s(e) {
   return encodeURI(e).replace(/[\/?#]/g, function(e) {
 return '%' + e.charCodeAt(0).toString(16).toUpperCase();
   });
 }
 
-function s(e) {
+function o(e) {
   for (var t = Array(e.length), n = 0; n < e.length; n++)
 'object' == typeof e[n] && (t[n] = RegExp('^(?:' + e[n].pattern + ')$'));
   return function(n, i) {
-for (var a = '', s = n || {}, l = (i || {}).pretty ? o : encodeURIComponent, u = 0; u < e.length; u++) {
+for (var a = '', o = n || {}, l = (i || {}).pretty ? s : encodeURIComponent, u = 0; u < e.length; u++) {
   var c, d = e[u];
   if ('string' == typeof d) {
     a += d;
     continue;
   }
-  var _ = s[d.name];
+  var _ = o[d.name];
   if (null == _) {
     if (d.optional) {
       d.partial && (a += d.prefix);
@@ -105,7 +105,7 @@ function c(e) {
 
 function d(e, t, n) {
   !r(t) && (n = t || n, t = []);
-  for (var i, a, o = (n = n || {}).strict, s = !1 !== n.end, u = '', d = 0; d < e.length; d++) {
+  for (var i, a, s = (n = n || {}).strict, o = !1 !== n.end, u = '', d = 0; d < e.length; d++) {
 var _ = e[d];
 if ('string' == typeof _)
   u += l(_);
@@ -117,11 +117,11 @@ else {
   }
   var h = l(n.delimiter || '/'),
 p = u.slice(-h.length) === h;
-  return !o && (u = (p ? u.slice(0, -h.length) : u) + '(?:' + h + '(?=$))?'), s ? u += '$' : u += o && p ? '' : '(?=' + h + '|$)', i = RegExp('^' + u, c(n)), a = t, i.keys = a, i;
+  return !s && (u = (p ? u.slice(0, -h.length) : u) + '(?:' + h + '(?=$))?'), o ? u += '$' : u += s && p ? '' : '(?=' + h + '|$)', i = RegExp('^' + u, c(n)), a = t, i.keys = a, i;
 }
 
 function _(e, t, n) {
-  var i, o, s;
+  var i, s, o;
   if (!r(t) && (n = t || n, t = []), n = n || {}, e instanceof RegExp)
 return function(e, t) {
   var n, r, i = e.source.match(/\((?!\?)/g);
@@ -141,9 +141,9 @@ return function(e, t) {
 }(e, t);
   if (r(e))
 return function(e, t, n) {
-  for (var r, i, a = [], o = 0; o < e.length; o++)
-    a.push(_(e[o], t, n).source);
+  for (var r, i, a = [], s = 0; s < e.length; s++)
+    a.push(_(e[s], t, n).source);
   return r = RegExp('(?:' + a.join('|') + ')', c(n)), i = t, r.keys = i, r;
 }(e, t, n);
-  return i = e, o = t, d(a(i, s = n), o, s);
+  return i = e, s = t, d(a(i, o = n), s, o);
 }

@@ -1,6 +1,6 @@
 l.d(t, {
   Z: function() {
-return A;
+return N;
   }
 }), l(47120);
 var n = l(735250),
@@ -109,13 +109,13 @@ children: [
   });
 }
 
-function A(e) {
+function N(e) {
   let {
 guildId: t,
 onClose: l
   } = e, o = (0, d.e7)([M.Z], () => M.Z.getSearchStateByGuildId(t), [t], c()), {
 inviteCodes: i
-  } = (0, T.s)(t), C = (0, d.e7)([m.Z], () => m.Z.getGuild(t)), E = null == C ? void 0 : C.vanityURLCode, [A, N] = a.useState(!1), {
+  } = (0, T.s)(t), C = (0, d.e7)([m.Z], () => m.Z.getGuild(t)), E = null == C ? void 0 : C.vanityURLCode, [N, A] = a.useState(!1), {
 selectedSourceInviteCode: R,
 selectedJoinSourceType: S
   } = o, Z = null != S && S !== b.gq.UNSPECIFIED, j = (0, d.e7)([_.Z], () => _.Z.hideInstantInvites, []);
@@ -138,7 +138,7 @@ D = a.useCallback(e => {
   }) : (0, x.Dr)(t, {
     selectedSourceInviteCode: null,
     selectedJoinSourceType: e
-  }), N(!1);
+  }), A(!1);
 }, [
   t,
   S
@@ -154,11 +154,11 @@ onClose: () => {
 },
 'aria-label': g.Z.Messages.MEMBER_SAFETY_JOIN_METHOD_LABEL,
 onSelect: L.dG4,
-children: A ? (0, n.jsxs)(u.MenuGroup, {
+children: N ? (0, n.jsxs)(u.MenuGroup, {
   children: [
     (0, n.jsx)(u.MenuItem, {
       id: 'back',
-      action: () => N(!1),
+      action: () => A(!1),
       render: e => (0, n.jsxs)('span', {
         ...e,
         className: I.customLabelContainer,
@@ -229,7 +229,7 @@ children: A ? (0, n.jsxs)(u.MenuGroup, {
     (0, n.jsx)(u.MenuSeparator, {}),
     (0, n.jsx)(u.MenuItem, {
       id: 'other-join-methods',
-      action: () => N(!0),
+      action: () => A(!0),
       render: e => (0, n.jsxs)('div', {
         className: s()(I.containerWithRightCaret, I.customLabelContainer),
         children: [

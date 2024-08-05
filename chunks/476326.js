@@ -9,7 +9,7 @@ return a;
 return f;
   }
 });
-var r, i, a, o, s = n(836560),
+var r, i, a, s, o = n(836560),
   l = n(392711),
   u = n.n(l),
   c = n(772848),
@@ -28,8 +28,8 @@ writable: !0
 function f(e) {
   return void 0 !== e.isVideo && void 0 !== e.isImage;
 }
-(r = a || (a = {}))[r.REACT_NATIVE = 0] = 'REACT_NATIVE', r[r.WEB = 1] = 'WEB', (i = o || (o = {}))[i.FILE_ATTACHMENT = 0] = 'FILE_ATTACHMENT', i[i.IMAGE_PICKER = 1] = 'IMAGE_PICKER';
-class h extends s.EventEmitter {
+(r = a || (a = {}))[r.REACT_NATIVE = 0] = 'REACT_NATIVE', r[r.WEB = 1] = 'WEB', (i = s || (s = {}))[i.FILE_ATTACHMENT = 0] = 'FILE_ATTACHMENT', i[i.IMAGE_PICKER = 1] = 'IMAGE_PICKER';
+class h extends o.EventEmitter {
   cancel() {}
   resetState() {
 return this;

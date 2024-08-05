@@ -5,8 +5,8 @@ return A;
 }), n(47120), n(411104), n(733860), n(653041);
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(699581),
   u = n(374470),
   c = n(442837),
@@ -40,8 +40,8 @@ let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.pr
     emojiName: r,
     animated: i,
     shouldAnimate: a,
-    isFocused: o,
-    isInteracting: s,
+    isFocused: s,
+    isInteracting: o,
     size: l = 'default'
   } = e,
   {
@@ -53,7 +53,7 @@ if (null != n) {
   let e = I.kV[l];
   return h.ZP.getEmojiURL({
     id: n,
-    animated: o && !0 === i && (!0 === a || u || !0 === s),
+    animated: s && !0 === i && (!0 === a || u || !0 === o),
     size: e
   });
 }
@@ -66,7 +66,7 @@ let t;
 let {
   emojiName: n,
   animated: r,
-  className: o,
+  className: s,
   size: l = 'default',
   alt: u,
   shouldAnimate: c,
@@ -77,7 +77,7 @@ let {
   ...h
 } = this.props, p = this.getSrc();
 return null == p || '' === p ? (0, i.jsx)('span', {
-  className: s()('emoji', 'emoji-text'),
+  className: o()('emoji', 'emoji-text'),
   children: n
 }) : (r && (t = {
   onMouseEnter: this.onMouseEnter,
@@ -89,7 +89,7 @@ return null == p || '' === p ? (0, i.jsx)('span', {
   alt: null !== (e = null != u ? u : n) && void 0 !== e ? e : void 0,
   draggable: !1,
   ...t,
-  className: s()('emoji', o, {
+  className: o()('emoji', s, {
     jumboable: 'jumbo' === l
   }),
   onError: this.onError,
@@ -151,10 +151,10 @@ r = new window.IntersectionObserver(e => {
       return;
     let i = r[1];
     if (e.intersectionRatio >= 0.7) {
-      var a, o;
+      var a, s;
       if (-1 !== t.indexOf(i))
         return;
-      let n = Math.abs(e.intersectionRect.bottom - Number(null === (a = e.rootBounds) || void 0 === a ? void 0 : a.bottom)) < Math.abs(e.intersectionRect.top - Number(null === (o = e.rootBounds) || void 0 === o ? void 0 : o.top));
+      let n = Math.abs(e.intersectionRect.bottom - Number(null === (a = e.rootBounds) || void 0 === a ? void 0 : a.bottom)) < Math.abs(e.intersectionRect.top - Number(null === (s = e.rootBounds) || void 0 === s ? void 0 : s.top));
       n ? t.unshift(i) : t.push(i), i.forceUpdate(), n && t.length > 100 && t[100].forceUpdate();
     } else {
       let e = t.indexOf(i); -
@@ -165,7 +165,7 @@ r = new window.IntersectionObserver(e => {
   threshold: 0.7
 });
 
-  function o(e) {
+  function s(e) {
 let t = l.findDOMNode(e);
 if (!!(0, u.k)(t))
   n.push([
@@ -174,7 +174,7 @@ if (!!(0, u.k)(t))
   ]), r.observe(t);
   }
 
-  function s(e) {
+  function o(e) {
 let i = l.findDOMNode(e);
 r.unobserve(i);
 let a = n.findIndex(t => {
@@ -189,26 +189,26 @@ shouldAutoplay(e) {
   return e.animated && e.autoplay;
 }
 componentDidMount() {
-  this.shouldAutoplay(this.props) && o(this);
+  this.shouldAutoplay(this.props) && s(this);
 }
 componentDidUpdate(e) {
   let t = this.shouldAutoplay(e),
     n = this.shouldAutoplay(this.props);
-  n !== t && (n ? o(this) : s(this));
+  n !== t && (n ? s(this) : o(this));
 }
 componentWillUnmount() {
-  this.shouldAutoplay(this.props) && s(this);
+  this.shouldAutoplay(this.props) && o(this);
 }
 render() {
   let n = t.indexOf(this),
     {
       autoplay: r,
       allowAnimatedEmoji: a,
-      ...o
+      ...s
     } = this.props;
   return (0, i.jsx)(f.G.Consumer, {
     children: t => (0, i.jsx)(e, {
-      ...o,
+      ...s,
       autoplay: r || !1,
       shouldAnimate: -1 !== n && n < 100 && !t.disableAnimations && a
     })

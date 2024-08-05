@@ -6,13 +6,13 @@ return m;
 var i = n(735250);
 n(470079);
 var a = n(512722),
-  l = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  l = n(442837),
   r = n(481060),
   o = n(40851),
   c = n(430824),
-  d = n(496675),
-  u = n(871499),
+  u = n(496675),
+  d = n(871499),
   h = n(981631),
   p = n(689938);
 
@@ -23,23 +23,23 @@ applicationId: m,
 stream: _,
 channel: f,
 exitFullScreen: E,
-appContext: C,
-analyticsLocation: g,
+appContext: g,
+analyticsLocation: C,
 guildScheduledEvent: I,
 ...x
-  } = e, T = (0, o.bp)(), v = null == f ? void 0 : f.getGuildId(), N = (0, s.e7)([c.Z], () => null != v ? c.Z.getGuild(v) : null, [v]);
-  return (t = N, a = f, null != t && null != a && d.Z.can(h.Plq.CREATE_INSTANT_INVITE, a)) ? (0, i.jsx)(u.Z, {
+  } = e, T = (0, o.bp)(), N = null == f ? void 0 : f.getGuildId(), v = (0, l.e7)([c.Z], () => null != N ? c.Z.getGuild(N) : null, [N]);
+  return (t = v, a = f, null != t && null != a && u.Z.can(h.Plq.CREATE_INSTANT_INVITE, a)) ? (0, i.jsx)(d.Z, {
 onClick: () => {
-  l()(null != N, 'guild cannot be null'), l()(null != f, 'channel cannot be null'), ! function(e) {
+  s()(null != v, 'guild cannot be null'), s()(null != f, 'channel cannot be null'), ! function(e) {
     let {
       guild: t,
       channel: a,
-      streamUserId: l,
-      applicationId: s,
+      streamUserId: s,
+      applicationId: l,
       appContext: o,
       exitFullScreen: c,
-      analyticsLocation: d,
-      guildScheduledEvent: u
+      analyticsLocation: u,
+      guildScheduledEvent: d
     } = e;
     null == c || c(), (0, r.openModalLazy)(async () => {
       let {
@@ -52,24 +52,24 @@ onClick: () => {
         ...n,
         guild: t,
         channel: a,
-        streamUserId: l,
-        applicationId: s,
-        analyticsLocation: d,
+        streamUserId: s,
+        applicationId: l,
+        analyticsLocation: u,
         source: a.isGuildStageVoice() ? h.t4x.STAGE_CHANNEL : h.t4x.STREAM_INVITE,
-        guildScheduledEvent: u
+        guildScheduledEvent: d
       });
     }, {
       modalKey: 'stream-invite-modal',
       contextKey: o === h.IlC.POPOUT ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT
     });
   }({
-    guild: N,
+    guild: v,
     channel: f,
     streamUserId: null == _ ? void 0 : _.ownerId,
     applicationId: m,
-    appContext: null != C ? C : T,
+    appContext: null != g ? g : T,
     exitFullScreen: E,
-    analyticsLocation: g,
+    analyticsLocation: C,
     guildScheduledEvent: I
   });
 },

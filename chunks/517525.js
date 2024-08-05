@@ -1,28 +1,28 @@
 n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(338545),
   o = n(468194),
   c = n(442837),
-  d = n(692547),
-  u = n(477690),
+  u = n(692547),
+  d = n(477690),
   h = n(481060),
   p = n(2052),
   m = n(906732),
   _ = n(484459),
   f = n(594174),
   E = n(368666),
-  C = n(626135),
-  g = n(74538),
+  g = n(626135),
+  C = n(74538),
   I = n(557457),
   x = n(475674),
   T = n(981631),
-  v = n(474936),
-  N = n(689938),
+  N = n(474936),
+  v = n(689938),
   S = n(102572);
-let Z = (0, o.Mg)(u.Z.LIVE_INDICATOR_BORDER_RADIUS),
+let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
   A = {
 opacity: 0,
 transform: 'translate3d(100%, 0, 0)'
@@ -50,10 +50,10 @@ friction: 18,
 clamp: !0
   },
   O = e => {
-let t, l, {
+let t, s, {
     participant: r,
     isUpsellEnabled: o,
-    shape: u,
+    shape: d,
     size: _,
     didTrackUpsellViewed: Z,
     setDidTrackUpsellViewed: A,
@@ -71,16 +71,16 @@ try {
   t = !1;
 }
 try {
-  l = (0, I.tR)(R);
+  s = (0, I.tR)(R);
 } catch (e) {
-  l = !1;
+  s = !1;
 }
-let P = t || l,
+let P = t || s,
   {
     location: O
   } = (0, p.O)(),
   y = (0, c.e7)([f.default], () => f.default.getCurrentUser()),
-  D = o && !g.ZP.isPremium(y, v.p9.TIER_1) && !g.ZP.canStreamQuality(g.ZP.StreamQuality.MID, y),
+  D = o && !C.ZP.isPremium(y, N.p9.TIER_1) && !C.ZP.canStreamQuality(C.ZP.StreamQuality.MID, y),
   k = a.useCallback(() => {
     D && P && (0, h.openModalLazy)(async () => {
       let {
@@ -97,15 +97,15 @@ let P = t || l,
     O
   ]);
 if (a.useEffect(() => {
-    !Z && P && (C.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
-      type: v.cd.STREAM_QUALITY_INDICATOR,
+    !Z && P && (g.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
+      type: N.cd.STREAM_QUALITY_INDICATOR,
       has_premium_stream_fps: t,
-      has_premium_stream_resolution: l,
+      has_premium_stream_resolution: s,
       location_stack: j
     }), A(!0));
   }, [
     t,
-    l,
+    s,
     P,
     Z,
     A,
@@ -113,13 +113,13 @@ if (a.useEffect(() => {
   ]), null == R)
   return null;
 let U = (0, i.jsx)(h.Tooltip, {
-  text: L ? N.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : P ? N.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : N.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
+  text: L ? v.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : P ? v.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : v.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
   position: 'bottom',
   color: h.Tooltip.Colors.GREY,
   children: e => (0, i.jsxs)(h.Clickable, {
     ...e,
     onClick: k,
-    className: s()(S.qualityIndicator, _, E.eE[u], L ? S.qualityIndicatorLowQuality : S.qualityIndicatorFullQuality, {
+    className: l()(S.qualityIndicator, _, E.eE[d], L ? S.qualityIndicatorLowQuality : S.qualityIndicatorFullQuality, {
       [S.clickable]: D && P
     }),
     children: [
@@ -140,61 +140,61 @@ let U = (0, i.jsx)(h.Tooltip, {
 });
 return (0, i.jsx)(h.TextBadge, {
   text: U,
-  className: s()(M, S.qualityIndicatorBadge, {
+  className: l()(M, S.qualityIndicatorBadge, {
     [S.qualityIndicatorBadgePremium]: b
   }),
-  color: d.Z.unsafe_rawColors.PRIMARY_500.css,
-  shape: u
+  color: u.Z.unsafe_rawColors.PRIMARY_500.css,
+  shape: d
 });
   };
 t.Z = e => {
   let {
 participant: t,
 showQuality: n,
-isUpsellEnabled: l = !0,
+isUpsellEnabled: s = !0,
 size: o,
 className: c,
-premiumIndicator: d
-  } = e, [u, p] = a.useState(!1), m = (0, I.Wc)(t), {
+premiumIndicator: u
+  } = e, [d, p] = a.useState(!1), m = (0, I.Wc)(t), {
 reducedMotion: f
-  } = a.useContext(h.AccessibilityPreferencesContext), C = n && null != m;
+  } = a.useContext(h.AccessibilityPreferencesContext), g = n && null != m;
   a.useEffect(() => {
 (0, _.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), {
   dispatchWait: !0
 });
   }, [t]);
-  let g = (0, r.useTransition)(C, {
+  let C = (0, h.useTransition)(g, {
   enter: {
     from: f.enabled ? b : A,
     to: f.enabled ? R : M
   },
   leave: f.enabled ? b : A,
   config: P
-}),
-x = (0, r.useSpring)({
-  to: C ? L : j,
+}, 'animate-always'),
+x = (0, h.useSpring)({
+  to: g ? L : j,
   config: P
-});
+}, 'animate-always');
   return (e => {
 let {
   className: n,
   popoutProps: a
 } = e;
 return (0, i.jsxs)('div', {
-  className: s()(S.streamQualityIndicator, n),
+  className: l()(S.streamQualityIndicator, n),
   ...a,
   children: [
-    g((e, n) => n ? (0, i.jsx)(r.animated.div, {
+    C((e, n) => n ? (0, i.jsx)(r.animated.div, {
       style: e,
       children: (0, i.jsx)(O, {
         className: S.liveQualityIndicator,
         participant: t,
         size: o,
         shape: h.BadgeShapes.ROUND_LEFT,
-        isUpsellEnabled: l,
-        didTrackUpsellViewed: u,
+        isUpsellEnabled: s,
+        didTrackUpsellViewed: d,
         setDidTrackUpsellViewed: p,
-        premiumIndicator: d
+        premiumIndicator: u
       })
     }) : null),
     (0, i.jsx)(r.animated.div, {
@@ -203,7 +203,7 @@ return (0, i.jsxs)('div', {
       children: (0, i.jsx)(E.ZP, {
         look: E.jZ.RED,
         size: o,
-        shape: C ? h.BadgeShapes.ROUND_RIGHT : h.BadgeShapes.ROUND
+        shape: g ? h.BadgeShapes.ROUND_RIGHT : h.BadgeShapes.ROUND
       })
     })
   ]

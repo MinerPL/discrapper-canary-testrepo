@@ -6,8 +6,8 @@ return c;
 var r = n(735250),
   i = n(470079),
   a = n(658722),
-  o = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  o = n(481060),
   l = n(683976);
 
 function u(e, t, n) {
@@ -27,10 +27,10 @@ let {
   renderValue: i,
   className: a
 } = this.props;
-return (0, r.jsx)(s.Popout, {
+return (0, r.jsx)(o.Popout, {
   ...n,
   renderPopout: this.renderPopout,
-  children: n => (0, r.jsx)(s.Clickable, {
+  children: n => (0, r.jsx)(o.Clickable, {
     ...n,
     className: a,
     children: (0, r.jsx)(l.F, {
@@ -47,7 +47,7 @@ super(...e), u(this, 'renderItems', e => {
     items: t,
     renderItem: n
   } = this.props;
-  return t.reduce((t, r, i) => (o()(e.toLowerCase(), r.label.toLowerCase()) && t.push(n(r, i)), t), []);
+  return t.reduce((t, r, i) => (s()(e.toLowerCase(), r.label.toLowerCase()) && t.push(n(r, i)), t), []);
 }), u(this, 'renderPopout', e => {
   let {
     closePopout: t
@@ -55,14 +55,15 @@ super(...e), u(this, 'renderItems', e => {
     placeholder: n,
     popoutClassName: i,
     onChange: a,
-    value: o
+    value: s
   } = this.props;
-  return (0, r.jsx)(s.ComboboxPopout, {
+  return (0, r.jsx)(o.ComboboxPopout, {
     className: i,
     placeholder: n,
-    value: new Set([o.value]),
+    value: new Set([s.value]),
     onChange: a,
     onClose: t,
+    showScrollbar: !0,
     children: e => this.renderItems(e)
   });
 });

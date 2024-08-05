@@ -21,7 +21,7 @@ return S;
 return N;
   },
   VQ: function() {
-return o;
+return s;
   },
   ZY: function() {
 return R;
@@ -66,8 +66,8 @@ return void 0 === r && (r = 0), void 0 === i && (i = 0), void 0 === a && (a = 0)
 30,
 31
   ],
-  o = 9999,
-  s = i(1970, 1, 1),
+  s = 9999,
+  o = i(1970, 1, 1),
   l = [
 6,
 0,
@@ -95,10 +95,10 @@ var n = e.getTime() - _(e),
 return Math.round((n - r) / 86400000);
   },
   f = function(e) {
-return E(e, s);
+return E(e, o);
   },
   h = function(e) {
-return new Date(s.getTime() + 86400000 * e);
+return new Date(o.getTime() + 86400000 * e);
   },
   p = function(e) {
 var t = e.getUTCMonth();

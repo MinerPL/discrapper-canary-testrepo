@@ -3,7 +3,7 @@ n.d(t, {
 return c;
   }
 });
-var i, a, s = n(470079),
+var i, s, a = n(470079),
   r = n(595519),
   l = n(527805),
   o = n(689938);
@@ -13,20 +13,20 @@ function c(e) {
 embeddedActivity: t,
 joinability: n,
 currentEmbeddedActivity: i,
-channel: a
+channel: s
   } = e;
-  return s.useMemo(() => function(e) {
+  return a.useMemo(() => function(e) {
 let {
   embeddedActivity: t,
   joinability: n,
   currentEmbeddedActivity: i,
-  channel: a
-} = e, s = null == t, c = {
+  channel: s
+} = e, a = null == t, c = {
   disabled: !1,
-  isJoinAction: !s,
-  text: s ? o.Z.Messages.START : o.Z.Messages.EMBEDDED_ACTIVITIES_JOIN,
+  isJoinAction: !a,
+  text: a ? o.Z.Messages.START : o.Z.Messages.EMBEDDED_ACTIVITIES_JOIN,
   tooltip: void 0
-}, d = (0, r.WS)(a, s);
+}, u = (0, r.WS)(s, a);
 if (null != t && null != i && t.launchId === i.launchId)
   return {
     ...c,
@@ -34,11 +34,11 @@ if (null != t && null != i && t.launchId === i.launchId)
     text: o.Z.Messages.EMBEDDED_ACTIVITIES_JOINED,
     tooltip: o.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY
   };
-if (s)
+if (a)
   return {
     ...c,
-    disabled: !d,
-    tooltip: d ? void 0 : o.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START
+    disabled: !u,
+    tooltip: u ? void 0 : o.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START
   };
 if (null != n && n !== l.Fw.CAN_JOIN) {
   let e;
@@ -78,12 +78,12 @@ return c;
 embeddedActivity: t,
 joinability: n,
 currentEmbeddedActivity: i,
-channel: a
+channel: s
   }), [
 t,
 n,
 i,
-a
+s
   ]);
 }
-(i = a || (a = {}))[i.ACTIVE = 0] = 'ACTIVE', i[i.ENDED = 1] = 'ENDED';
+(i = s || (s = {}))[i.ACTIVE = 0] = 'ACTIVE', i[i.ENDED = 1] = 'ENDED';

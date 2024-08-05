@@ -2,8 +2,8 @@ n(47120);
 var r = n(147913),
   i = n(344185),
   a = n(314897),
-  o = n(592125),
-  s = n(709054),
+  s = n(592125),
+  o = n(709054),
   l = n(882252);
 
 function u(e, t, n) {
@@ -37,11 +37,11 @@ super(...e), u(this, 'readStateSnapshots', {}), u(this, 'actions', {
   } = e;
   if (null == t)
     return;
-  let n = o.Z.getChannel(t);
+  let n = s.Z.getChannel(t);
   null != n && n.isForumLikeChannel() && (this.readStateSnapshots = {}, this.processForumChannel(n.guild_id, t));
 }), u(this, 'processForumChannel', (e, t) => {
   let n = i.Z.getThreadsForParent(e, t);
-  s.default.keys(n).forEach(e => {
+  o.default.keys(n).forEach(e => {
     let t = (0, l.nC)(e);
     null != t && (this.readStateSnapshots[e] = t);
   });

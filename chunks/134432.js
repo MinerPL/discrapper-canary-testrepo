@@ -18,8 +18,8 @@ return c.Z;
 var r = n(392711),
   i = n.n(r),
   a = n(31775),
-  o = n.n(a),
-  s = n(664751),
+  s = n.n(a),
+  o = n(664751),
   l = n(261470),
   u = n(931619),
   c = n(921948),
@@ -57,7 +57,7 @@ let _ = [
 3072,
 4096
   ],
-  E = new(o())({
+  E = new(s())({
 max: 1000
   });
 
@@ -147,12 +147,12 @@ src: t,
 width: n,
 height: r,
 maxWidth: a,
-maxHeight: o,
+maxHeight: s,
 ratio: l = 1,
 format: u = null,
 quality: d = null
   } = e, _ = n, E = r;
-  l < 1 && (_ = Math.round(n * l), E = Math.round(r * l)), null != a && (_ = Math.min(_, a)), null != o && (E = Math.min(E, o));
+  l < 1 && (_ = Math.round(n * l), E = Math.round(r * l)), null != a && (_ = Math.min(_, a)), null != s && (E = Math.min(E, s));
   let f = (0, c.Z)();
   return _ *= f,
 function(e) {
@@ -161,17 +161,17 @@ function(e) {
     sourceWidth: n,
     sourceHeight: r,
     targetWidth: a,
-    targetHeight: o,
+    targetHeight: s,
     format: l = null,
     quality: u = null
   } = e, [c, d] = function(e) {
     let [t, n] = e.split('?');
     return [
       t,
-      s.parse(n)
+      o.parse(n)
     ];
   }(t);
-  return null != l && (d.format = l), null != u && (d.quality = u), (a !== n || o !== r) && (d.width = 0 | a, d.height = 0 | o), !i().isEmpty(d) && (c += '?' + s.stringify(d)), c;
+  return null != l && (d.format = l), null != u && (d.quality = u), (a !== n || s !== r) && (d.width = 0 | a, d.height = 0 | s), !i().isEmpty(d) && (c += '?' + o.stringify(d)), c;
 }({
   src: t,
   sourceWidth: n,

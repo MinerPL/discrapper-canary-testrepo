@@ -11,9 +11,9 @@ var i, r = a(735250),
   c = a(622535),
   d = a(213919),
   u = a(982905),
-  p = a(794010),
-  h = a(66037),
-  m = a(231338),
+  h = a(794010),
+  m = a(66037),
+  p = a(231338),
   N = a(436620),
   k = a(330711),
   _ = a(357042);
@@ -34,17 +34,17 @@ PRIMARY: 'Primary'
   b = e => [{
   title: e.PRODUCT,
   routes: [{
-      link: m.am.DOWNLOAD,
+      link: p.am.DOWNLOAD,
       title: e.DOWNLOAD,
       tracking: 'download'
     },
     {
-      link: m.am.BRANDING,
+      link: p.am.BRANDING,
       title: e.BRANDING,
       tracking: 'branding'
     },
     {
-      link: m.am.NITRO,
+      link: p.am.NITRO,
       title: e.NITRO,
       tracking: 'nitro',
       external: !0
@@ -54,24 +54,24 @@ PRIMARY: 'Primary'
 {
   title: e.DEVELOPERS,
   routes: [{
-      link: m.am.RICH_PRESENCE,
+      link: p.am.RICH_PRESENCE,
       title: e.RICH_PRESENCE,
       tracking: 'rich_presence'
     },
     {
-      link: m.am.VERIFICATION,
+      link: p.am.VERIFICATION,
       title: e.VERIFICATION,
       tracking: 'verification',
       external: !0
     },
     {
-      link: m.yX.DEV_PORTAL_APPLICATIONS,
+      link: p.yX.DEV_PORTAL_APPLICATIONS,
       title: e.APPLICATIONS,
       tracking: 'developers',
       external: !0
     },
     {
-      link: m.yX.DEV_PORTAL_DOCUMENTATION,
+      link: p.yX.DEV_PORTAL_DOCUMENTATION,
       title: e.DOCUMENTATION,
       tracking: 'documentation',
       external: !0
@@ -81,48 +81,48 @@ PRIMARY: 'Primary'
 {
   title: e.RESOURCES,
   routes: [{
-      link: m.yX.HELP_AND_SUPPORT,
+      link: p.yX.HELP_AND_SUPPORT,
       title: e.HELP_AND_SUPPORT,
       tracking: 'helpandsupport',
       external: !0
     },
     {
-      link: m.am.GUIDELINES,
+      link: p.am.GUIDELINES,
       title: e.GUIDELINES,
       tracking: 'guidelines',
       external: !0
     },
     {
-      link: m.yX.FEEDBACK,
+      link: p.yX.FEEDBACK,
       title: e.FEEDBACK,
       tracking: 'feedback',
       external: !0
     },
     {
-      link: m.am.TERMS,
+      link: p.am.TERMS,
       title: e.TERMS,
       tracking: 'terms',
       external: !0
     },
     {
-      link: m.am.PRIVACY,
+      link: p.am.PRIVACY,
       title: e.PRIVACY,
       tracking: 'privacy',
       external: !0
     },
     {
-      link: m.am.SECURITY,
+      link: p.am.SECURITY,
       title: e.SECURITY,
       tracking: 'security'
     },
     {
-      link: m.yX.STATUS,
+      link: p.yX.STATUS,
       title: e.STATUS,
       tracking: 'status',
       external: !0
     },
     {
-      link: m.am.SAFETY_LANDING,
+      link: p.am.SAFETY_LANDING,
       title: e.SAFETY_CENTER,
       tracking: 'safetycenter',
       external: !0
@@ -132,18 +132,18 @@ PRIMARY: 'Primary'
 {
   title: e.COMPANY,
   routes: [{
-      link: m.am.COMPANY,
+      link: p.am.COMPANY,
       title: e.ABOUT,
       tracking: 'about'
     },
     {
-      link: m.am.BLOG,
+      link: p.am.BLOG,
       title: e.BLOG,
       tracking: 'blog',
       external: !0
     },
     {
-      link: m.am.JOBS,
+      link: p.am.JOBS,
       title: e.JOBS,
       tracking: 'join',
       external: !0
@@ -153,25 +153,25 @@ PRIMARY: 'Primary'
 {
   title: e.MORE,
   routes: [{
-      link: m.am.PARTNERS,
+      link: p.am.PARTNERS,
       title: e.PARTNERS,
       tracking: 'partners',
       external: !0
     },
     {
-      link: m.am.HYPESQUAD,
+      link: p.am.HYPESQUAD,
       title: e.HYPESQUAD,
       tracking: 'hypesquad',
       external: !0
     },
     {
-      link: m.yX.PRESS_INQUIRIES,
+      link: p.yX.PRESS_INQUIRIES,
       title: e.PRESS_INQUIRIES,
       tracking: 'pressinquiries',
       external: !0
     },
     {
-      link: m.am.OPEN_SOURCE,
+      link: p.am.OPEN_SOURCE,
       title: e.OPEN_SOURCE,
       tracking: 'open_source'
     }
@@ -244,12 +244,12 @@ if (!c)
     },
     alt: 'Download Discord',
     className: (0, u.l)(_, 'button', o),
-    href: m.am.DOWNLOAD,
+    href: p.am.DOWNLOAD,
     children: k.Z.Messages.Navigation.DOWNLOAD
   });
-let d = null != s ? m.$w.REGISTER_WITH_REDIRECT(s) : m.$w.REGISTER,
-  p = k.Z.Messages.Common.SIGN_UP_NOW;
-return e && (d = m.$w.ME, p = k.Z.Messages.Common.OPEN_DISCORD), (0, r.jsx)(n, {
+let d = null != s ? p.$w.REGISTER_WITH_REDIRECT(s) : p.$w.REGISTER,
+  h = k.Z.Messages.Common.SIGN_UP_NOW;
+return e && (d = p.$w.ME, h = k.Z.Messages.Common.OPEN_DISCORD), (0, r.jsx)(n, {
   eventName: g,
   className: (0, u.l)(_, 'button', this.props.variant),
   data: {
@@ -257,7 +257,7 @@ return e && (d = m.$w.ME, p = k.Z.Messages.Common.OPEN_DISCORD), (0, r.jsx)(n, {
     googleAnalytics: !0
   },
   href: d,
-  children: p
+  children: h
 });
   }
   render() {
@@ -269,7 +269,7 @@ let {
   showWave: o
 } = this.props, {
   animateBackground: d,
-  token: p
+  token: h
 } = this.state, N = b(k.Z.Messages.Navigation).map(e => {
   let t = e.routes.map((e, t) => e.external ? (0, r.jsx)(n, {
     className: _.route,
@@ -279,7 +279,7 @@ let {
     },
     href: e.link,
     children: e.title
-  }, e.link || t) : (0, r.jsx)(h.Z, {
+  }, e.link || t) : (0, r.jsx)(m.Z, {
     avoidRouter: l,
     to: e.link,
     from: 'footer_navigation',
@@ -324,7 +324,7 @@ return (0, r.jsx)(c.$, {
                 className: _.logoWrap,
                 children: (0, r.jsx)(n, {
                   className: _.logo,
-                  href: m.am.INDEX,
+                  href: p.am.INDEX,
                   eventName: g,
                   data: {
                     linkClicked: 'logo'
@@ -354,12 +354,12 @@ return (0, r.jsx)(c.$, {
                   (0, r.jsx)('h3', {
                     className: _.joinOtherPlayers,
                     children: k.Z.Messages.Footer.JOIN_OVER_PLAYERS_TODAY.format({
-                      num: m.vS
+                      num: p.vS
                     })
                   })
                 ]
               }),
-              this.renderAppButton(p)
+              this.renderAppButton(h)
             ]
           })
         ]
@@ -378,7 +378,7 @@ super(e), f(this, 'state', {
   this.setState({
     animateBackground: e
   });
-}), null != e.locale && k.Z.setLocale(e.locale), n = t => (0, r.jsx)(p.Z, {
+}), null != e.locale && k.Z.setLocale(e.locale), n = t => (0, r.jsx)(h.Z, {
   track: e.track,
   trackOutboundLink: e.trackOutboundLink,
   ...t

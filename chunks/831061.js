@@ -28,7 +28,7 @@ a = [
   'this',
   'super'
 ],
-o = [
+s = [
   '-',
   '~',
   /\*/,
@@ -54,13 +54,13 @@ o = [
   /\?:/,
   '='
 ],
-s = {
+o = {
   relevance: 0,
   match: t.concat(/\b(?!(if|while|for|else|super)\b)/, n, /(?=\s*[({])/),
   className: 'title.function'
 },
 l = {
-  match: t.concat(t.either(t.concat(/\b(?!(if|while|for|else|super)\b)/, n), t.either(...o)), /(?=\s*\([^)]+\)\s*\{)/),
+  match: t.concat(t.either(t.concat(/\b(?!(if|while|for|else|super)\b)/, n), t.either(...s)), /(?=\s*\([^)]+\)\s*\{)/),
   className: 'title.function',
   starts: {
     contains: [{
@@ -76,7 +76,7 @@ l = {
 },
 u = {
   relevance: 0,
-  match: t.either(...o),
+  match: t.either(...s),
   className: 'operator'
 },
 c = {
@@ -129,7 +129,7 @@ h = {
   contains: [
     E,
     _,
-    s,
+    o,
     d,
     u
   ]
@@ -250,7 +250,7 @@ contains: [{
     }
   },
   l,
-  s,
+  o,
   u,
   d,
   c,

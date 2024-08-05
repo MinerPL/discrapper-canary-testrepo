@@ -5,19 +5,19 @@ return m;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(901461),
-  s = n(453687),
+  s = n(901461),
+  l = n(453687),
   r = n(464891),
   o = n(318713),
   c = n(507418),
-  d = n(348238),
-  u = n(981631);
+  u = n(348238),
+  d = n(981631);
 let h = a.memo(function(e) {
 let {
   message: t,
   channel: n,
-  compact: l = !1,
-  groupId: s,
+  compact: s = !1,
+  groupId: l,
   isGroupStart: o,
   usernameProfile: h,
   avatarProfile: p,
@@ -25,7 +25,7 @@ let {
   author: _,
   repliedMessage: f,
   roleIcon: E
-} = e, C = (0, d.wq)(t.author.id, n.id), g = (0, d.XO)(t, n, h, m), I = (0, d.R9)(p, m), x = a.useCallback(() => m({
+} = e, g = (0, u.wq)(t.author.id, n.id), C = (0, u.XO)(t, n, h, m), I = (0, u.R9)(p, m), x = a.useCallback(() => m({
   usernameProfile: !1,
   avatarProfile: !1,
   referencedUsernameProfile: !1
@@ -36,15 +36,15 @@ return (0, i.jsx)(r.ZP, {
   channel: n,
   repliedMessage: f,
   author: _,
-  compact: l,
-  subscribeToGroupId: s,
-  showTimestampOnHover: !o && l && t.type !== u.uaV.REPLY,
+  compact: s,
+  subscribeToGroupId: l,
+  showTimestampOnHover: !o && s && t.type !== d.uaV.REPLY,
   renderPopout: c.Z,
   showAvatarPopout: p,
   showUsernamePopout: h,
   onClickAvatar: I,
-  onClickUsername: g,
-  onContextMenu: C,
+  onClickUsername: C,
+  onContextMenu: g,
   onPopoutRequestClose: x,
   roleIcon: E
 });
@@ -59,37 +59,37 @@ messagePopouts: a,
 replyReference: r,
 author: o,
 repliedMessage: c,
-roleIcon: d
+roleIcon: u
   } = e, {
-message: u,
+message: d,
 compact: m,
 channel: _,
 groupId: f
   } = t, {
 usernameProfile: E,
-avatarProfile: C
+avatarProfile: g
   } = a;
-  if ((0, l.Z)(u))
+  if ((0, s.Z)(d))
 return null;
-  let g = u.id === f;
-  return g || m || null != r ? (0, i.jsx)(h, {
-message: u,
+  let C = d.id === f;
+  return C || m || null != r ? (0, i.jsx)(h, {
+message: d,
 channel: _,
 compact: m,
 subscribeToGroupId: f,
-isGroupStart: g,
+isGroupStart: C,
 groupId: f,
 setPopout: n,
 usernameProfile: E,
-avatarProfile: C,
+avatarProfile: g,
 author: o,
 repliedMessage: c,
-roleIcon: d
+roleIcon: u
   }) : (0, i.jsx)(p, {
 compact: !0,
-timestamp: u.timestamp,
+timestamp: d.timestamp,
 isInline: !1,
-id: (0, s.Dv)(u),
+id: (0, l.Dv)(d),
 isVisibleOnlyOnHover: !0,
 cozyAlt: !0
   });

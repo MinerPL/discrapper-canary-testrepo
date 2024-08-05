@@ -5,13 +5,13 @@ return E;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(442837),
-  s = n(780384),
+  s = n(442837),
+  l = n(780384),
   r = n(481060),
   o = n(332148),
   c = n(796798),
-  d = n(198620),
-  u = n(624453),
+  u = n(198620),
+  d = n(624453),
   h = n(306680),
   p = n(494404),
   m = n(257559),
@@ -23,20 +23,20 @@ function E(e) {
 channel: t,
 onJump: E
   } = e, {
-messages: C,
-loading: g
-  } = (0, l.cj)([u.Z], () => {
-let e = u.Z.getPinnedMessages(t.id),
+messages: g,
+loading: C
+  } = (0, s.cj)([d.Z], () => {
+let e = d.Z.getPinnedMessages(t.id),
   n = null != e ? e.messages : f;
 return {
   messages: n,
   loading: null == n || null != e && e.loading
 };
-  }), I = (0, l.e7)([h.ZP], () => h.ZP.hasUnreadPins(t.id));
+  }), I = (0, s.e7)([h.ZP], () => h.ZP.hasUnreadPins(t.id));
   return a.useEffect(() => {
 c.l.getCurrentConfig({
   location: 'pins'
-}).enabled && C.some(d.k5) && o.Z.fetchPins(t.id, !0);
+}).enabled && g.some(u.k5) && o.Z.fetchPins(t.id, !0);
   }, []), a.useEffect(() => {
 I && o.Z.ackPins(t.id);
   }, [
@@ -49,8 +49,8 @@ children: (0, i.jsx)(p.ZP, {
     o.Z.ackPins(t.id), o.Z.fetchPins(t.id);
   },
   channel: t,
-  messages: C,
-  loading: g,
+  messages: g,
+  loading: C,
   analyticsName: 'Channel Pins',
   onCloseMessage: function(e, n) {
     null != e && (n.shiftKey ? o.Z.unpinMessage(t, e.id) : m.Z.confirmUnpin(t, e));
@@ -65,10 +65,10 @@ children: (0, i.jsx)(p.ZP, {
   renderEmptyState: function(e) {
     let a = _.Z.Messages.NO_PINS_IN_CHANNEL;
     t.isPrivate() && (a = _.Z.Messages.NO_PINS_IN_DM);
-    let l = (0, s.ap)(e) ? n(306059) : n(281485);
+    let s = (0, l.ap)(e) ? n(306059) : n(281485);
     return (0, i.jsx)(p.nH, {
       msg: a,
-      image: l
+      image: s
     }, 'emptystate');
   },
   listName: 'pins'

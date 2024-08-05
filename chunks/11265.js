@@ -4,70 +4,67 @@ var a = t(735250),
   i = t(120356),
   s = t.n(i),
   o = t(338545),
-  l = t(442837),
-  c = t(481060),
-  d = t(393238),
-  u = t(607070),
-  m = t(689938),
-  f = t(193981);
+  l = t(481060),
+  c = t(393238),
+  d = t(689938),
+  u = t(193981);
 n.Z = r.memo(function(e) {
   let {
 renderHeader: n,
 children: t,
 isExpanded: i,
-isStuck: C,
+isStuck: m,
 onExpand: _,
-disableAnimation: h,
-disableBackground: x
-  } = e, g = (0, l.e7)([u.Z], () => u.Z.useReducedMotion), [p, T] = r.useState(!0), [I, E] = r.useState(!1), {
-ref: b,
-height: N = 0
-  } = (0, d.Z)(), {
-ref: v,
-height: y = 0
-  } = (0, d.Z)(), [S, A] = r.useState(i), M = (0, o.useSpring)({
-height: S ? y + N : N,
-immediate: p || g || h,
+disableAnimation: C,
+disableBackground: f
+  } = e, [h, x] = r.useState(!0), [g, p] = r.useState(!1), {
+ref: T,
+height: E = 0
+  } = (0, c.Z)(), {
+ref: I,
+height: b = 0
+  } = (0, c.Z)(), [N, v] = r.useState(i), y = (0, l.useSpring)({
+height: N ? b + E : E,
 config: {
   ...o.config.stiff,
   clamp: !0
 },
 onStart: () => {
-  E(!1);
+  p(!1);
 },
 onRest: () => {
-  E(!0);
+  p(!0);
 }
-  });
+  }, h || C ? 'animate-never' : 'respect-motion-settings');
   return r.useLayoutEffect(() => {
-E(!1), A(i);
+p(!1), v(i);
   }, [i]), r.useLayoutEffect(() => {
 let e = setTimeout(() => {
-  T(!1);
+  x(!1);
 }, 100);
 return () => clearTimeout(e);
-  }, []), (0, a.jsx)(c.Clickable, {
-className: s()(f.editCard, {
-  [f.toggled]: i,
-  [f.noBackground]: x
+  }, []), (0, a.jsx)(l.Clickable, {
+className: s()(u.editCard, {
+  [u.toggled]: i,
+  [u.noBackground]: f
 }),
 children: (0, a.jsxs)(o.animated.div, {
-  className: s()(f.contentExpandContainer, {
-    [f.showOverflow]: i && I
+  className: s()(u.contentExpandContainer, {
+    [u.showOverflow]: i && g
   }),
-  style: M,
+  style: y,
   children: [
-    (0, a.jsx)(c.Clickable, {
-      innerRef: b,
-      onClick: C ? void 0 : _,
-      className: s()(f.innerHeader, {
-        [f.toggled]: i && C
+    (0, a.jsx)(l.Clickable, {
+      innerRef: T,
+      onClick: m ? void 0 : _,
+      className: s()(u.innerHeader, {
+        [u.toggled]: i && m
       }),
-      'aria-label': m.Z.Messages.EXPAND,
+      'aria-label': d.Z.Messages.EXPAND,
       children: n
     }),
     (0, a.jsx)('div', {
-      ref: v,
+      ref: I,
       children: t
     })
   ]

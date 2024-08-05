@@ -17,11 +17,11 @@ a = {
   className: 'variable',
   begin: /\$+\([\w^.:!-]+\)/
 },
-o = {
+s = {
   className: 'params',
   begin: t.either('ARCHIVE', 'FILE_ATTRIBUTE_ARCHIVE', 'FILE_ATTRIBUTE_NORMAL', 'FILE_ATTRIBUTE_OFFLINE', 'FILE_ATTRIBUTE_READONLY', 'FILE_ATTRIBUTE_SYSTEM', 'FILE_ATTRIBUTE_TEMPORARY', 'HKCR', 'HKCU', 'HKDD', 'HKEY_CLASSES_ROOT', 'HKEY_CURRENT_CONFIG', 'HKEY_CURRENT_USER', 'HKEY_DYN_DATA', 'HKEY_LOCAL_MACHINE', 'HKEY_PERFORMANCE_DATA', 'HKEY_USERS', 'HKLM', 'HKPD', 'HKU', 'IDABORT', 'IDCANCEL', 'IDIGNORE', 'IDNO', 'IDOK', 'IDRETRY', 'IDYES', 'MB_ABORTRETRYIGNORE', 'MB_DEFBUTTON1', 'MB_DEFBUTTON2', 'MB_DEFBUTTON3', 'MB_DEFBUTTON4', 'MB_ICONEXCLAMATION', 'MB_ICONINFORMATION', 'MB_ICONQUESTION', 'MB_ICONSTOP', 'MB_OK', 'MB_OKCANCEL', 'MB_RETRYCANCEL', 'MB_RIGHT', 'MB_RTLREADING', 'MB_SETFOREGROUND', 'MB_TOPMOST', 'MB_USERICON', 'MB_YESNO', 'NORMAL', 'OFFLINE', 'READONLY', 'SHCTX', 'SHELL_CONTEXT', 'SYSTEM|TEMPORARY')
 },
-s = {
+o = {
   className: 'keyword',
   begin: t.concat(/!/, t.either('addincludedir', 'addplugindir', 'appendfile', 'cd', 'define', 'delfile', 'echo', 'else', 'endif', 'error', 'execute', 'finalize', 'getdllversion', 'gettlbversion', 'if', 'ifdef', 'ifmacrodef', 'ifmacrondef', 'ifndef', 'include', 'insertmacro', 'macro', 'macroend', 'makensis', 'packhdr', 'searchparse', 'searchreplace', 'system', 'tempfile', 'undef', 'uninstfinalize', 'verbose', 'warning'))
 },
@@ -359,11 +359,11 @@ contains: [
       a
     ]
   },
-  s,
+  o,
   r,
   i,
   a,
-  o,
+  s,
   {
     className: 'title.function',
     begin: /\w+::\w+/

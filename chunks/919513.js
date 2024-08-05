@@ -1,6 +1,6 @@
 n.d(t, {
   JP: function() {
-return o;
+return s;
   },
   sM: function() {
 return function e(t, n) {
@@ -31,6 +31,6 @@ function a(e) {
   (0, r.k)('function' == typeof e.canDrag, 'Expected canDrag to be a function.'), (0, r.k)('function' == typeof e.beginDrag, 'Expected beginDrag to be a function.'), (0, r.k)('function' == typeof e.endDrag, 'Expected endDrag to be a function.');
 }
 
-function o(e) {
+function s(e) {
   (0, r.k)('function' == typeof e.canDrop, 'Expected canDrop to be a function.'), (0, r.k)('function' == typeof e.hover, 'Expected hover to be a function.'), (0, r.k)('function' == typeof e.drop, 'Expected beginDrag to be a function.');
 }

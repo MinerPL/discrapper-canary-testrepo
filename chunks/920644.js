@@ -5,8 +5,8 @@ return E;
 });
 var i = n(735250);
 n(470079);
-var s = n(990547),
-  a = n(481060),
+var a = n(990547),
+  s = n(481060),
   r = n(703656),
   l = n(153124),
   o = n(63063),
@@ -24,18 +24,18 @@ function E(e) {
 underageMessage: t,
 transitionState: r
   } = e, c = (0, l.Dt)();
-  return (0, i.jsxs)(a.ModalRoot, {
+  return (0, i.jsxs)(s.ModalRoot, {
 transitionState: r,
-size: a.ModalSize.SMALL,
+size: s.ModalSize.SMALL,
 'aria-labelledby': c,
 impression: {
-  impressionName: s.ImpressionNames.USER_AGE_GATE_UNDERAGE,
+  impressionName: a.ImpressionNames.USER_AGE_GATE_UNDERAGE,
   impressionProperties: {
     existing_user: !0
   }
 },
 children: [
-  (0, i.jsx)(a.ModalContent, {
+  (0, i.jsx)(s.ModalContent, {
     children: (0, i.jsxs)('div', {
       className: _.container,
       children: [
@@ -44,13 +44,13 @@ children: [
           src: n(231443),
           className: _.img
         }),
-        (0, i.jsx)(a.Heading, {
+        (0, i.jsx)(s.Heading, {
           variant: 'heading-xl/semibold',
           className: _.title,
           id: c,
           children: u.Z.Messages.AGE_GATE_UNDERAGE_EXISTING_HEADER
         }),
-        (0, i.jsx)(a.Text, {
+        (0, i.jsx)(s.Text, {
           color: 'header-secondary',
           className: _.subtitle,
           variant: 'text-sm/normal',
@@ -59,7 +59,7 @@ children: [
             helpURL: o.Z.getArticleURL(d.BhN.AGE_GATE)
           })
         }),
-        (0, i.jsx)(a.Text, {
+        (0, i.jsx)(s.Text, {
           color: 'header-secondary',
           className: _.subtitle,
           variant: 'text-sm/normal',
@@ -70,9 +70,9 @@ children: [
       ]
     })
   }),
-  (0, i.jsx)(a.ModalFooter, {
-    children: (0, i.jsx)(a.Button, {
-      size: a.ButtonSizes.SMALL,
+  (0, i.jsx)(s.ModalFooter, {
+    children: (0, i.jsx)(s.Button, {
+      size: s.ButtonSizes.SMALL,
       fullWidth: !0,
       onClick: h,
       children: u.Z.Messages.AGE_GATE_UNDERAGE_BACK_TO_LOGIN

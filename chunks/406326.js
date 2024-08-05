@@ -6,8 +6,8 @@ return c;
 var i = n(735250);
 n(470079);
 var a = n(481060),
-  l = n(63063),
-  s = n(981631),
+  s = n(63063),
+  l = n(981631),
   r = n(689938),
   o = n(512232);
 
@@ -19,7 +19,7 @@ searchByMode: n
   return (0, i.jsxs)('header', {
 className: o.searchHeader,
 children: [
-  (0, i.jsx)(d, {
+  (0, i.jsx)(u, {
     ...e
   }),
   (0, i.jsxs)(a.TabBar, {
@@ -29,15 +29,15 @@ children: [
     onItemSelect: n,
     children: [
       (0, i.jsx)(a.TabBar.Item, {
-        id: s.QIO.NEWEST,
+        id: l.QIO.NEWEST,
         children: r.Z.Messages.SEARCH_NEWEST_SHORT
       }),
       (0, i.jsx)(a.TabBar.Item, {
-        id: s.QIO.OLDEST,
+        id: l.QIO.OLDEST,
         children: r.Z.Messages.SEARCH_OLDEST_SHORT
       }),
       (0, i.jsx)(a.TabBar.Item, {
-        id: s.QIO.MOST_RELEVANT,
+        id: l.QIO.MOST_RELEVANT,
         children: r.Z.Messages.SEARCH_MOST_RELEVANT_SHORT
       })
     ]
@@ -46,14 +46,14 @@ children: [
   });
 }
 
-function d(e) {
+function u(e) {
   let t;
   let {
 isSearching: n,
-isIndexing: l,
-documentsIndexed: s
+isIndexing: s,
+documentsIndexed: l
   } = e;
-  (l || n) && (t = (0, i.jsx)('div', {
+  (s || n) && (t = (0, i.jsx)('div', {
 className: o.spinnerWrapper,
 children: (0, i.jsx)(a.Spinner, {
   type: a.Spinner.Type.SPINNING_CIRCLE,
@@ -61,26 +61,26 @@ children: (0, i.jsx)(a.Spinner, {
   itemClassName: o.spinnerPath
 })
   }));
-  let c = l && !n;
+  let c = s && !n;
   return (0, i.jsxs)('div', {
 className: o.totalResults,
 role: 'status',
 children: [
   c ? (0, i.jsx)(a.Tooltip, {
     text: r.Z.Messages.SEARCH_STILL_INDEXING_HINT.format({
-      count: s
+      count: l
     }),
     children: n => (0, i.jsxs)('div', {
       className: o.totalResultsWrapper,
       ...n,
       children: [
-        (0, i.jsx)(u, {
+        (0, i.jsx)(d, {
           ...e
         }),
         t
       ]
     })
-  }) : (0, i.jsx)(u, {
+  }) : (0, i.jsx)(d, {
     ...e
   }),
   c ? null : t
@@ -88,7 +88,7 @@ children: [
   });
 }
 
-function u(e) {
+function d(e) {
   let {
 isSearching: t,
 isIndexing: n,
@@ -105,7 +105,7 @@ return (0, i.jsx)(a.Text, {
   variant: 'text-md/normal',
   children: (0, i.jsx)(a.Anchor, {
     className: o.helpdeskLink,
-    href: l.Z.getArticleURL(s.BhN.SEARCH_INDEXING),
+    href: s.Z.getArticleURL(l.BhN.SEARCH_INDEXING),
     children: r.Z.Messages.STILL_INDEXING
   })
 });

@@ -12,19 +12,19 @@ return a;
 return _;
   },
   m1: function() {
-return o;
+return s;
   },
   wz: function() {
 return f;
   }
 });
-var r, i, a, o, s = n(772848),
+var r, i, a, s, o = n(772848),
   l = n(146282),
   u = n(626135),
   c = n(981631),
   d = n(206583);
-(r = a || (a = {}))[r.FollowGame = 0] = 'FollowGame', r[r.UnfollowGame = 1] = 'UnfollowGame', r[r.ClickMessageUser = 2] = 'ClickMessageUser', r[r.SendMessageUser = 3] = 'SendMessageUser', r[r.JoinVC = 4] = 'JoinVC', r[r.WatchStream = 5] = 'WatchStream', r[r.ClickSimilarGame = 6] = 'ClickSimilarGame', r[r.WebsiteLink = 7] = 'WebsiteLink', r[r.XLink = 8] = 'XLink', r[r.YouTubeLink = 9] = 'YouTubeLink', r[r.ShowMore = 10] = 'ShowMore', r[r.ShowLess = 11] = 'ShowLess', r[r.JoinOfficialServer = 12] = 'JoinOfficialServer', r[r.ClickImage = 13] = 'ClickImage', (i = o || (o = {})).ActivityCard = 'activity_card', i.UserProfile = 'user_profile', i.SimilarGames = 'similar_games', i.DevTools = 'dev_tools';
-let _ = () => (0, s.Z)(),
+(r = a || (a = {}))[r.FollowGame = 0] = 'FollowGame', r[r.UnfollowGame = 1] = 'UnfollowGame', r[r.ClickMessageUser = 2] = 'ClickMessageUser', r[r.SendMessageUser = 3] = 'SendMessageUser', r[r.JoinVC = 4] = 'JoinVC', r[r.WatchStream = 5] = 'WatchStream', r[r.ClickSimilarGame = 6] = 'ClickSimilarGame', r[r.WebsiteLink = 7] = 'WebsiteLink', r[r.XLink = 8] = 'XLink', r[r.YouTubeLink = 9] = 'YouTubeLink', r[r.ShowMore = 10] = 'ShowMore', r[r.ShowLess = 11] = 'ShowLess', r[r.JoinOfficialServer = 12] = 'JoinOfficialServer', r[r.ClickImage = 13] = 'ClickImage', (i = s || (s = {})).ActivityCard = 'activity_card', i.ActivityCardContextMenu = 'activity_card_context_menu', i.UserProfile = 'user_profile', i.UserProfileCardContextMenu = 'user_profile_card_context_menu', i.SimilarGames = 'similar_games', i.DevTools = 'dev_tools', i.Embed = 'embed', i.RtcPanel = 'rtc_panel';
+let _ = () => (0, o.Z)(),
   E = e => {
 let {
   viewId: t,
@@ -49,7 +49,7 @@ let {
   applicationId: r,
   playedFriendIds: i,
   playedFriendsData: a,
-  similarGames: o
+  similarGames: s
 } = e;
 u.default.track(c.rMx.GAME_PROFILE_CLOSE, {
   view_id: t,
@@ -57,7 +57,7 @@ u.default.track(c.rMx.GAME_PROFILE_CLOSE, {
   application_id: r,
   played_friend_ids: i,
   played_friends_data: a,
-  similar_games: o,
+  similar_games: s,
   request_id: l.Z.getFeedRequestId(d.YN.GAME_PROFILE_FEED)
 });
   },
@@ -68,7 +68,7 @@ let {
   action: r,
   recipientUserId: i,
   similarGameId: a,
-  viewId: o
+  viewId: s
 } = e;
 u.default.track(c.rMx.GAME_PROFILE_ACTION, {
   game_name: t,
@@ -76,6 +76,6 @@ u.default.track(c.rMx.GAME_PROFILE_ACTION, {
   action: r,
   recipient_user_id: i,
   similar_game_id: a,
-  view_id: o
+  view_id: s
 });
   };

@@ -13,8 +13,8 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
   a = n(481060),
-  o = n(430824),
-  s = n(275759),
+  s = n(430824),
+  o = n(275759),
   l = n(689938);
 let u = 'guild-connection-roles';
 
@@ -37,7 +37,7 @@ onCloseRequest: () => {
 }
 
 function d(e) {
-  return (0, i.e7)([o.Z], () => (0, s.kQ)(e, o.Z.getRoles(e.id)), [e]) ? (0, r.jsx)(a.MenuItem, {
+  return (0, i.e7)([s.Z], () => (0, o.kQ)(e, s.Z.getRoles(e.id)), [e]) ? (0, r.jsx)(a.MenuItem, {
 id: 'guild-connection-roles',
 label: l.Z.Messages.CONNECTIONS_ROLES_CHANNEL_NAME,
 icon: a.LinkIcon,

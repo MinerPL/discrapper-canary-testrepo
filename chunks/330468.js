@@ -24,8 +24,7 @@ e.exports = {
   upsellStaticHeader: 'upsellStaticHeader_ed1152',
   upsellBackButton: 'upsellBackButton_ed1152',
   reserveButton: 'reserveButton_ed1152',
-  browseButton: 'browseButton_ed1152',
-  spacer: 'spacer_ed1152',
+  wfsSpacer: 'wfsSpacer_ed1152',
   joinWFSContainer: 'joinWFSContainer_ed1152',
   joinWFS: 'joinWFS_ed1152',
   joinWFSLink: 'joinWFSLink_ed1152'

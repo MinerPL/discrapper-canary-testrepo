@@ -1,27 +1,27 @@
 t.d(n, {
   L: function() {
-return l;
+return c;
   }
 });
-var o = t(735250);
+var r = t(735250);
 t(470079);
-var r = t(409813),
-  a = t(443650),
+var a = t(409813),
+  o = t(443650),
   i = t(464797),
-  c = t(333259);
+  s = t(333259);
 
-function s(e) {
+function l(e) {
   let {
 onClose: n
   } = e, {
 guildProductListing: t
   } = (0, i._)();
-  return (0, o.jsx)(a.Z, {
+  return (0, r.jsx)(o.Z, {
 guildProductListing: t,
-className: c.header,
+className: s.header,
 onClose: n
   });
 }
-let l = (e, n, t) => t === r.h8.CONFIRM ? null : (0, o.jsx)(s, {
+let c = (e, n, t) => t === a.h8.CONFIRM ? null : (0, r.jsx)(l, {
   onClose: () => n(!1)
 });

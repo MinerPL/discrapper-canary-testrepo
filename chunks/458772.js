@@ -2,9 +2,9 @@ n(47120);
 var r = n(445346),
   i = n(570140),
   a = n(710845),
-  o = n(93093);
+  s = n(93093);
 
-function s(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -35,7 +35,7 @@ this.delete(e);
 this.delete(e);
   }
   initialize() {
-this.waitFor(o.Z);
+this.waitFor(s.Z);
   }
   handleCacheLoadedLazy(e) {
 for (let [t, n] of(this.guilds = new Map(), this.channels = new Map(), e.basicGuildChannels))
@@ -49,7 +49,7 @@ for (let [t, n] of(this.guilds = new Map(), this.channels = new Map(), e.basicGu
 this.guilds.clear(), this.channels.clear();
   }
   handleConnectionOpen(e) {
-let t = o.Z.allGuildIds();
+let t = s.Z.allGuildIds();
 for (let e of this.guilds.keys())
   !t.has(e) && this.delete(e);
   }
@@ -68,7 +68,7 @@ super(i.Z, {
   CACHE_LOADED_LAZY: e => this.handleCacheLoadedLazy(e),
   CONNECTION_OPEN: e => this.handleConnectionOpen(e),
   LOGOUT: e => this.handleLogout(e)
-}), s(this, 'channels', new Map()), s(this, 'guilds', new Map());
+}), o(this, 'channels', new Map()), o(this, 'guilds', new Map());
   }
 }
 t.Z = new u();

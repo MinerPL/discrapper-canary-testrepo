@@ -18,8 +18,8 @@ return function(t, n, r) {
 };
   }(),
   a = n(968598),
-  o = n(972101),
-  s = function(e) {
+  s = n(972101),
+  o = function(e) {
 function t(e, n) {
   ! function(e, t) {
     if (!(e instanceof t))
@@ -31,7 +31,7 @@ function t(e, n) {
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
   }(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
   return e.style && (e = r({}, e, {
-    style: new o(e.style)
+    style: new s(e.style)
   })), i._props = e, i._callback = n, i.__attach(), i;
 }
 return ! function(e, t) {
@@ -93,4 +93,4 @@ return ! function(e, t) {
   }
 ]), t;
   }(a);
-e.exports = s;
+e.exports = o;

@@ -5,10 +5,10 @@ return h;
 });
 var i = n(735250);
 n(470079);
-var s = n(120356),
-  a = n.n(s),
+var a = n(120356),
+  s = n.n(a),
   r = n(481060),
-  l = n(969832),
+  l = n(923973),
   o = n(572004),
   c = n(51144),
   d = n(785717),
@@ -20,10 +20,10 @@ function h(e) {
 user: t,
 isHovering: n
   } = e, {
-trackUserProfileAction: s
+trackUserProfileAction: a
   } = (0, d.KZ)();
   return o.wS ? (0, i.jsx)(l.o, {
-className: a()(_.copiable, {
+className: s()(_.copiable, {
   [_.visible]: n
 }),
 copyValue: c.ZP.getUserTag(t, {
@@ -35,7 +35,7 @@ copyTooltip: u.Z.Messages.COPY_USERNAME,
 copyTooltipDelay: 0,
 disableCopy: !1,
 showCopyIcon: !1,
-onCopy: () => s({
+onCopy: () => a({
   action: 'COPY_USERNAME'
 }),
 children: (0, i.jsx)(r.CopyIcon, {

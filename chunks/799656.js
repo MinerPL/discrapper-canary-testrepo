@@ -2,17 +2,17 @@ var r = n(735250);
 n(470079);
 var i = n(266067),
   a = n(442837),
-  o = n(353926),
-  s = n(314897),
+  s = n(353926),
+  o = n(314897),
   l = n(981631);
 t.Z = a.ZP.connectStores([
-  o.Z,
-  s.default
+  s.Z,
+  o.default
 ], () => {
-  let e = s.default.getToken();
+  let e = o.default.getToken();
   return {
 token: e,
-hasLoadedExperiments: null != e || o.Z.hasLoadedExperiments
+hasLoadedExperiments: null != e || s.Z.hasLoadedExperiments
   };
 })(e => {
   let {

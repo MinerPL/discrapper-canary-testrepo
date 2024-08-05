@@ -8,8 +8,8 @@ return v;
 }), n(47120), n(724458);
 var r, i = n(392711),
   a = n.n(i),
-  o = n(442837),
-  s = n(759174),
+  s = n(442837),
+  o = n(759174),
   l = n(570140),
   u = n(598077),
   c = n(314897),
@@ -64,14 +64,14 @@ username: '...',
 discriminator: n.slice(-5, -1)
   }));
   let {
-member: o,
-comparator: s
+member: s,
+comparator: o
   } = N(e, A(t, r = i), r), l = {
 voiceState: e,
 user: i,
-member: o,
-comparator: s,
-nick: null == o ? void 0 : o.nick
+member: s,
+comparator: o,
+nick: null == s ? void 0 : s.nick
   };
   return a && (l._isPlaceholder = !0), l;
 }
@@ -88,12 +88,12 @@ if (null != t && null != r) {
   if (n.voiceState !== t) {
     var i;
     let a = A(this.guildId, r),
-      o = null !== (i = null == a ? void 0 : a.nick) && void 0 !== i ? i : p.ZP.getName(r);
+      s = null !== (i = null == a ? void 0 : a.nick) && void 0 !== i ? i : p.ZP.getName(r);
     return this._voiceStates.set(e, {
       ...n,
       member: a,
-      comparator: v(t, o),
-      nick: o,
+      comparator: v(t, s),
+      nick: s,
       voiceState: t
     }), !0;
   }
@@ -153,7 +153,7 @@ if (null != this._pending) {
 }
   }
   constructor(e) {
-I(this, 'guildId', void 0), I(this, '_pending', new Set()), I(this, '_voiceStates', new s.h(e => {
+I(this, 'guildId', void 0), I(this, '_pending', new Set()), I(this, '_voiceStates', new o.h(e => {
   let {
     voiceState: {
       channelId: t
@@ -182,7 +182,7 @@ Object.keys(e[t]).forEach(e => {
 });
   });
 }
-class D extends(r = o.ZP.Store) {
+class D extends(r = s.ZP.Store) {
   initialize() {
 y(), this.waitFor(c.default, E.default, _.ZP, f.Z), this.syncWith([E.default], C);
   }
@@ -260,14 +260,14 @@ var t, n;
 let r = !1,
   i = new Set(null === (t = g[e.guildId]) || void 0 === t ? void 0 : t.getUserIds()),
   a = new Set(null === (n = e.voiceStates) || void 0 === n ? void 0 : n.map(e => e.userId)),
-  o = new Set(e.removedVoiceStateUsers);
+  s = new Set(e.removedVoiceStateUsers);
 for (let t of new Set([
     ...i,
     ...a
   ]))
   r = S(e.guildId).updateVoiceState(t) || r;
 for (let t of i)
-  !o.has(t) && (r = S(e.guildId).updateMember(t) || r);
+  !s.has(t) && (r = S(e.guildId).updateMember(t) || r);
 return r;
   }
 });

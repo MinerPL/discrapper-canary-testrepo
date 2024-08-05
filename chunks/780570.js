@@ -12,7 +12,7 @@ return _;
 return u;
   },
   Tu: function() {
-return s;
+return o;
   },
   d0: function() {
 return d;
@@ -27,9 +27,9 @@ return c;
 var r = n(695346),
   i = n(594174),
   a = n(55563),
-  o = n(981631);
+  s = n(981631);
 
-function s(e, t) {
+function o(e, t) {
   return ''.concat(e, ':').concat(t);
 }
 
@@ -42,10 +42,10 @@ branchId: n
 }
 
 function u(e, t) {
-  if (!r.G6.getSetting() || r.co.getSetting() === o.Skl.INVISIBLE)
+  if (!r.G6.getSetting() || r.co.getSetting() === s.Skl.INVISIBLE)
 return !1;
   let n = t.getActiveLibraryApplication(e);
-  return null == n || !n.hasFlag(o.eHb.PRIVATE);
+  return null == n || !n.hasFlag(s.eHb.PRIVATE);
 }
 
 function c(e, t) {
@@ -53,17 +53,17 @@ function c(e, t) {
 }
 
 function d(e, t, n) {
-  return !(null == t || n.enabled && t.hasFlag(o.eHb.PRIVATE)) && !t.isHidden();
+  return !(null == t || n.enabled && t.hasFlag(s.eHb.PRIVATE)) && !t.isHidden();
 }
 
 function _(e) {
-  return null == e ? null : e.type === o.vxO.INSTALLING || e.type === o.vxO.UPDATING || e.type === o.vxO.UNINSTALLING ? e : null;
+  return null == e ? null : e.type === s.vxO.INSTALLING || e.type === s.vxO.UPDATING || e.type === s.vxO.UNINSTALLING ? e : null;
 }
 
 function E(e) {
   return e.reduce((e, t) => {
 let n = _(t);
-return null == n || t.type === o.vxO.UP_TO_DATE ? e : {
+return null == n || t.type === s.vxO.UP_TO_DATE ? e : {
   total: e.total + Number(n.total),
   progress: e.progress + Number(n.progress)
 };

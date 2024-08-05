@@ -1,5 +1,11 @@
 e.exports = {
+  rowIcon: 'rowIcon_e5da8b',
+  rowDivider: 'rowDivider_e5da8b',
+  appDetailsRowContainer: 'appDetailsRowContainer_e5da8b',
   container: 'container_e5da8b',
+  containerBorderRadius: 'containerBorderRadius_e5da8b',
+  rowContainer: 'rowContainer_e5da8b',
+  containerDisabled: 'containerDisabled_e5da8b',
   icon: 'icon_e5da8b',
   iconCard: 'iconCard_e5da8b',
   darkenBannerImage: 'darkenBannerImage_e5da8b',
@@ -13,6 +19,8 @@ e.exports = {
   bannerImageChildContainer: 'bannerImageChildContainer_e5da8b',
   voiceLauncherAppCardContainer: 'voiceLauncherAppCardContainer_e5da8b',
   voiceLauncherAppCardButton: 'voiceLauncherAppCardButton_e5da8b',
+  activityVideoContainer: 'activityVideoContainer_e5da8b',
   activityVideo: 'activityVideo_e5da8b',
-  videoFadeOut: 'videoFadeOut_e5da8b'
+  videoFadeOut: 'videoFadeOut_e5da8b',
+  tooltipContent: 'tooltipContent_e5da8b'
 };

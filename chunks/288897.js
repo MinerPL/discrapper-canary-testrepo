@@ -2,8 +2,8 @@ n(47120), n(757143);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(519953),
+  s = n.n(a),
+  o = n(519953),
   l = n(239091),
   u = n(358085),
   c = n(960048),
@@ -64,17 +64,17 @@ let {
   channelId: i,
   renderExtraElement: a
 } = this.props, {
-  attributes: o,
-  children: s
+  attributes: s,
+  children: o
 } = e;
-'rtl' === o.dir && (o.style = {
-  ...o.style,
+'rtl' === s.dir && (s.style = {
+  ...s.style,
   textAlign: 'right'
 });
 let l = null !== (t = null == a ? void 0 : a(e)) && void 0 !== t ? t : (0, I.Z)(e, n, i);
 return null != l ? l : (0, r.jsx)('div', {
-  ...o,
-  children: s
+  ...s,
+  children: o
 });
   }
   renderLeaf(e) {
@@ -84,11 +84,11 @@ let {
   renderExtraLeaf: i
 } = this.props, {
   attributes: a,
-  children: o
-} = e, s = null !== (t = null == i ? void 0 : i(e)) && void 0 !== t ? t : (0, T.Z)(n, e);
-return null != s ? s : (0, r.jsx)('span', {
+  children: s
+} = e, o = null !== (t = null == i ? void 0 : i(e)) && void 0 !== t ? t : (0, T.Z)(n, e);
+return null != o ? o : (0, r.jsx)('span', {
   ...a,
-  children: o
+  children: s
 });
   }
   handleOnChange() {
@@ -99,7 +99,7 @@ let {
 if (r !== this.state.showPlaceholder && this.setState({
     showPlaceholder: r
   }), null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, h.bN.richValue(n)), !1 === this.props.canFocus) {
-  let e = s.F3.findDocumentOrShadowRoot(n).getSelection();
+  let e = o.F3.findDocumentOrShadowRoot(n).getSelection();
   null != e && this.isSelectionPartiallyInside(e) && (null == e || e.removeAllRanges());
 }
   }
@@ -123,7 +123,7 @@ null === (t = (n = this.props).onKeyUp) || void 0 === t || t.call(n, e);
 var t;
 let {
   editor: n
-} = this.props, r = s.F3.findDocumentOrShadowRoot(n).getSelection(), i = null != r && r.rangeCount > 0 ? r.getRangeAt(0) : null, a = null !== (t = e.getTargetRanges()[0]) && void 0 !== t ? t : null;
+} = this.props, r = o.F3.findDocumentOrShadowRoot(n).getSelection(), i = null != r && r.rangeCount > 0 ? r.getRangeAt(0) : null, a = null !== (t = e.getTargetRanges()[0]) && void 0 !== t ? t : null;
 if (null == n.composition) {
   if (('insertText' === e.inputType || 'insertReplacementText' === e.inputType) && (null == a && (a = i), null != a)) {
     let t = h.bN.toSlateRange(n, a, {
@@ -171,13 +171,13 @@ if (null != (null != n.selection && h.M8.isCollapsed(n.selection) ? h.bN.above(n
   }), r.insertedPrefix = !0, n.composition = r;
   return;
 }
-let a = s.F3.findDocumentOrShadowRoot(this.props.editor).getSelection(),
-  o = (null !== (e = null == a ? void 0 : a.rangeCount) && void 0 !== e ? e : 0) > 0 ? null == a ? void 0 : a.getRangeAt(0) : null;
-if (null == (null != o ? h.bN.toSlateRange(n, o, {
+let a = o.F3.findDocumentOrShadowRoot(this.props.editor).getSelection(),
+  s = (null !== (e = null == a ? void 0 : a.rangeCount) && void 0 !== e ? e : 0) > 0 ? null == a ? void 0 : a.getRangeAt(0) : null;
+if (null == (null != s ? h.bN.toSlateRange(n, s, {
     exactMatch: !0,
     suppressThrow: !0
-  }) : null) && null != o) {
-  let e = h.bN.toSlateRange(n, o, {
+  }) : null) && null != s) {
+  let e = h.bN.toSlateRange(n, s, {
     exactMatch: !1,
     suppressThrow: !0
   });
@@ -218,9 +218,9 @@ null == t || t(e);
 let {
   editor: t,
   onBlur: n
-} = this.props, r = e.relatedTarget, i = s.F3.findDocumentOrShadowRoot(this.props.editor), a = i.getElementById('textarea-context'), o = i.getElementById('slate-toolbar');
-if (null != r && !(0, E.hasDomParent)(r, a) && !(0, E.hasDomParent)(r, o)) {
-  let e = s.F3.findDocumentOrShadowRoot(t).getSelection();
+} = this.props, r = e.relatedTarget, i = o.F3.findDocumentOrShadowRoot(this.props.editor), a = i.getElementById('textarea-context'), s = i.getElementById('slate-toolbar');
+if (null != r && !(0, E.hasDomParent)(r, a) && !(0, E.hasDomParent)(r, s)) {
+  let e = o.F3.findDocumentOrShadowRoot(t).getSelection();
   null != e && this.isSelectionEscaping(e) && e.removeAllRanges();
 }
 null == n || n(e);
@@ -316,16 +316,16 @@ return (0, r.jsxs)('div', {
   className: n,
   children: [
     this.state.showPlaceholder ? (0, r.jsx)('div', {
-      className: o()(g.placeholder, t),
+      className: s()(g.placeholder, t),
       'aria-hidden': !0,
       children: l
     }) : null,
-    (0, r.jsx)(s.mH, {
+    (0, r.jsx)(o.mH, {
       editor: e,
       value: [...this.state.initialValue],
-      children: (0, r.jsx)(s.CX, {
+      children: (0, r.jsx)(o.CX, {
         ...T,
-        className: o()(S.markup, g.editor, t),
+        className: s()(S.markup, g.editor, t),
         decorate: this.decorate,
         renderElement: this.renderElement,
         renderLeaf: this.renderLeaf,

@@ -12,8 +12,8 @@ return _;
 var r = n(830121),
   i = n(754688),
   a = n(430824),
-  o = n(768581),
-  s = n(5192),
+  s = n(768581),
+  o = n(5192),
   l = n(154135),
   u = n(981631),
   c = n(959517),
@@ -35,9 +35,9 @@ return null;
   let I = (0, l.EY)(u.thumbnail),
 T = !m && u.has_media_attachment,
 g = m ? d.Z.Messages.MEDIA_POST_EMBED_SUBSCRIBED_CTA : d.Z.Messages.MEDIA_POST_EMBED_SUBSCRIBE_CTA,
-S = null != h ? s.ZP.getName(u.guild_id, u.channel_id, h) : void 0,
+S = null != h ? o.ZP.getName(u.guild_id, u.channel_id, h) : void 0,
 A = null == h ? void 0 : h.getAvatarURL(null == _ ? void 0 : _.id, 40);
-  (null == A || p !== u.guild_id) && (A = o.ZP.getGuildIconURL({
+  (null == A || p !== u.guild_id) && (A = s.ZP.getGuildIconURL({
 id: u.guild_id,
 icon: u.guild_icon,
 size: 40,

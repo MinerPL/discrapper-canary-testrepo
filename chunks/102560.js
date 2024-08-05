@@ -87,11 +87,15 @@ children: [
       }),
       (0, n.jsx)(r.FormItem, {
         title: m.Z.Messages.PRUNE_WITH_ROLES,
-        children: (0, n.jsx)(r.SearchableSelect, {
-          multi: !0,
-          value: b,
-          onChange: e => T(e),
-          options: g
+        children: (0, n.jsx)(r.ScrollerThin, {
+          className: _.scroller,
+          children: (0, n.jsx)(r.SearchableSelect, {
+            maxVisibleItems: 10,
+            multi: !0,
+            value: b,
+            onChange: e => T(e),
+            options: g
+          })
         })
       }),
       (0, n.jsx)(r.FormText, {

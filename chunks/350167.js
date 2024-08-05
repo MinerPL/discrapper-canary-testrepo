@@ -7,7 +7,7 @@ var r = n(259443),
   i = n(198584),
   a = n(444675);
 
-function o(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -15,7 +15,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let s = '1' === a.env.KV_STORAGE_LOGGING,
+let o = '1' === a.env.KV_STORAGE_LOGGING,
   l = new r.Y('Runtime');
 class u {
   static nextId() {
@@ -81,7 +81,7 @@ if (!this.initialized)
   i.d.setCallbacks({
     status: e => this.onStatus(e),
     response: (e, t) => this.onResponse(e, t)
-  }), s && (this.addCompletionCallback(e => {
+  }), o && (this.addCompletionCallback(e => {
     let t = e.ok ? 'completed' : 'failed',
       n = [
         ''.concat(e.timings.execution.toFixed(3), 'ms execution'),
@@ -93,4 +93,4 @@ if (!this.initialized)
   }), this.addDatabaseStateCallback((e, t) => l.info(''.concat(e, ' (state: ').concat(t, ')')))), this.initialized = !0;
   }
 }
-o(u, 'counter', 0), o(u, 'pending', new Map()), o(u, 'initialized', !1), o(u, 'dbStateCallbacks', []), o(u, 'completionCallbacks', []);
+s(u, 'counter', 0), s(u, 'pending', new Map()), s(u, 'initialized', !1), s(u, 'dbStateCallbacks', []), s(u, 'completionCallbacks', []);

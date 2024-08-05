@@ -3,7 +3,7 @@ n.d(t, {
 return u;
   },
   Gq: function() {
-return s;
+return o;
   },
   Gx: function() {
 return E;
@@ -21,18 +21,18 @@ return c;
 return _;
   },
   ut: function() {
-return o;
+return s;
   }
 });
 var r = n(446108),
   i = n(901461),
   a = n(981631);
 
-function o(e) {
+function s(e) {
   return 'message-content-'.concat(e.id);
 }
 
-function s(e) {
+function o(e) {
   return 'message-reply-context-'.concat(e.id);
 }
 
@@ -66,10 +66,10 @@ T = e.type !== a.uaV.DEFAULT || !I && '' !== e.content,
 g = (0, i.Z)(e),
 S = !g && (null == n ? void 0 : n.hasTimestamp) !== !1,
 A = l(e, t),
-N = s(e),
+N = o(e),
 v = g ? '' : ''.concat(c ? N : A, ' ').concat(r.Z0);
   if (T) {
-let t = o(e);
+let t = s(e);
 v += ' '.concat(t);
   }
   if (m) {

@@ -9,8 +9,8 @@ return h;
 var r = n(470079),
   i = n(367907),
   a = n(339085),
-  o = n(689789),
-  s = n(592125),
+  s = n(689789),
+  o = n(592125),
   l = n(944486),
   u = n(176354),
   c = n(304852),
@@ -35,9 +35,9 @@ containerWidth: r,
 rowSize: h,
 isBurstReaction: p,
 analyticsObject: m
-  } = e, I = s.Z.getChannel(l.Z.getChannelId()), T = null == I ? void 0 : I.getGuildId(), {
+  } = e, I = o.Z.getChannel(l.Z.getChannelId()), T = null == I ? void 0 : I.getGuildId(), {
 canSplitFrecencyList: g
-  } = o.Z.getCurrentConfig({
+  } = s.Z.getCurrentConfig({
 location: 'trackOnEmojiPickerOpened'
   }, {
 autoTrackExposure: !0

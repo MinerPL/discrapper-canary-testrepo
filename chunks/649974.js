@@ -1,4 +1,4 @@
-var i, s, a, r, l = n(442837),
+var i, a, s, r, l = n(442837),
   o = n(570140),
   c = n(656063),
   d = n(814443),
@@ -38,10 +38,10 @@ return !1;
   let i = n.filter(e => e.type !== h.IIU.CUSTOM_STATUS);
   if (0 === i.length)
 return p(t.id);
-  let s = !1;
+  let a = !1;
   return i.forEach(e => {
 (function(e, t) {
-  var n, i, s, a;
+  var n, i, a, s;
   let r = (0, c.Z)(e);
   if (null == r)
     return p(t.id);
@@ -53,21 +53,21 @@ return p(t.id);
       activity: e,
       startedPlaying: o
     };
-  return s = r, a = d, I = {
+  return a = r, s = d, I = {
     ...I,
-    [s]: {
-      ...I[s],
-      [a.userId]: a
+    [a]: {
+      ...I[a],
+      [s.userId]: s
     }
   }, m = {
     ...m,
-    [a.userId]: {
-      gameId: s,
-      startedPlaying: a.startedPlaying
+    [s.userId]: {
+      gameId: a,
+      startedPlaying: s.startedPlaying
     }
   }, !0;
-}(e, t) && (s = !0));
-  }), s;
+}(e, t) && (a = !0));
+  }), a;
 }
 
 function S() {
@@ -84,7 +84,7 @@ I = {}, m = {}, t = !1, u.Z.getUserIds().forEach(e => {
   }
   return E = !d.Z.needsRefresh(), e;
 }
-class C extends(r = l.ZP.Store) {
+class f extends(r = l.ZP.Store) {
   initialize() {
 this.waitFor(d.Z), this.syncWith([d.Z], S);
   }
@@ -104,12 +104,12 @@ return I[e];
 return m[e];
   }
 }
-a = 'NowPlayingStore', (s = 'displayName') in(i = C) ? Object.defineProperty(i, s, {
-  value: a,
+s = 'NowPlayingStore', (a = 'displayName') in(i = f) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[s] = a, t.Z = new C(o.Z, {
+}) : i[a] = s, t.Z = new f(o.Z, {
   CONNECTION_OPEN: function() {
 I = {}, m = {};
   },

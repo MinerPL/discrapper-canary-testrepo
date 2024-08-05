@@ -9,16 +9,15 @@ return C;
 return y;
   }
 }), n(653041), n(47120);
-var r, i, a, o, s = n(512722),
-  l = n.n(s),
+var r, i, a, s, o = n(512722),
+  l = n.n(o),
   u = n(261470),
   c = n(544891),
   d = n(911969),
   _ = n(367907),
   E = n(710845),
-  f = n(432877);
-n(893233);
-var h = n(873741),
+  f = n(432877),
+  h = n(873741),
   p = n(314897),
   m = n(866960),
   I = n(70956),
@@ -37,7 +36,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 let O = null;
-__OVERLAY__ && (O = n(237997).Z), (a = r || (r = {})).OVERLAY_UNLOCKED = 'overlay_unlocked', a.OVERLAY_UNLOCKED_PINNED = 'overlay_unlocked_pinned', a.OVERLAY_LOCKED_ACTIVATED = 'overlay_locked_activated', (o = i || (i = {}))[o.SEND = 0] = 'SEND', o[o.EDIT = 1] = 'EDIT', o[o.COMMAND = 2] = 'COMMAND';
+__OVERLAY__ && (O = n(237997).Z), (a = r || (r = {})).OVERLAY_UNLOCKED = 'overlay_unlocked', a.OVERLAY_UNLOCKED_PINNED = 'overlay_unlocked_pinned', a.OVERLAY_LOCKED_ACTIVATED = 'overlay_locked_activated', (s = i || (i = {}))[s.SEND = 0] = 'SEND', s[s.EDIT = 1] = 'EDIT', s[s.COMMAND = 2] = 'COMMAND';
 let R = e => 0 === e.type,
   C = e => 1 === e.type,
   y = e => R(e) ? e.message.nonce : C(e) ? e.message.messageId : e.message.data.id,
@@ -104,16 +103,16 @@ let {
   channelId: r,
   file: i,
   filename: a,
-  ...o
-} = e, s = (0, h.d)(), l = {
+  ...s
+} = e, o = (0, h.d)(), l = {
   mobile_network_type: m.Z.getType(),
-  ...o,
-  ...null != s && {
-    signal_strength: s
+  ...s,
+  ...null != o && {
+    signal_strength: o
   }
 };
 if (f.ZP.get('send_fail_100')) {
-  this.logger.log('Skipping message sened because send_fail_100 is enabled'), t(null, {
+  this.logger.log('Skipping message send because send_fail_100 is enabled'), t(null, {
     ok: !1,
     hasErr: !1,
     status: 500,
@@ -195,8 +194,8 @@ let n, {
     applicationId: r,
     guildId: i,
     channelId: a,
-    data: o,
-    nonce: s,
+    data: s,
+    nonce: o,
     attachments: u,
     maxSizeCallback: _,
     analytics_location: E,
@@ -208,8 +207,8 @@ let n, {
     guild_id: i,
     channel_id: a,
     session_id: p.default.getSessionId(),
-    data: o,
-    nonce: s,
+    data: s,
+    nonce: o,
     analytics_location: E,
     section_name: f
   };
@@ -227,14 +226,14 @@ c.tn.post({
   attachments: n,
   signal: m.signal,
   onRequestCreated: e => {
-    this.requests.set(s, m), e.on('progress', e => {
+    this.requests.set(o, m), e.on('progress', e => {
       let {
         total: t
       } = e, n = (0, T.dg)(i);
-      null != t && t > n && (this.cancelRequest(s), null == _ || _(n));
+      null != t && t > n && (this.cancelRequest(o), null == _ || _(n));
     });
   }
-}, this.createResponseHandler(s, t));
+}, this.createResponseHandler(o, t));
   }
   constructor(e = 5) {
 super(new E.Z('MessageQueue')), v(this, 'maxSize', void 0), v(this, 'requests', void 0), v(this, 'analyticsTimeouts', void 0), this.maxSize = e, this.requests = new Map(), this.analyticsTimeouts = new Map();

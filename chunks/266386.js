@@ -1,9 +1,9 @@
 n.d(t, {
   c: function() {
-return a;
+return r;
   }
 });
-let r = (0, n(818083).B)({
+let a = (0, n(818083).B)({
 kind: 'user',
 id: '2024-05_collectibles_hover_preview',
 label: 'Collectibles Hover Preview Experiment',
@@ -18,6 +18,6 @@ treatments: [{
   }
 }]
   }),
-  a = e => r.useExperiment({
+  r = e => a.useExperiment({
 location: e
   }).enabled;

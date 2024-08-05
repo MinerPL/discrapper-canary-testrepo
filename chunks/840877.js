@@ -9,8 +9,8 @@ return d;
 var r = n(664751),
   i = n(544891),
   a = n(710845),
-  o = n(70956),
-  s = n(981631);
+  s = n(70956),
+  o = n(981631);
 
 function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ if (!this.isCanceled)
       var r;
       if (this.query.attempts = (null !== (r = this.query.attempts) && void 0 !== r ? r : 0) + 1, this.query.attempts > 5)
         return;
-      let a = i.body.retry_after * o.Z.Millis.SECOND;
+      let a = i.body.retry_after * s.Z.Millis.SECOND;
       this.retryDelay = isNaN(a) || 0 === a ? 5000 : a, this.retryLater(e, t, n), t(i);
     }
   } catch (e) {
@@ -53,18 +53,18 @@ l(this, 'indexingPollId', void 0), l(this, 'searchId', void 0), l(this, 'searchT
 class c extends u {
   getEndpoint() {
 switch (this.searchType) {
-  case s.aib.DMS:
-    return s.ANM.SEARCH_DMS;
-  case s.aib.FAVORITES:
-    return s.ANM.SEARCH_FAVORITES;
-  case s.aib.GUILD:
+  case o.aib.DMS:
+    return o.ANM.SEARCH_DMS;
+  case o.aib.FAVORITES:
+    return o.ANM.SEARCH_FAVORITES;
+  case o.aib.GUILD:
     if (null == this.searchId || '' === this.searchId)
       return;
-    return s.ANM.SEARCH_GUILD(this.searchId);
-  case s.aib.CHANNEL:
+    return o.ANM.SEARCH_GUILD(this.searchId);
+  case o.aib.CHANNEL:
     if (null == this.searchId || '' === this.searchId)
       return;
-    return s.ANM.SEARCH_CHANNEL(this.searchId);
+    return o.ANM.SEARCH_CHANNEL(this.searchId);
   default:
     throw Error('[SearchFetcher] Unhandled search type: '.concat(this.searchType));
 }
@@ -81,17 +81,17 @@ return null == e ? null : i.tn.get({
 class d extends u {
   getEndpoint() {
 switch (this.searchType) {
-  case s.aib.DMS:
-    return s.ANM.SEARCH_TABS_DMS;
-  case s.aib.GUILD_CHANNEL:
-  case s.aib.GUILD:
+  case o.aib.DMS:
+    return o.ANM.SEARCH_TABS_DMS;
+  case o.aib.GUILD_CHANNEL:
+  case o.aib.GUILD:
     if (null == this.searchId || '' === this.searchId)
       return;
-    return s.ANM.SEARCH_TABS_GUILD(this.searchId);
-  case s.aib.CHANNEL:
+    return o.ANM.SEARCH_TABS_GUILD(this.searchId);
+  case o.aib.CHANNEL:
     if (null == this.searchId || '' === this.searchId)
       return;
-    return s.ANM.SEARCH_TABS_CHANNEL(this.searchId);
+    return o.ANM.SEARCH_TABS_CHANNEL(this.searchId);
   default:
     throw Error('[SearchFetcher] Unhandled search type: '.concat(this.searchType));
 }

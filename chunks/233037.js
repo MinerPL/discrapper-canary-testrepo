@@ -7,11 +7,11 @@ var l = t(735250);
 t(470079);
 var s = t(442837),
   a = t(481060),
-  i = t(984933),
-  r = t(430824),
+  r = t(984933),
+  i = t(430824),
   o = t(496675),
-  u = t(594174),
-  c = t(938475),
+  c = t(594174),
+  u = t(938475),
   d = t(382182),
   m = t(499596),
   E = t(148381),
@@ -23,11 +23,11 @@ function g(e) {
 selectedChannelId: n,
 guildId: t,
 onChangeSelectedChannelId: g
-  } = e, h = (0, s.e7)([u.default], () => u.default.getCurrentUser()), C = (0, s.e7)([
-r.Z,
-i.ZP,
+  } = e, C = (0, s.e7)([c.default], () => c.default.getCurrentUser()), h = (0, s.e7)([
+i.Z,
+r.ZP,
 o.Z
-  ], () => (0, d.h_)(i.ZP.getChannels(t), r.Z, o.Z)), N = (0, s.e7)([c.ZP], () => c.ZP.getVoiceStates(t)), Z = C.map(e => {
+  ], () => (0, d.h_)(r.ZP.getChannels(t), i.Z, o.Z)), N = (0, s.e7)([u.ZP], () => u.ZP.getVoiceStates(t)), Z = h.map(e => {
 var t;
 return {
   name: (0, l.jsx)(m.Z, {
@@ -36,7 +36,7 @@ return {
       let {
         user: n
       } = e;
-      return n.id !== (null == h ? void 0 : h.id);
+      return n.id !== (null == C ? void 0 : C.id);
     }).map(e => {
       let {
         user: n

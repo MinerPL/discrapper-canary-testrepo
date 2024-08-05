@@ -61,7 +61,7 @@ o
     case x.xn:
       return Z.genshinBackgroundImage;
     default:
-      return;
+      return Z.valorantBackgroundImage;
   }
 }, [a]),
 b = l.useCallback(() => {
@@ -178,49 +178,30 @@ children: n
 
 function A(e) {
   let {
-defaultGameId: t,
-children: n
+children: t
   } = e, {
-guilds: r
+guilds: n
   } = (0, f.C3)({
 location: 'GuildsBarClanAdminUpsellPopout',
 includeConverted: !1
-  }), a = r.length > 0, s = l.useCallback(() => {
+  }), r = n.length > 0, a = l.useCallback(() => {
 (0, _.TE)({
   location: p.Z.GUILDS_LIST
 });
-  }, []), o = l.useCallback(() => {
+  }, []), s = l.useCallback(() => {
 (0, _._9)({
   location: p.Z.GUILDS_LIST
 });
-  }, []), [u, d] = l.useMemo(() => {
-switch (t) {
-  case x.xn:
-    return [
-      v.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE,
-      v.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE
-    ];
-  case x.nJ:
-    return [
-      v.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE,
-      v.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE
-    ];
-  default:
-    return [
-      void 0,
-      void 0
-    ];
-}
-  }, [t]);
+  }, []), o = v.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_TITLE, u = v.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE;
   return (0, i.jsx)(T, {
-title: u,
-message: d,
+title: o,
+message: u,
 dismissibleContent: c.z.GUILD_LIST_CLAN_ADMIN_UPSELL,
-defaultGameId: t,
-onClick: o,
-isEligibleForUpsell: a,
-onPopoutVisible: s,
-children: n
+defaultGameId: null,
+onClick: s,
+isEligibleForUpsell: r,
+onPopoutVisible: a,
+children: t
   });
 }
 

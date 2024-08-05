@@ -3,7 +3,7 @@ n.d(t, {
 return a;
   },
   tX: function() {
-return o;
+return s;
   }
 });
 let r = 'undefined' != typeof global ? global : self,
@@ -19,7 +19,7 @@ function r() {
 }
   };
 }
-let o = 'function' == typeof i ? function(e) {
+let s = 'function' == typeof i ? function(e) {
   let t = 1,
 n = new i(e),
 r = document.createTextNode('');

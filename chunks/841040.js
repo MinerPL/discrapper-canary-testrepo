@@ -7,33 +7,33 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(300284),
-  o = n(785717),
-  s = n(981631),
+  s = n(785717),
+  o = n(981631),
   l = n(689938),
   u = n(914338);
 let c = {
-page: s.ZY5.GUILD_CHANNEL,
-section: s.jXE.PROFILE_POPOUT,
-object: s.qAy.EDIT_PER_SERVER_IDENTITY
+page: o.ZY5.GUILD_CHANNEL,
+section: o.jXE.PROFILE_POPOUT,
+object: o.qAy.EDIT_PER_SERVER_IDENTITY
   },
   d = {
-page: s.ZY5.USER_POPOUT,
-section: s.jXE.PROFILE_POPOUT
+page: o.ZY5.USER_POPOUT,
+section: o.jXE.PROFILE_POPOUT
   };
 
 function _(e) {
   let {
 onSelect: t,
 onClose: n,
-guild: s
+guild: o
   } = e, _ = (0, a.Z)({
-guild: s,
+guild: o,
 analyticsLocation: c
   }), E = (0, a.Z)({
 analyticsLocation: d
   }), {
 trackUserProfileAction: f
-  } = (0, o.KZ)();
+  } = (0, s.KZ)();
   return (0, r.jsxs)(i.Menu, {
 className: u.popoutMenu,
 onSelect: t,

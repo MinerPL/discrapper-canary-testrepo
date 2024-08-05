@@ -4,9 +4,9 @@ var i, s = n(735250),
   o = n(120356),
   r = n.n(o),
   l = n(442837),
-  c = n(416568),
-  d = n(914010),
-  u = n(583883),
+  c = n(552062),
+  d = n(416568),
+  u = n(914010),
   h = n(547881),
   p = n(178528),
   f = n(669083),
@@ -52,7 +52,7 @@ return (0, s.jsxs)(a, {
     [E.widget]: !n
   }),
   children: [
-    (0, s.jsx)(c.Z, {
+    (0, s.jsx)(d.Z, {
       isOverlay: !0,
       disableAppDownload: !0,
       isVisible: !t
@@ -66,12 +66,12 @@ super(...e), Z(this, 'onDragStart', e => {
   let {
     dragStart: t
   } = this.props;
-  t(u.B.MOVE, e.clientX, e.clientY);
+  t(c.B.MOVE, e.clientX, e.clientY);
 });
   }
 }
 Z(S, 'defaultProps', {
   contained: !1
-}), t.Z = l.ZP.connectStores([d.Z], () => ({
-  selectedGuildId: d.Z.getGuildId()
+}), t.Z = l.ZP.connectStores([u.Z], () => ({
+  selectedGuildId: u.Z.getGuildId()
 }))(S);

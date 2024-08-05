@@ -11,8 +11,8 @@ return O;
 }), n(47120), n(653041);
 var r, i = n(442837),
   a = n(46973),
-  o = n(570140),
-  s = n(304680),
+  s = n(570140),
+  o = n(304680),
   l = n(131951),
   u = n(594174),
   c = n(981631),
@@ -131,7 +131,7 @@ let n = T(e, t);
 return p.has(n) ? p.get(n) : d.Z.NO_OVERRIDE;
   }
 }
-_(y, 'displayName', 'RTCDebugStore'), t.ZP = new y(o.Z, {
+_(y, 'displayName', 'RTCDebugStore'), t.ZP = new y(s.Z, {
   RTC_DEBUG_MODAL_OPEN: function(e) {
 var t;
 f = null !== (t = e.section) && void 0 !== t ? t : E;
@@ -149,8 +149,8 @@ let {
   index: r
 } = e, i = h[t];
 if (null != n) {
-  let [e, a, o] = f.split(':');
-  if (e === t && parseInt(o) === r && null != u.default.getUser(a)) {
+  let [e, a, s] = f.split(':');
+  if (e === t && parseInt(s) === r && null != u.default.getUser(a)) {
     let {
       rtp: {
         inbound: e
@@ -162,30 +162,30 @@ if (null != n) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
       r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
       i = {};
-    for (let [a, o] of Object.entries(t)) {
+    for (let [a, s] of Object.entries(t)) {
       let t = n[a];
-      if (Array.isArray(o)) {
-        if ('object' == typeof o[0]) {
+      if (Array.isArray(s)) {
+        if ('object' == typeof s[0]) {
           let n = Array.isArray(t) ? t : [],
-            s = i[a] = [];
-          for (let t = 0; t < o.length; t++) {
+            o = i[a] = [];
+          for (let t = 0; t < s.length; t++) {
             let i = n[t],
               a = 'object' == typeof i ? i : {};
-            s.push(e(o[t], a, r));
+            o.push(e(s[t], a, r));
           }
         } else
-          i[a] = o;
-      } else if ('object' == typeof o && null !== o) {
+          i[a] = s;
+      } else if ('object' == typeof s && null !== s) {
         let n = 'object' == typeof t && null !== t ? t : {};
-        i[a] = e(o, n, r);
-      } else if (a in m && 'number' == typeof o) {
+        i[a] = e(s, n, r);
+      } else if (a in m && 'number' == typeof s) {
         let e = i[a] = Array.isArray(t) ? t : [];
         e.push({
-          value: o,
+          value: s,
           time: r
         }), e.length > 600 && e.shift();
       } else
-        i[a] = o;
+        i[a] = s;
     }
     return i;
   }(n, i[r]);
@@ -193,7 +193,7 @@ if (null != n) {
   delete i[r];
   },
   RTC_DEBUG_MODAL_OPEN_REPLAY: function(e) {
-s.gl();
+o.gl();
   },
   RTC_DEBUG_MODAL_OPEN_REPLAY_AT_PATH: function(e) {
 let {
@@ -203,14 +203,14 @@ if (C(), !n.supports(d.AN.CONNECTION_REPLAY) || 0 === t.length)
   return;
 let r = n.createReplayConnection(d.Yn.DEFAULT, t);
 null != r && (N = r, r.on(a.Sh.Video, (e, t, n, i, a) => {
-  o.Z.dispatch({
+  s.Z.dispatch({
     type: 'RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT',
     mediaEngineConnectionId: r.mediaEngineConnectionId,
     userId: e,
     videoSsrc: null != i ? i : 0,
     streamId: null != t ? t : ''
   });
-}), o.Z.wait(() => s.bA()));
+}), s.Z.wait(() => o.bA()));
   },
   RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT: function(e) {
 S = S.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId);
@@ -240,7 +240,7 @@ e.filter(e => {
   } = e;
   return n.context === t;
 }).forEach((e, n) => {
-  o.Z.dispatch({
+  s.Z.dispatch({
     type: 'RTC_DEBUG_MODAL_UPDATE',
     stats: e.stats,
     context: t,

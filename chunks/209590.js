@@ -1,6 +1,6 @@
 let r, i;
 n(724458);
-var a, o, s, l, u = n(442837),
+var a, s, o, l, u = n(442837),
   c = n(433517),
   d = n(570140),
   _ = n(592125),
@@ -25,12 +25,12 @@ var e;
 return !(null === (e = _.Z.getChannel(i)) || void 0 === e ? void 0 : e.isGuildStageVoice()) && !p;
   }
 }
-l = 'PermissionSpeakStore', (s = 'displayName') in(o = I) ? Object.defineProperty(o, s, {
+l = 'PermissionSpeakStore', (o = 'displayName') in(s = I) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[s] = l, t.Z = new I(d.Z, {
+}) : s[o] = l, t.Z = new I(d.Z, {
   CONNECTION_OPEN: function(e) {
 r = e.sessionId, h = !1;
   },

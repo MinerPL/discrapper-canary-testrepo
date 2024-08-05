@@ -1,6 +1,6 @@
 n.d(t, {
   CO: function() {
-return s;
+return o;
   },
   NU: function() {
 return E;
@@ -31,8 +31,8 @@ if (null == e)
 let [n, r] = e.split('/');
 return n === t;
   },
-  o = /\.(png|jpe?g|webp|gif|heic|heif|dng)$/i,
-  s = e => null != e && o.test(e),
+  s = /\.(png|jpe?g|webp|gif|heic|heif|dng)$/i,
+  o = e => null != e && s.test(e),
   l = e => a(e, 'image'),
   u = /\.(webp|gif)$/i,
   c = e => i(e, u),

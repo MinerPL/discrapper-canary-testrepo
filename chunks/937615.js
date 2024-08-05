@@ -3,7 +3,7 @@ n.d(t, {
 return u;
   },
   T4: function() {
-return s;
+return o;
   },
   og: function() {
 return l;
@@ -12,25 +12,25 @@ return l;
 var r = n(221513),
   i = n(706454),
   a = n(474936),
-  o = n(689938);
+  s = n(689938);
 
-function s(e, t, n) {
+function o(e, t, n) {
   var a;
-  let o = null !== (a = null == n ? void 0 : n.localeOverride) && void 0 !== a ? a : i.default.locale;
-  return (0, r.T4)(e, t, o, n);
+  let s = null !== (a = null == n ? void 0 : n.localeOverride) && void 0 !== a ? a : i.default.locale;
+  return (0, r.T4)(e, t, s, n);
 }
 
 function l(e, t, n) {
   if (t === a.rV.YEAR)
-return o.Z.Messages.BILLING_PRICE_PER_YEAR.format({
+return s.Z.Messages.BILLING_PRICE_PER_YEAR.format({
   price: e
 });
   if (t === a.rV.MONTH && 1 === n)
-return o.Z.Messages.BILLING_PRICE_PER_MONTH.format({
+return s.Z.Messages.BILLING_PRICE_PER_MONTH.format({
   price: e
 });
   if (t === a.rV.MONTH && n > 1)
-return o.Z.Messages.BILLING_PRICE_PER_MULTI_MONTHS.format({
+return s.Z.Messages.BILLING_PRICE_PER_MULTI_MONTHS.format({
   price: e,
   intervalCount: n
 });

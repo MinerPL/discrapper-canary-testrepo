@@ -9,12 +9,12 @@ var l = t(735250),
   s = t.n(i),
   r = t(442837),
   u = t(481060),
-  o = t(889161),
-  c = t(430824),
-  d = t(496675),
-  f = t(771845),
-  m = t(594174),
-  h = t(346656),
+  o = t(565138),
+  c = t(889161),
+  d = t(430824),
+  f = t(496675),
+  m = t(771845),
+  h = t(594174),
   g = t(267642),
   p = t(709054),
   N = t(208049),
@@ -52,16 +52,16 @@ value: n,
 className: t,
 onChange: i
   } = e, y = (0, r.cj)([
-f.ZP,
-d.Z,
-m.default,
-c.Z
+m.ZP,
+f.Z,
+h.default,
+d.Z
   ], () => {
 let e = {};
-for (let n of f.ZP.getFlattenedGuildIds()) {
-  let t = c.Z.getGuild(n);
+for (let n of m.ZP.getFlattenedGuildIds()) {
+  let t = d.Z.getGuild(n);
   if (null != t)
-    (0, o.Gw)(t, d.Z, m.default).canCreateExpressions && (e[t.id] = t);
+    (0, c.Gw)(t, f.Z, h.default).canCreateExpressions && (e[t.id] = t);
 }
 return e;
   }), E = (0, r.cj)([_.Z], () => {
@@ -90,12 +90,12 @@ return e;
   y,
   E
 ]),
-b = a.useCallback(e => null == e || '' === e.value ? null : (0, l.jsx)(h.Z, {
+b = a.useCallback(e => null == e || '' === e.value ? null : (0, l.jsx)(o.Z, {
   className: s()(S.guildSelectOptionIcon, {
     [S.disabledOption]: e.disabled
   }),
   guild: y[e.value],
-  size: h.Z.Sizes.SMOL,
+  size: o.Z.Sizes.SMOL,
   active: !0
 }), [y]),
 M = a.useCallback(e => {
@@ -107,13 +107,13 @@ M = a.useCallback(e => {
     availableSlots: E[n]
   });
 }, [E]),
-C = a.useCallback(e => (0, l.jsx)('div', {
+j = a.useCallback(e => (0, l.jsx)('div', {
   className: s()({
     [S.disabledOption]: e.disabled
   }),
   children: e.label
 }), []),
-j = a.useCallback(e => {
+C = a.useCallback(e => {
   !(E[e] <= 0) && i(e);
 }, [
   E,
@@ -125,13 +125,13 @@ I = (() => {
 })();
   return (0, l.jsx)(u.SearchableSelect, {
 className: t,
-onChange: j,
+onChange: C,
 value: I,
 multi: !1,
 options: A,
 renderOptionPrefix: b,
 renderOptionSuffix: M,
-renderOptionLabel: C,
+renderOptionLabel: j,
 placeholder: 0 === A.length ? O.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT_NONE_AVAILABLE : O.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT_PLACEHOLDER
   });
 }

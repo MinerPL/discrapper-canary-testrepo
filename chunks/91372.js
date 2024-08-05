@@ -1,25 +1,25 @@
-var i, a, s, r, l = n(442837),
+var i, s, a, r, l = n(442837),
   o = n(570140);
 let c = 'UPDATE_NOT_AVAILABLE';
 
-function d(e) {
+function u(e) {
   c = e.type;
 }
-class u extends(r = l.ZP.Store) {
+class d extends(r = l.ZP.Store) {
   getState() {
 return c;
   }
 }
-s = 'AutoUpdateStore', (a = 'displayName') in(i = u) ? Object.defineProperty(i, a, {
-  value: s,
+a = 'AutoUpdateStore', (s = 'displayName') in(i = d) ? Object.defineProperty(i, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = s, t.Z = new u(o.Z, {
-  CHECKING_FOR_UPDATES: d,
-  UPDATE_NOT_AVAILABLE: d,
-  UPDATE_AVAILABLE: d,
-  UPDATE_MANUALLY: d,
-  UPDATE_ERROR: d,
-  UPDATE_DOWNLOADED: d
+}) : i[s] = a, t.Z = new d(o.Z, {
+  CHECKING_FOR_UPDATES: u,
+  UPDATE_NOT_AVAILABLE: u,
+  UPDATE_AVAILABLE: u,
+  UPDATE_MANUALLY: u,
+  UPDATE_ERROR: u,
+  UPDATE_DOWNLOADED: u
 });

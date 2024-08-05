@@ -6,16 +6,16 @@ t.Z = o.forwardRef((e, t) => {
   let {
 quest: n,
 percentComplete: o,
-size: i = 42,
-strokeWidth: l = 3,
+size: l = 42,
+strokeWidth: i = 3,
 glowBlur: c = 0.4,
 children: d
-  } = e, u = (0, r.EK)(n, o > 0), p = i / 2, x = i / 2 - l / 2, m = 2 * Math.PI * x, g = m - o * m, C = {
-strokeDasharray: ''.concat(m, ' ').concat(m),
+  } = e, u = (0, r.EK)(n, o > 0), p = l / 2, m = l / 2 - i / 2, x = 2 * Math.PI * m, g = x - o * x, f = {
+strokeDasharray: ''.concat(x, ' ').concat(x),
 strokeDashoffset: g
-  }, f = {
-strokeDasharray: ''.concat(m, ' ').concat(m),
-strokeDashoffset: -o * m
+  }, C = {
+strokeDasharray: ''.concat(x, ' ').concat(x),
+strokeDashoffset: -o * x
   }, _ = {
 boxShadow: '0 0 30px 0px '.concat(u.glow)
   };
@@ -30,8 +30,8 @@ children: [
   }),
   (0, s.jsxs)('svg', {
     className: a.progressBar,
-    height: i,
-    width: i,
+    height: l,
+    width: l,
     children: [
       (0, s.jsxs)('defs', {
         children: [
@@ -81,23 +81,23 @@ children: [
       }),
       (0, s.jsx)('circle', {
         className: a.progress,
-        strokeWidth: l,
+        strokeWidth: i,
         fill: 'transparent',
-        r: x,
+        r: m,
         cx: p,
         cy: p,
         stroke: 'url(#linear)',
-        style: f
+        style: C
       }),
       (0, s.jsx)('circle', {
         className: a.progress,
-        strokeWidth: l,
+        strokeWidth: i,
         fill: 'transparent',
-        r: x,
+        r: m,
         cx: p,
         cy: p,
         stroke: u.foreground,
-        style: C
+        style: f
       })
     ]
   })

@@ -6,13 +6,13 @@ return o;
 return l;
   }
 }), t(411104);
-var n = t(735250),
-  a = t(470079),
+var a = t(735250),
+  n = t(470079),
   r = t(828762);
-let s = a.createContext(void 0);
+let s = n.createContext(void 0);
 
 function o() {
-  let e = a.useContext(s);
+  let e = n.useContext(s);
   if (null == e)
 throw Error('No GuildProductAttachmentManagerContextProvider found');
   return e;
@@ -22,9 +22,9 @@ function l(e) {
   let {
 children: A,
 guildId: t,
-...a
-  } = e, o = (0, r.Z)(t, a);
-  return (0, n.jsx)(s.Provider, {
+...n
+  } = e, o = (0, r.Z)(t, n);
+  return (0, a.jsx)(s.Provider, {
 value: o,
 children: A
   });

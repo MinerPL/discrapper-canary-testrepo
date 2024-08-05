@@ -10,7 +10,7 @@ var r = n(47770),
   i = n(11934),
   a = n(65154);
 
-function o(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -18,7 +18,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let s = 0;
+let o = 0;
 class l extends r.Z {
   destroy() {
 this.destroyed = !0, this.setConnectionState(a.$j.DISCONNECTED), this.emit(i.a.Destroy, this), this.removeAllListeners();
@@ -38,6 +38,6 @@ this.videoStreamParameters = e.filter(e => e.type === a.Tr.TEST).map(e => {
 });
   }
   constructor(e) {
-super(), o(this, 'mediaEngineConnectionId', 'WebRTC-'.concat(s++)), o(this, 'userId', void 0), o(this, 'streamUserId', void 0), o(this, 'destroyed', !1), o(this, 'audioSSRC', 0), o(this, 'videoStreamParameters', []), o(this, 'connectionState', a.$j.CONNECTING), this.userId = e;
+super(), s(this, 'mediaEngineConnectionId', 'WebRTC-'.concat(o++)), s(this, 'userId', void 0), s(this, 'streamUserId', void 0), s(this, 'destroyed', !1), s(this, 'audioSSRC', 0), s(this, 'videoStreamParameters', []), s(this, 'connectionState', a.$j.CONNECTING), this.userId = e;
   }
 }

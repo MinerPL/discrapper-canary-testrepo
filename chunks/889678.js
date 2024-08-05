@@ -1,8 +1,8 @@
 var r = n(706627),
   i = n(885365),
   a = n(67948),
-  o = Math.max,
-  s = Math.min;
+  s = Math.max,
+  o = Math.min;
 e.exports = function(e, t, n) {
   var l, u, c, d, _, E, f = 0,
 h = !1,
@@ -16,7 +16,7 @@ var n = l,
   r = u;
 return l = u = void 0, f = t, d = e.apply(r, n);
   }
-  t = a(t) || 0, r(n) && (h = !!n.leading, c = (p = 'maxWait' in n) ? o(a(n.maxWait) || 0, t) : c, m = 'trailing' in n ? !!n.trailing : m);
+  t = a(t) || 0, r(n) && (h = !!n.leading, c = (p = 'maxWait' in n) ? s(a(n.maxWait) || 0, t) : c, m = 'trailing' in n ? !!n.trailing : m);
 
   function T(e) {
 var n = e - E,
@@ -25,10 +25,10 @@ return void 0 === E || n >= t || n < 0 || p && r >= c;
   }
 
   function g() {
-var e, n, r, a, o = i();
-if (T(o))
-  return S(o);
-_ = setTimeout(g, (n = (e = o) - E, r = e - f, a = t - n, p ? s(a, c - r) : a));
+var e, n, r, a, s = i();
+if (T(s))
+  return S(s);
+_ = setTimeout(g, (n = (e = s) - E, r = e - f, a = t - n, p ? o(a, c - r) : a));
   }
 
   function S(e) {

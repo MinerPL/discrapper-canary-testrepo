@@ -1,6 +1,6 @@
-var r, i, a, o;
+var r, i, a, s;
 
-function s(e, t) {
+function o(e, t) {
   return {
 id: e.id,
 topic: e.topic,
@@ -16,6 +16,6 @@ type: e.type
 }
 n.d(t, {
   b: function() {
-return s;
+return o;
   }
-}), n(47120), (a = r || (r = {}))[a.SOURCE_0 = 0] = 'SOURCE_0', a[a.SOURCE_1 = 1] = 'SOURCE_1', (o = i || (i = {}))[o.UNSET = 0] = 'UNSET', o[o.SOURCE_1 = 1] = 'SOURCE_1', o[o.SOURCE_2 = 2] = 'SOURCE_2';
+}), n(47120), (a = r || (r = {}))[a.SOURCE_0 = 0] = 'SOURCE_0', a[a.SOURCE_1 = 1] = 'SOURCE_1', (s = i || (i = {}))[s.UNSET = 0] = 'UNSET', s[s.SOURCE_1 = 1] = 'SOURCE_1', s[s.SOURCE_2 = 2] = 'SOURCE_2';

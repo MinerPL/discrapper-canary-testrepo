@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(442837),
-  s = n(717881),
+  s = n(442837),
+  o = n(717881),
   l = n(906732),
   u = n(199902),
   c = n(158776),
@@ -24,21 +24,22 @@ function m(e) {
 user: t,
 guild: n,
 channelId: i,
-onClose: m
+className: m,
+onClose: I
   } = e, {
-analyticsLocations: I,
-newestAnalyticsLocation: T
+analyticsLocations: T,
+newestAnalyticsLocation: g
   } = (0, l.ZP)(), {
-trackUserProfileAction: g,
-...S
-  } = (0, _.KZ)(), A = (0, o.e7)([d.default], () => d.default.getCurrentUser()), {
-messageCtaEnabled: N
+trackUserProfileAction: S,
+...A
+  } = (0, _.KZ)(), N = (0, s.e7)([d.default], () => d.default.getCurrentUser()), {
+messageCtaEnabled: v
   } = (0, f.l)({
 location: 'BiteSizeProfileActivitySection'
   }), {
-isApplicationStreaming: v,
-activity: O
-  } = (0, o.cj)([
+isApplicationStreaming: O,
+activity: R
+  } = (0, s.cj)([
 u.Z,
 c.Z
   ], () => {
@@ -58,30 +59,30 @@ return {
   })
 };
   });
-  return (0, r.jsx)(s.Z, {
-type: s.P.BITE_SIZE_POPOUT,
-activity: O,
-className: p.activity,
-source: T,
+  return (0, r.jsx)(o.Z, {
+type: o.P.BITE_SIZE_POPOUT,
+activity: R,
+className: a()(p.activity, m),
+source: g,
 user: t,
 guildId: null == n ? void 0 : n.id,
 channelId: i,
-onGameProfileOpened: m,
+onClose: I,
 onAction: () => {
-  g({
+  S({
     action: 'JOIN_ACTIVITY'
   }), (0, E.Ac)({
-    activityType: v ? h.IIU.STREAMING : null == O ? void 0 : O.type,
-    activityName: null == O ? void 0 : O.name,
-    activityPlatform: null == O ? void 0 : O.platform,
-    activitySessionId: null == O ? void 0 : O.session_id,
-    applicationId: null == O ? void 0 : O.application_id,
-    analyticsLocations: I,
-    ...S
-  }), null == m || m();
+    activityType: O ? h.IIU.STREAMING : null == R ? void 0 : R.type,
+    activityName: null == R ? void 0 : R.name,
+    activityPlatform: null == R ? void 0 : R.platform,
+    activitySessionId: null == R ? void 0 : R.session_id,
+    applicationId: null == R ? void 0 : R.application_id,
+    analyticsLocations: T,
+    ...A
+  }), null == I || I();
 },
-showActions: t.id !== (null == A ? void 0 : A.id),
-actionColor: a()(p.buttonColor, N ? p.engagementExpButtonColor : void 0),
+showActions: t.id !== (null == N ? void 0 : N.id),
+actionColor: a()(p.buttonColor, v ? p.engagementExpButtonColor : void 0),
 showChannelDetails: !0
   });
 }

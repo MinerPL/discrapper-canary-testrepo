@@ -10,12 +10,12 @@ var t = n(120356),
   a = n(442837),
   l = n(481060),
   s = n(666188),
-  c = n(623624),
-  d = n(290034),
-  u = n(271383),
-  _ = n(594174),
-  g = n(940627),
-  E = n(705600),
+  c = n(372769),
+  d = n(523751),
+  u = n(623624),
+  _ = n(290034),
+  g = n(271383),
+  E = n(594174),
   f = n(267642),
   T = n(981631),
   N = n(689938),
@@ -27,19 +27,19 @@ guild: i,
 isBannerVisible: n,
 disableBoostClick: t
   } = e, r = (0, a.e7)([
-_.default,
-u.ZP
+E.default,
+g.ZP
   ], () => {
-let e = _.default.getCurrentUser();
-return u.ZP.isMember(i.id, null == e ? void 0 : e.id);
+let e = E.default.getCurrentUser();
+return g.ZP.isMember(i.id, null == e ? void 0 : e.id);
   }), {
 premiumTier: s,
-premiumSubscriberCount: g
+premiumSubscriberCount: c
   } = i;
-  if (0 === g && s === T.Eu4.NONE)
+  if (0 === c && s === T.Eu4.NONE)
 return null;
-  let E = e => {
-  e.stopPropagation(), e.preventDefault(), r && !t && (0, c.f)({
+  let d = e => {
+  e.stopPropagation(), e.preventDefault(), r && !t && (0, u.f)({
     guildId: i.id,
     location: {
       section: T.jXE.GUILD_HEADER,
@@ -56,7 +56,7 @@ p = (0, o.jsxs)(o.Fragment, {
     }),
     (0, o.jsx)('div', {
       children: N.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SUBSCRIBER_COUNT_TOOLTIP.format({
-        subscriberCount: g
+        subscriberCount: c
       })
     })
   ]
@@ -70,8 +70,8 @@ children: (0, o.jsx)(l.Tooltip, {
   children: e => (0, o.jsx)(l.Clickable, {
     ...e,
     className: I.__invalid_premiumGuildIcon,
-    onClick: E,
-    children: (0, o.jsx)(d.Z, {
+    onClick: d,
+    children: (0, o.jsx)(_.Z, {
       premiumTier: s,
       iconBackgroundClassName: n ? I.boostedGuildTierIconBackgroundWithVisibleBanner : null,
       iconClassName: n && s !== T.Eu4.TIER_3 ? I.boostedGuildTierMutedIconWithVisibleBanner : null
@@ -89,7 +89,7 @@ disableBoostClick: t
   } = e;
   return (0, s.Z)(i) ? (0, o.jsx)('div', {
 className: I.guildIconV2Container,
-children: (0, o.jsx)(E.Z, {
+children: (0, o.jsx)(d.Z, {
   guild: i,
   tooltipPosition: 'bottom',
   tooltipColor: l.Tooltip.Colors.PRIMARY,
@@ -100,7 +100,7 @@ children: (0, o.jsx)(E.Z, {
 })
   }) : (0, o.jsx)('div', {
 className: I.guildIconContainer,
-children: (0, o.jsx)(g.Z, {
+children: (0, o.jsx)(c.Z, {
   guild: i,
   tooltipPosition: 'bottom',
   tooltipColor: l.Tooltip.Colors.PRIMARY,

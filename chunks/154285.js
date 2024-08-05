@@ -9,8 +9,8 @@ return d;
 var r = n(149765),
   i = n(442837),
   a = n(818083),
-  o = n(430824),
-  s = n(496675),
+  s = n(430824),
+  o = n(496675),
   l = n(676770);
 let u = (0, a.B)({
 kind: 'guild',
@@ -66,8 +66,8 @@ treatments: [{
   });
 
 function d(e) {
-  let t = (0, i.e7)([o.Z], () => o.Z.getGuild(e)),
-n = (0, i.e7)([s.Z], () => null != t && r.Db(s.Z.computePermissions(t), l.cv)),
+  let t = (0, i.e7)([s.Z], () => s.Z.getGuild(e)),
+n = (0, i.e7)([o.Z], () => null != t && r.Db(o.Z.computePermissions(t), l.cv)),
 a = u.useExperiment({
   guildId: e,
   location: 'c3fae3_1'
@@ -89,8 +89,8 @@ alsoShowMemberSafety: a.alsoShowMemberSafety || d.alsoShowMemberSafety
 }
 
 function _(e) {
-  let t = o.Z.getGuild(e),
-n = null != t && r.Db(s.Z.computePermissions(t), l.cv),
+  let t = s.Z.getGuild(e),
+n = null != t && r.Db(o.Z.computePermissions(t), l.cv),
 i = u.getCurrentConfig({
   guildId: e,
   location: 'c3fae3_3'

@@ -1,11 +1,11 @@
 n.d(t, {
   Z: function() {
-return s;
+return a;
   }
 });
 var i = n(735250);
 
-function s(e) {
+function a(e) {
   let {
 color: t = 'currentColor',
 ...n

@@ -4,12 +4,12 @@ n.d(t, {
 return u;
   },
   J: function() {
-return o;
+return s;
   }
 });
 let i = Symbol.for('react-aria.i18n.locale'),
   a = Symbol.for('react-aria.i18n.strings');
-class o {
+class s {
   getStringForLocale(e, t) {
 let n = this.getStringsForLocale(t)[e];
 if (!n)
@@ -41,7 +41,7 @@ if (void 0 === r) {
   if (!e)
     return null;
   for (let n in (r = {}, e))
-    r[n] = new o({
+    r[n] = new s({
       [t]: e[n]
     }, t);
 }
@@ -56,7 +56,7 @@ this.strings = {
 }, this.defaultLocale = t;
   }
 }
-let s = new Map(),
+let o = new Map(),
   l = new Map();
 class u {
   format(e, t) {
@@ -68,10 +68,10 @@ let r = t['=' + e];
 if (r)
   return 'function' == typeof r ? r() : r;
 let i = this.locale + ':' + n,
-  a = s.get(i);
+  a = o.get(i);
 return !a && (a = new Intl.PluralRules(this.locale, {
   type: n
-}), s.set(i, a)), 'function' == typeof(r = t[a.select(e)] || t.other) ? r() : r;
+}), o.set(i, a)), 'function' == typeof(r = t[a.select(e)] || t.other) ? r() : r;
   }
   number(e) {
 let t = l.get(this.locale);

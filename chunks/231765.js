@@ -17,25 +17,25 @@ var n, a, i, r, o = s(735250),
   C = s(57562),
   m = s(955204),
   A = s(64078),
-  h = s(351780),
-  g = s(954794),
+  g = s(351780),
+  h = s(954794),
   O = s(112843),
   p = s(524484),
   R = s(981631),
   x = s(689938),
   M = s(370599);
-let D = {
+let f = {
 enabled: !0,
 combosEnabled: !0,
 screenshakeEnabled: !1,
 confettiEnabled: !1
   },
-  f = (0, c.range)(0, 11),
+  D = (0, c.range)(0, 11),
   P = (0, c.range)(0, 2.25, 0.25),
   L = (0, c.range)(1, 11),
-  Z = (0, c.range)(1, 26);
+  b = (0, c.range)(1, 26);
 (i = n || (n = {}))[i.CONFETTI = 0] = 'CONFETTI', i[i.SHAKE = 1] = 'SHAKE', (r = a || (a = {}))[r.USER_SETTINGS = 0] = 'USER_SETTINGS', r[r.ACHIEVEMENT_LIST = 1] = 'ACHIEVEMENT_LIST';
-let b = () => [{
+let Z = () => [{
   location: p.Hn.CHAT_INPUT,
   title: x.Z.Messages.POGGERMODE_CONFETTI_LOCATION_CHAT_INPUT_ENABLED,
   description: x.Z.Messages.POGGERMODE_CONFETTI_LOCATION_CHAT_INPUT_ENABLED_DESCRIPTION
@@ -127,7 +127,7 @@ onChange: e => {
     header: a ? x.Z.Messages.POGGERMODE_WARNING_TITLE_REDUCED_MOTION : x.Z.Messages.POGGERMODE_WARNING_TITLE,
     confirmText: x.Z.Messages.ENABLE,
     cancelText: x.Z.Messages.CANCEL,
-    onConfirm: () => n(a ? D : {
+    onConfirm: () => n(a ? f : {
       enabled: !0,
       warningSeen: !0
     }),
@@ -200,10 +200,10 @@ children: [
       }),
       (0, o.jsx)(E.Slider, {
         disabled: l,
-        markers: Z,
+        markers: b,
         stickToMarkers: !0,
-        minValue: Z[0],
-        maxValue: Z[Z.length - 1],
+        minValue: b[0],
+        maxValue: b[b.length - 1],
         initialValue: a,
         onValueChange: e => r({
           confettiSize: e
@@ -214,7 +214,7 @@ children: [
   }),
   (0, o.jsx)(j, {
     disabled: l,
-    locations: b(),
+    locations: Z(),
     settingsLocations: i,
     onChange: e => r({
       confettiEnabledLocations: e
@@ -266,10 +266,10 @@ children: [
       }),
       (0, o.jsx)(E.Slider, {
         disabled: r,
-        markers: f,
+        markers: D,
         stickToMarkers: !0,
-        minValue: f[0],
-        maxValue: f[f.length - 1],
+        minValue: D[0],
+        maxValue: D[D.length - 1],
         initialValue: a,
         onValueChange: e => i({
           combosRequiredCount: e
@@ -433,7 +433,7 @@ function k(e) {
   let {
 onChangePage: t,
 setShowEnableAnimation: s
-  } = e, n = (0, d.cj)([h.Z], () => h.Z.getState()), [a, i] = l.useState({
+  } = e, n = (0, d.cj)([g.Z], () => g.Z.getState()), [a, i] = l.useState({
 x: 0,
 y: 0
   }), r = (0, O.Z)();
@@ -515,7 +515,7 @@ switch (e) {
       setShowEnableAnimation: s
     });
   case 1:
-    return (0, o.jsx)(g.Z, {
+    return (0, o.jsx)(h.Z, {
       onBackClick: n(0)
     });
   default:

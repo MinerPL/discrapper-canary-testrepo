@@ -7,7 +7,7 @@ var r = n(47770),
   i = n(46973),
   a = n(65154);
 
-function o(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -16,7 +16,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 
-function s(e) {
+function o(e) {
   return null;
 }
 
@@ -154,7 +154,11 @@ e([]);
   getMLSSigningKey(e, t) {
 return Promise.reject(Error('NOT_IMPLEMENTED'));
   }
+  setSidechainCompression(e) {}
+  setNativeDesktopVideoSourcePickerActive(e) {}
+  presentNativeScreenSharePicker(e) {}
+  releaseNativeDesktopVideoSourcePickerStream() {}
   constructor(...e) {
-super(...e), o(this, 'Video', s), o(this, 'Camera', l);
+super(...e), s(this, 'Video', o), s(this, 'Camera', l);
   }
 }

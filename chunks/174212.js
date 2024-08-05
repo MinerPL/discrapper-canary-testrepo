@@ -1,5 +1,5 @@
 n(47120);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(367907),
   c = n(998698),
@@ -42,7 +42,7 @@ function I(e, t) {
 r = E.get(e);
   return null != r && (t !== r.commandId || n !== r.optionName) && (null != t && t !== r.commandId && (r.optionNameToLastResults.clear(), r.optionNameToNonce.clear(), r.optionNameToLastQuery.clear(), r.optionNameToAutocompleteQueries.clear()), r.lastErrored = !1, r.commandId = t, r.optionName = n, !0);
 }
-class T extends(r = s.ZP.Store) {
+class T extends(r = o.ZP.Store) {
   initialize() {
 this.waitFor(c.Z);
   }
@@ -60,12 +60,12 @@ return h(e).optionNameToLastResults.get(t);
 return h(e).lastResponseNonce;
   }
 }
-o = 'ApplicationCommandAutocompleteStore', (a = 'displayName') in(i = T) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'ApplicationCommandAutocompleteStore', (a = 'displayName') in(i = T) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new T(l.Z, {
+}) : i[a] = s, t.Z = new T(l.Z, {
   CONNECTION_OPEN: p,
   LOGOUT: p,
   CHANNEL_SELECT: p,
@@ -76,20 +76,20 @@ let {
   channelId: r,
   query: i,
   name: a
-} = e, o = h(r);
-if (o.optionNameToLastQuery.get(a) === i)
+} = e, s = h(r);
+if (s.optionNameToLastQuery.get(a) === i)
   return !1;
-o.optionNameToLastQuery.set(a, i);
-let s = null === (t = o.optionNameToAutocompleteQueries.get(a)) || void 0 === t ? void 0 : t.get(i);
-if (null != s)
-  return o.lastErrored = !1, o.optionNameToLastResults.set(a, s), !0;
-let l = o.optionNameToNonce.get(a);
+s.optionNameToLastQuery.set(a, i);
+let o = null === (t = s.optionNameToAutocompleteQueries.get(a)) || void 0 === t ? void 0 : t.get(i);
+if (null != o)
+  return s.lastErrored = !1, s.optionNameToLastResults.set(a, o), !0;
+let l = s.optionNameToNonce.get(a);
 if (null != l && _.delete(l), _.set(n, {
     channelId: r,
     query: i,
     name: a
-  }), f.set(n, new Date()), o.optionNameToNonce.set(a, n), o.lastErrored)
-  return o.lastErrored = !1, !0;
+  }), f.set(n, new Date()), s.optionNameToNonce.set(a, n), s.lastErrored)
+  return s.lastErrored = !1, !0;
   },
   APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE: function(e) {
 var t, n;
@@ -100,22 +100,22 @@ let {
 if (null == a)
   return !1;
 _.delete(i);
-let o = null !== (n = null == r ? void 0 : r.map(e => {
+let s = null !== (n = null == r ? void 0 : r.map(e => {
     var t;
     return {
       ...e,
       displayName: null !== (t = e.name_localized) && void 0 !== t ? t : e.name
     };
   })) && void 0 !== n ? n : [],
-  s = f.get(i),
-  l = null != s ? new Date().getTime() - s.getTime() : 0;
+  o = f.get(i),
+  l = null != o ? new Date().getTime() - o.getTime() : 0;
 (0, u.yw)(d.rMx.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, {
   duration_ms: l,
   error: !1,
-  num_options: o.length
+  num_options: s.length
 }), f.delete(i);
 let c = h(a.channelId);
-return null == c.optionNameToAutocompleteQueries.get(a.name) && c.optionNameToAutocompleteQueries.set(a.name, new Map()), null === (t = c.optionNameToAutocompleteQueries.get(a.name)) || void 0 === t || t.set(a.query, o), c.optionNameToLastQuery.get(a.name) === a.query && (c.lastErrored = !1, c.optionNameToLastResults.set(a.name, o)), c.lastResponseNonce = i, !0;
+return null == c.optionNameToAutocompleteQueries.get(a.name) && c.optionNameToAutocompleteQueries.set(a.name, new Map()), null === (t = c.optionNameToAutocompleteQueries.get(a.name)) || void 0 === t || t.set(a.query, s), c.optionNameToLastQuery.get(a.name) === a.query && (c.lastErrored = !1, c.optionNameToLastResults.set(a.name, s)), c.lastResponseNonce = i, !0;
   },
   INTERACTION_FAILURE: function(e) {
 let {

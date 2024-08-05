@@ -15,18 +15,18 @@ return c;
 var r = n(735250),
   i = n(470079),
   a = n(836560),
-  o = n(585483);
-class s {
+  s = n(585483);
+class o {
   subscribe(e, t) {
-o.S.subscribe(e, t), this.emitter.on(e, t);
+s.S.subscribe(e, t), this.emitter.on(e, t);
   }
   unsubscribe(e, t) {
-o.S.unsubscribe(e, t), this.emitter.off(e, t);
+s.S.unsubscribe(e, t), this.emitter.off(e, t);
   }
   bumpDispatchPriority() {
 for (let e of this.emitter.eventNames())
   for (let t of this.emitter.listeners(e))
-    o.S.resubscribe(e, t);
+    s.S.resubscribe(e, t);
   }
   constructor() {
 var e, t, n;
@@ -40,10 +40,10 @@ e = this, t = 'emitter', n = new a.EventEmitter(), t in e ? Object.definePropert
 }
 let l = i.createContext(new class e {
 subscribe(e, t) {
-  o.S.subscribe(e, t);
+  s.S.subscribe(e, t);
 }
 unsubscribe(e, t) {
-  o.S.unsubscribe(e, t);
+  s.S.unsubscribe(e, t);
 }
 bumpDispatchPriority() {}
   }()),
@@ -52,11 +52,11 @@ let {
   children: n
 } = e, a = i.useRef(null);
 
-function o() {
-  return null === a.current && (a.current = new s()), a.current;
+function s() {
+  return null === a.current && (a.current = new o()), a.current;
 }
-return i.useImperativeHandle(t, o), (0, r.jsx)(l.Provider, {
-  value: o(),
+return i.useImperativeHandle(t, s), (0, r.jsx)(l.Provider, {
+  value: s(),
   children: n
 });
   });
@@ -69,9 +69,9 @@ handler: n
   i.useEffect(() => {
 a.current = n;
   }, [n]);
-  let o = null == n;
+  let s = null == n;
   return i.useEffect(() => {
-if (o)
+if (s)
   return;
 let e = function() {
   for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++)
@@ -84,7 +84,7 @@ return r.subscribe(t, e), () => {
   }, [
 r,
 t,
-o
+s
   ]), null;
 }
 

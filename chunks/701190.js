@@ -1,5 +1,5 @@
 n(789020);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(264229),
   c = n(981631);
@@ -33,7 +33,7 @@ function h(e) {
 t.state = 'banned' in e && e.banned ? c.r2o.BANNED : c.r2o.EXPIRED;
   });
 }
-class p extends(r = s.ZP.Store) {
+class p extends(r = o.ZP.Store) {
   getInvite(e) {
 return d[e];
   }
@@ -47,12 +47,12 @@ return d;
 return E[e];
   }
 }
-o = 'InviteStore', (a = 'displayName') in(i = p) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'InviteStore', (a = 'displayName') in(i = p) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new p(l.Z, {
+}) : i[a] = s, t.Z = new p(l.Z, {
   INVITE_RESOLVE: function(e) {
 let {
   code: t

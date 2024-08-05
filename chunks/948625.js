@@ -1,125 +1,125 @@
 n.d(t, {
   E8: function() {
-return R;
+return A;
   },
   yc: function() {
-return k;
+return P;
   }
 });
-var r = n(180650),
-  s = n(44315),
+var s = n(180650),
+  r = n(44315),
   a = n(981631),
   o = n(689938),
   i = n(994745),
-  l = n(341364),
-  c = n(763542),
+  c = n(341364),
+  l = n(763542),
   d = n(354873),
   u = n(525071),
-  p = n(737140),
-  g = n(194349),
-  f = n(523569),
+  f = n(737140),
+  p = n(194349),
+  g = n(523569),
   C = n(55817),
-  m = n(696228),
-  h = n(202796),
-  _ = n(570593),
-  b = n(199546),
+  _ = n(696228),
+  m = n(202796),
+  b = n(570593),
+  h = n(199546),
   x = n(613540),
-  I = n(769411),
-  E = n(125257),
-  L = n(6412),
-  S = n(238286);
-let v = () => o.Z.Messages.LIMITED_TIME,
+  E = n(769411),
+  I = n(125257),
+  v = n(6412),
+  L = n(238286);
+let S = () => o.Z.Messages.LIMITED_TIME,
   T = () => o.Z.Messages.MOST_POPULAR,
   N = () => o.Z.Messages.APPLICATION_STORE_NEW_RELEASE,
   O = () => o.Z.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
-  j = () => o.Z.Messages.TAKE_ME_THERE,
-  Z = [{
+  k = () => o.Z.Messages.TAKE_ME_THERE,
+  j = [{
   id: 'category_tide',
-  backgroundStaticSrc: S,
-  overflowSrcStatic: L,
-  logoSrc: E,
-  textColor: (0, s.Lq)(a.Ilk.WHITE_100),
+  backgroundStaticSrc: L,
+  overflowSrcStatic: v,
+  logoSrc: I,
+  textColor: (0, r.Lq)(a.Ilk.WHITE_100),
   badge: {
-    label: v
+    label: S
   },
   cta: {
-    label: j,
-    categorySkuId: r.T.TIDE
+    label: k,
+    categorySkuId: s.T.TIDE
   }
 },
 {
   id: 'category_anime',
-  backgroundStaticSrc: p,
+  backgroundStaticSrc: f,
   backgroundVideoSrc: i,
   overflowSrcStatic: u,
   overflowSrcAnimatedBackground: d,
-  overflowSrcAnimated: c,
-  logoSrc: l,
-  textColor: (0, s.Lq)(a.Ilk.BLACK_500),
+  overflowSrcAnimated: l,
+  logoSrc: c,
+  textColor: (0, r.Lq)(a.Ilk.BLACK_500),
   badge: {
     label: T
   },
   cta: {
-    label: j,
-    categorySkuId: r.T.ANIME_V2
+    label: k,
+    categorySkuId: s.T.ANIME_V2
   }
 },
 {
   id: 'category_galaxy',
-  backgroundStaticSrc: I,
-  backgroundVideoSrc: b,
+  backgroundStaticSrc: E,
+  backgroundVideoSrc: h,
   logoSrc: x,
-  textColor: (0, s.Lq)(a.Ilk.WHITE_100),
+  textColor: (0, r.Lq)(a.Ilk.WHITE_100),
   badge: {
     label: N
   },
   cta: {
-    label: j,
-    categorySkuId: r.T.GALAXY
+    label: k,
+    categorySkuId: s.T.GALAXY
   }
 },
 {
   id: 'category_disxcore',
-  backgroundStaticSrc: _,
-  overflowSrcStatic: h,
-  logoSrc: m,
-  textColor: (0, s.Lq)(a.Ilk.WHITE_100),
+  backgroundStaticSrc: b,
+  overflowSrcStatic: m,
+  logoSrc: _,
+  textColor: (0, r.Lq)(a.Ilk.WHITE_100),
   badge: {
     label: O
   },
   cta: {
-    label: j,
-    categorySkuId: r.T.DISXCORE
+    label: k,
+    categorySkuId: s.T.DISXCORE
   }
 },
 {
   id: 'category_cyberpunk',
   backgroundStaticSrc: C,
-  backgroundVideoSrc: g,
-  logoSrc: f,
-  textColor: (0, s.Lq)(a.Ilk.WHITE_100),
+  backgroundVideoSrc: p,
+  logoSrc: g,
+  textColor: (0, r.Lq)(a.Ilk.WHITE_100),
   badge: {
     label: T
   },
   cta: {
-    label: j,
-    categorySkuId: r.T.CYBERPUNK
+    label: k,
+    categorySkuId: s.T.CYBERPUNK
   }
 }
   ],
-  k = e => Z.filter(t => {
+  P = e => j.filter(t => {
 var n;
-let r = null === (n = t.cta) || void 0 === n ? void 0 : n.categorySkuId;
-return null == r || null != e[r];
+let s = null === (n = t.cta) || void 0 === n ? void 0 : n.categorySkuId;
+return null == s || null != e[s];
   }),
-  R = (e, t) => {
+  A = (e, t) => {
 let {
   overflowSrcStatic: n,
-  overflowSrcAnimated: r,
-  overflowSrcAnimatedBackground: s
+  overflowSrcAnimated: s,
+  overflowSrcAnimatedBackground: r
 } = e;
-return null == n ? [] : t || null == r ? [n] : null == s ? [r] : [
-  s,
-  r
+return null == n ? [] : t || null == s ? [n] : null == r ? [s] : [
+  r,
+  s
 ];
   };

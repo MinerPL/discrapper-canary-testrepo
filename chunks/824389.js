@@ -6,56 +6,56 @@ return u;
 return d;
   },
   mh: function() {
-return s;
+return a;
   },
   p9: function() {
 return c;
   },
   uV: function() {
-return a;
+return s;
   }
 });
-var i = t(544891),
-  r = t(881052),
+var r = t(544891),
+  i = t(881052),
   o = t(73346),
   l = t(981631);
 let u = async (e, n, t) => {
   let {
 priceTier: o,
 imageName: u,
-createNewRole: s,
-unlinkRole: a,
+createNewRole: a,
+unlinkRole: s,
 ...c
   } = t;
   try {
-return (await i.tn.patch({
+return (await r.tn.patch({
   url: l.ANM.GUILD_PRODUCT_LISTINGS(e, n),
   body: {
     ...c,
     image_name: u,
     price_tier: o,
-    create_new_role: s,
-    unlink_role: a
+    create_new_role: a,
+    unlink_role: s
   }
 })).body;
   } catch (e) {
-throw new r.Hx(e);
+throw new i.Hx(e);
   }
-}, s = async (e, n) => {
+}, a = async (e, n) => {
   try {
-await i.tn.del({
+await r.tn.del({
   url: l.ANM.GUILD_PRODUCT_LISTINGS(e, n)
 });
   } catch (e) {
-throw new r.Hx(e);
+throw new i.Hx(e);
   }
-}, a = async e => {
+}, s = async e => {
   try {
 return (await (0, o.Kb)({
   url: l.ANM.GUILD_PRODUCT_LISTINGS(e)
 })).body.listings;
   } catch (e) {
-throw new r.Hx(e);
+throw new i.Hx(e);
   }
 }, c = async (e, n) => {
   try {
@@ -63,7 +63,7 @@ return (await (0, o.Kb)({
   url: l.ANM.GUILD_PRODUCT_LISTINGS(e, n)
 })).body;
   } catch (e) {
-throw new r.Hx(e);
+throw new i.Hx(e);
   }
 }, d = async e => {
   let {
@@ -72,10 +72,10 @@ productId: t,
 attachmentId: o
   } = e;
   try {
-return (await i.tn.post({
+return (await r.tn.post({
   url: l.ANM.GUILD_PRODUCT_ATTACHMENT_DOWNLOAD(n, t, o)
 })).body;
   } catch (e) {
-throw new r.Hx(e);
+throw new i.Hx(e);
   }
 };

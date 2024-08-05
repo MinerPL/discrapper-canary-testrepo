@@ -6,8 +6,8 @@ return _;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  o = n(481060),
   l = n(454585),
   u = n(572004),
   c = n(689938),
@@ -27,13 +27,13 @@ element: {
   return _ ? (0, r.jsxs)('div', {
 className: d.container,
 children: [
-  (0, r.jsx)(s.Heading, {
+  (0, r.jsx)(o.Heading, {
     variant: 'heading-sm/semibold',
     color: 'header-secondary',
     className: d.header,
     children: t
   }),
-  (0, r.jsx)(s.Text, {
+  (0, r.jsx)(o.Text, {
     variant: 'text-sm/normal',
     className: d.bodyText,
     children: h.current(n)
@@ -41,23 +41,23 @@ children: [
   (0, r.jsx)('div', {
     className: d.__invalid_smsInfoContainer,
     children: (0, r.jsxs)('div', {
-      className: o()(d.smsNumberContainer, {
+      className: s()(d.smsNumberContainer, {
         [d.copied]: E
       }),
       children: [
-        (0, r.jsx)(s.Text, {
+        (0, r.jsx)(o.Text, {
           variant: 'text-md/normal',
           selectable: !0,
           className: d.smsNumberText,
           children: a
         }),
-        (0, r.jsx)(s.Button, {
-          size: s.Button.Sizes.SMALL,
+        (0, r.jsx)(o.Button, {
+          size: o.Button.Sizes.SMALL,
           className: d.__invalid_trailingButton,
           onClick: () => {
             (0, u.JG)(a) && f(!0);
           },
-          color: s.Button.Colors.PRIMARY,
+          color: o.Button.Colors.PRIMARY,
           children: E ? c.Z.Messages.COPIED : c.Z.Messages.COPY
         })
       ]

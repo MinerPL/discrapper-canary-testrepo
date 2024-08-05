@@ -1,5 +1,5 @@
 n(47120), n(653041), n(536091);
-var r, i, a, o, s, l, u = n(392711),
+var r, i, a, s, o, l, u = n(392711),
   c = n.n(u),
   d = n(442837),
   _ = n(570140),
@@ -106,12 +106,12 @@ return D;
 return 2 === R && 2 === O;
   }
 }
-l = 'SoundboardStore', (s = 'displayName') in(o = P) ? Object.defineProperty(o, s, {
+l = 'SoundboardStore', (o = 'displayName') in(s = P) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[s] = l, t.Z = new P(_.Z, {
+}) : s[o] = l, t.Z = new P(_.Z, {
   LOGOUT: function() {
 A.clear(), N.clear(), y.clear(), D = !1, R = 0, O = 0;
   },
@@ -132,16 +132,16 @@ var t, n, r;
 let {
   soundId: i,
   userId: a
-} = e, o = (null !== (n = N.get(i)) && void 0 !== n ? n : 0) + 1, s = (null !== (r = y.get(a)) && void 0 !== r ? r : 0) + 1;
-N.set(i, o), y.set(a, s), a !== (null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && (D = !0);
+} = e, s = (null !== (n = N.get(i)) && void 0 !== n ? n : 0) + 1, o = (null !== (r = y.get(a)) && void 0 !== r ? r : 0) + 1;
+N.set(i, s), y.set(a, o), a !== (null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && (D = !0);
   },
   GUILD_SOUNDBOARD_SOUND_PLAY_END: function(e) {
 var t, n;
 let {
   soundId: r,
   userId: i
-} = e, a = (null !== (t = N.get(r)) && void 0 !== t ? t : 0) - 1, o = (null !== (n = y.get(i)) && void 0 !== n ? n : 0) - 1;
-a <= 0 ? N.delete(r) : N.set(r, a), o <= 0 ? y.delete(i) : y.set(i, o);
+} = e, a = (null !== (t = N.get(r)) && void 0 !== t ? t : 0) - 1, s = (null !== (n = y.get(i)) && void 0 !== n ? n : 0) - 1;
+a <= 0 ? N.delete(r) : N.set(r, a), s <= 0 ? y.delete(i) : y.set(i, s);
   },
   USER_SOUNDBOARD_SET_VOLUME: function(e) {
 let {

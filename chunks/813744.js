@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
   a = n(481060),
-  o = n(857192),
-  s = n(517100),
+  s = n(857192),
+  o = n(517100),
   l = n(594174),
   u = n(153850),
   c = n(231338),
@@ -16,14 +16,14 @@ var i = n(442837),
 
 function _() {
   var e;
-  let t = (0, i.e7)([o.default], () => o.default.isIdleStatusIndicatorEnabled),
+  let t = (0, i.e7)([s.default], () => s.default.isIdleStatusIndicatorEnabled),
 n = (0, i.e7)([l.default], () => {
   var e, t;
   return null !== (t = null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t;
 }),
-[_, E] = (0, i.Wu)([s.Z], () => [
-  s.Z.isIdle(),
-  s.Z.isAFK()
+[_, E] = (0, i.Wu)([o.Z], () => [
+  o.Z.isIdle(),
+  o.Z.isAFK()
 ]),
 f = [];
   return !_ && !E && f.push('ACTIVE'), _ && f.push('IDLE'), E && f.push('AFK'), n && t ? (0, r.jsx)(u.ZP, {
@@ -55,7 +55,7 @@ children: (0, r.jsxs)('div', {
       children: [
         'Idle since:',
         ' ',
-        new Date(null !== (e = s.Z.getIdleSince()) && void 0 !== e ? e : 0).toLocaleDateString(void 0, {
+        new Date(null !== (e = o.Z.getIdleSince()) && void 0 !== e ? e : 0).toLocaleDateString(void 0, {
           year: 'numeric',
           day: 'numeric',
           month: 'numeric',

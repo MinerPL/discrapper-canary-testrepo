@@ -3,7 +3,7 @@ n.d(e, {
 return d;
   },
   Zd: function() {
-return p;
+return f;
   },
   yD: function() {
 return E;
@@ -16,8 +16,8 @@ var r = n(213919),
   o = n(710845),
   a = n(314897),
   c = n(726745),
-  _ = n(981631);
-let s = new o.Z('MultiAccountActionCreators');
+  s = n(981631);
+let _ = new o.Z('MultiAccountActionCreators');
 
 function d() {
   let t = a.default.getId();
@@ -39,7 +39,7 @@ l.Z.dispatch({
 });
 try {
   n = await i.tn.get({
-    url: _.ANM.ME,
+    url: s.ANM.ME,
     headers: {
       authorization: o
     },
@@ -64,17 +64,17 @@ l.Z.dispatch({
 }
 
 function E(t, e) {
-  s.log('Switching account to '.concat(t), {
+  _.log('Switching account to '.concat(t), {
 switchSynchronously: e
   });
   let n = r.getToken(t);
-  return null == n ? (s.log('Switching accounts failed because there was no token'), l.Z.dispatch({
+  return null == n ? (_.log('Switching accounts failed because there was no token'), l.Z.dispatch({
 type: 'MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE',
 userId: t
   }), Promise.resolve()) : u.Z.switchAccountToken(n, e);
 }
 
-function p(t) {
+function f(t) {
   l.Z.dispatch({
 type: 'MULTI_ACCOUNT_REMOVE_ACCOUNT',
 userId: t

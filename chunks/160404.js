@@ -1,5 +1,5 @@
 n(47120), n(789020), n(724458);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(430824),
   c = n(630388),
@@ -8,7 +8,7 @@ var r, i, a, o, s = n(442837),
   E = n(981631),
   f = n(526761);
 let h = {};
-class p extends(r = s.ZP.Store) {
+class p extends(r = o.ZP.Store) {
   hasViewingRoles() {
 return Object.keys(h).length > 0;
   }
@@ -81,12 +81,12 @@ switch (t.type) {
 }
   }
 }
-o = 'ImpersonateStore', (a = 'displayName') in(i = p) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'ImpersonateStore', (a = 'displayName') in(i = p) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new p(l.Z, {
+}) : i[a] = s, t.Z = new p(l.Z, {
   IMPERSONATE_UPDATE: function(e) {
 let {
   guildId: t,
@@ -142,11 +142,11 @@ let {
 } = e;
 if (null == n || null == h[n])
   return !1;
-let o = h[n];
-if (null == o || o.type !== _.z.NEW_MEMBER)
+let s = h[n];
+if (null == s || s.type !== _.z.NEW_MEMBER)
   return !1;
-let s = null !== (t = o.onboardingResponses) && void 0 !== t ? t : new Set();
-return null != a && a.length > 0 && a.forEach(e => s.delete(e)), i ? s.add(r) : s.delete(r), o.onboardingResponses = s, !0;
+let o = null !== (t = s.onboardingResponses) && void 0 !== t ? t : new Set();
+return null != a && a.length > 0 && a.forEach(e => o.delete(e)), i ? o.add(r) : o.delete(r), s.onboardingResponses = o, !0;
   },
   GUILD_MEMBER_UPDATE_LOCAL: function(e) {
 let {

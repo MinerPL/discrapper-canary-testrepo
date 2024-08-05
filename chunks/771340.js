@@ -1,10 +1,10 @@
 var i = n(544891),
   a = n(570140),
-  l = n(981631);
+  s = n(981631);
 t.Z = {
   fetchRegions(e) {
 i.tn.get({
-  url: l.ANM.REGIONS(e),
+  url: s.ANM.REGIONS(e),
   retries: 1,
   oldFormErrors: !0
 }).then(t => a.Z.dispatch({
@@ -19,7 +19,7 @@ i.tn.get({
   },
   changeCallRegion(e, t) {
 i.tn.patch({
-  url: l.ANM.CALL(e),
+  url: s.ANM.CALL(e),
   body: {
     region: t
   },

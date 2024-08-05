@@ -13,10 +13,10 @@ isDropHovered: c,
 onDrop: d,
 onEdit: u,
 onRemove: m,
-canRemove: f,
+canRemove: _,
 actionsLocation: C
   } = e, {
-label: _,
+label: f,
 placeholder: h
   } = n;
   return (0, a.jsx)(i.Z, {
@@ -27,8 +27,8 @@ isDropHovered: c,
 onDrop: d,
 onEdit: u,
 onRemove: m,
-title: _,
-canRemove: f,
+title: f,
+canRemove: _,
 actionsLocation: C,
 children: (0, a.jsx)(r.Gi, {
   className: o.fieldBackground,

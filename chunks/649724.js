@@ -8,8 +8,8 @@ return f;
 }), n(47120);
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(481060),
   u = n(285952),
   c = n(153066),
@@ -41,7 +41,7 @@ let {
   mode: r
 } = this.props, a = null === (t = this.context) || void 0 === t ? void 0 : t.titleId;
 return (0, i.jsx)('input', {
-  className: s()((0, c.l)(_, 'input', r), {
+  className: o()((0, c.l)(_, 'input', r), {
     [_.inputHidden]: e
   }),
   ref: this.inputRef,
@@ -59,7 +59,7 @@ let {
   mode: n,
   hideMessage: r,
   className: a,
-  buttonLook: o
+  buttonLook: s
 } = this.props, E = null != r;
 switch (n) {
   case f.SUCCESS:
@@ -75,7 +75,7 @@ return (0, i.jsx)(l.FocusRing, {
   focusTarget: this.inputRef,
   ringTarget: this.containerRef,
   children: (0, i.jsx)('div', {
-    className: s()((0, c.l)(_, 'copyInput', n), a),
+    className: o()((0, c.l)(_, 'copyInput', n), a),
     ref: this.containerRef,
     children: (0, i.jsxs)(u.Z, {
       className: _.layout,
@@ -101,7 +101,7 @@ return (0, i.jsx)(l.FocusRing, {
             onClick: this.handleButtonClick,
             size: l.ButtonSizes.MIN,
             color: e,
-            look: o,
+            look: s,
             children: t
           })
         })

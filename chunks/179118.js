@@ -1,63 +1,63 @@
 n.d(t, {
   Z: function() {
-return k;
+return P;
   }
 }), n(47120);
-var r = n(735250),
-  s = n(470079),
+var s = n(735250),
+  r = n(470079),
   a = n(120356),
   o = n.n(a),
   i = n(392711),
-  l = n.n(i),
-  c = n(442837),
+  c = n.n(i),
+  l = n(442837),
   d = n(481060),
   u = n(37234),
-  p = n(194359),
-  g = n(700582),
-  f = n(479446),
-  C = n(522489),
+  f = n(194359),
+  p = n(700582),
+  g = n(925329),
+  C = n(479446),
+  _ = n(522489),
   m = n(93127),
-  h = n(814443),
-  _ = n(590783),
-  b = n(699516),
-  x = n(246946),
+  b = n(814443),
+  h = n(590783),
+  x = n(699516),
+  E = n(246946),
   I = n(594174),
-  E = n(366695),
-  L = n(572004),
-  S = n(669079),
-  v = n(74538),
+  v = n(572004),
+  L = n(669079),
+  S = n(74538),
   T = n(51144),
   N = n(981631),
   O = n(474936),
-  j = n(689938),
-  Z = n(882284);
+  k = n(689938),
+  j = n(882284);
 
-function k(e) {
+function P(e) {
   let {
 giftCode: t,
 application: n,
 sku: a,
 subscriptionPlan: i,
-selectedGiftStyle: l,
+selectedGiftStyle: c,
 onClose: u,
-hasSentMessage: p,
-giftRecipient: f,
+hasSentMessage: f,
+giftRecipient: C,
 giftMessageError: m,
-isSendingMessage: h
-  } = e, [b, I] = s.useState(d.CopyInput.Modes.DEFAULT), k = (0, c.e7)([x.Z], () => x.Z.enabled), A = p || null != l && null != f, P = (null == a ? void 0 : a.productLine) === N.POd.COLLECTIBLES, B = () => null != i ? i.skuId : null != a ? a.id : null, M = () => {
+isSendingMessage: b
+  } = e, [x, I] = r.useState(d.CopyInput.Modes.DEFAULT), P = (0, l.e7)([E.Z], () => E.Z.enabled), B = f || null != c && null != C, R = (null == a ? void 0 : a.productLine) === N.POd.COLLECTIBLES, Z = () => null != i ? i.skuId : null != a ? a.id : null, M = () => {
 let e;
-let t = null != l && O.V4.includes(l);
-return null != m ? j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_FAILURE_GENERIC_BLURB : null == i ? null : (e = i.interval === O.rV.MONTH ? A ? t ? j.Z.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_MONTHLY : A ? t ? j.Z.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_YEARLY).format({
-  skuName: (0, v.aq)(i.id),
+let t = null != c && O.V4.includes(c);
+return null != m ? k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_FAILURE_GENERIC_BLURB : null == i ? null : (e = i.interval === O.rV.MONTH ? B ? t ? k.Z.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_MONTHLY : B ? t ? k.Z.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_YEARLY).format({
+  skuName: (0, S.aq)(i.id),
   intervalCount: i.intervalCount
 });
   }, y = (e, t) => {
-null != a && (0, S.dM)(new _.Z({
+null != a && (0, L.dM)(new h.Z({
   code: t,
   maxUses: 1
 }), a);
 try {
-  (0, L.JG)(e), I(d.CopyInput.Modes.SUCCESS);
+  (0, v.JG)(e), I(d.CopyInput.Modes.SUCCESS);
 } catch (e) {
   I(d.CopyInput.Modes.ERROR);
 }
@@ -68,116 +68,116 @@ setTimeout(() => {
 let e;
 if (null == t)
   return null;
-switch (b) {
+switch (x) {
   case d.CopyInput.Modes.SUCCESS:
-    e = j.Z.Messages.BILLING_GIFT_COPIED;
+    e = k.Z.Messages.BILLING_GIFT_COPIED;
     break;
   case d.CopyInput.Modes.ERROR:
-    e = j.Z.Messages.FAILED;
+    e = k.Z.Messages.FAILED;
     break;
   default:
-    e = j.Z.Messages.COPY;
+    e = k.Z.Messages.COPY;
 }
-return (0, r.jsxs)('div', {
-  className: Z.giftCodeSection,
+return (0, s.jsxs)('div', {
+  className: j.giftCodeSection,
   children: [
-    (0, r.jsx)(d.FormTitle, {
-      children: j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_PRIVATE_LINK
+    (0, s.jsx)(d.FormTitle, {
+      children: k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_PRIVATE_LINK
     }),
-    null != t && (0, r.jsx)(d.CopyInput, {
-      hideMessage: k ? j.Z.Messages.GIFT_INVENTORY_HIDDEN : null,
-      value: (0, S.Nz)(t),
-      mode: b,
+    null != t && (0, s.jsx)(d.CopyInput, {
+      hideMessage: P ? k.Z.Messages.GIFT_INVENTORY_HIDDEN : null,
+      value: (0, L.Nz)(t),
+      mode: x,
       text: e,
       onCopy: e => y(e, t),
-      supportsCopy: L.wS,
-      className: Z.__invalid_copyInput,
+      supportsCopy: v.wS,
+      className: j.__invalid_copyInput,
       buttonColor: d.ButtonColors.LINK,
       buttonLook: d.ButtonLooks.LINK
     }),
-    (0, r.jsx)('div', {
-      className: Z.subtext,
-      children: j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRMATION_SUBTEXT_NO_FORMAT
+    (0, s.jsx)('div', {
+      className: j.subtext,
+      children: k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRMATION_SUBTEXT_NO_FORMAT
     })
   ]
 });
   };
-  return h ? (0, r.jsxs)('div', {
-className: Z.confirmation,
+  return b ? (0, s.jsxs)('div', {
+className: j.confirmation,
 children: [
-  null != n ? (0, r.jsx)(E.Z, {
+  null != n ? (0, s.jsx)(g.Z, {
     game: n,
-    className: Z.__invalid_icon,
-    size: E.Z.Sizes.LARGE,
-    skuId: B()
+    className: j.__invalid_icon,
+    size: g.Z.Sizes.LARGE,
+    skuId: Z()
   }) : null,
-  (0, r.jsx)(d.Spinner, {
+  (0, s.jsx)(d.Spinner, {
     type: d.SpinnerTypes.PULSING_ELLIPSIS
   })
 ]
-  }) : (0, r.jsxs)('div', {
-className: Z.confirmation,
+  }) : (0, s.jsxs)('div', {
+className: j.confirmation,
 children: [
-  null != n ? (0, r.jsx)(E.Z, {
+  null != n ? (0, s.jsx)(g.Z, {
     game: n,
-    className: Z.__invalid_icon,
-    size: E.Z.Sizes.LARGE,
-    skuId: B()
+    className: j.__invalid_icon,
+    size: g.Z.Sizes.LARGE,
+    skuId: Z()
   }) : null,
-  (0, r.jsx)(d.Heading, {
+  (0, s.jsx)(d.Heading, {
     variant: 'heading-lg/semibold',
     className: o()({
-      [Z.header]: null == l && !P,
-      [Z.headerCustomGifting]: null != l && !P
+      [j.header]: null == c && !R,
+      [j.headerCustomGifting]: null != c && !R
     }),
-    children: null != f || p && null == m ? j.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_AND_MESSAGE_CONFIRMATION_TITLE : null != m ? j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_FAILED : j.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_CONFIRMATION_TITLE
+    children: null != C || f && null == m ? k.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_AND_MESSAGE_CONFIRMATION_TITLE : null != m ? k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_FAILED : k.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_CONFIRMATION_TITLE
   }),
-  p && null != f && null == m || A ? (0, r.jsxs)(r.Fragment, {
+  f && null != C && null == m || B ? (0, s.jsxs)(s.Fragment, {
     children: [
-      (0, r.jsx)(g.Z, {
-        user: f,
-        className: Z.giftRecipient,
+      (0, s.jsx)(p.Z, {
+        user: C,
+        className: j.giftRecipient,
         size: d.AvatarSizes.SIZE_80
       }),
-      (0, r.jsx)(d.Heading, {
-        className: Z.giftRecipientName,
+      (0, s.jsx)(d.Heading, {
+        className: j.giftRecipientName,
         variant: 'heading-md/semibold',
-        children: T.ZP.getName(f)
+        children: T.ZP.getName(C)
       }),
-      (0, r.jsxs)('div', {
-        className: Z.giftRecipientTag,
+      (0, s.jsxs)('div', {
+        className: j.giftRecipientTag,
         children: [
           ' ',
-          T.ZP.getUserTag(f)
+          T.ZP.getUserTag(C)
         ]
       }),
-      (0, r.jsx)('div', {
-        className: Z.giftSentMessage,
+      (0, s.jsx)('div', {
+        className: j.giftSentMessage,
         children: M()
       })
     ]
   }) : (() => {
-    let e = (0, S.MY)(f, P),
+    let e = (0, L.MY)(C, R),
       {
         removeGiftRecipientUI: n
-      } = C.m.getCurrentConfig({
+      } = _.m.getCurrentConfig({
         location: 'GiftPurchaseConfirmation'
       }, {
         autoTrackExposure: !1,
-        disable: __BILLING_STANDALONE__ || e !== S.xr.CUSTOM_STYLE
+        disable: __BILLING_STANDALONE__ || e !== L.xr.CUSTOM_STYLE
       });
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, s.jsxs)(s.Fragment, {
       children: [
-        (0, r.jsx)('div', {
-          className: Z.blurb,
+        (0, s.jsx)('div', {
+          className: j.blurb,
           children: M()
         }),
-        !n && null == m && (0, r.jsx)(R, {
+        !n && null == m && (0, s.jsx)(A, {
           giftCode: t,
           onClose: u
         }),
-        (0, r.jsx)('div', {
-          className: Z.divider
+        (0, s.jsx)('div', {
+          className: j.divider
         }),
         w()
       ]
@@ -186,74 +186,74 @@ children: [
 ]
   });
 }
-let R = e => {
+let A = e => {
   let {
 giftCode: t,
 onClose: n
   } = e;
-  s.useEffect(() => {
-p.Z.fetchRelationships(), (0, m.W)();
+  r.useEffect(() => {
+f.Z.fetchRelationships(), (0, m.W)();
   }, []);
-  let [a, o] = s.useState(), [i, C] = s.useState(!1), [_, x] = s.useState(!1), {
+  let [a, o] = r.useState(), [i, g] = r.useState(!1), [_, h] = r.useState(!1), {
 userAffinities: E,
-isLoading: L
-  } = (0, c.cj)([h.Z], () => ({
-userAffinities: h.Z.getUserAffinitiesUserIds(),
-isLoading: h.Z.getFetching()
-  })), S = Array.from(E.values()), v = (0, c.e7)([b.Z], () => b.Z.getFriendIDs()), N = l().difference(v, S), O = [
-...S,
+isLoading: v
+  } = (0, l.cj)([b.Z], () => ({
+userAffinities: b.Z.getUserAffinitiesUserIds(),
+isLoading: b.Z.getFetching()
+  })), L = Array.from(E.values()), S = (0, l.e7)([x.Z], () => x.Z.getFriendIDs()), N = c().difference(S, L), O = [
+...L,
 ...N
-  ], k = (0, c.e7)([I.default], () => I.default.filter(e => O.includes(e.id) && !e.bot), [O]);
-  if (null == k || 0 === k.length)
+  ], P = (0, l.e7)([I.default], () => I.default.filter(e => O.includes(e.id) && !e.bot), [O]);
+  if (null == P || 0 === P.length)
 return null;
-  let R = l().sortBy(k, e => O.indexOf(e.id));
-  return (0, r.jsxs)('div', {
-className: Z.giftRecipientSection,
+  let A = c().sortBy(P, e => O.indexOf(e.id));
+  return (0, s.jsxs)('div', {
+className: j.giftRecipientSection,
 children: [
-  (0, r.jsx)(d.FormTitle, {
-    children: j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_RECIPIENT_SECTION_LABEL
+  (0, s.jsx)(d.FormTitle, {
+    children: k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_RECIPIENT_SECTION_LABEL
   }),
-  (0, r.jsxs)('div', {
-    className: Z.giftRecipient,
+  (0, s.jsxs)('div', {
+    className: j.giftRecipient,
     children: [
-      (0, r.jsx)(d.SearchableSelect, {
-        placeholder: j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_RECIPIENT_SELECT_PLACEHOLDER,
-        wrapperClassName: Z.giftRecipientInputWrapper,
-        className: i ? Z.giftRecipientInputError : void 0,
-        renderOptionPrefix: e => (null == e ? void 0 : e.value) == null ? null : (0, r.jsx)(g.Z, {
+      (0, s.jsx)(d.SearchableSelect, {
+        placeholder: k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_RECIPIENT_SELECT_PLACEHOLDER,
+        wrapperClassName: j.giftRecipientInputWrapper,
+        className: i ? j.giftRecipientInputError : void 0,
+        renderOptionPrefix: e => (null == e ? void 0 : e.value) == null ? null : (0, s.jsx)(p.Z, {
           user: e.value,
           size: d.AvatarSizes.SIZE_20
         }),
-        renderLeading: () => L ? (0, r.jsx)(d.Spinner, {
+        renderLeading: () => v ? (0, s.jsx)(d.Spinner, {
           type: d.SpinnerTypes.PULSING_ELLIPSIS
         }) : null,
         value: a,
         onChange: e => {
-          o(e), C(!1);
+          o(e), g(!1);
         },
-        options: R.map(e => ({
+        options: A.map(e => ({
           value: e,
           label: ''.concat(T.ZP.getUserTag(e))
         }))
       }),
-      (0, r.jsx)(d.Button, {
+      (0, s.jsx)(d.Button, {
         disabled: null == a,
         submitting: _,
-        className: Z.sendToRecipientButton,
+        className: j.sendToRecipientButton,
         onClick: () => {
-          x(!0), (0, f.Y)(a, t).then(() => {
+          h(!0), (0, C.Y)(a, t).then(() => {
             n(), (0, u.Ou)();
           }).catch(() => {
-            C(!0), x(!1);
+            g(!0), h(!1);
           });
         },
-        children: j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_SEND_NOW_BUTTON
+        children: k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_SEND_NOW_BUTTON
       })
     ]
   }),
-  (0, r.jsx)('div', {
-    className: i ? Z.subtextError : Z.subtext,
-    children: i ? j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_ERROR_SENDING_LINK : j.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_RECIPIENT_SUBTEXT
+  (0, s.jsx)('div', {
+    className: i ? j.subtextError : j.subtext,
+    children: i ? k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_ERROR_SENDING_LINK : k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_RECIPIENT_SUBTEXT
   })
 ]
   });

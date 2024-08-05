@@ -1,15 +1,15 @@
 n(47120);
-var i, a, l, s, r = n(442837),
+var i, a, s, l, r = n(442837),
   o = n(570140),
   c = n(786761),
-  d = n(594174),
-  u = n(355298),
+  u = n(594174),
+  d = n(355298),
   h = n(333984);
 let p = {},
   m = new Set();
 
 function _(e) {
-  return u.Z.isMessageRequest(e) || h.Z.isSpam(e);
+  return d.Z.isMessageRequest(e) || h.Z.isSpam(e);
 }
 
 function f(e, t) {
@@ -25,7 +25,7 @@ message: i
 }
 class E extends(i = r.ZP.Store) {
   initialize() {
-this.waitFor(u.Z, h.Z, d.default);
+this.waitFor(d.Z, h.Z, u.default);
   }
   shouldLoadMessageRequestPreview(e) {
 return !m.has(e);
@@ -38,12 +38,12 @@ return !(e in p) && (p[e] = {
 }), p[e];
   }
 }
-s = 'MessageRequestPreviewStore', (l = 'displayName') in(a = E) ? Object.defineProperty(a, l, {
-  value: s,
+l = 'MessageRequestPreviewStore', (s = 'displayName') in(a = E) ? Object.defineProperty(a, s, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = s, t.Z = new E(o.Z, {
+}) : a[s] = l, t.Z = new E(o.Z, {
   CONNECTION_OPEN: function() {
 p = {}, m.clear();
   },

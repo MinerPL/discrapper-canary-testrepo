@@ -6,8 +6,8 @@ return V;
 var r = n(267948),
   i = n(573500),
   a = n(544637),
-  o = n(365739),
-  s = n(999450),
+  s = n(365739),
+  o = n(999450),
   l = n(571513),
   u = n(759480),
   c = n(230432),
@@ -47,8 +47,8 @@ function V(e, t, n) {
   let i = (0, k.qb)((r = F) && r.__esModule ? r.default : r, '@react-aria/searchfield'),
 {
   isDisabled: a,
-  isReadOnly: o,
-  onSubmit: s = () => {},
+  isReadOnly: s,
+  onSubmit: o = () => {},
   onClear: l,
   type: u = 'search'
 } = e,
@@ -62,9 +62,9 @@ function V(e, t, n) {
   ...e,
   value: t.value,
   onChange: t.setValue,
-  onKeyDown: o ? e.onKeyDown : (0, G.tS)(e => {
+  onKeyDown: s ? e.onKeyDown : (0, G.tS)(e => {
     let n = e.key;
-    'Enter' === n && e.preventDefault(), !a && !o && ('Enter' === n && s(t.value), 'Escape' === n && ('' === t.value ? e.continuePropagation() : (t.setValue(''), l && l())));
+    'Enter' === n && e.preventDefault(), !a && !s && ('Enter' === n && o(t.value), 'Escape' === n && ('' === t.value ? e.continuePropagation() : (t.setValue(''), l && l())));
   }, e.onKeyDown),
   type: u
 }, n);
@@ -78,7 +78,7 @@ clearButtonProps: {
   'aria-label': i.format('Clear search'),
   excludeFromTabOrder: !0,
   preventFocusOnPress: !0,
-  isDisabled: a || o,
+  isDisabled: a || s,
   onPress: () => {
     t.setValue(''), l && l();
   },
@@ -96,8 +96,8 @@ F = {
   'ar-AE': r.Z,
   'bg-BG': i.Z,
   'cs-CZ': a.Z,
-  'da-DK': o.Z,
-  'de-DE': s.Z,
+  'da-DK': s.Z,
+  'de-DE': o.Z,
   'el-GR': l.Z,
   'en-US': u.Z,
   'es-ES': c.Z,

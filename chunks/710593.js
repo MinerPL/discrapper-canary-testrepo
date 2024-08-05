@@ -10,8 +10,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(714338),
-  s = n(59023);
+  s = n(714338),
+  o = n(59023);
 
 function l(e) {
   let {
@@ -21,7 +21,7 @@ direction: t = 'up'
 width: '10',
 height: '10',
 xmlns: 'http://www.w3.org/2000/svg',
-className: a()(s.bindArrow, s[t]),
+className: a()(o.bindArrow, o[t]),
 children: (0, r.jsx)('g', {
   fill: '#FFFFFF',
   children: (0, r.jsx)('polygon', {
@@ -32,8 +32,8 @@ children: (0, r.jsx)('g', {
   });
 }
 let u = {
-  mod: () => o.Z.modKey,
-  alt: () => o.Z.altKey,
+  mod: () => s.Z.modKey,
+  alt: () => s.Z.altKey,
   up: () => (0, r.jsx)(l, {
 direction: 'up'
   }),
@@ -50,7 +50,7 @@ direction: 'right'
   pagedown: () => 'page down',
   'any-character': () => 'any key',
   plus: () => '+',
-  return: () => o.Z.returnKey
+  return: () => s.Z.returnKey
 };
 
 function c(e) {
@@ -58,14 +58,14 @@ function c(e) {
 shortcut: t,
 dim: n = !1,
 className: i,
-keyClassName: o
+keyClassName: s
   } = e, l = Array.isArray(t) ? t : t.split('+');
   return (0, r.jsx)('div', {
-className: a()(s.combo, i, {
-  [s.dim]: n
+className: a()(o.combo, i, {
+  [o.dim]: n
 }),
 children: l.map(e => null != u[e] ? u[e]() : e).map((e, t) => (0, r.jsx)('span', {
-  className: a()(s.key, o),
+  className: a()(o.key, s),
   children: e
 }, t))
   });

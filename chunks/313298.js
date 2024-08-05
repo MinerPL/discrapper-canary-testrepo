@@ -2,8 +2,8 @@ n(47120);
 var r = n(570140),
   i = n(147913),
   a = n(650774),
-  o = n(709054),
-  s = n(893966);
+  s = n(709054),
+  o = n(893966);
 let l = {},
   u = {},
   c = null;
@@ -54,30 +54,30 @@ class h extends i.Z {
 null == c && ! function() {
   if (null == c)
     c = setInterval(() => {
-      o.default.forEachKey(l, e => {
+      s.default.forEachKey(l, e => {
         E(e) && _(e);
       });
     }, 10000);
 }();
   }
   handleGuildMemberUpdate(e, t) {
-if (!!s.Z.isInitialized(e))
+if (!!o.Z.isInitialized(e))
   return d(e, t);
   }
   handleGuildMemberRemove(e, t) {
-if (!!s.Z.isInitialized(e))
+if (!!o.Z.isInitialized(e))
   return d(e, t);
   }
   handleGuildDelete(e) {
 let t = e.guild.id;
-if (!!s.Z.isInitialized(t))
+if (!!o.Z.isInitialized(t))
   f(t);
   }
   handleGuildMemberSearchSuccess(e) {
 let {
   guildId: t
 } = e;
-if (!!s.Z.isInitialized(t))
+if (!!o.Z.isInitialized(t))
   f(t);
   }
   constructor(...e) {

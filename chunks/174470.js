@@ -9,16 +9,16 @@ return u;
 var r = n(470079),
   i = n(399606),
   a = n(430824),
-  o = n(709054),
-  s = n(763296);
+  s = n(709054),
+  o = n(763296);
 
 function l(e, t) {
-  return o.default.keys(e).filter(e => null == t.get(e));
+  return s.default.keys(e).filter(e => null == t.get(e));
 }
 
 function u() {
   let e = (0, i.e7)([a.Z], () => a.Z.getGuilds()),
-t = (0, i.e7)([s.Z], () => s.Z.getSounds());
+t = (0, i.e7)([o.Z], () => o.Z.getSounds());
   return (0, r.useMemo)(() => l(e, t), [
 e,
 t
@@ -27,5 +27,5 @@ t
 
 function c() {
   let e = a.Z.getGuilds();
-  return l(e, s.Z.getSounds());
+  return l(e, o.Z.getSounds());
 }

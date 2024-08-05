@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return E;
+return I;
   }
 }), t(47120);
 var a = t(735250),
@@ -13,9 +13,9 @@ var a = t(735250),
   d = t(863249),
   u = t(944163),
   m = t(246364),
-  f = t(571728),
+  _ = t(571728),
   C = t(755340),
-  _ = t(449226),
+  f = t(449226),
   h = t(689938),
   x = t(941377),
   g = t(301660);
@@ -26,7 +26,7 @@ guild: n,
 isExpanded: i,
 emptyFormFields: s,
 hasTermsField: o
-  } = e, c = n.hasVerificationGate(), [u, m] = r.useState(c), f = e => {
+  } = e, c = n.hasVerificationGate(), [u, m] = r.useState(c), _ = e => {
 e.preventDefault(), e.stopPropagation();
   }, C = async e => {
 try {
@@ -106,10 +106,10 @@ children: [
     children: i || u || !s ? (0, a.jsxs)(a.Fragment, {
       children: [
         (0, a.jsx)(l.Clickable, {
-          onMouseDown: f,
-          onMouseUp: f,
+          onMouseDown: _,
+          onMouseUp: _,
           onClick: e => {
-            f(e), T();
+            _(e), T();
           },
           children: (0, a.jsx)(l.Tooltip, {
             tooltipContentClassName: g.__invalid_tooltip,
@@ -122,7 +122,7 @@ children: [
             })
           })
         }),
-        (0, a.jsx)(_.Z, {
+        (0, a.jsx)(f.Z, {
           checked: u,
           onChange: () => p(!u)
         })
@@ -138,28 +138,28 @@ children: [
 async function T(e, n) {
   await d.Z.updateVerificationForm(e, n);
 }
-async function I(e, n) {
+async function E(e, n) {
   await d.Z.updateVerificationFormDescription(e, n);
 }
 
-function E(e) {
+function I(e) {
   var n, t, i;
   let {
 guild: l,
-isClanContext: _ = !1,
+isClanContext: f = !1,
 onFieldsSave: h,
-onDescriptionSave: E,
+onDescriptionSave: I,
 verificationForm: b
-  } = e, [N, v] = r.useState(_), y = r.useRef(!1), S = r.useCallback(() => {
+  } = e, [N, v] = r.useState(f), y = r.useRef(!1), S = r.useCallback(() => {
 y.current = !0;
-  }, []), A = null !== (n = (0, f.A)({
+  }, []), A = null !== (n = (0, _.A)({
 guildId: l.id
   })) && void 0 !== n ? n : 0, M = (0, o.e7)([u.Z], () => null != b ? b : u.Z.get(l.id)), j = null !== (t = null == M ? void 0 : M.formFields) && void 0 !== t ? t : [];
   r.useEffect(() => {
 d.Z.fetchVerificationForm(l.id);
   }, [l.id]);
   let R = null != M,
-L = !_;
+L = !f;
   return (0, a.jsx)(c.Z, {
 renderHeader: L ? (0, a.jsx)(p, {
   guild: l,
@@ -169,7 +169,7 @@ renderHeader: L ? (0, a.jsx)(p, {
 }) : null,
 isExpanded: N,
 onExpand: () => v(!N),
-disableAnimation: _,
+disableAnimation: f,
 disableBackground: !L,
 children: (0, a.jsx)('div', {
   className: s()(x.itemBodyContainer, {
@@ -182,9 +182,9 @@ children: (0, a.jsx)('div', {
     formFields: j,
     onFormFieldUpdate: S,
     hideVerificationLevelField: !0,
-    isClanContext: _,
+    isClanContext: f,
     onFieldsSave: null != h ? h : T,
-    onDescriptionSave: null != E ? E : I,
+    onDescriptionSave: null != I ? I : E,
     formDescription: null !== (i = null == M ? void 0 : M.description) && void 0 !== i ? i : ''
   })
 })

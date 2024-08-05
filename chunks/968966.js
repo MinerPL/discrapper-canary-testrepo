@@ -53,8 +53,8 @@ a = {
   scope: 'char.escape',
   relevance: 0
 },
-o = '[/|([{<"\']',
-s = [{
+s = '[/|([{<"\']',
+o = [{
     begin: /"/,
     end: /"/
   },
@@ -94,8 +94,8 @@ l = e => ({
 }),
 u = {
   className: 'string',
-  begin: '~[a-z](?=' + o + ')',
-  contains: s.map(t => e.inherit(t, {
+  begin: '~[a-z](?=' + s + ')',
+  contains: o.map(t => e.inherit(t, {
     contains: [
       l(t.end),
       a,
@@ -105,16 +105,16 @@ u = {
 },
 c = {
   className: 'string',
-  begin: '~[A-Z](?=' + o + ')',
-  contains: s.map(t => e.inherit(t, {
+  begin: '~[A-Z](?=' + s + ')',
+  contains: o.map(t => e.inherit(t, {
     contains: [l(t.end)]
   }))
 },
 d = {
   className: 'regex',
   variants: [{
-      begin: '~r(?=' + o + ')',
-      contains: s.map(n => e.inherit(n, {
+      begin: '~r(?=' + s + ')',
+      contains: o.map(n => e.inherit(n, {
         end: t.concat(n.end, /[uismxfU]{0,7}/),
         contains: [
           l(n.end),
@@ -124,8 +124,8 @@ d = {
       }))
     },
     {
-      begin: '~R(?=' + o + ')',
-      contains: s.map(n => e.inherit(n, {
+      begin: '~R(?=' + s + ')',
+      contains: o.map(n => e.inherit(n, {
         end: t.concat(n.end, /[uismxfU]{0,7}/),
         contains: [l(n.end)]
       }))

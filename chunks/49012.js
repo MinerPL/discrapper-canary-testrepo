@@ -9,8 +9,8 @@ return y;
 var r = n(302454),
   i = n.n(r),
   a = n(668781),
-  o = n(45986),
-  s = n(782568),
+  s = n(45986),
+  o = n(782568),
   l = n(704133),
   u = n(139674),
   c = n(702321),
@@ -112,7 +112,7 @@ if (U && E.Z.trackAnnouncementMessageLinkClicked({
   y();
   return;
 }
-(0, s.Z)(M);
+(0, o.Z)(M);
   };
   if (null !== u.Z.isBlockedDomain(M)) {
 null == t || t.preventDefault(), l.Z.show(M);
@@ -142,7 +142,7 @@ return;
   if (null != t && t.preventDefault(), Y)
 h.Z.show({
   url: M,
-  trustUrl: o.u,
+  trustUrl: s.u,
   onConfirm: V,
   isProtocol: !0
 });
@@ -151,7 +151,7 @@ let e = (0, f.yw)(M),
   t = null != e ? e.displayTarget : M;
 h.Z.show({
   url: t,
-  trustUrl: o.o,
+  trustUrl: s.o,
   onConfirm: V,
   isProtocol: !1
 });

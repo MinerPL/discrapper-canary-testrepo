@@ -36,8 +36,8 @@ return T;
 var r = n(544891),
   i = n(570140),
   a = n(881052),
-  o = n(957730),
-  s = n(695346),
+  s = n(957730),
+  o = n(695346),
   l = n(594174),
   u = n(626135),
   c = n(981631),
@@ -54,8 +54,8 @@ async function E(e, t) {
   let d = null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
   if (null == d)
 return;
-  let _ = s.dN.getSetting();
-  null != e.bio && _ && (e.bio = o.ZP.parse(void 0, e.bio).content);
+  let _ = o.dN.getSetting();
+  null != e.bio && _ && (e.bio = s.ZP.parse(void 0, e.bio).content);
   try {
 i.Z.dispatch({
   type: 'USER_PROFILE_UPDATE_START',

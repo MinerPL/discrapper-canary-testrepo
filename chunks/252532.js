@@ -6,8 +6,8 @@ return c;
 var r = n(470079),
   i = n(442837),
   a = n(607070),
-  o = n(654904),
-  s = n(271383),
+  s = n(654904),
+  o = n(271383),
   l = n(451478),
   u = n(166625);
 
@@ -21,7 +21,7 @@ animateOnHover: _ = !1,
 avatarOverride: E
   } = e, [f, h] = r.useState(!1), p = (0, i.e7)([a.Z], () => a.Z.useReducedMotion), m = (0, i.e7)([l.Z], () => l.Z.isFocused()) && (f || !p && !_), {
 pendingAvatar: I
-  } = (0, u.Z)({}), T = void 0 !== E ? E : d ? I : void 0, g = (0, i.e7)([s.ZP], () => null != n && null != t ? s.ZP.getMember(n, t.id) : null), S = r.useMemo(() => null != t ? (0, o.SG)(T, g, t, {
+  } = (0, u.Z)({}), T = void 0 !== E ? E : d ? I : void 0, g = (0, i.e7)([o.ZP], () => null != n && null != t ? o.ZP.getMember(n, t.id) : null), S = r.useMemo(() => null != t ? (0, s.SG)(T, g, t, {
 canAnimate: m,
 size: c
   }) : void 0, [

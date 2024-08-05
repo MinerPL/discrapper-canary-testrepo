@@ -37,12 +37,12 @@ j = (0, r.e7)([p.Z], () => p.Z.isLocalizedPromoEnabled) && null == x && null == 
 }, {
   autoTrackExposure: !1
 }),
-E = C && (null == x ? void 0 : x.trial_id) === b.a7;
+T = C && (null == x ? void 0 : x.trial_id) === b.a7;
   return t = N ? (0, i.jsx)(u.Z, {}) : null != g ? (0, i.jsx)(m.GN, {
 isTabSelected: v,
 userDiscount: g,
 includesAmountOff: !1
-  }) : null == x || E ? null != n ? n : j ? (0, i.jsx)(d.k, {
+  }) : null == x || T ? null != n ? n : j ? (0, i.jsx)(d.k, {
 entryPoint: d.U.SettingsMenu
   }) : (0, i.jsx)(f.Z, {
 isSelected: v

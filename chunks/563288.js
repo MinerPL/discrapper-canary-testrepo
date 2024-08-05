@@ -1,16 +1,16 @@
 n.r(t), n.d(t, {
   default: function() {
-return g;
+return L;
   }
 });
 var a = n(735250),
-  i = n(470079),
-  s = n(442837),
+  s = n(470079),
+  i = n(442837),
   o = n(704215),
   r = n(481060),
   l = n(607070),
-  d = n(434404),
-  c = n(430824),
+  c = n(434404),
+  d = n(430824),
   m = n(153124),
   u = n(810090),
   _ = n(626135),
@@ -20,15 +20,15 @@ var a = n(735250),
   I = n(981631),
   C = n(921944),
   f = n(689938),
-  L = n(147743);
+  g = n(147743);
 
-function g(e) {
+function L(e) {
   let {
 guildId: t,
 transitionState: n,
-onClose: g
-  } = e, j = (0, m.Dt)(), v = (0, s.e7)([l.Z], () => l.Z.useReducedMotion), D = (0, s.e7)([c.Z], () => c.Z.getGuild(t));
-  return (i.useEffect(() => {
+onClose: L
+  } = e, j = (0, m.Dt)(), v = (0, i.e7)([l.Z], () => l.Z.useReducedMotion), D = (0, i.e7)([d.Z], () => d.Z.getGuild(t));
+  return (s.useEffect(() => {
 _.default.track(I.rMx.DISMISSIBLE_CONTENT_SHOWN, {
   type: o.z[o.z.GUILD_ONBOARDING_UPSELL_MODAL_V2],
   guild_id: t
@@ -37,15 +37,15 @@ _.default.track(I.rMx.DISMISSIBLE_CONTENT_SHOWN, {
 transitionState: n,
 'aria-labelledby': j,
 size: r.ModalSize.LARGE,
-className: L.modal,
+className: g.modal,
 children: [
   (0, a.jsxs)('div', {
-    className: L.content,
+    className: g.content,
     children: [
       (0, a.jsx)(r.Heading, {
         variant: 'heading-xl/semibold',
         color: 'header-primary',
-        className: L.header,
+        className: g.header,
         children: f.Z.Messages.GUILD_ONBOARDING_UPSELL_MODAL_TITLE
       }),
       (0, a.jsx)(r.Text, {
@@ -56,10 +56,10 @@ children: [
         })
       }),
       (0, a.jsxs)('div', {
-        className: L.testimonials,
+        className: g.testimonials,
         children: [
           (0, a.jsx)('div', {
-            className: L.__invalid_designBuddiesContainer,
+            className: g.__invalid_designBuddiesContainer,
             children: (0, a.jsx)(N.Z, {
               message: f.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_DESIGN_BUDDIES,
               adminTitle: f.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_ADMIN_DESIGN_BUDDIES,
@@ -69,7 +69,7 @@ children: [
             })
           }),
           (0, a.jsx)('div', {
-            className: L.__invalid_valorantContainer,
+            className: g.__invalid_valorantContainer,
             children: (0, a.jsx)(N.Z, {
               message: f.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_VALORANT,
               adminTitle: f.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_ADMIN_VALORANT,
@@ -81,10 +81,10 @@ children: [
         ]
       }),
       (0, a.jsxs)('div', {
-        className: L.buttonContainer,
+        className: g.buttonContainer,
         children: [
           (0, a.jsx)(r.Button, {
-            onClick: () => g(),
+            onClick: () => L(),
             look: r.Button.Looks.OUTLINED,
             color: r.Button.Colors.PRIMARY,
             children: f.Z.Messages.CLOSE
@@ -94,7 +94,7 @@ children: [
               _.default.track(I.rMx.UPSELL_CLICKED, {
                 type: o.z[o.z.GUILD_ONBOARDING_UPSELL_MODAL_V2],
                 action: 'primary'
-              }), d.Z.open(t, I.pNK.ONBOARDING), g(C.L.PRIMARY), (0, h.G)(D.id, o.z.GUILD_ONBOARDING_UPSELL_MODAL_V2);
+              }), c.Z.open(t, I.pNK.ONBOARDING), L(C.L.PRIMARY), (0, h.G)(D.id, o.z.GUILD_ONBOARDING_UPSELL_MODAL_V2);
             },
             children: f.Z.Messages.CHECK_IT_OUT
           })
@@ -103,9 +103,9 @@ children: [
     ]
   }),
   (0, a.jsx)('div', {
-    className: L.videoContainer,
+    className: g.videoContainer,
     children: (0, a.jsx)(u.Z, {
-      className: L.video,
+      className: g.video,
       loop: !v,
       autoPlay: !v,
       playsInline: !0,

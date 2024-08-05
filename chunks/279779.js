@@ -1,7 +1,7 @@
 n(653041), n(315314), n(610138), n(216116), n(78328), n(815648), n(47120), n(411104), n(312677), n(390547);
 var r, i, a = n(392711),
-  o = n.n(a),
-  s = n(772848),
+  s = n.n(a),
+  o = n(772848),
   l = n(147913),
   u = n(131704),
   c = n(592125),
@@ -99,7 +99,7 @@ I(this, '_worker', void 0), I(this, '_uuid', void 0), I(this, '_callback', void 
   let t = e.data;
   if (null != t && 'USER_RESULTS' === t.type && t.uuid === this._uuid)
     !1 !== this._currentQuery && this._callback(t.payload), null != this._currentQuery && (this._currentQuery = null), this._setNextQuery();
-}), this._worker = e, this._uuid = (0, s.Z)(), this._callback = t, this._limit = n, this._currentQuery = null, this._nextQuery = null, this._subscribed = !1, this.subscribe();
+}), this._worker = e, this._uuid = (0, o.Z)(), this._callback = t, this._limit = n, this._currentQuery = null, this._nextQuery = null, this._subscribed = !1, this.subscribe();
   }
 }
 class v extends l.Z {
@@ -111,7 +111,7 @@ null != this._worker && (this._worker.terminate(), this._worker = null);
   }
   rebootWebworker() {
 null != this._worker && (this._worker.terminate(), this._worker = null);
-this._worker = new Worker(new URL(n.p + n.u('69731'), n.b));
+this._worker = new Worker(new URL('/assets/' + n.u('69731'), n.b));
   }
   updateUsers(e, t) {
 let {
@@ -187,9 +187,9 @@ super(...e), I(this, '_worker', void 0), I(this, 'actions', {
     for (let e in r)
       for (let t in r[e]) {
         var i, a;
-        let o = n[t],
-          s = null !== (a = null === (i = r[e][t]) || void 0 === i ? void 0 : i.nick) && void 0 !== a ? a : m.ZP.getGlobalName(o);
-        null != o && (o[e] = null != s && '' !== s ? s : null);
+        let s = n[t],
+          o = null !== (a = null === (i = r[e][t]) || void 0 === i ? void 0 : i.nick) && void 0 !== a ? a : m.ZP.getGlobalName(s);
+        null != s && (s[e] = null != o && '' !== o ? o : null);
       }
     this.updateUsers(Object.values(n), 'connection_open');
   }, 3000);
@@ -198,8 +198,24 @@ super(...e), I(this, '_worker', void 0), I(this, 'actions', {
     guilds: t
   } = e;
   setTimeout(() => {
-    let e = o().flatMap(t, e => A(e.members, e.id));
-    this.updateUsers(e, 'connection_open_supplemental');
+    let e = s().flatMap(t, e => A(e.members, e.id)),
+      n = s().flatMap(t, e => {
+        var t;
+        let n = [];
+        return null === (t = e.activity_instances) || void 0 === t || t.forEach(t => {
+          t.participants.forEach(t => {
+            let r = t.member;
+            if (null != r) {
+              let t = T(r.user);
+              null != t && (g(t, e.id, r.nick), n.push(t));
+            }
+          });
+        }), n;
+      });
+    this.updateUsers([
+      ...e,
+      ...n
+    ], 'connection_open_supplemental');
   }, 3000);
 }), I(this, '_handleOverlayInitialize', e => {
   let {

@@ -1,6 +1,6 @@
 n.d(t, {
   k: function() {
-return p;
+return g;
   }
 });
 var s, a, r = n(735250),
@@ -84,7 +84,7 @@ _(C, 'defaultProps', {
   style: {},
   wrap: !1
 });
-class p extends(a = i.PureComponent) {
+class g extends(a = i.PureComponent) {
   render() {
 let {
   children: e,
@@ -113,7 +113,7 @@ return (0, r.jsx)('div', {
 });
   }
 }
-_(p, 'Child', C), _(p, 'Direction', u), _(p, 'Align', I), _(p, 'Justify', E), _(p, 'Wrap', T), _(p, 'Gutter', R), _(p, 'defaultProps', {
+_(g, 'Child', C), _(g, 'Direction', u), _(g, 'Align', I), _(g, 'Justify', E), _(g, 'Wrap', T), _(g, 'Gutter', R), _(g, 'defaultProps', {
   direction: u.HORIZONTAL,
   justify: E.START,
   align: I.STRETCH,

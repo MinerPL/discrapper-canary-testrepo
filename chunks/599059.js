@@ -1,12 +1,12 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(981631),
   o = n(201241);
 
@@ -18,13 +18,13 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class d extends a.Component {
+class u extends a.Component {
   componentDidUpdate(e, t) {
 if (t.focused !== this.state.focused && this.state.focused) {
   var n;
   null === (n = this.inputRef.current) || void 0 === n || n.focus();
 }
-null !== this.props.value && this.props.value !== e.value && this.props.value !== this.state.value && u(this.props.value, this.props, this.state) && this.setState({
+null !== this.props.value && this.props.value !== e.value && this.props.value !== this.state.value && d(this.props.value, this.props, this.state) && this.setState({
   value: this.props.value
 });
   }
@@ -34,7 +34,7 @@ let {
   className: t,
   name: n,
   autoComplete: a,
-  maxLen: l
+  maxLen: s
 } = this.props, r = {
   position: 'absolute',
   left: 0,
@@ -45,7 +45,7 @@ return this.state.focused ? e = {
   visibility: 'hidden',
   pointerEvents: 'none'
 } : r.opacity = 0, (0, i.jsx)('div', {
-  className: s()(o.outer, t),
+  className: l()(o.outer, t),
   children: (0, i.jsxs)('div', {
     className: o.container,
     children: [
@@ -56,7 +56,7 @@ return this.state.focused ? e = {
         style: r,
         value: this.state.value,
         name: n,
-        maxLength: l,
+        maxLength: s,
         autoComplete: a,
         onKeyPress: this.handleKeyPress,
         onChange: this.handleChange,
@@ -93,7 +93,7 @@ super(...e), c(this, 'inputRef', a.createRef()), c(this, 'state', {
     lastGoodValue: e.currentTarget.value
   }), null == t || t(e);
 }), c(this, 'handleBlur', e => {
-  if (u('', this.props, this.state)) {
+  if (d('', this.props, this.state)) {
     this.setState({
       focused: !1
     });
@@ -115,7 +115,7 @@ super(...e), c(this, 'inputRef', a.createRef()), c(this, 'state', {
   }
 }
 
-function u() {
+function d() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : '',
 t = arguments.length > 1 ? arguments[1] : void 0,
 n = arguments.length > 2 ? arguments[2] : void 0,

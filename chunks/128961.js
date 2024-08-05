@@ -42,11 +42,11 @@ t.Z = {
   p: r,
   P: function(e, t) {
 var i, a = e.match(/(P+)(p+)?/) || [],
-  o = a[1],
-  s = a[2];
-if (!s)
+  s = a[1],
+  o = a[2];
+if (!o)
   return n(e, t);
-switch (o) {
+switch (s) {
   case 'P':
     i = t.dateTime({
       width: 'short'
@@ -67,6 +67,6 @@ switch (o) {
       width: 'full'
     });
 }
-return i.replace('{{date}}', n(o, t)).replace('{{time}}', r(s, t));
+return i.replace('{{date}}', n(s, t)).replace('{{time}}', r(o, t));
   }
 };

@@ -21,8 +21,8 @@ return A;
 var r = n(570140),
   i = n(367907),
   a = n(703656),
-  o = n(592125),
-  s = n(984933),
+  s = n(592125),
+  o = n(984933),
   l = n(271383),
   u = n(430824),
   c = n(496675),
@@ -71,9 +71,9 @@ guildId: e
 
 function S(e) {
   let t = d.Z.getChannelId(e),
-n = o.Z.getChannel(t);
+n = s.Z.getChannel(t);
   if (!(null != t && (0, m.AB)(t)) && !c.Z.can(p.Plq.VIEW_CHANNEL, n)) {
-let t = s.ZP.getDefaultChannel(e);
+let t = o.ZP.getDefaultChannel(e);
 null != t && (0, a.uL)(p.Z5c.CHANNEL(e, t.id));
   }
 }
@@ -90,19 +90,19 @@ function N(e, t) {
   let n = u.Z.getRoles(e);
   ! function(e, t) {
 let n = [
-    ...s.ZP.getSelectableChannelIds(e),
-    ...s.ZP.getVocalChannelIds(e)
+    ...o.ZP.getSelectableChannelIds(e),
+    ...o.ZP.getVocalChannelIds(e)
   ],
   r = Array.from(t);
-s.ZP.addConditionalChangeListener(() => {
+o.ZP.addConditionalChangeListener(() => {
   let t = l.ZP.getSelfMember(e);
   if (null == t)
     return !1;
   if (r.some(e => !t.roles.includes(e)))
     return !0;
   let i = [
-    ...s.ZP.getSelectableChannelIds(e),
-    ...s.ZP.getVocalChannelIds(e)
+    ...o.ZP.getSelectableChannelIds(e),
+    ...o.ZP.getVocalChannelIds(e)
   ].filter(e => !n.includes(e));
   return i.length > 0 && A(e, i, []), !1;
 });

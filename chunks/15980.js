@@ -8,6 +8,9 @@ class E extends(n = o.ZP.Store) {
   hasFetchedCredentials() {
 return d;
   }
+  get hasCredentials() {
+return _.length > 0;
+  }
   getCredentials() {
 return _;
   }

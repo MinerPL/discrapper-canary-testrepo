@@ -1,43 +1,43 @@
 t.r(n), t.d(n, {
   default: function() {
-return h;
+return f;
   }
 });
 var r = t(735250),
   l = t(470079),
   a = t(442837),
   o = t(481060),
-  i = t(668274),
+  c = t(668274),
+  i = t(241209),
   s = t(807693),
-  c = t(285952),
-  u = t(729035),
+  u = t(285952),
   d = t(689938),
-  f = t(559318);
+  h = t(559318);
 
-function h(e) {
+function f(e) {
   var n;
   let {
 eulaId: t,
-transitionState: h,
+transitionState: f,
 onClose: p
   } = e, g = (0, a.e7)([s.Z], () => s.Z.getEULA(t));
   l.useEffect(() => {
-(0, i.N)(t);
+(0, c.N)(t);
   }, [t]);
   let m = null !== (n = null == g ? void 0 : g.name) && void 0 !== n ? n : d.Z.Messages.LOADING,
-b = null != g ? (0, r.jsx)(u.Z, {
+b = null != g ? (0, r.jsx)(i.Z, {
   children: g.content,
-  className: f.markdown
+  className: h.markdown
 }) : (0, r.jsx)(o.Spinner, {
-  className: f.spinner
+  className: h.spinner
 });
   return (0, r.jsxs)(o.ModalRoot, {
-transitionState: h,
+transitionState: f,
 size: o.ModalSize.SMALL,
 'aria-label': m,
 children: [
   (0, r.jsxs)(o.ModalHeader, {
-    justify: c.Z.Justify.BETWEEN,
+    justify: u.Z.Justify.BETWEEN,
     children: [
       (0, r.jsx)(o.Heading, {
         variant: 'heading-lg/semibold',

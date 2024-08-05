@@ -1,4 +1,4 @@
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(592125);
 let c = {};
@@ -17,7 +17,7 @@ results: null
   };
   return c[e] = n, n;
 }
-class E extends(o = s.ZP.Store) {
+class E extends(s = o.ZP.Store) {
   getSearchQuery(e) {
 let t = c[e];
 return null == t ? void 0 : t.query;

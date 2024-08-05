@@ -21,9 +21,9 @@ return R;
 var r = n(599295),
   i = n(634450),
   a = n(115953),
-  o = n(568895);
+  s = n(568895);
 
-function s(e) {
+function o(e) {
   return '/' === e.charAt(0) ? e : '/' + e;
 }
 
@@ -49,24 +49,24 @@ i = t || '/';
 }
 
 function _(e, t, n, a) {
-  var o, s, l, u, c, d;
+  var s, o, l, u, c, d;
   if ('string' == typeof e) {
 ;
-l = '', u = '', -1 !== (c = (s = e || '/').indexOf('#')) && (u = s.substr(c), s = s.substr(0, c)), -1 !== (d = s.indexOf('?')) && (l = s.substr(d), s = s.substr(0, d)), (o = {
-  pathname: s,
+l = '', u = '', -1 !== (c = (o = e || '/').indexOf('#')) && (u = o.substr(c), o = o.substr(0, c)), -1 !== (d = o.indexOf('?')) && (l = o.substr(d), o = o.substr(0, d)), (s = {
+  pathname: o,
   search: '?' === l ? '' : l,
   hash: '#' === u ? '' : u
 }).state = t;
   } else
-void 0 === (o = (0, r.Z)({}, e)).pathname && (o.pathname = ''), o.search ? '?' !== o.search.charAt(0) && (o.search = '?' + o.search) : o.search = '', o.hash ? '#' !== o.hash.charAt(0) && (o.hash = '#' + o.hash) : o.hash = '', void 0 !== t && void 0 === o.state && (o.state = t);
+void 0 === (s = (0, r.Z)({}, e)).pathname && (s.pathname = ''), s.search ? '?' !== s.search.charAt(0) && (s.search = '?' + s.search) : s.search = '', s.hash ? '#' !== s.hash.charAt(0) && (s.hash = '#' + s.hash) : s.hash = '', void 0 !== t && void 0 === s.state && (s.state = t);
   try {
-o.pathname = decodeURI(o.pathname);
+s.pathname = decodeURI(s.pathname);
   } catch (e) {
 if (e instanceof URIError)
-  throw URIError('Pathname "' + o.pathname + '" could not be decoded. This is likely caused by an invalid percent-encoding.');
+  throw URIError('Pathname "' + s.pathname + '" could not be decoded. This is likely caused by an invalid percent-encoding.');
 throw e;
   }
-  return n && (o.key = n), a ? o.pathname ? '/' !== o.pathname.charAt(0) && (o.pathname = (0, i.default)(o.pathname, a.pathname)) : o.pathname = a.pathname : !o.pathname && (o.pathname = '/'), o;
+  return n && (s.key = n), a ? s.pathname ? '/' !== s.pathname.charAt(0) && (s.pathname = (0, i.default)(s.pathname, a.pathname)) : s.pathname = a.pathname : !s.pathname && (s.pathname = '/'), s;
 }
 
 function E(e, t) {
@@ -129,7 +129,7 @@ return {};
 }
 
 function g(e) {
-  void 0 === e && (e = {}), h || (0, o.Z)(!1);
+  void 0 === e && (e = {}), h || (0, s.Z)(!1);
   var t, n = window.history;
   var i = (-1 === (t = window.navigator.userAgent).indexOf('Android 2.') && -1 === t.indexOf('Android 4.0') || -1 === t.indexOf('Mobile Safari') || -1 !== t.indexOf('Chrome') || -1 !== t.indexOf('Windows Phone')) && window.history && 'pushState' in window.history,
 a = -1 !== window.navigator.userAgent.indexOf('Trident'),
@@ -140,7 +140,7 @@ S = l.getUserConfirmation,
 A = void 0 === S ? p : S,
 N = l.keyLength,
 v = void 0 === N ? 6 : N,
-O = e.basename ? c(s(e.basename)) : '';
+O = e.basename ? c(o(e.basename)) : '';
 
   function R(e) {
 var t = e || {},
@@ -213,12 +213,12 @@ V = {
     y.confirmTransitionTo(a, r, A, function(e) {
       if (e) {
         var t = x(a),
-          o = a.key,
-          s = a.state;
+          s = a.key,
+          o = a.state;
         if (i) {
           if (n.pushState({
-              key: o,
-              state: s
+              key: s,
+              state: o
             }, null, t), g)
             window.location.href = t;
           else {
@@ -240,12 +240,12 @@ V = {
     y.confirmTransitionTo(a, r, A, function(e) {
       if (e) {
         var t = x(a),
-          o = a.key,
-          s = a.state;
+          s = a.key,
+          o = a.state;
         if (i) {
           if (n.replaceState({
-              key: o,
-              state: s
+              key: s,
+              state: o
             }, null, t), g)
             window.location.replace(t);
           else {
@@ -297,11 +297,11 @@ hashbang: {
 },
 noslash: {
   encodePath: l,
-  decodePath: s
+  decodePath: o
 },
 slash: {
-  encodePath: s,
-  decodePath: s
+  encodePath: o,
+  decodePath: o
 }
   };
 
@@ -321,14 +321,14 @@ function O(e) {
 }
 
 function R(e) {
-  void 0 === e && (e = {}), h || (0, o.Z)(!1);
+  void 0 === e && (e = {}), h || (0, s.Z)(!1);
   var t = window.history;
   window.navigator.userAgent.indexOf('Firefox');
   var n = e,
 i = n.getUserConfirmation,
 a = void 0 === i ? p : i,
 l = n.hashType,
-E = e.basename ? c(s(e.basename)) : '',
+E = e.basename ? c(o(e.basename)) : '',
 m = A[void 0 === l ? 'slash' : l],
 I = m.encodePath,
 T = m.decodePath;
@@ -352,8 +352,8 @@ if (e !== t)
   O(t);
 else {
   var n, r, i = g(),
-    o = B.location;
-  if (!y && (n = o, r = i, n.pathname === r.pathname && n.search === r.search && n.hash === r.hash) || D === d(i))
+    s = B.location;
+  if (!y && (n = s, r = i, n.pathname === r.pathname && n.search === r.search && n.hash === r.hash) || D === d(i))
     return;
   D = null,
     function(e) {
@@ -407,9 +407,9 @@ B = {
           i = I(E + t);
         if (v() !== i) {
           D = t, a = i, window.location.hash = a;
-          var a, o = U.lastIndexOf(d(B.location)),
-            s = U.slice(0, o + 1);
-          s.push(t), U = s, C({
+          var a, s = U.lastIndexOf(d(B.location)),
+            o = U.slice(0, s + 1);
+          o.push(t), U = o, C({
             action: n,
             location: r
           });
@@ -470,9 +470,9 @@ function y(e) {
 n = t.getUserConfirmation,
 i = t.initialEntries,
 a = void 0 === i ? ['/'] : i,
-o = t.initialIndex,
-s = t.keyLength,
-l = void 0 === s ? 6 : s,
+s = t.initialIndex,
+o = t.keyLength,
+l = void 0 === o ? 6 : o,
 u = f();
 
   function c(e) {
@@ -482,7 +482,7 @@ u = f();
   function E() {
 return Math.random().toString(36).substr(2, l);
   }
-  var h = C(void 0 === o ? 0 : o, 0, a.length - 1),
+  var h = C(void 0 === s ? 0 : s, 0, a.length - 1),
 p = a.map(function(e) {
   return 'string' == typeof e ? _(e, void 0, E()) : _(e, void 0, e.key || E());
 });

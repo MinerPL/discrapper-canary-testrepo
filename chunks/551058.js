@@ -1,8 +1,8 @@
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  o = n(481060),
   l = n(503594);
 let u = i.memo(function(e) {
   let {
@@ -14,11 +14,11 @@ onClick: u,
 'aria-label': c
   } = e;
   return (0, r.jsx)('div', {
-className: o()(l.wrapper, n),
-children: (0, r.jsxs)(s.Clickable, {
+className: s()(l.wrapper, n),
+children: (0, r.jsxs)(o.Clickable, {
   onClick: u,
   onKeyDown: e => e.stopPropagation(),
-  className: o()(l.header, {
+  className: s()(l.header, {
     [l.interactive]: null != a
   }),
   'aria-expanded': null != a ? !a : void 0,
@@ -33,10 +33,10 @@ children: (0, r.jsxs)(s.Clickable, {
       className: l.headerLabel,
       children: t
     }),
-    null != a ? (0, r.jsx)(s.ChevronSmallDownIcon, {
+    null != a ? (0, r.jsx)(o.ChevronSmallDownIcon, {
       size: 'custom',
       color: 'currentColor',
-      className: o()(l.headerCollapseIcon, {
+      className: s()(l.headerCollapseIcon, {
         [l.headerCollapseIconCollapsed]: a
       }),
       height: 16,

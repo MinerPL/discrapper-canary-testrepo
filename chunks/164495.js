@@ -1,54 +1,54 @@
 n.d(t, {
   y: function() {
-return h;
+return C;
   }
 });
-var s = n(735250),
-  o = n(470079),
-  r = n(481060),
-  a = n(617136),
-  i = n(113434),
+var s = n(735250);
+n(470079);
+var o = n(481060),
+  r = n(617136),
+  a = n(113434),
   l = n(497505),
-  c = n(918701),
-  d = n(796111),
-  u = n(667105),
-  p = n(46140),
-  x = n(689938),
+  i = n(918701),
+  c = n(796111),
+  d = n(667105),
+  u = n(46140),
+  p = n(689938),
   m = n(941624);
-let g = e => {
+let x = e => {
 let {
   quest: t
 } = e;
 return (0, s.jsx)('div', {
   className: m.ctaContainer,
-  children: (0, s.jsx)(r.Button, {
+  children: (0, s.jsx)(o.Button, {
     className: m.flex,
-    size: r.Button.Sizes.SMALL,
-    onClick: () => (0, c.FE)(t, {
+    size: o.Button.Sizes.SMALL,
+    onClick: () => (0, i.FE)(t, {
       content: l.jn.QUEST_BAR_V2,
-      ctaContent: a.jZ.OPEN_GAME_LINK
+      ctaContent: r.jZ.OPEN_GAME_LINK
     }),
-    children: x.Z.Messages.QUESTS_GET_THIS_GAME
+    children: p.Z.Messages.QUESTS_GET_THIS_GAME
   })
 });
   },
-  C = e => {
+  g = e => {
 let {
   quest: t
 } = e;
 return (0, s.jsx)('div', {
   className: m.ctaContainer,
-  children: (0, s.jsx)(r.Button, {
+  children: (0, s.jsx)(o.Button, {
     fullWidth: !0,
-    onClick: () => (0, c.gI)({
+    onClick: () => (0, i.gI)({
       quest: t,
       showInline: !1
     }, {
       content: l.jn.QUEST_BAR_V2,
-      ctaContent: a.jZ.CONNECT_CONSOLE
+      ctaContent: r.jZ.CONNECT_CONSOLE
     }),
-    size: r.Button.Sizes.SMALL,
-    children: x.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CTA
+    size: o.Button.Sizes.SMALL,
+    children: p.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CTA
   })
 });
   },
@@ -56,63 +56,47 @@ return (0, s.jsx)('div', {
 let {
   quest: t,
   useReducedMotion: n,
-  isExpanded: o
-} = e, a = (0, u.hf)({
+  isExpanded: r
+} = e, a = (0, d.hf)({
   quest: t,
   location: l.jn.QUEST_BAR_V2
 });
 return (0, s.jsx)('div', {
   className: m.ctaContainer,
-  children: (0, s.jsx)(r.ShinyButton, {
+  children: (0, s.jsx)(o.ShinyButton, {
     fullWidth: !0,
-    size: r.Button.Sizes.SMALL,
+    size: o.Button.Sizes.SMALL,
     onClick: a,
-    pauseAnimation: n || !o,
+    pauseAnimation: n || !r,
     buttonShineClassName: m.shine,
-    children: x.Z.Messages.QUESTS_CLAIM_REWARD
+    children: p.Z.Messages.QUESTS_CLAIM_REWARD
   })
 });
   },
-  _ = e => {
-let {
-  quest: t
-} = e, {
-  xboxAndPlaystationAccounts: n
-} = (0, i.z6)(), s = (0, d.P)({
-  location: p.dr.QUESTS_BAR
-});
-return o.useMemo(() => {
-  let e = (0, c.$J)(t),
-    o = 0 === n.length;
-  return e && o && !s;
-}, [
-  t,
-  n,
-  s
-]);
-  },
-  h = e => {
+  C = e => {
 var t;
 let {
   quest: n,
   useReducedMotion: o,
   isExpanded: r,
-  hasMadeProgress: a
-} = e, l = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, d = _({
+  hasMadeProgress: l
+} = e, d = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, p = (0, a._s)({
   quest: n
-}), u = (0, i.z)(n);
-if (l)
+}), m = (0, c.P)({
+  location: u.dr.QUESTS_BAR
+}), C = (0, a.z)(n);
+if (d)
   return (0, s.jsx)(f, {
     quest: n,
     useReducedMotion: o,
     isExpanded: r
   });
-if (d)
-  return (0, s.jsx)(C, {
+if (p && !m)
+  return (0, s.jsx)(g, {
     quest: n
   });
-if (!a && !u && !(0, c.zK)(n, p.S7.IN_HOUSE_CONSOLE_QUEST))
-  return (0, s.jsx)(g, {
+if (!l && !C && !(0, i.zK)(n, u.S7.IN_HOUSE_CONSOLE_QUEST))
+  return (0, s.jsx)(x, {
     quest: n
   });
 return null;

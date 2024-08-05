@@ -42,8 +42,8 @@ return P;
 var r = n(149765),
   i = n(911969),
   a = n(90463),
-  o = n(968358),
-  s = n(874748),
+  s = n(968358),
+  o = n(874748),
   l = n(590415),
   u = n(131704),
   c = n(592125),
@@ -78,20 +78,20 @@ allow: i
 
 function O(e, t, n) {
   let a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-o = [];
+s = [];
   if (n.length > 0 || a) {
-var s, l, c;
+var o, l, c;
 let n;
-o.push((s = e, l = t, c = i.BN.ROLE, n = h.Hn, ((0, u.r8)(l) || l === S) && (n = r.IH(n, m.Plq.VIEW_CHANNEL)), N(l, g) && (n = r.IH(n, m.Plq.VIEW_CHANNEL), n = r.IH(n, m.Plq.CONNECT)), {
-  id: s,
+s.push((o = e, l = t, c = i.BN.ROLE, n = h.Hn, ((0, u.r8)(l) || l === S) && (n = r.IH(n, m.Plq.VIEW_CHANNEL)), N(l, g) && (n = r.IH(n, m.Plq.VIEW_CHANNEL), n = r.IH(n, m.Plq.CONNECT)), {
+  id: o,
   type: c,
   allow: h.Hn,
   deny: n
 }));
   }
   return n.forEach(e => {
-o.push(v(e, t, i.BN.ROLE));
-  }), o;
+s.push(v(e, t, i.BN.ROLE));
+  }), s;
 }
 
 function R(e, t) {
@@ -114,14 +114,14 @@ allow: h.Hn
 function D(e, t, n) {
   var r, i;
   let a = e.getGuildId(),
-s = n.getGuild(a),
-l = null !== (r = null == s ? void 0 : s.maxVideoChannelUsers) && void 0 !== r ? r : -1,
-u = null !== (i = null == s ? void 0 : s.maxStageVideoChannelUsers) && void 0 !== i ? i : -1,
+o = n.getGuild(a),
+l = null !== (r = null == o ? void 0 : o.maxVideoChannelUsers) && void 0 !== r ? r : -1,
+u = null !== (i = null == o ? void 0 : o.maxStageVideoChannelUsers) && void 0 !== i ? i : -1,
 c = f.ZP.countVoiceStatesForChannel(e.id),
 d = f.ZP.getVoiceStatesForChannel(e),
 E = _.Z.can(m.Plq.MOVE_MEMBERS, e) && _.Z.can(m.Plq.CONNECT, e),
 h = !1;
-  h = e.type === A ? null != a && (t.hasVideo(e.id) || (0, o.a)(d)) && u > 0 && c >= u : null != a && t.hasVideo(e.id) && l > 0 && c >= l + (E ? 1 : 0);
+  h = e.type === A ? null != a && (t.hasVideo(e.id) || (0, s.a)(d)) && u > 0 && c >= u : null != a && t.hasVideo(e.id) && l > 0 && c >= l + (E ? 1 : 0);
   let p = e.userLimit > 0 && c >= e.userLimit;
   return h || p && !E;
 }
@@ -227,8 +227,8 @@ function w(e, t, n, r) {
 function x(e, t, n, r) {
   let i;
   let a = e.getGuildId(),
-o = (0, s.BC)(a, t);
-  if (null != t && o) {
+s = (0, o.BC)(a, t);
+  if (null != t && s) {
 var l, u, c, d;
 l = a, u = t.id, c = e.id, d = p.default.castChannelIdAsMessageId(e.id), i = null == l || null == u || null == c ? w(l, u, d) : ''.concat(location.protocol, '//').concat(location.host).concat(m.Z5c.CHANNEL_THREAD_VIEW(l, u, c, d));
   } else

@@ -19,9 +19,9 @@ e.exports = {
   overflowEllipsis: 'overflowEllipsis_f8e03e',
   bullet: 'bullet_f8e03e',
   subListItem: 'subListItem_f8e03e',
-  timestamp: 'timestamp_f8e03e',
   meta: 'meta_f8e03e',
   tag: 'tag_f8e03e',
   tagString: 'tagString_f8e03e',
-  accentRed: 'accentRed_f8e03e'
+  accentRed: 'accentRed_f8e03e',
+  timestamp: 'timestamp_f8e03e'
 };

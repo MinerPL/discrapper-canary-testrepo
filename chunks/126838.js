@@ -1,8 +1,8 @@
 e.exports = function(e, t, n, r, i) {
   this.directMap[e + ':' + n] = t;
-  var a, o = (e = e.replace(/\s+/g, ' ')).split(' ');
-  if (o.length > 1) {
-this.bindSequence(e, o, t, n);
+  var a, s = (e = e.replace(/\s+/g, ' ')).split(' ');
+  if (s.length > 1) {
+this.bindSequence(e, s, t, n);
 return;
   }
   a = this.getKeyInfo(e, n), this.callbacks[a.key] = this.callbacks[a.key] || [], this.getMatches(a.key, a.modifiers, {

@@ -1,9 +1,9 @@
 n(47120);
-var i, a, l, s, r = n(873546),
+var i, a, s, l, r = n(873546),
   o = n(442837),
   c = n(570140),
-  d = n(38618),
-  u = n(268967),
+  u = n(38618),
+  d = n(268967),
   h = n(188785);
 let p = {},
   m = {},
@@ -11,13 +11,13 @@ let p = {},
   f = {},
   E = !1;
 
-function C() {
-  return u.Z;
+function g() {
+  return d.Z;
 }
 
-function g() {
+function C() {
   if (f = {}, !_)
-for (let [e, t] of Object.entries(u.Z)) {
+for (let [e, t] of Object.entries(d.Z)) {
   let n = !1 !== p[e];
   if (f[e] = n, n && null != t.prerequisites)
     for (let n of t.prerequisites)
@@ -26,7 +26,7 @@ for (let [e, t] of Object.entries(u.Z)) {
 }
 class I extends(i = o.ZP.Store) {
   initialize() {
-g(), this.mustEmitChanges(e => 'CONNECTION_OPEN' !== e.type), this.waitFor(d.Z);
+C(), this.mustEmitChanges(e => 'CONNECTION_OPEN' !== e.type), this.waitFor(u.Z);
   }
   shouldShow(e) {
 var t;
@@ -42,24 +42,24 @@ return !_;
 return m;
   }
   getData() {
-return u.Z;
+return d.Z;
   }
   getDefinition(e) {
 let t = this.getData();
 return null != t ? t[e] : null;
   }
 }
-s = 'TutorialIndicatorStore', (l = 'displayName') in(a = I) ? Object.defineProperty(a, l, {
-  value: s,
+l = 'TutorialIndicatorStore', (s = 'displayName') in(a = I) ? Object.defineProperty(a, s, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = s, t.Z = new I(c.Z, {
+}) : a[s] = l, t.Z = new I(c.Z, {
   CONNECTION_OPEN: function(e) {
 let {
   tutorial: t
 } = e;
-E = !0, _ = !0, p = {}, null != t && (_ = t.indicators_suppressed, t.indicators_confirmed.forEach(e => p[e] = !1)), g();
+E = !0, _ = !0, p = {}, null != t && (_ = t.indicators_suppressed, t.indicators_confirmed.forEach(e => p[e] = !1)), C();
   },
   CONNECTION_CLOSED: function() {
 E = !1;
@@ -70,7 +70,7 @@ p = {
   [e.tutorialId]: !1
 }, m = {
   ...m
-}, delete m[e.tutorialId], g();
+}, delete m[e.tutorialId], C();
   },
   TUTORIAL_INDICATOR_SHOW: function(e) {
 m = {

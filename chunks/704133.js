@@ -2,7 +2,7 @@ var r = n(735250);
 n(470079);
 var i = n(433517),
   a = n(481060),
-  o = n(358085);
+  s = n(358085);
 t.Z = {
   show(e) {
 (0, a.openModalLazy)(async () => {
@@ -16,13 +16,13 @@ t.Z = {
 });
   },
   getBlockedDomains() {
-if ((0, o.isDesktop)()) {
+if ((0, s.isDesktop)()) {
   let e = i.K.get('BlockedDomainsV2');
   return Promise.resolve(null == e ? [] : e.split('\n'));
 }
 return Promise.resolve([]);
   },
   saveBlockedDomains(e) {
-(0, o.isDesktop)() && i.K.set('BlockedDomainsV2', e.join('\n'));
+(0, s.isDesktop)() && i.K.set('BlockedDomainsV2', e.join('\n'));
   }
 };

@@ -21,18 +21,18 @@ return p;
 var r = n(921738),
   i = n.n(r),
   a = n(392711),
-  o = n.n(a),
-  s = n(714338),
+  s = n.n(a),
+  o = n(714338),
   l = n(823379),
   u = n(358085),
   c = n(981631);
 let d = (0, u.isLinux)() ? c.HsE : (0, u.isMac)() ? c.REU : (0, u.isWindows)() ? c.iC$ : void 0,
-  _ = o().invert(c.HsE);
+  _ = s().invert(c.HsE);
 _['223'] = '`', Object.freeze(_);
-let E = Object.freeze(o().invert(c.REU)),
-  f = o().invert(c.iC$);
+let E = Object.freeze(s().invert(c.REU)),
+  f = s().invert(c.iC$);
 f['223'] = '`', Object.freeze(f);
-let h = o().invert(null != d ? d : {});
+let h = s().invert(null != d ? d : {});
 
 function p() {
   if ((0, u.isLinux)())
@@ -221,7 +221,7 @@ if (A.test(r))
 function v(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p(),
 n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.MoX.KEYBOARD_KEY;
-  return e.replace(/numpad plus/i, '').replace(/NUMPAD \+/i, 'numpad plus').replace(/mod/i, s.Z.modKey).split('+').map(e => e.trim().replace('plus', '+')).reduce((e, r) => {
+  return e.replace(/numpad plus/i, '').replace(/NUMPAD \+/i, 'numpad plus').replace(/mod/i, o.Z.modKey).split('+').map(e => e.trim().replace('plus', '+')).reduce((e, r) => {
 let i = I(S(r), t, n);
 return null != i && e.push([
   n,

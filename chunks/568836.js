@@ -3,7 +3,7 @@ n.d(t, {
 return c;
   },
   OR: function() {
-return d;
+return u;
   },
   aL: function() {
 return o;
@@ -11,28 +11,28 @@ return o;
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-  s = n.n(a),
+var s = n(120356),
+  a = n.n(s),
   r = n(345898),
   l = n(322356);
 let o = 660,
   c = e => (0, i.jsx)(r.Z, {
 ...e,
-className: s()(e.className, {
+className: a()(e.className, {
   [l.embedVertical]: !e.isHorizontal,
   [l.embedHorizontal]: e.isHorizontal
 })
   }),
-  d = e => {
+  u = e => {
 let {
   isHorizontal: t
 } = e;
 return (0, i.jsx)(c, {
   ...e,
   media: () => (0, i.jsx)('div', {
-    className: s()(l.loadingDescription),
+    className: a()(l.loadingDescription),
     children: (0, i.jsx)('div', {
-      className: s()(l.loadingBackgroundWrapper, {
+      className: a()(l.loadingBackgroundWrapper, {
         [l.loadingBackgroundWrapperHorizontal]: t
       }),
       children: (0, i.jsx)('div', {
@@ -41,7 +41,7 @@ return (0, i.jsx)(c, {
     })
   }),
   title: () => (0, i.jsx)('div', {
-    className: s()(l.loadingImage, {
+    className: a()(l.loadingImage, {
       [l.loadingImageHorizontal]: t
     })
   })

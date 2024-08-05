@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  o = n(481060),
   l = n(285952),
   u = n(259580),
   c = n(525657);
@@ -21,7 +21,7 @@ let {
 } = this.props, n = e.map(this.renderBreadcrumb);
 return (0, r.jsx)(l.Z, {
   justify: l.Z.Justify.START,
-  className: o()(c.breadcrumbs, t),
+  className: s()(c.breadcrumbs, t),
   children: n
 });
   }
@@ -35,25 +35,25 @@ super(...e), t = this, n = 'renderBreadcrumb', i = (e, t) => {
     renderCustomBreadcrumb: l,
     separatorClassName: d
   } = this.props, _ = e.id === n, E = t === a.length - 1, f = null != l ? l(e, _) : (0, r.jsx)('span', {
-    className: o()(c.breadcrumb, {
+    className: s()(c.breadcrumb, {
       [c.activeBreadcrumb]: _,
       [c.interactiveBreadcrumb]: null != i
     }),
     children: e.label
   });
   return (0, r.jsxs)('div', {
-    className: o()(c.breadcrumbWrapper, {
+    className: s()(c.breadcrumbWrapper, {
       [c.breadcrumbFinalWrapper]: E
     }),
     children: [
-      null != i ? (0, r.jsx)(s.Clickable, {
+      null != i ? (0, r.jsx)(o.Clickable, {
         tag: 'span',
         onClick: () => this.handleClick(e),
         className: c.breadcrumbClickWrapper,
         children: f
       }) : f,
       E ? null : (0, r.jsx)(u.Z, {
-        className: o()(c.breadcrumbArrow, d),
+        className: s()(c.breadcrumbArrow, d),
         direction: u.Z.Directions.RIGHT
       })
     ]

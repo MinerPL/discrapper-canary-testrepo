@@ -8,11 +8,11 @@ n = e.COMMENT('//', '$', {
 r = 'decltype\\(auto\\)',
 i = '[a-zA-Z_]\\w*::',
 a = '(?!struct)(' + r + '|' + t.optional(i) + '[a-zA-Z_]\\w*' + t.optional('<[^<>]+>') + ')',
-o = {
+s = {
   className: 'type',
   begin: '\\b[a-z\\d_]*_t\\b'
 },
-s = {
+o = {
   className: 'string',
   variants: [{
       begin: '(u8?|U|L)?"',
@@ -56,7 +56,7 @@ u = {
       begin: /\\\n/,
       relevance: 0
     },
-    e.inherit(s, {
+    e.inherit(o, {
       className: 'string'
     }),
     {
@@ -359,11 +359,11 @@ E = {
 f = [
   E,
   u,
-  o,
+  s,
   n,
   e.C_BLOCK_COMMENT_MODE,
   l,
-  s
+  o
 ],
 h = {
   variants: [{
@@ -416,7 +416,7 @@ p = {
       begin: /:/,
       endsWithParent: !0,
       contains: [
-        s,
+        o,
         l
       ]
     },
@@ -433,9 +433,9 @@ p = {
       contains: [
         n,
         e.C_BLOCK_COMMENT_MODE,
-        s,
-        l,
         o,
+        l,
+        s,
         {
           begin: /\(/,
           end: /\)/,
@@ -445,14 +445,14 @@ p = {
             'self',
             n,
             e.C_BLOCK_COMMENT_MODE,
-            s,
+            o,
             l,
-            o
+            s
           ]
         }
       ]
     },
-    o,
+    s,
     n,
     e.C_BLOCK_COMMENT_MODE,
     u
@@ -482,7 +482,7 @@ contains: [].concat(h, p, E, f, [
     keywords: _,
     contains: [
       'self',
-      o
+      s
     ]
   },
   {

@@ -1,12 +1,12 @@
 n.d(t, {
   X: function() {
-return o;
+return s;
   }
 });
 var r = n(91641),
   i = n(89805),
   a = n(987338);
-let o = new r.E([
+let s = new r.E([
   i.NR,
   i.ZI,
   i.Ob,

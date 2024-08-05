@@ -1,6 +1,6 @@
 t.d(n, {
   w: function() {
-return d;
+return c;
   }
 }), t(47120), t(653041), t(733860);
 var i = t(470079),
@@ -9,9 +9,9 @@ var i = t(470079),
   l = t(496675),
   o = t(282923),
   r = t(981631),
-  c = t(689938);
+  d = t(689938);
 
-function d(e) {
+function c(e) {
   let n = i.useMemo(() => {
   let n = s.ZP.getChannels(e),
     t = [...n[s.sH]];
@@ -23,11 +23,11 @@ function d(e) {
   }));
   return i.unshift({
     id: (0, a.bD)(e),
-    name: c.Z.Messages.INTEGRATIONS_APPLICATION_ALL_CHANNELS,
+    name: d.Z.Messages.INTEGRATIONS_APPLICATION_ALL_CHANNELS,
     canManage: !0
   }), i;
 }, [e]),
-[t, d] = i.useState(''),
+[t, c] = i.useState(''),
 I = i.useMemo(() => {
   let e = function(e) {
     return e.startsWith('#') ? e.substr(1) : e;
@@ -40,7 +40,7 @@ I = i.useMemo(() => {
   return {
 query: t,
 results: I,
-setQuery: d,
+setQuery: c,
 unfilteredCount: n.length
   };
 }

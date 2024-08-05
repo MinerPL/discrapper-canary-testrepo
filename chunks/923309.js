@@ -39,21 +39,21 @@ a = {
     t
   ]
 },
-o = {
+s = {
   begin: /\{/,
   end: /\}/,
   contains: a.contains
 },
-s = '([0-9]_*)+',
+o = '([0-9]_*)+',
 l = '([0-9a-fA-F]_*)+',
 u = {
   className: 'number',
   relevance: 0,
   variants: [{
-      match: `\\b(${ s })(\\.(${ s }))?([eE][+-]?(${ s }))?\\b`
+      match: `\\b(${ o })(\\.(${ o }))?([eE][+-]?(${ o }))?\\b`
     },
     {
-      match: `\\b0[xX]_*(${ l })(\\.(${ l }))?([pP][+-]?(${ s }))?\\b`
+      match: `\\b0[xX]_*(${ l })(\\.(${ l }))?([pP][+-]?(${ o }))?\\b`
     },
     {
       match: '\\b0[oO](([0-7]_*)+)\\b'
@@ -107,7 +107,7 @@ contains: [{
       n,
       i,
       a,
-      o,
+      s,
       t
     ]
   },

@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var s = n(120356),
-  a = n.n(s),
+var a = n(120356),
+  s = n.n(a),
   r = n(166742);
 let l = () => (0, i.jsx)('div', {
 className: r.spacer
@@ -33,7 +33,7 @@ t.Z = e => {
 withBannerPadding: t
   } = e;
   return (0, i.jsxs)('div', {
-className: a()(r.container, {
+className: s()(r.container, {
   [r.bannerPadding]: t
 }),
 children: [

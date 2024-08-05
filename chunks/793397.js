@@ -1,6 +1,6 @@
 n.d(t, {
   Ae: function() {
-return s;
+return o;
   },
   Wo: function() {
 return l;
@@ -9,13 +9,13 @@ return l;
 return c;
   },
   zW: function() {
-return o;
+return s;
   }
 }), n(627341);
 var r = n(278074),
   i = n(228168),
   a = n(704776);
-let o = e => t => {
+let s = e => t => {
 if (t.hasBanner || t.hasProfileEffect)
   return e.premiumUserWithBanner;
 if (t.isPremium) {
@@ -24,24 +24,24 @@ if (t.isPremium) {
 }
 return e.default;
   },
-  s = e => {
+  o = e => {
 let {
   profileType: t,
   user: n
 } = e;
-return (0, r.EQ)(t).with(i.y0.POPOUT, i.y0.POMELO_POPOUT, () => o({
+return (0, r.EQ)(t).with(i.y0.POPOUT, i.y0.POMELO_POPOUT, () => s({
   premiumUserWithBanner: a.popoutBannerPremium,
   premiumUserWithoutBanner: a.popoutNoBannerPremium,
   default: a.popoutBanner
-})(n)).with(i.y0.MODAL, () => o({
+})(n)).with(i.y0.MODAL, () => s({
   premiumUserWithBanner: a.modalBannerPremium,
   premiumUserWithoutBanner: a.modalBanner,
   default: a.modalBanner
-})(n)).with(i.y0.BITE_SIZE, () => o({
+})(n)).with(i.y0.BITE_SIZE, () => s({
   premiumUserWithBanner: a.biteSizeBannerPremium,
   premiumUserWithoutBanner: a.biteSizeBanner,
   default: a.biteSizeBanner
-})(n)).with(i.y0.FULL_SIZE, () => o({
+})(n)).with(i.y0.FULL_SIZE, () => s({
   premiumUserWithBanner: a.fullSizeBannerPremium,
   premiumUserWithoutBanner: a.fullSizeBanner,
   default: a.fullSizeBanner
@@ -52,11 +52,11 @@ let {
   profileType: t,
   user: n
 } = e;
-return (0, r.EQ)(t).with(i.y0.POPOUT, () => o({
+return (0, r.EQ)(t).with(i.y0.POPOUT, () => s({
   premiumUserWithBanner: 120,
   premiumUserWithoutBanner: 90,
   default: 60
-})(n)).with(i.y0.MODAL, () => o({
+})(n)).with(i.y0.MODAL, () => s({
   premiumUserWithBanner: 212,
   premiumUserWithoutBanner: 106,
   default: 106

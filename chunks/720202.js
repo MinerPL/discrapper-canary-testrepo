@@ -1,6 +1,6 @@
 n(47120);
-var r, i, a, o, s = n(392711),
-  l = n.n(s),
+var r, i, a, s, o = n(392711),
+  l = n.n(o),
   u = n(442837),
   c = n(570140),
   d = n(601635),
@@ -55,12 +55,12 @@ this.waitFor(_.Z, E.ZP);
 p(e, t);
   }
 }
-o = 'GuildMemberRequesterStore', (a = 'displayName') in(i = g) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'GuildMemberRequesterStore', (a = 'displayName') in(i = g) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new g(c.Z, {
+}) : i[a] = s, t.Z = new g(c.Z, {
   CONNECTION_CLOSED: h,
   CONNECTION_OPEN: h,
   CONNECTION_RESUMED: function() {

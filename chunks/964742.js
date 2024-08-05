@@ -1,6 +1,6 @@
 n.d(t, {
   $T: function() {
-return o;
+return s;
   },
   Bs: function() {
 return l;
@@ -15,12 +15,12 @@ return a;
 return i;
   },
   rp: function() {
-return s;
+return o;
   }
 });
 var r = 'dnd-core/INIT_COORDS',
   i = 'dnd-core/BEGIN_DRAG',
   a = 'dnd-core/PUBLISH_DRAG_SOURCE',
-  o = 'dnd-core/HOVER',
-  s = 'dnd-core/DROP',
+  s = 'dnd-core/HOVER',
+  o = 'dnd-core/DROP',
   l = 'dnd-core/END_DRAG';

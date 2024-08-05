@@ -1,11 +1,11 @@
-a.d(e, {
+s.d(t, {
   P: function() {
 return i;
   }
 });
-var o = a(481060),
-  s = a(689938);
+var n = s(481060),
+  a = s(689938);
 
 function i() {
-  (0, o.showToast)((0, o.createToast)(s.Z.Messages.USER_SETTINGS_UPDATE_FAILURE, o.ToastType.FAILURE));
+  (0, n.showToast)((0, n.createToast)(a.Z.Messages.USER_SETTINGS_UPDATE_FAILURE, n.ToastType.FAILURE));
 }

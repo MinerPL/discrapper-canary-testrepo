@@ -1,8 +1,8 @@
 var r = n(544891),
   i = n(570140),
   a = n(668781),
-  o = n(239091),
-  s = n(881052),
+  s = n(239091),
+  o = n(881052),
   l = n(962086),
   u = n(160404),
   c = n(264229),
@@ -15,12 +15,12 @@ var r = n(544891),
 let m = async (e, t) => {
   let n = null != t ? t : _.Z.getInviteKeyForGuildId(e),
 a = E.default.getCurrentUser(),
-o = !d.ZP.isMember(e, null == a ? void 0 : a.id);
+s = !d.ZP.isMember(e, null == a ? void 0 : a.id);
   try {
 let t = await r.tn.get({
   url: h.ANM.GUILD_MEMBER_VERIFICATION(e),
   query: {
-    with_guild: o,
+    with_guild: s,
     invite_code: null != n ? (0, c.jX)(n) : void 0
   },
   oldFormErrors: !0
@@ -122,7 +122,7 @@ let {
 } = t;
 switch (e) {
   case 429:
-    throw (0, o.Zy)(), a.Z.show({
+    throw (0, s.Zy)(), a.Z.show({
       title: p.Z.Messages.CLAN_APPLICATION_RATE_LIMITED_HEADER,
       body: p.Z.Messages.CLAN_APPLICATION_RATE_LIMITED_BODY,
       confirmText: p.Z.Messages.CLAN_APPLICATION_RATE_LIMITED_BUTTON
@@ -139,7 +139,7 @@ switch (e) {
     var n, c;
     throw {
       ...t,
-      message: null !== (c = (n = new s.Hx(t), n.getAnyErrorMessage())) && void 0 !== c ? c : p.Z.Messages.ERROR_GENERIC_TITLE
+      message: null !== (c = (n = new o.Hx(t), n.getAnyErrorMessage())) && void 0 !== c ? c : p.Z.Messages.ERROR_GENERIC_TITLE
     };
 }
   }
@@ -188,7 +188,7 @@ let {
   guildJoinRequestUser: r,
   reason: i,
   reasonOther: a,
-  responses: o
+  responses: s
 } = e;
 f.default.track(h.rMx.GUILD_MEMBER_APPLICATION_REPORTED, {
   application_id: n.joinRequestId,
@@ -196,7 +196,7 @@ f.default.track(h.rMx.GUILD_MEMBER_APPLICATION_REPORTED, {
   guild_id: t.id,
   reason: i,
   reason_other: a,
-  responses: o
+  responses: s
 });
   }
 };

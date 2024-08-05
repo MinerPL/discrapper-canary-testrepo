@@ -6,9 +6,9 @@ return u;
 var r = n(735250),
   i = n(470079),
   a = n(865427),
-  o = n(853425),
-  s = n(830121);
-let l = RegExp('^' + s.oO.source, s.oO.flags);
+  s = n(853425),
+  o = n(830121);
+let l = RegExp('^' + o.oO.source, o.oO.flags);
 
 function u(e) {
   return {
@@ -18,20 +18,20 @@ parse: (e, t) => ({
   type: 'devLink'
 }),
 react: (e, t, n) => {
-  let s = e.target[0];
-  return (0, a.mG)(s) ? (0, r.jsxs)(r.Fragment, {
+  let o = e.target[0];
+  return (0, a.mG)(o) ? (0, r.jsxs)(r.Fragment, {
     children: [
       (0, r.jsx)('span', {
-        children: s
+        children: o
       }),
       (0, r.jsx)(i.Fragment, {
-        children: (0, r.jsx)(o.Z, {
-          url: s
-        }, s)
+        children: (0, r.jsx)(s.Z, {
+          url: o
+        }, o)
       }, n.key)
     ]
   }) : (0, r.jsx)('span', {
-    children: s
+    children: o
   });
 },
 order: 6

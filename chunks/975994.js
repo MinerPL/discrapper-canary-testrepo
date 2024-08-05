@@ -6,8 +6,8 @@ return q;
 var r = n(235003),
   i = n(385201),
   a = n(875889),
-  o = n(867377),
-  s = n(502651),
+  s = n(867377),
+  o = n(502651),
   l = n(364920),
   u = n(478943),
   c = n(518034),
@@ -54,8 +54,8 @@ function q(e, t) {
   var n, r, i;
   let {
 buttonRef: a,
-popoverRef: o,
-inputRef: s,
+popoverRef: s,
+inputRef: o,
 listBoxRef: l,
 keyboardDelegate: u,
 shouldFocusWrap: c,
@@ -87,7 +87,7 @@ id: h.id
   disallowTypeAhead: !0,
   disallowEmptySelection: !0,
   shouldFocusWrap: c,
-  ref: s,
+  ref: o,
   isVirtualized: !0
 }),
 I = (0, F.tv)(),
@@ -133,7 +133,7 @@ I = (0, F.tv)(),
   }, e.onKeyDown),
   onBlur: n => {
     var r;
-    !(n.relatedTarget === (null == a ? void 0 : a.current) || (null === (r = o.current) || void 0 === r ? void 0 : r.contains(n.relatedTarget))) && (e.onBlur && e.onBlur(n), t.setFocused(!1));
+    !(n.relatedTarget === (null == a ? void 0 : a.current) || (null === (r = s.current) || void 0 === r ? void 0 : r.contains(n.relatedTarget))) && (e.onBlur && e.onBlur(n), t.setFocused(!1));
   },
   value: t.inputValue,
   onFocus: n => {
@@ -142,7 +142,7 @@ I = (0, F.tv)(),
   autoComplete: 'off',
   validate: void 0,
   [Y.tL]: t
-}, s),
+}, o),
 R = (0, F.bE)({
   id: f.id,
   'aria-label': E.format('buttonLabel'),
@@ -201,13 +201,13 @@ q.current = t.selectedKey;
   }), (0, V.useEffect)(() => {
 if (t.isOpen)
   return (0, k.RP)([
-    s.current,
-    o.current
+    o.current,
+    s.current
   ]);
   }, [
 t.isOpen,
-s,
-o
+o,
+s
   ]), {
 labelProps: A,
 buttonProps: {
@@ -215,10 +215,10 @@ buttonProps: {
   ...R,
   excludeFromTabOrder: !0,
   onPress: e => {
-    'touch' === e.pointerType && (s.current.focus(), t.toggle(null, 'manual'));
+    'touch' === e.pointerType && (o.current.focus(), t.toggle(null, 'manual'));
   },
   onPressStart: e => {
-    'touch' !== e.pointerType && (s.current.focus(), t.toggle('keyboard' === e.pointerType || 'virtual' === e.pointerType ? 'first' : null, 'manual'));
+    'touch' !== e.pointerType && (o.current.focus(), t.toggle('keyboard' === e.pointerType || 'virtual' === e.pointerType ? 'first' : null, 'manual'));
   },
   isDisabled: _ || d
 },
@@ -232,14 +232,14 @@ inputProps: (0, F.dG)(N, {
     if (_ || d)
       return;
     if (e.timeStamp - y.current < 500) {
-      e.preventDefault(), s.current.focus();
+      e.preventDefault(), o.current.focus();
       return;
     }
     let n = e.target.getBoundingClientRect(),
       r = e.changedTouches[0],
       i = Math.ceil(n.left + 0.5 * n.width),
       a = Math.ceil(n.top + 0.5 * n.height);
-    r.clientX === i && r.clientY === a && (e.preventDefault(), s.current.focus(), t.toggle(null, 'manual'), y.current = e.timeStamp);
+    r.clientX === i && r.clientY === a && (e.preventDefault(), o.current.focus(), t.toggle(null, 'manual'), y.current = e.timeStamp);
   },
   autoCorrect: 'off',
   spellCheck: 'false'
@@ -262,8 +262,8 @@ z = {
   'ar-AE': r.Z,
   'bg-BG': i.Z,
   'cs-CZ': a.Z,
-  'da-DK': o.Z,
-  'de-DE': s.Z,
+  'da-DK': s.Z,
+  'de-DE': o.Z,
   'el-GR': l.Z,
   'en-US': u.Z,
   'es-ES': c.Z,

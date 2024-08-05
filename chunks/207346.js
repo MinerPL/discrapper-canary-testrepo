@@ -6,8 +6,8 @@ return d;
 var a = n(735250);
 n(470079);
 var l = n(481060),
-  i = n(547972),
-  s = n(703288),
+  s = n(547972),
+  i = n(703288),
   o = n(332325),
   r = n(689938),
   c = n(257877);
@@ -36,7 +36,7 @@ children: [
   }),
   (0, a.jsx)('div', {
     className: c.betaTag,
-    children: (0, a.jsx)(s.Z, {})
+    children: (0, a.jsx)(i.Z, {})
   }),
   (0, a.jsx)(l.SearchBar, {
     autoFocus: !0,
@@ -69,7 +69,7 @@ children: [
     className: c.settingsButton,
     look: l.Button.Looks.FILLED,
     onClick: () => {
-      (0, i.Z)(o.Z.CLIPS), d();
+      (0, s.Z)(o.Z.CLIPS), d();
     },
     children: (0, a.jsx)(l.SettingsIcon, {
       size: 'md',

@@ -6,8 +6,8 @@ return d;
 var r = n(836560),
   i = n(392711),
   a = n.n(i),
-  o = n(710845),
-  s = n(596956),
+  s = n(710845),
+  o = n(596956),
   l = n(959517);
 
 function u(e, t, n) {
@@ -18,7 +18,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let c = new o.Z('UploaderBase.tsx');
+let c = new s.Z('UploaderBase.tsx');
 class d extends r.EventEmitter {
   _addAttachmentsToPayload(e, t, n) {
 let r = {
@@ -64,11 +64,11 @@ super(), u(this, '_url', void 0), u(this, '_token', ''), u(this, '_cancel', void
   this._cancel = e, !this.alreadyStarted && this.emit('start', this._file), this.alreadyStarted = !0;
 }), u(this, '_handleProgress', (e, t, n) => {
   let r = Date.now(),
-    i = (0, s.S)(e, t),
+    i = (0, o.S)(e, t),
     a = Math.floor((e - this._loaded) / ((r - this._lastUpdate) / 1000));
   if (null != n) {
-    var o;
-    null === (o = this._file.items) || void 0 === o || o.forEach(e => {
+    var s;
+    null === (s = this._file.items) || void 0 === s || s.forEach(e => {
       e.item.progress = n[e.id];
     });
   }

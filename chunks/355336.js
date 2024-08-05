@@ -6,8 +6,8 @@ return c;
 var r = n(735250),
   i = n(470079),
   a = n(803997),
-  o = n.n(a),
-  s = n(84735),
+  s = n.n(a),
+  o = n(84735),
   l = n(780900),
   u = n(506162);
 
@@ -67,7 +67,7 @@ return i.useEffect(() => () => clearTimeout(S.current), []), (0, l.zn)({
   listenerMap: n
 }), (0, r.jsx)('div', {
   ref: O,
-  className: o()(_, {
+  className: s()(_, {
     [u.fade]: m,
     [u.customTheme]: I,
     [e]: !0,
@@ -78,11 +78,11 @@ return i.useEffect(() => () => clearTimeout(S.current), []), (0, l.zn)({
   dir: p,
   onScroll: y,
   ...g,
-  children: (0, r.jsx)(s.J, {
+  children: (0, r.jsx)(o.J, {
     containerRef: A,
     children: (0, r.jsxs)('div', {
       ref: A,
-      className: o()(f, u.content),
+      className: s()(f, u.content),
       children: [
         d,
         N && (0, r.jsx)('div', {

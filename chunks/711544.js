@@ -13,7 +13,7 @@ left: e.left - t.width - n.x
   };
 }
 
-function o(e) {
+function s(e) {
   return [
 r.we,
 r.F2,
@@ -32,7 +32,7 @@ t.Z = {
 var t = e.state,
   n = e.name,
   r = t.rects.reference,
-  s = t.rects.popper,
+  o = t.rects.popper,
   l = t.modifiersData.preventOverflow,
   u = (0, i.Z)(t, {
     elementContext: 'reference'
@@ -41,9 +41,9 @@ var t = e.state,
     altBoundary: !0
   }),
   d = a(u, r),
-  _ = a(c, s, l),
-  E = o(d),
-  f = o(_);
+  _ = a(c, o, l),
+  E = s(d),
+  f = s(_);
 t.modifiersData[n] = {
   referenceClippingOffsets: d,
   popperEscapeOffsets: _,

@@ -1,6 +1,6 @@
 let r, i;
 n(47120), n(724458);
-var a, o, s, l, u = n(392711),
+var a, s, o, l, u = n(392711),
   c = n.n(u),
   d = n(442837),
   _ = n(570140),
@@ -153,19 +153,19 @@ return Object.values(R(A, e)).length > 0;
   }
   getVoicePlatformForChannel(e, t) {
 var n, a;
-let o = null != i && (null === (a = N[r]) || void 0 === a ? void 0 : null === (n = a[i]) || void 0 === n ? void 0 : n.channelId);
-return t === r && e === o ? h.wR.DESKTOP : v[O(t, e)];
+let s = null != i && (null === (a = N[r]) || void 0 === a ? void 0 : null === (n = a[i]) || void 0 === n ? void 0 : n.channelId);
+return t === r && e === s ? h.wR.DESKTOP : v[O(t, e)];
   }
   get userHasBeenMovedVersion() {
 return p;
   }
 }
-l = 'VoiceStateStore', (s = 'displayName') in(o = M) ? Object.defineProperty(o, s, {
+l = 'VoiceStateStore', (o = 'displayName') in(s = M) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[s] = l, t.Z = new M(_.Z, {
+}) : s[o] = l, t.Z = new M(_.Z, {
   CONNECTION_OPEN: function(e) {
 let {
   user: t,

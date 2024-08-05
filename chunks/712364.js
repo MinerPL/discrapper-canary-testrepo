@@ -1,8 +1,8 @@
 n(47120);
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(481060),
   u = n(689938),
   c = n(752915);
@@ -22,7 +22,7 @@ let {
   title: t,
   actionText: n,
   children: r,
-  error: o,
+  error: s,
   isLoading: d,
   maxLength: _,
   transitionState: E,
@@ -41,12 +41,12 @@ let {
     children: r
   })
 }) : null, S = null != h ? (0, i.jsxs)(l.Text, {
-  className: s()(c.__invalid_submitText, c.spacing),
+  className: o()(c.__invalid_submitText, c.spacing),
   variant: 'text-sm/normal',
   children: [
     (0, i.jsx)('br', {}),
     (0, i.jsx)(l.Clickable, {
-      className: s()(c.spacing, c.__invalid_link),
+      className: o()(c.spacing, c.__invalid_link),
       onClick: this.handleRetry,
       children: (0, i.jsx)(l.Anchor, {
         children: h
@@ -100,7 +100,7 @@ return (0, i.jsx)(l.ModalRoot, {
                 color: 'text-danger',
                 variant: 'text-xs/normal',
                 className: c.error,
-                children: null != o ? o : I
+                children: null != s ? s : I
               }) : null,
               S
             ]

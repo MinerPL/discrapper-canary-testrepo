@@ -5,8 +5,8 @@ return p;
 });
 var i = n(735250);
 n(470079);
-var s = n(442837),
-  a = n(704215),
+var a = n(442837),
+  s = n(704215),
   r = n(481060),
   l = n(410575),
   o = n(100527),
@@ -23,7 +23,7 @@ var s = n(442837),
 function p() {
   let {
 analyticsLocations: e
-  } = (0, c.ZP)(o.Z.ACTIVE_NOW_COLUMN), t = (0, s.e7)([_.Z], () => _.Z.hasConsented(I.pjP.PERSONALIZATION)) ? [] : [a.z.NOW_PLAYING_CONSENT_CARD], n = (0, h.Dt)();
+  } = (0, c.ZP)(o.Z.ACTIVE_NOW_COLUMN), t = (0, a.e7)([_.Z], () => _.Z.hasConsented(I.pjP.PERSONALIZATION)) ? [] : [s.z.NOW_PLAYING_CONSENT_CARD], n = (0, h.Dt)();
   return (0, i.jsx)(c.Gt, {
 value: e,
 children: (0, i.jsx)(l.Z, {
@@ -47,7 +47,7 @@ children: (0, i.jsx)(l.Z, {
               visibleContent: t,
               markAsDismissed: n
             } = e;
-            if (t === a.z.NOW_PLAYING_CONSENT_CARD)
+            if (t === s.z.NOW_PLAYING_CONSENT_CARD)
               return (0, i.jsx)(u.Z, {
                 className: g.__invalid_consentCard,
                 markAsDismissed: n

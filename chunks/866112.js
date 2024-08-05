@@ -1,21 +1,21 @@
 n(653041);
-var i, a, l, s, r = n(442837),
+var i, a, s, l, r = n(442837),
   o = n(570140),
   c = n(975984);
-let d = [],
-  u = {},
+let u = [],
+  d = {},
   h = {};
 class p extends(i = r.ZP.Store) {
   getSearchState(e) {
 var t;
-return null !== (t = u[e]) && void 0 !== t ? t : {
+return null !== (t = d[e]) && void 0 !== t ? t : {
   mostRecentQuery: '',
   fetching: !1
 };
   }
   getSearchResults(e, t) {
 var n, i, a;
-return null !== (a = null === (i = h[e]) || void 0 === i ? void 0 : null === (n = i[t]) || void 0 === n ? void 0 : n.results) && void 0 !== a ? a : d;
+return null !== (a = null === (i = h[e]) || void 0 === i ? void 0 : null === (n = i[t]) || void 0 === n ? void 0 : n.results) && void 0 !== a ? a : u;
   }
   shouldFetch(e, t) {
 var n, i;
@@ -23,18 +23,18 @@ let a = null === (i = h[e]) || void 0 === i ? void 0 : null === (n = i[t]) || vo
 return null == a || Date.now() - a > 120000;
   }
 }
-s = 'GuildDirectorySearchStore', (l = 'displayName') in(a = p) ? Object.defineProperty(a, l, {
-  value: s,
+l = 'GuildDirectorySearchStore', (s = 'displayName') in(a = p) ? Object.defineProperty(a, s, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = s, t.Z = new p(o.Z, {
+}) : a[s] = l, t.Z = new p(o.Z, {
   GUILD_DIRECTORY_SEARCH_START: function(e) {
 let {
   channelId: t,
   query: n
 } = e;
-u[t] = {
+d[t] = {
   fetching: !0,
   mostRecentQuery: n
 };
@@ -45,8 +45,8 @@ let {
   query: n,
   results: i
 } = e;
-u[t] = {
-  ...u[t],
+d[t] = {
+  ...d[t],
   fetching: !1
 };
 let a = [];
@@ -65,8 +65,8 @@ i.forEach(e => {
 let {
   channelId: t
 } = e;
-u[t] = {
-  ...u[t],
+d[t] = {
+  ...d[t],
   fetching: !1
 };
   },
@@ -74,7 +74,7 @@ u[t] = {
 let {
   channelId: t
 } = e;
-u[t] = {
+d[t] = {
   fetching: !1,
   mostRecentQuery: ''
 };
@@ -84,7 +84,7 @@ let {
   channelId: t,
   query: n
 } = e;
-u[t] = {
+d[t] = {
   fetching: !1,
   mostRecentQuery: n
 };
@@ -94,18 +94,18 @@ var t;
 let {
   channelId: n,
   guildId: i
-} = e, a = null === (t = u[n]) || void 0 === t ? void 0 : t.mostRecentQuery;
+} = e, a = null === (t = d[n]) || void 0 === t ? void 0 : t.mostRecentQuery;
 if (null == a)
   return;
-let l = h[n][a];
-if (null == l)
+let s = h[n][a];
+if (null == s)
   return;
-let s = l.results.filter(e => e.guildId !== i);
+let l = s.results.filter(e => e.guildId !== i);
 h[n] = {
   ...h[n],
-  [u[n].mostRecentQuery]: {
-    ...l,
-    results: s
+  [d[n].mostRecentQuery]: {
+    ...s,
+    results: l
   }
 };
   }

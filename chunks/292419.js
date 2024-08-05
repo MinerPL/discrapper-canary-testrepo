@@ -9,8 +9,8 @@ return h;
 var r = n(911969),
   i = n(622449),
   a = n(768494),
-  o = n(768581),
-  s = n(823379),
+  s = n(768581),
+  o = n(823379),
   l = n(280501),
   u = n(790642),
   c = n(689938);
@@ -18,7 +18,7 @@ let d = (e, t) => ({
 id: e.id,
 name: e.name,
 animated: e.animated,
-src: t && null != e.id ? o.ZP.getEmojiURL({
+src: t && null != e.id ? s.ZP.getEmojiURL({
   id: e.id,
   animated: e.animated || !1,
   size: 48
@@ -33,8 +33,8 @@ if (null != (null != a ? function(e, t) {
       return null !== (n = e.components.find(e => e.id === t)) && void 0 !== n ? n : null;
     }
   }(n, a) : null)) {
-  var o;
-  return null !== (o = null == t ? void 0 : t.interactionError) && void 0 !== o ? o : _(e);
+  var s;
+  return null !== (s = null == t ? void 0 : t.interactionError) && void 0 !== s ? s : _(e);
 }
   },
   f = e => {
@@ -59,7 +59,7 @@ switch (e) {
 function h(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   return e.map((e, n) => function e(t, n, i) {
-var o, u, _, E, h, m, I, T;
+var s, u, _, E, h, m, I, T;
 if (!f(t.type))
   return null;
 let {
@@ -73,7 +73,7 @@ switch (t.type) {
         r
       ]);
       return null == a ? null : a;
-    }(t, r)).filter(s.lm);
+    }(t, r)).filter(o.lm);
     return {
       type: r.re.ACTION_ROW,
       id: p(i),
@@ -108,7 +108,7 @@ switch (t.type) {
           description: e.description,
           emoji: null != e.emoji ? d(e.emoji, g) : void 0
         })),
-        placeholder: null !== (o = t.placeholder) && void 0 !== o ? o : c.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
+        placeholder: null !== (s = t.placeholder) && void 0 !== s ? s : c.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
         minValues: t.min_values,
         maxValues: t.max_values
     };
@@ -195,6 +195,8 @@ switch (t.type) {
         spacing: null !== (T = t.spacing) && void 0 !== T ? T : r.US.SMALL
     };
   case r.re.CONTENT_INVENTORY_ENTRY:
+    if (null == t.content_inventory_entry)
+      return null;
     return {
       type: r.re.CONTENT_INVENTORY_ENTRY,
         id: p(i),

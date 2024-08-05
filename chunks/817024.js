@@ -18,12 +18,12 @@ e.exports = {
   ctaButtonInner: 'ctaButtonInner_d7df05',
   learnMoreLink: 'learnMoreLink_d7df05',
   ctaTooltipText: 'ctaTooltipText_d7df05',
-  ctaTooltipErrorText: 'ctaTooltipErrorText_d7df05',
-  ctaTooltipErrorHint: 'ctaTooltipErrorHint_d7df05',
+  root: 'root_d7df05',
   rewardTileWrapper: 'rewardTileWrapper_d7df05',
   rewardTileExpired: 'rewardTileExpired_d7df05',
   rewardTileExpirationTooltip: 'rewardTileExpirationTooltip_d7df05',
   inHouseButton: 'inHouseButton_d7df05',
   inHouseIcon: 'inHouseIcon_d7df05',
-  refreshIcon: 'refreshIcon_d7df05'
+  separator: 'separator_d7df05',
+  microphoneContainer: 'microphoneContainer_d7df05'
 };

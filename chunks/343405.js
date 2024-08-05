@@ -42,13 +42,13 @@ a = {
     }
   ]
 },
-o = {
+s = {
   scope: 'regex',
   begin: /#"/,
   end: /"/,
   contains: [e.BACKSLASH_ESCAPE]
 },
-s = e.inherit(e.QUOTE_STRING_MODE, {
+o = e.inherit(e.QUOTE_STRING_MODE, {
   illegal: null
 }),
 l = {
@@ -84,8 +84,8 @@ h = [
   l,
   E,
   a,
-  o,
   s,
+  o,
   u,
   _,
   d,
@@ -135,8 +135,8 @@ contains: [
   l,
   E,
   a,
-  o,
   s,
+  o,
   u,
   _,
   d,

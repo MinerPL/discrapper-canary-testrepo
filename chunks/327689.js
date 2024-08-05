@@ -1,4 +1,4 @@
-var i, s, a, r, l = n(442837),
+var i, a, s, r, l = n(442837),
   o = n(570140),
   c = n(430824),
   d = n(981631);
@@ -10,9 +10,9 @@ this.waitFor(c.Z), this.syncWith([c.Z], d.dG4);
 return !e.hasFeature(d.oNc.BANNER) && Date.now() - t >= d.Hqc;
   }
 }
-a = 'GuildBoostingNoticeStore', (s = 'displayName') in(i = u) ? Object.defineProperty(i, s, {
-  value: a,
+s = 'GuildBoostingNoticeStore', (a = 'displayName') in(i = u) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[s] = a, t.Z = new u(o.Z);
+}) : i[a] = s, t.Z = new u(o.Z);

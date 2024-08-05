@@ -7,17 +7,17 @@ return t;
   };
 e.exports = c;
 var a = n(555170),
-  o = n(833327);
+  s = n(833327);
 n(689118)(c, a);
-for (var s = i(o.prototype), l = 0; l < s.length; l++) {
-  var u = s[l];
-  !c.prototype[u] && (c.prototype[u] = o.prototype[u]);
+for (var o = i(s.prototype), l = 0; l < o.length; l++) {
+  var u = o[l];
+  !c.prototype[u] && (c.prototype[u] = s.prototype[u]);
 }
 
 function c(e) {
   if (!(this instanceof c))
 return new c(e);
-  a.call(this, e), o.call(this, e), this.allowHalfOpen = !0, e && (!1 === e.readable && (this.readable = !1), !1 === e.writable && (this.writable = !1), !1 === e.allowHalfOpen && (this.allowHalfOpen = !1, this.once('end', d)));
+  a.call(this, e), s.call(this, e), this.allowHalfOpen = !0, e && (!1 === e.readable && (this.readable = !1), !1 === e.writable && (this.writable = !1), !1 === e.allowHalfOpen && (this.allowHalfOpen = !1, this.once('end', d)));
 }
 
 function d() {

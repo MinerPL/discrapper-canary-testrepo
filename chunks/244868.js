@@ -9,13 +9,13 @@ e.exports = {
   textArea: 'textArea_dbc5a4',
   footerImage: 'footerImage_dbc5a4',
   stepImage: 'stepImage_dbc5a4',
-  checkImage: 'checkImage_dbc5a4',
-  tagImage: 'tagImage_dbc5a4',
-  pencilImage: 'pencilImage_dbc5a4',
   tags: 'tags_dbc5a4',
   error: 'error_dbc5a4',
   checkboxWrapper: 'checkboxWrapper_dbc5a4',
   tagContainer: 'tagContainer_dbc5a4',
   tag: 'tag_dbc5a4',
-  usedTag: 'usedTag_dbc5a4'
+  usedTag: 'usedTag_dbc5a4',
+  checkImage: 'checkImage_dbc5a4',
+  tagImage: 'tagImage_dbc5a4',
+  pencilImage: 'pencilImage_dbc5a4'
 };

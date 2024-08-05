@@ -14,8 +14,8 @@ var a, r, o = n(735250),
   h = n(749210),
   E = n(592125),
   f = n(944486),
-  p = n(594174),
-  A = n(285952),
+  A = n(594174),
+  p = n(285952),
   m = n(153124),
   b = n(626135),
   v = n(63063),
@@ -31,7 +31,7 @@ function C(e) {
   let {
 transitionState: t,
 source: a
-  } = e, r = (0, d.e7)([p.default], () => p.default.getCurrentUser()), s = (0, d.e7)([
+  } = e, r = (0, d.e7)([A.default], () => A.default.getCurrentUser()), s = (0, d.e7)([
 f.Z,
 E.Z
   ], () => E.Z.getChannel(f.Z.getChannelId())), [c, C] = l.useState(null), [N, O] = l.useState(null), [k, S] = l.useState(!1), [D, Z] = l.useState(0), I = l.createRef(), B = l.createRef(), j = (0, m.Dt)(), w = null != c ? u()().diff(c, 'years') : null;
@@ -146,7 +146,7 @@ return (0, o.jsxs)(_.ModalRoot, {
       ]
     }),
     (0, o.jsxs)(_.ModalFooter, {
-      justify: A.Z.Justify.BETWEEN,
+      justify: p.Z.Justify.BETWEEN,
       children: [
         (0, o.jsx)(_.Button, {
           buttonRef: B,

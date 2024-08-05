@@ -11,7 +11,7 @@ var r = n(470079);
 function i() {
   for (var e = arguments.length, t = Array(e), n = 0; n < e; n++)
 t[n] = arguments[n];
-  let [i, o] = r.useState(void 0), [s, l] = r.useState(void 0), [u, c] = r.useState(void 0), [d, _] = r.useState(void 0), E = r.useRef(null);
+  let [i, s] = r.useState(void 0), [o, l] = r.useState(void 0), [u, c] = r.useState(void 0), [d, _] = r.useState(void 0), E = r.useRef(null);
   return a(E, e => {
 let {
   width: t,
@@ -19,11 +19,11 @@ let {
   scrollWidth: r,
   scrollHeight: i
 } = e;
-l(n), o(t), c(r), _(i);
+l(n), s(t), c(r), _(i);
   }, t), {
 ref: E,
 width: i,
-height: s,
+height: o,
 scrollHeight: d,
 scrollWidth: u
   };
@@ -36,15 +36,15 @@ let n = e.current,
   r = null == n ? void 0 : n.ownerDocument.defaultView;
 if (null != n && null != r) {
   let i = new r.ResizeObserver(n => {
-    var r, i, a, o, s, l;
+    var r, i, a, s, o, l;
     let u = n[0],
       c = null == u ? void 0 : null === (i = u.borderBoxSize) || void 0 === i ? void 0 : null === (r = i[0]) || void 0 === r ? void 0 : r.inlineSize,
-      d = null == u ? void 0 : null === (o = u.borderBoxSize) || void 0 === o ? void 0 : null === (a = o[0]) || void 0 === a ? void 0 : a.blockSize;
+      d = null == u ? void 0 : null === (s = u.borderBoxSize) || void 0 === s ? void 0 : null === (a = s[0]) || void 0 === a ? void 0 : a.blockSize;
     if (null == c || null == d) {
       let t = e.current;
       if (null != t) {
         let e = window.getComputedStyle(t);
-        null == c && (c = parseFloat(null !== (s = e.width) && void 0 !== s ? s : '0')), null == d && (d = parseFloat(null !== (l = e.height) && void 0 !== l ? l : '0'));
+        null == c && (c = parseFloat(null !== (o = e.width) && void 0 !== o ? o : '0')), null == d && (d = parseFloat(null !== (l = e.height) && void 0 !== l ? l : '0'));
       }
     }
     t({

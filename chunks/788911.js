@@ -2,24 +2,24 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(26305);
+  s = n(26305);
 t.Z = e => {
   let {
 message: t,
 className: n,
 noResultsImageURL: i,
-forceLightTheme: s,
+forceLightTheme: o,
 suggestions: l
   } = e;
   return (0, r.jsx)('div', {
 className: a()({
-  [o.forceLightTheme]: s
+  [s.forceLightTheme]: o
 }, n),
 children: (0, r.jsxs)('div', {
-  className: o.wrapper,
+  className: s.wrapper,
   children: [
     (0, r.jsx)('div', {
-      className: o.sadImage,
+      className: s.sadImage,
       style: null != i ? {
         backgroundImage: 'url('.concat(i, ')')
       } : {}

@@ -1,111 +1,111 @@
-t.d(n, {
+_.d(E, {
   B2: function() {
-return a;
+return S;
   },
   DS: function() {
-return u;
+return a;
   },
   hj: function() {
-return i;
+return r;
   },
   nh: function() {
-return r;
+return M;
   }
 });
-var E = t(63063),
-  _ = t(981631),
-  s = t(689938);
+var s = _(63063),
+  t = _(981631),
+  n = _(689938);
 
-function u(e) {
+function a(e) {
   let {
-application: n,
-username: t,
-usernameHook: u = _.dG4,
-applicationNameHook: r = _.dG4
+application: E,
+username: _,
+usernameHook: a = t.dG4,
+applicationNameHook: M = t.dG4
   } = e;
-  return null != n ? s.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED.format({
-username: t,
-otherUsername: n.name,
-usernameHook: u,
-otherUsernameHook: r,
-helpCenterLink: E.Z.getArticleURL(_.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
-  }) : s.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_DELETED_APPLICATION.format({
-username: t,
-usernameHook: u,
-helpCenterLink: E.Z.getArticleURL(_.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+  return null != E ? n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED.format({
+username: _,
+otherUsername: E.name,
+usernameHook: a,
+otherUsernameHook: M,
+helpCenterLink: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+  }) : n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_DELETED_APPLICATION.format({
+username: _,
+usernameHook: a,
+helpCenterLink: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+  });
+}
+
+function M(e) {
+  let {
+application: E,
+username: _,
+usernameHook: a = t.dG4,
+applicationNameHook: M = t.dG4
+  } = e;
+  return null != E ? n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED.format({
+username: _,
+otherUsername: E.name,
+usernameHook: a,
+otherUsernameHook: M,
+helpCenterLink: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+  }) : n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_DELETED_APPLICATION.format({
+username: _,
+usernameHook: a,
+helpCenterLink: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+  });
+}
+
+function S(e) {
+  let {
+application: E,
+username: _,
+usernameOnClick: a,
+applicationNameOnClick: M,
+medium: S
+  } = e;
+  return null != E ? n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_MOBILE.astFormat({
+username: _,
+otherUsername: E.name,
+usernameOnClick: a,
+otherUsernameOnClick: M,
+medium: S,
+helpCenterLink: {
+  url: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+}
+  }) : n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_DELETED_APPLICATION_MOBILE.astFormat({
+username: _,
+usernameOnClick: a,
+medium: S,
+helpCenterLink: {
+  url: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+}
   });
 }
 
 function r(e) {
   let {
-application: n,
-username: t,
-usernameHook: u = _.dG4,
-applicationNameHook: r = _.dG4
+application: E,
+username: _,
+usernameOnClick: a,
+applicationNameOnClick: M,
+medium: S
   } = e;
-  return null != n ? s.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED.format({
-username: t,
-otherUsername: n.name,
-usernameHook: u,
-otherUsernameHook: r,
-helpCenterLink: E.Z.getArticleURL(_.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
-  }) : s.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_DELETED_APPLICATION.format({
-username: t,
-usernameHook: u,
-helpCenterLink: E.Z.getArticleURL(_.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
-  });
-}
-
-function a(e) {
-  let {
-application: n,
-username: t,
-usernameOnClick: u,
-applicationNameOnClick: r,
-medium: a
-  } = e;
-  return null != n ? s.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_MOBILE.astFormat({
-username: t,
-otherUsername: n.name,
-usernameOnClick: u,
-otherUsernameOnClick: r,
-medium: a,
+  return null != E ? n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_MOBILE.astFormat({
+username: _,
+otherUsername: E.name,
+usernameOnClick: a,
+otherUsernameOnClick: M,
+medium: S,
 helpCenterLink: {
-  url: E.Z.getArticleURL(_.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+  url: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
 }
-  }) : s.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_DELETED_APPLICATION_MOBILE.astFormat({
-username: t,
-usernameOnClick: u,
-medium: a,
+  }) : n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_DELETED_APPLICATION_MOBILE.astFormat({
+username: _,
+usernameOnClick: a,
+medium: S,
 helpCenterLink: {
-  url: E.Z.getArticleURL(_.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
-}
-  });
-}
-
-function i(e) {
-  let {
-application: n,
-username: t,
-usernameOnClick: u,
-applicationNameOnClick: r,
-medium: a
-  } = e;
-  return null != n ? s.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_MOBILE.astFormat({
-username: t,
-otherUsername: n.name,
-usernameOnClick: u,
-otherUsernameOnClick: r,
-medium: a,
-helpCenterLink: {
-  url: E.Z.getArticleURL(_.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
-}
-  }) : s.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_DELETED_APPLICATION_MOBILE.astFormat({
-username: t,
-usernameOnClick: u,
-medium: a,
-helpCenterLink: {
-  url: E.Z.getArticleURL(_.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+  url: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
 }
   });
 }

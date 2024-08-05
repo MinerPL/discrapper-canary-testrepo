@@ -2,8 +2,8 @@ n(47120), n(653041);
 var r = n(954955),
   i = n.n(r),
   a = n(477690),
-  o = n(624138),
-  s = n(50516),
+  s = n(624138),
+  o = n(50516),
   l = n(684827),
   u = n(898625);
 
@@ -16,7 +16,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 let d = 7.5,
-  _ = (0, o.Mg)(a.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
+  _ = (0, s.Mg)(a.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
   E = 1 / 60;
 
 function f(e, t, n, r) {
@@ -78,6 +78,6 @@ c(this, 'points', []), c(this, 'hasEntered', !1), c(this, 'isFilling', !1), c(th
   });
 }), c(this, 'resizeWave', i()(this._resizeWave, 200)), this.updateWaveState = e, this.hasEntered = !1;
 for (let e = 0; e <= 15; e++)
-  this.points.push(new s.Z(Math.floor(d - Math.floor(Math.abs(e - d)))));
+  this.points.push(new o.Z(Math.floor(d - Math.floor(Math.abs(e - d)))));
   }
 };

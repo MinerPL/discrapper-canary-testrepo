@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return T;
+return _;
   }
 }), n(47120);
 var i = n(735250),
@@ -8,26 +8,27 @@ var i = n(735250),
   o = n(887024),
   a = n(338545),
   l = n(748780),
-  r = n(596454),
-  c = n(745510),
-  u = n(912893),
-  d = n(153850),
-  h = n(768581),
-  m = n(176354),
-  p = n(675654),
-  g = n(130667);
-let f = [];
+  r = n(481060),
+  c = n(596454),
+  u = n(745510),
+  d = n(912893),
+  h = n(153850),
+  m = n(768581),
+  p = n(176354),
+  g = n(675654),
+  f = n(130667);
+let T = [];
 
-function T(e) {
+function _(e) {
   let {
 messageId: t,
 emoji: n,
-startPosition: T,
-targetPosition: _
-  } = e, [v, b] = s.useState(0), [E, I] = s.useState(0), [x, C] = s.useState(null), {
+startPosition: _,
+targetPosition: v
+  } = e, [b, E] = s.useState(0), [I, x] = s.useState(0), [C, S] = s.useState(null), {
 confettiCanvas: R
-  } = s.useContext(c.h), S = (0, o.uR)(R, x), N = s.useMemo(() => [{
-src: null == n.id ? m.ZP.getURL(n.name) : h.ZP.getEmojiURL({
+  } = s.useContext(u.h), N = (0, o.uR)(R, C), O = s.useMemo(() => [{
+src: null == n.id ? p.ZP.getURL(n.name) : m.ZP.getEmojiURL({
   id: n.id,
   animated: !1,
   size: 22
@@ -36,12 +37,12 @@ colorize: !1
   }], [
 n.name,
 n.id
-  ]), O = _.x - _.width / 2 * 0.5, Z = _.y - _.height / 2 * 0.5, j = (0, a.useSpring)({
+  ]), Z = v.x - v.width / 2 * 0.5, j = v.y - v.height / 2 * 0.5, M = (0, r.useSpring)({
 from: {
-  y: T.y
+  y: _.y
 },
 to: {
-  y: Z
+  y: j
 },
 config: {
   duration: 450,
@@ -51,16 +52,16 @@ onChange: e => {
   let {
     y: t
   } = e;
-  I(t);
+  x(t);
 }
-  }), M = (0, a.useSpring)({
+  }), A = (0, r.useSpring)({
 from: {
-  x: T.x,
+  x: _.x,
   scale: 1,
   opacity: 1
 },
 to: {
-  x: O,
+  x: Z,
   scale: 0.5,
   opacity: 0.4
 },
@@ -69,52 +70,52 @@ config: {
   easing: l.Z.Easing.in(l.Z.Easing.ease)
 },
 onRest: () => {
-  (0, u.G)(t, n.name, n.id);
+  (0, d.G)(t, n.name, n.id);
 },
 onChange: e => {
   let {
     x: t
   } = e;
-  b(t);
+  E(t);
 }
   });
   return s.useEffect(() => {
-v > 0 && E > 0 && S.createConfetti({
-  ...p.We,
+b > 0 && I > 0 && N.createConfetti({
+  ...g.We,
   position: {
     type: 'static',
     value: {
-      x: v,
-      y: E
+      x: b,
+      y: I
     }
   }
 });
   }, [
-S,
-v,
-E
+N,
+b,
+I
   ]), (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(o.Ji, {
-    ref: C,
-    sprites: N,
-    colors: f,
-    spriteWidth: p.Ko,
-    spriteHeight: p.Ko
+    ref: S,
+    sprites: O,
+    colors: T,
+    spriteWidth: g.Ko,
+    spriteHeight: g.Ko
   }),
-  (0, i.jsx)(d.ZP, {
+  (0, i.jsx)(h.ZP, {
     children: (0, i.jsx)(a.animated.div, {
       style: {
-        ...j
+        ...M
       },
-      className: g.emojiContainer,
+      className: f.emojiContainer,
       children: (0, i.jsx)(a.animated.div, {
         style: {
-          ...M,
-          opacity: M.opacity
+          ...A,
+          opacity: A.opacity
         },
-        children: (0, i.jsx)(r.Z, {
-          className: g.emoji,
+        children: (0, i.jsx)(c.Z, {
+          className: f.emoji,
           emojiId: n.id,
           emojiName: n.name,
           animated: n.animated,

@@ -6,8 +6,8 @@ return y;
 return C;
   }
 }), n(653041), n(47120), n(724458);
-var r, i, a, o, s = n(392711),
-  l = n.n(s),
+var r, i, a, s, o = n(392711),
+  l = n.n(o),
   u = n(149765),
   c = n(442837),
   d = n(570140),
@@ -277,12 +277,12 @@ var t;
 return null != e && null !== (t = b[e]) && void 0 !== t ? t : k;
   }
 }
-o = 'GuildChannelStore', (a = 'displayName') in(i = q) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'GuildChannelStore', (a = 'displayName') in(i = q) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.ZP = new q(d.Z, {
+}) : i[a] = s, t.ZP = new q(d.Z, {
   BACKGROUND_SYNC: V,
   CHANNEL_SELECT: function(e) {
 let {

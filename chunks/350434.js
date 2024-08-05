@@ -1,10 +1,10 @@
 var r, i = Object.prototype.toString,
   a = Function.prototype.toString,
-  o = /^\s*(?:function)?\*/,
-  s = n(703825)(),
+  s = /^\s*(?:function)?\*/,
+  o = n(703825)(),
   l = Object.getPrototypeOf,
   u = function() {
-if (!s)
+if (!o)
   return !1;
 try {
   return Function('return function*() {}')();
@@ -13,9 +13,9 @@ try {
 e.exports = function(e) {
   if ('function' != typeof e)
 return !1;
-  if (o.test(a.call(e)))
+  if (s.test(a.call(e)))
 return !0;
-  if (!s)
+  if (!o)
 return '[object GeneratorFunction]' === i.call(e);
   if (!l)
 return !1;

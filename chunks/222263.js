@@ -9,8 +9,8 @@ function i(e) {
 userId: t,
 nick: n,
 guildId: i,
-avatar: s,
-avatarDecoration: a,
+avatar: a,
+avatarDecoration: s,
 banner: r,
 bio: l,
 pronouns: o,
@@ -20,10 +20,10 @@ colorString: c
 user_id: t,
 nick: n,
 guild_id: i,
-avatar: s,
-avatar_decoration_data: null != a ? {
-  asset: a.asset,
-  sku_id: a.skuId
+avatar: a,
+avatar_decoration_data: null != s ? {
+  asset: s.asset,
+  sku_id: s.skuId
 } : null,
 banner: r,
 bio: l,

@@ -3,42 +3,42 @@ n.d(t, {
 return E;
   },
   Z: function() {
-return C;
+return g;
   }
 });
 var i = n(735250);
 n(470079);
 var a = n(442837),
-  l = n(481060),
-  s = n(239091),
+  s = n(481060),
+  l = n(239091),
   r = n(129861),
   o = n(906732),
   c = n(158776),
-  d = n(785717),
-  u = n(726059),
+  u = n(785717),
+  d = n(726059),
   h = n(171368),
   p = n(981631),
   m = n(689938),
   _ = n(735393);
-let f = (0, l.getAvatarSize)(l.AvatarSizes.SIZE_40);
+let f = (0, s.getAvatarSize)(s.AvatarSizes.SIZE_40);
 
 function E(e) {
   let {
 user: t,
 status: o,
-onSelect: d
-  } = e, u = (0, a.e7)([c.Z], () => c.Z.isMobileOnline(t.id));
-  return (0, i.jsxs)(l.Clickable, {
+onSelect: u
+  } = e, d = (0, a.e7)([c.Z], () => c.Z.isMobileOnline(t.id));
+  return (0, i.jsxs)(s.Clickable, {
 className: _.listRow,
-onClick: d,
+onClick: u,
 onContextMenu: e => {
-  (0, s.jW)(e, async () => {
+  (0, l.jW)(e, async () => {
     let {
       default: e
     } = await Promise.all([
       n.e('79695'),
-      n.e('17400'),
-      n.e('13806')
+      n.e('69220'),
+      n.e('91605')
     ]).then(n.bind(n, 881351));
     return n => (0, i.jsx)(e, {
       ...n,
@@ -47,12 +47,12 @@ onContextMenu: e => {
   });
 },
 children: [
-  (0, i.jsx)(l.Avatar, {
+  (0, i.jsx)(s.Avatar, {
     src: t.getAvatarURL(void 0, f),
     'aria-label': t.username,
-    size: l.AvatarSizes.SIZE_40,
+    size: s.AvatarSizes.SIZE_40,
     status: o,
-    isMobile: u,
+    isMobile: d,
     className: _.listAvatar
   }),
   (0, i.jsx)(r.Z, {
@@ -64,38 +64,38 @@ children: [
   });
 }
 
-function C(e) {
+function g(e) {
   let {
 user: t,
 onClose: n
   } = e, {
 mutualFriends: a
-  } = (0, u.Z)(t.id), {
-analyticsLocations: s
+  } = (0, d.Z)(t.id), {
+analyticsLocations: l
   } = (0, o.ZP)(), {
 guildId: r,
 channelId: c,
 messageId: f,
-roleId: C
-  } = (0, d.KZ)(), g = e => {
+roleId: g
+  } = (0, u.KZ)(), C = e => {
 n(), (0, h.openUserProfileModal)({
   userId: e,
   guildId: r,
   channelId: c,
   messageId: f,
-  roleId: C,
-  sourceAnalyticsLocations: s,
+  roleId: g,
+  sourceAnalyticsLocations: l,
   analyticsLocation: {
     section: p.jXE.USER_PROFILE_MUTUAL_FRIENDS
   }
 });
   };
-  return (0, i.jsx)(l.ScrollerThin, {
+  return (0, i.jsx)(s.ScrollerThin, {
 className: _.listScroller,
 fade: !0,
 children: null == a ? (0, i.jsx)('div', {
   className: _.empty,
-  children: (0, i.jsx)(l.Spinner, {})
+  children: (0, i.jsx)(s.Spinner, {})
 }) : 0 === a.length ? (0, i.jsxs)('div', {
   className: _.empty,
   children: [
@@ -116,7 +116,7 @@ children: null == a ? (0, i.jsx)('div', {
   return (0, i.jsx)(E, {
     user: n,
     status: a,
-    onSelect: () => g(n.id)
+    onSelect: () => C(n.id)
   }, t);
 })
   });

@@ -7,7 +7,7 @@ var i = n(735250);
 n(470079);
 var s = n(481060),
   a = n(13245),
-  o = n(454902),
+  o = n(593481),
   r = n(312839),
   l = n(981631),
   c = n(987650),
@@ -57,7 +57,7 @@ case c.nc.GO_LIVE_VOICE: {
           default: e
         } = await Promise.all([
           n.e('79477'),
-          n.e('99293')
+          n.e('8730')
         ]).then(n.bind(n, 60594));
         return t => (0, i.jsx)(e, {
           ...t,
@@ -99,7 +99,7 @@ case c.nc.GO_LIVE_NON_VOICE: {
           default: e
         } = await Promise.all([
           n.e('79477'),
-          n.e('99293')
+          n.e('8730')
         ]).then(n.bind(n, 60594));
         return t => (0, i.jsx)(e, {
           ...t,

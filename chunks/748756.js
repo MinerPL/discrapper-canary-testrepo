@@ -3,24 +3,24 @@ t.d(n, {
 return d;
   }
 }), t(399606);
-var s = t(92114),
-  i = t(9156),
-  a = t(621600),
-  l = t(113449),
-  u = t(686660),
-  o = t(981631),
-  r = t(526761);
+var i = t(92114),
+  a = t(9156),
+  c = t(621600),
+  s = t(113449),
+  o = t(686660),
+  r = t(981631),
+  _ = t(526761);
 
 function d(e, n) {
-  let t = i.ZP.getGuildFlags(e);
-  n === u.s8.ALL_MESSAGES ? s.Z.updateGuildNotificationSettings(e, {
-message_notifications: o.bL.ALL_MESSAGES,
-flags: (0, l.Q4)(t, r.vc.UNREADS_ALL_MESSAGES)
-  }, a.ZB.PresetAll) : n === u.s8.MENTIONS ? s.Z.updateGuildNotificationSettings(e, {
-message_notifications: o.bL.ONLY_MENTIONS,
-flags: (0, l.Q4)(t, r.vc.UNREADS_ONLY_MENTIONS)
-  }, a.ZB.PresetMentions) : n === u.s8.NOTHING && s.Z.updateGuildNotificationSettings(e, {
-message_notifications: o.bL.NO_MESSAGES,
-flags: (0, l.Q4)(t, r.vc.UNREADS_ONLY_MENTIONS)
-  }, a.ZB.PresetNothing);
+  let t = a.ZP.getGuildFlags(e);
+  n === o.s8.ALL_MESSAGES ? i.Z.updateGuildNotificationSettings(e, {
+message_notifications: r.bL.ALL_MESSAGES,
+flags: (0, s.Q4)(t, _.vc.UNREADS_ALL_MESSAGES)
+  }, c.ZB.PresetAll) : n === o.s8.MENTIONS ? i.Z.updateGuildNotificationSettings(e, {
+message_notifications: r.bL.ONLY_MENTIONS,
+flags: (0, s.Q4)(t, _.vc.UNREADS_ONLY_MENTIONS)
+  }, c.ZB.PresetMentions) : n === o.s8.NOTHING && i.Z.updateGuildNotificationSettings(e, {
+message_notifications: r.bL.NO_MESSAGES,
+flags: (0, s.Q4)(t, _.vc.UNREADS_ONLY_MENTIONS)
+  }, c.ZB.PresetNothing);
 }

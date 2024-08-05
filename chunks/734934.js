@@ -9,8 +9,8 @@ return E;
 var r = n(381499),
   i = n(668781),
   a = n(246133),
-  o = n(695346),
-  s = n(675478),
+  s = n(695346),
+  o = n(675478),
   l = n(885110),
   u = n(626135),
   c = n(621600),
@@ -18,18 +18,18 @@ var r = n(381499),
   _ = n(689938);
 
 function E() {
-  let e = o.QZ.useSetting(),
-t = o.fv.useSetting();
+  let e = s.QZ.useSetting(),
+t = s.fv.useSetting();
   return e && ('0' === t || new Date(Number(t)).getTime() - new Date().getTime() > 0);
 }
 
 function f(e, t) {
-  let n = o.QZ.getSetting();
-  s.hW.updateAsync('notifications', n => {
+  let n = s.QZ.getSetting();
+  o.hW.updateAsync('notifications', n => {
 n.quietMode = r.D5.create({
   value: e
 }), n.focusModeExpiresAtMs = e && null != t ? ''.concat(Date.now() + t) : '0';
-  }, s.fy.INFREQUENT_USER_ACTION), u.default.track(d.rMx.NOTIFICATION_SETTINGS_UPDATED, {
+  }, o.fy.INFREQUENT_USER_ACTION), u.default.track(d.rMx.NOTIFICATION_SETTINGS_UPDATED, {
 update_type: c.Ib.ACCOUNT,
 quiet_mode_enabled: e,
 quiet_mode_enabled_old: n

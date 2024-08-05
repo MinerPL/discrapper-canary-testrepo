@@ -5,8 +5,8 @@ return o;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(652844),
-  s = n(628581),
+  s = n(652844),
+  l = n(628581),
   r = n(871499);
 
 function o(e) {
@@ -15,27 +15,27 @@ selfMute: t,
 serverMute: n,
 suppress: o,
 centerButton: c = !1,
-awaitingRemote: d,
-onMouseEnter: u,
+awaitingRemote: u,
+onMouseEnter: d,
 onMouseLeave: h,
 ...p
-  } = e, m = t || n || o, _ = c ? r.d : r.Z, f = (0, s.Z)(t, n, o, d), {
+  } = e, m = t || n || o, _ = c ? r.d : r.Z, f = (0, l.Z)(t, n, o, u), {
 Component: E,
-play: C,
-events: g
-  } = (0, l.O)(m ? 'unmute' : 'mute');
-  return a.useEffect(() => () => C(), [
-C,
+play: g,
+events: C
+  } = (0, s.O)(m ? 'unmute' : 'mute');
+  return a.useEffect(() => () => g(), [
+g,
 m
   ]), (0, i.jsx)(_, {
 isActive: !m,
 iconComponent: E,
 label: f,
 onMouseEnter: e => {
-  null == u || u(e), g.onMouseEnter();
+  null == d || d(e), C.onMouseEnter();
 },
 onMouseLeave: e => {
-  null == h || h(e), g.onMouseLeave();
+  null == h || h(e), C.onMouseLeave();
 },
 ...p
   });

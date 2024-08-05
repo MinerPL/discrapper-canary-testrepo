@@ -2,8 +2,8 @@ n(47120);
 var r = n(147913),
   i = n(430824),
   a = n(70956),
-  o = n(709054),
-  s = n(553385),
+  s = n(709054),
+  o = n(553385),
   l = n(556178),
   u = n(890477);
 
@@ -27,14 +27,14 @@ super(...e), c(this, 'actions', {
   Date.now() - d > a.Z.Millis.HOUR && this._attemptDeadchatPrompt();
 }), c(this, '_attemptDeadchatPrompt', () => {
   let e = i.Z.getGuilds(),
-    t = o.default.keys(e).filter(e => u.Z.getCurrentConfig({
+    t = s.default.keys(e).filter(e => u.Z.getCurrentConfig({
       guildId: e,
       location: 'manager'
     }).triggerDeadchat);
-  t.length > 0 && (d = Date.now(), (0, s.N7)(t));
+  t.length > 0 && (d = Date.now(), (0, o.N7)(t));
 }), c(this, '_triggerGamingStatsSetupExperiment', () => {
   let e = i.Z.getGuilds();
-  o.default.keys(e).forEach(e => {
+  s.default.keys(e).forEach(e => {
     l.g.trackExposure({
       guildId: e,
       location: 'manager'

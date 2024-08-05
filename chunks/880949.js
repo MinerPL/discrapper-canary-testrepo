@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  o = n(481060),
   l = n(806519),
   u = n(260496);
 t.Z = e => {
@@ -23,12 +23,12 @@ onMouseOver: m,
 onMouseLeave: I,
 children: [
   (0, r.jsx)(l.ZP, {
-    className: o()(u.mask, t),
+    className: s()(u.mask, t),
     mask: a || f ? l.QS.SQUIRCLE : l.QS.AVATAR_DEFAULT,
     width: c,
     height: d,
     children: null == p ? (0, r.jsx)('div', {
-      className: o()(u.guildIcon, u.guildIconWithoutImage),
+      className: s()(u.guildIcon, u.guildIconWithoutImage),
       children: (0, r.jsx)('div', {
         className: u.guildAcronym,
         children: n.acronym
@@ -41,7 +41,7 @@ children: [
   }),
   E ? (0, r.jsx)('div', {
     className: u.categoryItemLockIconContainer,
-    children: (0, r.jsx)(s.LockIcon, {
+    children: (0, r.jsx)(o.LockIcon, {
       size: 'custom',
       color: 'currentColor',
       width: 10,

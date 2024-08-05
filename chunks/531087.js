@@ -16,12 +16,12 @@ width: n = 16,
 height: t = 16,
 color: a = 'currentColor',
 foreground: r,
-className: c,
-...d
+className: d,
+...c
   } = e;
   return (0, i.jsx)('svg', {
-className: s()(o.updateAvailable, c),
-...(0, l.Z)(d),
+className: s()(o.updateAvailable, d),
+...(0, l.Z)(c),
 width: n,
 height: t,
 viewBox: '0 0 24 24',

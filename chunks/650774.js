@@ -1,4 +1,4 @@
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140);
 let u = {},
   c = {};
@@ -14,7 +14,7 @@ approximate_presence_count: r
 return !1;
   c[n.id] = r;
 }
-class _ extends(o = s.ZP.Store) {
+class _ extends(s = o.ZP.Store) {
   getMemberCounts() {
 return u;
   }

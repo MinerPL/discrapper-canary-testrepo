@@ -5,8 +5,8 @@ return d;
 });
 var i = t(735250);
 t(470079);
-var l = t(481060),
-  s = t(287734),
+var s = t(481060),
+  l = t(287734),
   a = t(153124),
   r = t(471253),
   c = t(939863),
@@ -21,19 +21,19 @@ onClose: d
   } = n, _ = (0, a.Dt)();
 
   function E() {
-s.default.disconnect(), d();
+l.default.disconnect(), d();
   }
-  return (0, i.jsxs)(l.ModalRoot, {
+  return (0, i.jsxs)(s.ModalRoot, {
 transitionState: t,
 'aria-labelledby': _,
 children: [
-  (0, i.jsxs)(l.ModalContent, {
+  (0, i.jsxs)(s.ModalContent, {
     className: u.content,
     children: [
       (0, i.jsx)(c.Z, {
         children: (0, i.jsx)('div', {
           className: u.iconBackground,
-          children: (0, i.jsx)(l.StageXIcon, {
+          children: (0, i.jsx)(s.StageXIcon, {
             size: 'custom',
             color: 'currentColor',
             width: 40,
@@ -42,14 +42,14 @@ children: [
           })
         })
       }),
-      (0, i.jsx)(l.Heading, {
+      (0, i.jsx)(s.Heading, {
         id: _,
         variant: 'heading-xl/semibold',
         color: 'header-primary',
         className: u.title,
         children: o.Z.Messages.EXPLICIT_END_STAGE_TITLE
       }),
-      (0, i.jsx)(l.Text, {
+      (0, i.jsx)(s.Text, {
         variant: 'text-md/normal',
         color: 'header-secondary',
         className: u.subtitle,
@@ -57,17 +57,17 @@ children: [
       })
     ]
   }),
-  (0, i.jsxs)(l.ModalFooter, {
+  (0, i.jsxs)(s.ModalFooter, {
     children: [
-      (0, i.jsx)(l.Button, {
-        color: l.Button.Colors.RED,
+      (0, i.jsx)(s.Button, {
+        color: s.Button.Colors.RED,
         onClick: function() {
           (0, r.NZ)(e), E();
         },
         children: o.Z.Messages.EXPLICIT_END_STAGE_CONFIRM
       }),
-      (0, i.jsx)(l.Button, {
-        color: l.Button.Colors.PRIMARY,
+      (0, i.jsx)(s.Button, {
+        color: s.Button.Colors.PRIMARY,
         className: u.cancelButton,
         onClick: E,
         children: o.Z.Messages.EXPLICIT_END_STAGE_CANCEL

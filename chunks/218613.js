@@ -35,14 +35,14 @@ var n, a, r = s(735250),
   j = s(146085),
   v = s(60222),
   b = s(388131),
-  P = s(131704),
-  G = s(592125),
-  f = s(271383),
-  H = s(430824),
-  U = s(496675),
-  y = s(699516),
-  B = s(594174),
-  z = s(474333),
+  P = s(777036),
+  G = s(131704),
+  f = s(592125),
+  H = s(271383),
+  U = s(430824),
+  y = s(496675),
+  B = s(699516),
+  z = s(594174),
   F = s(153124),
   w = s(934415),
   k = s(823379),
@@ -83,7 +83,7 @@ onChange: t,
 guildId: s,
 channelType: n,
 description: a
-  } = e, [i, o] = l.useState({}), d = (0, C.e7)([H.Z], () => H.Z.getGuild(s)), c = n === V.d4z.GUILD_STAGE_VOICE;
+  } = e, [i, o] = l.useState({}), d = (0, C.e7)([U.Z], () => U.Z.getGuild(s)), c = n === V.d4z.GUILD_STAGE_VOICE;
   return (l.useEffect(() => {
 t(i);
   }, [
@@ -94,7 +94,7 @@ className: Q.addMembersContainer,
 children: (0, r.jsx)(O.AddMembersBody, {
   guild: d,
   channel: null,
-  permission: c ? j.yP : (0, P.CG)(n),
+  permission: c ? j.yP : (0, G.CG)(n),
   pendingAdditions: i,
   setPendingAdditions: o,
   isStageChannel: c,
@@ -165,7 +165,7 @@ switch (t) {
   case V.d4z.GUILD_STAGE_VOICE:
     return p.StageIcon;
   default:
-    return (0, P.zi)(t) ? p.TextIcon : X.Vq;
+    return (0, G.zi)(t) ? p.TextIcon : X.Vq;
 }
   }
   renderHeader() {
@@ -181,7 +181,7 @@ let {
 let d = (e = a, t = o, null != e ? q.Z.Messages.CLONE_CHANNEL : t === V.d4z.GUILD_CATEGORY ? q.Z.Messages.CREATE_CATEGORY : q.Z.Messages.CREATE_CHANNEL);
 if (null != l) {
   ;
-  let e = G.Z.getChannel(l);
+  let e = f.Z.getChannel(l);
   n = (0, r.jsx)(p.Text, {
     variant: 'text-xs/normal',
     color: 'header-secondary',
@@ -234,7 +234,7 @@ let i = l === V.d4z.GUILD_CATEGORY,
     className: Q.channelNameNote,
     type: p.FormText.Types.DESCRIPTION,
     children: q.Z.Messages.CLONE_CHANNEL_HELP.format({
-      name: (0, L.F6)(t, B.default, y.Z, !0)
+      name: (0, L.F6)(t, z.default, B.Z, !0)
     })
   }) : l === V.d4z.GUILD_FORUM ? (0, r.jsx)(p.FormText, {
     className: Q.channelNameNote,
@@ -596,8 +596,8 @@ if (null != t)
     className: o()(Q.createError, {
       [Q.addMemberError]: e
     }),
-    children: (0, r.jsx)(z.Z, {
-      messageType: z.Q.ERROR,
+    children: (0, r.jsx)(P.Z, {
+      messageType: P.Q.ERROR,
       children: t
     })
   });
@@ -796,7 +796,7 @@ super(e), $(this, 'headerId', (0, F.hQ)()), $(this, '_input', void 0), $(this, '
   let {
     channelType: t
   } = this.state;
-  P.xL.has(t) && (e = (0, w.Nj)(e)), this.setState({
+  G.xL.has(t) && (e = (0, w.Nj)(e)), this.setState({
     name: e
   });
 }), $(this, 'handleTypeChange', e => {
@@ -805,7 +805,7 @@ super(e), $(this, 'headerId', (0, F.hQ)()), $(this, '_input', void 0), $(this, '
   } = e, {
     name: s
   } = this.state;
-  P.xL.has(t) && (s = (0, w.Nj)(s)), t === V.d4z.GUILD_STAGE_VOICE && this.setState({
+  G.xL.has(t) && (s = (0, w.Nj)(s)), t === V.d4z.GUILD_STAGE_VOICE && this.setState({
     isPrivate: !1
   }), this.setState({
     channelType: t,
@@ -893,7 +893,7 @@ super(e), $(this, 'headerId', (0, F.hQ)()), $(this, '_input', void 0), $(this, '
       if (null == e || 201 !== e.status)
         return;
       let a = e.body;
-      P.xL.has(N) && (0, Z.XU)(a.guild_id, a.id), d();
+      G.xL.has(N) && (0, Z.XU)(a.guild_id, a.id), d();
     } catch (e) {
       null != e.body && 'object' == typeof e.body ? this.setState({
         errors: e.body
@@ -912,7 +912,7 @@ let {
 } = e;
 this.state = {
   channelType: null != t ? t : V.d4z.GUILD_TEXT,
-  name: null != s ? (0, L.F6)(s, B.default, y.Z) : null != n ? n : '',
+  name: null != s ? (0, L.F6)(s, z.default, B.Z) : null != n ? n : '',
   pendingPermissionOverwrites: {},
   isPrivate: !1,
   prevGuildId: e.guildId,
@@ -932,21 +932,21 @@ channelType: s,
 guildId: n,
 cloneChannelId: a
   } = e, l = (0, C.cj)([
-H.Z,
-B.default,
 U.Z,
-G.Z,
+z.default,
+y.Z,
+f.Z,
 M.Z,
-f.ZP
+H.ZP
   ], () => {
 var e, t, r;
-let l = H.Z.getGuild(n),
-  i = B.default.getCurrentUser();
+let l = U.Z.getGuild(n),
+  i = z.default.getCurrentUser();
 c()(null != i, 'CreateChannel: user cannot be undefined');
-let o = null != l && null != l.ownerId ? B.default.getUser(l.ownerId) : null,
-  d = new Set(null !== (t = null === (e = f.ZP.getMember(n, i.id)) || void 0 === e ? void 0 : e.roles) && void 0 !== t ? t : []),
-  h = U.Z.can(V.Plq.ADMINISTRATOR, l),
-  u = G.Z.getChannel(a);
+let o = null != l && null != l.ownerId ? z.default.getUser(l.ownerId) : null,
+  d = new Set(null !== (t = null === (e = H.ZP.getMember(n, i.id)) || void 0 === e ? void 0 : e.roles) && void 0 !== t ? t : []),
+  h = y.Z.can(V.Plq.ADMINISTRATOR, l),
+  u = f.Z.getChannel(a);
 return {
   guild: l,
   applications: M.Z.getGuildApplicationIds(n).map(e => M.Z.getApplication(e)).filter(k.lm),
@@ -955,13 +955,13 @@ return {
   user: i,
   owner: o,
   memberRoleIds: d,
-  canViewChannels: U.Z.can(V.Plq.VIEW_CHANNEL, l),
-  canConnect: U.Z.can(V.Plq.CONNECT, l),
+  canViewChannels: y.Z.can(V.Plq.VIEW_CHANNEL, l),
+  canConnect: y.Z.can(V.Plq.CONNECT, l),
   isAdmin: h,
   cloneChannel: u,
   channelType: null !== (r = null == u ? void 0 : u.type) && void 0 !== r ? r : s,
-  canManageRoles: U.Z.can(V.Plq.MANAGE_ROLES, l),
-  canManageChannels: U.Z.can(V.Plq.MANAGE_CHANNELS, l)
+  canManageRoles: y.Z.can(V.Plq.MANAGE_ROLES, l),
+  canManageChannels: y.Z.can(V.Plq.MANAGE_CHANNELS, l)
 };
   }), {
 canManageRoles: i,

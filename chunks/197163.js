@@ -27,13 +27,13 @@ function i(e) {
   return t[e].split('_');
 }
 
-function a(e, t, a, o) {
-  var s = e + ' ';
+function a(e, t, a, s) {
+  var o = e + ' ';
   if (1 === e)
-    return s + n(e, t, a[0], o);
+    return o + n(e, t, a[0], s);
   if (t)
-    return s + (r(e) ? i(a)[1] : i(a)[0]);
-  return o ? s + i(a)[1] : s + (r(e) ? i(a)[1] : i(a)[2]);
+    return o + (r(e) ? i(a)[1] : i(a)[0]);
+  return s ? o + i(a)[1] : o + (r(e) ? i(a)[1] : i(a)[2]);
 }
 e.defineLocale('lt', {
   months: {

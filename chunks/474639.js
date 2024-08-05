@@ -6,8 +6,8 @@ return A;
 var r = n(46973),
   i = n(570140),
   a = n(147913),
-  o = n(579806),
-  s = n(569545),
+  s = n(579806),
+  o = n(569545),
   l = n(441167),
   u = n(314897),
   c = n(131951),
@@ -37,7 +37,7 @@ if (t === r.Yn.DEFAULT)
 if (t === r.Yn.STREAM && null != i) {
   let {
     ownerId: e
-  } = (0, s.my)(i);
+  } = (0, o.my)(i);
   if (e !== a)
     return;
   let t = _.Z.getRTCConnection(i);
@@ -60,7 +60,7 @@ let {
   guildId: r
 } = e;
 this.maybeShowClipsWarning(t), this.applyUserVoiceRecording(t);
-let i = _.Z.getRTCConnection(s.V9({
+let i = _.Z.getRTCConnection(o.V9({
   streamType: null != r ? S.lo.GUILD : S.lo.CALL,
   ownerId: t,
   channelId: n,
@@ -109,17 +109,17 @@ let {
 } = e;
 if (n !== r.Yn.STREAM || !(0, I.Z)(c.Z))
   return;
-let o = _.Z.getRTCConnection(s.V9({
+let s = _.Z.getRTCConnection(o.V9({
   streamType: null != a ? S.lo.GUILD : S.lo.CALL,
   ownerId: t,
   channelId: i,
   guildId: a
 }));
-null != o && this.applyStreamRecording(t, o);
+null != s && this.applyStreamRecording(t, s);
   }
   async classifyHardwareAndTrack() {
 try {
-  let e = await o.Z.processUtils.getSystemInfo(),
+  let e = await s.Z.processUtils.getSystemInfo(),
     t = this.classifyHardware(e);
   return E.default.track(g.rMx.CLIPS_HARDWARE_CLASSIFICATION, {
     classification: t,

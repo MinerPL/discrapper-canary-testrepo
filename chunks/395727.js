@@ -2,19 +2,19 @@ n(47120);
 var r = n(317770),
   i = n(626135),
   a = n(358085),
-  o = n(998502),
-  s = n(801814),
+  s = n(998502),
+  o = n(801814),
   l = n(981631);
 class u extends r.Z {
   _initialize() {
 if (!!a.isPlatformEmbedded)
-  o.ZP.on('UPDATE_DOWNLOADED', () => this.processModuleEvents()), o.ZP.on('MODULE_INSTALLED', (e, t, n) => this.processModuleEvents()), o.ZP.on('UPDATER_HISTORY_RESPONSE', (e, t) => {
+  s.ZP.on('UPDATE_DOWNLOADED', () => this.processModuleEvents()), s.ZP.on('MODULE_INSTALLED', (e, t, n) => this.processModuleEvents()), s.ZP.on('UPDATER_HISTORY_RESPONSE', (e, t) => {
     this._handleHistoryResponse(t);
   }), this.processModuleEvents();
   }
   _terminate() {}
   processModuleEvents() {
-o.ZP.send('UPDATER_HISTORY_QUERY_AND_TRUNCATE');
+s.ZP.send('UPDATER_HISTORY_QUERY_AND_TRUNCATE');
   }
   _handleHistoryResponse(e) {
 if (null == e)
@@ -26,7 +26,7 @@ e.forEach(e => {
   }
   constructor(...e) {
 var t, n, r;
-super(...e), t = this, n = '_tracker', r = new s.Z(), n in t ? Object.defineProperty(t, n, {
+super(...e), t = this, n = '_tracker', r = new o.Z(), n in t ? Object.defineProperty(t, n, {
   value: r,
   enumerable: !0,
   configurable: !0,

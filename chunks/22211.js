@@ -1,57 +1,57 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
-return _;
+return E;
   }
 });
-var l = t(442837),
-  r = t(661869),
-  a = t(543882),
-  o = t(199902),
-  i = t(592125),
-  u = t(496675),
-  s = t(158776),
-  c = t(979651),
-  d = t(561308),
-  E = t(231338);
+var r = n(442837),
+  i = n(661869),
+  a = n(543882),
+  s = n(199902),
+  o = n(592125),
+  l = n(496675),
+  u = n(158776),
+  c = n(979651),
+  d = n(561308),
+  _ = n(231338);
 
-function _(e) {
-  let n = (0, l.e7)([
+function E(e) {
+  let t = (0, r.e7)([
   c.Z,
-  i.Z
+  o.Z
 ], () => {
-  if (!(0, d.kr)(e) || e.author_type !== r.i.USER)
+  if (!(0, d.kr)(e) || e.author_type !== i.i.USER)
     return null;
-  let n = c.Z.getVoiceStateForUser(e.author_id);
-  return i.Z.getChannel(null == n ? void 0 : n.channelId);
+  let t = c.Z.getVoiceStateForUser(e.author_id);
+  return o.Z.getChannel(null == t ? void 0 : t.channelId);
 }, [e]),
-t = (0, l.e7)([s.Z], () => s.Z.getPrimaryActivity(e.author_id, null == n ? void 0 : n.guild_id), [
-  n,
+n = (0, r.e7)([u.Z], () => u.Z.getPrimaryActivity(e.author_id, null == t ? void 0 : t.guild_id), [
+  t,
   e
 ]),
 {
-  streamPreviewUrl: _,
+  streamPreviewUrl: E,
   stream: f
-} = (0, l.cj)([
-  o.Z,
-  u.Z,
+} = (0, r.cj)([
+  s.Z,
+  l.Z,
   a.Z
 ], () => {
-  let t;
-  if (null == n)
+  let n;
+  if (null == t)
     return {};
-  let l = o.Z.getAnyStreamForUser(e.author_id);
-  return null == l ? {} : (u.Z.canBasicChannel(E.S7.CONNECT, n) && (null == l ? void 0 : l.channelId) === n.id && (t = a.Z.getPreviewURL(l.guildId, l.channelId, l.ownerId)), {
-    stream: l,
-    streamPreviewUrl: t
+  let r = s.Z.getAnyStreamForUser(e.author_id);
+  return null == r ? {} : (l.Z.canBasicChannel(_.S7.CONNECT, t) && (null == r ? void 0 : r.channelId) === t.id && (n = a.Z.getPreviewURL(r.guildId, r.channelId, r.ownerId)), {
+    stream: r,
+    streamPreviewUrl: n
   });
 }, [
-  n,
+  t,
   e
 ]);
   return {
-channel: n,
-activity: t,
-streamPreviewUrl: _,
+channel: t,
+activity: n,
+streamPreviewUrl: E,
 stream: f
   };
 }

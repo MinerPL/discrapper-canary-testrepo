@@ -1,8 +1,8 @@
 var r = n(570140),
   i = n(340332),
   a = n(672339),
-  o = n(463395),
-  s = n(131951),
+  s = n(463395),
+  o = n(131951),
   l = n(626135),
   u = n(557177),
   c = n(557457),
@@ -17,12 +17,12 @@ function f(e, t, n, r, i) {
   if (t === n)
 return;
   let a = e[t],
-s = e[n];
+o = e[n];
   l.default.track(d.rMx.MEDIA_DEVICE_CHANGED, {
-device_from_name: o.Z.getCertifiedDeviceName(t, null != a ? a.name : ''),
-device_to_name: o.Z.getCertifiedDeviceName(n, null != s ? s.name : ''),
+device_from_name: s.Z.getCertifiedDeviceName(t, null != a ? a.name : ''),
+device_to_name: s.Z.getCertifiedDeviceName(n, null != o ? o.name : ''),
 device_type: r,
-device_is_certified: o.Z.isCertified(n),
+device_is_certified: s.Z.isCertified(n),
 location: i
   });
 }
@@ -47,7 +47,7 @@ let {
 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
 return m() ? Promise.resolve() : (I({
   usedKeybind: n
-}), s.Z.isEnabled()) ? r.Z.dispatch({
+}), o.Z.isEnabled()) ? r.Z.dispatch({
   type: 'AUDIO_TOGGLE_SELF_MUTE',
   context: e,
   syncRemote: t,
@@ -134,7 +134,7 @@ let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
   context: n,
   mode: e,
   options: {
-    ...s.Z.getModeOptions(n),
+    ...o.Z.getModeOptions(n),
     ...t
   }
 });
@@ -154,8 +154,8 @@ let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
   setInputDevice(e, t) {
 if (!m()) {
   if (null != t) {
-    let n = s.Z.getInputDevices();
-    f(n, s.Z.getInputDeviceId(), e, 'Audio Input', t);
+    let n = o.Z.getInputDevices();
+    f(n, o.Z.getInputDeviceId(), e, 'Audio Input', t);
   }
   r.Z.dispatch({
     type: 'AUDIO_SET_INPUT_DEVICE',
@@ -166,8 +166,8 @@ if (!m()) {
   setOutputDevice(e, t) {
 if (!m()) {
   if (null != t) {
-    let n = s.Z.getOutputDevices();
-    f(n, s.Z.getOutputDeviceId(), e, 'Audio Output', t);
+    let n = o.Z.getOutputDevices();
+    f(n, o.Z.getOutputDeviceId(), e, 'Audio Output', t);
   }
   r.Z.dispatch({
     type: 'AUDIO_SET_OUTPUT_DEVICE',
@@ -178,8 +178,8 @@ if (!m()) {
   setVideoDevice(e, t) {
 if (!m()) {
   if (null != t) {
-    let n = s.Z.getVideoDevices();
-    f(n, s.Z.getVideoDeviceId(), e, 'Video', t);
+    let n = o.Z.getVideoDevices();
+    f(n, o.Z.getVideoDeviceId(), e, 'Video', t);
   }
   r.Z.dispatch({
     type: 'MEDIA_ENGINE_SET_VIDEO_DEVICE',
@@ -192,6 +192,12 @@ if (!m()) {
   type: 'AUDIO_SET_ECHO_CANCELLATION',
   enabled: e,
   location: t
+});
+  },
+  setSidechainCompression(e) {
+!m() && r.Z.dispatch({
+  type: 'AUDIO_SET_SIDECHAIN_COMPRESSION',
+  enabled: e
 });
   },
   setLoopback(e) {

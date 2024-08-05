@@ -6,10 +6,10 @@ return _;
 var i = n(735250);
 n(470079);
 var s = n(13245),
-  a = n(703656),
-  o = n(974180),
-  r = n(237997),
-  l = n(454902),
+  a = n(593481),
+  o = n(703656),
+  r = n(974180),
+  l = n(237997),
   c = n(150097),
   d = n(557177),
   u = n(312839),
@@ -36,7 +36,7 @@ channel_id: e.id,
 channel_type: e.type
   });
   return {
-colorScheme: l.IC.PRIMARY,
+colorScheme: a.IC.PRIMARY,
 icon: m,
 title: E,
 body: Z,
@@ -48,10 +48,10 @@ renderFooter: e => e ? (0, i.jsx)('div', {
 }) : null,
 maxBodyLines: 2,
 onNotificationShow: () => {
-  _ && (0, d.GN)(o.Ay, o.yk), I();
+  _ && (0, d.GN)(r.Ay, r.yk), I();
 },
 onNotificationClick: () => {
-  (0, a.uL)(h.Z5c.CHANNEL(e.guild_id, e.id)), S('jump'), r.Z.isInstanceUILocked() && s.Z.setInstanceLocked(!1);
+  (0, o.uL)(h.Z5c.CHANNEL(e.guild_id, e.id)), S('jump'), l.Z.isInstanceUILocked() && s.Z.setInstanceLocked(!1);
 },
 onDismissClick: () => {
   S('dismiss');

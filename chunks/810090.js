@@ -1,8 +1,8 @@
 var r = n(735250),
   i = n(470079),
   a = n(374470),
-  o = n(442837),
-  s = n(607070),
+  s = n(442837),
+  o = n(607070),
   l = n(217702);
 let u = e => {
   let {
@@ -12,7 +12,7 @@ playOnHover: u,
 responsive: c,
 mediaLayoutType: d,
 ..._
-  } = e, E = (0, o.e7)([s.Z], () => s.Z.useReducedMotion), f = i.useRef(null);
+  } = e, E = (0, s.e7)([o.Z], () => o.Z.useReducedMotion), f = i.useRef(null);
 
   function h() {
 var e;

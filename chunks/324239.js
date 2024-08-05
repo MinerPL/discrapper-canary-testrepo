@@ -4,9 +4,9 @@ return T;
   }
 }), n(47120);
 var o = n(735250),
-  l = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  l = n(120356),
+  r = n.n(l),
   a = n(481060),
   i = n(893776),
   c = n(809206),
@@ -24,11 +24,11 @@ function A(e) {
   let {
 email: t,
 setEmail: n,
-claimRequired: s,
+claimRequired: l,
 onSuccess: m,
 onClose: f
-  } = e, [A, S] = l.useState(), [T, I] = l.useState(''), [x, M] = l.useState(''), [E, O] = l.useState(!1);
-  l.useEffect(() => u.Z.flowStep(g.MK.ANY, g.mx.CLAIM_ACCOUNT), []);
+  } = e, [A, S] = s.useState(), [T, I] = s.useState(''), [x, M] = s.useState(''), [E, O] = s.useState(!1);
+  s.useEffect(() => u.Z.flowStep(g.MK.ANY, g.mx.CLAIM_ACCOUNT), []);
   let h = async e => {
 e.preventDefault(), O(!0), S(''), M('');
 try {
@@ -61,7 +61,7 @@ children: [
         className: N.formBody,
         variant: 'text-md/normal',
         color: 'header-secondary',
-        children: s ? C.Z.Messages.CLAIM_ACCOUNT_REQUIRED_BODY : C.Z.Messages.CLAIM_ACCOUNT_BODY_2
+        children: l ? C.Z.Messages.CLAIM_ACCOUNT_REQUIRED_BODY : C.Z.Messages.CLAIM_ACCOUNT_BODY_2
       }),
       (0, o.jsx)(a.ModalCloseButton, {
         className: N.closeButton,
@@ -102,7 +102,7 @@ children: [
           disabled: 0 === t.length || 0 === T.length,
           children: C.Z.Messages.CLAIM_ACCOUNT
         }),
-        s && (0, o.jsx)(a.Button, {
+        l && (0, o.jsx)(a.Button, {
           className: N.logoutButton,
           color: a.Button.Colors.PRIMARY,
           look: a.Button.Looks.LINK,
@@ -123,7 +123,7 @@ function S(e) {
   let {
 email: t,
 claimRequired: n,
-onClose: s
+onClose: l
   } = e, i = n ? C.Z.Messages.CLAIM_ACCOUNT_REQUIRED_EMAIL_TO : C.Z.Messages.CLAIM_ACCOUNT_EMAIL_TO;
 
   function c() {
@@ -136,7 +136,7 @@ window.open((0, f.t3)(), '_blank'), m.default.track(p.rMx.DOWNLOAD_APP, {
   qr_code: !1
 });
   }
-  return l.useEffect(() => u.Z.flowStep(g.MK.ANY, g.mx.CLAIM_ACCOUNT_SUCCESS), []), (0, o.jsxs)('div', {
+  return s.useEffect(() => u.Z.flowStep(g.MK.ANY, g.mx.CLAIM_ACCOUNT_SUCCESS), []), (0, o.jsxs)('div', {
 className: r()(N.modalLight, (0, _.Q)(p.BRd.LIGHT)),
 children: [
   (0, o.jsxs)(a.ModalContent, {
@@ -144,7 +144,7 @@ children: [
     children: [
       !n && (0, o.jsx)(a.ModalCloseButton, {
         className: N.closeButton,
-        onClick: s
+        onClick: l
       }),
       (0, o.jsx)('div', {
         className: N.successImage
@@ -167,7 +167,7 @@ children: [
     direction: d.Z.Direction.VERTICAL,
     children: (0, o.jsx)(a.Button, {
       size: a.Button.Sizes.LARGE,
-      onClick: s,
+      onClick: l,
       children: C.Z.Messages.OKAY
     })
   }) : (0, o.jsx)(a.ModalFooter, {
@@ -187,13 +187,13 @@ function T(e) {
   let {
 onClose: t,
 transitionState: n,
-claimRequired: s = !1
-  } = e, [r, i] = l.useState(''), [c, u] = l.useState(!1);
+claimRequired: l = !1
+  } = e, [r, i] = s.useState(''), [c, u] = s.useState(!1);
   return c ? (0, o.jsx)(a.ModalRoot, {
 transitionState: n,
 children: (0, o.jsx)(S, {
   email: r,
-  claimRequired: s,
+  claimRequired: l,
   onClose: t
 })
   }) : (0, o.jsx)(a.ModalRoot, {
@@ -201,7 +201,7 @@ transitionState: n,
 children: (0, o.jsx)(A, {
   email: r,
   setEmail: i,
-  claimRequired: s,
+  claimRequired: l,
   onSuccess: () => u(!0),
   onClose: t
 })

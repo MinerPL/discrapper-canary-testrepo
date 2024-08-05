@@ -1,17 +1,17 @@
 n.d(t, {
   Z: function() {
-return s;
+return o;
   }
 });
 var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(626135),
-  o = n(981631);
+  s = n(981631);
 
-function s(e) {
-  a.default.track(o.rMx.OPEN_MODAL, {
-type: o.jXE.STICKER_PREMIUM_TIER_2_UPSELL_MODAL,
+function o(e) {
+  a.default.track(s.rMx.OPEN_MODAL, {
+type: s.jXE.STICKER_PREMIUM_TIER_2_UPSELL_MODAL,
 location: e
   }), (0, i.openModalLazy)(async () => {
 let {

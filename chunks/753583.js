@@ -17,8 +17,8 @@ var t = a(735250),
   g = a(981631),
   h = a(203377),
   I = a(689938),
-  p = a(244868);
-let C = /^[A-Za-z0-9\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF-]+$/u;
+  C = a(244868);
+let p = /^[A-Za-z0-9\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF-]+$/u;
 s.Z = e => {
   var s;
   let {
@@ -26,7 +26,7 @@ guild: a,
 guildMetadata: i,
 headerId: l
   } = e, [T, N] = r.useState(!1), v = (0, c.e7)([_.Z], () => 'keywords' in _.Z.getErrors()), O = e => {
-if (C.test(e))
+if (p.test(e))
   N(!1);
 else {
   N(!0);
@@ -57,30 +57,30 @@ onLearnMoreClick: () => {
 }
   }) : null, b = new Set(i.keywords);
   return (0, t.jsxs)('div', {
-className: p.container,
+className: C.container,
 children: [
   (0, t.jsxs)('div', {
-    className: p.content,
+    className: C.content,
     children: [
       (0, t.jsx)('div', {
-        className: n()(p.stepImage, p.tagImage)
+        className: n()(C.stepImage, C.tagImage)
       }),
       (0, t.jsx)(d.Heading, {
         variant: 'heading-xl/semibold',
-        className: p.header,
+        className: C.header,
         id: l,
         children: I.Z.Messages.SERVER_DISCOVERY_TAGS
       }),
       (0, t.jsx)(d.Text, {
         color: 'none',
         variant: 'text-md/normal',
-        className: p.headerCaption,
+        className: C.headerCaption,
         children: I.Z.Messages.SERVER_DISCOVERY_SEARCH_SUBHEADING
       })
     ]
   }),
   (0, t.jsxs)(d.FormSection, {
-    className: p.form,
+    className: C.form,
     children: [
       (0, t.jsx)(d.FormTitle, {
         required: !0,
@@ -88,12 +88,12 @@ children: [
       }),
       (0, t.jsx)(d.FormText, {
         type: d.FormTextTypes.DESCRIPTION,
-        className: p.description,
+        className: C.description,
         children: I.Z.Messages.SERVER_DISCOVERY_TAGS_INPUT_SUBLABEL
       }),
       (0, t.jsx)(E.Z, {
-        className: n()(p.tags, {
-          [p.error]: null != f
+        className: n()(C.tags, {
+          [C.error]: null != f
         }),
         tags: i.keywords,
         onRemoveTag: e => {
@@ -108,7 +108,7 @@ children: [
         placeholder: (null == i ? void 0 : null === (s = i.keywords) || void 0 === s ? void 0 : s.length) === 0 ? I.Z.Messages.SERVER_DISCOVERY_TAGS_INPUT_PLACEHOLDER : ''
       }),
       (0, t.jsx)(d.Text, {
-        className: p.error,
+        className: C.error,
         color: 'text-danger',
         variant: 'text-sm/normal',
         children: f
@@ -116,17 +116,17 @@ children: [
     ]
   }),
   (0, t.jsx)('div', {
-    className: p.form,
+    className: C.form,
     children: (0, t.jsx)(d.FormTitle, {
       children: I.Z.Messages.SERVER_DISCOVERY_POPULAR_TAGS
     })
   }),
   (0, t.jsx)('div', {
-    className: p.tagContainer,
+    className: C.tagContainer,
     children: (0, R.P5)(i.primaryCategoryId).map(e => (0, t.jsx)(d.Anchor, {
       onClick: () => D(e),
-      className: n()(p.tag, {
-        [p.usedTag]: b.has(e)
+      className: n()(C.tag, {
+        [C.usedTag]: b.has(e)
       }),
       children: e
     }, e))

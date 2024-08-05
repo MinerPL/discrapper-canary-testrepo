@@ -6,8 +6,8 @@ var s = n(735250),
   l = n(780384),
   o = n(481060),
   c = n(410030),
-  d = n(134432),
-  u = n(940627),
+  d = n(372769),
+  u = n(134432),
   _ = n(806519),
   I = n(768581),
   E = n(624138),
@@ -48,7 +48,7 @@ name: D
   } = i, v = null != i.discoverySplash && /^data:/.test(i.discoverySplash) ? i.discoverySplash : I.ZP.getGuildDiscoverySplashURL({
 id: i.id,
 splash: i.discoverySplash,
-size: 240 * (0, d.x_)()
+size: 240 * (0, u.x_)()
   }), j = (0, l.wj)(O) ? N : S, Z = null !== (t = I.ZP.getGuildIconURL({
 id: i.id,
 icon: i.icon,
@@ -118,7 +118,7 @@ children: [
       (0, s.jsxs)('div', {
         className: m.title,
         children: [
-          (0, s.jsx)(u.Z, {
+          (0, s.jsx)(d.Z, {
             className: m.verifiedIcon,
             guild: i,
             tooltipColor: o.Tooltip.Colors.PRIMARY

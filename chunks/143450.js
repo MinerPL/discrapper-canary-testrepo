@@ -1,24 +1,24 @@
 n.d(t, {
   q: function() {
-return s;
+return o;
   }
 }), n(47120);
 var r = n(470079),
   i = n(338545),
-  a = n(481060),
-  o = n(717495);
+  a = n(186325),
+  s = n(717495);
 
-function s(e) {
+function o(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'respect-motion-settings',
 n = arguments.length > 2 ? arguments[2] : void 0,
-s = r.useContext(a.AccessibilityPreferencesContext).reducedMotion.enabled,
+o = r.useContext(a.S).reducedMotion.enabled,
 l = e;
-  !('animate-always' === t || 'respect-motion-settings' === t && !s) && (l = 'function' == typeof e ? () => ({
+  !('animate-always' === t || 'respect-motion-settings' === t && !o) && (l = 'function' == typeof e ? () => ({
 ...e(),
-...o.F
+...s.F
   }) : {
 ...e,
-...o.F
+...s.F
   });
   let u = 'function' == typeof l,
 [c, d, _] = (0, i.useSpring)(l, n);

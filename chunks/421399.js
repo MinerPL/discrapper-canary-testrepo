@@ -7,20 +7,20 @@ return i;
   }
 });
 var r, i, a = n(735250),
-  o = n(470079),
-  s = n(120356),
-  l = n.n(s),
+  s = n(470079),
+  o = n(120356),
+  l = n.n(o),
   u = n(873546),
   c = n(442837),
   d = n(481060),
   _ = n(607070),
   E = n(100527),
   f = n(906732),
-  h = n(979264),
-  p = n(372900),
-  m = n(477734),
-  I = n(484459),
-  T = n(467679),
+  h = n(385499),
+  p = n(979264),
+  m = n(372900),
+  I = n(477734),
+  T = n(484459),
   g = n(768581),
   S = n(463396),
   A = n(944192),
@@ -31,9 +31,9 @@ function O(e) {
   let {
 compact: t
   } = e;
-  return (0, a.jsx)(T.Z, {
+  return (0, a.jsx)(h.Z, {
 className: t ? v.botTagCompact : v.botTagCozy,
-type: T.Z.Types.REMIX,
+type: h.Z.Types.REMIX,
 useRemSizes: !0
   });
 }
@@ -43,8 +43,8 @@ function R(e) {
   let n, {
   author: r,
   message: i,
-  channel: s,
-  userOverride: T,
+  channel: o,
+  userOverride: h,
   compact: R = !1,
   withMentionPrefix: C = !1,
   showPopout: y = !1,
@@ -56,8 +56,8 @@ function R(e) {
   renderRemixTag: U = !1,
   decorations: w
 } = e,
-x = o.useContext(p.Z),
-G = null !== (t = null == s ? void 0 : s.guild_id) && void 0 !== t ? t : x,
+x = s.useContext(m.Z),
+G = null !== (t = null == o ? void 0 : o.guild_id) && void 0 !== t ? t : x,
 {
   analyticsLocations: k
 } = (0, f.ZP)(E.Z.USERNAME),
@@ -68,8 +68,8 @@ G = null !== (t = null == s ? void 0 : s.guild_id) && void 0 !== t ? t : x,
 } = r,
 H = null != i.messageReference && null != i.webhookId && i.hasFlag(N.iLy.IS_CROSSPOST),
 Z = (0, c.e7)([_.Z], () => _.Z.roleStyle),
-Y = (0, m.X$)(),
-j = o.useMemo(() => ({
+Y = (0, I.X$)(),
+j = s.useMemo(() => ({
   source: N.jXE.CHANNEL,
   messageId: i.id,
   tagUserId: i.author.id
@@ -88,7 +88,7 @@ W = {
     children: (C ? '@' : '') + B
   })
 },
-K = o.useMemo(() => R ? (0, a.jsx)(h.ZP, {
+K = s.useMemo(() => R ? (0, a.jsx)(p.ZP, {
   clan: r.clan,
   userId: i.author.id,
   contextGuildId: G,
@@ -103,8 +103,8 @@ K = o.useMemo(() => R ? (0, a.jsx)(h.ZP, {
 ]);
   n = null != P && null != y ? (0, a.jsx)(d.Popout, {
 preload: H ? void 0 : function() {
-  let e = null != T ? T : i.author;
-  return (0, I.W)(e.id, null != r.guildMemberAvatar && null != G ? (0, g.JM)({
+  let e = null != h ? h : i.author;
+  return (0, T.W)(e.id, null != r.guildMemberAvatar && null != G ? (0, g.JM)({
     guildId: G,
     userId: e.id,
     avatar: r.guildMemberAvatar,
@@ -164,7 +164,7 @@ children: [
   n,
   !R && (0, a.jsxs)(a.Fragment, {
     children: [
-      (0, a.jsx)(h.ZP, {
+      (0, a.jsx)(p.ZP, {
         clan: r.clan,
         userId: i.author.id,
         contextGuildId: G,

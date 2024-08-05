@@ -1,9 +1,9 @@
 n.d(t, {
   S: function() {
-return s;
+return o;
   },
   b: function() {
-return o;
+return s;
   }
 }), n(47120), n(653041);
 var r = n(836560);
@@ -19,7 +19,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 n(981631);
-class o {
+class s {
   safeDispatch(e) {
 for (var t, n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++)
   r[i - 1] = arguments[i];
@@ -81,4 +81,4 @@ return this.unsubscribe(''.concat(e, '_').concat(t), n);
 a(this, 'emitter', new r.EventEmitter()), a(this, '_savedDispatches', {}), this.emitter.setMaxListeners(100);
   }
 }
-let s = new o();
+let o = new s();

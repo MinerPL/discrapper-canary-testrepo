@@ -88,8 +88,8 @@ let {
   changePage: j,
   inviteChannel: M,
   source: D,
-  code: p,
-  guildScheduledEvent: R,
+  code: R,
+  guildScheduledEvent: p,
   disabled: V
 } = e, {
   maxAge: G,
@@ -102,15 +102,15 @@ let {
     channel: null == M ? void 0 : M.id,
     channel_type: null == M ? void 0 : M.type,
     location: D,
-    code: p,
-    guild_scheduled_event_id: null == R ? void 0 : R.id
+    code: R,
+    guild_scheduled_event_id: null == p ? void 0 : p.id
   });
 }, [
   f,
   M,
   D,
-  p,
-  R
+  R,
+  p
 ]);
 return (0, s.jsxs)(s.Fragment, {
   children: [

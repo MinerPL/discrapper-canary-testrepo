@@ -1,130 +1,143 @@
 n.d(t, {
   Z: function() {
-return T;
+return S;
   },
   r: function() {
-return I;
+return g;
   }
 });
 var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(442837),
-  s = n(692547),
+  s = n(442837),
+  o = n(692547),
   l = n(215569),
   u = n(481060),
-  c = n(19780),
-  d = n(285952),
-  _ = n(470441),
-  E = n(727218),
-  f = n(540028),
-  h = n(507675),
-  p = n(689938),
-  m = n(666922);
+  c = n(312956),
+  d = n(19780),
+  _ = n(285952),
+  E = n(470441),
+  f = n(727218),
+  h = n(540028),
+  p = n(507675),
+  m = n(273716),
+  I = n(689938),
+  T = n(666922);
 
-function I(e) {
+function g(e) {
   let {
 title: t,
 onJumpToChannel: n,
-idle: i,
-preventIdleComponent: a
-  } = e, l = (0, o.e7)([c.Z], () => c.Z.getChannelId()), d = null != l ? (0, r.jsx)(f.Z, {
-voiceChannelId: l,
-idle: i
-  }) : null;
-  return (0, r.jsxs)(a, {
-className: m.headerIdleContainer,
+onHide: i,
+idle: a,
+preventIdleComponent: l
+  } = e, _ = (0, s.e7)([d.Z], () => d.Z.getChannelId()), E = null != _ ? (0, r.jsx)(h.Z, {
+voiceChannelId: _,
+idle: a
+  }) : null, {
+enabled: p
+  } = c.Z.useExperiment({
+location: 'PictureInPicturePlayer'
+  });
+  return (0, r.jsxs)(l, {
+className: T.headerIdleContainer,
 children: [
   (0, r.jsxs)(u.Clickable, {
-    className: m.headerTitle,
+    className: T.headerTitle,
     onClick: n,
     children: [
       (0, r.jsx)(u.ArrowSmallLeftIcon, {
         size: 'custom',
         color: 'currentColor',
-        'aria-label': p.Z.Messages.OPEN_IN_THEATER,
-        className: m.backButton,
+        'aria-label': I.Z.Messages.OPEN_IN_THEATER,
+        className: T.backButton,
         width: 20,
         height: 20
       }),
-      (0, r.jsx)(E.Z, {
-        className: m.headerText,
-        size: E.Z.Sizes.SIZE_16,
-        color: s.Z.unsafe_rawColors.WHITE_500.css,
+      (0, r.jsx)(f.Z, {
+        className: T.headerText,
+        size: f.Z.Sizes.SIZE_16,
+        color: o.Z.unsafe_rawColors.WHITE_500.css,
         children: t
       })
     ]
   }),
-  d
+  p && null != i ? (0, r.jsx)(m.Z, {
+    onClick: i,
+    label: I.Z.Messages.PICTURE_IN_PICTURE_CLOSE_PIP
+  }) : null,
+  E
 ]
   });
 }
 
-function T(e) {
+function S(e) {
   let {
 children: t,
 idle: n,
 onJumpToChannel: i,
+onHide: s,
 backgroundKey: o,
-onActive: s,
-onForceIdle: u,
-renderBottomLeftControls: c,
-renderBottomRightControls: E,
-screenMessage: f,
-hideControls: p = !1,
-className: T,
-innerClassName: g,
-...S
+onActive: u,
+onForceIdle: c,
+renderBottomLeftControls: d,
+renderBottomRightControls: f,
+screenMessage: h,
+hideControls: m = !1,
+className: I,
+innerClassName: S,
+...A
   } = e;
   return (0, r.jsxs)('div', {
-onMouseMove: s,
-onMouseDown: s,
-onMouseLeave: u,
-className: a()(m.pictureInPictureVideo, {
-  [m.idle]: n
-}, T),
+onMouseMove: u,
+onMouseDown: u,
+onMouseLeave: c,
+className: a()(T.pictureInPictureVideo, {
+  [T.idle]: n
+}, I),
 onDoubleClick: i,
 children: [
   (0, r.jsx)(l.W, {
-    children: (0, r.jsx)(_.B, {
-      className: g,
+    children: (0, r.jsx)(E.B, {
+      className: S,
       children: t
     }, o)
   }),
-  null != f ? (0, r.jsx)(h.Z, {
+  null != h ? (0, r.jsx)(p.Z, {
     size: 'small',
-    ...f
+    ...h
   }) : null,
-  !p && (0, r.jsxs)('div', {
-    className: m.videoControls,
+  !m && (0, r.jsxs)('div', {
+    className: a()(T.videoControls, 'theme-dark'),
     children: [
       (0, r.jsx)('div', {
-        className: m.topControls,
-        children: (0, r.jsx)(I, {
+        className: T.topControls,
+        children: (0, r.jsx)(g, {
           idle: n,
           onJumpToChannel: i,
-          ...S
+          onHide: s,
+          ...A
         })
       }),
       (0, r.jsxs)('div', {
-        className: m.bottomControls,
+        className: T.bottomControls,
         children: [
-          (0, r.jsx)(d.Z, {
+          (0, r.jsx)(_.Z, {
             grow: 0,
             shrink: 1,
             basis: '50%',
-            align: d.Z.Align.CENTER,
-            className: m.bottomLeftControls,
-            children: null == c ? void 0 : c()
+            align: _.Z.Align.CENTER,
+            className: T.bottomLeftControls,
+            children: null == d ? void 0 : d()
           }),
-          (0, r.jsx)(d.Z, {
+          (0, r.jsx)(_.Z, {
             grow: 0,
             shrink: 1,
-            justify: d.Z.Justify.END,
+            justify: _.Z.Justify.END,
             basis: '50%',
-            align: d.Z.Align.CENTER,
-            children: null == E ? void 0 : E()
+            align: _.Z.Align.CENTER,
+            children: null == f ? void 0 : f()
           })
         ]
       })

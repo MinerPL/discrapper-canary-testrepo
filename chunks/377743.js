@@ -5,8 +5,8 @@ return E;
 });
 var i = n(735250);
 n(470079);
-var s = n(100527),
-  a = n(906732),
+var a = n(100527),
+  s = n(906732),
   r = n(82950),
   l = n(26323),
   o = n(267642),
@@ -22,7 +22,7 @@ guild: t,
 markAsDismissed: n
   } = e, E = (0, o.KK)(t, c.Eu4.TIER_2), {
 analyticsLocations: I
-  } = (0, a.ZP)(s.Z.GUILD_BANNER_NOTICE);
+  } = (0, s.ZP)(a.Z.GUILD_BANNER_NOTICE);
   return (0, i.jsx)(r.Z, {
 guild: t,
 onDismissed: () => n(d.L.UNKNOWN),

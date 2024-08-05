@@ -1,31 +1,31 @@
 var r = n(903799),
   i = n(609513),
   a = n(685053),
-  o = a.assert,
-  s = a.parseBytes,
+  s = a.assert,
+  o = a.parseBytes,
   l = n(226140),
   u = n(452610);
 
 function c(e) {
-  if (o('ed25519' === e, 'only tested with ed25519 so far'), !(this instanceof c))
+  if (s('ed25519' === e, 'only tested with ed25519 so far'), !(this instanceof c))
 return new c(e);
   e = i[e].curve, this.curve = e, this.g = e.g, this.g.precompute(e.n.bitLength() + 1), this.pointClass = e.point().constructor, this.encodingLength = Math.ceil(e.n.bitLength() / 8), this.hash = r.sha512;
 }
 e.exports = c, c.prototype.sign = function(e, t) {
-  e = s(e);
+  e = o(e);
   var n = this.keyFromSecret(t),
 r = this.hashInt(n.messagePrefix(), e),
 i = this.g.mul(r),
 a = this.encodePoint(i),
-o = this.hashInt(a, n.pubBytes(), e).mul(n.priv()),
-l = r.add(o).umod(this.curve.n);
+s = this.hashInt(a, n.pubBytes(), e).mul(n.priv()),
+l = r.add(s).umod(this.curve.n);
   return this.makeSignature({
 R: i,
 S: l,
 Rencoded: a
   });
 }, c.prototype.verify = function(e, t, n) {
-  e = s(e), t = this.makeSignature(t);
+  e = o(e), t = this.makeSignature(t);
   var r = this.keyFromPublic(n),
 i = this.hashInt(t.Rencoded(), r.pubBytes(), e),
 a = this.g.mul(t.S());

@@ -1,8 +1,8 @@
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(695464),
+  s = n.n(a),
+  o = n(695464),
   l = n(28546),
   u = n(981631),
   c = n(598025);
@@ -11,18 +11,18 @@ let d = e => {
 activeIndex: t,
 categoryListRef: n,
 getScrollOffsetForIndex: r
-  } = e, a = i.useRef(u.xAR), o = i.useRef(t);
+  } = e, a = i.useRef(u.xAR), s = i.useRef(t);
   return i.useEffect(() => {
-null != t && t !== o.current && (a.current !== u.xAR && window.cancelAnimationFrame(a.current), a.current = window.requestAnimationFrame(() => {
+null != t && t !== s.current && (a.current !== u.xAR && window.cancelAnimationFrame(a.current), a.current = window.requestAnimationFrame(() => {
   var e;
   if (null == n.current)
     return;
-  let i = t > (null !== (e = o.current) && void 0 !== e ? e : -1),
-    s = null != r ? r(t, i) : 0;
+  let i = t > (null !== (e = s.current) && void 0 !== e ? e : -1),
+    o = null != r ? r(t, i) : 0;
   n.current.scrollRowIntoView(t, {
     animate: !0,
-    offset: s
-  }), a.current = u.xAR, o.current = t;
+    offset: o
+  }), a.current = u.xAR, s.current = t;
 }));
   }, [
 t,
@@ -79,9 +79,9 @@ O = i.useMemo(() => 'function' == typeof m ? e => m(a[e], e) : m, [
   m
 ]);
   return (0, r.jsxs)('div', {
-className: o()(c.wrapper, E),
+className: s()(c.wrapper, E),
 children: [
-  (0, r.jsx)(s.Z, {
+  (0, r.jsx)(o.Z, {
     listPadding: f,
     onScroll: I,
     ref: t,

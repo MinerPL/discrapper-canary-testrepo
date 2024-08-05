@@ -3,8 +3,8 @@ n.d(t, {
 return r;
   }
 }), n(47120), n(653041);
-var r, i, a, o = n(31775),
-  s = n.n(o),
+var r, i, a, s = n(31775),
+  o = n.n(s),
   l = n(442837),
   u = n(570140),
   c = n(163268),
@@ -43,7 +43,7 @@ return this._cachedMessages.get(e);
 return this._cachedMessageIds;
   }
   constructor() {
-h(this, '_cachedMessages', new(s())({
+h(this, '_cachedMessages', new(o())({
   max: 100,
   dispose: (e, t) => this.handleCacheDisposed(e, t)
 })), h(this, '_cachedMessageIds', new Set());

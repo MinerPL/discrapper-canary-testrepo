@@ -8,11 +8,11 @@ return i;
 });
 var r, i, a = n(536895);
 
-function o(e, t) {
+function s(e, t) {
   return Number.isNaN(e) ? t : Number.isNaN(t) ? e : Math.max(e, t);
 }
 
-function s(e, t) {
+function o(e, t) {
   return Number.isNaN(e) ? t : Number.isNaN(t) ? e : Math.min(e, t);
 }
 (r = i || (i = {})).UPDATE_COLUMN_COUNTS = 'UPDATE_COLUMN_COUNTS', r.SET_FOCUSED_POSITION = 'SET_FOCUSED_POSITION';
@@ -22,26 +22,26 @@ function l(e, t) {
   switch (t.type) {
 case a.Us.NAVIGATE_UP:
   return function(e, t) {
-    let n = o(0, e.focusedY - 1);
+    let n = s(0, e.focusedY - 1);
     return {
       ...e,
-      focusedX: s(e.columnCounts[n] - 1, e.focusedX),
+      focusedX: o(e.columnCounts[n] - 1, e.focusedX),
       focusedY: n
     };
   }(e, 0);
 case a.Us.NAVIGATE_DOWN:
   return function(e, t) {
-    let n = s(e.focusedY + 1, e.columnCounts.length - 1);
+    let n = o(e.focusedY + 1, e.columnCounts.length - 1);
     return {
       ...e,
-      focusedX: s(e.columnCounts[n] - 1, e.focusedX),
+      focusedX: o(e.columnCounts[n] - 1, e.focusedX),
       focusedY: n
     };
   }(e, 0);
 case a.Us.NAVIGATE_RIGHT:
   return function(e, t) {
     let n = e.focusedY !== e.columnCounts.length - 1 && e.focusedX + 1 === e.columnCounts[e.focusedY],
-      r = n ? 0 : s(e.focusedX + 1, e.columnCounts[e.focusedY] - 1),
+      r = n ? 0 : o(e.focusedX + 1, e.columnCounts[e.focusedY] - 1),
       i = n ? e.focusedY + 1 : e.focusedY;
     return {
       ...e,
@@ -53,7 +53,7 @@ case a.Us.NAVIGATE_LEFT:
   return function(e, t) {
     let n = 0 !== e.focusedY && 0 === e.focusedX,
       r = n ? e.focusedY - 1 : e.focusedY,
-      i = n ? e.columnCounts[r] - 1 : o(0, e.focusedX - 1);
+      i = n ? e.columnCounts[r] - 1 : s(0, e.focusedX - 1);
     return {
       ...e,
       focusedX: i,
@@ -92,11 +92,11 @@ case 'UPDATE_COLUMN_COUNTS':
   return function(e, t) {
     let {
       columnCounts: n
-    } = t, r = s(o(0, n.length - 1), e.focusedY);
+    } = t, r = o(s(0, n.length - 1), e.focusedY);
     return {
       ...e,
       columnCounts: n,
-      focusedX: s(null == n[r] ? 0 : n[r] - 1, e.focusedX),
+      focusedX: o(null == n[r] ? 0 : n[r] - 1, e.focusedX),
       focusedY: r
     };
   }(e, t);
@@ -105,10 +105,10 @@ case 'SET_FOCUSED_POSITION':
     let {
       x: n,
       y: r
-    } = t, i = o(0, s(r, e.columnCounts.length - 1));
+    } = t, i = s(0, o(r, e.columnCounts.length - 1));
     return {
       ...e,
-      focusedX: o(0, s(n, e.columnCounts[i] - 1)),
+      focusedX: s(0, o(n, e.columnCounts[i] - 1)),
       focusedY: i
     };
   }(e, t);

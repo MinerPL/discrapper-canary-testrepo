@@ -6,8 +6,8 @@ return p;
 var r = n(36056),
   i = n(950697),
   a = n(614456),
-  o = n(528046),
-  s = n(727037),
+  s = n(528046),
+  o = n(727037),
   l = n(297584),
   u = n(349992),
   c = n(320215),
@@ -18,7 +18,7 @@ var r = n(36056),
   h = n(647943);
 class p {
   constructor(e, t, n) {
-this.defaultCheckDepth = 16, this.typeName = e, this.fields = t.map(r.nb), this.options = null != n ? n : {}, this.refTypeCheck = new i.Z(this), this.refJsonReader = new a.C(this), this.refJsonWriter = new o.k(this), this.refBinReader = new s.I(this), this.refBinWriter = new l.R(this);
+this.defaultCheckDepth = 16, this.typeName = e, this.fields = t.map(r.nb), this.options = null != n ? n : {}, this.refTypeCheck = new i.Z(this), this.refJsonReader = new a.C(this), this.refJsonWriter = new s.k(this), this.refBinReader = new o.I(this), this.refBinWriter = new l.R(this);
   }
   create(e) {
 let t = (0, u.t)(this);

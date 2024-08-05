@@ -1,25 +1,25 @@
-s.r(o), s(47120);
-var r = s(735250),
-  t = s(470079),
-  n = s(120356),
-  a = s.n(n),
-  i = s(512722),
-  c = s.n(i),
-  l = s(481060),
-  d = s(277390),
-  C = s(626135),
-  _ = s(985002),
-  u = s(880257),
-  f = s(631885),
-  m = s(292352),
-  E = s(981631),
-  x = s(689938),
-  N = s(167614),
-  h = s(549856);
-o.default = e => {
+o.r(s), o(47120);
+var r = o(735250),
+  t = o(470079),
+  n = o(120356),
+  a = o.n(n),
+  i = o(512722),
+  c = o.n(i),
+  l = o(481060),
+  d = o(277390),
+  C = o(626135),
+  _ = o(985002),
+  u = o(880257),
+  f = o(631885),
+  m = o(292352),
+  E = o(981631),
+  x = o(689938),
+  N = o(167614),
+  h = o(549856);
+s.default = e => {
   let {
-transitionState: o,
-onClose: s
+transitionState: s,
+onClose: o
   } = e, n = (0, u.Z)(), [i, R] = t.useState(!1), {
 getLinkCode: b,
 isGetLinkCodeLoading: p
@@ -29,22 +29,22 @@ isGetLinkCodeLoading: p
 R(e => (C.default.track(E.rMx.FAMILY_CENTER_ACTION, {
   action: i ? m.YC.HideQRCode : m.YC.RevealQRCode
 }), !e)), !i && setTimeout(() => {
-  s();
+  o();
 }, m.f2);
   };
   t.useEffect(() => {
 b();
   }, []), t.useEffect(() => {
-g > M.current && s();
+g > M.current && o();
   }, [
 M,
 g,
-s
+o
   ]);
   let v = i && !p && null != I;
   return (0, r.jsxs)(l.ModalRoot, {
 className: N.modalRoot,
-transitionState: o,
+transitionState: s,
 children: [
   (0, r.jsxs)(l.Notice, {
     className: N.notice,
@@ -109,7 +109,7 @@ children: [
           (0, r.jsx)(l.Button, {
             grow: !0,
             color: l.Button.Colors.PRIMARY,
-            onClick: s,
+            onClick: o,
             children: x.Z.Messages.CLOSE
           })
         ]

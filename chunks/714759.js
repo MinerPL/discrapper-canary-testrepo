@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(689938),
+var a = n(481060),
+  s = n(689938),
   r = n(98329);
 let l = Math.ceil(2 * Math.PI * 20);
 t.Z = e => {
@@ -9,14 +9,14 @@ t.Z = e => {
 total: t,
 used: n
   } = e, o = Math.max(0, Math.min(1, n / t)), c = ''.concat(Math.floor(100 * o), '%');
-  return (0, i.jsx)(s.Tooltip, {
-text: a.Z.Messages.APPLICATION_INSTALLATION_SPACE_USED.format({
+  return (0, i.jsx)(a.Tooltip, {
+text: s.Z.Messages.APPLICATION_INSTALLATION_SPACE_USED.format({
   used: c
 }),
 children: e => (0, i.jsxs)('div', {
   className: r.wrapper,
   role: 'progressbar',
-  'aria-label': a.Z.Messages.APPLICATION_INSTALLATION_SPACE_USED.format({
+  'aria-label': s.Z.Messages.APPLICATION_INSTALLATION_SPACE_USED.format({
     used: c
   }),
   ...e,

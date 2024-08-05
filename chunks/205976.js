@@ -5,8 +5,8 @@ return h;
 });
 var i = n(735250);
 n(470079);
-var s = n(692547),
-  a = n(481060),
+var a = n(692547),
+  s = n(481060),
   r = n(436088),
   l = n(770471),
   o = n(143614),
@@ -34,16 +34,16 @@ children: [
       className: _.inline,
       children: [
         (0, i.jsx)(r.Z, {
-          color: s.Z.colors.HEADER_PRIMARY.css,
+          color: a.Z.colors.HEADER_PRIMARY.css,
           height: 20,
           width: 20
         }),
-        (0, i.jsx)(a.Heading, {
+        (0, i.jsx)(s.Heading, {
           variant: 'heading-md/semibold',
           children: u.Z.Messages.LIVE_BROADCASTS
         }),
         (0, i.jsx)(d.Z, {}),
-        (0, i.jsxs)(a.Heading, {
+        (0, i.jsxs)(s.Heading, {
           variant: 'heading-md/semibold',
           children: [
             '\u2014 ',

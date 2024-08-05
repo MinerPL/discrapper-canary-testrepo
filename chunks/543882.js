@@ -1,6 +1,6 @@
 n(47120), n(724458);
-var r, i, a, o, s = n(392711),
-  l = n.n(s),
+var r, i, a, s, o = n(392711),
+  l = n.n(o),
   u = n(442837),
   c = n(570140),
   d = n(872810),
@@ -44,12 +44,12 @@ let r = (0, _.V9)({
 return p.has(r);
   }
 }
-o = 'ApplicationStreamPreviewStore', (a = 'displayName') in(i = I) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'ApplicationStreamPreviewStore', (a = 'displayName') in(i = I) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new I(c.Z, {
+}) : i[a] = s, t.Z = new I(c.Z, {
   CONNECTION_OPEN: m,
   LOGOUT: m,
   STREAM_PREVIEW_FETCH_START: function(e) {
@@ -92,13 +92,13 @@ return !(l().isEmpty(f) && l().isEmpty(h)) && t.reduce((e, t) => {
   } = t;
   if (a)
     return e;
-  let o = (0, _.V9)({
+  let s = (0, _.V9)({
     streamType: null != r ? E.lo.GUILD : E.lo.CALL,
     guildId: r,
     channelId: i,
     ownerId: n
   });
-  return delete f[o], delete h[o], !0;
+  return delete f[s], delete h[s], !0;
 }, !1);
   }
 });

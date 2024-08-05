@@ -1,6 +1,6 @@
 n(653041);
-var i, s = n(392711),
-  a = n.n(s),
+var i, a = n(392711),
+  s = n.n(a),
   r = n(442837),
   l = n(570140),
   o = n(194359),
@@ -40,21 +40,21 @@ applicationStream: u.Z.getAnyStreamForUser(e)
   };
 }
 
-function C(e) {
+function f(e) {
   let t = [];
-  return a()(_.ZP.memberOf(e)).map(h.Z.getGuild).sortBy(e => null != e ? e.name.toLowerCase() : null).forEach(e => {
+  return s()(_.ZP.memberOf(e)).map(h.Z.getGuild).sortBy(e => null != e ? e.name.toLowerCase() : null).forEach(e => {
 null != e && t.push(e);
   }), {
 mutualGuildsLength: t.length,
 mutualGuilds: t.slice(0, 5)
   };
 }
-class f extends c.Z {
+class C extends c.Z {
   get comparator() {
-var e, t, n, i, s;
+var e, t, n, i, a;
 return [
   this.type,
-  null !== (s = null !== (i = null === (e = this.nickname) || void 0 === e ? void 0 : e.toLowerCase()) && void 0 !== i ? i : null === (n = this.user) || void 0 === n ? void 0 : null === (t = n.globalName) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== s ? s : this.usernameLower
+  null !== (a = null !== (i = null === (e = this.nickname) || void 0 === e ? void 0 : e.toLowerCase()) && void 0 !== i ? i : null === (n = this.user) || void 0 === n ? void 0 : null === (t = n.globalName) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== a ? a : this.usernameLower
 ];
   }
   constructor(e) {
@@ -63,23 +63,23 @@ super(), p(this, 'key', void 0), p(this, 'type', void 0), p(this, 'status', void
 }
 class N {
   reset() {
-let e = a().map(I.Z.getRelationships(), (e, t) => new f({
+let e = s().map(I.Z.getRelationships(), (e, t) => new C({
     key: t,
     type: e,
     nickname: I.Z.getNickname(t),
     ...T(t),
     ...S(t),
-    ...C(t)
+    ...f(t)
   })),
-  t = a().map(d.Z.getSuggestions(), e => new f({
+  t = s().map(d.Z.getSuggestions(), e => new C({
     key: e.key,
     type: 99,
     nickname: e.name,
     ...T(e.key),
     ...S(e.key),
-    ...C(e.key)
+    ...f(e.key)
   }));
-return new N(a().concat(e, t));
+return new N(s().concat(e, t));
   }
   clone() {
 return new N(this._rows);
@@ -88,13 +88,13 @@ return new N(this._rows);
 let t = !1;
 for (let n = 0; n < this._rows.length; n++) {
   let i = this._rows[n],
-    s = i.merge(e(i.key));
-  t = t || s !== i, this._rows[n] = s;
+    a = i.merge(e(i.key));
+  t = t || a !== i, this._rows[n] = a;
 }
 return t;
   }
   filter(e, t) {
-return a()(this._rows).filter(e => {
+return s()(this._rows).filter(e => {
   if (null == e.user)
     return !1;
   if (null != t && '' !== t) {
@@ -139,31 +139,31 @@ p(this, '_rows', void 0), this._rows = e;
   }
 }
 let A = !0,
-  Z = !1,
-  L = g.pJs.ONLINE,
-  v = new N(),
+  v = !1,
+  Z = g.pJs.ONLINE,
+  L = new N(),
   O = !0,
   R = !1;
 
 function x() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  A && (e || L !== g.pJs.ONLINE && L !== g.pJs.ADD_FRIEND) && !Z && (A = !1, Z = !0, o.Z.fetchRelationships());
+  A && (e || Z !== g.pJs.ONLINE && Z !== g.pJs.ADD_FRIEND) && !v && (A = !1, v = !0, o.Z.fetchRelationships());
 }
 
 function b() {
-  if (A = !0, O ? Z = !1 : x(), v = v.reset(), R)
+  if (A = !0, O ? v = !1 : x(), L = L.reset(), R)
 return;
-  let e = v.getRelationshipCounts();
-  L = 0 === e[g.OGo.FRIEND] ? 0 !== e[g.OGo.PENDING_INCOMING] ? g.pJs.PENDING : g.pJs.ADD_FRIEND : g.pJs.ONLINE;
+  let e = L.getRelationshipCounts();
+  Z = 0 === e[g.OGo.FRIEND] ? 0 !== e[g.OGo.PENDING_INCOMING] ? g.pJs.PENDING : g.pJs.ADD_FRIEND : g.pJs.ONLINE;
 }
 
 function P() {
-  v = O ? new N() : v.reset();
+  L = O ? new N() : L.reset();
 }
 
 function M(e) {
   return function() {
-return !O && !!v.update(e) && (v = v.clone(), !0);
+return !O && !!L.update(e) && (L = L.clone(), !0);
   };
 }
 class D extends(i = r.ZP.Store) {
@@ -175,10 +175,10 @@ this.waitFor(I.Z, E.Z, m.default, h.Z, _.ZP, u.Z, d.Z), this.syncWith([I.Z], P),
   }
   getState() {
 return {
-  fetching: Z,
-  section: L,
+  fetching: v,
+  section: Z,
   pendingCount: I.Z.getPendingCount(),
-  rows: v
+  rows: L
 };
   }
 }
@@ -187,7 +187,7 @@ p(D, 'displayName', 'FriendsStore'), t.ZP = new D(l.Z, {
 b();
   },
   FRIENDS_SET_SECTION: function(e) {
-L = e.section, x();
+Z = e.section, x();
   },
   CHANNEL_SELECT: function(e) {
 let {
@@ -196,10 +196,10 @@ let {
 return O = null != t, P(), !O;
   },
   LOAD_RELATIONSHIPS_SUCCESS: function() {
-Z = !1;
+v = !1;
   },
   LOAD_RELATIONSHIPS_FAILURE: function() {
-A = !0, Z = !0;
+A = !0, v = !0;
   },
   DRAWER_SELECT_TAB: function(e) {
 let {
@@ -208,6 +208,6 @@ let {
 return O = t !== g.cII.FRIENDS, P(), !O;
   },
   FRIENDS_SET_INITIAL_SECTION: function(e) {
-L = e.section, R = !0;
+Z = e.section, R = !0;
   }
 });

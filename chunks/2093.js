@@ -1,21 +1,21 @@
 var i = n(735250);
 n(470079);
-var a = n(120356),
-  s = n.n(a),
+var s = n(120356),
+  a = n.n(s),
   r = n(451166);
 t.Z = e => {
   let {
 value: t = 0,
 text: n,
-className: a,
+className: s,
 ...l
   } = e;
   return null != n ? (0, i.jsx)('div', {
-className: s()(r.wrapper, a),
+className: a()(r.wrapper, s),
 ...l,
 children: n
   }) : t > 0 ? (0, i.jsx)('div', {
-className: s()(r.wrapper, a),
+className: a()(r.wrapper, s),
 ...l,
 children: t
   }) : null;

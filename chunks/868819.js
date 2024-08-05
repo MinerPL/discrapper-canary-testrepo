@@ -9,8 +9,8 @@ return I;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(718922),
+  s = n.n(a),
+  o = n(718922),
   l = n(442837),
   u = n(481060),
   c = n(292419),
@@ -38,7 +38,7 @@ color: 'text-danger',
 icon: (0, r.jsx)(u.CircleExclamationPointIcon, {
   size: 'xs',
   color: 'currentColor',
-  className: o()(h.icon, h.errorIcon)
+  className: s()(h.icon, h.errorIcon)
 })
   };
 }
@@ -51,7 +51,7 @@ text: i,
 color: a
   } = e;
   return (0, r.jsxs)('div', {
-className: o()(h.wrapper, t),
+className: s()(h.wrapper, t),
 children: [
   n,
   (0, r.jsx)(u.Text, {
@@ -68,18 +68,18 @@ t.ZP = i.memo(function(e) {
 message: t,
 className: n,
 component: a
-  } = e, o = (0, s.Z)(), u = (0, l.e7)([d.Z], () => d.Z.getInteraction(t), [t]);
+  } = e, s = (0, o.Z)(), u = (0, l.e7)([d.Z], () => d.Z.getInteraction(t), [t]);
   i.useEffect(() => {
 let e = null;
 if (t.hasFlag(E.iLy.LOADING) && null != u) {
   let n = (0, _.ow)(t.id) - Date.now();
-  n > 0 && (e = setTimeout(() => o(), 1000 + n));
+  n > 0 && (e = setTimeout(() => s(), 1000 + n));
 }
 return () => {
   clearTimeout(e);
 };
   }, [
-o,
+s,
 u,
 t
   ]);

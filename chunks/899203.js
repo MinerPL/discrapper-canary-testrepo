@@ -10,7 +10,7 @@ t[n] = e;
 e.exports = function(e, n, r, i) {
   var a = i + r;
   e ^= -1;
-  for (var o = i; o < a; o++)
-e = e >>> 8 ^ t[(e ^ n[o]) & 255];
+  for (var s = i; s < a; s++)
+e = e >>> 8 ^ t[(e ^ n[s]) & 255];
   return -1 ^ e;
 };

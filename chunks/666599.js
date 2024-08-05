@@ -28,7 +28,7 @@ children: [
       (0, r.jsx)('div', {
         className: _.progressBackground
       }),
-      (0, r.jsx)(n.Spring, {
+      (0, r.jsx)(t.Spring, {
         from: {
           width: 0
         },
@@ -41,6 +41,7 @@ children: [
           mass: 50,
           clamp: !0
         },
+        shouldAnimate: 'animate-always',
         children: e => {
           let {
             width: a

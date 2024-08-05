@@ -1,7 +1,7 @@
-var n = a(735250);
+var t = a(735250);
 a(470079);
-var t = a(120356),
-  l = a.n(t),
+var n = a(120356),
+  l = a.n(n),
   i = a(481060),
   r = a(888592),
   o = a(689938),
@@ -11,20 +11,20 @@ s.Z = e => {
 school: s,
 setStep: a
   } = e;
-  return (0, n.jsxs)('div', {
+  return (0, t.jsxs)('div', {
 className: c.container,
 children: [
-  (0, n.jsx)('div', {
+  (0, t.jsx)('div', {
     className: c.topImage
   }),
-  (0, n.jsx)(i.Heading, {
+  (0, t.jsx)(i.Heading, {
     className: l()(c.centerText, c.header),
     variant: 'heading-xl/semibold',
     children: o.Z.Messages.HUB_WAITLIST_MODAL_JOINED_HEADER
   }),
-  (0, n.jsx)('div', {
+  (0, t.jsx)('div', {
     className: c.descriptionWidth,
-    children: (0, n.jsx)(i.Text, {
+    children: (0, t.jsx)(i.Text, {
       className: c.centerText,
       variant: 'text-sm/normal',
       color: 'header-secondary',
@@ -33,7 +33,7 @@ children: [
       })
     })
   }),
-  (0, n.jsx)(i.Button, {
+  (0, t.jsx)(i.Button, {
     look: i.Button.Looks.LINK,
     size: i.Button.Sizes.SMALL,
     color: i.Button.Colors.LINK,

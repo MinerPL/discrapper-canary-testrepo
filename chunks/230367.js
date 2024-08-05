@@ -7,11 +7,11 @@ return i;
 return r;
   }
 }), ! function(e) {
-  e.symbol = Symbol.for('protobuf-ts/unknown'), e.onRead = (n, r, i, a, o) => {
+  e.symbol = Symbol.for('protobuf-ts/unknown'), e.onRead = (n, r, i, a, s) => {
 (t(r) ? r[e.symbol] : r[e.symbol] = []).push({
   no: i,
   wireType: a,
-  data: o
+  data: s
 });
   }, e.onWrite = (t, n, r) => {
 for (let {

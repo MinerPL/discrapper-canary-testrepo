@@ -2,8 +2,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(512722),
-  s = n.n(o),
+  s = n(512722),
+  o = n.n(s),
   l = n(442837),
   u = n(481060),
   c = n(730749),
@@ -35,7 +35,7 @@ t.Z = (0, c.Z)(e => {
 activity: t,
 embeddedActivity: n,
 user: i,
-applicationStream: o,
+applicationStream: s,
 className: c,
 guildId: U,
 channelId: w,
@@ -47,8 +47,8 @@ onAction: F,
 isEmbedded: V = !1
   } = e, H = (0, l.e7)([f.default], () => {
 let e = f.default.getCurrentUser();
-return s()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
-  }), Z = B === S.Y.PROFILE || B === S.Y.PROFILE_V2 || B === S.Y.SIMPLIFIED_PROFILE, Y = B === S.Y.STREAM_PREVIEW || null != o, j = B === S.Y.SIMPLIFIED_PROFILE || B === S.Y.BITE_SIZE_POPOUT, W = (0, T.Z)(t), K = Z ? p.Z.Align.END : p.Z.Align.STRETCH, z = W || Y ? p.Z.Direction.HORIZONTAL : p.Z.Direction.VERTICAL, q = (null == t ? void 0 : t.type) === M.IIU.HANG_STATUS, Q = (0, l.e7)([
+return o()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
+  }), Z = B === S.Y.PROFILE || B === S.Y.PROFILE_V2 || B === S.Y.SIMPLIFIED_PROFILE, Y = B === S.Y.STREAM_PREVIEW || null != s, j = B === S.Y.SIMPLIFIED_PROFILE || B === S.Y.BITE_SIZE_POPOUT, W = (0, T.Z)(t), K = Z ? p.Z.Align.END : p.Z.Align.STRETCH, z = W || Y ? p.Z.Direction.HORIZONTAL : p.Z.Direction.VERTICAL, q = (null == t ? void 0 : t.type) === M.IIU.HANG_STATUS, Q = (0, l.e7)([
 h.Z,
 E.Z
   ], () => {
@@ -124,7 +124,7 @@ children: (() => {
     isCurrentUser: H.id === i.id,
     color: G,
     look: k,
-    applicationStream: o,
+    applicationStream: s,
     onAction: F
   }, 'watch-button') : q && null != Q ? (0, r.jsx)(O.Z, {
     color: G,

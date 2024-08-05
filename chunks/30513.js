@@ -24,8 +24,8 @@ return C;
 var r = n(692547),
   i = n(481060),
   a = n(15385),
-  o = n(709586),
-  s = n(123245),
+  s = n(709586),
+  o = n(123245),
   l = n(981631);
 n(474936);
 var u = n(689938);
@@ -98,7 +98,7 @@ icon: a.Z,
 description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_PROFILE_BADGE
   }),
   T = () => ({
-icon: o.Z,
+icon: s.Z,
 color: r.Z.unsafe_rawColors.PREMIUM_PERK_PINK.css,
 description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_BOOST_CRYSTAL
   }),
@@ -122,7 +122,7 @@ return {
   },
   N = () => ({
 color: r.Z.unsafe_rawColors.PREMIUM_PERK_PURPLE.css,
-icon: s.Z,
+icon: o.Z,
 description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_FILE_UPLOAD_TIER_3
   }),
   v = function() {

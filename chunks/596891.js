@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(442837),
-  o = n(481060),
-  s = n(92114),
+  s = n(481060),
+  o = n(92114),
   l = n(194359),
   u = n(367907),
   c = n(592125),
@@ -45,7 +45,7 @@ b = i.useCallback(() => {
   null != A && (O(!0), u.ZP.trackWithMetadata(p.rMx.IAR_MUTE_USER_BUTTON_CLICKED, {
     other_user_id: t,
     report_id: n
-  }), s.Z.updateChannelOverrideSettings(null, A, {
+  }), o.Z.updateChannelOverrideSettings(null, A, {
     muted: !0
   }, f.ZB.Muted));
 }, [
@@ -61,7 +61,7 @@ x = S || g;
   return null != y && x ? (0, r.jsxs)('div', {
 className: I.container,
 children: [
-  (0, r.jsx)(o.Text, {
+  (0, r.jsx)(s.Text, {
     className: I.description,
     variant: 'text-sm/normal',
     children: g && S ? w : g ? U : P
@@ -72,18 +72,18 @@ children: [
       (0, r.jsxs)('div', {
         className: I.userInfo,
         children: [
-          (0, r.jsx)(o.Avatar, {
-            size: o.AvatarSizes.SIZE_32,
+          (0, r.jsx)(s.Avatar, {
+            size: s.AvatarSizes.SIZE_32,
             src: y.getAvatarURL(void 0, 32),
             className: I.avatar,
             'aria-label': y.username
           }),
-          (0, r.jsx)(o.Text, {
+          (0, r.jsx)(s.Text, {
             className: I.userName,
             variant: 'text-sm/semibold',
             children: y.username
           }),
-          !y.isPomelo() && (0, r.jsxs)(o.Text, {
+          !y.isPomelo() && (0, r.jsxs)(s.Text, {
             variant: 'text-sm/normal',
             children: [
               '#',
@@ -95,18 +95,18 @@ children: [
       (0, r.jsxs)('div', {
         className: I.actionButtonsContainer,
         children: [
-          S && (0, r.jsx)(o.Button, {
+          S && (0, r.jsx)(s.Button, {
             onClick: b,
             disabled: v,
-            size: o.Button.Sizes.SMALL,
-            color: o.Button.Colors.PRIMARY,
+            size: s.Button.Sizes.SMALL,
+            color: s.Button.Colors.PRIMARY,
             children: v ? m.Z.Messages.MUTED : m.Z.Messages.MUTE
           }),
-          g && (0, r.jsx)(o.Button, {
+          g && (0, r.jsx)(s.Button, {
             onClick: L,
             disabled: R,
-            size: o.Button.Sizes.SMALL,
-            color: o.Button.Colors.RED,
+            size: s.Button.Sizes.SMALL,
+            color: s.Button.Colors.RED,
             children: R ? m.Z.Messages.BLOCKED : m.Z.Messages.BLOCK
           })
         ]

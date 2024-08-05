@@ -2,8 +2,8 @@ var r = n(735250);
 n(470079);
 var i = n(392711),
   a = n(481060),
-  o = n(570140),
-  s = n(846027),
+  s = n(570140),
+  o = n(846027),
   l = n(872810),
   u = n(695346),
   c = n(199902),
@@ -19,7 +19,7 @@ var i = n(392711),
 let g = (0, i.debounce)(l.xc, 1000);
 t.Z = {
   init() {
-h.Z.init(), o.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', e => {
+h.Z.init(), s.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', e => {
   let {
     videoState: t
   } = e, n = c.Z.getCurrentUserActiveStream();
@@ -27,7 +27,7 @@ h.Z.init(), o.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', e => {
     let e = t === T.FQ1.PAUSED;
     (0, l.tK)(n, e);
   }
-}), o.Z.subscribe('STREAM_DELETE', e => {
+}), s.Z.subscribe('STREAM_DELETE', e => {
   e.reason === T.si2.STREAM_FULL && ((0, l.aP)(e.streamKey, !1), (0, a.openModalLazy)(async () => {
     let {
       default: e
@@ -36,7 +36,7 @@ h.Z.init(), o.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', e => {
       ...t
     });
   }));
-}), o.Z.subscribe('STREAM_WATCH', e => {
+}), s.Z.subscribe('STREAM_WATCH', e => {
   let {
     streamKey: t,
     allowMultiple: n
@@ -46,9 +46,9 @@ h.Z.init(), o.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', e => {
   let r = (0, p.my)(t);
   c.Z.getAllActiveStreams().forEach(e => {
     if (e.ownerId !== r.ownerId && e.ownerId !== d.default.getId())
-      e.ownerId === d.default.getId() && s.Z.setGoLiveSource(null), (0, l.aP)((0, p.V9)(e), !1);
+      e.ownerId === d.default.getId() && o.Z.setGoLiveSource(null), (0, l.aP)((0, p.V9)(e), !1);
   });
-}), o.Z.subscribe('VOICE_STATE_UPDATES', e => {
+}), s.Z.subscribe('VOICE_STATE_UPDATES', e => {
   let {
     voiceStates: t
   } = e;
@@ -64,7 +64,7 @@ h.Z.init(), o.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', e => {
       e.channelId !== r && (0, m.Z)(e, !1);
     });
   });
-}), o.Z.subscribe('STREAM_CREATE', e => {
+}), s.Z.subscribe('STREAM_CREATE', e => {
   var t;
   let {
     streamKey: n

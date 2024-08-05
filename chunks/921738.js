@@ -4,7 +4,7 @@ var t = e.which || e.keyCode || e.charCode;
 t && (e = t);
   }
   if ('number' == typeof e)
-return o[e];
+return s[e];
   var n = String(e),
 a = r[n.toLowerCase()];
   if (a)
@@ -104,8 +104,8 @@ for (a = 1; a < 13; a++)
   r['f' + a] = a + 111;
 for (a = 0; a < 10; a++)
   r['numpad ' + a] = a + 96;
-var o = t.names = t.title = {};
+var s = t.names = t.title = {};
 for (a in r)
-  o[r[a]] = a;
-for (var s in i)
-  r[s] = i[s];
+  s[r[a]] = a;
+for (var o in i)
+  r[o] = i[o];

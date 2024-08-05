@@ -1,44 +1,43 @@
-t.r(e), t.d(e, {
+i.r(e), i.d(e, {
   default: function() {
-return w;
+return Z;
   }
 });
-var i = t(735250);
-t(470079);
-var a = t(512722),
-  l = t.n(a),
-  d = t(399606),
-  r = t(721037),
-  s = t(561472),
-  c = t(372900),
-  o = t(238246),
-  u = t(592125),
-  h = t(703558),
-  p = t(677601);
+var t = i(735250);
+i(470079);
+var a = i(512722),
+  l = i.n(a),
+  d = i(399606),
+  r = i(721037),
+  u = i(561472),
+  c = i(372900),
+  s = i(238246),
+  h = i(592125),
+  o = i(703558),
+  p = i(677601);
 
-function w(n) {
+function Z(n) {
   let {
 windowKey: e,
-channelId: t
-  } = n, a = (0, d.e7)([u.Z], () => u.Z.getChannel(t));
-  return l()(null != a, 'channel cannot be null for popout'), (0, i.jsx)(o.Z, {
+channelId: i
+  } = n, a = (0, d.e7)([h.Z], () => h.Z.getChannel(i));
+  return l()(null != a, 'channel cannot be null for popout'), (0, t.jsx)(s.Z, {
 withTitleBar: !0,
 windowKey: e,
 title: a.name,
 channelId: a.id,
-children: (0, i.jsxs)(c.Z.Provider, {
+children: (0, t.jsxs)(c.Z.Provider, {
   value: a.guild_id,
   children: [
-    (0, i.jsx)(s.Z, {
+    (0, t.jsx)(u.Z, {
       channel: a,
-      draftType: h.d.ChannelMessage
+      draftType: o.d.ChannelMessage
     }),
-    (0, i.jsx)(p.Z, {
+    (0, t.jsx)(p.Z, {
       channel: a
     }),
-    (0, i.jsx)(r.Z, {
-      showInPopoutWindow: !0,
-      disallowTextActivity: !0
+    (0, t.jsx)(r.Z, {
+      inPopoutWindow: !0
     })
   ]
 })

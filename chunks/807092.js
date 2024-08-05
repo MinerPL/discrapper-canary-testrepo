@@ -1,4 +1,4 @@
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(375954);
 let c = {},
@@ -25,7 +25,7 @@ showMentionToggle: t.showMentionToggle
 function f() {
   c = {}, d = {}, _ = {};
 }
-class h extends(o = s.ZP.Store) {
+class h extends(s = o.ZP.Store) {
   initialize() {
 this.waitFor(u.Z);
   }

@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
   a = n(693789),
-  o = n(235874),
-  s = n(481060),
+  s = n(235874),
+  o = n(481060),
   l = n(944613),
   u = n(607070),
   c = n(605436),
@@ -30,7 +30,7 @@ buttonRef: T
   if (!(0, i.e7)([d.Z], () => d.Z.can(E.Plq.MANAGE_ROLES, t)))
 return null;
   let S = e => (0, c.Gy)(t.id, e.id) && !e.managed && d.Z.isRoleHigher(t, m, e) && -1 === n.roles.indexOf(e.id);
-  return (0, r.jsx)(o.y, {
+  return (0, r.jsx)(s.y, {
 position: 'bottom',
 align: 'center',
 renderPopout: e => {
@@ -45,20 +45,21 @@ renderPopout: e => {
     onClose: n
   });
 },
-children: e => (0, r.jsx)(s.TooltipContainer, {
+children: e => (0, r.jsx)(o.TooltipContainer, {
   text: f.Z.Messages.USER_PROFILE_ADD_ROLE,
   'aria-label': !1,
   shouldShow: p > 0,
   children: (0, r.jsxs)(_.kF, {
     className: h.button,
     color: a.zx.Colors.CUSTOM,
+    themeColor: 'none',
     size: a.zx.Sizes.NONE,
     grow: !1,
     'aria-label': f.Z.Messages.USER_PROFILE_ADD_ROLE,
     buttonRef: T,
     ...e,
     children: [
-      (0, r.jsx)(s.PlusSmallIcon, {
+      (0, r.jsx)(o.PlusSmallIcon, {
         size: 'xs',
         color: 'currentColor'
       }),

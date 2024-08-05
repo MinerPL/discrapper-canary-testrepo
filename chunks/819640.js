@@ -1,12 +1,12 @@
 n(47120);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140);
 let u = [];
 
 function c() {
   u = [];
 }
-class d extends(r = s.ZP.Store) {
+class d extends(r = o.ZP.Store) {
   hasLayers() {
 return u.length > 0;
   }
@@ -14,12 +14,12 @@ return u.length > 0;
 return u;
   }
 }
-o = 'LayerStore', (a = 'displayName') in(i = d) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'LayerStore', (a = 'displayName') in(i = d) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new d(l.Z, {
+}) : i[a] = s, t.Z = new d(l.Z, {
   LAYER_PUSH: function(e) {
 let {
   component: t

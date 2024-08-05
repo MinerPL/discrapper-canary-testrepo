@@ -1,151 +1,125 @@
 n.d(t, {
   Z: function() {
-return L;
+return v;
   }
-}), n(411104), n(47120);
+}), n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(481060),
-  l = n(493683),
-  u = n(904245),
-  c = n(906732),
-  d = n(541716),
-  _ = n(752305),
-  E = n(893718),
-  f = n(957730),
-  h = n(131704),
-  p = n(592125),
-  m = n(5192),
-  I = n(838440),
-  T = n(785717),
-  g = n(910128),
-  S = n(261253),
-  A = n(7242),
-  N = n(934861),
-  v = n(981631),
-  O = n(689938),
-  R = n(663054),
-  C = n(589273);
-let y = (0, h.kt)({
-id: '1',
-type: v.d4z.DM
-  }),
-  D = async e => {
-let {
-  userId: t,
-  content: n,
-  location: r
-} = e, {
-  valid: i,
-  failureReason: a
-} = await (0, I.v)({
-  type: d.I.NORMAL,
-  content: n,
-  channel: null
+  s = n.n(a),
+  o = n(481060),
+  l = n(906732),
+  u = n(541716),
+  c = n(752305),
+  d = n(893718),
+  _ = n(131704),
+  E = n(5192),
+  f = n(785717),
+  h = n(910128),
+  p = n(485216),
+  m = n(261253),
+  I = n(7242),
+  T = n(934861),
+  g = n(981631),
+  S = n(689938),
+  A = n(589273);
+let N = (0, _.kt)({
+  id: '1',
+  type: g.d4z.DM
 });
-if (!i)
-  throw Error(a);
-let o = await l.Z.openPrivateChannel(t, !1, !1, r),
-  s = p.Z.getChannel(o);
-if (null == s)
-  throw Error('Failed to open private channel');
-let c = f.ZP.parse(s, n);
-return u.Z.sendMessage(s.id, c);
-  };
 
-function L(e) {
+function v(e) {
   let {
 user: t,
 guildId: n,
 channelId: a,
-onClose: l
+onClose: _
   } = e, {
-newestAnalyticsLocation: u
-  } = (0, c.ZP)(), {
-trackUserProfileAction: f
-  } = (0, T.KZ)(), {
-messageCtaEnabled: h,
-activeInviteToCallCtaEnabled: p,
-persistentCallCtaEnabled: I
-  } = (0, g.l)({
+newestAnalyticsLocation: g
+  } = (0, l.ZP)(), {
+trackUserProfileAction: v
+  } = (0, f.KZ)(), {
+messageCtaEnabled: O,
+activeInviteToCallCtaEnabled: R,
+persistentCallCtaEnabled: C
+  } = (0, h.l)({
 location: 'BiteSizeProfileDirectMessageSection'
-  }), [v, L] = i.useState(''), [b, M] = i.useState((0, _.JM)(v)), P = i.useRef(!1);
-  if (h) {
-let e = (0, r.jsx)(A.Z, {
+  }), [y, D] = i.useState(''), [L, b] = i.useState((0, c.JM)(y)), M = i.useRef(!1);
+  if (O) {
+let e = (0, r.jsx)(I.Z, {
   user: t,
-  className: C.biteSizeButton
+  className: A.biteSizeButton
 });
-return p && null != e ? (0, r.jsxs)('div', {
-  className: C.ctaRow,
+return R && null != e ? (0, r.jsxs)('div', {
+  className: A.ctaRow,
   children: [
-    (0, r.jsx)(N.c, {
+    (0, r.jsx)(T.c, {
       userId: t.id,
       fullWidth: !0,
-      color: C.engagementExpButton,
-      className: C.biteSizeButton,
-      onClose: l
+      color: A.engagementExpButton,
+      themeColor: 'none',
+      className: A.biteSizeButton,
+      onClose: _
     }),
     e
   ]
-}) : I ? (0, r.jsxs)('div', {
-  className: C.ctaRow,
+}) : C ? (0, r.jsxs)('div', {
+  className: A.ctaRow,
   children: [
-    (0, r.jsx)(N.c, {
+    (0, r.jsx)(T.c, {
       userId: t.id,
       fullWidth: !0,
-      color: o()(s.Button.Colors.BRAND, R.color),
-      className: C.biteSizeButton,
-      onClose: l
+      color: o.Button.Colors.BRAND,
+      className: A.biteSizeButton,
+      onClose: _
     }),
-    (0, r.jsx)(S.Z, {
+    (0, r.jsx)(m.Z, {
       user: t,
-      onClose: l,
-      className: o()(C.engagementExpButton, C.biteSizeIconButton)
+      onClose: _,
+      className: s()(A.engagementExpButton, A.biteSizeIconButton)
     })
   ]
-}) : (0, r.jsx)(N.c, {
+}) : (0, r.jsx)(T.c, {
   userId: t.id,
   fullWidth: !0,
-  className: C.biteSizeButton,
-  color: o()(s.Button.Colors.BRAND, R.color),
-  onClose: l
+  className: A.biteSizeButton,
+  color: o.Button.Colors.BRAND,
+  onClose: _
 });
   }
-  return (0, r.jsx)(E.Z, {
-innerClassName: C.inner,
-editorClassName: C.editor,
-type: d.I.USER_PROFILE,
-placeholder: O.Z.Messages.QUICK_DM_USER.format({
-  name: m.ZP.getName(n, a, t)
+  return (0, r.jsx)(d.Z, {
+innerClassName: A.inner,
+editorClassName: A.editor,
+type: u.I.USER_PROFILE,
+placeholder: S.Z.Messages.QUICK_DM_USER.format({
+  name: E.ZP.getName(n, a, t)
 }),
-channel: y,
-textValue: v,
-richValue: b,
+channel: N,
+textValue: y,
+richValue: L,
 onChange: (e, t, n) => {
-  if (t !== v)
-    L(t), M(n);
+  if (t !== y)
+    D(t), b(n);
 },
-focused: P.current,
+focused: M.current,
 onFocus: () => {
-  P.current = !0;
+  M.current = !0;
 },
 onBlur: () => {
-  P.current = !1;
+  M.current = !1;
 },
 onSubmit: async e => {
   let {
     value: n
   } = e;
   try {
-    return f({
+    return v({
       action: 'SEND_DIRECT_MESSAGE'
-    }), await D({
+    }), await (0, p.Z)({
       userId: t.id,
       content: n.trim(),
-      location: u
-    }), null == l || l(), {
+      location: g
+    }), null == _ || _(), {
       shouldClear: !0,
       shouldRefocus: !1
     };

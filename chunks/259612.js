@@ -21,12 +21,12 @@ async function a(e, t) {
   n.muted = !0, n.src = e, n.currentTime = t, await n.play(), n.pause();
   let i = r.f_ / n.videoWidth,
 a = Math.min(i, r.wD / n.videoHeight),
-o = n.videoWidth * a,
-s = n.videoHeight * a,
+s = n.videoWidth * a,
+o = n.videoHeight * a,
 l = document.createElement('canvas');
-  l.width = o, l.height = s;
+  l.width = s, l.height = o;
   let u = l.getContext('2d');
   if (null == u)
 throw Error('Could not create canvas context');
-  return u.drawImage(n, 0, 0, n.videoWidth, n.videoHeight, 0, 0, o, s), l.toDataURL('image/jpeg', 0.9);
+  return u.drawImage(n, 0, 0, n.videoWidth, n.videoHeight, 0, 0, s, o), l.toDataURL('image/jpeg', 0.9);
 }

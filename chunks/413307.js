@@ -1,6 +1,6 @@
 var i = n(735250),
-  s = n(470079),
-  a = n(949389),
+  a = n(470079),
+  s = n(949389),
   r = n(82950),
   l = n(434404),
   o = n(981631),
@@ -9,8 +9,8 @@ var i = n(735250),
 t.Z = e => {
   let {
 guild: t
-  } = e, n = s.useCallback(() => {
-(0, a.K7)(t.id);
+  } = e, n = a.useCallback(() => {
+(0, s.K7)(t.id);
   }, [t.id]);
   return (0, i.jsx)(r.Z, {
 guild: t,

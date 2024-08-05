@@ -2,8 +2,8 @@ n.r(t);
 var a = n(735250),
   o = n(470079),
   r = n(481060),
-  l = n(230711),
-  s = n(782568),
+  s = n(230711),
+  l = n(782568),
   d = n(880257),
   i = n(63063),
   E = n(163268),
@@ -69,7 +69,7 @@ children: [
           A ? (0, a.jsx)(r.Button, {
             color: r.Button.Colors.BRAND,
             onClick: function() {
-              M(E.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), l.Z.open(_.oAB.PRIVACY_AND_SAFETY, null, {
+              M(E.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), s.Z.open(_.oAB.PRIVACY_AND_SAFETY, null, {
                 scrollPosition: c.to.EXPLICIT_MEDIA_REDACTION
               }), N();
             },
@@ -78,7 +78,7 @@ children: [
           }) : (0, a.jsx)(r.Button, {
             color: r.Button.Colors.BRAND,
             onClick: () => {
-              (0, s.Z)(i.Z.getArticleURL(_.BhN.EXPLICIT_MEDIA_REDACTION));
+              (0, l.Z)(i.Z.getArticleURL(_.BhN.EXPLICIT_MEDIA_REDACTION));
             },
             fullWidth: !0,
             children: u.Z.Messages.LEARN_MORE

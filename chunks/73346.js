@@ -21,9 +21,9 @@ return O;
 var r = n(392711),
   i = n.n(r),
   a = n(913527),
-  o = n.n(a),
-  s = n(991637),
-  l = n.n(s),
+  s = n.n(a),
+  o = n(991637),
+  l = n.n(o),
   u = n(873546),
   c = n(544891),
   d = n(355467),
@@ -46,11 +46,11 @@ analyticsSource: n,
 analyticsProperties: r,
 storeListingId: i,
 slug: a,
-channelId: o,
-guildId: s
+channelId: s,
+guildId: o
   } = t;
   return {
-pathname: null != o && null != s ? g.Z5c.CHANNEL(s, o, e) : g.Z5c.APPLICATION_STORE_LISTING_SKU(e, a),
+pathname: null != s && null != o ? g.Z5c.CHANNEL(o, s, e) : g.Z5c.APPLICATION_STORE_LISTING_SKU(e, a),
 state: {
   analyticsSource: n,
   analyticsProperties: r
@@ -62,7 +62,7 @@ search: null != i ? '?store_listing_id='.concat(i) : ''
 function N(e, t, n, r) {
   var i;
   let a;
-  let o = window.GLOBAL_ENV.CDN_HOST;
+  let s = window.GLOBAL_ENV.CDN_HOST;
   if (null == r)
 switch (t.mimeType || t.mime_type) {
   case 'video/quicktime':
@@ -76,9 +76,9 @@ switch (t.mimeType || t.mime_type) {
     r = 'webp';
 }
   'webp' === r && !S && (r = 'png');
-  let s = 'string' == typeof t ? t : t.id,
+  let o = 'string' == typeof t ? t : t.id,
 l = (i = 'https:', 'https:');
-  return a = null != o ? ''.concat(l, '//').concat(o, '/app-assets/').concat(e, '/store/').concat(s, '.').concat(r) : ''.concat(l).concat(window.GLOBAL_ENV.API_ENDPOINT).concat(g.ANM.STORE_ASSET(e, s, r)), null != n && (a += '?size='.concat((0, _.oO)(n * (0, _.x_)()))), a;
+  return a = null != s ? ''.concat(l, '//').concat(s, '/app-assets/').concat(e, '/store/').concat(o, '.').concat(r) : ''.concat(l).concat(window.GLOBAL_ENV.API_ENDPOINT).concat(g.ANM.STORE_ASSET(e, o, r)), null != n && (a += '?size='.concat((0, _.oO)(n * (0, _.x_)()))), a;
 }
 async function v(e) {
   var t, n, r, i;
@@ -97,12 +97,12 @@ let e = [];
     await (0, d.jg)(), e();
 })), await Promise.allSettled(e);
   }
-  let o = f.Z.getDefaultBillingCountryCode(),
-s = null !== (r = null === (t = f.Z.defaultPaymentSource) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : null,
+  let s = f.Z.getDefaultBillingCountryCode(),
+o = null !== (r = null === (t = f.Z.defaultPaymentSource) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : null,
 l = h.ZP.getPremiumTypeSubscription();
-  null != l && null != l.paymentSourceId && (s = l.paymentSourceId), null === o && (o = null !== (i = E.Z.ipCountryCode) && void 0 !== i ? i : null);
+  null != l && null != l.paymentSourceId && (o = l.paymentSourceId), null === s && (s = null !== (i = E.Z.ipCountryCode) && void 0 !== i ? i : null);
   let u = {};
-  if (null != o && (u.country_code = o), null != s && (u.payment_source_id = s), null != o || null != s) {
+  if (null != s && (u.country_code = s), null != o && (u.payment_source_id = o), null != s || null != o) {
 if ('string' == typeof e && (e = {
     url: e,
     oldFormErrors: !0
@@ -123,10 +123,10 @@ function O(e, t, n) {
 let R = [];
 
 function C(e, t, n, r, a) {
-  let o = t.get(e);
-  if (null == o)
+  let s = t.get(e);
+  if (null == s)
 return R;
-  let s = o.applicationId,
+  let o = s.applicationId,
 l = [],
 u = [],
 c = function(e, t, n) {
@@ -143,14 +143,14 @@ c = function(e, t, n) {
     type: g.AzA.NOW_PLAYING,
     userInfo: a
   };
-}(s, n, r);
+}(o, n, r);
   null != c && (l.push(c), u = c.userInfo.map(e => {
 let {
   user: t
 } = e;
 return t.id;
   }));
-  let d = a.getStatisticsForApplication(s);
+  let d = a.getStatisticsForApplication(o);
   if (null != d) {
 let e = d.map(e => e.user_id);
 if (i().difference(e, u).length > 0) {
@@ -169,7 +169,7 @@ if (i().difference(e, u).length > 0) {
       type: g.AzA.EVER_PLAYED,
       userInfo: i
     };
-  }(s, n, a);
+  }(o, n, a);
   null != e && l.push(e);
 }
   }
@@ -186,13 +186,13 @@ return y;
   (0, m.yE)(r.flags, g.l4R.HAS_FREE_PREMIUM_CONTENT) && a.push({
 type: g.AzA.HAS_FREE_PREMIUM_CONTENT
   });
-  let s = r.releaseDate;
-  return null != s && 3 > o()().diff(s, 'months') && (r.accessType === g.kGb.EARLY_ACCESS ? a.push({
+  let o = r.releaseDate;
+  return null != o && 3 > s()().diff(o, 'months') && (r.accessType === g.kGb.EARLY_ACCESS ? a.push({
 type: g.AzA.EARLY_ACCESS,
-releaseDate: s
+releaseDate: o
   }) : a.push({
 type: g.AzA.RECENT_RELEASE_DATE,
-releaseDate: s
+releaseDate: o
   })), null != i.flavorText && a.push({
 type: g.AzA.FLAVOR_TEXT,
 flavorText: i.flavorText

@@ -1,16 +1,16 @@
 n.d(t, {
   L: function() {
-return s;
+return o;
   },
   Q: function() {
 return i;
   }
 });
 var r, i, a = n(626135),
-  o = n(981631);
+  s = n(981631);
 
-function s(e, t) {
-  a.default.track(o.rMx.DM_SETTINGS_UPSELL_ACTION, {
+function o(e, t) {
+  a.default.track(s.rMx.DM_SETTINGS_UPSELL_ACTION, {
 action: e,
 guild_id: t
   });

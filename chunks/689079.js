@@ -9,7 +9,7 @@ return l;
 return f;
   },
   WO: function() {
-return s;
+return o;
   },
   _n: function() {
 return E;
@@ -40,12 +40,12 @@ return m;
   }
 });
 var r, i, a = n(911969),
-  o = n(689938);
-let s = 'True',
+  s = n(689938);
+let o = 'True',
   l = 'False',
   u = [{
-  name: s,
-  displayName: s,
+  name: o,
+  displayName: o,
   value: 'true'
 },
 {
@@ -67,23 +67,23 @@ let m = 200;
 
 function I(e) {
   if (null != e.choices)
-return o.Z.Messages.COMMAND_VALIDATION_CHOICE_ERROR;
+return s.Z.Messages.COMMAND_VALIDATION_CHOICE_ERROR;
   switch (e.type) {
 case a.jw.BOOLEAN:
-  return o.Z.Messages.COMMAND_VALIDATION_BOOLEAN_ERROR;
+  return s.Z.Messages.COMMAND_VALIDATION_BOOLEAN_ERROR;
 case a.jw.CHANNEL:
-  return o.Z.Messages.COMMAND_VALIDATION_CHANNEL_ERROR;
+  return s.Z.Messages.COMMAND_VALIDATION_CHANNEL_ERROR;
 case a.jw.INTEGER:
-  return o.Z.Messages.COMMAND_VALIDATION_INTEGER_ERROR;
+  return s.Z.Messages.COMMAND_VALIDATION_INTEGER_ERROR;
 case a.jw.NUMBER:
-  return o.Z.Messages.COMMAND_VALIDATION_NUMBER_ERROR;
+  return s.Z.Messages.COMMAND_VALIDATION_NUMBER_ERROR;
 case a.jw.ROLE:
-  return o.Z.Messages.COMMAND_VALIDATION_ROLE_ERROR;
+  return s.Z.Messages.COMMAND_VALIDATION_ROLE_ERROR;
 case a.jw.USER:
-  return o.Z.Messages.COMMAND_VALIDATION_USER_ERROR;
+  return s.Z.Messages.COMMAND_VALIDATION_USER_ERROR;
 case a.jw.MENTIONABLE:
-  return o.Z.Messages.COMMAND_VALIDATION_MENTIONABLE_ERROR;
+  return s.Z.Messages.COMMAND_VALIDATION_MENTIONABLE_ERROR;
 default:
-  return o.Z.Messages.COMMAND_VALIDATION_GENERAL_ERROR;
+  return s.Z.Messages.COMMAND_VALIDATION_GENERAL_ERROR;
   }
 }

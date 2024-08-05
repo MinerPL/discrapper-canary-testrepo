@@ -4,14 +4,14 @@ return E;
   }
 });
 var i = n(735250),
-  a = n(470079),
-  s = n(990547),
+  s = n(470079),
+  a = n(990547),
   r = n(91192),
   l = n(481060),
   o = n(724757),
   c = n(213609),
-  d = n(441358),
-  u = n(426521),
+  u = n(441358),
+  d = n(426521),
   _ = n(537959);
 
 function E(e) {
@@ -20,10 +20,10 @@ initialized: t,
 items: n,
 loading: E,
 loadMore: I
-  } = e, m = a.useRef(null), T = (0, o.Z)('for-you', m);
+  } = e, m = s.useRef(null), T = (0, o.Z)('for-you', m);
   (0, c.Z)({
-type: s.ImpressionTypes.VIEW,
-name: s.ImpressionNames.NOTIFICATION_CENTER_LANDING,
+type: a.ImpressionTypes.VIEW,
+name: a.ImpressionNames.NOTIFICATION_CENTER_LANDING,
 properties: {
   empty: 0 === n.length
 }
@@ -36,14 +36,14 @@ let t = null === (e = m.current) || void 0 === e ? void 0 : e.getScrollerState()
 if (null != t)
   t.scrollHeight - t.scrollTop - t.offsetHeight < 1500 && I();
   };
-  return t ? 0 === n.length ? (0, i.jsx)(d.v, {}) : (0, i.jsx)(i.Fragment, {
+  return t ? 0 === n.length ? (0, i.jsx)(u.v, {}) : (0, i.jsx)(i.Fragment, {
 children: (0, i.jsx)(r.bG, {
   navigator: T,
   children: (0, i.jsx)(r.SJ, {
     children: e => {
       let {
         ref: t,
-        ...a
+        ...s
       } = e;
       return (0, i.jsxs)(l.AdvancedScroller, {
         className: _.container,
@@ -51,10 +51,10 @@ children: (0, i.jsx)(r.bG, {
           var n;
           m.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null;
         },
-        ...a,
+        ...s,
         onScroll: h,
         children: [
-          (0, i.jsx)(u.U, {
+          (0, i.jsx)(d.U, {
             items: n
           }),
           E ? (0, i.jsx)(l.Spinner, {

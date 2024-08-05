@@ -1,21 +1,21 @@
 var r = n(607974),
   i = n(350434),
   a = n(91826),
-  o = n(400194);
+  s = n(400194);
 
-function s(e) {
+function o(e) {
   return e.call.bind(e);
 }
 var l = 'undefined' != typeof BigInt,
   u = 'undefined' != typeof Symbol,
-  c = s(Object.prototype.toString),
-  d = s(Number.prototype.valueOf),
-  _ = s(String.prototype.valueOf),
-  E = s(Boolean.prototype.valueOf);
+  c = o(Object.prototype.toString),
+  d = o(Number.prototype.valueOf),
+  _ = o(String.prototype.valueOf),
+  E = o(Boolean.prototype.valueOf);
 if (l)
-  var f = s(BigInt.prototype.valueOf);
+  var f = o(BigInt.prototype.valueOf);
 if (u)
-  var h = s(Symbol.prototype.valueOf);
+  var h = o(Symbol.prototype.valueOf);
 
 function p(e, t) {
   if ('object' != typeof e)
@@ -26,12 +26,12 @@ return t(e), !0;
 return !1;
   }
 }
-t.isArgumentsObject = r, t.isGeneratorFunction = i, t.isTypedArray = o;
+t.isArgumentsObject = r, t.isGeneratorFunction = i, t.isTypedArray = s;
 t.isPromise = function(e) {
   return 'undefined' != typeof Promise && e instanceof Promise || null !== e && 'object' == typeof e && 'function' == typeof e.then && 'function' == typeof e.catch;
 };
 t.isArrayBufferView = function(e) {
-  return 'undefined' != typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : o(e) || v(e);
+  return 'undefined' != typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : s(e) || v(e);
 };
 t.isUint8Array = function(e) {
   return 'Uint8Array' === a(e);

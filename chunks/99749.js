@@ -42,8 +42,8 @@ a = {
     e.C_NUMBER_MODE
   ]
 },
-o = /[a-z0-9&#*=?@\\><:,()$[\]_.{}!+%^-]+/,
-s = {
+s = /[a-z0-9&#*=?@\\><:,()$[\]_.{}!+%^-]+/,
+o = {
   begin: /[a-z][a-z0-9_]*(\([a-z0-9_, ]*\))?[ \t]+/,
   excludeBegin: !0,
   end: '$',
@@ -53,7 +53,7 @@ s = {
     a,
     {
       className: 'comment',
-      begin: t.concat(o, t.anyNumberOfTimes(t.concat(/[ ]+/, o))),
+      begin: t.concat(s, t.anyNumberOfTimes(t.concat(/[ ]+/, s))),
       relevance: 0
     }
   ]
@@ -90,7 +90,7 @@ contains: [
       e.QUOTE_STRING_MODE,
       e.APOS_STRING_MODE,
       a,
-      s
+      o
     ]
   },
   {
@@ -100,7 +100,7 @@ contains: [
     contains: [{
         beginKeywords: 'table',
         end: '$',
-        contains: [s]
+        contains: [o]
       },
       e.COMMENT('^\\*', '$'),
       e.C_LINE_COMMENT_MODE,

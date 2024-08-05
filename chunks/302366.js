@@ -10,9 +10,9 @@ throw Error('Missing required dependency: reporter.');
 return i(e).object;
   }
   return {
-makeDetectable: function(a, o, s) {
-  !s && (s = o, o = a, a = null), (a = a || {}).debug;
-  r.isIE(8) ? s(o) : ! function(o, s) {
+makeDetectable: function(a, s, o) {
+  !o && (o = s, s = a, a = null), (a = a || {}).debug;
+  r.isIE(8) ? o(s) : ! function(s, o) {
     var l, u, c = (l = [
         'display: block',
         'position: absolute',
@@ -28,20 +28,20 @@ makeDetectable: function(a, o, s) {
         'pointer-events: none'
       ], u = e.important ? ' !important; ' : '; ', (l.join(u) + u).trim()),
       d = !1,
-      _ = window.getComputedStyle(o),
-      E = o.offsetWidth,
-      f = o.offsetHeight;
+      _ = window.getComputedStyle(s),
+      E = s.offsetWidth,
+      f = s.offsetHeight;
 
     function h() {
       function e() {
         if ('static' === _.position) {
-          o.style.setProperty('position', 'relative', a.important ? 'important' : '');
+          s.style.setProperty('position', 'relative', a.important ? 'important' : '');
           var e = function(e, t, n, r) {
             var i = n[r];
             if ('auto' !== i && '0' !== i.replace(/[^-\d\.]/g, ''))
               e.warn('An element that is positioned static has style.' + r + '=' + i + ' which is ignored due to the static positioning. The element will need to be positioned relative, so the style.' + r + ' will be set to 0. Element: ', t), t.style.setProperty(r, '0', a.important ? 'important' : '');
           };
-          e(t, o, _, 'top'), e(t, o, _, 'right'), e(t, o, _, 'bottom'), e(t, o, _, 'left');
+          e(t, s, _, 'top'), e(t, s, _, 'right'), e(t, s, _, 'bottom'), e(t, s, _, 'left');
         }
       }
       '' !== _.position && (e(_), d = !0);
@@ -58,16 +58,16 @@ makeDetectable: function(a, o, s) {
             }
             n(t.contentDocument);
           }(this, function(e) {
-            s(o);
+            o(s);
           });
-        }, !r.isIE() && (n.data = 'about:blank'), !!i(o))
-        o.appendChild(n), i(o).object = n, r.isIE() && (n.data = 'about:blank');
+        }, !r.isIE() && (n.data = 'about:blank'), !!i(s))
+        s.appendChild(n), i(s).object = n, r.isIE() && (n.data = 'about:blank');
     }
-    i(o).startSize = {
+    i(s).startSize = {
       width: E,
       height: f
     }, n ? n.add(h) : h();
-  }(o, s);
+  }(s, o);
 },
 addListener: function(e, t) {
   function n() {

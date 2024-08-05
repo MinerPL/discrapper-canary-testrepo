@@ -3,7 +3,7 @@ n.d(t, {
 return u;
   }
 }), n(47120);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140);
 let u = {
 enabled: !1
@@ -26,7 +26,7 @@ guildId: n
   } = e;
   null != n && (null == t && (d[n] = u), d[n] = t, f(n), _.delete(n));
 }
-class p extends(r = s.ZP.Store) {
+class p extends(r = o.ZP.Store) {
   getSettings(e) {
 var t;
 return null == e ? null : null !== (t = d[e]) && void 0 !== t ? t : u;
@@ -73,12 +73,12 @@ var n, r, i;
 return null == e || null == t ? null : null !== (i = null === (r = d[e]) || void 0 === r ? void 0 : null === (n = r.newMemberActions) || void 0 === n ? void 0 : n.find(e => e.channelId === t)) && void 0 !== i ? i : null;
   }
 }
-o = 'GuildOnboardingHomeSettingsStore', (a = 'displayName') in(i = p) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'GuildOnboardingHomeSettingsStore', (a = 'displayName') in(i = p) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new p(l.Z, {
+}) : i[a] = s, t.Z = new p(l.Z, {
   GUILD_HOME_SETTINGS_FETCH_START: function(e) {
 let {
   guildId: t

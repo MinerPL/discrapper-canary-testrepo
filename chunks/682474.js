@@ -1,4 +1,4 @@
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(786761),
   c = n(592125),
@@ -42,7 +42,7 @@ mostRecentMessages: n
 p(e.channel_id, e);
   });
 }
-class g extends(o = s.ZP.Store) {
+class g extends(s = o.ZP.Store) {
   initialize() {
 this.waitFor(c.Z, d.default);
   }

@@ -6,10 +6,10 @@ return a;
 return r;
   },
   dD: function() {
-return s;
+return o;
   },
   pt: function() {
-return o;
+return s;
   },
   ve: function() {
 return i;
@@ -18,5 +18,5 @@ return i;
 let r = 'guild-product-edit-modal',
   i = 1073741824,
   a = 1073741824,
-  o = 10,
-  s = 30;
+  s = 10,
+  o = 30;

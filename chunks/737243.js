@@ -1,12 +1,12 @@
 n.d(t, {
   Z: function() {
-return d;
+return u;
   }
 });
 var i = n(735250),
   a = n(470079),
-  l = n(442837),
-  s = n(699516),
+  s = n(442837),
+  l = n(699516),
   r = n(697451),
   o = n(348238);
 let c = a.memo(function(e) {
@@ -14,12 +14,12 @@ let c = a.memo(function(e) {
   let {
 message: n,
 channel: c,
-compact: d = !1,
-interactionUsernameProfile: u,
+compact: u = !1,
+interactionUsernameProfile: d,
 interactionAvatarProfile: h,
 interactionData: p,
 setPopout: m
-  } = e, _ = (0, l.e7)([s.Z], () => s.Z.isBlockedForMessage(n), [n]), f = (0, o.wq)(null === (t = n.interaction) || void 0 === t ? void 0 : t.user.id, c.id), E = (0, o.Nk)(n.interaction, c, u, m), C = (0, o.NU)(h, m), g = (0, o.Xn)(p, m), I = a.useCallback(() => m({
+  } = e, _ = (0, s.e7)([l.Z], () => l.Z.isBlockedForMessage(n), [n]), f = (0, o.wq)(null === (t = n.interaction) || void 0 === t ? void 0 : t.user.id, c.id), E = (0, o.Nk)(n.interaction, c, d, m), g = (0, o.NU)(h, m), C = (0, o.Xn)(p, m), I = a.useCallback(() => m({
 interactionUsernameProfile: !1,
 interactionAvatarProfile: !1,
 interactionData: !1
@@ -27,36 +27,36 @@ interactionData: !1
   return (0, i.jsx)(r.Z, {
 message: n,
 channel: c,
-compact: d,
+compact: u,
 isInteractionUserBlocked: _,
 showAvatarPopout: h,
-showUsernamePopout: u,
+showUsernamePopout: d,
 showDataPopout: p,
-onClickAvatar: C,
+onClickAvatar: g,
 onClickUsername: E,
-onClickCommand: g,
+onClickCommand: C,
 onUserContextMenu: f,
 onPopoutRequestClose: I
   });
 });
 
-function d(e, t, n) {
+function u(e, t, n) {
   let {
 message: a,
-channel: l,
-compact: s
+channel: s,
+compact: l
   } = e, {
 interactionUsernameProfile: r,
 interactionAvatarProfile: o,
-interactionData: d
+interactionData: u
   } = n;
   return null != a.interaction && '' !== a.interaction.displayName ? (0, i.jsx)(c, {
 message: a,
-channel: l,
-compact: s,
+channel: s,
+compact: l,
 setPopout: t,
 interactionUsernameProfile: r,
 interactionAvatarProfile: o,
-interactionData: d
+interactionData: u
   }) : null;
 }

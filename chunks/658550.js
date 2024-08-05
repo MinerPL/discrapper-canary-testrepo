@@ -1,12 +1,12 @@
-t.d(s, {
+s.d(t, {
   Gz: function() {
 return o;
   },
   P0: function() {
-return u;
+return d;
   },
   gH: function() {
-return a;
+return r;
   },
   tL: function() {
 return i;
@@ -14,45 +14,45 @@ return i;
   th: function() {
 return l;
   }
-}), t(411104);
-var n = t(544891);
+}), s(411104);
+var n = s(544891);
 let l = 8,
   i = 11,
-  a = 6,
+  r = 6,
   o = 6;
-async function r(e) {
+async function a(e) {
   let {
-ticket: s,
-mfaType: t,
+ticket: t,
+mfaType: s,
 data: l
   } = e, i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
   try {
 return (await n.tn.post({
   url: '/mfa/finish',
   body: {
-    ticket: s,
-    mfa_type: t,
+    ticket: t,
+    mfa_type: s,
     data: l
   },
   retries: i
 })).body;
   } catch (e) {
-var a;
-if (null === (a = e.body) || void 0 === a ? void 0 : a.message)
+var r;
+if (null === (r = e.body) || void 0 === r ? void 0 : r.message)
   throw Error(e.body.message);
 throw e;
   }
 }
-async function u(e, s) {
+async function d(e, t) {
   let {
-token: t
-  } = await r(e);
+token: s
+  } = await a(e);
   return new Promise((e, n) => {
-s({
-  'X-Discord-MFA-Authorization': t
-}, s => {
-  var t, l;
-  return (null === (t = s.body) || void 0 === t ? void 0 : t.code) === 60008 || (null === (l = s.body) || void 0 === l ? void 0 : l.code) === 60003 ? (n(Error(s.body.message)), !0) : (e(), !1);
+t({
+  'X-Discord-MFA-Authorization': s
+}, t => {
+  var s, l;
+  return (null === (s = t.body) || void 0 === s ? void 0 : s.code) === 60008 || (null === (l = t.body) || void 0 === l ? void 0 : l.code) === 60003 ? (n(Error(t.body.message)), !0) : (e(), !1);
 });
   });
 }

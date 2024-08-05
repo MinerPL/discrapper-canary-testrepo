@@ -12,8 +12,8 @@ var i = n(735250),
   p = n(13245),
   f = n(490029),
   _ = n(797614),
-  g = n(703656),
-  m = n(454902),
+  g = n(593481),
+  m = n(703656),
   E = n(254761),
   Z = n(547881),
   I = n(70956),
@@ -77,9 +77,9 @@ return null == s ? null : (0, i.jsx)(x.Z, {
     className: o()((0, C.Q)(N.BRd.DARK), A.container),
     onClick: e => e.stopPropagation(),
     children: [
-      (0, i.jsx)(m.ZP, {
+      (0, i.jsx)(g.ZP, {
         expand: !0,
-        colorScheme: m.IC.DANGER,
+        colorScheme: g.IC.DANGER,
         icon: (0, i.jsx)(E.Z, {
           width: 40,
           height: 40,
@@ -153,7 +153,7 @@ tags: [
 });
 class P extends s.PureComponent {
   componentDidCatch(e, t) {
-let n = (0, g.s1)().location;
+let n = (0, m.s1)().location;
 this.setState({
   error: e,
   info: t

@@ -42,16 +42,16 @@ n = (0, r.useCallback)(() => {
       scrollLeft: r,
       scrollHeight: i,
       scrollWidth: a,
-      offsetHeight: o,
-      offsetWidth: s
+      offsetHeight: s,
+      offsetWidth: o
     } = n;
     t.current = {
       scrollTop: e,
       scrollLeft: r,
       scrollHeight: i,
       scrollWidth: a,
-      offsetHeight: o,
-      offsetWidth: s,
+      offsetHeight: s,
+      offsetWidth: o,
       dirty: 0
     };
   }

@@ -13,8 +13,8 @@ var s = n(735250),
   o = n(470079),
   r = n(699581),
   a = n(338545),
-  i = n(130653),
-  l = n(743294);
+  l = n(130653),
+  i = n(743294);
 let c = o.createContext({
 registerComponent: () => {},
 unregisterComponent: () => {},
@@ -23,43 +23,50 @@ expandedContentRef: o.createRef(),
 collapsedContentRef: o.createRef(),
 recalculateAnimationPositions: () => {},
 animatedComponentProps: [],
-expansionSpring: null,
-isExpansionAnimationComplete: !1
+expansionSpring: null
   }),
   d = o.forwardRef(function(e, t) {
+var n;
 let {
-  children: n,
-  id: l,
-  inState: d,
-  isTextTransition: u = !1
+  children: i,
+  id: d,
+  inState: u,
+  isTextTransition: p = !1
 } = e, {
-  isExpansionAnimationComplete: p,
-  recalculateAnimationPositions: x,
-  registerComponent: m,
+  recalculateAnimationPositions: m,
+  registerComponent: x,
   unregisterComponent: g,
-  expansionSpring: C
-} = o.useContext(c), f = o.useRef(null), _ = o.useRef(null), h = o.useContext(i.T);
+  expansionSpring: f
+} = o.useContext(c), C = o.useRef(null), _ = o.useRef(null), h = o.useContext(l.T);
 o.useEffect(() => {
-  x();
-}, [x]), o.useEffect(() => {
-  let e = f.current;
-  return null != e && m(e, l, d), () => {
-    null != e && g(l, d);
+  m();
+}, [m]), o.useEffect(() => {
+  let e = C.current;
+  return null != e && x(e, d, u), () => {
+    null != e && g(d, u);
   };
 }, [
-  l,
   d,
-  m,
+  u,
+  x,
   g
 ]);
-let E = document.getElementById(h ? 'quest-bar-v2-preview-' + l : 'quest-bar-v2-' + l),
-  T = null;
-return null == E ? T = null : u && null != C ? T = (0, s.jsxs)(s.Fragment, {
+let E = o.useRef(null),
+  S = null !== (n = E.current) && void 0 !== n ? n : document.getElementById(h ? 'quest-bar-v2-preview-' + d : 'quest-bar-v2-' + d);
+o.useEffect(() => {
+  E.current = S;
+}, [
+  S,
+  h,
+  d
+]);
+let T = null;
+return null == S ? T = null : p && null != f ? T = (0, s.jsxs)(s.Fragment, {
   children: [
-    'collapsed' === d && (0, r.createPortal)((0, s.jsx)(a.animated.div, {
+    'collapsed' === u && (0, r.createPortal)((0, s.jsx)(a.animated.div, {
       style: {
         position: 'absolute',
-        opacity: C.to({
+        opacity: f.to({
           range: [
             0,
             1
@@ -70,12 +77,12 @@ return null == E ? T = null : u && null != C ? T = (0, s.jsxs)(s.Fragment, {
           ]
         })
       },
-      children: n(_)
-    }), E),
-    'expanded' === d && (0, r.createPortal)((0, s.jsx)(a.animated.div, {
+      children: i(_)
+    }), S),
+    'expanded' === u && (0, r.createPortal)((0, s.jsx)(a.animated.div, {
       style: {
         position: 'absolute',
-        opacity: C.to({
+        opacity: f.to({
           range: [
             0,
             1
@@ -86,17 +93,17 @@ return null == E ? T = null : u && null != C ? T = (0, s.jsxs)(s.Fragment, {
           ]
         })
       },
-      children: n(_)
-    }), E)
+      children: i(_)
+    }), S)
   ]
-}) : 'collapsed' === d && (T = (0, r.createPortal)(n(_), E)), (0, s.jsxs)('div', {
+}) : 'collapsed' === u && (T = (0, r.createPortal)(i(_), S)), (0, s.jsxs)('div', {
   style: {
-    opacity: null == E || p ? 1 : 0
+    opacity: null == T && 'collapsed' === u ? 1 : 0
   },
   ref: t,
   children: [
-    n(f),
-    !p && T
+    i(C),
+    T
   ]
 });
   }),
@@ -105,10 +112,9 @@ let {
   children: t,
   expandedContentRef: n,
   collapsedContentRef: r,
-  expansionSpring: a,
-  isExpansionAnimationComplete: i
-} = e, [d, u] = o.useState({}), [p, x] = o.useState([]), m = o.useCallback((e, t, n) => {
-  u(s => {
+  expansionSpring: a
+} = e, [l, d] = o.useState({}), [u, p] = o.useState([]), m = o.useCallback((e, t, n) => {
+  d(s => {
     var o;
     let r = null !== (o = s[t]) && void 0 !== o ? o : {
       expanded: null,
@@ -122,8 +128,8 @@ let {
       }
     };
   });
-}, []), g = o.useCallback((e, t) => {
-  u(n => {
+}, []), x = o.useCallback((e, t) => {
+  d(n => {
     var s;
     let o = null !== (s = n[e]) && void 0 !== s ? s : {
       expanded: null,
@@ -134,48 +140,52 @@ let {
       [e]: o
     };
   });
-}, []), C = o.useCallback(() => {
+}, []), g = o.useCallback(() => {
   let e = [];
-  for (let t in d) {
-    if (null == d[t] || null == n.current || null == r.current)
+  for (let t in l) {
+    if (null == l[t] || null == n.current || null == r.current)
       continue;
-    let s = d[t].collapsed,
-      o = d[t].expanded;
+    let s = l[t].collapsed,
+      o = l[t].expanded;
     if (null == s || null == o)
       continue;
-    let a = o.getBoundingClientRect().top - n.current.getBoundingClientRect().top + l.Li,
-      i = s.getBoundingClientRect().top - r.current.getBoundingClientRect().top,
-      c = o.getBoundingClientRect().left - n.current.getBoundingClientRect().left + l.Li,
-      u = s.getBoundingClientRect().left - r.current.getBoundingClientRect().left,
-      p = -o.getBoundingClientRect().right + n.current.getBoundingClientRect().right + l.Li,
-      x = -s.getBoundingClientRect().right + r.current.getBoundingClientRect().right;
+    let a = o.getBoundingClientRect(),
+      c = n.current.getBoundingClientRect(),
+      d = s.getBoundingClientRect(),
+      u = r.current.getBoundingClientRect(),
+      p = a.top - c.top + i.Li,
+      m = d.top - u.top,
+      x = a.left - c.left + i.Li,
+      g = d.left - u.left,
+      f = -a.right + c.right + i.Li,
+      C = -d.right + u.right;
     e.push({
       id: t,
-      collapsedLeft: u,
-      expandedLeft: c,
-      collapsedRight: x,
-      expandedRight: p,
-      collapsedTop: i,
-      expandedTop: a
+      collapsedLeft: g,
+      expandedLeft: x,
+      collapsedRight: C,
+      expandedRight: f,
+      collapsedTop: m,
+      expandedTop: p,
+      width: a.width
     });
   }
-  x(e);
+  p(e);
 }, [
-  d,
+  l,
   n,
   r,
-  x
+  p
 ]);
 return (0, s.jsx)(c.Provider, {
   value: {
-    isExpansionAnimationComplete: i,
     registerComponent: m,
-    unregisterComponent: g,
-    animatedComponents: d,
+    unregisterComponent: x,
+    animatedComponents: l,
     expandedContentRef: n,
     collapsedContentRef: r,
-    recalculateAnimationPositions: C,
-    animatedComponentProps: p,
+    recalculateAnimationPositions: g,
+    animatedComponentProps: u,
     expansionSpring: a
   },
   children: t

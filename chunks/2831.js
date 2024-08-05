@@ -1,13 +1,13 @@
 var r = n(444675);
 ! function(e, t) {
   if (!e.setImmediate) {
-var n, i, a, o, s, l = 1,
+var n, i, a, s, o, l = 1,
   u = {},
   c = !1,
   d = e.document;
 var _ = Object.getPrototypeOf && Object.getPrototypeOf(e);
 if (_ = _ && _.setTimeout ? _ : e, '[object process]' === {}.toString.call(e.process))
-  s = function(e) {
+  o = function(e) {
     r.nextTick(function() {
       f(e);
     });
@@ -24,26 +24,26 @@ else if (function() {
   ;
   n = 'setImmediate$' + Math.random() + '$', i = function(t) {
     t.source === e && 'string' == typeof t.data && 0 === t.data.indexOf(n) && f(+t.data.slice(n.length));
-  }, e.addEventListener ? e.addEventListener('message', i, !1) : e.attachEvent('onmessage', i), s = function(t) {
+  }, e.addEventListener ? e.addEventListener('message', i, !1) : e.attachEvent('onmessage', i), o = function(t) {
     e.postMessage(n + t, '*');
   };
 } else if (e.MessageChannel) {
   ;
   (a = new MessageChannel()).port1.onmessage = function(e) {
     f(e.data);
-  }, s = function(e) {
+  }, o = function(e) {
     a.port2.postMessage(e);
   };
 } else if (d && 'onreadystatechange' in d.createElement('script')) {
   ;
-  o = d.documentElement, s = function(e) {
+  s = d.documentElement, o = function(e) {
     var t = d.createElement('script');
     t.onreadystatechange = function() {
-      f(e), t.onreadystatechange = null, o.removeChild(t), t = null;
-    }, o.appendChild(t);
+      f(e), t.onreadystatechange = null, s.removeChild(t), t = null;
+    }, s.appendChild(t);
   };
 } else
-  s = function(e) {
+  o = function(e) {
     setTimeout(f, 0, e);
   };
 _.setImmediate = function(e) {
@@ -54,7 +54,7 @@ _.setImmediate = function(e) {
     callback: e,
     args: t
   };
-  return u[l] = r, s(l), l++;
+  return u[l] = r, o(l), l++;
 }, _.clearImmediate = E;
   }
 

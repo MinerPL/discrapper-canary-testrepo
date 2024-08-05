@@ -18,13 +18,13 @@ return h;
 var r = n(683860),
   i = n(592125),
   a = n(430824),
-  o = n(306680),
-  s = n(710352),
+  s = n(306680),
+  o = n(710352),
   l = n(176505),
   u = n(689938);
 
 function c(e, t) {
-  let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [o.ZP];
+  let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [s.ZP];
   return {
 isNew: !e.isArchivedThread() && n.isNewForumThread(e.id, e.parent_id, t),
 hasUnreads: !e.isArchivedThread() && n.isForumPostUnread(e.id)
@@ -35,12 +35,12 @@ function d(e) {
   let [t, n, r] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [
 i.Z,
 a.Z,
-o.ZP
-  ], s = t.getChannel(e);
-  if (null == s)
+s.ZP
+  ], o = t.getChannel(e);
+  if (null == o)
 return null;
-  let l = n.getGuild(s.guild_id);
-  return null == l ? null : c(s, l, [r]);
+  let l = n.getGuild(o.guild_id);
+  return null == l ? null : c(o, l, [r]);
 }
 let _ = () => ({
   minutes: u.Z.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_MINUTES,
@@ -50,7 +50,7 @@ let _ = () => ({
 });
 
 function E(e, t) {
-  if (t === s.R6.POSTED_DURATION_AGO && e === r.z.CREATION_DATE)
+  if (t === o.R6.POSTED_DURATION_AGO && e === r.z.CREATION_DATE)
 return _;
 }
 

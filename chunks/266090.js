@@ -5,7 +5,7 @@ return i;
 });
 var r, i, a = n(818083);
 (r = i || (i = {}))[r.None = 0] = 'None', r[r.DefaultOn = 1] = 'DefaultOn', r[r.DefaultOff = 2] = 'DefaultOff', r[r.ComingSoon = 3] = 'ComingSoon', r[r.ClydeProfiles = 4] = 'ClydeProfiles';
-let o = (0, a.B)({
+let s = (0, a.B)({
   kind: 'guild',
   id: '2023-03_clyde_ai',
   label: 'ClydeAI',
@@ -42,4 +42,4 @@ experimentState: 0
 }
   ]
 });
-t.Z = o;
+t.Z = s;

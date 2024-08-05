@@ -12,8 +12,8 @@ var s = n(735250),
   c = n(899742),
   u = n(743142),
   d = n(703656),
-  h = n(314897),
-  _ = n(781428),
+  _ = n(314897),
+  h = n(781428),
   E = n(981631),
   g = n(176505);
 
@@ -35,15 +35,15 @@ function p(e) {
 {
   isAuthenticated: n,
   loginStatus: p
-} = (0, l.cj)([h.default], () => ({
-  isAuthenticated: h.default.isAuthenticated(),
-  loginStatus: h.default.getLoginStatus()
+} = (0, l.cj)([_.default], () => ({
+  isAuthenticated: _.default.isAuthenticated(),
+  loginStatus: _.default.getLoginStatus()
 })),
 {
-  location: f,
-  redirectTo: I
+  location: I,
+  redirectTo: m
 } = e,
-[m, N] = r.useState(n);
+[f, N] = r.useState(n);
 
   function T(e) {
 let {
@@ -58,14 +58,14 @@ let {
 }), N(!1);
   }
   return (r.useEffect(() => {
-if (null != f) {
+if (null != I) {
   let {
     handoff_key: e,
     handoff_token: t
-  } = (0, i.parse)(f.search);
+  } = (0, i.parse)(I.search);
   if (null != e && null != t) {
-    let n = null != I ? (0, u.L)(I) : void 0;
-    m ? o.Z.logout(null).finally(() => {
+    let n = null != m ? (0, u.L)(m) : void 0;
+    f ? o.Z.logout(null).finally(() => {
       T({
         handoffKey: e,
         handoffToken: t,
@@ -78,7 +78,7 @@ if (null != f) {
     });
   }
 }
-  }, []), m || p === E.u34.LOGGING_IN) ? (0, s.jsx)(_.q, {}) : (0, s.jsx)(_.Z, {
+  }, []), f || p === E.u34.LOGGING_IN) ? (0, s.jsx)(h.q, {}) : (0, s.jsx)(h.Z, {
 ...e,
 transitionTo: t
   });

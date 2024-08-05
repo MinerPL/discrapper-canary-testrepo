@@ -1,6 +1,6 @@
 n.d(t, {
   cS: function() {
-return s;
+return o;
   },
   nE: function() {
 return a;
@@ -22,23 +22,23 @@ entity_type: n,
 channel_id: a
   } = e;
   if (n in i.nz && null != a) {
-var o;
-t = null !== (o = r.Z.getChannel(e.channel_id)) && void 0 !== o ? o : void 0;
+var s;
+t = null !== (s = r.Z.getChannel(e.channel_id)) && void 0 !== s ? s : void 0;
   }
   return t;
 }
 
-function o(e, t) {
+function s(e, t) {
   let n = null;
   return e === i.WX.EXTERNAL && null != t && 'location' in t && (n = t.location), n;
 }
 
-function s(e) {
+function o(e) {
   let {
 entity_type: t,
 entity_metadata: n
   } = e;
-  return o(t, n);
+  return s(t, n);
 }
 
 function l(e) {
@@ -46,7 +46,7 @@ function l(e) {
 entityType: t,
 entityMetadata: n
   } = e;
-  return o(t, n);
+  return s(t, n);
 }
 
 function u(e) {

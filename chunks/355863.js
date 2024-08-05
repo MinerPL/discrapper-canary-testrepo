@@ -1,6 +1,6 @@
 let r, i;
 n(653041), n(47120), n(411104), n(724458);
-var a, o, s, l = n(392711),
+var a, s, o, l = n(392711),
   u = n.n(l),
   c = n(772848),
   d = n(442837),
@@ -19,7 +19,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-(s = a || (a = {})).REQUIRED = 'REQUIRED', s.OPTIONAL = 'OPTIONAL', s.OPTIONAL_DEFAULT = 'OPTIONAL_DEFAULT';
+(o = a || (a = {})).REQUIRED = 'REQUIRED', o.OPTIONAL = 'OPTIONAL', o.OPTIONAL_DEFAULT = 'OPTIONAL_DEFAULT';
 let T = 'migrated',
   g = {
 [m.Odu.GUILDS]: {
@@ -128,7 +128,7 @@ function A(e) {
   var t;
   return null === (t = g[e]) || void 0 === t ? void 0 : t.defaultSettings;
 }
-class N extends(o = d.ZP.PersistedStore) {
+class N extends(s = d.ZP.PersistedStore) {
   initialize(e) {
 null != e && null != e.layouts && null != e.widgets ? (r = function(e) {
   let t = {};
@@ -146,26 +146,26 @@ let t = !1,
 u().forEach(g, (e, t) => {
   'REQUIRED' === e.layoutPolicy && n.push(t);
 }), u().forEach(r, (e, a) => {
-  let o = this.getWidgetsForLayout(a),
-    s = !1;
+  let s = this.getWidgetsForLayout(a),
+    o = !1;
   for (let e of n) {
-    let n = o.find(t => t.type === e);
+    let n = s.find(t => t.type === e);
     if (null != n)
       continue;
-    s = t = !0;
+    o = t = !0;
     let r = (0, c.Z)();
     n = new h.Z({
       ...this.getWidgetDefaultSettings(e),
       type: e,
       id: r,
       layoutId: a,
-      zIndex: o.length
-    }), o.push(n), i = {
+      zIndex: s.length
+    }), s.push(n), i = {
       ...i,
       [r]: n
     };
   }
-  s && (e = e.set('widgets', o.map(e => {
+  o && (e = e.set('widgets', s.map(e => {
     let {
       id: t
     } = e;
@@ -250,7 +250,7 @@ if (5 === r && e) {
     i = e.map(e => {
       let i = null != t ? t[e] : null,
         a = null != n ? n[e] : null,
-        o = {
+        s = {
           id: e,
           layoutId: T,
           type: e,
@@ -268,9 +268,9 @@ if (5 === r && e) {
           zIndex: 0
         };
       return r.push([
-        o.id,
-        o
-      ]), o.id;
+        s.id,
+        s
+      ]), s.id;
     });
   return {
     layouts: [
@@ -311,16 +311,16 @@ return a.forEach(e => {
       return null != n && (null == a && n[1].type === m.Odu.VOICE && (a = n[0]), null == r && n[1].type === m.Odu.TEXT && (r = n[1].pinned), null != r && null != a || void 0);
     }), r || null == a)
     return;
-  let o = (0, c.Z)();
+  let s = (0, c.Z)();
   n.widgets = [
     a,
-    o
+    s
   ], i.push([
-    o,
+    s,
     {
       ...A(m.Odu.GUILDS_TEXT),
       type: m.Odu.GUILDS_TEXT,
-      id: o,
+      id: s,
       layoutId: t,
       zIndex: 2
     }
@@ -355,7 +355,7 @@ let {
 } = e;
 if (null != r[t])
   return !1;
-let o = [];
+let s = [];
 n.forEach((e, t) => {
   let n = function(e) {
       let t = r[T];
@@ -367,19 +367,19 @@ n.forEach((e, t) => {
         }
       return null;
     }(e.type),
-    s = {
+    o = {
       ...e,
       zIndex: t
     };
-  '' === s.id && (s.id = (0, c.Z)()), null != n && (s.pinned = n.pinned, -1 !== n.anchor.left && (s.anchor = (0, p.jL)(n.anchor, a)), -1 !== n.size.width && (s.size = (0, p.Ox)(n.size, a))), i = {
+  '' === o.id && (o.id = (0, c.Z)()), null != n && (o.pinned = n.pinned, -1 !== n.anchor.left && (o.anchor = (0, p.jL)(n.anchor, a)), -1 !== n.size.width && (o.size = (0, p.Ox)(n.size, a))), i = {
     ...i,
-    [s.id]: new h.Z(s)
-  }, o.push(s.id);
+    [o.id]: new h.Z(o)
+  }, s.push(o.id);
 }), r = {
   ...r,
   [t]: new f.Z({
     id: t,
-    widgets: o
+    widgets: s
   })
 };
   },

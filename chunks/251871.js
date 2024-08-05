@@ -9,10 +9,10 @@ var s = t(735250),
   i = t(481060),
   a = t(100527),
   l = t(906732),
-  u = t(314897),
-  _ = t(271383),
-  d = t(430824),
-  c = t(346656),
+  u = t(565138),
+  _ = t(314897),
+  d = t(271383),
+  c = t(430824),
   I = t(626135),
   A = t(715903),
   O = t(295474),
@@ -28,10 +28,10 @@ function D(e) {
 onClose: t,
 transitionState: D,
 guildId: R
-  } = e, C = (0, r.e7)([u.default], () => u.default.getId()), T = (0, r.e7)([_.ZP], () => _.ZP.getMember(R, C), [
+  } = e, C = (0, r.e7)([_.default], () => _.default.getId()), T = (0, r.e7)([d.ZP], () => d.ZP.getMember(R, C), [
 R,
 C
-  ]), f = (0, r.e7)([d.Z], () => d.Z.getGuild(R), [R]), Z = null !== (n = null == f ? void 0 : f.name) && void 0 !== n ? n : '', g = (0, A.no)(T), {
+  ]), f = (0, r.e7)([c.Z], () => c.Z.getGuild(R), [R]), Z = null !== (n = null == f ? void 0 : f.name) && void 0 !== n ? n : '', g = (0, A.no)(T), {
 analyticsLocations: h
   } = (0, l.ZP)(a.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT), [P, m] = (0, O.ww)({
 guildId: R,
@@ -66,9 +66,9 @@ children: [
         (0, s.jsxs)('div', {
           className: U.guildIconContainer,
           children: [
-            (0, s.jsx)(c.Z, {
+            (0, s.jsx)(u.Z, {
               guild: f,
-              size: c.Z.Sizes.LARGER
+              size: u.Z.Sizes.LARGER
             }),
             (0, s.jsx)('div', {
               className: U.statusContainer,

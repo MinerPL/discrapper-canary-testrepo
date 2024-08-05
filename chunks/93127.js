@@ -49,7 +49,7 @@ let {
 } = e;
 r.Z.dispatch({
   type: 'LOAD_USER_AFFINITIES_V2_SUCCESS',
-  affineUsers: t.map(e => {
+  affineUsers: t.user_affinities.map(e => {
     var t, n, i, r, o, a, l, d;
     return {
       otherUserId: e.other_user_id,

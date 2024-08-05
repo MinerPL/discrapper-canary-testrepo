@@ -34,8 +34,8 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
   a = n(481060),
-  o = n(596454),
-  s = n(99690),
+  s = n(596454),
+  o = n(99690),
   l = n(607070),
   u = n(797610),
   c = n(754688),
@@ -62,7 +62,7 @@ emoji: t
 text: t.name,
 delay: 750,
 position: 'top',
-children: e => (0, r.jsx)(o.Z, {
+children: e => (0, r.jsx)(s.Z, {
   src: t.src,
   emojiName: t.name,
   animated: !1,
@@ -79,7 +79,7 @@ emoji: t
 text: t.name,
 delay: 750,
 position: 'top',
-children: e => (0, r.jsx)(o.Z, {
+children: e => (0, r.jsx)(s.Z, {
   emojiId: t.emojiId,
   emojiName: t.name,
   animated: t.animated,
@@ -93,9 +93,9 @@ function C(e) {
 text: t,
 channelId: n,
 guildId: i
-  } = e, a = h.Z.getGuild(i), o = f.Z.getChannel(n), s = (0, u.Ib)(a, o) && '@Clyde' === t ? S.jM : null;
+  } = e, a = h.Z.getGuild(i), s = f.Z.getChannel(n), o = (0, u.Ib)(a, s) && '@Clyde' === t ? S.jM : null;
   return (0, r.jsx)(_.Z, {
-color: s,
+color: o,
 children: t
   });
 }
@@ -104,8 +104,8 @@ function y(e) {
   let {
 id: t,
 guildId: n,
-channelId: o
-  } = e, l = (0, i.e7)([m.default], () => m.default.getUser(t)), u = (0, i.e7)([p.Z], () => p.Z.hidePersonalInformation), c = T.ZP.useName(n, o, l), d = (0, r.jsx)(_.Z, {
+channelId: s
+  } = e, l = (0, i.e7)([m.default], () => m.default.getUser(t)), u = (0, i.e7)([p.Z], () => p.Z.hidePersonalInformation), c = T.ZP.useName(n, s, l), d = (0, r.jsx)(_.Z, {
 children: null == c ? '<@'.concat(t, '>') : '@'.concat(c)
   });
   if (null != l) {
@@ -114,7 +114,7 @@ return (0, r.jsx)(a.Tooltip, {
   text: (0, r.jsxs)('div', {
     className: N.userTooltip,
     children: [
-      (0, r.jsx)(s.Z, {
+      (0, r.jsx)(o.Z, {
         user: l,
         animate: !0,
         size: a.AvatarSizes.SIZE_16,
@@ -149,25 +149,25 @@ function D(e) {
   let {
 id: t,
 guildId: n
-  } = e, o = (0, i.e7)([h.Z], () => null != n ? h.Z.getRole(n, t) : void 0), s = (0, i.e7)([l.Z], () => l.Z.roleStyle);
-  if (null == o)
+  } = e, s = (0, i.e7)([h.Z], () => null != n ? h.Z.getRole(n, t) : void 0), o = (0, i.e7)([l.Z], () => l.Z.roleStyle);
+  if (null == s)
 return (0, r.jsxs)('span', {
   children: [
     '@',
     A.Z.Messages.UNKNOWN_ROLE_PLACEHOLDER
   ]
 });
-  let u = null != o.color && 0 !== o.color;
+  let u = null != s.color && 0 !== s.color;
   return (0, r.jsxs)(_.Z, {
-color: 'username' === s && u ? o.color : null,
+color: 'username' === o && u ? s.color : null,
 children: [
-  'dot' === s && (0, r.jsx)(a.RoleDot, {
-    color: o.colorString,
+  'dot' === o && (0, r.jsx)(a.RoleDot, {
+    color: s.colorString,
     background: !1,
     tooltip: !1
   }),
   '@',
-  o.name
+  s.name
 ]
   });
 }
@@ -175,13 +175,13 @@ children: [
 function L(e) {
   let {
 id: t
-  } = e, n = (0, i.e7)([f.Z], () => f.Z.getChannel(t)), a = A.Z.Messages.UNKNOWN_CHANNEL.toLowerCase(), o = 'text', s = !0;
+  } = e, n = (0, i.e7)([f.Z], () => f.Z.getChannel(t)), a = A.Z.Messages.UNKNOWN_CHANNEL.toLowerCase(), s = 'text', o = !0;
   if (null != n) {
 var l;
-a = (0, c.YO)(n) ? n.name : A.Z.Messages.NO_ACCESS, o = (0, c.YO)(n) ? null !== (l = (0, I.wl)(n)) && void 0 !== l ? l : 'text' : 'locked', s = (0, d.B)(n.type);
+a = (0, c.YO)(n) ? n.name : A.Z.Messages.NO_ACCESS, s = (0, c.YO)(n) ? null !== (l = (0, I.wl)(n)) && void 0 !== l ? l : 'text' : 'locked', o = (0, d.B)(n.type);
   }
-  return s ? (0, r.jsx)(_.Z, {
-iconType: o,
+  return o ? (0, r.jsx)(_.Z, {
+iconType: s,
 children: a
   }) : (0, r.jsx)('span', {
 children: '#' + a

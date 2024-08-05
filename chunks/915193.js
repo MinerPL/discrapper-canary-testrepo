@@ -1,27 +1,27 @@
-r.d(n, {
+t.d(n, {
   Z: function() {
-return f;
+return I;
   }
 });
-var i = r(735250);
-r(470079);
-var s = r(442837),
-  a = r(692547),
-  t = r(481060),
-  l = r(493683),
-  d = r(129861),
-  o = r(700582),
-  u = r(594174),
-  c = r(689938),
-  Z = r(813383);
+var i = t(735250);
+t(470079);
+var r = t(442837),
+  a = t(692547),
+  s = t(481060),
+  l = t(493683),
+  o = t(129861),
+  u = t(700582),
+  d = t(594174),
+  c = t(689938),
+  E = t(813383);
 
-function m(e) {
+function _(e) {
   let {
 color: n,
-className: r
+className: t
   } = e;
   return (0, i.jsx)('svg', {
-className: r,
+className: t,
 height: '16',
 width: '80',
 viewBox: '0 0 80 16',
@@ -60,59 +60,59 @@ children: (0, i.jsxs)('g', {
   });
 }
 
-function f(e, n) {
-  let r = (0, s.e7)([u.default], () => u.default.getCurrentUser());
-  return null == r || n.ownerId !== r.id || e.id === r.id || (null == n ? void 0 : n.isBroadcastChannel()) ? null : (0, i.jsx)(t.MenuItem, {
+function I(e, n) {
+  let t = (0, r.e7)([d.default], () => d.default.getCurrentUser());
+  return null == t || n.ownerId !== t.id || e.id === t.id || (null == n ? void 0 : n.isBroadcastChannel()) ? null : (0, i.jsx)(s.MenuItem, {
 id: 'make-dm-owner',
 color: 'danger',
 label: c.Z.Messages.CHANGE_DM_OWNER,
 action: () => {
-  var s;
-  return s = r, void(0, t.openModal)(r => (0, i.jsxs)(t.ConfirmModal, {
-    bodyClassName: Z.confirmModal,
+  var r;
+  return r = t, void(0, s.openModal)(t => (0, i.jsxs)(s.ConfirmModal, {
+    bodyClassName: E.confirmModal,
     header: c.Z.Messages.TRANSFER_GROUP_OWNERSHIP,
     confirmText: c.Z.Messages.CONFIRM,
     cancelText: c.Z.Messages.CANCEL,
     onConfirm: () => l.Z.setDMOwner(n.id, e.id),
-    ...r,
+    ...t,
     children: [
-      (0, i.jsx)(m, {
+      (0, i.jsx)(_, {
         color: a.Z.unsafe_rawColors.PRIMARY_300.css
       }),
       (0, i.jsxs)('div', {
-        className: Z.fromToWrapper,
+        className: E.fromToWrapper,
         children: [
           (0, i.jsx)('div', {
-            className: Z.from,
-            children: (0, i.jsx)(o.Z, {
-              user: s,
-              size: t.AvatarSizes.SIZE_80
+            className: E.from,
+            children: (0, i.jsx)(u.Z, {
+              user: r,
+              size: s.AvatarSizes.SIZE_80
             })
           }),
           (0, i.jsx)('div', {
-            className: Z.to,
-            children: (0, i.jsx)(o.Z, {
+            className: E.to,
+            children: (0, i.jsx)(u.Z, {
               user: e,
-              size: t.AvatarSizes.SIZE_80
+              size: s.AvatarSizes.SIZE_80
             })
           })
         ]
       }),
-      (0, i.jsx)(t.Text, {
+      (0, i.jsx)(s.Text, {
         variant: 'text-md/normal',
         children: c.Z.Messages.CONFIRM_CHANGE_DM_OWNER.format({
-          usernameHook: (n, r) => (0, i.jsx)(d.Z, {
-            usernameIcon: (0, i.jsx)(t.Avatar, {
-              className: Z.avatarIcon,
+          usernameHook: (n, t) => (0, i.jsx)(o.Z, {
+            usernameIcon: (0, i.jsx)(s.Avatar, {
+              className: E.avatarIcon,
               src: e.getAvatarURL(void 0, 16),
-              size: t.AvatarSizes.SIZE_16,
+              size: s.AvatarSizes.SIZE_16,
               'aria-hidden': !0
             }),
-            className: Z.discordTag,
-            usernameClass: Z.username,
-            discriminatorClass: Z.discriminator,
+            className: E.discordTag,
+            usernameClass: E.username,
+            discriminatorClass: E.discriminator,
             user: e
-          }, r)
+          }, t)
         })
       })
     ]

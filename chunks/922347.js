@@ -1,9 +1,9 @@
 n.d(t, {
   M: function() {
-return o;
+return s;
   },
   Z: function() {
-return s;
+return o;
   }
 });
 var r = n(979554),
@@ -17,10 +17,10 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let o = e => e instanceof s;
-class s extends i.Z {
+let s = e => e instanceof o;
+class o extends i.Z {
   static fromServer(e) {
-return new s({
+return new o({
   ...super.fromServer(e),
   ...e
 });

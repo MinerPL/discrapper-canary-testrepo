@@ -2,8 +2,8 @@ n(47120);
 var r = n(570140),
   i = n(147913),
   a = n(314897),
-  o = n(967368),
-  s = n(592125),
+  s = n(967368),
+  o = n(592125),
   l = n(944486),
   u = n(631768),
   c = n(981631);
@@ -11,10 +11,10 @@ var r = n(570140),
 function d() {
   ! function() {
 let e = l.Z.getVoiceChannelId(),
-  t = o.Z.bitrate;
+  t = s.Z.bitrate;
 if (null == e)
   return;
-let n = s.Z.getChannel(e);
+let n = o.Z.getChannel(e);
 if (null != n)
   t !== n.bitrate && r.Z.dispatch({
     type: 'SET_CHANNEL_BITRATE',
@@ -26,7 +26,7 @@ let t = l.Z.getVoiceChannelId(),
   n = u.Z.mode;
 if (null == t)
   return;
-let i = s.Z.getChannel(t);
+let i = o.Z.getChannel(t);
 if (null == i)
   return;
 let a = null !== (e = i.videoQualityMode) && void 0 !== e ? e : c.Ucd.AUTO;

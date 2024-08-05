@@ -1,7 +1,7 @@
 var r, i = n(512722),
   a = n.n(i),
-  o = n(392711),
-  s = n.n(o),
+  s = n(392711),
+  o = n.n(s),
   l = n(442837),
   u = n(377108),
   c = n(524437),
@@ -62,29 +62,29 @@ settings: {
 },
 partial: r,
 resetEditInfo: i,
-local: o
+local: s
   } = e;
-  g = !o;
-  let s = T[n];
-  i && N(s), r ? (s.proto = (0, f.re)(s.ProtoClass, s.proto, t), a()('string' != typeof s.proto, 'UserSettingsProto cannot be a string')) : (s.proto = t, a()('string' != typeof s.proto, 'UserSettingsProto cannot be a string'), s.editInfo.loaded = !0, s.editInfo.loading = !1);
+  g = !s;
+  let o = T[n];
+  i && N(o), r ? (o.proto = (0, f.re)(o.ProtoClass, o.proto, t), a()('string' != typeof o.proto, 'UserSettingsProto cannot be a string')) : (o.proto = t, a()('string' != typeof o.proto, 'UserSettingsProto cannot be a string'), o.editInfo.loaded = !0, o.editInfo.loading = !1);
 }
 
 function O(e) {
-  null != e && s().forEach(T, (t, n) => {
+  null != e && o().forEach(T, (t, n) => {
 var r, i;
-let o = e[Number(n)];
-if (null == o)
+let s = e[Number(n)];
+if (null == s)
   return;
-let s = null !== (r = null == o ? void 0 : o.proto) && void 0 !== r ? r : '',
-  l = (0, f.d5)(t.ProtoClass, s);
+let o = null !== (r = null == s ? void 0 : s.proto) && void 0 !== r ? r : '',
+  l = (0, f.d5)(t.ProtoClass, o);
 if (null == l)
   return;
 t.proto = l, a()('string' != typeof t.proto, 'UserSettingsProto cannot be a string');
-let u = null !== (i = null == o ? void 0 : o.protoToSave) && void 0 !== i ? i : null;
-if (null == u || null == o.offlineEditDataVersion)
+let u = null !== (i = null == s ? void 0 : s.protoToSave) && void 0 !== i ? i : null;
+if (null == u || null == s.offlineEditDataVersion)
   return;
 let c = (0, f.d5)(t.ProtoClass, u);
-null != c && (t.editInfo.protoToSave = c, t.editInfo.offlineEditDataVersion = o.offlineEditDataVersion);
+null != c && (t.editInfo.protoToSave = c, t.editInfo.offlineEditDataVersion = s.offlineEditDataVersion);
   });
 }
 class R extends(r = l.ZP.PersistedStore) {
@@ -95,7 +95,7 @@ O(e);
 return this.computeState();
   }
   computeState() {
-return s().mapValues(T, e => {
+return o().mapValues(T, e => {
   let t = {
     proto: (0, f.xU)(e.ProtoClass, e.proto)
   };

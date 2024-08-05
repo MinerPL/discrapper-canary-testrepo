@@ -1,6 +1,6 @@
-var _, E;
-t.d(e, {
+var r, i;
+n.d(t, {
   B: function() {
-return _;
+return r;
   }
-}), (E = _ || (_ = {})).MESSAGE_SEND = 'message_send', E.GUILD_JOIN = 'guild_join', E.USERNAME_UPDATE = 'username_update', E.CLAN_TAG_UPDATE = 'clan_tag_update';
+}), (i = r || (r = {})).MESSAGE_SEND = 'message_send', i.GUILD_JOIN = 'guild_join', i.USERNAME_UPDATE = 'username_update', i.CLAN_TAG_UPDATE = 'clan_tag_update';

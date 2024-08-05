@@ -4,20 +4,20 @@ return E;
   }
 }), n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(442837),
+  s = n(470079),
+  a = n(442837),
   r = n(481060),
   l = n(782568),
   o = n(31336),
   c = n(906467),
-  d = n(63063),
-  u = n(665149),
+  u = n(63063),
+  d = n(665149),
   _ = n(689938);
 
 function E() {
-  let e = (0, s.e7)([c.Z], () => c.Z.isDeveloper),
-[t, E] = a.useState(!1),
-[I, m] = a.useState(0),
+  let e = (0, a.e7)([c.Z], () => c.Z.isDeveloper),
+[t, E] = s.useState(!1),
+[I, m] = s.useState(0),
 T = e => {
   clearTimeout(I), m(setTimeout(() => {
     E(e);
@@ -37,7 +37,7 @@ children: (0, i.jsx)(r.Popout, {
   renderPopout: () => function(e) {
     let {
       onClose: t,
-      isDiscordDeveloper: a
+      isDiscordDeveloper: s
     } = e;
     return (0, i.jsx)(r.Menu, {
       onSelect: () => {},
@@ -60,7 +60,7 @@ children: (0, i.jsx)(r.Popout, {
               });
             })
           }),
-          a && (0, i.jsx)(r.MenuItem, {
+          s && (0, i.jsx)(r.MenuItem, {
             id: 'staff-devtools',
             label: 'Toggle DevTools',
             icon: r.StaffBadgeIcon,
@@ -70,7 +70,7 @@ children: (0, i.jsx)(r.Popout, {
             id: 'staff-help-center',
             label: 'Go to Help Center',
             icon: r.WindowLaunchIcon,
-            action: () => (0, l.Z)(d.w)
+            action: () => (0, l.Z)(u.w)
           })
         ]
       })
@@ -83,7 +83,7 @@ children: (0, i.jsx)(r.Popout, {
     let {
       isShown: n
     } = t;
-    return (0, i.jsx)(u.JO, {
+    return (0, i.jsx)(d.JO, {
       ...e,
       icon: r.BugIcon,
       'aria-label': _.Z.Messages.HELP,

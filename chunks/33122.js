@@ -10,14 +10,14 @@ var n, i = s(735250),
   o = s(748780),
   h = s(481060),
   d = s(112724),
-  u = s(283756),
-  c = s(524444),
-  p = s(494735),
-  m = s(574735),
-  g = s(529815),
-  I = s(250496),
-  C = s(552253),
-  x = s(261922),
+  u = s(446411),
+  c = s(468846),
+  p = s(679056),
+  m = s(44488),
+  g = s(519160),
+  I = s(124347),
+  C = s(283756),
+  x = s(524444),
   f = s(585483),
   N = s(981631),
   v = s(567698);
@@ -65,12 +65,12 @@ height: 1080
 width: 1280,
 height: 720
   },
-  y = e => (0, c.lV)({
+  y = e => (0, x.lV)({
 ...e,
 className: v.videoWrapper,
 mediaPlayerClassName: v.mediaPlayer
   }),
-  O = e => (0, i.jsx)(x.Z, {
+  O = e => (0, i.jsx)(I.Z, {
 ...e
   }),
   j = e => {
@@ -80,11 +80,11 @@ let t, s, n, {
   onPlay: l,
   onEnded: o,
   onClick: d,
-  playable: u,
-  volume: p,
-  isMuted: m,
-  onVolumeChange: C,
-  onMute: x
+  playable: p,
+  volume: m,
+  isMuted: g,
+  onVolumeChange: I,
+  onMute: C
 } = e;
 if (a.type === N.s9s.YOUTUBE_VIDEO)
   t = {
@@ -93,7 +93,7 @@ if (a.type === N.s9s.YOUTUBE_VIDEO)
   }, s = {
     url: ''.concat((0, N.ivE)(a.youtubeVideoId), '?').concat('rel=0&iv_load_policy=3&showinfo=0&modestbranding=1'),
     ...L
-  }, n = I.pn.YOUTUBE;
+  }, n = c.pn.YOUTUBE;
 else {
   let e = null != a.width ? a.width : 0,
     n = null != a.height ? a.height : 0;
@@ -108,7 +108,7 @@ else {
     height: n
   };
 }
-let f = (0, i.jsx)(g.BC, {
+let f = (0, i.jsx)(u.BC, {
   href: null,
   thumbnail: t,
   video: s,
@@ -118,18 +118,18 @@ let f = (0, i.jsx)(g.BC, {
   maxWidth: r.width,
   onPlay: l,
   onEnded: o,
-  playable: u,
+  playable: p,
   className: v.video,
-  volume: p,
-  onVolumeChange: C,
-  autoMute: m,
-  onMute: x,
-  autoPlay: u,
+  volume: m,
+  onVolumeChange: I,
+  autoMute: g,
+  onMute: C,
+  autoPlay: p,
   renderVideoComponent: y,
   renderImageComponent: O,
-  renderLinkComponent: c.iT
+  renderLinkComponent: x.iT
 });
-return u ? f : (0, i.jsx)(h.Clickable, {
+return p ? f : (0, i.jsx)(h.Clickable, {
   className: v.itemImageWrapper,
   onClick: d,
   children: f
@@ -137,10 +137,10 @@ return u ? f : (0, i.jsx)(h.Clickable, {
   },
   k = () => (0, i.jsx)('div', {
 className: v.paginationVideoOverlay,
-children: (0, i.jsx)(u.Z, {
+children: (0, i.jsx)(C.Z, {
   inactive: !0,
   className: v.paginationVideoPlayPill,
-  renderLinkComponent: c.iT
+  renderLinkComponent: x.iT
 })
   });
 class M extends(n = a.PureComponent) {
@@ -203,7 +203,7 @@ let {
   animate: s,
   hoveringPreviousItem: n,
   hoveringNextItem: a
-} = this.state, r = (0, i.jsx)(m.ZP, {
+} = this.state, r = (0, i.jsx)(g.ZP, {
   items: e,
   itemSize: this.getItemSize(),
   renderItem: this.renderItem,
@@ -215,13 +215,13 @@ return e.length <= 1 ? r : (0, i.jsxs)('div', {
   className: v.carouselButtonsContainer,
   children: [
     r,
-    (0, i.jsx)(p.am, {
+    (0, i.jsx)(m.am, {
       onClick: this.manualPrevious,
       className: l()(v.arrow, {
         [v.arrowHovered]: n
       })
     }),
-    (0, i.jsx)(p.Pz, {
+    (0, i.jsx)(m.Pz, {
       onClick: this.manualNext,
       className: l()(v.arrow, {
         [v.arrowHovered]: a
@@ -244,7 +244,7 @@ let {
   playingVideo: r,
   hasInteracted: l
 } = this.state;
-return (0, i.jsxs)(C.Z, {
+return (0, i.jsxs)(p.Z, {
   pauseOnHover: !0,
   onInterval: this.autoNext,
   interval: s,
@@ -254,14 +254,14 @@ return (0, i.jsxs)(C.Z, {
     this.renderCarousel(),
     (0, i.jsx)('div', {
       className: v.pagination,
-      children: (0, i.jsx)(p.ZP, {
+      children: (0, i.jsx)(m.ZP, {
         renderItem: this.renderPaginationItem,
         scrollToPadding: 85,
         items: e,
         selectedIndex: a,
         onSetItem: e => this.setItem(e, !0),
         paginationContainerClass: v.scroller,
-        align: e.length < 6 ? p.ZP.Align.LEFT : p.ZP.Align.CENTER
+        align: e.length < 6 ? m.ZP.Align.LEFT : m.ZP.Align.CENTER
       })
     })
   ]
@@ -291,7 +291,7 @@ super(...e), b(this, 'state', {
     state: {
       currentIndex: i
     }
-  } = this, a = (0, m.gN)(i, s.length), r = (0, m.gN)(e, s.length), l = 1 === Math.abs(e - a) || e === s.length - 1 && 0 === a || 0 === e && a === s.length - 1;
+  } = this, a = (0, g.gN)(i, s.length), r = (0, g.gN)(e, s.length), l = 1 === Math.abs(e - a) || e === s.length - 1 && 0 === a || 0 === e && a === s.length - 1;
   this.setState({
     playingVideo: !1,
     currentIndex: r,
@@ -348,7 +348,7 @@ super(...e), b(this, 'state', {
     currentIndex: n,
     volume: a,
     isMuted: r
-  } = this.state, h = t === (0, m.gN)(n, this.props.items.length);
+  } = this.state, h = t === (0, g.gN)(n, this.props.items.length);
   return (0, i.jsx)(o.Z.div, {
     className: l()(v.item, {
       [v.currentItem]: h

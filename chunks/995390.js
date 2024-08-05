@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return g;
+return p;
   }
 }), t(653041), t(47120);
 var i = t(470079),
@@ -9,8 +9,8 @@ var i = t(470079),
   l = t(392711),
   o = t.n(l),
   r = t(442837),
-  c = t(139387),
-  d = t(895924),
+  d = t(139387),
+  c = t(895924),
   u = t(581364),
   I = t(592125),
   m = t(430824),
@@ -19,31 +19,31 @@ var i = t(470079),
   E = t(823379),
   T = t(905753),
   h = t(399860),
-  p = t(981631);
+  g = t(981631);
 
-function g(e, n, t) {
+function p(e, n, t) {
   let a = (0, r.e7)([T.Z], () => T.Z.getApplicationPermissions()),
 l = i.useMemo(() => function(e, n) {
   let t = {
       ...n
     },
     i = (0, u.bD)(e),
-    a = (0, h.rE)(i, d.Kw.CHANNEL),
-    s = (0, h.rE)(e, d.Kw.ROLE);
+    a = (0, h.rE)(i, c.Kw.CHANNEL),
+    s = (0, h.rE)(e, c.Kw.ROLE);
   return !(s in t) && (t[s] = {
     id: e,
     permission: !0,
-    type: d.Kw.ROLE
+    type: c.Kw.ROLE
   }), !(a in t) && (t[a] = {
     id: i,
     permission: !0,
-    type: d.Kw.CHANNEL
+    type: c.Kw.CHANNEL
   }), t;
 }(e, null != a ? a : {}), [
   a,
   e
 ]),
-g = (0, r.e7)([T.Z], () => {
+p = (0, r.e7)([T.Z], () => {
   var e;
   if (null == t)
     return;
@@ -55,7 +55,7 @@ C = (0, r.e7)([T.Z], () => {
   return null == t ? T.Z.getEditedApplication() : null === (e = T.Z.getEditedCommand()) || void 0 === e ? void 0 : e.permissions;
 }, [t]),
 f = null != t ? t : n,
-x = null != t ? g : l,
+x = null != t ? p : l,
 O = i.useMemo(() => null != C ? C : {
   ...null != x ? x : {}
 }, [
@@ -69,14 +69,14 @@ A = i.useMemo(() => null == x || null == O ? null : !o().isEqual(x, O), [
 ]);
   return i.useEffect(() => {
 if (f === n)
-  A ? c.Z.startEditingCommandPermissions(f) : c.Z.stopEditingCommandPermissions(f);
+  A ? d.Z.startEditingCommandPermissions(f) : d.Z.stopEditingCommandPermissions(f);
   }, [
 n,
 A,
 f
   ]), {
 originalApplicationPermissions: l,
-originalCommandPermissions: g,
+originalCommandPermissions: p,
 editedTargetPermissions: function(e, n) {
   let t = (0, r.e7)([m.Z], () => m.Z.getGuild(e), [e]);
   s()(null != t, 'guild must be present to be editing its integration settings');
@@ -88,7 +88,7 @@ editedTargetPermissions: function(e, n) {
   s()(null != l, 'useComputePermissions: currentUserId must not be null');
   let o = l === t.ownerId,
     {
-      channelIds: c,
+      channelIds: d,
       roleIds: T,
       userIds: h
     } = i.useMemo(() => {
@@ -96,17 +96,17 @@ editedTargetPermissions: function(e, n) {
         t = [],
         i = [];
       for (let a of Object.values(n))
-        a.type === d.Kw.CHANNEL ? e.push(a.id) : a.type === d.Kw.ROLE ? t.push(a.id) : a.type === d.Kw.USER && i.push(a.id);
+        a.type === c.Kw.CHANNEL ? e.push(a.id) : a.type === c.Kw.ROLE ? t.push(a.id) : a.type === c.Kw.USER && i.push(a.id);
       return {
         channelIds: e,
         roleIds: t,
         userIds: i
       };
     }, [n]),
-    g = (0, r.cj)([I.Z], () => Object.fromEntries(c.map(I.Z.getChannel).filter(E.lm).map(e => [
+    p = (0, r.cj)([I.Z], () => Object.fromEntries(d.map(I.Z.getChannel).filter(E.lm).map(e => [
       e.id,
       e
-    ])), [c]),
+    ])), [d]),
     C = (0, r.cj)([m.Z], () => Object.fromEntries(T.map(n => m.Z.getRole(e, n)).filter(E.lm).map(e => [
       e.id,
       e
@@ -124,28 +124,28 @@ editedTargetPermissions: function(e, n) {
       s = {};
     for (let [l, r] of Object.entries(n)) {
       let n = !1,
-        c = !1;
-      if (r.type === d.Kw.CHANNEL) {
+        d = !1;
+      if (r.type === c.Kw.CHANNEL) {
         let e = r.id === i,
-          t = g[r.id];
-        n = e || _.Z.can(p.Plq.VIEW_CHANNEL, t), c = !0;
-      } else if (r.type === d.Kw.ROLE) {
+          t = p[r.id];
+        n = e || _.Z.can(g.Plq.VIEW_CHANNEL, t), d = !0;
+      } else if (r.type === c.Kw.ROLE) {
         let i = r.id === e,
           s = C[r.id];
-        n = i || null != s, c = o || i || _.Z.isRoleHigher(t, a, s);
-      } else if (r.type === d.Kw.USER) {
+        n = i || null != s, d = o || i || _.Z.isRoleHigher(t, a, s);
+      } else if (r.type === c.Kw.USER) {
         let e = f[r.id];
-        n = null != e, c = null != e && (o || _.Z.canManageUser(p.Plq.USE_APPLICATION_COMMANDS, e, t));
+        n = null != e, d = null != e && (o || _.Z.canManageUser(g.Plq.USE_APPLICATION_COMMANDS, e, t));
       }
       s[l] = {
         ...r,
         canRead: n,
-        canWrite: c
+        canWrite: d
       };
     }
     return s;
   }, [
-    g,
+    p,
     t,
     a,
     o,

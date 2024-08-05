@@ -23,7 +23,7 @@ let l = Math.min(4, Math.ceil(navigator.hardwareConcurrency / 2)),
   v = new Map(),
   I = (0, a.G)(async () => {
 for (let i = 0; i < l; i++) {
-  let i = new Worker(new URL(e.p + e.u('36412'), e.b));
+  let i = new Worker(new URL('/assets/' + e.u('36412'), e.b));
   d.push({
     worker: i,
     numActive: 0

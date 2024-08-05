@@ -8,11 +8,11 @@ return d;
 }), n(653041), n(47120), n(411104);
 var r, i, a = n(536895);
 
-function o(e, t) {
+function s(e, t) {
   return e.findIndex(e => t === e.key);
 }
 
-function s(e) {
+function o(e) {
   return e.focusPath[e.focusPath.length - 1];
 }
 
@@ -21,7 +21,7 @@ function l(e) {
   for (let n = 0; n < e.focusPath.length - 1; n++) {
 if (null == t)
   return;
-let r = o(t, e.focusPath[n]);
+let r = s(t, e.focusPath[n]);
 t = t[r].children;
   }
   return t;
@@ -32,7 +32,7 @@ function u(e, t) {
 r = [];
   for (let e = 0; e < t.length && null != n; e++) {
 let i = t[e],
-  a = o(n, i);
+  a = s(n, i);
 if (a < 0 || a >= n.length) {
   let e = n[0];
   null != e && r.push(e.key);
@@ -45,20 +45,20 @@ r.push(i), n = n[a].children;
 (i = r || (r = {})).UPDATE_ITEMS = 'UPDATE_ITEMS', i.SET_FOCUS_PATH = 'SET_FOCUS_PATH';
 
 function c(e) {
-  let t = s(e),
+  let t = o(e),
 n = l(e);
-  return null == n ? -1 : o(n, t);
+  return null == n ? -1 : s(n, t);
 }
 
 function d(e, t) {
   switch (t.type) {
 case a.Us.NAVIGATE_UP:
   return function(e, t) {
-    let n = s(e),
+    let n = o(e),
       r = l(e);
     if (null == r)
       return e;
-    let i = (o(r, n) - 1) % r.length;
+    let i = (s(r, n) - 1) % r.length;
     if (i < 0 && (i = r.length - 1), null == r[i])
       return e;
     let a = {
@@ -75,11 +75,11 @@ case a.Us.NAVIGATE_UP:
   }(e, 0);
 case a.Us.NAVIGATE_DOWN:
   return function(e, t) {
-    let n = s(e),
+    let n = o(e),
       r = l(e);
     if (null == r)
       return e;
-    let i = (o(r, n) + 1) % r.length;
+    let i = (s(r, n) + 1) % r.length;
     if (null == r[i])
       return e;
     let a = {
@@ -97,11 +97,11 @@ case a.Us.NAVIGATE_DOWN:
 case a.Us.NAVIGATE_IN:
   return function(e, t) {
     var n;
-    let r = s(e),
+    let r = o(e),
       i = l(e);
     if (null == i)
       return e;
-    let a = i[o(i, r)],
+    let a = i[s(i, r)],
       u = null == a ? void 0 : null === (n = a.children) || void 0 === n ? void 0 : n[0];
     if (null == u)
       return e;

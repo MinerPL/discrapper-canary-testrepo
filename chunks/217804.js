@@ -1,26 +1,26 @@
-n.d(l, {
+l.d(n, {
   u: function() {
 return i;
   }
 });
-var s = n(481060),
-  t = n(471445),
-  a = n(230900);
+var s = l(481060),
+  t = l(471445),
+  a = l(230900);
 
-function i(e, l) {
-  let n, i;
+function i(e, n) {
+  let l, i;
   if (null == e)
 return null;
-  let r = (0, a.cS)(e);
-  if (null != r)
-n = s.LocationIcon, i = r;
+  let o = (0, a.cS)(e);
+  if (null != o)
+l = s.LocationIcon, i = o;
   else {
-if (null == l)
+if (null == n)
   return null;
-n = (0, t.Th)(l.type), i = l.name;
+l = (0, t.Th)(n.type), i = n.name;
   }
   return {
-IconComponent: n,
+IconComponent: l,
 locationName: i
   };
 }

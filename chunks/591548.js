@@ -1,6 +1,6 @@
 n.d(t, {
   H: function() {
-return o;
+return s;
   },
   j: function() {
 return a;
@@ -33,7 +33,7 @@ return r.has(e.subscriptionPlanId) && (t.amount = t.amount * t.quantity, t.disco
   });
 }
 
-function o(e) {
+function s(e) {
   return {
 id: e.id,
 subscriptionPlanId: e.subscription_plan_id,

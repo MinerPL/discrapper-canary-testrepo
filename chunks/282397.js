@@ -1,6 +1,6 @@
 let r, i;
 n(47120);
-var a, o, s, l, u = n(442837),
+var a, s, o, l, u = n(442837),
   c = n(570140),
   d = n(911969),
   _ = n(314897),
@@ -49,12 +49,12 @@ return i;
 return r;
   }
 }
-l = 'InteractionStore', (s = 'displayName') in(o = g) ? Object.defineProperty(o, s, {
+l = 'InteractionStore', (o = 'displayName') in(s = g) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[s] = l, t.Z = new g(c.Z, {
+}) : s[o] = l, t.Z = new g(c.Z, {
   LOGOUT: function() {
 h = {}, p = {}, m = {};
   },
@@ -65,16 +65,16 @@ let {
   data: r,
   onCreate: i,
   onCancel: a,
-  onSuccess: o,
-  onFailure: s
+  onSuccess: s,
+  onFailure: o
 } = e;
 null != n && (p[n] = t, m[t] = n), h[t] = {
   state: f.F.QUEUED,
   data: r,
   onCreate: i,
   onCancel: a,
-  onSuccess: o,
-  onFailure: s
+  onSuccess: s,
+  onFailure: o
 };
   },
   INTERACTION_CREATE: function(e) {

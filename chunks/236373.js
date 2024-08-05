@@ -16,8 +16,8 @@ return E;
   }
 });
 var r, i, a = n(314897),
-  o = n(230900),
-  s = n(854698),
+  s = n(230900),
+  o = n(854698),
   l = n(765305);
 
 function u(e) {
@@ -60,8 +60,8 @@ function _(e, t, n) {
   let {
 name: r,
 description: i,
-privacyLevel: o,
-channelId: s,
+privacyLevel: s,
+channelId: o,
 scheduledStartTime: u,
 scheduledEndTime: d,
 entityType: _,
@@ -74,13 +74,13 @@ eventExceptions: p
 id: null != n ? n : l.Ku,
 name: r,
 description: null != i ? i : null,
-privacy_level: o,
+privacy_level: s,
 scheduled_start_time: u,
 scheduled_end_time: d,
 entity_type: _,
 entity_metadata: null != E ? E : null,
 image: null != f ? f : void 0,
-channel_id: s,
+channel_id: o,
 guild_id: t,
 creator_id: a.default.getId(),
 status: l.p1.SCHEDULED,
@@ -102,7 +102,7 @@ function E(e, t) {
 name: null !== (n = null == e ? void 0 : e.name) && void 0 !== n ? n : '',
 privacyLevel: null !== (r = null == e ? void 0 : e.privacy_level) && void 0 !== r ? r : l.j8.GUILD_ONLY,
 description: null !== (i = null == e ? void 0 : e.description) && void 0 !== i ? i : '',
-scheduledStartTime: null !== (a = null == e ? void 0 : e.scheduled_start_time) && void 0 !== a ? a : (0, s.ib)().toISOString(),
+scheduledStartTime: null !== (a = null == e ? void 0 : e.scheduled_start_time) && void 0 !== a ? a : (0, o.ib)().toISOString(),
 entityType: null !== (u = null == e ? void 0 : e.entity_type) && void 0 !== u ? u : l.WX.NONE,
 entityMetadata: null !== (c = null == e ? void 0 : e.entity_metadata) && void 0 !== c ? c : void 0,
 channelId: null == e ? void 0 : e.channel_id,
@@ -120,7 +120,7 @@ eventExceptions: (null !== (_ = null == e ? void 0 : e.guild_scheduled_event_exc
 }))
   };
   if (null != (E = e) && 'id' in E && (null == e ? void 0 : e.entity_type) === l.WX.EXTERNAL) {
-let t = (0, o.cS)(e);
+let t = (0, s.cS)(e);
 null != t && (f.entityMetadata = {
   location: t
 });

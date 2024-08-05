@@ -1,11 +1,11 @@
 n.d(t, {
   M: function() {
-return s;
+return a;
   }
 });
 var i = n(570140);
 
-function s(e) {
+function a(e) {
   i.Z.dispatch({
 type: 'VIEW_HISTORY_MARK_VIEW',
 key: e

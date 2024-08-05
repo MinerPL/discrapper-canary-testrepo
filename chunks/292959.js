@@ -1,7 +1,7 @@
 var r, i = n(442837),
   a = n(570140),
-  o = n(626135),
-  s = n(358085),
+  s = n(626135),
+  o = n(358085),
   l = n(981631);
 
 function u(e, t, n) {
@@ -13,7 +13,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 let c = {
-desktopType: s.isPlatformEmbedded ? l.qrD.ALL : l.qrD.NEVER,
+desktopType: o.isPlatformEmbedded ? l.qrD.ALL : l.qrD.NEVER,
 disableAllSounds: !1,
 disabledSounds: [],
 ttsType: l.PrB.NEVER,
@@ -24,7 +24,7 @@ notifyMessagesInSelectedChannel: !1
   d = c;
 
 function _(e, t) {
-  !__OVERLAY__ && o.default.track(e, t);
+  !__OVERLAY__ && s.default.track(e, t);
 }
 
 function E(e) {
@@ -74,7 +74,7 @@ u(f, 'displayName', 'NotificationSettingsStore'), u(f, 'persistKey', 'notificati
   let t = {
 ...e
   };
-  return t.disabledSounds = t.disabledSounds || [], t.disableUnreadBadge = t.disableUnreadBadge || !1, t.taskbarFlash = null == t.taskbarFlash || t.taskbarFlash, t.ttsType = t.ttsType || l.PrB.NEVER, null == t.desktopType && (t.desktopType = s.isPlatformEmbedded ? l.qrD.ALL : l.qrD.NEVER), t;
+  return t.disabledSounds = t.disabledSounds || [], t.disableUnreadBadge = t.disableUnreadBadge || !1, t.taskbarFlash = null == t.taskbarFlash || t.taskbarFlash, t.ttsType = t.ttsType || l.PrB.NEVER, null == t.desktopType && (t.desktopType = o.isPlatformEmbedded ? l.qrD.ALL : l.qrD.NEVER), t;
 }]), t.Z = new f(a.Z, {
   NOTIFICATIONS_SET_DESKTOP_TYPE: E,
   NOTIFICATIONS_SET_TTS_TYPE: function(e) {

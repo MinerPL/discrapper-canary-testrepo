@@ -9,8 +9,8 @@ return u;
 var r = n(470079),
   i = n(134158),
   a = n(924428),
-  o = n(151973);
-let s = Object.freeze({
+  s = n(151973);
+let o = Object.freeze({
   spacerTop: 0,
   totalHeight: 0,
   items: [],
@@ -30,12 +30,12 @@ paddingTop: E = 0,
 paddingBottom: f = 0,
 getScrollerState: h,
 getAnchorId: p
-  } = e, m = (0, a.Z)(), I = (0, r.useRef)(s), [T] = (0, r.useState)(() => new i.Z()), {
+  } = e, m = (0, a.Z)(), I = (0, r.useRef)(o), [T] = (0, r.useState)(() => new i.Z()), {
 dirty: g,
 chunkStart: S,
 chunkEnd: A,
 forceUpdateOnChunkChange: N
-  } = (0, o.Z)({
+  } = (0, s.Z)({
 chunkSize: _,
 getScrollerState: h,
 forceUpdate: m
@@ -107,8 +107,8 @@ scrollerRef: t,
 anchor: n,
 getScrollerState: i,
 listComputer: a,
-getAnchorId: o,
-totalHeight: s
+getAnchorId: s,
+totalHeight: o
   } = e;
   (0, r.useLayoutEffect)(() => {
 let {
@@ -116,15 +116,15 @@ let {
 } = t, {
   scrollTop: r
 } = i();
-if (null == n || null == n.row || null == e || null == o || 0 === r)
+if (null == n || null == n.row || null == e || null == s || 0 === r)
   return;
-let s = t => {
-  if (t < 0 || t >= a.sections[n.section] || o(n.section, n.row) !== n.id)
+let o = t => {
+  if (t < 0 || t >= a.sections[n.section] || s(n.section, n.row) !== n.id)
     return !1;
-  let [i] = a.computeScrollPosition(n.section, t), s = i - n.scrollOffset;
-  return r !== s && (e.scrollTop = s), !0;
+  let [i] = a.computeScrollPosition(n.section, t), o = i - n.scrollOffset;
+  return r !== o && (e.scrollTop = o), !0;
 };
-if (!s(n.row))
-  !s(n.row - 1) && s(n.row + 1);
-  }, [s]);
+if (!o(n.row))
+  !o(n.row - 1) && o(n.row + 1);
+  }, [o]);
 }

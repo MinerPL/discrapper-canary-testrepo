@@ -13,12 +13,12 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(49800),
-  s = n(285952),
+  s = n(49800),
+  o = n(285952),
   l = n(534542),
   u = n(512983),
   c = n(780897);
-let d = o.Z.Types,
+let d = s.Z.Types,
   _ = {
 LEFT: 'left',
 RIGHT: 'right'
@@ -26,7 +26,7 @@ RIGHT: 'right'
 
 function E(e) {
   let t, n, {
-  type: i = o.Z.Types.DANGER,
+  type: i = s.Z.Types.DANGER,
   imageData: d,
   button: E,
   className: f,
@@ -34,15 +34,15 @@ function E(e) {
   title: p,
   body: m,
   style: I,
-  align: T = s.Z.Align.START
+  align: T = o.Z.Align.START
 } = e,
-g = s.Z.Direction.HORIZONTAL;
+g = o.Z.Direction.HORIZONTAL;
   if (null != d) {
 let {
   position: e,
   ...n
 } = d;
-t = (0, r.jsx)(s.Z.Child, {
+t = (0, r.jsx)(o.Z.Child, {
   grow: 0,
   shrink: 0,
   children: (0, r.jsx)('img', {
@@ -50,20 +50,20 @@ t = (0, r.jsx)(s.Z.Child, {
     className: a()(c.icon, h),
     ...n
   })
-}), e === _.RIGHT && (g = s.Z.Direction.HORIZONTAL_REVERSE);
+}), e === _.RIGHT && (g = o.Z.Direction.HORIZONTAL_REVERSE);
   } else
 null != E && (n = E);
   let S = !0;
-  return i === o.Z.Types.PRIMARY && (S = !1), (0, r.jsx)(o.Z, {
+  return i === s.Z.Types.PRIMARY && (S = !1), (0, r.jsx)(s.Z, {
 className: a()(c.formNotice, f),
 type: i,
 style: I,
-children: (0, r.jsxs)(s.Z, {
+children: (0, r.jsxs)(o.Z, {
   direction: g,
   align: T,
   children: [
     t,
-    (0, r.jsxs)(s.Z.Child, {
+    (0, r.jsxs)(o.Z.Child, {
       children: [
         null != p && '' !== p ? (0, r.jsx)(u.v, {
           tag: u.R.H5,
@@ -86,4 +86,4 @@ children: (0, r.jsxs)(s.Z, {
 })
   });
 }
-E.Types = o.Z.Types;
+E.Types = s.Z.Types;

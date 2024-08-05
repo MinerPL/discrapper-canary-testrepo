@@ -14,8 +14,8 @@ var a = n(120356),
   I = n(689938),
   R = n(613105),
   C = n(872905),
-  p = n(578478);
-let g = e => {
+  g = n(578478);
+let p = e => {
 let {
   className: t,
   inTrial: n
@@ -74,7 +74,7 @@ let {
 return (0, s.jsxs)(s.Fragment, {
   children: [
     (0, s.jsx)('img', {
-      src: p,
+      src: g,
       alt: '',
       className: R.headerArtV2
     }),
@@ -121,7 +121,7 @@ analyticsLocations: a
   } = (0, o.ZP)(l.Z.PREMIUM_MARKETING_HERO_CTA), r = (0, c._O)(), i = (0, T.b)(n) ? (0, s.jsx)(A, {
 inTrial: r,
 location: n
-  }) : (0, s.jsx)(g, {
+  }) : (0, s.jsx)(p, {
 className: t,
 inTrial: r
   });

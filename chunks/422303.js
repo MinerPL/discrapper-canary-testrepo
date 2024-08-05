@@ -9,10 +9,10 @@ return _;
 return u;
   },
   kU: function() {
-return l;
+return s;
   },
   se: function() {
-return s;
+return l;
   }
 }), n(757143), n(47120), n(627494);
 let r = /[\t\n,]/g,
@@ -35,10 +35,10 @@ return n.localeCompare(r);
   });
 }
 
-function s(e) {
+function l(e) {
   return e.join(', ');
 }
 
-function l(e) {
+function s(e) {
   return e.includes('\n') || e.includes(',');
 }

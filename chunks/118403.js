@@ -12,8 +12,8 @@ return n && e(t.prototype, n), r && e(t, r), t;
 n(968598);
 var i = n(261469),
   a = n(512722),
-  o = n(59199),
-  s = n(771922),
+  s = n(59199),
+  o = n(771922),
   l = function(e) {
 function t(e, n) {
   ! function(e, t) {
@@ -55,7 +55,7 @@ return ! function(e, t) {
             value: t.__getValue()
           });
       }));
-      var n = s();
+      var n = o();
       return this._listeners[n] = e, n;
     }
   },
@@ -68,7 +68,7 @@ return ! function(e, t) {
   {
     key: 'interpolate',
     value: function(e) {
-      return new t(this, o.create(e));
+      return new t(this, s.create(e));
     }
   },
   {

@@ -13,7 +13,7 @@ var a = t(735250),
   d = t(692547),
   u = t(481060),
   m = t(689938),
-  f = t(672060);
+  _ = t(672060);
 
 function C(e) {
   let {
@@ -25,28 +25,28 @@ canRemove: o,
 actionsLocation: l
   } = e;
   return (0, a.jsxs)('div', {
-className: f.backgroundContainer,
+className: _.backgroundContainer,
 children: [
   (0, a.jsxs)('div', {
-    className: f.containerPadding,
+    className: _.containerPadding,
     children: [
       (0, a.jsx)(u.FormTitle, {
         tag: 'h3',
-        className: f.containerTitle,
+        className: _.containerTitle,
         children: n
       }),
       t
     ]
   }),
   'footer' === l && (0, a.jsxs)(u.FormSection, {
-    className: f.containerFooter,
+    className: _.containerFooter,
     children: [
       (0, a.jsx)(u.Tooltip, {
         text: m.Z.Messages.CLAN_APPLICATION_CANT_REMOVE_FIELD,
         shouldShow: !o,
         children: e => (0, a.jsx)(u.Button, {
           ...e,
-          className: s()(f.removeButton, f.button),
+          className: s()(_.removeButton, _.button),
           size: u.Button.Sizes.SMALL,
           look: u.Button.Looks.BLANK,
           onClick: i,
@@ -55,7 +55,7 @@ children: [
         })
       }),
       (0, a.jsx)(u.Button, {
-        className: f.button,
+        className: _.button,
         size: u.Button.Sizes.SMALL,
         color: u.Button.Colors.PRIMARY,
         onClick: r,
@@ -66,7 +66,7 @@ children: [
 ]
   });
 }
-let _ = 'FORM_FIELD';
+let f = 'FORM_FIELD';
 
 function h(e) {
   let {
@@ -77,7 +77,7 @@ onDrop: m
   } = e, h = (0, o.debounce)(async (e, n, t) => {
 await m(e, n, t);
   }), x = r.useRef(null), [, g] = (0, l.c)({
-type: _,
+type: f,
 item: {
   index: n,
   field: t
@@ -86,7 +86,7 @@ end: (e, n) => {
   null != e && !n.didDrop() && h(e.field, null, !0);
 }
   }), [, p] = (0, c.L)({
-accept: _,
+accept: f,
 hover: (e, t) => {
   var a;
   let {
@@ -110,15 +110,15 @@ p
   ]), (0, a.jsxs)('div', {
 ref: x,
 'data-dnd-name': 'field-'.concat(n),
-className: s()(f.dragContainer, {
-  [f.dropHovered]: i
+className: s()(_.dragContainer, {
+  [_.dropHovered]: i
 }),
 children: [
   (0, a.jsx)('div', {
-    className: f.dragIconContainer,
+    className: _.dragIconContainer,
     children: (0, a.jsx)(u.DragIcon, {
       size: 'xs',
-      className: f.dragIcon,
+      className: _.dragIcon,
       color: d.Z.unsafe_rawColors.PRIMARY_400.css
     })
   }),
@@ -131,10 +131,10 @@ children: [
 
 function x(e) {
   return (0, a.jsxs)('div', {
-className: f.formFieldContainer,
+className: _.formFieldContainer,
 children: [
   (0, a.jsx)('div', {
-    className: f.spacingContainer,
+    className: _.spacingContainer,
     children: e.isDragEnabled ? (0, a.jsx)(h, {
       ...e
     }) : (0, a.jsx)(C, {
@@ -142,10 +142,10 @@ children: [
     })
   }),
   'side' === e.actionsLocation && (0, a.jsxs)('div', {
-    className: f.actionButtonsContainer,
+    className: _.actionButtonsContainer,
     children: [
       (0, a.jsx)(u.Clickable, {
-        className: f.actionButton,
+        className: _.actionButton,
         onClick: e.onEdit,
         'aria-label': m.Z.Messages.EDIT,
         children: (0, a.jsx)(u.PencilIcon, {
@@ -153,7 +153,7 @@ children: [
         })
       }),
       e.canRemove && (0, a.jsx)(u.Clickable, {
-        className: f.actionButton,
+        className: _.actionButton,
         onClick: e.onRemove,
         'aria-label': m.Z.Messages.REMOVE,
         children: (0, a.jsx)(u.TrashIcon, {

@@ -6,8 +6,8 @@ username: n,
 discriminator: r,
 globalName: i,
 avatar: a,
-avatarDecoration: o,
-bot: s,
+avatarDecoration: s,
+bot: o,
 flags: l,
 premiumType: u
   } = e;
@@ -17,11 +17,11 @@ username: n,
 discriminator: r,
 global_name: i,
 avatar: a,
-avatar_decoration_data: null != o ? {
-  asset: o.asset,
-  sku_id: o.skuId
+avatar_decoration_data: null != s ? {
+  asset: s.asset,
+  sku_id: s.skuId
 } : null,
-bot: s,
+bot: o,
 flags: l,
 premium_type: null != u ? u : 0
   };

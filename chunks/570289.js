@@ -1,8 +1,8 @@
 var r = n(682404),
   i = n(657006),
   a = n(665771),
-  o = n(217764),
-  s = n(193603),
+  s = n(217764),
+  o = n(193603),
   l = n(119352),
   u = n(80383),
   c = {
@@ -60,11 +60,11 @@ if ('yo' === t) {
 return u.Z.y(e, t);
   },
   Y: function(e, t, n, r) {
-var i = (0, s.Z)(e, r),
+var i = (0, o.Z)(e, r),
   a = i > 0 ? i : 1 - i;
 if ('YY' === t) {
-  var o = a % 100;
-  return (0, l.Z)(o, 2);
+  var s = a % 100;
+  return (0, l.Z)(s, 2);
 }
 return 'Yo' === t ? n.ordinalNumber(a, {
   unit: 'year'
@@ -190,7 +190,7 @@ switch (t) {
 }
   },
   w: function(e, t, n, r) {
-var i = (0, o.Z)(e, r);
+var i = (0, s.Z)(e, r);
 return 'wo' === t ? n.ordinalNumber(i, {
   unit: 'week'
 }) : (0, l.Z)(i, t.length);

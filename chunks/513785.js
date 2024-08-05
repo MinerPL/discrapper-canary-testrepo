@@ -3,8 +3,8 @@ n.d(t, {
 return i;
   }
 });
-var r, i, a, o = n(442837),
-  s = n(570140);
+var r, i, a, s = n(442837),
+  o = n(570140);
 
 function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ lastFetchTimeMs: null,
 fetchState: 0
   },
   c = u;
-class d extends(a = o.ZP.PersistedStore) {
+class d extends(a = s.ZP.PersistedStore) {
   initialize(e) {
 c = {
   ...c,
@@ -38,7 +38,7 @@ return c.fetchState;
 return c.userTenureRewardStatusByRewardId[e];
   }
 }
-l(d, 'displayName', 'TenureRewardStore'), l(d, 'persistKey', 'TenureRewardStore'), t.Z = new d(s.Z, {
+l(d, 'displayName', 'TenureRewardStore'), l(d, 'persistKey', 'TenureRewardStore'), t.Z = new d(o.Z, {
   USER_TENURE_REWARD_SYNC_START: function() {
 c.fetchState = 1;
   },

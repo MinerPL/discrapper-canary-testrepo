@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var a = n(792766),
-  s = n(197409);
+var s = n(792766),
+  a = n(955415);
 t.Z = e => {
   let {
 stageInstance: t,
@@ -10,8 +10,8 @@ isMember: r,
 onTransitionToInviteChannel: l,
 onAcceptInstantInvite: o
   } = e;
-  return (0, i.jsx)(s.Z, {
-children: (0, i.jsx)(a.Z, {
+  return (0, i.jsx)(a.Z, {
+children: (0, i.jsx)(s.Z, {
   isEmbed: !0,
   stageInstance: t,
   guild: n,

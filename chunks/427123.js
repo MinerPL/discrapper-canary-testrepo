@@ -1,9 +1,9 @@
 n(47120), n(653041);
-var i, a, s, r, l = n(392711),
+var i, s, a, r, l = n(392711),
   o = n.n(l),
   c = n(442837),
-  d = n(433517),
-  u = n(570140),
+  u = n(433517),
+  d = n(570140),
   _ = n(496929),
   E = n(16084),
   I = n(728345),
@@ -11,9 +11,9 @@ var i, a, s, r, l = n(392711),
   T = n(594190),
   h = n(594174),
   N = n(580130),
-  f = n(55563),
-  p = n(981631);
-let C = 'DetectedOffPlatformPremiumPerksStore',
+  C = n(55563),
+  f = n(981631);
+let p = 'DetectedOffPlatformPremiumPerksStore',
   g = {},
   S = {},
   A = [];
@@ -32,33 +32,33 @@ if (null == i) {
   !m.Z.isFetchingApplication(n) && !m.Z.didFetchingApplicationFail(n) && I.Z.fetchApplication(n);
   continue;
 }
-let a = f.Z.get(t);
-if (null == a) {
-  !f.Z.isFetching(t) && !f.Z.didFetchingSkuFail(t) && E.$N(i.id, t);
+let s = C.Z.get(t);
+if (null == s) {
+  !C.Z.isFetching(t) && !C.Z.didFetchingSkuFail(t) && E.$N(i.id, t);
   continue;
 }
-N.Z.applicationIdsFetching.has(i.id) || N.Z.isEntitledToSku(h.default.getCurrentUser(), t, i.id, i.id) || !a.available ? null != g[t] && (delete g[t], e = !0) : (g[t] = {
+N.Z.applicationIdsFetching.has(i.id) || N.Z.isEntitledToSku(h.default.getCurrentUser(), t, i.id, i.id) || !s.available ? null != g[t] && (delete g[t], e = !0) : (g[t] = {
   skuId: t,
   applicationId: n
 }, e = !0);
   }
   return e;
 }
-class x extends(i = c.ZP.Store) {
+class O extends(i = c.ZP.Store) {
   initialize() {
 var e;
-this.waitFor(T.ZP, f.Z, N.Z), A = null !== (e = d.K.get(C)) && void 0 !== e ? e : A;
+this.waitFor(T.ZP, C.Z, N.Z), A = null !== (e = u.K.get(p)) && void 0 !== e ? e : A;
   }
   getDetectedOffPlatformPremiumPerks() {
 return o().values(g);
   }
 }
-r = 'DetectedOffPlatformPremiumPerksStore', (s = 'displayName') in(a = x) ? Object.defineProperty(a, s, {
+r = 'DetectedOffPlatformPremiumPerksStore', (a = 'displayName') in(s = O) ? Object.defineProperty(s, a, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = r, t.Z = new x(u.Z, {
+}) : s[a] = r, t.Z = new O(d.Z, {
   LOGOUT: function() {
 g = {}, S = {};
   },
@@ -72,7 +72,7 @@ let {
 } = e;
 if (delete g[t], A.includes(t))
   return !1;
-A.push(t), d.K.set(C, A);
+A.push(t), u.K.set(p, A);
   },
   RUNNING_GAMES_CHANGE: function() {
 let e = !1;
@@ -81,12 +81,12 @@ for (let {
     distributor: n
   }
   of T.ZP.getRunningGames())
-  if (null != t && n !== p.GQo.DISCORD)
+  if (null != t && n !== f.GQo.DISCORD)
     for (let {
         skuId: n,
         applicationId: i
       }
-      of p.Lg6) {
+      of f.Lg6) {
       if (!(i !== t || A.includes(n)))
         null == S[n] && (!N.Z.applicationIdsFetched.has(i) && !N.Z.applicationIdsFetching.has(i) && null == N.Z.getForSku(n) && _.yD(i), S[n] = {
           skuId: n,

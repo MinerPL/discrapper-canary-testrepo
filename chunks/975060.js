@@ -39,7 +39,7 @@ error: t
   } = e;
   L = t;
 }
-class B extends(l = o.ZP.Store) {
+class F extends(l = o.ZP.Store) {
   get stripePaymentMethod() {
 return A;
   }
@@ -91,12 +91,12 @@ return U;
 return L;
   }
 }
-u = 'NewPaymentSourceStore', (i = 'displayName') in(r = B) ? Object.defineProperty(r, i, {
+u = 'NewPaymentSourceStore', (i = 'displayName') in(r = F) ? Object.defineProperty(r, i, {
   value: u,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[i] = u, t.Z = new B(E.Z, {
+}) : r[i] = u, t.Z = new F(E.Z, {
   NEW_PAYMENT_SOURCE_STRIPE_PAYMENT_REQUEST_UPDATE: function(e) {
 let {
   stripePaymentMethod: t

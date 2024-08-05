@@ -1,11 +1,11 @@
 var r = n(470079),
   i = n(844303),
   a = n(13942),
-  o = n(464854);
+  s = n(464854);
 t.Z = function(e) {
   var t = e.color,
 n = e.onClick,
-s = e.onSwatchHover,
+o = e.onSwatchHover,
 l = e.active,
 u = (0, i.default)({
   default: {
@@ -49,11 +49,11 @@ u = (0, i.default)({
   'color-#FFFFFF': '#FFFFFF' === t,
   transparent: 'transparent' === t
 });
-  return r.createElement(o.m4, {
+  return r.createElement(s.m4, {
 style: u.color,
 color: t,
 onClick: void 0 === n ? function() {} : n,
-onHover: s,
+onHover: o,
 focusStyle: {
   boxShadow: '0 0 4px ' + t
 }

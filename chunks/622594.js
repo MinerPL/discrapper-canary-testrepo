@@ -21,7 +21,7 @@ disabled: r = !1
 ...h.nl
   }, {
 audio: N
-  } = (0, d.p)(), _ = null != N, v = s.useRef(null), D = s.useRef(null), O = s.useRef(null), [S, x] = s.useState(0), [y, E] = s.useState(0), [A, b] = s.useState(0), [M, C] = s.useState(!1), [j, I] = s.useState(!1), [w, U] = s.useState(!1), [L, Z] = s.useState(0), [R, P] = s.useState(-1), T = s.useMemo(() => L / p.fineTuningScale, [
+  } = (0, d.p)(), _ = null != N, v = s.useRef(null), D = s.useRef(null), O = s.useRef(null), [S, x] = s.useState(0), [y, E] = s.useState(0), [A, b] = s.useState(0), [M, j] = s.useState(!1), [C, I] = s.useState(!1), [w, U] = s.useState(!1), [L, Z] = s.useState(0), [R, P] = s.useState(-1), T = s.useMemo(() => L / p.fineTuningScale, [
 p.fineTuningScale,
 L
   ]);
@@ -35,7 +35,7 @@ x(0), E(0), b(e), Z(e);
   if (t(), 0 === e.button)
     switch (n) {
       case 0:
-        C(!0);
+        j(!0);
         break;
       case 1:
         I(!0);
@@ -47,7 +47,7 @@ x(0), E(0), b(e), Z(e);
 k = s.useCallback(e => {
   switch (e) {
     case 0:
-      C(!1);
+      j(!1);
       break;
     case 1:
       I(!1);
@@ -70,7 +70,7 @@ F = s.useCallback(e => {
   M
 ]),
 G = s.useCallback(e => {
-  if (null == N || !j)
+  if (null == N || !C)
     return;
   let n = parseInt(e.target.value);
   n < S ? (l((0, f.my)(S)), E(S)) : n > A ? (l((0, f.my)(A)), E(A)) : (l((0, f.my)(n)), E(n));
@@ -78,7 +78,7 @@ G = s.useCallback(e => {
   N,
   l,
   A,
-  j,
+  C,
   S
 ]),
 H = s.useCallback(e => {
@@ -124,7 +124,7 @@ S
 if (p.fineTuningDelay <= 0)
   return;
 let e = setTimeout(() => {
-  M && S == S && -1 === R ? P(S) : w && A == A && -1 === R ? P(A) : j && y == y && -1 === R && P(y);
+  M && S == S && -1 === R ? P(S) : w && A == A && -1 === R ? P(A) : C && y == y && -1 === R && P(y);
 }, p.fineTuningDelay);
 return () => {
   clearTimeout(e);
@@ -134,7 +134,7 @@ p.fineTuningDelay,
 w,
 A,
 R,
-j,
+C,
 y,
 M,
 S
@@ -235,7 +235,7 @@ children: [
         className: g.playheadTrack,
         children: (0, i.jsx)('div', {
           className: u()(g.playhead, {
-            [g.dragging]: j || M || w || n
+            [g.dragging]: C || M || w || n
           }),
           style: {
             left: ''.concat((0, f.pN)(y, R, T, L), '%')

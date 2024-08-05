@@ -3,8 +3,8 @@ n.d(t, {
 return i;
   }
 }), n(411104), n(47120);
-var i, s = n(735250),
-  a = n(470079),
+var i, a = n(735250),
+  s = n(470079),
   r = n(748780),
   l = n(442837),
   o = n(481060),
@@ -28,12 +28,12 @@ SECTION_ALL: {
   darkSrc: n(67764),
   width: 376,
   height: 162,
-  renderContent: e => (0, s.jsxs)(a.Fragment, {
+  renderContent: e => (0, a.jsxs)(s.Fragment, {
     children: [
-      (0, s.jsx)(o.EmptyStateText, {
+      (0, a.jsx)(o.EmptyStateText, {
         note: u.Z.Messages.FRIENDS_EMPTY_STATE_ALL
       }),
-      (0, s.jsx)(o.Button, {
+      (0, a.jsx)(o.Button, {
         className: _.button,
         onClick: e,
         children: u.Z.Messages.ADD_FRIEND
@@ -46,7 +46,7 @@ SECTION_ONLINE: {
   darkSrc: n(917847),
   width: 421,
   height: 218,
-  renderContent: () => (0, s.jsx)(o.EmptyStateText, {
+  renderContent: () => (0, a.jsx)(o.EmptyStateText, {
     note: u.Z.Messages.FRIENDS_EMPTY_STATE_ONLINE
   })
 },
@@ -55,7 +55,7 @@ SECTION_BLOCKED: {
   darkSrc: n(356634),
   width: 433,
   height: 232,
-  renderContent: () => (0, s.jsx)(o.EmptyStateText, {
+  renderContent: () => (0, a.jsx)(o.EmptyStateText, {
     note: u.Z.Messages.FRIENDS_EMPTY_STATE_BLOCKED
   })
 },
@@ -64,7 +64,7 @@ SECTION_PENDING: {
   darkSrc: n(138715),
   width: 415,
   height: 200,
-  renderContent: () => (0, s.jsx)(o.EmptyStateText, {
+  renderContent: () => (0, a.jsx)(o.EmptyStateText, {
     note: u.Z.Messages.FRIENDS_EMPTY_STATE_PENDING
   })
 },
@@ -73,7 +73,7 @@ SECTION_SUGGESTIONS: {
   darkSrc: n(138715),
   width: 415,
   height: 200,
-  renderContent: () => (0, s.jsx)(o.EmptyStateText, {
+  renderContent: () => (0, a.jsx)(o.EmptyStateText, {
     note: u.Z.Messages.FRIENDS_EMPTY_STATE_SUGGESTIONS
   })
 },
@@ -82,7 +82,7 @@ SECTION_NO_RESULTS: {
   darkSrc: n(917847),
   width: 421,
   height: 218,
-  renderContent: () => (0, s.jsx)(o.EmptyStateText, {
+  renderContent: () => (0, a.jsx)(o.EmptyStateText, {
     note: u.Z.Messages.FRIEND_REQUEST_NO_RESULTS_FOUND
   })
 }
@@ -91,24 +91,24 @@ SECTION_NO_RESULTS: {
 let {
   theme: t
 } = e, n = u.Z.Messages.FRIENDS_EMPTY_STATE_ALL, i = E.SECTION_ALL;
-return (0, s.jsx)(a.Fragment, {
-  children: (0, s.jsxs)(o.EmptyState, {
+return (0, a.jsx)(s.Fragment, {
+  children: (0, a.jsxs)(o.EmptyState, {
     theme: t,
     children: [
-      (0, s.jsx)(o.EmptyStateImage, {
+      (0, a.jsx)(o.EmptyStateImage, {
         width: i.width,
         height: i.height,
         lightSrc: i.lightSrc,
         darkSrc: i.darkSrc
       }),
-      (0, s.jsx)(o.EmptyStateText, {
+      (0, a.jsx)(o.EmptyStateText, {
         note: n
       })
     ]
   })
 });
   };
-class m extends a.PureComponent {
+class m extends s.PureComponent {
   render() {
 let {
   type: e,
@@ -116,7 +116,7 @@ let {
   theme: n
 } = this.props, i = {
   opacity: this.state.opacity
-}, a = function(e) {
+}, s = function(e) {
   switch (e) {
     case d.pJs.ADD_FRIEND:
     case d.pJs.ALL:
@@ -135,25 +135,25 @@ let {
       throw Error('FriendsEmptyState: Invalid empty state');
   }
 }(e);
-return e === d.pJs.ADD_FRIEND ? (0, s.jsx)(r.Z.div, {
+return e === d.pJs.ADD_FRIEND ? (0, a.jsx)(r.Z.div, {
   className: _.friendsEmpty,
   style: i,
-  children: (0, s.jsx)(I, {
+  children: (0, a.jsx)(I, {
     theme: n
   })
-}) : (0, s.jsx)(r.Z.div, {
+}) : (0, a.jsx)(r.Z.div, {
   className: _.friendsEmpty,
   style: i,
-  children: (0, s.jsxs)(o.EmptyState, {
+  children: (0, a.jsxs)(o.EmptyState, {
     theme: n,
     children: [
-      (0, s.jsx)(o.EmptyStateImage, {
-        width: a.width,
-        height: a.height,
-        lightSrc: a.lightSrc,
-        darkSrc: a.darkSrc
+      (0, a.jsx)(o.EmptyStateImage, {
+        width: s.width,
+        height: s.height,
+        lightSrc: s.lightSrc,
+        darkSrc: s.darkSrc
       }),
-      a.renderContent(t)
+      s.renderContent(t)
     ]
   })
 });

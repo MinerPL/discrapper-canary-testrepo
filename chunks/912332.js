@@ -1,70 +1,73 @@
-i.d(n, {
+n.d(t, {
   Np: function() {
-return s;
+return c;
   },
   l8: function() {
-return r;
+return l;
   },
   mc: function() {
-return l;
+return o;
+  },
+  so: function() {
+return r;
   }
 });
-var t = i(735250);
-i(470079);
-var o = i(481060),
-  a = i(822869);
-let c = 'forward-modal';
+var i = n(735250);
+n(470079);
+var s = n(481060),
+  a = n(822869);
+let r = 'forward-modal';
 
-function r(e) {
+function l(e) {
   let {
-messageId: n,
-channelId: r,
-source: l,
-initialSelectedDestinations: s = [],
-forwardOptions: d,
-onRequestSent: u
+messageId: t,
+channelId: l,
+source: o,
+initialSelectedDestinations: c = [],
+forwardOptions: u,
+onRequestSent: d
   } = e;
-  (0, a.Lb)(r, n, l), (0, o.openModalLazy)(async () => {
+  (0, a.Lb)(l, t, o), (0, s.openModalLazy)(async () => {
 let {
   ForwardModal: e
 } = await Promise.all([
-  i.e('6380'),
-  i.e('89900')
-]).then(i.bind(i, 930864));
-return i => (0, t.jsx)(e, {
-  ...i,
-  channelId: r,
-  messageId: n,
-  initialSelectedDestinations: s,
-  forwardOptions: d,
-  onRequestSent: u
+  n.e('6380'),
+  n.e('89900')
+]).then(n.bind(n, 930864));
+return n => (0, i.jsx)(e, {
+  ...n,
+  channelId: l,
+  messageId: t,
+  initialSelectedDestinations: c,
+  forwardOptions: u,
+  onRequestSent: d
 });
   }, {
-modalKey: c
+modalKey: r
   });
 }
 
-function l() {
-  (0, o.closeModal)(c);
+function o() {
+  (0, s.closeModal)(r);
 }
 
-function s(e) {
+function c(e) {
   let {
-messageId: n,
+messageId: t,
 channelId: a,
-failedDestinations: c,
-forwardOptions: r
+failedDestinations: r,
+forwardOptions: l
   } = e;
-  (0, o.openModalLazy)(async () => {
+  (0, s.openModalLazy)(async () => {
 let {
   ForwardFailedAlertModal: e
-} = await i.e('86590').then(i.bind(i, 384331));
-return i => (0, t.jsx)(e, {
-  ...i,
-  messageId: n,
+} = await n.e('86590').then(n.bind(n, 384331));
+return n => (0, i.jsx)(e, {
+  ...n,
+  messageId: t,
   channelId: a,
-  failedDestinations: c,
-  forwardOptions: r
+  failedDestinations: r,
+  forwardOptions: l
 });
   });
 }

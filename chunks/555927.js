@@ -4,8 +4,8 @@ return _;
   }
 }), n(653041), n(47120), n(390547);
 var i = n(735250),
-  s = n(470079),
-  a = n(481060),
+  a = n(470079),
+  s = n(481060),
   r = n(906732),
   l = n(171368),
   o = n(841710),
@@ -16,7 +16,7 @@ function u(e) {
   let {
 priorityMembers: t,
 otherMembers: n,
-totalMembers: s,
+totalMembers: a,
 activity: r,
 guildId: u,
 sourceAnalyticsLocations: _
@@ -26,7 +26,7 @@ sourceAnalyticsLocations: _
   status: n
 }
 of t)
-h.push((0, i.jsx)(a.MenuItem, {
+h.push((0, i.jsx)(s.MenuItem, {
   id: e.id,
   keepItemStyles: !0,
   render: t => (0, i.jsx)(o.Z, {
@@ -45,7 +45,7 @@ h.push((0, i.jsx)(a.MenuItem, {
   })
 }));
   for (let e of n)
-h.push((0, i.jsx)(a.MenuItem, {
+h.push((0, i.jsx)(s.MenuItem, {
   id: e.id,
   keepItemStyles: !0,
   render: t => (0, i.jsx)(o.Z, {
@@ -62,8 +62,8 @@ h.push((0, i.jsx)(a.MenuItem, {
     }
   })
 }));
-  let E = s - h.length;
-  return E > 0 && h.push((0, i.jsx)(a.MenuItem, {
+  let E = a - h.length;
+  return E > 0 && h.push((0, i.jsx)(s.MenuItem, {
 id: 'unknown-members-'.concat(null == r ? void 0 : r.session_id),
 render: e => (0, i.jsx)(o.Y, {
   ...e,
@@ -87,7 +87,7 @@ let {
 return t.id;
   })), _ = n.filter(e => !c.has(e.id)), {
 analyticsLocations: h
-  } = (0, r.ZP)(), E = s.useMemo(() => {
+  } = (0, r.ZP)(), E = a.useMemo(() => {
 let e = l.flatMap(e => {
   let {
     playingMembers: t
@@ -101,7 +101,7 @@ l
   ]);
   if (l.length <= 1 && 0 === E.length) {
 var I, m;
-return (0, i.jsx)(a.MenuGroup, {
+return (0, i.jsx)(s.MenuGroup, {
   label: n.length > 1 ? d.Z.Messages.ACTIVITY_FEED_SINGLE_MEMBER_LIST_HEADER.format({
     memberCount: n.length
   }) : void 0,
@@ -117,12 +117,12 @@ return (0, i.jsx)(a.MenuGroup, {
   }
   let g = l.map((e, n) => {
   let {
-    playingMembers: s,
+    playingMembers: a,
     game: r,
     activity: l
-  } = e, d = new Set(s.map(e => e.id));
-  return (0, i.jsx)(a.MenuGroup, {
-    label: ''.concat(r.name, ' - ').concat(s.length),
+  } = e, d = new Set(a.map(e => e.id));
+  return (0, i.jsx)(s.MenuGroup, {
+    label: ''.concat(r.name, ' - ').concat(a.length),
     children: u({
       priorityMembers: t.filter(e => {
         let {
@@ -130,8 +130,8 @@ return (0, i.jsx)(a.MenuGroup, {
         } = e;
         return d.has(t.id);
       }),
-      otherMembers: s.filter(e => !c.has(e.id)),
-      totalMembers: s.length,
+      otherMembers: a.filter(e => !c.has(e.id)),
+      totalMembers: a.length,
       activity: null != l ? l : void 0,
       guildId: null == o ? void 0 : o.id,
       sourceAnalyticsLocations: h
@@ -141,7 +141,7 @@ return (0, i.jsx)(a.MenuGroup, {
 p = E.map(e => e.id);
   return [
 ...g,
-(0, i.jsx)(a.MenuGroup, {
+(0, i.jsx)(s.MenuGroup, {
   label: ''.concat(d.Z.Messages.ACTIVITY_FEED_OTHER_MEMBER_LIST_HEADER, ' - ').concat(E.length),
   children: u({
     priorityMembers: t.filter(e => {

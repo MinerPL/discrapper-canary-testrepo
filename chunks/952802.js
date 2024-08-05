@@ -34,27 +34,27 @@ autoCapitalize: j,
 autoCorrect: y,
 onChange: T,
 inputClassName: I
-  } = e, Z = (0, l.Dt)(), [_, O] = r.useState(!1), R = (0, c.o9)(i, g);
+  } = e, _ = (0, l.Dt)(), [Z, O] = r.useState(!1), k = (0, c.o9)(i, g);
   return (0, n.jsx)(o.FormItem, {
 title: p,
 error: m,
 className: f,
 required: C,
 tag: 'label',
-htmlFor: Z,
+htmlFor: _,
 children: (0, n.jsxs)('div', {
   className: a()(h.input, d.input, I, {
     [h.error]: null != m,
-    [h.focused]: _
+    [h.focused]: Z
   }),
   children: [
     (0, n.jsx)(u.Z, {
-      show: R,
+      show: k,
       alpha2: t,
       countryCode: s
     }),
     (0, n.jsx)(o.TextInput, {
-      id: Z,
+      id: _,
       name: 'email',
       type: i === c.Nz.EMAIL ? 'email' : 'text',
       value: g,

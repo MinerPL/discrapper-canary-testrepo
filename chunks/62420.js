@@ -6,15 +6,15 @@ return o;
 var i = t(735250);
 t(470079);
 var a = t(481060),
-  r = t(117984),
-  l = t(593214),
+  l = t(117984),
+  r = t(593214),
   u = t(362658),
   s = t(689938);
 
 function o(e) {
-  let n = (0, l.Mt)(),
-t = (0, l.s4)(e.id),
-o = (0, l.zv)(),
+  let n = (0, r.Mt)(),
+t = (0, r.s4)(e.id),
+o = (0, r.zv)(),
 {
   isFavoritesPerk: d
 } = (0, u.z)('useChannelMoveToCategory');
@@ -32,7 +32,7 @@ return [
   }(o.filter(e => e.id !== (null == t ? void 0 : t.parentId)));
 
   function M(e) {
-null != t && (0, r.uA)(t.id, e);
+null != t && (0, l.uA)(t.id, e);
   }
   return null == c && 0 === _.length ? null : (0, i.jsxs)(a.MenuItem, {
 id: 'move-to-category',

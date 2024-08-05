@@ -1,39 +1,39 @@
 n.d(t, {
   Z: function() {
-return u;
+return d;
   }
 });
 var i = n(470079),
   a = n(399606),
-  l = n(570140),
-  s = n(607070),
+  s = n(570140),
+  l = n(607070),
   r = n(222677),
   o = n(695346),
   c = n(960020),
-  d = n(566006);
+  u = n(566006);
 
-function u() {
+function d() {
   let e = o.Yk.useSetting(),
-t = (0, a.e7)([s.Z], () => s.Z.useReducedMotion);
+t = (0, a.e7)([l.Z], () => l.Z.useReducedMotion);
   i.useEffect(() => {
 function n(n) {
   let {
     messageId: i,
     channelId: a,
-    emoji: l,
-    optimistic: s,
+    emoji: s,
+    optimistic: l,
     reactionType: o
   } = n;
-  if (!s && o === d.O.BURST && !!e && !t)
+  if (!l && o === u.O.BURST && !!e && !t)
     (0, r.T6)({
       channelId: a,
       messageId: i,
-      emoji: l,
+      emoji: s,
       key: c.I.EXTERNAL
     });
 }
-return l.Z.subscribe('MESSAGE_REACTION_ADD', n), () => {
-  l.Z.unsubscribe('MESSAGE_REACTION_ADD', n);
+return s.Z.subscribe('MESSAGE_REACTION_ADD', n), () => {
+  s.Z.unsubscribe('MESSAGE_REACTION_ADD', n);
 };
   }, [
 e,

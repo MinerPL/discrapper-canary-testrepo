@@ -1,7 +1,7 @@
 var r = Array.prototype.slice,
   i = n(775569),
   a = n(35262),
-  o = e.exports = function(e, t, n) {
+  s = e.exports = function(e, t, n) {
 if (!n && (n = {}), e === t)
   return !0;
 if (e instanceof Date && t instanceof Date)
@@ -13,34 +13,34 @@ else
     if (null == (c = e) || null == (d = t) || e.prototype !== t.prototype)
       return !1;
     if (a(e))
-      return !!a(t) && (e = r.call(e), o(e, t = r.call(t), n));
+      return !!a(t) && (e = r.call(e), s(e, t = r.call(t), n));
     if (l(e)) {
       if (!l(t) || e.length !== t.length)
         return !1;
-      for (s = 0; s < e.length; s++)
-        if (e[s] !== t[s])
+      for (o = 0; o < e.length; o++)
+        if (e[o] !== t[o])
           return !1;
       return !0;
     }
     try {
-      var s, u, c, d, _ = i(e),
+      var o, u, c, d, _ = i(e),
         E = i(t);
     } catch (e) {
       return !1;
     }
     if (_.length != E.length)
       return !1;
-    for (_.sort(), E.sort(), s = _.length - 1; s >= 0; s--)
-      if (_[s] != E[s])
+    for (_.sort(), E.sort(), o = _.length - 1; o >= 0; o--)
+      if (_[o] != E[o])
         return !1;
-    for (s = _.length - 1; s >= 0; s--)
-      if (!o(e[u = _[s]], t[u], n))
+    for (o = _.length - 1; o >= 0; o--)
+      if (!s(e[u = _[o]], t[u], n))
         return !1;
     return typeof e == typeof t;
   }(e, t, n);
   };
 
-function s(e) {
+function o(e) {
   return null == e;
 }
 

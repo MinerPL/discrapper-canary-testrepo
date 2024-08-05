@@ -6,8 +6,8 @@ return I;
 var r = n(668781),
   i = n(728345),
   a = n(812206),
-  o = n(835873),
-  s = n(973616),
+  s = n(835873),
+  o = n(973616),
   l = n(592125),
   u = n(430824),
   c = n(496675),
@@ -30,7 +30,7 @@ embeddedActivitiesManager: A
   } = e, N = E.ZP.getEmbeddedActivitiesForChannel(n).find(e => e.applicationId === I && (null == T || e.launchId === T)), v = g;
   if (null == v) {
 let e = await i.Z.fetchApplication(I);
-v = s.Z.createFromServer(e);
+v = o.Z.createFromServer(e);
   }
   if (null == N || null == v)
 return;
@@ -60,7 +60,7 @@ switch (t) {
     null == n || n();
     break;
   case p.Fw.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
-    (0, o.w)();
+    (0, s.w)();
     break;
   case p.Fw.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
     r.Z.show({

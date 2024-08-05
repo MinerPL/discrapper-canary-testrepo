@@ -5,12 +5,12 @@ return s;
 });
 var l = t(735250);
 t(470079);
-var r = t(481060),
+var i = t(481060),
   a = t(695346),
-  i = t(981631);
+  r = t(981631);
 
 function s(e, n) {
-  a.qF.getSetting() ? (0, r.openModalLazy)(async () => {
+  a.qF.getSetting() ? (0, i.openModalLazy)(async () => {
 let {
   default: n
 } = await Promise.all([
@@ -24,6 +24,6 @@ return t => (0, l.jsx)(n, {
 });
   }, {
 modalKey: 'camera-preview',
-contextKey: n === i.IlC.POPOUT ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT
+contextKey: n === r.IlC.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT
   }) : null == e || e();
 }

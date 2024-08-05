@@ -9,8 +9,8 @@ var r = arguments,
   a = n.cache;
 if (a.has(i))
   return a.get(i);
-var o = e.apply(this, r);
-return n.cache = a.set(i, o) || a, o;
+var s = e.apply(this, r);
+return n.cache = a.set(i, s) || a, s;
   };
   return n.cache = new(i.Cache || r.Z)(), n;
 }

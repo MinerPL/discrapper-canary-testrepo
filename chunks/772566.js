@@ -9,10 +9,10 @@ return d;
 var r = n(648709),
   i = n(470079),
   a = n(466324);
-let o = 'row-header-column-' + Math.random().toString(36).slice(2),
-  s = 'row-header-column-' + Math.random().toString(36).slice(2);
-for (; o === s;)
-  s = 'row-header-column-' + Math.random().toString(36).slice(2);
+let s = 'row-header-column-' + Math.random().toString(36).slice(2),
+  o = 'row-header-column-' + Math.random().toString(36).slice(2);
+for (; s === o;)
+  o = 'row-header-column-' + Math.random().toString(36).slice(2);
 
 function l(e, t) {
   if (0 === t.length)
@@ -49,18 +49,18 @@ n.push(a), i.index = n.length - 1;
   }
   let i = Math.max(...n.map(e => e.length)),
 a = Array(i).fill(0).map(() => []),
-o = 0;
+s = 0;
   for (let e of n) {
 let t = i - 1;
 for (let n of e) {
   if (n) {
     let e = a[t],
       r = e.reduce((e, t) => e + t.colspan, 0);
-    if (r < o) {
+    if (r < s) {
       let i = {
         type: 'placeholder',
         key: 'placeholder-' + n.key,
-        colspan: o - r,
+        colspan: s - r,
         index: r,
         value: null,
         rendered: null,
@@ -71,13 +71,13 @@ for (let n of e) {
       };
       e.length > 0 && (e[e.length - 1].nextKey = i.key, i.prevKey = e[e.length - 1].key), e.push(i);
     }
-    e.length > 0 && (e[e.length - 1].nextKey = n.key, n.prevKey = e[e.length - 1].key), n.level = t, n.colIndex = o, e.push(n);
+    e.length > 0 && (e[e.length - 1].nextKey = n.key, n.prevKey = e[e.length - 1].key), n.level = t, n.colIndex = s, e.push(n);
   }
   t--;
 }
-o++;
+s++;
   }
-  let s = 0;
+  let o = 0;
   for (let e of a) {
 let n = e.reduce((e, t) => e + t.colspan, 0);
 if (n < t.length) {
@@ -88,7 +88,7 @@ if (n < t.length) {
     index: n,
     value: null,
     rendered: null,
-    level: s,
+    level: o,
     hasChildNodes: !1,
     childNodes: [],
     textValue: null,
@@ -96,7 +96,7 @@ if (n < t.length) {
   };
   e.push(r);
 }
-s++;
+o++;
   }
   return a.map((e, t) => ({
 type: 'headerrow',
@@ -167,7 +167,7 @@ let r, i = new Set(),
 if (null == n ? void 0 : n.showSelectionCheckboxes) {
   let e = {
     type: 'column',
-    key: o,
+    key: s,
     value: null,
     textValue: '',
     level: 0,
@@ -184,7 +184,7 @@ if (null == n ? void 0 : n.showSelectionCheckboxes) {
 if (null == n ? void 0 : n.showDragButtons) {
   let e = {
     type: 'column',
-    key: s,
+    key: o,
     value: null,
     textValue: '',
     level: 0,
@@ -232,18 +232,18 @@ let c = {
 
 function d(e) {
   let [t, n] = (0, i.useState)(!1), {
-selectionMode: o = 'none',
-showSelectionCheckboxes: s,
+selectionMode: s = 'none',
+showSelectionCheckboxes: o,
 showDragButtons: l
   } = e, d = (0, i.useMemo)(() => ({
-showSelectionCheckboxes: s && 'none' !== o,
+showSelectionCheckboxes: o && 'none' !== s,
 showDragButtons: l,
-selectionMode: o,
+selectionMode: s,
 columns: []
   }), [
 e.children,
-s,
 o,
+s,
 l
   ]), _ = (0, r.Kx)(e, (0, i.useCallback)(e => new u(e, null, d), [d]), d), {
 disabledKeys: E,

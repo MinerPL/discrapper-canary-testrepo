@@ -27,8 +27,8 @@ let r = {
 46: 'cyan',
 47: 'white'
   },
-  o = /\x1B\[(\d+(?:[:;]\d+)*)m/,
-  s = new RegExp('(?='.concat(o.source, ')'));
+  s = /\x1B\[(\d+(?:[:;]\d+)*)m/,
+  o = new RegExp('(?='.concat(s.source, ')'));
 
 function l() {
   let e = [
@@ -43,9 +43,9 @@ function l() {
 ...u('style', r, [], !1),
 {
   className: 'ansi-control-sequence',
-  begin: o,
+  begin: s,
   starts: {
-    end: s,
+    end: o,
     endsParent: !0
   }
 }
@@ -55,7 +55,7 @@ for (let t = 0; t < e.length; t++)
   e[t].contains = e.slice(t + 1);
   }(e), {
 contains: [{
-  begin: s,
+  begin: o,
   contains: e
 }]
   };
@@ -67,16 +67,16 @@ function u(e, t, n, r) {
 ...n
   ];
   return r && i.push(...Object.keys(t)), Object.entries(t).map(t => {
-var n, r, a, o;
+var n, r, a, s;
 let [l, u] = t;
-return n = e, r = u, a = l, o = i, {
+return n = e, r = u, a = l, s = i, {
   className: 'ansi-'.concat(n, '-').concat(r),
   endsParent: !0,
-  begin: s,
+  begin: o,
   'on:begin': (e, t) => {
     let n = e[1].split(';');
     for (let e of (void 0 === t.data.isOn && (t.data.isOn = !1), n))
-      e === a ? t.data.isOn = !0 : o.includes(e) && (t.data.isOn = !1);
+      e === a ? t.data.isOn = !0 : s.includes(e) && (t.data.isOn = !1);
     !t.data.isOn && t.ignoreMatch();
   }
 };

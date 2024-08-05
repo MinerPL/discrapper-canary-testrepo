@@ -86,7 +86,7 @@ a = {
   scope: 'number',
   match: /\d+/
 },
-o = {
+s = {
   beginKeywords: n.join(' '),
   keywords: {
     name: n
@@ -103,7 +103,7 @@ o = {
     ]
   }]
 },
-s = {
+o = {
   match: /\|(?=[A-Za-z_]+:?)/,
   beginScope: 'punctuation',
   relevance: 0,
@@ -199,8 +199,8 @@ l = (e, {
   end: /%\}/,
   keywords: 'in',
   contains: [
-    s,
     o,
+    s,
     i,
     a
   ]
@@ -226,8 +226,8 @@ contains: [
     end: /\}\}/,
     contains: [
       'self',
-      s,
       o,
+      s,
       i,
       a
     ]

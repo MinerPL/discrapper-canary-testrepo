@@ -1,7 +1,7 @@
 var r, i = n(913527),
   a = n.n(i),
-  o = n(442837),
-  s = n(570140),
+  s = n(442837),
+  o = n(570140),
   l = n(709054);
 
 function u(e, t, n) {
@@ -22,7 +22,7 @@ function E() {
   for (let e in _)
 d.lastSeenNewlyAddedEmojiIds[e] = _[e];
 }
-class f extends(r = o.ZP.PersistedStore) {
+class f extends(r = s.ZP.PersistedStore) {
   initialize(e) {
 d = null != e ? e : c;
   }
@@ -60,7 +60,7 @@ n[e] = {
   return {
 lastSeenNewlyAddedEmojiIds: n
   };
-}]), t.Z = new f(s.Z, {
+}]), t.Z = new f(o.Z, {
   LOGOUT: function() {
 d = c, _ = {};
   },

@@ -1,6 +1,6 @@
 n.d(t, {
   Gj: function() {
-return s;
+return o;
   },
   Hk: function() {
 return h;
@@ -45,13 +45,13 @@ return _;
 return O;
   }
 });
-var r, i, a, o, s, l, u, c, d = n(689938);
+var r, i, a, s, o, l, u, c, d = n(689938);
 let _ = 0,
   E = 13,
   f = !0,
   h = -1,
   p = -2;
-(r = s || (s = {}))[r.Quests = -4] = 'Quests', r[r.Clans = -3] = 'Clans', r[r.Hub = p] = 'Hub', r[r.Communities = h] = 'Communities', r[r.Activity = 1] = 'Activity', r[r.Music = 2] = 'Music', r[r.Television = 3] = 'Television', r[r.Science = 5] = 'Science', r[r.Education = 6] = 'Education';
+(r = o || (o = {}))[r.Quests = -4] = 'Quests', r[r.Clans = -3] = 'Clans', r[r.Hub = p] = 'Hub', r[r.Communities = h] = 'Communities', r[r.Activity = 1] = 'Activity', r[r.Music = 2] = 'Music', r[r.Television = 3] = 'Television', r[r.Science = 5] = 'Science', r[r.Education = 6] = 'Education';
 let m = 1000,
   I = [
 1,
@@ -270,7 +270,7 @@ name: d.Z.Messages.en
   } : e),
   N = 40,
   v = 20;
-(a = u || (u = {})).GAME_RECOMMENDATIONS = 'Game Recommendations', a.SERVER_RECOMMENDATIONS = 'Server Recommendations', (o = c || (c = {}))[o.Activity = 0] = 'Activity', o[o.Discover = 1] = 'Discover', o[o.Education = 2] = 'Education', o[o.Music = 3] = 'Music', o[o.Science = 4] = 'Science', o[o.Stage = 5] = 'Stage', o[o.Television = 6] = 'Television', o[o.Server = 7] = 'Server', o[o.Quest = 8] = 'Quest';
+(a = u || (u = {})).GAME_RECOMMENDATIONS = 'Game Recommendations', a.SERVER_RECOMMENDATIONS = 'Server Recommendations', (s = c || (c = {}))[s.Activity = 0] = 'Activity', s[s.Discover = 1] = 'Discover', s[s.Education = 2] = 'Education', s[s.Music = 3] = 'Music', s[s.Science = 4] = 'Science', s[s.Stage = 5] = 'Stage', s[s.Television = 6] = 'Television', s[s.Server = 7] = 'Server', s[s.Quest = 8] = 'Quest';
 let O = {
   facebook: {
 presentation: 'Facebook',

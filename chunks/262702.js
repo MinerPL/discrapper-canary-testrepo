@@ -1,7 +1,7 @@
 n(47120);
 var i = n(570140),
-  s = n(846027),
-  a = n(872810),
+  a = n(846027),
+  s = n(872810),
   r = n(317770),
   l = n(569545),
   o = n(199902),
@@ -38,9 +38,9 @@ super(...e), h(this, 'handleVoiceStateUpdates', e => {
 }), h(this, 'handleStopStream', e => {
   let t = o.Z.getActiveStreamForUser(e.userId, e.guildId);
   if (null != t)
-    (0, a.g)((0, l.V9)(t), !1);
+    (0, s.g)((0, l.V9)(t), !1);
 }), h(this, 'handleStopUserVideo', () => {
-  u.Z.isVideoEnabled() && s.Z.setVideoEnabled(!1);
+  u.Z.isVideoEnabled() && a.Z.setVideoEnabled(!1);
 });
   }
 }

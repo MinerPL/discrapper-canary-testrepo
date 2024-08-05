@@ -4,7 +4,7 @@ let a = {
   fetched: !1,
   affinities: []
 };
-class o extends r.ZP.Store {
+class s extends r.ZP.Store {
   get hasFetched() {
 return a.fetched;
   }
@@ -12,7 +12,7 @@ return a.fetched;
 return a.affinities;
   }
 }
-t.Z = new o(i.Z, {
+t.Z = new s(i.Z, {
   BILLING_NITRO_AFFINITY_FETCHED: function(e) {
 let {} = e;
 a.fetched = !0;
@@ -22,5 +22,8 @@ let {
   res: t
 } = e;
 a.affinities = t;
+  },
+  LOGOUT: function() {
+a.fetched = !1, a.affinities = [];
   }
 });

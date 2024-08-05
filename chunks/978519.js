@@ -6,8 +6,8 @@ return l;
 var r = n(430824),
   i = n(358085),
   a = n(341653),
-  o = n(981631);
-let s = [o.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE];
+  s = n(981631);
+let o = [s.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE];
 
 function l(e) {
   if (!(0, i.isIOS)())
@@ -18,9 +18,9 @@ return !1;
     r = t.split('.').map(Number),
     i = Math.max(n.length, r.length);
   for (let e = 0; e < i; e++) {
-    var a, o;
+    var a, s;
     let t = null !== (a = n[e]) && void 0 !== a ? a : 0,
-      i = null !== (o = r[e]) && void 0 !== o ? o : 0;
+      i = null !== (s = r[e]) && void 0 !== s ? s : 0;
     if (t < i)
       return -1;
     if (t > i)
@@ -30,5 +30,5 @@ return !1;
 }(t, '13.2'))
 return !1;
   let n = r.Z.getGuild(e);
-  return !!(null != n && s.every(e => n.hasFeature(e))) || !1;
+  return !!(null != n && o.every(e => n.hasFeature(e))) || !1;
 }

@@ -1,6 +1,6 @@
 n.d(t, {
   Q2: function() {
-return s;
+return o;
   },
   i6: function() {
 return l;
@@ -23,10 +23,10 @@ continue;
 for (let t of n)
   a[t.toLowerCase()] = e;
 }
-let o = /^[a-z0-9_+\-.#]+$/,
-  s = /^[a-z0-9_+\-.#]+$/i;
+let s = /^[a-z0-9_+\-.#]+$/,
+  o = /^[a-z0-9_+\-.#]+$/i;
 for (let e in a)
-  if (null == e.match(o))
+  if (null == e.match(s))
 throw Error('Language name does not match regex: '.concat(e));
 
 function l(e) {

@@ -9,8 +9,8 @@ return _;
 var r = n(480189),
   i = n(81825),
   a = n(768581),
-  o = n(584597),
-  s = n(598077),
+  s = n(584597),
+  o = n(598077),
   l = n(701488);
 
 function u(e, t, n) {
@@ -47,12 +47,12 @@ return new _({
   storeListingSkuId: e.store_listing_sku_id,
   guildId: e.guild_id,
   guild: e.guild,
-  publishers: null != e.publishers ? e.publishers.map(o.Z.createFromServer) : [],
-  developers: null != e.developers ? e.developers.map(o.Z.createFromServer) : [],
+  publishers: null != e.publishers ? e.publishers.map(s.Z.createFromServer) : [],
+  developers: null != e.developers ? e.developers.map(s.Z.createFromServer) : [],
   eulaId: e.eula_id,
   slug: e.slug,
   coverImage: e.cover_image,
-  bot: null != e.bot ? new s.Z(e.bot) : null,
+  bot: null != e.bot ? new o.Z(e.bot) : null,
   flags: null !== (n = e.flags) && void 0 !== n ? n : 0,
   maxParticipants: e.max_participants,
   tags: e.tags,

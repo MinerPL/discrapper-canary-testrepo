@@ -79,7 +79,7 @@ if (!r) {
   }
   throw TypeError('Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
 }
-var o, s = !0,
+var s, o = !0,
   l = !1;
 return {
   s: function() {
@@ -87,17 +87,17 @@ return {
   },
   n: function() {
     var e = r.next();
-    return s = e.done, e;
+    return o = e.done, e;
   },
   e: function(e) {
-    l = !0, o = e;
+    l = !0, s = e;
   },
   f: function() {
     try {
-      !s && null != r.return && r.return();
+      !o && null != r.return && r.return();
     } finally {
       if (l)
-        throw o;
+        throw s;
     }
   }
 };

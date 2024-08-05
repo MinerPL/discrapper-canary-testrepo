@@ -1,12 +1,12 @@
 n.d(t, {
   LT: function() {
-return o;
+return s;
   },
   Sp: function() {
 return l;
   },
   el: function() {
-return s;
+return o;
   },
   mR: function() {
 return a.Key;
@@ -16,8 +16,8 @@ return r;
   }
 }), n(47120);
 var r, i, a = n(15858);
-let o = a.Key.F6,
-  s = new Map([
+let s = a.Key.F6,
+  o = new Map([
 [
   a.Key.F6,
   'f6'

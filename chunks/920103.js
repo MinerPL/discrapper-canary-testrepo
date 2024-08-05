@@ -52,8 +52,8 @@ callback: e,
 tension: t = 160,
 friction: n = 22,
 mass: a = 1,
-threshold: o = 0.001,
-clamp: s = !1,
+threshold: s = 0.001,
+clamp: o = !1,
 maxVelocity: l = 1 / 0,
 getNodeWindow: u = () => window
   }) {
@@ -87,15 +87,15 @@ r(this, 'tension', void 0), r(this, 'friction', void 0), r(this, 'threshold', vo
     this.from = t;
   }
   let {
-    from: o
+    from: s
   } = this;
   if (this.accumulator > 0) {
     let {
       from: e
-    } = this.getUpdates(this.vel, o), t = (e - o) * (this.accumulator / i);
-    o += t;
+    } = this.getUpdates(this.vel, s), t = (e - s) * (this.accumulator / i);
+    s += t;
   }
-  this.callback(o, this.abort), this.animating && (this.last = e, this.nextTick = null !== (a = null === (r = this.nodeWindow) || void 0 === r ? void 0 : r.requestAnimationFrame(this.update)) && void 0 !== a ? a : -1);
-}), this.callback = e, this.from = 0, this.tension = t, this.friction = n, this.mass = a, this.maxVelocity = l, this.threshold = o, this.clamp = s, this.getNodeWindow = u;
+  this.callback(s, this.abort), this.animating && (this.last = e, this.nextTick = null !== (a = null === (r = this.nodeWindow) || void 0 === r ? void 0 : r.requestAnimationFrame(this.update)) && void 0 !== a ? a : -1);
+}), this.callback = e, this.from = 0, this.tension = t, this.friction = n, this.mass = a, this.maxVelocity = l, this.threshold = s, this.clamp = o, this.getNodeWindow = u;
   }
 }

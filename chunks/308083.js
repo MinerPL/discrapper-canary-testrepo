@@ -1,24 +1,27 @@
 n.d(t, {
   A9: function() {
-return X;
+return Q;
   },
   CT: function() {
-return k;
+return G;
   },
   DA: function() {
-return $;
+return X;
+  },
+  Dd: function() {
+return z;
   },
   Du: function() {
 return m;
   },
   HR: function() {
-return H;
+return F;
   },
   K_: function() {
-return K;
+return j;
   },
   LD: function() {
-return z;
+return W;
   },
   LK: function() {
 return D;
@@ -27,13 +30,10 @@ return D;
 return a;
   },
   NC: function() {
-return o;
-  },
-  O6: function() {
-return V;
+return s;
   },
   OH: function() {
-return W;
+return Y;
   },
   Pv: function() {
 return T;
@@ -51,7 +51,7 @@ return y;
 return O;
   },
   WZ: function() {
-return B;
+return k;
   },
   Wy: function() {
 return r;
@@ -66,31 +66,25 @@ return I;
 return S;
   },
   dt: function() {
-return q;
+return K;
   },
   f4: function() {
 return b;
   },
   gQ: function() {
-return J;
+return $;
   },
   gh: function() {
-return F;
-  },
-  hm: function() {
-return w;
+return B;
   },
   i1: function() {
-return Y;
+return H;
   },
   i6: function() {
-return Z;
+return V;
   },
   jK: function() {
-return G;
-  },
-  k3: function() {
-return U;
+return x;
   },
   mv: function() {
 return L;
@@ -114,16 +108,16 @@ return R;
 return P;
   },
   yi: function() {
-return Q;
+return q;
   },
   ym: function() {
-return j;
+return Z;
   },
   zv: function() {
 return h.z;
   }
 }), n(47120);
-var r, i, a, o, s, l, u, c, d = n(392711),
+var r, i, a, s, o, l, u, c, d = n(392711),
   _ = n.n(d),
   E = n(913527),
   f = n.n(E),
@@ -160,8 +154,9 @@ case h.z.VERY_HARDCORE:
   return p.Z.Messages.CLAN_SETUP_PLAYSTYLE_VERY_HARDCORE_TITLE;
 case h.z.CREATIVE:
 case h.z.NONE:
-default:
   return null;
+default:
+  return e;
   }
 }
 
@@ -193,7 +188,7 @@ function b() {
 }
   };
 }
-(s = r || (r = {}))[s.GAMES = 0] = 'GAMES', s[s.PLAYSTYLE = 1] = 'PLAYSTYLE', s[s.UTILITY_TRAITS = 2] = 'UTILITY_TRAITS', s[s.INTERESTS = 3] = 'INTERESTS', s[s.DESCRIPTION = 4] = 'DESCRIPTION', s[s.CUSTOMIZE_TAG_BADGE = 5] = 'CUSTOMIZE_TAG_BADGE', s[s.CUSTOMIZE_BANNER = 6] = 'CUSTOMIZE_BANNER', s[s.MEMBER_APPLICATION = 7] = 'MEMBER_APPLICATION';
+(o = r || (r = {}))[o.GAMES = 0] = 'GAMES', o[o.PLAYSTYLE = 1] = 'PLAYSTYLE', o[o.UTILITY_TRAITS = 2] = 'UTILITY_TRAITS', o[o.INTERESTS = 3] = 'INTERESTS', o[o.DESCRIPTION = 4] = 'DESCRIPTION', o[o.CUSTOMIZE_TAG_BADGE = 5] = 'CUSTOMIZE_TAG_BADGE', o[o.CUSTOMIZE_BANNER = 6] = 'CUSTOMIZE_BANNER', o[o.MEMBER_APPLICATION = 7] = 'MEMBER_APPLICATION';
 let M = '700136079562375258',
   P = '762434991303950386',
   U = [
@@ -212,7 +207,8 @@ let M = '700136079562375258',
 'Platinum+',
 'Diamond+'
   ],
-  w = [
+  w = new Set([
+...U,
 'Server: NA',
 'Server: EU',
 'Server: Asia',
@@ -226,18 +222,14 @@ let M = '700136079562375258',
 'Spenders',
 'Co-op',
 'Support'
-  ],
-  x = new Set([
-...U,
-...w
   ]),
-  G = [
+  x = [
 '20+',
 '30+',
 '40+',
 'All Ages'
   ],
-  k = [
+  G = [
 'Beginner Friendly',
 'PUGs',
 'Inclusive',
@@ -245,12 +237,12 @@ let M = '700136079562375258',
 'Work-life Balance',
 'Streamers'
   ],
-  B = new Set([
+  k = new Set([
 ...U,
-...G,
-...k
+...x,
+...G
   ]),
-  F = new Set([
+  B = new Set([
 'Bulgarian',
 'Chinese (Simplified)',
 'Chinese (Traditional)',
@@ -282,15 +274,14 @@ let M = '700136079562375258',
 'Vietnamese'
   ]);
 
-function V(e) {
-  return !B.has(e) && !Z.has(e) && !F.has(e);
-}
-
-function H(e, t) {
+function F(e, t) {
   var n;
-  return _().sortBy(e, (n = t, e => -(((null == n ? void 0 : n.includes(e)) ? 1 : 0) << 4 | (V(e) ? 1 : 0) << 3 | (x.has(e) ? 1 : 0) << 2 | (G.includes(e) ? 1 : 0) << 1 | (k.includes(e) ? 1 : 0) << 0)));
+  return _().sortBy(e, (n = t, e => {
+var t;
+return -(((null == n ? void 0 : n.includes(e)) ? 1 : 0) << 4 | ((t = e, k.has(t) || V.has(t) || B.has(t)) ? 0 : 1) << 3 | (w.has(e) ? 1 : 0) << 2 | (x.includes(e) ? 1 : 0) << 1 | (G.includes(e) ? 1 : 0) << 0);
+  }));
 }
-let Z = new Set([
+let V = new Set([
   'anime',
   'fanart',
   'venting',
@@ -396,12 +387,12 @@ let Z = new Set([
   'FNAF'
 ]);
 
-function Y() {
+function H() {
   let e = Object.keys(i).filter(e => isNaN(Number(e)));
-  return i[e[Math.round(Math.random() * e.length - 1)]];
+  return i[e[Math.floor(Math.random() * e.length)]];
 }
 (l = i || (i = {}))[l.NIGHT_SKY = 0] = 'NIGHT_SKY', l[l.CASTLE = 1] = 'CASTLE', l[l.WORLD_MAP = 2] = 'WORLD_MAP', l[l.SEA_FOAM = 3] = 'SEA_FOAM', l[l.WARP_TUNNEL = 4] = 'WARP_TUNNEL', l[l.HOUSE = 5] = 'HOUSE', l[l.HEIGHTMAP = 6] = 'HEIGHTMAP', l[l.MESH = 7] = 'MESH', l[l.SPATTER = 8] = 'SPATTER', (u = a || (a = {})).BOULDER = 'Boulder', u.CASCADE = 'Cascade', u.THUNDER = 'Thunder', u.SOUL = 'Soul', u.MARSH = 'Marsh', u.VOLCANO = 'Volcano', u.EARTH = 'Earth', u.ZEPHYR = 'Zephyr';
-let j = [{
+let Z = [{
   name: 'Boulder',
   primary: '#8c8d8d',
   secondary: '#d0d0d1'
@@ -442,9 +433,9 @@ let j = [{
   secondary: '#78b6f0'
 }
   ],
-  W = j[0].primary,
-  K = j[0].secondary,
-  z = Object.fromEntries(j.map(e => [
+  Y = Z[0].primary,
+  j = Z[0].secondary,
+  W = Object.fromEntries(Z.map(e => [
 e.name,
 {
   primary: e.primary,
@@ -452,11 +443,15 @@ e.name,
 }
   ]));
 
-function q() {
-  return j[Math.floor(Math.random() * j.length)];
+function K() {
+  return Z[Math.floor(Math.random() * Z.length)];
 }
 
-function Q(e) {
+function z(e, t) {
+  return null == e || null == t ? e === t : e.identityGuildId === t.identityGuildId && e.identityEnabled === t.identityEnabled && e.tag === t.tag && e.badge === t.badge;
+}
+
+function q(e) {
   return null == e ? null : 'identityGuildId' in e ? e : {
 identityGuildId: e.identity_guild_id,
 identityEnabled: e.identity_enabled,
@@ -465,12 +460,12 @@ badge: e.badge
   };
 }
 
-function X(e) {
+function Q(e) {
   return {
 tag: e.tag
   };
 }
-let $ = {
+let X = {
 AGE_OF_EMPIRES_2: '720771660768084008',
 VALORANT: '700136079562375258',
 HELLDIVERS_2: '1205090671527071784',
@@ -482,7 +477,7 @@ BALDURS_GATE_3: '1137125502985961543',
 AIMLAB: '506950362461110273',
 HONKAI_STAR_RAIL: '1121201675240210523'
   },
-  J = new Map([
+  $ = new Map([
 '432980957394370572',
 '363445589247131668',
 '356869127241072640',
@@ -583,4 +578,4 @@ HONKAI_STAR_RAIL: '1121201675240210523'
 e,
 n.length - t
   ]));
-(c = o || (o = {}))[c.SIZE_12 = 12] = 'SIZE_12', c[c.SIZE_16 = 16] = 'SIZE_16', c[c.SIZE_24 = 24] = 'SIZE_24', c[c.SIZE_32 = 32] = 'SIZE_32', c[c.SIZE_36 = 36] = 'SIZE_36';
+(c = s || (s = {}))[c.SIZE_12 = 12] = 'SIZE_12', c[c.SIZE_16 = 16] = 'SIZE_16', c[c.SIZE_24 = 24] = 'SIZE_24', c[c.SIZE_32 = 32] = 'SIZE_32', c[c.SIZE_36 = 36] = 'SIZE_36';

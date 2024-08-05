@@ -15,8 +15,8 @@ function i(e) {
   let t = null,
 n = null;
   return function() {
-for (var i = arguments.length, a = Array(i), o = 0; o < i; o++)
-  a[o] = arguments[o];
+for (var i = arguments.length, a = Array(i), s = 0; s < i; s++)
+  a[s] = arguments[s];
 return !r(t, a) && (n = e(...a)), t = a, n;
   };
 }
@@ -28,7 +28,7 @@ r = null;
   return () => ((null == r || Date.now() >= n) && (n = Date.now() + t, r = e()), r);
 }
 
-function o(e) {
+function s(e) {
   for (var t in e)
 e.hasOwnProperty(t) && delete e[t];
 }
@@ -37,7 +37,7 @@ n.d(t, {
 return r;
   },
   Ti: function() {
-return o;
+return s;
   },
   ad: function() {
 return a;

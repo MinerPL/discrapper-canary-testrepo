@@ -1,7 +1,7 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(704215),
   l = n(433517),
   o = n(963202),
@@ -17,13 +17,13 @@ var i = n(735250),
   p = n(919285),
   T = n(118470),
   S = n(413307),
-  C = n(849688),
-  f = n(374023),
+  f = n(849688),
+  C = n(374023),
   N = n(661599),
   A = n(923608),
-  Z = n(617899),
-  L = n(8521),
-  v = n(760326),
+  v = n(617899),
+  Z = n(8521),
+  L = n(760326),
   O = n(536687),
   R = n(652785),
   x = n(981631),
@@ -37,7 +37,7 @@ function M(e) {
   var t;
   let {
 guild: n
-  } = e, [_, I] = s.useState(null !== (t = l.K.get(R.Iv)) && void 0 !== t ? t : 0), g = e => {
+  } = e, [_, I] = a.useState(null !== (t = l.K.get(R.Iv)) && void 0 !== t ? t : 0), g = e => {
 l.K.set(R.Iv, e), I(e);
   }, {
 defaultGameId: p,
@@ -46,7 +46,7 @@ enableClanCreation: T
 guild: n,
 location: 'ChannelNoticesGuard',
 includeConverted: !1
-  }), S = (0, a.Wu)(R.HG, () => R.XN.filter(e => {
+  }), S = (0, s.Wu)(R.HG, () => R.XN.filter(e => {
 let {
   type: t,
   store: i
@@ -61,50 +61,50 @@ groupName: b.R.CHANNEL_NOTICES,
 children: e => {
   let {
     visibleContent: t,
-    markAsDismissed: s
-  } = e, a = () => {
-    g(Date.now()), s(b.L.UNKNOWN);
+    markAsDismissed: a
+  } = e, s = () => {
+    g(Date.now()), a(b.L.UNKNOWN);
   }, l = (() => {
     switch (t) {
       case r.z.CHANNEL_NOTICE_HUBLINK:
         return (0, i.jsx)(m.Z, {
           guild: n,
-          markAsDismissed: a
+          markAsDismissed: s
         });
       case r.z.CHANNEL_NOTICE_INVITE:
-        return (0, i.jsx)(Z.Z, {
+        return (0, i.jsx)(v.Z, {
           guild: n,
-          markAsDismissed: a
+          markAsDismissed: s
         });
       case r.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION:
         return (0, i.jsx)(E.Z, {
           guild: n,
-          markAsDismissed: a
+          markAsDismissed: s
         });
       case r.z.CHANNEL_NOTICE_QUICKSWITCHER:
-        return (0, i.jsx)(v.Z, {
+        return (0, i.jsx)(L.Z, {
           guild: n,
-          markAsDismissed: a
+          markAsDismissed: s
         });
       case r.z.CHANNEL_NOTICE_GUILD_BANNER:
         return (0, i.jsx)(h.Z, {
           guild: n,
-          markAsDismissed: a
+          markAsDismissed: s
         });
       case r.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE:
         return (0, i.jsx)(A.Z, {
           guild: n,
-          markAsDismissed: a
+          markAsDismissed: s
         });
       case r.z.LINKED_ROLE_ADMIN_GUILD:
         return (0, i.jsx)(d.Z, {
           guild: n,
-          markAsDismissed: () => s(b.L.UNKNOWN)
+          markAsDismissed: () => a(b.L.UNKNOWN)
         });
       case r.z.CHANNEL_LIST_CLAN_ADMIN_UPSELL:
         return (0, i.jsx)(c.ZP, {
           guild: n,
-          markAsDismissed: a,
+          markAsDismissed: s,
           defaultGameId: p
         });
       default:
@@ -132,7 +132,7 @@ case O.R.APPLIED_GUILD_BOOST_GRACE_PERIOD:
     guild: t
   });
 case O.R.MAX_MEMBER_COUNT:
-  return (0, i.jsx)(L.Z, {
+  return (0, i.jsx)(Z.Z, {
     guild: t
   });
 case O.R.GUILD_LIVE_CHANNEL:
@@ -156,11 +156,11 @@ case O.R.HUB_STUDY_ROOM:
     guild: t
   });
 case O.R.SIGNUP:
-  return (0, i.jsx)(C.Z, {
+  return (0, i.jsx)(f.Z, {
     guild: t
   });
   }
-  return f.s.isDisallowPopupsSet() ? null : (0, i.jsx)(M, {
+  return C.s.isDisallowPopupsSet() ? null : (0, i.jsx)(M, {
 guild: e.guild
   });
 };

@@ -2,8 +2,8 @@ n(47120);
 var r = n(392711),
   i = n.n(r),
   a = n(25209),
-  o = n(691424),
-  s = n(428595),
+  s = n(691424),
+  o = n(428595),
   l = n(364458);
 let u = null;
 
@@ -22,37 +22,37 @@ let d = {
 enableBuildOverrides: !1,
 enableEmojiClick: !0
   },
-  _ = c(s.Z.RULES, [(0, o.Z)({
+  _ = c(o.Z.RULES, [(0, s.Z)({
 enableBuildOverrides: !0
   })]),
-  E = i().omit(c(s.Z.RULES, [(0, o.Z)(d)]), 'paragraph', 'newline'),
-  f = c(s.Z.CHANNEL_TOPIC_RULES, [
-(0, o.Z)({
+  E = i().omit(c(o.Z.RULES, [(0, s.Z)(d)]), 'paragraph', 'newline'),
+  f = c(o.Z.CHANNEL_TOPIC_RULES, [
+(0, s.Z)({
   ...d,
   emojiTooltipPosition: 'bottom'
 }),
 {
   codeBlock: {
-    react: s.Z.RULES.text.react
+    react: o.Z.RULES.text.react
   }
 }
   ]),
-  h = c(s.Z.VOICE_CHANNEL_STATUS_RULES, [(0, o.Z)({
+  h = c(o.Z.VOICE_CHANNEL_STATUS_RULES, [(0, s.Z)({
 ...d,
 enableEmojiClick: !1
   })]),
-  p = c(s.Z.EMBED_TITLE_RULES, [(0, o.Z)(d)]),
-  m = c(s.Z.INLINE_REPLY_RULES, [(0, o.Z)(d)]),
-  I = c(s.Z.GUILD_VERIFICATION_FORM_RULES, [(0, o.Z)(d)]),
-  T = c(s.Z.GUILD_EVENT_RULES, [(0, o.Z)(d)]),
-  g = c(s.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, o.Z)(d)]),
-  S = i().omit(c(s.Z.RULES, [(0, o.Z)(d)]), 'paragraph', 'newline', 'strong', 'codeBlock', 'inlineCode', 'u', 'link', 'url', 'autolink', 'list', 'heading', 'subtext'),
+  p = c(o.Z.EMBED_TITLE_RULES, [(0, s.Z)(d)]),
+  m = c(o.Z.INLINE_REPLY_RULES, [(0, s.Z)(d)]),
+  I = c(o.Z.GUILD_VERIFICATION_FORM_RULES, [(0, s.Z)(d)]),
+  T = c(o.Z.GUILD_EVENT_RULES, [(0, s.Z)(d)]),
+  g = c(o.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, s.Z)(d)]),
+  S = i().omit(c(o.Z.RULES, [(0, s.Z)(d)]), 'paragraph', 'newline', 'strong', 'codeBlock', 'inlineCode', 'u', 'link', 'url', 'autolink', 'list', 'heading', 'subtext'),
   A = {
-text: s.Z.RULES.text
+text: o.Z.RULES.text
   };
 t.Z = {
   combineAndInjectMentionRule: c,
-  createReactRules: o.Z,
+  createReactRules: s.Z,
   defaultReactRuleOptions: d,
   defaultRules: _,
   guildEventRules: T,

@@ -5,26 +5,26 @@ return F;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(512722),
-  s = n.n(l),
+  s = n(512722),
+  l = n.n(s),
   r = n(442837),
   o = n(481060),
   c = n(893776),
-  d = n(528963),
-  u = n(749210),
+  u = n(528963),
+  d = n(749210),
   h = n(607070),
   p = n(391650),
   m = n(645896),
   _ = n(353093),
   f = n(717057),
   E = n(693546),
-  C = n(881952),
-  g = n(305325),
+  g = n(881952),
+  C = n(305325),
   I = n(246364),
   x = n(937111),
   T = n(270801),
-  v = n(652730),
-  N = n(41776),
+  N = n(652730),
+  v = n(41776),
   S = n(657352),
   Z = n(33154),
   A = n(144114),
@@ -58,7 +58,7 @@ let {
   channelFollowingUsersSeen: t,
   channel: n
 } = this.props;
-e && null == t && d.Z.fetchChannelFollowerStats(n.id);
+e && null == t && u.Z.fetchChannelFollowerStats(n.id);
   }
   componentDidUpdate(e) {
 let {
@@ -79,28 +79,28 @@ if (!i && !e.shouldShowLurkerModeSuccessPopout && t && null != n) {
 let {
   isFollowable: e,
   isLurking: t,
-  notClaimed: l,
-  notPhoneVerified: s,
+  notClaimed: s,
+  notPhoneVerified: l,
   notEmailVerified: r,
   newMember: c,
-  memberDeadline: d,
-  newAccount: u,
+  memberDeadline: u,
+  newAccount: d,
   accountDeadline: h,
   theme: p,
   children: m,
   canSendMessages: _,
   channelFollowingUsersSeen: f,
   showLurkerModeUpsellPopout: E,
-  showMemberVerificationModal: C,
-  useReducedMotion: g,
+  showMemberVerificationModal: g,
+  useReducedMotion: C,
   isStaff: x,
   guildJoinRequest: T
 } = this.props, {
-  shouldShowLurkerModeUpsellPopout: v,
-  shouldShowLurkerModeSuccessPopout: N
+  shouldShowLurkerModeUpsellPopout: N,
+  shouldShowLurkerModeSuccessPopout: v
 } = this.state, S = {
   theme: p,
-  useReducedMotion: g
+  useReducedMotion: C
 };
 if (e && !_) {
   if (S.message = B.Z.Messages.FOLLOW_NEWS_CHAT_INPUT_MESSAGE, null != f && f >= 1000) {
@@ -110,9 +110,9 @@ if (e && !_) {
     });
   }
   S.buttonText = B.Z.Messages.FOLLOW, S.onButtonClick = this.handleFollowAnnouncement, S.imageSrc = n(485195), t && (S.onSecondaryButtonClick = this.handleJoinServer, S.secondaryButtonText = B.Z.Messages.LURKER_MODE_CHAT_INPUT_BUTTON);
-} else if (l)
-  S.message = B.Z.Messages.GUILD_VERIFICATION_TEXT_NOT_CLAIMED, S.buttonText = B.Z.Messages.CLAIM_ACCOUNT, S.onButtonClick = C ? this.handleShowMemberVerification : this.handleClaimAccount, S.imageSrc = n(102811);
-else if (C)
+} else if (s)
+  S.message = B.Z.Messages.GUILD_VERIFICATION_TEXT_NOT_CLAIMED, S.buttonText = B.Z.Messages.CLAIM_ACCOUNT, S.onButtonClick = g ? this.handleShowMemberVerification : this.handleClaimAccount, S.imageSrc = n(102811);
+else if (g)
   switch (null == T ? void 0 : T.applicationStatus) {
     case I.wB.SUBMITTED:
       S.message = B.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, S.subtitle = B.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_SUBTITLE, S.buttonText = B.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, S.onButtonClick = this.handleCancelApplication, S.imageSrc = n(281958);
@@ -130,15 +130,15 @@ else if (C)
       });
   }
 else
-  s && !x ? (S.message = B.Z.Messages.GUILD_VERIFICATION_TEXT_NOT_PHONE_VERIFIED, S.buttonText = B.Z.Messages.VERIFY_PHONE, S.onButtonClick = this.handleVerifyPhone, S.imageSrc = n(98063)) : r ? (S.message = B.Z.Messages.GUILD_VERIFICATION_TEXT_NOT_VERIFIED, S.buttonText = B.Z.Messages.RESEND_VERIFICATION_EMAIL, S.onButtonClick = this.handleResendVerification, S.imageSrc = n(102811)) : c ? (S.message = B.Z.Messages.GUILD_VERIFICATION_TEXT_MEMBER_AGE.format({
+  l && !x ? (S.message = B.Z.Messages.GUILD_VERIFICATION_TEXT_NOT_PHONE_VERIFIED, S.buttonText = B.Z.Messages.VERIFY_PHONE, S.onButtonClick = this.handleVerifyPhone, S.imageSrc = n(98063)) : r ? (S.message = B.Z.Messages.GUILD_VERIFICATION_TEXT_NOT_VERIFIED, S.buttonText = B.Z.Messages.RESEND_VERIFICATION_EMAIL, S.onButtonClick = this.handleResendVerification, S.imageSrc = n(102811)) : c ? (S.message = B.Z.Messages.GUILD_VERIFICATION_TEXT_MEMBER_AGE.format({
     min: U.YeM.MEMBER_AGE
-  }), S.countdown = d) : u && (S.message = B.Z.Messages.GUILD_VERIFICATION_TEXT_ACCOUNT_AGE.format({
+  }), S.countdown = u) : d && (S.message = B.Z.Messages.GUILD_VERIFICATION_TEXT_ACCOUNT_AGE.format({
     min: U.YeM.ACCOUNT_AGE
   }), S.countdown = h);
 return (0, i.jsx)(o.Popout, {
   position: 'top',
   align: 'left',
-  shouldShow: N,
+  shouldShow: v,
   onRequestClose: () => this.setState({
     shouldShowLurkerModeSuccessPopout: !1
   }),
@@ -150,7 +150,7 @@ return (0, i.jsx)(o.Popout, {
         this.renderMemberVerificationSuccessModal(),
         E ? (0, i.jsx)(o.Popout, {
           renderPopout: this.renderLurkerModeUpsellPopout,
-          shouldShow: v,
+          shouldShow: N,
           position: 'top',
           children: e => (0, i.jsx)(o.Clickable, {
             ...e,
@@ -175,7 +175,7 @@ super(...e), G(this, 'state', {
   } = e, {
     guild: n
   } = this.props;
-  return s()(null != n, 'This guildID cannot be null'), (0, i.jsx)(S.Z, {
+  return l()(null != n, 'This guildID cannot be null'), (0, i.jsx)(S.Z, {
     onClose: t,
     guild: n
   });
@@ -214,7 +214,7 @@ super(...e), G(this, 'state', {
   let {
     guild: e
   } = this.props;
-  null != e && (0, g.hk)(e.id);
+  null != e && (0, C.hk)(e.id);
 }), G(this, 'handleClaimAccount', () => {
   p.j();
 }), G(this, 'handleVerifyPhone', () => {
@@ -223,7 +223,7 @@ super(...e), G(this, 'state', {
       default: e
     } = await Promise.all([
       n.e('76540'),
-      n.e('56931')
+      n.e('52443')
     ]).then(n.bind(n, 607018));
     return t => (0, i.jsx)(e, {
       reason: A.L.GUILD_PHONE_REQUIRED,
@@ -261,7 +261,7 @@ super(...e), G(this, 'state', {
   });
   let e = this.props.channel.getGuildId();
   try {
-    await u.Z.joinGuild(e, {
+    await d.Z.joinGuild(e, {
       source: U.vtS.CHAT_INPUT_BLOCKER
     });
   } catch {
@@ -294,7 +294,7 @@ super(...e), G(this, 'state', {
   let {
     guild: e
   } = this.props;
-  return s()(null != e, 'GuildVerification.renderLurkerModeUpsellPopout - guild cannot be undefined'), (0, i.jsx)(Z.Z, {
+  return l()(null != e, 'GuildVerification.renderLurkerModeUpsellPopout - guild cannot be undefined'), (0, i.jsx)(Z.Z, {
     type: Z.s.CHAT,
     guild: e,
     closePopout: this.closeLurkerModeUpsellPopout
@@ -304,7 +304,7 @@ super(...e), G(this, 'state', {
     guild: e,
     guildJoinRequest: t
   } = this.props, n = (null == t ? void 0 : t.applicationStatus) === I.wB.APPROVED;
-  if (null == e || null == t || !n || (0, C.d3)(t))
+  if (null == e || null == t || !n || (0, g.d3)(t))
     return null;
   let a = () => {
     E.Z.ackUserGuildJoinRequest(e.id, t.joinRequestId);
@@ -331,14 +331,14 @@ super(...e), G(this, 'state', {
 function F(e) {
   var t, n;
   let {
-channel: l,
-children: s
-  } = e, o = l.getGuildId(), c = (0, r.e7)([L.Z], () => L.Z.getGuild(o)), d = (0, r.e7)([P.Z], () => P.Z.getCheck(o)), u = l.type === U.d4z.GUILD_ANNOUNCEMENT && null != c && c.hasFeature(U.oNc.NEWS), p = (0, r.e7)([R.Z], () => u ? R.Z.getFollowerStatsForChannel(l.id) : null), f = (0, r.e7)([N.Z], () => N.Z.isLurking(o)), E = (0, r.e7)([y.default], () => y.default.getCurrentUser()), g = null !== (t = null == E ? void 0 : E.isStaff()) && void 0 !== t && t, T = (0, r.e7)([j.ZP], () => {
+channel: s,
+children: l
+  } = e, o = s.getGuildId(), c = (0, r.e7)([L.Z], () => L.Z.getGuild(o)), u = (0, r.e7)([P.Z], () => P.Z.getCheck(o)), d = s.type === U.d4z.GUILD_ANNOUNCEMENT && null != c && c.hasFeature(U.oNc.NEWS), p = (0, r.e7)([R.Z], () => d ? R.Z.getFollowerStatsForChannel(s.id) : null), f = (0, r.e7)([v.Z], () => v.Z.isLurking(o)), E = (0, r.e7)([y.default], () => y.default.getCurrentUser()), C = null !== (t = null == E ? void 0 : E.isStaff()) && void 0 !== t && t, T = (0, r.e7)([j.ZP], () => {
 var e, t;
 return null != E && null !== (t = null === (e = j.ZP.getMember(o, E.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t;
-  }), S = !!(null == c ? void 0 : c.hasVerificationGate()), Z = (T || d.notClaimed) && S, A = (0, r.e7)([v.Z], () => v.Z.shouldShowPopout(o)), M = (0, r.e7)([O.Z], () => O.Z.can(U.Plq.SEND_MESSAGES, l)), k = (0, r.e7)([x.Z], () => x.Z.getRequest(o)), [w, B] = (0, m.L_)(o), H = (0, m.Cc)(o), G = (null == k ? void 0 : k.applicationStatus) === I.wB.APPROVED;
+  }), S = !!(null == c ? void 0 : c.hasVerificationGate()), Z = (T || u.notClaimed) && S, A = (0, r.e7)([N.Z], () => N.Z.shouldShowPopout(o)), M = (0, r.e7)([O.Z], () => O.Z.can(U.Plq.SEND_MESSAGES, s)), k = (0, r.e7)([x.Z], () => x.Z.getRequest(o)), [w, B] = (0, m.L_)(o), H = (0, m.Cc)(o), G = (null == k ? void 0 : k.applicationStatus) === I.wB.APPROVED;
   a.useEffect(() => {
-if (!(!(0, _.EJ)(c) || !G || (0, C.d3)(k)) && null == H)
+if (!(!(0, _.EJ)(c) || !G || (0, g.d3)(k)) && null == H)
   B();
   }, [
 c,
@@ -347,12 +347,12 @@ k,
 H
   ]);
   let F = {
-...d,
+...u,
 guild: c,
 isLurking: f,
-isFollowable: u,
+isFollowable: d,
 shouldShowLurkerModeSuccessPopout: A,
-showLurkerModeUpsellPopout: f && null != c && D.Uu(U.Plq.SEND_MESSAGES, l),
+showLurkerModeUpsellPopout: f && null != c && D.Uu(U.Plq.SEND_MESSAGES, s),
 theme: b.Z.theme,
 canSendMessages: M,
 channelFollowingUsersSeen: null != p ? p.usersSeenEver : null,
@@ -361,13 +361,13 @@ showMemberVerificationModal: Z,
 guildJoinRequestStatus: null !== (n = null == k ? void 0 : k.applicationStatus) && void 0 !== n ? n : I.wB.STARTED,
 guildJoinRequest: k,
 useReducedMotion: h.Z.useReducedMotion,
-isStaff: g,
+isStaff: C,
 isLoading: w,
 clanInfo: H
   };
   return (0, i.jsx)(V, {
 ...F,
-channel: l,
-children: s
+channel: s,
+children: l
   });
 }

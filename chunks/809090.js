@@ -6,8 +6,8 @@ return _;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(806519),
+  s = n.n(a),
+  o = n(806519),
   l = n(768581),
   u = n(895924),
   c = n(481972),
@@ -52,7 +52,7 @@ a
   ]);
   return (0, r.jsx)('div', {
 ...T,
-className: o()(c.wrapper, E, {
+className: s()(c.wrapper, E, {
   [c.selectable]: f,
   [c.selected]: f && n
 }),
@@ -60,9 +60,9 @@ onFocus: A,
 onBlur: N,
 onMouseOver: v,
 onMouseLeave: O,
-children: (0, r.jsx)(s.ZP, {
+children: (0, r.jsx)(o.ZP, {
   className: c.mask,
-  mask: f && (n || g) ? s.QS.SQUIRCLE : s.QS.AVATAR_DEFAULT,
+  mask: f && (n || g) ? o.QS.SQUIRCLE : o.QS.AVATAR_DEFAULT,
   width: a,
   height: _,
   children: (0, r.jsx)('img', {

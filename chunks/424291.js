@@ -1,20 +1,20 @@
 n.d(t, {
   V: function() {
-return s;
+return o;
   }
 });
 var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(522474),
-  o = n(981631);
+  s = n(981631);
 
-function s(e) {
+function o(e) {
   let {
 application: t,
-onAgree: s,
+onAgree: o,
 onDisagree: l
-  } = e, u = a.Z.getWindowOpen(o.KJ3.CHANNEL_CALL_POPOUT) ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
+  } = e, u = a.Z.getWindowOpen(s.KJ3.CHANNEL_CALL_POPOUT) ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
   return (0, i.openModalLazy)(async () => {
 let {
   ActivityAgeGateModal: e
@@ -22,7 +22,7 @@ let {
 return n => (0, r.jsx)(e, {
   ...n,
   application: t,
-  onAgree: s,
+  onAgree: o,
   onDisagree: l
 });
   }, {

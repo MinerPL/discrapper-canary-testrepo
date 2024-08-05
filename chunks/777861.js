@@ -1,9 +1,9 @@
 n.d(t, {
   U: function() {
-return o;
+return s;
   },
   Z: function() {
-return s;
+return o;
   }
 });
 var r = n(735250);
@@ -11,7 +11,7 @@ n(470079);
 var i = n(481060),
   a = n(689938);
 
-function o(e) {
+function s(e) {
   return null == e || null == e.end_time ? null : a.Z.Messages.MUTED_UNTIL_TIME.format({
 endTime: new Date(e.end_time).toLocaleString(a.Z.getLocale(), {
   month: 'numeric',
@@ -22,11 +22,11 @@ endTime: new Date(e.end_time).toLocaleString(a.Z.getLocale(), {
   });
 }
 
-function s(e) {
+function o(e) {
   let {
 muteConfig: t,
 className: n
-  } = e, a = o(t);
+  } = e, a = s(t);
   return null != a ? (0, r.jsx)(i.Text, {
 variant: 'text-xs/normal',
 color: 'text-muted',

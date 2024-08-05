@@ -1,9 +1,9 @@
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(981631);
 let c = {},
   d = null;
-class _ extends(o = s.ZP.Store) {
+class _ extends(s = o.ZP.Store) {
   get applicationStatistics() {
 return c;
   }
@@ -55,16 +55,16 @@ let {
   duration: t,
   applicationId: n,
   distributor: r
-} = e, i = c[n], a = new Date().toISOString(), o = 0, s = 0;
+} = e, i = c[n], a = new Date().toISOString(), s = 0, o = 0;
 if (null != i) {
   var l;
-  o = i.total_duration, s = null !== (l = i.total_discord_sku_duration) && void 0 !== l ? l : 0;
+  s = i.total_duration, o = null !== (l = i.total_discord_sku_duration) && void 0 !== l ? l : 0;
 }
-o += t, r === u.GQo.DISCORD && (s += t), c[n] = {
+s += t, r === u.GQo.DISCORD && (o += t), c[n] = {
   application_id: n,
-  total_duration: o,
+  total_duration: s,
   last_played_at: a,
-  total_discord_sku_duration: s
+  total_discord_sku_duration: o
 };
   },
   LOGOUT: function() {

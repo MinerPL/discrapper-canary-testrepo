@@ -12,8 +12,8 @@ return E;
 var r = n(123763),
   i = n.n(r),
   a = n(956067),
-  o = n(433517),
-  s = n(445346);
+  s = n(433517),
+  o = n(445346);
 
 function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ _state: void 0,
 _version: void 0
   },
   c = null;
-class d extends s.y {
+class d extends o.y {
   getClass() {
 return this.constructor;
   }
@@ -36,8 +36,8 @@ return this.constructor;
 return c = e, null == d._clearAllPromise && (d._clearAllPromise = new Promise(t => {
   requestIdleCallback(() => {
     d.clearPersistQueue(e), d.allPersistKeys.forEach(t => {
-      d.shouldClear(e, t) && o.K.remove(t);
-    }), s.y.getAll().forEach(t => {
+      d.shouldClear(e, t) && s.K.remove(t);
+    }), o.y.getAll().forEach(t => {
       t instanceof d && d.shouldClear(e, t.getClass().persistKey) && (t._isInitialized = !1, t.initializeIfNeeded());
     }), d._clearAllPromise = null, t();
   }, {
@@ -60,12 +60,12 @@ return Promise.all(Array.from(d._writePromises.values())).then(() => {
   let e = {};
   return d.allPersistKeys.forEach(t => {
     var n;
-    e[t] = (null !== (n = o.K.get(t)) && void 0 !== n ? n : u)._state;
+    e[t] = (null !== (n = s.K.get(t)) && void 0 !== n ? n : u)._state;
   }), e;
 });
   }
   static initializeAll(e) {
-s.y.getAll().forEach(t => {
+o.y.getAll().forEach(t => {
   if (t instanceof d) {
     let n = t.getClass().persistKey;
     e.hasOwnProperty(n) && t.initializeFromState(e[n]);
@@ -76,7 +76,7 @@ s.y.getAll().forEach(t => {
 this.initialize(e) && this.asyncPersist(), this._isInitialized ? this.emitChange() : (d.allPersistKeys.add(this.getClass().persistKey), this._isInitialized = !0);
   }
   static destroy() {
-c = null, s.y.destroy(), d.clearPersistQueue({
+c = null, o.y.destroy(), d.clearPersistQueue({
   type: 'all'
 }), d.allPersistKeys.clear(), d.userAgnosticPersistKeys.clear();
   }
@@ -95,21 +95,21 @@ if (!this._isInitialized) {
   }
   static migrateAndReadStoreState(e, t) {
 if (null != c && d.shouldClear(c, e))
-  return o.K.remove(e), {
+  return s.K.remove(e), {
     state: void 0,
     requiresPersist: !1
   };
-let n = null != d._clearAllPromise ? null : o.K.get(e),
+let n = null != d._clearAllPromise ? null : s.K.get(e),
   {
     _state: r,
     _version: i,
     ...a
   } = null != n ? n : u,
-  s = null == t ? 0 : t.length;
-if (0 !== s && i !== s && null != t) {
+  o = null == t ? 0 : t.length;
+if (0 !== o && i !== o && null != t) {
   let e = null != i ? i : 0,
     n = r;
-  for (null == i && (n = a); e < s;)
+  for (null == i && (n = a); e < o;)
     n = (0, t[e])(n), e++;
   return {
     state: n,
@@ -149,7 +149,7 @@ return null != r ? r : (r = new Promise(t => {
 let {
   persistKey: e
 } = this.getClass(), t = this.getState(), n = this._version;
-o.K.set(e, {
+s.K.set(e, {
   _state: t,
   _version: n
 });
@@ -158,7 +158,7 @@ o.K.set(e, {
 let {
   persistKey: e
 } = this.getClass();
-o.K.remove(e);
+s.K.remove(e);
   }
   constructor(e, t) {
 if (super(e, t), l(this, '_version', null == this.getClass().migrations ? 0 : this.getClass().migrations.length), l(this, 'callback', e => {

@@ -2,8 +2,8 @@ n(47120);
 var r = n(704215),
   i = n(570140),
   a = n(147913),
-  o = n(605236),
-  s = n(430824),
+  s = n(605236),
+  o = n(430824),
   l = n(496675),
   u = n(619574),
   c = n(317816),
@@ -27,10 +27,10 @@ super(...e), f(this, 'actions', {
 }), f(this, 'handleConnectionOpen', e => {
   let t = (0, _.jZ)('SignUpManager'),
     n = (0, d.t)('SignUpManager', !1),
-    a = (0, o.un)(r.z.GAME_ONE_USER_SIGNUPS),
-    s = (0, c.v)('SignUpManager'),
+    a = (0, s.un)(r.z.GAME_ONE_USER_SIGNUPS),
+    o = (0, c.v)('SignUpManager'),
     l = (0, u.e)('SignUpManager', !1),
-    E = (0, o.un)(r.z.GENSHIN_USER_SIGNUPS);
+    E = (0, s.un)(r.z.GENSHIN_USER_SIGNUPS);
   if (t && !n && !a) {
     i.Z.dispatch({
       type: 'ENABLE_USER_SIGN_UP',
@@ -38,7 +38,7 @@ super(...e), f(this, 'actions', {
     });
     return;
   }
-  if (s && !l && !E) {
+  if (o && !l && !E) {
     i.Z.dispatch({
       type: 'ENABLE_USER_SIGN_UP',
       key: 'genshin-user'
@@ -51,15 +51,15 @@ super(...e), f(this, 'actions', {
   } = e;
   if (null == t)
     return;
-  let n = (0, o.un)(r.z.GAME_ONE_USER_SIGNUPS),
-    a = (0, o.un)(r.z.GENSHIN_USER_SIGNUPS);
+  let n = (0, s.un)(r.z.GAME_ONE_USER_SIGNUPS),
+    a = (0, s.un)(r.z.GENSHIN_USER_SIGNUPS);
   if (n && a)
     return;
   let c = (0, d.t)('SignUpManager'),
     _ = (0, u.e)('SignUpManager');
   if (!c && !_)
     return;
-  let f = s.Z.getGuild(t);
+  let f = o.Z.getGuild(t);
   if (null != f) {
     if (f.hasFeature(E.oNc.VALORANT_L30) && l.Z.can(E.Plq.MANAGE_GUILD, f) && !n) {
       i.Z.dispatch({

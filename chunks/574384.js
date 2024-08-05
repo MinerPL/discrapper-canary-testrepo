@@ -6,8 +6,8 @@ return d;
 var r = n(735250),
   i = n(470079),
   a = n(260034),
-  o = n(993365),
-  s = n(481060),
+  s = n(993365),
+  o = n(481060),
   l = n(489863),
   u = n(689938),
   c = n(444494);
@@ -54,29 +54,28 @@ children: [
     className: c.sectionLabel,
     children: u.Z.Messages.OAUTH2_ADD_WEBHOOK_INCOMING
   }),
-  null != E && '' !== E ? (0, r.jsx)(o.x, {
+  null != E && '' !== E ? (0, r.jsx)(s.x, {
     variant: 'text-xs/normal',
     color: 'text-danger',
     children: E
   }) : null,
-  (0, r.jsx)(s.Select, {
-    className: c.select,
+  (0, r.jsx)(o.SearchableSelect, {
+    wrapperClassName: c.select,
     maxVisibleItems: 5,
-    select: _,
+    onChange: _,
     placeholder: u.Z.Messages.SCOPE_WEBHOOK_INCOMING_CHANNEL_PLACEHOLDER,
     options: m,
-    isSelected: e => e === d,
-    serialize: e => e,
-    renderOptionLabel: e => (0, r.jsx)(o.x, {
+    value: d,
+    renderOptionLabel: e => (0, r.jsx)(s.x, {
       variant: 'text-md/normal',
       children: e.label
     }),
-    renderOptionValue: e => (0, r.jsx)(o.x, {
+    renderOptionValue: e => (0, r.jsx)(s.x, {
       variant: 'text-md/normal',
       children: e[0].label
     })
   }),
-  (0, r.jsx)(o.x, {
+  (0, r.jsx)(s.x, {
     variant: 'text-xs/normal',
     color: 'header-secondary',
     className: c.label,

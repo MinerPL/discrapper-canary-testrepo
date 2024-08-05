@@ -21,13 +21,13 @@ var n = s(735250),
   C = s(65154),
   m = s(689938),
   A = s(549856);
-async function h() {
+async function g() {
   let e = await c.Z.fileManager.getModulePath(),
 t = c.Z.fileManager.join(e, 'discord_voice');
   c.Z.fileManager.showItemInFolder(t);
 }
 
-function g(e) {
+function h(e) {
   (0, r.openModal)(t => (0, n.jsx)(r.ConfirmModal, {
 header: m.Z.Messages.SET_DEBUG_LOGGING,
 confirmText: m.Z.Messages.OKAY,
@@ -138,7 +138,7 @@ children: [
       (0, n.jsx)(r.FormSwitch, {
         hideBorder: !0,
         value: s,
-        onChange: g,
+        onChange: h,
         note: m.Z.Messages.FORM_HELP_DEBUG_LOGGING,
         children: m.Z.Messages.FORM_CHECKBOX_DEBUG_LOGGING
       }),
@@ -160,7 +160,7 @@ children: [
               shrink: 0,
               children: (0, n.jsx)(r.Button, {
                 size: r.Button.Sizes.SMALL,
-                onClick: h,
+                onClick: g,
                 children: m.Z.Messages.SHOW_FOLDER
               })
             })

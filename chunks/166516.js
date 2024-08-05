@@ -1,7 +1,7 @@
 ! function() {
   var t = function(e) {
 e = e || {};
-var t, n, r, o, i, a, c, s, u, h, f, d, l, p, y, w, m = {
+var t, n, r, o, i, a, c, s, u, h, d, f, l, p, y, w, m = {
   bgColor: '#d00',
   textColor: '#fff',
   fontFamily: 'sans-serif',
@@ -15,10 +15,10 @@ var t, n, r, o, i, a, c, s, u, h, f, d, l, p, y, w, m = {
 };
 (l = {}).ff = 'undefined' != typeof InstallTrigger, l.chrome = !!window.chrome, l.opera = !!window.opera || navigator.userAgent.indexOf('Opera') >= 0, l.ie = !1, l.safari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0, l.supported = l.chrome || l.ff || l.opera;
 var g = [];
-f = function() {}, s = d = !1;
+d = function() {}, s = f = !1;
 var v = {};
 v.ready = function() {
-  s = !0, v.reset(), f();
+  s = !0, v.reset(), d();
 }, v.reset = function() {
   if (!!s)
     g = [], u = !1, h = !1, a.clearRect(0, 0, o, r), a.drawImage(c, 0, 0, o, r), A.setIcon(i), window.clearTimeout(p), window.clearTimeout(y);
@@ -64,7 +64,7 @@ x.circle = function(e) {
 };
 
 function E(e) {
-  if (e.paused || e.ended || d)
+  if (e.paused || e.ended || f)
     return !1;
   try {
     a.clearRect(0, 0, o, r), a.drawImage(e, 0, 0, o, r);
@@ -370,8 +370,8 @@ return O.duration = 40, O.types = {}, O.types.fade = [{
     u = t.position.indexOf('left') > -1;
   if (s || u)
     for (var h = 0; h < O.types['' + t.animation].length; h++) {
-      var f = O.types['' + t.animation][h];
-      s && (f.y < 0.6 ? f.y = f.y - 0.4 : f.y = f.y - 2 * f.y + (1 - f.w)), u && (f.x < 0.6 ? f.x = f.x - 0.4 : f.x = f.x - 2 * f.x + (1 - f.h)), O.types['' + t.animation][h] = f;
+      var d = O.types['' + t.animation][h];
+      s && (d.y < 0.6 ? d.y = d.y - 0.4 : d.y = d.y - 2 * d.y + (1 - d.w)), u && (d.x < 0.6 ? d.x = d.x - 0.4 : d.x = d.x - 2 * d.x + (1 - d.h)), O.types['' + t.animation][h] = d;
     }
   t.type = x['' + t.type] ? t.type : m.type, n = A.getIcon(), i = document.createElement('canvas'), c = document.createElement('img'), n.hasAttribute('href') ? (c.setAttribute('crossOrigin', 'anonymous'), c.onload = function() {
     r = c.height > 0 ? c.height : 32, o = c.width > 0 ? c.width : 32, i.height = r, i.width = o, a = i.getContext('2d'), v.ready();
@@ -382,7 +382,7 @@ return O.duration = 40, O.types = {}, O.types.fade = [{
   badge: function(e, t) {
     t = ('string' == typeof t ? {
       animation: t
-    } : t) || {}, f = function() {
+    } : t) || {}, d = function() {
       try {
         if ('number' == typeof e ? e > 0 : '' !== e) {
           var n = {
@@ -409,13 +409,13 @@ return O.duration = 40, O.types = {}, O.types.fade = [{
       } catch (e) {
         throw Error('Error setting badge. Message: ' + e.message);
       }
-    }, s && f();
+    }, s && d();
   },
   video: function(e) {
-    f = function() {
+    d = function() {
       try {
         if ('stop' === e) {
-          d = !0, v.reset(), d = !1;
+          f = !0, v.reset(), f = !1;
           return;
         }
         e.addEventListener('play', function() {
@@ -424,10 +424,10 @@ return O.duration = 40, O.types = {}, O.types.fade = [{
       } catch (e) {
         throw Error('Error setting video. Message: ' + e.message);
       }
-    }, s && f();
+    }, s && d();
   },
   image: function(e) {
-    f = function() {
+    d = function() {
       try {
         var t = e.width,
           n = e.height,
@@ -439,17 +439,17 @@ return O.duration = 40, O.types = {}, O.types.fade = [{
       } catch (e) {
         throw Error('Error setting image. Message: ' + e.message);
       }
-    }, s && f();
+    }, s && d();
   },
   webcam: function(e) {
     if ((!window.URL || !window.URL.createObjectURL) && (window.URL = window.URL || {}, window.URL.createObjectURL = function(e) {
         return e;
       }), l.supported) {
       var t = !1;
-      navigator.getUserMedia = navigator.getUserMedia || navigator.oGetUserMedia || navigator.msGetUserMedia || navigator.mozGetUserMedia || navigator.webkitGetUserMedia, f = function() {
+      navigator.getUserMedia = navigator.getUserMedia || navigator.oGetUserMedia || navigator.msGetUserMedia || navigator.mozGetUserMedia || navigator.webkitGetUserMedia, d = function() {
         try {
           if ('stop' === e) {
-            d = !0, v.reset(), d = !1;
+            f = !0, v.reset(), f = !1;
             return;
           }
           (t = document.createElement('video')).width = o, t.height = r, navigator.getUserMedia({
@@ -461,7 +461,7 @@ return O.duration = 40, O.types = {}, O.types.fade = [{
         } catch (e) {
           throw Error('Error setting webcam. Message: ' + e.message);
         }
-      }, s && f();
+      }, s && d();
     }
   },
   reset: v.reset,

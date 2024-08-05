@@ -1,35 +1,35 @@
 t.d(n, {
   $d: function() {
-return A;
+return f;
   },
   BQ: function() {
-return E;
+return C;
   },
   Wx: function() {
 return _;
   },
   Y$: function() {
-return C;
+return N;
   },
   jD: function() {
-return f;
+return h;
   },
   sl: function() {
 return v;
   },
   yJ: function() {
-return N;
+return E;
   },
   ye: function() {
-return h;
+return A;
   }
 }), t(789020);
 var i = t(668781),
-  l = t(904245),
-  a = t(895924),
-  r = t(667204),
-  s = t(957730),
-  o = t(973616),
+  a = t(904245),
+  l = t(895924),
+  o = t(667204),
+  r = t(957730),
+  s = t(973616),
   c = t(768581),
   u = t(630388),
   d = t(981631),
@@ -39,57 +39,57 @@ let _ = {
   id: m.bi.BUILT_IN
 };
 
-function E(e) {
+function C(e) {
   return e.id !== m.bi.BUILT_IN;
 }
 
-function A(e) {
-  return E(e) ? e.name : p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME;
-}
-
 function f(e) {
-  return E(e) ? e.description : p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION;
+  return C(e) ? e.name : p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME;
 }
 
 function h(e) {
+  return C(e) ? e.description : p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION;
+}
+
+function A(e) {
   var n;
   let {
 application: t
   } = e;
-  return E(t) && (0, u.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, d.udG.EMBEDDED);
+  return C(t) && (0, u.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, d.udG.EMBEDDED);
+}
+
+function E(e) {
+  return C(e) && A({
+application: e
+  }) ? e instanceof s.Z ? e.embeddedActivityConfig : e.embedded_activity_config : null;
 }
 
 function N(e) {
-  return E(e) && h({
-application: e
-  }) ? e instanceof o.Z ? e.embeddedActivityConfig : e.embedded_activity_config : null;
-}
-
-function C(e) {
   let {
 command: n,
 optionValues: t,
-context: o,
+context: s,
 commandTargetId: c,
 maxSizeCallback: u,
 sectionName: d
   } = e, {
 channel: m
-  } = o, _ = async () => {
+  } = s, _ = async () => {
 try {
-  let i = await (0, r.Z)({
+  let i = await (0, o.Z)({
     command: n,
     optionValues: t,
-    context: o,
+    context: s,
     commandTargetId: c,
     maxSizeCallback: u,
-    commandOrigin: a.bB.APPLICATION_LAUNCHER,
+    commandOrigin: l.bB.APPLICATION_LAUNCHER,
     sectionName: d
   });
-  if (n.inputType === a.iw.BUILT_IN_TEXT && null != i) {
+  if (n.inputType === l.iw.BUILT_IN_TEXT && null != i) {
     var e;
-    let n = s.ZP.parse(m, i.content);
-    n.tts = null !== (e = i.tts) && void 0 !== e && e, l.Z.sendMessage(o.channel.id, n);
+    let n = r.ZP.parse(m, i.content);
+    n.tts = null !== (e = i.tts) && void 0 !== e && e, a.Z.sendMessage(s.channel.id, n);
   }
 } catch (e) {
   throw i.Z.show({
@@ -109,15 +109,11 @@ function v(e) {
   fakeAppIconURL: t,
   ...i
 } = n;
-  return E(e) ? {
+  return C(e) ? {
 iconURL: c.ZP.getApplicationIconURL({
   ...i,
   id: e.id,
-  icon: e.icon,
-  bot: e.bot,
-  botIconFirst: !h({
-    application: e
-  })
+  icon: e.icon
 }),
 name: e.name,
 description: e.description

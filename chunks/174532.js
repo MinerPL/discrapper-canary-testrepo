@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   }
 }), n(47120);
 var r = n(445686),
@@ -14,7 +14,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class o {
+class s {
   start() {
 this.listeningUsers.clear(), this.listening.reset(), this.speaking.reset(), this.participation.reset(), this.connected.reset(), this.connected.start(), this.connection.on(r.S.Speaking, (e, t, n) => {
   this.userId === e ? this.onSpeaking(0 !== t) : this.onListening(0 !== t, e);

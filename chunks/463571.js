@@ -1,21 +1,21 @@
-n.d(t, {
+t.d(n, {
   Z: function() {
 return r;
   }
 });
-var i = n(735250);
-n(470079);
-var l = n(481060);
+var i = t(735250);
+t(470079);
+var l = t(481060);
 
 function r(e) {
   let {
-children: t,
-...n
+children: n,
+...t
   } = e;
   return (0, i.jsx)(l.Anchor, {
-...n,
+...t,
 onClick: e => e.preventDefault(),
 useDefaultUnderlineStyles: !1,
-children: t
+children: n
   });
 }

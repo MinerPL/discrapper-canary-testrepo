@@ -6,7 +6,7 @@ return l;
 return u;
   },
   fC: function() {
-return o;
+return s;
   }
 });
 var r = n(470079),
@@ -22,8 +22,8 @@ function a(e, t, n) {
   }
 })),
 a = t.compareDocumentPosition(e),
-o = null;
-  a & Node.DOCUMENT_POSITION_PRECEDING || n ? o = i.firstChild() : a & Node.DOCUMENT_POSITION_FOLLOWING && (o = i.lastChild()), (null != o ? o : e).focus();
+s = null;
+  a & Node.DOCUMENT_POSITION_PRECEDING || n ? s = i.firstChild() : a & Node.DOCUMENT_POSITION_FOLLOWING && (s = i.lastChild()), (null != s ? s : e).focus();
 }
 i.prototype.add = function(e, t) {
   var n = {
@@ -64,13 +64,13 @@ t = this.isActive();
 return n(t, e.locks);
   });
 };
-var o = new i(),
-  s = 0,
+var s = new i(),
+  o = 0,
   l = (0, r.memo)(function() {
 var e, t = (0, r.useState)(!1),
   n = t[0];
 return e = t[1], (0, r.useEffect)(function() {
-  return o.subscribe(e);
+  return s.subscribe(e);
 }, [e]), (0, r.createElement)('div', {
   tabIndex: n ? 0 : void 0,
   style: {
@@ -88,13 +88,13 @@ _ = t.attachTo;
   void 0 === _ && (_ = document);
   var E = t.disable,
 f = (i = (0, r.useState)(function() {
-  return 'lock-' + s++;
+  return 'lock-' + o++;
 })[0], l = (0, r.useRef)(!1), (0, r.useLayoutEffect)(function() {
-  return o.add(i, function(e) {
+  return s.add(i, function(e) {
       return l.current = e;
     }),
     function() {
-      return o.remove(i);
+      return s.remove(i);
     };
 }, [i]), l);
   (0, r.useEffect)(function() {

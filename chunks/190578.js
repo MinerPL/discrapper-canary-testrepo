@@ -17,11 +17,11 @@ return 'object' == typeof t && t.constructor === Object ? (e.splice(e.length - 1
   }(e).capture ? '' : '?:') + e.map(e => t(e)).join('|') + ')';
 }
 let a = e => r(/\b/, e, /\w$/.test(e) ? /\b/ : /\B/),
-  o = [
+  s = [
 'Protocol',
 'Type'
   ].map(a),
-  s = [
+  o = [
 'init',
 'self'
   ].map(a),
@@ -256,7 +256,7 @@ m = [
 N = {
   match: [
     /\./,
-    i(...o, ...s)
+    i(...s, ...o)
   ],
   className: {
     2: 'keyword'
@@ -270,7 +270,7 @@ O = u.filter(e => 'string' == typeof e).concat(['_|0']),
 R = {
   variants: [{
     className: 'keyword',
-    match: i(...u.filter(e => 'string' != typeof e).concat(l).map(a), ...s)
+    match: i(...u.filter(e => 'string' != typeof e).concat(l).map(a), ...o)
   }]
 },
 C = {

@@ -23,15 +23,15 @@ size: function() {
 e.exports = function(e) {
   var t, n = (e = e || {}).reporter,
 a = r.getOption(e, 'async', !0),
-o = r.getOption(e, 'auto', !0);
-  o && !a && (n && n.warn('Invalid options combination. auto=true and async=false is invalid. Setting async=true.'), a = !0);
-  var s = i(),
+s = r.getOption(e, 'auto', !0);
+  s && !a && (n && n.warn('Invalid options combination. auto=true and async=false is invalid. Setting async=true.'), a = !0);
+  var o = i(),
 l = !1;
 
   function u() {
-for (l = !0; s.size();) {
-  var e = s;
-  s = i(), e.process();
+for (l = !0; o.size();) {
+  var e = o;
+  o = i(), e.process();
 }
 l = !1;
   }
@@ -45,9 +45,9 @@ return setTimeout(e, 0);
   }
   return {
 add: function(e, n) {
-  !l && o && a && 0 === s.size() && function() {
+  !l && s && a && 0 === o.size() && function() {
     t = d(u);
-  }(), s.add(e, n);
+  }(), o.add(e, n);
 },
 force: function(e) {
   if (!l)

@@ -1,14 +1,14 @@
 n.d(t, {
   n: function() {
-return a;
+return s;
   }
 });
 var i = n(996106),
-  s = n(981631);
-let a = {
+  a = n(981631);
+let s = {
   handler(e) {
 throw new i.Z({
-  errorCode: s.lTL.INVALID_COMMAND
+  errorCode: a.lTL.INVALID_COMMAND
 }, 'Deprecated command: '.concat(e.cmd));
   }
 };

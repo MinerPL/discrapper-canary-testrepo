@@ -3,18 +3,18 @@ n.d(t, {
 return g;
   },
   s: function() {
-return C;
+return p;
   }
 });
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(470167),
   o = n(481060),
   c = n(572691),
-  d = n(406432),
-  u = n(584656),
+  u = n(406432),
+  d = n(584656),
   _ = n(153124),
   E = n(810090),
   I = n(163268),
@@ -26,33 +26,33 @@ let {
   attachment: t
 } = e, {
   url: n,
-  description: a
+  description: s
 } = t;
-return null == n ? null : (0, i.jsx)(p, {
+return null == n ? null : (0, i.jsx)(f, {
   url: n,
-  description: a
+  description: s
 });
   },
-  f = e => {
-var t, n, a;
+  C = e => {
+var t, n, s;
 let {
-  embed: s
+  embed: a
 } = e;
-if (!m.n2.has(s.type))
+if (!m.n2.has(a.type))
   return null;
-let r = void 0 !== s.video && s.type !== l.h.GIFV ? s.video.url : null !== (a = null === (t = s.thumbnail) || void 0 === t ? void 0 : t.url) && void 0 !== a ? a : null === (n = s.image) || void 0 === n ? void 0 : n.url;
-return null == r ? null : (0, i.jsx)(p, {
+let r = void 0 !== a.video && a.type !== l.h.GIFV ? a.video.url : null !== (s = null === (t = a.thumbnail) || void 0 === t ? void 0 : t.url) && void 0 !== s ? s : null === (n = a.image) || void 0 === n ? void 0 : n.url;
+return null == r ? null : (0, i.jsx)(f, {
   url: r
 });
   },
-  p = e => {
+  f = e => {
 let {
   url: t,
   description: n
-} = e, a = (0, d.cb)(t);
+} = e, s = (0, u.cb)(t);
 return (0, i.jsx)('div', {
   className: h.mediaContainer,
-  children: a ? (0, i.jsx)(E.Z, {
+  children: s ? (0, i.jsx)(E.Z, {
     className: r()(h.video, h.media),
     controls: !0,
     src: t
@@ -64,8 +64,8 @@ return (0, i.jsx)('div', {
 });
   };
 
-function C(e) {
-  c.Z.pop(), (0, u.t)({
+function p(e) {
+  c.Z.pop(), (0, d.t)({
 id: 'explicit-media-false-positive-modal',
 text: T.Z.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS
   }), e();
@@ -75,14 +75,14 @@ function g(e) {
   let {
 channelId: t,
 messageId: n,
-isReportFalsePositiveLoading: s,
+isReportFalsePositiveLoading: a,
 analyticsContext: r,
 attachmentPreview: l,
 embedPreview: c,
-onConfirmPress: d,
-transitionState: u,
+onConfirmPress: u,
+transitionState: d,
 onClose: E
-  } = e, m = (0, _.Dt)(), p = a.useCallback(() => {
+  } = e, m = (0, _.Dt)(), f = s.useCallback(() => {
 (0, I.aP)({
   action: I.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
   channelId: t,
@@ -94,8 +94,8 @@ t,
 n,
 r,
 E
-  ]), C = a.useCallback(() => {
-null == d || d(), (0, I.aP)({
+  ]), p = s.useCallback(() => {
+null == u || u(), (0, I.aP)({
   action: I.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
   channelId: t,
   messageId: n,
@@ -105,9 +105,9 @@ null == d || d(), (0, I.aP)({
 t,
 n,
 r,
-d
+u
   ]);
-  return a.useEffect(() => {
+  return s.useEffect(() => {
 (0, I.aP)({
   action: I.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
   channelId: t,
@@ -119,14 +119,14 @@ t,
 n,
 r
   ]), (0, i.jsxs)(o.ModalRoot, {
-transitionState: u,
+transitionState: d,
 'aria-labelledby': m,
 size: o.ModalSize.SMALL,
 children: [
   (0, i.jsxs)(o.ModalContent, {
     children: [
       (0, i.jsx)(o.ModalCloseButton, {
-        onClick: p,
+        onClick: f,
         className: h.closeButton
       }),
       (0, i.jsx)(o.Heading, {
@@ -145,7 +145,7 @@ children: [
       null != l && (0, i.jsx)(N, {
         attachment: l
       }),
-      null != c && (0, i.jsx)(f, {
+      null != c && (0, i.jsx)(C, {
         embed: c
       })
     ]
@@ -154,19 +154,19 @@ children: [
     children: [
       (0, i.jsx)(o.Button, {
         className: h.button,
-        disabled: s,
-        submitting: s,
+        disabled: a,
+        submitting: a,
         size: o.Button.Sizes.MEDIUM,
         color: o.Button.Colors.BRAND,
-        onClick: C,
+        onClick: p,
         children: T.Z.Messages.CONFIRM
       }),
       (0, i.jsx)(o.Button, {
         className: h.button,
-        disabled: s,
+        disabled: a,
         color: o.Button.Colors.TRANSPARENT,
         size: o.Button.Sizes.MEDIUM,
-        onClick: p,
+        onClick: f,
         children: T.Z.Messages.CANCEL
       })
     ]

@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return c;
+return d;
   }
 });
 var i = t(735250),
@@ -10,7 +10,7 @@ var i = t(735250),
   o = t(481060),
   r = t(663989);
 
-function c(e) {
+function d(e) {
   let {
 children: n,
 icon: t,

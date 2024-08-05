@@ -1,12 +1,12 @@
 n.d(t, {
   n_: function() {
-return s;
+return o;
   }
 });
 var r = n(470079),
   i = n(721535),
   a = n(275857);
-class o {
+class s {
   *[Symbol.iterator]() {
 yield* this.iterable;
   }
@@ -58,10 +58,10 @@ this.lastKey = null == t ? void 0 : t.key;
   }
 }
 
-function s(e) {
+function o(e) {
   let {
 filter: t
-  } = e, n = (0, i.q)(e), s = (0, r.useMemo)(() => e.disabledKeys ? new Set(e.disabledKeys) : new Set(), [e.disabledKeys]), l = (0, r.useCallback)(e => new o(t ? t(e) : e), [t]), u = (0, r.useMemo)(() => ({
+  } = e, n = (0, i.q)(e), o = (0, r.useMemo)(() => e.disabledKeys ? new Set(e.disabledKeys) : new Set(), [e.disabledKeys]), l = (0, r.useCallback)(e => new s(t ? t(e) : e), [t]), u = (0, r.useMemo)(() => ({
 suppressTextValueWarning: e.suppressTextValueWarning
   }), [e.suppressTextValueWarning]), c = (0, a.Kx)(e, l, u), d = (0, r.useMemo)(() => new i.Z(c, n), [
 c,
@@ -80,13 +80,13 @@ if (null != n.focusedKey && !c.getItem(n.focusedKey)) {
       return 'item' === t.type ? t : null;
     }).filter(e => null !== e),
     a = r.length - i.length,
-    o = Math.min(a > 1 ? Math.max(t.index - a + 1, 0) : t.index, i.length - 1);
-  for (; o >= 0;) {
-    if (!d.isDisabled(i[o].key)) {
-      e = i[o];
+    s = Math.min(a > 1 ? Math.max(t.index - a + 1, 0) : t.index, i.length - 1);
+  for (; s >= 0;) {
+    if (!d.isDisabled(i[s].key)) {
+      e = i[s];
       break;
     }
-    o < i.length - 1 ? o++ : (o > t.index && (o = t.index), o--);
+    s < i.length - 1 ? s++ : (s > t.index && (s = t.index), s--);
   }
   n.setFocusedKey(e ? e.key : null);
 }
@@ -98,7 +98,7 @@ n,
 n.focusedKey
   ]), {
 collection: c,
-disabledKeys: s,
+disabledKeys: o,
 selectionManager: d
   };
 }

@@ -7,9 +7,9 @@ if ('formatting' === (null != n && n.context ? String(n.context) : 'standalone')
     a = null != n && n.width ? String(n.width) : i;
   r = e.formattingValues[a] || e.formattingValues[i];
 } else {
-  var o = e.defaultWidth,
-    s = null != n && n.width ? String(n.width) : e.defaultWidth;
-  r = e.values[s] || e.values[o];
+  var s = e.defaultWidth,
+    o = null != n && n.width ? String(n.width) : e.defaultWidth;
+  r = e.values[o] || e.values[s];
 }
 return r[e.argumentCallback ? e.argumentCallback(t) : t];
   };

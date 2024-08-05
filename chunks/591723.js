@@ -6,8 +6,8 @@ return E;
 var r = n(573654),
   i = n(40284),
   a = n(481732),
-  o = n(478413),
-  s = n(919513),
+  s = n(478413),
+  o = n(919513),
   l = n(158851);
 
 function u(e, t) {
@@ -27,9 +27,9 @@ r[n] = e[n];
 function d(e) {
   switch (e[0]) {
 case 'S':
-  return o.t.SOURCE;
+  return s.t.SOURCE;
 case 'T':
-  return o.t.TARGET;
+  return s.t.TARGET;
 default:
   (0, r.k)(!1, 'Cannot parse handler ID: '.concat(e));
   }
@@ -39,9 +39,9 @@ function _(e, t) {
   var n = e.entries(),
 r = !1;
   do {
-var i, a, o = n.next(),
-  s = o.done;
-if ((i = o.value, a = 2, function(e) {
+var i, a, s = n.next(),
+  o = s.done;
+if ((i = s.value, a = 2, function(e) {
     if (Array.isArray(e))
       return e;
   }(i) || function(e, t) {
@@ -51,12 +51,12 @@ if ((i = o.value, a = 2, function(e) {
         i = !1,
         a = void 0;
       try {
-        for (var o, s = e[Symbol.iterator](); !(r = (o = s.next()).done) && (n.push(o.value), !t || n.length !== t); r = !0);
+        for (var s, o = e[Symbol.iterator](); !(r = (s = o.next()).done) && (n.push(s.value), !t || n.length !== t); r = !0);
       } catch (e) {
         i = !0, a = e;
       } finally {
         try {
-          !r && null != s.return && s.return();
+          !r && null != o.return && o.return();
         } finally {
           if (i)
             throw a;
@@ -78,7 +78,7 @@ if ((i = o.value, a = 2, function(e) {
     throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
   }())[1] === t)
   return !0;
-r = !!s;
+r = !!o;
   } while (!r);
   return !1;
 }
@@ -94,16 +94,16 @@ var E = function() {
   return e = c, t = [{
   key: 'addSource',
   value: function(e, t) {
-    (0, s.sM)(e), (0, s.up)(t);
-    var n = this.addHandler(o.t.SOURCE, e, t);
+    (0, o.sM)(e), (0, o.up)(t);
+    var n = this.addHandler(s.t.SOURCE, e, t);
     return this.store.dispatch((0, i.j1)(n)), n;
   }
 },
 {
   key: 'addTarget',
   value: function(e, t) {
-    (0, s.sM)(e, !0), (0, s.JP)(t);
-    var n = this.addHandler(o.t.TARGET, e, t);
+    (0, o.sM)(e, !0), (0, o.JP)(t);
+    var n = this.addHandler(s.t.TARGET, e, t);
     return this.store.dispatch((0, i.jn)(n)), n;
   }
 },
@@ -141,13 +141,13 @@ var E = function() {
 {
   key: 'isSourceId',
   value: function(e) {
-    return d(e) === o.t.SOURCE;
+    return d(e) === s.t.SOURCE;
   }
 },
 {
   key: 'isTargetId',
   value: function(e) {
-    return d(e) === o.t.TARGET;
+    return d(e) === s.t.TARGET;
   }
 },
 {
@@ -184,15 +184,15 @@ var E = function() {
     var r = function(e) {
       var t = (0, a.p)().toString();
       switch (e) {
-        case o.t.SOURCE:
+        case s.t.SOURCE:
           return 'S'.concat(t);
-        case o.t.TARGET:
+        case s.t.TARGET:
           return 'T'.concat(t);
         default:
           throw Error('Unknown Handler Role: '.concat(e));
       }
     }(e);
-    return this.types.set(r, t), e === o.t.SOURCE ? this.dragSources.set(r, n) : e === o.t.TARGET && this.dropTargets.set(r, n), r;
+    return this.types.set(r, t), e === s.t.SOURCE ? this.dragSources.set(r, n) : e === s.t.TARGET && this.dropTargets.set(r, n), r;
   }
 }
   ], u(e.prototype, t), c;

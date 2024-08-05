@@ -19,9 +19,9 @@ var r = n(442837),
   i = n(695346);
 n(199902);
 var a = n(314897),
-  o = n(592125);
+  s = n(592125);
 n(944486);
-var s = n(885110),
+var o = n(885110),
   l = n(770471);
 
 function u() {
@@ -33,7 +33,7 @@ function u() {
 }, {
   autoTrackExposure: !1
 }),
-n = (0, r.e7)([s.Z], () => s.Z.getBroadcast());
+n = (0, r.e7)([o.Z], () => o.Z.getBroadcast());
   return t && (null == n ? void 0 : n.userId) === e ? n : null;
 }
 
@@ -43,7 +43,7 @@ function c() {
 
 function d(e) {
   let t = u(),
-n = (0, r.e7)([o.Z], () => o.Z.getChannel(e));
+n = (0, r.e7)([s.Z], () => s.Z.getChannel(e));
   return null != t && null != n && n.ownerId === t.userId && n.isBroadcastChannel();
 }
 
@@ -56,10 +56,10 @@ function _(e) {
 }, {
   autoTrackExposure: !1
 }),
-r = s.Z.getBroadcast();
+r = o.Z.getBroadcast();
   if (!n || null == r || r.userId !== t)
 return !1;
-  let i = o.Z.getChannel(e);
+  let i = s.Z.getChannel(e);
   return null != i && i.ownerId === r.userId && i.isBroadcastChannel();
 }
 

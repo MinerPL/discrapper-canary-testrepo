@@ -1,6 +1,6 @@
 n(47120);
-var r, i, a, o, s = n(512722),
-  l = n.n(s),
+var r, i, a, s, o = n(512722),
+  l = n.n(o),
   u = n(442837),
   c = n(570140),
   d = n(830917);
@@ -46,12 +46,12 @@ let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, d.U
 return f(e).windowSize;
   }
 }
-o = 'WindowStore', (a = 'displayName') in(i = h) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'WindowStore', (a = 'displayName') in(i = h) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o;
+}) : i[a] = s;
 let p = new h(c.Z, {
   WINDOW_INIT: function(e) {
 l()(!E.has(e.windowId), 'Window initialized multiple times');

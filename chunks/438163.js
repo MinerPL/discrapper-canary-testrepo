@@ -1,13 +1,13 @@
 n.d(t, {
   Z: function() {
-return D;
+return y;
   }
 }), n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(338545),
+  s = n.n(a),
+  o = n(338545),
   l = n(442837),
   u = n(846519),
   c = n(481060),
@@ -20,165 +20,163 @@ var r = n(735250),
   m = n(158776),
   I = n(785717),
   T = n(277085),
-  g = n(825801),
-  S = n(228168),
-  A = n(981631),
-  N = n(689938),
-  v = n(230891);
-let O = 'text-sm/medium',
-  R = 36,
-  C = 144;
+  g = n(228168),
+  S = n(981631),
+  A = n(689938),
+  N = n(230891);
+let v = 'text-sm/medium',
+  O = 36,
+  R = 144;
 
-function y(e) {
+function C(e) {
   var t;
   let {
 statusActivity: a,
 profileType: h,
 editEnabled: p,
-reactReplyEnabled: m,
-hasEntered: A = !0,
-animate: y = !0,
-onClose: D
+hasEntered: m = !0,
+animate: S = !0,
+onClose: C
   } = e, {
-analyticsLocations: L
+analyticsLocations: y
   } = (0, f.ZP)(E.Z.PROFILE_CUSTOM_STATUS), {
-trackUserProfileAction: b
-  } = (0, I.KZ)(), M = (0, l.e7)([_.Z], () => _.Z.useReducedMotion), [P] = i.useState(() => new u.V7()), [U, w] = i.useState(!0), x = i.useRef(null), G = i.useRef(null), k = i.useRef(null), B = i.useRef(null), {
-emoji: F,
-state: V
-  } = null != a ? a : {}, H = null != V && '' !== V ? V : null, Z = null != H && H.length > 0, Y = null != F, j = Y && !Z, W = Y ? 1.25 : 0, K = 18 + W, z = C + W, q = R + W, Q = Y || Z, X = p && !Q, $ = p && Q, J = m && Q, [ee, et] = i.useState(j), [en, er] = i.useState(!j), [ei, ea] = i.useState(!1);
+trackUserProfileAction: D
+  } = (0, I.KZ)(), L = (0, l.e7)([_.Z], () => _.Z.useReducedMotion), [b] = i.useState(() => new u.V7()), [M, P] = i.useState(!0), U = i.useRef(null), w = i.useRef(null), x = i.useRef(null), G = i.useRef(null), {
+emoji: k,
+state: B
+  } = null != a ? a : {}, F = null != B && '' !== B ? B : null, V = null != F && F.length > 0, H = null != k, Z = H && !V, Y = H ? 1.25 : 0, j = 18 + Y, W = R + Y, K = O + Y, z = H || V, q = p && !z, Q = p && z, [X, $] = i.useState(Z), [J, ee] = i.useState(!Z), [et, en] = i.useState(!1);
   i.useLayoutEffect(() => {
-if (null == x.current || j)
+if (null == U.current || Z)
   return;
-let e = x.current.getBoundingClientRect().height;
-if (et(j || e <= K), A) {
+let e = U.current.getBoundingClientRect().height;
+if ($(Z || e <= j), m) {
   var t, n, r, i;
-  let e = null !== (r = null === (t = x.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== r ? r : z,
-    a = null !== (i = null === (n = k.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== i ? i : q;
-  er(!j && e > a), G.current = e, B.current = a;
+  let e = null !== (r = null === (t = U.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== r ? r : W,
+    a = null !== (i = null === (n = x.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== i ? i : K;
+  ee(!Z && e > a), w.current = e, G.current = a;
 }
   }, [
-A,
+m,
+Z,
 j,
-K,
-z,
-q
+W,
+K
   ]);
-  let [eo, es] = (0, s.useSpring)(() => ({
-maxHeight: ''.concat(q, 'px'),
+  let [er, ei] = (0, c.useSpring)(() => ({
+maxHeight: ''.concat(K, 'px'),
 config: {
   clamp: !0,
-  duration: M ? 0 : 150
+  duration: 150
 }
   }));
-  if (i.useEffect(() => () => P.stop(), [P]), !Q && !X)
+  if (i.useEffect(() => () => b.stop(), [b]), !z && !q)
 return null;
-  let el = e => {
+  let ea = e => {
   var t, n;
-  if (!!en) {
+  if (!!J) {
     if (e) {
-      let e = Math.min(null !== (t = G.current) && void 0 !== t ? t : z, z);
-      es({
+      let e = Math.min(null !== (t = w.current) && void 0 !== t ? t : W, W);
+      ei({
         maxHeight: ''.concat(e, 'px'),
-        delay: M ? 0 : 300,
+        delay: L ? 0 : 300,
         config: {
           clamp: !0,
-          duration: M ? 0 : 150
+          duration: L ? 0 : 150
         }
       });
     } else {
-      let e = Math.min(null !== (n = B.current) && void 0 !== n ? n : q, q);
-      es({
+      let e = Math.min(null !== (n = G.current) && void 0 !== n ? n : K, K);
+      ei({
         maxHeight: ''.concat(e, 'px'),
         delay: 0
       });
     }
-    if (M) {
-      w(!e);
+    if (L) {
+      P(!e);
       return;
     }
-    P.start(e ? 300 : 150, () => {
-      w(!e);
+    b.start(e ? 300 : 150, () => {
+      P(!e);
     });
   }
 },
-eu = () => Y ? (0, r.jsx)(d.I, {
-  className: Z ? v.statusEmojiInline : v.statusEmojiOnly,
-  emoji: F,
-  animate: y,
+es = () => H ? (0, r.jsx)(d.I, {
+  className: V ? N.statusEmojiInline : N.statusEmojiOnly,
+  emoji: k,
+  animate: S,
   hideTooltip: !1,
-  tooltipDelay: S.vB
+  tooltipDelay: g.vB
 }) : null,
-ec = () => Z ? (0, r.jsx)(c.Text, {
-  variant: O,
-  className: v.statusText,
-  children: H
+eo = () => V ? (0, r.jsx)(c.Text, {
+  variant: v,
+  className: N.statusText,
+  children: F
 }) : null,
-ed = () => (0, r.jsxs)('div', {
-  className: v.content,
+el = () => (0, r.jsxs)('div', {
+  className: N.content,
   children: [
     (0, r.jsx)(c.CirclePlusIcon, {
-      className: v.addStatusIcon,
-      colorClass: v.addStatusIconColor
+      className: N.addStatusIcon,
+      colorClass: N.addStatusIconColor
     }),
     (0, r.jsx)(c.Text, {
-      variant: O,
-      className: v.addStatusPrompt,
-      children: N.Z.Messages.USER_SETTINGS_ADD_STATUS
+      variant: v,
+      className: N.addStatusPrompt,
+      children: A.Z.Messages.USER_SETTINGS_ADD_STATUS
     })
   ]
 }),
-e_ = {
-  [v.biteSize]: h === S.y0.BITE_SIZE,
-  [v.fullSize]: h === S.y0.FULL_SIZE,
-  [v.panel]: h === S.y0.PANEL
+eu = {
+  [N.biteSize]: h === g.y0.BITE_SIZE,
+  [N.fullSize]: h === g.y0.FULL_SIZE,
+  [N.panel]: h === g.y0.PANEL
 },
-eE = o()(v.background, {
-  [v.editable]: $
+ec = s()(N.background, {
+  [N.editable]: Q
 }),
-ef = o()({
-  [v.statusBubbleShape]: !Z && Y || !ee,
-  [v.statusBubbleSingleLineWithTextShape]: ee && Z || X
+ed = s()({
+  [N.statusBubbleShape]: !V && H || !X,
+  [N.statusBubbleSingleLineWithTextShape]: X && V || q
 }),
-eh = o()(v.statusBubbleOuter, e_, ef, {
-  [v.statusBubbleOuterAddStatusCursor]: X
+e_ = s()(N.statusBubbleOuter, eu, ed, {
+  [N.statusBubbleOuterAddStatusCursor]: q
 }),
-ep = o()(v.statusBubble, ef, {
-  [v.statusBubbleEmojiOnlyPadding]: j,
-  [v.statusBubbleWithTextPadding]: Z || X,
-  [v.statusBubbleWithTextMinWidth]: Z,
-  [v.statusBubbleCopyStatusCursor]: Q
+eE = s()(N.statusBubble, ed, {
+  [N.statusBubbleEmojiOnlyPadding]: Z,
+  [N.statusBubbleWithTextPadding]: V || q,
+  [N.statusBubbleWithTextMinWidth]: V,
+  [N.statusBubbleCopyStatusCursor]: z
 });
   return (0, r.jsx)(f.Gt, {
-value: L,
+value: y,
 children: (0, r.jsxs)('div', {
   children: [
     (0, r.jsx)('div', {
-      className: o()(v.invisibleContainer, e_),
+      className: s()(N.invisibleContainer, eu),
       children: (0, r.jsx)('div', {
-        className: eh,
+        className: e_,
         children: (0, r.jsxs)('span', {
-          className: ep,
+          className: eE,
           children: [
-            X && ed(),
-            Q && (0, r.jsxs)('div', {
-              className: o()(v.content, v.clamp, v.placeholderWidth, {
-                [v.panel]: h === S.y0.PANEL
-              }),
-              ref: k,
-              children: [
-                eu(),
-                ec()
-              ]
-            }),
-            Q && (0, r.jsxs)('div', {
-              className: o()(v.content, v.unclamp, v.placeholderWidth, v.incorporeal, {
-                [v.panel]: h === S.y0.PANEL
+            q && el(),
+            z && (0, r.jsxs)('div', {
+              className: s()(N.content, N.clamp, N.placeholderWidth, {
+                [N.panel]: h === g.y0.PANEL
               }),
               ref: x,
               children: [
-                eu(),
-                ec()
+                es(),
+                eo()
+              ]
+            }),
+            z && (0, r.jsxs)('div', {
+              className: s()(N.content, N.unclamp, N.placeholderWidth, N.incorporeal, {
+                [N.panel]: h === g.y0.PANEL
+              }),
+              ref: U,
+              children: [
+                es(),
+                eo()
               ]
             })
           ]
@@ -186,74 +184,70 @@ children: (0, r.jsxs)('div', {
       })
     }),
     (0, r.jsxs)(c.ClickableContainer, {
-      className: o()(v.visibleContainer, e_, eE),
-      'aria-label': X ? N.Z.Messages.CUSTOM_STATUS_ADD_CUSTOM_STATUS_A11Y_LABEL : N.Z.Messages.CUSTOM_STATUS_CUSTOM_STATUS_A11Y_LABEL.format({
-        emoji: null !== (t = null == F ? void 0 : F.name) && void 0 !== t ? t : '',
-        status: V
+      className: s()(N.visibleContainer, eu, ec),
+      'aria-label': q ? A.Z.Messages.CUSTOM_STATUS_ADD_CUSTOM_STATUS_A11Y_LABEL : A.Z.Messages.CUSTOM_STATUS_CUSTOM_STATUS_A11Y_LABEL.format({
+        emoji: null !== (t = null == k ? void 0 : k.name) && void 0 !== t ? t : '',
+        status: B
       }),
       focusProps: {
-        ringClassName: ef
+        ringClassName: ed
       },
-      onClick: X ? () => {
-        b({
+      onClick: q ? () => {
+        D({
           action: 'PRESS_ADD_CUSTOM_STATUS'
-        }), null == D || D(), (0, c.openModalLazy)(async () => {
+        }), null == C || C(), (0, c.openModalLazy)(async () => {
           let {
             default: e
           } = await n.e('51714').then(n.bind(n, 211065));
           return t => (0, r.jsx)(e, {
             ...t,
-            sourceAnalyticsLocations: L
+            sourceAnalyticsLocations: y
           });
         });
       } : void 0,
       onFocus: () => {
-        ea(!0), el(!0);
+        en(!0), ea(!0);
       },
       onBlur: e => {
-        !e.currentTarget.contains(e.relatedTarget) && (ea(!1), el(!1));
+        !e.currentTarget.contains(e.relatedTarget) && (en(!1), ea(!1));
       },
       onMouseOver: () => {
-        b({
+        D({
           action: 'HOVER_CUSTOM_STATUS'
-        }), ea(!0), el(!0);
+        }), en(!0), ea(!0);
       },
       onMouseLeave: () => {
-        ea(!1), el(!1);
+        en(!1), ea(!1);
       },
       children: [
         (0, r.jsx)('div', {
-          className: eh,
+          className: e_,
           children: (0, r.jsxs)('span', {
-            className: ep,
+            className: eE,
             children: [
-              Q && (() => {
-                let e = o()(v.content, {
-                  [v.clamp]: U,
-                  [v.unclamp]: !U,
-                  [v.singleLineAlign]: ee
+              z && (() => {
+                let e = s()(N.content, {
+                  [N.clamp]: M,
+                  [N.unclamp]: !M,
+                  [N.singleLineAlign]: X
                 });
-                return (0, r.jsxs)(s.animated.div, {
-                  style: eo,
+                return (0, r.jsxs)(o.animated.div, {
+                  style: er,
                   className: e,
                   children: [
-                    eu(),
-                    ec()
+                    es(),
+                    eo()
                   ]
                 });
               })(),
-              X && ed()
+              q && el()
             ]
           })
         }),
-        J && (0, r.jsx)(g.Z, {
-          isVisible: ei,
-          isExpandable: en
-        }),
-        $ && (0, r.jsx)(T.Z, {
-          isVisible: ei,
-          isExpandable: en,
-          onClose: D
+        Q && (0, r.jsx)(T.Z, {
+          isVisible: et,
+          isExpandable: J,
+          onClose: C
         })
       ]
     })
@@ -262,22 +256,20 @@ children: (0, r.jsxs)('div', {
   });
 }
 
-function D(e) {
+function y(e) {
   let {
 user: t,
 editEnabled: n,
-reactReplyEnabled: i,
-...a
-  } = e, o = (0, l.e7)([p.default], () => p.default.getId() === t.id), s = (0, h.a)(), u = (0, l.e7)([m.Z], () => m.Z.findActivity(t.id, e => {
+...i
+  } = e, a = (0, l.e7)([p.default], () => p.default.getId() === t.id), s = (0, h.a)(), o = (0, l.e7)([m.Z], () => m.Z.findActivity(t.id, e => {
 let {
   type: t
 } = e;
-return t === A.IIU.CUSTOM_STATUS;
+return t === S.IIU.CUSTOM_STATUS;
   }));
-  return (0, r.jsx)(y, {
-reactReplyEnabled: i && !o,
-editEnabled: n && o,
-statusActivity: n && o ? s : u,
-...a
+  return (0, r.jsx)(C, {
+editEnabled: n && a,
+statusActivity: n && a ? s : o,
+...i
   });
 }

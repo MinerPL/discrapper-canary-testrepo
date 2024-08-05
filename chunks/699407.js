@@ -7,7 +7,7 @@ return h;
 return I;
   }
 }), n(177593), n(733860), n(47120), n(653041), n(17089);
-var o, s = n(756647),
+var s, o = n(756647),
   l = n(442837),
   u = n(544891),
   c = n(761609);
@@ -21,7 +21,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 let _ = 1500,
-  E = null !== (o = window.requestIdleCallback) && void 0 !== o ? o : e => setImmediate(() => e()),
+  E = null !== (s = window.requestIdleCallback) && void 0 !== s ? s : e => setImmediate(() => e()),
   f = new c.R(),
   h = {
 handleConnectionOpen: () => {},
@@ -37,7 +37,7 @@ sessionId: void 0
 let {
   dispatcher: t,
   actionHandler: n,
-  getFingerprint: o,
+  getFingerprint: s,
   getSessionId: c = m,
   TRACKING_URL: I,
   drainTimeoutOverride: T,
@@ -46,7 +46,7 @@ let {
 _ = null != T ? T : 1500;
 
 function S() {
-  return 0 !== p.length && (null != i ? null != r : null != o());
+  return 0 !== p.length && (null != i ? null != r : null != s());
 }
 
 function A() {
@@ -124,8 +124,8 @@ h.handleConnectionOpen = function(e) {
     }, d = function(e) {
       if (null != i)
         return i;
-      let t = e.fingerprint || o();
-      return null != t ? (0, s.s)(t) : null;
+      let t = e.fingerprint || s();
+      return null != t ? (0, o.s)(t) : null;
     }(c);
     null != d && (c.properties.client_uuid = f.generate(d)), p.push(c);
     p.length > 10000 && (p = p.slice(-10000)), r ? N() : A();

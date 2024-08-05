@@ -1,5 +1,5 @@
 n(610138), n(216116), n(78328), n(815648), n(47120), n(177593);
-var r, i, a, o, s, l, u, c = n(735250);
+var r, i, a, s, o, l, u, c = n(735250);
 n(92138), n(470079);
 var d = n(202226),
   _ = n(512722),
@@ -26,17 +26,20 @@ var d = n(202226),
   P = n(896361),
   U = n(892254);
 n(575335);
-var w = n(562101),
-  x = n(44163),
-  G = n(710845);
-let k = 5 * n(70956).Z.Millis.MINUTE,
-  B = document.getElementById('app-mount');
-E()(null != B, 'Could not find app-mount'), B.className = __OVERLAY__ ? '' : w.appMount;
-let F = (0, d.createRoot)(B),
-  V = {
+var w = n(857192),
+  x = n(562101),
+  G = n(44163),
+  k = n(710845),
+  B = n(70956);
+w.default.cssDebuggingEnabled && n.e('59051').then(n.bind(n, 459645));
+let F = 5 * B.Z.Millis.MINUTE,
+  V = document.getElementById('app-mount');
+E()(null != V, 'Could not find app-mount'), V.className = __OVERLAY__ ? '' : x.appMount;
+let H = (0, d.createRoot)(V),
+  Z = {
 '/oauth2/authorize': R.Z
   },
-  H = e => F.render((0, c.jsx)(U.Z, {
+  Y = e => H.render((0, c.jsx)(U.Z, {
 children: (0, c.jsx)(P.Z, {
   children: (0, c.jsx)(e, {})
 })
@@ -48,7 +51,7 @@ setImmediate(() => {
 });
   });
   let e = null === (i = (a = M.Z.remoteApp).getVersion) || void 0 === i ? void 0 : i.call(a),
-t = null === (o = (s = M.Z.remoteApp).getBuildNumber) || void 0 === o ? void 0 : o.call(s),
+t = null === (s = (o = M.Z.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(o),
 n = {};
   null != M.Z.remoteApp.getModuleVersions && (n = M.Z.remoteApp.getModuleVersions()), S.Z.setExtra({
 hostVersion: e,
@@ -57,18 +60,18 @@ moduleVersions: n
 nativeBuildNumber: null == t ? void 0 : t.toString()
   });
   let c = Object.keys(n).filter(e => null != n[e]).map(e => ''.concat(e, ': ').concat(n[e])).join(', ');
-  new G.Z().log('[NATIVE INFO] host '.concat(e, ', modules: ').concat(c, ', build: ').concat(t));
+  new k.Z().log('[NATIVE INFO] host '.concat(e, ', modules: ').concat(c, ', build: ').concat(t));
   let d = null === (l = (u = M.Z.remoteApp).getReleaseChannel) || void 0 === l ? void 0 : l.call(u);
   ('canary' === d || 'development' === d) && v.ZP.pauseFrameEvictor(), v.ZP.initializeExitHook();
 }
 if ((0, L.O)(window), __OVERLAY__)
-  H(f.Z.Overlay);
+  Y(f.Z.Overlay);
 else if (null != window.require && null == window.DiscordNative)
-  H(f.Z.OutdatedClient);
+  Y(f.Z.OutdatedClient);
 else {
   if (document.addEventListener('scroll', e => e.preventDefault()), C.isPlatformEmbedded) {
 window.onbeforeunload = () => v.ZP.beforeUnload(), v.ZP.on('HELP_OPEN', () => window.open(A.Z.getCommunityURL()));
-let e = new b.sW(k, () => v.ZP.purgeMemory());
+let e = new b.sW(F, () => v.ZP.purgeMemory());
 v.ZP.on('MAIN_WINDOW_BLUR', () => {
   e.delay(), v.ZP.setFocused(!1), (0, D.T_)(window, !1);
 }), v.ZP.on('MAIN_WINDOW_FOCUS', () => {
@@ -76,11 +79,11 @@ v.ZP.on('MAIN_WINDOW_BLUR', () => {
 }), v.ZP.on('MAIN_WINDOW_PATH', function(e, t, n) {
   var r;
   let i = null != n ? new URLSearchParams(n) : null;
-  if (null === (r = V[t]) || void 0 === r ? !void 0 : !r.call(V, i))
+  if (null === (r = Z[t]) || void 0 === r ? !void 0 : !r.call(Z, i))
     (0, y.uL)(t);
 }), v.ZP.on('MAIN_WINDOW_HIDDEN', () => {
   (0, D.al)(window);
 });
   }
-  I.Z.initialize(), h.Z.initialize(), p.Z.init(), g.Z.init(), x.Z.init(), m.Z.initialize(), N.Z.initialize(), O.Z.initialize(), T.j(), H(f.Z.App);
+  I.Z.initialize(), h.Z.initialize(), p.Z.init(), g.Z.init(), G.Z.init(), m.Z.initialize(), N.Z.initialize(), O.Z.initialize(), T.j(), Y(f.Z.App);
 }

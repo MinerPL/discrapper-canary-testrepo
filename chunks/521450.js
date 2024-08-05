@@ -13,8 +13,8 @@ var s = n(735250),
   I = n(981631),
   R = n(930441),
   C = n(689938),
-  p = n(595376),
-  g = n(549856);
+  g = n(595376),
+  p = n(549856);
 t.Z = () => {
   let e = T.Ex.useSetting(),
 {
@@ -24,7 +24,7 @@ t.Z = () => {
   return a.useEffect(() => {
 null == n && (0, u.Y7)();
   }, [n]), (0, s.jsxs)('div', {
-className: p.container,
+className: g.container,
 children: [
   (0, s.jsx)(d.Text, {
     variant: 'eyebrow',
@@ -32,7 +32,7 @@ children: [
     children: C.Z.Messages.FAMILY_CENTER_SETTINGS_FORM_TITLE
   }),
   (0, s.jsx)(d.FormSwitch, {
-    className: i()(g.marginTop8, g.marginBottom20),
+    className: i()(p.marginTop8, p.marginBottom20),
     value: e,
     note: C.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
     hideBorder: !0,
@@ -40,7 +40,7 @@ children: [
     children: C.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH
   }),
   e ? (0, s.jsx)(d.Card, {
-    className: p.enableCard,
+    className: g.enableCard,
     type: d.Card.Types.CUSTOM,
     outline: !0,
     children: (0, s.jsxs)(o.k, {
@@ -67,14 +67,14 @@ children: [
         }),
         (0, s.jsx)(d.IconBadge, {
           icon: d.ArrowSmallRightIcon,
-          className: p.arrow,
+          className: g.arrow,
           disableColor: !0
         })
       ]
     })
   }) : null,
   (0, s.jsx)(d.FormSwitch, {
-    className: i()(g.marginTop20, g.marginBottom20),
+    className: i()(p.marginTop20, p.marginBottom20),
     value: !!t[R.$Z.FAMILY_CENTER_DIGEST],
     note: C.Z.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
     hideBorder: !0,

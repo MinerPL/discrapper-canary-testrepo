@@ -8,8 +8,8 @@ return c;
 });
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(740547);
 
 function u(e, t, n) {
@@ -36,11 +36,11 @@ let {
   editable: n,
   type: r,
   className: a,
-  outline: o,
+  outline: s,
   ...u
 } = this.props;
-return o ? e = l.outline : r === c.PRIMARY && n && (e = l.editable), (0, i.jsx)('div', {
-  className: s()(a, r, e),
+return s ? e = l.outline : r === c.PRIMARY && n && (e = l.editable), (0, i.jsx)('div', {
+  className: o()(a, r, e),
   ...u,
   children: t
 });

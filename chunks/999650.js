@@ -13,9 +13,9 @@ return q;
   }
 }), n(47120), n(733860);
 var r, i, a = n(658722),
-  o = n.n(a),
-  s = n(392711),
-  l = n.n(s),
+  s = n.n(a),
+  o = n(392711),
+  l = n.n(o),
   u = n(913527),
   c = n.n(u),
   d = n(346610),
@@ -150,7 +150,7 @@ key: ''.concat(n, '-').concat(e.text)
 
 function H(e, t, n) {
   let r = e.toLocaleLowerCase();
-  return l()(n).filter(e => o()(r, e.toLocaleLowerCase())).take(t).map(e => ({
+  return l()(n).filter(e => s()(r, e.toLocaleLowerCase())).take(t).map(e => ({
 text: e
   })).value();
 }
@@ -159,7 +159,7 @@ function Z(e, t) {
   let n, r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
 i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
 a = f.Z.getSearchType(t),
-o = {
+s = {
   query: e = e.split('#')[0],
   limit: r,
   request: i
@@ -167,13 +167,13 @@ o = {
   switch (a) {
 case A.aib.GUILD:
   n = T.ZP.queryGuildUsers({
-    ...o,
+    ...s,
     guildId: t
   });
   break;
 case A.aib.CHANNEL:
   n = T.ZP.queryChannelUsers({
-    ...o,
+    ...s,
     channelId: t
   });
   break;
@@ -214,7 +214,7 @@ function z() {
   Object.assign(K, function() {
 let {
   canForwardMessages: e
-} = d.w.getCurrentConfig({
+} = (0, d.WT)({
   location: 'SearchTokens'
 }, {
   autoTrackExposure: !1
@@ -427,7 +427,7 @@ text: K[e].key
 let {
   text: n
 } = t;
-return o()(e.toLowerCase(), n);
+return s()(e.toLowerCase(), n);
   }).take(t).value();
 }
 t.ZP = K;

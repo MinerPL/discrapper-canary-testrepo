@@ -18,8 +18,8 @@ return function(t, n, r) {
 };
   }(),
   a = n(470079),
-  o = n(214438),
-  s = n(752934);
+  s = n(214438),
+  o = n(752934);
 e.exports = function(e) {
   var t = 'node',
 n = function(n) {
@@ -54,7 +54,7 @@ n = function(n) {
     {
       key: 'setNativeProps',
       value: function(e) {
-        !1 === s.current(this.refs[t], e, this) && this.forceUpdate();
+        !1 === o.current(this.refs[t], e, this) && this.forceUpdate();
       }
     },
     {
@@ -68,8 +68,8 @@ n = function(n) {
       value: function(e) {
         var n = this,
           r = this._propsAnimated;
-        this._propsAnimated = new o(e, function() {
-          !1 === s.current(n.refs[t], n._propsAnimated.__getAnimatedValue(), n) && n.forceUpdate();
+        this._propsAnimated = new s(e, function() {
+          !1 === o.current(n.refs[t], n._propsAnimated.__getAnimatedValue(), n) && n.forceUpdate();
         }), r && r.__detach();
       }
     },
@@ -84,7 +84,7 @@ n = function(n) {
       value: function() {
         var n = this._propsAnimated.__getValue(),
           i = n.style,
-          o = function(e, t) {
+          s = function(e, t) {
             var n = {};
             for (var r in e) {
               if (!(t.indexOf(r) >= 0))
@@ -92,8 +92,8 @@ n = function(n) {
             }
             return n;
           }(n, ['style']);
-        return a.createElement(e, r({}, o, {
-          style: s.transformStyles(i),
+        return a.createElement(e, r({}, s, {
+          style: o.transformStyles(i),
           ref: t,
           __source: {
             fileName: 'src/createAnimatedComponent.js',

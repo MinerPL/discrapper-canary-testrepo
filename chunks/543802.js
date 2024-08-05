@@ -17,5 +17,8 @@ e.exports = {
   tooltipHoverBridge: 'tooltipHoverBridge_ac1501',
   tooltipContentWrapper: 'tooltipContentWrapper_ac1501',
   traitsTooltip: 'traitsTooltip_ac1501',
-  trait: 'trait_ac1501'
+  trait: 'trait_ac1501',
+  backToDiscovery: 'backToDiscovery_ac1501',
+  backArrow: 'backArrow_ac1501',
+  savedInnerContainer: 'savedInnerContainer_ac1501'
 };

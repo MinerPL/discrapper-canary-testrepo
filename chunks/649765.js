@@ -4,8 +4,8 @@ return d;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(481060),
+  a = n(470079),
+  s = n(481060),
   r = n(119269),
   l = n(227140),
   o = n(689938),
@@ -31,11 +31,11 @@ children: [
   (0, i.jsxs)('div', {
     className: c.coachtipContent,
     children: [
-      (0, i.jsx)(a.Heading, {
+      (0, i.jsx)(s.Heading, {
         variant: 'heading-sm/bold',
         children: o.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS
       }),
-      (0, i.jsx)(a.Text, {
+      (0, i.jsx)(s.Text, {
         variant: 'text-xs/normal',
         children: o.Z.Messages.REFERRAL_PROGRAM_HOME_BADGE_SUBHEADER.format({
           numReferrals: 3
@@ -45,7 +45,7 @@ children: [
   })
 ]
   });
-  return (0, i.jsx)(a.Tooltip, {
+  return (0, i.jsx)(s.Tooltip, {
 text: n,
 position: 'right',
 'aria-label': o.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
@@ -63,7 +63,7 @@ t.Z = e => {
 isSelected: t,
 onSelect: n
   } = e;
-  return s.useEffect(() => {
+  return a.useEffect(() => {
 t && n();
   }, [
 t,

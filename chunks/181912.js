@@ -7,16 +7,16 @@ var i = n(26151),
   s = n(13245),
   a = n(43267),
   o = n(933557),
-  r = n(699516),
-  l = n(594174),
-  c = n(454902),
+  r = n(593481),
+  l = n(699516),
+  c = n(594174),
   d = n(312839),
   u = n(981631),
   h = n(987650),
   p = n(689938);
 
 function f(e) {
-  let t = (0, o.F6)(e, l.default, r.Z),
+  let t = (0, o.F6)(e, c.default, l.Z),
 n = p.Z.Messages.OVERLAY_NOTIFICATION_INCOMING_CALL,
 f = (0, a.x)(e),
 {
@@ -30,11 +30,11 @@ f = (0, a.x)(e),
   channel_type: e.type
 });
   return {
-colorScheme: c.ZP.ColorSchemes.PRIMARY,
+colorScheme: r.ZP.ColorSchemes.PRIMARY,
 icon: f,
 title: t,
 body: n,
-hint: e => (0, c.QR)(e, (0, d.P)(), p.Z.Messages.OVERLAY_UNLOCK_TO_ANSWER),
+hint: e => (0, r.QR)(e, (0, d.P)(), p.Z.Messages.OVERLAY_UNLOCK_TO_ANSWER),
 confirmText: p.Z.Messages.JOIN_CALL,
 cancelText: p.Z.Messages.DECLINE,
 onNotificationShow: () => {

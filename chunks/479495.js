@@ -98,7 +98,7 @@ return (0, r.jsx)(m.ZP, {
       } = e;
       return this.handleTokenSubmitMFAv2(t, s);
     },
-    request: e,
+    mfaChallenge: e,
     onEarlyClose: () => {
       d.Z.dispatch({
         type: 'LOGIN_RESET'

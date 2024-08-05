@@ -1,54 +1,62 @@
 l.d(t, {
   Z: function() {
-return a;
+return s;
   }
 }), l(47120);
-let n = (0, l(652874).Z)((e, t) => ({
+var n = l(652874),
+  a = l(731965);
+let o = (0, n.Z)((e, t) => ({
   selectedUserIds: {},
   addUsers: (l, n) => {
-var a;
+var o;
 let {
-  selectedUserIds: o
-} = t(), s = new Set([
-  ...null !== (a = o[l]) && void 0 !== a ? a : new Set(),
+  selectedUserIds: s
+} = t(), i = new Set([
+  ...null !== (o = s[l]) && void 0 !== o ? o : new Set(),
   ...n
 ]);
-e({
-  selectedUserIds: {
-    ...o,
-    [l]: s
-  }
+(0, a.j)(() => {
+  e({
+    selectedUserIds: {
+      ...s,
+      [l]: i
+    }
+  });
 });
   },
   removeUser: (l, n) => {
 let {
-  selectedUserIds: a
-} = t(), o = a[l];
-if (null == o)
+  selectedUserIds: o
+} = t(), s = o[l];
+if (null == s)
   return;
-let s = [...o].filter(e => e !== n);
-e({
-  selectedUserIds: {
-    ...a,
-    [l]: new Set(s)
-  }
+let i = [...s].filter(e => e !== n);
+(0, a.j)(() => {
+  e({
+    selectedUserIds: {
+      ...o,
+      [l]: new Set(i)
+    }
+  });
 });
   },
   clearSelection: l => {
 let {
   selectedUserIds: n
 } = t();
-null != n && e({
-  selectedUserIds: {
-    ...n,
-    [l]: new Set()
-  }
+null != n && (0, a.j)(() => {
+  e({
+    selectedUserIds: {
+      ...n,
+      [l]: new Set()
+    }
+  });
 });
   }
 }));
 
-function a(e) {
-  return n(t => {
+function s(e) {
+  return o(t => {
 var l;
 return {
   selectedUserIds: null !== (l = t.selectedUserIds[e]) && void 0 !== l ? l : new Set(),

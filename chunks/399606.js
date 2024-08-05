@@ -9,28 +9,28 @@ return u;
 return l;
   },
   pF: function() {
-return s;
+return o;
   }
 }), n(411104), n(47120);
 var r = n(470079),
   i = n(902704),
   a = n(250919);
 
-function o(e, t) {
+function s(e, t) {
   return e === t;
 }
 
-function s(e, t) {
+function o(e, t) {
   return !1;
 }
 
 function l(e, t, n) {
-  let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o,
+  let o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s,
 {
   current: l
 } = (0, r.useRef)({
   stores: e,
-  areStatesEqual: s,
+  areStatesEqual: o,
   getStateFromStores: t,
   prevDeps: void 0,
   state: void 0
@@ -38,7 +38,7 @@ function l(e, t, n) {
 u = l.state;
   if (null == n || !(0, i.E)(n, l.prevDeps)) {
 let e = t();
-(null == u || !s(u, e)) && (u = e);
+(null == u || !o(u, e)) && (u = e);
   }
   (0, r.useLayoutEffect)(() => {
 l.getStateFromStores = t, l.prevDeps = n, l.state = u;
@@ -47,7 +47,7 @@ l.getStateFromStores = t, l.prevDeps = n, l.state = u;
   return (0, r.useLayoutEffect)(() => {
 let t = () => {
   let e = l.getStateFromStores();
-  !s(l.state, e) && (l.state = e, c({}));
+  !o(l.state, e) && (l.state = e, c({}));
 };
 t();
 let n = new a.F(e, t);

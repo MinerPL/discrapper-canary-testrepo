@@ -18,8 +18,8 @@ return function(t, n, r) {
 };
   }(),
   a = n(161796),
-  o = n(512722),
-  s = function(e) {
+  s = n(512722),
+  o = function(e) {
 return e;
   },
   l = function() {
@@ -35,10 +35,10 @@ return i(e, null, [{
     if (e.outputRange && 'string' == typeof e.outputRange[0])
       return function(e) {
         var t = e.outputRange;
-        o(t.length >= 2, 'Bad output range'),
+        s(t.length >= 2, 'Bad output range'),
           function(e) {
             for (var t = e[0].replace(c, ''), n = 1; n < e.length; ++n)
-              o(t === e[n].replace(c, ''), 'invalid pattern ' + e[0] + ' and ' + e[n]);
+              s(t === e[n].replace(c, ''), 'invalid pattern ' + e[0] + ' and ' + e[n]);
           }(t = t.map(u));
         var n = t[0].match(c).map(function() {
           return [];
@@ -67,32 +67,32 @@ return i(e, null, [{
     var n = e.inputRange;
     d('inputRange', n),
       function(e) {
-        o(e.length >= 2, 'inputRange must have at least 2 elements');
+        s(e.length >= 2, 'inputRange must have at least 2 elements');
         for (var t = 1; t < e.length; ++t)
-          o(e[t] >= e[t - 1], 'inputRange must be monotonically increasing ' + e);
-      }(n), o(n.length === t.length, 'inputRange (' + n.length + ') and outputRange (' + t.length + ') must have the same length');
-    var i = e.easing || s,
+          s(e[t] >= e[t - 1], 'inputRange must be monotonically increasing ' + e);
+      }(n), s(n.length === t.length, 'inputRange (' + n.length + ') and outputRange (' + t.length + ') must have the same length');
+    var i = e.easing || o,
       a = 'extend';
     void 0 !== e.extrapolateLeft ? a = e.extrapolateLeft : void 0 !== e.extrapolate && (a = e.extrapolate);
     var _ = 'extend';
     return void 0 !== e.extrapolateRight ? _ = e.extrapolateRight : void 0 !== e.extrapolate && (_ = e.extrapolate),
       function(e) {
-        o('number' == typeof e, 'Cannot interpolation an input which is not a number');
+        s('number' == typeof e, 'Cannot interpolation an input which is not a number');
         var r = function(e, t) {
           for (var n = 1; n < t.length - 1 && !(t[n] >= e); ++n);
           return n - 1;
         }(e, n);
-        return function(e, t, n, r, i, a, o, s) {
+        return function(e, t, n, r, i, a, s, o) {
           var l = e;
           if (l < t) {
-            if ('identity' === o)
-              return l;
-            'clamp' === o ? l = t : o;
-          }
-          if (l > n) {
             if ('identity' === s)
               return l;
-            'clamp' === s ? l = n : s;
+            'clamp' === s ? l = t : s;
+          }
+          if (l > n) {
+            if ('identity' === o)
+              return l;
+            'clamp' === o ? l = n : o;
           }
           if (r === i)
             return r;
@@ -112,6 +112,6 @@ function u(e) {
 var c = /[0-9\.-]+/g;
 
 function d(e, t) {
-  o(t.length >= 2, e + ' must have at least 2 elements'), o(2 !== t.length || t[0] !== -1 / 0 || t[1] !== 1 / 0, e + 'cannot be ]-infinity;+infinity[ ' + t);
+  s(t.length >= 2, e + ' must have at least 2 elements'), s(2 !== t.length || t[0] !== -1 / 0 || t[1] !== 1 / 0, e + 'cannot be ]-infinity;+infinity[ ' + t);
 }
 e.exports = l;

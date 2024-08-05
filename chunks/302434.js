@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return d;
+return c;
   }
 });
 var i = t(735250),
@@ -9,18 +9,18 @@ var i = t(735250),
   l = t(153124),
   o = t(63063),
   r = t(981631),
-  c = t(689938);
+  d = t(689938);
 
-function d(e) {
+function c(e) {
   let {
 transitionState: n,
 onConfirm: t,
-onClose: d
+onClose: c
   } = e, u = (0, l.Dt)(), I = a.useCallback(() => {
-t(), d();
+t(), c();
   }, [
 t,
-d
+c
   ]);
   return (0, i.jsxs)(s.ModalRoot, {
 transitionState: n,
@@ -33,14 +33,14 @@ children: [
       id: u,
       color: 'header-primary',
       variant: 'heading-md/semibold',
-      children: c.Z.Messages.DISABLE_INVITES
+      children: d.Z.Messages.DISABLE_INVITES
     })
   }),
   (0, i.jsx)(s.ModalContent, {
     children: (0, i.jsx)(s.Text, {
       variant: 'text-sm/normal',
       color: 'header-secondary',
-      children: c.Z.Messages.INVITES_DISABLED_DESCRIPTION.format({
+      children: d.Z.Messages.INVITES_DISABLED_DESCRIPTION.format({
         helpArticleUrl: o.Z.getArticleURL(r.BhN.INVITE_DISABLED)
       })
     })
@@ -51,13 +51,13 @@ children: [
         onClick: I,
         color: s.Button.Colors.RED,
         look: s.Button.Looks.FILLED,
-        children: c.Z.Messages.YES_TEXT
+        children: d.Z.Messages.YES_TEXT
       }),
       (0, i.jsx)(s.Button, {
-        onClick: d,
+        onClick: c,
         color: s.Button.Colors.PRIMARY,
         look: s.Button.Looks.LINK,
-        children: c.Z.Messages.CANCEL
+        children: d.Z.Messages.CANCEL
       })
     ]
   })

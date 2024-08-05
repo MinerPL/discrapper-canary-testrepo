@@ -1,6 +1,6 @@
 n.d(t, {
   v: function() {
-return o;
+return s;
   }
 }), n(47120);
 var r = n(729594);
@@ -11,16 +11,16 @@ let i = new Set(n(821445)),
 'gitlab.com': RegExp('\\/downloads\\S*\\/[^\\/]*')
   };
 
-function o(e) {
+function s(e) {
   var t;
   let {
 pathname: n,
-hostname: o
+hostname: s
   } = r.parse(e);
-  if (null == o)
+  if (null == s)
 return null;
-  let s = a[o];
-  if (null != s && null != n && !s.test(n) || null == n)
+  let o = a[s];
+  if (null != o && null != n && !o.test(n) || null == n)
 return null;
   let l = n;
   try {

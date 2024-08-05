@@ -9,17 +9,17 @@ return l;
 var r = n(772848),
   i = n(433517),
   a = n(70956);
-let o = 'purchase_token',
-  s = 60 * a.Z.Millis.DAY;
+let s = 'purchase_token',
+  o = 60 * a.Z.Millis.DAY;
 
 function l() {
-  let e = i.K.get(o);
+  let e = i.K.get(s);
   if (null != e && e.expires >= Date.now())
 return e.purchaseToken;
   let t = (0, r.Z)();
-  return i.K.set(o, {
+  return i.K.set(s, {
 purchaseToken: t,
-expires: Date.now() + s
+expires: Date.now() + o
   }), t;
 }
 async function u() {

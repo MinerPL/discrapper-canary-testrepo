@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(710845),
   a = n(620662),
-  o = n(915863),
-  s = n(981631),
+  s = n(915863),
+  o = n(981631),
   l = n(689938);
 
 function u(e) {
@@ -19,7 +19,7 @@ look: u,
 color: c,
 onAction: d
   } = e;
-  return (0, a.Z)(t, s.xjy.INSTANCE) ? (0, r.jsx)(o.Z, {
+  return (0, a.Z)(t, o.xjy.INSTANCE) ? (0, r.jsx)(s.Z, {
 look: u,
 color: c,
 onClick: () => {

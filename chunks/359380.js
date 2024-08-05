@@ -2,53 +2,52 @@ t(47120), t(653041);
 var a = t(735250),
   r = t(470079),
   i = t(481060),
-  s = t(898543),
-  o = t(214715),
-  l = t(18100),
-  c = t(308083),
-  d = t(689938),
-  u = t(363778);
-let m = e => {
+  s = t(214715),
+  o = t(18100),
+  l = t(308083),
+  c = t(689938),
+  d = t(363778);
+let u = e => {
   let {
 title: n,
 icon: t,
-traits: s,
-interests: l,
-handleUpdate: d
+traits: o,
+interests: c,
+handleUpdate: u
   } = e, m = r.useCallback(e => {
-let n = new Set(l);
-n.delete(e), d(n);
+let n = new Set(c);
+n.delete(e), u(n);
   }, [
-d,
-l
-  ]), f = r.useCallback(e => {
-if (l.size === c.c4)
+u,
+c
+  ]), _ = r.useCallback(e => {
+if (c.size === l.c4)
   return;
-let n = new Set(l);
-n.add(e), d(n);
+let n = new Set(c);
+n.add(e), u(n);
   }, [
-d,
-l
+u,
+c
   ]);
   return (0, a.jsxs)(a.Fragment, {
 children: [
   (0, a.jsx)(i.Text, {
-    className: u.interestsCategoryTitle,
+    className: d.interestsCategoryTitle,
     variant: 'text-xs/semibold',
     color: 'text-muted',
     children: n
   }),
   (0, a.jsx)('div', {
-    className: u.interestsCategory,
-    children: s.map(e => {
-      let n = l.has(e);
-      return (0, a.jsx)(o.Z, {
+    className: d.utilityTraits,
+    children: o.map(e => {
+      let n = c.has(e);
+      return (0, a.jsx)(s.Z, {
         variant: 'text-xs/semibold',
         color: 'interactive-normal',
         icon: t,
         text: e,
         selected: n,
-        onClick: n ? m : f
+        onClick: n ? m : _
       }, e);
     })
   })
@@ -59,121 +58,106 @@ n.Z = e => {
   let {
 guildId: n,
 title: t,
-description: o,
-handleUpdate: f,
-progress: C,
-interests: _,
-requiredGameId: h,
-optional: x = !1,
-hidePreview: g = !1
-  } = e, p = r.useMemo(() => {
+description: s,
+handleUpdate: m,
+progress: _,
+interests: C,
+optional: f = !1,
+hidePreview: h = !1
+  } = e, x = r.useMemo(() => {
 let e = [];
-return c.gh.forEach(n => e.push({
+return l.gh.forEach(n => e.push({
   value: n,
   label: n
 })), e;
-  }, []), T = r.useMemo(() => {
+  }, []), g = r.useMemo(() => {
 var e;
-return null !== (e = null != _ ? _ : null == C ? void 0 : C.interests) && void 0 !== e ? e : new Set();
+return null !== (e = null != C ? C : null == _ ? void 0 : _.interests) && void 0 !== e ? e : new Set();
   }, [
-_,
-null == C ? void 0 : C.interests
-  ]), I = r.useMemo(() => Array.from(T), [T]), E = r.useMemo(() => I.filter(e => c.gh.has(e)), [I]), b = r.useCallback(e => {
-f(new Set([
-  ...I.filter(e => !c.gh.has(e)),
+C,
+null == _ ? void 0 : _.interests
+  ]), p = r.useMemo(() => Array.from(g), [g]), T = r.useMemo(() => p.filter(e => l.gh.has(e)), [p]), E = r.useCallback(e => {
+m(new Set([
+  ...p.filter(e => !l.gh.has(e)),
   ...e
 ]));
   }, [
-f,
-I
-  ]), N = r.useMemo(() => I.filter(e => c.WZ.has(e) || c.gh.has(e)), [I]), v = r.useCallback(e => {
-let n = new Set(T);
-n.delete(e), f(n);
+m,
+p
+  ]), I = r.useMemo(() => p.filter(e => l.WZ.has(e) || l.gh.has(e)), [p]), b = r.useCallback(e => {
+let n = new Set(g);
+n.delete(e), m(n);
   }, [
-f,
-T
+m,
+g
   ]);
   return (0, a.jsxs)('div', {
-className: u.slideContent,
+className: d.slideContent,
 children: [
-  x && (0, a.jsx)(i.Text, {
+  f && (0, a.jsx)(i.Text, {
     variant: 'text-sm/medium',
     color: 'header-secondary',
-    className: u.optionalTag,
-    children: d.Z.Messages.CLAN_SETUP_OPTIONAL
+    className: d.optionalTag,
+    children: c.Z.Messages.CLAN_SETUP_OPTIONAL
   }),
   (0, a.jsx)(i.Heading, {
     variant: 'heading-xxl/medium',
-    className: u.title,
+    className: d.title,
     children: t
   }),
   (0, a.jsx)(i.Text, {
     variant: 'text-md/normal',
     color: 'header-secondary',
-    className: u.subtitle,
-    children: o
+    className: d.subtitle,
+    children: s
   }),
   (0, a.jsxs)('div', {
-    className: u.content,
+    className: d.content,
     children: [
       (0, a.jsxs)('div', {
-        className: u.mainPanelContainer,
+        className: d.mainPanelContainer,
         children: [
-          h === c.nJ && (0, a.jsx)(m, {
-            title: d.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_VALORANT,
-            icon: (0, i.makeIconCompat)(s.Z),
-            traits: c.k3,
-            interests: T,
-            handleUpdate: f
-          }),
-          h === c.xn && (0, a.jsx)(m, {
-            title: d.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_GENSHIN,
-            icon: i.SparklesIcon,
-            traits: c.hm,
-            interests: T,
-            handleUpdate: f
-          }),
-          (0, a.jsx)(m, {
-            title: d.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_AGE,
+          (0, a.jsx)(u, {
+            title: c.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_AGE,
             icon: i.HourglassIcon,
-            traits: c.jK,
-            interests: T,
-            handleUpdate: f
+            traits: l.jK,
+            interests: g,
+            handleUpdate: m
           }),
-          (0, a.jsx)(m, {
-            title: d.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_IDENTITY,
+          (0, a.jsx)(u, {
+            title: c.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_IDENTITY,
             icon: i.UserIcon,
-            traits: c.CT,
-            interests: T,
-            handleUpdate: f
+            traits: l.CT,
+            interests: g,
+            handleUpdate: m
           }),
           (0, a.jsx)(i.Text, {
-            className: u.interestsCategoryTitle,
+            className: d.interestsCategoryTitle,
             variant: 'text-xs/semibold',
             color: 'text-muted',
-            children: d.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_LANGUAGE
+            children: c.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_LANGUAGE
           }),
           (0, a.jsx)('div', {
-            className: u.languageSelect,
+            className: d.languageSelect,
             children: (0, a.jsx)(i.SearchableSelect, {
-              wrapperClassName: u.input,
-              options: p,
-              value: E,
-              onChange: b,
-              placeholder: d.Z.Messages.CLAN_SETUP_LANGUAGE_PLACEHOLDER,
+              wrapperClassName: d.input,
+              options: x,
+              value: T,
+              onChange: E,
+              placeholder: c.Z.Messages.CLAN_SETUP_LANGUAGE_PLACEHOLDER,
               multi: !0
             })
           })
         ]
       }),
       (0, a.jsx)('div', {
-        className: u.fixedWidthSidebar,
-        children: null != C && I.length > 0 && !g && (0, a.jsx)(l.Z, {
+        className: d.fixedWidthSidebar,
+        children: null != _ && p.length > 0 && !h && (0, a.jsx)(o.Z, {
           guildId: n,
-          progress: C,
-          traitsToHighlight: N,
+          progress: _,
+          traitsToHighlight: I,
           maskDescription: !0,
-          onTraitClick: v
+          onTraitClick: b
         })
       })
     ]

@@ -2,15 +2,15 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(91192),
+  s = n.n(a),
+  o = n(91192),
   l = n(442837),
   u = n(481060),
   c = n(595519),
   d = n(317381),
-  _ = n(30465),
-  E = n(430824),
-  f = n(156361),
+  _ = n(588468),
+  E = n(30465),
+  f = n(430824),
   h = n(153124),
   p = n(153850),
   m = n(482207),
@@ -27,14 +27,14 @@ channel: C,
 type: y,
 editorHeight: D,
 onVisibilityChange: L
-  } = e, b = (0, h.Dt)(), M = (0, l.e7)([E.Z], () => {
+  } = e, b = (0, h.Dt)(), M = (0, l.e7)([f.Z], () => {
 var e;
-return null !== (e = E.Z.getGuild(C.guild_id)) && void 0 !== e ? e : null;
+return null !== (e = f.Z.getGuild(C.guild_id)) && void 0 !== e ? e : null;
   }, [C.guild_id]), P = i.useRef(), [U, w, x] = (0, S.Z)({
 ...e,
 guild: M
-  }, t, P), G = (null === (n = y.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? m.ZP : p.ZP, k = (0, f.DJ)(U.selectedIndex);
-  (0, _.KR)(b, U.isVisible, k), I.Z.trackExposure({
+  }, t, P), G = (null === (n = y.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? m.ZP : p.ZP, k = (0, _.DJ)(U.selectedIndex);
+  (0, E.KR)(b, U.isVisible, k), I.Z.trackExposure({
 location: '6e9811_1'
   });
   let {
@@ -85,14 +85,14 @@ return null;
 },
 j = 490;
   null != F && (j = (null === (v = y.autocomplete) || void 0 === v ? void 0 : v.small) ? 200 : (null === (O = U.query) || void 0 === O ? void 0 : O.type) === T.eq.EMOJIS_AND_STICKERS ? 490 : 245), j = Math.min(window.innerHeight - 175, j);
-  let W = (0, r.jsx)(f.ZP, {
+  let W = (0, r.jsx)(_.ZP, {
 id: b,
-className: o()(N.autocomplete, Y),
+className: s()(N.autocomplete, Y),
 innerClassName: N.autocompleteInner,
 onMouseDown: e => e.preventDefault(),
-children: (0, r.jsx)(s.bG, {
+children: (0, r.jsx)(o.bG, {
   navigator: x,
-  children: (0, r.jsx)(s.SJ, {
+  children: (0, r.jsx)(o.SJ, {
     children: e => {
       let {
         ref: t,
@@ -110,7 +110,7 @@ children: (0, r.jsx)(s.bG, {
           maxHeight: j
         },
         role: 'listbox',
-        'aria-labelledby': (0, f.rp)(b),
+        'aria-labelledby': (0, _.rp)(b),
         children: Z
       });
     }

@@ -3,7 +3,7 @@ n.d(t, {
 return l;
   },
   Z_: function() {
-return o;
+return s;
   },
   _v: function() {
 return u;
@@ -23,12 +23,12 @@ writable: !0
   }) : e[t] = n, e;
 }
 let a = () => Math.floor(r.v0 + r.Sv.now()),
-  o = new class {
+  s = new class {
 now() {
   return a();
 }
   }();
-class s {
+class o {
   isGreaterThan(e) {
 return this.milliseconds > e.milliseconds;
   }
@@ -36,10 +36,10 @@ return this.milliseconds > e.milliseconds;
 return this.milliseconds >= e.milliseconds;
   }
   constructor(e, t, n, r) {
-i(this, 'milliseconds', 0), i(this, 'asMilliseconds', () => this.milliseconds), i(this, 'asSeconds', () => this.milliseconds / 1000), i(this, 'asMinutes', () => this.milliseconds / 1000 / 60), i(this, 'asHours', () => this.milliseconds / 1000 / 60 / 60), i(this, 'add', e => s.fromMilliseconds(this.milliseconds + e.milliseconds)), i(this, 'subtract', e => s.fromMilliseconds(this.milliseconds - e.milliseconds)), i(this, 'subtractOrZero', e => s.fromMilliseconds(Math.max(this.milliseconds - e.milliseconds, 0))), this.milliseconds += r || 0, this.milliseconds += 1000 * (n || 0), this.milliseconds += 60000 * (t || 0), this.milliseconds += 3600000 * (e || 0);
+i(this, 'milliseconds', 0), i(this, 'asMilliseconds', () => this.milliseconds), i(this, 'asSeconds', () => this.milliseconds / 1000), i(this, 'asMinutes', () => this.milliseconds / 1000 / 60), i(this, 'asHours', () => this.milliseconds / 1000 / 60 / 60), i(this, 'add', e => o.fromMilliseconds(this.milliseconds + e.milliseconds)), i(this, 'subtract', e => o.fromMilliseconds(this.milliseconds - e.milliseconds)), i(this, 'subtractOrZero', e => o.fromMilliseconds(Math.max(this.milliseconds - e.milliseconds, 0))), this.milliseconds += r || 0, this.milliseconds += 1000 * (n || 0), this.milliseconds += 60000 * (t || 0), this.milliseconds += 3600000 * (e || 0);
   }
 }
-i(s, 'fromMilliseconds', e => new s(0, 0, 0, e)), i(s, 'fromSeconds', e => new s(0, 0, e)), i(s, 'fromMinutes', e => new s(0, e)), i(s, 'fromHours', e => new s(e));
+i(o, 'fromMilliseconds', e => new o(0, 0, 0, e)), i(o, 'fromSeconds', e => new o(0, 0, e)), i(o, 'fromMinutes', e => new o(0, e)), i(o, 'fromHours', e => new o(e));
 class l {
   start() {
 if (null == this.startTime)
@@ -60,9 +60,9 @@ e !== this.isRunning() && (e ? this.start() : this.stop());
   }
   elapsed() {
 if (null == this.startTime)
-  return s.fromMilliseconds(this.timePassed);
+  return o.fromMilliseconds(this.timePassed);
 let e = this.timestampProducer.now() - this.startTime;
-return s.fromMilliseconds(this.timePassed + e);
+return o.fromMilliseconds(this.timePassed + e);
   }
   isRunning() {
 return null != this.startTime;
@@ -71,7 +71,7 @@ return null != this.startTime;
 let e = new l();
 return e.start(), e;
   }
-  constructor(e = o) {
+  constructor(e = s) {
 i(this, 'timestampProducer', void 0), i(this, 'startTime', void 0), i(this, 'timePassed', void 0), this.timestampProducer = e, this.startTime = void 0, this.timePassed = 0;
   }
 }

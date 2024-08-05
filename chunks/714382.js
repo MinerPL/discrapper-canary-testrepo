@@ -4,14 +4,14 @@ function r(e) {
 }
 n.d(t, {
   MT: function() {
-return s;
+return o;
   }
 }), n(189885);
 var i = 'function' == typeof Symbol && Symbol.observable || '@@observable',
   a = function() {
 return Math.random().toString(36).substring(7).split('').join('.');
   },
-  o = {
+  s = {
 INIT: '@@redux/INIT' + a(),
 REPLACE: '@@redux/REPLACE' + a(),
 PROBE_UNKNOWN_ACTION: function() {
@@ -19,13 +19,13 @@ PROBE_UNKNOWN_ACTION: function() {
 }
   };
 
-function s(e, t, n) {
+function o(e, t, n) {
   if ('function' == typeof t && 'function' == typeof n || 'function' == typeof n && 'function' == typeof arguments[3])
 throw Error(r(0));
   if ('function' == typeof t && void 0 === n && (n = t, t = void 0), void 0 !== n) {
 if ('function' != typeof n)
   throw Error(r(1));
-return n(s)(e, t);
+return n(o)(e, t);
   }
   if ('function' != typeof e)
 throw Error(r(2));
@@ -86,7 +86,7 @@ for (var t = c = d, n = 0; n < t.length; n++)
 return e;
   }
   return p({
-type: o.INIT
+type: s.INIT
   }), (a = {
 dispatch: p,
 subscribe: h,
@@ -95,7 +95,7 @@ replaceReducer: function(e) {
   if ('function' != typeof e)
     throw Error(r(10));
   l = e, p({
-    type: o.REPLACE
+    type: s.REPLACE
   });
 }
   })[i] = function() {

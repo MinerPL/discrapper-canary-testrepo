@@ -2,8 +2,8 @@ n(47120);
 var r = n(70780),
   i = n(147913),
   a = n(710845),
-  o = n(131951),
-  s = n(936349),
+  s = n(131951),
+  o = n(936349),
   l = n(70956),
   u = n(358085);
 
@@ -27,9 +27,9 @@ super(...e), c(this, 'refetchTimeout', void 0), c(this, 'actions', {
   POST_CONNECTION_OPEN: () => this._handleConnectionOpen()
 }), c(this, '_handleTestRegionsResponse', e => {
   let t = e.map(e => e.region);
-  s.Z.shouldPerformLatencyTest(t) ? o.Z.getMediaEngine().rankRtcRegions(e).then(e => {
+  o.Z.shouldPerformLatencyTest(t) ? s.Z.getMediaEngine().rankRtcRegions(e).then(e => {
     E.verbose('RTC region latency test completed, ranked regions are: ', e), (0, r.o)(e, t);
-  }).catch(e => E.warn(e)) : E.verbose('RTC cached ranked preferred regions are '.concat(s.Z.getPreferredRegions()));
+  }).catch(e => E.warn(e)) : E.verbose('RTC cached ranked preferred regions are '.concat(o.Z.getPreferredRegions()));
 }), c(this, '_fetchAndScheduleRefetch', () => {
   (0, r.J)().then(e => this._handleTestRegionsResponse(e.body)).catch(e => E.warn(e)), this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, 360 * l.Z.Millis.MINUTE);
 }), c(this, '_handleConnectionOpen', () => {

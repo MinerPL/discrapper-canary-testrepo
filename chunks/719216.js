@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(763472),
   a = n(49012),
-  o = n(591759),
-  s = n(915863);
+  s = n(591759),
+  o = n(915863);
 
 function l(e) {
   let {
@@ -25,20 +25,20 @@ try {
   let r = await (0, i.sd)(e, t);
   if (r.button_urls.length <= n)
     return;
-  let s = r.button_urls[n];
-  if ('string' != typeof s)
+  let o = r.button_urls[n];
+  if ('string' != typeof o)
     return;
-  let l = o.Z.safeParseWithQuery(s);
+  let l = s.Z.safeParseWithQuery(o);
   if (null == l || null == l.protocol || null == l.hostname)
     return;
   (0, a.q)({
-    href: o.Z.format(l),
+    href: s.Z.format(l),
     trusted: !1
   });
 } catch (e) {}
   }
   return (0, r.jsx)(r.Fragment, {
-children: t.buttons.map((e, i) => (0, r.jsx)(s.Z, {
+children: t.buttons.map((e, i) => (0, r.jsx)(o.Z, {
   color: n,
   look: u,
   onClick: () => {

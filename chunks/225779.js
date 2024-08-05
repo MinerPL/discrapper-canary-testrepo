@@ -22,8 +22,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(873546),
-  s = n(481060),
+  s = n(873546),
+  o = n(481060),
   l = n(626135),
   u = n(981631),
   c = n(689938),
@@ -49,14 +49,14 @@ function E(e) {
 children: t,
 className: n,
 minor: i = !1,
-...o
+...s
   } = e;
-  return (0, r.jsx)(s.FocusRing, {
+  return (0, r.jsx)(o.FocusRing, {
 children: (0, r.jsx)('button', {
   className: a()(d.button, n, {
     [d.buttonMinor]: i
   }),
-  ...o,
+  ...s,
   children: t
 })
   });
@@ -88,7 +88,7 @@ children: t,
 href: n,
 ...i
   } = e;
-  return (0, r.jsx)(s.Anchor, {
+  return (0, r.jsx)(o.Anchor, {
 ...i,
 className: d.button,
 href: n,
@@ -101,7 +101,7 @@ function p(e) {
 onClick: t,
 noticeType: n
   } = e;
-  return (0, r.jsx)(s.Clickable, {
+  return (0, r.jsx)(o.Clickable, {
 focusProps: {
   offset: 6
 },
@@ -113,7 +113,7 @@ onClick: () => {
   });
 },
 'aria-label': c.Z.Messages.DISMISS,
-children: (0, r.jsx)(s.CloseSmallIcon, {
+children: (0, r.jsx)(o.CloseSmallIcon, {
   size: 'sm',
   color: 'currentColor',
   className: d.closeIcon
@@ -126,13 +126,13 @@ function m(e) {
 color: t = _.DEFAULT,
 className: n,
 style: i,
-children: s
+children: o
   } = e;
   return (0, r.jsx)('div', {
 className: a()(d.notice, {
-  [d.isMobile]: o.tq
+  [d.isMobile]: s.tq
 }, n, t),
 style: null != i ? i : void 0,
-children: s
+children: o
   });
 }

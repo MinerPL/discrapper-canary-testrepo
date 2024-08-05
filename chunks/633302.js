@@ -9,8 +9,8 @@ return I;
 var r = n(392711),
   i = n.n(r),
   a = n(946188),
-  o = n(176354),
-  s = n(906411);
+  s = n(176354),
+  o = n(906411);
 
 function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -91,7 +91,7 @@ return null;
   }
   get url() {
 let e = this.defaultDiversityChild;
-return null != e ? o.ZP.getURL(e.surrogates) : o.ZP.getURL(this.surrogates);
+return null != e ? s.ZP.getURL(e.surrogates) : s.ZP.getURL(this.surrogates);
   }
   get name() {
 return this.hasDiversity && null != u ? ''.concat(this.uniqueName, '::').concat(E[u]) : this.uniqueName;
@@ -110,7 +110,7 @@ i().each(this.names, e);
 this.index = e, this.useSpriteSheet = !0;
   }
   constructor(e) {
-l(this, 'emojiObject', void 0), l(this, 'type', void 0), l(this, 'uniqueName', void 0), l(this, 'surrogates', void 0), l(this, 'diversityChildren', void 0), l(this, 'originalName', void 0), l(this, 'id', void 0), l(this, 'guildId', void 0), l(this, 'index', void 0), l(this, 'useSpriteSheet', void 0), this.emojiObject = e, this.type = s.B.UNICODE, this.uniqueName = e.names[0];
+l(this, 'emojiObject', void 0), l(this, 'type', void 0), l(this, 'uniqueName', void 0), l(this, 'surrogates', void 0), l(this, 'diversityChildren', void 0), l(this, 'originalName', void 0), l(this, 'id', void 0), l(this, 'guildId', void 0), l(this, 'index', void 0), l(this, 'useSpriteSheet', void 0), this.emojiObject = e, this.type = o.B.UNICODE, this.uniqueName = e.names[0];
 if (this.surrogates = e.surrogates, this.diversityChildren = {}, null != e.diversityChildren) {
   for (let t of e.diversityChildren)
     if (null != t.diversity) {
@@ -149,7 +149,7 @@ for (let t in i) {
 }
 return f.push(t), t;
   });
-  c[e] = o.ZP.filterUnsupportedEmojis(t);
+  c[e] = s.ZP.filterUnsupportedEmojis(t);
 }
 
 function O(e) {

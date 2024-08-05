@@ -1,10 +1,10 @@
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(131704),
   c = n(592125);
 let d = {},
   _ = {};
-class E extends(o = s.ZP.Store) {
+class E extends(s = o.ZP.Store) {
   getTemplates(e) {
 return d[e];
   }

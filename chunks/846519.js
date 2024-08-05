@@ -9,13 +9,13 @@ writable: !0
 }
 n.d(t, {
   GR: function() {
-return s;
+return o;
   },
   V7: function() {
 return i;
   },
   Xp: function() {
-return o;
+return s;
   },
   sW: function() {
 return a;
@@ -57,7 +57,7 @@ return this._timeout.isStarted();
 r(this, '_timeout', void 0), r(this, '_delay', void 0), r(this, '_handler', void 0), this._delay = e, this._handler = t, this._timeout = new i();
   }
 }
-class o {
+class s {
   start(e, t) {
 this.stop(), this._ref = window.setInterval(t, e);
   }
@@ -72,7 +72,7 @@ r(this, '_ref', void 0);
   }
 }
 
-function s(e) {
+function o(e) {
   return new Promise(t => {
 setTimeout(() => t(), e);
   });

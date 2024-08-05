@@ -6,8 +6,8 @@ return _;
 var r = n(470079),
   i = n(392711),
   a = n(442837),
-  o = n(881052),
-  s = n(699682),
+  s = n(881052),
+  o = n(699682),
   l = n(81897),
   u = n(771845),
   c = n(621853),
@@ -31,7 +31,7 @@ if (!!p)
         abortSignal: E
       });
     } catch (e) {
-      h(new o.Hx(e));
+      h(new s.Hx(e));
     }
   })();
   }, [
@@ -60,7 +60,7 @@ I = (0, r.useMemo)(() => {
   n,
   m
 ]),
-T = (0, s.Z)(I);
+T = (0, o.Z)(I);
   return {
 mutualGuilds: null != I ? I : T,
 isFetching: _

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   }
 });
 var r = n(354459),
@@ -12,6 +12,6 @@ let a = Object.freeze({
   [r.fO.ACTIVITY]: i.Yn.DEFAULT
 });
 
-function o(e) {
+function s(e) {
   return a[e];
 }

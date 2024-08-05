@@ -3,7 +3,7 @@ t.d(n, {
 return u;
   },
   N8: function() {
-return d;
+return c;
   }
 });
 var i = t(442837);
@@ -13,12 +13,12 @@ var a = t(496675),
   l = t(655006),
   o = t(533244),
   r = t(487419),
-  c = t(981631);
+  d = t(981631);
 
-function d(e) {
+function c(e) {
   let n = (0, i.e7)([a.Z], () => function(e) {
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.Z;
-  return n.can(c.Plq.BAN_MEMBERS, e) || n.can(c.Plq.KICK_MEMBERS, e) || n.can(c.Plq.MANAGE_GUILD, e);
+  return n.can(d.Plq.BAN_MEMBERS, e) || n.can(d.Plq.KICK_MEMBERS, e) || n.can(d.Plq.MANAGE_GUILD, e);
 }(e, a.Z), [e]),
 t = (0, i.e7)([r.Z], () => null != e ? r.Z.getGuildIncident(e.id) : null, [e]);
   return !(null != t && (0, o.i9)(t)) && n;
@@ -26,10 +26,10 @@ t = (0, i.e7)([r.Z], () => null != e ? r.Z.getGuildIncident(e.id) : null, [e]);
 
 function u(e) {
   var n;
-  let t = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : c.lds,
+  let t = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : d.lds,
 o = (0, i.e7)([a.Z], () => function(e) {
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.Z;
-  return n.can(c.Plq.MANAGE_GUILD, e);
+  return n.can(d.Plq.MANAGE_GUILD, e);
 }(e, a.Z), [e]),
 {
   enableRaidAlerts: r
@@ -40,7 +40,7 @@ o = (0, i.e7)([a.Z], () => function(e) {
   autoTrackExposure: o
 }),
 {
-  showAlertMode: d
+  showAlertMode: c
 } = (0, s.sw)(t);
-  return o && (r || d);
+  return o && (r || c);
 }

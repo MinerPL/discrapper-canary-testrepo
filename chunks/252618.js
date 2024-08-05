@@ -1,90 +1,91 @@
 n.d(t, {
   EM: function() {
-return c;
+return d;
   },
   PR: function() {
-return u;
+return c;
   },
   Tt: function() {
-return _;
+return E;
   },
   ZD: function() {
-return f;
+return h;
   },
   yY: function() {
-return E;
+return f;
   }
 }), n(47120);
 var r = n(470079),
-  i = n(652874);
-let a = {
+  i = n(652874),
+  a = n(731965);
+let s = {
 base: n(358085).isPlatformEmbedded ? void 0 : 'Discord'
   },
   o = 0,
-  s = {
+  l = {
 count: 3,
 onlyWhenBlurred: !1,
 interval: 1000
   },
-  l = (0, i.Z)(() => ({
-titles: [a],
+  u = (0, i.Z)(() => ({
+titles: [s],
 notificationCount: void 0,
 flashQueue: []
   }));
 
-function u(e) {
-  l.setState({
+function c(e) {
+  (0, a.j)(() => u.setState({
 notificationCount: e
-  });
+  }));
 }
 
-function c(e) {
+function d(e) {
   let t = {
-...s,
+...l,
 ...e,
 id: o++
   };
-  return t.count = Math.max(t.count, t.messages.length), l.setState(e => ({
+  return t.count = Math.max(t.count, t.messages.length), u.setState(e => ({
 flashQueue: [
   ...e.flashQueue,
   t
 ]
-  })), () => d(t.id);
+  })), () => _(t.id);
 }
 
-function d(e) {
-  l.setState(t => ({
+function _(e) {
+  u.setState(t => ({
 flashQueue: t.flashQueue.filter(t => t.id !== e)
   }));
 }
 
-function _(e) {
+function E(e) {
   r.useEffect(() => {
 var t;
-return t = e, l.setState(e => ({
+return t = e, (0, a.j)(() => u.setState(e => ({
   titles: [
     t,
     ...e.titles
   ]
-})), () => {
-  l.setState(e => ({
+}))), () => {
+  (0, a.j)(() => u.setState(e => ({
     titles: e.titles.filter(e => e !== t)
-  }));
+  })));
 };
   }, [...Object.values(e)]);
 }
 
-function E(e) {
-  return _(e), null;
+function f(e) {
+  return E(e), null;
 }
 
-function f() {
+function h() {
   let {
 skipsSettingDefaultPageTitle: e
   } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
   r.useEffect(() => {
 function e() {
-  l.setState({
+  u.setState({
     flashQueue: []
   });
 }
@@ -95,7 +96,7 @@ return document.addEventListener('focusin', e, {
 });
   }, []);
   let t = function() {
-let [e, t] = l(e => {
+let [e, t] = u(e => {
   let {
     flashQueue: t
   } = e, n = function(e) {
@@ -120,28 +121,28 @@ let [e, t] = l(e => {
     ''.concat(r).concat(n),
     t[0]
   ];
-}), [n, i] = r.useState(!1), a = r.useRef(0), o = null == t ? void 0 : t.messages[a.current % t.messages.length];
+}), [n, i] = r.useState(!1), a = r.useRef(0), s = null == t ? void 0 : t.messages[a.current % t.messages.length];
 return r.useEffect(() => {
   if (null == t) {
     a.current = 0, i(!1);
     return;
   }
   if (document.hasFocus() && t.onlyWhenBlurred) {
-    d(t.id), i(!1);
+    _(t.id), i(!1);
     return;
   }
   let e = setInterval(() => {
     if (a.current >= t.count) {
-      d(t.id), i(!1);
+      _(t.id), i(!1);
       return;
     }
     i(e => !e || (a.current += 1, !1));
   }, t.interval);
   return () => clearInterval(e);
-}, [t]), n ? o : e;
+}, [t]), n ? s : e;
   }();
   r.useEffect(() => {
-let n = t === a.base;
+let n = t === s.base;
 if (!e || !n)
   document.title = t;
   }, [

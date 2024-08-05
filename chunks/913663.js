@@ -1,9 +1,9 @@
-var r, i, a, o = n(445346),
-  s = n(570140),
+var r, i, a, s = n(445346),
+  o = n(570140),
   l = n(703558);
 let u = {},
   c = {};
-class d extends o.y {
+class d extends s.y {
   getStickerPreview(e, t) {
 return (t === l.d.FirstThreadMessage ? c : u)[e];
   }
@@ -14,7 +14,7 @@ a = 'StickerMessagePreviewStore', (i = 'displayName') in(r = d) ? Object.defineP
   configurable: !0,
   writable: !0
 }) : r[i] = a;
-let _ = new d(s.Z, {
+let _ = new d(o.Z, {
   ADD_STICKER_PREVIEW: function(e) {
 let {
   channelId: t,

@@ -4,37 +4,37 @@ return r;
   }
 });
 var i = n(818083),
-  s = n(302800);
-let a = (0, i.B)({
+  a = n(302800);
+let s = (0, i.B)({
 kind: 'user',
 id: '2024-07_shop_marketing_variants',
 label: 'Shop Marketing Variants Experiment',
 defaultConfig: {
-  marketingVariant: s.k2.COACHTIP
+  marketingVariant: a.k2.COACHTIP
 },
 treatments: [{
     id: 0,
     label: 'Control (Badge + Coachtip with headline and copy)',
     config: {
-      marketingVariant: s.k2.COACHTIP
+      marketingVariant: a.k2.COACHTIP
     }
   },
   {
     id: 1,
     label: 'Badge + Coachtip with headline',
     config: {
-      marketingVariant: s.k2.COACHTIP_HEADLINE_ONLY
+      marketingVariant: a.k2.COACHTIP_HEADLINE_ONLY
     }
   },
   {
     id: 2,
     label: 'Badge only',
     config: {
-      marketingVariant: s.k2.BADGE
+      marketingVariant: a.k2.BADGE
     }
   }
 ]
   }),
-  r = e => a.useExperiment({
+  r = e => s.useExperiment({
 location: e
   }).marketingVariant;

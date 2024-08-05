@@ -1,13 +1,14 @@
 n.d(t, {
   Z: function() {
-return u;
+return l;
   }
 }), n(47120);
 var i = n(735250),
   o = n(470079),
   a = n(338545),
-  s = n(849146);
-let r = () => {
+  s = n(849146),
+  r = n(481060);
+let u = () => {
   let e = o.useRef(null),
 [t, n] = o.useState(0),
 i = o.useMemo(() => new s.Z(e => {
@@ -20,23 +21,23 @@ height: t
   };
 };
 
-function u(e) {
+function l(e) {
   let {
 show: t,
 children: n,
 top: o = 0,
 bottom: s = 0
   } = e, {
-ref: u,
-height: l
-  } = r(), g = (0, a.useSpring)({
+ref: l,
+height: g
+  } = u(), d = (0, r.useSpring)({
 from: {
   height: 0,
   paddingBottom: '0px',
   marginTop: '0px'
 },
 to: {
-  height: t ? l : 0,
+  height: t ? g : 0,
   paddingBottom: t ? ''.concat(s, 'px') : '0px',
   marginTop: t ? ''.concat(o, 'px') : '0px'
 },
@@ -44,7 +45,7 @@ config: {
   tension: 170,
   friction: 26
 }
-  }), d = (0, a.useSpring)({
+  }), c = (0, r.useSpring)({
 from: {
   opacity: 0
 },
@@ -59,15 +60,15 @@ config: {
   return (0, i.jsx)(a.animated.div, {
 style: {
   overflow: 'hidden',
-  height: g.height,
-  paddingBottom: g.paddingBottom,
-  marginTop: g.marginTop
+  height: d.height,
+  paddingBottom: d.paddingBottom,
+  marginTop: d.marginTop
 },
 children: (0, i.jsx)(a.animated.div, {
   style: {
-    opacity: d.opacity
+    opacity: c.opacity
   },
-  ref: u,
+  ref: l,
   children: n
 })
   });

@@ -7,10 +7,10 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(392711),
-  s = n.n(o),
+  s = n(392711),
+  o = n.n(s),
   l = n(481060),
-  u = n(346656),
+  u = n(565138),
   c = n(277242);
 
 function d(e) {
@@ -18,7 +18,7 @@ function d(e) {
 className: t,
 maxGuilds: n,
 guilds: i,
-onFocus: o,
+onFocus: s,
 onClick: d,
 size: _ = u.Z.Sizes.SMALLER,
 hideOverflowCount: E = !1,
@@ -27,7 +27,7 @@ disableGuildNameTooltip: f = !1
   return i.length <= 0 ? null : (0, r.jsx)('div', {
 className: a()(t, c.avatars),
 children: function() {
-  let e = s()(i).take(n).map(e => {
+  let e = o()(i).take(n).map(e => {
       let t = e.name;
       return f ? (0, r.jsx)('div', {
         className: c.avatar,
@@ -50,7 +50,7 @@ children: function() {
     t = i.length - n;
   return t > 0 && !E && (e[e.length - 1] = (0, r.jsxs)(l.Button, {
     className: a()(c.avatar, c.overflow),
-    onFocus: o,
+    onFocus: s,
     onClick: e => null == d ? void 0 : d(e),
     look: l.Button.Looks.BLANK,
     size: l.Button.Sizes.NONE,

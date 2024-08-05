@@ -6,8 +6,8 @@ return c;
 var r = n(470079),
   i = n(442837),
   a = n(634894),
-  o = n(353926),
-  s = n(335131),
+  s = n(353926),
+  o = n(335131),
   l = n(597688),
   u = n(617452);
 
@@ -20,7 +20,7 @@ autoTrackExposure: !0
 location: t + ' auto off',
 autoTrackExposure: !1
   });
-  let n = (0, i.e7)([o.Z], () => o.Z.hasLoadedExperiments),
+  let n = (0, i.e7)([s.Z], () => s.Z.hasLoadedExperiments),
 c = (0, u.e)('useMaybeFetchCollectiblesCategories'),
 [d, _, E, f, h] = (0, i.Wu)([l.Z], () => {
   var e;
@@ -39,9 +39,9 @@ let t = {
     ...e,
     includeBundles: c
   },
-  r = !(0, s.oc)(_, t),
+  r = !(0, o.oc)(_, t),
   i = Date.now() - f < 600000;
-(r || !i) && (0, s.F$)(t);
+(r || !i) && (0, o.F$)(t);
   }, [
 n,
 d,
@@ -59,7 +59,7 @@ refreshCategories: (0, r.useCallback)(() => {
     ...e,
     includeBundles: c
   };
-  (0, s.F$)(t);
+  (0, o.F$)(t);
 }, [
   e,
   c

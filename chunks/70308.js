@@ -1,67 +1,66 @@
 n.d(t, {
   I: function() {
-return f;
+return E;
   }
 });
 var r = n(735250),
   i = n(470079),
   a = n(338545),
-  o = n(442837),
-  s = n(607070),
-  l = n(345332),
-  u = n(417153),
-  c = n(561466),
-  d = n(58997);
-let _ = {
+  s = n(481060),
+  o = n(345332),
+  l = n(417153),
+  u = n(561466),
+  c = n(58997);
+let d = {
 duration: 300,
 friction: 24,
 tension: 280
   },
-  E = {
-[c.az.TOP]: {
-  styles: d.containerTop,
+  _ = {
+[u.az.TOP]: {
+  styles: c.containerTop,
   transition: {
     trail: 400,
     from: {
       transform: 'translate3d(0, -100%, 0)',
       opacity: 0,
-      config: _
+      config: d
     },
     enter: {
       transform: 'translate3d(0, -0px, 0)',
       opacity: 1,
-      config: _
+      config: d
     },
     leave: {
       transform: 'translate3d(0, -100%, 0)',
       opacity: 0,
       config: {
-        ..._,
+        ...d,
         friction: 40,
         clamp: !0
       }
     }
   }
 },
-[c.az.BOTTOM]: {
-  styles: d.containerBottom,
+[u.az.BOTTOM]: {
+  styles: c.containerBottom,
   transition: {
     trail: 400,
     from: {
       transform: 'translate3d(0, 100%, 0)',
       opacity: 0,
-      config: _
+      config: d
     },
     enter: {
       transform: 'translate3d(0, 0px, 0)',
       opacity: 1,
-      config: _
+      config: d
     },
     leave: {
       transform: 'translate3d(0, 100%, 0)',
       opacity: 0,
       config: {
-        ..._,
+        ...d,
         friction: 40,
         clamp: !0
       }
@@ -70,39 +69,37 @@ tension: 280
 }
   };
 
-function f() {
-  var e, t, n, d;
-  let _ = (0, u.Es)(e => e.currentToast),
-f = i.useRef(null !== (n = null == _ ? void 0 : null === (e = _.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : c.si.position),
-h = i.useRef(null !== (d = null == _ ? void 0 : null === (t = _.options) || void 0 === t ? void 0 : t.duration) && void 0 !== d ? d : c.si.duration),
-p = (0, o.e7)([s.Z], () => s.Z.useReducedMotion);
+function E() {
+  var e, t, n, c;
+  let d = (0, l.Es)(e => e.currentToast),
+E = i.useRef(null !== (n = null == d ? void 0 : null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : u.si.position),
+f = i.useRef(null !== (c = null == d ? void 0 : null === (t = d.options) || void 0 === t ? void 0 : t.duration) && void 0 !== c ? c : u.si.duration);
   i.useEffect(() => {
-if (null != _) {
+if (null != d) {
   var e, t, n, r;
-  f.current = null !== (n = null === (e = _.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : c.si.position, h.current = null !== (r = null === (t = _.options) || void 0 === t ? void 0 : t.duration) && void 0 !== r ? r : c.si.duration;
+  E.current = null !== (n = null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : u.si.position, f.current = null !== (r = null === (t = d.options) || void 0 === t ? void 0 : t.duration) && void 0 !== r ? r : u.si.duration;
 }
-  }, [_]);
-  let m = i.useMemo(() => {
+  }, [d]);
+  let h = i.useMemo(() => {
   var e, t;
-  return E[null !== (t = null == _ ? void 0 : null === (e = _.options) || void 0 === e ? void 0 : e.position) && void 0 !== t ? t : f.current];
-}, [_]),
-I = (0, a.useTransition)(_, {
+  return _[null !== (t = null == d ? void 0 : null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== t ? t : E.current];
+}, [d]),
+p = (0, s.useTransition)(d, {
   keys: e => {
     var t;
     return null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : '';
   },
-  immediate: p,
-  ...m.transition
+  ...h.transition
 });
   return i.useEffect(() => {
-null != _ && setTimeout(() => {
-  (0, u.z5)();
-}, h.current);
-  }, [_]), (0, r.jsx)('div', {
-className: m.styles,
-children: I((e, t) => null === t ? null : (0, r.jsx)(a.animated.div, {
+null != d && setTimeout(() => {
+  (0, l.z5)();
+}, f.current);
+  }, [d]), (0, r.jsx)('div', {
+className: h.styles,
+children: p((e, t) => null === t ? null : (0, r.jsx)(a.animated.div, {
   style: e,
-  children: (0, r.jsx)(l.F, {
+  children: (0, r.jsx)(o.F, {
     ...t
   })
 }, t.id))

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return c;
+return s;
   }
 });
 var a = n(735250);
@@ -9,7 +9,7 @@ var i = n(481060),
   l = n(689938),
   r = n(314328);
 
-function c(e) {
+function s(e) {
   let {} = e;
   return (0, a.jsxs)('div', {
 className: r.container,

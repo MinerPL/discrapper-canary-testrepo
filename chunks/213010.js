@@ -1,13 +1,13 @@
 n.d(t, {
   Q: function() {
-return s;
+return l;
   }
 });
 var i = n(442837),
   a = n(699516),
-  l = n(981631);
+  s = n(981631);
 
-function s(e) {
+function l(e) {
   let t = (0, i.e7)([a.Z], () => a.Z.getRelationshipType(e), [e]);
-  return t === l.OGo.NONE || t === l.OGo.BLOCKED || t === l.OGo.PENDING_INCOMING;
+  return t === s.OGo.NONE || t === s.OGo.BLOCKED || t === s.OGo.PENDING_INCOMING;
 }

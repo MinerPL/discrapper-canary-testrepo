@@ -5,8 +5,8 @@ return m;
 }), n(47120);
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(1561),
   u = n(84735),
   c = n(922770),
@@ -32,11 +32,11 @@ let {
   hasContent: t,
   onClear: n,
   className: r,
-  isLoading: o,
+  isLoading: s,
   size: u = h.SMALL
 } = e;
 return (0, i.jsx)(l.P, {
-  className: s()(r, E.iconLayout, u, {
+  className: o()(r, E.iconLayout, u, {
     [E.pointer]: t
   }),
   onClick: e => {
@@ -49,15 +49,15 @@ return (0, i.jsx)(l.P, {
   },
   children: (0, i.jsx)('div', {
     className: E.iconContainer,
-    children: o ? (0, i.jsx)(c.$, {
+    children: s ? (0, i.jsx)(c.$, {
       type: c.$.Type.SPINNING_CIRCLE,
-      className: s()(E.icon, E.visible)
+      className: o()(E.icon, E.visible)
     }) : (0, i.jsxs)(a.Fragment, {
       children: [
         (0, i.jsx)(d.MagnifyingGlassIcon, {
           size: 'md',
           color: 'currentColor',
-          className: s()(E.icon, {
+          className: o()(E.icon, {
             [E.visible]: !t
           }),
           'aria-label': _.Z.Messages.SEARCH
@@ -65,7 +65,7 @@ return (0, i.jsx)(l.P, {
         (0, i.jsx)(d.CloseSmallIcon, {
           size: 'md',
           color: 'currentColor',
-          className: s()(E.clear, {
+          className: o()(E.clear, {
             [E.visible]: t
           }),
           'aria-label': _.Z.Messages.CLEAR
@@ -96,7 +96,7 @@ let {
   onClear: n,
   className: r,
   placeholder: a = _.Z.Messages.SEARCH,
-  iconClassName: o,
+  iconClassName: s,
   onKeyDown: l,
   onKeyUp: c,
   onKeyPress: d,
@@ -116,7 +116,7 @@ return (0, i.jsx)(u.t, {
   focusTarget: this.inputRef,
   ringTarget: this.containerRef,
   children: (0, i.jsx)('div', {
-    className: s()(r, E.container, h, {
+    className: o()(r, E.container, h, {
       [E.disabled]: m
     }),
     ref: this.containerRef,
@@ -145,7 +145,7 @@ return (0, i.jsx)(u.t, {
           size: h,
           hasContent: e.length > 0,
           onClear: n,
-          className: o,
+          className: s,
           isLoading: f
         })
       ]

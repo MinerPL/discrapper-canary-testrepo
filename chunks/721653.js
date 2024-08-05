@@ -1,18 +1,18 @@
 var r = n(687249),
   i = n(779518);
 e.exports = function(e, t, n, a) {
-  var o = n.length,
-s = o,
+  var s = n.length,
+o = s,
 l = !a;
   if (null == e)
-return !s;
-  for (e = Object(e); o--;) {
-var u = n[o];
+return !o;
+  for (e = Object(e); s--;) {
+var u = n[s];
 if (l && u[2] ? u[1] !== e[u[0]] : !(u[0] in e))
   return !1;
   }
-  for (; ++o < s;) {
-var c = (u = n[o])[0],
+  for (; ++s < o;) {
+var c = (u = n[s])[0],
   d = e[c],
   _ = u[1];
 if (l && u[2]) {

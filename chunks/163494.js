@@ -7,7 +7,7 @@ try {
 }
   },
   a = Object.prototype.toString,
-  o = n(703825)();
+  s = n(703825)();
 e.exports = function(e) {
-  return 'string' == typeof e || 'object' == typeof e && (o ? i(e) : '[object String]' === a.call(e));
+  return 'string' == typeof e || 'object' == typeof e && (s ? i(e) : '[object String]' === a.call(e));
 };

@@ -6,15 +6,15 @@ return A;
 var r = n(392711),
   i = n.n(r),
   a = n(31775),
-  o = n.n(a);
+  s = n.n(a);
 n(711739);
-var s = n(302454),
-  l = n.n(s),
+var o = n(302454),
+  l = n.n(o),
   u = n(830121),
   c = n(823379),
   d = n(172244),
   _ = n(571989);
-let E = new(o())({
+let E = new(s())({
   max: 50
 });
 
@@ -118,14 +118,14 @@ t.ZP = {
   ...l().defaultRules.link,
   match: (e, t, n) => t.allowLinks ? l().defaultRules.link.match(e, t, n) : null,
   parse(e, t, n) {
-let [r, a, o, s] = e, _ = () => ({
+let [r, a, s, o] = e, _ = () => ({
   type: d.b.TEXT,
   content: r
-}), E = f(o), h = f(a), N = f(null != s ? s : ''), v = E.whitespaceSanitized, O = h.fullySanitized, R = N.fullySanitized, C = O.trim();
+}), E = f(s), h = f(a), N = f(null != o ? o : ''), v = E.whitespaceSanitized, O = h.fullySanitized, R = N.fullySanitized, C = O.trim();
 if (0 === v.trim().length || 0 === C.length)
   return _();
-let y = A(l().unescapeUrl(o)),
-  D = (0, u.ZP)(a).length > 0 || (0, u.ZP)(s).length > 0;
+let y = A(l().unescapeUrl(s)),
+  D = (0, u.ZP)(a).length > 0 || (0, u.ZP)(o).length > 0;
 if (null == y || D)
   return _();
 let L = {

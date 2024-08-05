@@ -6,8 +6,8 @@ return E;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(1561),
+  s = n.n(a),
+  o = n(1561),
   l = n(84735),
   u = n(922770),
   c = n(481060),
@@ -38,11 +38,11 @@ activate: () => !1
 className: _.iconContainer,
 children: (0, r.jsx)(u.$, {
   type: u.$.Type.SPINNING_CIRCLE,
-  className: o()(_.icon)
+  className: s()(_.icon)
 })
-  }) : n.length > 0 ? (0, r.jsx)(s.P, {
+  }) : n.length > 0 ? (0, r.jsx)(o.P, {
 'aria-label': d.Z.Messages.SEARCH_CLEAR,
-className: o()(_.iconContainer, _.iconClickable),
+className: s()(_.iconContainer, _.iconClickable),
 onClick: e => {
   e.stopPropagation(), E('');
 },

@@ -5,8 +5,8 @@ return r;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(709014);
-let s = {
+  s = n(709014);
+let l = {
 mute: {
   name: 'mute',
   start: 0,
@@ -40,7 +40,7 @@ let t = a.useRef(null),
     let n = 'mute' === e ? 'hover_unmuted' : 'hover_muted';
     t.current.play(n);
   }, [e]),
-  d = a.useCallback(() => {
+  u = a.useCallback(() => {
     if (null == t.current)
       return;
     let n = 'mute' === e ? 'hover_unmuted' : 'hover_muted';
@@ -50,15 +50,15 @@ return {
   events: {
     onClick: o,
     onMouseEnter: c,
-    onMouseLeave: d
+    onMouseLeave: u
   },
   play: o,
-  Component: a.useCallback(e => (0, i.jsx)(l.L, {
+  Component: a.useCallback(e => (0, i.jsx)(s.L, {
     ...e,
     src: () => n.e('410').then(n.t.bind(n, 992285, 19)),
     ref: t,
     initialAnimation: r.current,
-    markers: s
+    markers: l
   }), [])
 };
   };

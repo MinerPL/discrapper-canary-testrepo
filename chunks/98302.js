@@ -2,8 +2,8 @@ n(47120);
 var r = n(846519),
   i = n(147913),
   a = n(603113),
-  o = n(594190),
-  s = n(592125),
+  s = n(594190),
+  o = n(592125),
   l = n(131951),
   u = n(19780),
   c = n(885110),
@@ -33,7 +33,7 @@ this._currentUserSpeaking = !1, this._anyoneElseSpeaking = !1, null != this._rep
 if (this._currentUserSpeaking) {
   let e = u.Z.getChannelId(),
     t = u.Z.getGuildId(),
-    n = s.Z.getChannel(e),
+    n = o.Z.getChannel(e),
     r = null == n ? void 0 : n.isBroadcastChannel();
   (0, f.yw)(h.rMx.START_SPEAKING, {
     mode: l.Z.getMode(),
@@ -56,7 +56,7 @@ if (l.Z.isDeaf() || !this._anyoneElseSpeaking)
   return;
 let e = u.Z.getChannelId(),
   t = u.Z.getGuildId(),
-  n = s.Z.getChannel(e),
+  n = o.Z.getChannel(e),
   r = null == n ? void 0 : n.isBroadcastChannel();
 (0, f.yw)(h.rMx.START_LISTENING, {
   mute: l.Z.isMute(),
@@ -77,7 +77,7 @@ this._reset(), d.Z.removeChangeListener(this._handleSpeakingStoreChanged), u.Z.r
   }
   getGameMetadata() {
 let e = c.Z.findActivity(e => e.type === h.IIU.PLAYING),
-  t = o.ZP.getCurrentGameForAnalytics();
+  t = s.ZP.getCurrentGameForAnalytics();
 return {
   game_platform: (0, a.Z)(e),
   game_name: null != e ? e.name : null,

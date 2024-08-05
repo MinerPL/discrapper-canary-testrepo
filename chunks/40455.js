@@ -2,8 +2,8 @@ n(47120);
 var r = n(592125),
   i = n(650774),
   a = n(944486),
-  o = n(412788),
-  s = n(368321),
+  s = n(412788),
+  o = n(368321),
   l = n(553245),
   u = n(143806),
   c = n(814074),
@@ -23,9 +23,9 @@ let h = null,
   p = new l.b(750, 500),
   m = new u.S(15),
   I = !1;
-class T extends o.Z {
+class T extends s.Z {
   initialize() {
-this.waitFor(r.Z), this.waitFor(a.Z), this.waitFor(i.Z), this.syncWith([s.Z], () => !0), this.syncWith([a.Z], g);
+this.waitFor(r.Z), this.waitFor(a.Z), this.waitFor(i.Z), this.syncWith([o.Z], () => !0), this.syncWith([a.Z], g);
   }
   loadCache() {
 let e = this.readSnapshot(T.LATEST_SNAPSHOT_VERSION);
@@ -43,7 +43,7 @@ let e = r.Z.getChannelIds(null).map(e => ({
   guildId: null,
   channelId: e
 }));
-return s.Z.isLowDisk ? null != h ? [
+return o.Z.isLowDisk ? null != h ? [
   ...e,
   h
 ] : e : [

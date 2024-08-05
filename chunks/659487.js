@@ -1,6 +1,6 @@
 n.d(t, {
   w: function() {
-return o;
+return s;
   }
 }), n(47120), n(724458);
 var r = n(356659);
@@ -26,10 +26,10 @@ e => ({
 })
   ],
   a = null;
-async function o(e) {
+async function s(e) {
   var t;
-  let o = (await n.e('56268').then(n.t.bind(n, 826753, 23))).default;
-  let s = (t = o, null != a ? a : a = t.object({
+  let s = (await n.e('56268').then(n.t.bind(n, 826753, 23))).default;
+  let o = (t = s, null != a ? a : a = t.object({
 id: t.string().required(),
 version: t.number().positive().integer().min(0).max(r.Bg).optional(),
 name: t.string().when('version', {
@@ -60,7 +60,7 @@ editMetadata: t.object().keys({
 clipMethod: t.string().allow('auto', 'manual').required()
   }).required());
   try {
-o.assert(e, s);
+s.assert(e, o);
 return null == e.version && (e.version = 0), i.slice(e.version).reduce((e, t) => t(e), e);
   } catch (e) {
 return null;

@@ -6,8 +6,8 @@ return k;
 var r = n(735250),
   i = n(470079),
   a = n(442837),
-  o = n(481060),
-  s = n(410575),
+  s = n(481060),
+  o = n(410575),
   l = n(727637),
   u = n(980591),
   c = n(58540),
@@ -91,7 +91,7 @@ return {
   isMobile: g.Z.isMobileOnline(t.id),
   isApplicationStreaming: e
 };
-  }), [eo, es] = i.useState(!1), el = i.useMemo(() => null != n ? {
+  }), [es, eo] = i.useState(!1), el = i.useMemo(() => null != n ? {
 [n]: [t.id]
   } : {}, [
 n,
@@ -113,15 +113,15 @@ null == Z || Z(null == z ? void 0 : z.current);
 z,
 Z
   ]), i.useEffect(() => {
-if (!eo) {
+if (!es) {
   if ((null == et ? void 0 : et.application_id) == null || null != eE)
     (null == n || (null == J ? void 0 : J.fullProfileLoadedTimestamp) != null) && (function() {
       var e;
       let r, i, a;
       null != et && (r = et.party, i = et.assets, a = null != et.application_id ? h.Z.getApplication(et.application_id) : null);
-      let o = er;
-      er === U.Skl.ONLINE && (o = ei ? U.j28.ONLINE_MOBILE : U.j28.ONLINE_DESKTOP);
-      let s = null != J ? {
+      let s = er;
+      er === U.Skl.ONLINE && (s = ei ? U.j28.ONLINE_MOBILE : U.j28.ONLINE_DESKTOP);
+      let o = null != J ? {
           has_nickname: !!(null == J ? void 0 : J.nick),
           has_guild_member_avatar: !!(null == J ? void 0 : J.avatar),
           has_guild_member_banner: !!(null == q ? void 0 : q.isUsingGuildMemberBanner()),
@@ -145,7 +145,7 @@ if (!eo) {
         party_id: null != r ? r.id : void 0,
         party_platform: null != r && (0, w.Ps)(r.id) ? U.ABu.SPOTIFY : null,
         game_platform: (0, d.Z)(et),
-        profile_user_status: o,
+        profile_user_status: s,
         is_streaming: ea,
         has_custom_status: null != en,
         has_avatar_decoration: null != t.avatarDecoration,
@@ -153,17 +153,17 @@ if (!eo) {
         profile_has_nitro_customization: null != q && (null == q ? void 0 : q.hasPremiumCustomization()),
         profile_has_theme_color_customized: null != q && q.hasThemeColors(),
         profile_has_theme_animation: (null == q ? void 0 : q.popoutAnimationParticleType) != null,
-        ...s,
+        ...o,
         ...l,
         ...j
       });
-    }(), es(!0));
+    }(), eo(!0));
 }
   }, [
 J,
 null == et ? void 0 : et.application_id,
 eE,
-eo,
+es,
 n
   ]), (0, r.jsx)(f.Gt, {
 value: K,
@@ -175,9 +175,9 @@ children: (0, r.jsx)(N.Mt, {
   messageId: B,
   roleId: F,
   shouldTrackViewOnMount: null == J || null != J.fullProfileLoadedTimestamp,
-  children: (0, r.jsx)(s.Z, {
+  children: (0, r.jsx)(o.Z, {
     section: U.jXE.PROFILE_POPOUT,
-    children: (0, r.jsx)(o.Dialog, {
+    children: (0, r.jsx)(s.Dialog, {
       ref: z,
       'aria-label': t.username,
       onClick: G,

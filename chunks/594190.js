@@ -13,7 +13,7 @@ return ec;
 return eu;
   }
 }), n(47120), n(653041), n(724458), n(757143), n(733860);
-var i, a, o, s, l = n(392711),
+var i, a, s, o, l = n(392711),
   u = n.n(l),
   c = n(913527),
   d = n.n(c),
@@ -171,11 +171,11 @@ function ea(e, t, n) {
   void 0 !== r && (delete e[t], e[n] = r);
 }
 
-function eo(e, t) {
+function es(e, t) {
   null != t.lastLaunched ? e.lastLaunched = t.lastLaunched : null != t.start && (e.lastLaunched = t.start);
 }
 
-function es(e) {
+function eo(e) {
   return G.some(t => t.name === e.name && !0 === t.streamerTool);
 }
 
@@ -286,12 +286,12 @@ for (let i of v.Z.getLaunchOptions(n.id, n.branchId)) {
   let a = ''.concat(n.id, ':').concat(n.branchId);
   !F.has(a) && (e = !0, F.add(a));
   let {
-    fullExecutablePath: o
-  } = i, s = o.replace(/\\/g, '/').toLowerCase();
-  W[s] = r.id, t.push({
+    fullExecutablePath: s
+  } = i, o = s.replace(/\\/g, '/').toLowerCase();
+  W[o] = r.id, t.push({
     id: r.id,
     name: r.name,
-    exePath: s,
+    exePath: o,
     cmdLine: '',
     lastFocused: 0,
     add: !0
@@ -321,7 +321,7 @@ e.forEach(e => {
           let n = z.gameOverrides[eu(e)];
           null != n && (n.lastFocused = e.lastFocused);
         }
-        return eo(t, e), !0;
+        return es(t, e), !0;
       }
       return !1;
     }));
@@ -334,7 +334,7 @@ e.forEach(e => {
         cmdLine: e.cmdLine,
         lastFocused: e.lastFocused
       };
-      return null != e.id && (t.id = e.id), null != e.nativeProcessObserverId && (t.nativeProcessObserverId = e.nativeProcessObserverId), null != e.name && (t.name = e.name), e.add && (t.add = !0), e.block && (t.block = !0), eo(t, e), t;
+      return null != e.id && (t.id = e.id), null != e.nativeProcessObserverId && (t.nativeProcessObserverId = e.nativeProcessObserverId), null != e.name && (t.name = e.name), e.add && (t.add = !0), e.block && (t.block = !0), es(t, e), t;
     }(e));
   }
 }), z.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused), eE(), C.Z.setRecentGames(eI().map(e => ef(e)));
@@ -349,12 +349,12 @@ t = new Set();
   r = {};
   let n = A.Z.games;
   for (let e of n) {
-var i, a, o, s;
+var i, a, s, o;
 Q[e.id] = {
   compatibilityHook: null !== (i = e.overlayCompatibilityHook) && void 0 !== i ? i : h.r.compatibilityHook,
   warn: null !== (a = e.overlayWarn) && void 0 !== a ? a : h.r.warn,
-  enabled: null !== (o = e.overlay) && void 0 !== o ? o : h.r.enabled,
-  allowHook: null !== (s = e.hook) && void 0 !== s ? s : h.r.allowHook,
+  enabled: null !== (s = e.overlay) && void 0 !== s ? s : h.r.enabled,
+  allowHook: null !== (o = e.hook) && void 0 !== o ? o : h.r.allowHook,
   supportsOutOfProcessOverlay: e.supportsOutOfProcessOverlay
 };
   }
@@ -406,7 +406,7 @@ e = e.filter(e => (e.distributor = function(e) {
   } = t;
   return n === e.name;
 }) || (n.push(e), !1)));
-let a = n.filter(es).length;
+let a = n.filter(eo).length;
 a !== X && (X = a, f.Z.dispatch({
   type: 'RUNNING_STREAMER_TOOLS_CHANGE',
   count: X
@@ -525,12 +525,12 @@ var t;
 en.add(null !== (t = (0, m.F)(e)) && void 0 !== t ? t : e);
   }
 }
-s = 'RunningGameStore', (o = 'displayName') in(a = eT) ? Object.defineProperty(a, o, {
-  value: s,
+o = 'RunningGameStore', (s = 'displayName') in(a = eT) ? Object.defineProperty(a, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = s, t.ZP = new eT(f.Z, {
+}) : a[s] = o, t.ZP = new eT(f.Z, {
   RUNNING_GAMES_CHANGE: function(e) {
 em(Z);
   },

@@ -12,10 +12,10 @@ function a(e) {
 children: t,
 className: n,
 size: a = i.Button.Sizes.SMALL,
-...o
+...s
   } = e;
   return (0, r.jsx)(i.Button, {
-...o,
+...s,
 color: i.Button.Colors.BRAND,
 size: a,
 className: n,

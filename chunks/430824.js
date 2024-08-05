@@ -1,6 +1,6 @@
 let r;
 n(47120);
-var i, a, o, s, l = n(442837),
+var i, a, s, o, l = n(442837),
   u = n(902704),
   c = n(570140),
   d = n(601964),
@@ -64,12 +64,12 @@ var n;
 return null === (n = I[e]) || void 0 === n ? void 0 : n[t];
   }
 }
-s = 'GuildStore', (o = 'displayName') in(a = O) ? Object.defineProperty(a, o, {
-  value: s,
+o = 'GuildStore', (s = 'displayName') in(a = O) ? Object.defineProperty(a, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = s, t.Z = new O(c.Z, {
+}) : a[s] = o, t.Z = new O(c.Z, {
   BACKGROUND_SYNC: function(e) {
 for (let n of e.guilds) {
   var t;
@@ -160,12 +160,12 @@ let {
 } = e, i = h.default.getId(), a = T[t];
 if (i !== r.id || null == a)
   return !1;
-let o = 'string' == typeof n ? new Date(n) : n;
-if (o === a.joinedAt || null == o)
+let s = 'string' == typeof n ? new Date(n) : n;
+if (s === a.joinedAt || null == s)
   return !1;
 T = {
   ...T,
-  [t]: a.updateJoinedAt(o)
+  [t]: a.updateJoinedAt(s)
 };
   },
   GUILD_SETTINGS_SUBMIT_SUCCESS: function() {

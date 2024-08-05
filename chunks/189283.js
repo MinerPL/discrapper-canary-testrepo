@@ -6,8 +6,8 @@ return d;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(1561),
+  s = n.n(a),
+  o = n(1561),
   l = n(993365),
   u = n(336888);
 
@@ -35,8 +35,8 @@ selectedClassName: _
 a,
 t
   ]);
-  return (0, r.jsx)(s.P, {
-className: o()(function(e) {
+  return (0, r.jsx)(o.P, {
+className: s()(function(e) {
   switch (e) {
     case 'tab':
     default:
@@ -59,7 +59,7 @@ function d(e) {
 options: t,
 value: n,
 onChange: a,
-look: s = 'tab',
+look: o = 'tab',
 className: l,
 optionClassName: d,
 selectedOptionClassName: _
@@ -69,20 +69,20 @@ let i = n === e.value;
 return (0, r.jsx)(c, {
   selected: i,
   option: e,
-  look: s,
+  look: o,
   onClick: a,
   className: d,
   selectedClassName: _
 }, null !== (t = e.key) && void 0 !== t ? t : String(e.value));
   }, [
 n,
-s,
+o,
 a,
 d,
 _
   ]);
   return (0, r.jsx)('div', {
-className: o()(function(e) {
+className: s()(function(e) {
   switch (e) {
     case 'tab':
     default:
@@ -90,7 +90,7 @@ className: o()(function(e) {
     case 'pill':
       return u.pillContainer;
   }
-}(s), l),
+}(o), l),
 children: t.map(E)
   });
 }

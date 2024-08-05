@@ -6,7 +6,7 @@ return i;
 return a;
   },
   tk: function() {
-return o;
+return s;
   }
 }), n(47120);
 var r = n(911969);
@@ -19,7 +19,7 @@ function a(e, t) {
   return ''.concat(e, ':').concat(t);
 }
 
-function o(e) {
+function s(e) {
   return Object.fromEntries(e.map(e => [
 a(e.id, e.type),
 e

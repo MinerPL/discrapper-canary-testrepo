@@ -7,8 +7,8 @@ return d;
   }
 });
 var i = n(470079),
-  s = n(442837),
-  a = n(355298),
+  a = n(442837),
+  s = n(355298),
   r = n(333984),
   l = n(899740),
   o = n(355350);
@@ -16,7 +16,7 @@ var i = n(470079),
 function c() {
   let e = (0, l.q)(),
 t = i.useRef(e),
-n = (0, s.e7)([a.Z], () => a.Z.isReady()),
+n = (0, a.e7)([s.Z], () => s.Z.isReady()),
 r = i.useRef(n);
   return i.useEffect(() => {
 n && !r.current && (r.current = !0, t.current = e);
@@ -29,10 +29,10 @@ e
 function d() {
   let e = (0, o.w)(),
 t = i.useRef(e),
-n = (0, s.e7)([r.Z], () => r.Z.isReady()),
-a = i.useRef(n);
+n = (0, a.e7)([r.Z], () => r.Z.isReady()),
+s = i.useRef(n);
   return i.useEffect(() => {
-n && !a.current && (a.current = !0, t.current = e);
+n && !s.current && (s.current = !0, t.current = e);
   }, [
 n,
 e

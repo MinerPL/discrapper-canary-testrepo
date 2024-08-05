@@ -12,8 +12,8 @@ return E;
 var r = n(911969),
   i = n(581364),
   a = n(752305),
-  o = n(130402),
-  s = n(365704),
+  s = n(130402),
+  o = n(365704),
   l = n(590921),
   u = n(185923);
 
@@ -21,8 +21,8 @@ function c(e) {
   var t;
   let {
 activeCommandOption: n,
-canMentionUsers: o = !0,
-canMentionRoles: s = !0,
+canMentionUsers: s = !0,
+canMentionRoles: o = !0,
 canMentionChannels: u = !0,
 canMentionEveryone: c,
 canMentionClyde: d = !1,
@@ -70,7 +70,7 @@ getCommandOptionValues: () => {
 let e = (0, i.$z)(n);
 e.canMentionChannels && (N.mentions.channel = l.nS.ALLOW_SELECTABLE), e.canMentionEveryone && (N.mentions.global = e.canMentionHere ? l.VV.ALLOW_EVERYONE_OR_HERE : l.VV.ALLOW_EVERYONE), e.canMentionRoles && (N.mentions.role = e.canMentionNonMentionableRoles ? l.Fw.ALLOW_ALL : l.Fw.ALLOW_MENTIONABLE), e.canMentionUsers && (N.mentions.user = e.canMentionAnyGuildUser ? l.h3.ALLOW_GUILD : l.h3.ALLOW_CHANNEL), N.hideMentionDescription = !0;
   } else
-u && (N.mentions.channel = l.nS.ALLOW_SELECTABLE), s && (N.mentions.role = l.Fw.ALLOW_MENTIONABLE), o && (N.mentions.user = l.h3.ALLOW_CHANNEL), c && (N.mentions.global = l.VV.ALLOW_EVERYONE_OR_HERE), d && (N.mentions.clyde = l.cz.ALLOW);
+u && (N.mentions.channel = l.nS.ALLOW_SELECTABLE), o && (N.mentions.role = l.Fw.ALLOW_MENTIONABLE), s && (N.mentions.user = l.h3.ALLOW_CHANNEL), c && (N.mentions.global = l.VV.ALLOW_EVERYONE_OR_HERE), d && (N.mentions.clyde = l.cz.ALLOW);
   return (null === (t = m.commands) || void 0 === t ? void 0 : t.enabled) && (_ ? N.commands = E ? l.L8.NEW_TEXT_ONLY : l.L8.NEW : N.commands = l.L8.OLD_BUILT_INS), null != n && null != n.channelTypes && (N.allowedChannelTypes = n.channelTypes), N;
 }
 
@@ -81,14 +81,14 @@ channel: n,
 guild: r,
 query: i,
 isAtStart: a,
-options: o
-  } = e, l = s.W[t];
+options: s
+  } = e, l = o.W[t];
   if (null != l.sentinel) {
 if (!i.startsWith(l.sentinel))
   return !1;
 i = i.substring(l.sentinel.length);
   }
-  return !!(null == l.matches || l.matches(n, r, i, a, o)) || !1;
+  return !!(null == l.matches || l.matches(n, r, i, a, s)) || !1;
 }
 
 function _(e) {
@@ -101,9 +101,9 @@ currentWordIsAtStart: a,
 textValue: c,
 optionText: _
   } = e, E = null;
-  for (let e of s.R) {
+  for (let e of o.R) {
 var f, h, p, m, I, T;
-let g = s.W[e];
+let g = o.W[e];
 if (e === l.eq.GIFS || e === l.eq.CHOICES) {
   if (r.commands === l.L8.OLD_BUILT_INS) {
     if (d({
@@ -122,6 +122,20 @@ if (e === l.eq.GIFS || e === l.eq.CHOICES) {
       break;
     }
   } else if (d({
+      type: e,
+      channel: t,
+      guild: n,
+      query: _,
+      isAtStart: !1,
+      options: r
+    }))
+    return {
+      type: e,
+      typeInfo: g,
+      query: _
+    };
+} else if (e === l.eq.STICKERS) {
+  if (d({
       type: e,
       channel: t,
       guild: n,
@@ -167,7 +181,7 @@ if (e === l.eq.GIFS || e === l.eq.CHOICES) {
     break;
   }
 } else if (e === l.eq.EMOJIS_AND_STICKERS) {
-  if (null != i && i.length > 0 && (0, o.x)(u.qR.AutocompleteTyped), null != i && d({
+  if (null != i && i.length > 0 && (0, s.x)(u.qR.AutocompleteTyped), null != i && d({
       type: e,
       channel: t,
       guild: n,
@@ -223,7 +237,7 @@ switch (e.type) {
   default:
     return null;
 }
-  let i = s.W[n];
+  let i = o.W[n];
   return {
 type: n,
 typeInfo: i,

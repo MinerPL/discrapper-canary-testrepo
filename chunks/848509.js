@@ -7,6 +7,7 @@ e.exports = {
   messageListItem: 'messageListItem_d5deea',
   message: 'message_d5deea',
   selected: 'selected_d5deea',
+  reactionsOnMessage: 'reactionsOnMessage_d5deea',
   quotedChatMessage: 'quotedChatMessage_d5deea',
   jump: 'jump_d5deea',
   buttons: 'buttons_d5deea',

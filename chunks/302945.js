@@ -6,8 +6,8 @@ return _;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(793030),
+  s = n.n(a),
+  o = n(793030),
   l = n(422034),
   u = n(182294),
   c = n(689938),
@@ -29,7 +29,7 @@ applyMask: n !== t.length - 1,
 size: u.EF.SIZE_20
   }, e.id));
   return (0, r.jsxs)('div', {
-className: o()(d.container, n),
+className: s()(d.container, n),
 children: [
   (0, r.jsx)('div', {
     className: d.iconContainer,
@@ -37,7 +37,7 @@ children: [
   }),
   (0, r.jsx)('div', {
     className: d.textContainer,
-    children: (0, r.jsx)(s.x, {
+    children: (0, r.jsx)(o.x, {
       variant: 'text-sm/medium',
       children: _
     })

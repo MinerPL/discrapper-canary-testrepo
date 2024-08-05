@@ -9,8 +9,8 @@ return d;
 var r = n(468343),
   i = n(559972),
   a = n(789741),
-  o = 0,
-  s = {
+  s = 0,
+  o = {
 attributes: !0,
 characterData: !0,
 childList: !0,
@@ -48,7 +48,7 @@ return e.prototype.run = function(e) {
       try {
         n = (0, r.N)();
       } finally {
-        if (u = !1, !o)
+        if (u = !1, !s)
           return;
         n ? t.run(60) : e ? t.run(e - 1) : t.start();
       }
@@ -58,7 +58,7 @@ return e.prototype.run = function(e) {
 }, e.prototype.observe = function() {
   var e = this,
     t = function() {
-      return e.observer && e.observer.observe(document.body, s);
+      return e.observer && e.observer.observe(document.body, o);
     };
   document.body ? t() : i.C.addEventListener('DOMContentLoaded', t);
 }, e.prototype.start = function() {
@@ -74,5 +74,5 @@ return e.prototype.run = function(e) {
 }, e;
   }())(),
   d = function(e) {
-!o && e > 0 && c.start(), (o += e) || c.stop();
+!s && e > 0 && c.start(), (s += e) || c.stop();
   };

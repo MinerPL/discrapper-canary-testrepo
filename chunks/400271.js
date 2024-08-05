@@ -1,5 +1,5 @@
 n(47120);
-var i, s, a, r, l = n(442837),
+var i, a, s, r, l = n(442837),
   o = n(433517),
   c = n(570140),
   d = n(650774),
@@ -25,12 +25,12 @@ let t = d.Z.getMemberCount(e.id);
 return !m.has(e.id) && null != t && t >= h.U3 && _.Z.can(E.Plq.ADMINISTRATOR, e) && !e.hasFeature(E.oNc.COMMUNITY);
   }
 }
-r = 'EnablePublicGuildUpsellNoticeStore', (a = 'displayName') in(s = g) ? Object.defineProperty(s, a, {
+r = 'EnablePublicGuildUpsellNoticeStore', (s = 'displayName') in(a = g) ? Object.defineProperty(a, s, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = r, t.Z = new g(c.Z, {
+}) : a[s] = r, t.Z = new g(c.Z, {
   PUBLIC_UPSELL_NOTICE_DISMISS: function(e) {
 let t = e.guildId;
 if (!m.has(t))

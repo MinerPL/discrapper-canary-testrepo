@@ -1,4 +1,4 @@
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(585483),
   c = n(981631);
@@ -8,7 +8,7 @@ let d = null,
 function E() {
   d = null;
 }
-class f extends(o = s.ZP.Store) {
+class f extends(s = o.ZP.Store) {
   isOpen() {
 return null != d;
   }

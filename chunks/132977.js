@@ -6,10 +6,10 @@ return g;
 return S;
   },
   rH: function() {
-return s;
+return o;
   }
 });
-var r, i, a, o, s, l, u = n(735250),
+var r, i, a, s, o, l, u = n(735250),
   c = n(470079),
   d = n(120356),
   _ = n.n(d),
@@ -18,7 +18,7 @@ var r, i, a, o, s, l, u = n(735250),
   h = n(727637),
   p = n(285952),
   m = n(729443);
-(r = s || (s = {})).DEFAULT = 'default', r.SMALL = 'small';
+(r = o || (o = {})).DEFAULT = 'default', r.SMALL = 'small';
 let I = {
 default: m.shineDefault,
 small: m.shineSmall
@@ -51,14 +51,14 @@ return (0, u.jsx)(E.Z.div, {
 });
   }
 }
-o = {
+s = {
   shineSize: 'default'
 }, (a = 'defaultProps') in(i = g) ? Object.defineProperty(i, a, {
-  value: o,
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o;
+}) : i[a] = s;
 let S = e => {
   let {
 children: t,
@@ -66,8 +66,8 @@ className: n,
 disabled: r,
 submitting: i,
 pauseAnimation: a,
-shineSize: o = 'default',
-shinePaused: s,
+shineSize: s = 'default',
+shinePaused: o,
 buttonShineClassName: l,
 onlyShineOnHover: d,
 ...E
@@ -81,11 +81,11 @@ submitting: i,
 children: [
   t,
   T ? (0, u.jsx)(g, {
-    shinePaused: s,
+    shinePaused: o,
     className: _()(m.buttonShine, d ? m.onlyShineOnHover : void 0, l),
-    shineSize: o
+    shineSize: s
   }) : null
 ]
   });
 };
-S.ShineSizes = s;
+S.ShineSizes = o;

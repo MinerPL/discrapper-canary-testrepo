@@ -1,5 +1,5 @@
-var r, i, a, o, s = n(348327),
-  l = n.n(s),
+var r, i, a, s, o = n(348327),
+  l = n.n(o),
   u = n(442837),
   c = n(570140),
   d = n(592125),
@@ -18,14 +18,14 @@ let N = null;
 
 function v() {
   let e = function() {
-var e, t, n, r, i, a, o;
-let s = f.Z.getVoiceChannelId();
-if (null == s)
+var e, t, n, r, i, a, s;
+let o = f.Z.getVoiceChannelId();
+if (null == o)
   return null;
-let l = T.Z.getStageInstanceByChannel(s);
+let l = T.Z.getStageInstanceByChannel(o);
 if (null == l)
   return null;
-let u = d.Z.getChannel(s);
+let u = d.Z.getChannel(o);
 if (null == u || !h.oz(A.Plq.VIEW_CHANNEL, u))
   return null;
 let c = _.Z.getGuild(u.getGuildId());
@@ -36,7 +36,7 @@ let E = (0, I.Lw)(u, l),
   O = p.Z.getMutableParticipants(u.id, m.pV.SPEAKER),
   R = O.filter(e => e.type === m.Ui.STREAM).length,
   C = O.length - R,
-  y = p.Z.getParticipantCount(s) - R,
+  y = p.Z.getParticipantCount(o) - R,
   D = (null == v ? void 0 : null === (t = v.party) || void 0 === t ? void 0 : t.size) != null ? v.party.size[1] : 0;
 return {
   application_id: S.gD,
@@ -46,7 +46,7 @@ return {
     start: null !== (a = null == v ? void 0 : null === (n = v.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== a ? a : new Date().getTime()
   },
   assets: {
-    small_image: null !== (o = c.icon) && void 0 !== o ? o : void 0,
+    small_image: null !== (s = c.icon) && void 0 !== s ? s : void 0,
     small_text: c.name
   },
   party: {
@@ -60,7 +60,7 @@ return {
   }();
   return !l()(e, N) && (N = e, !0);
 }
-class O extends(o = u.ZP.Store) {
+class O extends(s = u.ZP.Store) {
   initialize() {
 this.waitFor(d.Z, f.Z, T.Z, E.Z);
   }

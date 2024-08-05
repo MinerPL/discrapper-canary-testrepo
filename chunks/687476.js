@@ -1,5 +1,5 @@
 n(47120);
-var r, i, a, o, s = n(149765),
+var r, i, a, s, o = n(149765),
   l = n(442837),
   u = n(570140),
   c = n(271383),
@@ -23,14 +23,14 @@ return !1;
 i = new Set(),
 a = new Set();
   if (T.set(e, n.isOwner(t)), n.hasFeature(f.oNc.ROLE_SUBSCRIPTIONS_ENABLED)) {
-var o, l;
+var s, l;
 let u = c.ZP.getMember(e, t.id),
-  _ = new Set(null !== (o = null == u ? void 0 : u.roles) && void 0 !== o ? o : []),
+  _ = new Set(null !== (s = null == u ? void 0 : u.roles) && void 0 !== s ? s : []),
   h = d.Z.getRoles(n.id);
 for (let t in h) {
   ;
   let n = h[t];
-  if ((0, E.Z)(n) && (r.add(t), (0, E.h)(n) && (i.add(t), _.has(t) && a.add(t))), _.has(t) && (l = n, s.e$(l.permissions, f.Plq.ADMINISTRATOR)))
+  if ((0, E.Z)(n) && (r.add(t), (0, E.h)(n) && (i.add(t), _.has(t) && a.add(t))), _.has(t) && (l = n, o.e$(l.permissions, f.Plq.ADMINISTRATOR)))
     T.set(e, !0);
 }
   }
@@ -103,12 +103,12 @@ var t;
 return this.buildRoles(e), null !== (t = T.get(e)) && void 0 !== t && t;
   }
 }
-o = 'SubscriptionRoleStore', (a = 'displayName') in(i = O) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'SubscriptionRoleStore', (a = 'displayName') in(i = O) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new O(u.Z, {
+}) : i[a] = s, t.Z = new O(u.Z, {
   CONNECTION_OPEN: A,
   LOGOUT: A,
   GUILD_CREATE: N,

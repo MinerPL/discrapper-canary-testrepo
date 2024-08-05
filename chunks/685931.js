@@ -99,14 +99,14 @@ extend: function(e, t) {
   };
 }
   },
-  o = t.autoprefix = function(e) {
+  s = t.autoprefix = function(e) {
 var t = {};
 return (0, r.default)(e, function(e, n) {
-  var o = {};
+  var s = {};
   (0, r.default)(e, function(e, t) {
     var n = a[t];
-    n ? o = i({}, o, n(e)) : o[t] = e;
-  }), t[n] = o;
+    n ? s = i({}, s, n(e)) : s[t] = e;
+  }), t[n] = s;
 }), t;
   };
-t.default = o;
+t.default = s;

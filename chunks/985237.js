@@ -6,8 +6,8 @@ return R;
 var r = n(735250),
   i = n(470079),
   a = n(442837),
-  o = n(481060),
-  s = n(727637),
+  s = n(481060),
+  o = n(727637),
   l = n(100527),
   u = n(906732),
   c = n(271383),
@@ -51,7 +51,7 @@ guildId: R,
 channelId: C,
 messageId: y,
 roleId: D
-  }), x = (0, E.ZP)(t.id, R), G = (0, a.e7)([d.Z], () => null != R ? d.Z.getGuild(R) : null), k = (0, a.e7)([c.ZP], () => null != R ? c.ZP.getMember(R, t.id) : null), B = i.useRef(null), F = (0, s.Z)(B);
+  }), x = (0, E.ZP)(t.id, R), G = (0, a.e7)([d.Z], () => null != R ? d.Z.getGuild(R) : null), k = (0, a.e7)([c.ZP], () => null != R ? c.ZP.getMember(R, t.id) : null), B = i.useRef(null), F = (0, o.Z)(B);
   i.useEffect(() => {
 null == b || b(null == B ? void 0 : B.current);
   }, [
@@ -79,7 +79,7 @@ children: (0, r.jsx)(_.Mt, {
   messageId: y,
   roleId: D,
   shouldTrackViewOnMount: null == k || null != k.fullProfileLoadedTimestamp,
-  children: (0, r.jsx)(o.Dialog, {
+  children: (0, r.jsx)(s.Dialog, {
     ref: B,
     'aria-label': t.username,
     children: (0, r.jsxs)(m.Z, {
@@ -92,7 +92,7 @@ children: (0, r.jsx)(_.Mt, {
           children: (0, r.jsx)(I.Z, {
             user: t,
             guildId: R,
-            viewProfileItem: M ? null : (0, r.jsx)(o.MenuItem, {
+            viewProfileItem: M ? null : (0, r.jsx)(s.MenuItem, {
               id: 'view-profile',
               label: v.Z.Messages.VIEW_FULL_PROFILE,
               action: () => {

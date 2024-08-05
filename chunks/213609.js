@@ -9,8 +9,8 @@ return m;
 var r = n(470079),
   i = n(348327),
   a = n.n(i),
-  o = n(97613),
-  s = n.n(o),
+  s = n(97613),
+  o = n.n(s),
   l = n(990547),
   u = n(570140),
   c = n(592125),
@@ -31,7 +31,7 @@ function m(e) {
 {
   name: i,
   type: a,
-  properties: o
+  properties: s
 } = e;
   if (e.type === l.ImpressionTypes.MODAL && null == e.name && (0, h.Ez)().some(e => {
   var t;
@@ -39,14 +39,14 @@ function m(e) {
 }))
 return;
   (0, h.Ps)(e);
-  let s = null !== (t = null == o ? void 0 : o.guild_id) && void 0 !== t ? t : _.Z.getGuildId(),
-u = null !== (n = null == o ? void 0 : o.channel_id) && void 0 !== n ? n : d.Z.getChannelId(s),
+  let o = null !== (t = null == s ? void 0 : s.guild_id) && void 0 !== t ? t : _.Z.getGuildId(),
+u = null !== (n = null == s ? void 0 : s.channel_id) && void 0 !== n ? n : d.Z.getChannelId(o),
 m = (0, E.expandEventProperties)({
   impression_type: a,
   location: (0, h.k$)(),
-  ...(0, f.hH)(s),
+  ...(0, f.hH)(o),
   ...(0, f.v_)(c.Z.getChannel(u)),
-  ...o
+  ...s
 });
   if (r) {
 (0, h.dT)(null, null);
@@ -62,16 +62,16 @@ function I(e) {
 },
 n = arguments.length > 2 ? arguments[2] : void 0,
 i = r.useRef(),
-o = r.useRef();
+s = r.useRef();
   r.useEffect(() => {
 let r = !a()(i.current, e);
 r && (i.current = e);
-let l = !a()(o.current, n);
-if (l && (o.current = n), !r && !l)
+let l = !a()(s.current, n);
+if (l && (s.current = n), !r && !l)
   return;
 let u = {
   ...e,
-  sequenceId: s()('impression_')
+  sequenceId: o()('impression_')
 };
 return m(u, t.disableTrack), () => {
   null != u && (0, h.dw)(u);

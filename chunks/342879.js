@@ -2,8 +2,8 @@ n(47120);
 var r = n(392711),
   i = n(570140),
   a = n(147913),
-  o = n(38618),
-  s = n(553795),
+  s = n(38618),
+  o = n(553795),
   l = n(517100),
   u = n(451478),
   c = n(162461),
@@ -16,7 +16,7 @@ let h = E.YN.GLOBAL_FEED,
   m = new Set(),
   I = new Map(),
   T = null,
-  g = (0, r.debounce)(d.y, 3000, {
+  g = (0, r.debounce)(d.yK, 3000, {
 trailing: !0
   });
 
@@ -36,7 +36,7 @@ function N(e) {
   if (!(0, c.sA)('ContentInventoryManager') || m.has(e) || e === E.YN.GAME_PROFILE_FEED && void 0 !== _.Z.getFeed(e))
 return !1;
   if (e === h) {
-if (_.Z.hidden || !u.Z.isFocused() || !o.Z.isConnected())
+if (_.Z.hidden || !u.Z.isFocused() || !s.Z.isConnected())
   return !1;
 let e = l.Z.getIdleSince();
 if (null != e && Date.now() - e > 900000)
@@ -76,7 +76,7 @@ try {
   m.add(e), S(e, {
     loading: !0
   });
-  let n = await (0, d.m)({
+  let n = await (0, d.mt)({
     token: null == t ? void 0 : t.refresh_token,
     feedId: e
   });
@@ -132,7 +132,7 @@ connectionId: n,
 track: r
   } = e;
   if (null != n && !!(0, c.Dy)('ContentInventoryManager.handleSpotifyNewTrack'))
-(null === (t = s.Z.getAccount(n, f.ABu.SPOTIFY)) || void 0 === t ? void 0 : t.showActivity) && g(n, r);
+(null === (t = o.Z.getAccount(n, f.ABu.SPOTIFY)) || void 0 === t ? void 0 : t.showActivity) && g(n, r);
 }
 
 function b() {

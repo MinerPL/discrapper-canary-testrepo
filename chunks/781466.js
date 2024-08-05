@@ -4,7 +4,7 @@ var r = n(470079),
 t.Z = function(e) {
   var t = e.onClick,
 n = e.hsl,
-o = (0, i.default)({
+s = (0, i.default)({
   default: {
     swatches: {
       marginTop: '20px'
@@ -21,9 +21,9 @@ o = (0, i.default)({
   }
 });
   return r.createElement('div', {
-style: o.swatches
+style: s.swatches
   }, r.createElement('div', {
-style: o.swatch
+style: s.swatch
   }, r.createElement(a.Z, {
 hsl: n,
 offset: '.80',
@@ -31,28 +31,28 @@ active: 0.1 > Math.abs(n.l - 0.8) && 0.1 > Math.abs(n.s - 0.5),
 onClick: t,
 first: !0
   })), r.createElement('div', {
-style: o.swatch
+style: s.swatch
   }, r.createElement(a.Z, {
 hsl: n,
 offset: '.65',
 active: 0.1 > Math.abs(n.l - 0.65) && 0.1 > Math.abs(n.s - 0.5),
 onClick: t
   })), r.createElement('div', {
-style: o.swatch
+style: s.swatch
   }, r.createElement(a.Z, {
 hsl: n,
 offset: '.50',
 active: 0.1 > Math.abs(n.l - 0.5) && 0.1 > Math.abs(n.s - 0.5),
 onClick: t
   })), r.createElement('div', {
-style: o.swatch
+style: s.swatch
   }, r.createElement(a.Z, {
 hsl: n,
 offset: '.35',
 active: 0.1 > Math.abs(n.l - 0.35) && 0.1 > Math.abs(n.s - 0.5),
 onClick: t
   })), r.createElement('div', {
-style: o.swatch
+style: s.swatch
   }, r.createElement(a.Z, {
 hsl: n,
 offset: '.20',
@@ -60,6 +60,6 @@ active: 0.1 > Math.abs(n.l - 0.2) && 0.1 > Math.abs(n.s - 0.5),
 onClick: t,
 last: !0
   })), r.createElement('div', {
-style: o.clear
+style: s.clear
   }));
 };

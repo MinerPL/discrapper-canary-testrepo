@@ -32,11 +32,11 @@ offsetSize: i
 
 function a(e, t, n) {
   let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 'vertical',
-o = e => {
+s = e => {
   let {
     to: r,
-    animate: o,
-    callback: s
+    animate: s,
+    callback: o
   } = e, {
     scrollPosition: l,
     scrollSize: u,
@@ -48,15 +48,15 @@ o = e => {
       return e >= r - 1 ? r : Math.max(0, e);
     }(r, u, c),
     from: l,
-    animate: o,
-    callback: s
+    animate: s,
+    callback: o
   });
 },
-s = e => {
+o = e => {
   let {
     start: n,
     end: r,
-    shouldScrollToStart: s = !1,
+    shouldScrollToStart: o = !1,
     padding: l = 0,
     animate: u,
     callback: c
@@ -64,11 +64,11 @@ s = e => {
     scrollPosition: d,
     offsetSize: _
   } = i(t(), a);
-  n -= l, r += l, n >= d && r <= d + _ ? null != c && c() : n < d || s ? o({
+  n -= l, r += l, n >= d && r <= d + _ ? null != c && c() : n < d || o ? s({
     to: n,
     animate: u,
     callback: c
-  }) : o({
+  }) : s({
     to: r - _,
     animate: u,
     callback: c
@@ -76,14 +76,14 @@ s = e => {
 };
   return {
 spring: n,
-scrollTo: o,
+scrollTo: s,
 mergeTo: n.mergeTo,
-scrollIntoViewRect: s,
+scrollIntoViewRect: o,
 scrollIntoViewNode(t) {
   let {
     node: n,
     shouldScrollToStart: i = !1,
-    padding: o = 0,
+    padding: s = 0,
     animate: l = !1,
     callback: u
   } = t, {
@@ -97,19 +97,19 @@ scrollIntoViewNode(t) {
   } = function(e, t, n) {
     let i = 'horizontal' === t ? e.offsetWidth : e.offsetHeight,
       a = 'horizontal' === t ? e.offsetLeft : e.offsetTop,
-      o = e.offsetParent;
-    for (; null != o && o !== n;)
-      (0, r.k)(o, HTMLElement) ? (a += 'horizontal' === t ? o.offsetLeft : o.offsetTop, o = o.offsetParent) : o = o.parentNode;
+      s = e.offsetParent;
+    for (; null != s && s !== n;)
+      (0, r.k)(s, HTMLElement) ? (a += 'horizontal' === t ? s.offsetLeft : s.offsetTop, s = s.offsetParent) : s = s.parentNode;
     return {
       offset: a,
       offsetSize: i
     };
   }(n, a, c);
-  s({
+  o({
     start: d,
     end: d + _,
     shouldScrollToStart: i,
-    padding: o,
+    padding: s,
     animate: l,
     callback: u
   });
@@ -120,10 +120,10 @@ scrollPageUp() {
     callback: n
   } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, {
     scrollPosition: r,
-    offsetSize: s
+    offsetSize: o
   } = i(t(), a);
-  o({
-    to: r - 0.9 * s,
+  s({
+    to: r - 0.9 * o,
     animate: e,
     callback: n
   });
@@ -134,10 +134,10 @@ scrollPageDown() {
     callback: n
   } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, {
     scrollPosition: r,
-    offsetSize: s
+    offsetSize: o
   } = i(t(), a);
-  o({
-    to: r + 0.9 * s,
+  s({
+    to: r + 0.9 * o,
     animate: e,
     callback: n
   });
@@ -147,7 +147,7 @@ scrollToTop() {
     animate: e = !1,
     callback: t
   } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-  o({
+  s({
     to: 0,
     animate: e,
     callback: t
@@ -158,7 +158,7 @@ scrollToBottom() {
     animate: e = !1,
     callback: t
   } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-  o({
+  s({
     to: Number.MAX_SAFE_INTEGER,
     animate: e,
     callback: t

@@ -9,9 +9,9 @@ var a = t(735250),
   d = t(481060),
   u = t(550271),
   m = t(688298),
-  f = t(995119),
+  _ = t(995119),
   C = t(116175),
-  _ = t(308083),
+  f = t(308083),
   h = t(689938),
   x = t(885837),
   g = t(363778);
@@ -45,8 +45,8 @@ badge: t,
 primaryColor: i,
 secondaryColor: o,
 tag: T,
-error: I,
-furthestStep: E,
+error: E,
+furthestStep: I,
 inSettings: b
   } = e, N = r.useMemo(() => {
 let e = (0, C.yf)();
@@ -90,7 +90,7 @@ A = r.useCallback(() => {
   });
 }, [n]);
   return r.useEffect(() => {
-E === _.Wy.CUSTOMIZE_TAG_BADGE && !b && n({
+I === f.Wy.CUSTOMIZE_TAG_BADGE && !b && n({
   brandPrimaryColor: N.primary,
   brandSecondaryColor: N.secondary
 });
@@ -98,7 +98,7 @@ E === _.Wy.CUSTOMIZE_TAG_BADGE && !b && n({
 n,
 N.primary,
 N.secondary,
-E,
+I,
 i,
 o,
 b
@@ -116,7 +116,7 @@ children: [
     className: g.subtitle,
     children: h.Z.Messages.CLAN_SETUP_CUSTOMIZE_SUBTITLE
   }),
-  (0, a.jsx)(f.Z, {
+  (0, a.jsx)(_.Z, {
     onClick: A
   }),
   (0, a.jsxs)('div', {
@@ -224,11 +224,11 @@ children: [
             color: 'text-muted',
             children: h.Z.Messages.CLAN_OVERVIEW_LABEL_CLAN_TAG
           }),
-          null != I && (0, a.jsx)(d.Text, {
+          null != E && (0, a.jsx)(d.Text, {
             variant: 'text-sm/normal',
             color: 'status-danger',
             className: g.errorText,
-            children: I
+            children: E
           }),
           (0, a.jsx)(d.TextInput, {
             className: x.tagInputWrapper,
@@ -237,7 +237,7 @@ children: [
             onChange: e => n({
               tag: e
             }),
-            maxLength: _.cG,
+            maxLength: f.cG,
             placeholder: h.Z.Messages.CLAN_SETUP_TAG_PLACEHOLDER,
             autoFocus: !0,
             prefixElement: (0, a.jsx)(u.A, {

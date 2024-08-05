@@ -1,27 +1,27 @@
 var i = n(735250),
-  s = n(470079),
-  a = n(948789),
+  a = n(470079),
+  s = n(948789),
   r = n(481060),
   l = n(442837),
   o = n(212093),
-  c = n(100527),
-  d = n(570938),
-  u = n(677277),
-  _ = n(285865),
-  h = n(918701),
-  E = n(702428),
-  I = n(709158),
-  m = n(683301),
-  g = n(360048),
-  p = n(296386),
-  T = n(150192),
-  S = n(889010),
-  C = n(488905),
+  c = n(570938),
+  d = n(677277),
+  u = n(285865),
+  _ = n(918701),
+  h = n(702428),
+  E = n(709158),
+  I = n(683301),
+  m = n(360048),
+  g = n(296386),
+  p = n(150192),
+  T = n(889010),
+  S = n(488905),
   f = n(731455),
-  N = n(981631),
+  C = n(981631),
+  N = n(46140),
   A = n(689938),
-  Z = n(885181);
-let L = e => {
+  v = n(885181);
+let Z = e => {
   switch (e) {
 case f.Gj.Activity:
   return f.fW.Activity;
@@ -41,24 +41,24 @@ t.Z = function() {
   let {
 currentCategoryId: e,
 isViewingSearchResults: t
-  } = (0, l.cj)([m.ZP], () => ({
-currentCategoryId: m.ZP.getCurrentCategoryId(),
-isViewingSearchResults: m.ZP.getMostRecentQuery().length > 0
-  })), n = (0, I.Z)(c.Z.QUEST_HOME_PAGE), v = (0, l.e7)([T.Z], () => T.Z.getClanDiscoveryCategories(), [], T.j), O = null == v ? void 0 : v.map(e => ({
+  } = (0, l.cj)([I.ZP], () => ({
+currentCategoryId: I.ZP.getCurrentCategoryId(),
+isViewingSearchResults: I.ZP.getMostRecentQuery().length > 0
+  })), n = (0, E.Z)(N.dr.QUEST_HOME_DESKTOP), L = (0, l.e7)([p.Z], () => p.Z.getClanDiscoveryCategories(), [], p.j), O = null == L ? void 0 : L.map(e => ({
 ...e,
-icon: L(e.categoryId)
+icon: Z(e.categoryId)
   })), R = e => {
-(0, o.uY)(e, !0), _.Z.closeSidebar(), t && (0, o.AQ)(), (0, h.OG)() && e !== f.Gj.Quests && (0, a.uL)(N.Z5c.GUILD_DISCOVERY), !(0, h.OG)() && e === f.Gj.Quests && (0, a.uL)(N.Z5c.QUEST_HOME);
+(0, o.uY)(e, !0), u.Z.closeSidebar(), t && (0, o.AQ)(), (0, _.OG)() && e !== f.Gj.Quests && (0, s.uL)(C.Z5c.GUILD_DISCOVERY), !(0, _.OG)() && e === f.Gj.Quests && (0, s.uL)(C.Z5c.QUEST_HOME);
   };
-  return s.useEffect(() => {
-(0, p.le)(!1, !0);
+  return a.useEffect(() => {
+(0, g.le)(!1, !0);
   }, [e]), (0, i.jsxs)(r.Scroller, {
 children: [
-  (0, i.jsx)(C.V, {
+  (0, i.jsx)(S.V, {
     text: A.Z.Messages.DISCOVER
   }),
-  (0, i.jsx)(g.Z, {
-    avatar: (0, i.jsx)(d.Z, {}),
+  (0, i.jsx)(m.Z, {
+    avatar: (0, i.jsx)(c.Z, {}),
     name: A.Z.Messages.CLANS,
     focusProps: {
       offset: {
@@ -70,22 +70,22 @@ children: [
     onClick: () => R(f.Gj.Clans),
     wrapContent: !0,
     selected: e === f.Gj.Clans,
-    className: Z.categoryItem,
-    selectedClassName: Z.selectedCategoryItem,
-    innerClassName: Z.itemInner
+    className: v.categoryItem,
+    selectedClassName: v.selectedCategoryItem,
+    innerClassName: v.itemInner
   }, 'clan-discovery-home'),
-  (0, i.jsx)(S.Z, {
+  (0, i.jsx)(T.Z, {
     categories: O,
     handleCategorySelect: R,
     currentCategoryId: e,
     shouldDisplaySelectedCategory: !t
   }),
-  (0, i.jsx)(u.Z, {
+  (0, i.jsx)(d.Z, {
     handleCategorySelect: R,
     currentCategoryId: e,
     shouldDisplaySelectedCategory: !t
   }),
-  n && (0, i.jsx)(E.Z, {
+  n && (0, i.jsx)(h.Z, {
     onClick: () => R(f.Gj.Quests),
     isSelected: e === f.Gj.Quests
   })

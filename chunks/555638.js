@@ -1,6 +1,6 @@
 t.d(n, {
   A: function() {
-return C;
+return a;
   }
 });
 var o = t(735250);
@@ -11,12 +11,12 @@ var i = t(212598),
   l = t(283554),
   c = t(124248);
 
-function C(e) {
+function a(e) {
   let {
 platformType: n,
 isWaitingForConnection: t,
-onWaitingForConnection: C,
-expectedCallbackState: a,
+onWaitingForConnection: a,
+expectedCallbackState: C,
 onAuthToken: d,
 onError: u,
 onClose: _
@@ -34,8 +34,8 @@ alt: ''
   return (0, o.jsx)(i.t, {
 platformType: n,
 isWaitingForConnection: t,
-onWaitingForConnection: C,
-expectedCallbackState: a,
+onWaitingForConnection: a,
+expectedCallbackState: C,
 onAuthToken: d,
 onError: u,
 onClose: _,

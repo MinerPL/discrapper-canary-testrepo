@@ -1,55 +1,55 @@
 t.d(n, {
   w: function() {
-return _;
+return E;
   }
 });
-var i = t(735250);
+var a = t(735250);
 t(470079);
-var r = t(512722),
-  o = t.n(r),
-  a = t(481060),
-  s = t(598),
-  l = t(698708),
-  c = t(614277),
-  d = t(689938),
-  u = t(811586);
+var s = t(512722),
+  i = t.n(s),
+  l = t(481060),
+  r = t(598),
+  o = t(698708),
+  d = t(614277),
+  u = t(689938),
+  c = t(811586);
 
-function _(e) {
+function E(e) {
   let {
 handleClose: n
   } = e, {
 skusById: t,
-selectedSkuId: r,
-application: _
-  } = (0, s.usePaymentContext)();
-  o()(null != r, 'Expected selectedSkuId'), o()(null != _, 'Expected application');
-  let p = t[r];
-  o()(null != p, 'Expected sku');
-  let f = d.Z.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
-applicationName: _.name,
-itemName: p.name
+selectedSkuId: s,
+application: E
+  } = (0, r.usePaymentContext)();
+  i()(null != s, 'Expected selectedSkuId'), i()(null != E, 'Expected application');
+  let f = t[s];
+  i()(null != f, 'Expected sku');
+  let h = u.Z.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
+applicationName: E.name,
+itemName: f.name
   });
-  return (0, i.jsxs)(c.C3, {
+  return (0, a.jsxs)(d.C3, {
 children: [
-  (0, i.jsx)(l.Z, {}),
-  (0, i.jsxs)('div', {
-    className: u.confirmation,
+  (0, a.jsx)(o.Z, {}),
+  (0, a.jsxs)('div', {
+    className: c.confirmation,
     children: [
-      (0, i.jsx)(a.Heading, {
+      (0, a.jsx)(l.Heading, {
         variant: 'heading-xxl/bold',
-        className: u.confirmationHeader,
+        className: c.confirmationHeader,
         children: 'Success!'
       }),
-      (0, i.jsx)(a.Text, {
+      (0, a.jsx)(l.Text, {
         variant: 'text-md/normal',
-        children: f
+        children: h
       }),
-      (0, i.jsx)('div', {
-        className: u.divider
+      (0, a.jsx)('div', {
+        className: c.divider
       }),
-      (0, i.jsx)(a.Button, {
+      (0, a.jsx)(l.Button, {
         onClick: n,
-        children: d.Z.Messages.CLOSE
+        children: u.Z.Messages.CLOSE
       })
     ]
   })

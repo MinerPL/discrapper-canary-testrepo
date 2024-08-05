@@ -10,20 +10,20 @@ var a = s(525654),
   r = s(481060),
   o = s(579806),
   l = s(304761),
-  c = s(969832),
+  c = s(923973),
   d = s(689938),
   _ = s(283181);
 
 function E() {
   var e, t, s, a, E, u;
   let T = window.GLOBAL_ENV.RELEASE_CHANNEL,
-I = '309567',
-S = (e = '2c1de47a73231628c74c6f23483760a11676c660', e.substring(0, 7)),
+I = '315452',
+S = (e = '67a37e2dc8a5774c99c996a4ad49e39b072266d6', e.substring(0, 7)),
 N = null === o.Z || void 0 === o.Z ? void 0 : o.Z.remoteApp.getVersion(),
 C = null === o.Z || void 0 === o.Z ? void 0 : null === (t = (s = o.Z.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
 m = null === o.Z || void 0 === o.Z ? void 0 : null === (a = (E = o.Z.remoteApp).getAppArch) || void 0 === a ? void 0 : a.call(E),
 A = null === (u = l.C.getCurrentBuildOverride().overrides) || void 0 === u ? void 0 : u.discord_web,
-h = function() {
+g = function() {
   var e;
   let t = null === i() || void 0 === i() ? void 0 : null === (e = i().os) || void 0 === e ? void 0 : e.toString();
   if (null == t || null == o.Z)
@@ -32,13 +32,13 @@ h = function() {
     [n, a, r] = s.split('.').map(e => parseInt(e, 10));
   return t.includes('Windows 10') && void 0 !== r && r >= 22000 && (t = t.replace('Windows 10', 'Windows 11')), t.includes('OS X 10.15.7') && void 0 !== n && n >= 20 && (t = 'macOS '.concat(n - 9)), ''.concat(t, ' (').concat(s, ')');
 }(),
-g = [
+h = [
   T,
   I,
   '('.concat(S, ')')
 ];
-  return null != N && (g.push('Host '.concat(N)), null != m && g.push(m.toLowerCase()), null != C && g.push('('.concat(C, ')'))), g.push('Build Override: '.concat(null != A ? A.id : 'N/A')), null != h && g.push(h), (0, n.jsx)(c.o, {
-copyValue: g.join(' '),
+  return null != N && (h.push('Host '.concat(N)), null != m && h.push(m.toLowerCase()), null != C && h.push('('.concat(C, ')'))), h.push('Build Override: '.concat(null != A ? A.id : 'N/A')), null != g && h.push(g), (0, n.jsx)(c.o, {
+copyValue: h.join(' '),
 disableCopy: !1,
 copyTooltip: d.Z.Messages.COPY_VERSION,
 showCopyIcon: !1,
@@ -96,12 +96,12 @@ children: (0, n.jsxs)('div', {
         ' '
       ]
     }) : null,
-    null != h ? (0, n.jsx)(r.Text, {
+    null != g ? (0, n.jsx)(r.Text, {
       tag: 'span',
       className: _.line,
       variant: 'text-xs/normal',
       color: 'text-muted',
-      children: h
+      children: g
     }) : null
   ]
 })

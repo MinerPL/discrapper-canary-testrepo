@@ -6,10 +6,10 @@ return i;
 return A;
   },
   ZP: function() {
-return I;
+return E;
   },
   w1: function() {
-return y;
+return w;
   }
 }), n(757143);
 var i, l, r = n(442837),
@@ -25,12 +25,12 @@ var i, l, r = n(442837),
   h = n(761122),
   Z = n(361213),
   _ = n(716600),
-  g = n(952561),
-  m = n(778569),
-  E = n(701488);
+  m = n(952561),
+  g = n(778569),
+  I = n(701488);
 (l = i || (i = {}))[l.START = 0] = 'START', l[l.JOIN = 1] = 'JOIN', l[l.LEAVE = 2] = 'LEAVE';
 
-function I(e) {
+function E(e) {
   let {
 activityItem: t,
 channel: n,
@@ -43,31 +43,31 @@ backgroundResolution: c = 250
   } = e, {
 application: s,
 activity: p
-  } = t, f = p.client_platform_config[(0, h.Z)((0, d.getOS)())], _ = null != f.label_until && Date.now() < Date.parse(f.label_until), g = (0, m.Z)({
+  } = t, f = p.client_platform_config[(0, h.Z)((0, d.getOS)())], _ = null != f.label_until && Date.now() < Date.parse(f.label_until), m = (0, g.Z)({
 applicationId: s.id,
 size: c,
 names: u
-  }), I = null != p.activity_preview_video_asset_id ? (0, Z.Z)(s.id, p.activity_preview_video_asset_id) : null, w = (0, v.ZP)(n).find(e => {
+  }), E = null != p.activity_preview_video_asset_id ? (0, Z.Z)(s.id, p.activity_preview_video_asset_id) : null, b = (0, v.ZP)(n).find(e => {
 let {
   embeddedActivity: t
 } = e;
 return s.id === t.applicationId;
-  }), b = A({
+  }), y = A({
 channelId: null == n ? void 0 : n.id,
 applicationId: s.id
-  }), C = y({
+  }), C = w({
 applicationId: t.application.id,
 channelId: null == n ? void 0 : n.id,
 guildId: i,
 locationObject: l,
 embeddedActivitiesManager: o,
 onActivityItemSelectedProp: r
-  }), S = t.activity.client_platform_config[(0, h.Z)((0, d.getOS)())].release_phase, T = E.eB.includes(S) ? S.replace('_', ' ').replace(/(^\w|\s\w)/g, e => e.toUpperCase()) : void 0;
+  }), S = t.activity.client_platform_config[(0, h.Z)((0, d.getOS)())].release_phase, T = I.eB.includes(S) ? S.replace('_', ' ').replace(/(^\w|\s\w)/g, e => e.toUpperCase()) : void 0;
   return {
-imageBackground: g,
-videoUrl: I,
-joinableEmbeddedApp: w,
-activityAction: b,
+imageBackground: m,
+videoUrl: E,
+joinableEmbeddedApp: b,
+activityAction: y,
 onActivityItemSelected: C,
 labelType: _ ? f.label_type : a.ww.NONE,
 staffReleasePhase: T
@@ -78,7 +78,7 @@ function A(e) {
   let {
 channelId: t,
 applicationId: n
-  } = e, i = 0, l = (0, r.e7)([c.Z], () => c.Z.getChannel(t)), a = (0, _.Z)(), o = (0, g.Z)(), d = (0, u.q)(n), s = (0, v.ZP)(l).find(e => {
+  } = e, i = 0, l = (0, r.e7)([c.Z], () => c.Z.getChannel(t)), a = (0, _.Z)(), o = (0, m.Z)(), d = (0, u.q)(n), s = (0, v.ZP)(l).find(e => {
 let {
   embeddedActivity: t
 } = e;
@@ -87,7 +87,7 @@ return null != d && d.id === t.applicationId;
   return null == d ? i : (null != l && (null == a ? void 0 : a.channelId) === l.id && (null == o ? void 0 : o.id) === d.id ? i = 2 : null != s && (i = 1), i);
 }
 
-function y(e) {
+function w(e) {
   let {
 applicationId: t,
 channelId: n,
@@ -98,7 +98,7 @@ onActivityItemSelectedProp: a
   } = e, u = A({
 channelId: n,
 applicationId: t
-  }), c = (0, g.Z)(), {
+  }), c = (0, m.Z)(), {
 analyticsLocations: d
   } = (0, o.ZP)();
   switch (u) {

@@ -1,7 +1,7 @@
-var r, i, a, o;
+var r, i, a, s;
 n.d(t, {
   CT: function() {
-return s;
+return o;
   },
   Om: function() {
 return l;
@@ -13,6 +13,6 @@ return r;
 return i;
   }
 }), (a = r || (r = {})).EMOJI = 'emoji', a.GIF = 'gif', a.STICKER = 'sticker', a.SOUNDBOARD = 'soundboard';
-let s = 'expression-picker-chat-input-button',
+let o = 'expression-picker-chat-input-button',
   l = 498;
-(o = i || (i = {})).MIN = 'min', o.MAX = 'max';
+(s = i || (i = {})).MIN = 'min', s.MAX = 'max';

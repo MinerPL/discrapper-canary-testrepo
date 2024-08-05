@@ -1,8 +1,8 @@
 var r = n(620014),
   i = n(580755),
   a = n(805100),
-  o = n(224760),
-  s = n(915212),
+  s = n(224760),
+  o = n(915212),
   l = n(228057),
   u = n(161984),
   c = n(388456),
@@ -44,7 +44,7 @@ if (T(t))
   return l(t, U);
 if (k == C || k == O || B && !b) {
   if (P = w || B ? {} : m(t), !U)
-    return w ? d(t, s(P, t)) : c(t, o(P, t));
+    return w ? d(t, o(P, t)) : c(t, s(P, t));
 } else {
   if (!y[k])
     return b ? t : {};

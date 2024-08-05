@@ -1,25 +1,25 @@
 var r = n(814033),
   i = n(689118),
   a = n(806981),
-  o = n(685053);
+  s = n(685053);
 
-function s(e) {
+function o(e) {
   a.call(this, 'mont', e), this.a = new r(e.a, 16).toRed(this.red), this.b = new r(e.b, 16).toRed(this.red), this.i4 = new r(4).toRed(this.red).redInvm(), this.two = new r(2).toRed(this.red), this.a24 = this.i4.redMul(this.a.redAdd(this.two));
 }
 
 function l(e, t, n) {
   a.BasePoint.call(this, e, 'projective'), null === t && null === n ? (this.x = this.curve.one, this.z = this.curve.zero) : (this.x = new r(t, 16), this.z = new r(n, 16), !this.x.red && (this.x = this.x.toRed(this.curve.red)), !this.z.red && (this.z = this.z.toRed(this.curve.red)));
 }
-i(s, a), e.exports = s, s.prototype.validate = function(e) {
+i(o, a), e.exports = o, o.prototype.validate = function(e) {
   var t = e.normalize().x,
 n = t.redSqr(),
 r = n.redMul(t).redAdd(n.redMul(this.a)).redAdd(t);
   return 0 === r.redSqrt().redSqr().cmp(r);
-}, i(l, a.BasePoint), s.prototype.decodePoint = function(e, t) {
-  return this.point(o.toArray(e, t), 1);
-}, s.prototype.point = function(e, t) {
+}, i(l, a.BasePoint), o.prototype.decodePoint = function(e, t) {
+  return this.point(s.toArray(e, t), 1);
+}, o.prototype.point = function(e, t) {
   return new l(this, e, t);
-}, s.prototype.pointFromJSON = function(e) {
+}, o.prototype.pointFromJSON = function(e) {
   return l.fromJSON(this, e);
 }, l.prototype.precompute = function() {}, l.prototype._encode = function() {
   return this.getX().toArray('be', this.curve.p.byteLength());
@@ -43,10 +43,10 @@ i = n.redMul(t.redAdd(this.curve.a24.redMul(n)));
 r = this.x.redSub(this.z),
 i = e.x.redAdd(e.z),
 a = e.x.redSub(e.z).redMul(n),
-o = i.redMul(r),
-s = t.z.redMul(a.redAdd(o).redSqr()),
-l = t.x.redMul(a.redISub(o).redSqr());
-  return this.curve.point(s, l);
+s = i.redMul(r),
+o = t.z.redMul(a.redAdd(s).redSqr()),
+l = t.x.redMul(a.redISub(s).redSqr());
+  return this.curve.point(o, l);
 }, l.prototype.mul = function(e) {
   for (var t = e.clone(), n = this, r = this.curve.point(null, null), i = []; 0 !== t.cmpn(0); t.iushrn(1))
 i.push(t.andln(1));

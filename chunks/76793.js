@@ -1,8 +1,8 @@
 s.d(t, {
   Z: function() {
-return p;
+return R;
   }
-}), s(47120);
+});
 var n = s(735250),
   a = s(470079),
   i = s(442837),
@@ -10,25 +10,25 @@ var n = s(735250),
   o = s(232567),
   l = s(700582),
   c = s(718629),
-  d = s(138820),
+  d = s(615830),
   _ = s(630759),
-  E = s(921157),
-  u = s(171368),
-  T = s(594174),
-  I = s(709054),
+  E = s(931500),
+  u = s(921157),
+  T = s(171368),
+  I = s(594174),
   S = s(51144),
   N = s(760373),
   C = s(689938),
   m = s(212491),
   A = s(549856);
 
-function h(e) {
+function g(e) {
   let {
 userId: t,
 count: s
-  } = e, c = (0, i.e7)([T.default], () => T.default.getUser(t)), d = S.ZP.getFormattedName(c), E = a.useCallback(() => {
-(0, _.Dz)(t);
-  }, [t]), I = a.useCallback(() => (0, u.openUserProfileModal)({
+  } = e, c = (0, i.e7)([I.default], () => I.default.getUser(t)), d = S.ZP.getFormattedName(c), E = a.useCallback(() => {
+(0, _.Zn)(t);
+  }, [t]), u = a.useCallback(() => (0, T.openUserProfileModal)({
 userId: t
   }), [t]);
   return a.useEffect(() => {
@@ -46,7 +46,7 @@ children: [
     children: [
       (0, n.jsx)(r.Clickable, {
         className: m.username,
-        onClick: I,
+        onClick: u,
         children: (0, n.jsx)(r.Text, {
           variant: 'text-md/semibold',
           color: 'interactive-active',
@@ -73,16 +73,16 @@ children: [
   });
 }
 
-function g(e) {
+function h(e) {
   let {
 className: t,
 userId: s,
 verification: i,
 index: o
   } = e, l = (0, _.bo)(i.timestamp), c = a.useCallback(() => {
-(0, _.KF)(s, i.fingerprint);
+(0, _.ZU)(s, i.verifiedKey);
   }, [
-i.fingerprint,
+i.verifiedKey,
 s
   ]);
   return (0, n.jsxs)('div', {
@@ -119,7 +119,34 @@ children: [
 
 function O(e) {
   let {
-entries: t
+userId: t
+  } = e, s = (0, E._)(t);
+  return (0, n.jsxs)(n.Fragment, {
+children: [
+  (0, n.jsx)(g, {
+    userId: t,
+    count: s.length
+  }),
+  s.map((e, i) => (0, n.jsxs)(a.Fragment, {
+    children: [
+      (0, n.jsx)(h, {
+        className: m.row,
+        userId: t,
+        index: i,
+        verification: e
+      }),
+      i !== s.length - 1 && (0, n.jsx)('div', {
+        className: m.divider
+      })
+    ]
+  }, ''.concat(i, '-').concat(e.timestamp)))
+]
+  });
+}
+
+function p(e) {
+  let {
+userIds: t
   } = e;
   return 0 === t.length ? null : (0, n.jsxs)(n.Fragment, {
 children: [
@@ -139,44 +166,22 @@ children: [
       })
     ]
   }),
-  t.map(e => {
-    let [t, s] = e;
-    return (0, n.jsxs)('div', {
-      className: m.item,
-      children: [
-        (0, n.jsx)(h, {
-          userId: t,
-          count: s.length
-        }),
-        s.map((e, i) => (0, n.jsxs)(a.Fragment, {
-          children: [
-            (0, n.jsx)(g, {
-              className: m.row,
-              userId: t,
-              index: i,
-              verification: e
-            }),
-            i !== s.length - 1 && (0, n.jsx)('div', {
-              className: m.divider
-            })
-          ]
-        }, ''.concat(i, '-').concat(e.timestamp)))
-      ]
-    }, t);
-  })
+  t.map(e => (0, n.jsx)('div', {
+    className: m.item,
+    children: (0, n.jsx)(O, {
+      userId: e
+    })
+  }, e))
 ]
   });
 }
 
-function p() {
+function R() {
   let e = (0, i.e7)([d.Z], () => d.Z.getPersistentCodesEnabled()),
 t = a.useCallback(e => {
-  c.Z.updateSettings({
-    persistentCodesEnabled: e
-  });
+  c.Z.updatePersistentCodesEnabled(e);
 }, []),
-s = (0, E.W)(),
-o = a.useMemo(() => I.default.entries(s), [s]);
+s = (0, u.s)();
   return (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsxs)(r.FormSection, {
@@ -198,7 +203,7 @@ children: [
             children: C.Z.Messages.E2EE_VERIFICATION_CODES
           }),
           (0, n.jsx)(r.FormSwitch, {
-            hideBorder: 0 === o.length,
+            hideBorder: 0 === s.length,
             value: e,
             note: C.Z.Messages.E2EE_PERSISTENT_CODES_DESCRIPTION.format({
               helpArticle: N.$J
@@ -210,8 +215,8 @@ children: [
       })
     ]
   }),
-  (0, n.jsx)(O, {
-    entries: o
+  (0, n.jsx)(p, {
+    userIds: s
   })
 ]
   });

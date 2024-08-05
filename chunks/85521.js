@@ -6,8 +6,8 @@ return d;
 var r = n(913527),
   i = n.n(r),
   a = n(81825),
-  o = n(812206),
-  s = n(630388),
+  s = n(812206),
+  o = n(630388),
   l = n(959546),
   u = n(981631);
 
@@ -57,7 +57,7 @@ return new d({
 return this.flags;
   }
   hasFlag(e) {
-return s.yE(this.flags, e);
+return o.yE(this.flags, e);
   }
   isHidden() {
 return this.hasFlag(u.eHb.HIDDEN);
@@ -90,7 +90,7 @@ return this.isMasterBranch() || null == this.branch ? e.name : ''.concat(e.name,
 return this.sku.id;
   }
   getAnalyticsData() {
-let e = o.Z.getApplication(this.id);
+let e = s.Z.getApplication(this.id);
 return {
   application_id: null != e ? e.id : null,
   application_name: null != e ? e.name : null,

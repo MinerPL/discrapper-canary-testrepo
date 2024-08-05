@@ -9,8 +9,8 @@ return c;
 var r = n(470079),
   i = n(442837),
   a = n(846519),
-  o = n(594174),
-  s = n(295226),
+  s = n(594174),
+  o = n(295226),
   l = n(74538);
 
 function u(e) {
@@ -18,9 +18,9 @@ function u(e) {
 }
 
 function c(e) {
-  let t = (0, i.e7)([s.Z], () => s.Z.getUserTrialOffer(e)),
+  let t = (0, i.e7)([o.Z], () => o.Z.getUserTrialOffer(e)),
 [n, c] = r.useState(u(t)),
-d = (0, i.e7)([o.default], () => (0, l.I5)(o.default.getCurrentUser()));
+d = (0, i.e7)([s.default], () => (0, l.I5)(s.default.getCurrentUser()));
   return r.useEffect(() => {
 if (null != t && null != t.expires_at) {
   let e = new a.V7(),

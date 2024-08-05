@@ -1,19 +1,19 @@
-var t = a(735250),
-  s = a(470079),
-  r = a(120356),
-  l = a.n(r),
-  i = a(931959);
-let o = s.forwardRef(function(e, n) {
+var t = s(735250),
+  r = s(470079),
+  l = s(120356),
+  a = s.n(l),
+  i = s(931959);
+let c = r.forwardRef(function(e, n) {
   let {
-isActive: a,
-children: s
+isActive: s,
+children: r
   } = e;
   return (0, t.jsx)('div', {
-className: l()(i.wrapper, {
-  [i.wrapperActive]: a
+className: a()(i.wrapper, {
+  [i.wrapperActive]: s
 }),
 ref: n,
-children: s
+children: r
   });
 });
-n.Z = o;
+n.Z = c;

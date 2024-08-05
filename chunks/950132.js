@@ -8,11 +8,11 @@ var n, i, r, l, o = a(735250),
   c = a(476400),
   d = a.n(c),
   u = a(948789),
-  p = a(982905),
-  h = a(66037),
-  m = a(231338),
+  h = a(982905),
+  m = a(66037),
+  p = a(231338),
   N = a(145269);
-let k = m.j_.MAIN_NAVIGATION_MENU;
+let k = p.j_.MAIN_NAVIGATION_MENU;
 class _ extends(l = s.PureComponent) {
   render() {
 let e = (0, u.fQ)(this.context.router),
@@ -42,12 +42,12 @@ let e = (0, u.fQ)(this.context.router),
       })
     })
   }, t.route) : (0, o.jsx)('li', {
-    className: (0, p.l)(N, 'moreListItem', e(t.route) ? 'Active' : 'Inactive'),
-    children: (0, o.jsx)(h.Z, {
+    className: (0, h.l)(N, 'moreListItem', e(t.route) ? 'Active' : 'Inactive'),
+    children: (0, o.jsx)(m.Z, {
       avoidRouter: i,
       className: N.moreListLink,
       to: t.route,
-      from: m.j_.MAIN_NAVIGATION_MENU,
+      from: p.j_.MAIN_NAVIGATION_MENU,
       role: 'menuitem',
       children: (0, o.jsx)(n, {
         tag: 'span',
@@ -62,7 +62,7 @@ let e = (0, u.fQ)(this.context.router),
   }, t.route));
 return (0, o.jsx)('ul', {
   id: r,
-  className: (0, p.l)(N, 'moreList', t ? 'Open' : 'Closed'),
+  className: (0, h.l)(N, 'moreList', t ? 'Open' : 'Closed'),
   'aria-label': l,
   children: s
 });

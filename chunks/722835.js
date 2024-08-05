@@ -1,11 +1,11 @@
 n.d(t, {
   Z: function() {
-return I;
+return m;
   }
 });
 var i = n(872810),
-  s = n(594190),
-  a = n(199902),
+  a = n(594190),
+  s = n(199902),
   r = n(592125),
   l = n(430824),
   o = n(131951),
@@ -14,21 +14,29 @@ var i = n(872810),
   u = n(449224),
   _ = n(382182),
   h = n(74299),
-  E = n(989941);
+  E = n(960861),
+  I = n(989941);
 
-function I() {
+function m() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  if (!(0, h.Z)(o.Z) || null != a.Z.getCurrentUserActiveStream())
+  if (!(0, h.Z)(o.Z) || null != s.Z.getCurrentUserActiveStream())
 return !1;
-  let t = (0, E.Z)(s.ZP, u.Z);
-  if (null == t || t.isLauncher && !e)
+  let t = d.Z.getVoiceChannelId(),
+n = r.Z.getChannel(t);
+  if (null == n)
 return !1;
-  let n = d.Z.getVoiceChannelId(),
-I = r.Z.getChannel(n);
-  if (null == I)
+  let m = n.getGuildId();
+  if (!(0, _.JL)(n, l.Z, c.Z, !1))
 return !1;
-  let m = I.getGuildId();
-  return !!(0, _.JL)(I, l.Z, c.Z, !1) && ((0, i.WH)(m, I.id, {
-pid: t.pid
-  }), !0);
+  if (E.ZP.enabled())
+E.ZP.presentPicker();
+  else {
+let t = (0, I.Z)(a.ZP, u.Z);
+if (null == t || t.isLauncher && !e)
+  return !1;
+(0, i.WH)(m, n.id, {
+  pid: t.pid
+});
+  }
+  return !0;
 }

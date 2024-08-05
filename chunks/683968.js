@@ -12,8 +12,8 @@ return n && e(t.prototype, n), r && e(t, r), t;
 n(968598);
 var i = n(261469),
   a = n(118403),
-  o = n(59199),
-  s = function(e) {
+  s = n(59199),
+  o = function(e) {
 function t(e, n) {
   ! function(e, t) {
     if (!(e instanceof t))
@@ -66,7 +66,7 @@ return ! function(e, t) {
   {
     key: 'interpolate',
     value: function(e) {
-      return new a(this, o.create(e));
+      return new a(this, s.create(e));
     }
   },
   {
@@ -83,4 +83,4 @@ return ! function(e, t) {
   }
 ]), t;
   }(i);
-e.exports = s;
+e.exports = o;

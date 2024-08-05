@@ -1,6 +1,6 @@
 E.d(_, {
   Wg: function() {
-return i;
+return M;
   }
 }), E(47120);
 var s, T = E(470079),
@@ -13,7 +13,7 @@ var s, T = E(470079),
   N = E(116175),
   L = E(308083);
 
-function D(e, _, E) {
+function S(e, _, E) {
   return _ in e ? Object.defineProperty(e, _, {
 value: E,
 enumerable: !0,
@@ -21,7 +21,7 @@ configurable: !0,
 writable: !0
   }) : e[_] = E, e;
 }
-let S = new Map(),
+let D = new Map(),
   l = new Map(),
   U = !1,
   G = Object.freeze({
@@ -54,18 +54,18 @@ function O() {
   return e.badgeKind = (0, N.lP)(), e.banner = (0, L.i1)(), e;
 }
 
-function i() {
+function M() {
   return T.useState(() => O())[0];
 }
 
-function M(e) {
+function i(e) {
   var _;
-  return null !== (_ = S.get(e)) && void 0 !== _ ? _ : O();
+  return null !== (_ = D.get(e)) && void 0 !== _ ? _ : O();
 }
 
 function R(e, _) {
-  let E = M(e);
-  S.set(e, {
+  let E = i(e);
+  D.set(e, {
 ...E,
 ..._
   });
@@ -79,11 +79,11 @@ Object.keys(_).forEach(e => {
 }), l.set(e, E);
   }
 }
-class o extends(s = A.ZP.PersistedStore) {
+class u extends(s = A.ZP.PersistedStore) {
   initialize(e) {
 null != e && r.default.keys(e.progressByGuild).forEach(_ => {
   var E, s, T, I, n;
-  S.set(_, {
+  D.set(_, {
     gameApplicationIds: new Set((E = e.progressByGuild[_]).gameApplicationIds),
     playstyle: E.playstyle,
     interests: new Set(E.interests),
@@ -111,7 +111,7 @@ null != e && r.default.keys(e.progressByGuild).forEach(_ => {
   }
   getState() {
 let e = {};
-return S.forEach((_, E) => {
+return D.forEach((_, E) => {
   var s;
   e[E] = {
     gameApplicationIds: Array.from((s = _).gameApplicationIds),
@@ -137,18 +137,18 @@ return S.forEach((_, E) => {
   }
   getStateForGuild(e) {
 return {
-  progress: S.get(e),
+  progress: D.get(e),
   errors: l.get(e),
   submitting: U
 };
   }
   getGuildIds() {
-return [...S.keys()];
+return [...D.keys()];
   }
 }
-D(o, 'displayName', 'ClanSetupStore'), D(o, 'persistKey', 'ClanSetupStore'), _.ZP = new o(t.Z, {
+S(u, 'displayName', 'ClanSetupStore'), S(u, 'persistKey', 'ClanSetupStore'), _.ZP = new u(t.Z, {
   CLAN_SETUP_RESET: function() {
-S.clear(), l.clear();
+D.clear(), l.clear();
   },
   CLAN_SETUP_UPDATE: function(e) {
 let {
@@ -167,7 +167,7 @@ U = !0, l.delete(_);
 let {
   guildId: _
 } = e;
-U = !1, S.delete(_), l.delete(_);
+U = !1, D.delete(_), l.delete(_);
   },
   CLAN_SETUP_ERROR: function(e) {
 let {
@@ -195,7 +195,7 @@ let {
   isLocalUpdate: T
 } = e;
 T && (_ = null == E ? a.t : {
-  ...M(s).verificationForm,
+  ...i(s).verificationForm,
   ...E
 }, R(s, {
   verificationForm: _

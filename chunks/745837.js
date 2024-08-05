@@ -1,12 +1,12 @@
 n.d(t, {
   Z: function() {
-return f;
+return C;
   }
 });
 var i = n(735250);
 n(470079);
-var s = n(120356),
-  a = n.n(s),
+var a = n(120356),
+  s = n.n(a),
   r = n(442837),
   l = n(481060),
   o = n(547972),
@@ -44,7 +44,7 @@ children: g.Z.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY.format({
 })
   });
 }
-let C = {
+let f = {
   [E.D5.Error]: {
 textColor: 'text-primary',
 buttonLook: l.Button.Looks.FILLED,
@@ -81,11 +81,11 @@ buttonColor: l.Button.Colors.BRAND_INVERTED,
 bodyCopy: () => (0, i.jsx)(S, {}),
 buttonCopy: () => g.Z.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
 ctaOnClick: () => T(E.D5.Enabled),
-containerClass: a()(p.container, p.containerEnabled)
+containerClass: s()(p.container, p.containerEnabled)
   }
 };
 
-function f() {
+function C() {
   var e;
   let {
 decoupledClipsEnabled: t,
@@ -94,26 +94,26 @@ clipsError: n
 decoupledClipsEnabled: _.Z.getSettings().decoupledClipsEnabled,
 clipsError: _.Z.getLastClipsError()
   }));
-  let s = (e = t, null != n ? E.D5.Error : e ? E.D5.Enabled : E.D5.Disabled),
+  let a = (e = t, null != n ? E.D5.Error : e ? E.D5.Enabled : E.D5.Disabled),
 {
-  bodyCopy: a,
+  bodyCopy: s,
   buttonCopy: o,
   ctaOnClick: c,
   textColor: d,
   buttonColor: u,
   buttonLook: I,
   containerClass: m
-} = C[s];
+} = f[a];
   return (0, i.jsxs)('div', {
 className: m,
 children: [
   (0, i.jsx)(l.Text, {
     color: d,
     variant: 'text-sm/medium',
-    children: a()
+    children: s()
   }),
   (0, i.jsx)(l.Button, {
-    onClick: () => (0, h.UW)(s),
+    onClick: () => (0, h.UW)(a),
     size: l.Button.Sizes.NONE,
     look: l.Button.Looks.BLANK,
     className: p.buttonClose,

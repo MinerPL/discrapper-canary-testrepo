@@ -6,24 +6,24 @@ var s, r, i = n(735250),
   c = n(442837),
   u = n(570140),
   d = n(893776),
-  h = n(533307),
-  _ = n(978085),
+  _ = n(533307),
+  h = n(978085),
   E = n(232567),
   g = n(388905),
   p = n(362762),
-  f = n(108427),
-  I = n(314897),
-  m = n(896797),
+  I = n(108427),
+  m = n(314897),
+  f = n(896797),
   N = n(82142),
   T = n(283595),
   x = n(55563),
   A = n(669079),
   C = n(63063),
-  S = n(51144),
-  O = n(481153),
-  v = n(781428),
-  Z = n(423527),
-  R = n(981631),
+  v = n(51144),
+  Z = n(481153),
+  S = n(781428),
+  R = n(423527),
+  O = n(981631),
   b = n(689938),
   D = n(549856);
 
@@ -42,7 +42,7 @@ let {
   authenticated: e,
   isResolved: t
 } = this.props;
-e && this.handleAuthenticated(), !t && this.resolveGiftCode(), (0, f.e)('gift_code');
+e && this.handleAuthenticated(), !t && this.resolveGiftCode(), (0, I.e)('gift_code');
   }
   componentDidUpdate(e) {
 let {
@@ -59,7 +59,7 @@ let {
 let {
   currentUser: e
 } = this.state;
-_.b8(), null == e && this.refreshUser();
+h.b8(), null == e && this.refreshUser();
   }
   get requiresVerification() {
 let {
@@ -82,9 +82,9 @@ let {
 } = this.props, {
   error: s
 } = this.state, r = null != s ? s.code : null;
-return r === R.evJ.INVALID_GIFT_SELF_REDEMPTION ? b.Z.Messages.GIFT_CONFIRMATION_BODY_SELF_GIFT_NO_PAYMENT : r === R.evJ.INVALID_GIFT_REDEMPTION_OWNED && (null == n ? void 0 : n.productLine) === R.POd.COLLECTIBLES ? b.Z.Messages.GIFT_ERROR_OWNED : null != t || r === R.evJ.INVALID_GIFT_REDEMPTION_OWNED ? b.Z.Messages.GIFT_CODE_AUTH_HELP_TEXT_OWNED.format({
-  libraryLink: R.Z5c.APPLICATION_LIBRARY
-}) : e.isClaimed || r === R.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED ? b.Z.Messages.GIFT_CODE_AUTH_HELP_TEXT_CLAIMED : r === R.evJ.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED ? b.Z.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT : void 0;
+return r === O.evJ.INVALID_GIFT_SELF_REDEMPTION ? b.Z.Messages.GIFT_CONFIRMATION_BODY_SELF_GIFT_NO_PAYMENT : r === O.evJ.INVALID_GIFT_REDEMPTION_OWNED && (null == n ? void 0 : n.productLine) === O.POd.COLLECTIBLES ? b.Z.Messages.GIFT_ERROR_OWNED : null != t || r === O.evJ.INVALID_GIFT_REDEMPTION_OWNED ? b.Z.Messages.GIFT_CODE_AUTH_HELP_TEXT_OWNED.format({
+  libraryLink: O.Z5c.APPLICATION_LIBRARY
+}) : e.isClaimed || r === O.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED ? b.Z.Messages.GIFT_CODE_AUTH_HELP_TEXT_CLAIMED : r === O.evJ.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED ? b.Z.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT : void 0;
   }
   renderSpinner(e) {
 return (0, i.jsxs)(g.ZP, {
@@ -120,7 +120,7 @@ return (0, i.jsxs)(g.ZP, {
       children: b.Z.Messages.CONTINUE_TO_WEBAPP
     }),
     (0, i.jsx)(g.zx, {
-      onClick: () => window.open(C.Z.getArticleURL(R.BhN.GIFTING), '_blank'),
+      onClick: () => window.open(C.Z.getArticleURL(O.BhN.GIFTING), '_blank'),
       look: g.zx.Looks.LINK,
       color: g.zx.Colors.LINK,
       children: b.Z.Messages.GIFT_CODE_AUTH_INVALID_TIP
@@ -187,7 +187,7 @@ return (0, i.jsxs)(g.ZP, {
 let n = this.getErrorMessage(e);
 return (0, i.jsxs)(g.ZP, {
   children: [
-    (0, i.jsx)(O.Z, {
+    (0, i.jsx)(Z.Z, {
       giftCode: e
     }),
     (0, i.jsx)(g.zx, {
@@ -202,7 +202,7 @@ return (0, i.jsxs)(g.ZP, {
     }) : (0, i.jsx)(g.i_, {
       className: D.marginTop20,
       children: b.Z.Messages.GIFT_CODE_AUTH_LOGGED_IN_AS.format({
-        userTag: S.ZP.getUserTag(t),
+        userTag: v.ZP.getUserTag(t),
         onLogoutClick: this.handleLogout
       })
     })
@@ -223,9 +223,9 @@ let {
   fetchingUser: c,
   continueOnWeb: u
 } = this.state;
-if (e === R.kEZ.OPEN && !u)
+if (e === O.kEZ.OPEN && !u)
   return this.renderAppOpened();
-if (e === R.kEZ.OPENING)
+if (e === O.kEZ.OPENING)
   return this.renderSpinner(b.Z.Messages.APP_OPENING);
 if (a)
   return this.renderSpinner(b.Z.Messages.GIFT_CODE_AUTH_ACCEPTING);
@@ -236,12 +236,12 @@ if (r) {
     let e = this.state.currentUser;
     return c || null == e ? this.renderSpinner(b.Z.Messages.GIFT_CODE_AUTH_FETCHING_USER) : this.requiresVerification && null != e ? this.renderVerification(e) : this.renderAuthenticated(s, e);
   }
-  return 'login' === this.getMode() ? (0, i.jsx)(v.Z, {
+  return 'login' === this.getMode() ? (0, i.jsx)(S.Z, {
     giftCodeSKU: t,
     giftCode: s,
     transitionTo: l,
     location: o
-  }) : (0, i.jsx)(Z.Z, {
+  }) : (0, i.jsx)(R.Z, {
     giftCodeSKU: t,
     giftCode: s,
     transitionTo: l,
@@ -270,7 +270,7 @@ super(...e), L(this, 'state', {
   }));
 }), L(this, 'handleLogout', () => {
   let e = this.props.match.params.giftCode;
-  d.Z.logout(R.Z5c.GIFT_CODE_LOGIN(e));
+  d.Z.logout(O.Z5c.GIFT_CODE_LOGIN(e));
 }), L(this, 'handleResendVerification', () => {
   d.Z.verifyResend(), this.setState({
     sentVerification: !0
@@ -286,9 +286,9 @@ super(...e), L(this, 'state', {
   try {
     this.setState({
       error: null
-    }), await h.Z.redeemGiftCode({
+    }), await _.Z.redeemGiftCode({
       code: n
-    }), e(R.Z5c.APP);
+    }), e(O.Z5c.APP);
   } catch (e) {
     this.setState({
       error: e
@@ -298,8 +298,8 @@ super(...e), L(this, 'state', {
   let {
     transitionTo: e
   } = this.props, t = this.getCode();
-  h.Z.resolveGiftCode(t, !0, !0).then(n => {
-    null != n && null != n.giftCode.promotion && e(R.Z5c.BILLING_PROMOTION_REDEMPTION(t));
+  _.Z.resolveGiftCode(t, !0, !0).then(n => {
+    null != n && null != n.giftCode.promotion && e(O.Z5c.BILLING_PROMOTION_REDEMPTION(t));
   });
 });
   }
@@ -307,9 +307,9 @@ super(...e), L(this, 'state', {
 t.Z = c.ZP.connectStores([
   N.Z,
   T.Z,
-  I.default,
+  m.default,
   x.Z,
-  m.Z,
+  f.Z,
   p.Z
 ], e => {
   let t = e.match.params.giftCode,
@@ -319,8 +319,8 @@ s = null != n ? x.Z.get(n.skuId) : null;
 giftCode: n,
 sku: s,
 libraryApplication: null != s && (null == n ? void 0 : n.entitlementBranches) != null ? A.z2(n.entitlementBranches, s, T.Z) : null,
-authenticated: I.default.isAuthenticated(),
-defaultRoute: m.Z.defaultRoute,
+authenticated: m.default.isAuthenticated(),
+defaultRoute: f.Z.defaultRoute,
 isResolved: N.Z.getIsResolved(t),
 isAccepting: N.Z.getIsAccepting(t),
 libraryApplicationsFetched: T.Z.fetched,

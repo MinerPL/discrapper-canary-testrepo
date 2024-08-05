@@ -24,8 +24,8 @@ return T;
 var r = n(470079),
   i = n(392711),
   a = n.n(i),
-  o = n(399606),
-  s = n(544891),
+  s = n(399606),
+  o = n(544891),
   l = n(570140),
   u = n(881052),
   c = n(902840),
@@ -47,7 +47,7 @@ summaryId: t,
 requestedAt: i
   });
   try {
-let n = await s.tn.get(h.Z5c.CHANNEL_SUMMARY(e, t));
+let n = await o.tn.get(h.Z5c.CHANNEL_SUMMARY(e, t));
 r = null == n ? void 0 : n.body;
   } catch (e) {
 n = new u.Hx(e);
@@ -66,14 +66,14 @@ async function I(e) {
   let r, i;
   if (!f.Z.shouldFetch(e))
 return;
-  let o = Date.now();
+  let s = Date.now();
   l.Z.dispatch({
 type: 'REQUEST_CHANNEL_SUMMARIES',
 channelId: e,
-requestedAt: o
+requestedAt: s
   });
   try {
-i = await s.tn.get(h.Z5c.CHANNEL_SUMMARIES(e));
+i = await o.tn.get(h.Z5c.CHANNEL_SUMMARIES(e));
   } catch (e) {
 r = new u.Hx(e);
   }
@@ -83,7 +83,7 @@ type: 'RECEIVE_CHANNEL_SUMMARIES',
 channelId: e,
 summaries: c,
 error: null != r ? r : void 0,
-requestedAt: o,
+requestedAt: s,
 receivedAt: Date.now()
   });
 }
@@ -136,7 +136,7 @@ type: 'REQUEST_CHANNEL_AFFINITIES',
 requestedAt: r
   });
   try {
-n = await s.tn.get('/users/@me/affinities/channels');
+n = await o.tn.get('/users/@me/affinities/channels');
   } catch (e) {
 t = new u.Hx(e);
   }
@@ -177,7 +177,7 @@ channelIds: e,
 requestedAt: a
   });
   try {
-n = await s.tn.post({
+n = await o.tn.post({
   url: h.Z5c.USER_SUMMARIES,
   body: {
     channel_ids: e
@@ -186,12 +186,12 @@ n = await s.tn.post({
   } catch (e) {
 t = new u.Hx(e);
   }
-  let o = null == n ? void 0 : n.body.summaries;
+  let s = null == n ? void 0 : n.body.summaries;
   l.Z.dispatch({
 type: 'RECEIVE_CHANNEL_SUMMARIES_BULK',
 requestedAt: a,
 receivedAt: Date.now(),
-summaries: o,
+summaries: s,
 requestArgs: {
   channelIds: e
 },
@@ -200,7 +200,7 @@ error: t
 }
 async function R(e) {
   try {
-await s.tn.del(h.Z5c.CHANNEL_SUMMARY(e.channelId, e.id)), l.Z.dispatch({
+await o.tn.del(h.Z5c.CHANNEL_SUMMARY(e.channelId, e.id)), l.Z.dispatch({
   type: 'DELETE_SUMMARY',
   summary: e
 });
@@ -228,7 +228,7 @@ let {
 } = e;
 return ! function() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-    t = (0, o.e7)([d.Z], () => d.Z.isConnected()),
+    t = (0, s.e7)([d.Z], () => d.Z.isConnected()),
     n = r.useMemo(() => e.join(','), [e]);
   r.useEffect(() => {
     t && e();
@@ -242,7 +242,7 @@ return ! function() {
     n,
     t
   ]);
-}(t), (0, o.Wu)([f.Z], () => f.Z.topSummaries(), []);
+}(t), (0, s.Wu)([f.Z], () => f.Z.topSummaries(), []);
   },
   deleteSummary: R
 };

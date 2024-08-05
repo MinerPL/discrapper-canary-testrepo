@@ -4,13 +4,13 @@ return o;
   }
 }), t(724458), t(47120), t(653041);
 var i = t(470079),
-  l = t(442837),
-  a = t(924301),
+  a = t(442837),
+  l = t(924301),
   r = t(765305);
 
 function o(e, n) {
-  let t = (0, l.Wu)([a.ZP], () => Object.values(a.ZP.getUsersForGuildEvent(e, null)), [e]),
-o = (0, l.Wu)([a.ZP], () => Object.values(a.ZP.getUsersForGuildEvent(e, n)), [
+  let t = (0, a.Wu)([l.ZP], () => Object.values(l.ZP.getUsersForGuildEvent(e, null)), [e]),
+o = (0, a.Wu)([l.ZP], () => Object.values(l.ZP.getUsersForGuildEvent(e, n)), [
   e,
   n
 ]);
@@ -21,12 +21,12 @@ let e = o.reduce((e, n) => (e[n.user_id] = n, e), {}),
     return null == t || t.response === r.gv.INTERESTED;
   }),
   i = o.filter(e => e.response === r.gv.INTERESTED),
-  l = new Set(),
-  a = [],
+  a = new Set(),
+  l = [],
   c = e => {
-    !l.has(e.user_id) && (a.push(e), l.add(e.user_id));
+    !a.has(e.user_id) && (l.push(e), a.add(e.user_id));
   };
-return n.forEach(c), i.forEach(c), a;
+return n.forEach(c), i.forEach(c), l;
   }, [
 t,
 o

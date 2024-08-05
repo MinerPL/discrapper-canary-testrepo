@@ -2,9 +2,9 @@ n(47120), n(411104);
 var r = n(735250),
   i = n(470079),
   a = n(902704),
-  o = n(250919);
+  s = n(250919);
 
-function s(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -41,14 +41,14 @@ return n => {
       });
     }
     constructor(...n) {
-      super(...n), s(this, 'memoizedGetStateFromStores', u(t)), s(this, 'listener', new o.F(e, () => {
+      super(...n), o(this, 'memoizedGetStateFromStores', u(t)), o(this, 'listener', new s.F(e, () => {
         let e = this.memoizedGetStateFromStores.getCachedResult(this.props.childProps);
         if (!(null != e && (this.memoizedGetStateFromStores.clear(), (0, a.Z)(this.memoizedGetStateFromStores(this.props.childProps), e))))
           this.forceUpdate();
       }));
     }
   }
-  s(_, 'displayName', d);
+  o(_, 'displayName', d);
   let E = i.forwardRef((e, t) => (0, r.jsx)(_, {
     childProps: e,
     forwardedConnectStoresRef: t
@@ -74,14 +74,14 @@ return n => {
       });
     }
     constructor(...n) {
-      super(...n), s(this, 'memoizedGetStateFromStores', u(t)), s(this, 'listener', new o.F(e, () => {
+      super(...n), o(this, 'memoizedGetStateFromStores', u(t)), o(this, 'listener', new s.F(e, () => {
         let e = this.memoizedGetStateFromStores.getCachedResult(this.props);
         if (!(null != e && (this.memoizedGetStateFromStores.clear(), (0, a.Z)(this.memoizedGetStateFromStores(this.props), e))))
           this.forceUpdate();
       }));
     }
   }
-  return s(_, 'displayName', d), _;
+  return o(_, 'displayName', d), _;
 };
   }(e, t);
 };

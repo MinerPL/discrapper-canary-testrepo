@@ -4,8 +4,8 @@ n.d(t, {
 return i;
   }
 }), n(411104), n(177593), n(773603);
-var i, a, o = n(990547),
-  s = n(213919),
+var i, a, s = n(990547),
+  o = n(213919),
   l = n(544891),
   u = n(433517),
   c = n(570140),
@@ -37,9 +37,19 @@ throw N.error('Error while dispatching LOGOUT', e), null === (t = window.Discord
 
 function R() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.Z5c.DEFAULT_LOGGED_OUT;
-  O();
+  if (O(), null == e)
+return;
   let t = (0, f.PP)();
-  null != e && (null != t ? (g.Z.popAll(), t.navigate('auth')) : (0, h.uL)(e));
+  if (null == t) {
+(0, h.uL)(e);
+return;
+  }
+  g.Z.popAll(), t.reset({
+index: 0,
+routes: [{
+  name: 'auth'
+}]
+  });
 }
 (a = i || (i = {})).MFA = 'MFA', a.SUCCESS = 'SUCCESS', t.Z = {
   startSession(e) {
@@ -64,7 +74,7 @@ let {
   password: r,
   loginCode: i,
   undelete: a,
-  source: s,
+  source: o,
   giftCodeSKUId: l,
   invite: u,
   isMultiAccount: _
@@ -80,13 +90,13 @@ c.Z.dispatch({
     password: r,
     undelete: a,
     login_code: i,
-    login_source: s,
+    login_source: o,
     gift_code_sku_id: l
   },
   retries: 2,
   oldFormErrors: !0,
   trackedActionData: {
-    event: o.NetworkActionNames.USER_LOGIN,
+    event: s.NetworkActionNames.USER_LOGIN,
     properties: {
       invite_code: null == u ? void 0 : u.code,
       is_multi_account: _
@@ -105,15 +115,15 @@ c.Z.dispatch({
       webauthn: r,
       ticket: i,
       token: a,
-      backup: o,
-      user_id: s,
+      backup: s,
+      user_id: o,
       required_actions: l,
       totp: u
     }
   } = e;
   c.Z.dispatch({
     type: 'LOGIN_ATTEMPTED',
-    user_id: s,
+    user_id: o,
     required_actions: l
   }), t ? c.Z.dispatch({
     type: 'LOGIN_MFA_STEP',
@@ -121,7 +131,7 @@ c.Z.dispatch({
     sms: n,
     webauthn: r,
     totp: u,
-    backup: o
+    backup: s
   }) : _ ? this.switchAccountToken(a) : c.Z.dispatch({
     type: 'LOGIN_SUCCESS',
     token: a
@@ -135,20 +145,20 @@ c.Z.dispatch({
     });
     return;
   }
-  let o = null === (i = e.body) || void 0 === i ? void 0 : i.code;
-  o === S.evJ.ACCOUNT_SCHEDULED_FOR_DELETION && null != r && '' !== r ? c.Z.dispatch({
+  let s = null === (i = e.body) || void 0 === i ? void 0 : i.code;
+  s === S.evJ.ACCOUNT_SCHEDULED_FOR_DELETION && null != r && '' !== r ? c.Z.dispatch({
     type: 'LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION',
     credentials: {
       login: n,
       password: r
     }
-  }) : o === S.evJ.ACCOUNT_DISABLED && null != r && '' !== r ? c.Z.dispatch({
+  }) : s === S.evJ.ACCOUNT_DISABLED && null != r && '' !== r ? c.Z.dispatch({
     type: 'LOGIN_ACCOUNT_DISABLED',
     credentials: {
       login: n,
       password: r
     }
-  }) : o === S.evJ.PHONE_VERIFICATION_REQUIRED ? c.Z.dispatch({
+  }) : s === S.evJ.PHONE_VERIFICATION_REQUIRED ? c.Z.dispatch({
     type: 'LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED'
   }) : c.Z.dispatch({
     type: 'LOGIN_FAILURE',
@@ -163,10 +173,10 @@ let {
   source: r,
   giftCodeSKUId: i,
   isMultiAccount: a,
-  mfaType: s
+  mfaType: o
 } = e;
 return T.Z.post({
-  url: S.ANM.LOGIN_MFA(s),
+  url: S.ANM.LOGIN_MFA(o),
   body: {
     code: t,
     ticket: n,
@@ -176,7 +186,7 @@ return T.Z.post({
   retries: 2,
   oldFormErrors: !0,
   trackedActionData: {
-    event: o.NetworkActionNames.USER_LOGIN_MFA
+    event: s.NetworkActionNames.USER_LOGIN_MFA
   }
 }).then(e => {
   a ? this.switchAccountToken(e.body.token) : c.Z.dispatch({
@@ -241,7 +251,7 @@ return T.Z.post({
   },
   retries: 1,
   trackedActionData: {
-    event: o.NetworkActionNames.USER_LOGIN_PASSWORDLESS
+    event: s.NetworkActionNames.USER_LOGIN_PASSWORDLESS
   }
 }).then(e => {
   let {
@@ -314,11 +324,11 @@ return T.Z.post({
   },
   oldFormErrors: !0,
   trackedActionData: {
-    event: o.NetworkActionNames.USER_LOGOUT
+    event: s.NetworkActionNames.USER_LOGOUT
   },
   ...null != n && {
     headers: {
-      authorization: null !== (e = s.getToken(n)) && void 0 !== e ? e : ''
+      authorization: null !== (e = o.getToken(n)) && void 0 !== e ? e : ''
     }
   }
 }).finally(() => {
@@ -357,7 +367,7 @@ null != e ? T.Z.post({
   },
   oldFormErrors: !0,
   trackedActionData: {
-    event: o.NetworkActionNames.USER_VERIFY
+    event: s.NetworkActionNames.USER_VERIFY
   }
 }).then(e => {
   c.Z.dispatch({
@@ -384,7 +394,7 @@ try {
     },
     oldFormErrors: !0,
     trackedActionData: {
-      event: o.NetworkActionNames.AUTHORIZE_PAYMENT
+      event: s.NetworkActionNames.AUTHORIZE_PAYMENT
     }
   }), c.Z.dispatch({
     type: 'VERIFY_SUCCESS'
@@ -412,7 +422,7 @@ try {
     },
     oldFormErrors: !0,
     trackedActionData: {
-      event: o.NetworkActionNames.AUTHORIZE_IP
+      event: s.NetworkActionNames.AUTHORIZE_IP
     }
   }), c.Z.dispatch({
     type: 'VERIFY_SUCCESS'
@@ -428,7 +438,7 @@ try {
 url: S.ANM.VERIFY_RESEND,
 oldFormErrors: !0,
 trackedActionData: {
-  event: o.NetworkActionNames.USER_VERIFY_RESEND
+  event: s.NetworkActionNames.USER_VERIFY_RESEND
 }
   }),
   async resetPassword(e, t, n) {
@@ -443,8 +453,8 @@ let r = {
   i = u.K.get(S.JkL),
   a = (0, A.xJ)();
 null != a && null != i && (r.push_provider = a, r.push_token = i);
-let s = u.K.get(S.scU);
-null != A.mv && null != s && (r.push_voip_provider = A.mv, r.push_voip_token = s);
+let o = u.K.get(S.scU);
+null != A.mv && null != o && (r.push_voip_provider = A.mv, r.push_voip_token = o);
 try {
   let {
     body: {
@@ -453,7 +463,7 @@ try {
       webauthn: n,
       ticket: i,
       token: a,
-      backup: s,
+      backup: o,
       totp: l
     }
   } = await T.Z.post({
@@ -461,7 +471,7 @@ try {
     body: r,
     oldFormErrors: !0,
     trackedActionData: {
-      event: o.NetworkActionNames.USER_RESET_PASSWORD
+      event: s.NetworkActionNames.USER_RESET_PASSWORD
     }
   });
   return {
@@ -470,7 +480,7 @@ try {
     webauthn: n,
     ticket: i,
     token: a,
-    backup: s,
+    backup: o,
     totp: l
   };
 } catch (e) {
@@ -487,7 +497,7 @@ let {
   ticket: r,
   password: i,
   token: a,
-  source: s
+  source: o
 } = e;
 return c.Z.dispatch({
   type: 'LOGIN_MFA'
@@ -498,12 +508,12 @@ return c.Z.dispatch({
     ticket: r,
     password: i,
     token: a,
-    source: s,
+    source: o,
     method: t
   },
   oldFormErrors: !0,
   trackedActionData: {
-    event: o.NetworkActionNames.USER_RESET_PASSWORD,
+    event: s.NetworkActionNames.USER_RESET_PASSWORD,
     properties: {
       mfa: !0
     }
@@ -522,7 +532,7 @@ try {
     },
     oldFormErrors: !0,
     trackedActionData: {
-      event: o.NetworkActionNames.FORGOT_PASSWORD
+      event: s.NetworkActionNames.FORGOT_PASSWORD
     }
   }), c.Z.dispatch({
     type: 'FORGOT_PASSWORD_SENT'
@@ -559,7 +569,7 @@ url: S.ANM.AUTH_LOCATION_METADATA,
 retries: 2,
 oldFormErrors: !0
   }).then(e => {
-var t, n, i, a, o;
+var t, n, i, a, s;
 if (clearTimeout(r), null == I.Z.getAuthenticationConsentRequired()) {
   let t = null === (a = null == e ? void 0 : null === (i = e.body) || void 0 === i ? void 0 : i.consent_required) || void 0 === a || a;
   c.Z.dispatch({
@@ -569,7 +579,7 @@ if (clearTimeout(r), null == I.Z.getAuthenticationConsentRequired()) {
 }
 if (c.Z.dispatch({
     type: 'SET_LOCATION_METADATA',
-    countryCode: null !== (o = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.country_code) && void 0 !== o ? o : void 0
+    countryCode: null !== (s = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.country_code) && void 0 !== s ? s : void 0
   }), v = null, (null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.promotional_email_opt_in) != null) {
   let t = e.body.promotional_email_opt_in;
   (0, _.K4)({

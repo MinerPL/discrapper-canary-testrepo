@@ -62,20 +62,20 @@ a = [{
     i
   ]
 }],
-o = {
+s = {
   className: 'title',
   begin: e.UNDERSCORE_IDENT_RE,
   relevance: 0
 },
-s = function(t, r, i) {
-  let s = e.inherit({
+o = function(t, r, i) {
+  let o = e.inherit({
     className: 'function',
     beginKeywords: t,
     end: r,
     excludeEnd: !0,
     contains: [].concat(a)
   }, i || {});
-  return s.contains.push(o), s.contains.push(e.C_NUMBER_MODE), s.contains.push(e.C_BLOCK_COMMENT_MODE), s.contains.push(n), s;
+  return o.contains.push(s), o.contains.push(e.C_NUMBER_MODE), o.contains.push(e.C_BLOCK_COMMENT_MODE), o.contains.push(n), o;
 },
 l = {
   className: 'built_in',
@@ -139,8 +139,8 @@ contains: [
     className: 'keyword',
     begin: /\bexternal (matrix|string|array|sparse matrix|struct|proc|keyword|fn)/
   },
-  s('proc keyword', ';'),
-  s('fn', '='),
+  o('proc keyword', ';'),
+  o('fn', '='),
   {
     beginKeywords: 'for threadfor',
     end: /;/,

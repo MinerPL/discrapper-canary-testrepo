@@ -13,7 +13,7 @@ writable: !0
 }
 let c = (0, o.K4)();
 
-function _(t) {
+function s(t) {
   var e;
   let {
 countryCode: n
@@ -21,7 +21,7 @@ countryCode: n
   if (null != n)
 c = null !== (e = (0, o.Zz)(n)) && void 0 !== e ? e : (0, o.K4)();
 }
-class s extends(i = l.ZP.DeviceSettingsStore) {
+class _ extends(i = l.ZP.DeviceSettingsStore) {
   initialize(t) {
 if (null != t)
   r = t.selectedCountryCode;
@@ -35,13 +35,13 @@ return {
 return null != r ? r : c;
   }
 }
-a(s, 'displayName', 'PhoneStore'), a(s, 'persistKey', 'PhoneStore'), e.Z = new s(u.Z, {
+a(_, 'displayName', 'PhoneStore'), a(_, 'persistKey', 'PhoneStore'), e.Z = new _(u.Z, {
   PHONE_SET_COUNTRY_CODE: function(t) {
 let {
   countryCode: e
 } = t;
 r = e;
   },
-  CONNECTION_OPEN: _,
-  SET_LOCATION_METADATA: _
+  CONNECTION_OPEN: s,
+  SET_LOCATION_METADATA: s
 });

@@ -2,9 +2,9 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(392711),
-  l = n.n(s),
+  s = n.n(a),
+  o = n(392711),
+  l = n.n(o),
   u = n(91192),
   c = n(442837),
   d = n(477690),
@@ -44,7 +44,7 @@ function H(e) {
 activeIndex: t,
 categoryIndex: n,
 analyticsContext: a,
-categories: s,
+categories: o,
 category: l,
 handleCategorySelect: c,
 isWindowFocused: d,
@@ -52,7 +52,7 @@ useReducedMotion: E
   } = e, f = (0, u.JA)('expression-guild-'.concat(n)), h = l.type === O.En.GUILD ? null : l.id, p = t === n, I = l.type === O.En.GUILD ? l.guild : null, g = (0, r.jsxs)(_.Clickable, {
 ...f,
 'aria-label': (0, S.Nf)(l, I),
-className: o()({
+className: s()({
   [D.categoryItemGuildCategory]: null != I,
   [D.categoryItemDefaultCategory]: null == I,
   [D.categoryItemDefaultCategorySelected]: null == I && p,
@@ -80,7 +80,7 @@ children: [
     size: 'custom'
   }) : null
 ]
-  }), v = s[n + 1], y = null != v && l.type === O.En.GUILD && v.type !== O.En.GUILD;
+  }), v = o[n + 1], y = null != v && l.type === O.En.GUILD && v.type !== O.En.GUILD;
   return null != I ? (0, r.jsxs)(i.Fragment, {
 children: [
   (0, r.jsx)(m.Z, {
@@ -101,12 +101,12 @@ t.Z = e => {
 className: t,
 emojiListRef: n,
 sectionDescriptors: a,
-intention: s,
+intention: o,
 channel: u
   } = e, d = h.kJ.useStore(e => e.activeCategoryIndex), m = (0, v.Ni)({
 sectionDescriptors: a,
 emojiListRef: n
-  }), T = (0, E.O)(), g = (0, S.kI)(s, u), A = i.useRef(null), N = (0, c.e7)([I.Z], () => I.Z.isFocused()), R = (0, c.e7)([f.Z], () => f.Z.useReducedMotion, []), C = i.useMemo(() => l().memoize((e, t) => {
+  }), T = (0, E.O)(), g = (0, S.kI)(o, u), A = i.useRef(null), N = (0, c.e7)([I.Z], () => I.Z.isFocused()), R = (0, c.e7)([f.Z], () => f.Z.useReducedMotion, []), C = i.useMemo(() => l().memoize((e, t) => {
 let n = g[t];
 if (null != n)
   return (0, r.jsx)(H, {
@@ -220,7 +220,7 @@ rowCountBySection: W,
 children: e => Z >= 7 && (0, r.jsx)(_.Clickable, {
   'aria-hidden': !K,
   'aria-label': y.Z.Messages.EMOJI_PICKER_SCROLL_TO_UNICODE_A11Y_LABEL,
-  className: o()(D.unicodeShortcut, {
+  className: s()(D.unicodeShortcut, {
     [D.unicodeShortcutInvisible]: !K
   }),
   tabIndex: K ? 0 : -1,

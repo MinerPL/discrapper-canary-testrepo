@@ -1,44 +1,44 @@
-t.d(n, {
+l.d(n, {
   Z: function() {
-return f;
+return _;
   }
 });
-var l = t(735250),
-  i = t(470079),
-  a = t(481060),
-  r = t(906732),
-  u = t(702557),
-  s = t(171368),
-  d = t(314897),
-  o = t(246946),
-  c = t(626135),
-  Z = t(981631),
-  E = t(228168),
-  M = t(689938);
+var t = l(735250),
+  r = l(470079),
+  i = l(481060),
+  a = l(906732),
+  s = l(702557),
+  u = l(171368),
+  d = l(314897),
+  o = l(246946),
+  c = l(626135),
+  Z = l(981631),
+  E = l(228168),
+  M = l(689938);
 
-function f(e) {
+function _(e) {
   let {
 user: n,
-guildId: t,
-context: f
+guildId: l,
+context: _
   } = e, {
-id: _
+id: f
   } = n, {
 loading: g,
-note: I
-  } = (0, u.Z)(_), m = !g && null != I && I.length > 0, R = f === Z.IlC.POPOUT, N = i.useContext(c.AnalyticsContext), {
-analyticsLocations: C
-  } = (0, r.ZP)();
-  return _ === d.default.getId() || o.Z.hidePersonalInformation || R ? null : (0, l.jsx)(a.MenuItem, {
+note: m
+  } = (0, s.Z)(f), I = !g && null != m && m.length > 0, R = _ === Z.IlC.POPOUT, N = r.useContext(c.AnalyticsContext), {
+analyticsLocations: A
+  } = (0, a.ZP)();
+  return f === d.default.getId() || o.Z.hidePersonalInformation || R ? null : (0, t.jsx)(i.MenuItem, {
 id: 'note',
-label: g ? M.Z.Messages.LOADING_NOTE : m ? M.Z.Messages.EDIT_NOTE : M.Z.Messages.ADD_NOTE,
+label: g ? M.Z.Messages.LOADING_NOTE : I ? M.Z.Messages.EDIT_NOTE : M.Z.Messages.ADD_NOTE,
 action: () => {
-  (0, s.openUserProfileModal)({
+  (0, u.openUserProfileModal)({
     userId: n.id,
     section: E.oh.USER_INFO,
     subsection: E.Tb.NOTE,
-    guildId: t,
-    sourceAnalyticsLocations: C,
+    guildId: l,
+    sourceAnalyticsLocations: A,
     analyticsLocation: N.location
   });
 }

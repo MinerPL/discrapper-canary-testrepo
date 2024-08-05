@@ -1,7 +1,7 @@
 var r, i = n(264344),
   a = n.n(i),
-  o = n(345546);
-window.AudioContext = null !== (r = window.AudioContext) && void 0 !== r ? r : window.webkitAudioContext, null != window.RTCPeerConnection && 'Chrome' === a().name && 52 > (0, o.n)() && [
+  s = n(345546);
+window.AudioContext = null !== (r = window.AudioContext) && void 0 !== r ? r : window.webkitAudioContext, null != window.RTCPeerConnection && 'Chrome' === a().name && 52 > (0, s.n)() && [
   'createOffer',
   'createAnswer'
 ].forEach(e => {

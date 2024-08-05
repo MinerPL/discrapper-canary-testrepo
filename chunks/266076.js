@@ -3,38 +3,38 @@ var l = n(735250),
   i = n(481060),
   s = n(43267),
   r = n(93687),
-  c = n(785232);
+  o = n(785232);
 t.Z = a.memo(function(e) {
   let {
 channel: t,
 size: n,
 facepileSizeOverride: a,
-experimentLocation: o,
-isTyping: u,
+experimentLocation: u,
+isTyping: c,
 status: d,
 className: _,
-animated: f = !1,
-...E
+animated: h = !1,
+...f
   } = e, {
-isFacepileEnabled: h
+isFacepileEnabled: E
   } = r.Z.useExperiment({
-location: o
+location: u
   }, {
 autoTrackExposure: !0
   });
-  return t.recipients.length >= 2 && h && null == t.icon ? (0, l.jsx)(c.Z, {
-'aria-label': E['aria-label'],
-'aria-hidden': E['aria-hidden'],
+  return t.recipients.length >= 2 && E && null == t.icon ? (0, l.jsx)(o.Z, {
+'aria-label': f['aria-label'],
+'aria-hidden': f['aria-hidden'],
 className: _,
 recipients: t.recipients,
 size: null != a ? a : n,
-isTyping: u,
+isTyping: c,
 status: d
   }) : (0, l.jsx)(i.Avatar, {
-'aria-hidden': E['aria-hidden'],
-'aria-label': E['aria-label'],
+'aria-hidden': f['aria-hidden'],
+'aria-label': f['aria-label'],
 className: _,
 size: n,
-src: (0, s.x)(t, 80, f)
+src: (0, s.x)(t, 80, h)
   });
 });

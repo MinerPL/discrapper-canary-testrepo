@@ -1,14 +1,14 @@
 n.d(t, {
   e: function() {
-return s;
+return a;
   }
 });
 var i = n(735250);
 n(470079);
-var a = n(481060);
+var s = n(481060);
 
-function s(e) {
-  (0, a.openModalLazy)(async () => {
+function a(e) {
+  (0, s.openModalLazy)(async () => {
 let {
   default: t
 } = await n.e('38062').then(n.bind(n, 546604));

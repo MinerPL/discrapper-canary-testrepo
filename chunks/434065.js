@@ -1,14 +1,16 @@
 t.d(n, {
   r: function() {
-return r;
+return o;
   }
 });
-let r = (0, t(652874).Z)(e => ({
+var r = t(652874),
+  i = t(731965);
+let o = (0, r.Z)(e => ({
   favoriteAdded: !1,
-  notifyFavoriteAdded: () => e({
+  notifyFavoriteAdded: () => (0, i.j)(() => e({
 favoriteAdded: !0
-  }),
-  clearFavoriteAdded: () => e({
+  })),
+  clearFavoriteAdded: () => (0, i.j)(() => e({
 favoriteAdded: !1
-  })
+  }))
 }));

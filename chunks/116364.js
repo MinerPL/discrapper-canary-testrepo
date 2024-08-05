@@ -2,12 +2,12 @@ var r = n(735250);
 n(470079);
 var i = n(392711),
   a = n.n(i),
-  o = n(788911),
-  s = n(911969),
+  s = n(788911),
+  o = n(911969),
   l = n(174212),
   u = n(998698),
   c = n(667204),
-  d = n(156361),
+  d = n(588468),
   _ = n(483360),
   E = n(877565),
   f = n(590921),
@@ -51,14 +51,14 @@ stores: [
 showEmpty: !0,
 matches(e, t, n, r, i) {
   let a = u.Z.getActiveOption(e.id);
-  return i.commands !== f.L8.DISABLED && null != a && (a.type === s.jw.BOOLEAN || !!(null == a ? void 0 : a.autocomplete) || (null == a ? void 0 : a.choices) != null && a.choices.length > 0);
+  return i.commands !== f.L8.DISABLED && null != a && (a.type === o.jw.BOOLEAN || !!(null == a ? void 0 : a.autocomplete) || (null == a ? void 0 : a.choices) != null && a.choices.length > 0);
 },
 queryResults(e, t, n, r, i) {
   var a;
-  let o = u.Z.getActiveOption(e.id);
-  if (null == o)
+  let s = u.Z.getActiveOption(e.id);
+  if (null == s)
     return T;
-  if (o.autocomplete) {
+  if (s.autocomplete) {
     if (i) {
       let i = u.Z.getActiveCommand(e.id);
       N({
@@ -68,7 +68,7 @@ queryResults(e, t, n, r, i) {
           channel: e,
           guild: t,
           autocomplete: {
-            name: o.name,
+            name: s.name,
             query: n
           }
         }
@@ -76,7 +76,7 @@ queryResults(e, t, n, r, i) {
     }
     if (l.Z.getLastErrored(e.id))
       return A;
-    let a = l.Z.getAutocompleteChoices(e.id, o.name, n);
+    let a = l.Z.getAutocompleteChoices(e.id, s.name, n);
     return null == a ? g : {
       results: {
         choices: a
@@ -86,7 +86,7 @@ queryResults(e, t, n, r, i) {
   return {
     results: _.ZP.queryChoiceResults({
       query: n,
-      choices: o.type === s.jw.BOOLEAN ? h.ak : null !== (a = o.choices) && void 0 !== a ? a : []
+      choices: s.type === o.jw.BOOLEAN ? h.ak : null !== (a = s.choices) && void 0 !== a ? a : []
     })
   };
 },
@@ -98,16 +98,16 @@ renderResults(e) {
       isError: i
     },
     selectedIndex: a,
-    query: s,
+    query: o,
     onHover: l,
     onClick: u
   } = e;
-  return i ? (0, r.jsx)(o.Z, {
+  return i ? (0, r.jsx)(s.Z, {
     message: p.Z.Messages.APPLICATION_COMMAND_AUTOCOMPLETE_FAILED,
     noResultsImageURL: I,
     className: m.noAutocompleteResults
   }) : 0 !== t.length || n ? (0, E.HI)({
-    query: s,
+    query: o,
     selectedIndex: a,
     autocompletes: n ? S : t,
     onHover: l,
@@ -121,7 +121,7 @@ renderResults(e) {
     }),
     getQuery: e => e,
     key: 'choice'
-  }) : (0, r.jsx)(o.Z, {
+  }) : (0, r.jsx)(s.Z, {
     message: p.Z.Messages.APPLICATION_COMMAND_AUTOCOMPLETE_NO_OPTIONS,
     noResultsImageURL: I,
     className: m.noAutocompleteResults

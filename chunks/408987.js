@@ -1,10 +1,10 @@
 var r = n(570140),
   i = n(496675),
   a = n(751189),
-  o = n(981631);
+  s = n(981631);
 t.Z = {
   async checkGuildTemplateDirty(e) {
-if (!i.Z.canWithPartialContext(o.Plq.MANAGE_GUILD, {
+if (!i.Z.canWithPartialContext(s.Plq.MANAGE_GUILD, {
     guildId: e
   }))
   return;

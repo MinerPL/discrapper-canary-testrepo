@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   }
 }), n(724458), n(653041);
 var r = n(778787),
@@ -14,18 +14,18 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class o extends i.Z {
+class s extends i.Z {
   static fromServer(e) {
 let {
   products: t,
   logo: n,
   pdp_bg: i,
   mobile_bg: a,
-  success_modal_bg: s,
+  success_modal_bg: o,
   mobile_banner: l,
   ...u
 } = e;
-return new o({
+return new s({
   ...super.fromServer(u),
   products: t.reduce((e, t) => {
     let n = r.Z.fromServer(t);
@@ -34,7 +34,7 @@ return new o({
   logo: n,
   pdpBg: i,
   mobileBg: a,
-  successModalBg: s,
+  successModalBg: o,
   mobileBanner: l
 });
   }

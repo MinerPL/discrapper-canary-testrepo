@@ -6,8 +6,8 @@ return r;
 var i = n(735250);
 n(470079);
 var a = n(481060),
-  l = n(285952),
-  s = n(630471);
+  s = n(285952),
+  l = n(630471);
 
 function r(e) {
   let {
@@ -18,13 +18,13 @@ label: r
   return (0, i.jsx)(a.Button, {
 look: a.Button.Looks.BLANK,
 size: a.Button.Sizes.MIN,
-className: s.button,
+className: l.button,
 onClick: n,
-children: (0, i.jsxs)(l.Z, {
-  align: l.Z.Align.CENTER,
+children: (0, i.jsxs)(s.Z, {
+  align: s.Z.Align.CENTER,
   children: [
     (0, i.jsx)('div', {
-      className: s.buttonIcon,
+      className: l.buttonIcon,
       children: t
     }),
     (0, i.jsx)(a.Text, {

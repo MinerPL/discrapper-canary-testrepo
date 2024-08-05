@@ -1,6 +1,6 @@
 s.d(t, {
   Sz: function() {
-return h;
+return g;
   },
   of: function() {
 return A;
@@ -121,7 +121,7 @@ children: [
   });
 }
 
-function h(e) {
+function g(e) {
   let {
 premiumSubscription: t,
 premiumType: s,
@@ -129,27 +129,27 @@ onClose: i,
 pauseDuration: o,
 analyticsLocation: d
   } = e, [T, A] = a.useState(!1), {
-analyticsLocations: h
-  } = (0, E.ZP)(), [g, O] = a.useState(!1), p = (0, _.ZP)(), R = null, x = null, M = [
+analyticsLocations: g
+  } = (0, E.ZP)(), [h, O] = a.useState(!1), p = (0, _.ZP)(), R = null, x = null, M = [
 S.O0b.PAST_DUE,
 S.O0b.PAUSED
-  ].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd, D = r()(M).add(o, 'days').toDate();
+  ].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd, f = r()(M).add(o, 'days').toDate();
   switch (t.status) {
 case S.O0b.PAST_DUE:
   x = N.Z.Messages.PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY.format({
     pauseDuration: o,
-    resumeDate: D
+    resumeDate: f
   });
   break;
 case S.O0b.PAUSED:
   x = N.Z.Messages.PREMIUM_PAUSE_EXTEND_CONFIRM_BODY.format({
-    resumeDate: D
+    resumeDate: f
   });
   break;
 default:
   x = N.Z.Messages.PREMIUM_PAUSE_CONFIRM_BODY.format({
     pauseDate: M,
-    resumeDate: D,
+    resumeDate: f,
     pauseDuration: o
   });
   }
@@ -190,7 +190,7 @@ children: [
       children: [
         (0, n.jsx)(c.Button, {
           color: c.Button.Colors.RED,
-          disabled: g || null == o,
+          disabled: h || null == o,
           onClick: async () => {
             await m({
               premiumSubscription: t,
@@ -198,7 +198,7 @@ children: [
               setIsCancelling: O,
               setHasError: A,
               onClose: i,
-              analyticsLocations: h,
+              analyticsLocations: g,
               analyticsLocation: d
             });
           },

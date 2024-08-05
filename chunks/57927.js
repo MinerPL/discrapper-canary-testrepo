@@ -12,10 +12,10 @@ var t = a(735250),
   d = a(442837),
   o = a(481060),
   _ = a(367907),
-  I = a(430824),
-  N = a(771845),
-  x = a(9156),
-  m = a(346656),
+  I = a(565138),
+  N = a(430824),
+  x = a(771845),
+  m = a(9156),
   T = a(626135),
   h = a(789662),
   u = a(981631),
@@ -26,7 +26,7 @@ function j(e) {
   let {
 guildPlans: s,
 overrideGuild: a
-  } = e, i = (0, d.e7)([N.ZP], () => N.ZP.getFlattenedGuildIds()), [l, r] = n.useMemo(() => c()(s).values().sortBy(e => {
+  } = e, i = (0, d.e7)([x.ZP], () => x.ZP.getFlattenedGuildIds()), [l, r] = n.useMemo(() => c()(s).values().sortBy(e => {
 let s = i.indexOf(e.guildId);
 return -1 === s ? i.length : s;
   }).partition(e => {
@@ -111,7 +111,7 @@ function M(e) {
   let {
 plan: a,
 onClick: n
-  } = e, i = (0, d.e7)([I.Z], () => I.Z.getGuild(a.guildId));
+  } = e, i = (0, d.e7)([N.Z], () => N.Z.getGuild(a.guildId));
   if (null == i)
 return null;
   let r = (null !== (s = a.overrideMode) && void 0 !== s ? s : a.mode) === h.AR.UseGreyDot;
@@ -120,8 +120,8 @@ return null;
 T.default.track(u.rMx.NOTIFICATION_MIGRATION_GUILD_CHANGED, {
   ...(0, _.hH)(a.guildId),
   is_selected: !r,
-  is_muted: x.ZP.isMuted(a.guildId),
-  notification_setting: x.ZP.getMessageNotifications(a.guildId)
+  is_muted: m.ZP.isMuted(a.guildId),
+  notification_setting: m.ZP.getMessageNotifications(a.guildId)
 }), n(a.guildId);
   }
   return (0, t.jsx)(o.Tooltip, {
@@ -189,11 +189,11 @@ children: e => (0, t.jsxs)(o.Clickable, {
       className: g.checkmark,
       secondaryColor: 'white'
     }),
-    (0, t.jsx)(m.Z, {
+    (0, t.jsx)(I.Z, {
       'aria-hidden': !0,
       className: g.guildIcon,
       guild: i,
-      size: m.Z.Sizes.MEDIUM,
+      size: I.Z.Sizes.MEDIUM,
       active: !0,
       tabIndex: -1
     })

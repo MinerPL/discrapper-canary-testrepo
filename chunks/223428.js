@@ -1,8 +1,8 @@
 var r = n(585559),
   i = n(771378),
   a = n(778247),
-  o = n(780177),
-  s = n(585754),
+  s = n(780177),
+  o = n(585754),
   l = n(957578).Buffer;
 
 function u(e) {
@@ -38,8 +38,8 @@ case 'ENCRYPTED PRIVATE KEY':
       u = e.algorithm.decrypt.cipher.iv,
       c = e.subjectPrivateKey,
       d = parseInt(a.split('-')[1], 10) / 8,
-      _ = s.pbkdf2Sync(t, n, r, d, 'sha1'),
-      E = o.createDecipheriv(a, _, u),
+      _ = o.pbkdf2Sync(t, n, r, d, 'sha1'),
+      E = s.createDecipheriv(a, _, u),
       f = [];
     return f.push(E.update(c)), f.push(E.final()), l.concat(f);
   }(_ = r.EncryptedPrivateKey.decode(_, 'der'), t);

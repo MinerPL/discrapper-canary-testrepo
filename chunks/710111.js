@@ -16,10 +16,10 @@ return c;
 return E;
   },
   X8: function() {
-return s;
+return o;
   },
   YW: function() {
-return o;
+return s;
   },
   hY: function() {
 return d;
@@ -29,8 +29,8 @@ return _;
   }
 }), n(47120);
 let a = 32,
-  o = 5,
-  s = 'DEFAULT';
+  s = 5,
+  o = 'DEFAULT';
 (i = r || (r = {}))[i.SUCCESS = 0] = 'SUCCESS', i[i.INTERRUPTED = 1] = 'INTERRUPTED';
 let l = {
 width: 424,

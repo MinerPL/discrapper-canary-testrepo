@@ -6,18 +6,18 @@ return l;
 return u;
   },
   mb: function() {
-return o;
+return s;
   },
   tV: function() {
-return s;
+return o;
   }
 }), n(47120);
 var r = n(664751),
   i = n(898450);
 let a = 'event';
 
-function o(e, t) {
-  return null == t ? e : s({
+function s(e, t) {
+  return null == t ? e : o({
 baseCode: e,
 guildScheduledEventId: function(e) {
   let t = '?' === e.charAt(0) ? e.substring(1) : e;
@@ -31,7 +31,7 @@ guildScheduledEventId: function(e) {
   });
 }
 
-function s(e) {
+function o(e) {
   let {
 baseCode: t,
 guildScheduledEventId: n
@@ -45,10 +45,10 @@ function l(e) {
 return {
   baseCode: t
 };
-  let o = r.parse(n);
+  let s = r.parse(n);
   return {
 baseCode: t,
-guildScheduledEventId: (0, i.d)(o[a])
+guildScheduledEventId: (0, i.d)(s[a])
   };
 }
 

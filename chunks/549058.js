@@ -6,18 +6,18 @@ return c;
 return l;
   },
   qm: function() {
-return o;
+return s;
   },
   t7: function() {
-return s;
+return o;
   },
   xv: function() {
 return u;
   }
 });
 var r, i, a = n(70956);
-let o = 4,
-  s = 5,
+let s = 4,
+  o = 5,
   l = 350,
   u = a.Z.Millis.MINUTE,
   c = 2 * a.Z.Millis.MINUTE;

@@ -11,8 +11,8 @@ return _;
 });
 var l = n(735250),
   o = n(470079),
-  t = n(120356),
-  s = n.n(t),
+  s = n(120356),
+  t = n.n(s),
   a = n(512722),
   c = n.n(a),
   i = n(699581),
@@ -21,7 +21,7 @@ var l = n(735250),
   p = n(776674);
 
 function _(e) {
-  var r, n, t, a, i, _;
+  var r, n, s, a, i, _;
   let {
 header: m,
 isLargeModal: f,
@@ -53,7 +53,7 @@ S
   ]), c()(null != T, 'Unknown step for current payment flow.');
   let b = null !== (i = null == T ? void 0 : null === (r = T.options) || void 0 === r ? void 0 : r.hideSlider) && void 0 !== i && i,
 j = null == T ? void 0 : null === (n = T.options) || void 0 === n ? void 0 : n.bodyClassName,
-v = void 0 !== f && f ? p.sliderBodyLarge : null == T ? void 0 : null === (t = T.options) || void 0 === t ? void 0 : t.sliderBodyClassName;
+v = void 0 !== f && f ? p.sliderBodyLarge : null == T ? void 0 : null === (s = T.options) || void 0 === s ? void 0 : s.sliderBodyClassName;
   return (0, l.jsxs)(l.Fragment, {
 children: [
   null === (_ = null == T ? void 0 : null === (a = T.options) || void 0 === a ? void 0 : a.renderHeader) || void 0 === _ || _ ? m : null,
@@ -61,7 +61,7 @@ children: [
   null == h || b ? null : (0, l.jsxs)(l.Fragment, {
     children: [
       (0, l.jsx)(d.ModalContent, {
-        className: s()(p.body, j),
+        className: t()(p.body, j),
         children: (0, l.jsx)(d.Slides, {
           activeSlide: h,
           centered: !1,
@@ -69,7 +69,7 @@ children: [
           children: E.filter(e => null != e.key).map(e => (0, l.jsx)(d.Slide, {
             id: e.key,
             children: (0, l.jsx)('form', {
-              className: s()(p.sliderBody, v),
+              className: t()(p.sliderBody, v),
               ref: e => x(e),
               onSubmit: e => e.preventDefault()
             })

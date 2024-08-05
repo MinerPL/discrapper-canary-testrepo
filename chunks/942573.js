@@ -17,10 +17,10 @@ a = e.inherit(i, {
   begin: /\(/,
   end: /\)/
 }),
-o = e.inherit(e.APOS_STRING_MODE, {
+s = e.inherit(e.APOS_STRING_MODE, {
   className: 'string'
 }),
-s = e.inherit(e.QUOTE_STRING_MODE, {
+o = e.inherit(e.QUOTE_STRING_MODE, {
   className: 'string'
 }),
 l = {
@@ -79,8 +79,8 @@ contains: [{
     relevance: 10,
     contains: [
       i,
-      s,
       o,
+      s,
       a,
       {
         begin: /\[/,
@@ -92,8 +92,8 @@ contains: [{
           contains: [
             i,
             a,
-            s,
-            o
+            o,
+            s
           ]
         }]
       }
@@ -114,7 +114,7 @@ contains: [{
     variants: [{
         begin: /<\?xml/,
         relevance: 10,
-        contains: [s]
+        contains: [o]
       },
       {
         begin: /<\?[a-z][a-z0-9]+/

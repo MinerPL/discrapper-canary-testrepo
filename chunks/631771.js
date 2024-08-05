@@ -1,11 +1,8 @@
 n.d(t, {
   Gi: function() {
-return a;
-  },
-  MP: function() {
 return s;
   },
-  PC: function() {
+  MP: function() {
 return o;
   },
   Qs: function() {
@@ -16,8 +13,9 @@ return u;
   }
 });
 var r = n(818083),
-  i = n(474936);
-let a = (0, r.B)({
+  i = n(311476),
+  a = n(474936);
+let s = (0, r.B)({
 id: '2024-06_premium_emoji_desktop_upsell',
 label: 'Premium Emoji Desktop Upsell',
 kind: 'user',
@@ -44,32 +42,6 @@ treatments: [{
 ]
   }),
   o = (0, r.B)({
-id: '2024-06_hd_streaming_desktop_upsell',
-label: 'HD Streaming Desktop Upsell',
-kind: 'user',
-defaultConfig: {
-  enabled: !1,
-  addSocialProof: !1
-},
-treatments: [{
-    id: 1,
-    label: 'Enable new roadblock modal',
-    config: {
-      enabled: !0,
-      addSocialProof: !1
-    }
-  },
-  {
-    id: 2,
-    label: 'Enable new roadblock modal with social proof',
-    config: {
-      enabled: !0,
-      addSocialProof: !0
-    }
-  }
-]
-  }),
-  s = (0, r.B)({
 id: '2024-05_file_upload_desktop_upsell',
 label: 'File Upload Desktop Upsell',
 kind: 'user',
@@ -136,15 +108,16 @@ treatments: [{
 
 function u(e) {
   switch (e) {
-case i.cd.UPLOAD_ERROR_UPSELL:
-  return s.getCurrentConfig({
+case a.cd.UPLOAD_ERROR_UPSELL:
+  return o.getCurrentConfig({
     location: 'File Upload Roadblock'
   }, {
     autoTrackExposure: !1
   }).addSocialProof;
-case i.cd.STREAM_QUALITY_UPSELL:
-  return o.getCurrentConfig({
-    location: 'HD Streaming Roadblock'
+case a.cd.CLIENT_THEMES_UPSELL:
+case a.cd.APP_ICONS_UPSELL:
+  return i.Z.getCurrentConfig({
+    location: 'shouldShowSocialProof'
   }, {
     autoTrackExposure: !1
   }).addSocialProof;

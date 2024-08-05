@@ -10,7 +10,7 @@ i = new Set();
 null != e.channel_id && i.has(e.channel_id) && t(e);
   }
 
-  function o(e) {
+  function s(e) {
 let {
   message: t
 } = e;
@@ -18,7 +18,7 @@ if (null != t.channel_id && !!i.has(t.channel_id))
   null == r || r(), a(t);
   }
 
-  function s(e) {
+  function o(e) {
 let {
   channelId: t,
   messages: n
@@ -37,12 +37,12 @@ POST_CONNECTION_OPEN: function() {
   i.clear();
 },
 MESSAGE_CREATE: {
-  callback: o,
+  callback: s,
   autoSubscribe: !1
 },
-MESSAGE_UPDATE: o,
-LOAD_MESSAGES_SUCCESS: s,
-LOAD_MESSAGES_AROUND_SUCCESS: s,
+MESSAGE_UPDATE: s,
+LOAD_MESSAGES_SUCCESS: o,
+LOAD_MESSAGES_AROUND_SUCCESS: o,
 LOAD_RECENT_MENTIONS_SUCCESS: function(e) {
   let {
     messages: n

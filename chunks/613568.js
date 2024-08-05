@@ -6,9 +6,9 @@ return h;
 var r = n(121014),
   i = n(512722),
   a = n.n(i),
-  o = n(956067);
+  s = n(956067);
 n(17089);
-var s = n(259443),
+var o = n(259443),
   l = n(986529),
   u = n(153102),
   c = n(625306),
@@ -38,7 +38,7 @@ let E = new Set([
 'UPLOAD_FAIL',
 'WRITE_CACHES'
   ]),
-  f = new s.Y('Flux');
+  f = new o.Y('Flux');
 class h {
   isDispatching() {
 return null != this._currentDispatchActionType;
@@ -104,9 +104,9 @@ for (let r = 0, i = n.length; r < i; r++) {
   let {
     name: i,
     actionHandler: a,
-    storeDidChange: o
+    storeDidChange: s
   } = n[r];
-  !1 !== t(i, () => a(e)) && o(e);
+  !1 !== t(i, () => a(e)) && s(e);
 }
 let r = this._subscriptions[e.type];
 null != r && t('__subscriptions', () => {
@@ -142,7 +142,7 @@ if (_(this, '_defaultBand', void 0), _(this, '_interceptors', []), _(this, '_sub
 else
   this.actionLogger = new d.Z();
 this.actionLogger.on('trace', (e, t, n) => {
-  o.Z.isTracing && n >= 10 && o.Z.mark('\uD83E\uDDA5', t, n);
+  s.Z.isTracing && n >= 10 && s.Z.mark('\uD83E\uDDA5', t, n);
 });
   }
 }
@@ -154,16 +154,16 @@ return null !== (t = this._orderedActionHandlers[e.type]) && void 0 !== t ? t : 
   register(e, t, n, r) {
 let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : this.createToken();
 a()(r >= 0 && Number.isInteger(r), 'band must be a non-negative integer.');
-let o = {};
+let s = {};
 for (let n in t) {
   let r = t[n],
     i = e => r(e);
-  m(i, ''.concat(e, '_').concat(n)), o[n] = i;
+  m(i, ''.concat(e, '_').concat(n)), s[n] = i;
 }
 return this._dependencyGraph.addNode(i, {
   name: e,
   band: r,
-  actionHandler: o,
+  actionHandler: s,
   storeDidChange: n
 }), this._addToBand(i, r), this._invalidateCaches(), i;
   }
@@ -199,12 +199,12 @@ for (let t = 0, i = n.length; t < i; t++) {
   let {
     name: i,
     actionHandler: a,
-    storeDidChange: o
-  } = this._dependencyGraph.getNodeData(n[t]), s = a[e];
-  null != s && r.push({
+    storeDidChange: s
+  } = this._dependencyGraph.getNodeData(n[t]), o = a[e];
+  null != o && r.push({
     name: i,
-    actionHandler: s,
-    storeDidChange: o
+    actionHandler: o,
+    storeDidChange: s
   });
 }
 return this._orderedActionHandlers[e] = r, r;

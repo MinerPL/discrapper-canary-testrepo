@@ -1,6 +1,6 @@
-var s, o;
+var i, s;
 n.d(t, {
   h: function() {
-return s;
+return i;
   }
-}), (o = s || (s = {}))[o.UNSPECIFIED = 0] = 'UNSPECIFIED', o[o.PENDING = 1] = 'PENDING', o[o.ACCEPTED = 2] = 'ACCEPTED', o[o.REJECTED = 3] = 'REJECTED';
+}), (s = i || (i = {}))[s.UNSPECIFIED = 0] = 'UNSPECIFIED', s[s.PENDING = 1] = 'PENDING', s[s.ACCEPTED = 2] = 'ACCEPTED', s[s.REJECTED = 3] = 'REJECTED';

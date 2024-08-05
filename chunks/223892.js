@@ -1,12 +1,12 @@
 n.d(t, {
   DB: function() {
-return o;
+return s;
   },
   Lm: function() {
 return d;
   },
   Ob: function() {
-return s;
+return o;
   },
   Rw: function() {
 return l;
@@ -35,7 +35,7 @@ autoTrackExposure: !1
   return e;
 }
 
-function o() {
+function s() {
   let {
 isUserEligibleForCreatorMonetization: e
   } = r.bT.getCurrentConfig({
@@ -46,7 +46,7 @@ autoTrackExposure: !1
   return e;
 }
 
-function s(e) {
+function o(e) {
   let t = function(e) {
   let {
     enableFastMonetizationOnboardingForGuild: t

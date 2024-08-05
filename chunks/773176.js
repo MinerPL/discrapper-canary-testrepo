@@ -1,68 +1,71 @@
 n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(954955),
   o = n.n(r),
   c = n(442837),
-  d = n(704215),
-  u = n(481060),
-  h = n(607070),
-  p = n(110630),
-  m = n(377171),
+  u = n(704215),
+  d = n(481060),
+  h = n(596454),
+  p = n(607070),
+  m = n(110630),
   _ = n(706140),
-  f = n(346610),
-  E = n(868643),
-  C = n(223606),
-  g = n(188597),
-  I = n(41776),
-  x = n(222677),
-  T = n(995774),
-  v = n(931651),
-  N = n(280845),
-  S = n(121254),
-  Z = n(115219),
-  A = n(742989),
-  M = n(802463),
-  b = n(665906),
-  R = n(695346),
-  j = n(314897),
-  L = n(323873),
-  P = n(271383),
-  O = n(430824),
-  y = n(607744),
-  D = n(496675),
-  k = n(448239),
-  U = n(404975),
+  f = n(543241),
+  E = n(689789),
+  g = n(346610),
+  C = n(868643),
+  I = n(223606),
+  x = n(188597),
+  T = n(41776),
+  N = n(222677),
+  v = n(995774),
+  S = n(931651),
+  Z = n(280845),
+  A = n(768943),
+  M = n(121254),
+  b = n(742989),
+  R = n(665906),
+  j = n(695346),
+  L = n(314897),
+  P = n(323873),
+  O = n(271383),
+  y = n(430824),
+  D = n(607744),
+  k = n(496675),
+  U = n(448239),
   w = n(626135),
   B = n(572004),
   H = n(970257),
   G = n(418476),
   V = n(151007),
   F = n(432376),
-  W = n(996861),
-  z = n(603490),
-  Y = n(225138),
-  K = n(717680),
-  q = n(981631),
-  X = n(921944),
-  Q = n(689938),
-  J = n(838764);
+  W = n(373662),
+  z = n(917990),
+  Y = n(996861),
+  K = n(603490),
+  q = n(225138),
+  X = n(717680),
+  Q = n(981631),
+  J = n(921944),
+  $ = n(689938),
+  ee = n(838764),
+  et = n(21620);
 
-function $(e) {
+function en(e) {
   e.stopPropagation();
 }
 
-function ee(e) {
+function ei(e) {
   let {
 message: t,
 channel: n,
 canReport: i,
 onClose: a,
-updatePosition: l
+updatePosition: s
   } = e;
-  return (0, Y.useMessageMenu)({
+  return (0, q.useMessageMenu)({
 message: t,
 channel: n,
 textSelection: '',
@@ -74,107 +77,96 @@ itemSrc: void 0,
 itemSafeSrc: void 0,
 itemTextContent: void 0,
 canReport: i,
-onHeightUpdate: l,
+onHeightUpdate: s,
 onClose: a,
 navId: 'message-actions',
-ariaLabel: Q.Z.Messages.MESSAGE_UTILITIES_A11Y_LABEL
+ariaLabel: $.Z.Messages.MESSAGE_UTILITIES_A11Y_LABEL
   });
 }
-
-function et(e) {
+let ea = a.memo(function(e) {
   let {
-label: t,
-ariaLabel: n,
-tooltipText: a,
-tooltipColor: l,
-icon: s,
-iconProps: r,
-channel: o,
-message: c,
-onClick: d,
-onTooltipShow: h,
-onTooltipHide: p,
-key: _,
-disabled: f,
-dangerous: E,
-separator: C,
-sparkle: g,
-showNewBadge: I,
-...x
-  } = e;
-  return (0, i.jsx)(u.Tooltip, {
-text: null != a ? a : t,
-color: null != l ? l : u.TooltipColors.PRIMARY,
-'aria-label': t,
-onTooltipShow: h,
-onTooltipHide: p,
-hideOnClick: !0,
-tooltipClassName: J.tooltip,
-children: e => {
-  let {
-    onMouseEnter: a,
-    onMouseLeave: l,
-    onClick: h
-  } = e;
-  return (0, i.jsxs)(i.Fragment, {
-    children: [
-      (0, i.jsxs)(U.zx, {
-        onMouseEnter: a,
-        onMouseLeave: l,
-        onClick: e => {
-          null == h || h(), d(o, c, e);
-        },
-        'aria-label': null != n ? n : t,
-        disabled: f,
-        dangerous: E,
-        ...x,
-        children: [
-          (0, i.jsx)(s, {
-            className: J.icon,
-            color: 'currentColor',
-            ...r
-          }),
-          g && (0, i.jsx)(u.LottieSparkle, {}),
-          I && (0, i.jsx)(u.TextBadge, {
-            text: Q.Z.Messages.NEW,
-            color: m.Z.BG_BRAND,
-            className: J.newBadge
-          })
-        ]
-      }),
-      C && (0, i.jsx)(U.Z0, {})
-    ]
+channel: t,
+message: n
+  } = e, a = (0, f.wC)(t.guild_id), s = (0, f.q5)(t.guild_id), {
+canSplitFrecencyList: l
+  } = (0, E.S)({
+location: 'ReactionSuggestions',
+autoTrackExposure: !0
+  }), r = l ? s.slice(0, 3) : a.slice(0, 3), o = n.reactions.filter(e => e.me);
+  return (0, i.jsx)(i.Fragment, {
+children: r.map(e => {
+  var a;
+  let s = o.find(t => (0, v.ir)(t.emoji, e)),
+    l = null != s ? $.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_REMOVE : $.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_ADD,
+    r = null != s ? $.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_REMOVE_ALLY.format({
+      emojiName: e.name
+    }) : $.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_ADD_ALLY.format({
+      emojiName: e.name
+    });
+  return (0, i.jsx)(W.s, {
+    tooltipText: (0, i.jsxs)(i.Fragment, {
+      children: [
+        (0, i.jsx)(d.Text, {
+          variant: 'text-sm/medium',
+          color: 'header-primary',
+          className: ee.emojiTooltipText,
+          children: ':'.concat(e.name, ':')
+        }),
+        (0, i.jsx)(d.Text, {
+          variant: 'text-xs/normal',
+          color: 'header-secondary',
+          className: ee.emojiTooltipText,
+          children: l
+        })
+      ]
+    }),
+    label: r,
+    onClick: () => er({
+      type: null != s ? 'remove' : 'add',
+      emoji: e,
+      channel: t,
+      message: n,
+      location: N.TW.MESSAGE_HOVER_BAR
+    }),
+    buttonClassName: et.reactionSuggestion,
+    children: (0, i.jsx)(h.Z, {
+      emojiId: e.id,
+      emojiName: null == e.id ? e.surrogates : e.name,
+      animated: e.animated,
+      size: 'reaction',
+      alt: ''
+    })
+  }, ''.concat(null !== (a = e.id) && void 0 !== a ? a : 0, ':').concat(e.name));
+})
   });
-}
-  }, _);
-}
+});
 
-function en(e) {
+function es(e) {
   let {
 channel: t,
 message: n,
-canCopy: l,
-canPin: s,
+canCopy: s,
+canPin: l,
 canDelete: r,
 canReport: o,
-canEdit: m,
-canPublish: C,
-canReact: g,
-canConfigureJoin: x,
-canReply: T,
-canStartThread: v,
-canViewThread: L,
-canForward: U,
-isExpanded: Y,
-showMoreUtilities: J,
-showEmojiPicker: $,
-showMessageRemindersActions: en,
-isMessageReminder: ei,
-showMessageBookmarksActions: el,
-isMessageBookmark: es,
+canEdit: h,
+canPublish: f,
+canReact: E,
+canConfigureJoin: I,
+canReply: x,
+canStartThread: N,
+canViewThread: v,
+canForward: S,
+isExpanded: P,
+showMoreUtilities: q,
+showEmojiPicker: ee,
+showMessageRemindersActions: et,
+isMessageReminder: en,
+showMessageBookmarksActions: es,
+isMessageBookmark: el,
 setPopout: er,
-hasDeveloperMode: eo,
-isGuildInviteReminder: ec,
+hasDeveloperMode: ec,
+isGuildInviteReminder: eu,
 isFocused: ed
   } = function(e) {
 let {
@@ -182,360 +174,346 @@ let {
   message: n,
   showEmojiPicker: i,
   showEmojiBurstPicker: a,
-  showMoreUtilities: l,
-  setPopout: s,
+  showMoreUtilities: s,
+  setPopout: l,
   isFocused: r
 } = e, {
   author: o
-} = n, d = (0, c.e7)([O.Z], () => O.Z.getGuild(t.guild_id), [t.guild_id]), u = (0, c.e7)([j.default], () => j.default.getId()), m = (0, b.$R)(t), _ = (0, b.Gu)(t), C = R.nc.useSetting(), g = R.Sb.useSetting(), x = (0, c.e7)([y.Z], () => null == t.guild_id || y.Z.canChatInGuild(t.guild_id), [t]), {
-  canManageMessages: T,
-  canAddNewReactions: v
-} = (0, c.cj)([D.Z], () => ({
-  canAddNewReactions: x && D.Z.can(q.Plq.ADD_REACTIONS, t),
-  canManageMessages: D.Z.can(q.Plq.MANAGE_MESSAGES, t)
+} = n, u = (0, c.e7)([y.Z], () => y.Z.getGuild(t.guild_id), [t.guild_id]), d = (0, c.e7)([L.default], () => L.default.getId()), h = (0, R.$R)(t), _ = (0, R.Gu)(t), f = j.nc.useSetting(), E = j.Sb.useSetting(), I = (0, c.e7)([D.Z], () => null == t.guild_id || D.Z.canChatInGuild(t.guild_id), [t]), {
+  canManageMessages: x,
+  canAddNewReactions: N
+} = (0, c.cj)([k.Z], () => ({
+  canAddNewReactions: I && k.Z.can(Q.Plq.ADD_REACTIONS, t),
+  canManageMessages: k.Z.can(Q.Plq.MANAGE_MESSAGES, t)
 }), [
   t,
-  x
-]), L = (0, N.U)(t, n), k = (0, b.NE)(t, n), U = (0, b.Ek)(n), w = (0, c.e7)([I.Z], () => null != t.guild_id && I.Z.isLurking(t.guild_id), [t]), W = (0, c.e7)([P.ZP], () => null != t.guild_id && P.ZP.isCurrentUserGuest(t.guild_id), [t]), z = o.id === u, Y = (T || n.canDeleteOwnMessage(u)) && m && !q.V$x.UNDELETABLE.has(n.type);
-n.type === q.uaV.AUTO_MODERATION_ACTION && (Y = Y && T);
-let X = (0, H.a4)(n),
-  Q = (0, V.Z)(n, t, T),
-  J = !t.isSystemDM() && (0, G.Z)(n, u) && m && !_,
+  I
+]), v = (0, Z.U)(t, n), S = (0, R.NE)(t, n), P = (0, R.Ek)(n), U = (0, c.e7)([T.Z], () => null != t.guild_id && T.Z.isLurking(t.guild_id), [t]), w = (0, c.e7)([O.ZP], () => null != t.guild_id && O.ZP.isCurrentUserGuest(t.guild_id), [t]), W = o.id === d, z = (x || n.canDeleteOwnMessage(d)) && h && !Q.V$x.UNDELETABLE.has(n.type);
+n.type === Q.uaV.AUTO_MODERATION_ACTION && (z = z && x);
+let Y = (0, H.a4)(n),
+  K = (0, V.Z)(n, t, x),
+  q = !t.isSystemDM() && (0, G.Z)(n, d) && h && !_,
   {
-    disableReactionCreates: $
+    disableReactionCreates: J
   } = (0, F.Z)({
     channel: t,
-    canChat: x,
-    renderReactions: C,
-    canAddNewReactions: v,
-    isLurking: w,
-    isGuest: W,
-    isActiveChannelOrUnarchivableThread: m
+    canChat: I,
+    renderReactions: f,
+    canAddNewReactions: N,
+    isLurking: U,
+    isGuest: w,
+    isActiveChannelOrUnarchivableThread: h
   }),
-  ee = t.type === q.d4z.GUILD_ANNOUNCEMENT && null != d && d.hasFeature(q.oNc.NEWS) && (z || T) && (0, p.Z)(n),
-  et = t.getGuildId(),
-  en = null != et && (n.type === q.uaV.USER_JOIN || n.type === q.uaV.GUILD_INVITE_REMINDER) && D.Z.canWithPartialContext(q.Plq.MANAGE_GUILD, {
-    guildId: et
+  $ = t.type === Q.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(Q.oNc.NEWS) && (W || x) && (0, m.Z)(n),
+  ee = t.getGuildId(),
+  et = null != ee && (n.type === Q.uaV.USER_JOIN || n.type === Q.uaV.GUILD_INVITE_REMINDER) && k.Z.canWithPartialContext(Q.Plq.MANAGE_GUILD, {
+    guildId: ee
   }),
   {
-    canForwardMessages: ei
-  } = f.w.useExperiment({
+    canForwardMessages: en
+  } = (0, g.yk)({
     location: 'useMessageUtilitiesProps'
   }, {
     autoTrackExposure: !1
   }),
-  ea = (0, E.a)(n),
+  ei = (0, C.a)(n),
   {
-    showReminders: el
-  } = A.Z.useExperiment({
+    showReminders: ea
+  } = b.Z.useExperiment({
     location: 'message_utilities'
   }, {
     autoTrackExposure: !1
   }),
-  es = (0, c.e7)([M.Z], () => M.Z.isMessageReminder(n.id)),
   {
-    enabled: er
-  } = S.Z.useExperiment({
+    enabled: es
+  } = M.Z.useExperiment({
     location: 'message_utilities'
   }, {
     autoTrackExposure: !1
   }),
-  eo = (0, c.e7)([Z.Z], () => Z.Z.isMessageBookmarked(n.id)),
-  ec = (0, K.Z)(),
-  ed = (0, c.e7)([h.Z], () => h.Z.keyboardModeEnabled);
+  [el, er] = (0, c.Wu)([A.Z], () => [
+    A.Z.isMessageReminder(n.id),
+    A.Z.isMessageBookmarked(n.id)
+  ]),
+  eo = (0, X.Z)(),
+  ec = (0, c.e7)([p.Z], () => p.Z.keyboardModeEnabled);
 return {
   channel: t,
   message: n,
-  canPin: Q,
-  canEdit: J,
-  canDelete: Y,
-  canReport: X,
-  canReply: L,
-  canStartThread: k,
-  canViewThread: U,
-  canForward: ei && ea,
+  canPin: K,
+  canEdit: q,
+  canDelete: z,
+  canReport: Y,
+  canReply: v,
+  canStartThread: S,
+  canViewThread: P,
+  canForward: en && ei,
   canCopy: B.wS,
-  hasDeveloperMode: g,
-  canReact: !$ && C,
-  canPublish: ee,
-  canConfigureJoin: en,
-  isExpanded: ec && !ed && !i && !a && !l,
+  hasDeveloperMode: E,
+  canReact: !J && f,
+  canPublish: $,
+  canConfigureJoin: et,
+  isExpanded: eo && !ec && !i && !a && !s,
   showEmojiPicker: i,
   showEmojiBurstPicker: a,
-  showMoreUtilities: l,
-  showMessageRemindersActions: el,
-  isMessageReminder: es,
-  showMessageBookmarksActions: er,
-  isMessageBookmark: eo,
-  setPopout: s,
+  showMoreUtilities: s,
+  showMessageRemindersActions: ea,
+  isMessageReminder: el,
+  showMessageBookmarksActions: es,
+  isMessageBookmark: er,
+  setPopout: l,
   isFocused: r,
-  isGuildInviteReminder: n.type === q.uaV.GUILD_INVITE_REMINDER
+  isGuildInviteReminder: n.type === Q.uaV.GUILD_INVITE_REMINDER
 };
-  }(e), eu = a.useCallback(() => {
-!J && w.default.track(q.rMx.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
+  }(e), eh = a.useCallback(() => {
+!q && w.default.track(Q.rMx.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
   message_id: n.id,
   channel: n.channel_id
 }), er({
-  moreUtilities: !J
+  moreUtilities: !q
 });
   }, [
-J,
+q,
 er,
 n
-  ]), eh = a.useCallback(() => {
+  ]), ep = a.useCallback(() => {
 er({
-  emojiPicker: !$
+  emojiPicker: !ee
 });
   }, [
-$,
+ee,
 er
-  ]), ep = (0, b.$R)(t), em = n.hasFlag(q.iLy.CROSSPOSTED), [e_, ef] = (0, _.c)(U ? [d.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []), eE = e_ === d.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE, [eC, eg] = a.useState(!1), eI = a.useCallback(() => {
-eg(!0);
-  }, []), ex = a.useCallback(() => {
-eg(!1);
-  }, []), eT = a.useCallback((e, t) => {
-ef(X.L.TAKE_ACTION), (0, W.ts)(e, t);
-  }, [ef]);
+  ]), em = (0, R.$R)(t), e_ = n.hasFlag(Q.iLy.CROSSPOSTED), [ef, eE] = (0, _.c)(S ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []), eg = ef === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE, [eC, eI] = a.useState(!1), ex = a.useCallback(() => {
+eI(!0);
+  }, []), eT = a.useCallback(() => {
+eI(!1);
+  }, []), eN = a.useCallback((e, t) => {
+eE(J.L.TAKE_ACTION), (0, Y.ts)(e, t);
+  }, [eE]), {
+canShowReactionsOnMessageHover: ev
+  } = z.Z.useExperiment({
+location: 'ExpandingButtons'
+  }, {
+autoTrackExposure: !0
+  });
   return (0, i.jsxs)(i.Fragment, {
 children: [
-  Y ? (0, i.jsxs)(i.Fragment, {
+  P ? (0, i.jsxs)(i.Fragment, {
     children: [
-      l && eo ? et({
-        key: 'copy-id',
-        channel: t,
-        message: n,
-        label: Q.Z.Messages.COPY_ID_MESSAGE,
-        icon: u.IdIcon,
-        onClick: W.F4
-      }) : null,
-      l && !ec ? et({
-        key: 'copy-link',
-        channel: t,
-        message: n,
-        label: Q.Z.Messages.COPY_LINK,
-        icon: u.LinkIcon,
-        onClick: W.fB
-      }) : null,
-      x ? et({
-        key: 'configure',
-        channel: t,
-        message: n,
-        label: Q.Z.Messages.CONFIGURE,
-        icon: u.CircleQuestionIcon,
-        onClick: W.zW
-      }) : null,
-      en ? et({
-        key: 'mark-reminder',
-        channel: t,
-        message: n,
-        label: ei ? Q.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : Q.Z.Messages.MESSAGE_REMINDERS_MARK_AS_TODO,
-        icon: ei ? (0, u.makeIconCompat)(k.Z) : u.ListBulletsIcon,
-        onClick: ei ? W.l9 : W.W1
-      }) : null,
-      ep ? et({
-        key: 'mark-unread',
-        channel: t,
-        message: n,
-        label: Q.Z.Messages.MARK_UNREAD,
-        icon: u.ChatMarkUnreadIcon,
-        onClick: W.B8
-      }) : null,
-      el ? et({
-        key: 'bookmark',
-        channel: t,
-        message: n,
-        label: es ? Q.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK : Q.Z.Messages.MESSAGE_BOOKMARKS_BOOKMARK,
-        icon: u.InboxIcon,
-        onClick: es ? W.eM : W.dF
-      }) : null,
-      s ? et({
-        key: 'pin',
-        channel: t,
-        message: n,
-        label: n.pinned ? Q.Z.Messages.UNPIN_MESSAGE : Q.Z.Messages.PIN_MESSAGE,
-        icon: u.PinIcon,
-        onClick: W.rY
-      }) : null,
-      v && U ? et({
-        key: 'thread',
-        channel: t,
-        message: n,
-        label: Q.Z.Messages.CREATE_THREAD,
-        icon: u.ThreadIcon,
-        onClick: W.gK
-      }) : null,
-      T && m ? et({
-        key: 'reply-self',
-        channel: t,
-        message: n,
-        label: Q.Z.Messages.MESSAGE_ACTION_REPLY,
-        icon: u.ArrowAngleLeftUpIcon,
-        onClick: W.HH
-      }) : null
+      s && ec ? (0, i.jsx)(W.s, {
+        label: $.Z.Messages.COPY_ID_MESSAGE,
+        icon: d.IdIcon,
+        onClick: e => (0, Y.F4)(t, n, e)
+      }, 'copy-id') : null,
+      s && !eu ? (0, i.jsx)(W.s, {
+        label: $.Z.Messages.COPY_LINK,
+        icon: d.LinkIcon,
+        onClick: () => (0, Y.fB)(t, n)
+      }, 'copy-link') : null,
+      I ? (0, i.jsx)(W.s, {
+        label: $.Z.Messages.CONFIGURE,
+        icon: d.CircleQuestionIcon,
+        onClick: () => (0, Y.zW)(t)
+      }, 'configure') : null,
+      et ? (0, i.jsx)(W.s, {
+        label: en ? $.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : $.Z.Messages.MESSAGE_REMINDERS_MARK_AS_TODO,
+        icon: en ? (0, d.makeIconCompat)(U.Z) : d.ListBulletsIcon,
+        onClick: () => en ? (0, Y.l9)(t, n) : (0, Y.W1)(t, n)
+      }, 'mark-reminder') : null,
+      em ? (0, i.jsx)(W.s, {
+        label: $.Z.Messages.MARK_UNREAD,
+        icon: d.ChatMarkUnreadIcon,
+        onClick: () => (0, Y.B8)(t, n)
+      }, 'mark-unread') : null,
+      es ? (0, i.jsx)(W.s, {
+        label: el ? $.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK : $.Z.Messages.MESSAGE_BOOKMARKS_BOOKMARK,
+        icon: el ? d.BookmarkIcon : d.BookmarkOutlineIcon,
+        onClick: () => el ? (0, Y.eM)(t, n) : (0, Y.dF)(t, n)
+      }, 'bookmark') : null,
+      l ? (0, i.jsx)(W.s, {
+        label: n.pinned ? $.Z.Messages.UNPIN_MESSAGE : $.Z.Messages.PIN_MESSAGE,
+        icon: d.PinIcon,
+        onClick: e => (0, Y.rY)(t, n, e)
+      }, 'pin') : null,
+      N && S ? (0, i.jsx)(W.s, {
+        label: $.Z.Messages.CREATE_THREAD,
+        icon: d.ThreadIcon,
+        onClick: () => (0, Y.gK)(t, n)
+      }, 'thread') : null,
+      x && h ? (0, i.jsx)(W.s, {
+        label: $.Z.Messages.MESSAGE_ACTION_REPLY,
+        icon: d.ArrowAngleLeftUpIcon,
+        onClick: e => (0, Y.HH)(t, n, e)
+      }, 'reply-self') : null
     ]
   }) : null,
-  g && !ec ? (0, i.jsx)(z.Z, {
-    channel: t,
-    message: n,
-    togglePopout: eh,
-    renderEmojiPicker: ea,
-    shouldShow: $,
-    isFocused: ed
+  E && !eu ? (0, i.jsxs)(i.Fragment, {
+    children: [
+      ev && !P ? (0, i.jsx)(ea, {
+        channel: t,
+        message: n
+      }) : null,
+      (0, i.jsx)(K.Z, {
+        togglePopout: ep,
+        renderEmojiPicker: eo,
+        shouldShow: ee,
+        isFocused: ed,
+        channel: t,
+        message: n
+      })
+    ]
   }) : null,
-  T && !m ? et({
-    key: 'reply-other',
-    channel: t,
-    message: n,
-    label: Q.Z.Messages.MESSAGE_ACTION_REPLY,
-    icon: u.ArrowAngleLeftUpIcon,
-    onClick: W.HH
-  }) : null,
-  m ? et({
-    key: 'edit',
-    channel: t,
-    message: n,
-    label: Q.Z.Messages.EDIT,
-    icon: u.PencilIcon,
-    onClick: W.Hd
-  }) : null,
-  U ? et({
-    key: 'forward',
-    channel: t,
-    message: n,
-    label: Q.Z.Messages.MESSAGE_ACTION_FORWARD,
-    icon: u.ChatArrowRightIcon,
-    onClick: eT,
-    onTooltipShow: eI,
-    onTooltipHide: ex,
-    showNewBadge: !eC && eE
-  }) : null,
-  v && !U ? et({
-    key: 'thread',
-    channel: t,
-    message: n,
-    label: Q.Z.Messages.CREATE_THREAD,
-    icon: u.ThreadIcon,
-    onClick: W.gK
-  }) : null,
-  !v && L ? et({
-    key: 'view-thread',
-    channel: t,
-    message: n,
-    label: Q.Z.Messages.VIEW_THREAD,
-    icon: u.ThreadIcon,
-    onClick: W.qe
-  }) : null,
-  C ? et({
-    key: 'publish',
-    channel: t,
-    message: n,
-    label: em ? Q.Z.Messages.NEWS_CHANNEL_PUBLISHED : Q.Z.Messages.NEWS_CHANNEL_PUBLISH,
-    icon: u.AnnouncementsIcon,
-    onClick: W.Xl,
-    disabled: em
-  }) : null,
-  r && (ec || Y) ? et({
-    key: 'delete',
-    channel: t,
-    message: n,
-    label: Q.Z.Messages.DELETE,
-    icon: u.TrashIcon,
-    onClick: W.$Z,
+  x && !h ? (0, i.jsx)(W.s, {
+    label: $.Z.Messages.MESSAGE_ACTION_REPLY,
+    icon: d.ArrowAngleLeftUpIcon,
+    onClick: e => (0, Y.HH)(t, n, e)
+  }, 'reply-other') : null,
+  h ? (0, i.jsx)(W.s, {
+    label: $.Z.Messages.EDIT,
+    icon: d.PencilIcon,
+    onClick: () => (0, Y.Hd)(t, n)
+  }, 'edit') : null,
+  S ? (0, i.jsx)(W.s, {
+    label: $.Z.Messages.MESSAGE_ACTION_FORWARD,
+    icon: d.ChatArrowRightIcon,
+    onClick: () => eN(t, n),
+    onTooltipShow: ex,
+    onTooltipHide: eT,
+    showNewBadge: !eC && eg
+  }, 'forward') : null,
+  N && !S ? (0, i.jsx)(W.s, {
+    label: $.Z.Messages.CREATE_THREAD,
+    icon: d.ThreadIcon,
+    onClick: () => (0, Y.gK)(t, n)
+  }, 'thread') : null,
+  !N && v ? (0, i.jsx)(W.s, {
+    label: $.Z.Messages.VIEW_THREAD,
+    icon: d.ThreadIcon,
+    onClick: () => (0, Y.qe)(t, n)
+  }, 'view-thread') : null,
+  f ? (0, i.jsx)(W.s, {
+    label: e_ ? $.Z.Messages.NEWS_CHANNEL_PUBLISHED : $.Z.Messages.NEWS_CHANNEL_PUBLISH,
+    icon: d.AnnouncementsIcon,
+    onClick: () => (0, Y.Xl)(t, n),
+    disabled: e_
+  }, 'publish') : null,
+  r && (eu || P) ? (0, i.jsx)(W.s, {
+    label: $.Z.Messages.DELETE,
+    icon: d.TrashIcon,
+    onClick: e => (0, Y.$Z)(t, n, e),
     dangerous: !0,
-    separator: !Y
-  }) : null,
-  Y && r ? null : (0, i.jsx)(u.Popout, {
+    separator: !P
+  }, 'delete') : null,
+  P && r ? null : (0, i.jsx)(d.Popout, {
     renderPopout: e => {
       let {
         updatePosition: a,
-        closePopout: l
+        closePopout: s
       } = e;
-      return (0, i.jsx)(ee, {
+      return (0, i.jsx)(ei, {
         channel: t,
         message: n,
         canReport: o,
-        onClose: l,
+        onClose: s,
         updatePosition: a
       });
     },
-    shouldShow: J,
-    onRequestClose: eu,
+    shouldShow: q,
+    onRequestClose: eh,
     position: 'left',
     align: 'top',
-    animation: u.Popout.Animation.NONE,
-    children: (e, i) => {
+    animation: d.Popout.Animation.NONE,
+    children: (e, t) => {
       let {
-        onClick: a,
-        ...l
+        onClick: n,
+        ...a
       } = e, {
         isShown: s
-      } = i;
-      return et({
-        key: 'more',
-        label: Q.Z.Messages.MORE,
-        icon: u.MoreHorizontalIcon,
-        channel: t,
-        message: n,
+      } = t;
+      return (0, i.jsx)(W.s, {
+        label: $.Z.Messages.MORE,
+        icon: d.MoreHorizontalIcon,
         selected: s,
-        onClick: eu,
-        ...l
-      });
+        onClick: eh,
+        ...a
+      }, 'more');
     }
   })
 ]
   });
 }
 
-function ei(e) {
+function el(e) {
   let {
 channel: t,
 message: n
-  } = e, a = (0, c.e7)([C.Z], () => null != C.Z.getMessage(n.id), [n.id]), l = null == n.interaction || null != n.interactionData && (0, g.$s)(n.interactionData);
+  } = e, a = (0, c.e7)([I.Z], () => null != I.Z.getMessage(n.id), [n.id]), s = null == n.interaction || null != n.interactionData && (0, x.$s)(n.interactionData);
   return (0, i.jsxs)(i.Fragment, {
 children: [
-  !a && l && et({
-    key: 'retry',
-    label: Q.Z.Messages.RETRY,
-    icon: u.RetryIcon,
-    channel: t,
-    message: n,
-    onClick: W.mG
-  }),
-  et({
-    key: 'delete-usent',
-    label: Q.Z.Messages.DELETE,
-    icon: u.TrashIcon,
-    channel: t,
-    message: n,
-    onClick: W.$Z
-  })
+  !a && s && (0, i.jsx)(W.s, {
+    label: $.Z.Messages.RETRY,
+    icon: d.RetryIcon,
+    onClick: () => (0, Y.mG)(t, n)
+  }, 'retry'),
+  (0, i.jsx)(W.s, {
+    label: $.Z.Messages.DELETE,
+    icon: d.TrashIcon,
+    onClick: e => (0, Y.$Z)(t, n, e)
+  }, 'delete-usent')
 ]
   });
 }
 
-function ea(e, t, n) {
+function er(e) {
+  let {
+type: t,
+emoji: n,
+channel: i,
+message: a,
+location: s,
+isBurst: l = !1
+  } = e;
+  if (null == n)
+return;
+  let r = (0, v.g1)(n);
+  'add' === t ? (0, N.rU)(i.id, a.id, r, s, {
+burst: l
+  }) : (0, N.WO)({
+channelId: i.id,
+messageId: a.id,
+emoji: r,
+location: s,
+options: {
+  burst: l
+}
+  });
+}
+
+function eo(e, t, n) {
   let a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-l = {
+s = {
   openPopoutType: 'message_reaction_emoji_picker',
   ...a && {
     openPopoutType: 'message_super_reaction_emoji_picker',
-    page: null != e.getGuildId() ? q.ZY5.GUILD_CHANNEL : q.ZY5.DM_CHANNEL,
-    section: (0, T.s4)(e),
-    object: q.qAy.EMOJI_REACTION_PICKER_POPOUT
+    page: null != e.getGuildId() ? Q.ZY5.GUILD_CHANNEL : Q.ZY5.DM_CHANNEL,
+    section: (0, v.s4)(e),
+    object: Q.qAy.EMOJI_REACTION_PICKER_POPOUT
   }
 };
-  return (0, i.jsx)(v.$, {
+  return (0, i.jsx)(S.$, {
 channel: e,
 closePopout: n,
-onSelectEmoji: (i, a, l) => {
-  ! function(e, t, n) {
-    let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-    null != e && (0, x.rU)(t.id, n.id, (0, T.g1)(e), void 0, {
-      burst: i
-    });
-  }(i, e, t, l), a && (l ? o()(n, 150)() : n());
+onSelectEmoji: (i, a, s) => {
+  er({
+    type: 'add',
+    emoji: i,
+    channel: e,
+    message: t,
+    location: N.TW.MESSAGE_REACTION_PICKER,
+    isBurst: s
+  }), a && (s ? o()(n, 150)() : n());
 },
-analyticsOverride: l,
+analyticsOverride: s,
 messageId: t.id
   });
 }
@@ -544,7 +522,7 @@ t.Z = a.memo(function(e) {
 channel: t,
 message: n,
 isHeader: a
-  } = e, l = (0, c.e7)([L.Z], () => L.Z.isEditing(t.id, n.id), [
+  } = e, s = (0, c.e7)([P.Z], () => P.Z.isEditing(t.id, n.id), [
 t.id,
 n.id
   ]), r = function(e) {
@@ -552,7 +530,7 @@ let {
   channel: t,
   message: n
 } = e;
-return n.state === q.yb.SEND_FAILED ? (0, i.jsx)(ei, {
+return n.state === Q.yb.SEND_FAILED ? (0, i.jsx)(el, {
   channel: t,
   message: n
 }) : null;
@@ -560,21 +538,21 @@ return n.state === q.yb.SEND_FAILED ? (0, i.jsx)(ei, {
 let {
   message: t
 } = e;
-return t.state !== q.yb.SEND_FAILED ? (0, i.jsx)(en, {
+return t.state !== Q.yb.SEND_FAILED ? (0, i.jsx)(es, {
   ...e
 }) : null;
   }(e);
-  return l || null == r && null == o ? null : (0, i.jsx)('div', {
-className: s()(e.className, {
-  [J.container]: !0,
-  [J.isHeader]: a
+  return s || null == r && null == o ? null : (0, i.jsx)('div', {
+className: l()(e.className, {
+  [ee.container]: !0,
+  [ee.isHeader]: a
 }),
-onClick: $,
-onContextMenu: $,
+onClick: en,
+onContextMenu: en,
 role: 'group',
-'aria-label': Q.Z.Messages.MESSAGE_UTILITIES_A11Y_LABEL,
-children: (0, i.jsxs)(U.ZP, {
-  className: s()(e.innerClassName, J.inner),
+'aria-label': $.Z.Messages.MESSAGE_UTILITIES_A11Y_LABEL,
+children: (0, i.jsxs)(W.Z, {
+  className: e.innerClassName,
   children: [
     r,
     o

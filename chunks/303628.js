@@ -2,8 +2,8 @@ n(47120), n(653041);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(91192),
+  s = n.n(a),
+  o = n(91192),
   l = n(536895),
   u = n(442837),
   c = n(570140),
@@ -85,18 +85,18 @@ b.length,
 n
   ]), !y && 0 === C.length || y && 0 === b.length) ? null : (0, r.jsxs)(i.Fragment, {
 children: [
-  (0, r.jsx)(s.bG, {
+  (0, r.jsx)(o.bG, {
     navigator: R,
-    children: (0, r.jsx)(s.SJ, {
+    children: (0, r.jsx)(o.SJ, {
       children: e => {
         let {
           ref: i,
-          ...s
+          ...o
         } = e;
         return (0, r.jsx)('ul', {
           ref: i,
-          ...s,
-          className: o()(N.channelAttachmentArea, v.scrollbarGhost),
+          ...o,
+          className: s()(N.channelAttachmentArea, v.scrollbarGhost),
           children: y ? b.map(e => (0, r.jsx)(g.Z, {
             channelId: t,
             keyboardModeEnabled: a,

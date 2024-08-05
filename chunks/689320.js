@@ -9,7 +9,7 @@ writable: !0
 }
 n.d(t, {
   t: function() {
-return o;
+return s;
   }
 }), n(47120);
 let i = Symbol.iterator;
@@ -34,7 +34,7 @@ r(this, 'index', void 0), r(this, 'items', void 0), this.index = 0, this.items =
   }
 }
 
-function o() {
+function s() {
   for (var e = arguments.length, t = Array(e), n = 0; n < e; n++)
 t[n] = arguments[n];
   return new a(t);

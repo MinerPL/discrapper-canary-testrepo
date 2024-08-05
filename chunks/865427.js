@@ -30,19 +30,19 @@ return A;
 var r = n(973361),
   i = n(729594),
   a = n(544891),
-  o = n(358085),
-  s = n(591759),
+  s = n(358085),
+  o = n(591759),
   l = n(908442);
 n(981631);
 let u = void 0,
-  c = (0, o.isAndroid)() ? u.Version.split(' - ')[0] : (0, o.isIOS)() ? u.Version : void 0;
+  c = (0, s.isAndroid)() ? u.Version.split(' - ')[0] : (0, s.isIOS)() ? u.Version : void 0;
 
 function d(e) {
   return ''.concat(location.protocol, '//').concat(location.host).concat(e);
 }
 
 function _() {
-  let e = s.Z.safeParseWithQuery(d('/__development/build_overrides'));
+  let e = o.Z.safeParseWithQuery(d('/__development/build_overrides'));
   return null == e ? Promise.resolve(null) : (e.search = null, c && (e.query.version = c), a.tn.get({
 url: i.format(e),
 oldFormErrors: !0
@@ -55,7 +55,7 @@ return Promise.resolve(function(e) {
   let t = e.match(I);
   if (null == t || 2 !== t.length)
     return null;
-  let n = (0, o.getNativePlatform)(),
+  let n = (0, s.getNativePlatform)(),
     r = t[1];
   return {
     targetBuildOverride: {
@@ -68,7 +68,7 @@ return Promise.resolve(function(e) {
     expiresAt: 'Mon, 1 Jan 2038 00:00:00 GMT'
   };
 }(e));
-  let t = s.Z.safeParseWithQuery(e);
+  let t = o.Z.safeParseWithQuery(e);
   return null == t ? Promise.resolve(null) : (t.search = null, t.query.meta = 'true', c && (t.query.version = c), t.host = window.location.host, a.tn.get({
 url: i.format(t),
 oldFormErrors: !0
@@ -120,7 +120,7 @@ return {
   payload: null,
   url: e
 };
-  let t = s.Z.safeParseWithQuery(e);
+  let t = o.Z.safeParseWithQuery(e);
   if (null == t || !g.has(t.hostname) || !('s' in t.query) || !S.has(t.pathname))
 return null;
   for (let e in t.query)

@@ -1,5 +1,5 @@
-var r, i, a, o, s = n(392711),
-  l = n.n(s),
+var r, i, a, s, o = n(392711),
+  l = n.n(o),
   u = n(442837),
   c = n(570140),
   d = n(594174),
@@ -22,24 +22,24 @@ let E = _.QZA.CLOSED,
   y = null;
 
 function D(e) {
-  var t, n, r, i, a, o;
-  let s = d.default.getCurrentUser();
-  if (null == s)
+  var t, n, r, i, a, s;
+  let o = d.default.getCurrentUser();
+  if (null == o)
 return L();
   h = null !== (t = e.section) && void 0 !== t ? t : h, C = null !== (n = e.section) && void 0 !== n ? n : h, null != e.subsection && null != h && (p[h] = e.subsection), null != e.scrollPosition && null != h && (m[h] = e.scrollPosition), A = !!e.openWithoutBackstack, E = _.QZA.OPEN, I = {}, g = {
 ...T = {
   [_.oAB.ACCOUNT]: {
-    userId: s.id,
-    username: s.username,
-    discriminator: s.discriminator,
-    email: s.email,
-    avatar: s.avatar,
+    userId: o.id,
+    username: o.username,
+    discriminator: o.discriminator,
+    email: o.email,
+    avatar: o.avatar,
     password: '',
     newPassword: null,
-    claimed: s.isClaimed()
+    claimed: o.isClaimed()
   }
 }
-  }, v = null !== (r = e.onClose) && void 0 !== r ? r : null, O = null !== (i = e.analyticsLocation) && void 0 !== i ? i : null, R = null !== (a = e.analyticsLocations) && void 0 !== a ? a : [], y = null !== (o = e.impressionSource) && void 0 !== o ? o : null;
+  }, v = null !== (r = e.onClose) && void 0 !== r ? r : null, O = null !== (i = e.analyticsLocation) && void 0 !== i ? i : null, R = null !== (a = e.analyticsLocations) && void 0 !== a ? a : [], y = null !== (s = e.impressionSource) && void 0 !== s ? s : null;
 }
 
 function L() {
@@ -49,7 +49,7 @@ function L() {
 function b() {
   E = _.QZA.OPEN, I = {};
 }
-class M extends(o = u.ZP.Store) {
+class M extends(s = u.ZP.Store) {
   initialize() {
 this.waitFor(d.default);
   }

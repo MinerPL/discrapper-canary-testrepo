@@ -6,8 +6,8 @@ return h;
 var r = n(735250),
   i = n(470079),
   a = n(481060),
-  o = n(367907),
-  s = n(10718),
+  s = n(367907),
+  o = n(10718),
   l = n(69626),
   u = n(626135),
   c = n(659101),
@@ -25,12 +25,12 @@ guildId: p,
 onClick: m
   } = e, {
 commands: I
-  } = s.Qm(h, t, n), T = i.useMemo(() => null == I ? void 0 : I.filter(e => !0 !== e.nsfw), [I]), g = i.useCallback(e => {
+  } = o.Qm(h, t, n), T = i.useMemo(() => null == I ? void 0 : I.filter(e => !0 !== e.nsfw), [I]), g = i.useCallback(e => {
 null == m || m(), u.default.track(d.rMx.POPULAR_APPLICATION_COMMAND_CLICKED, {
   application_id: t,
   command_id: e,
   guild_id: p,
-  ...(0, o.JS)(h.id)
+  ...(0, s.JS)(h.id)
 });
   }, [
 t,

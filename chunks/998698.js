@@ -1,5 +1,5 @@
 n(47120);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(433355),
   c = n(944486),
@@ -29,8 +29,8 @@ channelId: n,
 command: r,
 section: i,
 initialValues: a,
-location: o,
-triggerSection: s,
+location: s,
+triggerSection: o,
 queryLength: l,
 sectionName: u,
 query: c,
@@ -51,8 +51,8 @@ m[e.name] = {
 };
   }), p.optionStates = m, null != r && (0, d.qJ)({
 command: r,
-location: o,
-triggerSection: s,
+location: s,
+triggerSection: o,
 queryLength: l,
 sectionName: u,
 query: c,
@@ -78,7 +78,7 @@ changedOptionStates: n
 ...r.optionStates
   };
   for (let [e, t] of Object.entries(n)) {
-var a, o, s;
+var a, s, o;
 if (!(e in r.optionStates))
   continue;
 if (!(void 0 !== t.hasValue ? t.hasValue : i[e].hasValue)) {
@@ -98,15 +98,15 @@ i[e] = {
   isActive: void 0 !== t.isActive ? t.isActive : n.isActive,
   lastValidationResult: void 0 !== t.lastValidationResult ? t.lastValidationResult : n.lastValidationResult,
   optionValue: null !== (a = t.optionValue) && void 0 !== a ? a : n.optionValue,
-  location: null !== (o = t.location) && void 0 !== o ? o : n.location,
-  length: null !== (s = t.length) && void 0 !== s ? s : n.length
+  location: null !== (s = t.location) && void 0 !== s ? s : n.location,
+  length: null !== (o = t.length) && void 0 !== o ? o : n.length
 }, void 0 !== t.isActive && (t.isActive ? (null != r.activeOptionName && r.activeOptionName !== e && (i[r.activeOptionName] = {
   ...i[r.activeOptionName]
 }, i[r.activeOptionName].isActive = !1), r.activeOptionName = e) : e === r.activeOptionName && (r.activeOptionName = null));
   }
   return r.optionStates = i, !0;
 }
-class I extends(r = s.ZP.Store) {
+class I extends(r = o.ZP.Store) {
   initialize() {
 u.ZP.addChangeListener(() => {
   let e = c.Z.getChannelId();
@@ -156,12 +156,12 @@ return {
 };
   }
 }
-o = 'ApplicationCommandStore', (a = 'displayName') in(i = I) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'ApplicationCommandStore', (a = 'displayName') in(i = I) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o;
+}) : i[a] = s;
 let T = new I(l.Z, {
   CONNECTION_OPEN: E,
   CHANNEL_SELECT: E,
@@ -176,8 +176,8 @@ let {
   command: r,
   section: i,
   location: a,
-  changedOptionStates: o
-} = e, s = h({
+  changedOptionStates: s
+} = e, o = h({
   type: 'APPLICATION_COMMAND_SET_ACTIVE_COMMAND',
   channelId: t,
   command: r,
@@ -190,9 +190,9 @@ let {
 }), u = m({
   type: 'APPLICATION_COMMAND_UPDATE_OPTIONS',
   channelId: t,
-  changedOptionStates: o
+  changedOptionStates: s
 });
-return s || l || u;
+return o || l || u;
   }
 });
 t.Z = T;

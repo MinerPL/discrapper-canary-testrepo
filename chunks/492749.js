@@ -9,8 +9,8 @@ var a, n, l = s(735250),
   r = s.n(i),
   c = s(442837),
   d = s(481060),
-  u = s(285952),
-  m = s(346656),
+  u = s(565138),
+  m = s(285952),
   C = s(273387),
   _ = s(16853),
   x = s(689938),
@@ -27,9 +27,9 @@ onClick: s
 className: E.clickableGuildRow,
 onClick: s,
 children: [
-  (0, l.jsx)(m.Z, {
+  (0, l.jsx)(u.Z, {
     guild: t,
-    size: m.Z.Sizes.MEDIUM,
+    size: u.Z.Sizes.MEDIUM,
     active: !0
   }),
   (0, l.jsx)(d.Text, {
@@ -54,9 +54,9 @@ guild: s
   return (0, l.jsxs)('div', {
 className: E.guildRow,
 children: [
-  (0, l.jsx)(m.Z, {
+  (0, l.jsx)(u.Z, {
     guild: s,
-    size: m.Z.Sizes.MEDIUM,
+    size: u.Z.Sizes.MEDIUM,
     active: !0
   }),
   (0, l.jsx)(d.Text, {
@@ -84,7 +84,7 @@ function h(e) {
   onGuildChosen: n,
   handleChooseCreate: i,
   directoryGuildName: c,
-  availableGuilds: m,
+  availableGuilds: u,
   addedGuilds: C,
   loading: _
 } = e,
@@ -92,7 +92,7 @@ function h(e) {
   return t = _ ? (0, l.jsx)('div', {
 className: E.emptyContainer,
 children: (0, l.jsx)(d.Spinner, {})
-  }) : 0 === L ? 0 === m.length ? (0, l.jsxs)('div', {
+  }) : 0 === L ? 0 === u.length ? (0, l.jsxs)('div', {
 className: E.emptyContainer,
 children: [
   (0, l.jsx)('img', {
@@ -107,7 +107,7 @@ children: [
     children: x.Z.Messages.HUB_CHOOSE_GUILD_EMPTY
   })
 ]
-  }) : m.map(e => (0, l.jsx)(f, {
+  }) : u.map(e => (0, l.jsx)(f, {
 guild: e,
 onClick: () => n(e)
   }, e.id)) : 0 === C.length ? (0, l.jsxs)('div', {
@@ -131,7 +131,7 @@ guild: e
   }, e.id)), (0, l.jsxs)(l.Fragment, {
 children: [
   (0, l.jsxs)(d.ModalHeader, {
-    direction: u.Z.Direction.VERTICAL,
+    direction: m.Z.Direction.VERTICAL,
     className: E.header,
     separator: !1,
     children: [

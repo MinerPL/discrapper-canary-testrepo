@@ -14,8 +14,8 @@ return function(t, n, r) {
   }(),
   i = n(470079),
   a = u(i),
-  o = u(n(844303)),
-  s = u(n(123763)),
+  s = u(n(844303)),
+  o = u(n(123763)),
   l = function(e) {
 if (e && e.__esModule)
   return e;
@@ -50,7 +50,7 @@ return n.handleChange = function(e) {
   t.addEventListener('mousemove', n.handleChange), t.addEventListener('mouseup', n.handleMouseUp);
 }, n.handleMouseUp = function() {
   n.unbindEventListeners();
-}, n.throttle = (0, s.default)(function(e, t, n) {
+}, n.throttle = (0, o.default)(function(e, t, n) {
   e(t, n);
 }, 50), n;
   }
@@ -94,9 +94,9 @@ e.prototype = Object.create(t && t.prototype, {
       n = t.color,
       r = t.white,
       i = t.black,
-      s = t.pointer,
+      o = t.pointer,
       l = t.circle,
-      u = (0, o.default)({
+      u = (0, s.default)({
         default: {
           color: {
             absolute: '0px 0px 0px 0px',
@@ -131,7 +131,7 @@ e.prototype = Object.create(t && t.prototype, {
           color: n,
           white: r,
           black: i,
-          pointer: s,
+          pointer: o,
           circle: l
         }
       }, {

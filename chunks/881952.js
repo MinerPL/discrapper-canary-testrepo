@@ -6,10 +6,10 @@ return a;
 return i;
   },
   d3: function() {
-return o;
+return s;
   },
   oP: function() {
-return s;
+return o;
   }
 });
 var r = n(246364);
@@ -22,10 +22,10 @@ function a(e) {
   return e === r.wB.SUBMITTED;
 }
 
-function o(e) {
+function s(e) {
   return e.applicationStatus === r.wB.APPROVED && null != e.lastSeen;
 }
 
-function s(e) {
+function o(e) {
   return i(e.applicationStatus) && null == e.lastSeen;
 }

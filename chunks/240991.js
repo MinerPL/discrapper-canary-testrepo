@@ -6,9 +6,9 @@ return _;
 var r = n(392711),
   i = n.n(r),
   a = n(31775),
-  o = n.n(a);
+  s = n.n(a);
 n(302454);
-var s = n(25209),
+var o = n(25209),
   l = n(691424),
   u = n(428595);
 n(454585);
@@ -19,11 +19,11 @@ let d = (0, c.Z)([
 enableBuildOverrides: !1
   })
 ]);
-new(o())({
+new(s())({
   max: 2000
 });
-let _ = s.w4(d);
-s.w4((0, c.Z)([
+let _ = o.w4(d);
+o.w4((0, c.Z)([
   i().omit(d, [
 'link',
 'url',

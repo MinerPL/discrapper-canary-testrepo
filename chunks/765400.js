@@ -3,13 +3,13 @@ t.d(A, {
 return o;
   }
 });
-var n = t(735250);
+var a = t(735250);
 t(470079);
-var a = t(481060),
+var n = t(481060),
   r = t(689938),
   s = t(553733);
-let o = () => (0, n.jsx)(a.TextBadge, {
-  color: a.tokens.unsafe_rawColors.YELLOW_300.css,
+let o = () => (0, a.jsx)(n.TextBadge, {
+  color: n.tokens.unsafe_rawColors.YELLOW_300.css,
   text: r.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_MANAGEMENT_DRAFT_LABEL,
   className: s.draftBadge
 });

@@ -5,8 +5,8 @@ return o;
 });
 var i = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(689938),
+var a = n(481060),
+  s = n(689938),
   r = n(448243),
   l = n(217110);
 
@@ -18,23 +18,23 @@ children: (0, i.jsxs)('div', {
   children: [
     (0, i.jsx)('img', {
       src: l,
-      alt: a.Z.Messages.CREATOR_MONETIZATION_NOTICE_ILLO_A11Y_LABEL
+      alt: s.Z.Messages.CREATOR_MONETIZATION_NOTICE_ILLO_A11Y_LABEL
     }),
-    (0, i.jsx)(s.Spacer, {
+    (0, i.jsx)(a.Spacer, {
       size: 12
     }),
-    (0, i.jsx)(s.Heading, {
+    (0, i.jsx)(a.Heading, {
       className: r.header,
       variant: 'heading-lg/semibold',
-      children: a.Z.Messages.CREATOR_MONETIZATION_DISABLED_NOTICE_TITLE
+      children: s.Z.Messages.CREATOR_MONETIZATION_DISABLED_NOTICE_TITLE
     }),
-    (0, i.jsx)(s.Spacer, {
+    (0, i.jsx)(a.Spacer, {
       size: 8
     }),
-    (0, i.jsx)(s.Text, {
+    (0, i.jsx)(a.Text, {
       color: 'header-secondary',
       variant: 'text-sm/normal',
-      children: a.Z.Messages.CREATOR_MONETIZATION_DISABLED_NOTICE_DESCRIPTION
+      children: s.Z.Messages.CREATOR_MONETIZATION_DISABLED_NOTICE_DESCRIPTION
     })
   ]
 })

@@ -6,8 +6,8 @@ function n(e, n, r) {
 var t, r;
 
 function i(t, r, i) {
-  var a, o, s;
-  return e.call(this, (a = t, o = r, s = i, 'string' == typeof n ? n : n(a, o, s))) || this;
+  var a, s, o;
+  return e.call(this, (a = t, s = r, o = i, 'string' == typeof n ? n : n(a, s, o))) || this;
 }
 return t = i, r = e, t.prototype = Object.create(r.prototype), t.prototype.constructor = t, t.__proto__ = r, i;
   }(r);
@@ -29,10 +29,10 @@ n('ERR_INVALID_OPT_VALUE', function(e, t) {
 _ = 'must not be', t = t.replace(/^not /, '');
   else
 _ = 'must be';
-  if (o = e, s = ' argument', (void 0 === l || l > o.length) && (l = o.length), o.substring(l - s.length, l) === s)
+  if (s = e, o = ' argument', (void 0 === l || l > s.length) && (l = s.length), s.substring(l - o.length, l) === o)
 E = 'The '.concat(e, ' ').concat(_, ' ').concat(r(t, 'type'));
   else {
-var i, a, o, s, l, u, c, d, _, E, f = (u = e, c = '.', 'number' != typeof d && (d = 0), d + 1 > u.length || -1 === u.indexOf(c, d)) ? 'argument' : 'property';
+var i, a, s, o, l, u, c, d, _, E, f = (u = e, c = '.', 'number' != typeof d && (d = 0), d + 1 > u.length || -1 === u.indexOf(c, d)) ? 'argument' : 'property';
 E = 'The "'.concat(e, '" ').concat(f, ' ').concat(_, ' ').concat(r(t, 'type'));
   }
   return E += '. Received type '.concat(typeof n);

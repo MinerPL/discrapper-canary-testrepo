@@ -23,6 +23,6 @@ e.exports = {
   channelName: 'channelName_cacc4c',
   channelNameByline: 'channelNameByline_cacc4c lighten_cacc4c',
   highlightsLink: 'highlightsLink_cacc4c',
-  guildName: 'guildName_cacc4c',
-  customNotificationSoundsDivider: 'customNotificationSoundsDivider_cacc4c'
+  customNotificationSoundsDivider: 'customNotificationSoundsDivider_cacc4c',
+  guildName: 'guildName_cacc4c'
 };

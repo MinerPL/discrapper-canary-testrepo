@@ -1,14 +1,14 @@
-var n = t(735250),
-  r = t(470079),
-  s = t(442837),
-  l = t(481060),
+var s = t(735250),
+  n = t(470079),
+  l = t(442837),
+  r = t(481060),
   o = t(873115),
-  i = t(618541),
-  c = t(975060),
-  u = t(912454),
+  i = t(219929),
+  c = t(618541),
+  u = t(975060),
   d = t(689938),
   E = t(373044);
-class _ extends r.PureComponent {
+class A extends n.PureComponent {
   componentDidMount() {
 null != this.props.venmoClient && o.by();
   }
@@ -20,31 +20,31 @@ let {
   venmoUsername: e,
   className: a,
   venmoClient: t
-} = this.props, r = null != e && '' !== e;
-return (0, n.jsxs)('div', {
+} = this.props, n = null != e && '' !== e;
+return (0, s.jsxs)('div', {
   className: a,
   children: [
-    (0, n.jsx)(u.ZP, {
-      type: u.ZP.Types.VENMO,
-      size: u.Uy.MEDIUM,
+    (0, s.jsx)(i.ZP, {
+      type: i.ZP.Types.VENMO,
+      size: i.Uy.MEDIUM,
       className: E.venmoIcon
     }),
-    r ? (0, n.jsxs)(n.Fragment, {
+    n ? (0, s.jsxs)(s.Fragment, {
       children: [
-        (0, n.jsx)(l.Heading, {
+        (0, s.jsx)(r.Heading, {
           variant: e.length < 25 ? 'heading-xl/bold' : 'heading-lg/bold',
           className: E.connectionInstructions,
           children: d.Z.Messages.PAYMENT_SOURCE_VENMO_CONNECTED_SUCCESS.format({
             venmoUsername: e
           })
         }),
-        (0, n.jsx)(l.Text, {
+        (0, s.jsx)(r.Text, {
           variant: 'text-md/medium',
           className: E.connectionInstructions,
           children: d.Z.Messages.PAYMENT_SOURCE_VENMO_CONNECTED_SUCCESS_INSTRUCTIONS
         })
       ]
-    }) : (0, n.jsx)(l.Text, {
+    }) : (0, s.jsx)(r.Text, {
       variant: 'text-md/medium',
       className: E.connectionInstructions,
       children: null == t ? d.Z.Messages.PAYMENT_SOURCE_VENMO_LOADING : d.Z.Messages.PAYMENT_SOURCE_VENMO_CONNECTION_INSTRUCTIONS
@@ -53,10 +53,10 @@ return (0, n.jsxs)('div', {
 });
   }
 }
-a.Z = s.ZP.connectStores([
-  i.Z,
-  c.Z
+a.Z = l.ZP.connectStores([
+  c.Z,
+  u.Z
 ], () => ({
-  venmoUsername: c.Z.venmoUsername,
-  venmoClient: i.Z.getVenmoClient()
-}))(_);
+  venmoUsername: u.Z.venmoUsername,
+  venmoClient: c.Z.getVenmoClient()
+}))(A);

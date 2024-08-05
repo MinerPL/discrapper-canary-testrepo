@@ -12,8 +12,8 @@ return E;
 var r = n(981631),
   i = n(689938),
   a = n(337258),
-  o = n(705196),
-  s = n(190878),
+  s = n(705196),
+  o = n(190878),
   l = n(991254),
   u = n(485686),
   c = n(400976),
@@ -21,12 +21,12 @@ var r = n(981631),
 let _ = () => ({
 [r.tNA.CHILLING]: {
   title: i.Z.Messages.STATUS_CHILLING,
-  icon: o,
+  icon: s,
   color: '#567C7E'
 },
 [r.tNA.GAMING]: {
   title: i.Z.Messages.STATUS_GAMING,
-  icon: s,
+  icon: o,
   color: '#685F8C'
 },
 [r.tNA.FOCUSING]: {

@@ -1,3 +1,3 @@
-e.exports = {
+t.exports = {
   classificationEvidenceContainer: 'classificationEvidenceContainer_e3b35e'
 };

@@ -33,22 +33,22 @@ var n = s(470079),
   C = s(977156),
   m = s(237292),
   A = s(314897),
-  h = s(283595),
-  g = s(663389),
+  g = s(283595),
+  h = s(663389),
   O = s(594174),
   p = s(202527),
   R = s(695346),
   x = s(620163),
   M = s(295545),
-  D = s(168308),
-  f = s(839469),
+  f = s(168308),
+  D = s(839469),
   P = s(726985),
   L = s(46140),
-  Z = s(689938);
+  b = s(689938);
 
-function b(e) {
+function Z(e) {
   let t = [{
-    header: Z.Z.Messages.USER_SETTINGS,
+    header: b.Z.Messages.USER_SETTINGS,
     settings: [
       P.s6.ACCOUNT,
       P.s6.GAMES,
@@ -63,7 +63,7 @@ function b(e) {
     ]
   },
   {
-    header: Z.Z.Messages.BILLING_SETTINGS,
+    header: b.Z.Messages.BILLING_SETTINGS,
     divider: !0,
     settings: [
       P.s6.PREMIUM,
@@ -74,7 +74,7 @@ function b(e) {
     ]
   },
   {
-    header: Z.Z.Messages.APP_SETTINGS,
+    header: b.Z.Messages.APP_SETTINGS,
     divider: !0,
     settings: [
       P.s6.APPEARANCE,
@@ -106,6 +106,7 @@ function b(e) {
       P.s6.DESIGN_SYSTEMS,
       P.s6.TEXT_PLAYGROUND,
       P.s6.TEXT_COMPONENTS,
+      P.s6.INTL_TESTING,
       P.s6.PROFILE_EFFECTS_PREVIEW_TOOL,
       P.s6.QUEST_PREVIEW_TOOL
     ]
@@ -123,7 +124,7 @@ function b(e) {
   }
 ],
 s = {
-  header: Z.Z.Messages.ACTIVITY_SETTINGS,
+  header: b.Z.Messages.ACTIVITY_SETTINGS,
   divider: !0,
   settings: [
     P.s6.ACTIVITY_PRIVACY,
@@ -138,11 +139,11 @@ function v() {
   var e, t;
   let s = (0, N.YO)().length,
 n = (0, S.U)(),
-r = (0, a.e7)([g.Z], () => g.Z.getProps().impressionSource),
-f = (0, T.gU)(),
-P = (0, D.bC)(),
-Z = (0, d.Go)(),
-[b] = (0, _.c)(Z ? [i.z.CLIPS_SETTINGS_BETA_TAG] : []),
+r = (0, a.e7)([h.Z], () => h.Z.getProps().impressionSource),
+D = (0, T.gU)(),
+P = (0, f.bC)(),
+b = (0, d.Go)(),
+[Z] = (0, _.c)(b ? [i.z.CLIPS_SETTINGS_BETA_TAG] : []),
 v = 'useGenerateUserSettingsSections';
   (0, o.j)({
 location: v + ' auto on',
@@ -169,7 +170,7 @@ enabled: Y
 location: 'UserSettingsInventory'
   }, {
 autoTrackExposure: !0
-  }), w = (0, a.e7)([h.Z], () => h.Z.hasLibraryApplication()), k = (0, a.e7)([A.default], () => A.default.hasTOTPEnabled()), {
+  }), w = (0, a.e7)([g.Z], () => g.Z.hasLibraryApplication()), k = (0, a.e7)([A.default], () => A.default.hasTOTPEnabled()), {
 canBroadcast: H
   } = c.Z.useExperiment({
 location: 'user_settings_activity_privacy'
@@ -180,9 +181,9 @@ autoTrackExposure: !0
 unseenGiftCount: s,
 showPrepaidPaymentPastDueWarning: n,
 impressionSource: r,
-numOfPendingFamilyRequests: f,
+numOfPendingFamilyRequests: D,
 isOverlaySupported: P,
-isClipsBetaTagShowing: b === i.z.CLIPS_SETTINGS_BETA_TAG,
+isClipsBetaTagShowing: Z === i.z.CLIPS_SETTINGS_BETA_TAG,
 shouldMergeGameSettings: j,
 isUserSettingsSearchEnabled: B,
 isKeywordFilteringEnabled: U,
@@ -202,7 +203,7 @@ developerMode: W
 function j(e) {
   let {
 searchResults: t
-  } = (0, f.E)(), s = v();
+  } = (0, D.E)(), s = v();
   if (!(0, M.eA)({
   location: 'settings'
 }))
@@ -301,7 +302,7 @@ function U() {
 } = p.b.useExperiment({
   location: 'settings'
 }),
-s = n.useMemo(() => b(t), [t]);
+s = n.useMemo(() => Z(t), [t]);
   return n.useMemo(() => B(s, e), [
 s,
 e
@@ -315,9 +316,9 @@ s = function() {
     shouldMergeGameSettings: e
   } = p.b.useExperiment({
     location: 'settings'
-  }), t = b(e);
+  }), t = Z(e);
   return n.useMemo(() => [{
-    header: Z.Z.Messages.SEARCH_RESULTS_SECTION_LABEL,
+    header: b.Z.Messages.SEARCH_RESULTS_SECTION_LABEL,
     settings: [
       ...t.map(e => {
         let {

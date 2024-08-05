@@ -1,24 +1,24 @@
 t.r(A), t.d(A, {
   IconVariant: function() {
-return n;
+return a;
   },
   default: function() {
 return d;
   }
 }), t(47120);
-var n, a, r = t(735250),
+var a, n, r = t(735250),
   s = t(470079),
   o = t(481060),
   l = t(689938),
   i = t(547102);
-(a = n || (n = {})).DANGER = 'danger', a.WARNING = 'warning';
+(n = a || (a = {})).DANGER = 'danger', n.WARNING = 'warning';
 
 function d(e) {
   let {
 transitionState: A,
 onClose: t,
-title: n,
-body: a,
+title: a,
+body: n,
 cta: d,
 closeLabel: c,
 onConfirm: u,
@@ -30,7 +30,7 @@ try {
 } finally {
   T(!1);
 }
-  }, h = null != n ? n : l.Z.Messages.GUILD_PRODUCT_SETTINGS_WARNING_MODAL_TITLE;
+  }, h = null != a ? a : l.Z.Messages.GUILD_PRODUCT_SETTINGS_WARNING_MODAL_TITLE;
   return (0, r.jsxs)(o.ModalRoot, {
 className: i.__invalid_container,
 size: o.ModalSize.DYNAMIC,
@@ -75,7 +75,7 @@ children: [
         variant: 'text-md/normal',
         color: 'text-muted',
         className: i.__invalid_body,
-        children: a
+        children: n
       })
     ]
   }),

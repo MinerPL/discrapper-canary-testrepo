@@ -42,8 +42,8 @@ return C;
 var r = n(544891),
   i = n(570140),
   a = n(812206),
-  o = n(594190),
-  s = n(703656),
+  s = n(594190),
+  o = n(703656),
   l = n(695346),
   u = n(391690),
   c = n(626135),
@@ -85,8 +85,8 @@ application: t,
 branchId: n,
 buildId: r,
 manifestIds: a,
-installationPath: o,
-analyticsLocation: s
+installationPath: s,
+analyticsLocation: o
   } = e;
   E.Z.setTargetManifest({
 applicationId: t.id,
@@ -95,17 +95,17 @@ applicationIcon: t.icon,
 branchId: n,
 buildId: r,
 manifestIds: a,
-installationPath: o
+installationPath: s
   }), i.Z.dispatch({
 type: 'DISPATCH_APPLICATION_INSTALL',
 applicationId: t.id,
 branchId: n,
-installationPath: o
+installationPath: s
   }), c.default.track(h.rMx.LIBRARY_INSTALL_INITIATED, {
 application_id: t.id,
 application_name: t.name,
 sku_id: t.primarySkuId,
-location: s
+location: o
   });
 }
 
@@ -127,7 +127,7 @@ location: n
 function S(e, t, n, r) {
   let a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
   ! function(e, t, n, r) {
-if (o.ZP.getRunningDiscordApplicationIds().includes(e.id))
+if (s.ZP.getRunningDiscordApplicationIds().includes(e.id))
   return;
 let i = u.Z.getInstallationPath(e.id, t);
 if (null == i)
@@ -214,7 +214,7 @@ t.showNotification(i.getIconURL(64), p.Z.Messages.GAME_LIBRARY_NOTIFICATION_GAME
 }), {
   notif_type: 'Game Library Game Installed'
 }, {
-  onClick: () => (0, s.uL)(h.Z5c.APPLICATION_LIBRARY),
+  onClick: () => (0, o.uL)(h.Z5c.APPLICATION_LIBRARY),
   omitViewTracking: !0
 });
   }));

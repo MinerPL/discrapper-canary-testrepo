@@ -13,8 +13,8 @@ return E;
   }
 });
 var i = n(392711),
-  s = n.n(i),
-  a = n(570140),
+  a = n.n(i),
+  s = n(570140),
   r = n(317381),
   l = n(594174),
   o = n(823379),
@@ -37,10 +37,10 @@ participants: Array.from(e.userIds, e => {
   let i = l.default.getUser(e);
   if (null == i)
     return;
-  let s = (0, c.y)(t, n, i);
+  let a = (0, c.y)(t, n, i);
   return {
     ...(0, d.Z)(i),
-    nickname: null != s ? s : void 0
+    nickname: null != a ? a : void 0
   };
 }).filter(o.lm)
   };
@@ -55,7 +55,7 @@ handler: () => e => {
     prevState: t,
     dispatch: n
   } = e, i = _();
-  return !s().isEqual(i, t) && n(i), i;
+  return !a().isEqual(i, t) && n(i), i;
 }
   };
 
@@ -64,5 +64,5 @@ function I(e) {
 n = () => {
   e(_());
 };
-  return a.Z.subscribe(t, n), () => a.Z.unsubscribe(t, n);
+  return s.Z.subscribe(t, n), () => s.Z.unsubscribe(t, n);
 }

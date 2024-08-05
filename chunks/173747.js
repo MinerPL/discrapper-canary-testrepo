@@ -1,6 +1,6 @@
 n(47120), n(653041);
-var r, i, a, o, s = n(392711),
-  l = n.n(s),
+var r, i, a, s, o = n(392711),
+  l = n.n(o),
   u = n(442837),
   c = n(846519),
   d = n(570140),
@@ -79,12 +79,12 @@ return !O.hasOwnProperty(e);
 return O[e];
   }
 }
-o = 'ApplicationBuildStore', (a = 'displayName') in(i = x) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'ApplicationBuildStore', (a = 'displayName') in(i = x) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new x(d.Z, {
+}) : i[a] = s, t.Z = new x(d.Z, {
   CONNECTION_OPEN: function() {
 return M(D), P();
   },
@@ -119,9 +119,9 @@ let a = i.manifests.map(e => {
     } = e;
     return t;
   }),
-  o = i.id;
+  s = i.id;
 v.delete(n), N[n] = {
-  id: o,
+  id: s,
   applicationId: t,
   branchId: n,
   locale: r,

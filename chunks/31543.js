@@ -1,8 +1,8 @@
 var r = n(735250),
   i = n(470079),
   a = n(143927),
-  o = n(260866),
-  s = n(461745),
+  s = n(260866),
+  o = n(461745),
   l = n(806966),
   u = n(28546),
   c = n(453070),
@@ -38,12 +38,12 @@ if (T) {
 }
   }, [T]), (0, r.jsx)('div', {
 className: E.wrapper,
-children: (0, r.jsx)(s.ZP, {
+children: (0, r.jsx)(o.ZP, {
   autoFocus: p,
   disabled: !p,
   query: I,
   ref: m,
-  size: s.ZP.Sizes.MEDIUM,
+  size: o.ZP.Sizes.MEDIUM,
   placeholder: null != g ? g : p ? _.Z.Messages.SEARCH_FOR_STICKERS : _.Z.Messages.NO_STICKERS_TO_SEARCH_THROUGH,
   onClear: N,
   onKeyDown: n,
@@ -55,7 +55,7 @@ children: (0, r.jsx)(s.ZP, {
     'aria-haspopup': 'grid',
     'aria-controls': d.Vr,
     'aria-expanded': !0,
-    'aria-activedescendant': (0, o.NE)(d.Vr, S.columnIndex, S.rowIndex)
+    'aria-activedescendant': (0, s.NE)(d.Vr, S.columnIndex, S.rowIndex)
   }
 })
   });

@@ -1,6 +1,6 @@
 n.d(t, {
   f6: function() {
-return s;
+return o;
   }
 }), n(411104);
 var r = n(470079),
@@ -22,9 +22,9 @@ return this;
 return !1;
   }
 }
-let o = r.createContext(new a()),
+let s = r.createContext(new a()),
   {
-Provider: s,
+Provider: o,
 Consumer: l
-  } = o;
-t.ZP = o;
+  } = s;
+t.ZP = s;

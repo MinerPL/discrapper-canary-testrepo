@@ -1,8 +1,8 @@
 var r = n(470079),
   i = n(844303),
   a = n(230866),
-  o = n(827622),
-  s = Object.assign || function(e) {
+  s = n(827622),
+  o = Object.assign || function(e) {
 for (var t = 1; t < arguments.length; t++) {
   var n = arguments[t];
   for (var r in n)
@@ -33,9 +33,9 @@ var c = function(e) {
   if (!(e instanceof t))
     throw TypeError('Cannot call a class as a function');
 }(this, t);
-for (var e, n, r, i = arguments.length, o = Array(i), s = 0; s < i; s++)
-  o[s] = arguments[s];
-return n = r = u(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o))), r.handleChange = function(e) {
+for (var e, n, r, i = arguments.length, s = Array(i), o = 0; o < i; o++)
+  s[o] = arguments[o];
+return n = r = u(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(s))), r.handleChange = function(e) {
   var t = a.T(e, r.props.hsl, r.props.direction, r.props.a, r.container);
   t && 'function' == typeof r.props.onChange && r.props.onChange(t, e);
 }, r.handleMouseDown = function(e) {
@@ -113,7 +113,7 @@ e.prototype = Object.create(t && t.prototype, {
             top: 100 * t.a + '%'
           }
         },
-        overwrite: s({}, this.props.style)
+        overwrite: o({}, this.props.style)
       }, {
         vertical: 'vertical' === this.props.direction,
         overwrite: !0
@@ -122,7 +122,7 @@ e.prototype = Object.create(t && t.prototype, {
       style: n.alpha
     }, r.createElement('div', {
       style: n.checkboard
-    }, r.createElement(o.Z, {
+    }, r.createElement(s.Z, {
       renderers: this.props.renderers
     })), r.createElement('div', {
       style: n.gradient

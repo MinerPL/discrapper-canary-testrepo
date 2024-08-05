@@ -6,15 +6,15 @@ return r;
 var i = n(735250);
 n(470079);
 var a = n(481060),
-  l = n(871499),
-  s = n(689938);
+  s = n(871499),
+  l = n(689938);
 
 function r(e) {
   let {
 ...t
   } = e;
-  return (0, i.jsx)(l.Z, {
-label: s.Z.Messages.MORE,
+  return (0, i.jsx)(s.Z, {
+label: l.Z.Messages.MORE,
 iconComponent: a.MoreHorizontalIcon,
 tooltipPosition: 'bottom',
 ...t

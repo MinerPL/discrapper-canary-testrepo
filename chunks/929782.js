@@ -13,8 +13,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(570140),
-  o = n(710845),
-  s = n(131951),
+  s = n(710845),
+  o = n(131951),
   l = n(556296),
   u = n(451478),
   c = n(626135),
@@ -22,7 +22,7 @@ var i = n(481060),
   _ = n(981631),
   E = n(761274),
   f = n(689938);
-let h = new o.Z('AudioActionCreators');
+let h = new s.Z('AudioActionCreators');
 
 function p() {
   (0, i.openModalLazy)(async () => {
@@ -37,7 +37,7 @@ return t => (0, r.jsx)(e, {
 }
 
 function m() {
-  return !s.Z.isSupported() && ((0, i.openModal)(e => (0, r.jsx)(i.ConfirmModal, {
+  return !o.Z.isSupported() && ((0, i.openModal)(e => (0, r.jsx)(i.ConfirmModal, {
 header: f.Z.Messages.UNSUPPORTED_BROWSER,
 confirmText: f.Z.Messages.DOWNLOAD_APP,
 cancelText: f.Z.Messages.CANCEL,
@@ -62,7 +62,7 @@ function T() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
   return m() ? Promise.resolve(!1) : (c.default.track(_.rMx.PERMISSIONS_REQUESTED, {
 type: 'audio'
-  }), s.Z.getMediaEngine().enable().then(() => {
+  }), o.Z.getMediaEngine().enable().then(() => {
 a.Z.dispatch({
   type: 'MEDIA_ENGINE_SET_AUDIO_ENABLED',
   enabled: !0,
@@ -90,7 +90,7 @@ function g(e) {
 usedKeybind: t = !1
   } = e, n = l.Z.getKeybindForAction(_.kg4.TOGGLE_MUTE, !1, !0);
   c.default.track(_.rMx.INPUT_MUTE_TOGGLED, {
-enabled: !s.Z.isSelfMute(),
+enabled: !o.Z.isSelfMute(),
 custom_keybind_assigned: null != n && n.id !== l.E.id,
 used_keybind: t,
 app_in_focus: u.Z.isFocused(),

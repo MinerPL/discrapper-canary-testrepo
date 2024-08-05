@@ -5,9 +5,9 @@ return O;
   }
 }), n(47120);
 var a = n(735250),
-  r = n(470079),
-  s = n(120356),
-  i = n.n(s),
+  s = n(470079),
+  r = n(120356),
+  i = n.n(r),
   c = n(481060),
   u = n(447543),
   _ = n(881052),
@@ -16,8 +16,8 @@ var a = n(735250),
   E = n(153124),
   N = n(782605),
   m = n(981631),
-  p = n(689938),
-  T = n(19379),
+  T = n(689938),
+  p = n(19379),
   f = n(216019),
   S = n(286359);
 let C = 'hTKzmak',
@@ -33,7 +33,7 @@ let {
   onClick: t
 } = e;
 return (0, a.jsxs)(c.Clickable, {
-  className: T.rowContainer,
+  className: p.rowContainer,
   onClick: () => {
     t(), (0, d.uL)(m.Z5c.GUILD_DISCOVERY);
   },
@@ -41,26 +41,26 @@ return (0, a.jsxs)(c.Clickable, {
     (0, a.jsx)('img', {
       width: 40,
       height: 40,
-      className: T.rowIcon,
+      className: p.rowIcon,
       alt: '',
       src: S
     }),
     (0, a.jsxs)('div', {
       children: [
         (0, a.jsx)(c.Heading, {
-          className: T.rowText,
+          className: p.rowText,
           variant: 'heading-md/semibold',
-          children: p.Z.Messages.DISCOVERY_UPSELL_HEADER
+          children: T.Z.Messages.DISCOVERY_UPSELL_HEADER
         }),
         (0, a.jsx)(c.Text, {
-          className: T.rowText,
+          className: p.rowText,
           variant: 'text-xs/normal',
-          children: p.Z.Messages.DISCOVERY_UPSELL_DESCRIPTION
+          children: T.Z.Messages.DISCOVERY_UPSELL_DESCRIPTION
         })
       ]
     }),
     (0, a.jsx)('img', {
-      className: T.rowArrow,
+      className: p.rowArrow,
       alt: '',
       src: f
     })
@@ -73,8 +73,8 @@ function O(e) {
 onBack: t,
 onClose: n,
 isSlideReady: o
-  } = e, [l, s] = r.useState(''), [d, E] = r.useState(!1), [m, f] = r.useState(null), S = r.useRef(null);
-  r.useEffect(() => {
+  } = e, [l, r] = s.useState(''), [d, E] = s.useState(!1), [m, f] = s.useState(null), S = s.useRef(null);
+  s.useEffect(() => {
 var e;
 o && (null === (e = S.current) || void 0 === e || e.focus());
   }, [o]);
@@ -82,7 +82,7 @@ o && (null === (e = S.current) || void 0 === e || e.focus());
 e.preventDefault();
 let t = l.trim();
 if ('' === t) {
-  f(p.Z.Messages.INVALID_INVITE_LINK_ERROR);
+  f(T.Z.Messages.INVALID_INVITE_LINK_ERROR);
   return;
 }
 f(null), E(!0);
@@ -95,7 +95,7 @@ u.Z.resolveInvite(a, 'Join Guild', {
     invite: t
   } = e;
   if (E(!1), null == t) {
-    f(p.Z.Messages.INSTANT_INVITE_EXPIRED);
+    f(T.Z.Messages.INSTANT_INVITE_EXPIRED);
     return;
   }
   if (null != t.channel) {
@@ -107,7 +107,7 @@ u.Z.resolveInvite(a, 'Join Guild', {
         n(), u.Z.transitionToInvite(e);
       }
     }).then(() => {}, e => {
-      e instanceof _.yZ || e instanceof _.Hx ? f((0, N.O)(e.code)) : f(p.Z.Messages.INVITE_MODAL_ERROR_DEFAULT);
+      e instanceof _.yZ || e instanceof _.Hx ? f((0, N.O)(e.code)) : f(T.Z.Messages.INVITE_MODAL_ERROR_DEFAULT);
     });
   }
 }, e => {
@@ -119,48 +119,48 @@ u.Z.resolveInvite(a, 'Join Guild', {
   return (0, a.jsxs)('div', {
 children: [
   (0, a.jsxs)(c.ModalHeader, {
-    className: T.header,
+    className: p.header,
     direction: I.Z.Direction.VERTICAL,
     separator: !1,
     children: [
       (0, a.jsx)(c.Heading, {
-        className: T.title,
+        className: p.title,
         variant: 'heading-xl/semibold',
-        children: p.Z.Messages.JOIN_SERVER_TITLE
+        children: T.Z.Messages.JOIN_SERVER_TITLE
       }),
       (0, a.jsx)(c.Text, {
         color: 'header-secondary',
         variant: 'text-sm/normal',
-        children: p.Z.Messages.JOIN_SERVER_DESCRIPTION_NUF
+        children: T.Z.Messages.JOIN_SERVER_DESCRIPTION_NUF
       }),
       (0, a.jsx)(c.ModalCloseButton, {
-        className: T.closeButton,
+        className: p.closeButton,
         onClick: n
       })
     ]
   }),
   (0, a.jsxs)(c.ModalContent, {
-    className: T.__invalid_content,
+    className: p.__invalid_content,
     children: [
       (0, a.jsx)('form', {
         onSubmit: O,
-        className: T.inputForm,
+        className: p.inputForm,
         children: (0, a.jsxs)(c.FormItem, {
           children: [
             (0, a.jsx)(c.FormTitle, {
               id: L,
               error: m,
-              className: i()(T.formTitle, {
-                [T.error]: null != m
+              className: i()(p.formTitle, {
+                [p.error]: null != m
               }),
               required: !0,
-              children: p.Z.Messages.FORM_LABEL_INVITE_LINK
+              children: T.Z.Messages.FORM_LABEL_INVITE_LINK
             }),
             (0, a.jsx)(c.TextInput, {
               value: l,
-              onChange: s,
-              className: T.input,
-              inputClassName: T.inputInner,
+              onChange: r,
+              className: p.input,
+              inputClassName: p.inputInner,
               placeholder: ''.concat(A).concat(C),
               inputRef: S,
               required: !0,
@@ -170,12 +170,12 @@ children: [
         })
       }),
       (0, a.jsx)(c.FormItem, {
-        title: p.Z.Messages.JOIN_SERVER_INVITE_EXAMPLES_HEADER,
-        titleClassName: T.formTitle,
-        className: T.examplesForm,
+        title: T.Z.Messages.JOIN_SERVER_INVITE_EXAMPLES_HEADER,
+        titleClassName: p.formTitle,
+        className: p.examplesForm,
         children: D.map(e => (0, a.jsx)(c.Clickable, {
-          className: T.sampleLink,
-          onClick: () => s(e),
+          className: p.sampleLink,
+          onClick: () => r(e),
           children: e
         }, e))
       }),
@@ -185,20 +185,20 @@ children: [
     ]
   }),
   (0, a.jsxs)(c.ModalFooter, {
-    className: T.footer,
+    className: p.footer,
     children: [
       (0, a.jsx)(c.Button, {
         color: c.Button.Colors.BRAND,
         submitting: d,
         onClick: O,
-        children: p.Z.Messages.NUF_JOIN_SERVER_BUTTON
+        children: T.Z.Messages.NUF_JOIN_SERVER_BUTTON
       }),
       (0, a.jsx)(c.Button, {
         color: c.Button.Colors.PRIMARY,
         look: c.Button.Looks.LINK,
         size: c.Button.Sizes.MIN,
         onClick: t,
-        children: p.Z.Messages.BACK
+        children: T.Z.Messages.BACK
       })
     ]
   })

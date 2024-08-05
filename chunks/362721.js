@@ -9,16 +9,16 @@ return c;
 var r = n(442837),
   i = n(496675),
   a = n(700785),
-  o = n(231338);
-let s = [
-o.Pl.SET_VOICE_CHANNEL_STATUS,
-o.Pl.CONNECT,
-o.Pl.VIEW_CHANNEL
+  s = n(231338);
+let o = [
+s.Pl.SET_VOICE_CHANNEL_STATUS,
+s.Pl.CONNECT,
+s.Pl.VIEW_CHANNEL
   ],
-  l = [o.Pl.SET_VOICE_CHANNEL_STATUS];
+  l = [s.Pl.SET_VOICE_CHANNEL_STATUS];
 
 function u(e, t, n, r) {
-  return (n ? l : s).every(n => null == r ? t.can(n, e) : a.BT({
+  return (n ? l : o).every(n => null == r ? t.can(n, e) : a.BT({
 permission: n,
 user: r,
 context: e

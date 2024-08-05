@@ -11,7 +11,7 @@ var l = t(470079),
   i = t(304809),
   s = t(586826),
   r = t(943351);
-let u = new Worker(new URL(t.p + t.u('14315'), t.b)),
+let u = new Worker(new URL('/assets/' + t.u('14315'), t.b)),
   o = (0, i.N)();
 async function c(e) {
   let n = await e.arrayBuffer();

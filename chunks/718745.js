@@ -1,4 +1,4 @@
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(981631);
 let c = {},
@@ -6,7 +6,7 @@ let c = {},
 integration: '',
 query: ''
   };
-class _ extends(o = s.ZP.Store) {
+class _ extends(s = o.ZP.Store) {
   getResults(e, t) {
 if (null == e || null == t)
   return null;

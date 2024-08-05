@@ -6,18 +6,18 @@ return u;
 var r = n(626135),
   i = n(823967),
   a = n(281058),
-  o = n(761274),
-  s = n(981631),
+  s = n(761274),
+  o = n(981631),
   l = n(689938);
 class u {
   async requestAuthorization(e, t, n) {
 if ('function' != typeof t)
   throw Error('requestAuthorization: Was provided with not a function for '.concat(e, '.'));
-r.default.track(s.rMx.PERMISSIONS_REQUESTED, {
+r.default.track(o.rMx.PERMISSIONS_REQUESTED, {
   type: e
 });
-let a = await t() === o.NZ.AUTHORIZED,
-  l = a ? o.PQ.ACCEPTED : o.PQ.DENIED;
+let a = await t() === s.NZ.AUTHORIZED,
+  l = a ? s.PQ.ACCEPTED : s.PQ.DENIED;
 return i.Z.setPermission(e, l), !a && n.showAuthorizationError && this.showAlert(e), a;
   }
   requestPermission(e, t) {
@@ -30,11 +30,11 @@ return this.hasPermissionCore(e, n);
   }
   showAlert(e) {
 let t = {
-  [o.Eu.CAMERA]: ''.concat(l.Z.Messages.NO_CAMERA_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS),
-  [o.Eu.AUDIO]: ''.concat(l.Z.Messages.NO_MICRPHONE_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS),
-  [o.Eu.PHOTOS]: ''.concat(l.Z.Messages.NO_PHOTOS_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS),
-  [o.Eu.INPUT_MONITORING]: ''.concat(l.Z.Messages.NO_INPUT_MONITORING_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS),
-  [o.Eu.CONTACTS]: ''.concat(l.Z.Messages.NO_CONTACTS_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS)
+  [s.Eu.CAMERA]: ''.concat(l.Z.Messages.NO_CAMERA_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS),
+  [s.Eu.AUDIO]: ''.concat(l.Z.Messages.NO_MICRPHONE_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS),
+  [s.Eu.PHOTOS]: ''.concat(l.Z.Messages.NO_PHOTOS_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS),
+  [s.Eu.INPUT_MONITORING]: ''.concat(l.Z.Messages.NO_INPUT_MONITORING_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS),
+  [s.Eu.CONTACTS]: ''.concat(l.Z.Messages.NO_CONTACTS_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS)
 } [e];
 if (null != t)
   this.openAlertModal({

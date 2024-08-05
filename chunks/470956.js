@@ -3,13 +3,13 @@ t.d(n, {
 return g;
   },
   Eu: function() {
-return I;
-  },
-  Yp: function() {
 return N;
   },
-  bt: function() {
+  Yp: function() {
 return h;
+  },
+  bt: function() {
+return S;
   }
 }), t(47120), t(653041);
 var r = t(470079),
@@ -22,18 +22,18 @@ var r = t(470079),
   s = t(314897),
   d = t(878884),
   f = t(19780),
-  C = t(979651),
-  Z = t(413402);
+  Z = t(979651),
+  C = t(413402);
 let E = new l.Y('RTCConnectionDesyncHooks');
 
 function g(e, n) {
-  let t = (0, Z.M)(),
+  let t = (0, C.M)(),
 l = (0, c.e7)([
   d.Z,
   f.Z
 ], () => t && e === f.Z.getChannelId() ? d.Z.getDesyncedVoiceStates() : null);
   return r.useMemo(() => function(e, n) {
-if (!(0, Z.i)() || null == e || 0 === e.length)
+if (!(0, C.i)() || null == e || 0 === e.length)
   return n;
 let t = [],
   r = new Set();
@@ -55,16 +55,16 @@ n
   ]);
 }
 
-function h(e, n) {
+function S(e, n) {
   let t = function(e) {
-let n = (0, Z.M)();
+let n = (0, C.M)();
 return (0, c.e7)([
   d.Z,
   f.Z
 ], () => n && e === f.Z.getChannelId() ? d.Z.getDesyncedParticipants() : null);
   }(e);
   return r.useMemo(() => function(e, n) {
-if (!(0, Z.i)() || null == e || 0 === e.length)
+if (!(0, C.i)() || null == e || 0 === e.length)
   return n;
 let t = [...n];
 return e.forEach(e => {
@@ -76,8 +76,8 @@ n
   ]);
 }
 
-function N(e, n) {
-  let t = (0, Z.M)(),
+function h(e, n) {
+  let t = (0, C.M)(),
 u = (0, c.e7)([
   d.Z,
   f.Z
@@ -91,8 +91,8 @@ n
   ]);
 }
 
-function I(e, n) {
-  let t = (0, Z.M)(),
+function N(e, n) {
+  let t = (0, C.M)(),
 u = (0, c.e7)([s.default], () => s.default.getId() === n),
 l = (0, c.e7)([f.Z], () => f.Z.getChannelId()),
 i = r.useRef(null),
@@ -100,12 +100,12 @@ i = r.useRef(null),
 [d, E] = r.useState(!1),
 g = (0, c.e7)([
   f.Z,
-  C.Z
-], () => null != n && null != e && f.Z.getChannelId() === e && null != C.Z.isInChannel(e, n) && f.Z.isUserConnected(n)),
-h = (0, c.e7)([
+  Z.Z
+], () => null != n && null != e && f.Z.getChannelId() === e && null != Z.Z.isInChannel(e, n) && f.Z.isUserConnected(n)),
+S = (0, c.e7)([
   f.Z,
-  C.Z
-], () => null != n && null != e && f.Z.getChannelId() === e && null != C.Z.isInChannel(e, n) && !f.Z.isUserConnected(n));
+  Z.Z
+], () => null != n && null != e && f.Z.getChannelId() === e && null != Z.Z.isInChannel(e, n) && !f.Z.isUserConnected(n));
   return r.useEffect(() => {
 g && E(!0);
   }, [g]), r.useEffect(() => {
@@ -113,9 +113,9 @@ l !== e && E(!1);
   }, [
 e,
 l
-  ]), r.useEffect(() => (h && null == i.current ? i.current = setTimeout(() => {
+  ]), r.useEffect(() => (S && null == i.current ? i.current = setTimeout(() => {
 i.current = null, o(!0);
   }, 250) : (clearTimeout(i.current), i.current = null, o(!1)), () => {
 clearTimeout(i.current), i.current = null;
-  }), [h]), t && !u && d && a;
+  }), [S]), t && !u && d && a;
 }

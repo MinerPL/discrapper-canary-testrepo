@@ -1,12 +1,12 @@
 n.d(t, {
   V: function() {
-return o;
+return s;
   }
 });
 var r = n(544891),
   i = n(570140),
   a = n(981631);
-async function o() {
+async function s() {
   i.Z.dispatch({
 type: 'USER_TENURE_REWARD_SYNC_START'
   });

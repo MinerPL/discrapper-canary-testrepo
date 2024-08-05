@@ -29,8 +29,8 @@ onThemeColorsChange: r,
 preventDisabled: C,
 guildId: m,
 className: A,
-showPremiumIcon: h = !0,
-showResetThemeButton: g = !1,
+showPremiumIcon: g = !0,
+showResetThemeButton: h = !1,
 forcedDivider: O
   } = e, p = (0, _.ZP)(t.id, m), {
 primaryColor: R,
@@ -40,7 +40,7 @@ user: t,
 displayProfile: p,
 pendingThemeColors: a,
 isPreview: !0
-  }), M = u.ZP.canUsePremiumProfileCustomization(t), D = null != s ? s : t.getAvatarURL(m, 80), f = (0, c.useToken)(l.Z.unsafe_rawColors.PRIMARY_530).hex(), P = (0, d.Cf)(D, f, !1);
+  }), M = u.ZP.canUsePremiumProfileCustomization(t), f = null != s ? s : t.getAvatarURL(m, 80), D = (0, c.useToken)(l.Z.unsafe_rawColors.PRIMARY_530).hex(), P = (0, d.Cf)(f, D, !1);
   if (null == R || null == x)
 return null;
   let L = e => {
@@ -50,7 +50,7 @@ r(o()(e, null == p ? void 0 : p.themeColors) ? void 0 : e);
 title: S.Z.Messages.USER_SETTINGS_PROFILE_THEME,
 disabled: !M && !C,
 className: i()(N.__invalid_profileThemesSection, A),
-showPremiumIcon: h,
+showPremiumIcon: g,
 forcedDivider: O,
 children: (0, n.jsxs)('div', {
   className: N.sectionContainer,
@@ -93,7 +93,7 @@ children: (0, n.jsxs)('div', {
         })
       })
     }),
-    g && null != m && (0, n.jsx)(c.Button, {
+    h && null != m && (0, n.jsx)(c.Button, {
       className: N.resetButton,
       color: c.Button.Colors.PRIMARY,
       look: c.Button.Looks.LINK,

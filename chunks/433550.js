@@ -32,8 +32,8 @@ var t = n(735250),
   T = n(257436);
 let k = (0, E.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSIONS),
   v = (0, E.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_PADDING),
-  R = (0, E.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_MARGIN),
-  j = k + 2 * v,
+  j = (0, E.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_MARGIN),
+  R = k + 2 * v,
   M = a()(N.pF, 250),
   b = () => {
 M.cancel();
@@ -58,8 +58,8 @@ let {
   gutterWidth: _
 } = (0, S.el)({
   stickersCategories: c,
-  stickerNodeMargin: R,
-  stickerNodeWidth: j,
+  stickerNodeMargin: j,
+  stickerNodeWidth: R,
   listWidth: n
 });
 return (0, t.jsxs)('div', {

@@ -1,34 +1,34 @@
-r.d(t, {
+t.d(r, {
   Z: function() {
 return m;
   }
-}), r(47120);
-var a = r(735250),
-  n = r(470079),
-  i = r(120356),
-  o = r.n(i),
-  l = r(442837),
-  c = r(481060),
-  s = r(98357),
-  d = r(432877),
-  u = r(788548),
-  h = r(979756);
+}), t(47120);
+var a = t(735250),
+  n = t(470079),
+  i = t(120356),
+  o = t.n(i),
+  l = t(442837),
+  c = t(481060),
+  s = t(98357),
+  d = t(432877),
+  u = t(788548),
+  h = t(979756);
 
 function m(e) {
   let {
-devSettingsCategory: t
-  } = e, r = (0, l.e7)([d.ZP], () => d.ZP.allByCategory(t), [t], l.pF), i = n.useMemo(() => r.map(e => {
-let [t, r, {
+devSettingsCategory: r
+  } = e, t = (0, l.e7)([d.ZP], () => d.ZP.allByCategory(r), [r], l.pF), i = n.useMemo(() => t.map(e => {
+let [r, t, {
   label: n
 }] = e;
 return (0, a.jsx)(c.FormSwitch, {
-  value: r,
-  onChange: e => (0, s.Z)(t, e),
+  value: t,
+  onChange: e => (0, s.Z)(r, e),
   hideBorder: !0,
   className: u.switch,
   children: n
-}, t);
-  }), [r]);
+}, r);
+  }), [t]);
   return (0, a.jsx)('div', {
 className: o()(h.panel, u.panel),
 children: i

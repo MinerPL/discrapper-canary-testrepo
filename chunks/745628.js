@@ -13,13 +13,13 @@ n.Z = e => {
   let {
 guildId: u,
 handleUpdate: m,
-progress: f,
+progress: _,
 errors: C
   } = e, {
-wildcardDescriptors: _,
+wildcardDescriptors: f,
 description: h
-  } = f, x = (e, n) => {
-let t = [..._];
+  } = _, x = (e, n) => {
+let t = [...f];
 t[n] = e, m({
   wildcardDescriptors: t
 });
@@ -88,21 +88,21 @@ children: [
             children: [
               (0, a.jsx)(s.TextInput, {
                 inputClassName: i()(d.input, d.wildcardInput),
-                value: null !== (n = _[0]) && void 0 !== n ? n : '',
+                value: null !== (n = f[0]) && void 0 !== n ? n : '',
                 onChange: e => x(e, 0),
                 maxLength: l.TY,
                 placeholder: l.LK['0']
               }),
               (0, a.jsx)(s.TextInput, {
                 inputClassName: i()(d.input, d.wildcardInput),
-                value: null !== (t = _[1]) && void 0 !== t ? t : '',
+                value: null !== (t = f[1]) && void 0 !== t ? t : '',
                 onChange: e => x(e, 1),
                 maxLength: l.TY,
                 placeholder: l.LK['1']
               }),
               (0, a.jsx)(s.TextInput, {
                 inputClassName: i()(d.input, d.wildcardInput),
-                value: null !== (r = _[2]) && void 0 !== r ? r : '',
+                value: null !== (r = f[2]) && void 0 !== r ? r : '',
                 onChange: e => x(e, 2),
                 maxLength: l.TY,
                 placeholder: l.LK['2']
@@ -115,7 +115,7 @@ children: [
         className: d.fixedWidthSidebar,
         children: (0, a.jsx)(o.Z, {
           guildId: u,
-          progress: f,
+          progress: _,
           maskTraits: !0
         })
       })

@@ -1,5 +1,5 @@
 n(47120);
-var r, i, a, o, s, l, u = n(392711),
+var r, i, a, s, o, l, u = n(392711),
   c = n(442837),
   d = n(759174),
   _ = n(570140),
@@ -61,12 +61,12 @@ return O.get(e);
 return S;
   }
 }
-l = 'BroadcastingStore', (s = 'displayName') in(o = y) ? Object.defineProperty(o, s, {
+l = 'BroadcastingStore', (o = 'displayName') in(s = y) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[s] = l, t.Z = new y(_.Z, {
+}) : s[o] = l, t.Z = new y(_.Z, {
   PRESENCE_UPDATES: function(e) {
 let {
   updates: t

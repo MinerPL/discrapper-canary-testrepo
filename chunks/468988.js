@@ -4,24 +4,24 @@ return l;
   }
 });
 var i = n(689938);
-let a = [
+let s = [
 'a',
 'b',
 'c',
 'd'
   ],
-  s = e => e;
+  a = e => e;
 
 function r(e, t) {
   let n = {},
-i = Math.min(e.length, a.length);
-  for (let s = 0; s < i; ++s)
-n[a[s]] = (n, i) => t(e[s], i);
+i = Math.min(e.length, s.length);
+  for (let a = 0; a < i; ++a)
+n[s[a]] = (n, i) => t(e[a], i);
   return n;
 }
 class l {
   asString() {
-return this.transformed(s);
+return this.transformed(a);
   }
   isEmpty() {
 return 0 === this.items.length;

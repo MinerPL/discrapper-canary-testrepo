@@ -3,16 +3,16 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(893776),
-  o = n(147913),
-  s = n(594174),
+  s = n(147913),
+  o = n(594174),
   l = n(626135),
   u = n(374023),
   c = n(344532),
   d = n(981631),
   _ = n(231338);
-class E extends o.Z {
+class E extends s.Z {
   handleConnectionOpen() {
-let e = s.default.getCurrentUser();
+let e = o.default.getCurrentUser();
 if (null == e || u.s.isDisallowPopupsSet())
   return;
 let t = c.Z.requiredActionsIncludes(e.id, [d.ane.UPDATE_PASSWORD]);

@@ -14,14 +14,14 @@ return a;
 }), n(47120);
 let i = new(n(259443)).Y('AssetMap');
 async function a(e) {
-  let t = new o(),
+  let t = new s(),
 n = Object.entries(e).map(e => {
   let [n, r] = e;
   return t.loadRemoteImage(n, r).catch(e => i.warn('Failed to load canvas asset', e, n, r));
 });
   return await Promise.all(n), t;
 }
-class o {
+class s {
   loadFonts() {
 return Promise.resolve();
   }

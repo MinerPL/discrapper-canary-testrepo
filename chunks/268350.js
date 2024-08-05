@@ -36,8 +36,8 @@ return C;
 var r = n(392711),
   i = n.n(r),
   a = n(544891),
-  o = n(570140),
-  s = n(668781),
+  s = n(570140),
+  o = n(668781),
   l = n(38618),
   u = n(706454),
   c = n(675478),
@@ -53,7 +53,7 @@ let T = async (e, t) => {
   let {
 body: n
   } = await (0, f.Kb)(p.ANM.STICKER_PACK(e));
-  return o.Z.dispatch({
+  return s.Z.dispatch({
 type: 'STICKER_PACK_FETCH_SUCCESS',
 packId: e,
 pack: n,
@@ -65,8 +65,8 @@ locale: e = u.default.locale
   } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
   if (h.Z.isFetchingStickerPacks || h.Z.hasLoadedStickerPacks)
 return;
-  o.Z.wait(() => {
-o.Z.dispatch({
+  s.Z.wait(() => {
+s.Z.dispatch({
   type: 'STICKER_PACKS_FETCH_START'
 });
   });
@@ -80,7 +80,7 @@ query: {
   locale: e
 }
   });
-  o.Z.dispatch({
+  s.Z.dispatch({
 type: 'STICKER_PACKS_FETCH_SUCCESS',
 packs: t
   });
@@ -90,7 +90,7 @@ body: t
   } = await a.tn.get({
 url: p.ANM.STICKER(e)
   });
-  o.Z.dispatch({
+  s.Z.dispatch({
 type: 'STICKER_FETCH_SUCCESS',
 sticker: t
   });
@@ -100,7 +100,7 @@ body: t
   } = await a.tn.get({
 url: p.ANM.GUILD_STICKER_PACKS(e)
   });
-  o.Z.dispatch({
+  s.Z.dispatch({
 type: 'GUILD_STICKERS_FETCH_SUCCESS',
 guildId: e,
 stickers: t.map(e => null != e.user ? {
@@ -117,7 +117,7 @@ url: p.ANM.GUILD_STICKER(e.guild_id, e.id)
 url: p.ANM.GUILD_STICKER_PACKS(e),
 body: t
   });
-  return o.Z.dispatch({
+  return s.Z.dispatch({
 type: 'GUILD_STICKERS_CREATE_SUCCESS',
 guildId: e,
 sticker: {
@@ -131,7 +131,7 @@ sticker: {
 })).body;
 
 function R(e, t, n) {
-  o.Z.dispatch({
+  s.Z.dispatch({
 type: 'ADD_STICKER_PREVIEW',
 channelId: e,
 sticker: t,
@@ -140,7 +140,7 @@ draftType: n
 }
 
 function C(e, t) {
-  o.Z.dispatch({
+  s.Z.dispatch({
 type: 'CLEAR_STICKER_PREVIEW',
 channelId: e,
 draftType: t
@@ -152,7 +152,7 @@ function y(e) {
 }
 
 function D(e) {
-  c.DZ.updateAsync('favoriteStickers', t => (t.stickerIds = y(t.stickerIds), i().size(t.stickerIds) >= m.oX) ? (s.Z.show({
+  c.DZ.updateAsync('favoriteStickers', t => (t.stickerIds = y(t.stickerIds), i().size(t.stickerIds) >= m.oX) ? (o.Z.show({
 title: I.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
 body: I.Z.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
   count: m.oX

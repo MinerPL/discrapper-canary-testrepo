@@ -9,7 +9,7 @@ return i;
 return A;
   }
 }), n(411104), n(852437), n(47120);
-var r, i, a, o, s, l, u = n(735250),
+var r, i, a, s, o, l, u = n(735250),
   c = n(470079),
   d = n(392711),
   _ = n.n(d),
@@ -24,7 +24,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-(o = r || (r = {})).ACTIVITY_FEED = 'ACTIVITY_FEED', o.ACTIVITY_FEED_NEW = 'ACTIVITY_FEED_NEW', o.USER_ACTIVITY = 'USER_ACTIVITY', o.GAME_LIBRARY_TIME_PLAYED = 'GAME_LIBRARY_TIME_PLAYED', o.GAME_LIBRARY_LAST_PLAYED = 'GAME_LIBRARY_LAST_PLAYED', (s = i || (i = {})).NONE = 'NONE', s.SECONDS = 'SECONDS', s.MINUTES = 'MINUTES', s.HOURS = 'HOURS', s.DAYS = 'DAYS', s.WEEKS = 'WEEKS', s.MONTHS = 'MONTHS', s.YEARS = 'YEARS', (l = a || (a = {})).START = 'START', l.END = 'END', l.TIME = 'TIME';
+(s = r || (r = {})).ACTIVITY_FEED = 'ACTIVITY_FEED', s.ACTIVITY_FEED_NEW = 'ACTIVITY_FEED_NEW', s.USER_ACTIVITY = 'USER_ACTIVITY', s.GAME_LIBRARY_TIME_PLAYED = 'GAME_LIBRARY_TIME_PLAYED', s.GAME_LIBRARY_LAST_PLAYED = 'GAME_LIBRARY_LAST_PLAYED', (o = i || (i = {})).NONE = 'NONE', o.SECONDS = 'SECONDS', o.MINUTES = 'MINUTES', o.HOURS = 'HOURS', o.DAYS = 'DAYS', o.WEEKS = 'WEEKS', o.MONTHS = 'MONTHS', o.YEARS = 'YEARS', (l = a || (a = {})).START = 'START', l.END = 'END', l.TIME = 'TIME';
 let p = {
 NONE: e => 0,
 SECONDS: e => 60 * e,
@@ -301,15 +301,15 @@ render() {
     ...i
   } = this.props, {
     time: a
-  } = this.state, o = this.getType();
-  if (null == o)
+  } = this.state, s = this.getType();
+  if (null == s)
     return null;
-  let s = this.getTimeUnit(a, t, o),
-    l = T[t][o];
+  let o = this.getTimeUnit(a, t, s),
+    l = T[t][s];
   if (null == l)
     return null;
-  let c = l[s],
-    d = Math.floor(this.transformTime(s, a));
+  let c = l[o],
+    d = Math.floor(this.transformTime(o, a));
   return (0, u.jsx)(e, {
     ...i,
     children: null == c ? void 0 : c(d, n, r)

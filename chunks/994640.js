@@ -1,6 +1,6 @@
 a(47120);
-var n = a(735250),
-  t = a(470079),
+var t = a(735250),
+  n = a(470079),
   l = a(120356),
   i = a.n(l),
   r = a(481060),
@@ -23,11 +23,11 @@ setGuildId: x,
 invite: h,
 onClose: C,
 isNUXFlow: T
-  } = e, [g, O] = t.useState(null), [v, L] = t.useState(!1), S = async e => {
+  } = e, [g, O] = n.useState(null), [v, L] = n.useState(!1), S = async e => {
 e.preventDefault(), O(null), L(!0);
 try {
-  var n, t, i, r, N;
-  let e = null !== (N = null !== (r = null == h ? void 0 : null === (n = h.guild) || void 0 === n ? void 0 : n.id) && void 0 !== r ? r : null === (t = d.Z.getChannel(null == h ? void 0 : null === (i = h.channel) || void 0 === i ? void 0 : i.id)) || void 0 === t ? void 0 : t.getGuildId()) && void 0 !== N ? N : void 0;
+  var t, n, i, r, N;
+  let e = null !== (N = null !== (r = null == h ? void 0 : null === (t = h.guild) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : null === (n = d.Z.getChannel(null == h ? void 0 : null === (i = h.channel) || void 0 === i ? void 0 : i.id)) || void 0 === n ? void 0 : n.getGuildId()) && void 0 !== N ? N : void 0;
   e === u.fQ && (e = void 0);
   let c = await o.Z.sendVerificationEmail(l, !0, e),
     _ = c.guilds_info;
@@ -49,37 +49,37 @@ M = m.Z.Messages.HUB_EMAIL_CONNECTION_INVITE_HEADER.format({
   count: h.approximate_member_count
 });
   }
-  return (0, n.jsxs)('div', {
+  return (0, t.jsxs)('div', {
 className: E.container,
 children: [
-  (0, n.jsx)('div', {
+  (0, t.jsx)('div', {
     className: E.topImage
   }),
-  (0, n.jsx)(r.Heading, {
+  (0, t.jsx)(r.Heading, {
     className: i()(E.centerText, E.header),
     variant: 'heading-xl/semibold',
     children: M
   }),
-  (0, n.jsx)('div', {
+  (0, t.jsx)('div', {
     className: E.descriptionWidth,
-    children: (0, n.jsx)(r.Text, {
+    children: (0, t.jsx)(r.Text, {
       className: E.centerText,
       variant: 'text-sm/normal',
       color: 'header-secondary',
       children: A
     })
   }),
-  (0, n.jsxs)('form', {
+  (0, t.jsxs)('form', {
     className: E.formContent,
     onSubmit: S,
     children: [
-      (0, n.jsxs)(r.FormItem, {
+      (0, t.jsxs)(r.FormItem, {
         children: [
-          (0, n.jsx)(r.FormTitle, {
+          (0, t.jsx)(r.FormTitle, {
             id: I,
             children: m.Z.Messages.HUB_EMAIL_CONNECTION_CONTENT_INPUT_HEADER
           }),
-          (0, n.jsx)(r.TextInput, {
+          (0, t.jsx)(r.TextInput, {
             placeholder: m.Z.Messages.HUB_EMAIL_CONNECTION_CONTENT_INPUT_PLACEHOLDER,
             onChange: e => {
               N(e);
@@ -89,13 +89,13 @@ children: [
           })
         ]
       }),
-      (0, n.jsx)(r.Text, {
+      (0, t.jsx)(r.Text, {
         color: 'header-secondary',
         className: E.formDescription,
         variant: 'text-sm/normal',
         children: m.Z.Messages.HUB_EMAIL_CONNECTION_CONTENT_INPUT_DESCRIPTION
       }),
-      (0, n.jsx)(r.Button, {
+      (0, t.jsx)(r.Button, {
         type: 'submit',
         size: r.Button.Sizes.LARGE,
         color: r.Button.Colors.BRAND,
@@ -103,7 +103,7 @@ children: [
         submitting: v,
         children: m.Z.Messages.HUB_EMAIL_CONNECTION_CONTENT_BUTTON
       }),
-      (0, n.jsx)(r.Text, {
+      (0, t.jsx)(r.Text, {
         className: E.termsPhrase,
         color: 'header-secondary',
         variant: 'text-xs/normal',
@@ -112,7 +112,7 @@ children: [
           privacyURL: _.EYA.PRIVACY
         })
       }),
-      T && (0, n.jsx)(r.Button, {
+      T && (0, t.jsx)(r.Button, {
         look: r.Button.Looks.LINK,
         onClick: C,
         className: E.cancelButton,

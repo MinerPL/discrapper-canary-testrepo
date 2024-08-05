@@ -1,8 +1,8 @@
 var r = n(470079),
   i = n(476400),
   a = n.n(i),
-  o = n(844303),
-  s = n(329022),
+  s = n(844303),
+  o = n(329022),
   l = n(829307),
   u = n(13942),
   c = n(464854),
@@ -17,7 +17,7 @@ var t = e.onChange,
   f = e.styles,
   h = void 0 === f ? {} : f,
   p = e.className,
-  m = (0, o.default)((0, l.Z)({
+  m = (0, s.default)((0, l.Z)({
     default: {
       Compact: {
         background: '#f6f6f6',
@@ -46,7 +46,7 @@ return r.createElement(c.xZ, {
 }, r.createElement('div', {
   style: m.compact,
   className: 'compact-picker ' + (void 0 === p ? '' : p)
-}, r.createElement('div', null, (0, s.Z)(i, function(e) {
+}, r.createElement('div', null, (0, o.Z)(i, function(e) {
   return r.createElement(d.Z, {
     key: e,
     color: e,

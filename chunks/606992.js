@@ -1,27 +1,27 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   }
 }), n(47120);
 var r = n(470079),
   i = n(40851),
   a = n(590921);
 
-function o(e) {
+function s(e) {
   let {
 editorHeight: t,
 type: n,
-state: o,
-isInPopoutExperiment: s = !1
-  } = e, [l, u] = r.useState(void 0), c = null == o ? void 0 : o.query, d = null == o ? void 0 : o.isVisible, {
+state: s,
+isInPopoutExperiment: o = !1
+  } = e, [l, u] = r.useState(void 0), c = null == s ? void 0 : s.query, d = null == s ? void 0 : s.isVisible, {
 renderWindow: _
   } = r.useContext(i.ZP), E = r.useCallback(() => {
 var e, t, r, i;
-if (null != o && (null == c || !d)) {
+if (null != s && (null == c || !d)) {
   u(void 0);
   return;
 }
-if ((null == c ? void 0 : c.type) === a.eq.GIFS || null != n && !s && !(null === (e = n.autocomplete) || void 0 === e ? void 0 : e.alwaysUseLayer)) {
+if ((null == c ? void 0 : c.type) === a.eq.GIFS || null != n && !o && !(null === (e = n.autocomplete) || void 0 === e ? void 0 : e.alwaysUseLayer)) {
   u(null);
   return;
 }
@@ -51,9 +51,9 @@ let m = p.getBoundingClientRect();
 if ((null == m ? void 0 : m.height) !== 0)
   u(null != m ? m : null);
   }, [
-s,
-_.document,
 o,
+_.document,
+s,
 d,
 c,
 n

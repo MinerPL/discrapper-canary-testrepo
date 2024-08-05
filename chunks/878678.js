@@ -9,8 +9,8 @@ return _;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(693789),
+  s = n.n(a),
+  o = n(693789),
   l = n(260034),
   u = n(709692),
   c = n(298926);
@@ -29,7 +29,7 @@ function d(e) {
   bodyClassName: T,
   transitionState: g,
   loading: S = !1,
-  confirmButtonColor: A = s.zx.Colors.RED,
+  confirmButtonColor: A = o.zx.Colors.RED,
   focusCancel: N = !1
 } = e,
 v = i.useRef(null);
@@ -38,17 +38,17 @@ v = i.useRef(null);
   var e;
   return null === (e = v.current) || void 0 === e ? void 0 : e.focus();
 }, 0);
-  }, [N]), i.useLayoutEffect(() => () => null == I ? void 0 : I()), null != E && (t = (0, r.jsx)(s.zx, {
+  }, [N]), i.useLayoutEffect(() => () => null == I ? void 0 : I()), null != E && (t = (0, r.jsx)(o.zx, {
 type: 'button',
-look: s.zx.Looks.LINK,
-color: s.zx.Colors.PRIMARY,
+look: o.zx.Looks.LINK,
+color: o.zx.Colors.PRIMARY,
 disabled: S,
 onClick: () => {
   null == p || p(), m();
 },
 autoFocus: N,
 children: E
-  })), null != _ && (n = (0, r.jsx)(s.zx, {
+  })), null != _ && (n = (0, r.jsx)(o.zx, {
 buttonRef: v,
 type: 'submit',
 color: A,
@@ -74,7 +74,7 @@ children: [
     })
   }) : null,
   (0, r.jsx)(u.hz, {
-    className: o()(c.content, T),
+    className: s()(c.content, T),
     children: d
   }),
   (0, r.jsxs)(u.mz, {

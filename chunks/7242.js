@@ -1,56 +1,53 @@
 n.d(t, {
   Z: function() {
-return T;
+return p;
   }
 });
 var r = n(735250),
-  i = n(120356),
-  a = n.n(i),
-  o = n(442837),
-  s = n(481060),
-  l = n(493683),
-  u = n(447543),
-  c = n(904245),
-  d = n(314897),
-  _ = n(592125),
-  E = n(496675),
-  f = n(979651),
-  h = n(475413),
-  p = n(981631),
-  m = n(689938),
-  I = n(663054);
+  i = n(442837),
+  a = n(481060),
+  s = n(493683),
+  o = n(447543),
+  l = n(904245),
+  u = n(314897),
+  c = n(592125),
+  d = n(496675),
+  _ = n(979651),
+  E = n(475413),
+  f = n(981631),
+  h = n(689938);
 
-function T(e) {
+function p(e) {
   let {
 user: t,
 className: n,
-onClose: i
-  } = e, T = (0, o.e7)([d.default], () => d.default.getId()), g = (0, o.e7)([
-_.Z,
-f.Z
+onClose: p
+  } = e, m = (0, i.e7)([u.default], () => u.default.getId()), I = (0, i.e7)([
+c.Z,
+_.Z
   ], () => {
 var e;
-return _.Z.getChannel(null === (e = f.Z.getVoiceStateForUser(T)) || void 0 === e ? void 0 : e.channelId);
-  }), S = null == g ? void 0 : g.isPrivate(), A = (0, o.e7)([E.Z], () => E.Z.can(p.Plq.CREATE_INSTANT_INVITE, g));
-  if (null == g || S || !A || t.bot)
+return c.Z.getChannel(null === (e = _.Z.getVoiceStateForUser(m)) || void 0 === e ? void 0 : e.channelId);
+  }), T = null == I ? void 0 : I.isPrivate(), g = (0, i.e7)([d.Z], () => d.Z.can(f.Plq.CREATE_INSTANT_INVITE, I));
+  if (null == I || T || !g || t.bot)
 return null;
-  let N = async () => {
-await u.Z.createInvite(null == g ? void 0 : g.id, {
+  let S = async () => {
+await o.Z.createInvite(null == I ? void 0 : I.id, {
   max_uses: 1,
   unique: !0
 }, 'UserProfileInviteToCallButton').then(e => function(e, t) {
-  l.Z.ensurePrivateChannel(e).then(e => {
-    null != _.Z.getChannel(e) && c.Z.sendInvite(e, t, 'useActiveInviteToCallButton', null);
+  s.Z.ensurePrivateChannel(e).then(e => {
+    null != c.Z.getChannel(e) && l.Z.sendInvite(e, t, 'useActiveInviteToCallButton', null);
   });
-}(t.id, e.code)), null == i || i();
+}(t.id, e.code)), null == p || p();
   };
-  return (0, r.jsx)(h.tG, {
+  return (0, r.jsx)(E.tG, {
 action: 'PRESS_INVITE_TO_CALL',
-text: m.Z.Messages.USER_PROFILE_INVITE_TO_CALL,
-icon: s.GroupPlusIcon,
+text: h.Z.Messages.USER_PROFILE_INVITE_TO_CALL,
+icon: a.GroupPlusIcon,
 fullWidth: !0,
-color: a()(s.Button.Colors.BRAND, I.color),
+color: a.Button.Colors.BRAND,
 className: n,
-onClick: N
+onClick: S
   });
 }

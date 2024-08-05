@@ -5,29 +5,29 @@ var r, u, l, i, c = t(286379),
   s = t(642047),
   d = t(797614),
   f = t(413402),
-  C = t(189786),
-  Z = t(5192),
+  Z = t(189786),
+  C = t(5192),
   E = t(592125),
   g = t(19780),
-  h = t(594174),
-  N = t(979651),
-  I = t(938475),
-  S = t(981631),
-  T = t(354459);
+  S = t(594174),
+  h = t(979651),
+  N = t(938475),
+  T = t(981631),
+  I = t(354459);
 let _ = new s.Z(),
-  m = new s.Z(),
+  y = new s.Z(),
   p = new Set(),
-  v = !1;
+  m = !1;
 
-function y(e, n, t) {
-  let r = new C.Z({
+function v(e, n, t) {
+  let r = new Z.Z({
   userId: e.id,
   channelId: t
 }),
-u = (0, I.PH)(r, null != n ? n : S.ME, e.id);
+u = (0, N.PH)(r, null != n ? n : T.ME, e.id);
   _.set(e.id, u);
   let l = {
-type: T.fO.USER,
+type: I.fO.USER,
 user: e,
 id: e.id,
 streamId: null,
@@ -37,20 +37,20 @@ speaking: !1,
 lastSpoke: 0,
 soundsharing: !1,
 ringing: !1,
-userNick: Z.ZP.getName(n, t, e),
+userNick: C.ZP.getName(n, t, e),
 localVideoDisabled: !1
   };
-  m.set(e.id, l);
+  y.set(e.id, l);
 }
 
 function O(e) {
   let n = _.delete(e),
-t = m.delete(e),
+t = y.delete(e),
 r = p.delete(e);
   return n || t || r;
 }
 
-function D() {
+function R() {
   var e;
   let n = g.Z.getChannelId();
   if (null == n)
@@ -58,21 +58,21 @@ return !1;
   let t = null === (e = E.Z.getChannel(n)) || void 0 === e ? void 0 : e.getGuildId(),
 r = !1;
   return p.forEach(e => {
-if (null != N.Z.getVoiceStateForChannel(n, e)) {
+if (null != h.Z.getVoiceStateForChannel(n, e)) {
   p.delete(e);
   return;
 }
-let u = h.default.getUser(e);
-null != u && (r = !0, p.delete(e), y(u, t, n));
+let u = S.default.getUser(e);
+null != u && (r = !0, p.delete(e), v(u, t, n));
   }), r;
 }
 
-function b() {
-  _.clear(), m.clear(), p.clear();
+function V() {
+  _.clear(), y.clear(), p.clear();
 }
-class V extends(r = a.ZP.Store) {
+class D extends(r = a.ZP.Store) {
   initialize() {
-this.waitFor(N.Z, h.default, E.Z, g.Z), this.syncWith([h.default], D);
+this.waitFor(h.Z, S.default, E.Z, g.Z), this.syncWith([S.default], R);
   }
   get desyncedVoiceStatesCount() {
 return _.size();
@@ -84,26 +84,26 @@ return _.keys();
 return _.values();
   }
   getDesyncedParticipants() {
-return m.values();
+return y.values();
   }
 }
-i = 'RTCConnectionDesyncStore', (l = 'displayName') in(u = V) ? Object.defineProperty(u, l, {
+i = 'RTCConnectionDesyncStore', (l = 'displayName') in(u = D) ? Object.defineProperty(u, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : u[l] = i, n.Z = new V(o.Z, {
+}) : u[l] = i, n.Z = new D(o.Z, {
   CONNECTION_OPEN: function() {
-v = (0, f.i)(), b();
+m = (0, f.i)(), V();
   },
-  VOICE_CHANNEL_SELECT: b,
+  VOICE_CHANNEL_SELECT: V,
   RTC_CONNECTION_STATE: function(e) {
 let {
   state: n
 } = e;
-if (n !== S.hes.DISCONNECTED)
+if (n !== T.hes.DISCONNECTED)
   return !1;
-b();
+V();
   },
   VOICE_STATE_UPDATES: function(e) {
 let {
@@ -124,12 +124,12 @@ let {
   channelId: r
 } = e;
 return n.reduce((e, n) => {
-  if (null != N.Z.getVoiceStateForChannel(r, n))
+  if (null != h.Z.getVoiceStateForChannel(r, n))
     return e;
-  let u = h.default.getUser(n);
-  return null == u ? (null == t && v && d.Z.increment({
+  let u = S.default.getUser(n);
+  return null == u ? (null == t && m && d.Z.increment({
     name: c.V.RTC_CONNECTION_DESYNC_STORE_UNKNOWN_USER
-  }), p.add(n), e) : (y(u, t, r), !0);
+  }), p.add(n), e) : (v(u, t, r), !0);
 }, !1);
   },
   RTC_CONNECTION_CLIENT_DISCONNECT: function(e) {

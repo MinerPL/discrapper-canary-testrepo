@@ -9,8 +9,8 @@ return c;
 var r = n(735250),
   i = n(470079),
   a = n(887024),
-  o = n(399606),
-  s = n(607070),
+  s = n(399606),
+  o = n(607070),
   l = n(981631);
 let u = {
 confettiCanvas: null,
@@ -32,7 +32,7 @@ spriteCanvas: l,
 baseConfig: d,
 addClickListener: _,
 removeClickListener: E
-  } = e, f = (0, a.uR)(n, l), h = (0, o.e7)([s.Z], () => s.Z.useReducedMotion), p = i.useMemo(() => h ? u : {
+  } = e, f = (0, a.uR)(n, l), h = (0, s.e7)([o.Z], () => o.Z.useReducedMotion), p = i.useMemo(() => h ? u : {
 confettiCanvas: n,
 cannon: f,
 createConfetti: (e, t) => f.createConfetti({

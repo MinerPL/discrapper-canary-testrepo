@@ -1,10 +1,10 @@
 var i = n(401430),
-  s = n(283595),
-  a = n(695103);
+  a = n(283595),
+  s = n(695103);
 t.Z = {
   init() {
-s.Z.whenInitialized(() => {
-  null != a.Z.testModeApplicationId && (0, i.Wt)(a.Z.testModeApplicationId, a.Z.testModeOriginURL);
+a.Z.whenInitialized(() => {
+  null != s.Z.testModeApplicationId && (0, i.Wt)(s.Z.testModeApplicationId, s.Z.testModeOriginURL);
 });
   }
 };

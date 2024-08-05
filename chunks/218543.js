@@ -10,9 +10,9 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let o = () => {};
+let s = () => {};
 n.g.__timingFunction = () => performance.now();
-let s = null == n.g.__getTotalRequireTime ? () => 0 : () => n.g.__getTotalRequireTime();
+let o = null == n.g.__getTotalRequireTime ? () => 0 : () => n.g.__getTotalRequireTime();
 
 function l(e, t) {
   if (0 === t || null == t)
@@ -34,19 +34,19 @@ return this.start_ > 0;
 return this.end_ > 0;
   }
   recordStart() {
-0 === this.start_ && this.recordStart_(), r.Z.mark(this.emoji, 'Start '.concat(this.name)), o();
+0 === this.start_ && this.recordStart_(), r.Z.mark(this.emoji, 'Start '.concat(this.name)), s();
   }
   recordStart_() {
-this.start_ = Date.now(), this.startNumImports = i.dp(), this.startImportTime = s();
+this.start_ = Date.now(), this.startNumImports = i.dp(), this.startImportTime = o();
   }
   recordEnd() {
-0 === this.end_ && 0 !== this.start_ ? (this.recordEnd_(), r.Z.mark(this.emoji, 'Finish '.concat(this.name), this.end_ - this.start_)) : r.Z.mark(this.emoji, 'Finish '.concat(this.name)), o();
+0 === this.end_ && 0 !== this.start_ ? (this.recordEnd_(), r.Z.mark(this.emoji, 'Finish '.concat(this.name), this.end_ - this.start_)) : r.Z.mark(this.emoji, 'Finish '.concat(this.name)), s();
   }
   recordEnd_() {
-this.end_ = Date.now(), this.endNumImports = i.dp(), this.endImportTime = s();
+this.end_ = Date.now(), this.endNumImports = i.dp(), this.endImportTime = o();
   }
   set(e, t) {
-0 === this.start_ && (this.start_ = e, this.end_ = e + t, this.endNumImports = i.dp(), this.endImportTime = s()), r.Z.mark(this.emoji, this.name, t), o();
+0 === this.start_ && (this.start_ = e, this.end_ = e + t, this.endNumImports = i.dp(), this.endImportTime = o()), r.Z.mark(this.emoji, this.name, t), s();
   }
   serializeStart(e) {
 return l(e, this.start_);
@@ -59,14 +59,14 @@ if (this.start_ > 0)
   return r.Z.time(this.emoji, this.name, e);
 this.recordStart_();
 let t = r.Z.time(this.emoji, this.name, e);
-return this.recordEnd_(), o(), t;
+return this.recordEnd_(), s(), t;
   }
   async measureAsync(e) {
 if (this.start_ > 0)
   return r.Z.timeAsync(this.emoji, this.name, e);
 this.recordStart_();
 let t = await r.Z.timeAsync(this.emoji, this.name, e);
-return this.recordEnd_(), o(), t;
+return this.recordEnd_(), s(), t;
   }
   async measureAsyncWithoutNesting(e) {
 if (this.start_ > 0)
@@ -75,7 +75,7 @@ this.recordStart_();
 let t = Date.now();
 r.Z.mark(this.emoji, 'Start '.concat(this.name));
 let n = await e();
-return r.Z.mark(this.emoji, 'Finish '.concat(this.name), Date.now() - t), this.recordEnd_(), o(), n;
+return r.Z.mark(this.emoji, 'Finish '.concat(this.name), Date.now() - t), this.recordEnd_(), s(), n;
   }
   constructor(e, t) {
 a(this, 'emoji', void 0), a(this, 'name', void 0), a(this, 'start_', void 0), a(this, 'startNumImports', void 0), a(this, 'startImportTime', void 0), a(this, 'end_', void 0), a(this, 'endNumImports', void 0), a(this, 'endImportTime', void 0), this.emoji = e, this.name = t, this.start_ = 0, this.startNumImports = 0, this.startImportTime = 0, this.end_ = 0, this.endNumImports = 0, this.endImportTime = 0;
@@ -86,7 +86,7 @@ class c {
 return this.time_;
   }
   record() {
-0 === this.time_ ? (this.time_ = Date.now(), this.numImports = i.dp(), this.importTime = s(), r.Z.mark(this.emoji, this.name)) : !this.onlyOnce && r.Z.mark(this.emoji, this.name), o();
+0 === this.time_ ? (this.time_ = Date.now(), this.numImports = i.dp(), this.importTime = o(), r.Z.mark(this.emoji, this.name)) : !this.onlyOnce && r.Z.mark(this.emoji, this.name), s();
   }
   hasData() {
 return this.time_ > 0;
@@ -103,7 +103,7 @@ class d {
 return this.time_;
   }
   record() {
-0 === this.time_ && (this.time_ = s());
+0 === this.time_ && (this.time_ = o());
   }
   constructor() {
 a(this, 'time_', 0);
@@ -124,15 +124,15 @@ a(this, 'loadIndex', new u('\u2757', 'Load index.tsx')), a(this, 'loadFastConnec
 }
 t.Z = new class e extends _ {
   setTTICallback(e) {
-o = () => {
-  !0 === e() && (o = () => !1);
+s = () => {
+  !0 === e() && (s = () => !1);
 };
   }
   setCacheInfo(e) {
 this.cacheInfo = e;
   }
   setInterstitial(e) {
-this.interstitial = e, o();
+this.interstitial = e, s();
   }
   addLocalMessages(e, t) {
 for (this.cachedChannelCounts.set(e, t); this.cachedChannelCounts.size > 100;) {
@@ -172,15 +172,15 @@ if (!this.renderLatestMessages.hasData()) {
       return;
     }
     if (e === this.cachedChannelId) {
-      var o;
+      var s;
       let n = this.cachedMessageIds.sort(a.compare).reverse()[0],
         r = t.sort(a.compare).reverse()[0];
       this.messageCacheAgeSeconds = Math.floor((a.extractTimestamp(r) - a.extractTimestamp(n)) / 1000);
-      let s = t.filter(e => {
+      let o = t.filter(e => {
         var t;
         return null === (t = this.cachedMessageIds) || void 0 === t ? void 0 : t.includes(e);
       }).length;
-      this.messageCacheCount = null !== (o = this.cachedChannelCounts.get(e)) && void 0 !== o ? o : null, this.messageCacheHavingCount = s, this.messageCacheMissingCount = t.length - s, this.messageRenderFullCount = t.length, this.messageRenderCachedCount = this.cachedMessageIds.length, this.messageRenderHasMoreAfter = i;
+      this.messageCacheCount = null !== (s = this.cachedChannelCounts.get(e)) && void 0 !== s ? s : null, this.messageCacheHavingCount = o, this.messageCacheMissingCount = t.length - o, this.messageRenderFullCount = t.length, this.messageRenderCachedCount = this.cachedMessageIds.length, this.messageRenderHasMoreAfter = i;
     }
   } else
     (null == this.cachedChannelId || e === this.cachedChannelId) && (this.cachedChannelId = e, this.cachedMessageIds = t, t.length > 0 && (this.messageCacheMissingReason = null));
@@ -244,7 +244,7 @@ for (let t of e)
   }
   }
   serializeTTITracker(e) {
-var t, i, a, o, s, l;
+var t, i, a, s, o, l;
 let u = this.getStartTime(e),
   c = n(392711)(r.Z.logGroups['0'].logs).filter(e => e.log.startsWith('Require ')).map(e => {
     var t;
@@ -365,8 +365,8 @@ return {
   cache_num_guilds: null === (t = this.cacheInfo) || void 0 === t ? void 0 : t.guilds,
   cache_num_private_channels: null === (i = this.cacheInfo) || void 0 === i ? void 0 : i.privateChannels,
   cache_num_basic_channels: null === (a = this.cacheInfo) || void 0 === a ? void 0 : a.basicChannels,
-  cache_num_basic_channels_stale: null === (o = this.cacheInfo) || void 0 === o ? void 0 : o.basicChannelsStale,
-  cache_num_full_channels: null === (s = this.cacheInfo) || void 0 === s ? void 0 : s.fullChannels,
+  cache_num_basic_channels_stale: null === (s = this.cacheInfo) || void 0 === s ? void 0 : s.basicChannelsStale,
+  cache_num_full_channels: null === (o = this.cacheInfo) || void 0 === o ? void 0 : o.fullChannels,
   cache_num_full_channel_guilds: null === (l = this.cacheInfo) || void 0 === l ? void 0 : l.fullChannelGuilds,
   num_imports_at_load_index_end: this.loadIndex.endNumImports,
   num_imports_at_init_end: this.init.endNumImports,

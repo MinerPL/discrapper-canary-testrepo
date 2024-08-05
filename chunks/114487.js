@@ -6,8 +6,8 @@ return E;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  o = n(442837),
   l = n(451478),
   u = n(806519),
   c = n(768581),
@@ -22,7 +22,7 @@ guildIcon: i,
 iconSize: a,
 className: E,
 animate: f
-  } = e, h = (0, s.e7)([l.Z], () => l.Z.isFocused()), p = c.ZP.getGuildIconURL({
+  } = e, h = (0, o.e7)([l.Z], () => l.Z.isFocused()), p = c.ZP.getGuildIconURL({
 id: t,
 icon: i,
 size: a,
@@ -36,7 +36,7 @@ return (0, r.jsx)(u.ZP, {
   height: a,
   className: E,
   children: (0, r.jsx)('div', {
-    className: o()(_.guildIconImage, _.acronym),
+    className: s()(_.guildIconImage, _.acronym),
     children: e
   })
 });

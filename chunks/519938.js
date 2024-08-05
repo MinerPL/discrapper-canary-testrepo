@@ -1,21 +1,24 @@
 n.d(t, {
   $Z: function() {
-return s;
+return o;
   },
   Ao: function() {
 return l;
   },
   Cp: function() {
-return o;
+return s;
   },
   Cz: function() {
-return u;
+return c;
   },
   bA: function() {
 return i;
   },
+  d7: function() {
+return u;
+  },
   k3: function() {
-return c;
+return d;
   },
   xv: function() {
 return a;
@@ -40,14 +43,14 @@ id: e
   });
 }
 
-function o(e) {
+function s(e) {
   r.Z.dispatch({
 type: 'PICTURE_IN_PICTURE_HIDE',
 id: e
   });
 }
 
-function s(e) {
+function o(e) {
   r.Z.dispatch({
 type: 'PICTURE_IN_PICTURE_SHOW',
 id: e
@@ -62,7 +65,14 @@ position: t
   });
 }
 
-function u(e, t) {
+function u(e) {
+  r.Z.dispatch({
+type: 'PICTURE_IN_PICTURE_RESIZE',
+width: e
+  });
+}
+
+function c(e, t) {
   r.Z.dispatch({
 type: 'PICTURE_IN_PICTURE_UPDATE_RECT',
 id: e,
@@ -70,7 +80,7 @@ rect: t
   });
 }
 
-function c(e) {
+function d(e) {
   r.Z.dispatch({
 type: 'PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW',
 id: e

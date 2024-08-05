@@ -1,23 +1,23 @@
-t.d(i, {
+i.d(t, {
   d: function() {
 return d;
   }
 });
-var n = t(735250);
-t(470079);
-var o = t(120356),
-  a = t.n(o),
-  l = t(692547),
-  r = t(481060);
-t(651711);
-var s = t(551556);
-t(689938);
-var c = t(893239);
-t(347157), t(177266);
+var n = i(735250);
+i(470079);
+var o = i(120356),
+  a = i.n(o),
+  l = i(692547),
+  r = i(481060);
+i(651711);
+var s = i(551556);
+i(689938);
+var c = i(893239);
+i(347157), i(177266);
 let d = e => {
   let {
-name: i,
-description: t,
+name: t,
+description: i,
 checked: o,
 actionLabel: d,
 actionHandler: u
@@ -43,12 +43,12 @@ children: [
       (0, n.jsx)(r.Heading, {
         variant: 'heading-md/semibold',
         className: c.checklistItemName,
-        children: i
+        children: t
       }),
       (0, n.jsx)(r.Text, {
         color: 'interactive-normal',
         variant: 'text-sm/normal',
-        children: t
+        children: i
       })
     ]
   }),

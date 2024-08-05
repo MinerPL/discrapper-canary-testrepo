@@ -9,7 +9,7 @@ return v;
 return a;
   },
   dG: function() {
-return s;
+return o;
   },
   gn: function() {
 return N;
@@ -30,9 +30,9 @@ return _;
 var r = n(470079),
   i = n(819841);
 let a = 'undefined' != typeof document ? r.useLayoutEffect : () => {},
-  o = new Map();
+  s = new Map();
 
-function s(...e) {
+function o(...e) {
   let t = {
 ...e[0]
   };
@@ -49,10 +49,10 @@ for (let e in r) {
   }(n, a) : ('className' === e || 'UNSAFE_className' === e) && 'string' == typeof n && 'string' == typeof a ? t[e] = (0, i.Z)(n, a) : 'id' === e && n && a ? t.id = function(e, t) {
     if (e === t)
       return e;
-    let n = o.get(e);
+    let n = s.get(e);
     if (n)
       return n(t), t;
-    let r = o.get(t);
+    let r = s.get(t);
     return r ? (r(e), e) : t;
   }(n, a) : t[e] = void 0 !== a ? a : n;
 }

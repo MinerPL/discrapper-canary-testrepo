@@ -27,13 +27,13 @@ i = {
   ]
 },
 a = e.QUOTE_STRING_MODE,
-o = [
+s = [
   e.COMMENT(';', '$', {
     relevance: 0
   }),
   e.COMMENT('#\\|', '\\|#')
 ],
-s = {
+o = {
   begin: t,
   relevance: 0
 },
@@ -61,7 +61,7 @@ c = {
       r,
       a,
       i,
-      s,
+      o,
       l
     ]
   }]
@@ -102,7 +102,7 @@ _ = {
               end: /\]/
             }
           ],
-          contains: [s]
+          contains: [o]
         }
       ]
     },
@@ -114,11 +114,11 @@ _ = {
 r,
 i,
 a,
-s,
+o,
 l,
 c,
 _
-  ].concat(o), {
+  ].concat(s), {
 name: 'Scheme',
 aliases: ['scm'],
 illegal: /\S/,
@@ -129,6 +129,6 @@ contains: [
   l,
   c,
   _
-].concat(o)
+].concat(s)
   };
 };

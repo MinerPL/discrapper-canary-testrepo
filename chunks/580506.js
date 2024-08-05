@@ -2,8 +2,8 @@ n(47120);
 var r = n(147913),
   i = n(70956),
   a = n(192720),
-  o = n(121254),
-  s = n(742989);
+  s = n(121254),
+  o = n(742989);
 
 function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -19,11 +19,11 @@ super(...e), l(this, 'actions', {
   POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen()
 }), l(this, 'handlePostConnectionOpen', () => {
   ! function e() {
-    (o.Z.getCurrentConfig({
+    (s.Z.getCurrentConfig({
       location: 'saved_messages_manager'
     }, {
       autoTrackExposure: !1
-    }).enabled || s.Z.getCurrentConfig({
+    }).enabled || o.Z.getCurrentConfig({
       location: 'saved_messages_manager'
     }, {
       autoTrackExposure: !1

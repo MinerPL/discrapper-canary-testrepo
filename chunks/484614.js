@@ -16,7 +16,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class C extends(r = a.PureComponent) {
+class _ extends(r = a.PureComponent) {
   componentWillUnmount() {
 this._timeout.stop();
   }
@@ -81,7 +81,7 @@ super(e), m(this, '_timeout', void 0), this.state = {
 }, this._timeout = new i.V7(), this.handleCopy = this.handleCopy.bind(this);
   }
 }
-m(C, 'defaultProps', {
+m(_, 'defaultProps', {
   isVertical: !1,
   delay: 300
-}), t.Z = C;
+}), t.Z = _;

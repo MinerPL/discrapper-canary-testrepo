@@ -1,6 +1,6 @@
 s.d(t, {
   Z: function() {
-return g;
+return h;
   }
 }), s(47120);
 var n = s(735250);
@@ -135,7 +135,7 @@ children: (0, n.jsxs)(a.FormSection, {
   });
 }
 
-function h() {
+function g() {
   return (0, n.jsx)(o.F, {
 setting: u.s6.ACTIVITY_PRIVACY_TOS,
 children: (0, n.jsx)(a.FormSection, {
@@ -151,7 +151,7 @@ children: (0, n.jsx)(a.FormSection, {
   });
 }
 
-function g(e) {
+function h(e) {
   let {
 className: t,
 showHeader: s = !0
@@ -164,7 +164,7 @@ children: [
   (0, n.jsx)(C, {}),
   (0, n.jsx)(m, {}),
   (0, n.jsx)(A, {}),
-  (0, n.jsx)(h, {})
+  (0, n.jsx)(g, {})
 ]
   });
 }

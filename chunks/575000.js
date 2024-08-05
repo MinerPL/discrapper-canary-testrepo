@@ -136,7 +136,7 @@ return (0, a.jsx)(_.Tooltip, {
   text: this.renderTierMarkerTooltip(e),
   position: 'right',
   'aria-label': null !== (s = e.name) && void 0 !== s ? s : '',
-  children: e => (0, a.jsx)(o.Spring, {
+  children: e => (0, a.jsx)(_.Spring, {
     from: {
       scale: 1
     },
@@ -197,7 +197,7 @@ return (0, a.jsxs)('g', {
       height: e,
       fill: 'currentColor'
     }),
-    (0, a.jsx)(o.Spring, {
+    (0, a.jsx)(_.Spring, {
       from: {
         height: 0
       },

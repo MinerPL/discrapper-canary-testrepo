@@ -6,9 +6,9 @@ return _;
 var r = n(735250),
   i = n(470079),
   a = n(481060),
+  s = n(318766),
   o = n(907040),
-  s = n(28546),
-  l = n(401227),
+  l = n(28546),
   u = n(872635),
   c = n(185923),
   d = n(227285);
@@ -21,7 +21,7 @@ options: _,
 channel: E
   } = e, f = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor(), h = i.useCallback((e, t) => {
 let r = n.current;
-null != e && null != r && r.insertEmoji(e, t, !1), t && (0, s._Q)();
+null != e && null != r && r.insertEmoji(e, t, !1), t && (0, l._Q)();
   }, [n]);
   return null == f ? null : (0, r.jsxs)('div', {
 id: 'slate-toolbar',
@@ -58,7 +58,7 @@ children: [
       let {
         isShown: n
       } = t;
-      return (0, r.jsx)(l.Z, {
+      return (0, r.jsx)(s.Z, {
         ...e,
         active: n,
         className: d.emojiButton,

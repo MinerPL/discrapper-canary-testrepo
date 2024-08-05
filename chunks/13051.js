@@ -9,8 +9,8 @@ var i = t(735250),
   l = t.n(s),
   o = t(913527),
   r = t.n(o),
-  c = t(442837),
-  d = t(481060),
+  d = t(442837),
+  c = t(481060),
   u = t(139387),
   I = t(726542),
   m = t(339085),
@@ -19,8 +19,8 @@ var i = t(735250),
   E = t(430824),
   T = t(246946),
   h = t(285952),
-  p = t(259580),
-  g = t(531087),
+  g = t(259580),
+  p = t(531087),
   C = t(768581),
   f = t(709054),
   x = t(486199),
@@ -39,9 +39,9 @@ function b(e) {
   onDisable: v,
   onEnable: M
 } = e,
-L = (0, c.e7)([E.Z], () => E.Z.getRoles(t.id)),
+L = (0, d.e7)([E.Z], () => E.Z.getRoles(t.id)),
 [j, D] = a.useState(!1),
-P = (0, c.e7)([T.Z], () => T.Z.hidePersonalInformation),
+P = (0, d.e7)([T.Z], () => T.Z.hidePersonalInformation),
 B = a.useCallback(() => {
   D(!0), M(s);
 }, [
@@ -49,15 +49,15 @@ B = a.useCallback(() => {
   M
 ]),
 y = a.useCallback(() => {
-  !s.syncing && (0, d.openModal)(e => {
+  !s.syncing && (0, c.openModal)(e => {
     let n = 0 === s.expire_behavior ? S.Z.Messages.REMOVE_SYNCED_ROLE : S.Z.Messages.KICK_FROM_SERVER;
-    return (0, i.jsx)(d.ConfirmModal, {
+    return (0, i.jsx)(c.ConfirmModal, {
       ...e,
       header: S.Z.Messages.DISABLE_INTEGRATION_TITLE,
       confirmText: n,
       cancelText: S.Z.Messages.CANCEL,
       onConfirm: () => v(s),
-      children: (0, i.jsx)(d.Text, {
+      children: (0, i.jsx)(c.Text, {
         variant: 'text-md/normal',
         children: s.type === O.ABu.YOUTUBE ? S.Z.Messages.DISABLE_INTEGRATION_YOUTUBE_BODY : S.Z.Messages.DISABLE_INTEGRATION_TWITCH_BODY
       })
@@ -119,7 +119,7 @@ k = a.useCallback(() => {
 } = a.useMemo(() => {
   let e, n;
   let t = null != s.role_id ? L[s.role_id] : null;
-  e = null != t ? (0, i.jsx)(d.Anchor, {
+  e = null != t ? (0, i.jsx)(c.Anchor, {
     onClick: k,
     children: t.name
   }) : S.Z.Messages.NONE;
@@ -160,7 +160,7 @@ Y = a.useMemo(() => {
   s.id
 ]), s.enabled && null != s.user)
 n = [{
-  icon: d.ClockIcon,
+  icon: c.ClockIcon,
   text: P ? S.Z.Messages.INTEGRATION_ADDED_DATE.format({
     timestamp: f.default.extractTimestamp(s.id)
   }) : S.Z.Messages.INTEGRATION_ADDED_USER_DATE.format({
@@ -190,7 +190,7 @@ n = [{
     s.enabled ? (0, i.jsx)(h.Z.Child, {
       shrink: 0,
       grow: 0,
-      children: (0, i.jsx)(p.Z, {
+      children: (0, i.jsx)(g.Z, {
         className: A.expandIcon,
         expanded: b && !j,
         'aria-hidden': !0
@@ -198,12 +198,12 @@ n = [{
     }) : (0, i.jsx)(h.Z.Child, {
       shrink: 0,
       grow: 0,
-      children: (0, i.jsx)(d.Button, {
-        size: d.Button.Sizes.SMALL,
-        color: d.Button.Colors.PRIMARY,
+      children: (0, i.jsx)(c.Button, {
+        size: c.Button.Sizes.SMALL,
+        color: c.Button.Colors.PRIMARY,
         onClick: B,
         disabled: j,
-        children: j ? (0, i.jsx)(g.Z, {
+        children: j ? (0, i.jsx)(p.Z, {
           width: 24,
           height: 24
         }) : (0, i.jsx)(i.Fragment, {
@@ -218,7 +218,7 @@ q = null;
 className: A.body,
 direction: h.Z.Direction.VERTICAL,
 children: [
-  (0, i.jsx)(d.FormDivider, {
+  (0, i.jsx)(c.FormDivider, {
     className: A.topDivider
   }),
   function(e) {
@@ -235,11 +235,11 @@ children: [
         (0, i.jsxs)(h.Z.Child, {
           basis: '50%',
           children: [
-            (0, i.jsx)(d.FormTitle, {
+            (0, i.jsx)(c.FormTitle, {
               className: R.marginBottom8,
               children: S.Z.Messages.FORM_LABEL_SYNCED_ROLE
             }),
-            (0, i.jsx)(d.Text, {
+            (0, i.jsx)(c.Text, {
               className: A.syncedRole,
               color: 'header-primary',
               variant: 'text-sm/normal',
@@ -250,7 +250,7 @@ children: [
         (0, i.jsxs)(h.Z.Child, {
           basis: '50%',
           children: [
-            (0, i.jsx)(d.FormTitle, {
+            (0, i.jsx)(c.FormTitle, {
               className: R.marginBottom8,
               children: t
             }),
@@ -260,25 +260,25 @@ children: [
                 (0, i.jsxs)(h.Z, {
                   direction: h.Z.Direction.VERTICAL,
                   children: [
-                    (0, i.jsx)(d.Text, {
+                    (0, i.jsx)(c.Text, {
                       color: 'header-primary',
                       variant: 'text-sm/normal',
                       children: a
                     }),
-                    (0, i.jsx)(d.Text, {
+                    (0, i.jsx)(c.Text, {
                       color: 'header-secondary',
                       variant: 'text-xs/normal',
                       children: s
                     })
                   ]
                 }),
-                (0, i.jsx)(d.Button, {
-                  size: d.Button.Sizes.SMALL,
-                  look: d.Button.Looks.FILLED,
-                  color: d.Button.Colors.PRIMARY,
+                (0, i.jsx)(c.Button, {
+                  size: c.Button.Sizes.SMALL,
+                  look: c.Button.Looks.FILLED,
+                  color: c.Button.Colors.PRIMARY,
                   disabled: n.syncing || n.revoked,
                   onClick: o,
-                  children: n.syncing ? (0, i.jsx)(g.Z, {
+                  children: n.syncing ? (0, i.jsx)(p.Z, {
                     width: 24,
                     height: 24
                   }) : (0, i.jsx)(i.Fragment, {
@@ -299,7 +299,7 @@ children: [
     roleLink: V,
     onSync: G
   }),
-  (0, i.jsx)(d.FormDivider, {
+  (0, i.jsx)(c.FormDivider, {
     className: A.midDivider
   }),
   function(e) {
@@ -314,11 +314,11 @@ children: [
         (0, i.jsxs)(h.Z.Child, {
           basis: '50%',
           children: [
-            (0, i.jsx)(d.FormTitle, {
+            (0, i.jsx)(c.FormTitle, {
               className: R.marginBottom8,
               children: t
             }),
-            (0, i.jsx)(d.SingleSelect, {
+            (0, i.jsx)(c.SingleSelect, {
               placeholder: t,
               value: ''.concat(n.expire_behavior),
               options: [{
@@ -338,11 +338,11 @@ children: [
         (0, i.jsxs)(h.Z.Child, {
           basis: '50%',
           children: [
-            (0, i.jsx)(d.FormTitle, {
+            (0, i.jsx)(c.FormTitle, {
               className: R.marginBottom8,
               children: S.Z.Messages.FORM_LABEL_EXPIRE_GRACE_PERIOD
             }),
-            (0, i.jsx)(d.SingleSelect, {
+            (0, i.jsx)(c.SingleSelect, {
               placeholder: S.Z.Messages.FORM_LABEL_EXPIRE_GRACE_PERIOD,
               maxVisibleItems: 5,
               value: ''.concat(n.expire_grace_period),
@@ -388,8 +388,8 @@ children: [
     return (0, i.jsxs)(h.Z, {
       direction: h.Z.Direction.VERTICAL,
       children: [
-        (0, i.jsx)(d.Checkbox, {
-          type: d.Checkbox.Types.INVERTED,
+        (0, i.jsx)(c.Checkbox, {
+          type: c.Checkbox.Types.INVERTED,
           className: l()(R.marginTop20, R.marginBottom8),
           value: n.enable_emoticons,
           disabled: n.syncing,
@@ -399,14 +399,14 @@ children: [
             } = e;
             return a(n.checked);
           },
-          children: (0, i.jsx)(d.FormText, {
+          children: (0, i.jsx)(c.FormText, {
             children: S.Z.Messages.ENABLE_TWITCH_EMOJI_SYNC
           })
         }),
         (0, i.jsx)(h.Z, {
           wrap: h.Z.Wrap.WRAP,
           className: A.__invalid_twitchEmojis,
-          children: t.map((e, n) => (0, i.jsx)(d.Tooltip, {
+          children: t.map((e, n) => (0, i.jsx)(c.Tooltip, {
             text: e.name,
             children: n => (0, i.jsx)('img', {
               alt: S.Z.Messages.IMG_ALT_EMOJI.format({
@@ -434,27 +434,27 @@ children: [
       });
     }
   }) : null,
-  (0, i.jsx)(d.FormDivider, {
+  (0, i.jsx)(c.FormDivider, {
     className: A.bottomDivider
   }),
   (0, i.jsx)(h.Z, {
-    children: (0, i.jsx)(d.Button, {
+    children: (0, i.jsx)(c.Button, {
       className: A.disableButton,
-      size: d.Button.Sizes.SMALL,
-      color: d.Button.Colors.RED,
-      look: d.Button.Looks.LINK,
+      size: c.Button.Sizes.SMALL,
+      color: c.Button.Colors.RED,
+      look: c.Button.Looks.LINK,
       onClick: y,
       children: S.Z.Messages.INTEGRATIONS_DISABLE
     })
   })
 ]
-  })), (0, i.jsx)(d.Card, {
+  })), (0, i.jsx)(c.Card, {
 editable: !0,
 className: A.card,
 children: (0, i.jsxs)(h.Z, {
   direction: h.Z.Direction.VERTICAL,
   children: [
-    s.enabled ? (0, i.jsx)(d.Clickable, {
+    s.enabled ? (0, i.jsx)(c.Clickable, {
       className: A.expandableHeader,
       'aria-expanded': b && !j,
       onClick: Z,

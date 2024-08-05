@@ -1,7 +1,7 @@
 n(47120);
 var i = n(445346),
-  s = n(570140),
-  a = n(513418),
+  a = n(570140),
+  s = n(513418),
   r = n(710845),
   l = n(57132),
   o = n(592125),
@@ -79,13 +79,13 @@ if (!(0, l.cn)())
   return;
 let n = null !== (t = e.guildId) && void 0 !== t ? t : null,
   i = e.message.channel_id,
-  s = e.message.id;
-if (null == i || null == s)
+  a = e.message.id;
+if (null == i || null == a)
   return !1;
-let a = this.data(n);
-if ((null == a ? void 0 : a.messageId(i)) !== s)
+let s = this.data(n);
+if ((null == s ? void 0 : s.messageId(i)) !== a)
   return !1;
-null == a || a.update(e.message);
+null == s || s.update(e.message);
   }
   handleThreadListSync(e) {
 var t;
@@ -99,7 +99,7 @@ if (!(0, l.cn)())
 let t = o.Z.getBasicChannel(e.channelId);
 if (null != t) {
   var n;
-  (0, a.Z)(e.messages), this.data(t.guild_id).putNew(e.channelId, null !== (n = e.messages[0]) && void 0 !== n ? n : null, this.generation);
+  (0, s.Z)(e.messages), this.data(t.guild_id).putNew(e.channelId, null !== (n = e.messages[0]) && void 0 !== n ? n : null, this.generation);
 }
   }
   handleLocalMessagesLoaded(e) {
@@ -108,7 +108,7 @@ if (!(0, l.cn)())
 let t = o.Z.getBasicChannel(e.channelId);
 if (null != t) {
   var n;
-  (0, a.Z)(e.messages), this.data(t.guild_id).putNew(e.channelId, null !== (n = e.messages[0]) && void 0 !== n ? n : null, _);
+  (0, s.Z)(e.messages), this.data(t.guild_id).putNew(e.channelId, null !== (n = e.messages[0]) && void 0 !== n ? n : null, _);
 }
   }
   handleMessagePreviewsLoaded(e) {
@@ -132,7 +132,7 @@ t.localNeeded = !1;
 this.guilds.clear();
   }
   constructor() {
-super(s.Z, {
+super(a.Z, {
   CONNECTION_OPEN: e => this.handleConnectionOpen(e),
   GUILD_CREATE: e => this.handleGuildCreate(e),
   GUILD_DELETE: e => this.handleGuildDelete(e),

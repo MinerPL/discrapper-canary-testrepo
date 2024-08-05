@@ -1,13 +1,13 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   }
 });
 var r = n(358085),
   i = n(924557),
   a = n(65154);
 
-function o(e) {
+function s(e) {
   let {
 ignorePlatformRestriction: t
   } = i.NV.getCurrentConfig({

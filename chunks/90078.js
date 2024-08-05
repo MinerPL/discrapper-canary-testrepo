@@ -6,8 +6,8 @@ return c;
 var r = n(470079),
   i = n(234366),
   a = n(705942),
-  o = n(566833),
-  s = function() {},
+  s = n(566833),
+  o = function() {},
   l = function() {
 return Promise.resolve(null);
   },
@@ -57,7 +57,7 @@ g
   E,
   N
 ]),
-R = (0, o.D)(f || I, g, O),
+R = (0, s.D)(f || I, g, O),
 C = R.state,
 y = R.styles,
 D = R.forceUpdate,
@@ -73,7 +73,7 @@ b = r.useMemo(function() {
       style: y.arrow,
       ref: v
     },
-    forceUpdate: D || s,
+    forceUpdate: D || o,
     update: L || l
   };
 }, [

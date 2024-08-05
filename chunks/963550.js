@@ -1,18 +1,18 @@
-i.d(n, {
+t.d(n, {
   Z: function() {
-return a;
+return o;
   }
 });
-var t = i(735250);
-i(470079);
-var o = i(930282);
+var r = t(735250);
+t(470079);
+var i = t(930282);
 
-function a(e, n) {
+function o(e, n) {
   let {
-message: i
+message: t
   } = e;
-  return (0, t.jsx)(o.ZP, {
-message: i,
+  return (0, r.jsx)(i.ZP, {
+message: t,
 content: n
   });
 }

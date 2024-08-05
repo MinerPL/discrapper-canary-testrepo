@@ -1,6 +1,6 @@
 var r;
 r = 0,
-  function(e, t, r, i, a, o, s, l, u, c, d, _, E, f, h, p, m, I, T, g, S, A, N, v, O, R, C, y, D, L, b, M, P, U, w, x, G, k, B, F, V, H, Z, Y, j, W, K, z, q, Q, X, $, J, ee, et, en, er, ei, ea, eo, es, el, eu) {
+  function(e, t, r, i, a, s, o, l, u, c, d, _, E, f, h, p, m, I, T, g, S, A, N, v, O, R, C, y, D, L, b, M, P, U, w, x, G, k, B, F, V, H, Z, Y, j, W, K, z, q, Q, X, $, J, ee, et, en, er, ei, ea, es, eo, el, eu) {
 
 function ec(e) {
   return e && 'object' == typeof e && 'default' in e ? e : {
@@ -10,8 +10,8 @@ function ec(e) {
 var ed = ec(t),
   e_ = ec(i),
   eE = ec(a),
-  ef = ec(o),
-  eh = ec(s),
+  ef = ec(s),
+  eh = ec(o),
   ep = ec(l),
   em = ec(u),
   eI = ec(c),
@@ -59,8 +59,8 @@ var ed = ec(t),
   e6 = ec(er),
   e7 = ec(ei),
   e8 = ec(ea),
-  e9 = ec(eo),
-  te = ec(es),
+  e9 = ec(es),
+  te = ec(eo),
   tt = ec(eu);
 
 function tn(e, t) {
@@ -99,15 +99,15 @@ function ta(e, t) {
     throw TypeError('Cannot call a class as a function');
 }
 
-function to(e, t) {
+function ts(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
     r.enumerable = r.enumerable || !1, r.configurable = !0, 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
   }
 }
 
-function ts(e, t, n) {
-  return t && to(e.prototype, t), n && to(e, n), e;
+function to(e, t, n) {
+  return t && ts(e.prototype, t), n && ts(e, n), e;
 }
 
 function tl(e, t, n) {
@@ -370,7 +370,7 @@ function tk(e) {
     r = t.maxDate,
     i = t.excludeDates,
     a = t.includeDates,
-    o = t.filterDate;
+    s = t.filterDate;
   return tF(e, {
     minDate: n,
     maxDate: r
@@ -378,7 +378,7 @@ function tk(e) {
     return tb(e, t);
   }) || a && !a.some(function(t) {
     return tb(e, t);
-  }) || o && !o(tg(e)) || !1;
+  }) || s && !s(tg(e)) || !1;
 }
 
 function tB(e) {
@@ -416,12 +416,12 @@ function tZ(e, t) {
   if (!n || !r)
     throw Error('Both minTime and maxTime props required');
   var i, a = tg(),
-    o = ek.default(eG.default(a, eC.default(e)), ey.default(e)),
-    s = ek.default(eG.default(a, eC.default(n)), ey.default(n)),
+    s = ek.default(eG.default(a, eC.default(e)), ey.default(e)),
+    o = ek.default(eG.default(a, eC.default(n)), ey.default(n)),
     l = ek.default(eG.default(a, eC.default(r)), ey.default(r));
   try {
-    i = !e6.default(o, {
-      start: s,
+    i = !e6.default(s, {
+      start: o,
       end: l
     });
   } catch (e) {
@@ -498,9 +498,9 @@ function tQ() {
   for (var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [], t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'react-datepicker__day--highlighted', n = new Map(), r = 0, i = e.length; r < i; r++) {
     var a = e[r];
     if (eE.default(a)) {
-      var o = tA(a, 'MM.dd.yyyy'),
-        s = n.get(o) || [];
-      s.includes(t) || (s.push(t), n.set(o, s));
+      var s = tA(a, 'MM.dd.yyyy'),
+        o = n.get(s) || [];
+      o.includes(t) || (o.push(t), n.set(s, o));
     } else if ('object' === ti(a)) {
       var l = Object.keys(a),
         u = l[0],
@@ -584,15 +584,15 @@ var tJ = function(e) {
       return r.state = {
         yearsList: function(e, t, n, r) {
           for (var i = [], a = 0; a < 2 * t + 1; a++) {
-            var o = e + t - a,
-              s = !0;
-            n && (s = eU.default(n) <= o), r && s && (s = eU.default(r) >= o), s && i.push(o);
+            var s = e + t - a,
+              o = !0;
+            n && (o = eU.default(n) <= s), r && o && (o = eU.default(r) >= s), o && i.push(s);
           }
           return i;
         }(r.props.year, i || (a ? 10 : 5), r.props.minDate, r.props.maxDate)
       }, r;
     }
-    return ts(n, [{
+    return to(n, [{
       key: 'render',
       value: function() {
         var e = e_.default({
@@ -678,7 +678,7 @@ var tJ = function(e) {
         e.props.setOpen && e.props.setOpen(!0);
       }), e;
     }
-    return ts(n, [{
+    return to(n, [{
       key: 'render',
       value: function() {
         var e;
@@ -720,7 +720,7 @@ var tJ = function(e) {
         return e.props.onCancel();
       }), e;
     }
-    return ts(n, [{
+    return to(n, [{
       key: 'render',
       value: function() {
         return ed.default.createElement('div', {
@@ -789,7 +789,7 @@ var tJ = function(e) {
         });
       }), e;
     }
-    return ts(n, [{
+    return to(n, [{
       key: 'render',
       value: function() {
         var e, t = this,
@@ -854,7 +854,7 @@ var tJ = function(e) {
         }(r.props.minDate, r.props.maxDate)
       }, r;
     }
-    return ts(n, [{
+    return to(n, [{
       key: 'render',
       value: function() {
         var e = e_.default({
@@ -938,7 +938,7 @@ var tJ = function(e) {
         });
       }), e;
     }
-    return ts(n, [{
+    return to(n, [{
       key: 'render',
       value: function() {
         var e;
@@ -997,11 +997,11 @@ var tJ = function(e) {
           r = n.day,
           i = n.selectsStart,
           a = n.selectsEnd,
-          o = n.selectsRange,
-          s = n.startDate,
+          s = n.selectsRange,
+          o = n.startDate,
           l = n.endDate,
           u = null !== (t = e.props.selectingDate) && void 0 !== t ? t : e.props.preSelection;
-        return !(!(i || a || o) || !u || e.isDisabled()) && (i && l && (e5.default(u, l) || tM(u, l)) ? tP(r, u, l) : (a && s && (e4.default(u, s) || tM(u, s)) || !(!o || !s || l || !e4.default(u, s) && !tM(u, s))) && tP(r, s, u));
+        return !(!(i || a || s) || !u || e.isDisabled()) && (i && l && (e5.default(u, l) || tM(u, l)) ? tP(r, u, l) : (a && o && (e4.default(u, o) || tM(u, o)) || !(!s || !o || l || !e4.default(u, o) && !tM(u, o))) && tP(r, o, u));
       }), tl(tE(e), 'isSelectingRangeStart', function() {
         if (!e.isInSelectingRange())
           return !1;
@@ -1009,8 +1009,8 @@ var tJ = function(e) {
           r = n.day,
           i = n.startDate,
           a = n.selectsStart,
-          o = null !== (t = e.props.selectingDate) && void 0 !== t ? t : e.props.preSelection;
-        return tb(r, a ? o : i);
+          s = null !== (t = e.props.selectingDate) && void 0 !== t ? t : e.props.preSelection;
+        return tb(r, a ? s : i);
       }), tl(tE(e), 'isSelectingRangeEnd', function() {
         if (!e.isInSelectingRange())
           return !1;
@@ -1018,8 +1018,8 @@ var tJ = function(e) {
           r = n.day,
           i = n.endDate,
           a = n.selectsEnd,
-          o = null !== (t = e.props.selectingDate) && void 0 !== t ? t : e.props.preSelection;
-        return tb(r, a ? o : i);
+          s = null !== (t = e.props.selectingDate) && void 0 !== t ? t : e.props.preSelection;
+        return tb(r, a ? s : i);
       }), tl(tE(e), 'isRangeStart', function() {
         var t = e.props,
           n = t.day,
@@ -1087,7 +1087,7 @@ var tJ = function(e) {
         }, e.renderDayContents());
       }), e;
     }
-    return ts(n, [{
+    return to(n, [{
         key: 'componentDidMount',
         value: function() {
           this.handleFocusDay();
@@ -1114,7 +1114,7 @@ var tJ = function(e) {
         e.props.onClick && e.props.onClick(t);
       }), e;
     }
-    return ts(n, [{
+    return to(n, [{
       key: 'render',
       value: function() {
         var e = this.props,
@@ -1212,7 +1212,7 @@ var tJ = function(e) {
         }));
       }), e;
     }
-    return ts(n, [{
+    return to(n, [{
       key: 'render',
       value: function() {
         return ed.default.createElement('div', {
@@ -1234,8 +1234,8 @@ var tJ = function(e) {
 
     function n() {
       ta(this, n);
-      for (var e, r, i = arguments.length, a = Array(i), o = 0; o < i; o++)
-        a[o] = arguments[o];
+      for (var e, r, i = arguments.length, a = Array(i), s = 0; s < i; s++)
+        a[s] = arguments[s];
       return tl(tE(e = t.call.apply(t, [this].concat(a))), 'MONTH_REFS', (function(e) {
         if (Array.isArray(e))
           return th(e);
@@ -1337,9 +1337,9 @@ var tJ = function(e) {
             monthShowsDuplicateDaysStart: e.props.monthShowsDuplicateDaysStart
           })), !i;) {
           r++, a = eT.default(a, 1);
-          var o = n && r >= 6,
-            s = !n && !e.isWeekInMonth(a);
-          if (o || s) {
+          var s = n && r >= 6,
+            o = !n && !e.isWeekInMonth(a);
+          if (s || o) {
             if (!e.props.peekNextMonth)
               break;
             i = !0;
@@ -1367,7 +1367,7 @@ var tJ = function(e) {
         var r;
         e.handleDayClick((r = eF.default(e.props.day, n), eQ.default(r)), t);
       }), tl(tE(e), 'getMonthClassNames', function(t) {
-        var n, r, i, a, o, s, l, u, c, d = e.props,
+        var n, r, i, a, s, o, l, u, c, d = e.props,
           _ = d.day,
           E = d.startDate,
           f = d.endDate,
@@ -1384,7 +1384,7 @@ var tJ = function(e) {
               r = t.maxDate,
               i = t.excludeDates,
               a = t.includeDates,
-              o = t.filterDate;
+              s = t.filterDate;
             return tF(e, {
               minDate: n,
               maxDate: r
@@ -1392,11 +1392,11 @@ var tJ = function(e) {
               return tD(e, t);
             }) || a && !a.some(function(t) {
               return tD(e, t);
-            }) || o && !o(tg(e)) || !1;
+            }) || s && !s(tg(e)) || !1;
           }(eB.default(_, t), e.props),
           'react-datepicker__month--selected': eM.default(_) === t && eU.default(_) === eU.default(h),
           'react-datepicker__month-text--keyboard-selected': eM.default(I) === t,
-          'react-datepicker__month--in-range': (n = E, r = f, i = t, a = _, o = eU.default(n), s = eM.default(n), l = eU.default(r), u = eM.default(r), c = eU.default(a), o === l && o === c ? s <= i && i <= u : o < l ? c === o && s <= i || c === l && u >= i || c < l && c > o : void 0),
+          'react-datepicker__month--in-range': (n = E, r = f, i = t, a = _, s = eU.default(n), o = eM.default(n), l = eU.default(r), u = eM.default(r), c = eU.default(a), s === l && s === c ? o <= i && i <= u : s < l ? c === s && o <= i || c === l && u >= i || c < l && c > s : void 0),
           'react-datepicker__month--range-start': e.isRangeStartMonth(t),
           'react-datepicker__month--range-end': e.isRangeEndMonth(t)
         });
@@ -1408,11 +1408,11 @@ var tJ = function(e) {
           r = n.ariaLabelPrefix,
           i = n.disabledDayAriaLabelPrefix,
           a = n.day,
-          o = eB.default(a, t),
-          s = e.isDisabled(o) || e.isExcluded(o) ? void 0 === i ? 'Not available' : i : void 0 === r ? 'Choose' : r;
-        return ''.concat(s, ' ').concat(tA(o, 'MMMM yyyy'));
+          s = eB.default(a, t),
+          o = e.isDisabled(s) || e.isExcluded(s) ? void 0 === i ? 'Not available' : i : void 0 === r ? 'Choose' : r;
+        return ''.concat(o, ' ').concat(tA(s, 'MMMM yyyy'));
       }), tl(tE(e), 'getQuarterClassNames', function(t) {
-        var n, r, i, a, o, s, l, u, c, d = e.props,
+        var n, r, i, a, s, o, l, u, c, d = e.props,
           _ = d.day,
           E = d.startDate,
           f = d.endDate,
@@ -1426,7 +1426,7 @@ var tJ = function(e) {
               r = t.maxDate,
               i = t.excludeDates,
               a = t.includeDates,
-              o = t.filterDate;
+              s = t.filterDate;
             return tF(e, {
               minDate: n,
               maxDate: r
@@ -1434,10 +1434,10 @@ var tJ = function(e) {
               return tL(e, t);
             }) || a && !a.some(function(t) {
               return tL(e, t);
-            }) || o && !o(tg(e)) || !1;
+            }) || s && !s(tg(e)) || !1;
           }(eF.default(_, t), e.props),
           'react-datepicker__quarter--selected': eP.default(_) === t && eU.default(_) === eU.default(h),
-          'react-datepicker__quarter--in-range': (n = E, r = f, i = t, a = _, o = eU.default(n), s = eP.default(n), l = eU.default(r), u = eP.default(r), c = eU.default(a), o === l && o === c ? s <= i && i <= u : o < l ? c === o && s <= i || c === l && u >= i || c < l && c > o : void 0),
+          'react-datepicker__quarter--in-range': (n = E, r = f, i = t, a = _, s = eU.default(n), o = eP.default(n), l = eU.default(r), u = eP.default(r), c = eU.default(a), s === l && s === c ? o <= i && i <= u : s < l ? c === s && o <= i || c === l && u >= i || c < l && c > s : void 0),
           'react-datepicker__quarter--range-start': e.isRangeStartQuarter(t),
           'react-datepicker__quarter--range-end': e.isRangeEndQuarter(t)
         });
@@ -1558,17 +1558,17 @@ var tJ = function(e) {
           r = t.selectsStart,
           i = t.selectsEnd,
           a = t.showMonthYearPicker,
-          o = t.showQuarterYearPicker;
+          s = t.showQuarterYearPicker;
         return e_.default('react-datepicker__month', {
           'react-datepicker__month--selecting-range': n && (r || i)
         }, {
           'react-datepicker__monthPicker': a
         }, {
-          'react-datepicker__quarterPicker': o
+          'react-datepicker__quarterPicker': s
         });
       }), e;
     }
-    return ts(n, [{
+    return to(n, [{
       key: 'render',
       value: function() {
         var e = this.props,
@@ -1606,19 +1606,19 @@ var tJ = function(e) {
       }), tl(tE(e), 'handleOnKeyDown', function(t, n) {
         ' ' === t.key && (t.preventDefault(), t.key = 'Enter'), 'Enter' === t.key && e.handleClick(n), e.props.handleOnKeyDown(t);
       }), tl(tE(e), 'renderTimes', function() {
-        for (var t, n = [], r = e.props.format ? e.props.format : 'p', i = e.props.intervals, a = (t = tg(e.props.selected), eK.default(t)), o = 1440 / i, s = e.props.injectTimes && e.props.injectTimes.sort(function(e, t) {
+        for (var t, n = [], r = e.props.format ? e.props.format : 'p', i = e.props.intervals, a = (t = tg(e.props.selected), eK.default(t)), s = 1440 / i, o = e.props.injectTimes && e.props.injectTimes.sort(function(e, t) {
             return e - t;
-          }), l = e.props.selected || e.props.openToDate || tg(), u = ey.default(l), c = eC.default(l), d = ek.default(eG.default(a, c), u), _ = 0; _ < o; _++) {
+          }), l = e.props.selected || e.props.openToDate || tg(), u = ey.default(l), c = eC.default(l), d = ek.default(eG.default(a, c), u), _ = 0; _ < s; _++) {
           var E = ep.default(a, _ * i);
-          if (n.push(E), s) {
+          if (n.push(E), o) {
             var f = function(e, t, n, r, i) {
-              for (var a = i.length, o = [], s = 0; s < a; s++) {
-                var l = ep.default(em.default(e, ey.default(i[s])), eC.default(i[s])),
+              for (var a = i.length, s = [], o = 0; o < a; o++) {
+                var l = ep.default(em.default(e, ey.default(i[o])), eC.default(i[o])),
                   u = ep.default(e, (n + 1) * r);
-                e4.default(l, t) && e5.default(l, u) && o.push(i[s]);
+                e4.default(l, t) && e5.default(l, u) && s.push(i[o]);
               }
-              return o;
-            }(a, E, _, i, s);
+              return s;
+            }(a, E, _, i, o);
             n = n.concat(f);
           }
         }
@@ -1638,7 +1638,7 @@ var tJ = function(e) {
         });
       }), e;
     }
-    return ts(n, [{
+    return to(n, [{
         key: 'componentDidMount',
         value: function() {
           this.list.scrollTop = n.calcCenterPosition(this.props.monthRef ? this.props.monthRef.clientHeight - this.header.clientHeight : this.list.clientHeight, this.centerLi), this.props.monthRef && this.header && this.setState({
@@ -1728,10 +1728,10 @@ var nr = function(e) {
         });
       }), r;
     }
-    return ts(n, [{
+    return to(n, [{
       key: 'render',
       value: function() {
-        for (var e = this, t = [], n = this.props, r = t$(n.date, n.yearItemNumber), i = r.startPeriod, a = r.endPeriod, o = function(n) {
+        for (var e = this, t = [], n = this.props, r = t$(n.date, n.yearItemNumber), i = r.startPeriod, a = r.endPeriod, s = function(n) {
             t.push(ed.default.createElement('div', {
               onClick: function(t) {
                 e.onYearClick(t, n);
@@ -1739,8 +1739,8 @@ var nr = function(e) {
               className: e.getYearClassNames(n),
               key: n
             }, n));
-          }, s = i; s <= a; s++)
-          o(s);
+          }, o = i; o <= a; o++)
+          s(o);
         return ed.default.createElement('div', {
           className: 'react-datepicker__year'
         }, ed.default.createElement('div', {
@@ -1786,7 +1786,7 @@ var nr = function(e) {
         time: r.props.timeString
       }, r;
     }
-    return ts(n, [{
+    return to(n, [{
       key: 'render',
       value: function() {
         return ed.default.createElement('div', {
@@ -1820,12 +1820,12 @@ function na(e) {
     className: 'react-datepicker__triangle'
   }, void 0 === i ? {} : i)), n);
 }
-var no = [
+var ns = [
     'react-datepicker__year-select',
     'react-datepicker__month-select',
     'react-datepicker__month-year-select'
   ],
-  ns = function(e) {
+  no = function(e) {
     tc(n, e);
     var t = tf(n);
 
@@ -1838,7 +1838,7 @@ var no = [
       }), tl(tE(r), 'handleDropdownFocus', function(e) {
         (function() {
           var e = ((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).className || '').split(/\s+/);
-          return no.some(function(t) {
+          return ns.some(function(t) {
             return e.indexOf(t) >= 0;
           });
         }(e.target) && r.props.onDropdownFocus());
@@ -1848,9 +1848,9 @@ var no = [
           n = e.selected,
           i = e.openToDate,
           a = tz(r.props),
-          o = tq(r.props),
-          s = tg();
-        return i || n || t || (a && e5.default(s, a) ? a : o && e4.default(s, o) ? o : s);
+          s = tq(r.props),
+          o = tg();
+        return i || n || t || (a && e5.default(o, a) ? a : s && e4.default(o, s) ? s : o);
       }), tl(tE(r), 'increaseMonth', function() {
         r.setState(function(e) {
           var t = e.date;
@@ -1962,8 +1962,8 @@ var no = [
                   r = t.yearItemNumber,
                   i = void 0 === r ? 12 : r,
                   a = t$(tC(eO.default(e, i)), i).endPeriod,
-                  o = n && eU.default(n);
-                return o && o > a || !1;
+                  s = n && eU.default(n);
+                return s && s > a || !1;
               }(r.state.date, r.props);
               break;
             default:
@@ -1978,13 +1978,13 @@ var no = [
             (r.props.showMonthYearPicker || r.props.showQuarterYearPicker || r.props.showYearPicker) && (n = r.decreaseYear), e && r.props.showDisabledMonthNavigation && (t.push('react-datepicker__navigation--previous--disabled'), n = null);
             var i = r.props.showMonthYearPicker || r.props.showQuarterYearPicker || r.props.showYearPicker,
               a = r.props,
-              o = a.previousMonthAriaLabel,
-              s = a.previousYearAriaLabel;
+              s = a.previousMonthAriaLabel,
+              o = a.previousYearAriaLabel;
             return ed.default.createElement('button', {
               type: 'button',
               className: t.join(' '),
               onClick: n,
-              'aria-label': i ? void 0 === s ? 'Previous Year' : s : void 0 === o ? 'Previous Month' : o
+              'aria-label': i ? void 0 === o ? 'Previous Year' : o : void 0 === s ? 'Previous Month' : s
             }, ed.default.createElement('span', {
               className: 'react-datepicker__navigation-icon react-datepicker__navigation-icon--previous'
             }, i ? r.props.previousYearButtonLabel : r.props.previousMonthButtonLabel));
@@ -2013,8 +2013,8 @@ var no = [
                   r = t.yearItemNumber,
                   i = void 0 === r ? 12 : r,
                   a = t$(eS.default(e, i), i).startPeriod,
-                  o = n && eU.default(n);
-                return o && o < a || !1;
+                  s = n && eU.default(n);
+                return s && s < a || !1;
               }(r.state.date, r.props);
               break;
             default:
@@ -2030,13 +2030,13 @@ var no = [
             (r.props.showMonthYearPicker || r.props.showQuarterYearPicker || r.props.showYearPicker) && (n = r.increaseYear), e && r.props.showDisabledMonthNavigation && (t.push('react-datepicker__navigation--next--disabled'), n = null);
             var i = r.props.showMonthYearPicker || r.props.showQuarterYearPicker || r.props.showYearPicker,
               a = r.props,
-              o = a.nextMonthAriaLabel,
-              s = a.nextYearAriaLabel;
+              s = a.nextMonthAriaLabel,
+              o = a.nextYearAriaLabel;
             return ed.default.createElement('button', {
               type: 'button',
               className: t.join(' '),
               onClick: n,
-              'aria-label': i ? void 0 === s ? 'Next Year' : s : void 0 === o ? 'Next Month' : o
+              'aria-label': i ? void 0 === o ? 'Next Year' : o : void 0 === s ? 'Next Month' : s
             }, ed.default.createElement('span', {
               className: 'react-datepicker__navigation-icon react-datepicker__navigation-icon--next'
             }, i ? r.props.nextYearButtonLabel : r.props.nextMonthButtonLabel));
@@ -2114,8 +2114,8 @@ var no = [
           return null;
         var i = tY(r.state.date, r.props),
           a = tj(r.state.date, r.props),
-          o = tW(r.state.date, r.props),
-          s = tK(r.state.date, r.props),
+          s = tW(r.state.date, r.props),
+          o = tK(r.state.date, r.props),
           l = !r.props.showMonthYearPicker && !r.props.showQuarterYearPicker && !r.props.showYearPicker;
         return ed.default.createElement('div', {
           className: 'react-datepicker__header react-datepicker__header--custom',
@@ -2131,8 +2131,8 @@ var no = [
           increaseYear: r.increaseYear,
           prevMonthButtonDisabled: i,
           nextMonthButtonDisabled: a,
-          prevYearButtonDisabled: o,
-          nextYearButtonDisabled: s
+          prevYearButtonDisabled: s,
+          nextYearButtonDisabled: o
         })), l && ed.default.createElement('div', {
           className: 'react-datepicker__day-names'
         }, r.header(t)));
@@ -2142,10 +2142,10 @@ var no = [
           n = t.showYearPicker,
           i = t$(e, t.yearItemNumber),
           a = i.startPeriod,
-          o = i.endPeriod;
+          s = i.endPeriod;
         return ed.default.createElement('div', {
           className: 'react-datepicker__header react-datepicker-year-header'
-        }, n ? ''.concat(a, ' - ').concat(o) : eU.default(e));
+        }, n ? ''.concat(a, ' - ').concat(s) : eU.default(e));
       }), tl(tE(r), 'renderHeader', function(e) {
         switch (!0) {
           case void 0 !== r.props.renderCustomHeader:
@@ -2159,25 +2159,25 @@ var no = [
         if (!r.props.showTimeSelectOnly && !r.props.showYearPicker) {
           for (var e = [], t = r.props.showPreviousMonths ? r.props.monthsShown - 1 : 0, n = ev.default(r.state.date, t), i = 0; i < r.props.monthsShown; ++i) {
             var a = i - r.props.monthSelectedIn,
-              o = eg.default(n, a),
-              s = 'month-'.concat(i),
+              s = eg.default(n, a),
+              o = 'month-'.concat(i),
               l = i < r.props.monthsShown - 1,
               u = i > 0;
             e.push(ed.default.createElement('div', {
-              key: s,
+              key: o,
               ref: function(e) {
                 r.monthContainer = e;
               },
               className: 'react-datepicker__month-container'
             }, r.renderHeader({
-              monthDate: o,
+              monthDate: s,
               i: i
             }), ed.default.createElement(nt, {
               chooseDayAriaLabelPrefix: r.props.chooseDayAriaLabelPrefix,
               disabledDayAriaLabelPrefix: r.props.disabledDayAriaLabelPrefix,
               weekAriaLabelPrefix: r.props.weekAriaLabelPrefix,
               onChange: r.changeMonthYear,
-              day: o,
+              day: s,
               dayClassName: r.props.dayClassName,
               calendarStartDay: r.props.calendarStartDay,
               monthClassName: r.props.monthClassName,
@@ -2278,7 +2278,7 @@ var no = [
         monthContainer: null
       }, r;
     }
-    return ts(n, [{
+    return to(n, [{
         key: 'componentDidMount',
         value: function() {
           this.props.showTimeSelect && (this.assignMonthContainer = void this.setState({
@@ -2349,7 +2349,7 @@ var no = [
         t && t.length > 1 && t[0].focus();
       }), r.tabLoopRef = ed.default.createRef(), r;
     }
-    return ts(n, [{
+    return to(n, [{
       key: 'render',
       value: function() {
         return this.props.enableTabLoop ? ed.default.createElement('div', {
@@ -2382,7 +2382,7 @@ var no = [
       var r;
       return ta(this, n), (r = t.call(this, e)).el = document.createElement('div'), r;
     }
-    return ts(n, [{
+    return to(n, [{
         key: 'componentDidMount',
         value: function() {
           this.portalRoot = document.getElementById(this.props.portalId), this.portalRoot || (this.portalRoot = document.createElement('div'), this.portalRoot.setAttribute('id', this.props.portalId), document.body.appendChild(this.portalRoot)), this.portalRoot.appendChild(this.el);
@@ -2409,7 +2409,7 @@ var no = [
     function n() {
       return ta(this, n), t.apply(this, arguments);
     }
-    return ts(n, [{
+    return to(n, [{
       key: 'render',
       value: function() {
         var e, t = this.props,
@@ -2417,8 +2417,8 @@ var no = [
           r = t.wrapperClassName,
           i = t.hidePopper,
           a = t.popperComponent,
-          o = t.popperModifiers,
-          s = t.popperPlacement,
+          s = t.popperModifiers,
+          o = t.popperPlacement,
           l = t.popperProps,
           u = t.targetComponent,
           c = t.enableTabLoop,
@@ -2427,8 +2427,8 @@ var no = [
         if (!i) {
           var E = e_.default('react-datepicker-popper', n);
           e = ed.default.createElement(el.Popper, tu({
-            modifiers: o,
-            placement: s
+            modifiers: s,
+            placement: o
           }, l), function(e) {
             var t = e.ref,
               n = e.style,
@@ -2474,7 +2474,7 @@ var no = [
     }]), n;
   }(ed.default.Component),
   n_ = 'react-datepicker-ignore-onclickoutside',
-  nE = te.default(ns),
+  nE = te.default(no),
   nf = 'Date input not valid.',
   nh = function(e) {
     tc(n, e);
@@ -2553,21 +2553,21 @@ var no = [
             inputValue: i.target.value,
             lastPreSelectChange: np
           });
-          var a, o, s, l, u, c, d, _, E = (a = i.target.value, o = r.props.dateFormat, s = r.props.locale, l = r.props.strictParsing, u = r.props.minDate, c = null, d = tw(s) || tw(tU()), _ = !0, Array.isArray(o) ? (o.forEach(function(e) {
+          var a, s, o, l, u, c, d, _, E = (a = i.target.value, s = r.props.dateFormat, o = r.props.locale, l = r.props.strictParsing, u = r.props.minDate, c = null, d = tw(o) || tw(tU()), _ = !0, Array.isArray(s) ? (s.forEach(function(e) {
             var t = e8.default(a, e, new Date(), {
               locale: d
             });
             l && (_ = tS(t, u) && a === eh.default(t, e, {
               awareOfUnicodeTokens: !0
             })), tS(t, u) && _ && (c = t);
-          }), c) : (c = e8.default(a, o, new Date(), {
+          }), c) : (c = e8.default(a, s, new Date(), {
             locale: d
-          }), l ? _ = tS(c) && a === eh.default(c, o, {
+          }), l ? _ = tS(c) && a === eh.default(c, s, {
             awareOfUnicodeTokens: !0
-          }) : tS(c) || (o = o.match(tT).map(function(e) {
+          }) : tS(c) || (s = s.match(tT).map(function(e) {
             var t = e[0];
             return 'p' === t || 'P' === t ? d ? (0, tI[t])(e, d.formatLong) : t : e;
-          }).join(''), a.length > 0 && (c = e8.default(a, o.slice(0, a.length), new Date())), tS(c) || (c = new Date(a))), tS(c) && _ ? c : null));
+          }).join(''), a.length > 0 && (c = e8.default(a, s.slice(0, a.length), new Date())), tS(c) || (c = new Date(a))), tS(c) && _ ? c : null));
           !E && i.target.value || r.setSelected(E, i, !0);
         }
       }), tl(tE(r), 'handleSelect', function(e, t, n) {
@@ -2585,17 +2585,17 @@ var no = [
           r.props.selectsRange || r.setOpen(!1);
           var i = r.props,
             a = i.startDate,
-            o = i.endDate;
-          !a || o || e5.default(e, a) || r.setOpen(!1);
+            s = i.endDate;
+          !a || s || e5.default(e, a) || r.setOpen(!1);
         }
       }), tl(tE(r), 'setSelected', function(e, t, n, i) {
         var a = e;
         if (null === a || !tk(a, r.props)) {
-          var o = r.props,
-            s = o.onChange,
-            l = o.selectsRange,
-            u = o.startDate,
-            c = o.endDate;
+          var s = r.props,
+            o = s.onChange,
+            l = s.selectsRange,
+            u = s.startDate,
+            c = s.endDate;
           if (!tM(r.props.selected, a) || r.props.allowSameDay || l) {
             if (null !== a && (!r.props.selected || n && (r.props.showTimeSelect || r.props.showTimeSelectOnly || r.props.showTimeInput) || (a = tv(a, {
                 hour: ey.default(r.props.selected),
@@ -2608,21 +2608,21 @@ var no = [
               })), l) {
               var d = u && !c,
                 _ = u && c;
-              u || c ? d && s(e5.default(a, u) ? [
+              u || c ? d && o(e5.default(a, u) ? [
                 a,
                 null
               ] : [
                 u,
                 a
-              ], t) : s([
+              ], t) : o([
                 a,
                 null
-              ], t), _ && s([
+              ], t), _ && o([
                 a,
                 null
               ], t);
             } else
-              s(a, t);
+              o(a, t);
           }
           n || (r.props.onSelect(a, t), r.setState({
             inputValue: null
@@ -2637,11 +2637,11 @@ var no = [
           if (t && n)
             i = tP(e, r.props.minDate, r.props.maxDate);
           else if (t) {
-            var o = eK.default(r.props.minDate);
-            i = e4.default(e, o) || tM(a, o);
+            var s = eK.default(r.props.minDate);
+            i = e4.default(e, s) || tM(a, s);
           } else if (n) {
-            var s = e$.default(r.props.maxDate);
-            i = e5.default(e, s) || tM(a, s);
+            var o = e$.default(r.props.maxDate);
+            i = e5.default(e, o) || tM(a, o);
           }
         }
         i && r.setState({
@@ -2725,10 +2725,10 @@ var no = [
               lastPreSelectChange: nm
             }), r.props.adjustDateOnChange && r.setSelected(t), r.setPreSelection(t), r.props.inline) {
             var a = eM.default(i),
-              o = eM.default(t),
-              s = eU.default(i),
+              s = eM.default(t),
+              o = eU.default(i),
               l = eU.default(t);
-            a !== o || s !== l ? r.setState({
+            a !== s || o !== l ? r.setState({
               shouldFocusDayInline: !0
             }) : r.setState({
               shouldFocusDayInline: !1
@@ -2882,20 +2882,20 @@ var no = [
           n = e.selected,
           i = e.startDate,
           a = e.endDate,
-          o = e.clearButtonTitle,
-          s = e.clearButtonClassName,
+          s = e.clearButtonTitle,
+          o = e.clearButtonClassName,
           l = e.ariaLabelClose;
         return t && (null != n || null != i || null != a) ? ed.default.createElement('button', {
           type: 'button',
-          className: 'react-datepicker__close-icon '.concat(void 0 === s ? '' : s).trim(),
+          className: 'react-datepicker__close-icon '.concat(void 0 === o ? '' : o).trim(),
           'aria-label': void 0 === l ? 'Close' : l,
           onClick: r.onClearClick,
-          title: o,
+          title: s,
           tabIndex: -1
         }) : null;
       }), r.state = r.calcInitialState(), r;
     }
-    return ts(n, [{
+    return to(n, [{
         key: 'componentDidMount',
         value: function() {
           window.addEventListener('scroll', this.onScroll, !0);

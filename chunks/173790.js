@@ -1,99 +1,102 @@
 t.d(n, {
   Z: function() {
-return C;
+return I;
   }
 });
 var i = t(735250),
-  l = t(470079),
-  a = t(218061),
+  a = t(470079),
+  l = t(442837),
+  o = t(218061),
   r = t(481060),
   s = t(361213),
-  o = t(778569),
-  c = t(213459),
-  u = t(835473),
-  d = t(783097),
-  m = t(753972),
-  p = t(387658),
-  _ = t(536650),
-  E = t(675993),
-  A = t(689079),
-  f = t(689938),
-  h = t(132439),
-  N = t(413097);
+  c = t(778569),
+  u = t(213459),
+  d = t(835473),
+  m = t(541099),
+  p = t(827498),
+  _ = t(783097),
+  C = t(753972),
+  f = t(387658),
+  h = t(536650),
+  A = t(675993),
+  E = t(689079),
+  N = t(689938),
+  v = t(132439),
+  x = t(413097);
 
-function C(e) {
+function I(e) {
   var n;
   let {
 channel: t,
 application: s,
-sectionName: o,
-installOnDemand: C
-  } = e, I = null !== (n = (0, u.q)(s.id === A.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s, P = (0, d.ye)({
-application: I
-  }) ? v : E.Z, x = l.useRef(null), {
+sectionName: c,
+installOnDemand: I
+  } = e, P = (0, l.e7)([m.Z], () => m.Z.entrypoint()), S = null !== (n = (0, d.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s, L = (0, _.ye)({
+application: S
+  }) ? g : A.Z, R = a.useRef(null), {
 iconURL: T,
-name: g
-  } = l.useMemo(() => (0, d.sl)(I, {
-fakeAppIconURL: N,
+name: b
+  } = a.useMemo(() => (0, _.sl)(S, {
+fakeAppIconURL: x,
 size: 84
-  }), [I]);
-  return l.useEffect(() => {
-C ? c.ZP.queryInstallOnDemandApp(I.id, t.id) : c.ZP.maybeQueryForInstallLessApps(I.id, t.id);
+  }), [S]);
+  return a.useEffect(() => {
+I ? u.ZP.queryInstallOnDemandApp(S.id, t.id) : u.ZP.maybeQueryForInstallLessApps(S.id, t.id);
   }, [
-I.id,
+S.id,
 t.id,
-C
+I
   ]), (0, i.jsxs)(r.ScrollerNone, {
-className: h.container,
+className: v.container,
 fade: !0,
-ref: x,
+ref: R,
 role: 'region',
-'aria-label': f.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({
-  applicationName: g
+'aria-label': N.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({
+  applicationName: b
 }),
 children: [
-  (0, i.jsx)(_.Z, {
-    name: g,
+  (0, i.jsx)(h.Z, {
+    name: b,
     iconURL: T,
-    scrollerRef: x
+    scrollerRef: R
   }),
-  null != T && (0, i.jsx)(m.Z, {
+  null != T && (0, i.jsx)(C.Z, {
     src: T,
-    className: h.appIcon
+    className: v.appIcon
   }),
-  (0, i.jsx)(a.Z, {
+  (0, i.jsx)(o.Z, {
     size: 54
   }),
-  (0, i.jsx)(P, {
+  (0, i.jsx)(L, {
     channel: t,
-    application: I,
-    sectionName: o
+    application: S,
+    sectionName: c
   }),
-  (0, i.jsx)(p.Z, {
+  P === p._b.TEXT ? (0, i.jsx)(f.Z, {
     channel: t,
-    application: I,
-    sectionName: o,
-    installOnDemand: C
-  })
+    application: S,
+    sectionName: c,
+    installOnDemand: I
+  }) : null
 ]
   });
 }
 
-function v(e) {
+function g(e) {
   let {
 channel: n,
 application: t,
-sectionName: l
-  } = e, a = (0, o.Z)({
+sectionName: a
+  } = e, l = (0, c.Z)({
 applicationId: t.id,
 size: 2048,
 names: ['embedded_cover']
-  }), r = (0, d.yJ)(t), c = null != r && null != r.activity_preview_video_asset_id ? (0, s.Z)(t.id, r.activity_preview_video_asset_id) : null;
-  return (0, i.jsx)(E.Z, {
+  }), o = (0, _.yJ)(t), r = null != o && null != o.activity_preview_video_asset_id ? (0, s.Z)(t.id, o.activity_preview_video_asset_id) : null;
+  return (0, i.jsx)(A.Z, {
 channel: n,
 application: t,
-imageCoverUrl: a.url,
-videoUrl: c,
-sectionName: l
+imageCoverUrl: l.url,
+videoUrl: r,
+sectionName: a
   });
 }

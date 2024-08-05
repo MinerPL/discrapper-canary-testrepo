@@ -2,12 +2,12 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(143927),
+  s = n.n(a),
+  o = n(143927),
   l = n(532772),
   u = n(570220),
   c = n(28546),
-  d = n(147915),
+  d = n(443603),
   _ = n(957825),
   E = n(689938),
   f = n(497471);
@@ -18,7 +18,7 @@ type: a
   } = e, [h, p] = (0, c.Iu)(e => [
 e.activeView,
 e.pickerId
-  ], s.Z), m = i.useContext(u.ZP), [I, T] = i.useState(!1), g = h === _.X1.STICKER, S = i.useCallback(() => {
+  ], o.Z), m = i.useContext(u.ZP), [I, T] = i.useState(!1), g = h === _.X1.STICKER, S = i.useCallback(() => {
 (0, c.RO)(_.X1.STICKER, a);
   }, [a]);
   i.useEffect(() => {
@@ -42,10 +42,10 @@ events: N,
 play: v
   } = (0, l.z)();
   return n ? null : (0, r.jsx)('div', {
-className: o()(_.CT, f.buttonContainer),
+className: s()(_.CT, f.buttonContainer),
 ref: t,
 children: (0, r.jsx)(d.Z, {
-  innerClassName: o()(f.button, f.stickerButton, {
+  innerClassName: s()(f.button, f.stickerButton, {
     [f.stickerButtonTilted]: I && !g
   }),
   ...N,

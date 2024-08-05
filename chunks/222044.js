@@ -2,11 +2,11 @@ n(315314), n(610138), n(216116), n(78328), n(815648), n(47120), n(653041);
 var r = n(147913),
   i = n(339085),
   a = n(592125),
-  o = n(768581),
-  s = n(176354),
+  s = n(768581),
+  o = n(176354),
   l = n(176505),
   u = n(149203);
-let c = new Worker(new URL(n.p + n.u('80493'), n.b));
+let c = new Worker(new URL('/assets/' + n.u('80493'), n.b));
 class d extends r.Z {
   handleChannelPreload(e) {
 let {
@@ -20,19 +20,19 @@ null != n && n.isForumLikeChannel() && function(e) {
     n = e.defaultReactionEmoji;
   if ((null == n ? void 0 : n.emojiId) != null) {
     var r, a;
-    t.push(o.ZP.getEmojiURL({
+    t.push(s.ZP.getEmojiURL({
       id: n.emojiId,
       animated: null !== (a = null === (r = i.Z.getUsableCustomEmojiById(n.emojiId)) || void 0 === r ? void 0 : r.animated) && void 0 !== a && a,
       size: u.kV.reaction
     }));
   } else
-    (null == n ? void 0 : n.emojiName) != null && t.push(s.ZP.getURL(n.emojiName));
+    (null == n ? void 0 : n.emojiName) != null && t.push(o.ZP.getURL(n.emojiName));
   return e.availableTags.forEach(e => {
-    null != e.emojiId ? t.push(o.ZP.getEmojiURL({
+    null != e.emojiId ? t.push(s.ZP.getEmojiURL({
       id: e.emojiId,
       animated: !1,
       size: u.kV.reaction
-    })) : null != e.emojiName && t.push(s.ZP.getURL(e.emojiName));
+    })) : null != e.emojiName && t.push(o.ZP.getURL(e.emojiName));
   }), t;
 }(n).forEach(e => {
   if (null != e && 0 !== e.length) {

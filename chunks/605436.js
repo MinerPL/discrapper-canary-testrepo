@@ -69,8 +69,8 @@ return x;
 var r = n(149765),
   i = n(866442),
   a = n(741361),
-  o = n(911969),
-  s = n(131704),
+  s = n(911969),
+  o = n(131704),
   l = n(271383),
   u = n(594174),
   c = n(934415),
@@ -89,14 +89,14 @@ function I(e) {
 function T(e) {
   var t, n;
   let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  let o = (n = e, r.e$(n.permissions, p.Plq.ADMINISTRATOR) ? h.aC.ADMINISTRATOR : h.aC.ROLE);
+  let s = (n = e, r.e$(n.permissions, p.Plq.ADMINISTRATOR) ? h.aC.ADMINISTRATOR : h.aC.ROLE);
   return {
-rowType: o,
+rowType: s,
 colorString: null !== (t = e.colorString) && void 0 !== t ? t : (0, i.Rf)(p.p6O),
 name: e.name,
 id: e.id,
 disabled: I(e) || a,
-key: ''.concat(o, ':').concat(e.id),
+key: ''.concat(s, ':').concat(e.id),
 tags: e.tags
   };
 }
@@ -124,8 +124,8 @@ function A(e, t, n, i) {
 return !1;
   if (null == e)
 return a.id !== t;
-  let o = e.permissionOverwrites[t];
-  return (null == i ? void 0 : i[t]) != null && (o = i[t]), null == o || !r.e$(o.allow, n);
+  let s = e.permissionOverwrites[t];
+  return (null == i ? void 0 : i[t]) != null && (s = i[t]), null == s || !r.e$(s.allow, n);
 }
 
 function N(e, t) {
@@ -151,17 +151,17 @@ function C(e, t, n, i) {
 }
 
 function y(e, t, n, r, i) {
-  var a, o, s, l, u;
+  var a, s, o, l, u;
   let c = [];
-  return 0 === (c = (a = e, o = t, s = n, l = r, u = i, Object.values(o).filter(e => I(e) || !A(s, e.id, l, u) && O(a, e))).sort(g).map(e => T(e))).length ? S(m.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : c;
+  return 0 === (c = (a = e, s = t, o = n, l = r, u = i, Object.values(s).filter(e => I(e) || !A(o, e.id, l, u) && O(a, e))).sort(g).map(e => T(e))).length ? S(m.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : c;
 }
 
 function D(e, t, n, i, a) {
-  var o, s, l, u, c;
+  var s, o, l, u, c;
   let d = [];
-  return 0 === (d = (o = e, s = t, l = n, u = i, c = a, Object.values(s).filter(e => {
+  return 0 === (d = (s = e, o = t, l = n, u = i, c = a, Object.values(o).filter(e => {
 var t;
-return I(e) || !A(l, e.id, u, c) && O(o, e) || r.e$(r.$e(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u);
+return I(e) || !A(l, e.id, u, c) && O(s, e) || r.e$(r.$e(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u);
   })).sort(g).map(e => T(e, r.e$(e.permissions, i)))).length ? S(m.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : d;
 }
 
@@ -201,10 +201,10 @@ function U(e, t, n, r) {
 }
 
 function w(e, t, n, r, i) {
-  var a, o, s, l, c;
-  return (a = e, o = t, s = n, l = r, c = i, a.map(u.default.getUser).filter(d.lm).filter(e => {
+  var a, s, o, l, c;
+  return (a = e, s = t, o = n, l = r, c = i, a.map(u.default.getUser).filter(d.lm).filter(e => {
 var t;
-return !A(o, e.id, l, c) || (t = e, s.isOwner(t));
+return !A(s, e.id, l, c) || (t = e, o.isOwner(t));
   })).map(e => M(e, n)).sort(P);
 }
 
@@ -265,7 +265,7 @@ return;
   if (null == i) {
 let i = {
   id: n.id,
-  type: o.BN.MEMBER,
+  type: s.BN.MEMBER,
   allow: r.IH(_.Hn, t),
   deny: _.Hn
 };
@@ -273,9 +273,9 @@ return (0, a.hw)(e.id, [i], !0);
   } {
 let {
   allow: n,
-  deny: o
+  deny: s
 } = i;
-return n = r.IH(n, t), (0, a.kY)(e, i.id, n, o);
+return n = r.IH(n, t), (0, a.kY)(e, i.id, n, s);
   }
 }
 
@@ -292,7 +292,7 @@ function H(e, t) {
 }
 
 function Z(e, t, n) {
-  return e === p.d4z.GUILD_TEXT || e === p.d4z.GUILD_ANNOUNCEMENT ? t : !(0, s.bw)(e) && e !== p.d4z.GUILD_CATEGORY || t && n;
+  return e === p.d4z.GUILD_TEXT || e === p.d4z.GUILD_ANNOUNCEMENT ? t : !(0, o.bw)(e) && e !== p.d4z.GUILD_CATEGORY || t && n;
 }
 
 function Y(e) {

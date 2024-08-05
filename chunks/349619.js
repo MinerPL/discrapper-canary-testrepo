@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(153867),
-  o = n(468026),
-  s = n(740492),
+  s = n(468026),
+  o = n(740492),
   l = n(689938);
 
 function u(e) {
@@ -18,7 +18,7 @@ n = () => {
     disableEmbeddedActivityPopOutAlert: !0
   }), e();
 };
-  s.ZP.disableEmbeddedActivityPopOutAlert ? e() : (0, i.openModal)(i => (0, r.jsx)(o.default, {
+  o.ZP.disableEmbeddedActivityPopOutAlert ? e() : (0, i.openModal)(i => (0, r.jsx)(s.default, {
 confirmText: l.Z.Messages.EMBEDDED_ACTIVITIES_YEP,
 secondaryConfirmText: l.Z.Messages.DONT_ASK_AGAIN,
 title: l.Z.Messages.EMBEDDED_ACTIVITIES_CAREFUL,

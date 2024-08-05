@@ -31,47 +31,49 @@ var i = n(735250),
   O = n(616360),
   y = n(858064),
   P = n(594190),
-  j = n(569545),
-  D = n(382182),
-  U = n(74299),
-  w = n(914923),
-  G = n(165393),
-  k = n(989941),
-  B = n(803647),
-  V = n(231664),
-  H = n(759198),
-  F = n(131704),
-  W = n(199902),
-  Y = n(314897),
-  z = n(592125),
-  K = n(984933),
-  q = n(430824),
-  Q = n(131951),
-  J = n(496675),
-  X = n(158776),
-  $ = n(699516),
-  ee = n(944486),
-  et = n(885110),
-  en = n(594174),
-  ei = n(449224),
-  el = n(366695),
-  er = n(672752),
-  ea = n(499150),
-  es = n(976401),
-  eo = n(333454),
-  ec = n(864441),
-  eu = n(368666),
-  ed = n(626135),
-  eh = n(358085),
-  ep = n(793224),
-  e_ = n(978769),
-  ef = n(981631),
-  em = n(918559),
-  eg = n(702512),
-  eC = n(689938),
-  eI = n(115851);
+  j = n(925329),
+  D = n(810568),
+  U = n(168524),
+  G = n(569545),
+  w = n(382182),
+  k = n(74299),
+  B = n(914923),
+  H = n(165393),
+  V = n(989941),
+  F = n(803647),
+  W = n(690221),
+  Y = n(231664),
+  z = n(759198),
+  K = n(131704),
+  q = n(199902),
+  Q = n(314897),
+  J = n(592125),
+  X = n(984933),
+  $ = n(430824),
+  ee = n(131951),
+  et = n(496675),
+  en = n(158776),
+  ei = n(699516),
+  el = n(944486),
+  er = n(885110),
+  ea = n(594174),
+  es = n(449224),
+  eo = n(672752),
+  ec = n(976401),
+  eu = n(333454),
+  ed = n(864441),
+  eh = n(368666),
+  ep = n(626135),
+  e_ = n(358085),
+  ef = n(793224),
+  em = n(978769),
+  eg = n(981631),
+  eC = n(918559),
+  eI = n(702512),
+  eE = n(689938),
+  eN = n(115851);
 
-function eE(e, t, n) {
+function ex(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -79,15 +81,15 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let eN = (0, g.Z)(function(e) {
+let eS = (0, g.Z)(function(e) {
   let {
 message: t
   } = e;
-  return (0, i.jsx)(eo.Z, {
+  return (0, i.jsx)(eu.Z, {
 children: t
   });
 });
-class ex extends l.PureComponent {
+class ev extends l.PureComponent {
   componentDidUpdate(e) {
 !e.dropsActivityPanelExperienceBlocked && this.props.dropsActivityPanelExperienceBlocked && this.setState({
   isDropsActivityPanelTooltipOpen: !1
@@ -99,7 +101,7 @@ let {
   activity: t,
   embeddedActivity: n
 } = this.props;
-return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === ef.IIU.PLAYING && (0, x.Z)(t, ef.xjy.JOIN));
+return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === eg.IIU.PLAYING && (0, x.Z)(t, eg.xjy.JOIN));
   }
   renderGoLiveButton() {
 let e, t, n, l;
@@ -112,11 +114,11 @@ let {
   runningGame: u,
   embeddedActivity: d
 } = this.props;
-return (null != u || null == d) && (s || r && null != u) ? (s ? (e = !1, t = this.handleClickStopStreamingButton, n = h.ScreenXIcon, l = eC.Z.Messages.STOP_STREAMING) : c ? (e = !1, t = this.handleClickGoLiveButton, n = h.ScreenArrowIcon, l = null != u ? eC.Z.Messages.ACTIVITY_PANEL_GO_LIVE_STREAM_GAME.format({
+return (null != u || null == d) && (s || r && null != u) ? (s ? (e = !1, t = this.handleClickStopStreamingButton, n = h.ScreenXIcon, l = eE.Z.Messages.STOP_STREAMING) : c ? (e = !1, t = this.handleClickGoLiveButton, n = h.ScreenArrowIcon, l = null != u ? eE.Z.Messages.ACTIVITY_PANEL_GO_LIVE_STREAM_GAME.format({
   game: u.name
-}) : eC.Z.Messages.ACTIVITY_PANEL_GO_LIVE) : (e = !0, t = null, n = h.ScreenArrowIcon, l = null != o && (0, F.vd)(o.type) ? eC.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE : null != a ? eC.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_GUILD : eC.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NOT_IN_GUILD), (0, i.jsx)('div', {
-  className: eI.panelButtonContainer,
-  children: (0, i.jsx)(es.Z, {
+}) : eE.Z.Messages.ACTIVITY_PANEL_GO_LIVE) : (e = !0, t = null, n = h.ScreenArrowIcon, l = null != o && (0, K.vd)(o.type) ? eE.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE : null != a ? eE.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_GUILD : eE.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NOT_IN_GUILD), (0, i.jsx)('div', {
+  className: eN.panelButtonContainer,
+  children: (0, i.jsx)(ec.Z, {
     tooltipText: l,
     disabled: e,
     onClick: t,
@@ -128,11 +130,11 @@ return (null != u || null == d) && (s || r && null != u) ? (s ? (e = !1, t = thi
 let {
   embeddedActivity: e
 } = this.props;
-return this.isJoinableActivity() && null == e ? (0, i.jsx)(es.Z, {
-  tooltipText: eC.Z.Messages.INVITE_EMBED_INVITE_TO_JOIN,
+return this.isJoinableActivity() && null == e ? (0, i.jsx)(ec.Z, {
+  tooltipText: eE.Z.Messages.INVITE_EMBED_INVITE_TO_JOIN,
   onClick: this.handleClickInviteButton,
   icon: h.GroupPlusIcon,
-  iconForeground: eI.__invalid_actionIcon
+  iconForeground: eN.__invalid_actionIcon
 }) : null;
   }
   renderDropsButton() {
@@ -159,9 +161,9 @@ return (0, i.jsx)(h.Popout, {
   children: () => (0, i.jsxs)(i.Fragment, {
     children: [
       this.state.showDropsSparkles && this.renderSparkles(),
-      (0, i.jsx)(es.Z, {
-        'aria-label': eC.Z.Messages.DROPS_ENABLED,
-        tooltipText: n ? null : eC.Z.Messages.DROPS_ENABLED,
+      (0, i.jsx)(ec.Z, {
+        'aria-label': eE.Z.Messages.DROPS_ENABLED,
+        tooltipText: n ? null : eE.Z.Messages.DROPS_ENABLED,
         onClick: this.handleClickDropsButton,
         icon: O.Z
       })
@@ -174,24 +176,24 @@ let {
   embeddedActivity: e,
   channel: t
 } = this.props;
-return null == e || null == t ? null : (0, i.jsx)(es.Z, {
-  tooltipText: eC.Z.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY,
+return null == e || null == t ? null : (0, i.jsx)(ec.Z, {
+  tooltipText: eE.Z.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY,
   onClick: this.handleClickLeaveEmbeddedActivityButton(e.applicationId, t),
   icon: h.DoorExitIcon,
-  iconForeground: eI.__invalid_actionIcon
+  iconForeground: eN.__invalid_actionIcon
 });
   }
   renderBroadcastButton() {
 let {
   channel: e
 } = this.props;
-return null != e && (0, F.vd)(e.type) ? null : (0, i.jsx)(ep.Z, {});
+return null != e && (0, K.vd)(e.type) ? null : (0, i.jsx)(ef.Z, {});
   }
   renderBroadcastSettingsButton() {
 let {
   broadcast: e
 } = this.props;
-return null == e ? null : (0, i.jsx)(e_.Z, {});
+return null == e ? null : (0, i.jsx)(em.Z, {});
   }
   renderSparkles() {
 let {
@@ -204,11 +206,11 @@ async function t() {
   return e;
 }
 return (0, i.jsx)('div', {
-  className: eI.sparkleContainer,
+  className: eN.sparkleContainer,
   children: (0, i.jsx)(h.LottieAnimation, {
     importData: t,
     shouldAnimate: !e,
-    className: eI.sparkles
+    className: eN.sparkles
   })
 });
   }
@@ -221,7 +223,7 @@ let e = this.renderGoLiveButton(),
   a = this.renderBroadcastButton(),
   s = this.renderBroadcastSettingsButton();
 return null == e && null == n && null == l ? null : (0, i.jsxs)('div', {
-  className: eI.actions,
+  className: eN.actions,
   children: [
     a,
     e,
@@ -237,7 +239,7 @@ let {
   runningGame: e,
   application: t
 } = this.props;
-return null != t ? t.name : null != e ? e.name : eC.Z.Messages.STATUS_UNKNOWN;
+return null != t ? t.name : null != e ? e.name : eE.Z.Messages.STATUS_UNKNOWN;
   }
   renderGame() {
 let {
@@ -247,40 +249,39 @@ let {
   runningGame: l
 } = this.props, r = this.getGameName();
 return (0, i.jsxs)('div', {
-  className: a()(eI.gameWrapper, {
-    [eI.clickableGameWrapper]: null != n
-  }),
+  className: eN.gameWrapper,
   children: [
     (0, i.jsxs)('div', {
-      className: eI.gameIconWrapper,
+      className: eN.gameIconWrapper,
       children: [
-        (0, i.jsx)(el.Z, {
-          className: eI.gameIcon,
+        (0, i.jsx)(j.Z, {
+          className: eN.gameIcon,
           game: n,
           pid: null == l ? void 0 : l.pid
         }),
         e ? (0, i.jsx)(h.VideoIcon, {
           size: 'md',
           color: 'currentColor',
-          className: eI.liveBadge
+          className: eN.liveBadge
         }) : null
       ]
     }),
     (0, i.jsx)('div', {
-      className: a()(eI.info, {
-        [eI.infoWithDrops]: null != t
+      className: a()(eN.info, {
+        [eN.infoWithDrops]: null != t
       }),
       children: null != r ? (0, i.jsxs)(i.Fragment, {
         children: [
-          (0, i.jsx)(ec.Z, {
-            children: r
+          (0, i.jsx)(eZ, {
+            name: r,
+            applicationId: null == n ? void 0 : n.id
           }),
           null != t && (0, i.jsx)('div', {
-            className: eI.dropsBadgeWrapper,
+            className: eN.dropsBadgeWrapper,
             children: (0, i.jsx)(h.TextBadge, {
-              text: eC.Z.Messages.DROPS_AVAILABLE,
+              text: eE.Z.Messages.DROPS_AVAILABLE,
               color: d.Z.unsafe_rawColors.BRAND_500.css,
-              className: eI.dropsBadge
+              className: eN.dropsBadge
             })
           })
         ]
@@ -298,45 +299,45 @@ let {
 } = this.props, {
   title: r,
   sanitizedTitle: s
-} = (0, w.Z)(n);
+} = (0, B.Z)(n);
 return (0, i.jsxs)('div', {
-  className: eI.gameWrapper,
+  className: eN.gameWrapper,
   children: [
-    e ? (0, i.jsx)(G.Z, {
+    e ? (0, i.jsx)(H.Z, {
       title: s
-    }) : (0, i.jsx)(eu.ZP, {
-      look: eu.ZP.Looks.GRAY,
-      size: eu.ZP.Sizes.SMALL,
-      className: eI.liveIndicator
+    }) : (0, i.jsx)(eh.ZP, {
+      look: eh.ZP.Looks.GRAY,
+      size: eh.ZP.Sizes.SMALL,
+      className: eN.liveIndicator
     }),
     (0, i.jsxs)('div', {
-      className: a()(eI.info, {
-        [eI.infoWithDrops]: null != t
+      className: a()(eN.info, {
+        [eN.infoWithDrops]: null != t
       }),
       children: [
-        (0, i.jsx)(ec.Z, {
+        (0, i.jsx)(ed.Z, {
           children: r
         }),
         null != l && (0, i.jsxs)('div', {
-          className: eI.perksDemoContainer,
+          className: eN.perksDemoContainer,
           children: [
             (0, i.jsx)(h.NitroWheelIcon, {
               size: 'xxs',
-              color: er.JX.PREMIUM_TIER_2
+              color: eo.JX.PREMIUM_TIER_2
             }),
-            (0, i.jsx)(H.Z, {
-              className: eI.perksDemoText,
+            (0, i.jsx)(z.Z, {
+              className: eN.perksDemoText,
               variant: 'text-xxs/semibold',
               children: l
             })
           ]
         }),
         null != t && (0, i.jsx)('div', {
-          className: eI.dropsBadgeWrapper,
+          className: eN.dropsBadgeWrapper,
           children: (0, i.jsx)(h.TextBadge, {
-            text: eC.Z.Messages.DROPS_AVAILABLE,
+            text: eE.Z.Messages.DROPS_AVAILABLE,
             color: d.Z.unsafe_rawColors.BRAND_500.css,
-            className: eI.dropsBadge
+            className: eN.dropsBadge
           })
         })
       ]
@@ -359,35 +360,35 @@ let s = {
     start: n.connectedSince
   },
   o = r;
-null != a ? (e = ef.Z5c.CHANNEL(a.id, l.id), o = ''.concat(o, ' / ').concat(a.name)) : e = ef.Z5c.CHANNEL(ef.ME, l.id);
-let c = (0, i.jsx)(ea.Z, {
+null != a ? (e = eg.Z5c.CHANNEL(a.id, l.id), o = ''.concat(o, ' / ').concat(a.name)) : e = eg.Z5c.CHANNEL(eg.ME, l.id);
+let c = (0, i.jsx)(W.Z, {
   href: e,
   onClick: this.handleApplicationLinkClick,
-  children: (0, i.jsx)(eo.Z, {
-    className: eI.channel,
+  children: (0, i.jsx)(eu.Z, {
+    className: eN.channel,
     children: o
   })
 });
 return (0, i.jsxs)('div', {
-  className: eI.gameWrapper,
+  className: eN.gameWrapper,
   children: [
-    (0, i.jsx)(el.Z, {
-      className: eI.gameIcon,
+    (0, i.jsx)(j.Z, {
+      className: eN.gameIcon,
       game: t,
-      size: el.Z.Sizes.SMALL
+      size: j.Z.Sizes.SMALL
     }),
     (0, i.jsxs)('div', {
-      className: eI.info,
+      className: eN.info,
       children: [
-        (0, i.jsx)(ea.Z, {
+        (0, i.jsx)(W.Z, {
           href: e,
           onClick: this.handleApplicationLinkClick,
-          children: (0, i.jsx)(ec.Z, {
-            className: eI.activityName,
+          children: (0, i.jsx)(ed.Z, {
+            className: eN.activityName,
             children: t.name
           })
         }),
-        (0, F.Qm)(l.type) ? c : (0, i.jsx)(eN, {
+        (0, K.Qm)(l.type) ? c : (0, i.jsx)(eS, {
           timestamps: s
         })
       ]
@@ -405,9 +406,9 @@ let {
   className: s
 } = this.props;
 return l || (this.isJoinableActivity() || e) && (null != n || null != t) ? (0, i.jsx)('div', {
-  className: a()(eI.panel, s),
+  className: a()(eN.panel, s),
   children: (0, i.jsxs)('div', {
-    className: eI.body,
+    className: eN.body,
     children: [
       (() => null == n || l && (null == r ? void 0 : r.pid) == null ? null != t ? this.renderEmbeddedActivity() : this.renderScreenshare() : this.renderGame())(),
       this.renderActions()
@@ -416,25 +417,25 @@ return l || (this.isJoinableActivity() || e) && (null != n || null != t) ? (0, i
 }) : null;
   }
   constructor(...e) {
-super(...e), eE(this, 'modalKey', void 0), eE(this, 'state', {
+super(...e), ex(this, 'modalKey', void 0), ex(this, 'state', {
   isDropsActivityPanelTooltipOpen: !1,
   showDropsSparkles: this.props.showDropsSparkles
-}), eE(this, 'startBroadcast', () => {
+}), ex(this, 'startBroadcast', () => {
   let {
     stream: e,
     channel: t,
     runningGame: n
-  } = this.props, i = null != t && (0, F.vd)(t.type) ? t : null;
+  } = this.props, i = null != t && (0, K.vd)(t.type) ? t : null;
   null != i && null != n && (null == e ? (0, m.tE)({
     channelId: i.id,
     pid: n.pid
-  }) : (0, v.v$)((0, j.V9)(e), n.pid));
-}), eE(this, 'handleClickGoLiveButton', () => {
+  }) : (0, v.v$)((0, G.V9)(e), n.pid));
+}), ex(this, 'handleClickGoLiveButton', () => {
   let {
     guildId: e,
     channel: t,
     canStartBroadcast: l
-  } = this.props, r = null != t && (0, F.vd)(t.type) ? t : null, a = null != r ? r.getGuildId() : e;
+  } = this.props, r = null != t && (0, K.vd)(t.type) ? t : null, a = null != r ? r.getGuildId() : e;
   if ((null == r ? void 0 : r.isBroadcastChannel()) && l) {
     (0, T.D)(this.startBroadcast);
     return;
@@ -444,39 +445,39 @@ super(...e), eE(this, 'modalKey', void 0), eE(this, 'state', {
       default: e
     } = await Promise.all([
       n.e('79477'),
-      n.e('99293')
+      n.e('8730')
     ]).then(n.bind(n, 60594));
     return t => (0, i.jsx)(e, {
       ...t,
       selectSource: !1,
       guildId: a,
-      analyticsLocation: ef.Sbl.ACTIVITY_PANEL
+      analyticsLocation: eg.Sbl.ACTIVITY_PANEL
     });
   }).then(e => {
     null != e && (this.modalKey = e);
   });
-}), eE(this, 'handleClickStopStreamingButton', () => {
+}), ex(this, 'handleClickStopStreamingButton', () => {
   let {
     stream: e,
     channel: t,
     userId: n
-  } = this.props, i = null != t && (0, F.vd)(t.type) ? t : null;
+  } = this.props, i = null != t && (0, K.vd)(t.type) ? t : null;
   if ((null == i ? void 0 : i.isBroadcastChannel()) && (null == i ? void 0 : i.isOwner(n))) {
-    (0, T.Z)(() => (0, B.Z)(e));
+    (0, T.Z)(() => (0, F.Z)(e));
     return;
   }
-  (0, B.Z)(e);
-}), eE(this, 'handleClickInviteButton', () => {
+  (0, F.Z)(e);
+}), ex(this, 'handleClickInviteButton', () => {
   let {
     activity: e,
     analyticsContext: t
   } = this.props;
-  o()(null != e, 'Received null activity'), ed.default.track(ef.rMx.OPEN_MODAL, {
+  o()(null != e, 'Received null activity'), ep.default.track(eg.rMx.OPEN_MODAL, {
     type: 'Send Join Invite',
     application_id: e.application_id,
     location: t.location
   }), (0, p.h7)(e, !1);
-}), eE(this, 'handleClickDropsButton', () => {
+}), ex(this, 'handleClickDropsButton', () => {
   let {
     dropsPartnerGame: e,
     dropsTooltipAction: t,
@@ -485,7 +486,7 @@ super(...e), eE(this, 'modalKey', void 0), eE(this, 'state', {
   if (null == e)
     return;
   let i = (0, R.BS)(e);
-  null != i && (ed.default.track(ef.rMx.DROPS_ACTIVITY_PANEL_BUTTON_CLICK, {
+  null != i && (ep.default.track(eg.rMx.DROPS_ACTIVITY_PANEL_BUTTON_CLICK, {
     user_id: n,
     drops_quest_id: i.dropsQuestId,
     game_id: i.dropsGameId,
@@ -496,60 +497,80 @@ super(...e), eE(this, 'modalKey', void 0), eE(this, 'state', {
     isDropsActivityPanelTooltipOpen: !this.state.isDropsActivityPanelTooltipOpen,
     showDropsSparkles: !1
   }));
-}), eE(this, 'handleClickLeaveEmbeddedActivityButton', (e, t) => () => {
+}), ex(this, 'handleClickLeaveEmbeddedActivityButton', (e, t) => () => {
   (0, E.mW)({
     channelId: t.id,
     applicationId: e
   });
-}), eE(this, 'renderClipsButton', () => {
+}), ex(this, 'renderClipsButton', () => {
   let {
     stream: e
   } = this.props;
   return null == e ? null : (0, i.jsx)(A.Z, {});
-}), eE(this, 'handleApplicationLinkClick', () => {
+}), ex(this, 'handleApplicationLinkClick', () => {
   var e;
   let {
     channel: t,
     embeddedActivity: n
   } = this.props;
-  o()(null != t, 'Channel is null during navigation click'), o()(null != n, 'Activity null during navigation click'), (0, F.vd)(t.type) && _.Z.selectParticipant(t.id, n.applicationId), f.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : ef.ME, t.id), (0, F.Qm)(t.type) && (0, E.tg)(em.Ez.PANEL);
+  o()(null != t, 'Channel is null during navigation click'), o()(null != n, 'Activity null during navigation click'), (0, K.vd)(t.type) && _.Z.selectParticipant(t.id, n.applicationId), f.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : eg.ME, t.id), (0, K.Qm)(t.type) && (0, E.tg)(eC.Ez.PANEL);
 });
   }
+}
+
+function eZ(e) {
+  let {
+name: t,
+applicationId: n
+  } = e, l = (0, U.Z)({
+location: 'ActivityPanelGameCard',
+applicationId: n,
+source: D.m1.RtcPanel,
+trackEntryPointImpression: !0
+  });
+  return (0, i.jsx)(h.Clickable, {
+onClick: l,
+className: a()(null != l && eN.clickableGameName),
+children: (0, i.jsx)(ed.Z, {
+  className: eN.gameName,
+  children: t
+})
+  });
 }
 t.Z = (0, C.Z)(function(e) {
   var t;
   let {
 guildId: n,
 ...l
-  } = e, r = (0, c.e7)([Y.default], () => Y.default.getId()), a = (0, c.e7)([
+  } = e, r = (0, c.e7)([Q.default], () => Q.default.getId()), a = (0, c.e7)([
 P.ZP,
-ei.Z
-  ], () => (0, k.Z)(P.ZP, ei.Z)), s = (0, c.e7)([
-ee.Z,
-z.Z
-  ], () => z.Z.getChannel(ee.Z.getVoiceChannelId())), o = (0, c.e7)([N.ZP], () => N.ZP.getConnectedActivityChannelId()), d = (0, c.e7)([z.Z], () => z.Z.getChannel(o)), h = (0, c.e7)([q.Z], () => q.Z.getGuild(null == d ? void 0 : d.guild_id)), [p, _] = (0, c.Wu)([W.Z], () => [
-W.Z.getCurrentUserActiveStream(),
-W.Z.getStreamerActiveStreamMetadata()
+es.Z
+  ], () => (0, V.Z)(P.ZP, es.Z)), s = (0, c.e7)([
+el.Z,
+J.Z
+  ], () => J.Z.getChannel(el.Z.getVoiceChannelId())), o = (0, c.e7)([N.ZP], () => N.ZP.getConnectedActivityChannelId()), d = (0, c.e7)([J.Z], () => J.Z.getChannel(o)), h = (0, c.e7)([$.Z], () => $.Z.getGuild(null == d ? void 0 : d.guild_id)), [p, _] = (0, c.Wu)([q.Z], () => [
+q.Z.getCurrentUserActiveStream(),
+q.Z.getStreamerActiveStreamMetadata()
   ]), f = (0, c.e7)([I.Z], () => I.Z.useReducedMotion), m = (0, c.e7)([M.Z], () => M.Z.getActivityPanelTooltipAction()), {
 partnerGame: g,
 dropsActivityPanelExperienceBlocked: C,
 showDropsSparkles: E
-  } = (0, b.c)(eg.X2.FORTNITE, a, u.z.QUEST_2_ENROLLMENT_TOOLTIP, u.z.QUEST_2_COMPLETION_TOOLTIP), x = (0, c.e7)([N.ZP], () => null != d ? N.ZP.getSelfEmbeddedActivityForChannel(d.id) : null), v = (0, c.e7)([
-q.Z,
-J.Z,
-K.ZP
-  ], () => null != s ? D.JL(s, q.Z, J.Z, !1) : null != n && D.h_(K.ZP.getChannels(n), q.Z, J.Z).length > 0), [T] = (0, S.Z)([null !== (t = function() {
+  } = (0, b.c)(eI.X2.FORTNITE, a, u.z.QUEST_2_ENROLLMENT_TOOLTIP, u.z.QUEST_2_COMPLETION_TOOLTIP), x = (0, c.e7)([N.ZP], () => null != d ? N.ZP.getSelfEmbeddedActivityForChannel(d.id) : null), v = (0, c.e7)([
+$.Z,
+et.Z,
+X.ZP
+  ], () => null != s ? w.JL(s, $.Z, et.Z, !1) : null != n && w.h_(X.ZP.getChannels(n), $.Z, et.Z).length > 0), [T] = (0, S.Z)([null !== (t = function() {
 if (null != _ && null != _.id)
   return _.id;
 if (null != a && null != a.id)
   return a.id;
 if (null != x)
   return x.applicationId;
-  }()) && void 0 !== t ? t : '']), A = (0, c.e7)([Q.Z], () => (0, U.Z)(Q.Z) && (0, eh.isWindows)()), R = (0, c.e7)([X.Z], () => null != r ? X.Z.findActivity(r, e => e.type === ef.IIU.PLAYING) : null), O = null != p && p.ownerId === r && p.state !== ef.jm8.ENDED, y = (0, c.e7)([et.Z], () => et.Z.getBroadcast()), j = (0, Z.Z)() && null != a, w = (0, c.e7)([
-en.default,
-$.Z
-  ], () => null != d ? (0, L.F6)(d, en.default, $.Z) : void 0), G = (0, V.Z)(null == s ? void 0 : s.id, r);
-  return (0, i.jsx)(ex, {
+  }()) && void 0 !== t ? t : '']), A = (0, c.e7)([ee.Z], () => (0, k.Z)(ee.Z) && (0, e_.isWindows)()), R = (0, c.e7)([en.Z], () => null != r ? en.Z.findActivity(r, e => e.type === eg.IIU.PLAYING) : null), O = null != p && p.ownerId === r && p.state !== eg.jm8.ENDED, y = (0, c.e7)([er.Z], () => er.Z.getBroadcast()), j = (0, Z.Z)() && null != a, D = (0, c.e7)([
+ea.default,
+ei.Z
+  ], () => null != d ? (0, L.F6)(d, ea.default, ei.Z) : void 0), U = (0, Y.Z)(null == s ? void 0 : s.id, r);
+  return (0, i.jsx)(ev, {
 ...l,
 guildId: n,
 canGoLive: A,
@@ -570,8 +591,8 @@ stream: p,
 streamMetadata: _,
 broadcast: y,
 canStartBroadcast: j,
-channelName: w,
+channelName: D,
 guildForConnectedChannel: h,
-streamQualityIndicator: G
+streamQualityIndicator: U
   });
 });

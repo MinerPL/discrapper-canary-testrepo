@@ -3,17 +3,17 @@ n.d(t, {
 return l;
   },
   Dd: function() {
-return o;
+return s;
   },
   V1: function() {
-return s;
+return o;
   }
 });
 var r = n(442837),
   i = n(592125),
   a = n(770471);
 
-function o(e) {
+function s(e) {
   let {
 canViewBroadcasts: t
   } = a.Z.useExperiment({
@@ -24,7 +24,7 @@ autoTrackExposure: !1
   return !!t && !!(null == n ? void 0 : n.isBroadcastChannel());
 }
 
-function s(e) {
+function o(e) {
   let {
 canViewBroadcasts: t
   } = a.Z.getCurrentConfig({
@@ -39,5 +39,5 @@ return !1;
 }
 
 function l(e) {
-  return e.filter(e => !s(e));
+  return e.filter(e => !o(e));
 }

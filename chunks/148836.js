@@ -18,16 +18,16 @@ return d;
 var r = n(699581),
   i = n(470079),
   a = n(706682),
-  o = n(182823),
-  s = n(612001),
+  s = n(182823),
+  o = n(612001),
   l = n(616073);
 
 function u(e) {
-  return (0, o.ad)() ? e.altKey : e.ctrlKey;
+  return (0, s.ad)() ? e.altKey : e.ctrlKey;
 }
 
 function c(e) {
-  return (0, o.V5)() ? e.metaKey : e.ctrlKey;
+  return (0, s.V5)() ? e.metaKey : e.ctrlKey;
 }
 
 function d(e) {
@@ -48,8 +48,8 @@ typeSelectProps: {
     if (!i || e.ctrlKey || e.metaKey || !e.currentTarget.contains(e.target))
       return;
     ' ' === i && a.search.trim().length > 0 && (e.preventDefault(), !('continuePropagation' in e) && e.stopPropagation()), a.search += i;
-    let o = t.getKeyForSearch(a.search, n.focusedKey);
-    null == o && (o = t.getKeyForSearch(a.search)), null != o && (n.setFocusedKey(o), r && r(o)), clearTimeout(a.timeout), a.timeout = setTimeout(() => {
+    let s = t.getKeyForSearch(a.search, n.focusedKey);
+    null == s && (s = t.getKeyForSearch(a.search)), null != s && (n.setFocusedKey(s), r && r(s)), clearTimeout(a.timeout), a.timeout = setTimeout(() => {
       a.search = '';
     }, 1000);
   } : null
@@ -77,12 +77,12 @@ function _(e) {
 {
   direction: O
 } = (0, l.bU)(),
-R = (0, o.tv)(),
+R = (0, s.tv)(),
 C = (0, i.useRef)({
   top: 0,
   left: 0
 });
-  (0, o.zX)(N, 'scroll', A ? null : () => {
+  (0, s.zX)(N, 'scroll', A ? null : () => {
 C.current = {
   top: N.current.scrollTop,
   left: N.current.scrollLeft
@@ -106,10 +106,10 @@ if (y.current) {
   }, []);
   let D = (0, i.useRef)(n.focusedKey);
   (0, i.useEffect)(() => {
-let e = (0, s.Jz)();
+let e = (0, o.Jz)();
 if (n.isFocused && null != n.focusedKey && (null == N ? void 0 : N.current)) {
   let t = N.current.querySelector(`[data-key="${ CSS.escape(n.focusedKey.toString()) }"]`);
-  t && ('keyboard' === e || y.current) && (!A && (0, o.zT)(N.current, t), (0, o.Gt)(t, {
+  t && ('keyboard' === e || y.current) && (!A && (0, s.zT)(N.current, t), (0, s.Gt)(t, {
     containingElement: E.current
   }));
 }
@@ -123,7 +123,7 @@ E
   ]);
   let L = {
   onKeyDown: e => {
-    var t, i, s, l, d, f, T, g;
+    var t, i, o, l, d, f, T, g;
     if (e.altKey && 'Tab' === e.key && e.preventDefault(), !E.current.contains(e.target))
       return;
     let A = (t, i) => {
@@ -150,7 +150,7 @@ E
       case 'ArrowUp':
         if (_.getKeyAbove) {
           e.preventDefault();
-          let t = null != n.focusedKey ? _.getKeyAbove(n.focusedKey) : null === (s = _.getLastKey) || void 0 === s ? void 0 : s.call(_);
+          let t = null != n.focusedKey ? _.getKeyAbove(n.focusedKey) : null === (o = _.getLastKey) || void 0 === o ? void 0 : o.call(_);
           null == t && h && (t = null === (l = _.getLastKey) || void 0 === l ? void 0 : l.call(_, n.focusedKey)), A(t);
         }
         break;
@@ -205,7 +205,7 @@ E
             do
               (t = n.lastChild()) && (e = t);
             while (t);
-            e && !e.contains(document.activeElement) && (0, o.Ao)(e);
+            e && !e.contains(document.activeElement) && (0, s.Ao)(e);
           }
         }
     }
@@ -227,7 +227,7 @@ E
         !A && (N.current.scrollTop = C.current.top, N.current.scrollLeft = C.current.left);
       if (!A && null != n.focusedKey) {
         let e = N.current.querySelector(`[data-key="${ CSS.escape(n.focusedKey.toString()) }"]`);
-        e && (!e.contains(document.activeElement) && (0, o.Ao)(e), 'keyboard' === (0, s.Jz)() && (0, o.Gt)(e, {
+        e && (!e.contains(document.activeElement) && (0, s.Ao)(e), 'keyboard' === (0, o.Jz)() && (0, s.Gt)(e, {
           containingElement: E.current
         }));
       }
@@ -246,7 +246,7 @@ E
   keyboardDelegate: _,
   selectionManager: n
 });
-  return !T && (L = (0, o.dG)(b, L)), !g && (t = null == n.focusedKey ? 0 : -1), {
+  return !T && (L = (0, s.dG)(b, L)), !g && (t = null == n.focusedKey ? 0 : -1), {
 collectionProps: {
   ...L,
   tabIndex: t
@@ -266,7 +266,7 @@ isDisabled: E,
 onAction: p,
 allowsDifferentPressOrigin: m,
 linkBehavior: I = 'action'
-  } = e, T = (0, o.tv)(), g = e => {
+  } = e, T = (0, s.tv)(), g = e => {
 if ('keyboard' === e.pointerType && u(e))
   t.toggleSelection(n);
 else {
@@ -331,20 +331,20 @@ D.current = e.pointerType, b.current = L, M.current = R, v && ('mouse' === e.poi
   let {
 pressProps: w,
 isPressed: x
-  } = (0, s.r7)(U), G = C ? e => {
+  } = (0, o.r7)(U), G = C ? e => {
 'mouse' === D.current && (e.stopPropagation(), e.preventDefault(), P(e));
   } : void 0, {
 longPressProps: k
-  } = (0, s.TA)({
+  } = (0, o.TA)({
 isDisabled: !L,
 onLongPress(e) {
   'touch' === e.pointerType && (g(e), t.setSelectionBehavior('toggle'));
 }
   }), B = t.isLink(n) ? e => {
-!o.nG.isOpening && e.preventDefault();
+!s.nG.isOpening && e.preventDefault();
   } : void 0;
   return {
-itemProps: (0, o.dG)(S, v || R ? w : {}, L ? k : {}, {
+itemProps: (0, s.dG)(S, v || R ? w : {}, L ? k : {}, {
   onDoubleClick: G,
   onDragStartCapture: e => {
     'touch' === D.current && b.current && e.preventDefault();
@@ -447,19 +447,19 @@ let t = this.ref.current,
   n = this.getItem(e);
 if (!n)
   return null;
-if (!(0, o.a9)(t))
+if (!(0, s.a9)(t))
   return this.getFirstKey();
 let r = t.getBoundingClientRect(),
   i = n.getBoundingClientRect();
 if ('horizontal' === this.orientation) {
   let a = r.x - t.scrollLeft,
-    o = Math.max(0, i.x - a + i.width - r.width);
-  for (; n && i.x - a > o;)
+    s = Math.max(0, i.x - a + i.width - r.width);
+  for (; n && i.x - a > s;)
     i = null == (n = null == (e = this.getKeyAbove(e)) ? null : this.getItem(e)) ? void 0 : n.getBoundingClientRect();
 } else {
   let a = r.y - t.scrollTop,
-    o = Math.max(0, i.y - a + i.height - r.height);
-  for (; n && i.y - a > o;)
+    s = Math.max(0, i.y - a + i.height - r.height);
+  for (; n && i.y - a > s;)
     i = null == (n = null == (e = this.getKeyAbove(e)) ? null : this.getItem(e)) ? void 0 : n.getBoundingClientRect();
 }
 return null != e ? e : this.getFirstKey();
@@ -469,19 +469,19 @@ let t = this.ref.current,
   n = this.getItem(e);
 if (!n)
   return null;
-if (!(0, o.a9)(t))
+if (!(0, s.a9)(t))
   return this.getLastKey();
 let r = t.getBoundingClientRect(),
   i = n.getBoundingClientRect();
 if ('horizontal' === this.orientation) {
   let a = r.x - t.scrollLeft,
-    o = Math.min(t.scrollWidth, i.x - a - i.width + r.width);
-  for (; n && i.x - a < o;)
+    s = Math.min(t.scrollWidth, i.x - a - i.width + r.width);
+  for (; n && i.x - a < s;)
     i = null == (n = null == (e = this.getKeyBelow(e)) ? null : this.getItem(e)) ? void 0 : n.getBoundingClientRect();
 } else {
   let a = r.y - t.scrollTop,
-    o = Math.min(t.scrollHeight, i.y - a - i.height + r.height);
-  for (; n && i.y - a < o;)
+    s = Math.min(t.scrollHeight, i.y - a - i.height + r.height);
+  for (; n && i.y - a < s;)
     i = null == (n = null == (e = this.getKeyBelow(e)) ? null : this.getItem(e)) ? void 0 : n.getBoundingClientRect();
 }
 return null != e ? e : this.getLastKey();
@@ -516,16 +516,16 @@ selectionManager: t,
 collection: n,
 disabledKeys: r,
 ref: a,
-keyboardDelegate: o
-  } = e, s = (0, l.Xe)({
+keyboardDelegate: s
+  } = e, o = (0, l.Xe)({
 usage: 'search',
 sensitivity: 'base'
-  }), u = t.disabledBehavior, c = (0, i.useMemo)(() => o || new p(n, 'selection' === u ? new Set() : r, a, s), [
-o,
+  }), u = t.disabledBehavior, c = (0, i.useMemo)(() => s || new p(n, 'selection' === u ? new Set() : r, a, o), [
+s,
 n,
 r,
 a,
-s,
+o,
 u
   ]), {
 collectionProps: d

@@ -1,47 +1,49 @@
 t.r(n);
-var s = t(735250);
+var r = t(735250);
 t(470079);
-var r = t(481060),
-  i = t(239091),
-  o = t(410575),
-  u = t(108843),
-  a = t(100527),
-  c = t(299206),
-  l = t(88966),
+var s = t(481060),
+  u = t(239091),
+  i = t(410575),
+  a = t(108843),
+  c = t(100527),
+  l = t(299206),
+  o = t(88966),
   d = t(725119),
   Z = t(981631),
-  f = t(689938);
-n.default = (0, u.Z)(function(e) {
+  E = t(689938);
+n.default = (0, a.Z)(function(e) {
   let {
 user: n,
 analyticsContext: t,
-onSelect: u
-  } = e, a = (0, d.Z)(n.id), E = (0, c.Z)({
+onSelect: a
+  } = e, c = (0, d.Z)({
+userId: n.id
+  }), _ = (0, l.Z)({
 id: n.id,
-label: f.Z.Messages.COPY_ID_USER
-  }), M = (0, l.Z)(n.id), _ = n.isNonUserBot();
-  return (0, s.jsx)(o.Z, {
+label: E.Z.Messages.COPY_ID_USER
+  }), f = (0, o.Z)(n.id), M = n.isNonUserBot();
+  return (0, r.jsx)(i.Z, {
 context: t,
 object: Z.qAy.CONTEXT_MENU,
-children: (0, s.jsxs)(r.Menu, {
+children: (0, r.jsxs)(s.Menu, {
   navId: 'user-context',
-  onClose: i.Zy,
-  'aria-label': f.Z.Messages.USER_ACTIONS_MENU_LABEL,
-  onSelect: u,
+  onClose: u.Zy,
+  'aria-label': E.Z.Messages.USER_ACTIONS_MENU_LABEL,
+  onSelect: a,
   children: [
-    (0, s.jsxs)(r.MenuGroup, {
+    (0, r.jsxs)(s.MenuGroup, {
       children: [
-        !_ && a,
-        !_ && M
+        !M && c,
+        !M && f
       ]
     }),
-    (0, s.jsx)(r.MenuGroup, {
-      children: E
+    (0, r.jsx)(s.MenuGroup, {
+      children: _
     })
   ]
 })
   });
 }, [
-  a.Z.CONTEXT_MENU,
-  a.Z.BANNED_USER_MENU
+  c.Z.CONTEXT_MENU,
+  c.Z.BANNED_USER_MENU
 ]);

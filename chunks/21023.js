@@ -1,6 +1,6 @@
 n.d(t, {
   n: function() {
-return p;
+return g;
   }
 }), n(653041);
 var s, a, r = n(735250);
@@ -72,7 +72,7 @@ return t ? (0, r.jsxs)(r.Fragment, {
 });
   };
 (a = s || (s = {}))[a.PRICE = 0] = 'PRICE', a[a.EMOJI = 1] = 'EMOJI', a[a.STICKER = 2] = 'STICKER', a[a.CUSTOM_APP_ICONS = 3] = 'CUSTOM_APP_ICONS', a[a.SUPER_REACTIONS = 4] = 'SUPER_REACTIONS', a[a.UPLOAD = 5] = 'UPLOAD', a[a.STREAMING = 6] = 'STREAMING', a[a.BOOSTS = 7] = 'BOOSTS', a[a.PROFILE_THEMES = 8] = 'PROFILE_THEMES', a[a.SERVER_PROFILE = 9] = 'SERVER_PROFILE', a[a.SHOP_DISCOUNTS = 10] = 'SHOP_DISCOUNTS', a[a.CLIENT_THEME = 11] = 'CLIENT_THEME', a[a.BADGE = 12] = 'BADGE', a[a.VIDEO_BACKGROUND = 13] = 'VIDEO_BACKGROUND', a[a.CUSTOM_SOUNDS_ANYWHERE = 14] = 'CUSTOM_SOUNDS_ANYWHERE', a[a.CUSTOM_ENTRY_SOUNDS = 15] = 'CUSTOM_ENTRY_SOUNDS', a[a.SERVER_LIMIT = 16] = 'SERVER_LIMIT', a[a.MESSAGE_LENGTH = 17] = 'MESSAGE_LENGTH', a[a.CUSTOMIZATION_CATEGORY = 18] = 'CUSTOMIZATION_CATEGORY', a[a.FEATURE_UPGRADES_CATEGORY = 19] = 'FEATURE_UPGRADES_CATEGORY', a[a.PERSONALIZATION_CATEGORY = 20] = 'PERSONALIZATION_CATEGORY', a[a.AVATAR_AND_BANNER = 21] = 'AVATAR_AND_BANNER', a[a.REFERRAL_PROGRAM = 22] = 'REFERRAL_PROGRAM';
-let p = (e, t, n, s) => {
+let g = (e, t, n, s) => {
   let a = {
   0: {
     label: (0, r.jsx)(I, {
@@ -338,7 +338,7 @@ let p = (e, t, n, s) => {
     withBottomBorder: !1
   }
 },
-p = [
+g = [
   a[0],
   a[1],
   a[2],
@@ -358,5 +358,5 @@ p = [
   a[16],
   a[17]
 ];
-  return (0, d.V)() && p.push(a[22]), p;
+  return (0, d.V)() && g.push(a[22]), g;
 };

@@ -6,8 +6,8 @@ return H;
 var r = n(735250),
   i = n(470079),
   a = n(442837),
-  o = n(481060),
-  s = n(278323),
+  s = n(481060),
+  o = n(278323),
   l = n(224706),
   u = n(287734),
   c = n(2052),
@@ -76,12 +76,12 @@ let {
   channelId: n
 } = e;
 return (t === (null == H ? void 0 : H.application_id) || t === (null == Z ? void 0 : Z.applicationId)) && n === et;
-  })), ei = (0, a.e7)([v.Z], () => null != H && null != H.application_id && v.Z.getState(H.application_id, F.mFx.JOIN) === F.OcF.LOADING), [ea] = (0, _.Z)((null == Z ? void 0 : Z.applicationId) != null ? [null == Z ? void 0 : Z.applicationId] : (null == H ? void 0 : H.application_id) != null ? [null == H ? void 0 : H.application_id] : []), eo = (0, P.s5)({
+  })), ei = (0, a.e7)([v.Z], () => null != H && null != H.application_id && v.Z.getState(H.application_id, F.mFx.JOIN) === F.OcF.LOADING), [ea] = (0, _.Z)((null == Z ? void 0 : Z.applicationId) != null ? [null == Z ? void 0 : Z.applicationId] : (null == H ? void 0 : H.application_id) != null ? [null == H ? void 0 : H.application_id] : []), es = (0, P.s5)({
 userId: Y.id,
 activity: H,
 channelId: et,
 application: ea
-  }), es = (0, a.e7)([
+  }), eo = (0, a.e7)([
 f.Z,
 m.Z,
 p.Z,
@@ -89,7 +89,7 @@ g.Z,
 S.Z,
 N.Z,
 T.Z
-  ], () => null != Z ? eo === P.Fw.CAN_JOIN : null != H ? (0, b.Z)({
+  ], () => null != Z ? es === P.Fw.CAN_JOIN : null != H ? (0, b.Z)({
 user: Y,
 activity: H,
 application: ea,
@@ -107,7 +107,7 @@ PermissionStore: T.Z
   if (!((0, U.Z)(H, F.xjy.JOIN) || W) || null == ee)
 return null;
   let e_ = !J || W && !el,
-eE = e_ && (ed || en) && !Q && !er && (!W || es),
+eE = e_ && (ed || en) && !Q && !er && (!W || eo),
 ef = null;
   e_ ? !ed && !en && null != H && (ef = V.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({
 name: H.name
@@ -135,7 +135,7 @@ ep = async (e, t) => {
 }, em = async () => {
   let e = !1;
   if (W) {
-    if (!es || null == et || null == ee)
+    if (!eo || null == et || null == ee)
       return;
     e = await (0, L.Z)({
       applicationId: ee,
@@ -148,20 +148,20 @@ ep = async (e, t) => {
   }
   if (!e) {
     let e;
-    es && (null == j || j(), ep(Y, H)), X(!0), null != et && null != ee ? e = await y.pu({
+    eo && (null == j || j(), ep(Y, H)), X(!0), null != et && null != ee ? e = await y.pu({
       channelId: et,
       applicationId: ee,
       userId: Y.id,
       location: F.Sbl.PROFILE_POPOUT
-    }) : null != H && (e = await s.Z.sendActivityInviteUser({
+    }) : null != H && (e = await o.Z.sendActivityInviteUser({
       type: F.mFx.JOIN_REQUEST,
       userId: Y.id,
       activity: H,
       location: F.Sbl.PROFILE_POPOUT
     })), null != e && u.default.selectPrivateChannel(e.id);
   }
-}, eI = es ? V.Z.Messages.JOIN : V.Z.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN;
-  return W && (eI = V.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY), el && (eI = V.Z.Messages.EMBEDDED_ACTIVITIES_JOINED), (0, r.jsx)(o.Tooltip, {
+}, eI = eo ? V.Z.Messages.JOIN : V.Z.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN;
+  return W && (eI = V.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY), el && (eI = V.Z.Messages.EMBEDDED_ACTIVITIES_JOINED), (0, r.jsx)(s.Tooltip, {
 text: ef,
 children: e => {
   let {

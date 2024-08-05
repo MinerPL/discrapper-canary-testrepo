@@ -6,8 +6,8 @@ return l;
 var r = n(358085),
   i = n(782769),
   a = n(527805),
-  o = n(620662),
-  s = n(981631);
+  s = n(620662),
+  o = n(981631);
 
 function l(e) {
   let {
@@ -42,19 +42,19 @@ return (0, a.ZP)({
 }) === a.Fw.CAN_JOIN;
   if (!(0, r.isDesktop)())
 return !1;
-  if ((0, o.Z)(n, s.xjy.PARTY_PRIVACY_FRIENDS) && h.isFriend(t.id))
+  if ((0, s.Z)(n, o.xjy.PARTY_PRIVACY_FRIENDS) && h.isFriend(t.id))
 return !0;
-  if ((0, o.Z)(n, s.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) {
+  if ((0, s.Z)(n, o.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) {
 let e = _.getChannel(p.getVoiceChannelId());
 if (null == e || !m.isInChannel(e.id, t.id))
   return !1;
 switch (e.type) {
-  case s.d4z.DM:
-  case s.d4z.GROUP_DM:
+  case o.d4z.DM:
+  case o.d4z.GROUP_DM:
     return !0;
 }
 let n = E.getGuild(e.getGuildId());
-if (null == n || n.hasFeature(s.oNc.COMMUNITY))
+if (null == n || n.hasFeature(o.oNc.COMMUNITY))
   return !1;
 let r = f.getMemberCount(n.id);
 return null != r && r < 100;

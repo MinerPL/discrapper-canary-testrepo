@@ -5,18 +5,18 @@ return f;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(442837),
-  s = n(570140),
+  s = n(442837),
+  l = n(570140),
   r = n(519938),
   o = n(928518),
   c = n(585483),
-  d = n(317381),
-  u = n(917107),
+  u = n(317381),
+  d = n(917107),
   h = n(716600),
   p = n(918559),
   m = n(981631);
 let _ = (e, t) => {
-  s.Z.wait(() => {
+  l.Z.wait(() => {
 (0, r.Cz)(e, t);
   });
 };
@@ -24,17 +24,17 @@ let _ = (e, t) => {
 function f(e) {
   let t, {
   embedId: n,
-  className: s,
+  className: l,
   style: r
 } = e,
-f = (0, l.e7)([o.Z], () => o.Z.getWindow(m.KJ3.CHANNEL_CALL_POPOUT)),
+f = (0, s.e7)([o.Z], () => o.Z.getWindow(m.KJ3.CHANNEL_CALL_POPOUT)),
 E = (0, h.Z)(),
-C = (0, l.e7)([d.ZP], () => d.ZP.getActivityPanelMode());
-  if (null != E && !(0, u.Z)(E.channelId) && C === p.Ez.PANEL)
+g = (0, s.e7)([u.ZP], () => u.ZP.getActivityPanelMode());
+  if (null != E && !(0, d.Z)(E.channelId) && g === p.Ez.PANEL)
 t = window;
   else {
-var g;
-t = null !== (g = null == f ? void 0 : f.window) && void 0 !== g ? g : window;
+var C;
+t = null !== (C = null == f ? void 0 : f.window) && void 0 !== C ? C : window;
   }
   let I = a.useRef(null),
 x = a.useMemo(() => {
@@ -72,6 +72,6 @@ x
   ]), (0, i.jsx)('div', {
 ref: I,
 style: r,
-className: s
+className: l
   });
 }

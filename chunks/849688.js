@@ -1,7 +1,7 @@
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(481060),
   o = n(442837),
   c = n(792125),
@@ -14,8 +14,8 @@ let I = (0, c.Q)(_.BRd.DARK);
 t.Z = function(e) {
   let {
 guild: t
-  } = e, a = (0, o.e7)([u.Z], () => u.Z.getActiveGuildSignUp(t.id)), c = s.useCallback(() => {
-null != a && (0, l.openModalLazy)(async () => {
+  } = e, s = (0, o.e7)([u.Z], () => u.Z.getActiveGuildSignUp(t.id)), c = a.useCallback(() => {
+null != s && (0, l.openModalLazy)(async () => {
   let {
     default: e
   } = await Promise.all([
@@ -24,19 +24,19 @@ null != a && (0, l.openModalLazy)(async () => {
   ]).then(n.bind(n, 646202));
   return n => (0, i.jsx)(e, {
     ...n,
-    target: a,
+    target: s,
     guildId: t.id
   });
 });
   }, [
-a,
+s,
 t.id
-  ]), m = s.useCallback(() => {
-null != a && (0, d.b)(a.key, a.dismissibleContent);
-  }, [a]);
-  if (null == a)
+  ]), m = a.useCallback(() => {
+null != s && (0, d.b)(s.key, s.dismissibleContent);
+  }, [s]);
+  if (null == s)
 return null;
-  let g = 'url('.concat(a.backgroundAssetUrl, ') black top / cover no-repeat');
+  let g = 'url('.concat(s.backgroundAssetUrl, ') black top / cover no-repeat');
   return (0, i.jsx)(l.ThemeContextProvider, {
 theme: _.BRd.DARK,
 children: (0, i.jsx)('div', {
@@ -63,7 +63,7 @@ children: (0, i.jsx)('div', {
       }),
       (0, i.jsx)(l.Heading, {
         variant: 'heading-sm/medium',
-        children: a.noticeHeader
+        children: s.noticeHeader
       }),
       (0, i.jsx)(l.Button, {
         className: E.button,

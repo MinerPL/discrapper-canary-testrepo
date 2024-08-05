@@ -29,8 +29,8 @@ var s, a, t = l(735250),
   j = l(785468),
   M = l(202005),
   D = l(311166),
-  p = l(744782),
-  R = l(129526),
+  R = l(744782),
+  p = l(129526),
   V = l(765305),
   G = l(981631),
   O = l(689938),
@@ -119,7 +119,7 @@ onChange: h,
 onSave: v,
 onClose: S,
 createdEvent: C
-  } = e, L = (0, m.Dt)(), A = i.useRef(l), Z = !(0, r.isEqual)(A.current, l), R = i.useMemo(() => [{
+  } = e, L = (0, m.Dt)(), A = i.useRef(l), Z = !(0, r.isEqual)(A.current, l), p = i.useMemo(() => [{
   slideId: 0,
   label: O.Z.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_1,
   valid: null == _.entity,
@@ -140,10 +140,10 @@ createdEvent: C
 _,
 E,
 Z
-  ]), V = Object.keys(s).length, G = (0, g.xt)(l), y = e => Math.max(0, Math.min(e, V - 1)), [b, P] = i.useState(G ? 1 : 0), [k, z] = i.useState(!1), H = i.useMemo(() => R.slice(0, b + 1).map(e => e.valid).every(Boolean), [
-R,
+  ]), V = Object.keys(s).length, G = (0, g.xt)(l), y = e => Math.max(0, Math.min(e, V - 1)), [b, P] = i.useState(G ? 1 : 0), [k, z] = i.useState(!1), H = i.useMemo(() => p.slice(0, b + 1).map(e => e.valid).every(Boolean), [
+p,
 b
-  ]), F = b >= R.length ? 3 : R[y(b)].slideId, w = 3 === F;
+  ]), F = b >= p.length ? 3 : p[y(b)].slideId, w = 3 === F;
   (0, f.l)(e => e.onUpdateCanCloseModal)(w);
   let W = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
 X = i.useRef(null),
@@ -178,7 +178,7 @@ children: (0, t.jsxs)(d.ModalRoot, {
       scrollerRef: X,
       children: [
         !w && (0, t.jsx)(N.Z, {
-          steps: R.map(e => e.label),
+          steps: p.map(e => e.label),
           stepIndex: b,
           onClick: e => {
             e < b ? K() : e > b && q();
@@ -225,7 +225,7 @@ children: (0, t.jsxs)(d.ModalRoot, {
             }),
             (0, t.jsx)(d.Slide, {
               id: 3,
-              children: (0, t.jsx)(p.Z, {
+              children: (0, t.jsx)(R.Z, {
                 onClose: S,
                 event: C
               })
@@ -274,7 +274,7 @@ guildId: n,
 guildScheduledEventId: s,
 transitionState: a,
 onClose: r
-  } = e, u = (0, o.e7)([x.Z], () => x.Z.getGuild(n)), E = (0, o.e7)([g.ZP], () => g.ZP.getGuildScheduledEvent(s), [s]), N = (0, o.e7)([I.ZP], () => I.ZP.getDefaultChannel(n), [n]), m = (0, L.j$)(E, N), [T, f] = i.useState(m), [j] = i.useState((0, L.Ql)(E)), [M, D] = i.useState(null), p = e => {
+  } = e, u = (0, o.e7)([x.Z], () => x.Z.getGuild(n)), E = (0, o.e7)([g.ZP], () => g.ZP.getGuildScheduledEvent(s), [s]), N = (0, o.e7)([I.ZP], () => I.ZP.getDefaultChannel(n), [n]), m = (0, L.j$)(E, N), [T, f] = i.useState(m), [j] = i.useState((0, L.Ql)(E)), [M, D] = i.useState(null), R = e => {
 var n;
 let l = (0, S.so)(e),
   s = null !== (n = e.channel_id) && void 0 !== n ? n : null == N ? void 0 : N.id;
@@ -294,8 +294,8 @@ let e = {
 if (j && null != s)
   return await v.Z.saveEvent(s, T, n, e), r();
 let l = await v.Z.createGuildEvent(T, n, e);
-return p(l.body), l;
-  }), H = i.useMemo(() => (0, R.Z)(T, j), [
+return R(l.body), l;
+  }), H = i.useMemo(() => (0, p.Z)(T, j), [
 T,
 j
   ]);

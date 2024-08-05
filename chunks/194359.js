@@ -1,7 +1,7 @@
 n(47120);
 var r, i, a = n(544891),
-  o = n(780384),
-  s = n(570140),
+  s = n(780384),
+  o = n(570140),
   l = n(391650),
   u = n(877215),
   c = n(895886),
@@ -67,12 +67,12 @@ let {
   context: n,
   captchaPayload: r,
   errorUxConfig: i = 0
-} = e, [o, s] = t.split('#');
+} = e, [s, o] = t.split('#');
 return a.tn.post({
   url: m.ANM.USER_RELATIONSHIPS(),
   body: {
-    username: o,
-    discriminator: parseInt(s),
+    username: s,
+    discriminator: parseInt(o),
     ...r
   },
   context: n,
@@ -86,16 +86,16 @@ let {
   userId: n,
   context: r,
   type: i,
-  friendToken: o,
-  fromFriendSuggestion: s,
+  friendToken: s,
+  fromFriendSuggestion: o,
   captchaPayload: l
 } = e, u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, c = _.default.getUser(n);
 return a.tn.put({
   url: m.ANM.USER_RELATIONSHIP(n),
   body: {
     type: i,
-    friend_token: o,
-    from_friend_suggestion: s,
+    friend_token: s,
+    from_friend_suggestion: o,
     ...l
   },
   context: r,
@@ -107,19 +107,19 @@ return a.tn.put({
 });
   },
   acceptFriendRequest: e => S.addRelationship(e, function() {
-o.uv.announce(I.Z.Messages.A11Y_ANNOUNCEMENT_FRIEND_ACCEPT_REQUEST);
+s.uv.announce(I.Z.Messages.A11Y_ANNOUNCEMENT_FRIEND_ACCEPT_REQUEST);
   }),
   cancelFriendRequest: (e, t) => S.removeRelationship(e, t, function() {
-o.uv.announce(I.Z.Messages.A11Y_ANNOUNCEMENT_FRIEND_CANCEL_REQUEST);
+s.uv.announce(I.Z.Messages.A11Y_ANNOUNCEMENT_FRIEND_CANCEL_REQUEST);
   }),
   removeFriend(e, t) {
 S.removeRelationship(e, t, function() {
-  o.uv.announce(I.Z.Messages.A11Y_ANNOUNCEMENT_FRIEND_REMOVED);
+  s.uv.announce(I.Z.Messages.A11Y_ANNOUNCEMENT_FRIEND_REMOVED);
 });
   },
   unblockUser(e, t) {
 S.removeRelationship(e, t, function() {
-  o.uv.announce(I.Z.Messages.A11Y_ANNOUNCEMENT_USER_UNBLOCKED);
+  s.uv.announce(I.Z.Messages.A11Y_ANNOUNCEMENT_USER_UNBLOCKED);
 });
   },
   removeRelationship: (e, t, n) => a.tn.del({
@@ -129,7 +129,7 @@ oldFormErrors: !0
   }).then(() => {
 null == n || n();
   }).catch(() => {
-o.uv.announce(I.Z.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL);
+s.uv.announce(I.Z.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL);
   }),
   updateRelationship: (e, t) => a.tn.patch({
 url: m.ANM.USER_RELATIONSHIP(e),
@@ -141,10 +141,10 @@ body: {
 a.tn.get({
   url: m.ANM.USER_RELATIONSHIPS(),
   oldFormErrors: !0
-}).then(e => s.Z.dispatch({
+}).then(e => o.Z.dispatch({
   type: 'LOAD_RELATIONSHIPS_SUCCESS',
   relationships: e.body
-}), () => s.Z.dispatch({
+}), () => o.Z.dispatch({
   type: 'LOAD_RELATIONSHIPS_FAILURE'
 }));
   },
@@ -157,11 +157,11 @@ query: {
   relationship_type: m.OGo.PENDING_INCOMING
 }
   }).then(() => {
-s.Z.dispatch({
+o.Z.dispatch({
   type: 'RELATIONSHIP_PENDING_INCOMING_REMOVED'
 });
   }).catch(() => {
-o.uv.announce(I.Z.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL);
+s.uv.announce(I.Z.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL);
   })
 };
 t.Z = S;

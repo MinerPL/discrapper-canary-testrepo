@@ -1,8 +1,8 @@
 var r = n(470079),
   i = n(399606),
   a = n(311395),
-  o = n(778825),
-  s = n(150039),
+  s = n(778825),
+  o = n(150039),
   l = n(271383),
   u = n(25990),
   c = n(594174),
@@ -18,13 +18,13 @@ pendingAvatarDecoration: I,
 pendingErrors: T
   } = (0, i.cj)([
 u.Z,
-o.Z
+s.Z
   ], () => ({
-pendingAvatar: t ? u.Z.getTryItOutAvatar() : null != _ ? o.Z.getPendingAvatar() : u.Z.getPendingAvatar(),
-pendingAvatarDecoration: t ? u.Z.getTryItOutAvatarDecoration() : null != _ ? o.Z.getPendingAvatarDecoration() : u.Z.getPendingAvatarDecoration(),
-pendingErrors: null != _ ? o.Z.getErrors().avatarDecoration : u.Z.getErrors().avatarDecoration
-  })), g = (0, r.useCallback)(e => (0, s.Jw)(e, null == E ? void 0 : E.avatar), [null == E ? void 0 : E.avatar]), S = (0, r.useCallback)(e => {
-(0, s.PO)(_, e), null != e && p(e);
+pendingAvatar: t ? u.Z.getTryItOutAvatar() : null != _ ? s.Z.getPendingAvatar() : u.Z.getPendingAvatar(),
+pendingAvatarDecoration: t ? u.Z.getTryItOutAvatarDecoration() : null != _ ? s.Z.getPendingAvatarDecoration() : u.Z.getPendingAvatarDecoration(),
+pendingErrors: null != _ ? s.Z.getErrors().avatarDecoration : u.Z.getErrors().avatarDecoration
+  })), g = (0, r.useCallback)(e => (0, o.Jw)(e, null == E ? void 0 : E.avatar), [null == E ? void 0 : E.avatar]), S = (0, r.useCallback)(e => {
+(0, o.PO)(_, e), null != e && p(e);
   }, [
 p,
 _

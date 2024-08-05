@@ -14,8 +14,8 @@ return function(t, n, r) {
   }(),
   i = n(470079),
   a = l(i),
-  o = l(n(844303)),
-  s = function(e) {
+  s = l(n(844303)),
+  o = function(e) {
 if (e && e.__esModule)
   return e;
 var t = {};
@@ -42,10 +42,10 @@ var c = t.Hue = function(e) {
   if (!(e instanceof t))
     throw TypeError('Cannot call a class as a function');
 }(this, t);
-for (var e, n, r, i = arguments.length, a = Array(i), o = 0; o < i; o++)
-  a[o] = arguments[o];
+for (var e, n, r, i = arguments.length, a = Array(i), s = 0; s < i; s++)
+  a[s] = arguments[s];
 return n = r = u(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(a))), r.handleChange = function(e) {
-  var t = s.calculateChange(e, r.props.direction, r.props.hsl, r.container);
+  var t = o.calculateChange(e, r.props.direction, r.props.hsl, r.container);
   t && 'function' == typeof r.props.onChange && r.props.onChange(t, e);
 }, r.handleMouseDown = function(e) {
   r.handleChange(e), window.addEventListener('mousemove', r.handleChange), window.addEventListener('mouseup', r.handleMouseUp);
@@ -82,7 +82,7 @@ e.prototype = Object.create(t && t.prototype, {
     var e = this,
       t = this.props.direction,
       n = void 0 === t ? 'horizontal' : t,
-      r = (0, o.default)({
+      r = (0, s.default)({
         default: {
           hue: {
             absolute: '0px 0px 0px 0px',

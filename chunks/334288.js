@@ -4,12 +4,12 @@ return r;
   }
 });
 var i = n(996106),
-  s = n(186901),
-  a = n(981631);
+  a = n(186901),
+  s = n(981631);
 
 function r(e) {
-  if (s.He.IPC !== e && s.He.POST_MESSAGE !== e)
+  if (a.He.IPC !== e && a.He.POST_MESSAGE !== e)
 throw new i.Z({
-  errorCode: a.lTL.INVALID_COMMAND
+  errorCode: s.lTL.INVALID_COMMAND
 }, 'Invalid transport.');
 }

@@ -17,5 +17,5 @@ return 'json';
 return !0;
   }
 }
-let o = void 0 !== i ? i : a;
-r.s.isDiscordGatewayPlaintextSet() && (o = a), t.Z = o;
+let s = void 0 !== i ? i : a;
+r.s.isDiscordGatewayPlaintextSet() && (s = a), t.Z = s;

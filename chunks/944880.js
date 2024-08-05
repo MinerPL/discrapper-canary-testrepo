@@ -2,8 +2,8 @@ n(47120);
 var r = n(913527),
   i = n.n(r),
   a = n(570140),
-  o = n(147913),
-  s = n(959546),
+  s = n(147913),
+  o = n(959546),
   l = n(594174),
   u = n(580130),
   c = n(111361),
@@ -17,7 +17,7 @@ let m = null,
   I = !1;
 
 function T(e) {
-  let t = s.Z.createFromServer(e.entitlement);
+  let t = o.Z.createFromServer(e.entitlement);
   (0, f._k)(t) ? g({
 forceRefresh: !0
   }): (0, f.YE)(t) && null != E.Z.getTenureRewardStatusForRewardId(t.skuId) && a.Z.dispatch({
@@ -37,9 +37,9 @@ r = (0, f.MR)([
   p.Ft.FREE_GUILD_BOOST_1_MONTH,
   p.Ft.FREE_GUILD_BOOST_3_MONTHS
 ], t),
-o = l.default.getCurrentUser();
-  if (!(0, c.M5)(o, h.p9.TIER_2) && null == n) {
-null != o && a.Z.dispatch({
+s = l.default.getCurrentUser();
+  if (!(0, c.M5)(s, h.p9.TIER_2) && null == n) {
+null != s && a.Z.dispatch({
   type: 'USER_TENURE_REWARD_STATUS_RESET'
 });
 return;
@@ -59,7 +59,7 @@ if ((!0 === e || function(e) {
       let t = null !== (e = E.Z.getTenureRewardStatusForRewardId(p.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : E.Z.getTenureRewardStatusForRewardId(p.Ft.FREE_GUILD_BOOST_3_MONTHS);
       return null != t && null != t.redeemable_at && 0 >= i()(t.redeemable_at).diff(i().utc(), 'seconds');
     }();
-  }(o)) && null == r)
+  }(s)) && null == r)
   S();
 else {
   let e = u.Z.getForApplication(h.RQ);
@@ -97,7 +97,7 @@ function N() {
 function v() {
   g();
 }
-class O extends o.Z {
+class O extends s.Z {
   forceRefreshIfOutdated() {
 let e = E.Z.getState();
 null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 86400000 && g({

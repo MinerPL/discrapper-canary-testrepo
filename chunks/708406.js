@@ -11,18 +11,18 @@ function i(e, t, n) {
 } : {},
 {
   offset: a,
-  limit: o,
-  results: s,
+  limit: s,
+  results: o,
   totalResults: l
 } = null != n ? n : {};
   return {
 search_type: r.aib.GIF,
 load_id: e,
-limit: o,
+limit: s,
 offset: a,
-page: null != o && null != a ? Math.floor(a / o) + 1 : 1,
+page: null != s && null != a ? Math.floor(a / s) + 1 : 1,
 total_results: l,
-page_results: null != s ? s.length : null,
+page_results: null != o ? o.length : null,
 num_modifiers: Object.keys(i).length,
 modifiers: i
   };

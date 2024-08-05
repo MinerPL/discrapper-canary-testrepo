@@ -84,8 +84,8 @@ return b;
 var r = n(848246),
   i = n(710845),
   a = n(380684),
-  o = n(533293),
-  s = n(575691),
+  s = n(533293),
+  o = n(575691),
   l = n(474936);
 let u = new i.Z('ProductCatalog.tsx'),
   c = Object.freeze({
@@ -93,7 +93,7 @@ let u = new i.Z('ProductCatalog.tsx'),
 [l.p9.TIER_1]: l.Si.TIER_1,
 [l.p9.TIER_2]: l.Si.TIER_2
   });
-class d extends o.Z {
+class d extends s.Z {
   constructor(e, t) {
 super(e, e => function(e, t) {
   if (null == t || null == t.premiumType)
@@ -136,13 +136,13 @@ let _ = new d(r.q.ANIMATED_EMOJIS),
   b = new d('installPremiumApplications'),
   M = new d('redeemPremiumPerks'),
   P = new d(r.q.VIDEO_FILTER_ASSETS);
-new o.Z(r.q.INCREASED_FILE_UPLOAD_SIZE, a.h6);
+new s.Z(r.q.INCREASED_FILE_UPLOAD_SIZE, a.h6);
 let U = new d(r.q.INCREASED_GUILD_LIMIT),
   w = new d(r.q.INCREASED_MESSAGE_LENGTH),
   x = new d('increasedVideoUploadQuality'),
   G = new d('uploadLargeFiles'),
   k = Object.freeze({
-[l.Si.TIER_0]: new s.Z(l.Si.TIER_0, [
+[l.Si.TIER_0]: new o.Z(l.Si.TIER_0, [
   _,
   E,
   f,
@@ -152,7 +152,7 @@ let U = new d(r.q.INCREASED_GUILD_LIMIT),
   G,
   N
 ]),
-[l.Si.TIER_1]: new s.Z(l.Si.TIER_1, [
+[l.Si.TIER_1]: new o.Z(l.Si.TIER_1, [
   _,
   E,
   m,
@@ -165,7 +165,7 @@ let U = new d(r.q.INCREASED_GUILD_LIMIT),
   G,
   N
 ]),
-[l.Si.TIER_2]: new s.Z(l.Si.TIER_2, [
+[l.Si.TIER_2]: new o.Z(l.Si.TIER_2, [
   _,
   E,
   f,

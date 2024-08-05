@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  o = n(481060),
   l = n(330726),
   u = n(906411),
   c = n(438332),
@@ -79,11 +79,11 @@ W = e => {
         return (0, i.createElement)('li', {
           ...h,
           key: t
-        }, (0, r.jsx)(s.FocusRing, {
+        }, (0, r.jsx)(o.FocusRing, {
           children: (0, r.jsx)('button', {
             'aria-label': g.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
             ref: _,
-            className: o()(S.emojiItem, {
+            className: s()(S.emojiItem, {
               [S.emojiItemLarge]: Y,
               [S.emojiItemMedium]: j,
               [S.emojiItemSelected]: u,
@@ -96,7 +96,7 @@ W = e => {
             onMouseLeave: a,
             onClick: c,
             tabIndex: E,
-            children: (0, r.jsx)(s.CirclePlusIcon, {
+            children: (0, r.jsx)(o.CirclePlusIcon, {
               size: 'md',
               color: 'currentColor',
               className: S.icon,
@@ -110,13 +110,13 @@ W = e => {
       var n;
       let {
         columnIndex: i,
-        visibleRowIndex: o
-      } = e, s = B.rowIndex === o && B.columnIndex === i;
+        visibleRowIndex: s
+      } = e, o = B.rowIndex === s && B.columnIndex === i;
       return (0, r.jsx)(m.Z, {
         rowIndex: y,
         descriptor: e,
         emojiItemKey: t,
-        isInspected: s,
+        isInspected: o,
         isScrolling: R,
         isUsingKeyboardNavigation: C,
         surrogateCodePoint: N,
@@ -141,7 +141,7 @@ W = e => {
 },
 K = e => (0, r.jsx)('ul', {
   ...O(y),
-  className: o()(S.emojiListRow, {
+  className: s()(S.emojiListRow, {
     [S.emojiListRowLargeSize]: Y,
     [S.emojiListRowMediumSize]: j
   }),
@@ -156,7 +156,7 @@ q = t.filter(e => e.subCategory === I.t0.NEWLY_ADDED_EMOJI && e.emoji.type === u
 className: S.topEmojiSectionContainer,
 children: [
   (0, r.jsx)('div', {
-    className: o()(S.topEmojiContainer, {
+    className: s()(S.topEmojiContainer, {
       [S.noEmojis]: 0 === z.length
     }),
     children: K(z)
@@ -165,14 +165,14 @@ children: [
     className: S.newlyAddedHighlightContainer,
     children: [
       (0, r.jsx)('div', {
-        className: o()(S.newlyAddedHighlight, {
+        className: s()(S.newlyAddedHighlight, {
           [S.oneItem]: 1 === q.length,
           [S.alignRight]: z.length > 0
         }),
         children: K(q)
       }),
       (0, r.jsxs)('div', {
-        className: o()(S.newlyAddedBadge, {
+        className: s()(S.newlyAddedBadge, {
           [S.newlyAddedBadgeLarge]: Y,
           [S.newlyAddedBadgeMedium]: j,
           [S.alignRight]: z.length > 0
@@ -181,7 +181,7 @@ children: [
           (0, r.jsx)(f.Z, {
             foreground: S.newlyAddedBadgeStar
           }),
-          (0, r.jsx)(s.Text, {
+          (0, r.jsx)(o.Text, {
             variant: 'text-xs/semibold',
             color: 'always-white',
             children: g.Z.Messages.NEW

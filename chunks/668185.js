@@ -6,8 +6,8 @@ return _;
 var r = n(735250),
   i = n(470079),
   a = n(149765),
-  o = n(178940),
-  s = n(993365),
+  s = n(178940),
+  o = n(993365),
   l = n(481060),
   u = n(422559),
   c = n(689938),
@@ -34,11 +34,11 @@ m = p.filter(e => !a.e$(h, e)).map(e => {
     n = !a.e$(_, e);
   return (0, r.jsx)('li', {
     className: d.permission,
-    children: (0, r.jsx)(o.X, {
+    children: (0, r.jsx)(s.X, {
       value: n,
       onChange: (t, n) => E(n, e),
-      type: o.X.Types.INVERTED,
-      children: (0, r.jsx)(s.x, {
+      type: s.X.Types.INVERTED,
+      children: (0, r.jsx)(o.x, {
         variant: 'text-md/normal',
         children: t
       })
@@ -58,7 +58,7 @@ I = p.filter(e => a.e$(h, e)).map(e => {
           className: d.icon
         })
       }),
-      (0, r.jsx)(s.x, {
+      (0, r.jsx)(o.x, {
         variant: 'text-md/normal',
         children: t
       })
@@ -70,7 +70,7 @@ className: d.botPermissions,
 children: [
   m.length > 0 ? (0, r.jsxs)(r.Fragment, {
     children: [
-      (0, r.jsx)(s.x, {
+      (0, r.jsx)(o.x, {
         variant: 'text-sm/medium',
         color: 'header-secondary',
         className: d.permissionsLabel,
@@ -87,7 +87,7 @@ children: [
   }) : null,
   I.length > 0 ? (0, r.jsxs)(r.Fragment, {
     children: [
-      (0, r.jsx)(s.x, {
+      (0, r.jsx)(o.x, {
         variant: 'text-sm/medium',
         color: 'header-secondary',
         className: d.disabledPermissionsLabel,

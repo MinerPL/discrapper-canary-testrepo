@@ -96,11 +96,11 @@ channelId: t,
 closePopout: n
   } = e, [r, l] = s.useState(!1), {
 reducedMotion: d
-  } = s.useContext(c.AccessibilityPreferencesContext), g = (0, i.useSpring)({
+  } = s.useContext(c.AccessibilityPreferencesContext), g = (0, c.useSpring)({
 from: d.enabled ? b : N,
 to: v,
 config: S
-  }), x = (0, o.e7)([u.Z], () => u.Z.keyboardModeEnabled), f = (0, o.e7)([C.Z], () => C.Z.getUploads(t, m.I.CREATE_FORUM_POST.drafts.type));
+  }, 'animate-always'), x = (0, o.e7)([u.Z], () => u.Z.keyboardModeEnabled), f = (0, o.e7)([C.Z], () => C.Z.getUploads(t, m.I.CREATE_FORUM_POST.drafts.type));
   return (0, a.jsx)(i.animated.div, {
 className: E.popoutContainer,
 onMouseLeave: () => {

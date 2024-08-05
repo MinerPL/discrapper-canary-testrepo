@@ -48,7 +48,7 @@ onUserContextMenu: e => {
 },
 onChannelContextMenu: e => {
   let i = r.Z.getGuild(t);
-  null != u.options.channel && null != i && (0, a.jW)(e, async () => {
+  null != u.options.channel && 'string' != typeof u.options.channel && null != i && (0, a.jW)(e, async () => {
     let {
       default: e
     } = await n.e('51529').then(n.bind(n, 911053));

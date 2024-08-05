@@ -12,8 +12,8 @@ var o = n(735250),
   _ = n(144114),
   h = n(607018),
   p = n(325067),
-  R = n(594174),
-  f = n(285952),
+  f = n(594174),
+  R = n(285952),
   I = n(279837),
   N = n(981631),
   M = n(815660),
@@ -35,8 +35,8 @@ text: n,
 children: r,
 ...s
   } = e;
-  return (0, o.jsxs)(f.Z, {
-direction: f.Z.Direction.VERTICAL,
+  return (0, o.jsxs)(R.Z, {
+direction: R.Z.Direction.VERTICAL,
 ...s,
 children: [
   (0, o.jsx)(l.FormTitle, {
@@ -48,7 +48,7 @@ children: [
     className: S.sectionBody,
     children: n
   }) : null,
-  (0, o.jsx)(f.Z.Child, {
+  (0, o.jsx)(R.Z.Child, {
     wrap: !0,
     children: r
   })
@@ -127,7 +127,7 @@ return (0, o.jsx)(C, {
 return (0, o.jsxs)(l.ModalHeader, {
   separator: !1,
   children: [
-    (0, o.jsxs)(f.Z.Child, {
+    (0, o.jsxs)(R.Z.Child, {
       grow: 1,
       shrink: 1,
       children: [
@@ -143,7 +143,7 @@ return (0, o.jsxs)(l.ModalHeader, {
         })
       ]
     }),
-    (0, o.jsx)(f.Z.Child, {
+    (0, o.jsx)(R.Z.Child, {
       grow: 0,
       children: (0, o.jsx)(l.ModalCloseButton, {
         onClick: this.handleCloseModal
@@ -278,10 +278,10 @@ super(...e), O(this, 'state', {
   }
 }
 t.default = i.ZP.connectStores([
-  R.default,
+  f.default,
   p.Z
 ], () => {
-  let e = R.default.getCurrentUser();
+  let e = f.default.getCurrentUser();
   return a()(null != e, 'MFAEnableSuccess: currentUser cannot be undefined'), {
 currentUser: e,
 backupCodes: p.Z.getBackupCodes(),

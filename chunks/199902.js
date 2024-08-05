@@ -1,6 +1,6 @@
-let r, i, a, o;
+let r, i, a, s;
 n(47120), n(653041), n(724458);
-var s, l, u, c, d = n(442837),
+var o, l, u, c, d = n(442837),
   _ = n(570140),
   E = n(258609),
   f = n(594190),
@@ -23,7 +23,7 @@ let D = null,
   b = null;
 
 function M() {
-  r = new Map(), i = {}, a = {}, o = {}, L = {};
+  r = new Map(), i = {}, a = {}, s = {}, L = {};
 }
 M();
 
@@ -46,11 +46,11 @@ function w(e) {
 streamKey: t,
 region: n,
 viewerIds: i,
-paused: o
+paused: s
   } = e;
   r.set(t, {
 ...(0, h.my)(t),
-state: o ? C.jm8.PAUSED : C.jm8.ACTIVE
+state: s ? C.jm8.PAUSED : C.jm8.ACTIVE
   }), a[t] = {
 streamKey: t,
 region: n,
@@ -69,7 +69,7 @@ return !0;
   let t = g.Z.getBasicChannel(e.channelId);
   return null != t && (0, p.p9)(t, R.Z, S.Z, N.Z, E.Z)[0];
 }
-class k extends(s = d.ZP.Store) {
+class k extends(o = d.ZP.Store) {
   initialize() {
 this.syncWith([N.Z], () => !0), this.waitFor(f.ZP, N.Z);
   }
@@ -115,11 +115,11 @@ let t = O.Z.getVoiceChannelId(),
 if (null == n)
   return null;
 let r = this.getActiveStreamForUser(T.default.getId(), n.getGuildId());
-return null == r ? null : null !== (e = o[(0, h.V9)(r)]) && void 0 !== e ? e : null;
+return null == r ? null : null !== (e = s[(0, h.V9)(r)]) && void 0 !== e ? e : null;
   }
   getStreamerActiveStreamMetadataForStream(e) {
 var t;
-return null !== (t = o[e]) && void 0 !== t ? t : null;
+return null !== (t = s[e]) && void 0 !== t ? t : null;
   }
   getAnyStreamForUser(e) {
 var t;
@@ -160,7 +160,7 @@ return (0, m.Z)(A.Z) ? {
   activeStreams: Array.from(r.entries()),
   streamsByUserAndGuild: i,
   rtcStreams: a,
-  streamerActiveStreamMetadatas: o
+  streamerActiveStreamMetadatas: s
 } : {
   activeStreams: [],
   streamsByUserAndGuild: {},
@@ -179,7 +179,7 @@ c = 'ApplicationStreamingStore', (u = 'displayName') in(l = k) ? Object.definePr
 let {
   applicationStreamState: t
 } = e;
-i = t.streamsByUserAndGuild, r = new Map(t.activeStreams), a = t.rtcStreams, o = t.streamerActiveStreamMetadatas;
+i = t.streamsByUserAndGuild, r = new Map(t.activeStreams), a = t.rtcStreams, s = t.streamerActiveStreamMetadatas;
   },
   VOICE_STATE_UPDATES: function(e) {
 let {
@@ -190,10 +190,10 @@ return t.reduce((e, t) => {
     userId: n,
     guildId: r,
     channelId: a,
-    sessionId: o,
-    selfStream: s
+    sessionId: s,
+    selfStream: o
   } = t;
-  if (s && null != a) {
+  if (o && null != a) {
     var l, u;
     return null == i[(l = {
       streamType: null != r ? y.lo.GUILD : y.lo.CALL,
@@ -203,7 +203,7 @@ return t.reduce((e, t) => {
     }).ownerId] && (i[l.ownerId] = {}), i[l.ownerId][null !== (u = l.guildId) && void 0 !== u ? u : C.kod] = l, !0;
   } {
     let t = T.default.getSessionId();
-    return n === T.default.getId() && o !== t && null != v.Z.getChannelId() ? e : function(e, t) {
+    return n === T.default.getId() && s !== t && null != v.Z.getChannelId() ? e : function(e, t) {
       var n;
       let r = null != t ? t : C.kod;
       return (null === (n = i[e]) || void 0 === n ? void 0 : n[r]) != null && (delete i[e][r], !0);
@@ -226,7 +226,7 @@ let {
   streamType: n,
   guildId: i,
   channelId: a,
-  pid: s,
+  pid: o,
   sourceName: l,
   sourceId: u
 } = e, c = (0, h.V9)({
@@ -234,10 +234,10 @@ let {
   guildId: i,
   channelId: a,
   ownerId: T.default.getId()
-}), d = null !== (t = null != s ? f.ZP.getGameForPID(s) : null != u ? f.ZP.getRunningGames().find(e => (0, I.Z)(u, e.windowHandle)) : null) && void 0 !== t ? t : null;
-o[c] = {
+}), d = null !== (t = null != o ? f.ZP.getGameForPID(o) : null != u ? f.ZP.getRunningGames().find(e => (0, I.Z)(u, e.windowHandle)) : null) && void 0 !== t ? t : null;
+s[c] = {
   id: null == d ? void 0 : d.id,
-  pid: s,
+  pid: o,
   sourceName: l
 }, r.delete(c), r.set(c, {
   streamType: n,
@@ -251,7 +251,7 @@ o[c] = {
 let {
   streamKey: t
 } = e;
-o[t] = null;
+s[t] = null;
   },
   STREAM_CREATE: w,
   STREAM_UPDATE: w,
@@ -270,18 +270,18 @@ r.set(t, {
 let {
   streamKey: t,
   unavailable: i,
-  reason: o
+  reason: s
 } = e;
 delete a[t];
-let s = r.get(t);
-if (null == s)
+let o = r.get(t);
+if (null == o)
   return !1;
 let l = C.jm8.ENDED;
 if (i)
   l = C.jm8.RECONNECTING;
-else if (o === C.si2.UNAUTHORIZED)
+else if (s === C.si2.UNAUTHORIZED)
   l = C.jm8.FAILED;
-else if (o === C.si2.SAFETY_GUILD_RATE_LIMITED) {
+else if (s === C.si2.SAFETY_GUILD_RATE_LIMITED) {
   let {
     guildId: e
   } = (0, h.my)(t);
@@ -293,7 +293,7 @@ else if (o === C.si2.SAFETY_GUILD_RATE_LIMITED) {
   }), l = C.jm8.ENDED;
 }
 r.set(t, {
-  ...s,
+  ...o,
   state: l
 }), l === C.jm8.ENDED && D !== t && P(t);
   },

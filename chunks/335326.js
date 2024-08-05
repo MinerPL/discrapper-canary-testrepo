@@ -1,81 +1,79 @@
 n.d(t, {
   Bj: function() {
-return f;
+return p;
   },
   td: function() {
-return _;
+return h;
   }
 });
-var i = n(735250),
-  a = n(470079),
-  l = n(442837),
+var r = n(735250),
+  i = n(470079),
+  a = n(442837),
   s = n(835473),
-  r = n(594174),
-  o = n(81063),
-  c = n(297781),
-  d = n(443487),
-  u = n(43205),
-  h = n(701488),
-  p = n(689938),
-  m = n(827418);
-let _ = [
-c.Yl,
-c.Rg
+  o = n(594174),
+  l = n(81063),
+  u = n(297781),
+  c = n(443487),
+  d = n(43205),
+  _ = n(701488),
+  E = n(689938),
+  f = n(827418);
+let h = [
+u.Yl,
+u.Rg
   ],
-  f = e => {
+  p = e => {
 var t;
 let n = (0, s.q)(e.extra.application_id),
-  i = null == n ? void 0 : n.getIconURL(128),
-  a = (0, l.e7)([r.default], () => r.default.getUser(e.author_id)),
-  c = (0, o.getAssetImage)(e.extra.application_id, e.extra.media_assets_large_image, [
-    h.Si.LARGE,
-    h.Si.LARGE
+  r = null == n ? void 0 : n.getIconURL(128),
+  i = (0, a.e7)([o.default], () => o.default.getUser(e.author_id)),
+  u = (0, l.getAssetImage)(e.extra.application_id, e.extra.media_assets_large_image, [
+    _.Si.LARGE,
+    _.Si.LARGE
   ]),
-  d = /\w+ (\d+), \w+ (\d+)/.exec(null !== (t = e.extra.media_assets_large_text) && void 0 !== t ? t : '');
+  c = /\w+ (\d+), \w+ (\d+)/.exec(null !== (t = e.extra.media_assets_large_text) && void 0 !== t ? t : '');
 return {
-  user: a,
-  mediaImageSrc: null != c ? c : i,
-  episodeDescription: null != d ? p.Z.Messages.MEMBER_LIST_CONTENT_FEED_WATCH_SEASON_EPISODE.format({
-    seasonNum: d[1],
-    episodeNum: d[2]
+  user: i,
+  mediaImageSrc: null != u ? u : r,
+  episodeDescription: null != c ? E.Z.Messages.MEMBER_LIST_CONTENT_FEED_WATCH_SEASON_EPISODE.format({
+    seasonNum: c[1],
+    episodeNum: c[2]
   }) : null
 };
   };
-t.ZP = a.memo(e => {
+t.ZP = i.memo(e => {
   let {
 entry: t,
 channel: n,
-selected: a
+selected: i
   } = e, {
-mediaImageSrc: l
-  } = f(t);
-  return (0, i.jsxs)(d.Zb, {
-selected: a,
+mediaImageSrc: a
+  } = p(t);
+  return (0, r.jsxs)(c.Zb, {
+selected: i,
 children: [
-  (0, i.jsxs)(d.e$, {
+  (0, r.jsxs)(c.e$, {
     children: [
-      (0, i.jsx)(d.F9, {
+      (0, r.jsx)(c.F9, {
         entry: t,
         channelId: n.id,
         guildId: n.guild_id
       }),
-      (0, i.jsx)(d.ll, {
-        children: p.Z.Messages.MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA.format({
-          mediaTitle: t.extra.media_title
-        })
+      (0, r.jsx)(c.ll, {
+        children: t.extra.media_title
       }),
-      (0, i.jsx)(c.Gk, {
-        location: c.Gt.CARD,
-        children: _.map((e, n) => (0, i.jsx)(e, {
+      (0, r.jsx)(u.Gk, {
+        location: u.Gt.CARD,
+        children: h.map((e, n) => (0, r.jsx)(e, {
           entry: t
         }, n))
       })
     ]
   }),
-  (0, i.jsx)(u.f, {
-    src: l,
+  (0, r.jsx)(d.f, {
+    src: a,
     size: 48,
-    className: m.thumbnail,
+    className: f.thumbnail,
     alt: t.extra.media_title
   })
 ]

@@ -9,8 +9,8 @@ var i = t(735250),
   l = t(139387),
   o = t(933557),
   r = t(699516),
-  c = t(594174),
-  d = t(491302),
+  d = t(594174),
+  c = t(491302),
   u = t(936726),
   I = t(981631),
   m = t(689938),
@@ -24,10 +24,10 @@ lastCreatedWebhookId: N,
 editedWebhook: E,
 errors: T,
 canNavigate: h
-  } = e, p = a.useMemo(() => Object.values(t).map(e => ({
+  } = e, g = a.useMemo(() => Object.values(t).map(e => ({
 value: e.id,
-label: (0, o.F6)(e, c.default, r.Z, !0)
-  })), [t]), g = a.useMemo(() => {
+label: (0, o.F6)(e, d.default, r.Z, !0)
+  })), [t]), p = a.useMemo(() => {
 let e = {};
 for (let i of n)
   if (i.channel_id in e)
@@ -51,7 +51,7 @@ E
   ]);
   return (0, i.jsx)('div', {
 className: _.__invalid_list,
-children: g.map(e => {
+children: p.map(e => {
   let {
     channel: n,
     webhooks: t
@@ -73,14 +73,14 @@ children: g.map(e => {
           children: m.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_SECTION.format({
             channelHook: () => (0, i.jsx)('span', {
               className: _.channelName,
-              children: (0, o.F6)(n, c.default, r.Z, !0)
+              children: (0, o.F6)(n, d.default, r.Z, !0)
             }, n.id)
           })
         }),
         t.map(e => {
           var n;
           if (e.type === I.ylB.CHANNEL_FOLLOWER)
-            return (0, i.jsx)(d.Z, {
+            return (0, i.jsx)(c.Z, {
               webhook: e,
               editedWebhook: N,
               channelOptions: a,
@@ -104,7 +104,7 @@ children: g.map(e => {
   }({
     channel: n,
     webhooks: t,
-    channelOptions: p,
+    channelOptions: g,
     lastCreatedWebhookId: N,
     editedWebhook: E,
     errors: T,

@@ -4,8 +4,8 @@ return r;
   }
 }), n(47120), n(411104), n(653041);
 var r, i, a = n(230367),
-  o = n(320215),
-  s = n(240773),
+  s = n(320215),
+  o = n(240773),
   l = n(495852),
   u = n(835913);
 (i = r || (r = {}))[i.UNSPECIFIED_DISCLOSURE = 0] = 'UNSPECIFIED_DISCLOSURE', i[i.IP_LOCATION = 1] = 'IP_LOCATION', i[i.DISPLAYS_ADVERTISEMENTS = 2] = 'DISPLAYS_ADVERTISEMENTS';
@@ -17,15 +17,15 @@ let t = {
   platformUsername: '',
   version: '0'
 };
-return globalThis.Object.defineProperty(t, s.C, {
+return globalThis.Object.defineProperty(t, o.C, {
   enumerable: !1,
   value: this
-}), void 0 !== e && (0, o.l)(this, t, e), t;
+}), void 0 !== e && (0, s.l)(this, t, e), t;
   }
   internalBinaryRead(e, t, n, r) {
 let i = null != r ? r : this.create(),
-  o = e.pos + t;
-for (; e.pos < o;) {
+  s = e.pos + t;
+for (; e.pos < s;) {
   let [t, r] = e.tag();
   switch (t) {
     case 1:
@@ -41,11 +41,11 @@ for (; e.pos < o;) {
       i.version = e.fixed64().toString();
       break;
     default:
-      let o = n.readUnknownField;
-      if ('throw' === o)
+      let s = n.readUnknownField;
+      if ('throw' === s)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let s = e.skip(r);
-      !1 !== o && (!0 === o ? a.z.onRead : o)(this.typeName, i, t, r, s);
+      let o = e.skip(r);
+      !1 !== s && (!0 === s ? a.z.onRead : s)(this.typeName, i, t, r, o);
   }
 }
 return i;
@@ -53,7 +53,7 @@ return i;
   binaryReadMap1(e, t, n) {
 let r = t.uint32(),
   i = t.pos + r,
-  a, o;
+  a, s;
 for (; t.pos < i;) {
   let [e, n] = t.tag();
   switch (e) {
@@ -61,13 +61,13 @@ for (; t.pos < i;) {
       a = t.string();
       break;
     case 2:
-      o = t.string();
+      s = t.string();
       break;
     default:
       throw new globalThis.Error('unknown map entry field for field discord_protos.discord_kkv_store_value_models.v1.ApplicationUserRoleConnection.metadata');
   }
 }
-e[null != a ? a : ''] = null != o ? o : '';
+e[null != a ? a : ''] = null != s ? s : '';
   }
   internalBinaryWrite(e, t, n) {
 for (let n of Object.keys(e.metadata))
@@ -114,15 +114,15 @@ class d extends l.C {
 let t = {
   disclosureType: 0
 };
-return globalThis.Object.defineProperty(t, s.C, {
+return globalThis.Object.defineProperty(t, o.C, {
   enumerable: !1,
   value: this
-}), void 0 !== e && (0, o.l)(this, t, e), t;
+}), void 0 !== e && (0, s.l)(this, t, e), t;
   }
   internalBinaryRead(e, t, n, r) {
 let i = null != r ? r : this.create(),
-  o = e.pos + t;
-for (; e.pos < o;) {
+  s = e.pos + t;
+for (; e.pos < s;) {
   let [t, r] = e.tag();
   switch (t) {
     case 1:
@@ -132,11 +132,11 @@ for (; e.pos < o;) {
       i.ackedAt = u.E.internalBinaryRead(e, e.uint32(), n, i.ackedAt);
       break;
     default:
-      let o = n.readUnknownField;
-      if ('throw' === o)
+      let s = n.readUnknownField;
+      if ('throw' === s)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-      let s = e.skip(r);
-      !1 !== o && (!0 === o ? a.z.onRead : o)(this.typeName, i, t, r, s);
+      let o = e.skip(r);
+      !1 !== s && (!0 === s ? a.z.onRead : s)(this.typeName, i, t, r, o);
   }
 }
 return i;
@@ -171,24 +171,24 @@ class E extends l.C {
 let t = {
   ackedDisclosures: []
 };
-return globalThis.Object.defineProperty(t, s.C, {
+return globalThis.Object.defineProperty(t, o.C, {
   enumerable: !1,
   value: this
-}), void 0 !== e && (0, o.l)(this, t, e), t;
+}), void 0 !== e && (0, s.l)(this, t, e), t;
   }
   internalBinaryRead(e, t, n, r) {
 let i = null != r ? r : this.create(),
-  o = e.pos + t;
-for (; e.pos < o;) {
+  s = e.pos + t;
+for (; e.pos < s;) {
   let [t, r] = e.tag();
   if (1 === t)
     i.ackedDisclosures.push(_.internalBinaryRead(e, e.uint32(), n));
   else {
-    let o = n.readUnknownField;
-    if ('throw' === o)
+    let s = n.readUnknownField;
+    if ('throw' === s)
       throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-    let s = e.skip(r);
-    !1 !== o && (!0 === o ? a.z.onRead : o)(this.typeName, i, t, r, s);
+    let o = e.skip(r);
+    !1 !== s && (!0 === s ? a.z.onRead : s)(this.typeName, i, t, r, o);
   }
 }
 return i;

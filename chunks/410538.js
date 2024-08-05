@@ -3,8 +3,8 @@ var r = n(470079),
 return e === t && (0 !== e || 1 / e == 1 / t) || e != e && t != t;
   },
   a = r.useState,
-  o = r.useEffect,
-  s = r.useLayoutEffect,
+  s = r.useEffect,
+  o = r.useLayoutEffect,
   l = r.useDebugValue;
 
 function u(e) {
@@ -29,7 +29,7 @@ r = a({
 }),
 i = r[0].inst,
 c = r[1];
-  return s(function() {
+  return o(function() {
 i.value = n, i.getSnapshot = t, u(i) && c({
   inst: i
 });
@@ -37,7 +37,7 @@ i.value = n, i.getSnapshot = t, u(i) && c({
 e,
 n,
 t
-  ]), o(function() {
+  ]), s(function() {
 return u(i) && c({
   inst: i
 }), e(function() {

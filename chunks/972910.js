@@ -1,7 +1,7 @@
 var r, i = SyntaxError,
   a = Function,
-  o = TypeError,
-  s = function(e) {
+  s = TypeError,
+  o = function(e) {
 try {
 } catch (e) {}
   },
@@ -13,7 +13,7 @@ l({}, '');
 l = null;
   }
 var u = function() {
-throw new o();
+throw new s();
   },
   c = l ? function() {
 try {
@@ -91,7 +91,7 @@ return e.__proto__;
 '%SyntaxError%': i,
 '%ThrowTypeError%': c,
 '%TypedArray%': h,
-'%TypeError%': o,
+'%TypeError%': s,
 '%Uint8Array%': 'undefined' == typeof Uint8Array ? r : Uint8Array,
 '%Uint8ClampedArray%': 'undefined' == typeof Uint8ClampedArray ? r : Uint8ClampedArray,
 '%Uint16Array%': 'undefined' == typeof Uint16Array ? r : Uint16Array,
@@ -111,11 +111,11 @@ p['%Error.prototype%'] = m;
 var I = function e(t) {
 var n;
 if ('%AsyncFunction%' === t)
-  n = s('async function () {}');
+  n = o('async function () {}');
 else if ('%GeneratorFunction%' === t)
-  n = s('function* () {}');
+  n = o('function* () {}');
 else if ('%AsyncGeneratorFunction%' === t)
-  n = s('async function* () {}');
+  n = o('async function* () {}');
 else if ('%AsyncGenerator%' === t) {
   var r = e('%AsyncGeneratorFunction%');
   r && (n = r.prototype);
@@ -366,7 +366,7 @@ var n, r = e;
 if (S(T, r) && (r = '%' + (n = T[r])[0] + '%'), S(p, r)) {
   var a = p[r];
   if (a === f && (a = I(r)), void 0 === a && !t)
-    throw new o('intrinsic ' + e + ' exists, but is not available. Please file an issue!');
+    throw new s('intrinsic ' + e + ' exists, but is not available. Please file an issue!');
   return {
     alias: n,
     name: r,
@@ -377,15 +377,15 @@ throw new i('intrinsic ' + e + ' does not exist!');
   };
 e.exports = function(e, t) {
   if ('string' != typeof e || 0 === e.length)
-throw new o('intrinsic name must be a non-empty string');
+throw new s('intrinsic name must be a non-empty string');
   if (arguments.length > 1 && 'boolean' != typeof t)
-throw new o('"allowMissing" argument must be a boolean');
+throw new s('"allowMissing" argument must be a boolean');
   if (null === R(/^%?[^%]*%?$/, e))
 throw new i('`%` may not be present anywhere but at the beginning and end of the intrinsic name');
   var n = D(e),
 r = n.length > 0 ? n[0] : '',
 a = L('%' + r + '%', t),
-s = a.name,
+o = a.name,
 u = a.value,
 c = !1,
 d = a.alias;
@@ -399,12 +399,12 @@ var f = n[_],
   m = O(f, -1);
 if (('"' === h || '\'' === h || '`' === h || '"' === m || '\'' === m || '`' === m) && h !== m)
   throw new i('property names with quotes must have matching quotes');
-if (('constructor' === f || !E) && (c = !0), r += '.' + f, S(p, s = '%' + r + '%'))
-  u = p[s];
+if (('constructor' === f || !E) && (c = !0), r += '.' + f, S(p, o = '%' + r + '%'))
+  u = p[o];
 else if (null != u) {
   if (!(f in u)) {
     if (!t)
-      throw new o('base intrinsic for ' + e + ' exists, but the property is not available.');
+      throw new s('base intrinsic for ' + e + ' exists, but the property is not available.');
     return;
   }
   if (l && _ + 1 >= n.length) {
@@ -412,7 +412,7 @@ else if (null != u) {
     u = (E = !!I) && 'get' in I && !('originalValue' in I.get) ? I.get : u[f];
   } else
     E = S(u, f), u = u[f];
-  E && !c && (p[s] = u);
+  E && !c && (p[o] = u);
 }
   }
   return u;

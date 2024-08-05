@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   }
 });
 var r = n(81825),
@@ -14,10 +14,10 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class o extends r.Z {
+class s extends r.Z {
   static createInvoiceFromServer(e) {
 var t;
-return new o({
+return new s({
   id: e.id,
   invoiceItems: null === (t = e.invoice_items) || void 0 === t ? void 0 : t.map(i.H),
   total: e.total,

@@ -7,8 +7,8 @@ var s = n(497505),
   o = n(988303),
   r = n(909389),
   a = n(941348),
-  i = n(658590),
-  l = n(743294);
+  l = n(658590),
+  i = n(743294);
 let c = {
 component: r.Z,
 getCollapsedHeight: () => 40,
@@ -22,7 +22,7 @@ canCollapseOnBlur: e => {
 shouldExpandOnQuestComplete: e => !0,
 getVerticalPadding: () => 8
   },
-  d = l.Li,
+  d = i.Li,
   u = {
 component: a.Z,
 getCollapsedHeight: e => {
@@ -30,7 +30,7 @@ getCollapsedHeight: e => {
   return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null ? 66 : 40;
 },
 getPreEnrollmentExpandedHeight: () => 270,
-getPostEnrollmentBackgroundImage: () => 'linear-gradient(90deg, '.concat(l.aY, ', ').concat(l.v6, ')'),
+getPostEnrollmentBackgroundImage: () => 'linear-gradient(90deg, '.concat(i.aY, ', ').concat(i.v6, ')'),
 getPreEnrollmentBackgroundColor: e => 'var(--home-background)',
 canCollapseOnBlur: e => !0,
 shouldExpandOnQuestComplete: e => !1,
@@ -39,8 +39,8 @@ getVerticalPadding: () => d
   p = (e, t, n) => {
 var r;
 let a = (null === (r = e.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null,
-  l = !a && t === o.P.V2 || a && n === o.P.V2 || (0, i.a)(e),
-  d = l ? u : c;
+  i = !a && t === o.P.V2 || a && n === o.P.V2 || (0, l.a)(e),
+  d = i ? u : c;
 return {
   component: d.component,
   collapsedHeight: d.getCollapsedHeight(e),
@@ -51,7 +51,7 @@ return {
   shouldExpandOnQuestComplete: d.shouldExpandOnQuestComplete(e),
   paddingVertical: d.getVerticalPadding(),
   trackingCtx: {
-    content: l ? s.jn.QUEST_BAR_V2 : s.jn.QUEST_BAR
+    content: i ? s.jn.QUEST_BAR_V2 : s.jn.QUEST_BAR
   }
 };
   };

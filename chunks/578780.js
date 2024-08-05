@@ -3,58 +3,58 @@ t.r(n), t.d(n, {
 return C;
   }
 });
-var o = t(735250);
+var r = t(735250);
 t(470079);
-var r = t(100527),
-  a = t(906732),
+var a = t(100527),
+  o = t(906732),
   i = t(987209),
-  c = t(598),
-  s = t(409813),
-  l = t(791785),
+  s = t(598),
+  l = t(409813),
+  c = t(791785),
   d = t(276442),
   u = t(793541),
   f = t(380898),
-  p = t(710094),
-  _ = t(865921),
-  b = t(853872),
-  h = t(806984),
-  g = t(464797),
-  x = t(946211),
-  m = t(231338);
-let v = [{
+  h = t(710094),
+  p = t(865921),
+  g = t(853872),
+  x = t(806984),
+  m = t(464797),
+  _ = t(946211),
+  v = t(231338);
+let b = [{
 key: null,
-renderStep: e => (0, o.jsx)(_.v, {
+renderStep: e => (0, r.jsx)(p.v, {
   ...e
 })
   },
   {
-key: s.h8.ADD_PAYMENT_STEPS,
-renderStep: e => (0, o.jsx)(d.J, {
+key: l.h8.ADD_PAYMENT_STEPS,
+renderStep: e => (0, r.jsx)(d.J, {
   ...e,
   onReturn: () => {
-    0 === Object.keys(b.Z.paymentSources).length ? e.handleClose() : e.handleStepChange(s.h8.REVIEW, {
-      trackedFromStep: s.h8.ADD_PAYMENT_STEPS
+    0 === Object.keys(g.Z.paymentSources).length ? e.handleClose() : e.handleStepChange(l.h8.REVIEW, {
+      trackedFromStep: l.h8.ADD_PAYMENT_STEPS
     });
   }
 })
   },
   {
-key: s.h8.AWAITING_PURCHASE_TOKEN_AUTH,
-renderStep: () => (0, o.jsx)(f.Z, {})
+key: l.h8.AWAITING_PURCHASE_TOKEN_AUTH,
+renderStep: () => (0, r.jsx)(f.Z, {})
   },
   {
-key: s.h8.AWAITING_AUTHENTICATION,
-renderStep: () => (0, o.jsx)(u.Z, {})
+key: l.h8.AWAITING_AUTHENTICATION,
+renderStep: () => (0, r.jsx)(u.Z, {})
   },
   {
-key: s.h8.REVIEW,
-renderStep: e => (0, o.jsx)(p.l, {
+key: l.h8.REVIEW,
+renderStep: e => (0, r.jsx)(h.l, {
   ...e
 })
   },
   {
-key: s.h8.CONFIRM,
-renderStep: e => (0, o.jsx)(h.Z, {
+key: l.h8.CONFIRM,
+renderStep: e => (0, r.jsx)(x.Z, {
   ...e
 })
   }
@@ -64,26 +64,26 @@ function C(e) {
   let {
 guildProductContext: n,
 sourceAnalyticsLocations: t,
-applicationId: s,
+applicationId: l,
 ...d
   } = e, {
 analyticsLocations: u
-  } = (0, a.ZP)(t, r.Z.GUILD_PRODUCT_PAYMENT_MODAL);
-  return (0, o.jsx)(g.R, {
+  } = (0, o.ZP)(t, a.Z.GUILD_PRODUCT_PAYMENT_MODAL);
+  return (0, r.jsx)(m.R, {
 ...n,
-children: (0, o.jsx)(a.Gt, {
+children: (0, r.jsx)(o.Gt, {
   value: u,
-  children: (0, o.jsx)(c.PaymentContextProvider, {
-    stepConfigs: v,
-    applicationId: s,
+  children: (0, r.jsx)(s.PaymentContextProvider, {
+    stepConfigs: b,
+    applicationId: l,
     skuIDs: [d.skuId],
     activeSubscription: null,
-    purchaseType: m.GZ.ONE_TIME,
-    children: (0, o.jsx)(i.KB, {
-      children: (0, o.jsx)(l.PaymentModal, {
+    purchaseType: v.GZ.ONE_TIME,
+    children: (0, r.jsx)(i.KB, {
+      children: (0, r.jsx)(c.PaymentModal, {
         initialPlanId: null,
         analyticsLocations: u,
-        renderHeader: x.L,
+        renderHeader: _.L,
         ...d
       })
     })

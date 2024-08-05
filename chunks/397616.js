@@ -1,24 +1,24 @@
-r.d(n, {
+t.d(n, {
   Z: function() {
-return u;
+return d;
   }
 });
-var i = r(735250);
-r(470079);
-var s = r(442837),
-  a = r(481060),
-  t = r(493683),
-  l = r(592125),
-  d = r(594174),
-  o = r(689938);
+var i = t(735250);
+t(470079);
+var r = t(442837),
+  a = t(481060),
+  s = t(493683),
+  l = t(592125),
+  o = t(594174),
+  u = t(689938);
 
-function u(e, n) {
-  let r = (0, s.e7)([d.default], () => d.default.getCurrentUser(), []),
-u = (0, s.e7)([l.Z], () => l.Z.getChannel(n), [n]);
-  return null == u || u.isOwner(e) || null == r || !u.isOwner(r.id) ? null : (0, i.jsx)(a.MenuItem, {
+function d(e, n) {
+  let t = (0, r.e7)([o.default], () => o.default.getCurrentUser(), []),
+d = (0, r.e7)([l.Z], () => l.Z.getChannel(n), [n]);
+  return null == d || d.isOwner(e) || null == t || !d.isOwner(t.id) ? null : (0, i.jsx)(a.MenuItem, {
 id: 'remove',
-label: o.Z.Messages.REMOVE_FROM_GROUP,
-action: () => t.Z.removeRecipient(n, e),
+label: u.Z.Messages.REMOVE_FROM_GROUP,
+action: () => s.Z.removeRecipient(n, e),
 color: 'danger'
   });
 }

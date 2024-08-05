@@ -20,7 +20,7 @@ a = e.COMMENT(/\(\*/, /\*\)/, {
     i
   ]
 }),
-o = [
+s = [
   i,
   a,
   e.HASH_COMMENT_MODE
@@ -60,7 +60,7 @@ contains: [
       r
     ]
   },
-  ...o
+  ...s
 ],
 illegal: /\/\/|->|=>|\[\[/
   };

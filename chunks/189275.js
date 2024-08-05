@@ -1,16 +1,19 @@
 n.d(t, {
   O: function() {
-return a;
+return l;
   }
 });
 var r = n(735250);
 n(470079);
-var i = n(481060);
+var i = n(481060),
+  a = n(626135),
+  s = n(110223),
+  o = n(981631);
 
-function a(e) {
+function l(e) {
   let {
 channelId: t,
-blockedUserIds: a
+blockedUserIds: l
   } = e;
   (0, i.openModalLazy)(async () => {
 let {
@@ -19,14 +22,27 @@ let {
 return n => {
   let {
     transitionState: i,
-    onClose: o
+    onClose: a
   } = n;
   return (0, r.jsx)(e, {
     channelId: t,
-    blockedUserIds: a,
+    blockedUserIds: l,
     transitionState: i,
-    onClose: o
+    onClose: a
   });
 };
+  }, {
+onCloseCallback: () => {
+  a.default.track(o.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
+    action: s.q.DISMISS,
+    channel_id: t,
+    warning_medium: s.X.MODAL,
+    blocked_user_ids: l
+  });
+}
+  }), a.default.track(o.rMx.GDM_BLOCKED_USER_WARNING_VIEWED, {
+channel_id: t,
+warning_medium: s.X.MODAL,
+blocked_user_ids: l
   });
 }

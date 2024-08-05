@@ -4,27 +4,21 @@ return l;
   }
 });
 var i = n(652874),
-  s = n(868888),
-  a = n(433517),
+  a = n(868888),
+  s = n(433517),
   r = n(49898);
-let l = (0, i.Z)((0, s.tJ)(e => ({
-  selectedPage: r.SM.SERVERS,
-  setSelectedPage: t => e({
-selectedPage: t
-  }),
-  selectedServerTab: 'gaming',
-  setSelectedServerTab: t => e({
-selectedServerTab: t
-  })
+let l = (0, i.Z)((0, a.tJ)(() => ({
+  selectedPage: r.F$.SERVERS,
+  selectedServerTab: r.vf.GAMING
 }), {
   name: 'global-discovery',
   getStorage: () => ({
 getItem: e => {
   var t;
-  return null !== (t = a.K.get(e)) && void 0 !== t ? t : null;
+  return null !== (t = s.K.get(e)) && void 0 !== t ? t : null;
 },
-setItem: (e, t) => a.K.set(e, t),
-removeItem: e => a.K.remove(e)
+setItem: (e, t) => s.K.set(e, t),
+removeItem: e => s.K.remove(e)
   }),
   partialize: e => ({
 selectedPage: e.selectedPage

@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(399606),
+  s = n.n(a),
+  o = n(399606),
   l = n(481060),
   u = n(596454),
   c = n(315744),
@@ -19,7 +19,7 @@ soundId: t,
 jumbo: n = !1
   } = e, {
 currentPreviewRef: a
-  } = i.useContext(_.Z), m = (0, s.e7)([E.Z], () => E.Z.getSoundById(t)), I = (null == m ? void 0 : m.emojiId) != null || (null == m ? void 0 : m.emojiName) != null, [T, g] = i.useState(!1), S = (0, c.P)('soundmoji_chat_mention'), A = i.useCallback(() => {
+  } = i.useContext(_.Z), m = (0, o.e7)([E.Z], () => E.Z.getSoundById(t)), I = (null == m ? void 0 : m.emojiId) != null || (null == m ? void 0 : m.emojiName) != null, [T, g] = i.useState(!1), S = (0, c.P)('soundmoji_chat_mention'), A = i.useCallback(() => {
 var e;
 null == m && (0, d.w)();
 let n = new Audio((0, f.Z)(t));
@@ -58,7 +58,7 @@ onClick: A,
 className: p.jumboContainer,
 children: [
   (0, r.jsx)('div', {
-    className: o()(p.jumboOverlay, {
+    className: s()(p.jumboOverlay, {
       [p.playing]: T
     }),
     children: (0, r.jsx)(l.CirclePlayIcon, {

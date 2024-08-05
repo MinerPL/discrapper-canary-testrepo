@@ -5,9 +5,9 @@ var n = l(735250),
   s = l.n(o),
   i = l(348327),
   r = l.n(i),
-  C = l(338545),
-  c = l(399606),
-  d = l(952265),
+  C = l(399606),
+  c = l(952265),
+  d = l(481060),
   u = l(607070),
   m = l(906732),
   _ = l(136015),
@@ -26,11 +26,11 @@ let f = {
 transform: 'translate3d(15%, 0, 0)',
 opacity: 0.3
   },
-  A = {
+  N = {
 transform: 'translate3d(5%, 0, 0)',
 opacity: 0.5
   },
-  N = {
+  A = {
 transform: 'translate3d(0, 0, 0)',
 opacity: 1
   },
@@ -53,7 +53,7 @@ let {
   compact: r,
   onSelectRow: m,
   onResetForNewMembers: _
-} = e, h = (0, c.e7)([u.Z], () => u.Z.useReducedMotion), p = (0, d.f9)(), j = (0, E.n)(), [v, D] = a.useState(!1), [O, B] = a.useState(!1), V = !p && v && O;
+} = e, h = (0, C.e7)([u.Z], () => u.Z.useReducedMotion), p = (0, c.f9)(), j = (0, E.n)(), [v, D] = a.useState(!1), [O, B] = a.useState(!1), V = !p && v && O;
 a.useEffect(() => {
   !j && (D(!1), B(!1));
 }, [j]), a.useLayoutEffect(() => {
@@ -73,18 +73,17 @@ a.useEffect(() => {
   t
 ]);
 let U = t.length > 30,
-  w = (0, C.useTransition)(t, {
+  w = (0, d.useTransition)(t, {
     key: e => e,
     trail: U ? 5 : 15,
-    immediate: h,
     from(e) {
       let t = M.Z.getEnhancedMember(l.id, e),
         n = M.Z.getLastRefreshTimestamp(l.id),
         a = null == t || 0 === n,
         o = null != t && t.refreshTimestamp === n;
-      return a || !o ? N : U ? A : f;
+      return a || !o ? A : U ? N : f;
     },
-    enter: N,
+    enter: A,
     config: R
   }),
   k = !h && i === T.po.LOADING;
@@ -135,9 +134,9 @@ guild: o,
 className: s,
 searchState: i,
 compact: r,
-onSelectRow: C,
+onSelectRow: c,
 onResetForNewMembers: d
-  } = e, u = (0, c.cj)([M.Z], () => M.Z.getPaginationStateByGuildId(o.id), [o.id]), [E] = (0, c.e7)([M.Z], () => M.Z.getPagedMembersByGuildId(o.id), [o.id], _.Q);
+  } = e, u = (0, C.cj)([M.Z], () => M.Z.getPaginationStateByGuildId(o.id), [o.id]), [E] = (0, C.e7)([M.Z], () => M.Z.getPagedMembersByGuildId(o.id), [o.id], _.Q);
   a.useEffect(() => {
 (0, x.zO)(o.id);
   }, [o.id]);
@@ -157,7 +156,7 @@ guild: o,
 className: s,
 searchState: i,
 compact: r,
-onSelectRow: C,
+onSelectRow: c,
 onResetForNewMembers: d
   });
 };

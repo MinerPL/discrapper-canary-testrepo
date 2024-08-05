@@ -1,48 +1,48 @@
-t.d(n, {
+n.d(t, {
   b: function() {
-return l;
+return d;
   },
   o: function() {
-return p;
+return c;
   }
 });
-var o = t(570140),
-  c = t(605236),
-  i = t(626135),
-  a = t(445507),
-  r = t(981631),
-  f = t(921944);
+var i = n(570140),
+  a = n(605236),
+  s = n(626135),
+  r = n(445507),
+  l = n(981631),
+  o = n(921944);
 
-function p(e) {
+function c(e) {
   let {
-targetKey: n,
-dismissibleContent: t,
-data: p,
-completed: l
+targetKey: t,
+dismissibleContent: n,
+data: c,
+completed: d
   } = e;
-  null != p.selectedOptionKey && (!(0, c.un)(t) && i.default.track(r.rMx.SIGNUP_COMPLETED, {
-target_key: n,
-selected_option_key: p.selectedOptionKey,
-email: p.email,
-guild_id: p.guildId,
-metadata: (0, a.mU)(p),
-completed: l
-  }), (0, c.EW)(t, {
-dismissAction: f.L.PRIMARY,
+  null != c.selectedOptionKey && (!(0, a.un)(n) && s.default.track(l.rMx.SIGNUP_COMPLETED, {
+target_key: t,
+selected_option_key: c.selectedOptionKey,
+email: c.email,
+guild_id: c.guildId,
+metadata: (0, r.mU)(c),
+completed: d
+  }), (0, a.EW)(n, {
+dismissAction: o.L.PRIMARY,
 forceTrack: !0
-  }), o.Z.dispatch({
+  }), i.Z.dispatch({
 type: 'COMPLETE_SIGN_UP',
-email: p.email,
-targetKey: n,
-selectedOptionKey: p.selectedOptionKey
+email: c.email,
+targetKey: t,
+selectedOptionKey: c.selectedOptionKey
   }));
 }
 
-function l(e, n) {
-  (0, c.EW)(n, {
-dismissAction: f.L.DISMISS,
+function d(e, t) {
+  (0, a.EW)(t, {
+dismissAction: o.L.DISMISS,
 forceTrack: !0
-  }), o.Z.dispatch({
+  }), i.Z.dispatch({
 type: 'DISMISS_SIGN_UP',
 targetKey: e
   });

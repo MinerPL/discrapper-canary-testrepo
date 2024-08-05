@@ -8,5 +8,7 @@ e.exports = {
   sourceName: 'sourceName_d7ec26',
   segmentContainer: 'segmentContainer_d7ec26',
   segmentControl: 'segmentControl_d7ec26',
-  segmentControlOption: 'segmentControlOption_d7ec26'
+  segmentControlOption: 'segmentControlOption_d7ec26',
+  nativePickerContainer: 'nativePickerContainer_d7ec26',
+  nativePickerLabel: 'nativePickerLabel_d7ec26'
 };

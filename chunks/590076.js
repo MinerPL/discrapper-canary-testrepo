@@ -5,13 +5,13 @@ return _;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(512722),
-  s = n.n(l),
+  s = n(512722),
+  l = n.n(s),
   r = n(399606),
   o = n(618158),
   c = n(594174),
-  d = n(822183),
-  u = n(364125),
+  u = n(822183),
+  d = n(364125),
   h = n(610947),
   p = n(345392);
 
@@ -19,21 +19,21 @@ function m(e) {
   let {
 focused: t,
 channelId: n,
-streamerId: l,
-stream: d
+streamerId: s,
+stream: u
   } = e, m = a.useRef(null), _ = (0, r.e7)([c.default], () => c.default.getCurrentUser());
-  s()(null != _, 'user cannot be null'), (0, h.Z)(m, _, l, n);
+  l()(null != _, 'user cannot be null'), (0, h.Z)(m, _, s, n);
   let {
 handleClick: f,
 handleMouseDown: E,
-handleMouseEnter: C,
-handleMouseMove: g,
+handleMouseEnter: g,
+handleMouseMove: C,
 handleMouseUp: I
-  } = (0, u.Z)({
+  } = (0, d.Z)({
 user: _,
 channelId: n,
-streamerId: l,
-stream: d,
+streamerId: s,
+stream: u,
 focused: t,
 canvas: m.current
   });
@@ -42,8 +42,8 @@ children: (0, i.jsx)('canvas', {
   ref: m,
   onClick: f,
   onMouseDown: E,
-  onMouseEnter: C,
-  onMouseMove: g,
+  onMouseEnter: g,
+  onMouseMove: C,
   onMouseUp: I,
   className: p.sharedCanvas
 })
@@ -53,7 +53,7 @@ children: (0, i.jsx)('canvas', {
 function _(e) {
   let {
 isSharedCanvasEnabled: t
-  } = d.Z.useExperiment({
+  } = u.Z.useExperiment({
 guildId: e.guildId,
 location: 'd0de1c_1'
   }, {

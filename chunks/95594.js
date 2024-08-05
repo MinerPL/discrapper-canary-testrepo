@@ -6,8 +6,8 @@ return l;
 var r = n(470079),
   i = n(663507),
   a = n(924428),
-  o = n(151973);
-let s = Object.freeze({
+  s = n(151973);
+let o = Object.freeze({
   coordsMap: {},
   visibleSections: {},
   totalHeight: 0,
@@ -34,12 +34,12 @@ padding: m,
 paddingVertical: I,
 paddingHorizontal: T,
 dir: g
-  } = e, S = (0, a.Z)(), A = (0, r.useRef)(s), [N] = (0, r.useState)(() => new i.ZP()), v = _(), O = Math.min(null != E ? E : 1 / 0, v.offsetWidth), R = null != E ? Math.max(0, v.offsetWidth - E) : 0, {
+  } = e, S = (0, a.Z)(), A = (0, r.useRef)(o), [N] = (0, r.useState)(() => new i.ZP()), v = _(), O = Math.min(null != E ? E : 1 / 0, v.offsetWidth), R = null != E ? Math.max(0, v.offsetWidth - E) : 0, {
 dirty: C,
 chunkStart: y,
 chunkEnd: D,
 forceUpdateOnChunkChange: L
-  } = (0, o.Z)({
+  } = (0, s.Z)({
 chunkSize: d,
 getScrollerState: _,
 forceUpdate: S

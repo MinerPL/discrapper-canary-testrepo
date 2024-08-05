@@ -2,8 +2,8 @@ n(47120), n(724458), n(852437), n(653041), n(733860), n(757143);
 var r = n(392711),
   i = n.n(r),
   a = n(612002),
-  o = n(593472),
-  s = n(513418),
+  s = n(593472),
+  o = n(513418),
   l = n(710845),
   u = n(786761),
   c = n(709054),
@@ -358,7 +358,7 @@ let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
   r = arguments.length > 3 ? arguments[3] : void 0,
   i = arguments.length > 4 ? arguments[4] : void 0;
 return this.mutate(a => {
-  a.jumped = !0, a.jumpedToPresent = !1, a.jumpType = null != i ? i : o.SR.ANIMATED, a.jumpTargetId = e, a.jumpTargetOffset = null != e && null != n ? n : 0, a.jumpSequenceId = a.jumpSequenceId + 1, a.jumpFlash = t, a.jumpReturnTargetId = r, a.ready = !0, a.loadingMore = !1;
+  a.jumped = !0, a.jumpedToPresent = !1, a.jumpType = null != i ? i : s.SR.ANIMATED, a.jumpTargetId = e, a.jumpTargetOffset = null != e && null != n ? n : 0, a.jumpSequenceId = a.jumpSequenceId + 1, a.jumpFlash = t, a.jumpReturnTargetId = r, a.ready = !0, a.loadingMore = !1;
 }, !1);
   }
   focusOnMessage(e) {
@@ -417,12 +417,12 @@ return this.mutate({
 });
   }
   loadComplete(e) {
-var t, n, r, s, l, c, d, E, p, m, I;
+var t, n, r, o, l, c, d, E, p, m, I;
 let T = [...e.newMessages],
   g = null !== (t = e.isBefore) && void 0 !== t && t,
   S = null !== (n = e.isAfter) && void 0 !== n && n,
   A = null !== (r = e.jump) && void 0 !== r ? r : null,
-  N = null !== (s = e.hasMoreBefore) && void 0 !== s && s,
+  N = null !== (o = e.hasMoreBefore) && void 0 !== o && o,
   v = null !== (l = e.hasMoreAfter) && void 0 !== l && l,
   O = null !== (c = e.cached) && void 0 !== c && c,
   R = i()(T).reverse().map(a.Z.getCurrentConfig({
@@ -442,7 +442,7 @@ else {
 return C = C.mutate({
   ready: !0,
   loadingMore: !1,
-  jumpType: null !== (d = null == A ? void 0 : A.jumpType) && void 0 !== d ? d : o.SR.ANIMATED,
+  jumpType: null !== (d = null == A ? void 0 : A.jumpType) && void 0 !== d ? d : s.SR.ANIMATED,
   jumpFlash: null !== (E = null == A ? void 0 : A.flash) && void 0 !== E && E,
   jumped: null != A,
   jumpedToPresent: null !== (p = null == A ? void 0 : A.present) && void 0 !== p && p,
@@ -458,7 +458,7 @@ return C = C.mutate({
 });
   }
   addCachedMessages(e, t) {
-(0, s.Z)(e);
+(0, o.Z)(e);
 let n = e.map(e => h(this, e)).reverse();
 return this._array.filter(e => !n.some(t => t.id === e.id)).forEach(e => d.$(n, e, (e, t) => c.default.compare(e.id, t.id))), this.reset(n).mutate({
   ready: !0,
@@ -467,7 +467,7 @@ return this._array.filter(e => !n.some(t => t.id === e.id)).forEach(e => d.$(n, 
 });
   }
   constructor(e) {
-E(this, 'channelId', void 0), E(this, 'ready', void 0), E(this, 'jumpType', void 0), E(this, 'jumpTargetId', void 0), E(this, 'jumpTargetOffset', void 0), E(this, 'jumpSequenceId', void 0), E(this, 'jumped', void 0), E(this, 'jumpedToPresent', void 0), E(this, 'jumpFlash', void 0), E(this, 'jumpReturnTargetId', void 0), E(this, 'focusTargetId', void 0), E(this, 'hasMoreBefore', void 0), E(this, 'hasMoreAfter', void 0), E(this, 'loadingMore', void 0), E(this, 'revealedMessageId', void 0), E(this, 'cached', void 0), E(this, 'hasFetched', void 0), E(this, 'error', void 0), E(this, '_array', []), E(this, '_before', void 0), E(this, '_after', void 0), E(this, '_map', {}), this.channelId = e, this.ready = !1, this.jumpTargetId = null, this.jumpTargetOffset = 0, this.jumpSequenceId = 1, this.jumped = !1, this.jumpedToPresent = !1, this.jumpType = o.SR.ANIMATED, this.jumpFlash = !0, this.jumpReturnTargetId = null, this.hasMoreBefore = !0, this.hasMoreAfter = !1, this.loadingMore = !1, this.revealedMessageId = null, this._clearMessages(), this._before = new p(!0), this._after = new p(!1), this.cached = !1, this.hasFetched = !1, this.error = !1;
+E(this, 'channelId', void 0), E(this, 'ready', void 0), E(this, 'jumpType', void 0), E(this, 'jumpTargetId', void 0), E(this, 'jumpTargetOffset', void 0), E(this, 'jumpSequenceId', void 0), E(this, 'jumped', void 0), E(this, 'jumpedToPresent', void 0), E(this, 'jumpFlash', void 0), E(this, 'jumpReturnTargetId', void 0), E(this, 'focusTargetId', void 0), E(this, 'hasMoreBefore', void 0), E(this, 'hasMoreAfter', void 0), E(this, 'loadingMore', void 0), E(this, 'revealedMessageId', void 0), E(this, 'cached', void 0), E(this, 'hasFetched', void 0), E(this, 'error', void 0), E(this, '_array', []), E(this, '_before', void 0), E(this, '_after', void 0), E(this, '_map', {}), this.channelId = e, this.ready = !1, this.jumpTargetId = null, this.jumpTargetOffset = 0, this.jumpSequenceId = 1, this.jumped = !1, this.jumpedToPresent = !1, this.jumpType = s.SR.ANIMATED, this.jumpFlash = !0, this.jumpReturnTargetId = null, this.hasMoreBefore = !0, this.hasMoreAfter = !1, this.loadingMore = !1, this.revealedMessageId = null, this._clearMessages(), this._before = new p(!0), this._after = new p(!1), this.cached = !1, this.hasFetched = !1, this.error = !1;
   }
 }
 E(m, '_channelMessages', {}), t.Z = m;

@@ -44,13 +44,13 @@ m.default
 currentUser: C.default.getCurrentUser(),
 hidePrivateData: f.Z.hidePersonalInformation,
 isAuthenticated: m.default.isAuthenticated()
-  })), E = new p.Z(s), y = o && (null == r ? void 0 : r.id) === E.id, T = s.tokenStatus === v.q.INVALID, I = a || E.isPomelo() ? null : '#'.concat(E.discriminator), Z = null;
-  return y ? Z = (0, i.jsx)(u.Text, {
+  })), E = new p.Z(s), y = o && (null == r ? void 0 : r.id) === E.id, T = s.tokenStatus === v.q.INVALID, I = a || E.isPomelo() ? null : '#'.concat(E.discriminator), _ = null;
+  return y ? _ = (0, i.jsx)(u.Text, {
 variant: 'text-sm/semibold',
 className: j.hintText,
 color: 'text-positive',
 children: A.Z.Messages.SWITCH_ACCOUNTS_ACTIVE_ACCOUNT
-  }) : T && (Z = (0, i.jsx)(u.Text, {
+  }) : T && (_ = (0, i.jsx)(u.Text, {
 variant: 'text-sm/semibold',
 className: j.hintText,
 color: 'text-danger',
@@ -89,7 +89,7 @@ children: (0, i.jsxs)('div', {
             })
           ]
         }),
-        Z
+        _
       ]
     }),
     (0, i.jsxs)('div', {

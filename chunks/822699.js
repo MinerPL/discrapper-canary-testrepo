@@ -8,24 +8,24 @@ var s = n(735250),
   c = n(570140),
   u = n(893776),
   d = n(533307),
-  h = n(447543),
-  _ = n(126399),
+  _ = n(447543),
+  h = n(126399),
   E = n(765717),
   g = n(267394),
   p = n(761305),
-  f = n(698177),
-  I = n(353926),
-  m = n(409059),
+  I = n(698177),
+  m = n(353926),
+  f = n(409059),
   N = n(962220),
   T = n(637776),
   x = n(264229),
   A = n(677760),
   C = n(314897),
-  S = n(82142),
-  O = n(701190),
-  v = n(626135),
-  Z = n(81063),
-  R = n(449934),
+  v = n(82142),
+  Z = n(701190),
+  S = n(626135),
+  R = n(81063),
+  O = n(449934),
   b = n(768581),
   D = n(625054),
   L = n(645499),
@@ -36,8 +36,8 @@ var s = n(735250),
   G = n(73906),
   B = n(299852),
   U = n(39514),
-  k = n(236446),
-  F = n(9325),
+  F = n(236446),
+  k = n(9325),
   w = n(344295),
   H = n(781428),
   V = n(209411),
@@ -54,23 +54,23 @@ o.ZP.initialize();
 let $ = (0, M.Z)(H.Z),
   ee = (0, M.Z)(V.Z),
   et = (0, M.Z)(w.Z),
-  en = (0, M.Z)(k.Z),
+  en = (0, M.Z)(F.Z),
   es = (0, M.Z)(U.Z),
   er = (0, M.Z)(A.Z),
   ei = (0, M.Z)(K.Z),
   ea = (0, M.Z)(j.Z),
   el = (0, M.Z)(y.Z),
   eo = (0, M.Z)(J.Z),
-  ec = (0, M.Z)(f.Z),
+  ec = (0, M.Z)(I.Z),
   eu = (0, M.Z)(Y.Z),
   ed = (0, M.Z)(B.Z),
-  eh = (0, M.Z)(p.Z),
-  e_ = (0, M.Z)(T.Z),
+  e_ = (0, M.Z)(p.Z),
+  eh = (0, M.Z)(T.Z),
   eE = (0, M.Z)(G.Z),
   eg = (0, M.Z)(z.Z),
   ep = (0, M.Z)(q.Z),
-  ef = (0, M.Z)(W.Z);
-class eI extends r.PureComponent {
+  eI = (0, M.Z)(W.Z);
+class em extends r.PureComponent {
   static getDerivedStateFromProps(e, t) {
 var n;
 let {
@@ -82,13 +82,13 @@ let {
 (null == l || '' === l || !(0, L.B)(l) || l.startsWith(X.Z5c.ME)) && (l = null);
 let o = null;
 if (null == s)
-  o = (0, R.gK)(l);
+  o = (0, O.gK)(l);
 else if ((null == s ? void 0 : s.state) === X.r2o.RESOLVED) {
   let {
     guild: e,
     target_application: t
   } = s;
-  null != t ? null != a && (o = (0, Z.getAssetImage)(t.id, a, 1024)) : null != e && 'string' == typeof e.splash && (o = b.ZP.getGuildSplashURL({
+  null != t ? null != a && (o = (0, R.getAssetImage)(t.id, a, 1024)) : null != e && 'string' == typeof e.splash && (o = b.ZP.getGuildSplashURL({
     id: e.id,
     splash: e.splash
   }));
@@ -104,19 +104,19 @@ let {
   hasLoadedExperiments: t,
   isAuthenticated: n
 } = this.props;
-null != e && (!t && n && u.Z.getExperiments(!0), v.default.track(X.rMx.INVITE_OPENED, {
+null != e && (!t && n && u.Z.getExperiments(!0), S.default.track(X.rMx.INVITE_OPENED, {
   invite_code: (0, x.jX)(e),
   load_time: D.Z.getTimeSinceNavigationStart()
 }, {
   flush: !0
-})), (t || Q.a) && this.resolveInvite(), this.resolveGiftCode(), this.resolveGuildTemplate(), _.Z.initialize();
+})), (t || Q.a) && this.resolveInvite(), this.resolveGiftCode(), this.resolveGuildTemplate(), h.Z.initialize();
   }
   componentDidUpdate(e) {
 var t, n;
 !e.hasLoadedExperiments && this.props.hasLoadedExperiments && !Q.a && this.resolveInvite(), (null === (t = e.invite) || void 0 === t ? void 0 : t.state) !== (null === (n = this.props.invite) || void 0 === n ? void 0 : n.state) && this.maybeFetchApplicationSplash();
   }
   componentWillUnmount() {
-_.Z.terminate();
+h.Z.terminate();
   }
   maybeFetchApplicationSplash() {
 let {
@@ -126,7 +126,7 @@ if ((null == e ? void 0 : e.state) === X.r2o.RESOLVED) {
   let {
     target_application: t
   } = e;
-  null != t && (0, Z.fetchAssetIds)(t.id, ['embedded_splash']).then(e => {
+  null != t && (0, R.fetchAssetIds)(t.id, ['embedded_splash']).then(e => {
     let [t] = e;
     return this.setState({
       backgroundId: t
@@ -142,16 +142,16 @@ if (null != e)
   (async () => {
     let {
       invite: t
-    } = await h.Z.resolveInvite(e, X.Usc.INVITE);
+    } = await _.Z.resolveInvite(e, X.Usc.INVITE);
     null != t && (0, g.A)(t);
-  })(), h.Z.openNativeAppModal(e);
+  })(), _.Z.openNativeAppModal(e);
   }
   resolveGuildTemplate() {
 let {
   guildTemplateCode: e
 } = this.props;
 if (null != e)
-  v.default.track(X.rMx.GUILD_TEMPLATE_OPENED, {
+  S.default.track(X.rMx.GUILD_TEMPLATE_OPENED, {
     guild_template_code: e,
     load_time: D.Z.getTimeSinceNavigationStart()
   }, {
@@ -260,7 +260,7 @@ return (0, s.jsxs)(P.Z, {
           location: r,
           transitionTo: i
         } = e;
-        return l.tq || l.Em ? (0, s.jsx)(F.Z, {
+        return l.tq || l.Em ? (0, s.jsx)(k.Z, {
           code: t
         }, t) : (0, s.jsx)(en, {
           code: t,
@@ -278,7 +278,7 @@ return (0, s.jsxs)(P.Z, {
     }),
     (0, s.jsx)(E.Z, {
       path: X.Z5c.VERIFY_HUB_EMAIL,
-      render: e => (0, s.jsx)(e_, {
+      render: e => (0, s.jsx)(eh, {
         ...e
       })
     }),
@@ -296,7 +296,7 @@ return (0, s.jsxs)(P.Z, {
     }),
     (0, s.jsx)(E.Z, {
       path: X.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
-      render: e => (0, s.jsx)(eh, {
+      render: e => (0, s.jsx)(e_, {
         ...e
       })
     }),
@@ -353,7 +353,7 @@ return (0, s.jsxs)(P.Z, {
     }),
     (0, s.jsx)(E.Z, {
       path: X.Z5c.REPORT_SECOND_LOOK,
-      render: e => (0, s.jsx)(ef, {
+      render: e => (0, s.jsx)(eI, {
         ...e
       })
     })
@@ -376,10 +376,10 @@ super(...e), t = this, s = {
 }
 t.default = o.ZP.connectStores([
   C.default,
-  O.Z,
-  S.Z,
-  I.Z,
-  m.Z
+  Z.Z,
+  v.Z,
+  m.Z,
+  f.Z
 ], e => {
   var t, n, s;
   let {
@@ -391,9 +391,9 @@ inviteKey: o,
 isAuthenticated: C.default.isAuthenticated(),
 giftCode: c,
 guildTemplateCode: u,
-gift: null != c ? S.Z.get(c) : null,
-invite: null != o ? O.Z.getInvite(o) : null,
-guildTemplate: null != u ? m.Z.getGuildTemplate(u) : null,
-hasLoadedExperiments: I.Z.hasLoadedExperiments
+gift: null != c ? v.Z.get(c) : null,
+invite: null != o ? Z.Z.getInvite(o) : null,
+guildTemplate: null != u ? f.Z.getGuildTemplate(u) : null,
+hasLoadedExperiments: m.Z.hasLoadedExperiments
   };
-})(eI);
+})(em);

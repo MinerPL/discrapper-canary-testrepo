@@ -26,101 +26,101 @@ return N;
 }), n(47120), n(789020), n(411104), n(724458);
 var r, a, i, E, _ = n(470079),
   u = n(467319),
-  s = n(676317),
-  l = n(273504),
+  l = n(676317),
+  s = n(273504),
   o = n(689938);
 (i = r || (r = {})).NEW = 'new', i.RECOMMENDED = 'recommended', i.BETA = 'beta', i.ALPHA = 'alpha';
 let I = {
-  [l.fX.SPAM_LINK]: {
+  [s.fX.SPAM_LINK]: {
 getDefaultRuleName: () => o.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_NAME,
-type: l.fX.SPAM_LINK,
-eventType: l.q4.MESSAGE_SEND,
+type: s.fX.SPAM_LINK,
+eventType: s.q4.MESSAGE_SEND,
 perGuildMaxCount: 0,
 availableActionTypes: new Set(),
 flags: new Set(),
 defaultActionTypes: new Set()
   },
-  [l.fX.KEYWORD]: {
+  [s.fX.KEYWORD]: {
 getDefaultRuleName: () => o.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_NAME,
-type: l.fX.KEYWORD,
-eventType: l.q4.MESSAGE_SEND,
+type: s.fX.KEYWORD,
+eventType: s.q4.MESSAGE_SEND,
 perGuildMaxCount: 6,
 availableActionTypes: new Set([
-  l.jj.BLOCK_MESSAGE,
-  l.jj.FLAG_TO_CHANNEL,
-  l.jj.USER_COMMUNICATION_DISABLED
+  s.jj.BLOCK_MESSAGE,
+  s.jj.FLAG_TO_CHANNEL,
+  s.jj.USER_COMMUNICATION_DISABLED
 ]),
 flags: new Set(),
-defaultActionTypes: new Set([l.jj.BLOCK_MESSAGE])
+defaultActionTypes: new Set([s.jj.BLOCK_MESSAGE])
   },
-  [l.fX.ML_SPAM]: {
+  [s.fX.ML_SPAM]: {
 getDefaultRuleName: () => o.Z.Messages.GUILD_AUTOMOD_ML_SPAM_FILTER_NAME,
-type: l.fX.ML_SPAM,
-eventType: l.q4.MESSAGE_SEND,
+type: s.fX.ML_SPAM,
+eventType: s.q4.MESSAGE_SEND,
 perGuildMaxCount: 1,
 availableActionTypes: new Set([
-  l.jj.BLOCK_MESSAGE,
-  l.jj.FLAG_TO_CHANNEL
+  s.jj.BLOCK_MESSAGE,
+  s.jj.FLAG_TO_CHANNEL
 ]),
 flags: new Set([]),
-defaultActionTypes: new Set([l.jj.BLOCK_MESSAGE])
+defaultActionTypes: new Set([s.jj.BLOCK_MESSAGE])
   },
-  [l.fX.DEFAULT_KEYWORD_LIST]: {
+  [s.fX.DEFAULT_KEYWORD_LIST]: {
 getDefaultRuleName: () => o.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_FILTER_NAME,
-type: l.fX.DEFAULT_KEYWORD_LIST,
-eventType: l.q4.MESSAGE_SEND,
+type: s.fX.DEFAULT_KEYWORD_LIST,
+eventType: s.q4.MESSAGE_SEND,
 perGuildMaxCount: 1,
 availableActionTypes: new Set([
-  l.jj.BLOCK_MESSAGE,
-  l.jj.FLAG_TO_CHANNEL
+  s.jj.BLOCK_MESSAGE,
+  s.jj.FLAG_TO_CHANNEL
 ]),
 flags: new Set([]),
-defaultActionTypes: new Set([l.jj.BLOCK_MESSAGE])
+defaultActionTypes: new Set([s.jj.BLOCK_MESSAGE])
   },
-  [l.fX.MENTION_SPAM]: {
+  [s.fX.MENTION_SPAM]: {
 getDefaultRuleName: () => o.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_NAME,
-type: l.fX.MENTION_SPAM,
-eventType: l.q4.MESSAGE_SEND,
+type: s.fX.MENTION_SPAM,
+eventType: s.q4.MESSAGE_SEND,
 perGuildMaxCount: 1,
 availableActionTypes: new Set([
-  l.jj.BLOCK_MESSAGE,
-  l.jj.FLAG_TO_CHANNEL,
-  l.jj.USER_COMMUNICATION_DISABLED
+  s.jj.BLOCK_MESSAGE,
+  s.jj.FLAG_TO_CHANNEL,
+  s.jj.USER_COMMUNICATION_DISABLED
 ]),
 flags: new Set([]),
-defaultActionTypes: new Set([l.jj.BLOCK_MESSAGE])
+defaultActionTypes: new Set([s.jj.BLOCK_MESSAGE])
   },
-  [l.fX.USER_PROFILE]: {
+  [s.fX.USER_PROFILE]: {
 getDefaultRuleName: () => o.Z.Messages.GUILD_AUTOMOD_USER_PROFILE_FILTER_NAME,
-type: l.fX.USER_PROFILE,
-eventType: l.q4.GUILD_MEMBER_JOIN_OR_UPDATE,
+type: s.fX.USER_PROFILE,
+eventType: s.q4.GUILD_MEMBER_JOIN_OR_UPDATE,
 perGuildMaxCount: 1,
 availableActionTypes: new Set([
-  l.jj.QUARANTINE_USER,
-  l.jj.FLAG_TO_CHANNEL
+  s.jj.QUARANTINE_USER,
+  s.jj.FLAG_TO_CHANNEL
 ]),
 flags: new Set([]),
-defaultActionTypes: new Set([l.jj.QUARANTINE_USER])
+defaultActionTypes: new Set([s.jj.QUARANTINE_USER])
   },
-  [l.fX.SERVER_POLICY]: {
+  [s.fX.SERVER_POLICY]: {
 getDefaultRuleName: () => o.Z.Messages.GUILD_AUTOMOD_SERVER_POLICY_FILTER_NAME,
-type: l.fX.SERVER_POLICY,
-eventType: l.q4.MESSAGE_SEND,
+type: s.fX.SERVER_POLICY,
+eventType: s.q4.MESSAGE_SEND,
 perGuildMaxCount: 1,
-availableActionTypes: new Set([l.jj.FLAG_TO_CHANNEL]),
+availableActionTypes: new Set([s.jj.FLAG_TO_CHANNEL]),
 flags: new Set(['alpha']),
 defaultActionTypes: new Set()
   }
 };
 (E = a || (a = {})).MEMBERS = 'members', E.CONTENT = 'content';
 let T = {
-members: [I[l.fX.USER_PROFILE]],
+members: [I[s.fX.USER_PROFILE]],
 content: [
-  I[l.fX.SERVER_POLICY],
-  I[l.fX.MENTION_SPAM],
-  I[l.fX.ML_SPAM],
-  I[l.fX.DEFAULT_KEYWORD_LIST],
-  I[l.fX.KEYWORD]
+  I[s.fX.SERVER_POLICY],
+  I[s.fX.MENTION_SPAM],
+  I[s.fX.ML_SPAM],
+  I[s.fX.DEFAULT_KEYWORD_LIST],
+  I[s.fX.KEYWORD]
 ]
   },
   O = (e, t) => I[e].flags.has(t);
@@ -145,9 +145,9 @@ throw Error('You have provided an event type that is not available for this trig
 }
 
 function S(e) {
-  let t = (0, s.oA)(e);
+  let t = (0, l.oA)(e);
   return _.useMemo(() => Object.keys(T).reduce((e, n) => {
-let r = T[n].filter(e => e.type !== l.fX.SERVER_POLICY && (e.type !== l.fX.USER_PROFILE || !!t) && e.perGuildMaxCount > 0).map(e => e.type);
+let r = T[n].filter(e => e.type !== s.fX.SERVER_POLICY && (e.type !== s.fX.USER_PROFILE || !!t) && e.perGuildMaxCount > 0).map(e => e.type);
 return e[n] = r, e;
   }, {
 members: [],
@@ -158,25 +158,25 @@ content: []
 function c(e, t) {
   let n = (0, u.H)(t);
   switch (e) {
-case l.fX.DEFAULT_KEYWORD_LIST:
+case s.fX.DEFAULT_KEYWORD_LIST:
   return {
     allowList: [],
       presets: []
   };
-case l.fX.USER_PROFILE:
-case l.fX.KEYWORD:
+case s.fX.USER_PROFILE:
+case s.fX.KEYWORD:
   return {
     keywordFilter: [],
       regexPatterns: [],
       allowList: []
   };
-case l.fX.MENTION_SPAM:
+case s.fX.MENTION_SPAM:
   return {
-    mentionTotalLimit: l.Ic,
+    mentionTotalLimit: s.Ic,
       mentionRaidProtectionEnabled: n
   };
-case l.fX.ML_SPAM:
-case l.fX.SERVER_POLICY:
+case s.fX.ML_SPAM:
+case s.fX.SERVER_POLICY:
 default:
   return;
   }

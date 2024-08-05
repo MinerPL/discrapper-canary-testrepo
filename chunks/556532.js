@@ -1,20 +1,20 @@
 n.d(t, {
   s: function() {
-return o;
+return s;
   }
 });
 var r = n(573654),
   i = n(778010),
   a = n(964742);
 
-function o(e) {
+function s(e) {
   return function(t) {
 var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-  o = n.clientOffset;
+  s = n.clientOffset;
 (function(e) {
   (0, r.k)(Array.isArray(e), 'Expected targetIds to be an array.');
 }(t));
-var s = t.slice(0),
+var o = t.slice(0),
   l = e.getMonitor(),
   u = e.getRegistry();
 return function(e, t, n) {
@@ -22,26 +22,26 @@ return function(e, t, n) {
     for (var i = 0; i < e.length; i++) {
       var a = e[i];
       (0, r.k)(e.lastIndexOf(a) === i, 'Expected targetIds to be unique in the passed array.');
-      var o = n.getTarget(a);
-      (0, r.k)(o, 'Expected targetIds to be registered.');
+      var s = n.getTarget(a);
+      (0, r.k)(s, 'Expected targetIds to be registered.');
     }
-  }(s, l, u),
+  }(o, l, u),
   function(e, t, n) {
     for (var r = e.length - 1; r >= 0; r--) {
       var a = e[r],
-        o = t.getTargetType(a);
-      !(0, i.s)(o, n) && e.splice(r, 1);
+        s = t.getTargetType(a);
+      !(0, i.s)(s, n) && e.splice(r, 1);
     }
-  }(s, u, l.getItemType()),
+  }(o, u, l.getItemType()),
   function(e, t, n) {
     e.forEach(function(e) {
       n.getTarget(e).hover(t, e);
     });
-  }(s, l, u), {
+  }(o, l, u), {
     type: a.$T,
     payload: {
-      targetIds: s,
-      clientOffset: o || null
+      targetIds: o,
+      clientOffset: s || null
     }
   };
   };

@@ -21,29 +21,28 @@ var n = s(735250),
   C = s(605236),
   m = s(786761),
   A = s(3148),
-  h = s(739566),
-  g = s(753206),
-  O = s(837741),
-  p = s(804545),
-  R = s(921801),
-  x = s(594174),
-  M = s(285952),
-  D = s(153124),
+  g = s(739566),
+  h = s(753206),
+  O = s(311476),
+  p = s(921801),
+  R = s(594174),
+  x = s(285952),
+  M = s(153124),
   f = s(358085),
-  P = s(210887),
-  L = s(740492),
-  Z = s(695346),
+  D = s(210887),
+  P = s(740492),
+  L = s(695346),
   b = s(329013),
-  v = s(333859),
-  j = s(726985),
-  B = s(981631),
-  U = s(921944),
-  G = s(959517),
-  F = s(689938),
-  y = s(704803),
-  V = s(549856);
+  Z = s(333859),
+  v = s(726985),
+  j = s(981631),
+  B = s(921944),
+  U = s(959517),
+  G = s(689938),
+  F = s(704803),
+  y = s(549856);
 
-function Y(e, t, s) {
+function V(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
 value: s,
 enumerable: !0,
@@ -51,83 +50,104 @@ configurable: !0,
 writable: !0
   }) : e[t] = s, e;
 }
-let w = {
+let Y = {
 COZY: 'cozy',
 COMPACT: 'compact'
   },
-  k = (0, D.hQ)(),
-  H = (0, D.hQ)(),
-  W = (0, D.hQ)(),
-  K = '1337',
-  z = e => {
+  w = (0, M.hQ)(),
+  k = (0, M.hQ)(),
+  H = (0, M.hQ)(),
+  W = '1337',
+  K = e => {
 let t = 0;
 return [
   (0, m.e5)({
     ...(0, A.ZP)({
-      channelId: K,
-      content: F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_1
+      channelId: W,
+      content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_1
     }),
-    state: B.yb.SENT,
+    state: j.yb.SENT,
     id: ''.concat(t++)
   }),
   (0, m.e5)({
     ...(0, A.ZP)({
-      channelId: K,
-      content: (0, c.wj)(e) ? F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_DARK : F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_LIGHT
+      channelId: W,
+      content: (0, c.wj)(e) ? G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_DARK : G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_LIGHT
     }),
-    state: B.yb.SENT,
+    state: j.yb.SENT,
     id: ''.concat(t++)
   }),
   (0, m.e5)({
     ...(0, A.ZP)({
-      channelId: K,
-      content: F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_3
+      channelId: W,
+      content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_3
     }),
-    state: B.yb.SENT,
+    state: j.yb.SENT,
     id: ''.concat(t++)
   }),
   (0, m.e5)({
     ...(0, A.ZP)({
-      channelId: K,
-      content: F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_4
+      channelId: W,
+      content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_4
     }),
-    state: B.yb.SENT,
+    state: j.yb.SENT,
     id: ''.concat(t++)
   }),
   (0, m.e5)({
     ...(0, A.ZP)({
-      channelId: K,
-      content: F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_5
+      channelId: W,
+      content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_5
     }),
-    state: B.yb.SENT,
+    state: j.yb.SENT,
     id: ''.concat(t)
   })
 ];
+  },
+  z = () => {
+let e = (0, o.e7)([N.Z], () => N.Z.isPreview),
+  {
+    enabled: t
+  } = O.Z.useExperiment({
+    location: 'GradientSelectorsTitle'
+  }, {
+    autoTrackExposure: !1,
+    disable: !e
+  });
+return t ? null : (0, n.jsxs)('div', {
+  className: F.themeTitle,
+  children: [
+    (0, n.jsx)('div', {
+      className: F.title,
+      children: G.Z.Messages.THEME
+    }),
+    (0, n.jsx)(b.g, {})
+  ]
+});
   };
 class Q extends a.Component {
   renderZoomSlider() {
 return f.isPlatformEmbedded ? (0, n.jsxs)(d.FormItem, {
-  className: V.marginTop20,
+  className: y.marginTop20,
   children: [
     (0, n.jsx)(d.FormTitle, {
-      id: k,
+      id: w,
       tag: d.FormTitleTags.H5,
-      className: V.marginBottom8,
-      children: F.Z.Messages.ACCESSIBILITY_ZOOM_LEVEL_LABEL
+      className: y.marginBottom8,
+      children: G.Z.Messages.ACCESSIBILITY_ZOOM_LEVEL_LABEL
     }),
     (0, n.jsx)(d.Slider, {
-      className: r()(V.marginTop20, V.marginBottom4),
+      className: r()(y.marginTop20, y.marginBottom4),
       initialValue: this.props.zoom,
-      defaultValue: B.yqN.ZOOM_DEFAULT,
-      markers: B.yqN.ZOOM_SCALES,
+      defaultValue: j.yqN.ZOOM_DEFAULT,
+      markers: j.yqN.ZOOM_SCALES,
       stickToMarkers: !0,
       onValueChange: this.handleZoomChange,
       onValueRender: this.handleSliderRender,
-      'aria-labelledby': k
+      'aria-labelledby': w
     }),
     (0, n.jsx)(d.FormText, {
       type: d.FormText.Types.DESCRIPTION,
-      children: F.Z.Messages.USER_SETTINGS_APPEARANCE_ZOOM_TIP.format({
+      children: G.Z.Messages.USER_SETTINGS_APPEARANCE_ZOOM_TIP.format({
         modKey: u.Z.modKey
       })
     })
@@ -136,27 +156,27 @@ return f.isPlatformEmbedded ? (0, n.jsxs)(d.FormItem, {
   }
   renderFontScaleSlider() {
 return (0, n.jsxs)(d.FormItem, {
-  className: V.marginTop20,
+  className: y.marginTop20,
   children: [
     (0, n.jsx)(d.FormTitle, {
-      id: H,
+      id: k,
       tag: d.FormTitleTags.H5,
-      className: V.marginBottom8,
-      children: F.Z.Messages.ACCESSIBILITY_FONT_SCALING_LABEL
+      className: y.marginBottom8,
+      children: G.Z.Messages.ACCESSIBILITY_FONT_SCALING_LABEL
     }),
-    (0, n.jsx)(M.Z, {
-      align: M.Z.Align.CENTER,
+    (0, n.jsx)(x.Z, {
+      align: x.Z.Align.CENTER,
       children: (0, n.jsx)(d.Slider, {
-        className: r()(V.marginTop20, V.marginBottom4),
+        className: r()(y.marginTop20, y.marginBottom4),
         initialValue: this.props.fontSize,
-        defaultValue: B.yqN.FONT_SIZE_DEFAULT,
-        markers: B.yqN.FONT_SIZES,
+        defaultValue: j.yqN.FONT_SIZE_DEFAULT,
+        markers: j.yqN.FONT_SIZES,
         stickToMarkers: !0,
         onValueChange: this.handleFontSizeChange,
         onValueRender: this.handleSliderRenderPX,
         onMarkerRender: this.handleSliderRenderPX,
         getAriaValueText: this.handleSliderValueText,
-        'aria-labelledby': H
+        'aria-labelledby': k
       })
     })
   ]
@@ -168,25 +188,25 @@ let {
   messageGroupSpacing: t
 } = this.props;
 return (0, n.jsxs)(d.FormItem, {
-  className: V.marginTop20,
+  className: y.marginTop20,
   children: [
     (0, n.jsx)(d.FormTitle, {
-      id: W,
+      id: H,
       tag: d.FormTitleTags.H5,
-      className: V.marginBottom8,
-      children: F.Z.Messages.ACCESSIBILITY_MESSAGE_GROUP_SPACING
+      className: y.marginBottom8,
+      children: G.Z.Messages.ACCESSIBILITY_MESSAGE_GROUP_SPACING
     }),
     (0, n.jsx)(d.Slider, {
-      className: r()(V.marginTop20, V.marginBottom4),
+      className: r()(y.marginTop20, y.marginBottom4),
       initialValue: t,
-      defaultValue: e ? G.c8 : G.pq,
-      markers: G.fP,
+      defaultValue: e ? U.c8 : U.pq,
+      markers: U.fP,
       stickToMarkers: !0,
       onValueChange: this.handleMessageSpacingChange,
       onValueRender: this.handleSliderRenderPX,
       onMarkerRender: this.handleSliderRenderPX,
       getAriaValueText: this.handleSliderValueText,
-      'aria-labelledby': W
+      'aria-labelledby': H
     })
   ]
 });
@@ -200,15 +220,15 @@ let {
 } = this.props, i = (0, c.wj)(t) ? this.darkMessages : this.lightMessages;
 return (0, n.jsx)(d.FocusBlock, {
   children: (0, n.jsx)(d.Card, {
-    className: r()(y.preview, V.marginBottom40, e ? y.compactPreview : void 0, 'group-spacing-'.concat(null != s ? s : e ? G.c8 : G.pq)),
+    className: r()(F.preview, y.marginBottom40, e ? F.compactPreview : void 0, 'group-spacing-'.concat(null != s ? s : e ? U.c8 : U.pq)),
     outline: !0,
     'aria-hidden': !0,
-    children: i.map((t, s) => (0, n.jsx)(g.Z, {
-      author: (0, h.ZH)(t),
+    children: i.map((t, s) => (0, n.jsx)(h.Z, {
+      author: (0, g.ZH)(t),
       message: t,
       compact: e,
       isGroupStart: s % 2 == 0,
-      className: 0 === s ? y.firstMessage : void 0,
+      className: 0 === s ? F.firstMessage : void 0,
       hideSimpleEmbedContent: a
     }, t.id))
   })
@@ -222,75 +242,66 @@ let {
   gradientPreset: a
 } = this.props;
 return t ? (0, n.jsx)(d.FormItem, {
-  className: r()(V.marginTop8, V.marginBottom40),
+  className: r()(y.marginTop8, y.marginBottom40),
   title: (0, n.jsx)('div', {
-    className: y.themeTitle,
+    className: F.themeTitle,
     children: (0, n.jsx)('div', {
-      className: y.title,
-      children: F.Z.Messages.THEME
+      className: F.title,
+      children: G.Z.Messages.THEME
     })
   }),
   children: (0, n.jsx)(d.FormText, {
     type: d.FormText.Types.DEFAULT,
-    className: y.forcedColorsWarning,
-    children: (0, S.b)() ? F.Z.Messages.THEME_DISABLED_FOR_CONTRAST_SYNC.format({
+    className: F.forcedColorsWarning,
+    children: (0, S.b)() ? G.Z.Messages.THEME_DISABLED_FOR_CONTRAST_SYNC.format({
       onClick: () => {
-        E.Z.open(B.oAB.ACCESSIBILITY);
+        E.Z.open(j.oAB.ACCESSIBILITY);
       }
-    }) : F.Z.Messages.THEME_DISABLED_FOR_FORCED_COLORS
+    }) : G.Z.Messages.THEME_DISABLED_FOR_FORCED_COLORS
   })
 }) : (0, n.jsxs)(d.FormItem, {
-  className: V.marginTop8,
-  title: (0, n.jsxs)('div', {
-    className: y.themeTitle,
-    children: [
-      (0, n.jsx)('div', {
-        className: y.title,
-        children: F.Z.Messages.THEME
-      }),
-      (0, n.jsx)(b.g, {})
-    ]
-  }),
+  className: y.marginTop8,
+  title: (0, n.jsx)(z, {}),
   children: [
     (0, n.jsx)(b.i, {}),
-    (0, n.jsx)(R.F, {
-      setting: j.s6.APPEARANCE_ICON,
-      children: (0, n.jsx)(v.c, {})
+    (0, n.jsx)(p.F, {
+      setting: v.s6.APPEARANCE_ICON,
+      children: (0, n.jsx)(Z.c, {})
     }),
     (0, n.jsx)(d.FormSwitch, {
       value: s && (0, c.ap)(e) && !t,
-      disabled: e !== B.BRd.LIGHT || t || null != a,
+      disabled: e !== j.BRd.LIGHT || t || null != a,
       onChange: this.handleDarkSidebarChecked,
-      className: V.marginTop20,
-      children: F.Z.Messages.ACCESSIBILITY_DARK_SIDEBAR
+      className: y.marginTop20,
+      children: G.Z.Messages.ACCESSIBILITY_DARK_SIDEBAR
     })
   ]
 });
   }
   renderDisplayMode() {
 return (0, n.jsxs)(d.FormItem, {
-  title: F.Z.Messages.MESSAGE_DISPLAY_MODE_LABEL,
-  className: V.marginTop8,
+  title: G.Z.Messages.MESSAGE_DISPLAY_MODE_LABEL,
+  className: y.marginTop8,
   children: [
     (0, n.jsx)(d.RadioGroup, {
       options: [{
-          name: F.Z.Messages.COZY_MODE,
-          value: w.COZY
+          name: G.Z.Messages.COZY_MODE,
+          value: Y.COZY
         },
         {
-          name: F.Z.Messages.COMPACT_MODE,
-          value: w.COMPACT
+          name: G.Z.Messages.COMPACT_MODE,
+          value: Y.COMPACT
         }
       ],
       onChange: this.handleMessageDisplayModeChange,
-      value: this.props.messageDisplayCompact ? w.COMPACT : w.COZY
+      value: this.props.messageDisplayCompact ? Y.COMPACT : Y.COZY
     }),
     (0, n.jsx)(d.FormSwitch, {
       value: this.props.messageDisplayCompact && this.props.displayCompactAvatars,
       disabled: !this.props.messageDisplayCompact,
       onChange: this.handleDisplayCompactAvatarsChanged,
-      className: V.marginTop20,
-      children: F.Z.Messages.DISPLAY_COMPACT_AVATARS
+      className: y.marginTop20,
+      children: G.Z.Messages.DISPLAY_COMPACT_AVATARS
     })
   ]
 });
@@ -305,7 +316,7 @@ return (0, n.jsxs)(n.Fragment, {
     this.renderMessageGroupSpacingSlider(),
     this.renderZoomSlider(),
     (0, n.jsx)(d.FormDivider, {
-      className: V.marginTop20
+      className: y.marginTop20
     })
   ]
 });
@@ -313,29 +324,29 @@ return (0, n.jsxs)(n.Fragment, {
   render() {
 return (0, n.jsxs)(d.FormSection, {
   tag: d.FormTitleTags.H1,
-  title: F.Z.Messages.APPEARANCE,
+  title: G.Z.Messages.APPEARANCE,
   children: [
-    (0, n.jsxs)(R.F, {
-      setting: j.s6.APPEARANCE_THEME,
+    (0, n.jsxs)(p.F, {
+      setting: v.s6.APPEARANCE_THEME,
       children: [
         this.renderPreview(),
         this.renderTheme()
       ]
     }),
-    (0, n.jsx)(R.F, {
-      setting: j.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT,
+    (0, n.jsx)(p.F, {
+      setting: v.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT,
       children: this.renderDisplayMode()
     }),
-    (0, n.jsx)(R.F, {
-      setting: j.s6.APPEARANCE_SCALING_SPACING,
+    (0, n.jsx)(p.F, {
+      setting: v.s6.APPEARANCE_SCALING_SPACING,
       children: this.renderScalingAndSpacing()
     }),
     (0, n.jsx)(d.Text, {
       variant: 'text-md/normal',
-      className: V.marginTop20,
-      children: F.Z.Messages.APPEARANCE_SETTINGS_ACCESSIBILITY_LINK.format({
+      className: y.marginTop20,
+      children: G.Z.Messages.APPEARANCE_SETTINGS_ACCESSIBILITY_LINK.format({
         onAccessibilityClick() {
-          E.Z.open(B.oAB.ACCESSIBILITY);
+          E.Z.open(j.oAB.ACCESSIBILITY);
         }
       })
     })
@@ -349,7 +360,7 @@ return ''.concat(e.toFixed(0), '%');
 return ''.concat(e.toFixed(0), 'px');
   }
   handleSliderValueText(e) {
-return F.Z.Messages.PIXEL_VALUE_A11Y_TEXT.format({
+return G.Z.Messages.PIXEL_VALUE_A11Y_TEXT.format({
   value: e
 });
   }
@@ -370,62 +381,51 @@ switch (e) {
 (0, T.cq)(e);
   }
   constructor(...e) {
-super(...e), Y(this, 'darkMessages', z(B.BRd.DARK)), Y(this, 'lightMessages', z(B.BRd.LIGHT)), Y(this, 'handleDisplayCompactAvatarsChanged', e => {
+super(...e), V(this, 'darkMessages', K(j.BRd.DARK)), V(this, 'lightMessages', K(j.BRd.LIGHT)), V(this, 'handleDisplayCompactAvatarsChanged', e => {
   _.ZP.updatedUnsyncedSettings({
     displayCompactAvatars: e
   });
-}), Y(this, 'handleMessageDisplayModeChange', e => {
+}), V(this, 'handleMessageDisplayModeChange', e => {
   let {
     value: t
   } = e;
-  Z.jU.updateSetting(t === w.COMPACT), (0, T.ZZ)();
+  L.jU.updateSetting(t === Y.COMPACT), (0, T.ZZ)();
 });
   }
 }
 let X = e => {
   !(0, C.un)(e) && (0, C.EW)(e, {
-dismissAction: U.L.AUTO,
+dismissAction: B.L.AUTO,
 forceTrack: !0
   });
 };
 
 function q() {
-  let e = Z.jU.useSetting(),
-t = Z.RS.useSetting(),
-s = Z.NA.useSetting(),
-i = Z.L1.useSetting(),
-r = 'UserSettingsAppearance',
-{
-  enabled: c
-} = (0, O.J)({
-  location: r
-}),
-{
-  enabled: d
-} = (0, p._)({
-  location: r
-});
+  let e = L.jU.useSetting(),
+t = L.RS.useSetting(),
+s = L.NA.useSetting(),
+i = L.L1.useSetting();
   a.useEffect(() => {
-X(l.z.CLIENT_THEMES_SETTINGS_BADGE), X(l.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), X(l.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK), c && X(l.z.BRAND_REFRESH_NEW_BADGE), d && X(l.z.PRIDE_ICONS_APPEARANCE_BADGE);
+X(l.z.CLIENT_THEMES_SETTINGS_BADGE), X(l.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), X(l.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
   }, []);
-  let _ = (0, o.cj)([
-P.Z,
-L.ZP,
+  let r = (0, o.cj)([
+D.Z,
+P.ZP,
 I.Z,
-x.default,
+R.default,
 N.Z
   ], () => {
 var e, t;
 return {
-  theme: P.Z.theme,
+  theme: D.Z.theme,
   useForcedColors: I.Z.useForcedColors,
-  useSystemTheme: L.ZP.useSystemTheme,
-  darkSidebar: P.Z.darkSidebar,
+  useSystemTheme: P.ZP.useSystemTheme,
+  darkSidebar: D.Z.darkSidebar,
   fontSize: I.Z.fontSize,
   zoom: I.Z.zoom,
   messageGroupSpacing: I.Z.messageGroupSpacing,
-  displayCompactAvatars: L.ZP.displayCompactAvatars,
-  isStaff: null !== (t = null === (e = x.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== t && t,
+  displayCompactAvatars: P.ZP.displayCompactAvatars,
+  isStaff: null !== (t = null === (e = R.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== t && t,
   gradientPreset: N.Z.gradientPreset
 };
   });
@@ -433,6 +433,6 @@ return {
 messageDisplayCompact: e,
 hideSimpleEmbedContent: t && s,
 clientTheme: i,
-..._
+...r
   });
 }

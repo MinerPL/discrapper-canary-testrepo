@@ -497,7 +497,7 @@ EASING_END: N.Z.Easing.bezier(0, -0.01, 0.99, 0)
 function M(e) {
   let {
 animate: t
-  } = e, [n, a] = D.useState(0), r = (0, h.useSprings)(C.length, C.map((e, r) => {
+  } = e, [n, a] = D.useState(0), r = (0, A.useSprings)(C.length, C.map((e, r) => {
 let s = r > 0 ? j.DELAY_STAGGER * r + Math.random() * (j.DELAY_MAX - j.DELAY_MIN) + j.DELAY_MIN : 0,
   i = Math.random() * (j.SIZE_MAX - j.SIZE_MIN) + j.SIZE_MIN;
 return {

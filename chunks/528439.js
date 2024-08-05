@@ -9,7 +9,7 @@ return E;
 return p;
   }
 }), n(47120), n(724458), n(653041);
-var r, i, s = n(470079),
+var r, s, i = n(470079),
   l = n(392711),
   o = n(399606),
   a = n(597688),
@@ -18,7 +18,7 @@ var r, i, s = n(470079),
   u = n(594174),
   f = n(74538),
   m = n(689938);
-(i = r || (r = {})).PURCHASE = 'purchase', i.PREMIUM_PURCHASE = 'premium_purchase', i.PREVIEW = 'preview';
+(s = r || (r = {})).PURCHASE = 'purchase', s.PREMIUM_PURCHASE = 'premium_purchase', s.PREVIEW = 'preview';
 let E = {
 id: 'None'
   },
@@ -29,17 +29,17 @@ t.ZP = () => {
   let e = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
 t = f.ZP.canUseCollectibles(e),
 n = (0, o.e7)([c.Z], () => c.Z.purchases),
-[r, i] = (0, o.Wu)([a.Z], () => [
+[r, s] = (0, o.Wu)([a.Z], () => [
   a.Z.categories,
   a.Z.products
 ]);
-  return (0, s.useMemo)(() => {
+  return (0, i.useMemo)(() => {
 let e = (0, l.uniqBy)([
   ...(0, d.aj)(n),
   ...(0, d.XS)(r)
 ], 'id').reduce((e, r) => {
-  let s = n.get(r.skuId);
-  return (0, d.qS)(s) ? (e.premium_purchase.push(r), e) : null != s ? (e.purchase.push(r), e) : !t && (0, d.G1)(i.get(r.skuId)) ? (e.premium_purchase.push(r), e) : (e.preview.push(r), e);
+  let i = n.get(r.skuId);
+  return (0, d.qS)(i) ? (e.premium_purchase.push(r), e) : null != i ? (e.purchase.push(r), e) : !t && (0, d.G1)(s.get(r.skuId)) ? (e.premium_purchase.push(r), e) : (e.preview.push(r), e);
 }, {
   purchase: [],
   premium_purchase: [],
@@ -75,7 +75,7 @@ return [{
 });
   }, [
 r,
-i,
+s,
 n,
 t
   ]);

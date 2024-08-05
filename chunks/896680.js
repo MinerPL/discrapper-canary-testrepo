@@ -1,42 +1,42 @@
 t.d(n, {
   Z: function() {
-return N;
+return f;
   }
 }), t(47120);
 var l = t(735250),
   a = t(470079),
   i = t(442837),
   r = t(481060),
-  u = t(239091),
-  o = t(154285),
+  o = t(239091),
+  u = t(154285),
   s = t(369994),
   d = t(666657),
   c = t(533244),
-  I = t(487419),
-  _ = t(965638),
+  _ = t(487419),
+  I = t(965638),
   A = t(430824),
   E = t(981631),
   T = t(689938);
 
-function N(e, n) {
-  let N = n === E.IlC.POPOUT,
-M = (0, i.e7)([A.Z], () => A.Z.getGuild(e), [e]),
-[S, f] = a.useState(!1),
+function f(e, n) {
+  let f = n === E.IlC.POPOUT,
+N = (0, i.e7)([A.Z], () => A.Z.getGuild(e), [e]),
+[h, D] = a.useState(!1),
 {
-  showAlertMode: D
-} = (0, o.sw)(e),
-R = (0, i.e7)([I.Z], () => null != M ? I.Z.getGuildIncident(M.id) : null),
-C = (null == M ? void 0 : M.hasFeature(E.oNc.INVITES_DISABLED)) || D && (null == R ? void 0 : R.invitesDisabledUntil) != null && new Date(R.invitesDisabledUntil) > new Date(),
-[L, h] = a.useState(C),
-O = async n => {
-  if (!S && null != M) {
-    f(!0);
+  showAlertMode: S
+} = (0, u.sw)(e),
+L = (0, i.e7)([_.Z], () => null != N ? _.Z.getGuildIncident(N.id) : null),
+C = (null == N ? void 0 : N.hasFeature(E.oNc.INVITES_DISABLED)) || S && (null == L ? void 0 : L.invitesDisabledUntil) != null && new Date(L.invitesDisabledUntil) > new Date(),
+[M, R] = a.useState(C),
+x = async n => {
+  if (!h && null != N) {
+    D(!0);
     try {
-      if (h(n), D) {
+      if (R(n), S) {
         if (n) {
           let n = {
             source: d.Zu.MESSAGE,
-            alertType: (0, c.T1)(R)
+            alertType: (0, c.T1)(L)
           };
           (0, r.openModalLazy)(async () => {
             let {
@@ -49,22 +49,22 @@ O = async n => {
             });
           });
         } else
-          await (0, s.n)(M.id, !1, !1);
+          await (0, s.n)(N.id, !1, !1);
       } else
-        await (0, _.AG)(M, n);
+        await (0, I.AG)(N, n);
     } catch (e) {
-      h(!n);
+      R(!n);
     } finally {
-      f(!1), (0, u.Zy)();
+      D(!1), (0, o.Zy)();
     }
   }
 };
-  return N ? null : (0, l.jsx)(r.MenuCheckboxItem, {
+  return f ? null : (0, l.jsx)(r.MenuCheckboxItem, {
 id: 'pause-invites',
 label: T.Z.Messages.DISABLE_INVITES,
 action: () => {
-  O(!L);
+  x(!M);
 },
-checked: L
+checked: M
   });
 }

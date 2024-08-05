@@ -9,9 +9,9 @@ return T;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(348327),
-  l = n.n(s),
+  s = n.n(a),
+  o = n(348327),
+  l = n.n(o),
   u = n(498405),
   c = n(597442),
   d = n(21340),
@@ -28,7 +28,7 @@ function T(e) {
   let {
 navId: n,
 variant: a = 'flexible',
-hideScroller: s = !1,
+hideScroller: o = !1,
 className: _,
 children: T,
 onClose: g,
@@ -127,11 +127,11 @@ C.isUsingKeyboardNavigation ? !f.Z.keyboardModeEnabled && (0, E.Qj)() : f.Z.keyb
   }, [C.isUsingKeyboardNavigation]);
   let y = i.useRef(null);
   (0, c.T)(y);
-  let D = s ? d.u2 : d.zJ;
+  let D = o ? d.u2 : d.zJ;
   return (0, r.jsx)(p.r.Provider, {
 value: A,
 children: (0, r.jsx)('div', {
-  className: o()(I.menu, I[a], _),
+  className: s()(I.menu, I[a], _),
   ...C.getContainerProps(),
   ref: y,
   'aria-label': e['aria-label'],
@@ -149,27 +149,27 @@ children: (0, r.jsx)('div', {
         onClose: g
       }),
       N.length > 0 && function e(t, n, i, a) {
-        let o = 0,
-          s = [];
+        let s = 0,
+          o = [];
         return t.reduce((t, l, u) => {
-          let c = s.length > 0 ? s[s.length - 1] : t;
+          let c = o.length > 0 ? o[o.length - 1] : t;
           switch (l.type) {
             case 'separator':
-              c.push((0, r.jsx)(m.Z0, {}, 'separator-'.concat(u))), o = 0;
+              c.push((0, r.jsx)(m.Z0, {}, 'separator-'.concat(u))), s = 0;
               break;
             case 'groupstart':
-              o > 0 && l.length > 0 && (c.push((0, r.jsx)(m.Z0, {}, 'separator-'.concat(u))), o = 0), s.push([]);
+              s > 0 && l.length > 0 && (c.push((0, r.jsx)(m.Z0, {}, 'separator-'.concat(u))), s = 0), o.push([]);
               break;
             case 'groupend':
-              s.length > 0 && t.push((0, r.jsx)(m.ZA, {
-                contents: s.pop(),
+              o.length > 0 && t.push((0, r.jsx)(m.ZA, {
+                contents: o.pop(),
                 ...l.props
               }, 'group-'.concat(u)));
               break;
             case 'item': {
               let {
                 children: t,
-                childRowHeight: s,
+                childRowHeight: o,
                 onChildrenScroll: u,
                 listClassName: d,
                 subMenuClassName: _
@@ -192,7 +192,7 @@ children: (0, r.jsx)('div', {
                 },
                 onClose: a
               }, l.key);
-              E ? null != s ? c.push((0, r.jsx)(m.P2, {
+              E ? null != o ? c.push((0, r.jsx)(m.P2, {
                 ...l.props,
                 parentItem: p,
                 isFocused: h,
@@ -200,7 +200,7 @@ children: (0, r.jsx)('div', {
                   path: f
                 }),
                 rows: e(t, n, f, a),
-                rowHeight: s,
+                rowHeight: o,
                 onScroll: u,
                 listClassName: d
               }, ''.concat(l.key, '-submenu'))) : c.push((0, r.jsx)(m.LY, {
@@ -212,7 +212,7 @@ children: (0, r.jsx)('div', {
                   path: f
                 }),
                 renderSubmenu: () => e(t, n, f, a)
-              }, ''.concat(l.key, '-submenu'))) : c.push(p), o++;
+              }, ''.concat(l.key, '-submenu'))) : c.push(p), s++;
               break;
             }
             case 'customitem': {
@@ -228,7 +228,7 @@ children: (0, r.jsx)('div', {
                 }),
                 onClose: a,
                 children: l.render
-              }, l.key)), o++;
+              }, l.key)), s++;
               break;
             }
             case 'checkbox': {
@@ -243,7 +243,7 @@ children: (0, r.jsx)('div', {
                   path: e,
                   role: 'menuitemcheckbox'
                 })
-              }, l.key)), o++;
+              }, l.key)), s++;
               break;
             }
             case 'radio': {
@@ -258,7 +258,7 @@ children: (0, r.jsx)('div', {
                   path: e,
                   role: 'menuitemradio'
                 })
-              }, l.key)), o++;
+              }, l.key)), s++;
               break;
             }
             case 'control': {
@@ -273,7 +273,7 @@ children: (0, r.jsx)('div', {
                   path: e
                 }),
                 onClose: a
-              }, l.key)), o++;
+              }, l.key)), s++;
               break;
             }
             case 'compositecontrol': {
@@ -289,7 +289,7 @@ children: (0, r.jsx)('div', {
                 }),
                 onClose: a,
                 children: l.children
-              }, l.key)), o++;
+              }, l.key)), s++;
             }
           }
           return t;
@@ -303,7 +303,7 @@ children: (0, r.jsx)('div', {
 
 function g() {
   return (0, r.jsx)('div', {
-className: o()(I.menu, I.loader, I.flexible),
+className: s()(I.menu, I.loader, I.flexible),
 children: (0, r.jsx)(_.$, {})
   });
 }

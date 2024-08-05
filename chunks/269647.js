@@ -1,4 +1,4 @@
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(314897),
   c = n(592125),
@@ -28,7 +28,7 @@ type: 'SET_VAD_PERMISSION',
 hasPermission: p
   });
 }
-class T extends(o = s.ZP.Store) {
+class T extends(s = o.ZP.Store) {
   initialize() {
 this.waitFor(_.Z, d.Z, E.Z, f.Z);
   }

@@ -2,8 +2,8 @@ n.r(t), n(411104);
 var r = n(836560),
   i = n(525654),
   a = n.n(i),
-  o = n(664751),
-  s = n(772848),
+  s = n(664751),
+  o = n(772848),
   l = n(544891),
   u = n(996106),
   c = n(981631);
@@ -14,7 +14,7 @@ function _(e, t) {
 throw Error('cmd and name required');
   return ''.concat(e, ':').concat(t);
 }
-let E = o.parse(location.search.slice(1)),
+let E = s.parse(location.search.slice(1)),
   f = parseInt(null != E.rpc && '' !== E.rpc ? E.rpc : c.V6Z, 10),
   h = null;
 class p extends r.EventEmitter {
@@ -69,10 +69,10 @@ if (null == h) {
       this.emit(_(n, r), a);
       return;
     }
-    let o = null;
-    r === c.zMe.ERROR && (o = new u.Z({
+    let s = null;
+    r === c.zMe.ERROR && (s = new u.Z({
       errorCode: a.code
-    }, a.message), a = null), this.emit(_(n, i), o, a);
+    }, a.message), a = null), this.emit(_(n, i), s, a);
   }, h.onclose = h.onerror = e => this.disconnect(e));
 }
   }
@@ -102,14 +102,14 @@ return new Promise((r, i) => {
     }), this.connect();
     return;
   }
-  let a = (0, s.Z)(),
-    o = JSON.stringify({
+  let a = (0, o.Z)(),
+    s = JSON.stringify({
       cmd: e,
       args: t,
       evt: n,
       nonce: a
     });
-  this.once(_(e, a), (e, t) => null != e ? i(e) : r(t)), null == h || h.send(o);
+  this.once(_(e, a), (e, t) => null != e ? i(e) : r(t)), null == h || h.send(s);
 });
   }
   requestOnce(e, t, n) {
@@ -119,7 +119,7 @@ return l.tn.post({
     cmd: e,
     args: t,
     evt: n,
-    nonce: (0, s.Z)()
+    nonce: (0, o.Z)()
   }
 }).then(e => {
   let {
@@ -142,7 +142,7 @@ let r = encodeURIComponent(JSON.stringify({
     cmd: e,
     args: t,
     evt: n,
-    nonce: (0, s.Z)()
+    nonce: (0, o.Z)()
   })),
   i = encodeURIComponent(''.concat(location.protocol, '//').concat(location.host).concat(location.pathname, '?done=true'));
 return window.open('http://127.0.0.1:'.concat(this.port, '/rpc?v=').concat(c.X6Q, '&payload=').concat(r, '&callback=').concat(i), '_self'), new Promise(() => null);

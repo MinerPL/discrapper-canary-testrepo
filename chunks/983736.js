@@ -1,18 +1,18 @@
 t.d(n, {
   OA: function() {
-return a;
+return s;
   },
   _C: function() {
 return l;
   },
   kT: function() {
-return s;
+return o;
   }
 });
-var o = t(823379),
+var a = t(823379),
   r = t(246364),
   i = t(592286);
-let a = e => {
+let s = e => {
   let {
 required: n,
 response: t,
@@ -32,11 +32,11 @@ case r.QJ.PARAGRAPH:
 case r.QJ.MULTIPLE_CHOICE:
   return 'number' == typeof t;
 default:
-  return (0, o.vE)(i);
+  return (0, a.vE)(i);
   }
 };
 
-function s(e) {
+function o(e) {
   return i.lI.has(null == e ? void 0 : e.field_type);
 }
 

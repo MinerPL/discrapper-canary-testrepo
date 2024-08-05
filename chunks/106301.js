@@ -1,7 +1,7 @@
 let r, i, a;
 n(47120);
-var o, s = n(392711),
-  l = n.n(s),
+var s, o = n(392711),
+  l = n.n(o),
   u = n(442837),
   c = n(570140),
   d = n(981631);
@@ -22,7 +22,7 @@ recentCustomStatuses: [],
 currentDefaultStatus: null
   };
 }
-class h extends(o = u.ZP.PersistedStore) {
+class h extends(s = u.ZP.PersistedStore) {
   initialize(e) {
 E = {
   ...f(),
@@ -71,18 +71,18 @@ r = t, i = null, n && (E.currentDefaultStatus = {
 let {
   status: t,
   emoji: n,
-  saveAsDefault: o
+  saveAsDefault: s
 } = e;
 r = d.tNA.CUSTOM, i = {
   status: t,
   emoji: n
 };
-let s = [...E.recentCustomStatuses],
-  u = s.findIndex(e => e.status === t && l().isEqual(e.emoji, n)); -
-1 !== u ? s.splice(u, 1) : 7 === s.length && s.splice(6, 1), E.recentCustomStatuses = [
+let o = [...E.recentCustomStatuses],
+  u = o.findIndex(e => e.status === t && l().isEqual(e.emoji, n)); -
+1 !== u ? o.splice(u, 1) : 7 === o.length && o.splice(6, 1), E.recentCustomStatuses = [
   i,
-  ...s
-], o && (E.currentDefaultStatus = {
+  ...o
+], s && (E.currentDefaultStatus = {
   status: r,
   customHangStatus: i,
   expiresAt: Date.now() + 28800000
@@ -101,9 +101,9 @@ let {
 t.forEach(e => {
   let {
     status: t,
-    emoji: o
-  } = e, s = n.findIndex(e => e.status === t && l().isEqual(e.emoji, o)); -
-  1 !== s && n.splice(s, 1), t === (null == i ? void 0 : i.status) && l().isEqual(o, null == i ? void 0 : i.emoji) && (r = null, i = null, E.currentDefaultStatus = null, a = null);
+    emoji: s
+  } = e, o = n.findIndex(e => e.status === t && l().isEqual(e.emoji, s)); -
+  1 !== o && n.splice(o, 1), t === (null == i ? void 0 : i.status) && l().isEqual(s, null == i ? void 0 : i.emoji) && (r = null, i = null, E.currentDefaultStatus = null, a = null);
 }), E.recentCustomStatuses = n;
   },
   CLEAR_HANG_STATUS: function(e) {

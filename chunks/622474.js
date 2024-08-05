@@ -17,8 +17,8 @@ var n = s(735250),
   C = s(594174),
   m = s(55935),
   A = s(702512),
-  h = s(689938),
-  g = s(979031);
+  g = s(689938),
+  h = s(979031);
 let O = 'YYYY-MM-DD HH:mm';
 
 function p(e) {
@@ -53,22 +53,22 @@ return null;
 });
   };
   return (0, n.jsxs)('div', {
-className: g.dropContainer,
+className: h.dropContainer,
 children: [
   (0, n.jsx)('div', {
-    className: g.dropCard,
+    className: h.dropCard,
     children: (0, n.jsxs)('div', {
-      className: g.mainPromotionCardContainer,
+      className: h.mainPromotionCardContainer,
       children: [
         (0, n.jsxs)('div', {
-          className: g.promotionCardLeftContainer,
+          className: h.promotionCardLeftContainer,
           children: [
             (0, n.jsx)('div', {
-              className: g.promotionIcon,
+              className: h.promotionIcon,
               children: (0, n.jsx)('img', {
                 alt: '',
                 src: C.iconSrc,
-                className: g.promotionIconImage
+                className: h.promotionIconImage
               })
             }),
             (0, n.jsxs)('div', {
@@ -80,8 +80,8 @@ children: [
                 (0, n.jsx)(_.Text, {
                   variant: 'text-xs/medium',
                   color: 'text-normal',
-                  className: g.availableUntil,
-                  children: h.Z.Messages.DROPS_CARD_REDEEM_UNTIL.format({
+                  className: h.availableUntil,
+                  children: g.Z.Messages.DROPS_CARD_REDEEM_UNTIL.format({
                     endDate: l()(S, 'YYYY-MM-DD HH:mm').format('MMMM Do, YYYY')
                   })
                 })
@@ -90,43 +90,43 @@ children: [
           ]
         }),
         (0, n.jsx)(_.Tooltip, {
-          text: s && !i ? h.Z.Messages.DROPS_GIFT_INVENTORY_REDEMPTION_TOOLTIP : null,
-          tooltipContentClassName: g.redeemTooltipContent,
+          text: s && !i ? g.Z.Messages.DROPS_GIFT_INVENTORY_REDEMPTION_TOOLTIP : null,
+          tooltipContentClassName: h.redeemTooltipContent,
           children: e => (0, n.jsx)(_.Button, {
-            className: g.promotionCardButton,
+            className: h.promotionCardButton,
             color: _.Button.Colors.BRAND,
             size: _.Button.Sizes.SMALL,
             onClick: O,
             disabled: s && !i,
             ...e,
-            children: s ? h.Z.Messages.REDEEM : h.Z.Messages.DROPS_GIFT_INVENTORY_ENROLL
+            children: s ? g.Z.Messages.REDEEM : g.Z.Messages.DROPS_GIFT_INVENTORY_ENROLL
           })
         })
       ]
     })
   }),
   (0, n.jsxs)('div', {
-    className: g.dropCriteria,
+    className: h.dropCriteria,
     children: [
       (0, n.jsx)('img', {
         alt: '',
         src: C.rewardSrc,
-        className: g.dropRewardImage
+        className: h.dropRewardImage
       }),
       (0, n.jsx)('div', {
         ref: r,
         children: (0, n.jsx)(_.Text, {
           color: 'text-muted',
           variant: 'text-sm/normal',
-          className: g.dropCriteriaText,
+          className: h.dropCriteriaText,
           children: A.messages.giftInfo()
         })
       }),
       (0, n.jsx)(_.Text, {
         color: 'text-muted',
         variant: 'text-sm/normal',
-        className: g.dropLearnMore,
-        children: h.Z.Messages.DROPS_LEARN_MORE.format({
+        className: h.dropLearnMore,
+        children: g.Z.Messages.DROPS_LEARN_MORE.format({
           faqUrl: m
         })
       })
@@ -141,25 +141,25 @@ function R(e) {
 drop: t,
 code: s,
 platform: i
-  } = e, [o, c] = a.useState(!1), d = void 0 !== s, E = (0, m.vc)(l()(t.endDate), 'LL'), u = h.Z.Messages.DROPS_CARD_REDEEM_UNTIL.format({
+  } = e, [o, c] = a.useState(!1), d = void 0 !== s, E = (0, m.vc)(l()(t.endDate), 'LL'), u = g.Z.Messages.DROPS_CARD_REDEEM_UNTIL.format({
 endDate: E
-  }), T = d ? h.Z.Messages.OUTBOUND_PROMOTION_SEE_CODE : h.Z.Messages.PROMOTION_CARD_ACTION_CLAIM, I = a.useCallback(() => c(!1), []);
+  }), T = d ? g.Z.Messages.OUTBOUND_PROMOTION_SEE_CODE : g.Z.Messages.PROMOTION_CARD_ACTION_CLAIM, I = a.useCallback(() => c(!1), []);
   return (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsx)('div', {
-    className: r()(g.skuCard, g.promotionCard),
+    className: r()(h.skuCard, h.promotionCard),
     children: (0, n.jsxs)('div', {
-      className: g.mainPromotionCardContainer,
+      className: h.mainPromotionCardContainer,
       children: [
         (0, n.jsxs)('div', {
-          className: g.promotionCardLeftContainer,
+          className: h.promotionCardLeftContainer,
           children: [
             (0, n.jsx)('div', {
-              className: g.promotionIcon,
+              className: h.promotionIcon,
               children: (0, n.jsx)('img', {
                 alt: '',
                 src: t.assets.iconSrc,
-                className: g.promotionIconImage
+                className: h.promotionIconImage
               })
             }),
             (0, n.jsxs)('div', {
@@ -171,7 +171,7 @@ children: [
                 (0, n.jsx)(_.Text, {
                   variant: 'text-sm/normal',
                   color: 'text-normal',
-                  className: g.__invalid_promotionText,
+                  className: h.__invalid_promotionText,
                   children: u
                 })
               ]
@@ -251,14 +251,14 @@ _ && null == s.completed_at || null != s.enrolled_at && null == s.completed_at &
 });
   }
   let E = (0, n.jsxs)('div', {
-className: g.dropsHeaderContainer,
+className: h.dropsHeaderContainer,
 children: [
   (0, n.jsx)(_.Heading, {
     variant: 'heading-md/semibold',
-    children: h.Z.Messages.DROPS_GIFT_INVENTORY_TITLE
+    children: g.Z.Messages.DROPS_GIFT_INVENTORY_TITLE
   }),
   (0, n.jsx)(N.Z, {
-    className: g.betaTagIcon
+    className: h.betaTagIcon
   })
 ]
   });
@@ -266,11 +266,11 @@ children: [
 children: [
   E,
   (0, n.jsx)(_.FormDivider, {
-    className: g.divider
+    className: h.divider
   }),
   (0, n.jsx)('div', {
-    className: g.dropsHelpText,
-    children: h.Z.Messages.DROPS_READ_BLOG_TO_ENABLE.format({
+    className: h.dropsHelpText,
+    children: g.Z.Messages.DROPS_READ_BLOG_TO_ENABLE.format({
       blogURL: A.n4
     })
   })
@@ -279,7 +279,7 @@ children: [
 children: [
   E,
   (0, n.jsx)(_.FormDivider, {
-    className: g.divider
+    className: h.divider
   }),
   i.map(e => {
     let t = (0, I.EW)(e.dropsQuestId),
@@ -321,8 +321,8 @@ children: [
     }) : null;
   }),
   'string' == typeof(null == o ? void 0 : o.id) && r.length > 0 ? (0, n.jsx)('div', {
-    className: g.feedback,
-    children: h.Z.Messages.DROPS_REQUEST_FEEDBACK_SUCCESS.format({
+    className: h.feedback,
+    children: g.Z.Messages.DROPS_REQUEST_FEEDBACK_SUCCESS.format({
       feedbackURL: 'https://survey.alchemer.com/s3/7043098/Discord-Drops-CSAT?user_id='.concat(null !== (t = null == o ? void 0 : o.id) && void 0 !== t ? t : '')
     })
   }) : null

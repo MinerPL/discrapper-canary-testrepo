@@ -27,8 +27,8 @@ for (var r = 0; r < e.length; r += 2)
 for (var r = 0; r < e.length; r++) {
   var i = e.charCodeAt(r),
     a = i >> 8,
-    o = 255 & i;
-  a ? n.push(a, o) : n.push(o);
+    s = 255 & i;
+  a ? n.push(a, s) : n.push(s);
 }
   return n;
 }, t.zero2 = n, t.toHex = r, t.encode = function(e, t) {

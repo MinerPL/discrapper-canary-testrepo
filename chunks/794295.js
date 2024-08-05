@@ -1,8 +1,8 @@
 var r = n(735250),
   i = n(470079),
   a = n(302454),
-  o = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  o = n(481060),
   l = n(100527),
   u = n(906732),
   c = n(49012);
@@ -23,8 +23,8 @@ p,
 e
   ]), I = i.useCallback(e => {
 1 === e.button && m(e);
-  }, [m]), T = o().sanitizeUrl(d);
-  return (0, r.jsx)(s.Anchor, {
+  }, [m]), T = s().sanitizeUrl(d);
+  return (0, r.jsx)(o.Anchor, {
 ...h,
 title: a,
 target: '_blank',

@@ -7,8 +7,8 @@ var s = n(735250),
   o = n(481060),
   c = n(596454),
   d = n(296386),
-  u = n(907040),
-  _ = n(401227),
+  u = n(318766),
+  _ = n(907040),
   I = n(999382),
   E = n(185923),
   T = n(689938),
@@ -41,7 +41,7 @@ children: [
       let {
         closePopout: t
       } = e;
-      return (0, s.jsx)(u.Z, {
+      return (0, s.jsx)(_.Z, {
         pickerIntention: E.Hz.COMMUNITY_CONTENT,
         closePopout: t,
         onSelectEmoji: (e, n) => {
@@ -51,7 +51,7 @@ children: [
     },
     children: () => (0, s.jsx)('div', {
       className: m.background,
-      children: (0, s.jsx)(_.Z, {
+      children: (0, s.jsx)(u.Z, {
         active: !1,
         onClick: () => {
           p(!0);

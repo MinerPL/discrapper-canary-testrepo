@@ -1,8 +1,8 @@
 var r = n(735250),
   i = n(470079),
   a = n(481060),
-  o = n(367907),
-  s = n(524444),
+  s = n(367907),
+  o = n(524444),
   l = n(297047),
   u = n(592125),
   c = n(944486),
@@ -22,7 +22,7 @@ d.default.track(_.rMx.OPEN_POPOUT, {
   guild_id: t.id,
   channel_id: null == p ? void 0 : p.id
 });
-  }, []), null == p) ? null : (0, r.jsx)(s.W_, {
+  }, []), null == p) ? null : (0, r.jsx)(o.W_, {
 children: (0, r.jsxs)('div', {
   className: f.popoutContainer,
   children: [
@@ -60,7 +60,7 @@ children: (0, r.jsxs)('div', {
       innerClassName: f.ctaButtonContent,
       fullWidth: !0,
       onClick: () => {
-        o.ZP.trackWithMetadata(_.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, {
+        s.ZP.trackWithMetadata(_.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, {
           target_user_id: n.author.id
         }), h(), (0, l.q)(n.author, p.id);
       },

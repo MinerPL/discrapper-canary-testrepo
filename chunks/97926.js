@@ -7,13 +7,15 @@ var n = s(735250),
   l = s(113434),
   c = s(497505),
   d = s(918701),
-  _ = s(37303),
-  E = s(46140),
-  u = s(981631),
-  T = s(689938),
-  I = s(165549);
+  _ = s(625252),
+  E = s(37303),
+  u = s(709158),
+  T = s(46140),
+  I = s(981631),
+  S = s(689938),
+  N = s(165549);
 
-function S(e) {
+function C(e) {
   if (null == e)
 return !1;
   let {
@@ -28,19 +30,19 @@ quests: e,
 isFetchingCurrentQuests: t
   } = (0, l.J2)({
 fetchPolicy: 'cache-and-network'
-  }), s = (0, l.EH)(), N = (0, o.q)({
-location: E.dr.USER_SETTINGS_GIFT_INVENTORY
-  }), [C, m] = a.useState(!0), [A, h] = a.useState([]), [g, O] = a.useState([]), p = a.useMemo(() => C ? t ? 'unsorted' : 'pending_sort' : 'sorted', [
-C,
+  }), s = (0, l.EH)(), m = (0, o.q)({
+location: T.dr.USER_SETTINGS_GIFT_INVENTORY
+  }), A = (0, u.Z)(T.dr.USER_SETTINGS_GIFT_INVENTORY), [g, h] = a.useState(!0), [O, p] = a.useState([]), [R, x] = a.useState([]), M = a.useMemo(() => g ? t ? 'unsorted' : 'pending_sort' : 'sorted', [
+g,
 t
   ]);
   a.useEffect(() => {
-m(!0);
+h(!0);
   }, [
 t,
 s
   ]), a.useEffect(() => {
-if ('pending_sort' === p) {
+if ('pending_sort' === M) {
   let {
     sortedQuestIds: t,
     sections: n
@@ -92,18 +94,18 @@ if ('pending_sort' === p) {
         if (m && !I && !E)
           return 1;
         let A = l && _,
-          h = E && u;
-        return A && !h ? 1 : !A && h ? -1 : 0;
+          g = E && u;
+        return A && !g ? 1 : !A && g ? -1 : 0;
       }).map(e => e.id),
       n = [{
           location: c.jn.GIFT_INVENTORY_FOR_YOU,
-          title: T.Z.Messages.QUESTS_FOR_YOU,
-          questIds: s.filter(e => S(t.get(e)))
+          title: S.Z.Messages.QUESTS_FOR_YOU,
+          questIds: s.filter(e => C(t.get(e)))
         },
         {
           location: c.jn.GIFT_INVENTORY_OTHER,
-          title: T.Z.Messages.QUESTS_OTHER,
-          questIds: s.filter(e => !S(t.get(e)))
+          title: S.Z.Messages.QUESTS_OTHER,
+          questIds: s.filter(e => !C(t.get(e)))
         }
       ];
     return {
@@ -115,85 +117,88 @@ if ('pending_sort' === p) {
     let a = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
     return !(null !== (n = s.get(e.id)) && void 0 !== n && n) || a;
   }));
-  h(t), O(n), m(!1);
+  p(t), x(n), h(!1);
 }
   }, [
 e,
 s,
-p
+M
   ]);
-  let R = g.every(e => {
+  let f = R.every(e => {
 let {
   questIds: t
 } = e;
 return t.length > 0;
   });
-  return t || 'sorted' !== p ? (0, n.jsx)(i.Spinner, {
-className: I.spinner
-  }) : 0 === A.length ? null : (0, n.jsx)(i.FormSection, {
-className: I.questsContainer,
-children: (0, n.jsxs)(i.HeadingLevel, {
-  component: (0, n.jsxs)('div', {
-    className: I.questsHeading,
-    children: [
-      N && (0, n.jsx)(i.QuestsIcon, {
-        className: I.questsIcon
-      }),
-      (0, n.jsx)(i.Heading, {
-        variant: 'heading-md/semibold',
-        className: I.questsHeading,
-        children: T.Z.Messages.QUESTS
-      }),
-      (0, n.jsx)(i.Text, {
-        variant: 'text-xs/normal',
-        className: I.questsHeadingLearnMore,
-        children: T.Z.Messages.QUESTS_LEARN_MORE_LINK.format({
-          questsLearnMoreLink: r.Z.getArticleURL(u.BhN.QUESTS_LEARN_MORE)
+  return t || 'sorted' !== M ? (0, n.jsx)(i.Spinner, {
+className: N.spinner
+  }) : 0 === O.length ? null : (0, n.jsxs)(i.FormSection, {
+className: N.questsContainer,
+children: [
+  A ? (0, n.jsx)(_.Z, {}) : null,
+  (0, n.jsxs)(i.HeadingLevel, {
+    component: (0, n.jsxs)('div', {
+      className: N.questsHeading,
+      children: [
+        m && (0, n.jsx)(i.QuestsIcon, {
+          className: N.questsIcon
+        }),
+        (0, n.jsx)(i.Heading, {
+          variant: 'heading-md/semibold',
+          className: N.questsHeading,
+          children: S.Z.Messages.QUESTS
+        }),
+        (0, n.jsx)(i.Text, {
+          variant: 'text-xs/normal',
+          className: N.questsHeadingLearnMore,
+          children: S.Z.Messages.QUESTS_LEARN_MORE_LINK.format({
+            questsLearnMoreLink: r.Z.getArticleURL(I.BhN.QUESTS_LEARN_MORE)
+          })
         })
-      })
-    ]
-  }),
-  children: [
-    (0, n.jsx)(i.FormDivider, {
-      className: I.divider
+      ]
     }),
-    N ? g.map((e, t, s) => {
-      let {
-        location: a,
-        questIds: r,
-        title: o
-      } = e;
-      if (0 === r.length)
-        return null;
-      let l = 0 === t ? 0 : s.slice(0, t).reduce((e, t) => {
+    children: [
+      (0, n.jsx)(i.FormDivider, {
+        className: N.divider
+      }),
+      m ? R.map((e, t, s) => {
         let {
-          questIds: s
-        } = t;
-        return e + s.length;
-      }, 0);
-      return (0, n.jsxs)('section', {
-        className: I.questsListContainer,
-        children: [
-          R && (0, n.jsx)(i.Text, {
-            variant: 'text-xs/semibold',
-            color: 'header-secondary',
-            className: I.sectionHeader,
-            children: o
-          }),
-          r.map((e, t) => (0, n.jsx)(_.D, {
-            questId: e,
-            location: a,
-            contentPosition: t + l,
-            initiallyExpanded: !R
-          }, e))
-        ]
-      }, a);
-    }) : A.map((e, t) => (0, n.jsx)(_.D, {
-      questId: e,
-      location: c.jn.GIFT_INVENTORY_FOR_YOU,
-      contentPosition: t
-    }, e))
-  ]
-})
+          location: a,
+          questIds: r,
+          title: o
+        } = e;
+        if (0 === r.length)
+          return null;
+        let l = 0 === t ? 0 : s.slice(0, t).reduce((e, t) => {
+          let {
+            questIds: s
+          } = t;
+          return e + s.length;
+        }, 0);
+        return (0, n.jsxs)('section', {
+          className: N.questsListContainer,
+          children: [
+            f && (0, n.jsx)(i.Text, {
+              variant: 'text-xs/semibold',
+              color: 'header-secondary',
+              className: N.sectionHeader,
+              children: o
+            }),
+            r.map((e, t) => (0, n.jsx)(E.D, {
+              questId: e,
+              location: a,
+              contentPosition: t + l,
+              initiallyExpanded: !f
+            }, e))
+          ]
+        }, a);
+      }) : O.map((e, t) => (0, n.jsx)(E.D, {
+        questId: e,
+        location: c.jn.GIFT_INVENTORY_FOR_YOU,
+        contentPosition: t
+      }, e))
+    ]
+  })
+]
   });
 };

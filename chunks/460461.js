@@ -14,11 +14,11 @@ var s = n(735250),
   u = n(296386),
   _ = n(150192),
   I = n(688465),
-  E = n(134432),
-  T = n(813197),
-  m = n(208567),
-  N = n(496675),
-  S = n(315507),
+  E = n(970061),
+  T = n(134432),
+  m = n(813197),
+  N = n(208567),
+  S = n(496675),
   h = n(987134),
   g = n(768581),
   C = n(63063),
@@ -80,8 +80,8 @@ a.useEffect(() => {
 ]);
 let {
   canManageGuild: j
-} = (0, i.cj)([N.Z], () => ({
-  canManageGuild: N.Z.can(L.Plq.MANAGE_GUILD, n)
+} = (0, i.cj)([S.Z], () => ({
+  canManageGuild: S.Z.can(L.Plq.MANAGE_GUILD, n)
 })), Z = (0, i.e7)([p.Z], () => p.Z.isGuildMetadataLoaded()), b = (0, i.e7)([p.Z], () => null != n ? p.Z.getMetadata() : null), U = (0, i.e7)([p.Z], () => null != n && (null == b ? void 0 : b.isPublished) ? p.Z.getSlug() : null), [G, P] = a.useState([!0]), [B, y] = a.useState(!0), [F, w] = a.useState([!1]), [k, H] = a.useState(['']), V = e => {
   let t = Object.entries(O.zo).filter(e => !k.includes(e[1].presentation)).map(e => ({
     label: e[1].presentation,
@@ -382,7 +382,7 @@ return (0, s.jsx)('div', {
                                     color: l.Button.Colors.PRIMARY,
                                     children: [
                                       A.Z.Messages.UPLOAD_BACKGROUND,
-                                      (0, s.jsx)(T.ZP, {
+                                      (0, s.jsx)(m.ZP, {
                                         disabled: !j,
                                         onChange: K
                                       })
@@ -390,12 +390,12 @@ return (0, s.jsx)('div', {
                                   })
                                 ]
                               }),
-                              (0, s.jsx)(m.Z, {
+                              (0, s.jsx)(N.Z, {
                                 image: n.discoverySplash,
                                 makeURL: e => g.ZP.getGuildDiscoverySplashURL({
                                   id: n.id,
                                   splash: e,
-                                  size: 512 * (0, E.x_)()
+                                  size: 512 * (0, T.x_)()
                                 }),
                                 disabled: !j,
                                 onChange: K,
@@ -618,7 +618,7 @@ return (0, s.jsx)('div', {
               }),
               !b.isPublished && (0, s.jsx)('div', {
                 className: M.checklist,
-                children: (0, s.jsx)(S.Z, {
+                children: (0, s.jsx)(E.Z, {
                   title: A.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_TITLE,
                   children: ei,
                   buttonLabel: A.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_PUBLISH,

@@ -1,4 +1,4 @@
-var r, i, a, o;
+var r, i, a, s;
 n.d(t, {
   az: function() {
 return i;
@@ -7,11 +7,11 @@ return i;
 return r;
   },
   si: function() {
-return s;
+return o;
   }
 });
-(a = r || (r = {}))[a.MESSAGE = 0] = 'MESSAGE', a[a.SUCCESS = 1] = 'SUCCESS', a[a.FAILURE = 2] = 'FAILURE', a[a.CUSTOM = 3] = 'CUSTOM', a[a.CLIP = 4] = 'CLIP', a[a.LINK = 5] = 'LINK', a[a.FORWARD = 6] = 'FORWARD', (o = i || (i = {}))[o.TOP = 0] = 'TOP', o[o.BOTTOM = 1] = 'BOTTOM';
-let s = {
+(a = r || (r = {}))[a.MESSAGE = 0] = 'MESSAGE', a[a.SUCCESS = 1] = 'SUCCESS', a[a.FAILURE = 2] = 'FAILURE', a[a.CUSTOM = 3] = 'CUSTOM', a[a.CLIP = 4] = 'CLIP', a[a.LINK = 5] = 'LINK', a[a.FORWARD = 6] = 'FORWARD', (s = i || (i = {}))[s.TOP = 0] = 'TOP', s[s.BOTTOM = 1] = 'BOTTOM';
+let o = {
   position: 0,
   component: null,
   duration: 3000

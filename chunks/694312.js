@@ -31,7 +31,7 @@ _ = i.useMemo(() => null != p && Z.length > 0 && Z[0].id === p && null != Z[0].e
   Z,
   p
 ]),
-g = i.useMemo(() => n.map(e => {
+m = i.useMemo(() => n.map(e => {
   let t = Z.find(t => t.id === e.application_id);
   return null == t ? null : {
     activity: e,
@@ -43,7 +43,7 @@ g = i.useMemo(() => n.map(e => {
 ]);
   return i.useMemo(() => [
 ..._,
-...g
+...m
   ].filter(e => {
 var t;
 let {
@@ -57,7 +57,7 @@ let {
 return !n.requires_age_gate || (null == t ? void 0 : t.nsfwAllowed) === !0 || (null == t ? void 0 : t.nsfwAllowed) == null;
   }), [
 null == t ? void 0 : t.nsfwAllowed,
-g,
+m,
 _
   ]);
 }

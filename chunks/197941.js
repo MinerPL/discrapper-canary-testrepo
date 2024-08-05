@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250);
 n(470079);
-var s = n(243814),
-  a = n(481060),
+var a = n(243814),
+  s = n(481060),
   r = n(846027),
   l = n(872810),
   o = n(594190),
@@ -20,8 +20,8 @@ t.Z = {
   [p.Etm.TOGGLE_VIDEO]: {
 scope: {
   [g.Gp.ALL]: [
-    s.x.RPC,
-    s.x.RPC_VIDEO_WRITE
+    a.x.RPC,
+    a.x.RPC_VIDEO_WRITE
   ]
 },
 handler() {
@@ -33,8 +33,8 @@ handler() {
   [p.Etm.TOGGLE_SCREENSHARE]: {
 scope: {
   [g.Gp.ALL]: [
-    s.x.RPC,
-    s.x.RPC_SCREENSHARE_WRITE
+    a.x.RPC,
+    a.x.RPC_SCREENSHARE_WRITE
   ]
 },
 validation: e => (0, I.Z)(e).optional().keys({
@@ -45,15 +45,15 @@ handler(e) {
     args: {
       pid: t
     }
-  } = e, s = u.Z.getCurrentUserActiveStream(), r = u.Z.getStreamerActiveStreamMetadata(), d = (0, c.Z)(o.ZP, h.Z), _ = (0, m.Z)();
+  } = e, a = u.Z.getCurrentUserActiveStream(), r = u.Z.getStreamerActiveStreamMetadata(), d = (0, c.Z)(o.ZP, h.Z), _ = (0, m.Z)();
   if (null != _)
     null != t && null != r && r.pid !== t && (0, E.isWindows)() ? (0, l.WH)(_.guild_id, _.id, {
       pid: t
-    }) : null != s ? (0, l.L6)(!1) : null != t && (0, E.isWindows)() ? (0, l.WH)(_.guild_id, _.id, {
+    }) : null != a ? (0, l.L6)(!1) : null != t && (0, E.isWindows)() ? (0, l.WH)(_.guild_id, _.id, {
       pid: t
     }) : null != d ? (0, l.WH)(_.guild_id, _.id, {
       pid: d.pid
-    }) : (0, a.openModalLazy)(async () => {
+    }) : (0, s.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([

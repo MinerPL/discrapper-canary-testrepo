@@ -9,7 +9,7 @@ i = e.stateHandler.getState;
 throw Error('Missing required dependency: batchProcessor');
   if (!t)
 throw Error('Missing required dependency: reporter.');
-  var o = function() {
+  var s = function() {
   var e = document.createElement('div');
   e.style.cssText = u([
     'position: absolute',
@@ -39,23 +39,23 @@ throw Error('Missing required dependency: reporter.');
     height: r
   };
 }(),
-s = 'erd_scroll_detection_container';
+o = 'erd_scroll_detection_container';
 
   function l(e) {
 (function(e, t, n) {
   if (!e.getElementById(t)) {
-    var r, i, a, o = n + '_animation',
-      s = '/* Created by the element-resize-detector library. */\n';
-    s += '.' + n + ' > div::-webkit-scrollbar { ' + u(['display: none']) + ' }\n\n' + ('.' + n + '_animation_active { ' + u([
+    var r, i, a, s = n + '_animation',
+      o = '/* Created by the element-resize-detector library. */\n';
+    o += '.' + n + ' > div::-webkit-scrollbar { ' + u(['display: none']) + ' }\n\n' + ('.' + n + '_animation_active { ' + u([
       '-webkit-animation-duration: 0.1s',
       'animation-duration: 0.1s',
-      '-webkit-animation-name: ' + o,
-      'animation-name: ' + o
-    ]) + ' }\n') + ('@-webkit-keyframes ' + o + ' { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }\n') + ('@keyframes ' + o + ' { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }'), r = s, i = i || function(t) {
+      '-webkit-animation-name: ' + s,
+      'animation-name: ' + s
+    ]) + ' }\n') + ('@-webkit-keyframes ' + s + ' { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }\n') + ('@keyframes ' + s + ' { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }'), r = o, i = i || function(t) {
       e.head.appendChild(t);
     }, (a = e.createElement('style')).innerHTML = r, a.id = t, i(a);
   }
-}(e, 'erd_scroll_detection_scrollbar_style', s));
+}(e, 'erd_scroll_detection_scrollbar_style', o));
   }
 
   function u(t) {
@@ -132,11 +132,11 @@ makeDetectable: function(e, l, d) {
   }
 
   function A() {
-    return 2 * o.width + 1;
+    return 2 * s.width + 1;
   }
 
   function N() {
-    return 2 * o.height + 1;
+    return 2 * s.height + 1;
   }
 
   function v(e) {
@@ -151,16 +151,16 @@ makeDetectable: function(e, l, d) {
     var r = _(e),
       i = E(e),
       a = t + 10 + A(),
-      o = n + 10 + N(),
-      s = 2 * t + A(),
+      s = n + 10 + N(),
+      o = 2 * t + A(),
       l = 2 * n + N();
-    r.scrollLeft = a, r.scrollTop = o, i.scrollLeft = s, i.scrollTop = l;
+    r.scrollLeft = a, r.scrollTop = s, i.scrollLeft = o, i.scrollTop = l;
   }
 
   function C() {
     var e = i(l).container;
     if (!e) {
-      (e = document.createElement('div')).className = s, e.style.cssText = u([
+      (e = document.createElement('div')).className = o, e.style.cssText = u([
         'visibility: hidden',
         'display: inline',
         'width: 0px',
@@ -169,7 +169,7 @@ makeDetectable: function(e, l, d) {
         'overflow: hidden',
         'margin: 0',
         'padding: 0'
-      ]), i(l).container = e, t = e, t.className += ' ' + s + '_animation_active', l.appendChild(e);
+      ]), i(l).container = e, t = e, t.className += ' ' + o + '_animation_active', l.appendChild(e);
       var t, n = function() {
         i(l).onRendered && i(l).onRendered();
       };
@@ -196,8 +196,8 @@ makeDetectable: function(e, l, d) {
     }();
     var n, r, a, d, _ = i(l).container;
     !_ && (_ = C());
-    var E = o.width,
-      f = o.height,
+    var E = s.width,
+      f = s.height,
       h = u([
         'position: absolute',
         'flex: none',
@@ -265,22 +265,22 @@ makeDetectable: function(e, l, d) {
       var e = i(l);
       e && e.onShrink ? e.onShrink() : m('Aborting shrink scroll handler: element has been uninstalled');
     }
-    A.dir = 'ltr', A.style.cssText = h, A.className = s, N.className = s, N.style.cssText = p, v.style.cssText = I, O.style.cssText = g, R.style.cssText = T, y.style.cssText = S, v.appendChild(O), R.appendChild(y), N.appendChild(v), N.appendChild(R), A.appendChild(N), _.appendChild(A), c(v, 'scroll', D), c(R, 'scroll', L), i(l).onExpandScroll = D, i(l).onShrinkScroll = L;
+    A.dir = 'ltr', A.style.cssText = h, A.className = o, N.className = o, N.style.cssText = p, v.style.cssText = I, O.style.cssText = g, R.style.cssText = T, y.style.cssText = S, v.appendChild(O), R.appendChild(y), N.appendChild(v), N.appendChild(R), A.appendChild(N), _.appendChild(A), c(v, 'scroll', D), c(R, 'scroll', L), i(l).onExpandScroll = D, i(l).onShrinkScroll = L;
   }
 
   function D() {
-    function o(t, n, r) {
+    function s(t, n, r) {
       var i = _(t).childNodes[0],
         a = n + 10 + A(),
-        o = r + 10 + N();
-      i.style.setProperty('width', a + 'px', e.important ? 'important' : ''), i.style.setProperty('height', o + 'px', e.important ? 'important' : '');
+        s = r + 10 + N();
+      i.style.setProperty('width', a + 'px', e.important ? 'important' : ''), i.style.setProperty('height', s + 'px', e.important ? 'important' : '');
     }
 
-    function s(r) {
-      var s = l.offsetWidth,
+    function o(r) {
+      var o = l.offsetWidth,
         c = l.offsetHeight,
-        d = s !== i(l).lastWidth || c !== i(l).lastHeight;
-      m('Storing current size', s, c), S(l, s, c), n.add(0, function() {
+        d = o !== i(l).lastWidth || c !== i(l).lastHeight;
+      m('Storing current size', o, c), S(l, o, c), n.add(0, function() {
         if (!!d) {
           if (!i(l)) {
             m('Aborting because element has been uninstalled');
@@ -293,9 +293,9 @@ makeDetectable: function(e, l, d) {
           if (e.debug) {
             var n = l.offsetWidth,
               r = l.offsetHeight;
-            (n !== s || r !== c) && t.warn(a.get(l), 'Scroll: Size changed before updating detector elements.');
+            (n !== o || r !== c) && t.warn(a.get(l), 'Scroll: Size changed before updating detector elements.');
           }
-          o(l, s, c);
+          s(l, o, c);
         }
       }), n.add(1, function() {
         if (!i(l)) {
@@ -306,7 +306,7 @@ makeDetectable: function(e, l, d) {
           m('Aborting because element container has not been initialized');
           return;
         }
-        R(l, s, c);
+        R(l, o, c);
       }), d && r && n.add(2, function() {
         if (!i(l)) {
           m('Aborting because element has been uninstalled');
@@ -337,7 +337,7 @@ makeDetectable: function(e, l, d) {
         m('Scroll event fired while unrendered. Ignoring...');
         return;
       }
-      s(c);
+      o(c);
     }
     if (m('registerListenersAndPositionElements invoked.'), !i(l)) {
       m('Aborting because element has been uninstalled');
@@ -351,10 +351,10 @@ makeDetectable: function(e, l, d) {
       m('Element rendered.');
       var e = _(l),
         t = E(l);
-      (0 === e.scrollLeft || 0 === e.scrollTop || 0 === t.scrollLeft || 0 === t.scrollTop) && (m('Scrollbars out of sync. Updating detector elements...'), s(c));
+      (0 === e.scrollLeft || 0 === e.scrollTop || 0 === t.scrollLeft || 0 === t.scrollTop) && (m('Scrollbars out of sync. Updating detector elements...'), o(c));
     }, i(l).onExpand = d, i(l).onShrink = d;
     var f = i(l).style;
-    o(l, f.width, f.height);
+    s(l, f.width, f.height);
   }
 
   function L() {

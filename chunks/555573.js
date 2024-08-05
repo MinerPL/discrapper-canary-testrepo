@@ -21,8 +21,8 @@ return h;
 var r = n(512722),
   i = n.n(r),
   a = n(544891),
-  o = n(570140),
-  s = n(911969),
+  s = n(570140),
+  o = n(911969),
   l = n(314897),
   u = n(709054),
   c = n(174212),
@@ -35,7 +35,7 @@ channelId: t,
 command: n,
 section: r,
 location: a,
-initialValues: s,
+initialValues: o,
 triggerSection: l,
 queryLength: u,
 sectionName: c,
@@ -44,12 +44,12 @@ searchResultsPosition: E,
 source: f,
 commandOrigin: h
   } = e;
-  null != n && i()(n.inputType !== d.iw.PLACEHOLDER, 'command should not be placeholder'), o.Z.dispatch({
+  null != n && i()(n.inputType !== d.iw.PLACEHOLDER, 'command should not be placeholder'), s.Z.dispatch({
 type: 'APPLICATION_COMMAND_SET_ACTIVE_COMMAND',
 channelId: t,
 command: n,
 section: r,
-initialValues: s,
+initialValues: o,
 location: a,
 triggerSection: l,
 queryLength: u,
@@ -62,7 +62,7 @@ commandOrigin: h
 }
 
 function f(e, t) {
-  o.Z.dispatch({
+  s.Z.dispatch({
 type: 'APPLICATION_COMMAND_SET_PREFERRED_COMMAND',
 channelId: e,
 commandId: t
@@ -70,7 +70,7 @@ commandId: t
 }
 
 function h(e, t) {
-  o.Z.dispatch({
+  s.Z.dispatch({
 type: 'APPLICATION_COMMAND_UPDATE_OPTIONS',
 channelId: e,
 changedOptionStates: t
@@ -105,7 +105,7 @@ function I(e, t, n) {
 query: d,
 name: E
   } = t.autocomplete, f = u.default.fromTimestamp(Date.now());
-  if (o.Z.dispatch({
+  if (s.Z.dispatch({
   type: 'APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST',
   nonce: f,
   channelId: t.channel.id,
@@ -115,7 +115,7 @@ name: E
 a.tn.post({
   url: _.ANM.INTERACTIONS,
   body: {
-    type: s.B8.APPLICATION_COMMAND_AUTOCOMPLETE,
+    type: o.B8.APPLICATION_COMMAND_AUTOCOMPLETE,
     application_id: e.applicationId,
     guild_id: null === (r = t.guild) || void 0 === r ? void 0 : r.id,
     channel_id: t.channel.id,
@@ -125,7 +125,7 @@ a.tn.post({
   },
   timeout: 3000
 }).catch(() => {
-  o.Z.dispatch({
+  s.Z.dispatch({
     type: 'INTERACTION_FAILURE',
     nonce: f
   });

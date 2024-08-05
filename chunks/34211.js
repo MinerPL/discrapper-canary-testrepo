@@ -1,6 +1,6 @@
 a.d(t, {
   o: function() {
-return m;
+return p;
   }
 }), a(47120);
 var n, i = a(735250),
@@ -19,8 +19,8 @@ configurable: !0,
 writable: !0
   }) : e[t] = a, e;
 }
-let p = c.j_.MAIN_NAVIGATION_MENU,
-  h = (e, t) => [{
+let h = c.j_.MAIN_NAVIGATION_MENU,
+  m = (e, t) => [{
   route: c.am.DOWNLOAD,
   linkClicked: 'download',
   title: t.DOWNLOAD
@@ -114,7 +114,7 @@ let p = c.j_.MAIN_NAVIGATION_MENU,
   ]
 }
   ];
-class m extends(n = r.PureComponent) {
+class p extends(n = r.PureComponent) {
   render() {
 let e = (0, l.fQ)(this.context.router),
   {
@@ -123,19 +123,19 @@ let e = (0, l.fQ)(this.context.router),
     styles: n,
     NavigationMessages: r,
     TrackClick: u,
-    avoidRouter: m
+    avoidRouter: p
   } = this.props,
   {
     sectionShown: N
   } = this.state;
-return h(null != d.Z ? d.Z.getLocale().toLowerCase() : '', r).map(r => {
+return m(null != d.Z ? d.Z.getLocale().toLowerCase() : '', r).map(r => {
   if (null != r.links)
     return (0, i.jsx)(s.Z, {
       title: r.title,
       links: r.links,
       isOpen: N === r.title,
       isMobile: t,
-      avoidRouter: m,
+      avoidRouter: p,
       TrackClick: u,
       onClose: this.closeSubNav,
       onOpen: this.openSubNav
@@ -146,7 +146,7 @@ return h(null != d.Z ? d.Z.getLocale().toLowerCase() : '', r).map(r => {
       role: 'none',
       children: (0, i.jsx)(u, {
         className: n.mainNavLink,
-        eventName: p,
+        eventName: h,
         data: r.linkClicked ? {
           linkClicked: r.linkClicked
         } : {},
@@ -160,7 +160,7 @@ return h(null != d.Z ? d.Z.getLocale().toLowerCase() : '', r).map(r => {
       className: e(r.route) ? n.listItemActive : n.listItemInactive,
       role: 'none',
       children: (0, i.jsx)(o.Z, {
-        avoidRouter: m,
+        avoidRouter: p,
         to: r.route,
         from: c.j_.MAIN_NAVIGATION_MENU,
         tabIndex: a ? 0 : -1,
@@ -168,7 +168,7 @@ return h(null != d.Z ? d.Z.getLocale().toLowerCase() : '', r).map(r => {
         children: (0, i.jsx)(u, {
           tag: 'span',
           className: n.mainNavLink,
-          eventName: p,
+          eventName: h,
           data: {
             linkClicked: r.linkClicked
           },
@@ -199,7 +199,7 @@ super(...e), u(this, 'state', {
 });
   }
 }
-u(m, 'defaultProps', {
+u(p, 'defaultProps', {
   isMobile: !1,
   isVisible: !0
 });

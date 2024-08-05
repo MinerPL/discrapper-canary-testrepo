@@ -1,10 +1,10 @@
 n(47120);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140);
 let u = new Map(),
   c = new Set(),
   d = new Set();
-class _ extends(r = s.ZP.Store) {
+class _ extends(r = o.ZP.Store) {
   canFetch(e) {
 return !c.has(e) && !d.has(e) && !u.has(e);
   }
@@ -28,12 +28,12 @@ let r = null === (n = u.get(e)) || void 0 === n ? void 0 : n.coverImageUrl;
 return null == r ? null : null == t ? r : ''.concat(r, '?width=').concat(t.width, '&height=').concat(t.height);
   }
 }
-o = 'DetectableGameSupplementalStore', (a = 'displayName') in(i = _) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'DetectableGameSupplementalStore', (a = 'displayName') in(i = _) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new _(l.Z, {
+}) : i[a] = s, t.Z = new _(l.Z, {
   CONNECTION_OPEN: function() {
 u = new Map(), c = new Set(), d = new Set();
   },
@@ -59,8 +59,8 @@ t.forEach(e => {
     summary: r,
     websites: i,
     themes: a,
-    genres: o,
-    platforms: s,
+    genres: s,
+    platforms: o,
     artwork_urls: l,
     screenshot_urls: c,
     cover_image_url: d,
@@ -74,8 +74,8 @@ t.forEach(e => {
     summary: r,
     websites: i,
     themes: a,
-    genres: o,
-    platforms: s,
+    genres: s,
+    platforms: o,
     artwork: l,
     screenshots: c,
     coverImageUrl: d,

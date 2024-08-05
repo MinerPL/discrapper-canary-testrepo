@@ -19,8 +19,8 @@ var n, a, i = s(735250),
   C = s(78839),
   m = s(285952),
   A = s(74538),
-  h = s(689938),
-  g = s(507937);
+  g = s(689938),
+  h = s(507937);
 async function O(e, t, s, n) {
   await (0, u.bG)(s), await (0, E.Mg)(e, {
 items: (0, A.MY)(e, t)
@@ -43,7 +43,7 @@ children: [
     children: [
       (0, i.jsx)(_.FormTitle, {
         tag: _.FormTitleTags.H4,
-        children: h.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_TITLE
+        children: g.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_TITLE
       }),
       (0, i.jsx)(_.ModalCloseButton, {
         onClick: a
@@ -51,8 +51,8 @@ children: [
     ]
   }),
   (0, i.jsx)(_.ModalContent, {
-    className: g.body,
-    children: h.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_DESCRIPTION
+    className: h.body,
+    children: g.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_DESCRIPTION
   }),
   (0, i.jsxs)(_.ModalFooter, {
     justify: m.Z.Justify.START,
@@ -68,14 +68,14 @@ children: [
           }
         },
         submitting: o,
-        children: h.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_BUTTON
+        children: g.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_BUTTON
       }),
       (0, i.jsx)(_.Button, {
         look: _.Button.Looks.LINK,
         color: (0, d.ap)(u) ? _.Button.Colors.PRIMARY : _.Button.Colors.WHITE,
         onClick: a,
         disabled: o,
-        children: h.Z.Messages.NEVERMIND
+        children: g.Z.Messages.NEVERMIND
       })
     ]
   })
@@ -94,7 +94,7 @@ children: [
     children: [
       (0, i.jsx)(_.FormTitle, {
         tag: _.FormTitleTags.H4,
-        children: h.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_CONFIRM_TITLE
+        children: g.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_CONFIRM_TITLE
       }),
       (0, i.jsx)(_.ModalCloseButton, {
         onClick: t
@@ -102,20 +102,20 @@ children: [
     ]
   }),
   (0, i.jsxs)(_.ModalContent, {
-    className: g.body,
+    className: h.body,
     children: [
       (0, i.jsx)('div', {
-        className: g.uncancelImage
+        className: h.uncancelImage
       }),
       (0, i.jsx)('div', {
-        children: h.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_CONFIRM_DESCRIPTION
+        children: g.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_CONFIRM_DESCRIPTION
       })
     ]
   }),
   (0, i.jsx)(_.ModalFooter, {
     children: (0, i.jsx)(_.Button, {
       onClick: t,
-      children: h.Z.Messages.OKAY
+      children: g.Z.Messages.OKAY
     })
   })
 ]

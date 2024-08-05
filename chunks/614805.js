@@ -1,8 +1,8 @@
 var r, i = n(531478).codes,
   a = i.ERR_MISSING_ARGS,
-  o = i.ERR_STREAM_DESTROYED;
+  s = i.ERR_STREAM_DESTROYED;
 
-function s(e) {
+function o(e) {
   if (e)
 throw e;
 }
@@ -17,19 +17,19 @@ function u(e, t) {
 e.exports = function() {
   for (var e, t, i = arguments.length, c = Array(i), d = 0; d < i; d++)
 c[d] = arguments[d];
-  var _ = (e = c).length && 'function' == typeof e[e.length - 1] ? e.pop() : s;
+  var _ = (e = c).length && 'function' == typeof e[e.length - 1] ? e.pop() : o;
   if (Array.isArray(c[0]) && (c = c[0]), c.length < 2)
 throw new a('streams');
   var E = c.map(function(e, i) {
-var a, s, u, d, f, h, p, m, I = i < c.length - 1;
-return a = e, s = I, u = i > 0, f = d = function(e) {
+var a, o, u, d, f, h, p, m, I = i < c.length - 1;
+return a = e, o = I, u = i > 0, f = d = function(e) {
     !t && (t = e), e && E.forEach(l), !I && (E.forEach(l), _(t));
   }, h = !1, d = function() {
     !h && (h = !0, f.apply(void 0, arguments));
   }, p = !1, a.on('close', function() {
     p = !0;
   }), void 0 === r && (r = n(133495)), r(a, {
-    readable: s,
+    readable: o,
     writable: u
   }, function(e) {
     if (e)
@@ -44,7 +44,7 @@ return a = e, s = I, u = i > 0, f = d = function(e) {
           return a.abort();
         if ('function' == typeof a.destroy)
           return a.destroy();
-        d(e || new o('pipe'));
+        d(e || new s('pipe'));
       }
     }
   };

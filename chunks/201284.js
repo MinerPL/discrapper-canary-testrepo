@@ -1,6 +1,6 @@
 n.d(t, {
   PS: function() {
-return o;
+return s;
   },
   Q3: function() {
 return u;
@@ -31,12 +31,12 @@ valid: !0
 customError: !0,
 valid: !1
   },
-  o = {
+  s = {
 isInvalid: !1,
 validationDetails: i,
 validationErrors: []
   },
-  s = (0, r.createContext)({}),
+  o = (0, r.createContext)({}),
   l = '__formValidationState' + Date.now();
 
 function u(e) {
@@ -84,7 +84,7 @@ let h = t ? {
     l
   ]);
 (null == u ? void 0 : u.validationDetails.valid) && (u = null);
-let m = (0, r.useContext)(s),
+let m = (0, r.useContext)(o),
   I = (0, r.useMemo)(() => i ? Array.isArray(i) ? i.flatMap(e => c(m[e])) : c(m[i]) : [], [
     m,
     i
@@ -96,9 +96,9 @@ let N = (0, r.useMemo)(() => d(S ? [] : I), [
     S,
     I
   ]),
-  v = (0, r.useRef)(o),
-  [O, R] = (0, r.useState)(o),
-  C = (0, r.useRef)(o),
+  v = (0, r.useRef)(s),
+  [O, R] = (0, r.useState)(s),
+  C = (0, r.useRef)(s),
   [y, D] = (0, r.useState)(!1);
 return (0, r.useEffect)(() => {
   if (!y)
@@ -107,13 +107,13 @@ return (0, r.useEffect)(() => {
   let e = p || u || v.current;
   !_(e, C.current) && (C.current = e, R(e));
 }), {
-  realtimeValidation: h || N || p || u || o,
+  realtimeValidation: h || N || p || u || s,
   displayValidation: 'native' === f ? h || N || O : h || N || p || u || O,
   updateValidation(e) {
     'aria' !== f || _(O, e) ? v.current = e : R(e);
   },
   resetValidation() {
-    !_(o, C.current) && (C.current = o, R(o)), 'native' === f && D(!1), A(!0);
+    !_(s, C.current) && (C.current = s, R(s)), 'native' === f && D(!1), A(!0);
   },
   commitValidation() {
     'native' === f && D(!0), A(!0);

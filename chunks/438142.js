@@ -15,8 +15,8 @@ var E, s, c, I, R, T, u, l, A, N, d, O, S, p, D, f, L = r(876122),
   m = r(529866),
   y = r(862315),
   b = r(793884),
-  v = r(336344),
-  B = r(868145),
+  B = r(336344),
+  v = r(868145),
   w = r(50074),
   H = r(635602),
   Y = r(444675);
@@ -1047,9 +1047,9 @@ try {
   throw t;
 }
   },
-  tv = [];
+  tB = [];
 
-function tB(t) {
+function tv(t) {
   try {
 if ('composedPath' in t) {
   let e = t.composedPath();
@@ -1064,7 +1064,7 @@ if ('composedPath' in t) {
 function tw(t, e) {
   var r, n;
   let _ = new tU();
-  tv.push(_), _.init(t);
+  tB.push(_), _.init(t);
   let a = window.MutationObserver || window.__rrMutationObserver,
 i = null === (n = null === (r = null == window ? void 0 : window.Zone) || void 0 === r ? void 0 : r.__symbol__) || void 0 === n ? void 0 : n.call(r, 'MutationObserver');
   i && window[i] && (a = window[i]);
@@ -1092,7 +1092,7 @@ function tH({
   sampling: i
 }) {
   let o = tA(i => {
-let o = tB(i);
+let o = tv(i);
 if (!o || tp(o, n, _, a))
   return;
 let E = r.getId(o);
@@ -1197,7 +1197,7 @@ _ = function({
       tb(t)(o.map(t => (t.timeOffset -= r, t)), e), o = [], _ = null;
     }, i),
     s = tA(t => {
-      let e = tB(t),
+      let e = tv(t),
         {
           clientX: r,
           clientY: a
@@ -1234,7 +1234,7 @@ a = function({
   let o = !0 === i.mouseInteraction || void 0 === i.mouseInteraction ? {} : i.mouseInteraction,
     E = [],
     s = e => i => {
-      let o = tB(i);
+      let o = tv(i);
       if (tp(o, n, _, a))
         return;
       let E = tf(i) ? i.changedTouches[0] : i;
@@ -1293,7 +1293,7 @@ E = function({
   userTriggeredOnInput: T
 }) {
   function u(t) {
-    let r = tB(t),
+    let r = tv(t),
       R = r && r.tagName,
       u = t.isTrusted;
     if ('OPTION' === R && (r = r.parentElement), !r || !R || 0 > tK.indexOf(R) || tp(r, n, _, a))
@@ -1417,7 +1417,7 @@ s = function({
   sampling: a
 }) {
   let i = i => tA(tb(a => {
-      let o = tB(a);
+      let o = tv(a);
       if (!o || tp(o, e, r, n))
         return;
       let {
@@ -1597,7 +1597,7 @@ T = [];
   for (let e of t.plugins)
 T.push(e.observer(e.callback, r, e.options));
   return tb(() => {
-tv.forEach(t => t.reset()), n.disconnect(), _(), a(), i(), o(), E(), s();
+tB.forEach(t => t.reset()), n.disconnect(), _(), a(), i(), o(), E(), s();
 try {
   c(), I();
 } catch (t) {}
@@ -1993,8 +1993,8 @@ userTriggeredOnInput: G = !1,
 collectFonts: m = !1,
 inlineImages: y = !1,
 plugins: b,
-keepIframeSrcFn: v = () => !1,
-onMutation: B
+keepIframeSrcFn: B = () => !1,
+onMutation: v
   } = t;
   if (!r)
 throw Error('emit function is required');
@@ -2049,7 +2049,7 @@ K = t => {
 };
   a = (t, a) => {
 var o;
-if ((null === (o = tv[0]) || void 0 === o ? void 0 : o.isFrozen()) && t.type !== N.FullSnapshot && !(t.type === N.IncrementalSnapshot && t.data.source === d.Mutation) && tv.forEach(t => t.unfreeze()), r(K(t), a), t.type === N.FullSnapshot)
+if ((null === (o = tB[0]) || void 0 === o ? void 0 : o.isFrozen()) && t.type !== N.FullSnapshot && !(t.type === N.IncrementalSnapshot && t.data.source === d.Mutation) && tB.forEach(t => t.unfreeze()), r(K(t), a), t.type === N.FullSnapshot)
   e = t, Y = 0;
 else if (t.type === N.IncrementalSnapshot) {
   if (t.data.source === d.Mutation && t.data.isAttachIframe)
@@ -2096,7 +2096,7 @@ X = new tj({
   mutationCb: k,
   scrollCb: V,
   bypassOptions: {
-    onMutation: B,
+    onMutation: v,
     blockClass: o,
     blockSelector: E,
     unblockSelector: s,
@@ -2128,7 +2128,7 @@ a(t6({
     width: tS(),
     height: tO()
   }
-}), t), tv.forEach(t => t.lock());
+}), t), tB.forEach(t => t.lock());
 let [i, c] = function(t, e) {
   let {
     blockClass: r = 'rr-block',
@@ -2233,7 +2233,7 @@ let [i, c] = function(t, e) {
   onIframeLoad: (t, e) => {
     F.attachIframe(t, e), X.observeAttachShadow(t);
   },
-  keepIframeSrcFn: v
+  keepIframeSrcFn: B
 });
 if (!i)
   return console.warn('Failed to snapshot the document');
@@ -2246,7 +2246,7 @@ t5.map = c, a(t6({
       top: void 0 !== window.pageYOffset ? window.pageYOffset : (null == document ? void 0 : document.documentElement.scrollTop) || (null === (_ = null === (n = null == document ? void 0 : document.body) || void 0 === n ? void 0 : n.parentElement) || void 0 === _ ? void 0 : _.scrollTop) || (null == document ? void 0 : document.body.scrollTop) || 0
     }
   }
-})), tv.forEach(t => t.unlock());
+})), tB.forEach(t => t.unlock());
   };
   try {
 let t = [];
@@ -2259,7 +2259,7 @@ t.push(tT('DOMContentLoaded', () => {
 let e = t => {
   var e;
   return tb(tx)({
-    onMutation: B,
+    onMutation: v,
     mutationCb: k,
     mousemoveCb: (t, e) => a(t6({
       type: N.IncrementalSnapshot,
@@ -2388,7 +2388,7 @@ data: {
 }
   }));
 }, t4.freezePage = () => {
-  tv.forEach(t => t.freeze());
+  tB.forEach(t => t.freeze());
 }, t4.takeFullSnapshot = t => {
   if (!i)
 throw Error('please take full snapshot after start recording');
@@ -3267,7 +3267,7 @@ data: (0, U.Jr)({
   };
 }
 
-function ev(t) {
+function eB(t) {
   return {
 headers: {},
 size: t,
@@ -3277,7 +3277,7 @@ _meta: {
   };
 }
 
-function eB(t, e, r) {
+function ev(t, e, r) {
   if (!e && 0 === Object.keys(t).length)
 return;
   if (!e)
@@ -3354,7 +3354,7 @@ if (r.origin !== new URL(e).origin)
 let n = r.href;
 return !t.endsWith('/') && n.endsWith('/') ? n.slice(0, -1) : n;
   }(t);
-  return (0, v.U0)(r, e);
+  return (0, B.U0)(r, e);
 }
 async function eK(t, e, r) {
   try {
@@ -3382,8 +3382,8 @@ networkRequestHeaders: e
 let _ = function(t, e) {
   return 1 === t.length && 'string' != typeof t[0] ? eX(t[0], e) : 2 === t.length ? eX(t[1], e) : {};
 }(r, e);
-return t ? eB(_, n, ey(eF(r))) : eB(_, n, void 0);
-  }(r, e.input, E) : ev(E);
+return t ? ev(_, n, ey(eF(r))) : ev(_, n, void 0);
+  }(r, e.input, E) : eB(E);
   return {
 startTimestamp: n,
 endTimestamp: _,
@@ -3400,21 +3400,21 @@ async function eV(t, {
   networkResponseHeaders: n
 }, _, a) {
   if (!t && void 0 !== a)
-return ev(a);
+return eB(a);
   let i = eW(_.headers, n);
   if (!e && void 0 !== a)
-return eB(i, a, void 0);
+return ev(i, a, void 0);
   try {
 let n = _.clone(),
   o = await ex(n),
   E = o && o.length && void 0 === a ? eG(o, r) : a;
 if (!t)
-  return ev(E);
+  return eB(E);
 if (e)
-  return eB(i, E, o);
-return eB(i, E, void 0);
+  return ev(i, E, o);
+return ev(i, E, void 0);
   } catch (t) {
-return eB(i, a, void 0);
+return ev(i, a, void 0);
   }
 }
 async function ex(t) {
@@ -3461,7 +3461,7 @@ let n = function(t, e, r) {
     if (!o)
       return null;
     if (!eY(o, r.networkDetailAllowUrls) || eY(o, r.networkDetailDenyUrls)) {
-      let t = ev(c);
+      let t = eB(c);
       return {
         startTimestamp: n,
         endTimestamp: _,
@@ -3469,7 +3469,7 @@ let n = function(t, e, r) {
         method: E,
         statusCode: s,
         request: t,
-        response: ev(I)
+        response: eB(I)
       };
     }
     let R = i[b.xU],
@@ -3481,7 +3481,7 @@ let n = function(t, e, r) {
           return t[r.toLowerCase()] = n, t;
         }, {}) : {};
       }(i), r.networkResponseHeaders),
-      l = eB(T, c, r.networkCaptureBodies ? ey(a) : void 0);
+      l = ev(T, c, r.networkCaptureBodies ? ey(a) : void 0);
     return {
       startTimestamp: n,
       endTimestamp: _,
@@ -3489,7 +3489,7 @@ let n = function(t, e, r) {
       method: E,
       statusCode: s,
       request: l,
-      response: eB(u, I, r.networkCaptureBodies ? e.xhr.responseText : void 0)
+      response: ev(u, I, r.networkCaptureBodies ? e.xhr.responseText : void 0)
     };
   }(t, e, r),
   _ = eb('resource.xhr', n);
@@ -3694,7 +3694,7 @@ function eQ(t) {
 }
 
 function e0(t) {
-  return ((B.Z1 || K.performance.timeOrigin) + t) / 1000;
+  return ((v.Z1 || K.performance.timeOrigin) + t) / 1000;
 }
 async function e1({
   client: t,

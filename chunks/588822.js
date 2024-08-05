@@ -6,8 +6,8 @@ return E;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  o = n(481060),
   l = n(40966),
   u = n(580552),
   c = n(240991),
@@ -29,8 +29,8 @@ m,
 t
   ]);
   return null == I ? null : (0, r.jsx)('div', {
-className: o()(n, _.markup),
-children: (0, r.jsx)(s.Text, {
+className: s()(n, _.markup),
+children: (0, r.jsx)(o.Text, {
   variant: 'text-sm/normal',
   lineClamp: h ? f : void 0,
   color: void 0 !== p ? p : void 0,

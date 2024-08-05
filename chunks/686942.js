@@ -21,7 +21,7 @@ return h;
 return a;
   },
   kJ: function() {
-return s;
+return o;
   },
   q9: function() {
 return m;
@@ -39,7 +39,7 @@ return u;
 return l;
   },
   xs: function() {
-return o;
+return s;
   }
 });
 var r = n(713267),
@@ -49,10 +49,10 @@ return null != e;
   a = function(e) {
 return 'number' == typeof e;
   },
-  o = function(e) {
+  s = function(e) {
 return 'string' == typeof e && r.Z.includes(e);
   },
-  s = Array.isArray,
+  o = Array.isArray,
   l = function(e, t) {
 void 0 === t && (t = e), 1 == arguments.length && (t = e, e = 0);
 for (var n = [], r = e; r < t; r++)
@@ -62,7 +62,7 @@ return n;
   u = function(e, t) {
 var n = 0,
   r = [];
-if (s(e))
+if (o(e))
   for (; n < t; n++)
     r[n] = [].concat(e);
 else
@@ -71,7 +71,7 @@ else
 return r;
   },
   c = function(e) {
-return s(e) ? e : [e];
+return o(e) ? e : [e];
   };
 
 function d(e, t, n) {

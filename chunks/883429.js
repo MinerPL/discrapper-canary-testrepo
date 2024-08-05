@@ -1,8 +1,8 @@
 var r = n(544891),
   i = n(570140),
   a = n(668781),
-  o = n(346479),
-  s = n(929991),
+  s = n(346479),
+  o = n(929991),
   l = n(480739),
   u = n(985518),
   c = n(228392),
@@ -53,7 +53,7 @@ let n = r.tn.del({
 });
 E(() => n, _.Z.Messages.FORUM_TAG_REMOVE_ERROR, _.Z.Messages.FORUM_POST_NON_MODERATED_TAG_REQUIRED);
   },
-  updateForumPostTags: async (e, t) => (await o.Z.unarchiveThreadIfNecessary(e), r.tn.patch({
+  updateForumPostTags: async (e, t) => (await s.Z.unarchiveThreadIfNecessary(e), r.tn.patch({
 url: d.ANM.CHANNEL(e),
 body: {
   applied_tags: t
@@ -67,14 +67,14 @@ i.Z.dispatch({
 });
   },
   markPostAsSeen(e, t, n) {
-(0, s.a8)((0, u.UP)(e), t, n);
+(0, o.a8)((0, u.UP)(e), t, n);
   },
   markPostAsUnseen(e, t, n) {
-(0, s.FL)((0, u.UP)(e), t, n);
+(0, o.FL)((0, u.UP)(e), t, n);
   },
   flushSeenItems(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.cs.IMMEDIATE_WITH_COOLDOWN;
-(0, s.rS)((0, u.UP)(e), t);
+(0, o.rS)((0, u.UP)(e), t);
   },
   async searchForumPosts(e, t, n, r) {
 i.Z.dispatch({
@@ -82,7 +82,7 @@ i.Z.dispatch({
   channelId: t
 });
 try {
-  let a = await o.Z.searchThreads(e, t, n, r);
+  let a = await s.Z.searchThreads(e, t, n, r);
   (0, c.Js)({
     guildId: e,
     channelId: t,

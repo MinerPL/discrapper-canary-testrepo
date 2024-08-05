@@ -60,8 +60,8 @@ return O;
 var r = n(570140),
   i = n(153867),
   a = n(626135),
-  o = n(607070),
-  s = n(981631),
+  s = n(607070),
+  o = n(981631),
   l = n(969943),
   u = n(611480);
 
@@ -90,7 +90,7 @@ zoom: e
 function E() {
   r.Z.dispatch({
 type: 'ACCESSIBILITY_KEYBOARD_MODE_ENABLE'
-  }), a.default.track(s.rMx.KEYBOARD_MODE_TOGGLED, {
+  }), a.default.track(o.rMx.KEYBOARD_MODE_TOGGLED, {
 enabled: !0
   });
 }
@@ -98,7 +98,7 @@ enabled: !0
 function f() {
   r.Z.dispatch({
 type: 'ACCESSIBILITY_KEYBOARD_MODE_DISABLE'
-  }), a.default.track(s.rMx.KEYBOARD_MODE_TOGGLED, {
+  }), a.default.track(o.rMx.KEYBOARD_MODE_TOGGLED, {
 enabled: !1
   });
 }
@@ -136,12 +136,12 @@ saturation: e
 }
 
 function g(e) {
-  let t = o.Z.useReducedMotion;
+  let t = s.Z.useReducedMotion;
   r.Z.dispatch({
 type: 'ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION',
 prefersReducedMotion: e
   });
-  let n = o.Z.useReducedMotion;
+  let n = s.Z.useReducedMotion;
   !t && n ? i.ZP.applySettingsOverride({
 gifAutoPlay: {
   value: !1,
@@ -191,7 +191,7 @@ function O(e) {
   r.Z.dispatch({
 type: 'ACCESSIBILITY_SET_ROLE_STYLE',
 roleStyle: e
-  }), a.default.track(s.rMx.ROLE_STYLE_SETTING_UPDATED, {
+  }), a.default.track(o.rMx.ROLE_STYLE_SETTING_UPDATED, {
 role_style: e
   });
 }

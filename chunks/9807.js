@@ -5,12 +5,12 @@ var n, i = s(735250),
   l = s.n(r),
   o = s(481060),
   h = s(33122),
-  d = s(524444),
-  u = s(731081),
-  c = s(529815),
-  p = s(250496),
-  m = s(261922),
-  g = s(133910),
+  d = s(446411),
+  u = s(468846),
+  c = s(453499),
+  p = s(124347),
+  m = s(80966),
+  g = s(524444),
   I = s(843445),
   C = s(981631),
   x = s(689938),
@@ -29,11 +29,11 @@ let {
   className: t,
   ...s
 } = e;
-return (0, i.jsx)(g.Z, {
+return (0, i.jsx)(m.Z, {
   ...s,
   className: l()(f.sizedToParent, t),
   mediaPlayerClassName: f.sizedToParent,
-  renderLinkComponent: d.iT
+  renderLinkComponent: g.iT
 });
   },
   b = e => {
@@ -42,7 +42,7 @@ let {
   className: s,
   ...n
 } = e;
-return (0, i.jsx)(m.Z, {
+return (0, i.jsx)(p.Z, {
   ...n,
   className: l()(s, t)
 });
@@ -61,9 +61,9 @@ let t, s, n, {
   onPlay: r,
   volume: l,
   onVolumeChange: o,
-  onMute: u,
-  isMuted: m,
-  autoPlay: g
+  onMute: c,
+  isMuted: p,
+  autoPlay: m
 } = e;
 if (a.type === C.s9s.YOUTUBE_VIDEO)
   t = {
@@ -72,7 +72,7 @@ if (a.type === C.s9s.YOUTUBE_VIDEO)
   }, s = {
     url: ''.concat((0, C.ivE)(a.youtubeVideoId), '?').concat('rel=0&iv_load_policy=3&showinfo=0&modestbranding=1'),
     ...S
-  }, n = p.pn.YOUTUBE;
+  }, n = u.pn.YOUTUBE;
 else {
   let e = null != a.width ? a.width : 0,
     n = null != a.height ? a.height : 0;
@@ -89,7 +89,7 @@ else {
 }
 return (0, i.jsx)('div', {
   className: f.embedContainer,
-  children: (0, i.jsx)(c.BC, {
+  children: (0, i.jsx)(d.BC, {
     className: f.sizedToParent,
     iframeWrapperClassName: f.sizedToParent,
     href: null,
@@ -102,12 +102,12 @@ return (0, i.jsx)('div', {
     playable: !0,
     volume: l,
     onVolumeChange: o,
-    autoMute: m,
-    onMute: u,
-    autoPlay: g,
+    autoMute: p,
+    onMute: c,
+    autoPlay: m,
     renderImageComponent: b,
     renderVideoComponent: v,
-    renderLinkComponent: d.iT
+    renderLinkComponent: g.iT
   })
 });
   };
@@ -138,7 +138,7 @@ let {
 } = this.props, {
   hasInteracted: r
 } = this.state;
-return (0, i.jsx)(u.Z, {
+return (0, i.jsx)(c.Z, {
   items: e.slice(0, 12),
   delay: t,
   initialPaused: n || r,

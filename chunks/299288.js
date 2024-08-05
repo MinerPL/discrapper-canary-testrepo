@@ -15,7 +15,7 @@ a = {
   begin: /->\{/,
   end: /\}/
 },
-o = {
+s = {
   variants: [{
       begin: /\$\d/
     },
@@ -28,10 +28,10 @@ o = {
     }
   ]
 },
-s = [
+o = [
   e.BACKSLASH_ESCAPE,
   i,
-  o
+  s
 ],
 l = [
   /!/,
@@ -48,7 +48,7 @@ u = (e, r, i = '\\1') => {
 },
 c = (e, r, i) => t.concat(t.concat('(?:', e, ')'), r, /(?:\\.|[^\\\/])*?/, i, n),
 d = [
-  o,
+  s,
   e.HASH_COMMENT_MODE,
   e.COMMENT(/^=\w/, /=cut/, {
     endsWithParent: !0
@@ -56,7 +56,7 @@ d = [
   a,
   {
     className: 'string',
-    contains: s,
+    contains: o,
     variants: [{
         begin: 'q[qwxr]?\\s*\\(',
         end: '\\)',

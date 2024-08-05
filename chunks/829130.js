@@ -373,11 +373,11 @@ a = function(e) {
     r = 'decltype\\(auto\\)',
     i = '[a-zA-Z_]\\w*::',
     a = '(?!struct)(' + r + '|' + t.optional(i) + '[a-zA-Z_]\\w*' + t.optional('<[^<>]+>') + ')',
-    o = {
+    s = {
       className: 'type',
       begin: '\\b[a-z\\d_]*_t\\b'
     },
-    s = {
+    o = {
       className: 'string',
       variants: [{
           begin: '(u8?|U|L)?"',
@@ -421,7 +421,7 @@ a = function(e) {
           begin: /\\\n/,
           relevance: 0
         },
-        e.inherit(s, {
+        e.inherit(o, {
           className: 'string'
         }),
         {
@@ -724,11 +724,11 @@ a = function(e) {
     f = [
       E,
       u,
-      o,
+      s,
       n,
       e.C_BLOCK_COMMENT_MODE,
       l,
-      s
+      o
     ],
     h = {
       variants: [{
@@ -781,7 +781,7 @@ a = function(e) {
           begin: /:/,
           endsWithParent: !0,
           contains: [
-            s,
+            o,
             l
           ]
         },
@@ -798,9 +798,9 @@ a = function(e) {
           contains: [
             n,
             e.C_BLOCK_COMMENT_MODE,
-            s,
-            l,
             o,
+            l,
+            s,
             {
               begin: /\(/,
               end: /\)/,
@@ -810,14 +810,14 @@ a = function(e) {
                 'self',
                 n,
                 e.C_BLOCK_COMMENT_MODE,
-                s,
+                o,
                 l,
-                o
+                s
               ]
             }
           ]
         },
-        o,
+        s,
         n,
         e.C_BLOCK_COMMENT_MODE,
         u
@@ -847,7 +847,7 @@ a = function(e) {
         keywords: _,
         contains: [
           'self',
-          o
+          s
         ]
       },
       {
@@ -868,15 +868,15 @@ a = function(e) {
     ])
   };
 }(e),
-o = a.keywords;
-  return o.type = [
-...o.type,
+s = a.keywords;
+  return s.type = [
+...s.type,
 ...t
-  ], o.literal = [
-...o.literal,
+  ], s.literal = [
+...s.literal,
 ...i
-  ], o.built_in = [
-...o.built_in,
+  ], s.built_in = [
+...s.built_in,
 ...n
-  ], o._hints = r, a.name = 'Arduino', a.aliases = ['ino'], a.supersetOf = 'cpp', a;
+  ], s._hints = r, a.name = 'Arduino', a.aliases = ['ino'], a.supersetOf = 'cpp', a;
 };

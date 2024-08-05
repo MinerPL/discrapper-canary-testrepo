@@ -174,10 +174,10 @@ class L {
 a(this, 'key', void 0), a(this, 'oldValue', void 0), a(this, 'newValue', void 0), a(this, 'subtarget', void 0), this.key = e, this.oldValue = _, this.newValue = E;
   }
 }
-class D extends I.Z {
+class S extends I.Z {
   constructor(e) {
 var _, E, s, I, n, t;
 super(), a(this, 'id', void 0), a(this, 'actionType', void 0), a(this, 'action', void 0), a(this, 'targetType', void 0), a(this, 'targetId', void 0), a(this, 'target', void 0), a(this, 'userId', void 0), a(this, 'changes', void 0), a(this, 'timestampStart', void 0), a(this, 'timestampEnd', void 0), a(this, 'user', void 0), a(this, 'options', void 0), this.id = e.id, this.action = e.action, this.actionType = N(this.action), this.targetId = e.targetId, this.timestampStart = null !== (_ = e.timestampStart) && void 0 !== _ ? _ : T()(A.default.extractTimestamp(this.id)), this.timestampEnd = null !== (E = e.timestampEnd) && void 0 !== E ? E : this.timestampStart, this.userId = e.userId, this.changes = null !== (s = e.changes) && void 0 !== s ? s : [], this.targetType = r(this.action), this.options = null !== (I = e.options) && void 0 !== I ? I : {}, this.target = null !== (n = e.target) && void 0 !== n ? n : e.id, this.user = null !== (t = e.user) && void 0 !== t ? t : null;
   }
 }
-_.ZP = D;
+_.ZP = S;

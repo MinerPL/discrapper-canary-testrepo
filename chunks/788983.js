@@ -6,13 +6,13 @@ return u;
 return a;
   },
   hP: function() {
-return o;
+return s;
   },
   hY: function() {
 return l;
   },
   xv: function() {
-return s;
+return o;
   }
 });
 var r = n(570140);
@@ -35,14 +35,14 @@ render: t
   });
 }
 
-function o(e) {
+function s(e) {
   return r.Z.dispatch({
 type: 'CHANNEL_CALL_POPOUT_WINDOW_OPEN',
 channel: e
   });
 }
 
-function s(e) {
+function o(e) {
   return r.Z.dispatch({
 type: 'POPOUT_WINDOW_CLOSE',
 key: e

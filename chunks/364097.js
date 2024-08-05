@@ -5,26 +5,26 @@ return E;
 });
 var i = n(735250);
 n(470079);
-var a = n(442837),
-  s = n(481060),
-  r = n(197409),
+var s = n(442837),
+  a = n(481060),
+  r = n(955415),
   l = n(846587),
   o = n(409059),
   c = n(58346),
-  d = n(689938),
-  u = n(775315),
+  u = n(689938),
+  d = n(775315),
   _ = n(182578);
 
 function E(e) {
   var t;
   let {
 code: E
-  } = e, I = (0, a.e7)([o.Z], () => o.Z.getGuildTemplate(E));
+  } = e, I = (0, s.e7)([o.Z], () => o.Z.getGuildTemplate(E));
   if (null == I || I.state === c.Rj.RESOLVING)
 return (0, i.jsxs)(r.Z, {
   children: [
     (0, i.jsx)(r.Z.Header, {
-      text: d.Z.Messages.GUILD_TEMPLATE_RESOLVING_TITLE
+      text: u.Z.Messages.GUILD_TEMPLATE_RESOLVING_TITLE
     }),
     (0, i.jsx)(r.Z.Body, {
       resolving: !0
@@ -35,7 +35,7 @@ return (0, i.jsxs)(r.Z, {
 return (0, i.jsxs)(r.Z, {
   children: [
     (0, i.jsx)(r.Z.Header, {
-      text: d.Z.Messages.GUILD_TEMPLATE_INVALID_TITLE
+      text: u.Z.Messages.GUILD_TEMPLATE_INVALID_TITLE
     }),
     (0, i.jsxs)(r.Z.Body, {
       children: [
@@ -44,7 +44,7 @@ return (0, i.jsxs)(r.Z, {
         }),
         (0, i.jsx)(r.Z.Info, {
           expired: !0,
-          title: d.Z.Messages.GUILD_TEMPLATE_INVALID_SUBTITLE
+          title: u.Z.Messages.GUILD_TEMPLATE_INVALID_SUBTITLE
         })
       ]
     })
@@ -53,10 +53,10 @@ return (0, i.jsxs)(r.Z, {
   let m = __OVERLAY__ ? (0, i.jsx)(r.Z.Button, {
 isDisabled: !0,
 color: r.Z.Button.Colors.PRIMARY,
-children: d.Z.Messages.GUILD_TEMPLATE_EMBED_VIEW_IN_APP
+children: u.Z.Messages.GUILD_TEMPLATE_EMBED_VIEW_IN_APP
   }) : (0, i.jsx)(r.Z.Button, {
 onClick: () => {
-  (0, s.openModalLazy)(async () => {
+  (0, a.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.all([
@@ -71,12 +71,12 @@ onClick: () => {
 },
 submitting: I.state === c.Rj.ACCEPTING,
 color: r.Z.Button.Colors.GREEN,
-children: d.Z.Messages.GUILD_TEMPLATE_OPEN
+children: u.Z.Messages.GUILD_TEMPLATE_OPEN
   });
   return (0, i.jsxs)(r.Z, {
 children: [
   (0, i.jsx)(r.Z.Header, {
-    text: d.Z.Messages.GUILD_TEMPLATE_RESOLVED_EMBED_TITLE
+    text: u.Z.Messages.GUILD_TEMPLATE_RESOLVED_EMBED_TITLE
   }),
   (0, i.jsxs)(r.Z.Body, {
     children: [
@@ -84,11 +84,11 @@ children: [
         className: _.headerLine,
         children: [
           (0, i.jsx)(l.Z, {
-            className: u.icon
+            className: d.icon
           }),
           (0, i.jsx)(r.Z.Info, {
             title: I.name,
-            children: d.Z.Messages.GUILD_TEMPLATE_USAGES.format({
+            children: u.Z.Messages.GUILD_TEMPLATE_USAGES.format({
               usageCount: String(null !== (t = I.usageCount) && void 0 !== t ? t : 0)
             })
           })

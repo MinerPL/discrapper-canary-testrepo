@@ -11,10 +11,10 @@ var s = n(735250),
   _ = n(841470),
   I = n(605236),
   E = n(142497),
-  T = n(706454),
-  m = n(650774),
-  N = n(430824),
-  S = n(499150),
+  T = n(690221),
+  m = n(706454),
+  N = n(650774),
+  S = n(430824),
   h = n(626135),
   g = n(771212),
   C = n(434404),
@@ -99,9 +99,9 @@ guildId: t
   } = e, {
 hasAccessRate: n,
 accessRate: i
-  } = (0, l.cj)([p.Z], () => p.Z.getMemberInsights(t)), r = (0, l.e7)([m.Z], () => {
+  } = (0, l.cj)([p.Z], () => p.Z.getMemberInsights(t)), r = (0, l.e7)([N.Z], () => {
 var e;
-return null !== (e = m.Z.getMemberCount()) && void 0 !== e ? e : 0;
+return null !== (e = N.Z.getMemberCount()) && void 0 !== e ? e : 0;
   }), {
 showAccessRate: o
   } = (0, g.eA)(t, !n);
@@ -113,35 +113,35 @@ showAccessRate: o
 return null;
   let _ = 10 * Math.ceil((1 - i) * 10),
 E = B,
-T = null,
-N = null;
-  return i >= 0.9 ? (E = B, T = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_VERY_GOOD.format({
+m = null,
+S = null;
+  return i >= 0.9 ? (E = B, m = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_VERY_GOOD.format({
 ratingHook: (e, t) => (0, s.jsx)('span', {
   className: M.ratingVeryGood,
   children: e
 }, t)
-  }), N = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_LESS.format({
+  }), S = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_LESS.format({
 accessRate: 10
-  })) : i >= (r > 10000 ? 0.7 : 0.8) ? (E = G, T = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_GOOD.format({
+  })) : i >= (r > 10000 ? 0.7 : 0.8) ? (E = G, m = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_GOOD.format({
 ratingHook: (e, t) => (0, s.jsx)('span', {
   className: M.ratingGood,
   children: e
 }, t)
-  }), N = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({
+  }), S = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({
 accessRate: _
-  })) : i >= 0.5 ? (E = P, T = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_NEUTRAL.format({
+  })) : i >= 0.5 ? (E = P, m = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_NEUTRAL.format({
 ratingHook: (e, t) => (0, s.jsx)('span', {
   className: M.ratingNeutral,
   children: e
 }, t)
-  }), N = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({
+  }), S = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({
 accessRate: _
-  })) : (E = U, T = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_BAD.format({
+  })) : (E = U, m = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_BAD.format({
 ratingHook: (e, t) => (0, s.jsx)('span', {
   className: M.ratingBad,
   children: e
 }, t)
-  }), N = 100 === _ ? A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({
+  }), S = 100 === _ ? A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({
 accessRate: _
   }) : A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_MORE.format({
 accessRate: _
@@ -175,13 +175,13 @@ children: [
               (0, s.jsx)(u.Text, {
                 variant: 'text-md/semibold',
                 className: M.title,
-                children: T
+                children: m
               }),
               (0, s.jsxs)(u.Text, {
                 className: M.description,
                 variant: 'text-sm/normal',
                 children: [
-                  N,
+                  S,
                   (0, s.jsx)(u.TooltipContainer, {
                     text: A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATE_TOOLTIP,
                     className: M.insightsTooltip,
@@ -258,7 +258,7 @@ children: [
                     className: M.actionText,
                     variant: 'text-sm/normal',
                     children: A.Z.Messages.ACCESS_RATE_ACTION_BOTS.format({
-                      integrationsHook: (e, t) => (0, s.jsx)(S.Z, {
+                      integrationsHook: (e, t) => (0, s.jsx)(T.Z, {
                         onClick: () => C.Z.setSection(f.pNK.INTEGRATIONS),
                         className: M.link,
                         children: e
@@ -302,7 +302,7 @@ children: [
               className: M.actionText,
               variant: 'text-sm/normal',
               children: A.Z.Messages.ACCESS_RATE_ACTION_SUCCESS.format({
-                insightsHook: (e, n) => (0, s.jsx)(S.Z, {
+                insightsHook: (e, n) => (0, s.jsx)(T.Z, {
                   onClick: () => w(t),
                   className: M.link,
                   children: e
@@ -327,9 +327,9 @@ children: [
 }
 t.Z = () => {
   let e = (0, l.e7)([R.Z], () => R.Z.getGuildId()),
-t = (0, l.e7)([m.Z], () => m.Z.getMemberCount(e)),
-n = (0, l.e7)([N.Z], () => N.Z.getGuild(e)),
-i = (0, l.e7)([T.default], () => T.default.locale),
+t = (0, l.e7)([N.Z], () => N.Z.getMemberCount(e)),
+n = (0, l.e7)([S.Z], () => S.Z.getGuild(e)),
+i = (0, l.e7)([m.default], () => m.default.locale),
 {
   analytics: r,
   errorCode: o

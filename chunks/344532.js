@@ -2,7 +2,7 @@ n(724458);
 var r, i = n(442837),
   a = n(570140);
 
-function o(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -10,12 +10,12 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let s = {},
+let o = {},
   l = null,
   u = null;
 
 function c(e, t) {
-  null == t ? e in s && delete s[e] : null != e && (s[e] = t);
+  null == t ? e in o && delete o[e] : null != e && (o[e] = t);
 }
 
 function d(e) {
@@ -26,11 +26,11 @@ user: t
 }
 class _ extends(r = i.ZP.PersistedStore) {
   initialize(e) {
-null != e && (s = e);
+null != e && (o = e);
   }
   requiredActions(e) {
 var t;
-return null !== (t = s[e]) && void 0 !== t ? t : null;
+return null !== (t = o[e]) && void 0 !== t ? t : null;
   }
   requiredActionsIncludes(e, t) {
 let n = this.requiredActions(e);
@@ -40,10 +40,10 @@ return null != n && t.reduce((e, t) => e || n.includes(t), !1);
 return l === e;
   }
   getState() {
-return s;
+return o;
   }
 }
-o(_, 'displayName', 'LoginRequiredActionStore'), o(_, 'persistKey', 'LoginRequiredActionStore'), t.Z = new _(a.Z, {
+s(_, 'displayName', 'LoginRequiredActionStore'), s(_, 'persistKey', 'LoginRequiredActionStore'), t.Z = new _(a.Z, {
   LOGIN_ATTEMPTED: function(e) {
 let {
   required_actions: t,

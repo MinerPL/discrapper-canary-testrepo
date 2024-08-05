@@ -9,8 +9,8 @@ return O;
 var r = n(735250),
   i = n(470079),
   a = n(442837),
-  o = n(481060),
-  s = n(555573),
+  s = n(481060),
+  o = n(555573),
   l = n(10718),
   u = n(895924),
   c = n(124072),
@@ -36,25 +36,25 @@ if (null == r)
   return;
 let {
   command: a,
-  application: o
+  application: s
 } = l.Xq(r, n);
 if (null != a && a.name === t) {
   var c, d;
   m.S.dispatch(I.CkL.FOCUS_CHANNEL_TEXT_AREA, {
     channelId: e
   });
-  let t = null != o ? {
+  let t = null != s ? {
     type: u.Qi.APPLICATION,
-    id: o.id,
-    icon: null !== (d = null == o ? void 0 : null === (c = o.bot) || void 0 === c ? void 0 : c.username) && void 0 !== d ? d : o.icon,
-    name: o.name,
-    application: o
+    id: s.id,
+    icon: null !== (d = null == s ? void 0 : null === (c = s.bot) || void 0 === c ? void 0 : c.username) && void 0 !== d ? d : s.icon,
+    name: s.name,
+    application: s
   } : null;
-  s.Po({
+  o.Po({
     channelId: e,
     command: null,
     section: null
-  }), s.Po({
+  }), o.Po({
     channelId: e,
     command: a,
     section: t,
@@ -62,19 +62,19 @@ if (null != a && a.name === t) {
   });
 }
   };
-  '' !== f.Z.getDraft(e, f.d.ChannelMessage) ? (0, o.openModal)(t => (0, r.jsx)(o.ConfirmModal, {
+  '' !== f.Z.getDraft(e, f.d.ChannelMessage) ? (0, s.openModal)(t => (0, r.jsx)(s.ConfirmModal, {
 header: S.Z.Messages.APPLICATION_COMMAND_MENTION_CONFIRM_HEADER,
 confirmText: S.Z.Messages.CLEAR,
 cancelText: S.Z.Messages.CANCEL,
 onConfirm: () => a(),
-confirmButtonColor: o.Button.Colors.BRAND,
+confirmButtonColor: s.Button.Colors.BRAND,
 onCloseCallback: () => {
   m.S.dispatch(I.CkL.FOCUS_CHANNEL_TEXT_AREA, {
     channelId: e
   });
 },
 ...t,
-children: (0, r.jsx)(o.Text, {
+children: (0, r.jsx)(s.Text, {
   variant: 'text-md/normal',
   children: S.Z.Messages.APPLICATION_COMMAND_MENTION_CONFIRM_BODY
 })
@@ -85,7 +85,7 @@ function v(e) {
   var t;
   let {
 node: n,
-output: s,
+output: o,
 state: f
   } = e, m = (0, a.e7)([
 E.Z,
@@ -126,7 +126,7 @@ m,
 n.commandKey,
 n.commandName
   ]);
-  return R ? (0, r.jsx)(o.Tooltip, {
+  return R ? (0, r.jsx)(s.Tooltip, {
 text: n.output,
 position: 'top',
 children: e => {
@@ -141,14 +141,14 @@ children: e => {
     onMouseLeave: i,
     children: [
       g.GI,
-      s(n.content, f)
+      o(n.content, f)
     ]
   }, f.key);
 }
   }, f.key) : (0, r.jsxs)('span', {
 children: [
   g.GI,
-  s(n.content, f)
+  o(n.content, f)
 ]
   });
 }
@@ -158,11 +158,11 @@ function O(e) {
 commandId: t,
 commandName: n,
 commandDescription: i,
-onClick: s
+onClick: o
   } = e, l = (0, a.e7)([p.Z], () => p.Z.getChannelId()), c = e => {
-null == e || e.stopPropagation(), N(l, n, t, u.Vh.POPULAR_COMMANDS), null == s || s(t);
+null == e || e.stopPropagation(), N(l, n, t, u.Vh.POPULAR_COMMANDS), null == o || o(t);
   };
-  return (0, r.jsx)(o.Tooltip, {
+  return (0, r.jsx)(s.Tooltip, {
 text: i,
 position: 'top',
 tooltipContentClassName: A.tooltip,
@@ -171,9 +171,9 @@ children: e => {
     onMouseEnter: t,
     onMouseLeave: i
   } = e;
-  return (0, r.jsxs)(o.Button, {
-    color: o.ButtonColors.PRIMARY,
-    size: o.ButtonSizes.ICON,
+  return (0, r.jsxs)(s.Button, {
+    color: s.ButtonColors.PRIMARY,
+    size: s.ButtonSizes.ICON,
     onClick: c,
     onMouseEnter: t,
     onMouseLeave: i,

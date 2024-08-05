@@ -1,7 +1,7 @@
 var r, i = n(442837),
   a = n(570140),
-  o = n(626135),
-  s = n(761274),
+  s = n(626135),
+  o = n(761274),
   l = n(981631);
 
 function u(e, t, n) {
@@ -24,17 +24,17 @@ return c;
   }
   hasPermission(e) {
 let t = c.permissionStates[e];
-return null != t && t === s.PQ.ACCEPTED;
+return null != t && t === o.PQ.ACCEPTED;
   }
   handleSetNativePermission(e) {
 let {
   state: t,
   permissionType: n
 } = e, r = c.permissionStates, i = r[n];
-r[n] = t, i !== t && o.default.track(l.rMx.PERMISSIONS_ACKED, {
+r[n] = t, i !== t && s.default.track(l.rMx.PERMISSIONS_ACKED, {
   type: n,
   action: t,
-  previous_action: null != i ? i : s.PQ.NONE
+  previous_action: null != i ? i : o.PQ.NONE
 });
   }
   constructor() {

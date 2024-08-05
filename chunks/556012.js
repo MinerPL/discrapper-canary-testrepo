@@ -9,8 +9,8 @@ var r = n(481060),
   E = n(699516),
   _ = n(594174),
   u = n(273504),
-  s = n(590433),
-  l = n(689938);
+  l = n(590433),
+  s = n(689938);
 let o = e => {
 if (e === u.jj.QUARANTINE_USER)
   return !1;
@@ -30,13 +30,13 @@ switch (e) {
   T = e => {
 switch (e) {
   case u.jj.BLOCK_MESSAGE:
-    return l.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_NAME;
+    return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_NAME;
   case u.jj.FLAG_TO_CHANNEL:
-    return l.Z.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_NAME;
+    return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_NAME;
   case u.jj.USER_COMMUNICATION_DISABLED:
-    return l.Z.Messages.GUILD_AUTOMOD_ACTIONS_DISABLE_GUILD_COMMUNICATION_FOR_USER;
+    return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_DISABLE_GUILD_COMMUNICATION_FOR_USER;
   case u.jj.QUARANTINE_USER:
-    return l.Z.Messages.GUILD_AUTOMOD_ACTIONS_QUARANTINE_USER;
+    return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_QUARANTINE_USER;
 }
   },
   O = function(e) {
@@ -45,18 +45,18 @@ switch (e) {
   case u.jj.BLOCK_MESSAGE:
     switch (t) {
       case u.fX.MENTION_SPAM:
-        return l.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_DESCRIPTION_MENTION_SPAM;
+        return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_DESCRIPTION_MENTION_SPAM;
       case u.fX.ML_SPAM:
-        return l.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_DESCRIPTION_ML_SPAM;
+        return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_DESCRIPTION_ML_SPAM;
       default:
-        return l.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_DESCRIPTION;
+        return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_DESCRIPTION;
     }
   case u.jj.FLAG_TO_CHANNEL:
-    return l.Z.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_DESCRIPTION;
+    return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_DESCRIPTION;
   case u.jj.USER_COMMUNICATION_DISABLED:
-    return l.Z.Messages.GUILD_AUTOMOD_ACTIONS_DISABLE_GUILD_COMMUNICATION_FOR_USER_DESCRIPTION;
+    return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_DISABLE_GUILD_COMMUNICATION_FOR_USER_DESCRIPTION;
   case u.jj.QUARANTINE_USER:
-    return l.Z.Messages.GUILD_AUTOMOD_ACTIONS_QUARANTINE_USER_DESCRIPTION;
+    return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_QUARANTINE_USER_DESCRIPTION;
 }
   },
   A = (e, t) => {
@@ -73,16 +73,16 @@ switch (e) {
     if (null == r)
       return null;
     let u = (0, a.F6)(r, _.default, E.Z);
-    return l.Z.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_DISPLAY_HELPER.format({
+    return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_DISPLAY_HELPER.format({
       channelName: u
     });
   }
   case u.jj.USER_COMMUNICATION_DISABLED: {
     let e = null !== (o = null == t ? void 0 : null === (r = t.metadata) || void 0 === r ? void 0 : r.durationSeconds) && void 0 !== o ? o : 0,
-      n = (0, s.L9)(e);
+      n = (0, l.L9)(e);
     if (null == n)
       return null;
-    return l.Z.Messages.GUILD_AUTOMOD_ACTIONS_USER_DISABLE_COMMUNICATION_DISPLAY_HELPER.format({
+    return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_USER_DISABLE_COMMUNICATION_DISPLAY_HELPER.format({
       duration: n
     });
   }

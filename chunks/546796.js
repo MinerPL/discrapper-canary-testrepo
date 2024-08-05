@@ -5,13 +5,13 @@ return c;
   }
 }), n(411104);
 var a = n(594174),
-  o = n(831160);
-let s = () => {
+  s = n(831160);
+let o = () => {
   throw Error('updateModal has not been implemented.');
 };
 {
   let e = n(169480);
-  r = e.showModal, s = e.updateModalProps, i = n(952265).Mr;
+  r = e.showModal, o = e.updateModalProps, i = n(952265).Mr;
 }
 
 function l(e) {
@@ -19,7 +19,7 @@ function l(e) {
 promiseFn: t,
 resolve: n,
 reject: a,
-modalProps: o = {},
+modalProps: s = {},
 hooks: {
   onEarlyClose: l
 } = {}
@@ -28,7 +28,7 @@ hooks: {
 null == l || l();
 return;
   }
-  let c = r(f, d, o);
+  let c = r(f, d, s);
 
   function d() {
 null == l || l();
@@ -43,8 +43,8 @@ i(c), a(e);
   }
 
   function f(e) {
-return s(c, f, d, {
-  ...o,
+return o(c, f, d, {
+  ...s,
   isLoading: !0
 }), u({
   promiseFn: t,
@@ -60,8 +60,8 @@ return s(c, f, d, {
 let {
   res: t
 } = e;
-s(c, f, d, {
-  ...o,
+o(c, f, d, {
+  ...s,
   error: t.body.message
 });
   }
@@ -74,20 +74,20 @@ resolve: n,
 reject: r,
 code: i,
 mfaCodeHandler: a = l,
-isModalOpen: o = !1,
-...s
+isModalOpen: s = !1,
+...o
   } = e;
   return t(null != i ? {
 code: i
   } : {}).then(n, e => {
 var i, l;
-if (i = e, l = o, i.body && 60008 === i.body.code || l && 429 === i.status)
+if (i = e, l = s, i.body && 60008 === i.body.code || l && 429 === i.status)
   return a({
     promiseFn: t,
     resolve: n,
     reject: r,
     res: e,
-    ...s
+    ...o
   });
 r(e);
   });
@@ -97,14 +97,14 @@ function c(e, t) {
   var n, r;
   let {
 checkEnabled: i = null !== (r = null === (n = a.default.getCurrentUser()) || void 0 === n ? void 0 : n.mfaEnabled) && void 0 !== r && r,
-...s
+...o
   } = null != t ? t : {};
   return new Promise((t, n) => {
-((0, o.d)(i) ? l : u)({
+((0, s.d)(i) ? l : u)({
   promiseFn: e,
   resolve: t,
   reject: n,
-  ...s
+  ...o
 });
   });
 }

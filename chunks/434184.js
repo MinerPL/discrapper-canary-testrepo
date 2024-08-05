@@ -4,8 +4,8 @@ return m;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(481060),
+  a = n(470079),
+  s = n(481060),
   r = n(194359),
   l = n(906732),
   o = n(171368),
@@ -22,7 +22,7 @@ function m(e) {
 user: t,
 key: n,
 isFocused: m
-  } = e, g = s.useContext(c.AnalyticsContext), {
+  } = e, g = a.useContext(c.AnalyticsContext), {
 analyticsLocations: p
   } = (0, l.ZP)(), T = e => {
 e.stopPropagation(), r.Z.unblockUser(t.id, {
@@ -47,7 +47,7 @@ children: e => (0, i.jsxs)('div', {
       subText: E.Z.Messages.BLOCKED
     }),
     (0, i.jsx)(d.Z, {
-      icon: a.UserMinusIcon,
+      icon: s.UserMinusIcon,
       actionType: d.Z.ActionTypes.DENY,
       tooltip: E.Z.Messages.UNBLOCK,
       onClick: T,

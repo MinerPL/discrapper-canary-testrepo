@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return r;
+return o;
   }
 });
 var a = t(735250);
@@ -9,11 +9,11 @@ var l = t(481060),
   s = t(689938),
   i = t(674814);
 
-function r(e) {
+function o(e) {
   let {
 sendStartNotification: n,
 setSendStartNotification: t
-  } = e, r = n ? s.Z.Messages.GUILD_NOTIFY_MEMBERS_ENABLED_NEW : s.Z.Messages.GUILD_NOTIFY_MEMBERS_DISABLED_NEW;
+  } = e, o = n ? s.Z.Messages.GUILD_NOTIFY_MEMBERS_ENABLED_NEW : s.Z.Messages.GUILD_NOTIFY_MEMBERS_DISABLED_NEW;
   return (0, a.jsx)('div', {
 className: i.notificationToggle,
 children: (0, a.jsx)(l.Checkbox, {
@@ -34,7 +34,7 @@ children: (0, a.jsx)(l.Checkbox, {
       'aria-label': s.Z.Messages.GUILD_NOTIFY_MEMBERS_TOOLTIP_NEW,
       children: e => (0, a.jsx)('span', {
         ...e,
-        children: r
+        children: o
       })
     })
   })

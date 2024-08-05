@@ -1,4 +1,4 @@
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140);
 let u = {
 enabled: !1
@@ -6,7 +6,7 @@ enabled: !1
   c = {},
   d = {},
   _ = !1;
-class E extends(o = s.ZP.DeviceSettingsStore) {
+class E extends(s = o.ZP.DeviceSettingsStore) {
   initialize() {
 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u;
 _ = e.enabled;
@@ -67,18 +67,18 @@ let {
   completingUserId: r,
   waitingUserId: i,
   channelId: a
-} = e, o = null !== (t = c[a]) && void 0 !== t ? t : {}, s = o[i];
-if (delete o[i], null == s)
+} = e, s = null !== (t = c[a]) && void 0 !== t ? t : {}, o = s[i];
+if (delete s[i], null == o)
   return !1;
 d[a] = {
   ...d[a],
   [i]: [
-    s,
+    o,
     n
   ],
   [r]: [
     n,
-    s
+    o
   ]
 };
   },

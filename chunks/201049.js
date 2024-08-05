@@ -8,10 +8,10 @@ var l = o(735250),
   a = o(442837),
   i = o(481060),
   s = o(596454),
-  u = o(907040),
-  d = o(339085),
-  r = o(984933),
-  c = o(401227),
+  u = o(318766),
+  d = o(907040),
+  r = o(339085),
+  c = o(984933),
   m = o(153124),
   j = o(883429),
   C = o(981631),
@@ -30,7 +30,7 @@ tag: p
   } = e, N = (0, m.Dt)(), g = null != p, [T, M] = t.useState(null !== (n = null == p ? void 0 : p.name) && void 0 !== n ? n : ''), [B, R] = t.useState(null != p ? {
 id: p.emojiId,
 name: p.emojiName
-  } : null), [k, I] = t.useState(null == p ? void 0 : p.moderated), A = (0, a.e7)([d.Z], () => (null == B ? void 0 : B.id) != null ? d.Z.getUsableCustomEmojiById(B.id) : null), f = (null == p ? void 0 : p.name) !== T || (null == p ? void 0 : p.emojiId) !== (null == B ? void 0 : B.id) || (null == p ? void 0 : p.emojiName) !== (null == B ? void 0 : B.name) || k !== (null == p ? void 0 : p.moderated), Z = () => {
+  } : null), [k, I] = t.useState(null == p ? void 0 : p.moderated), A = (0, a.e7)([r.Z], () => (null == B ? void 0 : B.id) != null ? r.Z.getUsableCustomEmojiById(B.id) : null), f = (null == p ? void 0 : p.name) !== T || (null == p ? void 0 : p.emojiId) !== (null == B ? void 0 : B.id) || (null == p ? void 0 : p.emojiName) !== (null == B ? void 0 : B.name) || k !== (null == p ? void 0 : p.moderated), Z = () => {
 if (null != T && f) {
   if (g) {
     j.Z.updateForumTag({
@@ -87,8 +87,8 @@ children: [
               renderPopout: e => {
                 let {
                   closePopout: n
-                } = e, o = r.ZP.getDefaultChannel(b);
-                return (0, l.jsx)(u.Z, {
+                } = e, o = c.ZP.getDefaultChannel(b);
+                return (0, l.jsx)(d.Z, {
                   guildId: b,
                   closePopout: n,
                   onSelectEmoji: (e, o) => {
@@ -106,7 +106,7 @@ children: [
                 let {
                   isShown: o
                 } = n;
-                return (0, l.jsx)(c.Z, {
+                return (0, l.jsx)(u.Z, {
                   ...e,
                   onClick: n => {
                     var o;

@@ -49,7 +49,7 @@ x: o,
 y: u,
 scaledCropWidth: c,
 scaledCropHeight: h
-  } = i(t, r, l, s), d = await e.arrayBuffer(), g = new Worker(new URL(n.p + n.u('86047'), n.b)), A = new Promise((e, t) => {
+  } = i(t, r, l, s), d = await e.arrayBuffer(), g = new Worker(new URL('/assets/' + n.u('86047'), n.b)), A = new Promise((e, t) => {
 g.onmessage = n => {
   let {
     data: r

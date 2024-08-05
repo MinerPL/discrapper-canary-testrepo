@@ -6,9 +6,9 @@ return l;
 var r = n(836560),
   i = n(264344),
   a = n.n(i),
-  o = n(649318);
+  s = n(649318);
 
-function s(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -51,7 +51,7 @@ if (null == this._sdp)
 return this._sdp;
   }
   set sdp(e) {
-if (!(0, o.$6)(e))
+if (!(0, s.$6)(e))
   throw Error('Incorrect SDP received from rtc-worker: '.concat(e));
 this._sdp = e, this.createAnswer(), this.connected = !0, this._negotiationNeeded && this.negotiationNeeded();
   }
@@ -74,12 +74,12 @@ let t = this.streams.map((e, t) => {
     cname: n,
     ssrc: r,
     type: i
-  } = e, a = this.activeAudioSSRCs[n], s = this.activeVideoSSRCs[n], l = ''.concat(i, '_inbound_').concat(t);
+  } = e, a = this.activeAudioSSRCs[n], o = this.activeVideoSSRCs[n], l = ''.concat(i, '_inbound_').concat(t);
   return [
     r,
     n,
     i,
-    a === r || s === r ? this.direction : o.Ns.INACTIVE,
+    a === r || o === r ? this.direction : s.Ns.INACTIVE,
     l
   ];
 });
@@ -89,7 +89,7 @@ let n = this.outboundStreams.map((e, t) => [
   0,
   'outbound',
   e.type,
-  (0, o.Mg)(e.direction),
+  (0, s.Mg)(e.direction),
   ''.concat(e.type, '_outbound_').concat(t)
 ]);
 if ('answer' !== e)
@@ -97,12 +97,12 @@ if ('answer' !== e)
 {
   let e = n.length - t.length;
   return n.slice(0, e).concat(t).slice(0, n.length).map((e, t) => {
-    let [n, r, i, a, s] = e;
+    let [n, r, i, a, o] = e;
     return [
       n,
       r,
       i,
-      (0, o.Mg)(this.outboundStreams[t].direction),
+      (0, s.Mg)(this.outboundStreams[t].direction),
       this.outboundStreams[t].mid
     ];
   });
@@ -114,12 +114,12 @@ let t = this.audioCodec,
   r = this.videoCodec,
   i = this.videoPayloadType,
   a = this.rtxPayloadType,
-  s = this.sdp;
-if (null == t || null == n || null == r || null == i || null == a || null == s || null == this.direction)
-  throw Error('Invalid payload: audioCodec: '.concat(t, ', audioPayloadType: ').concat(null == n ? 'null' : n, ', videoCodec: ').concat(r, ', videoCodecPayloadType: ').concat(null == i ? 'null' : i, ', rtxPayloadType: ').concat(null == a ? 'null' : a, ', sdp: ').concat(s));
-let l = (0, o.MP)({
+  o = this.sdp;
+if (null == t || null == n || null == r || null == i || null == a || null == o || null == this.direction)
+  throw Error('Invalid payload: audioCodec: '.concat(t, ', audioPayloadType: ').concat(null == n ? 'null' : n, ', videoCodec: ').concat(r, ', videoCodecPayloadType: ').concat(null == i ? 'null' : i, ', rtxPayloadType: ').concat(null == a ? 'null' : a, ', sdp: ').concat(o));
+let l = (0, s.MP)({
   type: e,
-  baseSDP: s,
+  baseSDP: o,
   direction: this.direction,
   audioCodec: t,
   audioPayloadType: n,
@@ -134,6 +134,6 @@ let l = (0, o.MP)({
 return this.emit(e, l), Promise.resolve(l);
   }
   constructor(...e) {
-super(...e), s(this, 'audioCodec', null), s(this, 'audioPayloadType', null), s(this, 'videoCodec', null), s(this, 'videoPayloadType', null), s(this, 'rtxPayloadType', null), s(this, 'direction', null), s(this, 'outboundStreams', []), s(this, 'extensions', []), s(this, 'streams', []), s(this, 'activeAudioSSRCs', {}), s(this, 'activeVideoSSRCs', {}), s(this, '_sdp', null), s(this, 'connected', !1), s(this, 'negotiating', !1), s(this, '_negotiationNeeded', !1);
+super(...e), o(this, 'audioCodec', null), o(this, 'audioPayloadType', null), o(this, 'videoCodec', null), o(this, 'videoPayloadType', null), o(this, 'rtxPayloadType', null), o(this, 'direction', null), o(this, 'outboundStreams', []), o(this, 'extensions', []), o(this, 'streams', []), o(this, 'activeAudioSSRCs', {}), o(this, 'activeVideoSSRCs', {}), o(this, '_sdp', null), o(this, 'connected', !1), o(this, 'negotiating', !1), o(this, '_negotiationNeeded', !1);
   }
 }

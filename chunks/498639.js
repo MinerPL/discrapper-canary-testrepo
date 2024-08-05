@@ -17,15 +17,15 @@ var n = s(735250),
   C = s(333867),
   m = s(963249),
   A = s(87484),
-  h = s(197115),
-  g = s(911367),
+  g = s(197115),
+  h = s(911367),
   O = s(430824),
   p = s(78839),
   R = s(981631),
   x = s(474936),
   M = s(184796);
 
-function D(e) {
+function f(e) {
   let {
 selectedGuildForGuildSub: t
   } = e, s = (0, S.GG)(null == t ? void 0 : t.id)[0];
@@ -41,19 +41,19 @@ children: null != t && null != s ? (0, n.jsx)('div', {
   });
 }
 t.Z = function() {
-  let [e, t] = a.useState(x.Si.TIER_2), [s, S] = a.useState(null), [N] = (0, r.Wu)([O.Z], () => [O.Z.getGuilds()]), [f] = (0, r.Wu)([p.ZP], () => [p.ZP.getPremiumSubscription()]);
-  (0, g.t)();
+  let [e, t] = a.useState(x.Si.TIER_2), [s, S] = a.useState(null), [N] = (0, r.Wu)([O.Z], () => [O.Z.getGuilds()]), [D] = (0, r.Wu)([p.ZP], () => [p.ZP.getPremiumSubscription()]);
+  (0, h.t)();
   let P = Object.values(N).map(e => ({
   value: e,
   label: e.name
 })),
-[L, Z] = a.useState(P.length > 0 ? P[0].value : null),
-[b, v] = a.useState(''),
+[L, b] = a.useState(P.length > 0 ? P[0].value : null),
+[Z, v] = a.useState(''),
 [j, B] = a.useState({
   plan_id: x.Xh.PREMIUM_MONTH_TIER_2,
   gift: 'true'
 }),
-U = 'true' !== j.gift && null != f,
+U = 'true' !== j.gift && null != D,
 [G, F] = a.useState(P.length > 0 ? P[0].value : null),
 {
   analyticsLocations: y
@@ -96,7 +96,7 @@ children: (0, n.jsxs)(o.FormSection, {
           ],
           onChange: e => t(e)
         }),
-        (0, n.jsx)(h.Z, {
+        (0, n.jsx)(g.Z, {
           subscriptionTier: e,
           isGift: !0,
           premiumModalAnalyticsLocation: {}
@@ -154,7 +154,7 @@ children: (0, n.jsxs)(o.FormSection, {
         (0, n.jsx)(o.SingleSelect, {
           value: L,
           options: P,
-          onChange: e => Z(e)
+          onChange: e => b(e)
         }),
         null != L ? (0, n.jsx)(T.Z, {
           guild: L,
@@ -183,23 +183,23 @@ children: (0, n.jsxs)(o.FormSection, {
       children: [
         (0, n.jsx)(o.TextInput, {
           placeholder: 'Promotion Code',
-          value: b,
+          value: Z,
           onChange: e => v(e)
         }),
         (0, n.jsx)(o.Tooltip, {
           text: 'Need Promotion Code',
-          shouldShow: b.length < 1,
+          shouldShow: Z.length < 1,
           children: e => {
             let {
               onMouseEnter: t,
               onMouseLeave: s
             } = e;
             return (0, n.jsx)(o.Button, {
-              disabled: b.length < 1,
+              disabled: Z.length < 1,
               onMouseEnter: t,
               onMouseLeave: s,
               onClick: () => {
-                window.open(R.Z5c.BILLING_PROMOTION_REDEMPTION(b));
+                window.open(R.Z5c.BILLING_PROMOTION_REDEMPTION(Z));
               },
               children: 'Open Link'
             });
@@ -298,7 +298,7 @@ children: (0, n.jsxs)(o.FormSection, {
     }),
     (0, n.jsx)(I.l, {
       guildId: null == G ? void 0 : G.id,
-      children: (0, n.jsx)(D, {
+      children: (0, n.jsx)(f, {
         selectedGuildForGuildSub: G
       })
     }),

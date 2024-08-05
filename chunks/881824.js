@@ -28,8 +28,8 @@ var r = n(735250);
 n(470079);
 var i = n(952265),
   a = n(359110),
-  o = n(314897),
-  s = n(88751),
+  s = n(314897),
+  o = n(88751),
   l = n(427679),
   u = n(513449),
   c = n(930180),
@@ -41,7 +41,7 @@ function E(e, t) {
 let {
   default: t
 } = await Promise.all([
-  n.e('68241'),
+  n.e('99008'),
   n.e('2055')
 ]).then(n.bind(n, 581355));
 return n => (0, r.jsx)(t, {
@@ -97,17 +97,17 @@ contextKey: t === d.IlC.POPOUT ? _.u1 : _.z1
 }
 
 function I(e) {
-  let t = o.default.getId(),
+  let t = s.default.getId(),
 n = (0, c.Z7)(e);
-  return !s.ZP.isModerator(t, e) && n > 0;
+  return !o.ZP.isModerator(t, e) && n > 0;
 }
 
 function T(e, t) {
   var c;
   let d = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
   t !== e.id && (0, u.Ku)(!0), c = e, (0, a.Kh)(c.id), t !== e.id && d && ! function(e) {
-let t = o.default.getId(),
-  a = s.ZP.isModerator(t, e.id),
+let t = s.default.getId(),
+  a = o.ZP.isModerator(t, e.id),
   u = l.Z.isLive(e.id);
 a && !u ? E(e) : a && u && function(e) {
   (0, i.ZD)(async () => {

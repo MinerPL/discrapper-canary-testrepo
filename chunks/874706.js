@@ -7,12 +7,12 @@ var r = n(735250);
 n(470079);
 var i = n(331595),
   a = n(249849);
-let o = [
+let s = [
 '#816bee',
 '#b79cf8',
 '#f0f0f0'
   ],
-  s = [
+  o = [
 0.15,
 0.45,
 0.9
@@ -39,9 +39,9 @@ let {
 } = e, {
   primaryColorsTransformed: d
 } = (0, a.s)({
-  primaryBaseColors: o,
+  primaryBaseColors: s,
   primaryTintColor: u,
-  primaryTintLuminances: s,
+  primaryTintLuminances: o,
   primaryLuminanceWeights: l
 });
 return (0, r.jsxs)('svg', {

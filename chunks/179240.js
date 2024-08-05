@@ -5,9 +5,9 @@ return f;
   }
 });
 var i, a = n(735250),
-  o = n(470079),
-  s = n(120356),
-  l = n.n(s),
+  s = n(470079),
+  o = n(120356),
+  l = n.n(o),
   u = n(58654),
   c = n(84735),
   d = n(986095);
@@ -35,7 +35,7 @@ let E = [
   'border-width',
   'box-sizing'
 ];
-class f extends(i = o.PureComponent) {
+class f extends(i = s.PureComponent) {
   componentDidMount() {
 var e, t;
 null === (e = (t = this.props).onResize) || void 0 === e || e.call(t, void 0), Promise.resolve().then(() => this.calculateSize());
@@ -66,14 +66,14 @@ if (null != n && -1 === a.indexOf('\n') && a.length * n < 0.8 * t.offsetWidth) {
 }
 null == r && null != document.body && (r = document.createElement('textarea'), document.body.appendChild(r));
 let {
-  paddingSize: o,
-  borderSize: s,
+  paddingSize: s,
+  borderSize: o,
   boxSizing: l,
   sizingStyle: u
 } = this.calculateNodeStyling(t);
 r.setAttribute('style', u + ';\n  visibility:hidden;\n  overflow:hidden;\n  position:absolute;\n  z-index:-1000;\n  top:0;\n  right:0;\n'), r.value = a, null != i ? r.setAttribute('rows', ''.concat(i)) : r.removeAttribute('rows');
 let c = r.scrollHeight;
-'border-box' === l ? c += s : 'content-box' === l && (c -= o), this.setState({
+'border-box' === l ? c += o : 'content-box' === l && (c -= s), this.setState({
   height: c
 });
   }

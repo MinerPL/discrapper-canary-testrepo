@@ -1,14 +1,14 @@
 n.d(t, {
   OR: function() {
-return s;
+return o;
   },
   ot: function() {
-return o;
+return s;
   }
 });
 let {
   Layer: r,
   LayerContainer: i,
   LayerProvider: a
-} = (0, n(302901).Xv)('Verification'), o = i, s = a;
+} = (0, n(302901).Xv)('Verification'), s = i, o = a;
 t.ZP = r;

@@ -21,19 +21,19 @@ var n = s(735250),
   C = s(739566),
   m = s(753206),
   A = s(440849),
-  h = s(921801),
-  g = s(196051),
+  g = s(921801),
+  h = s(196051),
   O = s(441729),
   p = s(285952),
   R = s(153124),
   x = s(626135),
   M = s(63063),
-  D = s(695346),
-  f = s(263937),
+  f = s(695346),
+  D = s(263937),
   P = s(996073),
   L = s(526761),
-  Z = s(726985),
-  b = s(981631),
+  b = s(726985),
+  Z = s(981631),
   v = s(611480),
   j = s(653477),
   B = s(689938),
@@ -47,7 +47,7 @@ let y = (0, R.hQ)(),
 (0, u.o2)(e);
   }, 250),
   k = l().debounce(e => {
-(0, g.Ct)(e);
+(0, h.Ct)(e);
   }, 250);
 
 function H(e) {
@@ -59,50 +59,50 @@ children: [
     className: G.marginBottom20,
     children: (0, n.jsx)(W, {})
   }),
-  (0, n.jsxs)(h.F, {
-    setting: Z.s6.ACCESSIBILITY_SATURATION,
+  (0, n.jsxs)(g.F, {
+    setting: b.s6.ACCESSIBILITY_SATURATION,
     children: [
       (0, n.jsx)(K, {}),
       (0, n.jsx)(d.FormDivider, {})
     ]
   }),
-  (0, n.jsx)(h.F, {
-    setting: Z.s6.ACCESSIBILITY_LINK_DECORATIONS,
+  (0, n.jsx)(g.F, {
+    setting: b.s6.ACCESSIBILITY_LINK_DECORATIONS,
     children: (0, n.jsx)(z, {})
   }),
-  (0, n.jsx)(h.F, {
-    setting: Z.s6.ACCESSIBILITY_ROLE_STYLE,
+  (0, n.jsx)(g.F, {
+    setting: b.s6.ACCESSIBILITY_ROLE_STYLE,
     children: (0, n.jsx)(Q, {})
   }),
-  (0, n.jsx)(h.F, {
-    setting: Z.s6.ACCESSIBILITY_TAGS,
+  (0, n.jsx)(g.F, {
+    setting: b.s6.ACCESSIBILITY_TAGS,
     children: (0, n.jsx)(X, {})
   }),
-  (0, n.jsx)(h.F, {
-    setting: Z.s6.ACCESSIBILITY_SYNC_PROFILE_THEME,
+  (0, n.jsx)(g.F, {
+    setting: b.s6.ACCESSIBILITY_SYNC_PROFILE_THEME,
     children: (0, n.jsx)(q, {})
   }),
-  (0, I.b)() ? (0, n.jsxs)(h.F, {
-    setting: Z.s6.ACCESSIBILITY_CONTRAST,
+  (0, I.b)() ? (0, n.jsxs)(g.F, {
+    setting: b.s6.ACCESSIBILITY_CONTRAST,
     children: [
       (0, n.jsx)(J, {}),
       ' '
     ]
   }) : null,
-  (0, n.jsx)(h.F, {
-    setting: Z.s6.ACCESSIBILITY_REDUCED_MOTION,
+  (0, n.jsx)(g.F, {
+    setting: b.s6.ACCESSIBILITY_REDUCED_MOTION,
     children: (0, n.jsx)($, {})
   }),
-  (0, n.jsx)(h.F, {
-    setting: Z.s6.ACCESSIBILITY_STICKERS,
+  (0, n.jsx)(g.F, {
+    setting: b.s6.ACCESSIBILITY_STICKERS,
     children: (0, n.jsx)(ee, {})
   }),
-  (0, n.jsx)(h.F, {
-    setting: Z.s6.ACCESSIBILITY_MESSAGES,
+  (0, n.jsx)(g.F, {
+    setting: b.s6.ACCESSIBILITY_MESSAGES,
     children: (0, n.jsx)(et, {})
   }),
-  (0, n.jsxs)(h.F, {
-    setting: Z.s6.ACCESSIBILITY_TEXT_TO_SPEECH,
+  (0, n.jsxs)(g.F, {
+    setting: b.s6.ACCESSIBILITY_TEXT_TO_SPEECH,
     children: [
       (0, n.jsx)(es, {}),
       (0, n.jsx)(d.FormDivider, {})
@@ -113,7 +113,7 @@ children: [
     variant: 'text-md/normal',
     children: B.Z.Messages.ACCESSIBILITY_SETTINGS_APPEARANCE_LINK.format({
       onAppearanceClick() {
-        _.Z.open(b.oAB.APPEARANCE);
+        _.Z.open(Z.oAB.APPEARANCE);
       }
     })
   })
@@ -122,7 +122,7 @@ children: [
 }
 
 function W() {
-  let e = D.jU.useSetting(),
+  let e = f.jU.useSetting(),
 [t] = a.useState(() => {
   let e = (0, S.e5)({
     ...(0, N.ZP)({
@@ -131,7 +131,7 @@ function W() {
         previewLink: 'https://discord.com/accessibility'
       })
     }),
-    state: b.yb.SENT,
+    state: Z.yb.SENT,
     id: ''.concat(0)
   });
   return e.colorString = 'green', e;
@@ -152,9 +152,9 @@ children: (0, n.jsxs)(d.Card, {
         (0, n.jsx)('div', {
           className: U.previewAvatars,
           children: [
-            b.Skl.ONLINE,
-            b.Skl.DND,
-            b.Skl.IDLE
+            Z.Skl.ONLINE,
+            Z.Skl.DND,
+            Z.Skl.IDLE
           ].map(e => (0, n.jsx)(d.AnimatedAvatar, {
             'aria-label': B.Z.Messages.USER_SETTINGS_AVATAR,
             src: F,
@@ -205,7 +205,7 @@ children: [
   (0, n.jsx)(d.Slider, {
     'aria-labelledby': y,
     'aria-describedby': V,
-    markers: b.yqN.SATURATION_INCREMENTS,
+    markers: Z.yqN.SATURATION_INCREMENTS,
     equidistant: !0,
     stickToMarkers: !0,
     maxValue: 1,
@@ -305,7 +305,7 @@ className: r()(G.marginTop20, U.syncProfileThemeWithUserTheme),
 children: (0, n.jsx)(d.FormSwitch, {
   note: B.Z.Messages.ACCESSIBILITY_SETTINGS_PROFILE_THEMES_NOTE.format({
     onThemeClick() {
-      _.Z.open(b.oAB.APPEARANCE);
+      _.Z.open(Z.oAB.APPEARANCE);
     }
   }),
   className: G.marginTop20,
@@ -332,7 +332,7 @@ t,
 e
   ]);
   let r = B.Z.Messages.ACCESSIBILITY_SETTINGS_SYNC_FORCED_COLORS_DESCRIPTION.format({
-learnMoreLink: M.Z.getArticleURL(b.BhN.FORCED_COLORS)
+learnMoreLink: M.Z.getArticleURL(Z.BhN.FORCED_COLORS)
   });
   return (0, n.jsx)(d.FormItem, {
 title: B.Z.Messages.ACCESSIBILITY_SETTINGS_CONTRAST,
@@ -347,8 +347,8 @@ children: (0, n.jsx)(d.FormSwitch, {
 }
 
 function $() {
-  let e = D.QK.useSetting(),
-t = D.Yk.useSetting(),
+  let e = f.QK.useSetting(),
+t = f.Yk.useSetting(),
 {
   useReducedMotion: s,
   rawPrefersReducedMotion: i,
@@ -357,13 +357,13 @@ t = D.Yk.useSetting(),
   animateEmojiOverrideReason: _
 } = (0, c.cj)([
   T.Z,
-  f.Z
+  D.Z
 ], () => ({
   systemPrefersReducedMotion: T.Z.systemPrefersReducedMotion,
   rawPrefersReducedMotion: T.Z.rawPrefersReducedMotion,
   useReducedMotion: T.Z.useReducedMotion,
-  gifAutoPlayOverrideReason: f.Z.getAppliedOverrideReasonKey('gifAutoPlay'),
-  animateEmojiOverrideReason: f.Z.getAppliedOverrideReasonKey('animateEmoji')
+  gifAutoPlayOverrideReason: D.Z.getAppliedOverrideReasonKey('gifAutoPlay'),
+  animateEmojiOverrideReason: D.Z.getAppliedOverrideReasonKey('animateEmoji')
 })),
 E = a.useRef(null);
   (0, P.Z)(E, L.rP.REDUCED_MOTION);
@@ -382,7 +382,7 @@ children: [
     type: d.FormText.Types.DESCRIPTION,
     className: G.marginBottom8,
     children: B.Z.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_DESCRIPTION.format({
-      helpdeskArticle: M.Z.getArticleURL(b.BhN.REDUCED_MOTION)
+      helpdeskArticle: M.Z.getArticleURL(Z.BhN.REDUCED_MOTION)
     })
   }),
   (0, n.jsx)(d.Checkbox, {
@@ -406,14 +406,14 @@ children: [
     className: G.marginBottom40,
     value: e,
     note: null != l ? (0, A.Z)(l) : void 0,
-    onChange: D.QK.updateSetting,
+    onChange: f.QK.updateSetting,
     children: B.Z.Messages.GIF_AUTO_PLAY_LABEL
   }),
   (0, n.jsx)(d.FormSwitch, {
     className: r()(G.marginTop8, G.marginBottom20),
     value: t,
     note: null != _ ? (0, A.Z)(_) : void 0,
-    onChange: D.Yk.updateSetting,
+    onChange: f.Yk.updateSetting,
     children: B.Z.Messages.ANIMATE_EMOJI
   })
 ]
@@ -421,10 +421,10 @@ children: [
 }
 
 function ee() {
-  let e = D.Wp.useSetting(),
-t = (0, c.e7)([f.Z], () => f.Z.getAppliedOverrideReasonKey('animateStickers')),
+  let e = f.Wp.useSetting(),
+t = (0, c.e7)([D.Z], () => D.Z.getAppliedOverrideReasonKey('animateStickers')),
 s = a.useCallback(e => {
-  D.Wp.updateSetting(e.value);
+  f.Wp.updateSetting(e.value);
 }, []);
   return (0, n.jsxs)(d.FormItem, {
 className: G.marginBottom40,
@@ -459,7 +459,7 @@ children: [
 
 function et() {
   let e = (0, c.e7)([T.Z], () => T.Z.isSubmitButtonEnabled),
-t = D.dN.useSetting(),
+t = f.dN.useSetting(),
 s = a.useRef(null);
   return (0, P.Z)(s, L.rP.LEGACY_CHAT_INPUT), (0, n.jsxs)(d.FormItem, {
 ref: s,
@@ -479,12 +479,12 @@ children: [
     value: t,
     note: B.Z.Messages.LEGACY_CHAT_INPUT_DESCRIPTION,
     onChange: e => {
-      x.default.track(b.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
+      x.default.track(Z.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
         enabled: e,
         location: {
-          section: b.jXE.SETTINGS_ACCESSIBILITY
+          section: Z.jXE.SETTINGS_ACCESSIBILITY
         }
-      }), D.dN.updateSetting(e);
+      }), f.dN.updateSetting(e);
     },
     children: B.Z.Messages.LEGACY_CHAT_INPUT
   })
@@ -493,7 +493,7 @@ children: [
 }
 
 function es() {
-  let e = D.OW.useSetting(),
+  let e = f.OW.useSetting(),
 t = (0, c.e7)([O.Z], () => O.Z.speechRate),
 [s, i] = a.useState(!1);
   return E.Zh ? (0, n.jsxs)(n.Fragment, {
@@ -507,7 +507,7 @@ children: [
       (0, n.jsx)(d.FormSwitch, {
         className: G.marginTop20,
         value: e,
-        onChange: D.OW.updateSetting,
+        onChange: f.OW.updateSetting,
         children: B.Z.Messages.ALLOW_TTS_COMMAND
       })
     ]
@@ -526,10 +526,10 @@ children: [
           color: d.ButtonColors.BRAND,
           onClick: () => {
             if (s) {
-              (0, g.NB)(), i(!1);
+              (0, h.NB)(), i(!1);
               return;
             }
-            (0, g.cP)(B.Z.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_TEST, !0, void 0, () => i(!0), () => i(!1)), i(!0);
+            (0, h.cP)(B.Z.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_TEST, !0, void 0, () => i(!0), () => i(!1)), i(!0);
           },
           children: (0, n.jsxs)(p.Z, {
             align: p.Z.Align.CENTER,

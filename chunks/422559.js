@@ -1,9 +1,9 @@
 n.d(t, {
   VY: function() {
-return o;
+return s;
   },
   _$: function() {
-return s;
+return o;
   },
   wt: function() {
 return u;
@@ -12,7 +12,7 @@ return u;
 var r = n(149765),
   i = n(981631),
   a = n(689938);
-let o = [
+let s = [
   i.Plq.ADMINISTRATOR,
   i.Plq.MANAGE_GUILD,
   i.Plq.MANAGE_ROLES,
@@ -66,8 +66,8 @@ let o = [
   i.Plq.SET_VOICE_CHANNEL_STATUS
 ];
 
-function s(e) {
-  return Object.values(i.Plq).some(t => r.e$(e, t) && !o.includes(t));
+function o(e) {
+  return Object.values(i.Plq).some(t => r.e$(e, t) && !s.includes(t));
 }
 let l = {
   [i.Plq.ADMINISTRATOR.toString()]: () => a.Z.Messages.ADMINISTRATOR,
@@ -83,7 +83,7 @@ let l = {
   [i.Plq.CREATE_GUILD_EXPRESSIONS.toString()]: () => a.Z.Messages.CREATE_EXPRESSIONS,
   [i.Plq.MANAGE_WEBHOOKS.toString()]: () => a.Z.Messages.MANAGE_WEBHOOKS,
   [i.Plq.VIEW_AUDIT_LOG.toString()]: () => a.Z.Messages.VIEW_AUDIT_LOG,
-  [i.Plq.VIEW_CHANNEL.toString()]: () => a.Z.Messages.READ_MESSAGES,
+  [i.Plq.VIEW_CHANNEL.toString()]: () => a.Z.Messages.ROLE_PERMISSIONS_VIEW_CHANNEL,
   [i.Plq.SEND_MESSAGES.toString()]: () => a.Z.Messages.SEND_MESSAGES,
   [i.Plq.SEND_TTS_MESSAGES.toString()]: () => a.Z.Messages.SEND_TTS_MESSAGES,
   [i.Plq.MANAGE_MESSAGES.toString()]: () => a.Z.Messages.MANAGE_MESSAGES,

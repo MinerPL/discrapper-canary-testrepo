@@ -5,8 +5,8 @@ return E;
 }), n(47120);
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(748780),
   u = n(481060),
   c = n(981631),
@@ -58,7 +58,7 @@ return (0, i.jsx)(l.Z.a, {
   href: c.Z5c.INDEX,
   target: '_blank',
   rel: 'noopener',
-  className: s()(d.logo, this.props.className),
+  className: o()(d.logo, this.props.className),
   style: this.getAnimatedStyle()
 });
   }

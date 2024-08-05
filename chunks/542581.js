@@ -4,93 +4,88 @@ var a = n(735250),
   r = n(120356),
   l = n.n(r),
   i = n(338545),
-  o = n(442837),
-  c = n(481060),
-  d = n(787014),
-  u = n(607070),
-  m = n(454585),
-  h = n(456269),
-  _ = n(470623),
-  g = n(981631),
-  x = n(689938),
-  C = n(294057),
-  f = n(153521);
+  o = n(481060),
+  c = n(787014),
+  d = n(454585),
+  u = n(456269),
+  m = n(470623),
+  h = n(981631),
+  _ = n(689938),
+  g = n(294057),
+  x = n(153521);
 t.Z = s.memo(function(e) {
   let {
 channel: t,
 onChange: r
-  } = e, p = (0, _.AF)(), {
-guidelinesOpen: T
-  } = (0, _.xH)(e => {
+  } = e, C = (0, m.AF)(), {
+guidelinesOpen: f
+  } = (0, m.xH)(e => {
 let {
   guidelinesOpen: t
 } = e;
 return {
   guidelinesOpen: t
 };
-  }), I = (0, h.r_)(t), [E, N] = s.useState(!1), b = s.useCallback(e => {
+  }), p = (0, u.r_)(t), [T, I] = s.useState(!1), E = s.useCallback(e => {
 if (null == e)
   return;
 let t = e.clientHeight >= 220;
-t !== E && N(t);
-  }, [E]);
+t !== T && I(t);
+  }, [T]);
   s.useLayoutEffect(() => {
 setTimeout(r, 350);
   }, [
-T,
+f,
 r
   ]);
-  let v = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-[S, M] = s.useState(!T),
-A = (0, i.useSpring)({
-  opacity: T ? 1 : 0,
-  maxHeight: T ? 500 : 0,
-  config: {
-    duration: 300
-  },
-  immediate: v,
-  onRest: () => M(!T)
-});
+  let [N, b] = s.useState(!f), v = (0, o.useSpring)({
+opacity: f ? 1 : 0,
+maxHeight: f ? 500 : 0,
+config: {
+  duration: 300
+},
+onRest: () => b(!f)
+  });
   return null != t.topic && t.topic.length > 0 ? (0, a.jsx)(i.animated.div, {
-style: A,
-className: S ? C.hiddenVisually : void 0,
+style: v,
+className: N ? g.hiddenVisually : void 0,
 children: (0, a.jsxs)('div', {
-  className: C.container,
+  className: g.container,
   children: [
     (0, a.jsxs)('div', {
-      className: C.headerContainer,
+      className: g.headerContainer,
       children: [
-        (0, a.jsxs)(c.Heading, {
+        (0, a.jsxs)(o.Heading, {
           variant: 'heading-lg/semibold',
-          className: C.guidelinesHeader,
+          className: g.guidelinesHeader,
           children: [
-            (0, a.jsx)(c.BookCheckIcon, {
+            (0, a.jsx)(o.BookCheckIcon, {
               size: 'custom',
               color: 'currentColor',
               width: 20,
               height: 20
             }),
-            x.Z.Messages.FORUM_POST_GUIDELINES_TITLE,
-            I && (0, a.jsx)(c.Clickable, {
+            _.Z.Messages.FORUM_POST_GUIDELINES_TITLE,
+            p && (0, a.jsx)(o.Clickable, {
               onClick: () => {
-                d.ZP.open(t.id, void 0, g.ZfP.TOPIC);
+                c.ZP.open(t.id, void 0, h.ZfP.TOPIC);
               },
               tag: 'span',
-              className: C.clickable,
-              children: (0, a.jsx)(c.PencilIcon, {
+              className: g.clickable,
+              children: (0, a.jsx)(o.PencilIcon, {
                 size: 'xs',
                 color: 'currentColor'
               })
             })
           ]
         }),
-        (0, a.jsx)(c.Clickable, {
-          'aria-label': x.Z.Messages.CLOSE,
-          className: C.clickable,
+        (0, a.jsx)(o.Clickable, {
+          'aria-label': _.Z.Messages.CLOSE,
+          className: g.clickable,
           onClick: () => {
-            p.getState().setGuidelinesOpen(!1);
+            C.getState().setGuidelinesOpen(!1);
           },
-          children: (0, a.jsx)(c.CloseSmallIcon, {
+          children: (0, a.jsx)(o.CloseSmallIcon, {
             size: 'xs',
             color: 'currentColor'
           })
@@ -98,37 +93,37 @@ children: (0, a.jsxs)('div', {
       ]
     }),
     (0, a.jsxs)('div', {
-      className: C.descriptionContainer,
+      className: g.descriptionContainer,
       children: [
-        (0, a.jsx)(c.Text, {
+        (0, a.jsx)(o.Text, {
           selectable: !0,
           variant: 'text-sm/normal',
           color: 'header-secondary',
           style: {
             maxHeight: 220
           },
-          className: l()(C.guidelines, f.markup),
+          className: l()(g.guidelines, x.markup),
           children: (0, a.jsx)('div', {
-            ref: b,
-            children: m.Z.parseForumPostGuidelines(t.topic, !0, {
+            ref: E,
+            children: d.Z.parseForumPostGuidelines(t.topic, !0, {
               channelId: t.id,
               allowHeading: !0,
               allowList: !0
             })
           })
         }),
-        E && (0, a.jsxs)('div', {
-          className: C.showMore,
+        T && (0, a.jsxs)('div', {
+          className: g.showMore,
           children: [
             (0, a.jsx)('div', {
-              className: C.gradient
+              className: g.gradient
             }),
             (0, a.jsx)('div', {
-              className: C.linkContainer,
-              children: (0, a.jsx)(c.Clickable, {
-                className: C.showMoreLink,
+              className: g.linkContainer,
+              children: (0, a.jsx)(o.Clickable, {
+                className: g.showMoreLink,
                 onClick: () => {
-                  (0, c.openModalLazy)(async () => {
+                  (0, o.openModalLazy)(async () => {
                     let {
                       default: e
                     } = await n.e('78712').then(n.bind(n, 223164));
@@ -138,16 +133,16 @@ children: (0, a.jsxs)('div', {
                     });
                   });
                 },
-                children: (0, a.jsxs)(c.Text, {
+                children: (0, a.jsxs)(o.Text, {
                   variant: 'text-sm/semibold',
                   color: 'text-brand',
-                  className: C.showMoreText,
+                  className: g.showMoreText,
                   children: [
-                    x.Z.Messages.FORUM_CHANNEL_TOPIC_VIEW_ALL,
-                    (0, a.jsx)(c.MaximizeIcon, {
+                    _.Z.Messages.FORUM_CHANNEL_TOPIC_VIEW_ALL,
+                    (0, a.jsx)(o.MaximizeIcon, {
                       size: 'xs',
                       color: 'currentColor',
-                      className: C.showMoreIcon
+                      className: g.showMoreIcon
                     })
                   ]
                 })

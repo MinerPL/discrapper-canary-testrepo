@@ -1,7 +1,7 @@
 var r, i = n(442837),
   a = n(433517),
-  o = n(780384),
-  s = n(570140),
+  s = n(780384),
+  o = n(570140),
   l = n(695346),
   u = n(581883),
   c = n(12647),
@@ -175,11 +175,11 @@ let e = 'a11yFontScale',
   n = 'a11yColorblindMode',
   r = a.K.get(e) || 100,
   i = a.K.get(t) || d.yqN.ZOOM_DEFAULT,
-  o = a.K.get(n) || !1;
+  s = a.K.get(n) || !1;
 return a.K.remove(e), a.K.remove(t), a.K.remove(n), {
   fontScale: r,
   zoom: i,
-  colorblindMode: o,
+  colorblindMode: s,
   keyboardModeEnabled: !1
 };
   },
@@ -227,7 +227,7 @@ prefersReducedMotion: 'auto'
   }),
   e => ({
 ...e,
-alwaysShowLinkDecorations: e.saturation <= o.AE
+alwaysShowLinkDecorations: e.saturation <= s.AE
   }),
   e => ({
 ...e,
@@ -240,7 +240,7 @@ try {
 return e;
   }
 ]);
-let I = new m(s.Z, {
+let I = new m(o.Z, {
   ACCESSIBILITY_SET_FONT_SIZE: function(e) {
 var t;
 let n = (t = e.fontSize, d.yqN.FONT_SIZES.indexOf(t) >= 0 ? t : d.yqN.FONT_SIZE_DEFAULT);

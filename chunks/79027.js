@@ -5,8 +5,8 @@ return E;
 }), n(47120);
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(748780),
   u = n(481060),
   c = n(440715);
@@ -71,7 +71,7 @@ let {
   children: t
 } = this.props;
 return (0, i.jsx)(l.Z.div, {
-  className: s()(e, c.slider),
+  className: o()(e, c.slider),
   style: this.getAnimatedStyle(),
   children: t
 });

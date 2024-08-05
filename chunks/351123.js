@@ -10,26 +10,26 @@ var n = s(735250),
   u = s(787014),
   h = s(741361),
   m = s(911969),
-  g = s(134433),
-  E = s(156699),
-  T = s(693196),
-  p = s(434404),
-  N = s(200498),
-  _ = s(146085),
-  S = s(192079),
-  x = s(277053),
-  f = s(271383),
-  C = s(430824),
-  I = s(496675),
-  M = s(594174),
-  R = s(467679),
-  Z = s(285952),
-  v = s(474333),
+  g = s(385499),
+  E = s(134433),
+  T = s(156699),
+  p = s(693196),
+  N = s(434404),
+  _ = s(200498),
+  S = s(146085),
+  x = s(192079),
+  f = s(777036),
+  C = s(277053),
+  I = s(271383),
+  M = s(430824),
+  R = s(496675),
+  Z = s(594174),
+  v = s(285952),
   O = s(903386),
   A = s(700785),
   L = s(605436),
-  b = s(27544),
-  j = s(415236),
+  j = s(27544),
+  b = s(415236),
   D = s(182905),
   y = s(71080),
   w = s(981631),
@@ -52,93 +52,93 @@ sections: [
   l.length
 ],
 renderRow: function(e) {
-  let u, E, T, {
-      section: p,
-      row: _
+  let u, T, p, {
+      section: N,
+      row: S
     } = e,
-    S = !1;
-  switch (p) {
+    x = !1;
+  switch (N) {
     case y.m$.ROLES:
-      var x;
-      T = (E = s[_]).rowType === y.aC.ROLE && (null === (x = E.tags) || void 0 === x ? void 0 : x.guild_connections) === null ? (0, n.jsx)(g.Z, {
+      var f;
+      p = (T = s[S]).rowType === y.aC.ROLE && (null === (f = T.tags) || void 0 === f ? void 0 : f.guild_connections) === null ? (0, n.jsx)(E.Z, {
         className: B.shield,
-        color: E.colorString,
+        color: T.colorString,
         size: 20
       }) : (0, n.jsx)(o.ShieldUserIcon, {
         size: 'custom',
         className: B.shield,
-        color: E.colorString,
+        color: T.colorString,
         height: 20
       }), u = (0, n.jsxs)(n.Fragment, {
         children: [
           (0, n.jsx)('div', {
             className: B.rowHeight,
-            children: T
+            children: p
           }),
           (0, n.jsx)(o.Text, {
             variant: 'text-sm/normal',
             className: B.rowLabel,
-            color: E.disabled ? 'text-muted' : 'text-normal',
-            children: E.name
+            color: T.disabled ? 'text-muted' : 'text-normal',
+            children: T.name
           })
         ]
-      }), S = E.disabled;
+      }), x = T.disabled;
       break;
     case y.m$.MEMBERS:
-      E = l[_], u = (0, n.jsxs)(n.Fragment, {
+      T = l[S], u = (0, n.jsxs)(n.Fragment, {
         children: [
           (0, n.jsx)(o.Avatar, {
-            src: E.avatarURL,
+            src: T.avatarURL,
             size: o.AvatarSizes.SIZE_24,
             'aria-hidden': !0
           }),
           (0, n.jsx)(o.Text, {
             className: B.rowLabel,
             variant: 'text-sm/normal',
-            children: E.name
+            children: T.name
           }),
-          E.bot && (0, n.jsx)(R.Z, {
-            verified: E.verifiedBot,
+          T.bot && (0, n.jsx)(g.Z, {
+            verified: T.verifiedBot,
             className: B.rowBotTag
           }),
-          null != E.nickname && (0, n.jsx)(o.Text, {
+          null != T.nickname && (0, n.jsx)(o.Text, {
             color: 'text-muted',
             className: B.rowLabelSubText,
             variant: 'text-sm/normal',
-            children: E.username
+            children: T.username
           })
         ]
-      }), S = E.disabled;
+      }), x = T.disabled;
       break;
     default:
-      E = null;
+      T = null;
   }
-  if (null == E)
+  if (null == T)
     return null;
-  let f = !S && null == a && null != E.id;
-  return (0, n.jsxs)(Z.Z, {
-    justify: Z.Z.Justify.BETWEEN,
-    align: Z.Z.Align.CENTER,
+  let C = !x && null == a && null != T.id;
+  return (0, n.jsxs)(v.Z, {
+    justify: v.Z.Justify.BETWEEN,
+    align: v.Z.Align.CENTER,
     className: B.memberRow,
     children: [
-      (0, n.jsx)(Z.Z, {
-        justify: Z.Z.Justify.START,
-        align: Z.Z.Align.CENTER,
+      (0, n.jsx)(v.Z, {
+        justify: v.Z.Justify.START,
+        align: v.Z.Align.CENTER,
         className: B.__invalid_memberRowBody,
         children: u
       }),
       (0, n.jsx)(o.Text, {
         color: 'text-muted',
         variant: 'text-xs/normal',
-        children: L.zB(E.rowType)
+        children: L.zB(T.rowType)
       }),
-      E.rowType !== y.aC.EMPTY_STATE && (0, n.jsx)(o.TooltipContainer, {
+      T.rowType !== y.aC.EMPTY_STATE && (0, n.jsx)(o.TooltipContainer, {
         className: B.removeIconContainer,
-        text: null != a ? a : r(E.rowType, E.disabled),
+        text: null != a ? a : r(T.rowType, T.disabled),
         children: (0, n.jsx)(o.Clickable, {
           onClick: () => {
             var e, s, n;
-            return f && null != E && (e = E.id, s = E.name, n = E.rowType, void d.Z.show({
+            return C && null != T && (e = T.id, s = T.name, n = T.rowType, void d.Z.show({
               title: F.Z.Messages.SETTINGS_PERMISSIONS_DELETE_TITLE,
               body: F.Z.Messages.SETTINGS_PERMISSIONS_DELETE_BODY.format({
                 name: s
@@ -146,26 +146,26 @@ renderRow: function(e) {
               cancelText: F.Z.Messages.CANCEL,
               onConfirm: () => function(e, s) {
                 if (t.isGuildStageVoice()) {
-                  let n = (0, N._L)(e, s === y.aC.ROLE ? m.BN.ROLE : m.BN.MEMBER, t);
-                  (0, N.Os)(n) ? c.Z.clearPermissionOverwrite(t.id, n.id): (0, h.hw)(t.id, [n]);
+                  let n = (0, _._L)(e, s === y.aC.ROLE ? m.BN.ROLE : m.BN.MEMBER, t);
+                  (0, _.Os)(n) ? c.Z.clearPermissionOverwrite(t.id, n.id): (0, h.hw)(t.id, [n]);
                 } else
                   c.Z.clearPermissionOverwrite(t.id, e);
               }(e, n)
             }));
           },
-          'aria-disabled': !f,
+          'aria-disabled': !C,
           'aria-label': F.Z.Messages.REMOVE,
           children: (0, n.jsx)(o.CircleXIcon, {
             size: 'md',
             color: 'currentColor',
             className: i()(B.removeIcon, {
-              [B.disabledRemoveIcon]: S || a
+              [B.disabledRemoveIcon]: x || a
             })
           })
         })
       })
     ]
-  }, E.id);
+  }, T.id);
 },
 rowHeight: 40,
 renderSection: function(e) {
@@ -192,7 +192,7 @@ function H(e) {
 guild: t,
 channel: l,
 permissionUpdates: a
-  } = e, d = (0, r.e7)([C.Z], () => C.Z.getRoles(t.id)), c = L.RZ(t, d, l, _.yP, a), u = (0, r.e7)([f.ZP], () => L.cR(f.ZP.getMemberIds(t.id), l, t, _.yP, a)), h = (0, N.nG)(l.id);
+  } = e, d = (0, r.e7)([M.Z], () => M.Z.getRoles(t.id)), c = L.RZ(t, d, l, S.yP, a), u = (0, r.e7)([I.ZP], () => L.cR(I.ZP.getMemberIds(t.id), l, t, S.yP, a)), h = (0, _.nG)(l.id);
 
   function m() {
 (0, o.openModalLazy)(async () => {
@@ -208,7 +208,7 @@ permissionUpdates: a
   return (0, n.jsxs)('div', {
 className: i()(B.settingCard, B.active),
 children: [
-  (0, n.jsx)(j.Z, {
+  (0, n.jsx)(b.Z, {
     label: F.Z.Messages.CHANNEL_PERMISSIONS_MODERATOR_TITLE,
     description: F.Z.Messages.CHANNEL_PERMISSIONS_MODERATOR_DESCRIPTION,
     icon: (0, n.jsx)(o.StageIcon, {
@@ -223,9 +223,9 @@ children: [
   (0, n.jsxs)('div', {
     className: B.cardFolder,
     children: [
-      (0, n.jsxs)(Z.Z, {
-        justify: Z.Z.Justify.BETWEEN,
-        align: Z.Z.Align.CENTER,
+      (0, n.jsxs)(v.Z, {
+        justify: v.Z.Justify.BETWEEN,
+        align: v.Z.Align.CENTER,
         className: B.folderHeader,
         children: [
           (0, n.jsx)(o.FormTitle, {
@@ -252,7 +252,7 @@ children: [
         roles: c,
         members: u,
         disabledReason: h ? null : F.Z.Messages.CHANNEL_PERMISSIONS_NOT_MODERATOR,
-        getRemoveTooltipHint: S.kk
+        getRemoveTooltipHint: x.kk
       })
     ]
   })
@@ -267,11 +267,11 @@ channel: l,
 isPrivateGuildChannel: a,
 roles: d,
 members: c
-  } = e, u = (0, r.e7)([I.Z], () => I.Z.can(P.Pl.ADMINISTRATOR, t)), h = A.Uu(P.Pl.VIEW_CHANNEL, t), m = A.Uu(P.Pl.ADMINISTRATOR, t);
+  } = e, u = (0, r.e7)([R.Z], () => R.Z.can(P.Pl.ADMINISTRATOR, t)), h = A.Uu(P.Pl.VIEW_CHANNEL, t), m = A.Uu(P.Pl.ADMINISTRATOR, t);
   async function g() {
 let e = l.accessPermissions,
-  i = M.default.getCurrentUser();
-if (!a && null != await (0, T.T)(t.id, l.id)) {
+  i = Z.default.getCurrentUser();
+if (!a && null != await (0, p.T)(t.id, l.id)) {
   (0, o.openModalLazy)(async () => {
     let {
       ConfirmModal: e
@@ -285,7 +285,7 @@ if (!a && null != await (0, T.T)(t.id, l.id)) {
         variant: 'text-md/normal',
         children: F.Z.Messages.DESIGNATE_OTHER_CHANNEL_ONBOARDING_PRIVATE.format({
           onClick: () => {
-            p.Z.open(t.id, w.pNK.ONBOARDING), s.onClose();
+            N.Z.open(t.id, w.pNK.ONBOARDING), s.onClose();
           }
         })
       })
@@ -305,7 +305,7 @@ className: i()(B.settingCard, {
   [B.active]: a
 }),
 children: [
-  (0, n.jsx)(j.Z, {
+  (0, n.jsx)(b.Z, {
     description: E.subtitle,
     icon: (0, n.jsx)(o.LockIcon, {
       size: 'custom',
@@ -324,23 +324,23 @@ children: [
     children: [
       m && (0, n.jsx)('div', {
         className: B.adminWarning,
-        children: (0, n.jsx)(v.Z, {
-          messageType: v.Q.WARNING,
+        children: (0, n.jsx)(f.Z, {
+          messageType: f.Q.WARNING,
           children: F.Z.Messages.CHANNEL_PERMISSIONS_EVERYONE_IS_ADMIN_WARNING
         })
       }),
       !h && !m && !a && (0, n.jsx)('div', {
         className: B.adminWarning,
-        children: (0, n.jsx)(v.Z, {
-          messageType: v.Q.WARNING,
+        children: (0, n.jsx)(f.Z, {
+          messageType: f.Q.WARNING,
           children: F.Z.Messages.CHANNEL_PERMISSIONS_EVERYONE_CAN_NOT_VIEW_WARNING
         })
       }),
       a && (0, n.jsxs)(n.Fragment, {
         children: [
-          (0, n.jsxs)(Z.Z, {
-            justify: Z.Z.Justify.BETWEEN,
-            align: Z.Z.Align.CENTER,
+          (0, n.jsxs)(v.Z, {
+            justify: v.Z.Justify.BETWEEN,
+            align: v.Z.Align.CENTER,
             className: B.folderHeader,
             children: [
               (0, n.jsx)(o.FormTitle, {
@@ -399,38 +399,38 @@ children: [
   });
 }
 t.Z = r.ZP.connectStores([
-  x.Z,
-  I.Z,
-  f.ZP,
-  C.Z
+  C.Z,
+  R.Z,
+  I.ZP,
+  M.Z
 ], () => {
   let e;
-  let t = x.Z.channel,
-s = x.Z.category,
+  let t = C.Z.channel,
+s = C.Z.category,
 n = [],
 l = [],
 a = {},
 i = !1;
   if (null != t) {
-e = C.Z.getGuild(t.getGuildId());
-let s = f.ZP.getMemberIds(null == e ? void 0 : e.id);
+e = M.Z.getGuild(t.getGuildId());
+let s = I.ZP.getMemberIds(null == e ? void 0 : e.id);
 if (null != e) {
-  let r = C.Z.getRoles(e.id);
-  a = x.Z.editedPermissionIds.reduce((e, t) => {
-    let s = x.Z.getPermissionOverwrite(t);
+  let r = M.Z.getRoles(e.id);
+  a = C.Z.editedPermissionIds.reduce((e, t) => {
+    let s = C.Z.getPermissionOverwrite(t);
     return null != s && (e[t] = s), e;
   }, {}), n = L.kA(e, r, t, t.accessPermissions, a), l = L.cR(s, t, e, t.accessPermissions, a), i = L.Yk(t, a);
 }
   }
   return {
-canSyncChannel: null != s && I.Z.can(P.Pl.MANAGE_ROLES, s),
+canSyncChannel: null != s && R.Z.can(P.Pl.MANAGE_ROLES, s),
 category: s,
 channel: t,
 filteredMembers: l,
 filteredRoles: n,
 guild: e,
 isPrivateGuildChannel: i,
-locked: x.Z.locked,
+locked: C.Z.locked,
 permissionUpdates: a
   };
 })(function(e) {
@@ -444,12 +444,12 @@ guild: c,
 isPrivateGuildChannel: h,
 locked: m,
 permissionUpdates: g
-  } = e, [T, p] = l.useState(!A.Uu(P.Pl.SEND_MESSAGES, i));
+  } = e, [E, p] = l.useState(!A.Uu(P.Pl.SEND_MESSAGES, i));
   if (null == i || null == c)
 return null;
 
   function N() {
-L.$e(i, P.Pl.SEND_MESSAGES, T), p(!T);
+L.$e(i, P.Pl.SEND_MESSAGES, E), p(!E);
   }
 
   function _() {
@@ -468,7 +468,7 @@ if (null != a)
         } = a, t = {
           ...a.permissionOverwrites
         };
-        null != e && null == t[e] && (t[e] = A.we(e)), await (0, E.u)(i, t[e].deny, t[e].allow) && (0, u.wk)(i.id, {
+        null != e && null == t[e] && (t[e] = A.we(e)), await (0, T.u)(i, t[e].deny, t[e].allow) && (0, u.wk)(i.id, {
           permissionOverwrites: Object.values(t)
         });
       }
@@ -516,7 +516,7 @@ children: [
     members: r
   }),
   !1,
-  (0, n.jsx)(b.Z, {})
+  (0, n.jsx)(j.Z, {})
 ]
   });
 });

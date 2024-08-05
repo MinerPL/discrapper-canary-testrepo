@@ -1,6 +1,6 @@
 n.d(t, {
   e: function() {
-return o;
+return s;
   }
 });
 var r = n(708644);
@@ -20,16 +20,16 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-var o = function() {
+var s = function() {
   var e, t, n;
 
-  function o(e) {
+  function s(e) {
 ! function(e, t) {
   if (!(e instanceof t))
     throw TypeError('Cannot call a class as a function');
-}(this, o), a(this, 'entered', []), a(this, 'isNodeInDocument', void 0), this.isNodeInDocument = e;
+}(this, s), a(this, 'entered', []), a(this, 'isNodeInDocument', void 0), this.isNodeInDocument = e;
   }
-  return e = o, t = [{
+  return e = s, t = [{
   key: 'enter',
   value: function(e) {
     var t = this,
@@ -52,5 +52,5 @@ var o = function() {
     this.entered = [];
   }
 }
-  ], i(e.prototype, t), o;
+  ], i(e.prototype, t), s;
 }();

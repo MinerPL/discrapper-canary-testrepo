@@ -14,7 +14,7 @@ e.exports = {
   unreadMuted: 'unreadMuted_f0a004',
   hidden: 'hidden_f0a004',
   badge: 'badge_f0a004',
-  mockMessage: 'mockMessage_f0a004',
   mockMessageDisabled: 'mockMessageDisabled_f0a004',
+  mockMessage: 'mockMessage_f0a004',
   mockMessageAvatar: 'mockMessageAvatar_f0a004'
 };

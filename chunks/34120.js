@@ -6,8 +6,8 @@ return f;
 var r = n(717029),
   i = n(25487),
   a = n(846042),
-  o = n(794914),
-  s = n(780603);
+  s = n(794914),
+  o = n(780603);
 
 function l(e) {
   return (l = 'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator ? function(e) {
@@ -128,7 +128,7 @@ return E(d(e = p.call.apply(p, [this].concat(n))), 'priority', 100), E(d(e), 'in
 {
   key: 'set',
   value: function(e, t, n, r) {
-    return (0, s.Z)((0, o.Z)(e, n, r), r);
+    return (0, o.Z)((0, s.Z)(e, n, r), r);
   }
 }
   ], u(r.prototype, f), m;

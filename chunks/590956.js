@@ -9,8 +9,8 @@ return T;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(772848),
+  s = n.n(a),
+  o = n(772848),
   l = n(481060),
   u = n(596454),
   c = n(367907),
@@ -27,7 +27,7 @@ var t;
 let {
   node: n,
   tooltipPosition: a = f.b_.position,
-  enableClick: s = !0
+  enableClick: o = !0
 } = e, c = null === (t = n.originalMatch) || void 0 === t ? void 0 : t[0], d = null != c ? c : n.name, [_, h] = i.useState(!1), p = e => (0, r.jsx)(u.Z, {
   ...e,
   emojiName: n.name,
@@ -36,13 +36,13 @@ let {
   alt: c,
   animated: !1
 }), m = e => (0, r.jsx)(l.Tooltip, {
-  text: (0, f.Y)(n.name, s),
+  text: (0, f.Y)(n.name, o),
   'aria-label': d,
   ...f.b_,
   position: a,
   shouldShow: !_,
   onTooltipShow: () => {
-    s && S({
+    o && S({
       emojiNode: n,
       isCustomEmoji: !1
     });
@@ -54,13 +54,13 @@ let {
       var n;
       h(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t);
     },
-    className: o()(I.emojiContainer, {
-      [I.emojiContainerClickable]: s
+    className: s()(I.emojiContainer, {
+      [I.emojiContainerClickable]: o
     }),
     children: p(t)
   })
 });
-return s ? (0, r.jsx)(l.Popout, {
+return o ? (0, r.jsx)(l.Popout, {
   animation: l.Popout.Animation.TRANSLATE,
   align: 'center',
   autoInvert: !0,
@@ -92,7 +92,7 @@ let {
     animated: t.animated,
     isInteracting: n
   });
-}, R = (0, s.Z)(), C = e => (0, r.jsx)(l.Tooltip, {
+}, R = (0, o.Z)(), C = e => (0, r.jsx)(l.Tooltip, {
   text: (0, f.Y)(t.name, c),
   'aria-label': t.name,
   ...f.b_,
@@ -111,17 +111,17 @@ let {
       var t;
       null == e || null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
     },
-    onClick: t => {
+    onClick: c ? t => {
       var n;
       A(!1), v(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t);
-    },
+    } : void 0,
     onMouseLeave: () => {
       g && (_.default.track(h.rMx.CLOSE_POPOUT, {
         nonce: R
       }), A(!1));
     },
     tag: 'span',
-    className: o()(I.emojiContainer, {
+    className: s()(I.emojiContainer, {
       [I.emojiContainerClickable]: c
     }),
     children: O(t)

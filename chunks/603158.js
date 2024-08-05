@@ -18,17 +18,17 @@ let r = {
 '-': '-',
 ' ': ' '
   },
-  o = {
+  s = {
 '\u200B': '',
 '‌': '',
 '‍': '',
 '\u200E': '',
 '\uFEFF': ''
   },
-  s = {
+  o = {
 ...a,
 ...i,
-...o,
+...s,
 ...r
   };
 
@@ -36,7 +36,7 @@ function l(e) {
   let t = '';
   for (let n = 0; n < e.length; n++) {
 let r = e[n];
-null != s[r] ? t += s[r] : /[\p{Pd}\p{Pc}\p{Po}]/gu.test(r) ? t += ' ' : t += r;
+null != o[r] ? t += o[r] : /[\p{Pd}\p{Pc}\p{Po}]/gu.test(r) ? t += ' ' : t += r;
   }
   return t.toLowerCase();
 }

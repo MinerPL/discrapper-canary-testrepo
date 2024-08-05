@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
   a = n(231757),
-  o = n(553795),
-  s = n(915863),
+  s = n(553795),
+  o = n(915863),
   l = n(689938),
   u = n(451016);
 
@@ -20,7 +20,7 @@ look: c,
 onAction: d,
 Icon: _
   } = e;
-  if ((0, i.e7)([o.Z], () => o.Z.getAccounts().some(e => e.type === t.type)))
+  if ((0, i.e7)([s.Z], () => s.Z.getAccounts().some(e => e.type === t.type)))
 return null;
   let E = null != _ ? (0, r.jsx)(_, {
 className: u.platformIcon
@@ -29,7 +29,7 @@ alt: '',
 className: u.platformIcon,
 src: t.icon.whiteSVG
   });
-  return (0, r.jsx)(s.Z, {
+  return (0, r.jsx)(o.Z, {
 onClick: () => {
   null == d || d(), (0, a.Z)({
     platformType: t.type,

@@ -1,84 +1,70 @@
 n.d(t, {
   n: function() {
-return p;
+return m;
   },
   t: function() {
-return u;
+return p;
   }
 }), n(47120);
 var s = n(735250),
   o = n(470079),
   r = n(338545),
   a = n(442837),
+  l = n(481060),
   i = n(393238),
-  l = n(110924),
-  c = n(607070);
-let d = o.createContext({
+  c = n(110924),
+  d = n(607070);
+let u = o.createContext({
   springConfig: {},
-  onHeightChange: () => {},
   isExpanded: !1
 });
 
-function u(e) {
+function p(e) {
   let t = o.useMemo(() => ({
 springConfig: e.springConfig,
-isExpanded: e.isExpanded,
-onHeightChange: e.onHeightChange
+isExpanded: e.isExpanded
   }), [
 e.springConfig,
-e.onHeightChange,
 e.isExpanded
   ]);
-  return (0, s.jsx)(d.Provider, {
+  return (0, s.jsx)(u.Provider, {
 value: t,
 children: e.children
   });
 }
 
-function p(e) {
+function m(e) {
   var t;
   let {
 children: n
   } = e, {
-springConfig: u,
-isExpanded: p,
-onHeightChange: x
-  } = o.useContext(d), m = (0, a.e7)([c.Z], () => c.Z.useReducedMotion), {
+springConfig: p,
+isExpanded: m
+  } = o.useContext(u), x = (0, a.e7)([d.Z], () => d.Z.useReducedMotion), {
 ref: g,
-height: C = null
-  } = (0, i.Z)(), f = null !== (t = (0, l.Z)(C)) && void 0 !== t ? t : null, [{
+height: f = null
+  } = (0, i.Z)(), C = null !== (t = (0, c.Z)(f)) && void 0 !== t ? t : null, [{
 height: _
-  }, h] = (0, r.useSpring)(() => ({
+  }, h] = (0, l.useSpring)(() => ({
 from: {
   height: 0
 },
-config: u,
-immediate: m
+config: p
   }));
   return o.useLayoutEffect(() => {
-if (null === f || null === C)
-  return;
-let e = C - f;
-0 !== e && x(e);
-  }, [
-C,
-f,
-x,
-p
-  ]), o.useLayoutEffect(() => {
-null !== C && h({
-  height: C,
-  immediate: !p || m || null === f
+null !== f && h({
+  height: f,
+  immediate: !m || x || null === C
 });
   }, [
-C,
+f,
 h,
-p,
 m,
-f
+x,
+C
   ]), (0, s.jsx)(r.animated.div, {
 style: {
-  height: null === f ? 'auto' : _,
+  height: null === C ? 'auto' : _,
   overflow: 'hidden'
 },
 children: (0, s.jsx)('div', {

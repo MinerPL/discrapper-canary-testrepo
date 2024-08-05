@@ -6,7 +6,7 @@ return f;
 return l;
   },
   HP: function() {
-return s;
+return o;
   },
   I5: function() {
 return c;
@@ -33,7 +33,7 @@ return d;
 return E;
   },
   iq: function() {
-return o;
+return s;
   },
   pG: function() {
 return T;
@@ -52,11 +52,11 @@ var r = n(544891),
   i = n(570140);
 n(37234);
 var a = n(981631);
-async function o(e, t) {
+async function s(e, t) {
   let {
 nick: n,
-avatar: o,
-avatarDecoration: s
+avatar: s,
+avatarDecoration: o
   } = t;
   if (null == e)
 throw Error('Need guildId');
@@ -65,9 +65,9 @@ type: 'GUILD_IDENTITY_SETTINGS_SUBMIT'
   });
   let l = {
 nick: n,
-avatar: o,
-avatar_decoration_id: null === s ? null : null == s ? void 0 : s.id,
-avatar_decoration_sku_id: null === s ? null : null == s ? void 0 : s.skuId
+avatar: s,
+avatar_decoration_id: null === o ? null : null == o ? void 0 : o.id,
+avatar_decoration_sku_id: null === o ? null : null == o ? void 0 : o.skuId
   };
   try {
 let t = await r.tn.patch({
@@ -91,7 +91,7 @@ return (null == e ? void 0 : e.username) != null && (e.nick = e.username, delete
   }
 }
 
-function s(e) {
+function o(e) {
   i.Z.dispatch({
 type: 'GUILD_IDENTITY_SETTINGS_SET_GUILD',
 guild: e

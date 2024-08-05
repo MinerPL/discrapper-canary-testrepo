@@ -1,8 +1,8 @@
 n(47120);
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(748780),
   u = n(688851);
 
@@ -73,10 +73,10 @@ if (null == n)
 let {
   left: i,
   width: a,
-  bottom: o,
-  height: s
+  bottom: s,
+  height: o
 } = n.getBoundingClientRect();
-return Math.min(1, Math.max(0, r === _.VOLUME ? (o - t) / s : (e - i) / a));
+return Math.min(1, Math.max(0, r === _.VOLUME ? (s - t) / o : (e - i) / a));
   }
   render() {
 let {
@@ -86,18 +86,18 @@ let {
   sliderClassName: r
 } = this.props, {
   dragging: a,
-  previewWidth: o,
+  previewWidth: s,
   animatedProgress: c
-} = this.state, d = a ? c : o;
+} = this.state, d = a ? c : s;
 return (0, i.jsx)('div', {
-  className: s()(n, t === _.VOLUME ? u.vertical : u.horizontal),
+  className: o()(n, t === _.VOLUME ? u.vertical : u.horizontal),
   children: (0, i.jsx)('div', {
-    className: s()(r, a ? u.mediaBarInteractionDragging : u.mediaBarInteraction, t === _.VOLUME ? u.mediaBarInteractionVolume : null),
+    className: o()(r, a ? u.mediaBarInteractionDragging : u.mediaBarInteraction, t === _.VOLUME ? u.mediaBarInteractionVolume : null),
     onMouseDown: this.handleDragStart,
     onMouseMove: this.handleMouseMove,
     ref: e => this.wrapper = e,
     children: (0, i.jsxs)('div', {
-      className: s()(u.mediaBarWrapper, t === _.VOLUME ? u.mediaBarWrapperVolume : null),
+      className: o()(u.mediaBarWrapper, t === _.VOLUME ? u.mediaBarWrapperVolume : null),
       children: [
         null != e ? e.map((e, t) => {
           let [n, r] = e;
@@ -112,7 +112,7 @@ return (0, i.jsx)('div', {
         t === _.DURATION ? (0, i.jsx)(l.Z.div, {
           className: u.mediaBarPreview,
           style: {
-            width: o.interpolate({
+            width: s.interpolate({
               inputRange: [
                 0,
                 1
@@ -225,20 +225,20 @@ super(...e), c(this, 'state', {
     currentWindow: i
   } = this.props, {
     clientX: a,
-    clientY: o
+    clientY: s
   } = e;
   if (e.preventDefault(), null == this.wrapper)
     return;
   let {
-    left: s,
+    left: o,
     width: l
   } = this.wrapper.getBoundingClientRect();
   this.setState({
     dragging: !0,
-    offsetLeft: s,
+    offsetLeft: o,
     offsetWidth: l
   }, () => {
-    t(r), n(this.calculatePercentage(a, o), r), i.removeEventListener('mouseup', this.handleDragEnd, !1), i.removeEventListener('mousemove', this.handleDragMove, !1), i.addEventListener('mouseup', this.handleDragEnd, !1), i.addEventListener('mousemove', this.handleDragMove, !1);
+    t(r), n(this.calculatePercentage(a, s), r), i.removeEventListener('mouseup', this.handleDragEnd, !1), i.removeEventListener('mousemove', this.handleDragMove, !1), i.addEventListener('mouseup', this.handleDragEnd, !1), i.addEventListener('mousemove', this.handleDragMove, !1);
   });
 }), c(this, 'handleDragEnd', () => {
   let {

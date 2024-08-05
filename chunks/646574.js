@@ -6,8 +6,8 @@ return g;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(338545),
+  s = n.n(a),
+  o = n(338545),
   l = n(442837),
   u = n(704215),
   c = n(481060),
@@ -62,7 +62,7 @@ function g(e) {
 checked: t,
 onClick: n,
 id: a = 'burst-reaction-toggle-button'
-  } = e, g = (0, l.e7)([d.Z], () => d.Z.useReducedMotion), S = E.default.getCurrentUser(), A = null == S || (0, f.I5)(S) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [], [N, v] = (0, _.U)(A), [O, R] = i.useState(!1), [C, y] = (0, s.useSpring)(() => ({})), D = (0, s.animated)(c.SuperReactionIcon);
+  } = e, g = (0, l.e7)([d.Z], () => d.Z.useReducedMotion), S = E.default.getCurrentUser(), A = null == S || (0, f.I5)(S) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [], [N, v] = (0, _.U)(A), [O, R] = i.useState(!1), [C, y] = (0, c.useSpring)(() => ({})), D = (0, o.animated)(c.SuperReactionIcon);
   i.useEffect(() => {
 let e = N === u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
 e && (v(h.L.DISMISS), setTimeout(() => R(e), 200));
@@ -103,7 +103,7 @@ children: [
   }),
   (0, r.jsxs)('label', {
     htmlFor: a,
-    className: o()(m.label, {
+    className: s()(m.label, {
       [m.labelChecked]: t
     }),
     children: [

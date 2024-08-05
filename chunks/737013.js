@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
   a = n(481060),
-  o = n(898531),
-  s = n(314897),
+  s = n(898531),
+  o = n(314897),
   l = n(131951),
   u = n(689938),
   c = n(739873);
@@ -16,8 +16,8 @@ var i = n(442837),
 function d(e) {
   let t = (0, a.useModalContext)(),
 d = (0, i.e7)([l.Z], () => l.Z.isVideoEnabled()),
-_ = (0, i.e7)([s.default], () => s.default.getId() === e),
-E = (0, o.Z)();
+_ = (0, i.e7)([o.default], () => o.default.getId() === e),
+E = (0, s.Z)();
   return (!d || E) && _ ? (0, r.jsx)(a.MenuItem, {
 id: 'change-video-background',
 label: (0, r.jsx)('div', {

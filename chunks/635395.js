@@ -1,5 +1,5 @@
 n(47120);
-var i, s, a = n(470079),
+var i, a, s = n(470079),
   r = n(442837),
   l = n(846027),
   o = n(230711),
@@ -12,9 +12,9 @@ var i, s, a = n(470079),
   I = n(358085),
   m = n(998502),
   g = n(981631);
-(s = i || (i = {})).DEFAULT = 'DEFAULT', s.UNREAD = 'UNREAD', s.CONNECTED = 'CONNECTED', s.SPEAKING = 'SPEAKING', s.MUTED = 'MUTED', s.DEAFENED = 'DEAFENED';
+(a = i || (i = {})).DEFAULT = 'DEFAULT', a.UNREAD = 'UNREAD', a.CONNECTED = 'CONNECTED', a.SPEAKING = 'SPEAKING', a.MUTED = 'MUTED', a.DEAFENED = 'DEAFENED';
 let p = (0, I.isMac)() ? null : 'DEFAULT';
-class T extends a.PureComponent {
+class T extends s.PureComponent {
   componentDidMount() {
 m.ZP.setSystemTrayIcon(this.getIcon());
   }
@@ -35,9 +35,9 @@ super(...e), t = this, n = 'getIcon', i = () => {
     muted: t,
     speaking: n,
     connected: i,
-    unread: s
-  } = this.props, a = p;
-  return (0, I.isMac)() && !i ? a : (0, I.isLinux)() || !i ? (s && (a = 'UNREAD'), a) : a = e ? 'DEAFENED' : t ? 'MUTED' : n ? 'SPEAKING' : 'CONNECTED';
+    unread: a
+  } = this.props, s = p;
+  return (0, I.isMac)() && !i ? s : (0, I.isLinux)() || !i ? (a && (s = 'UNREAD'), s) : s = e ? 'DEAFENED' : t ? 'MUTED' : n ? 'SPEAKING' : 'CONNECTED';
 }, n in t ? Object.defineProperty(t, n, {
   value: i,
   enumerable: !0,

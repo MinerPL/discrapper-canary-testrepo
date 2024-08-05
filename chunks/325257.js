@@ -44,13 +44,13 @@ let {
   n.e('33053'),
   n.e('50654'),
   n.e('7654'),
-  n.e('73331'),
+  n.e('67847'),
   n.e('44156'),
   n.e('71700'),
   n.e('85552'),
   n.e('58227'),
   n.e('10926'),
-  n.e('55400'),
+  n.e('89622'),
   n.e('33213'),
   n.e('61297')
 ]).then(n.bind(n, 545135));
@@ -67,12 +67,12 @@ guildNode: P,
 setRef: j,
 onDragStart: D,
 onDragEnd: U,
-route: w,
-guild: G,
+route: G,
+guild: w,
 animatable: k,
 selected: B = !1,
-unread: V = !1,
-mediaState: H,
+unread: H = !1,
+mediaState: V,
 unavailable: F = !1,
 badge: W = 0,
 contextMenu: Y = O,
@@ -83,7 +83,7 @@ guildJoinRequestStatus: Q
   } = e, {
 id: J,
 parentId: X
-  } = P, $ = null !== (t = e.upperBadge) && void 0 !== t ? t : F ? (0, L.Ny)() : null != H ? (0, L.Or)(H) : void 0, ee = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
+  } = P, $ = null !== (t = e.upperBadge) && void 0 !== t ? t : F ? (0, L.Ny)() : null != V ? (0, L.Or)(V) : void 0, ee = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
   null == ee && W > 0 ? ee = null !== (r = (0, L.Ne)(W)) && void 0 !== r ? r : void 0 : null == ee && null != Q && (ee = null !== (p = (0, L.jt)({
 guildJoinRequestStatus: Q
   })) && void 0 !== p ? p : void 0);
@@ -115,8 +115,8 @@ es = !K && er,
 [eh] = l.useState(() => new u.sW(70, () => ed(!0)));
   l.useEffect(() => () => eh.cancel(), [eh]);
   let ep = l.useCallback(() => {
-  if (null != w) {
-    (0, m.uL)(w, {
+  if (null != G) {
+    (0, m.uL)(G, {
       state: R
     });
     return;
@@ -126,25 +126,25 @@ es = !K && er,
   });
 }, [
   J,
-  w
+  G
 ]),
 e_ = l.useCallback(() => {
-  if (null != w || null == G || F || !q)
+  if (null != G || null == w || F || !q)
     return;
-  let e = (0, f.V)(G.id);
+  let e = (0, f.V)(w.id);
   if (null != e)
-    h.Z.preload(G.id, e);
+    h.Z.preload(w.id, e);
 }, [
-  w,
   G,
+  w,
   F,
   q
 ]),
 ef = (0, c.e7)([C.ZP], () => C.ZP.isCurrentUserGuest(J)),
 em = l.useCallback(e => {
-  null != G && !ef && Y(e, G);
+  null != w && !ef && Y(e, w);
 }, [
-  G,
+  w,
   Y,
   ef
 ]),
@@ -167,10 +167,10 @@ eI = l.useCallback(e => {
   J,
   j
 ]);
-  if (null == G)
+  if (null == w)
 return null;
   let eE = eu || eo ? (0, i.jsx)(x.Z, {
-  guild: G,
+  guild: w,
   show: eu,
   active: B,
   onAnimationStart: function() {
@@ -181,10 +181,10 @@ return null;
   }
 }) : (0, i.jsx)(d.NavItem, {
   ariaLabel: b.Z.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
-    guildName: G.toString(),
+    guildName: w.toString(),
     mentions: W
   }),
-  name: G.toString(),
+  name: w.toString(),
   onClick: ep,
   onMouseEnter: function() {
     K || ea(!0);
@@ -195,7 +195,7 @@ return null;
   onMouseDown: e_,
   onContextMenu: em,
   onKeyDown: eg,
-  icon: G.getIconURL(96, es && k),
+  icon: w.getIconURL(96, es && k),
   selected: B || es,
   ...el,
   role: 'treeitem'
@@ -204,7 +204,7 @@ eN = en ? (0, i.jsx)(S.OG, {
   children: (0, i.jsx)(Z.Z, {})
 }) : (0, i.jsx)('div', {
   ref: z ? ei : void 0,
-  'data-dnd-name': G.toString(),
+  'data-dnd-name': w.toString(),
   className: a()(M.blobContainer, {
     [M.sorting]: K,
     [M.wobble]: eu,
@@ -224,17 +224,17 @@ children: [
   (0, i.jsx)(N.Z, {
     hovered: !en && es,
     selected: !en && B,
-    unread: !en && V,
+    unread: !en && H,
     className: M.pill
   }),
   (0, i.jsx)(v.Z, {
-    guild: G,
+    guild: w,
     disabled: K,
     isDragging: en,
     children: eN
   }),
   z ? (0, i.jsx)(S.ZP, {
-    name: G.name,
+    name: w.name,
     targetNode: P,
     onDragOverChanged: eC
   }) : null

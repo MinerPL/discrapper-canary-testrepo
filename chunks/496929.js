@@ -6,15 +6,15 @@ return u;
 return l;
   },
   yD: function() {
-return s;
+return o;
   }
 });
 var r = n(544891),
   i = n(570140),
   a = n(73346),
-  o = n(981631);
+  s = n(981631);
 
-function s(e) {
+function o(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   return i.Z.wait(() => {
 i.Z.dispatch({
@@ -22,7 +22,7 @@ i.Z.dispatch({
   applicationId: e
 });
   }), r.tn.get({
-url: o.ANM.ENTITLEMENTS_FOR_APPLICATION(e),
+url: s.ANM.ENTITLEMENTS_FOR_APPLICATION(e),
 oldFormErrors: !0,
 query: {
   exclude_consumed: t
@@ -49,7 +49,7 @@ type: 'ENTITLEMENTS_FETCH_FOR_USER_START'
   });
   try {
 let e = await r.tn.get({
-  url: o.ANM.ENTITLEMENTS_FOR_USER,
+  url: s.ANM.ENTITLEMENTS_FOR_USER,
   query: {
     with_sku: t,
     with_application: n,
@@ -72,7 +72,7 @@ type: 'ENTITLEMENTS_GIFTABLE_FETCH'
   });
   try {
 let e = await (0, a.Kb)({
-  url: o.ANM.ENTITLEMENTS_GIFTABLE
+  url: s.ANM.ENTITLEMENTS_GIFTABLE
 });
 i.Z.dispatch({
   type: 'ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS',

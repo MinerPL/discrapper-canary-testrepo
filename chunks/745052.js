@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(91192),
   o = n(286379),
   c = n(442837),
@@ -17,13 +17,13 @@ var i = n(735250),
   p = n(209613),
   T = n(325708),
   S = n(320149),
-  C = n(252618),
-  f = n(605236),
+  f = n(252618),
+  C = n(605236),
   N = n(243778),
   A = n(984370),
-  Z = n(797614),
-  L = n(359110),
-  v = n(6025),
+  v = n(797614),
+  Z = n(359110),
+  L = n(6025),
   O = n(897473),
   R = n(108427),
   x = n(970731),
@@ -55,24 +55,24 @@ var i = n(735250),
   en = n(757833),
   ei = n(489919);
 
-function es() {
-  let e = s.useRef(null),
+function ea() {
+  let e = a.useRef(null),
 t = (0, Y.q)(),
 n = (0, W.Z)(),
-a = (0, H.K)(),
+s = (0, H.K)(),
 c = (0, m.N)(),
 d = n.length > 0 ? null == n ? void 0 : n[0].channel.id : null,
 _ = (0, G.e)({
   location: 'message-request-page-web'
 });
-  s.useEffect(() => {
+  a.useEffect(() => {
 if (!!_ && null != d)
   (0, h.ES)(d);
   }, [
 d,
 _
   ]);
-  let E = s.useCallback(() => {
+  let E = a.useCallback(() => {
   (0, u.showToast)((0, u.createToast)(et.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE));
 }, []),
 {
@@ -84,17 +84,17 @@ g = (0, p.Z)('message-requests-list'),
 {
   channelId: T
 } = (0, F._)(),
-S = s.useCallback(() => {
+S = a.useCallback(() => {
   I(n.map(e => e.channel.id));
 }, [
   n,
   I
 ]),
-C = s.useCallback(e => {
-  var t, s;
+f = a.useCallback(e => {
+  var t, a;
   let {
     row: l
-  } = e, o = n[l], c = null === (s = n[l + 1]) || void 0 === s ? void 0 : null === (t = s.channel) || void 0 === t ? void 0 : t.id, d = o.channel.id;
+  } = e, o = n[l], c = null === (a = n[l + 1]) || void 0 === a ? void 0 : null === (t = a.channel) || void 0 === t ? void 0 : t.id, d = o.channel.id;
   return (0, i.jsx)(q.Z, {
     index: l,
     className: r()({
@@ -103,14 +103,14 @@ C = s.useCallback(e => {
     }),
     channel: o.channel,
     user: o.user,
-    hasSingleMessageRequest: a
+    hasSingleMessageRequest: s
   }, d);
 }, [
-  a,
+  s,
   n,
   T
 ]),
-f = s.useCallback(() => (0, i.jsxs)(y.Z, {
+C = a.useCallback(() => (0, i.jsxs)(y.Z, {
   className: en.sectionTitle,
   children: [
     t > 0 ? et.Z.Messages.MESSAGE_REQUESTS_PAGE_TITLE_WITH_COUNT.format({
@@ -142,7 +142,7 @@ f = s.useCallback(() => (0, i.jsxs)(y.Z, {
   S,
   c
 ]);
-  return (n.length !== t && Z.Z.increment({
+  return (n.length !== t && v.Z.increment({
 name: o.V.MESSAGE_REQUEST_COUNT_DRIFT
   }), 0 === n.length) ? (0, i.jsx)(K.Z, {
 section: X.pS.REQUESTS
@@ -151,24 +151,24 @@ navigator: g,
 children: (0, i.jsx)(l.SJ, {
   children: t => {
     let {
-      ref: s,
-      role: a,
+      ref: a,
+      role: s,
       ...r
     } = t;
     return (0, i.jsx)(u.List, {
       className: en.list,
-      innerRole: a,
+      innerRole: s,
       innerAriaLabel: et.Z.Messages.MESSAGE_REQUESTS,
       ref: t => {
         var n;
-        e.current = t, s.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null;
+        e.current = t, a.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null;
       },
       paddingTop: 24,
       paddingBottom: 24,
       sectionHeight: X.oi,
       rowHeight: X.WN,
-      renderSection: f,
-      renderRow: C,
+      renderSection: C,
+      renderRow: f,
       sections: [n.length],
       chunkSize: 30,
       fade: !0,
@@ -179,12 +179,12 @@ children: (0, i.jsx)(l.SJ, {
   });
 }
 
-function ea(e) {
+function es(e) {
   let {
 pageWidth: t,
 onSidebarResize: n
-  } = e, s = (0, c.e7)([P.ZP], () => P.ZP.getSidebarState(P.uZ)), a = (0, c.e7)([M.Z], () => M.Z.getChannel(null == s ? void 0 : s.channelId));
-  if (null == s || s.type !== O.tI.VIEW_MESSAGE_REQUEST || null == a || !a.isPrivate())
+  } = e, a = (0, c.e7)([P.ZP], () => P.ZP.getSidebarState(P.uZ)), s = (0, c.e7)([M.Z], () => M.Z.getChannel(null == a ? void 0 : a.channelId));
+  if (null == a || a.type !== O.tI.VIEW_MESSAGE_REQUEST || null == s || !s.isPrivate())
 return null;
   let r = t - J.R7I;
   return (0, i.jsx)(T.Z, {
@@ -192,7 +192,7 @@ sidebarType: T.y.MessageRequestSidebar,
 maxWidth: r,
 onWidthChange: n,
 children: (0, i.jsx)(S.Z, {
-  channel: a,
+  channel: s,
   baseChannelId: P.uZ
 })
   });
@@ -215,16 +215,16 @@ return (0, i.jsx)(x.ZP, {
   el = e => {
 let t = (0, B.Z)(),
   n = () => D.Z.hasLayers() || (0, u.hasAnyModalOpen)(),
-  a = (0, c.e7)([g.Z], () => g.Z.useReducedMotion);
-return s.useEffect(() => {
-  (0, f.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
+  s = (0, c.e7)([g.Z], () => g.Z.useReducedMotion);
+return a.useEffect(() => {
+  (0, C.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
 }, []), (0, i.jsx)(N.Z, {
   contentTypes: [d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
-  children: s => {
+  children: a => {
     let {
       visibleContent: r,
       markAsDismissed: l
-    } = s;
+    } = a;
     if (r === d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
       return (0, i.jsx)(u.Popout, {
         renderPopout: () => t ? (0, i.jsx)(er, {
@@ -246,7 +246,7 @@ return s.useEffect(() => {
         }),
         position: 'bottom',
         align: 'center',
-        animation: a ? u.Popout.Animation.NONE : u.Popout.Animation.TRANSLATE,
+        animation: s ? u.Popout.Animation.NONE : u.Popout.Animation.TRANSLATE,
         shouldShow: !n(),
         spacing: 16,
         children: () => e.children
@@ -260,22 +260,22 @@ function eo(e) {
   let {
 section: t
   } = e;
-  return t === X.pS.SPAM ? (0, i.jsx)(Q.Z, {}) : (0, i.jsx)(es, {});
+  return t === X.pS.SPAM ? (0, i.jsx)(Q.Z, {}) : (0, i.jsx)(ea, {});
 }
 let ec = (0, I.Z)(function(e) {
   let {
 width: t
   } = e, n = (0, Y.q)();
-  s.useEffect(() => {
+  a.useEffect(() => {
 _.Y(J.Z5c.MESSAGE_REQUESTS), (0, R.e)('message-requests'), j.default.track(J.rMx.MESSAGE_REQUESTS_VIEWED, {
   num_message_requests: n
-}), Z.Z.increment({
+}), v.Z.increment({
   name: o.V.MESSAGE_REQUEST_VIEW
 });
   }, []);
-  let a = (0, c.e7)([b.Z], () => b.Z.theme),
+  let s = (0, c.e7)([b.Z], () => b.Z.theme),
 l = (0, z.w)(),
-[d, h] = s.useState(!1),
+[d, h] = a.useState(!1),
 E = (0, c.e7)([P.ZP], () => {
   let e = P.ZP.getSidebarState(P.uZ);
   return null != e && e.type === O.tI.VIEW_MESSAGE_REQUEST ? e : null;
@@ -284,16 +284,16 @@ I = null == E ? void 0 : E.channelId,
 m = null != E,
 g = (0, w.T)(I),
 p = (0, k.J)(I);
-  s.useEffect(() => {
-null != I && !g && p && m && ((0, L.Kh)(I), v.Z.closeChannelSidebar(P.uZ));
+  a.useEffect(() => {
+null != I && !g && p && m && ((0, Z.Kh)(I), L.Z.closeChannelSidebar(P.uZ));
   }, [
 I,
 p,
 m,
 g
   ]);
-  let [T, S] = s.useState(X.pS.REQUESTS);
-  return (0, C.Tt)({
+  let [T, S] = a.useState(X.pS.REQUESTS);
+  return (0, f.Tt)({
 location: et.Z.Messages.MESSAGE_REQUESTS
   }), (0, i.jsxs)(i.Fragment, {
 children: [
@@ -304,7 +304,7 @@ children: [
     }),
     children: [
       (0, i.jsxs)(A.Z, {
-        className: (0, U.Q)(a),
+        className: (0, U.Q)(s),
         toolbar: !0,
         children: [
           (0, i.jsx)(A.Z.Icon, {
@@ -350,7 +350,7 @@ children: [
       })
     ]
   }),
-  m && (0, i.jsx)(ea, {
+  m && (0, i.jsx)(es, {
     pageWidth: t,
     onSidebarResize: (e, t) => {
       h(t);

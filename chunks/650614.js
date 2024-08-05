@@ -256,7 +256,7 @@ a,
 r,
 e.REGEXP_MODE
   ];
-  let o = i.contains.concat([
+  let s = i.contains.concat([
 e.C_BLOCK_COMMENT_MODE,
 e.C_LINE_COMMENT_MODE
   ]);
@@ -315,7 +315,7 @@ contains: [
               excludeBegin: !0,
               excludeEnd: !0,
               keywords: n,
-              contains: o
+              contains: s
             }
           ]
         }]
@@ -338,7 +338,7 @@ contains: [
         end: /\)/,
         excludeBegin: !0,
         excludeEnd: !0,
-        contains: o
+        contains: s
       }
     ],
     illegal: /\[|%/

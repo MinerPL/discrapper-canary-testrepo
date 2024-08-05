@@ -12,8 +12,8 @@ return function(t, n, r) {
   i = n(464942);
 n(592093);
 var a = n(217209),
-  o = n(1108),
-  s = n(144613),
+  s = n(1108),
+  o = n(144613),
   l = a.inOut(a.ease),
   u = function(e) {
 function t(e) {
@@ -47,7 +47,7 @@ return ! function(e, t) {
       var i = function() {
         0 === r._duration ? (r._onUpdate(r._toValue), r.__debouncedOnEnd({
           finished: !0
-        })) : (r._startTime = Date.now(), r._animationFrame = o.current(r.onUpdate.bind(r)));
+        })) : (r._startTime = Date.now(), r._animationFrame = s.current(r.onUpdate.bind(r)));
       };
       this._delay ? this._timeout = setTimeout(i, this._delay) : i();
     }
@@ -62,13 +62,13 @@ return ! function(e, t) {
         });
         return;
       }
-      this._onUpdate(this._fromValue + this._easing((e - this._startTime) / this._duration) * (this._toValue - this._fromValue)), this.__active && (this._animationFrame = o.current(this.onUpdate.bind(this)));
+      this._onUpdate(this._fromValue + this._easing((e - this._startTime) / this._duration) * (this._toValue - this._fromValue)), this.__active && (this._animationFrame = s.current(this.onUpdate.bind(this)));
     }
   },
   {
     key: 'stop',
     value: function() {
-      this.__active = !1, clearTimeout(this._timeout), s.current(this._animationFrame), this.__debouncedOnEnd({
+      this.__active = !1, clearTimeout(this._timeout), o.current(this._animationFrame), this.__debouncedOnEnd({
         finished: !1
       });
     }

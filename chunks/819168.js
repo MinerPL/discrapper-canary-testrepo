@@ -1,13 +1,13 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   }
 });
 var r = n(306680),
   i = n(70956),
   a = n(709054);
 
-function o(e) {
+function s(e) {
   if (null == e.threadMetadata)
 return 0;
   let t = e.threadMetadata.autoArchiveDuration * i.Z.Millis.MINUTE;

@@ -7,8 +7,8 @@ throw RangeError('requested too many random bytes');
   var n = i.allocUnsafe(e);
   if (e > 0) {
 if (e > 65536)
-  for (var o = 0; o < e; o += 65536)
-    a.getRandomValues(n.slice(o, o + 65536));
+  for (var s = 0; s < e; s += 65536)
+    a.getRandomValues(n.slice(s, s + 65536));
 else
   a.getRandomValues(n);
   }

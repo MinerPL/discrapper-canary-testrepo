@@ -3,7 +3,7 @@ n.d(t, {
 return d;
   },
   Jt: function() {
-return s;
+return o;
   },
   Un: function() {
 return c;
@@ -25,10 +25,10 @@ return () => (0, r.jsx)('div', {
   }
 });
   },
-  o = () => Promise.resolve();
+  s = () => Promise.resolve();
 
-function s(e) {
-  o = e;
+function o(e) {
+  s = e;
 }
 let l = e => new Promise(t => setTimeout(t, e));
 async function u(e) {
@@ -44,7 +44,7 @@ try {
     throw console.log('Module was found in webpack cache so it has loaded from the network and webpack will not retry'), e;
   if (a >= 50)
     throw e;
-  await l(i), await o(), i = Math.min(5000, 2 * i), a++;
+  await l(i), await s(), i = Math.min(5000, 2 * i), a++;
 }
 }
 
@@ -52,19 +52,19 @@ function c(e) {
   let {
 createPromise: t,
 webpackId: n,
-renderLoader: o,
-name: s,
+renderLoader: s,
+name: o,
 memo: l = !1
   } = e, c = i.lazy(() => u({
 createPromise: t,
 webpackId: n
   })), d = e => (0, r.jsx)(i.Suspense, {
-fallback: null != o ? o() : a()(),
+fallback: null != s ? s() : a()(),
 children: (0, r.jsx)(c, {
   ...e
 })
   });
-  return l && (d = i.memo(d)), d.displayName = 'Suspense('.concat(s || 'Unknown', ')'), d;
+  return l && (d = i.memo(d)), d.displayName = 'Suspense('.concat(o || 'Unknown', ')'), d;
 }
 
 function d(e) {
@@ -72,8 +72,8 @@ function d(e) {
 createPromise: t,
 webpackId: n,
 render: a,
-renderFallback: o
-  } = e, [s, l] = i.useState(null);
+renderFallback: s
+  } = e, [o, l] = i.useState(null);
   return i.useEffect(() => {
 u({
   createPromise: t,
@@ -85,6 +85,6 @@ u({
   return l(t);
 });
   }, []), (0, r.jsx)(r.Fragment, {
-children: null == s ? o() : a(s)
+children: null == o ? s() : a(o)
   });
 }

@@ -10,6 +10,7 @@ e.exports = {
   contentLabel: 'contentLabel_b22bc0',
   interestsCategoryTitle: 'interestsCategoryTitle_b22bc0',
   interestsCategory: 'interestsCategory_b22bc0',
+  utilityTraits: 'utilityTraits_b22bc0',
   languageSelect: 'languageSelect_b22bc0',
   playstyleSelect: 'playstyleSelect_b22bc0',
   playstyleOption: 'playstyleOption_b22bc0',

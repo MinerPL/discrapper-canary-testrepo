@@ -6,13 +6,13 @@ return _;
 return c;
   },
   R5: function() {
-return d;
+return u;
   },
   RJ: function() {
 return E;
   },
   VT: function() {
-return u;
+return d;
   },
   Vb: function() {
 return m;
@@ -28,8 +28,8 @@ return I;
   }
 });
 var i = n(544891),
-  a = n(570140),
-  s = n(199902),
+  s = n(570140),
+  a = n(199902),
   r = n(981631);
 let l = async e => {
   let t = !1;
@@ -43,7 +43,7 @@ t = (await i.tn.get({
   } catch (e) {
 t = !1;
   }
-  a.Z.dispatch({
+  s.Z.dispatch({
 type: 'DROPS_ELIGIBILITY_FETCH_SUCCESS',
 isEligible: t,
 dropsQuestId: e
@@ -60,7 +60,7 @@ t = (await i.tn.get({
   } catch (e) {
 t = [];
   }
-  a.Z.dispatch({
+  s.Z.dispatch({
 type: 'DROPS_PLATFORM_AVAILABILITY_SUCCESS',
 availablePlatforms: t
   });
@@ -73,37 +73,37 @@ let n = await i.tn.post({
     platform: t
   }
 });
-return a.Z.dispatch({
+return s.Z.dispatch({
   type: 'DROPS_REWARD_CODE_CLAIM_SUCCESS',
   rewardCode: n.body.code
 }), n.body.code;
   } catch (e) {
 throw e;
   }
-}, d = async () => {
+}, u = async () => {
   try {
 let e = await i.tn.get({
   url: r.ANM.DROPS_USER_STATUS
 });
-a.Z.dispatch({
+s.Z.dispatch({
   type: 'DROPS_USER_STATUS_FETCH_SUCCESS',
   codes: e.body
 });
   } catch (e) {
-a.Z.dispatch({
+s.Z.dispatch({
   type: 'DROPS_USER_STATUS_FETCH_FAILURE'
 });
   }
-}, u = async e => {
+}, d = async e => {
   await i.tn.del({
 url: r.ANM.DROPS_ENROLL_USER,
 query: {
   drops_quest_id: e
 }
-  }), a.Z.dispatch({
+  }), s.Z.dispatch({
 type: 'DROPS_UNENROLL_USER',
 dropsQuestId: e
-  }), await d();
+  }), await u();
 }, _ = async e => {
   let t = await i.tn.get({
 url: r.ANM.DROPS_ENROLL_USER,
@@ -111,7 +111,7 @@ query: {
   drops_quest_id: e
 }
   });
-  await a.Z.dispatch({
+  await s.Z.dispatch({
 type: 'DROPS_ENROLLED_USER_FETCH_SUCCESS',
 enrolledUser: t.body.user,
 isEnrolled: t.body.enrolled,
@@ -123,13 +123,13 @@ url: r.ANM.DROPS_ENROLL_USER,
 query: {
   drops_quest_id: e
 }
-  }), a.Z.dispatch({
+  }), s.Z.dispatch({
 type: 'DROPS_ENROLL_SUCCESS'
   });
 }, I = async (e, t, n) => {
-  let l = s.Z.getViewerIds(t);
+  let l = a.Z.getViewerIds(t);
   try {
-let s = await i.tn.post({
+let a = await i.tn.post({
   url: r.ANM.DROPS_HEARTBEAT(e),
   query: {
     stream_key: t,
@@ -138,14 +138,14 @@ let s = await i.tn.post({
   },
   retries: 2
 });
-a.Z.dispatch({
+s.Z.dispatch({
   type: 'DROPS_HEARTBEAT_SUCCESS',
   dropsQuestId: e,
-  completed: s.body.completed,
-  progress: s.body.progress
+  completed: a.body.completed,
+  progress: a.body.progress
 });
   } catch (t) {
-a.Z.dispatch({
+s.Z.dispatch({
   type: 'DROPS_HEARTBEAT_FAILURE',
   dropsQuestId: e,
   statusCode: null == t ? void 0 : t.status
@@ -156,14 +156,14 @@ a.Z.dispatch({
 let t = await i.tn.get({
   url: r.ANM.DROPS_PROGRESS(e)
 });
-a.Z.dispatch({
+s.Z.dispatch({
   type: 'DROPS_FETCH_PROGRESS_SUCCESS',
   dropsQuestId: e,
   completed: t.body.completed,
   progress: t.body.progress
 });
   } catch (t) {
-a.Z.dispatch({
+s.Z.dispatch({
   type: 'DROPS_FETCH_PROGRESS_FAILURE',
   dropsQuestId: e
 });

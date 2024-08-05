@@ -4,7 +4,7 @@ n.d(t, {
 return u;
   },
   Nh: function() {
-return o;
+return s;
   },
   ZD: function() {
 return r;
@@ -16,7 +16,7 @@ return c;
 return a;
   },
   vY: function() {
-return s;
+return o;
   },
   yf: function() {
 return l;
@@ -27,12 +27,20 @@ let a = [{
   secondary: '#ff7fc0'
 },
 {
-  primary: '#32839a',
-  secondary: '#71c2d9'
+  primary: '#ff8f1c',
+  secondary: '#ffae77'
 },
 {
-  primary: '#568d00',
-  secondary: '#94cf38'
+  primary: '#eebe1a',
+  secondary: '#fffc7f'
+},
+{
+  primary: '#32a070',
+  secondary: '#57b59e'
+},
+{
+  primary: '#32839a',
+  secondary: '#71c2d9'
 },
 {
   primary: '#8a43ff',
@@ -43,40 +51,32 @@ let a = [{
   secondary: '#cc8dff'
 },
 {
-  primary: '#c03f7d',
-  secondary: '#ff80bd'
+  primary: '#942e8f',
+  secondary: '#d46cb5'
 },
 {
   primary: '#d14242',
   secondary: '#ff8989'
 },
 {
-  primary: '#ff8f1c',
-  secondary: '#ffae77'
+  primary: '#814300',
+  secondary: '#a88a6c'
 },
 {
-  primary: '#eebe1a',
-  secondary: '#fffc7f'
+  primary: '#717224',
+  secondary: '#c3c3c3'
 },
 {
-  primary: '#92ff7f',
-  secondary: '#27e772'
+  primary: '#5d1d47',
+  secondary: '#c58fbb'
 },
 {
-  primary: '#32a070',
-  secondary: '#57b59e'
-},
-{
-  primary: '#6d6d6d',
-  secondary: '#737373'
-},
-{
-  primary: '#3f3f3f',
-  secondary: '#555555'
+  primary: '#222222',
+  secondary: '#cccccc'
 }
   ],
-  o = a[0].primary,
-  s = a[0].secondary;
+  s = a[0].primary,
+  o = a[0].secondary;
 
 function l() {
   return a[Math.floor(Math.random() * a.length)];
@@ -107,5 +107,5 @@ let u = {
 
 function c() {
   let e = Object.keys(r).filter(e => isNaN(Number(e)));
-  return r[e[Math.round(Math.random() * e.length - 1)]];
+  return r[e[Math.floor(Math.random() * e.length)]];
 }

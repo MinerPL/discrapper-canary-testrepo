@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(392711),
-  r = n.n(a),
+  a = n(470079),
+  s = n(392711),
+  r = n.n(s),
   l = n(442837),
   o = n(239091),
   c = n(476669),
@@ -23,7 +23,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class T extends s.PureComponent {
+class T extends a.PureComponent {
   hasParty(e) {
 return e.length > 1;
   }
@@ -52,8 +52,8 @@ super(...e), p(this, 'handleUserContextMenu', (e, t) => {
       default: e
     } = await Promise.all([
       n.e('79695'),
-      n.e('17400'),
-      n.e('13806')
+      n.e('69220'),
+      n.e('86541')
     ]).then(n.bind(n, 881351));
     return n => (0, i.jsx)(e, {
       ...n,
@@ -82,11 +82,11 @@ t.Z = l.ZP.connectStores([
   let e, t;
   let n = u.Z.getSyncingWith(),
 i = u.Z.getActivity(),
-s = E.default.getCurrentUser(),
-a = [];
-  if (null != n ? (e = E.default.getUser(n.userId), t = n.partyId) : null != i && null != i.party && null != i.party.id && (e = s, t = i.party.id), null != t) {
+a = E.default.getCurrentUser(),
+s = [];
+  if (null != n ? (e = E.default.getUser(n.userId), t = n.partyId) : null != i && null != i.party && null != i.party.id && (e = a, t = i.party.id), null != t) {
 var l;
-a = r()(Array.from(null !== (l = _.Z.getParty(t)) && void 0 !== l ? l : [])).map(e => E.default.getUser(e)).filter(m.lm).orderBy([
+s = r()(Array.from(null !== (l = _.Z.getParty(t)) && void 0 !== l ? l : [])).map(e => E.default.getUser(e)).filter(m.lm).orderBy([
   t => null == e || e.id === t.id,
   e => h.Z.isFriend(e.id)
 ], [
@@ -95,8 +95,8 @@ a = r()(Array.from(null !== (l = _.Z.getParty(t)) && void 0 !== l ? l : [])).map
 ]).value();
   }
   return {
-currentUser: s,
+currentUser: a,
 host: e,
-party: a
+party: s
   };
 })(T);

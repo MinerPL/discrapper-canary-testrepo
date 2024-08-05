@@ -116,15 +116,15 @@ canUseEventListeners: i && !!(window.addEventListener || window.attachEvent),
 canUseViewport: i && !!window.screen,
 isInWorker: !i
   },
-  o = r.isUnitlessNumber;
+  s = r.isUnitlessNumber;
 
-function s(e) {
+function o(e) {
   return function() {
 return e;
   };
 }
 var l = function() {};
-l.thatReturns = s, l.thatReturnsFalse = s(!1), l.thatReturnsTrue = s(!0), l.thatReturnsNull = s(null), l.thatReturnsThis = function() {
+l.thatReturns = o, l.thatReturnsFalse = o(!1), l.thatReturnsTrue = o(!0), l.thatReturnsNull = o(null), l.thatReturnsThis = function() {
   return this;
 }, l.thatReturnsArgument = function(e) {
   return e;
@@ -144,8 +144,8 @@ e.exports = {
 var i = e.style;
 for (var a in t) {
   if (!!t.hasOwnProperty(a)) {
-    var s, l, c, d = 0 === a.indexOf('--');
-    var _ = (s = a, l = t[a], c = d, null == l || 'boolean' == typeof l || '' === l ? '' : c || 'number' != typeof l || 0 === l || o.hasOwnProperty(s) && o[s] ? ('' + l).trim() : l + 'px');
+    var o, l, c, d = 0 === a.indexOf('--');
+    var _ = (o = a, l = t[a], c = d, null == l || 'boolean' == typeof l || '' === l ? '' : c || 'number' != typeof l || 0 === l || s.hasOwnProperty(o) && s[o] ? ('' + l).trim() : l + 'px');
     if ('float' === a && (a = 'cssFloat'), d)
       i.setProperty(a, _);
     else if (_)

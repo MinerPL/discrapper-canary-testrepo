@@ -1,22 +1,22 @@
 let r = n(689118),
   i = n(814033),
   a = n(873994).DecoderBuffer,
-  o = n(206424),
-  s = n(375990);
+  s = n(206424),
+  o = n(375990);
 
 function l(e) {
   this.enc = 'der', this.name = e.name, this.entity = e, this.tree = new u(), this.tree._init(e.body);
 }
 
 function u(e) {
-  o.call(this, 'der', e);
+  s.call(this, 'der', e);
 }
 
 function c(e, t) {
   let n = e.readUInt8(t);
   if (e.isError(n))
 return n;
-  let r = s.tagClass[n >> 6],
+  let r = o.tagClass[n >> 6],
 i = (32 & n) == 0;
   if ((31 & n) == 31) {
 let r = n;
@@ -28,7 +28,7 @@ for (n = 0;
 }
   } else
 n &= 31;
-  let a = s.tag[n];
+  let a = o.tag[n];
   return {
 cls: r,
 primitive: i,
@@ -60,7 +60,7 @@ r |= t;
 }
 e.exports = l, l.prototype.decode = function(e, t) {
   return !a.isDecoderBuffer(e) && (e = new a(e, t)), this.tree._decode(e, t);
-}, r(u, o), u.prototype._peekTag = function(e, t, n) {
+}, r(u, s), u.prototype._peekTag = function(e, t, n) {
   if (e.isEmpty())
 return !1;
   let r = e.save(),
@@ -78,8 +78,8 @@ return e.error('Failed to match tag: "' + t + '"');
   if (r.primitive || null !== i)
 return e.skip(i, 'Failed to match body of: "' + t + '"');
   let a = e.save(),
-o = this._skipUntilEnd(e, 'Failed to skip indefinite length body: "' + this.tag + '"');
-  return e.isError(o) ? o : (i = e.offset - a.offset, e.restore(a), e.skip(i, 'Failed to match body of: "' + t + '"'));
+s = this._skipUntilEnd(e, 'Failed to skip indefinite length body: "' + this.tag + '"');
+  return e.isError(s) ? s : (i = e.offset - a.offset, e.restore(a), e.skip(i, 'Failed to match body of: "' + t + '"'));
 }, u.prototype._skipUntilEnd = function(e, t) {
   for (;;) {
 let n;
@@ -141,14 +141,14 @@ return e.error('Decoding of string type: ' + t + ' unsupported');
   let r;
   let i = [],
 a = 0,
-o = 0;
+s = 0;
   for (; !e.isEmpty();)
-o = e.readUInt8(), a <<= 7, a |= 127 & o, (128 & o) == 0 && (i.push(a), a = 0);
-  128 & o && i.push(a);
-  let s = i[0] / 40 | 0,
+s = e.readUInt8(), a <<= 7, a |= 127 & s, (128 & s) == 0 && (i.push(a), a = 0);
+  128 & s && i.push(a);
+  let o = i[0] / 40 | 0,
 l = i[0] % 40;
   if (r = n ? i : [
-  s,
+  o,
   l
 ].concat(i.slice(1)), t) {
 let e = t[r.join(' ')];
@@ -156,16 +156,16 @@ void 0 === e && (e = t[r.join('.')]), void 0 !== e && (r = e);
   }
   return r;
 }, u.prototype._decodeTime = function(e, t) {
-  let n, r, i, a, o, s;
+  let n, r, i, a, s, o;
   let l = e.raw().toString();
   if ('gentime' === t)
-n = 0 | l.slice(0, 4), r = 0 | l.slice(4, 6), i = 0 | l.slice(6, 8), a = 0 | l.slice(8, 10), o = 0 | l.slice(10, 12), s = 0 | l.slice(12, 14);
+n = 0 | l.slice(0, 4), r = 0 | l.slice(4, 6), i = 0 | l.slice(6, 8), a = 0 | l.slice(8, 10), s = 0 | l.slice(10, 12), o = 0 | l.slice(12, 14);
   else {
 if ('utctime' !== t)
   return e.error('Decoding ' + t + ' time is not supported yet');
-n = 0 | l.slice(0, 2), r = 0 | l.slice(2, 4), i = 0 | l.slice(4, 6), a = 0 | l.slice(6, 8), o = 0 | l.slice(8, 10), s = 0 | l.slice(10, 12), n = n < 70 ? 2000 + n : 1900 + n;
+n = 0 | l.slice(0, 2), r = 0 | l.slice(2, 4), i = 0 | l.slice(4, 6), a = 0 | l.slice(6, 8), s = 0 | l.slice(8, 10), o = 0 | l.slice(10, 12), n = n < 70 ? 2000 + n : 1900 + n;
   }
-  return Date.UTC(n, r - 1, i, a, o, s, 0);
+  return Date.UTC(n, r - 1, i, a, s, o, 0);
 }, u.prototype._decodeNull = function() {
   return null;
 }, u.prototype._decodeBool = function(e) {

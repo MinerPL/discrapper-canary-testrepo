@@ -26,9 +26,9 @@ function i(e, t, n) {
 }
 
 function a(e, n) {
-  for (var i = 0, a = '_' + n, o = a; t.call(e, o); o = a + i++)
-if (r(e[o].key, n))
-  return e[o];
+  for (var i = 0, a = '_' + n, s = a; t.call(e, s); s = a + i++)
+if (r(e[s].key, n))
+  return e[s];
 }
 e.exports = n, n.prototype.forEach = function(e, t) {
   t = t || this, Object.keys(this._data).forEach(function(n) {
@@ -41,7 +41,7 @@ e.exports = n, n.prototype.forEach = function(e, t) {
   return t && t.value;
 }, n.prototype.set = function(e, n) {
   (function(e, n, a) {
-for (var o = 0, s = '_' + n, l = s; t.call(e, l); l = s + o++)
+for (var s = 0, o = '_' + n, l = o; t.call(e, l); l = o + s++)
   if (r(e[l].key, n)) {
     e[l].value = a;
     return;

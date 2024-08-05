@@ -1,17 +1,17 @@
-n.d(t, {
+t.d(s, {
   Z: function() {
-return i;
+return o;
   }
 });
-var s = n(735250);
-n(470079);
-var r = n(248042),
-  o = n(227140);
+var n = t(735250);
+t(470079);
+var r = t(248042),
+  a = t(227140);
 
-function i() {
+function o() {
   let e = (0, r.Vi)(),
-t = (0, r.W1)();
-  return e ? (0, s.jsx)(o.Z, {
-copy: t
+s = (0, r.W1)();
+  return e ? (0, n.jsx)(a.Z, {
+copy: s
   }) : null;
 }

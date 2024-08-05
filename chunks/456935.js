@@ -27,7 +27,7 @@ default:
   return '';
   }
 }
-let f = {
+let _ = {
   [c.sFg.NONE]: '',
   [c.sFg.LOW]: i.Z.unsafe_rawColors.GREEN_360.css,
   [c.sFg.MEDIUM]: i.Z.unsafe_rawColors.YELLOW_300.css,
@@ -37,7 +37,7 @@ let f = {
 n.ZP = function(e) {
   let {
 guild: n
-  } = e, i = o.Z.can(c.Plq.MANAGE_GUILD, n), C = n.verificationLevel, _ = C === c.sFg.VERY_HIGH ? s.MobilePhoneIcon : s.EnvelopeIcon, h = r.useMemo(() => m(C), [C]), x = f[C], g = (0, a.jsx)('div', {
+  } = e, i = o.Z.can(c.Plq.MANAGE_GUILD, n), C = n.verificationLevel, f = C === c.sFg.VERY_HIGH ? s.MobilePhoneIcon : s.EnvelopeIcon, h = r.useMemo(() => m(C), [C]), x = _[C], g = (0, a.jsx)('div', {
 className: u.verificationLevelTitle,
 children: d.Z.Messages.MEMBER_VERIFICATION_GUILD_VERIFICATION_LEVEL.format({
   verificationLevelHook: function() {
@@ -57,7 +57,7 @@ title: g,
 children: (0, a.jsxs)('div', {
   className: u.verificationContainer,
   children: [
-    (0, a.jsx)(_, {
+    (0, a.jsx)(f, {
       size: 'custom',
       color: 'currentColor',
       width: 20,

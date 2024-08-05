@@ -6,8 +6,8 @@ return l;
 var r = n(456007),
   i = n(895924),
   a = n(351133),
-  o = n(689079),
-  s = n(689938);
+  s = n(689079),
+  o = n(689938);
 
 function l(e) {
   let {
@@ -23,7 +23,7 @@ content: n
   if (!(null != n))
 return E ? {
   success: !1,
-  error: s.Z.Messages.COMMAND_VALIDATION_REQUIRED_ERROR
+  error: o.Z.Messages.COMMAND_VALIDATION_REQUIRED_ERROR
 } : {
   success: !0
 };
@@ -32,15 +32,15 @@ return c ? {
   success: !0
 } : E ? {
   success: !1,
-  error: s.Z.Messages.COMMAND_VALIDATION_REQUIRED_ERROR
+  error: o.Z.Messages.COMMAND_VALIDATION_REQUIRED_ERROR
 } : {
   success: !1,
-  error: (0, o.al)(t)
+  error: (0, s.al)(t)
 };
   let h = n.length > 1 ? {
   type: 'text',
   text: _
 } : n[0],
 p = a.Z[t.type](h, t, u, l, d);
-  return !p.success && null == p.error && (p.error = (0, o.al)(t)), p;
+  return !p.success && null == p.error && (p.error = (0, s.al)(t)), p;
 }

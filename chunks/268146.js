@@ -1,4 +1,4 @@
-var r, i, a, o, s, l;
+var r, i, a, s, o, l;
 n.d(t, {
   X4: function() {
 return r;
@@ -9,4 +9,4 @@ return i;
   vA: function() {
 return a;
   }
-}), (o = r || (r = {}))[o.HasRTCConnection = 0] = 'HasRTCConnection', o[o.IsSendingVideo = 1] = 'IsSendingVideo', o[o.IsSendingStream = 2] = 'IsSendingStream', o[o.IsReceivingVideo = 3] = 'IsReceivingVideo', o[o.IsReceivingStream = 4] = 'IsReceivingStream', o[o.VideoMediaSessionId = 5] = 'VideoMediaSessionId', o[o.StreamMediaSessionId = 6] = 'StreamMediaSessionId', (s = i || (i = {}))[s.RendererProcessDelayed = 0] = 'RendererProcessDelayed', s[s.RendererProcess = 1] = 'RendererProcess', s[s.MainProcess = 2] = 'MainProcess', (l = a || (a = {})).WINDOW = 'window', l.SCREEN = 'screen', l.CAMERA = 'camera';
+}), (s = r || (r = {}))[s.HasRTCConnection = 0] = 'HasRTCConnection', s[s.IsSendingVideo = 1] = 'IsSendingVideo', s[s.IsSendingStream = 2] = 'IsSendingStream', s[s.IsReceivingVideo = 3] = 'IsReceivingVideo', s[s.IsReceivingStream = 4] = 'IsReceivingStream', s[s.VideoMediaSessionId = 5] = 'VideoMediaSessionId', s[s.StreamMediaSessionId = 6] = 'StreamMediaSessionId', (o = i || (i = {}))[o.RendererProcessDelayed = 0] = 'RendererProcessDelayed', o[o.RendererProcess = 1] = 'RendererProcess', o[o.MainProcess = 2] = 'MainProcess', (l = a || (a = {})).WINDOW = 'window', l.SCREEN = 'screen', l.CAMERA = 'camera';

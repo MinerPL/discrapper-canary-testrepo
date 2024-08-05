@@ -686,11 +686,11 @@ return b(this, t, function(t, e) {
   return t ^ e;
 });
   }, E.prototype.xor = o.prototype.xor = i.prototype.xor;
-  var v = 1073758208;
+  var B = 1073758208;
 
-  function B(t) {
+  function v(t) {
 var e = t.value,
-  r = 'number' == typeof e ? 1073741824 | e : 'bigint' == typeof e ? e | BigInt(1073741824) : e[0] + 10000000 * e[1] | v;
+  r = 'number' == typeof e ? 1073741824 | e : 'bigint' == typeof e ? e | BigInt(1073741824) : e[0] + 10000000 * e[1] | B;
 return r & -r;
   }
 
@@ -710,12 +710,12 @@ if (t.isZero())
 if (e.isZero())
   return t;
 for (var r, n, _ = a[1]; t.isEven() && e.isEven();)
-  r = H(B(t), B(e)), t = t.divide(r), e = e.divide(r), _ = _.multiply(r);
+  r = H(v(t), v(e)), t = t.divide(r), e = e.divide(r), _ = _.multiply(r);
 for (; t.isEven();)
-  t = t.divide(B(t));
+  t = t.divide(v(t));
 do {
   for (; e.isEven();)
-    e = e.divide(B(e));
+    e = e.divide(v(e));
   t.greater(e) && (n = e, e = t, t = n), e = e.subtract(t);
 } while (!e.isZero());
 return _.isUnit() ? t : t.multiply(_);

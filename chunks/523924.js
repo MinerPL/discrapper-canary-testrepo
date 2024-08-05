@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(346656),
+var a = n(481060),
+  s = n(565138),
   r = n(689938),
   l = n(920691),
   o = n(364632);
@@ -21,8 +21,8 @@ children: [
   (0, i.jsxs)('div', {
     className: l.confirmationContent,
     children: [
-      null !== h ? (0, i.jsx)(a.Z, {
-        size: a.Z.Sizes.LARGER,
+      null !== h ? (0, i.jsx)(s.Z, {
+        size: s.Z.Sizes.LARGER,
         guild: h,
         className: l.guildIcon
       }) : (0, i.jsx)('img', {
@@ -30,7 +30,7 @@ children: [
         src: o,
         className: l.__invalid_verificationStateIcon
       }),
-      (0, i.jsx)(s.Heading, {
+      (0, i.jsx)(a.Heading, {
         id: t,
         variant: 'heading-xl/semibold',
         className: l.header,
@@ -39,7 +39,7 @@ children: [
         }) : r.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_TITLE
       }),
       null != _ && '' !== _ ? (0, i.jsx)(i.Fragment, {
-        children: (0, i.jsxs)(s.Text, {
+        children: (0, i.jsxs)(a.Text, {
           variant: 'text-sm/normal',
           children: [
             (0, i.jsx)('span', {
@@ -58,15 +58,15 @@ children: [
   (0, i.jsxs)('div', {
     className: l.confirmationButtonRow,
     children: [
-      (0, i.jsx)(s.Button, {
+      (0, i.jsx)(a.Button, {
         onClick: c,
-        color: s.Button.Colors.PRIMARY,
+        color: a.Button.Colors.PRIMARY,
         className: l.confirmationButton,
         children: n
       }),
-      (0, i.jsx)(s.Button, {
+      (0, i.jsx)(a.Button, {
         onClick: u,
-        color: s.Button.Colors.RED,
+        color: a.Button.Colors.RED,
         className: l.confirmationButton,
         children: d
       })

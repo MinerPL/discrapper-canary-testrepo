@@ -3,10 +3,10 @@ n.d(t, {
 return c;
   },
   Lm: function() {
-return o;
+return s;
   },
   Ol: function() {
-return s;
+return o;
   },
   P4: function() {
 return l;
@@ -28,11 +28,11 @@ var r = n(654861),
   i = n.n(r);
 let a = 1420070400000;
 
-function o(e) {
+function s(e) {
   return Math.floor(Number(e) / 4194304) + a;
 }
 
-function s(e) {
+function o(e) {
   let t = e - a;
   return t <= 0 ? '0' : i()(t).shiftLeft(22).toString();
 }
@@ -43,11 +43,11 @@ function l(e, t) {
 }
 
 function u(e) {
-  return s(o(e) - 1);
+  return o(s(e) - 1);
 }
 
 function c(e) {
-  return Date.now() - o(e);
+  return Date.now() - s(e);
 }
 
 function d(e, t) {

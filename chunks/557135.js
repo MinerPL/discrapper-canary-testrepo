@@ -3,8 +3,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(287734),
-  o = n(258609),
-  s = n(703656),
+  s = n(258609),
+  o = n(703656),
   l = n(569471),
   u = n(346479),
   c = n(314897),
@@ -24,7 +24,7 @@ let {
   bypassGuildIdCheck: g = !1
 } = e;
 t.isThread() && (await u.Z.unarchiveThreadIfNecessary(t.id), !l.Z.hasJoined(t.id) && await u.Z.joinThread(t, 'Join Voice'));
-let S = o.Z.getRemoteSessionId(),
+let S = s.Z.getRemoteSessionId(),
   A = _.Z.getVoiceStateForSession(c.default.getId(), S),
   N = (null == A ? void 0 : A.channelId) === t.id || d.Z.getChannelId() === _.Z.getCurrentClientVoiceChannelId(t.guild_id);
 return !T && !m && (0, E._)(t) ? new Promise(e => {
@@ -50,7 +50,7 @@ return !T && !m && (0, E._)(t) ? new Promise(e => {
     n = e.getGuildId();
   if (null == n && !t)
     throw Error('VoiceChannel, transitionTo: Channel does not have a guildId');
-  (0, s.uL)(f.Z5c.CHANNEL(n, e.id));
+  (0, o.uL)(f.Z5c.CHANNEL(n, e.id));
 }(t, g), !0);
   }
 };

@@ -2,16 +2,16 @@ n(47120);
 var r = n(147913),
   i = n(604375),
   a = n(202511),
-  o = n(828354);
-class s extends r.Z {
+  s = n(828354);
+class o extends r.Z {
   handlePostConnectionOpen() {
 a.d.trigger();
   }
   handleVoiceChannelSelect() {
-o.M.trigger();
+s.M.trigger();
   }
   handleCallCreate() {
-o.M.trigger();
+s.M.trigger();
   }
   handleUserSettingsModalOpen() {
 i.X.trigger();
@@ -31,4 +31,4 @@ super(...e), t = this, n = 'actions', r = {
 }) : t[n] = r;
   }
 }
-t.Z = new s();
+t.Z = new o();

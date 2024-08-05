@@ -22,7 +22,7 @@ var r = n(65154);
 let i = null != navigator.mediaDevices && null != navigator.mediaDevices.enumerateDevices,
   a = i && 'setSinkId' in HTMLAudioElement.prototype;
 
-function o(e) {
+function s(e) {
   return {
 id: r.w5,
 type: e,
@@ -31,11 +31,11 @@ name: 'Default'
   };
 }
 
-function s() {
+function o() {
   return [
-o(r.h7.AUDIO_INPUT),
-o(r.h7.AUDIO_OUTPUT),
-o(r.h7.VIDEO_INPUT)
+s(r.h7.AUDIO_INPUT),
+s(r.h7.AUDIO_OUTPUT),
+s(r.h7.VIDEO_INPUT)
   ];
 }
 
@@ -77,8 +77,8 @@ return e.filter(e => {
     name: null != e.label && '' !== e.label ? e.label : 0 === a ? 'Default' : 'Device '.concat(a)
   };
 });
-  }).then(e => (!a && (e = e.filter(e => e.type !== r.h7.AUDIO_OUTPUT)).push(o(r.h7.AUDIO_OUTPUT)), e)).catch(s) : new Promise(e => {
-setImmediate(() => e(s()));
+  }).then(e => (!a && (e = e.filter(e => e.type !== r.h7.AUDIO_OUTPUT)).push(s(r.h7.AUDIO_OUTPUT)), e)).catch(o) : new Promise(e => {
+setImmediate(() => e(o()));
   });
 }
 async function c() {

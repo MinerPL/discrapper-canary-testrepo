@@ -12,8 +12,8 @@ return c;
 var r = n(544891),
   i = n(570140),
   a = n(647162),
-  o = n(158776),
-  s = n(981631);
+  s = n(158776),
+  o = n(981631);
 
 function l(e, t) {
   i.Z.dispatch({
@@ -39,7 +39,7 @@ async function c(e, t) {
   let n = e.metadata;
   if (null != n)
 return n;
-  let a = o.Z.getActivityMetadata(t);
+  let a = s.Z.getActivityMetadata(t);
   if (null != a)
 return a;
   if (null == e.session_id)
@@ -47,7 +47,7 @@ throw Error('null/undefined session_id');
   let {
 body: l
   } = await r.tn.get({
-url: s.ANM.USER_ACTIVITY_METADATA(t, e.session_id, e.application_id),
+url: o.ANM.USER_ACTIVITY_METADATA(t, e.session_id, e.application_id),
 oldFormErrors: !0
   });
   return i.Z.dispatch({

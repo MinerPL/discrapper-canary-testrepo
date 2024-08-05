@@ -6,12 +6,12 @@ var a = l(735250),
   d = l(692547),
   o = l(481060),
   c = l(410030),
-  u = l(637853),
-  h = l(434404),
-  m = l(159300),
-  g = l(496675),
-  C = l(705600),
-  x = l(346656),
+  u = l(565138),
+  h = l(523751),
+  m = l(637853),
+  g = l(434404),
+  C = l(159300),
+  x = l(496675),
   f = l(709586),
   I = l(768581),
   Z = l(981631),
@@ -35,7 +35,7 @@ function b(e) {
   let {
 guild: n
   } = e, l = () => {
-h.Z.open(n.id, Z.pNK.ONBOARDING, void 0, Z.KsC.SERVER_GUIDE);
+g.Z.open(n.id, Z.pNK.ONBOARDING, void 0, Z.KsC.SERVER_GUIDE);
   };
   return n.hasFeature(Z.oNc.BANNER) ? (0, a.jsxs)(o.Button, {
 className: v.editButton,
@@ -72,7 +72,7 @@ titleClassName: r
   } = e, {
 homeHeaderImage: i,
 isHomeHeaderImageSet: d
-  } = j(n), h = (0, u.b$)(n.id), f = (0, s.e7)([g.Z], () => (0, m.b)(g.Z, n)), I = (0, c.ZP)();
+  } = j(n), g = (0, m.b$)(n.id), f = (0, s.e7)([x.Z], () => (0, C.b)(x.Z, n)), I = (0, c.ZP)();
   return (0, a.jsxs)('div', {
 className: v.header,
 children: [
@@ -87,7 +87,7 @@ children: [
           backgroundImage: 'url('.concat(d ? i : 'dark' === I ? p : N, ')')
         }
       }),
-      h && (0, a.jsx)(b, {
+      g && (0, a.jsx)(b, {
         guild: n
       })
     ]
@@ -97,10 +97,10 @@ children: [
     children: (0, a.jsxs)('div', {
       className: r,
       children: [
-        (0, a.jsx)(x.Z, {
+        (0, a.jsx)(u.Z, {
           className: v.headerIcon,
           guild: n,
-          size: x.Z.Sizes.XLARGE,
+          size: u.Z.Sizes.XLARGE,
           active: !0
         }),
         (0, a.jsx)(o.HeadingLevel, {
@@ -112,7 +112,7 @@ children: [
                 variant: 'heading-xxl/bold',
                 children: n.name
               }),
-              (0, a.jsx)(C.Z, {
+              (0, a.jsx)(h.Z, {
                 size: 24,
                 guild: n,
                 tooltipPosition: 'bottom',

@@ -1,95 +1,93 @@
 n(47120);
-var i, s, a = n(735250),
+var i, a, s = n(735250),
   r = n(470079),
   l = n(338545),
   o = n(143927),
   c = n(704215),
   d = n(481060),
-  u = n(442837),
-  _ = n(393238),
-  h = n(607070),
-  E = n(963202),
-  I = n(353093),
-  m = n(605236),
-  g = n(931515),
-  p = n(807933),
-  T = n(702646),
-  S = n(207796),
-  C = n(543550),
-  f = n(895068),
-  N = n(921944),
-  A = n(540736);
-(s = i || (i = {})).TOP_PICKS = 'top_picks', s.OTHER_GUILDS = 'other_guilds';
-let Z = {
+  u = n(393238),
+  _ = n(963202),
+  h = n(353093),
+  E = n(605236),
+  I = n(931515),
+  m = n(807933),
+  g = n(702646),
+  p = n(207796),
+  T = n(543550),
+  S = n(895068),
+  f = n(921944),
+  C = n(540736);
+(a = i || (i = {})).TOP_PICKS = 'top_picks', a.OTHER_GUILDS = 'other_guilds';
+let N = {
 mass: 1,
 tension: 600,
 friction: 60
   },
-  L = r.memo(function(e) {
+  A = r.memo(function(e) {
 let {
   width: t
-} = e, n = (0, u.e7)([h.Z], () => h.Z.useReducedMotion), i = (0, S.GN)(e => e.mode, o.Z), [s, d] = r.useState(!0), _ = (0, l.useSpring)({
+} = e, n = (0, p.GN)(e => e.mode, o.Z), [i, a] = r.useState(!0), u = (0, d.useSpring)({
   from: {
     opacity: 0
   },
   to: {
-    opacity: i === S.v0.GET_STARTED ? 0 : 1
+    opacity: n === p.v0.GET_STARTED ? 0 : 1
   },
-  config: Z,
+  config: N,
   delay: 500,
-  immediate: n,
-  onRest: () => d(!1)
-}), g = (0, S.GN)(e => e.userUpsellScreen, o.Z), L = (0, S.GN)(e => e.started, o.Z), {
+  onRest: () => a(!1)
+}), I = (0, p.GN)(e => e.userUpsellScreen, o.Z), A = (0, p.GN)(e => e.started, o.Z), {
   guilds: v
-} = (0, E.C3)({
+} = (0, _.C3)({
   location: 'ClanDiscoveryAdminContainer',
   includeConverted: !0
-}), O = r.useMemo(() => v.filter(e => !(0, I.EJ)(e)), [v]), {
-  enableApplication: R
-} = (0, E.Fg)('ClanDiscoveryAdminContainer'), x = (0, m.wE)(c.z.NEW_GAMING_DISCOVERY_NOTIF);
+}), Z = r.useMemo(() => v.filter(e => !(0, h.EJ)(e)), [v]), {
+  enableApplication: L
+} = (0, _.Fg)('ClanDiscoveryAdminContainer'), O = (0, E.wE)(c.z.NEW_GAMING_DISCOVERY_NOTIF);
 switch (r.useEffect(() => {
-    !x && (0, m.EW)(c.z.NEW_GAMING_DISCOVERY_NOTIF, {
-      dismissAction: N.L.TAKE_ACTION,
+    !O && (0, E.EW)(c.z.NEW_GAMING_DISCOVERY_NOTIF, {
+      dismissAction: f.L.TAKE_ACTION,
       forceTrack: !0
     });
-  }, [x]), r.useEffect(() => {
+  }, [O]), r.useEffect(() => {
     let e = v.length > 0;
-    if (e && !R && g === S.o2.USER_UPSELL) {
-      (0, S.fH)(S.v0.ADMIN_UPSELL);
+    if (e && !L && I === p.o2.USER_UPSELL) {
+      (0, p.fH)(p.v0.ADMIN_UPSELL);
       return;
     }
-    if (!e && R && !L) {
-      (0, S.fH)(S.v0.GET_STARTED);
+    if (!e && L && !A) {
+      (0, p.fH)(p.v0.GET_STARTED);
       return;
     }
-    if (R && i === S.v0.ADMIN_UPSELL && 0 === O.length) {
-      (0, S.fH)(S.v0.GET_STARTED), S.GN.getState().setUserUpsellScreen(S.o2.USER_UPSELL);
+    if (L && n === p.v0.ADMIN_UPSELL && 0 === Z.length) {
+      (0, p.fH)(p.v0.GET_STARTED), p.GN.getState().setUserUpsellScreen(p.o2.USER_UPSELL);
       return;
     }
   }, [
-    O.length,
+    Z.length,
     v.length,
+    A,
     L,
-    R,
-    i,
-    g
-  ]), i) {
-  case S.v0.ADMIN_UPSELL:
-    return (0, a.jsx)(C.$, {});
-  case S.v0.GET_STARTED:
-    return (0, a.jsx)(C.J, {});
-  case S.v0.DISCOVERY:
-  case S.v0.GAMES:
-  case S.v0.PLAYSTYLE:
-  case S.v0.TRAITS:
-    return (0, a.jsxs)('div', {
-      className: A.discoveryContainer,
+    n,
+    I
+  ]), n) {
+  case p.v0.ADMIN_UPSELL:
+    return (0, s.jsx)(T.$, {});
+  case p.v0.GET_STARTED:
+    return (0, s.jsx)(T.J, {});
+  case p.v0.DISCOVERY:
+  case p.v0.GAMES:
+  case p.v0.PLAYSTYLE:
+  case p.v0.TRAITS:
+  case p.v0.SAVED_GUILDS:
+    return (0, s.jsxs)('div', {
+      className: C.discoveryContainer,
       children: [
-        (0, a.jsx)(l.animated.div, {
-          className: A.toolbar,
+        (0, s.jsx)(l.animated.div, {
+          className: C.toolbar,
           style: {
-            opacity: _.opacity,
-            transform: _.opacity.to([
+            opacity: u.opacity,
+            transform: u.opacity.to([
               0,
               1
             ], [
@@ -98,13 +96,13 @@ switch (r.useEffect(() => {
             ]).to(e => 'translateY('.concat(e, 'px)')),
             borderBottom: '1px solid var(--bg-mod-strong)'
           },
-          children: (0, a.jsx)(T.Z, {})
+          children: (0, s.jsx)(g.Z, {})
         }),
-        (0, a.jsx)(l.animated.div, {
-          className: A.content,
+        (0, s.jsx)(l.animated.div, {
+          className: C.content,
           style: {
-            opacity: _.opacity,
-            transform: _.opacity.to([
+            opacity: u.opacity,
+            transform: u.opacity.to([
               0,
               1
             ], [
@@ -112,15 +110,16 @@ switch (r.useEffect(() => {
               0
             ]).to(e => 'translateY('.concat(e, 'px)'))
           },
-          children: (0, a.jsx)(f.ZP, {
+          children: (0, s.jsx)(S.ZP, {
             width: t,
-            isAnimating: s
+            isAnimating: i,
+            variant: (0, S.s)(n)
           })
         }),
-        (0, a.jsx)('div', {
-          className: A.selectors,
-          children: (0, a.jsx)(p.Z, {
-            mode: i
+        (0, s.jsx)('div', {
+          className: C.selectors,
+          children: (0, s.jsx)(m.Z, {
+            mode: n
           })
         })
       ]
@@ -130,21 +129,21 @@ switch (r.useEffect(() => {
 t.Z = r.memo(function() {
   let {
 loading: e
-  } = (0, g.LE)(), {
+  } = (0, I.LE)(), {
 ref: t,
 width: n
-  } = (0, _.Z)();
-  return (0, a.jsxs)('main', {
-className: A.container,
+  } = (0, u.Z)();
+  return (0, s.jsxs)('main', {
+className: C.container,
 ref: t,
 children: [
-  (0, a.jsx)('div', {
-    className: A.dragRegion
+  (0, s.jsx)('div', {
+    className: C.dragRegion
   }),
-  e ? (0, a.jsx)('div', {
-    className: A.loading,
-    children: (0, a.jsx)(d.Spinner, {})
-  }) : (0, a.jsx)(L, {
+  e ? (0, s.jsx)('div', {
+    className: C.loading,
+    children: (0, s.jsx)(d.Spinner, {})
+  }) : (0, s.jsx)(A, {
     width: null != n ? n : 0
   })
 ]

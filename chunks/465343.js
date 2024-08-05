@@ -9,8 +9,8 @@ return m;
 var r = n(933557),
   i = n(797610),
   a = n(339085),
-  o = n(633302),
-  s = n(601070),
+  s = n(633302),
+  o = n(601070),
   l = n(592125),
   u = n(984933),
   c = n(271383),
@@ -29,10 +29,10 @@ allowRoles: m = !0
   switch (e[0]) {
 case '@':
   return function(e, t, n, r, a) {
-    let [o, s] = e.slice(1).split('#', 2), u = null != t ? d.Z.getGuild(t) : null, _ = (0, i.M9)(u);
-    if (a && null == s && null != u) {
+    let [s, o] = e.slice(1).split('#', 2), u = null != t ? d.Z.getGuild(t) : null, _ = (0, i.M9)(u);
+    if (a && null == o && null != u) {
       for (let e of Object.values(d.Z.getRoles(u.id)))
-        if (o === e.name)
+        if (s === e.name)
           return {
             type: 'roleMention',
             roleId: e.id,
@@ -46,7 +46,7 @@ case '@':
       if (null != e) {
         if (e.isPrivate()) {
           for (let t of e.recipients)
-            if (T(o, s, t))
+            if (T(s, o, t))
               return {
                 type: 'userMention',
                 userId: t,
@@ -59,7 +59,7 @@ case '@':
               userId: e
             }
             of c.ZP.getMembers(t))
-            if (T(o, s, e))
+            if (T(s, o, e))
               return {
                 type: 'userMention',
                 userId: e,
@@ -67,7 +67,7 @@ case '@':
                   text: ''
                 }]
               };
-          if (_ && T(o, s, p.fL))
+          if (_ && T(s, o, p.fL))
             return {
               type: 'userMention',
               userId: p.fL,
@@ -82,7 +82,7 @@ case '@':
   }(e, t, n, h, m);
 case ':':
   return function(e, t) {
-    let n = o.ZP.EMOJI_NAME_RE.exec(e);
+    let n = s.ZP.EMOJI_NAME_RE.exec(e);
     if (null == n)
       return null;
     let r = n[1],
@@ -136,7 +136,7 @@ case '#':
             };
       }
     }
-    let a = s.Z.getActiveJoinedThreadsForGuild(t);
+    let a = o.Z.getActiveJoinedThreadsForGuild(t);
     for (let e of f.default.keys(a))
       for (let t of f.default.keys(a[e])) {
         let {

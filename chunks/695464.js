@@ -2,8 +2,8 @@ n(47120), n(653041);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(147479),
+  s = n.n(a),
+  o = n(147479),
   l = n(52225);
 let u = i.memo(i.forwardRef((e, t) => {
   let {
@@ -73,28 +73,28 @@ V = i.useRef([]),
     i = [],
     a = [];
   r += w();
-  for (let o = 0; o < n; o++) {
-    let n = t ? p[o] : h,
-      s = (null == p ? void 0 : p[o]) !== 0;
-    a[o] = {
+  for (let s = 0; s < n; s++) {
+    let n = t ? p[s] : h,
+      o = (null == p ? void 0 : p[s]) !== 0;
+    a[s] = {
       firstRowIndex: e,
       offset: {
         top: r,
         bottom: -1
       }
-    }, r += G(o);
+    }, r += G(s);
     for (let t = 0; t < n; t++) {
-      let n = r + (s ? x(o, t, e) : 0),
+      let n = r + (o ? x(s, t, e) : 0),
         a = {
           top: r,
           bottom: n
         };
       i[e] = {
-        sectionIndex: o,
+        sectionIndex: s,
         offset: a
       }, r = n, e++;
     }
-    r += k(o) + B(o), a[o].offset.bottom = r;
+    r += k(s) + B(s), a[s].offset.bottom = r;
   }
   return {
     totalHeight: r += u[2],
@@ -173,15 +173,15 @@ scrollRowIntoView: function(e) {
   null != i && window.requestAnimationFrame(() => {
     var t, a;
     let {
-      sectionIndex: o,
+      sectionIndex: s,
       offset: {
-        top: s,
+        top: o,
         bottom: l
       }
-    } = i, u = G(o), c = s - (A ? u : 0) - r <= P.current, d = l + r >= P.current + L;
+    } = i, u = G(s), c = o - (A ? u : 0) - r <= P.current, d = l + r >= P.current + L;
     if (c) {
-      let i = P.current + u - s,
-        a = A ? P.current - i : s;
+      let i = P.current + u - o,
+        a = A ? P.current - i : o;
       null === (t = M.current) || void 0 === t || t.scrollTo({
         to: 0 === e ? 0 : a - r,
         animate: n
@@ -251,31 +251,31 @@ for (let i = 0; i < Y.length; i++) {
   let {
     firstRowIndex: a,
     offset: {
-      top: o,
-      bottom: s
+      top: s,
+      bottom: o
     }
-  } = Y[i], l = s - o;
+  } = Y[i], l = o - s;
   if (0 === l)
     continue;
   let u = G(i),
     f = k(i),
     h = B(i);
-  if (s <= y)
-    n = s;
-  else if (s > y && o < e) {
+  if (o <= y)
+    n = o;
+  else if (o > y && s < e) {
     t = a;
-    let s = [],
+    let o = [],
       p = 0,
       m = 0,
-      I = o + u >= y && o <= e;
-    for (null != _ && (A || I) && s.push(_(i)), !I && !A && (n += u); p + u + f < l - h;) {
+      I = s + u >= y && s <= e;
+    for (null != _ && (A || I) && o.push(_(i)), !I && !A && (n += u); p + u + f < l - h;) {
       let r = x(i, m, t),
-        a = o + p + u,
+        a = s + p + u,
         l = a + r;
       if (l <= y)
         n = l - (A ? u : 0);
       else if (l > y && a < e)
-        s.push(c(t, {
+        o.push(c(t, {
           sectionIndex: i,
           sectionRowIndex: m
         }));
@@ -283,11 +283,11 @@ for (let i = 0; i < Y.length; i++) {
         break;
       p += r, m++, t++;
     }
-    let T = o + u + p,
+    let T = s + u + p,
       g = T + f >= y && T <= e;
-    null != E && g && s.push(E(i)), null != d ? r.push(d(i, s)) : r = [
+    null != E && g && o.push(E(i)), null != d ? r.push(d(i, o)) : r = [
       ...r,
-      ...s
+      ...o
     ];
   } else
     break;
@@ -325,10 +325,10 @@ z,
 u
   ]), Q = i.useMemo(() => ({
 height: H
-  }), [H]), X = v ? s.xV : s.h2;
+  }), [H]), X = v ? o.xV : o.h2;
   return (0, r.jsxs)(X, {
 fade: O,
-className: o()(l.scroller, N),
+className: s()(l.scroller, N),
 ref: M,
 onScroll: W,
 children: [

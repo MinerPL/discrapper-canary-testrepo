@@ -9,11 +9,11 @@ return u;
 var r = n(735250),
   i = n(470079),
   a = n(134432),
-  o = n(413107),
-  s = n(242493);
+  s = n(413107),
+  o = n(242493);
 
 function l() {
-  (0, a.po)(''.concat(s, '?query=true'));
+  (0, a.po)(''.concat(o, '?query=true'));
 }
 
 function u(e) {
@@ -29,12 +29,12 @@ played: n
   l(e => !e);
 }, [n]), n)
 return null;
-  let c = ''.concat(s, '?query=').concat(a);
+  let c = ''.concat(o, '?query=').concat(a);
   return (0, r.jsx)('div', {
-className: o.demoEffectOverlay,
+className: s.demoEffectOverlay,
 children: (0, r.jsx)('img', {
   alt: '',
-  className: o.demoEffectImg,
+  className: s.demoEffectImg,
   src: c
 })
   });

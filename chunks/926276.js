@@ -112,7 +112,7 @@ a = {
     ...i
   ]
 },
-o = e.inherit(a, {
+s = e.inherit(a, {
   relevance: 0,
   endsParent: !0,
   contains: [
@@ -120,11 +120,11 @@ o = e.inherit(a, {
     ...i
   ]
 }),
-s = {
+o = {
   begin: /\s+/,
   relevance: 0
 },
-l = [o],
+l = [s],
 u = [{
   begin: /\[/,
   end: /\]/,
@@ -137,7 +137,7 @@ u = [{
 }],
 c = function(e, t) {
   return {
-    contains: [s],
+    contains: [o],
     starts: {
       relevance: 0,
       contains: e,
@@ -153,7 +153,7 @@ d = function(e, t) {
       keyword: '\\' + e
     },
     relevance: 0,
-    contains: [s],
+    contains: [o],
     starts: t
   };
 },

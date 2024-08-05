@@ -4,8 +4,8 @@ var a = n(735250),
   r = n(120356),
   l = n.n(r),
   i = n(143927),
-  o = n(28546),
-  c = n(401227),
+  o = n(318766),
+  c = n(28546),
   d = n(957825),
   u = n(497471);
 t.Z = s.memo(s.forwardRef(function(e, t) {
@@ -14,11 +14,11 @@ disabled: n,
 type: r,
 className: m,
 onClick: h
-  } = e, [_, g] = (0, o.Iu)(e => [
+  } = e, [_, g] = (0, c.Iu)(e => [
 e.activeView,
 e.activeViewType
   ], i.Z), x = s.useCallback(() => {
-(0, o.j9)(r), null == h || h();
+(0, c.j9)(r), null == h || h();
   }, [
 r,
 h
@@ -26,7 +26,7 @@ h
   return n ? null : (0, a.jsx)('div', {
 className: l()(d.CT, u.buttonContainer),
 ref: t,
-children: (0, a.jsx)(c.Z, {
+children: (0, a.jsx)(o.Z, {
   className: l()(u.emojiButton, m),
   onClick: x,
   active: (_ === d.X1.GIF || _ === d.X1.EMOJI || _ === d.X1.STICKER) && g === r,

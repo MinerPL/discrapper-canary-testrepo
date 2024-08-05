@@ -1,8 +1,8 @@
 var r = n(546299),
   i = n(261638),
   a = n(411108),
-  o = n(21841),
-  s = r.sum32,
+  s = n(21841),
+  o = r.sum32,
   l = r.sum32_4,
   u = r.sum32_5,
   c = a.ch32,
@@ -106,12 +106,12 @@ I = this.h[4],
 T = this.h[5],
 g = this.h[6],
 S = this.h[7];
-  for (o(this.k.length === n.length), r = 0; r < n.length; r++) {
+  for (s(this.k.length === n.length), r = 0; r < n.length; r++) {
 var A = u(S, E(I), c(I, T, g), this.k[r], n[r]),
-  N = s(_(i), d(i, a, p));
-S = g, g = T, T = I, I = s(m, A), m = p, p = a, a = i, i = s(A, N);
+  N = o(_(i), d(i, a, p));
+S = g, g = T, T = I, I = o(m, A), m = p, p = a, a = i, i = o(A, N);
   }
-  this.h[0] = s(this.h[0], i), this.h[1] = s(this.h[1], a), this.h[2] = s(this.h[2], p), this.h[3] = s(this.h[3], m), this.h[4] = s(this.h[4], I), this.h[5] = s(this.h[5], T), this.h[6] = s(this.h[6], g), this.h[7] = s(this.h[7], S);
+  this.h[0] = o(this.h[0], i), this.h[1] = o(this.h[1], a), this.h[2] = o(this.h[2], p), this.h[3] = o(this.h[3], m), this.h[4] = o(this.h[4], I), this.h[5] = o(this.h[5], T), this.h[6] = o(this.h[6], g), this.h[7] = o(this.h[7], S);
 }, I.prototype._digest = function(e) {
   return 'hex' === e ? r.toHex32(this.h, 'big') : r.split32(this.h, 'big');
 };

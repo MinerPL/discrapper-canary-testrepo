@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(392711),
-  o = n.n(a),
-  s = n(818405),
+  s = n.n(a),
+  o = n(818405),
   l = n(587158),
   u = n(286379),
   c = n(442837),
@@ -11,10 +11,10 @@ var r = n(735250),
   _ = n(386506),
   E = n(304761),
   f = n(865427),
-  h = n(25779),
-  p = n(797614),
-  m = n(703656),
-  I = n(586576),
+  h = n(406128),
+  p = n(25779),
+  m = n(797614),
+  I = n(703656),
   T = n(626135),
   g = n(960048),
   S = n(998502),
@@ -53,11 +53,11 @@ className: v.clearOverrideButton,
 children: N.Z.Messages.CLEAR_BUILD_OVERRIDE
   });
 }
-let C = o().throttle(e => {
-  p.Z.increment({
+let C = s().throttle(e => {
+  m.Z.increment({
 name: u.V.APP_CRASHED,
 tags: [
-  'reason:'.concat(s.v.UNHANDLED_JS_ERROR),
+  'reason:'.concat(o.v.UNHANDLED_JS_ERROR),
   'level:'.concat(l.c.FATAL),
   'modded_client:'.concat(e)
 ]
@@ -70,12 +70,12 @@ class y extends i.PureComponent {
 this.triggerSoftCrash(e, t);
   }
   triggerSoftCrash(e, t) {
-let n = (0, m.s1)().location;
+let n = (0, I.s1)().location;
 this.setState({
   error: e,
   info: t
 });
-let r = (0, h.e)(),
+let r = (0, p.e)(),
   i = g.Z.captureCrash(e, {
     extra: t
   });
@@ -128,7 +128,7 @@ if (null !== this.state.error) {
         (0, r.jsx)(R, {})
       ]
     });
-  return (0, r.jsx)(I.Z, {
+  return (0, r.jsx)(h.Z, {
     title: N.Z.Messages.UNSUPPORTED_BROWSER_TITLE,
     note: null != t ? t() : e,
     action: n,

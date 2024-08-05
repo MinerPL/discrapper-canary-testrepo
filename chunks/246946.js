@@ -1,7 +1,7 @@
 var r, i = n(442837),
   a = n(570140),
-  o = n(626135),
-  s = n(314897),
+  s = n(626135),
+  o = n(314897),
   l = n(981631);
 
 function u(e, t, n) {
@@ -14,7 +14,7 @@ writable: !0
 }
 
 function c(e, t) {
-  o.default.track(l.rMx.STREAMER_MODE_TOGGLE, {
+  s.default.track(l.rMx.STREAMER_MODE_TOGGLE, {
 enabled: e,
 automatic: t
   });
@@ -34,9 +34,9 @@ enableContentProtection: !1
   };
 class f extends(r = i.ZP.PersistedStore) {
   initialize(e) {
-Object.assign(_, e), this.syncWith([s.default], () => {
+Object.assign(_, e), this.syncWith([o.default], () => {
   var e;
-  let t, n = s.default.getId();
+  let t, n = o.default.getId();
   E = null != n ? (null == (t = _[e = n]) && (t = _[e] = {
     ...d
   }), t) : {
@@ -73,7 +73,7 @@ return this.enabled && E.enableContentProtection;
   }
 }
 u(f, 'displayName', 'StreamerModeStore'), u(f, 'persistKey', 'StreamerModeStore'), u(f, 'migrations', [e => {
-  let t = s.default.getId();
+  let t = o.default.getId();
   return null == e || null == t ? {} : {
 [t]: {
   ...e
@@ -90,7 +90,7 @@ e.userId in _ && delete _[e.userId];
 let t = {
   ...E
 };
-return E[e.key] = e.value, 'enabled' === e.key ? c(e.value, !1) : o.default.track(l.rMx.UPDATE_STREAMER_MODE_SETTINGS, {
+return E[e.key] = e.value, 'enabled' === e.key ? c(e.value, !1) : s.default.track(l.rMx.UPDATE_STREAMER_MODE_SETTINGS, {
   enabled: E.enabled,
   automatic: E.autoToggle,
   disable_notifications: E.disableNotifications,

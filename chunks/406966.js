@@ -3,7 +3,7 @@ var r = n(710845),
   i = n(430824),
   a = n(287328);
 
-function o(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -11,7 +11,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let s = new r.Z('GuildVersions');
+let o = new r.Z('GuildVersions');
 t.Z = new class e {
   async getCommittedVersions() {
 try {
@@ -24,7 +24,7 @@ try {
   ]);
   return Object.fromEntries(null != t ? t : []);
 } catch (e) {
-  return s.warn('couldn\'t load guild versions', e), {};
+  return o.warn('couldn\'t load guild versions', e), {};
 }
   }
   remove(e, t) {
@@ -116,7 +116,7 @@ if (this.pending.size > 0) {
 }
   }
   constructor() {
-o(this, 'pending', new Map()), o(this, 'committed', new Map()), o(this, 'actions', {
+s(this, 'pending', new Map()), s(this, 'committed', new Map()), s(this, 'actions', {
   BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
   CHANNEL_CREATE: (e, t) => this.handleChannelCreate(e, t),
   CHANNEL_DELETE: (e, t) => this.handleChannelDelete(e, t),

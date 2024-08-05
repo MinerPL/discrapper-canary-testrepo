@@ -2,7 +2,7 @@ n(177593), n(47120);
 var r = n(147913),
   i = n(695346);
 let a = !1;
-class o extends r.Z {
+class s extends r.Z {
   maybeShowChangeLanguageToast() {}
   setVerifyTimezone() {
 a = !0;
@@ -30,4 +30,4 @@ super(...e), t = this, n = 'actions', r = {
 }) : t[n] = r;
   }
 }
-t.Z = new o();
+t.Z = new s();

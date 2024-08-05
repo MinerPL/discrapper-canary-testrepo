@@ -2,7 +2,7 @@ var r = n(492476),
   i = n(381538),
   a = n(26018);
 
-function o(e, t) {
+function s(e, t) {
   return t.encode ? t.strict ? r(e) : encodeURIComponent(e) : e;
 }
 t.extract = function(e) {
@@ -48,8 +48,8 @@ r = Object.create(null);
   return 'string' == typeof e && (e = e.trim().replace(/^(\?|#|&)/, '')) ? (e.split('&').forEach(function(e) {
 var t = e.replace(/\+/g, ' ').split('='),
   i = t.shift(),
-  o = t.length > 0 ? t.join('=') : void 0;
-o = void 0 === o ? null : a(o), n(a(i), o, r);
+  s = t.length > 0 ? t.join('=') : void 0;
+s = void 0 === s ? null : a(s), n(a(i), s, r);
   }), Object.keys(r).sort().reduce(function(e, t) {
 var n = r[t];
 return n && 'object' == typeof n && !Array.isArray(n) ? e[t] = function e(t) {
@@ -66,32 +66,32 @@ switch (e.arrayFormat) {
   case 'index':
     return function(t, n, r) {
       return null === n ? [
-        o(t, e),
+        s(t, e),
         '[',
         r,
         ']'
       ].join('') : [
-        o(t, e),
+        s(t, e),
         '[',
-        o(r, e),
+        s(r, e),
         ']=',
-        o(n, e)
+        s(n, e)
       ].join('');
     };
   case 'bracket':
     return function(t, n) {
-      return null === n ? o(t, e) : [
-        o(t, e),
+      return null === n ? s(t, e) : [
+        s(t, e),
         '[]=',
-        o(n, e)
+        s(n, e)
       ].join('');
     };
   default:
     return function(t, n) {
-      return null === n ? o(t, e) : [
-        o(t, e),
+      return null === n ? s(t, e) : [
+        s(t, e),
         '=',
-        o(n, e)
+        s(n, e)
       ].join('');
     };
 }
@@ -105,7 +105,7 @@ var i = e[r];
 if (void 0 === i)
   return '';
 if (null === i)
-  return o(r, t);
+  return s(r, t);
 if (Array.isArray(i)) {
   var a = [];
   return i.slice().forEach(function(e) {
@@ -113,7 +113,7 @@ if (Array.isArray(i)) {
       a.push(n(r, e, a.length));
   }), a.join('&');
 }
-return o(r, t) + '=' + o(i, t);
+return s(r, t) + '=' + s(i, t);
   }).filter(function(e) {
 return e.length > 0;
   }).join('&') : '';

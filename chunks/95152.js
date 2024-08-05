@@ -6,8 +6,8 @@ return v;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  o = n(481060),
   l = n(166459),
   u = n(476326),
   c = n(752305),
@@ -31,7 +31,7 @@ writable: !0
 }
 
 function S(e) {
-  var t, n, a, s;
+  var t, n, a, o;
   let {
 file: l
   } = e, [u, c] = i.useState(), [d, _] = i.useState(!1), [E, f] = i.useState({}), h = i.useRef(null);
@@ -62,14 +62,14 @@ null != e && (e.onload = () => {
   return (0, r.jsx)('img', {
 ref: h,
 src: u,
-className: o()(I.icon, {
+className: s()(I.icon, {
   [I.image]: !d
 }),
 'aria-hidden': !0,
 alt: '',
 style: {
   width: null !== (a = E.width) && void 0 !== a ? a : 'initial',
-  height: null !== (s = E.height) && void 0 !== s ? s : 104,
+  height: null !== (o = E.height) && void 0 !== o ? o : 104,
   marginLeft: p,
   marginRight: p,
   marginTop: null != E.height ? 104 - E.height - 33 : -33
@@ -86,7 +86,7 @@ if (this.props.upload.isImage)
     file: this.props.upload.item.file
   });
 return (0, r.jsx)('div', {
-  className: o()(I.icon, {
+  className: s()(I.icon, {
     [I[null !== (e = this.props.upload.classification) && void 0 !== e ? e : '']]: !0
   })
 });
@@ -118,17 +118,17 @@ let {
 } = this.props, {
   hasSpoiler: l
 } = this.state;
-return (0, r.jsxs)(s.ModalRoot, {
+return (0, r.jsxs)(o.ModalRoot, {
   'aria-label': m.Z.Messages.ATTACH_FILES,
-  size: s.ModalSize.DYNAMIC,
+  size: o.ModalSize.DYNAMIC,
   transitionState: t,
-  className: o()(I.uploadModal),
+  className: s()(I.uploadModal),
   children: [
     (0, r.jsxs)('div', {
       className: I.inner,
       children: [
         (0, r.jsxs)('div', {
-          className: o()(I.file, {
+          className: s()(I.file, {
             [I.expandable]: e.isImage
           }),
           children: [
@@ -162,8 +162,8 @@ return (0, r.jsxs)(s.ModalRoot, {
                   children: m.Z.Messages.UPLOAD_AREA_FILENAME
                 })
               }),
-              (0, r.jsx)(s.TextInput, {
-                className: o()(I.channelTextAreaUpload, T.marginTop8),
+              (0, r.jsx)(o.TextInput, {
+                className: s()(I.channelTextAreaUpload, T.marginTop8),
                 value: this.state.filename,
                 onChange: e => this.setState({
                   filename: e
@@ -181,8 +181,8 @@ return (0, r.jsxs)(s.ModalRoot, {
                       children: m.Z.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_LABEL
                     })
                   }),
-                  (0, r.jsx)(s.TextInput, {
-                    className: o()(I.channelTextAreaUpload, T.marginTop8),
+                  (0, r.jsx)(o.TextInput, {
+                    className: s()(I.channelTextAreaUpload, T.marginTop8),
                     placeholder: m.Z.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_PLACEHOLDER,
                     value: this.state.description,
                     onChange: e => this.setState({
@@ -195,13 +195,13 @@ return (0, r.jsxs)(s.ModalRoot, {
                   })
                 ]
               }) : null,
-              !0 !== a && (0, r.jsx)(s.Checkbox, {
+              !0 !== a && (0, r.jsx)(o.Checkbox, {
                 className: T.marginBottom20,
                 value: l,
                 onChange: (e, t) => this.setState({
                   hasSpoiler: t
                 }),
-                children: (0, r.jsx)(s.Text, {
+                children: (0, r.jsx)(o.Text, {
                   variant: 'text-sm/normal',
                   children: m.Z.Messages.SPOILER_MARK_SELECTED
                 })
@@ -214,18 +214,18 @@ return (0, r.jsxs)(s.ModalRoot, {
     (0, r.jsx)('div', {
       className: I.footer,
       children: (0, r.jsxs)('div', {
-        className: o()(I.hasSpoilers, I.footerRightAlign),
+        className: s()(I.hasSpoilers, I.footerRightAlign),
         children: [
-          (0, r.jsx)(s.Button, {
+          (0, r.jsx)(o.Button, {
             type: 'button',
-            look: s.Button.Looks.LINK,
-            color: s.Button.Colors.PRIMARY,
+            look: o.Button.Looks.LINK,
+            color: o.Button.Colors.PRIMARY,
             onClick: this.cancel,
             children: (0, r.jsx)('span', {
               children: m.Z.Messages.CANCEL
             })
           }),
-          (0, r.jsx)(s.Button, {
+          (0, r.jsx)(o.Button, {
             type: 'submit',
             onClick: this.handleSubmit,
             children: (0, r.jsx)('span', {
@@ -239,7 +239,7 @@ return (0, r.jsxs)(s.ModalRoot, {
 });
   }
   constructor(e) {
-var t, n, r, i, a, o;
+var t, n, r, i, a, s;
 super(e), g(this, 'cancelAll', () => {
   l.Z.clearAll(this.props.channelId, this.props.draftType), this.props.onClose();
 }), g(this, 'cancel', () => {
@@ -266,14 +266,14 @@ super(e), g(this, 'cancelAll', () => {
     spoiler: a
   }), t();
 });
-let s = e.ignoreDraft ? '' : _.Z.getDraft(this.props.channelId, e.draftType);
+let o = e.ignoreDraft ? '' : _.Z.getDraft(this.props.channelId, e.draftType);
 this.state = {
-  ...(0, c.eK)(s),
+  ...(0, c.eK)(o),
   textFocused: !0,
   hasSpoiler: null !== (i = null === (t = e.upload) || void 0 === t ? void 0 : t.spoiler) && void 0 !== i && i,
   filename: null !== (a = null === (n = e.upload) || void 0 === n ? void 0 : n.filename) && void 0 !== a ? a : '',
   contentWarningProps: null,
-  description: null !== (o = null === (r = e.upload) || void 0 === r ? void 0 : r.description) && void 0 !== o ? o : ''
+  description: null !== (s = null === (r = e.upload) || void 0 === r ? void 0 : r.description) && void 0 !== s ? s : ''
 };
   }
 }

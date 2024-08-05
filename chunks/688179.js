@@ -4,8 +4,8 @@ return l;
   }
 });
 var i = n(806966),
-  a = n(585483),
-  s = n(981631),
+  s = n(585483),
+  a = n(981631),
   r = n(957825);
 
 function l(e) {
@@ -13,7 +13,7 @@ function l(e) {
 stickerPack: t,
 stickerPickerCategories: n
   } = e;
-  a.S.dispatchToLastSubscribed(s.CkL.OPEN_EXPRESSION_PICKER, {
+  s.S.dispatchToLastSubscribed(a.CkL.OPEN_EXPRESSION_PICKER, {
 activeView: r.X1.STICKER
   });
   let l = n.findIndex(e => e.id === t.id); -

@@ -15,8 +15,8 @@ return v;
 var r = n(512722),
   i = n.n(r),
   a = n(392711),
-  o = n.n(a),
-  s = n(570140),
+  s = n.n(a),
+  o = n(570140),
   l = n(430742),
   u = n(40851),
   c = n(367907),
@@ -34,9 +34,9 @@ var r = n(512722),
 
 function A(e, t, n) {
   u.UI.dispatch(g.CkL.POPOUT_CLOSE);
-  let r = !o().isEmpty(m.Z.getVoiceStatesForChannel(e.id));
+  let r = !s().isEmpty(m.Z.getVoiceStatesForChannel(e.id));
   if (t || !f.vF.getSetting() || __OVERLAY__ || r) {
-s.Z.dispatch({
+o.Z.dispatch({
   type: 'SIDEBAR_CLOSE',
   baseChannelId: e.parent_id
 }), null != n ? (0, E.ad)(e, {
@@ -65,7 +65,7 @@ let t = h.Z.getDraft(e.id, h.d.ChannelMessage);
 l.Z.saveDraft(e.id, '', h.d.ChannelMessage), l.Z.saveDraft(e.id, t, h.d.FirstThreadMessage);
   }
   setTimeout(() => {
-s.Z.dispatch({
+o.Z.dispatch({
   type: 'SIDEBAR_CREATE_THREAD',
   parentChannelId: e.id,
   parentMessageId: null == t ? void 0 : t.id,
@@ -75,21 +75,21 @@ s.Z.dispatch({
 }
 
 function v(e, t) {
-  (0, _.uL)(g.Z5c.CHANNEL(e, (0, S.ME)(t) ? S.oC.GUILD_HOME : t)), s.Z.dispatch({
+  (0, _.uL)(g.Z5c.CHANNEL(e, (0, S.ME)(t) ? S.oC.GUILD_HOME : t)), o.Z.dispatch({
 type: 'SIDEBAR_CLOSE',
 baseChannelId: t
   });
 }
 
 function O(e) {
-  s.Z.dispatch({
+  o.Z.dispatch({
 type: 'SIDEBAR_CLOSE',
 baseChannelId: e
-  }), s.Z.dispatch({
+  }), o.Z.dispatch({
 type: 'DRAFT_CLEAR',
 channelId: e,
 draftType: h.d.FirstThreadMessage
-  }), s.Z.dispatch({
+  }), o.Z.dispatch({
 type: 'DRAFT_CLEAR',
 channelId: e,
 draftType: h.d.ThreadSettings

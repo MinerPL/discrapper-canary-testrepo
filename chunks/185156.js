@@ -10,14 +10,14 @@ var n = i(735250),
   s = i(912370),
   l = i(477690),
   c = i(481060),
-  d = i(731081),
+  d = i(453499),
   u = i(626135),
   h = i(463571),
   _ = i(34674),
   p = i(132871),
   m = i(147890),
-  f = i(409425),
-  g = i(57716),
+  g = i(409425),
+  f = i(57716),
   C = i(981631),
   x = i(689938),
   I = i(557499);
@@ -65,7 +65,7 @@ children: [
           children: [
             i,
             ' ',
-            _ && (0, n.jsx)(f.Z, {})
+            _ && (0, n.jsx)(g.Z, {})
           ]
         }),
         (0, n.jsx)(c.Text, {
@@ -105,9 +105,9 @@ collection: {
   title: r,
   application_directory_collection_items: c
 }
-  } = e, h = (0, g.Z)({
+  } = e, h = (0, f.Z)({
 collection: t
-  }), [f, N] = a.useState(), v = (0, p.useApplicationDirectoryHistory)(e => e.guildId);
+  }), [g, N] = a.useState(), v = (0, p.useApplicationDirectoryHistory)(e => e.guildId);
   return a.useEffect(() => {
 let e = null == h ? void 0 : h.current;
 if (null == e)
@@ -125,7 +125,7 @@ className: o()({
   [I.collectionBottomMargin]: c.length <= 1
 }),
 children: (0, n.jsx)(d.Z, {
-  aspectRatio: f,
+  aspectRatio: g,
   themedPagination: !0,
   paginationClassName: I.paginationControls,
   paginationArrowClassName: I.paginationArrow,
@@ -154,16 +154,16 @@ children: (0, n.jsx)(d.Z, {
     } = e;
     if (null == a)
       return;
-    let f = (0, _.$_)({
+    let g = (0, _.$_)({
       itemId: t,
       hash: a
     });
     if (l === s.C.APPLICATION && null != o) {
-      var g, I;
+      var f, I;
       return (0, n.jsx)(b, {
         collectionTitle: r,
         title: o.name,
-        description: null !== (I = null === (g = o.directory_entry) || void 0 === g ? void 0 : g.short_description) && void 0 !== I ? I : o.description,
+        description: null !== (I = null === (f = o.directory_entry) || void 0 === f ? void 0 : f.short_description) && void 0 !== I ? I : o.description,
         handleClick: () => {
           u.default.track(C.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
             collection_id: i,
@@ -174,7 +174,7 @@ children: (0, n.jsx)(d.Z, {
             applicationId: o.id
           });
         },
-        imageSrc: f,
+        imageSrc: g,
         ctaLabel: x.Z.Messages.APP_DIRECTORY_GALLERY_COLLECTION_VIEW_APP_CTA,
         applicationId: o.id
       });
@@ -192,7 +192,7 @@ children: (0, n.jsx)(d.Z, {
             shown_mutual_guilds_count: void 0
           });
         },
-        imageSrc: f,
+        imageSrc: g,
         ctaLabel: h,
         ctaLink: p
       });

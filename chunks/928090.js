@@ -31,8 +31,8 @@ guild: s,
 toUser: _,
 fromUser: x,
 onClose: A,
-transitionState: p
-  } = e, [h, O] = t.useState(!1), F = s.hasFeature(N.oNc.VERIFIED) || s.hasFeature(N.oNc.PARTNERED), M = F ? f.Z.Messages.TRANSFER_OWNERSHIP_PROTECTED_GUILD_PAUSED : null, b = F ? f.Z.Messages.TRANSFER_OWNERSHIP_PROTECTED_GUILD_LINK_PAUSED.format({
+transitionState: h
+  } = e, [p, O] = t.useState(!1), F = s.hasFeature(N.oNc.VERIFIED) || s.hasFeature(N.oNc.PARTNERED), M = F ? f.Z.Messages.TRANSFER_OWNERSHIP_PROTECTED_GUILD_PAUSED : null, b = F ? f.Z.Messages.TRANSFER_OWNERSHIP_PROTECTED_GUILD_LINK_PAUSED.format({
 ticketUrl: S()
   }) : null, g = s.hasFeature(N.oNc.CREATOR_MONETIZABLE) || s.hasFeature(N.oNc.CREATOR_MONETIZABLE_PROVISIONAL);
   async function C(e) {
@@ -101,7 +101,7 @@ v = () => (0, r.jsxs)('span', {
   ]
 });
   return (0, r.jsx)(i.ModalRoot, {
-transitionState: p,
+transitionState: h,
 children: (0, r.jsxs)('form', {
   onSubmit: Z,
   children: [
@@ -180,7 +180,7 @@ children: (0, r.jsxs)('form', {
           disabled: F,
           tooltipNote: M,
           hideBorder: !0,
-          value: h,
+          value: p,
           onChange: function(e) {
             O(e);
           },
@@ -202,7 +202,7 @@ children: (0, r.jsxs)('form', {
       children: [
         (0, r.jsx)(i.Button, {
           type: 'submit',
-          disabled: !h,
+          disabled: !p,
           color: i.Button.Colors.RED,
           children: f.Z.Messages.TRANSFER_OWNERSHIP
         }),

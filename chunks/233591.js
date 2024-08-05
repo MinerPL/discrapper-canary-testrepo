@@ -1,8 +1,8 @@
 var r = n(581031),
   i = /[^\0-\u007E]/,
   a = /[.\u3002\uFF0E\uFF61]/g,
-  o = 'Overflow: input needs wider integers to process',
-  s = 35,
+  s = 'Overflow: input needs wider integers to process',
+  o = 35,
   l = RangeError,
   u = r(a.exec),
   c = Math.floor,
@@ -29,15 +29,15 @@ return e + 22 + 75 * (e < 26);
   },
   g = function(e, t, n) {
 var r = 0;
-for (e = n ? c(e / 700) : e >> 1, e += c(e / t); e > 26 * s >> 1;)
-  e = c(e / s), r += 36;
-return c(r + (s + 1) * e / (e + 38));
+for (e = n ? c(e / 700) : e >> 1, e += c(e / t); e > 26 * o >> 1;)
+  e = c(e / o), r += 36;
+return c(r + (o + 1) * e / (e + 38));
   },
   S = function(e) {
 var t, n, r = [],
   i = (e = I(e)).length,
   a = 128,
-  s = 0,
+  o = 0,
   u = 72;
 for (t = 0; t < e.length; t++)
   (n = e[t]) < 128 && f(r, d(n));
@@ -48,13 +48,13 @@ for (_ && f(r, '-'); h < i;) {
   for (t = 0; t < e.length; t++)
     (n = e[t]) >= a && n < p && (p = n);
   var m = h + 1;
-  if (p - a > c((2147483647 - s) / m))
-    throw l(o);
-  for (s += (p - a) * m, a = p, t = 0; t < e.length; t++) {
-    if ((n = e[t]) < a && ++s > 2147483647)
-      throw l(o);
+  if (p - a > c((2147483647 - o) / m))
+    throw l(s);
+  for (o += (p - a) * m, a = p, t = 0; t < e.length; t++) {
+    if ((n = e[t]) < a && ++o > 2147483647)
+      throw l(s);
     if (n === a) {
-      for (var S = s, A = 36;;) {
+      for (var S = o, A = 36;;) {
         var N = A <= u ? 1 : A >= u + 26 ? 26 : A - u;
         if (S < N)
           break;
@@ -62,17 +62,17 @@ for (_ && f(r, '-'); h < i;) {
           O = 36 - N;
         f(r, d(T(N + v % O))), S = c(v / O), A += 36;
       }
-      f(r, d(T(S))), u = g(s, m, h === _), s = 0, h++;
+      f(r, d(T(S))), u = g(o, m, h === _), o = 0, h++;
     }
   }
-  s++, a++;
+  o++, a++;
 }
 return E(r, '');
   };
 e.exports = function(e) {
   var t, n, r = [],
-o = p(h(m(e), a, '.'), '.');
-  for (t = 0; t < o.length; t++)
-f(r, u(i, n = o[t]) ? 'xn--' + S(n) : n);
+s = p(h(m(e), a, '.'), '.');
+  for (t = 0; t < s.length; t++)
+f(r, u(i, n = s[t]) ? 'xn--' + S(n) : n);
   return E(r, '.');
 };

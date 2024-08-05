@@ -1,6 +1,6 @@
 n.d(t, {
   P: function() {
-return o;
+return s;
   }
 }), n(470079), n(442837);
 var r = n(581883);
@@ -8,7 +8,7 @@ n(594174);
 var i = n(74538),
   a = n(647177);
 
-function o(e) {
+function s(e) {
   var t;
   return function(e, t) {
 let n = (0, a.Gx)(e, t.id);

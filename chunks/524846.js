@@ -1,6 +1,6 @@
-var t, i;
-n.d(l, {
+var l, r;
+t.d(n, {
   $: function() {
-return t;
+return l;
   }
-}), (i = t || (t = {})).USER = 'user', i.ROLE = 'role', i.CHANNEL = 'channel';
+}), (r = l || (l = {})).USER = 'user', r.ROLE = 'role', r.CHANNEL = 'channel';

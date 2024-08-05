@@ -3,8 +3,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(570140),
-  o = n(468026),
-  s = n(626135),
+  s = n(468026),
+  o = n(626135),
   l = n(358085),
   u = n(998502),
   c = n(566620),
@@ -17,7 +17,7 @@ class p extends d.Z {
   _initialize() {
 super._initialize(), l.isPlatformEmbedded && u.ZP.on('APP_PUSH_ANALYTICS', (e, t) => {
   t.forEach(e => {
-    'activities' === e.type && e.name === f.rMx.ACTIVITIES_RESTRICTRED_CSP_VIOLATION && s.default.track(e.name, e.data);
+    'activities' === e.type && e.name === f.rMx.ACTIVITIES_RESTRICTRED_CSP_VIOLATION && o.default.track(e.name, e.data);
   });
 });
   }
@@ -26,7 +26,7 @@ let {
   code: t,
   message: n
 } = e;
-(0, i.openModalLazy)(async () => e => (0, r.jsx)(o.default, {
+(0, i.openModalLazy)(async () => e => (0, r.jsx)(s.default, {
   title: h.Z.Messages.EMBEDDED_ACTIVITIES_ERROR_TITLE.format({
     code: t
   }),
@@ -35,7 +35,7 @@ let {
 }));
   }
   showLaunchErrorModal(e) {
-(0, i.openModalLazy)(async () => t => (0, r.jsx)(o.default, {
+(0, i.openModalLazy)(async () => t => (0, r.jsx)(s.default, {
   title: h.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
   body: e,
   ...t

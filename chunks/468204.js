@@ -6,8 +6,8 @@ return l;
 var r = n(765981),
   i = n(714382),
   a = n(574543),
-  o = n(92861),
-  s = n(591723);
+  s = n(92861),
+  o = n(591723);
 
 function l(e) {
   var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
@@ -20,7 +20,7 @@ u = function(e) {
     instanceId: 'dnd-core'
   }));
 }(l),
-c = new o.S(u, new s.V(u)),
+c = new s.S(u, new o.V(u)),
 d = new r.f(u, c),
 _ = e(d, t, n);
   return d.receiveBackend(_), d;

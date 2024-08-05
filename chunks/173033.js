@@ -9,10 +9,10 @@ function a(e, t) {
   let n = e.offsetTop,
 a = e.offsetParent;
   for (; null != a;) {
-var l;
+var s;
 if (a === t || !(0, i.k)(a, HTMLElement))
   break;
-n += null !== (l = a.offsetTop) && void 0 !== l ? l : 0, a = a.offsetParent;
+n += null !== (s = a.offsetTop) && void 0 !== s ? s : 0, a = a.offsetParent;
   }
   return n;
 }

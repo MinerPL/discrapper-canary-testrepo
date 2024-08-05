@@ -3,7 +3,7 @@ n.d(t, {
 return T;
   }
 }), n(47120);
-var r, i, a, o, s, l, u = n(735250),
+var r, i, a, s, o, l, u = n(735250),
   c = n(470079),
   d = n(120356),
   _ = n.n(d),
@@ -20,7 +20,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-(s = r || (r = {}))[s.ENTERING = 0] = 'ENTERING', s[s.LEAVING = 1] = 'LEAVING', s[s.APPEARING = 2] = 'APPEARING', s[s.STATIC = 3] = 'STATIC', (l = i || (i = {})).SLIDE = 'slide', l.LIFT = 'lift';
+(o = r || (r = {}))[o.ENTERING = 0] = 'ENTERING', o[o.LEAVING = 1] = 'LEAVING', o[o.APPEARING = 2] = 'APPEARING', o[o.STATIC = 3] = 'STATIC', (l = i || (i = {})).SLIDE = 'slide', l.LIFT = 'lift';
 class I extends(a = c.PureComponent) {
   componentDidMount() {
 if (null != this._measureRef.current) {
@@ -148,14 +148,14 @@ let {
   animationProgress: r,
   animationState: i,
   baseHeight: a,
-  targetHeight: o
-} = this.state, s = null !== (e = this.props.sideMargin) && void 0 !== e ? e : 0, l = null !== (t = this.props.verticalMargin) && void 0 !== t ? t : 0, u = 1 === i, c = 0 === i;
+  targetHeight: s
+} = this.state, o = null !== (e = this.props.sideMargin) && void 0 !== e ? e : 0, l = null !== (t = this.props.verticalMargin) && void 0 !== t ? t : 0, u = 1 === i, c = 0 === i;
 return {
   overflow: c || u ? 'hidden' : 'visible',
   position: u ? 'absolute' : void 0,
   top: u ? l : void 0,
-  left: u ? s : void 0,
-  right: u ? s : void 0,
+  left: u ? o : void 0,
+  right: u ? o : void 0,
   bottom: u ? l : void 0,
   ...this.getMotionAnimation(),
   opacity: r.interpolate({
@@ -177,7 +177,7 @@ return {
     ],
     outputRange: [
       a,
-      o
+      s
     ],
     extrapolate: 'clamp',
     easing: E.Z.Easing.inOut(E.Z.Easing.ease)
@@ -225,7 +225,7 @@ super(...e), m(this, 'state', {
 m(I, 'contextType', h.S), m(I, 'defaultProps', {
   duration: 300
 });
-class T extends(o = c.Component) {
+class T extends(s = c.Component) {
   componentDidMount() {
 this.setPrevSteps();
   }
@@ -247,8 +247,8 @@ let {
   animatedNodeClassName: r,
   staticClassName: i,
   sideMargin: a,
-  verticalMargin: o,
-  children: s,
+  verticalMargin: s,
+  children: o,
   fillParent: l,
   animationMotionType: c
 } = this.props;
@@ -259,14 +259,14 @@ return (0, u.jsx)(f.W, {
     fillParent: l,
     sideMargin: a,
     animationMotionType: null != c ? c : 'slide',
-    verticalMargin: o,
+    verticalMargin: s,
     getDirection: this.getDirection,
     getBaseHeight: this.getBaseHeight,
     className: n,
     animatedNodeClassName: r,
     staticClassName: i,
     setHeight: this.setHeight,
-    children: s
+    children: o
   }, ''.concat(e))
 });
   }

@@ -1,48 +1,50 @@
 n.d(t, {
   o: function() {
-return I;
+return m;
   }
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-  s = n.n(a),
+var s = n(120356),
+  a = n.n(s),
   r = n(481060),
-  l = n(230711),
-  o = n(266843),
-  c = n(981631),
+  l = n(266843),
+  o = n(341907),
+  c = n(709158),
+  u = n(46140),
   d = n(689938),
-  u = n(687133),
-  _ = n(87181);
+  _ = n(687133),
+  E = n(87181);
 
-function E() {
+function I() {
+  let e = (0, c.Z)(u.dr.EMBED_DESKTOP);
   return (0, i.jsx)('div', {
-className: u.buttonContainer,
+className: _.buttonContainer,
 children: (0, i.jsx)(r.Button, {
-  className: u.button,
+  className: _.button,
   color: r.ButtonColors.BRAND,
   onClick: () => {
-    l.Z.open(c.oAB.INVENTORY);
+    (0, o.navigateToQuestHome)(u.dr.EMBED_DESKTOP);
   },
-  children: d.Z.Messages.GIFT_INVENTORY
+  children: e ? d.Z.Messages.QUESTS : d.Z.Messages.GIFT_INVENTORY
 })
   });
 }
 
-function I() {
+function m() {
   let {
 containerRef: e,
 size: t
-  } = (0, o.h)();
+  } = (0, l.h)();
   return (0, i.jsxs)('div', {
 ref: t => e.current = t,
-className: s()(u.container, {
-  [u.wide]: 'lg' === t,
-  [u.tall]: 'lg' !== t
+className: a()(_.container, {
+  [_.wide]: 'lg' === t,
+  [_.tall]: 'lg' !== t
 }),
 children: [
   (0, i.jsxs)('div', {
-    className: u.contentContainer,
+    className: _.contentContainer,
     children: [
       (0, i.jsx)(r.Heading, {
         variant: 'lg' === t ? 'heading-xl/bold' : 'heading-lg/bold',
@@ -52,18 +54,18 @@ children: [
       (0, i.jsx)(r.Text, {
         variant: 'lg' === t ? 'text-sm/medium' : 'text-xs/medium',
         color: 'text-normal',
-        className: u.__invalid_mobileWebCopy,
+        className: _.__invalid_mobileWebCopy,
         children: d.Z.Messages.QUESTS_EMBED_INVALID_BODY_2
       }),
-      (0, i.jsx)(E, {})
+      (0, i.jsx)(I, {})
     ]
   }),
   (0, i.jsx)('div', {
-    className: u.imgContainer,
+    className: _.imgContainer,
     children: (0, i.jsx)('img', {
-      src: _,
+      src: E,
       alt: '',
-      className: u.missingQuestImage
+      className: _.missingQuestImage
     })
   })
 ]

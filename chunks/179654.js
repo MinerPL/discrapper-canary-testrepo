@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   }
 });
 var r = n(848479),
@@ -14,7 +14,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class o {
+class s {
   getStats() {
 let e = this.cpuHistogram.getReport(),
   t = this.memoryHistogram.getReport(),

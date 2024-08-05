@@ -5,8 +5,8 @@ return o;
 });
 var i = n(735250);
 n(470079);
-var a = n(481060),
-  s = n(671533),
+var s = n(481060),
+  a = n(671533),
   r = n(981631),
   l = n(952681);
 
@@ -17,25 +17,25 @@ onGoBack: n,
 onDismiss: o,
 showCloseButton: c
   } = e;
-  return (0, i.jsxs)(a.Notice, {
+  return (0, i.jsxs)(s.Notice, {
 className: l.backNotice,
 children: [
-  c && (0, i.jsx)(a.NoticeCloseButton, {
+  c && (0, i.jsx)(s.NoticeCloseButton, {
     onClick: o,
     noticeType: r.kVF.BACK_TO_PREVIOUS_SCREEN
   }),
-  (0, i.jsxs)(a.Button, {
+  (0, i.jsxs)(s.Button, {
     className: l.backButton,
     innerClassName: l.backButtonInner,
-    look: a.Button.Looks.OUTLINED,
-    color: a.Button.Colors.WHITE,
-    size: a.Button.Sizes.NONE,
+    look: s.Button.Looks.OUTLINED,
+    color: s.Button.Colors.WHITE,
+    size: s.Button.Sizes.NONE,
     onClick: n,
     children: [
-      (0, i.jsx)(s.Z, {
+      (0, i.jsx)(a.Z, {
         width: 16,
         height: 16,
-        direction: s.Z.Directions.LEFT,
+        direction: a.Z.Directions.LEFT,
         className: l.__invalid_backArrow
       }),
       t

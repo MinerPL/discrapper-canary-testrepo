@@ -10,8 +10,8 @@ return r;
   }
 }), n(627341);
 var r, i, a = n(278074),
-  o = n(981631),
-  s = n(490897),
+  s = n(981631),
+  o = n(490897),
   l = n(689938);
 
 function u(e, t) {
@@ -19,20 +19,20 @@ function u(e, t) {
 t,
 e
   ]).with([
-o.bL.ALL_MESSAGES,
-s.i.ALL_MESSAGES
+s.bL.ALL_MESSAGES,
+o.i.ALL_MESSAGES
   ], () => 'all_messages').with([
-o.bL.ONLY_MENTIONS,
-s.i.UNSET
+s.bL.ONLY_MENTIONS,
+o.i.UNSET
   ], () => 'mentions').with([
-o.bL.ONLY_MENTIONS,
-s.i.ONLY_MENTIONS
+s.bL.ONLY_MENTIONS,
+o.i.ONLY_MENTIONS
   ], () => 'mentions').with([
-o.bL.NO_MESSAGES,
-s.i.UNSET
+s.bL.NO_MESSAGES,
+o.i.UNSET
   ], () => 'nothing').with([
-o.bL.NO_MESSAGES,
-s.i.ONLY_MENTIONS
+s.bL.NO_MESSAGES,
+o.i.ONLY_MENTIONS
   ], () => 'nothing').otherwise(() => 'custom');
 }
 

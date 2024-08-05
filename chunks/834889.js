@@ -1,7 +1,7 @@
 var r = n(583584),
   i = n(429675),
   a = n(815329),
-  o = n(49662);
+  s = n(49662);
 e.exports = function(e, t, n) {
   if (!e || 'object' != typeof e && 'function' != typeof e)
 throw new a('`obj` must be an object or a function`');
@@ -15,19 +15,19 @@ throw new a('`nonWritable`, if provided, must be a boolean or null');
 throw new a('`nonConfigurable`, if provided, must be a boolean or null');
   if (arguments.length > 6 && 'boolean' != typeof arguments[6])
 throw new a('`loose`, if provided, must be a boolean');
-  var s = arguments.length > 3 ? arguments[3] : null,
+  var o = arguments.length > 3 ? arguments[3] : null,
 l = arguments.length > 4 ? arguments[4] : null,
 u = arguments.length > 5 ? arguments[5] : null,
 c = arguments.length > 6 && arguments[6],
-d = !!o && o(e, t);
+d = !!s && s(e, t);
   if (r)
 r(e, t, {
   configurable: null === u && d ? d.configurable : !u,
-  enumerable: null === s && d ? d.enumerable : !s,
+  enumerable: null === o && d ? d.enumerable : !o,
   value: n,
   writable: null === l && d ? d.writable : !l
 });
-  else if (!c && (s || l || u))
+  else if (!c && (o || l || u))
 throw new i('This environment does not support defining a property as non-configurable, non-writable, or non-enumerable.');
   else
 e[t] = n;

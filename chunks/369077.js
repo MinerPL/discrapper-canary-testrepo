@@ -25,8 +25,8 @@ var d = s(594174),
   C = s(979264),
   m = s(308083),
   A = s(981631),
-  h = s(689938),
-  g = s(947020);
+  g = s(689938),
+  h = s(947020);
 
 function O(e) {
   let {
@@ -44,21 +44,21 @@ memberCount: u
 let e = T.current;
 null != e && null != e.offsetWidth && null != e.scrollWidth && A(e.offsetWidth < e.scrollWidth);
   }, []), (0, n.jsxs)('div', {
-className: r()(g.container, t),
+className: r()(h.container, t),
 children: [
   (0, n.jsxs)('div', {
-    className: g.guildPrefixContainer,
+    className: h.guildPrefixContainer,
     children: [
       (0, n.jsx)(S.b, {
         guildId: c,
         guildName: d,
         guildIcon: _,
         iconSize: E,
-        className: g.guildPrefixIcon,
+        className: h.guildPrefixIcon,
         animate: !1
       }),
       (0, n.jsxs)('div', {
-        className: g.details,
+        className: h.details,
         children: [
           (0, n.jsx)(l.Tooltip, {
             text: d,
@@ -67,7 +67,7 @@ children: [
             children: e => (0, n.jsx)('span', {
               ref: T,
               ...e,
-              className: g.guildName,
+              className: h.guildName,
               children: d
             })
           }),
@@ -79,17 +79,17 @@ children: [
     ]
   }),
   (0, n.jsx)('div', {
-    className: g.tagContainer,
+    className: h.tagContainer,
     children: (0, n.jsx)(C.aG, {
       guildId: c,
-      className: g.tag,
+      className: h.tag,
       clanTag: s,
       clanBadge: i,
       onClick: o,
       badgeSize: m.NC.SIZE_16,
       textColor: 'interactive-normal',
       textVariant: 'text-sm/semibold',
-      badgeClassName: g.badge
+      badgeClassName: h.badge
     })
   })
 ]
@@ -114,16 +114,16 @@ if (i !== m) {
     return () => {
       (0, l.openModal)(e => (0, n.jsx)(l.ConfirmModal, {
         ...e,
-        header: h.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_CTA,
-        confirmText: h.Z.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA,
+        header: g.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_CTA,
+        confirmText: g.Z.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA,
         confirmButtonColor: l.Button.Colors.BRAND,
-        cancelText: h.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_CANCEL,
+        cancelText: g.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_CANCEL,
         onConfirm: async () => {
           await (0, _.nE)(i, !0, c.Z.PROFILE_POPOUT);
         },
         children: (0, n.jsx)(l.Text, {
           variant: 'text-sm/normal',
-          children: h.Z.Messages.CLAN_USER_PROFILE_USE_CLAN_TAG.format({
+          children: g.Z.Messages.CLAN_USER_PROFILE_USE_CLAN_TAG.format({
             guildName: r
           })
         })
@@ -149,12 +149,12 @@ N
   return (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsx)(l.Heading, {
-    className: g.header,
+    className: h.header,
     variant: 'eyebrow',
-    children: h.Z.Messages.CLAN_USER_PROFILE_PRIMARY_CLAN
+    children: g.Z.Messages.CLAN_USER_PROFILE_PRIMARY_CLAN
   }),
   (0, n.jsx)(O, {
-    className: g.profileContainer,
+    className: h.profileContainer,
     clanTag: t,
     clanBadge: s,
     onTagClick: p,

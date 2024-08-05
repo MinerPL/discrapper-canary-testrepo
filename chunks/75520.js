@@ -1,17 +1,17 @@
 n.d(t, {
   n: function() {
-return o;
+return s;
   }
 });
 var r = n(182823),
   i = n(706682),
   a = n(612001);
 
-function o(e, t) {
+function s(e, t) {
   let {
 elementType: n = 'a',
-onPress: o,
-onPressStart: s,
+onPress: s,
+onPressStart: o,
 onPressEnd: l,
 onClick: u,
 isDisabled: c,
@@ -27,8 +27,8 @@ focusableProps: E
 pressProps: f,
 isPressed: h
   } = (0, a.r7)({
-onPress: o,
-onPressStart: s,
+onPress: s,
+onPressStart: o,
 onPressEnd: l,
 isDisabled: c,
 ref: t

@@ -21,47 +21,47 @@ var s = n(735250),
 function C(e) {
   let {
 user: t
-  } = e, r = (0, d.Z)(), C = (0, _.VM)(), p = (0, l.e7)([c.default], () => c.default.getCurrentUser()), g = a.useCallback(() => {
-i()(void 0 !== p, 'User must be logged in to accept a link request'), (0, o.openModalLazy)(async () => {
+  } = e, r = (0, d.Z)(), C = (0, _.VM)(), g = (0, l.e7)([c.default], () => c.default.getCurrentUser()), p = a.useCallback(() => {
+i()(void 0 !== g, 'User must be logged in to accept a link request'), (0, o.openModalLazy)(async () => {
   let {
     default: e
   } = await n.e('59716').then(n.bind(n, 275370));
   return n => (0, s.jsx)(e, {
     ...n,
-    currentUser: p,
+    currentUser: g,
     otherUser: t
   });
 });
   }, [
-p,
+g,
 t
   ]), A = a.useCallback(() => {
-i()(void 0 !== p, 'User must be logged in to decline a link request'), (0, o.openModalLazy)(async () => {
+i()(void 0 !== g, 'User must be logged in to decline a link request'), (0, o.openModalLazy)(async () => {
   let {
     default: e
   } = await n.e('958').then(n.bind(n, 4526));
   return n => (0, s.jsx)(e, {
     ...n,
-    currentUser: p,
+    currentUser: g,
     otherUser: t
   });
 });
   }, [
-p,
+g,
 t
   ]), m = a.useCallback(() => {
-i()(void 0 !== p, 'User must be logged in to decline a link request'), (0, o.openModalLazy)(async () => {
+i()(void 0 !== g, 'User must be logged in to decline a link request'), (0, o.openModalLazy)(async () => {
   let {
     default: e
   } = await n.e('69015').then(n.bind(n, 247265));
   return n => (0, s.jsx)(e, {
     ...n,
-    currentUser: p,
+    currentUser: g,
     otherUser: t
   });
 });
   }, [
-p,
+g,
 t
   ]);
   return (0, s.jsxs)('div', {
@@ -87,7 +87,7 @@ children: [
           icon: o.CheckmarkLargeIcon,
           className: R.__invalid_actionAccept,
           tooltip: I.Z.Messages.FAMILY_CENTER_LINK_ACTION_ACCEPT,
-          onClick: g
+          onClick: p
         }),
         (0, s.jsx)(u.Z, {
           icon: o.CloseSmallIcon,

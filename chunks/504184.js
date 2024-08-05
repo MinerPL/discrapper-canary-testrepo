@@ -97,13 +97,13 @@ var t = {
     ]
   },
   a = function(e) {
-    return function(t, n, a, o) {
-      var s = r(t),
+    return function(t, n, a, s) {
+      var o = r(t),
         l = i[e][r(t)];
-      return 2 === s && (l = l[n ? 0 : 1]), l.replace(/%d/i, t);
+      return 2 === o && (l = l[n ? 0 : 1]), l.replace(/%d/i, t);
     };
   },
-  o = [
+  s = [
     'يناير',
     'فبراير',
     'مارس',
@@ -118,8 +118,8 @@ var t = {
     'ديسمبر'
   ];
 e.defineLocale('ar', {
-  months: o,
-  monthsShort: o,
+  months: s,
+  monthsShort: s,
   weekdays: 'الأحد_الإثنين_الثلاثاء_الأربعاء_الخميس_الجمعة_السبت'.split('_'),
   weekdaysShort: 'أحد_إثنين_ثلاثاء_أربعاء_خميس_جمعة_سبت'.split('_'),
   weekdaysMin: 'ح_ن_ث_ر_خ_ج_س'.split('_'),

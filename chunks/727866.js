@@ -2,7 +2,7 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(689938);
-let o = (e, t) => (0, r.jsxs)(i.Text, {
+let s = (e, t) => (0, r.jsxs)(i.Text, {
   color: 'text-danger',
   style: {
 display: 'flex',
@@ -24,12 +24,12 @@ e
 t.Z = {
   getTextInVoiceSendMessageChannelPermissionText: function(e) {
 return e ? a.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_TIV_DESCRIPTION_TEXT_DISABLED.format({
-  warningHook: o
+  warningHook: s
 }) : a.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_DESCRIPTION_TEXT;
   },
   getTextInVoiceReadMessageHistoryChannelPermissionText: function(e) {
 return e ? a.Z.Messages.ROLE_PERMISSIONS_READ_MESSAGE_HISTORY_WITH_TIV_DESCRIPTION_TEXT_DISABLED.format({
-  warningHook: o
+  warningHook: s
 }) : a.Z.Messages.ROLE_PERMISSIONS_READ_MESSAGE_HISTORY_DESCRIPTION_TEXT;
   }
 };

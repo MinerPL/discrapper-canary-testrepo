@@ -1,8 +1,8 @@
 n(724458);
 var r, i = n(180650),
   a = n(979554),
-  o = n(442837),
-  s = n(570140),
+  s = n(442837),
+  o = n(570140),
   l = n(597688);
 
 function u(e, t, n) {
@@ -35,7 +35,7 @@ categoryItemViews: {
 }
   }),
   E = _();
-class f extends(r = o.ZP.PersistedStore) {
+class f extends(r = s.ZP.PersistedStore) {
   initialize(e) {
 null != e && (E = e);
   }
@@ -51,7 +51,7 @@ return null != r && (null === (n = E.categoryItemViews[r]) || void 0 === n ? voi
 E = _();
   }
 }
-u(f, 'displayName', 'CollectiblesPersistedStore'), u(f, 'persistKey', 'CollectiblesPersistedStoreV2'), new f(s.Z, {
+u(f, 'displayName', 'CollectiblesPersistedStore'), u(f, 'persistKey', 'CollectiblesPersistedStoreV2'), new f(o.Z, {
   COLLECTIBLES_CATEGORY_ITEMS_VIEWED: e => {
 let {
   categories: t,

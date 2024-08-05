@@ -4,7 +4,7 @@ n.d(t, {
 return B;
   }
 }), n(47120);
-var i, a, o, s, l = n(392711),
+var i, a, s, o, l = n(392711),
   u = n.n(l),
   c = n(683860),
   d = n(442837),
@@ -130,12 +130,12 @@ return N = null, e;
 return r;
   }
 }
-s = 'ForumActivePostStore', (o = 'displayName') in(a = V) ? Object.defineProperty(a, o, {
-  value: s,
+o = 'ForumActivePostStore', (s = 'displayName') in(a = V) ? Object.defineProperty(a, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = s, t.Z = new V(_.Z, {
+}) : a[s] = o, t.Z = new V(_.Z, {
   CONNECTION_OPEN: k,
   OVERLAY_INITIALIZE: k,
   GUILD_CREATE: k,

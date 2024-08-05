@@ -3,7 +3,7 @@ n.d(t, {
 return p;
   }
 });
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(601964),
   c = n(594174),
@@ -43,7 +43,7 @@ i = c.default.getCurrentUser();
 return !1;
   (0, d.d3)(r) ? delete E[t]: E[t] = r;
 }
-class I extends(o = s.ZP.Store) {
+class I extends(s = o.ZP.Store) {
   getRequest(e) {
 return E[e];
   }
@@ -152,13 +152,13 @@ if (null != n && null != r) {
     id: t,
     name: i,
     icon: a,
-    features: o
+    features: s
   } = n;
   h[t] = {
     id: t,
     name: i,
     icon: a,
-    features: null != o ? o : []
+    features: null != s ? s : []
   };
 }
   },

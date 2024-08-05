@@ -20,8 +20,8 @@ var a = t(735250),
   O = t(430824),
   C = t(699516),
   h = t(594174),
-  p = t(153124),
-  A = t(626135),
+  A = t(153124),
+  p = t(626135),
   S = t(63063),
   f = t(700785),
   g = t(245315),
@@ -616,13 +616,13 @@ transitionState: t,
 onClose: i
   } = e;
   l.useEffect(() => {
-A.default.track(b.rMx.OPEN_MODAL, {
+p.default.track(b.rMx.OPEN_MODAL, {
   type: v.tA
 });
   }, []);
   let {
 guild: n
-  } = (0, r.cj)([M.Z], () => M.Z.getProps()), c = (0, r.e7)([u.Z], () => u.Z.theme), [d, _] = l.useState(!1), [x, S] = l.useState(!v.$X.some(e => f.oz(e, n))), [g, R] = l.useState(v.b4), [U, B] = l.useState(v.b4), [P] = l.useState(null == n ? void 0 : n.defaultMessageNotifications), [Z] = l.useState(null == n ? void 0 : n.verificationLevel), [F] = l.useState(null == n ? void 0 : n.explicitContentFilter), [w] = l.useState(x), H = (0, r.e7)([O.Z], () => null != n ? O.Z.getRole(n.id, n.getEveryoneRoleId()) : void 0), V = (0, r.e7)([L.ZP], () => null != n ? L.ZP.getChannels(n.id) : null), q = (0, p.Dt)(), {
+  } = (0, r.cj)([M.Z], () => M.Z.getProps()), c = (0, r.e7)([u.Z], () => u.Z.theme), [d, _] = l.useState(!1), [x, S] = l.useState(!v.$X.some(e => f.oz(e, n))), [g, R] = l.useState(v.b4), [U, B] = l.useState(v.b4), [P] = l.useState(null == n ? void 0 : n.defaultMessageNotifications), [Z] = l.useState(null == n ? void 0 : n.verificationLevel), [F] = l.useState(null == n ? void 0 : n.explicitContentFilter), [w] = l.useState(x), H = (0, r.e7)([O.Z], () => null != n ? O.Z.getRole(n.id, n.getEveryoneRoleId()) : void 0), V = (0, r.e7)([L.ZP], () => null != n ? L.ZP.getChannels(n.id) : null), q = (0, A.Dt)(), {
 enabled: W
   } = (0, E.D2)(null !== (s = null == n ? void 0 : n.id) && void 0 !== s ? s : b.lds);
   if (null == n)
@@ -779,7 +779,7 @@ stepData: el,
 title: D.Z.Messages.ENABLE_COMMUNITY_MODAL_TITLE,
 transitionState: t,
 onClose: () => {
-  i(), A.default.track(b.rMx.MODAL_DISMISSED, {
+  i(), p.default.track(b.rMx.MODAL_DISMISSED, {
     type: v.tA
   });
 },

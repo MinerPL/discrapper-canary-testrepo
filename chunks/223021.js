@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   }
 });
 var r = n(475525);
@@ -11,6 +11,6 @@ ASIAN: r.asianCompactTimeStamp
   },
   a = /(AM|PM)$/;
 
-function o(e) {
+function s(e) {
   return null != e.match(a) ? i.LATIN24 : e.length <= 5 ? i.LATIN12 : i.ASIAN;
 }

@@ -7,7 +7,7 @@ var n = function() {
   convert: {
     fromCodePoint: function(e) {
       var t = 'string' == typeof e ? parseInt(e, 16) : e;
-      return t < 65536 ? s(t) : s(55296 + ((t -= 65536) >> 10), 56320 + (1023 & t));
+      return t < 65536 ? o(t) : o(55296 + ((t -= 65536) >> 10), 56320 + (1023 & t));
     },
     toCodePoint: f
   },
@@ -21,10 +21,10 @@ var n = function() {
     }), ('string' == typeof t ? function(e, t) {
       return E(e, function(e) {
         var n, r, i = e,
-          o = c(e),
-          s = t.callback(o, t);
-        if (o && s) {
-          for (r in (i = '<img '.concat('class="', t.className, '" ', 'draggable="false" ', 'alt="', e, '"', ' src="', s, '"'), n = t.attributes(e, o)))
+          s = c(e),
+          o = t.callback(s, t);
+        if (s && o) {
+          for (r in (i = '<img '.concat('class="', t.className, '" ', 'draggable="false" ', 'alt="', e, '"', ' src="', o, '"'), n = t.attributes(e, s)))
             if (n.hasOwnProperty(r) && 0 !== r.indexOf('on') && -1 === i.indexOf(' ' + r + '='))
               i = i.concat(' ', r, '="', n[r].replace(a, d), '"');
           i = i.concat('/>');
@@ -32,19 +32,19 @@ var n = function() {
         return i;
       });
     } : function(e, t) {
-      for (var r, i, a, s, u, d, _, E, f, h, p, m, I, T = function e(t, n) {
-          for (var r, i, a = t.childNodes, s = a.length; s--;)
-            3 === (i = (r = a[s]).nodeType) ? n.push(r) : 1 === i && !('ownerSVGElement' in r) && !o.test(r.nodeName.toLowerCase()) && e(r, n);
+      for (var r, i, a, o, u, d, _, E, f, h, p, m, I, T = function e(t, n) {
+          for (var r, i, a = t.childNodes, o = a.length; o--;)
+            3 === (i = (r = a[o]).nodeType) ? n.push(r) : 1 === i && !('ownerSVGElement' in r) && !s.test(r.nodeName.toLowerCase()) && e(r, n);
           return n;
         }(e, []), g = T.length; g--;) {
-        for (a = !1, s = document.createDocumentFragment(), d = (u = T[g]).nodeValue, E = 0; _ = n.exec(d);) {
-          if ((f = _.index) !== E && s.appendChild(l(d.slice(E, f), !0)), m = c(p = _[0]), E = f + p.length, I = t.callback(m, t), m && I) {
+        for (a = !1, o = document.createDocumentFragment(), d = (u = T[g]).nodeValue, E = 0; _ = n.exec(d);) {
+          if ((f = _.index) !== E && o.appendChild(l(d.slice(E, f), !0)), m = c(p = _[0]), E = f + p.length, I = t.callback(m, t), m && I) {
             for (i in ((h = new Image()).onerror = t.onerror, h.setAttribute('draggable', 'false'), r = t.attributes(p, m)))
               r.hasOwnProperty(i) && 0 !== i.indexOf('on') && !h.hasAttribute(i) && h.setAttribute(i, r[i]);
-            h.className = t.className, h.alt = p, h.src = I, a = !0, s.appendChild(h);
-          }!h && s.appendChild(l(p, !1)), h = null;
+            h.className = t.className, h.alt = p, h.src = I, a = !0, o.appendChild(h);
+          }!h && o.appendChild(l(p, !1)), h = null;
         }
-        a && (E < d.length && s.appendChild(l(d.slice(E), !0)), u.parentNode.replaceChild(s, u));
+        a && (E < d.length && o.appendChild(l(d.slice(E), !0)), u.parentNode.replaceChild(o, u));
       }
       return e;
     })(t, {
@@ -75,8 +75,8 @@ n = /(?:\ud83d\udc68\ud83c\udffb\u200d\u2764\ufe0f\u200d\ud83d\udc8b\u200d\ud83d
 r = /\uFE0F/g,
 i = String.fromCharCode(8205),
 a = /[&<>'"]/g,
-o = /^(?:iframe|noframes|noscript|script|select|style|textarea)$/,
-s = String.fromCharCode;
+s = /^(?:iframe|noframes|noscript|script|select|style|textarea)$/,
+o = String.fromCharCode;
   return e;
 
   function l(e, t) {

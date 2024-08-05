@@ -5,9 +5,9 @@ var a = n(735250),
   l = n(481060),
   i = n(970606),
   o = n(616230),
-  c = n(650774),
-  d = n(430824),
-  u = n(474333),
+  c = n(777036),
+  d = n(650774),
+  u = n(430824),
   I = n(693546),
   E = n(246364),
   _ = n(98493),
@@ -94,7 +94,7 @@ guildJoinRequests: O
 guildId: b,
 applicationStatus: 'REVIEW_APPLICATION' === v ? E.wB.SUBMITTED : v,
 sortOrder: f
-  }), L = (0, r.e7)([d.Z], () => d.Z.getGuild(b), [b]), D = (0, r.e7)([c.Z], () => c.Z.getMemberCount(b)), G = null != L && (null != D ? D : 0) >= L.maxMembers, {
+  }), L = (0, r.e7)([u.Z], () => u.Z.getGuild(b), [b]), D = (0, r.e7)([d.Z], () => d.Z.getMemberCount(b)), G = null != L && (null != D ? D : 0) >= L.maxMembers, {
 fetchNextPage: w
   } = (0, _.m)({
 guildId: b,
@@ -180,8 +180,8 @@ children: [
       })
     }) : null : (0, a.jsxs)(a.Fragment, {
       children: [
-        G && (0, a.jsx)(u.Z, {
-          messageType: u.Q.WARNING,
+        G && (0, a.jsx)(c.Z, {
+          messageType: c.Q.WARNING,
           textVariant: 'text-sm/medium',
           className: P.headerWarning,
           children: S.Z.Messages.CLAN_MAX_MEMBER_LIMIT_WARNING.format({

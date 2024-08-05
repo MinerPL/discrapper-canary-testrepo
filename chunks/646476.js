@@ -9,11 +9,11 @@ return _;
 var r = n(470079),
   i = n(913527),
   a = n.n(i),
-  o = n(846519),
-  s = n(987170);
+  s = n(846519),
+  o = n(987170);
 let l = new Date('2024-01-04T07:59:59.000Z'),
   u = a()(l),
-  c = (0, s.Z)({
+  c = (0, o.Z)({
 id: '2023-11_seasonal_gifting',
 label: 'Seasonal Gifting 2023',
 kind: 'user',
@@ -28,7 +28,7 @@ treatments: [{
   }
 }]
   }),
-  d = (0, s.Z)({
+  d = (0, o.Z)({
 id: '2023-11_seasonal_gifting_marketing_2023',
 label: 'Seasonal Gifting Marketing 2023',
 kind: 'user',
@@ -47,7 +47,7 @@ treatments: [{
 function _() {
   let [e, t] = r.useState(() => u.isAfter(Date.now()));
   return r.useEffect(() => {
-let n = new o.V7(),
+let n = new s.V7(),
   r = () => {
     let e = Math.min(u.diff(Date.now(), 'millisecond'), 86400000);
     null == n || n.start(e, () => {

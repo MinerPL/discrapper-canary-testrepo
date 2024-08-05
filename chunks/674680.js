@@ -35,22 +35,22 @@ size: T = r.AvatarSizes.SIZE_40
 return null;
   let C = (0, r.getAvatarSpecs)(T),
 {
-  name: p,
-  rarity: g
+  name: g,
+  rarity: p
 } = R,
 {
   color: A
-} = (0, c.F7)(g),
+} = (0, c.F7)(p),
 m = (0, a.wj)(I) ? u : E,
 N = (C.size - C.offset - 2 * C.stroke) * 0.8,
 f = C.size - C.stroke,
-S = {
+h = {
   width: 0.4 * N,
   height: 0.4 * N
 },
-h = {
-  width: S.width + 1,
-  height: S.height + 1,
+S = {
+  width: h.width + 1,
+  height: h.height + 1,
   right: C.stroke + 1,
   bottom: C.stroke + 1,
   padding: 0
@@ -62,7 +62,7 @@ style: {
   height: f,
   padding: C.stroke
 },
-'aria-label': ''.concat(null !== (t = p()) && void 0 !== t ? t : ''),
+'aria-label': ''.concat(null !== (t = g()) && void 0 !== t ? t : ''),
 children: [
   (0, s.jsx)('div', {
     className: _.trophyIconContainer,
@@ -75,19 +75,19 @@ children: [
   }),
   !d && (0, s.jsx)('div', {
     className: _.lockContainer,
-    style: h,
+    style: S,
     children: (0, s.jsx)(r.LockIcon, {
       size: 'custom',
       color: (0, l.Lq)(m.locked),
-      ...S
+      ...h
     })
   }),
-  d && g === c.EP.LEGENDARY && (0, s.jsx)('div', {
+  d && p === c.EP.LEGENDARY && (0, s.jsx)('div', {
     className: _.lockContainer,
-    style: h,
+    style: S,
     children: (0, s.jsx)(o.Z, {
       className: _.confettiIcon,
-      ...S
+      ...h
     })
   })
 ]

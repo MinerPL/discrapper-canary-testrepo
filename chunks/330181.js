@@ -45,8 +45,8 @@ error: R
   } = E(l), C = (0, d._k)(t, {
 includeSoftDeleted: !0
   }), {
-currentListing: p,
-nextListing: g
+currentListing: g,
+nextListing: p
   } = a.useMemo(() => {
 if ((null == n ? void 0 : n.renewalMutations) == null)
   return {
@@ -64,13 +64,13 @@ return {
 n,
 C
   ]);
-  if (null == n || null == p || null == g)
+  if (null == n || null == g || null == p)
 return null;
   let A = i()(n.currentPeriodEnd).format('MMM DD, YYYY');
   return (0, s.jsx)(_.Z, {
 message: u.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_DELETE_MUTATION_DESCRIPTION.format({
-  currentListing: p.name,
-  nextListing: g.name,
+  currentListing: g.name,
+  nextListing: p.name,
   changeDate: A
 }),
 error: null == R ? void 0 : R.message,

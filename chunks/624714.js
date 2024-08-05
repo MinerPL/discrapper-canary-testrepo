@@ -1,7 +1,7 @@
 n(47120), n(789020);
 var i = n(544891),
-  s = n(115130),
-  a = n(287545),
+  a = n(115130),
+  s = n(287545),
   r = n(812206),
   l = n(695103),
   o = n(626135),
@@ -24,7 +24,7 @@ handler(e) {
     socket: n,
     args: {
       event_name: i,
-      event_properties: s
+      event_properties: a
     }
   } = e;
   (0, u.bu)(n.transport), (0, u._f)(n.application);
@@ -40,7 +40,7 @@ handler(e) {
     throw new d.Z({
       errorCode: I.lTL.INVALID_COMMAND
     }, 'This application cannot access this API');
-  let g = (0, a.U)(l),
+  let g = (0, s.U)(l),
     p = {
       activity_application_id: l,
       activity_channel_type: _.type,
@@ -49,7 +49,7 @@ handler(e) {
     };
   o.default.track(i, {
     ...p,
-    ...s
+    ...a
   });
 }
   },
@@ -66,7 +66,7 @@ handler(e) {
   return i.tn.post({
     url: I.ANM.APPLICATION_TICKET(n),
     body: {
-      test_mode: l.Z.inTestModeForApplication(n) || s.Z.inDevModeForApplication(n)
+      test_mode: l.Z.inTestModeForApplication(n) || a.Z.inDevModeForApplication(n)
     },
     retries: 3,
     oldFormErrors: !0

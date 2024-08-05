@@ -6,13 +6,13 @@ return i;
 var r = n(647162);
 
 function i(e, t, n, i) {
-  var a, o, s;
+  var a, s, o;
   let l = e.hasConnectedAccount(),
 u = (0, r.PY)(e),
 c = e.getTrack(),
 d = e.getSyncingWith(),
 _ = e.getActivity(),
-E = null !== (s = null !== (o = null == c ? void 0 : c.id) && void 0 !== o ? o : null == _ ? void 0 : _.sync_id) && void 0 !== s ? s : e.getLastPlayedTrackId(),
+E = null !== (o = null !== (s = null == c ? void 0 : c.id) && void 0 !== s ? s : null == _ ? void 0 : _.sync_id) && void 0 !== o ? o : e.getLastPlayedTrackId(),
 f = n.id === t.getId(),
 h = l && !u,
 p = null != E && E === (null == i ? void 0 : i.sync_id),

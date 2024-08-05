@@ -1,4 +1,4 @@
-var i, s, a, r, l = n(442837),
+var i, a, s, r, l = n(442837),
   o = n(433517),
   c = n(570140);
 let d = 'hasSeenGuildTemplatePromotionTooltip',
@@ -23,12 +23,12 @@ return null !== (t = u[e]) && void 0 !== t && t;
 return !_;
   }
 }
-a = 'GuildTemplateTooltipStore', (s = 'displayName') in(i = E) ? Object.defineProperty(i, s, {
-  value: a,
+s = 'GuildTemplateTooltipStore', (a = 'displayName') in(i = E) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[s] = a, t.Z = new E(c.Z, {
+}) : i[a] = s, t.Z = new E(c.Z, {
   GUILD_TEMPLATE_DIRTY_TOOLTIP_REFRESH: function(e) {
 let {
   guildTemplate: t

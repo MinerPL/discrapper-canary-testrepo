@@ -28,21 +28,21 @@ var i = n(735250),
   T = n(752305),
   N = n(974251),
   O = n(893718),
-  A = n(957730),
-  y = n(400023),
-  R = n(623292),
-  M = n(807092),
-  b = n(592125),
-  L = n(703558),
-  P = n(731290),
-  D = n(430824),
-  w = n(375954),
-  j = n(944486),
-  k = n(914010),
-  V = n(594174),
-  B = n(556296),
-  U = n(237997),
-  z = n(583883),
+  A = n(552062),
+  y = n(957730),
+  R = n(400023),
+  M = n(623292),
+  b = n(807092),
+  L = n(592125),
+  P = n(703558),
+  D = n(731290),
+  w = n(430824),
+  j = n(375954),
+  k = n(944486),
+  V = n(914010),
+  B = n(594174),
+  U = n(556296),
+  z = n(237997),
   G = n(278297),
   W = n(547881),
   Y = n(585483),
@@ -72,7 +72,7 @@ e.channel.id !== this.props.channel.id && this.draftDidChange(this.props), (this
 });
   }
   componentWillUnmount() {
-L.Z.removeChangeListener(this.draftDidChange), Y.S.unsubscribe(q.CkL.TEXTAREA_FOCUS, this.focusInput), Y.S.unsubscribe(q.CkL.TEXTAREA_BLUR, this.blurInput);
+P.Z.removeChangeListener(this.draftDidChange), Y.S.unsubscribe(q.CkL.TEXTAREA_FOCUS, this.focusInput), Y.S.unsubscribe(q.CkL.TEXTAREA_BLUR, this.blurInput);
   }
   render() {
 let {
@@ -137,14 +137,14 @@ super(e), t = this, et(this, 'draftDidChange', function() {
     {
       textValue: n
     } = t.state,
-    i = L.Z.getDraft(e.channel.id, L.d.ChannelMessage);
+    i = P.Z.getDraft(e.channel.id, P.d.ChannelMessage);
   n !== i && '' === i && t.setState((0, T.eK)(i));
 }), et(this, 'handleTextareaKeyDown', e => {
   if (e.which === q.yXg.ARROW_UP && !e.shiftKey && !e.altKey && !e.ctrlKey && !e.metaKey && 0 === this.state.textValue.length) {
     e.preventDefault();
     let {
       channel: t
-    } = this.props, n = w.Z.getLastEditableMessage(t.id);
+    } = this.props, n = j.Z.getLastEditableMessage(t.id);
     null != n && p.Z.startEditMessage(t.id, n.id, n.content);
   }
 }), et(this, 'handleTextareaChange', (e, t, n) => {
@@ -153,7 +153,7 @@ super(e), t = this, et(this, 'draftDidChange', function() {
       id: i
     }
   } = this.props;
-  h.Z.changeDraft(i, this.state.textValue, L.d.ChannelMessage), '' !== t ? _.Z.startTyping(i) : _.Z.stopTyping(i), this.setState({
+  h.Z.changeDraft(i, this.state.textValue, P.d.ChannelMessage), '' !== t ? _.Z.startTyping(i) : _.Z.stopTyping(i), this.setState({
     textValue: t,
     richValue: n
   });
@@ -189,7 +189,7 @@ super(e), t = this, et(this, 'draftDidChange', function() {
         shouldRefocus: !1
       };
     let r = p.Z.getSendMessageOptionsForReply(i);
-    return (p.Z.sendMessage(n.id, A.ZP.parse(n, t), !0, r), this.setState((0, T.H2)()), (0, R.A6)(n.id), s) ? (f.Z.deactivateAllRegions(), {
+    return (p.Z.sendMessage(n.id, y.ZP.parse(n, t), !0, r), this.setState((0, T.H2)()), (0, M.A6)(n.id), s) ? (f.Z.deactivateAllRegions(), {
       shouldClear: !1,
       shouldRefocus: !1
     }) : {
@@ -208,12 +208,12 @@ super(e), t = this, et(this, 'draftDidChange', function() {
 }), et(this, 'renderAttachButton', (e, t) => (0, i.jsx)(N.Z, {
   className: t,
   channel: this.props.channel,
-  draftType: L.d.ChannelMessage,
+  draftType: P.d.ChannelMessage,
   editorTextContent: this.state.textValue,
   setValue: e => this.handleTextareaChange(null, e, (0, T.JM)(e)),
   canOnlyUseTextCommands: e
-})), L.Z.addChangeListener(this.draftDidChange);
-let n = L.Z.getDraft(e.channel.id, L.d.ChannelMessage);
+})), P.Z.addChangeListener(this.draftDidChange);
+let n = P.Z.getDraft(e.channel.id, P.d.ChannelMessage);
 this.state = {
   ...(0, T.eK)(n),
   focused: !1,
@@ -269,7 +269,7 @@ let _ = l || h,
   Z = !_ || c;
 return e = m && null != r ? (0, i.jsx)(E.Z, {
   guild: r
-}) : (0, i.jsx)(y.Z, {
+}) : (0, i.jsx)(R.Z, {
   channel: t,
   className: ee.messages,
   forceCompact: u,
@@ -431,7 +431,7 @@ super(...e), et(this, 'handlePin', () => {
       default: e
     } = await Promise.all([
       n.e('79695'),
-      n.e('17400'),
+      n.e('70474'),
       n.e('56826'),
       n.e('80991')
     ]).then(n.bind(n, 131404));
@@ -446,12 +446,12 @@ super(...e), et(this, 'handlePin', () => {
   let {
     dragStart: t
   } = this.props;
-  t(z.B.MOVE, e.clientX, e.clientY);
+  t(A.B.MOVE, e.clientX, e.clientY);
 }), et(this, 'resizeDragStart', e => {
   let {
     dragStart: t
   } = this.props;
-  t(z.B.RESIZE_SOUTH_EAST, e.clientX, e.clientY);
+  t(A.B.RESIZE_SOUTH_EAST, e.clientX, e.clientY);
 });
   }
 }
@@ -460,11 +460,11 @@ function ea(e) {
   let {
 contained: t = !1,
 ...n
-  } = e, s = (0, c.e7)([k.Z], () => k.Z.getGuildId()), a = (0, c.e7)([j.Z], () => j.Z.getChannelId(s)), o = (0, c.e7)([b.Z], () => b.Z.getChannel(a)), r = (0, c.e7)([B.Z], () => B.Z.getOverlayChatKeybind()), l = null != r ? (0, H.BB)(r.shortcut, !0) : ']', [d, u, h] = (0, c.Wu)([U.Z], () => [
-U.Z.getTextWidgetOpacity(),
-U.Z.getActiveRegions(),
-!t && U.Z.isPreviewingInGame()
-  ]), p = (0, c.e7)([D.Z], () => D.Z.getGuild(s)), f = (0, c.e7)([P.Z], () => null != s && P.Z.didAgree(s)), _ = null != o && o.isPrivate() ? o.getRecipientId() : null, g = (0, c.e7)([M.Z], () => null != a ? M.Z.getPendingReply(a) : void 0), m = (0, c.e7)([V.default], () => null != _ ? V.default.getUser(_) : null), {
+  } = e, s = (0, c.e7)([V.Z], () => V.Z.getGuildId()), a = (0, c.e7)([k.Z], () => k.Z.getChannelId(s)), o = (0, c.e7)([L.Z], () => L.Z.getChannel(a)), r = (0, c.e7)([U.Z], () => U.Z.getOverlayChatKeybind()), l = null != r ? (0, H.BB)(r.shortcut, !0) : ']', [d, u, h] = (0, c.Wu)([z.Z], () => [
+z.Z.getTextWidgetOpacity(),
+z.Z.getActiveRegions(),
+!t && z.Z.isPreviewingInGame()
+  ]), p = (0, c.e7)([w.Z], () => w.Z.getGuild(s)), f = (0, c.e7)([D.Z], () => null != s && D.Z.didAgree(s)), _ = null != o && o.isPrivate() ? o.getRecipientId() : null, g = (0, c.e7)([b.Z], () => null != a ? b.Z.getPendingReply(a) : void 0), m = (0, c.e7)([B.default], () => null != _ ? B.default.getUser(_) : null), {
 placeholder: E
   } = (0, Z.Z)(o);
   return null != o && null != p && q.TPd.GUILD_THREADS_ONLY.has(o.type) ? (0, i.jsx)(I.Z, {}) : (0, i.jsx)(es, {

@@ -18,12 +18,12 @@ var I = t(442837),
   o = t(933557),
   E = t(471445),
   N = t(727429),
-  d = t(430824),
-  T = t(158776),
-  S = t(111583),
-  c = t(594174),
-  O = t(104175),
-  f = t(499150),
+  d = t(810123),
+  T = t(690221),
+  S = t(430824),
+  c = t(158776),
+  O = t(111583),
+  f = t(594174),
   M = t(514342),
   m = t(998502),
   U = t(981631),
@@ -57,15 +57,15 @@ size: a.AvatarSizes.SIZE_20
 function V(e) {
   let {
 channel: n
-  } = e, t = (0, I.e7)([c.default], () => c.default.getUser(null == n ? void 0 : n.recipients[0])), s = (0, I.e7)([S.Z], () => !(null == t || null == n || n.isMultiUserDM()) && null != S.Z.getTypingUsers(null == n ? void 0 : n.id)[null == t ? void 0 : t.id]), {
+  } = e, t = (0, I.e7)([f.default], () => f.default.getUser(null == n ? void 0 : n.recipients[0])), s = (0, I.e7)([O.Z], () => !(null == t || null == n || n.isMultiUserDM()) && null != O.Z.getTypingUsers(null == n ? void 0 : n.id)[null == t ? void 0 : t.id]), {
 status: u,
 isMobile: i
-  } = (0, I.cj)([T.Z], () => null == t || null == n || n.isMultiUserDM() ? {
+  } = (0, I.cj)([c.Z], () => null == t || null == n || n.isMultiUserDM() ? {
 status: null,
 isMobile: !1
   } : {
-status: T.Z.getStatus(t.id),
-isMobile: T.Z.isMobileOnline(t.id)
+status: c.Z.getStatus(t.id),
+isMobile: c.Z.isMobileOnline(t.id)
   });
   return (0, l.jsx)(A, {
 size: a.AvatarSizes.SIZE_20,
@@ -84,10 +84,10 @@ channel: t,
 locked: s,
 hasActiveThreads: u,
 withGuildIcon: r
-  } = e, _ = (0, I.e7)([d.Z], () => d.Z.getGuild(t.guild_id), [t.guild_id]), o = t.type === U.d4z.DM || t.type === U.d4z.GROUP_DM, N = null;
+  } = e, _ = (0, I.e7)([S.Z], () => S.Z.getGuild(t.guild_id), [t.guild_id]), o = t.type === U.d4z.DM || t.type === U.d4z.GROUP_DM, N = null;
   if (r && null != _ && !o)
-N = (0, l.jsx)(O.Z, {
-  size: O.E.SMALL_32,
+N = (0, l.jsx)(d.Z, {
+  size: d.E.SMALL_32,
   className: g.iconContainerWithGuildIcon,
   iconClassName: g.iconWithGuildIcon,
   channel: t,
@@ -125,14 +125,14 @@ N = (0, l.jsx)(e, {
 });
   }
   let T = r ? null == _ ? void 0 : _.name : (0, E.bT)(t, _, s, u),
-S = r && null != _ ? ''.concat(_.name, ' - ').concat(T, ' icon') : ''.concat(T, ' icon');
+c = r && null != _ ? ''.concat(_.name, ' - ').concat(T, ' icon') : ''.concat(T, ' icon');
   return (0, l.jsx)(a.Tooltip, {
 text: T,
 delay: 500,
 children: e => (0, l.jsx)('div', {
   ...e,
   role: 'img',
-  'aria-label': S,
+  'aria-label': c,
   className: i()(g.iconContainer),
   children: N
 })
@@ -148,10 +148,10 @@ muted: I,
 selected: _,
 connected: E,
 unread: d,
-locked: T,
-hasActiveThreads: S,
-onClick: c,
-onMouseDown: O,
+locked: S,
+hasActiveThreads: c,
+onClick: O,
+onMouseDown: f,
 onMouseUp: m,
 onContextMenu: A,
 connectDragPreview: R,
@@ -181,13 +181,13 @@ className: i()({
   [g.favoritesSuggestion]: F
 }),
 ref: W,
-children: (0, l.jsxs)(f.Z, {
+children: (0, l.jsxs)(T.Z, {
   role: ee && !E ? 'button' : 'link',
   href: ee ? void 0 : Q,
   target: '_blank',
   ref: K,
   className: g.link,
-  onClick: () => null == c ? void 0 : c(t),
+  onClick: () => null == O ? void 0 : O(t),
   ...B,
   'aria-label': G,
   focusProps: {
@@ -201,8 +201,8 @@ children: (0, l.jsxs)(f.Z, {
           className: v,
           channel: t,
           guild: b,
-          hasActiveThreads: S,
-          locked: T,
+          hasActiveThreads: c,
+          locked: S,
           withGuildIcon: Y
         }),
         (0, l.jsx)(M.Z, {
@@ -240,12 +240,12 @@ offset: {
   right: 4
 },
 children: (0, l.jsxs)('div', {
-  className: i()(V, null != c || null != m || null != O || z ? g.wrapper : g.notInteractive, (() => {
+  className: i()(V, null != O || null != m || null != f || z ? g.wrapper : g.notInteractive, (() => {
     if (_)
       return D.SELECTED;
     if (E)
       return D.CONNECTED;
-    if (T)
+    if (S)
       return D.LOCKED;
     if (I)
       return D.MUTED;
@@ -271,7 +271,7 @@ children: (0, l.jsxs)('div', {
     }
   }(null != j ? j : L)),
   onMouseUp: e => null == m ? void 0 : m(e, t),
-  onMouseDown: e => null == O ? void 0 : O(e, t),
+  onMouseDown: e => null == f ? void 0 : f(e, t),
   onContextMenu: e => null == A ? void 0 : A(e, t),
   onMouseEnter: y,
   onMouseLeave: x,

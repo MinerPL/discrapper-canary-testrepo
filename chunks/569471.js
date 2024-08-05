@@ -1,6 +1,6 @@
 n(47120), n(789020);
-var r, i, a, o, s = n(392711),
-  l = n.n(s),
+var r, i, a, s, o = n(392711),
+  l = n.n(o),
   u = n(442837),
   c = n(570140),
   d = n(798140),
@@ -79,12 +79,12 @@ return p;
 return p.has(e);
   }
 }
-o = 'JoinedThreadsStore', (a = 'displayName') in(i = A) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'JoinedThreadsStore', (a = 'displayName') in(i = A) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o;
+}) : i[a] = s;
 let N = new A(c.Z, {
   CONNECTION_OPEN: function(e) {
 h.reset(), p = new Set(), f = {}, e.guilds.forEach(e => {

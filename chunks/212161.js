@@ -3,15 +3,15 @@ n.d(t, {
 return a;
   },
   Z: function() {
-return o;
+return s;
   }
 });
 var r = n(979554),
   i = n(656698);
-let a = e => e instanceof o;
-class o extends i.Z {
+let a = e => e instanceof s;
+class s extends i.Z {
   static fromServer(e) {
-return new o({
+return new s({
   ...super.fromServer(e),
   ...e
 });

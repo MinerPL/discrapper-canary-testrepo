@@ -12,8 +12,8 @@ return c;
 var r = n(512722),
   i = n.n(r),
   a = n(869765),
-  o = n(598077),
-  s = n(594174),
+  s = n(598077),
+  o = n(594174),
   l = n(48854),
   u = n(981631);
 
@@ -24,7 +24,7 @@ username: n,
 avatar: r,
 discriminator: i,
 bot: a,
-globalName: o
+globalName: s
   } = e;
   return {
 id: t,
@@ -32,7 +32,7 @@ username: n,
 avatar: r,
 discriminator: i,
 bot: a,
-global_name: o
+global_name: s
   };
 }
 
@@ -54,7 +54,7 @@ changelogId: I
 let e = a.Z.getMessageByReference(_);
 (null == e ? void 0 : e.state) === a.Y.LOADED && T.push(c(e.message.author));
   }
-  return null == f && (f = s.default.getCurrentUser()), f instanceof o.Z && (f = c(f)), i()(null != f, 'createMessage: author cannot be undefined'), {
+  return null == f && (f = o.default.getCurrentUser()), f instanceof s.Z && (f = c(f)), i()(null != f, 'createMessage: author cannot be undefined'), {
 id: null != p ? p : (0, l.r)(),
 type: d,
 content: n,

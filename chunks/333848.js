@@ -2,8 +2,8 @@ n(411104);
 var r = n(990547),
   i = n(283693),
   a = n(570140),
-  o = n(408987),
-  s = n(9156),
+  s = n(408987),
+  o = n(9156),
   l = n(621600),
   u = n(573261),
   c = n(92114),
@@ -50,9 +50,9 @@ return u.Z.post({
       });
     }
   }
-}).then(e => (s.ZP.isOptInEnabled(t) && c.Z.updateChannelOverrideSettings(t, e.body.id, {
+}).then(e => (o.ZP.isOptInEnabled(t) && c.Z.updateChannelOverrideSettings(t, e.body.id, {
   flags: _.ic.OPT_IN_ENABLED
-}, l.ZB.OptedIn), o.Z.checkGuildTemplateDirty(t), e), e => {
+}, l.ZB.OptedIn), s.Z.checkGuildTemplateDirty(t), e), e => {
   throw a.Z.dispatch({
     type: 'CREATE_CHANNEL_MODAL_SUBMIT_FAILURE',
     errors: e.body

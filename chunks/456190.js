@@ -1,13 +1,13 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   }
 });
 var r = n(51144),
   i = n(616922),
   a = n(689938);
 
-function o(e, t, n) {
+function s(e, t, n) {
   switch (t) {
 case i.kG.USER_ACTIVITY_PLAY:
   if (e.isCurrentUser)

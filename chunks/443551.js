@@ -15,7 +15,7 @@ function i(e) {
 var n = null != arguments[t] ? arguments[t] : {};
 t % 2 ? r(Object(n), !0).forEach(function(t) {
   (function(e, t, n) {
-    (t = o(t)) in e ? Object.defineProperty(e, t, {
+    (t = s(t)) in e ? Object.defineProperty(e, t, {
       value: n,
       enumerable: !0,
       configurable: !0,
@@ -32,11 +32,11 @@ t % 2 ? r(Object(n), !0).forEach(function(t) {
 function a(e, t) {
   for (var n = 0; n < t.length; n++) {
 var r = t[n];
-r.enumerable = r.enumerable || !1, r.configurable = !0, 'value' in r && (r.writable = !0), Object.defineProperty(e, o(r.key), r);
+r.enumerable = r.enumerable || !1, r.configurable = !0, 'value' in r && (r.writable = !0), Object.defineProperty(e, s(r.key), r);
   }
 }
 
-function o(e) {
+function s(e) {
   var t = function(e, t) {
 if ('object' != typeof e || null === e)
   return e;
@@ -51,7 +51,7 @@ return ('string' === t ? String : Number)(e);
   }(e, 'string');
   return 'symbol' == typeof t ? t : String(t);
 }
-var s = n(413135).Buffer,
+var o = n(413135).Buffer,
   l = n(252602).inspect,
   u = l && l.custom || 'inspect';
 e.exports = function() {
@@ -112,10 +112,10 @@ e.exports = function() {
   key: 'concat',
   value: function(e) {
     if (0 === this.length)
-      return s.alloc(0);
-    for (var t, n, r, i = s.allocUnsafe(e >>> 0), a = this.head, o = 0; a;) {
+      return o.alloc(0);
+    for (var t, n, r, i = o.allocUnsafe(e >>> 0), a = this.head, s = 0; a;) {
       ;
-      t = a.data, n = i, r = o, s.prototype.copy.call(t, n, r), o += a.data.length, a = a.next;
+      t = a.data, n = i, r = s, o.prototype.copy.call(t, n, r), s += a.data.length, a = a.next;
     }
     return i;
   }
@@ -154,7 +154,7 @@ e.exports = function() {
 {
   key: '_getBuffer',
   value: function(e) {
-    var t = s.allocUnsafe(e),
+    var t = o.allocUnsafe(e),
       n = this.head,
       r = 1;
     for (n.data.copy(t), e -= n.data.length; n = n.next;) {

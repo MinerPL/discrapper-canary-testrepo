@@ -86,7 +86,7 @@ return {
   category: m.Z.getChannel(t.parent_id)
 };
   })(D),
-  w = c.ZP.connectStores([N.ZP], e => {
+  G = c.ZP.connectStores([N.ZP], e => {
 let {
   channel: t
 } = e;
@@ -96,7 +96,7 @@ return {
   voiceStates: N.ZP.getVoiceStates(t.guild_id)[t.id]
 };
   })(D),
-  G = c.ZP.connectStores([g.default], e => {
+  w = c.ZP.connectStores([g.default], e => {
 let {
   guild: t
 } = e;
@@ -124,7 +124,7 @@ return {
 };
   })(S.n5);
 
-function V(e, t, n) {
+function H(e, t, n) {
   return (0, l.jsx)(u.Tooltip, {
 text: n,
 children: e => (0, l.jsx)('span', {
@@ -134,7 +134,7 @@ children: e => (0, l.jsx)('span', {
 })
   }, e);
 }
-class H extends r.PureComponent {
+class V extends r.PureComponent {
   componentDidMount() {
 p.Z.disable(), p.Z.enableTemp(h.u);
   }
@@ -232,10 +232,10 @@ return (0, l.jsx)(x.Z, {
   }),
   type: x.Z.Types.INLINE,
   children: R.Z.Messages.QUICKSWITCHER_PROTIP.format({
-    userSymbolHook: (e, t) => V(t, _.xQ.USER, R.Z.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
-    textChannelSymbolHook: (e, t) => V(t, _.xQ.TEXT_CHANNEL, R.Z.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
-    voiceChannelSymbolHook: (e, t) => V(t, _.xQ.VOICE_CHANNEL, R.Z.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
-    guildSymbolHook: (e, t) => V(t, _.xQ.GUILD, R.Z.Messages.QUICKSWITCHER_PROTIP_GUILDS),
+    userSymbolHook: (e, t) => H(t, _.xQ.USER, R.Z.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
+    textChannelSymbolHook: (e, t) => H(t, _.xQ.TEXT_CHANNEL, R.Z.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
+    voiceChannelSymbolHook: (e, t) => H(t, _.xQ.VOICE_CHANNEL, R.Z.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
+    guildSymbolHook: (e, t) => H(t, _.xQ.GUILD, R.Z.Messages.QUICKSWITCHER_PROTIP_GUILDS),
     helpdeskArticle: T.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL)
   })
 });
@@ -304,13 +304,13 @@ super(...e), y(this, 'scrollerRef', r.createRef()), y(this, 'inputRef', r.create
           n.e('33053'),
           n.e('50654'),
           n.e('7654'),
-          n.e('73331'),
+          n.e('67847'),
           n.e('44156'),
           n.e('71700'),
           n.e('85552'),
           n.e('58227'),
           n.e('10926'),
-          n.e('55400'),
+          n.e('89622'),
           n.e('33213'),
           n.e('61297')
         ]).then(n.bind(n, 545135));
@@ -422,8 +422,8 @@ super(...e), y(this, 'scrollerRef', r.createRef()), y(this, 'inputRef', r.create
           default: e
         } = await Promise.all([
           n.e('79695'),
-          n.e('17400'),
-          n.e('13806')
+          n.e('69220'),
+          n.e('86541')
         ]).then(n.bind(n, 881351));
         return n => (0, l.jsx)(e, {
           ...n,
@@ -511,7 +511,7 @@ super(...e), y(this, 'scrollerRef', r.createRef()), y(this, 'inputRef', r.create
         score: r ? n.score : void 0
       }, ''.concat(n.type, '-').concat(n.record.id));
     case _.h8.VOICE_CHANNEL:
-      return (0, l.jsx)(w, {
+      return (0, l.jsx)(G, {
         id: this.getRowId(t),
         focused: i >= 0 && t === i,
         onClick: () => this.selectResult(n),
@@ -522,7 +522,7 @@ super(...e), y(this, 'scrollerRef', r.createRef()), y(this, 'inputRef', r.create
         score: r ? n.score : void 0
       }, ''.concat(n.type, '-').concat(n.record.id));
     case _.h8.GUILD:
-      return (0, l.jsx)(G, {
+      return (0, l.jsx)(w, {
         id: this.getRowId(t),
         focused: i >= 0 && t === i,
         onClick: () => this.selectResult(n),
@@ -575,6 +575,17 @@ super(...e), y(this, 'scrollerRef', r.createRef()), y(this, 'inputRef', r.create
         score: r ? n.score : void 0,
         id: this.getRowId(t)
       }, ''.concat(n.type, '-').concat(n.record.id));
+    case _.h8.IN_APP_NAVIGATION:
+      return (0, l.jsx)(S.s8, {
+        focused: i >= 0 && t === i,
+        onClick: () => this.selectResult(n),
+        onMouseEnter: () => this.focusResult(n),
+        onFocus: this.focusNode,
+        onContextMenu: this.handleContextMenu,
+        navigationRecord: n.record,
+        score: r ? n.score : void 0,
+        id: this.getRowId(t)
+      }, ''.concat(n.type, '-').concat(n.record.id));
     default:
       return null;
   }
@@ -584,7 +595,7 @@ super(...e), y(this, 'scrollerRef', r.createRef()), y(this, 'inputRef', r.create
 
 function F(e) {
   let t = (0, c.cj)([A.Z], () => A.Z.getProps());
-  return (0, l.jsx)(H, {
+  return (0, l.jsx)(V, {
 ...t,
 ...e
   });

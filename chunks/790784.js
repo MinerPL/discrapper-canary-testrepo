@@ -1,19 +1,19 @@
 var r = n(459584),
   i = n(957578).Buffer,
   a = n(737372),
-  o = n(222822),
-  s = n(764900),
+  s = n(222822),
+  o = n(764900),
   l = n(458340),
   u = n(245413);
 
 function c(e, t, n) {
-  s.call(this), this._cache = new d(), this._last = void 0, this._cipher = new l.AES(t), this._prev = i.from(n), this._mode = e, this._autopadding = !0;
+  o.call(this), this._cache = new d(), this._last = void 0, this._cipher = new l.AES(t), this._prev = i.from(n), this._mode = e, this._autopadding = !0;
 }
 
 function d() {
   this.cache = i.allocUnsafe(0);
 }
-n(689118)(c, s), c.prototype._update = function(e) {
+n(689118)(c, o), c.prototype._update = function(e) {
   this._cache.add(e);
   for (var t, n, r = []; t = this._cache.get(this._autopadding);)
 n = this._mode.decrypt(this, t), r.push(n);
@@ -54,14 +54,14 @@ return this.cache;
 };
 
 function _(e, t, n) {
-  var s = a[e.toLowerCase()];
-  if (!s)
+  var o = a[e.toLowerCase()];
+  if (!o)
 throw TypeError('invalid suite type');
-  if ('string' == typeof n && (n = i.from(n)), 'GCM' !== s.mode && n.length !== s.iv)
+  if ('string' == typeof n && (n = i.from(n)), 'GCM' !== o.mode && n.length !== o.iv)
 throw TypeError('invalid iv length ' + n.length);
-  if ('string' == typeof t && (t = i.from(t)), t.length !== s.key / 8)
+  if ('string' == typeof t && (t = i.from(t)), t.length !== o.key / 8)
 throw TypeError('invalid key length ' + t.length);
-  return 'stream' === s.type ? new o(s.module, t, n, !0) : 'auth' === s.type ? new r(s.module, t, n, !0) : new c(s.module, t, n);
+  return 'stream' === o.type ? new s(o.module, t, n, !0) : 'auth' === o.type ? new r(o.module, t, n, !0) : new c(o.module, t, n);
 }
 t.createDecipher = function(e, t) {
   var n = a[e.toLowerCase()];

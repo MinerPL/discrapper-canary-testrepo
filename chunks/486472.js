@@ -1,6 +1,6 @@
 n(47120);
-var r, i, a, o, s = n(392711),
-  l = n.n(s),
+var r, i, a, s, o = n(392711),
+  l = n.n(o),
   u = n(442837),
   c = n(570140),
   d = n(710845),
@@ -34,12 +34,12 @@ return f.size;
 return Array.from(f);
   }
 }
-o = 'GuildAvailabilityStore', (a = 'displayName') in(i = m) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'GuildAvailabilityStore', (a = 'displayName') in(i = m) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new m(c.Z, {
+}) : i[a] = s, t.Z = new m(c.Z, {
   CONNECTION_OPEN: h,
   OVERLAY_INITIALIZE: h,
   GUILD_UNAVAILABLE: function(e) {

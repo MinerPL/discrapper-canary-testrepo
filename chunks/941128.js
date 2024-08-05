@@ -1,5 +1,5 @@
 n(47120), n(411104), n(653041), n(733860);
-var r, i, a, o, s, l, u, c, d = n(392711),
+var r, i, a, s, o, l, u, c, d = n(392711),
   _ = n.n(d),
   E = n(442837),
   f = n(433517),
@@ -14,7 +14,7 @@ var r, i, a, o, s, l, u, c, d = n(392711),
   N = n(417363),
   v = n(981631),
   O = n(186901);
-(o = r || (r = {})).INSTALL = 'Install', o.REPAIR = 'Repair', (s = i || (i = {})).PATCH = 'Patch', s.REPAIR = 'Repair';
+(s = r || (r = {})).INSTALL = 'Install', s.REPAIR = 'Repair', (o = i || (i = {})).PATCH = 'Patch', o.REPAIR = 'Repair';
 let R = [
 O.ff.AUTHENTICATION_FAILED,
 O.ff.NOT_ENTITLED
@@ -48,14 +48,14 @@ let {
   action: i
 } = e, {
   applicationId: a,
-  branchId: o
+  branchId: s
 } = (0, g.CP)(r);
-if (t = a, n = o, (null == b || b.applicationId !== t || b.branchId !== n) && (null == M || M.applicationId !== t || M.branchId !== n)) {
+if (t = a, n = s, (null == b || b.applicationId !== t || b.branchId !== n) && (null == M || M.applicationId !== t || M.branchId !== n)) {
   let e = I.default.getToken(),
     t = I.default.getId();
   if (null == e)
     throw Error('missing user token');
-  w = !S.Z.setCurrentTask(a, o, i, t, e);
+  w = !S.Z.setCurrentTask(a, s, i, t, e);
 }
   }
 }
@@ -71,10 +71,10 @@ a = {
   comboId: i,
   action: r
 },
-o = D.indexOf(i); -
-  1 !== o && D.splice(o, 1);
-  let s = B(e, t);
-  0 !== s && (n ? -1 === s && (y.push(a), k()) : (s > 0 && y.splice(s, 1), y.unshift(a), k())), !n && L && S.Z.resume(), G();
+s = D.indexOf(i); -
+  1 !== s && D.splice(s, 1);
+  let o = B(e, t);
+  0 !== o && (n ? -1 === o && (y.push(a), k()) : (o > 0 && y.splice(o, 1), y.unshift(a), k())), !n && L && S.Z.resume(), G();
 }
 
 function V(e, t) {
@@ -206,8 +206,8 @@ y = y.filter(e => {
   } = e, {
     applicationId: n,
     branchId: i
-  } = (0, g.CP)(t), a = N.Z.getState(n, i), o = T.Z.getTargetBuildId(n, i), s = T.Z.getTargetManifests(n, i);
-  if (null != a && a.type === v.vxO.UP_TO_DATE && a.buildId === a.targetBuildId && a.buildId === o && _().isEqual(a.manifestIds, a.targetManifestIds) && _().isEqual(a.manifestIds, s)) {
+  } = (0, g.CP)(t), a = N.Z.getState(n, i), s = T.Z.getTargetBuildId(n, i), o = T.Z.getTargetManifests(n, i);
+  if (null != a && a.type === v.vxO.UP_TO_DATE && a.buildId === a.targetBuildId && a.buildId === s && _().isEqual(a.manifestIds, a.targetManifestIds) && _().isEqual(a.manifestIds, o)) {
     if (D.push(t), U.has(t)) {
       switch (U.get(t)) {
         case 'Install':

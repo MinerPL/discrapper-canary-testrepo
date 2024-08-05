@@ -1,32 +1,32 @@
 var r = n(735250),
   i = n(470079),
   a = n(481060),
-  o = n(149203);
-let s = e => {
+  s = n(149203);
+let o = e => {
 switch (e) {
-  case o.UX.RECENT:
+  case s.UX.RECENT:
     return a.ClockIcon;
-  case o.UX.FAVORITES:
+  case s.UX.FAVORITES:
     return a.StarIcon;
-  case o.UX.TOP_GUILD_EMOJI:
+  case s.UX.TOP_GUILD_EMOJI:
     return a.TrophyIcon;
-  case o.UX.PEOPLE:
+  case s.UX.PEOPLE:
     return a.ReactionIcon;
-  case o.UX.NATURE:
+  case s.UX.NATURE:
     return a.NatureIcon;
-  case o.UX.FOOD:
+  case s.UX.FOOD:
     return a.FoodIcon;
-  case o.UX.ACTIVITY:
+  case s.UX.ACTIVITY:
     return a.GameControllerIcon;
-  case o.UX.TRAVEL:
+  case s.UX.TRAVEL:
     return a.BicycleIcon;
-  case o.UX.OBJECTS:
+  case s.UX.OBJECTS:
     return a.ObjectIcon;
-  case o.UX.SYMBOLS:
+  case s.UX.SYMBOLS:
     return a.HeartIcon;
-  case o.UX.FLAGS:
+  case s.UX.FLAGS:
     return a.FlagIcon;
-  case o.UX.PREMIUM_UPSELL:
+  case s.UX.PREMIUM_UPSELL:
     return a.NitroWheelIcon;
   default:
     return;
@@ -36,7 +36,7 @@ switch (e) {
 let {
   categoryId: t,
   ...n
-} = e, i = s(t);
+} = e, i = o(t);
 return null == i ? null : (0, r.jsx)(i, {
   color: 'currentColor',
   ...n

@@ -18,7 +18,7 @@ return C;
 return Y;
   }
 }), n(757143), n(47120), n(653041);
-var r, i, a, o, s, l, u = n(729594),
+var r, i, a, s, o, l, u = n(729594),
   c = n(421474);
 n(865427);
 var d = n(264229);
@@ -49,8 +49,8 @@ let m = /^\/([a-zA-Z0-9-]+)$/,
   w = [
 E.Z.escape(null !== (i = y.host) && void 0 !== i ? i : ''),
 E.Z.escape(null !== (a = D.host) && void 0 !== a ? a : ''),
-E.Z.escape(null !== (o = L.host) && void 0 !== o ? o : ''),
-E.Z.escape(null !== (s = P.host) && void 0 !== s ? s : ''),
+E.Z.escape(null !== (s = L.host) && void 0 !== s ? s : ''),
+E.Z.escape(null !== (o = P.host) && void 0 !== o ? o : ''),
 E.Z.escape(null !== (l = U.host) && void 0 !== l ? l : '')
   ].filter(Boolean),
   x = RegExp('((https?://[^ ]*)|^|[^/][^/.])('.concat(w.join('|'), ')'), 'g');
@@ -79,11 +79,11 @@ function k(e, t) {
   if ((null === (n = t.host) || void 0 === n ? void 0 : n.replace(/^www[.]/i, '')) !== e.host)
 return null;
   let a = null !== (r = t.pathname) && void 0 !== r ? r : '',
-o = null !== (i = e.pathPrefix) && void 0 !== i ? i : '';
-  if (!a.startsWith(o))
+s = null !== (i = e.pathPrefix) && void 0 !== i ? i : '';
+  if (!a.startsWith(s))
 return null;
-  let s = a.substring(o.length);
-  return '' === s ? null : s;
+  let o = a.substring(s.length);
+  return '' === o ? null : o;
 }
 
 function B(e) {
@@ -101,13 +101,13 @@ return {
   templateHostRemainingPath: null,
   primaryHostRemainingPath: null
 };
-  let o = k(y, a),
-s = k(D, a),
+  let s = k(y, a),
+o = k(D, a),
 l = null !== (i = null !== (r = null !== (n = null !== (t = k(L, a)) && void 0 !== t ? t : k(b, a)) && void 0 !== n ? n : k(M, a)) && void 0 !== r ? r : k(P, a)) && void 0 !== i ? i : k(U, a);
   return {
 url: a,
-inviteHostRemainingPath: o,
-templateHostRemainingPath: s,
+inviteHostRemainingPath: s,
+templateHostRemainingPath: o,
 primaryHostRemainingPath: l
   };
 }
@@ -128,11 +128,11 @@ let {
   url: r,
   inviteHostRemainingPath: i,
   templateHostRemainingPath: a,
-  primaryHostRemainingPath: o
+  primaryHostRemainingPath: s
 } = F(e);
 if (null == r || null == r.pathname)
   continue;
-let s = (e, r) => {
+let o = (e, r) => {
   !t.has(r) && (t.add(r), n.push({
     type: e,
     code: r
@@ -141,19 +141,19 @@ let s = (e, r) => {
 if ((null == i ? void 0 : i.match(m)) != null) {
   let e = (0, d.mb)(i.substring(1), r.search);
   _.Z.getInvite(e);
-  s(h.g.INVITE, e);
+  o(h.g.INVITE, e);
 }
-(null == a ? void 0 : a.match(m)) != null && s(h.g.TEMPLATE, a.substring(1));
-let l = null == o ? void 0 : o.match(T);
+(null == a ? void 0 : a.match(m)) != null && o(h.g.TEMPLATE, a.substring(1));
+let l = null == s ? void 0 : s.match(T);
 if (null != l) {
   let e = l[1].toUpperCase();
   if (e === h.g.INVITE) {
     let e = (0, d.mb)(l[2], r.search);
-    s(h.g.INVITE, e);
+    o(h.g.INVITE, e);
   } else
-    s(e, l[2]);
+    o(e, l[2]);
 }
-(null == o ? void 0 : o.match(I)) != null && s(h.g.CHANNEL_LINK, o.replace('/channels/', ''));
+(null == s ? void 0 : s.match(I)) != null && o(h.g.CHANNEL_LINK, s.replace('/channels/', ''));
 let u = function(e) {
   if (null == e)
     return null;
@@ -164,33 +164,33 @@ let u = function(e) {
     recurrenceId: t[4]
   } : null;
 }(r.pathname);
-null != u && s(h.g.EVENT, ''.concat(u.guildId, '-').concat(u.guildEventId) + (null != u.recurrenceId ? '-'.concat(u.recurrenceId) : ''));
-let E = null == o ? void 0 : o.match(S);
+null != u && o(h.g.EVENT, ''.concat(u.guildId, '-').concat(u.guildEventId) + (null != u.recurrenceId ? '-'.concat(u.recurrenceId) : ''));
+let E = null == s ? void 0 : s.match(S);
 if (null != E) {
   let e = E[1];
-  s(h.g.APP_DIRECTORY_PROFILE, e);
+  o(h.g.APP_DIRECTORY_PROFILE, e);
 }
-let f = null == o ? void 0 : o.match(A);
+let f = null == s ? void 0 : s.match(A);
 if (null != f) {
   let e = f[1],
     t = f[2];
   if (null != t) {
     let n = (0, c.l)(e, t);
-    s(h.g.APP_DIRECTORY_STOREFRONT_SKU, n);
+    o(h.g.APP_DIRECTORY_STOREFRONT_SKU, n);
   } else
-    s(h.g.APP_DIRECTORY_STOREFRONT, e);
+    o(h.g.APP_DIRECTORY_STOREFRONT, e);
 }
-let p = null == o ? void 0 : o.match(N);
+let p = null == s ? void 0 : s.match(N);
 if (null != p) {
   let e = p[1];
-  s(h.g.ACTIVITY_BOOKMARK, e);
+  o(h.g.ACTIVITY_BOOKMARK, e);
 }
-let R = null == o ? void 0 : o.match(v);
-null != R && s(h.g.GUILD_PRODUCT, ''.concat(R[1], '-').concat(R[2]));
-let C = null == o ? void 0 : o.match(O);
-null != C && s(h.g.SERVER_SHOP, C[1]);
+let R = null == s ? void 0 : s.match(v);
+null != R && o(h.g.GUILD_PRODUCT, ''.concat(R[1], '-').concat(R[2]));
+let C = null == s ? void 0 : s.match(O);
+null != C && o(h.g.SERVER_SHOP, C[1]);
 let y = H(e);
-null != y && s(h.g.QUESTS_EMBED, y);
+null != y && o(h.g.QUESTS_EMBED, y);
   }
   return n;
 }

@@ -1,8 +1,8 @@
 var r = n(961123),
   i = n(841566),
   a = n(290677),
-  o = n(682653),
-  s = n(720815),
+  s = n(682653),
+  o = n(720815),
   l = n(278757);
 e.exports = function(e, t, n) {
   t = r(t, e);
@@ -12,5 +12,5 @@ if (!(d = null != e && n(e, _)))
   break;
 e = e[_];
   }
-  return d || ++u != c ? d : !!(c = null == e ? 0 : e.length) && s(c) && o(_, c) && (a(e) || i(e));
+  return d || ++u != c ? d : !!(c = null == e ? 0 : e.length) && o(c) && s(_, c) && (a(e) || i(e));
 };

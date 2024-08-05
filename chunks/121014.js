@@ -1,13 +1,13 @@
 function n(e, t, n, r) {
   var a = [],
-o = {};
-  return function s(l) {
-o[l] = !0, a.push(l), e[l].forEach(function(e) {
-  if (o[e]) {
+s = {};
+  return function o(l) {
+s[l] = !0, a.push(l), e[l].forEach(function(e) {
+  if (s[e]) {
     if (a.indexOf(e) >= 0 && (a.push(e), !r))
       throw new i(a);
   } else
-    s(e);
+    o(e);
 }), a.pop(), (!t || 0 === e[l].length) && -1 === n.indexOf(l) && n.push(l);
   };
 }
@@ -92,11 +92,11 @@ var a = n(this.outgoingEdges, !1, [], this.circular);
 i.forEach(function(e) {
   a(e);
 });
-var o = n(this.outgoingEdges, e, r, this.circular);
+var s = n(this.outgoingEdges, e, r, this.circular);
 return i.filter(function(e) {
   return 0 === t.incomingEdges[e].length;
 }).forEach(function(e) {
-  o(e);
+  s(e);
 }), r;
   }
 };

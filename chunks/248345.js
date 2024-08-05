@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
   a = n(717881),
-  o = n(906732),
-  s = n(199902),
+  s = n(906732),
+  o = n(199902),
   l = n(785717),
   u = n(221292),
   c = n(659101),
@@ -25,10 +25,10 @@ onClose: h,
 analyticsParams: p
   } = e, {
 analyticsLocations: m
-  } = (0, o.ZP)(), {
+  } = (0, s.ZP)(), {
 trackUserProfileAction: I,
 ...T
-  } = (0, l.KZ)(), g = (0, i.e7)([s.Z], () => null != s.Z.getAnyStreamForUser(n.id));
+  } = (0, l.KZ)(), g = (0, i.e7)([o.Z], () => null != o.Z.getAnyStreamForUser(n.id));
   return (0, r.jsx)(c.Z, {
 children: (0, r.jsx)(a.Z, {
   type: a.P.USER_POPOUT_V2,
@@ -38,7 +38,7 @@ children: (0, r.jsx)(a.Z, {
   guildId: null == E ? void 0 : E.id,
   channelId: f,
   source: d.Sbl.PROFILE_POPOUT,
-  onGameProfileOpened: h,
+  onClose: h,
   onAction: () => {
     I({
       action: 'JOIN_ACTIVITY'

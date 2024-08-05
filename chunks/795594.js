@@ -17,19 +17,19 @@ var n = s(735250),
   C = s(566620),
   m = s(317381),
   A = s(979200),
-  h = s(713938),
-  g = s(881998),
+  g = s(713938),
+  h = s(881998),
   O = s(246946),
   p = s(285952),
   R = s(768581),
   x = s(49012),
   M = s(210887),
-  D = s(436267),
-  f = s(494620),
+  f = s(436267),
+  D = s(494620),
   P = s(981631),
   L = s(689938),
-  Z = s(756576),
-  b = s(549856);
+  b = s(756576),
+  Z = s(549856);
 let v = d.ZP.connectStores([M.Z], () => ({
   theme: M.Z.theme
 }))(u.EmptyState);
@@ -39,12 +39,12 @@ function j(e) {
 application: t
   } = e;
   return (0, n.jsxs)('div', {
-className: Z.twoWayWarning,
+className: b.twoWayWarning,
 children: [
   (0, n.jsx)(u.CircleInformationIcon, {
     size: 'md',
     color: 'currentColor',
-    className: Z.twoWayWarningIcon
+    className: b.twoWayWarningIcon
   }),
   (0, n.jsx)(u.Text, {
     color: 'text-normal',
@@ -67,15 +67,15 @@ return a.useMemo(() => {
       return (0, n.jsx)(u.GlobeEarthIcon, {
         size: 'md',
         color: 'currentColor',
-        className: Z.disclosureIcon
+        className: b.disclosureIcon
       });
     case _.u$.DISPLAYS_ADVERTISEMENTS:
       return (0, n.jsx)(u.EmbedIcon, {
-        className: Z.disclosureIcon
+        className: b.disclosureIcon
       });
     default:
       return (0, n.jsx)(u.CircleInformationIcon, {
-        className: Z.disclosureIcon
+        className: b.disclosureIcon
       });
   }
 }, [t]);
@@ -88,11 +88,11 @@ let {
   disclosures: i
 } = e, o = () => {
   let e = L.Z.Messages.DELETE_APP_CONFIRM_MSG;
-  return (0, D.Z)(s.id) && (e = (0, n.jsxs)(n.Fragment, {
+  return (0, f.Z)(s.id) && (e = (0, n.jsxs)(n.Fragment, {
     children: [
       e,
-      (0, n.jsx)(f.Z, {
-        className: Z.infoBox,
+      (0, n.jsx)(D.Z, {
+        className: b.infoBox,
         children: L.Z.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT_DISCONNECT_WARNING.format({
           applicationName: s.name
         })
@@ -116,9 +116,9 @@ let {
     href: s.privacy_policy_url,
     shouldConfirm: !0
   });
-}, _ = (0, D.O)(s.id);
+}, _ = (0, f.O)(s.id);
 return (0, n.jsx)(u.Card, {
-  className: r()(Z.authedApp, b.marginBottom8),
+  className: r()(b.authedApp, Z.marginBottom8),
   outline: !0,
   children: (0, n.jsxs)(u.HeadingLevel, {
     component: (() => {
@@ -127,7 +127,7 @@ return (0, n.jsx)(u.Card, {
           icon: s.icon
         }),
         t = null != e ? (0, n.jsx)(p.Z.Child, {
-          className: Z.appAvatar,
+          className: b.appAvatar,
           grow: 0,
           children: (0, n.jsx)('img', {
             src: e,
@@ -135,10 +135,10 @@ return (0, n.jsx)(u.Card, {
           })
         }) : null;
       return (0, n.jsxs)(p.Z, {
-        className: r()(Z.__invalid_header, b.marginBottom20),
+        className: r()(b.__invalid_header, Z.marginBottom20),
         children: [
           (0, n.jsxs)(p.Z, {
-            className: Z.headerInfo,
+            className: b.headerInfo,
             children: [
               t,
               (0, n.jsx)(p.Z.Child, {
@@ -177,40 +177,40 @@ return (0, n.jsx)(u.Card, {
       (() => {
         if (null != s.terms_of_service_url || null != s.privacy_policy_url)
           return (0, n.jsxs)('div', {
-            className: Z.tosPrivacy,
+            className: b.tosPrivacy,
             children: [
               null != s.terms_of_service_url ? (0, n.jsxs)(E.P, {
                 tag: 'a',
                 onClick: l,
-                className: Z.tos,
+                className: b.tos,
                 children: [
                   (0, n.jsx)(u.FormText, {
-                    className: Z.link,
+                    className: b.link,
                     children: L.Z.Messages.AUTHORIZED_APPS_TERMS_OF_SERVICE
                   }),
                   (0, n.jsx)(u.LinkExternalSmallIcon, {
-                    className: Z.externalLinkIcon,
+                    className: b.externalLinkIcon,
                     color: 'var(--text-link)'
                   })
                 ]
               }) : null,
               null != s.privacy_policy_url ? (0, n.jsxs)('div', {
-                className: Z.privacy,
+                className: b.privacy,
                 children: [
                   null != s.terms_of_service_url ? (0, n.jsx)('div', {
-                    className: Z.divider
+                    className: b.divider
                   }) : null,
                   (0, n.jsxs)(E.P, {
                     tag: 'a',
                     onClick: d,
-                    className: Z.privacy,
+                    className: b.privacy,
                     children: [
                       (0, n.jsx)(u.FormText, {
-                        className: Z.link,
+                        className: b.link,
                         children: L.Z.Messages.AUTHORIZED_APPS_PRIVACY_POLICY
                       }),
                       (0, n.jsx)(u.LinkExternalSmallIcon, {
-                        className: Z.externalLinkIcon,
+                        className: b.externalLinkIcon,
                         color: 'var(--text-link)'
                       })
                     ]
@@ -223,19 +223,19 @@ return (0, n.jsx)(u.Card, {
       (() => {
         let e = [];
         for (let s of t)
-          e.push((0, h.jW)(s, t)), s === c.x.APPLICATIONS_COMMANDS && e.push(L.Z.Messages.SCOPE_DM_YOU);
+          e.push((0, g.jW)(s, t)), s === c.x.APPLICATIONS_COMMANDS && e.push(L.Z.Messages.SCOPE_DM_YOU);
         if (e.length > 0 || null != i && i.length > 0)
           return (0, n.jsx)(u.FormItem, {
             faded: !0,
             title: L.Z.Messages.PERMISSIONS,
-            className: b.marginTop20,
+            className: Z.marginTop20,
             children: (0, n.jsxs)('ul', {
               children: [
                 e.map((e, t) => (0, n.jsxs)('li', {
-                  className: r()(Z.permission, b.marginTop8),
+                  className: r()(b.permission, Z.marginTop8),
                   children: [
                     (0, n.jsx)('i', {
-                      className: Z.permissionCheckmark
+                      className: b.permissionCheckmark
                     }),
                     (0, n.jsx)(u.FormText, {
                       children: e
@@ -245,7 +245,7 @@ return (0, n.jsx)(u.Card, {
                 null == i ? void 0 : i.map((t, s) => {
                   let a = (0, A.PM)(t);
                   return null != a ? (0, n.jsxs)('li', {
-                    className: r()(Z.permission, b.marginTop8),
+                    className: r()(b.permission, Z.marginTop8),
                     children: [
                       (0, n.jsx)(B, {
                         disclosure: t
@@ -269,7 +269,7 @@ return (0, n.jsx)(u.Card, {
   };
 t.Z = () => {
   let e = (0, d.e7)([O.Z], () => O.Z.hidePersonalInformation),
-t = (0, d.e7)([g.Z], () => g.Z.getApps()),
+t = (0, d.e7)([h.Z], () => h.Z.getApps()),
 i = (0, d.e7)([m.ZP], () => m.ZP.getSelfEmbeddedActivities());
   a.useEffect(() => {
 T.Z.fetch();
@@ -294,7 +294,7 @@ E = () => {
   c('');
 },
 I = () => (0, n.jsx)('div', {
-  className: Z.searchContainer,
+  className: b.searchContainer,
   children: (0, n.jsx)(u.SearchBar, {
     size: u.SearchBar.Sizes.MEDIUM,
     query: o,
@@ -305,7 +305,7 @@ I = () => (0, n.jsx)('div', {
   })
 }),
 N = (e, t) => (0, n.jsxs)(v, {
-  className: Z.__invalid_marginTop20,
+  className: b.__invalid_marginTop20,
   children: [
     (0, n.jsx)(u.EmptyStateImage, {
       darkSrc: s(701972),
@@ -331,13 +331,13 @@ tag: u.FormTitleTags.H1,
 title: L.Z.Messages.AUTHORIZED_APPS,
 children: (0, n.jsx)(u.HeadingLevel, {
   component: (0, n.jsx)(u.FormNotice, {
-    className: b.marginBottom40,
+    className: Z.marginBottom40,
     type: u.CardTypes.PRIMARY,
     title: L.Z.Messages.APPLICATIONS_AND_CONNECTIONS,
     body: L.Z.Messages.APPLICATIONS_AND_CONNECTIONS_BODY
   }),
   children: null == t || null == A ? (0, n.jsx)(u.Spinner, {
-    className: b.marginTop20,
+    className: Z.marginTop20,
     type: u.Spinner.Type.SPINNING_CIRCLE
   }) : 0 === t.length ? N(L.Z.Messages.NO_AUTHORIZED_APPS_NOTE, L.Z.Messages.NO_AUTHORIZED_APPS) : 0 === A.length ? (0, n.jsxs)(n.Fragment, {
     children: [

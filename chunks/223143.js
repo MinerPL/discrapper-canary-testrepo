@@ -9,8 +9,8 @@ return c;
 var r = n(470079),
   i = n(399606),
   a = n(634894),
-  o = n(335131),
-  s = n(337679),
+  s = n(335131),
+  o = n(337679),
   l = n(1870),
   u = n(267097);
 
@@ -31,12 +31,12 @@ l.Z.claimError,
 l.Z.purchases
   ]), {
 shouldFakePurchaseSuccessFlowLocally: _
-  } = (0, s.Z)({
+  } = (0, o.Z)({
 location: 'useFetchPurchases'
   });
   return (0, r.useEffect)(() => {
 if (!_ || !(d.size > 0))
-  (0, o.qg)();
+  (0, s.qg)();
   }, [_]), {
 isClaiming: n,
 fetchError: u,
@@ -59,8 +59,8 @@ autoTrackExposure: !1
   });
   let {
 isFetching: i,
-categories: o,
-error: s,
+categories: s,
+error: o,
 refreshCategories: l
   } = (0, u.Z)({
 paymentGateway: n
@@ -76,9 +76,9 @@ isFetching: i || f,
 isFetchingCategories: i,
 isFetchingPurchases: f,
 isClaiming: d,
-categories: o,
+categories: s,
 purchases: h,
-error: null !== (t = null != s ? s : _) && void 0 !== t ? t : E,
+error: null !== (t = null != o ? o : _) && void 0 !== t ? t : E,
 refreshCategories: l
   };
 }

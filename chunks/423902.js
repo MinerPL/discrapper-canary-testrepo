@@ -1,22 +1,22 @@
 n.d(t, {
   w: function() {
-return s;
+return o;
   }
 });
 var r = n(697898),
   i = n(470079);
 let a = Math.round(10000000000 * Math.random()),
-  o = 0;
+  s = 0;
 
-function s(e) {
-  let t = (0, i.useMemo)(() => e.name || `radio-group-${ a }-${ ++o }`, [e.name]),
-[n, s] = (0, r.zk)(e.value, e.defaultValue, e.onChange),
+function o(e) {
+  let t = (0, i.useMemo)(() => e.name || `radio-group-${ a }-${ ++s }`, [e.name]),
+[n, o] = (0, r.zk)(e.value, e.defaultValue, e.onChange),
 [l, u] = (0, i.useState)(null);
   return {
 name: t,
 selectedValue: n,
 setSelectedValue: t => {
-  !e.isReadOnly && !e.isDisabled && s(t);
+  !e.isReadOnly && !e.isDisabled && o(t);
 },
 lastFocusedValue: l,
 setLastFocusedValue: u,

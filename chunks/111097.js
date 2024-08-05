@@ -1,7 +1,7 @@
 n(411104), n(47120);
 var i = n(72924),
-  s = n(100527),
-  a = n(367207),
+  a = n(100527),
+  s = n(367207),
   r = n(996106),
   l = n(452426),
   o = n(561205),
@@ -10,7 +10,7 @@ var i = n(72924),
   u = n(186901),
   _ = n(981631),
   h = n(474936);
-let E = [s.Z.RPC];
+let E = [a.Z.RPC];
 
 function I(e) {
   if (null == e)
@@ -33,9 +33,9 @@ analyticsObject: t
   };
   switch (e) {
 case _.IlC.APP:
-  return a.Z.openPremiumPaymentModalInApp(n);
+  return s.Z.openPremiumPaymentModalInApp(n);
 case _.IlC.OVERLAY:
-  return a.Z.openPremiumPaymentModalInOverlay(n);
+  return s.Z.openPremiumPaymentModalInOverlay(n);
 default:
   throw Error('Unexpected app context: '.concat(e));
   }
@@ -55,19 +55,19 @@ handler(e) {
     socket: t,
     args: {
       sku_id: n,
-      pid: s
+      pid: a
     }
   } = e;
   (0, c.f)(t.transport);
-  let a = t.application.id;
-  if (null == a)
+  let s = t.application.id;
+  if (null == s)
     throw new r.Z({
       errorCode: _.lTL.INVALID_COMMAND
     }, 'No application.');
   let {
     lock: l,
     context: d
-  } = I(t.transport !== u.He.POST_MESSAGE ? s : null);
+  } = I(t.transport !== u.He.POST_MESSAGE ? a : null);
   if (null == (0, o.Z)())
     throw new r.Z({
       errorCode: _.lTL.INVALID_CHANNEL
@@ -78,7 +78,7 @@ handler(e) {
   return (async () => {
     try {
       let e = await (0, i.S)({
-        applicationId: a,
+        applicationId: s,
         skuId: n,
         openPremiumPaymentModal: () => m(d, h),
         analyticsLocations: E,
@@ -121,9 +121,9 @@ handler(e) {
     }, 'No application.');
   let {
     lock: i,
-    context: s
+    context: a
   } = I(t.transport !== u.He.POST_MESSAGE ? n : null);
-  return m(s, {
+  return m(a, {
     page: _.ZY5.IN_APP
   }).then(() => {
     i();

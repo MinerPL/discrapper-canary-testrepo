@@ -1,6 +1,6 @@
 n.d(t, {
   Fv: function() {
-return o;
+return s;
   },
   Kt: function() {
 return i;
@@ -25,7 +25,7 @@ return !1;
   return e.roles.some(e => t.has(e));
 }
 
-function o(e, t) {
+function s(e, t) {
   if ((null == e ? void 0 : e.roles) == null || 0 === e.roles.length || null == e.guildId)
 return !1;
   if (a(e)) {

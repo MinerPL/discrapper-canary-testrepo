@@ -1,4 +1,4 @@
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(931619),
   c = n(981631);
@@ -10,7 +10,7 @@ function f(e) {
   var t;
   d = null != e.type ? e.type : c.IWh.UNKNOWN, _ = null !== (t = e.effectiveSpeed) && void 0 !== t ? t : c.IyS.UNKNOWN, E = e.serviceProvider, p.emitChange();
 }
-class h extends(o = s.ZP.Store) {
+class h extends(s = o.ZP.Store) {
   initialize() {
 u.Z.getNetworkInformation().then(f), u.Z.addChangeCallback(f);
   }

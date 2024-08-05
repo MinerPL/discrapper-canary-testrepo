@@ -17,16 +17,16 @@ t.Z = e => {
   title: I,
   titleClassName: R,
   buttonClassName: C,
-  perkImage: p,
-  isCarousel: g,
+  perkImage: g,
+  isCarousel: p,
   onCtaClick: A,
   perkComponent: m,
   subtitle: N = '',
   descriptionCta: f = '',
-  cardVariant: S,
-  subtitleClassName: h
+  cardVariant: h,
+  subtitleClassName: S
 } = e,
-M = (0, o._)(S),
+M = (0, o._)(h),
 x = (0, l.yQ)(),
 b = (null == x ? void 0 : x.nitroTenureStatus) === d.EB.REDEEMABLE;
   switch (null == x ? void 0 : x.nitroTenureStatus) {
@@ -53,14 +53,14 @@ children: [
     cardVariantStyleInfo: M,
     titleClassName: R,
     subtitle: N,
-    subtitleClassName: h
+    subtitleClassName: S
   }),
-  null != p && (0, s.jsx)('img', {
-    src: p,
+  null != g && (0, s.jsx)('img', {
+    src: g,
     alt: '',
     className: r()({
-      [_.cardImage]: !g,
-      [_.carouselCardImage]: g
+      [_.cardImage]: !p,
+      [_.carouselCardImage]: p
     })
   }),
   null != m && (0, s.jsx)(s.Fragment, {

@@ -1,6 +1,6 @@
 n.d(t, {
   p: function() {
-return o;
+return s;
   },
   y: function() {
 return a;
@@ -19,7 +19,7 @@ location: t
   return n;
 }
 
-function o(e, t) {
+function s(e, t) {
   let {
 enabled: n
   } = r.c.getCurrentConfig({

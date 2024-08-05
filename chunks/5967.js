@@ -1,9 +1,9 @@
 n.d(t, {
   VG: function() {
-return o;
+return s;
   },
   uB: function() {
-return s;
+return o;
   }
 }), n(47120);
 let r = /input/i,
@@ -23,7 +23,7 @@ let r = /input/i,
 'url'
   ]);
 
-function o(e) {
+function s(e) {
   if (null == e)
 return !1;
   if ('true' === e.getAttribute('contenteditable') || i.test(e.tagName))
@@ -37,7 +37,7 @@ if (a.has(n))
   return !1;
 }
 
-function s(e) {
+function o(e) {
   let {
 target: t
   } = e;

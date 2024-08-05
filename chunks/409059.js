@@ -1,4 +1,4 @@
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(741847),
   c = n(58346);
@@ -36,7 +36,7 @@ function p(e) {
 e.state = c.Rj.EXPIRED;
   });
 }
-class m extends(o = s.ZP.Store) {
+class m extends(s = o.ZP.Store) {
   getGuildTemplate(e) {
 return null != e ? d[e] : null;
   }

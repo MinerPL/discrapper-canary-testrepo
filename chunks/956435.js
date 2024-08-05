@@ -122,7 +122,7 @@ a = [
   'var_samp',
   'width_bucket'
 ],
-o = [
+s = [
   'create table',
   'insert into',
   'primary key',
@@ -140,7 +140,7 @@ o = [
   'depth first',
   'breadth first'
 ],
-s = [
+o = [
   'abs',
   'acos',
   'all',
@@ -534,7 +534,7 @@ keywords: {
     when: n
   } = {}) {
     return t = t || [], e.map(e => e.match(/\|\d+$/) || t.includes(e) ? e : n(e) ? `${ e }|0` : e);
-  }(s, {
+  }(o, {
     when: e => e.length < 3
   }),
   literal: r,
@@ -558,11 +558,11 @@ keywords: {
   ]
 },
 contains: [{
-    begin: t.either(...o),
+    begin: t.either(...s),
     relevance: 0,
     keywords: {
       $pattern: /[\w\.]+/,
-      keyword: s.concat(o),
+      keyword: o.concat(s),
       literal: r,
       type: i
     }

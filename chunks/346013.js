@@ -4,14 +4,14 @@ return y;
   }
 }), n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(512722),
   o = n.n(l),
   c = n(772848),
-  d = n(831209),
-  u = n(399606),
+  u = n(831209),
+  d = n(399606),
   _ = n(481060),
   E = n(607070),
   I = n(100527),
@@ -19,40 +19,40 @@ var i = n(735250),
   T = n(1585),
   h = n(841762),
   N = n(336197),
-  f = n(406432),
-  p = n(348238),
-  C = n(38267),
+  C = n(406432),
+  f = n(348238),
+  p = n(38267),
   g = n(484459),
   S = n(103575),
   A = n(695346),
   R = n(271383),
-  x = n(594174),
-  O = n(768581),
+  O = n(594174),
+  x = n(768581),
   M = n(900849),
   v = n(506071),
   L = n(495114),
   Z = n(170140),
   P = n(981631),
-  b = n(959517),
-  D = n(689938),
+  D = n(959517),
+  b = n(689938),
   j = n(730752),
   U = n(527455);
 
 function y(e) {
-  var t, n, s;
+  var t, n, a;
   let {
 embedUrl: l,
 message: y,
 channel: B
   } = e, k = (0, Z.J)(l, y), {
 setPopout: G
-  } = (0, C.Z)(y.id, b.d$), F = (0, p.qo)(y, B, G, !0), w = A.QK.useSetting(), V = (0, v.n)(), [H, Y] = a.useState(!1), [W, z] = a.useState((null == k ? void 0 : k.coverImage) == null), K = (0, u.e7)([E.Z], () => E.Z.useReducedMotion), Q = (0, u.e7)([
+  } = (0, p.Z)(y.id, D.d$), F = (0, f.qo)(y, B, G, !0), w = A.QK.useSetting(), V = (0, v.n)(), [H, Y] = s.useState(!1), [W, K] = s.useState((null == k ? void 0 : k.coverImage) == null), z = (0, d.e7)([E.Z], () => E.Z.useReducedMotion), Q = (0, d.e7)([
 R.ZP,
-x.default
+O.default
   ], () => {
 var e;
-return R.ZP.isMember(null == k ? void 0 : k.guildId, null === (e = x.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
-  }, [k]), q = (0, u.e7)([R.ZP], () => (null == k ? void 0 : k.authorId) != null ? R.ZP.getMember(k.guildId, k.authorId) : null), [X, J] = a.useMemo(() => {
+return R.ZP.isMember(null == k ? void 0 : k.guildId, null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
+  }, [k]), q = (0, d.e7)([R.ZP], () => (null == k ? void 0 : k.authorId) != null ? R.ZP.getMember(k.guildId, k.authorId) : null), [X, J] = s.useMemo(() => {
 var e;
 return [
   null !== (e = null == q ? void 0 : q.colorString) && void 0 !== e ? e : 'inherit',
@@ -60,11 +60,11 @@ return [
 ];
   }, [q]), {
 reducedMotion: $
-  } = a.useContext(_.AccessibilityPreferencesContext), [ee, et] = a.useState(!1), en = a.useCallback(() => {
+  } = s.useContext(_.AccessibilityPreferencesContext), [ee, et] = s.useState(!1), en = s.useCallback(() => {
 Y(!0);
-  }, [Y]), ei = a.useCallback(() => {
+  }, [Y]), ei = s.useCallback(() => {
 Y(!1);
-  }, [Y]), ea = a.useCallback(async () => {
+  }, [Y]), es = s.useCallback(async () => {
 null != k && ((0, m.yw)(P.rMx.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
   media_post_id: k.threadId,
   channel_id: B.id,
@@ -77,7 +77,7 @@ null != k && ((0, m.yw)(P.rMx.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
 k,
 B,
 Q
-  ]), es = a.useCallback(() => (o()((null == k ? void 0 : k.authorId) != null, 'Author Id cannot be null when loading user profile'), (0, g.W)(k.authorId, k.avatarUrl, {
+  ]), ea = s.useCallback(() => (o()((null == k ? void 0 : k.authorId) != null, 'Author Id cannot be null when loading user profile'), (0, g.W)(k.authorId, k.avatarUrl, {
 guildId: k.guildId,
 channelId: B.id
   })), [
@@ -96,7 +96,7 @@ return null;
   roleId: J,
   newAnalyticsLocations: t
 })),
-el = (0, O.NZ)({
+el = (0, x.NZ)({
   avatarDecoration: (null == q ? void 0 : q.avatarDecoration) != null ? null == q ? void 0 : q.avatarDecoration : null === (t = k.user) || void 0 === t ? void 0 : t.avatarDecoration,
   size: (0, T.y9)(_.AvatarSizes.SIZE_40),
   canAnimate: ee
@@ -106,8 +106,8 @@ ec = () => {
   if (!$.enabled)
     et(e => !e);
 },
-ed = k.coverImage,
-eu = null != ed && (0, f.d$)(ed);
+eu = k.coverImage,
+ed = null != eu && (0, C.d$)(eu);
   return (0, i.jsxs)('div', {
 className: j.postPreviewContainer,
 children: [
@@ -118,33 +118,33 @@ children: [
     children: [
       !W && (!0 === k.shouldShowBlurredThumbnailImage ? (0, i.jsx)('img', {
         src: U,
-        alt: D.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
+        alt: b.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
         className: r()(j.thumbnail, {
           [j.spoiler]: k.shouldSpoiler
         }),
         onContextMenu: F,
-        onError: () => z(!0)
+        onError: () => K(!0)
       }) : (0, i.jsx)(h.Z, {
-        src: !(V && (w || H)) && eu ? ''.concat(ed, '?format=png') : ed,
-        backgroundSrc: ''.concat(ed, '?format=png'),
-        alt: D.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
+        src: !(V && (w || H)) && ed ? ''.concat(eu, '?format=png') : eu,
+        backgroundSrc: ''.concat(eu, '?format=png'),
+        alt: b.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
         aspectRatio: 16 / 9,
         className: r()(j.thumbnail, {
           [j.spoiler]: k.shouldSpoiler
         }),
         imageChildClassName: j.thumbnailImage,
         onContextMenu: F,
-        onError: () => z(!0)
+        onError: () => K(!0)
       })),
       null != k.coverImageOverlayText && (0, i.jsx)(_.Clickable, {
-        onClick: ea,
+        onClick: es,
         children: (0, i.jsx)('div', {
           className: j.thumbnailOverlay,
           children: (0, i.jsxs)('div', {
             className: j.thumbnailOverlayCta,
             children: [
               (0, i.jsx)(L.Z, {
-                color: d.Z.WHITE
+                color: u.Z.WHITE
               }),
               (0, i.jsx)(_.Text, {
                 variant: 'text-sm/semibold',
@@ -184,7 +184,7 @@ children: [
             renderPopout: e => er(e, [I.Z.AVATAR]),
             position: 'right',
             spacing: 12,
-            preload: null == k.authorId ? void 0 : es,
+            preload: null == k.authorId ? void 0 : ea,
             children: e => (0, i.jsx)('div', {
               onMouseEnter: ec,
               onMouseLeave: ec,
@@ -192,7 +192,7 @@ children: [
                 ...e,
                 size: _.AvatarSizes.SIZE_40,
                 src: eo,
-                'aria-label': D.Z.Messages.MEDIA_POST_EMBED_AUTHOR_AVATAR_ALT,
+                'aria-label': b.Z.Messages.MEDIA_POST_EMBED_AUTHOR_AVATAR_ALT,
                 avatarDecoration: el
               })
             })
@@ -209,12 +209,12 @@ children: [
                     className: j.mediaChannelIcon
                   }),
                   (0, i.jsx)(_.Clickable, {
-                    onClick: ea,
+                    onClick: es,
                     className: j.channelName,
                     children: (0, i.jsx)(_.Heading, {
                       variant: 'heading-md/semibold',
                       color: 'header-primary',
-                      children: null !== (s = k.channelName) && void 0 !== s ? s : k.guildName
+                      children: null !== (a = k.channelName) && void 0 !== a ? a : k.guildName
                     })
                   })
                 ]
@@ -223,12 +223,12 @@ children: [
                 variant: 'text-sm/medium',
                 color: 'text-muted',
                 className: j.descriptionFooterAuthorContainer,
-                children: D.Z.Messages.MEDIA_POST_EMBED_FOOTER_WEB.format({
+                children: b.Z.Messages.MEDIA_POST_EMBED_FOOTER_WEB.format({
                   authorName: k.authorName,
                   authorNameHook: () => (0, i.jsx)(_.Popout, {
                     renderPopout: e => er(e, [I.Z.USERNAME]),
                     position: 'right',
-                    preload: null == k.authorId ? void 0 : es,
+                    preload: null == k.authorId ? void 0 : ea,
                     children: e => (0, i.jsx)(_.NameWithRoleAnchor, {
                       ...e,
                       name: k.authorName,
@@ -242,15 +242,15 @@ children: [
           }),
           k.canAccess ? (0, i.jsx)(_.Button, {
             color: _.ButtonColors.BRAND,
-            onClick: ea,
+            onClick: es,
             children: (0, i.jsx)(_.Text, {
               variant: 'text-sm/medium',
               color: 'always-white',
               children: k.ctaText
             })
           }) : (0, i.jsx)(_.ShinyButton, {
-            pauseAnimation: K,
-            onClick: ea,
+            pauseAnimation: z,
+            onClick: es,
             className: r()(j.__invalid_ctaButtonContent, j.subscribeButton),
             color: _.Button.Colors.CUSTOM,
             children: (0, i.jsx)(_.Text, {

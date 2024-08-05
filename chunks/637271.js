@@ -1,6 +1,6 @@
 var i, a = n(442837),
-  l = n(570140),
-  s = n(592125),
+  s = n(570140),
+  l = n(592125),
   r = n(176505);
 
 function o(e, t, n) {
@@ -12,8 +12,8 @@ writable: !0
   }) : e[t] = n, e;
 }
 let c = {},
-  d = {};
-class u extends(i = a.ZP.PersistedStore) {
+  u = {};
+class d extends(i = a.ZP.PersistedStore) {
   initialize(e) {
 var t;
 c = null !== (t = null == e ? void 0 : e.selectedResourceChannelIdByGuildId) && void 0 !== t ? t : {};
@@ -28,10 +28,10 @@ return null == e ? null : c[e];
   }
   getHomeNavigationChannelId(e) {
 var t;
-return null == e ? null : null !== (t = c[e]) && void 0 !== t ? t : d[e];
+return null == e ? null : null !== (t = c[e]) && void 0 !== t ? t : u[e];
   }
 }
-o(u, 'displayName', 'GuildOnboardingHomeNavigationStore'), o(u, 'persistKey', 'GuildOnboardingHomeNavigationStore'), t.Z = new u(l.Z, {
+o(d, 'displayName', 'GuildOnboardingHomeNavigationStore'), o(d, 'persistKey', 'GuildOnboardingHomeNavigationStore'), t.Z = new d(s.Z, {
   CHANNEL_SELECT: function(e) {
 let {
   channelId: t,
@@ -39,27 +39,27 @@ let {
 } = e;
 if (null == n || t === r.oC.GUILD_HOME)
   return;
-let i = s.Z.getChannel(t),
+let i = l.Z.getChannel(t),
   a = c[n],
-  l = d[n];
+  s = u[n];
 if (!((null == i ? void 0 : i.isThread()) && (null == i ? void 0 : i.parent_id) != null && [
-    l,
+    s,
     a
   ].includes(null == i ? void 0 : i.parent_id)))
-  t !== a && delete c[n], t !== l && delete d[n];
+  t !== a && delete c[n], t !== s && delete u[n];
   },
   SELECT_HOME_RESOURCE_CHANNEL: function(e) {
 let {
   channelId: t,
   guildId: n
 } = e;
-null == t ? delete d[n] : c[n] = t, delete d[n];
+null == t ? delete u[n] : c[n] = t, delete u[n];
   },
   SELECT_NEW_MEMBER_ACTION_CHANNEL: function(e) {
 let {
   channelId: t,
   guildId: n
 } = e;
-delete c[n], d[n] = t;
+delete c[n], u[n] = t;
   }
 });

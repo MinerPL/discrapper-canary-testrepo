@@ -62,18 +62,18 @@ r.Z.dispatch({
   update(e, t, n, i) {
 let {
   description: a,
-  filename: o,
-  spoiler: s,
+  filename: s,
+  spoiler: o,
   thumbnail: l
 } = i;
 r.Z.dispatch({
   type: 'UPLOAD_ATTACHMENT_UPDATE_FILE',
   channelId: e,
   id: t,
-  filename: o,
+  filename: s,
   description: a,
   thumbnail: l,
-  spoiler: s,
+  spoiler: o,
   draftType: n
 });
   },

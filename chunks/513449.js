@@ -1,38 +1,39 @@
 n.d(t, {
   Ku: function() {
-return d;
+return _;
   },
   MV: function() {
-return _;
+return E;
   }
 });
 var r = n(470079),
   i = n(652874),
-  a = n(442837),
+  a = n(731965),
+  s = n(442837),
   o = n(496675),
-  s = n(944486),
-  l = n(146085),
-  u = n(643632);
-let c = (0, i.Z)(e => ({
+  l = n(944486),
+  u = n(146085),
+  c = n(643632);
+let d = (0, i.Z)(e => ({
   isOnStartStageScreen: !0
 }));
 
-function d(e) {
-  c.setState({
+function _(e) {
+  (0, a.j)(() => d.setState({
 isOnStartStageScreen: e
-  });
+  }));
 }
 
-function _(e) {
-  let t = (0, a.e7)([s.Z], () => s.Z.getVoiceChannelId() === e.id),
-n = (0, a.e7)([o.Z], () => o.Z.can(l.yP, e), [e]),
-i = (0, u.Z)(e.id),
-c = n && !i;
+function E(e) {
+  let t = (0, s.e7)([l.Z], () => l.Z.getVoiceChannelId() === e.id),
+n = (0, s.e7)([o.Z], () => o.Z.can(u.yP, e), [e]),
+i = (0, c.Z)(e.id),
+a = n && !i;
   r.useEffect(() => {
-t ? !c && d(!1) : d(c);
+t ? !a && _(!1) : _(a);
   }, [
 t,
-c
+a
   ]);
 }
-t.ZP = c;
+t.ZP = d;

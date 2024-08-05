@@ -1,26 +1,26 @@
 n.d(t, {
   Z: function() {
-return s;
+return o;
   }
 });
 var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(733371);
+  s = n(733371);
 
-function s(e) {
+function o(e) {
   let {
 children: t,
 lastSection: n = !1,
 className: i,
-...s
+...o
   } = e;
   return (0, r.jsx)('div', {
-className: a()(o.section, i, {
-  [o.lastSection]: n
+className: a()(s.section, i, {
+  [s.lastSection]: n
 }),
-...s,
+...o,
 children: t
   });
 }

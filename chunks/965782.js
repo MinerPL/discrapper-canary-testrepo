@@ -104,7 +104,7 @@ a = {
     'this'
   ]
 },
-o = {
+s = {
   className: 'meta',
   begin: '@' + n,
   contains: [{
@@ -113,7 +113,7 @@ o = {
     contains: ['self']
   }]
 },
-s = {
+o = {
   className: 'params',
   begin: /\(/,
   end: /\)/,
@@ -195,7 +195,7 @@ contains: [
       3: 'title.class'
     },
     contains: [
-      s,
+      o,
       e.C_LINE_COMMENT_MODE,
       e.C_BLOCK_COMMENT_MODE
     ]
@@ -221,7 +221,7 @@ contains: [
         keywords: a,
         relevance: 0,
         contains: [
-          o,
+          s,
           e.APOS_STRING_MODE,
           e.QUOTE_STRING_MODE,
           i,
@@ -233,7 +233,7 @@ contains: [
     ]
   },
   i,
-  o
+  s
 ]
   };
 };

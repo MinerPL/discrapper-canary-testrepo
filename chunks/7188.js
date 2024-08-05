@@ -6,8 +6,8 @@ return v;
 var r = n(735250),
   i = n(470079),
   a = n(442837),
-  o = n(481060),
-  s = n(158631),
+  s = n(481060),
+  o = n(158631),
   l = n(709369),
   u = n(544384),
   c = n(76021),
@@ -27,7 +27,7 @@ function A(e) {
   let {
 className: t
   } = e;
-  return (0, r.jsx)(o.SettingsIcon, {
+  return (0, r.jsx)(s.SettingsIcon, {
 size: 'md',
 color: 'currentColor',
 className: t
@@ -57,13 +57,13 @@ function v(e) {
 hideBadges: t = !1,
 stream: n,
 ...E
-  } = e, f = (0, a.e7)([_.default], () => h.ZP.isPremium(_.default.getCurrentUser(), T.p9.TIER_1)), S = (0, a.e7)([d.Z], () => d.Z.getChannel(null == n ? void 0 : n.channelId)), v = i.useMemo(() => null != n ? [n] : [], [n]), O = (0, s.zW)(null == S ? void 0 : S.id), R = i.useCallback(() => {
+  } = e, f = (0, a.e7)([_.default], () => h.ZP.isPremium(_.default.getCurrentUser(), T.p9.TIER_1)), S = (0, a.e7)([d.Z], () => d.Z.getChannel(null == n ? void 0 : n.channelId)), v = i.useMemo(() => null != n ? [n] : [], [n]), O = (0, o.zW)(null == S ? void 0 : S.id), R = i.useCallback(() => {
 null != S && (0, c.Z)(S.getGuildId(), S.id, I.jXE.STREAM_SETTINGS);
   }, [S]);
   if (null == n || null == S)
 return null;
   let C = A;
-  return !t && !f && (C = N), (0, r.jsx)(o.Popout, {
+  return !t && !f && (C = N), (0, r.jsx)(s.Popout, {
 position: 'top',
 renderPopout: e => {
   let {
@@ -82,7 +82,7 @@ renderPopout: e => {
     })
   });
 },
-animation: o.Popout.Animation.FADE,
+animation: s.Popout.Animation.FADE,
 children: e => (0, r.jsx)(m.Z, {
   ...e,
   label: g.Z.Messages.STREAMER_SETTINGS_TITLE,

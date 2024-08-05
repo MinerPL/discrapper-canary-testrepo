@@ -4,10 +4,10 @@ return f;
   }
 });
 var r, i, a = n(470079),
-  o = n(699581);
+  s = n(699581);
 
-function s(e, t) {
-  return (s = Object.setPrototypeOf || function(e, t) {
+function o(e, t) {
+  return (o = Object.setPrototypeOf || function(e, t) {
 return e.__proto__ = t, e;
   })(e, t);
 }
@@ -66,7 +66,7 @@ function r(e) {
     throw Error('WrappedComponent: ' + E + ' lacks a handleClickOutside(event) function for processing outside click events.');
   }, r.__getComponentNode = function() {
     var e = r.getInstance();
-    return t && 'function' == typeof t.setClickOutsideRef ? t.setClickOutsideRef()(e) : 'function' == typeof e.setClickOutsideRef ? e.setClickOutsideRef() : (0, o.findDOMNode)(e);
+    return t && 'function' == typeof t.setClickOutsideRef ? t.setClickOutsideRef()(e) : 'function' == typeof e.setClickOutsideRef ? e.setClickOutsideRef() : (0, s.findDOMNode)(e);
   }, r.enableOnClickOutside = function() {
     if ('undefined' != typeof document && !_[r._uid]) {
       void 0 === i && (i = u()), _[r._uid] = !0;
@@ -107,7 +107,7 @@ function r(e) {
     return r.instanceRef = e;
   }, r._uid = c(), r;
 }
-f = r, p = n, f.prototype = Object.create(p.prototype), f.prototype.constructor = f, s(f, p);
+f = r, p = n, f.prototype = Object.create(p.prototype), f.prototype.constructor = f, o(f, p);
 var f, p, m = r.prototype;
 return m.getInstance = function() {
   if (e.prototype && !e.prototype.isReactComponent)

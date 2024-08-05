@@ -9,7 +9,7 @@ return N;
 return a;
   },
   gV: function() {
-return D;
+return S;
   },
   uo: function() {
 return L;
@@ -134,7 +134,7 @@ return T.Z.dispatch({
 }), a(_, e);
 }
 
-function D(e, _) {
+function S(e, _) {
   if (!A() && null != _)
 return T.Z.dispatch({
   type: 'AUDIT_LOG_FILTER_BY_TARGET',

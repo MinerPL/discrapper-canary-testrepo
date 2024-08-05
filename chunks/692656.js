@@ -1,9 +1,9 @@
 let r = n(689118),
   i = n(988324).Buffer,
   a = n(206424),
-  o = n(375990);
+  s = n(375990);
 
-function s(e) {
+function o(e) {
   this.enc = 'der', this.name = e.name, this.entity = e, this.tree = new l(), this.tree._init(e.body);
 }
 
@@ -14,19 +14,19 @@ function l(e) {
 function u(e) {
   return e < 10 ? '0' + e : e;
 }
-e.exports = s, s.prototype.encode = function(e, t) {
+e.exports = o, o.prototype.encode = function(e, t) {
   return this.tree._encode(e, t).join();
 }, r(l, a), l.prototype._encodeComposite = function(e, t, n, r) {
   let a = function(e, t, n, r) {
 let i;
-if ('seqof' === e ? e = 'seq' : 'setof' === e && (e = 'set'), o.tagByName.hasOwnProperty(e))
-  i = o.tagByName[e];
+if ('seqof' === e ? e = 'seq' : 'setof' === e && (e = 'set'), s.tagByName.hasOwnProperty(e))
+  i = s.tagByName[e];
 else {
   if ('number' != typeof e || (0 | e) !== e)
     return r.error('Unknown tag: ' + e);
   i = e;
 }
-return i >= 31 ? r.error('Multi-octet tag encoding unsupported') : (!t && (i |= 32), i |= o.tagClassByName[n || 'universal'] << 6);
+return i >= 31 ? r.error('Multi-octet tag encoding unsupported') : (!t && (i |= 32), i |= s.tagClassByName[n || 'universal'] << 6);
   }(e, t, n, this.reporter);
   if (r.length < 128) {
 let e = i.alloc(2);
@@ -35,12 +35,12 @@ return e[0] = a, e[1] = r.length, this._createEncoderBuffer([
   r
 ]);
   }
-  let s = 1;
+  let o = 1;
   for (let e = r.length; e >= 256; e >>= 8)
-s++;
-  let l = i.alloc(2 + s);
-  l[0] = a, l[1] = 128 | s;
-  for (let e = 1 + s, t = r.length; t > 0; e--, t >>= 8)
+o++;
+  let l = i.alloc(2 + o);
+  l[0] = a, l[1] = 128 | o;
+  for (let e = 1 + o, t = r.length; t > 0; e--, t >>= 8)
 l[e] = 255 & t;
   return this._createEncoderBuffer([
 l,
@@ -96,12 +96,12 @@ for (r++; n >= 128; n >>= 7)
   r++;
   }
   let a = i.alloc(r),
-o = a.length - 1;
+s = a.length - 1;
   for (let t = e.length - 1; t >= 0; t--) {
 let n = e[t];
-for (a[o--] = 127 & n;
+for (a[s--] = 127 & n;
   (n >>= 7) > 0;)
-  a[o--] = 128 | 127 & n;
+  a[s--] = 128 | 127 & n;
   }
   return this._createEncoderBuffer(a);
 }, l.prototype._encodeTime = function(e, t) {

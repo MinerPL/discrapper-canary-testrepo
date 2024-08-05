@@ -12,7 +12,7 @@ return u;
 return r;
   },
   frameLoop: function() {
-return s;
+return o;
   },
   now: function() {
 return l;
@@ -31,8 +31,8 @@ return E;
   }
 });
 var r, i, a = n(19784),
-  o = n(217348),
-  s = new a.V(),
+  s = n(217348),
+  o = new a.V(),
   l = function() {
 return performance.now();
   },
@@ -44,13 +44,13 @@ return -1;
   _ = function(e) {
 return e();
   },
-  E = o.ZT,
+  E = s.ZT,
   f = function(e) {
 var t;
 return i = (t = Object.assign({
   to: i,
   now: l,
-  frameLoop: s,
+  frameLoop: o,
   colorNames: u,
   skipAnimation: c,
   createStringInterpolator: r,
@@ -62,5 +62,5 @@ return i = (t = Object.assign({
   for (var n in e)
     void 0 !== e[n] && (t[n] = e[n]);
   return t;
-}(e))).to, l = t.now, s = t.frameLoop, u = t.colorNames, c = t.skipAnimation, r = t.createStringInterpolator, d = t.requestAnimationFrame, _ = t.batchedUpdates, E = t.willAdvance, t;
+}(e))).to, l = t.now, o = t.frameLoop, u = t.colorNames, c = t.skipAnimation, r = t.createStringInterpolator, d = t.requestAnimationFrame, _ = t.batchedUpdates, E = t.willAdvance, t;
   };

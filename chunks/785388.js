@@ -25,8 +25,8 @@ var i = n(735250),
   I = n(620652),
   x = n(815605),
   C = n(222677),
-  R = n(995774),
-  S = n(665906),
+  S = n(995774),
+  R = n(665906),
   N = n(210887),
   O = n(314897),
   Z = n(592125),
@@ -194,7 +194,7 @@ guildId: a,
 reactionType: l,
 onRemoveReactor: r,
 disableManage: c = !1
-  } = e, d = (0, u.e7)([O.default], () => O.default.getId()), m = (0, u.e7)([L.default], () => L.default.getUser(n.id), [n]), f = (0, S.$R)(o), T = (0, u.e7)([y.Z], () => y.Z.can(V.Plq.MANAGE_MESSAGES, o) && f) || d === n.id, _ = (0, u.e7)([
+  } = e, d = (0, u.e7)([O.default], () => O.default.getId()), m = (0, u.e7)([L.default], () => L.default.getUser(n.id), [n]), f = (0, R.$R)(o), T = (0, u.e7)([y.Z], () => y.Z.can(V.Plq.MANAGE_MESSAGES, o) && f) || d === n.id, _ = (0, u.e7)([
 j.ZP,
 Z.Z,
 P.Z
@@ -236,13 +236,15 @@ children: [
   }),
   !c && T && (0, i.jsx)(h.Clickable, {
     onClick: function() {
-      C.Vn({
-        emoji: t,
-        userId: n.id,
+      C.WO({
         channelId: o.id,
         messageId: s.id,
-        reactionType: l,
-        isMe: d === n.id
+        emoji: t,
+        location: C.TW.MESSAGE,
+        userId: n.id,
+        options: {
+          burst: l === E.O.BURST
+        }
       }), null == r || r();
     },
     children: (0, i.jsx)(h.CloseSmallIcon, {
@@ -432,12 +434,12 @@ return null != i ? i.reactions : [];
   }), e;
 }, [t])),
 x = I[0],
-[C, S] = function(e, t, n) {
+[C, R] = function(e, t, n) {
   let [i, o] = s.useState(null != e ? e : t);
   return s.useEffect(() => {
     null != i && null == n.find(e => {
       let t = null != e.me_vote ? E.O.VOTE : e.burst_count > 0 ? E.O.BURST : E.O.NORMAL;
-      return (0, R.ir)(e.emoji, i.emoji) && t === i.reactionType;
+      return (0, S.ir)(e.emoji, i.emoji) && t === i.reactionType;
     }) && o(t);
   }, [
     i,
@@ -454,7 +456,7 @@ x = I[0],
 } : null, T),
 O = s.useMemo(() => {
   var e;
-  return null == C ? null : null !== (e = T.find(e => (0, R.ir)(e.emoji, C.emoji))) && void 0 !== e ? e : null;
+  return null == C ? null : null !== (e = T.find(e => (0, S.ir)(e.emoji, C.emoji))) && void 0 !== e ? e : null;
 }, [
   T,
   C
@@ -488,7 +490,7 @@ children: (0, i.jsxs)(h.ModalRoot, {
         let n = e.burst_count > 0;
         return (0, i.jsx)(J, {
           isSelected: ee(C, e, n ? E.O.BURST : E.O.NORMAL),
-          setSelected: S,
+          setSelected: R,
           reactionType: n ? E.O.BURST : E.O.NORMAL,
           emoji: e.emoji,
           count: n ? e.burst_count : e.count,

@@ -6,8 +6,8 @@ return E;
 return m;
   }
 });
-var n = a(735250),
-  t = a(470079),
+var t = a(735250),
+  n = a(470079),
   l = a(990547),
   i = a(481060),
   r = a(390885),
@@ -24,37 +24,37 @@ transitionState: s,
 onClose: a,
 isNUXFlow: m
   } = e;
-  return t.useEffect(() => {
+  return n.useEffect(() => {
 o.Z.hideHubUpsell(), m && r.Z.flowStep(N.MK.ORGANIC, N.EW.HUB_CONNECTION);
-  }, [m]), (0, n.jsx)(i.ModalRoot, {
+  }, [m]), (0, t.jsx)(i.ModalRoot, {
 className: _.modalRoot,
 transitionState: s,
 'aria-label': u.Z.Messages.HUB_WAITLIST_MODAL_JOIN_HEADER,
 impression: {
   impressionName: l.ImpressionNames.HUB_EMAIL_SIGNUP
 },
-children: (0, n.jsx)(i.ModalContent, {
+children: (0, t.jsx)(i.ModalContent, {
   style: {
     overflow: 'hidden',
     paddingRight: '0px'
   },
   paddingFix: !1,
   className: _.modalContent,
-  children: (0, n.jsxs)('div', {
+  children: (0, t.jsxs)('div', {
     className: _.container,
     children: [
-      (0, n.jsx)('div', {
+      (0, t.jsx)('div', {
         className: _.sidebarContainer,
-        children: (0, n.jsx)(d.Z, {})
+        children: (0, t.jsx)(d.Z, {})
       }),
-      (0, n.jsxs)('div', {
+      (0, t.jsxs)('div', {
         className: _.contentContainer,
         children: [
-          (0, n.jsx)(i.ModalCloseButton, {
+          (0, t.jsx)(i.ModalCloseButton, {
             onClick: a,
             className: _.closeButton
           }),
-          (0, n.jsx)(c.Z, {
+          (0, t.jsx)(c.Z, {
             isNUXFlow: m,
             onClose: a
           })
@@ -69,16 +69,16 @@ let E = e => {
   let {
 invite: s
   } = e;
-  return (0, n.jsxs)('div', {
+  return (0, t.jsxs)('div', {
 className: _.container,
 children: [
-  (0, n.jsx)('div', {
+  (0, t.jsx)('div', {
     className: _.sidebarContainer,
-    children: (0, n.jsx)(d.Z, {})
+    children: (0, t.jsx)(d.Z, {})
   }),
-  (0, n.jsx)('div', {
+  (0, t.jsx)('div', {
     className: _.contentContainer,
-    children: (0, n.jsx)(c.Z, {
+    children: (0, t.jsx)(c.Z, {
       invite: s
     })
   })

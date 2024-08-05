@@ -7,11 +7,11 @@ var r = n(735250);
 n(470079);
 var i = n(399606),
   a = n(481060),
-  o = n(275759),
-  s = n(706454),
-  l = n(271383),
-  u = n(430824),
-  c = n(346656),
+  s = n(275759),
+  o = n(565138),
+  l = n(706454),
+  u = n(271383),
+  c = n(430824),
   d = n(709054),
   _ = n(689938),
   E = n(350741);
@@ -22,7 +22,7 @@ userId: t,
 guildId: n,
 textClassName: f,
 tooltipDelay: h
-  } = e, p = (0, i.e7)([s.default], () => s.default.locale), m = (0, i.e7)([u.Z], () => null != n ? u.Z.getGuild(n) : null), I = (0, i.e7)([l.ZP], () => null != n ? l.ZP.getMember(n, t) : null), T = (0, o.FI)(d.default.extractTimestamp(t), p), g = (0, o.FI)(null == I ? void 0 : I.joinedAt, p);
+  } = e, p = (0, i.e7)([l.default], () => l.default.locale), m = (0, i.e7)([c.Z], () => null != n ? c.Z.getGuild(n) : null), I = (0, i.e7)([u.ZP], () => null != n ? u.ZP.getMember(n, t) : null), T = (0, s.FI)(d.default.extractTimestamp(t), p), g = (0, s.FI)(null == I ? void 0 : I.joinedAt, p);
   return null == m || null == I ? (0, r.jsx)(a.Text, {
 variant: 'text-sm/normal',
 className: f,
@@ -61,10 +61,10 @@ children: [
       (0, r.jsx)(a.Tooltip, {
         text: m.name,
         delay: h,
-        children: e => (0, r.jsx)(c.Z, {
+        children: e => (0, r.jsx)(o.Z, {
           ...e,
           guild: m,
-          size: c.Z.Sizes.SMOL
+          size: o.Z.Sizes.SMOL
         })
       }),
       (0, r.jsx)(a.Text, {

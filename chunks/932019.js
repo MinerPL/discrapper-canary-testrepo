@@ -1,6 +1,6 @@
-var _, E;
-t.d(e, {
+var r, i;
+n.d(t, {
   i: function() {
-return _;
+return r;
   }
-}), (E = _ || (_ = {})).BIO = 'bio', E.USERNAME = 'username', E.NICKNAME = 'nickname', E.GLOBAL_NAME = 'display_name', E.CLAN_TAG = 'clan_tag';
+}), (i = r || (r = {})).BIO = 'bio', i.USERNAME = 'username', i.NICKNAME = 'nickname', i.GLOBAL_NAME = 'display_name', i.CLAN_TAG = 'clan_tag';

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return s;
+return o;
   }
 }), n(653041), n(177593), n(733860);
 var r = n(427786),
@@ -14,8 +14,8 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let o = new(n(710845)).Z('Queue');
-class s {
+let s = new(n(710845)).Z('Queue');
+class o {
   enqueue(e, t, n) {
 this.queue.push({
   message: e,
@@ -53,7 +53,7 @@ this.logger.log('Draining message from queue LogId:'.concat(r, ' QueueLength: ')
   }
 });
   }
-  constructor(e = o, t = 100) {
+  constructor(e = s, t = 100) {
 a(this, 'logger', void 0), a(this, 'defaultRetryAfter', void 0), a(this, 'queue', void 0), a(this, 'timeout', void 0), a(this, 'draining', void 0), this.logger = e, this.defaultRetryAfter = t, this.queue = new(i())(), this.timeout = null, this.draining = !1;
   }
 }

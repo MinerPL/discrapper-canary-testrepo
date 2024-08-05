@@ -1,13 +1,13 @@
 n.d(t, {
   Z: function() {
-return s;
+return o;
   }
 });
 var r = n(424218),
   i = n(186901),
   a = n(689938);
 
-function o(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -15,7 +15,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class s {
+class o {
   get displayMessage() {
 if (null == this.code)
   return a.Z.Messages.NOTICE_DISPATCH_ERROR;
@@ -27,14 +27,14 @@ switch (this.code) {
     let {
       available: t,
         required: n
-    } = this.context, o = (0, r.BU)(t, {
+    } = this.context, s = (0, r.BU)(t, {
       useKibibytes: !0
-    }), s = (0, r.BU)(n, {
+    }), o = (0, r.BU)(n, {
       useKibibytes: !0
     });
     return a.Z.Messages.NOTICE_DISPATCH_ERROR_DISK_LOW.format({
-      required: s,
-      available: o
+      required: o,
+      available: s
     });
   case i.ff.POST_INSTALL_FAILED:
     let {
@@ -76,6 +76,6 @@ switch (this.code) {
 }
   }
   constructor(e) {
-o(this, 'raw', void 0), o(this, 'context', void 0), o(this, 'code', void 0), o(this, 'uuid', void 0), o(this, 'applicationId', void 0), o(this, 'branchId', void 0), this.raw = e, null != e.code && (this.code = e.code), null != e.uuid && (this.uuid = e.uuid), null != e.application_id && (this.applicationId = e.application_id), null != e.branch_id && (this.branchId = e.branch_id), null != e.context ? this.context = e.context : this.context = {};
+s(this, 'raw', void 0), s(this, 'context', void 0), s(this, 'code', void 0), s(this, 'uuid', void 0), s(this, 'applicationId', void 0), s(this, 'branchId', void 0), this.raw = e, null != e.code && (this.code = e.code), null != e.uuid && (this.uuid = e.uuid), null != e.application_id && (this.applicationId = e.application_id), null != e.branch_id && (this.branchId = e.branch_id), null != e.context ? this.context = e.context : this.context = {};
   }
 }

@@ -6,8 +6,8 @@ return f;
 var r = n(735250),
   i = n(470079),
   a = n(665443),
-  o = n.n(a),
-  s = n(259443),
+  s = n.n(a),
+  o = n(259443),
   l = n(992774);
 
 function u(e, t, n) {
@@ -18,7 +18,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let c = new s.Y('DirectVideo');
+let c = new o.Y('DirectVideo');
 class d {
   addref() {
 this.refcount++;
@@ -42,7 +42,7 @@ function f(e) {
 streamId: t,
 paused: n,
 onReady: a,
-onResize: s,
+onResize: o,
 className: u,
 ...f
   } = e, h = i.useRef(null), p = i.useRef(null), m = i.useRef({
@@ -52,7 +52,7 @@ height: 0
 streamId: t,
 paused: n,
 onReady: a,
-onResize: s
+onResize: o
   });
   return i.useLayoutEffect(() => {
 let {
@@ -68,10 +68,10 @@ if (null != e) {
   }), t.addEventListener('resize', function() {
     var e, t, n, r, i, a;
     let {
-      width: o,
-      height: s
+      width: s,
+      height: o
     } = m.current, l = null !== (n = null === (e = p.current) || void 0 === e ? void 0 : e.videoWidth) && void 0 !== n ? n : 0, u = null !== (r = null === (t = p.current) || void 0 === t ? void 0 : t.videoHeight) && void 0 !== r ? r : 0;
-    if (o !== l || s !== u) {
+    if (s !== l || o !== u) {
       let e = {
         width: l,
         height: u
@@ -84,7 +84,7 @@ if (null != e) {
   }), c.info('create video element for '.concat(I.current.streamId, ', readyState=').concat(t.readyState)), t.readyState > 3 && c.error('video element for '.concat(I.current.streamId, ' was ready before attached')), e.appendChild(t), p.current = t;
 }
   }, []), i.useEffect(() => {
-I.current.streamId = t, I.current.paused = n, I.current.onReady = a, I.current.onResize = s;
+I.current.streamId = t, I.current.paused = n, I.current.onReady = a, I.current.onResize = o;
   }), i.useEffect(() => {
 let e = p.current;
 if (null != e) {
@@ -103,7 +103,7 @@ if (null != e) {
 n,
 t
   ]), (0, r.jsx)('div', {
-className: o()('media-engine-video', u),
+className: s()('media-engine-video', u),
 ref: h,
 ...f
   });

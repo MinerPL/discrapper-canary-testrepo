@@ -60,11 +60,11 @@ if (t + n > r) {
   }
   return t;
 }
-for (var o = this._front, i = n - 1; i >= 0; i--) {
-  var a = (o - 1 & r - 1 ^ r) - r;
-  this[a] = arguments[i], o = a;
+for (var s = this._front, i = n - 1; i >= 0; i--) {
+  var a = (s - 1 & r - 1 ^ r) - r;
+  this[a] = arguments[i], s = a;
 }
-return this._front = o, this._length = t + n, t + n;
+return this._front = s, this._length = t + n, t + n;
   }
   if (0 === n)
 return t;
@@ -112,8 +112,8 @@ a = this._length;
   if (r(this, 0, i, 0, n), this._capacity = e, this._makeCapacity(), this._front = 0, t + a <= n)
 r(i, t, this, 0, a);
   else {
-var o = a - (t + a & n - 1);
-r(i, t, this, 0, o), r(i, 0, this, o, a - o);
+var s = a - (t + a & n - 1);
+r(i, t, this, 0, s), r(i, 0, this, s, a - s);
   }
 };
 var n = Array.isArray;

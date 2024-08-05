@@ -1,19 +1,19 @@
 n.d(t, {
   x: function() {
-return s;
+return o;
   }
 }), n(789020);
 var r = n(271383),
   i = n(630388),
   a = n(549817),
-  o = n(372897);
+  s = n(372897);
 
-function s(e) {
+function o(e) {
   return new Promise(t => {
 r.ZP.addConditionalChangeListener(() => {
   var n;
-  let s = r.ZP.getSelfMember(e);
-  return !(0, i.yE)(null !== (n = null == s ? void 0 : s.flags) && void 0 !== n ? n : 0, o.q.COMPLETED_ONBOARDING) || (a.Z.finishOnboarding(e), t(), !1);
+  let o = r.ZP.getSelfMember(e);
+  return !(0, i.yE)(null !== (n = null == o ? void 0 : o.flags) && void 0 !== n ? n : 0, s.q.COMPLETED_ONBOARDING) || (a.Z.finishOnboarding(e), t(), !1);
 });
   });
 }

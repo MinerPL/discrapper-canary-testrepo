@@ -2,7 +2,7 @@ n(47120);
 var r, i = n(442837),
   a = n(570140);
 
-function o(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -10,7 +10,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let s = {
+let o = {
 use_topic_dividers_in_chat: 'Use summary topics as divider content in chat instead of string formatted dates.',
 highlight_redesigned_icons: 'Highlight redesigned icons',
 alt_clips_1: 'Use alt clip icon 1',
@@ -33,7 +33,7 @@ return {
 };
   }
   initialize(e) {
-for (var t in s) {
+for (var t in o) {
   var n, r;
   let i = null !== (r = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== r && r;
   l[t] = i;
@@ -55,12 +55,12 @@ return Object.entries(l).map(e => {
   return [
     t,
     n,
-    s[t]
+    o[t]
   ];
 });
   }
 }
-o(u, 'displayName', 'DevToolsDesignTogglesStore'), o(u, 'persistKey', 'DevToolsDesignTogglesStore'), t.Z = new u(a.Z, {
+s(u, 'displayName', 'DevToolsDesignTogglesStore'), s(u, 'persistKey', 'DevToolsDesignTogglesStore'), t.Z = new u(a.Z, {
   DEV_TOOLS_DESIGN_TOGGLE_WEB_SET: function(e) {
 l[e.toggle] = e.value;
   }

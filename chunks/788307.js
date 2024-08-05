@@ -6,8 +6,8 @@ return C;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  o = n(442837),
   l = n(481060),
   u = n(596454),
   c = n(122810),
@@ -34,9 +34,9 @@ emoji: t,
 className: n,
 animate: i = !0,
 hideTooltip: a,
-tooltipDelay: s
+tooltipDelay: o
   } = e, c = m.Yk.useSetting(), d = null != t.id ? ':'.concat(t.name, ':') : E.ZP.translateSurrogatesToInlineEmoji(t.name), _ = {
-className: o()(O.emoji, n),
+className: s()(O.emoji, n),
 emojiId: t.id,
 emojiName: t.name,
 autoplay: !0,
@@ -46,7 +46,7 @@ animated: !!(t.animated && c && i)
 ..._
   }) : (0, r.jsx)(l.Tooltip, {
 text: d,
-delay: s,
+delay: o,
 children: e => (0, r.jsx)(u.Z, {
   ...e,
   ..._
@@ -57,13 +57,13 @@ let y = e => {
   let {
 className: t,
 text: n
-  } = e, a = i.useRef(null), s = i.useRef(null), [u, c] = i.useState(!1);
+  } = e, a = i.useRef(null), o = i.useRef(null), [u, c] = i.useState(!1);
   return i.useLayoutEffect(() => {
 let {
   current: e
 } = a, {
   current: t
-} = s;
+} = o;
 if (null != e && null != t)
   c(!(e.clientWidth < t.clientWidth && e.clientHeight <= t.clientHeight));
   }, [n]), (0, r.jsx)(l.Tooltip, {
@@ -79,8 +79,8 @@ children: e => (0, r.jsxs)(r.Fragment, {
       children: n
     }),
     (0, r.jsx)('div', {
-      className: o()(O.textRuler, t),
-      ref: s,
+      className: s()(O.textRuler, t),
+      ref: o,
       'aria-hidden': !0,
       children: n
     })
@@ -94,14 +94,14 @@ t.Z = e => {
 activities: n,
 applicationStream: i,
 className: a,
-textClassName: o,
+textClassName: s,
 emojiClassName: u,
 animate: E = !0,
 hideTooltip: m = !1,
 hideEmoji: D = !1,
 user: L,
 hasQuest: b
-  } = e, M = null != n ? n.find(e => e.type === v.IIU.CUSTOM_STATUS) : null, P = (0, s.e7)([I.default], () => I.default.getId() === (null == L ? void 0 : L.id)), U = (0, s.e7)([h.Z], () => P ? h.Z.getHangStatusActivity() : null != n ? n.find(e => e.type === v.IIU.HANG_STATUS) : null), w = (0, s.e7)([
+  } = e, M = null != n ? n.find(e => e.type === v.IIU.CUSTOM_STATUS) : null, P = (0, o.e7)([I.default], () => I.default.getId() === (null == L ? void 0 : L.id)), U = (0, o.e7)([h.Z], () => P ? h.Z.getHangStatusActivity() : null != n ? n.find(e => e.type === v.IIU.HANG_STATUS) : null), w = (0, o.e7)([
 A.Z,
 T.Z
   ], () => {
@@ -124,7 +124,7 @@ animate: E,
 hideTooltip: m,
 className: u
   }));
-  let F = (0, s.e7)([S.Z], () => null != L ? S.Z.getStatus(L.id) : null),
+  let F = (0, o.e7)([S.Z], () => null != L ? S.Z.getStatus(L.id) : null),
 V = null !== F && [
   v.Skl.OFFLINE,
   v.Skl.INVISIBLE
@@ -137,7 +137,7 @@ children: [
   k,
   (0, r.jsx)(y, {
     text: H,
-    className: o
+    className: s
   }),
   b && (0, r.jsx)(l.QuestsIcon, {
     size: 'custom',

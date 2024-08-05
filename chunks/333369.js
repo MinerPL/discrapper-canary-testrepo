@@ -85,13 +85,13 @@ a = {
     }
   ]
 },
-o = e.inherit(i, {
+s = e.inherit(i, {
   contains: []
 }),
-s = e.inherit(a, {
+o = e.inherit(a, {
   contains: []
 });
-  i.contains.push(s), a.contains.push(o);
+  i.contains.push(o), a.contains.push(s);
   let l = [
 n,
 r
@@ -99,8 +99,8 @@ r
   [
 i,
 a,
-o,
-s
+s,
+o
   ].forEach(e => {
 e.contains = e.contains.concat(l);
   });

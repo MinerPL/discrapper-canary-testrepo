@@ -1,13 +1,13 @@
 n(757143), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(442837),
   o = n(481060),
   c = n(771340),
-  d = n(903223),
-  u = n(285952),
+  u = n(903223),
+  d = n(285952),
   h = n(689938),
   p = n(303450);
 
@@ -39,9 +39,9 @@ let {
   region: e,
   selected: t
 } = this.props;
-return (0, i.jsxs)(u.Z, {
-  align: u.Z.Align.CENTER,
-  className: s()({
+return (0, i.jsxs)(d.Z, {
+  align: d.Z.Align.CENTER,
+  className: l()({
     selected: t
   }),
   children: [
@@ -56,7 +56,7 @@ return (0, i.jsxs)(u.Z, {
 });
   }
 }
-class C extends a.PureComponent {
+class g extends a.PureComponent {
   componentDidMount() {
 null == this.props.regions && c.Z.fetchRegions(null);
   }
@@ -121,6 +121,6 @@ super(...e), m(this, 'renderOption', (e, t) => (0, i.jsx)(E, {
 });
   }
 }
-t.Z = r.ZP.connectStores([d.Z], () => ({
-  regions: d.Z.getRegions(null)
-}))(C);
+t.Z = r.ZP.connectStores([u.Z], () => ({
+  regions: u.Z.getRegions(null)
+}))(g);

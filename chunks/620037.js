@@ -1,4 +1,4 @@
-let l = (0, s(818083).B)({
+let i = (0, t(818083).B)({
   kind: 'user',
   id: '2023-12_collectibles_gifting_dm_entrypoint',
   label: 'Collectibles Gifting From DM\'s',
@@ -16,13 +16,13 @@ config: {
 n.Z = e => {
   let {
 location: n,
-autoTrackExposure: s = !0,
-trackExposureOptions: t = {}
+autoTrackExposure: t = !0,
+trackExposureOptions: a = {}
   } = e;
-  return l.useExperiment({
+  return i.useExperiment({
 location: n
   }, {
-autoTrackExposure: s,
-trackExposureOptions: t
+autoTrackExposure: t,
+trackExposureOptions: a
   });
 };

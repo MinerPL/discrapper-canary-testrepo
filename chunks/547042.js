@@ -3,10 +3,10 @@ n.d(t, {
 return N;
   },
   _: function() {
-return s;
+return a;
   }
 });
-var i, s, a = n(735250),
+var i, a, s = n(735250),
   r = n(470079),
   l = n(442837),
   o = n(481060),
@@ -22,21 +22,21 @@ var i, s, a = n(735250),
   p = n(921944),
   T = n(689938),
   S = n(660979);
-(i = s || (s = {})).BOOSTING = 'BOOSTING', i.NITRO = 'NITRO', i.BASH_OUT = 'BASH_OUT', i.GAME_NIGHT = 'GAME_NIGHT';
-let C = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4',
-  f = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png',
+(i = a || (a = {})).BOOSTING = 'BOOSTING', i.NITRO = 'NITRO', i.BASH_OUT = 'BASH_OUT', i.GAME_NIGHT = 'GAME_NIGHT';
+let f = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4',
+  C = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png',
   N = e => {
 let {
   channelId: t,
   markAsDismissed: n,
   tutorialType: i
 } = e, {
-  analyticsLocation: s,
+  analyticsLocation: a,
   analyticsType: N,
   ctaText: A,
-  dismissText: Z,
-  description: L,
-  learnMore: v,
+  dismissText: v,
+  description: Z,
+  learnMore: L,
   title: O,
   videoPosterUrl: R,
   videoUrl: x,
@@ -50,8 +50,8 @@ let {
           description: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_WTP_DESCRIPTION,
           learnMore: !0,
           title: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_TITLE,
-          videoPosterUrl: f,
-          videoUrl: C,
+          videoPosterUrl: C,
+          videoUrl: f,
           ctaText: T.Z.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT,
           dismissText: T.Z.Messages.DISMISS
       };
@@ -62,8 +62,8 @@ let {
           description: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_DESCRIPTION,
           learnMore: !0,
           title: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_TITLE,
-          videoPosterUrl: f,
-          videoUrl: C,
+          videoPosterUrl: C,
+          videoUrl: f,
           ctaText: T.Z.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT,
           dismissText: T.Z.Messages.DISMISS
       };
@@ -106,7 +106,7 @@ let {
   }
 }(i), {
   analyticsLocations: P
-} = (0, h.ZP)(s);
+} = (0, h.ZP)(a);
 r.useEffect(() => {
   m.default.track(g.rMx.TOOLTIP_VIEWED, {
     type: N
@@ -114,16 +114,16 @@ r.useEffect(() => {
 }, [N]);
 let M = (0, c.bp)() === g.IlC.POPOUT,
   D = (0, l.e7)([E.Z], () => E.Z.getChannel(t), [t]);
-return (0, a.jsx)(h.Gt, {
+return (0, s.jsx)(h.Gt, {
   value: P,
-  children: (0, a.jsx)('div', {
+  children: (0, s.jsx)('div', {
     className: S.wrapper,
-    children: (0, a.jsx)('div', {
+    children: (0, s.jsx)('div', {
       className: S.container,
-      children: (0, a.jsxs)('div', {
+      children: (0, s.jsxs)('div', {
         className: S.content,
         children: [
-          (0, a.jsx)(I.Z, {
+          (0, s.jsx)(I.Z, {
             className: S.video,
             src: x,
             poster: R,
@@ -133,25 +133,25 @@ return (0, a.jsx)(h.Gt, {
             muted: !0,
             autoPlay: !0
           }),
-          (0, a.jsx)('div', {
+          (0, s.jsx)('div', {
             className: S.header,
-            children: (0, a.jsx)(o.Heading, {
+            children: (0, s.jsx)(o.Heading, {
               className: S.__invalid_headerText,
               variant: 'text-sm/bold',
               color: 'always-white',
               children: O
             })
           }),
-          (0, a.jsxs)(o.Text, {
+          (0, s.jsxs)(o.Text, {
             className: S.subheaderText,
             variant: 'text-xs/normal',
             color: 'always-white',
             children: [
-              L,
-              v ? (0, a.jsxs)(a.Fragment, {
+              Z,
+              L ? (0, s.jsxs)(s.Fragment, {
                 children: [
                   ' ',
-                  (0, a.jsx)(o.Anchor, {
+                  (0, s.jsx)(o.Anchor, {
                     className: S.learnMoreLink,
                     href: 'https://support.discord.com/hc/articles/4422142836759',
                     children: T.Z.Messages.LEARN_MORE
@@ -160,17 +160,17 @@ return (0, a.jsx)(h.Gt, {
               }) : null
             ]
           }),
-          (0, a.jsxs)('div', {
+          (0, s.jsxs)('div', {
             className: S.ctaActionWrapper,
             children: [
-              (0, a.jsx)(o.Button, {
+              (0, s.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
                 onClick: () => {
                   n(p.L.UNKNOWN);
                 },
-                children: Z
+                children: v
               }),
-              (0, a.jsx)(o.Button, {
+              (0, s.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND_INVERTED,
                 onClick: null != b ? b : () => {
                   if (n(p.L.UNKNOWN), null != D)

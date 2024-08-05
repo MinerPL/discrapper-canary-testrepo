@@ -21,8 +21,8 @@ var n = s(735250),
   C = s(491758),
   m = s(183632),
   A = s(689938),
-  h = s(6679),
-  g = s(885582),
+  g = s(6679),
+  h = s(885582),
   O = s(549856);
 
 function p(e) {
@@ -38,8 +38,8 @@ autoTrackExposure: !1
   }), {
 analyticsLocations: x
   } = (0, l.ZP)(), M = (0, u.Go)(), {
-viewerClipsEnabled: D
-  } = (0, i.cj)([T.Z], () => T.Z.getSettings()), f = (0, I.Z)(E.Z);
+viewerClipsEnabled: f
+  } = (0, i.cj)([T.Z], () => T.Z.getSettings()), D = (0, I.Z)(E.Z);
   return a.useEffect(() => {
 (0, c.EW)(r.z.CLIPS_SETTINGS_BETA_TAG);
   }), (0, n.jsxs)(l.Gt, {
@@ -49,7 +49,7 @@ children: [
     className: t,
     tag: o.FormTitleTags.H1,
     title: s ? (0, n.jsxs)('div', {
-      className: h.headerContainer,
+      className: g.headerContainer,
       children: [
         A.Z.Messages.CLIPS,
         (0, n.jsx)(N.Z, {})
@@ -69,7 +69,7 @@ children: [
     children: [
       (0, n.jsx)(o.FormSwitch, {
         hideBorder: !0,
-        className: g.formItem,
+        className: h.formItem,
         value: p,
         note: A.Z.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
         onChange: e => S.yg({
@@ -77,10 +77,10 @@ children: [
         }),
         children: A.Z.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
       }),
-      R && f && (0, n.jsx)(o.FormSwitch, {
+      R && D && (0, n.jsx)(o.FormSwitch, {
         hideBorder: !0,
-        className: g.formItem,
-        value: D,
+        className: h.formItem,
+        value: f,
         note: A.Z.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
         onChange: e => S.yl({
           enabled: e,

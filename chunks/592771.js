@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var a = n(120356),
-  s = n.n(a),
+var s = n(120356),
+  a = n.n(s),
   r = n(689938),
   l = n(616999);
 t.Z = e => {
@@ -9,7 +9,7 @@ t.Z = e => {
 className: t
   } = e;
   return (0, i.jsx)('div', {
-className: s()(l.tag, t),
+className: a()(l.tag, t),
 children: (0, i.jsx)('span', {
   className: l.text,
   children: r.Z.Messages.APPLICATION_STORE_THE_GAME_AWARDS_WINNER

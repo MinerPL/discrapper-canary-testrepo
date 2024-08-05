@@ -5,73 +5,71 @@ return m;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(399606),
-  s = n(481060),
-  r = n(69882),
-  o = n(815790),
-  c = n(893966),
-  d = n(373791),
-  u = n(776767),
+  s = n(399606),
+  l = n(481060),
+  r = n(346486),
+  o = n(69882),
+  c = n(815790),
+  u = n(893966),
+  d = n(776767),
   h = n(689938),
   p = n(749348);
 
 function m(e) {
   let {
 member: t
-  } = e, n = t.userId, m = t.guildId, _ = (0, l.e7)([c.Z], () => c.Z.getEnhancedMember(m, n), [
+  } = e, n = t.userId, m = t.guildId, _ = (0, s.e7)([u.Z], () => u.Z.getEnhancedMember(m, n), [
 n,
 m
   ]), f = (null != _ ? _ : t).unusualDMActivityUntil, E = a.useCallback(e => {
 if (null == e)
   return null;
 let t = new Date(e).getTime();
-return (0, o.fv)(t, o.jq.JOINED_AT);
-  }, []), C = a.useMemo(() => null == t ? null : E(f), [
+return (0, c.fv)(t, c.jq.JOINED_AT);
+  }, []), g = a.useMemo(() => null == t ? null : E(f), [
 t,
 E,
 f
-  ]), g = a.useMemo(() => (0, r.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]), I = a.useMemo(() => null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil), [t.communicationDisabledUntil]);
-  return null != f || g ? (0, i.jsx)(s.FormItem, {
+  ]), C = a.useMemo(() => (0, o.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]), I = a.useMemo(() => null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil), [t.communicationDisabledUntil]);
+  return null != f || C ? (0, i.jsx)(l.FormItem, {
 title: h.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_FLAGS,
 titleClassName: p.infoTitle,
-children: (0, i.jsxs)(u.WM, {
+children: (0, i.jsxs)(d.WM, {
   children: [
-    null != f && (0, i.jsx)(u._2, {
-      icon: (0, i.jsx)(s.ChatAlertIcon, {
+    null != f && (0, i.jsx)(d._2, {
+      icon: (0, i.jsx)(l.ChatAlertIcon, {
         size: 'custom',
         color: 'currentColor',
-        width: u.Mn,
-        height: u.Mn,
-        className: p.__invalid_unusualDMLabelIcon
+        width: d.Mn,
+        height: d.Mn
       }),
-      name: (0, i.jsx)(s.Text, {
+      name: (0, i.jsx)(l.Text, {
         variant: 'text-sm/semibold',
         color: 'text-normal',
         children: h.Z.Messages.MEMBER_SAFETY_UNUSUAL_DM_ACTIVITY
       }),
-      description: (0, i.jsx)(s.Text, {
+      description: (0, i.jsx)(l.Text, {
         variant: 'text-sm/semibold',
         color: 'text-normal',
-        children: C
+        children: g
       })
     }),
-    g && null != I && (0, i.jsx)(u._2, {
-      icon: (0, i.jsx)(s.ClockWarningIcon, {
+    C && null != I && (0, i.jsx)(d._2, {
+      icon: (0, i.jsx)(l.ClockWarningIcon, {
         size: 'custom',
         color: 'currentColor',
-        width: u.Mn,
-        height: u.Mn,
-        className: p.__invalid_unusualDMLabelIcon
+        width: d.Mn,
+        height: d.Mn
       }),
-      name: (0, i.jsx)(s.Text, {
+      name: (0, i.jsx)(l.Text, {
         variant: 'text-sm/semibold',
         color: 'text-normal',
         children: h.Z.Messages.GUILD_COMMUNICATION_DISABLED_ON_MEMBER
       }),
-      description: (0, i.jsx)(s.Text, {
+      description: (0, i.jsx)(l.Text, {
         variant: 'text-sm/semibold',
         color: 'text-normal',
-        children: (0, i.jsx)(d.Z, {
+        children: (0, i.jsx)(r.Z, {
           deadline: I,
           showUnits: !0,
           stopAtOneSec: !0

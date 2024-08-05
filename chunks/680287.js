@@ -6,8 +6,8 @@ return u;
 var r = n(544891),
   i = n(881052),
   a = n(687294),
-  o = n(476326),
-  s = n(861990),
+  s = n(476326),
+  o = n(861990),
   l = n(689938);
 class u extends a.Z {
   async uploadFiles(e, t) {
@@ -39,8 +39,8 @@ try {
 let a;
 let l = [];
 this.files.forEach((e, t) => {
-  let n = (0, s.B)(e, t);
-  e.item.platform === o.ow.WEB && l.push({
+  let n = (0, o.B)(e, t);
+  e.item.platform === s.ow.WEB && l.push({
     ...n
   });
 }), a = null != n && null != t ? this._addAttachmentsToPayload(t, n, l) : {

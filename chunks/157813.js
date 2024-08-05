@@ -6,8 +6,8 @@ return f;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  o = n(481060),
   l = n(475179),
   u = n(871499),
   c = n(689938),
@@ -21,15 +21,15 @@ isVertical: n
   return (0, r.jsxs)('div', {
 className: d.iconContainer,
 children: [
-  (0, r.jsx)(s.ChevronSmallDownIcon, {
+  (0, r.jsx)(o.ChevronSmallDownIcon, {
     size: 'md',
     color: 'currentColor',
-    className: o()(n ? d.upCaret : d.leftCaret, t)
+    className: s()(n ? d.upCaret : d.leftCaret, t)
   }),
-  (0, r.jsx)(s.GroupIcon, {
+  (0, r.jsx)(o.GroupIcon, {
     size: 'md',
     color: 'currentColor',
-    className: o()(d.members, t)
+    className: s()(d.members, t)
   })
 ]
   });
@@ -43,15 +43,15 @@ isVertical: n
   return (0, r.jsxs)('div', {
 className: d.iconContainer,
 children: [
-  (0, r.jsx)(s.ChevronSmallDownIcon, {
+  (0, r.jsx)(o.ChevronSmallDownIcon, {
     size: 'md',
     color: 'currentColor',
-    className: o()(n ? d.downCaret : d.rightCaret, t)
+    className: s()(n ? d.downCaret : d.rightCaret, t)
   }),
-  n && (0, r.jsx)(s.GroupIcon, {
+  n && (0, r.jsx)(o.GroupIcon, {
     size: 'md',
     color: 'currentColor',
-    className: o()(d.members, t)
+    className: s()(d.members, t)
   })
 ]
   });
@@ -62,7 +62,7 @@ function f(e) {
 channelId: t,
 className: n,
 isParticipantsOpen: a,
-isVertical: s = !1,
+isVertical: o = !1,
 hideTooltip: f = !1
   } = e, h = i.useCallback(e => {
 let {
@@ -70,18 +70,18 @@ let {
 } = e;
 return a ? (0, r.jsx)(E, {
   className: t,
-  isVertical: s
+  isVertical: o
 }) : (0, r.jsx)(_, {
   className: t,
-  isVertical: s
+  isVertical: o
 });
   }, [
 a,
-s
+o
   ]);
   return (0, r.jsx)(u.Z, {
 label: a ? c.Z.Messages.VIDEO_CALL_HIDE_MEMBERS : c.Z.Messages.VIDEO_CALL_SHOW_MEMBERS,
-className: o()(d.participantsButton, n),
+className: s()(d.participantsButton, n),
 onClick: function() {
   l.Z.toggleParticipants(t, !a);
 },

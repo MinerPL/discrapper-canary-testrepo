@@ -5,13 +5,13 @@ return f;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(772848),
-  s = n(442837),
+  s = n(772848),
+  l = n(442837),
   r = n(570140),
   o = n(607070),
   c = n(367907),
-  d = n(37091),
-  u = n(721264),
+  u = n(37091),
+  d = n(721264),
   h = n(963838),
   p = n(39127),
   m = n(981631),
@@ -23,30 +23,30 @@ channelId: t,
 guildId: n,
 userId: f,
 containerDimensions: E
-  } = e, C = (0, s.e7)([o.Z], () => o.Z.useReducedMotion), [g, I] = a.useState([]), x = g.length < 50;
+  } = e, g = (0, l.e7)([o.Z], () => o.Z.useReducedMotion), [C, I] = a.useState([]), x = C.length < 50;
   a.useEffect(() => {
 function e(e) {
   var i;
   let {
     channelId: a,
-    userId: s,
+    userId: l,
     emoji: r,
     animationType: o,
     animationId: p
   } = e;
-  if (null != f && f !== s || d.Z.getEnabled() && (0, u.Z)(null !== (i = null == r ? void 0 : r.name) && void 0 !== i ? i : ''))
+  if (null != f && f !== l || u.Z.getEnabled() && (0, d.Z)(null !== (i = null == r ? void 0 : r.name) && void 0 !== i ? i : ''))
     return;
   let _ = null != r && null != o && null != p;
-  if (a === t && !C && x && _) {
+  if (a === t && !g && x && _) {
     let e = (0, h._r)(r),
       i = null != r.id && !r.animated,
       a = {
-        id: (0, l.Z)(),
+        id: (0, s.Z)(),
         animationType: o,
         animationId: p,
         shouldResize: i,
         url: e,
-        userId: s
+        userId: l
       };
     I(e => [
       ...e,
@@ -64,7 +64,7 @@ return r.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', e), () => {
 t,
 n,
 f,
-C,
+g,
 x
   ]);
   let T = a.useCallback(e => {
@@ -74,14 +74,14 @@ I(t => {
   return n.splice(i, 1), n;
 });
   }, []);
-  return C ? null : (0, i.jsx)('div', {
+  return g ? null : (0, i.jsx)('div', {
 className: _.effectsWrapper,
 style: {
   width: E.width
 },
 children: (0, i.jsx)('div', {
   className: _.effects,
-  children: g.map(e => (0, i.jsx)(p.Z, {
+  children: C.map(e => (0, i.jsx)(p.Z, {
     containerDimensions: E,
     effect: e,
     onComplete: T

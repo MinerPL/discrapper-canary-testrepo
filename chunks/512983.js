@@ -8,8 +8,8 @@ return c;
 });
 var r, i, a = n(735250);
 n(470079);
-var o = n(120356),
-  s = n.n(o),
+var s = n(120356),
+  o = n.n(s),
   l = n(337033),
   u = n(399943);
 
@@ -18,7 +18,7 @@ function c(e) {
 tag: n = 'h5',
 children: r,
 className: i,
-faded: o,
+faded: s,
 disabled: c,
 required: d = !1,
 error: _,
@@ -34,9 +34,9 @@ default:
   t = l.H;
   }
   return (0, a.jsxs)(t, {
-className: s()(u[n], 'h5' !== n ? u.defaultColor : null, i, {
+className: o()(u[n], 'h5' !== n ? u.defaultColor : null, i, {
   [u['defaultMargin'.concat(n)]]: null == i,
-  [u.faded]: o,
+  [u.faded]: s,
   [u.disabled]: c,
   [u.error]: null != _
 }),

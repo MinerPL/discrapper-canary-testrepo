@@ -8,12 +8,12 @@ var o = n(735250),
   s = n(442837),
   a = n(481060),
   i = n(596454),
-  d = n(907040),
-  u = n(339085),
-  r = n(592125),
-  m = n(944486),
-  c = n(594174),
-  j = n(401227),
+  d = n(318766),
+  u = n(907040),
+  r = n(339085),
+  m = n(592125),
+  c = n(944486),
+  j = n(594174),
   x = n(74538),
   S = n(906605),
   _ = n(106301),
@@ -27,10 +27,10 @@ function I(e) {
 customStatusEmoji: t,
 setCustomStatusEmoji: n,
 onClose: l
-  } = e, u = (0, s.e7)([
-m.Z,
-r.Z
-  ], () => r.Z.getChannel(m.Z.getVoiceChannelId())), c = e => {
+  } = e, r = (0, s.e7)([
+c.Z,
+m.Z
+  ], () => m.Z.getChannel(c.Z.getVoiceChannelId())), j = e => {
 var t;
 if (null == e) {
   n(null);
@@ -52,12 +52,12 @@ renderPopout: e => {
   let {
     closePopout: n
   } = e;
-  return (0, o.jsx)(d.Z, {
-    channel: u,
-    guildId: null !== (t = null == u ? void 0 : u.guild_id) && void 0 !== t ? t : void 0,
+  return (0, o.jsx)(u.Z, {
+    channel: r,
+    guildId: null !== (t = null == r ? void 0 : r.guild_id) && void 0 !== t ? t : void 0,
     closePopout: n,
     onSelectEmoji: (e, t) => {
-      c(e), t && n();
+      j(e), t && n();
     },
     pickerIntention: p.Hz.STATUS,
     onNavigateAway: l
@@ -70,7 +70,7 @@ children: (e, n) => {
   let {
     isShown: l
   } = n;
-  return (0, o.jsx)(j.Z, {
+  return (0, o.jsx)(d.Z, {
     ...e,
     active: l,
     className: C.emojiButton,
@@ -92,10 +92,10 @@ function h(e) {
 transitionState: s,
 onClose: i,
 startingText: d,
-startingEmoji: r
-  } = e, m = _.Z.getCustomHangStatus(), j = null != d ? d : null !== (t = null == m ? void 0 : m.status) && void 0 !== t ? t : '', p = null !== (n = null == m ? void 0 : m.emoji) && void 0 !== n ? n : null;
-  (null == r ? void 0 : r.id) != null ? p = x.ZP.canUseEmojisEverywhere(c.default.getCurrentUser()) && null != u.Z.getUsableCustomEmojiById(r.id) ? r : null : (null == r ? void 0 : r.name) != null && (p = r);
-  let [h, g] = l.useState(j), [N, A] = l.useState(p);
+startingEmoji: u
+  } = e, m = _.Z.getCustomHangStatus(), c = null != d ? d : null !== (t = null == m ? void 0 : m.status) && void 0 !== t ? t : '', p = null !== (n = null == m ? void 0 : m.emoji) && void 0 !== n ? n : null;
+  (null == u ? void 0 : u.id) != null ? p = x.ZP.canUseEmojisEverywhere(j.default.getCurrentUser()) && null != r.Z.getUsableCustomEmojiById(u.id) ? u : null : (null == u ? void 0 : u.name) != null && (p = u);
+  let [h, g] = l.useState(c), [N, A] = l.useState(p);
   return (0, o.jsxs)(a.ModalRoot, {
 className: C.modal,
 transitionState: s,

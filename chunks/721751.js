@@ -8,40 +8,40 @@ var r = n(735250),
   c = n(442837),
   u = n(481060),
   d = n(980591),
-  h = n(605782),
-  _ = n(133853),
+  _ = n(605782),
+  h = n(133853),
   E = n(568154),
   g = n(353926),
   p = n(703656),
-  f = n(981631),
-  I = n(532591);
-let m = n(575703),
+  I = n(981631),
+  m = n(532591);
+let f = n(575703),
   N = n(2984),
   T = [
-f.Z5c.LOGIN,
-f.Z5c.LOGIN_HANDOFF,
-f.Z5c.REGISTER,
-f.Z5c.INVITE(''),
-f.Z5c.GIFT_CODE(''),
-f.Z5c.GUILD_TEMPLATE_LOGIN(''),
-f.Z5c.GUILD_TEMPLATE(''),
-f.Z5c.DISABLE_EMAIL_NOTIFICATIONS,
-f.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
-f.Z5c.BILLING_PREMIUM_SUBSCRIBE,
-f.Z5c.BILLING_PAYMENT_SOURCES_CREATE,
-f.Z5c.BILLING_PAYMENTS,
-f.Z5c.BILLING_PREMIUM_SWITCH_PLAN,
-f.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE,
-f.Z5c.VERIFY,
-f.Z5c.VERIFY_HUB_EMAIL,
-f.Z5c.REJECT_IP,
-f.Z5c.REJECT_MFA,
-f.Z5c.AUTHORIZE_IP,
-f.Z5c.AUTHORIZE_PAYMENT,
-f.Z5c.RESET,
-f.Z5c.HANDOFF,
-f.Z5c.REPORT,
-f.Z5c.REPORT_SECOND_LOOK
+I.Z5c.LOGIN,
+I.Z5c.LOGIN_HANDOFF,
+I.Z5c.REGISTER,
+I.Z5c.INVITE(''),
+I.Z5c.GIFT_CODE(''),
+I.Z5c.GUILD_TEMPLATE_LOGIN(''),
+I.Z5c.GUILD_TEMPLATE(''),
+I.Z5c.DISABLE_EMAIL_NOTIFICATIONS,
+I.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
+I.Z5c.BILLING_PREMIUM_SUBSCRIBE,
+I.Z5c.BILLING_PAYMENT_SOURCES_CREATE,
+I.Z5c.BILLING_PAYMENTS,
+I.Z5c.BILLING_PREMIUM_SWITCH_PLAN,
+I.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE,
+I.Z5c.VERIFY,
+I.Z5c.VERIFY_HUB_EMAIL,
+I.Z5c.REJECT_IP,
+I.Z5c.REJECT_MFA,
+I.Z5c.AUTHORIZE_IP,
+I.Z5c.AUTHORIZE_PAYMENT,
+I.Z5c.RESET,
+I.Z5c.HANDOFF,
+I.Z5c.REPORT,
+I.Z5c.REPORT_SECOND_LOOK
   ];
 
 function x(e) {
@@ -65,12 +65,12 @@ case 'default':
   return (0, r.jsxs)(r.Fragment, {
     children: [
       (0, r.jsx)('img', {
-        className: I.artwork,
-        src: m,
+        className: m.artwork,
+        src: f,
         alt: ''
       }),
       (0, r.jsx)('img', {
-        className: I.logoWithText,
+        className: m.logoWithText,
         src: N,
         alt: ''
       }),
@@ -82,7 +82,7 @@ case 'loading':
   return null;
   }
 }
-class S extends i.Component {
+class v extends i.Component {
   componentDidMount() {
 window.addEventListener('resize', this.handleResize);
   }
@@ -103,7 +103,7 @@ x(e) ? (0, p.dL)(e) : window.location = e;
   renderDefault() {
 let {
   splash: e
-} = this.props, t = (0, r.jsx)(h.Z, {
+} = this.props, t = (0, r.jsx)(_.Z, {
   component: i.Fragment,
   children: i.Children.map(this.props.children, e => i.cloneElement(e, {
     transitionTo: p.uL,
@@ -111,14 +111,14 @@ let {
   }))
 });
 return (0, r.jsx)('div', {
-  className: I.characterBackground,
+  className: m.characterBackground,
   children: (0, r.jsx)(u.HeadingLevel, {
     forceLevel: 1,
     children: null != e ? (0, r.jsxs)(r.Fragment, {
       children: [
-        (0, r.jsx)(_.Z, {
+        (0, r.jsx)(h.Z, {
           show: !0,
-          className: l()(I.logo)
+          className: l()(m.logo)
         }),
         (0, r.jsx)(E.h, {
           splash: e,
@@ -132,7 +132,7 @@ return (0, r.jsx)('div', {
 });
   }
   renderMobile() {
-return (0, r.jsx)(h.Z, {
+return (0, r.jsx)(_.Z, {
   component: i.Fragment,
   children: i.Children.map(this.props.children, e => i.cloneElement(e, {
     transitionTo: this.mobileTransitionTo,
@@ -162,4 +162,4 @@ super(e), t = this, n = 'handleResize', s = () => {
 };
   }
 }
-t.Z = S;
+t.Z = v;

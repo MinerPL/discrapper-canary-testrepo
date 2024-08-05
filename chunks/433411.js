@@ -28,21 +28,21 @@ forcedDivider: N = !1,
 withTutorial: m = !1,
 isTryItOutFlow: A = !1
   } = e, {
-analyticsLocations: h
-  } = (0, l.ZP)(), g = null != s, {
+analyticsLocations: g
+  } = (0, l.ZP)(), h = null != s, {
 userAvatarDecoration: O,
 guildAvatarDecoration: p,
 pendingAvatarDecoration: R,
 pendingErrors: x
-  } = (0, u.$U)(t, s), M = (0, _.Z)('enable_avatar_decoration_uploads'), D = a.useCallback(() => (0, d.ps)({
-analyticsLocations: h,
+  } = (0, u.$U)(t, s), M = (0, _.Z)('enable_avatar_decoration_uploads'), f = a.useCallback(() => (0, d.ps)({
+analyticsLocations: g,
 isTryItOutFlow: A,
 guild: s
   }), [
-h,
+g,
 A,
 s
-  ]), f = A || void 0 !== R ? null != R : (g ? p : O) != null, P = m ? o.ShinyButton : o.Button;
+  ]), D = A || void 0 !== R ? null != R : (h ? p : O) != null, P = m ? o.ShinyButton : o.Button;
   return (0, n.jsxs)(T.Z, {
 className: i,
 forcedDivider: N,
@@ -55,13 +55,13 @@ children: [
     children: [
       (0, n.jsx)(P, {
         size: o.Button.Sizes.SMALL,
-        onClick: D,
+        onClick: f,
         className: r()({
           [S.buttonHighlighted]: m
         }),
         children: I.Z.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
       }),
-      f && (0, n.jsx)(o.Button, {
+      D && (0, n.jsx)(o.Button, {
         className: S.removeButton,
         color: o.Button.Colors.PRIMARY,
         look: o.Button.Looks.LINK,

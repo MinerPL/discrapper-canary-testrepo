@@ -1,9 +1,9 @@
 n(47120), n(653041);
 var r, i = n(442837),
   a = n(570140),
-  o = n(924301);
+  s = n(924301);
 n(57132);
-var s = n(786761),
+var o = n(786761),
   l = n(23750),
   u = n(594174),
   c = n(709054),
@@ -59,7 +59,7 @@ function I(e) {
   return {
 ...e,
 kind: 'notification-center-item',
-message: null != e.message ? (0, s.e5)(e.message) : void 0
+message: null != e.message ? (0, o.e5)(e.message) : void 0
   };
 }
 
@@ -86,7 +86,7 @@ function S(e, t, n) {
 }
 
 function A(e) {
-  if (!!(0, o.Z2)(e))
+  if (!!(0, s.Z2)(e))
 h.notifCenterItems = h.notifCenterItems.map(t => t.type === d.DY.GUILD_SCHEDULED_EVENT_STARTED && t.guild_scheduled_event_id === e.id ? {
   ...t,
   disable_action: !0

@@ -1,27 +1,27 @@
-r.d(t, {
+t.d(r, {
   Z: function() {
 return m;
   }
 });
-var a = r(735250);
-r(470079);
-var n = r(120356),
-  i = r.n(n),
-  o = r(481060),
-  l = r(45114),
-  c = r(423932),
-  s = r(601948),
-  d = r(870872),
-  u = r(549856);
+var a = t(735250);
+t(470079);
+var n = t(120356),
+  i = t.n(n),
+  o = t(481060),
+  l = t(45114),
+  c = t(423932),
+  s = t(601948),
+  d = t(870872),
+  u = t(549856);
 let h = () => {
   Promise.all([
-r.e('52030'),
-r.e('25593')
-  ]).then(r.bind(r, 24031)).then(e => {
+t.e('52030'),
+t.e('25593')
+  ]).then(t.bind(t, 24031)).then(e => {
 let {
-  openMFAModal: t
+  openMFAModal: r
 } = e;
-t({
+r({
   ticket: 'ticket',
   methods: [{
       type: 'webauthn',

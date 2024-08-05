@@ -3,16 +3,16 @@ n.d(t, {
 return E;
   }
 });
-var i, a, l, s, r = n(735250),
+var i, a, s, l, r = n(735250),
   o = n(470079),
   c = n(699581),
-  d = n(374470),
-  u = n(442837),
+  u = n(374470),
+  d = n(442837),
   h = n(260300),
   p = n(451478),
   m = n(5560),
   _ = n(10401);
-class f extends(s = o.Component) {
+class f extends(l = o.Component) {
   componentDidMount() {
 let {
   visible: e,
@@ -32,10 +32,10 @@ let {
   offsetX: n,
   offsetY: i,
   tutorialId: a,
-  visible: l,
-  windowSize: s
+  visible: s,
+  windowSize: l
 } = e;
-a !== this.props.tutorialId ? h.Z.hide(a) : (l !== this.props.visible || t !== this.props.position || n !== this.props.offsetX || i !== this.props.offsetY || s !== this.props.windowSize) && this.show(this.props.visible);
+a !== this.props.tutorialId ? h.Z.hide(a) : (s !== this.props.visible || t !== this.props.position || n !== this.props.offsetX || i !== this.props.offsetY || l !== this.props.windowSize) && this.show(this.props.visible);
   }
   show(e) {
 let {
@@ -43,28 +43,28 @@ let {
   position: n,
   offsetX: i,
   offsetY: a,
-  visible: l,
-  inlineSpecs: s,
+  visible: s,
+  inlineSpecs: l,
   autoInvert: r
 } = this.props;
-if (e && null == s) {
+if (e && null == l) {
   let e = (0, c.findDOMNode)(this);
-  if (!(0, d.k)(e))
+  if (!(0, u.k)(e))
     return;
   let {
-    top: l,
-    left: s,
+    top: s,
+    left: l,
     right: o,
-    bottom: u
+    bottom: d
   } = e.getBoundingClientRect();
   h.Z.show(t, {
     position: n,
-    targetWidth: o - s,
-    targetHeight: u - l,
+    targetWidth: o - l,
+    targetHeight: d - s,
     autoInvert: r,
     origin: {
-      x: s,
-      y: l
+      x: l,
+      y: s
     },
     offset: {
       x: i,
@@ -72,7 +72,7 @@ if (e && null == s) {
     }
   });
 } else
-  l && h.Z.hide(t);
+  s && h.Z.hide(t);
   }
   render() {
 let {
@@ -81,15 +81,15 @@ let {
   children: n,
   visible: i,
   windowFocused: a,
-  position: l,
-  autoInvert: s
+  position: s,
+  autoInvert: l
 } = this.props, c = _.Z.getData()[t];
 return null != e && null != c ? (0, r.jsxs)(r.Fragment, {
   children: [
     n,
     i && (0, r.jsx)(m.V, {
-      autoInvert: s,
-      position: l,
+      autoInvert: l,
+      position: s,
       tutorialId: t,
       tutorialDefinition: c,
       focused: a,
@@ -103,7 +103,7 @@ return null != e && null != c ? (0, r.jsxs)(r.Fragment, {
 function E(e) {
   let {
 tutorialId: t
-  } = e, n = (0, u.e7)([_.Z], () => _.Z.shouldShow(t), [t]), i = (0, u.e7)([p.Z], () => p.Z.isFocused()), a = (0, u.e7)([p.Z], () => p.Z.windowSize(), []);
+  } = e, n = (0, d.e7)([_.Z], () => _.Z.shouldShow(t), [t]), i = (0, d.e7)([p.Z], () => p.Z.isFocused()), a = (0, d.e7)([p.Z], () => p.Z.windowSize(), []);
   return (0, r.jsx)(f, {
 ...e,
 visible: n,
@@ -111,14 +111,14 @@ windowFocused: i,
 windowSize: a
   });
 }
-l = {
+s = {
   position: 'top',
   offsetX: 0,
   offsetY: 0,
   autoInvert: !0
 }, (a = 'defaultProps') in(i = f) ? Object.defineProperty(i, a, {
-  value: l,
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = l;
+}) : i[a] = s;

@@ -12,22 +12,22 @@ return c;
 return u;
   },
   d$: function() {
-return s;
+return o;
   },
   hL: function() {
 return l;
   },
   us: function() {
-return o;
+return s;
   }
 });
 var r = n(544891),
   i = n(570140),
   a = n(981631);
-async function o() {
+async function s() {
   return (await r.tn.post(a.ANM.WEBAUTHN_CONDITIONAL_UI_CHALLENGE)).body;
 }
-async function s() {
+async function o() {
   let {
 challenge: e,
 ticket: t
@@ -83,7 +83,7 @@ challenge: t
   };
 }
 async function _(e, t, n) {
-  let o = await r.tn.post({
+  let s = await r.tn.post({
 url: a.ANM.MFA_WEBAUTHN_CREDENTIALS,
 body: {
   name: e,
@@ -93,9 +93,9 @@ body: {
   });
   i.Z.dispatch({
 type: 'AUTHENTICATOR_CREATE',
-credential: o.body
+credential: s.body
   }), i.Z.dispatch({
 type: 'MFA_ENABLE_SUCCESS',
-codes: o.body.backup_codes
+codes: s.body.backup_codes
   });
 }

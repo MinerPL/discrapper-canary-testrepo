@@ -1,23 +1,24 @@
 n.d(t, {
   Wq: function() {
-return u;
-  },
-  Xn: function() {
 return c;
   },
+  Xn: function() {
+return d;
+  },
   ZN: function() {
-return l;
+return u;
   },
   c: function() {
-return i;
+return a;
   },
   kJ: function() {
-return s;
+return l;
   }
 });
-var r = n(652874);
-let i = -1,
-  a = Object.freeze({
+var r = n(652874),
+  i = n(731965);
+let a = -1,
+  s = Object.freeze({
 inspectedExpressionPosition: {
   rowIndex: 0,
   columnIndex: 0
@@ -27,35 +28,35 @@ searchPlaceholder: null
   });
 
 function o() {
-  let e = (0, r.Z)(e => a);
+  let e = (0, r.Z)(e => s);
   return {
 useStore: e,
 getState: () => e.getState(),
 setInspectedExpressionPosition: (t, n, r) => {
-  e.setState({
+  (0, i.j)(() => e.setState({
     inspectedExpressionPosition: {
       rowIndex: n,
       columnIndex: t,
       source: r
     }
-  });
+  }));
 },
 setActiveCategoryIndex: t => {
-  e.setState({
+  (0, i.j)(() => e.setState({
     activeCategoryIndex: t
-  });
+  }));
 },
 setSearchPlaceholder: t => {
-  e.setState({
+  (0, i.j)(() => e.setState({
     searchPlaceholder: t
-  });
+  }));
 },
 resetStoreState: () => {
-  e.setState(a);
+  (0, i.j)(() => e.setState(s));
 }
   };
 }
-let s = o(),
-  l = o(),
+let l = o(),
   u = o(),
-  c = o();
+  c = o(),
+  d = o();

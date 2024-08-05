@@ -39,12 +39,12 @@ var l = n(120356),
   j = n(9156),
   D = n(979651),
   U = n(934415),
-  w = n(98597),
-  G = n(648501),
+  G = n(98597),
+  w = n(648501),
   k = n(473403),
   B = n(830993),
-  V = n(653577),
-  H = n(207055),
+  H = n(653577),
+  V = n(207055),
   F = n(981631),
   W = n(647086),
   Y = n(689938),
@@ -58,7 +58,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class q extends w.ZP {
+class q extends G.ZP {
   componentWillUnmount() {
 this.activitiesHideTimeout.stop();
   }
@@ -97,7 +97,7 @@ let {
 } = this.props, a = null === (e = (0, I.D)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle, {
   hovered: s
 } = this.state;
-return (0, i.jsx)(V.Z, {
+return (0, i.jsx)(H.Z, {
   onClick: this.handleVoiceStatusClick,
   channel: t,
   connected: n,
@@ -115,7 +115,7 @@ let {
   withGuildIcon: l,
   tabIndex: r
 } = this.props;
-return (0, i.jsx)(H.Z, {
+return (0, i.jsx)(V.Z, {
   channel: e,
   collapsed: n,
   collapsedMax: 6,
@@ -431,7 +431,7 @@ guildId: n.guild_id,
 location: 'VoiceChannel'
   }, {
 autoTrackExposure: !1
-  }), R = (0, G.Z)({
+  }), R = (0, w.Z)({
 channel: n,
 isChannelSelected: s,
 isChannelCollapsed: o,

@@ -2,12 +2,12 @@ var r = n(444675),
   i = n(607974),
   a = n(64750);
 if (n(322499)() || n(882171)()) {
-  var o = Symbol.iterator;
+  var s = Symbol.iterator;
   e.exports = function(e) {
-return null != e && void 0 !== e[o] ? e[o]() : i(e) ? Array.prototype[o].call(e) : void 0;
+return null != e && void 0 !== e[s] ? e[s]() : i(e) ? Array.prototype[s].call(e) : void 0;
   };
 } else {
-  var s = n(189612),
+  var o = n(189612),
 l = n(163494),
 u = n(690244),
 c = u('%Map%', !0),
@@ -38,7 +38,7 @@ m = function(e) {
   };
 },
 I = function(e, t) {
-  if (s(e) || i(e))
+  if (o(e) || i(e))
     return m(e);
   if (l(e)) {
     var n = 0;

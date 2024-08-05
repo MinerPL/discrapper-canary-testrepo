@@ -1,54 +1,54 @@
-n.d(t, {
+t.d(n, {
   Z: function() {
-return d;
+return u;
   }
 });
-var s = n(735250),
-  r = n(470079),
-  i = n(481060),
-  a = n(725436),
-  l = n(11868),
-  o = n(217804),
-  c = n(765305),
-  u = n(794797);
+var i = t(735250),
+  a = t(470079),
+  l = t(481060),
+  r = t(725436),
+  o = t(11868),
+  c = t(217804),
+  s = t(765305),
+  d = t(794797);
 
-function d(e) {
+function u(e) {
   let {
-guildScheduledEvent: t,
-channel: n,
-onClose: d
-  } = e, h = t.entity_type === c.WX.EXTERNAL, _ = r.useCallback(e => (0, l.Qt)(t, d)(e), [
-t,
-d
-  ]), E = (0, o.u)(t, n);
-  if (null == E)
+guildScheduledEvent: n,
+channel: t,
+onClose: u
+  } = e, _ = n.entity_type === s.WX.EXTERNAL, g = a.useCallback(e => (0, o.Qt)(n, u)(e), [
+n,
+u
+  ]), v = (0, c.u)(n, t);
+  if (null == v)
 return null;
   let {
-IconComponent: g,
-locationName: p
-  } = E, f = (0, s.jsxs)(s.Fragment, {
+IconComponent: h,
+locationName: f
+  } = v, I = (0, i.jsxs)(i.Fragment, {
 children: [
-  null != g && (0, s.jsx)(g, {
+  null != h && (0, i.jsx)(h, {
     size: 'custom',
     color: 'currentColor',
     width: 20,
     height: 20,
-    className: u.channelIcon
+    className: d.channelIcon
   }),
-  (0, s.jsx)(i.Text, {
+  (0, i.jsx)(l.Text, {
     color: 'header-secondary',
     variant: 'text-sm/normal',
-    className: u.locationText,
-    children: (0, a.m)(p, !0)
+    className: d.locationText,
+    children: (0, r.m)(f, !0)
   })
 ]
   });
-  return (0, s.jsx)('div', {
-className: u.row,
-children: null != _ ? (0, s.jsx)(i.Clickable, {
-  className: h ? u.externalLocation : u.channelLocation,
-  onClick: _,
-  children: f
-}) : f
+  return (0, i.jsx)('div', {
+className: d.row,
+children: null != g ? (0, i.jsx)(l.Clickable, {
+  className: _ ? d.externalLocation : d.channelLocation,
+  onClick: g,
+  children: I
+}) : I
   });
 }

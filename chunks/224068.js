@@ -6,8 +6,8 @@ return u;
 var n = i(735250);
 i(470079);
 var s = i(120356),
-  a = i.n(s),
-  l = i(278074),
+  l = i.n(s),
+  a = i(278074),
   r = i(979554),
   o = i(481060),
   c = i(689938),
@@ -19,10 +19,10 @@ function u(e) {
 product: i,
 isDarkText: s = !1
   } = e;
-  let u = (t = i.type, (0, l.EQ)(t).with(r.Z.AVATAR_DECORATION, () => c.Z.Messages.USER_SETTINGS_AVATAR_DECORATION).with(r.Z.PROFILE_EFFECT, () => c.Z.Messages.USER_SETTINGS_PROFILE_EFFECT).otherwise(() => null));
+  let u = (t = i.type, (0, a.EQ)(t).with(r.Z.AVATAR_DECORATION, () => c.Z.Messages.USER_SETTINGS_AVATAR_DECORATION).with(r.Z.PROFILE_EFFECT, () => c.Z.Messages.USER_SETTINGS_PROFILE_EFFECT).otherwise(() => null));
   return null === u ? null : (0, n.jsx)(o.Text, {
 variant: 'text-xxs/normal',
-className: a()([
+className: l()([
   d.container,
   s ? d.darkText : d.lightText
 ]),

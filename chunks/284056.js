@@ -18,9 +18,9 @@ var s = n(735250),
   I = n(626135),
   R = n(981631),
   C = n(689938),
-  p = n(123188);
+  g = n(123188);
 
-function g(e, t, n) {
+function p(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -90,7 +90,7 @@ let {
   isDetectingInput: a
 } = this.state;
 return (0, s.jsx)(d.FormText, {
-  className: p.micTestCaption,
+  className: g.micTestCaption,
   type: d.FormText.Types.DESCRIPTION,
   children: n ? a ? e : t : null
 });
@@ -111,20 +111,20 @@ let {
   volume: u
 } = this.state, E = e && !_ ? C.Z.Messages.MIC_TEST_VOICE_CHANNEL_WARNING : null;
 return _ && e && !c && this._micTestStop(), (0, s.jsxs)('div', {
-  className: p.container,
+  className: g.container,
   children: [
     (0, s.jsx)(d.FormTitle, {
       tag: d.FormTitleTags.H5,
-      className: p.title,
+      className: g.title,
       children: t
     }),
     null != n && (0, s.jsx)(d.FormText, {
       type: d.FormText.Types.DESCRIPTION,
-      className: p.description,
+      className: g.description,
       children: n
     }),
     (0, s.jsxs)('div', {
-      className: p.micTest,
+      className: g.micTest,
       children: [
         (0, s.jsx)(d.Tooltip, {
           text: E,
@@ -156,14 +156,14 @@ return _ && e && !c && this._micTestStop(), (0, s.jsxs)('div', {
 });
   }
   constructor(...e) {
-super(...e), g(this, '_initTimeout', new c.V7()), g(this, '_silenceTimeout', new c.V7()), g(this, '_messageTimeout', new c.V7()), g(this, '_micTestStartTime', void 0), g(this, 'state', {
+super(...e), p(this, '_initTimeout', new c.V7()), p(this, '_silenceTimeout', new c.V7()), p(this, '_messageTimeout', new c.V7()), p(this, '_micTestStartTime', void 0), p(this, 'state', {
   volume: -100,
   isMicTesting: !1,
   isDetectingInput: !0,
   didDeafenUser: !1
-}), g(this, 'setupVoiceActivity', () => {
+}), p(this, 'setupVoiceActivity', () => {
   u.Z.getMediaEngine().on(o.aB.VoiceActivity, this.handleVoiceActivity);
-}), g(this, 'handleVoiceActivity', e => {
+}), p(this, 'handleVoiceActivity', e => {
   let {
     isMicTesting: t
   } = this.state;
@@ -181,7 +181,7 @@ super(...e), g(this, '_initTimeout', new c.V7()), g(this, '_silenceTimeout', new
     volume: e,
     isDetectingInput: !0
   });
-}), g(this, 'handleToggleMicTest', () => {
+}), p(this, 'handleToggleMicTest', () => {
   this.state.isMicTesting ? this._micTestStop() : this._micTestStart();
 });
   }

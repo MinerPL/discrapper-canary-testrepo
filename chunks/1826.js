@@ -11,11 +11,11 @@ return function(t, n, r) {
   return n && e(t.prototype, n), r && e(t, r), t;
 };
   }(),
-  o = [
+  s = [
 38,
 40
   ],
-  s = 1,
+  o = 1,
   l = function(e) {
 function t(e) {
   ! function(e, t) {
@@ -36,7 +36,7 @@ function t(e) {
     n.setUpdatedValue(e.target.value, e);
   }, n.handleKeyDown = function(e) {
     var t, r = Number(String(e.target.value).replace(/%/g, ''));
-    if (!isNaN(r) && (t = e.keyCode, o.indexOf(t) > -1)) {
+    if (!isNaN(r) && (t = e.keyCode, s.indexOf(t) > -1)) {
       var i = n.getArrowOffset(),
         a = 38 === e.keyCode ? r + i : r - i;
       n.setUpdatedValue(a, e);
@@ -55,7 +55,7 @@ function t(e) {
   }, n.state = {
     value: String(e.value).toUpperCase(),
     blurValue: String(e.value).toUpperCase()
-  }, n.inputId = 'rc-editable-input-' + s++, n;
+  }, n.inputId = 'rc-editable-input-' + o++, n;
 }
 return ! function(e, t) {
   if ('function' != typeof t && null !== t)

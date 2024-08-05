@@ -3,7 +3,7 @@ n.r(t), n.d(t, {
 return s;
   },
   default: function() {
-return N;
+return b;
   }
 });
 var a, s, l = n(735250),
@@ -18,7 +18,7 @@ var a, s, l = n(735250),
 (a = s || (s = {})).BAD_OUTLINE = 'BAD_OUTLINE', a.BACKGROUND_DETECTION_ACCURACY = 'BACKGROUND_DETECTION_ACCURACY', a.FLICKERING = 'FLICKERING', a.BACKGROUND_DETECTION_LAG = 'BACKGROUND_DETECTION_LAG', a.OTHER = 'OTHER';
 let C = ['OTHER'];
 
-function N(e) {
+function b(e) {
   let {
 analyticsData: t,
 transitionState: a,
@@ -58,17 +58,17 @@ onSubmit: function(e) {
   var a, s, o, i;
   let {
     rating: C,
-    problem: N,
-    dontShowAgain: O,
-    feedback: b
+    problem: b,
+    dontShowAgain: N,
+    feedback: O
   } = e;
-  if (O && (0, c.Kw)(_.v.VIDEO_BACKGROUND_FEEDBACK), null != C)
-    a = C, s = N, o = b, i = t, u.default.track(d.rMx.VIDEO_BACKGROUND_FEEDBACK, {
+  if (N && (0, c.Kw)(_.v.VIDEO_BACKGROUND_FEEDBACK), null != C)
+    a = C, s = b, o = O, i = t, u.default.track(d.rMx.VIDEO_BACKGROUND_FEEDBACK, {
       ...i,
       reason: s,
       rating: a,
       feedback: o
-    }), null != N && (0, r.openModalLazy)(async () => {
+    }), null != b && (0, r.openModalLazy)(async () => {
       let {
         default: e
       } = await n.e('14466').then(n.bind(n, 729328));

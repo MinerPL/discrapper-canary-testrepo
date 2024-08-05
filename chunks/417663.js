@@ -8,8 +8,8 @@ return g;
 }), s(47120);
 var n = s(735250),
   r = s(470079),
-  o = s(120356),
-  a = s.n(o),
+  a = s(120356),
+  o = s.n(a),
   i = s(593473),
   l = s(481060),
   c = s(457330),
@@ -17,9 +17,9 @@ var n = s(735250),
   u = s(536285),
   N = s(981631),
   m = s(689938),
-  p = s(789487);
+  f = s(789487);
 
-function f(e, t, s) {
+function p(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
 value: s,
 enumerable: !0,
@@ -35,16 +35,16 @@ platform: t,
 className: s
   } = e;
   return (0, n.jsxs)('div', {
-className: a()(p.logos, s),
+className: o()(f.logos, s),
 children: [
   (0, n.jsx)('div', {
-    className: a()(p.logo, p.logoDiscord)
+    className: o()(f.logo, f.logoDiscord)
   }),
   (0, n.jsx)('div', {
-    className: p.logosDivider
+    className: f.logosDivider
   }),
   (0, n.jsx)('div', {
-    className: p.logo,
+    className: f.logo,
     style: {
       backgroundImage: 'url("'.concat(t.icon.whiteSVG, '")')
     }
@@ -55,7 +55,7 @@ children: [
 
 function C(e) {
   let t, s, {
-  verifying: o,
+  verifying: a,
   verified: i,
   platformType: c
 } = e,
@@ -63,46 +63,46 @@ u = d.Z.get(c),
 N = r.useCallback(() => {
   window.close();
 }, []);
-  return t = o ? (0, n.jsx)('div', {
-className: p.message,
+  return t = a ? (0, n.jsx)('div', {
+className: f.message,
 children: m.Z.Messages.CONNECTED_ACCOUNT_VERIFYING.format({
   name: u.name
 })
   }) : i ? (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsx)('div', {
-    className: p.message,
+    className: f.message,
     children: m.Z.Messages.CONNECTED_ACCOUNT_VERIFY_SUCCESS.format({
       name: u.name
     })
   }),
   (0, n.jsx)('div', {
-    className: a()(p.message, p.details),
+    className: o()(f.message, f.details),
     children: m.Z.Messages.CONNECTED_ACCOUNT_VERIFY_SUCCESS_DETAILS
   })
 ]
   }) : (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsx)('div', {
-    className: a()(p.message, p.error),
+    className: o()(f.message, f.error),
     children: m.Z.Messages.CONNECTED_ACCOUNT_VERIFY_FAILURE.format({
       name: u.name
     })
   }),
   (0, n.jsx)('div', {
-    className: a()(p.message, p.details),
+    className: o()(f.message, f.details),
     children: m.Z.Messages.CONNECTED_ACCOUNT_VERIFY_FAILURE_DETAILS
   })
 ]
-  }), (_ || o) && (s = (0, n.jsx)(l.Button, {
-className: p.btn,
-disabled: o,
+  }), (_ || a) && (s = (0, n.jsx)(l.Button, {
+className: f.btn,
+disabled: a,
 onClick: N,
-children: o ? (0, n.jsx)(l.Spinner, {
-  itemClassName: p.spinnerItem
+children: a ? (0, n.jsx)(l.Spinner, {
+  itemClassName: f.spinnerItem
 }) : m.Z.Messages.DONE
   })), (0, n.jsx)('div', {
-className: p.verifyConnectedAccount,
+className: f.verifyConnectedAccount,
 children: (0, n.jsxs)('div', {
   children: [
     (0, n.jsx)(g, {
@@ -122,15 +122,15 @@ let t = (0, i.parse)(this.props.location.search),
     code: s,
     state: n,
     oauth_verifier: r,
-    loading: o
+    loading: a
   } = t;
-if (null != o)
+if (null != a)
   return;
 null != r && (s = r), Object.keys(t).forEach(s => {
   if (!!s.startsWith('openid.'))
     null == e && (e = {}), e[s] = t[s];
 });
-let a = e => {
+let o = e => {
     let {
       status: t,
       body: s
@@ -147,7 +147,7 @@ let a = e => {
     openid_params: e,
     state: n
   },
-  d = e => c.Z.callback(this.getType(), l, e).then(a, a);
+  d = e => c.Z.callback(this.getType(), l, e).then(o, o);
 if (_) {
   d(!1);
   return;
@@ -155,7 +155,7 @@ if (_) {
 u.default.request(N.Etm.CONNECTIONS_CALLBACK, {
   ...l,
   providerType: this.getType()
-}).then(a, e => d('RPCError' !== e.name)).then(() => u.default.disconnect());
+}).then(o, e => d('RPCError' !== e.name)).then(() => u.default.disconnect());
   }
   render() {
 let {
@@ -169,10 +169,10 @@ return d.Z.isSupported(s) ? (0, n.jsx)(C, {
 }) : null;
   }
   constructor(...e) {
-super(...e), f(this, 'state', {
+super(...e), p(this, 'state', {
   verifying: !0,
   verified: !1
-}), f(this, 'getType', () => this.props.match.params.type);
+}), p(this, 'getType', () => this.props.match.params.type);
   }
 }
 t.default = v;

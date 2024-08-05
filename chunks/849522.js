@@ -1,13 +1,13 @@
 n.d(t, {
   Z: function() {
-return s;
+return o;
   }
 });
 var r = n(442837),
   i = n(594174),
   a = n(74538),
-  o = n(981631);
+  s = n(981631);
 
-function s() {
-  return (0, r.e7)([i.default], () => a.ZP.canUseIncreasedMessageLength(i.default.getCurrentUser())) ? o.en1 : o.J6R;
+function o() {
+  return (0, r.e7)([i.default], () => a.ZP.canUseIncreasedMessageLength(i.default.getCurrentUser())) ? s.en1 : s.J6R;
 }

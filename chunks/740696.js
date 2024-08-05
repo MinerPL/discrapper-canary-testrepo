@@ -37,10 +37,10 @@ guildId: a,
 shouldUpsellCreation: u,
 transitionState: O,
 onClose: L
-  } = e, x = (0, r.e7)([_.Z], () => _.Z.getGuild(a), [a]), h = (0, r.e7)([i.Z], () => i.Z.can(E.Plq.MANAGE_CHANNELS, x)), R = S(), [A, p] = n.useState(0), N = (0, c.Dt)();
+  } = e, x = (0, r.e7)([_.Z], () => _.Z.getGuild(a), [a]), h = (0, r.e7)([i.Z], () => i.Z.can(E.Plq.MANAGE_CHANNELS, x)), R = S(), [A, N] = n.useState(0), U = (0, c.Dt)();
   return (0, t.jsxs)(o.ModalRoot, {
 transitionState: O,
-'aria-labelledby': N,
+'aria-labelledby': U,
 size: o.ModalSize.LARGE,
 children: [
   (0, t.jsxs)(o.ModalHeader, {
@@ -71,7 +71,7 @@ children: [
             selectedItem: A,
             type: 'top',
             onItemSelect: e => {
-              p(e), (0, l.ws)({
+              N(e), (0, l.ws)({
                 forumDemoId: e
               });
             },

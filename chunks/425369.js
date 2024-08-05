@@ -1,6 +1,6 @@
 var i = n(735250),
-  s = n(470079),
-  a = n(266067),
+  a = n(470079),
+  s = n(266067),
   r = n(410575),
   l = n(765717),
   o = n(252618),
@@ -12,7 +12,7 @@ var i = n(735250),
   E = n(136853);
 
 function I() {
-  return (0, i.jsxs)(a.rs, {
+  return (0, i.jsxs)(s.rs, {
 children: [
   (0, i.jsx)(l.Z, {
     path: _.Z5c.APPLICATION_LIBRARY_SETTINGS,
@@ -44,8 +44,8 @@ children: [
 ]
   });
 }
-t.Z = s.memo(function() {
-  return s.useEffect(() => {
+t.Z = a.memo(function() {
+  return a.useEffect(() => {
 (0, c.e)('application_library');
   }, []), (0, i.jsxs)('div', {
 className: E.container,

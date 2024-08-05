@@ -1,8 +1,8 @@
 var r = n(735250),
   i = n(470079),
   a = n(481060),
-  o = n(285952),
-  s = n(689938),
+  s = n(285952),
+  o = n(689938),
   l = n(172260);
 t.Z = e => {
   let t, {
@@ -24,15 +24,15 @@ m = h || p;
   }
 }, [null == n ? void 0 : n.type]), !m)
 return null;
-  let I = s.Z.Messages.DONE;
-  return (null == n ? void 0 : n.type) === 'submit' ? (I = s.Z.Messages.MOBILE_REPORTS_SUBMIT_REPORT, t = a.Button.Colors.RED) : (null == n ? void 0 : n.type) === 'next' ? I = s.Z.Messages.NEXT : (null == n ? void 0 : n.type) === 'cancel' && (I = s.Z.Messages.CANCEL, t = a.Button.Colors.TRANSPARENT), (0, r.jsxs)(a.ModalFooter, {
-direction: o.Z.Direction.HORIZONTAL,
+  let I = o.Z.Messages.DONE;
+  return (null == n ? void 0 : n.type) === 'submit' ? (I = o.Z.Messages.MOBILE_REPORTS_SUBMIT_REPORT, t = a.Button.Colors.RED) : (null == n ? void 0 : n.type) === 'next' ? I = o.Z.Messages.NEXT : (null == n ? void 0 : n.type) === 'cancel' && (I = o.Z.Messages.CANCEL, t = a.Button.Colors.TRANSPARENT), (0, r.jsxs)(a.ModalFooter, {
+direction: s.Z.Direction.HORIZONTAL,
 children: [
   p && (0, r.jsx)(a.Button, {
     onClick: E,
     color: a.Button.Colors.TRANSPARENT,
     disabled: u,
-    children: s.Z.Messages.BACK
+    children: o.Z.Messages.BACK
   }),
   h && (0, r.jsx)(a.Button, {
     onClick: () => {

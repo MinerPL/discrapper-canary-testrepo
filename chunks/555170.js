@@ -1,4 +1,4 @@
-var r, i, a, o, s, l = n(444675);
+var r, i, a, s, o, l = n(444675);
 e.exports = O, O.ReadableState = v, n(836560).EventEmitter;
 var u = function(e, t) {
 return e.listeners(t).length;
@@ -39,7 +39,7 @@ return new O(e);
 
 function R(e, t, n, r, a) {
   i('readableAddChunk', t);
-  var o, s, l = e._readableState;
+  var s, o, l = e._readableState;
   if (null === t)
 l.reading = !1,
 function(e, t) {
@@ -51,7 +51,7 @@ function(e, t) {
     t.ended = !0, t.sync ? D(e) : (t.needReadable = !1, !t.emittedReadable && (t.emittedReadable = !0, L(e)));
   }
 }(e, l);
-  else if (!a && (s = function(e, t) {
+  else if (!a && (o = function(e, t) {
   var n, r;
   if (r = t, !d.isBuffer(r) && !(r instanceof _) && 'string' != typeof t && void 0 !== t && !e.objectMode)
     n = new I('chunk', [
@@ -60,12 +60,12 @@ function(e, t) {
       'Uint8Array'
     ], t);
   return n;
-}(l, t)), s)
-A(e, s);
+}(l, t)), o)
+A(e, o);
   else if (l.objectMode || t && t.length > 0) {
 if ('string' != typeof t && !l.objectMode && Object.getPrototypeOf(t) !== d.prototype) {
   ;
-  o = t, t = d.from(o);
+  s = t, t = d.from(s);
 }
 if (r)
   l.endEmitted ? A(e, new S()) : C(e, l, t, !0);
@@ -178,18 +178,18 @@ default:
   r.pipes.push(e);
   }
   r.pipesCount += 1, i('pipe count=%d opts=%j', r.pipesCount, t);
-  var a = t && !1 === t.end || e === l.stdout || e === l.stderr ? p : s;
+  var a = t && !1 === t.end || e === l.stdout || e === l.stderr ? p : o;
 
-  function o(t, a) {
+  function s(t, a) {
 i('onunpipe'), t === n && a && !1 === a.hasUnpiped && (a.hasUnpiped = !0, function() {
-  i('cleanup'), e.removeListener('close', f), e.removeListener('finish', h), e.removeListener('drain', c), e.removeListener('error', E), e.removeListener('unpipe', o), n.removeListener('end', s), n.removeListener('end', p), n.removeListener('data', _), d = !0, r.awaitDrain && (!e._writableState || e._writableState.needDrain) && c();
+  i('cleanup'), e.removeListener('close', f), e.removeListener('finish', h), e.removeListener('drain', c), e.removeListener('error', E), e.removeListener('unpipe', s), n.removeListener('end', o), n.removeListener('end', p), n.removeListener('data', _), d = !0, r.awaitDrain && (!e._writableState || e._writableState.needDrain) && c();
 }());
   }
 
-  function s() {
+  function o() {
 i('onend'), e.end();
   }
-  r.endEmitted ? l.nextTick(a) : n.once('end', a), e.on('unpipe', o);
+  r.endEmitted ? l.nextTick(a) : n.once('end', a), e.on('unpipe', s);
   var c = function(e) {
 return function() {
   var t = e._readableState;
@@ -257,8 +257,8 @@ for (var a = 0; a < i; a++)
   });
 return this;
   }
-  var o = F(t.pipes, e);
-  return -1 === o ? this : (t.pipes.splice(o, 1), t.pipesCount -= 1, 1 === t.pipesCount && (t.pipes = t.pipes[0]), e.emit('unpipe', this, n), this);
+  var s = F(t.pipes, e);
+  return -1 === s ? this : (t.pipes.splice(s, 1), t.pipesCount -= 1, 1 === t.pipesCount && (t.pipes = t.pipes[0]), e.emit('unpipe', this, n), this);
 }, O.prototype.on = function(e, t) {
   var n = c.prototype.on.call(this, e, t),
 r = this._readableState;
@@ -331,13 +331,13 @@ void 0 === this[a] && 'function' == typeof e[a] && (this[a] = function(t) {
     return e[t].apply(e, arguments);
   };
 }(a));
-  for (var o = 0; o < N.length; o++)
-e.on(N[o], this.emit.bind(this, N[o]));
+  for (var s = 0; s < N.length; s++)
+e.on(N[s], this.emit.bind(this, N[s]));
   return this._read = function(t) {
 i('wrapped _read', t), r && (r = !1, e.resume());
   }, this;
 }, 'function' == typeof Symbol && (O.prototype[Symbol.asyncIterator] = function() {
-  return void 0 === o && (o = n(634587)), o(this);
+  return void 0 === s && (s = n(634587)), s(this);
 }), Object.defineProperty(O.prototype, 'readableHighWaterMark', {
   enumerable: !1,
   get: function() {
@@ -362,5 +362,5 @@ this._readableState && (this._readableState.flowing = e);
 return this._readableState.length;
   }
 }), 'function' == typeof Symbol && (O.from = function(e, t) {
-  return void 0 === s && (s = n(787838)), s(O, e, t);
+  return void 0 === o && (o = n(787838)), o(O, e, t);
 });

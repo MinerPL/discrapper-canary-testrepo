@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(842146),
-  o = n(293177),
-  s = n(349407),
+  s = n(293177),
+  o = n(349407),
   l = n(49012),
   u = n(202120),
   c = n(981631);
@@ -25,18 +25,18 @@ a.K([null != d ? d : 'unknown']);
 return;
   }
   if (t === c.ABu.XBOX) {
-s.K([null != d ? d : 'unknown']);
+o.K([null != d ? d : 'unknown']);
 return;
   }
   if (t === c.ABu.PLAYSTATION || t === c.ABu.PLAYSTATION_STAGING) {
-o.K([null != d ? d : 'unknown'], t);
+s.K([null != d ? d : 'unknown'], t);
 return;
   }
   if (t === c.ABu.DOMAIN) {
 (0, i.openModalLazy)(async () => {
   let {
     default: e
-  } = await n.e('64941').then(n.bind(n, 414402));
+  } = await n.e('64941').then(n.bind(n, 907053));
   return t => (0, r.jsx)(e, {
     analyticsLocation: [null != d ? d : 'unknown'],
     ...t

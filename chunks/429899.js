@@ -1,9 +1,9 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(558381),
+  a = n(470079),
+  s = n(558381),
   r = n(613311);
-class l extends s.Component {
+class l extends a.Component {
   componentDidMount() {
 this.fetchStoreListing();
   }
@@ -12,8 +12,8 @@ let {
   skuId: e,
   applicationId: t,
   slug: n,
-  storeListingId: s,
-  pageSize: a,
+  storeListingId: a,
+  pageSize: s,
   location: l
 } = this.props;
 return (0, i.jsx)(r.Z, {
@@ -21,9 +21,9 @@ return (0, i.jsx)(r.Z, {
   applicationId: t,
   fetchStoreListing: this.fetchStoreListing,
   slug: n,
-  storeListingId: s,
+  storeListingId: a,
   location: l,
-  pageSize: a
+  pageSize: s
 });
   }
   constructor(...e) {
@@ -33,13 +33,13 @@ super(...e), t = this, n = 'fetchStoreListing', i = e => {
     storeListingId: t,
     skuId: n,
     applicationId: i
-  } = this.props, s = null != e ? e : n;
+  } = this.props, a = null != e ? e : n;
   if (null != t)
-    return (0, a.rV)(t);
-  if (null != s)
-    return (0, a.km)(s);
+    return (0, s.rV)(t);
+  if (null != a)
+    return (0, s.km)(a);
   if (null != i)
-    return (0, a.Hq)(i);
+    return (0, s.Hq)(i);
 }, n in t ? Object.defineProperty(t, n, {
   value: i,
   enumerable: !0,

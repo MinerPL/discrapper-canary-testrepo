@@ -31,7 +31,7 @@ disabled: N = !1,
 isTryItOutFlow: C = !1,
 forcedDivider: m,
 withHighlight: A = !1
-  } = e, h = A ? r.ShinyButton : r.Button;
+  } = e, g = A ? r.ShinyButton : r.Button;
   return (0, n.jsx)(l.Z, {
 className: S,
 title: u,
@@ -41,7 +41,7 @@ forcedDivider: m,
 children: (0, n.jsxs)('div', {
   className: _.buttonsContainer,
   children: [
-    (0, n.jsx)(h, {
+    (0, n.jsx)(g, {
       className: i()({
         [_.buttonHighlighted]: A
       }),

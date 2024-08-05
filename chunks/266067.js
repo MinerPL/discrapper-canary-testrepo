@@ -34,9 +34,9 @@ return m;
   }
 });
 var r, i, a = n(782726),
-  o = n(470079);
+  s = n(470079);
 n(476400);
-var s = n(539528),
+var o = n(539528),
   l = n(177632),
   u = n(568895),
   c = n(194649),
@@ -75,20 +75,20 @@ return n.componentDidMount = function() {
 }, n.componentWillUnmount = function() {
   this.unlisten && this.unlisten();
 }, n.render = function() {
-  return o.createElement(m.Provider, {
+  return s.createElement(m.Provider, {
     value: {
       history: this.props.history,
       location: this.state.location,
       match: t.computeRootMatch(this.state.location.pathname),
       staticContext: this.props.staticContext
     }
-  }, o.createElement(p.Provider, {
+  }, s.createElement(p.Provider, {
     children: this.props.children || null,
     value: this.props.history
   }));
 }, t;
-  }(o.Component);
-o.Component;
+  }(s.Component);
+s.Component;
 var T = function(e) {
 function t() {
   return e.apply(this, arguments) || this;
@@ -104,7 +104,7 @@ return n.componentDidMount = function() {
 }, n.render = function() {
   return null;
 }, t;
-  }(o.Component),
+  }(s.Component),
   g = {},
   S = 0;
 
@@ -124,21 +124,21 @@ function N(e) {
 n = e.to,
 r = e.push,
 i = void 0 !== r && r;
-  return o.createElement(m.Consumer, null, function(e) {
+  return s.createElement(m.Consumer, null, function(e) {
 e || (0, u.Z)(!1);
 var r = e.history,
   a = e.staticContext,
   l = i ? r.push : r.replace,
-  d = (0, s.ob)(t ? 'string' == typeof n ? A(n, t.params) : (0, c.Z)({}, n, {
+  d = (0, o.ob)(t ? 'string' == typeof n ? A(n, t.params) : (0, c.Z)({}, n, {
     pathname: A(n.pathname, t.params)
   }) : n);
-return a ? (l(d), null) : o.createElement(T, {
+return a ? (l(d), null) : s.createElement(T, {
   onMount: function() {
     l(d);
   },
   onUpdate: function(e, t) {
-    var n = (0, s.ob)(t.to);
-    !(0, s.Hp)(n, (0, c.Z)({}, d, {
+    var n = (0, o.ob)(t.to);
+    !(0, o.Hp)(n, (0, c.Z)({}, d, {
       key: n.key
     })) && l(d);
   },
@@ -157,8 +157,8 @@ path: t
 r = n.path,
 i = n.exact,
 a = void 0 !== i && i,
-o = n.strict,
-s = void 0 !== o && o,
+s = n.strict,
+o = void 0 !== s && s,
 l = n.sensitive,
 u = void 0 !== l && l;
   return [].concat(r).reduce(function(t, n) {
@@ -179,11 +179,11 @@ var r = function(e, t) {
     return O < 10000 && (r[e] = a, O++), a;
   }(n, {
     end: a,
-    strict: s,
+    strict: o,
     sensitive: u
   }),
   i = r.regexp,
-  o = r.keys,
+  s = r.keys,
   l = i.exec(e);
 if (!l)
   return null;
@@ -194,7 +194,7 @@ return a && !E ? null : {
   path: n,
   url: '/' === n && '' === c ? '/' : c,
   isExact: E,
-  params: o.reduce(function(e, t, n) {
+  params: s.reduce(function(e, t, n) {
     return e[t.name] = d[n], e;
   }, {})
 };
@@ -206,7 +206,7 @@ return e.apply(this, arguments) || this;
   }
   return (0, a.Z)(t, e), t.prototype.render = function() {
 var e = this;
-return o.createElement(m.Consumer, null, function(t) {
+return s.createElement(m.Consumer, null, function(t) {
   t || (0, u.Z)(!1);
   var n = e.props.location || t.location,
     r = e.props.computedMatch ? e.props.computedMatch : e.props.path ? R(n.pathname, e.props) : t.match,
@@ -215,59 +215,59 @@ return o.createElement(m.Consumer, null, function(t) {
       match: r
     }),
     a = e.props,
-    s = a.children,
+    o = a.children,
     l = a.component,
     d = a.render;
-  return Array.isArray(s) && 0 === s.length && (s = null), o.createElement(m.Provider, {
+  return Array.isArray(o) && 0 === o.length && (o = null), s.createElement(m.Provider, {
     value: i
-  }, i.match ? s ? 'function' == typeof s ? s(i) : s : l ? o.createElement(l, i) : d ? d(i) : null : 'function' == typeof s ? s(i) : null);
+  }, i.match ? o ? 'function' == typeof o ? o(i) : o : l ? s.createElement(l, i) : d ? d(i) : null : 'function' == typeof o ? o(i) : null);
 });
   }, t;
-}(o.Component);
+}(s.Component);
 
 function y(e) {
   return '/' === e.charAt(0) ? e : '/' + e;
 }
-o.Component;
+s.Component;
 var D = function(e) {
   function t() {
 return e.apply(this, arguments) || this;
   }
   return (0, a.Z)(t, e), t.prototype.render = function() {
 var e = this;
-return o.createElement(m.Consumer, null, function(t) {
+return s.createElement(m.Consumer, null, function(t) {
   t || (0, u.Z)(!1);
   var n, r, i = e.props.location || t.location;
-  return o.Children.forEach(e.props.children, function(e) {
-    if (null == r && o.isValidElement(e)) {
+  return s.Children.forEach(e.props.children, function(e) {
+    if (null == r && s.isValidElement(e)) {
       n = e;
       var a = e.props.path || e.props.from;
       r = a ? R(i.pathname, (0, c.Z)({}, e.props, {
         path: a
       })) : t.match;
     }
-  }), r ? o.cloneElement(n, {
+  }), r ? s.cloneElement(n, {
     location: i,
     computedMatch: r
   }) : null;
 });
   }, t;
-}(o.Component);
+}(s.Component);
 
 function L(e) {
   var t = 'withRouter(' + (e.displayName || e.name) + ')',
 n = function(t) {
   var n = t.wrappedComponentRef,
     r = (0, E.Z)(t, ['wrappedComponentRef']);
-  return o.createElement(m.Consumer, null, function(t) {
-    return t || (0, u.Z)(!1), o.createElement(e, (0, c.Z)({}, r, t, {
+  return s.createElement(m.Consumer, null, function(t) {
+    return t || (0, u.Z)(!1), s.createElement(e, (0, c.Z)({}, r, t, {
       ref: n
     }));
   });
 };
   return n.displayName = t, n.WrappedComponent = e, h()(n, e);
 }
-var b = o.useContext;
+var b = s.useContext;
 
 function M() {
   return b(p);

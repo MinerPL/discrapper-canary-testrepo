@@ -1,21 +1,20 @@
 a.d(n, {
   T: function() {
-return l;
+return i;
   }
 });
-var i = a(470079),
-  t = a(127255);
+var t = a(470079),
+  s = a(127255);
 
-function l(e, n, a) {
-  let l = (0, t.Z)({
-guildId: e,
-channel: a
+function i(e, n) {
+  let a = (0, s.Z)({
+guildId: e
   });
-  return i.useMemo(() => {
+  return t.useMemo(() => {
 var e;
-return null !== (e = l.find(e => e.application.id === n)) && void 0 !== e ? e : null;
+return null !== (e = a.find(e => e.application.id === n)) && void 0 !== e ? e : null;
   }, [
-l,
+a,
 n
   ]);
 }

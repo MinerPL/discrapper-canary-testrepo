@@ -4,9 +4,9 @@ return N;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(512722),
   o = n.n(l),
   c = n(481060),
@@ -26,9 +26,9 @@ error: null
   },
   T = (0, u.hQ)(),
   S = ''.concat(T, '-decription'),
-  C = ''.concat(T, '-error');
+  f = ''.concat(T, '-error');
 
-function f(e, t) {
+function C(e, t) {
   switch (t.type) {
 case 'RESET':
   return p;
@@ -53,16 +53,16 @@ case 'ERROR':
 }
 
 function N() {
-  let e = s.createRef(),
-t = s.createRef(),
-[n, a] = s.useReducer(f, p),
+  let e = a.createRef(),
+t = a.createRef(),
+[n, s] = a.useReducer(C, p),
 {
   canSend: l,
   hint: u,
   success: N,
   error: A
 } = n;
-  return s.useEffect(() => {
+  return a.useEffect(() => {
 null != N && (o()(null != e.current, 'Input is submitting when not mounted'), e.current.value = '', e.current.focus());
   }, [
 N,
@@ -74,7 +74,7 @@ onSubmit: t => {
   !n.includes('#') && n.startsWith('@') && (n = n.substring(1));
   let i = (0, _.Zy)(n);
   if (null != i) {
-    a({
+    s({
       type: 'ERROR',
       text: i
     });
@@ -85,14 +85,14 @@ onSubmit: t => {
     context: {
       location: 'Add Friend'
     }
-  }).then(() => a({
+  }).then(() => s({
     type: 'SUCCESS',
     text: I.Z.Messages.ADD_FRIEND_SUCCESS.format({
       discordTag: n
     })
   }), e => {
     var t;
-    return a({
+    return s({
       type: 'ERROR',
       text: (0, _.NF)(null === (t = e.body) || void 0 === t ? void 0 : t.code, n)
     });
@@ -127,23 +127,23 @@ children: [
               if (n.includes('#')) {
                 o()(null != e.current, 'Input is handling keypress when not mounted');
                 let i = n.indexOf('#'),
-                  s = e.current.selectionStart,
-                  a = t.key === E.mR.Backspace || t.key === E.mR.ArrowRight || t.key === E.mR.ArrowLeft,
+                  a = e.current.selectionStart,
+                  s = t.key === E.mR.Backspace || t.key === E.mR.ArrowRight || t.key === E.mR.ArrowLeft,
                   r = t.which >= 48 && t.which <= 57;
-                null != s && s > i && /^(.+?#\d{4})$/.test(n) && !a ? t.preventDefault() : null != s && s > i && !r && !a && t.preventDefault();
+                null != a && a > i && /^(.+?#\d{4})$/.test(n) && !s ? t.preventDefault() : null != a && a > i && !r && !s && t.preventDefault();
               }
             }
           },
           onChange: e => {
             if (e.length <= 0) {
-              a({
+              s({
                 type: 'RESET'
               });
               return;
             }
             let t = '',
               [, n] = e.split('#');
-            null != n && (t = e + h.LYt.slice(null != n ? n.length + 1 : 0)), a({
+            null != n && (t = e + h.LYt.slice(null != n ? n.length + 1 : 0)), s({
               type: 'HINT',
               text: t
             });
@@ -158,7 +158,7 @@ children: [
           placeholder: I.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
           'aria-label': I.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
           'aria-invalid': null != A || void 0,
-          'aria-describedby': null != A ? C : S
+          'aria-describedby': null != A ? f : S
         }),
         null != u && (0, i.jsx)('div', {
           className: m.addFriendHint,
@@ -176,7 +176,7 @@ children: [
   }),
   null != A && (0, i.jsx)(c.FormText, {
     role: 'alert',
-    id: C,
+    id: f,
     type: c.FormText.Types.ERROR,
     className: g.marginTop8,
     children: A

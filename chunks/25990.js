@@ -1,4 +1,4 @@
-let r, i, a, o, s, l, u, c, d, _, E, f, h, p;
+let r, i, a, s, o, l, u, c, d, _, E, f, h, p;
 var m, I, T, g, S = n(979554),
   A = n(442837),
   N = n(570140),
@@ -19,11 +19,11 @@ function D() {
 }
 
 function L() {
-  r = void 0, i = void 0, a = void 0, o = void 0;
+  r = void 0, i = void 0, a = void 0, s = void 0;
 }
 
 function b() {
-  s = void 0, l = void 0, u = void 0, c = void 0, d = void 0, o = void 0;
+  o = void 0, l = void 0, u = void 0, c = void 0, d = void 0, s = void 0;
 }
 
 function M() {
@@ -37,7 +37,7 @@ return O;
 return R;
   }
   showNotice() {
-return void 0 !== r || void 0 !== s || void 0 !== l || void 0 !== u || void 0 !== c || void 0 !== d || void 0 !== a || void 0 !== o || void 0 !== i;
+return void 0 !== r || void 0 !== o || void 0 !== l || void 0 !== u || void 0 !== c || void 0 !== d || void 0 !== a || void 0 !== s || void 0 !== i;
   }
   getIsSubmitDisabled() {
 return void 0 !== l && l.length > v.tPV;
@@ -49,7 +49,7 @@ return r;
 return i;
   }
   getPendingBanner() {
-return s;
+return o;
   }
   getPendingBio() {
 return l;
@@ -67,18 +67,18 @@ return d;
 return a;
   }
   getPendingProfileEffectId() {
-return o;
+return s;
   }
   getAllPending() {
 return {
   pendingAvatar: r,
-  pendingBanner: s,
+  pendingBanner: o,
   pendingBio: l,
   pendingPronouns: u,
   pendingAccentColor: c,
   pendingThemeColors: d,
   pendingAvatarDecoration: a,
-  pendingProfileEffectId: o,
+  pendingProfileEffectId: s,
   pendingGlobalName: i
 };
   }
@@ -163,13 +163,13 @@ let {
 let {
   profileEffectId: t
 } = e;
-o = t;
+s = t;
   },
   USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER: function(e) {
 let {
   banner: t
 } = e;
-s = t;
+o = t;
   },
   USER_SETTINGS_ACCOUNT_SET_PENDING_BIO: function(e) {
 let {

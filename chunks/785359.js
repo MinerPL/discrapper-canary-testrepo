@@ -14,11 +14,11 @@ function a(e) {
     return null !== (t = e.mimeType) && void 0 !== t ? t : 'unknown';
   });
 }(e.fileItems) : [],
-o = null !== (t = e.errorMessage) && void 0 !== t ? t : void 0,
-s = null !== (n = e.failureCode) && void 0 !== n ? n : void 0;
+s = null !== (t = e.errorMessage) && void 0 !== t ? t : void 0,
+o = null !== (n = e.failureCode) && void 0 !== n ? n : void 0;
   (0, r.yw)(i.rMx.SEND_MESSAGE_FAILURE, {
-failure_code: s,
-error_message: o,
+failure_code: o,
+error_message: s,
 attachment_mimetypes: a
   });
 }

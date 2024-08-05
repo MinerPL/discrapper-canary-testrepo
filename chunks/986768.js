@@ -4,8 +4,8 @@ return d;
   }
 });
 var i = n(317381),
-  s = n(573979),
-  a = n(42352),
+  a = n(573979),
+  s = n(42352),
   r = n(886355),
   l = n(238679),
   o = n(981631),
@@ -28,11 +28,11 @@ case o.zMe.ACTIVITY_LAYOUT_MODE_UPDATE: {
   } : null;
 }
 case o.zMe.THERMAL_STATE_UPDATE: {
-  let e = await (0, a.Z)();
+  let e = await (0, s.Z)();
   if (null == e)
     return null;
   return {
-    thermal_state: (0, s.Z)(e)
+    thermal_state: (0, a.Z)(e)
   };
 }
 case o.zMe.ORIENTATION_UPDATE: {

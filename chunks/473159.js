@@ -1,24 +1,24 @@
 n.d(t, {
   O: function() {
-return s;
+return o;
   }
 }), n(47120);
 var r = n(284737),
   i = n(228488),
   a = n(830917),
-  o = n(919570);
+  s = n(919570);
 
-function s(e) {
+function o(e) {
   let t = e.document,
 n = (0, a.Ig)(e);
 
-  function s() {
-(0, o.gK)(n);
+  function o() {
+(0, s.gK)(n);
   }
 
   function l() {
 setTimeout(() => {
-  (0, o.HQ)(n);
+  (0, s.HQ)(n);
 }, 0);
   }
   for (let n of (e.addEventListener('resize', function() {
@@ -31,8 +31,8 @@ setTimeout(() => {
   (0, r.Rz)(e);
 }), e.addEventListener('visibilitychange', function() {
   (0, r.CO)(e);
-}), o.wu))
-t.addEventListener(n, s, !0), t.addEventListener(n, l, !1);
+}), s.wu))
+t.addEventListener(n, o, !0), t.addEventListener(n, l, !1);
   (0, i.uF)(t, function() {
 (0, r.gH)(e);
   }), (0, r.S1)(e);

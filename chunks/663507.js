@@ -15,13 +15,13 @@ return a;
 return l;
   },
   t$: function() {
-return o;
+return s;
   }
 }), n(757143), n(724458), n(47120), n(653041), n(733860), n(411104);
 let i = e => '__section__'.concat(e),
   a = e => '__section_header__'.concat(e),
-  o = e => parseInt(e.replace(/^__section__/, ''), 10),
-  s = () => 0;
+  s = e => parseInt(e.replace(/^__section__/, ''), 10),
+  o = () => 0;
 class l {
   getPadding() {
 return null != this.padding ? this.padding : this.itemGutter;
@@ -42,8 +42,8 @@ let {
   itemGutter: r = this.itemGutter,
   removeEdgeItemGutters: i = this.removeEdgeItemGutters,
   getItemKey: a = this.getItemKey,
-  getItemHeight: o = this.getItemHeight,
-  getSectionHeight: s = this.getSectionHeight,
+  getItemHeight: s = this.getItemHeight,
+  getSectionHeight: o = this.getSectionHeight,
   bufferWidth: l = this.bufferWidth,
   padding: u = this.padding,
   paddingVertical: c = this.paddingVertical,
@@ -52,8 +52,8 @@ let {
   sectionGutter: E = this.sectionGutter,
   dir: f = this.dir
 } = e;
-if (this.sections !== t || this.columns !== n || this.itemGutter !== r || this.removeEdgeItemGutters !== i || this.getItemKey !== a || this.getSectionHeight !== s || this.getItemHeight !== o || this.bufferWidth !== l || this.padding !== u || this.paddingVertical !== c || this.paddingHorizontal !== d || this.marginLeft !== _ || this.sectionGutter !== E || this.dir !== f)
-  this.needsFullCompute = !0, this.sections = t, this.columns = n, this.itemGutter = r, this.getItemKey = a, this.getSectionHeight = s, this.getItemHeight = o, this.bufferWidth = l, this.padding = u, this.paddingVertical = c, this.paddingHorizontal = d, this.marginLeft = _, this.sectionGutter = E, this.dir = f;
+if (this.sections !== t || this.columns !== n || this.itemGutter !== r || this.removeEdgeItemGutters !== i || this.getItemKey !== a || this.getSectionHeight !== o || this.getItemHeight !== s || this.bufferWidth !== l || this.padding !== u || this.paddingVertical !== c || this.paddingHorizontal !== d || this.marginLeft !== _ || this.sectionGutter !== E || this.dir !== f)
+  this.needsFullCompute = !0, this.sections = t, this.columns = n, this.itemGutter = r, this.getItemKey = a, this.getSectionHeight = o, this.getItemHeight = s, this.bufferWidth = l, this.padding = u, this.paddingVertical = c, this.paddingHorizontal = d, this.marginLeft = _, this.sectionGutter = E, this.dir = f;
   }
   computeFullCoords() {
 var e, t, n;
@@ -61,8 +61,8 @@ if (!this.needsFullCompute)
   return;
 let {
   columns: r,
-  getItemKey: o,
-  getItemHeight: s,
+  getItemKey: s,
+  getItemHeight: o,
   itemGutter: l,
   getSectionHeight: u,
   bufferWidth: c,
@@ -89,7 +89,7 @@ for (; p < this.sections.length;) {
     this.columnHeights[e] = f + m;
   for (; c < e;) {
     ;
-    let e = o(p, c);
+    let e = s(p, c);
     if (null == e) {
       c++;
       continue;
@@ -102,7 +102,7 @@ for (; p < this.sections.length;) {
       0
     ]);
     i < this.lastColumnIndex && this.currentRow++, this.lastColumnIndex = i;
-    let a = s(p, c, this.columnWidth),
+    let a = o(p, c, this.columnWidth),
       u = {
         position: 'absolute',
         [_]: this.columnWidth * i + l * (i + 1) - l + E,
@@ -142,9 +142,9 @@ let {
 this.visibleSections = {};
 let a = 0;
 for (; a < this.sections.length;) {
-  let o = this.sections[a],
-    s = i(a),
-    l = r[s];
+  let s = this.sections[a],
+    o = i(a),
+    l = r[o];
   if (null == l) {
     a++;
     continue;
@@ -160,22 +160,22 @@ for (; a < this.sections.length;) {
   }
   let d = 0,
     _ = 1;
-  for (c < t && c > e && (d = o - 1, _ = -1), this.visibleSections[s] = []; d >= 0 && d < o;) {
+  for (c < t && c > e && (d = s - 1, _ = -1), this.visibleSections[o] = []; d >= 0 && d < s;) {
     let i = n(a, d),
-      o = null != i ? r[i] : null;
-    if (null == i || null == o) {
+      s = null != i ? r[i] : null;
+    if (null == i || null == s) {
       d += _;
       continue;
     }
     let {
       top: l,
       height: c
-    } = o;
-    l + u > e - c && l + u < t && (-1 === _ ? this.visibleSections[s].unshift([
+    } = s;
+    l + u > e - c && l + u < t && (-1 === _ ? this.visibleSections[o].unshift([
       i,
       a,
       d
-    ]) : this.visibleSections[s].push([
+    ]) : this.visibleSections[o].push([
       i,
       a,
       d
@@ -206,6 +206,6 @@ r(this, 'visibleSections', {}), r(this, 'gridData', {
   throw Error('MasonryListComputer: getItemKey has not been implemented');
 }), r(this, 'getItemHeight', () => {
   throw Error('MasonryListComputer: getItemHeight has not been implemented');
-}), r(this, 'getSectionHeight', s);
+}), r(this, 'getSectionHeight', o);
   }
 }

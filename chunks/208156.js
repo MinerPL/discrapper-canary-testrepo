@@ -6,8 +6,8 @@ return g;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(482033),
+  s = n.n(a),
+  o = n(482033),
   l = n(772848),
   u = n(442837),
   c = n(928518),
@@ -25,12 +25,12 @@ function T(e) {
 url: t,
 className: n,
 style: a,
-onLoad: o,
+onLoad: s,
 shouldRefocus: I,
 queryParams: T,
 allowPopups: g = !1,
 referrerPolicy: S = 'origin'
-  } = e, A = (0, u.e7)([c.Z], () => c.Z.getWindow(m.KJ3.CHANNEL_CALL_POPOUT)), N = (0, s.useMemoOne)(() => (0, l.Z)(), [t]), v = i.useRef(null), O = (0, f.Z)(v, I, null == A ? window : A), R = {
+  } = e, A = (0, u.e7)([c.Z], () => c.Z.getWindow(m.KJ3.CHANNEL_CALL_POPOUT)), N = (0, o.useMemoOne)(() => (0, l.Z)(), [t]), v = i.useRef(null), O = (0, f.Z)(v, I, null == A ? window : A), R = {
 ...T,
 frame_id: N,
 platform: p.S4.DESKTOP
@@ -59,7 +59,7 @@ allow: 'autoplay; encrypted-media',
 referrerPolicy: S,
 onLoad: function(e) {
   var n;
-  null == o || o(e.target), v.current = e.target, O(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([
+  null == s || s(e.target), v.current = e.target, O(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([
     d.Z.HELLO,
     R
   ], null != t ? t : '');
@@ -75,20 +75,20 @@ src: ''.concat(t, '?').concat(new URLSearchParams(R))
 function g(e) {
   let {
 onLoad: t
-  } = e, [n, a] = i.useState(!1), s = i.useCallback(e => {
+  } = e, [n, a] = i.useState(!1), o = i.useCallback(e => {
 a(!0), null == t || t(e);
   }, [t]);
   return (0, r.jsxs)('div', {
 className: I.fillParent,
 children: [
   !n && (0, r.jsx)('div', {
-    className: o()(I.fillParent, I.iframePlaceholder)
+    className: s()(I.fillParent, I.iframePlaceholder)
   }),
   (0, r.jsx)('div', {
-    className: o()(I.fillParent, n ? void 0 : I.hiddenIframeContainer),
+    className: s()(I.fillParent, n ? void 0 : I.hiddenIframeContainer),
     children: (0, r.jsx)(T, {
       ...e,
-      onLoad: s
+      onLoad: o
     })
   })
 ]

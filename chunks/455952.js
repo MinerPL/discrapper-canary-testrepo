@@ -20,17 +20,17 @@ function a(e, t) {
 throw ReferenceError('this hasn\'t been initialised - super() hasn\'t been called');
   return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-var o = t.active = function(e) {
+var s = t.active = function(e) {
   var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'span';
   return function(n) {
-function o() {
+function s() {
   ! function(e, t) {
     if (!(e instanceof t))
       throw TypeError('Cannot call a class as a function');
-  }(this, o);
-  for (var n, s, l, u = arguments.length, c = Array(u), d = 0; d < u; d++)
+  }(this, s);
+  for (var n, o, l, u = arguments.length, c = Array(u), d = 0; d < u; d++)
     c[d] = arguments[d];
-  return s = l = a(this, (n = o.__proto__ || Object.getPrototypeOf(o)).call.apply(n, [this].concat(c))), l.state = {
+  return o = l = a(this, (n = s.__proto__ || Object.getPrototypeOf(s)).call.apply(n, [this].concat(c))), l.state = {
     active: !1
   }, l.handleMouseDown = function() {
     return l.setState({
@@ -45,7 +45,7 @@ function o() {
       onMouseDown: l.handleMouseDown,
       onMouseUp: l.handleMouseUp
     }, i.default.createElement(e, r({}, l.props, l.state)));
-  }, a(l, s);
+  }, a(l, o);
 }
 return ! function(e, t) {
   if ('function' != typeof t && null !== t)
@@ -58,7 +58,7 @@ return ! function(e, t) {
       configurable: !0
     }
   }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t);
-}(o, n), o;
+}(s, n), s;
   }(i.default.Component);
 };
-t.default = o;
+t.default = s;

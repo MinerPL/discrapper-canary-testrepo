@@ -9,8 +9,8 @@ return I;
 var r = n(392711),
   i = n.n(r),
   a = n(442837),
-  o = n(544891),
-  s = n(570140),
+  s = n(544891),
+  o = n(570140),
   l = n(592125),
   u = n(709054),
   c = n(238349),
@@ -84,8 +84,8 @@ function I(e) {
   let {
 loaded: r,
 firstMessage: i
-  } = (0, a.cj)([d.Z], () => d.Z.getMessage(e.id)), o = (0, a.e7)([l.Z], () => l.Z.getChannel(e.parent_id));
-  if (null != o && (t = r, n = i, !t && null == n))
+  } = (0, a.cj)([d.Z], () => d.Z.getMessage(e.id)), s = (0, a.e7)([l.Z], () => l.Z.getChannel(e.parent_id));
+  if (null != s && (t = r, n = i, !t && null == n))
 (function(e, t) {
   if (h.hasRequested(e.id, t))
     return;
@@ -93,7 +93,7 @@ firstMessage: i
     r = n.findIndex(e => e === t),
     i = n.slice(r, r + 5).filter(t => !h.hasRequested(e.id, t));
   T(e, i);
-}(o, e.id));
+}(s, e.id));
   return {
 loaded: r,
 firstMessage: i
@@ -106,9 +106,9 @@ function T(e, t) {
 var r, i;
 let {
   loaded: a,
-  firstMessage: o
+  firstMessage: s
 } = d.Z.getMessage(t);
-if (r = a, i = o, !r && null == i)
+if (r = a, i = s, !r && null == i)
   h.request(e.id, t), n = !0;
   }), n && null == p && (p = setTimeout(S, 0));
 }
@@ -137,13 +137,13 @@ let {
   body: {
     threads: i
   }
-} = await o.tn.post({
+} = await s.tn.post({
   url: _.ANM.FORUM_POSTS(e),
   body: {
     thread_ids: t
   }
 });
-s.Z.dispatch({
+o.Z.dispatch({
   type: 'LOAD_FORUM_POSTS',
   guildId: r,
   threads: i

@@ -2,8 +2,8 @@ n(47120);
 var r = n(433517),
   i = n(147913),
   a = n(594174),
-  o = n(918505),
-  s = n(548161),
+  s = n(918505),
+  o = n(548161),
   l = n(347649),
   u = n(776319),
   c = n(801461);
@@ -23,7 +23,7 @@ super(...e), d(this, 'actions', {
   POST_CONNECTION_OPEN: () => this.onPostConnectionOpen()
 }), d(this, 'onPostConnectionOpen', () => {
   if (function() {
-      if (!o.w8.getCurrentConfig({
+      if (!s.w8.getCurrentConfig({
           location: 'b9eb97_1'
         }, {
           autoTrackExposure: !1
@@ -41,7 +41,7 @@ super(...e), d(this, 'actions', {
     }, {
       autoTrackExposure: !1
     }).enabled;
-    (0, s.a)(c.Kq.APP_START, e, !1) && r.K.set(_, Date.now());
+    (0, o.a)(c.Kq.APP_START, e, !1) && r.K.set(_, Date.now());
   }
 });
   }

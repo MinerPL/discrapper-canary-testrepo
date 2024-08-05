@@ -5,35 +5,35 @@ return I;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(442837),
-  s = n(570140),
+  s = n(442837),
+  l = n(570140),
   r = n(475179),
   o = n(367907),
   c = n(358221),
-  d = n(788983),
-  u = n(268353),
+  u = n(788983),
+  d = n(268353),
   h = n(944486),
   p = n(626135),
   m = n(585483),
   _ = n(358085),
   f = n(228488),
   E = n(981631),
-  C = n(495585);
-let g = () => {
-  s.Z.wait(() => d.xv(E.KJ3.CHANNEL_CALL_POPOUT));
+  g = n(495585);
+let C = () => {
+  l.Z.wait(() => u.xv(E.KJ3.CHANNEL_CALL_POPOUT));
 };
 
 function I(e) {
   let {
 channel: t,
 appContext: n,
-popoutOpen: s,
-popoutWindow: d,
+popoutOpen: l,
+popoutWindow: u,
 currentWindow: I
   } = e, x = n === E.IlC.POPOUT, T = a.useRef(null), {
-currentLayout: v,
-mode: N
-  } = (0, l.cj)([c.Z], () => {
+currentLayout: N,
+mode: v
+  } = (0, s.cj)([c.Z], () => {
 let e = c.Z.getMode(t.id),
   i = n === E.IlC.POPOUT;
 i && (e = E.WtW.VIDEO);
@@ -45,16 +45,16 @@ return i && a !== E.AEg.FULL_SCREEN && (a = E.AEg.NO_CHAT), {
   }, [
 t,
 n
-  ]), S = (0, l.e7)([h.Z], () => h.Z.getVoiceChannelId() === t.id, [t.id]);
+  ]), S = (0, s.e7)([h.Z], () => h.Z.getVoiceChannelId() === t.id, [t.id]);
   a.useEffect(() => {
-T.current = N;
+T.current = v;
   });
-  let Z = a.useRef(v),
+  let Z = a.useRef(N),
 {
   currentDocument: A,
   rootNode: M
 } = a.useMemo(() => {
-  let e = null != d && x ? d.document : document,
+  let e = null != u && x ? u.document : document,
     t = I.document.getElementById('app-mount');
   return {
     currentWindow: I,
@@ -62,12 +62,12 @@ T.current = N;
     rootNode: t
   };
 }, [
-  d,
+  u,
   x,
   I
 ]),
-b = s && !x,
-R = N === E.WtW.VIDEO && S && !b,
+b = l && !x,
+R = v === E.WtW.VIDEO && S && !b,
 j = a.useCallback((e, i) => {
   i !== e && (r.Z.updateLayout(t.id, i, n), i === E.AEg.FULL_SCREEN && t.isPrivate() && m.S.dispatch(E.CkL.TEXTAREA_BLUR));
 }, [
@@ -93,41 +93,41 @@ P = a.useCallback(e => () => {
 ]);
   return (a.useEffect(() => {
 let e = () => {
-  null != M && !(0, f.rB)(M, A) && v === E.AEg.FULL_SCREEN && P(v)();
+  null != M && !(0, f.rB)(M, A) && N === E.AEg.FULL_SCREEN && P(N)();
 };
 return A.addEventListener(f.NO, e), () => {
   A.removeEventListener(f.NO, e);
 };
   }, [
 A,
-v,
+N,
 P,
 M
   ]), a.useEffect(() => (p.default.track(E.rMx.VIDEO_LAYOUT_TOGGLED, {
-video_layout: x ? 'popout' : v,
+video_layout: x ? 'popout' : N,
 ...(0, o.AB)(t.id)
   }), () => {
-!(x && (0, _.isMac)()) && L(v);
+!(x && (0, _.isMac)()) && L(N);
   }), [
-v,
+N,
 x
   ]), a.useEffect(() => {
-null != M && T.current === E.WtW.VIDEO && N === E.WtW.VOICE && (0, f.Pr)(M, A);
+null != M && T.current === E.WtW.VIDEO && v === E.WtW.VOICE && (0, f.Pr)(M, A);
   }, [
 A,
-N,
+v,
 T,
 M
   ]), a.useEffect(() => {
-!S && x && g();
+!S && x && C();
   }, [
 S,
 x
-  ]), R) ? (0, i.jsx)(u.Z, {
+  ]), R) ? (0, i.jsx)(d.Z, {
 themeable: !1,
 node: M,
-guestWindow: d,
-className: C.rightTrayIcon,
-onClick: P(v)
+guestWindow: u,
+className: g.rightTrayIcon,
+onClick: P(N)
   }) : null;
 }

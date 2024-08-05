@@ -178,7 +178,7 @@ return (0, n.jsx)(h.ZP, {
   theme: this.props.theme,
   children: (0, n.jsx)(_.Cd, {
     mfaFinish: this.handleTokenSubmitMFA,
-    request: e,
+    mfaChallenge: e,
     onEarlyClose: () => {
       this.handleReset();
     },

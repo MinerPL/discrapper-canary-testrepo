@@ -1,29 +1,29 @@
-t.r(n), t.d(n, {
+n.r(t), n.d(t, {
   default: function() {
 return L;
   }
-}), t(47120);
-var a, s, o = t(735250),
-  r = t(470079),
-  l = t(120356),
-  i = t.n(l),
-  c = t(525654),
-  d = t.n(c),
-  u = t(873546),
-  f = t(213919),
-  p = t(442837),
-  m = t(481060),
-  x = t(391650),
-  g = t(314897),
-  O = t(594174),
-  h = t(153124),
-  v = t(626135),
-  _ = t(361207),
-  N = t(792125),
-  w = t(981631),
-  D = t(689938),
-  A = t(59384);
-(s = a || (a = {}))[s.OSX = 0] = 'OSX', s[s.WINDOWS = 1] = 'WINDOWS', s[s.LINUX = 2] = 'LINUX', s[s.IOS = 3] = 'IOS', s[s.ANDROID = 4] = 'ANDROID';
+}), n(47120);
+var s, a, o = n(735250),
+  r = n(470079),
+  l = n(120356),
+  i = n.n(l),
+  c = n(525654),
+  d = n.n(c),
+  u = n(873546),
+  f = n(213919),
+  p = n(442837),
+  m = n(481060),
+  x = n(391650),
+  g = n(314897),
+  O = n(594174),
+  h = n(153124),
+  v = n(626135),
+  _ = n(361207),
+  N = n(792125),
+  w = n(981631),
+  D = n(689938),
+  A = n(59384);
+(a = s || (s = {}))[a.OSX = 0] = 'OSX', a[a.WINDOWS = 1] = 'WINDOWS', a[a.LINUX = 2] = 'LINUX', a[a.IOS = 3] = 'IOS', a[a.ANDROID = 4] = 'ANDROID';
 let j = [{
   getOs: () => D.Z.Messages.PLATFORM_MACOS,
   icon: A.apple,
@@ -67,23 +67,23 @@ let j = [{
   M = (0, N.Q)(w.BRd.LIGHT),
   W = e => {
 let {
-  url: n,
-  text: t,
-  onClick: a
+  url: t,
+  text: n,
+  onClick: s
 } = e;
 return (0, o.jsx)(m.Anchor, {
   useDefaultUnderlineStyles: !1,
-  href: n,
+  href: t,
   className: A.downloadButton,
-  onClick: a,
-  children: t
+  onClick: s,
+  children: n
 });
   },
   b = e => {
-let n, {
-    platform: t,
-    onClick: a,
-    onMouseEnter: s,
+let t, {
+    platform: n,
+    onClick: s,
+    onMouseEnter: a,
     isActive: r,
     claimed: l
   } = e,
@@ -92,23 +92,23 @@ let n, {
     icon: d,
     url: u,
     platformKey: f
-  } = t,
+  } = n,
   p = c(),
   x = i()(A.icon, d);
 if (Array.isArray(u))
-  n = u.map((e, n) => {
-    let t = l ? e.url() : '';
+  t = u.map((e, t) => {
+    let n = l ? e.url() : '';
     return (0, o.jsx)(W, {
-      url: t,
-      onClick: () => a(p),
+      url: n,
+      onClick: () => s(p),
       text: e.getText()
-    }, ''.concat(t, '-').concat(n));
+    }, ''.concat(n, '-').concat(t));
   });
 else {
   let e = l ? u() : void 0;
-  n = (0, o.jsx)(W, {
+  t = (0, o.jsx)(W, {
     url: e,
-    onClick: () => a(p),
+    onClick: () => s(p),
     text: D.Z.Messages.DOWNLOAD
   });
 }
@@ -116,7 +116,7 @@ return (0, o.jsx)('li', {
   className: i()(A.platform, {
     [A.active]: r
   }),
-  onMouseEnter: () => s(f),
+  onMouseEnter: () => a(f),
   children: (0, o.jsxs)('div', {
     className: A.contentWrapper,
     children: [
@@ -140,9 +140,9 @@ return (0, o.jsx)('li', {
           }),
           (0, o.jsx)('div', {
             className: i()(A.downloadButtons, {
-              [A.list]: Array.isArray(n)
+              [A.list]: Array.isArray(t)
             }),
-            children: n
+            children: t
           })
         ]
       })
@@ -153,10 +153,10 @@ return (0, o.jsx)('li', {
 
 function L(e) {
   let {
-source: n,
-onClose: t,
-transitionState: a
-  } = e, s = (0, p.e7)([O.default], () => O.default.getCurrentUser()), l = (0, p.e7)([g.default], () => g.default.getFingerprint()), c = null == s || s.isClaimed(), [_, N] = r.useState(function() {
+source: t,
+onClose: n,
+transitionState: s
+  } = e, a = (0, p.e7)([O.default], () => O.default.getCurrentUser()), l = (0, p.e7)([g.default], () => g.default.getFingerprint()), c = null == a || a.isClaimed(), [_, N] = r.useState(function() {
 var e;
 switch (null === (e = d().os) || void 0 === e ? void 0 : e.family) {
   case 'OS X':
@@ -185,9 +185,9 @@ switch (null === (e = d().os) || void 0 === e ? void 0 : e.family) {
   ptb: !1,
   released: !0,
   has_e_mail: c,
-  referring_location: n,
+  referring_location: t,
   qr_code: !1
-}), !c && (t(), x.j());
+}), !c && (n(), x.j());
   }
 
   function L(e) {
@@ -197,14 +197,14 @@ N(e);
 v.default.track(w.rMx.OPEN_MODAL, {
   type: 'Download App',
   source: {
-    location: n
+    location: t
   }
 });
-  }, [n]);
+  }, [t]);
   let T = (0, h.Dt)();
   return (0, o.jsx)(m.ModalRoot, {
 className: i()(A.downloadApps, M),
-transitionState: a,
+transitionState: s,
 'aria-labelledby': T,
 children: (0, o.jsx)('div', {
   className: A.inner,
@@ -217,7 +217,7 @@ children: (0, o.jsx)('div', {
     }),
     children: [
       (0, o.jsx)(m.ModalCloseButton, {
-        onClick: t,
+        onClick: n,
         className: A.modalCloseButton
       }),
       !u.tq && (0, o.jsx)('div', {

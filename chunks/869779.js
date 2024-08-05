@@ -32,14 +32,14 @@ var n = s(735250),
   O = s(428813),
   A = s(2147),
   L = s(856606),
-  b = s(981631),
-  j = s(689938),
+  j = s(981631),
+  b = s(689938),
   D = s(742199);
 
 function y(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
 s = arguments.length > 2 ? arguments[2] : void 0;
-  h.ZP.trackWithMetadata(b.rMx.SETTINGS_PANE_VIEWED, {
+  h.ZP.trackWithMetadata(j.rMx.SETTINGS_PANE_VIEWED, {
 settings_type: 'channel',
 origin_pane: t,
 destination_pane: e,
@@ -64,7 +64,7 @@ let {
   canManageChannels: i,
   canManageWebhooks: r
 } = this.props;
-(i || a || r) && (n !== b.QZA.CLOSED || n === t) && (a || l !== b.CoT.PERMISSIONS) && (r || l !== b.CoT.INTEGRATIONS) ? l !== s && y(l, s): (0, d.xf)();
+(i || a || r) && (n !== j.QZA.CLOSED || n === t) && (a || l !== j.CoT.PERMISSIONS) && (r || l !== j.CoT.INTEGRATIONS) ? l !== s && y(l, s): (0, d.xf)();
   }
   render() {
 let {
@@ -81,7 +81,7 @@ let {
 return null == l ? null : (0, n.jsx)(c.ZP, {
   theme: e,
   sidebarTheme: t,
-  section: null != s ? s : b.CoT.OVERVIEW,
+  section: null != s ? s : j.CoT.OVERVIEW,
   onSetSection: o.zc,
   onClose: d.xf,
   sections: function(e) {
@@ -94,7 +94,7 @@ return null == l ? null : (0, n.jsx)(c.ZP, {
       canManageWebhooks: c
     } = e, h = (0, g.KS)(t), {
       GUILD_CATEGORY: T
-    } = b.d4z, p = N.Ec.has(t.type), f = t.type === T ? j.Z.Messages.DELETE_CATEGORY : p ? t.isForumPost() ? j.Z.Messages.DELETE_FORUM_POST : j.Z.Messages.DELETE_THREAD : j.Z.Messages.DELETE_CHANNEL;
+    } = j.d4z, p = N.Ec.has(t.type), f = t.type === T ? b.Z.Messages.DELETE_CATEGORY : p ? t.isForumPost() ? b.Z.Messages.DELETE_FORUM_POST : b.Z.Messages.DELETE_THREAD : b.Z.Messages.DELETE_CHANNEL;
     return [{
         section: u.ID.HEADER,
         label: null != t ? (0, n.jsxs)(n.Fragment, {
@@ -114,12 +114,12 @@ return null == l ? null : (0, n.jsx)(c.ZP, {
               children: (0, m.F6)(s, M.default, I.Z)
             }) : null
           ]
-        }) : j.Z.Messages.CHANNEL_SETTINGS
+        }) : b.Z.Messages.CHANNEL_SETTINGS
       },
       {
-        section: b.CoT.OVERVIEW,
-        label: j.Z.Messages.OVERVIEW,
-        ariaLabel: j.Z.Messages.OVERVIEW,
+        section: j.CoT.OVERVIEW,
+        label: b.Z.Messages.OVERVIEW,
+        ariaLabel: b.Z.Messages.OVERVIEW,
         element: A.Z,
         notice: {
           element: A.G,
@@ -127,8 +127,8 @@ return null == l ? null : (0, n.jsx)(c.ZP, {
         }
       },
       {
-        section: b.CoT.PERMISSIONS,
-        label: j.Z.Messages.PERMISSIONS,
+        section: j.CoT.PERMISSIONS,
+        label: b.Z.Messages.PERMISSIONS,
         element: E.Z,
         notice: {
           element: L.n,
@@ -137,16 +137,16 @@ return null == l ? null : (0, n.jsx)(c.ZP, {
         predicate: () => l && !p
       },
       {
-        section: b.CoT.INSTANT_INVITES,
-        label: j.Z.Messages.INVITES,
+        section: j.CoT.INSTANT_INVITES,
+        label: b.Z.Messages.INVITES,
         element: O.Z,
         type: u.bT.CUSTOM,
         predicate: () => t.type !== T && a && !p
       },
       {
-        section: b.CoT.INTEGRATIONS,
-        label: j.Z.Messages.INTEGRATIONS_OVERVIEW,
-        ariaLabel: j.Z.Messages.INTEGRATIONS_OVERVIEW,
+        section: j.CoT.INTEGRATIONS,
+        label: b.Z.Messages.INTEGRATIONS_OVERVIEW,
+        ariaLabel: b.Z.Messages.INTEGRATIONS_OVERVIEW,
         element: v.Z,
         notice: {
           stores: [_.Z],
@@ -158,10 +158,10 @@ return null == l ? null : (0, n.jsx)(c.ZP, {
         section: u.ID.DIVIDER
       },
       {
-        section: b.CoT.DELETE,
+        section: j.CoT.DELETE,
         onClick() {
           (0, Z.w)(t, function() {
-            R.S.subscribeOnce(b.CkL.LAYER_POP_COMPLETE, () => {
+            R.S.subscribeOnce(j.CkL.LAYER_POP_COMPLETE, () => {
               (0, o.zz)(t.id);
             }), (0, d.xf)();
           });
@@ -191,14 +191,14 @@ function P() {
   let {
 channel: e,
 analyticsLocation: t
-  } = (0, a.cj)([x.Z], () => x.Z.getProps()), s = (0, a.e7)([x.Z], () => x.Z.getFormState()), l = (0, a.e7)([x.Z], () => x.Z.getSection()), i = (0, a.e7)([p.Z], () => p.Z.theme), r = (0, a.e7)([p.Z], () => p.Z.darkSidebar ? b.BRd.DARK : void 0), o = (0, T.C7)(e), d = (0, T.Xb)(e), {
+  } = (0, a.cj)([x.Z], () => x.Z.getProps()), s = (0, a.e7)([x.Z], () => x.Z.getFormState()), l = (0, a.e7)([x.Z], () => x.Z.getSection()), i = (0, a.e7)([p.Z], () => p.Z.theme), r = (0, a.e7)([p.Z], () => p.Z.darkSidebar ? j.BRd.DARK : void 0), o = (0, T.C7)(e), d = (0, T.Xb)(e), {
 canManageChannels: c,
 canManageRoles: u,
 canManageWebhooks: h
   } = (0, a.cj)([C.Z], () => ({
-canManageChannels: C.Z.can(b.Plq.MANAGE_CHANNELS, e),
-canManageRoles: null != e && C.Z.can(b.Plq.MANAGE_ROLES, e),
-canManageWebhooks: null != e && C.Z.can(b.Plq.MANAGE_WEBHOOKS, e)
+canManageChannels: C.Z.can(j.Plq.MANAGE_CHANNELS, e),
+canManageRoles: null != e && C.Z.can(j.Plq.MANAGE_ROLES, e),
+canManageWebhooks: null != e && C.Z.can(j.Plq.MANAGE_WEBHOOKS, e)
   })), m = (0, a.e7)([f.Z], () => f.Z.getChannel(null == e ? void 0 : e.parent_id));
   return (0, n.jsx)(w, {
 channel: e,

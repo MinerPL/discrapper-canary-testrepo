@@ -2,7 +2,6 @@ e.exports = {
   container: 'container_c013eb',
   upsellContainer: 'upsellContainer_c013eb',
   toolbar: 'toolbar_c013eb',
-  toolbarBackground: 'toolbarBackground_c013eb',
   adminUpsell: 'adminUpsell_c013eb',
   backgroundImageContent: 'backgroundImageContent_c013eb',
   userUpsell: 'userUpsell_c013eb',

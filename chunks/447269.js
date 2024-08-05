@@ -4,10 +4,10 @@ return r;
   }
 });
 var i = n(817718),
-  s = n(612226),
-  a = n(981631);
+  a = n(612226),
+  s = n(981631);
 let r = {
-  ...s.oT,
-  [a.EkH.CAROUSEL_NEXT]: i.lI,
-  [a.EkH.CAROUSEL_PREV]: i.hd
+  ...a.oT,
+  [s.EkH.CAROUSEL_NEXT]: i.lI,
+  [s.EkH.CAROUSEL_PREV]: i.hd
 };

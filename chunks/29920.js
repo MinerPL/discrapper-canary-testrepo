@@ -4,8 +4,8 @@ return r;
   }
 });
 var i = n(544891),
-  s = n(960048),
-  a = n(981631);
+  a = n(960048),
+  s = n(981631);
 async function r(e) {
   let {
 userTrialOffer: t,
@@ -14,7 +14,7 @@ userDiscountOffer: r
   } = e;
   try {
 let e = await i.tn.post({
-  url: a.ANM.PREMIUM_MARKETING,
+  url: s.ANM.PREMIUM_MARKETING,
   body: {
     user_trial_offer: t,
     user_discount: n,
@@ -23,8 +23,8 @@ let e = await i.tn.post({
 });
 if (e.ok)
   return e.body;
-return s.Z.captureMessage('fetchPremiumMarketingContentWithUserOffer failed'), [];
+return a.Z.captureMessage('fetchPremiumMarketingContentWithUserOffer failed'), [];
   } catch (e) {
-return s.Z.captureException(e), [];
+return a.Z.captureException(e), [];
   }
 }

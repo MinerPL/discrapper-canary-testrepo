@@ -9,8 +9,8 @@ return u;
 var r = n(146150),
   i = n(707908),
   a = n(713267),
-  o = n(695170),
-  s = n(812975);
+  s = n(695170),
+  o = n(812975);
 
 function l(e) {
   var t = e.split('\n').map(c).filter(function(e) {
@@ -26,7 +26,7 @@ n = /DTSTART(?:;TZID=([^:=]+?))?(?::|=)([^;\s]+)/i.exec(e);
 return t;
   var r = n[1],
 i = n[2];
-  return r && (t.tzid = r), t.dtstart = (0, o.gE)(i), t;
+  return r && (t.tzid = r), t.dtstart = (0, s.gE)(i), t;
 }
 
 function c(e) {
@@ -58,7 +58,7 @@ switch (l.toUpperCase()) {
     t.freq = i.D[c.toUpperCase()];
     break;
   case 'WKST':
-    t.wkst = s.hn[c.toUpperCase()];
+    t.wkst = o.hn[c.toUpperCase()];
     break;
   case 'COUNT':
   case 'INTERVAL':
@@ -80,13 +80,13 @@ switch (l.toUpperCase()) {
     t.byweekday = function(e) {
       return e.split(',').map(function(e) {
         if (2 === e.length)
-          return s.hn[e];
+          return o.hn[e];
         var t = e.match(/^([+-]?\d{1,2})([A-Z]{2})$/);
         if (!t || t.length < 3)
           throw SyntaxError('Invalid weekday string: '.concat(e));
         var n = Number(t[1]),
           r = t[2],
-          i = s.hn[r].weekday;
+          i = o.hn[r].weekday;
         return new a.O(i, n);
       });
     }(c);
@@ -97,7 +97,7 @@ switch (l.toUpperCase()) {
     t.tzid = E.tzid, t.dtstart = E.dtstart;
     break;
   case 'UNTIL':
-    t.until = (0, o.gE)(c);
+    t.until = (0, s.gE)(c);
     break;
   case 'BYEASTER':
     t.byeaster = Number(c);

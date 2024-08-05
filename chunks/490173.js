@@ -6,8 +6,8 @@ return g;
 var r = n(735250),
   i = n(470079),
   a = n(699581),
-  o = n(990547),
-  s = n(442837),
+  s = n(990547),
+  o = n(442837),
   l = n(481060),
   u = n(239091),
   c = n(40851),
@@ -30,7 +30,7 @@ let I = e => {
   let {
 children: t,
 close: n,
-onUnmount: s,
+onUnmount: o,
 target: u,
 rect: _,
 position: E,
@@ -56,15 +56,15 @@ return null === (e = r.ownerDocument) || void 0 === e || e.addEventListener('cli
   null === (e = r.ownerDocument) || void 0 === e || e.removeEventListener('click', i, !0), null === (t = r.ownerDocument) || void 0 === t || t.removeEventListener('contextmenu', i, !0);
 };
   }, [n]);
-  let S = i.useRef(s);
-  i.useEffect(() => void(S.current = s)), i.useEffect(() => () => {
+  let S = i.useRef(o);
+  i.useEffect(() => void(S.current = o)), i.useEffect(() => () => {
 var e;
 return null === (e = S.current) || void 0 === e ? void 0 : e.call(S);
   }, []), i.useLayoutEffect(() => {
 var e;
 null === (e = T.current) || void 0 === e || e.updatePosition();
   }), (0, d.Z)({
-type: o.ImpressionTypes.MENU,
+type: s.ImpressionTypes.MENU,
 name: m,
 properties: I
   });
@@ -129,18 +129,18 @@ let {
   target: n,
   isOpen: i,
   theme: a,
-  config: o,
-  rect: s
+  config: s,
+  rect: o
 } = this.props, l = null !== (e = this.state.render) && void 0 !== e ? e : this.props.render;
-return i && null != s && null != o && null != n && null != l && o.context === t ? (0, r.jsx)(I, {
+return i && null != o && null != s && null != n && null != l && s.context === t ? (0, r.jsx)(I, {
   target: n,
-  rect: s,
+  rect: o,
   close: this.close,
-  onUnmount: o.onClose,
-  align: o.align,
-  position: o.position,
-  impressionName: o.impressionName,
-  impressionProperties: o.impressionProperties,
+  onUnmount: s.onClose,
+  align: s.align,
+  position: s.position,
+  impressionName: s.impressionName,
+  impressionProperties: s.impressionProperties,
   children: (e, r) => {
     let {
       position: i
@@ -149,7 +149,7 @@ return i && null != s && null != o && null != n && null != l && o.context === t 
       position: i,
       theme: a,
       onHeightUpdate: r,
-      config: o,
+      config: s,
       target: n,
       context: t
     });
@@ -180,16 +180,16 @@ function g() {
 contextMenu: e,
 version: t,
 isOpen: n
-  } = (0, s.cj)([E.Z], () => ({
+  } = (0, o.cj)([E.Z], () => ({
 contextMenu: E.Z.getContextMenu(),
 version: E.Z.version,
 isOpen: E.Z.isOpen()
-  })), a = (0, s.e7)([_.Z], () => _.Z.theme), {
-appContext: o,
+  })), a = (0, o.e7)([_.Z], () => _.Z.theme), {
+appContext: s,
 renderWindow: l
   } = i.useContext(c.ZP);
   return (0, r.jsx)(T, {
-appContext: o,
+appContext: s,
 renderWindow: l,
 ...e,
 isOpen: n,

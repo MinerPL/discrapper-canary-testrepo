@@ -6,8 +6,8 @@ return O;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  o = n(442837),
   l = n(481060),
   u = n(749210),
   c = n(906732),
@@ -45,11 +45,11 @@ function O(e) {
 } = (0, h.KZ)(),
 w = (0, d.Z)(y, R, C),
 [x, G] = i.useState(new Set()),
-k = (0, s.e7)([p.Z], () => p.Z.getUserProfile(R)),
+k = (0, o.e7)([p.Z], () => p.Z.getUserProfile(R)),
 B = null !== (t = null == k ? void 0 : k.connectedAccounts) && void 0 !== t ? t : [],
 F = null !== (n = null == k ? void 0 : k.applicationRoleConnections) && void 0 !== n ? n : [],
-V = (0, s.e7)([E.Z], () => E.Z.hidePersonalInformation),
-H = (0, s.e7)([_.default], () => _.default.locale);
+V = (0, o.e7)([E.Z], () => E.Z.hidePersonalInformation),
+H = (0, o.e7)([_.default], () => _.default.locale);
   if (i.useEffect(() => {
   if ((null == y ? void 0 : y.id) != null && (null == w ? void 0 : w.id) != null)
     u.Z.fetchGuildRoleConnectionsEligibility(y.id, w.id).then(e => {
@@ -84,7 +84,7 @@ children: [
     children: A.Z.Messages.CONNECTIONS
   }),
   (0, r.jsxs)('div', {
-    className: o()(N.connectionsContainer, b),
+    className: s()(N.connectionsContainer, b),
     children: [
       Z,
       (0, r.jsxs)(l.Clickable, {
@@ -127,7 +127,7 @@ children: [
     children: A.Z.Messages.APPS
   }),
   (0, r.jsx)('div', {
-    className: o()(N.connectionsContainer, b),
+    className: s()(N.connectionsContainer, b),
     children: F.map(e => (0, r.jsx)(m.tH, {
       applicationRoleConnection: e,
       locale: H

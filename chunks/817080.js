@@ -46,22 +46,22 @@ var t = e.document,
   },
   p = function(t, d, p) {
     !p && (t = h(t));
-    var R, f, I = this,
+    var f, R, I = this,
       N = t.type,
       M = !1,
       A = function() {
         _(I, 'writestart progress write writeend'.split(' '));
       },
       S = function() {
-        if (f && a && 'undefined' != typeof FileReader) {
+        if (R && a && 'undefined' != typeof FileReader) {
           var o = new FileReader();
           o.onloadend = function() {
             var e = o.result;
-            f.location.href = 'data:attachment/file' + e.slice(e.search(/[,;]/)), I.readyState = I.DONE, A();
+            R.location.href = 'data:attachment/file' + e.slice(e.search(/[,;]/)), I.readyState = I.DONE, A();
           }, o.readAsDataURL(t), I.readyState = I.INIT;
           return;
         }
-        (M || !R) && (R = n().createObjectURL(t)), f ? f.location.href = R : void 0 === e.open(R, '_blank') && a && (e.location.href = R), I.readyState = I.DONE, A(), u(R);
+        (M || !f) && (f = n().createObjectURL(t)), R ? R.location.href = f : void 0 === e.open(f, '_blank') && a && (e.location.href = f), I.readyState = I.DONE, A(), u(f);
       },
       O = function(e) {
         return function() {
@@ -74,12 +74,12 @@ var t = e.document,
         exclusive: !1
       };
     if (I.readyState = I.INIT, !d && (d = 'download'), r) {
-      R = n().createObjectURL(t), setTimeout(function() {
-        o.href = R, o.download = d, s(o), A(), u(R), I.readyState = I.DONE;
+      f = n().createObjectURL(t), setTimeout(function() {
+        o.href = f, o.download = d, s(o), A(), u(f), I.readyState = I.DONE;
       });
       return;
     }
-    if (e.chrome && N && N !== c && (t = (t.slice || t.webkitSlice).call(t, 0, t.size, c), M = !0), i && 'download' !== d && (d += '.download'), (N === c || i) && (f = e), !l) {
+    if (e.chrome && N && N !== c && (t = (t.slice || t.webkitSlice).call(t, 0, t.size, c), M = !0), i && 'download' !== d && (d += '.download'), (N === c || i) && (R = e), !l) {
       S();
       return;
     }
@@ -89,7 +89,7 @@ var t = e.document,
           e.getFile(d, C, O(function(e) {
             e.createWriter(O(function(n) {
               n.onwriteend = function(t) {
-                f.location.href = e.toURL(), I.readyState = I.DONE, _(I, 'writeend', t), u(e);
+                R.location.href = e.toURL(), I.readyState = I.DONE, _(I, 'writeend', t), u(e);
               }, n.onerror = function() {
                 var e = n.error;
                 e.code !== e.ABORT_ERR && S();
@@ -111,12 +111,12 @@ var t = e.document,
       }), S);
     }), S);
   },
-  R = p.prototype;
+  f = p.prototype;
 return 'undefined' != typeof navigator && navigator.msSaveOrOpenBlob ? function(e, t, n) {
   return !n && (e = h(e)), navigator.msSaveOrOpenBlob(e, t || 'download');
-} : (R.abort = function() {
+} : (f.abort = function() {
   this.readyState = this.DONE, _(this, 'abort');
-}, R.readyState = R.INIT = 0, R.WRITING = 1, R.DONE = 2, R.error = R.onwritestart = R.onprogress = R.onwrite = R.onabort = R.onerror = R.onwriteend = null, function(e, t, n) {
+}, f.readyState = f.INIT = 0, f.WRITING = 1, f.DONE = 2, f.error = f.onwritestart = f.onprogress = f.onwrite = f.onabort = f.onerror = f.onwriteend = null, function(e, t, n) {
   return new p(e, t, n);
 });
   }

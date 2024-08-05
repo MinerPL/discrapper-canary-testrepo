@@ -1,9 +1,9 @@
 t.d(a, {
   X: function() {
-return n;
+return s;
   }
 });
-let n = [{
+let s = [{
 label: 'Alberta',
 value: 'AB'
   },

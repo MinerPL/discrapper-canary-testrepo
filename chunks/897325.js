@@ -7,20 +7,20 @@ return r;
   }
 }), n(627341);
 var i = n(278074),
-  a = n(263568),
-  s = n(171018);
+  s = n(263568),
+  a = n(171018);
 
 function r(e, t) {
-  let n = (0, i.EQ)(t).with(a.C.IMAGE_ONLY_ANSWERS, () => s.normalStylesImageOnlyAnswers).otherwise(() => s.normalStylesDefault);
+  let n = (0, i.EQ)(t).with(s.C.IMAGE_ONLY_ANSWERS, () => a.normalStylesImageOnlyAnswers).otherwise(() => a.normalStylesDefault);
   return {
 styles: {
   loserSelected: n,
   normal: n,
   notVoted: n,
   selected: n,
-  voted: s.votedStyles,
-  victorSelected: s.victorStyles,
-  victorNotSelected: s.victorStyles,
+  voted: a.votedStyles,
+  victorSelected: a.victorStyles,
+  victorNotSelected: a.victorStyles,
   normalVote: n
 }
   };

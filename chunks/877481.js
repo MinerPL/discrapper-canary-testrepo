@@ -2,8 +2,8 @@ n(411104), n(47120);
 var r = n(274616),
   i = n(710845),
   a = n(893988),
-  o = n(812967),
-  s = n(314897),
+  s = n(812967),
+  o = n(314897),
   l = n(757266),
   u = n(906467),
   c = n(6132),
@@ -85,13 +85,13 @@ null == E.Z.safeParseWithQuery(e.launchTarget) ? n(Error('Failed to parse launch
   });
 }
 t.Z = {
-  waitSubscribed: (e, t) => new Promise((n, r) => v(() => o.Z.isSubscribed(e, t), n, r)),
+  waitSubscribed: (e, t) => new Promise((n, r) => v(() => s.Z.isSubscribed(e, t), n, r)),
   waitConnected(e) {
 return new Promise(v.bind(this, () => l.Z.isConnected(e)));
   },
   isLaunchable: e => N(S(e)).then(e => null != e).catch(() => !1),
   launch: e => N(S(e)).then(O),
-  launchDispatchApplication(e, t, n, i, o) {
+  launchDispatchApplication(e, t, n, i, s) {
 let {
   launchOptions: l,
   defaultLaunchOptionId: u,
@@ -103,8 +103,8 @@ let {
 } = e;
 if (null == l || null == u || null == _)
   throw Error('Couldn\'t construct launchable for '.concat(e.applicationId));
-null == o && (o = u);
-let I = l[o];
+null == s && (s = u);
+let I = l[s];
 if (null == I)
   throw Error('Couldn\'t construct launchable for '.concat(e.applicationId, '. No launch option.'));
 return (0, r.o)([f]).then(e => {
@@ -123,7 +123,7 @@ return (0, r.o)([f]).then(e => {
       DISCORD_ACCESS_TOKEN: null != t ? t : '',
       DISCORD_CURRENT_LOCALE: n,
       DISCORD_CURRENT_BRANCH: i,
-      DISCORD_STORAGE_PATH: h.SRg.ROOT_STORAGE_PATH(e, s.default.getId())
+      DISCORD_STORAGE_PATH: h.SRg.ROOT_STORAGE_PATH(e, o.default.getId())
     };
   return d.Z.launch(E, f, I.name, r);
 });
@@ -136,10 +136,10 @@ return null !== (r = null === (n = t.removeShortcuts) || void 0 === n ? void 0 :
 if (null == i || !(0, _.isWindows)())
   return Promise.resolve(!1);
 let a = 'discord:///library/'.concat(r, '/launch'),
-  o = ''.concat(i, '\\icon.ico');
+  s = ''.concat(i, '\\icon.ico');
 return g().then(r => {
-  var i, s;
-  return null !== (s = null === (i = r.createShortcuts) || void 0 === i ? void 0 : i.call(r, e, t, n, a, o)) && void 0 !== s && s;
+  var i, o;
+  return null !== (o = null === (i = r.createShortcuts) || void 0 === i ? void 0 : i.call(r, e, t, n, a, s)) && void 0 !== o && o;
 });
   },
   isGameLaunchable: e => N({

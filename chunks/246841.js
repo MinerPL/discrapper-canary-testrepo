@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(395361),
-  o = n(829820),
-  s = n(598030);
+  s = n(829820),
+  o = n(598030);
 
 function l(e) {
   let {
@@ -27,7 +27,7 @@ tooltip: p,
 loading: m,
 disabled: I,
 onClick: T
-  } = (0, o.Ih)(t, n, l), g = () => {
+  } = (0, s.Ih)(t, n, l), g = () => {
 null == f || f(), T();
   };
   return (0, r.jsx)(i.Tooltip, {
@@ -39,7 +39,7 @@ children: e => {
   } = e;
   return (0, r.jsxs)(i.Button, {
     className: u,
-    innerClassName: s.playButtonInner,
+    innerClassName: o.playButtonInner,
     size: c,
     look: d,
     color: _,

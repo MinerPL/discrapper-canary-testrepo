@@ -3,7 +3,7 @@ r.d(e, {
 return M;
   },
   Jd: function() {
-return v;
+return B;
   },
   S1: function() {
 return C;
@@ -140,7 +140,7 @@ ignoreDuration: !0
   }), t.captureSession();
 }
 
-function v(t) {
+function B(t) {
   let e = (0, o.Gd)().getClient();
   e && e.captureUserFeedback(t);
 }

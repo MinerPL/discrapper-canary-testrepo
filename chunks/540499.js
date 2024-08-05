@@ -1,13 +1,13 @@
 n.d(t, {
   L: function() {
-return s;
+return o;
   }
 });
 var r = n(876026),
   i = n(518285),
   a = n(412169),
-  o = n(219845),
-  s = function() {
+  s = n(219845),
+  o = function() {
 var e = 1 / 0,
   t = [];
 r.C.forEach(function(n) {
@@ -15,8 +15,8 @@ r.C.forEach(function(n) {
     var r = [];
     n.activeTargets.forEach(function(t) {
       var n = new i.A(t.target),
-        s = (0, a.D)(t.target);
-      r.push(n), t.lastReportedSize = (0, o.Y9)(t.target, t.observedBox), s < e && (e = s);
+        o = (0, a.D)(t.target);
+      r.push(n), t.lastReportedSize = (0, s.Y9)(t.target, t.observedBox), o < e && (e = o);
     }), t.push(function() {
       n.callback.call(n.observer, r, n.observer);
     }), n.activeTargets.splice(0, n.activeTargets.length);

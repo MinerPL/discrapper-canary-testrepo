@@ -21,7 +21,7 @@ callee: !0,
 arguments: !0,
 arity: !0
   },
-  o = {
+  s = {
 $$typeof: !0,
 compare: !0,
 defaultProps: !0,
@@ -29,18 +29,18 @@ displayName: !0,
 propTypes: !0,
 type: !0
   },
-  s = {};
+  o = {};
 
 function l(e) {
-  return r.isMemo(e) ? o : s[e.$$typeof] || i;
+  return r.isMemo(e) ? s : o[e.$$typeof] || i;
 }
-s[r.ForwardRef] = {
+o[r.ForwardRef] = {
   $$typeof: !0,
   render: !0,
   defaultProps: !0,
   displayName: !0,
   propTypes: !0
-}, s[r.Memo] = o;
+}, o[r.Memo] = s;
 var u = Object.defineProperty,
   c = Object.getOwnPropertyNames,
   d = Object.getOwnPropertySymbols,
@@ -53,11 +53,11 @@ if (f) {
   var i = E(n);
   i && i !== f && e(t, i, r);
 }
-var o = c(n);
-d && (o = o.concat(d(n)));
-for (var s = l(t), h = l(n), p = 0; p < o.length; ++p) {
-  var m = o[p];
-  if (!a[m] && !(r && r[m]) && !(h && h[m]) && !(s && s[m])) {
+var s = c(n);
+d && (s = s.concat(d(n)));
+for (var o = l(t), h = l(n), p = 0; p < s.length; ++p) {
+  var m = s[p];
+  if (!a[m] && !(r && r[m]) && !(h && h[m]) && !(o && o[m])) {
     var I = _(n, m);
     try {
       u(t, m, I);

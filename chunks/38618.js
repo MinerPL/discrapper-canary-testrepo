@@ -1,6 +1,6 @@
 n(724458);
-var r, i, a, o, s = n(392711),
-  l = n.n(s),
+var r, i, a, s, o = n(392711),
+  l = n.n(o),
   u = n(442837),
   c = n(570140),
   d = n(287734),
@@ -35,8 +35,8 @@ async function G(e) {
   let t = {},
 n = S.Z.getVoiceChannelId();
   if (null != n) {
-var r, i, a, o, s, l, u, c;
-if ((null === (s = window) || void 0 === s ? void 0 : null === (o = s.performance) || void 0 === o ? void 0 : null === (a = o.getEntriesByType) || void 0 === a ? void 0 : null === (i = a.call(o, 'navigation')) || void 0 === i ? void 0 : null === (r = i[0]) || void 0 === r ? void 0 : r.type) === 'reload' || (null === (l = await (null == b ? void 0 : null === (c = b.processUtils) || void 0 === c ? void 0 : null === (u = c.getLastCrash) || void 0 === u ? void 0 : u.call(c))) || void 0 === l ? void 0 : l.rendererCrashReason) != null || !w) {
+var r, i, a, s, o, l, u, c;
+if ((null === (o = window) || void 0 === o ? void 0 : null === (s = o.performance) || void 0 === s ? void 0 : null === (a = s.getEntriesByType) || void 0 === a ? void 0 : null === (i = a.call(s, 'navigation')) || void 0 === i ? void 0 : null === (r = i[0]) || void 0 === r ? void 0 : r.type) === 'reload' || (null === (l = await (null == b ? void 0 : null === (c = b.processUtils) || void 0 === c ? void 0 : null === (u = c.getLastCrash) || void 0 === u ? void 0 : u.call(c))) || void 0 === l ? void 0 : l.rendererCrashReason) != null || !w) {
   let e = m.Z.getChannel(n);
   null != e && (t = {
     guildId: e.getGuildId(),
@@ -83,12 +83,12 @@ return R.Wb.isSessionEstablished() || __OVERLAY__;
 return P;
   }
 }
-o = 'GatewayConnectionStore', (a = 'displayName') in(i = H) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'GatewayConnectionStore', (a = 'displayName') in(i = H) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new H(c.Z, {
+}) : i[a] = s, t.Z = new H(c.Z, {
   START_SESSION: function() {
 return R.Wb.isClosed() ? (M.verbose('Socket is reconnecting because of starting new session'), R.Wb.connect()) : (M.verbose('Socket is not reconnecting during a new session because it is not closed'), !1);
   },
@@ -118,7 +118,7 @@ e.willReconnect && (null != e.streamKey ? R.Wb.streamPing(e.streamKey) : R.Wb.vo
 return R.GC.update({
   guildId: e.guildId,
   channelId: e.channelId
-}), (0, v.isIOS)() && null == e.channelId && x === D.$7l.BACKGROUND && R.Wb.close(!0), !1;
+}), (0, v.isIOS)() && x === D.$7l.BACKGROUND && (null == e.channelId ? R.Wb.close(!0) : R.Wb.isClosed() && (C.Y(!1), R.Wb.connect())), !1;
   },
   VOICE_STATE_UPDATES: function(e) {
 let {
@@ -168,7 +168,7 @@ t === R.GC.channelId && R.GC.setState({
 });
   },
   APP_STATE_UPDATE: function(e) {
-return (0, v.isIOS)() ? (h.default.isAuthenticated() && (x === D.$7l.INACTIVE && e.state === D.$7l.BACKGROUND && null == R.GC.channelId ? R.Wb.close(!0) : x === D.$7l.BACKGROUND && e.state === D.$7l.ACTIVE && (C.Y(!1), R.Wb.connect())), x = e.state) : e.state === D.$7l.ACTIVE && (C.Y(!1), h.default.isAuthenticated() && R.Wb.resetBackoff('App state is active')), !1;
+return (0, v.isIOS)() ? (h.default.isAuthenticated() && (x === D.$7l.INACTIVE && e.state === D.$7l.BACKGROUND && null == R.GC.channelId ? R.Wb.close(!0) : x === D.$7l.BACKGROUND && e.state === D.$7l.ACTIVE && R.Wb.isClosed() && (C.Y(!1), R.Wb.connect())), x = e.state) : e.state === D.$7l.ACTIVE && (C.Y(!1), h.default.isAuthenticated() && R.Wb.resetBackoff('App state is active')), !1;
   },
   GUILD_MEMBERS_REQUEST: function(e) {
 return R.Wb.isSessionEstablished() && ('userIds' in e ? l()(e.userIds).chunk(100).forEach(t => {

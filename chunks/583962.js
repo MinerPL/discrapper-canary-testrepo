@@ -1,9 +1,9 @@
 n.d(t, {
   PD: function() {
-return R;
+return M;
   },
   aR: function() {
-return O;
+return R;
   }
 }), n(47120);
 var i = n(735250),
@@ -16,50 +16,49 @@ var i = n(735250),
   u = n(477690),
   d = n(481060),
   h = n(239091),
-  p = n(607070),
-  _ = n(100527),
-  f = n(367907),
-  m = n(906732),
-  g = n(434404),
-  C = n(496675),
-  I = n(259580),
-  E = n(267642),
-  N = n(624138),
-  x = n(667815),
-  S = n(531572),
-  v = n(26323),
-  Z = n(30513),
-  T = n(981631),
-  L = n(689938),
-  A = n(962095);
-let b = (0, N.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
-  M = e => {
+  p = n(100527),
+  _ = n(367907),
+  f = n(906732),
+  m = n(434404),
+  g = n(496675),
+  C = n(259580),
+  I = n(267642),
+  E = n(624138),
+  N = n(667815),
+  x = n(531572),
+  S = n(26323),
+  v = n(30513),
+  Z = n(981631),
+  T = n(689938),
+  L = n(962095);
+let A = (0, E.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
+  b = e => {
 let {
   guild: t,
   onSelect: n
-} = e, [r, a] = l.useState(t.premiumProgressBarEnabled), [s, o] = l.useState(!1), u = (0, c.e7)([C.Z], () => C.Z.can(T.Plq.MANAGE_GUILD, t)), p = async () => {
+} = e, [r, a] = l.useState(t.premiumProgressBarEnabled), [s, o] = l.useState(!1), u = (0, c.e7)([g.Z], () => g.Z.can(Z.Plq.MANAGE_GUILD, t)), p = async () => {
   if (!!u)
-    o(!0), await g.Z.saveGuild(t.id, {
+    o(!0), await m.Z.saveGuild(t.id, {
       premiumProgressBarEnabled: !r
     }), a(!r), o(!1);
 };
 return (0, i.jsx)(d.Menu, {
   navId: 'progress-bar-context',
   onClose: h.Zy,
-  'aria-label': L.Z.Messages.PROGRESS_BAR_ACTIONS_MENU_LABEL,
+  'aria-label': T.Z.Messages.PROGRESS_BAR_ACTIONS_MENU_LABEL,
   onSelect: n,
   children: (0, i.jsx)(d.MenuCheckboxItem, {
     id: 'progress-bar-enabled',
-    label: L.Z.Messages.GUILD_ENABLE_PROGRESS_BAR,
+    label: T.Z.Messages.GUILD_ENABLE_PROGRESS_BAR,
     checked: r,
     disabled: s,
     action: p
   })
 });
   },
-  R = 57,
-  O = 57 + b,
-  y = {
+  M = 57,
+  R = 57 + A,
+  O = {
 tension: 180,
 friction: 80
   };
@@ -69,76 +68,75 @@ guild: t,
 withMargin: n
   } = e, {
 analyticsLocations: r
-  } = (0, m.ZP)(_.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY), {
+  } = (0, f.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY), {
 premiumSubscriberCount: u,
-id: g
-  } = t, N = (0, E.rF)(u, g), b = (0, E.FZ)(N, t.id), R = null == b, O = null != b ? b : N, P = (0, c.e7)([S.Z], () => {
+id: m
+  } = t, E = (0, I.rF)(u, m), A = (0, I.FZ)(E, t.id), M = null == A, R = null != A ? A : E, y = (0, c.e7)([x.Z], () => {
 var e;
-return null !== (e = S.Z.getCountForGuild(g)) && void 0 !== e ? e : 0;
-  }), j = (0, c.e7)([p.Z], () => p.Z.useReducedMotion), D = (0, c.e7)([C.Z], () => C.Z.can(T.Plq.MANAGE_GUILD, t));
+return null !== (e = x.Z.getCountForGuild(m)) && void 0 !== e ? e : 0;
+  }), P = (0, c.e7)([g.Z], () => g.Z.can(Z.Plq.MANAGE_GUILD, t));
   l.useEffect(() => {
-P !== u && (0, x.v)(g, u);
+y !== u && (0, N.v)(m, u);
   }, [
-g,
-P,
+m,
+y,
 u
   ]);
-  let U = ''.concat(Math.min(100, u / (0, E.vn)(t.id)[O] * 100), '%'),
+  let j = ''.concat(Math.min(100, u / (0, I.vn)(t.id)[R] * 100), '%'),
 {
-  current: w
-} = l.useRef(U),
-G = {
+  current: D
+} = l.useRef(j),
+U = {
   from: {
-    width: P === u ? w : '0%'
+    width: y === u ? D : '0%'
   },
   to: {
-    width: U
+    width: j
   },
-  config: y,
-  immediate: j
+  config: O
 },
-[k, B] = (0, s.useSpring)(() => G),
-V = () => {
-  (0, f.yw)(T.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+[G, w] = (0, d.useSpring)(() => U),
+k = () => {
+  (0, _.yw)(Z.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
     location: {
-      section: T.jXE.PREMIUM_GUILD_PROGRESS_BAR
+      section: Z.jXE.PREMIUM_GUILD_PROGRESS_BAR
     },
-    guild_id: g,
+    guild_id: m,
     location_stack: r
-  }), (0, v.Z)({
+  }), (0, S.Z)({
     analyticsLocations: r,
     analyticsSourceLocation: {
-      page: T.ZY5.GUILD_CHANNEL,
-      section: T.jXE.PREMIUM_GUILD_PROGRESS_BAR,
-      object: T.qAy.TOOLTIP
+      page: Z.ZY5.GUILD_CHANNEL,
+      section: Z.jXE.PREMIUM_GUILD_PROGRESS_BAR,
+      object: Z.qAy.TOOLTIP
     },
     guild: t,
-    perks: (0, Z.VF)(),
-    perkIntro: L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_MODAL_PROGRESS_BAR_HEADER
+    perks: (0, v.VF)(),
+    perkIntro: T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_MODAL_PROGRESS_BAR_HEADER
   });
 },
-H = L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_GOAL.format({
-  levelName: (0, E.e9)(O)
+B = T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_GOAL.format({
+  levelName: (0, I.e9)(R)
 }),
-F = L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_BLURB.format({
+H = T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_BLURB.format({
   numBoosts: u,
-  numTotal: (0, E.vn)(t.id)[O]
+  numTotal: (0, I.vn)(t.id)[R]
 });
-  R && (H = (0, E.e9)(O), F = L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({
+  M && (B = (0, I.e9)(R), H = T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({
 numBoosts: u
   }));
-  let W = (0, o.JA)('boosts-'.concat(t.id));
+  let V = (0, o.JA)('boosts-'.concat(t.id));
   return (0, i.jsx)('li', {
 children: (0, i.jsx)(d.Tooltip, {
-  text: R ? L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP_COMPLETE : L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP.format({
-    levelName: (0, E.nW)(O)
+  text: M ? T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP_COMPLETE : T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP.format({
+    levelName: (0, I.nW)(R)
   }),
   color: d.Tooltip.Colors.BLACK,
   position: 'top',
   delay: 200,
   hideOnClick: !0,
   children: e => (0, i.jsxs)(d.Clickable, {
-    ...W,
+    ...V,
     ...e,
     'aria-label': void 0,
     role: 'button',
@@ -148,16 +146,16 @@ children: (0, i.jsx)(d.Tooltip, {
         right: 4
       }
     },
-    onClick: V,
+    onClick: k,
     onMouseEnter: () => {
       var t;
-      null === (t = e.onMouseEnter) || void 0 === t || t.call(e), B(G);
+      null === (t = e.onMouseEnter) || void 0 === t || t.call(e), w(U);
     },
-    className: a()(A.container, {
-      [A.containerWithMargin]: n
+    className: a()(L.container, {
+      [L.containerWithMargin]: n
     }),
     onContextMenu: e => {
-      D && (0, h.vq)(e, e => (0, i.jsx)(M, {
+      P && (0, h.vq)(e, e => (0, i.jsx)(b, {
         ...e,
         guild: t
       }));
@@ -167,48 +165,48 @@ children: (0, i.jsx)(d.Tooltip, {
         children: e['aria-label']
       }),
       (0, i.jsxs)('div', {
-        className: A.textArea,
+        className: L.textArea,
         children: [
           (0, i.jsx)('div', {
-            className: A.goalTextContainer,
+            className: L.goalTextContainer,
             children: (0, i.jsx)(d.Text, {
-              className: A.goalText,
+              className: L.goalText,
               color: 'interactive-active',
               variant: 'text-xs/bold',
-              children: H
+              children: B
             })
           }),
           (0, i.jsxs)('div', {
-            className: A.progressFraction,
+            className: L.progressFraction,
             children: [
               (0, i.jsx)(d.Text, {
                 color: 'interactive-normal',
                 variant: 'text-xs/normal',
-                children: F
+                children: H
               }),
-              (0, i.jsx)(I.Z, {
-                className: A.count,
+              (0, i.jsx)(C.Z, {
+                className: L.count,
                 height: 16,
                 width: 16,
-                direction: I.Z.Directions.RIGHT
+                direction: C.Z.Directions.RIGHT
               })
             ]
           })
         ]
       }),
       (0, i.jsxs)('div', {
-        className: a()(A.progressBarContainer, {
-          [A.progressBarContainerComplete]: R
+        className: a()(L.progressBarContainer, {
+          [L.progressBarContainerComplete]: M
         }),
         children: [
           (0, i.jsx)(s.animated.div, {
-            className: A.progressBar,
-            style: k
+            className: L.progressBar,
+            style: G
           }),
-          R ? (0, i.jsx)('span', {
-            'aria-label': L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_TADA_ICON_ALT_TEXT,
+          M ? (0, i.jsx)('span', {
+            'aria-label': T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_TADA_ICON_ALT_TEXT,
             role: 'img',
-            className: A.tadaIcon,
+            className: L.tadaIcon,
             children: '\uD83C\uDF89'
           }) : null
         ]

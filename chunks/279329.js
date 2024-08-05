@@ -6,8 +6,8 @@ return u;
 var i = t(735250);
 t(470079);
 var a = t(442837),
-  r = t(481060),
-  l = t(196051),
+  l = t(481060),
+  r = t(196051),
   o = t(441729),
   s = t(689938);
 
@@ -16,10 +16,10 @@ function u(e, n) {
 n,
 e
   ]);
-  return '' === e.content ? null : (0, i.jsx)(r.MenuItem, {
+  return '' === e.content ? null : (0, i.jsx)(l.MenuItem, {
 id: 'tts',
 label: t ? s.Z.Messages.STOP_SPEAKING_MESSAGE : s.Z.Messages.SPEAK_MESSAGE,
-icon: r.ChatSpeakIcon,
-action: () => t ? (0, l.NB)() : (0, l.LA)(n, e)
+icon: l.ChatSpeakIcon,
+action: () => t ? (0, r.NB)() : (0, r.LA)(n, e)
   });
 }

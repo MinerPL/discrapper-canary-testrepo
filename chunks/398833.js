@@ -2,9 +2,9 @@ var r = n(413135).Buffer,
   i = n(136924),
   a = n(814033);
 e.exports = function(e) {
-  return new s(e);
+  return new o(e);
 };
-var o = {
+var s = {
   secp256k1: {
 name: 'secp256k1',
 byteLength: 32
@@ -35,8 +35,8 @@ byteLength: 66
   }
 };
 
-function s(e) {
-  this.curveType = o[e], !this.curveType && (this.curveType = {
+function o(e) {
+  this.curveType = s[e], !this.curveType && (this.curveType = {
 name: e
   }), this.curve = new i.ec(this.curveType.name), this.keys = void 0;
 }
@@ -53,18 +53,18 @@ a.fill(0), i = r.concat([
   }
   return t ? i.toString(t) : i;
 }
-o.p224 = o.secp224r1, o.p256 = o.secp256r1 = o.prime256v1, o.p192 = o.secp192r1 = o.prime192v1, o.p384 = o.secp384r1, o.p521 = o.secp521r1, s.prototype.generateKeys = function(e, t) {
+s.p224 = s.secp224r1, s.p256 = s.secp256r1 = s.prime256v1, s.p192 = s.secp192r1 = s.prime192v1, s.p384 = s.secp384r1, s.p521 = s.secp521r1, o.prototype.generateKeys = function(e, t) {
   return this.keys = this.curve.genKeyPair(), this.getPublicKey(e, t);
-}, s.prototype.computeSecret = function(e, t, n) {
+}, o.prototype.computeSecret = function(e, t, n) {
   return t = t || 'utf8', !r.isBuffer(e) && (e = new r(e, t)), l(this.curve.keyFromPublic(e).getPublic().mul(this.keys.getPrivate()).getX(), n, this.curveType.byteLength);
-}, s.prototype.getPublicKey = function(e, t) {
+}, o.prototype.getPublicKey = function(e, t) {
   var n = this.keys.getPublic('compressed' === t, !0);
   return 'hybrid' === t && (n[n.length - 1] % 2 ? n[0] = 7 : n[0] = 6), l(n, e);
-}, s.prototype.getPrivateKey = function(e) {
+}, o.prototype.getPrivateKey = function(e) {
   return l(this.keys.getPrivate(), e);
-}, s.prototype.setPublicKey = function(e, t) {
+}, o.prototype.setPublicKey = function(e, t) {
   return t = t || 'utf8', !r.isBuffer(e) && (e = new r(e, t)), this.keys._importPublic(e), this;
-}, s.prototype.setPrivateKey = function(e, t) {
+}, o.prototype.setPrivateKey = function(e, t) {
   t = t || 'utf8', !r.isBuffer(e) && (e = new r(e, t));
   var n = new a(e);
   return n = n.toString(16), this.keys = this.curve.genKeyPair(), this.keys._importPrivate(n), this;

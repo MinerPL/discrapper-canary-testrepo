@@ -6,8 +6,8 @@ return d;
 var r = n(430198),
   i = n(557135),
   a = n(66999),
-  o = n(592125),
-  s = n(496675),
+  s = n(592125),
+  o = n(496675),
   l = n(944486),
   u = n(979651);
 class c extends Error {}
@@ -16,13 +16,13 @@ async function d(e) {
 channelId: t,
 timeoutMs: n = 10000,
 bypassChangeModal: d = !1
-  } = e, _ = o.Z.getChannel(t);
+  } = e, _ = s.Z.getChannel(t);
   if (null == _ || !await i.Z.handleVoiceConnect({
   bypassGuildIdCheck: !0,
   bypassChangeModal: d,
   channel: _,
   connected: u.Z.isInChannel(t),
-  needSubscriptionToAccess: (0, a.$)(t, o.Z, r.Z, s.Z).needSubscriptionToAccess
+  needSubscriptionToAccess: (0, a.$)(t, s.Z, r.Z, o.Z).needSubscriptionToAccess
 }))
 return !1;
   let E = new Promise((e, r) => {

@@ -2,8 +2,8 @@ let r;
 n(411104), n(47120), n(653041);
 var i = n(348327),
   a = n.n(i),
-  o = n(512722),
-  s = n.n(o),
+  s = n(512722),
+  o = n.n(s),
   l = n(727258),
   u = n(41776),
   c = n(581883),
@@ -90,14 +90,14 @@ sourceId: t,
 targetId: n,
 moveToBelow: r,
 combine: i
-  } = e, a = S.getNode(t), o = S.getNode(n);
-  if (null == a || null == o)
+  } = e, a = S.getNode(t), s = S.getNode(n);
+  if (null == a || null == s)
 return !1;
-  if (s()(!(i && a.type === l.eD.FOLDER), '[SORTED GUILDS] Can\'t combine a folder '.concat(a.id, ' with another guilds list item')), s()(!(i && null != o.parentId), '[SORTED GUILDS] Can\'t combine with a guild '.concat(o.id, ' that\'s already inside of a folder')), s()(!(a.type === l.eD.FOLDER && null != o.parentId), '[SORTED GUILDS] Can\'t move a folder '.concat(a.id, ' to inside of another folder ').concat(o.parentId)), i) {
-let e = o.type !== l.eD.FOLDER ? S.convertToFolder(o) : o;
+  if (o()(!(i && a.type === l.eD.FOLDER), '[SORTED GUILDS] Can\'t combine a folder '.concat(a.id, ' with another guilds list item')), o()(!(i && null != s.parentId), '[SORTED GUILDS] Can\'t combine with a guild '.concat(s.id, ' that\'s already inside of a folder')), o()(!(a.type === l.eD.FOLDER && null != s.parentId), '[SORTED GUILDS] Can\'t move a folder '.concat(a.id, ' to inside of another folder ').concat(s.parentId)), i) {
+let e = s.type !== l.eD.FOLDER ? S.convertToFolder(s) : s;
 S.moveInto(a, e, r);
   } else
-S.moveNextTo(a, o, r);
+S.moveNextTo(a, s, r);
 }
 
 function C(e) {
@@ -128,21 +128,21 @@ return !1;
   let a = '' === r.name ? void 0 : r.name;
   if (a !== i.name) {
 let e = S.cloneNode(i);
-s()(e.id === i.id, '[SORTED GUILDS] Replacement folder node must have same id.'), e.name = a, S.replaceNode(i, e);
+o()(e.id === i.id, '[SORTED GUILDS] Replacement folder node must have same id.'), e.name = a, S.replaceNode(i, e);
   }
-  let o = S.getNode(t);
-  if (null == o)
+  let s = S.getNode(t);
+  if (null == s)
 return !1;
-  let u = o.children.map(e => e.id).filter(_.lm),
+  let u = s.children.map(e => e.id).filter(_.lm),
 c = new Set(u),
 d = new Set(n),
 E = new Set([...u].filter(e => !d.has(e)));
   n.filter(e => !c.has(e)).forEach(e => {
 let t = S.getNode(e);
-null != t && S.moveInto(t, o, !0);
+null != t && S.moveInto(t, s, !0);
   }), E.forEach(e => {
 let t = S.getNode(e);
-null != t && S.moveNextTo(t, o, !0);
+null != t && S.moveNextTo(t, s, !0);
   });
 }
 
@@ -166,8 +166,8 @@ user: r
   } = e, i = T.default.getCurrentUser(), a = p.Z.getGuild(t);
   if ((null == i ? void 0 : i.id) !== r.id || null == a)
 return !1;
-  let o = 'string' == typeof n ? new Date(n) : n;
-  return o !== a.joinedAt && null != o && v();
+  let s = 'string' == typeof n ? new Date(n) : n;
+  return s !== a.joinedAt && null != s && v();
 }
 
 function b(e) {
@@ -196,7 +196,7 @@ e.type === l.eD.FOLDER && e.expanded && U(e, !1);
 
 function U(e, t) {
   let n = S.cloneNode(e);
-  s()(n.id === e.id, '[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.'), n.expanded = t, S.replaceNode(e, n);
+  o()(n.id === e.id, '[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.'), n.expanded = t, S.replaceNode(e, n);
 }
 let w = (0, d.oH)((e, t) => e.sortedGuildNodes().map(e => e.id)),
   x = (0, d.oH)((e, t) => e.getRoots().map(A)),

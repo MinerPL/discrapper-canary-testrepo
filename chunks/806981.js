@@ -1,8 +1,8 @@
 var r = n(814033),
   i = n(685053),
   a = i.getNAF,
-  o = i.getJSF,
-  s = i.assert;
+  s = i.getJSF,
+  o = i.assert;
 
 function l(e, t) {
   this.type = e, this.p = new r(t.p, 16), this.red = t.prime ? r.red(t.prime) : r.mont(this.p), this.zero = new r(0).toRed(this.red), this.one = new r(1).toRed(this.red), this.two = new r(2).toRed(this.red), this.n = t.n && new r(t.n, 16), this.g = t.g && this.pointFromJSON(t.g, t.gRed), this._wnafT1 = [, , , , ], this._wnafT2 = [, , , , ], this._wnafT3 = [, , , , ], this._wnafT4 = [, , , , ], this._bitLength = this.n ? this.n.bitLength() : 0;
@@ -18,16 +18,16 @@ e.exports = l, l.prototype.point = function() {
 }, l.prototype.validate = function() {
   throw Error('Not implemented');
 }, l.prototype._fixedNafMul = function(e, t) {
-  s(e.precomputed);
+  o(e.precomputed);
   var n, r, i = e._getDoubles(),
-o = a(t, 1, this._bitLength),
+s = a(t, 1, this._bitLength),
 l = (1 << i.step + 1) - (i.step % 2 == 0 ? 2 : 1);
   l /= 3;
   var u = [];
-  for (n = 0; n < o.length; n += i.step) {
+  for (n = 0; n < s.length; n += i.step) {
 r = 0;
 for (var c = n + i.step - 1; c >= n; c--)
-  r = (r << 1) + o[c];
+  r = (r << 1) + s[c];
 u.push(r);
   }
   for (var d = this.jpoint(null, null, null), _ = this.jpoint(null, null, null), E = l; E > 0; E--) {
@@ -40,27 +40,27 @@ d = d.add(_);
   var n = 4,
 r = e._getNAFPoints(n);
   n = r.wnd;
-  for (var i = r.points, o = a(t, n, this._bitLength), l = this.jpoint(null, null, null), u = o.length - 1; u >= 0; u--) {
-for (var c = 0; u >= 0 && 0 === o[u]; u--)
+  for (var i = r.points, s = a(t, n, this._bitLength), l = this.jpoint(null, null, null), u = s.length - 1; u >= 0; u--) {
+for (var c = 0; u >= 0 && 0 === s[u]; u--)
   c++;
 if (u >= 0 && c++, l = l.dblp(c), u < 0)
   break;
-var d = o[u];
-s(0 !== d), l = 'affine' === e.type ? d > 0 ? l.mixedAdd(i[d - 1 >> 1]) : l.mixedAdd(i[-d - 1 >> 1].neg()) : d > 0 ? l.add(i[d - 1 >> 1]) : l.add(i[-d - 1 >> 1].neg());
+var d = s[u];
+o(0 !== d), l = 'affine' === e.type ? d > 0 ? l.mixedAdd(i[d - 1 >> 1]) : l.mixedAdd(i[-d - 1 >> 1].neg()) : d > 0 ? l.add(i[d - 1 >> 1]) : l.add(i[-d - 1 >> 1].neg());
   }
   return 'affine' === e.type ? l.toP() : l;
 }, l.prototype._wnafMulAdd = function(e, t, n, r, i) {
-  var s, l, u, c = this._wnafT1,
+  var o, l, u, c = this._wnafT1,
 d = this._wnafT2,
 _ = this._wnafT3,
 E = 0;
-  for (s = 0; s < r; s++) {
-var f = (u = t[s])._getNAFPoints(e);
-c[s] = f.wnd, d[s] = f.points;
+  for (o = 0; o < r; o++) {
+var f = (u = t[o])._getNAFPoints(e);
+c[o] = f.wnd, d[o] = f.points;
   }
-  for (s = r - 1; s >= 1; s -= 2) {
-var h = s - 1,
-  p = s;
+  for (o = r - 1; o >= 1; o -= 2) {
+var h = o - 1,
+  p = o;
 if (1 !== c[h] || 1 !== c[p]) {
   _[h] = a(n[h], c[h], this._bitLength), _[p] = a(n[p], c[p], this._bitLength), E = Math.max(_[h].length, E), E = Math.max(_[p].length, E);
   continue;
@@ -83,7 +83,7 @@ var I = [
     1,
     3
   ],
-  T = o(n[h], n[p]);
+  T = s(n[h], n[p]);
 for (l = 0, E = Math.max(T[0].length, E), _[h] = Array(E), _[p] = Array(E); l < E; l++) {
   var g = 0 | T[0][l],
     S = 0 | T[1][l];
@@ -92,16 +92,16 @@ for (l = 0, E = Math.max(T[0].length, E), _[h] = Array(E), _[p] = Array(E); l < 
   }
   var A = this.jpoint(null, null, null),
 N = this._wnafT4;
-  for (s = E; s >= 0; s--) {
-for (var v = 0; s >= 0;) {
+  for (o = E; o >= 0; o--) {
+for (var v = 0; o >= 0;) {
   var O = !0;
   for (l = 0; l < r; l++)
-    N[l] = 0 | _[l][s], 0 !== N[l] && (O = !1);
+    N[l] = 0 | _[l][o], 0 !== N[l] && (O = !1);
   if (!O)
     break;
-  v++, s--;
+  v++, o--;
 }
-if (s >= 0 && v++, A = A.dblp(v), s < 0)
+if (o >= 0 && v++, A = A.dblp(v), o < 0)
   break;
 for (l = 0; l < r; l++) {
   var R = N[l];
@@ -111,8 +111,8 @@ for (l = 0; l < r; l++) {
   }
 }
   }
-  for (s = 0; s < r; s++)
-d[s] = null;
+  for (o = 0; o < r; o++)
+d[o] = null;
   return i ? A : A.toP();
 }, l.BasePoint = u, u.prototype.eq = function() {
   throw Error('Not implemented');
@@ -122,7 +122,7 @@ d[s] = null;
   e = i.toArray(e, t);
   var n = this.p.byteLength();
   if ((4 === e[0] || 6 === e[0] || 7 === e[0]) && e.length - 1 == 2 * n)
-return 6 === e[0] ? s(e[e.length - 1] % 2 == 0) : 7 === e[0] && s(e[e.length - 1] % 2 == 1), this.point(e.slice(1, 1 + n), e.slice(1 + n, 1 + 2 * n));
+return 6 === e[0] ? o(e[e.length - 1] % 2 == 0) : 7 === e[0] && o(e[e.length - 1] % 2 == 1), this.point(e.slice(1, 1 + n), e.slice(1 + n, 1 + 2 * n));
   if ((2 === e[0] || 3 === e[0]) && e.length - 1 === n)
 return this.pointFromX(e.slice(1, 1 + n), 3 === e[0]);
   throw Error('Unknown point format');

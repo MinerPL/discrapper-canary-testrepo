@@ -3,7 +3,7 @@ a.r(L), a.d(L, {
 return e4;
   }
 }), a(47120), a(757143), a(653041);
-var C, t, i, r, s = a(735250),
+var C, t, i, s, r = a(735250),
   n = a(470079),
   l = a(120356),
   o = a.n(l),
@@ -17,8 +17,8 @@ var C, t, i, r, s = a(735250),
   E = a(393238),
   I = a(110924),
   h = a(315263),
-  p = a(607070),
-  u = a(100527),
+  u = a(607070),
+  p = a(100527),
   f = a(906732),
   T = a(213609),
   m = a(216547),
@@ -56,8 +56,8 @@ var C, t, i, r, s = a(735250),
   eC = a(537789),
   et = a(841547),
   ei = a(239298),
-  er = a(513202),
-  es = a(884338),
+  es = a(513202),
+  er = a(884338),
   en = a(701488),
   el = a(981631),
   eo = a(689938),
@@ -71,8 +71,8 @@ var C, t, i, r, s = a(735250),
   eE = a(392381),
   eI = a(176890),
   eh = a(997074),
-  ep = a(901924),
-  eu = a(448096),
+  eu = a(901924),
+  ep = a(448096),
   ef = a(286557),
   eT = a(358176),
   em = a(610924),
@@ -91,11 +91,11 @@ function ej() {
   let {
 width: a,
 ref: C
-  } = (0, E.Z)(), t = (0, V.e7)([p.Z], () => p.Z.useReducedMotion), i = (0, V.e7)([W.Z], () => W.Z.isAcknowledged(en.ES.FREE)), [r, l] = n.useState(!1), [d, M] = n.useState(!1), [I, h] = n.useState(!1), T = (0, c.k6)(), m = (0, c.TH)(), g = (0, V.e7)([D.Z], () => D.Z.getState().theme), [N] = n.useState((0, Q.c)(W.Z) > 0), {
+  } = (0, E.Z)(), t = (0, V.e7)([u.Z], () => u.Z.useReducedMotion), i = (0, V.e7)([W.Z], () => W.Z.isAcknowledged(en.ES.FREE)), [s, l] = n.useState(!1), [d, M] = n.useState(!1), [I, h] = n.useState(!1), T = (0, c.k6)(), m = (0, c.TH)(), g = (0, V.e7)([D.Z], () => D.Z.getState().theme), [N] = n.useState((0, Q.c)(W.Z) > 0), {
 analyticsLocations: v
   } = (0, f.ZP)([
 ...null !== (L = null == m ? void 0 : null === (e = m.state) || void 0 === e ? void 0 : e.analyticsLocations) && void 0 !== L ? L : [],
-u.Z.ACTIVITIES_PAGE
+p.Z.ACTIVITIES_PAGE
   ]), A = n.useRef(new Date());
   return n.useEffect(() => {
 setTimeout(() => {
@@ -109,10 +109,10 @@ setTimeout(() => {
 }, 1500), setTimeout(() => {
   h(!0);
 }, 1700));
-  }, [i]), n.useEffect(() => ((0, _.Y)(el.Z5c.ACTIVITIES), N && !v.includes(u.Z.ACTIVITIES_PAGE_NOTIFICATION_DOT) && T.replace(el.Z5c.ACTIVITIES, {
+  }, [i]), n.useEffect(() => ((0, _.Y)(el.Z5c.ACTIVITIES), N && !v.includes(p.Z.ACTIVITIES_PAGE_NOTIFICATION_DOT) && T.replace(el.Z5c.ACTIVITIES, {
 analyticsLocations: [
   ...v,
-  u.Z.ACTIVITIES_PAGE_NOTIFICATION_DOT
+  p.Z.ACTIVITIES_PAGE_NOTIFICATION_DOT
 ]
   }), () => {
 let e = A.current,
@@ -125,74 +125,74 @@ B.default.track(el.rMx.ROUTE_UNMOUNT, {
 v,
 T,
 N
-  ]), (0, s.jsx)(f.Gt, {
+  ]), (0, r.jsx)(f.Gt, {
 value: v,
-children: (0, s.jsxs)('div', {
+children: (0, r.jsxs)('div', {
   className: eH.outerContainer,
   children: [
-    (0, s.jsxs)(x.ZP, {
+    (0, r.jsxs)(x.ZP, {
       children: [
-        (0, s.jsx)(w.Z, {
+        (0, r.jsx)(w.Z, {
           className: o()(eH.activitiesBirthdayIcon, {
             [eH.activitiesBirthdayIconLight]: 'light' === g
           })
         }),
-        (0, s.jsx)(Z.Heading, {
+        (0, r.jsx)(Z.Heading, {
           variant: 'heading-md/semibold',
           children: eo.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_TAB_TITLE
         })
       ]
     }),
-    (0, s.jsx)(Z.Scroller, {
+    (0, r.jsx)(Z.Scroller, {
       className: eH.scroller,
-      children: (0, s.jsxs)('div', {
+      children: (0, r.jsxs)('div', {
         className: eH.innerContainer,
         children: [
-          (0, s.jsxs)('div', {
+          (0, r.jsxs)('div', {
             className: eH.heroFlipper,
             children: [
-              (0, s.jsxs)('div', {
+              (0, r.jsxs)('div', {
                 className: o()(eH.heroFlipperInner, {
                   [eH.heroFlipped]: i || t
                 }),
                 children: [
-                  (0, s.jsx)('img', {
+                  (0, r.jsx)('img', {
                     src: 'light' === g ? ec : ed,
                     className: o()(eH.hero),
                     alt: eo.Z.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_ACTIVITIES_HERO_ALT
                   }),
-                  (0, s.jsx)('div', {
+                  (0, r.jsx)('div', {
                     className: o()(eH.heroFlipperBack, {
                       [eH.heroFlipperBackLightMode]: 'light' === g
                     }),
-                    children: (0, s.jsx)(eR, {
+                    children: (0, r.jsx)(eR, {
                       containerRef: C,
                       width: a
                     })
                   })
                 ]
               }),
-              !t && r ? (0, s.jsx)('div', {
+              !t && s ? (0, r.jsx)('div', {
                 className: eH.heroConfetti01Wrapper,
-                children: (0, s.jsx)(H.Z, {
+                children: (0, r.jsx)(H.Z, {
                   colors: ey
                 })
               }) : null,
-              !t && d ? (0, s.jsx)('div', {
+              !t && d ? (0, r.jsx)('div', {
                 className: eH.heroConfetti02Wrapper,
-                children: (0, s.jsx)(H.Z, {
+                children: (0, r.jsx)(H.Z, {
                   colors: ey
                 })
               }) : null,
-              !t && I ? (0, s.jsx)('div', {
+              !t && I ? (0, r.jsx)('div', {
                 className: eH.heroConfetti03Wrapper,
-                children: (0, s.jsx)(H.Z, {
+                children: (0, r.jsx)(H.Z, {
                   colors: ey
                 })
               }) : null
             ]
           }),
-          null != a && a < 660 ? (0, s.jsx)(R.Z, {
+          null != a && a < 660 ? (0, r.jsx)(R.Z, {
             autoPlay: !0,
             muted: !0,
             src: eV,
@@ -200,12 +200,12 @@ children: (0, s.jsxs)('div', {
             className: eH.freeForeverBreakpointVideo,
             controls: t
           }) : null,
-          (0, s.jsx)(eB, {}),
-          (0, s.jsx)(eF, {}),
-          (0, s.jsx)(eJ, {}),
-          (0, s.jsx)(eQ, {}),
-          (0, s.jsx)(e$, {}),
-          (0, s.jsx)(e6, {})
+          (0, r.jsx)(eB, {}),
+          (0, r.jsx)(eF, {}),
+          (0, r.jsx)(eJ, {}),
+          (0, r.jsx)(eQ, {}),
+          (0, r.jsx)(e$, {}),
+          (0, r.jsx)(e6, {})
         ]
       })
     })
@@ -218,36 +218,36 @@ function eR(e) {
   let {
 width: L,
 containerRef: a
-  } = e, C = (0, V.e7)([p.Z], () => p.Z.useReducedMotion);
-  return (0, s.jsxs)('div', {
+  } = e, C = (0, V.e7)([u.Z], () => u.Z.useReducedMotion);
+  return (0, r.jsxs)('div', {
 className: eH.freeForeverContainer,
 ref: a,
 children: [
-  (0, s.jsx)('div', {
+  (0, r.jsx)('div', {
     className: eH.freeForeverLeft,
-    children: (0, s.jsxs)('div', {
+    children: (0, r.jsxs)('div', {
       className: eH.freeForeverText,
       children: [
-        (0, s.jsx)(j.Z, {
+        (0, r.jsx)(j.Z, {
           className: o()(eH.freeForeverLogo, {
             [eH.freeForeverLogoMedium]: null != L && L < 1000,
             [eH.freeForeverLogoSmall]: null != L && L < 480
           })
         }),
-        (0, s.jsx)(Z.Heading, {
+        (0, r.jsx)(Z.Heading, {
           variant: null == L || L < 480 ? 'heading-sm/bold' : L < 1000 ? 'display-sm' : 'display-md',
           children: eo.Z.Messages.EMBEDDED_ACTIVITIES_FREE_FOREVER_TITLE
         }),
-        (0, s.jsx)(Z.Text, {
+        (0, r.jsx)(Z.Text, {
           variant: null == L || L < 480 ? 'text-sm/medium' : L < 1000 ? 'text-md/medium' : 'text-lg/medium',
           children: eo.Z.Messages.EMBEDDED_ACTIVITIES_FREE_FOREVER_DESCRIPTION
         })
       ]
     })
   }),
-  null != L && L > 660 ? (0, s.jsx)('div', {
+  null != L && L > 660 ? (0, r.jsx)('div', {
     className: eH.freeForeverRight,
-    children: (0, s.jsx)(R.Z, {
+    children: (0, r.jsx)(R.Z, {
       autoPlay: !0,
       muted: !0,
       loop: !0,
@@ -262,26 +262,26 @@ children: [
 }
 
 function eB() {
-  return (0, s.jsxs)('div', {
+  return (0, r.jsxs)('div', {
 className: eH.birthdayExplanationWrapper,
 children: [
-  (0, s.jsx)('div', {
+  (0, r.jsx)('div', {
     className: eH.birthdayBalloonsContainer,
-    children: (0, s.jsx)(ea.j, {
+    children: (0, r.jsx)(ea.j, {
       className: o()(eH.birthdayExplanationBalloonsLeft, eH.balloon)
     })
   }),
-  (0, s.jsx)(Z.Heading, {
+  (0, r.jsx)(Z.Heading, {
     variant: 'heading-md/semibold',
     className: eH.birthdayExplanationText,
     children: eo.Z.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_HERO_TEXT_WITH_2_LINKS.format({
       linkToBdayBlogPost: 'https://dis.gd/birthday',
-      linkToSurprises: e => (0, s.jsxs)(Z.Anchor, {
+      linkToSurprises: e => (0, r.jsxs)(Z.Anchor, {
         href: eA,
         children: [
           e,
-          (0, s.jsx)('img', {
-            src: eu,
+          (0, r.jsx)('img', {
+            src: ep,
             className: eH.birthdayExplanationNitroIcon,
             alt: eo.Z.Messages.EMBEDDED_ACTIVITIES_NITRO_ICON_ALT
           })
@@ -289,9 +289,9 @@ children: [
       })
     })
   }),
-  (0, s.jsx)('div', {
+  (0, r.jsx)('div', {
     className: eH.birthdayBalloonsContainer,
-    children: (0, s.jsx)(ea.j, {
+    children: (0, r.jsx)(ea.j, {
       className: o()(eH.birthdayExplanationBalloonsRight, eH.balloon),
       flipX: !0
     })
@@ -332,7 +332,7 @@ let t = [];
 return t.push({
   id: en.ES.DISCORD_TURNS_8,
   title: eo.Z.Messages.EMBEDDED_ACTIVITIES_WEEKLY_DROPS_TILE_TITLE,
-  content: (0, s.jsx)(Z.Text, {
+  content: (0, r.jsx)(Z.Text, {
     variant: 'text-sm/normal',
     className: eH.whatsNewDescription,
     children: eo.Z.Messages.EMBEDDED_ACTIVITIES_WEEKLY_DROPS_TILE_DESCRIPTION
@@ -347,7 +347,7 @@ return t.push({
 }), t.push({
   id: en.ES.GDM_ACTIVITIES,
   title: eo.Z.Messages.EMBEDDED_ACTIVITIES_WHATS_NEW_GDM_TILE_TITLE,
-  content: (0, s.jsx)(Z.Text, {
+  content: (0, r.jsx)(Z.Text, {
     variant: 'text-sm/normal',
     className: eH.whatsNewDescription,
     children: eo.Z.Messages.EMBEDDED_ACTIVITIES_WHATS_NEW_GDM_TILE_DESCRIPTION
@@ -362,7 +362,7 @@ return t.push({
 }), t.push({
   id: en.ES.PUTT_PARTY,
   title: eo.Z.Messages.EMBEDDED_ACTIVITIES_WHATS_NEW_PUTT_PARTY_TILE_TITLE,
-  content: (0, s.jsx)(Z.Text, {
+  content: (0, r.jsx)(Z.Text, {
     variant: 'text-sm/normal',
     className: eH.whatsNewDescription,
     children: eo.Z.Messages.EMBEDDED_ACTIVITIES_WHATS_NEW_PUTT_PARTY_TILE_DESCRIPTION
@@ -377,7 +377,7 @@ return t.push({
 }), t.push({
   id: en.ES.JAMSPACE,
   title: eo.Z.Messages.EMBEDDED_ACTIVITIES_WHATS_NEW_JAMSPACE_TILE_TITLE,
-  content: (0, s.jsx)(Z.Text, {
+  content: (0, r.jsx)(Z.Text, {
     variant: 'text-sm/normal',
     className: eH.whatsNewDescription,
     children: eo.Z.Messages.EMBEDDED_ACTIVITIES_WHATS_NEW_JAMSPACE_TILE_DESCRIPTION
@@ -392,7 +392,7 @@ return t.push({
 }), t.push({
   id: en.ES.POKER,
   title: eo.Z.Messages.EMBEDDED_ACTIVITIES_WHATS_NEW_POKER_TILE_TITLE,
-  content: (0, s.jsx)(Z.Text, {
+  content: (0, r.jsx)(Z.Text, {
     variant: 'text-sm/normal',
     className: eH.whatsNewDescription,
     children: eo.Z.Messages.EMBEDDED_ACTIVITIES_WHATS_NEW_POKER_TILE_DESCRIPTION
@@ -411,19 +411,19 @@ L,
 C,
 a
   ]);
-  return t.length <= 0 ? null : (0, s.jsx)('div', {
+  return t.length <= 0 ? null : (0, r.jsx)('div', {
 className: eH.whatsNew,
-children: (0, s.jsx)(m.Z, {
+children: (0, r.jsx)(m.Z, {
   tileMargin: eP,
   headerId: eO,
   tileWidth: ek,
   header: eo.Z.Messages.WHATS_NEW,
   headerContainerClassName: eH.tileScrollerHeader,
   scrollContainerClassName: eH.tileScrollerContainer,
-  children: (0, s.jsx)('ul', {
+  children: (0, r.jsx)('ul', {
     'aria-labelledby': eO,
     className: eH.whatsNewItemsContainer,
-    children: t.map(e => (0, s.jsx)(eW, {
+    children: t.map(e => (0, r.jsx)(eW, {
       ...e
     }, e.id))
   })
@@ -438,14 +438,14 @@ imgAlt: a,
 title: C,
 content: t,
 link: i,
-isAppLink: r,
+isAppLink: s,
 id: l,
 cardImgUrl: c,
 revealDate: d,
 enabled: M
-  } = e, _ = (0, V.e7)([p.Z], () => p.Z.useReducedMotion), E = (0, V.e7)([N.default], () => N.default.locale), {
+  } = e, _ = (0, V.e7)([u.Z], () => u.Z.useReducedMotion), E = (0, V.e7)([N.default], () => N.default.locale), {
 analyticsLocations: h
-  } = (0, f.ZP)(u.Z.ACTIVITIES_PAGE_WHATS_NEW_TILE), [T, m] = n.useState(!1), g = (0, I.Z)(T), x = (0, V.e7)([W.Z], () => {
+  } = (0, f.ZP)(p.Z.ACTIVITIES_PAGE_WHATS_NEW_TILE), [T, m] = n.useState(!1), g = (0, I.Z)(T), x = (0, V.e7)([W.Z], () => {
 if (!M)
   return 0;
 let e = W.Z.isOpened(l);
@@ -460,34 +460,34 @@ M && F.Z(l);
 M,
 l
   ]);
-  let D = (0, s.jsxs)(s.Fragment, {
+  let D = (0, r.jsxs)(r.Fragment, {
 children: [
-  (0, s.jsx)(Z.Text, {
+  (0, r.jsx)(Z.Text, {
     variant: 'text-sm/semibold',
     className: eH.whatsNewDate,
     children: new Intl.DateTimeFormat(E, {
       dateStyle: 'long'
     }).format(d)
   }),
-  (0, s.jsxs)('div', {
+  (0, r.jsxs)('div', {
     className: eH.whatsNewImageContainer,
     children: [
-      (0, s.jsx)('img', {
+      (0, r.jsx)('img', {
         src: L,
         className: eH.whatsNewImage,
         alt: a
       }),
-      (0, s.jsx)(Z.Text, {
+      (0, r.jsx)(Z.Text, {
         variant: 'eyebrow',
         className: eH.newTag,
         children: eo.Z.Messages.NEW
       })
     ]
   }),
-  (0, s.jsxs)('div', {
+  (0, r.jsxs)('div', {
     className: eH.whatsNewTextArea,
     children: [
-      (0, s.jsx)(Z.Heading, {
+      (0, r.jsx)(Z.Heading, {
         variant: 'heading-md/bold',
         className: eH.whatsNewDetailsHeader,
         children: C
@@ -497,21 +497,21 @@ children: [
   })
 ]
   });
-  return (0, s.jsx)(f.Gt, {
+  return (0, r.jsx)(f.Gt, {
 value: h,
-children: (0, s.jsxs)('div', {
+children: (0, r.jsxs)('div', {
   className: eH.flipCardOuter,
   children: [
-    _ || 2 !== x || T || !g ? null : (0, s.jsx)('div', {
+    _ || 2 !== x || T || !g ? null : (0, r.jsx)('div', {
       className: eH.flipCardConfetti,
-      children: (0, s.jsx)(H.Z, {
+      children: (0, r.jsx)(H.Z, {
         colors: ey
       })
     }),
-    (0, s.jsx)(eG, {
+    (0, r.jsx)(eG, {
       openState: x,
       link: i,
-      isAppLink: r,
+      isAppLink: s,
       onOpen: () => {
         m(!0), F.E(l), B.default.track(el.rMx.ACTIVITIES_WHATS_NEW_OPENED, {
           section_id: l
@@ -525,25 +525,25 @@ children: (0, s.jsxs)('div', {
         });
       }
     }),
-    (0, s.jsxs)('div', {
+    (0, r.jsxs)('div', {
       className: o()(eH.flipCardInner, {
         [eH.flipCardInnerFlipped]: 2 === x,
         [eH.flipCardOpening]: T && !_,
         [eH.flipCardInnerReducedMotion]: _
       }),
       children: [
-        (0, s.jsx)('div', {
+        (0, r.jsx)('div', {
           className: eH.flipCardOpened,
           children: (() => {
             switch (x) {
               case 0:
               case 1:
-                return (0, s.jsx)(Z.Text, {
+                return (0, r.jsx)(Z.Text, {
                   variant: 'text-md/medium',
                   children: '( ͡\xB0 ͜ʖ ͡\xB0) https://discord.com/careers'
                 });
               case 2:
-                return (0, s.jsx)('div', {
+                return (0, r.jsx)('div', {
                   className: eH.whatsNewItemContainer,
                   children: D
                 });
@@ -552,10 +552,10 @@ children: (0, s.jsxs)('div', {
             }
           })()
         }),
-        (0, s.jsxs)('div', {
+        (0, r.jsxs)('div', {
           className: eH.flipCardClosed,
           children: [
-            (0, s.jsx)('img', {
+            (0, r.jsx)('img', {
               src: c,
               className: eH.flipCardClosedImg,
               alt: eo.Z.Messages.EMBEDDED_ACTIVITIES_PLAYING_CARD_ALT
@@ -563,7 +563,7 @@ children: (0, s.jsxs)('div', {
             (() => {
               switch (x) {
                 case 0:
-                  return (0, s.jsx)(Z.Text, {
+                  return (0, r.jsx)(Z.Text, {
                     variant: 'text-sm/semibold',
                     className: eH.flipCardClosedText,
                     children: eo.Z.Messages.EMBEDDED_ACTIVITIES_CLICK_TO_REVEAL_DATE.format({
@@ -571,7 +571,7 @@ children: (0, s.jsxs)('div', {
                     })
                   });
                 case 1:
-                  return (0, s.jsx)(Z.Text, {
+                  return (0, r.jsx)(Z.Text, {
                     variant: 'text-sm/semibold',
                     className: eH.flipCardText,
                     children: eo.Z.Messages.EMBEDDED_ACTIVITIES_REVEAL_THIS_WEEKS_DROP.format({
@@ -599,17 +599,17 @@ isAppLink: C,
 onOpen: t,
 onCardContentClick: i
   } = e, {
-analyticsLocations: r
-  } = (0, f.ZP)(), n = (0, V.e7)([p.Z], () => p.Z.useReducedMotion);
+analyticsLocations: s
+  } = (0, f.ZP)(), n = (0, V.e7)([u.Z], () => u.Z.useReducedMotion);
   switch (L) {
 case 0:
-  return (0, s.jsx)('div', {
+  return (0, r.jsx)('div', {
     className: o()(eH.clickableContainer, eH.noPointer, {
       [eH.clickableContainerReducedMotion]: n
     })
   });
 case 1:
-  return (0, s.jsx)(Z.Clickable, {
+  return (0, r.jsx)(Z.Clickable, {
     'aria-label': eo.Z.Messages.EMBEDDED_ACTIVITIES_OPEN_BIRTHDAY_SURPRISE,
     className: o()(eH.clickableContainer, {
       [eH.clickableContainerReducedMotion]: n
@@ -618,13 +618,13 @@ case 1:
   });
 case 2:
   if (null == a)
-    return (0, s.jsx)('div', {
+    return (0, r.jsx)('div', {
       className: o()(eH.clickableContainer, eH.noPointer, {
         [eH.clickableContainerReducedMotion]: n
       })
     });
   if (C)
-    return (0, s.jsx)(ei.o, {
+    return (0, r.jsx)(ei.o, {
       className: o()(eH.clickableContainer, {
         [eH.clickableContainerReducedMotion]: n
       }),
@@ -632,11 +632,11 @@ case 2:
       to: {
         pathname: a,
         state: {
-          analyticsLocations: r
+          analyticsLocations: s
         }
       }
     });
-  return (0, s.jsx)(Z.Clickable, {
+  return (0, r.jsx)(Z.Clickable, {
     tag: 'a',
     href: a,
     target: '_blank',
@@ -666,7 +666,7 @@ if (e[a].activityItem.application.id !== L[a].activityItem.application.id || e[a
 function eJ() {
   let {
 analyticsLocations: e
-  } = (0, f.ZP)(u.Z.ACTIVITIES_HAPPENING_NOW), L = (0, V.e7)([
+  } = (0, f.ZP)(p.Z.ACTIVITIES_HAPPENING_NOW), L = (0, V.e7)([
 U.ZP,
 g.Z,
 v.Z,
@@ -684,16 +684,16 @@ return S.ZP.getFlattenedGuildIds().forEach(t => {
     let i = v.Z.getChannel(t.channelId);
     if (null == i || t.userIds.has(L.id))
       return;
-    let r = (0, z.Z)({
+    let s = (0, z.Z)({
         activityConfigs: a,
         applicationId: t.applicationId,
         applications: C
       }),
-      s = Array.from(t.userIds).map(e => b.default.getUser(e)).filter(O.lm);
-    null != r && e.push({
-      activityItem: r,
+      r = Array.from(t.userIds).map(e => b.default.getUser(e)).filter(O.lm);
+    null != s && e.push({
+      activityItem: s,
       channel: i,
-      users: s
+      users: r
     });
   });
 }), e;
@@ -706,11 +706,11 @@ properties: {
 }
   }, {
 trackOnInitialLoad: !0
-  }), L.length <= 0) ? null : (0, s.jsx)(f.Gt, {
+  }), L.length <= 0) ? null : (0, r.jsx)(f.Gt, {
 value: e,
-children: (0, s.jsx)('div', {
+children: (0, r.jsx)('div', {
   className: eH.happeningNowContainer,
-  children: (0, s.jsx)(m.Z, {
+  children: (0, r.jsx)(m.Z, {
     tileMargin: eK,
     headerId: eU,
     tileWidth: eY,
@@ -718,7 +718,7 @@ children: (0, s.jsx)('div', {
     subHeader: eo.Z.Messages.EMBEDDED_ACTIVITIES_HAPPENING_NOW_DESCRIPTION,
     headerContainerClassName: eH.tileScrollerHeader,
     scrollContainerClassName: eH.tileScrollerContainer,
-    children: (0, s.jsx)('ul', {
+    children: (0, r.jsx)('ul', {
       'aria-labelledby': eU,
       className: eH.whatsNewItemsContainer,
       children: L.map(e => {
@@ -727,7 +727,7 @@ children: (0, s.jsx)('div', {
           channel: a,
           users: C
         } = e;
-        return (0, s.jsx)(ez, {
+        return (0, r.jsx)(ez, {
           activityItem: L,
           channel: a,
           users: C
@@ -744,15 +744,15 @@ function ez(e) {
 activityItem: L,
 channel: a,
 users: C
-  } = e, t = (0, V.e7)([p.Z], () => p.Z.useReducedMotion), {
+  } = e, t = (0, V.e7)([u.Z], () => u.Z.useReducedMotion), {
 imageBackground: i,
-onActivityItemSelected: r
+onActivityItemSelected: s
   } = (0, ee.ZP)({
 activityItem: L,
 channel: a,
 guildId: a.guild_id,
 locationObject: {},
-embeddedActivitiesManager: er.Z,
+embeddedActivitiesManager: es.Z,
 backgroundResolution: 512
   }), n = k.ZP.getName(a.guild_id, a.id, null == C ? void 0 : C[0]);
   n = (0, P.aF)(n, 25);
@@ -760,31 +760,31 @@ backgroundResolution: 512
 var e;
 return null === (e = A.Z.getGuild(a.guild_id)) || void 0 === e ? void 0 : e.name;
   });
-  return (0, s.jsxs)(Z.Clickable, {
-onClick: r,
+  return (0, r.jsxs)(Z.Clickable, {
+onClick: s,
 className: o()((0, y.Q)(el.BRd.DARK), eH.happeningNowCard, {
   [eH.happeningNowCardReducedMotion]: t
 }),
 children: [
-  (0, s.jsx)('img', {
+  (0, r.jsx)('img', {
     src: i.url,
     alt: L.application.name,
     className: eH.happeningNowCardImg
   }),
-  (0, s.jsxs)('div', {
+  (0, r.jsxs)('div', {
     className: eH.happeningNowCardForeground,
     children: [
-      (0, s.jsx)(Z.Heading, {
+      (0, r.jsx)(Z.Heading, {
         variant: 'heading-lg/bold',
         children: L.application.name
       }),
-      (0, s.jsx)(es.Z, {
+      (0, r.jsx)(er.Z, {
         guildId: a.guild_id,
         users: C,
         max: 4,
         className: eH.happeningNowAvatars
       }),
-      (0, s.jsx)(Z.Text, {
+      (0, r.jsx)(Z.Text, {
         className: eH.happeningNowAvatarNames,
         variant: 'text-xs/normal',
         children: C.length > 1 ? eo.Z.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
@@ -794,14 +794,14 @@ children: [
           username: n
         })
       }),
-      (0, s.jsx)(Z.Text, {
+      (0, r.jsx)(Z.Text, {
         variant: 'text-md/medium',
         className: o()(eH.happeningNowJoin, {
           [eH.happeningNowJoinReducedMotion]: t
         }),
         children: eo.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
       }),
-      null != l ? (0, s.jsx)(Z.Text, {
+      null != l ? (0, r.jsx)(Z.Text, {
         variant: 'text-xs/medium',
         className: eH.happeningNowChannelAndGuildName,
         children: eo.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_CHANNEL_IN_SERVER.format({
@@ -817,24 +817,23 @@ children: [
 
 function eQ() {
   let e = (0, q.Z)({
-guildId: null,
-channel: void 0
+guildId: null
   });
   return n.useEffect(() => {
 (0, G.w1)({
   guildId: null
 });
-  }, []), (0, s.jsxs)(s.Fragment, {
+  }, []), (0, r.jsxs)(r.Fragment, {
 children: [
-  (0, s.jsx)('div', {
+  (0, r.jsx)('div', {
     className: eH.activityGridHeader,
-    children: (0, s.jsxs)('div', {
+    children: (0, r.jsxs)('div', {
       children: [
-        (0, s.jsx)(Z.Heading, {
+        (0, r.jsx)(Z.Heading, {
           variant: 'heading-lg/bold',
           children: eo.Z.Messages.EMBEDDED_ACTIVITIES_EXPLORE_ACTIVITIES
         }),
-        (0, s.jsx)(Z.Text, {
+        (0, r.jsx)(Z.Text, {
           variant: 'text-sm/medium',
           className: eH.activityGridSubheader,
           children: eo.Z.Messages.EMBEDDED_ACTIVITIES_EXPLORE_ACTIVITIES_SUBHEADER
@@ -842,9 +841,9 @@ children: [
       ]
     })
   }),
-  (0, s.jsx)('div', {
+  (0, r.jsx)('div', {
     className: eH.activityGrid,
-    children: e.map(e => (0, s.jsx)(eq, {
+    children: e.map(e => (0, r.jsx)(eq, {
       activityItem: e
     }, e.application.id))
   })
@@ -861,7 +860,7 @@ analyticsLocations: C
   } = (0, f.ZP)(), t = (0, eL.Z)({
 applicationId: a.application.id,
 size: 512
-  }), i = (0, V.e7)([p.Z], () => p.Z.useReducedMotion), r = (null === (L = a.application.embeddedActivityConfig) || void 0 === L ? void 0 : L.activity_preview_video_asset_id) != null ? (0, $.Z)(a.application.id, a.application.embeddedActivityConfig.activity_preview_video_asset_id) : null, [l, H] = n.useState(!1), [c, d] = n.useState(l);
+  }), i = (0, V.e7)([u.Z], () => u.Z.useReducedMotion), s = (null === (L = a.application.embeddedActivityConfig) || void 0 === L ? void 0 : L.activity_preview_video_asset_id) != null ? (0, $.Z)(a.application.id, a.application.embeddedActivityConfig.activity_preview_video_asset_id) : null, [l, H] = n.useState(!1), [c, d] = n.useState(l);
   n.useEffect(() => {
 l && d(!0);
   }, [l]);
@@ -870,7 +869,7 @@ _ = () => H(!1),
 E = null == a.application.maxParticipants || -1 === a.application.maxParticipants ? eo.Z.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS : eo.Z.Messages.EMBEDDED_ACTIVITIES_ONE_TO_N_PARTICIPANTS.format({
   count: a.application.maxParticipants
 });
-  return (0, s.jsxs)(ei.o, {
+  return (0, r.jsxs)(ei.o, {
 to: {
   pathname: el.Z5c.ACTIVITY_DETAILS(a.application.id),
   state: {
@@ -885,22 +884,22 @@ onFocus: M,
 onMouseLeave: _,
 onBlur: _,
 children: [
-  (0, s.jsxs)('div', {
+  (0, r.jsxs)('div', {
     className: eH.activityCardImageContainer,
     children: [
-      (0, s.jsx)('img', {
+      (0, r.jsx)('img', {
         src: t.url,
         alt: a.application.name,
         className: eH.activityCardImage
       }),
-      !i && null != r && c ? (0, s.jsx)('div', {
+      !i && null != s && c ? (0, r.jsx)('div', {
         className: o()(eH.video, {
           [eH.videoFadeOut]: !l
         }),
         onAnimationEnd: () => l ? null : d(!1),
-        children: (0, s.jsx)(R.Z, {
+        children: (0, r.jsx)(R.Z, {
           className: eH.video,
-          src: r,
+          src: s,
           loop: !0,
           autoPlay: !0,
           muted: !0
@@ -908,42 +907,42 @@ children: [
       }) : null
     ]
   }),
-  (0, s.jsxs)('div', {
+  (0, r.jsxs)('div', {
     className: eH.activityCardDetails,
     children: [
-      (0, s.jsxs)('div', {
+      (0, r.jsxs)('div', {
         children: [
-          (0, s.jsx)(Z.Heading, {
+          (0, r.jsx)(Z.Heading, {
             variant: 'heading-xl/extrabold',
             children: a.application.name
           }),
-          (0, s.jsx)(Z.Text, {
+          (0, r.jsx)(Z.Text, {
             variant: 'text-xs/semibold',
             className: eH.activityCardParticipants,
             children: E
           })
         ]
       }),
-      a.application.tags.length > 0 ? (0, s.jsx)('div', {
+      a.application.tags.length > 0 ? (0, r.jsx)('div', {
         className: eH.activityCardTagContainer,
-        children: a.application.tags.slice(0, 3).map(e => (0, s.jsx)('div', {
+        children: a.application.tags.slice(0, 3).map(e => (0, r.jsx)('div', {
           className: eH.activityCardTag,
-          children: (0, s.jsx)(Z.Text, {
+          children: (0, r.jsx)(Z.Text, {
             variant: 'text-xs/semibold',
             children: e
           })
         }, e))
       }) : null,
-      (0, s.jsxs)('div', {
+      (0, r.jsxs)('div', {
         className: o()(eH.activityCardHoverHint, {
           [eH.activityCardHoverHintReducedMotion]: i
         }),
         children: [
-          (0, s.jsx)(Z.Text, {
+          (0, r.jsx)(Z.Text, {
             variant: 'text-sm/semibold',
             children: eo.Z.Messages.LEARN_MORE
           }),
-          (0, s.jsx)(Z.ChevronSmallRightIcon, {
+          (0, r.jsx)(Z.ChevronSmallRightIcon, {
             size: 'xs',
             color: 'currentColor'
           })
@@ -956,18 +955,18 @@ children: [
 }
 
 function e$() {
-  return (0, s.jsxs)('div', {
+  return (0, r.jsxs)('div', {
 className: eH.celebrateContainer,
 id: ev,
 children: [
-  (0, s.jsx)(Z.Heading, {
+  (0, r.jsx)(Z.Heading, {
     variant: 'heading-lg/bold',
     children: eo.Z.Messages.EMBEDDED_ACTIVITIES_HOW_YOU_CAN_CELEBRATE_WITH_US
   }),
-  (0, s.jsxs)('div', {
+  (0, r.jsxs)('div', {
     className: eH.celebrateCardGrid,
     children: [
-      (0, s.jsxs)(Z.Clickable, {
+      (0, r.jsxs)(Z.Clickable, {
         tag: 'a',
         href: eS,
         target: '_blank',
@@ -976,34 +975,34 @@ children: [
           section: 'share_nitro'
         }),
         children: [
-          (0, s.jsx)('img', {
-            src: eu,
+          (0, r.jsx)('img', {
+            src: ep,
             className: eH.celebrateNitroIcon,
             alt: eo.Z.Messages.EMBEDDED_ACTIVITIES_NITRO_ICON_ALT
           }),
-          (0, s.jsx)(Z.Heading, {
+          (0, r.jsx)(Z.Heading, {
             variant: 'heading-lg/bold',
             className: eH.celebrateCardHeader,
             children: eo.Z.Messages.EMBEDDED_ACTIVITIES_SHARE_THE_GIFT_OF_NITRO
           }),
-          (0, s.jsx)(Z.Heading, {
+          (0, r.jsx)(Z.Heading, {
             variant: 'heading-sm/normal',
             className: eH.celebrateCardSubheader,
             children: eo.Z.Messages.EMBEDDED_ACTIVITIES_SHARE_THREE_TRIALS.format({
               nitroLink: eS
             })
           }),
-          (0, s.jsx)('div', {
+          (0, r.jsx)('div', {
             className: eH.celebrateCardFiller
           }),
-          (0, s.jsx)('img', {
+          (0, r.jsx)('img', {
             className: eH.celebrateCardImage,
             src: ef,
             alt: eo.Z.Messages.EMBEDDED_ACTIVITIES_SHARE_NITRO_TRIAL_ALT
           })
         ]
       }),
-      (0, s.jsxs)(Z.Clickable, {
+      (0, r.jsxs)(Z.Clickable, {
         tag: 'a',
         href: ew,
         target: '_blank',
@@ -1014,29 +1013,29 @@ children: [
           });
         },
         children: [
-          (0, s.jsx)(Z.Heading, {
+          (0, r.jsx)(Z.Heading, {
             variant: 'heading-lg/bold',
             className: eH.celebrateCardHeader,
             children: eo.Z.Messages.EMBEDDED_ACTIVITIES_EXCLUSIVE_BIRTHDAY_MERCH
           }),
-          (0, s.jsx)(Z.Heading, {
+          (0, r.jsx)(Z.Heading, {
             variant: 'heading-sm/normal',
             className: eH.celebrateCardSubheader,
             children: eo.Z.Messages.EMBEDDED_ACTIVITIES_VISIT_OUR_MERCH_STORE.format({
               merchStoreLink: ew
             })
           }),
-          (0, s.jsx)('div', {
+          (0, r.jsx)('div', {
             className: eH.celebrateCardFiller
           }),
-          (0, s.jsx)('img', {
+          (0, r.jsx)('img', {
             className: eH.celebrateCardImage,
-            src: ep,
+            src: eu,
             alt: eo.Z.Messages.EMBEDDED_ACTIVITIES_MERCH_STORE_ALT
           })
         ]
       }),
-      (0, s.jsxs)(Z.Clickable, {
+      (0, r.jsxs)(Z.Clickable, {
         tag: 'a',
         href: eb,
         target: '_blank',
@@ -1048,22 +1047,22 @@ children: [
           }), null === (L = (0, h.default)(eb)) || void 0 === L || L(e);
         },
         children: [
-          (0, s.jsx)(Z.Heading, {
+          (0, r.jsx)(Z.Heading, {
             variant: 'heading-lg/bold',
             className: eH.celebrateCardHeader,
             children: eo.Z.Messages.EMBEDDED_ACTIVITIES_CELEBRATE_TOWN_HALL_TITLE
           }),
-          (0, s.jsx)(Z.Heading, {
+          (0, r.jsx)(Z.Heading, {
             variant: 'heading-sm/normal',
             className: eH.celebrateCardSubheader,
             children: eo.Z.Messages.EMBEDDED_ACTIVITIES_CELEBRATE_TOWN_HALL_DESCRIPTION.format({
               clickHandler: (0, h.default)(eb)
             })
           }),
-          (0, s.jsx)('div', {
+          (0, r.jsx)('div', {
             className: eH.celebrateCardFiller
           }),
-          (0, s.jsx)('img', {
+          (0, r.jsx)('img', {
             className: eH.celebrateCardImage,
             src: eT,
             alt: eo.Z.Messages.EMBEDDED_ACTIVITIES_CELEBRATE_TOWN_HALL_IMG_ALT
@@ -1077,15 +1076,15 @@ children: [
 }
 
 function e6() {
-  return (0, s.jsx)('div', {
+  return (0, r.jsx)('div', {
 className: eH.kitBashContainer,
-children: (0, s.jsx)(et.i, {})
+children: (0, r.jsx)(et.i, {})
   });
 }
 
 function e4() {
-  return (0, s.jsx)(eC.i, {
-children: (0, s.jsx)(ej, {})
+  return (0, r.jsx)(eC.i, {
+children: (0, r.jsx)(ej, {})
   });
 }
-(r = t || (t = {})).SHARE_NITRO = 'share_nitro', r.DISXCORE_MERCH = 'disxcore_merch', r.TOWN_HALL = 'town_hall';
+(s = t || (t = {})).SHARE_NITRO = 'share_nitro', s.DISXCORE_MERCH = 'disxcore_merch', s.TOWN_HALL = 'town_hall';

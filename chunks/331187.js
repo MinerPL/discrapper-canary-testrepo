@@ -1,6 +1,6 @@
 var i = n(735250),
-  s = n(470079),
-  a = n(703656),
+  a = n(470079),
+  s = n(703656),
   r = n(970731),
   l = n(626135),
   o = n(63063),
@@ -13,7 +13,7 @@ t.Z = e => {
   let {
 markAsDismissed: t
   } = e;
-  return s.useEffect(() => {
+  return a.useEffect(() => {
 l.default.track(d.rMx.DM_SAFETY_COACHMARK_ACTION, {
   action: c.Rv.VIEW
 });
@@ -31,7 +31,7 @@ onClick: e => {
   });
 },
 onSecondaryClick: () => {
-  (0, a.uL)(d.Z5c.SETTINGS('privacy-and-safety')), l.default.track(d.rMx.DM_SAFETY_COACHMARK_ACTION, {
+  (0, s.uL)(d.Z5c.SETTINGS('privacy-and-safety')), l.default.track(d.rMx.DM_SAFETY_COACHMARK_ACTION, {
     action: c.Rv.CHANGE_SETTING
   });
 },

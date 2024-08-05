@@ -1,6 +1,6 @@
 let r;
-var i, a, o = n(442837),
-  s = n(524437),
+var i, a, s = n(442837),
+  o = n(524437),
   l = n(692547),
   u = n(780384),
   c = n(570140),
@@ -50,15 +50,15 @@ if (null == a)
 if (!E.i.getCurrentConfig({
     location: 'ThemeStore'
   }).enabled)
-  return a === s.Q2.LIGHT ? S.BRd.LIGHT : S.BRd.DARK;
+  return a === o.Q2.LIGHT ? S.BRd.LIGHT : S.BRd.DARK;
 switch (a) {
-  case s.Q2.LIGHT:
+  case o.Q2.LIGHT:
     return S.BRd.LIGHT;
-  case s.Q2.DARK:
+  case o.Q2.DARK:
     return S.BRd.DARK;
-  case s.Q2.DARKER:
+  case o.Q2.DARKER:
     return S.BRd.DARKER;
-  case s.Q2.MIDNIGHT:
+  case o.Q2.MIDNIGHT:
     return S.BRd.MIDNIGHT;
   default:
     return S.BRd.DARK;
@@ -79,7 +79,7 @@ function L() {
   let e = C();
   return e !== v && (v = e, !0);
 }
-class b extends(a = o.ZP.PersistedStore) {
+class b extends(a = s.ZP.PersistedStore) {
   initialize(e) {
 (null == e ? void 0 : e.theme) != null && (v = e.theme), this.waitFor(I.ZP, m.Z, T.Z, d.Z);
   }

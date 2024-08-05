@@ -5,9 +5,9 @@ var i = t(735250),
   l = t.n(s),
   o = t(149765),
   r = t(253923),
-  c = t(481060),
-  d = t(901524),
-  u = t(291913),
+  d = t(481060),
+  c = t(453628),
+  u = t(996987),
   I = t(332379),
   m = t(549856);
 class _ extends a.PureComponent {
@@ -18,7 +18,7 @@ let {
 } = this.props;
 if (null == n || null == t)
   throw Error('PermissionsForm.getOverwriteValue: Invalid allow or deny props');
-return o.e$(n, e) ? d.y.ALLOW : o.e$(t, e) ? d.y.DENY : d.y.PASSTHROUGH;
+return o.e$(n, e) ? c.y.ALLOW : o.e$(t, e) ? c.y.DENY : c.y.PASSTHROUGH;
   }
   getPermissionValue(e, n) {
 return o.e$(n, e);
@@ -30,13 +30,13 @@ let {
 t(e, n);
   }
   renderDisabledIndicator(e) {
-return (0, i.jsx)(c.Tooltip, {
+return (0, i.jsx)(d.Tooltip, {
   text: e,
   position: 'top',
-  color: c.Tooltip.Colors.RED,
+  color: d.Tooltip.Colors.RED,
   children: e => (0, i.jsx)('span', {
     ...e,
-    children: (0, i.jsx)(c.DenyIcon, {
+    children: (0, i.jsx)(d.DenyIcon, {
       size: 'sm',
       color: 'currentColor',
       className: I.icon
@@ -52,9 +52,9 @@ let {
   flag: s
 } = e, {
   permissions: o,
-  locked: d,
+  locked: c,
   permissionRender: m
-} = this.props, _ = null == m ? void 0 : m(s), N = !!(d || _), E = 'string' == typeof _ ? this.renderDisabledIndicator(_) : null, T = l()({
+} = this.props, _ = null == m ? void 0 : m(s), N = !!(c || _), E = 'string' == typeof _ ? this.renderDisabledIndicator(_) : null, T = l()({
   [I.title]: null != E
 });
 return null == o ? (0, i.jsxs)(u.Z, {
@@ -70,7 +70,7 @@ return null == o ? (0, i.jsxs)(u.Z, {
       children: n
     })
   ]
-}, String(s)) : (0, i.jsxs)(c.FormSwitch, {
+}, String(s)) : (0, i.jsxs)(d.FormSwitch, {
   disabled: N,
   value: this.getPermissionValue(s, o),
   onChange: e => this.handleChange(s, e),
@@ -89,16 +89,16 @@ let {
   spec: e,
   className: n
 } = this.props;
-return (0, i.jsx)(c.FormSection, {
+return (0, i.jsx)(d.FormSection, {
   className: n,
-  children: (0, i.jsxs)(c.HeadingLevel, {
-    component: (0, i.jsx)(c.FormTitle, {
-      tag: c.FormTitleTags.H5,
+  children: (0, i.jsxs)(d.HeadingLevel, {
+    component: (0, i.jsx)(d.FormTitle, {
+      tag: d.FormTitleTags.H5,
       className: null != e.description ? m.marginBottom8 : m.marginBottom20,
       children: e.title
     }),
     children: [
-      null != e.description && (0, i.jsx)(c.Text, {
+      null != e.description && (0, i.jsx)(d.Text, {
         variant: 'text-sm/normal',
         color: 'header-secondary',
         className: m.marginBottom20,

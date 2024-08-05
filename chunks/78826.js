@@ -12,8 +12,8 @@ return _;
 var r = n(735250),
   i = n(470079),
   a = n(374470),
-  o = n(626135),
-  s = n(960048),
+  s = n(626135),
+  o = n(960048),
   l = n(981631);
 let u = i.createContext({
   registerAsset: () => {},
@@ -51,11 +51,11 @@ e.size !== p.size && m(e);
     errorPrefix: i,
     errorMessage: a
   } = e;
-  !n && null != _ && (o.default.track(l.rMx.QUEST_ASSET_LOADING_FAILURE, {
+  !n && null != _ && (s.default.track(l.rMx.QUEST_ASSET_LOADING_FAILURE, {
     source: _,
     quest_id: E,
     asset_id: d(t)
-  }), s.Z.captureException(Error(''.concat(i, ': ').concat(null != a ? ''.concat(a, ', ') : '').concat(d(t), ', ').concat(r)), {
+  }), o.Z.captureException(Error(''.concat(i, ': ').concat(null != a ? ''.concat(a, ', ') : '').concat(d(t), ', ').concat(r)), {
     tags: {
       source: _
     }
@@ -126,9 +126,9 @@ children: n
   } = e, {
 registerAsset: r,
 unregisterAsset: a
-  } = i.useContext(u), o = i.useRef(null);
+  } = i.useContext(u), s = i.useRef(null);
   return i.useEffect(() => {
-let e = o.current;
+let e = s.current;
 return null != e && r(e, t), () => {
   null != e && a(e);
 };
@@ -136,7 +136,7 @@ return null != e && r(e, t), () => {
 r,
 a,
 t
-  ]), n(o);
+  ]), n(s);
 }
 
 function f() {

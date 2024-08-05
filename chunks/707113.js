@@ -21,7 +21,7 @@ var l = t(735250),
 function N(e) {
   let {
 guild: n
-  } = e, t = (0, c.$j)(n.id), s = (0, a.useSpring)({
+  } = e, t = (0, c.$j)(n.id), s = (0, d.useSpring)({
 height: t ? 3 : 0,
 config: a.config.stiff
   });

@@ -3,7 +3,7 @@ n.d(t, {
 return r;
   }
 }), n(47120);
-var r, i, a, o, s, l, u = n(512722),
+var r, i, a, s, o, l, u = n(512722),
   c = n.n(u),
   d = n(442837),
   _ = n(759174),
@@ -96,12 +96,12 @@ let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
 return N.values(g(t, e));
   }
 }
-l = 'ApplicationSubscriptionStore', (s = 'displayName') in(o = y) ? Object.defineProperty(o, s, {
+l = 'ApplicationSubscriptionStore', (o = 'displayName') in(s = y) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[s] = l, t.Z = new y(E.Z, {
+}) : s[o] = l, t.Z = new y(E.Z, {
   LOGOUT: function() {
 S.clear(), A.clear(), N.clear(), v = {}, O = {};
   },

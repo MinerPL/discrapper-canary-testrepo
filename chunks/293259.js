@@ -1,102 +1,102 @@
-i.d(n, {
+i.d(s, {
   Z: function() {
 return A;
   }
 });
-var s = i(735250),
+var n = i(735250),
   l = i(470079),
-  o = i(442837),
-  t = i(692547),
-  r = i(481060),
-  a = i(239091),
+  t = i(442837),
+  o = i(692547),
+  a = i(481060),
+  r = i(239091),
   d = i(233440),
   c = i(314897),
   u = i(158776),
   I = i(699516),
   _ = i(998502),
   f = i(785717),
-  E = i(621853),
-  m = i(204197),
-  S = i(735336),
-  Z = i(520978),
+  m = i(621853),
+  E = i(204197),
+  v = i(735336),
+  S = i(520978),
   x = i(184325),
-  v = i(652853),
+  Z = i(652853),
   h = i(225714),
   p = i(228168),
   T = i(231338),
   g = i(689938),
   N = i(520067);
-let C = r.AvatarSizes.SIZE_120,
-  j = _.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
+let j = a.AvatarSizes.SIZE_120,
+  C = _.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
 function A(e) {
   let {
-displayProfile: n,
+displayProfile: s,
 user: _,
 guildId: A,
 channelId: R,
-friendToken: O,
+friendToken: M,
 className: U,
-isStreaming: M,
-hasProfileEffect: L,
+isStreaming: L,
+hasProfileEffect: O,
 onClose: P
-  } = e, b = (0, o.e7)([I.Z], () => I.Z.getRelationshipType(_.id)), y = (0, o.e7)([u.Z], () => u.Z.isMobileOnline(_.id)), D = (0, o.e7)([u.Z], () => u.Z.getStatus(_.id)), F = (0, o.e7)([E.Z], () => E.Z.getUserProfile(_.id)), B = (0, o.e7)([c.default], () => c.default.getId() === _.id), {
+  } = e, b = (0, t.e7)([I.Z], () => I.Z.getRelationshipType(_.id)), y = (0, t.e7)([u.Z], () => u.Z.isMobileOnline(_.id)), D = (0, t.e7)([u.Z], () => u.Z.getStatus(_.id)), F = (0, t.e7)([m.Z], () => m.Z.getUserProfile(_.id)), B = (0, t.e7)([c.default], () => c.default.getId() === _.id), {
 theme: G
-  } = (0, v.z)(), {
+  } = (0, Z.z)(), {
 trackUserProfileAction: w
   } = (0, f.KZ)(), {
 avatarSrc: k,
-eventHandlers: V,
-avatarDecorationSrc: Y
-  } = (0, m.Z)({
+eventHandlers: Y,
+avatarDecorationSrc: V
+  } = (0, E.Z)({
 user: _,
-size: C
+size: j
   }), H = l.useMemo(() => (0, d.W)(_, R), [
 _,
 R
   ]);
-  return (0, s.jsxs)('header', {
+  return (0, n.jsxs)('header', {
 className: U,
 children: [
-  (0, s.jsx)(S.Z, {
-    displayProfile: n,
+  (0, n.jsx)(v.Z, {
+    displayProfile: s,
     onClose: P,
     user: _,
     profileType: p.y0.MODAL,
-    hasProfileEffect: L
+    hasProfileEffect: O
   }),
-  (0, s.jsxs)('div', {
+  (0, n.jsxs)('div', {
     className: N.header,
     children: [
-      (0, s.jsx)('div', {
-        ...V,
-        children: (0, s.jsx)(j, {
+      (0, n.jsx)('div', {
+        ...Y,
+        children: (0, n.jsx)(C, {
           src: k,
-          avatarDecoration: Y,
-          size: C,
+          avatarDecoration: V,
+          size: j,
           className: N.avatar,
-          status: H ? T.Sk.UNKNOWN : M ? T.Sk.STREAMING : D,
-          statusBackdropColor: (0, r.getStatusBackdropColor)(G),
+          status: H ? T.Sk.UNKNOWN : L ? T.Sk.STREAMING : D,
+          statusBackdropColor: (0, a.getStatusBackdropColor)(G),
           isMobile: y,
           statusTooltip: !0,
           'aria-label': _.username
         })
       }),
-      (0, s.jsxs)('div', {
+      (0, n.jsxs)('div', {
         className: N.headerTop,
         children: [
-          (null == F ? void 0 : F.profileFetchFailed) && !_.isClyde() ? (0, s.jsx)(r.Tooltip, {
+          (null == F ? void 0 : F.profileFetchFailed) && !_.isClyde() ? (0, n.jsx)(a.Tooltip, {
             text: g.Z.Messages.USER_PROFILE_LOAD_ERROR,
             spacing: 20,
-            children: e => (0, s.jsx)(r.CircleExclamationPointIcon, {
+            children: e => (0, n.jsx)(a.CircleExclamationPointIcon, {
               size: 'custom',
               width: 20,
               height: 20,
               ...e,
               className: N.warningCircleIcon,
-              color: t.Z.unsafe_rawColors.YELLOW_300.css
+              color: o.Z.unsafe_rawColors.YELLOW_300.css
             })
-          }) : (0, s.jsx)(x.Z, {
+          }) : (0, n.jsx)(x.Z, {
             user: _,
             className: N.badgeList,
             guildId: A,
@@ -105,21 +105,21 @@ children: [
             shrinkToSize: x.V.SIZE_18,
             onBadgeClick: P
           }),
-          (0, s.jsxs)('div', {
+          (0, n.jsxs)('div', {
             className: N.relationshipButtons,
             children: [
-              (null == F ? void 0 : F.application) != null && (0, s.jsx)(Z.Z, {
+              (null == F ? void 0 : F.application) != null && (0, n.jsx)(S.Z, {
                 className: N.applicationInstallButton,
                 application: F.application
               }),
-              (0, s.jsx)(h.Z, {
+              (0, n.jsx)(h.Z, {
                 user: _,
                 isCurrentUser: B,
                 relationshipType: b,
-                friendToken: O,
+                friendToken: M,
                 onClose: P
               }),
-              B || _.isNonUserBot() ? null : (0, s.jsx)(r.Clickable, {
+              B || _.isNonUserBot() ? null : (0, n.jsx)(a.Clickable, {
                 focusProps: {
                   offset: {
                     left: 8
@@ -128,12 +128,12 @@ children: [
                 onClick: function(e) {
                   w({
                     action: 'PRESS_OPTIONS'
-                  }), (0, a.jW)(e, async () => {
+                  }), (0, r.jW)(e, async () => {
                     let {
                       default: e
                     } = await i.e('29136').then(i.bind(i, 193646));
-                    return n => (0, s.jsx)(e, {
-                      ...n,
+                    return s => (0, n.jsx)(e, {
+                      ...s,
                       user: _,
                       isCurrentUser: B,
                       guildId: A,
@@ -143,7 +143,7 @@ children: [
                     });
                   });
                 },
-                children: (0, s.jsx)(r.MoreVerticalIcon, {
+                children: (0, n.jsx)(a.MoreVerticalIcon, {
                   size: 'md',
                   color: 'currentColor',
                   className: N.additionalActionsIcon

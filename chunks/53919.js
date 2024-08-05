@@ -1,8 +1,8 @@
 var r = n(762378),
   i = n(481062),
   a = n(34775),
-  o = n(79568),
-  s = n(221286),
+  s = n(79568),
+  o = n(221286),
   l = n(903425),
   u = n(785775),
   c = '[object Map]',
@@ -13,10 +13,10 @@ var r = n(762378),
   h = u(r),
   p = u(i),
   m = u(a),
-  I = u(o),
-  T = u(s),
+  I = u(s),
+  T = u(o),
   g = l;
-(r && g(new r(new ArrayBuffer(1))) != f || i && g(new i()) != c || a && g(a.resolve()) != d || o && g(new o()) != _ || s && g(new s()) != E) && (g = function(e) {
+(r && g(new r(new ArrayBuffer(1))) != f || i && g(new i()) != c || a && g(a.resolve()) != d || s && g(new s()) != _ || o && g(new o()) != E) && (g = function(e) {
   var t = l(e),
 n = '[object Object]' == t ? e.constructor : void 0,
 r = n ? u(n) : '';

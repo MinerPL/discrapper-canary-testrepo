@@ -2,18 +2,18 @@ e.exports = function(e, t, r, i) {
   var a = this;
   a.sequenceLevels[e] = 0;
 
-  function o(t) {
-var o;
-a.fireCallback(r, t, e), 'keyup' !== i && (o = n(619820), a.ignoreNextKeyup = o(t)), setTimeout(function() {
+  function s(t) {
+var s;
+a.fireCallback(r, t, e), 'keyup' !== i && (s = n(619820), a.ignoreNextKeyup = s(t)), setTimeout(function() {
   a.resetSequences();
 }, 10);
   }
-  for (var s = 0; s < t.length; ++s) {
-var l = s + 1 === t.length ? o : function(t) {
+  for (var o = 0; o < t.length; ++o) {
+var l = o + 1 === t.length ? s : function(t) {
   return function() {
     a.nextExpectedAction = t, ++a.sequenceLevels[e], a.resetSequenceTimer();
   };
-}(i || a.getKeyInfo(t[s + 1]).action);
-a.bindSingle(t[s], l, i, e, s);
+}(i || a.getKeyInfo(t[o + 1]).action);
+a.bindSingle(t[o], l, i, e, o);
   }
 };

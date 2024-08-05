@@ -6,18 +6,18 @@ return l;
 var r = n(307643),
   i = n(973616),
   a = n(592125),
-  o = n(566620),
-  s = n(969345);
+  s = n(566620),
+  o = n(969345);
 async function l(e, t) {
   var n;
   let l = null === (n = a.Z.getChannel(t)) || void 0 === n ? void 0 : n.guild_id,
 {
   activityConfigs: u,
   applications: c
-} = await (0, o.w1)({
+} = await (0, s.w1)({
   guildId: l
 }),
-d = (0, s.Z)({
+d = (0, o.Z)({
   applicationId: e,
   activityConfigs: u,
   applications: c

@@ -12,8 +12,8 @@ e.exports = {
   default: 'default_b91d66',
   disabled: 'disabled_b91d66',
   colorPickerDropper: 'colorPickerDropper_b91d66',
+  colorPickerDropperFg: 'colorPickerDropperFg_b91d66',
   suggestedColors: 'suggestedColors_b91d66',
   suggestedColor: 'suggestedColor_b91d66',
-  noColor: 'noColor_b91d66',
-  colorPickerDropperFg: 'colorPickerDropperFg_b91d66'
+  noColor: 'noColor_b91d66'
 };

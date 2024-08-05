@@ -2,17 +2,17 @@ var r = n(735250);
 n(470079);
 var i = n(960259),
   a = n(65675),
-  o = n(325767);
+  s = n(325767);
 t.Z = (0, i.hN)(function(e) {
   let {
 width: t = 6,
 height: n = 11,
 color: i = 'currentColor',
 foreground: a,
-...s
+...o
   } = e;
   return (0, r.jsx)('svg', {
-...(0, o.Z)(s),
+...(0, s.Z)(o),
 width: t,
 height: n,
 viewBox: '0 0 6 11',

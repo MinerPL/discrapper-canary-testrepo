@@ -6,8 +6,8 @@ return E;
 var r = n(991656),
   i = n(70597),
   a = n(991998),
-  o = n(896662),
-  s = n(573347),
+  s = n(896662),
+  o = n(573347),
   l = n(536403),
   u = n(188650),
   c = n(291750),
@@ -36,11 +36,11 @@ months: f * E.months
   var m = (0, i.Z)(p, {
 days: f * E.days
   });
-  E.hours = Math.abs((0, o.Z)(n, m));
+  E.hours = Math.abs((0, s.Z)(n, m));
   var I = (0, i.Z)(m, {
 hours: f * E.hours
   });
-  E.minutes = Math.abs((0, s.Z)(n, I));
+  E.minutes = Math.abs((0, o.Z)(n, I));
   var T = (0, i.Z)(I, {
 minutes: f * E.minutes
   });

@@ -6,7 +6,7 @@ return l;
 return d;
   },
   Tn: function() {
-return s;
+return o;
   },
   dt: function() {
 return _;
@@ -18,26 +18,26 @@ return u;
 var r = n(392711),
   i = n.n(r),
   a = n(544891),
-  o = n(981631);
-async function s() {
-  return (await a.tn.get(o.ANM.NOTIFICATION_SNAPSHOTS)).body;
+  s = n(981631);
+async function o() {
+  return (await a.tn.get(s.ANM.NOTIFICATION_SNAPSHOTS)).body;
 }
 async function l(e) {
   return (await a.tn.post({
-url: o.ANM.NOTIFICATION_SNAPSHOTS,
+url: s.ANM.NOTIFICATION_SNAPSHOTS,
 body: {
   label: e
 }
   })).body;
 }
 async function u(e) {
-  return (await a.tn.post(o.ANM.RESTORE_NOTIFICATION_SNAPSHOT(e))).body;
+  return (await a.tn.post(s.ANM.RESTORE_NOTIFICATION_SNAPSHOT(e))).body;
 }
 async function c(e) {
-  return (await a.tn.del(o.ANM.NOTIFICATION_SNAPSHOT(e))).body;
+  return (await a.tn.del(s.ANM.NOTIFICATION_SNAPSHOT(e))).body;
 }
 async function d() {
-  let e = await s(),
+  let e = await o(),
 t = i().sortBy(e, e => new Date(e.recorded_at).getTime());
   0 !== t.length && await u(t[t.length - 1].id);
 }

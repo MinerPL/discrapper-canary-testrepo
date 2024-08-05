@@ -12,8 +12,8 @@ var i = n(735250),
   c = n(442837),
   u = n(477690),
   d = n(481060),
-  h = n(430824),
-  p = n(346656),
+  h = n(565138),
+  p = n(430824),
   _ = n(624138),
   f = n(674552),
   m = n(981631),
@@ -26,14 +26,14 @@ function N(e) {
   let {
 guildId: t,
 animate: n
-  } = e, l = (0, c.e7)([h.Z], () => h.Z.getGuild(t), [t]);
+  } = e, l = (0, c.e7)([p.Z], () => p.Z.getGuild(t), [t]);
   return null == l ? (0, i.jsx)('div', {
 className: C.guildIconUnavailable,
 children: '!'
-  }) : (0, i.jsx)(p.Z, {
+  }) : (0, i.jsx)(h.Z, {
 guild: l,
 animate: n,
-size: p.Z.Sizes.SMOL,
+size: h.Z.Sizes.SMOL,
 className: C.guildIcon,
 tabIndex: -1
   });
@@ -54,7 +54,7 @@ _ = h.map(e => e.id),
 [f, g] = l.useState(!1),
 [x, S] = l.useState(c),
 v = c ? 0 : -E,
-Z = (0, s.useSpring)({
+Z = (0, d.useSpring)({
   transform: 'translate3d(0, '.concat(v, 'px, 0)'),
   config: {
     duration: I
@@ -65,7 +65,7 @@ Z = (0, s.useSpring)({
   onRest() {
     g(!1), S(c);
   }
-}),
+}, 'animate-always'),
 T = f ? Z : void 0;
   return (f || x) && (t = (0, i.jsx)(s.animated.div, {
 style: T,

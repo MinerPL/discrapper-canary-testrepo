@@ -8,8 +8,8 @@ return c;
 }), n(47120);
 var r, i = n(735250),
   a = n(470079),
-  o = n(53281),
-  s = n(869783),
+  s = n(53281),
+  o = n(869783),
   l = n(689938);
 
 function u(e, t, n) {
@@ -43,7 +43,7 @@ if (null != e) {
   }, n.readAsDataURL(e);
 }
   }(e, r => {
-if (e.type === s.m.MP4)
+if (e.type === o.m.MP4)
   return t(r, e);
 let i = new Image();
 i.src = r, i.onload = () => {
@@ -68,12 +68,12 @@ let {
   className: n,
   tabIndex: r,
   'aria-label': a,
-  filters: s
+  filters: o
 } = this.props;
-return (0, i.jsx)(o.Z, {
+return (0, i.jsx)(s.Z, {
   ref: this._ref,
   onChange: this.handleFileChange,
-  filters: null != s ? s : c(),
+  filters: null != o ? o : c(),
   multiple: e,
   disabled: t,
   className: n,

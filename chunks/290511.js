@@ -1,6 +1,6 @@
 n.d(t, {
   FN: function() {
-return s;
+return o;
   },
   M$: function() {
 return p;
@@ -45,7 +45,7 @@ return S;
 return _;
   },
   l7: function() {
-return o;
+return s;
   },
   md: function() {
 return T;
@@ -57,7 +57,7 @@ return m;
 return v;
   }
 });
-var r, i, a, o, s, l, u = n(348327),
+var r, i, a, s, o, l, u = n(348327),
   c = n.n(u),
   d = n(689938);
 let _ = 100,
@@ -174,4 +174,4 @@ belowRequirements: e.below_requirements
 function y(e) {
   return null == e || null == e.id && null == e.name;
 }
-(r = o || (o = {}))[r.CUSTOMIZE = 0] = 'CUSTOMIZE', r[r.BROWSE = 1] = 'BROWSE', (i = s || (s = {}))[i.MULTIPLE_CHOICE = 0] = 'MULTIPLE_CHOICE', i[i.DROPDOWN = 1] = 'DROPDOWN', (a = l || (l = {}))[a.ONBOARDING_DEFAULT = 0] = 'ONBOARDING_DEFAULT', a[a.ONBOARDING_ADVANCED = 1] = 'ONBOARDING_ADVANCED';
+(r = s || (s = {}))[r.CUSTOMIZE = 0] = 'CUSTOMIZE', r[r.BROWSE = 1] = 'BROWSE', (i = o || (o = {}))[i.MULTIPLE_CHOICE = 0] = 'MULTIPLE_CHOICE', i[i.DROPDOWN = 1] = 'DROPDOWN', (a = l || (l = {}))[a.ONBOARDING_DEFAULT = 0] = 'ONBOARDING_DEFAULT', a[a.ONBOARDING_ADVANCED = 1] = 'ONBOARDING_ADVANCED';

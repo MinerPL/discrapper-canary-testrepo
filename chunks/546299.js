@@ -14,17 +14,17 @@ if (t) {
       n.push(parseInt(e[i] + e[i + 1], 16));
 } else {
   for (var r = 0, i = 0; i < e.length; i++) {
-    var a, o, s = e.charCodeAt(i);
-    if (s < 128)
-      n[r++] = s;
-    else if (s < 2048)
-      n[r++] = s >> 6 | 192, n[r++] = 63 & s | 128;
+    var a, s, o = e.charCodeAt(i);
+    if (o < 128)
+      n[r++] = o;
+    else if (o < 2048)
+      n[r++] = o >> 6 | 192, n[r++] = 63 & o | 128;
     else {
       ;
-      if (a = e, o = i, (64512 & a.charCodeAt(o)) != 55296 || o < 0 || o + 1 >= a.length ? 1 : (64512 & a.charCodeAt(o + 1)) != 56320)
-        n[r++] = s >> 12 | 224, n[r++] = s >> 6 & 63 | 128, n[r++] = 63 & s | 128;
+      if (a = e, s = i, (64512 & a.charCodeAt(s)) != 55296 || s < 0 || s + 1 >= a.length ? 1 : (64512 & a.charCodeAt(s + 1)) != 56320)
+        n[r++] = o >> 12 | 224, n[r++] = o >> 6 & 63 | 128, n[r++] = 63 & o | 128;
       else
-        s = 65536 + ((1023 & s) << 10) + (1023 & e.charCodeAt(++i)), n[r++] = s >> 18 | 240, n[r++] = s >> 12 & 63 | 128, n[r++] = s >> 6 & 63 | 128, n[r++] = 63 & s | 128;
+        o = 65536 + ((1023 & o) << 10) + (1023 & e.charCodeAt(++i)), n[r++] = o >> 18 | 240, n[r++] = o >> 12 & 63 | 128, n[r++] = o >> 6 & 63 | 128, n[r++] = 63 & o | 128;
     }
   }
 }
@@ -39,15 +39,15 @@ function a(e) {
 }
 t.toHex = function(e) {
   for (var t = '', n = 0; n < e.length; n++)
-t += o(e[n].toString(16));
+t += s(e[n].toString(16));
   return t;
 }, t.htonl = a;
 
-function o(e) {
+function s(e) {
   return 1 === e.length ? '0' + e : e;
 }
 
-function s(e) {
+function o(e) {
   if (7 === e.length)
 return '0' + e;
   if (6 === e.length)
@@ -68,16 +68,16 @@ return e;
 t.toHex32 = function(e, t) {
   for (var n = '', r = 0; r < e.length; r++) {
 var i = e[r];
-'little' === t && (i = a(i)), n += s(i.toString(16));
+'little' === t && (i = a(i)), n += o(i.toString(16));
   }
   return n;
-}, t.zero2 = o, t.zero8 = s;
+}, t.zero2 = s, t.zero8 = o;
 t.join32 = function(e, t, n, i) {
-  var a, o = n - t;
-  r(o % 4 == 0);
-  for (var s = Array(o / 4), l = 0, u = t; l < s.length; l++, u += 4)
-a = 'big' === i ? e[u] << 24 | e[u + 1] << 16 | e[u + 2] << 8 | e[u + 3] : e[u + 3] << 24 | e[u + 2] << 16 | e[u + 1] << 8 | e[u], s[l] = a >>> 0;
-  return s;
+  var a, s = n - t;
+  r(s % 4 == 0);
+  for (var o = Array(s / 4), l = 0, u = t; l < o.length; l++, u += 4)
+a = 'big' === i ? e[u] << 24 | e[u + 1] << 16 | e[u + 2] << 8 | e[u + 3] : e[u + 3] << 24 | e[u + 2] << 16 | e[u + 1] << 8 | e[u], o[l] = a >>> 0;
+  return o;
 };
 t.split32 = function(e, t) {
   for (var n = Array(4 * e.length), r = 0, i = 0; r < e.length; r++, i += 4) {
@@ -115,19 +115,19 @@ t.sum64_hi = function(e, t, n, r) {
 t.sum64_lo = function(e, t, n, r) {
   return t + r >>> 0;
 };
-t.sum64_4_hi = function(e, t, n, r, i, a, o, s) {
+t.sum64_4_hi = function(e, t, n, r, i, a, s, o) {
   var l, u = t;
-  return l = 0 + ((u = u + r >>> 0) < t ? 1 : 0), l += (u = u + a >>> 0) < a ? 1 : 0, e + n + i + o + (l += (u = u + s >>> 0) < s ? 1 : 0) >>> 0;
+  return l = 0 + ((u = u + r >>> 0) < t ? 1 : 0), l += (u = u + a >>> 0) < a ? 1 : 0, e + n + i + s + (l += (u = u + o >>> 0) < o ? 1 : 0) >>> 0;
 };
-t.sum64_4_lo = function(e, t, n, r, i, a, o, s) {
-  return t + r + a + s >>> 0;
+t.sum64_4_lo = function(e, t, n, r, i, a, s, o) {
+  return t + r + a + o >>> 0;
 };
-t.sum64_5_hi = function(e, t, n, r, i, a, o, s, l, u) {
+t.sum64_5_hi = function(e, t, n, r, i, a, s, o, l, u) {
   var c, d = t;
-  return c = 0 + ((d = d + r >>> 0) < t ? 1 : 0), c += (d = d + a >>> 0) < a ? 1 : 0, c += (d = d + s >>> 0) < s ? 1 : 0, e + n + i + o + l + (c += (d = d + u >>> 0) < u ? 1 : 0) >>> 0;
+  return c = 0 + ((d = d + r >>> 0) < t ? 1 : 0), c += (d = d + a >>> 0) < a ? 1 : 0, c += (d = d + o >>> 0) < o ? 1 : 0, e + n + i + s + l + (c += (d = d + u >>> 0) < u ? 1 : 0) >>> 0;
 };
-t.sum64_5_lo = function(e, t, n, r, i, a, o, s, l, u) {
-  return t + r + a + s + u >>> 0;
+t.sum64_5_lo = function(e, t, n, r, i, a, s, o, l, u) {
+  return t + r + a + o + u >>> 0;
 };
 t.rotr64_hi = function(e, t, n) {
   return (t << 32 - n | e >>> n) >>> 0;

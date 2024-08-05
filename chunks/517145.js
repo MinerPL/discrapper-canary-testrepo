@@ -1,25 +1,25 @@
 var r = n(957578).Buffer,
   i = n(28704),
   a = n(136924).ec,
-  o = n(223428),
-  s = n(733345);
+  s = n(223428),
+  o = n(733345);
 
 function l(e, t) {
   if (0 >= e.cmpn(0) || e.cmp(t) >= t)
 throw Error('invalid sig');
 }
 e.exports = function(e, t, n, u, c) {
-  var d = o(n);
+  var d = s(n);
   if ('ec' === d.type) {
 if ('ecdsa' !== u && 'ecdsa/rsa' !== u)
   throw Error('wrong public key type');
 return function(e, t, n) {
-  var r = s[n.data.algorithm.curve.join('.')];
+  var r = o[n.data.algorithm.curve.join('.')];
   if (!r)
     throw Error('unknown curve ' + n.data.algorithm.curve.join('.'));
   var i = new a(r),
-    o = n.data.subjectPrivateKey.data;
-  return i.verify(t, e, o);
+    s = n.data.subjectPrivateKey.data;
+  return i.verify(t, e, s);
 }(e, t, d);
   }
   if ('dsa' === d.type) {
@@ -28,15 +28,15 @@ if ('dsa' !== u)
 return function(e, t, n) {
   var r = n.data.p,
     a = n.data.q,
-    s = n.data.g,
+    o = n.data.g,
     u = n.data.pub_key,
-    c = o.signature.decode(e, 'der'),
+    c = s.signature.decode(e, 'der'),
     d = c.s,
     _ = c.r;
   l(d, a), l(_, a);
   var E = i.mont(r),
     f = d.invm(a);
-  return 0 === s.toRed(E).redPow(new i(t).mul(f).mod(a)).fromRed().mul(u.toRed(E).redPow(_.mul(f).mod(a)).fromRed()).mod(r).mod(a).cmp(_);
+  return 0 === o.toRed(E).redPow(new i(t).mul(f).mod(a)).fromRed().mul(u.toRed(E).redPow(_.mul(f).mod(a)).fromRed()).mod(r).mod(a).cmp(_);
 }(e, t, d);
   }
   if ('rsa' !== u && 'ecdsa/rsa' !== u)

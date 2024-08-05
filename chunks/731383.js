@@ -1,8 +1,8 @@
 var r = n(728804),
   i = n(505388),
   a = n(363406),
-  o = Object.prototype.hasOwnProperty,
-  s = {
+  s = Object.prototype.hasOwnProperty,
+  o = {
 brackets: function(e) {
   return e + '[]';
 },
@@ -40,7 +40,7 @@ skipNulls: !1,
 strictNullHandling: !1
   },
   f = {},
-  h = function e(t, n, a, o, s, u, d, _, h, p, m, I, T, g, S, A) {
+  h = function e(t, n, a, s, o, u, d, _, h, p, m, I, T, g, S, A) {
 for (var N, v, O = t, R = A, C = 0, y = !1; void 0 !== (R = R.get(f)) && !y;) {
   var D = R.get(t);
   if (C += 1, void 0 !== D) {
@@ -53,7 +53,7 @@ for (var N, v, O = t, R = A, C = 0, y = !1; void 0 !== (R = R.get(f)) && !y;) {
 if ('function' == typeof _ ? O = _(n, O) : O instanceof Date ? O = m(O) : 'comma' === a && l(O) && (O = i.maybeMap(O, function(e) {
     return e instanceof Date ? m(e) : e;
   })), null === O) {
-  if (s)
+  if (o)
     return d && !g ? d(n, E.encoder, S, 'key', I) : n;
   O = '';
 }
@@ -72,14 +72,14 @@ else {
   var b = Object.keys(O);
   v = h ? b.sort(h) : b;
 }
-for (var M = o && l(O) && 1 === O.length ? n + '[]' : n, P = 0; P < v.length; ++P) {
+for (var M = s && l(O) && 1 === O.length ? n + '[]' : n, P = 0; P < v.length; ++P) {
   var U = v[P],
     w = 'object' == typeof U && void 0 !== U.value ? U.value : O[U];
   if (!u || null !== w) {
     var x = l(O) ? 'function' == typeof a ? a(M, U) : M : M + (p ? '.' + U : '[' + U + ']');
     A.set(t, C);
     var G = r();
-    G.set(f, A), c(L, e(w, x, a, o, s, u, 'comma' === a && g && l(O) ? null : d, _, h, p, m, I, T, g, S, G));
+    G.set(f, A), c(L, e(w, x, a, s, o, u, 'comma' === a && g && l(O) ? null : d, _, h, p, m, I, T, g, S, G));
   }
 }
 return L;
@@ -94,7 +94,7 @@ if (void 0 !== e.charset && 'utf-8' !== e.charset && 'iso-8859-1' !== e.charset)
   throw TypeError('The charset option must be either utf-8, iso-8859-1, or undefined');
 var n = a.default;
 if (void 0 !== e.format) {
-  if (!o.call(a.formatters, e.format))
+  if (!s.call(a.formatters, e.format))
     throw TypeError('Unknown format option provided.');
   n = e.format;
 }
@@ -119,22 +119,22 @@ return ('function' == typeof e.filter || l(e.filter)) && (i = e.filter), {
 };
   };
 e.exports = function(e, t) {
-  var n, i, a, o = e,
+  var n, i, a, s = e,
 u = p(t);
-  'function' == typeof u.filter ? o = (i = u.filter)('', o) : l(u.filter) && (n = i = u.filter);
+  'function' == typeof u.filter ? s = (i = u.filter)('', s) : l(u.filter) && (n = i = u.filter);
   var d = [];
-  if ('object' != typeof o || null === o)
+  if ('object' != typeof s || null === s)
 return '';
-  a = t && t.arrayFormat in s ? t.arrayFormat : t && 'indices' in t ? t.indices ? 'indices' : 'repeat' : 'indices';
-  var _ = s[a];
+  a = t && t.arrayFormat in o ? t.arrayFormat : t && 'indices' in t ? t.indices ? 'indices' : 'repeat' : 'indices';
+  var _ = o[a];
   if (t && 'commaRoundTrip' in t && 'boolean' != typeof t.commaRoundTrip)
 throw TypeError('`commaRoundTrip` must be a boolean, or absent');
   var E = 'comma' === _ && t && t.commaRoundTrip;
-  !n && (n = Object.keys(o)), u.sort && n.sort(u.sort);
+  !n && (n = Object.keys(s)), u.sort && n.sort(u.sort);
   for (var f = r(), m = 0; m < n.length; ++m) {
 var I = n[m];
-if (!u.skipNulls || null !== o[I])
-  c(d, h(o[I], I, _, E, u.strictNullHandling, u.skipNulls, u.encode ? u.encoder : null, u.filter, u.sort, u.allowDots, u.serializeDate, u.format, u.formatter, u.encodeValuesOnly, u.charset, f));
+if (!u.skipNulls || null !== s[I])
+  c(d, h(s[I], I, _, E, u.strictNullHandling, u.skipNulls, u.encode ? u.encoder : null, u.filter, u.sort, u.allowDots, u.serializeDate, u.format, u.formatter, u.encodeValuesOnly, u.charset, f));
   }
   var T = d.join(u.delimiter),
 g = !0 === u.addQueryPrefix ? '?' : '';

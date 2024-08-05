@@ -9,25 +9,25 @@ return u;
 var r = n(594190),
   i = n(131951),
   a = n(449224),
-  o = n(626135),
-  s = n(367907),
+  s = n(626135),
+  o = n(367907),
   l = n(981631);
 
 function u() {
-  let e, t, n, a, o;
-  let s = i.Z.getGoLiveSource();
-  if (null != s && (e = s.quality.resolution, t = s.quality.frameRate, null != s.desktopSource)) {
+  let e, t, n, a, s;
+  let o = i.Z.getGoLiveSource();
+  if (null != o && (e = o.quality.resolution, t = o.quality.frameRate, null != o.desktopSource)) {
 var l, u;
-n = s.desktopSource.soundshareSession;
-let e = null != s.desktopSource.sourcePid ? r.ZP.getGameForPID(s.desktopSource.sourcePid) : null;
-a = null !== (l = null == e ? void 0 : e.name) && void 0 !== l ? l : null, o = null !== (u = null == e ? void 0 : e.id) && void 0 !== u ? u : null;
+n = o.desktopSource.soundshareSession;
+let e = null != o.desktopSource.sourcePid ? r.ZP.getGameForPID(o.desktopSource.sourcePid) : null;
+a = null !== (l = null == e ? void 0 : e.name) && void 0 !== l ? l : null, s = null !== (u = null == e ? void 0 : e.id) && void 0 !== u ? u : null;
   }
   return {
 video_input_resolution: e,
 video_input_frame_rate: t,
 soundshare_session: n,
 share_game_name: a,
-share_game_id: o
+share_game_id: s
   };
 }
 
@@ -43,9 +43,9 @@ case l.rMx.VOICE_CHANNEL_SELECTED:
 case l.rMx.SETTINGS_PANE_VIEWED:
 case l.rMx.GUILD_VIEWED:
 case l.rMx.CHANNEL_OPENED:
-  return (0, s.yw)(e, t, n);
+  return (0, o.yw)(e, t, n);
 default:
-  return o.default.track(e, t, {
+  return s.default.track(e, t, {
     flush: n
   });
   }

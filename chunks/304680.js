@@ -12,10 +12,10 @@ return a;
 return d;
   },
   xv: function() {
-return o;
+return s;
   },
   z4: function() {
-return s;
+return o;
   },
   zc: function() {
 return l;
@@ -33,13 +33,13 @@ type: 'RTC_DEBUG_POPOUT_WINDOW_OPEN'
   });
 }
 
-function o() {
+function s() {
   r.Z.dispatch({
 type: 'RTC_DEBUG_MODAL_CLOSE'
   });
 }
 
-function s() {
+function o() {
   r.Z.dispatch({
 type: 'RTC_DEBUG_MODAL_OPEN_REPLAY'
   });

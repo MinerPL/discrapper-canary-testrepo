@@ -4,8 +4,8 @@ return _;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(481060),
+  a = n(470079),
+  s = n(481060),
   r = n(493683),
   l = n(367907),
   o = n(205129),
@@ -19,7 +19,7 @@ function _(e) {
   priorityMembers: n,
   partiedMembers: _
 } = e,
-h = s.useContext(c.AnalyticsContext),
+h = a.useContext(c.AnalyticsContext),
 E = n.map(e => {
   let {
     user: t
@@ -28,7 +28,7 @@ E = n.map(e => {
 }),
 I = 1 === _.length && 1 === n.length,
 m = n.length - _.length > 0;
-  return (I || t) && !m && 0 !== E.length ? (0, i.jsx)(a.MenuItem, {
+  return (I || t) && !m && 0 !== E.length ? (0, i.jsx)(s.MenuItem, {
 id: 'message',
 action: function() {
   r.Z.openPrivateChannel(E).then(t => l.ZP.trackWithMetadata(d.rMx.ACTIVITY_FEED_DM_VISITED, {

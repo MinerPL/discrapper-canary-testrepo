@@ -6,9 +6,9 @@ return _;
 var r = n(710845),
   i = n(374023),
   a = n(420491),
-  o = n(988348);
+  s = n(988348);
 
-function s(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -29,7 +29,7 @@ return !1;
 this._onDataReady = e;
   }
   constructor(e) {
-s(this, '_onDataReady', void 0), s(this, '_gatewayEncoding', void 0), this._onDataReady = null, this._gatewayEncoding = e;
+o(this, '_onDataReady', void 0), o(this, '_gatewayEncoding', void 0), this._onDataReady = null, this._gatewayEncoding = e;
   }
 }
 u.push(class extends c {
@@ -52,7 +52,7 @@ t = this._stream.decompress(e), null != this._decoder && (t = this._decoder.deco
   }
   close() {}
   constructor(e) {
-super(e), s(this, '_decoder', null), s(this, '_stream', void 0), this._gatewayEncoding.wantsString() ? this._decoder = new TextDecoder('utf-8') : this._decoder = null, this._stream = (0, o.Gz)();
+super(e), o(this, '_decoder', null), o(this, '_stream', void 0), this._gatewayEncoding.wantsString() ? this._decoder = new TextDecoder('utf-8') : this._decoder = null, this._stream = (0, s.Gz)();
   }
 }), u.push(class extends c {
   static canUse() {
@@ -90,16 +90,16 @@ if (e !== n.Z_OK)
   throw Error('zlib error, '.concat(e, ', ').concat(i.strm.msg));
 let {
   chunks: a
-} = i, o = a.length;
+} = i, s = a.length;
 if (this._gatewayEncoding.wantsString())
-  t = o > 1 ? a.join('') : a[0];
-else if (o > 1) {
+  t = s > 1 ? a.join('') : a[0];
+else if (s > 1) {
   let e = 0;
-  for (let t = 0; t < o; t++)
+  for (let t = 0; t < s; t++)
     e += a[t].length;
   let n = new Uint8Array(e),
     r = 0;
-  for (let e = 0; e < o; e++) {
+  for (let e = 0; e < s; e++) {
     let t = a[e];
     n.set(t, r), r += t.length;
   }
@@ -109,7 +109,7 @@ else if (o > 1) {
 a.length = 0, null != this._onDataReady && this._onDataReady(t);
   }
   constructor(e) {
-super(e), s(this, '_inflate', void 0), s(this, '_pako', n(457854)), s(this, '_usesZstd', !1), s(this, '_zstdDecoder', null), s(this, '_zstdStream', null), this._inflate = new this._pako.Inflate({
+super(e), o(this, '_inflate', void 0), o(this, '_pako', n(457854)), o(this, '_usesZstd', !1), o(this, '_zstdDecoder', null), o(this, '_zstdStream', null), this._inflate = new this._pako.Inflate({
   chunkSize: 65536,
   to: this._gatewayEncoding.wantsString() ? 'string' : ''
 }), this._inflate.onEnd = this.handleFlushEnd.bind(this);
@@ -134,7 +134,7 @@ this._onDataReady(e);
   }
   close() {}
   constructor(...e) {
-super(...e), s(this, '_pako', n(457854));
+super(...e), o(this, '_pako', n(457854));
   }
 }), u.push(class extends c {
   static canUse() {
@@ -159,7 +159,7 @@ let e = this._socketId;
 this._socketId = null, null !== e && l.DCDCompressionManager.disableZlibStreamSupport(e);
   }
   constructor(e) {
-super(e), s(this, '_socketId', void 0), s(this, '_usesZstd', void 0), this._usesZstd = a.Z.shouldUseZstd(), this._socketId = null;
+super(e), o(this, '_socketId', void 0), o(this, '_usesZstd', void 0), this._usesZstd = a.Z.shouldUseZstd(), this._socketId = null;
   }
 });
 class d extends c {

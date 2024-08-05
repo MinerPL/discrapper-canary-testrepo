@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(442837),
-  s = n(481060),
+  s = n(442837),
+  o = n(481060),
   l = n(607070),
   u = n(104494),
   c = n(639119),
@@ -24,18 +24,18 @@ function I(e) {
   var t, n;
   let {
 onDismiss: i
-  } = e, I = (0, o.e7)([l.Z], () => l.Z.useReducedMotion), T = p.Z.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, g = (0, c.N)(), S = (0, u.Ng)(), A = (null == g ? void 0 : g.subscription_trial) != null || null != S, N = {
+  } = e, I = (0, s.e7)([l.Z], () => l.Z.useReducedMotion), T = p.Z.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, g = (0, c.N)(), S = (0, u.Ng)(), A = (null == g ? void 0 : g.subscription_trial) != null || null != S, N = {
 object: f.qAy.BUTTON_CTA,
 section: f.jXE.SUPER_REACTION_PICKER
   };
   return (0, r.jsxs)('div', {
 className: m.wrapper,
 children: [
-  (0, r.jsx)(s.Clickable, {
+  (0, r.jsx)(o.Clickable, {
     onClick: i,
     className: m.closeButton,
     'aria-label': p.Z.Messages.DISMISS,
-    children: (0, r.jsx)(s.CloseSmallIcon, {
+    children: (0, r.jsx)(o.CloseSmallIcon, {
       size: 'md',
       color: 'currentColor'
     })
@@ -49,7 +49,7 @@ children: [
           className: a()(m.banner, {
             [m.hasTrialOffer]: A
           }),
-          src: 'https://cdn.discordapp.com/attachments/955557117622886410/1085270553759322153/super-reactions-launch.mp4',
+          src: 'https://cdn.discordapp.com/assets/22_211_SuperReactions_GTM_Hero_v09.mp4',
           loop: !0,
           autoPlay: !I,
           muted: !0,
@@ -69,21 +69,21 @@ children: [
           (0, r.jsxs)('div', {
             className: m.header,
             children: [
-              (0, r.jsx)(s.NitroWheelIcon, {
+              (0, r.jsx)(o.NitroWheelIcon, {
                 size: 'custom',
                 color: 'currentColor',
                 className: m.nitroWheel,
                 width: 32,
                 height: 32
               }),
-              (0, r.jsx)(s.Heading, {
+              (0, r.jsx)(o.Heading, {
                 className: m.headerText,
                 variant: 'heading-xl/bold',
                 children: p.Z.Messages.SUPER_REACTIONS_UPSELL_TITLE_MOBILE
               })
             ]
           }),
-          (0, r.jsx)(s.Text, {
+          (0, r.jsx)(o.Text, {
             className: m.subheaderText,
             variant: 'text-md/normal',
             children: T

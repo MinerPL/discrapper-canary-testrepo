@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(748780),
   o = n(91192),
   c = n(481060),
@@ -18,7 +18,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class E extends s.PureComponent {
+class E extends a.PureComponent {
   componentWillLeave(e) {
 l.Z.parallel([
   l.Z.timing(this.state.opacity, {
@@ -48,9 +48,9 @@ let {
   height: e,
   opacity: t,
   hovered: n,
-  isContextMenuActive: s
+  isContextMenuActive: a
 } = this.state, {
-  children: a,
+  children: s,
   user: d,
   onClick: u,
   isActive: h
@@ -64,7 +64,7 @@ return (0, i.jsx)(o.mh, {
     },
     children: (0, i.jsx)(l.Z.div, {
       className: r()(_.peopleListItem, {
-        [_.active]: h || s
+        [_.active]: h || a
       }),
       onContextMenu: e => this.handleContextMenu(e, d),
       onMouseEnter: this.handleMouseEnter,
@@ -75,7 +75,7 @@ return (0, i.jsx)(o.mh, {
         opacity: t
       },
       ...o,
-      children: a(n || h || s)
+      children: s(n || h || a)
     })
   })
 });
@@ -109,8 +109,8 @@ super(...e), h(this, 'state', {
       default: e
     } = await Promise.all([
       n.e('79695'),
-      n.e('17400'),
-      n.e('13806')
+      n.e('69220'),
+      n.e('86541')
     ]).then(n.bind(n, 881351));
     return n => (0, i.jsx)(e, {
       ...n,

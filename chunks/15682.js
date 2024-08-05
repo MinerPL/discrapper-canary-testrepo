@@ -3,29 +3,29 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(459554);
-let o = e => {
+let s = e => {
   let {
 onChange: t,
 label: n,
-subtitle: o,
-selected: s
+subtitle: s,
+selected: o
   } = e;
   return (0, r.jsx)('div', {
 className: a.checkboxRow,
 children: (0, r.jsxs)(i.Checkbox, {
   type: i.Checkbox.Types.INVERTED,
   onChange: () => t(),
-  value: s,
+  value: o,
   children: [
     (0, r.jsx)(i.Text, {
       color: 'interactive-active',
       variant: 'text-md/semibold',
       children: n
     }),
-    null != o ? (0, r.jsx)(i.Text, {
+    null != s ? (0, r.jsx)(i.Text, {
       color: 'interactive-active',
       variant: 'text-sm/normal',
-      children: o
+      children: s
     }) : null
   ]
 })
@@ -44,11 +44,11 @@ data: a
   } = t;
   return (0, r.jsx)('div', {
 children: a.map((e, t) => {
-  let [a, s, l] = e;
-  return (0, r.jsx)(o, {
-    onChange: () => i(a, s),
+  let [a, o, l] = e;
+  return (0, r.jsx)(s, {
+    onChange: () => i(a, o),
     selected: a in n,
-    label: s,
+    label: o,
     subtitle: l
   }, ''.concat(t, '+button'));
 })

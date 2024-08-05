@@ -2,12 +2,12 @@ n(47120);
 var r = n(956067),
   i = n(147913),
   a = n(70956),
-  o = n(640795),
-  s = n(139674);
+  s = n(640795),
+  o = n(139674);
 let l = 4 * a.Z.Millis.HOUR;
 class u extends i.Z {
   _initialize() {
-setTimeout(() => r.Z.timeAsync('\uD83D\uDCBE', 'getBlockedDomainList', () => s.Z.getBlockedDomainList()), 1000), setTimeout(() => (0, o.q)(), 10 * a.Z.Millis.SECOND), this.intervalID = setInterval(o.q, l);
+setTimeout(() => r.Z.timeAsync('\uD83D\uDCBE', 'getBlockedDomainList', () => o.Z.getBlockedDomainList()), 1000), setTimeout(() => (0, s.q)(), 10 * a.Z.Millis.SECOND), this.intervalID = setInterval(s.q, l);
   }
   _terminate() {
 clearInterval(this.intervalID);

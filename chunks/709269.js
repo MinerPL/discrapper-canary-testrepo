@@ -11,10 +11,10 @@ a = {
   begin: '\\b(\\d+(_\\d+)*#[a-fA-F0-9]+(_[a-fA-F0-9]+)*|\\d+(_\\d+)*(\\.\\d+(_\\d+)*)?([eE][-+]?\\d+)?)',
   relevance: 0
 },
-o = {
+s = {
   begin: 'fun\\s+' + t + '/\\d+'
 },
-s = {
+o = {
   begin: n + '\\(',
   end: '\\)',
   returnBegin: !0,
@@ -67,12 +67,12 @@ _ = {
 };
   _.contains = [
 i,
-o,
+s,
 e.inherit(e.APOS_STRING_MODE, {
   className: ''
 }),
 _,
-s,
+o,
 e.QUOTE_STRING_MODE,
 a,
 l,
@@ -82,9 +82,9 @@ d
   ];
   let E = [
 i,
-o,
-_,
 s,
+_,
+o,
 e.QUOTE_STRING_MODE,
 a,
 l,
@@ -92,7 +92,7 @@ u,
 c,
 d
   ];
-  s.contains[1].contains = E, l.contains = E, d.contains[1].contains = E;
+  o.contains[1].contains = E, l.contains = E, d.contains[1].contains = E;
   let f = {
 className: 'params',
 begin: '\\(',

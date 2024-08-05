@@ -1,11 +1,11 @@
 n.d(t, {
   Z: function() {
-return C;
+return f;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(481060),
   l = n(58642),
   o = n(695346),
@@ -27,7 +27,7 @@ restoreApplication: n
   } = e;
   if (0 === t.length)
 return null;
-  let s = t.map(e => {
+  let a = t.map(e => {
 let t = e.libraryApplication.getDistributor();
 return (0, i.jsxs)('div', {
   className: p.hiddenLibraryApplication,
@@ -65,11 +65,11 @@ children: [
     className: p.hiddenLibraryApplicationsTitle,
     children: g.Z.Messages.SETTINGS_GAMES_HIDDEN_LIBRARY_APPLICATIONS_LABEL
   }),
-  s
+  a
 ]
   });
 }
-class S extends s.PureComponent {
+class S extends a.PureComponent {
   handleToggleShortcutDesktop(e) {
 o.Xc.updateSetting(e);
   }
@@ -91,7 +91,7 @@ let {
 return (0, i.jsxs)('div', {
   className: p.body,
   children: [
-    (0, h.Q)() ? (0, i.jsxs)(s.Fragment, {
+    (0, h.Q)() ? (0, i.jsxs)(a.Fragment, {
       children: [
         (0, i.jsx)(r.FormSwitch, {
           value: t,
@@ -142,11 +142,11 @@ super(...e), t = this, n = 'handleRestoreHiddenLibraryApplication', i = e => {
   }
 }
 
-function C() {
+function f() {
   let e = {
 installShortcutDesktop: o.Xc.useSetting(),
 installShortcutStartMenu: o.Pe.useSetting(),
-hiddenLibraryApplicationViewItems: (0, a.e7)([c.Z], () => c.Z.hiddenLibraryApplicationViewItems)
+hiddenLibraryApplicationViewItems: (0, s.e7)([c.Z], () => c.Z.hiddenLibraryApplicationViewItems)
   };
   return (0, i.jsx)(S, {
 ...e

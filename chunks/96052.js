@@ -1,13 +1,13 @@
 n.d(t, {
   U: function() {
-return o;
+return s;
   }
 });
 var r = n(570140),
   i = n(709054),
   a = n(981631);
 
-function o(e, t, n) {
+function s(e, t, n) {
   r.Z.dispatch({
 type: 'MESSAGE_CREATE',
 channelId: e,

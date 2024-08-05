@@ -15,8 +15,8 @@ return h;
 var r = n(544891),
   i = n(570140),
   a = n(367907),
-  o = n(314897),
-  s = n(271383),
+  s = n(314897),
+  o = n(271383),
   l = n(430824),
   u = n(626135),
   c = n(630388),
@@ -55,8 +55,8 @@ guildId: e
 }
 async function m(e) {
   var t, n;
-  let r = o.default.getId(),
-i = (0, c.yE)(null !== (n = null === (t = s.ZP.getMember(e, r)) || void 0 === t ? void 0 : t.flags) && void 0 !== n ? n : 0, f.q.COMPLETED_ONBOARDING),
+  let r = s.default.getId(),
+i = (0, c.yE)(null !== (n = null === (t = o.ZP.getMember(e, r)) || void 0 === t ? void 0 : t.flags) && void 0 !== n ? n : 0, f.q.COMPLETED_ONBOARDING),
 a = l.Z.getGuild(e);
   if (null == a || !a.hasFeature(E.oNc.GUILD_ONBOARDING))
 return Promise.resolve();

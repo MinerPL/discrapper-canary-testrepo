@@ -27,22 +27,22 @@ return E;
 var r = n(913527),
   i = n.n(r),
   a = n(232551),
-  o = n(706454);
-let s = 86400000,
+  s = n(706454);
+let o = 86400000,
   l = Object.create(null);
 
 function u(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
 n = e.getTime();
-  return !t && (n -= 60000 * e.getTimezoneOffset()), Math.floor(n / s) * s;
+  return !t && (n -= 60000 * e.getTimezoneOffset()), Math.floor(n / o) * o;
 }
 
 function c(e, t) {
-  return Math.floor((u(e, !1) - u(t, !1)) / s);
+  return Math.floor((u(e, !1) - u(t, !1)) / o);
 }
 
 function d(e, t) {
-  return Math.abs(+e - +t) <= s && e.getDate() === t.getDate();
+  return Math.abs(+e - +t) <= o && e.getDate() === t.getDate();
 }
 
 function _(e, t, n) {
@@ -92,7 +92,7 @@ r = new Date(),
 a = c(e, r);
   return 'sameElse' == (t = a < -1 ? 'sameElse' : a < 0 ? 'lastDay' : a < 1 ? 'sameDay' : a < 2 ? 'nextDay' : 'sameElse') ? E(e, 'LLL') : E(e, n.calendar(t, i()(e), i()(r)));
 }
-o.default.addChangeListener(() => {
+s.default.addChangeListener(() => {
   l = Object.create(null);
 });
 let T = [{

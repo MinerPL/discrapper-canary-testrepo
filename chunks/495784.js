@@ -1,5 +1,5 @@
-var n = a(913527),
-  t = a.n(n),
+var t = a(913527),
+  n = a.n(t),
   l = a(704215),
   i = a(951716),
   r = a(605236),
@@ -22,10 +22,10 @@ if (!N.s.isDisallowPopupsSet())
     if ((0, i.Z)())
       return;
     let e = d.default.getCurrentUser(),
-      n = null != e && 7 > t()().diff(t()(u.default.extractTimestamp(e.id)), 'days'),
+      t = null != e && 7 > n()().diff(n()(u.default.extractTimestamp(e.id)), 'days'),
       o = null != Object.values(c.Z.getGuilds()).find(e => e.hasFeature(m.oNc.HUB)),
       N = !(0, r.un)(l.z.HUB_BACK_TO_SCHOOL_UPSELL);
-    !(n || s() || o || !N) && (0, _.b)() && (_.Z.trackExposure({
+    !(t || s() || o || !N) && (0, _.b)() && (_.Z.trackExposure({
       location: '8b792a_1'
     }), a(), (0, r.kk)(l.z.HUB_BACK_TO_SCHOOL_UPSELL));
   });

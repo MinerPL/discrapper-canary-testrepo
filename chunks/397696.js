@@ -6,8 +6,8 @@ return l;
 var r = n(230367),
   i = n(320215),
   a = n(240773),
-  o = n(495852);
-class s extends o.C {
+  s = n(495852);
+class o extends s.C {
   create(e) {
 let t = {
   clientVersion: 0,
@@ -21,8 +21,8 @@ return globalThis.Object.defineProperty(t, a.C, {
   }
   internalBinaryRead(e, t, n, i) {
 let a = null != i ? i : this.create(),
-  o = e.pos + t;
-for (; e.pos < o;) {
+  s = e.pos + t;
+for (; e.pos < s;) {
   let [t, i] = e.tag();
   switch (t) {
     case 1:
@@ -35,11 +35,11 @@ for (; e.pos < o;) {
       a.dataVersion = e.uint32();
       break;
     default:
-      let o = n.readUnknownField;
-      if ('throw' === o)
+      let s = n.readUnknownField;
+      if ('throw' === s)
         throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
-      let s = e.skip(i);
-      !1 !== o && (!0 === o ? r.z.onRead : o)(this.typeName, a, t, i, s);
+      let o = e.skip(i);
+      !1 !== s && (!0 === s ? r.z.onRead : s)(this.typeName, a, t, i, o);
   }
 }
 return a;
@@ -71,4 +71,4 @@ super('discord_protos.discord_users.v1.Versions', [{
 ]);
   }
 }
-let l = new s();
+let l = new o();

@@ -1,48 +1,56 @@
-var E, _, s, u;
+var i, r, a, s;
 t.d(n, {
   $J: function() {
-return a;
-  },
-  HK: function() {
-return c;
-  },
-  KN: function() {
-return A;
-  },
-  WK: function() {
-return S;
-  },
-  YP: function() {
-return M;
-  },
-  ak: function() {
 return o;
   },
-  iQ: function() {
+  GB: function() {
+return S;
+  },
+  HK: function() {
 return N;
   },
-  l4: function() {
-return r;
+  KN: function() {
+return I;
   },
-  s9: function() {
-return i;
+  WK: function() {
+return E;
   },
-  tu: function() {
+  Xj: function() {
+return p;
+  },
+  YP: function() {
+return c;
+  },
+  ak: function() {
+return T;
+  },
+  iQ: function() {
 return _;
   },
-  y6: function() {
+  l4: function() {
 return l;
+  },
+  s9: function() {
+return u;
+  },
+  tu: function() {
+return r;
+  },
+  y6: function() {
+return d;
   }
 });
-let r = '',
-  a = '',
-  i = '',
-  l = 5,
-  M = 30,
-  S = 3,
-  N = 5,
-  A = 60,
-  o = 4;
-(s = E || (E = {})).MATCH = 'match', s.OTHER_USER_ALREADY_VERIFIED = 'other_user_already_verified', s.MISMATCH = 'mismatch', s.UNABLE_TO_VERIFY = 'unable_to_verify', s.OTHER_USER_DISCONNECTED = 'other_user_disconnected', s.CURRENT_USER_DISCONNECTED = 'current_user_disconnected';
-let c = 100;
-(u = _ || (_ = {})).RTC_DEBUG_PANEL = 'rtc_debug_panel', u.RTC_SECURE_FRAMES = 'rtc_secure_frames';
+let l = '',
+  o = '',
+  u = '',
+  d = 5,
+  c = 30,
+  E = 3,
+  _ = 5,
+  I = 60,
+  T = 4;
+(a = i || (i = {})).MATCH = 'match', a.OTHER_USER_ALREADY_VERIFIED = 'other_user_already_verified', a.MISMATCH = 'mismatch', a.UNABLE_TO_VERIFY = 'unable_to_verify', a.OTHER_USER_DISCONNECTED = 'other_user_disconnected', a.CURRENT_USER_DISCONNECTED = 'current_user_disconnected';
+let N = 100;
+(s = r || (r = {})).RTC_DEBUG_PANEL = 'rtc_debug_panel', s.RTC_SECURE_FRAMES = 'rtc_secure_frames';
+let S = 1,
+  p = 0;

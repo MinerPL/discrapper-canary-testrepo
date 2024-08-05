@@ -39,8 +39,8 @@ return N;
 var r = n(647943),
   i = n(581282),
   a = n(392711),
-  o = n.n(a),
-  s = n(377108),
+  s = n.n(a),
+  o = n(377108),
   l = n(524437),
   u = n(397696),
   c = n(526761),
@@ -50,7 +50,7 @@ readerFactory: e => new r.o(e, new TextDecoder('utf-8'))
   },
   E = {
 [c.yP.PRELOADED_USER_SETTINGS]: l.o8,
-[c.yP.FRECENCY_AND_FAVORITES_SETTINGS]: s.ji
+[c.yP.FRECENCY_AND_FAVORITES_SETTINGS]: o.ji
   };
 
 function f(e, t) {
@@ -93,8 +93,8 @@ function g(e, t, n) {
 }
 
 function S(e, t, n, r) {
-  var i, a, o;
-  return i = e, a = t, o = e => A(e, n, r), null == i.guilds && (i.guilds = l.os.create()), g(i.guilds, a, o);
+  var i, a, s;
+  return i = e, a = t, s = e => A(e, n, r), null == i.guilds && (i.guilds = l.os.create()), g(i.guilds, a, s);
 }
 
 function A(e, t, n) {
@@ -113,14 +113,14 @@ n = e.version;
 i = !1,
 a = [];
   for (let n of t) {
-var o, s;
+var s, o;
 if (n.version <= e.versions.clientVersion) {
-  r && (null === (o = n.cleanup) || void 0 === o || o.call(n));
+  r && (null === (s = n.cleanup) || void 0 === s || s.call(n));
   continue;
 }
 let t = n.run(e);
 if (e.versions.clientVersion = n.version, !1 === t) {
-  null === (s = n.cleanup) || void 0 === s || s.call(n);
+  null === (o = n.cleanup) || void 0 === o || o.call(n);
   continue;
 }
 i = !0, null != n.cleanup && a.push(n.cleanup);
@@ -135,14 +135,14 @@ cleanupFuncs: a
 function v(e, t) {
   let n = Object.entries(e);
   if (n.length > t)
-for (n = o().sortBy(n, e => {
+for (n = s().sortBy(n, e => {
     let [t, n] = e;
     return n.recentUses[n.recentUses.length - 1];
   }).reverse(); n.length > t;)
   n.pop();
   let r = {};
   for (let [e, t] of n) {
-let n = s._F.create();
+let n = o._F.create();
 n.frecency = t.frecency, n.recentUses = t.recentUses.filter(e => null != e && e > 0).map(String), n.score = Math.round(t.score), n.totalUses = t.totalUses, r[e] = n;
   }
   return r;

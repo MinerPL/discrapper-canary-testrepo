@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var s = n(924826),
-  a = n(91192),
+var a = n(924826),
+  s = n(91192),
   r = n(442837),
   l = n(215569),
   o = n(481060),
@@ -15,7 +15,7 @@ renderRow: n,
 searchQuery: _,
 sectionFilter: h,
 useReducedMotion: E
-  } = e, I = (0, r.e7)([c.Z], () => c.Z.keyboardModeEnabled), m = (0, s.ZP)({
+  } = e, I = (0, r.e7)([c.Z], () => c.Z.keyboardModeEnabled), m = (0, a.ZP)({
 id: 'people',
 isEnabled: I,
 async scrollToStart() {},
@@ -27,9 +27,9 @@ transitionAppear: !1,
 component: 'div',
 children: e.map(n)
   }, t));
-  return (0, i.jsx)(a.bG, {
+  return (0, i.jsx)(s.bG, {
 navigator: m,
-children: (0, i.jsx)(a.SJ, {
+children: (0, i.jsx)(s.SJ, {
   children: e => {
     let {
       ref: t,

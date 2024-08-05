@@ -5,9 +5,9 @@ return L;
   }
 }), n(724458), n(653041), n(47120), n(757143);
 var i, a = n(879443),
-  o = n.n(a),
-  s = n(414861),
-  l = n.n(s),
+  s = n.n(a),
+  o = n(414861),
+  l = n.n(o),
   u = n(348327),
   c = n.n(u),
   d = n(392711),
@@ -109,7 +109,7 @@ if (g.isPlatformEmbedded)
   S.ZP.inputEventRegister(parseInt(e), t, n, r);
 else {
   V(e);
-  let i = l()(new(o())(document));
+  let i = l()(new(s())(document));
   r.keyup && i.bindGlobal((0, A.BB)(t), () => n(!1), 'keyup'), r.keydown && i.bindGlobal((0, A.BB)(t), () => n(!0), 'keydown'), b[e] = i;
 }
   }(i, t, e => function(e, t) {

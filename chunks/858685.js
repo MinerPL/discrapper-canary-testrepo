@@ -81,13 +81,13 @@ return t[1] = t[1] || t[0], t[2] = t[2] || t[0], t[3] = t[3] || t[1], t;
   subtree: !0
 }))));
   }, i.prototype._unmonitorIntersections = function() {
-this._monitoringIntersections && (this._monitoringIntersections = !1, clearInterval(this._monitoringInterval), this._monitoringInterval = null, o(e, 'resize', this._checkForIntersections, !0), o(t, 'scroll', this._checkForIntersections, !0), this._domObserver && (this._domObserver.disconnect(), this._domObserver = null));
+this._monitoringIntersections && (this._monitoringIntersections = !1, clearInterval(this._monitoringInterval), this._monitoringInterval = null, s(e, 'resize', this._checkForIntersections, !0), s(t, 'scroll', this._checkForIntersections, !0), this._domObserver && (this._domObserver.disconnect(), this._domObserver = null));
   }, i.prototype._checkForIntersections = function() {
 var t = this._rootIsInDom(),
   n = t ? this._getRootRect() : l();
 this._observationTargets.forEach(function(i) {
   var a = i.element,
-    o = s(a),
+    s = o(a),
     l = this._rootContainsTarget(a),
     u = i.entry,
     c = t && l && this._computeTargetAndRootIntersection(a, n),
@@ -96,7 +96,7 @@ this._observationTargets.forEach(function(i) {
         return e.performance && performance.now && performance.now();
       }(),
       target: a,
-      boundingClientRect: o,
+      boundingClientRect: s,
       rootBounds: n,
       intersectionRect: c
     });
@@ -104,25 +104,25 @@ this._observationTargets.forEach(function(i) {
 }, this), this._queuedEntries.length && this._callback(this.takeRecords(), this);
   }, i.prototype._computeTargetAndRootIntersection = function(n, r) {
 if ('none' != e.getComputedStyle(n).display) {
-  for (var i = s(n), a = c(n), o = !1; !o;) {
+  for (var i = o(n), a = c(n), s = !1; !s;) {
     var l = null,
       u = 1 == a.nodeType ? e.getComputedStyle(a) : {};
     if ('none' == u.display)
       return;
-    if (a == this.root || a == t ? (o = !0, l = r) : a != t.body && a != t.documentElement && 'visible' != u.overflow && (l = s(a)), l && !(i = function(e, t) {
+    if (a == this.root || a == t ? (s = !0, l = r) : a != t.body && a != t.documentElement && 'visible' != u.overflow && (l = o(a)), l && !(i = function(e, t) {
         var n = Math.max(e.top, t.top),
           r = Math.min(e.bottom, t.bottom),
           i = Math.max(e.left, t.left),
           a = Math.min(e.right, t.right),
-          o = a - i,
-          s = r - n;
-        return o >= 0 && s >= 0 && {
+          s = a - i,
+          o = r - n;
+        return s >= 0 && o >= 0 && {
           top: n,
           bottom: r,
           left: i,
           right: a,
-          width: o,
-          height: s
+          width: s,
+          height: o
         };
       }(l, i)))
       break;
@@ -133,7 +133,7 @@ if ('none' != e.getComputedStyle(n).display) {
   }, i.prototype._getRootRect = function() {
 var e;
 if (this.root)
-  e = s(this.root);
+  e = o(this.root);
 else {
   var n = t.documentElement,
     r = t.body;
@@ -182,11 +182,11 @@ var e = n.indexOf(this); -
 'function' == typeof e.addEventListener ? e.addEventListener(t, n, r || !1) : 'function' == typeof e.attachEvent && e.attachEvent('on' + t, n);
   }
 
-  function o(e, t, n, r) {
+  function s(e, t, n, r) {
 'function' == typeof e.removeEventListener ? e.removeEventListener(t, n, r || !1) : 'function' == typeof e.detatchEvent && e.detatchEvent('on' + t, n);
   }
 
-  function s(e) {
+  function o(e) {
 var t;
 try {
   t = e.getBoundingClientRect();

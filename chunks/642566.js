@@ -1,22 +1,22 @@
-o.d(e, {
+o.d(n, {
   Z: function() {
-return c;
+return s;
   }
 });
 var t = o(735250);
 o(470079);
-var r = o(859097),
-  i = o(689938);
+var i = o(859097),
+  r = o(689938);
 
-function c(n) {
+function s(e) {
   let {
-onContinue: e,
+onContinue: n,
 onClose: o
-  } = n;
-  return (0, t.jsx)(r.C, {
-title: i.Z.Messages.CONNECT_CRUNCHYROLL_ERROR_TITLE,
-body: i.Z.Messages.CONNECT_CRUNCHYROLL_ERROR_BODY,
+  } = e;
+  return (0, t.jsx)(i.C, {
+title: r.Z.Messages.CONNECT_CRUNCHYROLL_ERROR_TITLE,
+body: r.Z.Messages.CONNECT_CRUNCHYROLL_ERROR_BODY,
 onClose: o,
-onContinue: e
+onContinue: n
   });
 }

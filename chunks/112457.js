@@ -17,10 +17,10 @@ y: e.y - t.y
 function i(e) {
   var t, n, i = e.clientOffset,
 a = e.initialClientOffset,
-o = e.initialSourceClientOffset;
-  if (!i || !a || !o)
+s = e.initialSourceClientOffset;
+  if (!i || !a || !s)
 return null;
-  return r((t = i, n = o, {
+  return r((t = i, n = s, {
 x: t.x + n.x,
 y: t.y + n.y
   }), a);

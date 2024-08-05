@@ -1,18 +1,18 @@
 n.d(t, {
   Z: function() {
-return C;
+return g;
   }
 });
 var i = n(735250);
 n(470079);
 var a = n(442837),
-  l = n(481060),
-  s = n(665149),
+  s = n(481060),
+  l = n(665149),
   r = n(171368),
   o = n(650774),
   c = n(430824),
-  d = n(496675),
-  u = n(709054),
+  u = n(496675),
+  d = n(709054),
   h = n(826581),
   p = n(246364),
   m = n(360328),
@@ -20,30 +20,30 @@ var a = n(442837),
   f = n(689938),
   E = n(593269);
 
-function C(e) {
+function g(e) {
   let {
 channelId: t,
 showProfile: n = !1,
-showTrailingDivider: C = !1
-  } = e, g = u.default.cast(t), {
+showTrailingDivider: g = !1
+  } = e, C = d.default.cast(t), {
 joinRequest: I,
 isModmin: x,
 guildId: T,
-maxMembers: v
+maxMembers: N
   } = (0, a.cj)([
 h.Z,
 c.Z,
-d.Z
+u.Z
   ], () => {
-let e = h.Z.getRequest(g),
+let e = h.Z.getRequest(C),
   t = c.Z.getGuild(null == e ? void 0 : e.guildId);
 return {
   joinRequest: e,
-  isModmin: null != t && d.Z.can(_.Plq.KICK_MEMBERS, t),
+  isModmin: null != t && u.Z.can(_.Plq.KICK_MEMBERS, t),
   guildId: null == t ? void 0 : t.id,
   maxMembers: null == t ? void 0 : t.maxMembers
 };
-  }), N = (0, a.e7)([o.Z], () => null != T ? o.Z.getMemberCount(T) : 0), S = null != v && (null != N ? N : 0) >= v, {
+  }), v = (0, a.e7)([o.Z], () => null != T ? o.Z.getMemberCount(T) : 0), S = null != N && (null != v ? v : 0) >= N, {
 approveRequest: Z,
 rejectRequest: A,
 submitting: M
@@ -51,28 +51,28 @@ submitting: M
   return null != I && I.applicationStatus === p.wB.SUBMITTED && x ? (0, i.jsxs)('div', {
 className: E.buttons,
 children: [
-  (0, i.jsx)(l.Tooltip, {
+  (0, i.jsx)(s.Tooltip, {
     text: f.Z.Messages.CLAN_APPLICATION_MAX_MEMBER_LIMIT_TOOLTIP,
     shouldShow: S,
-    children: e => (0, i.jsx)(l.Button, {
+    children: e => (0, i.jsx)(s.Button, {
       ...e,
-      color: l.Button.Colors.GREEN,
+      color: s.Button.Colors.GREEN,
       submitting: M,
       onClick: Z,
-      size: l.ButtonSizes.SMALL,
+      size: s.ButtonSizes.SMALL,
       disabled: S,
       children: f.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
     })
   }),
-  (0, i.jsx)(l.Button, {
-    color: l.Button.Colors.RED,
+  (0, i.jsx)(s.Button, {
+    color: s.Button.Colors.RED,
     onClick: A,
-    size: l.ButtonSizes.SMALL,
+    size: s.ButtonSizes.SMALL,
     disabled: M || I.applicationStatus !== p.wB.SUBMITTED,
     children: f.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
   }),
-  n && (0, i.jsx)(l.Button, {
-    color: l.Button.Colors.TRANSPARENT,
+  n && (0, i.jsx)(s.Button, {
+    color: s.Button.Colors.TRANSPARENT,
     onClick: () => {
       (0, r.openUserProfileModal)({
         userId: I.userId,
@@ -83,10 +83,10 @@ children: [
         }
       });
     },
-    size: l.ButtonSizes.SMALL,
+    size: s.ButtonSizes.SMALL,
     children: f.Z.Messages.VIEW_PROFILE
   }),
-  C && (0, i.jsx)(s.ZP.Divider, {})
+  g && (0, i.jsx)(l.ZP.Divider, {})
 ]
   }) : null;
 }

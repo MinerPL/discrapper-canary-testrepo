@@ -1,15 +1,15 @@
 n.d(t, {
   g: function() {
-return o;
+return s;
   },
   p: function() {
-return s;
+return o;
   }
 });
 var r = n(399606),
   i = n(581883),
   a = n(592204);
-let o = () => {
+let s = () => {
 var e, t, n;
 let a = (0, r.cj)([i.Z], () => {
   var e, t;
@@ -21,13 +21,13 @@ return {
   slurs: null === (n = a.slurs) || void 0 === n ? void 0 : n.value
 };
   },
-  s = () => {
+  o = () => {
 var e;
 let {
   profanity: t,
   sexualContent: n,
   slurs: r
-} = o();
+} = s();
 return !!(0, a.Xo)({
   location: 'use-should-filter-keywords'
 }) && null !== (e = t || n || r) && void 0 !== e && e;

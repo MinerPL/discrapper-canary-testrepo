@@ -38,15 +38,15 @@ try {
 }
   }, {
 transitionState: R
-  } = e, N = Object.values(u.Z.getGuilds()).filter(e => e.id !== a && e.hasFeature(_.oNc.HUB)).length > 0, p = !x && !N && (null == o ? void 0 : o.hasFeature(_.oNc.HUB)) && (0, m.b)();
+  } = e, N = Object.values(u.Z.getGuilds()).filter(e => e.id !== a && e.hasFeature(_.oNc.HUB)).length > 0, L = !x && !N && (null == o ? void 0 : o.hasFeature(_.oNc.HUB)) && (0, m.b)();
   return n.useEffect(() => {
-if (p) {
+if (L) {
   let e = window.innerWidth / 2;
   M(e, window.innerHeight / 2);
 }
   }, [
 M,
-p
+L
   ]), (0, t.jsxs)(s.ModalRoot, {
 className: E.__invalid_modalRoot,
 transitionState: R,

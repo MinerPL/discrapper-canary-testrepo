@@ -12,8 +12,8 @@ return h;
 var r = n(182823),
   i = n(464593),
   a = n(706682),
-  o = n(148836),
-  s = n(612001),
+  s = n(148836),
+  o = n(612001),
   l = n(470079),
   u = n(616073);
 let c = new WeakMap();
@@ -31,7 +31,7 @@ throw Error('Unknown list');
 
 function _(e, t, n) {
   let {
-isVirtualized: s,
+isVirtualized: o,
 keyboardDelegate: l,
 onAction: u,
 linkBehavior: d = 'action'
@@ -39,13 +39,13 @@ linkBehavior: d = 'action'
   !e['aria-label'] && !e['aria-labelledby'] && console.warn('An aria-label or aria-labelledby prop is required for accessibility.');
   let {
 listProps: _
-  } = (0, o._t)({
+  } = (0, s._t)({
 selectionManager: t.selectionManager,
 collection: t.collection,
 disabledKeys: t.disabledKeys,
 ref: n,
 keyboardDelegate: l,
-isVirtualized: s,
+isVirtualized: o,
 selectOnFocus: 'replace' === t.selectionManager.selectionBehavior,
 shouldFocusWrap: e.shouldFocusWrap,
 linkBehavior: d
@@ -72,7 +72,7 @@ m = (0, r.dG)(p, {
 }, 0 === t.collection.size ? {
   tabIndex: h ? -1 : 0
 } : _, f);
-  return s && (m['aria-rowcount'] = t.collection.size, m['aria-colcount'] = 1), (0, i.B6)({}, t), {
+  return o && (m['aria-rowcount'] = t.collection.size, m['aria-colcount'] = 1), (0, i.B6)({}, t), {
 gridProps: m
   };
 }
@@ -90,7 +90,7 @@ linkBehavior: m
   } = c.get(t), I = (0, r.mp)(), T = (0, l.useRef)(null), {
 itemProps: g,
 ...S
-  } = (0, o.Cs)({
+  } = (0, s.Cs)({
 selectionManager: t.selectionManager,
 key: i.key,
 ref: n,
@@ -153,7 +153,7 @@ onKeyDownCapture: e => {
 },
 onFocus: e => {
   if (T.current = i.key, e.target !== n.current) {
-    !(0, s.E)() && t.selectionManager.setFocusedKey(i.key);
+    !(0, o.E)() && t.selectionManager.setFocusedKey(i.key);
     return;
   }
 },

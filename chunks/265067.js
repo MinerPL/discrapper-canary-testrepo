@@ -1,7 +1,7 @@
 n(653041), n(47120);
 var i = n(243814),
-  s = n(100527),
-  a = n(208049),
+  a = n(100527),
+  s = n(208049),
   r = n(763296),
   l = n(697426),
   o = n(242291),
@@ -21,7 +21,7 @@ scope: {
   ]
 },
 async handler() {
-  await (0, a.w)();
+  await (0, s.w)();
   let e = r.Z.getSounds(),
     t = [];
   return e.forEach(e => e.forEach(e => t.push((0, l.QL)(e)))), t;
@@ -45,7 +45,7 @@ async handler(e) {
       sound_id: n
     }
   } = e;
-  await (0, a.w)();
+  await (0, s.w)();
   let i = d.default.getCurrentUser(),
     l = r.Z.getSound(t, n),
     _ = (0, h.Z)(),
@@ -56,7 +56,7 @@ async handler(e) {
     }, 'Invalid Channel.');
   if (E) {
     if ((0, c.Z)(_))
-      null != l && (0, o.GN)(l, _.id, [s.Z.RPC]);
+      null != l && (0, o.GN)(l, _.id, [a.Z.RPC]);
     else
       throw new u.Z({
         errorCode: I.lT.INVALID_PERMISSIONS

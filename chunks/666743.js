@@ -4,8 +4,8 @@ return l;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(314897);
+  a = n(470079),
+  s = n(314897);
 
 function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -17,12 +17,12 @@ writable: !0
 }
 
 function l(e) {
-  return class extends s.Component {
+  return class extends a.Component {
 componentDidMount() {
-  a.default.addChangeListener(this.onStoreChange);
+  s.default.addChangeListener(this.onStoreChange);
 }
 componentWillUnmount() {
-  a.default.removeChangeListener(this.onStoreChange);
+  s.default.removeChangeListener(this.onStoreChange);
 }
 render() {
   return (0, i.jsx)(e, {
@@ -32,10 +32,10 @@ render() {
 }
 constructor(...e) {
   super(...e), r(this, 'state', {
-    isAuthenticated: a.default.isAuthenticated()
+    isAuthenticated: s.default.isAuthenticated()
   }), r(this, 'onStoreChange', () => {
     this.setState({
-      isAuthenticated: a.default.isAuthenticated()
+      isAuthenticated: s.default.isAuthenticated()
     });
   });
 }

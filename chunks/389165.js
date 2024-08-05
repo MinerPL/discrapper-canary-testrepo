@@ -25,16 +25,16 @@ n = 0;
 e[r] && (t += 1, !isNaN(e[r]) && (n += 1), ('s' === r || 'l' === r) && /^\d+%$/.test(e[r]) && (n += 1));
   }), t === n && e;
 };
-var o = t.toState = function(e, t) {
+var s = t.toState = function(e, t) {
   var n = e.hex ? (0, i.default)(e.hex) : (0, i.default)(e),
 r = n.toHsl(),
 a = n.toHsv(),
-o = n.toRgb(),
-s = n.toHex();
+s = n.toRgb(),
+o = n.toHex();
   return 0 === r.s && (r.h = t || 0, a.h = t || 0), {
 hsl: r,
-hex: '000000' === s && 0 === o.a ? 'transparent' : '#' + s,
-rgb: o,
+hex: '000000' === o && 0 === s.a ? 'transparent' : '#' + o,
+rgb: s,
 hsv: a,
 oldHue: e.h || t || r.h,
 source: e.source
@@ -48,7 +48,7 @@ return !0;
 }, t.getContrastingColor = function(e) {
   if (!e)
 return '#fff';
-  var t = o(e);
+  var t = s(e);
   return 'transparent' === t.hex ? 'rgba(0,0,0,0.4)' : (299 * t.rgb.r + 587 * t.rgb.g + 114 * t.rgb.b) / 1000 >= 128 ? '#000' : '#fff';
 }, t.red = {
   hsl: {

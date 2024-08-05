@@ -15,21 +15,21 @@ n.Z = function(e) {
 channelId: n,
 formField: t,
 index: r,
-isDragEnabled: f,
+isDragEnabled: _,
 isDropHovered: C,
-onDrop: _,
+onDrop: f,
 onEdit: h,
 onRemove: x,
 canRemove: g,
 title: p,
 actionsLocation: T
-  } = e, I = t.values, E = I.slice(0, 1), b = I.length - E.length;
+  } = e, E = t.values, I = E.slice(0, 1), b = E.length - I.length;
   return (0, a.jsxs)(d.Z, {
 field: t,
 index: r,
-isDragEnabled: f,
+isDragEnabled: _,
 isDropHovered: C,
-onDrop: _,
+onDrop: f,
 onEdit: h,
 onRemove: x,
 title: p,
@@ -40,7 +40,7 @@ children: [
     className: i()(m.fieldBackground, {
       [m.withFooter]: 0 !== b
     }),
-    terms: E,
+    terms: I,
     channelId: n
   }),
   0 !== b && (0, a.jsxs)(o.Clickable, {

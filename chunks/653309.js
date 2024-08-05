@@ -10,27 +10,27 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(887490),
-  s = n(434175),
+  s = n(887490),
+  o = n(434175),
   l = n(551360),
   u = n(157409);
 let c = {
-  strong: s.bold,
-  em: s.italics,
-  u: s.underline,
-  s: s.strikethrough,
-  inlineCode: s.inlineCode,
-  link: s.fakeLink,
-  url: s.fakeLink,
-  autolink: s.fakeLink,
-  spoiler: a()(u.spoilerContent, u.spoilerMarkdownContent, u.obscuredTextContent, s.spoiler),
-  staticRouteLink: s.fakeLink,
-  syntaxBefore: s.syntaxBefore,
-  syntaxAfter: s.syntaxAfter,
-  codeBlockText: s.codeBlockText,
-  codeBlockSyntax: s.codeBlockSyntax,
-  codeBlockLang: s.codeBlockLang,
-  subtext: s.subtext
+  strong: o.bold,
+  em: o.italics,
+  u: o.underline,
+  s: o.strikethrough,
+  inlineCode: o.inlineCode,
+  link: o.fakeLink,
+  url: o.fakeLink,
+  autolink: o.fakeLink,
+  spoiler: a()(u.spoilerContent, u.spoilerMarkdownContent, u.obscuredTextContent, o.spoiler),
+  staticRouteLink: o.fakeLink,
+  syntaxBefore: o.syntaxBefore,
+  syntaxAfter: o.syntaxAfter,
+  codeBlockText: o.codeBlockText,
+  codeBlockSyntax: o.codeBlockSyntax,
+  codeBlockLang: o.codeBlockLang,
+  subtext: o.subtext
 };
 
 function d(e, t) {
@@ -40,8 +40,8 @@ attributes: i,
 children: u,
 leaf: d,
 text: _
-  } = t, E = !1, [f] = o.bN.node(e, o.C0.parent(o.bN.findPath(e, _)));
-  switch (o.bN.isEditor(f) ? 'editor' : f.type) {
+  } = t, E = !1, [f] = s.bN.node(e, s.C0.parent(s.bN.findPath(e, _)));
+  switch (s.bN.isEditor(f) ? 'editor' : f.type) {
 case 'line':
 case 'blockQuote': {
   E = void 0;
@@ -54,14 +54,14 @@ case 'blockQuote': {
       return n;
     if (!0 === n) {
       if (('codeBlockLang' === t || 'codeBlockSyntax' === t) && (E = !1), t.startsWith('before_') || t.startsWith('after_'))
-        return [s[t]];
+        return [o[t]];
       if (t in c)
         return [c[t]];
       throw Error('Slate: Unknown decoration attribute: '.concat(t));
     }
   }).filter(e => null != e).join(' ');
   n = a()(e, {
-    [s.syntaxOverride]: '||' === d.text || '\\' === d.text
+    [o.syntaxOverride]: '||' === d.text || '\\' === d.text
   });
 }
   }

@@ -1,4 +1,4 @@
-var r, i, a, o;
+var r, i, a, s;
 n.d(t, {
   AR: function() {
 return r;
@@ -7,10 +7,10 @@ return r;
 return i;
   },
   nf: function() {
-return s;
+return o;
   }
-}), (a = r || (r = {}))[a.KeepAsIs = 0] = 'KeepAsIs', a[a.UseGreyDot = 1] = 'UseGreyDot', (o = i || (i = {}))[o.Low = 0] = 'Low', o[o.Medium = 1] = 'Medium', o[o.High = 2] = 'High';
-let s = {
+}), (a = r || (r = {}))[a.KeepAsIs = 0] = 'KeepAsIs', a[a.UseGreyDot = 1] = 'UseGreyDot', (s = i || (i = {}))[s.Low = 0] = 'Low', s[s.Medium = 1] = 'Medium', s[s.High = 2] = 'High';
+let o = {
   careALot: {
 monthOpenPerc: 0.01,
 yearOpenPerc: 0.01,

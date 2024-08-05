@@ -3,15 +3,15 @@ n.d(t, {
 return A;
   },
   HR: function() {
-return Z;
+return v;
   },
   ZP: function() {
-return L;
+return Z;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(990547),
+  a = n(470079),
+  s = n(990547),
   r = n(442837),
   l = n(544891),
   o = n(481060),
@@ -27,13 +27,13 @@ var i = n(735250),
   p = n(610001),
   T = n(78415),
   S = n(1964),
-  C = n(981631),
-  f = n(815660),
+  f = n(981631),
+  C = n(815660),
   N = n(689938);
 let A = 'Email Verification',
-  Z = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';
+  v = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';
 
-function L() {
+function Z() {
   let {
 action: e,
 theme: t
@@ -43,15 +43,15 @@ m.Z
   ], () => ({
 action: g.Z.getAction(),
 theme: m.Z.theme
-  })), L = S.Z.getVerificationTypes(e), [v, O] = s.useState(0), R = (0, _.Z)(L);
+  })), Z = S.Z.getVerificationTypes(e), [L, O] = a.useState(0), R = (0, _.Z)(Z);
   (0, E.Z)({
-type: a.ImpressionTypes.MODAL,
-name: a.ImpressionNames.USER_ACTION_REQUIRED,
+type: s.ImpressionTypes.MODAL,
+name: s.ImpressionNames.USER_ACTION_REQUIRED,
 properties: {
-  verification_type: L[0],
-  verification_types: L
+  verification_type: Z[0],
+  verification_types: Z
 }
-  }, {}, [L.toString()]);
+  }, {}, [Z.toString()]);
   let x = () => {
   (0, u.FD)(), (0, o.openModalLazy)(async () => {
     let {
@@ -71,21 +71,21 @@ b = () => {
       default: e
     } = await Promise.all([
       n.e('76540'),
-      n.e('27817')
+      n.e('87931')
     ]).then(n.bind(n, 607018));
     return t => (0, i.jsx)(e, {
       reason: I.L.USER_ACTION_REQUIRED,
       ...t
     });
   }, {
-    modalKey: f.M,
+    modalKey: C.M,
     Layer: T.ZP
   });
 };
-  return s.useEffect(() => (h.Z.disable(), () => {
+  return a.useEffect(() => (h.Z.disable(), () => {
 h.Z.enable();
-  }), []), s.useEffect(() => {
-(null == R ? void 0 : R[0]) === C.PUi.PHONE && (null == L ? void 0 : L[0]) === C.PUi.EMAIL && (0, o.openModalLazy)(async () => {
+  }), []), a.useEffect(() => {
+(null == R ? void 0 : R[0]) === f.PUi.PHONE && (null == Z ? void 0 : Z[0]) === f.PUi.EMAIL && (0, o.openModalLazy)(async () => {
   let {
     default: e
   } = await Promise.resolve().then(n.bind(n, 468026));
@@ -96,19 +96,19 @@ h.Z.enable();
     confirmText: N.Z.Messages.PHONE_THEN_EMAIL_INTERSTITIAL_CONFIRM
   });
 }, {
-  modalKey: Z,
+  modalKey: v,
   Layer: T.ZP,
   onCloseCallback: x
 });
   }, [
-L,
+Z,
 R
   ]), (0, i.jsx)(p.Z, {
-types: L,
-captchaKey: v,
+types: Z,
+captchaKey: L,
 onCaptchaVerify: e => {
   l.tn.post({
-    url: C.ANM.CAPTCHA,
+    url: f.ANM.CAPTCHA,
     body: {
       captcha_key: e
     },
@@ -119,7 +119,7 @@ onCaptchaVerify: e => {
 },
 theme: t,
 onClick: e => {
-  e === C.PUi.EMAIL_OR_PHONE || e === C.PUi.EMAIL || e === C.PUi.REVERIFY_EMAIL ? x() : b();
+  e === f.PUi.EMAIL_OR_PHONE || e === f.PUi.EMAIL || e === f.PUi.REVERIFY_EMAIL ? x() : b();
 },
 onLogout: () => {
   (0, o.openModalLazy)(async () => {

@@ -4,14 +4,14 @@ return I;
   }
 }), n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(442837),
+  s = n(470079),
+  a = n(442837),
   r = n(481060),
   l = n(239091),
   o = n(585237),
   c = n(812206),
-  d = n(55563),
-  u = n(73346),
+  u = n(55563),
+  d = n(73346),
   _ = n(689938);
 
 function E(e, t, n) {
@@ -28,14 +28,14 @@ let I = {
   Colors: o.Z.Colors,
   Looks: o.Z.Looks
 };
-class m extends a.PureComponent {
+class m extends s.PureComponent {
   render() {
 let {
   skus: e,
   children: t,
   applicationId: n,
-  primarySKU: a,
-  onSKUSelect: s,
+  primarySKU: s,
+  onSKUSelect: a,
   ...r
 } = this.props;
 return (0, i.jsx)(o.Z, {
@@ -77,16 +77,16 @@ super(...e), E(this, 'renderContextMenu', () => {
 });
   }
 }
-t.Z = s.ZP.connectStores([
-  d.Z,
+t.Z = a.ZP.connectStores([
+  u.Z,
   c.Z
 ], e => {
   var t;
   let {
 applicationId: n
-  } = e, i = (0, u.uF)(n, c.Z, d.Z);
+  } = e, i = (0, d.uF)(n, c.Z, u.Z);
   return {
-skus: (null !== (t = d.Z.getForApplication(n)) && void 0 !== t ? t : []).sort((e, t) => null != i && e.id === i.id ? -1 : null != i && t.id === i.id ? 1 : e.name >= t.name ? -1 : 1),
+skus: (null !== (t = u.Z.getForApplication(n)) && void 0 !== t ? t : []).sort((e, t) => null != i && e.id === i.id ? -1 : null != i && t.id === i.id ? 1 : e.name >= t.name ? -1 : 1),
 primarySKU: i
   };
 })(m);

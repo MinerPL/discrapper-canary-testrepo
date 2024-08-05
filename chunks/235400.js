@@ -6,8 +6,8 @@ return y;
 var r = n(735250),
   i = n(470079),
   a = n(979554),
-  o = n(442837),
-  s = n(481060),
+  s = n(442837),
+  o = n(481060),
   l = n(100527),
   u = n(906732),
   c = n(335131),
@@ -33,7 +33,7 @@ function C(e) {
 user: t,
 categories: n,
 purchases: a,
-analyticsLocations: o,
+analyticsLocations: s,
 onClose: u,
 initialSelectedDecoration: E,
 initialSelectedDecorationId: m,
@@ -44,7 +44,7 @@ pendingAvatarDecoration: C,
 setPendingAvatarDecoration: y,
 savedAvatarDecoration: D
   } = (0, p.Z)({
-analyticsLocations: o,
+analyticsLocations: s,
 isTryItOut: I,
 guildId: null == N ? void 0 : N.id
   }), [L, b] = i.useState(() => {
@@ -56,35 +56,35 @@ return null != m ? null !== (e = r.find(e => e.id === m)) && void 0 !== e ? e : 
   }), {
 product: M,
 purchase: P
-  } = (0, _.Z)(null == L ? void 0 : L.skuId), U = T.ZP.canUseCollectibles(t), w = i.useRef(null), x = (0, f.Z)(o), G = (0, g.sr)(L, void 0 === C ? D : C), k = () => {
+  } = (0, _.Z)(null == L ? void 0 : L.skuId), U = T.ZP.canUseCollectibles(t), w = i.useRef(null), x = (0, f.Z)(s), G = (0, g.sr)(L, void 0 === C ? D : C), k = () => {
 y(L), u();
   }, B = i.useCallback(e => {
 u(), (0, c.mK)({
-  analyticsLocations: o,
+  analyticsLocations: s,
   analyticsSource: l.Z.EDIT_AVATAR_DECORATION_MODAL,
   initialProductSkuId: e
 });
   }, [
-o,
+s,
 u
   ]);
   return (0, r.jsxs)(r.Fragment, {
 children: [
-  (0, r.jsxs)(s.ModalHeader, {
+  (0, r.jsxs)(o.ModalHeader, {
     separator: !1,
     className: R.modalHeader,
     children: [
-      (0, r.jsx)(s.Heading, {
+      (0, r.jsx)(o.Heading, {
         variant: 'heading-lg/semibold',
         children: O.Z.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
       }),
-      (0, r.jsx)(s.ModalCloseButton, {
+      (0, r.jsx)(o.ModalCloseButton, {
         className: R.modalCloseButton,
         onClick: u
       })
     ]
   }),
-  (0, r.jsxs)(s.ModalContent, {
+  (0, r.jsxs)(o.ModalContent, {
     className: R.modalContent,
     scrollbarType: 'none',
     children: [
@@ -106,14 +106,14 @@ children: [
       })
     ]
   }),
-  (0, r.jsxs)(s.ModalFooter, {
+  (0, r.jsxs)(o.ModalFooter, {
     className: R.modalFooter,
     children: [
-      null != P && (!(0, d.qS)(P) || U) || null === L ? (0, r.jsx)(s.Button, {
+      null != P && (!(0, d.qS)(P) || U) || null === L ? (0, r.jsx)(o.Button, {
         onClick: k,
         disabled: G,
         children: O.Z.Messages.AVATAR_DECORATION_MODAL_APPLY
-      }) : null == P && (U || !(0, d.G1)(M)) ? (0, r.jsx)(s.Button, {
+      }) : null == P && (U || !(0, d.G1)(M)) ? (0, r.jsx)(o.Button, {
         className: R.modalFooterShopButton,
         onClick: () => B(null == M ? void 0 : M.skuId),
         children: O.Z.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
@@ -121,9 +121,9 @@ children: [
         subscriptionTier: v.Si.TIER_2,
         buttonText: T.ZP.isPremium(t) ? O.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : O.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
       }),
-      (0, r.jsx)(s.Button, {
-        look: s.Button.Looks.LINK,
-        color: s.Button.Colors.PRIMARY,
+      (0, r.jsx)(o.Button, {
+        look: o.Button.Looks.LINK,
+        color: o.Button.Colors.PRIMARY,
         onClick: u,
         children: O.Z.Messages.CANCEL
       })
@@ -143,7 +143,7 @@ initialSelectedDecoration: f,
 initialSelectedDecorationId: h,
 isTryItOutFlow: p,
 guild: T
-  } = e, g = (0, o.e7)([m.default], () => m.default.getCurrentUser()), {
+  } = e, g = (0, s.e7)([m.default], () => m.default.getCurrentUser()), {
 analyticsLocations: S
   } = (0, u.ZP)(n, l.Z.EDIT_AVATAR_DECORATION_MODAL), {
 categories: A,
@@ -163,13 +163,13 @@ I.default.track(N.rMx.OPEN_MODAL, {
 });
   }, [A]), null == g ? null : (0, r.jsx)(u.Gt, {
 value: S,
-children: (0, r.jsx)(s.ModalRoot, {
+children: (0, r.jsx)(o.ModalRoot, {
   transitionState: t,
   className: R.modal,
-  size: D ? s.ModalSize.DYNAMIC : s.ModalSize.MEDIUM,
-  children: D ? (0, r.jsx)(s.Spinner, {
+  size: D ? o.ModalSize.DYNAMIC : o.ModalSize.MEDIUM,
+  children: D ? (0, r.jsx)(o.Spinner, {
     className: R.spinner,
-    type: s.Spinner.Type.SPINNING_CIRCLE
+    type: o.Spinner.Type.SPINNING_CIRCLE
   }) : (0, r.jsx)(C, {
     user: g,
     guild: T,

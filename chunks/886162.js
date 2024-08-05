@@ -4,8 +4,8 @@ return I;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(990547),
+  a = n(470079),
+  s = n(990547),
   r = n(399606),
   l = n(481060),
   o = n(232567),
@@ -19,13 +19,13 @@ var i = n(735250),
 function I(e) {
   let {
 transitionState: t
-  } = e, I = (0, r.e7)([d.Z], () => d.Z.getAction()), [m, g] = s.useState(!1), p = (0, u.Dt)();
+  } = e, I = (0, r.e7)([d.Z], () => d.Z.getAction()), [m, g] = a.useState(!1), p = (0, u.Dt)();
   async function T() {
 return g(!0), I === _.c2C.AGREEMENTS && g(await (0, o.Lr)()), null;
   }
   return (0, c.Z)({
-type: a.ImpressionTypes.VIEW,
-name: a.ImpressionNames.USER_AGREEMENTS,
+type: s.ImpressionTypes.VIEW,
+name: s.ImpressionNames.USER_AGREEMENTS,
 properties: {
   required_action: I
 }

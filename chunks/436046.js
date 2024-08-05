@@ -3,8 +3,8 @@ n.d(t, {
 return N;
   }
 }), n(47120);
-var a = n(735250),
-  s = n(470079),
+var s = n(735250),
+  a = n(470079),
   o = n(512722),
   r = n.n(o),
   l = n(442837),
@@ -13,8 +13,8 @@ var a = n(735250),
   d = n(771308),
   u = n(13430),
   _ = n(594174),
-  p = n(63063),
-  f = n(981631),
+  f = n(63063),
+  p = n(981631),
   m = n(723359),
   h = n(689938),
   E = n(21800);
@@ -23,7 +23,7 @@ function N(e) {
   let {
 onComplete: t,
 onClose: n
-  } = e, [o, N] = s.useState(null), [T, x] = s.useState(null), [A, v] = s.useState(!1), b = (0, l.e7)([_.default], () => _.default.getCurrentUser()), C = s.createRef();
+  } = e, [o, N] = a.useState(null), [T, x] = a.useState(null), [A, v] = a.useState(!1), b = (0, l.e7)([_.default], () => _.default.getCurrentUser()), C = a.createRef();
   async function I(e) {
 e.preventDefault(), r()(null != o, 'Cannot submit null birthday.'), v(!0);
 try {
@@ -32,52 +32,52 @@ try {
   if (null != e.body && null != e.body.date_of_birth)
     d.wE(m.L0.NEW_USER_FLOW), d.hp(m.L0.NEW_USER_FLOW), n();
   else {
-    var a;
-    (null == e ? void 0 : null === (a = e.body) || void 0 === a ? void 0 : a.username) != null ? x(h.Z.Messages.USER_SETTINGS_UPDATE_FAILURE) : x(null == e ? void 0 : e.body.message);
+    var s;
+    (null == e ? void 0 : null === (s = e.body) || void 0 === s ? void 0 : s.username) != null ? x(h.Z.Messages.USER_SETTINGS_UPDATE_FAILURE) : x(null == e ? void 0 : e.body.message);
   }
 }
 v(!1);
   }
-  s.useEffect(() => {
+  a.useEffect(() => {
 null != b && null != b.nsfwAllowed && t();
   }, [
 b,
 t
   ]);
-  let g = s.useCallback(e => {
+  let g = a.useCallback(e => {
   N(e);
 }, [N]),
-M = s.useCallback(() => {
+M = a.useCallback(() => {
   var e;
   null === (e = C.current) || void 0 === e || e.focus();
 }, [C]);
-  return null == b ? null : (0, a.jsxs)('form', {
+  return null == b ? null : (0, s.jsxs)('form', {
 className: E.content,
 onSubmit: I,
 children: [
-  (0, a.jsx)(c.ClydeIcon, {
+  (0, s.jsx)(c.ClydeIcon, {
     size: 'custom',
     width: 56,
     height: 40,
     className: E.logo,
     color: i.Z.unsafe_rawColors.BRAND_500.css
   }),
-  (0, a.jsx)(c.Heading, {
+  (0, s.jsx)(c.Heading, {
     className: E.title,
     variant: 'heading-xl/semibold',
     children: h.Z.Messages.NUF_JOIN_SERVER_TITLE_2
   }),
-  (0, a.jsx)(c.Text, {
+  (0, s.jsx)(c.Text, {
     color: 'text-normal',
     className: E.description,
     variant: 'text-md/normal',
     children: h.Z.Messages.NUF_AGE_GATE_BODY.format({
-      helpURL: p.Z.getArticleURL(f.BhN.AGE_GATE)
+      helpURL: f.Z.getArticleURL(p.BhN.AGE_GATE)
     })
   }),
-  (0, a.jsx)(c.ThemeContextProvider, {
-    theme: f.BRd.LIGHT,
-    children: (0, a.jsx)(u.Z, {
+  (0, s.jsx)(c.ThemeContextProvider, {
+    theme: p.BRd.LIGHT,
+    children: (0, s.jsx)(u.Z, {
       required: !0,
       autoFocus: !0,
       wrapperClassName: E.formItem,
@@ -89,11 +89,11 @@ children: [
       value: o
     })
   }),
-  (0, a.jsx)('div', {
+  (0, s.jsx)('div', {
     className: E.footer,
-    children: (0, a.jsx)('div', {
+    children: (0, s.jsx)('div', {
       className: E.buttonWrapper,
-      children: (0, a.jsx)(c.Button, {
+      children: (0, s.jsx)(c.Button, {
         buttonRef: C,
         type: 'submit',
         size: c.Button.Sizes.LARGE,

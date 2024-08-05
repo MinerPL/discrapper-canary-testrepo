@@ -7,8 +7,8 @@ var r = n(302454);
 let {
   newline: i,
   paragraph: a,
-  url: o,
-  link: s,
+  url: s,
+  link: o,
   strong: l,
   u,
   br: c,
@@ -18,11 +18,11 @@ let {
 } = r.defaultRules, f = {
   newline: i,
   paragraph: a,
-  url: o,
+  url: s,
   link: {
-...s,
+...o,
 parse(e, t, n) {
-  let r = s.parse(e, t, n);
+  let r = o.parse(e, t, n);
   return r.context = n.context, r;
 }
   },

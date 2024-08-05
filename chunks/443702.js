@@ -1,6 +1,6 @@
 s.d(t, {
   Z: function() {
-return D;
+return f;
   }
 });
 var n = s(735250),
@@ -21,8 +21,8 @@ var n = s(735250),
   C = s(594174),
   m = s(351402),
   A = s(853872),
-  h = s(78839),
-  g = s(706454),
+  g = s(78839),
+  h = s(706454),
   O = s(726985),
   p = s(981631),
   R = s(689938),
@@ -94,19 +94,19 @@ return t ? (0, n.jsx)(E.Z, {}) : (0, n.jsxs)('div', {
   }
 }
 
-function D() {
+function f() {
   let e = (0, o.cj)([
-g.default,
+h.default,
 m.Z,
 A.Z,
 C.default,
 N.Z,
-h.ZP
+g.ZP
   ], () => {
-let e = h.ZP.getPremiumTypeSubscription(),
+let e = g.ZP.getPremiumTypeSubscription(),
   t = C.default.getCurrentUser();
 return r()(null != t, 'UserSettingsBilling: currentUser cannot be undefined'), {
-  locale: g.default.locale,
+  locale: h.default.locale,
   hide: N.Z.enabled,
   isClaimed: t.isClaimed(),
   isVerified: t.verified,

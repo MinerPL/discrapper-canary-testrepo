@@ -1,6 +1,6 @@
 n.r(t), n.d(t, {
   PaymentContext: function() {
-return F;
+return B;
   },
   PaymentContextProvider: function() {
 return g;
@@ -42,8 +42,8 @@ var r = n(735250),
   Z = n(771206),
   G = n(362755),
   D = n(981631),
-  B = n(474936);
-let [F, K, y] = (0, I.Z)();
+  F = n(474936);
+let [B, K, y] = (0, I.Z)();
 
 function g(e) {
   var t, n;
@@ -60,8 +60,8 @@ purchaseType: b = D.GZQ.SUBSCRIPTION,
 applicationId: W,
 referralCode: V,
 repeatPurchase: k = !1
-  } = e, x = (0, Z.Z)(), X = (0, S.Q)(), J = (0, P.Z)(), {
-paymentSources: Q,
+  } = e, x = (0, Z.Z)(), Q = (0, S.Q)(), X = (0, P.Z)(), {
+paymentSources: J,
 hasPaymentSources: j,
 paymentSourceId: q,
 setPaymentSourceId: z,
@@ -115,28 +115,28 @@ A.Z.purchaseTokenHash
   ]), [ep, em] = (0, E.Wu)([G.Z], () => [
 G.Z.browserCheckoutState,
 G.Z.loadId
-  ]), [eZ, eG] = i.useState(null), [eD, eB] = i.useState(null), [eF, eK] = i.useState(null), [ey, eg] = i.useState(null), [eH, ev] = i.useState(null), [ew, eY] = i.useState(void 0), [eb, eW] = i.useState([]), eV = i.useMemo(() => null == ef || (0, C.PV)(ef.id), [ef]), ek = i.useRef(null != K ? K.planId : null);
+  ]), [eZ, eG] = i.useState(null), [eD, eF] = i.useState(null), [eB, eK] = i.useState(null), [ey, eg] = i.useState(null), [eH, ev] = i.useState(null), [ew, eY] = i.useState(void 0), [eb, eW] = i.useState([]), eV = i.useMemo(() => null == ef || (0, C.PV)(ef.id), [ef]), ek = i.useRef(null != K ? K.planId : null);
   i.useEffect(() => {
 null == ek.current && null != K && (ek.current = K.planId);
   }, [K]);
   let {
 skusById: ex,
-hasFetchedSkus: eX,
-skuPricePreviewsById: eJ,
-previewErrorsById: eQ
+hasFetchedSkus: eQ,
+skuPricePreviewsById: eX,
+previewErrorsById: eJ
   } = (0, p.Z)({
-applicationId: null != W ? W : B.RQ,
+applicationId: null != W ? W : F.RQ,
 skuIDs: H,
 currentPaymentSourceId: q,
 isGift: v
-  }), ej = null != eP ? eQ[eP] : null, eq = i.useMemo(() => {
+  }), ej = null != eP ? eJ[eP] : null, eq = i.useMemo(() => {
 if (null == eP)
   return null;
-let e = eJ[eP];
+let e = eX[eP];
 return null == e ? null : e[null != q ? q : c.c];
   }, [
 eP,
-eJ,
+eX,
 q
   ]), ez = (0, s.IX)(W), e$ = (0, d.yE)(null !== (t = null == ez ? void 0 : ez.flags) && void 0 !== t ? t : 0, D.udG.EMBEDDED) && (0, d.yE)(null !== (n = null == ez ? void 0 : ez.flags) && void 0 !== n ? n : 0, D.udG.EMBEDDED_IAP), e0 = (0, E.e7)([a.ZP], () => Array.from(a.ZP.getSelfEmbeddedActivities().values()).find(e => {
 let {
@@ -144,20 +144,20 @@ let {
 } = e;
 return t === W;
   })), e1 = (0, _.Z)(e0), e7 = (0, E.e7)([T.Z], () => null != eP ? T.Z.getForSKU(eP) : null, [eP]), e4 = ex[null != eP ? eP : ''], [e2, e5] = i.useState(null);
-  return (0, r.jsx)(F.Provider, {
+  return (0, r.jsx)(B.Provider, {
 value: {
   stripe: x,
   contextMetadata: eM,
-  blockedPayments: X,
+  blockedPayments: Q,
   activeSubscription: K,
-  hasFetchedSubscriptions: J,
+  hasFetchedSubscriptions: X,
   hasFetchedSubscriptionPlans: et,
   updatedSubscription: ey,
   setUpdatedSubscription: eg,
   subscriptionMetadataRequest: eH,
   setSubscriptionMetadataRequest: ev,
   hasFetchedPaymentSources: $,
-  paymentSources: Q,
+  paymentSources: J,
   hasPaymentSources: j,
   paymentSourceId: q,
   setPaymentSourceId: z,
@@ -189,8 +189,8 @@ value: {
   bodyNode: eZ,
   setBodyNode: eG,
   footerNode: eD,
-  setFooterNode: eB,
-  modalOverlayNode: eF,
+  setFooterNode: eF,
+  modalOverlayNode: eB,
   setModalOverlayNode: eK,
   selectedSkuId: eP,
   selectedSku: e4,
@@ -204,9 +204,9 @@ value: {
   isPremium: eV,
   startedPaymentFlowWithPaymentSourcesRef: ee,
   startingPremiumSubscriptionPlanIdRef: ek,
-  hasFetchedSkus: eX,
+  hasFetchedSkus: eQ,
   skusById: ex,
-  skuPricePreviewsById: eJ,
+  skuPricePreviewsById: eX,
   selectedSkuPricePreview: eq,
   application: ez,
   purchaseType: b,

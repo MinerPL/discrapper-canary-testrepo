@@ -2,13 +2,13 @@ n(47120);
 var r = n(147913),
   i = n(592125),
   a = n(109590),
-  o = n(176505);
-class s extends r.Z {
+  s = n(176505);
+class o extends r.Z {
   handleChannelPreload(e) {
 let {
   channelId: t
 } = e;
-if ((0, o.AB)(t))
+if ((0, s.AB)(t))
   return;
 let n = i.Z.getChannel(t);
 null != n && n.isForumLikeChannel() && (0, a.EB)(n);
@@ -25,4 +25,4 @@ super(...e), t = this, n = 'actions', r = {
 }) : t[n] = r;
   }
 }
-t.Z = new s();
+t.Z = new o();

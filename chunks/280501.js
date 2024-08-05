@@ -1,11 +1,11 @@
-var r, i, a, o;
+var r, i, a, s;
 
-function s(e) {
+function o(e) {
   return e;
 }
 n.d(t, {
   FF: function() {
-return s;
+return o;
   },
   gH: function() {
 return r;
@@ -13,4 +13,4 @@ return r;
   tM: function() {
 return i;
   }
-}), (a = r || (r = {}))[a.NORMAL = 0] = 'NORMAL', a[a.LOADING = 1] = 'LOADING', a[a.DISABLED = 2] = 'DISABLED', (o = i || (i = {}))[o.STRING = 1] = 'STRING', o[o.USER = 2] = 'USER', o[o.ROLE = 3] = 'ROLE', o[o.CHANNEL = 4] = 'CHANNEL', o[o.GUILD = 5] = 'GUILD';
+}), (a = r || (r = {}))[a.NORMAL = 0] = 'NORMAL', a[a.LOADING = 1] = 'LOADING', a[a.DISABLED = 2] = 'DISABLED', (s = i || (i = {}))[s.STRING = 1] = 'STRING', s[s.USER = 2] = 'USER', s[s.ROLE = 3] = 'ROLE', s[s.CHANNEL = 4] = 'CHANNEL', s[s.GUILD = 5] = 'GUILD';

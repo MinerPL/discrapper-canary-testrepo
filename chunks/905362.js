@@ -10,8 +10,8 @@ var r = n(735250);
 n(470079);
 var i = n(704215),
   a = n(481060),
-  o = n(645041),
-  s = n(970606);
+  s = n(645041),
+  o = n(970606);
 
 function l(e) {
   (0, a.openModalLazy)(async () => {
@@ -21,15 +21,15 @@ let {
 return n => (0, r.jsx)(t, {
   ...n,
   onClose: t => {
-    (0, o.Qd)(i.C.ADOPT_CLAN_IDENTITY_NOTICE, e, !0, t), n.onClose();
+    (0, s.Qd)(i.C.ADOPT_CLAN_IDENTITY_NOTICE, e, !0, t), n.onClose();
   },
   guildId: e
 });
   });
 }
 
-function u(e, t, i, o) {
-  (0, s.Vr)({
+function u(e, t, i, s) {
+  (0, o.Vr)({
 guildId: e,
 ...i
   }), (0, a.openModalLazy)(async () => {
@@ -42,7 +42,7 @@ let {
 return n => (0, r.jsx)(e, {
   ...n,
   clan: t,
-  prioritizedGameIds: o
+  prioritizedGameIds: s
 });
   });
 }

@@ -2,12 +2,12 @@ n(610138), n(216116), n(78328), n(815648), n(47120);
 var r = n(990547),
   i = n(544891),
   a = n(570140),
-  o = n(275759),
-  s = n(710845),
+  s = n(275759),
+  o = n(710845),
   l = n(626135),
   u = n(573261),
   c = n(981631);
-let d = new s.Z('ConnectedAccounts');
+let d = new o.Z('ConnectedAccounts');
 
 function _(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -40,27 +40,27 @@ let {
   twoWayLinkType: n,
   userCode: r,
   twoWayLink: a,
-  successRedirect: o
+  successRedirect: s
 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
 l.default.track(c.rMx.CONNECTED_ACCOUNT_INITIATED, {
   platform_type: e,
   location: t
 });
-let s = c.ANM.CONNECTIONS_AUTHORIZE(e),
+let o = c.ANM.CONNECTIONS_AUTHORIZE(e),
   u = new URLSearchParams();
-return null != r && u.append('two_way_user_code', r), null != o && u.append('success_redirect', o), null != n ? (u.append('two_way_link_type', n), u.append('two_way_link', 'true')) : null != a && u.append('two_way_link', String(a)), s = s + '?' + u.toString(), i.tn.get({
-  url: s,
+return null != r && u.append('two_way_user_code', r), null != s && u.append('success_redirect', s), null != n ? (u.append('two_way_link_type', n), u.append('two_way_link', 'true')) : null != a && u.append('two_way_link', String(a)), o = o + '?' + u.toString(), i.tn.get({
+  url: o,
   oldFormErrors: !0
 });
   },
   callback: _,
   connect(e, t, n, i, a) {
-var o;
+var s;
 return u.Z.put({
   url: c.ANM.CONNECTION(e, t),
   body: {
     name: n,
-    friend_sync: null !== (o = null == a ? void 0 : a.friend_sync) && void 0 !== o ? o : c.BFP.has(e)
+    friend_sync: null !== (s = null == a ? void 0 : a.friend_sync) && void 0 !== s ? s : c.BFP.has(e)
   },
   context: {
     location: i
@@ -173,12 +173,12 @@ if (null == t) {
 }
 let {
   code: a,
-  error: s,
+  error: o,
   errorDescription: l
-} = (0, o.xp)(t);
-if (null != s) {
+} = (0, s.xp)(t);
+if (null != o) {
   d.error('Two-way link: missing authorize code', {
-    error: s,
+    error: o,
     errorDescription: l
   });
   return;

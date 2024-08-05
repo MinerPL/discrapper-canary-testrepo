@@ -1,13 +1,13 @@
 n.d(t, {
   j: function() {
-return o;
+return s;
   }
 }), n(47120), n(411104), n(653041);
 var r = n(570140);
 let i = {},
   a = !1;
 
-function o(e) {
+function s(e) {
   for (let t in e) {
 let n = e[t];
 (function(e, t) {
@@ -32,10 +32,10 @@ let n = e[t];
     !(t in i) && (i[t] = []), i[t].push(e);
 }(n));
   }
-  r.Z.addInterceptor(s);
+  r.Z.addInterceptor(o);
 }
 
-function s(e) {
+function o(e) {
   if (('CONNECTION_OPEN' === e.type || 'OVERLAY_INITIALIZE' === e.type) && (a = !0), e.type in i) {
 let t = [];
 for (let n of i[e.type])

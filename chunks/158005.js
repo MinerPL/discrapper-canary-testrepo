@@ -9,8 +9,8 @@ return f;
 var r = n(182823),
   i = n(470079),
   a = n(148836),
-  o = n(612001),
-  s = n(616073),
+  s = n(612001),
+  o = n(616073),
   l = n(251433),
   u = n(370225),
   c = n(705782),
@@ -24,7 +24,7 @@ isDisabled: d,
 isRequired: E,
 name: f,
 validationBehavior: h = 'aria'
-  } = e, p = (0, s.Xe)({
+  } = e, p = (0, o.Xe)({
 usage: 'search',
 sensitivity: 'base'
   }), m = (0, i.useMemo)(() => c || new a.dp(t.collection, t.disabledKeys, null, p), [
@@ -76,7 +76,7 @@ validationBehavior: h
 labelProps: {
   ...v,
   onClick: () => {
-    !e.isDisabled && (n.current.focus(), (0, o._w)('keyboard'));
+    !e.isDisabled && (n.current.focus(), (0, s._w)('keyboard'));
   }
 },
 triggerProps: (0, r.dG)(y, {
@@ -141,7 +141,7 @@ function f(e) {
   let {
 state: n,
 triggerRef: a,
-label: s,
+label: o,
 name: l,
 isDisabled: u
   } = e, E = (0, i.useRef)(null), {
@@ -152,7 +152,7 @@ selectProps: p
 var i;
 let a = _.get(t) || {},
   {
-    autoComplete: s,
+    autoComplete: o,
     name: l = a.name,
     isDisabled: u = a.isDisabled
   } = e,
@@ -160,7 +160,7 @@ let a = _.get(t) || {},
     validationBehavior: E,
     isRequired: f
   } = a,
-  h = (0, o.Kf)(),
+  h = (0, s.Kf)(),
   {
     visuallyHiddenProps: p
   } = (0, d.S)();
@@ -184,7 +184,7 @@ return (0, r.y$)(e.selectRef, t.selectedKey, t.setSelectedKey), (0, c.Q)({
   },
   selectProps: {
     tabIndex: -1,
-    autoComplete: s,
+    autoComplete: o,
     disabled: u,
     required: 'native' === E && f,
     name: l,
@@ -199,7 +199,7 @@ selectRef: E
   return n.collection.size <= 300 ? i.createElement('div', {
 ...f,
 'data-testid': 'hidden-select-container'
-  }, i.createElement('input', h), i.createElement('label', null, s, i.createElement('select', {
+  }, i.createElement('input', h), i.createElement('label', null, o, i.createElement('select', {
 ...p,
 ref: E
   }, i.createElement('option', null), [...n.collection.getKeys()].map(e => {

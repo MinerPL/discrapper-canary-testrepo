@@ -1,43 +1,46 @@
-s.d(n, {
+t.d(n, {
   Z: function() {
-return c;
+return o;
   }
 });
-var l = s(735250);
-s(470079);
-var t = s(120356),
-  i = s.n(t),
-  r = s(481060),
-  a = s(397590);
+var i = t(735250);
+t(470079);
+var a = t(120356),
+  r = t.n(a),
+  s = t(481060),
+  l = t(397590);
 
-function c(e) {
+function o(e) {
   let {
 className: n,
-copy: s,
-bannerImage: t,
-textColor: c = 'always-white'
+copy: t,
+bannerImage: a,
+textColor: o = 'always-white',
+hideGiftIcon: c = !1
   } = e;
-  return (0, l.jsxs)('div', {
-className: i()(a.bannerContainer, n),
+  return (0, i.jsxs)('div', {
+className: r()(l.bannerContainer, n),
 children: [
-  null == t ? null : (0, l.jsx)('img', {
+  null == a ? null : (0, i.jsx)('img', {
     alt: '',
-    className: a.banner,
-    src: t
+    className: l.banner,
+    src: a
   }),
-  (0, l.jsxs)('div', {
-    className: a.textContainer,
+  (0, i.jsxs)('div', {
+    className: l.textContainer,
     children: [
-      (0, l.jsx)(r.GiftIcon, {
+      !1 === c && (0, i.jsx)(s.GiftIcon, {
         size: 'md',
         color: 'currentColor',
-        className: a.giftIcon
+        className: l.giftIcon
       }),
-      (0, l.jsx)(r.Heading, {
-        className: a.textHeader,
-        color: c,
+      (0, i.jsx)(s.Heading, {
+        className: r()(l.textHeader, {
+          [l.textHeaderWithGiftIcon]: !c
+        }),
+        color: o,
         variant: 'eyebrow',
-        children: s
+        children: t
       })
     ]
   })

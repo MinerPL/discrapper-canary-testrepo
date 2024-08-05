@@ -2,8 +2,8 @@ s.r(t), s(610138), s(216116), s(78328), s(815648), s(47120);
 var n = s(735250);
 s(470079);
 var r = s(481060),
-  o = s(457330),
-  a = s(417663),
+  a = s(457330),
+  o = s(417663),
   i = s(726542),
   l = s(77987),
   c = s(787025),
@@ -26,22 +26,22 @@ return (0, n.jsx)(c.G, {
 var e, t, n;
 let r = new URLSearchParams(window.location.search),
   {
-    body: a
-  } = await o.Z.authorize(s, {
+    body: o
+  } = await a.Z.authorize(s, {
     location: 'Connection Intermediate',
     twoWayLink: null != r.get('two_way_link') ? 'true' === r.get('two_way_link') : void 0,
     twoWayLinkType: null !== (e = r.get('two_way_link_type')) && void 0 !== e ? e : void 0,
     userCode: null !== (t = r.get('two_way_user_code')) && void 0 !== t ? t : void 0,
     successRedirect: null !== (n = r.get('success_redirect')) && void 0 !== n ? n : void 0
   });
-window.location = a.url;
+window.location = o.url;
   }
   return (0, n.jsx)(c.G, {
 wrapperClassName: u.wrapper,
 children: (0, n.jsxs)('div', {
   className: u.root,
   children: [
-    (0, n.jsx)(a.LinkPlatformLogo, {
+    (0, n.jsx)(o.LinkPlatformLogo, {
       className: u.logos,
       platform: l
     }),

@@ -11,17 +11,17 @@ t.Z = {
 var t = e.state,
   n = e.instance,
   a = e.options,
-  o = a.scroll,
-  s = void 0 === o || o,
+  s = a.scroll,
+  o = void 0 === s || s,
   l = a.resize,
   u = void 0 === l || l,
   c = (0, r.Z)(t.elements.popper),
   d = [].concat(t.scrollParents.reference, t.scrollParents.popper);
-return s && d.forEach(function(e) {
+return o && d.forEach(function(e) {
     e.addEventListener('scroll', n.update, i);
   }), u && c.addEventListener('resize', n.update, i),
   function() {
-    s && d.forEach(function(e) {
+    o && d.forEach(function(e) {
       e.removeEventListener('scroll', n.update, i);
     }), u && c.removeEventListener('resize', n.update, i);
   };

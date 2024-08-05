@@ -1,121 +1,125 @@
 t.r(e);
-var l = t(735250),
+var r = t(735250),
   u = t(470079),
-  r = t(442837),
-  i = t(481060),
-  a = t(239091),
-  o = t(883385),
+  i = t(442837),
+  a = t(481060),
+  o = t(239091),
+  l = t(883385),
   c = t(108843),
-  s = t(2052),
-  d = t(100527),
-  _ = t(906732),
+  d = t(2052),
+  _ = t(100527),
+  s = t(906732),
   E = t(299206),
   M = t(976192),
   f = t(910693),
-  T = t(271383),
-  Z = t(979651),
-  A = t(933409),
-  O = t(389052),
-  C = t(88966),
-  I = t(712301),
-  L = t(567711),
-  p = t(358386),
+  A = t(271383),
+  O = t(979651),
+  I = t(933409),
+  T = t(389052),
+  L = t(88966),
+  N = t(712301),
+  U = t(567711),
+  D = t(358386),
   S = t(725119),
-  U = t(931617),
-  g = t(981631),
-  D = t(689938);
-e.default = (0, c.Z)((0, o.Z)(function(n) {
+  p = t(931617),
+  C = t(981631),
+  g = t(689938);
+e.default = (0, c.Z)((0, l.Z)(function(n) {
   var e;
   let {
 user: t,
-guildId: o,
+guildId: l,
 channelId: c,
-context: g,
-onSelect: x,
-moderationAlertId: N,
-analyticsLocation: b,
-analyticsLocations: v,
-onCloseContextMenu: h,
-showTransferOwnershipItem: R
+context: C,
+onSelect: y,
+moderationAlertId: R,
+analyticsLocation: m,
+analyticsLocations: b,
+onCloseContextMenu: x,
+showTransferOwnershipItem: j
   } = n, {
-analyticsLocations: j
-  } = (0, _.ZP)(d.Z.CONTEXT_MENU), y = (0, s.O)(), P = null !== (e = null == v ? void 0 : v[0]) && void 0 !== e ? e : j[0], m = (0, f.sE)(o, {
-location: P,
+analyticsLocations: v
+  } = (0, s.ZP)(_.Z.CONTEXT_MENU), Z = (0, d.O)(), h = null !== (e = null == b ? void 0 : b[0]) && void 0 !== e ? e : v[0], G = (0, f.sE)(l, {
+location: h,
 targetUserId: t.id
-  }), G = (0, r.e7)([Z.Z], () => {
+  }), P = (0, i.e7)([O.Z], () => {
 var n;
-return null !== (n = Z.Z.getUserVoiceChannelId(o, t.id)) && void 0 !== n ? n : void 0;
+return null !== (n = O.Z.getUserVoiceChannelId(l, t.id)) && void 0 !== n ? n : void 0;
   }, [
-o,
+l,
 t.id
-  ]), k = u.useCallback(() => {
-m(f.jQ.COPY_ID);
-  }, [m]), w = (0, r.e7)([T.ZP], () => T.ZP.isMember(o, t.id), [
-o,
+  ]), w = u.useCallback(() => {
+G(f.jQ.COPY_ID);
+  }, [G]), k = (0, i.e7)([A.ZP], () => A.ZP.isMember(l, t.id), [
+l,
 t.id
-  ]), B = (0, S.Z)(t.id, o), F = (0, C.Z)(t.id, g), Y = (0, M.Z)({
-guildId: o,
+  ]), F = (0, S.Z)({
 userId: t.id,
-analyticsLocation: null != b ? b : y.location,
-analyticsLocations: [P],
-context: g
-  }), H = (0, O.Z)({
+guildId: l,
+sourceAnalyticsLocations: b
+  }), Y = (0, L.Z)(t.id, C), B = (0, M.Z)({
+guildId: l,
+userId: t.id,
+analyticsLocation: null != m ? m : Z.location,
+analyticsLocations: [h],
+context: C
+  }), K = (0, T.Z)({
 user: t,
-location: P
-  }), W = (0, A.Z)(t, o, null != c ? c : G, P), q = (0, L.Z)(c, N), z = (0, p.Z)(t, o), V = (0, U.Z)(t.id, o, !1, P), K = (0, E.Z)({
+location: h
+  }), V = (0, I.Z)(t, l, null != c ? c : P, h), W = (0, U.Z)(c, R), H = (0, D.Z)(t, l), q = (0, p.Z)(t.id, l, !1, h), X = (0, E.Z)({
 id: t.id,
-label: D.Z.Messages.COPY_ID_USER,
-onSuccess: k
-  }), X = (0, I.Z)(t, o), Q = !!(null == t ? void 0 : t.isNonUserBot());
-  return (0, l.jsxs)(i.Menu, {
+label: g.Z.Messages.COPY_ID_USER,
+onSuccess: w
+  }), z = (0, N.Z)(t, l), Q = !!(null == t ? void 0 : t.isNonUserBot());
+  return (0, r.jsxs)(a.Menu, {
 navId: 'user-context',
 onClose: () => {
-  (0, a.Zy)(), null == h || h();
+  (0, o.Zy)(), null == x || x();
 },
-'aria-label': D.Z.Messages.USER_ACTIONS_MENU_LABEL,
-onSelect: x,
+'aria-label': g.Z.Messages.USER_ACTIONS_MENU_LABEL,
+onSelect: y,
 children: [
-  !Q && (0, l.jsxs)(l.Fragment, {
+  !Q && (0, r.jsxs)(r.Fragment, {
     children: [
-      (0, l.jsxs)(i.MenuGroup, {
+      (0, r.jsxs)(a.MenuGroup, {
+        children: [
+          F,
+          Y
+        ]
+      }),
+      (0, r.jsxs)(a.MenuGroup, {
         children: [
           B,
-          F
+          K
         ]
       }),
-      (0, l.jsxs)(i.MenuGroup, {
+      k && (0, r.jsxs)(r.Fragment, {
         children: [
-          Y,
-          H
-        ]
-      }),
-      w && (0, l.jsxs)(l.Fragment, {
-        children: [
-          (0, l.jsx)(i.MenuGroup, {
-            children: W
+          (0, r.jsx)(a.MenuGroup, {
+            children: V
           }),
-          (0, l.jsxs)(i.MenuGroup, {
+          (0, r.jsxs)(a.MenuGroup, {
             children: [
-              V,
-              X
+              q,
+              z
             ]
           })
         ]
       }),
-      null != N ? q : null,
-      R && null != z ? (0, l.jsx)(i.MenuGroup, {
-        children: z
+      null != R ? W : null,
+      j && null != H ? (0, r.jsx)(a.MenuGroup, {
+        children: H
       }) : null
     ]
   }),
-  (0, l.jsx)(i.MenuGroup, {
-    children: K
+  (0, r.jsx)(a.MenuGroup, {
+    children: X
   })
 ]
   });
 }, {
-  object: g.qAy.CONTEXT_MENU
+  object: C.qAy.CONTEXT_MENU
 }), [
-  d.Z.CONTEXT_MENU,
-  d.Z.GUILD_MODERATION_USER_MENU
+  _.Z.CONTEXT_MENU,
+  _.Z.GUILD_MODERATION_USER_MENU
 ]);

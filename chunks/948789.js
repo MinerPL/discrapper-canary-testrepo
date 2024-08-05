@@ -7,8 +7,8 @@ return c;
 return o;
   }
 }), n(653041), n(757143);
-var s = n(438361),
-  a = n.n(s),
+var a = n(438361),
+  s = n.n(a),
   r = n(33382),
   l = n.n(r);
 
@@ -24,4 +24,4 @@ if (null != e)
   }).exec(e.history.location.pathname);
   };
 }
-i = a()();
+i = s()();

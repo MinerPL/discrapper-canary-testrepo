@@ -1,24 +1,24 @@
 n.d(t, {
   k: function() {
-return o;
+return s;
   }
 });
 var r = n(442837),
   i = n(114064),
   a = n(485731);
 
-function o(e) {
+function s(e) {
   var t, n;
   let {
-demos: o,
-activated: s
+demos: s,
+activated: o
   } = (0, r.cj)([i.Z], () => ({
 demos: i.Z.getPerksDemos(),
 activated: i.Z.getActivated()
   })), l = (0, a.j$)();
   return {
-available: null !== (t = null == o ? void 0 : o[e]) && void 0 !== t && t,
-activated: null !== (n = s[e]) && void 0 !== n && n,
+available: null !== (t = null == s ? void 0 : s[e]) && void 0 !== t && t,
+activated: null !== (n = o[e]) && void 0 !== n && n,
 hqStreamingState: l
   };
 }

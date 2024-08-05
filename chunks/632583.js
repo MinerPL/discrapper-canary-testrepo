@@ -6,8 +6,8 @@ return E;
 var r = n(735250),
   i = n(470079),
   a = n(692547),
-  o = n(325767);
-let s = 'currentColor',
+  s = n(325767);
+let o = 'currentColor',
   l = new Map([
 [
   'url(#birthday_gradient_1)',
@@ -94,10 +94,10 @@ return (0, r.jsx)(r.Fragment, {
   },
   _ = (e, t, n, r, i) => {
 if (!t || r)
-  return e ? 'url(#nitro_hover)' : s;
+  return e ? 'url(#nitro_hover)' : o;
 let a = n ? [...u.keys()].filter(e => e !== i) : [...l.keys()].filter(e => e !== i),
-  o = Math.floor(Math.random() * a.length);
-return a[o];
+  s = Math.floor(Math.random() * a.length);
+return a[s];
   };
 
 function E(e) {
@@ -111,9 +111,9 @@ hovered: h,
 shouldShowBirthdayUX: p,
 isLightTheme: m,
 ...I
-  } = e, [T, g] = i.useState(s), S = null !== (t = l.get(T)) && void 0 !== t ? t : null;
+  } = e, [T, g] = i.useState(o), S = null !== (t = l.get(T)) && void 0 !== t ? t : null;
   return i.useEffect(() => {
-h ? g(e => _(h, p, m, f, e)) : f && g(s);
+h ? g(e => _(h, p, m, f, e)) : f && g(o);
   }, [
 h,
 p,
@@ -122,14 +122,14 @@ f
   ]), (0, r.jsxs)('svg', {
 width: n,
 height: u,
-...(0, o.Z)(I),
+...(0, s.Z)(I),
 xmlns: 'http://www.w3.org/2000/svg',
 children: [
   f ? (0, r.jsx)(d, {
     fillColor: T
   }) : (0, r.jsx)(c, {
     referralsRemaining: E,
-    fillColor: h ? T : s,
+    fillColor: h ? T : o,
     secondaryFillColor: h ? S : null
   }),
   (0, r.jsxs)('defs', {

@@ -1,24 +1,26 @@
 n.d(t, {
   J1: function() {
-return i;
+return s;
   },
   cD: function() {
-return l;
+return c;
   },
   hP: function() {
-return a;
-  },
-  j$: function() {
-return r;
-  },
-  pM: function() {
 return o;
   },
+  j$: function() {
+return a;
+  },
+  pM: function() {
+return l;
+  },
   qA: function() {
-return s;
+return u;
   }
 });
-let r = (0, n(652874).Z)(() => ({
+var r = n(652874),
+  i = n(731965);
+let a = (0, r.Z)(() => ({
   hqStreamingFrameAnimationPlayed: !1,
   hqStreamingPopoutDismissed: !1,
   hqStreamingOptInPopoutDismissed: !1,
@@ -27,36 +29,38 @@ let r = (0, n(652874).Z)(() => ({
   hqStreamingOptOutPopoutShouldShow: !1
 }));
 
-function i(e) {
+function s(e) {
   let {
 hqStreamingDidEnable: t
-  } = r.getState();
-  r.setState({
-hqStreamingIsEnabled: e,
-hqStreamingDidEnable: e || t
-  });
-}
-
-function a(e) {
-  r.setState({
-hqStreamingFrameAnimationPlayed: e
+  } = a.getState();
+  (0, i.j)(() => {
+a.setState({
+  hqStreamingIsEnabled: e,
+  hqStreamingDidEnable: e || t
+});
   });
 }
 
 function o(e) {
-  r.setState({
-hqStreamingPopoutDismissed: e
-  });
-}
-
-function s(e) {
-  r.setState({
-hqStreamingOptInPopoutDismissed: e
-  });
+  (0, i.j)(() => a.setState({
+hqStreamingFrameAnimationPlayed: e
+  }));
 }
 
 function l(e) {
-  r.setState({
+  (0, i.j)(() => a.setState({
+hqStreamingPopoutDismissed: e
+  }));
+}
+
+function u(e) {
+  (0, i.j)(() => a.setState({
+hqStreamingOptInPopoutDismissed: e
+  }));
+}
+
+function c(e) {
+  (0, i.j)(() => a.setState({
 hqStreamingOptOutPopoutShouldShow: e
-  });
+  }));
 }

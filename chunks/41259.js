@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(974674),
   a = n(1561),
-  o = n(993365),
-  s = n(467679),
+  s = n(993365),
+  o = n(385499),
   l = n(768581),
   u = n(630388),
   c = n(489863),
@@ -64,29 +64,29 @@ children: [
       })
     ]
   }),
-  !g && (0, r.jsx)(o.x, {
+  !g && (0, r.jsx)(s.x, {
     variant: 'text-md/medium',
     color: 'header-secondary',
     className: f.label,
     children: E.Z.Messages.OAUTH2_THIRD_PARTY_APPLICATION
   }),
-  (0, r.jsxs)(o.x, {
+  (0, r.jsxs)(s.x, {
     variant: 'text-lg/bold',
     color: 'header-primary',
     children: [
       h.name,
-      null != p ? (0, r.jsx)(s.Z, {
+      null != p ? (0, r.jsx)(o.Z, {
         className: f.botTag,
         verified: null != p.public_flags && (0, u.yE)(p.public_flags, d.xW$.VERIFIED_BOT)
       }) : null
     ]
   }),
-  m.length > 0 ? (0, r.jsx)(o.x, {
+  m.length > 0 ? (0, r.jsx)(s.x, {
     variant: 'text-md/normal',
     color: 'header-secondary',
     className: f.label,
     children: E.Z.Messages.OAUTH2_REQUESTS_ACCOUNT_ACCESS
-  }) : (0, r.jsx)(o.x, {
+  }) : (0, r.jsx)(s.x, {
     variant: 'text-md/normal',
     color: 'header-secondary',
     className: f.label,
@@ -94,17 +94,17 @@ children: [
   }),
   I ? (0, r.jsx)('div', {
     className: f.currentUser,
-    children: (0, r.jsxs)(o.x, {
+    children: (0, r.jsxs)(s.x, {
       variant: 'text-sm/normal',
       color: 'text-muted',
       children: [
         E.Z.Messages.OAUTH2_SIGNED_IN_AS.format({
-          userHook: () => (0, r.jsxs)(o.x, {
+          userHook: () => (0, r.jsxs)(s.x, {
             className: f.currentUserTag,
             variant: 'text-sm/normal',
             children: [
               n.username,
-              !n.isPomelo() && (0, r.jsx)(o.x, {
+              !n.isPomelo() && (0, r.jsx)(s.x, {
                 className: f.currentUserDiscriminator,
                 variant: 'text-sm/normal',
                 children: '#'.concat(n.discriminator)

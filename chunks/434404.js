@@ -1,8 +1,8 @@
 var r = n(990547),
   i = n(544891),
   a = n(570140),
-  o = n(37234),
-  s = n(710845),
+  s = n(37234),
+  o = n(710845),
   l = n(655006),
   u = n(408987),
   c = n(962086),
@@ -17,7 +17,7 @@ var r = n(990547),
   T = n(981631),
   g = n(308083),
   S = n(689938);
-let A = new s.Z('GuildSettingsActionCreators'),
+let A = new o.Z('GuildSettingsActionCreators'),
   N = {
 init(e, t, n, r) {
   a.Z.dispatch({
@@ -37,27 +37,26 @@ async open(e, t, r, i) {
     n.e('11751'),
     n.e('29549'),
     n.e('33053'),
-    n.e('50654'),
-    n.e('7654'),
     n.e('31605'),
+    n.e('50654'),
     n.e('65840'),
-    n.e('73331'),
-    n.e('44156'),
+    n.e('7654'),
     n.e('90508'),
+    n.e('67847'),
+    n.e('44156'),
     n.e('71700'),
     n.e('85552'),
+    n.e('51760'),
     n.e('58227'),
-    n.e('3084'),
-    n.e('10926'),
-    n.e('43568'),
     n.e('1187'),
-    n.e('55400'),
+    n.e('10926'),
     n.e('92557'),
-    n.e('36439'),
-    n.e('39557'),
+    n.e('64679'),
+    n.e('89622'),
+    n.e('84739'),
     n.e('35919')
   ]).then(n.bind(n, 994763)), (null === (a = h.Z.getGuild(e)) || void 0 === a ? void 0 : a.hasFeature(T.oNc.COMMUNITY)) && (t === T.pNK.GUILD_AUTOMOD && (t = T.pNK.SAFETY, i = T.KsC.SAFETY_AUTOMOD), t === T.pNK.MEMBER_VERIFICATION && (t = T.pNK.SAFETY, i = T.KsC.SAFETY_DM_AND_SPAM_PROTECTION)), N.init(e, t, r, i);
-  (0, o.jN)(T.S9g.GUILD_SETTINGS);
+  (0, s.jN)(T.S9g.GUILD_SETTINGS);
 },
 close() {
   a.Z.dispatch({
@@ -159,29 +158,29 @@ updateGuild(e) {
   let {
     safetyAlertsChannelId: r,
     clan: i,
-    ...o
-  } = e, s = {
-    ...o
+    ...s
+  } = e, o = {
+    ...s
   };
-  null != i && (s.clan = {
-    ...null !== (t = s.clan) && void 0 !== t ? t : {},
+  null != i && (o.clan = {
+    ...null !== (t = o.clan) && void 0 !== t ? t : {},
     ...i
   });
   let u = I.Z.getGuildId();
   null != u && (null === (n = l.l.getCurrentConfig({
     guildId: u,
     location: 'be0372_1'
-  })) || void 0 === n ? void 0 : n.enableRaidAlerts) && null != r && (s.safetyAlertsChannelId = r), a.Z.dispatch({
+  })) || void 0 === n ? void 0 : n.enableRaidAlerts) && null != r && (o.safetyAlertsChannelId = r), a.Z.dispatch({
     type: 'GUILD_SETTINGS_UPDATE',
-    ...s
+    ...o
   });
 },
 saveGuild(e, t) {
   let {
     name: n,
     description: r,
-    icon: o,
-    splash: s,
+    icon: s,
+    splash: o,
     banner: l,
     homeHeader: c,
     afkChannelId: d,
@@ -202,8 +201,8 @@ saveGuild(e, t) {
   } = t, D = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, L = {
     name: n,
     description: r,
-    icon: o,
-    splash: s,
+    icon: s,
+    splash: o,
     banner: l,
     home_header: c,
     features: m,
@@ -321,7 +320,7 @@ async leaveGuild(e) {
     oldFormErrors: !0
   }), N.close();
 },
-async updateMemberRoles(e, t, n, r, o) {
+async updateMemberRoles(e, t, n, r, s) {
   if (d.Z.isFullServerPreview(e) && t === E.default.getId()) {
     (0, c.og)(e, n);
     return;
@@ -337,7 +336,7 @@ async updateMemberRoles(e, t, n, r, o) {
     guildId: e,
     roleId: n,
     userId: t
-  })), o.forEach(n => a.Z.dispatch({
+  })), s.forEach(n => a.Z.dispatch({
     type: 'GUILD_ROLE_MEMBER_REMOVE',
     guildId: e,
     roleId: n,
@@ -357,12 +356,6 @@ bulkAddMemberRoles: (e, t, n) => i.tn.patch({
     added: n.body
   });
 }),
-updateRolesEditSection(e) {
-  a.Z.dispatch({
-    type: 'GUILD_SETTINGS_ROLES_EDIT_SECTION_UPDATE',
-    section: e
-  });
-},
 enableIntegration: (e, t, n) => i.tn.post({
   url: T.ANM.GUILD_INTEGRATIONS(e),
   body: {

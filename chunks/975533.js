@@ -1,6 +1,6 @@
 var i = n(570140),
-  s = n(846027),
-  a = n(13245),
+  a = n(846027),
+  s = n(13245),
   r = n(287734),
   l = n(872810),
   o = n(223245),
@@ -16,12 +16,12 @@ var i = n(570140),
   p = n(131951),
   T = n(246946),
   S = n(808506),
-  C = n(237997),
-  f = n(626135),
+  f = n(237997),
+  C = n(626135),
   N = n(554174),
   A = n(981631),
-  Z = n(65154);
-let L = {
+  v = n(65154);
+let Z = {
   [A.kg4.TOGGLE_PRIORITY_SPEAKER]: {
 onTrigger() {},
 keyEvents: {}
@@ -32,7 +32,7 @@ keyEvents: {}
   },
   [A.kg4.PUSH_TO_TALK]: {
 onTrigger(e, t) {
-  p.Z.getMode(t.context) === A.pM4.PUSH_TO_TALK && (L[A.kg4.PUSH_TO_TALK].isPressed = e, p.Z.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !1), t.context));
+  p.Z.getMode(t.context) === A.pM4.PUSH_TO_TALK && (Z[A.kg4.PUSH_TO_TALK].isPressed = e, p.Z.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !1), t.context));
 },
 keyEvents: {
   keyup: !0,
@@ -42,7 +42,7 @@ isPressed: !1
   },
   [A.kg4.PUSH_TO_TALK_PRIORITY]: {
 onTrigger(e) {
-  p.Z.getMode() === A.pM4.PUSH_TO_TALK && (L[A.kg4.PUSH_TO_TALK_PRIORITY].isPressed = e, p.Z.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !0), Z.Yn.DEFAULT));
+  p.Z.getMode() === A.pM4.PUSH_TO_TALK && (Z[A.kg4.PUSH_TO_TALK_PRIORITY].isPressed = e, p.Z.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !0), v.Yn.DEFAULT));
 },
 keyEvents: {
   keyup: !0,
@@ -53,7 +53,7 @@ isPressed: !1
   [A.kg4.PUSH_TO_MUTE]: {
 onTrigger(e) {
   if (!(p.Z.getMode() !== A.pM4.VOICE_ACTIVITY || p.Z.isSelfDeaf()))
-    L[A.kg4.PUSH_TO_MUTE].isPressed = e, s.Z.setTemporarySelfMute(e);
+    Z[A.kg4.PUSH_TO_MUTE].isPressed = e, a.Z.setTemporarySelfMute(e);
 },
 keyEvents: {
   keyup: !0,
@@ -62,7 +62,7 @@ keyEvents: {
 isPressed: !1
   },
   [A.kg4.TOGGLE_MUTE]: {
-onTrigger: () => s.Z.toggleSelfMute({
+onTrigger: () => a.Z.toggleSelfMute({
   usedKeybind: !0
 }),
 keyEvents: {
@@ -72,7 +72,7 @@ keyEvents: {
   },
   [A.kg4.TOGGLE_DEAFEN]: {
 onTrigger() {
-  s.Z.toggleSelfDeaf();
+  a.Z.toggleSelfDeaf();
 },
 keyEvents: {
   keyup: !0,
@@ -82,7 +82,7 @@ keyEvents: {
   [A.kg4.TOGGLE_VOICE_MODE]: {
 onTrigger() {
   let e = p.Z.getMode() === A.pM4.PUSH_TO_TALK ? A.pM4.VOICE_ACTIVITY : A.pM4.PUSH_TO_TALK;
-  s.Z.setMode(e);
+  a.Z.setMode(e);
 },
 keyEvents: {
   keyup: !0,
@@ -92,7 +92,7 @@ keyEvents: {
   [A.kg4.TOGGLE_OVERLAY]: {
 onTrigger() {
   let e = S.Z.enabled;
-  a.Z.setEnabled(!e, S.Z.legacyEnabled);
+  s.Z.setEnabled(!e, S.Z.legacyEnabled);
 },
 keyEvents: {
   keyup: !0,
@@ -103,7 +103,7 @@ keyEvents: {
 onTrigger(e) {
   let t = (0, N.Z)();
   if (null != t)
-    e ? a.Z.setUILocked(!C.Z.isUILocked(t), t) : a.Z.setInputLocked(!S.Z.isInputLocked(t), t);
+    e ? s.Z.setUILocked(!f.Z.isUILocked(t), t) : s.Z.setInputLocked(!S.Z.isInputLocked(t), t);
 },
 keyEvents: {
   keyup: !0,
@@ -114,7 +114,7 @@ keyEvents: {
 onTrigger() {
   let e = S.Z.getFocusedPID(),
     t = null != e;
-  null != e && t && C.Z.isPinned(A.Odu.TEXT) && S.Z.isReady(e) && S.Z.isInputLocked(e) && a.Z.activateRegion(A.O0n.TEXT_WIDGET);
+  null != e && t && f.Z.isPinned(A.Odu.TEXT) && S.Z.isReady(e) && S.Z.isInputLocked(e) && s.Z.activateRegion(A.O0n.TEXT_WIDGET);
 },
 keyEvents: {
   keyup: !0,
@@ -165,7 +165,7 @@ onTrigger: () => {
   if (!(0, I.D)())
     return;
   let e = (0, N.Z)();
-  null != e && (C.Z.isUILocked(e) ? (0, m.IN)(!0, e) : (0, m.oZ)(e));
+  null != e && (f.Z.isUILocked(e) ? (0, m.IN)(!0, e) : (0, m.oZ)(e));
 },
 keyEvents: {
   keyup: !0,
@@ -189,7 +189,7 @@ keyEvents: {
   },
   [A.kg4.SAVE_CLIP]: {
 onTrigger: () => {
-  (0, d.ln)() && (f.default.track(A.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, u.C1)());
+  (0, d.ln)() && (C.default.track(A.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, u.C1)());
 },
 keyEvents: {
   keyup: !1,
@@ -224,13 +224,13 @@ keyEvents: {
 }
   }
 };
-class v extends c.Z {
+class L extends c.Z {
   _initialize() {
 i.Z.wait(() => i.Z.dispatch({
   type: 'KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS',
-  keybinds: L
+  keybinds: Z
 }));
   }
   _terminate() {}
 }
-t.Z = new v();
+t.Z = new L();

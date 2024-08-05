@@ -1,8 +1,8 @@
 var r = n(470079),
   i = n(476400),
   a = n.n(i),
-  o = n(844303),
-  s = n(829307),
+  s = n(844303),
+  o = n(829307),
   l = n(464854),
   u = n(353144),
   c = Object.assign || function(e) {
@@ -22,7 +22,7 @@ var t = e.width,
   d = e.pointer,
   _ = e.styles,
   E = e.className,
-  f = (0, o.default)((0, s.Z)({
+  f = (0, s.default)((0, o.Z)({
     default: {
       picker: {
         position: 'relative',

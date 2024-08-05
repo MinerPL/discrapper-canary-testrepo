@@ -1,10 +1,24 @@
-e.d(t, {
-  d: function() {
-return u;
+n.d(t, {
+  dX: function() {
+return i;
+  },
+  kx: function() {
+return a;
+  },
+  r5: function() {
+return s;
   }
 });
-var r = e(876215);
+var r = n(876215);
 
-function u(n) {
-  return n.content_type === r.s.PLAYED_GAME || n.content_type === r.s.TOP_GAME;
+function i(e) {
+  return e.content_type === r.s.PLAYED_GAME || e.content_type === r.s.TOP_GAME;
+}
+
+function a(e) {
+  return e.content_type === r.s.LISTENED_SESSION;
+}
+
+function s(e) {
+  return e.content_type === r.s.WATCHED_MEDIA;
 }

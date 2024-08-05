@@ -4,8 +4,8 @@ return b;
   }
 });
 var t = n(735250),
-  l = n(470079),
-  s = n(481060),
+  s = n(470079),
+  l = n(481060),
   r = n(332664),
   o = n(538211),
   i = n(698066),
@@ -26,7 +26,7 @@ onClose: S,
 transitionState: M,
 analyticsData: O
   } = e, f = a ? R.Z.Messages.STREAM_REPORT_RATING_BODY_STREAMER : R.Z.Messages.STREAM_REPORT_RATING_BODY;
-  return l.useEffect(() => {
+  return s.useEffect(() => {
 u.default.track(_.rMx.OPEN_MODAL, {
   type: 'Stream Problem Report',
   other_user_id: b.ownerId,
@@ -47,20 +47,20 @@ feedbackProblems: m,
 onSubmit: function(e) {
   let {
     rating: a,
-    problem: l,
+    problem: s,
     dontShowAgain: r,
     feedback: o
   } = e;
   if (r && (0, c.Kw)(E.v.REPORT_PROBLEM_POST_STREAM), null != a)
     (0, i.Z)({
-      problem: l,
+      problem: s,
       stream: b,
       feedback: o,
       streamApplication: T,
       analyticsData: O,
       location: 'Stream End',
       rating: a
-    }), null != l && (0, s.openModalLazy)(async () => {
+    }), null != s && (0, l.openModalLazy)(async () => {
       let {
         default: e
       } = await n.e('14466').then(n.bind(n, 729328));

@@ -2,8 +2,8 @@ n(653041);
 var r = n(735250),
   i = n(470079),
   a = n(834427),
-  o = n(579806),
-  s = n(403182),
+  s = n(579806),
+  o = n(403182),
   l = n(358085),
   u = n(380684),
   c = n(861990);
@@ -12,11 +12,11 @@ function d(e) {
   let t = ['openFile'];
   e.multiple && t.push('multiSelections');
   let n = e.filters;
-  o.Z.fileManager.openFiles({
+  s.Z.fileManager.openFiles({
 properties: t,
 filters: n
   }, (0, u.Xv)() ? c.Ld : c.zz).then(t => {
-let n = t.map(e => s.qF(e));
+let n = t.map(e => o.qF(e));
 null != n && e.onChange({
   stopPropagation: () => null,
   preventDefault: () => null,

@@ -9,17 +9,17 @@ return c;
 var r = n(442837),
   i = n(430824),
   a = n(496675),
-  o = n(594174),
-  s = n(700785),
+  s = n(594174),
+  o = n(700785),
   l = n(981631);
 
 function u(e, t) {
   let [n, r, u] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [
-o.default,
+s.default,
 i.Z,
 a.Z
   ], c = r.getGuild(e), d = n.getUser(t);
-  return !(null == c || null == d || d.isNonUserBot() || c.isOwner(d) || s.BT({
+  return !(null == c || null == d || d.isNonUserBot() || c.isOwner(d) || o.BT({
 permission: l.Plq.ADMINISTRATOR,
 user: d,
 context: c
@@ -28,11 +28,11 @@ context: c
 
 function c(e, t) {
   return (0, r.e7)([
-o.default,
+s.default,
 i.Z,
 a.Z
   ], () => u(e, t, [
-o.default,
+s.default,
 i.Z,
 a.Z
   ]), [

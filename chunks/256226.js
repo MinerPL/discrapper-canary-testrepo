@@ -1,8 +1,8 @@
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(91192),
+  s = n.n(a),
+  o = n(91192),
   l = n(866442),
   u = n(442837),
   c = n(692547),
@@ -28,7 +28,7 @@ onMouseDown: y
   } = e, {
 tabIndex: D,
 ...L
-  } = (0, s.JA)(v.id), b = (0, h.p9)({
+  } = (0, o.JA)(v.id), b = (0, h.p9)({
 roleId: v.id,
 size: 16,
 guildId: R
@@ -72,7 +72,7 @@ e.style
   return (0, r.jsx)(d.FocusRing, {
 children: (0, r.jsxs)('div', {
   ref: t,
-  className: o()(I.role, N),
+  className: s()(I.role, N),
   style: F,
   onContextMenu: U,
   onMouseDown: y,
@@ -83,7 +83,7 @@ children: (0, r.jsxs)('div', {
     A ? (0, r.jsx)(d.TooltipContainer, {
       text: m.Z.Messages.USER_PROFILE_REMOVE_ROLE,
       children: (0, r.jsxs)(d.Clickable, {
-        className: o()(I.roleRemoveButtonCanRemove, I.roleRemoveButton),
+        className: s()(I.roleRemoveButtonCanRemove, I.roleRemoveButton),
         onClick: O,
         tabIndex: D,
         focusProps: {

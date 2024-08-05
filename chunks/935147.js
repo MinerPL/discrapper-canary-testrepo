@@ -21,19 +21,19 @@ var n = s(735250),
   C = s(996073),
   m = s(25990),
   A = s(626135),
-  h = s(74538),
-  g = s(296810),
+  g = s(74538),
+  h = s(296810),
   O = s(921813),
   p = s(433411),
   R = s(532432),
   x = s(504983),
   M = s(134795),
-  D = s(513901),
-  f = s(451392),
+  f = s(513901),
+  D = s(451392),
   P = s(981631),
   L = s(474936),
-  Z = s(526761),
-  b = s(689938),
+  b = s(526761),
+  Z = s(689938),
   v = s(432562);
 
 function j(e) {
@@ -42,7 +42,7 @@ function j(e) {
 user: U
   } = e, {
 reducedMotion: G
-  } = a.useContext(r.AccessibilityPreferencesContext), F = h.ZP.isPremium(U), {
+  } = a.useContext(r.AccessibilityPreferencesContext), F = g.ZP.isPremium(U), {
 pendingAvatar: y,
 pendingBanner: V,
 pendingThemeColors: Y,
@@ -63,7 +63,7 @@ return {
   errors: t
 };
   }), X = (0, _.Z)(z), q = (0, E.Z)(Q), J = a.useRef(null);
-  (0, C.Z)(J, Z.Y_.TRY_IT_OUT);
+  (0, C.Z)(J, b.Y_.TRY_IT_OUT);
   let {
 analyticsLocations: $,
 sourceAnalyticsLocations: ee
@@ -99,7 +99,7 @@ children: (0, n.jsxs)(x.Z, {
   isShown: !0,
   hasBackground: !0,
   children: [
-    (0, n.jsx)(g.Z, {
+    (0, n.jsx)(h.Z, {
       layoutClassName: v.tryItOutLayout,
       previewTitle: (0, n.jsxs)(n.Fragment, {
         children: [
@@ -108,7 +108,7 @@ children: (0, n.jsxs)(x.Z, {
             color: 'currentColor',
             className: v.premiumIcon
           }),
-          b.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_PREVIEW
+          Z.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_PREVIEW
         ]
       }),
       profilePreview: (0, n.jsx)(O.Z, {
@@ -132,16 +132,16 @@ children: (0, n.jsxs)(x.Z, {
             children: [
               (0, n.jsx)(r.Heading, {
                 variant: 'heading-xl/extrabold',
-                children: b.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_HEADER
+                children: Z.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_HEADER
               }),
               (0, n.jsx)(r.Text, {
                 className: v.description,
                 variant: 'text-sm/normal',
-                children: b.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_DESCRIPTION
+                children: Z.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_DESCRIPTION
               })
             ]
           }),
-          (0, n.jsx)(f.Z, {
+          (0, n.jsx)(D.Z, {
             className: v.customizationSection,
             user: U,
             pendingAvatar: null != W ? W : y,
@@ -162,28 +162,28 @@ children: (0, n.jsxs)(x.Z, {
             isTryItOutFlow: !0,
             onAvatarChange: N.c_,
             showRemoveAvatarButton: !1,
-            changeAvatarButtonText: b.Z.Messages.USER_SETTINGS_ADD_ANIMATED_AVATAR,
-            sectionTitle: b.Z.Messages.PREMIUM_TIER_0_FEATURE_AVATAR
+            changeAvatarButtonText: Z.Z.Messages.USER_SETTINGS_ADD_ANIMATED_AVATAR,
+            sectionTitle: Z.Z.Messages.PREMIUM_TIER_0_FEATURE_AVATAR
           }),
           (0, n.jsx)(p.Z, {
             isTryItOutFlow: !0,
             className: v.customizationSection,
             user: U,
-            sectionTitle: b.Z.Messages.USER_SETTINGS_AVATAR_DECORATION
+            sectionTitle: Z.Z.Messages.USER_SETTINGS_AVATAR_DECORATION
           }, 'decoration'),
-          (0, n.jsx)(D.Z, {
+          (0, n.jsx)(f.Z, {
             className: v.customizationSection,
             isTryItOutFlow: !0,
             initialSelectedEffectId: q,
             user: U,
-            sectionTitle: b.Z.Messages.USER_SETTINGS_PROFILE_EFFECT
+            sectionTitle: Z.Z.Messages.USER_SETTINGS_PROFILE_EFFECT
           }, 'effect'),
           !et && (0, n.jsxs)(n.Fragment, {
             children: [
               (0, n.jsx)(r.Text, {
                 variant: 'text-sm/normal',
                 className: v.premiumPerksListTitle,
-                children: b.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_ALSO_INCLUDES
+                children: Z.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_ALSO_INCLUDES
               }),
               (0, n.jsx)(S.Z, {
                 onSubscribeModalClose: e => {
@@ -192,9 +192,9 @@ children: (0, n.jsxs)(x.Z, {
                 subscriptionTier: L.Si.TIER_2,
                 className: v.premiumSubscribeButton,
                 size: r.Button.Sizes.MEDIUM,
-                buttonText: F ? b.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : en ? b.Z.Messages.PREMIUM_DISCOUNT_CTA.format({
+                buttonText: F ? Z.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : en ? Z.Z.Messages.PREMIUM_DISCOUNT_CTA.format({
                   percent: null == es ? void 0 : es.discount.amount
-                }) : b.Z.Messages.PREMIUM_UPSELL_GET_NITRO
+                }) : Z.Z.Messages.PREMIUM_UPSELL_GET_NITRO
               })
             ]
           })

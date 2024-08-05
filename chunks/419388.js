@@ -1,25 +1,25 @@
 n.d(t, {
   ZP: function() {
-return N;
+return v;
   }
 }), n(47120), n(653041);
 var i = n(470079),
   a = n(392711),
-  l = n.n(a),
-  s = n(374470),
+  s = n.n(a),
+  l = n(374470),
   r = n(925549),
   o = n(904245),
   c = n(45114),
-  d = n(40851),
-  u = n(607070),
+  u = n(40851),
+  d = n(607070),
   h = n(703656),
   p = n(479313),
   m = n(796974),
   _ = n(709054),
   f = n(534469),
   E = n(173033),
-  C = n(959517),
-  g = n(981631);
+  g = n(959517),
+  C = n(981631);
 
 function I(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -44,7 +44,7 @@ if (0 === a)
 let n = e.getByIndex(e.indexOf(i) + a);
 return null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : i;
   }
-  let l = [
+  let s = [
   i,
   ...e.map(e => {
     let {
@@ -53,8 +53,8 @@ return null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : i;
     return t;
   })
 ].sort(_.default.compare),
-s = l.indexOf(i),
-r = null !== (n = l[s + (Math.abs(a) > 0 ? a : 1)]) && void 0 !== n ? n : l[s - 1];
+l = s.indexOf(i),
+r = null !== (n = s[l + (Math.abs(a) > 0 ? a : 1)]) && void 0 !== n ? n : s[l - 1];
   return null != r ? r : null;
 }
 let T = {
@@ -62,7 +62,7 @@ let T = {
   scrollHeight: 0,
   offsetHeight: 0
 };
-class v {
+class N {
   isReady() {
 return this.props.messages.ready;
   }
@@ -106,7 +106,7 @@ let {
   scrollHeight: t,
   offsetHeight: n
 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.getScrollerState();
-return e >= t - n - C.kQ && !this.props.messages.hasMoreAfter;
+return e >= t - n - g.kQ && !this.props.messages.hasMoreAfter;
   }
   mergePropsAndUpdate(e) {
 this.mergePropsAndUpdate_(e), this.props.messages.ready && this.enableAutomaticAck();
@@ -120,7 +120,7 @@ this.props = {
 let {
   offsetHeight: i,
   scrollHeight: a
-} = this.getScrollerState(), l = this.isHeightChange(i, a);
+} = this.getScrollerState(), s = this.isHeightChange(i, a);
 if (this.offsetHeightCache = i, this.scrollHeightCache = a, this.loading = e.messages.loadingMore, this.isInitialized() || this.isReady()) {
   if (!this.isInitialized()) {
     this.restoreScroll();
@@ -150,9 +150,9 @@ if (e.messages.jumpedToPresent && t.jumpSequenceId !== e.messages.jumpSequenceId
   this.jumping = !0, this.scrollTo(0), this.setScrollToBottom(!0);
   return;
 }
-let s = e.messages.last(),
+let l = e.messages.last(),
   r = t.last();
-if (null != s && s.state === g.yb.SENDING && (null == r ? void 0 : r.id) !== s.id) {
+if (null != l && l.state === C.yb.SENDING && (null == r ? void 0 : r.id) !== l.id) {
   this.setScrollToBottom();
   return;
 }
@@ -165,23 +165,23 @@ if (null != o && n !== o) {
     var c;
     null === (c = this.ref.current) || void 0 === c || c.scrollIntoViewNode({
       node: e,
-      padding: C.kQ,
+      padding: g.kQ,
       callback: this.handleScroll
     });
     return;
   }
 }
-l && this.fixScrollPosition(i, a);
+s && this.fixScrollPosition(i, a);
   }
   getAnchorData(e, t, n) {
 var i;
 let a = this.getElementFromMessageId(e),
-  l = null === (i = this.ref.current) || void 0 === i ? void 0 : i.getScrollerNode();
-if (!(0, s.k)(a) || null == l)
+  s = null === (i = this.ref.current) || void 0 === i ? void 0 : i.getScrollerNode();
+if (!(0, l.k)(a) || null == s)
   return null;
 let {
   offsetHeight: r
-} = a, o = (0, E.Z)(a, l), c = o - t;
+} = a, o = (0, E.Z)(a, s), c = o - t;
 return null != n && (c = Math.max(-r, Math.min(n, c))), {
   id: e,
   offsetFromTop: c,
@@ -194,7 +194,7 @@ return null != n && (c = Math.max(-r, Math.min(n, c))), {
 this.setAutomaticAnchor(null);
   }
   newMessageBarBuffer() {
-return this.props.channel.isForumPost() ? C.R4 : C.Eo;
+return this.props.channel.isForumPost() ? g.R4 : g.Eo;
   }
   findAnchor() {
 let {
@@ -203,7 +203,7 @@ let {
   channel: n
 } = this.props, i = this.getScrollerState(), {
   scrollTop: a
-} = i, l = t && a >= this.newMessageBarBuffer() ? this.newMessageBarBuffer() : 0, s = null, r = t => {
+} = i, s = t && a >= this.newMessageBarBuffer() ? this.newMessageBarBuffer() : 0, l = null, r = t => {
   var i;
   return -1 === t ? _.default.castChannelIdAsMessageId(n.id) : null === (i = e._array[t]) || void 0 === i ? void 0 : i.id;
 }, o = -1, c = !1;
@@ -212,24 +212,24 @@ for (;;) {
   if (null == t)
     break;
   let n = this.getAnchorData(t, a);
-  if (this._bottomAnchor = n, c && null != n && n.offsetTop > a + l + i.offsetHeight)
+  if (this._bottomAnchor = n, c && null != n && n.offsetTop > a + s + i.offsetHeight)
     break;
   if (c) {
     o++;
     continue;
   }
-  null != n && (n.offsetTop >= a + l || o === e.length - 1) && (s = n, c = !0), o++;
+  null != n && (n.offsetTop >= a + s || o === e.length - 1) && (l = n, c = !0), o++;
 }
-return s;
+return l;
   }
   findFetchAnchor(e) {
 let {
   messages: t
 } = this.props, {
   scrollTop: n
-} = this.getScrollerState(), i = e ? -1 : 1, a = null, l = t._array.length - 1;
-for (let s = e ? l : 0; null != t._array[s]; s += i) {
-  let e = t._array[s],
+} = this.getScrollerState(), i = e ? -1 : 1, a = null, s = t._array.length - 1;
+for (let l = e ? s : 0; null != t._array[l]; l += i) {
+  let e = t._array[l],
     i = this.getAnchorData(e.id, n);
   if (null != i) {
     a = i;
@@ -247,7 +247,7 @@ for (let e of [
   if (null == e)
     continue;
   let t = this.getElementFromMessageId(e.id);
-  if (!(0, s.k)(t))
+  if (!(0, l.k)(t))
     continue;
   let n = e === this.messageFetchAnchor ? e.offsetHeight - t.offsetHeight : 0;
   return {
@@ -271,7 +271,7 @@ if (null != this.focusAnchor) {
   var i;
   this.isPinned() ? this.scrollTo(Number.MAX_SAFE_INTEGER, !1, this.handleScroll) : this.mergeTo(n, this.handleScroll), null === (i = this.ref.current) || void 0 === i || i.scrollIntoViewNode({
     node: t,
-    padding: C.kQ,
+    padding: g.kQ,
     callback: this.handleScroll
   });
 } else
@@ -325,9 +325,9 @@ let {
   scrollHeight: i
 } = e, {
   messages: a,
-  placeholderHeight: l
+  placeholderHeight: s
 } = this.props;
-return a.hasMoreBefore && t < l && i > n ? 1 : a.hasMoreAfter && t >= i - n - l ? 2 : 0;
+return a.hasMoreBefore && t < s && i > n ? 1 : a.hasMoreAfter && t >= i - n - s ? 2 : 0;
   }
   isInScrollTriggerLoadingRegion(e) {
 let {
@@ -349,14 +349,14 @@ let {
 } = e, {
   prevScrollTop: a,
   props: {
-    placeholderHeight: l
+    placeholderHeight: s
   }
 } = this;
 if (this.prevScrollTop = t, null == a)
   return;
-let s = this.isInPlaceholderRegion(e),
+let l = this.isInPlaceholderRegion(e),
   r = t - a;
-0 !== s && (1 === s && t + r <= 0 ? (this.mergeTo(l - n), this.prevScrollTop = l - n) : 2 === s && t + r >= i - n && (this.mergeTo(i - l), this.prevScrollTop = i - l));
+0 !== l && (1 === l && t + r <= 0 ? (this.mergeTo(s - n), this.prevScrollTop = s - n) : 2 === l && t + r >= i - n && (this.mergeTo(i - s), this.prevScrollTop = i - s));
   }
   enableAutomaticAck() {
 this.isInitialized() && !this.acking && (this.acking = !0, this.updateStoreDimensions(() => {
@@ -378,7 +378,7 @@ if (null != e.jumpTargetId) {
   if (null == n)
     return;
   let i = this.getElementFromMessageId(n);
-  (0, s.k)(i) ? this.scrollTo(this.getOffsetOrientationFromNode(i, 'middle', t ? this.newMessageBarBuffer() : C.kQ), !0): this.scrollToNewMessages(!0, 'middle');
+  (0, l.k)(i) ? this.scrollTo(this.getOffsetOrientationFromNode(i, 'middle', t ? this.newMessageBarBuffer() : g.kQ), !0): this.scrollToNewMessages(!0, 'middle');
 } else
   this.scrollTo(Number.MAX_SAFE_INTEGER, !0);
   }
@@ -387,11 +387,11 @@ var e;
 let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
   n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'top',
   i = arguments.length > 2 ? arguments[2] : void 0,
-  a = null === (e = this.getDocument()) || void 0 === e ? void 0 : e.getElementById(C.j1),
-  l = () => {
+  a = null === (e = this.getDocument()) || void 0 === e ? void 0 : e.getElementById(g.j1),
+  s = () => {
     this.jumping = !1, this.setAutomaticAnchor(this.findAnchor()), null != i && i(), this.handleScroll();
   };
-this.pinned = !1, this.jumping = t, null != a ? this.scrollTo(this.getOffsetOrientationFromNode(a, n, this.newMessageBarBuffer()), t, l) : this.scrollTo(this.getOffsetToPreventLoading('top'), t, l);
+this.pinned = !1, this.jumping = t, null != a ? this.scrollTo(this.getOffsetOrientationFromNode(a, n, this.newMessageBarBuffer()), t, s) : this.scrollTo(this.getOffsetToPreventLoading('top'), t, s);
   }
   getOffsetOrientationFromNode(e, t) {
 var n;
@@ -399,9 +399,9 @@ let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
   a = null === (n = this.ref.current) || void 0 === n ? void 0 : n.getScrollerNode();
 if (null == a)
   return 0;
-let l = this.getScrollerState(),
-  s = (0, E.Z)(e, a);
-return 'middle' === t ? Math.min(s - 0.5 * l.offsetHeight + 0.5 * e.offsetHeight + -8, s - i) : s - i;
+let s = this.getScrollerState(),
+  l = (0, E.Z)(e, a);
+return 'middle' === t ? Math.min(l - 0.5 * s.offsetHeight + 0.5 * e.offsetHeight + -8, l - i) : l - i;
   }
   restoreScroll() {
 if (this.isInitialized())
@@ -411,7 +411,7 @@ let {
 } = this;
 this.initialScrollTop = void 0;
 let t = x(this.props.messages);
-null != t ? this.scrollToMessage(t, !1) : this.props.hasUnreads && this.props.channel.type !== g.d4z.GUILD_VOICE && this.props.channel.type !== g.d4z.GUILD_STAGE_VOICE ? this.scrollToNewMessages() : null != e ? this.scrollTo(e + this.props.placeholderHeight, !1, this.handleScroll) : this.setScrollToBottom();
+null != t ? this.scrollToMessage(t, !1) : this.props.hasUnreads && this.props.channel.type !== C.d4z.GUILD_VOICE && this.props.channel.type !== C.d4z.GUILD_STAGE_VOICE ? this.scrollToNewMessages() : null != e ? this.scrollTo(e + this.props.placeholderHeight, !1, this.handleScroll) : this.setScrollToBottom();
   }
   scrollTo(e) {
 var t;
@@ -419,7 +419,7 @@ let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
   i = arguments.length > 2 ? arguments[2] : void 0;
 null === (t = this.ref.current) || void 0 === t || t.scrollTo({
   to: e,
-  animate: !u.Z.useReducedMotion && n,
+  animate: !d.Z.useReducedMotion && n,
   callback: i
 }), this.isPinned() ? this.updateStoreDimensions() : this.updateStoreDimensionsDebounced();
   }
@@ -438,7 +438,7 @@ let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
   } = this.props;
 if (t.hasMoreAfter) {
   var i, a;
-  i = n, o.Z.jumpToPresent(i.id, g.AQB), (0, h.XU)(null !== (a = i.getGuildId()) && void 0 !== a ? a : g.ME, i.id);
+  i = n, o.Z.jumpToPresent(i.id, C.AQB), (0, h.XU)(null !== (a = i.getGuildId()) && void 0 !== a ? a : C.ME, i.id);
 } else
   this.scrollTo(Number.MAX_SAFE_INTEGER, e, () => {
     this.jumping = !1, this.handleScroll();
@@ -458,9 +458,9 @@ else {
   } = this.props, {
     scrollTop: i,
     scrollHeight: a,
-    offsetHeight: l
+    offsetHeight: s
   } = this.getScrollerState();
-  r.Z.updateChannelDimensions(t.id, i - n, a - n, l, e);
+  r.Z.updateChannelDimensions(t.id, i - n, a - n, s, e);
 }
   }
   scrollIntoViewRect() {}
@@ -488,13 +488,13 @@ if (e === this.props.channel.id) {
   return;
 }
 let i = this.getElementFromMessageId(e);
-!this.isJumping() && t && null != n && !u.Z.useReducedMotion && (_.default.extractTimestamp(e) > n ? this.scrollTo(0) : this.scrollTo(Number.MAX_SAFE_INTEGER)), this.pinned = !1, this.jumping = !0;
+!this.isJumping() && t && null != n && !d.Z.useReducedMotion && (_.default.extractTimestamp(e) > n ? this.scrollTo(0) : this.scrollTo(Number.MAX_SAFE_INTEGER)), this.pinned = !1, this.jumping = !0;
 let a = () => {
-  this.jumping = !1, (0, s.k)(i) && u.Z.keyboardModeEnabled && i.focus({
+  this.jumping = !1, (0, l.k)(i) && d.Z.keyboardModeEnabled && i.focus({
     preventScroll: !0
   }), this.scrollCounter = 0, this.handleScroll(), this._scrollCompleteCallbacks.forEach(e => e());
 };
-(0, s.k)(i) ? this.scrollTo(this.getOffsetOrientationFromNode(i, 'middle', this.props.hasUnreads ? this.newMessageBarBuffer() : C.kQ), t, a): this.scrollToNewMessages(t, 'middle', a);
+(0, l.k)(i) ? this.scrollTo(this.getOffsetOrientationFromNode(i, 'middle', this.props.hasUnreads ? this.newMessageBarBuffer() : g.kQ), t, a): this.scrollToNewMessages(t, 'middle', a);
   }
   getOffsetToTriggerLoading(e, t) {
 let {
@@ -502,12 +502,12 @@ let {
   offsetHeight: i
 } = t, {
   messages: a,
-  hasUnreads: l,
-  placeholderHeight: s
+  hasUnreads: s,
+  placeholderHeight: l
 } = this.props;
 if ('top' === e)
-  return a.hasMoreBefore ? l ? s - C.D4 - 2 : s + 500 : 0;
-return a.hasMoreAfter ? n - i - s - 500 : n - i;
+  return a.hasMoreBefore ? s ? l - g.D4 - 2 : l + 500 : 0;
+return a.hasMoreAfter ? n - i - l - 500 : n - i;
   }
   getOffsetToPreventLoading(e) {
 let {
@@ -527,23 +527,23 @@ if (this.hasAnchor() || null != e) {
   }
   addAutomaticAnchorCallback(e) {
 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-this._automaticAnchorCallbacks.push(e), this._automaticAnchorCallbacks = l().uniq(this._automaticAnchorCallbacks), !0 === t && this.setAutomaticAnchor(this.findAnchor());
+this._automaticAnchorCallbacks.push(e), this._automaticAnchorCallbacks = s().uniq(this._automaticAnchorCallbacks), !0 === t && this.setAutomaticAnchor(this.findAnchor());
   }
   removeAutomaticAnchorCallback(e) {
-this._automaticAnchorCallbacks = l().without(this._automaticAnchorCallbacks, e);
+this._automaticAnchorCallbacks = s().without(this._automaticAnchorCallbacks, e);
   }
   addScrollCompleteCallback(e) {
-this._scrollCompleteCallbacks.push(e), this._scrollCompleteCallbacks = l().uniq(this._scrollCompleteCallbacks);
+this._scrollCompleteCallbacks.push(e), this._scrollCompleteCallbacks = s().uniq(this._scrollCompleteCallbacks);
   }
   removeScrollCompleteCallback(e) {
-this._scrollCompleteCallbacks = l().without(this._scrollCompleteCallbacks, e);
+this._scrollCompleteCallbacks = s().without(this._scrollCompleteCallbacks, e);
   }
   cleanup() {
 this.acking = !1, this.updateStoreDimensionsDebounced.cancel(), this._automaticAnchorCallbacks.forEach(e => this.removeAutomaticAnchorCallback(e)), (0, c.jT)(this.props.channel.id, this.props.windowId);
   }
   constructor(e) {
 var t, n = this;
-I(this, 'props', void 0), I(this, 'ref', i.createRef()), I(this, 'automaticAnchor', null), I(this, 'messageFetchAnchor', null), I(this, 'focusAnchor', null), I(this, 'loading', void 0), I(this, 'jumping', !1), I(this, 'pinned', void 0), I(this, 'dragging', !1), I(this, 'isAtBottom', !1), I(this, 'prevScrollTop', null), I(this, 'anchorTimeout', null), I(this, 'initialScrollTop', null), I(this, 'acking', !1), I(this, 'scrollCounter', 0), I(this, 'offsetHeightCache', 0), I(this, 'scrollHeightCache', 0), I(this, 'scrollTopCache', -1), I(this, '_bottomAnchor', null), I(this, '_automaticAnchorCallbacks', []), I(this, '_scrollCompleteCallbacks', []), I(this, 'updateVisibleMessagesDebounced', l().debounce(p.JR, 300)), I(this, 'handleScroll', e => {
+I(this, 'props', void 0), I(this, 'ref', i.createRef()), I(this, 'automaticAnchor', null), I(this, 'messageFetchAnchor', null), I(this, 'focusAnchor', null), I(this, 'loading', void 0), I(this, 'jumping', !1), I(this, 'pinned', void 0), I(this, 'dragging', !1), I(this, 'isAtBottom', !1), I(this, 'prevScrollTop', null), I(this, 'anchorTimeout', null), I(this, 'initialScrollTop', null), I(this, 'acking', !1), I(this, 'scrollCounter', 0), I(this, 'offsetHeightCache', 0), I(this, 'scrollHeightCache', 0), I(this, 'scrollTopCache', -1), I(this, '_bottomAnchor', null), I(this, '_automaticAnchorCallbacks', []), I(this, '_scrollCompleteCallbacks', []), I(this, 'updateVisibleMessagesDebounced', s().debounce(p.JR, 300)), I(this, 'handleScroll', e => {
   var t;
   if (!this.isInitialized())
     return;
@@ -593,50 +593,50 @@ I(this, 'props', void 0), I(this, 'ref', i.createRef()), I(this, 'automaticAncho
     channelId: n.props.channel.id,
     before: e,
     after: t,
-    limit: g.AQB,
+    limit: C.AQB,
     truncate: !0
   });
-}), I(this, 'updateStoreDimensionsDebounced', l().debounce(this.updateStoreDimensions, 200)), this.props = e, this.loading = e.messages.loadingMore;
+}), I(this, 'updateStoreDimensionsDebounced', s().debounce(this.updateStoreDimensions, 200)), this.props = e, this.loading = e.messages.loadingMore;
 let a = m.Z.getChannelDimensions(e.channel.id);
 null != e.messages.jumpTargetId ? this.pinned = !1 : (this.initialScrollTop = null !== (t = null == a ? void 0 : a.scrollTop) && void 0 !== t ? t : null, this.pinned = null == a);
   }
 }
 
-function N(e) {
+function v(e) {
   let {
 messages: t,
 channel: n,
 compact: a,
-hasUnreads: l,
-focusId: s,
+hasUnreads: s,
+focusId: l,
 placeholderHeight: r,
 canLoadMore: o = !0,
 handleScrollToBottom: c,
-handleScrollFromBottom: u
+handleScrollFromBottom: d
   } = e, {
 windowId: h
-  } = i.useContext(d.ZP), [p] = i.useState(() => new v({
+  } = i.useContext(u.ZP), [p] = i.useState(() => new N({
 messages: t,
 channel: n,
 compact: a,
-hasUnreads: l,
-focusId: s,
+hasUnreads: s,
+focusId: l,
 placeholderHeight: r,
 canLoadMore: o,
 windowId: h,
 handleScrollToBottom: c,
-handleScrollFromBottom: u
+handleScrollFromBottom: d
   }));
-  return p.getSnapshotBeforeUpdate(s), i.useLayoutEffect(() => p.mergePropsAndUpdate({
+  return p.getSnapshotBeforeUpdate(l), i.useLayoutEffect(() => p.mergePropsAndUpdate({
 messages: t,
 channel: n,
 compact: a,
-hasUnreads: l,
-focusId: s,
+hasUnreads: s,
+focusId: l,
 placeholderHeight: r,
 canLoadMore: o,
 windowId: h,
 handleScrollToBottom: c,
-handleScrollFromBottom: u
+handleScrollFromBottom: d
   })), i.useLayoutEffect(() => () => p.cleanup(), [p]), p;
 }

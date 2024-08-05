@@ -9,19 +9,19 @@ return M;
 return N;
   },
   k3: function() {
-return p;
+return g;
   },
   mN: function() {
 return x;
   },
   sP: function() {
-return h;
+return S;
   },
   t2: function() {
 return m;
   },
   vZ: function() {
-return g;
+return p;
   }
 }), n(653041), n(627341);
 var s = n(278074),
@@ -39,7 +39,7 @@ var s = n(278074),
   I = n(474936),
   R = n(735825),
   C = n(689938);
-let p = e => {
+let g = e => {
 switch (e) {
   case R.EB.PENDING:
     return C.Z.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_TITLE;
@@ -51,7 +51,7 @@ switch (e) {
     return '';
 }
   },
-  g = (e, t) => {
+  p = (e, t) => {
 switch (e) {
   case R.EB.PENDING:
     return t === R.Ft.FREE_GUILD_BOOST_1_MONTH ? C.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT : C.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT;
@@ -92,7 +92,7 @@ default:
 }
 let N = (e, t, n) => (0, r.wj)(e) ? t : n,
   f = 'getWhatsNewRow',
-  S = e => {
+  h = e => {
 let {
   cards: t,
   perksCards: n,
@@ -147,7 +147,7 @@ return null != n.freeBoost && !0 === a && o({
   card: n.unlimitedSuperReactions
 }), t;
   },
-  h = e => {
+  S = e => {
 let {
   perksCards: t,
   variant: n,
@@ -186,7 +186,7 @@ switch (n) {
     ]);
     break;
   case T.R0.WHATS_NEW:
-    c = S({
+    c = h({
       cards: c,
       perksCards: t,
       isFullScreen: r,

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   }
 });
 var r = n(81825),
@@ -14,9 +14,9 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class o extends r.Z {
+class s extends r.Z {
   static createFromServer(e) {
-return new o({
+return new s({
   id: e.id,
   liveBuildId: e.live_build_id,
   name: e.name

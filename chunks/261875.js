@@ -2,8 +2,8 @@ n(47120);
 var r = n(442837),
   i = n(348326),
   a = n(570140),
-  o = n(710845),
-  s = n(314897),
+  s = n(710845),
+  o = n(314897),
   l = n(115522);
 
 function u(e, t, n) {
@@ -14,10 +14,10 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let c = new o.Z('DatabaseManager');
+let c = new s.Z('DatabaseManager');
 class d extends r.yh {
   initialize() {
-this.waitFor(s.default), this.carefullySpeculativelyOpen(l.n()), this.handleAuthenticationStoreChanged(), s.default.addChangeListener(() => this.handleAuthenticationStoreChanged());
+this.waitFor(o.default), this.carefullySpeculativelyOpen(l.n()), this.handleAuthenticationStoreChanged(), o.default.addChangeListener(() => this.handleAuthenticationStoreChanged());
   }
   databaseName(e) {
 return _(e);
@@ -55,13 +55,13 @@ c.log('removing database (user: '.concat(e, ', database: ').concat(t, ')')), nul
 e.preventWritingCachesAgainThisSession && (this.preventWritingCachesAgainThisSession = !0), this.replaceDisableAllDatabases('DatabaseManager ('.concat(e.reason, ')'));
   }
   handleConnectionOpen() {
-let e = s.default.getId(),
+let e = o.default.getId(),
   t = this.databases.get(e),
   n = null == t ? void 0 : t.state();
 null == t && n !== i.hi.Open && this.remove(e), this.carefullyOpenDatabase(e);
   }
   handleAuthenticationStoreChanged() {
-let e = s.default.getId(),
+let e = o.default.getId(),
   t = this.activeUserId;
 if (e !== t) {
   let n = this.databases.get(t);

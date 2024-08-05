@@ -85,10 +85,10 @@ var t = {
     ]
   },
   i = function(e) {
-    return function(t, i, a, o) {
-      var s = n(t),
+    return function(t, i, a, s) {
+      var o = n(t),
         l = r[e][n(t)];
-      return 2 === s && (l = l[i ? 0 : 1]), l.replace(/%d/i, t);
+      return 2 === o && (l = l[i ? 0 : 1]), l.replace(/%d/i, t);
     };
   },
   a = [

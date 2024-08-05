@@ -5,8 +5,8 @@ return A;
 }), n(653041);
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(772848),
   u = n(84735),
   c = n(15127),
@@ -66,7 +66,7 @@ if (this.props.showCharacterCount) {
     maxLength: n
   } = this.props;
   return (0, i.jsxs)('div', {
-    className: s()(h.maxLength, {
+    className: o()(h.maxLength, {
       [h.errorOverflow]: this.hasError()
     }),
     'aria-hidden': 'true',
@@ -84,7 +84,7 @@ if (this.props.showCharacterCount || !1 === this.props.showRemainingCharacterCou
   return null;
 let e = this.getCharsLeftLength();
 return null == e ? null : (0, i.jsx)('div', {
-  className: s()(h.maxLength, {
+  className: o()(h.maxLength, {
     [h.errorOverflow]: e < 0
   }),
   'aria-hidden': 'true',
@@ -122,7 +122,7 @@ let {
   disabled: n,
   value: r,
   placeholder: a,
-  autoFocus: o,
+  autoFocus: s,
   minLength: l,
   maxLength: c,
   allowOverflow: _,
@@ -138,19 +138,19 @@ let {
   inputRef: D
 } = this.props, L = R ? E.l : 'textarea', b = this.hasError(), M = null !== (t = this.props['aria-labelledby']) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, P = this.getAriaDescribedBy();
 return (0, i.jsxs)('div', {
-  className: s()(p.inputWrapper, {
+  className: o()(p.inputWrapper, {
     [h.flex]: O
   }),
   children: [
     (0, i.jsxs)('div', {
-      className: s()(h.inputMaxLength, {
+      className: o()(h.inputMaxLength, {
         [h.flex]: O
       }),
       children: [
         (0, i.jsx)(u.t, {
           children: (0, i.jsx)(L, {
             type: 'text',
-            className: s()(p.inputDefault, h.textArea, m.scrollbarDefault, A, {
+            className: o()(p.inputDefault, h.textArea, m.scrollbarDefault, A, {
               [p.error]: b,
               [p.disabled]: n,
               [h.resizeable]: T
@@ -165,7 +165,7 @@ return (0, i.jsxs)('div', {
             disabled: n,
             placeholder: a,
             value: r,
-            autoFocus: o,
+            autoFocus: s,
             minLength: l,
             maxLength: _ ? void 0 : c,
             spellCheck: I,

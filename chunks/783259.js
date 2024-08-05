@@ -1,8 +1,8 @@
 var r = n(735250),
   i = n(470079),
   a = n(692547),
-  o = n(481060),
-  s = n(220082),
+  s = n(481060),
+  o = n(220082),
   l = n(420596),
   u = n(880563),
   c = n(484459),
@@ -19,7 +19,7 @@ userId: p,
 pulseSpeakingIndicator: m = !1,
 speaking: I = !1,
 ...T
-  } = e, g = null != h ? h : n, S = (0, s.ZP)(g, a.Z.unsafe_rawColors.PRIMARY_800.css), A = (0, l.c)(!0, 'VideoBackground-web').enabled, N = (0, d.ZP)(null != p ? p : E.lds), v = null == N ? void 0 : N.getBannerURL({
+  } = e, g = null != h ? h : n, S = (0, o.ZP)(g, a.Z.unsafe_rawColors.PRIMARY_800.css), A = (0, l.c)(!0, 'VideoBackground-web').enabled, N = (0, d.ZP)(null != p ? p : E.lds), v = null == N ? void 0 : N.getBannerURL({
 size: 1024,
 canAnimate: _.QK.getSetting()
   });
@@ -32,7 +32,7 @@ canAnimate: _.QK.getSetting()
   p
 ]), null == n)
 return null;
-  let O = (0, r.jsx)(o.Avatar, {
+  let O = (0, r.jsx)(s.Avatar, {
   className: f.avatarWrapper,
   src: n,
   ...T

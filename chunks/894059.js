@@ -23,9 +23,11 @@ action: () => {
     let {
       default: n
     } = await Promise.all([
+      t.e('18543'),
+      t.e('53115'),
       t.e('22347'),
       t.e('58023'),
-      t.e('43135')
+      t.e('29999')
     ]).then(t.bind(t, 779250));
     return t => (0, a.jsx)(n, {
       ...t,

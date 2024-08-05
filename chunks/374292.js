@@ -3,7 +3,6 @@ e.exports = {
   settingsContainer: 'settingsContainer_a8b566',
   settingsHeroNoBackground: 'settingsHeroNoBackground_a8b566',
   fullscreenHero: 'fullscreenHero_a8b566',
-  fullscreenHeroModified: 'fullscreenHeroModified_a8b566',
   noTopPaddingOverride: 'noTopPaddingOverride_a8b566',
   settingsHeroBogoHeight: 'settingsHeroBogoHeight_a8b566',
   settingsHeroBogoMarginFullscreen: 'settingsHeroBogoMarginFullscreen_a8b566',

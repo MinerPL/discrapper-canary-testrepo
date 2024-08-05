@@ -50,8 +50,8 @@ i = [
   let a = e.inherit(e.TITLE_MODE, {
   begin: n
 }),
-o = '(\\(.*\\)\\s*)?\\B[-=]>',
-s = {
+s = '(\\(.*\\)\\s*)?\\B[-=]>',
+o = {
   className: 'params',
   begin: '\\([^\\(]',
   returnBegin: !0,
@@ -71,12 +71,12 @@ contains: i.concat([
   e.COMMENT('--', '$'),
   {
     className: 'function',
-    begin: '^\\s*' + n + '\\s*=\\s*' + o,
+    begin: '^\\s*' + n + '\\s*=\\s*' + s,
     end: '[-=]>',
     returnBegin: !0,
     contains: [
       a,
-      s
+      o
     ]
   },
   {
@@ -84,10 +84,10 @@ contains: i.concat([
     relevance: 0,
     contains: [{
       className: 'function',
-      begin: o,
+      begin: s,
       end: '[-=]>',
       returnBegin: !0,
-      contains: [s]
+      contains: [o]
     }]
   },
   {

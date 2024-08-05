@@ -1,5 +1,5 @@
-var r = n(484155),
-  s = n(599773),
+var s = n(484155),
+  r = n(599773),
   a = n(730179),
   o = Math.min;
 e.exports = function(e, t) {
@@ -7,8 +7,8 @@ e.exports = function(e, t) {
 return [];
   var n = 4294967295,
 i = o(e, 4294967295);
-  t = s(t), e -= 4294967295;
-  for (var l = r(i, t); ++n < e;)
+  t = r(t), e -= 4294967295;
+  for (var c = s(i, t); ++n < e;)
 t(n);
-  return l;
+  return c;
 };

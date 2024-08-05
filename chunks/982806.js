@@ -6,8 +6,8 @@ t.Z = {
 let {
   url: t,
   trustUrl: a,
-  onConfirm: o,
-  isProtocol: s
+  onConfirm: s,
+  isProtocol: o
 } = e;
 (0, i.openModalLazy)(async () => {
   let {
@@ -16,9 +16,9 @@ let {
   return n => (0, r.jsx)(e, {
     ...n,
     url: t,
-    isProtocol: s,
+    isProtocol: o,
     trustUrl: a,
-    onConfirm: o
+    onConfirm: s
   });
 });
   }

@@ -1,12 +1,12 @@
 a.d(s, {
   Z: function() {
-return n;
+return t;
   }
 });
 var E = a(58346),
   _ = a(689938);
 
-function n(e) {
+function t(e) {
   switch (e) {
 case E.HQ.CLASSROOM:
   return {

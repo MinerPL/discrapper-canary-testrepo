@@ -9,8 +9,8 @@ return _;
 var r = n(373793),
   i = n(81825),
   a = n(712057),
-  o = n(566006),
-  s = n(995774),
+  s = n(566006),
+  o = n(995774),
   l = n(630388),
   u = n(358085),
   c = n(981631);
@@ -25,8 +25,8 @@ writable: !0
 }
 class _ extends i.Z {
   constructor(e) {
-var t, n, r, i, a, o, s, l, u, _, E, f;
-super(), d(this, 'type', void 0), d(this, 'content', void 0), d(this, 'attachments', void 0), d(this, 'embeds', void 0), d(this, 'timestamp', void 0), d(this, 'editedTimestamp', void 0), d(this, 'flags', void 0), d(this, 'components', void 0), d(this, 'codedLinks', void 0), d(this, 'stickers', void 0), d(this, 'stickerItems', void 0), this.type = null !== (t = e.type) && void 0 !== t ? t : c.uaV.DEFAULT, this.content = null !== (n = e.content) && void 0 !== n ? n : '', this.attachments = null !== (r = e.attachments) && void 0 !== r ? r : [], this.embeds = null !== (i = e.embeds) && void 0 !== i ? i : [], this.timestamp = null !== (a = e.timestamp) && void 0 !== a ? a : new Date(), this.editedTimestamp = null !== (o = e.editedTimestamp) && void 0 !== o ? o : null, this.flags = null !== (s = e.flags) && void 0 !== s ? s : 0, this.components = null !== (l = e.components) && void 0 !== l ? l : [], this.codedLinks = null !== (u = e.codedLinks) && void 0 !== u ? u : [], this.stickers = null !== (_ = e.stickers) && void 0 !== _ ? _ : [], this.stickerItems = null !== (f = null !== (E = e.sticker_items) && void 0 !== E ? E : e.stickerItems) && void 0 !== f ? f : [];
+var t, n, r, i, a, s, o, l, u, _, E, f;
+super(), d(this, 'type', void 0), d(this, 'content', void 0), d(this, 'attachments', void 0), d(this, 'embeds', void 0), d(this, 'timestamp', void 0), d(this, 'editedTimestamp', void 0), d(this, 'flags', void 0), d(this, 'components', void 0), d(this, 'codedLinks', void 0), d(this, 'stickers', void 0), d(this, 'stickerItems', void 0), this.type = null !== (t = e.type) && void 0 !== t ? t : c.uaV.DEFAULT, this.content = null !== (n = e.content) && void 0 !== n ? n : '', this.attachments = null !== (r = e.attachments) && void 0 !== r ? r : [], this.embeds = null !== (i = e.embeds) && void 0 !== i ? i : [], this.timestamp = null !== (a = e.timestamp) && void 0 !== a ? a : new Date(), this.editedTimestamp = null !== (s = e.editedTimestamp) && void 0 !== s ? s : null, this.flags = null !== (o = e.flags) && void 0 !== o ? o : 0, this.components = null !== (l = e.components) && void 0 !== l ? l : [], this.codedLinks = null !== (u = e.codedLinks) && void 0 !== u ? u : [], this.stickers = null !== (_ = e.stickers) && void 0 !== _ ? _ : [], this.stickerItems = null !== (f = null !== (E = e.sticker_items) && void 0 !== E ? E : e.stickerItems) && void 0 !== f ? f : [];
   }
 }
 class E extends i.Z {
@@ -42,22 +42,22 @@ return null != this.editedTimestamp;
 return this.channel_id;
   }
   getReaction(e) {
-return this.reactions.find(t => (0, s.ir)(t.emoji, e));
+return this.reactions.find(t => (0, o.ir)(t.emoji, e));
   }
   userHasReactedWithEmoji(e, t) {
 return this.reactions.some(n => {
-  if ((0, s.ir)(n.emoji, e))
+  if ((0, o.ir)(n.emoji, e))
     return t && n.me || !t && n.me_burst;
 });
   }
   addReaction(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
   n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-  r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.O.NORMAL,
+  r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.O.NORMAL,
   i = -1,
   l = this.reactions.map((l, c) => {
-    if ((0, s.ir)(l.emoji, e)) {
-      if (i = c, r === o.O.BURST) {
+    if ((0, o.ir)(l.emoji, e)) {
+      if (i = c, r === s.O.BURST) {
         if (t && l.me)
           return l;
         let e = t && l.me_burst ? l.burst_count : l.burst_count + 1,
@@ -76,7 +76,7 @@ let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             shouldProcessMobileColors: (0, u.isIOS)()
           })
         };
-      } else if (r === o.O.VOTE) {
+      } else if (r === s.O.VOTE) {
         var d, _;
         let e = null !== (_ = null === (d = l.count_details) || void 0 === d ? void 0 : d.vote) && void 0 !== _ ? _ : 0,
           n = t && l.me_vote ? e : e + 1;
@@ -105,7 +105,7 @@ let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     }
     return l;
   });
-return -1 === i && (r === o.O.BURST ? l.push({
+return -1 === i && (r === s.O.BURST ? l.push({
   emoji: e,
   me: !1,
   me_burst: t,
@@ -120,7 +120,7 @@ return -1 === i && (r === o.O.BURST ? l.push({
     colors: null != n ? n : [],
     shouldProcessMobileColors: (0, u.isIOS)()
   })
-}) : r === o.O.VOTE ? l.push({
+}) : r === s.O.VOTE ? l.push({
   emoji: e,
   me: !1,
   me_burst: !1,
@@ -158,11 +158,11 @@ return e.reduce((e, n) => {
   removeReaction(e) {
 var t, n, r, i;
 let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-  l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.O.NORMAL,
+  l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.O.NORMAL,
   u = -1,
   c = this.reactions.map((t, n) => {
-    if ((0, s.ir)(t.emoji, e)) {
-      if (l === o.O.BURST) {
+    if ((0, o.ir)(t.emoji, e)) {
+      if (l === s.O.BURST) {
         let e = a && !t.me_burst ? t.burst_count : t.burst_count - 1;
         t = {
           ...t,
@@ -173,7 +173,7 @@ let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             burst: e
           }
         };
-      } else if (l === o.O.VOTE) {
+      } else if (l === s.O.VOTE) {
         var r, i;
         let e = null !== (i = null === (r = t.count_details) || void 0 === r ? void 0 : r.vote) && void 0 !== i ? i : 0,
           n = a && !t.me_vote ? e : e - 1;
@@ -212,7 +212,7 @@ let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
 return -1 !== u && d <= 0 && _ <= 0 && f <= 0 && h <= 0 && p <= 0 && c.splice(u, 1), this.set('reactions', c);
   }
   removeReactionsForEmoji(e) {
-return this.set('reactions', this.reactions.filter(t => !(0, s.ir)(t.emoji, e)));
+return this.set('reactions', this.reactions.filter(t => !(0, o.ir)(t.emoji, e)));
   }
   isSystemDM() {
 return this.author.isSystemUser();

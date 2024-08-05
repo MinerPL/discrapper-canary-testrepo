@@ -5,8 +5,8 @@ return d;
 });
 var t = o(735250);
 o(470079);
-var r = o(212598),
-  s = o(981631),
+var s = o(212598),
+  r = o(981631),
   i = o(927923),
   c = o(689938),
   a = o(397995),
@@ -31,8 +31,8 @@ width: '152',
 height: '124',
 alt: ''
   }), p = n ? c.Z.Messages.XBOX_DETAILS_TITLE_WAITING : c.Z.Messages.XBOX_DETAILS_TITLE, O = n ? c.Z.Messages.XBOX_DETAILS_BODY_WAITING : c.Z.Messages.XBOX_DETAILS_BODY;
-  return (0, t.jsx)(r.t, {
-platformType: s.ABu.XBOX,
+  return (0, t.jsx)(s.t, {
+platformType: r.ABu.XBOX,
 isWaitingForConnection: n,
 onWaitingForConnection: o,
 expectedCallbackState: d,

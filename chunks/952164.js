@@ -15,23 +15,23 @@ return d;
 var r = n(358085),
   i = n(18323),
   a = n(647162),
-  o = n(616922);
+  s = n(616922);
 
-function s(e, t, n) {
-  let s;
-  !(0, r.isDesktop)() && (s = window.open('', '_blank')), (0, a.iy)(e, t).then(e => n(e)).then(e => {
+function o(e, t, n) {
+  let o;
+  !(0, r.isDesktop)() && (o = window.open('', '_blank')), (0, a.iy)(e, t).then(e => n(e)).then(e => {
 let {
   resourceType: t,
   resourceId: n
-} = e, r = i.Z.isProtocolRegistered() ? o.C7.PLAYER_OPEN(t, n) : o.C7.WEB_OPEN(t, n);
-null != s ? s.location.href = r : window.open(r);
+} = e, r = i.Z.isProtocolRegistered() ? s.C7.PLAYER_OPEN(t, n) : s.C7.WEB_OPEN(t, n);
+null != o ? o.location.href = r : window.open(r);
   }).catch(() => {
-null != s && s.close();
+null != o && o.close();
   });
 }
 
 function l() {
-  window.open(o.C7.PREMIUM_SITE);
+  window.open(s.C7.PREMIUM_SITE);
 }
 
 function u(e) {
@@ -42,28 +42,28 @@ metadata: r
   } = e;
   if (null == n)
 return;
-  let a = (0, o.c8)(null !== (t = null == r ? void 0 : r.type) && void 0 !== t ? t : o.Hw.TRACK);
+  let a = (0, s.c8)(null !== (t = null == r ? void 0 : r.type) && void 0 !== t ? t : s.Hw.TRACK);
   if (null == a)
 return;
-  let s = i.Z.isProtocolRegistered() ? o.C7.PLAYER_OPEN(a, n) : o.C7.WEB_OPEN(a, n);
-  window.open(s);
+  let o = i.Z.isProtocolRegistered() ? s.C7.PLAYER_OPEN(a, n) : s.C7.WEB_OPEN(a, n);
+  window.open(o);
 }
 
 function c(e, t) {
-  s(e, t, t => {
+  o(e, t, t => {
 var n;
 let {
   album_id: r
 } = t;
 return {
-  resourceType: (0, o.c8)(null === (n = e.metadata) || void 0 === n ? void 0 : n.type) === o.Hw.EPISODE ? o.Hw.SHOW : o.Hw.ALBUM,
+  resourceType: (0, s.c8)(null === (n = e.metadata) || void 0 === n ? void 0 : n.type) === s.Hw.EPISODE ? s.Hw.SHOW : s.Hw.ALBUM,
   resourceId: r
 };
   });
 }
 
 function d(e, t, n) {
-  s(e, t, e => {
+  o(e, t, e => {
 let {
   artist_ids: t
 } = e;
@@ -73,7 +73,7 @@ let r = t[n];
 if (null == r)
   throw Error('invalid artist index');
 return {
-  resourceType: o.Hw.ARTIST,
+  resourceType: s.Hw.ARTIST,
   resourceId: r
 };
   });

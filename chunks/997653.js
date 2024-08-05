@@ -6,8 +6,8 @@ return I;
 var r = n(264344),
   i = n.n(r),
   a = n(259443),
-  o = n(46973),
-  s = n(912095),
+  s = n(46973),
+  o = n(912095),
   l = n(912978),
   u = n(886848),
   c = n(236842),
@@ -28,15 +28,15 @@ writable: !0
 function p(e) {
   return e.split('-')[0];
 }
-class m extends s.Z {
+class m extends o.Z {
   destroy() {
 super.destroy(), this.pc.close();
   }
   setCodecs(e, t, n) {
 var r, i, a;
-let o;
+let s;
 if (this.fpc.audioCodec !== e || this.fpc.videoCodec !== t)
-  o = this.codecs.find(t => t.name === e), this.fpc.audioCodec = e, this.fpc.audioPayloadType = null !== (r = null == o ? void 0 : o.payloadType) && void 0 !== r ? r : 0, o = this.codecs.find(e => e.name === t), this.fpc.videoCodec = t, this.fpc.videoPayloadType = null !== (i = null == o ? void 0 : o.payloadType) && void 0 !== i ? i : 0, this.fpc.rtxPayloadType = null !== (a = null == o ? void 0 : o.rtxPayloadType) && void 0 !== a ? a : 0, this.pc.negotiationNeeded();
+  s = this.codecs.find(t => t.name === e), this.fpc.audioCodec = e, this.fpc.audioPayloadType = null !== (r = null == s ? void 0 : s.payloadType) && void 0 !== r ? r : 0, s = this.codecs.find(e => e.name === t), this.fpc.videoCodec = t, this.fpc.videoPayloadType = null !== (i = null == s ? void 0 : s.payloadType) && void 0 !== i ? i : 0, this.fpc.rtxPayloadType = null !== (a = null == s ? void 0 : s.rtxPayloadType) && void 0 !== a ? a : 0, this.pc.negotiationNeeded();
   }
   setStream(e) {
 this.fpc.direction = null != e ? d.Ns.SENDRECV : d.Ns.SENDONLY, this.pc.setStream(null != e ? e : null);
@@ -71,33 +71,33 @@ let i = new l.Z();
 i.on('answer', e => this.pc.setRemoteDescription(e).catch(e => this.logger.error('Failed to set remote description (answer): '.concat(e)))), i.on('offer', e => {
   this.pc.setRemoteDescription(e).then(() => this.pc.createAnswer()).then(e => this.fpc.setRemoteDescription(e)).catch(e => this.logger.error('Failed to set remote description (offer): '.concat(e)));
 }), i.direction = null != this.input.stream ? d.Ns.SENDRECV : d.Ns.SENDONLY, this.fpc = i;
-let s = new c.Z(this.voiceBitrate);
-s.on('addtrack', (e, t) => this.createOutput(p(e), t)), s.on('removetrack', (e, t) => this.destroyOutput(p(e), t)), s.once('connected', () => {
-  this.input.reset(), this.setConnectionState(E.$j.CONNECTED), this.on(o.Sh.Stats, this.handleStats), this.input.on(u.G.VoiceActivity, this.handleVoiceActivity);
-}), s.on('connecting', () => this.setConnectionState(E.$j.DTLS_CONNECTING)), s.on('checking', () => this.setConnectionState(E.$j.ICE_CHECKING)), s.on('failed', () => this.setConnectionState(E.$j.NO_ROUTE)), s.on('disconnected', () => this.setConnectionState(E.$j.DISCONNECTED)), s.on('closed', () => this.setConnectionState(E.$j.DISCONNECTED)), s.on('offer', e => {
+let o = new c.Z(this.voiceBitrate);
+o.on('addtrack', (e, t) => this.createOutput(p(e), t)), o.on('removetrack', (e, t) => this.destroyOutput(p(e), t)), o.once('connected', () => {
+  this.input.reset(), this.setConnectionState(E.$j.CONNECTED), this.on(s.Sh.Stats, this.handleStats), this.input.on(u.G.VoiceActivity, this.handleVoiceActivity);
+}), o.on('connecting', () => this.setConnectionState(E.$j.DTLS_CONNECTING)), o.on('checking', () => this.setConnectionState(E.$j.ICE_CHECKING)), o.on('failed', () => this.setConnectionState(E.$j.NO_ROUTE)), o.on('disconnected', () => this.setConnectionState(E.$j.DISCONNECTED)), o.on('closed', () => this.setConnectionState(E.$j.DISCONNECTED)), o.on('offer', e => {
   let {
     sdp: t
   } = e, {
     outboundStreams: n,
     codecs: r,
     audioSSRC: a,
-    videoSSRC: s,
+    videoSSRC: o,
     rtxSSRC: l
   } = (0, d.Nl)(t);
   this.codecs = r;
   let u = (0, d.nX)(t);
-  i.outboundStreams = n, this.audioSSRC = a, i.extensions = u, (this.videoStreamParameters[0].ssrc !== s || this.videoStreamParameters[0].rtxSsrc !== l || !this.videoReady) && (this.videoStreamParameters[0].ssrc = s, this.videoStreamParameters[0].rtxSsrc = l, this.emit(o.Sh.Video, this.userId, this.input.getVideoStreamId(), this.audioSSRC, this.videoStreamParameters[0].ssrc, this.videoStreamParameters[0].rtxSsrc, this.videoStreamParameters), this.videoReady = !0);
-}), s.once('offer', e => {
+  i.outboundStreams = n, this.audioSSRC = a, i.extensions = u, (this.videoStreamParameters[0].ssrc !== o || this.videoStreamParameters[0].rtxSsrc !== l || !this.videoReady) && (this.videoStreamParameters[0].ssrc = o, this.videoStreamParameters[0].rtxSsrc = l, this.emit(s.Sh.Video, this.userId, this.input.getVideoStreamId(), this.audioSSRC, this.videoStreamParameters[0].ssrc, this.videoStreamParameters[0].rtxSsrc, this.videoStreamParameters), this.videoReady = !0);
+}), o.once('offer', e => {
   let {
     sdp: t
   } = e;
-  this.emit(o.Sh.Connected, 'webrtc', (0, d.sc)(t));
-}), null != this.input.stream ? s.setStream(this.input.stream) : s.negotiationNeeded(), this.pc = s;
+  this.emit(s.Sh.Connected, 'webrtc', (0, d.sc)(t));
+}), null != this.input.stream ? o.setStream(this.input.stream) : o.negotiationNeeded(), this.pc = o;
   }
 }
 
 function I(e, t, n, r) {
-  let o = ''.concat(null != i().name && '' !== i().name ? i().name : 'unknown', ' ').concat(null != i().version && '' !== i().version ? i().version : 'unknown'),
-s = new a.Y('Connection('.concat(e, ')'));
-  return f.WS ? (s.info('Using Unified Plan ('.concat(o, ')')), new _.Z(e, t, n, r)) : (s.info('Using Plan B ('.concat(o, ')')), new m(e, t, n, r));
+  let s = ''.concat(null != i().name && '' !== i().name ? i().name : 'unknown', ' ').concat(null != i().version && '' !== i().version ? i().version : 'unknown'),
+o = new a.Y('Connection('.concat(e, ')'));
+  return f.WS ? (o.info('Using Unified Plan ('.concat(s, ')')), new _.Z(e, t, n, r)) : (o.info('Using Plan B ('.concat(s, ')')), new m(e, t, n, r));
 }

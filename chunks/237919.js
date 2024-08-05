@@ -1,12 +1,12 @@
 n.d(t, {
   Z: function() {
-return C;
+return f;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(442837),
   o = n(481060),
   c = n(570140),
@@ -28,7 +28,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class S extends s.Component {
+class S extends a.Component {
   componentDidMount() {
 document.addEventListener('keydown', this.handleKeyDown);
   }
@@ -48,10 +48,10 @@ null != e && e.focus();
 let {
   applicationViewItems: t,
   activeRowKey: n
-} = this.props, i = t.findIndex(e => e.key === n), s = 0;
-i >= 0 && (s = (i + e) % t.length) < 0 && (s = t.length - 1);
-let a = t[s];
-d.wX(null != a ? a.key : null, !0);
+} = this.props, i = t.findIndex(e => e.key === n), a = 0;
+i >= 0 && (a = (i + e) % t.length) < 0 && (a = t.length - 1);
+let s = t[a];
+d.wX(null != s ? s.key : null, !0);
   }
   render() {
 let {
@@ -94,22 +94,22 @@ super(...e), T(this, 'searchBarRef', null), T(this, 'state', {
   let {
     activeRowKey: n,
     hasModalOpen: i,
-    applicationViewItems: s
+    applicationViewItems: a
   } = this.props, {
-    searchBarRef: a
+    searchBarRef: s
   } = this;
-  if (i || e.ctrlKey || e.altKey || e.metaKey || null == a)
+  if (i || e.ctrlKey || e.altKey || e.metaKey || null == s)
     return;
   let r = null === (t = (0, E.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
-  if (!(r !== a.inputRef.current && (0, E.VG)(r)))
+  if (!(r !== s.inputRef.current && (0, E.VG)(r)))
     switch (e.which) {
       case m.yXg.ESCAPE:
-        e.target !== a.inputRef.current ? this.reset() : null != a.inputRef.current && a.blur();
+        e.target !== s.inputRef.current ? this.reset() : null != s.inputRef.current && s.blur();
         break;
       case m.yXg.ENTER:
         if (null != n) {
           e.preventDefault();
-          let t = s.find(e => e.key === n);
+          let t = a.find(e => e.key === n);
           if (null == t)
             return;
           let i = t.libraryApplication;
@@ -130,13 +130,13 @@ super(...e), T(this, 'searchBarRef', null), T(this, 'state', {
         e.preventDefault(), e.stopPropagation(), this.updateActiveRow(e.which === m.yXg.ARROW_DOWN ? 1 : -1);
         break;
       default:
-        null != a.inputRef.current && e.target !== a.inputRef.current && a.focus();
+        null != s.inputRef.current && e.target !== s.inputRef.current && s.focus();
     }
 });
   }
 }
 
-function C() {
+function f() {
   let e = (0, l.e7)([u.Z], () => u.Z.hasLayers()),
 t = (0, o.useModalsStore)(o.hasAnyModalOpenSelector);
   return (0, i.jsx)(S, {

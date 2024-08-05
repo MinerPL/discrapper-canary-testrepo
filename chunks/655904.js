@@ -4,9 +4,9 @@ return _;
   }
 });
 var r, i, a = n(735250),
-  o = n(470079),
-  s = n(120356),
-  l = n.n(s),
+  s = n(470079),
+  o = n(120356),
+  l = n.n(o),
   u = n(692547),
   c = n(896810);
 (r = i || (i = {})).XSMALL = 'xsmall', r.SMALL = 'small', r.LARGE = 'large';
@@ -17,7 +17,7 @@ function _(e) {
   className: n,
   percent: r,
   size: i = 'small',
-  foregroundColor: s = u.Z.unsafe_rawColors.BRAND_500.css,
+  foregroundColor: o = u.Z.unsafe_rawColors.BRAND_500.css,
   backgroundColor: _ = 'var(--background-modifier-active)',
   foregroundGradientColor: E,
   animate: f = !0
@@ -26,7 +26,7 @@ h = null != r ? r : 0;
   return t = null != E ? {
 background: 'linear-gradient(to right, '.concat(E[0], ', ').concat(E[1], ')')
   } : {
-backgroundColor: s
+backgroundColor: o
   }, (0, a.jsx)('div', {
 className: l()(n, c.progress, c[i]),
 style: {
@@ -40,7 +40,7 @@ children: h !== d && 'number' == typeof h ? (0, a.jsx)('div', {
     transform: 'translate3d('.concat(Math.min(Math.max(0, h), 100) - 100, '%, 0, 0)'),
     ...t
   }
-}) : (0, a.jsxs)(o.Fragment, {
+}) : (0, a.jsxs)(s.Fragment, {
   children: [
     (0, a.jsx)('div', {
       className: l()(c.indeterminateBar1, c[i], {

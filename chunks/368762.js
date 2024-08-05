@@ -20,13 +20,13 @@ r.enumerable = r.enumerable || !1, r.configurable = !0, 'value' in r && (r.writa
   }
 }
 
-function o(e, t) {
-  return (o = Object.setPrototypeOf || function(e, t) {
+function s(e, t) {
+  return (s = Object.setPrototypeOf || function(e, t) {
 return e.__proto__ = t, e;
   })(e, t);
 }
 
-function s(e) {
+function o(e) {
   if (void 0 === e)
 throw ReferenceError('this hasn\'t been initialised - super() hasn\'t been called');
   return e;
@@ -56,7 +56,7 @@ e.prototype = Object.create(t && t.prototype, {
     writable: !0,
     configurable: !0
   }
-}), t && o(e, t);
+}), t && s(e, t);
   }(E, e);
   var t, n, r, c, d, _ = (t = E, n = function() {
 if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham)
@@ -72,7 +72,7 @@ try {
 var e, r = l(t);
 return e = n ? Reflect.construct(r, arguments, l(this).constructor) : r.apply(this, arguments),
   function(e, t) {
-    return t && ('object' === i(t) || 'function' == typeof t) ? t : s(e);
+    return t && ('object' === i(t) || 'function' == typeof t) ? t : o(e);
   }(this, e);
   });
 
@@ -84,7 +84,7 @@ var e;
 }(this, E);
 for (var t = arguments.length, n = Array(t), r = 0; r < t; r++)
   n[r] = arguments[r];
-return u(s(e = _.call.apply(_, [this].concat(n))), 'priority', 140), u(s(e), 'incompatibleTokens', [
+return u(o(e = _.call.apply(_, [this].concat(n))), 'priority', 140), u(o(e), 'incompatibleTokens', [
   'R',
   'u',
   't',

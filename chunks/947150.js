@@ -6,8 +6,8 @@ return o;
 var i = n(735250);
 n(470079);
 var a = n(442837),
-  l = n(481060),
-  s = n(846027),
+  s = n(481060),
+  l = n(846027),
   r = n(131951);
 
 function o() {
@@ -19,13 +19,13 @@ let {
   disabled: a,
   name: r
 } = e;
-return (0, i.jsx)(l.MenuRadioItem, {
+return (0, i.jsx)(s.MenuRadioItem, {
   id: 'input-'.concat(n),
   group: 'input-devices',
   disabled: a,
   label: r,
   checked: n === t,
-  action: () => s.Z.setInputDevice(n)
+  action: () => l.Z.setInputDevice(n)
 }, 'input-'.concat(n));
   });
 }

@@ -1,10 +1,10 @@
-var a = r(319301);
+var a = t(319301);
 let n = {
   figma: {
 category: 'misc'
   }
 };
-t.Z = (0, a.a)({
+r.Z = (0, a.a)({
   'activity-card-background': {
 dark: 'primary.700',
 light: 'white.500',

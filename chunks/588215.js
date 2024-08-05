@@ -7,12 +7,12 @@ return r;
 return a;
   },
   si: function() {
-return o;
+return s;
   }
 });
 let a = 2 * n(70956).Z.Millis.DAY;
 
-function o(e) {
+function s(e) {
   let {
 joinedAt: t,
 userId: n

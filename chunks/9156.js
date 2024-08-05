@@ -8,8 +8,8 @@ return j;
 }), n(47120), n(789020);
 var r, i = n(392711),
   a = n.n(i),
-  o = n(442837),
-  s = n(570140),
+  s = n(442837),
+  o = n(570140),
   l = n(798140),
   u = n(160404),
   c = n(312400),
@@ -77,17 +77,17 @@ function k(e, t) {
   var n;
   let r = N[e],
 i = null !== (n = null == r ? void 0 : r.channel_overrides) && void 0 !== n ? n : {},
-o = W(t.channel_overrides),
-s = {
+s = W(t.channel_overrides),
+o = {
   ...j(e),
   ...r,
   ...t,
-  channel_overrides: o
+  channel_overrides: s
 };
   y.clearTimer(e), a().forEach(i, e => {
 D.clearTimer(e.channel_id);
-  }), B(e, s), N[e] = s, M[e] = q(N[e]);
-  let l = a().filter(s.channel_overrides, e => {
+  }), B(e, o), N[e] = o, M[e] = q(N[e]);
+  let l = a().filter(o.channel_overrides, e => {
 var t;
 return E.yE(null !== (t = e.flags) && void 0 !== t ? t : 0, S.ic.OPT_IN_ENABLED);
   });
@@ -110,7 +110,7 @@ function B(e, t) {
   !0 === t.muted && y.setTimer(e, t.mute_config, () => {
 F(e, {
   muted: !1
-}), s.Z.dispatch({
+}), o.Z.dispatch({
   type: 'GUILD_MUTE_EXPIRED',
   guildId: e
 });
@@ -118,7 +118,7 @@ F(e, {
 !0 === t.muted && D.setTimer(t.channel_id, t.mute_config, () => {
   V(e, t.channel_id, {
     muted: !1
-  }), s.Z.dispatch({
+  }), o.Z.dispatch({
     type: 'CHANNEL_MUTE_EXPIRED',
     guildId: e,
     channelId: t.channel_id
@@ -149,9 +149,9 @@ function H(e, t) {
 i = null !== (n = null != e ? x[e] : null) && void 0 !== n ? n : {};
   f.default.keys(t).forEach(n => {
 var a;
-let o = Y(e, n, t[n]);
-r[n] = o, i[n] = {
-  flags: null !== (a = o.flags) && void 0 !== a ? a : 0
+let s = Y(e, n, t[n]);
+r[n] = s, i[n] = {
+  flags: null !== (a = s.flags) && void 0 !== a ? a : 0
 };
   }), null != e && (x[e] = {
 ...x[e],
@@ -217,7 +217,7 @@ location: 'UserGuildSettingsStore'
 autoTrackExposure: !1
   }).enabled;
 }
-class $ extends(r = o.ZP.PersistedStore) {
+class $ extends(r = s.ZP.PersistedStore) {
   initialize(e) {
 if (this.waitFor(m.default, p.Z, u.Z, d.Z), null != e) {
   var t, n;
@@ -443,7 +443,7 @@ return E.yE(n, S.ic.UNREADS_ALL_MESSAGES) ? g.i.ALL_MESSAGES : E.yE(n, S.ic.UNRE
   }
 }
 A($, 'displayName', 'UserGuildSettingsStore'), A($, 'persistKey', 'collapsedGuilds');
-let J = new $(s.Z, {
+let J = new $(o.Z, {
   USER_GUILD_SETTINGS_FULL_UPDATE: function(e) {
 let {
   userGuildSettings: t

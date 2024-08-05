@@ -8,8 +8,8 @@ return c;
 });
 var i = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(931240),
+var a = n(481060),
+  s = n(931240),
   r = n(308083),
   l = n(689938);
 
@@ -62,11 +62,11 @@ onSuccess: r,
 progress: l
   } = e;
   try {
-await a.sv(t, l);
+await s.sv(t, l);
   } catch (e) {
 return;
   }
-  r(), (0, s.openModalLazy)(async () => {
+  r(), (0, a.openModalLazy)(async () => {
 let {
   default: e
 } = await n.e('63636').then(n.bind(n, 511385));

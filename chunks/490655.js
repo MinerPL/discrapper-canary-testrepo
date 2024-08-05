@@ -5,8 +5,8 @@ var i = t(735250),
   l = t.n(s),
   o = t(442837),
   r = t(481060),
-  c = t(139387),
-  d = t(503089),
+  d = t(139387),
+  c = t(503089),
   u = t(231757),
   I = t(106976),
   m = t(488915),
@@ -15,8 +15,8 @@ var i = t(735250),
   E = t(285952),
   T = t(585483),
   h = t(63063),
-  p = t(919196),
-  g = t(731072),
+  g = t(919196),
+  p = t(731072),
   C = t(494118),
   f = t(351644),
   x = t(720764),
@@ -57,13 +57,13 @@ isFetching: j,
 refToScroller: D,
 errors: P,
 hasChanges: B
-  } = e, y = (0, o.e7)([_.ZP], () => null != s ? _.ZP.getDefaultChannel(s.id) : null), G = (0, o.cj)([_.ZP], () => _.ZP.getChannels(null == s ? void 0 : s.id)), k = (0, o.cj)([N.Z], () => l().keyBy(G.SELECTABLE.map(e => e.channel).filter(e => N.Z.can(O.Plq.MANAGE_WEBHOOKS, e)), 'id')), U = (0, o.cj)([N.Z], () => l().keyBy(G.VOCAL.map(e => e.channel).filter(e => e.isGuildVocal() && N.Z.can(O.Plq.MANAGE_WEBHOOKS, e)), 'id')), H = null != b ? b : y, w = n === O.b4C.APPLICATION ? t : null, [W, F] = a.useState(d.$x), V = a.useCallback(() => B() ? (T.S.dispatch(O.CkL.SHAKE_APP, {
+  } = e, y = (0, o.e7)([_.ZP], () => null != s ? _.ZP.getDefaultChannel(s.id) : null), G = (0, o.cj)([_.ZP], () => _.ZP.getChannels(null == s ? void 0 : s.id)), k = (0, o.cj)([N.Z], () => l().keyBy(G.SELECTABLE.map(e => e.channel).filter(e => N.Z.can(O.Plq.MANAGE_WEBHOOKS, e)), 'id')), U = (0, o.cj)([N.Z], () => l().keyBy(G.VOCAL.map(e => e.channel).filter(e => e.isGuildVocal() && N.Z.can(O.Plq.MANAGE_WEBHOOKS, e)), 'id')), H = null != b ? b : y, w = n === O.b4C.APPLICATION ? t : null, [W, F] = a.useState(c.$x), V = a.useCallback(() => B() ? (T.S.dispatch(O.CkL.SHAKE_APP, {
 duration: 300,
 intensity: W
-  }), F(Math.min(W + d.d7, d.w6)), T.S.dispatch(O.CkL.EMPHASIZE_NOTICE), !1) : (F(d.$x), !0), [
+  }), F(Math.min(W + c.d7, c.w6)), T.S.dispatch(O.CkL.EMPHASIZE_NOTICE), !1) : (F(c.$x), !0), [
 B,
 W
-  ]), K = a.useCallback(e => !!V() && (c.Z.setSection(e), !0), [V]), {
+  ]), K = a.useCallback(e => !!V() && (d.Z.setSection(e), !0), [V]), {
 applicationIntegrations: Y,
 applicationBotIds: z,
 builtInIntegrations: q,
@@ -109,13 +109,13 @@ M
 if (!j)
   switch (n) {
     case O.b4C.TWITCH:
-      null == q[O.ABu.TWITCH] && c.Z.setSection(O.b4C.OVERVIEW);
+      null == q[O.ABu.TWITCH] && d.Z.setSection(O.b4C.OVERVIEW);
       break;
     case O.b4C.YOUTUBE:
-      null == q[O.ABu.YOUTUBE] && c.Z.setSection(O.b4C.OVERVIEW);
+      null == q[O.ABu.YOUTUBE] && d.Z.setSection(O.b4C.OVERVIEW);
       break;
     case O.b4C.APPLICATION:
-      (null == w || !(w in z || w in Y)) && c.Z.setSection(O.b4C.OVERVIEW);
+      (null == w || !(w in z || w in Y)) && d.Z.setSection(O.b4C.OVERVIEW);
   }
   }, [
 Y,
@@ -131,7 +131,7 @@ if ((null == s ? void 0 : s.id) != null)
   let Q = null;
   switch (n) {
 case O.b4C.TWITCH:
-  null != q[O.ABu.TWITCH] && (Q = (0, i.jsx)(g.Z, {
+  null != q[O.ABu.TWITCH] && (Q = (0, i.jsx)(p.Z, {
     guild: s,
     integrations: q[O.ABu.TWITCH],
     editedIntegration: v,
@@ -149,7 +149,7 @@ case O.b4C.TWITCH:
   }));
   break;
 case O.b4C.YOUTUBE:
-  null != q[O.ABu.YOUTUBE] && (Q = (0, i.jsx)(g.Z, {
+  null != q[O.ABu.YOUTUBE] && (Q = (0, i.jsx)(p.Z, {
     guild: s,
     integrations: q[O.ABu.YOUTUBE],
     editedIntegration: v,
@@ -168,7 +168,7 @@ case O.b4C.YOUTUBE:
 case O.b4C.APPLICATION:
   var $;
   let ee = null != w ? null !== ($ = Y[z[w]]) && void 0 !== $ ? $ : Y[w] : null;
-  null != ee && (Q = (0, i.jsx)(p.Z, {
+  null != ee && (Q = (0, i.jsx)(g.Z, {
     guild: s,
     applicationIntegration: ee,
     editedWebhook: L,
@@ -212,21 +212,21 @@ default:
     isLoading: j || null == s,
     canCreateWebhook: null != H,
     onManageCustomWebhooks: () => {
-      c.Z.setSection(O.b4C.WEBHOOKS);
+      d.Z.setSection(O.b4C.WEBHOOKS);
     },
     onManageFollowedChannels: () => {
-      c.Z.setSection(O.b4C.CHANNEL_FOLLOWING);
+      d.Z.setSection(O.b4C.CHANNEL_FOLLOWING);
     },
     onManageApplication: e => {
-      c.Z.setSection(O.b4C.APPLICATION, e);
+      d.Z.setSection(O.b4C.APPLICATION, e);
     },
     onManageBuiltIn: e => {
       switch (e) {
         case O.ABu.TWITCH:
-          c.Z.setSection(O.b4C.TWITCH);
+          d.Z.setSection(O.b4C.TWITCH);
           break;
         case O.ABu.YOUTUBE:
-          c.Z.setSection(O.b4C.YOUTUBE);
+          d.Z.setSection(O.b4C.YOUTUBE);
       }
     }
   });

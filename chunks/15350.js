@@ -9,12 +9,12 @@ let a = (e, t, n) => {
   if ('' === e)
 return null;
   let a = [],
-o = [];
+s = [];
   return (0, i.WL)(e).forEach(e => {
 let i = (0, r.cO)(e, t, n);
-i === r.eb.SENDABLE ? a.push(e) : i === r.eb.SENDABLE_WITH_PREMIUM && o.push(e);
+i === r.eb.SENDABLE ? a.push(e) : i === r.eb.SENDABLE_WITH_PREMIUM && s.push(e);
   }), {
 sendable: a,
-sendableWithPremium: o
+sendableWithPremium: s
   };
 };

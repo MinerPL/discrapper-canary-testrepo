@@ -3,8 +3,8 @@ t.d(a, {
 return m;
   }
 }), t(47120);
-var n, r, s = t(735250),
-  l = t(470079),
+var s, n, l = t(735250),
+  r = t(470079),
   o = t(481060),
   i = t(987134),
   c = t(754103),
@@ -12,18 +12,18 @@ var n, r, s = t(735250),
   d = t(761462),
   E = t(962776);
 
-function _(e) {
+function A(e) {
   let {
 onChange: a,
 billingAddressInfo: t,
-error: n
-  } = e, [r, i] = l.useState({}), [E, _] = l.useState({}), p = {
+error: s
+  } = e, [n, i] = r.useState({}), [E, A] = r.useState({}), N = {
 name: 'email',
 title: () => u.Z.Messages.EMAIL,
 autoComplete: 'cc-name',
 placeholder: () => u.Z.Messages.EMAIL,
 getClassNameForLayout: () => d.width100,
-renderInput: e => (0, s.jsx)(o.TextInput, {
+renderInput: e => (0, l.jsx)(o.TextInput, {
   ...e
 })
   }, m = {
@@ -32,36 +32,36 @@ title: () => u.Z.Messages.CREDIT_CARD_NAME,
 autoComplete: 'cc-name',
 placeholder: () => u.Z.Messages.CREDIT_CARD_NAME,
 getClassNameForLayout: () => d.width100,
-renderInput: e => (0, s.jsx)(o.TextInput, {
+renderInput: e => (0, l.jsx)(o.TextInput, {
   ...e
 })
   };
-  return (0, s.jsx)(c.Z, {
+  return (0, l.jsx)(c.Z, {
 form: [{
-    fields: [p]
+    fields: [N]
   },
   {
     fields: [m]
   }
 ],
 errors: E,
-formError: n,
+formError: s,
 values: {
   name: t.name,
   email: t.email
 },
-onFieldChange: function(e, n) {
-  if (null != n)
-    !r[n] && '' !== e && i(e => (e[n] = !0, e)), r[n] && '' === e ? _(e => ('email' === n && (e[n] = u.Z.Messages.PAYMENT_SOURCE_EMAIL_ERROR_REQUIRED), 'name' === n && (e[n] = u.Z.Messages.PAYMENT_SOURCE_NAME_ERROR_REQUIRED), e)) : _(e => (delete e[n], e)), a({
+onFieldChange: function(e, s) {
+  if (null != s)
+    !n[s] && '' !== e && i(e => (e[s] = !0, e)), n[s] && '' === e ? A(e => ('email' === s && (e[s] = u.Z.Messages.PAYMENT_SOURCE_EMAIL_ERROR_REQUIRED), 'name' === s && (e[s] = u.Z.Messages.PAYMENT_SOURCE_NAME_ERROR_REQUIRED), e)) : A(e => (delete e[s], e)), a({
       name: t.name,
       email: t.email,
-      [n]: e
+      [s]: e
     });
 }
   });
 }
-(r = n || (n = {})).EMAIL = 'email', r.NAME = 'name';
-let p = [{
+(n = s || (s = {})).EMAIL = 'email', n.NAME = 'name';
+let N = [{
 label: 'Alior Bank',
 value: 'alior_bank'
   },
@@ -167,46 +167,46 @@ function m(e) {
   let {
 onDetailsChange: a,
 onP24BankChange: t,
-error: n,
-billingAddressInfo: r,
+error: s,
+billingAddressInfo: n,
 p24BankValue: o
-  } = e, [m, A] = l.useState(o), N = 'p24Bank', h = [{
+  } = e, [m, _] = r.useState(o), p = 'p24Bank', h = [{
 fields: [{
-  name: N,
+  name: p,
   title: () => u.Z.Messages.PAYMENT_SOURCE_PRZELEWY24_BANK_LABEL,
   getClassNameForLayout: () => d.width100,
-  renderInput: e => (0, s.jsx)(i.Z, {
+  renderInput: e => (0, l.jsx)(i.Z, {
     maxMenuHeight: 190,
     menuPlacement: i.Z.MenuPlacements.TOP,
     clearable: !1,
-    options: p,
+    options: N,
     value: e.value,
     onChange: e => {
       let {
         value: a
       } = e;
-      t(a), A(a);
+      t(a), _(a);
     }
   })
 }]
   }];
-  return (0, s.jsxs)(s.Fragment, {
+  return (0, l.jsxs)(l.Fragment, {
 children: [
-  (0, s.jsx)(_, {
-    error: n,
-    billingAddressInfo: r,
+  (0, l.jsx)(A, {
+    error: s,
+    billingAddressInfo: n,
     onChange: a
   }),
-  (0, s.jsx)(c.Z, {
+  (0, l.jsx)(c.Z, {
     className: E.p24Form,
     form: h,
     errors: {},
-    formError: n,
+    formError: s,
     values: {
-      [N]: m
+      [p]: m
     }
   })
 ]
   });
 }
-a.Z = _;
+a.Z = A;

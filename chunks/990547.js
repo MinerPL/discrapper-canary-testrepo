@@ -61,8 +61,8 @@ return b;
 return P;
   }
 }), n(757143), n(47120);
-var a, o = n(348327),
-  s = n.n(o),
+var a, s = n(348327),
+  o = n.n(s),
   l = n(512722),
   u = n.n(l),
   c = n(264344),
@@ -86,8 +86,8 @@ if (null != v) {
   let t = v.remoteApp.getVersion(),
 n = v.process.platform,
 i = v.os.release,
-o = v.os.arch,
-s = v.os.appArch,
+s = v.os.arch,
+o = v.os.appArch,
 l = v.remoteApp.getReleaseChannel(),
 u = (0, _.qf)();
   switch (n) {
@@ -109,8 +109,8 @@ default:
   release_channel: l || 'unknown',
   client_version: t,
   os_version: i,
-  os_arch: o,
-  app_arch: s,
+  os_arch: s,
+  app_arch: o,
   system_locale: u
 }, (null === (a = d().name) || void 0 === a ? void 0 : a.toLocaleLowerCase()) === 'electron' && (r.browser_user_agent = d().ua || '', r.browser_version = d().version || ''), 'linux' === n) {
 let e = v.crashReporter.getMetadata();
@@ -284,10 +284,10 @@ M(function() {
   let r = {},
 i = window.GLOBAL_ENV.RELEASE_CHANNEL;
   i && (r.release_channel = i.split('-')[0]);
-  let a = parseInt((n = '309567', '309567'), 10);
+  let a = parseInt((n = '315452', '315452'), 10);
   !isNaN(a) && (r.client_build_number = a);
-  let o = null == v ? void 0 : null === (e = (t = v.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
-  return !isNaN(o) && (r.native_build_number = o), r.client_event_source = function() {
+  let s = null == v ? void 0 : null === (e = (t = v.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
+  return !isNaN(s) && (r.native_build_number = s), r.client_event_source = function() {
 try {
   if (__OVERLAY__)
     return 'OVERLAY';
@@ -305,13 +305,13 @@ TRACK_ACTION_NAME: i
 let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
 if (null != n.g.isServerRendering && !0 === n.g.isServerRendering)
   return Promise.resolve();
-let o = null != r ? r : {},
+let s = null != r ? r : {},
   l = t[e];
 if (null != l) {
   if ('throttlePeriod' in l) {
     let t = [
       e,
-      ...l.throttleKeys(o)
+      ...l.throttleKeys(s)
     ].join('_');
     if (b(t))
       return Promise.resolve();
@@ -319,9 +319,9 @@ if (null != l) {
       return Promise.resolve();
     if (l.deduplicate) {
       let e = N[t];
-      if (s()(e, o))
+      if (o()(e, s))
         return Promise.resolve();
-      N[t] = o;
+      N[t] = s;
     }
     A[t] = Date.now() + l.throttlePeriod;
   } else if ('throttlePercent' in l) {

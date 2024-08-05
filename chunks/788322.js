@@ -1,19 +1,19 @@
 n.d(t, {
   Y: function() {
-return L;
+return Z;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(481060),
   o = n(239091),
   c = n(906732),
-  d = n(134432),
-  u = n(451603),
-  _ = n(885714),
-  h = n(940627),
+  d = n(372769),
+  u = n(134432),
+  _ = n(451603),
+  h = n(885714),
   E = n(806519),
   I = n(768581),
   m = n(900849),
@@ -21,20 +21,20 @@ var i = n(735250),
   p = n(879484),
   T = n(26580),
   S = n(206887),
-  C = n(981631),
-  f = n(689938),
+  f = n(981631),
+  C = n(689938),
   N = n(465423),
   A = n(129512),
-  Z = n(330065);
-let L = () => (0, i.jsx)('div', {
+  v = n(330065);
+let Z = () => (0, i.jsx)('div', {
   className: N.placeholder
 });
 t.Z = e => {
   var t;
   let {
-guild: a,
-theme: L,
-onView: v,
+guild: s,
+theme: Z,
+onView: L,
 onTagClick: O
   } = e, {
 id: R,
@@ -45,20 +45,20 @@ description: M,
 presenceCount: D,
 memberCount: y,
 keywords: j
-  } = a, [U, G] = s.useState(!1), [k, w] = s.useState(!1), {
+  } = s, [U, G] = a.useState(!1), [k, w] = a.useState(!1), {
 analyticsLocations: B
   } = (0, c.ZP)(), H = I.ZP.getGuildDiscoverySplashURL({
 id: R,
 splash: x,
-size: 240 * (0, d.x_)()
+size: 240 * (0, u.x_)()
   }), V = null != H ? H : function(e) {
 switch (e) {
-  case C.BRd.DARK:
+  case f.BRd.DARK:
     return A;
-  case C.BRd.LIGHT:
-    return Z;
+  case f.BRd.LIGHT:
+    return v;
 }
-  }(L), F = null !== (t = I.ZP.getGuildIconURL({
+  }(Z), F = null !== (t = I.ZP.getGuildIconURL({
 id: R,
 icon: b,
 size: 32
@@ -67,14 +67,14 @@ let {
   className: t
 } = e.target;
 if (!t.includes('Menu')) {
-  if ((0, u.yU)()) {
-    (0, _.Z)({
+  if ((0, _.yU)()) {
+    (0, h.Z)({
       analyticsSource: {
-        page: C.ZY5.GUILD_DISCOVERY
+        page: f.ZY5.GUILD_DISCOVERY
       },
       analyticsLocation: {
-        page: C.ZY5.GUILD_DISCOVERY,
-        section: C.jXE.GUILD_CAP_UPSELL_MODAL
+        page: f.ZY5.GUILD_DISCOVERY,
+        section: f.jXE.GUILD_CAP_UPSELL_MODAL
       },
       analyticsLocations: B
     });
@@ -82,13 +82,13 @@ if (!t.includes('Menu')) {
   }
   w(!0);
   try {
-    null != v && await v(a.id);
+    null != L && await L(s.id);
   } finally {
     w(!1);
   }
 }
   };
-  s.useEffect(() => p.w.trackExposure({
+  a.useEffect(() => p.w.trackExposure({
 location: '4302e4_1'
   }));
   let {
@@ -120,7 +120,7 @@ children: [
             } = await Promise.resolve().then(n.bind(n, 455839));
             return t => (0, i.jsx)(e, {
               ...t,
-              guild: a
+              guild: s
             });
           });
         },
@@ -160,8 +160,8 @@ children: [
                     className: N.headerName,
                     children: [
                       (0, i.jsx)('div', {
-                        children: (0, i.jsx)(h.Z, {
-                          guild: a,
+                        children: (0, i.jsx)(d.Z, {
+                          guild: s,
                           className: N.guildBadge,
                           size: 16
                         })
@@ -181,9 +181,9 @@ children: [
                 children: M
               }),
               W && null != j && null != O && (0, i.jsx)(T.F, {
-                guildId: a.id,
+                guildId: s.id,
                 discoveryTagStyle: T.B.ALT,
-                onTagClick: e => O(e, a.id),
+                onTagClick: e => O(e, s.id),
                 tags: j,
                 section: m.P1.SEARCH
               }),
@@ -195,7 +195,7 @@ children: [
                     children: (0, i.jsx)(l.Text, {
                       variant: 'text-xs/normal',
                       color: 'header-secondary',
-                      children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+                      children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
                         membersOnline: D
                       })
                     })
@@ -210,7 +210,7 @@ children: [
                         children: (0, i.jsx)(l.Text, {
                           variant: 'text-xs/normal',
                           color: 'header-secondary',
-                          children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+                          children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                             count: y
                           })
                         })
@@ -224,7 +224,7 @@ children: [
           z ? (0, i.jsx)('div', {
             className: N.actionButtons,
             children: (0, i.jsx)(S.Z, {
-              guild: a
+              guild: s
             })
           }) : null
         ]

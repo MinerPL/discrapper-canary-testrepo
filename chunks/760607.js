@@ -90,5 +90,5 @@ this.x = e, this.y = t, this.width = n, this.height = r;
   }
 }
 let a = 'undefined' != typeof window ? window.performance : null,
-  o = a && (a.now || a.webkitNow || a.msNow || a.mozNow);
-o && o.bind(a);
+  s = a && (a.now || a.webkitNow || a.msNow || a.mozNow);
+s && s.bind(a);

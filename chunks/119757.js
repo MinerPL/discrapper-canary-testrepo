@@ -1,22 +1,22 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   }
 });
 var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(889347);
-let o = e => {
+let s = e => {
   let {
 title: t,
 subtitle: n,
-icon: o
+icon: s
   } = e;
   return (0, r.jsxs)('div', {
 className: a.wrapper,
 children: [
-  null != o && (0, r.jsx)(o, {
+  null != s && (0, r.jsx)(s, {
     size: 'xs',
     color: 'currentColor',
     className: a.icon

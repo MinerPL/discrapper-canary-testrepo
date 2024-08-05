@@ -5,8 +5,8 @@ return d;
 });
 var i = n(735250);
 n(470079);
-var s = n(82950),
-  a = n(63063),
+var a = n(82950),
+  s = n(63063),
   r = n(981631),
   l = n(921944),
   o = n(689938),
@@ -17,12 +17,12 @@ function d(e) {
 guild: t,
 markAsDismissed: n
   } = e;
-  return (0, i.jsx)(s.Z, {
+  return (0, i.jsx)(a.Z, {
 image: c,
 guild: t,
 onDismissed: () => n(l.L.UNKNOWN),
 onClick: () => {
-  open(a.Z.getArticleURL(r.BhN.CONNECTION_DETAILS)), n(l.L.UNKNOWN);
+  open(s.Z.getArticleURL(r.BhN.CONNECTION_DETAILS)), n(l.L.UNKNOWN);
 },
 title: o.Z.Messages.LINKED_ROLES_ADMIN_NUX_TITLE,
 message: o.Z.Messages.LINKED_ROLES_ADMIN_NUX_CONTENT,

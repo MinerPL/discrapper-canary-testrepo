@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(481060),
-  s = n(412899),
+  s = n(481060),
+  o = n(412899),
   l = n(659101),
   u = n(689938),
   c = n(658520),
@@ -23,14 +23,14 @@ showBorder: _
   } = e;
   return null == n || null == i ? null : (0, r.jsxs)(l.Z, {
 children: [
-  (0, r.jsx)(o.Heading, {
+  (0, r.jsx)(s.Heading, {
     variant: 'eyebrow',
     className: d.title,
     children: u.Z.Messages.ROLES_LIST.format({
       numRoles: i.roles.length
     })
   }),
-  (0, r.jsx)(s.ZP, {
+  (0, r.jsx)(o.ZP, {
     roleClassName: a()(c.rolePill, {
       [c.rolePillBorder]: _
     }),

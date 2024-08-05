@@ -9,8 +9,8 @@ return i;
 return d;
   }
 }), n(653041), n(47120);
-var r, i, a, o = n(512722),
-  s = n.n(o),
+var r, i, a, s = n(512722),
+  o = n.n(s),
   l = n(570140);
 
 function u(e, t, n) {
@@ -54,7 +54,7 @@ for (let r of this.seenIntervals) {
   }
   n.push(r);
 }
-return s()(n.length < 2, 'there should only be a single left over data'), this.seenIntervals = n, Math.round(t);
+return o()(n.length < 2, 'there should only be a single left over data'), this.seenIntervals = n, Math.round(t);
   }
   constructor() {
 u(this, 'seenIntervals', void 0), this.seenIntervals = [];

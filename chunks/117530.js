@@ -1,6 +1,6 @@
 n(47120), n(653041);
-var r, i, a, o, s = n(392711),
-  l = n.n(s),
+var r, i, a, s, o = n(392711),
+  l = n.n(o),
   u = n(442837),
   c = n(570140),
   d = n(668781),
@@ -49,12 +49,12 @@ return T(e, n).find(e => e.id === t);
 return T(e, t).find(n);
   }
 }
-o = 'UploadAttachmentStore', (a = 'displayName') in(i = A) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'UploadAttachmentStore', (a = 'displayName') in(i = A) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new A(c.Z, {
+}) : i[a] = s, t.Z = new A(c.Z, {
   UPLOAD_ATTACHMENT_POP_FILE: function(e) {
 let {
   channelId: t
@@ -89,10 +89,10 @@ let {
   filename: r,
   description: i,
   spoiler: a,
-  thumbnail: o,
-  draftType: s
-} = e, l = [...T(t, s)].map(e => (e.id === n && (void 0 !== r && (e.filename = r), void 0 !== a && (e.spoiler = a), void 0 !== i && (e.description = i), void 0 !== o && (e.isThumbnail = o)), e));
-S(t, s, l);
+  thumbnail: s,
+  draftType: o
+} = e, l = [...T(t, o)].map(e => (e.id === n && (void 0 !== r && (e.filename = r), void 0 !== a && (e.spoiler = a), void 0 !== i && (e.description = i), void 0 !== s && (e.isThumbnail = s)), e));
+S(t, o, l);
   },
   UPLOAD_ATTACHMENT_REMOVE_FILE: function(e) {
 let {
@@ -137,8 +137,8 @@ let {
   id: n,
   file: r,
   draftType: i
-} = e, a = [...T(t, i)].filter(e => e.id !== n), o = new _.n(r, t);
-o.upload(), a.push(o), S(t, i, a);
+} = e, a = [...T(t, i)].filter(e => e.id !== n), s = new _.n(r, t);
+s.upload(), a.push(s), S(t, i, a);
   },
   SIDEBAR_CLOSE: function(e) {
 let {

@@ -2,8 +2,8 @@ n(47120);
 var r = n(147913),
   i = n(358221),
   a = n(729052),
-  o = n(592125),
-  s = n(979651),
+  s = n(592125),
+  o = n(979651),
   l = n(556076);
 class u extends r.Z {
   handleVoiceChannelSelect(e) {
@@ -13,10 +13,10 @@ let {
 } = e;
 if (null == t || null == n)
   return;
-let r = o.Z.getChannel(t);
+let r = s.Z.getChannel(t);
 if (null != r && (0, a.vS)(r) && r.isGuildVoice()) {
   let e = i.Z.getParticipants(t).length,
-    n = s.Z.isInChannel(t),
+    n = o.Z.isInChannel(t),
     r = e === (n ? 1 : 0);
   r ? l.y(t, r) : e === (n ? 2 : 1) && l.y(t, r);
 }

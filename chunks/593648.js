@@ -21,19 +21,19 @@ var n = s(735250),
   C = s(378364),
   m = s(197344),
   A = s(734934),
-  h = s(223683),
-  g = s(312400),
+  g = s(223683),
+  h = s(312400),
   O = s(115345),
   p = s(392888),
   R = s(921801),
   x = s(657254),
   M = s(470647),
-  D = s(292959),
-  f = s(9156),
+  f = s(292959),
+  D = s(9156),
   P = s(626135),
   L = s(912101),
-  Z = s(358085),
-  b = s(709054),
+  b = s(358085),
+  Z = s(709054),
   v = s(557177),
   j = s(695346),
   B = s(675478),
@@ -273,7 +273,7 @@ children: (0, n.jsxs)(d.FormSection, {
 function K() {
   let e = (0, c.e7)([N.Z], () => N.Z.getGuildAlertSettings()),
 [t, s] = a.useState(null),
-i = b.default.keys(e).map(t => {
+i = Z.default.keys(e).map(t => {
   let s = e[t];
   return {
     label: s.guildName,
@@ -386,7 +386,7 @@ let {
   disableAllSounds: o,
   notifyMessagesInSelectedChannel: c,
   focusMode: _
-} = this.props, E = Z.isPlatformEmbedded && (0, Z.isWindows)(), u = l().range(1, 11).map(e => ({
+} = this.props, E = b.isPlatformEmbedded && (0, b.isWindows)(), u = l().range(1, 11).map(e => ({
   value: 60 * e,
   label: V.Z.Messages.DURATION_MINUTES.format({
     minutes: e
@@ -533,7 +533,7 @@ function X() {
 }, {
   autoTrackExposure: !1
 }).enabled,
-t = (0, c.e7)([f.ZP], () => f.ZP.mentionOnAllMessages);
+t = (0, c.e7)([D.ZP], () => D.ZP.mentionOnAllMessages);
   return e ? (0, n.jsx)(R.F, {
 setting: G.s6.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES,
 children: (0, n.jsx)(d.FormSwitch, {
@@ -549,19 +549,19 @@ children: (0, n.jsx)(d.FormSwitch, {
 }
 
 function q() {
-  let e = g.xT.useExperiment({
+  let e = h.xT.useExperiment({
   location: 'UserSettingsNotifications'
 }, {
   autoTrackExposure: !1
 }).enabled,
 {
   manuallyOpen: t
-} = g.fs.useExperiment({
+} = h.fs.useExperiment({
   location: 'UserSettingsNotifications'
 }, {
   autoTrackExposure: !1
 }),
-s = (0, c.e7)([f.ZP], () => f.ZP.useNewNotifications),
+s = (0, c.e7)([D.ZP], () => D.ZP.useNewNotifications),
 [i, o] = a.useState(!1);
   return e && (s || t) ? (0, n.jsxs)(n.Fragment, {
 children: [
@@ -603,7 +603,7 @@ children: [
             (0, n.jsx)(R.F, {
               setting: G.s6.NOTIFICATIONS_RESTORE_MOST_RECENT_SNAPSHOT,
               children: (0, n.jsx)(d.Button, {
-                onClick: h.KP,
+                onClick: g.KP,
                 children: 'Restore most recent snapshot'
               })
             }),
@@ -640,7 +640,7 @@ children: [
 }
 async function J(e) {
   e(!0);
-  let t = await (0, h.Tn)();
+  let t = await (0, g.Tn)();
   0 === t.length ? await (0, O.oL)() : _.Z.show({
 title: V.Z.Messages.CONFIRM,
 body: V.Z.Messages.NOTIF_MIGRATION_SETTINGS_CONFIRM_BODY.format({
@@ -661,14 +661,14 @@ focusMode: t
 }
 
 function ee() {
-  let e = (0, c.cj)([D.Z], () => ({
-disableUnreadBadge: D.Z.getDisableUnreadBadge(),
-taskbarFlash: D.Z.taskbarFlash,
-disabledSounds: D.Z.getDisabledSounds(),
-disableAllSounds: D.Z.getDisableAllSounds(),
-desktopType: D.Z.getDesktopType(),
-ttsType: D.Z.getTTSType(),
-notifyMessagesInSelectedChannel: D.Z.getNotifyMessagesInSelectedChannel()
+  let e = (0, c.cj)([f.Z], () => ({
+disableUnreadBadge: f.Z.getDisableUnreadBadge(),
+taskbarFlash: f.Z.taskbarFlash,
+disabledSounds: f.Z.getDisabledSounds(),
+disableAllSounds: f.Z.getDisableAllSounds(),
+desktopType: f.Z.getDesktopType(),
+ttsType: f.Z.getTTSType(),
+notifyMessagesInSelectedChannel: f.Z.getNotifyMessagesInSelectedChannel()
   }));
   return (0, n.jsx)($, {
 ...e,

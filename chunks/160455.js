@@ -218,7 +218,7 @@ CSS_VARIABLE: {
 'slotted',
 'spelling-error'
   ],
-  o = [
+  s = [
 'align-content',
 'align-items',
 'align-self',
@@ -578,7 +578,7 @@ CSS_VARIABLE: {
 'writing-mode',
 'z-index'
   ].reverse(),
-  s = i.concat(a);
+  o = i.concat(a);
 e.exports = function(e) {
   let l = t(e),
 u = '[\\w-]+',
@@ -648,7 +648,7 @@ I = {
     l.CSS_VARIABLE,
     {
       className: 'attribute',
-      begin: '\\b(' + o.join('|') + ')\\b',
+      begin: '\\b(' + s.join('|') + ')\\b',
       end: /(?=:)/,
       starts: {
         endsWithParent: !0,
@@ -710,7 +710,7 @@ T = {
   ]
 },
 g = {
-  begin: u + ':(:)?' + `(${ s.join('|') })`,
+  begin: u + ':(:)?' + `(${ o.join('|') })`,
   returnBegin: !0,
   contains: [T]
 };

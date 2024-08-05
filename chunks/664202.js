@@ -6,8 +6,8 @@ return p;
 var r = n(470079),
   i = n(512722),
   a = n.n(i),
-  o = n(399606),
-  s = n(704215),
+  s = n(399606),
+  o = n(704215),
   l = n(232567),
   u = n(634894),
   c = n(211242),
@@ -33,7 +33,7 @@ autoTrackExposure: !1
 {
   upsellSource: I
 } = (0, h.k)(),
-T = (0, o.e7)([E.default], () => E.default.getCurrentUser());
+T = (0, s.e7)([E.default], () => E.default.getCurrentUser());
   a()(null != T, 'currentUser should not be null');
   let g = (0, c.Q)(),
 S = (0, f.ZP)(T.id, i),
@@ -49,7 +49,7 @@ v = N && (null == T ? void 0 : T.avatarDecoration) == null && (null == t ? void 
 O = N && null != S && null == S.profileEffectId && (null == A ? void 0 : A.profileEffectId) != null,
 [R, C] = (0, _.U)((v, []), void 0, !0);
   return {
-shouldShow: R === s.z.SHOP_FOR_ALL_USER_POPOUT_UPSELL,
+shouldShow: R === o.z.SHOP_FOR_ALL_USER_POPOUT_UPSELL,
 canShowAvatarDecorationUpsell: v,
 canShowProfileEffectUpsell: O,
 onDismiss: C

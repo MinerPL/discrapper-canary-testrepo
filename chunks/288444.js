@@ -2,8 +2,8 @@ n(47120);
 var r = n(846519),
   i = n(904245),
   a = n(287734),
-  o = n(147913),
-  s = n(317381),
+  s = n(147913),
+  o = n(317381),
   l = n(592125),
   u = n(885110),
   c = n(979651),
@@ -25,7 +25,7 @@ function h() {
   if (null == e)
 return !1;
   let t = l.Z.getChannel(e);
-  return !(null == t || !t.isPrivate() || t.recipients.length > 1 || d.ZP.countVoiceStatesForChannel(e) > 1) && null == s.ZP.getSelfEmbeddedActivityForChannel(e) && null == u.Z.getBroadcast() && !0;
+  return !(null == t || !t.isPrivate() || t.recipients.length > 1 || d.ZP.countVoiceStatesForChannel(e) > 1) && null == o.ZP.getSelfEmbeddedActivityForChannel(e) && null == u.Z.getBroadcast() && !0;
 }
 
 function p() {
@@ -37,7 +37,7 @@ i.Z.sendBotMessage(e, _.Z.Messages.BOT_CALL_IDLE_DISCONNECT_2.format({
   number: 3
 })), a.default.selectVoiceChannel(null);
 }
-class m extends o.Z {
+class m extends s.Z {
   constructor(...e) {
 super(...e), E(this, 'idleTimeout', new r.V7()), E(this, 'handleConnectionClosed', () => {
   this.idleTimeout.stop();

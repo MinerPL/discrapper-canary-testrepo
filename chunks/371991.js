@@ -1,76 +1,84 @@
-e.d(t, {
+n.d(t, {
   tS: function() {
-return s;
+return h;
   },
   x3: function() {
-return d;
+return p;
   }
-}), e(47120);
-var r = e(735250),
-  u = e(470079),
-  i = e(442837),
-  o = e(846519),
-  E = e(481060),
-  l = e(607070),
-  a = e(706454),
-  T = e(506071),
-  _ = e(561308),
-  c = e(377329);
+}), n(47120);
+var r = n(735250),
+  i = n(470079),
+  a = n(120356),
+  s = n.n(a),
+  o = n(442837),
+  l = n(846519),
+  u = n(481060),
+  c = n(607070),
+  d = n(706454),
+  _ = n(506071),
+  E = n(561308),
+  f = n(377329);
 
-function s(n, t) {
-  let [e, r] = u.useState(Date.now()), E = (0, T.n)(), a = (0, i.e7)([l.Z], () => l.Z.useReducedMotion), c = u.useMemo(() => {
+function h(e, t) {
+  let [n, r] = i.useState(Date.now()), a = (0, _.n)(), s = (0, o.e7)([c.Z], () => c.Z.useReducedMotion), u = i.useMemo(() => {
 let {
   hours: t
-} = (0, _.JY)(n, e);
+} = (0, E.JY)(e, n);
 return t > 0 ? 300000 : 1000;
   }, [
-n,
-e
+e,
+n
   ]);
-  return u.useEffect(() => {
-let n = new o.Xp();
-return n.start(c, () => {
+  return i.useEffect(() => {
+let e = new l.Xp();
+return e.start(u, () => {
   r(Date.now());
-}), (!E || a && !t) && n.stop(), () => n.stop();
+}), (!a || s && !t) && e.stop(), () => e.stop();
   }, [
-c,
-E,
+u,
 a,
+s,
 t
-  ]), e;
+  ]), n;
 }
-let d = n => {
+let p = e => {
   let {
 entry: t,
-inline: e = !1,
-textColor: i,
-hovered: o = !1
-  } = n, l = s(t, o), a = u.useMemo(() => (0, _.T_)(t, l), [
+inline: n = !1,
+textColor: a,
+hovered: o = !1,
+bold: l = !1
+  } = e, c = h(t, o), d = i.useMemo(() => (0, E.T_)(t, c), [
 t,
-l
+c
   ]);
-  return (0, r.jsx)(E.Text, {
-className: e ? c.inlineTimestamp : void 0,
-variant: 'text-xs/normal',
+  return (0, r.jsx)(u.Text, {
+className: s()(f.timestamp, {
+  [f.inlineTimestamp]: n,
+  [f.bold]: l
+}),
+variant: 'text-xs/medium',
 tabularNumbers: !0,
-color: i,
-children: a
+color: a,
+children: d
   });
 };
-t.ZP = n => {
+t.ZP = e => {
   let {
 entry: t,
-textColor: e,
-hovered: u = !1
-  } = n, o = (0, _.kr)(t), l = (0, i.e7)([a.default], () => a.default.locale);
-  return o ? (0, r.jsx)(d, {
+textColor: n,
+hovered: i = !1,
+bold: a = !1
+  } = e, s = (0, E.kr)(t), l = (0, o.e7)([d.default], () => d.default.locale);
+  return s ? (0, r.jsx)(p, {
 entry: t,
-textColor: e,
-hovered: u
-  }) : (0, r.jsx)(E.Text, {
+textColor: n,
+hovered: i,
+bold: a
+  }) : (0, r.jsx)(u.Text, {
 variant: 'text-xs/normal',
-color: e,
+color: n,
 lineClamp: 1,
-children: (0, _.GL)(t, l)
+children: (0, E.GL)(t, l)
   });
 };

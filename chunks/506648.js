@@ -1,6 +1,6 @@
 var i = n(735250),
-  s = n(470079),
-  a = n(481060),
+  a = n(470079),
+  s = n(481060),
   r = n(378720),
   l = n(863969),
   o = n(38761),
@@ -13,43 +13,43 @@ let E = [{
   feature: u.Qa3.SINGLE_PLAYER,
   getText: () => _.Z.Messages.APPLICATION_STORE_SINGLE_PLAYER,
   getTooltip: () => _.Z.Messages.APPLICATION_STORE_SINGLE_PLAYER_TOOLTIP,
-  IconComponent: a.UserIcon
+  IconComponent: s.UserIcon
 },
 {
   feature: u.Qa3.LOCAL_MULTIPLAYER,
   getText: () => _.Z.Messages.APPLICATION_STORE_LOCAL_MULTIPLAYER,
   getTooltip: () => _.Z.Messages.APPLICATION_STORE_LOCAL_MULTIPLAYER_TOOLTIP,
-  IconComponent: a.GroupIcon
+  IconComponent: s.GroupIcon
 },
 {
   feature: u.Qa3.ONLINE_MULTIPLAYER,
   getText: () => _.Z.Messages.APPLICATION_STORE_ONLINE_MULTIPLAYER,
   getTooltip: () => _.Z.Messages.APPLICATION_STORE_ONLINE_MULTIPLAYER_TOOLTIP,
-  IconComponent: a.GroupIcon
+  IconComponent: s.GroupIcon
 },
 {
   feature: u.Qa3.PVP,
   getText: () => _.Z.Messages.APPLICATION_STORE_PVP,
   getTooltip: () => _.Z.Messages.APPLICATION_STORE_PVP_TOOLTIP,
-  IconComponent: a.ModerationIcon
+  IconComponent: s.ModerationIcon
 },
 {
   feature: u.Qa3.LOCAL_COOP,
   getText: () => _.Z.Messages.APPLICATION_STORE_LOCAL_COOP,
   getTooltip: () => _.Z.Messages.APPLICATION_STORE_LOCAL_COOP_TOOLTIP,
-  IconComponent: a.GroupIcon
+  IconComponent: s.GroupIcon
 },
 {
   feature: u.Qa3.ONLINE_COOP,
   getText: () => _.Z.Messages.APPLICATION_STORE_ONLINE_COOP,
   getTooltip: () => _.Z.Messages.APPLICATION_STORE_ONLINE_COOP_TOOLTIP,
-  IconComponent: a.GroupIcon
+  IconComponent: s.GroupIcon
 },
 {
   feature: u.Qa3.CROSS_PLATFORM,
   getText: () => _.Z.Messages.APPLICATION_STORE_CROSS_PLATFORM,
   getTooltip: () => _.Z.Messages.APPLICATION_STORE_CROSS_PLATFORM_TOOLTIP,
-  IconComponent: a.RefreshIcon
+  IconComponent: s.RefreshIcon
 },
 {
   feature: u.Qa3.RICH_PRESENCE,
@@ -67,13 +67,13 @@ let E = [{
   feature: u.Qa3.SPECTATOR_MODE,
   getText: () => _.Z.Messages.APPLICATION_STORE_SPECTATOR_MODE,
   getTooltip: () => _.Z.Messages.APPLICATION_STORE_SPECTATOR_MODE_TOOLTIP,
-  IconComponent: a.VideoIcon
+  IconComponent: s.VideoIcon
 },
 {
   feature: u.Qa3.CONTROLLER_SUPPORT,
   getText: () => _.Z.Messages.APPLICATION_STORE_CONTROLLER_SUPPORT,
   getTooltip: () => _.Z.Messages.APPLICATION_STORE_CONTROLLER_SUPPORT_TOOLTIP,
-  IconComponent: a.DpadIcon
+  IconComponent: s.DpadIcon
 },
 {
   feature: u.Qa3.CLOUD_SAVES,
@@ -92,13 +92,13 @@ let E = [{
 let {
   IconComponent: t,
   text: n,
-  tooltip: s
+  tooltip: a
 } = e;
 return (0, i.jsxs)('div', {
   className: h.row,
   children: [
-    (0, i.jsx)(a.Tooltip, {
-      text: s,
+    (0, i.jsx)(s.Tooltip, {
+      text: a,
       children: e => (0, i.jsx)(t, {
         className: h.featureIcon,
         ...e
@@ -108,7 +108,7 @@ return (0, i.jsxs)('div', {
       className: h.featureText,
       children: n
     }),
-    (0, i.jsx)(a.CheckmarkLargeIcon, {
+    (0, i.jsx)(s.CheckmarkLargeIcon, {
       size: 'md',
       color: 'currentColor',
       className: h.checkmarkIcon
@@ -116,7 +116,7 @@ return (0, i.jsxs)('div', {
   ]
 });
   };
-class m extends s.PureComponent {
+class m extends a.PureComponent {
   render() {
 let {
   sku: e
@@ -129,13 +129,13 @@ let {
   let {
     feature: t,
     IconComponent: n,
-    getText: s,
-    getTooltip: a
+    getText: a,
+    getTooltip: s
   } = e;
   return (0, i.jsx)(I, {
     IconComponent: n,
-    text: s(),
-    tooltip: a()
+    text: a(),
+    tooltip: s()
   }, t);
 });
 return 0 === t.length ? null : (0, i.jsxs)('div', {

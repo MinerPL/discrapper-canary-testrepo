@@ -3,11 +3,11 @@ a.d(n, {
 return d;
   }
 });
-var i = a(735250);
+var t = a(735250);
 a(470079);
-var t = a(481060),
-  l = a(447003),
-  s = a(687352),
+var s = a(481060),
+  i = a(447003),
+  l = a(687352),
   r = a(409216),
   o = a(823379),
   c = a(619915),
@@ -18,32 +18,32 @@ function d(e) {
 channel: n,
 users: a
   } = e, d = (0, c.ZP)(n);
-  return (0, i.jsxs)('div', {
+  return (0, t.jsxs)('div', {
 className: u.channelInfo,
 children: [
-  (0, l.Z)(n) ? (0, i.jsx)(t.VoiceLockIcon, {
+  (0, i.Z)(n) ? (0, t.jsx)(s.VoiceLockIcon, {
     size: 'md',
     color: 'currentColor',
     className: u.speakerIcon
-  }) : (0, i.jsx)(t.VoiceNormalIcon, {
+  }) : (0, t.jsx)(s.VoiceNormalIcon, {
     size: 'md',
     color: 'currentColor',
     className: u.speakerIcon
   }),
-  (0, i.jsx)('div', {
+  (0, t.jsx)('div', {
     className: u.channelName,
     children: n.name
   }),
-  d.length > 0 ? (0, i.jsxs)(i.Fragment, {
+  d.length > 0 ? (0, t.jsxs)(t.Fragment, {
     children: [
-      (0, i.jsx)('div', {
+      (0, t.jsx)('div', {
         className: u.divider
       }),
-      (0, i.jsx)(s.Z, {
+      (0, t.jsx)(l.Z, {
         embeddedApps: d,
         className: u.channelItemActivities
       }),
-      (0, i.jsx)('div', {
+      (0, t.jsx)('div', {
         className: u.channelActivitiesText,
         children: d.map(e => {
           var n;
@@ -52,9 +52,9 @@ children: [
       })
     ]
   }) : null,
-  (0, i.jsx)('div', {
+  (0, t.jsx)('div', {
     className: u.voiceUserContainer,
-    children: (0, i.jsx)(r.Z, {
+    children: (0, t.jsx)(r.Z, {
       users: a,
       max: 4
     })

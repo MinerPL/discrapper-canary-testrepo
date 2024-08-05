@@ -7,8 +7,8 @@ var r = n(392711),
   i = n.n(r);
 n(724522);
 var a = n(442837),
-  o = n(570140),
-  s = n(749210),
+  s = n(570140),
+  o = n(749210),
   l = n(821849),
   u = n(232567),
   c = n(864106),
@@ -95,7 +95,7 @@ function B(e) {
 }
 
 function F(e) {
-  o.Z.dispatch(e).catch(t => L.Wb.resetSocketOnDispatchError({
+  s.Z.dispatch(e).catch(t => L.Wb.resetSocketOnDispatchError({
 error: t,
 action: e.type
   }));
@@ -105,8 +105,8 @@ function V(e, t, n) {
   var r;
   let {
 roles: a,
-nick: o,
-avatar: s,
+nick: s,
+avatar: o,
 avatar_decoration_data: l,
 flags: u,
 premium_since: d,
@@ -115,14 +115,14 @@ joined_at: E,
 communication_disabled_until: f,
 unusual_dm_activity_until: h
   } = n, p = S.ZP.getMember(e, t.id);
-  if (!(null != p && p.nick === o && p.avatar === s && i().isEqual(p.roles, a) && (0, c.sr)(p.avatarDecoration, l)) || p.premiumSince !== d || p.isPending !== _ || p.joinedAt !== E || p.communicationDisabledUntil !== f || p.flags !== u || (null !== (r = p.unusualDMActivityUntil) && void 0 !== r ? r : null) !== (null != h ? h : null))
+  if (!(null != p && p.nick === s && p.avatar === o && i().isEqual(p.roles, a) && (0, c.sr)(p.avatarDecoration, l)) || p.premiumSince !== d || p.isPending !== _ || p.joinedAt !== E || p.communicationDisabledUntil !== f || p.flags !== u || (null !== (r = p.unusualDMActivityUntil) && void 0 !== r ? r : null) !== (null != h ? h : null))
 F({
   type: 'GUILD_MEMBER_ADD',
   guildId: e,
   user: t,
   roles: a,
-  nick: o,
-  avatar: s,
+  nick: s,
+  avatar: o,
   avatarDecoration: l,
   premiumSince: d,
   isPending: _,
@@ -169,7 +169,7 @@ user: n,
 status: r,
 activities: i,
 clientStatus: a,
-broadcast: o
+broadcast: s
   } = e;
   w.add({
 guildId: t,
@@ -177,7 +177,7 @@ user: n,
 status: r,
 clientStatus: a,
 activities: i,
-broadcast: o
+broadcast: s
   });
 }
 k(['INITIAL_GUILD'], e => 'full' === e.data_mode ? null : g.o.loadGuildIds([e.id]), e => {
@@ -226,15 +226,15 @@ a.ZP.Emitter.batched(() => {
     e.presences = r(e.presences || []);
   });
   let a = e.presences ? r(e.presences) : [],
-    o = (null !== (t = e.lazy_private_channels) && void 0 !== t ? t : []).map(e => (0, m.q_)(e)),
-    s = null !== (n = e.game_invites) && void 0 !== n ? n : [];
+    s = (null !== (t = e.lazy_private_channels) && void 0 !== t ? t : []).map(e => (0, m.q_)(e)),
+    o = null !== (n = e.game_invites) && void 0 !== n ? n : [];
   h.Z.dispatchReadySupplemental.measure(() => {
     F({
       type: 'CONNECTION_OPEN_SUPPLEMENTAL',
       guilds: i,
       presences: a,
-      lazyPrivateChannels: o,
-      gameInvites: s
+      lazyPrivateChannels: s,
+      gameInvites: o
     });
   });
   let l = [];
@@ -295,7 +295,7 @@ a.ZP.Emitter.batched(() => {
   i.forEach(e => {
     e.presences = [];
   });
-  let o = null == e.user_settings_proto ? void 0 : (0, p.ac)(e.user_settings_proto);
+  let s = null == e.user_settings_proto ? void 0 : (0, p.ac)(e.user_settings_proto);
   h.Z.dispatchReady.measure(() => {
     var n;
     F({
@@ -324,7 +324,7 @@ a.ZP.Emitter.batched(() => {
       pendingPayments: e.pending_payments,
       countryCode: null !== (n = e.country_code) && void 0 !== n ? n : void 0,
       guildJoinRequests: e.guild_join_requests || [],
-      userSettingsProto: o,
+      userSettingsProto: s,
       apiCodeVersion: e.api_code_version,
       auth: e.auth,
       notificationSettings: {
@@ -538,7 +538,7 @@ F({
 });
   else {
 let t = y.J2(e);
-s.Z.createGuild(t), F({
+o.Z.createGuild(t), F({
   type: 'VOICE_STATE_UPDATES',
   voiceStates: t.voice_states.map(e => {
     var n;
@@ -592,7 +592,7 @@ U.add({
     status: r,
     client_status: i,
     activities: a,
-    broadcast: o
+    broadcast: s
   } = t;
   return Y({
     guildId: e.guild_id,
@@ -600,7 +600,7 @@ U.add({
     status: r,
     activities: a,
     clientStatus: i,
-    broadcast: o
+    broadcast: s
   });
 }), D.Z.flush('GUILD_MEMBERS_CHUNK');
   });
@@ -617,7 +617,7 @@ F({
     status: r,
     client_status: i,
     activities: a,
-    broadcast: o
+    broadcast: s
   } = t;
   return Y({
     guildId: e.guild_id,
@@ -625,7 +625,7 @@ F({
     status: r,
     activities: a,
     clientStatus: i,
-    broadcast: o
+    broadcast: s
   });
 }), D.Z.flush();
   });

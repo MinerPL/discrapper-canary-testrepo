@@ -1,32 +1,33 @@
 n.d(t, {
   Iu: function() {
-return p;
+return m;
   },
   PG: function() {
-return c;
-  },
-  RO: function() {
-return E;
-  },
-  _Q: function() {
 return d;
   },
-  hr: function() {
+  RO: function() {
 return f;
   },
-  j9: function() {
+  _Q: function() {
 return _;
   },
-  ql: function() {
+  hr: function() {
 return h;
+  },
+  j9: function() {
+return E;
+  },
+  ql: function() {
+return p;
   }
 });
 var r = n(97613),
   i = n.n(r),
   a = n(652874),
-  o = n(868888),
-  s = n(957825);
-let l = Object.freeze({
+  s = n(868888),
+  o = n(731965),
+  l = n(957825);
+let u = Object.freeze({
 activeView: null,
 lastActiveView: null,
 activeViewType: null,
@@ -37,50 +38,50 @@ pickerId: function() {
   return i()(e);
 }()
   }),
-  u = (0, a.Z)((0, o.tJ)((e, t) => l, {
+  c = (0, a.Z)((0, s.tJ)((e, t) => u, {
 name: 'expression-picker-last-active-view',
 partialize: e => ({
   lastActiveView: e.lastActiveView
 })
   })),
-  c = (e, t) => {
-u.setState({
+  d = (e, t) => {
+(0, o.j)(() => c.setState({
   activeView: e,
   activeViewType: t,
-  lastActiveView: u.getState().activeView
-});
+  lastActiveView: c.getState().activeView
+}));
   },
-  d = e => {
-let t = u.getState();
+  _ = e => {
+let t = c.getState();
 if ((void 0 === e || e === t.activeViewType) && null !== t.activeView)
-  u.setState({
+  (0, o.j)(() => c.setState({
     activeView: null,
     activeViewType: null,
     lastActiveView: t.activeView
-  });
+  }));
   },
-  _ = e => {
-let t = u.getState();
+  E = e => {
+let t = c.getState();
 if (null == t.activeView) {
   var n;
-  c(null !== (n = t.lastActiveView) && void 0 !== n ? n : s.X1.EMOJI, e);
+  d(null !== (n = t.lastActiveView) && void 0 !== n ? n : l.X1.EMOJI, e);
 } else
-  d();
+  _();
   },
-  E = (e, t) => {
-u.getState().activeView === e ? d() : c(e, t);
+  f = (e, t) => {
+c.getState().activeView === e ? _() : d(e, t);
   },
-  f = e => {
-u.setState({
+  h = e => {
+(0, o.j)(() => c.setState({
   activeView: e,
-  lastActiveView: u.getState().activeView
-});
+  lastActiveView: c.getState().activeView
+}));
   },
-  h = function(e) {
+  p = function(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-u.setState({
+(0, o.j)(() => c.setState({
   searchQuery: e,
   isSearchSuggestion: t
-});
+}));
   },
-  p = u;
+  m = c;

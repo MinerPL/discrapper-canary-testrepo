@@ -23,7 +23,7 @@ tint: 2
 0,
 0.2
   ],
-  f = [{
+  _ = [{
   base: 1,
   tint: 0
 },
@@ -38,7 +38,7 @@ function C(e) {
 width: n,
 height: t,
 primaryTintColor: C,
-secondaryTintColor: _,
+secondaryTintColor: f,
 ...h
   } = e, {
 primaryColorsTransformed: x,
@@ -49,9 +49,9 @@ primaryTintColor: C,
 primaryTintLuminances: d,
 primaryLuminanceWeights: u,
 secondaryBaseColors: c,
-secondaryTintColor: _,
+secondaryTintColor: f,
 secondaryTintLuminances: m,
-secondaryLuminanceWeights: f
+secondaryLuminanceWeights: _
   }), {
 styleContent: p,
 containerId: T

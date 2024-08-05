@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(946273),
-  o = n(441110),
-  s = n(689938),
+  s = n(441110),
+  o = n(689938),
   l = n(735282);
 
 function u(e) {
@@ -26,7 +26,7 @@ renderPopout: e => {
   let {
     closePopout: i
   } = e;
-  return (0, r.jsx)(o.Z, {
+  return (0, r.jsx)(s.Z, {
     guild: t,
     message: n,
     onClose: i
@@ -40,7 +40,7 @@ children: e => {
     onClick: t,
     tag: 'span',
     children: (0, r.jsx)(i.Tooltip, {
-      text: s.Z.Messages.NEW_MEMBER_BADGE_TOOLTIP_TEXT,
+      text: o.Z.Messages.NEW_MEMBER_BADGE_TOOLTIP_TEXT,
       children: e => (0, r.jsx)('div', {
         className: l.newMemberBadge,
         ...e,

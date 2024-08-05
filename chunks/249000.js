@@ -3,7 +3,7 @@ n.d(t, {
 return I;
   }
 }), n(411104), n(47120);
-var r, i, a, o, s, l = n(735250),
+var r, i, a, s, o, l = n(735250),
   u = n(470079),
   c = n(981631);
 
@@ -29,20 +29,20 @@ y: a
 function E(e, t, n, r, i) {
   let {
 top: a,
-bottom: o,
-left: s,
+bottom: s,
+left: o,
 right: l
   } = e;
-  if (null == a && null == o ? (a = 0, o = n - i) : null == a && null != o ? a = n - (o + i) : null != a && (o = n - (a + i)), null == s && null == l ? (s = 0, l = t - r) : null == s && null != l ? s = t - (l + r) : null == l && null != s && (l = t - (s + r)), null == a || null == o || null == s || null == l)
+  if (null == a && null == s ? (a = 0, s = n - i) : null == a && null != s ? a = n - (s + i) : null != a && (s = n - (a + i)), null == o && null == l ? (o = 0, l = t - r) : null == o && null != l ? o = t - (l + r) : null == l && null != o && (l = t - (o + r)), null == a || null == s || null == o || null == l)
 throw Error('Logically this can never happen based on our if/else statements');
   return {
 top: a,
-left: s,
-bottom: o,
+left: o,
+bottom: s,
 right: l
   };
 }
-(o = r || (r = {}))[o.DISABLED = 0] = 'DISABLED', o[o.DEFAULT = 1] = 'DEFAULT', o[o.OFFSET = 2] = 'OFFSET', (s = i || (i = {})).TOP = 'TOP', s.BOTTOM = 'BOTTOM', s.RIGHT = 'RIGHT', s.LEFT = 'LEFT';
+(s = r || (r = {}))[s.DISABLED = 0] = 'DISABLED', s[s.DEFAULT = 1] = 'DEFAULT', s[s.OFFSET = 2] = 'OFFSET', (o = i || (i = {})).TOP = 'TOP', o.BOTTOM = 'BOTTOM', o.RIGHT = 'RIGHT', o.LEFT = 'LEFT';
 
 function f(e) {
   return [
@@ -97,12 +97,12 @@ let {
   },
   props: {
     maxX: a,
-    maxY: o,
-    onRelocated: s,
+    maxY: s,
+    onRelocated: o,
     snapOrientation: l
   }
 } = this;
-(e.maxX !== a || e.maxY !== o || e.onRelocated !== s || e.snapOrientation !== l || t.verticalOrientation !== n || t.horizontalOrientation !== r || t.atTopEdge !== i) && this.checkBounds();
+(e.maxX !== a || e.maxY !== s || e.onRelocated !== o || e.snapOrientation !== l || t.verticalOrientation !== n || t.horizontalOrientation !== r || t.atTopEdge !== i) && this.checkBounds();
   }
   componentWillUnmount() {
 window.removeEventListener('mousemove', this.handleMouseMove), window.removeEventListener('mouseup', this.handleMouseUp);
@@ -136,8 +136,8 @@ let {
   horizontalOrientation: i,
   atTopEdge: a
 } = this.state, {
-  top: o,
-  left: s,
+  top: s,
+  left: o,
   right: c,
   bottom: d
 } = this.position;
@@ -148,8 +148,8 @@ return (0, l.jsx)('div', {
   style: {
     pointerEvents: n ? 'none' : 'auto',
     position: 'absolute',
-    top: o,
-    left: s,
+    top: s,
+    left: o,
     bottom: d,
     right: c
   },
@@ -173,18 +173,18 @@ super(e), d(this, 'draggableRef', u.createRef()), d(this, '_dragStart', {
     right: i
   } = this.position, {
     dragAnywhere: a,
-    selector: o,
-    maxX: s,
+    selector: s,
+    maxX: o,
     maxY: l
   } = this.props, {
     target: u
   } = e, {
     current: d
   } = this.draggableRef;
-  if (null != d && e.button === c.AeJ.PRIMARY && (a || null != u && null != o && '' !== o && null != u.closest(o))) {
+  if (null != d && e.button === c.AeJ.PRIMARY && (a || null != u && null != s && '' !== s && null != u.closest(s))) {
     let {
       x: a,
-      y: o
+      y: s
     } = function(e) {
       let {
         top: t,
@@ -199,11 +199,11 @@ super(e), d(this, 'draggableRef', u.createRef()), d(this, '_dragStart', {
       left: n,
       bottom: r,
       right: i
-    }, s, l, d.clientWidth, d.clientHeight));
+    }, o, l, d.clientWidth, d.clientHeight));
     this._dragStart = {
       x: e.clientX,
       y: e.clientY
-    }, this._offsetX = e.clientX - a, this._offsetY = e.clientY - o, window.addEventListener('mousemove', this.handleMouseMove), window.addEventListener('mouseup', this.handleMouseUp);
+    }, this._offsetX = e.clientX - a, this._offsetY = e.clientY - s, window.addEventListener('mousemove', this.handleMouseMove), window.addEventListener('mouseup', this.handleMouseUp);
   }
 }), d(this, 'handleMouseMove', e => {
   e.preventDefault();
@@ -215,8 +215,8 @@ super(e), d(this, 'draggableRef', u.createRef()), d(this, '_dragStart', {
   } = this.draggableRef, {
     maxX: i,
     maxY: a,
-    flipVertical: o,
-    flipHorizontal: s,
+    flipVertical: s,
+    flipHorizontal: o,
     onDragStart: l,
     onDrag: u,
     onFlip: c,
@@ -248,7 +248,7 @@ super(e), d(this, 'draggableRef', u.createRef()), d(this, '_dragStart', {
       top: O.top,
       left: O.left
     };
-  2 === s && g !== this.state.horizontalOrientation && (this._offsetX = A - this._offsetX, S = !0), 2 === o && T !== this.state.verticalOrientation && (this._offsetY = N - this._offsetY, S = !0), this.setDOMPositions(O), !I && (null == l || l(O, r)), null == u || u(O, r), S && (null == c || c([
+  2 === o && g !== this.state.horizontalOrientation && (this._offsetX = A - this._offsetX, S = !0), 2 === s && T !== this.state.verticalOrientation && (this._offsetY = N - this._offsetY, S = !0), this.setDOMPositions(O), !I && (null == l || l(O, r)), null == u || u(O, r), S && (null == c || c([
     T,
     g
   ])), this.setState({
@@ -281,8 +281,8 @@ super(e), d(this, 'draggableRef', u.createRef()), d(this, '_dragStart', {
     props: {
       maxX: i,
       maxY: a,
-      onRelocated: o,
-      snapOrientation: s
+      onRelocated: s,
+      snapOrientation: o
     }
   } = this, {
     verticalOrientation: l,
@@ -294,7 +294,7 @@ super(e), d(this, 'draggableRef', u.createRef()), d(this, '_dragStart', {
     clientHeight: c,
     clientWidth: d
   } = r, _ = E(t, i, a, d, c);
-  if (_ = p(_), s) {
+  if (_ = p(_), o) {
     let t = f(e = h(_));
     l = t[0], u = t[1];
   } else
@@ -306,7 +306,7 @@ super(e), d(this, 'draggableRef', u.createRef()), d(this, '_dragStart', {
     };
   if (t.left === e.left && t.right === e.right && t.top === e.top && t.bottom === e.bottom)
     return;
-  null == o || o(e, r), this.setDOMPositions(e);
+  null == s || s(e, r), this.setDOMPositions(e);
   let m = 0 === e.top;
   (l !== n.verticalOrientation || u !== n.horizontalOrientation || m !== n.atTopEdge) && this.setState({
     verticalOrientation: l,

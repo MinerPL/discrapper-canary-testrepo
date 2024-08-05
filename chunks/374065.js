@@ -13,8 +13,8 @@ return i;
   }
 });
 var r, i, a = n(442837),
-  o = n(592125),
-  s = n(430824),
+  s = n(592125),
+  o = n(430824),
   l = n(496675),
   u = n(979651),
   c = n(782769),
@@ -28,23 +28,23 @@ ChannelStore: n,
 GuildStore: r,
 PermissionStore: i,
 VoiceStateStore: a
-  } = e, o = n.getChannel(t);
-  if (null == o)
+  } = e, s = n.getChannel(t);
+  if (null == s)
 return 3;
-  if (!(0, c.a)(o))
+  if (!(0, c.a)(s))
 return 6;
-  if (!o.isPrivate()) {
-let e = o.getGuildId();
+  if (!s.isPrivate()) {
+let e = s.getGuildId();
 if (null == e)
   return 4;
 let n = r.getGuild(e);
-if ((null == n ? void 0 : n.afkChannelId) === o.id)
+if ((null == n ? void 0 : n.afkChannelId) === s.id)
   return 5;
-let s = i.can(d.Plq.CONNECT, o);
-if (!i.can(d.Plq.USE_EMBEDDED_ACTIVITIES, o))
+let o = i.can(d.Plq.CONNECT, s);
+if (!i.can(d.Plq.USE_EMBEDDED_ACTIVITIES, s))
   return 1;
-let l = a.getCurrentClientVoiceChannelId(o.getGuildId()) === t;
-if (o.isVocal() && !l && !s)
+let l = a.getCurrentClientVoiceChannelId(s.getGuildId()) === t;
+if (s.isVocal() && !l && !o)
   return 2;
   }
   return 0;
@@ -52,14 +52,14 @@ if (o.isVocal() && !l && !s)
 
 function f(e) {
   return (0, a.e7)([
-o.Z,
 s.Z,
+o.Z,
 l.Z,
 u.Z
   ], () => E({
 channelId: e,
-ChannelStore: o.Z,
-GuildStore: s.Z,
+ChannelStore: s.Z,
+GuildStore: o.Z,
 PermissionStore: l.Z,
 VoiceStateStore: u.Z
   }), [e]);

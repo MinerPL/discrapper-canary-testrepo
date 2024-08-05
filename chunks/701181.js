@@ -5,8 +5,8 @@ return c;
 });
 var i = n(735250);
 n(470079);
-var a = n(481060),
-  s = n(702346),
+var s = n(481060),
+  a = n(702346),
   r = n(739566),
   l = n(689938),
   o = n(118496);
@@ -16,13 +16,13 @@ function c(e) {
 message: t,
 compact: n,
 usernameHook: c
-  } = e, d = (0, r.ZP)(t), u = c(d), _ = l.Z.Messages.SYSTEM_MESSAGE_STAGE_SPEAKER_HOOK.format({
-username: d.nick,
-usernameHook: u
+  } = e, u = (0, r.ZP)(t), d = c(u), _ = l.Z.Messages.SYSTEM_MESSAGE_STAGE_SPEAKER_HOOK.format({
+username: u.nick,
+usernameHook: d
   });
-  return (0, i.jsx)(s.Z, {
+  return (0, i.jsx)(a.Z, {
 className: o.stageSystemMessage,
-iconNode: (0, i.jsx)(a.MicrophoneArrowRightIcon, {
+iconNode: (0, i.jsx)(s.MicrophoneArrowRightIcon, {
   size: 'md',
   color: 'currentColor'
 }),

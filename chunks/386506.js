@@ -15,17 +15,17 @@ return c;
 });
 var i = n(544891),
   a = n(314897),
-  o = n(12647),
-  s = n(865427);
+  s = n(12647),
+  o = n(865427);
 let l = '/__development/build_overrides';
 async function u(e) {
   try {
 var t;
 let n = await i.tn.put({
-  url: (0, s.pU)(l),
+  url: (0, o.pU)(l),
   body: {
     overrides: e,
-    version: s.Ji
+    version: o.Ji
   },
   headers: {
     Authorization: null !== (t = a.default.getToken()) && void 0 !== t ? t : ''
@@ -40,11 +40,11 @@ return e;
 async function c(e) {
   try {
 let t = await i.tn.put({
-  url: (0, s.pU)('/__development/link'),
+  url: (0, o.pU)('/__development/link'),
   body: {
     payload: e,
     token: a.default.getToken(),
-    version: s.Ji
+    version: o.Ji
   },
   oldFormErrors: !0
 });
@@ -55,7 +55,7 @@ return e;
 }
 async function d() {
   let e = await i.tn.del({
-url: (0, s.pU)(l),
+url: (0, o.pU)(l),
 oldFormErrors: !0
   });
   return await r(e), e;
@@ -64,7 +64,7 @@ oldFormErrors: !0
 function _(e) {
   var t;
   return i.tn.post({
-url: (0, s.pU)('/__development/create_build_override_link'),
+url: (0, o.pU)('/__development/create_build_override_link'),
 body: e,
 headers: {
   Authorization: null !== (t = a.default.getToken()) && void 0 !== t ? t : ''
@@ -83,6 +83,6 @@ error: 'Error making API request ('.concat(e.status, ')')
 }
 r = async e => {
   try {
-await o.Z.flushCookies();
+await s.Z.flushCookies();
   } catch (e) {}
 };

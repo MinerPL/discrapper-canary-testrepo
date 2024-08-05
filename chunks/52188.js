@@ -1,65 +1,65 @@
-n.d(t, {
+t.d(s, {
   U: function() {
-return s;
+return n;
   },
   k: function() {
-return es;
+return en;
   }
-}), n(47120);
-var s, r, o = n(735250);
-n(470079);
-var i = n(120356),
-  c = n.n(i),
-  a = n(442837),
-  l = n(246946),
-  u = n(91802),
-  d = n(222727),
-  p = n(981631),
-  f = n(782082),
-  g = n(500052),
-  x = n(375832),
-  b = n(992171),
-  v = n(937064),
-  _ = n(434336),
-  h = n(128955),
-  S = n(803353),
-  T = n(479388),
-  C = n(179581),
-  E = n(13174),
-  A = n(580248),
-  I = n(966294),
-  L = n(302143),
-  m = n(146121),
-  B = n(705500),
-  M = n(402127),
-  U = n(153652),
-  j = n(485487),
-  P = n(200985),
-  N = n(270930),
-  O = n(46514),
-  R = n(750876),
-  w = n(993855),
-  D = n(701497),
-  G = n(937717),
-  Z = n(165194),
-  y = n(208802),
-  k = n(145905),
-  F = n(335302),
-  H = n(956172),
-  Y = n(695579),
-  V = n(541764),
-  W = n(191706),
-  X = n(67528),
-  z = n(332150),
-  K = n(581902),
-  J = n(167219),
-  Q = n(704381),
-  $ = n(591417),
-  q = n(929883),
-  ee = n(261137),
-  et = n(958700);
-(r = s || (s = {}))[r.PrivateMessages = 0] = 'PrivateMessages', r[r.SettingsMenu = 1] = 'SettingsMenu';
-let en = new Map([
+}), t(47120);
+var n, r, a = t(735250);
+t(470079);
+var o = t(120356),
+  i = t.n(o),
+  c = t(442837),
+  l = t(246946),
+  u = t(91802),
+  d = t(222727),
+  f = t(981631),
+  p = t(782082),
+  g = t(500052),
+  x = t(375832),
+  b = t(992171),
+  v = t(937064),
+  _ = t(434336),
+  h = t(128955),
+  S = t(803353),
+  T = t(479388),
+  C = t(179581),
+  E = t(13174),
+  A = t(580248),
+  I = t(966294),
+  L = t(302143),
+  m = t(146121),
+  B = t(705500),
+  M = t(402127),
+  U = t(153652),
+  j = t(485487),
+  P = t(200985),
+  N = t(270930),
+  O = t(46514),
+  R = t(750876),
+  w = t(993855),
+  D = t(701497),
+  G = t(937717),
+  Z = t(165194),
+  y = t(208802),
+  k = t(145905),
+  F = t(335302),
+  H = t(956172),
+  Y = t(695579),
+  V = t(541764),
+  W = t(191706),
+  X = t(67528),
+  z = t(332150),
+  K = t(581902),
+  J = t(167219),
+  Q = t(704381),
+  $ = t(591417),
+  q = t(929883),
+  ee = t(261137),
+  es = t(958700);
+(r = n || (n = {}))[r.PrivateMessages = 0] = 'PrivateMessages', r[r.SettingsMenu = 1] = 'SettingsMenu';
+let et = new Map([
   [
 'PE',
 W
@@ -86,7 +86,7 @@ R
   ],
   [
 'VN',
-et
+es
   ],
   [
 'TH',
@@ -230,17 +230,17 @@ M
   ]
 ]);
 
-function es(e) {
+function en(e) {
   let {
-entryPoint: t,
-className: n
-  } = e, r = (0, a.e7)([l.Z], () => l.Z.hidePersonalInformation), i = (0, u.n)(), g = null == i ? void 0 : i.countryCode;
-  if ((0, d.U)(p.jXE.SETTINGS_PREMIUM, g), null == g || !en.has(g) || r)
+entryPoint: s,
+className: t
+  } = e, r = (0, c.e7)([l.Z], () => l.Z.hidePersonalInformation), o = (0, u.n)(), g = null == o ? void 0 : o.countryCode;
+  if ((0, d.U)(f.jXE.SETTINGS_PREMIUM, g), null == g || !et.has(g) || r)
 return null;
-  let x = en.get(g),
-b = 'badgeIcon' + s[t];
-  return (0, o.jsx)('img', {
-className: c()(n, f[b]),
+  let x = et.get(g),
+b = 'badgeIcon' + n[s];
+  return (0, a.jsx)('img', {
+className: i()(t, p[b]),
 'aria-hidden': !0,
 alt: 'Wumpus holding a country-specific flag',
 src: x

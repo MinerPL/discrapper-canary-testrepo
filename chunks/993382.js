@@ -17,8 +17,8 @@ var t = a(735250),
   g = a(731455),
   h = a(981631),
   I = a(689938),
-  p = a(244868),
-  C = a(438825);
+  C = a(244868),
+  p = a(438825);
 s.default = e => {
   let {
 transitionState: s,
@@ -54,8 +54,8 @@ y = (0, t.jsx)(R.Z, {
 }),
 P = (0, t.jsx)('img', {
   alt: '',
-  src: C,
-  className: p.footerImage,
+  src: p,
+  className: C.footerImage,
   width: 240
 }),
 k = async () => {
@@ -138,6 +138,6 @@ onComplete: () => {
 },
 overviewFooter: P,
 submitting: D,
-sequencerClassName: p.container
+sequencerClassName: C.container
   });
 };

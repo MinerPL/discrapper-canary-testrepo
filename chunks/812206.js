@@ -1,5 +1,5 @@
 n(47120), n(653041);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(973616);
 let c = [],
@@ -25,7 +25,7 @@ of t)
 (null == e ? void 0 : e.application) != null && (h(u.Z.createFromServer(e.application)), n = !0);
   return n;
 }
-class m extends(r = s.ZP.Store) {
+class m extends(r = o.ZP.Store) {
   _getAllApplications() {
 return Object.values(d);
   }
@@ -59,12 +59,12 @@ return !1 === f[e];
 return Object.keys(f);
   }
 }
-o = 'ApplicationStore', (a = 'displayName') in(i = m) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'ApplicationStore', (a = 'displayName') in(i = m) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new m(l.Z, {
+}) : i[a] = s, t.Z = new m(l.Z, {
   LOGOUT: function() {
 d = {}, _ = {}, E = {}, f = {};
   },
@@ -206,5 +206,15 @@ t.forEach(e => function(e) {
     null != e.application && h(u.Z.createFromServer(e.application));
   });
 }(e));
+  },
+  APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS: function(e) {
+let {
+  recommendations: t
+} = e;
+t.forEach(e => {
+  e.items.forEach(e => {
+    h(u.Z.createFromServer(e.application));
+  });
+});
   }
 });

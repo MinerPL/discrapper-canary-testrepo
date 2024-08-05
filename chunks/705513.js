@@ -21,7 +21,7 @@ return T;
 return r;
   },
   QN: function() {
-return s;
+return o;
   },
   ZE: function() {
 return E;
@@ -51,7 +51,7 @@ return a;
 return c;
   },
   vq: function() {
-return o;
+return s;
   }
 });
 var r = {
@@ -102,7 +102,7 @@ a200: '#e040fb',
 a400: '#d500f9',
 a700: '#aa00ff'
   },
-  o = {
+  s = {
 50: '#ede7f6',
 100: '#d1c4e9',
 200: '#b39ddb',
@@ -118,7 +118,7 @@ a200: '#7c4dff',
 a400: '#651fff',
 a700: '#6200ea'
   },
-  s = {
+  o = {
 50: '#e8eaf6',
 100: '#c5cae9',
 200: '#9fa8da',

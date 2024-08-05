@@ -7,8 +7,8 @@ return I;
   }
 }), n(653041);
 var r, i, a = n(470079),
-  o = n(512722),
-  s = n.n(o),
+  s = n(512722),
+  o = n.n(s),
   l = n(683076),
   u = n(442837),
   c = n(224706),
@@ -39,7 +39,7 @@ location: t,
 applicationId: n = '',
 autoTrackExposure: r = !0,
 source: i,
-trackEntryPointImpression: o = !0
+trackEntryPointImpression: s = !0
   } = e, l = (0, E.x)(t, r);
   a.useEffect(() => {
 l && null != n && '' !== n && c.Z.getDetectableGamesSupplemental([n]);
@@ -49,7 +49,16 @@ l
   ]);
   let _ = (0, u.e7)([d.Z], () => d.Z.getGame(n)),
 f = a.useMemo(() => null != _ && m(_), [_]);
-  return l && o && !1 === d.Z.isFetching(n) && (s()(null != i, 'Cannot track a Game Profile Entry Point Impressions without a source.'), h(f, n, p(_), i)), {
+  return a.useEffect(() => {
+l && s && !1 === d.Z.isFetching(n) && (o()(null != i, 'Cannot track a Game Profile Entry Point Impressions without a source.'), h(f, n, p(_), i));
+  }, [
+f,
+n,
+l,
+_,
+i,
+s
+  ]), {
 shouldOpenGameProfile: l && f,
 applicationId: n
   };

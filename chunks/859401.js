@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return s;
+return o;
   }
 }), n(653041), n(47120);
 var r = n(392711),
@@ -14,11 +14,11 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let o = [];
-class s {
+let s = [];
+class o {
   static create() {
-let e = new s();
-return o.push(e), e.record;
+let e = new o();
+return s.push(e), e.record;
   }
   getTotalBytes() {
 return i().sum(Object.values(this.bytes));

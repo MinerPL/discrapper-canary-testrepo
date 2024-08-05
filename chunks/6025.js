@@ -1,8 +1,8 @@
 var r = n(570140),
   i = n(904245),
   a = n(593472),
-  o = n(526120),
-  s = n(348245),
+  s = n(526120),
+  o = n(348245),
   l = n(897473),
   u = n(176505);
 t.Z = {
@@ -11,7 +11,7 @@ let {
   channelId: t,
   messageId: n,
   baseChannelId: a,
-  hasSingleMessageRequest: o
+  hasSingleMessageRequest: s
 } = e;
 r.Z.dispatch({
   type: 'SIDEBAR_VIEW_CHANNEL',
@@ -20,13 +20,13 @@ r.Z.dispatch({
   channelId: t,
   details: {
     type: l.Ff.MESSAGE_REQUEST,
-    hasSingleMessageRequest: o
+    hasSingleMessageRequest: s
   }
 }), null != n ? i.Z.jumpToMessage({
   channelId: t,
   messageId: n,
   flash: !0
-}) : s.Z.fetchMessages({
+}) : o.Z.fetchMessages({
   channelId: t
 });
   },
@@ -34,7 +34,7 @@ r.Z.dispatch({
 let {
   guildId: t,
   channelId: n,
-  baseChannelId: o,
+  baseChannelId: s,
   flash: u = !0,
   details: c
 } = e;
@@ -42,7 +42,7 @@ r.Z.dispatch({
   type: 'SIDEBAR_VIEW_CHANNEL',
   sidebarType: l.tI.VIEW_CHANNEL,
   guildId: t,
-  baseChannelId: o,
+  baseChannelId: s,
   channelId: n,
   details: c
 });
@@ -52,7 +52,7 @@ null != d ? i.Z.jumpToMessage({
   messageId: d,
   flash: u,
   jumpType: a.SR.INSTANT
-}) : s.Z.fetchMessages({
+}) : o.Z.fetchMessages({
   guildId: t,
   channelId: n
 });
@@ -62,7 +62,7 @@ let {
   guildId: t,
   channelId: n
 } = e;
-null != t && ((0, o.C3)(t, n, !1), r.Z.dispatch({
+null != t && ((0, s.C3)(t, n, !1), r.Z.dispatch({
   type: 'SIDEBAR_VIEW_CHANNEL',
   sidebarType: l.tI.VIEW_CHANNEL,
   guildId: t,
@@ -74,7 +74,7 @@ null != t && ((0, o.C3)(t, n, !1), r.Z.dispatch({
 let {
   guildId: t,
   baseChannelId: n,
-  channelId: o,
+  channelId: s,
   flash: u = !0,
   details: c
 } = e;
@@ -82,16 +82,16 @@ r.Z.dispatch({
   type: 'SIDEBAR_VIEW_CHANNEL',
   sidebarType: l.tI.VIEW_THREAD,
   baseChannelId: n,
-  channelId: o,
+  channelId: s,
   details: c
 }), (null == c ? void 0 : c.initialMessageId) != null ? i.Z.jumpToMessage({
-  channelId: o,
+  channelId: s,
   messageId: c.initialMessageId,
   flash: u,
   jumpType: a.SR.INSTANT
-}) : s.Z.fetchMessages({
+}) : o.Z.fetchMessages({
   guildId: t,
-  channelId: o
+  channelId: s
 });
   },
   closeChannelSidebar(e) {

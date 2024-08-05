@@ -3,50 +3,48 @@ n(470079);
 var a = n(120356),
   r = n.n(a),
   i = n(338545),
-  l = n(399606),
-  o = n(607070),
-  c = n(104494),
-  d = n(639119),
-  _ = n(318747),
-  u = n(409100),
-  E = n(474936),
-  T = n(981631),
-  I = n(145227);
+  l = n(481060),
+  o = n(104494),
+  c = n(639119),
+  d = n(318747),
+  _ = n(409100),
+  u = n(474936),
+  E = n(981631),
+  T = n(145227);
 t.Z = function(e) {
   var t, n;
   let {
 isVisible: a,
-isFullscreen: R,
-subscriptionTier: C
-  } = e, p = null === (t = (0, d.N)()) || void 0 === t ? void 0 : t.subscription_trial, g = (0, c.Ng)(), A = (0, c.Wp)(g, E.Si.TIER_2) ? E.Si.TIER_2 : void 0, m = (0, l.e7)([o.Z], () => o.Z.useReducedMotion), N = (0, i.useSpring)({
+isFullscreen: I,
+subscriptionTier: R
+  } = e, C = null === (t = (0, c.N)()) || void 0 === t ? void 0 : t.subscription_trial, g = (0, o.Ng)(), p = (0, o.Wp)(g, u.Si.TIER_2) ? u.Si.TIER_2 : void 0, A = (0, l.useSpring)({
 transform: a ? 'translateY(-100%)' : 'translateY(0%)',
 opacity: a ? 1 : 0,
 config: {
   tension: 120,
   friction: 12
-},
-immediate: m
-  }), f = {
-section: T.jXE.MARKETING_FLOATING_CTA
+}
+  }), m = {
+section: E.jXE.MARKETING_FLOATING_CTA
   };
   return (0, s.jsx)(i.animated.div, {
-className: r()(I.wrapper, {
-  [I.fullscreenWrapper]: R,
-  [I.invisible]: !a
+className: r()(T.wrapper, {
+  [T.fullscreenWrapper]: I,
+  [T.invisible]: !a
 }),
-style: N,
+style: A,
 children: (0, s.jsxs)('div', {
-  className: I.innerWrapper,
+  className: T.innerWrapper,
   children: [
-    (0, s.jsx)(u.Z, {
-      className: I.button,
-      subscriptionTier: null !== (n = null != C ? C : null == p ? void 0 : p.sku_id) && void 0 !== n ? n : A,
-      premiumModalAnalyticsLocation: f,
+    (0, s.jsx)(_.Z, {
+      className: T.button,
+      subscriptionTier: null !== (n = null != R ? R : null == C ? void 0 : C.sku_id) && void 0 !== n ? n : p,
+      premiumModalAnalyticsLocation: m,
       isPersistentCTA: !0
     }),
-    (0, s.jsx)(_.Z, {
-      className: I.button,
-      premiumModalAnalyticsLocation: f
+    (0, s.jsx)(d.Z, {
+      className: T.button,
+      premiumModalAnalyticsLocation: m
     })
   ]
 })

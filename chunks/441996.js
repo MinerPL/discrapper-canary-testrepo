@@ -1,6 +1,6 @@
 n(47120);
-var i, s = n(735250),
-  a = n(470079),
+var i, a = n(735250),
+  s = n(470079),
   r = n(392711),
   l = n.n(r),
   o = n(302221),
@@ -14,14 +14,14 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class u extends(i = a.PureComponent) {
+class u extends(i = s.PureComponent) {
   onDataUpdate(e, t) {
 let {
   maxValue: n,
   data: i,
-  animate: s
-} = this.props, a = null == e || e.data !== t.data && !l().isEqual(e.data, t.data);
-if (a && (this.dataChangedAt = performance.now(), this.maxValue = null != n ? n : Math.max(...i)), a || null == e || !e.animate && s || e.color !== this.props.color) {
+  animate: a
+} = this.props, s = null == e || e.data !== t.data && !l().isEqual(e.data, t.data);
+if (s && (this.dataChangedAt = performance.now(), this.maxValue = null != n ? n : Math.max(...i)), s || null == e || !e.animate && a || e.color !== this.props.color) {
   let e = o.oo(this.props.color);
   this.fillColor = 'rgba('.concat(e.r, ', ').concat(e.g, ', ').concat(e.b, ', 0.5)'), window.cancelAnimationFrame(this.animationFrameRequestId), this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation);
 }
@@ -41,9 +41,9 @@ let {
   pixelWidth: t,
   pixelHeight: n
 } = this.props;
-return (0, s.jsx)('div', {
+return (0, a.jsx)('div', {
   className: e,
-  children: (0, s.jsx)('canvas', {
+  children: (0, a.jsx)('canvas', {
     ref: this.canvas,
     className: c.canvas,
     width: t,
@@ -52,23 +52,23 @@ return (0, s.jsx)('div', {
 });
   }
   constructor(...e) {
-super(...e), d(this, 'dataChangedAt', void 0), d(this, 'fillColor', void 0), d(this, 'maxValue', void 0), d(this, 'canvas', a.createRef()), d(this, 'animationFrameRequestId', void 0), d(this, 'updateAnimation', e => {
+super(...e), d(this, 'dataChangedAt', void 0), d(this, 'fillColor', void 0), d(this, 'maxValue', void 0), d(this, 'canvas', s.createRef()), d(this, 'animationFrameRequestId', void 0), d(this, 'updateAnimation', e => {
   let t, n;
   let i = this.canvas.current;
   if (null == i)
     return;
   let {
-    data: s,
-    updateInterval: a,
+    data: a,
+    updateInterval: s,
     color: r,
     numUpdatesToShow: l,
     lineWidth: c,
     animate: d,
     gradientStopColor: u
   } = this.props;
-  if (s.length < 2)
+  if (a.length < 2)
     return;
-  let _ = Math.max(Math.min((e - this.dataChangedAt) / a, 1), 0),
+  let _ = Math.max(Math.min((e - this.dataChangedAt) / s, 1), 0),
     h = i.getContext('2d'),
     E = this.maxValue;
   h.strokeStyle = r, h.lineWidth = c;
@@ -85,13 +85,13 @@ super(...e), d(this, 'dataChangedAt', void 0), d(this, 'fillColor', void 0), d(t
     m.addColorStop(0, 'rgba('.concat(e, ', ').concat(t, ', ').concat(n, ', 0)'));
   }
   m.addColorStop(1, this.fillColor), h.fillStyle = m;
-  let g = s.length >= l ? l : s.length;
+  let g = a.length >= l ? l : a.length;
   h.setTransform(1, 0, 0, -1, 0, i.height), h.clearRect(0, 0, i.width, i.height), h.translate(0, 0.5 * h.lineWidth);
   let p = Math.floor(i.width / (g - 3)),
     T = 0.5 * p;
   h.translate(p - p * _, 0), h.beginPath();
   let S = -p;
-  s.forEach((e, i) => {
+  a.forEach((e, i) => {
     t = {
       x: S,
       y: I * e / E

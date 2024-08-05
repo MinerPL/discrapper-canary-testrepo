@@ -13,9 +13,9 @@ var n, a, i, r, o = s(442837),
   C = s(399002),
   m = s(369541),
   A = s(981631),
-  h = s(65154);
+  g = s(65154);
 new d.Z('RTCSpeedTestStore');
-let g = [{
+let h = [{
   clusterSize: 40,
   clusterIntervalMs: 20,
   numClusters: 1500,
@@ -64,7 +64,7 @@ let g = [{
   direction: m.u_.SERVER_TO_CLIENT
 }
   ],
-  O = g.length,
+  O = h.length,
   p = {
 running: !1,
 region: null,
@@ -91,29 +91,29 @@ function x() {
 function M() {
   if (p.lifecycle === m.N7.CONNECTING) {
 var e;
-Z(m.N7.PINGING), null === (e = p.connection) || void 0 === e || e.setPingInterval(500), P();
+b(m.N7.PINGING), null === (e = p.connection) || void 0 === e || e.setPingInterval(500), P();
   }
 }
 
-function D(e, t) {
+function f(e, t) {
   if (null != p.currentTest) {
 if (!0 !== p.failed)
   p.currentTest = p.currentTest + 1, p.results.push({
     payload: e,
     summary: t
-  }), p.currentTest === O ? (Z(m.N7.UPLOADING), j()) : b();
+  }), p.currentTest === O ? (b(m.N7.UPLOADING), j()) : Z();
   }
 }
 
-function f(e) {
+function D(e) {
   if (void 0 !== e)
-p.pings.length < 10 && (p.pings.push(e), p.pings.length < 10 && Z(m.N7.PINGING), P());
+p.pings.length < 10 && (p.pings.push(e), p.pings.length < 10 && b(m.N7.PINGING), P());
 }
 
 function P() {
   if (p.lifecycle === m.N7.PINGING && 10 === p.pings.length) {
 var e;
-null === (e = p.connection) || void 0 === e || e.setPingInterval(5000), p.currentTest = 0, b();
+null === (e = p.connection) || void 0 === e || e.setPingInterval(5000), p.currentTest = 0, Z();
   }
 }
 
@@ -123,22 +123,22 @@ return !1;
   p.connection.destroy(), p.connection = null;
 }
 
-function Z(e) {
+function b(e) {
   p.lifecycle = e, c.Z.dispatch({
 type: 'RTC_SPEED_TEST_STATE_UPDATE',
 lifecycle: e
   });
 }
 
-function b() {
+function Z() {
   var e, t;
-  null !== p.currentTest && (g[p.currentTest].direction === m.u_.CLIENT_TO_SERVER ? null === (e = p.connection) || void 0 === e || e.startClientToServerSpeedTest(g[p.currentTest]) : g[p.currentTest].direction === m.u_.SERVER_TO_CLIENT && (null === (t = p.connection) || void 0 === t || t.startServerToClientSpeedTest(g[p.currentTest])), Z(m.N7.TESTING));
+  null !== p.currentTest && (h[p.currentTest].direction === m.u_.CLIENT_TO_SERVER ? null === (e = p.connection) || void 0 === e || e.startClientToServerSpeedTest(h[p.currentTest]) : h[p.currentTest].direction === m.u_.SERVER_TO_CLIENT && (null === (t = p.connection) || void 0 === t || t.startServerToClientSpeedTest(h[p.currentTest])), b(m.N7.TESTING));
 }
 
 function v() {
   if (p.lifecycle === m.N7.TESTING && null != p.currentTest) {
 var e, t;
-g[p.currentTest].direction === m.u_.CLIENT_TO_SERVER ? null === (e = p.connection) || void 0 === e || e.stopClientToServerSpeedTest() : null === (t = p.connection) || void 0 === t || t.stopServerToClientSpeedTest();
+h[p.currentTest].direction === m.u_.CLIENT_TO_SERVER ? null === (e = p.connection) || void 0 === e || e.stopClientToServerSpeedTest() : null === (t = p.connection) || void 0 === t || t.stopServerToClientSpeedTest();
   }
 }
 async function j() {
@@ -163,7 +163,7 @@ i = {
   pings: p.pings,
   tests: []
 };
-  for (let e = 0; e < g.length; e++) {
+  for (let e = 0; e < h.length; e++) {
 let t = {
     params: null,
     results: null
@@ -172,7 +172,7 @@ let t = {
     params: null,
     results: null
   };
-t.params = g[e], s.params = g[e], e < p.results.length && (t.results = p.results[e].summary, s.results = p.results[e].payload), a.tests.push(t), i.tests.push(s);
+t.params = h[e], s.params = h[e], e < p.results.length && (t.results = p.results[e].summary, s.results = p.results[e].payload), a.tests.push(t), i.tests.push(s);
   }
   await Promise.all([
 l.tn.post({
@@ -191,7 +191,7 @@ l.tn.post({
     'Content-Type': 'text/plain'
   }
 })
-  ]), Z(m.N7.COMPLETED), L(), S.Z.stopSpeedTest(), p.running = !1, p.notes = '';
+  ]), b(m.N7.COMPLETED), L(), S.Z.stopSpeedTest(), p.running = !1, p.notes = '';
 }
 class B extends(n = o.ZP.Store) {
   initialize() {
@@ -220,7 +220,7 @@ return p.failed;
 return p.currentTest;
   }
   getTestCases() {
-return g;
+return h;
   }
   getTestResults() {
 return p.results;
@@ -235,7 +235,7 @@ return p.notes;
 p.notes = e;
   }
   isSupported() {
-return E.Z.supports(h.AN.SPEED_TEST);
+return E.Z.supports(g.AN.SPEED_TEST);
   }
 }
 r = 'RTCSpeedTestStore', (i = 'displayName') in(a = B) ? Object.defineProperty(a, i, {
@@ -245,10 +245,10 @@ r = 'RTCSpeedTestStore', (i = 'displayName') in(a = B) ? Object.defineProperty(a
   writable: !0
 }) : a[i] = r, t.Z = new B(c.Z, {
   RTC_SPEED_TEST_START_TEST: function(e) {
-!p.running && (Z(m.N7.AWAITING_ENDPOINT), p.running = !0, p.currentTest = null, p.results = [], p.failed = !1, p.pings = [], p.connected = !1, L());
+!p.running && (b(m.N7.AWAITING_ENDPOINT), p.running = !0, p.currentTest = null, p.results = [], p.failed = !1, p.pings = [], p.connected = !1, L());
   },
   RTC_SPEED_TEST_STOP_TEST: function(e) {
-p.running = !1, L(), p.lifecycle !== m.N7.COMPLETED && Z(m.N7.CANCELLED);
+p.running = !1, L(), p.lifecycle !== m.N7.COMPLETED && b(m.N7.CANCELLED);
   },
   SPEED_TEST_CREATE: function(e) {
 if (!p.running) {
@@ -258,7 +258,7 @@ if (!p.running) {
 p.rtcServerId = e.rtcServerId;
   },
   SPEED_TEST_DELETE: function(e) {
-L(), p.running = !1, p.lifecycle !== m.N7.COMPLETED && Z(m.N7.INACTIVE);
+L(), p.running = !1, p.lifecycle !== m.N7.COMPLETED && b(m.N7.INACTIVE);
   },
   SPEED_TEST_SERVER_UPDATE: function(e) {
 var t;
@@ -268,6 +268,6 @@ L(), p.endpoint = null !== (t = e.endpoint) && void 0 !== t ? t : null, p.connec
   rtcServerId: p.rtcServerId,
   endpoint: e.endpoint,
   token: e.token
-}), p.connection.on('state', R), p.connection.on('resuming', x), p.connection.on('ready', M), p.connection.on('speed-test-completed', D), p.connection.on('ping', f), p.connection.on('ping-timeout', f), p.connection.connect(), Z(m.N7.CONNECTING);
+}), p.connection.on('state', R), p.connection.on('resuming', x), p.connection.on('ready', M), p.connection.on('speed-test-completed', f), p.connection.on('ping', D), p.connection.on('ping-timeout', D), p.connection.connect(), b(m.N7.CONNECTING);
   }
 });

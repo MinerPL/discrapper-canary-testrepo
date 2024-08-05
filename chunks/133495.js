@@ -4,15 +4,15 @@ function i() {}
 e.exports = function e(t, n, a) {
   if ('function' == typeof n)
 return e(t, null, n);
-  !n && (n = {}), o = a || i, s = !1, a = function() {
-if (!s) {
-  s = !0;
+  !n && (n = {}), s = a || i, o = !1, a = function() {
+if (!o) {
+  o = !0;
   for (var e = arguments.length, t = Array(e), n = 0; n < e; n++)
     t[n] = arguments[n];
-  o.apply(this, t);
+  s.apply(this, t);
 }
   };
-  var o, s, l, u = n.readable || !1 !== n.readable && t.readable,
+  var s, o, l, u = n.readable || !1 !== n.readable && t.readable,
 c = n.writable || !1 !== n.writable && t.writable,
 d = function() {
   !t.writable && E();

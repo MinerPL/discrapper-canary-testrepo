@@ -6,8 +6,8 @@ return u;
 var r = n(592125),
   i = n(771845),
   a = n(553245),
-  o = n(814074),
-  s = n(989263),
+  s = n(814074),
+  o = n(989263),
   l = n(981631);
 
 function u(e, t) {
@@ -20,7 +20,7 @@ for (let i of t.guildIds)
   for (let t of Object.values(r.Z.getMutableBasicGuildChannelsForGuild(i)))
     if (function(e) {
         return e.type === l.d4z.DM || e.type === l.d4z.GROUP_DM || e.type === l.d4z.GUILD_TEXT;
-      }(t) && (0, s.v)(t) && !(0, o.Hr)(t) && function(e, t, n) {
+      }(t) && (0, o.v)(t) && !(0, s.Hr)(t) && function(e, t, n) {
         !n.hasExtended(t.id) && n.put(t.id, {
           guildId: e,
           channelId: t.id,

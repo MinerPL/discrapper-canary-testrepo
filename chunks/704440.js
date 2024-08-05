@@ -6,9 +6,9 @@ return L;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(913527),
-  l = n.n(s),
+  s = n.n(a),
+  o = n(913527),
+  l = n.n(o),
   u = n(235874),
   c = n(481060),
   d = n(37234),
@@ -38,14 +38,14 @@ n(!1);
 onClose: t,
 referralsRemaining: n,
 recipient: a,
-analyticsLocations: s,
+analyticsLocations: o,
 shouldShowBirthdayUX: l
   } = e, [u, d] = i.useState(!1), _ = n - 1;
   return (0, r.jsxs)('div', {
 className: A.confirmationContainer,
 children: [
   (0, r.jsxs)('div', {
-    className: o()({
+    className: s()({
       [A.confirmationBody]: !l,
       [A.confirmationBirthdayBody]: l
     }),
@@ -86,7 +86,7 @@ children: [
         submitting: u,
         onClick: () => {
           C(a, t, d), f.default.track(g.rMx.SHARE_NITRO_FLOW_STEPS, {
-            location_stack: s,
+            location_stack: o,
             step: T.fz.FLOW_COMPLETED,
             other_user_id: Number(a)
           });
@@ -115,7 +115,7 @@ function D(e) {
 referralsRemaining: t,
 channel: n,
 onClose: a,
-isResending: s
+isResending: o
   } = e, [u, d] = i.useState(!1), [m, O] = i.useState(!1), D = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null, {
 analyticsLocations: L
   } = (0, E.ZP)(_.Z.REFERRAL_TRIALS_POPOUT), {
@@ -152,22 +152,22 @@ children: [
           (0, r.jsx)(c.Heading, {
             className: A.generalHeading,
             variant: 'heading-xl/bold',
-            children: s ? S.Z.Messages.SHARE_NITRO_RESEND_TRIAL_HEADER : S.Z.Messages.SHARE_NITRO_MODAL_HEADER
+            children: o ? S.Z.Messages.SHARE_NITRO_RESEND_TRIAL_HEADER : S.Z.Messages.SHARE_NITRO_MODAL_HEADER
           }),
           (0, r.jsxs)(c.Text, {
             className: A.generalBodyCopy,
             variant: 'text-md/normal',
             children: [
               (0, r.jsx)(c.Anchor, {
-                className: o()(A.learnMore, {
-                  [A.learnMoreResendUnderlinedText]: s
+                className: s()(A.learnMore, {
+                  [A.learnMoreResendUnderlinedText]: o
                 }),
                 href: p.Z.getArticleURL(g.BhN.SHARE_NITRO_FAQ),
-                children: s ? S.Z.Messages.SHARE_NITRO_RESEND_TRIAL_BODY : S.Z.Messages.SHARE_NITRO_MODAL_BODY_GENERAL.format({
+                children: o ? S.Z.Messages.SHARE_NITRO_RESEND_TRIAL_BODY : S.Z.Messages.SHARE_NITRO_MODAL_BODY_GENERAL.format({
                   count: t
                 })
               }),
-              s ? (0, r.jsx)('div', {
+              o ? (0, r.jsx)('div', {
                 className: A.shareNitroResendCopySuffix,
                 children: S.Z.Messages.SHARE_NITRO_RESEND_TRIAL_BODY_2
               }) : (0, r.jsx)('div', {
@@ -192,13 +192,13 @@ children: [
       className: A.generalShareButton,
       submitting: m,
       onClick: () => {
-        s ? C(D, a, O) : (d(!0), f.default.track(g.rMx.SHARE_NITRO_FLOW_STEPS, {
+        o ? C(D, a, O) : (d(!0), f.default.track(g.rMx.SHARE_NITRO_FLOW_STEPS, {
           location_stack: L,
           step: T.fz.FLOW_STARTED,
           other_user_id: Number(D)
         }));
       },
-      children: s ? S.Z.Messages.SHARE_NITRO_RESEND_BUTTON_TEXT : S.Z.Messages.SHARE_NITRO_BUTTON_TEXT
+      children: o ? S.Z.Messages.SHARE_NITRO_RESEND_BUTTON_TEXT : S.Z.Messages.SHARE_NITRO_BUTTON_TEXT
     })
   })
 ]
@@ -211,7 +211,7 @@ shouldShowPopout: t,
 referralsRemaining: n,
 channel: i,
 onClose: a,
-isResending: o
+isResending: s
   } = e;
   return t ? (0, r.jsx)('div', {
 onMouseDown: e => e.stopPropagation(),
@@ -224,7 +224,7 @@ children: (0, r.jsx)(u.y, {
     referralsRemaining: n,
     channel: i,
     onClose: a,
-    isResending: o
+    isResending: s
   }),
   onRequestClose: () => void 0,
   closeOnScroll: !1,

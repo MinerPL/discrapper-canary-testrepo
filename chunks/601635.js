@@ -7,7 +7,7 @@ var r = n(392711),
   i = n.n(r),
   a = n(846519);
 
-function o(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -15,7 +15,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class s {
+class o {
   acknowledge(e) {
 this._unacknowledgedRequests.delete(e), this._pendingRequests.delete(e);
   }
@@ -38,7 +38,7 @@ if (this._guildMemberExists(e) || this._sentRequests.has(e) || this._pendingRequ
 this._pendingRequests.add(e);
   }
   constructor(e, t) {
-o(this, '_guildId', void 0), o(this, '_pendingRequests', new Set()), o(this, '_sentRequests', new Set()), o(this, '_unacknowledgedRequests', new Set()), o(this, '_guildMemberExists', void 0), this._guildId = e, this._guildMemberExists = n => t(e, n);
+s(this, '_guildId', void 0), s(this, '_pendingRequests', new Set()), s(this, '_sentRequests', new Set()), s(this, '_unacknowledgedRequests', new Set()), s(this, '_guildMemberExists', void 0), this._guildId = e, this._guildMemberExists = n => t(e, n);
   }
 }
 class l {
@@ -59,9 +59,9 @@ i().reduce(this._guildStates, (e, t) => !1 !== t.requestUnacknowledged() || t, !
   }
   _getGuildState(e) {
 let t = this._guildStates[e];
-return null == t && (t = this._guildStates[e] = new s(e, this._guildMemberExists)), t;
+return null == t && (t = this._guildStates[e] = new o(e, this._guildMemberExists)), t;
   }
   constructor(e, t) {
-o(this, '_onChange', void 0), o(this, '_guildMemberExists', void 0), o(this, '_guildStates', {}), o(this, '_flush', new a.sW(0, () => this.flushRequests())), this._guildMemberExists = e, this._onChange = t;
+s(this, '_onChange', void 0), s(this, '_guildMemberExists', void 0), s(this, '_guildStates', {}), s(this, '_flush', new a.sW(0, () => this.flushRequests())), this._guildMemberExists = e, this._onChange = t;
   }
 }

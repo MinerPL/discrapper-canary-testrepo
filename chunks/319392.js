@@ -5,8 +5,8 @@ return p;
 });
 var t = o(735250);
 o(470079);
-var r = o(481060),
-  s = o(726542),
+var s = o(481060),
+  r = o(726542),
   i = o(277390),
   c = o(63063),
   a = o(376340),
@@ -23,30 +23,30 @@ children: [
   (0, t.jsxs)('div', {
     className: _.getXboxAppBody,
     children: [
-      (0, t.jsxs)(r.Heading, {
+      (0, t.jsxs)(s.Heading, {
         className: _.getXboxAppHeading,
         variant: 'text-lg/semibold',
         children: [
           (0, t.jsx)('div', {
             className: _.xboxLogoBox,
             children: (0, t.jsx)('img', {
-              src: s.Z.get(l.ABu.XBOX).icon.whiteSVG,
+              src: r.Z.get(l.ABu.XBOX).icon.whiteSVG,
               alt: ''
             })
           }),
           u.Z.Messages.GET_XBOX_APP
         ]
       }),
-      (0, t.jsx)(r.Text, {
+      (0, t.jsx)(s.Text, {
         tag: 'p',
         variant: 'text-md/normal',
         color: 'header-secondary',
         children: u.Z.Messages.CONNECT_XBOX_SUCCESS_APP_BODY
       }),
-      (0, t.jsx)(r.Text, {
+      (0, t.jsx)(s.Text, {
         variant: 'text-sm/medium',
         color: 'header-secondary',
-        children: (0, t.jsx)(r.Anchor, {
+        children: (0, t.jsx)(s.Anchor, {
           href: c.Z.getArticleURL(l.BhN.XBOX_CONNECTION),
           children: u.Z.Messages.LEARN_MORE
         })

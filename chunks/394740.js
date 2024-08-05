@@ -6,8 +6,8 @@ return v;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(780384),
+  s = n.n(a),
+  o = n(780384),
   l = n(481060),
   u = n(2052),
   c = n(410030),
@@ -45,7 +45,7 @@ previewSound: P
 sound: O,
 previewSound: P,
 tooltipPosition: 'left'
-  }), w = (0, s.ap)(C) ? n(537381) : n(341048);
+  }), w = (0, o.ap)(C) ? n(537381) : n(341048);
   i.useEffect(() => {
 h.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
   type: g.cd.SOUND_PICKER_SOUND_CLICKED,
@@ -67,7 +67,7 @@ h.default.track(T.rMx.PREMIUM_PROMOTION_OPENED, {
 }), (0, E.z)(), v();
   }, [v]);
   return (0, r.jsxs)('div', {
-className: o()(N.premiumPromo, A.container),
+className: s()(N.premiumPromo, A.container),
 children: [
   (0, r.jsx)(l.Clickable, {
     className: N.premiumPromoClose,
@@ -77,7 +77,7 @@ children: [
   (0, r.jsx)('img', {
     'aria-hidden': !0,
     alt: '',
-    className: o()(N.premiumPromoImage, N.premiumPromoImageSmaller, A.image),
+    className: s()(N.premiumPromoImage, N.premiumPromoImageSmaller, A.image),
     src: w
   }),
   (0, r.jsx)(l.Heading, {

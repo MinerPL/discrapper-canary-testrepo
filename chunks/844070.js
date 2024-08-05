@@ -9,13 +9,13 @@ return _;
 var r = n(493683),
   i = n(758059),
   a = n(292556),
-  o = n(703656),
-  s = n(768581),
+  s = n(703656),
+  o = n(768581),
   l = n(981631),
   u = n(689938);
 
 function c(e, t, n) {
-  a.default.showNotification(s.ZP.getUserAvatarURL(e), e.username, t, {}, {
+  a.default.showNotification(o.ZP.getUserAvatarURL(e), e.username, t, {}, {
 omitViewTracking: !0,
 omitClickTracking: !0,
 tag: e.id,
@@ -33,7 +33,7 @@ function d(e) {
     userId: e.id
   });
 }
-(0, o.uL)(l.Z5c.FRIENDS), i.Z.setSection(l.pJs.PENDING);
+(0, s.uL)(l.Z5c.FRIENDS), i.Z.setSection(l.pJs.PENDING);
   });
 }
 

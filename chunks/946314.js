@@ -12,7 +12,7 @@ let c = 1000,
   d = 200,
   u = {},
   m = !1;
-class f extends(s = o.ZP.Store) {
+class _ extends(s = o.ZP.Store) {
   isLoading() {
 return m;
   }
@@ -28,12 +28,12 @@ return null != n && !m && n.healthScorePending && n.safeEnvironment && 0 === Obj
 return u[e];
   }
 }
-i = 'DiscoverGuildChecklistStore', (r = 'displayName') in(a = f) ? Object.defineProperty(a, r, {
+i = 'DiscoverGuildChecklistStore', (r = 'displayName') in(a = _) ? Object.defineProperty(a, r, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[r] = i, n.ZP = new f(l.Z, {
+}) : a[r] = i, n.ZP = new _(l.Z, {
   DISCOVER_CHECKLIST_FETCH_START: function(e) {
 m = !0;
   },

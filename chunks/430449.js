@@ -1,5 +1,5 @@
 n(47120);
-var r, i, a, o, s, l, u = n(392711),
+var r, i, a, s, o, l, u = n(392711),
   c = n.n(u),
   d = n(442837),
   _ = n(570140);
@@ -41,12 +41,12 @@ return [...Object.entries(E).filter(e => {
 return f[e];
   }
 }
-l = 'ApplicationAssetsStore', (s = 'displayName') in(o = p) ? Object.defineProperty(o, s, {
+l = 'ApplicationAssetsStore', (o = 'displayName') in(s = p) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[s] = l, t.Z = new p(_.Z, {
+}) : s[o] = l, t.Z = new p(_.Z, {
   APPLICATION_ASSETS_FETCH: function(e) {
 let {
   applicationId: t

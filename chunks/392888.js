@@ -7,14 +7,14 @@ var r = n(735250);
 n(470079);
 var i = n(544891),
   a = n(433517),
-  o = n(481060),
-  s = n(147913),
+  s = n(481060),
+  o = n(147913),
   l = n(480294),
   u = n(9156),
   c = n(312400),
   d = n(115345),
   _ = n(981631);
-class E extends s.Z {
+class E extends o.Z {
   handlePostConnectionOpen() {
 if (!a.K.get('turnedOffNewNotifications')) {
   if (l.Z.hasConsented(_.pjP.PERSONALIZATION)) {
@@ -42,17 +42,17 @@ if (!e)
 let {
   body: {
     guild_noise: a,
-    usage: s
+    usage: o
   }
-} = await i.tn.get('/users/@me/notification-migration-data2'), l = (0, d._Y)(s), {
+} = await i.tn.get('/users/@me/notification-migration-data2'), l = (0, d._Y)(o), {
   default: u
 } = await n.e('53512').then(n.bind(n, 753521));
-if ((0, o.hasAnyModalOpen)())
+if ((0, s.hasAnyModalOpen)())
   return;
 if (c.fs.trackExposure({
     location: 'NotificationMigrationManager'
   }), !!t)
-  (0, d.cG)(a, l) ? (0, o.openModal)(e => (0, r.jsx)(u, {
+  (0, d.cG)(a, l) ? (0, s.openModal)(e => (0, r.jsx)(u, {
     ...e,
     dismissable: !1,
     guildPain: a,
@@ -93,8 +93,8 @@ body: {
   guild_noise: t,
   usage: a
 }
-  } = await i.tn.get('/users/@me/notification-migration-data2'), s = (0, d._Y)(a);
-  (0, o.openModalLazy)(async () => {
+  } = await i.tn.get('/users/@me/notification-migration-data2'), o = (0, d._Y)(a);
+  (0, s.openModalLazy)(async () => {
 let {
   default: i
 } = await n.e('53512').then(n.bind(n, 753521));
@@ -102,7 +102,7 @@ return n => (0, r.jsx)(i, {
   ...n,
   dismissable: e,
   guildPain: t,
-  myUsage: s
+  myUsage: o
 });
   });
 }

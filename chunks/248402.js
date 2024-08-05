@@ -1,6 +1,6 @@
 let r, i;
 n(47120);
-var a, o, s, l, u = n(392711),
+var a, s, o, l, u = n(392711),
   c = n.n(u),
   d = n(442837),
   _ = n(570140),
@@ -17,7 +17,7 @@ function g() {
   if (null == r)
 e = null;
   else {
-var n, a, o, s, l;
+var n, a, s, o, l;
 e = E.Z.getSelectedParticipantId(r);
 let t = h.Z.getLastActiveStream(),
   u = null != e ? E.Z.getParticipant(r, e) : null;
@@ -25,7 +25,7 @@ if (((null == u ? void 0 : u.type) === T.fO.ACTIVITY || (null == u ? void 0 : u.
   let t = p.default.getId(),
     n = c()(E.Z.getVideoParticipants(r)).filter(e => e.type === T.fO.USER && e.user.id !== t && !m.Z.isLocalVideoDisabled(e.user.id)),
     a = Date.now();
-  null == (e = null === (o = n.map(e => [
+  null == (e = null === (s = n.map(e => [
     e.user.id,
     I.Z.getSpeakingDuration(e.user.id, a)
   ]).filter(e => {
@@ -34,7 +34,7 @@ if (((null == u ? void 0 : u.type) === T.fO.ACTIVITY || (null == u ? void 0 : u.
   }).maxBy(e => {
     let [t, n] = e;
     return -n;
-  })) || void 0 === o ? void 0 : o[0]) && (e = null != i ? i : null === (l = n.first()) || void 0 === l ? void 0 : null === (s = l.user) || void 0 === s ? void 0 : s.id);
+  })) || void 0 === s ? void 0 : s[0]) && (e = null != i ? i : null === (l = n.first()) || void 0 === l ? void 0 : null === (o = l.user) || void 0 === o ? void 0 : o.id);
 }
   }
   i !== e && (i = e, t && v.emitChange());
@@ -55,12 +55,12 @@ this.waitFor(E.Z, p.default, I.Z, h.Z, m.Z), this.syncWith([
 return r !== e && (r = e, g(!1)), null != i ? i : p.default.getId();
   }
 }
-l = 'VideoSpeakerStore', (s = 'displayName') in(o = N) ? Object.defineProperty(o, s, {
+l = 'VideoSpeakerStore', (o = 'displayName') in(s = N) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[s] = l;
+}) : s[o] = l;
 let v = new N(_.Z, {
   AUDIO_SET_LOCAL_VIDEO_DISABLED: A
 });

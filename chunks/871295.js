@@ -46,7 +46,7 @@ a = {
   ]
 };
   r.contains.push(a);
-  let o = {
+  let s = {
   begin: /\$?\(\(/,
   end: /\)\)/,
   contains: [{
@@ -57,7 +57,7 @@ a = {
     n
   ]
 },
-s = e.SHEBANG({
+o = e.SHEBANG({
   binary: '(fish|bash|zsh|sh|csh|ksh|tcsh|dash|scsh)',
   relevance: 10
 }),
@@ -308,10 +308,10 @@ keywords: {
   ]
 },
 contains: [
-  s,
+  o,
   e.SHEBANG(),
   l,
-  o,
+  s,
   e.HASH_COMMENT_MODE,
   i,
   {

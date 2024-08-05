@@ -31,11 +31,11 @@ pendingBio: d,
 placeholder: C,
 currentBio: m,
 disabled: A = !1
-  } = e, [h, g] = a.useState(null != d ? d : m), [O, p] = a.useState((0, o.JM)(h)), R = a.useRef(!1);
+  } = e, [g, h] = a.useState(null != d ? d : m), [O, p] = a.useState((0, o.JM)(g)), R = a.useRef(!1);
   return a.useEffect(() => {
 if (void 0 === d) {
   let e = (0, o.JM)(m);
-  g(m), p(e);
+  h(m), p(e);
 }
   }, [
 d,
@@ -53,11 +53,11 @@ children: [
     innerClassName: T.bioTextArea,
     maxCharacterCount: E.tPV,
     onChange: function(e, t, s) {
-      t !== h && (g(t), p(s), c(t));
+      t !== g && (h(t), p(s), c(t));
     },
     placeholder: C,
     channel: S,
-    textValue: h,
+    textValue: g,
     richValue: O,
     type: r.I.PROFILE_BIO_INPUT,
     onBlur: () => {

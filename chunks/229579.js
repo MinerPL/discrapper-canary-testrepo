@@ -9,11 +9,11 @@ return f;
 var r = n(430901),
   i = n(96428),
   a = n(222285),
-  o = n(288930),
-  s = new WeakMap(),
+  s = n(288930),
+  o = new WeakMap(),
   l = /auto|scroll/,
   u = /^tb|vertical/,
-  c = /msie|trident/i.test(o.C.navigator && o.C.navigator.userAgent),
+  c = /msie|trident/i.test(s.C.navigator && s.C.navigator.userAgent),
   d = function(e) {
 return parseFloat(e || '0');
   },
@@ -30,13 +30,13 @@ contentBoxSize: _(),
 contentRect: new i.N(0, 0, 0, 0)
   }),
   f = function(e, t) {
-if (void 0 === t && (t = !1), s.has(e) && !t)
-  return s.get(e);
+if (void 0 === t && (t = !1), o.has(e) && !t)
+  return o.get(e);
 if ((0, a.xj)(e))
-  return s.set(e, E), E;
+  return o.set(e, E), E;
 var n = getComputedStyle(e),
   r = (0, a.zd)(e) && e.ownerSVGElement && e.getBBox(),
-  o = !c && 'border-box' === n.boxSizing,
+  s = !c && 'border-box' === n.boxSizing,
   f = u.test(n.writingMode || ''),
   h = !r && l.test(n.overflowY || ''),
   p = !r && l.test(n.overflowX || ''),
@@ -54,8 +54,8 @@ var n = getComputedStyle(e),
   y = S + N,
   D = p ? e.offsetHeight - y - e.clientHeight : 0,
   L = h ? e.offsetWidth - C - e.clientWidth : 0,
-  b = r ? r.width : d(n.width) - (o ? O + C : 0) - L,
-  M = r ? r.height : d(n.height) - (o ? R + y : 0) - D,
+  b = r ? r.width : d(n.width) - (s ? O + C : 0) - L,
+  M = r ? r.height : d(n.height) - (s ? R + y : 0) - D,
   P = b + O + L + C,
   U = M + R + D + y,
   w = Object.freeze({
@@ -64,19 +64,19 @@ var n = getComputedStyle(e),
     contentBoxSize: _(b, M, f),
     contentRect: new i.N(g, m, b, M)
   });
-return s.set(e, w), w;
+return o.set(e, w), w;
   },
   h = function(e, t, n) {
 var i = f(e, n),
   a = i.borderBoxSize,
-  o = i.contentBoxSize,
-  s = i.devicePixelContentBoxSize;
+  s = i.contentBoxSize,
+  o = i.devicePixelContentBoxSize;
 switch (t) {
   case r.z.DEVICE_PIXEL_CONTENT_BOX:
-    return s;
+    return o;
   case r.z.BORDER_BOX:
     return a;
   default:
-    return o;
+    return s;
 }
   };

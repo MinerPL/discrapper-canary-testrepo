@@ -5,11 +5,11 @@ function a() {
 throw Error('Native dependencies have not been injected.');
 }
 
-function o(e) {
+function s(e) {
   r = e;
 }
 
-function s() {
+function o() {
   return a(), r.supported();
 }
 
@@ -26,13 +26,13 @@ function c() {
 }
 n.d(t, {
   Zh: function() {
-return s;
+return o;
   },
   eJ: function() {
 return l;
   },
   f3: function() {
-return o;
+return s;
   },
   p8: function() {
 return u;

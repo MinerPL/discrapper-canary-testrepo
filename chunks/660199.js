@@ -9,7 +9,7 @@ return _;
 return l;
   },
   Qh: function() {
-return s;
+return o;
   },
   ZB: function() {
 return d;
@@ -18,8 +18,8 @@ return d;
 var r = n(913527),
   i = n.n(r),
   a = n(55935),
-  o = n(70956);
-let s = {
+  s = n(70956);
+let o = {
 t: e => (0, a.vc)(e, 'LT'),
 T: e => (0, a.vc)(e, 'LTS'),
 d: e => (0, a.vc)(e, 'L'),
@@ -41,20 +41,20 @@ R: e => {
 }
   },
   l = 'f';
-Object.setPrototypeOf(s, null);
-let u = Object.keys(s).join('|'),
+Object.setPrototypeOf(o, null);
+let u = Object.keys(o).join('|'),
   c = new RegExp('^<t:(-?\\d{1,17})(?::('.concat(u, '))?>'));
 
 function d(e, t) {
-  let n = i()(Number(e) * o.Z.Millis.SECOND);
+  let n = i()(Number(e) * s.Z.Millis.SECOND);
   if (!n.isValid())
 return null;
-  let r = null != t ? s[t] : void 0;
-  return null == r && (r = s[l]), {
+  let r = null != t ? o[t] : void 0;
+  return null == r && (r = o[l]), {
 timestamp: e,
 format: t,
 parsed: n,
-full: s.F(n),
+full: o.F(n),
 formatted: r(n)
   };
 }

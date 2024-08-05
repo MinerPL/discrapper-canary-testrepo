@@ -3,22 +3,22 @@ n.d(t, {
 return l;
   },
   h9: function() {
-return s;
+return o;
   },
   nM: function() {
-return o;
+return s;
   }
 }), n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(846519);
-let o = i.createContext({
+let s = i.createContext({
 onPreventIdle: () => null,
 onAllowIdle: () => null,
 onForceIdle: () => null,
 onActive: () => null
   }),
-  s = i.createContext(!1);
+  o = i.createContext(!1);
 
 function l(e) {
   let {
@@ -75,9 +75,9 @@ p = i.useMemo(() => ({
   f,
   h
 ]);
-  return (0, r.jsx)(s.Provider, {
+  return (0, r.jsx)(o.Provider, {
 value: l,
-children: (0, r.jsx)(o.Provider, {
+children: (0, r.jsx)(s.Provider, {
   value: p,
   children: t({
     idle: l,

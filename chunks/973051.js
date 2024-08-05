@@ -12,8 +12,8 @@ var s = n(735250),
   d = n(367907),
   c = n(863249),
   u = n(944163),
-  m = n(454585),
-  p = n(996753),
+  m = n(768762),
+  p = n(454585),
   h = n(626135),
   g = n(981631),
   x = n(689938),
@@ -99,7 +99,7 @@ children: (0, s.jsxs)('div', {
               (0, s.jsx)(i.Text, {
                 variant: 'text-sm/normal',
                 className: f.termsRowContent,
-                children: m.Z.parseGuildVerificationFormRule(e, !0, {
+                children: p.Z.parseGuildVerificationFormRule(e, !0, {
                   channelId: n.rulesChannelId
                 })
               })
@@ -141,9 +141,9 @@ children: (0, s.jsxs)('div', {
             grow: !1,
             color: i.Button.Colors.PRIMARY,
             children: [
-              (0, s.jsx)(p.Z, {
+              (0, s.jsx)(m.Z, {
                 className: f.arrow,
-                direction: p.Z.Directions.LEFT
+                direction: m.Z.Directions.LEFT
               }),
               x.Z.Messages.BACK
             ]

@@ -6,8 +6,8 @@ return d;
 var r = n(470079),
   i = n(905405),
   a = n(626135),
-  o = n(937889),
-  s = n(761910),
+  s = n(937889),
+  o = n(761910),
   l = n(981631),
   u = n(689938),
   c = n(751786);
@@ -29,11 +29,11 @@ viewingChannelId: g
   return r.useMemo(() => null != e.customRenderedContent ? e.customRenderedContent : e.isUnsupported ? {
 content: u.Z.Messages.MESSAGE_UNSUPPORTED,
 hasSpoilerEmbeds: !1
-  } : e.isCommandType() && 0 === e.content.length || e.hasFlag(l.iLy.LOADING) ? (0, s.Z)(e) : e.type === l.uaV.CHANGELOG ? (0, o.n0)(e, c, {
+  } : e.isCommandType() && 0 === e.content.length || e.hasFlag(l.iLy.LOADING) ? (0, o.Z)(e) : e.type === l.uaV.CHANGELOG ? (0, s.n0)(e, c, {
 track: (e, t) => {
   a.default.track(e, t);
 }
-  }) : (0, o.ZP)(e, {
+  }) : (0, s.ZP)(e, {
 hideSimpleEmbedContent: n,
 formatInline: d,
 noStyleAndInteraction: _,

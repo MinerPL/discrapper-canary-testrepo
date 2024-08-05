@@ -24,8 +24,8 @@ return p;
 var r = n(442837),
   i = n(246946),
   a = n(594174),
-  o = n(981631),
-  s = n(689938);
+  s = n(981631),
+  o = n(689938);
 let l = e => ''.concat(e[0], '...'),
   u = e => '@'.concat(e),
   c = {
@@ -82,19 +82,19 @@ else
 function p(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   switch (e) {
-case o.Skl.ONLINE:
-  return t ? s.Z.Messages.STATUS_ONLINE_MOBILE : s.Z.Messages.STATUS_ONLINE;
-case o.Skl.OFFLINE:
-  return s.Z.Messages.STATUS_OFFLINE;
-case o.Skl.IDLE:
-  return s.Z.Messages.STATUS_IDLE;
-case o.Skl.DND:
-  return s.Z.Messages.STATUS_DND;
-case o.Skl.INVISIBLE:
-  return s.Z.Messages.STATUS_INVISIBLE;
-case o.Skl.STREAMING:
-  return s.Z.Messages.STATUS_STREAMING;
-case o.Skl.UNKNOWN:
+case s.Skl.ONLINE:
+  return t ? o.Z.Messages.STATUS_ONLINE_MOBILE : o.Z.Messages.STATUS_ONLINE;
+case s.Skl.OFFLINE:
+  return o.Z.Messages.STATUS_OFFLINE;
+case s.Skl.IDLE:
+  return o.Z.Messages.STATUS_IDLE;
+case s.Skl.DND:
+  return o.Z.Messages.STATUS_DND;
+case s.Skl.INVISIBLE:
+  return o.Z.Messages.STATUS_INVISIBLE;
+case s.Skl.STREAMING:
+  return o.Z.Messages.STATUS_STREAMING;
+case s.Skl.UNKNOWN:
 default:
   return null;
   }
@@ -127,11 +127,11 @@ maxDaysOld: 7
 
 function g(e, t, n) {
   if (null == e)
-return s.Z.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER;
+return o.Z.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER;
   if (!d(e.username))
 return '???';
   let r = n;
-  if ('always' === t.identifiable ? r = !1 : 'never' === t.identifiable && (r = !0), '0' !== e.discriminator && e.discriminator !== o.fo$ && !t.forcePomelo)
+  if ('always' === t.identifiable ? r = !1 : 'never' === t.identifiable && (r = !0), '0' !== e.discriminator && e.discriminator !== s.fo$ && !t.forcePomelo)
 return 'username' === t.mode ? e.username : r ? e.username : ''.concat(e.username, '#').concat(e.discriminator);
   let i = r ? l(e.username) : e.username;
   return 'never' !== t.decoration ? u(i) : i;

@@ -1,7 +1,7 @@
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(442837),
   o = n(649974),
   c = n(246946),
@@ -15,7 +15,7 @@ var i = n(735250),
   g = n(4962),
   p = n(689938),
   T = n(670257);
-class S extends s.Component {
+class S extends a.Component {
   renderReasons(e, t, n) {
 return 0 === e.length && 0 === t.length ? null : (0, i.jsx)('div', {
   className: T.section,
@@ -53,20 +53,20 @@ let {
   socialReasons: e,
   nonSocialReasons: t,
   storeListing: n,
-  hidePersonalInformation: s,
-  className: a
+  hidePersonalInformation: a,
+  className: s
 } = this.props;
 if (0 === e.length && 0 === t.length && null == n.staffNotes)
   return null;
 let l = this.getReviewToRender();
 return (0, i.jsxs)('div', {
-  className: r()(T.root, a),
+  className: r()(T.root, s),
   children: [
     (0, i.jsx)('div', {
       className: T.header,
       children: p.Z.Messages.APPLICATION_STORE_SECTION_TITLE_RECOMMENDATION
     }),
-    this.renderReasons(e, t, s),
+    this.renderReasons(e, t, a),
     null != l ? (0, i.jsx)(g.Z, {
       data: l,
       className: T.review

@@ -1,53 +1,53 @@
 n.d(t, {
   Z: function() {
-return c;
+return d;
   }
 });
 var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(338545),
-  s = n(845676);
-let l = Object.freeze({
+  s = n(338545),
+  o = n(481060),
+  l = n(845676);
+let u = Object.freeze({
 tension: 400,
 friction: 30
   }),
-  u = Object.freeze({
+  c = Object.freeze({
 opacity: 0,
 height: 8,
 x: -4
   });
 
-function c(e) {
+function d(e) {
   let {
 selected: t = !1,
 hovered: n = !1,
 unread: i = !1,
-disabled: c = !1,
-className: d
+disabled: d = !1,
+className: _
   } = e;
-  t = !c && t, n = !c && n, i = !c && i;
-  let _ = {
+  t = !d && t, n = !d && n, i = !d && i;
+  let E = {
   opacity: 1,
   height: t ? 40 : n ? 20 : 8,
   x: 0
 },
-E = (0, o.useTransition)(t || n || i, {
-  config: l,
+f = (0, o.useTransition)(t || n || i, {
+  config: u,
   keys: e => e ? 'pill' : 'empty',
-  immediate: !n && !document.hasFocus(),
-  initial: t || n || i ? _ : null,
-  from: u,
-  leave: u,
-  enter: _,
-  update: _
-});
+  initial: t || n || i ? E : null,
+  from: c,
+  leave: c,
+  enter: E,
+  update: E
+}, n || document.hasFocus() ? 'animate-always' : 'animate-never');
   return (0, r.jsx)('div', {
-className: a()(d, s.wrapper),
+className: a()(_, l.wrapper),
 'aria-hidden': !0,
-children: E((e, t) => t && (0, r.jsx)(o.animated.span, {
-  className: s.item,
+children: f((e, t) => t && (0, r.jsx)(s.animated.span, {
+  className: l.item,
   style: e
 }))
   });

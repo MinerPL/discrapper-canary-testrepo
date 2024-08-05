@@ -5,14 +5,14 @@ return h;
 }), n(789020);
 var i = n(735250);
 n(470079);
-var a = n(533800),
-  s = n(481060),
+var s = n(533800),
+  a = n(481060),
   r = n(358555),
-  l = n(131704),
-  o = n(197409),
+  l = n(955415),
+  o = n(131704),
   c = n(630388),
-  d = n(267642),
-  u = n(411198),
+  u = n(267642),
+  d = n(411198),
   _ = n(277707),
   E = n(358595),
   I = n(981631),
@@ -21,48 +21,48 @@ var a = n(533800),
 
 function h(e) {
   var t, h;
-  let N, f, p, {
-  onTransitionToInviteChannel: C,
+  let N, C, f, {
+  onTransitionToInviteChannel: p,
   onAcceptInstantInvite: g,
   guild: S,
   invite: A,
   author: R,
-  currentUserId: x
+  currentUserId: O
 } = e,
-O = x === R.id,
+x = O === R.id,
 {
   channel: M,
   approximate_member_count: v,
   approximate_presence_count: L
 } = A,
 Z = A.state === I.r2o.ACCEPTING,
-P = null != M ? (0, l.jD)(M) : null,
-b = null != S,
-D = null != P,
+P = null != M ? (0, o.jD)(M) : null,
+D = null != S,
+b = null != P,
 j = null != P && P.isGuildVocal(),
 U = null != P && P.isGuildStageVoice(),
-y = (0, c.yE)(null !== (t = A.flags) && void 0 !== t ? t : 0, a.$.IS_GUEST_INVITE),
+y = (0, c.yE)(null !== (t = A.flags) && void 0 !== t ? t : 0, s.$.IS_GUEST_INVITE),
 B = null !== (h = null == S ? void 0 : S.hasFeature(I.oNc.HUB)) && void 0 !== h && h;
   if (null == S) {
 if (null == A.guild)
   return (0, i.jsx)(E.Z, {});
-S = u.Qs(A.guild);
-let e = (0, d.rF)(A.guild.premium_subscription_count, A.guild.id);
+S = d.Qs(A.guild);
+let e = (0, u.rF)(A.guild.premium_subscription_count, A.guild.id);
 S.premiumTier = e;
   }
-  let k = b ? C : g,
+  let k = D ? p : g,
 G = (0, _.e)({
   isVoiceChannel: j,
-  isOwnInvite: O,
+  isOwnInvite: x,
   isGuest: y,
   isHubGuild: B,
   isStage: U,
   isStream: !1
 });
-  return f = (0, i.jsxs)('span', {
+  return C = (0, i.jsxs)('span', {
 className: T.infoTitle,
 children: [
-  (0, i.jsx)(o.Z.GuildName, {
+  (0, i.jsx)(l.Z.GuildName, {
     guild: S
   }),
   (0, i.jsx)('span', {
@@ -74,15 +74,15 @@ children: [
     })
   })
 ]
-  }), y && (p = (0, i.jsx)(s.TooltipContainer, {
+  }), y && (f = (0, i.jsx)(a.TooltipContainer, {
 className: T.tooltipContainer,
 text: m.Z.Messages.GUEST_MEMBERSHIP_EXPLANATION,
-children: (0, i.jsx)(s.CircleInformationIcon, {
+children: (0, i.jsx)(a.CircleInformationIcon, {
   size: 'md',
   color: 'currentColor',
   className: T.infoIcon
 })
-  })), j ? (f = (0, i.jsx)(o.Z.Channel, {
+  })), j ? (C = (0, i.jsx)(l.Z.Channel, {
 channel: P
   }), N = (0, i.jsxs)('span', {
 className: T.infoTitle,
@@ -98,41 +98,41 @@ children: [
     })
   })
 ]
-  })) : null != v && v >= 5 || null != L && L > 0 ? N = (0, i.jsx)(o.Z.Data, {
+  })) : null != v && v >= 5 || null != L && L > 0 ? N = (0, i.jsx)(l.Z.Data, {
 members: v,
 membersOnline: L
-  }) : D && (N = (0, i.jsx)(o.Z.Channel, {
+  }) : b && (N = (0, i.jsx)(l.Z.Channel, {
 channel: P,
 guild: S
-  })), (0, i.jsxs)(o.Z, {
+  })), (0, i.jsxs)(l.Z, {
 children: [
-  (0, i.jsx)(o.Z.GuildSplash, {
+  (0, i.jsx)(l.Z.GuildSplash, {
     guild: S
   }),
-  (0, i.jsx)(o.Z.Header, {
+  (0, i.jsx)(l.Z.Header, {
     text: G,
-    extra: p
+    extra: f
   }),
-  (0, i.jsxs)(o.Z.Body, {
+  (0, i.jsxs)(l.Z.Body, {
     children: [
       (0, i.jsxs)('div', {
         className: T.headerLine,
         children: [
-          (0, i.jsx)(o.Z.Icon, {
+          (0, i.jsx)(l.Z.Icon, {
             guild: S
           }),
-          (0, i.jsx)(o.Z.Info, {
-            title: f,
-            onClick: b ? k : null,
+          (0, i.jsx)(l.Z.Info, {
+            title: C,
+            onClick: D ? k : null,
             children: N
           })
         ]
       }),
-      (0, i.jsx)(o.Z.Button, {
+      (0, i.jsx)(l.Z.Button, {
         onClick: k,
         submitting: Z,
-        color: o.Z.Button.Colors.GREEN,
-        children: j ? U ? m.Z.Messages.STAGE_CHANNEL_JOIN : m.Z.Messages.INVITE_VOICE_CHANNEL_JOIN : b ? m.Z.Messages.JOINED_GUILD : m.Z.Messages.JOIN_GUILD
+        color: l.Z.Button.Colors.GREEN,
+        children: j ? U ? m.Z.Messages.STAGE_CHANNEL_JOIN : m.Z.Messages.INVITE_VOICE_CHANNEL_JOIN : D ? m.Z.Messages.JOINED_GUILD : m.Z.Messages.JOIN_GUILD
       })
     ]
   }),
@@ -141,11 +141,11 @@ children: [
       (0, i.jsx)('div', {
         className: T.separator
       }),
-      (0, i.jsx)(s.Text, {
+      (0, i.jsx)(a.Text, {
         variant: 'text-sm/normal',
         color: 'header-secondary',
         children: m.Z.Messages.HUB_INVITE_ANOTHER_SCHOOL_LINK.format({
-          onClick: () => (0, s.openModalLazy)(async () => {
+          onClick: () => (0, a.openModalLazy)(async () => {
             let {
               default: e
             } = await Promise.all([

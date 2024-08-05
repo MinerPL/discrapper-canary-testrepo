@@ -1,22 +1,22 @@
 n.d(t, {
   Z: function() {
-return l;
+return s;
   }
 }), n(47120);
 var i = n(470079),
   a = n(846519);
 
-function l(e, t) {
-  let [n, l] = i.useState(!1), s = i.useRef(new a.sW(t, () => l(!1))), r = i.useRef(new a.sW(e, () => l(!0))), o = i.useCallback(() => {
-s.current.cancel(), r.current.cancel();
+function s(e, t) {
+  let [n, s] = i.useState(!1), l = i.useRef(new a.sW(t, () => s(!1))), r = i.useRef(new a.sW(e, () => s(!0))), o = i.useCallback(() => {
+l.current.cancel(), r.current.cancel();
   }, []);
   i.useEffect(() => o, [o]);
   let c = i.useCallback(() => {
-o(), s.current.delay();
+o(), l.current.delay();
   }, [o]);
   return {
 isHovered: n,
-setIsHovered: l,
+setIsHovered: s,
 onMouseEnter: i.useCallback(() => {
   o(), r.current.delay();
 }, [o]),

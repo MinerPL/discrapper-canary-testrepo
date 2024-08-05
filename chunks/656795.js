@@ -12,19 +12,19 @@ function a(e) {
 disabled: t,
 deviceId: n,
 width: a,
-height: o
+height: s
   } = e;
   return t ? (0, r.jsx)('div', {
 className: 'media-engine-video',
 style: {
   width: a,
-  height: o
+  height: s
 }
   }) : (0, r.jsx)(i.Z, {
 streamId: n,
 style: {
   width: a,
-  height: o
+  height: s
 }
   });
 }

@@ -2,8 +2,8 @@ n(47120);
 var r = n(570140),
   i = n(317770),
   a = n(280837),
-  o = n(592125),
-  s = n(914010),
+  s = n(592125),
+  o = n(914010),
   l = n(823379);
 
 function u(e, t, n) {
@@ -28,14 +28,14 @@ super(...e), u(this, 'handleVoiceChannelSelect', e => {
     guildId: n
   } = e;
   if (null != t) {
-    let e = o.Z.getChannel(t);
+    let e = s.Z.getChannel(t);
     if (null == e || e.isGuildStageVoice())
       return;
   }
   this.terminate();
   this.handleDisconnectFromStageChannel(null == t ? null : null != n ? n : null);
 }), u(this, 'handleDisconnectFromStageChannel', e => {
-  let t = s.Z.getGuildId();
+  let t = o.Z.getGuildId();
   (0, a.O)([
     t,
     e

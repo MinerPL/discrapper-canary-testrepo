@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(780384),
+  s = n.n(a),
+  o = n(780384),
   l = n(481060),
   u = n(410030),
   c = n(424218),
@@ -159,14 +159,14 @@ function m(e) {
 children: t,
 className: n,
 tier: i
-  } = e, a = i === _.Eu4.NONE ? 'text-muted' : 'header-primary', s = i === _.Eu4.NONE || null == i ? 'heading-xl/normal' : 'heading-xl/bold';
+  } = e, a = i === _.Eu4.NONE ? 'text-muted' : 'header-primary', o = i === _.Eu4.NONE || null == i ? 'heading-xl/normal' : 'heading-xl/bold';
   return (0, r.jsxs)('th', {
-className: o()(h.columnHeading, n),
+className: s()(h.columnHeading, n),
 scope: 'col',
 children: [
   (0, r.jsx)(l.Heading, {
     color: a,
-    variant: s,
+    variant: o,
     children: t
   }),
   null != i && (0, r.jsx)(l.Text, {
@@ -188,7 +188,7 @@ textVariant: i = 'text-md/bold',
 value: a
   } = e;
   if ('boolean' == typeof a) {
-let e = o()(h.booleanValueIcon, {
+let e = s()(h.booleanValueIcon, {
   [h.booleanValueTrue]: a
 });
 t = a ? (0, r.jsx)(l.CheckmarkLargeIcon, {
@@ -207,7 +207,7 @@ t = (0, r.jsx)(l.Text, {
   children: a
 });
   return (0, r.jsx)('td', {
-className: o()(h.tableCell, n),
+className: s()(h.tableCell, n),
 children: t
   });
 }
@@ -228,7 +228,7 @@ switch (e) {
 }
   }(t);
   return null == n ? null : (0, r.jsx)('div', {
-className: o()(h.recommendedTierHighlight, {
+className: s()(h.recommendedTierHighlight, {
   [h.recommendedTierHighlightTier2]: n === _.Eu4.TIER_2,
   [h.recommendedTierHighlightTier3]: n === _.Eu4.TIER_3
 }),
@@ -311,10 +311,10 @@ children: [
                 className: h.__invalid_tableRow,
                 children: [
                   (0, r.jsx)('th', {
-                    className: o()(h.tableCell, h.tableCellWrapper),
+                    className: s()(h.tableCell, h.tableCellWrapper),
                     scope: 'row',
                     children: (0, r.jsx)(l.Clickable, {
-                      className: o()(h.tableRowHeading, h.tableCell, h.tableCellInner),
+                      className: s()(h.tableRowHeading, h.tableCell, h.tableCellInner),
                       onFocus: c,
                       onBlur: S,
                       onMouseEnter: c,
@@ -326,7 +326,7 @@ children: [
                         position: 'bottom',
                         renderPopout: () => (0, r.jsx)('img', {
                           className: h.perkPreviewImage,
-                          src: (0, s.wj)(t) ? e.getPerkPreviewDarkTheme() : e.getPerkPreviewLightTheme(),
+                          src: (0, o.wj)(t) ? e.getPerkPreviewDarkTheme() : e.getPerkPreviewLightTheme(),
                           alt: ''
                         }),
                         shouldShow: u,

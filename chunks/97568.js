@@ -6,8 +6,8 @@ return N;
 var A = I(735250);
 I(470079);
 var O = I(481060),
-  T = I(621145),
-  S = I(689938),
+  S = I(621145),
+  T = I(689938),
   C = I(233003);
 let N = E => {
   let {
@@ -19,9 +19,9 @@ children: [
   (0, A.jsx)(O.Text, {
     variant: 'eyebrow',
     color: 'text-muted',
-    children: S.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_EVIDENCE_HEADER
+    children: T.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_EVIDENCE_HEADER
   }),
-  (0, A.jsx)(T.Z, {
+  (0, A.jsx)(S.Z, {
     flaggedContent: _
   })
 ]

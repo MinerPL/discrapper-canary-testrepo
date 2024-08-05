@@ -12,9 +12,9 @@ var t = s(735250),
   u = s(596454),
   d = s(225433),
   c = s(727637),
-  I = s(907040),
-  m = s(984933),
-  _ = s(401227),
+  I = s(318766),
+  m = s(907040),
+  _ = s(984933),
   E = s(903749),
   f = s(185923),
   g = s(689938),
@@ -28,17 +28,17 @@ error: i,
 emojiId: T,
 emojiName: v,
 isRequiredField: D = !0,
-shouldUpdateBothEmojiFields: p = !1,
-setEmojiId: x,
+shouldUpdateBothEmojiFields: x = !1,
+setEmojiId: p,
 setEmojiName: C
   } = e, R = (0, E.Z)({
 emojiId: T,
 emojiName: v
-  }), S = (0, o.e7)([m.ZP], () => null != s ? m.ZP.getDefaultChannel(s) : null), j = n.createRef(), h = (0, c.Z)(j), N = () => {
-C(void 0), x(void 0);
+  }), S = (0, o.e7)([_.ZP], () => null != s ? _.ZP.getDefaultChannel(s) : null), j = n.createRef(), h = (0, c.Z)(j), N = () => {
+C(void 0), p(void 0);
   }, U = e => (l, s) => {
 let t = (null == l ? void 0 : l.id) == null;
-N(), t ? C(null == l ? void 0 : l.optionallyDiverseSequence) : (p && C(null == l ? void 0 : l.name), x(null == l ? void 0 : l.id)), s && e();
+N(), t ? C(null == l ? void 0 : l.optionallyDiverseSequence) : (x && C(null == l ? void 0 : l.name), p(null == l ? void 0 : l.id)), s && e();
   }, Z = e => {
 e.stopPropagation(), N();
   };
@@ -54,7 +54,7 @@ children: (0, t.jsx)(r.Popout, {
     let {
       closePopout: l
     } = e;
-    return (0, t.jsx)(I.Z, {
+    return (0, t.jsx)(m.Z, {
       closePopout: l,
       pickerIntention: f.Hz.SOUNDBOARD,
       onNavigateAway: l,
@@ -72,7 +72,7 @@ children: (0, t.jsx)(r.Popout, {
       className: L.emojiInput,
       ref: j,
       children: [
-        (0, t.jsx)(_.Z, {
+        (0, t.jsx)(I.Z, {
           className: L.emojiButton,
           active: s,
           tabIndex: 0,

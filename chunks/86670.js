@@ -1,12 +1,12 @@
 n.d(t, {
   Pv: function() {
-return o;
+return s;
   },
   dI: function() {
 return a;
   },
   gs: function() {
-return s;
+return o;
   }
 });
 var r = n(570140);
@@ -19,7 +19,7 @@ return i.log('database load failed.', e), null;
   }
 }
 
-function o(e, t, n) {
+function s(e, t, n) {
   try {
 return t();
   } catch (t) {
@@ -34,7 +34,7 @@ return i.log(''.concat(e, ': exception thrown, resetting socket.'), t, t.stack),
 }), null;
   }
 }
-async function s(e, t, n) {
+async function o(e, t, n) {
   try {
 return await t();
   } catch (t) {

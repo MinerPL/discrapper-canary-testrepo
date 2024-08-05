@@ -2,9 +2,9 @@ n(47120), n(653041);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(512722),
-  l = n.n(s),
+  s = n.n(a),
+  o = n(512722),
+  l = n.n(o),
   u = n(481060),
   c = n(942389),
   d = n(572004),
@@ -18,15 +18,15 @@ var r = n(735250),
 function I(e) {
   let {
 url: t
-  } = e, [n, a] = i.useState(!1), s = i.useRef(void 0), l = i.useCallback(() => {
+  } = e, [n, a] = i.useState(!1), o = i.useRef(void 0), l = i.useCallback(() => {
 if (!n)
-  (0, d.JG)(t) && a(!0), s.current = setTimeout(() => a(!1), 2000);
+  (0, d.JG)(t) && a(!0), o.current = setTimeout(() => a(!1), 2000);
   }, [
 t,
 n
   ]);
-  return i.useEffect(() => () => clearTimeout(s.current), []), d.wS ? (0, r.jsxs)(u.Clickable, {
-className: o()(m.copyLink, n ? m.copied : null),
+  return i.useEffect(() => () => clearTimeout(o.current), []), d.wS ? (0, r.jsxs)(u.Clickable, {
+className: s()(m.copyLink, n ? m.copied : null),
 onClick: l,
 children: [
   (0, r.jsx)(u.LinkIcon, {
@@ -44,7 +44,7 @@ function T(e) {
 subHead: t,
 buildDetails: n,
 buttonColor: a,
-buttonClick: s,
+buttonClick: o,
 buttonText: l,
 disabled: c = !1,
 submitting: d = !1
@@ -68,8 +68,8 @@ children: [
   (0, r.jsx)(u.Button, {
     submitting: d,
     color: a,
-    onClick: s,
-    className: o()(m.button, c ? m.disabledButtonOverride : null),
+    onClick: o,
+    className: s()(m.button, c ? m.disabledButtonOverride : null),
     size: m.buttonSize,
     disabled: c,
     children: l
@@ -80,7 +80,7 @@ children: [
 t.Z = e => {
   var t, n, a;
   let {
-loading: s = !1,
+loading: o = !1,
 currentOverrides: d,
 linkMeta: g,
 url: S,
@@ -102,7 +102,7 @@ v
   return (0, r.jsxs)('div', {
 className: m.wrapper,
 children: [
-  (t = g, n = S, a = s, (0, r.jsxs)(u.Text, {
+  (t = g, n = S, a = o, (0, r.jsxs)(u.Text, {
     variant: 'text-xs/normal',
     className: m.titleRegion,
     children: [
@@ -133,13 +133,13 @@ children: [
       (0, r.jsx)(c.Z, {
         className: m.icon
       }),
-      s ? (0, r.jsxs)(i.Fragment, {
+      o ? (0, r.jsxs)(i.Fragment, {
         children: [
           (0, r.jsxs)('div', {
             className: m.buildInfo,
             children: [
               (0, r.jsx)('div', {
-                className: o()(m.barLoader, m.barTitle)
+                className: s()(m.barLoader, m.barTitle)
               }),
               (0, r.jsx)('div', {
                 className: m.barLoader
@@ -153,15 +153,15 @@ children: [
       }) : function(e) {
         var t, n;
         let r, i, a, {
-            currentOverrides: o,
-            linkMeta: s,
+            currentOverrides: s,
+            linkMeta: o,
             applyBuildOverride: c,
             clearBuildOverride: d,
             submitting: _
           } = e,
           h = ['discord_web'];
         !E.isPlatformEmbedded && h.push('discord_marketing', 'discord_developers');
-        let m = (0, f.Z)(s, h);
+        let m = (0, f.Z)(o, h);
         if (!m.valid)
           return function(e) {
             return T({
@@ -172,12 +172,12 @@ children: [
               disabled: !0
             });
           }(m.reason);
-        l()(null != s, 'BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved');
+        l()(null != o, 'BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved');
         let {
           discord_web: I,
           discord_developers: g
-        } = s.targetBuildOverride, S = null != I ? I : g;
-        if (l()(null != S, 'BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved'), t = S, null == (n = o) || null == n.discord_web ? 1 : t.id !== n.discord_web.id || t.type !== n.discord_web.type)
+        } = o.targetBuildOverride, S = null != I ? I : g;
+        if (l()(null != S, 'BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved'), t = S, null == (n = s) || null == n.discord_web ? 1 : t.id !== n.discord_web.id || t.type !== n.discord_web.type)
           i = p.Z.Messages.BUILD_OVERRIDE_APPLY, r = c, a = u.Button.Colors.GREEN;
         else
           i = p.Z.Messages.BUILD_OVERRIDE_CLEAR, r = d, a = u.Button.Colors.RED;

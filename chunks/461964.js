@@ -10,8 +10,8 @@ var c = n(735250),
   o = n(721383),
   r = n(153124),
   s = n(63063),
-  u = n(857595),
-  _ = n(981631),
+  _ = n(857595),
+  u = n(981631),
   d = n(689938),
   h = n(642821);
 
@@ -21,7 +21,7 @@ transitionState: t,
 onClose: n
   } = e, f = (0, r.Dt)();
   return l.useEffect(() => {
-u.r_();
+_.r_();
   }, []), (0, c.jsxs)(i.ModalRoot, {
 transitionState: t,
 role: 'alertdialog',
@@ -75,7 +75,7 @@ children: [
       (0, c.jsx)(i.Text, {
         variant: 'text-md/normal',
         children: d.Z.Messages.KEYBOARD_SHORTCUTS_EXPLAINER_HELP_CENTER_LINK.format({
-          link: s.Z.getArticleURL(_.BhN.KEYBOARD_NAVIGATION)
+          link: s.Z.getArticleURL(u.BhN.KEYBOARD_NAVIGATION)
         })
       })
     ]

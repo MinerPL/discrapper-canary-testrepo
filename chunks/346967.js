@@ -1,54 +1,73 @@
 n.d(t, {
   Z: function() {
-return f;
+return C;
   }
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(512722),
-  s = n.n(l),
+  s = n(512722),
+  l = n.n(s),
   r = n(442837),
   o = n(911367),
-  c = n(594174),
-  d = n(380738),
-  u = n(484459),
-  h = n(87728),
-  p = n(792379),
-  m = n(123579),
-  _ = n(402777);
+  c = n(699516),
+  u = n(594174),
+  d = n(453956),
+  h = n(380738),
+  p = n(484459),
+  m = n(87728),
+  _ = n(705816),
+  f = n(792379),
+  E = n(123579),
+  g = n(402777);
 
-function f(e) {
+function C(e) {
   let {
 location: t,
 channel: n,
-...l
+...s
   } = e, {
-botProfilesEnabled: f
-  } = (0, d.J)({
+botProfilesEnabled: C
+  } = (0, h.J)({
 location: t
-  }), E = (0, h.Z)();
+  }), I = (0, m.Z)();
   (0, o.t)();
-  let [C] = n.recipients, g = (0, r.e7)([c.default], () => c.default.getUser(C));
-  return (s()(null != g, 'ProfilePanelExperimentWrapper: user cannot be undefined'), a.useEffect(() => {
-(0, u.W)(g, {
-  withMutualFriends: !g.bot,
+  let [x] = n.recipients, T = (0, r.e7)([u.default], () => u.default.getUser(x));
+  l()(null != T, 'ProfilePanelExperimentWrapper: user cannot be undefined');
+  let N = (0, r.e7)([u.default], () => u.default.getCurrentUser());
+  l()(null != N, 'ProfilePanelExperimentWrapper: currentUser cannot be undefined'), a.useEffect(() => {
+(0, p.W)(T, {
+  withMutualFriends: !T.bot,
   withMutualGuilds: !0,
   channelId: n.id
 });
   }, [
-g,
+T,
 n.id
-  ]), E) ? null : f && g.isNonUserBot() ? (0, i.jsx)(p.Z, {
-user: g,
+  ]);
+  let v = (0, r.e7)([c.Z], () => c.Z.isBlocked(T.id)),
+[S, Z] = a.useState(v),
+A = (0, d.sS)({
+  location: t
+});
+  return (a.useEffect(() => {
+Z(v);
+  }, [v]), I) ? null : S && A ? (0, i.jsx)(_.Z, {
+user: T,
 channel: n,
-...l
-  }) : f || !g.bot ? (0, i.jsx)(_.Z, {
-user: g,
+onViewBlockedProfileClick: () => Z(!1),
+...s
+  }) : C && T.isNonUserBot() ? (0, i.jsx)(f.Z, {
+user: T,
 channel: n,
-...l
-  }) : (0, i.jsx)(m.Z, {
-user: g,
+...s
+  }) : C || !T.bot ? (0, i.jsx)(g.Z, {
+user: T,
+currentUser: N,
 channel: n,
-...l
+...s
+  }) : (0, i.jsx)(E.Z, {
+user: T,
+channel: n,
+...s
   });
 }

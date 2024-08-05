@@ -12,7 +12,7 @@ return u;
 return d;
   },
   g: function() {
-return s;
+return o;
   },
   i2: function() {
 return f;
@@ -27,11 +27,11 @@ return _;
 var r = n(860911),
   i = n(544891),
   a = n(893776),
-  o = n(981631);
+  s = n(981631);
 
-function s(e) {
+function o(e) {
   return i.tn.post({
-url: o.ANM.OAUTH2_WHITELIST_ACCEPT,
+url: s.ANM.OAUTH2_WHITELIST_ACCEPT,
 query: {
   token: e
 },
@@ -44,7 +44,7 @@ authorize: t,
 clientId: n,
 scopes: r,
 responseType: a,
-redirectUri: s,
+redirectUri: o,
 codeChallenge: l,
 codeChallengeMethod: u,
 state: c,
@@ -55,11 +55,11 @@ integrationType: f,
 nonce: h
   } = e;
   return (await i.tn.post({
-url: o.ANM.OAUTH2_AUTHORIZE,
+url: s.ANM.OAUTH2_AUTHORIZE,
 query: {
   client_id: n,
   response_type: a,
-  redirect_uri: s,
+  redirect_uri: o,
   code_challenge: l,
   code_challenge_method: u,
   scope: r.join(' '),
@@ -83,19 +83,19 @@ clientId: t,
 scopes: n,
 responseType: r,
 redirectUri: a,
-codeChallenge: s,
+codeChallenge: o,
 codeChallengeMethod: l,
 state: u,
 integrationType: c,
 nonce: d
   } = e;
   return (await i.tn.get({
-url: o.ANM.OAUTH2_AUTHORIZE,
+url: s.ANM.OAUTH2_AUTHORIZE,
 query: {
   client_id: t,
   response_type: r,
   redirect_uri: a,
-  code_challenge: s,
+  code_challenge: o,
   code_challenge_method: l,
   scope: n.join(' '),
   state: u,
@@ -110,7 +110,7 @@ async function c(e) {
   let {
 body: t
   } = await i.tn.get({
-url: o.ANM.OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS,
+url: s.ANM.OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS,
 query: {
   guild_id: e
 },
@@ -124,7 +124,7 @@ function d(e) {
 }
 async function _(e) {
   return await i.tn.post({
-url: o.ANM.OAUTH2_DEVICE_VERIFY,
+url: s.ANM.OAUTH2_DEVICE_VERIFY,
 body: {
   user_code: e
 }
@@ -132,7 +132,7 @@ body: {
 }
 async function E(e, t) {
   return await i.tn.post({
-url: o.ANM.OAUTH2_DEVICE_FINISH,
+url: s.ANM.OAUTH2_DEVICE_FINISH,
 body: {
   user_code: e,
   result: t
@@ -141,7 +141,7 @@ body: {
 }
 async function f(e, t, n) {
   return await i.tn.post({
-url: o.ANM.OAUTH2_DEVICE_FINISH,
+url: s.ANM.OAUTH2_DEVICE_FINISH,
 body: {
   user_code: e,
   result: 'two_way_link_error',

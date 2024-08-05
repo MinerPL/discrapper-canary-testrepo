@@ -82,8 +82,8 @@ canSetFocus: f = !1
 entityType: j,
 channelId: M,
 description: D,
-name: p,
-image: R,
+name: R,
+image: p,
 scheduledEndTime: V,
 scheduledStartTime: G,
 recurrenceRule: O
@@ -151,7 +151,7 @@ children: [
             },
             placeholder: h.Z.Messages.GUILD_EVENT_CREATE_TOPIC_PLACEHOLDER,
             maxLength: m.p,
-            value: p,
+            value: R,
             autoComplete: 'off',
             inputRef: k
           }),
@@ -221,12 +221,12 @@ children: [
             className: g.addImageHint,
             children: h.Z.Messages.GUILD_EVENT_ADD_IMAGE_SUGGESTION
           }),
-          null != R ? (0, s.jsxs)(s.Fragment, {
+          null != p ? (0, s.jsxs)(s.Fragment, {
             children: [
               (0, s.jsx)(o.Z, {
                 className: g.imagePreview,
                 iconWrapperClassName: g.imagePreviewInner,
-                image: R,
+                image: p,
                 makeURL: e => {
                   if (null == e)
                     return null;

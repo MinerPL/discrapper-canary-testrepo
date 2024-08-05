@@ -1,13 +1,13 @@
 n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(374470),
   o = n(481060),
   c = n(239091),
-  d = n(822951),
-  u = n(933557),
+  u = n(822951),
+  d = n(933557),
   h = n(454585),
   p = n(984370),
   m = n(981631),
@@ -23,22 +23,22 @@ writable: !0
   }) : e[t] = n, e;
 }
 
-function C(e) {
+function g(e) {
   let {
 channel: t,
 onClose: n,
 transitionState: a
-  } = e, l = (0, u.ZP)(t, !0);
+  } = e, s = (0, d.ZP)(t, !0);
   return (0, i.jsx)(o.ModalRoot, {
 transitionState: a,
 'aria-label': _.Z.Messages.FORM_LABEL_CHANNEL_TOPIC,
 children: (0, i.jsx)(o.ModalContent, {
-  children: (0, i.jsx)(d.Z, {
+  children: (0, i.jsx)(u.Z, {
     selectable: !0,
     onClose: n,
     renderHeader: () => (0, i.jsx)(o.Heading, {
       variant: 'heading-lg/semibold',
-      children: l
+      children: s
     }),
     children: (0, i.jsx)(o.Text, {
       selectable: !0,
@@ -53,7 +53,7 @@ children: (0, i.jsx)(o.ModalContent, {
   });
 }
 
-function g(e) {
+function C(e) {
   return e.matches('a') || 'highlight' === e.className || e.className.includes('mention');
 }
 class I extends a.Component {
@@ -65,7 +65,7 @@ return e.isMultiUserDM() || null == e.topic || 0 === e.topic.length ? null : (0,
   children: [
     (0, i.jsx)(p.Z.Divider, {}),
     (0, i.jsxs)('div', {
-      className: s()(f.topic, f.expandable),
+      className: l()(f.topic, f.expandable),
       onMouseDown: this.onMouseDown,
       onMouseMove: this.onMouseMove,
       onMouseUp: this.onMouseUp,
@@ -90,13 +90,13 @@ return e.isMultiUserDM() || null == e.topic || 0 === e.topic.length ? null : (0,
 super(...e), E(this, '_mouseDown', !1), E(this, '_mouseUp', !1), E(this, 'handleOpenTopic', e => {
   let t = e.target;
   if ((0, r.k)(t)) {
-    if (g(t))
+    if (C(t))
       return;
     let e = t.parentNode;
-    if ((0, r.k)(e) && g(e))
+    if ((0, r.k)(e) && C(e))
       return;
   }
-  (0, o.openModal)(e => (0, i.jsx)(C, {
+  (0, o.openModal)(e => (0, i.jsx)(g, {
     ...e,
     ...this.props
   }));

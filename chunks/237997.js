@@ -1,8 +1,8 @@
 n(47120), n(411104);
 var r, i = n(442837),
   a = n(433517),
-  o = n(570140),
-  s = n(284737),
+  s = n(570140),
+  o = n(284737),
   l = n(490029),
   u = n(48481),
   c = n(131704),
@@ -155,7 +155,7 @@ function k() {
 return !1;
   let e = v === (0, I.QF)(),
 t = C.has((0, I.QF)()) || M.size > 0;
-  e && t ? (0, s.T_)(window, !0) : (0, s.T_)(window, !1);
+  e && t ? (0, o.T_)(window, !0) : (0, o.T_)(window, !1);
 }
 
 function B() {
@@ -173,8 +173,8 @@ switch (e.type) {
     break;
   case g.BmY.DISPATCH:
     null != e.payloads && (L = !0, e.payloads.forEach(e => function(e) {
-      var t, n, r, i, a, s;
-      if ('OVERLAY_INITIALIZE' === e.type && (null == (t = e).version && 1 === I.Tq || t.version === I.Tq || (o.Z.dispatch({
+      var t, n, r, i, a, o;
+      if ('OVERLAY_INITIALIZE' === e.type && (null == (t = e).version && 1 === I.Tq || t.version === I.Tq || (s.Z.dispatch({
           type: 'OVERLAY_INCOMPATIBLE_APP'
         }), (0, l.zP)(), 0)))
         b = !0;
@@ -189,22 +189,22 @@ switch (e.type) {
             let t = (0, c.kt)(e.channel);
             if (!c.AW.has(t.type))
               break;
-            o.Z.dispatch({
+            s.Z.dispatch({
               type: e.type,
               channel: t
             });
             break;
           case 'CHANNEL_UPDATES':
-            o.Z.dispatch({
+            s.Z.dispatch({
               type: e.type,
               channels: e.channels.map(e => (0, c.kt)(e))
             });
             break;
           case 'CONNECTION_OPEN_SUPPLEMENTAL':
-            e.lazyPrivateChannels = (null !== (n = e.lazyPrivateChannels) && void 0 !== n ? n : []).map(e => (0, c.kt)(e)), o.Z.dispatch(e);
+            e.lazyPrivateChannels = (null !== (n = e.lazyPrivateChannels) && void 0 !== n ? n : []).map(e => (0, c.kt)(e)), s.Z.dispatch(e);
             break;
           case 'THREAD_LIST_SYNC':
-            o.Z.dispatch({
+            s.Z.dispatch({
               ...e,
               threads: e.threads.map(e => (0, c.kt)(e))
             });
@@ -212,13 +212,13 @@ switch (e.type) {
           case 'GUILD_CREATE':
             let l = e => (0, c.kt)(e),
               d = e.guild;
-            d.channels = null !== (a = null === (r = d.channels) || void 0 === r ? void 0 : r.map(l)) && void 0 !== a ? a : null, d.threads = null === (i = d.threads) || void 0 === i ? void 0 : i.map(l), null != d.channelUpdates && (d.channelUpdates.writes = null === (s = d.channelUpdates.writes) || void 0 === s ? void 0 : s.map(l)), o.Z.dispatch({
+            d.channels = null !== (a = null === (r = d.channels) || void 0 === r ? void 0 : r.map(l)) && void 0 !== a ? a : null, d.threads = null === (i = d.threads) || void 0 === i ? void 0 : i.map(l), null != d.channelUpdates && (d.channelUpdates.writes = null === (o = d.channelUpdates.writes) || void 0 === o ? void 0 : o.map(l)), s.Z.dispatch({
               type: 'GUILD_CREATE',
               guild: d
             });
             break;
           case 'USER_SETTINGS_PROTO_UPDATE':
-            o.Z.dispatch({
+            s.Z.dispatch({
               ...e,
               settings: {
                 proto: (0, u.kI)(e.settings.type, e.settings.proto),
@@ -227,7 +227,7 @@ switch (e.type) {
             });
             break;
           default:
-            o.Z.dispatch(e);
+            s.Z.dispatch(e);
         }
       }
     }(e)), L = !1);
@@ -345,7 +345,7 @@ return null == e || null == t ? {} : {
   }
 };
   }
-]), t.Z = new V(o.Z, {
+]), t.Z = new V(s.Z, {
   LOGOUT: function(e) {
 !e.isSwitchingAccount && (O = {});
   },
@@ -356,7 +356,7 @@ e.userId in O && delete O[e.userId];
 C.clear();
   },
   OVERLAY_START_SESSION: function() {
-o.Z.addInterceptor(e => {
+s.Z.addInterceptor(e => {
   if (L || !G.has(e.type))
     return !1;
   if ('CHANNEL_SELECT' === e.type) {

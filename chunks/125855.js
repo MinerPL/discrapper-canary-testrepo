@@ -5,8 +5,8 @@ return u;
 });
 var i = n(735250);
 n(470079);
-var s = n(6025),
-  a = n(433355),
+var a = n(6025),
+  s = n(433355),
   r = n(626135),
   l = n(585483),
   o = n(545724),
@@ -28,9 +28,9 @@ isFocused: !1,
 channel: u,
 user: _,
 onClick: e => {
-  e.stopPropagation(), s.Z.openPrivateChannelAsSidebar({
+  e.stopPropagation(), a.Z.openPrivateChannelAsSidebar({
     channelId: u.id,
-    baseChannelId: a.uZ,
+    baseChannelId: s.uZ,
     hasSingleMessageRequest: h
   }), r.default.track(d.rMx.MESSAGE_REQUEST_PREVIEW_VIEWED, {
     is_spam: !0,

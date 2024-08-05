@@ -1,41 +1,41 @@
-t.d(n, {
+l.d(n, {
   Z: function() {
-return s;
+return u;
   }
-}), t(47120);
-var l = t(735250);
-t(470079);
-var i = t(442837),
-  a = t(481060),
-  r = t(699516),
-  u = t(689938);
+}), l(47120);
+var t = l(735250);
+l(470079);
+var r = l(442837),
+  i = l(481060),
+  a = l(699516),
+  s = l(689938);
 
-function s(e) {
+function u(e) {
   let {
 user: n,
-onAction: s
-  } = e, d = n.id, [o, c] = (0, i.Wu)([r.Z], () => {
+onAction: u
+  } = e, d = n.id, [o, c] = (0, r.Wu)([a.Z], () => {
 var e;
 return [
-  r.Z.isFriend(d),
-  null !== (e = r.Z.getNickname(d)) && void 0 !== e ? e : null
+  a.Z.isFriend(d),
+  null !== (e = a.Z.getNickname(d)) && void 0 !== e ? e : null
 ];
   }, [d]);
   if (!o)
 return null;
-  let Z = null == c ? u.Z.Messages.ADD_FRIEND_NICKNAME : u.Z.Messages.CHANGE_FRIEND_NICKNAME;
-  return (0, l.jsx)(a.MenuItem, {
+  let Z = null == c ? s.Z.Messages.ADD_FRIEND_NICKNAME : s.Z.Messages.CHANGE_FRIEND_NICKNAME;
+  return (0, t.jsx)(i.MenuItem, {
 id: null == c ? 'add-friend-nickname' : 'edit-friend-nickname',
 label: Z,
 action: () => {
-  null == s || s(), (0, a.openModalLazy)(async () => {
+  null == u || u(), (0, i.openModalLazy)(async () => {
     let {
       default: e
-    } = await t.e('25070').then(t.bind(t, 670794));
-    return t => (0, l.jsx)(e, {
+    } = await l.e('25070').then(l.bind(l, 670794));
+    return l => (0, t.jsx)(e, {
       user: n,
       nickname: c,
-      ...t
+      ...l
     });
   });
 }

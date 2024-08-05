@@ -8,8 +8,8 @@ return p;
 }), n(47120), n(724458);
 var r, i = n(735250),
   a = n(470079),
-  o = n(392711),
-  s = n.n(o),
+  s = n(392711),
+  o = n.n(s),
   l = n(748780),
   u = n(692547),
   c = n(560149);
@@ -47,7 +47,7 @@ return (0, i.jsx)('div', {
   }
   constructor(...e) {
 super(...e), d(this, 'state', {
-  backgroundColor: s().sample(_)
+  backgroundColor: o().sample(_)
 });
   }
 }
@@ -114,7 +114,7 @@ super(e), d(this, 'animateSlide', () => {
     easing: l.Z.Easing.linear
   }).start(this.animateSlide);
 });
-let t = Array(10).fill(null).map(() => s().random(40, 150));
+let t = Array(10).fill(null).map(() => o().random(40, 150));
 this.state = {
   blocks: t,
   height: 2 * t.reduce((e, t) => e + t + 12, 12),

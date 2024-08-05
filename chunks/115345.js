@@ -21,8 +21,8 @@ return G;
 var r = n(470079),
   i = n(392711),
   a = n.n(i),
-  o = n(442837),
-  s = n(433517),
+  s = n(442837),
+  o = n(433517),
   l = n(570140),
   u = n(668781),
   c = n(92114),
@@ -51,33 +51,33 @@ var r = n(470079),
   P = n(689938);
 
 function U(e, t) {
-  let [n, i] = r.useState(D.nf), [s, l] = r.useState({});
+  let [n, i] = r.useState(D.nf), [o, l] = r.useState({});
   (0, E.D)();
-  let u = (0, o.Wu)([m.Z], () => Object.values(m.Z.getGuilds())),
+  let u = (0, s.Wu)([m.Z], () => Object.values(m.Z.getGuilds())),
 c = r.useCallback(() => {
   let r = {};
   for (let i of u)
     r[i.id] = function(e, t, n, r, i) {
       var a;
-      let [o, s, l] = f.Z.hasConsented(L.pjP.PERSONALIZATION) ? (0, C.q)(e, t, n, r, !0) : (0, C.A)(e, n), u = null !== (a = n.filter(t => t.guild_id === e.id)[0]) && void 0 !== a ? a : {}, c = (0, R.Z)(e, null != i ? i : o, u, r, t);
+      let [s, o, l] = f.Z.hasConsented(L.pjP.PERSONALIZATION) ? (0, C.q)(e, t, n, r, !0) : (0, C.A)(e, n), u = null !== (a = n.filter(t => t.guild_id === e.id)[0]) && void 0 !== a ? a : {}, c = (0, R.Z)(e, null != i ? i : s, u, r, t);
       return {
         guildId: e.id,
-        mode: o,
+        mode: s,
         debugReason: l,
         actions: c,
         overrideMode: i,
         messagePain: u.messages === D.XR.High,
-        visitsALot: s,
+        visitsALot: o,
         muted: T.ZP.isMuted(e.id) && !T.ZP.isTemporarilyMuted(e.id)
       };
-    }(i, n, e, t, s[i.id]);
+    }(i, n, e, t, o[i.id]);
   return r;
 }, [
   u,
   n,
   e,
   t,
-  s
+  o
 ]),
 [d, _] = r.useState(() => c());
   return r.useEffect(() => _(c()), [c]), {
@@ -99,11 +99,11 @@ getDebug: () => function(e, t) {
       return e + Number(null !== (n = t.num_month_opens) && void 0 !== n ? n : 0);
     }, 0),
     i = I.ZP.getFlattenedGuildIds(),
-    o = a().sortBy(Object.values(e), e => {
+    s = a().sortBy(Object.values(e), e => {
       let t = i.indexOf(e.guildId);
       return -1 === t ? i.length : t;
     }),
-    s = [
+    o = [
       [
         'Use Grey Dot',
         new Set([D.AR.UseGreyDot])
@@ -113,7 +113,7 @@ getDebug: () => function(e, t) {
         new Set([D.AR.KeepAsIs])
       ]
     ].map(e => {
-      let [t, n] = e, r = o.filter(e => {
+      let [t, n] = e, r = s.filter(e => {
         var t;
         return n.has(null !== (t = e.overrideMode) && void 0 !== t ? t : e.mode);
       }).map(e => {
@@ -126,7 +126,7 @@ getDebug: () => function(e, t) {
       });
       return '# '.concat(t, '\n\n').concat(r.join('\n\n'));
     });
-  return '\n# Basic Stats\n- Total channel visits (yr): '.concat(n, '\n- Total channel visits (month): ').concat(r, '\n\n').concat(s.join('\n\n'));
+  return '\n# Basic Stats\n- Total channel visits (yr): '.concat(n, '\n- Total channel visits (month): ').concat(r, '\n\n').concat(o.join('\n\n'));
 }(Object.values(d), t)
   };
 }
@@ -155,7 +155,7 @@ num_unread_guids_after: e.filter(e => p.default.hasUnread(e.id)).length
 }
 
 function G(e) {
-  let [t, n] = r.useState(!1), [i, a] = r.useState(!1), o = r.useCallback(async t => {
+  let [t, n] = r.useState(!1), [i, a] = r.useState(!1), s = r.useCallback(async t => {
 if (i)
   throw Error('Already submitted notifications migration');
 n(!0);
@@ -171,7 +171,7 @@ e
   return {
 submitting: t,
 submitted: i,
-saveSettings: o
+saveSettings: s
   };
 }
 async function k(e, t) {
@@ -280,7 +280,7 @@ return new Promise(e => {
   }() && (0, O.dt)(e): (0, O.$U)('Backup from '.concat(new Date().toLocaleDateString()));
 }
 async function H() {
-  s.K.set('turnedOffNewNotifications', !0), g.default.track(L.rMx.NOTIFICATION_MIGRATION_OPTOUT, {
+  o.K.set('turnedOffNewNotifications', !0), g.default.track(L.rMx.NOTIFICATION_MIGRATION_OPTOUT, {
 num_guilds_with_new_setting: Object.values(m.Z.getGuilds()).filter(e => T.ZP.resolveGuildUnreadSetting(e) === b.i.ONLY_MENTIONS).length
   });
   let e = await (0, O.Tn)(),
@@ -303,16 +303,16 @@ function Z(e) {
   if (null == e)
 return [];
   let i = a().keyBy(null !== (t = e.voice_joins) && void 0 !== t ? t : [], 'channel_id'),
-o = a().keyBy(null !== (n = e.message_sends) && void 0 !== n ? n : [], 'channel_id');
+s = a().keyBy(null !== (n = e.message_sends) && void 0 !== n ? n : [], 'channel_id');
   return (null !== (r = e.channel_opens) && void 0 !== r ? r : []).map(e => {
-var t, n, r, a, s, l, u, c, d, _, E;
+var t, n, r, a, o, l, u, c, d, _, E;
 let f = null !== (t = i[e.channel_id]) && void 0 !== t ? t : {},
-  h = null !== (n = o[e.channel_id]) && void 0 !== n ? n : {};
+  h = null !== (n = s[e.channel_id]) && void 0 !== n ? n : {};
 return {
   channel_id: e.channel_id,
   num_year_opens: Number(null !== (r = e.year_opens) && void 0 !== r ? r : 0),
   num_month_opens: Number(null !== (a = e.one_month_opens) && void 0 !== a ? a : 0),
-  num_three_month_opens: Number(null !== (s = e.three_month_opens) && void 0 !== s ? s : 0),
+  num_three_month_opens: Number(null !== (o = e.three_month_opens) && void 0 !== o ? o : 0),
   num_six_month_opens: Number(null !== (l = e.six_month_opens) && void 0 !== l ? l : 0),
   num_messages: Number(null !== (u = null == h ? void 0 : h.num_messages) && void 0 !== u ? u : 0),
   num_year_voice_joins: Number(null !== (c = null == f ? void 0 : f.year_opens) && void 0 !== c ? c : 0),

@@ -21,23 +21,23 @@ return _;
 return I;
   },
   kG: function() {
-return o;
+return s;
   },
   lS: function() {
 return d;
   }
 });
-var r, i, a, o, s = n(726542),
+var r, i, a, s, o = n(726542),
   l = n(358085),
   u = n(981631);
 let c = 'spotify',
   d = 'spotify:',
-  _ = s.Z.get(u.ABu.SPOTIFY).name;
+  _ = o.Z.get(u.ABu.SPOTIFY).name;
 
 function E(e) {
   return null != e && e.startsWith(d);
 }
-(r = a || (a = {})).TRACK = 'track', r.ARTIST = 'artist', r.ALBUM = 'album', r.PLAYLIST = 'playlist', r.EPISODE = 'episode', r.SHOW = 'show', (i = o || (o = {})).USER_ACTIVITY_PLAY = 'user_activity_play', i.USER_ACTIVITY_SYNC = 'user_activity_sync', i.EMBED_SYNC = 'embed_sync';
+(r = a || (a = {})).TRACK = 'track', r.ARTIST = 'artist', r.ALBUM = 'album', r.PLAYLIST = 'playlist', r.EPISODE = 'episode', r.SHOW = 'show', (i = s || (s = {})).USER_ACTIVITY_PLAY = 'user_activity_play', i.USER_ACTIVITY_SYNC = 'user_activity_sync', i.EMBED_SYNC = 'embed_sync';
 let f = [
 'open.spotify.com',
 'www.spotify.com'

@@ -5,8 +5,8 @@ return E;
   }
 });
 var a = n(213919),
-  o = n(570140),
-  s = n(147913),
+  s = n(570140),
+  o = n(147913),
   l = n(594174),
   u = n(626135),
   c = n(726745),
@@ -20,25 +20,25 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class E extends s.Z {
+class E extends o.Z {
   _initialize() {
-o.Z.subscribe('CONNECTION_OPEN', () => this.handleConnectionOpen()), this.handleConnectionOpen();
+s.Z.subscribe('CONNECTION_OPEN', () => this.handleConnectionOpen()), this.handleConnectionOpen();
   }
   _terminate() {
-o.Z.unsubscribe('CONNECTION_OPEN', () => this.handleConnectionOpen());
+s.Z.unsubscribe('CONNECTION_OPEN', () => this.handleConnectionOpen());
   }
   constructor({
 onSwitchStart: e,
 onSwitchSuccess: t,
 onSwitchError: n,
-onTokenSet: o
+onTokenSet: s
   }) {
 super(), _(this, 'onSwitchStart', void 0), _(this, 'onSwitchSuccess', void 0), _(this, 'onSwitchError', void 0), _(this, 'onTokenSet', void 0), _(this, 'actions', {
   LOGOUT: e => this.handleLogout(e)
 }), _(this, 'handleConnectionOpen', () => {
   var e, t, n;
-  let o = l.default.getCurrentUser();
-  if (null == o)
+  let s = l.default.getCurrentUser();
+  if (null == s)
     return;
   if (null != i) {
     if (i !== r) {
@@ -51,14 +51,14 @@ super(), _(this, 'onSwitchStart', void 0), _(this, 'onSwitchSuccess', void 0), _
       u.default.track(d.rMx.MULTI_ACCOUNT_SWITCH_SUCCESS, {
         from_user_id: i,
         linked_user_ids: e
-      }), null === (t = this.onSwitchSuccess) || void 0 === t || t.call(this, o);
+      }), null === (t = this.onSwitchSuccess) || void 0 === t || t.call(this, s);
     } else
-      u.default.track(d.rMx.MULTI_ACCOUNT_SWITCH_FAILURE), null === (n = this.onSwitchError) || void 0 === n || n.call(this, o);
+      u.default.track(d.rMx.MULTI_ACCOUNT_SWITCH_FAILURE), null === (n = this.onSwitchError) || void 0 === n || n.call(this, s);
     i = null;
   }
-  r = o.id;
-  let s = a.getToken();
-  null != s && '' !== s && a.setToken(s, o.id), null === (e = this.onTokenSet) || void 0 === e || e.call(this, o);
+  r = s.id;
+  let o = a.getToken();
+  null != o && '' !== o && a.setToken(o, s.id), null === (e = this.onTokenSet) || void 0 === e || e.call(this, s);
 }), _(this, 'handleLogout', e => {
   if (e.isSwitchingAccount) {
     var t;
@@ -66,6 +66,6 @@ super(), _(this, 'onSwitchStart', void 0), _(this, 'onSwitchSuccess', void 0), _
   } else
     a.removeToken(r);
   r = null;
-}), this.onSwitchStart = e, this.onSwitchSuccess = t, this.onSwitchError = n, this.onTokenSet = o;
+}), this.onSwitchStart = e, this.onSwitchSuccess = t, this.onSwitchError = n, this.onTokenSet = s;
   }
 }

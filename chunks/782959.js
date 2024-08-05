@@ -5,8 +5,8 @@ return h;
 });
 var i = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(367907),
+var a = n(481060),
+  s = n(367907),
   r = n(970731),
   l = n(810090),
   o = n(626135),
@@ -21,13 +21,13 @@ guildId: t,
 markAsDismissed: h
   } = e, E = (0, i.jsxs)(i.Fragment, {
 children: [
-  (0, i.jsx)(s.Text, {
+  (0, i.jsx)(a.Text, {
     color: 'always-white',
     variant: 'text-sm/normal',
     className: _.upsellBody,
     children: u.Z.Messages.MEDIA_CHANNEL_UPSELL_BODY
   }),
-  (0, i.jsx)(s.Text, {
+  (0, i.jsx)(a.Text, {
     color: 'always-white',
     variant: 'text-sm/normal',
     children: u.Z.Messages.MEDIA_CHANNEL_LEARN_MORE.format({
@@ -48,8 +48,8 @@ asset: (0, i.jsx)(l.Z, {
 buttonCTA: u.Z.Messages.MEDIA_CHANNEL_UPSELL_CREATE_NOW_CTA,
 onClick: () => {
   o.default.track(d.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, {
-    ...(0, a.hH)(t)
-  }), (0, s.openModalLazy)(async () => {
+    ...(0, s.hH)(t)
+  }), (0, a.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.all([

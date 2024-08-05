@@ -1,45 +1,45 @@
 s.r(t), s.d(t, {
   AddPaymentModalOld: function() {
-return K;
+return q;
   },
   default: function() {
-return Q;
+return V;
   }
 }), s(411104), s(47120);
-var n, a, i = s(735250),
-  r = s(470079),
-  o = s(160612),
-  l = s(120356),
-  c = s.n(l),
-  d = s(512722),
-  _ = s.n(d),
-  E = s(442837),
-  u = s(481060),
-  T = s(570140),
-  I = s(355467),
+var n, a, r = s(735250),
+  i = s(470079),
+  l = s(160612),
+  o = s(120356),
+  d = s.n(o),
+  h = s(512722),
+  p = s.n(h),
+  u = s(442837),
+  c = s(481060),
+  y = s(570140),
+  m = s(355467),
   S = s(873115),
-  N = s(976255),
-  C = s(598),
-  m = s(409813),
+  C = s(976255),
+  g = s(598),
+  _ = s(409813),
   A = s(3409),
-  h = s(351402),
-  g = s(975060),
-  O = s(505649),
-  p = s(285952),
-  R = s(358085),
-  x = s(622999),
-  M = s(462566),
-  D = s(801937),
-  f = s(282164),
-  P = s(738342),
-  L = s(228666),
-  Z = s(581813),
-  b = s(981631),
-  v = s(689938),
+  f = s(351402),
+  P = s(975060),
+  E = s(505649),
+  N = s(285952),
+  B = s(358085),
+  M = s(622999),
+  T = s(462566),
+  x = s(801937),
+  b = s(282164),
+  R = s(738342),
+  Z = s(228666),
+  k = s(581813),
+  O = s(981631),
+  I = s(689938),
   j = s(605280),
-  B = s(483085);
+  v = s(483085);
 
-function U(e, t, s) {
+function D(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
 value: s,
 enumerable: !0,
@@ -48,43 +48,43 @@ writable: !0
   }) : e[t] = s, e;
 }
 (a = n || (n = {})).PAYMENT_TYPE = 'payment_type', a.CARD_INFO = 'card_info', a.SOFORT_INFO = 'sofort_info', a.ADDRESS = 'billing_address', a.PAYMENT_REQUEST_INFO = 'payment_request_info', a.PAYPAL = 'paypal', a.PRZELEWY24_INFO = 'przelewy24_info';
-let G = [
+let Y = [
 'payment_type',
 'card_info',
 'billing_address'
   ],
-  F = [
+  w = [
 'payment_type',
 'sofort_info',
 'billing_address'
   ],
-  y = [
+  L = [
 'payment_type',
 'paypal',
 'billing_address'
   ],
-  V = [
+  F = [
 'payment_type',
 'payment_request_info'
   ],
-  Y = [
+  H = [
 'payment_type',
 'billing_address'
   ],
-  w = [
+  Q = [
 'payment_type',
 'przelewy24_info',
 'billing_address'
   ],
-  k = [
+  G = [
 'payment_type',
 'billing_address'
   ];
 
-function H(e) {
+function U(e) {
   return e.hasCardError() ? 'card_info' : e.hasAddressError() ? 'billing_address' : null;
 }
-class W extends r.PureComponent {
+class z extends i.PureComponent {
   static getDerivedStateFromProps(e, t) {
 let {
   error: s
@@ -95,7 +95,7 @@ if (null == s)
   return null == n ? null : {
     errorStep: null
   };
-let a = H(s);
+let a = U(s);
 return null != a && a !== t.errorStep ? {
   step: a,
   errorStep: a
@@ -103,13 +103,13 @@ return null != a && a !== t.errorStep ? {
   }
   async componentDidMount() {
 S.eI();
-let e = await (0, x.d2)();
+let e = await (0, M.d2)();
 this.setState({
   stripe: e
 });
   }
   componentWillUnmount() {
-T.Z.wait(() => S.gy()), (0, N.tt)();
+y.Z.wait(() => S.gy()), (0, C.tt)();
   }
   get stepData() {
 let {
@@ -121,25 +121,25 @@ return t;
   }
   getSteps(e) {
 switch (null != e ? e : this.state.type) {
-  case b.HeQ.PAYMENT_REQUEST:
-    return V;
-  case b.HeQ.PAYPAL:
-    return y;
-  case b.HeQ.SOFORT:
+  case O.HeQ.PAYMENT_REQUEST:
     return F;
-  case b.HeQ.GIROPAY:
-    return Y;
-  case b.HeQ.PRZELEWY24:
+  case O.HeQ.PAYPAL:
+    return L;
+  case O.HeQ.SOFORT:
     return w;
-  case b.HeQ.PAYSAFE_CARD:
-  case b.HeQ.GCASH:
-  case b.HeQ.GRABPAY_MY:
-  case b.HeQ.MOMO_WALLET:
-  case b.HeQ.KAKAOPAY:
-  case b.HeQ.GOPAY_WALLET:
-    return k;
-  default:
+  case O.HeQ.GIROPAY:
+    return H;
+  case O.HeQ.PRZELEWY24:
+    return Q;
+  case O.HeQ.PAYSAFE_CARD:
+  case O.HeQ.GCASH:
+  case O.HeQ.GRABPAY_MY:
+  case O.HeQ.MOMO_WALLET:
+  case O.HeQ.KAKAOPAY:
+  case O.HeQ.GOPAY_WALLET:
     return G;
+  default:
+    return Y;
 }
   }
   getNextStep() {
@@ -168,23 +168,23 @@ S.i0();
 let {
   error: e
 } = this.props;
-return null == e || null != H(e) ? null : (0, i.jsx)(u.FormErrorBlock, {
+return null == e || null != U(e) ? null : (0, r.jsx)(c.FormErrorBlock, {
   className: j.errorBlock,
   children: e.message
 });
   }
   renderFooter() {
 let e = this.stepData;
-return null == e.renderNextButton ? null : (0, i.jsx)(u.ModalFooter, {
-  children: (0, i.jsxs)(p.Z, {
-    justify: p.Z.Justify.BETWEEN,
+return null == e.renderNextButton ? null : (0, r.jsx)(c.ModalFooter, {
+  children: (0, r.jsxs)(N.Z, {
+    justify: N.Z.Justify.BETWEEN,
     children: [
-      (0, i.jsx)(u.Button, {
+      (0, r.jsx)(c.Button, {
         onClick: this.handleBackClick,
-        color: u.Button.Colors.PRIMARY,
-        look: u.Button.Looks.LINK,
-        size: u.Button.Sizes.MIN,
-        children: v.Z.Messages.BACK
+        color: c.Button.Colors.PRIMARY,
+        look: c.Button.Looks.LINK,
+        size: c.Button.Sizes.MIN,
+        children: I.Z.Messages.BACK
       }),
       e.renderNextButton()
     ]
@@ -202,69 +202,69 @@ let {
   label: function(e) {
     switch (e) {
       case 'payment_type':
-        return v.Z.Messages.PAYMENT_SOURCE_TYPE;
+        return I.Z.Messages.PAYMENT_SOURCE_TYPE;
       case 'payment_request_info':
-        return v.Z.Messages.BILLING_STEP_PAYMENT_INFO;
+        return I.Z.Messages.BILLING_STEP_PAYMENT_INFO;
       case 'card_info':
-        return v.Z.Messages.PAYMENT_SOURCE_INFORMATION;
+        return I.Z.Messages.PAYMENT_SOURCE_INFORMATION;
       case 'billing_address':
-        return v.Z.Messages.BILLING_ADDRESS;
+        return I.Z.Messages.BILLING_ADDRESS;
       case 'paypal':
-        return v.Z.Messages.PAYMENT_SOURCE_PAYPAL_DETAILS;
+        return I.Z.Messages.PAYMENT_SOURCE_PAYPAL_DETAILS;
       case 'sofort_info':
-        return v.Z.Messages.PAYMENT_SOURCE_SOFORT_INFO;
+        return I.Z.Messages.PAYMENT_SOURCE_SOFORT_INFO;
       case 'przelewy24_info':
-        return v.Z.Messages.PAYMENT_SOURCE_PRZELEWY24_INFO;
+        return I.Z.Messages.PAYMENT_SOURCE_PRZELEWY24_INFO;
     }
   }(e)
 }));
-return (0, i.jsx)(o.Elements, {
-  options: b.OBo,
+return (0, r.jsx)(l.Elements, {
+  options: O.OBo,
   stripe: this.state.stripe,
-  children: (0, i.jsx)(u.ModalRoot, {
+  children: (0, r.jsx)(c.ModalRoot, {
     transitionState: s,
-    size: u.ModalSize.SMALL,
+    size: c.ModalSize.SMALL,
     className: j.modal,
-    'aria-label': v.Z.Messages.PAYMENT_SOURCES_ADD,
-    children: (0, i.jsxs)('form', {
+    'aria-label': I.Z.Messages.PAYMENT_SOURCES_ADD,
+    children: (0, r.jsxs)('form', {
       className: j.form,
       onSubmit: this.preventDefault,
       children: [
-        (0, i.jsxs)(u.ModalHeader, {
-          direction: p.Z.Direction.VERTICAL,
-          align: p.Z.Align.STRETCH,
+        (0, r.jsxs)(c.ModalHeader, {
+          direction: N.Z.Direction.VERTICAL,
+          align: N.Z.Align.STRETCH,
           separator: !1,
           children: [
-            (0, i.jsxs)(p.Z, {
+            (0, r.jsxs)(N.Z, {
               className: j.modalTitle,
-              justify: p.Z.Justify.BETWEEN,
-              align: p.Z.Align.CENTER,
+              justify: N.Z.Justify.BETWEEN,
+              align: N.Z.Align.CENTER,
               children: [
-                (0, i.jsx)(u.FormTitle, {
-                  tag: u.FormTitleTags.H4,
-                  children: v.Z.Messages.PAYMENT_SOURCES_ADD
+                (0, r.jsx)(c.FormTitle, {
+                  tag: c.FormTitleTags.H4,
+                  children: I.Z.Messages.PAYMENT_SOURCES_ADD
                 }),
-                (0, i.jsx)(u.ModalCloseButton, {
+                (0, r.jsx)(c.ModalCloseButton, {
                   onClick: this.handleClose
                 })
               ]
             }),
             this.renderGenericError(),
-            (0, i.jsx)(u.Breadcrumbs, {
+            (0, r.jsx)(c.Breadcrumbs, {
               breadcrumbs: n,
               activeId: e
             })
           ]
         }),
-        (0, i.jsx)('div', {
+        (0, r.jsx)('div', {
           className: j.divider
         }),
-        (0, i.jsx)(u.Sequencer, {
+        (0, r.jsx)(c.Sequencer, {
           fillParent: !0,
           className: j.sequencer,
           step: e,
           steps: t,
-          children: (0, i.jsx)(u.ModalContent, {
+          children: (0, r.jsx)(c.ModalContent, {
             className: j.content,
             children: this.stepData.renderBody()
           })
@@ -276,10 +276,10 @@ return (0, i.jsx)(o.Elements, {
 });
   }
   constructor(...e) {
-super(...e), U(this, 'state', {
-  type: b.HeQ.CARD,
+super(...e), D(this, 'state', {
+  type: O.HeQ.CARD,
   step: 'payment_type',
-  steps: G,
+  steps: Y,
   errorStep: null,
   stripeToken: null,
   stripe: null,
@@ -287,14 +287,14 @@ super(...e), U(this, 'state', {
   paymentDetails: {
     p24Bank: ''
   }
-}), U(this, 'STEPS_DATA', {
+}), D(this, 'STEPS_DATA', {
   przelewy24_info: {
     renderBody: () => {
       let {
         error: e,
         billingAddressInfo: t
       } = this.props;
-      return (0, i.jsx)(P.w, {
+      return (0, r.jsx)(R.w, {
         billingAddressInfo: t,
         onDetailsChange: this.handlePaymentDetailsChange,
         onP24BankChange: this.handleP24BankChange,
@@ -307,11 +307,11 @@ super(...e), U(this, 'state', {
       let {
         billingAddressInfo: t
       } = this.props, s = null === (e = this.state.paymentDetails) || void 0 === e ? void 0 : e.p24Bank;
-      return (0, i.jsx)(u.Button, {
+      return (0, r.jsx)(c.Button, {
         type: 'submit',
         disabled: '' === t.name || '' === t.email || '' === s,
         onClick: this.handleNextClick,
-        children: v.Z.Messages.NEXT
+        children: I.Z.Messages.NEXT
       });
     }
   },
@@ -321,7 +321,7 @@ super(...e), U(this, 'state', {
         error: e,
         billingAddressInfo: t
       } = this.props;
-      return (0, i.jsx)(P.Z, {
+      return (0, r.jsx)(R.Z, {
         billingAddressInfo: t,
         onChange: this.handlePaymentDetailsChange,
         error: e
@@ -331,17 +331,17 @@ super(...e), U(this, 'state', {
       let {
         billingAddressInfo: e
       } = this.props;
-      return (0, i.jsx)(u.Button, {
+      return (0, r.jsx)(c.Button, {
         type: 'submit',
         disabled: '' === e.name || '' === e.email,
         onClick: this.handleNextClick,
-        children: v.Z.Messages.NEXT
+        children: I.Z.Messages.NEXT
       });
     }
   },
   payment_type: {
-    renderBody: () => (0, i.jsx)(D.Z, {
-      allowStripeRequestPayments: !R.isPlatformEmbedded,
+    renderBody: () => (0, r.jsx)(x.Z, {
+      allowStripeRequestPayments: !B.isPlatformEmbedded,
       onChooseType: this.handleChooseType,
       onStripePaymentMethodReceived: this.handleStripePaymentMethod
     })
@@ -352,7 +352,7 @@ super(...e), U(this, 'state', {
         stripePaymentMethod: e,
         submitting: t
       } = this.props;
-      return (0, i.jsx)(Z.k, {
+      return (0, r.jsx)(k.k, {
         stripePaymentMethod: e,
         submitting: t
       });
@@ -361,9 +361,9 @@ super(...e), U(this, 'state', {
       let {
         submitting: e
       } = this.props;
-      return (0, i.jsx)(u.Button, {
+      return (0, r.jsx)(c.Button, {
         submitting: e,
-        look: u.Button.Looks.OUTLINED,
+        look: c.Button.Looks.OUTLINED,
         disabled: !0
       });
     }
@@ -372,14 +372,14 @@ super(...e), U(this, 'state', {
     renderBody: () => {
       let {
         error: e
-      } = this.props, t = null != e && (null == e.code || 'card_info' === H(e));
-      return (0, i.jsxs)(i.Fragment, {
+      } = this.props, t = null != e && (null == e.code || 'card_info' === U(e));
+      return (0, r.jsxs)(r.Fragment, {
         children: [
-          t ? (0, i.jsx)(u.FormErrorBlock, {
+          t ? (0, r.jsx)(c.FormErrorBlock, {
             className: j.errorBlock,
-            children: v.Z.Messages.BILLING_ERROR_SECTION_CARD
+            children: I.Z.Messages.BILLING_ERROR_SECTION_CARD
           }) : null,
-          (0, i.jsx)(M.Z, {
+          (0, r.jsx)(T.Z, {
             onCardInfoChange: this.handleCardInfoChange,
             error: t ? e : null
           })
@@ -392,19 +392,19 @@ super(...e), U(this, 'state', {
       } = this.props, {
         tokenSubmitting: t
       } = this.state;
-      return (0, i.jsx)(o.ElementsConsumer, {
+      return (0, r.jsx)(l.ElementsConsumer, {
         children: s => {
           let {
             elements: n
           } = s;
-          return (0, i.jsx)(u.Button, {
+          return (0, r.jsx)(c.Button, {
             disabled: !e,
             onClick: () => {
               this.createToken(n);
             },
             type: 'submit',
             submitting: t,
-            children: v.Z.Messages.NEXT
+            children: I.Z.Messages.NEXT
           });
         }
       });
@@ -418,7 +418,7 @@ super(...e), U(this, 'state', {
       } = this.props, {
         type: s
       } = this.state;
-      return (0, i.jsx)(L.P, {
+      return (0, r.jsx)(Z.P, {
         billingAddressInfo: e,
         billingError: t,
         onBillingAddressChange: this.handleBillingAddressChange,
@@ -431,32 +431,32 @@ super(...e), U(this, 'state', {
         isBillingAddressInfoValid: t,
         isAuthenticating: s
       } = this.props;
-      return (0, i.jsx)(u.Button, {
+      return (0, r.jsx)(c.Button, {
         type: 'submit',
         submitting: e,
         disabled: !t || s,
         onClick: this.handleSave,
-        children: v.Z.Messages.SAVE
+        children: I.Z.Messages.SAVE
       });
     }
   },
   paypal: {
-    renderBody: () => (0, i.jsx)(f.Z, {}),
+    renderBody: () => (0, r.jsx)(b.Z, {}),
     renderNextButton: () => {
       let {
         submitting: e,
         braintreeNonce: t,
         braintreeEmail: s
       } = this.props, n = null != s && null != t;
-      return (0, i.jsx)(u.Button, {
+      return (0, r.jsx)(c.Button, {
         submitting: e,
-        color: n ? u.Button.Colors.BRAND : u.Button.Colors.PRIMARY,
+        color: n ? c.Button.Colors.BRAND : c.Button.Colors.PRIMARY,
         onClick: n ? this.handleNextClick : this.handleReopenPaypal,
-        children: n ? v.Z.Messages.NEXT : v.Z.Messages.PAYMENT_SOURCE_CONNECT_TO_PAYPAL
+        children: n ? I.Z.Messages.NEXT : I.Z.Messages.PAYMENT_SOURCE_CONNECT_TO_PAYPAL
       });
     }
   }
-}), U(this, 'handleChooseType', e => {
+}), D(this, 'handleChooseType', e => {
   let t = this.getSteps(e),
     s = this.getNextStep(t);
   null != s && this.setState({
@@ -464,60 +464,60 @@ super(...e), U(this, 'state', {
     steps: t,
     step: s
   });
-}), U(this, 'handleCardInfoChange', (e, t) => {
-  T.Z.wait(() => (0, N.sn)(e, t));
-}), U(this, 'handlePaymentDetailsChange', e => {
+}), D(this, 'handleCardInfoChange', (e, t) => {
+  y.Z.wait(() => (0, C.sn)(e, t));
+}), D(this, 'handlePaymentDetailsChange', e => {
   let {
     billingAddressInfo: t
   } = this.props;
-  t.name = e.name, T.Z.wait(() => (0, N.Ow)({
+  t.name = e.name, y.Z.wait(() => (0, C.Ow)({
     ...t,
     ...e
   }, !1));
-}), U(this, 'handleP24BankChange', e => {
+}), D(this, 'handleP24BankChange', e => {
   this.setState({
     paymentDetails: {
       p24Bank: e
     }
   });
-}), U(this, 'handleBillingAddressChange', (e, t) => {
+}), D(this, 'handleBillingAddressChange', (e, t) => {
   let {
     billingAddressInfo: s
   } = this.props;
-  T.Z.wait(() => (0, N.Ow)({
+  y.Z.wait(() => (0, C.Ow)({
     ...s,
     ...e
   }, t));
-}), U(this, 'handleBackClick', () => {
+}), D(this, 'handleBackClick', () => {
   let e = this.getPreviousStep();
   if (null != e) {
-    'payment_type' === e && (0, N.fw)();
+    'payment_type' === e && (0, C.fw)();
     this.setState({
       step: e
     });
   }
-}), U(this, 'handleNextClick', () => {
+}), D(this, 'handleNextClick', () => {
   let e = this.getNextStep();
   null != e && this.setState({
     step: e
   });
-}), U(this, 'handleClose', () => {
-  (0, N.fw)(), this.props.onClose();
-}), U(this, 'handleStripePaymentMethod', e => {
-  if ((0, N.Xt)(e), null == e) {
+}), D(this, 'handleClose', () => {
+  (0, C.fw)(), this.props.onClose();
+}), D(this, 'handleStripePaymentMethod', e => {
+  if ((0, C.Xt)(e), null == e) {
     this.handleBackClick();
     return;
   }
   this.handleStripePaymentRequestSave(e);
-}), U(this, 'handleStripePaymentRequestSave', async e => {
+}), D(this, 'handleStripePaymentRequestSave', async e => {
   try {
-    let t = await I.i6(e, void 0, this.props.analyticsLocation),
+    let t = await m.i6(e, void 0, this.props.analyticsLocation),
       {
         onAddPaymentSource: s
       } = this.props;
     null == s || s(t), this.handleClose();
   } catch (e) {}
-}), U(this, 'createToken', async e => {
+}), D(this, 'createToken', async e => {
   let {
     stripe: t
   } = this.state;
@@ -525,7 +525,7 @@ super(...e), U(this, 'state', {
     tokenSubmitting: !0
   });
   try {
-    let s = await I.qv(t, e);
+    let s = await m.qv(t, e);
     this.setState({
       stripeToken: s
     }), this.handleNextClick();
@@ -534,28 +534,28 @@ super(...e), U(this, 'state', {
       tokenSubmitting: !1
     });
   }
-}), U(this, 'handleSave', () => {
+}), D(this, 'handleSave', () => {
   let {
     type: e
   } = this.state;
   switch (e) {
-    case b.HeQ.PAYPAL:
+    case O.HeQ.PAYPAL:
       return this.handlePaypalSave();
-    case b.HeQ.CARD:
+    case O.HeQ.CARD:
       return this.handleCardSave();
-    case b.HeQ.SOFORT:
+    case O.HeQ.SOFORT:
       return this.handleSofortSave();
-    case b.HeQ.GIROPAY:
+    case O.HeQ.GIROPAY:
       return this.handleGiropaySave();
-    case b.HeQ.PRZELEWY24:
+    case O.HeQ.PRZELEWY24:
       return this.handlePrzelewy24Save();
-    case b.HeQ.PAYSAFE_CARD:
-    case b.HeQ.GRABPAY_MY:
+    case O.HeQ.PAYSAFE_CARD:
+    case O.HeQ.GRABPAY_MY:
       return this.handleAdyenPrepaidPaymentMethodSave(e);
     default:
-      I.SQ('user used a unsupported payment type: '.concat(e));
+      m.SQ('user used a unsupported payment type: '.concat(e));
   }
-}), U(this, 'handlePrzelewy24Save', async () => {
+}), D(this, 'handlePrzelewy24Save', async () => {
   let {
     billingAddressInfo: e,
     isBillingAddressInfoValid: t,
@@ -563,14 +563,14 @@ super(...e), U(this, 'state', {
     analyticsLocation: n
   } = this.props, {
     stripe: a,
-    paymentDetails: i
+    paymentDetails: r
   } = this.state;
   if (!!t)
     try {
-      let t = await I.pF(a, i, e, n);
+      let t = await m.pF(a, r, e, n);
       null == s || s(t), this.handleClose();
     } catch (e) {}
-}), U(this, 'handleSofortSave', async () => {
+}), D(this, 'handleSofortSave', async () => {
   let {
     billingAddressInfo: e,
     isBillingAddressInfoValid: t,
@@ -581,10 +581,10 @@ super(...e), U(this, 'state', {
   } = this.state;
   if (!!t)
     try {
-      let t = await I.av(a, e, n);
+      let t = await m.av(a, e, n);
       null == s || s(t), this.handleClose();
     } catch (e) {}
-}), U(this, 'handleCardSave', async () => {
+}), D(this, 'handleCardSave', async () => {
   let {
     billingAddressInfo: e,
     isCreditCardInfoValid: t,
@@ -592,15 +592,15 @@ super(...e), U(this, 'state', {
     onAddPaymentSource: n,
     analyticsLocation: a
   } = this.props, {
-    stripe: i,
-    stripeToken: r
+    stripe: r,
+    stripeToken: i
   } = this.state;
   if (!!t && !!s)
     try {
-      let t = await I.f0(i, r, e, a);
+      let t = await m.f0(r, i, e, a);
       null == n || n(t), this.handleClose();
     } catch (e) {}
-}), U(this, 'handlePaypalSave', async () => {
+}), D(this, 'handlePaypalSave', async () => {
   let {
     braintreeEmail: e,
     braintreeNonce: t,
@@ -610,10 +610,10 @@ super(...e), U(this, 'state', {
   } = this.props;
   if (null != e && null != t)
     try {
-      let e = await I.lP(t, s, a);
+      let e = await m.lP(t, s, a);
       null == n || n(e), this.handleClose();
     } catch (e) {}
-}), U(this, 'handleAdyenPrepaidPaymentMethodSave', async e => {
+}), D(this, 'handleAdyenPrepaidPaymentMethodSave', async e => {
   let {
     billingAddressInfo: t,
     isBillingAddressInfoValid: s,
@@ -622,10 +622,10 @@ super(...e), U(this, 'state', {
   } = this.props;
   if (!!s)
     try {
-      let s = await I.sF(t, e, a);
+      let s = await m.sF(t, e, a);
       null == n || n(s), this.handleClose();
     } catch (e) {}
-}), U(this, 'handleGiropaySave', async () => {
+}), D(this, 'handleGiropaySave', async () => {
   let {
     billingAddressInfo: e,
     isBillingAddressInfoValid: t,
@@ -636,56 +636,57 @@ super(...e), U(this, 'state', {
   } = this.state;
   if (!!t)
     try {
-      let t = await I.GV(a, e, b.HeQ.GIROPAY, n);
+      let t = await m.GV(a, e, O.HeQ.GIROPAY, n);
       null == s || s(t), this.handleClose();
     } catch (e) {}
 });
   }
 }
-let K = E.ZP.connectStores([
-  g.Z,
-  h.Z,
-  O.Z
+let q = u.ZP.connectStores([
+  P.Z,
+  f.Z,
+  E.Z
 ], () => ({
-  braintreeEmail: g.Z.braintreeEmail,
-  braintreeNonce: g.Z.braintreeNonce,
-  stripePaymentMethod: g.Z.stripePaymentMethod,
-  creditCardInfo: g.Z.getCreditCardInfo(),
-  isCreditCardInfoValid: g.Z.isCardInfoValid,
-  billingAddressInfo: g.Z.getBillingAddressInfo(),
-  isBillingAddressInfoValid: g.Z.isBillingAddressInfoValid,
-  error: g.Z.error,
-  popupCallbackCalled: g.Z.popupCallbackCalled,
-  submitting: h.Z.isBusy,
-  isAuthenticating: O.Z.isAwaitingAuthentication
-}))(W);
+  braintreeEmail: P.Z.braintreeEmail,
+  braintreeNonce: P.Z.braintreeNonce,
+  stripePaymentMethod: P.Z.stripePaymentMethod,
+  creditCardInfo: P.Z.getCreditCardInfo(),
+  isCreditCardInfoValid: P.Z.isCardInfoValid,
+  billingAddressInfo: P.Z.getBillingAddressInfo(),
+  isBillingAddressInfoValid: P.Z.isBillingAddressInfoValid,
+  error: P.Z.error,
+  popupCallbackCalled: P.Z.popupCallbackCalled,
+  submitting: f.Z.isBusy,
+  isAuthenticating: E.Z.isAwaitingAuthentication
+}))(z);
 
-function z(e) {
+function W(e) {
   let {
 transitionState: t,
 analyticsLocation: s,
 onClose: n,
-onAddPaymentSource: a
-  } = e, r = (0, A.fL)(), o = (0, A.vP)({
-paymentModalArgs: r,
-initialStep: m.h8.PAYMENT_TYPE,
+onAddPaymentSource: a,
+initialStep: i = _.h8.PAYMENT_TYPE
+  } = e, l = (0, A.fL)(), o = (0, A.vP)({
+paymentModalArgs: l,
+initialStep: i,
 prependSteps: [],
 appendSteps: [],
 onReturn: () => {
   n();
 },
 onComplete: (e, t) => {
-  _()(null != t, 'paymentSource missing'), null == a || a(t), n();
+  p()(null != t, 'paymentSource missing'), null == a || a(t), n();
 },
 onStepChange: () => {},
-header: (0, i.jsxs)('div', {
-  className: c()(j.modalTitle, B.flex, B.justifyBetween, B.alignCenter),
+header: (0, r.jsxs)('div', {
+  className: d()(j.modalTitle, v.flex, v.justifyBetween, v.alignCenter),
   children: [
-    (0, i.jsx)(u.FormTitle, {
-      tag: u.FormTitleTags.H4,
-      children: v.Z.Messages.PAYMENT_SOURCES_ADD
+    (0, r.jsx)(c.FormTitle, {
+      tag: c.FormTitleTags.H4,
+      children: I.Z.Messages.PAYMENT_SOURCES_ADD
     }),
-    (0, i.jsx)(u.ModalCloseButton, {
+    (0, r.jsx)(c.ModalCloseButton, {
       onClick: n
     })
   ]
@@ -693,12 +694,12 @@ header: (0, i.jsxs)('div', {
 analyticsLocation: s,
 hideBreadcrumbs: !0
   });
-  return (0, i.jsx)(u.ModalRoot, {
+  return (0, r.jsx)(c.ModalRoot, {
 transitionState: t,
-size: u.ModalSize.SMALL,
+size: c.ModalSize.SMALL,
 className: j.modal,
-'aria-label': v.Z.Messages.PAYMENT_SOURCES_ADD,
-children: (0, i.jsx)('form', {
+'aria-label': I.Z.Messages.PAYMENT_SOURCES_ADD,
+children: (0, r.jsx)('form', {
   className: j.form,
   onSubmit: function(e) {
     e.preventDefault();
@@ -708,12 +709,12 @@ children: (0, i.jsx)('form', {
   });
 }
 
-function Q(e) {
-  return (0, i.jsx)(C.PaymentContextProvider, {
+function V(e) {
+  return (0, r.jsx)(g.PaymentContextProvider, {
 activeSubscription: null,
 stepConfigs: [],
 skuIDs: [],
-children: (0, i.jsx)(z, {
+children: (0, r.jsx)(W, {
   ...e
 })
   });

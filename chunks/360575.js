@@ -11,9 +11,9 @@ var a = i.getContext('2d');
 return a ? (a.fillStyle = e, a.fillRect(0, 0, i.width, i.height), a.fillStyle = t, a.fillRect(0, 0, n, n), a.translate(n, n), a.fillRect(0, 0, n, n), i.toDataURL()) : null;
   };
 t.get = function(e, t, i, a) {
-  var o = e + '-' + t + '-' + i + (a ? '-server' : '');
-  if (n[o])
-return n[o];
-  var s = r(e, t, i, a);
-  return n[o] = s, s;
+  var s = e + '-' + t + '-' + i + (a ? '-server' : '');
+  if (n[s])
+return n[s];
+  var o = r(e, t, i, a);
+  return n[s] = o, o;
 };

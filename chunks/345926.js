@@ -9,9 +9,9 @@ var r = n(99047),
 function a(e) {
   let t = (0, r.d)(e),
 [n, a] = (0, i.useState)(null),
-[o, s] = (0, i.useState)([]),
+[s, o] = (0, i.useState)([]),
 l = () => {
-  s([]), t.close();
+  o([]), t.close();
 };
   return {
 focusStrategy: n,
@@ -25,15 +25,15 @@ toggle(e = null) {
 close() {
   l();
 },
-UNSTABLE_expandedKeysStack: o,
+UNSTABLE_expandedKeysStack: s,
 UNSTABLE_openSubmenu: (e, t) => {
-  s(n => t > n.length ? n : [
+  o(n => t > n.length ? n : [
     ...n.slice(0, t),
     e
   ]);
 },
 UNSTABLE_closeSubmenu: (e, t) => {
-  s(n => n[t] === e ? n.slice(0, t) : n);
+  o(n => n[t] === e ? n.slice(0, t) : n);
 }
   };
 }

@@ -20,42 +20,42 @@ function a(e) {
     i = () => t,
     a = (e, r = i, a = Object.is) => {
       console.warn('[DEPRECATED] Please use `subscribeWithSelector` middleware');
-      let o = r(t);
+      let s = r(t);
 
-      function s() {
+      function o() {
         let n = r(t);
-        if (!a(o, n)) {
-          let t = o;
-          e(o = n, t);
+        if (!a(s, n)) {
+          let t = s;
+          e(s = n, t);
         }
       }
-      return n.add(s), () => n.delete(s);
+      return n.add(o), () => n.delete(o);
     },
-    o = {
+    s = {
       setState: r,
       getState: i,
       subscribe: (e, t, r) => t || r ? a(e, t, r) : (n.add(e), () => n.delete(e)),
       destroy: () => n.clear()
     };
-  return t = e(r, i, o), o;
+  return t = e(r, i, s), s;
 }(e) : e,
 n = (e = t.getState, n = Object.is) => {
   let a;
-  let [, o] = (0, r.useReducer)(e => e + 1, 0), s = t.getState(), l = (0, r.useRef)(s), u = (0, r.useRef)(e), c = (0, r.useRef)(n), d = (0, r.useRef)(!1), _ = (0, r.useRef)();
-  void 0 === _.current && (_.current = e(s));
+  let [, s] = (0, r.useReducer)(e => e + 1, 0), o = t.getState(), l = (0, r.useRef)(o), u = (0, r.useRef)(e), c = (0, r.useRef)(n), d = (0, r.useRef)(!1), _ = (0, r.useRef)();
+  void 0 === _.current && (_.current = e(o));
   let E = !1;
-  (l.current !== s || u.current !== e || c.current !== n || d.current) && (a = e(s), E = !n(_.current, a)), i(() => {
-    E && (_.current = a), l.current = s, u.current = e, c.current = n, d.current = !1;
+  (l.current !== o || u.current !== e || c.current !== n || d.current) && (a = e(o), E = !n(_.current, a)), i(() => {
+    E && (_.current = a), l.current = o, u.current = e, c.current = n, d.current = !1;
   });
-  let f = (0, r.useRef)(s);
+  let f = (0, r.useRef)(o);
   i(() => {
     let e = () => {
         try {
           let e = t.getState(),
             n = u.current(e);
-          !c.current(_.current, n) && (l.current = e, _.current = n, o());
+          !c.current(_.current, n) && (l.current = e, _.current = n, s());
         } catch (e) {
-          d.current = !0, o();
+          d.current = !0, s();
         }
       },
       n = t.subscribe(e);

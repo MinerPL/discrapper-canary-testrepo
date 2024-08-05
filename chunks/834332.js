@@ -2,8 +2,8 @@ n(47120);
 var r = n(275726),
   i = n(904245),
   a = n(147913),
-  o = n(314897),
-  s = n(592125),
+  s = n(314897),
+  o = n(592125),
   l = n(375954),
   u = n(496675),
   c = n(944486),
@@ -23,8 +23,8 @@ t.forEach(e => {
     suppress: a,
     requestToSpeakTimestamp: h
   } = e;
-  if (c.Z.getVoiceChannelId() === t && !!a && null != t && n !== o.default.getId()) {
-    if (u.Z.can(_.yP, s.Z.getChannel(t))) {
+  if (c.Z.getVoiceChannelId() === t && !!a && null != t && n !== s.default.getId()) {
+    if (u.Z.can(_.yP, o.Z.getChannel(t))) {
       if (null != h) {
         let e = d.default.getUser(n);
         null != e && (0, E.U)(t, e, h);

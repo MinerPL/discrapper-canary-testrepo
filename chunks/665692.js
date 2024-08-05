@@ -9,10 +9,10 @@ return a;
 return r;
   },
   a4: function() {
-return o;
+return s;
   },
   jp: function() {
-return s;
+return o;
   },
   zy: function() {
 return i;
@@ -21,6 +21,6 @@ return i;
 let r = '@',
   i = '#',
   a = ':',
-  o = '+:',
-  s = ':',
+  s = '+:',
+  o = ':',
   l = '/';

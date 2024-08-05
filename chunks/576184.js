@@ -9,21 +9,21 @@ var o = r(735250),
   d = r(361207),
   w = r(954824),
   l = r(981631),
-  p = r(689938),
-  m = r(299891);
+  m = r(689938),
+  p = r(299891);
 let f = [{
   id: 'discord',
-  getName: () => p.Z.Messages.DESKTOP_APP,
+  getName: () => m.Z.Messages.DESKTOP_APP,
   url: (0, d.t3)()
 },
 {
   id: 'chrome',
-  getName: () => p.Z.Messages.BROWSER_CHROME,
+  getName: () => m.Z.Messages.BROWSER_CHROME,
   url: 'https://www.google.com/chrome/browser/desktop/'
 },
 {
   id: 'firefox',
-  getName: () => p.Z.Messages.BROWSER_FIREFOX,
+  getName: () => m.Z.Messages.BROWSER_FIREFOX,
   url: 'https://www.mozilla.org/en-US/firefox/new/?scene=2'
 }
   ],
@@ -41,21 +41,21 @@ let {
   url: t
 } = this.props.browser;
 return e = null != t ? (0, o.jsx)(n.Anchor, {
-  className: m.btn,
+  className: p.btn,
   href: t,
-  children: p.Z.Messages.DOWNLOAD
+  children: m.Z.Messages.DOWNLOAD
 }) : (0, o.jsx)(i.rU, {
-  className: m.btn,
+  className: p.btn,
   to: l.Z5c.APPS,
-  children: p.Z.Messages.DOWNLOAD
+  children: m.Z.Messages.DOWNLOAD
 }), (0, o.jsxs)('li', {
-  className: m.browserItem,
+  className: p.browserItem,
   children: [
     (0, o.jsx)('div', {
-      className: a()(m.browserItemText, m.browser, m[h[s]])
+      className: a()(p.browserItemText, p.browser, p[h[s]])
     }),
     (0, o.jsx)('div', {
-      className: m.browserItemText,
+      className: p.browserItemText,
       children: r()
     }),
     e
@@ -74,20 +74,20 @@ let e = f.map(e => (0, o.jsx)(x, {
   browser: e
 }, e.id));
 return (0, o.jsx)('div', {
-  className: m.unsupportedBrowser,
+  className: p.unsupportedBrowser,
   children: (0, o.jsxs)('div', {
-    className: m.wrap,
+    className: p.wrap,
     children: [
       (0, o.jsx)(n.H, {
-        className: m.title,
-        children: p.Z.Messages.UNSUPPORTED_BROWSER_TITLE
+        className: p.title,
+        children: m.Z.Messages.UNSUPPORTED_BROWSER_TITLE
       }),
       (0, o.jsx)('p', {
-        className: m.message,
-        children: p.Z.Messages.UNSUPPORTED_BROWSER_BODY
+        className: p.message,
+        children: m.Z.Messages.UNSUPPORTED_BROWSER_BODY
       }),
       (0, o.jsx)('ul', {
-        className: m.browserList,
+        className: p.browserList,
         children: e
       })
     ]

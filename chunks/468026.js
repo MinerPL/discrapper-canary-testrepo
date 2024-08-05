@@ -3,8 +3,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(693789),
-  s = n(1561),
+  s = n(693789),
+  o = n(1561),
   l = n(512983),
   u = n(466377),
   c = n(993365),
@@ -27,23 +27,23 @@ title: v,
 transitionState: O,
 titleClassName: R
   } = e;
-  return null != h && '' !== h && (t = (0, r.jsx)(o.zx, {
+  return null != h && '' !== h && (t = (0, r.jsx)(s.zx, {
 type: 'button',
-size: o.zx.Sizes.LARGE,
-color: o.zx.Colors.PRIMARY,
+size: s.zx.Sizes.LARGE,
+color: s.zx.Colors.PRIMARY,
 onClick: () => {
   null == S || S(), null == g || g();
 },
 className: E.secondaryButton,
 children: h
-  })), null != I && '' !== I && (n = (0, r.jsx)(o.zx, {
+  })), null != I && '' !== I && (n = (0, r.jsx)(s.zx, {
 type: 'submit',
 color: m,
-size: o.zx.Sizes.LARGE,
+size: s.zx.Sizes.LARGE,
 className: a()(E.primaryButton, null != t ? E.gutter : null),
 autoFocus: !0,
 children: I
-  })), null != T && '' !== T && (i = (0, r.jsx)(s.P, {
+  })), null != T && '' !== T && (i = (0, r.jsx)(o.P, {
 onClick: () => {
   null == S || S(), null == N || N();
 },

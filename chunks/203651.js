@@ -8,8 +8,8 @@ r[n] = e[n];
 }
 'undefined' != typeof window ? r = window : 'undefined' == typeof self ? (console.warn('Using browser-only version of superagent in non-browser environment'), r = void 0) : r = self;
 let a = n(606419),
-  o = n(164390),
-  s = n(339768),
+  s = n(164390),
+  o = n(339768),
   l = n(615252),
   u = n(517024),
   c = u.isObject,
@@ -42,7 +42,7 @@ _(e, n) && function e(t, n, r) {
       return;
     }
     if (Array.isArray(r)) {
-      var a, o = function(e, t) {
+      var a, s = function(e, t) {
         var n = 'undefined' != typeof Symbol && e[Symbol.iterator] || e['@@iterator'];
         if (!n) {
           if (Array.isArray(e) || (n = function(e, t) {
@@ -77,7 +77,7 @@ _(e, n) && function e(t, n, r) {
           }
           throw TypeError('Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
         }
-        var o, s = !0,
+        var s, o = !0,
           l = !1;
         return {
           s: function() {
@@ -85,30 +85,30 @@ _(e, n) && function e(t, n, r) {
           },
           n: function() {
             var e = n.next();
-            return s = e.done, e;
+            return o = e.done, e;
           },
           e: function(e) {
-            l = !0, o = e;
+            l = !0, s = e;
           },
           f: function() {
             try {
-              !s && null != n.return && n.return();
+              !o && null != n.return && n.return();
             } finally {
               if (l)
-                throw o;
+                throw s;
             }
           }
         };
       }(r);
       try {
-        for (o.s(); !(a = o.n()).done;) {
+        for (s.s(); !(a = s.n()).done;) {
           let r = a.value;
           e(t, n, r);
         }
       } catch (e) {
-        o.e(e);
+        s.e(e);
       } finally {
-        o.f();
+        s.f();
       }
     } else if (c(r))
       for (let i in r)
@@ -137,8 +137,8 @@ p.serializeObject = I, p.parseString = T, p.types = {
   form: 'application/x-www-form-urlencoded',
   'form-data': 'application/x-www-form-urlencoded'
 }, p.serialize = {
-  'application/x-www-form-urlencoded': s.stringify,
-  'application/json': o
+  'application/x-www-form-urlencoded': o.stringify,
+  'application/json': s
 }, p.parse = {
   'application/x-www-form-urlencoded': T,
   'application/json': JSON.parse
@@ -154,12 +154,12 @@ function S(e) {
   1223 === t && (t = 204), this._setStatusProperties(t), this.headers = function(e) {
 let t, n, r, i;
 let a = e.split(/\r?\n/),
-  o = {};
-for (let e = 0, s = a.length; e < s; ++e) {
+  s = {};
+for (let e = 0, o = a.length; e < o; ++e) {
   if (-1 !== (t = (n = a[e]).indexOf(':')))
-    r = n.slice(0, t).toLowerCase(), i = m(n.slice(t + 1)), o[r] = i;
+    r = n.slice(0, t).toLowerCase(), i = m(n.slice(t + 1)), s[r] = i;
 }
-return o;
+return s;
   }(this.xhr.getAllResponseHeaders()), this.header = this.headers, this.header['content-type'] = this.xhr.getResponseHeader('content-type'), this._setHeaderProperties(this.header), null === this.text && e._responseType ? this.body = this.xhr.response : this.body = 'HEAD' === this.req.method ? null : this._parseBody(this.text ? this.text : this.xhr.response);
 }
 

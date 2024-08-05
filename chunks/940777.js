@@ -55,9 +55,9 @@ function O() {
 })),
 D = (0, o.e7)([E.Z], () => E.Z.getChannelId(A.I_8)),
 U = (0, o.e7)([I.Z], () => I.Z.getChannel(D)),
-w = (0, g.Z)(e => e.guildId) === A.I_8,
+G = (0, g.Z)(e => e.guildId) === A.I_8,
 {
-  badge: G,
+  badge: w,
   unread: k
 } = (0, Z.Z)(j),
 B = function(e) {
@@ -95,36 +95,36 @@ B = function(e) {
     activity: _
   });
 }(j),
-V = G > 0 ? (0, m.N)(G) : null,
-H = l.useCallback(() => {
+H = w > 0 ? (0, m.N)(w) : null,
+V = l.useCallback(() => {
   r();
 }, [r]);
   return (0, i.jsxs)(_.H, {
 children: [
   (0, i.jsx)(p.Z, {
-    selected: w,
+    selected: G,
     hovered: O,
     unread: k && !P,
     className: M.pill
   }),
   (0, i.jsx)(L.Z, {
-    onShow: H,
+    onShow: V,
     children: (0, i.jsx)(T.S, {
       children: (0, i.jsx)(c.BlobMask, {
-        selected: w || O,
+        selected: G || O,
         upperBadge: B,
-        lowerBadge: V,
+        lowerBadge: H,
         children: (0, i.jsx)(c.NavItem, {
           ...e,
           ariaLabel: b.Z.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
             guildName: b.Z.Messages.FAVORITES_GUILD_NAME,
-            mentions: G
+            mentions: w
           }),
           to: {
             pathname: A.Z5c.CHANNEL(A.I_8, D),
             state: R
           },
-          selected: w || O,
+          selected: G || O,
           onMouseEnter: () => y(!0),
           onMouseLeave: () => y(!1),
           onMouseDown: function() {

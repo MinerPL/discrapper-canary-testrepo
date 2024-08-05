@@ -4,9 +4,9 @@ return R;
   }
 }), n(47120);
 var r, i, a = n(735250),
-  o = n(470079),
-  s = n(120356),
-  l = n.n(s),
+  s = n(470079),
+  o = n(120356),
+  l = n.n(o),
   u = n(96355),
   c = n(47759),
   d = n.n(c),
@@ -48,7 +48,7 @@ mass: 1
   N = (null === (r = window.SVGPathElement) || void 0 === r ? void 0 : r.prototype.getTotalLength) != null ? (0, u.interpolate)('M48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24Z', 'M0 24C0 16.5449 0 12.8174 1.21793 9.87706C2.84183 5.95662 5.95662 2.84183 9.87706 1.21793C12.8174 0 16.5449 0 24 0C31.4551 0 35.1826 0 38.1229 1.21793C42.0434 2.84183 45.1582 5.95662 46.7821 9.87706C48 12.8174 48 16.5449 48 24C48 31.4551 48 35.1826 46.7821 38.1229C45.1582 42.0434 42.0434 45.1582 38.1229 46.7821C35.1826 48 31.4551 48 24 48C16.5449 48 12.8174 48 9.87706 46.7821C5.95662 45.1582 2.84183 42.0434 1.21793 38.1229C0 35.1826 0 31.4551 0 24Z', {
 maxSegmentLength: 1.5
   }) : e => ''.concat(e);
-class v extends o.Component {
+class v extends s.Component {
   componentDidMount() {
 this.forceUpdate();
   }
@@ -90,30 +90,30 @@ highlight: i
   } = e;
   return t || null != n || null != r || !!i;
 }
-class R extends(i = o.Component) {
+class R extends(i = s.Component) {
   static getDerivedStateFromProps(e, t) {
 let {
   hasRenderedBadge: n,
   upperBadgeMask: r,
   lowerBadgeMask: i,
   borderRadiusMask: a,
-  renderComplex: o
+  renderComplex: s
 } = t, {
-  upperBadge: s,
+  upperBadge: o,
   lowerBadge: l
 } = e, u = !1;
-return (null != s && null == r || null != l && null == i) && (u = !0, n = !0, r = new _.Controller({
+return (null != o && null == r || null != l && null == i) && (u = !0, n = !0, r = new _.Controller({
   spring: 0
 }), i = new _.Controller({
   spring: 0
 })), O(e) && null == a && (u = !0, a = new _.Controller({
   spring: 0
-})), !o && O(e) && (u = !0, o = !0), u ? {
+})), !s && O(e) && (u = !0, s = !0), u ? {
   hasRenderedBadge: n,
   lowerBadgeMask: i,
   upperBadgeMask: r,
   borderRadiusMask: a,
-  renderComplex: o
+  renderComplex: s
 } : null;
   }
   componentDidMount() {
@@ -153,8 +153,8 @@ let {
 } = this.props, {
   borderRadiusMask: i,
   lowerBadgeMask: a,
-  upperBadgeMask: o,
-  renderComplex: s
+  upperBadgeMask: s,
+  renderComplex: o
 } = this.state;
 t && !e.selected ? null == i || i.update({
   spring: 1,
@@ -172,15 +172,15 @@ t && !e.selected ? null == i || i.update({
   spring: 0,
   immediate: !document.hasFocus(),
   config: A
-}).start()), null != r && null == e.upperBadge ? null == o || o.update({
+}).start()), null != r && null == e.upperBadge ? null == s || s.update({
   spring: 1,
   immediate: !document.hasFocus(),
   config: S
-}).start() : null == r && null != e.upperBadge && (null == o || o.update({
+}).start() : null == r && null != e.upperBadge && (null == s || s.update({
   spring: 0,
   immediate: !document.hasFocus(),
   config: A
-}).start()), !s || O(this.props) || this.timeout.isStarted() ? O(this.props) && this.timeout.isStarted() && this.timeout.stop() : this.timeout.start(d()(10800000, 18000000), this.handleTimeout);
+}).start()), !o || O(this.props) || this.timeout.isStarted() ? O(this.props) && this.timeout.isStarted() && this.timeout.stop() : this.timeout.start(d()(10800000, 18000000), this.handleTimeout);
   }
   getBadgePositionInterpolation(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
@@ -255,7 +255,7 @@ let {
   innerClassName: n,
   lowerBadge: r,
   lowerBadgeSize: i,
-  style: s,
+  style: o,
   upperBadge: u,
   highlight: c
 } = this.props, {
@@ -272,7 +272,7 @@ if (!g)
       [m.wrapperSimple]: !0,
       [m.simpleFocused]: I
     }),
-    style: s,
+    style: o,
     onFocus: this.handleFocus,
     onBlur: this.handleBlur,
     children: (0, a.jsx)('svg', {
@@ -300,7 +300,7 @@ let S = ''.concat(d, '-upper_badge_masks'),
   y = (null == i ? void 0 : i.height) != null ? i.height : 16;
 return (0, a.jsxs)('div', {
   className: l()(t, m.wrapper),
-  style: s,
+  style: o,
   onFocus: this.handleFocus,
   onBlur: this.handleBlur,
   children: [
@@ -398,7 +398,7 @@ return (0, a.jsxs)('div', {
             })
           ]
         }) : null,
-        I ? (0, a.jsxs)(o.Fragment, {
+        I ? (0, a.jsxs)(s.Fragment, {
           children: [
             (0, a.jsx)('g', {
               className: m.focusStroke,
@@ -439,7 +439,7 @@ return (0, a.jsxs)('div', {
       ]
     }, 'svg'),
     (0, a.jsxs)(p.W, {
-      component: o.Fragment,
+      component: s.Fragment,
       children: [
         null != r ? (0, a.jsx)(v, {
           className: m.lowerBadge,

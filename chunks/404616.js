@@ -37,22 +37,22 @@ var i = n(735250),
   f = n(393238),
   T = n(963374),
   _ = n(884338),
-  v = n(406432),
-  b = n(169525),
-  E = n(566006),
-  I = n(255269),
-  x = n(937889),
-  C = n(443877),
+  v = n(446489),
+  b = n(406432),
+  E = n(169525),
+  I = n(566006),
+  x = n(255269),
+  C = n(937889),
+  S = n(443877),
   R = n(524444),
-  S = n(287151),
-  N = n(267128),
-  O = n(695346),
-  Z = n(433355),
-  j = n(592125),
-  M = n(496675),
-  A = n(699516),
-  y = n(451478),
-  P = n(18732),
+  N = n(287151),
+  O = n(267128),
+  Z = n(695346),
+  j = n(433355),
+  M = n(592125),
+  A = n(496675),
+  y = n(699516),
+  P = n(451478),
   L = n(68588),
   w = n(55935),
   U = n(109434),
@@ -93,9 +93,9 @@ media: b
 let {
   threadId: t,
   overrideMedia: n
-} = e, i = (0, h.e7)([j.Z], () => j.Z.getChannel(t));
+} = e, i = (0, h.e7)([M.Z], () => M.Z.getChannel(t));
 r()(null != i, 'the thread should not be null here, a store must have missed an update');
-let s = (0, h.e7)([Z.ZP], () => Z.ZP.getCurrentSidebarChannelId(i.parent_id) === i.id),
+let s = (0, h.e7)([j.ZP], () => j.ZP.getCurrentSidebarChannelId(i.parent_id) === i.id),
   {
     firstMessage: o
   } = (0, B.cl)(i),
@@ -138,8 +138,8 @@ t
   ]);
   let C = s.useRef(null),
 {
-  handleLeftClick: R,
-  handleRightClick: S
+  handleLeftClick: S,
+  handleRightClick: R
 } = (0, Y.Z)({
   facepileRef: C,
   goToThread: n,
@@ -148,7 +148,7 @@ t
 {
   role: N,
   onFocus: O,
-  ...M
+  ...Z
 } = (0, d.JA)(t),
 {
   isFocused: A,
@@ -158,18 +158,18 @@ t
   return (0, i.jsxs)('div', {
 ref: E,
 'data-item-id': t,
-onClick: R,
-onContextMenu: S,
+onClick: S,
+onContextMenu: R,
 className: a()($.container, c, {
   [$.isOpen]: g
 }),
 children: [
   (0, i.jsx)(p.Clickable, {
-    onClick: R,
+    onClick: S,
     focusProps: {
       ringTarget: E
     },
-    onContextMenu: S,
+    onContextMenu: R,
     'aria-label': X.Z.Messages.FORUM_POST_ARIA_LABEL.format({
       title: m.name,
       count: T
@@ -177,7 +177,7 @@ children: [
     className: $.focusTarget,
     onFocus: y,
     onBlur: P,
-    ...M
+    ...Z
   }),
   (0, i.jsxs)('div', {
     className: $.left,
@@ -285,7 +285,7 @@ i = s.useMemo(() => (0, T.nC)(t && null != n ? n : ''), [
   t,
   n
 ]);
-  return s.useMemo(() => (0, x.ZP)({
+  return s.useMemo(() => (0, C.ZP)({
 content: e.name,
 embeds: []
   }, {
@@ -302,7 +302,7 @@ channel: n,
 content: s,
 hasMediaAttachment: o,
 hasUnreads: l
-  } = e, r = (0, h.e7)([A.Z], () => null != t && A.Z.isBlockedForMessage(t)), c = (0, h.e7)([D.Z], () => D.Z.isLoading(n.id)), u = (0, h.e7)([M.Z], () => M.Z.can(J.Plq.MANAGE_MESSAGES, n)), d = O.cC.useSetting(), m = null;
+  } = e, r = (0, h.e7)([y.Z], () => null != t && y.Z.isBlockedForMessage(t)), c = (0, h.e7)([D.Z], () => D.Z.isLoading(n.id)), u = (0, h.e7)([A.Z], () => A.Z.can(J.Plq.MANAGE_MESSAGES, n)), d = Z.cC.useSetting(), m = null;
   if (r)
 m = (0, i.jsx)(p.Text, {
   className: $.blockedMessage,
@@ -317,7 +317,7 @@ let {
 } = null == t ? {
   contentPlaceholder: null,
   renderedContent: null
-} : (0, N.f)(t, s, r, a()($.messageContent, Q.inlineFormat, Q.__invalid_smallFontSize), {
+} : (0, O.f)(t, s, r, a()($.messageContent, Q.inlineFormat, Q.__invalid_smallFontSize), {
   leadingIconClass: $.messageContentLeadingIcon,
   trailingIconClass: $.messageContentTrailingIcon,
   iconSize: q.WW
@@ -335,7 +335,7 @@ m = null != n ? (0, i.jsx)(p.Text, {
 });
   }
   return (0, i.jsxs)(L.a.Provider, {
-value: (0, I.Z)(d, u),
+value: (0, x.Z)(d, u),
 children: [
   !r && (0, i.jsx)(G.Z, {
     channel: n,
@@ -427,7 +427,7 @@ children: [
       height: n
     })
   }),
-  'number' == typeof o ? (0, i.jsx)(P.Z, {
+  'number' == typeof o ? (0, i.jsx)(v.Z, {
     value: o,
     digitWidth: 9,
     className: $.messageCountText
@@ -455,12 +455,12 @@ function el(e) {
   let {
 firstMessage: t,
 channel: n
-  } = e, s = (0, h.e7)([j.Z], () => j.Z.getChannel(n.parent_id)), o = (0, k.Bs)(s), {
+  } = e, s = (0, h.e7)([M.Z], () => M.Z.getChannel(n.parent_id)), o = (0, k.Bs)(s), {
 disableReactionCreates: a,
 isLurking: l,
 isPendingMember: r
-  } = (0, C.Z)(n);
-  return null == o || a ? null : (0, i.jsx)(S.le, {
+  } = (0, S.Z)(n);
+  return null == o || a ? null : (0, i.jsx)(N.le, {
 className: $.updateReactionButton,
 message: t,
 readOnly: n.isArchivedLockedThread(),
@@ -473,7 +473,7 @@ count: 0,
 burst_count: 0,
 me: !1,
 me_burst: !1,
-type: E.O.NORMAL,
+type: I.O.NORMAL,
 emojiSize: 'reaction'
   });
 }
@@ -487,15 +487,15 @@ channel: s
 disableReactionUpdates: a,
 isLurking: l,
 isPendingMember: r
-  } = (0, C.Z)(s);
-  return null == o ? null : (0, i.jsx)(S.le, {
+  } = (0, S.Z)(s);
+  return null == o ? null : (0, i.jsx)(N.le, {
 className: $.updateReactionButton,
 message: n,
 readOnly: a || s.isArchivedLockedThread(),
 isLurking: l,
 isPendingMember: r,
 useChatFontScaling: !1,
-type: o.burst_count >= o.count ? E.O.BURST : E.O.NORMAL,
+type: o.burst_count >= o.count ? I.O.BURST : I.O.NORMAL,
 emojiSize: 'reaction',
 ...o
   }, ''.concat(null !== (t = o.emoji.id) && void 0 !== t ? t : 0, ':').concat(o.emoji.name));
@@ -549,14 +549,14 @@ function ed(e) {
   channel: s,
   firstMedia: o
 } = e,
-l = (0, h.e7)([y.Z], () => y.Z.isFocused()),
-r = (0, v.d$)(o.src),
-c = O.QK.useSetting(),
-[u, d] = (0, b.hL)({
+l = (0, h.e7)([P.Z], () => P.Z.isFocused()),
+r = (0, b.d$)(o.src),
+c = Z.QK.useSetting(),
+[u, d] = (0, E.hL)({
   media: o,
   channel: s
 }),
-m = (0, b.MC)(d),
+m = (0, E.MC)(d),
 {
   src: g,
   width: f,

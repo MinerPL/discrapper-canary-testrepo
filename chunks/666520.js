@@ -5,8 +5,8 @@ return m;
 }), n(47120);
 var r, i = n(735250),
   a = n(470079),
-  o = n(699581),
-  s = n(442837),
+  s = n(699581),
+  o = n(442837),
   l = n(481060),
   u = n(34854),
   c = n(702557),
@@ -26,7 +26,7 @@ writable: !0
 class p extends(r = a.PureComponent) {
   componentDidMount() {
 if (this.props.autoFocus && !this.props.hideNote) {
-  let e = o.findDOMNode(this.noteRef.current);
+  let e = s.findDOMNode(this.noteRef.current);
   null != e && null != e.selectionStart && (e.focus(), e.selectionStart = e.selectionEnd = e.value.length);
 }
   }
@@ -76,7 +76,7 @@ super(...e), h(this, 'noteRef', a.createRef()), h(this, 'handleBlur', e => {
 }
 
 function m(e) {
-  let t = (0, s.e7)([d.Z], () => d.Z.hidePersonalInformation),
+  let t = (0, o.e7)([d.Z], () => d.Z.hidePersonalInformation),
 n = (0, c.Z)(e.userId);
   return (0, i.jsx)(p, {
 ...e,

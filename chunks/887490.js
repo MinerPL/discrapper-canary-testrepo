@@ -30,21 +30,21 @@ return _;
 var r = n(512722),
   i = n.n(r),
   a = n(327432),
-  o = n(519953),
-  s = n(339227),
+  s = n(519953),
+  o = n(339227),
   l = n(42530);
 n(789952);
 let u = !1;
 {
-  let e = o.F3.findDocumentOrShadowRoot;
-  o.F3.findDocumentOrShadowRoot = t => {
+  let e = s.F3.findDocumentOrShadowRoot;
+  s.F3.findDocumentOrShadowRoot = t => {
 var n, r;
 return null !== (r = null === (n = t.windowContext) || void 0 === n ? void 0 : n.renderWindow.document) && void 0 !== r ? r : e(t);
   }, u = !0;
 }
 let c = {
 ...a.ML,
-...o.F3,
+...s.F3,
 richValue: e => e.children,
 blocks: e => c.richValue(e).map((e, t) => [
   e,
@@ -129,10 +129,10 @@ getSelectedVoid(e) {
 getSelectedText(e, t) {
   let n = null;
   if (t) {
-    let t = o.F3.findDocumentOrShadowRoot(e).getSelection();
+    let t = s.F3.findDocumentOrShadowRoot(e).getSelection();
     if (null != t && t.rangeCount > 0) {
       let r = t.getRangeAt(0);
-      null != r && (n = o.F3.toSlateRange(e, r, {
+      null != r && (n = s.F3.toSlateRange(e, r, {
         exactMatch: !0,
         suppressThrow: !0
       }));
@@ -149,8 +149,8 @@ getTextFromRange(e, t) {
   }), a = '';
   for (let [e, t] of i) {
     let i = f.equals(t, n.path) ? n.offset : 0,
-      o = f.equals(t, r.path) ? r.offset : 0;
-    a += e.text.substring(i, o);
+      s = f.equals(t, r.path) ? r.offset : 0;
+    a += e.text.substring(i, s);
   }
   return a;
 },
@@ -173,11 +173,11 @@ areStylesDisabled(e) {
   if (null == i || !E.isText(i))
     return !1;
   let a = e.chatInputType,
-    o = i.text;
-  return 1 === n.length && 1 === r.children.length && (!0 === a.sedReplace && o.startsWith('s/') || (null === (t = a.autocomplete) || void 0 === t ? void 0 : t.reactions) === !0 && o.startsWith('+'));
+    s = i.text;
+  return 1 === n.length && 1 === r.children.length && (!0 === a.sedReplace && s.startsWith('s/') || (null === (t = a.autocomplete) || void 0 === t ? void 0 : t.reactions) === !0 && s.startsWith('+'));
 },
 focus(e) {
-  !o.F3.isFocused(e) && (o.F3.focus(e), o.F3.deselect(e));
+  !s.F3.isFocused(e) && (s.F3.focus(e), s.F3.deselect(e));
 },
 getSelectionOverlap(e, t) {
   if (null == e.selection)
@@ -219,13 +219,10 @@ updateElement(e, t) {
 markdown(e, t, n) {
   var r;
   let i = 'line' === e.type && (null === (r = e.codeBlockState) || void 0 === r ? void 0 : r.wasInCodeBlock) === !0,
-    a = e.children.map(e => {
-      var t;
-      return E.isText(e) ? e.text : '((element:'.concat(null !== (t = e.type) && void 0 !== t ? t : 'unknown', '))');
-    }),
-    o = a.join('');
+    a = e.children.map(e => E.isText(e) ? e.text : '?'),
+    s = a.join('');
   return {
-    entries: s.Q(o, null != t ? t : null, i, n),
+    entries: o.Q(s, null != t ? t : null, i, n),
     serializedChildren: a
   };
 },
@@ -335,20 +332,20 @@ let i = {
     focus: t
   },
   a = 0,
-  o = n.length,
-  s = Math.floor((a + o) / 2);
-for (; s !== a;)
+  s = n.length,
+  o = Math.floor((a + s) / 2);
+for (; o !== a;)
   if (T(e, {
-      anchor: n[s],
-      focus: n[s]
-    }, i) ? r ? o = s : a = s : r ? a = s : o = s, s = Math.floor((a + o) / 2), !r && s === n.length - 2 && o === n.length - 1) {
+      anchor: n[o],
+      focus: n[o]
+    }, i) ? r ? s = o : a = o : r ? a = o : s = o, o = Math.floor((a + s) / 2), !r && o === n.length - 2 && s === n.length - 1) {
     let t = n[n.length - 1];
     T(e, {
       anchor: t,
       focus: t
-    }, i) && (s = o);
+    }, i) && (o = s);
   }
-return n[s];
+return n[o];
   },
   S = {
 getLineStart(e, t, n) {
@@ -361,19 +358,19 @@ getLineStart(e, t, n) {
     match: t => c.isInline(e, t) && !c.isVoid(e, t) && t !== i[0]
   });
   null != a && (r = c.after(e, a[1])), null == r && (r = c.start(e, i[1]));
-  let o = {
+  let s = {
       anchor: r,
       focus: t
     },
-    s = Array.from(c.positions(e, {
-      at: o
+    o = Array.from(c.positions(e, {
+      at: s
     })),
-    l = g(e, t, s, !0);
+    l = g(e, t, o, !0);
   if (n && h.equals(t, l) && !h.isAtEnd(t, i)) {
     let n = c.after(e, t);
     if (null == n)
       return l;
-    l = g(e, n, s, !0);
+    l = g(e, n, o, !0);
   }
   return l;
 },
@@ -387,19 +384,19 @@ getLineEnd(e, t, n) {
     match: t => c.isInline(e, t) && !c.isVoid(e, t) && t !== i[0]
   });
   null != a && (r = c.before(e, a[1])), null == r && (r = c.end(e, i[1]));
-  let o = {
+  let s = {
       anchor: t,
       focus: r
     },
-    s = Array.from(c.positions(e, {
-      at: o
+    o = Array.from(c.positions(e, {
+      at: s
     })),
-    l = g(e, t, s, !1);
+    l = g(e, t, o, !1);
   if (n && h.equals(t, l) && !h.isAtEnd(t, i)) {
     let n = c.after(e, t);
     if (null == n)
       return l;
-    l = g(e, n, s, !1);
+    l = g(e, n, o, !1);
   }
   return l;
 },

@@ -2,8 +2,8 @@ e.exports = c;
 var r = n(531478).codes,
   i = r.ERR_METHOD_NOT_IMPLEMENTED,
   a = r.ERR_MULTIPLE_CALLBACK,
-  o = r.ERR_TRANSFORM_ALREADY_TRANSFORMING,
-  s = r.ERR_TRANSFORM_WITH_LENGTH_0,
+  s = r.ERR_TRANSFORM_ALREADY_TRANSFORMING,
+  o = r.ERR_TRANSFORM_WITH_LENGTH_0,
   l = n(827664);
 
 function u(e, t) {
@@ -41,9 +41,9 @@ function _(e, t, n) {
   if (t)
 return e.emit('error', t);
   if (null != n && e.push(n), e._writableState.length)
-throw new s();
-  if (e._transformState.transforming)
 throw new o();
+  if (e._transformState.transforming)
+throw new s();
   return e.push(null);
 }
 n(689118)(c, l), c.prototype.push = function(e, t) {

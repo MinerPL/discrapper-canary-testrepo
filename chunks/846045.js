@@ -9,5 +9,6 @@ e.exports = {
   copyIcon: 'copyIcon_e96cae',
   code: 'code_e96cae',
   details: 'details_e96cae',
-  verifiedButton: 'verifiedButton_e96cae'
+  verifiedButton: 'verifiedButton_e96cae',
+  spinner: 'spinner_e96cae'
 };

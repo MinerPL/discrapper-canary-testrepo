@@ -1,6 +1,6 @@
 var i = n(735250),
-  s = n(470079),
-  a = n(924826),
+  a = n(470079),
+  s = n(924826),
   r = n(91192),
   l = n(442837),
   o = n(481060),
@@ -15,27 +15,27 @@ searchQuery: _
   } = e, h = e => 0 === t[e].length ? 0 : d.De + 16, E = e => {
 let {
   section: i,
-  row: s
-} = e, a = t[i];
-if (null == a || null == s)
+  row: a
+} = e, s = t[i];
+if (null == s || null == a)
   return null;
-let r = a[s];
+let r = s[a];
 return null == r ? null : n(r);
-  }, I = (0, l.e7)([c.Z], () => c.Z.keyboardModeEnabled), m = s.useRef(null), g = s.useCallback(() => new Promise(e => {
+  }, I = (0, l.e7)([c.Z], () => c.Z.keyboardModeEnabled), m = a.useRef(null), g = a.useCallback(() => new Promise(e => {
 let t = m.current;
 if (null == t)
   return e();
 t.scrollToTop({
   callback: () => requestAnimationFrame(() => e())
 });
-  }), []), p = s.useCallback(() => new Promise(e => {
+  }), []), p = a.useCallback(() => new Promise(e => {
 let t = m.current;
 if (null == t)
   return e();
 t.scrollToBottom({
   callback: () => requestAnimationFrame(() => e())
 });
-  }), []), T = s.useCallback(e => {
+  }), []), T = a.useCallback(e => {
 let t = document.querySelector(e),
   n = m.current;
 null != t && null != n && n.scrollIntoViewNode({
@@ -43,7 +43,7 @@ null != t && null != n && n.scrollIntoViewNode({
   padding: 8,
   callback: () => null == t ? void 0 : t.focus()
 });
-  }, []), S = (0, a.ZP)({
+  }, []), S = (0, s.ZP)({
 id: 'people-list',
 isEnabled: I,
 scrollToStart: g,
@@ -56,7 +56,7 @@ children: (0, i.jsx)(r.SJ, {
   children: e => {
     let {
       ref: n,
-      ...s
+      ...a
     } = e;
     return (0, i.jsx)(o.ListAuto, {
       ref: e => {
@@ -68,7 +68,7 @@ children: (0, i.jsx)(r.SJ, {
       rowHeight: d.NV,
       sections: t.map(e => '' !== _ && 0 === e.length ? e.length + 1 : e.length),
       className: u.peopleList,
-      ...s
+      ...a
     });
   }
 })

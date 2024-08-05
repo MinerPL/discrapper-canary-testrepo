@@ -18,21 +18,21 @@ return a;
 let i = /.+/g,
   a = 'NON_TOKEN';
 
-function o(e, t, n) {
+function s(e, t, n) {
   if (null == t)
 return null;
   for (let r = 0; r < t.length; r++) {
 let i;
 let a = t[r],
-  o = s(e.match(a.regex), n);
-if (null != o) {
+  s = o(e.match(a.regex), n);
+if (null != s) {
   let {
     cache: e
   } = a;
-  if (null != e && null != (i = e.get(o[0])) && ((i = new u(i)).start = o.index), null == i) {
-    if (i = new u(o, a.type), null != a.validator && !a.validator(i))
+  if (null != e && null != (i = e.get(s[0])) && ((i = new u(i)).start = s.index), null == i) {
+    if (i = new u(s, a.type), null != a.validator && !a.validator(i))
       continue;
-    null != e && !(null == e ? void 0 : e.has(o[0])) && e.set(o[0], i);
+    null != e && !(null == e ? void 0 : e.has(s[0])) && e.set(s[0], i);
   }
   return i;
 }
@@ -40,7 +40,7 @@ if (null != o) {
   return null;
 }
 
-function s(e, t) {
+function o(e, t) {
   if (null == e)
 return null;
   let n = [...e];
@@ -81,12 +81,12 @@ r.forEach(e => {
 let t, n = e,
   r = '',
   a = 0,
-  o = [];
+  s = [];
 for (; n.length > 0;) {
   let e = this._getMatch(n, t, a + r.length);
-  null != e ? (null != r && '' !== r && o.push(new u(s(r.match(i), a), this._nonTokenType)), t = e, o.push(e), a += t.length + r.length, n = n.substring(t.length), r = '') : (r += n[0], n = n.substring(1));
+  null != e ? (null != r && '' !== r && s.push(new u(o(r.match(i), a), this._nonTokenType)), t = e, s.push(e), a += t.length + r.length, n = n.substring(t.length), r = '') : (r += n[0], n = n.substring(1));
 }
-return null != r && '' !== r && o.push(new u(s(r.match(i), a), this._nonTokenType)), o;
+return null != r && '' !== r && s.push(new u(o(r.match(i), a), this._nonTokenType)), s;
   }
   clearCache() {
 for (let e in (this._rules.forEach(e => {
@@ -101,7 +101,7 @@ for (let e in (this._rules.forEach(e => {
   _getMatch(e, t, n) {
 let r;
 let i = null != t ? t.type : null;
-return (null == t ? void 0 : t.end) === n && (r = o(e, this._followers[String(i)], n)), null == r && (r = o(e, this._rules, n)), r;
+return (null == t ? void 0 : t.end) === n && (r = s(e, this._followers[String(i)], n)), null == r && (r = s(e, this._rules, n)), r;
   }
   constructor(e = [], t) {
 r(this, '_rules', []), r(this, '_followers', {}), r(this, '_nonTokenType', a), this.reset(t), e.forEach(e => this.addRule(e));

@@ -1,5 +1,5 @@
-var r, i, a, o, s = n(392711),
-  l = n.n(s),
+var r, i, a, s, o = n(392711),
+  l = n.n(o),
   u = n(442837),
   c = n(544891),
   d = n(570140),
@@ -26,7 +26,7 @@ return p[t] = null !== (r = p[t]) && void 0 !== r ? r : {
   }
   return !1;
 }
-class T extends(o = u.ZP.Store) {
+class T extends(s = u.ZP.Store) {
   initialize() {
 this.waitFor(f.Z, E.Z);
   }
@@ -125,13 +125,13 @@ let {
   messageId: n,
   region: r,
   ringing: i
-} = e, a = p[t], o = null != a && (a.regionUpdated || a.region !== r);
+} = e, a = p[t], s = null != a && (a.regionUpdated || a.region !== r);
 p[t] = {
   ...p[t],
   messageId: n,
   region: r,
   ringing: i,
-  regionUpdated: o
+  regionUpdated: s
 };
   },
   CALL_DELETE: function(e) {

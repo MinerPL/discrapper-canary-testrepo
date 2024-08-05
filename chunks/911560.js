@@ -1,8 +1,8 @@
 var r = n(266067),
   i = n(544891),
   a = n(570140),
-  o = n(38618),
-  s = n(131704),
+  s = n(38618),
+  o = n(131704),
   l = n(592125),
   u = n(944486),
   c = n(981631),
@@ -18,7 +18,7 @@ return Promise.resolve();
   let e = u.Z.getChannelId(),
     t = l.Z.getChannel(e);
   null != e && null == t && f(e);
-})), !o.Z.isConnected())
+})), !s.Z.isConnected())
 return Promise.resolve();
   let t = _[e];
   if (null != t)
@@ -33,11 +33,11 @@ h = i.tn.get(c.ANM.CHANNEL(e)).then(t => {
   } = t;
   if (_[e] = {
       type: 'LOADED'
-    }, s.Ec.has(r.type)) {
+    }, o.Ec.has(r.type)) {
     var i;
     a.Z.dispatch({
       type: 'THREAD_CREATE',
-      channel: (0, s.q_)(r),
+      channel: (0, o.q_)(r),
       messageId: null == n ? void 0 : null === (i = n.params) || void 0 === i ? void 0 : i.messageId
     });
   }

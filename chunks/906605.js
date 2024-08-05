@@ -15,8 +15,8 @@ return _;
 var r = n(570140),
   i = n(339085),
   a = n(592125),
-  o = n(19780),
-  s = n(944486),
+  s = n(19780),
+  o = n(944486),
   l = n(626135),
   u = n(106301),
   c = n(981631);
@@ -33,9 +33,9 @@ status: e,
 saveAsDefault: t
   }), l.default.track(c.rMx.SET_HANG_STATUS, {
 status_type: e,
-channel_id: s.Z.getVoiceChannelId(),
-guild_id: null === (n = a.Z.getChannel(s.Z.getVoiceChannelId())) || void 0 === n ? void 0 : n.guild_id,
-media_session_id: o.Z.getMediaSessionId()
+channel_id: o.Z.getVoiceChannelId(),
+guild_id: null === (n = a.Z.getChannel(o.Z.getVoiceChannelId())) || void 0 === n ? void 0 : n.guild_id,
+media_session_id: s.Z.getMediaSessionId()
   });
 }
 
@@ -52,9 +52,9 @@ status: e,
 saveAsDefault: n
   }), l.default.track(c.rMx.SET_HANG_STATUS, {
 status_type: e,
-channel_id: s.Z.getVoiceChannelId(),
-guild_id: null === (i = a.Z.getChannel(s.Z.getVoiceChannelId())) || void 0 === i ? void 0 : i.guild_id,
-media_session_id: o.Z.getMediaSessionId()
+channel_id: o.Z.getVoiceChannelId(),
+guild_id: null === (i = a.Z.getChannel(o.Z.getVoiceChannelId())) || void 0 === i ? void 0 : i.guild_id,
+media_session_id: s.Z.getMediaSessionId()
   });
 }
 
@@ -64,9 +64,9 @@ function E(e) {
 type: 'CLEAR_HANG_STATUS',
 saveAsDefault: e
   }), l.default.track(c.rMx.CLEAR_HANG_STATUS, {
-channel_id: s.Z.getVoiceChannelId(),
-guild_id: null === (t = a.Z.getChannel(s.Z.getVoiceChannelId())) || void 0 === t ? void 0 : t.guild_id,
-media_session_id: o.Z.getMediaSessionId()
+channel_id: o.Z.getVoiceChannelId(),
+guild_id: null === (t = a.Z.getChannel(o.Z.getVoiceChannelId())) || void 0 === t ? void 0 : t.guild_id,
+media_session_id: s.Z.getMediaSessionId()
   });
 }
 

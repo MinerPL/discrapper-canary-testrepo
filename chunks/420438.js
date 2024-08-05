@@ -1,8 +1,8 @@
 n(47120);
 var i, a = n(442837),
-  l = n(570140);
+  s = n(570140);
 
-function s(e, t, n) {
+function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -26,7 +26,7 @@ return null != n && (!!n.has(e) || !1);
 return r;
   }
 }
-s(o, 'displayName', 'GuildPromptsStore'), s(o, 'persistKey', 'GuildPromptsStore'), t.Z = new o(l.Z, {
+l(o, 'displayName', 'GuildPromptsStore'), l(o, 'persistKey', 'GuildPromptsStore'), t.Z = new o(s.Z, {
   GUILD_PROMPT_VIEWED: function(e) {
 let {
   prompt: t,

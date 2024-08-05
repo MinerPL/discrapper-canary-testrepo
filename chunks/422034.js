@@ -9,8 +9,8 @@ return f;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  o = n(442837),
   l = n(481060),
   u = n(204197),
   c = n(357355),
@@ -23,7 +23,7 @@ function f(e) {
 smallerText: t,
 className: n,
 textColor: a
-  } = e, u = (0, s.e7)([c.Z], () => c.Z.affinities.slice(0, 3).reverse()), f = u.map((e, t) => (0, r.jsx)(h, {
+  } = e, u = (0, o.e7)([c.Z], () => c.Z.affinities.slice(0, 3).reverse()), f = u.map((e, t) => (0, r.jsx)(h, {
 affinity: e,
 applyMask: t !== u.length - 1,
 size: d.EF.SIZE_32
@@ -36,7 +36,7 @@ otherUsername: p(u[0])
 username: p(u[0])
   }) : '', [u]);
   return 0 === u.length ? null : (0, r.jsxs)('div', {
-className: o()(E.container, n),
+className: s()(E.container, n),
 children: [
   (0, r.jsx)('div', {
     className: E.iconContainer,
@@ -67,19 +67,19 @@ applyMask: n,
 size: i
   } = e, {
 avatarSrc: a,
-eventHandlers: s
+eventHandlers: o
   } = (0, u.Z)({
 user: t,
 size: i,
 animateOnHover: !0
   });
   return (0, r.jsx)(l.Avatar, {
-className: o()(E.icon, {
+className: s()(E.icon, {
   [E.mask]: n
 }),
 src: a,
 'aria-label': t.username,
 size: i,
-...s
+...o
   });
 }

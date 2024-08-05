@@ -5,21 +5,21 @@ return null;
   t.shift();
   var n = null,
 r = [];
-  t[2] && (n = (o = t[2].split('-')).shift(), r = o);
+  t[2] && (n = (s = t[2].split('-')).shift(), r = s);
   var i = [];
   t[5] && (i = t[5].split('-')).shift();
   var a = [];
   if (t[6]) {
-(o = t[6].split('-')).shift();
-for (var o, s, l = []; o.length;) {
-  var u = o.shift();
-  1 === u.length ? s ? (a.push({
-    singleton: s,
+(s = t[6].split('-')).shift();
+for (var s, o, l = []; s.length;) {
+  var u = s.shift();
+  1 === u.length ? o ? (a.push({
+    singleton: o,
     extension: l
-  }), s = u, l = []) : s = u : l.push(u);
+  }), o = u, l = []) : o = u : l.push(u);
 }
 a.push({
-  singleton: s,
+  singleton: o,
   extension: l
 });
   }

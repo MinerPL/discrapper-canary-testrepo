@@ -3,7 +3,7 @@ n.d(t, {
 return r;
   }
 }), n(47120);
-var r, i, a, o, s, l, u = n(512722),
+var r, i, a, s, o, l, u = n(512722),
   c = n.n(u),
   d = n(442837),
   _ = n(759174),
@@ -103,12 +103,12 @@ return null !== (t = R[e]) && void 0 !== t ? t : 0;
 return C.get(e);
   }
 }
-l = 'GuildRoleSubscriptionsStore', (s = 'displayName') in(o = M) ? Object.defineProperty(o, s, {
+l = 'GuildRoleSubscriptionsStore', (o = 'displayName') in(s = M) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[s] = l, t.Z = new M(E.Z, {
+}) : s[o] = l, t.Z = new M(E.Z, {
   CONNECTION_OPEN: function() {
 T.clear(), g.clear(), S = {}, A.clear(), N = {}, v = {}, O = {}, R = {}, C.clear();
   },

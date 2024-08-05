@@ -65,7 +65,7 @@ experimentId: i,
 overrideDescriptor: _
   } = e, [E, u] = a.useState(null != _), [N, C] = a.useState(!1), m = a.useCallback(() => {
 u(e => !e);
-  }, []), A = (0, o.e7)([d.Z], () => d.Z.getUserExperimentDescriptor(i)), h = (0, o.e7)([d.Z], () => d.Z.getLoadedUserExperiment(i)), g = (0, o.e7)([d.Z], () => r().sortBy(d.Z.getRecentExposures(T.xY.USER, i), e => {
+  }, []), A = (0, o.e7)([d.Z], () => d.Z.getUserExperimentDescriptor(i)), g = (0, o.e7)([d.Z], () => d.Z.getLoadedUserExperiment(i)), h = (0, o.e7)([d.Z], () => r().sortBy(d.Z.getRecentExposures(T.xY.USER, i), e => {
 let [t, s] = e;
 return -s;
   }).map(e => {
@@ -134,7 +134,7 @@ children: [
               null !== (t = null == A ? void 0 : A.bucket) && void 0 !== t ? t : T.NZ.NOT_ELIGIBLE
             ]
           }),
-          null == h ? (0, n.jsx)(l.FormText, {
+          null == g ? (0, n.jsx)(l.FormText, {
             type: l.FormTextTypes.DESCRIPTION,
             children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
           }) : null
@@ -150,7 +150,7 @@ children: [
           (0, n.jsx)(l.Text, {
             variant: 'code',
             className: I.pre,
-            children: null == h ? 'None' : JSON.stringify(h, void 0, 2)
+            children: null == g ? 'None' : JSON.stringify(g, void 0, 2)
           }),
           (0, n.jsx)(l.FormTitle, {
             tag: 'h5',
@@ -170,7 +170,7 @@ children: [
           (0, n.jsx)(l.Text, {
             variant: 'code',
             className: I.pre,
-            children: 0 === g.length ? 'None' : g.join('\n')
+            children: 0 === h.length ? 'None' : h.join('\n')
           })
         ]
       }) : (0, n.jsx)(l.Button, {
@@ -201,13 +201,13 @@ experimentId: s,
 overrideDescriptor: i
   } = e, [E, u] = a.useState(null != i), [N, C] = a.useState(!1), m = a.useCallback(() => {
 u(e => !e);
-  }, []), A = (0, o.e7)([d.Z], () => d.Z.getLoadedGuildExperiment(s)), h = (0, o.e7)([d.Z], () => r().sortBy(d.Z.getRecentExposures(T.xY.GUILD, s), e => {
+  }, []), A = (0, o.e7)([d.Z], () => d.Z.getLoadedGuildExperiment(s)), g = (0, o.e7)([d.Z], () => r().sortBy(d.Z.getRecentExposures(T.xY.GUILD, s), e => {
 let [t, s] = e;
 return -s;
   }).map(e => {
 let [t, s] = e;
 return ''.concat(new Date(s).toLocaleString(), ' (').concat(t, ')');
-  })), [g, O] = (0, o.Wu)([
+  })), [h, O] = (0, o.Wu)([
 _.Z,
 d.Z
   ], () => {
@@ -303,7 +303,7 @@ children: [
           (0, n.jsx)(l.Text, {
             variant: 'code',
             className: I.pre,
-            children: g.join('\n')
+            children: h.join('\n')
           }),
           (0, n.jsx)(l.FormTitle, {
             tag: 'h5',
@@ -333,7 +333,7 @@ children: [
           (0, n.jsx)(l.Text, {
             variant: 'code',
             className: I.pre,
-            children: 0 === h.length ? 'None' : h.join('\n')
+            children: 0 === g.length ? 'None' : g.join('\n')
           })
         ]
       }) : (0, n.jsx)(l.Button, {

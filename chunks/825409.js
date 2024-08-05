@@ -9,9 +9,9 @@ return u;
 var r = n(836560),
   i = n(400053),
   a = n.n(i),
-  o = n(142494);
+  s = n(142494);
 
-function s(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -31,11 +31,11 @@ class c {
 return this._parsedMessages;
   }
   constructor(e) {
-s(this, '_context', {
+o(this, '_context', {
   messages: {},
   defaultMessages: {},
   locale: l
-}), s(this, '_parsedMessages', {}), s(this, '_getParsedMessages', void 0), this._getParsedMessages = e;
+}), o(this, '_parsedMessages', {}), o(this, '_getParsedMessages', void 0), this._getParsedMessages = e;
   }
 }
 class d extends c {
@@ -44,7 +44,7 @@ this._context = e, this._refresh(e, this._parsedMessages);
   }
   constructor(...e) {
 var t;
-super(...e), t = this, s(this, '_refresh', function(e) {
+super(...e), t = this, o(this, '_refresh', function(e) {
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   return Object.keys(e.defaultMessages).forEach(r => {
     Object.defineProperty(n, r, {
@@ -63,7 +63,7 @@ Object.assign(this._context, e), Object.keys(this._parsedMessages).forEach(e => 
   }
   constructor(e) {
 var t;
-super(e), t = this, s(this, '_createProxy', function() {
+super(e), t = this, o(this, '_createProxy', function() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : t._context;
   return new Proxy({}, {
     get: (n, r) => n[r] || (n[r] = t._getParsedMessages(e, r, t._createProxy))
@@ -90,7 +90,7 @@ let t = this._chosenLocale;
 this._chosenLocale = e, this.loadPromise = this._loadMessagesForLocale(e), this.emit('locale', this._chosenLocale, t);
   }
   setUpdateRules(e) {
-(0, o.yR)(e);
+(0, s.yR)(e);
   }
   getLanguages() {
 return this._languages;
@@ -180,26 +180,26 @@ initialLocale: e,
 getMessages: t,
 getLanguages: r
   }) {
-super(), s(this, 'Messages', void 0), s(this, 'loadPromise', Promise.resolve()), s(this, 'initialLanguageLoad', void 0), s(this, 'resolveLanguageLoaded', () => {}), s(this, '_languages', []), s(this, '_provider', void 0), s(this, '_chosenLocale', ''), s(this, '_requestedLocale', void 0), s(this, '_getMessages', void 0), s(this, '_getParsedMessages', (e, t, n) => {
+super(), o(this, 'Messages', void 0), o(this, 'loadPromise', Promise.resolve()), o(this, 'initialLanguageLoad', void 0), o(this, 'resolveLanguageLoaded', () => {}), o(this, '_languages', []), o(this, '_provider', void 0), o(this, '_chosenLocale', ''), o(this, '_requestedLocale', void 0), o(this, '_getMessages', void 0), o(this, '_getParsedMessages', (e, t, n) => {
   let {
     messages: r,
     defaultMessages: i,
     locale: a
-  } = e, s = r[t] || i[t];
-  if ('object' == typeof s)
+  } = e, o = r[t] || i[t];
+  if ('object' == typeof o)
     return n({
-      messages: s,
+      messages: o,
       defaultMessages: i[t],
       locale: a
     });
   try {
-    return (0, o.FC)(s, a);
+    return (0, s.FC)(o, a);
   } catch (e) {
-    if (console.warn('Failed parsing intl key \''.concat(String(t), '\' in locale \'').concat(a, '\' defaulting to English'), e), 'string' == typeof(s = i[t]))
-      return (0, o.FC)(s, a);
+    if (console.warn('Failed parsing intl key \''.concat(String(t), '\' in locale \'').concat(a, '\' defaulting to English'), e), 'string' == typeof(o = i[t]))
+      return (0, s.FC)(o, a);
   }
   return '';
-}), s(this, '_handleNewListener', e => {
+}), o(this, '_handleNewListener', e => {
   if ('locale' === e)
     this.emit(e, this._chosenLocale);
 }), this.initialLanguageLoad = new Promise((e, t) => {

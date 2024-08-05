@@ -3,7 +3,7 @@ n.d(t, {
 return i;
   },
   V9: function() {
-return o;
+return s;
   },
   my: function() {
 return a;
@@ -41,7 +41,7 @@ default:
   }
 }
 
-function o(e) {
+function s(e) {
   let {
 streamType: t,
 guildId: n,

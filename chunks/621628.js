@@ -22,7 +22,7 @@ var n = s(735250),
   m = s(197369),
   A = s(549856);
 
-function h(e) {
+function g(e) {
   let {
 contents: t,
 content: s,
@@ -43,14 +43,14 @@ children: (0, n.jsx)(d.FormSwitch, {
   });
 }
 
-function g(e) {
+function h(e) {
   let {
 items: t,
 dismissedContents: s,
 handleChange: a
   } = e;
   return (0, n.jsx)(n.Fragment, {
-children: t.filter(e => isNaN(Number(e))).map(e => (0, n.jsx)(h, {
+children: t.filter(e => isNaN(Number(e))).map(e => (0, n.jsx)(g, {
   contents: s,
   content: e,
   onChange: a
@@ -69,7 +69,7 @@ function O() {
   dailyCapOverridden: N.Z.dailyCapOverridden
 })),
 [T, I] = a.useState(''),
-h = null !== (e = (0, o.e7)([E.Z], () => {
+g = null !== (e = (0, o.e7)([E.Z], () => {
   var e;
   return null === (e = E.Z.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents;
 })) && void 0 !== e ? e : new Uint8Array(),
@@ -98,7 +98,7 @@ R = e => {
 },
 x = t.map(e => l.z[e]),
 M = O.filter(e => e.toLowerCase().includes(T.toLowerCase())).filter(e => !x.includes(e)),
-D = Object.keys(l.z).filter(e => !x.includes(e)).filter(e => !O.includes(e)).filter(e => e.toLowerCase().includes(T.toLowerCase())).sort((e, t) => e.localeCompare(t));
+f = Object.keys(l.z).filter(e => !x.includes(e)).filter(e => !O.includes(e)).filter(e => e.toLowerCase().includes(T.toLowerCase())).sort((e, t) => e.localeCompare(t));
   return (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsxs)(d.FormSection, {
@@ -167,9 +167,9 @@ children: [
               children: 'Recently Shown'
             })
           }),
-          (0, n.jsx)(g, {
+          (0, n.jsx)(h, {
             items: x,
-            dismissedContents: h,
+            dismissedContents: g,
             handleChange: R
           })
         ]
@@ -182,9 +182,9 @@ children: [
               children: 'Recent Overrides'
             })
           }),
-          (0, n.jsx)(g, {
+          (0, n.jsx)(h, {
             items: M,
-            dismissedContents: h,
+            dismissedContents: g,
             handleChange: R
           })
         ]
@@ -195,9 +195,9 @@ children: [
           children: 'Available Dismissible Contents'
         })
       }),
-      (0, n.jsx)(g, {
-        items: D,
-        dismissedContents: h,
+      (0, n.jsx)(h, {
+        items: f,
+        dismissedContents: g,
         handleChange: R
       })
     ]

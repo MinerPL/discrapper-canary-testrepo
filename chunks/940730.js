@@ -6,8 +6,8 @@ return f;
 var r = n(735250),
   i = n(470079),
   a = n(367907),
-  o = n(10718),
-  s = n(69626),
+  s = n(10718),
+  o = n(69626),
   l = n(626135),
   u = n(785717),
   c = n(678738),
@@ -26,7 +26,7 @@ onClick: p
 trackUserProfileAction: m
   } = (0, u.KZ)(), {
 commands: I
-  } = o.Qm(h, t, n), T = i.useMemo(() => null == I ? void 0 : I.filter(e => {
+  } = s.Qm(h, t, n), T = i.useMemo(() => null == I ? void 0 : I.filter(e => {
 let {
   nsfw: t
 } = e;
@@ -45,11 +45,11 @@ null == p || p(), m({
 });
   };
   return (0, r.jsx)(c.Z, {
-title: _.Z.Messages.COMMANDS,
+heading: _.Z.Messages.COMMANDS,
 children: (0, r.jsx)('ul', {
   className: E.list,
   children: T.map(e => (0, r.jsx)('li', {
-    children: (0, r.jsx)(s.wz, {
+    children: (0, r.jsx)(o.wz, {
       commandId: e.id,
       commandName: e.displayName,
       commandDescription: e.displayDescription,

@@ -3,8 +3,8 @@ var r = n(392711),
   i = n.n(r);
 n(57132), n(140155);
 var a = n(398758),
-  o = n(601070),
-  s = n(569471),
+  s = n(601070),
+  o = n(569471),
   l = n(195663),
   u = n(131704),
   c = n(709054),
@@ -65,7 +65,7 @@ function b(e, t, n) {
 function M(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
 n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  return !(null == e || e.isGuildVocal() && 0 === t || e.hasFlag(S.zZ.IS_GUILD_RESOURCE_CHANNEL) || (0 === t || n) && (e.isThread() ? s.Z.isMuted(e.id) || I.ZP.isGuildOrCategoryOrChannelMuted(e.guild_id, e.parent_id) : I.ZP.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id)) || !e.isPrivate() && (b(e, t, (0, a.r1)(e.guild_id)) || !f.Z.can(e.accessPermissions, e))) && (t > 0 || I.ZP.resolveUnreadSetting(e) === A.i.ALL_MESSAGES);
+  return !(null == e || e.isGuildVocal() && 0 === t || e.hasFlag(S.zZ.IS_GUILD_RESOURCE_CHANNEL) || (0 === t || n) && (e.isThread() ? o.Z.isMuted(e.id) || I.ZP.isGuildOrCategoryOrChannelMuted(e.guild_id, e.parent_id) : I.ZP.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id)) || !e.isPrivate() && (b(e, t, (0, a.r1)(e.guild_id)) || !f.Z.can(e.accessPermissions, e))) && (t > 0 || I.ZP.resolveUnreadSetting(e) === A.i.ALL_MESSAGES);
 }
 
 function P(e) {
@@ -158,25 +158,25 @@ let i = I.ZP.getMutedChannels(n),
 for (let t in d) {
   let n = d[t],
     a = e || i.has(t) || null != n.parent_id && i.has(n.parent_id),
-    o = r.unreadByType[A.W.CHANNEL],
+    s = r.unreadByType[A.W.CHANNEL],
     {
-      mentionCount: s,
+      mentionCount: o,
       unread: _
-    } = h.ZP.getGuildChannelUnreadState(n, c, l, a, o),
-    E = s > 0;
+    } = h.ZP.getGuildChannelUnreadState(n, c, l, a, s),
+    E = o > 0;
   if (!E && a)
     continue;
-  let p = !o && (!a || E) && _;
+  let p = !s && (!a || E) && _;
   (p || E) && function(e, t, n) {
     if ((0, u.bw)(e.type) && 0 === t || !f.Z.canBasicChannel((0, u.Gz)(e.type), e) || b(e, t, n))
       return !1;
     return !('flags' in e && e.hasFlag(S.zZ.IS_GUILD_RESOURCE_CHANNEL)) && (t > 0 || I.ZP.resolveUnreadSetting(e) === A.i.ALL_MESSAGES);
-  }(n, s, c) && (p && (r.unreadByType[A.W.CHANNEL] = !0, r.unreadChannelId = t), E && (r.mentionCount += s, r.mentionCounts[n.id] = s));
+  }(n, o, c) && (p && (r.unreadByType[A.W.CHANNEL] = !0, r.unreadChannelId = t), E && (r.mentionCount += o, r.mentionCounts[n.id] = o));
 }
-let E = o.Z.getActiveJoinedThreadsForGuild(n);
+let E = s.Z.getActiveJoinedThreadsForGuild(n);
 for (let t in E)
   for (let n in E[t]) {
-    !r.unreadByType[A.W.CHANNEL] && h.ZP.hasUnread(n) && !s.Z.isMuted(n) && !e && (r.unreadByType[A.W.CHANNEL] = !0, r.unreadChannelId = n);
+    !r.unreadByType[A.W.CHANNEL] && h.ZP.hasUnread(n) && !o.Z.isMuted(n) && !e && (r.unreadByType[A.W.CHANNEL] = !0, r.unreadChannelId = n);
     let t = h.ZP.getMentionCount(n);
     t > 0 && (r.mentionCount += t, r.mentionCounts[n] = t);
   }!r.unreadByType[A.W.GUILD_EVENT] && U(n, A.W.GUILD_EVENT) && (r.unreadByType[A.W.GUILD_EVENT] = !0);
@@ -277,7 +277,7 @@ channelId: t
 return !1;
   if (null != n.guild_id) {
 let e = D(n.guild_id);
-if (((n.isThread() ? !s.Z.hasJoined(n.id) || s.Z.isMuted(n.id) : I.ZP.isGuildOrCategoryOrChannelMuted(n.guild_id, n.id)) || e.unreadByType[A.W.CHANNEL]) && 0 === h.ZP.getMentionCount(t))
+if (((n.isThread() ? !o.Z.hasJoined(n.id) || o.Z.isMuted(n.id) : I.ZP.isGuildOrCategoryOrChannelMuted(n.guild_id, n.id)) || e.unreadByType[A.W.CHANNEL]) && 0 === h.ZP.getMentionCount(t))
   return !1;
   }
   return B(n.getGuildId(), [n.id]);
@@ -352,7 +352,7 @@ ackType: n
   return F(t, n);
 }
 
-function eo(e) {
+function es(e) {
   let {
 id: t,
 guildId: n
@@ -360,7 +360,7 @@ guildId: n
   return B(n, [t]);
 }
 
-function es(e) {
+function eo(e) {
   return (0, l.s)(e) && B(e.guildId, [e.id]);
 }
 
@@ -369,7 +369,7 @@ function el(e) {
 threads: t,
 guildId: n
   } = e;
-  return B(n, t.filter(e => s.Z.hasJoined(e.id)).map(e => e.id));
+  return B(n, t.filter(e => o.Z.hasJoined(e.id)).map(e => e.id));
 }
 
 function eu(e) {
@@ -413,7 +413,7 @@ guildId: t
 }
 class eh extends m.Z {
   initialize() {
-this.waitFor(_.Z, p.Z, h.ZP, f.Z, d.default, T.default, I.ZP, o.Z, s.Z);
+this.waitFor(_.Z, p.Z, h.ZP, f.Z, d.default, T.default, I.ZP, s.Z, o.Z);
   }
   loadCache() {
 let e = this.readSnapshot(eh.LATEST_SNAPSHOT_VERSION);
@@ -458,7 +458,7 @@ for (let e in t) {
       return !0;
   }
 }
-let n = o.Z.getActiveJoinedThreadsForGuild(e);
+let n = s.Z.getActiveJoinedThreadsForGuild(e);
 for (let e in n)
   if (null != _.Z.getChannel(e)) {
     for (let t in n[e])
@@ -529,8 +529,8 @@ super({
   THREAD_UPDATE: en,
   THREAD_DELETE: en,
   THREAD_LIST_SYNC: el,
-  THREAD_MEMBER_UPDATE: eo,
-  THREAD_MEMBERS_UPDATE: es,
+  THREAD_MEMBER_UPDATE: es,
+  THREAD_MEMBERS_UPDATE: eo,
   PASSIVE_UPDATE_V2: eu,
   GUILD_MEMBER_UPDATE: q,
   USER_GUILD_SETTINGS_FULL_UPDATE: e_,

@@ -1,6 +1,6 @@
 s.d(t, {
   Z: function() {
-return D;
+return f;
   }
 }), s(47120);
 var n = s(735250),
@@ -17,12 +17,12 @@ var n = s(735250),
   T = s(242291),
   I = s(893663),
   S = s(331642),
-  N = s(474333),
+  N = s(777036),
   C = s(63063),
   m = s(581883),
   A = s(918257),
-  h = s(726985),
-  g = s(981631),
+  g = s(726985),
+  h = s(981631),
   O = s(710111),
   p = s(689938),
   R = s(278720),
@@ -40,10 +40,10 @@ return u.Z.getSound(t === O.hY ? O.X8 : t, s);
   });
 }
 
-function D() {
+function f() {
   let {
 analyticsLocations: e
-  } = (0, l.ZP)(), [t, s] = a.useState(O.hY), o = (0, I.tT)(t), m = M(o), D = (0, i.e7)([u.Z], () => u.Z.hasFetchedAllSounds()), P = (null == o ? void 0 : o.type) === I.zx.GLOBAL, L = D && null != o && null == m;
+  } = (0, l.ZP)(), [t, s] = a.useState(O.hY), o = (0, I.tT)(t), m = M(o), f = (0, i.e7)([u.Z], () => u.Z.hasFetchedAllSounds()), P = (null == o ? void 0 : o.type) === I.zx.GLOBAL, L = f && null != o && null == m;
   a.useEffect(() => {
 L && (0, T.tt)({
   location: e
@@ -54,11 +54,11 @@ e
   ]), a.useEffect(() => {
 (0, E.w)();
   }, []);
-  let Z = a.useCallback((e, t) => {
+  let b = a.useCallback((e, t) => {
 let {
   inDropdown: s
 } = t;
-return null == e ? null : s ? (0, n.jsx)(f, {
+return null == e ? null : s ? (0, n.jsx)(D, {
   guildId: e.value
 }) : null;
   }, []);
@@ -69,11 +69,11 @@ titleClassName: x.__invalid_marginBottom16,
 title: p.Z.Messages.SOUNDBOARD,
 children: [
   (0, n.jsx)(_.F, {
-    setting: h.s6.VOICE_AND_VIDEO_SOUNDBOARD,
+    setting: g.s6.VOICE_AND_VIDEO_SOUNDBOARD,
     children: (0, n.jsx)(A.Z, {})
   }),
   (0, n.jsxs)(_.F, {
-    setting: h.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
+    setting: g.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
     children: [
       (0, n.jsx)(r.FormDivider, {
         className: R.callSoundsDivider
@@ -88,7 +88,7 @@ children: [
         variant: 'text-sm/medium',
         color: 'header-secondary',
         children: p.Z.Messages.CALL_SOUNDS_SETTINGS_DESCRIPTION_2.format({
-          helpdeskArticle: C.Z.getArticleURL(g.BhN.SOUNDBOARD)
+          helpdeskArticle: C.Z.getArticleURL(h.BhN.SOUNDBOARD)
         })
       }),
       (0, n.jsx)(c.Z, {
@@ -99,7 +99,7 @@ children: [
           value: O.hY
         },
         onChange: e => s(null == e ? O.hY : e.id),
-        renderOptionSuffix: Z,
+        renderOptionSuffix: b,
         hideDivider: !0
       }),
       (0, n.jsxs)(d.Z, {
@@ -133,7 +133,7 @@ children: [
   });
 }
 
-function f(e) {
+function D(e) {
   let {
 guildId: t
   } = e, s = (0, i.e7)([m.Z], () => {

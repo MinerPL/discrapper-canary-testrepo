@@ -6,16 +6,16 @@ return u;
 var i = t(735250);
 t(470079);
 var a = t(481060),
-  r = t(346610),
-  l = t(868643),
+  l = t(346610),
+  r = t(868643),
   o = t(996861),
   s = t(689938);
 
 function u(e, n) {
-  let t = (0, l.a)(e),
+  let t = (0, r.a)(e),
 {
   canForwardMessages: u
-} = r.w.useExperiment({
+} = (0, l.yk)({
   location: 'MessageActionsMenu'
 }, {
   autoTrackExposure: !1

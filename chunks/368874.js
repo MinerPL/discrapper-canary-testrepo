@@ -1,17 +1,17 @@
 var i = n(735250);
 n(470079);
-var s = n(120356),
-  a = n.n(s),
+var a = n(120356),
+  s = n.n(a),
   r = n(924005);
 t.Z = e => {
   let {
 aspectRatio: t,
 style: n,
-className: s,
+className: a,
 children: l
   } = e;
   return (0, i.jsx)('div', {
-className: a()(r.outer, s),
+className: s()(r.outer, a),
 style: {
   paddingTop: ''.concat(1 / t * 100, '%'),
   ...n

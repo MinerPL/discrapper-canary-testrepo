@@ -1,6 +1,6 @@
 n.d(t, {
   f: function() {
-return o;
+return s;
   }
 }), n(47120);
 var r = n(742635);
@@ -29,7 +29,7 @@ for (let n of Object.keys(e)) {
 }
 return t;
   },
-  o = e => {
+  s = e => {
 switch (e.type) {
   case r.L.FIRST_PARTY:
     return {

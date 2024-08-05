@@ -6,8 +6,8 @@ return N;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  o = n(442837),
   l = n(481060),
   u = n(100527),
   c = n(906732),
@@ -41,7 +41,7 @@ function N(e) {
 className: n,
 iconOnly: a,
 remaining: N
-  } = e, v = (0, s.e7)([
+  } = e, v = (0, o.e7)([
 h.Z,
 f.Z
   ], () => {
@@ -85,7 +85,7 @@ children: (0, r.jsx)(l.Tooltip, {
   })
 })
   }) : (0, r.jsxs)('div', {
-className: o()(S.root, n),
+className: s()(S.root, n),
 children: [
   (0, r.jsx)(l.NitroWheelIcon, {
     size: 'md',

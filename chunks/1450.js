@@ -1,8 +1,8 @@
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  o = n(442837),
   l = n(481060),
   u = n(2052),
   c = n(367907),
@@ -28,7 +28,7 @@ setTrackedUpsellViewed: N
 location: v
   } = (0, u.O)(), {
 analyticsLocations: O
-  } = (0, d.ZP)(), R = (0, s.e7)([p.Z], () => p.Z.getGuild(n)), {
+  } = (0, d.ZP)(), R = (0, o.e7)([p.Z], () => p.Z.getGuild(n)), {
 canManageAllExpressions: C
   } = (0, h.XJ)(R), y = null != R && 0 === (0, m.A3)(R.premiumTier) && !R.hasFeature(I.oNc.MORE_STICKERS);
   return (i.useEffect(() => {
@@ -49,7 +49,7 @@ N,
 O,
 C
   ]), null != R && C) ? y ? (0, r.jsxs)('div', {
-className: o()(S.upsell, t),
+className: s()(S.upsell, t),
 children: [
   (0, r.jsx)(l.BoostTier2SimpleIcon, {
     size: 'md',
@@ -79,7 +79,7 @@ children: [
   })
 ]
   }) : (0, r.jsxs)('div', {
-className: o()(S.upsell, t),
+className: s()(S.upsell, t),
 children: [
   (0, r.jsx)(l.StickerIcon, {
     size: 'custom',

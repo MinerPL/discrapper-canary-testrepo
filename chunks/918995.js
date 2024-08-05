@@ -1,35 +1,35 @@
-s.r(n), s(47120);
-var a = s(735250),
-  c = s(470079),
-  t = s(481060),
-  i = s(233787),
-  l = s(689938);
+a.r(s), a(47120);
+var n = a(735250),
+  t = a(470079),
+  c = a(481060),
+  i = a(233787),
+  l = a(689938);
 
-function o(e, n, s) {
-  return n in e ? Object.defineProperty(e, n, {
-value: s,
+function o(e, s, a) {
+  return s in e ? Object.defineProperty(e, s, {
+value: a,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : e[n] = s, e;
+  }) : e[s] = a, e;
 }
-class r extends c.Component {
+class r extends t.Component {
   render() {
 let {
   transitionState: e
 } = this.props;
-return (0, a.jsxs)(i.Z, {
+return (0, n.jsxs)(i.Z, {
   transitionState: e,
   'aria-label': l.Z.Messages.PREMIUM_NOT_CLAIMED,
   children: [
-    (0, a.jsx)(i.Z.Header, {
+    (0, n.jsx)(i.Z.Header, {
       children: l.Z.Messages.PREMIUM_NOT_CLAIMED
     }),
-    (0, a.jsx)(i.Z.Content, {
+    (0, n.jsx)(i.Z.Content, {
       type: i.Z.Types.UNCLAIMED,
       children: l.Z.Messages.PREMIUM_NOT_CLAIMED_BODY
     }),
-    (0, a.jsx)(i.Z.Footer, {
+    (0, n.jsx)(i.Z.Footer, {
       secondary: {
         onClick: this.cancel,
         label: l.Z.Messages.NEVERMIND
@@ -52,15 +52,15 @@ super(...e), o(this, 'cancel', () => {
   let {
     onClose: e
   } = this.props;
-  null == e || e(), (0, t.openModalLazy)(async () => {
+  null == e || e(), (0, c.openModalLazy)(async () => {
     let {
       default: e
-    } = await s.e('60827').then(s.bind(s, 324239));
-    return n => (0, a.jsx)(e, {
-      ...n
+    } = await a.e('60827').then(a.bind(a, 324239));
+    return s => (0, n.jsx)(e, {
+      ...s
     });
   });
 });
   }
 }
-n.default = r;
+s.default = r;

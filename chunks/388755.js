@@ -12,9 +12,9 @@ var n = a(735250),
   c = a(608863),
   d = a(66037),
   u = a(643103),
-  p = a(34211),
-  h = a(231338),
-  m = a(431138),
+  h = a(34211),
+  m = a(231338),
+  p = a(431138),
   N = a(137119);
 
 function k(e, t, a) {
@@ -25,7 +25,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = a, e;
 }
-let _ = h.j_.MAIN_NAVIGATION_MENU;
+let _ = m.j_.MAIN_NAVIGATION_MENU;
 class f extends i.PureComponent {
   componentDidMount() {
 window.addEventListener('keydown', this.handleKeyDown);
@@ -60,11 +60,11 @@ return (0, n.jsx)('header', {
         children: (0, n.jsx)(d.Z, {
           avoidRouter: r,
           className: N.logoWrapper,
-          to: h.am.INDEX,
-          from: h.j_.MAIN_NAVIGATION_MENU,
+          to: m.am.INDEX,
+          from: m.j_.MAIN_NAVIGATION_MENU,
           children: (0, n.jsx)('img', {
             className: N.logo,
-            src: m.r.ASSET_LOGO_DISCORD_SVG,
+            src: p.r.ASSET_LOGO_DISCORD_SVG,
             alt: 'Discord',
             itemProp: 'logo'
           })
@@ -89,7 +89,7 @@ return (0, n.jsx)('header', {
       (0, n.jsxs)('ul', {
         className: k ? N.headerNavOpen : N.headerNav,
         children: [
-          (0, n.jsx)(p.o, {
+          (0, n.jsx)(h.o, {
             avoidRouter: r,
             TrackClick: a,
             styles: N,

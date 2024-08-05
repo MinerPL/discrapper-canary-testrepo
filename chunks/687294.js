@@ -9,8 +9,8 @@ return E;
 var r = n(259443),
   i = n(510990),
   a = n(141795),
-  o = n(983544),
-  s = n(596956),
+  s = n(983544),
+  o = n(596956),
   l = n(865275),
   u = n(981631),
   c = n(959517),
@@ -25,7 +25,7 @@ return this.files.reduce((e, t) => {
   }
   async compressAndCheckFileSize() {
 var e, t;
-let n = (0, o.F)(null === (t = this.files[0]) || void 0 === t ? void 0 : null === (e = t.item) || void 0 === e ? void 0 : e.target);
+let n = (0, s.F)(null === (t = this.files[0]) || void 0 === t ? void 0 : null === (e = t.item) || void 0 === e ? void 0 : e.target);
 return this.files.length > n.getMaxAttachmentsCount() ? (_.log('Too many attachments for '.concat(this.id)), this._handleError({
   code: u.evJ.TOO_MANY_ATTACHMENTS
 }), !1) : !(this._fileSize() > n.getMaxTotalAttachmentSize()) || (this._handleError({
@@ -76,7 +76,7 @@ return {
   _recomputeProgressByFile() {
 let e = {};
 return this.files.forEach(t => {
-  e[t.id] = (0, s.S)(t.loaded, t.currentSize);
+  e[t.id] = (0, o.S)(t.loaded, t.currentSize);
 }), e;
   }
   cancel() {

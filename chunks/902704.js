@@ -8,16 +8,16 @@ return e === t;
 a = Object.keys(t);
   if (i.length !== a.length)
 return null != r && r('shallowEqual: unequal key lengths '.concat(i.length, ' !=== ').concat(a.length)), !1;
-  let o = [];
+  let s = [];
   for (let a = 0; a < i.length; a++) {
-let s = i[a];
-if (e[s] !== t[s] && (null == n || !n.includes(s))) {
+let o = i[a];
+if (e[o] !== t[o] && (null == n || !n.includes(o))) {
   if (null == r)
     return !1;
-  o.push(s);
+  s.push(o);
 }
   }
-  return null != r && o.length > 0 && r('shallowEqual: unequal keys: '.concat(o.join(', '))), 0 === o.length;
+  return null != r && s.length > 0 && r('shallowEqual: unequal keys: '.concat(s.join(', '))), 0 === s.length;
 }
 
 function i(e, t) {

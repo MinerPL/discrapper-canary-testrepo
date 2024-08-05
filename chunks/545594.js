@@ -6,8 +6,8 @@ return r;
 var i = n(735250);
 n(470079);
 var a = n(120356),
-  l = n.n(a),
-  s = n(726181);
+  s = n.n(a),
+  l = n(726181);
 
 function r(e) {
   let {
@@ -19,25 +19,25 @@ headerStyles: o,
 children: c
   } = e;
   return (0, i.jsxs)('div', {
-className: s.spamBanner,
+className: l.spamBanner,
 children: [
   (0, i.jsxs)('div', {
-    className: l()(s.bannerTextContainer, r),
+    className: s()(l.bannerTextContainer, r),
     children: [
       'string' == typeof t ? (0, i.jsx)('img', {
         src: t,
         alt: '',
-        className: s.bannerIcon
+        className: l.bannerIcon
       }) : t,
       (0, i.jsxs)('div', {
-        className: s.bannerText,
+        className: l.bannerText,
         children: [
           (0, i.jsx)('div', {
-            className: l()(s.bannerHeader, o),
+            className: s()(l.bannerHeader, o),
             children: n
           }),
           (0, i.jsx)('div', {
-            className: s.bannerSubtext,
+            className: l.bannerSubtext,
             children: a
           })
         ]
@@ -45,7 +45,7 @@ children: [
     ]
   }),
   (0, i.jsx)('div', {
-    className: s.actionButtons,
+    className: l.actionButtons,
     children: c
   })
 ]

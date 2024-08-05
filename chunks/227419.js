@@ -3,8 +3,8 @@ var r = n(735250);
 n(470079);
 var i = n(392711),
   a = n.n(i),
-  o = n(481060),
-  s = n(493683),
+  s = n(481060),
+  o = n(493683),
   l = n(904245),
   u = n(911969),
   c = n(933557),
@@ -95,7 +95,7 @@ execute: (e, t) => {
   }), h = null !== (i = null === (n = e.find(e => 'silent' === e.name)) || void 0 === n ? void 0 : n.value) && void 0 !== i && i;
   async function m() {
     try {
-      await s.Z.closePrivateChannel(a.id, void 0, h);
+      await o.Z.closePrivateChannel(a.id, void 0, h);
     } catch (e) {
       l.Z.sendBotMessage(a.id, p.Z.Messages.LEAVE_GROUP_DM_ERROR);
     }
@@ -104,18 +104,46 @@ execute: (e, t) => {
     name: u
   }), f = p.Z.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({
     name: u
-  })), (0, o.openModal)(e => (0, r.jsx)(o.ConfirmModal, {
+  })), (0, s.openModal)(e => (0, r.jsx)(s.ConfirmModal, {
     header: E,
     confirmText: p.Z.Messages.LEAVE_GROUP_DM,
     cancelText: p.Z.Messages.CANCEL,
     onConfirm: m,
     ...e,
-    children: (0, r.jsx)(o.Text, {
+    children: (0, r.jsx)(s.Text, {
       variant: 'text-md/normal',
       children: f
     })
   }));
 }
+  },
+  {
+id: '-17',
+name: 'sticker',
+displayName: 'sticker',
+type: u.yU.CHAT,
+inputType: E.iw.BUILT_IN_INTEGRATION,
+applicationId: f.bi.BUILT_IN,
+get description() {
+  return p.Z.Messages.COMMAND_STICKER_DESCRIPTION;
+},
+get displayDescription() {
+  return p.Z.Messages.COMMAND_STICKER_DESCRIPTION;
+},
+options: [{
+  name: 'query',
+  displayName: 'query',
+  type: u.jw.STRING,
+  get description() {
+    return p.Z.Messages.COMMAND_STICKER_QUERY_DESCRIPTION;
+  },
+  get displayDescription() {
+    return p.Z.Messages.COMMAND_STICKER_QUERY_DESCRIPTION;
+  },
+  required: !0
+}],
+integrationType: h.q9n.STICKER,
+integrationTitle: 'sticker'
   }
 ];
 t.Z = I;

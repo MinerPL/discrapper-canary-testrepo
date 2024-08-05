@@ -5,8 +5,8 @@ return _;
 });
 var r = n(735250);
 n(470079);
-var i = n(442837),
-  s = n(954138),
+var s = n(442837),
+  i = n(954138),
   l = n(979264),
   o = n(741308),
   a = n(530),
@@ -31,7 +31,7 @@ pendingBio: C,
 pendingPronouns: x,
 isTryItOutFlow: P,
 hideBioSection: Z
-  } = e, A = (0, i.e7)([u.ZP], () => null == h ? null : u.ZP.getMember(h.id, n.id)), T = (0, i.e7)([f.Z], () => f.Z.hidePersonalInformation), N = (0, s.Z)('ProfileCustomizationPreviewBody'), S = null == _ ? void 0 : null === (t = _.getPreviewBio(C)) || void 0 === t ? void 0 : t.value, j = null != x ? x : null == _ ? void 0 : _.pronouns, R = (0, m.Ly)({
+  } = e, A = (0, s.e7)([u.ZP], () => null == h ? null : u.ZP.getMember(h.id, n.id)), T = (0, s.e7)([f.Z], () => f.Z.hidePersonalInformation), N = (0, i.Z)('ProfileCustomizationPreviewBody'), S = null == _ ? void 0 : null === (t = _.getPreviewBio(C)) || void 0 === t ? void 0 : t.value, j = null != x ? x : null == _ ? void 0 : _.pronouns, R = (0, m.Ly)({
 pendingNickname: g,
 pendingGlobalName: v,
 user: n,

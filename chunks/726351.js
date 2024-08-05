@@ -1,8 +1,8 @@
 var r = n(201694).forEach,
   i = n(864483),
   a = n(10968),
-  o = n(525185),
-  s = n(498031),
+  s = n(525185),
+  o = n(498031),
   l = n(763160),
   u = n(117417),
   c = n(775548),
@@ -41,8 +41,8 @@ t = {
 };
   else {
 var t, n;
-t = s({
-  idGenerator: o(),
+t = o({
+  idGenerator: s(),
   stateHandler: d
 });
   }
@@ -75,13 +75,13 @@ throw Error('Invalid strategy name: ' + N);
   var R = {};
   return {
 listenTo: function(e, i, a) {
-  function o(e) {
+  function s(e) {
     r(S.get(e), function(t) {
       t(e);
     });
   }
 
-  function s(e, t, n) {
+  function o(e, t, n) {
     S.add(t, n), e && n(t);
   }
   if (!a && (a = i, i = e, e = {}), !i)
@@ -104,7 +104,7 @@ listenTo: function(e, i, a) {
     var E = t.get(e);
     if (_ && I.log('Attaching listener to element', E, e), !A.isDetectable(e)) {
       if (_ && I.log(E, 'Not detectable.'), A.isBusy(e)) {
-        _ && I.log(E, 'System busy making it detectable'), s(u, e, a), R[E] = R[E] || [], R[E].push(function() {
+        _ && I.log(E, 'System busy making it detectable'), o(u, e, a), R[E] = R[E] || [], R[E].push(function() {
           ++l === i.length && c();
         });
         return;
@@ -114,12 +114,12 @@ listenTo: function(e, i, a) {
         important: v
       }, e, function(e) {
         if (_ && I.log(E, 'onElementDetectable'), d.getState(e)) {
-          A.markAsDetectable(e), A.markBusy(e, !1), n.addListener(e, o), s(u, e, a);
+          A.markAsDetectable(e), A.markBusy(e, !1), n.addListener(e, s), o(u, e, a);
           var t = d.getState(e);
           if (t && t.startSize) {
             var f = e.offsetWidth,
               h = e.offsetHeight;
-            (t.startSize.width !== f || t.startSize.height !== h) && o(e);
+            (t.startSize.width !== f || t.startSize.height !== h) && s(e);
           }
           R[E] && r(R[E], function(e) {
             e();
@@ -129,7 +129,7 @@ listenTo: function(e, i, a) {
         delete R[E], ++l === i.length && c();
       });
     }
-    _ && I.log(E, 'Already detecable, adding listener.'), s(u, e, a), l++;
+    _ && I.log(E, 'Already detecable, adding listener.'), o(u, e, a), l++;
   }), l === i.length && c();
 },
 removeListener: S.removeListener,

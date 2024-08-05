@@ -1,5 +1,5 @@
 n(724458);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(46973),
   u = n(570140),
   c = n(581883),
@@ -24,7 +24,7 @@ return !1;
 function g() {
   p !== _.Z.getVoiceChannelId() && (m = !1), T() && (m = !0), p = _.Z.getVoiceChannelId();
 }
-class S extends(r = s.ZP.Store) {
+class S extends(r = o.ZP.Store) {
   initialize() {
 this.waitFor(c.Z, _.Z, d.Z), this.syncWith([
   _.Z,
@@ -41,12 +41,12 @@ return h;
 return m;
   }
 }
-o = 'VideoBackgroundStore', (a = 'displayName') in(i = S) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'VideoBackgroundStore', (a = 'displayName') in(i = S) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new S(u.Z, {
+}) : i[a] = s, t.Z = new S(u.Z, {
   VIDEO_FILTER_ASSETS_FETCH_SUCCESS: function(e) {
 let {
   assets: t

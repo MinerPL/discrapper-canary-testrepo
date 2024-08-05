@@ -6,8 +6,8 @@ return _;
 var r = n(685516),
   i = n(285363),
   a = n(175922),
-  o = n(406434),
-  s = n(6138),
+  s = n(406434),
+  o = n(6138),
   l = n(740078),
   u = n(882159),
   c = n(544338),
@@ -35,13 +35,13 @@ C = e.rects.popper,
 y = e.elements[void 0 !== A && A ? R : S],
 D = (0, r.Z)((0, u.kK)(y) ? y : y.contextElement || (0, i.Z)(e.elements.popper), m, T, h),
 L = (0, a.Z)(e.elements.reference),
-b = (0, o.Z)({
+b = (0, s.Z)({
   reference: L,
   element: C,
   strategy: 'absolute',
   placement: E
 }),
-M = (0, s.Z)(Object.assign({}, C, b)),
+M = (0, o.Z)(Object.assign({}, C, b)),
 P = S === l.k5 ? M : L,
 U = {
   top: D.top - P.top + O.top,

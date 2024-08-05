@@ -1,7 +1,7 @@
 var r = n(444675);
 
 function i(e, t) {
-  o(e, t), a(e);
+  s(e, t), a(e);
 }
 
 function a(e) {
@@ -9,15 +9,15 @@ function a(e) {
 (!e._readableState || e._readableState.emitClose) && e.emit('close');
 }
 
-function o(e, t) {
+function s(e, t) {
   e.emit('error', t);
 }
 e.exports = {
   destroy: function(e, t) {
 var n = this,
-  s = this._readableState && this._readableState.destroyed,
+  o = this._readableState && this._readableState.destroyed,
   l = this._writableState && this._writableState.destroyed;
-return s || l ? (t ? t(e) : e && (this._writableState ? !this._writableState.errorEmitted && (this._writableState.errorEmitted = !0, r.nextTick(o, this, e)) : r.nextTick(o, this, e)), this) : (this._readableState && (this._readableState.destroyed = !0), this._writableState && (this._writableState.destroyed = !0), this._destroy(e || null, function(e) {
+return o || l ? (t ? t(e) : e && (this._writableState ? !this._writableState.errorEmitted && (this._writableState.errorEmitted = !0, r.nextTick(s, this, e)) : r.nextTick(s, this, e)), this) : (this._readableState && (this._readableState.destroyed = !0), this._writableState && (this._writableState.destroyed = !0), this._destroy(e || null, function(e) {
   !t && e ? n._writableState ? n._writableState.errorEmitted ? r.nextTick(a, n) : (n._writableState.errorEmitted = !0, r.nextTick(i, n, e)) : r.nextTick(i, n, e) : t ? (r.nextTick(a, n), t(e)) : r.nextTick(a, n);
 }), this);
   },

@@ -6,8 +6,8 @@ return x;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  o = n(442837),
   l = n(481060),
   u = n(100527),
   c = n(580552),
@@ -53,10 +53,10 @@ canDM: j,
 hideNote: W = !1,
 showCopiableUsername: K = !1,
 analyticsParams: z
-  } = e, q = (0, s.e7)([E.Z], () => E.Z.hidePersonalInformation), Q = (0, s.e7)([p.Z], () => {
+  } = e, q = (0, o.e7)([E.Z], () => E.Z.hidePersonalInformation), Q = (0, o.e7)([p.Z], () => {
 var e;
 return null === (e = p.Z.getUserProfile(k.id)) || void 0 === e ? void 0 : e.application;
-  }), X = (0, s.e7)([_.Z], () => _.Z.getChannel(H)), {
+  }), X = (0, o.e7)([_.Z], () => _.Z.getChannel(H)), {
 theme: $
   } = (0, I.z)(), J = i.useRef(null), [ee, et] = i.useState(!0), en = i.useCallback(() => {
 let {
@@ -73,11 +73,11 @@ null != t && (null === (e = t.getScrollerNode()) || void 0 === e || e.scrollTo({
   top: 0
 }));
   }, []);
-  let er = (0, s.e7)([d.default], () => d.default.getId()),
+  let er = (0, o.e7)([d.default], () => d.default.getId()),
 ei = k.id === er,
 ea = k.bot || ei,
 {
-  enabled: eo
+  enabled: es
 } = (0, m.qI)({
   autoTrackExposure: !0,
   location: u.Z.PROFILE_POPOUT,
@@ -98,7 +98,7 @@ return (0, r.jsxs)(r.Fragment, {
           className: w.divider
         }),
         (0, r.jsx)(l.AdvancedScroller, {
-          className: o()(w.scroller, {
+          className: s()(w.scroller, {
             [w.scrollerSeparator]: !ee
           }),
           onScroll: en,
@@ -130,7 +130,7 @@ return (0, r.jsx)(P.Z, {
   className: w.usernameSection,
   lastSection: !0
 });
-  let es = null !== (t = f.ZP.getNickname(null == F ? void 0 : F.id, H, k)) && void 0 !== t ? t : h.ZP.getName(k),
+  let eo = null !== (t = f.ZP.getNickname(null == F ? void 0 : F.id, H, k)) && void 0 !== t ? t : h.ZP.getName(k),
 el = {
   location: {
     page: U.ZY5.USER_POPOUT,
@@ -142,11 +142,11 @@ children: [
   (0, r.jsx)(P.Z, {
     className: w.usernameSection,
     user: k,
-    nickname: es,
+    nickname: eo,
     pronouns: null == B ? void 0 : B.pronouns,
     usernameIcon: k.hasAvatarForGuild(null == F ? void 0 : F.id) && (0, r.jsx)(S.Z, {
       user: k,
-      nickname: es
+      nickname: eo
     }),
     shouldCopyOnClick: K
   }),
@@ -160,7 +160,7 @@ children: [
         className: w.divider
       }),
       (0, r.jsxs)(l.AdvancedScroller, {
-        className: o()(w.scroller, {
+        className: s()(w.scroller, {
           [w.scrollerSeparator]: !ee
         }),
         onScroll: en,
@@ -176,7 +176,7 @@ children: [
             guild: F,
             hidePersonalInformation: q
           }),
-          eo && (0, r.jsx)(T.ZP, {
+          es && (0, r.jsx)(T.ZP, {
             className: w.profileMutuals,
             user: k,
             onClose: Z

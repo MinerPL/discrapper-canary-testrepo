@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(481060),
-  s = n(315263),
+  s = n(481060),
+  o = n(315263),
   l = n(100527),
   u = n(906732),
   c = n(617136),
@@ -38,10 +38,10 @@ trackUserProfileAction: A,
 className: a()(T.container, n),
 'aria-label': I.Z.Messages.PROFILE_USER_BADGES,
 role: 'group',
-children: t.map(e => (0, r.jsx)(o.TooltipContainer, {
+children: t.map(e => (0, r.jsx)(s.TooltipContainer, {
   text: e.description,
   delay: p.vB,
-  children: (0, r.jsx)(o.Anchor, {
+  children: (0, r.jsx)(s.Anchor, {
     onClick: t => {
       A({
         action: 'PRESS_BADGE'
@@ -50,7 +50,7 @@ children: t.map(e => (0, r.jsx)(o.TooltipContainer, {
         analyticsLocations: S,
         ...N
       });
-      let n = null != e.link ? (0, s.default)(e.link, {
+      let n = null != e.link ? (0, o.default)(e.link, {
         analyticsLocations: S
       }) : null;
       if (null != n)

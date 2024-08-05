@@ -29,7 +29,7 @@ a = {
   ],
   relevance: 0
 },
-o = {
+s = {
   className: 'function',
   beginKeywords: 'subroutine function program',
   illegal: '[${=\\n]',
@@ -42,7 +42,7 @@ o = {
     }
   ]
 },
-s = {
+o = {
   className: 'string',
   relevance: 0,
   variants: [
@@ -550,8 +550,8 @@ keywords: {
 },
 illegal: /\/\*/,
 contains: [
-  s,
   o,
+  s,
   {
     begin: /^C\s*=(?!=)/,
     relevance: 0

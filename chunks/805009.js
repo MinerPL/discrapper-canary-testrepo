@@ -4,26 +4,26 @@ return A;
   }
 }), n(653041), n(789020), n(47120);
 var i, a = n(735250),
-  l = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  l = n(120356),
+  r = n.n(l),
   o = n(481060),
   c = n(434650),
-  d = n(657305),
-  u = n(367907),
+  u = n(657305),
+  d = n(367907),
   h = n(282256),
-  p = n(833858),
-  m = n(223135),
-  _ = n(366695),
+  p = n(925329),
+  m = n(833858),
+  _ = n(223135),
   f = n(374129),
   E = n(639351),
-  C = n(368666),
-  g = n(630388),
+  g = n(368666),
+  C = n(630388),
   I = n(51144),
   x = n(981631),
   T = n(354459),
-  v = n(927923),
-  N = n(689938),
+  N = n(927923),
+  v = n(689938),
   S = n(665861);
 
 function Z(e, t, n) {
@@ -54,33 +54,33 @@ let {
 } = e;
 return i && null == t ? (0, a.jsx)(o.TooltipContainer, {
   className: S.iconSpacing,
-  text: N.Z.Messages.HANG_STATUS_VC_ROW_ADD,
+  text: v.Z.Messages.HANG_STATUS_VC_ROW_ADD,
   children: (0, a.jsx)(o.PlusLargeIcon, {
     className: r()(S.icon, n)
   })
 }, 'add-status') : (0, a.jsx)(o.TooltipContainer, {
   className: S.iconSpacing,
-  text: (0, p.O8)(t),
-  children: (0, a.jsx)(m.Z, {
+  text: (0, m.O8)(t),
+  children: (0, a.jsx)(_.Z, {
     hangStatusActivity: t,
     className: r()(S.hangStatusIcon, n)
   })
 }, 'hang-status');
   };
-class b extends(i = l.Component) {
+class b extends(i = s.Component) {
   renderPrioritySpeaker() {
 let {
   speaking: e,
   priority: t,
   collapsed: n,
   mute: i,
-  serverMute: l
+  serverMute: s
 } = this.props;
 return t && !n ? (0, a.jsx)(o.Tooltip, {
-  text: N.Z.Messages.PRIORITY_SPEAKER,
+  text: v.Z.Messages.PRIORITY_SPEAKER,
   children: t => (0, a.jsx)('div', {
     className: r()(S.iconPriortySpeaker, {
-      [S.iconPriortySpeakerSpeaking]: !i && !l && e
+      [S.iconPriortySpeakerSpeaking]: !i && !s && e
     }),
     ...t
   })
@@ -92,7 +92,7 @@ let {
   user: t,
   size: n,
   avatarContainerClass: i,
-  guildId: l
+  guildId: s
 } = this.props;
 return (0, a.jsx)('div', {
   className: r()(i, S.avatar, {
@@ -101,7 +101,7 @@ return (0, a.jsx)('div', {
     [S.avatarSpeaking]: e
   }),
   style: {
-    backgroundImage: 'url('.concat(t.getAvatarURL(l, n === x.ipw.LARGE ? 38 : 24), ')')
+    backgroundImage: 'url('.concat(t.getAvatarURL(s, n === x.ipw.LARGE ? 38 : 24), ')')
   }
 });
   }
@@ -111,16 +111,16 @@ let {
   user: t,
   collapsed: n,
   speaking: i,
-  userNameClassName: l,
-  mute: s,
+  userNameClassName: s,
+  mute: l,
   serverMute: o,
   isGuest: c,
-  isOverlay: d,
-  guildId: u
+  isOverlay: u,
+  guildId: d
 } = this.props, p = (0, a.jsxs)('div', {
-  className: r()(l, {
+  className: r()(s, {
     [S.username]: !0,
-    [S.usernameSpeaking]: !s && !o && i
+    [S.usernameSpeaking]: !l && !o && i
   }),
   children: [
     null != e ? e : I.ZP.getName(t),
@@ -128,23 +128,23 @@ let {
       className: S.guestSuffix,
       children: [
         '\xA0',
-        N.Z.Messages.GUEST_NAME_SUFFIX
+        v.Z.Messages.GUEST_NAME_SUFFIX
       ]
     }) : ''
   ]
 }), m = {
   clan: t.clan,
   userId: t.id,
-  contextGuildId: u,
-  isOverlay: d,
+  contextGuildId: d,
+  isOverlay: u,
   disableTooltip: !0,
-  className: r()(S.clanTag, d && S.isOverlay),
+  className: r()(S.clanTag, u && S.isOverlay),
   profileViewedAnalytics: {
-    source: d ? x.jXE.OVERLAY : x.Sbl.VOICE_PANEL,
+    source: u ? x.jXE.OVERLAY : x.Sbl.VOICE_PANEL,
     tagUserId: t.id
   }
 };
-return !n || d ? (0, a.jsx)(a.Fragment, {
+return !n || u ? (0, a.jsx)(a.Fragment, {
   children: (0, a.jsx)(h.Z, {
     ...m,
     children: p
@@ -157,10 +157,10 @@ let {
   localMute: t,
   localVideoDisabled: n,
   serverMute: i,
-  deaf: l,
-  serverDeaf: s,
+  deaf: s,
+  serverDeaf: l,
   collapsed: c,
-  video: u,
+  video: d,
   isStreaming: h,
   disabled: p,
   isWatching: m,
@@ -187,12 +187,12 @@ let H = [],
     mute: e,
     localMute: t,
     serverMute: i,
-    deaf: l,
-    serverDeaf: s
+    deaf: s,
+    serverDeaf: l
   });
-u && (n ? H.push((0, a.jsx)(o.TooltipContainer, {
+d && (n ? H.push((0, a.jsx)(o.TooltipContainer, {
   className: S.iconSpacing,
-  text: N.Z.Messages.LOCAL_VIDEO_DISABLED,
+  text: v.Z.Messages.LOCAL_VIDEO_DISABLED,
   children: (0, a.jsx)(o.VideoSlashIcon, {
     size: 'md',
     color: 'currentColor',
@@ -201,7 +201,7 @@ u && (n ? H.push((0, a.jsx)(o.TooltipContainer, {
   })
 }, 'video')) : H.push((0, a.jsx)(o.TooltipContainer, {
   className: S.iconSpacing,
-  text: N.Z.Messages.VIDEO,
+  text: v.Z.Messages.VIDEO,
   children: (0, a.jsx)(o.VideoIcon, {
     size: 'md',
     color: 'currentColor',
@@ -209,44 +209,44 @@ u && (n ? H.push((0, a.jsx)(o.TooltipContainer, {
   })
 }, 'video'))), B && H.push((0, a.jsx)(o.TooltipContainer, {
   className: S.iconSpacing,
-  text: N.Z.Messages.NOTICE_USER_DISCONNECTED,
+  text: v.Z.Messages.NOTICE_USER_DISCONNECTED,
   children: (0, a.jsx)(o.CircleExclamationPointIcon, {
     className: r()(S.icon, _),
     color: o.tokens.colors.STATUS_WARNING_BACKGROUND
   })
 }, 'disconnected')), null != I && H.push((0, a.jsx)(o.TooltipContainer, {
-  text: (0, d.Z)(I.name),
+  text: (0, u.Z)(I.name),
   className: S.iconSpacing,
   children: (0, a.jsx)(o.ActivitiesIcon, {
     size: 'md',
     color: 'currentColor',
     className: r()(S.icon, _)
   })
-}, 'activity')), Z === v.YE.XBOX || A === T.wR.XBOX ? H.push((0, a.jsx)('div', {
+}, 'activity')), Z === N.YE.XBOX || A === T.wR.XBOX ? H.push((0, a.jsx)('div', {
   className: r()(S.iconSpacing),
   children: (0, a.jsx)(E.Z, {
     className: r()(S.icon, _)
   })
-}, 'xbox')) : (Z === v.YE.PLAYSTATION || A === T.wR.PLAYSTATION) && H.push((0, a.jsx)('div', {
+}, 'xbox')) : (Z === N.YE.PLAYSTATION || A === T.wR.PLAYSTATION) && H.push((0, a.jsx)('div', {
   className: r()(S.iconSpacing),
   children: (0, a.jsx)(f.Z, {
     className: r()(S.icon, _)
   })
 }, 'playstation')), h ? H.push((0, a.jsx)('div', {
   className: r()(S.iconSpacing, S.liveIconSpacing),
-  children: (0, a.jsx)(C.ZP, {
-    size: C.ZP.Sizes.SMALL
+  children: (0, a.jsx)(g.ZP, {
+    size: g.ZP.Sizes.SMALL
   })
 }, 'stream')) : m && H.push((0, a.jsx)(o.TooltipContainer, {
   className: S.iconSpacing,
-  text: N.Z.Messages.WATCH_STREAM_WATCHING,
+  text: v.Z.Messages.WATCH_STREAM_WATCHING,
   children: (0, a.jsx)(o.EyeIcon, {
     size: 'xs',
     color: 'currentColor',
     className: r()(S.icon, _)
   })
 }, 'watch'));
-let V = null != O && !(0, g.yE)(O.flags, x.udG.EMBEDDED),
+let V = null != O && !(0, C.yE)(O.flags, x.udG.EMBEDDED),
   F = null == b && V;
 return 0 !== H.length || null != G || L || F ? (0, a.jsxs)('div', {
   className: S.icons,
@@ -285,22 +285,22 @@ let {
   onKeyDown: t,
   flipped: n,
   size: i,
-  className: l,
-  selected: s,
+  className: s,
+  selected: l,
   disabled: c,
-  overlap: d,
-  'aria-label': u,
+  overlap: u,
+  'aria-label': d,
   tabIndex: h
 } = this.props;
 return (0, a.jsx)(o.Clickable, {
-  className: r()(l, {
+  className: r()(s, {
     [S.voiceUser]: !0,
-    [S.overlap]: d,
-    [S.selected]: s,
+    [S.overlap]: u,
+    [S.selected]: l,
     [S.clickable]: null != e,
     [S.userSmall]: i === x.ipw.SMALL,
     [S.userLarge]: i === x.ipw.LARGE,
-    [S.disabled]: !s && c
+    [S.disabled]: !l && c
   }),
   onClick: this.handleClick,
   onDoubleClick: this.handleDoubleClick,
@@ -309,7 +309,7 @@ return (0, a.jsx)(o.Clickable, {
   onMouseLeave: this.handleMouseLeave,
   onMouseDown: this.handleMouseDown,
   onKeyDown: t,
-  'aria-label': u,
+  'aria-label': d,
   tabIndex: h,
   children: (0, a.jsxs)('div', {
     className: r()(S.content, {
@@ -370,41 +370,41 @@ function R(e) {
 application: t,
 iconClassName: n,
 guildId: i,
-channelId: s,
-userId: d
-  } = e, [h, p] = l.useState(!1), m = (0, c.O)(e => p(e));
-  return l.useEffect(() => {
-h && u.ZP.trackWithMetadata(x.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
-  channel_id: s,
+channelId: l,
+userId: u
+  } = e, [h, m] = s.useState(!1), _ = (0, c.O)(e => m(e));
+  return s.useEffect(() => {
+h && d.ZP.trackWithMetadata(x.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
+  channel_id: l,
   guild_id: i,
-  user_id: d
+  user_id: u
 });
   }, [
 t.id,
-s,
+l,
 i,
-d,
+u,
 h
   ]), (0, a.jsx)(o.TooltipContainer, {
-text: N.Z.Messages.UNFORMATTED_PLAYING_GAME.format({
+text: v.Z.Messages.UNFORMATTED_PLAYING_GAME.format({
   game: t.name
 }),
-'aria-label': N.Z.Messages.UNFORMATTED_PLAYING_GAME.format({
+'aria-label': v.Z.Messages.UNFORMATTED_PLAYING_GAME.format({
   game: t.name
 }),
 className: S.iconSpacing,
 children: (0, a.jsx)('div', {
-  ref: m,
-  children: (0, a.jsx)(_.Z, {
+  ref: _,
+  children: (0, a.jsx)(p.Z, {
     className: r()(S.icon, n),
     game: t,
-    size: _.Z.Sizes.XSMALL,
+    size: p.Z.Sizes.XSMALL,
     onMouseEnter: () => {
-      u.ZP.trackWithMetadata(x.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
-        channel_id: s,
+      d.ZP.trackWithMetadata(x.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
+        channel_id: l,
         guild_id: i,
         game_name: t.name,
-        user_id: d
+        user_id: u
       });
     }
   })
@@ -417,17 +417,17 @@ function j(e) {
 iconClassName: t,
 mute: n,
 localMute: i,
-serverMute: l,
-deaf: s,
+serverMute: s,
+deaf: l,
 serverDeaf: c
-  } = e, d = (0, o.useRedesignIconContext)().enabled, u = [];
+  } = e, u = (0, o.useRedesignIconContext)().enabled, d = [];
   if (n) {
 let e;
-if (d) {
+if (u) {
   let n;
-  n = l ? o.MicrophoneDenyIcon : i ? o.MicrophoneDenyIcon : o.MicrophoneSlashIcon, e = (0, a.jsx)(n, {
+  n = s ? o.MicrophoneDenyIcon : i ? o.MicrophoneDenyIcon : o.MicrophoneSlashIcon, e = (0, a.jsx)(n, {
     className: r()(S.icon, t, {
-      [S.iconServer]: l
+      [S.iconServer]: s
     }),
     color: 'currentColor'
   });
@@ -436,19 +436,19 @@ if (d) {
     size: 'md',
     color: 'currentColor',
     className: r()(S.icon, t, {
-      [S.iconServer]: l
+      [S.iconServer]: s
     }),
     colorClass: i ? S.strikethrough : void 0
   });
-u.push((0, a.jsx)(o.TooltipContainer, {
-  text: i ? N.Z.Messages.LOCAL_MUTED : l ? N.Z.Messages.SERVER_MUTED : N.Z.Messages.VOICE_CHANNEL_MUTED,
+d.push((0, a.jsx)(o.TooltipContainer, {
+  text: i ? v.Z.Messages.LOCAL_MUTED : s ? v.Z.Messages.SERVER_MUTED : v.Z.Messages.VOICE_CHANNEL_MUTED,
   className: S.iconSpacing,
   children: e
 }, 'mute'));
   }
-  if (c || s) {
+  if (c || l) {
 let e;
-if (d) {
+if (u) {
   let n = c ? o.HeadphonesDenyIcon : o.HeadphonesSlashIcon;
   e = (0, a.jsx)(n, {
     className: r()(S.icon, t, {
@@ -464,14 +464,14 @@ if (d) {
       [S.iconServer]: c
     })
   });
-u.push((0, a.jsx)(o.TooltipContainer, {
+d.push((0, a.jsx)(o.TooltipContainer, {
   className: S.iconSpacing,
-  text: c ? N.Z.Messages.SERVER_DEAFENED : N.Z.Messages.VOICE_CHANNEL_DEAFENED,
+  text: c ? v.Z.Messages.SERVER_DEAFENED : v.Z.Messages.VOICE_CHANNEL_DEAFENED,
   children: e
 }, 'deaf'));
   }
-  return 0 === u.length ? null : (0, a.jsx)(a.Fragment, {
-children: u
+  return 0 === d.length ? null : (0, a.jsx)(a.Fragment, {
+children: d
   });
 }
 Z(b, 'defaultProps', {

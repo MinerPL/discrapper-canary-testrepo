@@ -2,8 +2,8 @@ n(47120);
 var r = n(302454),
   i = n.n(r),
   a = n(339085),
-  o = n(633302),
-  s = n(176354),
+  s = n(633302),
+  o = n(176354),
   l = n(594199);
 let u = {
   s: {
@@ -18,18 +18,18 @@ match: () => null
 order: l.ZP.order,
 requiredFirstCharacters: [':'],
 match(e) {
-  let t = o.ZP.EMOJI_NAME_AND_DIVERSITY_RE.exec(e);
-  return null != t && '' !== o.ZP.convertNameToSurrogate(t[1]) ? t : null;
+  let t = s.ZP.EMOJI_NAME_AND_DIVERSITY_RE.exec(e);
+  return null != t && '' !== s.ZP.convertNameToSurrogate(t[1]) ? t : null;
 },
 parse(e) {
-  let [t, n] = e, r = o.ZP.convertNameToSurrogate(n);
+  let [t, n] = e, r = s.ZP.convertNameToSurrogate(n);
   return null == r || '' === r ? {
     type: 'text',
     content: t
   } : {
     name: ':'.concat(n, ':'),
     surrogate: r,
-    src: s.ZP.getURL(r)
+    src: o.ZP.getURL(r)
   };
 }
   },
@@ -38,19 +38,19 @@ order: i().defaultRules.codeBlock.order,
 requiredFirstCharacters: ['<'],
 match: e => /^<(a)?:(\w+):(\d+)>/.exec(e),
 parse(e, t, n) {
-  let [r, i, o, s] = e, {
+  let [r, i, s, o] = e, {
     guildId: l
-  } = n, u = a.Z.getDisambiguatedEmojiContext(l).getById(s), c = null == u || u.require_colons;
-  return null != u && (o = u.name), {
-    emojiId: s,
-    name: c ? ':'.concat(o, ':') : o,
+  } = n, u = a.Z.getDisambiguatedEmojiContext(l).getById(o), c = null == u || u.require_colons;
+  return null != u && (s = u.name), {
+    emojiId: o,
+    name: c ? ':'.concat(s, ':') : s,
     animated: 'a' === i
   };
 }
   },
   text: {
 parse(e) {
-  let t = o.ZP.findInlineEmojisFromSurrogates(e[0]),
+  let t = s.ZP.findInlineEmojisFromSurrogates(e[0]),
     n = 0;
   return t.map(e => {
     if ('text' === e.type) {
@@ -72,7 +72,7 @@ parse(e) {
         type: 'emoji',
         name: e.emojiName,
         surrogate: e.surrogate,
-        src: s.ZP.getURL(e.surrogate),
+        src: o.ZP.getURL(e.surrogate),
         originalMatch: t
       };
     }

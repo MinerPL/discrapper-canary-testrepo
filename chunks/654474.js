@@ -1,8 +1,8 @@
 var r = n(470079),
   i = n(844303),
   a = n(476400),
-  o = n.n(a),
-  s = function(e) {
+  s = n.n(a),
+  o = function(e) {
 var t = (0, i.default)({
   default: {
     picker: {
@@ -19,18 +19,18 @@ return r.createElement('div', {
   style: t.picker
 });
   };
-s.propTypes = {
-  hsl: o().shape({
-h: o().number,
-s: o().number,
-l: o().number,
-a: o().number
+o.propTypes = {
+  hsl: s().shape({
+h: s().number,
+s: s().number,
+l: s().number,
+a: s().number
   })
-}, s.defaultProps = {
+}, o.defaultProps = {
   hsl: {
 a: 1,
 h: 249.94,
 l: 0.2,
 s: 0.5
   }
-}, t.C = s;
+}, t.C = o;

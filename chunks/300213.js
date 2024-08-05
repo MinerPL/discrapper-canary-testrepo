@@ -4,17 +4,17 @@ return c;
   }
 });
 var i = n(442837),
-  s = n(427679),
-  a = n(517334),
+  a = n(427679),
+  s = n(517334),
   r = n(592125),
   l = n(151864),
   o = n(554747);
 
 function c(e) {
   var t;
-  let n = (0, a.ZP)(e),
+  let n = (0, s.ZP)(e),
 c = r.Z.getChannel(null === (t = n[0]) || void 0 === t ? void 0 : t.id),
-d = (0, i.e7)([s.Z], () => s.Z.getStageInstanceByChannel(null == c ? void 0 : c.id), [c]),
+d = (0, i.e7)([a.Z], () => a.Z.getStageInstanceByChannel(null == c ? void 0 : c.id), [c]),
 u = (0, o.k5)(e),
 {
   isStageNoticeHidden: _,

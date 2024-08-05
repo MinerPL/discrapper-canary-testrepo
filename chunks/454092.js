@@ -1,6 +1,6 @@
 t.d(n, {
   _: function() {
-return c;
+return d;
   },
   s: function() {
 return a;
@@ -11,7 +11,7 @@ var i, a, s = t(668781),
   o = t(981631),
   r = t(689938);
 
-function c(e, n) {
+function d(e, n) {
   let t;
   0 === e ? t = r.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_SELF_DENY_MODAL_MESSAGE_REMOVE_SELF.format() : 1 === e ? t = r.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_SELF_DENY_MODAL_MESSAGE_REMOVE_ROLE.format({
 name: n

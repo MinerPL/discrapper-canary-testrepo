@@ -1,8 +1,8 @@
 t(47120);
-var n = t(735250),
-  r = t(470079),
-  s = t(120356),
-  l = t.n(s),
+var s = t(735250),
+  n = t(470079),
+  l = t(120356),
+  r = t.n(l),
   o = t(481060),
   i = t(285952),
   c = t(761462);
@@ -15,7 +15,7 @@ configurable: !0,
 writable: !0
   }) : e[a] = t, e;
 }
-class d extends r.PureComponent {
+class d extends n.PureComponent {
   componentDidUpdate(e) {
 if (this.props.formError !== e.formError)
   this.setState({
@@ -50,7 +50,7 @@ let {
   form: e,
   className: a
 } = this.props, t = e.map(this.renderFormRow);
-return (0, n.jsx)('div', {
+return (0, s.jsx)('div', {
   className: a,
   children: t
 });
@@ -62,40 +62,40 @@ super(...e), u(this, 'state', {
   let {
     values: a,
     onFieldChange: t,
-    onFieldFocus: r,
-    onFieldBlur: s,
+    onFieldFocus: n,
+    onFieldBlur: l,
     layout: i,
     ...c
   } = this.props, {
     getClassNameForLayout: u,
     renderInput: d,
     title: E,
-    name: _,
-    id: p,
+    name: A,
+    id: N,
     placeholder: m,
-    ...A
-  } = e, N = {
-    ...A,
+    ..._
+  } = e, p = {
+    ..._,
     placeholder: null == m ? void 0 : m(),
     layout: i,
-    error: this.getError(_),
-    value: a[_],
-    name: _,
-    'aria-labelledby': p,
+    error: this.getError(A),
+    value: a[A],
+    name: A,
+    'aria-labelledby': N,
     onChange: t,
-    onFocus: r,
-    onBlur: s
+    onFocus: n,
+    onBlur: l
   };
-  return (0, n.jsx)(o.FormSection, {
-    className: l()(null == u ? void 0 : u(i)),
+  return (0, s.jsx)(o.FormSection, {
+    className: r()(null == u ? void 0 : u(i)),
     title: E(),
-    titleId: p,
-    children: d(N, c)
-  }, _);
+    titleId: N,
+    children: d(p, c)
+  }, A);
 }), u(this, 'renderFormRow', e => {
   let a = e.fields.map(this.renderFormSection);
-  return (0, n.jsx)(i.Z, {
-    className: l()(c.row, e.className),
+  return (0, s.jsx)(i.Z, {
+    className: r()(c.row, e.className),
     children: a
   }, e.fields.map(e => e.name).join(''));
 });

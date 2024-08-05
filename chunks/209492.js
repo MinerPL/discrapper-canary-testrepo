@@ -7,10 +7,10 @@ return C;
 return f;
   }
 }), n(411104);
-var o = n(544891),
+var s = n(544891),
   a = n(570140),
-  l = n(710845),
-  s = n(893988),
+  o = n(710845),
+  l = n(893988),
   r = n(314897),
   c = n(417363),
   d = n(780570),
@@ -20,7 +20,7 @@ var o = n(544891),
 async function C() {
   if (null == i) {
 if (!(u.isPlatformEmbedded && ((0, u.isMac)() || (0, u.isWindows)()))) {
-  new l.Z('CloudSyncUtils').warn('CloudSync is not supported on this platform');
+  new o.Z('CloudSyncUtils').warn('CloudSync is not supported on this platform');
   return;
 }
 await p.ZP.ensureModule('discord_cloudsync'), (i = new(p.ZP.getCloudSync())()).on('state', t => a.Z.dispatch({
@@ -37,7 +37,7 @@ function f(t, e) {
 return Promise.resolve({
   type: h.QCD.NONE
 });
-  let l = function() {
+  let o = function() {
   if (null == i)
     throw Error('Initialize cloud sync module before syncing.');
   return i;
@@ -50,7 +50,7 @@ C = (0, d.Tu)(t, e),
 f = r.default.getToken();
   if (null == f)
 throw Error('Cannot use cloud sync when not authenticated.');
-  let A = null != u.installPath ? (0, s.Z)(u.installPath) : null;
+  let A = null != u.installPath ? (0, l.Z)(u.installPath) : null;
   if (null == A)
 throw Error('No install path for '.concat(t, ':').concat(e));
   let O = r.default.getId(),
@@ -66,7 +66,7 @@ N = {
     patterns: h.SRg.ROOT_PATTERN
   }],
   storage: {
-    baseURL: ''.concat((0, o.K0)()).concat(h.ANM.APPLICATION_STORAGE(t, e)),
+    baseURL: ''.concat((0, s.K0)()).concat(h.ANM.APPLICATION_STORAGE(t, e)),
     token: f
   },
   replacements: {
@@ -75,5 +75,5 @@ N = {
     BRANCHID: e
   }
 };
-  return l.sync(C, N);
+  return o.sync(C, N);
 }

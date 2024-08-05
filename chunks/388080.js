@@ -6,11 +6,11 @@ var l = n(735250),
   s = n(913527),
   i = n.n(s),
   c = n(481060),
-  d = n(299379),
-  h = n(454585),
-  u = n(524444),
-  g = n(529815),
-  m = n(250496),
+  d = n(446411),
+  h = n(468846),
+  u = n(299379),
+  g = n(454585),
+  m = n(524444),
   p = n(285952),
   x = n(810090),
   f = n(55406),
@@ -27,7 +27,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let N = h.Z.reactParserFor(f.Z.getDefaultRules(C)),
+let N = g.Z.reactParserFor(f.Z.getDefaultRules(C)),
   j = {};
 class O extends r.PureComponent {
   track(e, t, n) {
@@ -40,7 +40,7 @@ return (0, l.jsxs)('div', {
     (0, l.jsx)(c.Anchor, {
       'aria-label': E.Z.Messages.TWITTER,
       className: C.socialLink,
-      href: (0, d.Z)(_.RK.TWITTER),
+      href: (0, u.Z)(_.RK.TWITTER),
       target: 'blank',
       children: (0, l.jsx)(c.XNeutralIcon, {
         size: 'xs',
@@ -79,7 +79,7 @@ let {
   changeLog: e
 } = this.props, t = e.youtube_video_id, r = e.video, a = e.image;
 if (null != t && '' !== t)
-  return (0, l.jsx)(g.BC, {
+  return (0, l.jsx)(d.BC, {
     className: o()(C.video),
     allowFullScreen: !1,
     href: 'https://youtu.be/'.concat(t),
@@ -93,12 +93,12 @@ if (null != t && '' !== t)
       width: 451,
       height: 254
     },
-    provider: m.pn.YOUTUBE,
+    provider: h.pn.YOUTUBE,
     maxWidth: 451,
     maxHeight: 254,
-    renderVideoComponent: u.lV,
-    renderImageComponent: u.Yi,
-    renderLinkComponent: u.iT,
+    renderVideoComponent: m.lV,
+    renderImageComponent: m.Yi,
+    renderLinkComponent: m.iT,
     onPlay: () => {
       this.track(_.rMx.CHANGE_LOG_VIDEO_INTERACTED, {}, !0);
     }

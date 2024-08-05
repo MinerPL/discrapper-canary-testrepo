@@ -1,8 +1,8 @@
 var r = n(470079),
   i = n(476400),
   a = n.n(i),
-  o = n(844303),
-  s = n(329022),
+  s = n(844303),
+  o = n(329022),
   l = n(829307),
   u = n(705513),
   c = n(464854),
@@ -17,7 +17,7 @@ var t = e.width,
   _ = e.styles,
   E = e.circleSpacing,
   f = e.className,
-  h = (0, o.default)((0, l.Z)({
+  h = (0, s.default)((0, l.Z)({
     default: {
       card: {
         width: t,
@@ -37,7 +37,7 @@ var t = e.width,
 return r.createElement('div', {
   style: h.card,
   className: 'circle-picker ' + (void 0 === f ? '' : f)
-}, (0, s.Z)(a, function(e) {
+}, (0, o.Z)(a, function(e) {
   return r.createElement(d.Z, {
     key: e,
     color: e,

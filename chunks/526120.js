@@ -18,8 +18,8 @@ return T;
 var r = n(544891),
   i = n(570140),
   a = n(904245),
-  o = n(593472),
-  s = n(160404),
+  s = n(593472),
+  o = n(160404),
   l = n(359110),
   u = n(592125),
   c = n(626135),
@@ -51,7 +51,7 @@ i.Z.dispatch({
 });
   }
 }, m = async e => {
-  if (!s.Z.isFullServerPreview(e)) {
+  if (!o.Z.isFullServerPreview(e)) {
 i.Z.dispatch({
   type: 'GUILD_NEW_MEMBER_ACTIONS_FETCH_START',
   guildId: e
@@ -84,7 +84,7 @@ try {
 return;
   let r = u.Z.getChannel(t),
 E = _.Z.getResourceForChannel(e, t);
-  null != e && !s.Z.isFullServerPreview(e) && null != r && null != E && c.default.track(h.rMx.SERVER_GUIDE_CHANNEL_SELECTED, {
+  null != e && !o.Z.isFullServerPreview(e) && null != r && null != E && c.default.track(h.rMx.SERVER_GUIDE_CHANNEL_SELECTED, {
 guild_id: e,
 channel_id: r.id,
 server_guide_channel_type: 'resource',
@@ -94,7 +94,7 @@ channel_action_type: -1
 channelId: t,
 messageId: d.default.castChannelIdAsMessageId(t),
 flash: !1,
-jumpType: o.SR.INSTANT
+jumpType: s.SR.INSTANT
   });
 }, T = (e, t) => {
   i.Z.dispatch({
@@ -104,7 +104,7 @@ channelId: t
   });
   let n = u.Z.getChannel(t),
 r = _.Z.getActionForChannel(e, t);
-  null != e && !s.Z.isFullServerPreview(e) && null != n && null != r && c.default.track(h.rMx.SERVER_GUIDE_CHANNEL_SELECTED, {
+  null != e && !o.Z.isFullServerPreview(e) && null != n && null != r && c.default.track(h.rMx.SERVER_GUIDE_CHANNEL_SELECTED, {
 guild_id: e,
 channel_id: n.id,
 server_guide_channel_type: 'member action',
@@ -115,13 +115,13 @@ channel_action_type: r.actionType
   type: 'COMPLETE_NEW_MEMBER_ACTION',
   guildId: e,
   channelId: t
-}), s.Z.isFullServerPreview(e))
+}), o.Z.isFullServerPreview(e))
 return;
   let n = u.Z.getChannel(t),
 a = _.Z.getActionForChannel(e, t);
   if (null != n && null != a) {
-var o, l;
-let t = d.default.keys(null !== (o = f.Z.getCompletedActions(e)) && void 0 !== o ? o : {}),
+var s, l;
+let t = d.default.keys(null !== (s = f.Z.getCompletedActions(e)) && void 0 !== s ? s : {}),
   r = null !== (l = _.Z.getNewMemberActions(e)) && void 0 !== l ? l : [];
 c.default.track(h.rMx.SERVER_GUIDE_ACTION_COMPLETED, {
   guild_id: n.guild_id,

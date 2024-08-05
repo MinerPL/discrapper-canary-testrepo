@@ -1,7 +1,7 @@
 n(47120);
 var i = n(243814),
-  s = n(120960),
-  a = n(996106),
+  a = n(120960),
+  s = n(996106),
   r = n(452426),
   l = n(186901),
   o = n(981631),
@@ -45,10 +45,10 @@ handler(e) {
     }
   } = e;
   if (null == t.application.id)
-    throw new a.Z({
+    throw new s.Z({
       errorCode: o.lTL.INVALID_COMMAND
     }, 'No application.');
-  (0, s.N)(t.application.id, n.map(e => ({
+  (0, a.N)(t.application.id, n.map(e => ({
     type: e.type,
     id: e.id,
     vendor: e.vendor,

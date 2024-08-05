@@ -5,8 +5,8 @@ return u;
 });
 var o = s(735250);
 s(470079);
-var n = s(481060),
-  a = s(153124),
+var a = s(481060),
+  n = s(153124),
   l = s(154921),
   i = s(689938),
   c = s(778286),
@@ -17,16 +17,16 @@ function u(e) {
 onClose: t,
 transitionState: s,
 kind: u
-  } = e, d = (0, a.Dt)();
-  return (0, o.jsxs)(n.ModalRoot, {
+  } = e, d = (0, n.Dt)();
+  return (0, o.jsxs)(a.ModalRoot, {
 transitionState: s,
 'aria-labelledby': d,
-size: n.ModalSize.SMALL,
+size: a.ModalSize.SMALL,
 children: [
-  (0, o.jsxs)(n.ModalContent, {
+  (0, o.jsxs)(a.ModalContent, {
     className: c.content,
     children: [
-      (0, o.jsx)(n.ModalCloseButton, {
+      (0, o.jsx)(a.ModalCloseButton, {
         className: c.closeButton,
         onClick: t
       }),
@@ -42,7 +42,7 @@ children: [
         color: l.Z.Colors.HEADER_PRIMARY,
         children: i.Z.Messages.INACCESSIBLE_CHANNEL_LINK_TITLE
       }),
-      (0, o.jsx)(n.Text, {
+      (0, o.jsx)(a.Text, {
         className: c.subtitle,
         variant: 'text-md/normal',
         color: 'header-secondary',
@@ -50,12 +50,12 @@ children: [
       })
     ]
   }),
-  (0, o.jsx)(n.ModalFooter, {
-    children: (0, o.jsx)(n.Button, {
+  (0, o.jsx)(a.ModalFooter, {
+    children: (0, o.jsx)(a.Button, {
       className: c.button,
-      color: n.Button.Colors.BRAND,
+      color: a.Button.Colors.BRAND,
       onClick: t,
-      size: n.Button.Sizes.LARGE,
+      size: a.Button.Sizes.LARGE,
       children: i.Z.Messages.OKAY
     })
   })

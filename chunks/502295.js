@@ -27,7 +27,7 @@ t = (0, r.useCallback)(() => {
       scrollHeight: r,
       scrollWidth: i,
       offsetHeight: a,
-      offsetWidth: o
+      offsetWidth: s
     } = t;
     return {
       scrollTop: e,
@@ -35,7 +35,7 @@ t = (0, r.useCallback)(() => {
       scrollHeight: r,
       scrollWidth: i,
       offsetHeight: a,
-      offsetWidth: o,
+      offsetWidth: s,
       dirty: 0
     };
   }

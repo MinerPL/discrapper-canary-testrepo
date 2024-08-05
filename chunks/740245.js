@@ -1,8 +1,8 @@
 var r = n(546299),
   i = n(261638),
   a = n(21841),
-  o = r.rotr64_hi,
-  s = r.rotr64_lo,
+  s = r.rotr64_hi,
+  o = r.rotr64_lo,
   l = r.shr64_hi,
   u = r.shr64_lo,
   c = r.sum64,
@@ -203,21 +203,21 @@ r.inherits(T, m), e.exports = T, T.blockSize = 1024, T.outSize = 512, T.hmacStre
 n[r] = e[t + r];
   for (; r < n.length; r += 2) {
 var i = function(e, t) {
-    var n = o(e, t, 19) ^ o(t, e, 29) ^ l(e, t, 6);
+    var n = s(e, t, 19) ^ s(t, e, 29) ^ l(e, t, 6);
     return n < 0 && (n += 4294967296), n;
   }(n[r - 4], n[r - 3]),
   a = function(e, t) {
-    var n = s(e, t, 19) ^ s(t, e, 29) ^ u(e, t, 6);
+    var n = o(e, t, 19) ^ o(t, e, 29) ^ u(e, t, 6);
     return n < 0 && (n += 4294967296), n;
   }(n[r - 4], n[r - 3]),
   c = n[r - 14],
   d = n[r - 13],
   _ = function(e, t) {
-    var n = o(e, t, 1) ^ o(e, t, 8) ^ l(e, t, 7);
+    var n = s(e, t, 1) ^ s(e, t, 8) ^ l(e, t, 7);
     return n < 0 && (n += 4294967296), n;
   }(n[r - 30], n[r - 29]),
   h = function(e, t) {
-    var n = s(e, t, 1) ^ s(e, t, 8) ^ u(e, t, 7);
+    var n = o(e, t, 1) ^ o(e, t, 8) ^ u(e, t, 7);
     return n < 0 && (n += 4294967296), n;
   }(n[r - 30], n[r - 29]),
   p = n[r - 32],
@@ -248,11 +248,11 @@ R = this.h[15];
 var y = O,
   D = R,
   L = function(e, t) {
-    var n = o(e, t, 14) ^ o(e, t, 18) ^ o(t, e, 9);
+    var n = s(e, t, 14) ^ s(e, t, 18) ^ s(t, e, 9);
     return n < 0 && (n += 4294967296), n;
   }(T, g),
   b = function(e, t) {
-    var n = s(e, t, 14) ^ s(e, t, 18) ^ s(t, e, 9);
+    var n = o(e, t, 14) ^ o(e, t, 18) ^ o(t, e, 9);
     return n < 0 && (n += 4294967296), n;
   }(T, g),
   M = function(e, t, n, r, i) {
@@ -260,8 +260,8 @@ var y = O,
     return a < 0 && (a += 4294967296), a;
   }(T, g, S, A, N, v),
   P = function(e, t, n, r, i, a) {
-    var o = t & r ^ ~t & a;
-    return o < 0 && (o += 4294967296), o;
+    var s = t & r ^ ~t & a;
+    return s < 0 && (s += 4294967296), s;
   }(T, g, S, A, N, v),
   U = this.k[C],
   w = this.k[C + 1],
@@ -270,18 +270,18 @@ var y = O,
   k = h(y, D, L, b, M, P, U, w, x, G),
   B = p(y, D, L, b, M, P, U, w, x, G);
 y = function(e, t) {
-  var n = o(e, t, 28) ^ o(t, e, 2) ^ o(t, e, 7);
+  var n = s(e, t, 28) ^ s(t, e, 2) ^ s(t, e, 7);
   return n < 0 && (n += 4294967296), n;
 }(r, i), D = function(e, t) {
-  var n = s(e, t, 28) ^ s(t, e, 2) ^ s(t, e, 7);
+  var n = o(e, t, 28) ^ o(t, e, 2) ^ o(t, e, 7);
   return n < 0 && (n += 4294967296), n;
 }(r, i), L = function(e, t, n, r, i) {
   var a = e & n ^ e & i ^ n & i;
   return a < 0 && (a += 4294967296), a;
 }(r, i, l, u, E, f);
 var F = d(y, D, L, b = function(e, t, n, r, i, a) {
-    var o = t & r ^ t & a ^ r & a;
-    return o < 0 && (o += 4294967296), o;
+    var s = t & r ^ t & a ^ r & a;
+    return s < 0 && (s += 4294967296), s;
   }(r, i, l, u, E, f)),
   V = _(y, D, L, b);
 O = N, R = v, N = S, v = A, S = T, A = g, T = d(m, I, k, B), g = _(I, I, k, B), m = E, I = f, E = l, f = u, l = r, u = i, r = d(k, B, F, V), i = _(k, B, F, V);

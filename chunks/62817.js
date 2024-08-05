@@ -1,5 +1,5 @@
 n(47120), n(177593);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(375954);
 let c = Object.freeze([]),
@@ -34,7 +34,7 @@ return !1;
 ...t
   });
 }
-class g extends(r = s.ZP.Store) {
+class g extends(r = o.ZP.Store) {
   initialize() {
 this.waitFor(u.Z);
   }
@@ -53,12 +53,12 @@ if (null != e)
   return h[e];
   }
 }
-o = 'UploadStore', (a = 'displayName') in(i = g) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'UploadStore', (a = 'displayName') in(i = g) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new g(l.Z, {
+}) : i[a] = s, t.Z = new g(l.Z, {
   CONNECTION_OPEN: function() {
 h = {};
   },
@@ -75,17 +75,17 @@ let {
 } = e;
 if (i._aborted || i._errored)
   return;
-let o = null !== (t = d[n]) && void 0 !== t ? t : c;
+let s = null !== (t = d[n]) && void 0 !== t ? t : c;
 _[r.id] = i, d[n] = [
-  ...o,
+  ...s,
   r
 ], E[r.id] = a;
 let {
-  items: s
+  items: o
 } = r;
-null != s && (f[a.id] = {
+null != o && (f[a.id] = {
   ...r,
-  items: s
+  items: o
 }), p(a.nonce, r);
   },
   UPLOAD_COMPRESSION_PROGRESS: function(e) {

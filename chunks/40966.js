@@ -7,13 +7,13 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(626135),
-  o = n(596401),
-  s = n(981631),
+  s = n(596401),
+  o = n(981631),
   l = n(689938);
 let u = () => {
-  a.default.track(s.rMx.CHANGE_LOG_CTA_CLICKED, {
+  a.default.track(o.rMx.CHANGE_LOG_CTA_CLICKED, {
 cta_type: 'profile_bio',
-target: o.D2
+target: s.D2
   });
 };
 
@@ -31,7 +31,7 @@ children: [
         onClick: u,
         target: '_blank',
         rel: 'noreferrer noopener',
-        href: o.D2,
+        href: s.D2,
         children: e
       }, t)
     })

@@ -1,6 +1,6 @@
 n(653041), n(724458), n(47120);
-var r, i, a, o, s = n(512722),
-  l = n.n(s),
+var r, i, a, s, o = n(512722),
+  l = n.n(o),
   u = n(392711),
   c = n.n(u),
   d = n(442837),
@@ -69,13 +69,13 @@ else if (1 === n.size(R.sI.VIDEO)) {
   let e = n.toArray().find(e => e.type === C.fO.USER && e.id !== t && !e.ringing);
   r = null !== (a = null == e ? void 0 : e.id) && void 0 !== a ? a : t;
 }
-let [o] = j(e);
-if (o !== C.dF.AUTO && o !== C.dF.NONE) {
-  let e = n.getParticipant(o);
-  (null == e || e.type === C.fO.STREAM && null == m.Z.getActiveStreamForStreamKey(e.id)) && (o = C.dF.NONE);
+let [s] = j(e);
+if (s !== C.dF.AUTO && s !== C.dF.NONE) {
+  let e = n.getParticipant(s);
+  (null == e || e.type === C.fO.STREAM && null == m.Z.getActiveStreamForStreamKey(e.id)) && (s = C.dF.NONE);
 }
 z(e, [
-  o,
+  s,
   r
 ]);
   }(n), !0) : t, !1);
@@ -286,12 +286,12 @@ return F[e];
 return V[e];
   }
 }
-o = 'ChannelRTCStore', (a = 'displayName') in(i = ea) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'ChannelRTCStore', (a = 'displayName') in(i = ea) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new ea(_.Z, {
+}) : i[a] = s, t.Z = new ea(_.Z, {
   CONNECTION_OPEN: X,
   CONNECTION_OPEN_SUPPLEMENTAL: X,
   THREAD_LIST_SYNC: X,

@@ -9,7 +9,7 @@ var i = n(390507);
 let a = function(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   return function(n) {
-var a, o, s, l, u;
+var a, s, o, l, u;
 let {
   color: c,
   ...d
@@ -17,7 +17,7 @@ let {
 null != c && (_ = 'string' != typeof c && 'css' in c ? c.css : c);
 let E = null !== (a = d.size) && void 0 !== a ? a : 'md',
   f = (0, i.m)(E),
-  h = null !== (s = null !== (o = null == f ? void 0 : f.width) && void 0 !== o ? o : d.width) && void 0 !== s ? s : 24,
+  h = null !== (o = null !== (s = null == f ? void 0 : f.width) && void 0 !== s ? s : d.width) && void 0 !== o ? o : 24,
   p = {
     color: _,
     width: h,

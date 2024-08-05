@@ -5,10 +5,10 @@ function i(e, t) {
 }
 i.prototype.update = function(e, t) {
   'string' == typeof e && (t = t || 'utf8', e = r.from(e, t));
-  for (var n = this._block, i = this._blockSize, a = e.length, o = this._len, s = 0; s < a;) {
-for (var l = o % i, u = Math.min(a - s, i - l), c = 0; c < u; c++)
-  n[l + c] = e[s + c];
-o += u, s += u, o % i == 0 && this._update(n);
+  for (var n = this._block, i = this._blockSize, a = e.length, s = this._len, o = 0; o < a;) {
+for (var l = s % i, u = Math.min(a - o, i - l), c = 0; c < u; c++)
+  n[l + c] = e[o + c];
+s += u, o += u, s % i == 0 && this._update(n);
   }
   return this._len += a, this;
 }, i.prototype.digest = function(e) {

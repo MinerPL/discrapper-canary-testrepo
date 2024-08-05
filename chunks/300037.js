@@ -4,10 +4,10 @@ var a = s(120356),
   i = s.n(a),
   r = s(399606),
   o = s(481060),
-  l = s(623624),
-  c = s(678558),
-  d = s(430824),
-  _ = s(346656),
+  l = s(565138),
+  c = s(623624),
+  d = s(678558),
+  _ = s(430824),
   E = s(709586),
   u = s(267642),
   T = s(981631),
@@ -18,7 +18,7 @@ t.Z = function(e) {
 className: t,
 guildId: s,
 boostingVariant: a
-  } = e, N = (0, r.e7)([d.Z], () => d.Z.getGuild(s), [s]);
+  } = e, N = (0, r.e7)([_.Z], () => _.Z.getGuild(s), [s]);
   return null == N ? (0, n.jsx)('div', {
 className: i()(t, S.guildContainer),
 children: (0, n.jsx)('div', {
@@ -31,10 +31,10 @@ children: (0, n.jsx)('div', {
   }) : (0, n.jsxs)('div', {
 className: i()(t, S.guildContainer),
 children: [
-  (0, n.jsx)(_.Z, {
+  (0, n.jsx)(l.Z, {
     className: S.__invalid_guildIcon,
     guild: N,
-    size: _.Z.Sizes.LARGER
+    size: l.Z.Sizes.LARGER
   }),
   (0, n.jsxs)('div', {
     className: S.guildInfoContainer,
@@ -72,7 +72,7 @@ children: [
       })
     ]
   }),
-  a ? (0, n.jsx)(c.Z, {
+  a ? (0, n.jsx)(d.Z, {
     guild: N,
     analyticsLocation: {
       page: T.ZY5.GUILD_BOOSTING_USER_SETTINGS,
@@ -87,7 +87,7 @@ children: [
   }) : (0, n.jsx)(o.Button, {
     color: o.Button.Colors.PRIMARY,
     onClick: () => {
-      (0, l.f)({
+      (0, c.f)({
         guildId: N.id,
         location: {
           section: T.jXE.GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA

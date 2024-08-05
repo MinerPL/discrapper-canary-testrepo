@@ -6,8 +6,8 @@ return r;
 var i = n(735250);
 n(470079);
 var a = n(205820),
-  l = n(192029),
-  s = n(527119);
+  s = n(192029),
+  l = n(527119);
 
 function r() {
   return (0, i.jsx)('div', {
@@ -147,7 +147,7 @@ children: (0, i.jsxs)('svg', {
             y: '0',
             height: '44',
             width: '44',
-            href: l
+            href: s
           })
         }),
         (0, i.jsx)('pattern', {
@@ -162,7 +162,7 @@ children: (0, i.jsxs)('svg', {
             y: '0',
             height: '44',
             width: '44',
-            href: s
+            href: l
           })
         })
       ]

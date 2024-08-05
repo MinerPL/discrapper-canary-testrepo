@@ -5,8 +5,8 @@ return S;
 }), n(47120), n(411104);
 var r, i = n(735250),
   a = n(470079),
-  o = n(97613),
-  s = n.n(o),
+  s = n(97613),
+  o = n.n(s),
   l = n(699581),
   u = n(374470),
   c = n(846519),
@@ -103,8 +103,8 @@ let {
   nudgeAlignIntoViewport: n,
   useRawTargetDimensions: r,
   spacing: a,
-  autoInvert: o,
-  fixed: s,
+  autoInvert: s,
+  fixed: o,
   positionKey: l,
   disablePointerEvents: u,
   layerContext: c
@@ -126,8 +126,8 @@ return f && !h ? null : (0, i.jsx)(_.mh, {
     nudgeAlignIntoViewport: n,
     useRawTargetDimensions: r,
     spacing: a,
-    autoInvert: o,
-    fixed: s,
+    autoInvert: s,
+    fixed: o,
     positionKey: null != l ? l : String(d),
     disablePointerEvents: u,
     onPositionChange: this.handlePopoutPositionChange,
@@ -141,7 +141,7 @@ this.state.shouldShowPopout !== e && this.setState({
 });
   }
   constructor(...e) {
-super(...e), T(this, 'domElementRef', a.createRef()), T(this, 'layerRef', a.createRef()), T(this, 'popoutRef', a.createRef()), T(this, 'resizeObserver', void 0), T(this, 'popoutId', 'popout_'.concat(s()())), T(this, 'loadingTimeout', new c.V7()), T(this, 'validClickTimeout', new c.V7()), T(this, 'isValidClickStart', !1), T(this, 'state', {
+super(...e), T(this, 'domElementRef', a.createRef()), T(this, 'layerRef', a.createRef()), T(this, 'popoutRef', a.createRef()), T(this, 'resizeObserver', void 0), T(this, 'popoutId', 'popout_'.concat(o()())), T(this, 'loadingTimeout', new c.V7()), T(this, 'validClickTimeout', new c.V7()), T(this, 'isValidClickStart', !1), T(this, 'state', {
   renderedPosition: this.props.position,
   shouldShowPopout: !1,
   shouldShowLoadingState: !1,

@@ -1,10 +1,10 @@
 var r = n(470079),
   i = n(919499),
   a = n(476400),
-  o = n.n(a),
-  s = 'undefined' != typeof globalThis ? globalThis : 'undefined' != typeof window ? window : void 0 !== n.g ? n.g : {},
+  s = n.n(a),
+  o = 'undefined' != typeof globalThis ? globalThis : 'undefined' != typeof window ? window : void 0 !== n.g ? n.g : {},
   l = r.createContext || function(e, t) {
-var n, a, l, u = '__create-react-context-' + (s[n = '__global_unique_id__'] = (s[n] || 0) + 1) + '__',
+var n, a, l, u = '__create-react-context-' + (o[n = '__global_unique_id__'] = (o[n] || 0) + 1) + '__',
   c = function(e) {
     function n() {
       var t, n, r;
@@ -35,11 +35,11 @@ var n, a, l, u = '__create-react-context-' + (s[n = '__global_unique_id__'] = (s
     }, r.componentWillReceiveProps = function(e) {
       if (this.props.value !== e.value) {
         var n, r, i, a = this.props.value,
-          o = e.value;
-        if ((n = a) === (r = o) ? 0 !== n || 1 / n == 1 / r : n != n && r != r)
+          s = e.value;
+        if ((n = a) === (r = s) ? 0 !== n || 1 / n == 1 / r : n != n && r != r)
           i = 0;
         else {
-          i = 'function' == typeof t ? t(a, o) : 1073741823;
+          i = 'function' == typeof t ? t(a, s) : 1073741823;
           0 != (i |= 0) && this.emitter.set(e.value, i);
         }
       }
@@ -47,7 +47,7 @@ var n, a, l, u = '__create-react-context-' + (s[n = '__global_unique_id__'] = (s
       return this.props.children;
     }, n;
   }(r.Component);
-c.childContextTypes = ((a = {})[u] = o().object.isRequired, a);
+c.childContextTypes = ((a = {})[u] = s().object.isRequired, a);
 var d = function(t) {
   function n() {
     var e;
@@ -77,7 +77,7 @@ var d = function(t) {
     return (Array.isArray(e = this.props.children) ? e[0] : e)(this.state.value);
   }, n;
 }(r.Component);
-return d.contextTypes = ((l = {})[u] = o().object, l), {
+return d.contextTypes = ((l = {})[u] = s().object, l), {
   Provider: c,
   Consumer: d
 };

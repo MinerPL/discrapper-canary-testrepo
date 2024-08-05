@@ -1,6 +1,8 @@
 e.exports = {
   clickableCard: 'clickableCard_e0fe28',
   card: 'card_e0fe28',
+  favoriteButton: 'favoriteButton_e0fe28',
+  shownFavoriteButton: 'shownFavoriteButton_e0fe28',
   cardStaticHeight: 'cardStaticHeight_e0fe28',
   clanIconMask: 'clanIconMask_e0fe28',
   clanIconInner: 'clanIconInner_e0fe28',
@@ -16,7 +18,6 @@ e.exports = {
   clanTagChiplet: 'clanTagChiplet_e0fe28',
   traitsContainer: 'traitsContainer_e0fe28',
   thinTrait: 'thinTrait_e0fe28',
-  selectedTrait: 'selectedTrait_e0fe28',
   cardFooter: 'cardFooter_e0fe28',
   cardFooterInfo: 'cardFooterInfo_e0fe28',
   cardFooterMembers: 'cardFooterMembers_e0fe28',
@@ -25,5 +26,6 @@ e.exports = {
   clanInfoItem: 'clanInfoItem_e0fe28',
   wildCardText: 'wildCardText_e0fe28',
   nameText: 'nameText_e0fe28',
-  bannerImage: 'bannerImage_e0fe28'
+  bannerImage: 'bannerImage_e0fe28',
+  selectedTrait: 'selectedTrait_e0fe28'
 };

@@ -9,8 +9,8 @@ var i = t(735250),
   l = t(481060),
   o = t(668781),
   r = t(434404),
-  c = t(590157),
-  d = t(270144),
+  d = t(590157),
+  c = t(270144),
   u = t(288594),
   I = t(588822),
   m = t(496675),
@@ -19,8 +19,8 @@ var i = t(735250),
   E = t(709054),
   T = t(51144),
   h = t(486199),
-  p = t(366598),
-  g = t(125657),
+  g = t(366598),
+  p = t(125657),
   C = t(725875),
   f = t(981631),
   x = t(689938),
@@ -104,7 +104,7 @@ return null != v.user && e.push({
   }, [
 v.id,
 v.user
-  ]), y = a.useMemo(() => null != Z.bot ? (0, i.jsx)(g.Z, {
+  ]), y = a.useMemo(() => null != Z.bot ? (0, i.jsx)(p.Z, {
 guild: t,
 applicationIntegration: o
   }) : (0, i.jsx)(l.Card, {
@@ -121,7 +121,7 @@ o,
 t
   ]), {
 applicationSubscriptionListingsShown: G
-  } = (0, d.ZP)({
+  } = (0, c.ZP)({
 applicationId: Z.id,
 groupListingId: Z.primarySkuId,
 guildId: t.id
@@ -138,7 +138,7 @@ children: [
     userBio: Z.description,
     className: O.headerDescription
   }) : null,
-  L ? (0, i.jsx)(c.Z, {
+  L ? (0, i.jsx)(d.Z, {
     application: Z,
     canNavigate: b,
     guildId: t.id
@@ -149,7 +149,7 @@ children: [
   null != Z.bot ? (0, i.jsxs)('div', {
     className: O.section,
     children: [
-      (0, i.jsx)(p.Z, {
+      (0, i.jsx)(g.Z, {
         icon: (0, i.jsx)(l.RobotIcon, {
           size: 'xs',
           color: 'currentColor'
@@ -162,7 +162,7 @@ children: [
   G && null != Z.primarySkuId && (0, i.jsxs)('div', {
     className: O.section,
     children: [
-      (0, i.jsx)(p.Z, {
+      (0, i.jsx)(g.Z, {
         icon: (0, i.jsx)(l.TicketIcon, {
           size: 'md',
           color: 'currentColor'
@@ -179,7 +179,7 @@ children: [
   (0, i.jsxs)('div', {
     className: O.section,
     children: [
-      (0, i.jsx)(p.Z, {
+      (0, i.jsx)(g.Z, {
         icon: (0, i.jsx)(l.WebhookIcon, {
           size: 'md',
           color: 'currentColor'

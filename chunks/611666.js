@@ -1,8 +1,8 @@
 var r = n(470079),
   i = n(476400),
   a = n.n(i),
-  o = n(844303),
-  s = n(329022),
+  s = n(844303),
+  o = n(329022),
   l = n(829307),
   u = n(13942),
   c = n(464854),
@@ -15,7 +15,7 @@ var t = e.onChange,
   _ = e.triangle,
   E = e.styles,
   f = e.className,
-  h = (0, o.default)((0, l.Z)({
+  h = (0, s.default)((0, l.Z)({
     default: {
       card: {
         width: d,
@@ -131,7 +131,7 @@ return r.createElement('div', {
   style: h.triangle
 }), r.createElement('div', {
   style: h.body
-}, (0, s.Z)(a, function(e, t) {
+}, (0, o.Z)(a, function(e, t) {
   return r.createElement(c.m4, {
     key: t,
     color: e,

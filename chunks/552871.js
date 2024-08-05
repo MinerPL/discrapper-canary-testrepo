@@ -6,8 +6,8 @@ return d;
 var r = n(259443),
   i = n(544891),
   a = n(881052),
-  o = n(131951),
-  s = n(403182),
+  s = n(131951),
+  o = n(403182),
   l = n(579806),
   u = n(981631);
 let c = new r.Y('uploadRtcLogFiles');
@@ -17,7 +17,7 @@ async function d(e, t) {
 throw new a.n0(a.cz.GENERAL);
   let r = [];
   try {
-r = (r = await l.Z.fileManager.readLogFiles(e)).map(e => (0, s.qF)(e, 'application/octet-stream'));
+r = (r = await l.Z.fileManager.readLogFiles(e)).map(e => (0, o.qF)(e, 'application/octet-stream'));
   } catch (e) {
 throw c.error('uploadDebugFiles: read error \''.concat(e, '\'')), new a.n0(a.cz.READ);
   }
@@ -26,7 +26,7 @@ throw new a.n0(a.cz.NO_FILE);
   try {
 let e = {
   extraInfo: t,
-  mediaEngineState: o.Z.getState()
+  mediaEngineState: s.Z.getState()
 };
 n = await i.tn.post({
   url: u.ANM.DEBUG_LOGS(u.GU0.RTC),

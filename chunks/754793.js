@@ -26,12 +26,12 @@ arraySet: function(e, t, n, r, i) {
     e[i + a] = t[n + a];
 },
 flattenChunks: function(e) {
-  var t, n, r, i, a, o;
+  var t, n, r, i, a, s;
   for (t = 0, r = 0, n = e.length; t < n; t++)
     r += e[t].length;
-  for (t = 0, o = new Uint8Array(r), i = 0, n = e.length; t < n; t++)
-    a = e[t], o.set(a, i), i += a.length;
-  return o;
+  for (t = 0, s = new Uint8Array(r), i = 0, n = e.length; t < n; t++)
+    a = e[t], s.set(a, i), i += a.length;
+  return s;
 }
   },
   i = {

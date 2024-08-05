@@ -1,12 +1,12 @@
 n.d(t, {
   T4: function() {
-return o;
+return s;
   }
 }), n(411104);
 var r = n(567198),
   i = n.n(r),
   a = n(231338);
-let o = function(e, t, n) {
+let s = function(e, t, n) {
 let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
   {
     convertToMajorUnits: i = !0,
@@ -18,7 +18,7 @@ return Intl.NumberFormat(n, {
   ...a
 }).format(i ? l(e, t) : e);
   },
-  s = {
+  o = {
 [a.pK.AED]: 2,
 [a.pK.AFN]: 2,
 [a.pK.ALL]: 2,
@@ -203,7 +203,7 @@ return Intl.NumberFormat(n, {
 [a.pK.ZWL]: 2
   },
   l = (e, t) => {
-let n = s[t];
+let n = o[t];
 if (null == n)
   throw Error('Unexpected currency '.concat(t));
 return new(i())(e).dividedBy(10 ** n).toNumber();

@@ -9,13 +9,13 @@ return l;
 var r = n(570140),
   i = n(232567),
   a = n(594174),
-  o = n(484459),
-  s = n(981631);
+  s = n(484459),
+  o = n(981631);
 
 function l(e) {
   let {
 userId: t,
-guildId: n = s.ME,
+guildId: n = o.ME,
 channelId: l,
 messageId: u,
 roleId: c,
@@ -25,7 +25,7 @@ friendToken: E,
 showGuildProfile: f,
 analyticsLocation: h,
 sourceAnalyticsLocations: p
-  } = e, m = a.default.getUser(t), I = null != n && n !== s.ME ? n : void 0;
+  } = e, m = a.default.getUser(t), I = null != n && n !== o.ME ? n : void 0;
   if (null == m)
 return (0, i.In)(t, {
   guildId: f ? I : void 0,
@@ -48,7 +48,7 @@ return (0, i.In)(t, {
     sourceAnalyticsLocations: p
   });
 });
-  (0, o.W)(m, {
+  (0, s.W)(m, {
 guildId: f ? I : void 0,
 withMutualGuilds: !0,
 withMutualFriends: !0,

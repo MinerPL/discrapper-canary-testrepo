@@ -9,8 +9,8 @@ return c;
 var r = n(735250),
   i = n(470079),
   a = n(772848),
-  o = n(993365),
-  s = n(481060),
+  s = n(993365),
+  o = n(481060),
   l = n(561466),
   u = n(301235);
 
@@ -19,7 +19,7 @@ function c(e, t) {
 {
   position: r = l.si.position,
   component: i = l.si.component,
-  duration: o = l.si.duration
+  duration: s = l.si.duration
 } = n;
   return {
 message: e,
@@ -28,7 +28,7 @@ type: t,
 options: {
   position: r,
   component: i,
-  duration: o
+  duration: s
 }
   };
 }
@@ -50,38 +50,38 @@ children: [
   function(e) {
     switch (e) {
       case l.pC.SUCCESS:
-        return (0, r.jsx)(s.CheckmarkLargeIcon, {
+        return (0, r.jsx)(o.CheckmarkLargeIcon, {
           size: 'md',
           className: u.icon,
-          color: s.tokens.colors.STATUS_POSITIVE.css
+          color: o.tokens.colors.STATUS_POSITIVE.css
         });
       case l.pC.FAILURE:
-        return (0, r.jsx)(s.CloseLargeIcon, {
+        return (0, r.jsx)(o.CloseLargeIcon, {
           size: 'md',
           className: u.icon,
-          color: s.tokens.colors.STATUS_DANGER.css
+          color: o.tokens.colors.STATUS_DANGER.css
         });
       case l.pC.CLIP:
-        return (0, r.jsx)(s.ClipsIcon, {
+        return (0, r.jsx)(o.ClipsIcon, {
           size: 'xs',
           className: u.clipIcon,
-          color: s.tokens.colors.HEADER_PRIMARY.css
+          color: o.tokens.colors.HEADER_PRIMARY.css
         });
       case l.pC.LINK:
-        return (0, r.jsx)(s.LinkIcon, {
+        return (0, r.jsx)(o.LinkIcon, {
           className: u.icon,
-          color: s.tokens.colors.HEADER_PRIMARY.css
+          color: o.tokens.colors.HEADER_PRIMARY.css
         });
       case l.pC.FORWARD:
-        return (0, r.jsx)(s.ChatArrowRightIcon, {
+        return (0, r.jsx)(o.ChatArrowRightIcon, {
           className: u.icon,
-          color: s.tokens.colors.STATUS_POSITIVE.css
+          color: o.tokens.colors.STATUS_POSITIVE.css
         });
       default:
         return null;
     }
   }(n),
-  (0, r.jsx)(o.x, {
+  (0, r.jsx)(s.x, {
     className: u.__invalid_content,
     color: 'header-primary',
     variant: 'text-md/normal',

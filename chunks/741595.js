@@ -12,7 +12,7 @@ description: t,
 handleUpdate: i,
 playstyle: d,
 error: u
-  } = e, m = (0, o.useToken)(o.tokens.colors.WHITE), f = r.useMemo(() => Object.values((0, l.f4)()), []);
+  } = e, m = (0, o.useToken)(o.tokens.colors.WHITE), _ = r.useMemo(() => Object.values((0, l.f4)()), []);
   return (0, a.jsxs)('div', {
 className: c.slideContent,
 children: [
@@ -35,7 +35,7 @@ children: [
   }),
   (0, a.jsx)('div', {
     className: c.playstyleSelect,
-    children: f.map(e => (0, a.jsxs)(o.Clickable, {
+    children: _.map(e => (0, a.jsxs)(o.Clickable, {
       className: s()(c.playstyleOption, c.selectableOption, {
         [c.selectedOption]: e.type === d
       }),

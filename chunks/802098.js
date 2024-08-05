@@ -1,5 +1,5 @@
 n(47120);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(433517),
   u = n(570140),
   c = n(706454),
@@ -19,7 +19,7 @@ let f = {},
 function N() {
   g = d.l4.getSetting();
 }
-class v extends(r = s.ZP.Store) {
+class v extends(r = o.ZP.Store) {
   initialize() {
 this.waitFor(c.default, _.Z), this.syncWith([c.default], () => !0), this.syncWith([_.Z], N);
 let e = l.K.get(T);
@@ -68,12 +68,12 @@ return {
 return A.size > 0;
   }
 }
-o = 'ChangelogStore', (a = 'displayName') in(i = v) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'ChangelogStore', (a = 'displayName') in(i = v) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new v(u.Z, {
+}) : i[a] = s, t.Z = new v(u.Z, {
   CHANGE_LOG_LOCK: function(e) {
 let {
   key: t

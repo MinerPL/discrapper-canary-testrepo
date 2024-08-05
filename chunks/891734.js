@@ -1,24 +1,24 @@
 n.d(t, {
   Z: function() {
-return s;
+return o;
   }
 });
 var r = n(632471),
   i = n(740078),
   a = n(510104),
-  o = n(126387);
+  s = n(126387);
 
-function s(e, t) {
+function o(e, t) {
   void 0 === t && (t = {});
   var n = t,
-s = n.placement,
+o = n.placement,
 l = n.boundary,
 u = n.rootBoundary,
 c = n.padding,
 d = n.flipVariations,
 _ = n.allowedAutoPlacements,
 E = void 0 === _ ? i.Ct : _,
-f = (0, r.Z)(s),
+f = (0, r.Z)(o),
 h = f ? d ? i.bw : i.bw.filter(function(e) {
   return (0, r.Z)(e) === f;
 }) : i.mv,
@@ -32,7 +32,7 @@ return t[n] = (0, a.Z)(e, {
   boundary: l,
   rootBoundary: u,
   padding: c
-})[(0, o.Z)(n)], t;
+})[(0, s.Z)(n)], t;
   }, {});
   return Object.keys(m).sort(function(e, t) {
 return m[e] - m[t];

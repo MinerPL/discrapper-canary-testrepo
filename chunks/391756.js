@@ -1,12 +1,12 @@
 n.d(t, {
   Q: function() {
-return o;
+return s;
   }
 });
 var r = n(644387),
   i = n(219845),
   a = n(383466),
-  o = function() {
+  s = function() {
 function e(e, t) {
   this.target = e, this.observedBox = t || r.z.CONTENT_BOX, this.lastReportedSize = {
     inlineSize: 0,

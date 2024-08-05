@@ -12,8 +12,8 @@ return b;
 var r = n(392711),
   i = n.n(r),
   a = n(105797),
-  o = n(63725),
-  s = n(924997),
+  s = n(63725),
+  o = n(924997),
   l = n(861498),
   u = n(749834),
   c = n(760260),
@@ -39,7 +39,7 @@ var r = n(392711),
 let L = 60,
   b = [{
 id: y.aH.DEFAULT,
-iconSource: o,
+iconSource: s,
 name: D.Z.Messages.APP_ICON_DEFAULT,
 isPremium: !1
   }].concat([{
@@ -110,7 +110,7 @@ isPremium: !1
 },
 {
   id: y.Ru.BEANIE,
-  iconSource: s,
+  iconSource: o,
   isPremium: !0,
   name: D.Z.Messages.APP_ICON_BEANIE
 },

@@ -1,8 +1,8 @@
 var r = n(444675);
 let i = n(620633),
   a = n(517024),
-  o = a.isObject,
-  s = a.hasOwn;
+  s = a.isObject,
+  o = a.hasOwn;
 
 function l() {}
 e.exports = l, l.prototype.clearTimeout = function() {
@@ -17,7 +17,7 @@ e.exports = l, l.prototype.clearTimeout = function() {
   if (!e || 'object' != typeof e)
 return this._timeout = e, this._responseTimeout = 0, this._uploadTimeout = 0, this;
   for (let t in e)
-if (s(e, t))
+if (o(e, t))
   switch (t) {
     case 'deadline':
       this._timeout = e.deadline;
@@ -105,9 +105,9 @@ throw Error('Callback required');
 }, l.prototype.get = function(e) {
   return this._header[e.toLowerCase()];
 }, l.prototype.getHeader = l.prototype.get, l.prototype.set = function(e, t) {
-  if (o(e)) {
+  if (s(e)) {
 for (let t in e)
-  s(e, t) && this.set(t, e[t]);
+  o(e, t) && this.set(t, e[t]);
 return this;
   }
   return this._header[e.toLowerCase()] = t, this.header[e] = t, this;
@@ -118,14 +118,14 @@ return this;
 throw Error('.field(name, val) name can not be empty');
   if (this._data)
 throw Error('.field() can\'t be used if .send() is used. Please use only .send() or only .field() & .attach()');
-  if (o(e)) {
+  if (s(e)) {
 for (let t in e)
-  s(e, t) && this.field(t, e[t]);
+  o(e, t) && this.field(t, e[t]);
 return this;
   }
   if (Array.isArray(t)) {
 for (let n in t)
-  s(t, n) && this.field(e, t[n]);
+  o(t, n) && this.field(e, t[n]);
 return this;
   }
   if (null == t)
@@ -168,7 +168,7 @@ data: this._data,
 headers: this._header
   };
 }, l.prototype.send = function(e) {
-  let t = o(e),
+  let t = s(e),
 n = this._header['content-type'];
   if (this._formData)
 throw Error('.send() can\'t be used if .attach() or .field() is used. Please use only .send() or only .field() & .attach()');
@@ -176,11 +176,11 @@ throw Error('.send() can\'t be used if .attach() or .field() is used. Please use
 Array.isArray(e) ? this._data = [] : !this._isHost(e) && (this._data = {});
   else if (e && this._data && this._isHost(this._data))
 throw Error('Can\'t merge these send calls');
-  if (t && o(this._data))
+  if (t && s(this._data))
 for (let t in e) {
   if ('bigint' == typeof e[t] && !e[t].toJSON)
     throw Error('Cannot serialize BigInt value to json');
-  s(e, t) && (this._data[t] = e[t]);
+  o(e, t) && (this._data[t] = e[t]);
 }
   else if ('bigint' == typeof e)
 throw Error('Cannot send value of type BigInt');

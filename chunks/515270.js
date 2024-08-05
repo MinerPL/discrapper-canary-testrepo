@@ -12,8 +12,8 @@ return A;
 var r = n(920478),
   i = n(31775),
   a = n.n(i),
-  o = n(70956),
-  s = n(364964),
+  s = n(70956),
+  o = n(364964),
   l = n(53529),
   u = n(925994),
   c = n(436660),
@@ -53,7 +53,7 @@ d.bN.richValue(e) !== n && (l.T.withMergedEntry(e, () => {
           a = null != n && (n.isStyledCodeBlockLine || n.opensCodeBlockOnOwnLine);
         n = function(e, t, n, r, i) {
           var a;
-          let o = function(e) {
+          let s = function(e) {
               let t;
               let [n, r] = e;
               if (!E.has(n.type))
@@ -61,9 +61,9 @@ d.bN.richValue(e) !== n && (l.T.withMergedEntry(e, () => {
               let i = [],
                 a = /\\|```/g;
               for (let e = 0; e < n.children.length; e++) {
-                let o = n.children[e];
-                if (d.LC.isText(o))
-                  for (a.lastIndex = 0; null != (t = a.exec(o.text));) {
+                let s = n.children[e];
+                if (d.LC.isText(s))
+                  for (a.lastIndex = 0; null != (t = a.exec(s.text));) {
                     if ('\\' === t[0]) {
                       a.lastIndex += 1;
                       continue;
@@ -76,17 +76,17 @@ d.bN.richValue(e) !== n && (l.T.withMergedEntry(e, () => {
               }
               return i;
             }(t),
-            s = o[0],
-            l = o[o.length - 1],
+            o = s[0],
+            l = s[s.length - 1],
             u = null;
           if (null != l) {
             let [t] = d.bN.node(e, l.path);
             u = t.text.substring(l.offset + 3);
           }
-          let c = n && null != s,
-            _ = n && 0 === o.length,
-            f = r && 0 === o.length,
-            p = (c ? o.slice(1) : o).length % 2 == 1,
+          let c = n && null != o,
+            _ = n && 0 === s.length,
+            f = r && 0 === s.length,
+            p = (c ? s.slice(1) : s).length % 2 == 1,
             I = p && (null == u || '' === u || null != u.match(m)),
             T = I && null != u && null !== (a = h[u.toLowerCase()]) && void 0 !== a ? a : null;
           return {
@@ -116,7 +116,7 @@ d.bN.richValue(e) !== n && (l.T.withMergedEntry(e, () => {
                   r = S.get(n);
                 if (null != r)
                   return r;
-                let i = s.default.highlight(t, e, !1);
+                let i = o.default.highlight(t, e, !1);
                 if (null == i || i.illegal)
                   return null;
                 let a = i.value.split('\n');
@@ -127,27 +127,27 @@ d.bN.richValue(e) !== n && (l.T.withMergedEntry(e, () => {
                 for (let n = 0; n < t.length; n++) {
                   let i;
                   let a = r[n].replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#x27;/g, '\''),
-                    o = [],
-                    s = 0,
+                    s = [],
+                    o = 0,
                     l = 0;
                   for (; null != (i = T.exec(a));) {
                     let t = i.index + i[0].length,
                       n = i.index - l;
-                    i.index > l && (e.length > 0 && o.push({
+                    i.index > l && (e.length > 0 && s.push({
                       types: [...e],
-                      start: s,
-                      end: s + n
-                    }), s += n), '</span>' === i[0] ? e.pop() : e.push(i[1]), l = t;
+                      start: o,
+                      end: o + n
+                    }), o += n), '</span>' === i[0] ? e.pop() : e.push(i[1]), l = t;
                   }
                   if (e.length > 0) {
                     let t = a.length - l;
-                    o.push({
+                    s.push({
                       types: [...e],
-                      start: s,
-                      end: s + t
+                      start: o,
+                      end: o + t
                     });
                   }
-                  t[n].hljsTypes = o;
+                  t[n].hljsTypes = s;
                 }
               } else
                 for (let e = 0; e < t.length; e++)
@@ -184,7 +184,7 @@ d.bN.richValue(e) !== n && (l.T.withMergedEntry(e, () => {
 let T = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
   g = {
 max: 1 / 0,
-maxAge: 1 * o.Z.Millis.MINUTE,
+maxAge: 1 * s.Z.Millis.MINUTE,
 updateAgeOnGet: !0
   },
   S = new(a())(g);

@@ -11,11 +11,11 @@ function a(e) {
   return null;
 }
 
-function o(e) {
+function s(e) {
   return null;
 }
 
-function s(e) {
+function o(e) {
   return null;
 }
 
@@ -30,10 +30,10 @@ return r;
 return l;
   },
   S8: function() {
-return o;
+return s;
   },
   k5: function() {
-return s;
+return o;
   },
   kS: function() {
 return i;

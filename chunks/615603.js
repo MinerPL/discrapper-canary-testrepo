@@ -17,8 +17,8 @@ var n = s(735250),
   C = s(267642),
   m = s(74538),
   A = s(283029),
-  h = s(357956),
-  g = s(275909),
+  g = s(357956),
+  h = s(275909),
   O = s(981631),
   p = s(735825),
   R = s(689938),
@@ -39,7 +39,7 @@ children: [
   (0, n.jsxs)('div', {
     className: x.unappliedGuildBoostSlotContentPrimary,
     children: [
-      (0, n.jsx)(g.Z, {
+      (0, n.jsx)(h.Z, {
         className: x.unappliedGuildBoostSlotIcon,
         hasCooldown: t.isOnCooldown(),
         isCanceled: _,
@@ -51,7 +51,7 @@ children: [
         children: R.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_PENDING_CANCELATION.format({
           date: o.currentPeriodEnd
         })
-      }) : t.isOnCooldown() && null != d ? (0, n.jsx)(h.Z, {
+      }) : t.isOnCooldown() && null != d ? (0, n.jsx)(g.Z, {
         cooldown: d.getTime()
       }) : (0, n.jsx)(l.Text, {
         className: x.__invalid_unappliedGuildBoostSlotDescription,
@@ -86,14 +86,14 @@ children: [
   }, t.id);
 }
 
-function D(e) {
+function f(e) {
   (0, l.openModalLazy)(async () => t => (0, n.jsx)(E.default, {
 ...t,
 guildBoostSlot: e
   }));
 }
 
-function f(e) {
+function D(e) {
   (0, l.openModalLazy)(async () => t => (0, n.jsx)(u.default, {
 ...t,
 guildBoostSlotId: e.id
@@ -103,10 +103,10 @@ t.Z = function(e) {
   let t, s;
   let {
 guildBoostSlots: i
-  } = e, E = (0, o.e7)([N.ZP], () => N.ZP.getPremiumTypeSubscription()), u = (null == E ? void 0 : E.isPausedOrPausePending) === !0, h = (0, o.e7)([c.Z], () => c.Z.useReducedMotion), g = (0, o.e7)([S.default], () => S.default.getCurrentUser()), P = (0, I.Vp)(), {
+  } = e, E = (0, o.e7)([N.ZP], () => N.ZP.getPremiumTypeSubscription()), u = (null == E ? void 0 : E.isPausedOrPausePending) === !0, g = (0, o.e7)([c.Z], () => c.Z.useReducedMotion), h = (0, o.e7)([S.default], () => S.default.getCurrentUser()), P = (0, I.Vp)(), {
 appliedGuildBoostSlots: L,
-unappliedGuildBoostSlots: Z,
-numActiveGuildBoostSlots: b,
+unappliedGuildBoostSlots: b,
+numActiveGuildBoostSlots: Z,
 hasCooldownBoosts: v,
 allGuildBoostsAreOnCooldown: j
   } = a.useMemo(() => {
@@ -124,26 +124,26 @@ return i.forEach(i => {
   hasCooldownBoosts: n,
   allGuildBoostsAreOnCooldown: a
 };
-  }, [i]), B = null != E ? (0, d.G)(E, P) : 0, U = Math.max(0, B - L.length), G = b > B, F = B === i.length, y = F ? U : 1, V = a.useMemo(() => {
+  }, [i]), B = null != E ? (0, d.G)(E, P) : 0, U = Math.max(0, B - L.length), G = Z > B, F = B === i.length, y = F ? U : 1, V = a.useMemo(() => {
 let e = [];
 for (let t = 0; t < y; t++)
   e.push((0, n.jsx)(A.Z, {
     className: x.headerBoostGem,
-    useReducedMotion: h
+    useReducedMotion: g
   }, t));
 return e;
   }, [
 y,
-h
-  ]), Y = null != P, w = a.useMemo(() => Z.find(e => e.isAvailable()), [Z]);
-  if (0 === Z.length)
+g
+  ]), Y = null != P, w = a.useMemo(() => b.find(e => e.isAvailable()), [b]);
+  if (0 === b.length)
 return null;
-  let k = Z.length;
+  let k = b.length;
   if (t = F ? 1 === k && Y ? R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE : (j ? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION).format({
   numUnappliedGuildBoostSlots: k
 }) : (j ? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_V2).format({
   numUnappliedGuildBoostSlots: k
-}), m.ZP.isPremium(g)) {
+}), m.ZP.isPremium(h)) {
 if (F && 1 === k && Y)
   s = P.skuId === p.Ft.FREE_GUILD_BOOST_1_MONTH ? R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT;
 else {
@@ -242,13 +242,13 @@ children: [
       }),
       (!F || v) && (0, n.jsx)('ul', {
         className: x.unappliedBoostSlots,
-        children: Z.map(e => (0, n.jsx)(M, {
+        children: b.map(e => (0, n.jsx)(M, {
           guildBoostSlot: e,
           isCancellable: G,
-          onCancel: D,
-          onUncancel: f,
+          onCancel: f,
+          onUncancel: D,
           premiumSubscription: E,
-          useReducedMotion: h
+          useReducedMotion: g
         }, e.id))
       })
     ]

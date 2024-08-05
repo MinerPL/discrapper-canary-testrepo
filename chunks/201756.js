@@ -28,7 +28,7 @@ var n = l(735250),
   H = l(325465),
   f = l(124927);
 
-function A(e) {
+function N(e) {
   let {
 label: t,
 onFilter: l,
@@ -65,7 +65,7 @@ children: (0, n.jsxs)(d.Clickable, {
 })
   });
 }
-let N = 'member-safety-force-show-signals-tooltip';
+let A = 'member-safety-force-show-signals-tooltip';
 
 function R(e) {
   let {
@@ -78,8 +78,8 @@ u.Z
 selectedUserIds: R,
 addUsers: S,
 clearSelection: Z
-  } = (0, M.Z)(t), j = o.requireUnusualDmActivity || o.requireCommunicationDisabled || o.requireUnusualAccountActivity || o.requireUsernameQuarantined, v = o.selectedRoleIds.size > 0, D = null != o.selectedJoinDateOption.afterDate, O = o.selectedSort === _.d$.ORDER_BY_GUILD_JOINED_AT_ASC, B = null != o.selectedAccountAgeOption.afterDate, V = o.selectedSort === _.d$.ORDER_BY_USER_ID_ASC || o.selectedSort === _.d$.ORDER_BY_USER_ID_DESC, U = null != o.selectedSourceInviteCode && '' !== o.selectedSourceInviteCode, w = null != o.selectedJoinSourceType, k = U || w, [F, y] = a.useState(null == c.K.get(N, null)), P = a.useCallback(() => {
-c.K.set(N, Date.now()), y(!1);
+  } = (0, M.Z)(t), j = o.requireUnusualDmActivity || o.requireCommunicationDisabled || o.requireUnusualAccountActivity || o.requireUsernameQuarantined, v = o.selectedRoleIds.size > 0, D = null != o.selectedJoinDateOption.afterDate, O = o.selectedSort === _.d$.ORDER_BY_GUILD_JOINED_AT_ASC, B = null != o.selectedAccountAgeOption.afterDate, V = o.selectedSort === _.d$.ORDER_BY_USER_ID_ASC || o.selectedSort === _.d$.ORDER_BY_USER_ID_DESC, U = null != o.selectedSourceInviteCode && '' !== o.selectedSourceInviteCode, w = null != o.selectedJoinSourceType, k = U || w, [F, y] = a.useState(null == c.K.get(A, null)), P = a.useCallback(() => {
+c.K.set(A, Date.now()), y(!1);
   }, []), Y = (0, E.xC)(t), G = a.useMemo(() => l.filter(e => (0, E.rX)(t, Y, e)), [
 Y,
 l,
@@ -114,7 +114,7 @@ children: (0, n.jsxs)('tr', {
         })
       })
     }),
-    (0, n.jsx)(A, {
+    (0, n.jsx)(N, {
       label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_NAME
     }),
     i ? (0, n.jsxs)(n.Fragment, {
@@ -133,7 +133,7 @@ children: (0, n.jsxs)('tr', {
               onClick: t,
               ...l
             } = e;
-            return (0, n.jsx)(A, {
+            return (0, n.jsx)(N, {
               label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_JOINED_AT,
               onFilter: t,
               isFiltered: D,
@@ -157,7 +157,7 @@ children: (0, n.jsxs)('tr', {
               onClick: t,
               ...l
             } = e;
-            return (0, n.jsx)(A, {
+            return (0, n.jsx)(N, {
               label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE,
               onFilter: t,
               isFiltered: B,
@@ -170,11 +170,11 @@ children: (0, n.jsxs)('tr', {
       ]
     }) : (0, n.jsxs)(n.Fragment, {
       children: [
-        (0, n.jsx)(A, {
+        (0, n.jsx)(N, {
           label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_JOINED_AT,
           className: f.smallCol
         }),
-        (0, n.jsx)(A, {
+        (0, n.jsx)(N, {
           label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE,
           className: f.smallCol
         })
@@ -194,7 +194,7 @@ children: (0, n.jsxs)('tr', {
           onClick: t,
           ...l
         } = e;
-        return (0, n.jsx)(A, {
+        return (0, n.jsx)(N, {
           label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_JOIN_METHOD,
           onFilter: t,
           isFiltered: k,
@@ -202,7 +202,7 @@ children: (0, n.jsxs)('tr', {
           ...l
         });
       }
-    }) : i && (0, n.jsx)(A, {
+    }) : i && (0, n.jsx)(N, {
       label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_JOIN_METHOD,
       className: f.smallCol
     }),
@@ -225,7 +225,7 @@ children: (0, n.jsxs)('tr', {
           onClick: t,
           ...l
         } = e;
-        return (0, n.jsx)(A, {
+        return (0, n.jsx)(N, {
           label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_ROLES,
           onFilter: t,
           isFiltered: v,
@@ -255,7 +255,7 @@ children: (0, n.jsxs)('tr', {
             onClose: l
           });
         },
-        children: t => (0, n.jsx)(A, {
+        children: t => (0, n.jsx)(N, {
           label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_FLAGS,
           'aria-label': p.Z.Messages.MEMBER_SAFETY_SIGNALS_DESCRIPTION,
           onFilter: l => {
@@ -278,7 +278,7 @@ children: (0, n.jsxs)('tr', {
         })
       })
     }),
-    (0, n.jsx)(A, {
+    (0, n.jsx)(N, {
       label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_ACTIONS,
       className: f.smallCol
     })

@@ -6,8 +6,8 @@ return d;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(239091),
+  s = n.n(a),
+  o = n(239091),
   l = n(665692),
   u = n(689938),
   c = n(979092);
@@ -27,7 +27,7 @@ m = i.useCallback(e => {
     e.preventDefault();
     return;
   }
-  (0, s.jW)(e, async () => {
+  (0, o.jW)(e, async () => {
     let {
       default: e
     } = await n.e('5396').then(n.bind(n, 731646));
@@ -46,7 +46,7 @@ a = h.displayName, d = h.displayDescription, _ = (null == e ? void 0 : e.success
   } else
 a = ''.concat(l.GI).concat(f.displayName), d = f.displayDescription, _ = null;
   return (0, r.jsxs)('div', {
-className: o()(E, c.bar),
+className: s()(E, c.bar),
 onContextMenu: m,
 children: [
   (0, r.jsx)('span', {

@@ -2,8 +2,8 @@ n(653041), n(47120);
 var r = n(147913),
   i = n(579806),
   a = n(818083),
-  o = n(998502);
-let s = [
+  s = n(998502);
+let o = [
   0,
   0
 ];
@@ -17,7 +17,7 @@ t = '0' + t;
 
 function u(e, t, n, r) {
   let i = [],
-o = n.map(e => e.map(l).join(':')).join(', ');
+s = n.map(e => e.map(l).join(':')).join(', ');
   for (let e = 0; e < r.length; e++) {
 let t = {};
 t[r[e]] = '1', i.push({
@@ -31,7 +31,7 @@ gpus: n,
 experiment: (0, a.B)({
   kind: 'user',
   id: e,
-  label: 'GPU Workarounds: '.concat(t, ' (').concat(o, ')'),
+  label: 'GPU Workarounds: '.concat(t, ' (').concat(s, ')'),
   defaultConfig: {},
   treatments: i
 })
@@ -118,7 +118,7 @@ c(6141)
 
 function _(e) {
   for (let t of e)
-if (t[0] === s[0] && t[1] === s[1])
+if (t[0] === o[0] && t[1] === o[1])
   return !0;
   return !1;
 }
@@ -136,7 +136,7 @@ if (_(t.gpus)) {
     ...n
   };
 }
-  o.ZP.setChromiumSwitches(e);
+  s.ZP.setChromiumSwitches(e);
 }
 class h extends r.Z {
   constructor(...e) {
@@ -149,7 +149,7 @@ super(...e), t = this, n = 'actions', r = {
         return;
       let a = await i.Z.processUtils.getSystemInfo();
       for (let e of null !== (r = null === (n = a.electronGPUInfo) || void 0 === n ? void 0 : n.gpuDevice) && void 0 !== r ? r : [])
-        !0 === e.active && (s = [
+        !0 === e.active && (o = [
           e.vendorId,
           e.deviceId
         ]);

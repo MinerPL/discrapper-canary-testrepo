@@ -1,8 +1,8 @@
 var r = n(690244),
   i = r('%Number%'),
   a = r('%RegExp%'),
-  o = r('%TypeError%'),
-  s = r('%parseInt%'),
+  s = r('%TypeError%'),
+  o = r('%parseInt%'),
   l = n(192853),
   u = n(385097),
   c = l('String.prototype.slice'),
@@ -14,11 +14,11 @@ var r = n(690244),
   p = n(632384);
 e.exports = function e(t) {
   if ('String' !== p(t))
-throw new o('Assertion failed: `argument` is not a String');
+throw new s('Assertion failed: `argument` is not a String');
   if (d(t))
-return i(s(c(t, 2), 2));
+return i(o(c(t, 2), 2));
   if (_(t))
-return i(s(c(t, 2), 8));
+return i(o(c(t, 2), 8));
   if (f(t) || E(t))
 return NaN;
   var n = h(t);

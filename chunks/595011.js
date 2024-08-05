@@ -1,52 +1,55 @@
-l.r(n);
-var t = l(735250);
-l(470079);
-var r = l(481060),
-  i = l(239091),
-  o = l(410575),
-  s = l(108843),
-  u = l(100527),
-  a = l(299206),
-  d = l(88966),
-  c = l(725119),
-  Z = l(931617),
-  f = l(981631),
-  M = l(689938);
-n.default = (0, s.Z)(function(e) {
+n.r(l);
+var r = n(735250);
+n(470079);
+var t = n(481060),
+  i = n(239091),
+  o = n(410575),
+  u = n(108843),
+  s = n(100527),
+  d = n(299206),
+  a = n(88966),
+  c = n(725119),
+  Z = n(931617),
+  f = n(981631),
+  M = n(689938);
+l.default = (0, u.Z)(function(e) {
   let {
-user: n,
-guildId: l,
-analyticsContext: s,
-onSelect: u
-  } = e, R = (0, c.Z)(n.id), x = (0, Z.Z)(n.id, l), _ = (0, a.Z)({
-id: n.id,
+user: l,
+guildId: n,
+analyticsContext: u,
+onSelect: s
+  } = e, R = (0, c.Z)({
+userId: l.id,
+guildId: n
+  }), _ = (0, Z.Z)(l.id, n), h = (0, d.Z)({
+id: l.id,
 label: M.Z.Messages.COPY_ID_USER
-  }), h = (0, d.Z)(n.id), p = n.isNonUserBot();
-  return (0, t.jsx)(o.Z, {
-context: s,
+  }), g = (0, a.Z)(l.id), x = l.isNonUserBot();
+  return (0, r.jsx)(o.Z, {
+context: u,
 object: f.qAy.CONTEXT_MENU,
-children: (0, t.jsxs)(r.Menu, {
+children: (0, r.jsxs)(t.Menu, {
   navId: 'user-context',
   onClose: i.Zy,
   'aria-label': M.Z.Messages.USER_ACTIONS_MENU_LABEL,
-  onSelect: u,
+  onSelect: s,
   children: [
-    (0, t.jsxs)(r.MenuGroup, {
+    (0, r.jsxs)(t.MenuGroup, {
       children: [
-        !p && R,
-        !p && h
+        !x && R,
+        !x && g
       ]
     }),
-    (0, t.jsx)(r.MenuGroup, {
-      children: !p && x
+    (0, r.jsx)(t.MenuGroup, {
+      children: !x && _
     }),
-    (0, t.jsx)(r.MenuGroup, {
-      children: _
+    (0, r.jsx)(t.MenuGroup, {
+      children: h
     })
   ]
 })
   });
 }, [
-  u.Z.CONTEXT_MENU,
-  u.Z.AUDIT_LOG_USER_MENU
+  s.Z.CONTEXT_MENU,
+  s.Z.AUDIT_LOG_USER_MENU
 ]);

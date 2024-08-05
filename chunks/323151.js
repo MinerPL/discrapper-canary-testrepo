@@ -1,8 +1,8 @@
 var r = n(687249),
   i = n(718332),
   a = n(995542),
-  o = n(92141),
-  s = n(53919),
+  s = n(92141),
+  o = n(53919),
   l = n(290677),
   u = n(551023),
   c = n(454745),
@@ -13,8 +13,8 @@ var r = n(687249),
 e.exports = function(e, t, n, h, p, m) {
   var I = l(e),
 T = l(t),
-g = I ? _ : s(e),
-S = T ? _ : s(t);
+g = I ? _ : o(e),
+S = T ? _ : o(t);
   g = g == d ? E : g, S = S == d ? E : S;
   var A = g == E,
 N = S == E,
@@ -35,5 +35,5 @@ if (O || R) {
   return m || (m = new r()), p(C, y, n, h, m);
 }
   }
-  return !!v && (m || (m = new r()), o(e, t, n, h, p, m));
+  return !!v && (m || (m = new r()), s(e, t, n, h, p, m));
 };

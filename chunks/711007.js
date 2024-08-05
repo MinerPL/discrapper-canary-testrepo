@@ -1,18 +1,18 @@
-t.d(e, {
+n.d(t, {
   p: function() {
-return a;
+return o;
   }
 });
-var l = t(470079),
-  u = t(409813),
-  i = t(882712);
+var l = n(470079),
+  i = n(409813),
+  u = n(882712);
 
-function a(n, e, t) {
+function o(e, t, n) {
   l.useEffect(() => {
-null != n && n !== u.h8.AWAITING_PURCHASE_TOKEN_AUTH && e === i.I.PENDING ? t(u.h8.AWAITING_PURCHASE_TOKEN_AUTH) : n === u.h8.AWAITING_PURCHASE_TOKEN_AUTH && e === i.I.SUCCESS && t(u.h8.REVIEW);
+null != e && e !== i.h8.AWAITING_PURCHASE_TOKEN_AUTH && t === u.I.PENDING ? n(i.h8.AWAITING_PURCHASE_TOKEN_AUTH) : e === i.h8.AWAITING_PURCHASE_TOKEN_AUTH && t === u.I.SUCCESS && n(i.h8.REVIEW);
   }, [
-n,
 e,
-t
+t,
+n
   ]);
 }

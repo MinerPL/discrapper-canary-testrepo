@@ -1,24 +1,24 @@
 n.d(t, {
   Z: function() {
-return s;
+return o;
   }
 });
 var r = n(49691),
   i = n(285363),
   a = n(977489),
-  o = n(436857);
+  s = n(436857);
 
-function s(e, t) {
+function o(e, t) {
   var n = (0, r.Z)(e),
-s = (0, i.Z)(e),
+o = (0, i.Z)(e),
 l = n.visualViewport,
-u = s.clientWidth,
-c = s.clientHeight,
+u = o.clientWidth,
+c = o.clientHeight,
 d = 0,
 _ = 0;
   if (l) {
 u = l.width, c = l.height;
-var E = (0, o.Z)();
+var E = (0, s.Z)();
 (E || !E && 'fixed' === t) && (d = l.offsetLeft, _ = l.offsetTop);
   }
   return {

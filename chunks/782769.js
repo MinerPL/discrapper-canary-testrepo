@@ -1,6 +1,6 @@
 n.d(t, {
   a: function() {
-return o;
+return s;
   },
   z: function() {
 return a;
@@ -16,6 +16,6 @@ function a(e) {
   return i();
 }
 
-function o(e) {
+function s(e) {
   return i();
 }

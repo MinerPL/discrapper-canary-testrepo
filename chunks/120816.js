@@ -1,10 +1,10 @@
-r(47120);
-var a, n, i, o, l = r(772848),
-  c = r(756647),
-  s = r(442837),
-  d = r(570140),
-  u = r(314897),
-  h = r(906467);
+t(47120);
+var a, n, i, o, l = t(772848),
+  c = t(756647),
+  s = t(442837),
+  d = t(570140),
+  u = t(314897),
+  h = t(906467);
 let m = 0,
   g = [],
   p = [],
@@ -28,11 +28,11 @@ o = 'AnalyticsLogStore', (i = 'displayName') in(n = f) ? Object.defineProperty(n
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : n[i] = o, t.Z = new f(d.Z, {
+}) : n[i] = o, r.Z = new f(d.Z, {
   TRACK: function(e) {
 let {
-  event: t,
-  properties: r,
+  event: r,
+  properties: t,
   fingerprint: a
 } = e;
 if (h.Z.isDeveloper) {
@@ -41,8 +41,8 @@ if (h.Z.isDeveloper) {
     ...g,
     {
       key: (m++).toString(),
-      event: t,
-      properties: r,
+      event: r,
+      properties: t,
       fingerprint: null != (n = a) ? (0, c.s)(n) : u.default.getId(),
       timestamp: new Date()
     }
@@ -51,8 +51,8 @@ if (h.Z.isDeveloper) {
   },
   TRACK_TRIGGER: function(e) {
 let {
-  experimentId: t,
-  descriptor: r,
+  experimentId: r,
+  descriptor: t,
   exposureType: a,
   excluded: n,
   location: i,
@@ -63,8 +63,8 @@ if (!!h.Z.isDeveloper)
     ...p,
     {
       key: (0, l.Z)(),
-      experimentId: t,
-      descriptor: r,
+      experimentId: r,
+      descriptor: t,
       exposureType: a,
       excluded: n,
       location: i,
@@ -75,9 +75,9 @@ if (!!h.Z.isDeveloper)
   },
   SET_TRACK_TRIGGERS: function(e) {
 let {
-  enabled: t
+  enabled: r
 } = e;
-b = t;
+b = r;
   },
   ANALYTICS_LOG_CLEAR: function() {
 g = [], p = [];

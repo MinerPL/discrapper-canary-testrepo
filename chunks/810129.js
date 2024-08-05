@@ -12,11 +12,11 @@ i = e.inherit(e.QUOTE_STRING_MODE, {
 a = e.COMMENT(';', '$', {
   relevance: 0
 }),
-o = {
+s = {
   className: 'literal',
   begin: /\b([Tt]rue|[Ff]alse|nil|None)\b/
 },
-s = {
+o = {
   begin: '[\\[\\{]',
   end: '[\\]\\}]',
   relevance: 0
@@ -45,9 +45,9 @@ E = [
   u,
   a,
   c,
-  s,
-  r,
   o,
+  r,
+  s,
   {
     begin: n,
     relevance: 0
@@ -66,7 +66,7 @@ e.COMMENT('comment', ''),
   starts: _
 },
 _
-  ], _.contains = E, s.contains = E, {
+  ], _.contains = E, o.contains = E, {
 name: 'Hy',
 aliases: ['hylang'],
 illegal: /\S/,
@@ -78,9 +78,9 @@ contains: [
   u,
   a,
   c,
-  s,
+  o,
   r,
-  o
+  s
 ]
   };
 };

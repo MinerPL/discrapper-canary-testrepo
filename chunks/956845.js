@@ -1,11 +1,11 @@
 var r = n(520714),
   i = n(650359),
   a = n(557105),
-  o = n(964417);
+  s = n(964417);
 
-function s(t) {
+function o(t) {
   var n = 'function' == typeof Map ? new Map() : void 0;
-  return e.exports = s = function(e) {
+  return e.exports = o = function(e) {
 if (null === e || !a(e))
   return e;
 if ('function' != typeof e)
@@ -17,7 +17,7 @@ if (void 0 !== n) {
 }
 
 function t() {
-  return o(e, arguments, r(this).constructor);
+  return s(e, arguments, r(this).constructor);
 }
 return t.prototype = Object.create(e.prototype, {
   constructor: {
@@ -27,6 +27,6 @@ return t.prototype = Object.create(e.prototype, {
     configurable: !0
   }
 }), i(t, e);
-  }, e.exports.__esModule = !0, e.exports.default = e.exports, s(t);
+  }, e.exports.__esModule = !0, e.exports.default = e.exports, o(t);
 }
-e.exports = s, e.exports.__esModule = !0, e.exports.default = e.exports;
+e.exports = o, e.exports.__esModule = !0, e.exports.default = e.exports;

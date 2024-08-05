@@ -5,7 +5,7 @@ throw Error(t);
 }
 n.d(t, {
   E_: function() {
-return o;
+return s;
   },
   fp: function() {
 return a;
@@ -32,7 +32,7 @@ throw Error('invalid uint 32: ' + typeof e);
 throw Error('invalid uint 32: ' + e);
 }
 
-function o(e) {
+function s(e) {
   if ('number' != typeof e)
 throw Error('invalid float 32: ' + typeof e);
   if (Number.isFinite(e) && (e > 3.4028234663852886e+38 || e < -3.4028234663852886e+38))

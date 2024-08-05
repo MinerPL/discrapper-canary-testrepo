@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(153124),
-  o = n(793397),
-  s = n(228168),
+  s = n(793397),
+  o = n(228168),
   l = n(809965);
 let u = e => {
 let {
@@ -18,42 +18,42 @@ let {
 return t / 2 + n;
   },
   c = {
-[s.y0.POPOUT]: {
+[o.y0.POPOUT]: {
   radius: u(i.AvatarSizes.SIZE_80),
   offsetX: 16,
   offsetY: 4
 },
-[s.y0.BITE_SIZE]: {
+[o.y0.BITE_SIZE]: {
   radius: u(i.AvatarSizes.SIZE_80),
   offsetX: 10,
   offsetY: 4
 },
-[s.y0.MODAL]: {
+[o.y0.MODAL]: {
   radius: u(i.AvatarSizes.SIZE_120),
   offsetX: 14,
   offsetY: 5
 },
-[s.y0.FULL_SIZE]: {
+[o.y0.FULL_SIZE]: {
   radius: u(i.AvatarSizes.SIZE_120),
   offsetX: 16,
   offsetY: 5
 },
-[s.y0.SETTINGS]: {
+[o.y0.SETTINGS]: {
   radius: u(i.AvatarSizes.SIZE_80),
   offsetX: 16,
   offsetY: -22
 },
-[s.y0.PANEL]: {
+[o.y0.PANEL]: {
   radius: u(i.AvatarSizes.SIZE_80),
   offsetX: 10,
   offsetY: 8
 },
-[s.y0.POMELO_POPOUT]: {
+[o.y0.POMELO_POPOUT]: {
   radius: u(i.AvatarSizes.SIZE_80),
   offsetX: 20,
   offsetY: -20
 },
-[s.y0.CANCEL_MODAL]: {
+[o.y0.CANCEL_MODAL]: {
   radius: u(i.AvatarSizes.SIZE_56),
   offsetX: 8,
   offsetY: 2
@@ -69,7 +69,7 @@ hasThemeColors: u,
 hasBanner: d,
 overrideBannerWidth: _,
 hasProfileEffect: E = !1
-  } = e, f = (0, a.Dt)(), h = null != _ ? _ : (0, o.e7)(n), p = (0, o.Wo)({
+  } = e, f = (0, a.Dt)(), h = null != _ ? _ : (0, s.e7)(n), p = (0, s.Wo)({
 profileType: n,
 user: {
   hasBanner: d,
@@ -80,7 +80,7 @@ user: {
 radius: m,
 offsetX: I,
 offsetY: T
-  } = c[n], g = u && (n === s.y0.POPOUT || n === s.y0.BITE_SIZE) ? 4 : 0, S = p - T - g;
+  } = c[n], g = u && (n === o.y0.POPOUT || n === o.y0.BITE_SIZE) ? 4 : 0, S = p - T - g;
   return (0, r.jsxs)('svg', {
 className: l.bannerSVGWrapper,
 viewBox: '0 0 '.concat(h, ' ').concat(p),

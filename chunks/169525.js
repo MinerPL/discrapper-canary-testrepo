@@ -22,8 +22,8 @@ return r;
   }
 }), n(789020), n(627341);
 var r, i, a = n(278074),
-  o = n(399606),
-  s = n(432877),
+  s = n(399606),
+  o = n(432877),
   l = n(163268),
   u = n(25610),
   c = n(368844),
@@ -45,7 +45,7 @@ let {
 if (t) {
   if ((0, l.Sv)(i))
     return 'potential_explicit_content';
-  if ((0, h.yE)(r, m.J0y.CONTAINS_EXPLICIT_MEDIA) || s.ZP.get('obscure_blur_effect_enabled'))
+  if ((0, h.yE)(r, m.J0y.CONTAINS_EXPLICIT_MEDIA) || o.ZP.get('obscure_blur_effect_enabled'))
     return 'explicit_content';
 }
 return n || (0, h.yE)(r, m.J0y.IS_SPOILER) ? 'spoiler' : null;
@@ -53,14 +53,14 @@ return n || (0, h.yE)(r, m.J0y.IS_SPOILER) ? 'spoiler' : null;
   g = (e, t, n, r, i) => {
 let {
   flags: a = 0,
-  contentScanVersion: o
+  contentScanVersion: s
 } = e, u = E.Z.getMessage(t, n);
 if (null == u)
   return null;
 if (i) {
-  if (!u.author.bot && (0, l.Sv)(o))
+  if (!u.author.bot && (0, l.Sv)(s))
     return 'potential_explicit_content';
-  if ((0, h.yE)(a, m.xPJ.CONTAINS_EXPLICIT_MEDIA) || s.ZP.get('obscure_blur_effect_enabled'))
+  if ((0, h.yE)(a, m.xPJ.CONTAINS_EXPLICIT_MEDIA) || o.ZP.get('obscure_blur_effect_enabled'))
     return 'explicit_content';
 }
 return r ? 'spoiler' : null;
@@ -76,7 +76,7 @@ if (t) {
   let {
     contentScanFlags: e
   } = r;
-  if ((0, h.yE)(e, d.Cb.EXPLICIT) || s.ZP.get('obscure_blur_effect_enabled'))
+  if ((0, h.yE)(e, d.Cb.EXPLICIT) || o.ZP.get('obscure_blur_effect_enabled'))
     return 'explicit_content';
 }
 return n ? 'spoiler' : null;
@@ -122,7 +122,7 @@ function N(e) {
   let {
 channel: t,
 media: n
-  } = e, r = (0, o.e7)([f.Z], () => null != t && f.Z.can(m.Plq.MANAGE_MESSAGES, t)), i = _.cC.useSetting(), a = (0, u.m)();
+  } = e, r = (0, s.e7)([f.Z], () => null != t && f.Z.can(m.Plq.MANAGE_MESSAGES, t)), i = _.cC.useSetting(), a = (0, u.m)();
   return A(n, !(0, p.Z)(i, r), a);
 }
 let v = e => (0, a.EQ)(e).with('explicit_content', () => I.Z.Messages.EXPLICIT_CONTENT_ALT).with('spoiler', () => I.Z.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0);

@@ -6,13 +6,13 @@ return f;
 var i = n(735250);
 n(470079);
 var a = n(442837),
-  l = n(481060),
-  s = n(545594),
-  r = n(314897),
-  o = n(271383),
-  c = n(373791),
-  d = n(322937),
-  u = n(134049),
+  s = n(481060),
+  l = n(346486),
+  r = n(545594),
+  o = n(314897),
+  c = n(271383),
+  u = n(322937),
+  d = n(134049),
   h = n(893732),
   p = n(590433),
   m = n(689938),
@@ -22,18 +22,18 @@ function f(e) {
   let {
 guild: t,
 disabledUntil: n
-  } = e, [f, E] = (0, u.i)(t.id), C = (0, a.e7)([
-o.ZP,
-r.default
-  ], () => o.ZP.getMember(t.id, r.default.getId()), [t.id]);
-  return (0, d.$)(C), (0, i.jsxs)('div', {
+  } = e, [f, E] = (0, d.i)(t.id), g = (0, a.e7)([
+c.ZP,
+o.default
+  ], () => c.ZP.getMember(t.id, o.default.getId()), [t.id]);
+  return (0, u.$)(g), (0, i.jsxs)('div', {
 children: [
   f ? (0, i.jsx)(h.Z, {
     onClose: () => E(t.id),
     guildName: t.name
   }) : null,
-  (0, i.jsx)(s.i, {
-    bannerIcon: (0, i.jsx)(l.ClockWarningIcon, {
+  (0, i.jsx)(r.i, {
+    bannerIcon: (0, i.jsx)(s.ClockWarningIcon, {
       size: 'md',
       color: 'currentColor',
       className: _.bannerIcon
@@ -44,9 +44,9 @@ children: [
     }),
     containerStyles: _.bannerContainer,
     headerStyles: _.bannerHeader,
-    children: (0, i.jsx)(l.Text, {
+    children: (0, i.jsx)(s.Text, {
       variant: 'text-sm/semibold',
-      children: (0, i.jsx)(c.Z, {
+      children: (0, i.jsx)(l.Z, {
         deadline: new Date(n),
         showUnits: !0,
         stopAtOneSec: !0

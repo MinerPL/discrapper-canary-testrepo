@@ -5,15 +5,15 @@ return N;
 });
 var i = n(735250);
 n(470079);
-var a = n(913527),
-  s = n.n(a),
+var s = n(913527),
+  a = n.n(s),
   r = n(692547),
   l = n(481060),
   o = n(788080),
   c = n(800530),
-  d = n(689938),
-  u = n(454777);
-let _ = e => s()().diff(s().unix(e), 'days');
+  u = n(689938),
+  d = n(454777);
+let _ = e => a()().diff(a().unix(e), 'days');
 
 function E(e) {
   let {
@@ -36,8 +36,8 @@ onClick: () => {
     });
   });
 },
-className: u.detailsButton,
-children: d.Z.Messages.SAFETY_SYSTEM_NOTIFICATION_SEE_DETAILS_BUTTON
+className: d.detailsButton,
+children: u.Z.Messages.SAFETY_SYSTEM_NOTIFICATION_SEE_DETAILS_BUTTON
   });
 }
 
@@ -46,9 +46,9 @@ function I(e) {
 learnMoreLink: t
   } = e;
   return (0, i.jsx)(l.Anchor, {
-className: u.detailsButton,
+className: d.detailsButton,
 href: t,
-children: d.Z.Messages.SAFETY_SYSTEM_NOTIFICATION_LEARN_MORE_BUTTON
+children: u.Z.Messages.SAFETY_SYSTEM_NOTIFICATION_LEARN_MORE_BUTTON
   });
 }
 
@@ -56,7 +56,7 @@ function m(e) {
   let {
 ctaType: t,
 classificationId: n,
-learnMoreLink: a
+learnMoreLink: s
   } = e;
   switch (t) {
 case c.wo.POLICY_VIOLATION_DETAIL:
@@ -66,10 +66,10 @@ case c.wo.POLICY_VIOLATION_DETAIL:
     classificationId: n
   });
 case c.wo.LEARN_MORE_LINK:
-  if (null == a)
+  if (null == s)
     return null;
   return (0, i.jsx)(I, {
-    learnMoreLink: a
+    learnMoreLink: s
   });
 default:
   return null;
@@ -89,7 +89,7 @@ danger: (0, i.jsx)(l.WarningIcon, {
 })
   };
   return null != t && t in n ? (0, i.jsx)('div', {
-className: u.icon,
+className: d.icon,
 children: n[t]
   }) : null;
 }
@@ -98,12 +98,12 @@ function h(e) {
   let {
 children: t,
 theme: n
-  } = e, a = {
-default: u.defaultFooterContainer,
-danger: u.dangerFooterContainer
+  } = e, s = {
+default: d.defaultFooterContainer,
+danger: d.dangerFooterContainer
   };
   return (0, i.jsx)('div', {
-className: a[null != n ? n : 'default'],
+className: s[null != n ? n : 'default'],
 children: t
   });
 }
@@ -112,50 +112,50 @@ function N(e) {
   var t, n;
   if (null == e.embed || null == e.embed.fields)
 return null;
-  let a = (0, o.fr)(e.embed);
-  return null == a ? null : (0, i.jsxs)(l.Clickable, {
-className: u.safetyPolicyNoticeContainer,
+  let s = (0, o.fr)(e.embed);
+  return null == s ? null : (0, i.jsxs)(l.Clickable, {
+className: d.safetyPolicyNoticeContainer,
 children: [
   (0, i.jsxs)('div', {
-    className: u.noticeContent,
+    className: d.noticeContent,
     children: [
       (0, i.jsxs)('div', {
-        className: u.headerRow,
+        className: d.headerRow,
         children: [
           (0, i.jsx)(T, {
-            iconType: a.icon
+            iconType: s.icon
           }),
           (0, i.jsx)(l.Text, {
             variant: 'text-md/semibold',
-            children: a.header
+            children: s.header
           })
         ]
       }),
       (0, i.jsx)('div', {
-        className: u.incidentTiming,
+        className: d.incidentTiming,
         children: (0, i.jsx)(l.Text, {
           variant: 'text-xs/medium',
-          children: d.Z.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({
-            daysAgo: _(null !== (n = a.timestamp) && void 0 !== n ? n : 0)
+          children: u.Z.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({
+            daysAgo: _(null !== (n = s.timestamp) && void 0 !== n ? n : 0)
           })
         })
       }),
       (0, i.jsx)('div', {
-        className: u.noticeBody,
+        className: d.noticeBody,
         children: (0, i.jsx)(l.Text, {
           variant: 'text-md/normal',
           color: 'text-muted',
-          children: a.body
+          children: s.body
         })
       })
     ]
   }),
   (0, i.jsx)(h, {
-    theme: a.theme,
-    children: null === (t = a.ctas) || void 0 === t ? void 0 : t.map(e => (0, i.jsx)(m, {
+    theme: s.theme,
+    children: null === (t = s.ctas) || void 0 === t ? void 0 : t.map(e => (0, i.jsx)(m, {
       ctaType: e,
-      classificationId: a.classification_id,
-      learnMoreLink: a.learn_more_link
+      classificationId: s.classification_id,
+      learnMoreLink: s.learn_more_link
     }, e))
   })
 ]

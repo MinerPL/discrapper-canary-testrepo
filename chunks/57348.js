@@ -17,8 +17,8 @@ var a = i(120356),
   _ = i(132871),
   p = i(147890),
   m = i(57716),
-  f = i(981631),
-  g = i(65176);
+  g = i(981631),
+  f = i(65176);
 
 function C(e) {
   let {
@@ -36,11 +36,11 @@ ref: x,
 children: [
   (0, n.jsx)(s.Heading, {
     variant: 'heading-lg/semibold',
-    className: g.header,
+    className: f.header,
     children: a
   }),
   (0, n.jsx)('div', {
-    className: g.list,
+    className: f.list,
     children: C.map(e => {
       let {
         id: t,
@@ -59,8 +59,8 @@ children: [
         hash: m
       });
       return a === o.C.APPLICATION && null != _ ? (0, n.jsx)(c.Z, {
-        href: f.Z5c.APPLICATION_DIRECTORY_PROFILE(_.id),
-        className: g.item,
+        href: g.Z5c.APPLICATION_DIRECTORY_PROFILE(_.id),
+        className: f.item,
         children: (0, n.jsx)(u.Z, {
           imageSrc: v,
           application: _,
@@ -68,7 +68,7 @@ children: [
             let {
               mutualGuilds: t
             } = e;
-            l.default.track(f.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+            l.default.track(g.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
               collection_id: i,
               application_id: _.id,
               guild_id: I,
@@ -80,19 +80,19 @@ children: [
           animatesOnHover: !0
         })
       }, t) : a === o.C.LINK && null != C ? (0, n.jsxs)(h.Z, {
-        className: r()(g.item, g.linkCard),
+        className: r()(f.item, f.linkCard),
         imageSrc: v,
         header: C,
-        headerClassName: g.cardHeader,
+        headerClassName: f.cardHeader,
         children: [
           (0, n.jsx)(s.Text, {
             variant: 'text-sm/normal',
-            className: g.linkDescription,
+            className: f.linkDescription,
             children: x
           }),
           (0, n.jsx)(s.Anchor, {
             onClick: () => {
-              l.default.track(f.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+              l.default.track(g.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                 collection_id: i,
                 link: N,
                 guild_id: I,
@@ -100,7 +100,7 @@ children: [
               });
             },
             href: N,
-            className: r()((0, s.getButtonStyle)(), g.linkCta),
+            className: r()((0, s.getButtonStyle)(), f.linkCta),
             children: b
           })
         ]

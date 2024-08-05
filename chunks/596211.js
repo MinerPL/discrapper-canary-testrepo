@@ -1,28 +1,28 @@
 n.d(t, {
   Z: function() {
-return o;
+return r;
   }
 });
-var a = n(735250);
+var i = n(735250);
 n(470079);
-var r = n(481060),
-  i = n(406877);
+var s = n(481060),
+  a = n(406877);
 
-function o(e) {
+function r(e) {
   let {
 guildId: t,
 productId: n,
-attachmentId: o,
-...s
+attachmentId: r,
+...l
   } = e, {
-isLoading: l,
+isLoading: o,
 downloadAttachment: c
-  } = (0, i.Z)(t, n);
-  return (0, a.jsx)(r.Button, {
-...s,
-submitting: l,
+  } = (0, a.Z)(t, n);
+  return (0, i.jsx)(s.Button, {
+...l,
+submitting: o,
 onClick: function() {
-  c(o);
+  c(r);
 }
   });
 }

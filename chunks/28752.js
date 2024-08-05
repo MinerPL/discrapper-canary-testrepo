@@ -6,8 +6,8 @@ return h;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(373793),
+  s = n.n(a),
+  o = n(373793),
   l = n(974674),
   u = n(481060),
   c = n(688465),
@@ -28,14 +28,14 @@ icon: n.icon
 n.icon,
 n.id
   ]), p = i.useMemo(() => [{
-  type: s.Y.USER_INSTALL,
+  type: o.Y.USER_INSTALL,
   icon: u.UserPlusIcon,
   title: E.Z.Messages.OAUTH2_INTEGRATION_SELECT_USER,
   subtitle: E.Z.Messages.OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE,
   beta: !1
 },
 {
-  type: s.Y.GUILD_INSTALL,
+  type: o.Y.GUILD_INSTALL,
   icon: u.ServerIcon,
   title: E.Z.Messages.OAUTH2_INTEGRATION_SELECT_GUILD,
   subtitle: E.Z.Messages.OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE,
@@ -67,7 +67,7 @@ children: [
     className: f.rows,
     children: p.map(e => (0, r.jsxs)(u.Clickable, {
       tag: 'li',
-      className: o()(f.row, {
+      className: s()(f.row, {
         [f.inApp]: t
       }),
       onClick: () => a(e.type),

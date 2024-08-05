@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
   a = n(481060),
-  o = n(782568),
-  s = n(100527),
+  s = n(782568),
+  o = n(100527),
   l = n(906732),
   u = n(326135),
   c = n(299206),
@@ -31,7 +31,7 @@ trackUserProfileAction: g
   } = (0, f.KZ)(), {
 analyticsLocations: S,
 newestAnalyticsLocation: A
-  } = (0, l.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU), N = (0, i.e7)([E.default], () => E.default.locale), v = (0, i.e7)([h.Z], () => h.Z.getUserProfile(n.id)), O = null == v ? void 0 : v.application, R = (0, d.Z)({
+  } = (0, l.ZP)(o.Z.USER_PROFILE_OVERFLOW_MENU), N = (0, i.e7)([E.default], () => E.default.locale), v = (0, i.e7)([h.Z], () => h.Z.getUserProfile(n.id)), O = null == v ? void 0 : v.application, R = (0, d.Z)({
 user: n,
 location: A,
 color: 'danger',
@@ -60,7 +60,7 @@ action: () => {
   g({
     action: 'REPORT_APP',
     analyticsLocations: S
-  }), (0, o.Z)((0, u.G)({
+  }), (0, s.Z)((0, u.G)({
     id: O.id,
     name: n.username,
     locale: N

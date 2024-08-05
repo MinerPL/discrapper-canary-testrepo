@@ -7,20 +7,20 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(481060),
-  s = n(689938),
+  s = n(481060),
+  o = n(689938),
   l = n(68388);
 
 function u(e) {
   let {
-text: t = s.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
+text: t = o.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
 className: n
   } = e;
-  return (0, r.jsx)(o.Tooltip, {
+  return (0, r.jsx)(s.Tooltip, {
 text: t,
-children: e => (0, r.jsx)(o.Clickable, {
+children: e => (0, r.jsx)(s.Clickable, {
   ...e,
-  children: (0, r.jsx)(o.NitroWheelIcon, {
+  children: (0, r.jsx)(s.NitroWheelIcon, {
     size: 'md',
     color: 'currentColor',
     className: a()(l.nitroWheel, n)

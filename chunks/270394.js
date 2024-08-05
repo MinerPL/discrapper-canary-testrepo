@@ -9,8 +9,8 @@ var i = t(735250),
   l = t.n(s),
   o = t(512722),
   r = t.n(o),
-  c = t(392711),
-  d = t.n(c),
+  d = t(392711),
+  c = t.n(d),
   u = t(399606),
   I = t(692547),
   m = t(481060),
@@ -19,16 +19,16 @@ var i = t(735250),
   E = t(129861),
   T = t(493544),
   h = t(700582),
-  p = t(410030),
-  g = t(933557),
-  C = t(154285),
-  f = t(666657),
-  x = t(487419),
-  O = t(664452),
-  S = t(560114),
-  A = t(699516),
-  R = t(594174),
-  b = t(373791),
+  g = t(410030),
+  p = t(933557),
+  C = t(346486),
+  f = t(154285),
+  x = t(666657),
+  O = t(487419),
+  S = t(664452),
+  A = t(560114),
+  R = t(699516),
+  b = t(594174),
   Z = t(285952),
   v = t(965638),
   M = t(302434),
@@ -51,8 +51,8 @@ invite: a,
 showChannel: s = !1,
 inviteDisabled: o = !1,
 hide: r = !1
-  } = e, c = a.uses;
-  return a.maxUses > 0 && (c = ''.concat(a.uses, '/').concat(a.maxUses)), (0, i.jsxs)(Z.Z, {
+  } = e, d = a.uses;
+  return a.maxUses > 0 && (d = ''.concat(a.uses, '/').concat(a.maxUses)), (0, i.jsxs)(Z.Z, {
 className: l()(D.inviteSettingsInviteRow, P.card, {
   [D.inviteDisabledRow]: o
 }),
@@ -82,7 +82,7 @@ children: [
         (t = a.channel, s ? (0, i.jsx)(m.Text, {
           variant: 'text-xs/normal',
           color: 'header-secondary',
-          children: (0, g.F6)(t, R.default, A.Z, !0)
+          children: (0, p.F6)(t, b.default, R.Z, !0)
         }) : null)
       ]
     })
@@ -108,7 +108,7 @@ children: [
     children: (0, i.jsx)(m.Text, {
       className: D.uses,
       variant: 'text-sm/normal',
-      children: c
+      children: d
     })
   }),
   (0, i.jsx)(Z.Z, {
@@ -120,7 +120,7 @@ children: [
     children: (0, i.jsx)(m.Text, {
       className: D.countdown,
       variant: 'text-sm/normal',
-      children: (0, i.jsx)(b.Z, {
+      children: (0, i.jsx)(C.Z, {
         deadline: a.getExpiresAt()
       })
     })
@@ -141,7 +141,7 @@ invites: n,
 guild: s,
 hide: l,
 channel: o = null,
-showChannel: c = !1,
+showChannel: d = !1,
 loading: _ = !1,
 canCreateInvites: N = !1
   } = e;
@@ -151,10 +151,10 @@ canCreateInvites: N = !1
   enableInvitesDisabled: h
 } = (0, v.FR)(s),
 {
-  showAlertMode: g
-} = (0, C.sw)(s.id),
-A = (0, u.e7)([x.Z], () => x.Z.getGuildIncident(s.id)),
-R = s.hasFeature(L.oNc.INVITES_DISABLED) || g && (null == A ? void 0 : A.invitesDisabledUntil) != null && new Date(A.invitesDisabledUntil) > new Date(),
+  showAlertMode: p
+} = (0, f.sw)(s.id),
+C = (0, u.e7)([O.Z], () => O.Z.getGuildIncident(s.id)),
+R = s.hasFeature(L.oNc.INVITES_DISABLED) || p && (null == C ? void 0 : C.invitesDisabledUntil) != null && new Date(C.invitesDisabledUntil) > new Date(),
 [b, P] = a.useState(!1);
   a.useEffect(() => {
 E && v.WC.trackExposure({
@@ -166,8 +166,8 @@ E,
 h,
 s.id
   ]);
-  let k = (0, p.ZP)(),
-U = a.useMemo(() => null == n || _ ? [] : d()(n).sortBy(e => {
+  let k = (0, g.ZP)(),
+U = a.useMemo(() => null == n || _ ? [] : c()(n).sortBy(e => {
   var n, t;
   return (null !== (t = null === (n = e.inviter) || void 0 === n ? void 0 : n.username) && void 0 !== t ? t : '').toLowerCase();
 }).value(), [
@@ -175,7 +175,7 @@ U = a.useMemo(() => null == n || _ ? [] : d()(n).sortBy(e => {
   _
 ]),
 H = () => {
-  (0, m.openModalLazy)(async () => e => (0, i.jsx)(S.default, {
+  (0, m.openModalLazy)(async () => e => (0, i.jsx)(A.default, {
     ...e,
     channel: o,
     guild: s,
@@ -192,11 +192,11 @@ w = async e => {
     }
   }
 }, W = () => {
-  if (g) {
+  if (p) {
     let e = {
-      source: f.Zu.GUILD_SETTINGS
+      source: x.Zu.GUILD_SETTINGS
     };
-    (0, m.openModalLazy)(async () => n => (0, i.jsx)(O.default, {
+    (0, m.openModalLazy)(async () => n => (0, i.jsx)(S.default, {
       ...n,
       guildId: s.id,
       analyticsData: e
@@ -277,7 +277,7 @@ renderSection: () => {
             onCreateInvite: H
           }) : j.Z.Messages.SETTINGS_INVITE_TIP_WITHOUT_CREATE
         }),
-        (h || g || R) && (0, i.jsxs)('div', {
+        (h || p || R) && (0, i.jsxs)('div', {
           className: D.inviteDisabledContainer,
           children: [
             (0, i.jsx)(m.Button, {
@@ -329,7 +329,7 @@ renderRow: e => {
   return null == a ? null : (0, i.jsx)(G, {
     hide: l,
     invite: a,
-    showChannel: c,
+    showChannel: d,
     inviteDisabled: R
   }, a.code);
 },

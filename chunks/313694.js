@@ -9,7 +9,7 @@ writable: !0
 }
 n.d(t, {
   J: function() {
-return s;
+return o;
   }
 });
 
@@ -25,10 +25,10 @@ function a(e, t, n) {
 throw TypeError('attempted to ' + n + ' private field on non-instance');
   return t.get(e);
 }
-var o = new WeakMap();
-class s {
+var s = new WeakMap();
+class o {
   constructor() {
-var e, t, n, s, l, u;
+var e, t, n, o, l, u;
 e = this, n = {
     writable: !0,
     value: void 0
@@ -36,16 +36,16 @@ e = this, n = {
   function(e, t) {
     if (t.has(e))
       throw TypeError('Cannot initialize the same private elements twice on an object');
-  }(e, t = o), t.set(e, n), r(this, 'register', e => {
-    i(this, o).push(e);
+  }(e, t = s), t.set(e, n), r(this, 'register', e => {
+    i(this, s).push(e);
   }), r(this, 'unregister', e => {
     let t;
-    for (; - 1 !== (t = i(this, o).indexOf(e));)
-      i(this, o).splice(t, 1);
+    for (; - 1 !== (t = i(this, s).indexOf(e));)
+      i(this, s).splice(t, 1);
   }), r(this, 'backendChanged', e => {
-    for (let t of i(this, o))
+    for (let t of i(this, s))
       t.backendChanged(e);
-  }), s = this, l = [], u = a(s, o, 'set'),
+  }), o = this, l = [], u = a(o, s, 'set'),
   function(e, t, n) {
     if (t.set)
       t.set.call(e, n);
@@ -54,6 +54,6 @@ e = this, n = {
         throw TypeError('attempted to set read only private field');
       t.value = n;
     }
-  }(s, u, l);
+  }(o, u, l);
   }
 }

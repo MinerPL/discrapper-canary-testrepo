@@ -20,7 +20,7 @@ var a = n(735250),
   E = n(981631),
   N = n(689938),
   b = n(971300),
-  v = n(906739),
+  v = n(972268),
   S = n(965358),
   M = n(420196),
   A = n(433075);
@@ -147,7 +147,7 @@ channelId: r.id
   }), {
 transitions: y,
 setVisible: D
-  } = (0, I.H)(L), F = s.useCallback(() => {
+  } = (0, I.H)(), F = s.useCallback(() => {
 D(!1), _.Z.hideAdminOnboarding(r.id, !0);
   }, [
 r,

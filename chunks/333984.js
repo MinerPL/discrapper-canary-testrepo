@@ -10,8 +10,8 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let o = new Set(),
-  s = new Set(),
+let s = new Set(),
+  o = new Set(),
   l = !1;
 
 function u(e) {
@@ -20,17 +20,17 @@ function u(e) {
 
 function c(e) {
   let t = !1;
-  if (e.isSpam && !o.has(e.id))
-o.add(e.id), t = !0;
-  if (!e.isSpam && o.has(e.id))
-o.delete(e.id), t = !0;
+  if (e.isSpam && !s.has(e.id))
+s.add(e.id), t = !0;
   if (!e.isSpam && s.has(e.id))
 s.delete(e.id), t = !0;
+  if (!e.isSpam && o.has(e.id))
+o.delete(e.id), t = !0;
   return t;
 }
 
 function d() {
-  o.clear(), s.clear(), Object.values(r.Z.getMutablePrivateChannels()).forEach(e => {
+  s.clear(), o.clear(), Object.values(r.Z.getMutablePrivateChannels()).forEach(e => {
 c(e);
   }), l = !0;
 }
@@ -39,7 +39,7 @@ function _(e) {
   let {
 channelId: t
   } = e;
-  s.add(t);
+  o.add(t);
 }
 
 function E(e) {
@@ -61,7 +61,7 @@ function h(e) {
   let {
 channel: t
   } = e, n = !1;
-  return o.has(t.id) && (o.delete(t.id), n = !0), n;
+  return s.has(t.id) && (s.delete(t.id), n = !0), n;
 }
 class p extends i.Z {
   initialize() {
@@ -69,25 +69,25 @@ this.waitFor(r.Z);
   }
   loadCache() {
 let e = this.readSnapshot(p.LATEST_SNAPSHOT_VERSION);
-null != e && (o = new Set(e));
+null != e && (s = new Set(e));
   }
   takeSnapshot() {
 return {
   version: p.LATEST_SNAPSHOT_VERSION,
-  data: Array.from(o)
+  data: Array.from(s)
 };
   }
   getSpamChannelIds() {
-return o;
+return s;
   }
   getSpamChannelsCount() {
-return o.size;
+return s.size;
   }
   isSpam(e) {
-return o.has(e);
+return s.has(e);
   }
   isAcceptedOptimistic(e) {
-return s.has(e);
+return o.has(e);
   }
   isReady() {
 return l;

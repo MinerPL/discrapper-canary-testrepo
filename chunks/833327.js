@@ -1,6 +1,6 @@
 var r, i, a = n(444675);
 
-function o(e) {
+function s(e) {
   var t = this;
   this.next = null, this.entry = null, this.finish = function() {
 (function(e, t, n) {
@@ -14,7 +14,7 @@ function o(e) {
   };
 }
 e.exports = O, O.WritableState = v;
-var s = {
+var o = {
 deprecate: n(220342)
   },
   l = n(138772),
@@ -37,23 +37,23 @@ function N() {}
 
 function v(e, t, i) {
   r = r || n(827664), e = e || {}, 'boolean' != typeof i && (i = t instanceof r), this.objectMode = !!e.objectMode, i && (this.objectMode = this.objectMode || !!e.writableObjectMode), this.highWaterMark = _(this, e, 'writableHighWaterMark', i), this.finalCalled = !1, this.needDrain = !1, this.ending = !1, this.ended = !1, this.finished = !1, this.destroyed = !1;
-  var s = !1 === e.decodeStrings;
-  this.decodeStrings = !s, this.defaultEncoding = e.defaultEncoding || 'utf8', this.length = 0, this.writing = !1, this.corked = 0, this.sync = !0, this.bufferProcessing = !1, this.onwrite = function(e) {
+  var o = !1 === e.decodeStrings;
+  this.decodeStrings = !o, this.defaultEncoding = e.defaultEncoding || 'utf8', this.length = 0, this.writing = !1, this.corked = 0, this.sync = !0, this.bufferProcessing = !1, this.onwrite = function(e) {
 (function(e, t) {
-  var n, r, i, o, s, l, u = e._writableState,
+  var n, r, i, s, o, l, u = e._writableState,
     c = u.sync,
     d = u.writecb;
   if ('function' != typeof d)
     throw new p();
   if ((n = u).writing = !1, n.writecb = null, n.length -= n.writelen, n.writelen = 0, t) {
     ;
-    r = e, i = u, o = c, s = t, l = d, --i.pendingcb, o ? (a.nextTick(l, s), a.nextTick(b, r, i), r._writableState.errorEmitted = !0, A(r, s)) : (l(s), r._writableState.errorEmitted = !0, A(r, s), b(r, i));
+    r = e, i = u, s = c, o = t, l = d, --i.pendingcb, s ? (a.nextTick(l, o), a.nextTick(b, r, i), r._writableState.errorEmitted = !0, A(r, o)) : (l(o), r._writableState.errorEmitted = !0, A(r, o), b(r, i));
   } else {
     var _ = D(u) || e.destroyed;
     !_ && !u.corked && !u.bufferProcessing && u.bufferedRequest && y(e, u), c ? a.nextTick(C, e, u, _, d) : C(e, u, _, d);
   }
 }(t, e));
-  }, this.writecb = null, this.writelen = 0, this.bufferedRequest = null, this.lastBufferedRequest = null, this.pendingcb = 0, this.prefinished = !1, this.errorEmitted = !1, this.emitClose = !1 !== e.emitClose, this.autoDestroy = !!e.autoDestroy, this.bufferedRequestCount = 0, this.corkedRequestsFree = new o(this);
+  }, this.writecb = null, this.writelen = 0, this.bufferedRequest = null, this.lastBufferedRequest = null, this.pendingcb = 0, this.prefinished = !1, this.errorEmitted = !1, this.emitClose = !1 !== e.emitClose, this.autoDestroy = !!e.autoDestroy, this.bufferedRequestCount = 0, this.corkedRequestsFree = new s(this);
 }
 
 function O(e) {
@@ -69,7 +69,7 @@ t.push(e), e = e.next;
 }, ! function() {
   try {
 Object.defineProperty(v.prototype, 'buffer', {
-  get: s.deprecate(function() {
+  get: o.deprecate(function() {
     return this.getBuffer();
   }, '_writableState.buffer is deprecated. Use _writableState.getBuffer instead.', 'DEP0003')
 });
@@ -84,7 +84,7 @@ return !!i.call(this, e) || this === O && e && e._writableState instanceof v;
   A(this, new m());
 };
 O.prototype.write = function(e, t, n) {
-  var r, i, o, s, l, d, _, E, h, p, m = this._writableState,
+  var r, i, s, o, l, d, _, E, h, p, m = this._writableState,
 I = !1;
   var S = !m.objectMode && (r = e, u.isBuffer(r) || r instanceof c);
   if (S && !u.isBuffer(e)) {
@@ -93,7 +93,7 @@ i = e, e = u.from(i);
   }
   if ('function' == typeof t && (n = t, t = null), S ? t = 'buffer' : !t && (t = m.defaultEncoding), 'function' != typeof n && (n = N), m.ending) {
 ;
-o = this, s = n, A(o, l = new g()), a.nextTick(s, l);
+s = this, o = n, A(s, l = new g()), a.nextTick(o, l);
   } else {
 ;
 if (S || (d = this, _ = m, E = e, h = n, null === E ? p = new T() : 'string' != typeof E && !_.objectMode && (p = new f('chunk', [
@@ -102,7 +102,7 @@ if (S || (d = this, _ = m, E = e, h = n, null === E ? p = new T() : 'string' != 
   ], E)), !p || (A(d, p), a.nextTick(h, p), 0)))
   m.pendingcb++, I = function(e, t, n, r, i, a) {
     if (!n) {
-      var o, s, l, c = (o = t, s = r, l = i, !o.objectMode && !1 !== o.decodeStrings && 'string' == typeof s && (s = u.from(s, l)), s);
+      var s, o, l, c = (s = t, o = r, l = i, !s.objectMode && !1 !== s.decodeStrings && 'string' == typeof o && (o = u.from(o, l)), o);
       r !== c && (n = !0, i = 'buffer', r = c);
     }
     var d = t.objectMode ? 1 : r.length;
@@ -157,8 +157,8 @@ return this._writableState.highWaterMark;
   }
 });
 
-function R(e, t, n, r, i, a, o) {
-  t.writelen = r, t.writecb = o, t.writing = !0, t.sync = !0, t.destroyed ? t.onwrite(new I('write')) : n ? e._writev(i, t.onwrite) : e._write(i, a, t.onwrite), t.sync = !1;
+function R(e, t, n, r, i, a, s) {
+  t.writelen = r, t.writecb = s, t.writing = !0, t.sync = !0, t.destroyed ? t.onwrite(new I('write')) : n ? e._writev(i, t.onwrite) : e._write(i, a, t.onwrite), t.sync = !1;
 }
 
 function C(e, t, n, r) {
@@ -174,9 +174,9 @@ function y(e, t) {
 var r = Array(t.bufferedRequestCount),
   i = t.corkedRequestsFree;
 i.entry = n;
-for (var a = 0, s = !0; n;)
-  r[a] = n, !n.isBuf && (s = !1), n = n.next, a += 1;
-r.allBuffers = s, R(e, t, !0, t.length, r, '', i.finish), t.pendingcb++, t.lastBufferedRequest = null, i.next ? (t.corkedRequestsFree = i.next, i.next = null) : t.corkedRequestsFree = new o(t), t.bufferedRequestCount = 0;
+for (var a = 0, o = !0; n;)
+  r[a] = n, !n.isBuf && (o = !1), n = n.next, a += 1;
+r.allBuffers = o, R(e, t, !0, t.length, r, '', i.finish), t.pendingcb++, t.lastBufferedRequest = null, i.next ? (t.corkedRequestsFree = i.next, i.next = null) : t.corkedRequestsFree = new s(t), t.bufferedRequestCount = 0;
   } else {
 for (; n;) {
   var l = n.chunk,
@@ -219,8 +219,8 @@ function b(e, t) {
   if (i) {
 ;
 if (n = e, (r = t).prefinished || r.finalCalled || ('function' != typeof n._final || r.destroyed ? (r.prefinished = !0, n.emit('prefinish')) : (r.pendingcb++, r.finalCalled = !0, a.nextTick(L, n, r))), 0 === t.pendingcb && (t.finished = !0, e.emit('finish'), t.autoDestroy)) {
-  var o = e._readableState;
-  (!o || o.autoDestroy && o.endEmitted) && e.destroy();
+  var s = e._readableState;
+  (!s || s.autoDestroy && s.endEmitted) && e.destroy();
 }
   }
   return i;

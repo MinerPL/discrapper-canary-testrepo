@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(442837),
-  s = n(481060),
+  s = n(442837),
+  o = n(481060),
   l = n(872810),
   u = n(199902),
   c = n(314897),
@@ -24,7 +24,7 @@ participant: t,
 width: n,
 noArt: i = !1,
 selected: p = !1
-  } = e, m = n < 195, I = (0, o.e7)([
+  } = e, m = n < 195, I = (0, s.e7)([
 u.Z,
 c.default
   ], () => u.Z.getAllActiveStreams().some(e => {
@@ -51,7 +51,7 @@ children: (0, r.jsx)(_.Z, {
     children: [
       (0, r.jsx)(d.a, {
         isSmall: m,
-        children: (0, r.jsx)(s.Text, {
+        children: (0, r.jsx)(o.Text, {
           variant: m ? 'text-sm/semibold' : 'text-md/semibold',
           color: 'none',
           children: n < 175 ? E.Z.Messages.WATCH : E.Z.Messages.WATCH_STREAM
@@ -66,7 +66,7 @@ children: (0, r.jsx)(_.Z, {
           });
         },
         isSmall: m,
-        children: (0, r.jsx)(s.EyePlusIcon, {
+        children: (0, r.jsx)(o.EyePlusIcon, {
           size: 'xs',
           color: 'currentColor',
           className: f.addStreamIcon

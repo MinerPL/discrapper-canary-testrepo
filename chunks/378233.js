@@ -45,8 +45,8 @@ return L;
 var r = n(606301),
   i = n(134432),
   a = n(430824),
-  o = n(117530),
-  s = n(768581),
+  s = n(117530),
+  o = n(768581),
   l = n(358085),
   u = n(913663),
   c = n(373228),
@@ -68,7 +68,7 @@ if (null != t)
 }, N = e => {
   switch (e) {
 case c.u3.PNG:
-  return s.$k ? c.og.WEBP : c.og.PNG;
+  return o.$k ? c.og.WEBP : c.og.PNG;
 case c.u3.APNG:
   return c.og.APNG;
 case c.u3.LOTTIE:
@@ -106,8 +106,8 @@ return null;
 if (e.format_type === c.u3.LOTTIE)
   return ''.concat(location.protocol).concat(p).concat(a);
 let r = e.format_type === c.u3.APNG && t && !(0, l.isAndroid)() ? '&passthrough=false' : '',
-  o = Math.min(2, (0, i.x_)());
-return ''.concat(location.protocol).concat(f).concat(a, '?size=').concat((0, i.oO)(n * o)).concat(r);
+  s = Math.min(2, (0, i.x_)());
+return ''.concat(location.protocol).concat(f).concat(a, '?size=').concat((0, i.oO)(n * s)).concat(r);
   }
   return ''.concat(location.protocol).concat(E).concat(a);
 }, C = (e, t) => {
@@ -115,7 +115,7 @@ return ''.concat(location.protocol).concat(f).concat(a, '?size=').concat((0, i.o
   let r = e.banner_asset_id;
   if (null == r)
 return null;
-  let a = s.$k ? 'webp' : 'png';
+  let a = o.$k ? 'webp' : 'png';
   return n = null != m ? ''.concat(location.protocol, '//').concat(m, '/app-assets/').concat(d.Ks, '/store/').concat(r, '.').concat(a) : ''.concat(location.protocol).concat(E).concat(_.ANM.STORE_ASSET(d.Ks, r, a)), null != t && (n += '?size='.concat((0, i.oO)(t))), n;
 }, y = e => e.match('development' !== h ? g : S), D = e => e.stickers.some(e => {
   let {
@@ -129,7 +129,7 @@ format_type: t
   stickers: e.stickers,
   previewSticker: A(e)
 }), b = (e, t) => e === d.yr.ANIMATE_ON_INTERACTION ? t : e !== d.yr.NEVER_ANIMATE, M = (e, t, n, i) => {
-  if (o.Z.getUploadCount(n, i) > 0)
+  if (s.Z.getUploadCount(n, i) > 0)
 return !0;
   let a = u.Z.getStickerPreview(n, i);
   if (null != a && a.length > 0)
@@ -140,6 +140,7 @@ case c.V0.STICKER_PICKER:
 case c.V0.AUTOCOMPLETE:
 case c.V0.EXPRESSION_SUGGESTIONS:
   return (0, r.wN)(t).length > 1;
+case c.V0.BUILT_IN_INTEGRATION:
 default:
   return !1;
   }

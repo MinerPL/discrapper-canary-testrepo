@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(77866),
-  o = n(622535),
-  s = n(481060),
+  s = n(622535),
+  o = n(481060),
   l = n(425493),
   u = n(906732),
   c = n(626135),
@@ -84,7 +84,7 @@ children: [
       variant: l.Z.Variants.SOLID
     })
   }),
-  (0, r.jsxs)(s.AdvancedScrollerAuto, {
+  (0, r.jsxs)(o.AdvancedScrollerAuto, {
     className: A.scroller,
     children: [
       (0, r.jsxs)('div', {
@@ -93,7 +93,7 @@ children: [
           (0, r.jsxs)('div', {
             className: A.headerContentWrapper,
             children: [
-              (0, r.jsx)(s.Heading, {
+              (0, r.jsx)(o.Heading, {
                 className: A.heading,
                 color: 'always-white',
                 variant: 'display-lg',
@@ -139,7 +139,7 @@ children: [
           })
         ]
       }),
-      (0, r.jsx)(o.$, {
+      (0, r.jsx)(s.$, {
         onChange: L,
         children: (0, r.jsx)('div', {
           className: A.persistentCtaSpacer

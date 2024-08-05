@@ -1,8 +1,8 @@
 n(47120);
 var r, i, a = n(735250),
-  o = n(470079),
-  s = n(120356),
-  l = n.n(s),
+  s = n(470079),
+  o = n(120356),
+  l = n.n(o),
   u = n(91192),
   c = n(924826),
   d = n(536895),
@@ -39,8 +39,8 @@ isFocused: t,
 isHidden: n,
 sendability: r,
 listIndex: i,
-sticker: o,
-onMouseOver: s,
+sticker: s,
+onMouseOver: o,
 onSelectSticker: c
   } = e, {
 tabIndex: d,
@@ -55,8 +55,8 @@ className: l()(P.suggestedExpression, {
 focusProps: {
   enabled: !1
 },
-onClick: () => c(o, r),
-onMouseOver: s,
+onClick: () => c(s, r),
+onMouseOver: o,
 children: [
   (0, a.jsx)(C.ZP, {
     mask: C.ZP.Masks.STICKER_ROUNDED_RECT,
@@ -70,7 +70,7 @@ children: [
   (0, a.jsx)(N.ZP, {
     maskAsset: !0,
     size: w,
-    sticker: o,
+    sticker: s,
     className: P.__invalid_sticker
   }),
   r !== T.eb.SENDABLE && (0, a.jsx)(v.Z, {
@@ -80,16 +80,16 @@ children: [
   });
 }
 (i = r || (r = {}))[i.STICKER = 0] = 'STICKER';
-t.Z = o.memo(function(e) {
+t.Z = s.memo(function(e) {
   var t;
   let {
 editorRef: n,
 channel: r,
 isEditorFocused: i,
-onSelectSticker: s,
+onSelectSticker: o,
 stickerIconVisible: _ = !1,
 submitButtonVisible: E = !1
-  } = e, N = o.useContext(m.ZP), [v, C] = o.useState(null), [U, w] = o.useState(!1), [B, F] = o.useState(null), V = (0, I.Iu)(e => null != e.activeView), H = o.useRef(null), [Z, Y] = o.useState(''), [j, W] = o.useState(''), [K, z] = o.useState(!1), [q, Q] = o.useState(!1), X = (0, D.Z)(Z, U, r), {
+  } = e, N = s.useContext(m.ZP), [v, C] = s.useState(null), [U, w] = s.useState(!1), [B, F] = s.useState(null), V = (0, I.Iu)(e => null != e.activeView), H = s.useRef(null), [Z, Y] = s.useState(''), [j, W] = s.useState(''), [K, z] = s.useState(!1), [q, Q] = s.useState(!1), X = (0, D.Z)(Z, U, r), {
 analyticsLocations: $
   } = (0, p.ZP)(h.Z.EXPRESSION_SUGGESTIONS), {
 handleTextChange: J,
@@ -100,7 +100,7 @@ setHasDismissed: w,
 setHasSelection: Q,
 setFocusedSuggestionType: C
   });
-  o.useEffect(() => {
+  s.useEffect(() => {
 let e = e => {
     z(e);
   },
@@ -118,11 +118,11 @@ return N.addListener('text-changed', J), N.addListener('autocomplete-visibility-
 J,
 n,
 N
-  ]), o.useLayoutEffect(() => {
+  ]), s.useLayoutEffect(() => {
 null == v && F(null);
   }, [v]);
-  let [et, en] = o.useState(!1);
-  o.useLayoutEffect(() => {
+  let [et, en] = s.useState(!1);
+  s.useLayoutEffect(() => {
 requestAnimationFrame(() => {
   let e = H.current;
   en(i || (null == e ? void 0 : e.contains(null == e ? void 0 : e.ownerDocument.activeElement)) === !0);
@@ -139,10 +139,10 @@ ei = et && !V && !K && !U && !q && er,
     shouldRenderSuggestions: r,
     focusedSuggestionType: i,
     setFocusedStickerListItem: a,
-    setFocusedSuggestionType: s,
+    setFocusedSuggestionType: o,
     setHasDismissed: l,
     setTextInputValue: u
-  } = e, _ = o.useCallback((e, t) => {
+  } = e, _ = s.useCallback((e, t) => {
     a(t);
   }, [a]), E = (0, c.ZP)({
     id: 'expression-suggestions-stickers',
@@ -153,19 +153,19 @@ ei = et && !V && !K && !U && !q && er,
     setFocus: _,
     useVirtualFocus: !0
   });
-  return o.useEffect(() => {
+  return s.useEffect(() => {
     let e = e => {
-      var a, o;
+      var a, s;
       if (r && !e.shiftKey && !e.ctrlKey && !e.altKey && !e.metaKey) {
         switch (e.key) {
           case 'ArrowUp':
-            e.preventDefault(), null == i && n && (E.focusFirstVisibleItem(), s(0));
+            e.preventDefault(), null == i && n && (E.focusFirstVisibleItem(), o(0));
             break;
           case 'ArrowDown':
-            s(null), null === (a = t.current) || void 0 === a || a.focus();
+            o(null), null === (a = t.current) || void 0 === a || a.focus();
             break;
           case 'Escape':
-            s(null), l(!0), u(''), null === (o = t.current) || void 0 === o || o.focus();
+            o(null), l(!0), u(''), null === (s = t.current) || void 0 === s || s.focus();
         }
         0 === i && E.containerProps.onKeyDown(e);
       }
@@ -179,7 +179,7 @@ ei = et && !V && !K && !U && !q && er,
     E,
     r,
     i,
-    s,
+    o,
     n,
     t,
     l,
@@ -198,13 +198,13 @@ ei = et && !V && !K && !U && !q && er,
   setFocusedStickerListItem: F,
   setTextInputValue: Y
 }),
-eo = (e, t) => {
+es = (e, t) => {
   if (ei) {
     if (y.default.track(b.rMx.AUTO_SUGGEST_EXPRESSION_SELECTED, {
         sticker_id: e.id,
         suggestion_trigger: j
       }), t === T.eb.SENDABLE)
-      w(!0), s(e, S.V0.EXPRESSION_SUGGESTIONS), ee.cancel(), Y('');
+      w(!0), o(e, S.V0.EXPRESSION_SUGGESTIONS), ee.cancel(), Y('');
     else if ((0, A.jl)(e)) {
       let t = g.Z.getStickerPack(e.pack_id);
       null != t && (0, O.Z)({
@@ -215,10 +215,10 @@ eo = (e, t) => {
     N.emit('sticker-suggestions-hidden');
   }
 },
-es = o.useRef([]),
-el = o.useRef(!1);
-  o.useEffect(() => {
-ei && (es.current = X), ei !== el.current && (N.emit(ei ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), ei && ((0, L.Tk)(Z), W(Z))), el.current = ei;
+eo = s.useRef([]),
+el = s.useRef(!1);
+  s.useEffect(() => {
+ei && (eo.current = X), ei !== el.current && (N.emit(ei ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), ei && ((0, L.Tk)(Z), W(Z))), el.current = ei;
   }, [
 N,
 ei,
@@ -226,7 +226,7 @@ X,
 Z
   ]);
   let eu = !ei,
-ec = ei ? X : es.current;
+ec = ei ? X : eo.current;
   return (0, a.jsx)(p.Gt, {
 value: $,
 children: (0, a.jsxs)(f.Clickable, {
@@ -280,7 +280,7 @@ children: (0, a.jsxs)(f.Clickable, {
                     onMouseOver: () => {
                       ea.setFocus(''.concat(t)), F(''.concat(t));
                     },
-                    onSelectSticker: eo,
+                    onSelectSticker: es,
                     sticker: n
                   }, n.id);
                 })

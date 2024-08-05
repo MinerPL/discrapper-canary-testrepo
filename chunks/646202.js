@@ -349,9 +349,9 @@ handleSetSelectedOption: a,
 data: l
   } = e, i = (0, x.e7)([h.Z], () => h.Z.useReducedMotion), [{
 state: c
-  }, o] = (0, u.useSpring)(() => ({
+  }, o] = (0, m.useSpring)(() => ({
 state: 0
-  }), []), C = (0, x.e7)([p.default], () => p.default.getCurrentUser()), N = c.to({
+  }), 'respect-motion-settings', []), C = (0, x.e7)([p.default], () => p.default.getCurrentUser()), N = c.to({
 range: [
   0,
   1

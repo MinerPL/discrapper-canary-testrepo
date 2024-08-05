@@ -1,5 +1,5 @@
 let r;
-var i, a, o, s, l = n(569048),
+var i, a, s, o, l = n(569048),
   u = n.n(l),
   c = n(167006),
   d = n.n(c),
@@ -16,7 +16,7 @@ let I = {},
   A = !1,
   N = !1,
   v = !1;
-class O extends(s = f.ZP.Store) {
+class O extends(o = f.ZP.Store) {
   getInvite(e) {
 var t, n;
 let {
@@ -36,12 +36,12 @@ return A;
 return null != r && !N && !v;
   }
 }
-o = 'InstantInviteStore', (a = 'displayName') in(i = O) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'InstantInviteStore', (a = 'displayName') in(i = O) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new O(h.Z, {
+}) : i[a] = s, t.Z = new O(h.Z, {
   CONNECTION_OPEN: function() {
 I = {}, T = {}, g = {}, S = {}, r = null, N = !1, v = !1, A = !1;
   },

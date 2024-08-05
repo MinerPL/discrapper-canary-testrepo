@@ -1,21 +1,21 @@
 n(653041), n(47120);
-var i, a, l, s, r = n(442837),
+var i, a, s, l, r = n(442837),
   o = n(570140),
   c = n(633302),
-  d = n(594174),
-  u = n(176354),
+  u = n(594174),
+  d = n(176354),
   h = n(292793),
   p = n(88315),
   m = n(813900);
 let _ = {},
   f = {},
   E = {},
-  C = !0,
-  g = null;
+  g = !0,
+  C = null;
 
 function I(e) {
   if (null == f[e]) {
-let t = d.default.getUser(e);
+let t = u.default.getUser(e);
 if (null == t)
   return;
 let n = t.getAvatarURL(null, m.Ks),
@@ -25,7 +25,7 @@ i.src = n, f[e] = i;
 }
 class x extends(i = r.ZP.Store) {
   get visibleOverlayCanvas() {
-return C;
+return g;
   }
   getDrawables(e) {
 return null != _[e] ? _[e] : [];
@@ -37,15 +37,15 @@ return f[e];
 return E[e];
   }
   getDrawMode() {
-return g;
+return C;
   }
 }
-s = 'SharedCanvasStore', (l = 'displayName') in(a = x) ? Object.defineProperty(a, l, {
-  value: s,
+l = 'SharedCanvasStore', (s = 'displayName') in(a = x) ? Object.defineProperty(a, s, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = s;
+}) : a[s] = l;
 let T = new x(o.Z, {
   SHARED_CANVAS_UPDATE_LINE_POINTS: function(e) {
 let {
@@ -53,8 +53,8 @@ let {
   newPoints: n,
   userId: i,
   streamerId: a
-} = e, l = _[a];
-if (null == l)
+} = e, s = _[a];
+if (null == s)
   _[a] = [{
     type: h.W.LINE,
     id: t,
@@ -62,8 +62,8 @@ if (null == l)
     points: n
   }];
 else {
-  let e = l.find(e => e.id === t);
-  null == e ? l.push({
+  let e = s.find(e => e.id === t);
+  null == e ? s.push({
     type: h.W.LINE,
     id: t,
     userId: i,
@@ -76,31 +76,31 @@ I(i);
 var t, n, i;
 let {
   emojiHose: a,
-  streamerId: l,
-  userId: s
+  streamerId: s,
+  userId: l
 } = e, r = {
   ...a,
   type: h.W.EMOJI_HOSE
 };
-if (null == _[l])
-  _[l] = [r];
+if (null == _[s])
+  _[s] = [r];
 else {
-  let e = _[l].findIndex(e => e.id === a.id);
-  e >= 0 ? _[l][e] = {
-    ..._[l][e],
+  let e = _[s].findIndex(e => e.id === a.id);
+  e >= 0 ? _[s][e] = {
+    ..._[s][e],
     ...r
-  } : _[l].push(r);
+  } : _[s].push(r);
 }
 let o = null !== (n = null !== (t = a.emojiId) && void 0 !== t ? t : a.emojiName) && void 0 !== n ? n : '';
 if (null == E[o]) {
   let e = null != a.emojiName ? c.ZP.convertNameToSurrogate(a.emojiName) : null;
-  E[o] = new Image(), E[o].src = (0, u.qc)({
+  E[o] = new Image(), E[o].src = (0, d.qc)({
     id: a.emojiId,
     name: null !== (i = null != e ? e : a.emojiName) && void 0 !== i ? i : '',
     animated: !1
   }, m.qh);
 }
-I(s);
+I(l);
   },
   SHARED_CANVAS_CLEAR_DRAWABLES: function(e) {
 let {
@@ -116,11 +116,11 @@ if (null != _[n]) {
 let {
   drawMode: t
 } = e;
-g = t;
+C = t;
   },
   TOGGLE_OVERLAY_CANVAS: function(e) {
 let {} = e;
-C = !C;
+g = !g;
   }
 });
 t.Z = T;

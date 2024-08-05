@@ -15,8 +15,8 @@ return h;
 var r = n(470079),
   i = n(512722),
   a = n.n(i),
-  o = n(570140),
-  s = n(821849),
+  s = n(570140),
+  o = n(821849),
   l = n(15640),
   u = n(509545),
   c = n(74538),
@@ -25,20 +25,24 @@ var r = n(470079),
 
 function E(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [..._.YQ];
-  return null == e || u.Z.hasPaymentSourceForSKUIds(e, t) ? Promise.resolve() : new Promise(e => {
-o.Z.wait(async () => {
-  await (0, s.Gn)(t), e();
+  return null == e || u.Z.hasPaymentSourceForSKUIds(e, t) ? Promise.resolve() : new Promise((e, n) => {
+s.Z.wait(async () => {
+  try {
+    await (0, o.Gn)(t), e();
+  } catch (e) {
+    n(e);
+  }
 });
   });
 }
 
 function f(e, t, n) {
   let r, i = [],
-o = [],
-s = {
+s = [],
+o = {
   purchaseType: n ? d.tuJ.GIFT : d.tuJ.DEFAULT
 };
-  return r = 'string' == typeof e ? u.Z.get(e) : e, a()(r, 'subscription plan not loaded'), null != t && u.Z.hasPaymentSourceForSKUId(t, r.skuId) && (s.paymentSourceId = t), (i = (o = (0, c.T4)(r.id, s)).map(e => e.currency)).length < 1 && (i = [d.pKx.USD]), i;
+  return r = 'string' == typeof e ? u.Z.get(e) : e, a()(r, 'subscription plan not loaded'), null != t && u.Z.hasPaymentSourceForSKUId(t, r.skuId) && (o.paymentSourceId = t), (i = (s = (0, c.T4)(r.id, o)).map(e => e.currency)).length < 1 && (i = [d.pKx.USD]), i;
 }
 
 function h(e, t, n) {
@@ -47,7 +51,7 @@ function h(e, t, n) {
 }
 
 function p(e, t, n, i, a) {
-  let [o, s] = r.useReducer((e, t) => ({
+  let [s, o] = r.useReducer((e, t) => ({
 ...e,
 ...t
   }), null != n ? {
@@ -60,13 +64,18 @@ loaded: !1
   }), c = (0, l.V)(a);
   r.useEffect(() => {
 (async () => {
-  await E(n, a);
+  try {
+    await E(n, a);
+  } catch (e) {
+    if (10027 !== e.code)
+      throw e;
+  }
   let e = [];
-  null != t && null != u.Z.get(t) && (e = f(t, n, i)), e.length > 0 ? s({
+  null != t && null != u.Z.get(t) && (e = f(t, n, i)), e.length > 0 ? o({
     paymentSourceId: n,
     currency: e[0],
     loaded: !0
-  }) : s({
+  }) : o({
     paymentSourceId: n,
     loaded: !1
   });
@@ -78,12 +87,12 @@ t,
 i,
 c
   ]);
-  let d = o.paymentSourceId !== n || null == t || !c || !0 !== o.loaded;
+  let d = s.paymentSourceId !== n || null == t || !c || !0 !== s.loaded;
   return {
 hasFetchedSubscriptionPlans: c,
-priceOptions: o,
+priceOptions: s,
 setCurrency: e => {
-  s({
+  o({
     currency: e
   });
 },

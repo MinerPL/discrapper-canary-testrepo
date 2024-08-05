@@ -1,13 +1,13 @@
 n.d(t, {
   V: function() {
-return o;
+return s;
   }
 }), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817);
 var r = n(710845),
   i = n(358085),
   a = n(998502);
 
-function o() {
+function s() {
   if (i.isPlatformEmbedded) {
 let e;
 try {

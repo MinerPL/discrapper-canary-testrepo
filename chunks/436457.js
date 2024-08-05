@@ -1,4 +1,4 @@
-let a, s;
+let s, a;
 n.d(t, {
   Z: function() {
 return x;
@@ -12,25 +12,25 @@ var o = n(735250),
   d = n(447543),
   u = n(230711),
   _ = n(881052),
-  p = n(285952),
-  f = n(154921),
+  f = n(285952),
+  p = n(154921),
   m = n(782605),
   h = n(981631),
   E = n(689938),
   N = n(507851);
-let T = (a = window.GLOBAL_ENV.INVITE_HOST, s = '', null == a && (a = location.host, s = h.Z5c.INVITE('')), ''.concat(location.protocol, '//').concat(a).concat(s, '/'));
+let T = (s = window.GLOBAL_ENV.INVITE_HOST, a = '', null == s && (s = location.host, a = h.Z5c.INVITE('')), ''.concat(location.protocol, '//').concat(s).concat(a, '/'));
 
 function x(e) {
   let {
 onBack: t,
 onComplete: n,
-onConnect: a,
-isSlideReady: s
+onConnect: s,
+isSlideReady: a
   } = e, [l, x] = r.useState(''), [A, v] = r.useState(!1), [b, C] = r.useState(null), I = r.useRef(null);
   r.useEffect(() => {
 var e;
-s && (null === (e = I.current) || void 0 === e || e.focus());
-  }, [s]);
+a && (null === (e = I.current) || void 0 === e || e.focus());
+  }, [a]);
   let g = r.useCallback(e => {
   e.preventDefault();
   let t = l.trim();
@@ -39,9 +39,9 @@ s && (null === (e = I.current) || void 0 === e || e.focus());
     return;
   }
   C(null), v(!0);
-  let a = t.split('/'),
-    s = a[a.length - 1];
-  d.Z.resolveInvite(s, 'Join Guild', {
+  let s = t.split('/'),
+    a = s[s.length - 1];
+  d.Z.resolveInvite(a, 'Join Guild', {
     inputValue: t
   }).then(e => {
     let {
@@ -78,13 +78,13 @@ M = (0, o.jsxs)(o.Fragment, {
   children: [
     (0, o.jsxs)(c.ModalHeader, {
       className: N.header,
-      direction: p.Z.Direction.VERTICAL,
+      direction: f.Z.Direction.VERTICAL,
       separator: !1,
       children: [
-        (0, o.jsx)(f.Z, {
+        (0, o.jsx)(p.Z, {
           className: N.title,
-          size: f.Z.Sizes.SIZE_24,
-          color: f.Z.Colors.HEADER_PRIMARY,
+          size: p.Z.Sizes.SIZE_24,
+          color: p.Z.Colors.HEADER_PRIMARY,
           children: E.Z.Messages.JOIN_SERVER_TITLE
         }),
         (0, o.jsx)(c.Text, {
@@ -127,7 +127,7 @@ M = (0, o.jsxs)(o.Fragment, {
           className: N.connectCTA,
           children: E.Z.Messages.JOIN_GUILD_CONNECT.format({
             onClick: () => {
-              a(), u.Z.open(h.oAB.CONNECTIONS);
+              s(), u.Z.open(h.oAB.CONNECTIONS);
             }
           })
         })

@@ -6,12 +6,12 @@ return m;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  o = n(481060),
   l = n(129861),
   u = n(954138),
   c = n(979264),
-  d = n(969832),
+  d = n(923973),
   _ = n(51144),
   E = n(659101),
   f = n(981631),
@@ -34,7 +34,7 @@ source: f.jXE.PROFILE_POPOUT,
 tagUserId: t.id
   }), [t.id]);
   return (0, r.jsxs)(E.Z, {
-className: o()(p.container, g),
+className: s()(p.container, g),
 lastSection: A,
 children: [
   (0, r.jsxs)('div', {
@@ -53,7 +53,7 @@ children: [
         children: (0, r.jsxs)('div', {
           className: p.userText,
           children: [
-            null != a ? (0, r.jsx)(s.Heading, {
+            null != a ? (0, r.jsx)(o.Heading, {
               variant: 'heading-lg/semibold',
               className: p.nickname,
               children: a
@@ -72,9 +72,9 @@ children: [
           ]
         })
       }),
-      null != m && '' !== m && (0, r.jsx)(s.Tooltip, {
+      null != m && '' !== m && (0, r.jsx)(o.Tooltip, {
         text: h.Z.Messages.USER_PROFILE_PRONOUNS,
-        children: e => (0, r.jsx)(s.Text, {
+        children: e => (0, r.jsx)(o.Text, {
           ...e,
           variant: 'text-sm/normal',
           className: p.pronouns,

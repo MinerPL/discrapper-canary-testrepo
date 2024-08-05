@@ -1,65 +1,67 @@
-t.d(n, {
+n.d(e, {
   J: function() {
-return a;
+return l;
   },
   l: function() {
-return o;
+return u;
   }
-}), t(47120);
-var l = t(693824),
-  r = t(169040);
+}), n(47120);
+var a = n(693824),
+  r = n(169040);
 
-function a(e) {
-  let n, {
-canvas: t,
-badges: a,
-startPosition: o,
+function l(t) {
+  let e, {
+canvas: n,
+badges: l,
+startPosition: u,
 maxWidth: i
-  } = e;
+  } = t;
   for (let {
-  iconPath: e,
-  text: u
+  iconPath: t,
+  text: o
 }
-of(t.setFont({
+of(n.setFont({
   size: 12,
-  truncate: l.GX.None
-}), a)) {
-let l = null != n ? n.w + n.x + r.PW : o,
-  a = null != n ? n.w + n.x + r.PW + r.NC : o + r.NC;
-t.drawPath(e, {
-  x: l,
-  y: r.f0
-}, !0, 0.6), n = t.drawText(u, {
+  family: r.I8,
+  weight: r.Ue,
+  truncate: a.GX.None
+}), l)) {
+let a = null != e ? e.w + e.x + r.PW : u,
+  l = null != e ? e.w + e.x + r.PW + r.NC : u + r.NC;
+n.drawPath(t, {
   x: a,
+  y: r.f0
+}, !0, 0.6), e = n.drawText(o, {
+  x: l,
   y: r.m2,
   w: i
 }, !0);
   }
 }
 
-function o(e) {
+function u(t) {
   let {
-canvas: n,
-avatarSrcs: t,
+canvas: e,
+avatarSrcs: n,
 position: {
   x: r,
-  y: a
+  y: l
 },
-avatarImageSize: o
-  } = e;
-  for (let e = 0; e < t.length; e++)
-e < t.length - 1 && n.clipRoundedRect({
-  x: r + (e + 1) * (o - 8) - 2,
-  y: a - 1,
-  w: o + 2,
-  h: o + 2
-}, o / 2, !0), n.drawRoundedImage(t[e], {
-  x: r + e * (o - 8),
-  y: a
+avatarImageSize: u
+  } = t;
+  for (let t = 0; t < n.length; t++)
+t < n.length - 1 && e.clipRoundedRect({
+  x: r + (t + 1) * (u - 8) - 2,
+  y: l - 1,
+  w: u + 2,
+  h: u + 2
+}, u / 2, !0), e.drawRoundedImage(n[t], {
+  x: r + t * (u - 8),
+  y: l
 }, {
-  w: o,
-  h: o
+  w: u,
+  h: u
 }, 50, {
-  fillMode: l.JU.Cover
-}), n.restoreContext();
+  fillMode: a.JU.Cover
+}), e.restoreContext();
 }

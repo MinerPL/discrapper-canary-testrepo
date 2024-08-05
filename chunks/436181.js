@@ -1,8 +1,8 @@
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140);
 let u = null,
   c = !1;
-class d extends(o = s.ZP.Store) {
+class d extends(s = o.ZP.Store) {
   getLastProgress() {
 return u;
   }

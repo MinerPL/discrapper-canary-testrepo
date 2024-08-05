@@ -5,6 +5,6 @@ e.exports = function(e, t, n) {
 return Reflect.construct.apply(null, arguments);
   var a = [null];
   a.push.apply(a, t);
-  var o = new(e.bind.apply(e, a))();
-  return n && r(o, n.prototype), o;
+  var s = new(e.bind.apply(e, a))();
+  return n && r(s, n.prototype), s;
 }, e.exports.__esModule = !0, e.exports.default = e.exports;

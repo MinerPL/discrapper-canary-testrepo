@@ -1,12 +1,12 @@
 n.d(t, {
   Z: function() {
-return L;
+return Z;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(91192),
   o = n(286379),
   c = n(481060),
@@ -21,23 +21,23 @@ var i = n(735250),
   p = n(727813),
   T = n(355350),
   S = n(307947),
-  C = n(125855),
-  f = n(687683),
+  f = n(125855),
+  C = n(687683),
   N = n(981631),
   A = n(689938),
-  Z = n(553437);
+  v = n(553437);
 
-function L() {
-  let e = s.useRef(null),
+function Z() {
+  let e = a.useRef(null),
 t = (0, p.Z)(),
 n = (0, T.w)(),
-a = (0, I.V)(),
-L = (0, d.N)(),
-v = (0, u.Z)('message-requests-spam-list'),
+s = (0, I.V)(),
+Z = (0, d.N)(),
+L = (0, u.Z)('message-requests-spam-list'),
 {
   channelId: O
 } = (0, g._)(),
-R = s.useCallback(() => {
+R = a.useCallback(() => {
   (0, c.showToast)((0, c.createToast)(A.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, c.ToastType.FAILURE));
 }, []),
 {
@@ -45,49 +45,49 @@ R = s.useCallback(() => {
 } = (0, m.m)({
   onError: R
 }),
-b = s.useCallback(() => {
+b = a.useCallback(() => {
   x(t.map(e => e.channel.id));
 }, [
   t,
   x
 ]);
-  s.useEffect(() => {
+  a.useEffect(() => {
 E.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, {
   num_spam_message_requests: n
 }), _.Z.increment({
   name: o.V.SPAM_MESSAGE_REQUEST_VIEW
 });
   }, []);
-  let P = s.useCallback(e => {
-  var n, s;
+  let P = a.useCallback(e => {
+  var n, a;
   let {
     row: l
-  } = e, o = t[l], c = null === (s = t[l + 1]) || void 0 === s ? void 0 : null === (n = s.channel) || void 0 === n ? void 0 : n.id, d = o.channel.id;
-  return (0, i.jsx)(C.Z, {
+  } = e, o = t[l], c = null === (a = t[l + 1]) || void 0 === a ? void 0 : null === (n = a.channel) || void 0 === n ? void 0 : n.id, d = o.channel.id;
+  return (0, i.jsx)(f.Z, {
     index: l,
     className: r()({
-      [Z.selected]: null != O && O === d,
-      [Z.siblingSelected]: null != O && O === c
+      [v.selected]: null != O && O === d,
+      [v.siblingSelected]: null != O && O === c
     }),
     channel: o.channel,
     user: o.user,
-    hasSingleMessageRequest: a
+    hasSingleMessageRequest: s
   }, d);
 }, [
   t,
-  a,
+  s,
   O
 ]),
-M = s.useCallback(() => (0, i.jsxs)(h.Z, {
-  className: Z.sectionTitle,
+M = a.useCallback(() => (0, i.jsxs)(h.Z, {
+  className: v.sectionTitle,
   children: [
     A.Z.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({
       count: n
     }),
-    L && n > 0 ? (0, i.jsxs)(i.Fragment, {
+    Z && n > 0 ? (0, i.jsxs)(i.Fragment, {
       children: [
         (0, i.jsx)(c.Text, {
-          className: Z.titleDivider,
+          className: v.titleDivider,
           variant: 'eyebrow',
           color: 'header-secondary',
           tag: 'span',
@@ -98,7 +98,7 @@ M = s.useCallback(() => (0, i.jsxs)(h.Z, {
           look: c.ButtonLooks.LINK,
           color: c.ButtonColors.LINK,
           size: c.ButtonSizes.SMALL,
-          className: Z.clearAllButton,
+          className: v.clearAllButton,
           'aria-label': A.Z.Messages.MESSAGE_REQUESTS_CLEAR_ALL,
           children: A.Z.Messages.MESSAGE_REQUESTS_CLEAR_ALL
         })
@@ -108,31 +108,31 @@ M = s.useCallback(() => (0, i.jsxs)(h.Z, {
 }, 'message-requests-spam-title'), [
   n,
   b,
-  L
+  Z
 ]);
   return 0 === t.length ? (0, i.jsx)(S.Z, {
-section: f.pS.SPAM
+section: C.pS.SPAM
   }) : (0, i.jsx)(l.bG, {
-navigator: v,
+navigator: L,
 children: (0, i.jsx)(l.SJ, {
   children: n => {
     let {
-      ref: s,
-      role: a,
+      ref: a,
+      role: s,
       ...r
     } = n;
     return (0, i.jsx)(c.List, {
-      className: Z.list,
-      innerRole: a,
+      className: v.list,
+      innerRole: s,
       innerAriaLabel: A.Z.Messages.MESSAGE_REQUESTS,
       ref: t => {
         var n;
-        e.current = t, s.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null;
+        e.current = t, a.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null;
       },
       paddingTop: 24,
       paddingBottom: 24,
-      sectionHeight: f.oi,
-      rowHeight: f.WN,
+      sectionHeight: C.oi,
+      rowHeight: C.WN,
       renderSection: M,
       renderRow: P,
       sections: [t.length],

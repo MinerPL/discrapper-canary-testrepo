@@ -2,8 +2,8 @@ n(47120), n(653041);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(802498),
+  s = n.n(a),
+  o = n(802498),
   l = n(266067),
   u = n(873546),
   c = n(442837),
@@ -20,42 +20,45 @@ var r = n(735250),
   S = n(899663),
   A = n(213609),
   N = n(613413),
-  v = n(327943),
-  O = n(907459),
-  R = n(559407),
-  C = n(556766),
-  y = n(514361),
-  D = n(724145),
-  L = n(260035),
-  b = n(947519),
-  M = n(243778),
-  P = n(813744),
-  U = n(892254),
-  w = n(210887),
-  x = n(819640),
-  G = n(594174),
-  k = n(451478),
-  B = n(672752),
-  F = n(812663),
-  V = n(153850),
-  H = n(725568),
-  Z = n(78415),
-  Y = n(806519),
-  j = n(358085),
-  W = n(74538),
-  K = n(663993),
-  z = n(823453),
-  q = n(628123),
-  Q = n(962745),
-  X = n(151851),
-  $ = n(981631),
-  J = n(921944),
-  ee = n(376593);
+  v = n(94795),
+  O = n(327943),
+  R = n(907459),
+  C = n(559407),
+  y = n(556766),
+  D = n(514361),
+  L = n(724145),
+  b = n(260035),
+  M = n(947519),
+  P = n(243778),
+  U = n(813744),
+  w = n(311476),
+  x = n(892254),
+  G = n(210887),
+  k = n(978781),
+  B = n(819640),
+  F = n(594174),
+  V = n(451478),
+  H = n(672752),
+  Z = n(812663),
+  Y = n(153850),
+  j = n(725568),
+  W = n(78415),
+  K = n(806519),
+  z = n(358085),
+  q = n(74538),
+  Q = n(663993),
+  X = n(823453),
+  $ = n(628123),
+  J = n(962745),
+  ee = n(151851),
+  et = n(981631),
+  en = n(921944),
+  er = n(376593);
 n(792295), Promise.resolve().then(n.bind(n, 62883)).then(e => {
-  j.isPlatformEmbedded ? window.addEventListener('contextmenu', e.contextMenuCallbackNative, !1) : window.addEventListener('contextmenu', e.contextMenuCallbackWeb, !1);
+  z.isPlatformEmbedded ? window.addEventListener('contextmenu', e.contextMenuCallbackNative, !1) : window.addEventListener('contextmenu', e.contextMenuCallbackWeb, !1);
 }), (0, _.E)({
   getDefaultLinkInterceptor: I.default
-}), (0, K.Un)({
+}), (0, Q.Un)({
   createPromise: () => Promise.all([
 n.e('77298'),
 n.e('80451'),
@@ -63,7 +66,7 @@ n.e('30634'),
 n.e('54343')
   ]).then(n.bind(n, 849493)),
   webpackId: 849493
-}), (0, K.Un)({
+}), (0, Q.Un)({
   createPromise: () => Promise.all([
 n.e('77298'),
 n.e('80451'),
@@ -72,13 +75,13 @@ n.e('81811')
   ]).then(n.bind(n, 80753)),
   webpackId: 80753
 });
-let et = (0, K.Un)({
+let ei = (0, Q.Un)({
 createPromise: () => n.e('46369').then(n.bind(n, 177741)),
 webpackId: 177741
   }),
-  en = i.memo(function(e) {
-let t = (0, c.e7)([k.Z], () => k.Z.isFocused());
-return (0, r.jsx)(X.Z, {
+  ea = i.memo(function(e) {
+let t = (0, c.e7)([V.Z], () => V.Z.isFocused());
+return (0, r.jsx)(ee.Z, {
   ...e,
   focused: t
 });
@@ -89,62 +92,75 @@ children: t,
 skipsSettingDefaultPageTitle: n
   } = e, {
 pathname: a
-  } = (0, l.TH)(), _ = (0, j.getPlatform)(), I = u.tq || u.Em, k = (0, c.e7)([w.Z], () => w.Z.darkSidebar ? $.BRd.DARK : void 0), K = (0, c.e7)([g.Z], () => g.Z.useForcedColors ? 'yes' : 'no'), [X, er] = (0, c.Wu)([y.Z], () => [
-y.Z.isEditorOpen,
-y.Z.isCoachmark
-  ]), ei = (0, c.e7)([v.Z], () => v.Z.isEditorOpen), ea = (0, c.e7)([x.Z], () => x.Z.getLayers().includes($.S9g.USER_SETTINGS)), eo = (0, c.e7)([G.default], () => W.ZP.canUseClientThemes(G.default.getCurrentUser())), es = X && !ea, el = [];
-  es && er && !eo && el.push(d.z.CLIENT_THEMES_COACHMARK);
-  let [eu, ec] = (0, M.U)(el, J.R.SIDEBAR, !0);
-  el.push(d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
-  let ed = eu === d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
-e_ = eu === d.z.CLIENT_THEMES_COACHMARK;
+  } = (0, l.TH)(), _ = (0, z.getPlatform)(), I = u.tq || u.Em, V = (0, c.e7)([G.Z], () => G.Z.darkSidebar ? et.BRd.DARK : void 0), Q = (0, c.e7)([g.Z], () => g.Z.useForcedColors ? 'yes' : 'no'), [ee, es, eo] = (0, c.Wu)([D.Z], () => [
+D.Z.isEditorOpen,
+D.Z.isCoachmark,
+D.Z.isPreview
+  ]), [el, eu] = (0, c.Wu)([O.Z], () => [
+O.Z.isEditorOpen,
+O.Z.isUpsellPreview
+  ]), ec = (0, c.e7)([B.Z], () => B.Z.getLayers().includes(et.S9g.USER_SETTINGS)), ed = (0, c.e7)([F.default], () => q.ZP.canUseClientThemes(F.default.getCurrentUser())), e_ = ee && !ec, eE = [];
+  e_ && es && !ed && eE.push(d.z.CLIENT_THEMES_COACHMARK);
+  let [ef, eh] = (0, P.U)(eE, en.R.SIDEBAR, !0);
+  eE.push(d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
+  let ep = ef === d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
+em = ef === d.z.CLIENT_THEMES_COACHMARK;
   i.useEffect(() => {
 null == (0, l.LX)(a, {
   path: 'invite',
   exact: !1,
   strict: !1
-}) && ed && !e_ && (f.Z.dispatch({
-  type: 'APP_ICON_EDITOR_OPEN'
-}), f.Z.dispatch({
+}) && ep && !em && ((0, v.nJ)(), f.Z.dispatch({
   type: 'APP_ICON_TRACK_IMPRESSION',
-  markAsDismissed: ec
+  markAsDismissed: eh
 }));
   }, [
-ed,
-e_,
-ec,
+ep,
+em,
+eh,
 a
   ]);
-  let eE = i.useRef(document.body);
-  return (0, r.jsx)(U.Z, {
+  let eI = i.useRef(document.body),
+eT = e_ && !es || em,
+eg = el && !ec && !em,
+eS = eo || eu,
+{
+  enabled: eA
+} = w.Z.useExperiment({
+  location: 'AppSkeleton'
+}, {
+  autoTrackExposure: eS && (eT || eg),
+  disable: !eS
+});
+  return (0, r.jsx)(x.Z, {
 children: (0, r.jsx)(S.Z, {
   children: (0, r.jsxs)(E.RedesignIconContextProvider, {
     children: [
-      (0, r.jsx)(z.Z, {
+      (0, r.jsx)(X.Z, {
         skipsSettingDefaultPageTitle: n
       }),
-      (0, r.jsx)(Q.Z, {
-        children: (0, r.jsx)(q.Z, {
+      (0, r.jsx)(J.Z, {
+        children: (0, r.jsx)($.Z, {
           children: (0, r.jsxs)(E.FocusRingScope, {
-            containerRef: eE,
+            containerRef: eI,
             children: [
-              (0, r.jsx)(Y.Co, {}),
-              (0, r.jsx)(B.ZP, {}),
-              (0, r.jsx)(s.OU, {}),
-              null != _ ? (0, r.jsx)(en, {
+              (0, r.jsx)(K.Co, {}),
+              (0, r.jsx)(H.ZP, {}),
+              (0, r.jsx)(o.OU, {}),
+              null != _ ? (0, r.jsx)(ea, {
                 type: _,
-                themeOverride: k
+                themeOverride: V
               }) : null,
               (0, r.jsx)(T.Wu, {
-                appContext: $.IlC.APP,
+                appContext: et.IlC.APP,
                 renderWindow: window,
-                children: (0, r.jsxs)(V.yP, {
+                children: (0, r.jsxs)(Y.yP, {
                   children: [
                     (0, r.jsxs)('div', {
-                      className: o()(ee.appAsidePanelWrapper, I && ee.mobileAppAsidePanelWrapper, {
-                        [ee.allowsScrolling]: (() => {
+                      className: s()(er.appAsidePanelWrapper, I && er.mobileAppAsidePanelWrapper, {
+                        [er.allowsScrolling]: (() => {
                           let e = (0, l.LX)(a, {
-                            path: $.Z5c.APPLICATION_DIRECTORY,
+                            path: et.Z5c.APPLICATION_DIRECTORY,
                             exact: !1,
                             strict: !1
                           });
@@ -153,43 +169,47 @@ children: (0, r.jsx)(S.Z, {
                       }),
                       children: [
                         (0, r.jsx)('div', {
-                          className: ee.notAppAsidePanel,
+                          className: er.notAppAsidePanel,
                           'data-app-not-dev-tools': !0,
-                          children: (0, r.jsx)(L.m, {
-                            children: (0, r.jsx)(Z.OR, {
-                              children: (0, r.jsxs)(F.Z.Provider, {
+                          children: (0, r.jsx)(b.m, {
+                            children: (0, r.jsx)(W.OR, {
+                              children: (0, r.jsxs)(Z.Z.Provider, {
                                 value: A.Z,
                                 children: [
                                   (0, r.jsx)('div', {
-                                    className: o()(I ? ee.mobileApp : ee.app),
+                                    className: s()(I ? er.mobileApp : er.app),
                                     children: t
                                   }),
-                                  (0, r.jsx)(R.Z, {}),
+                                  (0, r.jsx)(C.Z, {}),
                                   (0, r.jsx)(p.Z, {}),
                                   (0, r.jsx)(E.Modals, {}),
                                   (0, r.jsx)(m.Z, {}),
-                                  (0, r.jsx)(H.Ox, {}),
-                                  (0, r.jsx)(V.Un, {}),
-                                  (0, r.jsx)(Z.ot, {}),
+                                  (0, r.jsx)(j.Ox, {}),
+                                  (0, r.jsx)(Y.Un, {}),
+                                  (0, r.jsx)(W.ot, {}),
                                   (0, r.jsx)(E.ToastContainer, {}),
                                   (0, r.jsx)(N.Z, {}),
-                                  (0, r.jsx)(P.Z, {}),
-                                  (0, r.jsx)(et, {})
+                                  (0, r.jsx)(U.Z, {}),
+                                  (0, r.jsx)(ei, {})
                                 ]
                               })
                             })
                           })
                         }),
-                        (0, r.jsx)(C.Z, {}),
+                        (0, r.jsx)(y.Z, {}),
                         (0, r.jsx)(h.Z, {}),
-                        es && !er || e_ ? (0, r.jsx)(D.Z, {
-                          markAsDismissed: ec
-                        }) : null,
-                        !ei || ea || e_ ? null : (0, r.jsx)(O.Z, {
-                          isCoachmark: ed,
-                          markAsDismissed: ec
+                        eT && !eA && (0, r.jsx)(L.Z, {
+                          markAsDismissed: eh
                         }),
-                        (0, r.jsx)(b.Z, {
+                        eg && !eA && (0, r.jsx)(R.Z, {
+                          isCoachmark: ep,
+                          markAsDismissed: eh
+                        }),
+                        (eT || eg) && eA && (0, r.jsx)(k.Z, {
+                          initialTab: eg ? k._.APP_ICONS : k._.CLIENT_THEMES,
+                          markAsDismissed: eh
+                        }),
+                        (0, r.jsx)(M.Z, {
                           mobile: I
                         })
                       ]
@@ -198,7 +218,7 @@ children: (0, r.jsx)(S.Z, {
                   ]
                 })
               }),
-              (0, r.jsx)(s.OU, {})
+              (0, r.jsx)(o.OU, {})
             ]
           })
         })
@@ -206,5 +226,5 @@ children: (0, r.jsx)(S.Z, {
     ]
   })
 })
-  }, K);
+  }, Q);
 };

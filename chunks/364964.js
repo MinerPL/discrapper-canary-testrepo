@@ -2,11 +2,11 @@ n.r(t), n(47120);
 var r = n(920478),
   i = n(392711),
   a = n.n(i),
-  o = n(462176);
-r.Z.registerLanguage('ansi', o.Z), t.default = {
+  s = n(462176);
+r.Z.registerLanguage('ansi', s.Z), t.default = {
   highlight(e, t, n) {
 if (! function(e) {
-    if (e.indexOf(s) >= 0)
+    if (e.indexOf(o) >= 0)
       return !1;
     let t = 0;
     for (let n of e.split('\n')) {
@@ -26,4 +26,4 @@ return Date.now(), i;
   },
   hasLanguage: e => null != r.Z.getLanguage(e)
 };
-let s = a().repeat('/', 15);
+let o = a().repeat('/', 15);

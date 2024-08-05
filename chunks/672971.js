@@ -1,175 +1,175 @@
-a(411104), a(47120);
-var t = a(735250),
-  s = a(470079),
-  r = a(120356),
-  l = a.n(r),
-  i = a(512722),
-  o = a.n(i),
-  c = a(442837),
-  u = a(481060),
-  d = a(850840),
-  _ = a(63063),
-  I = a(74538),
-  E = a(981631),
-  T = a(474936),
-  A = a(689938),
-  N = a(178218);
+s(411104), s(47120);
+var t = s(735250),
+  r = s(470079),
+  l = s(120356),
+  a = s.n(l),
+  i = s(512722),
+  c = s.n(i),
+  o = s(442837),
+  u = s(481060),
+  I = s(850840),
+  _ = s(63063),
+  E = s(74538),
+  T = s(981631),
+  d = s(474936),
+  N = s(689938),
+  M = s(178218);
 
-function P(e, n, a) {
+function A(e, n, s) {
   return n in e ? Object.defineProperty(e, n, {
-value: a,
+value: s,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : e[n] = a, e;
+  }) : e[n] = s, e;
 }
-class M extends s.Component {
+class P extends r.Component {
   componentDidMount() {
 this.props.onChange(this.hasAcceptedNeccessaryTerms(this.props, this.state));
   }
   componentDidUpdate(e, n) {
-let a = this.hasAcceptedNeccessaryTerms(e, n),
+let s = this.hasAcceptedNeccessaryTerms(e, n),
   t = this.hasAcceptedNeccessaryTerms(this.props, this.state);
-t !== a && this.props.onChange(t);
+t !== s && this.props.onChange(t);
   }
   hasAcceptedNeccessaryTerms(e, n) {
 return (null == e.eulaId || n.hasAcceptedEULA) && (!e.showWithdrawalWaiver || n.hasAcceptedWithdrawalWaiver);
   }
   formatInterval(e) {
-if (e === T.rV.YEAR)
-  return A.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_YEAR;
-if (e === T.rV.MONTH)
-  return A.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH;
+if (e === d.rV.YEAR)
+  return N.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_YEAR;
+if (e === d.rV.MONTH)
+  return N.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH;
 throw Error('Invalid interval type: '.concat(e));
   }
   render() {
 let {
   eulaId: e,
   applicationName: n,
-  hasPreviouslyAcceptedEULA: s,
-  forceShow: r,
+  hasPreviouslyAcceptedEULA: r,
+  forceShow: l,
   disabled: i,
-  className: c,
-  checkboxClassname: d,
-  checkboxLabelClassname: T,
-  finePrint: P,
-  showPricingLink: M,
-  showWithdrawalWaiver: p,
+  className: o,
+  checkboxClassname: I,
+  checkboxLabelClassname: d,
+  finePrint: A,
+  showPricingLink: P,
+  showWithdrawalWaiver: L,
   isTrial: R,
-  isDiscount: L,
-  subscriptionPlan: f,
-  finePrintClassname: C
+  isDiscount: S,
+  subscriptionPlan: m,
+  finePrintClassname: U
 } = this.props, {
-  hasAcceptedEULA: m,
-  hasAcceptedWithdrawalWaiver: S
+  hasAcceptedEULA: p,
+  hasAcceptedWithdrawalWaiver: O
 } = this.state;
-return (o()(!R || null != f, 'subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true'), r || null != e && !s || p) ? (0, t.jsxs)('div', {
-  className: c,
+return (c()(!R || null != m, 'subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true'), l || null != e && !r || L) ? (0, t.jsxs)('div', {
+  className: o,
   children: [
-    p && (0, t.jsx)(u.FormTitle, {
-      className: N.formTitle,
-      children: A.Z.Messages.BILLING_ONLINE_PURCHASE_WAIVER
+    L && (0, t.jsx)(u.FormTitle, {
+      className: M.formTitle,
+      children: N.Z.Messages.BILLING_ONLINE_PURCHASE_WAIVER
     }),
-    null != e && (r || !s) ? (0, t.jsx)(u.Checkbox, {
+    null != e && (l || !r) ? (0, t.jsx)(u.Checkbox, {
       type: u.Checkbox.Types.INVERTED,
-      value: m,
+      value: p,
       onChange: this.handleToggleEULAAcceptance,
       disabled: i,
-      className: N.checkbox,
+      className: M.checkbox,
       children: (0, t.jsx)('div', {
-        className: N.checkboxLabel,
-        children: A.Z.Messages.BILLING_THIRD_PARTY_EULA_LABEL.format({
+        className: M.checkboxLabel,
+        children: N.Z.Messages.BILLING_THIRD_PARTY_EULA_LABEL.format({
           applicationName: n,
           onClick: n => {
             (0, u.openModalLazy)(async () => {
               let {
                 default: n
-              } = await a.e('51868').then(a.bind(a, 796504));
-              return a => (0, t.jsx)(n, {
+              } = await s.e('51868').then(s.bind(s, 796504));
+              return s => (0, t.jsx)(n, {
                 eulaId: e,
-                ...a
+                ...s
               });
             }), n.preventDefault();
           }
         })
       })
     }) : null,
-    null == P ? null : (0, t.jsx)('div', {
-      className: l()(N.finePrint, C),
-      children: P
+    null == A ? null : (0, t.jsx)('div', {
+      className: a()(M.finePrint, U),
+      children: A
     }),
-    p ? (0, t.jsxs)('div', {
-      className: c,
+    L ? (0, t.jsxs)('div', {
+      className: o,
       children: [
         (0, t.jsx)(u.Checkbox, {
           type: u.Checkbox.Types.INVERTED,
-          value: S,
+          value: O,
           onChange: this.handleToggleEUWithdralWaiverAcceptance,
           disabled: i,
-          className: l()(N.checkbox, d),
+          className: a()(M.checkbox, I),
           children: (0, t.jsx)('div', {
-            className: l()(N.checkboxLabel, T),
-            children: A.Z.Messages.BILLING_ONLINE_PURCHASE_WAIVER_CHECKBOX
+            className: a()(M.checkboxLabel, d),
+            children: N.Z.Messages.BILLING_ONLINE_PURCHASE_WAIVER_CHECKBOX
           })
         }),
         (0, t.jsx)('div', {
-          className: N.finePrint,
-          children: A.Z.Messages.BILLING_ONLINE_PURCHASE_WAIVER_DISCLAIMER
+          className: M.finePrint,
+          children: N.Z.Messages.BILLING_ONLINE_PURCHASE_WAIVER_DISCLAIMER
         })
       ]
     }) : null,
-    M && (0, t.jsxs)('div', {
-      className: N.finePrint,
+    P && (0, t.jsxs)('div', {
+      className: M.finePrint,
       children: [
         '*',
-        A.Z.Messages.BILLING_HOW_PRICING_WORKS.format({
-          documentationLink: _.Z.getArticleURL(E.BhN.LOCALIZED_PRICING)
+        N.Z.Messages.BILLING_HOW_PRICING_WORKS.format({
+          documentationLink: _.Z.getArticleURL(T.BhN.LOCALIZED_PRICING)
         })
       ]
     }),
-    R && null != f && (0, t.jsx)(u.Text, {
+    R && null != m && (0, t.jsx)(u.Text, {
       variant: 'text-xs/medium',
       color: 'interactive-normal',
-      children: A.Z.Messages.BILLING_TRIAL_LEGAL_COPY_V2.format({
-        buttonText: (0, I.W_)(null, f),
-        interval: this.formatInterval(null == f ? void 0 : f.interval),
-        cancelSubscriptionArticle: _.Z.getArticleURL(E.BhN.PREMIUM_DETAILS_CANCEL_SUB),
-        paidServiceTermsArticle: _.Z.getArticleURL(E.BhN.PAID_TERMS)
+      children: N.Z.Messages.BILLING_TRIAL_LEGAL_COPY_V2.format({
+        buttonText: (0, E.W_)(null, m),
+        interval: this.formatInterval(null == m ? void 0 : m.interval),
+        cancelSubscriptionArticle: _.Z.getArticleURL(T.BhN.PREMIUM_DETAILS_CANCEL_SUB),
+        paidServiceTermsArticle: _.Z.getArticleURL(T.BhN.PAID_TERMS)
       })
     }),
-    L && null != f && (0, t.jsx)(u.Text, {
+    S && null != m && (0, t.jsx)(u.Text, {
       variant: 'text-xs/medium',
       color: 'interactive-normal',
-      children: A.Z.Messages.BILLING_DISCOUNT_LEGAL_COPY.format({
-        buttonText: (0, I.W_)(null, f),
-        interval: this.formatInterval(null == f ? void 0 : f.interval),
-        cancelSubscriptionArticle: _.Z.getArticleURL(E.BhN.PREMIUM_DETAILS_CANCEL_SUB),
-        paidServiceTermsArticle: _.Z.getArticleURL(E.BhN.PAID_TERMS)
+      children: N.Z.Messages.BILLING_DISCOUNT_LEGAL_COPY.format({
+        buttonText: (0, E.W_)(null, m),
+        interval: this.formatInterval(null == m ? void 0 : m.interval),
+        cancelSubscriptionArticle: _.Z.getArticleURL(T.BhN.PREMIUM_DETAILS_CANCEL_SUB),
+        paidServiceTermsArticle: _.Z.getArticleURL(T.BhN.PAID_TERMS)
       })
     })
   ]
 }) : null;
   }
   constructor(...e) {
-super(...e), P(this, 'state', {
+super(...e), A(this, 'state', {
   hasAcceptedEULA: !this.props.forceShow && this.props.hasPreviouslyAcceptedEULA,
   hasAcceptedWithdrawalWaiver: !1
-}), P(this, 'handleToggleEUWithdralWaiverAcceptance', (e, n) => {
+}), A(this, 'handleToggleEUWithdralWaiverAcceptance', (e, n) => {
   this.setState({
     hasAcceptedWithdrawalWaiver: n
   });
-}), P(this, 'handleToggleEULAAcceptance', (e, n) => {
+}), A(this, 'handleToggleEULAAcceptance', (e, n) => {
   this.setState({
     hasAcceptedEULA: n
   });
 });
   }
 }
-n.Z = c.ZP.connectStores([d.Z], e => {
+n.Z = o.ZP.connectStores([I.Z], e => {
   let {
 eulaId: n
   } = e;
   return {
-hasPreviouslyAcceptedEULA: null != n && d.Z.hasAcceptedEULA(n)
+hasPreviouslyAcceptedEULA: null != n && I.Z.hasAcceptedEULA(n)
   };
-})(M);
+})(P);

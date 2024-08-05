@@ -1,38 +1,38 @@
 n.d(t, {
   Z: function() {
-return s;
+return l;
   }
 }), n(653041);
 var i = n(88315),
   a = n(199766),
-  l = n(813900);
+  s = n(813900);
 
-function s(e) {
+function l(e) {
   let {
 line: t,
 context: n,
-canvasWidth: s,
+canvasWidth: l,
 canvasHeight: r,
 fallbackColor: o,
 outlineColorDark: c,
-outlineColorLight: d,
-linesDrawnAt: u,
+outlineColorLight: u,
+linesDrawnAt: d,
 deadDrawables: h
   } = e;
-  null == u.current[t.id] && (u.current[t.id] = Date.now()), n.lineCap = 'round', n.lineJoin = 'round';
-  let p = t.points.map(e => (0, i.RR)(e, s, r)),
-m = u.current[t.id],
+  null == d.current[t.id] && (d.current[t.id] = Date.now()), n.lineCap = 'round', n.lineJoin = 'round';
+  let p = t.points.map(e => (0, i.RR)(e, l, r)),
+m = d.current[t.id],
 _ = e => m + e.deltaTime,
 f = e => _(e) + 1500 >= Date.now(),
 E = e => _(e) <= Date.now() && f(e),
-C = p.find(E);
-  if (null == C) {
+g = p.find(E);
+  if (null == g) {
 !f(t.points[t.points.length - 1]) && h.push(t);
 return;
   }
-  let g = (e, t) => {
+  let C = (e, t) => {
   let i = null;
-  n.lineWidth = t * window.devicePixelRatio, n.strokeStyle = e, n.beginPath(), n.moveTo(C.x, C.y);
+  n.lineWidth = t * window.devicePixelRatio, n.strokeStyle = e, n.beginPath(), n.moveTo(g.x, g.y);
   for (let e = 1; e < p.length; e++) {
     let t = p[e];
     E(t) && (n.lineTo(t.x, t.y), i = t);
@@ -42,8 +42,8 @@ return;
 {
   fillColor: I,
   outlineColor: x
-} = (0, i.bg)(t.userId, c, d, o),
-T = g(x, 6 + l.q2),
-v = null != T && E(T);
-  v && (0, a.I)(n, T.x, T.y, x, l.q2), g(I, 6), v && (0, a.T)(n, T.x, T.y, t.userId);
+} = (0, i.bg)(t.userId, c, u, o),
+T = C(x, 6 + s.q2),
+N = null != T && E(T);
+  N && (0, a.I)(n, T.x, T.y, x, s.q2), C(I, 6), N && (0, a.T)(n, T.x, T.y, t.userId);
 }

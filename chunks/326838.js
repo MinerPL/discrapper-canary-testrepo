@@ -4,14 +4,14 @@ return h;
   }
 }), n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(913527),
-  r = n.n(s),
+  s = n(470079),
+  a = n(913527),
+  r = n.n(a),
   l = n(442837),
   o = n(481060),
   c = n(727637),
-  d = n(782568),
-  u = n(317632),
+  u = n(782568),
+  d = n(317632),
   _ = n(174767),
   E = n(594174),
   I = n(55935),
@@ -22,18 +22,18 @@ function h(e) {
   let {
 invite: t,
 expired: n
-  } = e, s = (0, l.e7)([E.default], () => {
+  } = e, a = (0, l.e7)([E.default], () => {
 var e, n;
 return null !== (n = null === (e = E.default.getUser(t.inviter_id)) || void 0 === e ? void 0 : e.username) && void 0 !== n ? n : '';
-  }), d = (0, I.vc)(r()(t.created_at), 'LT'), u = a.useRef(null), h = (0, c.Z)(u);
-  return a.useEffect(() => {
+  }), u = (0, I.vc)(r()(t.created_at), 'LT'), d = s.useRef(null), h = (0, c.Z)(d);
+  return s.useEffect(() => {
 !n && (0, _.Br)(t);
   }, [
 t,
 n
   ]), (0, i.jsxs)('div', {
 className: T.container,
-ref: u,
+ref: d,
 children: [
   (0, i.jsxs)('div', {
     className: T.primaryRow,
@@ -48,7 +48,7 @@ children: [
         variant: 'text-md/semibold',
         color: 'interactive-active',
         children: m.Z.Messages.GAME_INVITES_SENT_YOU_AN_INVITE.format({
-          username: s
+          username: a
         })
       }),
       (0, i.jsxs)('div', {
@@ -87,7 +87,7 @@ children: [
         children: [
           t.application_name,
           ' \xB7 ',
-          d
+          u
         ]
       }),
       n && (0, i.jsx)('div', {
@@ -109,14 +109,14 @@ function N(e) {
   let {
 expired: t,
 invite: n,
-isHoveringInvite: s
-  } = e, r = (0, l.e7)([u.Z], () => u.Z.isInviteGameInstalled(n)), c = (0, l.e7)([u.Z], () => u.Z.isInviteJoinable(n)), [E, I] = a.useState(!1), h = a.useCallback(async () => {
+isHoveringInvite: a
+  } = e, r = (0, l.e7)([d.Z], () => d.Z.isInviteGameInstalled(n)), c = (0, l.e7)([d.Z], () => d.Z.isInviteJoinable(n)), [E, I] = s.useState(!1), h = s.useCallback(async () => {
 I(!0);
 try {
   await (0, _.MH)(n);
 } catch {}
 I(!1);
-  }, [n]), N = a.useCallback(async () => {
+  }, [n]), N = s.useCallback(async () => {
 I(!0);
 try {
   await (0, _.Ol)(n);
@@ -124,7 +124,7 @@ try {
 I(!1);
   }, [n]);
   if (t)
-return r && s ? (0, i.jsx)(o.Button, {
+return r && a ? (0, i.jsx)(o.Button, {
   className: T.primaryButton,
   color: o.ButtonColors.TRANSPARENT,
   disabled: E,
@@ -144,7 +144,7 @@ className: T.primaryButton,
 disabled: E,
 size: o.ButtonSizes.SMALL,
 color: o.ButtonColors.TRANSPARENT,
-onClick: () => (0, d.Z)(n.fallback_url),
+onClick: () => (0, u.Z)(n.fallback_url),
 children: m.Z.Messages.GAME_INVITES_INSTALL_GAME
   }) : (0, i.jsx)(o.Tooltip, {
 text: m.Z.Messages.GAME_INVITES_NOT_DETECTED_TOOLTIP.format({
@@ -156,7 +156,7 @@ children: e => (0, i.jsx)(o.Button, {
   disabled: !0,
   size: o.ButtonSizes.SMALL,
   color: o.ButtonColors.TRANSPARENT,
-  onClick: () => (0, d.Z)(n.fallback_url),
+  onClick: () => (0, u.Z)(n.fallback_url),
   children: (0, i.jsxs)('div', {
     className: T.launchToJoinContainer,
     children: [

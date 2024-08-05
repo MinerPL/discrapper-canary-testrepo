@@ -6,8 +6,8 @@ return E;
 var r = n(470079),
   i = n(442837),
   a = n(581883),
-  o = n(914010),
-  s = n(915486),
+  s = n(914010),
+  o = n(915486),
   l = n(68985),
   u = n(211644),
   c = n(605236),
@@ -19,10 +19,10 @@ function E(e, t, n) {
   var e;
   return null === (e = a.Z.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents;
 }),
-f = (0, i.e7)([o.Z], () => o.Z.getGuildId()),
+f = (0, i.e7)([s.Z], () => s.Z.getGuildId()),
 h = (0, d.i)(e),
 p = null;
-  a.Z.hasLoaded(_.yP.PRELOADED_USER_SETTINGS) ? p = h.find(e => null == E || !(0, s.jl)(E, e)) : null != E && (p = h.find(e => !(0, s.jl)(E, e)));
+  a.Z.hasLoaded(_.yP.PRELOADED_USER_SETTINGS) ? p = h.find(e => null == E || !(0, o.jl)(E, e)) : null != E && (p = h.find(e => !(0, o.jl)(E, e)));
   let m = (0, u.ZP)(e => null != p && e.currentlyShown.has(p)),
 I = (0, i.e7)([l.Z], () => null != p && l.Z.hasUserHitDCCap(p));
   r.useEffect(() => {

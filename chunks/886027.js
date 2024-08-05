@@ -6,8 +6,8 @@ return l;
 var r = n(53529),
   i = n(436660),
   a = n(887490),
-  o = n(515270);
-let s = new Set([
+  s = n(515270);
+let o = new Set([
   'line',
   'blockQuote'
 ]);
@@ -35,13 +35,13 @@ if ((null == r ? void 0 : r[0].type) === 'blockQuote') {
 t(n);
   }, e.deleteFragment = t => {
 if (null != e.selection) {
-  let [o, s] = a.M8.edges(e.selection), l = [o.path[0]], u = a.bN.node(e, l), c = [s.path[0]], d = a.C0.equals(l, c) ? null : a.bN.node(e, c);
+  let [s, o] = a.M8.edges(e.selection), l = [s.path[0]], u = a.bN.node(e, l), c = [o.path[0]], d = a.C0.equals(l, c) ? null : a.bN.node(e, c);
   r.T.withSingleEntry(e, () => {
-    (null == u ? void 0 : u[0].type) === 'blockQuote' && a.Jz.isAtStart(o, u) && i.Q.setNodes(e, {
+    (null == u ? void 0 : u[0].type) === 'blockQuote' && a.Jz.isAtStart(s, u) && i.Q.setNodes(e, {
       type: 'line'
     }, {
       at: l
-    }), (null == d ? void 0 : d[0].type) === 'blockQuote' && a.Jz.isAtEnd(s, d) && i.Q.setNodes(e, {
+    }), (null == d ? void 0 : d[0].type) === 'blockQuote' && a.Jz.isAtEnd(o, d) && i.Q.setNodes(e, {
       type: 'line'
     }, {
       at: c
@@ -86,13 +86,13 @@ let t = a.bN.richValue(e);
     let t = !1;
     for (let l of a.bN.blocks(e)) {
       let [u, c] = l;
-      if (!s.has(u.type))
+      if (!o.has(u.type))
         continue;
       let d = {
         path: a.C0.child(c, 0),
         offset: 0
       };
-      if ((0, o.iF)(e, d)) {
+      if ((0, s.iF)(e, d)) {
         'blockQuote' === u.type && (i.Q.setNodes(e, {
           type: 'line'
         }, {
@@ -115,17 +115,17 @@ let t = a.bN.richValue(e);
           at: c
         }), !t)) {
         var n, r;
-        let o = null !== (r = null !== (n = null == f ? void 0 : f[0].length) && void 0 !== n ? n : null == E ? void 0 : E[0].length) && void 0 !== r ? r : 0,
-          s = a.C0.child(c, 0);
+        let s = null !== (r = null !== (n = null == f ? void 0 : f[0].length) && void 0 !== n ? n : null == E ? void 0 : E[0].length) && void 0 !== r ? r : 0,
+          o = a.C0.child(c, 0);
         i.Q.delete(e, {
           at: {
             anchor: {
-              path: s,
+              path: o,
               offset: 0
             },
             focus: {
-              path: s,
-              offset: o
+              path: o,
+              offset: s
             }
           }
         }), t = null != E;

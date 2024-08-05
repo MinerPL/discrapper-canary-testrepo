@@ -6,18 +6,18 @@ return m;
 return h;
   },
   jE: function() {
-return u;
+return d;
   }
 }), n(627494), n(757143);
 var i = n(884439),
   a = n(55000),
-  l = n(693824),
-  s = n(690725),
+  s = n(693824),
+  l = n(690725),
   r = n(561308),
   o = n(737583),
   c = n(169040),
-  d = n(689938);
-let u = e => {
+  u = n(689938);
+let d = e => {
 let {
   timestamp: t
 } = e;
@@ -31,7 +31,7 @@ var t;
 let n = null === (t = (0, r.PJ)(e, i.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
 return null == n ? [] : [{
   iconPath: c.eF,
-  text: d.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({
+  text: u.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({
     count: n
   })
 }];
@@ -55,14 +55,14 @@ let {
   mediaImageSrc: i,
   artist: r,
   description: u,
-  colors: h,
-  badges: m
-} = e, _ = p({
+  colors: d,
+  badges: h
+} = e, m = p({
   avatarSrc: t.getAvatarURL(n.guild_id, 128),
   mediaImageSrc: i
-}), f = r.replaceAll(/[^a-zA-Z0-9 ]/g, '').replaceAll(' ', '-');
-return await (0, s.f)({
-  assetsToLoad: _,
+}), _ = r.replaceAll(/[^a-zA-Z0-9 ]/g, '').replaceAll(' ', '-');
+return await (0, l.f)({
+  assetsToLoad: m,
   drawImage: e => {
     (function(e, t) {
       let n = t.map((e, t) => ({
@@ -84,25 +84,7 @@ return await (0, s.f)({
         h: c.bg,
         w: c.nx
       }, 8);
-    }(e, h), function(e) {
-      e.setColor('rgba(108, 111, 124, 0.24)'), e.drawRoundedRect({
-        x: c.nx - c.sB - c.if,
-        y: c.sB,
-        w: c.if,
-        h: c.wI
-      }, 4, !0), e.setColor('rgba(255, 255, 255, 0.5)'), e.setFont({
-        size: 12,
-        family: [
-          'gg sans',
-          'sans-serif'
-        ],
-        weight: 500,
-        truncate: l.GX.None
-      }), e.drawText(d.Z.Messages.BETA, {
-        x: c.nx - c.sB - 29,
-        y: 26
-      }, !0);
-    }(e), function(e) {
+    }(e, d), function(e) {
       e.drawRoundedImage('MediaImage', {
         x: c.sB,
         y: c.sB
@@ -110,8 +92,8 @@ return await (0, s.f)({
         w: c.Pu,
         h: c.Pu
       }, 8, {
-        fillMode: l.JU.Contain
-      }) === l.vP.Failure && e.drawPath(a.Cv, {
+        fillMode: s.JU.Contain
+      }) === s.vP.Failure && e.drawPath(a.Cv, {
         x: c.sB,
         y: c.sB
       }, !0, 2 + 2 / 3);
@@ -126,7 +108,9 @@ return await (0, s.f)({
     }(e), function(e, t) {
       e.setColor('white'), e.setFont({
         size: 16,
-        truncate: l.GX.Wrap
+        family: c.I8,
+        weight: c.Ue,
+        truncate: s.GX.Wrap
       }), e.drawText(t, {
         x: c.Iq,
         y: 64,
@@ -135,15 +119,15 @@ return await (0, s.f)({
       }, !0);
     }(e, u), (0, o.J)({
       canvas: e,
-      badges: m,
+      badges: h,
       startPosition: c.Iq,
       maxWidth: c.kC
     }));
   },
   exportConfigs: {
-    format: l.kH.CloudUpload,
+    format: s.kH.CloudUpload,
     quality: 1,
-    fileName: 'user-reacting-to-'.concat(f, '.png').toLowerCase(),
+    fileName: 'user-reacting-to-'.concat(_, '.png').toLowerCase(),
     fileType: 'png',
     channelId: n.id
   }

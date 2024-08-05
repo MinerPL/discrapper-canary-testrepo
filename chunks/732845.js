@@ -1,6 +1,6 @@
 n.d(t, {
   ac: function() {
-return o;
+return s;
   },
   mv: function() {
 return i;
@@ -40,7 +40,7 @@ treatments: [{
   }
 }]
   }),
-  o = (0, r.B)({
+  s = (0, r.B)({
 kind: 'user',
 id: '2023-09_server_shop_phantom_preview',
 label: 'Server Shop Phantom Preview',

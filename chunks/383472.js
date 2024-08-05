@@ -1,9 +1,9 @@
 var r = n(470079),
   i = n(844303),
   a = n(829307),
-  o = n(13942),
-  s = n(464854);
-(0, s.t1)(function(e) {
+  s = n(13942),
+  o = n(464854);
+(0, o.t1)(function(e) {
   var t = e.onChange,
 n = e.hex,
 l = e.rgb,
@@ -77,7 +77,7 @@ _ = (0, i.default)((0, a.Z)({
   }
 }, c)),
 E = function(e, n) {
-  e.hex ? o.FX(e.hex) && t({
+  e.hex ? s.FX(e.hex) && t({
     hex: e.hex,
     source: 'hex'
   }, n) : (e.r || e.g || e.b) && t({
@@ -87,12 +87,12 @@ E = function(e, n) {
     source: 'rgb'
   }, n);
 };
-  return r.createElement(s.xZ, {
+  return r.createElement(o.xZ, {
 styles: c
   }, r.createElement('div', {
 style: _.material,
 className: 'material-picker ' + (void 0 === d ? '' : d)
-  }, r.createElement(s.Vm, {
+  }, r.createElement(o.Vm, {
 style: {
   wrap: _.HEXwrap,
   input: _.HEXinput,
@@ -106,7 +106,7 @@ style: _.split,
 className: 'flexbox-fix'
   }, r.createElement('div', {
 style: _.third
-  }, r.createElement(s.Vm, {
+  }, r.createElement(o.Vm, {
 style: {
   wrap: _.RGBwrap,
   input: _.RGBinput,
@@ -117,7 +117,7 @@ value: l.r,
 onChange: E
   })), r.createElement('div', {
 style: _.third
-  }, r.createElement(s.Vm, {
+  }, r.createElement(o.Vm, {
 style: {
   wrap: _.RGBwrap,
   input: _.RGBinput,
@@ -128,7 +128,7 @@ value: l.g,
 onChange: E
   })), r.createElement('div', {
 style: _.third
-  }, r.createElement(s.Vm, {
+  }, r.createElement(o.Vm, {
 style: {
   wrap: _.RGBwrap,
   input: _.RGBinput,

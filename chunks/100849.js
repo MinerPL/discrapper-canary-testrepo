@@ -1,69 +1,69 @@
-i.d(n, {
+i.d(s, {
   Z: function() {
 return x;
   }
 });
-var s = i(735250),
+var n = i(735250),
   l = i(470079),
-  o = i(120356),
-  t = i.n(o),
-  r = i(442837),
-  a = i(481060),
+  t = i(120356),
+  o = i.n(t),
+  a = i(442837),
+  r = i(481060),
   d = i(717881),
   c = i(387903),
   u = i(906732),
   I = i(199902),
   _ = i(158776),
   f = i(785717),
-  E = i(221292),
-  m = i(981631),
-  S = i(501649),
-  Z = i(735393);
+  m = i(221292),
+  E = i(981631),
+  v = i(501649),
+  S = i(735393);
 
 function x(e) {
   let {
-user: n,
+user: s,
 type: i,
-showActions: o,
+showActions: t,
 onClose: x
-  } = e, v = (0, r.e7)([I.Z], () => null != I.Z.getAnyStreamForUser(n.id)), h = (0, r.e7)([_.Z], () => _.Z.getActivities(n.id)), p = l.useMemo(() => h.filter(e => e.type !== m.IIU.CUSTOM_STATUS), [h]), T = l.useMemo(() => v ? p.find(e => e.type === m.IIU.PLAYING) : null, [
+  } = e, Z = (0, a.e7)([I.Z], () => null != I.Z.getAnyStreamForUser(s.id)), h = (0, a.e7)([_.Z], () => _.Z.getActivities(s.id)), p = l.useMemo(() => h.filter(e => e.type !== E.IIU.CUSTOM_STATUS), [h]), T = l.useMemo(() => Z ? p.find(e => e.type === E.IIU.PLAYING) : null, [
 p,
-v
+Z
   ]), g = l.useMemo(() => p.filter(e => e !== T), [
 T,
 p
   ]), {
 analyticsLocations: N,
-newestAnalyticsLocation: C
+newestAnalyticsLocation: j
   } = (0, u.ZP)(), {
-trackUserProfileAction: j,
+trackUserProfileAction: C,
 ...A
   } = (0, f.KZ)(), R = {
 location: {
-  page: m.ZY5.USER_PROFILE,
-  section: m.jXE.PROFILE_MODAL
+  page: E.ZY5.USER_PROFILE,
+  section: E.jXE.PROFILE_MODAL
 }
   };
-  return (0, s.jsxs)(a.ScrollerThin, {
-className: Z.listScroller,
+  return (0, n.jsxs)(r.ScrollerThin, {
+className: S.listScroller,
 fade: !0,
 children: [
-  v ? (0, s.jsx)(d.Z, {
+  Z ? (0, n.jsx)(d.Z, {
     type: i,
-    user: n,
-    source: C,
-    className: S.userProfileActivity,
+    user: s,
+    source: j,
+    className: v.userProfileActivity,
     showChannelDetails: i === c.Y.SIMPLIFIED_PROFILE,
     activity: T,
-    actionColor: S.actionColor,
+    actionColor: v.actionColor,
     analyticsParams: R,
-    showActions: o,
-    onGameProfileOpened: x,
+    showActions: t,
+    onClose: x,
     onAction: () => {
-      j({
+      C({
         action: 'JOIN_ACTIVITY'
-      }), (0, E.Ac)({
-        activityType: m.IIU.STREAMING,
+      }), (0, m.Ac)({
+        activityType: E.IIU.STREAMING,
         activityName: null == T ? void 0 : T.name,
         activityPlatform: null == T ? void 0 : T.platform,
         activitySessionId: null == T ? void 0 : T.session_id,
@@ -73,22 +73,22 @@ children: [
       });
     }
   }) : null,
-  g.map(e => (0, s.jsx)(d.Z, {
+  g.map(e => (0, n.jsx)(d.Z, {
     type: i,
     activity: e,
-    user: n,
+    user: s,
     useStoreStream: !1,
-    source: C,
-    className: t()(S.userProfileActivity, i === c.Y.SIMPLIFIED_PROFILE && S.simplifiedProfileActivity),
+    source: j,
+    className: o()(v.userProfileActivity, i === c.Y.SIMPLIFIED_PROFILE && v.simplifiedProfileActivity),
     showChannelDetails: i === c.Y.SIMPLIFIED_PROFILE,
-    actionColor: S.actionColor,
+    actionColor: v.actionColor,
     analyticsParams: R,
-    showActions: o,
-    onGameProfileOpened: x,
+    showActions: t,
+    onClose: x,
     onAction: () => {
-      j({
+      C({
         action: 'JOIN_ACTIVITY'
-      }), (0, E.Ac)({
+      }), (0, m.Ac)({
         activityType: e.type,
         activityName: e.name,
         activityPlatform: e.platform,

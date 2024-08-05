@@ -215,7 +215,7 @@ U = r.useCallback(async () => {
 z = !((null == M ? void 0 : null === (n = M.guild) || void 0 === n ? void 0 : n.verification_level) === I.sFg.VERY_HIGH ? Z : D || Z) || O.some(e => !(0, f.OA)(e)),
 G = (null !== (R = null == M ? void 0 : null === (t = M.guild) || void 0 === t ? void 0 : t.approximate_member_count) && void 0 !== R ? R : 0) >= N.Du,
 K = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
-Q = (0, a.useSpring)({
+Q = (0, i.useSpring)({
   from: {
     opacity: 0,
     transform: 'translateY('.concat(K ? 0 : 40, 'px)')
@@ -226,7 +226,7 @@ Q = (0, a.useSpring)({
   },
   config: v,
   delay: 500
-}),
+}, 'animate-always'),
 W = r.useRef(null);
   return (0, o.jsxs)(i.ModalRoot, {
 transitionState: B,

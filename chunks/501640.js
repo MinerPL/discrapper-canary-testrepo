@@ -4,15 +4,15 @@ return o;
   }
 });
 var i = n(149765),
-  s = n(442837),
-  a = n(984933),
+  a = n(442837),
+  s = n(984933),
   r = n(496675),
   l = n(981631);
 
 function o(e) {
-  let t = (0, s.e7)([a.ZP], () => {
+  let t = (0, a.e7)([s.ZP], () => {
 var t;
-return null !== (t = a.ZP.getChannels(e)[a.sH]) && void 0 !== t ? t : [];
+return null !== (t = s.ZP.getChannels(e)[s.sH]) && void 0 !== t ? t : [];
   }, [e]);
   return 0 === t.length ? 0 : t.filter(e => {
 let {

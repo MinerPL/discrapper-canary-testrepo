@@ -65,7 +65,7 @@ username: Z,
 globalName: U
   } = L, G = i.useRef(null), b = i.useRef(null), j = i.useMemo(() => s.merge({
 discriminator: '0000'
-  }), [s]), [D, W] = (0, l.useSpring)(() => ({
+  }), [s]), [D, W] = (0, u.useSpring)(() => ({
 opacity: 0,
 y: 5
   }));

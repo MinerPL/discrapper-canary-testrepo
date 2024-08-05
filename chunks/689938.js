@@ -2,8 +2,8 @@ n(47120), n(653041);
 var r = n(913527),
   i = n.n(r),
   a = n(627420),
-  o = n(375964),
-  s = n.n(o),
+  s = n(375964),
+  o = n.n(s),
   l = n(924658),
   u = n.n(l),
   c = n(539590),
@@ -16,7 +16,7 @@ let _ = e => ({
   E = new a.ZP({
 getMessages: e => {
   if ('en-US' === e)
-    return _(s());
+    return _(o());
   return n(385007)('./'.concat(e, '.jsona')).then(e => {
     let {
       default: t

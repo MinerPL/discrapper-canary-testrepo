@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  o = n(442837),
   l = n(481060),
   u = n(607070),
   c = n(62170),
@@ -90,11 +90,11 @@ ea = i.useCallback(() => {
   let t = e.error;
   null == w || w(t);
 }, [w]),
-eo = i.useCallback(e => {
+es = i.useCallback(e => {
   let t = (0, h.A)(e, 1);
   H(0 === t), $(t), null == C || C(t);
 }, [C]),
-es = i.useCallback(() => {
+eo = i.useCallback(() => {
   H(!V), null == y || y(!V);
 }, [
   V,
@@ -200,12 +200,12 @@ children: (0, r.jsx)('source', {
   src: O
 })
   });
-  let ef = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
+  let ef = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
 {
   enabled: eh
 } = (0, l.useRedesignIconContext)();
   return (0, r.jsxs)('div', {
-className: o()(T.container, {
+className: s()(T.container, {
   [T.playing]: Z
 }),
 onMouseEnter: et,
@@ -213,7 +213,7 @@ children: [
   (0, r.jsx)('div', {
     className: T.rippleContainer,
     children: (0, r.jsx)('div', {
-      className: o()(T.ripple, {
+      className: s()(T.ripple, {
         [T.reducedMotion]: ef
       })
     })
@@ -223,7 +223,7 @@ children: [
     onClick: ee,
     'aria-label': eE,
     children: (0, r.jsx)(e_, {
-      className: o()(T.playIcon, {
+      className: s()(T.playIcon, {
         [T.oldPlayIconSpacing]: !eh && !Z
       }),
       size: 'custom',
@@ -257,8 +257,8 @@ children: [
     minValue: 0,
     maxValue: 1,
     currentWindow: window,
-    onValueChange: eo,
-    onToggleMute: es,
+    onValueChange: es,
+    onToggleMute: eo,
     onVolumeShow: b,
     onVolumeHide: M
   }),

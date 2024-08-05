@@ -4,9 +4,9 @@ return l;
   }
 });
 var r, i, a = n(433517),
-  o = n(987650);
+  s = n(987650);
 
-function s(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -39,24 +39,24 @@ return null == l._loaded && (l._loaded = l.loadInternal()), l._loaded;
   static loadInternal() {
 let e = a.K.get('OverlayStore');
 if (null != e) {
-  let t = new l('boolean' == typeof e.enabled ? e.enabled : o.iP, !1);
+  let t = new l('boolean' == typeof e.enabled ? e.enabled : s.iP, !1);
   return t.save(), a.K.remove('OverlayStore'), t;
 }
 let t = a.K.get('overlayEnabled');
 if (null != t) {
-  let e = new l('boolean' == typeof t ? t : o.iP, !1);
+  let e = new l('boolean' == typeof t ? t : s.iP, !1);
   return e.save(), a.K.remove('overlayEnabled'), e;
 }
 let n = a.K.get('OverlayStore3');
 if (null != n) {
   var r, i;
-  return new l(null !== (r = n.enabled) && void 0 !== r ? r : o.iP, null !== (i = n.legacyEnabled) && void 0 !== i && i);
+  return new l(null !== (r = n.enabled) && void 0 !== r ? r : s.iP, null !== (i = n.legacyEnabled) && void 0 !== i && i);
 }
-let s = new l(o.iP, !1);
-return s.save(), s;
+let o = new l(s.iP, !1);
+return o.save(), o;
   }
   constructor(e, t) {
-s(this, 'enabled', void 0), s(this, 'legacyEnabled', void 0), this.enabled = e, this.legacyEnabled = t;
+o(this, 'enabled', void 0), o(this, 'legacyEnabled', void 0), this.enabled = e, this.legacyEnabled = t;
   }
 }
-s(l, '_loaded', null);
+o(l, '_loaded', null);

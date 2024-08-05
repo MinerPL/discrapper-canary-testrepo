@@ -1,15 +1,15 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   }
 });
 var r = n(63063),
   i = n(927923),
   a = n(689938);
 
-function o(e, t, n) {
-  let o = null;
-  return 'failed' === t ? o = function(e, t) {
+function s(e, t, n) {
+  let s = null;
+  return 'failed' === t ? s = function(e, t) {
 let {
   platform: n,
   name: r
@@ -56,7 +56,7 @@ switch (t) {
         })
     };
 }
-  }(e, n.code) : 'n/a' === t && (o = function(e, t) {
+  }(e, n.code) : 'n/a' === t && (s = function(e, t) {
 let {
   platform: n,
   name: r
@@ -71,8 +71,8 @@ if (t === i.Ry.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED)
     })
   };
 return null;
-  }(e, n.code)), null != o && (o.errorCodeMessage = a.Z.Messages.CONSOLE_ERROR_CODE_SUPPORT.format({
+  }(e, n.code)), null != s && (s.errorCodeMessage = a.Z.Messages.CONSOLE_ERROR_CODE_SUPPORT.format({
 supportURL: r.Z.getSubmitRequestURL(),
 errorCode: n.code
-  })), o;
+  })), s;
 }

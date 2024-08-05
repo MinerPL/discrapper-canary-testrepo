@@ -9,17 +9,17 @@ t.Z = {
 var t = e.state,
   n = e.options,
   a = e.name,
-  o = n.offset,
-  s = void 0 === o ? [
+  s = n.offset,
+  o = void 0 === s ? [
     0,
     0
-  ] : o,
+  ] : s,
   l = i.Ct.reduce(function(e, n) {
-    var a, o, l, u, c, d, _, E;
-    return e[n] = (a = n, o = t.rects, l = s, u = (0, r.Z)(a), c = [
+    var a, s, l, u, c, d, _, E;
+    return e[n] = (a = n, s = t.rects, l = o, u = (0, r.Z)(a), c = [
       i.t$,
       i.we
-    ].indexOf(u) >= 0 ? -1 : 1, _ = (d = 'function' == typeof l ? l(Object.assign({}, o, {
+    ].indexOf(u) >= 0 ? -1 : 1, _ = (d = 'function' == typeof l ? l(Object.assign({}, s, {
       placement: a
     })) : l)[0], E = d[1], _ = _ || 0, E = (E || 0) * c, [
       i.t$,

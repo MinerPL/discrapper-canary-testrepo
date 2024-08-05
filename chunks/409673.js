@@ -1,16 +1,16 @@
 n.d(t, {
   K_: function() {
-return R;
+return C;
   },
   hU: function() {
-return O;
+return R;
   }
 });
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(91192),
+  s = n.n(a),
+  o = n(91192),
   l = n(442837),
   u = n(846519),
   c = n(692547),
@@ -18,33 +18,34 @@ var r = n(735250),
   _ = n(596454),
   E = n(607070),
   f = n(745510),
-  h = n(594174),
-  p = n(208049),
-  m = n(763296),
-  I = n(697426),
-  T = n(242291),
-  g = n(706667),
-  S = n(286654),
-  A = n(675654),
-  N = n(689938),
-  v = n(627450);
+  h = n(631771),
+  p = n(594174),
+  m = n(208049),
+  I = n(763296),
+  T = n(697426),
+  g = n(242291),
+  S = n(706667),
+  A = n(286654),
+  N = n(675654),
+  v = n(689938),
+  O = n(627450);
 
-function O(e) {
+function R(e) {
   let {
 disabled: t = !1,
 onClick: n,
 text: i,
 children: a,
-tooltipPosition: s = 'top'
+tooltipPosition: o = 'top'
   } = e;
   return (0, r.jsx)(d.Tooltip, {
 text: i,
-position: s,
+position: o,
 children: e => (0, r.jsx)(d.Clickable, {
   ...e,
   'aria-label': i,
-  className: o()(v.secondaryButton, {
-    [v.buttonDisabled]: t
+  className: s()(O.secondaryButton, {
+    [O.buttonDisabled]: t
   }),
   onClick: n,
   children: a
@@ -52,239 +53,271 @@ children: e => (0, r.jsx)(d.Clickable, {
   });
 }
 
-function R(e) {
+function C(e) {
   let {
 sound: t,
 previewSound: n,
 disabled: i = !1,
 tooltipPosition: a = 'top'
   } = e;
-  return (0, r.jsx)(O, {
+  return (0, r.jsx)(R, {
 tooltipPosition: a,
 disabled: i,
 onClick: function(e) {
   e.stopPropagation(), e.currentTarget.blur(), n();
 },
-text: N.Z.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
+text: v.Z.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
   emojiName: t.emojiName,
   soundName: t.name
 }),
 children: (0, r.jsx)(d.VoiceNormalIcon, {
   size: 'md',
   color: 'currentColor',
-  className: v.secondaryIcon
+  className: O.secondaryIcon
 })
   });
 }
 t.ZP = i.forwardRef(function(e, t) {
-  var n, a, C;
+  var n, a, y;
   let {
-sound: y,
-channel: D,
-className: L,
-focused: b,
-forceSecondaryActions: M = !1,
-interactive: P = !0,
-enableSecondaryActions: U = !1,
-suppressPlaySound: w,
-onMouseEnter: x,
-onSelectItem: G,
-analyticsLocations: k,
-buttonOverlay: B = I.Pb.PLAY,
-...F
+sound: D,
+channel: L,
+className: b,
+focused: M,
+forceSecondaryActions: P = !1,
+interactive: U = !0,
+enableSecondaryActions: w = !1,
+suppressPlaySound: x,
+onMouseEnter: G,
+onSelectItem: k,
+analyticsLocations: B,
+buttonOverlay: F = T.Pb.PLAY,
+showLockForDisabledSound: V = !0,
+inNitroLockedSection: H = !1,
+...Z
   } = e, {
-soundId: V,
-name: H,
-emojiId: Z,
-emojiName: Y
-  } = y, j = (0, l.e7)([h.default], () => h.default.getCurrentUser()), W = (0, S.z)(y, null == D ? void 0 : D.guild_id), {
-playSoundboardSound: K,
-previewSound: z,
-isPlayingSound: q
-  } = (0, g.Z)(y, null !== (n = null == D ? void 0 : D.id) && void 0 !== n ? n : null), {
-createMultipleConfettiAt: Q
-  } = i.useContext(f.h), X = i.useRef(null);
-  let $ = (a = y.soundId, C = X.current, i.useMemo(() => {
-  if (null == C || '1' !== a)
+soundId: Y,
+name: j,
+emojiId: W,
+emojiName: K
+  } = D, z = (0, l.e7)([p.default], () => p.default.getCurrentUser()), q = (0, A.z)(D, null == L ? void 0 : L.guild_id), {
+playSoundboardSound: Q,
+previewSound: X,
+isPlayingSound: $
+  } = (0, S.Z)(D, null !== (n = null == L ? void 0 : L.id) && void 0 !== n ? n : null), {
+createMultipleConfettiAt: J
+  } = i.useContext(f.h), ee = i.useRef(null);
+  let et = (a = D.soundId, y = ee.current, i.useMemo(() => {
+  if (null == y || '1' !== a)
     return {
       x: 0,
       y: 0
     };
-  let e = C.getBoundingClientRect();
+  let e = y.getBoundingClientRect();
   return {
     x: e.left + e.width / 2,
     y: e.top + e.height / 2
   };
 }, [
-  C,
+  y,
   a
 ])),
-J = (0, l.e7)([E.Z], () => E.Z.useReducedMotion),
-ee = i.useRef(0.01),
-et = i.useRef(new u.Xp()),
-en = '1' === y.soundId,
-er = (0, l.e7)([m.Z], () => m.Z.isFavoriteSound(V), [V]),
-ei = 'sound-'.concat(y.soundId),
-ea = (0, s.JA)(ei),
-eo = null != Z || null != Y,
-es = !(0, T.Nq)(j, y, D),
-el = M || U && !es;
+en = (0, l.e7)([E.Z], () => E.Z.useReducedMotion),
+er = i.useRef(0.01),
+ei = i.useRef(new u.Xp()),
+ea = '1' === D.soundId,
+es = (0, l.e7)([I.Z], () => I.Z.isFavoriteSound(Y), [Y]),
+eo = 'sound-'.concat(D.soundId),
+el = (0, o.JA)(eo),
+eu = null != W || null != K,
+ec = !(0, g.Nq)(z, D, L),
+ed = P || w && !ec,
+e_ = ec && V,
+{
+  enableInlineUpsell: eE
+} = h.Qs.useExperiment({
+  location: 'Soundboard Sound Button'
+}, {
+  autoTrackExposure: e_
+});
 
-  function eu(e) {
-e.stopPropagation(), e.currentTarget.blur(), er ? (0, p.hs)(V) : (0, p.TB)(V);
+  function ef(e) {
+e.stopPropagation(), e.currentTarget.blur(), es ? (0, m.hs)(Y) : (0, m.TB)(Y);
   }
 
-  function ec() {
-return (0, r.jsx)(O, {
-  disabled: !P && !M,
-  onClick: eu,
-  text: N.Z.Messages.SOUNDBOARD_SOUND_FAVORITE_SOUND.format({
-    emojiName: y.emojiName,
-    soundName: y.name
+  function eh() {
+return (0, r.jsx)(R, {
+  disabled: !U && !P,
+  onClick: ef,
+  text: v.Z.Messages.SOUNDBOARD_SOUND_FAVORITE_SOUND.format({
+    emojiName: D.emojiName,
+    soundName: D.name
   }),
-  children: er ? (0, r.jsx)(d.StarIcon, {
+  children: es ? (0, r.jsx)(d.StarIcon, {
     size: 'xs',
-    className: o()(v.secondaryIcon, v.favoriteIconFavorite),
+    className: s()(O.secondaryIcon, O.favoriteIconFavorite),
     color: c.Z.unsafe_rawColors.GOLD.css
   }) : (0, r.jsx)(d.StarOutlineIcon, {
     size: 'xs',
     color: 'currentColor',
-    className: v.secondaryIcon
+    className: O.secondaryIcon
   })
 });
   }
-  let ed = R({
-  sound: y,
-  previewSound: z,
-  disabled: es
+  let ep = C({
+  sound: D,
+  previewSound: X,
+  disabled: ec && !P
 }),
-e_ = () => (0, r.jsxs)('div', {
-  className: v.buttonOverlay,
+em = e => x || ec ? ec && V && eE ? (0, r.jsx)(d.LockIcon, {
+  size: 'xs',
+  color: 'currentColor',
+  className: s()(O.primaryIcon, e)
+}) : null : (0, r.jsx)(d.PlayIcon, {
+  size: 'xs',
+  color: 'currentColor',
+  className: s()(O.primaryIcon, e)
+}),
+eI = () => eE && ec && V && !H ? (0, r.jsxs)(r.Fragment, {
   children: [
     (0, r.jsx)('div', {
-      className: o()({
-        [v.buttonOverlayBackground]: !w
+      className: O.buttonOverlayBackground
+    }),
+    em(O.primaryIconTopLevel),
+    (0, r.jsx)('div', {
+      className: O.buttonOverlay,
+      children: (0, r.jsxs)('div', {
+        className: O.buttonOverlayActions,
+        children: [
+          ed && ep,
+          ed && eh()
+        ]
+      })
+    })
+  ]
+}) : (0, r.jsxs)('div', {
+  className: O.buttonOverlay,
+  children: [
+    (0, r.jsx)('div', {
+      className: s()({
+        [O.buttonOverlayBackground]: !x
       })
     }),
     (0, r.jsxs)('div', {
-      className: v.buttonOverlayActions,
+      className: O.buttonOverlayActions,
       children: [
-        el && ed,
-        !w && !es && (0, r.jsx)(d.PlayIcon, {
-          size: 'xs',
-          color: 'currentColor',
-          className: v.playIcon
-        }),
-        el && ec()
+        ed && ep,
+        em(),
+        ed && eh()
       ]
     })
   ]
 });
   return i.useEffect(() => {
-let e = et.current;
-return en && e.start(1000, () => {
-  ee.current = Math.max(ee.current - 0.01, 0.01);
+let e = ei.current;
+return ea && e.start(1000, () => {
+  er.current = Math.max(er.current - 0.01, 0.01);
 }), () => e.stop();
-  }, [en]), (0, r.jsxs)('li', {
+  }, [ea]), (0, r.jsxs)('li', {
 ref: t,
-className: v.soundButtonWrapper,
-onMouseEnter: x,
+className: O.soundButtonWrapper,
+onMouseEnter: G,
 children: [
   (0, r.jsxs)(d.ClickableContainer, {
-    ...F,
+    ...Z,
     buttonProps: {
-      ...ea,
-      id: ei,
+      ...el,
+      id: eo,
       role: 'button'
     },
-    'aria-label': N.Z.Messages.SOUNDBOARD_PLAY_SOUND.format({
-      emojiName: y.emojiName,
-      soundName: y.name
+    'aria-label': v.Z.Messages.SOUNDBOARD_PLAY_SOUND.format({
+      emojiName: D.emojiName,
+      soundName: D.name
     }),
-    className: o()(L, v.soundButton, {
-      [v.playing]: q,
-      [v.hoverActiveBackground]: w,
-      [v.soundButtonInteractive]: P,
-      [v.buttonDisabled]: !P && !M,
-      [v.premiumDisabled]: es && !M,
-      [v.buttonDisabledSecondaryActionsEnabled]: !P && M,
-      [v.focused]: P && b
+    className: s()(b, O.soundButton, {
+      [O.playing]: $,
+      [O.hoverActiveBackground]: x,
+      [O.soundButtonInteractive]: U,
+      [O.buttonDisabled]: !U && !P,
+      [O.premiumDisabled]: ec && !P,
+      [O.buttonDisabledSecondaryActionsEnabled]: !U && P,
+      [O.focused]: U && M
     }),
     onClick: function() {
-      if (en && !J && (ee.current = Math.min(ee.current + 0.01, 0.1), Math.random() < ee.current && Q($.x, $.y, void 0, void 0, {
-          sprite: A.vv
-        })), null != G) {
-        G();
+      if (ea && !en && (er.current = Math.min(er.current + 0.01, 0.1), Math.random() < er.current && J(et.x, et.y, void 0, void 0, {
+          sprite: N.vv
+        })), null != k) {
+        k();
         return;
       }
-      w || K(k);
+      x || Q(B);
     },
-    onContextMenu: U && !es ? W : void 0,
+    onContextMenu: w && !ec ? q : void 0,
     children: [
       (0, r.jsxs)('div', {
-        className: v.soundInfo,
+        className: O.soundInfo,
         'aria-hidden': !0,
-        ref: X,
+        ref: ee,
         children: [
-          eo && (0, r.jsx)(_.Z, {
-            emojiId: Z,
-            emojiName: Y,
-            className: v.emoji
+          eu && (0, r.jsx)(_.Z, {
+            emojiId: W,
+            emojiName: K,
+            className: O.emoji
           }),
           (0, r.jsx)(d.Text, {
             variant: 'text-xs/medium',
-            color: P ? 'header-primary' : 'text-muted',
-            className: o()(v.soundName, {
-              [v.hasEmoji]: eo
+            color: U ? 'header-primary' : 'text-muted',
+            className: s()(O.soundName, {
+              [O.hasEmoji]: eu
             }),
-            children: H
+            children: j
           })
         ]
       }),
       function() {
-        switch (B) {
-          case I.Pb.ADD:
+        switch (F) {
+          case T.Pb.ADD:
             return (0, r.jsxs)('div', {
-              className: v.addButtonOverlay,
+              className: O.addButtonOverlay,
               children: [
                 (0, r.jsx)('div', {
-                  className: v.buttonOverlayBackground
+                  className: O.buttonOverlayBackground
                 }),
                 (0, r.jsxs)('div', {
-                  className: v.buttonOverlayActions,
+                  className: O.buttonOverlayActions,
                   children: [
-                    ed,
+                    ep,
                     (0, r.jsxs)('div', {
-                      className: v.addButton,
+                      className: O.addButton,
                       children: [
                         (0, r.jsx)(d.PlusSmallIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: v.plusSign
+                          className: O.plusSign
                         }),
                         (0, r.jsx)(d.Text, {
                           variant: 'text-xs/medium',
                           color: 'header-primary',
-                          children: N.Z.Messages.GIFT_SELECT_SOUNDBOARD_ADD
+                          children: v.Z.Messages.GIFT_SELECT_SOUNDBOARD_ADD
                         })
                       ]
                     }),
-                    el && ec()
+                    ed && eh()
                   ]
                 })
               ]
             });
-          case I.Pb.PLAY:
+          case T.Pb.PLAY:
           default:
-            return e_();
+            return eI();
         }
       }()
     ]
   }),
-  !y.available && (0, r.jsx)(d.Tooltip, {
-    text: N.Z.Messages.SOUNDBOARD_SOUND_DISABLED_PREMIUM_TIER_LOST,
+  !D.available && (0, r.jsx)(d.Tooltip, {
+    text: v.Z.Messages.SOUNDBOARD_SOUND_DISABLED_PREMIUM_TIER_LOST,
     children: e => (0, r.jsx)('div', {
-      className: v.unavailableTooltip,
+      className: O.unavailableTooltip,
       ...e
     })
   })

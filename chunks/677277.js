@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(360048),
+var a = n(481060),
+  s = n(360048),
   r = n(731455),
   l = n(689938),
   o = n(283831);
@@ -11,8 +11,8 @@ handleCategorySelect: t,
 shouldDisplaySelectedCategory: n,
 currentCategoryId: c
   } = e;
-  return (0, i.jsx)(a.Z, {
-avatar: (0, i.jsx)(s.HubIcon, {
+  return (0, i.jsx)(s.Z, {
+avatar: (0, i.jsx)(a.HubIcon, {
   size: 'md',
   color: 'currentColor'
 }),

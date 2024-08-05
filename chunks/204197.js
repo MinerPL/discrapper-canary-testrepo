@@ -6,8 +6,8 @@ return l;
 var r = n(470079),
   i = n(481060),
   a = n(1585),
-  o = n(125988),
-  s = n(252532);
+  s = n(125988),
+  o = n(252532);
 
 function l(e) {
   let {
@@ -23,7 +23,7 @@ avatarOverride: E
 avatarSrc: f,
 isAvatarAnimating: h,
 eventHandlers: p
-  } = (0, s.w)({
+  } = (0, o.w)({
 user: t,
 guildId: n,
 size: (0, i.getAvatarSize)(l),
@@ -34,7 +34,7 @@ avatarOverride: E
 avatarPlaceholderSrc: m,
 avatarDecorationSrc: I,
 eventHandlers: T
-  } = (0, o.Z)({
+  } = (0, s.Z)({
 user: t,
 guildId: null != n ? n : void 0,
 size: (0, a.y9)(l),

@@ -27,8 +27,8 @@ function m() {
 {
   canSetInputDevice: m,
   canSetOutputDevice: A,
-  inputDeviceId: h,
-  outputDeviceId: g
+  inputDeviceId: g,
+  outputDeviceId: h
 } = (0, r.cj)([_.Z], () => ({
   canSetInputDevice: _.Z.supports(I.AN.AUDIO_INPUT_DEVICE),
   canSetOutputDevice: _.Z.supports(I.AN.AUDIO_OUTPUT_DEVICE),
@@ -53,9 +53,9 @@ children: S.Z.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({
   let R = i()(O).values().first(),
 x = null != R ? R.disabled : null != e,
 M = i()(p).values().first(),
-D = null != M ? M.disabled : null != t;
+f = null != M ? M.disabled : null != t;
 
-  function f(e) {
+  function D(e) {
 let t, {
   label: i,
   value: r
@@ -81,7 +81,7 @@ return (0, n.jsxs)('span', {
   }
 
   function P(e) {
-return f(e[0]);
+return D(e[0]);
   }
   return (0, n.jsxs)(E.Z, {
 className: C.marginBottom20,
@@ -95,7 +95,7 @@ children: [
         children: S.Z.Messages.FORM_LABEL_INPUT_DEVICE
       }),
       (0, n.jsx)(l.SingleSelect, {
-        value: h,
+        value: g,
         onChange: e => c.Z.setInputDevice(e, 'Settings'),
         options: i().map(O, e => {
           let {
@@ -109,7 +109,7 @@ children: [
         }),
         isDisabled: x,
         renderOptionValue: P,
-        renderOptionLabel: f
+        renderOptionLabel: D
       }),
       e
     ]
@@ -123,7 +123,7 @@ children: [
         children: S.Z.Messages.FORM_LABEL_OUTPUT_DEVICE
       }),
       (0, n.jsx)(l.SingleSelect, {
-        value: g,
+        value: h,
         onChange: e => c.Z.setOutputDevice(e, 'Settings'),
         options: i().map(p, e => {
           let {
@@ -135,9 +135,9 @@ children: [
             label: s
           };
         }),
-        isDisabled: D,
+        isDisabled: f,
         renderOptionValue: P,
-        renderOptionLabel: f
+        renderOptionLabel: D
       }),
       t
     ]

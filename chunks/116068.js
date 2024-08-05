@@ -13,10 +13,10 @@ return function(t, n, r) {
 };
   }(),
   i = n(470079),
-  a = s(i),
-  o = s(n(844303));
+  a = o(i),
+  s = o(n(844303));
 
-function s(e) {
+function o(e) {
   return e && e.__esModule ? e : {
 default: e
   };
@@ -126,7 +126,7 @@ return ! function(e, t) {
     key: 'render',
     value: function() {
       var e = this,
-        t = (0, o.default)({
+        t = (0, s.default)({
           default: {
             wrap: {
               position: 'relative'

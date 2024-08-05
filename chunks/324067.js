@@ -1,5 +1,5 @@
 n(653041), n(47120), n(724458);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(740504),
   c = n(853856),
@@ -89,7 +89,7 @@ return !1;
 function y() {
   A(h.I_8);
 }
-class D extends(r = s.ZP.Store) {
+class D extends(r = o.ZP.Store) {
   initialize() {
 this.waitFor(E.ZP, f.Z, d.default, _.Z, c.Z), this.syncWith([c.Z], y);
   }
@@ -100,12 +100,12 @@ return null != e ? function(e) {
 }(e) : g;
   }
 }
-o = 'GuildCategoryStore', (a = 'displayName') in(i = D) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'GuildCategoryStore', (a = 'displayName') in(i = D) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new D(l.Z, {
+}) : i[a] = s, t.Z = new D(l.Z, {
   CHANNEL_SELECT: function(e) {
 let {
   guildId: t

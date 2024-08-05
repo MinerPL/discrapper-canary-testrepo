@@ -1,8 +1,8 @@
 let r;
 n(47120), n(757143);
 var i, a = n(442837),
-  o = n(570140),
-  s = n(579806),
+  s = n(570140),
+  o = n(579806),
   l = n(358085),
   u = n(417363),
   c = n(689938);
@@ -16,7 +16,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 let _ = {},
-  E = (0, l.isWindows)() ? ''.concat(s.Z.process.env.LOCALAPPDATA, '\\DiscordGames') : (0, l.isMac)() ? '/Applications/DiscordGames' : '/tmp';
+  E = (0, l.isWindows)() ? ''.concat(o.Z.process.env.LOCALAPPDATA, '\\DiscordGames') : (0, l.isMac)() ? '/Applications/DiscordGames' : '/tmp';
 
 function f(e, t) {
   var n;
@@ -100,10 +100,10 @@ return null == r.installations[e] || null == r.installations[e][t] ? null : r.in
   }
   getLabelFromPath(e) {
 var t, n;
-return e === E ? c.Z.Messages.INSTALL_LOCATION_MAIN : null !== (n = null !== (t = s.Z.fileManager.basename(e)) && void 0 !== t ? t : e.replace(/[/\\]+$/, '').split(/[/\\]+/g).slice(-1)[0]) && void 0 !== n ? n : '?';
+return e === E ? c.Z.Messages.INSTALL_LOCATION_MAIN : null !== (n = null !== (t = o.Z.fileManager.basename(e)) && void 0 !== t ? t : e.replace(/[/\\]+$/, '').split(/[/\\]+/g).slice(-1)[0]) && void 0 !== n ? n : '?';
   }
 }
-d(I, 'displayName', 'InstallationManagerStore'), d(I, 'persistKey', 'InstallationManagerStore'), t.Z = new I(o.Z, {
+d(I, 'displayName', 'InstallationManagerStore'), d(I, 'persistKey', 'InstallationManagerStore'), t.Z = new I(s.Z, {
   DISPATCH_APPLICATION_INSTALL: h,
   DISPATCH_APPLICATION_UNINSTALL: p,
   DISPATCH_APPLICATION_CANCEL: function(e) {
@@ -144,10 +144,10 @@ let {
 if (!r.installationPaths.has(t))
   return !1;
 if (null != n && '' !== n && r.pathLabels[t] !== n) {
-  var a, o;
-  a = t, o = n, r.pathLabels = {
+  var a, s;
+  a = t, s = n, r.pathLabels = {
     ...r.pathLabels,
-    [a]: o
+    [a]: s
   };
 }
 i && r.defaultInstallationPath !== t && (r.defaultInstallationPath = t);

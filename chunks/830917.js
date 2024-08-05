@@ -3,7 +3,7 @@ n.d(t, {
 return a;
   },
   UU: function() {
-return o;
+return s;
   },
   ZY: function() {
 return i;
@@ -20,6 +20,6 @@ function a(e) {
   return e.__DISCORD_WINDOW_ID = t, t;
 }
 
-function o() {
+function s() {
   return i(window);
 }

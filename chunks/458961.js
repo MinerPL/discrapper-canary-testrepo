@@ -6,7 +6,7 @@ return J;
 return $;
   }
 }), t(47120);
-var n, a, r = t(735250),
+var a, n, r = t(735250),
   s = t(470079),
   o = t(120356),
   l = t.n(o),
@@ -55,13 +55,13 @@ function y(e) {
   let {
 text: A,
 onChange: t,
-value: n,
-disabled: a,
+value: a,
+disabled: n,
 warning: s
-  } = e, o = (0, N.Dt)(), i = a ? 'text-muted' : 'text-normal';
+  } = e, o = (0, N.Dt)(), i = n ? 'text-muted' : 'text-normal';
   return (0, r.jsxs)('label', {
 className: l()(z.benefitToggleContainer, {
-  [z.disabled]: a
+  [z.disabled]: n
 }),
 htmlFor: o,
 children: [
@@ -85,8 +85,8 @@ children: [
   }),
   (0, r.jsx)(g.Switch, {
     onChange: t,
-    checked: n,
-    disabled: a,
+    checked: a,
+    disabled: n,
     id: o
   })
 ]
@@ -97,9 +97,9 @@ function Y(e, A) {
   return e.filter(e => {
 let {
   value: t,
-  label: n
+  label: a
 } = e;
-return t.toString().includes(A) || n.includes(A);
+return t.toString().includes(A) || a.includes(A);
   });
 }
 
@@ -107,14 +107,14 @@ function w(e) {
   let {
 guildId: A,
 selectedPriceTier: t,
-setPriceTier: n
+setPriceTier: a
   } = e, {
-priceTiers: a
-  } = (0, I.R)(A, K.RG5.GUILD_PRODUCTS), o = s.useMemo(() => (null != a ? a : null != t ? [t] : []).map(e => ({
+priceTiers: n
+  } = (0, I.R)(A, K.RG5.GUILD_PRODUCTS), o = s.useMemo(() => (null != n ? n : null != t ? [t] : []).map(e => ({
 value: e,
 label: (0, D.T4)(e, K.pKx.USD)
   })), [
-a,
+n,
 t
   ]);
   return (0, r.jsx)(g.SearchableSelect, {
@@ -122,27 +122,27 @@ value: t,
 placeholder: X.Z.Messages.GUILD_PRODUCT_EDIT_MODAL_PRICE_PLACEHOLDER,
 maxVisibleItems: 5,
 options: o,
-onChange: n,
+onChange: a,
 filter: Y,
 'aria-required': !0
   });
 }
 
 function J(e) {
-  var A, n, a, o, l, i, I, v;
+  var A, a, n, o, l, i, I, v;
   let {
 guildId: N,
 productId: Y,
 transitionState: J,
 onClose: ee
-  } = e, [eA, et] = s.useState(Y), en = (0, u.e7)([L.Z], () => null == eA ? null : L.Z.getGuildProduct(eA), [eA]), ea = (null == en ? void 0 : en.published) === !0, {
+  } = e, [eA, et] = s.useState(Y), ea = (0, u.e7)([L.Z], () => null == eA ? null : L.Z.getGuildProduct(eA), [eA]), en = (null == ea ? void 0 : ea.published) === !0, {
 application: er
   } = (0, m.Z)(N, W.wW.GUILD_ROLE_SUBSCRIPTIONS), es = P.M['0'], eo = (0, u.e7)([h.Z], () => h.Z.useReducedMotion), el = q.QK.useSetting(), ei = (0, x.n)(), ed = s.useCallback(() => {
 var e;
-return (null == en ? void 0 : null === (e = en.image_asset) || void 0 === e ? void 0 : e.application_id) == null ? es.data : (0, O._W)(en.image_asset.application_id, en.image_asset, 600, ei && el ? void 0 : 'webp');
+return (null == ea ? void 0 : null === (e = ea.image_asset) || void 0 === e ? void 0 : e.application_id) == null ? es.data : (0, O._W)(ea.image_asset.application_id, ea.image_asset, 600, ei && el ? void 0 : 'webp');
   }, [
 es,
-en,
+ea,
 ei,
 el
   ]), {
@@ -154,13 +154,13 @@ ec && (ee(), (0, Z.B)(X.Z.Messages.CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_
 ec,
 ee
   ]);
-  let [eu, eC] = s.useState(null !== (a = null == en ? void 0 : en.name) && void 0 !== a ? a : ''), [eg, eT] = s.useState(null !== (o = null == en ? void 0 : en.description) && void 0 !== o ? o : ''), [ep, eh] = s.useState(null !== (l = null == en ? void 0 : en.price_tier) && void 0 !== l ? l : void 0), [em, eI] = s.useState(ed), [eU, ef] = s.useState(null !== (i = null == en ? void 0 : null === (A = en.image_asset) || void 0 === A ? void 0 : A.filename) && void 0 !== i ? i : es.name), [ev, eq] = s.useState(!1), [eE, eN] = s.useState(), eD = s.useMemo(() => null != ep ? (0, D.T4)(ep, K.pKx.USD) : void 0, [ep]), [eO, ex] = s.useState(!0), {
+  let [eu, eC] = s.useState(null !== (n = null == ea ? void 0 : ea.name) && void 0 !== n ? n : ''), [eg, eT] = s.useState(null !== (o = null == ea ? void 0 : ea.description) && void 0 !== o ? o : ''), [ep, eh] = s.useState(null !== (l = null == ea ? void 0 : ea.price_tier) && void 0 !== l ? l : void 0), [em, eI] = s.useState(ed), [eU, ef] = s.useState(null !== (i = null == ea ? void 0 : null === (A = ea.image_asset) || void 0 === A ? void 0 : A.filename) && void 0 !== i ? i : es.name), [ev, eq] = s.useState(!1), [eE, eN] = s.useState(), eD = s.useMemo(() => null != ep ? (0, D.T4)(ep, K.pKx.USD) : void 0, [ep]), [eO, ex] = s.useState(!0), {
 changesSaving: eR,
 saveError: eL,
 saveProductWithAttachments: eb,
 hasUnsavedAttachmentChanges: eP,
 cancelUnusedUploads: eV
-  } = (0, R.P)(), e_ = (null == en ? void 0 : en.attachments) != null && (null == en ? void 0 : en.attachments.length) > 0, eS = null != eL ? eL : eE, eZ = null != eR && 'published' in eR, ej = null != eR && !eZ, eF = null !== (I = null == en ? void 0 : en.role_id) && void 0 !== I ? I : null, [eM, eG] = s.useState(), eB = null != eM || null != eF, eK = (0, u.e7)([E.Z], () => null != eF && null !== eM ? E.Z.getRole(N, eF) : null != eM ? eM : void 0, [
+  } = (0, R.P)(), e_ = (null == ea ? void 0 : ea.attachments) != null && (null == ea ? void 0 : ea.attachments.length) > 0, eS = null != eL ? eL : eE, eZ = null != eR && 'published' in eR, ej = null != eR && !eZ, eF = null !== (I = null == ea ? void 0 : ea.role_id) && void 0 !== I ? I : null, [eM, eG] = s.useState(), eB = null != eM || null != eF, eK = (0, u.e7)([E.Z], () => null != eF && null !== eM ? E.Z.getRole(N, eF) : null != eM ? eM : void 0, [
 eM,
 eF,
 N
@@ -177,7 +177,7 @@ N
   canSaveForPublished: eY,
   canPublishOrUnpublish: ew
 } = s.useMemo(() => (0, b.fG)({
-  guildProductListing: en,
+  guildProductListing: ea,
   name: eu,
   priceTier: ep,
   description: eg,
@@ -188,7 +188,7 @@ N
   hasSavedAttachments: e_,
   hasUnsavedAttachmentChanges: eP
 }), [
-  en,
+  ea,
   eu,
   ep,
   eg,
@@ -383,11 +383,11 @@ children: [
                   radioGroupAriaLabel: X.Z.Messages.GUILD_PRODUCT_EDIT_MODAL_THUMBNAIL_RADIO_GROUP_ARIA_LABEL,
                   image: em,
                   imageName: eU,
-                  savedImageName: null == en ? void 0 : null === (n = en.image_asset) || void 0 === n ? void 0 : n.filename,
+                  savedImageName: null == ea ? void 0 : null === (a = ea.image_asset) || void 0 === a ? void 0 : a.filename,
                   onChange: (e, A) => {
                     if (null != e) {
                       var t;
-                      eI(e), ef(A), eq(e.startsWith('data:') || A !== (null == en ? void 0 : null === (t = en.image_asset) || void 0 === t ? void 0 : t.filename));
+                      eI(e), ef(A), eq(e.startsWith('data:') || A !== (null == ea ? void 0 : null === (t = ea.image_asset) || void 0 === t ? void 0 : t.filename));
                     }
                   }
                 })
@@ -426,12 +426,12 @@ children: [
           children: [
             (0, r.jsx)(M.Z, {
               disabled: !ew,
-              disabledTooltip: ea ? X.Z.Messages.GUILD_PRODUCT_UNPUBLISH_REQUIRES_SAVE : X.Z.Messages.GUILD_PRODUCT_PUBLISH_REQUIRES_SAVE,
-              published: ea,
+              disabledTooltip: en ? X.Z.Messages.GUILD_PRODUCT_UNPUBLISH_REQUIRES_SAVE : X.Z.Messages.GUILD_PRODUCT_PUBLISH_REQUIRES_SAVE,
+              published: en,
               onClick: () => {
-                d()(ew, 'Attempting to publish/unpublish when not allowed'), eQ(ea ? 'unpublish' : 'publish'), e0({
+                d()(ew, 'Attempting to publish/unpublish when not allowed'), eQ(en ? 'unpublish' : 'publish'), e0({
                   ...ek,
-                  published: !ea
+                  published: !en
                 });
               },
               submitting: eZ
@@ -520,7 +520,7 @@ children: [
         }),
         (0, r.jsx)('div', {
           className: z.footerActionRightButtons,
-          children: ea ? (0, r.jsx)(g.Button, {
+          children: en ? (0, r.jsx)(g.Button, {
             color: g.Button.Colors.PRIMARY,
             disabled: !eY,
             submitting: ej,
@@ -563,4 +563,4 @@ children: (0, r.jsx)(J, {
 })
   });
 }
-(a = n || (n = {})).DRAFT = 'draft', a.PUBLISH = 'publish', a.UPDATE_PUBLISH = 'update_publish', a.UNPUBLISH = 'unpublish';
+(n = a || (a = {})).DRAFT = 'draft', n.PUBLISH = 'publish', n.UPDATE_PUBLISH = 'update_publish', n.UNPUBLISH = 'unpublish';

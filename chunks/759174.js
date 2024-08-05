@@ -15,10 +15,10 @@ writable: !0
   }) : e[t] = n, e;
 }
 
-function o(e, t, n, r) {
+function s(e, t, n, r) {
   null != t && e.splice(i()(e, t, r), 1), null != n && e.splice(i()(e, n, r), 0, n);
 }
-let s = [];
+let o = [];
 class l {
   get version() {
 return this._version;
@@ -39,7 +39,7 @@ return this.valueMap.keys();
   values(e) {
 var t;
 let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-return null == e ? this.valueArray : null !== (t = this.indexes(n)[e]) && void 0 !== t ? t : s;
+return null == e ? this.valueArray : null !== (t = this.indexes(n)[e]) && void 0 !== t ? t : o;
   }
   size(e) {
 var t, n;
@@ -56,7 +56,7 @@ return this.valueMap.get(e);
   }
   set(e, t) {
 let n = this.get(e);
-return !(null == n && null == t || null != n && null != t && this.isEqual(n, t)) && (null != t ? this.valueMap.set(e, t) : this.valueMap.delete(e), o(this.valueArray, n, t, this.sortBy), null != n && this.indexBy(n).forEach(e => o(this.getIndex(e), n, null, this.sortBy)), null != t && this.indexBy(t).forEach(e => o(this.getIndex(e), null, t, this.sortBy)), this.dirty = !0, this._version++, !0);
+return !(null == n && null == t || null != n && null != t && this.isEqual(n, t)) && (null != t ? this.valueMap.set(e, t) : this.valueMap.delete(e), s(this.valueArray, n, t, this.sortBy), null != n && this.indexBy(n).forEach(e => s(this.getIndex(e), n, null, this.sortBy)), null != t && this.indexBy(t).forEach(e => s(this.getIndex(e), null, t, this.sortBy)), this.dirty = !0, this._version++, !0);
   }
   delete(e) {
 return this.set(e, null);

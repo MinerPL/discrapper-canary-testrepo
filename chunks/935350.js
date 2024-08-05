@@ -37,10 +37,10 @@ n = {
 r = /\[\]|\[[^\]]+\]/,
 i = /[^\s!"#%&'()*+,.\/;<=>@\[\\\]^`{|}~]+/,
 a = t.either(/""|"[^"]+"/, /''|'[^']+'/, r, i),
-o = t.concat(t.optional(/\.|\.\/|\//), a, t.anyNumberOfTimes(t.concat(/(\.|\/)/, a))),
-s = t.concat('(', r, '|', i, ')(?==)'),
+s = t.concat(t.optional(/\.|\.\/|\//), a, t.anyNumberOfTimes(t.concat(/(\.|\/)/, a))),
+o = t.concat('(', r, '|', i, ')(?==)'),
 l = {
-  begin: o
+  begin: s
 },
 u = e.inherit(l, {
   keywords: {
@@ -59,7 +59,7 @@ c = {
 },
 d = {
   className: 'attr',
-  begin: s,
+  begin: o,
   relevance: 0,
   starts: {
     begin: /=/,

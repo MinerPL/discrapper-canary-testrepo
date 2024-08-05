@@ -3,20 +3,20 @@ i.d(n, {
 return a;
   },
   K: function() {
-return l;
+return s;
   }
 });
-var o = i(981631),
-  t = i(486324);
+var t = i(981631),
+  o = i(486324);
 
 function a(e, n) {
   let {
 isGIF: i
   } = n;
-  if (e === t.pC.GUILD_BANNER)
-return i ? o.oNc.ANIMATED_BANNER : o.oNc.BANNER;
+  if (e === o.pC.GUILD_BANNER)
+return i ? t.oNc.ANIMATED_BANNER : t.oNc.BANNER;
 }
 
-function l(e) {
-  return e === t.pC.AVATAR || e === t.pC.BANNER;
+function s(e) {
+  return e === o.pC.AVATAR || e === o.pC.BANNER;
 }

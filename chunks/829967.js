@@ -9,11 +9,11 @@ var t = e.state;
 Object.keys(t.elements).forEach(function(e) {
   var n = t.styles[e] || {},
     a = t.attributes[e] || {},
-    o = t.elements[e];
-  if (!!(0, i.Re)(o) && !!(0, r.Z)(o))
-    Object.assign(o.style, n), Object.keys(a).forEach(function(e) {
+    s = t.elements[e];
+  if (!!(0, i.Re)(s) && !!(0, r.Z)(s))
+    Object.assign(s.style, n), Object.keys(a).forEach(function(e) {
       var t = a[e];
-      !1 === t ? o.removeAttribute(e) : o.setAttribute(e, !0 === t ? '' : t);
+      !1 === t ? s.removeAttribute(e) : s.setAttribute(e, !0 === t ? '' : t);
     });
 });
   },
@@ -35,12 +35,12 @@ return Object.assign(t.elements.popper.style, n.popper), t.styles = n, t.element
   function() {
     Object.keys(t.elements).forEach(function(e) {
       var a = t.elements[e],
-        o = t.attributes[e] || {},
-        s = Object.keys(t.styles.hasOwnProperty(e) ? t.styles[e] : n[e]).reduce(function(e, t) {
+        s = t.attributes[e] || {},
+        o = Object.keys(t.styles.hasOwnProperty(e) ? t.styles[e] : n[e]).reduce(function(e, t) {
           return e[t] = '', e;
         }, {});
       if (!!(0, i.Re)(a) && !!(0, r.Z)(a))
-        Object.assign(a.style, s), Object.keys(o).forEach(function(e) {
+        Object.assign(a.style, o), Object.keys(s).forEach(function(e) {
           a.removeAttribute(e);
         });
     });

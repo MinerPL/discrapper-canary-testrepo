@@ -6,20 +6,20 @@ return L;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(477690),
+  s = n.n(a),
+  o = n(477690),
   l = n(481060),
   u = n(420660),
-  c = n(979264),
-  d = n(33934),
-  _ = n(736144),
-  E = n(113434),
-  f = n(918701),
-  h = n(553393),
-  p = n(204197),
-  m = n(594174),
-  I = n(467679),
-  T = n(681426),
+  c = n(385499),
+  d = n(693728),
+  _ = n(979264),
+  E = n(33934),
+  f = n(736144),
+  h = n(113434),
+  p = n(918701),
+  m = n(553393),
+  I = n(204197),
+  T = n(594174),
   g = n(709586),
   S = n(360048),
   A = n(624138),
@@ -30,13 +30,13 @@ var r = n(735250),
   C = n(524484),
   y = n(689938),
   D = n(952384);
-let L = (0, A.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
+let L = (0, A.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
 t.Z = function(e) {
   var t;
   let {
 selected: n = !1,
 colorString: a,
-colorRoleName: s,
+colorRoleName: o,
 isOwner: A,
 ownerTooltipText: L,
 lostPermissionTooltipText: b,
@@ -66,11 +66,11 @@ onFocus: Q,
 id: et,
 tabIndex: en,
 itemProps: er
-  } = e, ei = null == U ? void 0 : U.id, ea = N.ZP.useName(U), eo = (null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === ei, es = i.useRef(null), [el, eu] = i.useState(!1), [ec, ed] = i.useState(null), {
+  } = e, ei = null == U ? void 0 : U.id, ea = N.ZP.useName(U), es = (null === (t = T.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === ei, eo = i.useRef(null), [el, eu] = i.useState(!1), [ec, ed] = i.useState(null), {
 avatarDecorationSrc: e_,
 avatarSrc: eE,
 eventHandlers: ef
-  } = (0, p.Z)({
+  } = (0, I.Z)({
 user: U,
 size: l.AvatarSizes.SIZE_32,
 animateOnHover: !(n || el),
@@ -82,8 +82,8 @@ tagUserId: ei
   i.useEffect(() => {
 n && em(!1);
   }, [n]);
-  let eI = (0, E.Fr)(x),
-eT = null != eI && !eo && n && !ep && (0, f.dl)(eI),
+  let eI = (0, h.Fr)(x),
+eT = null != eI && !es && n && !ep && (0, p.dl)(eI),
 eg = () => {
   eu(!0);
 },
@@ -95,7 +95,7 @@ eA = e => {
 },
 eN = () => {
   let e = null != x ? x.find(e => e.type === O.IIU.CUSTOM_STATUS) : null,
-    t = null != e && null != U && (0, d.Z)(e, U, H);
+    t = null != e && null != U && (0, E.Z)(e, U, H);
   return (0, r.jsx)(v.Z, {
     className: D.activity,
     textClassName: D.activityText,
@@ -106,7 +106,7 @@ eN = () => {
     hideEmoji: !t,
     hideTooltip: !0,
     user: U,
-    hasQuest: null != eI && (0, f.dl)(eI)
+    hasQuest: null != eI && (0, p.dl)(eI)
   });
 },
 ev = () => null != A && A && null == b ? (0, r.jsx)(l.Tooltip, {
@@ -133,7 +133,7 @@ eO = () => null == V ? null : (0, r.jsx)(l.Tooltip, {
 }),
 eR = () => {
   let e = (null == U ? void 0 : U.isClyde()) ? R.Hb.AI : R.Hb.BOT;
-  return null != U && U.bot ? (0, r.jsx)(I.Z, {
+  return null != U && U.bot ? (0, r.jsx)(c.Z, {
     className: D.botTag,
     type: e,
     verified: U.isVerifiedBot()
@@ -163,7 +163,7 @@ ey = (e, t) => {
         avatarDecoration: e_,
         typingIndicatorRef: eA
       }),
-      (0, r.jsx)(_.Z, {
+      (0, r.jsx)(f.Z, {
         confettiSpawnRef: ec,
         shouldFire: M && null != w && e.id !== w.id,
         confettiLocation: C.Hn.MEMBER_USER
@@ -174,12 +174,12 @@ ey = (e, t) => {
 eD = () => (0, r.jsxs)(r.Fragment, {
   children: [
     (0, r.jsx)(l.NameWithRole, {
-      roleName: s,
+      roleName: o,
       color: null != a ? a : void 0,
       name: null != P ? P : ea,
       className: D.name
     }),
-    (0, r.jsx)(c.ZP, {
+    (0, r.jsx)(_.ZP, {
       clan: null == U ? void 0 : U.clan,
       userId: null == U ? void 0 : U.id,
       contextGuildId: Z,
@@ -190,13 +190,13 @@ eD = () => (0, r.jsxs)(r.Fragment, {
   ]
 }),
 eL = k === O.Skl.OFFLINE;
-  return null == U ? (0, r.jsx)(T.Z, {
+  return null == U ? (0, r.jsx)(d.Z, {
 avatarSize: l.AvatarSizes.SIZE_32,
 className: D.placeholder
   }) : (0, r.jsx)(l.Popout, {
-renderPopout: e => (0, r.jsx)(h.Z, {
+renderPopout: e => (0, r.jsx)(m.Z, {
   quest: eI,
-  memberListItemRef: es,
+  memberListItemRef: eo,
   applicationStream: G,
   ...e,
   closePopout: () => em(!0)
@@ -208,9 +208,9 @@ useRawTargetDimensions: !0,
 animation: l.Popout.Animation.NONE,
 spacing: -3,
 children: () => (0, r.jsx)(S.Z, {
-  ref: es,
+  ref: eo,
   selected: n,
-  className: o()(D.member, Y, {
+  className: s()(D.member, Y, {
     [D.offline]: eL && !n
   }),
   innerClassName: D.memberInner,
@@ -227,7 +227,7 @@ children: () => (0, r.jsx)(S.Z, {
     text: b,
     children: e => (0, r.jsx)('span', {
       ...e,
-      className: o()(D.username, D.lostPermission),
+      className: s()(D.username, D.lostPermission),
       children: eD()
     })
   }),

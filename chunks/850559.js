@@ -6,8 +6,8 @@ return l;
 var r = n(275857),
   i = n(913122),
   a = n(470079),
-  o = n(697898),
-  s = n(345926);
+  s = n(697898),
+  o = n(345926);
 
 function l(e) {
   var t, n, l, u, c, d, _, E;
@@ -30,30 +30,30 @@ onSelectionChange: t => {
   e.onSelectionChange && e.onSelectionChange(t), t === O && (F(), k());
 },
 items: null !== (l = e.items) && void 0 !== l ? l : e.defaultItems
-  }), [D, L] = (0, o.zk)(e.inputValue, null !== (c = null !== (u = e.defaultInputValue) && void 0 !== u ? u : null === (t = N.getItem(O)) || void 0 === t ? void 0 : t.textValue) && void 0 !== c ? c : '', e.onInputChange), b = (0, a.useMemo)(() => null == e.items && f ? function(e, t, n) {
+  }), [D, L] = (0, s.zk)(e.inputValue, null !== (c = null !== (u = e.defaultInputValue) && void 0 !== u ? u : null === (t = N.getItem(O)) || void 0 === t ? void 0 : t.textValue) && void 0 !== c ? c : '', e.onInputChange), b = (0, a.useMemo)(() => null == e.items && f ? function(e, t, n) {
 return new i.DC(function e(t, n, i, a) {
-  let o = [];
-  for (let s of n)
-    if ('section' === s.type && s.hasChildNodes) {
-      let n = e(t, (0, r._P)(s, t), i, a);
-      [...n].some(e => 'item' === e.type) && o.push({
-        ...s,
+  let s = [];
+  for (let o of n)
+    if ('section' === o.type && o.hasChildNodes) {
+      let n = e(t, (0, r._P)(o, t), i, a);
+      [...n].some(e => 'item' === e.type) && s.push({
+        ...o,
         childNodes: n
       });
     } else
-      'item' === s.type && a(s.textValue, i) ? o.push({
-        ...s
-      }) : 'item' !== s.type && o.push({
-        ...s
+      'item' === o.type && a(o.textValue, i) ? s.push({
+        ...o
+      }) : 'item' !== o.type && s.push({
+        ...o
       });
-  return o;
+  return s;
 }(e, e, t, n));
   }(N, D, f) : N, [
 N,
 D,
 f,
 e.items
-  ]), [M, P] = (0, a.useState)(b), U = (0, a.useRef)('focus'), w = (0, s.W)({
+  ]), [M, P] = (0, a.useState)(b), U = (0, a.useRef)('focus'), w = (0, o.W)({
 ...e,
 onOpenChange: t => {
   e.onOpenChange && e.onOpenChange(t, t ? U.current : void 0), v.setFocused(t), !t && v.setFocusedKey(null);

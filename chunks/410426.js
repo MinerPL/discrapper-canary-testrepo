@@ -1,12 +1,12 @@
 n.d(t, {
   Z: function() {
-return h;
+return v;
   }
 });
 var a = n(735250),
   l = n(470079),
-  i = n(120356),
-  s = n.n(i),
+  s = n(120356),
+  i = n.n(s),
   o = n(399606),
   r = n(481060),
   c = n(547972),
@@ -15,34 +15,34 @@ var a = n(735250),
   m = n(435064),
   p = n(981631),
   C = n(332325),
-  v = n(689938),
-  g = n(341858);
+  g = n(689938),
+  h = n(341858);
 
-function h(e) {
+function v(e) {
   let {
 isEmptyBecauseQuery: t,
 closePopout: n
-  } = e, i = (0, o.e7)([d.Z], () => d.Z.getKeybindForAction(p.kg4.SAVE_CLIP)), h = (0, o.e7)([m.Z], () => m.Z.getSettings().clipsEnabled), x = t ? g.noSearchResultsImage : g.noClipsImage, E = l.useCallback(() => {
+  } = e, s = (0, o.e7)([d.Z], () => d.Z.getKeybindForAction(p.kg4.SAVE_CLIP)), v = (0, o.e7)([m.Z], () => m.Z.getSettings().clipsEnabled), x = t ? h.noSearchResultsImage : h.noClipsImage, f = l.useCallback(() => {
 n(), (0, c.Z)(C.Z.CLIPS);
-  }, [n]), f = (() => {
-if (!h)
-  return v.Z.Messages.CLIPS_GALLERY_NO_CLIPS_CLIPS_NOT_ENABLED.format({
-    onClick: E
+  }, [n]), E = (() => {
+if (!v)
+  return g.Z.Messages.CLIPS_GALLERY_NO_CLIPS_CLIPS_NOT_ENABLED.format({
+    onClick: f
   });
 if (t)
-  return v.Z.Messages.CLIPS_GALLERY_NO_CLIPS_MATCH_QUERY;
-if (null == i)
-  return v.Z.Messages.CLIPS_GALLERY_NO_CLIPS_NO_KEYBIND_SET.format({
-    onClick: E
+  return g.Z.Messages.CLIPS_GALLERY_NO_CLIPS_MATCH_QUERY;
+if (null == s)
+  return g.Z.Messages.CLIPS_GALLERY_NO_CLIPS_NO_KEYBIND_SET.format({
+    onClick: f
   });
 {
-  let e = u.BB(i.shortcut, !0);
-  return v.Z.Messages.CLIPS_GALLERY_NO_CLIPS.format({
+  let e = u.BB(s.shortcut, !0);
+  return g.Z.Messages.CLIPS_GALLERY_NO_CLIPS.format({
     keybind: e,
     keybindHook: () => (0, a.jsx)('span', {
-      className: g.keybindHintKeys,
+      className: h.keybindHintKeys,
       children: (0, a.jsx)(r.KeyCombo, {
-        className: g.keybindShortcut,
+        className: h.keybindShortcut,
         shortcut: e
       })
     })
@@ -50,19 +50,19 @@ if (null == i)
 }
   })();
   return (0, a.jsx)('div', {
-className: g.container,
+className: h.container,
 children: (0, a.jsxs)('div', {
-  className: g.content,
+  className: h.content,
   children: [
     (0, a.jsx)('div', {
       className: x
     }),
     (0, a.jsx)(r.Text, {
       variant: 'text-md/medium',
-      className: s()(g.noClipsText, {
-        [g.noSearchResultsText]: t
+      className: i()(h.noClipsText, {
+        [h.noSearchResultsText]: t
       }),
-      children: f
+      children: E
     })
   ]
 })

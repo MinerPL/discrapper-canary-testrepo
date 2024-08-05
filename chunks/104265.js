@@ -1,28 +1,28 @@
-r.d(n, {
+t.d(n, {
   Z: function() {
 return f;
   }
-}), r(47120);
-var t = r(735250),
-  o = r(470079),
-  a = r(120356),
-  l = r.n(a),
-  i = r(338545),
-  s = r(399606),
-  c = r(692547),
-  u = r(780384),
-  d = r(481060),
-  m = r(596454),
-  h = r(410030),
-  v = r(339085),
-  p = r(14263),
-  g = r(689938),
-  x = r(99931);
+}), t(47120);
+var r = t(735250),
+  o = t(470079),
+  a = t(120356),
+  l = t.n(a),
+  i = t(338545),
+  s = t(399606),
+  c = t(692547),
+  u = t(780384),
+  d = t(481060),
+  m = t(596454),
+  h = t(410030),
+  v = t(339085),
+  p = t(14263),
+  g = t(689938),
+  x = t(99931);
 
 function f(e) {
   let {
 guildId: n,
-option: r,
+option: t,
 selected: a,
 onSelect: f,
 hideMemberCount: C,
@@ -30,26 +30,26 @@ canBeNew: b
   } = e, O = (0, u.wj)((0, h.ZP)()), [N, j] = o.useState(!1), _ = N && !C, M = o.useRef(null), {
 reducedMotion: k
   } = o.useContext(d.AccessibilityPreferencesContext), Z = (0, s.e7)([v.Z], () => {
-var e, n, t, o;
-return (null === (e = r.emoji) || void 0 === e ? void 0 : e.id) != null && null !== (o = null === (n = v.Z.getCustomEmojiById(null === (t = r.emoji) || void 0 === t ? void 0 : t.id)) || void 0 === n ? void 0 : n.animated) && void 0 !== o && o;
-  }), T = (0, p.Z)(n, 1000), S = null == T || null == r.roleIds ? 0 : Math.max(...r.roleIds.map(e => T[e])), y = b && !a && r.isUnseen, I = (0, i.useSpring)({
+var e, n, r, o;
+return (null === (e = t.emoji) || void 0 === e ? void 0 : e.id) != null && null !== (o = null === (n = v.Z.getCustomEmojiById(null === (r = t.emoji) || void 0 === r ? void 0 : r.id)) || void 0 === n ? void 0 : n.animated) && void 0 !== o && o;
+  }), y = (0, p.Z)(n, 1000), T = null == y || null == t.roleIds ? 0 : Math.max(...t.roleIds.map(e => y[e])), S = b && !a && t.isUnseen, w = (0, d.useSpring)({
 transform: a || k.enabled ? 'scale(1)' : 'scale(0.7)',
 opacity: a ? 1 : 0,
 config: {
   duration: 150
 }
-  }), R = (0, d.useToken)(c.Z.colors.BACKGROUND_MODIFIER_ACCENT), w = (0, d.useToken)(c.Z.unsafe_rawColors.BRAND_500), E = (0, i.useSpring)({
+  }, 'animate-always'), I = (0, d.useToken)(c.Z.colors.BACKGROUND_MODIFIER_ACCENT), R = (0, d.useToken)(c.Z.unsafe_rawColors.BRAND_500), E = (0, d.useSpring)({
 from: {
-  color: w.spring()
+  color: R.spring()
 },
-color: R.spring({
+color: I.spring({
   opacity: O ? 0.5 : 0.25
 }),
 config: {
   duration: 300
 },
 delay: 500
-  }), A = (0, i.useTransition)(_, {
+  }, 'animate-always'), A = (0, d.useTransition)(_, {
 from: {
   transform: k.enabled ? 'translateX(0)' : 'translateX(8px)',
   opacity: 0
@@ -65,7 +65,7 @@ trail: 400,
 config: {
   duration: 150
 }
-  }), [D, B] = o.useState(!1);
+  }, 'animate-always'), [D, B] = o.useState(!1);
   o.useEffect(() => {
 if (_)
   return M.current = setTimeout(() => {
@@ -78,14 +78,14 @@ if (_)
   [x.selected]: a,
   [x.pressed]: D
 }),
-P = y ? {
+P = S ? {
   borderColor: E.color
 } : {};
-  return (0, t.jsx)(t.Fragment, {
-children: (0, t.jsx)(i.animated.div, {
+  return (0, r.jsx)(r.Fragment, {
+children: (0, r.jsx)(i.animated.div, {
   style: P,
   className: L,
-  children: (0, t.jsxs)(d.Clickable, {
+  children: (0, r.jsxs)(d.Clickable, {
     className: l()(x.optionButton),
     onClick: () => {
       j(!a), f(!a);
@@ -93,49 +93,49 @@ children: (0, t.jsx)(i.animated.div, {
     onMouseDown: () => B(!0),
     onMouseUp: () => B(!1),
     children: [
-      null != r.emoji && (null != r.emoji.id || null != r.emoji.name) ? (0, t.jsx)(m.Z, {
-        animated: r.emoji.animated || Z,
+      null != t.emoji && (null != t.emoji.id || null != t.emoji.name) ? (0, r.jsx)(m.Z, {
+        animated: t.emoji.animated || Z,
         className: x.buttonEmoji,
-        emojiId: r.emoji.id,
-        emojiName: r.emoji.name
+        emojiId: t.emoji.id,
+        emojiName: t.emoji.name
       }) : null,
-      (0, t.jsxs)('div', {
+      (0, r.jsxs)('div', {
         className: x.buttonText,
         children: [
-          (0, t.jsx)(d.Text, {
+          (0, r.jsx)(d.Text, {
             variant: 'text-md/medium',
             color: 'header-primary',
-            children: r.title
+            children: t.title
           }),
-          r.description.length > 0 ? (0, t.jsx)(d.Text, {
+          t.description.length > 0 ? (0, r.jsx)(d.Text, {
             variant: 'text-xs/normal',
             color: 'header-secondary',
-            children: r.description
+            children: t.description
           }) : null
         ]
       }),
-      (0, t.jsx)(i.animated.div, {
+      (0, r.jsx)(i.animated.div, {
         className: x.checkIcon,
-        style: I,
-        children: (0, t.jsx)(d.CheckmarkLargeIcon, {
+        style: w,
+        children: (0, r.jsx)(d.CheckmarkLargeIcon, {
           size: 'custom',
           width: 10,
           height: 10,
           color: c.Z.unsafe_rawColors.WHITE_500.css
         })
       }),
-      A((e, n) => S > 0 && n && (0, t.jsx)(i.animated.div, {
+      A((e, n) => T > 0 && n && (0, r.jsx)(i.animated.div, {
         className: x.memberCount,
         style: e,
-        children: (0, t.jsx)(d.Text, {
+        children: (0, r.jsx)(d.Text, {
           variant: 'text-xs/normal',
           color: 'always-white',
           children: g.Z.Messages.ONBOARDING_OPTION_ROLE_COUNTS.format({
-            memberCount: S
+            memberCount: T
           })
         })
       })),
-      y && (0, t.jsx)(d.TextBadge, {
+      S && (0, r.jsx)(d.TextBadge, {
         color: c.Z.unsafe_rawColors.BRAND_260.css,
         text: g.Z.Messages.NEW,
         className: x.newBadge

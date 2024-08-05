@@ -1,11 +1,11 @@
 var r = n(470079),
   i = n(844303),
   a = n(13942),
-  o = n(464854);
+  s = n(464854);
 t.Z = function(e) {
   var t = e.onChange,
 n = e.rgb,
-s = e.hsl,
+o = e.hsl,
 l = e.hex,
 u = e.hsv,
 c = function(e, n) {
@@ -32,11 +32,11 @@ c = function(e, n) {
       source: 'hsv'
     }, n));
   } else if (e.hsl) {
-    var o = e.hsl.split(',');
-    a.p7(e.hsl, 'hsl') && (o[2] = o[2].replace('%', ''), o[1] = o[1].replace('%', ''), o[0] = o[0].replace('\xB0', ''), 1 == f[1] ? f[1] = 0.01 : 1 == f[2] && (f[2] = 0.01), t({
-      h: Number(o[0]),
-      s: Number(o[1]),
-      v: Number(o[2]),
+    var s = e.hsl.split(',');
+    a.p7(e.hsl, 'hsl') && (s[2] = s[2].replace('%', ''), s[1] = s[1].replace('%', ''), s[0] = s[0].replace('\xB0', ''), 1 == f[1] ? f[1] = 0.01 : 1 == f[2] && (f[2] = 0.01), t({
+      h: Number(s[0]),
+      s: Number(s[1]),
+      v: Number(s[2]),
       source: 'hsl'
     }, n));
   }
@@ -119,7 +119,7 @@ d = (0, i.default)({
   }
 }),
 _ = n.r + ', ' + n.g + ', ' + n.b,
-E = Math.round(s.h) + '\xB0, ' + Math.round(100 * s.s) + '%, ' + Math.round(100 * s.l) + '%',
+E = Math.round(o.h) + '\xB0, ' + Math.round(100 * o.s) + '%, ' + Math.round(100 * o.l) + '%',
 f = Math.round(u.h) + '\xB0, ' + Math.round(100 * u.s) + '%, ' + Math.round(100 * u.v) + '%';
   return r.createElement('div', {
 style: d.wrap,
@@ -128,7 +128,7 @@ className: 'flexbox-fix'
 style: d.fields
   }, r.createElement('div', {
 style: d.double
-  }, r.createElement(o.Vm, {
+  }, r.createElement(s.Vm, {
 style: {
   input: d.input,
   label: d.label
@@ -140,7 +140,7 @@ onChange: c
 style: d.column
   }, r.createElement('div', {
 style: d.single
-  }, r.createElement(o.Vm, {
+  }, r.createElement(s.Vm, {
 style: {
   input: d.input2,
   label: d.label2
@@ -150,7 +150,7 @@ value: _,
 onChange: c
   })), r.createElement('div', {
 style: d.single
-  }, r.createElement(o.Vm, {
+  }, r.createElement(s.Vm, {
 style: {
   input: d.input2,
   label: d.label2
@@ -160,7 +160,7 @@ value: f,
 onChange: c
   })), r.createElement('div', {
 style: d.single
-  }, r.createElement(o.Vm, {
+  }, r.createElement(s.Vm, {
 style: {
   input: d.input2,
   label: d.label2

@@ -12,8 +12,8 @@ return T;
 var r = n(512722),
   i = n.n(r),
   a = n(46973),
-  o = n(594174),
-  s = n(768581),
+  s = n(594174),
+  o = n(768581),
   l = n(932724),
   u = n(716161),
   c = n(634041),
@@ -39,7 +39,7 @@ function m(e, t, n, r, i) {
   });
 }
 async function I(e, t, n) {
-  var r, o;
+  var r, s;
   let l, c = !1;
   if (null == n)
 return m(e, t, a.zZ.NONE);
@@ -51,7 +51,7 @@ let e = (0, _.Z)()[n];
 c = null !== (r = e.isVideo) && void 0 !== r && r, l = e.source;
   } else {
 let e = n.asset;
-c = (0, s.xR)(e) || (0, s.ay)(e), l = (0, s.rI)({
+c = (0, o.xR)(e) || (0, o.ay)(e), l = (0, o.rI)({
   userId: n.user_id,
   assetId: n.id,
   assetHash: e,
@@ -61,7 +61,7 @@ c = (0, s.xR)(e) || (0, s.ay)(e), l = (0, s.rI)({
   if (null != l)
 try {
   ;
-  let n = c ? void 0 : await (o = l, new Promise((e, t) => {
+  let n = c ? void 0 : await (s = l, new Promise((e, t) => {
       let n = new Image();
       n.crossOrigin = 'anonymous', n.onload = () => {
         let t = document.createElement('canvas');
@@ -69,11 +69,11 @@ try {
         let r = t.getContext('2d');
         i()(null != r, 'Canvas context is missing');
         let a = n.height / n.width,
-          o = f.HE.height,
-          s = f.HE.height / a,
-          l = (t.width - s) / 2,
-          u = (t.height - o) / 2;
-        r.drawImage(n, l, u, s, o);
+          s = f.HE.height,
+          o = f.HE.height / a,
+          l = (t.width - o) / 2,
+          u = (t.height - s) / 2;
+        r.drawImage(n, l, u, o, s);
         let c = r.getImageData(0, 0, t.width, t.height);
         e({
           data: c.data,
@@ -81,7 +81,7 @@ try {
           height: c.height,
           pixelFormat: 'rgba'
         });
-      }, n.onerror = e => t(e), n.src = o;
+      }, n.onerror = e => t(e), n.src = s;
     })),
     r = c ? await p(l) : void 0;
   m(e, t, a.zZ.BACKGROUND_REPLACEMENT, n, r);
@@ -110,7 +110,7 @@ streamId: t
 }
 
 function S() {
-  let e = o.default.getCurrentUser();
+  let e = s.default.getCurrentUser();
   if (null == e)
 return;
   let t = (0, l.P)(e);

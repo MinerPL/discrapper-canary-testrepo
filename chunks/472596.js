@@ -1,6 +1,6 @@
 E.d(_, {
   RE: function() {
-return D;
+return S;
   },
   RN: function() {
 return l;
@@ -9,7 +9,7 @@ return l;
 return T;
   },
   qr: function() {
-return S;
+return D;
   },
   xb: function() {
 return G;
@@ -26,7 +26,7 @@ var s, T, I = E(470079),
   r = E(594174),
   N = E(91047),
   L = E(981631);
-let D = (e, _) => {
+let S = (e, _) => {
   let {
 guildId: E,
 userId: s,
@@ -44,7 +44,7 @@ analyticsLocation: {
   });
 };
 
-function S(e, _, E) {
+function D(e, _, E) {
   let {
 analyticsLocations: s
   } = (0, A.ZP)();

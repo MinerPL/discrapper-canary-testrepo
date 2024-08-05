@@ -1,12 +1,12 @@
 n.d(t, {
-  bM: function() {
+  Kq: function() {
+return s;
+  },
+  Mo: function() {
 return o;
   },
   kj: function() {
 return l;
-  },
-  my: function() {
-return s;
   },
   xs: function() {
 return a;
@@ -28,12 +28,12 @@ r.Z.dispatch({
   presetId: null
 });
   },
-  o = () => {
+  s = () => {
 r.Z.dispatch({
   type: 'CLIENT_THEMES_EDITOR_OPEN'
 });
   },
-  s = () => {
+  o = () => {
 r.Z.dispatch({
   type: 'CLIENT_THEMES_EDITOR_CLOSE'
 });

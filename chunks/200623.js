@@ -1,27 +1,27 @@
-s.r(a), s.d(a, {
+a.r(s), a.d(s, {
   default: function() {
 return C;
   }
 });
-var r = s(735250),
-  t = s(470079),
-  n = s(442837),
-  d = s(481060),
-  c = s(277390),
-  o = s(639351),
-  i = s(63063),
-  l = s(258609),
-  f = s(259408),
-  u = s(893387),
-  m = s(927923),
-  x = s(981631),
-  _ = s(689938),
-  N = s(255789);
+var r = a(735250),
+  t = a(470079),
+  n = a(442837),
+  d = a(481060),
+  c = a(277390),
+  o = a(639351),
+  i = a(63063),
+  l = a(258609),
+  f = a(259408),
+  u = a(893387),
+  m = a(927923),
+  x = a(981631),
+  _ = a(689938),
+  N = a(255789);
 
 function h(e) {
   let {
-step: a,
-instructions: s
+step: s,
+instructions: a
   } = e;
   return (0, r.jsxs)('div', {
 className: N.cardRow,
@@ -31,14 +31,14 @@ children: [
     children: (0, r.jsx)(d.Text, {
       variant: 'text-sm/semibold',
       className: N.stepNumber,
-      children: a
+      children: s
     })
   }),
   (0, r.jsx)(d.Text, {
     variant: 'text-sm/normal',
     color: 'header-primary',
     className: N.instructions,
-    children: s
+    children: a
   })
 ]
   });
@@ -46,10 +46,10 @@ children: [
 
 function C(e) {
   let {
-channel: a,
-transitionState: s,
+channel: s,
+transitionState: a,
 onClose: C
-  } = e, p = (0, n.e7)([l.Z], () => null != l.Z.getRemoteSessionId()), g = (0, f.Z)(a, {
+  } = e, p = (0, n.e7)([l.Z], () => null != l.Z.getRemoteSessionId()), g = (0, f.Z)(s, {
 forQRCode: !0
   });
   return t.useEffect(() => {
@@ -58,11 +58,11 @@ p && C();
 p,
 C
   ]), t.useEffect(() => {
-(0, u.Z)(a.id, m.YE.XBOX);
-  }, [a.id]), (0, r.jsxs)(d.ModalRoot, {
+(0, u.Z)(s.id, m.YE.XBOX);
+  }, [s.id]), (0, r.jsxs)(d.ModalRoot, {
 size: d.ModalSize.DYNAMIC,
 className: N.modalRoot,
-transitionState: s,
+transitionState: a,
 children: [
   (0, r.jsxs)(d.ModalHeader, {
     separator: !1,

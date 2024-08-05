@@ -1,15 +1,15 @@
-t.d(n, {
+n.d(t, {
   c: function() {
-return u;
+return r;
   }
 });
-var E = t(442837),
-  _ = t(581883),
-  s = t(981312);
-let u = () => {
-  let e = (0, E.e7)([_.Z], () => {
-var e, n, t;
-return null === (t = null === (n = _.Z.settings.privacy) || void 0 === n ? void 0 : null === (e = n.inappropriateConversationWarnings) || void 0 === e ? void 0 : e.value) || void 0 === t || t;
+var i = n(442837),
+  s = n(581883),
+  a = n(981312);
+let r = () => {
+  let e = (0, i.e7)([s.Z], () => {
+var e, t, n;
+return null === (n = null === (t = s.Z.settings.privacy) || void 0 === t ? void 0 : null === (e = t.inappropriateConversationWarnings) || void 0 === e ? void 0 : e.value) || void 0 === n || n;
   });
-  return (0, s.U)('safety_warnings_setting') && e;
+  return (0, a.U)('safety_warnings_setting') && e;
 };

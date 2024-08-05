@@ -1,37 +1,37 @@
-r.d(n, {
+t.d(n, {
   Z: function() {
 return c;
   }
 });
-var i = r(735250);
-r(470079);
-var s = r(442837),
-  a = r(481060),
-  t = r(475179),
-  l = r(358221),
-  d = r(979651),
-  o = r(981631),
-  u = r(689938);
+var a = t(735250);
+t(470079);
+var i = t(442837),
+  s = t(481060),
+  l = t(475179),
+  o = t(358221),
+  r = t(979651),
+  u = t(981631),
+  d = t(689938);
 
 function c(e, n) {
-  let r = (0, s.e7)([l.Z], () => e === l.Z.getSelectedParticipantId(n), [
+  let t = (0, i.e7)([o.Z], () => e === o.Z.getSelectedParticipantId(n), [
 n,
 e
   ]);
-  return (0, s.e7)([
-l.Z,
-d.Z
+  return (0, i.e7)([
+o.Z,
+r.Z
   ], () => {
-let r = d.Z.isInChannel(n, e) && d.Z.hasVideo(n),
-  i = l.Z.getLayout(n),
-  s = i === o.AEg.MINIMUM || i === o.AEg.NORMAL;
-return !r || s;
+let t = r.Z.isInChannel(n, e) && r.Z.hasVideo(n),
+  a = o.Z.getLayout(n),
+  i = a === u.AEg.MINIMUM || a === u.AEg.NORMAL;
+return !t || i;
   }, [
 n,
 e
-  ]) ? null : (0, i.jsx)(a.MenuItem, {
+  ]) ? null : (0, a.jsx)(s.MenuItem, {
 id: 'focus-video',
-label: r ? u.Z.Messages.UNFOCUS_PARTICIPANT : u.Z.Messages.FOCUS_PARTICIPANT,
-action: () => t.Z.selectParticipant(n, r ? null : e)
+label: t ? d.Z.Messages.UNFOCUS_PARTICIPANT : d.Z.Messages.FOCUS_PARTICIPANT,
+action: () => l.Z.selectParticipant(n, t ? null : e)
   });
 }

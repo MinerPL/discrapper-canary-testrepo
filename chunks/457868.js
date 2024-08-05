@@ -5,26 +5,26 @@ return X;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(392711),
   o = n.n(r),
   c = n(91192),
-  d = n(924826),
-  u = n(873546),
+  u = n(924826),
+  d = n(873546),
   h = n(442837),
   p = n(481060),
   m = n(239091),
   _ = n(144144),
   f = n(607070),
   E = n(100527),
-  C = n(906732),
-  g = n(623624),
+  g = n(906732),
+  C = n(623624),
   I = n(518738),
   x = n(965376),
   T = n(159299),
-  v = n(484459),
-  N = n(103575),
+  N = n(484459),
+  v = n(103575),
   S = n(199902),
   Z = n(271383),
   A = n(430824),
@@ -50,22 +50,22 @@ let W = w.ZP.getEnableHardwareAcceleration(),
   Y = a.memo(function(e) {
 let {
   channel: t,
-  sectionId: l,
-  userId: s,
+  sectionId: s,
+  userId: l,
   guildOwnerId: r
-} = e, o = (0, h.e7)([R.Z], () => R.Z.isTyping(t.id, s)), d = (0, h.e7)([Z.ZP], () => Z.ZP.getMember(t.guild_id, s)), f = (0, h.e7)([A.Z], () => {
+} = e, o = (0, h.e7)([R.Z], () => R.Z.isTyping(t.id, l)), u = (0, h.e7)([Z.ZP], () => Z.ZP.getMember(t.guild_id, l)), f = (0, h.e7)([A.Z], () => {
   var e;
-  return (null == d ? void 0 : d.colorRoleId) != null ? null === (e = A.Z.getRole(t.guild_id, d.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0;
+  return (null == u ? void 0 : u.colorRoleId) != null ? null === (e = A.Z.getRole(t.guild_id, u.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0;
 }, [
   t.guild_id,
-  d
-]), E = (0, h.e7)([j.default], () => j.default.getUser(s)), C = (0, h.e7)([j.default], () => j.default.getCurrentUser()), I = (null == E ? void 0 : E.id) === (null == C ? void 0 : C.id), x = (0, h.e7)([
+  u
+]), E = (0, h.e7)([j.default], () => j.default.getUser(l)), g = (0, h.e7)([j.default], () => j.default.getCurrentUser()), I = (null == E ? void 0 : E.id) === (null == g ? void 0 : g.id), x = (0, h.e7)([
   M.Z,
   b.Z
-], () => I ? b.Z.getStatus() : M.Z.getStatus(s, t.guild_id)), L = (0, h.e7)([M.Z], () => M.Z.isMobileOnline(s)), P = (0, h.e7)([
+], () => I ? b.Z.getStatus() : M.Z.getStatus(l, t.guild_id)), L = (0, h.e7)([M.Z], () => M.Z.isMobileOnline(l)), P = (0, h.e7)([
   M.Z,
   b.Z
-], () => I ? b.Z.getActivities() : M.Z.getActivities(s, t.guild_id)), O = (0, h.e7)([S.Z], () => S.Z.getAnyStreamForUser(s)), y = (0, c.JA)(s), k = (0, h.e7)([T.Z], () => T.Z.canUserViewChannel(t.id, l, s)), w = (null == E ? void 0 : E.id) != null && E.id === r, V = a.useCallback(e => {
+], () => I ? b.Z.getActivities() : M.Z.getActivities(l, t.guild_id)), O = (0, h.e7)([S.Z], () => S.Z.getAnyStreamForUser(l)), y = (0, c.JA)(l), k = (0, h.e7)([T.Z], () => T.Z.canUserViewChannel(t.id, s, l)), w = (null == E ? void 0 : E.id) != null && E.id === r, V = a.useCallback(e => {
   null != E && (0, m.jW)(e, async () => {
     let {
       default: e
@@ -98,7 +98,7 @@ let {
   E,
   t
 ]), z = a.useCallback(e => {
-  e.stopPropagation(), (0, g.f)({
+  e.stopPropagation(), (0, C.f)({
     guildId: t.guild_id,
     location: {
       section: H.jXE.THREAD_MEMBER_LIST,
@@ -108,13 +108,13 @@ let {
 }, [t.guild_id]);
 if (null == E)
   return null;
-let Y = null == d ? void 0 : d.premiumSince;
+let Y = null == u ? void 0 : u.premiumSince;
 return (0, i.jsx)(p.Popout, {
-  preload: () => (0, v.W)(E, {
+  preload: () => (0, N.W)(E, {
     guildId: t.guild_id,
     channelId: t.id
   }),
-  renderPopout: e => (0, i.jsx)(N.Z, {
+  renderPopout: e => (0, i.jsx)(v.Z, {
     ...e,
     location: 'ThreadMembers',
     userId: E.id,
@@ -127,7 +127,7 @@ return (0, i.jsx)(p.Popout, {
       }
     }
   }),
-  position: u.tq ? 'window_center' : 'left',
+  position: d.tq ? 'window_center' : 'left',
   spacing: 16,
   onShiftClick: F,
   children: (e, n) => {
@@ -138,11 +138,11 @@ return (0, i.jsx)(p.Popout, {
       onContextMenu: V,
       shouldAnimateStatus: W,
       user: E,
-      currentUser: C,
-      nick: null == d ? void 0 : d.nick,
+      currentUser: g,
+      nick: null == u ? void 0 : u.nick,
       status: x,
       activities: P,
-      colorString: null == d ? void 0 : d.colorString,
+      colorString: null == u ? void 0 : u.colorString,
       colorRoleName: f,
       isTyping: o,
       channel: t,
@@ -165,10 +165,10 @@ let {
   id: t,
   label: n,
   count: a,
-  guildId: l
-} = e, s = (0, I.p9)({
+  guildId: s
+} = e, l = (0, I.p9)({
   roleId: t,
-  guildId: l,
+  guildId: s,
   size: 16
 });
 return t === H.Skl.UNKNOWN ? (0, i.jsx)('div', {
@@ -183,9 +183,9 @@ return t === H.Skl.UNKNOWN ? (0, i.jsx)('div', {
     count: a
   }),
   children: [
-    null != s ? (0, i.jsx)(O.Z, {
+    null != l ? (0, i.jsx)(O.Z, {
       className: F.roleIcon,
-      ...s
+      ...l
     }) : null,
     (0, i.jsxs)('span', {
       'aria-hidden': !0,
@@ -234,23 +234,23 @@ function X(e) {
   let {
 channel: t,
 guild: n
-  } = e, l = 'members-'.concat(t.id), {
+  } = e, s = 'members-'.concat(t.id), {
 analyticsLocations: r
-  } = (0, C.ZP)(E.Z.MEMBER_LIST), u = (0, x.D)(t.id, n), m = u.filter(e => e.userIds.length > 0).reverse()[0], {
+  } = (0, g.ZP)(E.Z.MEMBER_LIST), d = (0, x.D)(t.id, n), m = d.filter(e => e.userIds.length > 0).reverse()[0], {
 navigator: _,
-listRef: g
+listRef: C
   } = function(e, t) {
 let n = (0, h.e7)([f.Z], () => f.Z.keyboardModeEnabled),
   i = a.useRef(null),
-  l = a.useCallback((e, n) => {
+  s = a.useCallback((e, n) => {
     let a = i.current;
     if (null == a)
       return;
-    let l = parseInt(n, 10),
-      [s, r] = a.getSectionRowFromIndex(l),
-      o = 0 === s && 0 === r ? t : 0;
+    let s = parseInt(n, 10),
+      [l, r] = a.getSectionRowFromIndex(s),
+      o = 0 === l && 0 === r ? t : 0;
     a.scrollToIndex({
-      section: s,
+      section: l,
       row: r,
       padding: o,
       callback: () => {
@@ -263,7 +263,7 @@ let n = (0, h.e7)([f.Z], () => f.Z.keyboardModeEnabled),
       }
     });
   }, [t]),
-  s = a.useCallback(() => new Promise(e => {
+  l = a.useCallback(() => new Promise(e => {
     let t = i.current;
     if (null == t)
       return e();
@@ -282,16 +282,16 @@ let n = (0, h.e7)([f.Z], () => f.Z.keyboardModeEnabled),
     });
   }), []);
 return {
-  navigator: (0, d.ZP)({
+  navigator: (0, u.ZP)({
     id: e,
-    setFocus: l,
+    setFocus: s,
     isEnabled: n,
-    scrollToStart: s,
+    scrollToStart: l,
     scrollToEnd: r
   }),
   listRef: i
 };
-  }(l, z), I = 0 === u.length || u.every(e => 0 === e.userIds.length);
+  }(s, z), I = 0 === d.length || d.every(e => 0 === e.userIds.length);
   if (a.useEffect(() => {
   y.default.track(H.rMx.MEMBER_LIST_VIEWED, {
     channel_id: t.id,
@@ -307,23 +307,23 @@ return (0, i.jsx)(Q, {
   channel: t
 });
   let T = o().omit(_.containerProps, ['ref']),
-v = k.iJ(n);
-  return (0, i.jsx)(C.Gt, {
+N = k.iJ(n);
+  return (0, i.jsx)(g.Gt, {
 value: r,
 children: (0, i.jsx)(c.bG, {
   navigator: _,
   children: (0, i.jsx)(p.FocusJumpSection, {
     children: e => (0, i.jsx)('div', {
-      className: s()(F.membersWrap, F.hiddenMembers),
+      className: l()(F.membersWrap, F.hiddenMembers),
       children: (0, i.jsx)(p.List, {
-        ref: g,
+        ref: C,
         className: F.members,
         paddingTop: 0,
         sectionHeight: 40,
         renderSection: e => {
           let {
             section: t
-          } = e, a = u[t];
+          } = e, a = d[t];
           return (0, i.jsx)(K, {
             id: a.id,
             label: a.label,
@@ -337,27 +337,27 @@ children: (0, i.jsx)(c.bG, {
             section: n,
             row: a
           } = e, {
-            userIds: l,
-            id: s
-          } = u[n];
+            userIds: s,
+            id: l
+          } = d[n];
           return (0, i.jsx)(Y, {
             channel: t,
-            sectionId: s,
-            userId: l[a],
-            guildOwnerId: v
-          }, l[a]);
+            sectionId: l,
+            userId: s[a],
+            guildOwnerId: N
+          }, s[a]);
         },
-        footerHeight: e => u[e] === m && t.type === H.d4z.PRIVATE_THREAD ? 80 : 0,
-        renderFooter: e => u[e.section] === m ? (0, i.jsx)(q, {
+        footerHeight: e => d[e] === m && t.type === H.d4z.PRIVATE_THREAD ? 80 : 0,
+        renderFooter: e => d[e.section] === m ? (0, i.jsx)(q, {
           channel: t
         }, 'footer') : null,
         innerAriaLabel: G.Z.Messages.MEMBERS,
         innerTag: 'ul',
-        sections: u.map(e => e.userIds.length),
+        sections: d.map(e => e.userIds.length),
         fade: !0,
         ...T,
         ...e
-      }, l)
+      }, s)
     })
   })
 })
@@ -369,7 +369,7 @@ function Q(e) {
 channel: t
   } = e;
   return (0, i.jsxs)('div', {
-className: s()(F.membersWrap, F.hiddenMembers, F.members, V.emptyState),
+className: l()(F.membersWrap, F.hiddenMembers, F.members, V.emptyState),
 children: [
   (0, i.jsx)(p.Text, {
     className: V.emptyStateHeader,

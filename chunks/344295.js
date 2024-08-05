@@ -8,24 +8,24 @@ var s = n(735250),
   c = n(442837),
   u = n(298444),
   d = n(447543),
-  h = n(881052),
-  _ = n(899370),
+  _ = n(881052),
+  h = n(899370),
   E = n(267394),
   g = n(388905),
   p = n(639946),
-  f = n(792766),
-  I = n(362762),
-  m = n(978684),
+  I = n(792766),
+  m = n(362762),
+  f = n(978684),
   N = n(264229),
   T = n(929809),
   x = n(703656),
   A = n(108427),
   C = n(314897),
-  S = n(896797),
-  O = n(701190),
-  v = n(626135),
-  Z = n(630388),
-  R = n(63063),
+  v = n(896797),
+  Z = n(701190),
+  S = n(626135),
+  R = n(630388),
+  O = n(63063),
   b = n(782605),
   D = n(954824),
   L = n(588705),
@@ -36,9 +36,9 @@ var s = n(735250),
   G = n(701476),
   B = n(436620),
   U = n(689938),
-  k = n(549856);
+  F = n(549856);
 
-function F(e, t, n) {
+function k(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -66,7 +66,7 @@ let {
   login: t,
   inviteKey: n
 } = this.props;
-if (v.default.track(j.rMx.INVITE_VIEWED, {
+if (S.default.track(j.rMx.INVITE_VIEWED, {
     invite_code: n
   }, {
     flush: !0
@@ -138,7 +138,7 @@ let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
   } : {
     invite_code: i
   };
-v.default.track(e, {
+S.default.track(e, {
   ...a,
   ...n
 });
@@ -159,10 +159,10 @@ return (0, s.jsxs)(g.ZP, {
   children: [
     (0, s.jsx)(g.Ee, {
       src: n(167969),
-      className: k.marginBottom8
+      className: F.marginBottom8
     }),
     (0, s.jsx)(g.Dx, {
-      className: a()(k.marginTop8, k.marginBottom8),
+      className: a()(F.marginTop8, F.marginBottom8),
       children: U.Z.Messages.AUTH_INVALID_INVITE_TITLE
     }),
     (0, s.jsx)(g.DK, {
@@ -170,10 +170,10 @@ return (0, s.jsxs)(g.ZP, {
     }),
     this.renderButton(U.Z.Messages.CONTINUE_TO_WEBAPP),
     (0, s.jsx)(g.zx, {
-      onClick: () => window.open(R.Z.getArticleURL(j.BhN.INVALID_INVITES), '_blank'),
+      onClick: () => window.open(O.Z.getArticleURL(j.BhN.INVALID_INVITES), '_blank'),
       look: g.zx.Looks.LINK,
       color: g.zx.Colors.LINK,
-      className: k.marginTop8,
+      className: F.marginTop8,
       children: U.Z.Messages.AUTH_INVALID_INVITE_TIP
     })
   ]
@@ -202,7 +202,7 @@ let t = null != e ? e : this.handleContinue;
 return (0, s.jsxs)(g.ZP, {
   children: [
     (0, s.jsx)(g.Dx, {
-      className: k.marginBottom8,
+      className: F.marginBottom8,
       children: U.Z.Messages.APP_OPENED_TITLE
     }),
     (0, s.jsx)(g.DK, {
@@ -216,7 +216,7 @@ return (0, s.jsxs)(g.ZP, {
 let {
   invite: e
 } = this.props;
-return null != e.stage_instance && null != e.guild ? (0, s.jsx)(f.Z, {
+return null != e.stage_instance && null != e.guild ? (0, s.jsx)(I.Z, {
   stageInstance: e.stage_instance,
   guild: e.guild
 }) : null != e.guild_scheduled_event ? (0, s.jsx)(p.r, {
@@ -231,8 +231,8 @@ let {
   invite: e
 } = this.props;
 return (null != e.stage_instance || null != e.guild_scheduled_event) && null != e.guild ? (0, s.jsx)(g.ZP, {
-  className: k.marginTop20,
-  children: (0, s.jsx)(f.y, {
+  className: F.marginTop20,
+  children: (0, s.jsx)(I.y, {
     guild: e.guild,
     onlineCount: e.approximate_presence_count
   })
@@ -285,8 +285,8 @@ switch (e.state) {
     return this.renderSpinner(U.Z.Messages.APP_OPENING);
   case j.r2o.RESOLVED:
     var a;
-    if (n && (0, Z.yE)(null !== (a = e.flags) && void 0 !== a ? a : 0, l.$.IS_GUEST_INVITE))
-      return d.Z.openApp(e.code), u.x.set(m.J, e.code), this.renderAppOpened(() => r(j.Z5c.APP));
+    if (n && (0, R.yE)(null !== (a = e.flags) && void 0 !== a ? a : 0, l.$.IS_GUEST_INVITE))
+      return d.Z.openApp(e.code), u.x.set(f.J, e.code), this.renderAppOpened(() => r(j.Z5c.APP));
     if (n || !B.KO)
       return this.renderAuthenticatedOrDownload();
     else if (this.getMode() === H.LOGIN)
@@ -317,9 +317,9 @@ switch (e.state) {
   }
   constructor(...e) {
 var t;
-super(...e), t = this, F(this, 'state', {
+super(...e), t = this, k(this, 'state', {
   error: null
-}), F(this, 'getAcceptInviteContext', e => d.Z.getInviteContext(e, this.props.invite)), F(this, 'handleContinue', e => {
+}), k(this, 'getAcceptInviteContext', e => d.Z.getInviteContext(e, this.props.invite)), k(this, 'handleContinue', e => {
   let {
     invite: t,
     transitionTo: n
@@ -328,7 +328,7 @@ super(...e), t = this, F(this, 'state', {
     var s;
     (null === (s = t.guild) || void 0 === s ? void 0 : s.id) != null ? n(j.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : d.Z.transitionToInvite(null != e ? e : t, n);
   }
-}), F(this, 'handleAccept', () => {
+}), k(this, 'handleAccept', () => {
   this.setState({
     error: null
   });
@@ -341,7 +341,7 @@ super(...e), t = this, F(this, 'state', {
       (0, E.A)(t), null != t.channel && d.Z.openApp(e, t.channel.id);
     }
   }).catch(e => {
-    if (e instanceof h.yZ || e instanceof h.Hx) {
+    if (e instanceof _.yZ || e instanceof _.Hx) {
       let t = (0, b.O)(e.code);
       this.setState({
         error: {
@@ -357,45 +357,45 @@ super(...e), t = this, F(this, 'state', {
         }
       });
   });
-}), F(this, 'handleDefaultTransition', () => {
+}), k(this, 'handleDefaultTransition', () => {
   let {
     defaultRoute: e,
     transitionTo: t
   } = this.props;
   t(e);
-}), F(this, 'renderButton', function(e) {
+}), k(this, 'renderButton', function(e) {
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : t.handleDefaultTransition,
     {
       invite: r
     } = t.props,
     i = null != r.stage_instance || null != r.guild_scheduled_event;
   return B.KO ? (0, s.jsx)(g.zx, {
-    className: i ? k.marginTop20 : k.marginTop40,
+    className: i ? F.marginTop20 : F.marginTop40,
     onClick: n,
     color: i ? g.zx.Colors.GREEN : g.zx.Colors.BRAND,
     children: e
   }) : (0, s.jsx)(g.v6, {
-    className: k.marginTop40
+    className: F.marginTop40
   });
 });
   }
 }
 t.Z = c.ZP.connectStores([
-  O.Z,
-  S.Z,
+  Z.Z,
+  v.Z,
   C.default,
-  I.Z,
-  _.Z
+  m.Z,
+  h.Z
 ], e => {
   var t;
   let {
 inviteKey: n
   } = e;
   return {
-invite: null !== (t = O.Z.getInvite(n)) && void 0 !== t ? t : {},
-nativeAppState: I.Z.getState(n),
+invite: null !== (t = Z.Z.getInvite(n)) && void 0 !== t ? t : {},
+nativeAppState: m.Z.getState(n),
 authenticated: C.default.isAuthenticated(),
-defaultRoute: S.Z.defaultRoute,
-isUnderage: _.Z.isUnderageAnonymous()
+defaultRoute: v.Z.defaultRoute,
+isUnderage: h.Z.isUnderageAnonymous()
   };
 })(z);

@@ -3,8 +3,8 @@ n.d(t, {
 return Z;
   }
 }), n(47120), n(51350), n(411104);
-var r, i, a, o, s = n(392711),
-  l = n.n(s),
+var r, i, a, s, o = n(392711),
+  l = n.n(o),
   u = n(956067),
   c = n(442837),
   d = n(570140),
@@ -103,8 +103,8 @@ return;
 G.add(e), h.Z.restored(e), R.log('load returned null; early returning (guild: '.concat(e, ', database: ').concat(r, ')'));
 return;
   }
-  let [a, o] = i;
-  for (let n of ((0, p.ZP)(a), 0 !== t && (H += 1), G.add(e), h.Z.restored(e), u.Z.mark('\u2757', 'loaded guild channels (guild: '.concat(e, ')'), o), a))
+  let [a, s] = i;
+  for (let n of ((0, p.ZP)(a), 0 !== t && (H += 1), G.add(e), h.Z.restored(e), u.Z.mark('\u2757', 'loaded guild channels (guild: '.concat(e, ')'), s), a))
 !Object.hasOwn(y, n.id) && $((0, T._H)(n));
   R.verbose('hydration complete (guild: '.concat(e, ', channels: ').concat(a.length, ', guilds_loaded: ').concat(H, ')'));
 }
@@ -251,8 +251,8 @@ channels: r
   } = e;
   for (let e of t)
 for (let t of e)
-  eo(t.thread);
-  n.forEach(eo), null == r || r.forEach(e => {
+  es(t.thread);
+  n.forEach(es), null == r || r.forEach(e => {
 let t = (0, T.q_)(e),
   n = null != z(e.id),
   r = null != F[e.id];
@@ -260,11 +260,11 @@ t.isPrivate() && (!n || r) ? F[t.id] = t : !n && q(t);
   });
 }
 
-function eo(e) {
+function es(e) {
   null != e && !(e.id in M) && T.AW.has(e.type) && X((0, T.q_)(e));
 }
 
-function es() {
+function eo() {
   for (let e in (x = {}, I.Z.getFavoriteChannels())) {
 let t = I.Z.getCategoryRecord(e);
 null != t && (x[e] = t);
@@ -272,7 +272,7 @@ null != t && (x[e] = t);
 }
 class el extends(r = c.ZP.Store) {
   initialize() {
-this.waitFor(h.Z, v.default, N.Z, I.Z), this.syncWith([I.Z], es);
+this.waitFor(h.Z, v.default, N.Z, I.Z), this.syncWith([I.Z], eo);
   }
   hasChannel(e) {
 return null != K(e);
@@ -354,12 +354,12 @@ return {
 function eu(e) {
   return null == D[e] ? null : Object.keys(D[e]).length;
 }
-o = 'ChannelStore', (a = 'displayName') in(i = el) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'ChannelStore', (a = 'displayName') in(i = el) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new el(d.Z, {
+}) : i[a] = s, t.Z = new el(d.Z, {
   BACKGROUND_SYNC: function(e) {
 let {
   guilds: t
@@ -429,7 +429,7 @@ null != b && (L = {}, b.forEach(Q)), t.forEach(Q);
 let t = D;
 for (let n of (P = {}, y = {}, D = {}, M = {}, w = {}, F = {}, k = {}, B = Date.now(), b = e.initialPrivateChannels, e.initialPrivateChannels.forEach(Q), e.guilds))
   'partial' === n.dataMode && (l().forEach(t[n.id], $), R.fileOnly('Restoring guild channels for '.concat(n.id, ' #:').concat(eu(n.id)))), J(n);
-es();
+eo();
   },
   GUILD_CREATE: function(e) {
 J(e.guild);

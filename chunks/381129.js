@@ -2,8 +2,8 @@ n(47120);
 var r = n(512722),
   i = n.n(r),
   a = n(957730),
-  o = n(439170),
-  s = n(496675),
+  s = n(439170),
+  o = n(496675),
   l = n(981631);
 let u = new RegExp(/@(:?everyone|here)/);
 
@@ -13,14 +13,14 @@ function c(e, t) {
 var r;
 return null !== (r = t.memberCount) && void 0 !== r ? r : 0;
   }
-  return o.ZP.getProps(t.getGuildId(), t.id).groups.forEach(t => {
+  return s.ZP.getProps(t.getGuildId(), t.id).groups.forEach(t => {
 ('@everyone' === e || t.id !== l.Skl.OFFLINE) && (n += t.count);
   }), n;
 }
 t.Z = {
   shouldShowEveryoneGuard: function(e, t) {
 let n = t.getGuildId();
-return i()(n, 'isGuildChannel with null guildId'), c(e, t) > 30 && s.Z.can(l.Plq.MENTION_EVERYONE, t);
+return i()(n, 'isGuildChannel with null guildId'), c(e, t) > 30 && o.Z.can(l.Plq.MENTION_EVERYONE, t);
   },
   everyoneMemberCount: c,
   extractEveryoneRole: function(e, t) {

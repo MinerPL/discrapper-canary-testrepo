@@ -6,8 +6,8 @@ return o;
 var i = n(735250);
 n(470079);
 var a = n(120356),
-  l = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  l = n(481060),
   r = n(574408);
 
 function o(e) {
@@ -16,8 +16,8 @@ hasMentions: t,
 truncatedCount: n,
 className: a
   } = e;
-  return (0, i.jsx)(s.Text, {
-className: l()(r.unreadCount, a, {
+  return (0, i.jsx)(l.Text, {
+className: s()(r.unreadCount, a, {
   [r.mention]: t
 }),
 variant: 'text-xs/normal',

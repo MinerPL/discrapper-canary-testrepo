@@ -53,7 +53,7 @@ a = {
   keywords: t,
   relevance: 0
 },
-o = [{
+s = [{
     className: 'attr',
     variants: [{
         begin: '\\w[\\w :\\/.-]*:(?=[ \t]|$)'
@@ -144,11 +144,11 @@ o = [{
   },
   r
 ],
-s = [...o];
-  return s.pop(), s.push(i), a.contains = s, {
+o = [...s];
+  return o.pop(), o.push(i), a.contains = o, {
 name: 'YAML',
 case_insensitive: !0,
 aliases: ['yml'],
-contains: o
+contains: s
   };
 };

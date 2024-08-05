@@ -8,9 +8,9 @@ var a = t(735250),
   o = t(477690),
   r = t(481060),
   s = t(208156),
-  l = t(962250),
-  c = t(368874),
-  d = t(467679),
+  l = t(385499),
+  c = t(962250),
+  d = t(368874),
   u = t(624138),
   h = t(293979),
   _ = t(674563),
@@ -34,7 +34,7 @@ iframeUrl: b
   } = (0, h.b8)(e), {
 width: p,
 height: w
-  } = (0, l.b)(), T = i.useMemo(() => {
+  } = (0, c.b)(), T = i.useMemo(() => {
 let e = Math.min((w - f - 2 * N) * 16 / 9, v);
 return Math.max(I, Math.min(p - 2 * N, e));
   }, [
@@ -76,7 +76,7 @@ children: (0, a.jsxs)('div', {
                 })
               ]
             }),
-            (0, a.jsx)(d.Z, {
+            (0, a.jsx)(l.Z, {
               type: _.Hb.BOT,
               className: M.botTag,
               verified: null === (n = e.application.bot) || void 0 === n ? void 0 : n.verified
@@ -98,7 +98,7 @@ children: (0, a.jsxs)('div', {
         })
       ]
     }),
-    (0, a.jsx)(c.Z, {
+    (0, a.jsx)(d.Z, {
       aspectRatio: 16 / 9,
       children: (0, a.jsx)(s.J, {
         url: b,

@@ -1,4 +1,4 @@
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(902704),
   u = n(570140);
 let c = {},
@@ -26,7 +26,7 @@ return t === n - r;
   }
   return !0;
 }
-class h extends(o = s.ZP.Store) {
+class h extends(s = o.ZP.Store) {
   percentageScrolled(e) {
 if (null != c[e]) {
   let {

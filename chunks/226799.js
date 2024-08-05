@@ -3,18 +3,18 @@ a.d(n, {
 return B;
   }
 });
-var i = a(701488),
-  t = a(114954),
-  l = a(956089),
-  s = a(407407),
+var t = a(701488),
+  s = a(114954),
+  i = a(956089),
+  l = a(407407),
   r = a(942006),
   o = a(836479),
   c = a(779337),
   u = a(694111),
   d = a(442405),
   g = a(974379),
-  p = a(873444),
-  m = a(216989),
+  m = a(873444),
+  p = a(216989),
   x = a(188225),
   v = a(337664),
   f = a(585681),
@@ -38,7 +38,7 @@ var i = a(701488),
   O = a(33218),
   P = a(975570);
 let B = {
-  [i.MO]: {
+  [t.MO]: {
 playersSuggestionMin: 1,
 playersSuggestionMax: 8,
 timeSuggestionMinutes: 1,
@@ -47,22 +47,22 @@ gameplayImageUrls: [
   f
 ]
   },
-  [i.js]: {
+  [t.js]: {
 playersSuggestionMin: 4,
 playersSuggestionMax: 12,
 timeSuggestionMinutes: 10,
 gameplayImageUrls: [
-  m,
+  p,
   x
 ]
   },
-  [i.mI]: {
+  [t.mI]: {
 playersSuggestionMin: 1,
 playersSuggestionMax: 16,
 timeSuggestionMinutes: 5,
 gameplayImageUrls: []
   },
-  [i.GR]: {
+  [t.GR]: {
 playersSuggestionMin: 1,
 playersSuggestionMax: 8,
 timeSuggestionMinutes: 10,
@@ -71,7 +71,7 @@ gameplayImageUrls: [
   k
 ]
   },
-  [i.PD]: {
+  [t.PD]: {
 playersSuggestionMin: 1,
 playersSuggestionMax: 8,
 timeSuggestionMinutes: 5,
@@ -80,7 +80,7 @@ gameplayImageUrls: [
   y
 ]
   },
-  [i.jT]: {
+  [t.jT]: {
 playersSuggestionMin: 1,
 playersSuggestionMax: 16,
 timeSuggestionMinutes: 2,
@@ -89,7 +89,7 @@ gameplayImageUrls: [
   P
 ]
   },
-  [i.am]: {
+  [t.am]: {
 playersSuggestionMin: 3,
 playersSuggestionMax: 8,
 timeSuggestionMinutes: 10,
@@ -98,16 +98,16 @@ gameplayImageUrls: [
   S
 ]
   },
-  [i.Ec]: {
+  [t.Ec]: {
 playersSuggestionMin: 2,
 playersSuggestionMax: 8,
 timeSuggestionMinutes: 15,
 gameplayImageUrls: [
-  s,
+  l,
   r
 ]
   },
-  [i.l4]: {
+  [t.l4]: {
 playersSuggestionMin: 2,
 playersSuggestionMax: 16,
 timeSuggestionMinutes: 10,
@@ -116,25 +116,25 @@ gameplayImageUrls: [
   c
 ]
   },
-  [i.fE]: {
+  [t.fE]: {
 playersSuggestionMin: 2,
 playersSuggestionMax: 16,
 timeSuggestionMinutes: 15,
 gameplayImageUrls: [
   g,
-  p
+  m
 ]
   },
-  [i.IF]: {
+  [t.IF]: {
 playersSuggestionMin: 2,
 playersSuggestionMax: 5,
 timeSuggestionMinutes: 5,
 gameplayImageUrls: [
-  t,
-  l
+  s,
+  i
 ]
   },
-  [i.Zc]: {
+  [t.Zc]: {
 playersSuggestionMin: 1,
 playersSuggestionMax: 7,
 timeSuggestionMinutes: 15,
@@ -143,7 +143,7 @@ gameplayImageUrls: [
   N
 ]
   },
-  [i.Gv]: {
+  [t.Gv]: {
 playersSuggestionMin: 2,
 playersSuggestionMax: 8,
 timeSuggestionMinutes: 15,
@@ -152,7 +152,7 @@ gameplayImageUrls: [
   M
 ]
   },
-  [i.Cb]: {
+  [t.Cb]: {
 playersSuggestionMin: 2,
 playersSuggestionMax: 8,
 timeSuggestionMinutes: 15,
@@ -161,7 +161,7 @@ gameplayImageUrls: [
   D
 ]
   },
-  [i.qG]: {
+  [t.qG]: {
 playersSuggestionMin: 2,
 playersSuggestionMax: 4,
 timeSuggestionMinutes: 5,
@@ -170,7 +170,7 @@ gameplayImageUrls: [
   d
 ]
   },
-  [i.f9]: {
+  [t.f9]: {
 playersSuggestionMin: 1,
 playersSuggestionMax: 8,
 timeSuggestionMinutes: 10,
@@ -179,7 +179,7 @@ gameplayImageUrls: [
   T
 ]
   },
-  [i.In]: {
+  [t.In]: {
 gameplayImageUrls: [
   b,
   I,

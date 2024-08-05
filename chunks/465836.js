@@ -1,18 +1,18 @@
-t.r(n), t.d(n, {
+s.r(n), s.d(n, {
   default: function() {
 return c;
   }
 });
-var a = t(735250);
-t(470079);
-var s = t(703558),
-  o = t(403182),
-  _ = t(127654),
-  E = t(98278),
-  L = t(790527),
-  M = t(474936),
-  r = t(981631),
-  i = t(689938);
+var t = s(735250);
+s(470079);
+var a = s(703558),
+  o = s(403182),
+  _ = s(127654),
+  E = s(98278),
+  L = s(790527),
+  M = s(474936),
+  r = s(981631),
+  i = s(689938);
 
 function c(e) {
   var n;
@@ -26,8 +26,8 @@ content: A,
   function O() {
 l(), (0, E.z)(!0);
   }
-  return (0, a.jsx)(L.Z, {
-artURL: t(990158),
+  return (0, t.jsx)(L.Z, {
+artURL: s(990158),
 type: M.cd.MESSAGE_LENGTH_UPSELL,
 title: i.Z.Messages.PREMIUM_MESSAGE_LENGTH_ROADBLOCK_MODAL_HEADER,
 body: i.Z.Messages.PREMIUM_MESSAGE_LENGTH_ROADBLOCK_MODAL_BODY.format({
@@ -54,7 +54,7 @@ onSecondaryClick: function() {
   let e = new Blob([A], {
     type: 'text/plain'
   });
-  (0, _.d)([(0, o.dp)(e, 'message.txt')], c, s.d.ChannelMessage, {
+  (0, _.d)([(0, o.dp)(e, 'message.txt')], c, a.d.ChannelMessage, {
     requireConfirm: !0,
     showLargeMessageDialog: !0
   });

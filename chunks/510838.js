@@ -1,20 +1,20 @@
 var r = n(957578).Buffer,
   i = n(294415),
   a = n(530917),
-  o = n(136924).ec,
-  s = n(28704),
+  s = n(136924).ec,
+  o = n(28704),
   l = n(223428),
   u = n(733345);
 
 function c(e, t, n, a) {
   if ((e = r.from(e.toArray())).length < t.byteLength()) {
-var o = r.alloc(t.byteLength() - e.length);
+var s = r.alloc(t.byteLength() - e.length);
 e = r.concat([
-  o,
+  s,
   e
 ]);
   }
-  var s = n.length,
+  var o = n.length,
 l = function(e, t) {
   e = (e = d(e, t)).mod(t);
   var n = r.from(e.toArray());
@@ -27,9 +27,9 @@ l = function(e, t) {
   }
   return n;
 }(n, t),
-u = r.alloc(s);
+u = r.alloc(o);
   u.fill(1);
-  var c = r.alloc(s);
+  var c = r.alloc(o);
   return c = i(a, c).update(u).update(r.from([0])).update(e).update(l).digest(), u = i(a, c).update(u).digest(), c = i(a, c).update(u).update(r.from([1])).update(e).update(l).digest(), u = i(a, c).update(u).digest(), {
 k: c,
 v: u
@@ -37,22 +37,22 @@ v: u
 }
 
 function d(e, t) {
-  var n = new s(e),
+  var n = new o(e),
 r = (e.length << 3) - t.bitLength();
   return r > 0 && n.ishrn(r), n;
 }
 
 function _(e, t, n) {
-  var a, o;
+  var a, s;
   do {
 for (a = r.alloc(0); 8 * a.length < e.bitLength();)
   t.v = i(n, t.k).update(t.v).digest(), a = r.concat([
     a,
     t.v
   ]);
-o = d(a, e), t.k = i(n, t.k).update(t.v).update(r.from([0])).digest(), t.v = i(n, t.k).update(t.v).digest();
-  } while (-1 !== o.cmp(e));
-  return o;
+s = d(a, e), t.k = i(n, t.k).update(t.v).update(r.from([0])).digest(), t.v = i(n, t.k).update(t.v).digest();
+  } while (-1 !== s.cmp(e));
+  return s;
 }
 e.exports = function(e, t, n, i, E) {
   var f = l(t);
@@ -63,7 +63,7 @@ return function(e, t) {
   var n = u[t.curve.join('.')];
   if (!n)
     throw Error('unknown curve ' + t.curve.join('.'));
-  var i = new o(n).keyFromPrivate(t.privateKey).sign(e);
+  var i = new s(n).keyFromPrivate(t.privateKey).sign(e);
   return r.from(i.toDER());
 }(e, f);
   }
@@ -71,10 +71,10 @@ return function(e, t) {
 if ('dsa' !== i)
   throw Error('wrong private key type');
 return function(e, t, n) {
-  for (var i, a = t.params.priv_key, o = t.params.p, l = t.params.q, u = t.params.g, E = new s(0), f = d(e, l).mod(l), h = !1, p = c(a, l, e, n); !1 === h;)
+  for (var i, a = t.params.priv_key, s = t.params.p, l = t.params.q, u = t.params.g, E = new o(0), f = d(e, l).mod(l), h = !1, p = c(a, l, e, n); !1 === h;)
     E = function(e, t, n, r) {
-      return e.toRed(s.mont(n)).redPow(t).fromRed().mod(r);
-    }(u, i = _(l, p, n), o, l), 0 === (h = i.invm(l).imul(f.add(a.mul(E))).mod(l)).cmpn(0) && (h = !1, E = new s(0));
+      return e.toRed(o.mont(n)).redPow(t).fromRed().mod(r);
+    }(u, i = _(l, p, n), s, l), 0 === (h = i.invm(l).imul(f.add(a.mul(E))).mod(l)).cmpn(0) && (h = !1, E = new o(0));
   return function(e, t) {
     e = e.toArray(), t = t.toArray(), 128 & e[0] && (e = [0].concat(e)), 128 & t[0] && (t = [0].concat(t));
     var n = [

@@ -3,7 +3,7 @@ n.d(t, {
 return _;
   }
 });
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140);
 let u = !1,
   c = null,
@@ -21,7 +21,7 @@ locale: t
   } = e;
   u = !0, c = t;
 }
-class f extends(o = s.ZP.Store) {
+class f extends(s = o.ZP.Store) {
   isLoading() {
 return u;
   }

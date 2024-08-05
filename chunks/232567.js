@@ -18,21 +18,21 @@ return p;
 var r = n(512722),
   i = n.n(r),
   a = n(525769),
-  o = n(259443),
-  s = n(544891),
+  s = n(259443),
+  o = n(544891),
   l = n(570140),
   u = n(598077),
   c = n(594174),
   d = n(573261),
   _ = n(981631);
-let E = new o.Y('UserProfileModalActionCreators');
+let E = new s.Y('UserProfileModalActionCreators');
 
 function f() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
 {
   withAnalyticsToken: t = !1
 } = e;
-  return s.tn.get({
+  return o.tn.get({
 url: _.ANM.ME,
 query: {
   with_analytics_token: t
@@ -65,7 +65,7 @@ function p(e, t) {
   let n = c.default.getCurrentUser();
   i()(null != n, 'setFlag: user cannot be undefined');
   let r = t ? n.flags | e : n.flags & ~e;
-  return s.tn.patch({
+  return o.tn.patch({
 url: _.ANM.ME,
 oldFormErrors: !0,
 body: {
@@ -76,7 +76,7 @@ body: {
 
 function m(e) {
   let t = c.default.getUser(e);
-  return null != t ? Promise.resolve(t) : s.tn.get({
+  return null != t ? Promise.resolve(t) : o.tn.get({
 url: _.ANM.USER(e),
 oldFormErrors: !0
   }).then(t => (l.Z.dispatch({
@@ -91,7 +91,7 @@ withMutualGuilds: n,
 withMutualFriendsCount: r,
 withMutualFriends: i,
 guildId: a,
-connectionsRoleId: o,
+connectionsRoleId: s,
 abortSignal: u
   } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, c = arguments.length > 2 ? arguments[2] : void 0;
   l.Z.dispatch({
@@ -99,7 +99,7 @@ type: 'USER_PROFILE_FETCH_START',
 userId: e
   });
   try {
-let d = await s.tn.get({
+let d = await o.tn.get({
   url: _.ANM.USER_PROFILE(e),
   query: {
     friend_token: t,
@@ -107,7 +107,7 @@ let d = await s.tn.get({
     with_mutual_friends: i,
     with_mutual_friends_count: r && (null == i || !i),
     guild_id: a,
-    connections_role_id: o
+    connections_role_id: s
   },
   oldFormErrors: !0,
   signal: u

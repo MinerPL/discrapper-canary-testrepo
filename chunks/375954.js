@@ -1,6 +1,6 @@
 n(47120), n(789020), n(653041), n(177593);
-var r, i, a, o, s = n(392711),
-  l = n.n(s),
+var r, i, a, s, o = n(392711),
+  l = n.n(o),
   u = n(442837),
   c = n(570140),
   d = n(89892),
@@ -63,12 +63,12 @@ channelId: n,
 messageId: r,
 userId: i,
 emoji: a,
-reactionType: o
-  } = e, s = d.Z.get(n);
-  if (null == s || !(0, g.sm)(e))
+reactionType: s
+  } = e, o = d.Z.get(n);
+  if (null == o || !(0, g.sm)(e))
 return !1;
   let l = v.default.getId() === i;
-  s = s.update(r, n => 'MESSAGE_REACTION_ADD' === t ? n.addReaction(a, l, e.colors, o) : n.removeReaction(a, l, o)), d.Z.commit(s);
+  o = o.update(r, n => 'MESSAGE_REACTION_ADD' === t ? n.addReaction(a, l, e.colors, s) : n.removeReaction(a, l, s)), d.Z.commit(o);
 }
 
 function Z(e) {
@@ -77,13 +77,13 @@ type: t,
 messageData: n
   } = e, {
 message: r
-  } = n, i = (0, _.hc)(n), a = r.channelId, o = d.Z.getOrCreate(a);
-  if (!o.has(i))
+  } = n, i = (0, _.hc)(n), a = r.channelId, s = d.Z.getOrCreate(a);
+  if (!s.has(i))
 return !1;
-  o = o.update(i, e => {
+  s = s.update(i, e => {
 var n;
 return (null === (n = e.embeds) || void 0 === n ? void 0 : n.filter(h.K).length) > 0 && (e = e.set('embeds', [])), 'MESSAGE_SEND_FAILED_AUTOMOD' === t && (e = e.set('flags', (0, A.pj)(e.flags, w.iLy.EPHEMERAL))), e;
-  }), d.Z.commit(o);
+  }), d.Z.commit(s);
 }
 class Y extends(r = u.ZP.Store) {
   initialize() {
@@ -148,12 +148,12 @@ return null != this.getMessages(e).findNewest(e => e.author.id === (null == t ? 
 return k;
   }
 }
-o = 'MessageStore', (a = 'displayName') in(i = Y) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'MessageStore', (a = 'displayName') in(i = Y) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new Y(c.Z, {
+}) : i[a] = s, t.Z = new Y(c.Z, {
   BACKGROUND_SYNC_CHANNEL_MESSAGES: function(e) {
 let {
   changesByChannelId: t
@@ -184,18 +184,18 @@ let {
   isAfter: r,
   jump: i,
   hasMoreBefore: a,
-  hasMoreAfter: o,
-  messages: s,
+  hasMoreAfter: s,
+  messages: o,
   isStale: l,
   truncate: u
 } = e, c = d.Z.getOrCreate(t);
 c = c.loadComplete({
-  newMessages: s,
+  newMessages: o,
   isBefore: n,
   isAfter: r,
   jump: i,
   hasMoreBefore: a,
-  hasMoreAfter: o,
+  hasMoreAfter: s,
   cached: l,
   hasFetched: !0
 }), null != u && (n || r) && (!n || !r) && (c = c.truncate(n, r)), d.Z.commit(c);
@@ -216,10 +216,10 @@ let {
   focus: r,
   before: i,
   after: a,
-  limit: o,
-  truncate: s
+  limit: s,
+  truncate: o
 } = e, l = d.Z.getOrCreate(t);
-(null == n ? void 0 : n.present) ? l = l.jumpToPresent(o): (null == r ? void 0 : r.messageId) != null ? l = l.focusOnMessage(r.messageId) : (null == n ? void 0 : n.messageId) != null ? l = l.jumpToMessage(n.messageId, n.flash, n.offset, n.returnMessageId, n.jumpType) : (null != i || null != a) && (l = l.loadFromCache(null != i, o)), null != s && (null != i || null != a) && (null == i || null == a) && (l = l.truncate(null != i, null != a)), d.Z.commit(l);
+(null == n ? void 0 : n.present) ? l = l.jumpToPresent(s): (null == r ? void 0 : r.messageId) != null ? l = l.focusOnMessage(r.messageId) : (null == n ? void 0 : n.messageId) != null ? l = l.jumpToMessage(n.messageId, n.flash, n.offset, n.returnMessageId, n.jumpType) : (null != i || null != a) && (l = l.loadFromCache(null != i, s)), null != o && (null != i || null != a) && (null == i || null == a) && (l = l.truncate(null != i, null != a)), d.Z.commit(l);
   },
   LOCAL_MESSAGES_LOADED: function(e) {
 let t = d.Z.getOrCreate(e.channelId);

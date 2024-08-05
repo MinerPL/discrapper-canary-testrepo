@@ -3,8 +3,8 @@ n.d(t, {
 return _;
   }
 });
-var r, i, a, o, s = n(392711),
-  l = n.n(s),
+var r, i, a, s, o = n(392711),
+  l = n.n(o),
   u = n(442837),
   c = n(570140),
   d = n(246364);
@@ -14,7 +14,7 @@ description: '',
 formFields: []
   },
   E = {};
-class f extends(o = u.ZP.Store) {
+class f extends(s = u.ZP.Store) {
   get(e) {
 if (null != e)
   return E[e];

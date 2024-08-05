@@ -1,11 +1,11 @@
 n.d(t, {
   n: function() {
-return s;
+return o;
   }
 }), n(47120), n(724458), n(653041);
 var r, i, a = n(372817);
 
-function o(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -14,7 +14,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 (i = r || (r = {})).UP = 'ArrowUp', i.DOWN = 'ArrowDown', i.DROP = 'Shift', i.CANCEL = 'Escape';
-class s {
+class o {
   disconnect() {
 window.removeEventListener('keydown', this.handleDraggedElementKeyDown, {
   capture: !0
@@ -79,7 +79,7 @@ return null == this.monitor.getItemType() ? Array.from(e.values()) : Array.from(
 }, []);
   }
   constructor(e, t, n, r, i) {
-o(this, 'targetNodes', void 0), o(this, 'manager', void 0), o(this, 'previewer', void 0), o(this, 'announcer', void 0), o(this, 'currentHoveredNode', void 0), o(this, 'focusManager', void 0), o(this, 'actions', void 0), o(this, 'monitor', void 0), o(this, 'handleDraggedElementKeyDown', void 0), this.targetNodes = t, this.manager = n, this.previewer = r, this.announcer = i, this.handleDraggedElementKeyDown = async e => {
+s(this, 'targetNodes', void 0), s(this, 'manager', void 0), s(this, 'previewer', void 0), s(this, 'announcer', void 0), s(this, 'currentHoveredNode', void 0), s(this, 'focusManager', void 0), s(this, 'actions', void 0), s(this, 'monitor', void 0), s(this, 'handleDraggedElementKeyDown', void 0), this.targetNodes = t, this.manager = n, this.previewer = r, this.announcer = i, this.handleDraggedElementKeyDown = async e => {
   switch (e.key) {
     case 'ArrowUp':
       e.preventDefault(), e.stopPropagation(), this.hoverNode(await this.getPreviousDropTarget());

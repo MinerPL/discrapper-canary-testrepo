@@ -1,7 +1,7 @@
 var i = n(735250),
-  s = n(470079),
-  a = n(392711),
-  r = n.n(a),
+  a = n(470079),
+  s = n(392711),
+  r = n.n(s),
   l = n(481060),
   o = n(367907),
   c = n(626135),
@@ -15,7 +15,7 @@ let I = r().debounce(o.ZP.trackWithMetadata, 500),
 let {
   guild: t,
   title: n,
-  message: a,
+  message: s,
   image: r,
   type: d,
   imageMarginX: u,
@@ -24,10 +24,10 @@ let {
   undismissable: p,
   onDismissed: T,
   onClick: S,
-  cta: C,
-  ctaColor: f
+  cta: f,
+  ctaColor: C
 } = e;
-s.useEffect(() => {
+a.useEffect(() => {
   I(_.rMx.CHANNEL_NOTICE_VIEWED, {
     notice_type: d,
     guild_id: t.id
@@ -37,7 +37,7 @@ s.useEffect(() => {
   d
 ]);
 let N = null;
-'function' == typeof C ? N = C() : null != C && (N = (0, i.jsx)(l.Button, {
+'function' == typeof f ? N = f() : null != f && (N = (0, i.jsx)(l.Button, {
   className: E.btn,
   size: l.Button.Sizes.SMALL,
   onClick: () => {
@@ -48,8 +48,8 @@ let N = null;
     }), null == S || S();
   },
   fullWidth: !0,
-  color: f,
-  children: C
+  color: C,
+  children: f
 }));
 let A = null != u ? ''.concat(u, 'px') : '16px';
 return (0, i.jsxs)('div', {
@@ -92,7 +92,7 @@ return (0, i.jsxs)('div', {
         }) : null,
         (0, i.jsx)(l.Text, {
           variant: 'text-sm/normal',
-          children: a
+          children: s
         }),
         N
       ]

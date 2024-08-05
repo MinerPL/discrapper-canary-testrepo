@@ -9,8 +9,8 @@ return p;
 var r = n(470079),
   i = n(442837),
   a = n(524437),
-  o = n(781391),
-  s = n(740492),
+  s = n(781391),
+  o = n(740492),
   l = n(581883),
   u = n(626135),
   c = n(238302),
@@ -20,7 +20,7 @@ var r = n(470079),
   f = n(874893);
 let h = () => {
 let e = (0, i.e7)([d.Z], () => d.Z.gradientPreset),
-  t = (0, i.e7)([s.ZP], () => s.ZP.useSystemTheme === f.K.ON),
+  t = (0, i.e7)([o.ZP], () => o.ZP.useSystemTheme === f.K.ON),
   [n, a] = (0, r.useState)(t);
 return (0, r.useEffect)(() => {
   if (null == e)
@@ -32,7 +32,7 @@ return (0, r.useEffect)(() => {
   if (null == e)
     return;
   if ((0, c.kj)(), !!n)
-    (0, o.hi)(f.K.ON);
+    (0, s.hi)(f.K.ON);
 }, [
   e,
   n

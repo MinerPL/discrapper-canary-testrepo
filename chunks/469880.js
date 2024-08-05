@@ -9,8 +9,8 @@ var i = t(735250),
   l = t(932776),
   o = t(680298),
   r = t(289465),
-  c = t(689938),
-  d = t(549031);
+  d = t(689938),
+  c = t(549031);
 
 function u(e) {
   let {
@@ -32,7 +32,7 @@ children: T ? (0, i.jsx)(r.Z, {
     onClear: () => N('')
   }),
   inModal: !1,
-  title: c.Z.Messages.COMMANDS,
+  title: d.Z.Messages.COMMANDS,
   children: m.map((e, l) => (0, i.jsxs)(a.Fragment, {
     children: [
       (0, i.jsx)(o.Z, {
@@ -46,12 +46,12 @@ children: T ? (0, i.jsx)(r.Z, {
     ]
   }, e.id))
 }) : (0, i.jsx)(s.Card, {
-  className: d.emptyCard,
+  className: c.emptyCard,
   editable: !0,
   children: (0, i.jsx)(s.Text, {
     color: 'text-muted',
     variant: 'text-sm/normal',
-    children: c.Z.Messages.INTEGRATIONS_APPLICATION_NO_COMMANDS
+    children: d.Z.Messages.INTEGRATIONS_APPLICATION_NO_COMMANDS
   })
 })
   });

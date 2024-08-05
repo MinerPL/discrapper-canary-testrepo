@@ -4,8 +4,8 @@ var r = n(470079),
 t.Z = (e, t) => {
   let n = (0, i.Z)('profile_effect_debug_controls'),
 {
-  id: o,
-  preset: s,
+  id: s,
+  preset: o,
   increment: l,
   decrement: u
 } = (0, a.Z)(e);
@@ -19,7 +19,7 @@ return window.addEventListener('keydown', e), () => {
   window.removeEventListener('keydown', e);
 };
   }, []), {
-id: null != o ? o : null,
-preset: s
+id: null != s ? s : null,
+preset: o
   };
 };

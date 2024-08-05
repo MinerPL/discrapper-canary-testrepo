@@ -4,8 +4,8 @@ t.C = function(e) {
   var t = e.onClick,
 n = e.label,
 a = e.children,
-o = e.active,
-s = (0, i.default)({
+s = e.active,
+o = (0, i.default)({
   default: {
     button: {
       backgroundImage: 'linear-gradient(-180deg, #FFFFFF 0%, #E6E6E6 100%)',
@@ -27,10 +27,10 @@ s = (0, i.default)({
     }
   }
 }, {
-  active: o
+  active: s
 });
   return r.createElement('div', {
-style: s.button,
+style: o.button,
 onClick: t
   }, n || a);
 };

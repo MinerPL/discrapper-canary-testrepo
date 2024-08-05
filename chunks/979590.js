@@ -1,7 +1,7 @@
 ! function(t) {
   var n, r, i, a = /^\s+/,
-o = /\s+$/,
-s = 0,
+s = /\s+$/,
+o = 0,
 l = t.round,
 u = t.min,
 c = t.max,
@@ -20,12 +20,12 @@ var r = function(e) {
     },
     r = 1,
     i = null,
-    s = null,
+    o = null,
     l = null,
     d = !1,
     _ = !1;
   return 'string' == typeof e && (e = function(e) {
-    e = e.replace(a, '').replace(o, '').toLowerCase();
+    e = e.replace(a, '').replace(s, '').toLowerCase();
     var t, n = !1;
     if (L[e])
       e = L[e], n = !0;
@@ -111,20 +111,20 @@ var r = function(e) {
       g: 255 * P(t, 255),
       b: 255 * P(n, 255)
     };
-  }(e.r, e.g, e.b), d = !0, _ = '%' === String(e.r).substr(-1) ? 'prgb' : 'rgb') : V(e.h) && V(e.s) && V(e.v) ? (i = G(e.s), s = G(e.v), n = function(e, n, r) {
+  }(e.r, e.g, e.b), d = !0, _ = '%' === String(e.r).substr(-1) ? 'prgb' : 'rgb') : V(e.h) && V(e.s) && V(e.v) ? (i = G(e.s), o = G(e.v), n = function(e, n, r) {
     e = 6 * P(e, 360), n = P(n, 100), r = P(r, 100);
     var i = t.floor(e),
       a = e - i,
-      o = r * (1 - n),
-      s = r * (1 - a * n),
+      s = r * (1 - n),
+      o = r * (1 - a * n),
       l = r * (1 - (1 - a) * n),
       u = i % 6;
     return {
       r: 255 * [
         r,
+        o,
         s,
-        o,
-        o,
+        s,
         l,
         r
       ][u],
@@ -132,31 +132,31 @@ var r = function(e) {
         l,
         r,
         r,
-        s,
         o,
-        o
+        s,
+        s
       ][u],
       b: 255 * [
-        o,
-        o,
+        s,
+        s,
         l,
         r,
         r,
-        s
+        o
       ][u]
     };
-  }(e.h, i, s), d = !0, _ = 'hsv') : V(e.h) && V(e.s) && V(e.l) && (i = G(e.s), l = G(e.l), n = function(e, t, n) {
+  }(e.h, i, o), d = !0, _ = 'hsv') : V(e.h) && V(e.s) && V(e.l) && (i = G(e.s), l = G(e.l), n = function(e, t, n) {
     var r, i, a;
 
-    function o(e, t, n) {
+    function s(e, t, n) {
       return (n < 0 && (n += 1), n > 1 && (n -= 1), n < 1 / 6) ? e + (t - e) * 6 * n : n < 0.5 ? t : n < 2 / 3 ? e + (t - e) * (2 / 3 - n) * 6 : e;
     }
     if (e = P(e, 360), t = P(t, 100), n = P(n, 100), 0 === t)
       r = i = a = n;
     else {
-      var s = n < 0.5 ? n * (1 + t) : n + t - n * t,
-        l = 2 * n - s;
-      r = o(l, s, e + 1 / 3), i = o(l, s, e), a = o(l, s, e - 1 / 3);
+      var o = n < 0.5 ? n * (1 + t) : n + t - n * t,
+        l = 2 * n - o;
+      r = s(l, o, e + 1 / 3), i = s(l, o, e), a = s(l, o, e - 1 / 3);
     }
     return {
       r: 255 * r,
@@ -172,7 +172,7 @@ var r = function(e) {
     a: r
   };
 }(e);
-this._originalInput = e, this._r = r.r, this._g = r.g, this._b = r.b, this._a = r.a, this._roundA = l(100 * this._a) / 100, this._format = n.format || r.format, this._gradientType = n.gradientType, this._r < 1 && (this._r = l(this._r)), this._g < 1 && (this._g = l(this._g)), this._b < 1 && (this._b = l(this._b)), this._ok = r.ok, this._tc_id = s++;
+this._originalInput = e, this._r = r.r, this._g = r.g, this._b = r.b, this._a = r.a, this._roundA = l(100 * this._a) / 100, this._format = n.format || r.format, this._gradientType = n.gradientType, this._r < 1 && (this._r = l(this._r)), this._g < 1 && (this._g = l(this._g)), this._b < 1 && (this._b = l(this._b)), this._ok = r.ok, this._tc_id = o++;
   }
   _.prototype = {
 isDark: function() {
@@ -198,8 +198,8 @@ getBrightness: function() {
   return (299 * e.r + 587 * e.g + 114 * e.b) / 1000;
 },
 getLuminance: function() {
-  var e, n, r, i, a, o, s = this.toRgb();
-  return e = s.r / 255, n = s.g / 255, r = s.b / 255, i = e <= 0.03928 ? e / 12.92 : t.pow((e + 0.055) / 1.055, 2.4), a = n <= 0.03928 ? n / 12.92 : t.pow((n + 0.055) / 1.055, 2.4), 0.2126 * i + 0.7152 * a + 0.0722 * (o = r <= 0.03928 ? r / 12.92 : t.pow((r + 0.055) / 1.055, 2.4));
+  var e, n, r, i, a, s, o = this.toRgb();
+  return e = o.r / 255, n = o.g / 255, r = o.b / 255, i = e <= 0.03928 ? e / 12.92 : t.pow((e + 0.055) / 1.055, 2.4), a = n <= 0.03928 ? n / 12.92 : t.pow((n + 0.055) / 1.055, 2.4), 0.2126 * i + 0.7152 * a + 0.0722 * (s = r <= 0.03928 ? r / 12.92 : t.pow((r + 0.055) / 1.055, 2.4));
 },
 setAlpha: function(e) {
   return this._a = M(e), this._roundA = l(100 * this._a) / 100, this;
@@ -363,12 +363,12 @@ return _(e, t);
 e = P(e, 255), t = P(t, 255);
 var r = c(e, t, n = P(n, 255)),
   i = u(e, t, n),
-  a, o, s = (r + i) / 2;
+  a, s, o = (r + i) / 2;
 if (r == i)
-  a = o = 0;
+  a = s = 0;
 else {
   var l = r - i;
-  switch (o = s > 0.5 ? l / (2 - r - i) : l / (r + i), r) {
+  switch (s = o > 0.5 ? l / (2 - r - i) : l / (r + i), r) {
     case e:
       a = (t - n) / l + (t < n ? 6 : 0);
       break;
@@ -382,28 +382,28 @@ else {
 }
 return {
   h: a,
-  s: o,
-  l: s
+  s: s,
+  l: o
 };
   }
 
   function f(e, t, n) {
 e = P(e, 255), t = P(t, 255);
 var r, i, a = c(e, t, n = P(n, 255)),
-  o = u(e, t, n);
-var s = a - o;
-if (i = 0 === a ? 0 : s / a, a == o)
+  s = u(e, t, n);
+var o = a - s;
+if (i = 0 === a ? 0 : o / a, a == s)
   r = 0;
 else {
   switch (a) {
     case e:
-      r = (t - n) / s + (t < n ? 6 : 0);
+      r = (t - n) / o + (t < n ? 6 : 0);
       break;
     case t:
-      r = (n - e) / s + 2;
+      r = (n - e) / o + 2;
       break;
     case n:
-      r = (e - t) / s + 4;
+      r = (e - t) / o + 4;
   }
   r /= 6;
 }
@@ -548,13 +548,13 @@ return a;
 
   function D(e, t) {
 t = t || 6;
-for (var n = _(e).toHsv(), r = n.h, i = n.s, a = n.v, o = [], s = 1 / t; t--;)
-  o.push(_({
+for (var n = _(e).toHsv(), r = n.h, i = n.s, a = n.v, s = [], o = 1 / t; t--;)
+  s.push(_({
     h: r,
     s: i,
     v: a
-  })), a = (a + s) % 1;
-return o;
+  })), a = (a + o) % 1;
+return s;
   }
   _.equals = function(e, t) {
 return !!e && !!t && _(e).toRgbString() == _(t).toRgbString();
@@ -603,15 +603,15 @@ switch (i = !1, (r = function(e) {
 }
 return i;
   }, _.mostReadable = function(e, t, n) {
-var r, i, a, o, s = null,
+var r, i, a, s, o = null,
   l = 0;
-i = (n = n || {}).includeFallbackColors, a = n.level, o = n.size;
+i = (n = n || {}).includeFallbackColors, a = n.level, s = n.size;
 for (var u = 0; u < t.length; u++)
-  (r = _.readability(e, t[u])) > l && (l = r, s = _(t[u]));
-return _.isReadable(e, s, {
+  (r = _.readability(e, t[u])) > l && (l = r, o = _(t[u]));
+return _.isReadable(e, o, {
   level: a,
-  size: o
-}) || !i ? s : (n.includeFallbackColors = !1, _.mostReadable(e, [
+  size: s
+}) || !i ? o : (n.includeFallbackColors = !1, _.mostReadable(e, [
   '#fff',
   '#000'
 ], n));

@@ -14,20 +14,20 @@ var s = n(735250),
   I = n(985002),
   R = n(858719),
   C = n(780985),
-  p = n(880257),
-  g = n(631885),
+  g = n(880257),
+  p = n(631885),
   A = n(240351),
   m = n(792258),
   N = n(657825),
   f = n(198952),
-  S = n(329242),
-  h = n(895328),
+  h = n(329242),
+  S = n(895328),
   M = n(292352),
   x = n(981631),
   b = n(689938),
   O = n(661624);
 
-function L() {
+function P() {
   let e = a.useCallback(() => {
 (0, o.openModalLazy)(async () => {
   let {
@@ -51,26 +51,26 @@ children: (0, s.jsx)(o.CircleInformationIcon, {
   });
 }
 
-function P(e) {
+function v(e) {
   let {
 displayType: t
   } = e, n = a.useCallback(() => {
 (0, o.showToast)((0, o.createToast)(b.Z.Messages.FAMILY_CENTER_ERROR_GENERIC_TOAST, o.ToastType.FAILURE));
-  }, []), r = (0, p.Z)(), l = (0, R.ws)(t), c = (0, R.C7)(t), {
+  }, []), r = (0, g.Z)(), l = (0, R.ws)(t), c = (0, R.C7)(t), {
 loadMore: _,
 isMoreLoading: T
   } = (0, I.G)({
 onError: n
-  }), C = M.tx.get(t), [g, A] = a.useState(M.iB), f = (0, E.Xi)({
+  }), C = M.tx.get(t), [p, A] = a.useState(M.iB), f = (0, E.Xi)({
 location: 'family_center_activity_section_web'
-  }), S = a.useCallback(() => {
+  }), h = a.useCallback(() => {
 A(e => e + M.iB), _(t);
   }, [
 t,
 _
   ]);
   i()(C, 'No text for action type');
-  let h = C.sectionHeader(c),
+  let S = C.sectionHeader(c),
 x = a.useCallback(e => {
   let {
     row: t
@@ -86,13 +86,13 @@ x = a.useCallback(e => {
   l,
   C.timestampFormatter
 ]),
-L = a.useCallback(() => (0, s.jsxs)(s.Fragment, {
+P = a.useCallback(() => (0, s.jsxs)(s.Fragment, {
   children: [
     (0, s.jsx)(o.Text, {
       className: O.sectionHeader,
       variant: 'eyebrow',
       color: 'header-secondary',
-      children: h
+      children: S
     }),
     void 0 !== C.sectionDescription ? (0, s.jsx)(o.Text, {
       className: O.sectionDescription,
@@ -102,30 +102,30 @@ L = a.useCallback(() => (0, s.jsxs)(s.Fragment, {
     }) : null
   ]
 }), [
-  h,
+  S,
   C,
   r,
   f
 ]);
   if (0 === l.length)
 return null;
-  let P = l.slice(0, g);
+  let v = l.slice(0, p);
   return (0, s.jsxs)('div', {
 className: O.actionSection,
 children: [
-  L(),
+  P(),
   (0, s.jsx)('div', {
     className: O.actions,
     style: {
-      maxHeight: 65 * P.length
+      maxHeight: 65 * v.length
     },
-    children: P.map((e, t) => x({
+    children: v.map((e, t) => x({
       row: t
     }))
   }),
-  P.length !== c ? (0, s.jsx)(o.Clickable, {
+  v.length !== c ? (0, s.jsx)(o.Clickable, {
     className: O.loadMoreBar,
-    onClick: S,
+    onClick: h,
     role: 'button',
     children: T ? (0, s.jsx)(o.Spinner, {
       type: o.Spinner.Type.PULSING_ELLIPSIS,
@@ -134,21 +134,21 @@ children: [
       className: O.loadMore,
       variant: 'text-sm/bold',
       children: b.Z.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({
-        pageSize: Math.min(c - P.length, M.iB)
+        pageSize: Math.min(c - v.length, M.iB)
       })
     })
   }) : null
 ]
   });
 }
-let v = () => {
-let e = (0, p.Z)(),
-  t = (0, g.mq)(M.ne.ACTIVE),
+let L = () => {
+let e = (0, g.Z)(),
+  t = (0, p.mq)(M.ne.ACTIVE),
   n = (0, T.o)(b.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
     activeLinks: t.length
   }), b.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
   a = (0, u.Qr)(!!e),
-  r = (0, g.Rd)(a);
+  r = (0, p.Rd)(a);
 return e && t.length > 1 ? (0, s.jsx)(o.Text, {
   variant: 'eyebrow',
   children: r
@@ -182,7 +182,7 @@ return void 0 === r ? null : (0, s.jsxs)('div', {
     (0, s.jsxs)('div', {
       className: O.headerText,
       children: [
-        (0, s.jsx)(S.Z, {
+        (0, s.jsx)(h.Z, {
           user: r
         }),
         void 0 !== n ? (0, s.jsx)(o.Text, {
@@ -196,7 +196,7 @@ return void 0 === r ? null : (0, s.jsxs)('div', {
 });
   },
   D = () => {
-let e = (0, g.mq)(M.ne.ACTIVE),
+let e = (0, p.mq)(M.ne.ACTIVE),
   t = (0, l.e7)([_.Z], () => _.Z.getSelectedTeenId()),
   {
     selectTeenUser: n
@@ -229,7 +229,7 @@ return (0, s.jsx)(o.Select, {
   B = e => {
 let {
   userId: t
-} = e, n = (0, p.Z)(), a = (0, g.mq)(M.ne.ACTIVE), r = (0, u.Qr)(!!n), i = (0, g.Rd)(r);
+} = e, n = (0, g.Z)(), a = (0, p.mq)(M.ne.ACTIVE), r = (0, u.Qr)(!!n), i = (0, p.Rd)(r);
 return n && 1 !== a.length ? (0, s.jsx)(D, {}) : (0, s.jsx)(Z, {
   userId: t,
   subText: i
@@ -238,15 +238,15 @@ return n && 1 !== a.length ? (0, s.jsx)(D, {}) : (0, s.jsx)(Z, {
 t.Z = e => {
   let {
 user: t
-  } = e, n = Array.from(M.tx.entries()), a = (0, R.kE)(), r = (0, u.t3)(), i = (0, g.Rd)(r);
+  } = e, n = Array.from(M.tx.entries()), a = (0, R.kE)(), r = (0, u.t3)(), i = (0, p.Rd)(r);
   return (0, s.jsxs)('div', {
 className: O.container,
 children: [
   (0, s.jsxs)('div', {
     className: O.connectedCounter,
     children: [
-      (0, s.jsx)(v, {}),
-      (0, s.jsx)(L, {})
+      (0, s.jsx)(L, {}),
+      (0, s.jsx)(P, {})
     ]
   }),
   (0, s.jsxs)('div', {
@@ -275,10 +275,10 @@ children: [
             className: O.activityOverview,
             children: a ? n.map(e => {
               let [t] = e;
-              return (0, s.jsx)(P, {
+              return (0, s.jsx)(v, {
                 displayType: t
               }, ''.concat(t, '-list'));
-            }) : (0, s.jsx)(h.Z, {
+            }) : (0, s.jsx)(S.Z, {
               className: O.emptyActivity,
               text: null != i ? i : ''
             })

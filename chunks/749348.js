@@ -12,5 +12,6 @@ e.exports = {
   roleTooltipItem: 'roleTooltipItem_f51af4',
   addRoleContainer: 'addRoleContainer_f51af4',
   guildIcon: 'guildIcon_f51af4',
-  loadingSpinner: 'loadingSpinner_f51af4'
+  loadingSpinner: 'loadingSpinner_f51af4',
+  noRoles: 'noRoles_f51af4'
 };

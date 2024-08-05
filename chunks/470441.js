@@ -5,8 +5,8 @@ return p;
 });
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(748780),
   u = n(846519),
   c = n(215569),
@@ -49,7 +49,7 @@ l.Z.spring(this.state.animation, {
   }
   render() {
 return (0, i.jsx)(l.Z.div, {
-  className: s()(E.videoBackgroundTransition, this.props.className),
+  className: o()(E.videoBackgroundTransition, this.props.className),
   style: {
     opacity: this.state.animation
   },
@@ -104,11 +104,11 @@ let {
   layout: r,
   focused: a
 } = this.props, {
-  idle: o
+  idle: s
 } = this.state;
 return (0, i.jsx)(d.Z, {
-  className: s()(E.video, h[r], {
-    [E.idle]: o
+  className: o()(E.video, h[r], {
+    [E.idle]: s
   }),
   direction: d.Z.Direction.VERTICAL,
   justify: d.Z.Justify.CENTER,
@@ -118,7 +118,7 @@ return (0, i.jsx)(d.Z, {
     children: [
       this.renderBackground(),
       (0, i.jsxs)(d.Z, {
-        className: s()(E.videoInner, {
+        className: o()(E.videoInner, {
           [E.focused]: a
         }),
         direction: d.Z.Direction.VERTICAL,
@@ -151,7 +151,7 @@ let {
   animated: n
 } = this.props;
 return (0, i.jsx)('div', {
-  className: s()(E.videoHeight, h[e], t, {
+  className: o()(E.videoHeight, h[e], t, {
     [E.animated]: n
   }),
   children: this.renderContents()

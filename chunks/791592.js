@@ -6,8 +6,8 @@ return o;
 var i = n(735250);
 n(470079);
 var a = n(481060),
-  l = n(26151),
-  s = n(871499),
+  s = n(26151),
+  l = n(871499),
   r = n(689938);
 
 function o(e) {
@@ -15,10 +15,10 @@ function o(e) {
 channel: t,
 ...n
   } = e;
-  return (0, i.jsx)(s.d, {
+  return (0, i.jsx)(l.d, {
 ...n,
 iconComponent: a.CloseSmallIcon,
 label: r.Z.Messages.DISMISS,
-onClick: () => l.Z.stopRinging(t.id)
+onClick: () => s.Z.stopRinging(t.id)
   });
 }

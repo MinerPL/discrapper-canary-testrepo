@@ -1,1 +1,1 @@
-e.exports = t.p + 'a64ea373b47e9a224206.svg';
+e.exports = '/assets/a64ea373b47e9a224206.svg';

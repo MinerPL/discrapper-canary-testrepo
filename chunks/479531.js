@@ -1,12 +1,12 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   }
 });
 var r = n(544891),
   i = n(981631),
   a = n(689938);
-class o extends r.sX {
+class s extends r.sX {
   constructor(e, t) {
 super(e, t, null != t ? a.Z.Messages.FORM_ERROR_GENERIC_WITH_DETAILS.format({
   statusPageURL: i.yXt.STATUS,

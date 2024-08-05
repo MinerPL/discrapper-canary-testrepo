@@ -1,23 +1,23 @@
 n.d(t, {
   Z: function() {
-return s;
+return o;
   }
 });
 var r = n(735250);
 n(470079);
 var i = n(266067),
   a = n(990547),
-  o = n(213609);
+  s = n(213609);
 
-function s(e) {
+function o(e) {
   var t;
   let {
 impressionName: n,
-impressionProperties: s,
+impressionProperties: o,
 disableTrack: l,
 ...u
-  } = e, c = s;
-  return 'function' == typeof c && (c = c(u)), (0, o.Z)({
+  } = e, c = o;
+  return 'function' == typeof c && (c = c(u)), (0, s.Z)({
 type: a.ImpressionTypes.PAGE,
 name: n,
 properties: c

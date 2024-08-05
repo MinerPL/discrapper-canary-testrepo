@@ -15,8 +15,8 @@ return p;
 return P;
   }
 }), n(653041), n(47120);
-var r, i, a, o, s = n(392711),
-  l = n.n(s),
+var r, i, a, s, o = n(392711),
+  l = n.n(o),
   u = n(442837),
   c = n(759174),
   d = n(570140),
@@ -88,10 +88,10 @@ D(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, i + a);
 function y(e) {
   var t, n, r, i;
   let a = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-o = R(e.guild_scheduled_event_exception_id),
-s = (null === (n = A[e.guild_scheduled_event_id]) || void 0 === n ? void 0 : null === (t = n[o]) || void 0 === t ? void 0 : t[e.user_id]) != null,
+s = R(e.guild_scheduled_event_exception_id),
+o = (null === (n = A[e.guild_scheduled_event_id]) || void 0 === n ? void 0 : null === (t = n[s]) || void 0 === t ? void 0 : t[e.user_id]) != null,
 l = e.user_id === _.default.getId();
-  (s || !l) && (null === (i = A[e.guild_scheduled_event_id]) || void 0 === i || null === (r = i[o]) || void 0 === r || delete r[e.user_id], function(e) {
+  (o || !l) && (null === (i = A[e.guild_scheduled_event_id]) || void 0 === i || null === (r = i[s]) || void 0 === r || delete r[e.user_id], function(e) {
 var t, n;
 let r = R(e.guild_scheduled_event_exception_id),
   i = null !== (n = null === (t = N[e.guild_scheduled_event_id]) || void 0 === t ? void 0 : t[r]) && void 0 !== n ? n : 0,
@@ -171,16 +171,16 @@ let n = _.default.getId(),
   r = this.getRsvp(e, null, n),
   i = this.getRsvp(e, t, n),
   a = (null == r ? void 0 : r.response) === h.gv.INTERESTED,
-  o = (null == i ? void 0 : i.response) === h.gv.INTERESTED,
-  s = (null == i ? void 0 : i.response) === h.gv.UNINTERESTED;
-return a && !s || o;
+  s = (null == i ? void 0 : i.response) === h.gv.INTERESTED,
+  o = (null == i ? void 0 : i.response) === h.gv.UNINTERESTED;
+return a && !o || s;
   }
   getUserCount(e, t) {
 var n, r, i, a;
 if (null == e)
   return 0;
-let o = null !== (i = null === (n = N[e]) || void 0 === n ? void 0 : n[S]) && void 0 !== i ? i : 0;
-return null == t ? o : o - (null !== (a = null === (r = N[e]) || void 0 === r ? void 0 : r[t]) && void 0 !== a ? a : 0);
+let s = null !== (i = null === (n = N[e]) || void 0 === n ? void 0 : n[S]) && void 0 !== i ? i : 0;
+return null == t ? s : s - (null !== (a = null === (r = N[e]) || void 0 === r ? void 0 : r[t]) && void 0 !== a ? a : 0);
   }
   hasUserCount(e, t) {
 var n;
@@ -202,12 +202,12 @@ let i = R(t);
 return null !== (r = null === (n = A[e]) || void 0 === n ? void 0 : n[i]) && void 0 !== r ? r : {};
   }
 }
-o = 'GuildScheduledEventStore', (a = 'displayName') in(i = x) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'GuildScheduledEventStore', (a = 'displayName') in(i = x) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.ZP = new x(d.Z, {
+}) : i[a] = s, t.ZP = new x(d.Z, {
   CONNECTION_OPEN: function(e) {
 let {
   guilds: t
@@ -257,17 +257,17 @@ let {
   userId: r,
   guildEventId: i,
   guildId: a,
-  guildEventExceptionId: o,
-  response: s
-} = e, l = R(o), u = null === (n = A[i]) || void 0 === n ? void 0 : null === (t = n[l]) || void 0 === t ? void 0 : t[r];
+  guildEventExceptionId: s,
+  response: o
+} = e, l = R(s), u = null === (n = A[i]) || void 0 === n ? void 0 : null === (t = n[l]) || void 0 === t ? void 0 : t[r];
 null != u && y(u, !1);
 let c = E.ZP.getMember(a, r);
 return C({
   user_id: r,
   guild_scheduled_event_id: i,
   member: null != c ? c : void 0,
-  guild_scheduled_event_exception_id: o,
-  response: s
+  guild_scheduled_event_exception_id: s,
+  response: o
 }), !0;
   },
   GUILD_SCHEDULED_EVENT_USER_REMOVE: function(e) {

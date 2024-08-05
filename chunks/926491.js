@@ -1,5 +1,5 @@
 n(47120), n(653041);
-var r, i, a, o, s = n(956067),
+var r, i, a, s, o = n(956067),
   l = n(442837),
   u = n(570140),
   c = n(287328),
@@ -31,7 +31,7 @@ let e = c.Z.database();
 if (null == e)
   return;
 g = 2;
-let t = await (0, d.gs)('StickerStore.loadSavedGuildStickers', () => s.Z.timeAsync('\uD83D\uDCBE', 'loadSavedGuildStickers', () => _.Z.getAsync(e)));
+let t = await (0, d.gs)('StickerStore.loadSavedGuildStickers', () => o.Z.timeAsync('\uD83D\uDCBE', 'loadSavedGuildStickers', () => _.Z.getAsync(e)));
 if (null != t)
   u.Z.dispatch({
     type: 'CACHED_STICKERS_LOADED',
@@ -157,12 +157,12 @@ return L(), C;
 return L(), C.get(e);
   }
 }
-o = 'StickersStore', (a = 'displayName') in(i = x) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'StickersStore', (a = 'displayName') in(i = x) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new x(u.Z, {
+}) : i[a] = s, t.Z = new x(u.Z, {
   BACKGROUND_SYNC: () => {
 N = null, A = new Map(), C = new Map(), g = 0;
   },

@@ -1,6 +1,6 @@
-var i, s;
+var i, a;
 n.d(t, {
   F: function() {
 return i;
   }
-}), (s = i || (i = {})).AGE_GATE = 'age-gate', s.CHOOSE_TEMPLATE = 'choose-template', s.CUSTOMIZE_GUILD = 'customize-server', s.CHANNEL_PROMPT = 'channel-prompt', s.JOIN_GUILD = 'join-server', s.CREATION_INTENT = 'creation-intent', s.COMPLETE = 'complete';
+}), (a = i || (i = {})).AGE_GATE = 'age-gate', a.CHOOSE_TEMPLATE = 'choose-template', a.CUSTOMIZE_GUILD = 'customize-server', a.CHANNEL_PROMPT = 'channel-prompt', a.JOIN_GUILD = 'join-server', a.CREATION_INTENT = 'creation-intent', a.COMPLETE = 'complete';

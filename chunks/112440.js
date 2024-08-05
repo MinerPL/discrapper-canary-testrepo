@@ -1,13 +1,13 @@
 t.d(n, {
   Z: function() {
-return r;
+return l;
   }
 });
 var i = t(735250);
 t(470079);
 var a = t(481060);
 
-function r() {
+function l() {
   (0, a.openModalLazy)(async () => {
 let {
   default: e

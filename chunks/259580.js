@@ -2,8 +2,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(481060),
-  s = n(325767),
+  s = n(481060),
+  o = n(325767),
   l = n(509682);
 let u = {
 UP: l.directionUp,
@@ -24,13 +24,13 @@ let {
   ...h
 } = e, {
   enabled: p
-} = (0, o.useRedesignIconContext)(), m = t;
+} = (0, s.useRedesignIconContext)(), m = t;
 if (!0 === f ? m = u.DOWN : !1 === f && (m = u.RIGHT), p) {
   let e = {
-    [u.UP]: o.ChevronSmallUpIcon,
-    [u.DOWN]: o.ChevronSmallDownIcon,
-    [u.LEFT]: o.ChevronSmallLeftIcon,
-    [u.RIGHT]: o.ChevronSmallRightIcon
+    [u.UP]: s.ChevronSmallUpIcon,
+    [u.DOWN]: s.ChevronSmallDownIcon,
+    [u.LEFT]: s.ChevronSmallLeftIcon,
+    [u.RIGHT]: s.ChevronSmallRightIcon
   } [m];
   return (0, r.jsx)(e, {
     ...h,
@@ -47,7 +47,7 @@ return (0, r.jsx)('svg', {
   width: n,
   height: i,
   viewBox: '0 0 24 24',
-  ...(0, s.Z)(h),
+  ...(0, o.Z)(h),
   children: (0, r.jsx)('path', {
     className: E,
     fill: 'none',

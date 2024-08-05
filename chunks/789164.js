@@ -6,8 +6,8 @@ return u;
 var r = n(735250),
   i = n(470079),
   a = n(337033),
-  o = n(15127),
-  s = n(512983),
+  s = n(15127),
+  o = n(512983),
   l = n(505903);
 let u = i.forwardRef(function(e, t) {
   var n;
@@ -30,7 +30,7 @@ children: null != _ ? (0, r.jsx)(a.y, {
     className: l.sectionTitle,
     children: [
       E,
-      null != _ ? (0, r.jsx)(s.v, {
+      null != _ ? (0, r.jsx)(o.v, {
         tag: p,
         id: T,
         htmlFor: h,
@@ -42,7 +42,7 @@ children: null != _ ? (0, r.jsx)(a.y, {
   }),
   children: (0, r.jsx)('div', {
     className: l.children,
-    children: (0, r.jsx)(o.ol, {
+    children: (0, r.jsx)(s.ol, {
       titleId: T,
       children: u
     })

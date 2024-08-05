@@ -33,8 +33,8 @@ return E;
 var r = n(570140),
   i = n(601070),
   a = n(131704),
-  o = n(592125),
-  s = n(324067),
+  s = n(592125),
+  o = n(324067),
   l = n(594174),
   u = n(709054),
   c = n(981631);
@@ -59,10 +59,10 @@ function _(e) {
   e.isCategory() ? ! function(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
   n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-  r = o.Z.getChannel(e);
+  r = s.Z.getChannel(e);
 if (null == r || null == r.guild_id)
   return;
-let l = s.Z.getCategories(r.guild_id);
+let l = o.Z.getCategories(r.guild_id);
 if (null == l[e])
   return;
 let u = l[e].filter(e => {

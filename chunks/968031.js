@@ -10,9 +10,9 @@ var o = s(735250),
   _ = s(100527),
   r = s(906732),
   T = s(197115),
-  p = s(594174),
-  E = s(626135),
-  n = s(74538),
+  E = s(594174),
+  n = s(626135),
+  p = s(74538),
   M = s(300284),
   f = s(981631),
   d = s(474936),
@@ -27,11 +27,11 @@ transitionState: L,
 onClose: m,
 title: h,
 description: u
-  } = e, I = (0, t.e7)([p.default], () => p.default.getCurrentUser()), {
+  } = e, I = (0, t.e7)([E.default], () => E.default.getCurrentUser()), {
 analyticsLocations: R
   } = (0, r.ZP)(l, _.Z.PROFILE_THEME_UPSELL_MODAL);
   a.useEffect(() => {
-E.default.track(f.rMx.PREMIUM_UPSELL_VIEWED, {
+n.default.track(f.rMx.PREMIUM_UPSELL_VIEWED, {
   type: d.cd.PROFILE_THEME_UPSELL_MODAL,
   location_stack: l
 });
@@ -83,7 +83,7 @@ children: (0, o.jsxs)(i.ModalRoot, {
         (0, o.jsx)(T.Z, {
           subscriptionTier: d.Si.TIER_2,
           size: i.Button.Sizes.SMALL,
-          buttonText: n.ZP.isPremium(I) ? S.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : S.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
+          buttonText: p.ZP.isPremium(I) ? S.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : S.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
         }),
         (0, o.jsx)(i.Button, {
           onClick: () => {

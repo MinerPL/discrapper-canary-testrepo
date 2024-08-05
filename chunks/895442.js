@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return c;
+return o;
   }
 });
 var l = n(592125),
@@ -19,7 +19,7 @@ return null != t && t.isStaff();
   });
 }
 
-function c(e, t) {
+function o(e, t) {
   var n;
   if (!(null === (n = i.default.getCurrentUser()) || void 0 === n ? void 0 : n.isStaff()))
 return !1;

@@ -9,22 +9,22 @@ var r = n(341702),
 function a(e, t) {
   if (i.bN.areStylesDisabled(e))
 return [];
-  let [n, a] = t, o = [];
+  let [n, a] = t, s = [];
   if (!i.aj.isType(n, 'line') || null == n.codeBlockState)
-return o;
+return s;
   let {
-hljsTypes: s,
+hljsTypes: o,
 isStyledCodeBlockLine: l
   } = n.codeBlockState;
-  if (null == s || 0 === s.length || !l)
+  if (null == o || 0 === o.length || !l)
 return [];
-  for (let t of s) {
-let s = n.children.map(e => i.LC.isText(e) ? e.text : null);
-o.push({
+  for (let t of o) {
+let o = n.children.map(e => i.LC.isText(e) ? e.text : null);
+s.push({
   hljsTypes: t.types,
-  anchor: (0, r.t)(e, a, s, t.start),
-  focus: (0, r.t)(e, a, s, t.end)
+  anchor: (0, r.t)(e, a, o, t.start),
+  focus: (0, r.t)(e, a, o, t.end)
 });
   }
-  return o;
+  return s;
 }

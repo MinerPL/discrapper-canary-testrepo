@@ -6,8 +6,8 @@ return h;
 var r = n(570140),
   i = n(367907),
   a = n(932724),
-  o = n(634041),
-  s = n(647177),
+  s = n(634041),
+  o = n(647177),
   l = n(592125),
   u = n(131951),
   c = n(19780),
@@ -28,17 +28,17 @@ let t = (0, a.P)(_.default.getCurrentUser());
 return {
   video_device_name: null === (e = u.Z.getVideoDevices()[u.Z.getVideoDeviceId()]) || void 0 === e ? void 0 : e.name,
   video_hardware_scaling_enabled: u.Z.getHardwareEncoding(),
-  video_effect_type: (0, s.TA)(t),
-  video_effect_detail: (0, s.V$)(t)
+  video_effect_type: (0, o.TA)(t),
+  video_effect_detail: (0, o.V$)(t)
 };
   };
 
 function h(e, t, n, i) {
   let a = d.Z.getVoiceChannelId(),
-s = l.Z.getChannel(a);
-  if (null == t && null != a && null != s) {
-let t = E(s, i);
-if (e(), o.Z.hasUsedBackgroundInCall) {
+o = l.Z.getChannel(a);
+  if (null == t && null != a && null != o) {
+let t = E(o, i);
+if (e(), s.Z.hasUsedBackgroundInCall) {
   let e = {
     ...t,
     ...f()

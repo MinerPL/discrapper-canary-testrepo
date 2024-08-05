@@ -6,8 +6,8 @@ return E;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  o = n(442837),
   l = n(481060),
   u = n(204197),
   c = n(357355),
@@ -15,7 +15,7 @@ var r = n(735250),
   _ = n(876925);
 
 function E() {
-  let e = (0, s.e7)([c.Z], () => c.Z.affinities.slice(0, 3)),
+  let e = (0, o.e7)([c.Z], () => c.Z.affinities.slice(0, 3)),
 t = e[0],
 {
   avatarSrc: n,
@@ -42,7 +42,7 @@ children: [
     ...a
   }),
   (0, r.jsx)(l.Text, {
-    className: o()(_.text),
+    className: s()(_.text),
     variant: 'text-sm/normal',
     color: 'always-white',
     children: f

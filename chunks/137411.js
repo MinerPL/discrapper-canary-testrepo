@@ -7,12 +7,12 @@ var r = n(735250);
 n(470079);
 var i = n(331595),
   a = n(249849);
-let o = [
+let s = [
 '#7fb134',
 '#bcef42',
 '#f0f0f0'
   ],
-  s = [
+  o = [
 '#816bee',
 '#b79cf8'
   ],
@@ -58,11 +58,11 @@ let {
   primaryColorsTransformed: h,
   secondaryColorsTransformed: p
 } = (0, a.s)({
-  primaryBaseColors: o,
+  primaryBaseColors: s,
   primaryTintColor: _,
   primaryTintLuminances: l,
   primaryLuminanceWeights: u,
-  secondaryBaseColors: s,
+  secondaryBaseColors: o,
   secondaryTintColor: E,
   secondaryTintLuminances: c,
   secondaryLuminanceWeights: d

@@ -3,7 +3,7 @@ a.r(s), a.d(s, {
 return R;
   }
 }), a(47120);
-var o, l, t = a(735250),
+var o, t, l = a(735250),
   n = a(470079),
   r = a(481060),
   c = a(749210),
@@ -14,7 +14,7 @@ var o, l, t = a(735250),
   d = a(981631),
   S = a(689938),
   N = a(882555);
-(l = o || (o = {}))[l.INITIAL = 0] = 'INITIAL', l[l.OTHER_REASON = 1] = 'OTHER_REASON';
+(t = o || (o = {}))[t.INITIAL = 0] = 'INITIAL', t[t.OTHER_REASON = 1] = 'OTHER_REASON';
 
 function O() {
   return [{
@@ -53,14 +53,14 @@ function R(e) {
   let {
 guildId: s,
 user: o,
-location: l,
+location: t,
 userIds: _,
 onBanMultiple: R,
 transitionState: M,
 onClose: C,
 canBulkBan: I = !1
   } = e, [m, T] = n.useState(A), [b, g] = n.useState(''), [p, h] = n.useState(0), [x, Z] = n.useState(!1), B = (0, i.sE)(s, {
-location: l,
+location: t,
 targetUserId: null == o ? void 0 : o.id,
 targets: _
   }), L = n.useCallback(() => {
@@ -119,48 +119,48 @@ count: null == _ ? void 0 : _.size
   }) : null == o ? '' : S.Z.Messages.BAN_CONFIRM_TITLE.format({
 username: '@'.concat(E.ZP.getName(s, null, o))
   });
-  return (0, t.jsxs)(r.ModalRoot, {
+  return (0, l.jsxs)(r.ModalRoot, {
 transitionState: M,
 children: [
-  (0, t.jsx)(r.ModalHeader, {
+  (0, l.jsx)(r.ModalHeader, {
     separator: !1,
-    children: (0, t.jsx)(r.Heading, {
+    children: (0, l.jsx)(r.Heading, {
       variant: 'heading-md/semibold',
       children: D
     })
   }),
-  (0, t.jsxs)(r.ModalContent, {
+  (0, l.jsxs)(r.ModalContent, {
     className: N.modalContent,
     children: [
-      (0, t.jsxs)(u.Z, {
+      (0, l.jsxs)(u.Z, {
         autoPlay: !0,
         loop: !0,
         className: N.spacing,
         width: 400,
         children: [
-          (0, t.jsx)('source', {
+          (0, l.jsx)('source', {
             src: a(942314),
             type: 'video/webm'
           }),
-          (0, t.jsx)('source', {
+          (0, l.jsx)('source', {
             src: a(888322),
             type: 'video/mp4'
           }),
-          (0, t.jsx)('img', {
+          (0, l.jsx)('img', {
             alt: '',
             src: a(860724)
           })
         ]
       }),
-      (0, t.jsxs)(r.FormItem, {
+      (0, l.jsxs)(r.FormItem, {
         title: S.Z.Messages.FORM_LABEL_REASON_BAN,
         className: N.spacing,
         children: [
-          x && (0, t.jsx)(r.FormErrorBlock, {
+          x && (0, l.jsx)(r.FormErrorBlock, {
             className: N.error,
             children: S.Z.Messages.BAN_REASON_REQUIRED_ERROR
           }),
-          (0, t.jsx)(r.Sequencer, {
+          (0, l.jsx)(r.Sequencer, {
             steps: [
               0,
               1
@@ -169,24 +169,24 @@ children: [
             children: (e => {
               switch (p) {
                 case 0:
-                  return (0, t.jsxs)(t.Fragment, {
+                  return (0, l.jsxs)(l.Fragment, {
                     children: [
-                      (0, t.jsx)(r.RadioGroup, {
+                      (0, l.jsx)(r.RadioGroup, {
                         value: b,
                         options: e,
                         onChange: j,
                         radioItemClassName: N.radioItemStyles
                       }),
-                      (0, t.jsxs)(r.Clickable, {
+                      (0, l.jsxs)(r.Clickable, {
                         onClick: k,
                         className: N.banReasonOtherClickable,
                         children: [
-                          (0, t.jsx)(r.Text, {
+                          (0, l.jsx)(r.Text, {
                             variant: 'text-md/medium',
                             color: 'none',
                             children: S.Z.Messages.OTHER
                           }),
-                          (0, t.jsx)(r.ChevronSmallRightIcon, {
+                          (0, l.jsx)(r.ChevronSmallRightIcon, {
                             color: 'currentColor',
                             size: 'xs'
                           })
@@ -195,7 +195,7 @@ children: [
                     ]
                   });
                 case 1:
-                  return (0, t.jsx)(r.TextArea, {
+                  return (0, l.jsx)(r.TextArea, {
                     maxLength: d.GNZ,
                     onChange: v,
                     value: b,
@@ -207,10 +207,10 @@ children: [
           })
         ]
       }),
-      (0, t.jsx)(r.FormItem, {
+      (0, l.jsx)(r.FormItem, {
         title: S.Z.Messages.FORM_LABEL_DELETE_MESSAGE_HISTORY,
         className: N.spacing,
-        children: (0, t.jsx)(r.SingleSelect, {
+        children: (0, l.jsx)(r.SingleSelect, {
           options: O(),
           value: m,
           onChange: f
@@ -221,17 +221,17 @@ children: [
   (() => {
     switch (p) {
       case 0:
-        return (0, t.jsxs)(r.ModalFooter, {
+        return (0, l.jsxs)(r.ModalFooter, {
           className: N.footer,
           children: [
-            (0, t.jsx)(r.Button, {
+            (0, l.jsx)(r.Button, {
               type: 'button',
               look: r.Button.Looks.LINK,
               color: r.Button.Colors.PRIMARY,
               onClick: C,
               children: S.Z.Messages.CANCEL
             }),
-            (0, t.jsx)(r.Button, {
+            (0, l.jsx)(r.Button, {
               type: 'submit',
               color: r.Button.Colors.RED,
               size: r.Button.Sizes.SMALL,
@@ -241,10 +241,10 @@ children: [
           ]
         });
       case 1:
-        return (0, t.jsxs)(r.ModalFooter, {
+        return (0, l.jsxs)(r.ModalFooter, {
           className: N.footerStepped,
           children: [
-            (0, t.jsx)(r.Button, {
+            (0, l.jsx)(r.Button, {
               className: N.cancel,
               innerClassName: N.cancel,
               type: 'button',
@@ -254,7 +254,7 @@ children: [
               onClick: H,
               children: S.Z.Messages.BACK
             }),
-            (0, t.jsx)(r.Button, {
+            (0, l.jsx)(r.Button, {
               type: 'submit',
               color: r.Button.Colors.RED,
               size: r.Button.Sizes.SMALL,

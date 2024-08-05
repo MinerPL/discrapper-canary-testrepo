@@ -2,8 +2,8 @@ let r;
 n(242167), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817), n(411104), n(773603);
 var i = n(512722),
   a = n.n(i),
-  o = n(392711),
-  s = n.n(o),
+  s = n(392711),
+  o = n.n(s),
   l = n(544891),
   u = n(992774),
   c = n(649754),
@@ -28,7 +28,7 @@ let R = O.getContext('2d');
 function C() {
   N.stop(), null != r && (c.Z.removeSink(r, A), r = null);
 }
-let y = s().debounce((e, t, n, r) => {
+let y = o().debounce((e, t, n, r) => {
   D(e, (0, I.V9)({
 streamType: null != t ? T.lo.GUILD : T.lo.CALL,
 guildId: t,
@@ -48,18 +48,18 @@ try {
     return (p.isPlatformEmbedded ? function(e, t) {
       let n = (0, u.zS)(),
         i = (null == n ? void 0 : n.getNextVideoOutputFrame) != null;
-      return new Promise((a, o) => {
-        let s = e => {
+      return new Promise((a, s) => {
+        let o = e => {
           try {
             null != e && t(e) && a(e);
           } catch (e) {
-            o(e);
+            s(e);
           }
         };
-        i ? n.getNextVideoOutputFrame(e).then(s, t => {
+        i ? n.getNextVideoOutputFrame(e).then(o, t => {
           if (r === e)
             throw t;
-        }) : c.Z.addSink(e, A, s);
+        }) : c.Z.addSink(e, A, o);
       }).finally(() => {
         !i && c.Z.removeSink(e, A);
       });
@@ -70,13 +70,13 @@ try {
       let {
         width: r,
         height: i
-      } = n.getVideoTracks()[0].getSettings(), a = document.createElement('video'), o = document.createElement('canvas');
-      a.width = o.width = null != r ? r : 512, a.height = o.height = null != i ? i : 288, a.srcObject = n, a.play();
-      let s = o.getContext('2d');
+      } = n.getVideoTracks()[0].getSettings(), a = document.createElement('video'), s = document.createElement('canvas');
+      a.width = s.width = null != r ? r : 512, a.height = s.height = null != i ? i : 288, a.srcObject = n, a.play();
+      let o = s.getContext('2d');
       return new Promise((e, n) => {
         a.ontimeupdate = () => {
-          null == s || s.drawImage(a, 0, 0, o.width, o.height);
-          let r = null == s ? void 0 : s.getImageData(0, 0, o.width, o.height);
+          null == o || o.drawImage(a, 0, 0, s.width, s.height);
+          let r = null == o ? void 0 : o.getImageData(0, 0, s.width, s.height);
           try {
             null != r && t(r) && e(r);
           } catch (e) {
@@ -102,10 +102,10 @@ try {
       i = e.height * n;
     O.width = r, O.height = i;
     let a = window.document.createElement('canvas'),
-      o = a.getContext('2d');
+      s = a.getContext('2d');
     a.width = e.width, a.height = e.height;
-    let s = new ImageData(e.data, e.width, e.height);
-    return null == o || o.putImageData(s, 0, 0), new Promise(t => {
+    let o = new ImageData(e.data, e.width, e.height);
+    return null == s || s.putImageData(o, 0, 0), new Promise(t => {
       null == R || R.drawImage(a, 0, 0, e.width, e.height, 0, 0, r, i), t();
     });
   }(n);
@@ -144,9 +144,9 @@ E.Z.subscribe('CONNECTION_OPEN', C), E.Z.subscribe('LOGOUT', C), E.Z.subscribe('
     channelId: n,
     userId: i,
     streamId: a,
-    context: o
+    context: s
   } = e;
-  !(null == a || o !== S.Yn.STREAM || i !== h.default.getId() || __OVERLAY__) && (C(), r = a, y(a, t, n, i));
+  !(null == a || s !== S.Yn.STREAM || i !== h.default.getId() || __OVERLAY__) && (C(), r = a, y(a, t, n, i));
 }), E.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', e => {
   let {
     videoState: t

@@ -9,7 +9,7 @@ return d;
 return c;
   },
   Ld: function() {
-return s;
+return o;
   },
   U4: function() {
 return u;
@@ -18,7 +18,7 @@ return u;
 return _;
   },
   zz: function() {
-return o;
+return s;
   }
 }), n(411104);
 var r = n(830496),
@@ -79,18 +79,18 @@ let a = [{
   type: 'image/webm'
 }
   ],
-  o = 524288000,
-  s = 1073741824;
+  s = 524288000,
+  o = 1073741824;
 
 function l(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
 a = arguments.length > 2 ? arguments[2] : void 0,
-o = {
+s = {
   id: null !== (t = null == n ? void 0 : n.toString()) && void 0 !== t ? t : e.id
 };
-  null != e.description && (o.description = e.description);
-  let s = function(e) {
+  null != e.description && (s.description = e.description);
+  let o = function(e) {
 let {
   spoiler: t
 } = e;
@@ -98,7 +98,7 @@ return t ? i._j : '';
   }({
 spoiler: e.spoiler
   });
-  return o.filename = ''.concat(s).concat(null != a ? a : e.filename), o.uploaded_filename = e.uploadedFilename, 'durationSecs' in e && null != e.durationSecs && (o.duration_secs = e.durationSecs), 'waveform' in e && null != e.waveform && (o.waveform = e.waveform), 'isThumbnail' in e && !0 === e.isThumbnail && (o.is_thumbnail = e.isThumbnail), 'isRemix' in e && !0 === e.isRemix && (o.is_remix = e.isRemix), 'clip' in e && null != e.clip && (o.is_clip = !0, o.title = e.clip.name, o.application_id = e.clip.applicationId, o.clip_created_at = (0, r.U)(e.clip.id), o.clip_participant_ids = (0, r.Z)(e.clip.users)), o;
+  return s.filename = ''.concat(o).concat(null != a ? a : e.filename), s.uploaded_filename = e.uploadedFilename, 'durationSecs' in e && null != e.durationSecs && (s.duration_secs = e.durationSecs), 'waveform' in e && null != e.waveform && (s.waveform = e.waveform), 'isThumbnail' in e && !0 === e.isThumbnail && (s.is_thumbnail = e.isThumbnail), 'isRemix' in e && !0 === e.isRemix && (s.is_remix = e.isRemix), 'clip' in e && null != e.clip && (s.is_clip = !0, s.title = e.clip.name, s.application_id = e.clip.applicationId, s.clip_created_at = (0, r.U)(e.clip.id), s.clip_participant_ids = (0, r.Z)(e.clip.users)), s;
 }
 
 function u(e, t, n) {
@@ -134,7 +134,7 @@ r.open('HEAD', e, !0), r.onload = () => {
 }
 
 function _(e) {
-  var t, n, r, i, o, s;
+  var t, n, r, i, s, o;
   let l, {
   uri: u,
   i: c,
@@ -155,7 +155,7 @@ l = null != h ? h.name(c) : null != d ? d : 'unknown';
 uri: u,
 filename: l,
 type: null !== (i = null != _ ? _ : null == h ? void 0 : h.type) && void 0 !== i ? i : 'unknown',
-isVideo: -1 !== (null !== (o = null != _ ? _ : null == h ? void 0 : h.name(c)) && void 0 !== o ? o : '').indexOf('video'),
-isImage: -1 !== (null !== (s = null != _ ? _ : null == h ? void 0 : h.name(c)) && void 0 !== s ? s : '').indexOf('image')
+isVideo: -1 !== (null !== (s = null != _ ? _ : null == h ? void 0 : h.name(c)) && void 0 !== s ? s : '').indexOf('video'),
+isImage: -1 !== (null !== (o = null != _ ? _ : null == h ? void 0 : h.name(c)) && void 0 !== o ? o : '').indexOf('image')
   };
 }

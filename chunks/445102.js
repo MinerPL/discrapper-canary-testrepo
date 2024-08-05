@@ -13,8 +13,8 @@ c = n.Z.getInputDeviceId(),
 u = n.Z.getInputDevices()[c],
 d = n.Z.getOutputDeviceId(),
 _ = n.Z.getOutputDevices()[d],
-E = n.Z.getVideoDeviceId(),
-b = n.Z.getVideoDevices()[E],
+b = n.Z.getVideoDeviceId(),
+E = n.Z.getVideoDevices()[b],
 m = n.Z.getNoiseCancellation();
   a.default.track(s.rMx.CALL_REPORT_PROBLEM, {
 rating: null != e ? e : 'no response',
@@ -31,7 +31,7 @@ voice_output_volume: r.outputVolume,
 noise_cancellation_enabled: m,
 input_device_name: null == u ? void 0 : u.name,
 output_device_name: null == _ ? void 0 : _.name,
-video_device_name: null == b ? void 0 : b.name,
+video_device_name: null == E ? void 0 : E.name,
 ...i
   });
 }

@@ -2,8 +2,8 @@ n(47120), n(315314), n(610138), n(216116), n(78328), n(815648);
 var r = n(628735),
   i = n.n(r),
   a = n(392711),
-  o = n.n(a),
-  s = n(729594),
+  s = n.n(a),
+  o = n(729594),
   l = n(981631);
 let u = /(?:^|\.)(?:discordapp|discord)\.com$/i,
   c = i().v4().source,
@@ -29,11 +29,11 @@ function f(e) {
 
 function h(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  return null != e && E(s.parse(e).hostname, t);
+  return null != e && E(o.parse(e).hostname, t);
 }
 
 function p(e) {
-  return null != e && f(s.parse(e).protocol);
+  return null != e && f(o.parse(e).protocol);
 }
 t.Z = {
   URL_REGEX: d,
@@ -45,24 +45,24 @@ return null != e && null != t && (window.location.host === e || !1);
   isDiscordUrl: h,
   isDiscordUri: p,
   isDiscordCdnUrl: function(e) {
-return null != e && s.parse(e).hostname === window.GLOBAL_ENV.CDN_HOST;
+return null != e && o.parse(e).hostname === window.GLOBAL_ENV.CDN_HOST;
   },
   isDiscordUrlOrUri: e => h(e) || p(e),
   isAppRoute: e => {
 let t = e.toLowerCase();
 return t.startsWith('/channels/') || t.startsWith(l.Z5c.APPLICATION_STORE) || t.startsWith(l.Z5c.APPLICATION_LIBRARY) || t.startsWith(l.Z5c.MESSAGE_REQUESTS) || t.startsWith(l.Z5c.FAMILY_CENTER) || t.startsWith(l.Z5c.ACTIVITIES) || t.startsWith(l.Z5c.COLLECTIBLES_SHOP) || t.startsWith(l.Z5c.ACTIVITY);
   },
-  format: e => s.format(e),
-  formatPathWithQuery: (e, t) => s.format({
+  format: e => o.format(e),
+  formatPathWithQuery: (e, t) => o.format({
 pathname: e,
-query: o().pickBy(t)
+query: s().pickBy(t)
   }),
-  formatSearch: e => s.format({
-query: o().pickBy(e)
+  formatSearch: e => o.format({
+query: s().pickBy(e)
   }),
   safeParseWithQuery(e) {
 try {
-  return s.parse(e, !0);
+  return o.parse(e, !0);
 } catch (e) {
   return null;
 }

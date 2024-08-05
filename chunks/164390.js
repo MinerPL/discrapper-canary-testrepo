@@ -1,4 +1,4 @@
-e.exports = o, o.default = o, o.stable = u, o.stableStringify = u;
+e.exports = s, s.default = s, s.stable = u, s.stableStringify = u;
 var t = '[...]',
   n = '[Circular]',
   r = [],
@@ -11,34 +11,34 @@ edgesLimit: Number.MAX_SAFE_INTEGER
   };
 }
 
-function o(e, o, l, u) {
+function s(e, s, l, u) {
   void 0 === u && (u = a()),
-function e(r, i, a, o, l, u, c) {
+function e(r, i, a, s, l, u, c) {
   if (u += 1, 'object' == typeof r && null !== r) {
-    for (d = 0; d < o.length; d++)
-      if (o[d] === r) {
-        s(n, r, i, l);
+    for (d = 0; d < s.length; d++)
+      if (s[d] === r) {
+        o(n, r, i, l);
         return;
       }
     if (void 0 !== c.depthLimit && u > c.depthLimit || void 0 !== c.edgesLimit && a + 1 > c.edgesLimit) {
-      s(t, r, i, l);
+      o(t, r, i, l);
       return;
     }
-    if (o.push(r), Array.isArray(r))
+    if (s.push(r), Array.isArray(r))
       for (d = 0; d < r.length; d++)
-        e(r[d], d, d, o, r, u, c);
+        e(r[d], d, d, s, r, u, c);
     else {
       var d, _ = Object.keys(r);
       for (d = 0; d < _.length; d++) {
         var E = _[d];
-        e(r[E], E, d, o, r, u, c);
+        e(r[E], E, d, s, r, u, c);
       }
     }
-    o.pop();
+    s.pop();
   }
 }(e, '', 0, [], void 0, 0, u);
   try {
-d = 0 === i.length ? JSON.stringify(e, o, l) : JSON.stringify(e, c(o), l);
+d = 0 === i.length ? JSON.stringify(e, s, l) : JSON.stringify(e, c(s), l);
   } catch (e) {
 return JSON.stringify('[unable to serialize, circular reference is too complex to analyze]');
   } finally {
@@ -50,15 +50,15 @@ for (; 0 !== r.length;) {
   return d;
 }
 
-function s(e, t, n, a) {
-  var o = Object.getOwnPropertyDescriptor(a, n);
-  void 0 !== o.get ? o.configurable ? (Object.defineProperty(a, n, {
+function o(e, t, n, a) {
+  var s = Object.getOwnPropertyDescriptor(a, n);
+  void 0 !== s.get ? s.configurable ? (Object.defineProperty(a, n, {
 value: e
   }), r.push([
 a,
 n,
 t,
-o
+s
   ])) : i.push([
 t,
 n,
@@ -74,13 +74,13 @@ function l(e, t) {
   return e < t ? -1 : e > t ? 1 : 0;
 }
 
-function u(e, o, u, d) {
+function u(e, s, u, d) {
   void 0 === d && (d = a());
-  var _, E = function e(i, a, o, u, c, d, _) {
+  var _, E = function e(i, a, s, u, c, d, _) {
 if (d += 1, 'object' == typeof i && null !== i) {
   for (E = 0; E < u.length; E++)
     if (u[E] === i) {
-      s(n, i, a, c);
+      o(n, i, a, c);
       return;
     }
   try {
@@ -89,8 +89,8 @@ if (d += 1, 'object' == typeof i && null !== i) {
   } catch (e) {
     return;
   }
-  if (void 0 !== _.depthLimit && d > _.depthLimit || void 0 !== _.edgesLimit && o + 1 > _.edgesLimit) {
-    s(t, i, a, c);
+  if (void 0 !== _.depthLimit && d > _.depthLimit || void 0 !== _.edgesLimit && s + 1 > _.edgesLimit) {
+    o(t, i, a, c);
     return;
   }
   if (u.push(i), Array.isArray(i))
@@ -115,7 +115,7 @@ if (d += 1, 'object' == typeof i && null !== i) {
 }
   }(e, '', 0, [], void 0, 0, d) || e;
   try {
-_ = 0 === i.length ? JSON.stringify(E, o, u) : JSON.stringify(E, c(o), u);
+_ = 0 === i.length ? JSON.stringify(E, s, u) : JSON.stringify(E, c(s), u);
   } catch (e) {
 return JSON.stringify('[unable to serialize, circular reference is too complex to analyze]');
   } finally {

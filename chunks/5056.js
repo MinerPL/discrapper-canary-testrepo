@@ -9,7 +9,7 @@ var a = t(735250),
   u = t(689938),
   m = t(672060);
 
-function f(e) {
+function _(e) {
   let {
 onClick: n,
 text: t,
@@ -39,7 +39,7 @@ n.Z = function(e) {
 addFormField: n,
 showManualApprovalWarning: i,
 guild: C,
-showHeader: _
+showHeader: f
   } = e, h = r.useCallback(e => {
 (0, d.Md)(e, n, C);
   }, [
@@ -62,7 +62,7 @@ h
   return (0, a.jsxs)('div', {
 className: s()(m.spacingContainer, m.backgroundContainer),
 children: [
-  _ && (0, a.jsx)('div', {
+  f && (0, a.jsx)('div', {
     className: m.containerTopHat,
     children: (0, a.jsx)(o.Text, {
       className: m.containerTopHatText,
@@ -96,21 +96,21 @@ children: [
             type: o.FormText.Types.DESCRIPTION,
             children: u.Z.Messages.MEMBER_VERIFICATION_ADD_QUESTIONS_DESCRIPTION
           }),
-          (0, a.jsx)(f, {
+          (0, a.jsx)(_, {
             formFieldType: c.QJ.TEXT_INPUT,
             addFormField: n,
             icon: (0, o.makeIconCompat)(l.Z),
             text: u.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_TEXT_INPUT,
             onClick: () => x(c.QJ.TEXT_INPUT)
           }),
-          (0, a.jsx)(f, {
+          (0, a.jsx)(_, {
             formFieldType: c.QJ.PARAGRAPH,
             addFormField: n,
             icon: o.ChannelListIcon,
             text: u.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_PARAGRAPH,
             onClick: () => x(c.QJ.PARAGRAPH)
           }),
-          (0, a.jsx)(f, {
+          (0, a.jsx)(_, {
             formFieldType: c.QJ.MULTIPLE_CHOICE,
             addFormField: n,
             icon: o.ListBulletsIcon,

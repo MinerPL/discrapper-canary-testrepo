@@ -3,7 +3,7 @@ n.d(t, {
 return a;
   },
   i6: function() {
-return o;
+return s;
   }
 });
 var r = n(780384),
@@ -16,7 +16,7 @@ theme: e
   return e;
 }
 
-function o() {
+function s() {
   return function(e) {
 switch (e) {
   case i.BRd.DARK:

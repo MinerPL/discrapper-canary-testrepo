@@ -7,9 +7,9 @@ return i;
   }
 });
 var r, i, a = n(735250),
-  o = n(470079),
-  s = n(120356),
-  l = n.n(s),
+  s = n(470079),
+  o = n(120356),
+  l = n.n(o),
   u = n(442837),
   c = n(481060),
   d = n(355467),
@@ -31,26 +31,30 @@ containerContext: t,
 image: n,
 title: r,
 description: i,
-enableSocialProof: s,
+enableSocialProof: o,
 analyticsLocationSection: N,
-onClose: v,
-onDisplay: O,
-onLearnMore: R
-  } = e, C = (0, u.e7)([p.Z], () => p.Z.affinities), y = (0, u.e7)([p.Z], () => p.Z.hasFetched);
-  o.useEffect(() => {
-!y && s && d.MH();
+upsellViewedTrackingData: v,
+onClose: O,
+onDisplay: R,
+onLearnMore: C
+  } = e, y = (0, u.e7)([p.Z], () => p.Z.affinities), D = (0, u.e7)([p.Z], () => p.Z.hasFetched);
+  s.useEffect(() => {
+!D && o && d.MH();
   }, [
-y,
-s
-  ]), o.useEffect(() => {
-null == O || O();
-  }, [O]);
-  let D = C.length > 1 && s;
+D,
+o
+  ]), s.useEffect(() => {
+h.default.track(g.rMx.PREMIUM_UPSELL_VIEWED, v), null == R || R();
+  }, [
+R,
+v
+  ]);
+  let L = y.length > 1 && o;
   return (0, a.jsxs)(a.Fragment, {
 children: [
   (0, a.jsx)(c.Backdrop, {
     backdropStyle: c.BackdropStyles.DARK,
-    onClose: v,
+    onClose: O,
     'aria-label': S.Z.Messages.CLOSE,
     isVisible: !0
   }),
@@ -58,7 +62,7 @@ children: [
     className: l()(A.container, 2 === t ? A.hasTabParentContainer : 1 === t ? A.hasParentContainer : A.noParentContainer),
     children: [
       (0, a.jsx)(c.ModalCloseButton, {
-        onClick: v,
+        onClick: O,
         className: A.closeButton
       }),
       (0, a.jsxs)('div', {
@@ -73,13 +77,13 @@ children: [
           }),
           (0, a.jsx)(c.Heading, {
             className: l()(A.title, {
-              [A.titleNoSocialProof]: !D
+              [A.titleNoSocialProof]: !L
             }),
             variant: 'heading-xl/bold',
             children: r
           }),
-          D && (0, a.jsx)(I.Z, {
-            affinities: C
+          L && (0, a.jsx)(I.Z, {
+            affinities: y
           }),
           (0, a.jsx)(c.Text, {
             variant: 'text-sm/medium',
@@ -100,7 +104,7 @@ children: [
               h.default.track(g.rMx.PREMIUM_PROMOTION_OPENED, {
                 location_section: N,
                 location_object: g.qAy.NAVIGATION_LINK
-              }), null == R || R(), (0, E.Z)(), v(), (0, _.xf)(), (0, f.uL)(g.Z5c.APPLICATION_STORE);
+              }), null == C || C(), (0, E.Z)(), O(), (0, _.xf)(), (0, f.uL)(g.Z5c.APPLICATION_STORE);
             },
             children: S.Z.Messages.STREAM_PREMIUM_UPSELL_SECONDARY_CTA
           }),
@@ -114,7 +118,7 @@ children: [
             size: c.Button.Sizes.SMALL,
             color: c.Button.Colors.CUSTOM,
             onClick: () => {
-              v();
+              O();
             },
             buttonText: S.Z.Messages.PREMIUM_UPSELL_GET_NITRO
           })

@@ -66,7 +66,7 @@ children: [
                   default: e
                 } = await Promise.all([
                   n.e('76540'),
-                  n.e('56931')
+                  n.e('52443')
                 ]).then(n.bind(n, 607018));
                 return t => (0, r.jsx)(e, {
                   reason: u.L.GUILD_PHONE_REQUIRED,

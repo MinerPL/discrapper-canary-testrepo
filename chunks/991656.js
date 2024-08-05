@@ -10,6 +10,6 @@ function a(e, t) {
   (0, i.Z)(2, arguments);
   var n = (0, r.default)(e),
 a = (0, r.default)(t),
-o = n.getTime() - a.getTime();
-  return o < 0 ? -1 : o > 0 ? 1 : o;
+s = n.getTime() - a.getTime();
+  return s < 0 ? -1 : s > 0 ? 1 : s;
 }

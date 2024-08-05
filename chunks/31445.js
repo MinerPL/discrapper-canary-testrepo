@@ -1,16 +1,16 @@
 n.d(t, {
   Z: function() {
-return o;
+return s;
   },
   t: function() {
-return s;
+return o;
   }
 });
 var r = n(442837),
   i = n(160404),
   a = n(981631);
 
-function o(e) {
+function s(e) {
   return (0, r.e7)([i.Z], () => {
 if ((null == e ? void 0 : e.id) == null)
   return !1;
@@ -20,7 +20,7 @@ return t && n;
   }) || (null == e ? void 0 : e.hasFeature(a.oNc.GUILD_ONBOARDING_HAS_PROMPTS));
 }
 
-function s(e) {
+function o(e) {
   if (null == e)
 return !1;
   let t = i.Z.isFullServerPreview(e.id),

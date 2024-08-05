@@ -6,10 +6,10 @@ return E;
 var r = n(717029),
   i = n(846042),
   a = n(193603),
-  o = n(780603);
+  s = n(780603);
 
-function s(e) {
-  return (s = 'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator ? function(e) {
+function o(e) {
+  return (o = 'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator ? function(e) {
 return typeof e;
   } : function(e) {
 return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
@@ -75,7 +75,7 @@ try {
 var e, r = d(t);
 return e = n ? Reflect.construct(r, arguments, d(this).constructor) : r.apply(this, arguments),
   function(e, t) {
-    return t && ('object' === s(t) || 'function' == typeof t) ? t : c(e);
+    return t && ('object' === o(t) || 'function' == typeof t) ? t : c(e);
   }(this, e);
   });
 
@@ -133,13 +133,13 @@ return _(c(e = h.call.apply(h, [this].concat(n))), 'priority', 130), _(c(e), 'in
 {
   key: 'set',
   value: function(e, t, n, r) {
-    var s = (0, a.Z)(e, r);
+    var o = (0, a.Z)(e, r);
     if (n.isTwoDigitYear) {
-      var l = (0, i.WG)(n.year, s);
-      return e.setUTCFullYear(l, 0, r.firstWeekContainsDate), e.setUTCHours(0, 0, 0, 0), (0, o.Z)(e, r);
+      var l = (0, i.WG)(n.year, o);
+      return e.setUTCFullYear(l, 0, r.firstWeekContainsDate), e.setUTCHours(0, 0, 0, 0), (0, s.Z)(e, r);
     }
     var u = 'era' in t && 1 !== t.era ? 1 - n.year : n.year;
-    return e.setUTCFullYear(u, 0, r.firstWeekContainsDate), e.setUTCHours(0, 0, 0, 0), (0, o.Z)(e, r);
+    return e.setUTCFullYear(u, 0, r.firstWeekContainsDate), e.setUTCHours(0, 0, 0, 0), (0, s.Z)(e, r);
   }
 }
   ], l(r.prototype, E), p;

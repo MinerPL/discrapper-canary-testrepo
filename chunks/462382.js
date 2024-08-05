@@ -1,6 +1,6 @@
-var _, E;
-t.d(e, {
+var r, i;
+n.d(t, {
   J: function() {
-return _;
+return r;
   }
-}), (E = _ || (_ = {})).NICKNAME_UPDATE = 'nickname_update', E.NICKNAME_RESET = 'nickname_reset';
+}), (i = r || (r = {})).NICKNAME_UPDATE = 'nickname_update', i.NICKNAME_RESET = 'nickname_reset';

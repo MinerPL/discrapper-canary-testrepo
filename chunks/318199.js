@@ -8,8 +8,8 @@ return I;
 });
 var i = n(735250);
 n(470079);
-var s = n(581282),
-  a = n(8853),
+var a = n(581282),
+  s = n(8853),
   r = n(663002),
   l = n(2052),
   o = n(410030),
@@ -24,7 +24,7 @@ function I(e) {
   let {
 content: t,
 isPreview: n
-  } = e, i = a.t.fromBinary((0, s.c)(t));
+  } = e, i = s.t.fromBinary((0, a.c)(t));
   return 'announcementModalVariant1' !== i.properties.oneofKind ? null : !n && (0 === i.properties.announcementModalVariant1.dismissKey.trim().length || (0, u.un)(Number(i.properties.announcementModalVariant1.dismissKey))) ? null : (n && (i.properties.announcementModalVariant1.dismissKey = ''), i);
 }
 
@@ -33,16 +33,16 @@ function m(e) {
 renderModalProps: t,
 properties: n
   } = e, {
-location: s
+location: a
   } = (0, l.O)(), {
-analyticsLocations: a
+analyticsLocations: s
   } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), u = (0, o.ZP)(), I = (0, r.a)(u);
   if ('announcementModalVariant1' === n.properties.oneofKind) {
 let e = (0, h.N)({
   content: n.properties.announcementModalVariant1,
   renderModalProps: t,
-  analyticsLocations: a,
-  analyticsLocation: s,
+  analyticsLocations: s,
+  analyticsLocation: a,
   isLightTheme: I
 });
 return (0, i.jsx)(E.Z, {

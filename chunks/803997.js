@@ -9,11 +9,11 @@ for (var e = [], r = 0; r < arguments.length; r++) {
     if ('string' === a || 'number' === a)
       e.push(i);
     else if (Array.isArray(i) && i.length) {
-      var o = n.apply(null, i);
-      o && e.push(o);
+      var s = n.apply(null, i);
+      s && e.push(s);
     } else if ('object' === a)
-      for (var s in i)
-        t.call(i, s) && i[s] && e.push(s);
+      for (var o in i)
+        t.call(i, o) && i[o] && e.push(o);
   }
 }
 return e.join(' ');

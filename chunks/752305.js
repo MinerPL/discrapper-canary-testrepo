@@ -14,7 +14,7 @@ richValue: [{
 function i(e) {
   return {
 textValue: e,
-richValue: o(e)
+richValue: s(e)
   };
 }
 n.d(t, {
@@ -22,10 +22,10 @@ n.d(t, {
 return r;
   },
   JM: function() {
-return o;
+return s;
   },
   VI: function() {
-return s;
+return o;
   },
   eK: function() {
 return i;
@@ -38,7 +38,7 @@ text: ''
   })])
 })]);
 
-function o(e) {
+function s(e) {
   return '' !== e ? e.split('\n').map(e => ({
 type: 'line',
 children: [{
@@ -47,7 +47,7 @@ children: [{
   })) : a;
 }
 
-function s(e) {
+function o(e) {
   switch (e.type) {
 case 'userMention':
   return {

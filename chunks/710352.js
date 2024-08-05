@@ -1,4 +1,4 @@
-var r, i, a, o;
+var r, i, a, s;
 n.d(t, {
   Cn: function() {
 return l;
@@ -16,12 +16,12 @@ return u;
 return r;
   },
   pC: function() {
-return s;
+return o;
   }
 });
-let s = 20,
+let o = 20,
   l = 5,
   u = 256;
 (a = r || (r = {})).PERMISSIONS = 'Permissions', a.GUIDELINES = 'Guidelines', a.TAGS = 'Tags', a.DEFAULT_REACTION = 'Default Reaction', a.CREATE_POST = 'Create Post';
 let c = 'https://discord.com/community/creating-value-with-conversation';
-(o = i || (i = {}))[o.DURATION_AGO = 0] = 'DURATION_AGO', o[o.POSTED_DURATION_AGO = 1] = 'POSTED_DURATION_AGO';
+(s = i || (i = {}))[s.DURATION_AGO = 0] = 'DURATION_AGO', s[s.POSTED_DURATION_AGO = 1] = 'POSTED_DURATION_AGO';

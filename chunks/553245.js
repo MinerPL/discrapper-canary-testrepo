@@ -1,6 +1,6 @@
 n.d(t, {
   b: function() {
-return o;
+return s;
   }
 }), n(47120);
 var r = n(689320),
@@ -14,7 +14,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class o {
+class s {
   get totalLength() {
 return this.primary.length + this.extended.length;
   }

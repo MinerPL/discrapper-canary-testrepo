@@ -1,26 +1,26 @@
 n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(442837),
   o = n(481060),
   c = n(410030),
-  d = n(100527),
-  u = n(906732),
+  u = n(100527),
+  d = n(906732),
   h = n(574176),
   p = n(769654),
   m = n(199902),
   _ = n(314897),
   f = n(592125),
   E = n(496675),
-  C = n(158776),
-  g = n(246946),
+  g = n(158776),
+  C = n(246946),
   I = n(979651),
   x = n(5192),
   T = n(51144),
-  v = n(785717),
-  N = n(221292),
+  N = n(785717),
+  v = n(221292),
   S = n(310427),
   Z = n(318661),
   A = n(57048),
@@ -51,10 +51,10 @@ t.Z = e => {
   var t;
   let {
 user: n,
-channel: l
+channel: s
   } = e, [Q, J] = a.useState(!1), $ = a.useRef(0), {
 analyticsLocations: ee
-  } = (0, u.ZP)(d.Z.PROFILE_PANEL), et = null == n ? void 0 : n.isNonUserBot(), en = (0, Z.ZP)(n.id), ei = (0, r.e7)([
+  } = (0, d.ZP)(u.Z.PROFILE_PANEL), et = null == n ? void 0 : n.isNonUserBot(), en = (0, Z.ZP)(n.id), ei = (0, r.e7)([
 I.Z,
 f.Z
   ], () => {
@@ -68,48 +68,48 @@ location: 'ActivityStatus'
   }, {
 autoTrackExposure: !1
   }), {
-activity: el,
-customStatusActivity: es,
+activity: es,
+customStatusActivity: el,
 isApplicationStreaming: er,
 isMobile: eo,
 status: ec,
-hangStatusActivity: ed
+hangStatusActivity: eu
   } = (0, r.cj)([
 m.Z,
-C.Z,
+g.Z,
 E.Z
   ], () => {
 let e = null != m.Z.getAnyStreamForUser(n.id);
 return {
-  activity: C.Z.findActivity(n.id, t => {
+  activity: g.Z.findActivity(n.id, t => {
     let {
       type: n
     } = t;
     return e ? n === K.IIU.PLAYING : n !== K.IIU.CUSTOM_STATUS && n !== K.IIU.HANG_STATUS;
   }),
-  customStatusActivity: C.Z.findActivity(n.id, e => {
+  customStatusActivity: g.Z.findActivity(n.id, e => {
     let {
       type: t
     } = e;
     return t === K.IIU.CUSTOM_STATUS;
   }),
   isApplicationStreaming: e,
-  isMobile: C.Z.isMobileOnline(n.id),
-  status: et ? null : C.Z.getStatus(n.id),
-  hangStatusActivity: ea && null != ei && E.Z.can(K.Plq.CONNECT, ei) ? C.Z.findActivity(n.id, e => {
+  isMobile: g.Z.isMobileOnline(n.id),
+  status: et ? null : g.Z.getStatus(n.id),
+  hangStatusActivity: ea && null != ei && E.Z.can(K.Plq.CONNECT, ei) ? g.Z.findActivity(n.id, e => {
     let {
       type: t
     } = e;
     return t === K.IIU.HANG_STATUS;
   }) : null
 };
-  }), eu = null != el || null != ed || er, eh = null !== (t = x.ZP.getNickname(null, l.id, n)) && void 0 !== t ? t : T.ZP.getName(n), ep = (0, r.e7)([g.Z], () => g.Z.hidePersonalInformation), {
+  }), ed = null != es || null != eu || er, eh = null !== (t = x.ZP.getNickname(null, s.id, n)) && void 0 !== t ? t : T.ZP.getName(n), ep = (0, r.e7)([C.Z], () => C.Z.hidePersonalInformation), {
 mutualFriends: em,
 isFetching: e_
   } = (0, M.Z)(n.id, !n.bot), {
 mutualGuilds: ef,
 isFetching: eE
-  } = (0, b.Z)(n.id, !n.bot), eC = !n.bot && null != em && em.length > 0, eg = !n.bot && null != ef && ef.length > 0, eI = (0, F.J)({
+  } = (0, b.Z)(n.id, !n.bot), eg = !n.bot && null != em && em.length > 0, eC = !n.bot && null != ef && ef.length > 0, eI = (0, F.J)({
 popoutUser: n,
 source: D.m.PROFILE_PANEL
   }), ex = (0, c.ZP)();
@@ -120,15 +120,15 @@ null != en && (0, A.U)({
   displayProfile: en,
   isMobile: eo,
   loadDurationMs: Date.now() - $.current,
-  activity: el,
-  customStatusActivity: es,
+  activity: es,
+  customStatusActivity: el,
   status: ec
 });
   }, [
 en,
 eo,
-el,
 es,
+el,
 ec
   ]);
   let eT = null == ef ? void 0 : ef.map(e => {
@@ -144,7 +144,7 @@ ec
     onSelect: () => (0, p.X)(t.id)
   }, t.id);
 }),
-ev = null == em ? void 0 : em.map(e => {
+eN = null == em ? void 0 : em.map(e => {
   let {
     key: t,
     user: n,
@@ -156,7 +156,7 @@ ev = null == em ? void 0 : em.map(e => {
     onSelect: () => {
       (0, j.openUserProfileModal)({
         userId: n.id,
-        channelId: l.id,
+        channelId: s.id,
         sourceAnalyticsLocations: ee,
         analyticsLocation: {
           section: K.jXE.DM_PROFILE
@@ -165,7 +165,7 @@ ev = null == em ? void 0 : em.map(e => {
     }
   }, t);
 }),
-eN = a.useCallback(() => J(!0), []),
+ev = a.useCallback(() => J(!0), []),
 eS = a.useCallback(() => J(!1), []),
 eZ = (0, r.e7)([_.default], () => _.default.getId()),
 eA = n.id === eZ,
@@ -174,18 +174,18 @@ eM = n.bot || eA,
   enabled: eb
 } = (0, S.qI)({
   autoTrackExposure: !0,
-  location: d.Z.PROFILE,
+  location: u.Z.PROFILE,
   disable: eM
 });
-  return (0, i.jsx)(u.Gt, {
+  return (0, i.jsx)(d.Gt, {
 value: ee,
-children: (0, i.jsx)(v.Mt, {
+children: (0, i.jsx)(N.Mt, {
   layout: 'DM_PANEL',
   userId: n.id,
-  channelId: l.id,
+  channelId: s.id,
   children: (0, i.jsx)('aside', {
     className: X.profilePanel,
-    onMouseEnter: eN,
+    onMouseEnter: ev,
     onMouseLeave: eS,
     children: (0, i.jsxs)(R.Z, {
       user: n,
@@ -205,7 +205,7 @@ children: (0, i.jsx)(v.Mt, {
             (0, i.jsx)(z.Z, {
               user: n,
               displayProfile: en,
-              channel: l,
+              channel: s,
               animateAssets: Q,
               forceShowPremiumBadge: Q
             }),
@@ -218,7 +218,7 @@ children: (0, i.jsx)(v.Mt, {
                   pronouns: null == en ? void 0 : en.pronouns
                 }),
                 (0, i.jsx)(B.Z, {
-                  customStatusActivity: es,
+                  customStatusActivity: el,
                   animate: Q
                 }),
                 (0, i.jsx)(k.Z, {}),
@@ -247,12 +247,12 @@ children: (0, i.jsx)(v.Mt, {
                 })
               ]
             }),
-            eu ? (0, i.jsx)(R.Z.Overlay, {
+            ed ? (0, i.jsx)(R.Z.Overlay, {
               className: X.overlay,
               children: (0, i.jsx)(U.Z, {
-                activity: null != el || er ? el : ed,
+                activity: null != es || er ? es : eu,
                 user: n,
-                channelId: l.id,
+                channelId: s.id,
                 analyticsParams: {
                   location: {
                     page: K.ZY5.USER_PROFILE,
@@ -261,10 +261,10 @@ children: (0, i.jsx)(v.Mt, {
                 }
               })
             }) : null,
-            (eg || eC) && (0, i.jsxs)(R.Z.Overlay, {
+            (eC || eg) && (0, i.jsxs)(R.Z.Overlay, {
               className: X.profilePanelConnections,
               children: [
-                eg ? (0, i.jsx)(W.Z, {
+                eC ? (0, i.jsx)(W.Z, {
                   className: X.mutualGuildsList,
                   header: q.Z.Messages.MUTUAL_GUILDS_COUNT.format({
                     count: ef.length
@@ -273,20 +273,20 @@ children: (0, i.jsx)(v.Mt, {
                   loadingContentsCount: ef.length,
                   itemType: W.R.MutualGuildList,
                   onExpand: () => {
-                    (0, N.pQ)({
+                    (0, v.pQ)({
                       action: 'PRESS_SECTION',
                       section: 'MUTUAL_GUILDS',
                       layout: 'DM_PANEL',
                       userId: n.id,
-                      channelId: l.id,
+                      channelId: s.id,
                       analyticsLocations: ee
                     });
                   },
                   children: eT
                 }) : null,
-                eC ? (0, i.jsx)(W.Z, {
-                  className: s()(X.mutualFriendsList, {
-                    [X.mutualFriendsDivider]: eg
+                eg ? (0, i.jsx)(W.Z, {
+                  className: l()(X.mutualFriendsList, {
+                    [X.mutualFriendsDivider]: eC
                   }),
                   header: q.Z.Messages.MUTUAL_FRIENDS_COUNT.format({
                     count: em.length
@@ -295,16 +295,16 @@ children: (0, i.jsx)(v.Mt, {
                   loadingContentsCount: em.length,
                   itemType: W.R.MutualFriendsList,
                   onExpand: () => {
-                    (0, N.pQ)({
+                    (0, v.pQ)({
                       action: 'PRESS_SECTION',
                       section: 'MUTUAL_FRIENDS',
                       layout: 'DM_PANEL',
                       userId: n.id,
-                      channelId: l.id,
+                      channelId: s.id,
                       analyticsLocations: ee
                     });
                   },
-                  children: ev
+                  children: eN
                 }) : null
               ]
             })

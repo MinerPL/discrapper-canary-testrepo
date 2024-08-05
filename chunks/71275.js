@@ -12,19 +12,19 @@ return u;
 var r = n(442837),
   i = n(430824),
   a = n(979651),
-  o = n(565799),
-  s = n(501655);
+  s = n(565799),
+  o = n(501655);
 
 function l(e) {
   let t = function(e) {
-return (0, r.e7)([o.Z], () => null != o.Z.getMutableParticipants(e, s.pV.SPEAKER).find(e => e.type === s.Ui.STREAM), [e]);
+return (0, r.e7)([s.Z], () => null != s.Z.getMutableParticipants(e, o.pV.SPEAKER).find(e => e.type === o.Ui.STREAM), [e]);
   }(e);
   return (0, r.e7)([a.Z], () => a.Z.hasVideo(e), [e]) || t;
 }
 
 function u(e) {
   return function(e) {
-return null != o.Z.getMutableParticipants(e, s.pV.SPEAKER).find(e => e.type === s.Ui.STREAM);
+return null != s.Z.getMutableParticipants(e, o.pV.SPEAKER).find(e => e.type === o.Ui.STREAM);
   }(e) || a.Z.hasVideo(e);
 }
 

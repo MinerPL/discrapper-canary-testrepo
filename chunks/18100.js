@@ -13,10 +13,10 @@ var a = t(735250),
   d = t(430824),
   u = t(214715),
   m = t(308083),
-  f = t(689938),
+  _ = t(689938),
   C = t(120713);
 
-function _(e) {
+function f(e) {
   let {
 trait: n,
 selected: t,
@@ -47,8 +47,8 @@ maskTraits: x,
 onTraitClick: g
   } = e, p = (0, o.e7)([d.Z], () => d.Z.getGuild(t)), {
 interests: T,
-description: I,
-playstyle: E,
+description: E,
+playstyle: I,
 wildcardDescriptors: b,
 brandPrimaryColor: N
   } = i, v = (0, l.useToken)(l.tokens.colors.TEXT_BRAND), y = Array.from(T), S = r.useMemo(() => null != u ? new Set(u) : new Set(), [u]);
@@ -74,7 +74,7 @@ children: [
             className: C.clanInfoItem,
             children: (0, a.jsx)('span', {
               role: 'img',
-              'aria-label': f.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_ARIA_LABEL,
+              'aria-label': _.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_ARIA_LABEL,
               children: '\uD83C\uDFAE'
             })
           }),
@@ -82,7 +82,7 @@ children: [
             variant: 'text-xs/normal',
             color: 'text-secondary',
             className: C.clanInfoItem,
-            children: null !== (n = (0, m.mv)(E)) && void 0 !== n ? n : f.Z.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
+            children: null !== (n = (0, m.mv)(I)) && void 0 !== n ? n : _.Z.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
           }),
           null != p && (0, a.jsx)(c.cS, {
             wildcardDescriptors: b,
@@ -94,7 +94,7 @@ children: [
         variant: 'text-xs/medium',
         color: 'header-secondary',
         className: C.descriptionText,
-        children: (null == I ? void 0 : I.length) > 0 ? I : f.Z.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
+        children: (null == E ? void 0 : E.length) > 0 ? E : _.Z.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
       })
     ]
   }),
@@ -114,7 +114,7 @@ children: [
           (0, a.jsx)(l.Text, {
             variant: 'text-xs/semibold',
             color: 'text-muted',
-            children: f.Z.Messages.CLAN_SETUP_NUM_TRAITS.format({
+            children: _.Z.Messages.CLAN_SETUP_NUM_TRAITS.format({
               n: y.length
             })
           })
@@ -122,7 +122,7 @@ children: [
       }),
       (0, a.jsx)('div', {
         className: C.traits,
-        children: y.map(e => (0, a.jsx)(_, {
+        children: y.map(e => (0, a.jsx)(f, {
           trait: e,
           selected: S.has(e),
           onClick: g

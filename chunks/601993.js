@@ -1,6 +1,6 @@
 n.d(t, {
   Gb: function() {
-return s;
+return o;
   },
   RD: function() {
 return h;
@@ -28,14 +28,14 @@ var r = n(579806),
   i = n(405826),
   a = n(358085);
 
-function o() {
+function s() {
   return (null === r.Z || void 0 === r.Z ? void 0 : r.Z.spellCheck) != null;
 }
 
-function s() {
-  return (0, a.isDesktop)() && o();
+function o() {
+  return (0, a.isDesktop)() && s();
 }
-let l = s() ? (0, i.N)() : null;
+let l = o() ? (0, i.N)() : null;
 async function u(e) {
   let t = await l;
   if (null != t)
@@ -69,7 +69,7 @@ t.setAppLocale(e);
 }
 
 function h(e) {
-  if (!o())
+  if (!s())
 return () => {};
   let t = r.Z.spellCheck.on('spellcheck-result', e);
   return null != t ? t : () => {};

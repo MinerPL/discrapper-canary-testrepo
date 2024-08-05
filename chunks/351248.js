@@ -5,22 +5,22 @@ return S;
 }), n(653041), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(748780),
   o = n(442837),
   c = n(215569),
-  d = n(780384),
-  u = n(481060),
+  u = n(780384),
+  d = n(481060),
   h = n(410030),
   p = n(451478),
   m = n(584511),
   _ = n(354459),
   f = n(861414),
   E = n(483085),
-  C = n(66487);
+  g = n(66487);
 
-function g(e, t, n) {
+function C(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -42,8 +42,8 @@ EASING_IN: r.Z.Easing.inOut(r.Z.Easing.back()),
 EASING_OUT: r.Z.Easing.quad
   },
   T = 200,
-  v = 125;
-class N extends a.PureComponent {
+  N = 125;
+class v extends a.PureComponent {
   componentDidMount() {
 this.componentDidAppear();
   }
@@ -79,9 +79,9 @@ let {
   widthAnimation: a
 } = this;
 i.setValue(1), n.setValue(0);
-let l = [];
+let s = [];
 for (let e = 0; e < I.STEPS; e++)
-  l.push(r.Z.timing(n, {
+  s.push(r.Z.timing(n, {
     toValue: -I.FRAME_SIZE * e,
     duration: I.FRAME_DURATION
   }));
@@ -91,10 +91,10 @@ r.Z.sequence([
     duration: x.DURATION_OUT,
     easing: x.EASING_OUT
   }),
-  r.Z.sequence(l),
+  r.Z.sequence(s),
   r.Z.timing(a, {
     toValue: 0,
-    duration: v
+    duration: N
   })
 ]).start(e);
   }
@@ -147,18 +147,18 @@ let {
   theme: e,
   children: t,
   className: n
-} = this.props, a = (0, d.wj)(e), l = s()(f.sprite, {
-  [C.crossWhite]: a,
-  [C.crossGrey]: !a
+} = this.props, a = (0, u.wj)(e), s = l()(f.sprite, {
+  [g.crossWhite]: a,
+  [g.crossGrey]: !a
 });
 return (0, i.jsxs)(r.Z.div, {
-  className: s()(f.transition, n),
+  className: l()(f.transition, n),
   style: this.getWidthStyle(),
   children: [
     (0, i.jsx)('div', {
-      className: s()(f.spriteWrapper, E.horizontal, E.justifyCenter, E.alignCenter),
+      className: l()(f.spriteWrapper, E.horizontal, E.justifyCenter, E.alignCenter),
       children: (0, i.jsx)(r.Z.div, {
-        className: l,
+        className: s,
         style: this.getSpriteStyle()
       })
     }),
@@ -170,7 +170,7 @@ return (0, i.jsxs)(r.Z.div, {
 });
   }
   constructor(...e) {
-super(...e), g(this, 'scaleAnimation', new r.Z.Value(0)), g(this, 'spriteAnimation', new r.Z.Value(0)), g(this, 'spriteOpacity', new r.Z.Value(0)), g(this, 'widthAnimation', new r.Z.Value(0));
+super(...e), C(this, 'scaleAnimation', new r.Z.Value(0)), C(this, 'spriteAnimation', new r.Z.Value(0)), C(this, 'spriteOpacity', new r.Z.Value(0)), C(this, 'widthAnimation', new r.Z.Value(0));
   }
 }
 
@@ -178,13 +178,13 @@ function S(e) {
   var t, n;
   let {
 participants: a,
-onContextMenu: l,
+onContextMenu: s,
 className: r,
-onClick: d,
+onClick: u,
 width: E,
-guildId: C
-  } = e, g = (0, h.ZP)();
-  let I = (t = E, n = a.length, ((0, u.getAvatarSize)(u.AvatarSizes.SIZE_80) + 16) * n > t ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80),
+guildId: g
+  } = e, C = (0, h.ZP)();
+  let I = (t = E, n = a.length, ((0, d.getAvatarSize)(d.AvatarSizes.SIZE_80) + 16) * n > t ? d.AvatarSizes.SIZE_40 : d.AvatarSizes.SIZE_80),
 x = (0, o.e7)([p.Z], () => p.Z.isFocused()),
 T = a.map(e => {
   var t, n;
@@ -192,29 +192,29 @@ T = a.map(e => {
     return null;
   let {
     user: a,
-    voiceState: s,
+    voiceState: l,
     speaking: r,
     ringing: o
   } = e;
-  return (0, i.jsx)(N, {
+  return (0, i.jsx)(v, {
     className: f.participant,
-    width: (0, u.getAvatarSize)(I),
-    theme: g,
+    width: (0, d.getAvatarSize)(I),
+    theme: C,
     children: (0, i.jsx)(m.Z, {
-      src: a.getAvatarURL(C, (0, u.getAvatarSize)(I), r && x),
+      src: a.getAvatarURL(g, (0, d.getAvatarSize)(I), r && x),
       size: I,
-      muted: null !== (t = null == s ? void 0 : s.isVoiceMuted()) && void 0 !== t && t,
-      deafen: null !== (n = null == s ? void 0 : s.isVoiceDeafened()) && void 0 !== n && n,
+      muted: null !== (t = null == l ? void 0 : l.isVoiceMuted()) && void 0 !== t && t,
+      deafen: null !== (n = null == l ? void 0 : l.isVoiceDeafened()) && void 0 !== n && n,
       speaking: r,
       ringing: o,
-      onClick: t => null == d ? void 0 : d(e, t),
-      onContextMenu: t => null == l ? void 0 : l(e, t)
+      onClick: t => null == u ? void 0 : u(e, t),
+      onContextMenu: t => null == s ? void 0 : s(e, t)
     }, e.id)
   }, a.id);
 });
   return (0, i.jsx)(c.W, {
 component: 'div',
-className: s()(f.root, r),
+className: l()(f.root, r),
 children: T
   });
 }

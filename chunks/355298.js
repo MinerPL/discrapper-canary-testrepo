@@ -3,7 +3,7 @@ var r = n(133080),
   i = n(592125),
   a = n(412788);
 
-function o(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -11,7 +11,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let s = new Set(),
+let o = new Set(),
   l = new Set(),
   u = !1,
   c = null;
@@ -22,7 +22,7 @@ function d(e) {
 
 function _(e) {
   let t = !1;
-  return d(e) && !s.has(e.id) && (s.add(e.id), t = !0), !d(e) && s.has(e.id) && (s.delete(e.id), t = !0), !d(e) && l.has(e.id) && (l.delete(e.id), t = !0), t;
+  return d(e) && !o.has(e.id) && (o.add(e.id), t = !0), !d(e) && o.has(e.id) && (o.delete(e.id), t = !0), !d(e) && l.has(e.id) && (l.delete(e.id), t = !0), t;
 }
 
 function E(e) {
@@ -32,7 +32,7 @@ c = null !== (t = (0, r.Zz)(e)) && void 0 !== t ? t : (0, r.K4)();
 }
 
 function f(e) {
-  'CONNECTION_OPEN' === e.type && E(e.countryCode), s.clear(), l.clear(), Object.values(i.Z.getMutablePrivateChannels()).forEach(e => {
+  'CONNECTION_OPEN' === e.type && E(e.countryCode), o.clear(), l.clear(), Object.values(i.Z.getMutablePrivateChannels()).forEach(e => {
 _(e);
   }), u = !0;
 }
@@ -63,14 +63,14 @@ function I(e) {
   let {
 channel: t
   } = e;
-  return !!s.has(t.id) && (s.delete(t.id), !0);
+  return !!o.has(t.id) && (o.delete(t.id), !0);
 }
 
 function T(e) {
   let {
 messageRequestChannelIds: t
   } = e;
-  t.forEach(e => s.add(e));
+  t.forEach(e => o.add(e));
 }
 
 function g(e) {
@@ -85,22 +85,22 @@ this.waitFor(i.Z);
   }
   loadCache() {
 let e = this.readSnapshot(S.LATEST_SNAPSHOT_VERSION);
-null != e && (s = new Set(e));
+null != e && (o = new Set(e));
   }
   takeSnapshot() {
 return {
   version: S.LATEST_SNAPSHOT_VERSION,
-  data: Array.from(s)
+  data: Array.from(o)
 };
   }
   getMessageRequestChannelIds() {
-return s;
+return o;
   }
   getMessageRequestsCount() {
-return s.size;
+return o.size;
   }
   isMessageRequest(e) {
-return s.has(e);
+return o.has(e);
   }
   isAcceptedOptimistic(e) {
 return l.has(e);
@@ -125,4 +125,4 @@ super({
 });
   }
 }
-o(S, 'displayName', 'MessageRequestStore'), o(S, 'LATEST_SNAPSHOT_VERSION', 1), t.Z = new S();
+s(S, 'displayName', 'MessageRequestStore'), s(S, 'LATEST_SNAPSHOT_VERSION', 1), t.Z = new S();

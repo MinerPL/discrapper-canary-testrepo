@@ -30,8 +30,8 @@ return N;
 var r = n(112456),
   i = n.n(r),
   a = n(392711),
-  o = n.n(a),
-  s = n(206744),
+  s = n.n(a),
+  o = n(206744),
   l = n(948350),
   u = n(430824),
   c = n(594174),
@@ -119,7 +119,7 @@ function I(e) {
 function T(e, t) {
   var n;
   e = null !== (n = null == e ? void 0 : e.toLowerCase()) && void 0 !== n ? n : '';
-  let r = o().find(m, n => null != n.reType && null != t ? n.reType.test(t) : null != n.reName && '' !== e && n.reName.test(e));
+  let r = s().find(m, n => null != n.reType && null != t ? n.reType.test(t) : null != n.reName && '' !== e && n.reName.test(e));
   return null != r ? r.klass : 'unknown';
 }
 
@@ -129,7 +129,7 @@ function g(e) {
 
 function S(e) {
   let t = c.default.getCurrentUser();
-  s.Z.trackExposure({
+  o.Z.trackExposure({
 location: 'de18ec_1'
   }), l.Z.trackExposure({
 location: 'de18ec_2'

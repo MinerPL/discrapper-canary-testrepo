@@ -1,8 +1,8 @@
 var r = n(678916),
   i = n(190378),
   a = n(689938),
-  o = n(671231),
-  s = n(647248),
+  s = n(671231),
+  o = n(647248),
   l = n(912855),
   u = n(320236),
   c = n(502058),
@@ -32,14 +32,14 @@ name: a.Z.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_4
   },
   [r.dp.OPTION_7]: {
 id: r.dp.OPTION_7,
-source: o,
+source: s,
 name: a.Z.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_7,
 isVideo: !0,
 hotspotLocation: i.v.ANIMATED_VIDEO_BG_CAPERNITE_DAY_NEW
   },
   [r.dp.OPTION_8]: {
 id: r.dp.OPTION_8,
-source: s,
+source: o,
 name: a.Z.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_8,
 isVideo: !0,
 hotspotLocation: i.v.ANIMATED_VIDEO_BG_CAPERNITE_NIGHT_NEW

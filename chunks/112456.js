@@ -30,7 +30,7 @@ return new Date().getTime() / 1000;
   304,
   334
 ],
-o = [
+s = [
   0,
   0,
   31,
@@ -48,7 +48,7 @@ o = [
   i.date = function(e, t) {
 var n = void 0 === t ? new Date() : new Date(t instanceof Date ? t : 1000 * t),
   r = /\\?([a-z])/gi,
-  s = function(e, t) {
+  o = function(e, t) {
     return c[e] ? c[e]() : t;
   },
   l = [
@@ -102,7 +102,7 @@ var n = void 0 === t ? new Date() : new Date(t instanceof Date ? t : 1000 * t),
       return n.getDay();
     },
     z: function() {
-      return (c.L() ? o[c.n()] : a[c.n()]) + c.j() - 1;
+      return (c.L() ? s[c.n()] : a[c.n()]) + c.j() - 1;
     },
     W: function() {
       var e = c.z() - c.N() + 1.5;
@@ -184,22 +184,22 @@ var n = void 0 === t ? new Date() : new Date(t instanceof Date ? t : 1000 * t),
       return -(60 * n.getTimezoneOffset());
     },
     c: function() {
-      return 'Y-m-d\\TH:i:sP'.replace(r, s);
+      return 'Y-m-d\\TH:i:sP'.replace(r, o);
     },
     r: function() {
-      return 'D, d M Y H:i:s O'.replace(r, s);
+      return 'D, d M Y H:i:s O'.replace(r, o);
     },
     U: function() {
       return n.getTime() / 1000 || 0;
     }
   };
-return e.replace(r, s);
+return e.replace(r, o);
   }, i.numberFormat = function(e, t, n, r) {
 t = isNaN(t) ? 2 : Math.abs(t), n = void 0 === n ? '.' : n, r = void 0 === r ? ',' : r;
 var i = e < 0 ? '-' : '',
   a = parseInt((e = Math.abs(+e || 0)).toFixed(t), 10) + '',
-  o = a.length > 3 ? a.length % 3 : 0;
-return i + (o ? a.substr(0, o) + r : '') + a.substr(o).replace(/(\d{3})(?=\d)/g, '$1' + r) + (t ? n + Math.abs(e - a).toFixed(t).slice(2) : '');
+  s = a.length > 3 ? a.length % 3 : 0;
+return i + (s ? a.substr(0, s) + r : '') + a.substr(s).replace(/(\d{3})(?=\d)/g, '$1' + r) + (t ? n + Math.abs(e - a).toFixed(t).slice(2) : '');
   }, i.naturalDay = function(e, t) {
 e = void 0 === e ? i.time() : e, t = void 0 === t ? 'Y-m-d' : t;
 var n = new Date(),
@@ -235,11 +235,11 @@ if (n < 5184000 && n > -5184000)
   return n >= 0 ? 'about a month ago' : 'in about a month';
 var r = parseInt(i.date('Y', t), 10),
   a = parseInt(i.date('Y', e), 10),
-  o = 12 * r + parseInt(i.date('n', t), 10) - (12 * a + parseInt(i.date('n', e), 10));
-if (o < 12 && o > -12)
-  return o >= 0 ? o + ' months ago' : 'in ' + -o + ' months';
-var s = r - a;
-return s < 2 && s > -2 ? s >= 0 ? 'a year ago' : 'in a year' : s >= 0 ? s + ' years ago' : 'in ' + -s + ' years';
+  s = 12 * r + parseInt(i.date('n', t), 10) - (12 * a + parseInt(i.date('n', e), 10));
+if (s < 12 && s > -12)
+  return s >= 0 ? s + ' months ago' : 'in ' + -s + ' months';
+var o = r - a;
+return o < 2 && o > -2 ? o >= 0 ? 'a year ago' : 'in a year' : o >= 0 ? o + ' years ago' : 'in ' + -o + ' years';
   }, i.ordinal = function(e) {
 var t = (e = isNaN(e = parseInt(e, 10)) ? 0 : e) < 0 ? '-' : '',
   n = (e = Math.abs(e)) % 100;
@@ -248,31 +248,31 @@ return t + e + (n > 4 && n < 21 ? 'th' : {
   2: 'nd',
   3: 'rd'
 } [e % 10] || 'th');
-  }, i.filesize = function(e, t, n, r, a, o) {
-return (t = void 0 === t ? 1024 : t, e <= 0) ? '0 bytes' : (e < t && void 0 === n && (n = 0), void 0 === o && (o = ' '), i.intword(e, [
+  }, i.filesize = function(e, t, n, r, a, s) {
+return (t = void 0 === t ? 1024 : t, e <= 0) ? '0 bytes' : (e < t && void 0 === n && (n = 0), void 0 === s && (s = ' '), i.intword(e, [
   'bytes',
   'KB',
   'MB',
   'GB',
   'TB',
   'PB'
-], t, n, r, a, o));
-  }, i.intword = function(e, t, n, r, a, o, s) {
+], t, n, r, a, s));
+  }, i.intword = function(e, t, n, r, a, s, o) {
 u = (t = t || [
   '',
   'K',
   'M',
   'B',
   'T'
-]).length - 1, n = n || 1000, r = isNaN(r) ? 2 : Math.abs(r), a = a || '.', o = o || ',', s = s || '';
+]).length - 1, n = n || 1000, r = isNaN(r) ? 2 : Math.abs(r), a = a || '.', s = s || ',', o = o || '';
 for (var l, u, c = 0; c < t.length; c++)
   if (e < Math.pow(n, c + 1)) {
     u = c;
     break;
   }
 l = e / Math.pow(n, u);
-var d = t[u] ? s + t[u] : '';
-return i.numberFormat(l, r, a, o) + d;
+var d = t[u] ? o + t[u] : '';
+return i.numberFormat(l, r, a, s) + d;
   }, i.linebreaks = function(e) {
 return '<p>' + (e = (e = (e = (e = (e = e.replace(/^([\n|\r]*)/, '')).replace(/([\n|\r]*)$/, '')).replace(/(\r\n|\n|\r)/g, '\n')).replace(/(\n{2,})/g, '</p><p>')).replace(/\n/g, '<br />')) + '</p>';
   }, i.nl2br = function(e) {

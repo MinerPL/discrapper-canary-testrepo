@@ -9,8 +9,8 @@ var i = t(735250),
   l = t(139387),
   o = t(726542),
   r = t(434404),
-  c = t(486199),
-  d = t(13051),
+  d = t(486199),
+  c = t(13051),
   u = t(541762);
 
 function I(e) {
@@ -23,12 +23,12 @@ labelText: _,
 descriptionText: N,
 helpText: E,
 canNavigate: T
-  } = e, h = o.Z.get(m), p = a.useCallback(async e => {
+  } = e, h = o.Z.get(m), g = a.useCallback(async e => {
 T() && (await r.Z.enableIntegration(I.id, e.type, e.id), l.Z.startEditingIntegration(e.id));
   }, [
 T,
 I.id
-  ]), g = a.useCallback(e => {
+  ]), p = a.useCallback(e => {
 T() && (e.id === (null == t ? void 0 : t.id) && l.Z.stopEditingIntegration(), r.Z.disableIntegration(I.id, e.id));
   }, [
 T,
@@ -42,7 +42,7 @@ t
   ]);
   return (0, i.jsxs)(i.Fragment, {
 children: [
-  (0, i.jsx)(c.Z, {
+  (0, i.jsx)(d.Z, {
     name: _,
     icon: null == h ? void 0 : h.icon.whiteSVG,
     iconBackgroundColor: null == h ? void 0 : h.color,
@@ -53,13 +53,13 @@ children: [
   (0, i.jsx)(s.FormDivider, {
     className: u.headerDivider
   }),
-  n.map(e => (0, i.jsx)(d.Z, {
+  n.map(e => (0, i.jsx)(c.Z, {
     integration: e,
     editedIntegration: t,
     guild: I,
     isExpanded: (null == t ? void 0 : t.id) === e.id,
-    onEnable: p,
-    onDisable: g,
+    onEnable: g,
+    onDisable: p,
     onToggleExpand: () => C(e.id)
   }, e.id)),
   (0, i.jsx)(s.Text, {

@@ -1,4 +1,4 @@
-var r, i, a, o, s, l = n(392711),
+var r, i, a, s, o, l = n(392711),
   u = n.n(l),
   c = n(442837),
   d = n(433517),
@@ -16,11 +16,11 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-(r = a || (a = {})).DATA_SAVER = 'data_saver', r.STANDARD = 'standard', r.BEST = 'best', (i = o || (o = {})).VERY_LOW = 'very_low', i.LOW = 'low', i.MEDIUM = 'medium', i.HIGH = 'high', i.VERY_HIGH = 'very_high';
+(r = a || (a = {})).DATA_SAVER = 'data_saver', r.STANDARD = 'standard', r.BEST = 'best', (i = s || (s = {})).VERY_LOW = 'very_low', i.LOW = 'low', i.MEDIUM = 'medium', i.HIGH = 'high', i.VERY_HIGH = 'very_high';
 let m = (window.innerWidth - f.PrS) / 2,
   I = null,
   T = {};
-class g extends(s = c.ZP.DeviceSettingsStore) {
+class g extends(o = c.ZP.DeviceSettingsStore) {
   initialize(e) {
 var t;
 T = null != e ? e : {};

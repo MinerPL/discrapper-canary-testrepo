@@ -5,13 +5,13 @@ return E;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(481060),
   o = n(239091),
   c = n(586902),
-  d = n(40851),
-  u = n(484459),
+  u = n(40851),
+  d = n(484459),
   h = n(103575),
   p = n(409216),
   m = n(768581),
@@ -20,25 +20,25 @@ var i = n(735250),
 function f(e) {
   let {
 channel: t,
-speaker: l,
+speaker: s,
 className: p
-  } = e, f = (0, d.bp)(), {
+  } = e, f = (0, u.bp)(), {
 reducedMotion: E
-  } = a.useContext(r.AccessibilityPreferencesContext), C = (0, c.Z)({
-userId: l.id
-  }), g = null != l.member ? (0, m.CA)(l.member) : null, I = e => {
+  } = a.useContext(r.AccessibilityPreferencesContext), g = (0, c.Z)({
+userId: s.id
+  }), C = null != s.member ? (0, m.CA)(s.member) : null, I = e => {
 (0, o.jW)(e, async () => {
   let {
     default: e
   } = await Promise.all([
     n.e('79695'),
-    n.e('17400'),
+    n.e('70474'),
     n.e('12435'),
     n.e('17463')
   ]).then(n.bind(n, 757387));
   return n => (0, i.jsx)(e, {
     ...n,
-    user: l.user,
+    user: s.user,
     guildId: t.guild_id,
     channel: t,
     showMediaItems: !0,
@@ -50,7 +50,7 @@ userId: l.id
 });
   };
   return (0, i.jsx)(r.Popout, {
-preload: () => (0, u.W)(l.user, {
+preload: () => (0, d.W)(s.user, {
   guildId: t.guild_id,
   channelId: t.id
 }),
@@ -59,12 +59,12 @@ renderPopout: e => (0, i.jsx)(h.Z, {
   location: 'StageSpeakerSummary',
   guildId: t.guild_id,
   channelId: t.id,
-  userId: l.id
+  userId: s.id
 }),
 position: 'right',
 spacing: 8,
 children: e => (0, i.jsx)(r.Tooltip, {
-  text: l.userNick,
+  text: s.userNick,
   position: 'bottom',
   children: n => (0, i.jsx)(r.Clickable, {
     ...n,
@@ -74,11 +74,11 @@ children: e => (0, i.jsx)(r.Tooltip, {
     },
     onContextMenu: I,
     children: (0, i.jsx)(r.Avatar, {
-      src: null != g ? g : l.user.getAvatarURL(t.guild_id, 24),
+      src: null != C ? C : s.user.getAvatarURL(t.guild_id, 24),
       size: r.AvatarSizes.SIZE_24,
-      className: s()(_.avatar, p),
-      'aria-label': l.userNick,
-      isSpeaking: C && !E.enabled
+      className: l()(_.avatar, p),
+      'aria-label': s.userNick,
+      isSpeaking: g && !E.enabled
     })
   })
 })
@@ -101,7 +101,7 @@ renderUser: (e, t, a) => (0, i.jsx)(f, {
   className: t
 }, a),
 renderMoreUsers: (e, t, n) => (0, i.jsx)('div', {
-  className: s()(_.speakers, t),
+  className: l()(_.speakers, t),
   children: e
 }, n)
   });

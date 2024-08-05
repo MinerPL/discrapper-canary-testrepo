@@ -1,16 +1,16 @@
 var A = I(735250),
   O = I(470079),
-  T = I(286379),
-  S = I(692547),
+  S = I(286379),
+  T = I(692547),
   C = I(481060),
   N = I(442837),
   D = I(797614),
   R = I(706454),
   e = I(626135),
   V = I(219230),
-  i = I(531441),
-  n = I(788080),
-  P = I(451284),
+  P = I(531441),
+  i = I(788080),
+  n = I(451284),
   t = I(613734),
   a = I(846488),
   L = I(384725),
@@ -19,18 +19,18 @@ var A = I(735250),
   o = I(981631),
   M = I(689938),
   r = I(32068);
-let c = E => {
+let U = E => {
 let {
   classificationTypeText: _,
   guildMetadata: I
-} = E, T = (0, V.B)('classification_detail'), S = O.useMemo(() => {
+} = E, S = (0, V.B)('classification_detail'), T = O.useMemo(() => {
   let E = {
     classification_type: _,
     classificationHook: (E, _) => (0, A.jsx)('strong', {
       children: E
     }, _)
   };
-  return T && null != I ? (null == I ? void 0 : I.member_type) === i.wO.OWNER ? M.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_GUILD.format({
+  return S && null != I ? (null == I ? void 0 : I.member_type) === P.wO.OWNER ? M.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_GUILD.format({
     ...E,
     guildName: null == I ? void 0 : I.name
   }) : M.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_GUILD_PRESENCE.format({
@@ -40,17 +40,17 @@ let {
 }, [
   _,
   I,
-  T
+  S
 ]);
 return (0, A.jsx)('div', {
   className: r.classificationHeader,
   children: (0, A.jsx)(C.Heading, {
     variant: 'heading-xl/normal',
-    children: S
+    children: T
   })
 });
   },
-  Y = E => {
+  c = E => {
 let {
   actions: _,
   classificationExpiration: I
@@ -66,7 +66,7 @@ return 0 === _.filter(E => E.descriptions.length > 0).length && null == I ? null
     (0, A.jsxs)('ul', {
       className: r.classificationActionsTakenList,
       children: [
-        _.map(E => (0, A.jsx)(U, {
+        _.map(E => (0, A.jsx)(Y, {
           action: E
         }, E.id)),
         null != I ? (0, A.jsx)('li', {
@@ -87,7 +87,7 @@ return 0 === _.filter(E => E.descriptions.length > 0).length && null == I ? null
   ]
 });
   },
-  U = E => {
+  Y = E => {
 let {
   action: _
 } = E;
@@ -117,7 +117,7 @@ return (0, A.jsxs)(C.Anchor, {
       className: r.classificationPolicyCardIcon,
       children: (0, A.jsx)(C.ShieldIcon, {
         size: 'md',
-        color: S.Z.colors.FOCUS_PRIMARY
+        color: T.Z.colors.FOCUS_PRIMARY
       })
     }),
     (0, A.jsx)('div', {
@@ -133,7 +133,7 @@ return (0, A.jsxs)(C.Anchor, {
       className: r.classificationPolicyLinkIcon,
       children: (0, A.jsx)(C.ChevronSmallRightIcon, {
         size: 'md',
-        color: S.Z.colors.INTERACTIVE_NORMAL
+        color: T.Z.colors.INTERACTIVE_NORMAL
       })
     })
   ]
@@ -168,8 +168,8 @@ let {
   tosLink: _,
   communityGuidelinesLink: I,
   classificationTypeText: O,
-  policyExplainerLink: T,
-  appealComponent: S
+  policyExplainerLink: S,
+  appealComponent: T
 } = E;
 return (0, A.jsxs)('div', {
   className: r.classificationActionExplanationContainer,
@@ -189,9 +189,9 @@ return (0, A.jsxs)('div', {
     }),
     (0, A.jsx)(d, {
       classificationTypeText: O,
-      policyExplainerLink: T
+      policyExplainerLink: S
     }),
-    S
+    T
   ]
 });
   };
@@ -199,38 +199,38 @@ _.Z = E => {
   var _;
   let {
 classificationId: I,
-source: S,
+source: T,
 onError: C
   } = E, {
 classification: N,
 classificationRequestState: R,
 isAppealEligible: V,
 isDsaEligible: M,
-violationType: U
-  } = (0, t.YG)(I), d = (0, P.P)(), G = null != N && null != N.flagged_content && N.flagged_content.length > 0, F = (0, a.e)();
+violationType: Y
+  } = (0, t.YG)(I), d = (0, n.P)(), G = null != N && null != N.flagged_content && N.flagged_content.length > 0, F = (0, a.e)();
   return (O.useEffect(() => {
 F && e.default.track(o.rMx.SAFETY_HUB_ACTION, {
   action: s.n0.ViewViolationDetail,
   account_standing: d.state,
   classification_ids: [Number(I)],
-  source: S,
+  source: T,
   is_violative_content_shown: G,
   is_dsa_eligible: M,
-  violation_type: U
+  violation_type: Y
 });
-  }, [F]), null == N && R === i.OY.FAILED) ? (C(), null) : null == N ? null : (0, A.jsxs)('div', {
+  }, [F]), null == N && R === P.OY.FAILED) ? (C(), null) : null == N ? null : (0, A.jsxs)('div', {
 className: r.classificationContainer,
 children: [
-  (0, A.jsx)(c, {
+  (0, A.jsx)(U, {
     classificationTypeText: N.description,
     guildMetadata: null == N ? void 0 : N.guild_metadata
   }),
   (0, A.jsx)(l.s, {
     flaggedContent: null !== (_ = N.flagged_content) && void 0 !== _ ? _ : []
   }),
-  (0, A.jsx)(Y, {
+  (0, A.jsx)(c, {
     actions: N.actions,
-    classificationExpiration: (0, n.Pu)(N)
+    classificationExpiration: (0, i.Pu)(N)
   }),
   (0, A.jsx)(m, {
     classificationTypeText: N.description,
@@ -244,12 +244,12 @@ children: [
           action: s.n0.ClickLetUsKnow,
           account_standing: d.state,
           classification_ids: [Number(I)],
-          source: S,
+          source: T,
           is_violative_content_shown: G,
           is_dsa_eligible: M,
-          violation_type: U
+          violation_type: Y
         }), V && (D.Z.increment({
-          name: T.V.APPEAL_INGESTION_VIEW
+          name: S.V.APPEAL_INGESTION_VIEW
         }), L.Z.open(I));
       },
       isAppealEligible: V

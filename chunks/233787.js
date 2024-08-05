@@ -1,9 +1,9 @@
-var a, c, t = s(735250);
-s(470079);
-var i = s(481060),
-  l = s(285952),
-  o = s(634724);
-(a = c || (c = {})).UPGRADE = 'UPGRADE', a.CANCEL = 'CANCEL', a.UNVERIFIED = 'UNVERIFIED', a.UNCLAIMED = 'UNCLAIMED', a.GRANDFATHERED = 'GRANDFATHERED';
+var n, t, c = a(735250);
+a(470079);
+var i = a(481060),
+  l = a(285952),
+  o = a(634724);
+(n = t || (t = {})).UPGRADE = 'UPGRADE', n.CANCEL = 'CANCEL', n.UNVERIFIED = 'UNVERIFIED', n.UNCLAIMED = 'UNCLAIMED', n.GRANDFATHERED = 'GRANDFATHERED';
 let r = {
 UPGRADE: 'imageUpgrade',
 CANCEL: 'imageCancel',
@@ -13,71 +13,71 @@ GRANDFATHERED: 'imageCancel'
   },
   d = e => {
 let {
-  children: n,
-  ...s
+  children: s,
+  ...a
 } = e;
-return (0, t.jsx)(i.ModalRoot, {
-  ...s,
-  children: n
+return (0, c.jsx)(i.ModalRoot, {
+  ...a,
+  children: s
 });
   };
 d.Header = e => {
   let {
-children: n,
-onClose: s
+children: s,
+onClose: a
   } = e;
-  return (0, t.jsxs)(i.ModalHeader, {
+  return (0, c.jsxs)(i.ModalHeader, {
 justify: l.Z.Justify.BETWEEN,
 separator: !1,
 children: [
-  (0, t.jsx)(i.FormTitle, {
+  (0, c.jsx)(i.FormTitle, {
     tag: i.FormTitleTags.H4,
-    children: n
+    children: s
   }),
-  null != s ? (0, t.jsx)(i.ModalCloseButton, {
+  null != a ? (0, c.jsx)(i.ModalCloseButton, {
     className: o.__invalid_closeIcon,
-    onClick: s
+    onClick: a
   }) : null
 ]
   });
 }, d.Content = e => {
   let {
-children: n,
-type: s
+children: s,
+type: a
   } = e;
-  return (0, t.jsxs)(i.ModalContent, {
+  return (0, c.jsxs)(i.ModalContent, {
 children: [
-  (0, t.jsx)('div', {
-    className: o[r[s]]
+  (0, c.jsx)('div', {
+    className: o[r[a]]
   }),
-  (0, t.jsx)('div', {
+  (0, c.jsx)('div', {
     className: o.message,
-    children: n
+    children: s
   })
 ]
   });
 }, d.Footer = e => {
   let {
-primary: n,
-primaryRenderer: s,
-secondary: a
+primary: s,
+primaryRenderer: a,
+secondary: n
   } = e;
-  return (0, t.jsx)(i.ModalFooter, {
-children: (0, t.jsxs)(l.Z, {
+  return (0, c.jsx)(i.ModalFooter, {
+children: (0, c.jsxs)(l.Z, {
   justify: l.Z.Justify.END,
   children: [
-    null != a ? (0, t.jsx)(i.Button, {
-      onClick: a.onClick,
+    null != n ? (0, c.jsx)(i.Button, {
+      onClick: n.onClick,
       look: i.Button.Looks.LINK,
       innerClassName: o.secondaryButton,
-      children: a.label
-    }) : null,
-    null != n ? (0, t.jsx)(i.Button, {
-      onClick: n.onClick,
-      color: i.Button.Colors.BRAND,
       children: n.label
-    }) : s
+    }) : null,
+    null != s ? (0, c.jsx)(i.Button, {
+      onClick: s.onClick,
+      color: i.Button.Colors.BRAND,
+      children: s.label
+    }) : a
   ]
 })
   });
-}, d.Types = c, n.Z = d;
+}, d.Types = t, s.Z = d;

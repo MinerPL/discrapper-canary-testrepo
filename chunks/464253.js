@@ -2,8 +2,8 @@ n(411104);
 var r = n(570140),
   i = n(846027),
   a = n(872810),
-  o = n(710845),
-  s = n(252759),
+  s = n(710845),
+  o = n(252759),
   l = n(361291),
   u = n(199902),
   c = n(314897),
@@ -39,7 +39,7 @@ this.mode = 'application', this.streamKey = e, this.director.onStreamBegin(this.
   }
   _onStreamDirectSource(e, t, n, r) {
 this.mode = 'verbatim-source', this.streamKey = e, this._onDirectorAction({
-  type: s.A.STREAM,
+  type: o.A.STREAM,
   sourceId: t,
   audioSourceId: n,
   sound: r
@@ -53,7 +53,7 @@ if (this.streamKey === e)
       break;
     case 'verbatim-source':
       this._onDirectorAction({
-        type: s.A.STOP
+        type: o.A.STOP
       });
       break;
     default:
@@ -78,7 +78,7 @@ if (this.streamKey === e)
 let t = u.Z.getCurrentUserActiveStream(),
   n = l.Z.getState();
 switch (e.type) {
-  case s.A.STREAM:
+  case o.A.STREAM:
     if (null != t && (0, a.tK)(t, !1), e.sourceId.startsWith('camera') && null != e.audioSourceId) {
       let t = e.sourceId.split(':')[1];
       i.Z.setGoLiveSource({
@@ -109,10 +109,10 @@ switch (e.type) {
       });
     }
     break;
-  case s.A.PAUSE:
+  case o.A.PAUSE:
     null != t && (0, a.tK)(t, !0);
     break;
-  case s.A.STOP:
+  case o.A.STOP:
     null != t && (0, _.Z)(t);
     break;
   default:
@@ -137,14 +137,14 @@ switch (this.mode) {
 }
   }
   constructor() {
-h(this, 'director', void 0), h(this, 'applications', void 0), h(this, 'streamKey', void 0), h(this, 'mode', void 0), this.mode = null, this.applications = [], this.director = new s.a(e => this._onDirectorAction(e)), r.Z.subscribe('STREAM_START', e => {
+h(this, 'director', void 0), h(this, 'applications', void 0), h(this, 'streamKey', void 0), h(this, 'mode', void 0), this.mode = null, this.applications = [], this.director = new o.a(e => this._onDirectorAction(e)), r.Z.subscribe('STREAM_START', e => {
   let {
     streamType: t,
     guildId: n,
     channelId: r,
     pid: i,
     sourceId: a,
-    audioSourceId: s,
+    audioSourceId: o,
     sound: l
   } = e, u = c.default.getId(), _ = (0, d.V9)({
     streamType: t,
@@ -152,7 +152,7 @@ h(this, 'director', void 0), h(this, 'applications', void 0), h(this, 'streamKey
     channelId: r,
     ownerId: u
   });
-  null == i != (null == a) ? (null != i && this._onStreamApplication(_, i), null != a && this._onStreamDirectSource(_, a, s, l)) : new o.Z('ApplicationSwitchingManager').warn('invalid start_stream: both application + display modes were specified (pid: '.concat(i, ', source-id: ').concat(a, ')'));
+  null == i != (null == a) ? (null != i && this._onStreamApplication(_, i), null != a && this._onStreamDirectSource(_, a, o, l)) : new s.Z('ApplicationSwitchingManager').warn('invalid start_stream: both application + display modes were specified (pid: '.concat(i, ', source-id: ').concat(a, ')'));
 }), r.Z.subscribe('STREAM_DELETE', e => {
   let {
     streamKey: t

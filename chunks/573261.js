@@ -5,7 +5,7 @@ function a(e, t, n) {
   let {
 trackedActionData: r,
 ...a
-  } = t, o = {
+  } = t, s = {
 url: a.url,
 request_method: n
   };
@@ -14,18 +14,18 @@ e(a).then(e => {
   let n = r.properties;
   'function' == typeof r.properties && (n = r.properties(e)), (0, i.trackNetworkAction)(r.event, {
     status_code: e.status,
-    ...o,
+    ...s,
     ...n
   }), t(e);
 }).catch(e => {
   var t, a;
-  let s = r.properties;
-  'function' == typeof r.properties && (s = r.properties(e)), (0, i.trackNetworkAction)(r.event, {
+  let o = r.properties;
+  'function' == typeof r.properties && (o = r.properties(e)), (0, i.trackNetworkAction)(r.event, {
     status_code: e.status,
     error_code: null === (t = e.body) || void 0 === t ? void 0 : t.code,
     error_message: null === (a = e.body) || void 0 === a ? void 0 : a.message,
-    ...o,
-    ...s
+    ...s,
+    ...o
   }), n(e);
 });
   });

@@ -1,5 +1,5 @@
-var a = r(319301);
-t.Z = (0, a.a)({
+var a = t(319301);
+r.Z = (0, a.a)({
   'button-danger-background': {
 dark: 'red.430',
 light: 'red.430'

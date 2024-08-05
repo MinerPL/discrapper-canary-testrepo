@@ -1,8 +1,8 @@
 n(47120);
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(481060),
   u = n(540026),
   c = n(689938),
@@ -38,7 +38,7 @@ let {
   className: n,
   sliderWrapperClassName: r,
   sliderClassName: a,
-  currentWindow: o,
+  currentWindow: s,
   muted: _,
   minValue: E,
   maxValue: f,
@@ -51,7 +51,7 @@ let {
   dragging: g
 } = this.state, S = l.VoiceNormalIcon;
 return _ || h === E ? S = l.VoiceXIcon : h < f / 2 && (S = l.VoiceLowIcon), (0, i.jsxs)('div', {
-  className: s()(n, d.container),
+  className: o()(n, d.container),
   onMouseEnter: () => {
     clearTimeout(this._hoverTimeout), this.setState({
       hovered: !0
@@ -73,7 +73,7 @@ return _ || h === E ? S = l.VoiceXIcon : h < f / 2 && (S = l.VoiceLowIcon), (0, 
   onKeyDown: this.handleKeyDown,
   children: [
     (0, i.jsx)('div', {
-      className: s()(d.volumeButtonSlider, r, {
+      className: o()(d.volumeButtonSlider, r, {
         [d.sliderVisible]: I || T || g
       }),
       onMouseEnter: () => {
@@ -93,7 +93,7 @@ return _ || h === E ? S = l.VoiceXIcon : h < f / 2 && (S = l.VoiceLowIcon), (0, 
         onDrag: this.handleValueChange,
         onDragStart: this.handleDragStart,
         onDragEnd: this.handleDragEnd,
-        currentWindow: o,
+        currentWindow: s,
         ref: this._mediaBar
       })
     }),

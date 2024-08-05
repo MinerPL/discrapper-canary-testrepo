@@ -9,24 +9,24 @@ return u;
 var r = n(442837),
   i = n(592125),
   a = n(430824),
-  o = n(944486),
-  s = n(981631);
+  s = n(944486),
+  o = n(981631);
 let l = () => {
-let e = o.Z.getVoiceChannelId();
+let e = s.Z.getVoiceChannelId();
 if (null == e)
   return !1;
 let t = i.Z.getChannel(e);
 if (null == t)
   return !1;
 let n = a.Z.getGuild(t.getGuildId());
-return null != n && n.hasFeature(s.oNc.HUB);
+return null != n && n.hasFeature(o.oNc.HUB);
   },
   u = e => (0, r.e7)([
-o.Z,
+s.Z,
 i.Z,
 a.Z
   ], () => {
-let t = o.Z.getVoiceChannelId();
+let t = s.Z.getVoiceChannelId();
 if (null == t)
   return !1;
 let n = i.Z.getChannel(t);

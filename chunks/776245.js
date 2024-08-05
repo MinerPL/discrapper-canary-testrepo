@@ -2,21 +2,21 @@ var r = n(926515),
   i = n(24033),
   a = n(995739);
 e.exports = function(e, t, n) {
-  var o, s;
+  var s, o;
   i(e);
   try {
-if (!(o = a(e, 'return'))) {
+if (!(s = a(e, 'return'))) {
   if ('throw' === t)
     throw n;
   return n;
 }
-o = r(o, e);
+s = r(s, e);
   } catch (e) {
-s = !0, o = e;
+o = !0, s = e;
   }
   if ('throw' === t)
 throw n;
-  if (s)
-throw o;
-  return i(o), n;
+  if (o)
+throw s;
+  return i(s), n;
 };

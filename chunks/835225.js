@@ -12,17 +12,17 @@ function a(e) {
 width: t = 12,
 height: n = 12,
 color: a = 'currentColor',
-foreground: o,
-...s
+foreground: s,
+...o
   } = e;
   return (0, r.jsx)('svg', {
-...(0, i.Z)(s),
+...(0, i.Z)(o),
 width: t,
 height: n,
 viewBox: '0 0 12 12',
 children: (0, r.jsxs)('g', {
   fill: a,
-  className: o,
+  className: s,
   fillRule: 'evenodd',
   children: [
     (0, r.jsx)('path', {

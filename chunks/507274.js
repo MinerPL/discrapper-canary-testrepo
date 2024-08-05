@@ -9,8 +9,8 @@ return c;
 var r = n(735250),
   i = n(470079),
   a = n(597442),
-  o = n(84735),
-  s = n(337033),
+  s = n(84735),
+  o = n(337033),
   l = n(812663);
 let u = i.createContext(void 0),
   c = i.forwardRef(function(e, t) {
@@ -38,9 +38,9 @@ return (0, a.T)(h, {
     role: 'dialog',
     tabIndex: -1,
     'aria-modal': !0,
-    children: (0, r.jsx)(s.y, {
+    children: (0, r.jsx)(o.y, {
       forceLevel: 1,
-      children: (0, r.jsx)(o.J, {
+      children: (0, r.jsx)(s.J, {
         containerRef: h,
         children: n
       })

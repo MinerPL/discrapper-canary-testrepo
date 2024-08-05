@@ -1,8 +1,8 @@
 n(47120);
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(512289);
 
 function u(e, t, n) {
@@ -45,8 +45,8 @@ return null;
 let {
   children: n,
   mirror: r,
-  paused: o,
-  component: s
+  paused: s,
+  component: o
 } = this.props;
 if (null == e) {
   if (null == n)
@@ -59,8 +59,8 @@ if (null == e) {
     ...e.props
   });
 }
-return (0, i.jsx)(s, {
-  paused: o,
+return (0, i.jsx)(o, {
+  paused: s,
   className: l.media,
   streamId: e,
   onReady: t ? null : this.handleReady
@@ -72,7 +72,7 @@ let {
   className: t
 } = this.props;
 return (0, i.jsxs)('div', {
-  className: s()(l.video, t, {
+  className: o()(l.video, t, {
     [l.mirror]: e
   }),
   onDoubleClick: this.handleDoubleClick,

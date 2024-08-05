@@ -1,50 +1,50 @@
-var i = n(735250);
+var t = n(735250);
 n(470079);
-var r = n(780384),
-  o = n(481060),
-  a = n(410030),
-  s = n(204197),
-  l = n(51144),
-  d = n(105759),
-  c = n(898969),
-  C = n(703614),
-  u = n(182294),
+var i = n(780384),
+  r = n(481060),
+  l = n(410030),
+  a = n(204197),
+  o = n(51144),
+  C = n(105759),
+  d = n(898969),
+  u = n(703614),
+  c = n(182294),
   _ = n(689938),
   p = n(906884);
-t.Z = () => {
-  let e = (0, d.Z)(),
+s.Z = () => {
+  let e = (0, C.Z)(),
 {
-  avatarSrc: t,
+  avatarSrc: s,
   eventHandlers: n
-} = (0, s.Z)({
+} = (0, a.Z)({
   user: e,
-  size: u.EF.SIZE_32,
+  size: c.EF.SIZE_32,
   animateOnHover: !0
 }),
-f = (0, a.Fg)(),
-x = (0, r.ap)(f),
-h = l.ZP.getName(e),
-b = x ? c.Z : C.Z;
-  return null == e ? null : (0, i.jsxs)('div', {
+x = (0, l.Fg)(),
+L = (0, i.ap)(x),
+h = o.ZP.getName(e),
+f = L ? d.Z : u.Z;
+  return null == e ? null : (0, t.jsxs)('div', {
 className: p.attributionBannerContainer,
 children: [
-  (0, i.jsx)('div', {
+  (0, t.jsx)('div', {
     className: p.avatarContainer,
-    children: (0, i.jsx)(o.Avatar, {
-      src: t,
+    children: (0, t.jsx)(r.Avatar, {
+      src: s,
       'aria-label': e.username,
-      size: u.EF.SIZE_32,
+      size: c.EF.SIZE_32,
       ...n
     })
   }),
-  (0, i.jsx)(o.Text, {
+  (0, t.jsx)(r.Text, {
     variant: 'text-xs/bold',
     className: p.bannerHeader,
     children: _.Z.Messages.REFERRAL_PRORAM_PAYMENT_MODAL_BANNER.format({
       userName: h
     })
   }),
-  (0, i.jsx)(b, {
+  (0, t.jsx)(f, {
     className: p.bannerIcon
   })
 ]

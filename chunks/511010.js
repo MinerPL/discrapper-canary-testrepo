@@ -1,23 +1,23 @@
 var i = n(735250),
   a = n(470079),
-  l = n(120356),
-  s = n.n(l),
+  s = n(120356),
+  l = n.n(s),
   r = n(661824),
   o = n(848509);
 let c = a.forwardRef(function(e, t) {
   let {
 className: n,
 isBeforeGroup: a = !1,
-...l
+...s
   } = e, {
 children: c
-  } = l;
+  } = s;
   return (0, i.jsx)(r.Z, {
-...l,
+...s,
 ref: t,
 role: 'separator',
 'aria-label': 'string' == typeof c ? c : void 0,
-className: s()(n, {
+className: l()(n, {
   [o.divider]: !0,
   [o.hasContent]: null != c,
   [o.beforeGroup]: a

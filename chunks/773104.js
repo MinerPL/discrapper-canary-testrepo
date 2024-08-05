@@ -22,11 +22,11 @@ onTier2TrialPeriod: E,
 onNonTier2Subscriber: T,
 onTier2Subscriber: I,
 onCustomCriteria: R
-  } = e, C = (0, l.N)(), p = (0, i.Ng)(), g = (0, s.e7)([a.ZP], () => a.ZP.getPremiumTypeSubscription()), A = r.ZP.getPremiumTypeFromSubscription(g);
+  } = e, C = (0, l.N)(), g = (0, i.Ng)(), p = (0, s.e7)([a.ZP], () => a.ZP.getPremiumTypeSubscription()), A = r.ZP.getPremiumTypeFromSubscription(p);
   if (null != R) {
 let e = R();
 if (null != e)
   return e;
   }
-  return null != C && o.nG[C.trial_id].skus.includes(o.Si.TIER_0) ? null != d ? d : t : null != C && o.nG[C.trial_id].skus.includes(o.Si.TIER_2) ? null != _ ? _ : t : null != g && null != g.trialId && A === o.p9.TIER_0 ? null != u ? u : t : null != g && null != g.trialId && A === o.p9.TIER_2 ? null != E ? E : t : null != p ? null != n ? n : t : null == A ? null != c ? c : t : A === o.p9.TIER_0 || A === o.p9.TIER_1 ? null != T ? T : t : A === o.p9.TIER_2 ? null != I ? I : t : t;
+  return null != C && o.nG[C.trial_id].skus.includes(o.Si.TIER_0) ? null != d ? d : t : null != C && o.nG[C.trial_id].skus.includes(o.Si.TIER_2) ? null != _ ? _ : t : null != p && null != p.trialId && A === o.p9.TIER_0 ? null != u ? u : t : null != p && null != p.trialId && A === o.p9.TIER_2 ? null != E ? E : t : null != g ? null != n ? n : t : null == A ? null != c ? c : t : A === o.p9.TIER_0 || A === o.p9.TIER_1 ? null != T ? T : t : A === o.p9.TIER_2 ? null != I ? I : t : t;
 }

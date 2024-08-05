@@ -24,8 +24,8 @@ return g;
 var r = n(470079),
   i = n(230012),
   a = n(133886),
-  o = n(387103),
-  s = n(182823),
+  s = n(387103),
+  o = n(182823),
   l = n(881085);
 let u = new Set([
 'Arab',
@@ -126,11 +126,11 @@ i
 }
 
 function S(e) {
-  e = (0, s.vE)(null != e ? e : {}, A);
+  e = (0, o.vE)(null != e ? e : {}, A);
   let {
 locale: t
   } = m();
-  return (0, r.useMemo)(() => new o.CN(t, e), [
+  return (0, r.useMemo)(() => new s.CN(t, e), [
 t,
 e
   ]);

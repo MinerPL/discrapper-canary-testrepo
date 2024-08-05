@@ -1,12 +1,12 @@
 n.d(t, {
   Sv: function() {
-return r;
+return i;
   },
   Y$: function() {
-return l;
+return o;
   }
 });
-let i = (0, n(818083).B)({
+let s = (0, n(818083).B)({
   kind: 'user',
   id: '2024-07_global_discovery',
   label: 'Global Discovery',
@@ -41,18 +41,18 @@ discoverButtonTakeoverEnabled: !1
   ]
 });
 
-function l(e) {
+function o(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  return i.useExperiment({
+  return s.useExperiment({
 location: e
   }, {
 autoTrackExposure: t
   }).discoverButtonTakeoverEnabled;
 }
 
-function r(e) {
+function i(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  return i.getCurrentConfig({
+  return s.getCurrentConfig({
 location: e
   }, {
 autoTrackExposure: t

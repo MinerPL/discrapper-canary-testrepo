@@ -40,13 +40,13 @@ children: [
     children: [
       (0, n.jsx)(o.Heading, {
         variant: 'heading-lg/extrabold',
-        color: 'always-white',
+        color: 'currentColor',
         className: N.title,
         children: null !== (i = null == c ? void 0 : null === (t = c.title) || void 0 === t ? void 0 : t.call(c)) && void 0 !== i ? i : S.Z.Messages.COLLECTIBLES_BANNER_TITLE_2024
       }),
       (0, n.jsx)(o.Text, {
         variant: 'text-sm/normal',
-        color: 'always-white',
+        color: 'currentColor',
         children: null !== (l = null == c ? void 0 : null === (s = c.description) || void 0 === s ? void 0 : s.call(c)) && void 0 !== l ? l : S.Z.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
       })
     ]
@@ -66,7 +66,9 @@ d.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
 });
   }, [t]), (0, n.jsxs)('div', {
 ref: s,
-className: r()(N.container),
+className: r()(N.container, {
+  [N.robertContainer]: i === E.C5.ROBERT
+}),
 style: {
   backgroundImage: 'url('.concat(null !== (e = null == C ? void 0 : C.backgroundSrc) && void 0 !== e ? e : m, ')')
 },

@@ -9,8 +9,8 @@ var s = a(735250),
   o = a(481060),
   i = a(91176),
   r = a(906732),
-  c = a(594174),
-  u = a(373791),
+  c = a(346486),
+  u = a(594174),
   d = a(153124),
   _ = a(626135),
   h = a(71619),
@@ -29,7 +29,7 @@ transitionState: p,
 onClose: T
   } = e, O = (0, d.Dt)(), {
 analyticsLocations: U
-  } = (0, r.ZP)(), S = null !== (a = null !== (t = null == f ? void 0 : f[0]) && void 0 !== t ? t : null == U ? void 0 : U[0]) && void 0 !== a ? a : null, v = (0, l.e7)([c.default], () => c.default.getUser(E), [E]), [D, x] = (0, h.ZP)(E, m), [A, g] = n.useState(!1), b = n.useCallback(async () => {
+  } = (0, r.ZP)(), S = null !== (a = null !== (t = null == f ? void 0 : f[0]) && void 0 !== t ? t : null == U ? void 0 : U[0]) && void 0 !== a ? a : null, v = (0, l.e7)([u.default], () => u.default.getUser(E), [E]), [D, x] = (0, h.ZP)(E, m), [A, g] = n.useState(!1), b = n.useCallback(async () => {
 if (null != v) {
   g(!0);
   try {
@@ -92,7 +92,7 @@ children: [
         color: 'interactive-normal',
         children: I.Z.Messages.GUILD_ENABLE_COMMUNICATION_TIME_REMAINING.format({
           username: v.username,
-          countdown: e => null == D ? null : (0, s.jsx)(u.Z, {
+          countdown: e => null == D ? null : (0, s.jsx)(c.Z, {
             className: M.countdown,
             deadline: new Date(D),
             onInterval: Z,

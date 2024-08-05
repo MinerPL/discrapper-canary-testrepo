@@ -14,7 +14,7 @@ var r = t(108930),
   d = t(206851),
   u = t(246933),
   m = t(995414),
-  f = t(308083);
+  _ = t(308083);
 
 function C(e) {
   let {
@@ -22,39 +22,39 @@ banner: n,
 ...t
   } = e;
   switch (n) {
-case f.qC.NIGHT_SKY:
+case _.qC.NIGHT_SKY:
   return (0, a.jsx)(l.Z, {
     ...t
   });
-case f.qC.CASTLE:
+case _.qC.CASTLE:
   return (0, a.jsx)(r.Z, {
     ...t
   });
-case f.qC.WORLD_MAP:
+case _.qC.WORLD_MAP:
   return (0, a.jsx)(m.Z, {
     ...t
   });
-case f.qC.SEA_FOAM:
+case _.qC.SEA_FOAM:
   return (0, a.jsx)(c.Z, {
     ...t
   });
-case f.qC.WARP_TUNNEL:
+case _.qC.WARP_TUNNEL:
   return (0, a.jsx)(u.Z, {
     ...t
   });
-case f.qC.HOUSE:
+case _.qC.HOUSE:
   return (0, a.jsx)(s.Z, {
     ...t
   });
-case f.qC.HEIGHTMAP:
+case _.qC.HEIGHTMAP:
   return (0, a.jsx)(i.Z, {
     ...t
   });
-case f.qC.MESH:
+case _.qC.MESH:
   return (0, a.jsx)(o.Z, {
     ...t
   });
-case f.qC.SPATTER:
+case _.qC.SPATTER:
   return (0, a.jsx)(d.Z, {
     ...t
   });

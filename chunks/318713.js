@@ -2,8 +2,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(481060),
-  s = n(55935),
+  s = n(481060),
+  o = n(55935),
   l = n(223021),
   u = n(689938),
   c = n(475525);
@@ -18,7 +18,7 @@ cozyAlt: E = !1,
 isInline: f = !0,
 id: h,
 isEdited: p = !1
-  } = e, m = (0, s.Hg)(d), I = i ? (0, s.vc)(d, 'LT') : (0, s.Y4)(d), T = i ? (0, l.Z)(I) : null, g = p ? u.Z.Messages.MESSAGE_EDITED_TIMESTAMP_A11Y_LABEL.format({
+  } = e, m = (0, o.Hg)(d), I = i ? (0, o.vc)(d, 'LT') : (0, o.Y4)(d), T = i ? (0, l.Z)(I) : null, g = p ? u.Z.Messages.MESSAGE_EDITED_TIMESTAMP_A11Y_LABEL.format({
 timeFormatted: m
   }) : m;
   return (0, r.jsx)('span', {
@@ -28,8 +28,8 @@ className: a()(n, T, {
   [c.timestampInline]: f,
   [c.alt]: E
 }),
-children: (0, r.jsx)(o.Tooltip, {
-  text: (0, s.vc)(d, 'LLLL'),
+children: (0, r.jsx)(s.Tooltip, {
+  text: (0, o.vc)(d, 'LLLL'),
   'aria-label': g,
   tooltipClassName: c.timestampTooltip,
   delay: 750,

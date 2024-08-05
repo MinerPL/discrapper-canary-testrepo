@@ -5,13 +5,13 @@ return h;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(481060),
-  s = n(239091),
+  s = n(481060),
+  l = n(239091),
   r = n(299206),
   o = n(726521),
   c = n(99325),
-  d = n(683818),
-  u = n(689938);
+  u = n(683818),
+  d = n(689938);
 
 function h(e) {
   let {
@@ -23,34 +23,34 @@ hideEditButton: m = !1
 isEntryAdmin: _,
 canEdit: f,
 canRemove: E
-  } = (0, d.Z)(t), C = (0, r.Z)({
+  } = (0, u.Z)(t), g = (0, r.Z)({
 id: t.guildId,
-label: u.Z.Messages.COPY_ID_GUILD,
+label: d.Z.Messages.COPY_ID_GUILD,
 onSuccess: p
   });
   a.useEffect(() => {
-!f && !E && null == C && (0, s.Zy)();
+!f && !E && null == g && (0, l.Zy)();
   });
-  let g = () => {
+  let C = () => {
 c.kx(t.channelId, t.guildId);
   };
 
   function I() {
-(0, s.Zy)(), null == p || p();
+(0, l.Zy)(), null == p || p();
   }
-  return (0, i.jsxs)(l.Menu, {
+  return (0, i.jsxs)(s.Menu, {
 navId: 'guild-entry-context',
 onClose: I,
-'aria-label': u.Z.Messages.GUILD_ACTIONS_MENU_LABEL,
+'aria-label': d.Z.Messages.GUILD_ACTIONS_MENU_LABEL,
 onSelect: h,
 children: [
-  (0, i.jsxs)(l.MenuGroup, {
+  (0, i.jsxs)(s.MenuGroup, {
     children: [
-      f && !m ? (0, i.jsx)(l.MenuItem, {
+      f && !m ? (0, i.jsx)(s.MenuItem, {
         id: 'update-entry',
-        label: u.Z.Messages.HUB_ENTRY_UPDATE,
+        label: d.Z.Messages.HUB_ENTRY_UPDATE,
         action: function() {
-          (0, l.openModalLazy)(async () => {
+          (0, s.openModalLazy)(async () => {
             let {
               default: e
             } = await n.e('34191').then(n.bind(n, 303647));
@@ -61,19 +61,19 @@ children: [
           }), I();
         }
       }) : null,
-      E ? (0, i.jsx)(l.MenuItem, {
+      E ? (0, i.jsx)(s.MenuItem, {
         id: 'remove-from-hub',
-        label: u.Z.Messages.HUB_ENTRY_REMOVE,
+        label: d.Z.Messages.HUB_ENTRY_REMOVE,
         action: function() {
-          (0, l.openModal)(e => (0, i.jsx)(l.ConfirmModal, {
-            header: u.Z.Messages.HUB_ENTRY_REMOVE,
-            confirmText: u.Z.Messages.REMOVE,
-            cancelText: u.Z.Messages.CANCEL,
-            onConfirm: g,
+          (0, s.openModal)(e => (0, i.jsx)(s.ConfirmModal, {
+            header: d.Z.Messages.HUB_ENTRY_REMOVE,
+            confirmText: d.Z.Messages.REMOVE,
+            cancelText: d.Z.Messages.CANCEL,
+            onConfirm: C,
             ...e,
-            children: (0, i.jsx)(l.Text, {
+            children: (0, i.jsx)(s.Text, {
               variant: 'text-md/normal',
-              children: u.Z.Messages.HUB_ENTRY_REMOVE_BODY.format({
+              children: d.Z.Messages.HUB_ENTRY_REMOVE_BODY.format({
                 guildName: t.name
               })
             })
@@ -82,20 +82,20 @@ children: [
         color: 'danger'
       }) : null,
       _ ? null : (0, i.jsx)(i.Fragment, {
-        children: (0, i.jsx)(l.MenuItem, {
+        children: (0, i.jsx)(s.MenuItem, {
           id: 'report-server-listing',
-          label: u.Z.Messages.REPORT_SERVER_NO_NAME,
+          label: d.Z.Messages.REPORT_SERVER_NO_NAME,
           action: function() {
             null != t && ((0, o.sq)(t), I());
           },
-          icon: l.FlagIcon,
+          icon: s.FlagIcon,
           color: 'danger'
         })
       })
     ]
   }),
-  (0, i.jsx)(l.MenuGroup, {
-    children: C
+  (0, i.jsx)(s.MenuGroup, {
+    children: g
   })
 ]
   });

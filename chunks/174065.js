@@ -1,9 +1,9 @@
 n(47120);
 var r, i = n(442837),
   a = n(570140),
-  o = n(70956);
+  s = n(70956);
 
-function s(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -46,7 +46,7 @@ return u.captionsById.size > 0;
 u = l, c = !1, d = null;
   }
 }
-s(_, 'displayName', 'EmojiCaptionsStore'), s(_, 'persistKey', 'EmojiCaptionsStore'), t.Z = new _(a.Z, {
+o(_, 'displayName', 'EmojiCaptionsStore'), o(_, 'persistKey', 'EmojiCaptionsStore'), t.Z = new _(a.Z, {
   LOGOUT: function() {
 u = l, c = !1, d = null;
   },
@@ -58,14 +58,14 @@ let {} = e;
 let {
   emojiCaptions: t
 } = e;
-u.captionsById = new Map(Object.entries(t)), c = !1, d = Date.now() + 360 * o.Z.Millis.MINUTE;
+u.captionsById = new Map(Object.entries(t)), c = !1, d = Date.now() + 360 * s.Z.Millis.MINUTE;
   },
   EMOJI_CAPTIONS_FETCH_ERROR: function(e) {
 let {
   is4XXError: t
 } = e;
 c = !1;
-d = Date.now() + (t ? 10 : 1) * o.Z.Millis.MINUTE;
+d = Date.now() + (t ? 10 : 1) * s.Z.Millis.MINUTE;
   },
   POST_CONNECTION_OPEN: function(e) {
 let {} = e;

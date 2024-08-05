@@ -5,7 +5,9 @@ e.exports = {
   banner: 'banner_f9d37d',
   visible: 'visible_f9d37d',
   buttonInner: 'buttonInner_f9d37d',
-  color: 'color_f9d37d',
+  themeColor: 'themeColor_f9d37d',
+  primary: 'primary_f9d37d',
+  secondary: 'secondary_f9d37d',
   hoverColor: 'hoverColor_f9d37d',
   bannerColor: 'bannerColor_f9d37d'
 };

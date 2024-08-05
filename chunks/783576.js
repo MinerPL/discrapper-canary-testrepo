@@ -1,15 +1,15 @@
-o.r(e), o.d(e, {
+s.r(e), s.d(e, {
   default: function() {
 return d;
   }
 });
-var s = o(735250);
-o(470079);
-var n = o(481060),
-  a = o(782568),
-  i = o(153124),
-  l = o(689938),
-  r = o(150493);
+var o = s(735250);
+s(470079);
+var n = s(481060),
+  a = s(782568),
+  i = s(153124),
+  l = s(689938),
+  r = s(150493);
 
 function d(t) {
   let {
@@ -17,26 +17,26 @@ href: e,
 onClose: d,
 transitionState: c
   } = t, N = (0, i.Dt)();
-  return (0, s.jsxs)(n.ModalRoot, {
+  return (0, o.jsxs)(n.ModalRoot, {
 transitionState: c,
 'aria-labelledby': N,
 children: [
-  (0, s.jsx)('img', {
+  (0, o.jsx)('img', {
     className: r.art,
-    src: o(902623),
+    src: s(902623),
     alt: ''
   }),
-  (0, s.jsx)(n.ModalContent, {
-    children: (0, s.jsxs)('div', {
+  (0, o.jsx)(n.ModalContent, {
+    children: (0, o.jsxs)('div', {
       className: r.modalContent,
       children: [
-        (0, s.jsx)(n.Heading, {
+        (0, o.jsx)(n.Heading, {
           id: N,
           variant: 'heading-lg/semibold',
           className: r.title,
           children: l.Z.Messages.SUSPICIOUS_DOWNLOAD_WARNING_TITLE
         }),
-        (0, s.jsx)(n.Text, {
+        (0, o.jsx)(n.Text, {
           variant: 'text-md/normal',
           className: r.body,
           children: l.Z.Messages.SUSPICIOUS_DOWNLOAD_WARNING_BODY
@@ -44,16 +44,16 @@ children: [
       ]
     })
   }),
-  (0, s.jsxs)(n.ModalFooter, {
+  (0, o.jsxs)(n.ModalFooter, {
     children: [
-      (0, s.jsx)(n.Button, {
+      (0, o.jsx)(n.Button, {
         type: 'button',
         size: n.Button.Sizes.MEDIUM,
         color: n.Button.Colors.BRAND,
         onClick: d,
         children: l.Z.Messages.SUSPICIOUS_DOWNLOAD_WARNING_CANCEL
       }),
-      (0, s.jsx)(n.Button, {
+      (0, o.jsx)(n.Button, {
         type: 'button',
         size: n.Button.Sizes.MEDIUM,
         color: n.Button.Colors.TRANSPARENT,

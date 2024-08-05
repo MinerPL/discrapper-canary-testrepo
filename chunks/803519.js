@@ -16,6 +16,10 @@ e.exports = {
   iconWrapper: 'iconWrapper_d0585c',
   subLabel: 'subLabel_d0585c',
   checkbox: 'checkbox_d0585c',
+  fauxButton: 'fauxButton_d0585c',
   noResults: 'noResults_d0585c',
-  noResultsImg: 'noResultsImg_d0585c'
+  noResultsImg: 'noResultsImg_d0585c',
+  actions: 'actions_d0585c',
+  sendWithMessage: 'sendWithMessage_d0585c',
+  messageInput: 'messageInput_d0585c'
 };

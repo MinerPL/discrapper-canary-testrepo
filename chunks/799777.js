@@ -1,5 +1,5 @@
 let r;
-var i, a, o, s, l = n(392711),
+var i, a, s, o, l = n(392711),
   u = n.n(l),
   c = n(442837),
   d = n(433517),
@@ -12,7 +12,7 @@ let f = 'GameLibraryViewStore',
   I = u().debounce(() => {
 m = !1, g.emitChange();
   }, 200);
-class T extends(s = c.ZP.Store) {
+class T extends(o = c.ZP.Store) {
   initialize() {
 var e;
 let t = null !== (e = d.K.get(f)) && void 0 !== e ? e : {};
@@ -31,12 +31,12 @@ return r;
 return m;
   }
 }
-o = 'GameLibraryViewStore', (a = 'displayName') in(i = T) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'GameLibraryViewStore', (a = 'displayName') in(i = T) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o;
+}) : i[a] = s;
 let g = new T(_.Z, {
   LIBRARY_TABLE_SORT_UPDATE: function(e) {
 let {

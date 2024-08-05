@@ -5,8 +5,8 @@ return d;
 });
 var o = n(735250);
 n(470079);
-var r = n(98278),
-  a = n(790527),
+var a = n(98278),
+  r = n(790527),
   s = n(474936),
   c = n(981631),
   i = n(689938),
@@ -21,10 +21,10 @@ onLearnMore: d,
 ...p
   } = t, L = s.Si.TIER_2, O = i.Z.Messages.VIDEO_BACKGROUND_UPSELL_BODY.format({
 onLearnMore: function() {
-  null == d || d(), e(), (0, r.z)();
+  null == d || d(), e(), (0, a.z)();
 }
   });
-  return (0, o.jsx)(a.Z, {
+  return (0, o.jsx)(r.Z, {
 artURL: _,
 artContainerClassName: u.videoBackgroundArt,
 type: s.cd.VIDEO_BACKGROUNDS_MODAL,

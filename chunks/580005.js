@@ -5,8 +5,8 @@ return m;
 }), n(653041);
 var r, i = n(392711),
   a = n.n(i),
-  o = n(442837),
-  s = n(570140),
+  s = n(442837),
+  o = n(570140),
   l = n(704907),
   u = n(581883),
   c = n(592125),
@@ -69,7 +69,7 @@ recentUses: e.recentUses.map(Number).filter(e => e > 0)
 let N = {
   pendingUsages: []
 };
-class v extends(r = o.ZP.PersistedStore) {
+class v extends(r = s.ZP.PersistedStore) {
   initialize(e) {
 this.waitFor(E.Z, _.Z), null != e && (e.pendingUsages = e.pendingUsages.filter(e => null != e && f.Xyh.test(e.key)), N = e), this.syncWith([u.Z], A);
   }
@@ -100,7 +100,7 @@ return 10 * m;
 return 100;
   }
 }
-p(v, 'displayName', 'FrecencyStore'), p(v, 'persistKey', 'FrecencyStore'), t.Z = new v(s.Z, {
+p(v, 'displayName', 'FrecencyStore'), p(v, 'persistKey', 'FrecencyStore'), t.Z = new v(o.Z, {
   CHANNEL_SELECT: S,
   VOICE_CHANNEL_SELECT: S,
   USER_SETTINGS_PROTO_UPDATE: function(e) {

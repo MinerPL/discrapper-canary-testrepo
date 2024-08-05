@@ -9,9 +9,9 @@ var n, a, i, r, o = s(735250),
   d = s.n(c),
   _ = s(481060),
   E = s(987032),
-  u = s(46141),
-  T = s(285952),
-  I = s(912454),
+  u = s(219929),
+  T = s(46141),
+  I = s(285952),
   S = s(122289),
   N = s(624138),
   C = s(689938),
@@ -21,51 +21,51 @@ class A extends(r = l.PureComponent) {
 let {
   paymentSource: e
 } = this.props;
-if (e instanceof u.qo)
-  return I.ZP.Types.PAYPAL;
-if (e instanceof u.Sf)
-  return I.ZP.Types.SOFORT;
-if (e instanceof u.dm)
-  return I.ZP.getType(e.brand);
-else if (e instanceof u.fv)
-  return I.ZP.Types.GIROPAY;
-else if (e instanceof u.Vg)
-  return I.ZP.Types.PRZELEWY24;
-else if (e instanceof u.sn)
-  return I.ZP.Types.PAYSAFECARD;
-else if (e instanceof u.o_)
-  return I.ZP.Types.GCASH;
-else if (e instanceof u.kX)
-  return I.ZP.Types.GRABPAY;
-else if (e instanceof u.z)
-  return I.ZP.Types.MOMO_WALLET;
-else if (e instanceof u.Xc)
-  return I.ZP.Types.VENMO;
-else if (e instanceof u.Om)
-  return I.ZP.Types.KAKAOPAY;
-else if (e instanceof u.JC)
-  return I.ZP.Types.GOPAY_WALLET;
-else if (e instanceof u.U4)
-  return I.ZP.Types.BANCONTACT;
-else if (e instanceof u.D0)
-  return I.ZP.Types.EPS;
-else if (e instanceof u.jc)
-  return I.ZP.Types.IDEAL;
-else if (e instanceof u.u_)
-  return I.ZP.Types.CASH_APP;
-else if (e instanceof u.$z)
-  return I.ZP.Types.APPLE;
-return I.ZP.Types.UNKNOWN;
+if (e instanceof T.qo)
+  return u.ZP.Types.PAYPAL;
+if (e instanceof T.Sf)
+  return u.ZP.Types.SOFORT;
+if (e instanceof T.dm)
+  return u.ZP.getType(e.brand);
+else if (e instanceof T.fv)
+  return u.ZP.Types.GIROPAY;
+else if (e instanceof T.Vg)
+  return u.ZP.Types.PRZELEWY24;
+else if (e instanceof T.sn)
+  return u.ZP.Types.PAYSAFECARD;
+else if (e instanceof T.o_)
+  return u.ZP.Types.GCASH;
+else if (e instanceof T.kX)
+  return u.ZP.Types.GRABPAY;
+else if (e instanceof T.z)
+  return u.ZP.Types.MOMO_WALLET;
+else if (e instanceof T.Xc)
+  return u.ZP.Types.VENMO;
+else if (e instanceof T.Om)
+  return u.ZP.Types.KAKAOPAY;
+else if (e instanceof T.JC)
+  return u.ZP.Types.GOPAY_WALLET;
+else if (e instanceof T.U4)
+  return u.ZP.Types.BANCONTACT;
+else if (e instanceof T.D0)
+  return u.ZP.Types.EPS;
+else if (e instanceof T.jc)
+  return u.ZP.Types.IDEAL;
+else if (e instanceof T.u_)
+  return u.ZP.Types.CASH_APP;
+else if (e instanceof T.$z)
+  return u.ZP.Types.APPLE;
+return u.ZP.Types.UNKNOWN;
   }
   getLabel(e) {
-return e instanceof u.dm ? C.Z.Messages.PAYMENT_SOURCE_CARD_ENDING.format({
+return e instanceof T.dm ? C.Z.Messages.PAYMENT_SOURCE_CARD_ENDING.format({
   brand: (0, N.De)(e.brand),
   last_4: e.last4
-}) : e instanceof u.qo ? C.Z.Messages.PAYMENT_SOURCE_PAYPAL : e instanceof u.Sf ? C.Z.Messages.PAYMENT_SOURCE_SOFORT : e instanceof u.fv ? C.Z.Messages.PAYMENT_SOURCE_GIROPAY : e instanceof u.Vg ? C.Z.Messages.PAYMENT_SOURCE_PRZELEWY24 : e instanceof u.sn ? C.Z.Messages.PAYMENT_SOURCE_PAYSAFE_CARD : e instanceof u.o_ ? C.Z.Messages.PAYMENT_SOURCE_GCASH : e instanceof u.kX ? C.Z.Messages.PAYMENT_SOURCE_GRABPAY : e instanceof u.z ? C.Z.Messages.PAYMENT_SOURCE_MOMO_WALLET : e instanceof u.Xc ? C.Z.Messages.PAYMENT_SOURCE_VENMO : e instanceof u.Om ? C.Z.Messages.PAYMENT_SOURCE_KAKAOPAY : e instanceof u.JC ? C.Z.Messages.PAYMENT_SOURCE_GOPAY_WALLET : e instanceof u.U4 ? C.Z.Messages.PAYMENT_SOURCE_BANCONTACT : e instanceof u.jc ? C.Z.Messages.PAYMENT_SOURCE_IDEAL_WITH_BANK.format({
+}) : e instanceof T.qo ? C.Z.Messages.PAYMENT_SOURCE_PAYPAL : e instanceof T.Sf ? C.Z.Messages.PAYMENT_SOURCE_SOFORT : e instanceof T.fv ? C.Z.Messages.PAYMENT_SOURCE_GIROPAY : e instanceof T.Vg ? C.Z.Messages.PAYMENT_SOURCE_PRZELEWY24 : e instanceof T.sn ? C.Z.Messages.PAYMENT_SOURCE_PAYSAFE_CARD : e instanceof T.o_ ? C.Z.Messages.PAYMENT_SOURCE_GCASH : e instanceof T.kX ? C.Z.Messages.PAYMENT_SOURCE_GRABPAY : e instanceof T.z ? C.Z.Messages.PAYMENT_SOURCE_MOMO_WALLET : e instanceof T.Xc ? C.Z.Messages.PAYMENT_SOURCE_VENMO : e instanceof T.Om ? C.Z.Messages.PAYMENT_SOURCE_KAKAOPAY : e instanceof T.JC ? C.Z.Messages.PAYMENT_SOURCE_GOPAY_WALLET : e instanceof T.U4 ? C.Z.Messages.PAYMENT_SOURCE_BANCONTACT : e instanceof T.jc ? C.Z.Messages.PAYMENT_SOURCE_IDEAL_WITH_BANK.format({
   bank: (0, E.YE)(e.bank)
-}) : e instanceof u.D0 ? C.Z.Messages.PAYMENT_SOURCE_EPS_WITH_BANK.format({
+}) : e instanceof T.D0 ? C.Z.Messages.PAYMENT_SOURCE_EPS_WITH_BANK.format({
   bank: (0, E.Ul)(e.bank)
-}) : e instanceof u.u_ ? C.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY : e instanceof u.$z ? C.Z.Messages.PAYMENT_SOURCE_APPLE : C.Z.Messages.PAYMENT_SOURCE_UNKNOWN;
+}) : e instanceof T.u_ ? C.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY : e instanceof T.$z ? C.Z.Messages.PAYMENT_SOURCE_APPLE : C.Z.Messages.PAYMENT_SOURCE_UNKNOWN;
   }
   renderDescription() {
 let {
@@ -83,10 +83,10 @@ let {
   paymentSource: e,
   locale: t
 } = this.props, s = null;
-return e instanceof u.dm ? s = C.Z.Messages.PAYMENT_SOURCE_CARD_EXPIRES.format({
+return e instanceof T.dm ? s = C.Z.Messages.PAYMENT_SOURCE_CARD_EXPIRES.format({
   month: (0, S.E2)(e.expiresMonth, t),
   year: e.expiresYear
-}) : e instanceof u.qo ? s = e.email : e instanceof u.Sf ? s = e.email : e instanceof u.Vg ? s = e.email : e instanceof u.Xc ? s = '@' + e.username : e instanceof u.u_ && (s = e.username), s;
+}) : e instanceof T.qo ? s = e.email : e instanceof T.Sf ? s = e.email : e instanceof T.Vg ? s = e.email : e instanceof T.Xc ? s = '@' + e.username : e instanceof T.u_ && (s = e.username), s;
   }
   render() {
 let {
@@ -97,17 +97,17 @@ let {
   showPaymentSourceIcon: a,
   showLabels: i
 } = this.props, r = this.renderSubText();
-return (0, o.jsxs)(T.Z, {
+return (0, o.jsxs)(I.Z, {
   children: [
-    a && (0, o.jsx)(I.ZP, {
+    a && (0, o.jsx)(u.ZP, {
       type: this.typeString
     }),
-    (0, o.jsxs)(T.Z, {
-      direction: T.Z.Direction.VERTICAL,
+    (0, o.jsxs)(I.Z, {
+      direction: I.Z.Direction.VERTICAL,
       className: m.descriptionWrapper,
       children: [
-        (0, o.jsxs)(T.Z, {
-          align: T.Z.Align.CENTER,
+        (0, o.jsxs)(I.Z, {
+          align: I.Z.Align.CENTER,
           children: [
             this.renderDescription(),
             i && e ? (0, o.jsx)('div', {

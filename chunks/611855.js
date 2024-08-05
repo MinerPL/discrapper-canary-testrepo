@@ -1,33 +1,33 @@
 var s = n(735250);
 n(470079);
-var a = n(120356),
-  r = n.n(a),
-  i = n(481060),
-  o = n(689938),
-  u = n(665567);
+var o = n(120356),
+  i = n.n(o),
+  a = n(481060),
+  r = n(689938),
+  l = n(665567);
 t.Z = function(e) {
   let {
 className: t,
 color: n = 'header-primary',
-textOpacity: a = 0.9,
-bgOpacity: _ = 0.4
+textOpacity: o = 0.9,
+bgOpacity: u = 0.4
   } = e;
-  return (0, s.jsxs)(i.Text, {
+  return (0, s.jsxs)(a.Text, {
 variant: 'text-xxs/medium',
 color: n,
-className: r()(u.promotedTag, t),
+className: i()(l.promotedTag, t),
 children: [
   (0, s.jsx)('span', {
-    className: u.promotedTagBackground,
+    className: l.promotedTagBackground,
     style: {
-      opacity: _
+      opacity: u
     }
   }),
   (0, s.jsx)('span', {
     style: {
-      opacity: a
+      opacity: o
     },
-    children: o.Z.Messages.QUESTS_PROMOTED
+    children: r.Z.Messages.QUESTS_PROMOTED
   })
 ]
   });

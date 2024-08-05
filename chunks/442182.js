@@ -14,10 +14,10 @@ var s = n(735250),
   u = n(58540),
   _ = n(100527),
   I = n(906732),
-  E = n(484459),
-  T = n(103575),
-  m = n(594174),
-  N = n(474333),
+  E = n(777036),
+  T = n(484459),
+  m = n(103575),
+  N = n(594174),
   S = n(626135),
   h = n(243730),
   g = n(434404),
@@ -98,17 +98,16 @@ if (e.stopPropagation(), !d) {
 }
   }
 
-  function N(e) {
-let a = m.default.getUser(t.id);
+  function E(e) {
+let a = N.default.getUser(t.id);
 if (null != a)
   (0, c.jW)(e, async () => {
     let {
       default: e
     } = await Promise.all([
       n.e('79695'),
-      n.e('17400'),
       n.e('12435'),
-      n.e('34696')
+      n.e('4746')
     ]).then(n.bind(n, 415118));
     return t => (0, s.jsx)(e, {
       ...t,
@@ -121,7 +120,7 @@ if (null != a)
   return (0, u.$)(_), (0, s.jsx)('div', {
 className: D.contentWidth,
 children: (0, s.jsx)(o.Popout, {
-  renderPopout: e => (0, s.jsx)(T.Z, {
+  renderPopout: e => (0, s.jsx)(m.Z, {
     location: 'GuildSettingsRolesEditMembers',
     guildId: i,
     userId: t.id,
@@ -129,13 +128,13 @@ children: (0, s.jsx)(o.Popout, {
     ...e
   }),
   position: 'left',
-  preload: () => (0, E.W)(t.id, t.avatarURL, {
+  preload: () => (0, T.W)(t.id, t.avatarURL, {
     guildId: i
   }),
   children: e => (0, s.jsxs)(o.Clickable, {
     ...e,
     className: M.memberRow,
-    onContextMenu: N,
+    onContextMenu: E,
     children: [
       (0, s.jsx)(f.Z, {
         className: M.memberDetails,
@@ -294,10 +293,10 @@ locked: c,
 setSelectedSection: d
   } = e, [u, _] = a.useState(''), {
 headerHeight: I,
-headerRef: E
+headerRef: T
   } = (0, p.Z)(0), {
-scrolledToTop: T,
-handleScroll: m
+scrolledToTop: m,
+handleScroll: N
   } = (0, R.V)(), g = i.managed || c, C = (0, x.e)(t.id, i.id), f = (0, l.e7)([h.Z], () => {
 var e, n;
 return null !== (n = null === (e = h.Z.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[i.id]) && void 0 !== n ? n : 0;
@@ -325,12 +324,12 @@ className: M.container,
 children: [
   (0, s.jsx)('div', {
     className: M.headerContainer,
-    ref: E,
+    ref: T,
     children: (0, s.jsx)('div', {
       className: D.contentWidth,
       children: (0, s.jsxs)('div', {
         className: r()(D.header, {
-          [D.stickyHeaderElevated]: !T
+          [D.stickyHeaderElevated]: !m
         }),
         children: [
           (0, s.jsx)(R.Z, {
@@ -345,9 +344,9 @@ children: [
             locked: g,
             handleAddClick: v
           }),
-          f ? (0, s.jsx)(N.Z, {
+          f ? (0, s.jsx)(E.Z, {
             className: M.searchWarning,
-            messageType: N.Q.INFO,
+            messageType: E.Q.INFO,
             children: A.Z.Messages.ROLE_EDIT_MEMBERS_MISSING
           }) : null
         ]
@@ -360,7 +359,7 @@ children: [
     guildId: t.id,
     roleId: i.id,
     locked: g,
-    onScroll: m,
+    onScroll: N,
     roleMembers: C,
     handleAddClick: v
   })

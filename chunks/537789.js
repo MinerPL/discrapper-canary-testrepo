@@ -6,16 +6,16 @@ return l;
 var C = a(735250),
   t = a(266067),
   i = a(442837),
-  r = a(594174),
-  s = a(348600),
+  s = a(594174),
+  r = a(348600),
   n = a(981631);
 
 function l(e) {
   let {
 children: L
-  } = e, a = (0, i.e7)([r.default], () => r.default.getCurrentUser()), {
+  } = e, a = (0, i.e7)([s.default], () => s.default.getCurrentUser()), {
 enabled: l
-  } = s.Z.useExperiment({
+  } = r.Z.useExperiment({
 location: '1f3236_1'
   }, {
 autoTrackExposure: !0

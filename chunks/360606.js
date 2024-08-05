@@ -1,7 +1,7 @@
 let i, a;
 t(653041), t(47120);
-var s, l, o, r, c = t(392711),
-  d = t.n(c),
+var s, l, o, r, d = t(392711),
+  c = t.n(d),
   u = t(442837),
   I = t(570140),
   m = t(308063),
@@ -10,8 +10,8 @@ var s, l, o, r, c = t(392711),
   E = t(999382),
   T = t(981631);
 let h = [],
-  p = [],
-  g = null,
+  g = [],
+  p = null,
   C = null,
   f = null,
   x = !1,
@@ -39,7 +39,7 @@ let e = E.Z.getProps().integrations;
 null == e && (O = !0), h = null != e ? e : [];
   } else
 h = [];
-  if (p = null != i && _.Z.can(T.Plq.MANAGE_WEBHOOKS, i) ? N.Z.getWebhooksForGuild(i.id) : [], !e && null != C) {
+  if (g = null != i && _.Z.can(T.Plq.MANAGE_WEBHOOKS, i) ? N.Z.getWebhooksForGuild(i.id) : [], !e && null != C) {
 let e = L(C.id);
 null != e && (C = e);
   }
@@ -47,10 +47,10 @@ null != e && (C = e);
 let e = j(f.id);
 null != e && (f = e);
   }
-  g = null, S = T.QZA.OPEN, A = {}, R = !1;
+  p = null, S = T.QZA.OPEN, A = {}, R = !1;
 }
-let M = d().debounce(() => {
-  R && (null != C ? d().isEqual(C, L(C.id)) && (R = !1) : null != f && d().isEqual(f, j(f.id)) && (R = !1), !R && P.emitChange());
+let M = c().debounce(() => {
+  R && (null != C ? c().isEqual(C, L(C.id)) && (R = !1) : null != f && c().isEqual(f, j(f.id)) && (R = !1), !R && P.emitChange());
 }, 500);
 
 function L(e) {
@@ -63,7 +63,7 @@ return t === e;
 }
 
 function j(e) {
-  return p.find(n => {
+  return g.find(n => {
 let {
   id: t
 } = n;
@@ -84,10 +84,10 @@ return i;
 return h;
   }
   get webhooks() {
-return p;
+return g;
   }
   get editedCommandId() {
-return g;
+return p;
   }
   get editedIntegration() {
 return C;
@@ -153,15 +153,15 @@ a = n, b = t;
 let {
   commandId: n
 } = e;
-g = n, C = null, f = null, A = {}, R = !0;
+p = n, C = null, f = null, A = {}, R = !0;
   },
   INTEGRATION_SETTINGS_STOP_EDITING_COMMAND: function(e) {
 let {
   commandId: n
 } = e;
-if (null == g || g !== n)
+if (null == p || p !== n)
   return !1;
-g = null, A = {}, R = !1;
+p = null, A = {}, R = !1;
   },
   INTEGRATION_SETTINGS_START_EDITING_INTEGRATION: function(e) {
 let {
@@ -169,7 +169,7 @@ let {
 } = e, t = L(n);
 if (null == t)
   return !1;
-C = t, g = null, f = null, A = {}, R = !1;
+C = t, p = null, f = null, A = {}, R = !1;
   },
   INTEGRATION_SETTINGS_STOP_EDITING_INTEGRATION: function() {
 C = null, A = {}, R = !1;
@@ -200,13 +200,13 @@ let {
 } = e, t = j(n);
 if (null == t)
   return !1;
-f = t, g = null, C = null, A = {}, R = !1;
+f = t, p = null, C = null, A = {}, R = !1;
   },
   INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function() {
 f = null, A = {}, R = !1;
   },
   GUILD_SETTINGS_CLOSE: function() {
-i = null, h = [], p = [], g = null, C = null, f = null, S = T.QZA.CLOSED, R = !1;
+i = null, h = [], g = [], p = null, C = null, f = null, S = T.QZA.CLOSED, R = !1;
   },
   GUILD_SETTINGS_LOADED_INTEGRATIONS: function(e) {
 let {
@@ -255,8 +255,8 @@ let {
 if (null == i || n !== i.id || null == a || S === T.QZA.SUBMITTING)
   return !1;
 x = !1;
-for (let e = p.length - 1; e >= 0; e--) {
-  let n = p[e];
+for (let e = g.length - 1; e >= 0; e--) {
+  let n = g[e];
   if (null != t && (null == n ? void 0 : n.channel_id) !== t)
     continue;
   let i = a.find(e => {
@@ -271,19 +271,19 @@ for (let e = p.length - 1; e >= 0; e--) {
       ...n,
       ...i
     };
-    p[e] = t, !R && (null == f ? void 0 : f.id) === t.id && (f = t);
+    g[e] = t, !R && (null == f ? void 0 : f.id) === t.id && (f = t);
   } else
-    (null == f ? void 0 : f.id) === n.id && (f = null), p.splice(e, 1);
+    (null == f ? void 0 : f.id) === n.id && (f = null), g.splice(e, 1);
 }
 for (let e of a)
-  null == p.find(n => {
+  null == g.find(n => {
     let {
       id: t
     } = n;
     if (t === e.id)
       return !0;
-  }) && p.push(e);
-p = [...p], M();
+  }) && g.push(e);
+g = [...g], M();
   },
   INTEGRATION_SETTINGS_SUBMITTING: function() {
 S = T.QZA.SUBMITTING, A = {};

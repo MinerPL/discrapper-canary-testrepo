@@ -1,8 +1,8 @@
 var r = n(735250),
   i = n(470079),
   a = n(704215),
-  o = n(481060),
-  s = n(442837),
+  s = n(481060),
+  o = n(442837),
   l = n(100527),
   u = n(231467),
   c = n(605236),
@@ -36,13 +36,13 @@ clan: n,
 isLoading: b,
 onClose: M,
 profileViewedAnalytics: P
-  } = e, U = null == n ? void 0 : n.identityGuildId, w = (0, g.Cc)(null != U ? U : null), x = null == n ? void 0 : n.tag, G = (0, v.Z)('clan_guild_profile'), k = (0, N.Z)('base_clan_tag_chiplet'), B = (0, s.e7)([h.default], () => h.default.getId()), F = (0, s.e7)([p.ZP], () => null != U ? p.ZP.getMember(U, B) : null, [
+  } = e, U = null == n ? void 0 : n.identityGuildId, w = (0, g.Cc)(null != U ? U : null), x = null == n ? void 0 : n.tag, G = (0, v.Z)('clan_guild_profile'), k = (0, N.Z)('base_clan_tag_chiplet'), B = (0, o.e7)([h.default], () => h.default.getId()), F = (0, o.e7)([p.ZP], () => null != U ? p.ZP.getMember(U, B) : null, [
 U,
 B
-  ]), V = (0, s.e7)([_.Z], () => {
+  ]), V = (0, o.e7)([_.Z], () => {
 var e;
 return (null == w ? void 0 : w.id) != null && (null === (e = _.Z.getRequest(w.id)) || void 0 === e ? void 0 : e.applicationStatus) === d.wB.SUBMITTED;
-  }), H = null != w && w.memberCount >= R.Du, Z = (0, c.wE)(a.z.CLAN_TAG_WAITLIST), Y = (0, s.e7)([m.default], () => m.default.getUser(B), [B]), j = (null == F ? void 0 : F.joinedAt) != null, W = (0, A.Z4)(U, null == Y ? void 0 : Y.clan), K = null != (0, E.Z)(U);
+  }), H = null != w && w.memberCount >= R.Du, Z = (0, c.wE)(a.z.CLAN_TAG_WAITLIST), Y = (0, o.e7)([m.default], () => m.default.getUser(B), [B]), j = (null == F ? void 0 : F.joinedAt) != null, W = (0, A.Z4)(U, null == Y ? void 0 : Y.clan), K = null != (0, E.Z)(U);
   i.useEffect(() => {
 null != U && (0, T.u0)({
   guildId: U,
@@ -63,7 +63,7 @@ P
       messageId: null == P ? void 0 : P.messageId,
       tagUserId: null == P ? void 0 : P.tagUserId,
       location: l.Z.CLAN_GUILD_PROFILE
-    }), (0, o.showToast)((0, o.createToast)(y.Z.Messages.CLAN_USER_WAITLIST_TOAST_SUCCESS, o.ToastType.SUCCESS));
+    }), (0, s.showToast)((0, s.createToast)(y.Z.Messages.CLAN_USER_WAITLIST_TOAST_SUCCESS, s.ToastType.SUCCESS));
 }, [
   U,
   Z,
@@ -107,8 +107,8 @@ J = i.useCallback(() => {
 ee = i.useMemo(() => {
   var e, t;
   return {
-    color: o.Button.Colors.BRAND,
-    size: o.Button.Sizes.SMALL,
+    color: s.Button.Colors.BRAND,
+    size: s.Button.Sizes.SMALL,
     fullWidth: !0,
     className: D.button,
     themeColor: null !== (t = null == w ? void 0 : null === (e = w.branding) || void 0 === e ? void 0 : e.primaryColor) && void 0 !== t ? t : null
@@ -119,23 +119,23 @@ et = i.useMemo(() => {
     case !k:
       return null;
     case !j && !G && !Z:
-      return (0, r.jsx)(o.Button, {
+      return (0, r.jsx)(s.Button, {
         onClick: z,
-        color: o.Button.Colors.PRIMARY,
-        size: o.Button.Sizes.SMALL,
+        color: s.Button.Colors.PRIMARY,
+        size: s.Button.Sizes.SMALL,
         fullWidth: !0,
         children: y.Z.Messages.CLAN_USER_WAITLIST_CTA
       });
     case !j && !G && Z:
-      return (0, r.jsxs)(o.Button, {
+      return (0, r.jsxs)(s.Button, {
         innerClassName: D.waitlistedButton,
         onClick: X,
-        color: o.Button.Colors.PRIMARY,
-        size: o.Button.Sizes.SMALL,
+        color: s.Button.Colors.PRIMARY,
+        size: s.Button.Sizes.SMALL,
         fullWidth: !0,
         children: [
           y.Z.Messages.CLAN_USER_WAITLISTED,
-          (0, r.jsx)(o.CircleInformationIcon, {
+          (0, r.jsx)(s.CircleInformationIcon, {
             size: 'xs',
             color: 'currentColor'
           })
@@ -189,7 +189,7 @@ en = i.useMemo(() => ({
 }), []);
   return null == x || null == w || null == U || b ? (0, r.jsx)('div', {
 ...en,
-children: (0, r.jsx)(o.Spinner, {})
+children: (0, r.jsx)(s.Spinner, {})
   }) : (0, r.jsxs)('div', {
 ...en,
 children: [

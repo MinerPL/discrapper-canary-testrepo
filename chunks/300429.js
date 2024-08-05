@@ -3,7 +3,7 @@ n.d(t, {
 return r;
   }
 }), n(47120);
-var r, i, a, o, s, l, u = n(442837),
+var r, i, a, s, o, l, u = n(442837),
   c = n(846519),
   d = n(570140),
   _ = n(70956),
@@ -61,12 +61,12 @@ let n = p[null != t ? t : 0][e];
 return null != n ? n.cooldownMs : 0;
   }
 }
-l = 'SlowmodeStore', (s = 'displayName') in(o = g) ? Object.defineProperty(o, s, {
+l = 'SlowmodeStore', (o = 'displayName') in(s = g) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[s] = l, t.Z = new g(d.Z, {
+}) : s[o] = l, t.Z = new g(d.Z, {
   SLOWMODE_RESET_COOLDOWN: function(e) {
 let {
   channelId: t,

@@ -1,12 +1,12 @@
 n.d(t, {
   W: function() {
-return s;
+return o;
   }
 }), n(653041), n(47120);
 var r, i = n(470079),
   a = n(830483);
 
-function o(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -14,7 +14,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class s extends(r = i.Component) {
+class o extends(r = i.Component) {
   static getDerivedStateFromProps(e, t) {
 let {
   children: n,
@@ -119,10 +119,10 @@ for (let t in n) {
 let a = {
   ...this.props
 };
-return Object.keys(s.defaultProps).forEach(e => delete a[e]), i.createElement(t, a, r);
+return Object.keys(o.defaultProps).forEach(e => delete a[e]), i.createElement(t, a, r);
   }
   constructor(e) {
-super(e), o(this, '_currentlyTransitioningKeys', void 0), o(this, '_keysToEnter', void 0), o(this, '_keysToLeave', void 0), o(this, '_isMounted', void 0), o(this, '_keyChildMapping', {}), o(this, 'addChildRef', (e, t) => {
+super(e), s(this, '_currentlyTransitioningKeys', void 0), s(this, '_keysToEnter', void 0), s(this, '_keysToLeave', void 0), s(this, '_isMounted', void 0), s(this, '_keyChildMapping', {}), s(this, 'addChildRef', (e, t) => {
   this._keyChildMapping[e] = t;
 }), this.state = {
   children: (0, a.n)(e.children),
@@ -130,7 +130,7 @@ super(e), o(this, '_currentlyTransitioningKeys', void 0), o(this, '_keysToEnter'
 }, this._currentlyTransitioningKeys = new Set(), this._keysToEnter = [], this._keysToLeave = [], this._isMounted = !1;
   }
 }
-o(s, 'defaultProps', {
+s(o, 'defaultProps', {
   component: 'span',
   transitionAppear: !0,
   transitionLeave: !0,

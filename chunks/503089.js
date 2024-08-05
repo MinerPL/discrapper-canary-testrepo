@@ -3,10 +3,10 @@ n.d(t, {
 return C;
   },
   d7: function() {
-return T;
+return E;
   },
   w6: function() {
-return E;
+return T;
   }
 }), n(653041), n(390547), n(47120);
 var i = n(735250),
@@ -42,8 +42,8 @@ onPreventNavigation: null,
 sidebarOpen: !0
   }),
   C = 1.4,
-  E = 15,
-  T = 2;
+  T = 15,
+  E = 2;
 
 function R(e) {
   var t, n;
@@ -68,7 +68,7 @@ children: (0, i.jsx)(c, {
 })
   });
 }
-class P extends s.PureComponent {
+class I extends s.PureComponent {
   componentDidMount() {
 this.getPredicateSections().forEach(e => {
   let {
@@ -109,7 +109,7 @@ let {
 return null != n && n.stores.some(e => e.showNotice() && !(null != e.canCloseEarly && e.canCloseEarly())) ? (p.S.dispatch(v.CkL.SHAKE_APP, {
   duration: 300,
   intensity: this._intensity
-}), this._intensity = Math.min(this._intensity + T, E), p.S.dispatch(v.CkL.EMPHASIZE_NOTICE), !1) : (this._intensity = C, !0);
+}), this._intensity = Math.min(this._intensity + E, T), p.S.dispatch(v.CkL.EMPHASIZE_NOTICE), !1) : (this._intensity = C, !0);
   }
   renderSidebar(e) {
 let {
@@ -308,4 +308,4 @@ super(...e), N(this, '_unmounted', !1), N(this, '_intensity', C), N(this, '_subs
 });
   }
 }
-t.ZP = P;
+t.ZP = I;

@@ -1,26 +1,26 @@
-var _, E;
-t.d(e, {
+var r, i;
+n.d(t, {
   d: function() {
-return _;
+return r;
   },
   t: function() {
-return r;
+return a;
   }
-}), (E = _ || (_ = {}))[E.SET_COMPLETED = 1] = 'SET_COMPLETED', E[E.UNSET_COMPLETED = 2] = 'UNSET_COMPLETED', E[E.DELETE_USER_MESSAGE = 3] = 'DELETE_USER_MESSAGE', E[E.SUBMIT_FEEDBACK = 4] = 'SUBMIT_FEEDBACK';
+}), (i = r || (r = {}))[i.SET_COMPLETED = 1] = 'SET_COMPLETED', i[i.UNSET_COMPLETED = 2] = 'UNSET_COMPLETED', i[i.DELETE_USER_MESSAGE = 3] = 'DELETE_USER_MESSAGE', i[i.SUBMIT_FEEDBACK = 4] = 'SUBMIT_FEEDBACK';
 
-function r(n) {
-  if (null == n)
+function a(e) {
+  if (null == e)
 return null;
-  let e = function(n) {
-if (null == n)
+  let t = function(e) {
+if (null == e)
   return null;
 try {
-  return JSON.parse(n);
-} catch (n) {
+  return JSON.parse(e);
+} catch (e) {
   return null;
 }
-  }(n);
-  return null == e || null == e.actions ? null : (Object.keys(e.actions).forEach(n => {
-e.actions[n].actionType = n;
-  }), e);
+  }(e);
+  return null == t || null == t.actions ? null : (Object.keys(t.actions).forEach(e => {
+t.actions[e].actionType = e;
+  }), t);
 }

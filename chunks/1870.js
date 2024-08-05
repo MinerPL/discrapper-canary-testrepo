@@ -1,12 +1,12 @@
 let r, i, a;
 n(47120);
-var o, s, l, u, c = n(392711),
+var s, o, l, u, c = n(392711),
   d = n(442837),
   _ = n(570140);
 let E = new Map(),
   f = E,
   h = !1;
-class p extends(o = d.ZP.Store) {
+class p extends(s = d.ZP.Store) {
   get isFetching() {
 return h;
   }
@@ -26,12 +26,12 @@ return a;
 return null != e ? f.get(e) : void 0;
   }
 }
-u = 'CollectiblesPurchaseStore', (l = 'displayName') in(s = p) ? Object.defineProperty(s, l, {
+u = 'CollectiblesPurchaseStore', (l = 'displayName') in(o = p) ? Object.defineProperty(o, l, {
   value: u,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = u, t.Z = new p(_.Z, {
+}) : o[l] = u, t.Z = new p(_.Z, {
   COLLECTIBLES_PURCHASES_FETCH: e => {
 h = !0, i = void 0;
   },

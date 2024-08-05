@@ -1,5 +1,5 @@
 n(47120);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(433517),
   u = n(570140),
   c = n(601993);
@@ -13,7 +13,7 @@ enabled: _,
 learnedWords: E
   });
 }
-class h extends(r = s.ZP.Store) {
+class h extends(r = o.ZP.Store) {
   initialize() {
 let e = l.K.get(d);
 null != e && (_ = e.enabled, E = new Set(e.learnedWords), (0, c.gL)(_), (0, c.fG)(E));
@@ -25,12 +25,12 @@ return _;
 return E.has(e.toLocaleLowerCase());
   }
 }
-o = 'SpellcheckStore', (a = 'displayName') in(i = h) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'SpellcheckStore', (a = 'displayName') in(i = h) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new h(u.Z, {
+}) : i[a] = s, t.Z = new h(u.Z, {
   SPELLCHECK_TOGGLE() {
 _ = !_, (0, c.gL)(_), f();
   },

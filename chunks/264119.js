@@ -1,62 +1,62 @@
-t.d(s, {
+n.d(s, {
   Z: function() {
 return r;
   }
 });
-var n = t(735250);
-t(470079);
-var a = t(481060),
-  o = t(689938),
-  l = t(660817);
+var t = n(735250);
+n(470079);
+var o = n(481060),
+  a = n(689938),
+  l = n(660817);
 
 function r(e) {
   let {
 email: s,
-onClose: t
+onClose: n
   } = e;
-  return (0, n.jsxs)(n.Fragment, {
+  return (0, t.jsxs)(t.Fragment, {
 children: [
-  (0, n.jsxs)(a.ModalHeader, {
+  (0, t.jsxs)(o.ModalHeader, {
     separator: !1,
     className: l.header,
     children: [
-      (0, n.jsx)(a.Heading, {
+      (0, t.jsx)(o.Heading, {
         className: l.title,
         variant: 'heading-xl/semibold',
-        children: o.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_COMPLETE_TITLE
+        children: a.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_COMPLETE_TITLE
       }),
-      (0, n.jsx)(a.ModalCloseButton, {
-        onClick: t,
+      (0, t.jsx)(o.ModalCloseButton, {
+        onClick: n,
         className: l.modalCloseButton
       })
     ]
   }),
-  (0, n.jsx)(a.ModalContent, {
+  (0, t.jsx)(o.ModalContent, {
     className: l.content,
-    children: (0, n.jsx)(a.Text, {
+    children: (0, t.jsx)(o.Text, {
       className: l.description,
       variant: 'text-md/normal',
-      children: o.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_COMPLETE_DESCRIPTION.format({
+      children: a.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_COMPLETE_DESCRIPTION.format({
         email: s
       })
     })
   }),
-  (0, n.jsx)(a.ModalContent, {
+  (0, t.jsx)(o.ModalContent, {
     className: l.content,
-    children: (0, n.jsx)(a.Text, {
+    children: (0, t.jsx)(o.Text, {
       className: l.tooltip,
       variant: 'text-sm/normal',
-      children: o.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CHECK_SPAM
+      children: a.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CHECK_SPAM
     })
   }),
-  (0, n.jsx)(a.ModalFooter, {
+  (0, t.jsx)(o.ModalFooter, {
     className: l.modalFooter,
-    children: (0, n.jsx)(a.Button, {
+    children: (0, t.jsx)(o.Button, {
       className: l.__invalid_submit,
-      color: a.Button.Colors.BRAND,
-      size: a.Button.Sizes.MEDIUM,
-      onClick: t,
-      children: o.Z.Messages.OKAY
+      color: o.Button.Colors.BRAND,
+      size: o.Button.Sizes.MEDIUM,
+      onClick: n,
+      children: a.Z.Messages.OKAY
     })
   })
 ]

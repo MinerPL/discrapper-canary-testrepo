@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(477690),
+  s = n.n(a),
+  o = n(477690),
   l = n(481060),
   u = n(2052),
   c = n(880949),
@@ -22,12 +22,12 @@ var r = n(735250),
   N = n(957825),
   v = n(689938),
   O = n(784498);
-let R = (0, p.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
-  C = (0, p.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),
-  y = (0, p.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN),
-  D = (0, p.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_UNICODE_ICON_SIZE),
-  L = (0, p.Mg)(s.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
-  b = (0, p.Mg)(s.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
+let R = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
+  C = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),
+  y = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN),
+  D = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_UNICODE_ICON_SIZE),
+  L = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
+  b = (0, p.Mg)(o.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
   M = [
 R,
 R,
@@ -41,9 +41,9 @@ let {
   activeIndex: t,
   stickerPickerCategories: n,
   categoryListRef: a,
-  firstStandardStickerCategoryOffsetTop: s,
+  firstStandardStickerCategoryOffsetTop: o,
   setShouldRenderShortcut: d
-} = e, E = (0, u.O)(), p = (0, _.Iu)(e => '' !== e.searchQuery), m = i.useCallback((e, a, s) => {
+} = e, E = (0, u.O)(), p = (0, _.Iu)(e => '' !== e.searchQuery), m = i.useCallback((e, a, o) => {
   var u, d;
   let _;
   let m = (null === (u = n[0]) || void 0 === u ? void 0 : u.type) === T.Ih.FAVORITE,
@@ -58,11 +58,11 @@ let {
       'aria-posinset': a,
       children: (0, r.jsx)(l.Clickable, {
         'aria-label': v.Z.Messages.CATEGORY_FAVORITE,
-        className: o()(O.stickerCategory, O.stickerCategoryGeneric, {
+        className: s()(O.stickerCategory, O.stickerCategoryGeneric, {
           [O.stickerCategoryGenericDisabled]: L && !m,
           [O.stickerCategoryGenericSelected]: !p && m && 0 === t
         }),
-        onClick: s,
+        onClick: o,
         children: (0, r.jsx)(l.StarIcon, {
           size: 'custom',
           color: 'currentColor',
@@ -79,11 +79,11 @@ let {
       'aria-posinset': a,
       children: (0, r.jsx)(l.Clickable, {
         'aria-label': v.Z.Messages.STICKER_PICKER_CATEGORIES_RECENT,
-        className: o()(O.stickerCategory, O.stickerCategoryGeneric, {
+        className: s()(O.stickerCategory, O.stickerCategoryGeneric, {
           [O.stickerCategoryGenericDisabled]: L && !y,
           [O.stickerCategoryGenericSelected]: !p && y && t === R
         }),
-        onClick: s,
+        onClick: o,
         children: (0, r.jsx)(l.ClockIcon, {
           size: 'custom',
           color: 'currentColor',
@@ -127,7 +127,7 @@ let {
           children: (0, r.jsx)(l.Clickable, {
             ...e,
             'aria-label': G,
-            className: o()(O.stickerCategory, {
+            className: s()(O.stickerCategory, {
               [O.firstPartyCategory]: x,
               [O.firstPartyCategorySelected]: !p && M && x
             }),
@@ -137,7 +137,7 @@ let {
                 tab: N.X1.STICKER,
                 sticker_pack_id: P.id,
                 guild_id: _
-              }), s();
+              }), o();
             },
             children: k
           })
@@ -168,15 +168,15 @@ return {
     if (null == n)
       return;
     let r = e + n.height;
-    d(r - L < s);
-  }, [s])
+    d(r - L < o);
+  }, [o])
 };
   };
 t.Z = e => {
   let {
 stickersListRef: t,
 channel: n
-  } = e, a = i.useRef(null), [s, u] = i.useState(!0), c = d.ZN.useStore(e => e.activeCategoryIndex), _ = (0, m.Sd)(n), {
+  } = e, a = i.useRef(null), [o, u] = i.useState(!0), c = d.ZN.useStore(e => e.activeCategoryIndex), _ = (0, m.Sd)(n), {
 firstStandardStickerCategoryIndex: f,
 firstStandardStickerCategoryOffsetTop: h,
 guildCategoryCount: p,
@@ -225,9 +225,9 @@ renderCategoryListItem: g,
 rowCount: _.length,
 categories: _,
 categoryHeight: S,
-children: e => I && s && (0, r.jsx)(l.Clickable, {
-  className: o()(O.standardStickerShortcut, {
-    [O.invisibleShortcut]: !s
+children: e => I && o && (0, r.jsx)(l.Clickable, {
+  className: s()(O.standardStickerShortcut, {
+    [O.invisibleShortcut]: !o
   }),
   onClick: () => N(e),
   children: (0, r.jsx)(l.StickerIcon, {

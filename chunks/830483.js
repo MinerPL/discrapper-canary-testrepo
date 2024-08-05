@@ -31,16 +31,16 @@ return n.hasOwnProperty(e) ? n[e] : t[e];
 a = [];
   for (let e in t)
 n.hasOwnProperty(e) ? a.length && (i[e] = a, a = []) : a.push(e);
-  let o = {};
+  let s = {};
   for (let t in n) {
 if (i.hasOwnProperty(t))
   for (e = 0; e < i[t].length; e++) {
     let n = i[t][e];
-    o[i[t][e]] = r(n);
+    s[i[t][e]] = r(n);
   }
-o[t] = r(t);
+s[t] = r(t);
   }
   for (e = 0; e < a.length; e++)
-o[a[e]] = r(a[e]);
-  return o;
+s[a[e]] = r(a[e]);
+  return s;
 }

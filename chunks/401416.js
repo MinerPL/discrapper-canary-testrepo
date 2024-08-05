@@ -6,11 +6,11 @@ return u;
 var r = n(544891),
   i = n(147913),
   a = n(25733),
-  o = n(704587),
-  s = n(981631);
+  s = n(704587),
+  o = n(981631);
 class l extends i.Z {
   intialize() {
-o.s.getCurrentConfig({
+s.s.getCurrentConfig({
   location: 'initializer'
 }, {
   autoTrackExposure: !1
@@ -34,7 +34,7 @@ super(...e), t = this, n = 'actions', r = {
 
 function u(e) {
   return r.tn.post({
-url: s.ANM.DM_SETTINGS_UPSELL_ACK(e)
+url: o.ANM.DM_SETTINGS_UPSELL_ACK(e)
   });
 }
 t.Z = new l();

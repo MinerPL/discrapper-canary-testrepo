@@ -6629,12 +6629,12 @@ e.exports = function(e) {
 r = n.either(n.concat(/([2-9]|[1-2]\d|[3][0-5])\^\^/, /(\w*\.\w+|\w+\.\w*|\w+)/), /(\d*\.\d+|\d+\.\d*|\d+)/),
 i = n.either(/``[+-]?(\d*\.\d+|\d+\.\d*|\d+)/, /`([+-]?(\d*\.\d+|\d+\.\d*|\d+))?/),
 a = n.concat(r, n.optional(i), n.optional(/\*\^[+-]?\d+/)),
-o = /[a-zA-Z$][a-zA-Z0-9$]*/,
-s = new Set(t),
+s = /[a-zA-Z$][a-zA-Z0-9$]*/,
+o = new Set(t),
 l = {
   className: 'message-name',
   relevance: 0,
-  begin: n.concat('::', o)
+  begin: n.concat('::', s)
 };
   return {
 name: 'Mathematica',
@@ -6669,15 +6669,15 @@ contains: [
   {
     variants: [{
         className: 'builtin-symbol',
-        begin: o,
+        begin: s,
         'on:begin': (e, t) => {
-          !s.has(e[0]) && t.ignoreMatch();
+          !o.has(e[0]) && t.ignoreMatch();
         }
       },
       {
         className: 'symbol',
         relevance: 0,
-        begin: o
+        begin: s
       }
     ]
   },

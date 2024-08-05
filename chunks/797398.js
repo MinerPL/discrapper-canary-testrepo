@@ -11,7 +11,7 @@ function a(e) {
 channel: t,
 userActivity: n,
 inActivity: a,
-embeddedActivitiesManager: o
+embeddedActivitiesManager: s
   } = e;
   r.useEffect(() => {
 !a && (0, i.oy)(t.id);
@@ -19,6 +19,6 @@ embeddedActivitiesManager: o
 null == n ? void 0 : n.applicationId,
 t.id,
 a,
-o
+s
   ]);
 }

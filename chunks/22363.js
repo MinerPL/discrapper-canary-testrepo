@@ -2,8 +2,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(646574),
-  s = n(543241),
+  s = n(646574),
+  o = n(543241),
   l = n(747613),
   u = n(533432),
   c = n(149203),
@@ -35,11 +35,11 @@ children: [
     isFullRow: !1,
     onFocus: h,
     autoFocus: p,
-    defaultSearchPlaceholder: (0, s.nV)(n, g)
+    defaultSearchPlaceholder: (0, o.nV)(n, g)
   }),
   n === d.Hz.REACTION ? (0, r.jsx)('div', {
     className: _.burstToggle,
-    children: (0, r.jsx)(o.Z, {
+    children: (0, r.jsx)(s.Z, {
       checked: g,
       onClick: S
     })

@@ -4,8 +4,8 @@ return h;
   }
 }), n(47120), n(653041), n(411104);
 var r, i, a = n(442837),
-  o = n(710845),
-  s = n(483012),
+  s = n(710845),
+  o = n(483012),
   l = n(138859),
   u = n(91247);
 
@@ -17,7 +17,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let d = new o.Z('GatewaySocket'),
+let d = new s.Z('GatewaySocket'),
   _ = new Set([
 'INITIAL_GUILD',
 'READY'
@@ -88,7 +88,7 @@ try {
   this.socket.connectionState === l.Z.RESUMING && a.ZP.Emitter.pause(150), a.ZP.Emitter.batched(() => {
     e.forEach(e => {
       t = e.type, n = n || f.has(e.type), this.dispatchOne(e);
-    }), s.Z.flush();
+    }), o.Z.flush();
   }), n && a.ZP.Emitter.resume();
 } catch (e) {
   this.socket.resetSocketOnDispatchError({
@@ -102,16 +102,16 @@ var t, n, r;
 let {
   data: i,
   type: a,
-  compressionAnalytics: o,
+  compressionAnalytics: s,
   preloadedData: c
 } = e, d = performance.now();
 if (this.socket.connectionState === l.Z.RESUMING) {
   let e = d - this.resumeAnalytics.lastUpdateTime;
   0 === this.resumeAnalytics.numEvents ? this.resumeAnalytics.initialWaitTime = e : e > this.resumeAnalytics.largestWaitTime && (this.resumeAnalytics.largestWaitTime = e), this.resumeAnalytics.totalWaitTime += e, this.resumeAnalytics.lastUpdateTime = d, this.resumeAnalytics.numEvents += 1;
 }
-if (s.Z.flush(a, i), 'READY' === a) {
+if (o.Z.flush(a, i), 'READY' === a) {
   let e = (0, u.vW)(i);
-  null === (t = this.getDispatchHandler(a)) || void 0 === t || t.dispatch(i, a, c), (0, u.dm)(this.socket, i, d, o, e);
+  null === (t = this.getDispatchHandler(a)) || void 0 === t || t.dispatch(i, a, c), (0, u.dm)(this.socket, i, d, s, e);
 } else
   'RESUMED' === a ? (null === (n = this.getDispatchHandler(a)) || void 0 === n || n.dispatch(i, a, c), (0, u.uB)(this.resumeAnalytics), this.resumeAnalytics = (0, u.zH)(), this.socket.handleResumeDispatched()) : null === (r = this.getDispatchHandler(a)) || void 0 === r || r.dispatch(i, a, c);
 this.socket.connectionState === l.Z.RESUMING && (this.resumeAnalytics.dispatchTime += performance.now() - d);

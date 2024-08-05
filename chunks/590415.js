@@ -3,16 +3,16 @@ n.d(t, {
 return l;
   },
   gf: function() {
-return s;
+return o;
   },
   xO: function() {
 return i;
   }
 });
 var r, i, a = n(442837),
-  o = n(979651);
+  s = n(979651);
 
-function s(e) {
+function o(e) {
   if (null == e)
 return 0;
   if (e.suppress && null != e.requestToSpeakTimestamp)
@@ -25,7 +25,7 @@ return 3;
 }
 
 function l(e, t) {
-  return (0, a.e7)([o.Z], () => null == e || null == t ? 0 : s(o.Z.getVoiceStateForChannel(t, e)), [
+  return (0, a.e7)([s.Z], () => null == e || null == t ? 0 : o(s.Z.getVoiceStateForChannel(t, e)), [
 e,
 t
   ]);

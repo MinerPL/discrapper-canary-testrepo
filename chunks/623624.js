@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(512722),
   a = n.n(i),
-  o = n(442837),
-  s = n(100527),
+  s = n(442837),
+  o = n(100527),
   l = n(906732),
   u = n(430824),
   c = n(594174),
@@ -19,12 +19,12 @@ let E = e => {
 guildId: t,
 close: n,
 location: i
-  } = e, d = (0, o.e7)([c.default], () => c.default.getCurrentUser());
+  } = e, d = (0, s.e7)([c.default], () => c.default.getCurrentUser());
   a()(null != d, 'PremiumGuildPerksModalConnected: currentUser cannot be undefined');
-  let E = (0, o.e7)([u.Z], () => u.Z.getGuild(t), [t]),
+  let E = (0, s.e7)([u.Z], () => u.Z.getGuild(t), [t]),
 {
   analyticsLocations: f
-} = (0, l.ZP)(s.Z.BOOSTED_GUILD_PERKS_MODAL);
+} = (0, l.ZP)(o.Z.BOOSTED_GUILD_PERKS_MODAL);
   return null == E ? null : (0, r.jsx)(l.Gt, {
 value: f,
 children: (0, r.jsx)(_.Z, {

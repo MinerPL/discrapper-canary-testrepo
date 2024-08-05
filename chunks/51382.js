@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var s = n(82950),
-  a = n(536442),
+var a = n(82950),
+  s = n(536442),
   r = n(703656),
   l = n(922482),
   o = n(981631),
@@ -12,13 +12,13 @@ t.Z = e => {
 channel: t,
 guild: n
   } = e;
-  return (0, i.jsx)(s.Z, {
+  return (0, i.jsx)(a.Z, {
 guild: n,
 onDismissed: () => {
-  (0, a.Kw)(a.v6.HUB_STUDY_ROOM_NOTICE);
+  (0, s.Kw)(s.v6.HUB_STUDY_ROOM_NOTICE);
 },
 onClick: () => {
-  (0, a.Kw)(a.v6.HUB_STUDY_ROOM_NOTICE), null != t && null != t.getGuildId() && ((0, l.Cq)(t), (0, r.XU)(t.getGuildId(), t.id));
+  (0, s.Kw)(s.v6.HUB_STUDY_ROOM_NOTICE), null != t && null != t.getGuildId() && ((0, l.Cq)(t), (0, r.XU)(t.getGuildId(), t.id));
 },
 title: c.Z.Messages.HUB_STUDY_ROOM_NOTICE_TITLE,
 message: c.Z.Messages.HUB_STUDY_ROOM_NOTICE_DESCRIPTION,

@@ -37,13 +37,13 @@ null != _ && S({
   startPositionMs: 0
 });
   }, [_]);
-  let C = a.useCallback(e => {
+  let j = a.useCallback(e => {
   null != _ && (_.pause(), null != e && (_.currentTime = e), D(!1));
 }, [_]),
-j = a.useCallback(() => {
+C = a.useCallback(() => {
   if (null != _) {
     if (v) {
-      C();
+      j();
       return;
     }
     x >= y ? _.currentTime = (0, f.my)(E) : _.currentTime = (0, f.my)(x), _.volume = (0, o.Z)(i), _.play(), D(!0);
@@ -51,7 +51,7 @@ j = a.useCallback(() => {
 }, [
   _,
   y,
-  C,
+  j,
   x,
   v,
   E,
@@ -77,7 +77,7 @@ children: [
     children: [
       (0, l.jsx)(r.Clickable, {
         className: h.playButton,
-        onClick: A ? j : void 0,
+        onClick: A ? C : void 0,
         children: v ? (0, l.jsx)(r.StopIcon, {
           size: 'xs',
           color: 'currentColor',
@@ -102,7 +102,7 @@ children: [
   (0, l.jsx)(d.Z, {
     playing: v,
     onPlaybackChange: w,
-    onPausePlayback: C,
+    onPausePlayback: j,
     onChangePosition: I,
     disabled: p
   })

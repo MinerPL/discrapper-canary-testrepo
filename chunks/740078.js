@@ -21,7 +21,7 @@ return f;
 return h;
   },
   d7: function() {
-return s;
+return o;
   },
   k5: function() {
 return E;
@@ -30,7 +30,7 @@ return E;
 return l;
   },
   t$: function() {
-return o;
+return s;
   },
   ut: function() {
 return c;
@@ -48,13 +48,13 @@ return d;
 var r = 'top',
   i = 'bottom',
   a = 'right',
-  o = 'left',
-  s = 'auto',
+  s = 'left',
+  o = 'auto',
   l = [
 r,
 i,
 a,
-o
+s
   ],
   u = 'start',
   c = 'end',
@@ -68,7 +68,7 @@ return e.concat([
   t + '-' + c
 ]);
   }, []),
-  p = [].concat(l, [s]).reduce(function(e, t) {
+  p = [].concat(l, [o]).reduce(function(e, t) {
 return e.concat([
   t,
   t + '-' + u,

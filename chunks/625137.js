@@ -3,10 +3,10 @@ n.d(t, {
 return u;
   },
   CL: function() {
-return s;
+return o;
   },
   cf: function() {
-return o;
+return s;
   },
   iw: function() {
 return l;
@@ -16,11 +16,11 @@ var r = n(149765),
   i = n(866442),
   a = n(709054);
 
-function o(e) {
+function s(e) {
   e.permissions = r.vB(e.permissions);
 }
 
-function s(e) {
+function o(e) {
   var t;
   return {
 id: e.id,
@@ -47,14 +47,14 @@ return {};
 r = {};
   return t.sort((t, n) => {
 var r, i;
-let o = e === t.id ? 1 / 0 : -(null !== (r = t.originalPosition) && void 0 !== r ? r : t.position),
-  s = e === n.id ? 1 / 0 : -(null !== (i = n.originalPosition) && void 0 !== i ? i : n.position);
-return o === s ? a.default.compare(t.id, n.id) : o < s ? -1 : o === s ? 0 : 1;
+let s = e === t.id ? 1 / 0 : -(null !== (r = t.originalPosition) && void 0 !== r ? r : t.position),
+  o = e === n.id ? 1 / 0 : -(null !== (i = n.originalPosition) && void 0 !== i ? i : n.position);
+return s === o ? a.default.compare(t.id, n.id) : s < o ? -1 : s === o ? 0 : 1;
   }).forEach((e, t) => {
 e.position = n - t, r[e.id] = e;
   }), r;
 }
 
 function u(e, t) {
-  return null == t ? {} : l(e, t.map(s));
+  return null == t ? {} : l(e, t.map(o));
 }

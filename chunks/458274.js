@@ -218,7 +218,7 @@ CSS_VARIABLE: {
 'slotted',
 'spelling-error'
   ],
-  o = [
+  s = [
 'align-content',
 'align-items',
 'align-self',
@@ -579,7 +579,7 @@ CSS_VARIABLE: {
 'z-index'
   ].reverse();
 e.exports = function(e) {
-  let s = e.regex,
+  let o = e.regex,
 l = t(e),
 u = [
   e.APOS_STRING_MODE,
@@ -625,7 +625,7 @@ contains: [
   l.CSS_VARIABLE,
   {
     className: 'attribute',
-    begin: '\\b(' + o.join('|') + ')\\b'
+    begin: '\\b(' + s.join('|') + ')\\b'
   },
   {
     begin: /:/,
@@ -657,7 +657,7 @@ contains: [
     ]
   },
   {
-    begin: s.lookahead(/@/),
+    begin: o.lookahead(/@/),
     end: '[{;]',
     relevance: 0,
     illegal: /:/,

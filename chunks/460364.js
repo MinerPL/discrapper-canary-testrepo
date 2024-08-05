@@ -6,8 +6,8 @@ return u;
 var r = n(735250),
   i = n(470079),
   a = n(539907),
-  o = n(743236),
-  s = n(695464),
+  s = n(743236),
+  o = n(695464),
   l = n(206227);
 
 function u(e) {
@@ -26,7 +26,7 @@ focusIndex: T,
   } = u;
   i.useLayoutEffect(() => {
 var e;
-n && ((0, o.F)(f), null === (e = p.current) || void 0 === e || e.focus());
+n && ((0, s.F)(f), null === (e = p.current) || void 0 === e || e.focus());
   }, [n]), i.useEffect(() => {
 if (n && T >= 0 && I) {
   var e;
@@ -60,7 +60,7 @@ children: [
         className: l.submenu,
         ...g,
         ref: p,
-        children: (0, r.jsx)(s.Z, {
+        children: (0, r.jsx)(o.Z, {
           ref: m,
           className: E,
           listPadding: [

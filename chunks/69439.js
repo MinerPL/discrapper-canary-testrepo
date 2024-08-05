@@ -1,64 +1,127 @@
 n.d(t, {
   Z: function() {
-return E;
+return I;
   }
 });
-var i = n(735250),
-  s = n(470079),
-  a = n(481060),
-  r = n(617136),
-  l = n(272008),
-  o = n(497505),
-  c = n(918701),
-  d = n(667105),
-  u = n(689938),
-  _ = n(207637);
+var i = n(735250);
+n(470079);
+var a = n(442837),
+  s = n(481060),
+  r = n(607070),
+  l = n(617136),
+  o = n(113434),
+  c = n(569984),
+  d = n(918701),
+  u = n(667105),
+  _ = n(46140),
+  h = n(689938),
+  E = n(207637);
 
-function h(e) {
+function I(e) {
+  var t, n, I, m;
   let {
-onClick: t
-  } = e;
-  return (0, i.jsx)('div', {
-className: _.container,
-children: (0, i.jsx)(a.Button, {
-  color: a.ButtonColors.BRAND,
-  onClick: t,
-  className: _.button,
-  children: u.Z.Messages.QUESTS_CLAIM_REWARD
-})
+quest: g,
+location: p,
+onReceiveErrorHints: T,
+contentPosition: S,
+rowIndex: f
+  } = e, C = (0, a.e7)([r.Z], () => r.Z.useReducedMotion), N = (0, u.g2)({
+useReducedMotion: C
+  }), A = (0, o._s)({
+quest: g
+  }), v = (0, o.z)(g), Z = (0, o.B6)(g.config.expiresAt, {
+month: 'numeric',
+day: 'numeric'
+  }), {
+isClaiming: L,
+isEnrolling: O
+  } = (0, a.cj)([c.Z], () => ({
+isClaiming: c.Z.isClaimingReward(g.id) || c.Z.isFetchingRewardCode(g.id),
+isEnrolling: c.Z.isEnrolling(g.id)
+  })), R = (null === (t = g.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, x = (null === (n = g.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, b = x && (null === (I = g.userStatus) || void 0 === I ? void 0 : I.claimedAt) == null, P = (0, d.iQ)(g), M = !(0, d.zi)(g), D = (0, o._Q)(g), y = (0, d.zK)(g, _.S7.IN_HOUSE_CONSOLE_QUEST), j = (0, d.zK)(g, _.S7.MOBILE_CONSOLE_QUEST), U = (0, d.Xv)(g.config), {
+text: G,
+onClick: k
+  } = (0, u.Ks)({
+progressState: D,
+quest: g,
+isInHouseQuest: y,
+location: p,
+isCollectibleQuest: U,
+questContentPosition: S,
+questContentRowIndex: f,
+inGiftInventory: !0
+  }), {
+startingConsoleQuest: w,
+startConsoleQuest: B
+  } = (0, o.GI)({
+questId: g.id,
+beforeRequest: () => {
+  N.startAnimation(), (0, l._3)({
+    questId: g.id,
+    questContent: p,
+    questContentCTA: l.jZ.DEFIBRILLATOR,
+    questContentPosition: S,
+    questContentRowIndex: f
   });
+},
+afterRequest: e => {
+  N.stopAnimation(), T(e);
 }
-
-function E(e) {
-  var t, n, E, I;
-  let {
-quest: m
-  } = e, g = (null === (t = m.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, p = (null === (n = m.userStatus) || void 0 === n ? void 0 : n.completedAt) != null && (null === (E = m.userStatus) || void 0 === E ? void 0 : E.claimedAt) == null, T = (0, c.iQ)(m), S = !(0, c.zi)(m), C = (null === (I = m.userStatus) || void 0 === I ? void 0 : I.claimedAt) != null, f = (0, d.hf)({
-quest: m,
-location: o.jn.QUEST_BAR
-  }), N = s.useCallback(() => {
-(0, l.AH)(m.id, {
-  questContent: o.jn.QUEST_HOME_DESKTOP,
-  questContentCTA: r.jZ.ACCEPT_QUEST
-});
-  }, [m]);
-  return T && p || S && p ? (0, i.jsx)(h, {
-onClick: f
-  }) : S && g && !C ? (0, i.jsx)('div', {
-className: _.container,
-children: (0, i.jsx)(a.Button, {
-  color: a.ButtonColors.PRIMARY,
-  disabled: !0,
-  className: _.button,
-  children: u.Z.Messages.QUEST_ACCEPTED
+  }), H = (null === (m = g.userStatus) || void 0 === m ? void 0 : m.claimedAt) != null, V = null;
+  return (P && b ? V = (0, i.jsx)(s.Button, {
+color: s.ButtonColors.BRAND,
+submitting: L,
+onClick: null != k ? k : void 0,
+className: E.button,
+children: G
+  }) : x ? V = (0, i.jsx)(s.Button, {
+color: s.ButtonColors.PRIMARY,
+className: E.button,
+onClick: null != k ? k : void 0,
+children: G
+  }) : M ? M && b ? V = (0, i.jsx)(s.Button, {
+color: s.ButtonColors.BRAND,
+submitting: L,
+onClick: null != k ? k : void 0,
+className: E.button,
+children: G
+  }) : M && R && !H ? V = j && !v ? A ? (0, i.jsx)(s.Button, {
+color: s.ButtonColors.PRIMARY,
+className: E.button,
+onClick: null != k ? k : void 0,
+children: G
+  }) : (0, i.jsx)(s.Button, {
+color: s.ButtonColors.PRIMARY,
+onClick: B,
+disabled: w,
+className: E.button,
+children: (0, i.jsxs)('div', {
+  className: E.ctaInner,
+  children: [
+    N.render(),
+    h.Z.Messages.QUESTS_MICROHPONE_UNIT_BUTTON_CTA
+  ]
 })
-  }) : S && !g ? (0, i.jsx)('div', {
-className: _.container,
-children: (0, i.jsx)(a.Button, {
-  color: a.ButtonColors.BRAND,
-  onClick: N,
-  className: _.button,
-  children: u.Z.Messages.QUESTS_ACCEPT
+  }) : (0, i.jsx)(s.Button, {
+color: s.ButtonColors.PRIMARY,
+disabled: !0,
+className: E.button,
+children: h.Z.Messages.QUEST_ACCEPTED
+  }) : M && !R && (V = (0, i.jsx)(s.Button, {
+submitting: O,
+color: s.ButtonColors.BRAND,
+onClick: null != k ? k : void 0,
+className: E.button,
+children: G
+  })) : V = (0, i.jsx)(s.Button, {
+color: s.ButtonColors.PRIMARY,
+disabled: !0,
+className: E.button,
+children: h.Z.Messages.QUESTS_ENDED_ON_DATE.format({
+  expiryDate: Z
 })
-  }) : null;
+  }), null == V) ? null : (0, i.jsx)('div', {
+className: E.container,
+children: V
+  });
 }

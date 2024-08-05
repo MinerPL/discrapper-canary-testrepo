@@ -1,6 +1,6 @@
 n(47120);
-var r, i, a, o, s = n(658722),
-  l = n.n(s),
+var r, i, a, s, o = n(658722),
+  l = n.n(o),
   u = n(392711),
   c = n.n(u),
   d = n(913527),
@@ -77,22 +77,22 @@ r = p.ZP.getGamesSeen(!1, !1).map(e => {
   return null != n ? (t[n.id] = e.lastFocused * C.Z.Millis.SECOND, n.id) : null;
 }),
 i = Object.values(S.Z.getAllLibraryApplications()).map(r => function(e, t, n, r, i) {
-  var a, o;
+  var a, s;
   if (!i && t.has(e.id))
     return null;
-  let s = h.Z.getApplication(e.id);
-  if (null == s)
+  let o = h.Z.getApplication(e.id);
+  if (null == o)
     return null;
-  let l = K(s, n);
+  let l = K(o, n);
   if (t.add(e.id), !(0, L.Je)(e) && !O.Z.isInstalled(e.id, e.branchId))
     return null;
   return {
     key: ''.concat(e.id, '-').concat(e.branchId),
-    application: s,
+    application: o,
     libraryApplication: e,
     lastPlayed: l,
     supportsCloudSync: null != e && O.Z.supportsCloudSync(e.id, e.branchId),
-    isNew: (a = e, o = l, null != a && _()(a.createdAt).isAfter(x) && 0 === o),
+    isNew: (a = e, s = l, null != a && _()(a.createdAt).isAfter(x) && 0 === s),
     isLaunching: m.Z.launchingGames.has(e.id),
     isRunning: r.has(e.id),
     isLaunchable: (0, P.t)({
@@ -104,7 +104,7 @@ i = Object.values(S.Z.getAllLibraryApplications()).map(r => function(e, t, n, r,
       branchId: e.branchId
     }),
     isUpdatingFlags: S.Z.isUpdatingFlags(e.id, e.branchId),
-    shouldShowInLibrary: (0, L.d0)(s, e, A.Z),
+    shouldShowInLibrary: (0, L.d0)(o, e, A.Z),
     defaultAction: (0, U.i)(e, O.Z, R.Z)
   };
 }(r, n, t, e, !0)).filter(D.lm),
@@ -183,12 +183,12 @@ return W(G);
 return B;
   }
 }
-o = 'ApplicationViewStore', (a = 'displayName') in(i = q) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'ApplicationViewStore', (a = 'displayName') in(i = q) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new q(f.Z, {
+}) : i[a] = s, t.Z = new q(f.Z, {
   LIBRARY_APPLICATION_FILTER_UPDATE: function(e) {
 let {
   query: t

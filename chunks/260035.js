@@ -6,8 +6,8 @@ return u;
 var r = n(735250),
   i = n(470079),
   a = n(887024),
-  o = n(745510),
-  s = n(675654),
+  s = n(745510),
+  o = n(675654),
   l = n(55233);
 
 function u(e) {
@@ -21,10 +21,10 @@ for (let n of _.current)
   }, []);
   return (0, r.jsxs)(r.Fragment, {
 children: [
-  (0, r.jsx)(o.d, {
+  (0, r.jsx)(s.d, {
     confettiCanvas: c,
     spriteCanvas: n,
-    baseConfig: s.We,
+    baseConfig: o.We,
     addClickListener: p,
     removeClickListener: h,
     children: t
@@ -32,15 +32,15 @@ children: [
   (0, r.jsx)(a.O_, {
     ref: d,
     className: l.canvas,
-    environment: s.rq,
+    environment: o.rq,
     onClick: E ? m : void 0
   }),
   (0, r.jsx)(a.Ji, {
     ref: u,
-    colors: s.Br,
-    sprites: s.CA,
-    spriteWidth: s.Ko,
-    spriteHeight: s.Ko
+    colors: o.Br,
+    sprites: o.CA,
+    spriteWidth: o.Ko,
+    spriteHeight: o.Ko
   })
 ]
   });

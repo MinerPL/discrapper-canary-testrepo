@@ -25,7 +25,7 @@ return e.__proto__ = t, e;
   })(e, t);
 }
 
-function o(e) {
+function s(e) {
   var t = function() {
 if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham)
   return !1;
@@ -41,7 +41,7 @@ try {
 var n, i = l(e);
 return n = t ? Reflect.construct(i, arguments, l(this).constructor) : i.apply(this, arguments),
   function(e, t) {
-    return t && ('object' === r(t) || 'function' == typeof t) ? t : s(e);
+    return t && ('object' === r(t) || 'function' == typeof t) ? t : o(e);
   }(this, n);
   };
 }
@@ -54,7 +54,7 @@ return f;
   }
 });
 
-function s(e) {
+function o(e) {
   if (void 0 === e)
 throw ReferenceError('this hasn\'t been initialised - super() hasn\'t been called');
   return e;
@@ -103,11 +103,11 @@ return d(e, [{
   }(),
   f = function(e) {
 i(n, e);
-var t = o(n);
+var t = s(n);
 
-function n(e, r, i, a, o) {
-  var s;
-  return u(this, n), (s = t.call(this)).value = e, s.validateValue = r, s.setValue = i, s.priority = a, o && (s.subPriority = o), s;
+function n(e, r, i, a, s) {
+  var o;
+  return u(this, n), (o = t.call(this)).value = e, o.validateValue = r, o.setValue = i, o.priority = a, s && (o.subPriority = s), o;
 }
 return d(n, [{
     key: 'validate',
@@ -125,14 +125,14 @@ return d(n, [{
   }(E),
   h = function(e) {
 i(n, e);
-var t = o(n);
+var t = s(n);
 
 function n() {
   var e;
   u(this, n);
   for (var r = arguments.length, i = Array(r), a = 0; a < r; a++)
     i[a] = arguments[a];
-  return _(s(e = t.call.apply(t, [this].concat(i))), 'priority', 10), _(s(e), 'subPriority', -1), e;
+  return _(o(e = t.call.apply(t, [this].concat(i))), 'priority', 10), _(o(e), 'subPriority', -1), e;
 }
 return d(n, [{
   key: 'set',

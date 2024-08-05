@@ -1,8 +1,8 @@
 var r = n(754675),
   i = n(39493),
   a = n(855543),
-  o = n(143866),
-  s = n(142670);
+  s = n(143866),
+  o = n(142670);
 e.exports = function(e, t, n) {
   var l = e.constructor;
   switch (t) {
@@ -22,7 +22,7 @@ case '[object Uint8Array]':
 case '[object Uint8ClampedArray]':
 case '[object Uint16Array]':
 case '[object Uint32Array]':
-  return s(e, n);
+  return o(e, n);
 case '[object Map]':
 case '[object Set]':
   return new l();
@@ -32,6 +32,6 @@ case '[object String]':
 case '[object RegExp]':
   return a(e);
 case '[object Symbol]':
-  return o(e);
+  return s(e);
   }
 };

@@ -40,7 +40,7 @@ t % 2 ? f(Object(r), !0).forEach(function(t) {
 }
 var h = o.default,
   p = Object.keys(h),
-  g = function(e) {
+  y = function(e) {
 var t, r = c()(e),
   a = (0, b.L)(r.array()),
   n = (0, s.Z)(a, 3),
@@ -55,7 +55,7 @@ var l = [
   f = (0, b.x)(l);
 return c().rgb(f).hex();
   },
-  y = function(e) {
+  g = function(e) {
 return function(t) {
   return {
     className: [
@@ -82,7 +82,7 @@ switch (r) {
           e
         ].filter(Boolean).join(' ');
       case 'object':
-        return y({
+        return g({
           className: e,
           style: t
         });
@@ -90,7 +90,7 @@ switch (r) {
         return function(r) {
           for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++)
             n[s - 1] = arguments[s];
-          return y({
+          return g({
             className: e
           })(t.apply(void 0, [r].concat(n)));
         };
@@ -99,7 +99,7 @@ switch (r) {
   case 'object':
     switch (n) {
       case 'string':
-        return y({
+        return g({
           className: t,
           style: e
         });
@@ -109,7 +109,7 @@ switch (r) {
         return function(r) {
           for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++)
             n[s - 1] = arguments[s];
-          return y({
+          return g({
             style: e
           })(t.apply(void 0, [r].concat(n)));
         };
@@ -121,7 +121,7 @@ switch (r) {
         return function(r) {
           for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++)
             n[s - 1] = arguments[s];
-          return e.apply(void 0, [y(r)({
+          return e.apply(void 0, [g(r)({
             className: t
           })].concat(n));
         };
@@ -129,7 +129,7 @@ switch (r) {
         return function(r) {
           for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++)
             n[s - 1] = arguments[s];
-          return e.apply(void 0, [y(r)({
+          return e.apply(void 0, [g(r)({
             style: t
           })].concat(n));
         };
@@ -172,7 +172,7 @@ return !o.className && delete o.className, 0 === Object.keys(o.style).length && 
   },
   w = function(e) {
 return Object.keys(e).reduce(function(t, r) {
-  return t[r] = /^base/.test(r) ? g(e[r]) : 'scheme' === r ? e[r] + ':inverted' : e[r], t;
+  return t[r] = /^base/.test(r) ? y(e[r]) : 'scheme' === r ? e[r] + ':inverted' : e[r], t;
 }, {});
   },
   k = l()(function(e) {

@@ -1,107 +1,95 @@
-e.d(t, {
+n.d(t, {
   T: function() {
-return I;
+return T;
   }
-}), e(47120);
-var r, u = e(392711),
-  i = e.n(u),
-  o = e(661869),
-  E = e(876215),
-  l = e(423875),
-  a = e(442837),
-  T = e(570140),
-  _ = e(158776),
-  c = e(146282),
-  s = e(26033),
-  d = e(561308),
-  f = e(981631),
-  S = e(616922);
+}), n(47120);
+var r, i = n(392711),
+  a = n.n(i),
+  s = n(661869),
+  o = n(876215),
+  l = n(442837),
+  u = n(570140),
+  c = n(158776),
+  d = n(146282),
+  _ = n(26033),
+  E = n(180335),
+  f = n(561308),
+  h = n(981631);
 
-function N(n, t, e) {
-  return t in n ? Object.defineProperty(n, t, {
-value: e,
+function p(e, t, n) {
+  return t in e ? Object.defineProperty(e, t, {
+value: n,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : n[t] = e, n;
+  }) : e[t] = n, e;
 }
-let M = new Set([E.s.LISTENED_SESSION]),
-  A = new Map();
+let m = new Set([o.s.LISTENED_SESSION]),
+  I = new Map();
 
-function I(n) {
-  return ''.concat(n.author_id, ':').concat(n.id);
+function T(e) {
+  return ''.concat(e.author_id, ':').concat(e.id);
 }
 
-function O(n) {
+function g(e) {
   let t = new Set(),
-e = new Set();
-  for (let r of n) {
-let n = function(n) {
-  return (0, d.n2)(n) ? null : (0, d.kr)(n) && n.author_type === o.i.USER ? _.Z.getActivities(n.author_id).find(t => {
-    if (t.type === f.IIU.PLAYING && (0, s.d)(n))
-      return function(n, t) {
-        let e = n.extra;
-        return null != e && ('application_id' in t && t.application_id === e.application_id || 'game_name' in e && t.name === e.game_name);
-      }(n, t);
-    if (t.type === f.IIU.LISTENING && n.content_type === E.s.LISTENED_SESSION) {
-      var e, r, u, i, o;
-      return e = n, r = t, (null === (i = e.extra.entries[0]) || void 0 === i ? void 0 : null === (u = i.media) || void 0 === u ? void 0 : u.provider) === l.p.SPOTIFY && (0, S.Ps)(null === (o = r.party) || void 0 === o ? void 0 : o.id);
-    }
-    return !1;
-  }) : void 0;
+n = new Set();
+  for (let r of e) {
+let e = function(e) {
+  return (0, f.n2)(e) ? null : (0, f.kr)(e) && e.author_type === s.i.USER ? c.Z.getActivities(e.author_id).find(t => t.type === h.IIU.PLAYING && (0, _.dX)(e) ? (0, E.Ym)(e, t) : !!(t.type === h.IIU.LISTENING && (0, _.kx)(e)) && (0, E.pB)(e, t)) : void 0;
 }(r.content);
-if (void 0 !== n) {
-  let u = I(r.content);
-  e.add(u), n !== A.get(u) && (t.add(u), A.set(u, n));
+if (void 0 !== e) {
+  let i = T(r.content);
+  n.add(i), e !== I.get(i) && (t.add(i), I.set(i, e));
 }
   }
   return {
 updatedKeys: t,
-matchedKeys: e
+matchedKeys: n
   };
 }
 
-function R() {
-  let n = !1,
-t = Array.from(A.keys()),
-e = new Set(),
+function S() {
+  let e = !1,
+t = Array.from(I.keys()),
+n = new Set(),
 r = new Set();
-  for (let t of c.Z.getFeeds().values()) {
+  for (let t of d.Z.getFeeds().values()) {
 let {
-  updatedKeys: u,
-  matchedKeys: i
-} = O(e.size > 0 ? t.entries.filter(n => !e.has(I(n.content))) : t.entries);
-for (let n of u)
-  e.add(n);
-for (let n of i)
-  r.add(n);
-n = n || u.size > 0;
+  updatedKeys: i,
+  matchedKeys: a
+} = g(n.size > 0 ? t.entries.filter(e => !n.has(T(e.content))) : t.entries);
+for (let e of i)
+  n.add(e);
+for (let e of a)
+  r.add(e);
+e = e || i.size > 0;
   }
-  for (let e of i().difference(t, [...r]))
-A.delete(e), n = !0;
-  return n;
+  for (let n of a().difference(t, [...r]))
+I.delete(n), e = !0;
+  return e;
 }
-class D extends(r = a.ZP.Store) {
+class A extends(r = l.ZP.Store) {
   initialize() {
-this.waitFor(c.Z, _.Z), this.syncWith([_.Z], R);
+this.waitFor(d.Z, c.Z), this.syncWith([c.Z], S);
   }
-  getMatchingActivity(n) {
-return (0, d.n2)(n) ? null : A.get(I(n));
+  getMatchingActivity(e) {
+return (0, f.n2)(e) ? null : I.get(T(e));
   }
-  constructor(...n) {
-super(...n), N(this, 'canRenderContent', n => !(0, d.n2)(n) && (!M.has(n.content_type) || null != this.getMatchingActivity(n)));
+  constructor(...e) {
+super(...e), p(this, 'canRenderContent', e => !(0, f.n2)(e) && (!m.has(e.content_type) || null != this.getMatchingActivity(e)));
   }
 }
-N(D, 'displayName', 'ContentInventoryActivityStore'), t.Z = new D(T.Z, {
+p(A, 'displayName', 'ContentInventoryActivityStore'), t.Z = new A(u.Z, {
   CONNECTION_OPEN: function() {
-A.clear();
+I.clear();
   },
-  CONTENT_INVENTORY_SET_FEED: function(n) {
+  CONTENT_INVENTORY_SET_FEED: function(e) {
 let {
   feed: t
-} = n, {
-  updatedKeys: e
-} = O(t.entries);
-return e.size > 0;
+} = e, {
+  updatedKeys: n
+} = g(t.entries);
+return n.size > 0;
   }
 });

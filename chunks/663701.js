@@ -1,12 +1,12 @@
 n.d(t, {
   Z: function() {
-return ea;
+return es;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(143927),
   o = n(91192),
   c = n(873546),
@@ -21,13 +21,13 @@ var i = n(735250),
   p = n(770471),
   T = n(158631),
   S = n(143614),
-  C = n(463119),
-  f = n(377171),
+  f = n(463119),
+  C = n(377171),
   N = n(243778),
   A = n(922409),
-  Z = n(899740),
-  L = n(28476),
-  v = n(880257),
+  v = n(899740),
+  Z = n(28476),
+  L = n(880257),
   O = n(631885),
   R = n(457396),
   x = n(51596),
@@ -53,7 +53,7 @@ let q = e => {
 let {
   selected: t,
   ...n
-} = e, s = (0, o.JA)('friends'), a = (0, d.e7)([j.Z], () => j.Z.getPendingCount()), r = (0, S.Z)(), {
+} = e, a = (0, o.JA)('friends'), s = (0, d.e7)([j.Z], () => j.Z.getPendingCount()), r = (0, S.Z)(), {
   canViewBroadcasts: l
 } = p.Z.useExperiment({
   location: 'friends_tab_no_track'
@@ -71,10 +71,10 @@ return (0, i.jsxs)(V.Qj, {
     });
   },
   ...n,
-  ...s,
+  ...a,
   children: [
     r.length > 0 && l && (0, i.jsx)(h.TextBadge, {
-      color: f.Z.BG_BRAND,
+      color: C.Z.BG_BRAND,
       text: (0, i.jsxs)('div', {
         className: K.broadcastingBadge,
         children: [
@@ -89,8 +89,8 @@ return (0, i.jsxs)(V.Qj, {
         ]
       })
     }),
-    a > 0 ? (0, i.jsx)(h.NumberBadge, {
-      count: a
+    s > 0 ? (0, i.jsx)(h.NumberBadge, {
+      count: s
     }) : null
   ]
 });
@@ -99,15 +99,15 @@ return (0, i.jsxs)(V.Qj, {
 let {
   selected: t,
   hideGameUpdateProgressIndicator: n,
-  ...s
-} = e, a = (0, o.JA)('library');
+  ...a
+} = e, s = (0, o.JA)('library');
 return (0, i.jsx)(V.Qj, {
   selected: t,
   route: W.Z5c.APPLICATION_LIBRARY,
   icon: h.InventoryIcon,
   text: z.Z.Messages.LIBRARY,
-  ...s,
   ...a,
+  ...s,
   children: (0, i.jsx)(Y.Z, {
     className: r()(K.downloadProgressCircle, {
       [K.hideGameUpdateProgressIndicator]: n
@@ -119,8 +119,8 @@ return (0, i.jsx)(V.Qj, {
 let {
   selected: t,
   route: n,
-  locationState: s,
-  ...a
+  locationState: a,
+  ...s
 } = e, l = (0, o.JA)('activities'), c = (0, d.e7)([M.Z], () => M.Z.getState().theme), u = (0, m.p)();
 return (0, i.jsx)(V.Qj, {
   selected: t,
@@ -130,8 +130,8 @@ return (0, i.jsx)(V.Qj, {
     [K.activitiesBirthdayIconLight]: 'light' === c
   }),
   text: z.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_TAB_TITLE,
-  locationState: s,
-  ...a,
+  locationState: a,
+  ...s,
   ...l,
   children: u > 0 ? (0, i.jsx)(h.NumberBadge, {
     count: u
@@ -139,28 +139,28 @@ return (0, i.jsx)(V.Qj, {
 });
   },
   J = () => {
-let e = (0, Z.q)(),
-  t = (0, Z.T)();
+let e = (0, v.q)(),
+  t = (0, v.T)();
 return e > 0 ? (0, i.jsx)(h.NumberBadge, {
   count: e,
-  color: 0 === t ? f.Z.ICON_MUTED : void 0
+  color: 0 === t ? C.Z.ICON_MUTED : void 0
 }) : null;
   },
   $ = e => {
 let {
   selected: t
 } = e, n = (0, o.JA)('messageRequests'), {
-  channelId: s
+  channelId: a
 } = (0, A._)();
-if (!(0, L.a)())
+if (!(0, Z.a)())
   return null;
-let a = null == s ? void 0 : () => E.Z.preload(W.ME, s);
+let s = null == a ? void 0 : () => E.Z.preload(W.ME, a);
 return (0, i.jsx)(V.Qj, {
   selected: t,
   route: W.Z5c.MESSAGE_REQUESTS,
   icon: h.EnvelopeIcon,
   text: z.Z.Messages.MESSAGE_REQUESTS,
-  onClick: a,
+  onClick: s,
   ...n,
   children: (0, i.jsx)(J, {})
 });
@@ -168,7 +168,7 @@ return (0, i.jsx)(V.Qj, {
   ee = e => {
 let {
   selected: t
-} = e, n = z.Z.Messages.FAMILY_CENTER_SIDEBAR_TITLE, a = (0, o.JA)('family-center'), r = D.Ex.useSetting(), l = (0, v.Z)(), [c, d] = s.useState(!0);
+} = e, n = z.Z.Messages.FAMILY_CENTER_SIDEBAR_TITLE, s = (0, o.JA)('family-center'), r = D.Ex.useSetting(), l = (0, L.Z)(), [c, d] = a.useState(!0);
 return r && l ? (0, i.jsx)(V.Qj, {
   selected: t,
   route: W.Z5c.FAMILY_CENTER,
@@ -181,7 +181,7 @@ return r && l ? (0, i.jsx)(V.Qj, {
     d(!1);
   },
   interactiveClassName: K.familyCenterLinkButton,
-  ...a,
+  ...s,
   children: (0, i.jsx)(et, {
     isParentHovered: c
   })
@@ -190,7 +190,7 @@ return r && l ? (0, i.jsx)(V.Qj, {
   et = e => {
 let {
   isParentHovered: t
-} = e, s = (0, O.gU)();
+} = e, a = (0, O.gU)();
 return t ? (0, i.jsx)(V.PZ, {
   onClick: () => {
     (0, _.ZD)(async () => {
@@ -203,10 +203,10 @@ return t ? (0, i.jsx)(V.PZ, {
     });
   },
   'aria-label': z.Z.Messages.CLOSE
-}) : s > 0 ? (0, i.jsx)('div', {
+}) : a > 0 ? (0, i.jsx)('div', {
   className: K.familyCenterPendingBadge,
   children: (0, i.jsx)(h.NumberBadge, {
-    count: s
+    count: a
   })
 }) : (0, i.jsx)(N.Z, {
   contentTypes: [u.z.FAMILY_CENTER_NEW_BADGE],
@@ -216,7 +216,7 @@ return t ? (0, i.jsx)(V.PZ, {
     } = e;
     return t === u.z.FAMILY_CENTER_NEW_BADGE ? (0, i.jsx)(h.TextBadge, {
       text: z.Z.Messages.NEW,
-      color: f.Z.BG_BRAND
+      color: C.Z.BG_BRAND
     }) : null;
   }
 });
@@ -236,12 +236,12 @@ case W.Z5c.COLLECTIBLES_SHOP:
 return e === W.Z5c.APPLICATION_STORE ? W.ZY5.STORE_DIRECTORY_HOME : e.startsWith(W.Z5c.APPLICATION_STORE) ? W.ZY5.STORE_DIRECTORY_BROWSE : W.ZY5.STORE_LISTING;
   return W.ZY5.DM_CHANNEL;
 }
-let es = e => {
+let ea = e => {
   let {
 showLibrary: t,
 hasLibraryApplication: n,
-homeLink: s,
-storeLink: a,
+homeLink: a,
+storeLink: s,
 premiumTabSelected: o
   } = e, [d, u] = (0, b.Z)(e => {
 let {
@@ -288,49 +288,49 @@ children: [
     showDMHeader: !0,
     children: [
       (0, i.jsx)(q, {
-        selected: null != u ? u === W.Z5c.FRIENDS : s === W.Z5c.FRIENDS
+        selected: null != u ? u === W.Z5c.FRIENDS : a === W.Z5c.FRIENDS
       }, 'friends'),
       n && t ? (0, i.jsx)(Q, {
-        selected: null == u ? null != s && s.startsWith(W.Z5c.APPLICATION_LIBRARY) : u.startsWith(W.Z5c.APPLICATION_LIBRARY),
-        hideGameUpdateProgressIndicator: s === W.Z5c.APPLICATION_LIBRARY
+        selected: null == u ? null != a && a.startsWith(W.Z5c.APPLICATION_LIBRARY) : u.startsWith(W.Z5c.APPLICATION_LIBRARY),
+        hideGameUpdateProgressIndicator: a === W.Z5c.APPLICATION_LIBRARY
       }, 'library') : null,
       (0, i.jsx)(R.g, {
         selected: null == u ? o : u.startsWith(W.Z5c.APPLICATION_STORE),
-        route: null == a || location.pathname.startsWith(W.Z5c.ACTIVITIES) || location.pathname.startsWith(W.Z5c.APPLICATION_STORE) ? W.Z5c.APPLICATION_STORE : a,
+        route: null == s || location.pathname.startsWith(W.Z5c.ACTIVITIES) || location.pathname.startsWith(W.Z5c.APPLICATION_STORE) ? W.Z5c.APPLICATION_STORE : s,
         locationState: {
           analyticsSource: {
-            page: ei(s),
+            page: ei(a),
             section: W.jXE.NAVIGATION,
             object: W.qAy.NAVIGATION_LINK
           }
         }
       }, 'premium'),
       _ ? (0, i.jsx)(X, {
-        selected: null != u && u.startsWith(W.Z5c.ACTIVITIES) || null != s && s.startsWith(W.Z5c.ACTIVITIES),
+        selected: null != u && u.startsWith(W.Z5c.ACTIVITIES) || null != a && a.startsWith(W.Z5c.ACTIVITIES),
         route: W.Z5c.ACTIVITIES,
         locationState: {
           analyticsSource: {
-            page: ei(s),
+            page: ei(a),
             section: W.jXE.NAVIGATION,
             object: W.qAy.NAVIGATION_LINK
           }
         }
       }, 'activities') : null,
       (0, i.jsx)($, {
-        selected: null == u ? null != s && s.startsWith(W.Z5c.MESSAGE_REQUESTS) : u === W.Z5c.MESSAGE_REQUESTS
+        selected: null == u ? null != a && a.startsWith(W.Z5c.MESSAGE_REQUESTS) : u === W.Z5c.MESSAGE_REQUESTS
       }, 'message-requests'),
-      (0, i.jsx)(C.i, {
-        selected: u === W.Z5c.COLLECTIBLES_SHOP || (null == s ? void 0 : s.startsWith(W.Z5c.COLLECTIBLES_SHOP)),
+      (0, i.jsx)(f.i, {
+        selected: u === W.Z5c.COLLECTIBLES_SHOP || (null == a ? void 0 : a.startsWith(W.Z5c.COLLECTIBLES_SHOP)),
         locationState: {
           analyticsSource: {
-            page: ei(s),
+            page: ei(a),
             section: W.jXE.NAVIGATION,
             object: W.qAy.NAVIGATION_LINK
           }
         }
       }, 'discord-shop'),
       (0, i.jsx)(ee, {
-        selected: null != s && s.startsWith(W.Z5c.FAMILY_CENTER) || null != u && u.startsWith(W.Z5c.FAMILY_CENTER)
+        selected: null != a && a.startsWith(W.Z5c.FAMILY_CENTER) || null != u && u.startsWith(W.Z5c.FAMILY_CENTER)
       }, 'family-center')
     ]
   })
@@ -338,7 +338,7 @@ children: [
   });
 };
 
-function ea() {
+function es() {
   let e = (0, d.e7)([k.Z], () => k.Z.getHomeLink()),
 t = (0, d.e7)([G.Z], () => {
   if (e === W.Z5c.APPLICATION_STORE)
@@ -352,16 +352,16 @@ t = (0, d.e7)([G.Z], () => {
 }, [e]),
 n = !D.bm.useSetting(),
 {
-  theme: s
+  theme: a
 } = (0, d.cj)([M.Z], () => ({
   theme: M.Z.theme
 })),
-a = (0, d.e7)([y.Z], () => y.Z.hasLibraryApplication()),
+s = (0, d.e7)([y.Z], () => y.Z.hasLibraryApplication()),
 r = (0, d.e7)([U.Z], () => U.Z.getCurrentPath());
-  return (0, i.jsx)(es, {
-theme: s,
+  return (0, i.jsx)(ea, {
+theme: a,
 showLibrary: n,
-hasLibraryApplication: a,
+hasLibraryApplication: s,
 storeLink: r,
 homeLink: e,
 premiumTabSelected: t

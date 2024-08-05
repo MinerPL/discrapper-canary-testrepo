@@ -1,1 +1,1 @@
-e.exports = n.p + 'd075653a166e78e578fa.png';
+e.exports = '/assets/d075653a166e78e578fa.png';

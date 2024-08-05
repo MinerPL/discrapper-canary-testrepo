@@ -3,25 +3,25 @@ n.d(t, {
 return i;
   }
 }), n(47120);
-var i, a, l = n(735250),
-  s = n(470079),
+var i, a, s = n(735250),
+  l = n(470079),
   r = n(120356),
   o = n.n(r),
   c = n(338545),
-  d = n(442837),
-  u = n(481060),
+  u = n(442837),
+  d = n(481060),
   h = n(393238),
   p = n(434650),
   m = n(607070),
   _ = n(594174),
   f = n(5192),
   E = n(603368),
-  C = n(856682),
-  g = n(284019),
+  g = n(856682),
+  C = n(284019),
   I = n(689938),
   x = n(333626);
 (a = i || (i = {})).LEFT = 'left', a.RIGHT = 'right';
-t.Z = s.memo(function(e) {
+t.Z = l.memo(function(e) {
   let {
 guildId: t,
 primaryColor: n,
@@ -29,18 +29,18 @@ children: i,
 canSignCharter: a = !0,
 onSignCharter: r,
 animationDelayMs: T = 1000,
-signHintButtonText: v,
-signHintHelperText: N,
+signHintButtonText: N,
+signHintHelperText: v,
 signHintPosition: S = 'left',
 className: Z,
 fullHeight: A
-  } = e, M = s.useRef(null), [b, R] = s.useState(!1), j = s.useCallback(e => {
+  } = e, M = l.useRef(null), [b, R] = l.useState(!1), j = l.useCallback(e => {
 e.preventDefault(), e.stopPropagation(), null == r || r(), R(!0);
-  }, [r]), [L, P] = s.useState(!1), [O, y] = s.useState(!1), D = s.useRef(null), k = s.useCallback(e => {
+  }, [r]), [L, P] = l.useState(!1), [O, y] = l.useState(!1), D = l.useRef(null), k = l.useCallback(e => {
 e && (D.current = setTimeout(() => {
   y(!0);
 }, T));
-  }, [T]), U = (0, p.O)(k), w = (0, d.e7)([m.Z], () => m.Z.useReducedMotion), B = (0, d.e7)([_.default], () => _.default.getCurrentUser()), [H, G] = (0, c.useSpring)(() => {
+  }, [T]), U = (0, p.O)(k), w = (0, u.e7)([m.Z], () => m.Z.useReducedMotion), B = (0, u.e7)([_.default], () => _.default.getCurrentUser()), [H, G] = (0, d.useSpring)(() => {
 var e, t;
 return e = S, t = w, 'left' === e ? {
   right: t ? 68 : 0,
@@ -49,14 +49,14 @@ return e = S, t = w, 'left' === e ? {
   left: t ? 68 : 0,
   config: c.config.stiff
 };
-  }), [V, F] = (0, c.useSpring)(() => ({
+  }), [V, F] = (0, d.useSpring)(() => ({
 opacity: 0,
 top: -24,
 onRest: () => {
   b && P(!0);
 }
   }));
-  s.useEffect(() => {
+  l.useEffect(() => {
 if (O)
   G({
     ...'left' === S ? {
@@ -78,19 +78,19 @@ O && b && F({
 O,
 b,
 S
-  ]), s.useEffect(() => () => {
+  ]), l.useEffect(() => () => {
 null != D.current && clearTimeout(D.current);
   }, []);
   let W = o()(x.signHintAnimationContainer, L && x.noDisplay, 'left' === S ? x.signTextLeft : x.signTextRight),
-z = (0, u.useToken)(u.tokens.colors.BG_SURFACE_OVERLAY),
-Y = (0, u.useToken)(u.tokens.colors.BG_BRAND),
+z = (0, d.useToken)(d.tokens.colors.BG_SURFACE_OVERLAY),
+Y = (0, d.useToken)(d.tokens.colors.BG_BRAND),
 K = null != n ? n : Y.hex(),
 q = (0, E.j1)(K, z.hex()),
 {
   height: X = 87,
   ref: Q
 } = (0, h.Z)(a),
-J = (0, c.useTransition)(a, {
+J = (0, d.useTransition)(a, {
   from: {
     opacity: 0,
     height: 0
@@ -99,52 +99,51 @@ J = (0, c.useTransition)(a, {
     opacity: 1,
     height: null != X ? X : 87
   },
-  config: c.config.stiff,
-  immediate: w
+  config: c.config.stiff
 });
-  return (0, l.jsx)('div', {
+  return (0, s.jsx)('div', {
 className: o()(x.container, Z),
 ref: U,
-children: (0, l.jsx)(C.Z, {
+children: (0, s.jsx)(g.Z, {
   fullHeight: A,
-  children: (0, l.jsxs)('div', {
+  children: (0, s.jsxs)('div', {
     className: o()(x.overviewSidebarWrapper, A && x.fullHeight),
     children: [
-      (0, l.jsx)(u.ScrollerNone, {
+      (0, s.jsx)(d.ScrollerNone, {
         fade: !0,
         className: x.overviewSidebarContent,
-        children: (0, l.jsx)('div', {
+        children: (0, s.jsx)('div', {
           className: x.scrollContentContainer,
           children: i
         })
       }),
-      J((e, n) => n && (0, l.jsx)(c.animated.div, {
+      J((e, n) => n && (0, s.jsx)(c.animated.div, {
         className: x.signatureBlockContainer,
         style: e,
-        children: (0, l.jsx)('div', {
+        children: (0, s.jsx)('div', {
           ref: Q,
-          children: (0, l.jsxs)(u.Clickable, {
+          children: (0, s.jsxs)(d.Clickable, {
             onClick: j,
             className: o()(x.signatureBlock, {
               [x.clickable]: null != r
             }),
             children: [
-              (0, l.jsx)('div', {
+              (0, s.jsx)('div', {
                 ref: M,
                 className: x.signHintContainer,
-                children: (0, l.jsxs)(c.animated.div, {
+                children: (0, s.jsxs)(c.animated.div, {
                   className: W,
                   style: {
                     ...H,
                     ...V
                   },
                   children: [
-                    (0, l.jsx)('div', {
+                    (0, s.jsx)('div', {
                       className: x.signContainerButton,
-                      children: (0, l.jsxs)(g.Z, {
+                      children: (0, s.jsxs)(C.Z, {
                         themeColor: K,
                         className: x.signButton,
-                        size: u.Button.Sizes.SMALL,
+                        size: d.Button.Sizes.SMALL,
                         onClick: e => {
                           var t;
                           null === (t = M.current) || void 0 === t || t.scrollIntoView({
@@ -152,7 +151,7 @@ children: (0, l.jsx)(C.Z, {
                           }), j(e);
                         },
                         children: [
-                          (0, l.jsx)('div', {
+                          (0, s.jsx)('div', {
                             className: o()(x.signCarot, {
                               [x.signCarotCustomColors]: null != q
                             }),
@@ -160,30 +159,30 @@ children: (0, l.jsx)(C.Z, {
                               borderColor: K
                             }
                           }),
-                          null != v ? v : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
+                          null != N ? N : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
                         ]
                       })
                     }),
-                    (0, l.jsx)(u.Text, {
+                    (0, s.jsx)(d.Text, {
                       variant: 'text-xs/normal',
                       color: 'text-muted',
                       className: x.signHintHelperText,
-                      children: null != N ? v : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_HELP
+                      children: null != v ? N : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_HELP
                     })
                   ]
                 })
               }),
-              (0, l.jsx)(u.Text, {
+              (0, s.jsx)(d.Text, {
                 variant: 'text-md/normal',
                 color: 'none',
                 children: 'x'
               }),
-              b ? (0, l.jsx)(u.Text, {
+              b ? (0, s.jsx)(d.Text, {
                 variant: 'text-lg/normal',
                 color: 'header-primary',
                 className: x.signatureText,
                 children: f.ZP.getName(t, null, B)
-              }) : (0, l.jsx)(u.Text, {
+              }) : (0, s.jsx)(d.Text, {
                 variant: 'text-lg/normal',
                 color: 'none',
                 className: x.signatureText,

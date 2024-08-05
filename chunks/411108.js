@@ -8,7 +8,7 @@ function a(e, t, n) {
   return e & t ^ e & n ^ t & n;
 }
 
-function o(e, t, n) {
+function s(e, t, n) {
   return e ^ t ^ n;
 }
 t.ft_1 = function(e, t, n, r) {
@@ -17,7 +17,7 @@ return e & t ^ ~e & n;
   }(t, n, r) : 1 === e || 3 === e ? function(e, t, n) {
 return e ^ t ^ n;
   }(t, n, r) : 2 === e ? a(t, n, r) : void 0;
-}, t.ch32 = i, t.maj32 = a, t.p32 = o;
+}, t.ch32 = i, t.maj32 = a, t.p32 = s;
 t.s0_256 = function(e) {
   return r(e, 2) ^ r(e, 13) ^ r(e, 22);
 };

@@ -19,8 +19,8 @@ var r = n(956067);
 n(17089);
 var i = n(218543),
   a = n(594174),
-  o = n(626135),
-  s = n(981631);
+  s = n(626135),
+  o = n(981631);
 
 function l(e, t, n, a, l) {
   var u, c, d;
@@ -57,7 +57,7 @@ return n;
       return;
     let t = 'partial' === e.data_mode ? e.partial_updates.channels : e.channels;
     null != t && null != t.forEach && t.forEach(e => {
-      r++, e.type === s.d4z.GUILD_CATEGORY && n++;
+      r++, e.type === o.d4z.GUILD_CATEGORY && n++;
     });
   }), {
     num_guilds: t.length,
@@ -77,7 +77,7 @@ identify_compressed_byte_size: e.identifyCompressedByteSize,
 had_cache_at_startup: null !== (c = e.analytics.hadCacheAtStartup) && void 0 !== c && c,
 used_cache_at_startup: null !== (d = e.analytics.usedCacheAtStartup) && void 0 !== d && d
   };
-  i.Z.attachReadyPayloadProperties(E), o.default.track(s.rMx.READY_PAYLOAD_RECEIVED, E, {
+  i.Z.attachReadyPayloadProperties(E), s.default.track(o.rMx.READY_PAYLOAD_RECEIVED, E, {
 logEventProperties: !0
   });
 }
@@ -107,8 +107,8 @@ function c(e) {
 {
   guilds: i,
   merged_presences: a,
-  merged_members: o,
-  read_state: s,
+  merged_members: s,
+  read_state: o,
   private_channels: l,
   user_guild_settings: u,
   user_settings: c,
@@ -137,13 +137,13 @@ let {
 } = null !== (t = e.properties) && void 0 !== t ? t : {}, {
   threads: i,
   guild_scheduled_events: a,
-  ...o
+  ...s
 } = e;
-m.push('partial' === e.data_mode ? e.partial_updates.channels : e.channels), I.push('partial' === e.data_mode ? e.partial_updates.roles : e.roles), T.push('partial' === e.data_mode ? e.partial_updates.emojis : e.emojis), g.push(i), S.push('partial' === e.data_mode ? e.partial_updates.stickers : e.stickers), A.push(n), N.push(a), v.push(o, r);
+m.push('partial' === e.data_mode ? e.partial_updates.channels : e.channels), I.push('partial' === e.data_mode ? e.partial_updates.roles : e.roles), T.push('partial' === e.data_mode ? e.partial_updates.emojis : e.emojis), g.push(i), S.push('partial' === e.data_mode ? e.partial_updates.stickers : e.stickers), A.push(n), N.push(a), v.push(s, r);
   }), {
 presences_size: JSON.stringify(null !== (t = null == a ? void 0 : a.friends) && void 0 !== t ? t : []).length,
 users_size: JSON.stringify(h).length,
-read_states_size: JSON.stringify(s).length,
+read_states_size: JSON.stringify(o).length,
 private_channels_size: JSON.stringify(l).length,
 user_settings_size: JSON.stringify(null != c ? c : '').length + (null != d ? d : '').length,
 experiments_size: JSON.stringify(null != _ ? _ : []).length + JSON.stringify(null != E ? E : []).length,
@@ -151,7 +151,7 @@ user_guild_settings_size: JSON.stringify(u).length,
 relationships_size: JSON.stringify(f).length,
 remaining_data_size: JSON.stringify(null != p ? p : {}).length,
 guild_channels_size: JSON.stringify(m).length,
-guild_members_size: JSON.stringify(null != o ? o : []).length,
+guild_members_size: JSON.stringify(null != s ? s : []).length,
 guild_presences_size: JSON.stringify(null !== (n = null == a ? void 0 : a.guilds) && void 0 !== n ? n : []).length,
 guild_roles_size: JSON.stringify(I).length,
 guild_emojis_size: JSON.stringify(T).length,
@@ -179,7 +179,7 @@ lastUpdateTime: performance.now()
 
 function _(e) {
   var t;
-  !(!(null === (t = a.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) && 0.5 > Math.random()) && o.default.track(s.rMx.CONNECTION_RESUMED, {
+  !(!(null === (t = a.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) && 0.5 > Math.random()) && s.default.track(o.rMx.CONNECTION_RESUMED, {
 connect_time_ms: e.connectTime,
 resume_time_ms: Math.floor(performance.now() - e.startTime),
 num_events: e.numEvents,

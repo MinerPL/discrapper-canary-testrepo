@@ -5,29 +5,30 @@ return C;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(338545),
-  s = n(442837),
+  s = n(338545),
+  l = n(442837),
   r = n(780384),
-  o = n(435064),
-  c = n(39604),
+  o = n(481060),
+  c = n(435064),
+  u = n(39604),
   d = n(175470),
-  u = n(569545),
-  h = n(153850),
-  p = n(420576);
-let m = {
+  h = n(569545),
+  p = n(153850),
+  m = n(420576);
+let _ = {
 visibility: 'hidden'
   },
-  _ = {
+  f = {
 precision: 0.0001,
 duration: 300
   },
-  f = {
+  E = {
 tension: 150,
 friction: 20,
 precision: 0.0001,
 bounce: 0
   },
-  E = {
+  g = {
 duration: 1000
   };
 
@@ -37,24 +38,24 @@ stream: t,
 inPopout: n
   } = e, {
 reducedMotion: C
-  } = a.useContext(r.Sf), g = (0, a.useRef)(null), I = d.n.getState().clipsButtonRef, x = (0, u.V9)(t), T = (0, s.e7)([o.Z], () => o.Z.getActiveAnimation()), v = (0, s.Wu)([o.Z], () => o.Z.getStreamClipAnimations(x)), N = (0, a.useRef)();
+  } = a.useContext(r.Sf), I = (0, a.useRef)(null), x = d.n.getState().clipsButtonRef, T = (0, h.V9)(t), N = (0, l.e7)([c.Z], () => c.Z.getActiveAnimation()), v = (0, l.Wu)([c.Z], () => c.Z.getStreamClipAnimations(T)), S = (0, a.useRef)();
   a.useEffect(() => () => {
-(0, c.Gh)(x);
-  }, [x]);
-  let S = () => {
+(0, u.Gh)(T);
+  }, [T]);
+  let Z = () => {
   var e;
-  let t = null === (e = g.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
-  return null == t || n ? m : {
+  let t = null === (e = I.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+  return null == t || n ? _ : {
     width: t.width,
     height: t.height,
     top: t.top,
     left: t.left
   };
 },
-Z = e => {
-  let t = null == I ? void 0 : I.getBoundingClientRect();
-  if (N.current = t, e.timestamp !== T || null == t || n)
-    return m;
+A = e => {
+  let t = null == x ? void 0 : x.getBoundingClientRect();
+  if (S.current = t, e.timestamp !== N || null == t || n)
+    return _;
   let {
     top: i,
     left: a
@@ -66,32 +67,32 @@ Z = e => {
     width: 268
   };
 },
-A = (0, a.useRef)(null),
-M = (0, l.useTransition)(v, {
+M = (0, a.useRef)(null),
+b = (0, o.useTransition)(v, {
   keys: e => e.timestamp,
-  ref: A,
+  ref: M,
   from: {
     opacity: 0.2
   },
   enter: {
     opacity: 0
   },
-  config: _
-}),
-b = (0, a.useRef)(null),
-R = (0, l.useTransition)(v, {
-  ref: b,
+  config: f
+}, 'animate-always'),
+R = (0, a.useRef)(null),
+j = (0, o.useTransition)(v, {
+  ref: R,
   keys: e => e.timestamp,
   from: e => ({
     position: 'fixed',
     visibility: 'hidden',
     opacity: 1,
-    ...C.enabled ? Z(e) : S()
+    ...C.enabled ? A(e) : Z()
   }),
   enter: e => [{
     opacity: 1,
     visibility: 'visible',
-    ...Z(e)
+    ...A(e)
   }],
   leave: {
     opacity: 0,
@@ -99,41 +100,41 @@ R = (0, l.useTransition)(v, {
       height: 0,
       width: 0,
       ...(() => {
-        if (null != N.current)
+        if (null != S.current)
           return {
-            top: N.current.top + 12,
-            left: N.current.left + 12
+            top: S.current.top + 12,
+            left: S.current.left + 12
           };
       })()
     }
   },
-  config: C.enabled ? E : f,
+  config: C.enabled ? g : E,
   onRest: (e, t) => {
-    null != t.item && null != v.find(e => e.timestamp === t.item.timestamp) && (0, c.Gh)(x, t.item.timestamp);
+    null != t.item && null != v.find(e => e.timestamp === t.item.timestamp) && (0, u.Gh)(T, t.item.timestamp);
   }
-});
-  return (0, l.useChain)([
-A,
-b
+}, 'animate-always');
+  return (0, s.useChain)([
+M,
+R
   ], [
 0,
 0.1
   ], 3000), (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)('div', {
-    className: p.hidden,
-    ref: g
+    className: m.hidden,
+    ref: I
   }),
-  M((e, t) => null != t && (0, i.jsx)(l.animated.div, {
-    className: p.whiteFlash,
+  b((e, t) => null != t && (0, i.jsx)(s.animated.div, {
+    className: m.whiteFlash,
     style: e
   })),
-  (0, i.jsx)(h.ZP, {
+  (0, i.jsx)(p.ZP, {
     children: (0, i.jsx)('div', {
-      className: p.hidden,
-      children: R((e, t, n, a) => (null == t ? void 0 : t.thumbnail) != null && (0, i.jsx)(l.animated.img, {
+      className: m.hidden,
+      children: j((e, t, n, a) => (null == t ? void 0 : t.thumbnail) != null && (0, i.jsx)(s.animated.img, {
         src: t.thumbnail,
-        className: p.movingImage,
+        className: m.movingImage,
         style: e
       }))
     })

@@ -12,8 +12,8 @@ return f;
 var r = n(570140),
   i = n(579806),
   a = n(710845),
-  o = n(314897),
-  s = n(626135),
+  s = n(314897),
+  o = n(626135),
   l = n(931619),
   u = n(358085),
   c = n(548570),
@@ -24,12 +24,12 @@ let E = new a.Z('ConnectionStore'),
   h = new d.Z(f),
   p = new _.Z(f);
 f.handleIdentify = () => {
-  let e = o.default.getToken();
+  let e = s.default.getToken();
   return (E.verbose('handleIdentify called', {
 hasToken: null != e
   }), null == e) ? null : {
 token: e,
-properties: s.default.getSuperProperties(),
+properties: o.default.getSuperProperties(),
 presence: h.getInitialState()
   };
 };

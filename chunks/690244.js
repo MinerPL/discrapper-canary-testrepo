@@ -1,7 +1,7 @@
 var r, i = n(401801),
   a = n(104509),
-  o = n(333567),
-  s = n(284456),
+  s = n(333567),
+  o = n(284456),
   l = n(429675),
   u = n(815329),
   c = n(102099),
@@ -84,8 +84,8 @@ __proto__: null,
 '%parseInt%': parseInt,
 '%Promise%': 'undefined' == typeof Promise ? r : Promise,
 '%Proxy%': 'undefined' == typeof Proxy ? r : Proxy,
-'%RangeError%': o,
-'%ReferenceError%': s,
+'%RangeError%': s,
+'%ReferenceError%': o,
 '%Reflect%': 'undefined' == typeof Reflect ? r : Reflect,
 '%RegExp%': RegExp,
 '%Set%': 'undefined' == typeof Set ? r : Set,
@@ -393,8 +393,8 @@ throw new l('`%` may not be present anywhere but at the beginning and end of the
 r = n.length > 0 ? n[0] : '',
 i = w('%' + r + '%', t),
 a = i.name,
-o = i.value,
-s = !1,
+s = i.value,
+o = !1,
 c = i.alias;
   c && (r = c[0], y(n, C([
 0,
@@ -406,21 +406,21 @@ var f = n[d],
   p = L(f, -1);
 if (('"' === h || '\'' === h || '`' === h || '"' === p || '\'' === p || '`' === p) && h !== p)
   throw new l('property names with quotes must have matching quotes');
-if (('constructor' === f || !_) && (s = !0), r += '.' + f, R(S, a = '%' + r + '%'))
-  o = S[a];
-else if (null != o) {
-  if (!(f in o)) {
+if (('constructor' === f || !_) && (o = !0), r += '.' + f, R(S, a = '%' + r + '%'))
+  s = S[a];
+else if (null != s) {
+  if (!(f in s)) {
     if (!t)
       throw new u('base intrinsic for ' + e + ' exists, but the property is not available.');
     return;
   }
   if (E && d + 1 >= n.length) {
-    var m = E(o, f);
-    o = (_ = !!m) && 'get' in m && !('originalValue' in m.get) ? m.get : o[f];
+    var m = E(s, f);
+    s = (_ = !!m) && 'get' in m && !('originalValue' in m.get) ? m.get : s[f];
   } else
-    _ = R(o, f), o = o[f];
-  _ && !s && (S[a] = o);
+    _ = R(s, f), s = s[f];
+  _ && !o && (S[a] = s);
 }
   }
-  return o;
+  return s;
 };

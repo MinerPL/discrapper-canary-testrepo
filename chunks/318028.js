@@ -1,17 +1,17 @@
 n.d(t, {
   l: function() {
-return l;
+return o;
   }
 }), n(47120);
-var r = n(399606),
-  a = n(597688),
-  o = n(267097);
+var a = n(399606),
+  r = n(597688),
+  s = n(267097);
 
-function l(e) {
-  (0, o.Z)();
-  let [t, n] = (0, r.Wu)([a.Z], () => [
-a.Z.isFetchingCategories,
-a.Z.getCategoryForProduct(e)
+function o(e) {
+  (0, s.Z)();
+  let [t, n] = (0, a.Wu)([r.Z], () => [
+r.Z.isFetchingCategories,
+r.Z.getCategoryForProduct(e)
   ]);
   return {
 isFetching: t,

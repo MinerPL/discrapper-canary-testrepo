@@ -5,32 +5,32 @@ return I;
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-  s = n.n(a),
+var s = n(120356),
+  a = n.n(s),
   r = n(297821),
   l = n(481060),
   o = n(839963),
   c = n(139256),
-  d = n(689938),
-  u = n(622264);
+  u = n(689938),
+  d = n(622264);
 
 function _(e) {
   let {
 didSelfVote: t,
 label: n,
-percentage: a
+percentage: s
   } = e;
   return (0, i.jsxs)('div', {
-className: u.votesData,
+className: d.votesData,
 children: [
   t && (0, i.jsx)(r.T, {
-    children: d.Z.Messages.POLL_ANSWER_VOTED_ARIA
+    children: u.Z.Messages.POLL_ANSWER_VOTED_ARIA
   }),
   (0, i.jsxs)(l.Text, {
     variant: 'text-md/semibold',
     color: 'none',
     children: [
-      a,
+      s,
       '%'
     ]
   }),
@@ -47,26 +47,26 @@ function E(e) {
   let {
 answer: t,
 isExpired: n,
-myAvatarUrl: a,
+myAvatarUrl: s,
 canShowVoteCounts: r
-  } = e, l = !0 === t.isSelected, o = !0 === t.didSelfVote, d = !0 === t.isVictor;
+  } = e, l = !0 === t.isSelected, o = !0 === t.didSelfVote, u = !0 === t.isVictor;
   return (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(c.$w, {
-    attachmentClassName: s()(u.attachment, {
-      [u.attachmentWithResults]: r
+    attachmentClassName: a()(d.attachment, {
+      [d.attachmentWithResults]: r
     }),
-    emojiClassName: u.emoji,
+    emojiClassName: d.emoji,
     media: t.pollMedia,
     fallback: (0, i.jsx)('div', {
-      className: s()(u.attachment, u.mediaMissing)
+      className: a()(d.attachment, d.mediaMissing)
     })
   }),
   l && (0, i.jsx)(c.ZY, {
     size: 40,
-    isVictor: d,
+    isVictor: u,
     isExpired: n,
-    className: u.selectedIcon
+    className: d.selectedIcon
   }),
   r && (0, i.jsxs)(i.Fragment, {
     children: [
@@ -74,13 +74,13 @@ children: [
         didSelfVote: o,
         percentage: t.votesPercentage,
         label: t.votes,
-        myAvatarUrl: o ? a : void 0
+        myAvatarUrl: o ? s : void 0
       }),
-      (!n && o || d) && (0, i.jsx)(c.ZY, {
+      (!n && o || u) && (0, i.jsx)(c.ZY, {
         size: 18,
-        isVictor: d,
+        isVictor: u,
         isExpired: n,
-        className: u.pollAnswerIcon
+        className: d.pollAnswerIcon
       })
     ]
   })
@@ -92,22 +92,22 @@ function I(e) {
   let {
 isExpired: t,
 myAvatarUrl: n,
-answersInteraction: a,
+answersInteraction: s,
 canShowVoteCounts: r,
 ...l
   } = e;
   return (0, i.jsx)(c.$e, {
-className: u.answersContainer,
-answerClassName: s()(u.answer, {
-  [u.currentlyVoting]: a !== o.Y7.LIST
+className: d.answersContainer,
+answerClassName: a()(d.answer, {
+  [d.currentlyVoting]: s !== o.Y7.LIST
 }),
 myAvatarUrl: n,
-answersInteraction: a,
+answersInteraction: s,
 renderAnswerContent: e => (0, i.jsx)(E, {
   answer: e,
   isExpired: t,
   myAvatarUrl: n,
-  answersInteraction: a,
+  answersInteraction: s,
   canShowVoteCounts: r
 }),
 ...l

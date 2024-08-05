@@ -6,8 +6,8 @@ return I;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  o = n(481060),
   l = n(166459),
   u = n(53281),
   c = n(476326),
@@ -63,7 +63,7 @@ keyboardModeEnabled: a,
 draftType: d.d.SlashCommand,
 label: (0, r.jsxs)(i.Fragment, {
   children: [
-    (0, r.jsxs)(s.Text, {
+    (0, r.jsxs)(o.Text, {
       tag: 'span',
       variant: 'text-md/normal',
       children: [
@@ -71,7 +71,7 @@ label: (0, r.jsxs)(i.Fragment, {
         ': '
       ]
     }),
-    (0, r.jsx)(s.Text, {
+    (0, r.jsx)(o.Text, {
       tag: 'span',
       variant: 'text-md/normal',
       color: 'text-brand',
@@ -90,19 +90,19 @@ onKeyDown: e => {
     e.preventDefault(), null === (t = I.current) || void 0 === t || t.activateUploadDialogue();
   }
 },
-className: o()(p.emptyOption, {
+className: s()(p.emptyOption, {
   [p.emptyOptionActive]: T
 }),
 draftType: d.d.SlashCommand,
 ref: A,
 children: [
   (0, r.jsx)('span', {
-    className: o()(p.optionName, {
+    className: s()(p.optionName, {
       [p.optionNameActive]: T
     }),
     children: n.name
   }),
-  (0, r.jsx)(s.Clickable, {
+  (0, r.jsx)(o.Clickable, {
     className: p.clickContainer,
     onClick: () => {
       var e;
@@ -116,7 +116,7 @@ children: [
           className: p.optionIcon,
           alt: ''
         }),
-        (0, r.jsx)(s.Text, {
+        (0, r.jsx)(o.Text, {
           className: p.optionHelp,
           variant: 'text-sm/normal',
           children: 'Drag and drop or click to upload file'

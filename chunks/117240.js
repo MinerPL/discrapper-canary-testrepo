@@ -1,5 +1,5 @@
 let r, i, a;
-var o, s, l, u, c = n(772848),
+var s, o, l, u, c = n(772848),
   d = n(442837),
   _ = n(433517),
   E = n(846519),
@@ -38,12 +38,12 @@ return a;
 return i;
   }
 }
-l = 'BrowserHandoffStore', (s = 'displayName') in(o = R) ? Object.defineProperty(o, s, {
+l = 'BrowserHandoffStore', (o = 'displayName') in(s = R) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[s] = l, t.Z = new R(f.Z, {
+}) : s[o] = l, t.Z = new R(f.Z, {
   RPC_SERVER_READY: function(e) {
 r = ''.concat(location.protocol, '//').concat(location.host, '/handoff?rpc=').concat(e.port), N();
   },

@@ -15,8 +15,8 @@ return f;
 var r = n(442837),
   i = n(762914),
   a = n(353926),
-  o = n(699516),
-  s = n(594174),
+  s = n(699516),
+  o = n(594174),
   l = n(823379),
   u = n(51144),
   c = n(981631),
@@ -24,8 +24,8 @@ var r = n(442837),
 
 function _(e, t, n) {
   var r, a;
-  let o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-s = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+  let s = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+o = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
   switch (e.type) {
 case c.d4z.DM:
   let [_] = e.recipients.map(t.getUser).filter(l.lm);
@@ -33,7 +33,7 @@ case c.d4z.DM:
     return '???';
   let f = n.getNickname(_.id),
     h = null !== (r = null != f ? f : u.ZP.getName(_)) && void 0 !== r ? r : '???';
-  return o ? '@'.concat(h) : h;
+  return s ? '@'.concat(h) : h;
 case c.d4z.GROUP_DM:
   let p = (0, i.V1)(e.id);
   if ('' !== e.name)
@@ -58,7 +58,7 @@ case c.d4z.GUILD_ANNOUNCEMENT:
 case c.d4z.GUILD_TEXT:
 case c.d4z.GUILD_FORUM:
 case c.d4z.GUILD_MEDIA:
-  if (o)
+  if (s)
     return '#'.concat(e.name);
   return e.name;
 case c.d4z.PUBLIC_THREAD:
@@ -67,9 +67,9 @@ case c.d4z.ANNOUNCEMENT_THREAD:
 case c.d4z.GUILD_VOICE:
 case c.d4z.GUILD_STAGE_VOICE:
 case c.d4z.GUILD_CATEGORY:
-  if (s)
+  if (o)
     return '#"'.concat(E(e.name), '"');
-  if (o && e.isThread())
+  if (s && e.isThread())
     return '"'.concat(e.name, '"');
   return e.name;
 default:
@@ -88,8 +88,8 @@ function f(e) {
 function h(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   return (0, r.e7)([
-s.default,
+o.default,
 a.Z,
-o.Z
-  ], () => null == e ? null : _(e, s.default, o.Z, t));
+s.Z
+  ], () => null == e ? null : _(e, o.default, s.Z, t));
 }

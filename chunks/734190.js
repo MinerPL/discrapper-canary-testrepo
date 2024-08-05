@@ -61,12 +61,12 @@ unread: f.ZP.hasUnread(t.id),
 mentionCount: f.ZP.getMentionCount(t.id)
   })), D = (0, o.e7)([h.Z], () => h.Z.isMuted(t.id)), U = l.useCallback(e => {
 (0, p.ok)(t, !e.shiftKey, v.on.CHANNEL_LIST);
-  }, [t]), w = l.useCallback(() => {
+  }, [t]), G = l.useCallback(() => {
 u.Z.preload(t.guild_id, t.id);
   }, [
 t.guild_id,
 t.id
-  ]), G = l.useCallback(e => {
+  ]), w = l.useCallback(e => {
 let l = _.Z.getChannel(t.id);
 null != l && (0, d.jW)(e, async () => {
   let {
@@ -79,8 +79,8 @@ null != l && (0, d.jW)(e, async () => {
 });
   }, [t.id]), k = null == O ? 0 : O.length, {
 role: B,
-...V
-  } = (0, s.JA)(t.id), H = l.useRef(null), F = j > 0 ? Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
+...H
+  } = (0, s.JA)(t.id), V = l.useRef(null), F = j > 0 ? Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
 channelName: t.name,
 mentionCount: j
   }) : P ? Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_UNREADS.format({
@@ -104,8 +104,8 @@ children: [
     }
   }),
   (0, i.jsx)(c.FocusRing, {
-    focusTarget: H,
-    ringTarget: H,
+    focusTarget: V,
+    ringTarget: V,
     offset: {
       top: 2,
       bottom: 2,
@@ -118,15 +118,15 @@ children: [
         [L.modeUnreadImportant]: !D && !r && P,
         [L.withGuildIcon]: R
       }),
-      onMouseDown: w,
-      onContextMenu: G,
+      onMouseDown: G,
+      onContextMenu: w,
       children: [
         !P || D || r ? null : (0, i.jsx)('div', {
           className: a()(L.unread, L.unreadImportant)
         }),
         (0, i.jsx)(c.Clickable, {
-          ...V,
-          innerRef: H,
+          ...H,
+          innerRef: V,
           className: L.link,
           onClick: U,
           'aria-label': F,

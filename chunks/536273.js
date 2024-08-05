@@ -22,8 +22,5 @@ e.exports = {
   tier2PlanComparisonTableBackground: 'tier2PlanComparisonTableBackground_cf74b3',
   topRimPill: 'topRimPill_cf74b3',
   rimGlowTier2: 'rimGlowTier2_cf74b3',
-  trialHeader: 'trialHeader_cf74b3',
-  modifiedSubHeader: 'modifiedSubHeader_cf74b3',
-  modifiedTier2Title: 'modifiedTier2Title_cf74b3',
-  modifiedTierInfo: 'modifiedTierInfo_cf74b3'
+  trialHeader: 'trialHeader_cf74b3'
 };

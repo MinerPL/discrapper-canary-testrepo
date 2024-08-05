@@ -1,11 +1,11 @@
 var r, i = n(708083),
   a = n(263081),
-  o = n(116068),
-  s = n(958403);
+  s = n(116068),
+  o = n(958403);
 Object.defineProperty(t, 'Hue', {
   enumerable: !0,
   get: function() {
-return _(s).default;
+return _(o).default;
   }
 });
 var l = n(802951),

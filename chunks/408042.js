@@ -1,6 +1,6 @@
 n(47120), n(653041);
-var i, s = n(442837),
-  a = n(570140),
+var i, a = n(442837),
+  s = n(570140),
   r = n(314897),
   l = n(592125),
   o = n(430824),
@@ -21,7 +21,7 @@ function h(e, t) {
   let n = _[e];
   return !(null == n || n.has(t)) && (_[e] = new Set(n.add(t)), !0);
 }
-class E extends(i = s.ZP.PersistedStore) {
+class E extends(i = a.ZP.PersistedStore) {
   initialize(e) {
 this.waitFor(r.default, o.Z), _ = {}, null != e && c.default.keys(e).forEach(t => {
   let n = e[t];
@@ -39,7 +39,7 @@ return null != t && !t.has(d.Rg.DISMISSED);
 return _;
   }
 }
-u(E, 'displayName', 'GuildProgressStore'), u(E, 'persistKey', 'GuildProgressStore'), new E(a.Z, {
+u(E, 'displayName', 'GuildProgressStore'), u(E, 'persistKey', 'GuildProgressStore'), new E(s.Z, {
   CONNECTION_OPEN: function() {
 let e = [];
 c.default.keys(_).forEach(t => {
@@ -102,8 +102,8 @@ var t;
 let {
   channelId: n,
   message: i
-} = e, s = l.Z.getChannel(n);
-return (null === (t = i.author) || void 0 === t ? void 0 : t.id) === r.default.getId() && null != s && null != _[s.guild_id] && h(s.guild_id, d.Rg.MESSAGE);
+} = e, a = l.Z.getChannel(n);
+return (null === (t = i.author) || void 0 === t ? void 0 : t.id) === r.default.getId() && null != a && null != _[a.guild_id] && h(a.guild_id, d.Rg.MESSAGE);
   },
   GUILD_MEMBER_LIST_UPDATE: function(e) {
 let {

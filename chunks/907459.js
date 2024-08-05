@@ -1,26 +1,26 @@
 n.d(t, {
   Z: function() {
-return M;
+return b;
   }
 });
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  o = n(442837),
   l = n(481060),
-  u = n(570140),
-  c = n(230711),
-  d = n(351773),
-  _ = n(607070),
-  E = n(100527),
-  f = n(906732),
-  h = n(639119),
-  p = n(197115),
-  m = n(587446),
-  I = n(594174),
-  T = n(626135),
-  g = n(74538),
+  u = n(230711),
+  c = n(351773),
+  d = n(607070),
+  _ = n(100527),
+  E = n(906732),
+  f = n(639119),
+  h = n(197115),
+  p = n(587446),
+  m = n(594174),
+  I = n(626135),
+  T = n(74538),
+  g = n(94795),
   S = n(327943),
   A = n(539873),
   N = n(981631),
@@ -29,29 +29,24 @@ var r = n(735250),
   R = n(689938),
   C = n(463200);
 let y = () => {
-u.Z.dispatch({
-  type: 'APP_ICON_EDITOR_CLOSE'
-});
-  },
-  D = () => {
 var e, t, n;
-let i = (0, s.e7)([I.default], () => g.ZP.isPremium(I.default.getCurrentUser())),
-  a = (0, h.N)(),
-  o = (null == a ? void 0 : null === (e = a.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === O.Si.TIER_2;
-return (0, r.jsx)(p.Z, {
+let i = (0, o.e7)([m.default], () => T.ZP.isPremium(m.default.getCurrentUser())),
+  a = (0, f.N)(),
+  s = (null == a ? void 0 : null === (e = a.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === O.Si.TIER_2;
+return (0, r.jsx)(h.Z, {
   size: l.Button.Sizes.MEDIUM,
-  buttonText: i ? R.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE : o ? (0, g.Rt)({
+  buttonText: i ? R.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE : s ? (0, T.Rt)({
     intervalType: null == a ? void 0 : null === (t = a.subscription_trial) || void 0 === t ? void 0 : t.interval,
     intervalCount: null == a ? void 0 : null === (n = a.subscription_trial) || void 0 === n ? void 0 : n.interval_count
   }) : R.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
   subscriptionTier: O.Si.TIER_2
 });
   },
-  L = e => {
+  D = e => {
 let {
   markAsDismissed: t
 } = e, n = () => {
-  null == t || t(v.L.DISMISS), y();
+  null == t || t(v.L.DISMISS), (0, g.G8)();
 };
 return (0, r.jsxs)('div', {
   className: C.editorHeader,
@@ -72,7 +67,7 @@ return (0, r.jsxs)('div', {
           variant: 'heading-lg/extrabold',
           children: R.Z.Messages.APP_ICON_PREVIEW_TITLE
         }),
-        (0, r.jsx)(m.Z, {
+        (0, r.jsx)(p.Z, {
           className: C.premiumIcon
         })
       ]
@@ -80,19 +75,19 @@ return (0, r.jsxs)('div', {
   ]
 });
   },
-  b = e => {
+  L = e => {
 let {
   isCoachmark: t,
   markAsDismissed: n
-} = e, i = (0, s.e7)([S.Z], () => S.Z.isUpsellPreview);
+} = e, i = (0, o.e7)([S.Z], () => S.Z.isUpsellPreview);
 return (0, r.jsxs)('div', {
   className: C.editorFooter,
   children: [
-    i && (0, r.jsx)(D, {}),
+    i && (0, r.jsx)(y, {}),
     (0, r.jsx)(l.Button, {
       className: C.footerButton,
       onClick: () => {
-        null == n || n(v.L.DISMISS), y(), !t && c.Z.open();
+        null == n || n(v.L.DISMISS), (0, g.G8)(), !t && u.Z.open();
       },
       color: l.Button.Colors.PRIMARY,
       size: l.Button.Sizes.MEDIUM,
@@ -102,58 +97,59 @@ return (0, r.jsxs)('div', {
 });
   };
 
-function M(e) {
+function b(e) {
   let {
 isCoachmark: t,
 markAsDismissed: n
   } = e, {
 analyticsLocations: a
-  } = (0, f.ZP)(E.Z.APP_ICON_EDITOR), u = (0, s.e7)([I.default], () => I.default.getCurrentUser()), {
-isUpsellPreview: c,
+  } = (0, E.ZP)(_.Z.APP_ICON_EDITOR), u = (0, o.e7)([m.default], () => m.default.getCurrentUser()), {
+isUpsellPreview: f,
 isEditorOpen: h,
 shouldEditorAnimate: p
-  } = (0, s.cj)([
+  } = (0, o.cj)([
 S.Z,
-_.Z
+d.Z
   ], () => ({
 isUpsellPreview: S.Z.isUpsellPreview,
 isEditorOpen: S.Z.isEditorOpen,
-shouldEditorAnimate: t && !_.Z.useReducedMotion
+shouldEditorAnimate: t && !d.Z.useReducedMotion
   }));
   i.useEffect(() => {
-if (!!c)
-  T.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
+if (!!f)
+  I.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
     type: O.cd.APP_ICON_UPSELL,
     location_stack: a
   });
   }, [
-c,
+f,
 a
   ]);
-  let m = (0, d.Z)(null, c ? y : N.dG4);
+  let T = (0, c.Z)(null, f ? g.O7 : N.dG4);
   return (i.useEffect(() => {
-if (!!c && !h)
-  return y;
+if (!!f && !h)
+  return g.O7;
   }, [
-c,
+f,
 h
-  ]), null == u) ? null : (0, r.jsx)(f.Gt, {
+  ]), null == u) ? null : (0, r.jsx)(E.Gt, {
 value: a,
 children: (0, r.jsx)('div', {
-  ref: m,
-  className: o()(C.editor, p ? C.editorAnimate : null),
+  ref: T,
+  className: s()(C.editor, p ? C.editorAnimate : null),
   children: (0, r.jsxs)(l.HeadingLevel, {
     children: [
-      (0, r.jsx)(L, {
+      (0, r.jsx)(D, {
         markAsDismissed: n
       }),
       (0, r.jsx)(l.Scroller, {
         className: C.editorBody,
         children: (0, r.jsx)(A.Z, {
-          className: C.selectionGroup
+          className: C.selectionGroup,
+          isEditor: !0
         })
       }),
-      (0, r.jsx)(b, {
+      (0, r.jsx)(L, {
         markAsDismissed: n,
         isCoachmark: t
       })

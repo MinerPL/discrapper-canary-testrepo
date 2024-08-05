@@ -1,12 +1,12 @@
 n.r(t), n.d(t, {
   default: function() {
-return _;
+return Z;
   }
 }), n(47120);
 var a = n(735250),
   l = n(470079),
-  i = n(658722),
-  s = n.n(i),
+  s = n(658722),
+  i = n.n(s),
   o = n(392711),
   r = n.n(o),
   c = n(990547),
@@ -15,66 +15,66 @@ var a = n(735250),
   m = n(481060),
   p = n(100527),
   C = n(906732),
-  v = n(213609),
-  g = n(709054),
-  h = n(435064),
+  g = n(213609),
+  h = n(709054),
+  v = n(435064),
   x = n(39604),
-  E = n(680056),
-  f = n(10217),
+  f = n(680056),
+  E = n(10217),
   L = n(410426),
-  I = n(207346),
-  S = n(356659),
-  M = n(847024);
+  S = n(207346),
+  I = n(356659),
+  N = n(847024);
 
-function _(e) {
+function Z(e) {
   let {
 channelId: t,
-onClose: i,
+onClose: s,
 transitionState: o
-  } = e, [_, N] = l.useState(''), [Z, T] = l.useState('descending'), [j, A] = l.useState(!0), [b, P] = l.useState(null), R = l.useDeferredValue(_), k = (0, d.e7)([h.Z], () => h.Z.getClips()), y = (0, d.e7)([h.Z], () => h.Z.getPendingClips()), B = (0, d.e7)([h.Z], () => h.Z.getSettings().storageLocation), D = (0, d.Wu)([h.Z], () => h.Z.getNewClipIds()), {
+  } = e, [Z, M] = l.useState(''), [_, T] = l.useState('descending'), [j, b] = l.useState(!0), [A, P] = l.useState(null), k = l.useDeferredValue(Z), R = (0, d.e7)([v.Z], () => v.Z.getClips()), y = (0, d.e7)([v.Z], () => v.Z.getPendingClips()), B = (0, d.e7)([v.Z], () => v.Z.getSettings().storageLocation), D = (0, d.Wu)([v.Z], () => v.Z.getNewClipIds()), {
 analyticsLocations: H
-  } = (0, C.ZP)(p.Z.CLIPS_GALLERY), V = l.useMemo(() => [
+  } = (0, C.ZP)(p.Z.CLIPS_GALLERY), w = l.useMemo(() => [
 ...y,
-...k
+...R
   ], [
-k,
+R,
 y
   ]);
-  (0, v.Z)({
+  (0, g.Z)({
 type: c.ImpressionTypes.MODAL,
 name: c.ImpressionNames.CLIP_GALLERY_VIEWED,
 properties: {
-  number_of_clips_loaded: V.length
+  number_of_clips_loaded: w.length
 }
   }, {
 disableTrack: j
   }, [
-V.length,
+w.length,
 j
   ]), l.useEffect(() => ((0, x.eL)(), () => {
 (0, x.eL)(), (0, x.zq)();
   }), []);
-  let w = l.useMemo(() => r()(V).filter(e => {
-if ('' === R.trim())
+  let V = l.useMemo(() => r()(w).filter(e => {
+if ('' === k.trim())
   return !0;
-let t = R.toLowerCase();
-return null != e.name && '' !== e.name && s()(t, e.name.toLowerCase()) || s()(t, e.applicationName.toLowerCase());
-  }).sort((e, t) => 'ascending' === Z ? g.default.compare(e.id, t.id) : 'descending' === Z ? g.default.compare(t.id, e.id) : 0).chunk(3).value(), [
-V,
-R,
-Z
+let t = k.toLowerCase();
+return null != e.name && '' !== e.name && i()(t, e.name.toLowerCase()) || i()(t, e.applicationName.toLowerCase());
+  }).sort((e, t) => 'ascending' === _ ? h.default.compare(e.id, t.id) : 'descending' === _ ? h.default.compare(t.id, e.id) : 0).chunk(3).value(), [
+w,
+k,
+_
   ]);
   l.useEffect(() => {
 (async function e() {
-  A(!0);
+  b(!0);
   try {
     await x.jv(B);
   } finally {
-    A(!1);
+    b(!1);
   }
 }());
   }, [B]);
-  let Y = l.useCallback(e => {
+  let G = l.useCallback(e => {
   (0, m.openModalLazy)(async () => {
     let {
       default: l
@@ -85,16 +85,16 @@ Z
       clip: e
     });
   }, {
-    modalKey: S.Ut
+    modalKey: I.Ut
   });
 }, [t]),
 {
-  onShareClick: G
-} = (0, E.Z)({
+  onShareClick: O
+} = (0, f.Z)({
   channelId: t,
   setExporting: P
 }),
-O = l.useCallback((e, t) => {
+z = l.useCallback((e, t) => {
   (0, m.openModalLazy)(async () => {
     let {
       default: l
@@ -107,61 +107,61 @@ O = l.useCallback((e, t) => {
     });
   });
 }, []),
-z = l.useCallback(e => {
+Y = l.useCallback(e => {
   let {
     row: t
-  } = e, n = w[t];
+  } = e, n = V[t];
   return (0, a.jsx)('div', {
-    className: M.clipsRow,
+    className: N.clipsRow,
     children: n.map(e => {
       let t = 0 === e.length;
-      return (0, a.jsx)(f.Z, {
-        actionsDisabled: null != b || t,
-        exporting: b === e.id,
+      return (0, a.jsx)(E.Z, {
+        actionsDisabled: null != A || t,
+        exporting: A === e.id,
         isNew: D.includes(e.id),
-        onDelete: O,
-        onEdit: Y,
-        onShare: e => G({
+        onDelete: z,
+        onEdit: G,
+        onShare: e => O({
           clip: e,
-          onShareComplete: () => u.Mr(S.Qr)
+          onShareComplete: () => u.Mr(I.Qr)
         }),
         clip: e
       }, e.id);
     })
   }, 'clips-gallery-'.concat(t));
 }, [
-  w,
+  V,
   D,
-  b,
-  G,
+  A,
   O,
-  Y
+  z,
+  G
 ]),
-F = j || 0 !== w.length ? j ? (0, a.jsx)('div', {
-  className: M.spinnerContainer,
+F = j || 0 !== V.length ? j ? (0, a.jsx)('div', {
+  className: N.spinnerContainer,
   children: (0, a.jsx)(m.Spinner, {})
 }) : (0, a.jsx)(m.List, {
-  className: M.clipGrid,
-  sections: [w.length],
+  className: N.clipGrid,
+  sections: [V.length],
   sectionHeight: 0,
   rowHeight: 328.25,
-  renderRow: z
+  renderRow: Y
 }) : (0, a.jsx)(L.Z, {
-  isEmptyBecauseQuery: V.length > 0,
-  closePopout: i
+  isEmptyBecauseQuery: w.length > 0,
+  closePopout: s
 });
   return (0, a.jsx)(m.ModalRoot, {
 size: m.ModalSize.DYNAMIC,
 transitionState: o,
-className: M.root,
+className: N.root,
 children: (0, a.jsxs)(C.Gt, {
   value: H,
   children: [
-    (0, a.jsx)(I.Z, {
-      onClose: i,
-      filterQuery: _,
-      setFilterQuery: N,
-      sortOrder: Z,
+    (0, a.jsx)(S.Z, {
+      onClose: s,
+      filterQuery: Z,
+      setFilterQuery: M,
+      sortOrder: _,
       setSortOrder: T
     }),
     F

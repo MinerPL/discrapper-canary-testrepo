@@ -12,8 +12,8 @@ return c;
 var r = n(913527),
   i = n.n(r),
   a = n(689938);
-let o = 3600,
-  s = 86400,
+let s = 3600,
+  o = 86400,
   l = 2592000,
   u = 31104000,
   c = () => ({
@@ -43,12 +43,12 @@ let {
 } = e, r = n(), i = '';
 return i = t < 60 ? r.minutes.format({
   minutes: 1
-}) : t < o ? r.minutes.format({
+}) : t < s ? r.minutes.format({
   minutes: Math.floor(t / 60)
-}) : t < s ? r.hours.format({
-  hours: Math.floor(t / o)
+}) : t < o ? r.hours.format({
+  hours: Math.floor(t / s)
 }) : t < l ? r.days.format({
-  days: Math.floor(t / s)
+  days: Math.floor(t / o)
 }) : t < u ? r.months.format({
   months: Math.floor(t / l)
 }) : r.years.format({

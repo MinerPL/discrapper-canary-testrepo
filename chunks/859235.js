@@ -4,9 +4,9 @@ return i;
   }
 });
 var r, i, a = n(735250),
-  o = n(470079),
-  s = n(120356),
-  l = n.n(s),
+  s = n(470079),
+  o = n(120356),
+  l = n.n(o),
   u = n(91192),
   c = n(481060),
   d = n(166459),
@@ -21,13 +21,13 @@ function I(e) {
   e.stopPropagation();
 }
 (r = i || (i = {}))[r.SMALL = 0] = 'SMALL', r[r.MEDIUM = 1] = 'MEDIUM', r[r.CLIP = 2] = 'CLIP';
-t.Z = o.forwardRef(function(e, t) {
+t.Z = s.forwardRef(function(e, t) {
   let {
 id: n,
 channelId: r,
 className: i,
-children: o,
-actions: s,
+children: s,
+actions: o,
 handleEditModal: T,
 keyboardModeEnabled: g,
 onKeyDown: S,
@@ -39,7 +39,7 @@ onFocus: v,
   } = (0, u.JA)(n), {
 handleFocus: R,
 handleBlur: C
-  } = (0, f.b)(v), y = 0 === N, D = null != s;
+  } = (0, f.b)(v), y = 0 === N, D = null != o;
   return (0, a.jsx)(c.FocusRing, {
 children: (0, a.jsx)('li', {
   ...O,
@@ -74,7 +74,7 @@ children: (0, a.jsx)('li', {
   children: (0, a.jsxs)('div', {
     className: m.uploadContainer,
     children: [
-      o,
+      s,
       D ? (0, a.jsx)('div', {
         className: m.actionBarContainer,
         children: (0, a.jsx)('div', {
@@ -87,7 +87,7 @@ children: (0, a.jsx)('li', {
             className: l()({
               [m.miniPopover]: y
             }),
-            children: s
+            children: o
           })
         })
       }) : null

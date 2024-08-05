@@ -1,8 +1,8 @@
 var r = n(470079),
   i = n(476400),
   a = n.n(i),
-  o = n(844303),
-  s = n(464854),
+  s = n(844303),
+  o = n(464854),
   l = Object.assign || function(e) {
 for (var t = 1; t < arguments.length; t++) {
   var n = arguments[t];
@@ -16,7 +16,7 @@ var t = e.colors,
   n = e.onClick,
   i = void 0 === n ? function() {} : n,
   a = e.onSwatchHover,
-  u = (0, o.default)({
+  u = (0, s.default)({
     default: {
       colors: {
         margin: '0 -10px',
@@ -61,7 +61,7 @@ return r.createElement('div', {
   return r.createElement('div', {
     key: n,
     style: u.swatchWrap
-  }, r.createElement(s.m4, l({}, t, {
+  }, r.createElement(o.m4, l({}, t, {
     style: u.swatch,
     onClick: c,
     onHover: a,

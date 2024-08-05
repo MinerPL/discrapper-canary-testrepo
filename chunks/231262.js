@@ -1,6 +1,6 @@
 a.d(t, {
   h: function() {
-return h;
+return m;
   }
 });
 var n = a(735250),
@@ -12,8 +12,8 @@ var n = a(735250),
   c = a(388755),
   d = a(330711),
   u = a(697906);
-let p = null;
-class h extends i.PureComponent {
+let h = null;
+class m extends i.PureComponent {
   render() {
 let {
   token: e,
@@ -21,20 +21,20 @@ let {
   onChangeLocale: a,
   mainContentId: r,
   mobileClassName: o,
-  avoidRouter: h,
-  authRedirectTo: m,
+  avoidRouter: m,
+  authRedirectTo: p,
   openNavAriaLabel: N,
   hideNavAriaLabel: k,
   skipToContentLabel: _
 } = this.props;
-return null == p ? null : (0, n.jsxs)(i.Fragment, {
+return null == h ? null : (0, n.jsxs)(i.Fragment, {
   children: [
     (0, n.jsx)(s.a, {
       className: l()(u.desktopHeader, t),
-      TrackClick: p,
+      TrackClick: h,
       token: e,
-      avoidRouter: h,
-      authRedirectTo: m,
+      avoidRouter: m,
+      authRedirectTo: p,
       NavigationMessages: d.Z.Messages.Navigation,
       onChangeLocale: a,
       mainContentId: r,
@@ -43,8 +43,8 @@ return null == p ? null : (0, n.jsxs)(i.Fragment, {
     (0, n.jsx)(c.D, {
       className: l()(u.mobileHeader, o),
       token: e,
-      avoidRouter: h,
-      TrackClick: p,
+      avoidRouter: m,
+      TrackClick: h,
       NavigationMessages: d.Z.Messages.Navigation,
       onChangeLocale: a,
       openNavAriaLabel: N,
@@ -54,7 +54,7 @@ return null == p ? null : (0, n.jsxs)(i.Fragment, {
 });
   }
   constructor(e) {
-super(e), null != e.locale && d.Z.setLocale(e.locale), p = t => (0, n.jsx)(o.Z, {
+super(e), null != e.locale && d.Z.setLocale(e.locale), h = t => (0, n.jsx)(o.Z, {
   track: e.track,
   trackOutboundLink: e.trackOutboundLink,
   ...t

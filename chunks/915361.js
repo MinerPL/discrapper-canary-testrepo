@@ -2,7 +2,6 @@ e.exports = {
   results: 'results_bad108',
   result: 'result_bad108',
   favButton: 'favButton_bad108',
-  focused: 'focused_bad108',
   gif: 'gif_bad108',
   endContainer: 'endContainer_bad108',
   endText: 'endText_bad108',

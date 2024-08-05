@@ -1,13 +1,13 @@
-var i, a, l, s, r = n(392711),
+var i, a, s, l, r = n(392711),
   o = n.n(r),
   c = n(442837),
-  d = n(570140),
-  u = n(430824);
+  u = n(570140),
+  d = n(430824);
 let h = null,
   p = {};
-class m extends(s = c.ZP.Store) {
+class m extends(l = c.ZP.Store) {
   initialize() {
-this.waitFor(u.Z);
+this.waitFor(d.Z);
   }
   getOptimalRegion() {
 var e;
@@ -39,12 +39,12 @@ return null != t ? t.id : null;
 return null != e ? p[e] : h;
   }
 }
-l = 'RegionStore', (a = 'displayName') in(i = m) ? Object.defineProperty(i, a, {
-  value: l,
+s = 'RegionStore', (a = 'displayName') in(i = m) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = l, t.Z = new m(d.Z, {
+}) : i[a] = s, t.Z = new m(u.Z, {
   LOAD_REGIONS: function(e) {
 let t = o().sortBy(e.regions, e => e.name);
 null != e.guildId ? p[e.guildId] = t : h = t;

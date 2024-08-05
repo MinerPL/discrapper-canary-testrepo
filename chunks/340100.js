@@ -1,63 +1,59 @@
 var s = n(735250);
 n(470079);
-var a = n(120356),
-  r = n.n(a),
-  i = n(442837),
-  o = n(692547),
-  u = n(481060),
-  _ = n(706454),
-  l = n(930153),
-  T = n(113434),
-  E = n(524824),
-  I = n(330039),
-  c = n(260370);
+var o = n(120356),
+  i = n.n(o),
+  a = n(692547),
+  r = n(481060),
+  l = n(113434),
+  u = n(524824),
+  c = n(330039),
+  d = n(260370);
 t.Z = function(e) {
   let {
 className: t,
-color: n = o.Z.colors.WHITE,
-quest: a,
-isInventory: d
-  } = e, R = (0, i.e7)([_.default], () => _.default.locale), {
-percentComplete: m
-  } = (0, T.Rf)(a), S = (0, T.Jf)(a), g = null != S ? S.completedRatio : m, N = null != S ? ''.concat(null == S ? void 0 : S.progress, '/').concat(null == S ? void 0 : S.target) : (0, l.T3)(R, g, {
-roundingMode: 'floor'
-  }), C = 100 * g, A = (0, E.r)(a);
-  return A && !d ? (0, s.jsx)(I.Z, {}) : (0, s.jsxs)('div', {
-className: r()(c.wrapper, t),
+color: n = a.Z.colors.WHITE,
+quest: o,
+isInventory: E
+  } = e, b = (0, u.r)(o), {
+percentComplete: m,
+completedRatioDisplay: C
+  } = (0, l.I)(o);
+  return b && !E ? (0, s.jsx)(c.Z, {}) : (0, s.jsxs)('div', {
+className: i()(d.wrapper, t),
 style: {
   color: n.css
 },
 children: [
   (0, s.jsxs)('div', {
-    className: c.percentCompleteWrapper,
+    className: d.percentCompleteWrapper,
     children: [
-      (0, s.jsx)(u.Text, {
+      (0, s.jsx)(r.Text, {
         variant: 'text-xs/semibold',
-        className: c.percentCompleteLabel,
+        className: d.percentCompleteLabel,
         color: 'none',
-        children: N
+        children: C
       }),
       (0, s.jsx)('div', {
-        className: c.percentCompleteLabelOffset,
+        className: d.percentCompleteLabelOffset,
         style: {
-          width: ''.concat(100 - C, '%')
+          width: ''.concat(100 - m, '%')
         }
       })
     ]
   }),
   (0, s.jsx)('div', {
-    className: c.progressBar,
+    className: d.progressBar,
     role: 'progressbar',
-    'aria-valuenow': C,
+    'aria-valuenow': m,
     children: (0, s.jsx)('div', {
-      className: c.progressBarFill,
+      className: d.progressBarFill,
       style: {
-        width: ''.concat(C, '%')
+        width: ''.concat(m, '%')
       }
     })
   }),
-  A && (0, s.jsx)(I.Z, {
-    isInventory: d
+  b && (0, s.jsx)(c.Z, {
+    isInventory: E
   })
 ]
   });

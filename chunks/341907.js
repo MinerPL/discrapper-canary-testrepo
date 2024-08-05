@@ -1,43 +1,50 @@
-n.d(t, {
-  C: function() {
-return s;
+n.r(t), n.d(t, {
+  navigateToQuestHome: function() {
+return E;
   },
-  az: function() {
-return l;
+  openDisclosureModal: function() {
+return _;
   },
-  hp: function() {
-return o;
+  openQuestInGameRewardModal: function() {
+return d;
+  },
+  openQuestsRewardCodeModal: function() {
+return c;
   }
 });
 var r = n(735250);
 n(470079);
 var i = n(481060),
-  a = n(617136);
+  a = n(230711),
+  s = n(703656),
+  o = n(617136),
+  l = n(282421),
+  u = n(981631);
 
-function o(e) {
+function c(e) {
   let {
 questId: t,
 location: a,
-questContentPosition: o
+questContentPosition: s
   } = e;
   (0, i.openModalLazy)(async () => {
 let {
   default: e
 } = await Promise.all([
+  n.e('26138'),
   n.e('54535'),
-  n.e('89043'),
   n.e('87353')
 ]).then(n.bind(n, 985866));
 return n => (0, r.jsx)(e, {
   ...n,
   questId: t,
-  questContentPosition: o,
+  questContentPosition: s,
   location: a
 });
   });
 }
 
-function s(e, t) {
+function d(e, t) {
   (0, i.openModalLazy)(async () => {
 let {
   default: i
@@ -50,8 +57,8 @@ return n => (0, r.jsx)(i, {
   });
 }
 
-function l(e, t) {
-  (0, a._3)({
+function _(e, t) {
+  (0, o._3)({
 questId: e.id,
 questContent: t.content,
 questContentPosition: t.position,
@@ -66,4 +73,10 @@ return n => (0, r.jsx)(i, {
   quest: e
 });
   });
+}
+
+function E(e, t) {
+  l.B.getCurrentConfig({
+location: e
+  }).enabled ? (0, s.uL)(u.Z5c.QUEST_HOME + (null != t ? '#'.concat(t) : '')) : a.Z.open(u.oAB.INVENTORY);
 }

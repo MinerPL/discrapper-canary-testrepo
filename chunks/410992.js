@@ -1,20 +1,20 @@
 n.d(t, {
   Z: function() {
-return l;
+return s;
   }
 });
 var i = n(735250);
 n(470079);
 var a = n(325767);
 
-function l(e) {
+function s(e) {
   let {
 width: t = 45,
 height: n = 46,
-...l
+...s
   } = e;
   return (0, i.jsxs)('svg', {
-...(0, a.Z)(l),
+...(0, a.Z)(s),
 width: t,
 height: n,
 viewBox: '0 0 49 50',

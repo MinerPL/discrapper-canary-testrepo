@@ -1,12 +1,12 @@
-i.d(n, {
+t.d(n, {
   H: function() {
-return l;
+return i;
   }
 });
-let l = e => {
+let i = e => {
   let {
 guildId: n,
-guildEventId: i
+guildEventId: t
   } = e;
-  return 'https://discord.com/events/'.concat(n, '/').concat(i);
+  return 'https://discord.com/events/'.concat(n, '/').concat(t);
 };

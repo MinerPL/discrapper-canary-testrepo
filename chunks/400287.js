@@ -28,8 +28,8 @@ N = E.vF.useSetting(),
 C = E.H1.useSetting(),
 m = E.ev.useSetting(),
 A = E.x4.useSetting(),
-h = E.RS.useSetting(),
-g = E.NA.useSetting(),
+g = E.RS.useSetting(),
+h = E.NA.useSetting(),
 O = E.nc.useSetting(),
 {
   analyticsLocations: p
@@ -49,7 +49,7 @@ children: [
         setting: u.s6.CHAT_INLINE_MEDIA_LINKS,
         children: (0, n.jsx)(r.FormSwitch, {
           className: i()(S.marginTop8, S.marginBottom20),
-          value: h,
+          value: g,
           onChange: E.RS.updateSetting,
           children: I.Z.Messages.INLINE_EMBED_MEDIA
         })
@@ -89,7 +89,7 @@ children: [
         setting: u.s6.CHAT_EMBEDS_LINK_PREVIEWS,
         children: (0, n.jsx)(r.FormSwitch, {
           className: i()(S.marginTop8, S.marginBottom40),
-          value: g,
+          value: h,
           onChange: E.NA.updateSetting,
           children: I.Z.Messages.RENDER_EMBEDS
         })

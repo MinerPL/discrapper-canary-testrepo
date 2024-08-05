@@ -1,8 +1,8 @@
 var r = n(470079),
   i = n(844303),
   a = n(786547),
-  o = n(994167),
-  s = function() {
+  s = n(994167),
+  o = function() {
 function e(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
@@ -25,7 +25,7 @@ function t(e) {
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
   }(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
   return n.handleChange = function(e) {
-    'function' == typeof n.props.onChange && n.throttle(n.props.onChange, o.T(e, n.props.hsl, n.container), e);
+    'function' == typeof n.props.onChange && n.throttle(n.props.onChange, s.T(e, n.props.hsl, n.container), e);
   }, n.handleMouseDown = function(e) {
     n.handleChange(e);
     var t = n.getContainerRenderWindow();
@@ -47,7 +47,7 @@ return ! function(e, t) {
       configurable: !0
     }
   }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t);
-}(t, e), s(t, [{
+}(t, e), o(t, [{
     key: 'componentWillUnmount',
     value: function() {
       this.throttle.cancel(), this.unbindEventListeners();
@@ -75,8 +75,8 @@ return ! function(e, t) {
         t = this.props.style || {},
         n = t.color,
         a = t.white,
-        o = t.black,
-        s = t.pointer,
+        s = t.black,
+        o = t.pointer,
         l = t.circle,
         u = (0, i.default)({
           default: {
@@ -112,8 +112,8 @@ return ! function(e, t) {
           custom: {
             color: n,
             white: a,
-            black: o,
-            pointer: s,
+            black: s,
+            pointer: o,
             circle: l
           }
         }, {

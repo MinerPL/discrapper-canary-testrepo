@@ -129,12 +129,12 @@ n.r(e.exports = {
   activityVoiceChannel: 'activityVoiceChannel_c1d9fd',
   platformIcon: 'platformIcon_c1d9fd',
   icon: 'icon_c1d9fd',
-  activityStreamPreview: 'activityStreamPreview_c1d9fd',
+  wrap: 'wrap_c1d9fd',
+  activityDetails: 'activityDetails_c1d9fd',
+  actions: 'actions_c1d9fd',
   activityUserPopout: 'activityUserPopout_c1d9fd',
   activityProfile: 'activityProfile_c1d9fd',
   activityProfileV2: 'activityProfileV2_c1d9fd',
   activityUserPopoutV2: 'activityUserPopoutV2_c1d9fd',
-  wrap: 'wrap_c1d9fd',
-  activityDetails: 'activityDetails_c1d9fd',
-  actions: 'actions_c1d9fd'
+  activityStreamPreview: 'activityStreamPreview_c1d9fd'
 });

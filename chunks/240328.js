@@ -6,8 +6,8 @@ return C;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(278074),
+  s = n.n(a),
+  o = n(278074),
   l = n(399606),
   u = n(481060),
   c = n(393238),
@@ -129,7 +129,7 @@ j = i.useCallback(() => {
 }, [f]);
   if (!L && !b)
 return null;
-  let W = (0, s.EQ)([
+  let W = (0, o.EQ)([
 L,
 b
   ]).with([
@@ -160,7 +160,7 @@ openShop: y
   }))).otherwise(() => null);
   return (0, r.jsx)('div', {
 style: x,
-className: o()(v.containerWrapper, v.animation, {
+className: s()(v.containerWrapper, v.animation, {
   [v.inSidebar]: O
 }),
 ref: U,

@@ -1,11 +1,11 @@
 var r = n(470079),
   i = n(844303),
   a = n(329022),
-  o = n(464854);
+  s = n(464854);
 t.Z = function(e) {
   var t = e.colors,
 n = e.onClick,
-s = e.onSwatchHover,
+o = e.onSwatchHover,
 l = (0, i.default)({
   default: {
     swatches: {
@@ -27,12 +27,12 @@ l = (0, i.default)({
   return r.createElement('div', {
 style: l.swatches
   }, (0, a.Z)(t, function(e) {
-return r.createElement(o.m4, {
+return r.createElement(s.m4, {
   key: e,
   color: e,
   style: l.swatch,
   onClick: n,
-  onHover: s,
+  onHover: o,
   focusStyle: {
     boxShadow: '0 0 4px ' + e
   }

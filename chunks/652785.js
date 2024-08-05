@@ -10,8 +10,8 @@ return h;
   }
 });
 var i = n(704215),
-  s = n(823385),
-  a = n(327689),
+  a = n(823385),
+  s = n(327689),
   r = n(421176),
   l = n(989695),
   o = n(456065),
@@ -30,7 +30,7 @@ let _ = 'lastHiddenChannelNotice',
 },
 {
   type: u.vID.GUILD_BANNER,
-  store: a.Z,
+  store: s.Z,
   dismissibleContentType: i.z.CHANNEL_NOTICE_GUILD_BANNER
 },
 {
@@ -45,7 +45,7 @@ let _ = 'lastHiddenChannelNotice',
 },
 {
   type: u.vID.QUICKSWITCHER,
-  store: s.Z,
+  store: a.Z,
   dismissibleContentType: i.z.CHANNEL_NOTICE_QUICKSWITCHER
 },
 {

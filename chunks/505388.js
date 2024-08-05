@@ -1,12 +1,12 @@
 var r = n(363406),
   i = Object.prototype.hasOwnProperty,
   a = Array.isArray,
-  o = function() {
+  s = function() {
 for (var e = [], t = 0; t < 256; ++t)
   e.push('%' + ((t < 16 ? '0' : '') + t.toString(16)).toUpperCase());
 return e;
   }(),
-  s = function(e) {
+  o = function(e) {
 for (; e.length > 1;) {
   var t = e.pop(),
     n = t.obj[t.prop];
@@ -39,8 +39,8 @@ for (var t = [{
     },
     prop: 'o'
   }], n = [], r = 0; r < t.length; ++r) {
-  for (var i = t[r], a = i.obj[i.prop], o = Object.keys(a), l = 0; l < o.length; ++l) {
-    var u = o[l],
+  for (var i = t[r], a = i.obj[i.prop], s = Object.keys(a), l = 0; l < s.length; ++l) {
+    var u = s[l],
       c = a[u];
     'object' == typeof c && null !== c && -1 === n.indexOf(c) && (t.push({
       obj: a,
@@ -48,7 +48,7 @@ for (var t = [{
     }), n.push(c));
   }
 }
-return s(t), e;
+return o(t), e;
   },
   decode: function(e, t, n) {
 var r = e.replace(/\+/g, ' ');
@@ -63,30 +63,30 @@ try {
   encode: function(e, t, n, i, a) {
 if (0 === e.length)
   return e;
-var s = e;
-if ('symbol' == typeof e ? s = Symbol.prototype.toString.call(e) : 'string' != typeof e && (s = String(e)), 'iso-8859-1' === n)
-  return escape(s).replace(/%u[0-9a-f]{4}/gi, function(e) {
+var o = e;
+if ('symbol' == typeof e ? o = Symbol.prototype.toString.call(e) : 'string' != typeof e && (o = String(e)), 'iso-8859-1' === n)
+  return escape(o).replace(/%u[0-9a-f]{4}/gi, function(e) {
     return '%26%23' + parseInt(e.slice(2), 16) + '%3B';
   });
-for (var l = '', u = 0; u < s.length; ++u) {
-  var c = s.charCodeAt(u);
+for (var l = '', u = 0; u < o.length; ++u) {
+  var c = o.charCodeAt(u);
   if (45 === c || 46 === c || 95 === c || 126 === c || c >= 48 && c <= 57 || c >= 65 && c <= 90 || c >= 97 && c <= 122 || a === r.RFC1738 && (40 === c || 41 === c)) {
-    l += s.charAt(u);
+    l += o.charAt(u);
     continue;
   }
   if (c < 128) {
-    l += o[c];
+    l += s[c];
     continue;
   }
   if (c < 2048) {
-    l += o[192 | c >> 6] + o[128 | 63 & c];
+    l += s[192 | c >> 6] + s[128 | 63 & c];
     continue;
   }
   if (c < 55296 || c >= 57344) {
-    l += o[224 | c >> 12] + o[128 | c >> 6 & 63] + o[128 | 63 & c];
+    l += s[224 | c >> 12] + s[128 | c >> 6 & 63] + s[128 | 63 & c];
     continue;
   }
-  u += 1, l += o[240 | (c = 65536 + ((1023 & c) << 10 | 1023 & s.charCodeAt(u))) >> 18] + o[128 | c >> 12 & 63] + o[128 | c >> 6 & 63] + o[128 | 63 & c];
+  u += 1, l += s[240 | (c = 65536 + ((1023 & c) << 10 | 1023 & o.charCodeAt(u))) >> 18] + s[128 | c >> 12 & 63] + s[128 | c >> 6 & 63] + s[128 | 63 & c];
 }
 return l;
   },
@@ -122,16 +122,16 @@ if ('object' != typeof n) {
 }
 if (!t || 'object' != typeof t)
   return [t].concat(n);
-var o = t;
-return (a(t) && !a(n) && (o = l(t, r)), a(t) && a(n)) ? (n.forEach(function(n, a) {
+var s = t;
+return (a(t) && !a(n) && (s = l(t, r)), a(t) && a(n)) ? (n.forEach(function(n, a) {
   if (i.call(t, a)) {
-    var o = t[a];
-    o && 'object' == typeof o && n && 'object' == typeof n ? t[a] = e(o, n, r) : t.push(n);
+    var s = t[a];
+    s && 'object' == typeof s && n && 'object' == typeof n ? t[a] = e(s, n, r) : t.push(n);
   } else
     t[a] = n;
 }), t) : Object.keys(n).reduce(function(t, a) {
-  var o = n[a];
-  return i.call(t, a) ? t[a] = e(t[a], o, r) : t[a] = o, t;
-}, o);
+  var s = n[a];
+  return i.call(t, a) ? t[a] = e(t[a], s, r) : t[a] = s, t;
+}, s);
   }
 };

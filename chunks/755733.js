@@ -3,4 +3,4 @@ s.d(t, {
   x: function() {
 return n;
   }
-}), (a = n || (n = {})).INIT = 'INIT', a.EDIT = 'EDIT', a.REGISTER = 'REGISTER', a.NAME = 'NAME', a.SUCCESS = 'SUCCESS';
+}), (a = n || (n = {})).MODAL_UPSELL = 'MODAL_UPSELL', a.INIT = 'INIT', a.EDIT = 'EDIT', a.REGISTER = 'REGISTER', a.NAME = 'NAME', a.SUCCESS = 'SUCCESS';

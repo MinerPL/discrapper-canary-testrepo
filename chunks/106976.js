@@ -15,14 +15,14 @@ return E;
 var r = n(570140),
   i = n(821849),
   a = n(307643),
-  o = n(981631);
+  s = n(981631);
 
-function s(e) {
+function o(e) {
   return {
 id: e.id,
-type: o.epS.SUBSCRIPTION,
+type: s.epS.SUBSCRIPTION,
 application_id: e.application_id,
-product_line: o.POd.APPLICATION,
+product_line: s.POd.APPLICATION,
 name: e.name,
 summary: '',
 description: e.description,
@@ -41,7 +41,7 @@ function l(e) {
   var t;
   return {
 id: e.id,
-sku: s(e),
+sku: o(e),
 summary: e.description,
 description: e.description,
 benefits: null !== (t = e.store_listing_benefits) && void 0 !== t ? t : [],
@@ -53,7 +53,7 @@ published: e.published
 function u(e) {
   for (let t of (r.Z.dispatch({
   type: 'SKUS_FETCH_SUCCESS',
-  skus: e.map(s)
+  skus: e.map(o)
 }), r.Z.dispatch({
   type: 'STORE_LISTINGS_FETCH_SUCCESS',
   storeListings: e.map(l)
@@ -122,9 +122,9 @@ r.Z.dispatch({
   type: 'APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS',
   groupListing: n
 });
-let o = null !== (t = n.subscription_listings) && void 0 !== t ? t : [];
-for (let t of o)
+let s = null !== (t = n.subscription_listings) && void 0 !== t ? t : [];
+for (let t of s)
   t.subscription_plans[0].id === e && await i.GZ(t.id, void 0, void 0, !0);
-u(o);
+u(s);
   } catch (e) {}
 }

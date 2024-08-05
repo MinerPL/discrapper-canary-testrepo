@@ -14,8 +14,8 @@ return E;
 }), n(47120);
 var r, i = n(544891),
   a = n(70956),
-  o = n(591759),
-  s = n(796798),
+  s = n(591759),
+  o = n(796798),
   l = n(981631);
 let u = new Set([
 window.GLOBAL_ENV.CDN_HOST,
@@ -32,7 +32,7 @@ function _(e) {
 }
 
 function E(e) {
-  let t = o.Z.toURLSafe(e);
+  let t = s.Z.toURLSafe(e);
   if (null == t)
 return e;
   for (let e of [
@@ -54,14 +54,14 @@ return isNaN(n) ? void 0 : n * a.Z.Millis.SECOND;
 }
 
 function h(e) {
-  let t = o.Z.toURLSafe(e.url);
+  let t = s.Z.toURLSafe(e.url);
   return null != t && f(t);
 }
 
 function p(e) {
   if (null == e)
 return !1;
-  let t = o.Z.toURLSafe(e.url);
+  let t = s.Z.toURLSafe(e.url);
   return !!(null != t && _(t)) && f(t);
 }
 
@@ -83,11 +83,11 @@ body: {
   return t.ok ? t.body.refreshed_urls[0].refreshed : void 0;
 }
 async function g(e) {
-  if (!s.l.getCurrentConfig({
+  if (!o.l.getCurrentConfig({
   location: 'link_clicked'
 }).enabled)
 return e;
-  let t = o.Z.toURLSafe(e);
+  let t = s.Z.toURLSafe(e);
   if (null == t || !f(t))
 return e;
   let n = await T(e);

@@ -10,8 +10,8 @@ return p;
   }
 });
 var r, i, a = n(442837),
-  o = n(592125),
-  s = n(430824),
+  s = n(592125),
+  o = n(430824),
   l = n(496675),
   u = n(594174),
   c = n(979651),
@@ -25,8 +25,8 @@ function h(e) {
   let {
 userId: i,
 activity: a,
-application: o,
-channelId: s,
+application: s,
+channelId: o,
 currentUser: l,
 isActivitiesEnabledForCurrentPlatform: u,
 ChannelStore: c,
@@ -36,16 +36,16 @@ GuildStore: p
   } = e;
   if (null == i)
 return 8;
-  if ((null == l ? void 0 : l.nsfwAllowed) === !1 && (null == o ? void 0 : null === (t = o.embeddedActivityConfig) || void 0 === t ? void 0 : t.requires_age_gate) === !0)
+  if ((null == l ? void 0 : l.nsfwAllowed) === !1 && (null == s ? void 0 : null === (t = s.embeddedActivityConfig) || void 0 === t ? void 0 : t.requires_age_gate) === !0)
 return 7;
   if (!u)
 return 5;
-  if (!(0, E.Z)(null == o ? void 0 : null === (n = o.embeddedActivityConfig) || void 0 === n ? void 0 : n.supported_platforms))
+  if (!(0, E.Z)(null == s ? void 0 : null === (n = s.embeddedActivityConfig) || void 0 === n ? void 0 : n.supported_platforms))
 return 6;
-  let m = null != s ? s : null === (r = _.getVoiceStateForSession(i, null == a ? void 0 : a.session_id)) || void 0 === r ? void 0 : r.channelId;
+  let m = null != o ? o : null === (r = _.getVoiceStateForSession(i, null == a ? void 0 : a.session_id)) || void 0 === r ? void 0 : r.channelId;
   if (null == m)
 return 4;
-  let I = c.getChannel(s);
+  let I = c.getChannel(o);
   if (null == I)
 return 4;
   let T = I.getGuildId();
@@ -78,10 +78,10 @@ channelId: r,
 application: i
   } = e, d = (0, _.z)(null != r ? r : void 0), E = (0, a.e7)([u.default], () => u.default.getCurrentUser());
   return (0, a.e7)([
-o.Z,
+s.Z,
 c.Z,
 l.Z,
-s.Z
+o.Z
   ], () => h({
 userId: t,
 activity: n,
@@ -89,10 +89,10 @@ application: i,
 channelId: r,
 currentUser: E,
 isActivitiesEnabledForCurrentPlatform: d,
-ChannelStore: o.Z,
+ChannelStore: s.Z,
 VoiceStateStore: c.Z,
 PermissionStore: l.Z,
-GuildStore: s.Z
+GuildStore: o.Z
   }), [
 n,
 i,

@@ -45,8 +45,8 @@ return G;
 var r = n(512722),
   i = n.n(r),
   a = n(990547),
-  o = n(544891),
-  s = n(570140),
+  s = n(544891),
+  o = n(570140),
   l = n(258609),
   u = n(569545),
   c = n(525925),
@@ -69,7 +69,7 @@ var r = n(512722),
   C = n(70722);
 
 function y(e, t, n) {
-  s.Z.dispatch({
+  o.Z.dispatch({
 type: 'STREAM_START',
 streamType: null != e ? C.lo.GUILD : C.lo.CALL,
 guildId: e,
@@ -81,7 +81,7 @@ appContext: __OVERLAY__ ? R.IlC.OVERLAY : R.IlC.APP,
 
 function D(e, t) {
   let n = (0, u.V9)(e);
-  s.Z.dispatch({
+  o.Z.dispatch({
 type: 'STREAM_SET_PAUSED',
 streamKey: n,
 paused: t
@@ -109,7 +109,7 @@ a = (null == t ? void 0 : t.forceMultiple) || _.Z.getAllActiveStreamsForChannel(
   } = e;
   return t !== E.default.getId();
 }).length >= 2;
-  s.Z.dispatch({
+  o.Z.dispatch({
 type: 'STREAM_WATCH',
 streamKey: i,
 allowMultiple: a
@@ -117,7 +117,7 @@ allowMultiple: a
 }
 
 function M(e, t) {
-  s.Z.dispatch({
+  o.Z.dispatch({
 type: 'STREAM_UPDATE_SELF_HIDDEN',
 channelId: e,
 selfStreamHidden: t
@@ -140,7 +140,7 @@ a = p.Z.getVoiceChannelId();
 
 function U(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  w(e, t), s.Z.dispatch({
+  w(e, t), o.Z.dispatch({
 type: 'STREAM_STOP',
 streamKey: e,
 appContext: __OVERLAY__ ? R.IlC.OVERLAY : R.IlC.APP
@@ -149,7 +149,7 @@ appContext: __OVERLAY__ ? R.IlC.OVERLAY : R.IlC.APP
 
 function w(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  s.Z.dispatch({
+  o.Z.dispatch({
 type: 'STREAM_CLOSE',
 streamKey: e,
 canShowFeedback: t
@@ -162,26 +162,26 @@ guildId: e,
 channelId: t,
 ownerId: n
   });
-  s.Z.dispatch({
+  o.Z.dispatch({
 type: 'STREAM_PREVIEW_FETCH_START',
 streamKey: r
   });
   try {
-let e = await o.tn.get({
+let e = await s.tn.get({
   url: R.ANM.STREAM_PREVIEW(r),
   query: {
     version: Date.now()
   },
   oldFormErrors: !0
 });
-s.Z.dispatch({
+o.Z.dispatch({
   type: 'STREAM_PREVIEW_FETCH_SUCCESS',
   streamKey: r,
   previewURL: e.body.url
 });
   } catch (t) {
 let e;
-429 === t.status && (e = t.body.retry_after * T.Z.Millis.SECOND), s.Z.dispatch({
+429 === t.status && (e = t.body.retry_after * T.Z.Millis.SECOND), o.Z.dispatch({
   type: 'STREAM_PREVIEW_FETCH_FAIL',
   streamKey: r,
   retryAfter: e
@@ -201,14 +201,14 @@ await S.Z.post({
 }
 
 function k(e) {
-  (0, g.Ye)(e.preset, e.resolution, e.frameRate), s.Z.dispatch({
+  (0, g.Ye)(e.preset, e.resolution, e.frameRate), o.Z.dispatch({
 type: 'STREAM_UPDATE_SETTINGS',
 ...e
   });
 }
 
 function B(e, t) {
-  o.tn.patch({
+  s.tn.patch({
 url: R.ANM.STREAM(e),
 body: {
   region: t
@@ -230,7 +230,7 @@ pid: n,
 sourceId: r,
 sourceName: i
   } = e;
-  (null != n || null != r || null != i) && (s.Z.dispatch({
+  (null != n || null != r || null != i) && (o.Z.dispatch({
 type: 'START_BROADCAST_STREAM',
 options: {
   pid: n,

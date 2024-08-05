@@ -1,6 +1,6 @@
 n(653041), n(47120);
-var r, i, a, o, s = n(348327),
-  l = n.n(s),
+var r, i, a, s, o = n(348327),
+  l = n.n(o),
   u = n(442837),
   c = n(570140),
   d = n(742738);
@@ -23,9 +23,9 @@ this.syncWith(_, f);
 return E;
   }
 }
-o = 'FirstPartyRichPresenceStore', (a = 'displayName') in(i = h) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'FirstPartyRichPresenceStore', (a = 'displayName') in(i = h) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new h(c.Z);
+}) : i[a] = s, t.Z = new h(c.Z);

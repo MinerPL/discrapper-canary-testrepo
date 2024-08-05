@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(149765),
   a = n(260034),
-  o = n(993365),
-  s = n(481060),
+  s = n(993365),
+  o = n(481060),
   l = n(981631),
   u = n(689938),
   c = n(444494);
@@ -32,22 +32,21 @@ children: [
     className: c.sectionLabel,
     children: u.Z.Messages.OAUTH2_ADD_TO_GUILD
   }),
-  null != t && '' !== t ? (0, r.jsx)(o.x, {
+  null != t && '' !== t ? (0, r.jsx)(s.x, {
     variant: 'text-xs/normal',
     color: 'text-danger',
     children: t
   }) : null,
-  (0, r.jsx)(s.Select, {
-    className: c.select,
+  (0, r.jsx)(o.SearchableSelect, {
+    wrapperClassName: c.select,
     maxVisibleItems: 5,
     placeholder: u.Z.Messages.OAUTH2_ADD_TO_GUILD_PLACEHOLDER,
     options: f,
-    select: d,
+    onChange: d,
     isDisabled: E,
-    isSelected: e => e === n,
-    serialize: e => e
+    value: n
   }),
-  (0, r.jsx)(o.x, {
+  (0, r.jsx)(s.x, {
     variant: 'text-xs/medium',
     color: 'header-secondary',
     className: c.label,

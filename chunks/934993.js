@@ -1,13 +1,13 @@
 n(47120);
 var i = n(570140),
-  s = n(996106),
-  a = n(452426),
+  a = n(996106),
+  s = n(452426),
   r = n(186901),
   l = n(981631);
 t.Z = {
   [l.Etm.SET_CONFIG]: {
 scope: r.wE,
-validation: e => (0, a.Z)(e).required().keys({
+validation: e => (0, s.Z)(e).required().keys({
   use_interactive_pip: e.boolean()
 }),
 handler(e) {
@@ -18,11 +18,11 @@ handler(e) {
     }
   } = e;
   if (t.transport !== r.He.POST_MESSAGE)
-    throw new s.Z({
+    throw new a.Z({
       errorCode: l.lTL.INVALID_COMMAND
     }, 'command not available from "'.concat(t.transport, ' transport'));
   if (null == t.application.id)
-    throw new s.Z({
+    throw new a.Z({
       errorCode: l.lTL.INVALID_COMMAND
     }, 'invalid application');
   return i.Z.dispatch({

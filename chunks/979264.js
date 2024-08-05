@@ -9,8 +9,8 @@ return I;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  o = n(442837),
   l = n(481060),
   u = n(594174),
   c = n(645896),
@@ -32,7 +32,7 @@ return null == t ? null : (0, r.jsx)('img', {
   alt: h.Z.Messages.CLAN_BADGE_ALT.format({
     tag: n
   }),
-  className: o()(p.badge, i),
+  className: s()(p.badge, i),
   width: a,
   height: a
 });
@@ -43,7 +43,7 @@ let {
   clanTag: n,
   clanBadge: i,
   className: a,
-  textClassName: s,
+  textClassName: o,
   badgeClassName: u,
   onClick: c,
   onMouseEnter: E,
@@ -57,12 +57,12 @@ return (0, _.Z)('base_clan_tag_chiplet') ? (0, r.jsx)(l.Clickable, {
   tabIndex: null == c ? -1 : void 0,
   onClick: c,
   onMouseEnter: E,
-  className: o()(p.chipletContainerInner, g && p.chipletContainerInline, null != c && p.clickable, a),
+  className: s()(p.chipletContainerInner, g && p.chipletContainerInline, null != c && p.clickable, a),
   children: (0, r.jsxs)(l.Text, {
     variant: h,
     color: I,
     tag: 'span',
-    className: o()(p.text, s),
+    className: s()(p.text, o),
     children: [
       null != i && 'string' == typeof i ? (0, r.jsx)(m, {
         src: (0, d.ky)(t, i, T),
@@ -82,10 +82,10 @@ return (0, _.Z)('base_clan_tag_chiplet') ? (0, r.jsx)(l.Clickable, {
 var t, n;
 let {
   clan: a,
-  userId: o,
+  userId: s,
   children: d,
   profileViewedAnalytics: _
-} = e, f = (0, s.e7)([u.default], () => u.default.getUser(o), [o]), h = null !== (t = null == f ? void 0 : f.clan) && void 0 !== t ? t : a, [m, I] = (0, c.L_)(null !== (n = null == h ? void 0 : h.identityGuildId) && void 0 !== n ? n : null), T = i.useCallback(() => {
+} = e, f = (0, o.e7)([u.default], () => u.default.getUser(s), [s]), h = null !== (t = null == f ? void 0 : f.clan) && void 0 !== t ? t : a, [m, I] = (0, c.L_)(null !== (n = null == h ? void 0 : h.identityGuildId) && void 0 !== n ? n : null), T = i.useCallback(() => {
   I();
 }, [I]);
 return (0, r.jsx)(l.Popout, {
@@ -132,7 +132,7 @@ badgeSize: E,
 disableGuildProfile: f = !1,
 inline: h = !0,
 profileViewedAnalytics: m
-  } = e, g = (0, s.e7)([u.default], () => u.default.getUser(i), [i]), S = null !== (t = null == g ? void 0 : g.clan) && void 0 !== t ? t : n, {
+  } = e, g = (0, o.e7)([u.default], () => u.default.getUser(i), [i]), S = null !== (t = null == g ? void 0 : g.clan) && void 0 !== t ? t : n, {
 tag: A,
 badge: N,
 guildId: v
@@ -141,7 +141,7 @@ guildId: v
 guildId: v,
 clanTag: A,
 clanBadge: N,
-className: o()(p.noTooltip, l),
+className: s()(p.noTooltip, l),
 textVariant: c,
 textColor: _,
 badgeSize: E,

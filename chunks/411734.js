@@ -1,16 +1,16 @@
 n.d(t, {
   R: function() {
-return s;
+return o;
   },
   n: function() {
-return o;
+return s;
   }
 }), n(47120);
 var r = n(735250),
   i = n(470079);
 let a = 0;
 
-function o(e, t) {
+function s(e, t) {
   let [n] = i.useState(() => a++), r = ''.concat('data-focus-blocked', '-').concat(n);
   i.useLayoutEffect(() => {
 if (t) {
@@ -40,14 +40,14 @@ if (t) {
   }, [t]);
 }
 
-function s(e) {
+function o(e) {
   let {
 children: t,
 className: n,
 enabled: a = !0
-  } = e, s = i.useRef(null);
-  return o(s, a), (0, r.jsx)('div', {
-ref: s,
+  } = e, o = i.useRef(null);
+  return s(o, a), (0, r.jsx)('div', {
+ref: o,
 className: n,
 children: t
   });

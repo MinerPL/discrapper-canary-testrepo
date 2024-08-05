@@ -1,18 +1,18 @@
 n.d(t, {
   Z: function() {
-return s;
+return a;
   }
 }), n(47120);
 var i = n(470079),
-  a = n(393238);
+  s = n(393238);
 
-function s() {
+function a() {
   let {
 ref: e,
 width: t
-  } = (0, a.Z)(), [n, s] = i.useState();
+  } = (0, s.Z)(), [n, a] = i.useState();
   return i.useEffect(() => {
-null == n && null != t && s(t);
+null == n && null != t && a(t);
   }, [
 n,
 t

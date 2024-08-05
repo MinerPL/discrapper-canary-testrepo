@@ -12,15 +12,15 @@ return l;
 var r = n(442837),
   i = n(902704),
   a = n(158776),
-  o = n(981631);
+  s = n(981631);
 
-function s(e) {
-  return e.type === o.IIU.PLAYING;
+function o(e) {
+  return e.type === s.IIU.PLAYING;
 }
 
 function l(e, t) {
   var n;
-  return null != e ? (n = e.ownerId, t.findActivity(n, s)) : null;
+  return null != e ? (n = e.ownerId, t.findActivity(n, o)) : null;
 }
 
 function u(e, t) {

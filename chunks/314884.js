@@ -1,5 +1,5 @@
 n(47120);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(78839);
 let c = !1,
@@ -21,7 +21,7 @@ function E() {
 e[t.id] = t, t.subscription = u.ZP.getSubscriptionById(t.subscriptionId);
   d = e;
 }
-class f extends(r = s.ZP.Store) {
+class f extends(r = o.ZP.Store) {
   initialize() {
 this.syncWith([u.ZP], E);
   }
@@ -35,12 +35,12 @@ return d;
 return d[e];
   }
 }
-o = 'GuildBoostSlotStore', (a = 'displayName') in(i = f) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'GuildBoostSlotStore', (a = 'displayName') in(i = f) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new f(l.Z, {
+}) : i[a] = s, t.Z = new f(l.Z, {
   GUILD_BOOST_SLOTS_FETCH_SUCCESS: function(e) {
 let {
   guildBoostSlots: t

@@ -5,13 +5,13 @@ return _;
 }), n(47120);
 var i = n(735250),
   a = n(470079),
-  l = n(692547),
-  s = n(780384),
+  s = n(692547),
+  l = n(780384),
   r = n(481060),
   o = n(367907),
   c = n(210887),
-  d = n(626135),
-  u = n(981631),
+  u = n(626135),
+  d = n(981631),
   h = n(689938),
   p = n(768749),
   m = n(153521);
@@ -22,17 +22,17 @@ onClose: t,
 onConfirm: _,
 onCancel: f,
 channel: E,
-analyticsType: C,
-popoutText: g,
+analyticsType: g,
+popoutText: C,
 animation: I
   } = e;
   a.useEffect(() => {
-d.default.track(u.rMx.OPEN_POPOUT, {
-  type: C,
+u.default.track(d.rMx.OPEN_POPOUT, {
+  type: g,
   ...(0, o.v_)(E)
 });
   }, [
-C,
+g,
 E
   ]);
   let x = a.useCallback(() => {
@@ -47,7 +47,7 @@ T = a.useCallback(() => {
   f,
   t
 ]),
-v = a.useRef(null);
+N = a.useRef(null);
   return a.useEffect(() => {
 let e;
 let t = c.Z.theme,
@@ -55,16 +55,16 @@ let t = c.Z.theme,
 return null != I && (async () => {
   let [{
     default: a
-  }, l] = await Promise.all([
+  }, s] = await Promise.all([
     Promise.resolve().then(n.t.bind(n, 500923, 23)),
-    (0, s.wj)(t) ? I.dark() : I.light()
+    (0, l.wj)(t) ? I.dark() : I.light()
   ]);
-  !i && null != v.current && (e = a.loadAnimation({
-    container: v.current,
+  !i && null != N.current && (e = a.loadAnimation({
+    container: N.current,
     renderer: 'svg',
     loop: !0,
     autoplay: !0,
-    animationData: l
+    animationData: s
   }));
 })(), () => {
   i = !0, null != e && (e.destroy(), e = void 0);
@@ -80,7 +80,7 @@ children: (0, i.jsxs)('form', {
       children: [
         null != I && (0, i.jsx)('div', {
           className: p.animation,
-          ref: v
+          ref: N
         }),
         (0, i.jsxs)('div', {
           className: p.content,
@@ -93,7 +93,7 @@ children: (0, i.jsxs)('form', {
               id: 'content-warning-popout-label',
               className: m.markup,
               variant: 'text-sm/normal',
-              children: g.body
+              children: C.body
             }),
             (0, i.jsxs)('div', {
               className: p.buttonWrapper,
@@ -137,17 +137,17 @@ children: (0, i.jsxs)('form', {
         })
       ]
     }),
-    null != g.footer && '' !== g.footer ? (0, i.jsxs)('div', {
+    null != C.footer && '' !== C.footer ? (0, i.jsxs)('div', {
       className: p.footer,
       children: [
         (0, i.jsx)(r.CircleInformationIcon, {
           size: 'xs',
-          color: l.Z.unsafe_rawColors.PRIMARY_400.css,
+          color: s.Z.unsafe_rawColors.PRIMARY_400.css,
           className: p.icon
         }),
         (0, i.jsx)(r.Text, {
           variant: 'text-sm/normal',
-          children: g.footer
+          children: C.footer
         })
       ]
     }) : null

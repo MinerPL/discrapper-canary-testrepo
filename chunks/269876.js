@@ -1,6 +1,6 @@
 s.d(t, {
   Z: function() {
-return h;
+return g;
   }
 }), s(47120);
 var n = s(735250),
@@ -22,10 +22,10 @@ var n = s(735250),
   m = s(549856);
 let A = (0, T.hQ)();
 
-function h() {
+function g() {
   let [e, t] = a.useState(-100), [s, i] = a.useState(!1), {
-threshold: h,
-autoThreshold: g
+threshold: g,
+autoThreshold: h
   } = (0, o.cj)([u.Z], () => u.Z.getModeOptions()), {
 inputMode: O,
 automaticVADSupported: p,
@@ -54,12 +54,12 @@ return e.start(1000, () => {
   u.Z.getMediaEngine().removeListener(l.aB.VoiceActivity, x), e.stop();
 };
   }, []);
-  let D = (0, n.jsx)('section', {
+  let f = (0, n.jsx)('section', {
 className: r()(N.inputSensitivityToggle, N.manual),
 children: (0, n.jsx)(_.Slider, {
-  initialValue: h + 100,
+  initialValue: g + 100,
   onValueRender: e => ''.concat((-((100 - e) * 1)).toFixed(0), 'dB'),
-  onValueChange: e => M(-((100 - e) * 1), g),
+  onValueChange: e => M(-((100 - e) * 1), h),
   barStyles: {
     background: d.Z.unsafe_rawColors.GREEN_360.css
   },
@@ -83,7 +83,7 @@ children: (0, n.jsx)(_.Slider, {
   })
 })
   });
-  return g && (D = (0, n.jsxs)('section', {
+  return h && (f = (0, n.jsxs)('section', {
 className: N.inputSensitivityToggle,
 children: [
   (0, n.jsx)('div', {
@@ -125,13 +125,13 @@ children: [
             }),
             (0, n.jsx)(_.Switch, {
               id: e,
-              checked: g,
-              onChange: e => M(h, e)
+              checked: h,
+              onChange: e => M(g, e)
             })
           ]
         })
       }),
-      D
+      f
     ]
   }),
   !R && (0, n.jsx)(_.FormText, {

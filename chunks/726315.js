@@ -3,44 +3,44 @@ t.readUInt32BE = function(e, t) {
 }, t.writeUInt32BE = function(e, t, n) {
   e[0 + n] = t >>> 24, e[1 + n] = t >>> 16 & 255, e[2 + n] = t >>> 8 & 255, e[3 + n] = 255 & t;
 }, t.ip = function(e, t, n, r) {
-  for (var i = 0, a = 0, o = 6; o >= 0; o -= 2) {
-for (var s = 0; s <= 24; s += 8)
-  i <<= 1, i |= t >>> s + o & 1;
-for (var s = 0; s <= 24; s += 8)
-  i <<= 1, i |= e >>> s + o & 1;
+  for (var i = 0, a = 0, s = 6; s >= 0; s -= 2) {
+for (var o = 0; o <= 24; o += 8)
+  i <<= 1, i |= t >>> o + s & 1;
+for (var o = 0; o <= 24; o += 8)
+  i <<= 1, i |= e >>> o + s & 1;
   }
-  for (var o = 6; o >= 0; o -= 2) {
-for (var s = 1; s <= 25; s += 8)
-  a <<= 1, a |= t >>> s + o & 1;
-for (var s = 1; s <= 25; s += 8)
-  a <<= 1, a |= e >>> s + o & 1;
+  for (var s = 6; s >= 0; s -= 2) {
+for (var o = 1; o <= 25; o += 8)
+  a <<= 1, a |= t >>> o + s & 1;
+for (var o = 1; o <= 25; o += 8)
+  a <<= 1, a |= e >>> o + s & 1;
   }
   n[r + 0] = i >>> 0, n[r + 1] = a >>> 0;
 }, t.rip = function(e, t, n, r) {
-  for (var i = 0, a = 0, o = 0; o < 4; o++)
-for (var s = 24; s >= 0; s -= 8)
-  i <<= 1, i |= t >>> s + o & 1, i <<= 1, i |= e >>> s + o & 1;
-  for (var o = 4; o < 8; o++)
-for (var s = 24; s >= 0; s -= 8)
-  a <<= 1, a |= t >>> s + o & 1, a <<= 1, a |= e >>> s + o & 1;
+  for (var i = 0, a = 0, s = 0; s < 4; s++)
+for (var o = 24; o >= 0; o -= 8)
+  i <<= 1, i |= t >>> o + s & 1, i <<= 1, i |= e >>> o + s & 1;
+  for (var s = 4; s < 8; s++)
+for (var o = 24; o >= 0; o -= 8)
+  a <<= 1, a |= t >>> o + s & 1, a <<= 1, a |= e >>> o + s & 1;
   n[r + 0] = i >>> 0, n[r + 1] = a >>> 0;
 }, t.pc1 = function(e, t, n, r) {
-  for (var i = 0, a = 0, o = 7; o >= 5; o--) {
-for (var s = 0; s <= 24; s += 8)
-  i <<= 1, i |= t >> s + o & 1;
-for (var s = 0; s <= 24; s += 8)
-  i <<= 1, i |= e >> s + o & 1;
+  for (var i = 0, a = 0, s = 7; s >= 5; s--) {
+for (var o = 0; o <= 24; o += 8)
+  i <<= 1, i |= t >> o + s & 1;
+for (var o = 0; o <= 24; o += 8)
+  i <<= 1, i |= e >> o + s & 1;
   }
-  for (var s = 0; s <= 24; s += 8)
-i <<= 1, i |= t >> s + o & 1;
-  for (var o = 1; o <= 3; o++) {
-for (var s = 0; s <= 24; s += 8)
-  a <<= 1, a |= t >> s + o & 1;
-for (var s = 0; s <= 24; s += 8)
-  a <<= 1, a |= e >> s + o & 1;
+  for (var o = 0; o <= 24; o += 8)
+i <<= 1, i |= t >> o + s & 1;
+  for (var s = 1; s <= 3; s++) {
+for (var o = 0; o <= 24; o += 8)
+  a <<= 1, a |= t >> o + s & 1;
+for (var o = 0; o <= 24; o += 8)
+  a <<= 1, a |= e >> o + s & 1;
   }
-  for (var s = 0; s <= 24; s += 8)
-a <<= 1, a |= e >> s + o & 1;
+  for (var o = 0; o <= 24; o += 8)
+a <<= 1, a |= e >> o + s & 1;
   n[r + 0] = i >>> 0, n[r + 1] = a >>> 0;
 }, t.r28shl = function(e, t) {
   return e << t & 268435455 | e >>> 28 - t;
@@ -96,11 +96,11 @@ var n = [
   24
 ];
 t.pc2 = function(e, t, r, i) {
-  for (var a = 0, o = 0, s = n.length >>> 1, l = 0; l < s; l++)
+  for (var a = 0, s = 0, o = n.length >>> 1, l = 0; l < o; l++)
 a <<= 1, a |= e >>> n[l] & 1;
-  for (var l = s; l < n.length; l++)
-o <<= 1, o |= t >>> n[l] & 1;
-  r[i + 0] = a >>> 0, r[i + 1] = o >>> 0;
+  for (var l = o; l < n.length; l++)
+s <<= 1, s |= t >>> n[l] & 1;
+  r[i + 0] = a >>> 0, r[i + 1] = s >>> 0;
 }, t.expand = function(e, t, n) {
   var r = 0,
 i = 0;
@@ -628,13 +628,13 @@ var r = [
 t.substitute = function(e, t) {
   for (var n = 0, i = 0; i < 4; i++) {
 var a = e >>> 18 - 6 * i & 63,
-  o = r[64 * i + a];
-n <<= 4, n |= o;
+  s = r[64 * i + a];
+n <<= 4, n |= s;
   }
   for (var i = 0; i < 4; i++) {
 var a = t >>> 18 - 6 * i & 63,
-  o = r[256 + 64 * i + a];
-n <<= 4, n |= o;
+  s = r[256 + 64 * i + a];
+n <<= 4, n |= s;
   }
   return n >>> 0;
 };

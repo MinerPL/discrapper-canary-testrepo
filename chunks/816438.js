@@ -6,8 +6,8 @@ return E;
 var r = n(4313),
   i = n(493623),
   a = n(620720),
-  o = n(343713),
-  s = n(540321),
+  s = n(343713),
+  o = n(540321),
   l = n(609027),
   u = n(375317),
   c = n(882159),
@@ -56,7 +56,7 @@ var f = {
         reference: (0, c.kK)(e) ? (0, a.Z)(e) : e.contextElement ? (0, a.Z)(e.contextElement) : [],
         popper: (0, a.Z)(t)
       };
-      var i = (0, s.Z)((0, u.Z)([].concat(E, f.options.modifiers)));
+      var i = (0, o.Z)((0, u.Z)([].concat(E, f.options.modifiers)));
       return f.orderedModifiers = i.filter(function(e) {
           return e.enabled;
         }),
@@ -85,7 +85,7 @@ var f = {
         n = e.popper;
       if (!!_(t, n)) {
         f.rects = {
-          reference: (0, r.Z)(t, (0, o.Z)(n), 'fixed' === f.options.strategy),
+          reference: (0, r.Z)(t, (0, s.Z)(n), 'fixed' === f.options.strategy),
           popper: (0, i.Z)(n)
         }, f.reset = !1, f.placement = f.options.placement, f.orderedModifiers.forEach(function(e) {
           return f.modifiersData[e.name] = Object.assign({}, e.data);
@@ -95,11 +95,11 @@ var f = {
             f.reset = !1, a = -1;
             continue;
           }
-          var s = f.orderedModifiers[a],
-            l = s.fn,
-            u = s.options,
+          var o = f.orderedModifiers[a],
+            l = o.fn,
+            u = o.options,
             c = void 0 === u ? {} : u,
-            d = s.name;
+            d = o.name;
           'function' == typeof l && (f = l({
             state: f,
             options: c,

@@ -2,8 +2,8 @@ n(47120);
 var r = n(442837),
   i = n(570140),
   a = n(147913),
-  o = n(883429),
-  s = n(314897),
+  s = n(883429),
+  o = n(314897),
   l = n(592125);
 class u extends a.Z {
   handleChannelDelete(e) {
@@ -27,10 +27,10 @@ let {
   channelId: i,
   message: a
 } = e, u = l.Z.getChannel(i);
-if ((null === (t = a.author) || void 0 === t ? void 0 : t.id) !== s.default.getId() || !(null == u ? void 0 : u.isActiveThread()))
+if ((null === (t = a.author) || void 0 === t ? void 0 : t.id) !== o.default.getId() || !(null == u ? void 0 : u.isActiveThread()))
   return;
 let c = new Date(null !== (r = null === (n = u.threadMetadata) || void 0 === n ? void 0 : n.archiveTimestamp) && void 0 !== r ? r : 0).getTime();
-Date.now() - c < 5000 && o.Z.resort(u.parent_id);
+Date.now() - c < 5000 && s.Z.resort(u.parent_id);
   }
   constructor(...e) {
 var t, n, r;

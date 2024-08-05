@@ -1,5 +1,5 @@
 n(47120);
-var i, s, a, r, l = n(442837),
+var i, a, s, r, l = n(442837),
   o = n(433517),
   c = n(570140),
   d = n(650774),
@@ -27,12 +27,12 @@ let n = null !== (t = d.Z.getMemberCount(e.id)) && void 0 !== t ? t : 0,
 return !e.hasFeature(h.oNc.CLAN) && !E[h.vID.MAX_MEMBER_COUNT].has(e.id) && i && e.maxMembers > 0 && e.maxMembers - n <= 10000;
   }
 }
-r = 'MaxMemberCountChannelNoticeStore', (a = 'displayName') in(s = I) ? Object.defineProperty(s, a, {
+r = 'MaxMemberCountChannelNoticeStore', (s = 'displayName') in(a = I) ? Object.defineProperty(a, s, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = r, t.Z = new I(c.Z, {
+}) : a[s] = r, t.Z = new I(c.Z, {
   MAX_MEMBER_COUNT_NOTICE_DISMISS: function(e) {
 let t = e.guildId;
 if (!E[h.vID.MAX_MEMBER_COUNT].has(t))

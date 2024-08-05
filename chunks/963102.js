@@ -1,77 +1,77 @@
 n.d(t, {
   I: function() {
-return _;
+return b;
   }
 });
-var r = n(735250),
-  s = n(470079),
+var s = n(735250),
+  r = n(470079),
   a = n(120356),
   o = n.n(a),
   i = n(425493),
-  l = n(410030),
-  c = n(984370),
+  c = n(410030),
+  l = n(984370),
   d = n(471731),
   u = n(486620),
-  p = n(792125),
-  g = n(335131),
-  f = n(994896),
+  f = n(792125),
+  p = n(335131),
+  g = n(994896),
   C = n(689938),
-  m = n(807926);
+  _ = n(807926);
 
-function h(e) {
+function m(e) {
   let {
 isLayer: t,
 onClose: n,
 isFullScreen: a = !1
   } = e;
-  return (0, r.jsxs)(c.Z, {
-className: o()(m.headerBar, {
-  [m.fullscreenHeaderBar]: a
+  return (0, s.jsxs)(l.Z, {
+className: o()(_.headerBar, {
+  [_.fullscreenHeaderBar]: a
 }),
-innerClassname: m.shopLogoContainer,
-toolbar: a ? null : (0, r.jsx)(s.Fragment, {}),
+innerClassname: _.shopLogoContainer,
+toolbar: a ? null : (0, s.jsx)(r.Fragment, {}),
 children: [
-  (0, r.jsx)(u.Z, {
-    className: m.shopLogo
+  (0, s.jsx)(u.Z, {
+    className: _.shopLogo
   }),
-  a && (0, r.jsx)(i.Z, {
-    className: m.closeIcon,
-    closeAction: t ? g.DR : n,
+  a && (0, s.jsx)(i.Z, {
+    className: _.closeIcon,
+    closeAction: t ? p.DR : n,
     keybind: 'ESC'
   })
 ]
   });
 }
 
-function _(e) {
+function b(e) {
   let {
 isFullScreen: t,
 isLayer: n,
 onClose: a
   } = e, {
 newShopLogoEnabled: u
-  } = (0, f.O)({
+  } = (0, g.O)({
 location: 'CollectiblesShop'
-  }), _ = (0, l.ZP)();
-  return u ? (0, r.jsx)(h, {
+  }), b = (0, c.ZP)();
+  return u ? (0, s.jsx)(m, {
 isLayer: n,
 onClose: a,
 isFullScreen: t
-  }) : (0, r.jsxs)(c.Z, {
-className: o()((0, p.Q)(_), m.headerBar, {
-  [m.fullscreenHeaderBar]: t
+  }) : (0, s.jsxs)(l.Z, {
+className: o()((0, f.Q)(b), _.headerBar, {
+  [_.fullscreenHeaderBar]: t
 }),
-toolbar: t ? null : (0, r.jsx)(s.Fragment, {}),
+toolbar: t ? null : (0, s.jsx)(r.Fragment, {}),
 children: [
-  (0, r.jsx)(d.Z, {
-    className: m.discordLogo
+  (0, s.jsx)(d.Z, {
+    className: _.discordLogo
   }),
-  (0, r.jsx)(c.Z.Title, {
+  (0, s.jsx)(l.Z.Title, {
     children: C.Z.Messages.COLLECTIBLES_SHOP
   }),
-  t && (0, r.jsx)(i.Z, {
-    className: m.closeIcon,
-    closeAction: n ? g.DR : a,
+  t && (0, s.jsx)(i.Z, {
+    className: _.closeIcon,
+    closeAction: n ? p.DR : a,
     keybind: 'ESC'
   })
 ]

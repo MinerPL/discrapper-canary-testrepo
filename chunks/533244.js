@@ -36,8 +36,8 @@ return h;
 var r = n(913527),
   i = n.n(r),
   a = n(666657),
-  o = n(676770),
-  s = n(689938);
+  s = n(676770),
+  o = n(689938);
 let l = {
   month: 'numeric',
   day: 'numeric',
@@ -46,15 +46,15 @@ let l = {
 };
 
 function u(e) {
-  return null != e.dmSpamDetectedAt && i()(e.dmSpamDetectedAt).add(o.lp, 'hours') > i()() || null != e.raidDetectedAt && i()(e.raidDetectedAt).add(o.lp, 'hours') > i()();
+  return null != e.dmSpamDetectedAt && i()(e.dmSpamDetectedAt).add(s.lp, 'hours') > i()() || null != e.raidDetectedAt && i()(e.raidDetectedAt).add(s.lp, 'hours') > i()();
 }
 
 function c(e) {
-  return null != e.raidDetectedAt && i()(e.raidDetectedAt).add(o.lp, 'hours') > i()();
+  return null != e.raidDetectedAt && i()(e.raidDetectedAt).add(s.lp, 'hours') > i()();
 }
 
 function d(e) {
-  return null != e.dmSpamDetectedAt && i()(e.dmSpamDetectedAt).add(o.lp, 'hours') > i()();
+  return null != e.dmSpamDetectedAt && i()(e.dmSpamDetectedAt).add(s.lp, 'hours') > i()();
 }
 
 function _(e) {
@@ -92,19 +92,19 @@ return '';
 a = null != e.invitesDisabledUntil;
   switch (!0) {
 case i && a:
-  return s.Z.Messages.GUILD_ANTIRAID_PAUSE_DMS_AND_JOINS_NAGBAR_MESSAGE_NEW.format({
+  return o.Z.Messages.GUILD_ANTIRAID_PAUSE_DMS_AND_JOINS_NAGBAR_MESSAGE_NEW.format({
     guildName: t,
-    time: new Date(r).toLocaleString(s.Z.getLocale(), l)
+    time: new Date(r).toLocaleString(o.Z.getLocale(), l)
   });
 case i:
-  return s.Z.Messages.GUILD_ANTIRAID_PAUSE_DMS_NAGBAR_MESSAGE_NEW.format({
+  return o.Z.Messages.GUILD_ANTIRAID_PAUSE_DMS_NAGBAR_MESSAGE_NEW.format({
     guildName: t,
-    time: new Date(r).toLocaleString(s.Z.getLocale(), l)
+    time: new Date(r).toLocaleString(o.Z.getLocale(), l)
   });
 case a:
-  return s.Z.Messages.GUILD_ANTIRAID_PAUSE_JOINS_NAGBAR_MESSAGE_NEW.format({
+  return o.Z.Messages.GUILD_ANTIRAID_PAUSE_JOINS_NAGBAR_MESSAGE_NEW.format({
     guildName: t,
-    time: new Date(r).toLocaleString(s.Z.getLocale(), l)
+    time: new Date(r).toLocaleString(o.Z.getLocale(), l)
   });
 default:
   return '';

@@ -17,19 +17,19 @@ stream_key: a
   };
 }
 
-function o(e, t, n) {
+function s(e, t, n) {
   let {
 session_id: r,
 application_id: i,
 channel_id: a,
-stream_key: o
+stream_key: s
   } = e;
   return {
 sessionId: r,
 userId: t,
 applicationId: i,
 channelId: a,
-streamKey: o,
+streamKey: s,
 source: n
   };
 }
@@ -41,6 +41,6 @@ return r;
 return a;
   },
   tI: function() {
-return o;
+return s;
   }
 }), (i = r || (r = {}))[i.GLOBAL = 0] = 'GLOBAL', i[i.GUILD = 1] = 'GUILD';

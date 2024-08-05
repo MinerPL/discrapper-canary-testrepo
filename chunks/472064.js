@@ -10,12 +10,12 @@ var a = s(735250),
   d = s(51025),
   u = s(672971),
   p = s(812206),
-  I = s(703656),
-  A = s(173747),
-  L = s(850840),
-  _ = s(391690),
-  T = s(285952),
-  N = s(366695),
+  I = s(925329),
+  A = s(703656),
+  L = s(173747),
+  _ = s(850840),
+  T = s(391690),
+  N = s(285952),
   m = s(424218),
   f = s(94692),
   P = s(981631),
@@ -93,16 +93,16 @@ return (0, a.jsxs)(i.ModalRoot, {
       }
     }) : null,
     (0, a.jsxs)(i.ModalHeader, {
-      justify: T.Z.Justify.BETWEEN,
+      justify: N.Z.Justify.BETWEEN,
       children: [
-        (0, a.jsx)(T.Z.Child, {
+        (0, a.jsx)(N.Z.Child, {
           grow: 1,
           children: (0, a.jsx)(i.Heading, {
             variant: 'heading-lg/semibold',
             children: E.Z.Messages.APPLICATION_INSTALLATION_MODAL_TITLE
           })
         }),
-        (0, a.jsx)(T.Z.Child, {
+        (0, a.jsx)(N.Z.Child, {
           grow: 0,
           children: (0, a.jsx)(i.ModalCloseButton, {
             onClick: this.close
@@ -112,12 +112,12 @@ return (0, a.jsxs)(i.ModalRoot, {
     }),
     (0, a.jsxs)(i.ModalContent, {
       children: [
-        (0, a.jsxs)(T.Z, {
-          align: T.Z.Align.CENTER,
+        (0, a.jsxs)(N.Z, {
+          align: N.Z.Align.CENTER,
           children: [
-            (0, a.jsx)(N.Z, {
+            (0, a.jsx)(I.Z, {
               game: e,
-              size: N.Z.Sizes.MEDIUM,
+              size: I.Z.Sizes.MEDIUM,
               className: C.gameIcon
             }),
             (0, a.jsx)('div', {
@@ -183,7 +183,7 @@ super(...e), g(this, 'state', {
     manifestIds: t,
     installationPath: this.state.selectedInstallationPath,
     analyticsLocation: n
-  }), (0, I.uL)(P.Z5c.APPLICATION_LIBRARY), this.close();
+  }), (0, A.uL)(P.Z5c.APPLICATION_LIBRARY), this.close();
 }), g(this, 'handleInstall', () => {
   let {
     application: e,
@@ -205,21 +205,21 @@ super(...e), g(this, 'state', {
   }
 }
 t.default = l.ZP.connectStores([
-  A.Z,
-  _.Z,
   L.Z,
+  T.Z,
+  _.Z,
   p.Z
 ], e => {
   let {
 applicationId: t,
 branchId: s
-  } = e, a = A.Z.getTargetBuildId(t, s);
+  } = e, a = L.Z.getTargetBuildId(t, s);
   return {
 application: p.Z.getApplication(t),
-defaultInstallationPath: _.Z.defaultInstallationPath,
+defaultInstallationPath: T.Z.defaultInstallationPath,
 buildId: a,
-manifestIds: A.Z.getTargetManifests(t, s),
-buildSizeKB: null != a ? A.Z.getBuildSize(a) : null,
-hasPreviouslyAcceptedStoreTerms: L.Z.hasAcceptedStoreTerms
+manifestIds: L.Z.getTargetManifests(t, s),
+buildSizeKB: null != a ? L.Z.getBuildSize(a) : null,
+hasPreviouslyAcceptedStoreTerms: _.Z.hasAcceptedStoreTerms
   };
 })(S);

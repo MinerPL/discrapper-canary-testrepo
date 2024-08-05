@@ -1,6 +1,6 @@
 n.d(t, {
   i: function() {
-return s;
+return o;
   },
   j: function() {
 return l;
@@ -10,9 +10,9 @@ var r = n(735250);
 n(470079);
 var i = n(952265),
   a = n(723359),
-  o = n(231338);
+  s = n(231338);
 
-function s(e) {
+function o(e) {
   (0, i.ZD)(async () => {
 let {
   default: e
@@ -26,7 +26,7 @@ return t => (0, r.jsx)(e, {
 });
   }, {
 modalKey: a.$$,
-onCloseRequest: o.dG,
+onCloseRequest: s.dG,
 onCloseCallback: e
   });
 }
@@ -43,7 +43,7 @@ return n => (0, r.jsx)(t, {
   ...n
 });
   }, {
-onCloseRequest: e ? o.dG : null,
+onCloseRequest: e ? s.dG : null,
 onCloseCallback: t
   });
 }

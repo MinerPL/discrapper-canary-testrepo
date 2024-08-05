@@ -2,8 +2,8 @@ let r;
 n(757143);
 var i = n(302454),
   a = n.n(i),
-  o = n(800927),
-  s = n(945884),
+  s = n(800927),
+  o = n(945884),
   l = n(594199);
 let u = a().defaultRules.lheading,
   c = a().defaultRules.heading,
@@ -21,11 +21,11 @@ let {
 } = e;
 return (e, n, r) => {
   let i = p.exec(e[1]),
-    o = e[1].replace(p, '');
-  return t && (o = o.toUpperCase()), {
+    s = e[1].replace(p, '');
+  return t && (s = s.toUpperCase()), {
     className: null != i ? i[1] : null,
     level: '=' === e[2] ? 1 : 2,
-    content: a().parseInline(n, o, r)
+    content: a().parseInline(n, s, r)
   };
 };
   },
@@ -93,8 +93,8 @@ newline: {
   ...a().defaultRules.newline
 },
 text: l.ZP,
-list: o.Z,
-subtext: s.Z
+list: s.Z,
+subtext: o.Z
   });
 t.Z = {
   getDefaultRules: e => ({

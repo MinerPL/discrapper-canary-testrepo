@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  o = n(481060),
   l = n(40851),
   u = n(906732),
   c = n(78839),
@@ -47,28 +47,28 @@ children: null != p ? p : f.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_SUBSCRIB
   return ((null == M ? void 0 : M.isPausedOrPausePending) && (P = (0, r.jsxs)('div', {
 className: h.pausedButton,
 children: [
-  (0, r.jsx)(s.LockIcon, {
+  (0, r.jsx)(o.LockIcon, {
     size: 'xs',
     className: h.lockIcon
   }),
   ' ',
   P
 ]
-  }), v.disabled = !0), null != L) ? (0, r.jsx)(s.Tooltip, {
+  }), v.disabled = !0), null != L) ? (0, r.jsx)(o.Tooltip, {
 text: L,
 'aria-label': !1,
-children: e => (0, r.jsx)(s.ShinyButton, {
+children: e => (0, r.jsx)(o.ShinyButton, {
   ...e,
   disabled: !0,
-  size: s.Button.Sizes.SMALL,
+  size: o.Button.Sizes.SMALL,
   pauseAnimation: g,
   ...v,
   children: P
 })
-  }) : (0, r.jsx)(s.ShinyButton, {
-size: s.Button.Sizes.SMALL,
+  }) : (0, r.jsx)(o.ShinyButton, {
+size: o.Button.Sizes.SMALL,
 ...v,
-className: o()(v.className, {
+className: s()(v.className, {
   [h.buttonHighlighted]: N
 }),
 submitting: C,

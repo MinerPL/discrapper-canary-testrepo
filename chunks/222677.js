@@ -11,9 +11,6 @@ return i;
   U0: function() {
 return A;
   },
-  Vn: function() {
-return D;
-  },
   WO: function() {
 return C;
   },
@@ -25,8 +22,8 @@ return O;
   }
 });
 var r, i, a = n(544891),
-  o = n(780384),
-  s = n(570140),
+  s = n(780384),
+  o = n(570140),
   l = n(668781),
   u = n(566006),
   c = n(346479),
@@ -67,15 +64,15 @@ return t(), !1;
 }
 
 function g(e, t, n, r, i) {
-  var a, o;
-  s.Z.dispatch({
+  var a, s;
+  o.Z.dispatch({
 type: e,
 channelId: t,
 messageId: n,
 userId: null !== (a = null == i ? void 0 : i.userId) && void 0 !== a ? a : d.default.getId(),
 emoji: r,
 optimistic: !0,
-colors: null !== (o = null == i ? void 0 : i.colors) && void 0 !== o ? o : [],
+colors: null !== (s = null == i ? void 0 : i.colors) && void 0 !== s ? s : [],
 reactionType: (null == i ? void 0 : i.burst) ? u.O.BURST : u.O.NORMAL
   });
 }
@@ -87,18 +84,18 @@ messageId: n,
 emoji: r,
 userId: i,
 useTypeEndpoint: a = !1,
-type: o = u.O.NORMAL
-  } = e, s = null != r.id ? ''.concat(r.name, ':').concat(r.id) : r.name;
-  return null == i ? m.ANM.REACTIONS(t, n, s) : a ? m.ANM.REACTION_WITH_TYPE(t, n, s, i, o) : m.ANM.REACTION(t, n, s, i);
+type: s = u.O.NORMAL
+  } = e, o = null != r.id ? ''.concat(r.name, ':').concat(r.id) : r.name;
+  return null == i ? m.ANM.REACTIONS(t, n, o) : a ? m.ANM.REACTION_WITH_TYPE(t, n, o, i, s) : m.ANM.REACTION(t, n, o, i);
 }
-(r = i || (i = {})).MESSAGE = 'Message', r.FORUM_TOOLBAR = 'Forum Toolbar', r.MOBILE_MEDIA_VIEWER = 'Mobile Media Viewer';
+(r = i || (i = {})).MESSAGE = 'Message', r.FORUM_TOOLBAR = 'Forum Toolbar', r.MOBILE_MEDIA_VIEWER = 'Mobile Media Viewer', r.MESSAGE_HOVER_BAR = 'Message Hover Bar', r.MESSAGE_INLINE_BUTTON = 'Message Inline Button', r.MESSAGE_CONTEXT_MENU = 'Message Context Menu', r.MESSAGE_REACTION_PICKER = 'Message Reaction Picker';
 async function A(e) {
   let {
 channelId: t,
 messageId: n,
 emoji: r,
 limit: i,
-after: o,
+after: s,
 type: l
   } = e, c = l === u.O.VOTE ? function(e, t, n) {
 var r;
@@ -112,12 +109,12 @@ emoji: r
 url: c,
 query: {
   limit: i,
-  after: o,
+  after: s,
   type: l
 },
 oldFormErrors: !0
   }), _ = l === u.O.VOTE ? d.body.users : d.body;
-  return s.Z.dispatch({
+  return o.Z.dispatch({
 type: 'MESSAGE_REACTION_ADD_USERS',
 channelId: t,
 messageId: n,
@@ -129,12 +126,12 @@ reactionType: l
 async function N(e, t, n) {
   let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 'Message',
 i = arguments.length > 4 ? arguments[4] : void 0,
-s = null != i && !!i.burst,
+o = null != i && !!i.burst,
 d = null != i && !!i.isRetry;
   if (!d && function(e, t, n, r) {
   let i = _.Z.getMessage(e, t);
   return null != i && i.userHasReactedWithEmoji(n, r);
-}(e, t, n, s)) {
+}(e, t, n, o)) {
 l.Z.show({
   title: I.Z.Messages.EMOJI_PICKER_DOUBLE_REACTION_SUPER_ERROR_TITLE,
   body: I.Z.Messages.EMOJI_PICKER_DOUBLE_REACTION_SUPER_ERROR_BODY,
@@ -142,9 +139,9 @@ l.Z.show({
 });
 return;
   }
-  let E = await y(n, s);
+  let E = await y(n, o);
   return g('MESSAGE_REACTION_ADD', e, t, n, {
-burst: s,
+burst: o,
 colors: E
   }), await c.Z.unarchiveThreadIfNecessary(e), a.tn.put({
 url: S({
@@ -155,11 +152,11 @@ url: S({
 }),
 query: {
   location: r,
-  type: s ? u.O.BURST : u.O.NORMAL
+  type: o ? u.O.BURST : u.O.NORMAL
 },
 oldFormErrors: !0
   }).then(() => {
-s ? (o.uv.announce(I.Z.Messages.BURST_REACTION_ADD_UNLIMITED_SUCCESS_A11Y.format({
+o ? (s.uv.announce(I.Z.Messages.BURST_REACTION_ADD_UNLIMITED_SUCCESS_A11Y.format({
   name: n.name
 })), p.Z.triggerFullscreenAnimation({
   channelId: e,
@@ -168,20 +165,20 @@ s ? (o.uv.announce(I.Z.Messages.BURST_REACTION_ADD_UNLIMITED_SUCCESS_A11Y.format
     ...n,
     animated: !1
   }
-})) : o.uv.announce(I.Z.Messages.REACTION_ADD_SUCCESS_A11Y.format({
+})) : s.uv.announce(I.Z.Messages.REACTION_ADD_SUCCESS_A11Y.format({
   name: n.name
 }));
   }).catch(i => {
 T(i, () => N(e, t, n, r, {
-  burst: s,
+  burst: o,
   isRetry: !0
 }), {
   isRetry: d
 }) && (g('MESSAGE_REACTION_REMOVE', e, t, n, {
-  burst: s
-}), s ? o.uv.announce(I.Z.Messages.BURST_REACTION_ADD_UNLIMITED_ERROR_A11Y.format({
+  burst: o
+}), o ? s.uv.announce(I.Z.Messages.BURST_REACTION_ADD_UNLIMITED_ERROR_A11Y.format({
   name: n.name
-})) : o.uv.announce(I.Z.Messages.REACTION_ADD_ERROR_A11Y.format({
+})) : s.uv.announce(I.Z.Messages.REACTION_ADD_ERROR_A11Y.format({
   name: n.name
 })));
   });
@@ -194,7 +191,7 @@ messageId: n,
 emoji: r,
 key: i
   } = e;
-  s.Z.dispatch({
+  o.Z.dispatch({
 type: 'BURST_REACTION_EFFECT_PLAY',
 channelId: t,
 messageId: n,
@@ -218,9 +215,9 @@ T(n, () => O(e, t, {
 async function R(e, t, n, r) {
   let i = null != r && !!r.isRetry;
   await c.Z.unarchiveThreadIfNecessary(e);
-  let o = null === n.id ? n.name : ''.concat(n.name, ':').concat(n.id);
+  let s = null === n.id ? n.name : ''.concat(n.name, ':').concat(n.id);
   a.tn.del({
-url: m.ANM.REMOVE_EMOJI_REACTIONS(e, t, o),
+url: m.ANM.REMOVE_EMOJI_REACTIONS(e, t, s),
 oldFormErrors: !0
   }).catch(r => {
 T(r, () => R(e, t, n, {
@@ -230,50 +227,61 @@ T(r, () => R(e, t, n, {
 });
   });
 }
-async function C(e, t, n, r) {
-  let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 'Message',
-s = arguments.length > 5 ? arguments[5] : void 0,
-l = null != s && !!s.burst,
-d = null != s && !!s.isRetry;
-  g('MESSAGE_REACTION_REMOVE', e, t, n, {
-userId: r,
-burst: l
-  }), await c.Z.unarchiveThreadIfNecessary(e), a.tn.del({
+async function C(e) {
+  let {
+channelId: t,
+messageId: n,
+emoji: r,
+location: i = 'Message',
+userId: o,
+options: l
+  } = e, d = null != l && !!l.burst, _ = null != l && !!l.isRetry;
+  g('MESSAGE_REACTION_REMOVE', t, n, r, {
+userId: o,
+burst: d
+  }), await c.Z.unarchiveThreadIfNecessary(t), a.tn.del({
 url: S({
-  channelId: e,
-  messageId: t,
-  emoji: n,
-  userId: null != r ? r : '@me',
-  type: l ? u.O.BURST : u.O.NORMAL,
+  channelId: t,
+  messageId: n,
+  emoji: r,
+  userId: null != o ? o : '@me',
+  type: d ? u.O.BURST : u.O.NORMAL,
   useTypeEndpoint: !0
 }),
 query: {
   location: i,
-  burst: l
+  burst: d
 },
 oldFormErrors: !0
   }).then(() => {
-(null == s ? void 0 : s.burst) ? o.uv.announce(I.Z.Messages.BURST_REACTION_REMOVE_SUCCESS_A11Y.format({
-  name: n.name
-})): o.uv.announce(I.Z.Messages.REACTION_REMOVE_SUCCESS_A11Y.format({
-  name: n.name
+(null == l ? void 0 : l.burst) ? s.uv.announce(I.Z.Messages.BURST_REACTION_REMOVE_SUCCESS_A11Y.format({
+  name: r.name
+})): s.uv.announce(I.Z.Messages.REACTION_REMOVE_SUCCESS_A11Y.format({
+  name: r.name
 }));
-  }).catch(async a => {
-if (T(a, () => C(e, t, n, r, i, {
-    burst: l,
-    isRetry: !0
+  }).catch(async e => {
+if (T(e, () => C({
+    channelId: t,
+    messageId: n,
+    emoji: r,
+    location: i,
+    userId: o,
+    options: {
+      burst: d,
+      isRetry: !0
+    }
   }), {
-    isRetry: d
+    isRetry: _
   })) {
-  let i = await y(n, l);
-  g('MESSAGE_REACTION_ADD', e, t, n, {
-    userId: r,
-    burst: l,
-    colors: i
-  }), (null == s ? void 0 : s.burst) ? o.uv.announce(I.Z.Messages.BURST_REACTION_REMOVE_ERROR_A11Y.format({
-    name: n.name
-  })) : o.uv.announce(I.Z.Messages.REACTION_REMOVE_ERROR_A11Y.format({
-    name: n.name
+  let e = await y(r, d);
+  g('MESSAGE_REACTION_ADD', t, n, r, {
+    userId: o,
+    burst: d,
+    colors: e
+  }), (null == l ? void 0 : l.burst) ? s.uv.announce(I.Z.Messages.BURST_REACTION_REMOVE_ERROR_A11Y.format({
+    name: r.name
+  })) : s.uv.announce(I.Z.Messages.REACTION_REMOVE_ERROR_A11Y.format({
+    name: r.name
   }));
 }
   });
@@ -285,18 +293,4 @@ try {
   n = await (0, h.B6)(e);
 } catch {}
   return n;
-}
-
-function D(e) {
-  let {
-channelId: t,
-messageId: n,
-emoji: r,
-reactionType: i,
-userId: a,
-location: o
-  } = e;
-  C(t, n, r, a, o, {
-burst: i === u.O.BURST
-  });
 }

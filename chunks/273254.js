@@ -1,48 +1,43 @@
 n.d(t, {
   L: function() {
-return d;
+return c;
   }
 }), n(47120);
 var i = n(470079),
-  s = n(468194),
-  a = n(645896),
-  r = n(316553),
-  l = n(559469),
-  o = n(308083),
-  c = n(689938);
+  a = n(468194),
+  s = n(645896),
+  r = n(559469),
+  l = n(308083),
+  o = n(689938);
 
-function d(e) {
+function c(e) {
   let {
-guild: t,
-selectedGame: n
-  } = e, d = (0, r.J)({
-selectedGame: n
-  }), u = i.useMemo(() => null == d ? [] : [d], [d]), _ = (0, l.n)(d), h = (0, a.Cc)(null == t ? void 0 : t.id), [E, I] = (0, a.L_)(null == t ? void 0 : t.id);
+guild: t
+  } = e, n = (0, r.n)(), c = (0, s.Cc)(null == t ? void 0 : t.id), [d, u] = (0, s.L_)(null == t ? void 0 : t.id);
   return i.useEffect(() => {
-!E && null != t && I();
+!d && null != t && u();
   }, [
 t,
-E,
-I
+d,
+u
   ]), i.useMemo(() => {
 var e;
-return null != h ? h : null == t ? null : {
-  ..._[_.length - 1],
+return null != c ? c : null == t ? null : {
+  ...n[n.length - 1],
   id: t.id,
   name: t.name,
   icon: t.icon,
-  description: null !== (e = t.description) && void 0 !== e ? e : c.Z.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER,
+  description: null !== (e = t.description) && void 0 !== e ? e : o.Z.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER,
   memberCount: 0,
-  games: u,
-  playstyle: o.zv.CASUAL,
+  games: [],
+  playstyle: l.zv.CASUAL,
   traits: [],
-  tag: (0, s.Zg)(t.name),
-  wildcardDescriptors: o.LK
+  tag: (0, a.Zg)(t.name),
+  wildcardDescriptors: l.LK
 };
   }, [
-u,
 t,
-_,
-h
+n,
+c
   ]);
 }

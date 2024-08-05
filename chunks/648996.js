@@ -6,9 +6,9 @@ return N;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(512722),
-  l = n.n(s),
+  s = n.n(a),
+  o = n(512722),
+  l = n.n(o),
   u = n(442837),
   c = n(481060),
   d = n(493683),
@@ -29,7 +29,7 @@ function N(e) {
 user: t,
 autoFocus: n = !1,
 className: a,
-inputClassName: s,
+inputClassName: o,
 onSend: N
   } = e, v = i.useRef(null), O = (0, u.e7)([m.Z], () => m.Z.isBlocked(t.id)), R = i.useCallback(e => {
 if ('Enter' === e.key) {
@@ -59,7 +59,7 @@ name: I.ZP.getName(t)
   });
   return (0, r.jsx)(c.TextInput, {
 className: a,
-inputClassName: o()(s, A.input),
+inputClassName: s()(o, A.input),
 inputRef: v,
 autoFocus: n,
 placeholder: C,

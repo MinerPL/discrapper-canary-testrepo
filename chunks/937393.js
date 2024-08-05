@@ -4,14 +4,14 @@ return a;
   }
 });
 var l = t(442837),
-  u = t(553795),
-  i = t(823379),
+  i = t(553795),
+  u = t(823379),
   r = t(981631);
 
 function a() {
-  return (0, l.Wu)([u.Z], () => [
-u.Z.getAccount(null, r.ABu.XBOX),
-u.Z.getAccount(null, r.ABu.PLAYSTATION),
-u.Z.getAccount(null, r.ABu.PLAYSTATION_STAGING)
-  ].filter(i.lm));
+  return (0, l.Wu)([i.Z], () => [
+i.Z.getAccount(null, r.ABu.XBOX),
+i.Z.getAccount(null, r.ABu.PLAYSTATION),
+i.Z.getAccount(null, r.ABu.PLAYSTATION_STAGING)
+  ].filter(u.lm));
 }

@@ -1,6 +1,6 @@
 n.d(t, {
   s: function() {
-return f;
+return h;
   }
 }), n(47120);
 var l = n(470079),
@@ -8,30 +8,30 @@ var l = n(470079),
   i = n(38618),
   s = n(51596),
   r = n(516373),
-  c = n(314897),
-  o = n(580005),
-  u = n(987509),
+  o = n(314897),
+  u = n(580005),
+  c = n(987509),
   d = n(601565),
   _ = n(41837);
 
-function f(e) {
+function h(e) {
   let {
 searchText: t,
 targetDestination: n,
-selectedDestinations: f,
-originDestination: E,
-includeMissingDMs: h = !1
-  } = e, S = (0, a.e7)([c.default], () => c.default.getId()), g = l.useMemo(() => ({
+selectedDestinations: h,
+originDestination: f,
+includeMissingDMs: E = !1
+  } = e, g = (0, a.e7)([o.default], () => o.default.getId()), S = l.useMemo(() => ({
 searchOptions: {
-  blacklist: new Set(['user:'.concat(S)]),
+  blacklist: new Set(['user:'.concat(g)]),
   frecencyBoosters: !0,
   userFilters: null
 }
-  }), [S]), {
-search: I,
-query: A,
+  }), [g]), {
+search: A,
+query: I,
 results: p
-  } = (0, d.Z)(g), m = l.useMemo(() => function(e) {
+  } = (0, d.Z)(S), m = l.useMemo(() => function(e) {
 let {
   query: t,
   queryMode: n
@@ -43,44 +43,44 @@ return null != n && _.M.includes(n) && (l = [n], a = n), {
 };
   }(t), [t]), {
 queryMode: C
-  } = m, [b, L] = l.useState(null != f ? f : []);
+  } = m, [N, L] = l.useState(null != h ? h : []);
   l.useLayoutEffect(() => {
 let {
   query: e,
   resultTypes: t
 } = m;
-I({
+A({
   query: e,
   resultTypes: t
-}), L(null != f ? f : []);
+}), L(null != h ? h : []);
   }, [
-I,
+A,
 m
   ]), (0, r.D)();
-  let N = (0, a.e7)([o.Z], () => o.Z.getFrequentlyWithoutFetchingLatest()),
+  let b = (0, a.e7)([u.Z], () => u.Z.getFrequentlyWithoutFetchingLatest()),
 T = (0, a.e7)([i.Z], () => i.Z.isConnected()),
-Z = '' !== A;
-  return l.useMemo(() => (0, u.ZP)({
+Z = '' !== I;
+  return l.useMemo(() => (0, c.ZP)({
 results: p,
 hasQuery: Z,
 queryMode: C,
 targetDestination: n,
-frequentChannels: N,
-selectedDestinations: f,
-pinnedDestinations: b,
-originDestination: E,
-includeMissingDMs: h,
+frequentChannels: b,
+selectedDestinations: h,
+pinnedDestinations: N,
+originDestination: f,
+includeMissingDMs: E,
 isConnected: T
   }), [
 p,
 Z,
 C,
 n,
+b,
+h,
 N,
 f,
-b,
 E,
-h,
 T
   ]);
 }

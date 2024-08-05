@@ -10,13 +10,13 @@ var a = t(442837),
   l = t(434404),
   o = t(962086),
   r = t(225675),
-  c = t(496675),
-  d = t(981631),
+  d = t(496675),
+  c = t(981631),
   u = t(689938);
 
 function I(e, n) {
-  let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.pNK.ROLES;
-  return (0, a.e7)([c.Z], () => c.Z.canImpersonateRole(e, n)) ? (0, i.jsx)(s.MenuItem, {
+  let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.pNK.ROLES;
+  return (0, a.e7)([d.Z], () => d.Z.canImpersonateRole(e, n)) ? (0, i.jsx)(s.MenuItem, {
 id: 'view-as-role',
 label: u.Z.Messages.VIEW_AS_ROLE,
 icon: s.ArrowSmallRightIcon,

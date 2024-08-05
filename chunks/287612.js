@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(318374),
-  o = n(522289),
-  s = n(346656),
+  s = n(522289),
+  o = n(565138),
   l = n(726059),
   u = n(162267),
   c = n(228168),
@@ -62,7 +62,7 @@ children: [
     className: E.section,
     onClick: () => null == n ? void 0 : n(c.oh.MUTUAL_GUILDS),
     children: [
-      !p && (0, r.jsx)(o.Z, {
+      !p && (0, r.jsx)(s.Z, {
         maxGuilds: 3,
         guilds: h.map(e => {
           let {
@@ -70,7 +70,7 @@ children: [
           } = e;
           return t;
         }),
-        size: s.Z.Sizes.SMOL,
+        size: o.Z.Sizes.SMOL,
         hideOverflowCount: !0,
         disableGuildNameTooltip: !0
       }),

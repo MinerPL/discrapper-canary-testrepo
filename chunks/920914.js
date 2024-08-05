@@ -17,19 +17,19 @@ var n = s(735250),
   C = s(726542),
   m = s(122021),
   A = s(275759),
-  h = s(231757),
-  g = s(323588),
+  g = s(231757),
+  h = s(323588),
   O = s(605236),
-  p = s(553795),
-  R = s(430824),
-  x = s(771845),
-  M = s(246946),
-  D = s(797717),
-  f = s(346656),
+  p = s(565138),
+  R = s(297700),
+  x = s(553795),
+  M = s(430824),
+  f = s(771845),
+  D = s(246946),
   P = s(626135),
   L = s(63063),
-  Z = s(706454),
-  b = s(349728),
+  b = s(706454),
+  Z = s(349728),
   v = s(494620),
   j = s(205266),
   B = s(216153),
@@ -48,12 +48,12 @@ let w = e => {
   isJoining: r,
   joinErrorMessage: l,
   showJoinErrorMessage: c
-} = (0, o.cj)([p.Z], () => ({
-  isJoining: p.Z.isJoining(i.id),
-  joinErrorMessage: '' === p.Z.joinErrorMessage(i.id) ? y.Z.Messages.ERROR : p.Z.joinErrorMessage(i.id),
-  showJoinErrorMessage: void 0 !== p.Z.joinErrorMessage(i.id)
+} = (0, o.cj)([x.Z], () => ({
+  isJoining: x.Z.isJoining(i.id),
+  joinErrorMessage: '' === x.Z.joinErrorMessage(i.id) ? y.Z.Messages.ERROR : x.Z.joinErrorMessage(i.id),
+  showJoinErrorMessage: void 0 !== x.Z.joinErrorMessage(i.id)
 }), [i.id]),
-d = null != (0, o.e7)([R.Z], () => R.Z.getGuild(i.guild.id), [i.guild.id]);
+d = null != (0, o.e7)([M.Z], () => M.Z.getGuild(i.guild.id), [i.guild.id]);
   return !d && (a = (0, n.jsx)(_.Button, {
 size: _.ButtonSizes.SMALL,
 onClick: function() {
@@ -69,8 +69,8 @@ children: [
   (0, n.jsxs)('div', {
     className: V.integration,
     children: [
-      (0, n.jsx)(f.Z, {
-        size: f.Z.Sizes.SMALL,
+      (0, n.jsx)(p.Z, {
+        size: p.Z.Sizes.SMALL,
         guild: i.guild,
         className: V.guildIcon
       }),
@@ -114,9 +114,9 @@ function k(e) {
   locale: N
 } = e,
 [O, p] = a.useState(T.friendSync),
-[R, x] = a.useState(T.visibility),
-[M, f] = a.useState(T.metadataVisibility),
-[P, Z] = a.useState(T.showActivity),
+[x, M] = a.useState(T.visibility),
+[f, D] = a.useState(T.metadataVisibility),
+[P, b] = a.useState(T.showActivity),
 [F, Y] = a.useState(null),
 [k, H] = a.useState(null),
 [W, K] = a.useState(!1),
@@ -124,14 +124,14 @@ function k(e) {
 X = (0, m.rR)(T.type),
 q = C.Z.get(X);
   a.useEffect(() => {
-p(T.friendSync), x(T.visibility), f(T.metadataVisibility), Z(T.showActivity);
+p(T.friendSync), M(T.visibility), D(T.metadataVisibility), b(T.showActivity);
   }, [T]), a.useEffect(() => {
 if (!1 !== T.verified)
-  null != F && (x(F), u.Z.setVisibility(T.type, T.id, F), Y(null)), null != k && (f(k), u.Z.setMetadataVisibility(T.type, T.id, k), H(null));
+  null != F && (M(F), u.Z.setVisibility(T.type, T.id, F), Y(null)), null != k && (D(k), u.Z.setMetadataVisibility(T.type, T.id, k), H(null));
   }, [T]);
 
   function J() {
-(0, h.Z)({
+(0, g.Z)({
   platformType: T.type,
   location: 'User Settings'
 });
@@ -140,7 +140,7 @@ if (!1 !== T.verified)
   function $() {
 let e = C.Z.get(T.type),
   t = y.Z.Messages.DISCONNECT_ACCOUNT_BODY;
-(0, b.Z)(T) && (t = (0, n.jsxs)(n.Fragment, {
+(0, Z.Z)(T) && (t = (0, n.jsxs)(n.Fragment, {
   children: [
     t,
     (0, n.jsx)(v.Z, {
@@ -167,13 +167,13 @@ let {
   verified: t
 } = T, s = e ? 1 : 0;
 if (e && !t) {
-  Y(s), (0, h.Z)({
+  Y(s), (0, g.Z)({
     platformType: T.type,
     location: 'User Settings'
   });
   return;
 }
-x(s), u.Z.setVisibility(T.type, T.id, s);
+M(s), u.Z.setVisibility(T.type, T.id, s);
   }
 
   function et(e) {
@@ -181,13 +181,13 @@ let {
   verified: t
 } = T, s = e ? 1 : 0;
 if (e && !t) {
-  H(s), (0, h.Z)({
+  H(s), (0, g.Z)({
     platformType: T.type,
     location: 'User Settings'
   });
   return;
 }
-f(s), u.Z.setMetadataVisibility(T.type, T.id, s);
+D(s), u.Z.setMetadataVisibility(T.type, T.id, s);
   }
 
   function es(e) {
@@ -195,7 +195,7 @@ p(e), u.Z.setFriendSync(T.type, T.id, e);
   }
 
   function en(e) {
-Z(e), u.Z.setShowActivity(T.type, T.id, e);
+b(e), u.Z.setShowActivity(T.type, T.id, e);
   }
   return (0, n.jsxs)('div', {
 className: V.connection,
@@ -208,7 +208,7 @@ children: [
       r = null;
     return s.type === U.ABu.TWITTER && i && (r = (0, n.jsx)(_.Tooltip, {
       text: y.Z.Messages.CONNECTION_VERIFIED_ON_TWITTER,
-      children: e => (0, n.jsx)(D.Z, {
+      children: e => (0, n.jsx)(R.Z, {
         ...e,
         className: V.connectionAccountLabelVerified,
         color: c.Z.unsafe_rawColors.TWITTER.css,
@@ -280,22 +280,22 @@ children: [
       i = (0, A.FI)(s[G.PC.CREATED_AT], N);
     switch (e.type) {
       case U.ABu.REDDIT:
-        a = (0, g.oP)(s, V.metadataItem);
+        a = (0, h.oP)(s, V.metadataItem);
         break;
       case U.ABu.STEAM:
-        a = (0, g.Dq)(s, V.metadataItem);
+        a = (0, h.Dq)(s, V.metadataItem);
         break;
       case U.ABu.TWITTER:
-        a = (0, g.rJ)(s, V.metadataItem);
+        a = (0, h.rJ)(s, V.metadataItem);
         break;
       case U.ABu.EBAY:
-        a = (0, g.ul)(s, V.metadataItem);
+        a = (0, h.ul)(s, V.metadataItem);
         break;
       case U.ABu.PAYPAL:
-        a = (0, g.li)(s, V.metadataItem);
+        a = (0, h.li)(s, V.metadataItem);
         break;
       case U.ABu.TIKTOK:
-        a = (0, g.hf)(s, V.metadataItem);
+        a = (0, h.hf)(s, V.metadataItem);
     }
     null !== i && (null == a && (a = []), null == a || a.push((0, n.jsx)(_.Text, {
       variant: 'text-xs/normal',
@@ -366,9 +366,9 @@ children: [
   })), (null === (i = C.Z.get(T.type)) || void 0 === i ? void 0 : i.hasMetadata) === !0 && (l = (0, n.jsx)(_.FormSwitch, {
     className: V.connectionOptionSwitch,
     hideBorder: !0,
-    value: 1 === M,
+    value: 1 === f,
     onChange: et,
-    disabled: 1 !== R || null == T.metadata,
+    disabled: 1 !== x || null == T.metadata,
     children: (0, n.jsx)(_.Text, {
       variant: 'text-sm/semibold',
       children: y.Z.Messages.DISPLAY_DETAILS_ON_PROFILE
@@ -381,7 +381,7 @@ children: [
         (0, n.jsx)(_.FormSwitch, {
           className: V.connectionOptionSwitch,
           hideBorder: !0,
-          value: 1 === R,
+          value: 1 === x,
           onChange: ee,
           children: (0, n.jsx)(_.Text, {
             variant: 'text-sm/semibold',
@@ -457,7 +457,7 @@ children: [
 
 function W(e) {
   let t = C.Z.get(e);
-  (0, h.Z)({
+  (0, g.Z)({
 platformType: t.type
   }), P.default.track(U.rMx.ACCOUNT_LINK_STEP, {
 previous_step: 'desktop connections',
@@ -558,12 +558,12 @@ children: t
   });
 }
 t.Z = () => {
-  let e = (0, o.e7)([M.Z], () => M.Z.hidePersonalInformation),
-t = (0, o.e7)([p.Z], () => p.Z.isFetching()),
-s = (0, o.e7)([p.Z], () => p.Z.getAccounts()),
+  let e = (0, o.e7)([D.Z], () => D.Z.hidePersonalInformation),
+t = (0, o.e7)([x.Z], () => x.Z.isFetching()),
+s = (0, o.e7)([x.Z], () => x.Z.getAccounts()),
 i = (0, N.ZP)();
-  (0, o.e7)([x.ZP], () => x.ZP.getFlattenedGuildIds());
-  let r = (0, o.e7)([Z.default], () => Z.default.locale);
+  (0, o.e7)([f.ZP], () => f.ZP.getFlattenedGuildIds());
+  let r = (0, o.e7)([b.default], () => b.default.locale);
   return (a.useEffect(() => {
 u.Z.fetch();
   }, []), e) ? (0, n.jsx)(T.Z, {}) : (0, n.jsxs)(_.FormSection, {

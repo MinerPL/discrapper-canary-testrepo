@@ -1,8 +1,8 @@
 var r = n(544891),
   i = n(570140),
   a = n(802098),
-  o = n(695346),
-  s = n(981631),
+  s = n(695346),
+  o = n(981631),
   l = n(596401);
 
 function u() {
@@ -27,7 +27,7 @@ i.Z.dispatch({
   type: 'CHANGE_LOG_MARK_SEEN',
   changelogId: e,
   changelogDate: t
-}), o.l4.updateSetting(e);
+}), s.l4.updateSetting(e);
   },
   setChangelogOverride(e) {
 i.Z.dispatch({
@@ -37,7 +37,7 @@ i.Z.dispatch({
   },
   sendChangelogMessage(e) {
 r.tn.post({
-  url: s.ANM.CHANGELOG_MESSAGES,
+  url: o.ANM.CHANGELOG_MESSAGES,
   body: {
     changelog_id: e
   }

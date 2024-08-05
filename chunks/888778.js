@@ -7,8 +7,8 @@ return r;
   }
 }), n(47120);
 var r, i, a = n(470079),
-  o = n(695346),
-  s = n(768581);
+  s = n(695346),
+  o = n(768581);
 
 function l(e) {
   let {
@@ -16,7 +16,7 @@ displayProfile: t,
 size: n,
 canAnimate: r,
 pendingBanner: i
-  } = e, l = o.QK.getSetting(), u = null == t ? void 0 : t.getPreviewBanner(i, r, n), [c, d] = (0, a.useState)((null == t ? void 0 : t.banner) == null ? 2 : 0);
+  } = e, l = s.QK.getSetting(), u = null == t ? void 0 : t.getPreviewBanner(i, r, n), [c, d] = (0, a.useState)((null == t ? void 0 : t.banner) == null ? 2 : 0);
   return (0, a.useEffect)(() => {
 if (null == u || 0 !== c)
   return;
@@ -30,7 +30,7 @@ c
 if (l)
   return;
 let e = null == t ? void 0 : t.getPreviewBanner(i, !0, n);
-if (null != e && !!(0, s.F8)(e))
+if (null != e && !!(0, o.F8)(e))
   new Image().src = e;
   }, [
 l,

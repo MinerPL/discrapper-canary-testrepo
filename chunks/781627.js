@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return c;
+return s;
   }
 });
 var a = n(735250);
@@ -9,12 +9,12 @@ var i = n(481060),
   l = n(689938),
   r = n(658676);
 
-function c(e) {
+function s(e) {
   let {
 imageSrc: t,
 header: n,
-description: c,
-secondaryInfo: s,
+description: s,
+secondaryInfo: c,
 mutualGuildCount: o,
 ctaLabel: d,
 onCtaClick: u,
@@ -55,7 +55,7 @@ children: (0, a.jsxs)('div', {
                         variant: 'text-sm/medium',
                         children: l.Z.Messages.APP_DIRECTORY_MUSIC_CATEGORY
                       }),
-                      null != s ? (0, a.jsxs)(a.Fragment, {
+                      null != c ? (0, a.jsxs)(a.Fragment, {
                         children: [
                           (0, a.jsx)(i.Text, {
                             tag: 'span',
@@ -68,7 +68,7 @@ children: (0, a.jsxs)('div', {
                             tag: 'span',
                             color: 'header-secondary',
                             variant: 'text-sm/medium',
-                            children: s
+                            children: c
                           })
                         ]
                       }) : null
@@ -85,10 +85,10 @@ children: (0, a.jsxs)('div', {
             }) : null
           ]
         }),
-        null != c ? (0, a.jsx)(i.Text, {
+        null != s ? (0, a.jsx)(i.Text, {
           className: r.listingDescription,
           variant: 'text-md/normal',
-          children: c
+          children: s
         }) : null,
         (0, a.jsx)('div', {
           className: r.children,

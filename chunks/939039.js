@@ -12,16 +12,16 @@ function a(e) {
 width: t = 12,
 height: n = 12,
 color: a = 'currentColor',
-foreground: o,
-...s
+foreground: s,
+...o
   } = e;
   return (0, r.jsx)('svg', {
-...(0, i.Z)(s),
+...(0, i.Z)(o),
 width: t,
 height: n,
 viewBox: '0 0 12 12',
 children: (0, r.jsx)('rect', {
-  className: o,
+  className: s,
   fill: a,
   width: '10',
   height: '1',

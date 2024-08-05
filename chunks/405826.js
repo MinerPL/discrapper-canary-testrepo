@@ -6,8 +6,8 @@ return T;
 var r = n(623279),
   i = n(392711),
   a = n.n(i),
-  o = n(374470),
-  s = n(579806),
+  s = n(374470),
+  o = n(579806),
   l = n(710845),
   u = n(706454),
   c = n(823379),
@@ -23,7 +23,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 let f = new l.Z('Spellchecker'),
-  h = null === s.Z || void 0 === s.Z ? void 0 : s.Z.spellCheck;
+  h = null === o.Z || void 0 === o.Z ? void 0 : o.Z.spellCheck;
 
 function p(e) {
   var t;
@@ -100,7 +100,7 @@ this.languageDetector = new d.Z(t, n => {
 }
 let I = a().debounce((e, t) => {
   let n = function(e) {
-return null == e ? null : (0, o.k)(e, HTMLInputElement) || (0, o.k)(e, HTMLTextAreaElement) ? e.value : (0, o.k)(e) && e.hasAttribute('contenteditable') ? e.textContent : void 0;
+return null == e ? null : (0, s.k)(e, HTMLInputElement) || (0, s.k)(e, HTMLTextAreaElement) ? e.value : (0, s.k)(e) && e.hasAttribute('contenteditable') ? e.textContent : void 0;
   }(t);
   null != n && e.detectLanguage(n);
 }, 250);

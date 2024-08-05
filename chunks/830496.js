@@ -3,7 +3,7 @@ n.d(t, {
 return a;
   },
   Z: function() {
-return o;
+return s;
   }
 });
 var r = n(709054),
@@ -13,6 +13,6 @@ function a(e) {
   return new Date(r.default.extractTimestamp(e)).toISOString();
 }
 
-function o(e) {
+function s(e) {
   return e.slice(0, i.JO);
 }

@@ -6,21 +6,21 @@ return d;
 var i = t(904245),
   l = t(181945),
   o = t(888369),
-  E = t(375954),
-  r = t(944486),
-  u = t(914010),
-  a = t(585483),
+  r = t(375954),
+  E = t(944486),
+  a = t(914010),
+  u = t(585483),
   s = t(981631);
 let d = {
   binds: ['shift+esc'],
   comboKeysBindGlobal: !0,
   action() {
-let e = u.Z.getGuildId();
+let e = a.Z.getGuildId();
 if (null == e || !o.default.getGuildHasUnreadIgnoreMuted(e))
   return;
 (0, l.Z)([e]);
-let n = r.Z.getChannelId(e);
+let n = E.Z.getChannelId(e);
 if (null != n)
-  E.Z.getMessages(n).hasMoreAfter ? i.Z.jumpToPresent(n, s.AQB) : a.S.dispatch(s.CkL.SCROLLTO_PRESENT);
+  r.Z.getMessages(n).hasMoreAfter ? i.Z.jumpToPresent(n, s.AQB) : u.S.dispatch(s.CkL.SCROLLTO_PRESENT);
   }
 };

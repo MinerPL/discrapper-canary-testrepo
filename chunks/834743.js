@@ -1,7 +1,7 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(82950),
   l = n(623624),
   o = n(650774),
@@ -9,7 +9,7 @@ var i = n(735250),
   d = n(921944),
   u = n(689938),
   _ = n(241626);
-class h extends s.PureComponent {
+class h extends a.PureComponent {
   render() {
 let {
   guild: e,
@@ -49,7 +49,7 @@ super(...e), t = this, n = 'handleButtonClick', i = () => {
 }) : t[n] = i;
   }
 }
-t.Z = a.ZP.connectStores([o.Z], e => {
+t.Z = s.ZP.connectStores([o.Z], e => {
   let {
 guild: t
   } = e;

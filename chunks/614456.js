@@ -6,8 +6,8 @@ return u;
 var r = n(660284),
   i = n(581282),
   a = n(36056),
-  o = n(69122),
-  s = n(17146),
+  s = n(69122),
+  o = n(17146),
   l = n(929412);
 class u {
   constructor(e) {
@@ -28,12 +28,12 @@ if (!e) {
   read(e, t, n) {
 this.prepare();
 let i = [];
-for (let [o, s] of Object.entries(e)) {
+for (let [s, o] of Object.entries(e)) {
   let e;
-  let l = this.fMap[o];
+  let l = this.fMap[s];
   if (!l) {
     if (!n.ignoreUnknownFields)
-      throw Error(`Found unknown field while reading ${ this.info.typeName } from JSON format. JSON key: ${ o }`);
+      throw Error(`Found unknown field while reading ${ this.info.typeName } from JSON format. JSON key: ${ s }`);
     continue;
   }
   let u = l.localName;
@@ -46,11 +46,11 @@ for (let [o, s] of Object.entries(e)) {
   } else
     e = t;
   if ('map' == l.kind) {
-    if (null === s)
+    if (null === o)
       continue;
-    this.assert((0, r.b)(s), l.name, s);
+    this.assert((0, r.b)(o), l.name, o);
     let t = e[u];
-    for (let [e, r] of Object.entries(s)) {
+    for (let [e, r] of Object.entries(o)) {
       let i;
       switch (this.assert(null !== r, l.name + ' map value', null), l.V.kind) {
         case 'message':
@@ -64,15 +64,15 @@ for (let [o, s] of Object.entries(e)) {
           i = this.scalar(r, l.V.T, l.V.L, l.name);
       }
       this.assert(void 0 !== i, l.name + ' map value', r);
-      let o = e;
-      l.K == a.wx.BOOL && (o = 'true' == o || 'false' != o && o), t[o = this.scalar(o, l.K, a.pz.STRING, l.name).toString()] = i;
+      let s = e;
+      l.K == a.wx.BOOL && (s = 'true' == s || 'false' != s && s), t[s = this.scalar(s, l.K, a.pz.STRING, l.name).toString()] = i;
     }
   } else if (l.repeat) {
-    if (null === s)
+    if (null === o)
       continue;
-    this.assert(Array.isArray(s), l.name, s);
+    this.assert(Array.isArray(o), l.name, o);
     let t = e[u];
-    for (let e of s) {
+    for (let e of o) {
       let r;
       switch (this.assert(null !== e, l.name, null), l.kind) {
         case 'message':
@@ -85,43 +85,43 @@ for (let [o, s] of Object.entries(e)) {
         case 'scalar':
           r = this.scalar(e, l.T, l.L, l.name);
       }
-      this.assert(void 0 !== r, l.name, s), t.push(r);
+      this.assert(void 0 !== r, l.name, o), t.push(r);
     }
   } else
     switch (l.kind) {
       case 'message':
-        if (null === s && 'google.protobuf.Value' != l.T().typeName) {
+        if (null === o && 'google.protobuf.Value' != l.T().typeName) {
           this.assert(void 0 === l.oneof, l.name + ' (oneof member)', null);
           continue;
         }
-        e[u] = l.T().internalJsonRead(s, n, e[u]);
+        e[u] = l.T().internalJsonRead(o, n, e[u]);
         break;
       case 'enum':
-        let c = this.enum(l.T(), s, l.name, n.ignoreUnknownFields);
+        let c = this.enum(l.T(), o, l.name, n.ignoreUnknownFields);
         if (!1 === c)
           continue;
         e[u] = c;
         break;
       case 'scalar':
-        e[u] = this.scalar(s, l.T, l.L, l.name);
+        e[u] = this.scalar(o, l.T, l.L, l.name);
     }
 }
   }
   enum(e, t, n, r) {
-if ('google.protobuf.NullValue' == e[0] && (0, s.hu)(null === t, `Unable to parse field ${ this.info.typeName }#${ n }, enum ${ e[0] } only accepts null.`), null === t)
+if ('google.protobuf.NullValue' == e[0] && (0, o.hu)(null === t, `Unable to parse field ${ this.info.typeName }#${ n }, enum ${ e[0] } only accepts null.`), null === t)
   return 0;
 switch (typeof t) {
   case 'number':
-    return (0, s.hu)(Number.isInteger(t), `Unable to parse field ${ this.info.typeName }#${ n }, enum can only be integral number, got ${ t }.`), t;
+    return (0, o.hu)(Number.isInteger(t), `Unable to parse field ${ this.info.typeName }#${ n }, enum can only be integral number, got ${ t }.`), t;
   case 'string':
     let i = t;
     e[2] && t.substring(0, e[2].length) === e[2] && (i = t.substring(e[2].length));
     let a = e[1][i];
     if (void 0 === a && r)
       return !1;
-    return (0, s.hu)('number' == typeof a, `Unable to parse field ${ this.info.typeName }#${ n }, enum ${ e[0] } has no value for "${ t }".`), a;
+    return (0, o.hu)('number' == typeof a, `Unable to parse field ${ this.info.typeName }#${ n }, enum ${ e[0] } has no value for "${ t }".`), a;
 }
-(0, s.hu)(!1, `Unable to parse field ${ this.info.typeName }#${ n }, cannot parse enum value from ${ typeof t }".`);
+(0, o.hu)(!1, `Unable to parse field ${ this.info.typeName }#${ n }, cannot parse enum value from ${ typeof t }".`);
   }
   scalar(e, t, n, r) {
 let u;
@@ -156,7 +156,7 @@ try {
         u = 'too large or small';
         break;
       }
-      return t == a.wx.FLOAT && (0, s.E_)(r), r;
+      return t == a.wx.FLOAT && (0, o.E_)(r), r;
     case a.wx.INT32:
     case a.wx.FIXED32:
     case a.wx.SFIXED32:
@@ -167,22 +167,22 @@ try {
         return 0;
       if ('number' == typeof e ? c = e : '' === e ? u = 'empty string' : 'string' == typeof e && (e.trim().length !== e.length ? u = 'extra whitespace' : c = Number(e)), void 0 === c)
         break;
-      return t == a.wx.UINT32 ? (0, s.fp)(c) : (0, s.ug)(c), c;
+      return t == a.wx.UINT32 ? (0, o.fp)(c) : (0, o.ug)(c), c;
     case a.wx.INT64:
     case a.wx.SFIXED64:
     case a.wx.SINT64:
       if (null === e)
-        return (0, l._)(o.M.ZERO, n);
+        return (0, l._)(s.M.ZERO, n);
       if ('number' != typeof e && 'string' != typeof e)
         break;
-      return (0, l._)(o.M.from(e), n);
+      return (0, l._)(s.M.from(e), n);
     case a.wx.FIXED64:
     case a.wx.UINT64:
       if (null === e)
-        return (0, l._)(o.p.ZERO, n);
+        return (0, l._)(s.p.ZERO, n);
       if ('number' != typeof e && 'string' != typeof e)
         break;
-      return (0, l._)(o.p.from(e), n);
+      return (0, l._)(s.p.from(e), n);
     case a.wx.BOOL:
       if (null === e)
         return !1;

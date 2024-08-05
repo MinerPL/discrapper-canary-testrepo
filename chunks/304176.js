@@ -1,8 +1,8 @@
 var r = n(735250),
   i = n(470079),
   a = n(442837),
-  o = n(481060),
-  s = n(367907),
+  s = n(481060),
+  o = n(367907),
   l = n(829883),
   u = n(623624),
   c = n(973542),
@@ -30,7 +30,7 @@ name: v
 I.default.track(g.rMx.OPEN_POPOUT, {
   type: 'Role Icon Popout',
   guild_id: n.id,
-  ...(0, s.v_)(_.Z.getChannel(f.Z.getChannelId(n.id)))
+  ...(0, o.v_)(_.Z.getChannel(f.Z.getChannelId(n.id)))
 });
   }, []);
   let O = (0, a.e7)([E.Z], () => null != t.roleId ? E.Z.getRole(n.id, t.roleId) : void 0),
@@ -55,7 +55,7 @@ D = R ? () => {
     }
   });
 };
-  return (0, r.jsx)(o.Dialog, {
+  return (0, r.jsx)(s.Dialog, {
 children: (0, r.jsx)(T.W_, {
   children: (0, r.jsxs)('div', {
     className: N.popoutContainer,
@@ -75,14 +75,14 @@ children: (0, r.jsx)(T.W_, {
           (0, r.jsxs)('div', {
             className: N.truncatingText,
             children: [
-              (0, r.jsx)(o.Heading, {
+              (0, r.jsx)(s.Heading, {
                 variant: 'heading-md/semibold',
                 className: N.roleName,
                 children: (0, r.jsx)(h.Z, {
                   children: v
                 })
               }),
-              (0, r.jsx)(o.Text, {
+              (0, r.jsx)(s.Text, {
                 variant: 'text-sm/normal',
                 children: C
               })
@@ -90,9 +90,9 @@ children: (0, r.jsx)(T.W_, {
           })
         ]
       }),
-      (0, r.jsxs)(o.Button, {
-        size: o.Button.Sizes.SMALL,
-        color: o.Button.Colors.PRIMARY,
+      (0, r.jsxs)(s.Button, {
+        size: s.Button.Sizes.SMALL,
+        color: s.Button.Colors.PRIMARY,
         className: N.ctaButton,
         innerClassName: N.ctaButtonContent,
         fullWidth: !0,

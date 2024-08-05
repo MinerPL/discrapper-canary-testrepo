@@ -1,6 +1,6 @@
 let r;
 n(47120);
-var i, a, o, s, l = n(392711),
+var i, a, s, o, l = n(392711),
   u = n.n(l),
   c = n(442837),
   d = n(570140),
@@ -123,12 +123,12 @@ let t = C.get(e).channels;
 return null != t && Object.keys(t).length > 0;
   }
 }
-s = 'GuildSubscriptionsStore', (o = 'displayName') in(a = w) ? Object.defineProperty(a, o, {
-  value: s,
+o = 'GuildSubscriptionsStore', (s = 'displayName') in(a = w) ? Object.defineProperty(a, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = s, t.Z = new w(d.Z, {
+}) : a[s] = o, t.Z = new w(d.Z, {
   CONNECTION_OPEN: b,
   CONNECTION_RESUMED: b,
   CONNECTION_CLOSED: function() {

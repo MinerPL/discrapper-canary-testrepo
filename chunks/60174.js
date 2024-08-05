@@ -4,14 +4,14 @@ return M;
   }
 }), n(789020), n(47120);
 var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  r = n.n(s),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
   l = n(954955),
   o = n.n(l),
   c = n(507274),
-  d = n(481060),
-  u = n(130402),
+  u = n(481060),
+  d = n(130402),
   _ = n(466794),
   E = n(659215),
   I = n(222677),
@@ -19,16 +19,16 @@ var i = n(735250),
   T = n(931651),
   h = n(594174),
   N = n(630388),
-  f = n(74538),
-  p = n(566006),
-  C = n(981631),
+  C = n(74538),
+  f = n(566006),
+  p = n(981631),
   g = n(185923),
   S = n(474936),
   A = n(689938),
   R = n(716862),
-  x = n(372178);
+  O = n(372178);
 
-function O(e, t, n) {
+function x(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -36,65 +36,65 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class M extends a.Component {
+class M extends s.Component {
   render() {
 let {
   type: e,
   message: t,
   className: n,
-  children: a,
-  useChatFontScaling: s
+  children: s,
+  useChatFontScaling: a
 } = this.props, {
   isReactionPickerActive: l
-} = this.state, o = t.state === C.yb.SENDING, c = e === p.O.BURST;
-if (o || (0, N.yE)(t.flags, C.iLy.EPHEMERAL))
+} = this.state, o = t.state === p.yb.SENDING, c = e === f.O.BURST;
+if (o || (0, N.yE)(t.flags, p.iLy.EPHEMERAL))
   return null;
 let E = h.default.getCurrentUser(),
-  I = (0, f.I5)(E),
+  I = (0, C.I5)(E),
   m = c ? A.Z.Messages.ADD_BURST_REACTION : A.Z.Messages.ADD_REACTION;
 !I && c && (m = (0, i.jsx)(_.X, {
   tooltipText: A.Z.Messages.ADD_BURST_REACTION
 }));
-let T = s ? x : R;
-return (0, i.jsx)(d.Popout, {
+let T = a ? O : R;
+return (0, i.jsx)(u.Popout, {
   shouldShow: l,
   onRequestClose: this.handleReactionPickerToggle,
   renderPopout: this.renderReactionPopout,
   position: 'right',
   children: (e, t) => {
     let {
-      isShown: s
+      isShown: a
     } = t;
-    return (0, i.jsx)(d.TooltipContainer, {
+    return (0, i.jsx)(u.TooltipContainer, {
       text: m,
-      color: d.TooltipColors.PRIMARY,
+      color: u.TooltipColors.PRIMARY,
       'aria-label': c ? A.Z.Messages.ADD_BURST_REACTION : A.Z.Messages.ADD_REACTION,
       tooltipClassName: T.__invalid_addReactionTooltip,
-      children: (0, i.jsxs)(d.Clickable, {
+      children: (0, i.jsxs)(u.Clickable, {
         ...e,
         onClick: e => {
           this.handleAddReactionClick(e);
         },
-        onMouseEnter: () => (0, u.x)(g.qR.AddReactionPopoutMouseEntered),
-        onFocus: () => (0, u.x)(g.qR.AddReactionPopoutFocused),
+        onMouseEnter: () => (0, d.x)(g.qR.AddReactionPopoutMouseEntered),
+        onFocus: () => (0, d.x)(g.qR.AddReactionPopoutFocused),
         className: r()(T.reactionBtn, {
-          [T.active]: s
+          [T.active]: a
         }, n),
         children: [
           c ? (0, i.jsx)(i.Fragment, {
-            children: (0, i.jsx)(d.SuperReactionIcon, {
+            children: (0, i.jsx)(u.SuperReactionIcon, {
               size: 'sm',
               color: 'currentColor',
               className: T.icon
             })
           }) : (0, i.jsx)(i.Fragment, {
-            children: (0, i.jsx)(d.ReactionIcon, {
+            children: (0, i.jsx)(u.ReactionIcon, {
               size: 'sm',
               color: 'currentColor',
               className: T.icon
             })
           }),
-          a
+          s
         ]
       })
     });
@@ -102,64 +102,64 @@ return (0, i.jsx)(d.Popout, {
 });
   }
   constructor(...e) {
-super(...e), O(this, 'state', {
+super(...e), x(this, 'state', {
   isReactionPickerActive: !1
-}), O(this, 'onAddReaction', (e, t) => {
+}), x(this, 'onAddReaction', (e, t) => {
   if (null == e)
     return;
   let {
     channel: n,
     message: i,
-    isForumToolbar: a
+    isForumToolbar: s
   } = this.props;
-  (0, I.rU)(n.id, i.id, (0, m.g1)(e), a ? I.TW.FORUM_TOOLBAR : I.TW.MESSAGE, {
+  (0, I.rU)(n.id, i.id, (0, m.g1)(e), s ? I.TW.FORUM_TOOLBAR : I.TW.MESSAGE_INLINE_BUTTON, {
     burst: t
   });
-}), O(this, 'handleReactionPickerToggle', () => {
+}), x(this, 'handleReactionPickerToggle', () => {
   this.setState(e => ({
     isReactionPickerActive: !e.isReactionPickerActive
   }));
-}), O(this, 'handleAddReactionClick', e => {
+}), x(this, 'handleAddReactionClick', e => {
   let {
     type: t,
     channel: n
   } = this.props;
   e.stopPropagation();
   let i = h.default.getCurrentUser();
-  t === p.O.BURST && !(0, f.I5)(i) && (0, E.openBurstReactionsUpsellModal)({
+  t === f.O.BURST && !(0, C.I5)(i) && (0, E.openBurstReactionsUpsellModal)({
     analytics: {
       type: S.cd.BURST_REACTION_UPSELL,
-      page: null != n.getGuildId() ? C.ZY5.GUILD_CHANNEL : C.ZY5.DM_CHANNEL,
+      page: null != n.getGuildId() ? p.ZY5.GUILD_CHANNEL : p.ZY5.DM_CHANNEL,
       section: (0, m.s4)(n),
-      object: C.qAy.INLINE_REACTION_PICKER_UPSELL
+      object: p.qAy.INLINE_REACTION_PICKER_UPSELL
     }
   }), this.handleReactionPickerToggle();
-}), O(this, 'renderReactionPopout', e => {
+}), x(this, 'renderReactionPopout', e => {
   let {
     closePopout: t
   } = e, {
     type: n,
-    channel: a,
-    message: s
+    channel: s,
+    message: a
   } = this.props, r = {
     openPopoutType: 'message_reaction_emoji_picker',
-    ...n === p.O.BURST && {
+    ...n === f.O.BURST && {
       openPopoutType: 'message_super_reaction_emoji_picker',
-      page: null != a.getGuildId() ? C.ZY5.GUILD_CHANNEL : C.ZY5.DM_CHANNEL,
-      section: (0, m.s4)(a),
-      object: C.qAy.REACTION_RAIL
+      page: null != s.getGuildId() ? p.ZY5.GUILD_CHANNEL : p.ZY5.DM_CHANNEL,
+      section: (0, m.s4)(s),
+      object: p.qAy.REACTION_RAIL
     }
   }, l = (0, i.jsx)(T.$, {
     closePopout: t,
-    channel: a,
+    channel: s,
     onSelectEmoji: (e, n, i) => {
       this.onAddReaction(e, i), n && (i ? o()(t, 150)() : t());
     },
     analyticsOverride: r,
-    messageId: s.id
+    messageId: a.id
   });
   return (0, i.jsx)(c.M.Consumer, {
-    children: e => e ? (0, i.jsx)(d.Dialog, {
+    children: e => e ? (0, i.jsx)(u.Dialog, {
       'aria-label': A.Z.Messages.REACTION_PICKER,
       children: l
     }) : l

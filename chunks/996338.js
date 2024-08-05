@@ -1,11 +1,11 @@
 var r = n(470079),
   i = n(844303),
   a = n(13942),
-  o = n(464854);
+  s = n(464854);
 t.Z = function(e) {
   var t = e.onChange,
 n = e.rgb,
-s = e.hsl,
+o = e.hsl,
 l = e.hex,
 u = e.disableAlpha,
 c = (0, i.default)({
@@ -61,9 +61,9 @@ d = function(e, r) {
     a: n.a,
     source: 'rgb'
   }, r) : e.a && (e.a < 0 ? e.a = 0 : e.a > 100 && (e.a = 100), e.a /= 100, t({
-    h: s.h,
-    s: s.s,
-    l: s.l,
+    h: o.h,
+    s: o.s,
+    l: o.l,
     a: e.a,
     source: 'rgb'
   }, r));
@@ -73,7 +73,7 @@ style: c.fields,
 className: 'flexbox-fix'
   }, r.createElement('div', {
 style: c.double
-  }, r.createElement(o.Vm, {
+  }, r.createElement(s.Vm, {
 style: {
   input: c.input,
   label: c.label
@@ -83,7 +83,7 @@ value: l.replace('#', ''),
 onChange: d
   })), r.createElement('div', {
 style: c.single
-  }, r.createElement(o.Vm, {
+  }, r.createElement(s.Vm, {
 style: {
   input: c.input,
   label: c.label
@@ -95,7 +95,7 @@ dragLabel: 'true',
 dragMax: '255'
   })), r.createElement('div', {
 style: c.single
-  }, r.createElement(o.Vm, {
+  }, r.createElement(s.Vm, {
 style: {
   input: c.input,
   label: c.label
@@ -107,7 +107,7 @@ dragLabel: 'true',
 dragMax: '255'
   })), r.createElement('div', {
 style: c.single
-  }, r.createElement(o.Vm, {
+  }, r.createElement(s.Vm, {
 style: {
   input: c.input,
   label: c.label
@@ -119,7 +119,7 @@ dragLabel: 'true',
 dragMax: '255'
   })), r.createElement('div', {
 style: c.alpha
-  }, r.createElement(o.Vm, {
+  }, r.createElement(s.Vm, {
 style: {
   input: c.input,
   label: c.label

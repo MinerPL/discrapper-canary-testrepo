@@ -6,14 +6,14 @@ return N;
 var r = n(735250),
   i = n(470079),
   a = n(525654),
-  o = n.n(a),
-  s = n(470716),
+  s = n.n(a),
+  o = n(470716),
   l = n(442837),
   u = n(946188),
   c = n(481060),
   d = n(596454),
-  _ = n(451478),
-  E = n(586576),
+  _ = n(406128),
+  E = n(451478),
   f = n(176354),
   h = n(63063),
   p = n(358085),
@@ -22,13 +22,13 @@ var r = n(735250),
   T = n(151851),
   g = n(981631),
   S = n(689938);
-let A = l.ZP.connectStores([_.Z], () => ({
-  focused: _.Z.isFocused()
+let A = l.ZP.connectStores([E.Z], () => ({
+  focused: E.Z.isFocused()
 }))(T.Z);
 class N extends i.PureComponent {
   getPlatform() {
 var e;
-let t = null === (e = o().os) || void 0 === e ? void 0 : e.family;
+let t = null === (e = s().os) || void 0 === e ? void 0 : e.family;
 return null != t && /^win/i.test(t) ? p.PlatformTypes.WINDOWS : null != t && /darwin|os x/i.test(t) ? p.PlatformTypes.OSX : p.PlatformTypes.LINUX;
   }
   componentDidMount() {
@@ -60,7 +60,7 @@ let e = (0, r.jsx)('div', {
   });
 return (0, r.jsxs)(i.Fragment, {
   children: [
-    (0, r.jsx)(s.ql, {
+    (0, r.jsx)(o.ql, {
       children: (0, r.jsx)('html', {
         className: (0, m.Q)(g.BRd.DARK)
       })
@@ -68,7 +68,7 @@ return (0, r.jsxs)(i.Fragment, {
     (0, r.jsx)(A, {
       type: this.getPlatform()
     }),
-    (0, r.jsx)(E.Z, {
+    (0, r.jsx)(_.Z, {
       title: S.Z.Messages.UNSUPPORTED_BROWSER_TITLE,
       note: e,
       action: t

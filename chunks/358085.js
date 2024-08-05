@@ -37,7 +37,7 @@ return c;
 return u;
   },
   isPlatformEmbedded: function() {
-return o;
+return s;
   },
   isWeb: function() {
 return _;
@@ -47,19 +47,19 @@ return l;
   }
 }), (i = r || (r = {})).WINDOWS = 'WINDOWS', i.OSX = 'OSX', i.LINUX = 'LINUX', i.WEB = 'WEB';
 let a = window.DiscordNative,
-  o = null != a,
-  s = null != a ? a.process.platform : '';
+  s = null != a,
+  o = null != a ? a.process.platform : '';
 
 function l() {
-  return /^win/.test(s);
+  return /^win/.test(o);
 }
 
 function u() {
-  return 'darwin' === s;
+  return 'darwin' === o;
 }
 
 function c() {
-  return 'linux' === s;
+  return 'linux' === o;
 }
 
 function d() {
@@ -80,11 +80,11 @@ function f() {
 }
 
 function h() {
-  return 'android' === s;
+  return 'android' === o;
 }
 
 function p() {
-  return 'ios' === s;
+  return 'ios' === o;
 }
 
 function m() {
@@ -92,14 +92,14 @@ function m() {
 }
 
 function I() {
-  return s;
+  return o;
 }
 
 function T() {
-  switch (s) {
+  switch (o) {
 case 'ios':
 case 'android':
-  return s;
+  return o;
 default:
   return 'web';
   }

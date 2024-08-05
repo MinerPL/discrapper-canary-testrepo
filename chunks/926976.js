@@ -1,37 +1,37 @@
-r.d(t, {
+t.d(r, {
   Z: function() {
-return I;
+return Z;
   }
-}), r(47120);
-var a = r(735250),
-  n = r(470079),
-  i = r(120356),
-  o = r.n(i),
-  l = r(913527),
-  c = r.n(l),
-  s = r(442837),
-  d = r(481060),
-  u = r(129861),
-  h = r(665149),
-  m = r(594174),
-  g = r(55935),
-  p = r(120816),
-  b = r(31336),
-  f = r(257785),
-  y = r(484036),
-  x = r(681619),
-  k = r(621060),
-  v = r(689938),
-  _ = r(813064),
-  w = r(979756);
-let C = [{
+}), t(47120);
+var a = t(735250),
+  n = t(470079),
+  i = t(120356),
+  o = t.n(i),
+  l = t(913527),
+  c = t.n(l),
+  s = t(442837),
+  d = t(481060),
+  u = t(129861),
+  h = t(665149),
+  m = t(594174),
+  g = t(55935),
+  p = t(120816),
+  b = t(31336),
+  f = t(257785),
+  y = t(484036),
+  x = t(681619),
+  k = t(621060),
+  v = t(689938),
+  _ = t(813064),
+  j = t(979756);
+let w = [{
 key: 'event',
 cellClassName: _.eventColumn,
 render(e) {
   let {
-    event: t
+    event: r
   } = e;
-  return t;
+  return r;
 }
   },
   {
@@ -39,39 +39,39 @@ key: 'location',
 cellClassName: _.locationColumn,
 render(e) {
   let {
-    properties: t
+    properties: r
   } = e;
-  return t.location;
+  return r.location;
 }
   }
 ];
 
-function j(e) {
+function C(e) {
   let {
-children: t
+children: r
   } = e;
   return (0, a.jsx)(d.ScrollerThin, {
 className: _.customPropertiesContainer,
 children: (0, a.jsx)('dl', {
-  children: t
+  children: r
 })
   });
 }
 
 function N(e) {
   let {
-name: t,
-children: r
+name: r,
+children: t
   } = e;
   return (0, a.jsxs)(a.Fragment, {
 children: [
   (0, a.jsx)('dt', {
     className: _.customPropertiesName,
-    children: t
+    children: r
   }),
   (0, a.jsx)('dd', {
     className: _.customPropertiesValue,
-    children: r
+    children: t
   })
 ]
   });
@@ -82,8 +82,8 @@ name: 'Details',
 render: e => {
   let {
     loggedEvent: {
-      event: t,
-      properties: r,
+      event: r,
+      properties: t,
       timestamp: n,
       fingerprint: i
     }
@@ -91,14 +91,14 @@ render: e => {
   return (0, a.jsxs)(a.Fragment, {
     children: [
       (0, a.jsxs)(h.ZP, {
-        className: o()(w.headerBar, _.subPanelHeaderBar),
+        className: o()(j.headerBar, _.subPanelHeaderBar),
         children: [
           (0, a.jsx)(h.ZP.Icon, {
             icon: d.AnalyticsIcon,
-            tooltip: t
+            tooltip: r
           }),
           (0, a.jsx)(h.ZP.Title, {
-            children: t
+            children: r
           })
         ]
       }),
@@ -127,18 +127,18 @@ render: e => {
           })
         ]
       }),
-      (0, a.jsx)(j, {
-        children: Object.entries(r).map(e => {
-          let [t, r] = e;
+      (0, a.jsx)(C, {
+        children: Object.entries(t).map(e => {
+          let [r, t] = e;
           return (0, a.jsx)(N, {
-            name: ''.concat(t, ':'),
-            children: null != r ? (0, a.jsx)('code', {
-              children: JSON.stringify(r)
+            name: ''.concat(r, ':'),
+            children: null != t ? (0, a.jsx)('code', {
+              children: JSON.stringify(t)
             }) : (0, a.jsx)('code', {
               className: _.emptyProperty,
               children: 'null'
             })
-          }, t);
+          }, r);
         })
       })
     ]
@@ -149,12 +149,12 @@ render: e => {
 events: {
   label: 'Events',
   filter: e => Object.entries(T).filter(e => {
-    let [t] = e;
-    return 'events' !== t;
-  }).map(t => {
-    let [r, {
+    let [r] = e;
+    return 'events' !== r;
+  }).map(r => {
+    let [t, {
       filter: a
-    }] = t;
+    }] = r;
     return !a(e);
   }).every(e => e)
 },
@@ -175,13 +175,13 @@ networkActions: {
 }
   };
 
-function I() {
+function Z() {
   let e = n.useRef(null),
-t = (0, s.e7)([p.Z], () => p.Z.loggedEvents),
-[r, i] = n.useState(Object.keys(T)),
-l = t.filter(e => {
-  for (let t of r)
-    if (T[t].filter(e))
+r = (0, s.e7)([p.Z], () => p.Z.loggedEvents),
+[t, i] = n.useState(Object.keys(T)),
+l = r.filter(e => {
+  for (let r of t)
+    if (T[r].filter(e))
       return !0;
   return !1;
 }),
@@ -195,7 +195,7 @@ h = l.find(e => e.key === c),
 }, []);
   return (0, a.jsxs)('div', {
 ref: e,
-className: o()(w.panel, _.panel),
+className: o()(j.panel, _.panel),
 children: [
   (0, a.jsxs)('div', {
     className: _.toolbar,
@@ -220,18 +220,18 @@ children: [
       (0, a.jsx)('div', {
         className: _.filters,
         children: Object.entries(T).map(e => {
-          let [t, n] = e;
+          let [r, n] = e;
           return (0, a.jsx)(d.Clickable, {
-            className: o()(_.filter, r.includes(t) && _.activeFilter),
+            className: o()(_.filter, t.includes(r) && _.activeFilter),
             onClick: () => {
               var e;
-              return e = t, void i(t => t.includes(e) ? t.filter(t => t !== e) : [
-                ...t,
+              return e = r, void i(r => r.includes(e) ? r.filter(r => r !== e) : [
+                ...r,
                 e
               ]);
             },
             children: n.label
-          }, t);
+          }, r);
         })
       })
     ]
@@ -239,7 +239,7 @@ children: [
   (0, a.jsx)(d.ScrollerThin, {
     className: _.tableContainer,
     children: (0, a.jsx)(x.Z, {
-      columns: C,
+      columns: w,
       data: l,
       selectedRowKey: c,
       onClickRow: u

@@ -6,8 +6,8 @@ return d;
 var r = n(913527),
   i = n.n(r),
   a = n(81825),
-  o = n(630388),
-  s = n(973616),
+  s = n(630388),
+  o = n(973616),
   l = n(981631);
 
 function u(e, t, n) {
@@ -26,7 +26,7 @@ let c = [
 ];
 class d extends a.Z {
   static createFromServer(e) {
-var t, n, r, a, o;
+var t, n, r, a, s;
 let {
   price: l
 } = e;
@@ -34,7 +34,7 @@ return new d({
   id: e.id,
   type: e.type,
   applicationId: e.application_id,
-  application: null != e.application ? s.Z.createFromServer(e.application) : null,
+  application: null != e.application ? o.Z.createFromServer(e.application) : null,
   productLine: e.product_line,
   name: null !== (t = e.name) && void 0 !== t ? t : '',
   releaseDate: null != e.release_date ? i()(e.release_date) : null,
@@ -66,7 +66,7 @@ return new d({
   locales: null !== (a = e.locales) && void 0 !== a ? a : ['en-US'],
   flags: e.flags,
   externalPurchaseUrl: e.external_purchase_url,
-  deleted: null !== (o = e.deleted) && void 0 !== o && o
+  deleted: null !== (s = e.deleted) && void 0 !== s && s
 });
   }
   get supportedOperatingSystems() {
@@ -116,16 +116,16 @@ return !this.premium && null != e && e.amount > 0;
 return c.includes(this.id);
   }
   get available() {
-return (0, o.yE)(this.flags, l.l4R.AVAILABLE) || null != this.externalPurchaseUrl;
+return (0, s.yE)(this.flags, l.l4R.AVAILABLE) || null != this.externalPurchaseUrl;
   }
   isAvailableForDistribution() {
-return this.available && null != this.getPrice() && null == this.externalPurchaseUrl && (!this.premium || (0, o.yE)(this.flags, l.l4R.PREMIUM_AND_DISTRIBUTION));
+return this.available && null != this.getPrice() && null == this.externalPurchaseUrl && (!this.premium || (0, s.yE)(this.flags, l.l4R.PREMIUM_AND_DISTRIBUTION));
   }
   isAvailable() {
-return (0, o.yE)(this.flags, l.l4R.AVAILABLE);
+return (0, s.yE)(this.flags, l.l4R.AVAILABLE);
   }
   isPremiumPerk() {
-return this.premium && ((0, o.yE)(this.flags, l.l4R.PREMIUM_PURCHASE) || (0, o.yE)(this.flags, l.l4R.PREMIUM_AND_DISTRIBUTION));
+return this.premium && ((0, s.yE)(this.flags, l.l4R.PREMIUM_PURCHASE) || (0, s.yE)(this.flags, l.l4R.PREMIUM_AND_DISTRIBUTION));
   }
   hasFeature(e) {
 return this.features.has(e);

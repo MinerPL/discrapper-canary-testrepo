@@ -1,6 +1,6 @@
-var i, a;
+var i, s;
 n.d(t, {
   $: function() {
 return i;
   }
-}), (a = i || (i = {})).JOIN_RAID = 'JOIN_RAID', a.DM_RAID = 'DM_RAID', a.MENTION_RAID = 'MENTION_RAID';
+}), (s = i || (i = {})).JOIN_RAID = 'JOIN_RAID', s.DM_RAID = 'DM_RAID', s.MENTION_RAID = 'MENTION_RAID';

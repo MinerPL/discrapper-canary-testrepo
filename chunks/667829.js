@@ -6,9 +6,9 @@ return U;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(392711),
-  l = n.n(s),
+  s = n.n(a),
+  o = n(392711),
+  l = n.n(o),
   u = n(218887),
   c = n.n(u),
   d = n(729594),
@@ -167,7 +167,7 @@ let {
 return e && !n ? D.Z.Messages.NO_SEND_MESSAGES_PERMISSION_PLACEHOLDER : t;
   }
   render() {
-var e, t, n, i, a, s;
+var e, t, n, i, a, o;
 let {
   textValue: l,
   richValue: u,
@@ -196,7 +196,7 @@ let {
   popup: F
 } = this.state, V = {
   channel: p,
-  className: o()(D, L.textArea, {
+  className: s()(D, L.textArea, {
     [L.textAreaSlate]: T,
     [L.textAreaDisabled]: c || B
   }),
@@ -220,7 +220,7 @@ let {
   onResize: f,
   onKeyDown: E,
   onSubmit: h,
-  textAreaPaddingClassName: o()(P[I], {
+  textAreaPaddingClassName: s()(P[I], {
     [L.textAreaWithoutAttachmentButton]: m !== A.I.NORMAL && m !== A.I.OVERLAY && m !== A.I.THREAD_CREATION && m !== A.I.SIDEBAR,
     [L.textAreaForPostCreation]: m === A.I.CREATE_FORUM_POST,
     [L.textAreaCustomGift]: m === A.I.CUSTOM_GIFT,
@@ -233,7 +233,7 @@ let {
   'aria-controls': null !== (a = F.id) && void 0 !== a ? a : void 0,
   'aria-haspopup': 'listbox',
   'aria-expanded': null !== F.id || void 0,
-  'aria-activedescendant': null !== (s = F.activeDescendant) && void 0 !== s ? s : void 0,
+  'aria-activedescendant': null !== (o = F.activeDescendant) && void 0 !== o ? o : void 0,
   'aria-invalid': l.length > U,
   'aria-describedby': x,
   'aria-labelledby': G,
@@ -340,12 +340,12 @@ super(e), t = this, b(this, 'ref', i.createRef()), b(this, '_focusBlurQueue', Pr
     uploadPromptCharacterCount: r,
     promptToUpload: i,
     maxCharacterCount: a,
-    type: o
+    type: s
   } = this.props;
   if (null == i || !t.isPrivate() && !n || t.isPrivate() && t.isManaged())
     return !1;
   let {
-    files: s
+    files: o
   } = function(e, t) {
     let n = [],
       r = [],
@@ -365,9 +365,9 @@ super(e), t = this, b(this, 'ref', i.createRef()), b(this, '_focusBlurQueue', Pr
       };
     if (r.length > 0) {
       if (1 === r.length && 'image/png' === r[0].type && null != a) {
-        var o;
+        var s;
         let t = r[0],
-          n = null !== (o = function(e) {
+          n = null !== (s = function(e) {
             let t = new DOMParser().parseFromString(e, 'text/html').querySelector('img');
             if (null != t) {
               let e;
@@ -380,7 +380,7 @@ super(e), t = this, b(this, 'ref', i.createRef()), b(this, '_focusBlurQueue', Pr
               if (null != e && e.length > 0)
                 return ''.concat(e, '.png');
             }
-          }(e.getData(a.type))) && void 0 !== o ? o : t.name;
+          }(e.getData(a.type))) && void 0 !== s ? s : t.name;
         return {
           files: [(0, S.dp)(t, n, t.type)]
         };
@@ -404,7 +404,7 @@ super(e), t = this, b(this, 'ref', i.createRef()), b(this, '_focusBlurQueue', Pr
     return {
       files: []
     };
-  }(e.clipboardData, o.uploadLongMessages ? null != r ? r : a : null);
+  }(e.clipboardData, s.uploadLongMessages ? null != r ? r : a : null);
   return M('onPaste', [...e.clipboardData.items].map(e => {
     if ('file' !== e.kind)
       return {
@@ -420,18 +420,18 @@ super(e), t = this, b(this, 'ref', i.createRef()), b(this, '_focusBlurQueue', Pr
         path: null == t ? void 0 : t.path
       };
     }
-  })), 0 !== s.length && (e.preventDefault(), e.stopPropagation(), this.saveCurrentText(), ((e, n) => {
+  })), 0 !== o.length && (e.preventDefault(), e.stopPropagation(), this.saveCurrentText(), ((e, n) => {
     var r, a;
-    let s = m.Z.getActiveCommand(t.id);
-    if (null == s)
-      return i(e, t, o.drafts.type, {
+    let o = m.Z.getActiveCommand(t.id);
+    if (null == o)
+      return i(e, t, s.drafts.type, {
         requireConfirm: !0,
         showLargeMessageDialog: n
       });
-    let l = null !== (r = o.drafts.commandType) && void 0 !== r ? r : o.drafts.type,
+    let l = null !== (r = s.drafts.commandType) && void 0 !== r ? r : s.drafts.type,
       u = null,
       c = m.Z.getActiveOption(t.id);
-    if (null != (u = (null == c ? void 0 : c.type) === h.jw.ATTACHMENT ? c : null === (a = s.options) || void 0 === a ? void 0 : a.find(e => {
+    if (null != (u = (null == c ? void 0 : c.type) === h.jw.ATTACHMENT ? c : null === (a = o.options) || void 0 === a ? void 0 : a.find(e => {
         if (e.type === h.jw.ATTACHMENT)
           return null == T.Z.getUpload(t.id, e.name, l);
       })))
@@ -445,7 +445,7 @@ super(e), t = this, b(this, 'ref', i.createRef()), b(this, '_focusBlurQueue', Pr
           file: e[0]
         }
       });
-  })(s), this.focus(), !0);
+  })(o), this.focus(), !0);
 }), this._unsubscribe = v.p8.subscribe(e => {
   requestAnimationFrame(() => {
     this.setState({

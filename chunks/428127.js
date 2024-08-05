@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return N;
+return E;
   }
 });
 var i = n(735250),
@@ -11,39 +11,38 @@ var i = n(735250),
   o = n(442837),
   c = n(692547),
   u = n(481060),
-  d = n(607070),
-  h = n(492162),
-  p = n(451478),
-  _ = n(409216),
-  f = n(934415),
-  m = n(968847),
-  g = n(689938),
-  C = n(369343);
-let I = {
+  d = n(492162),
+  h = n(451478),
+  p = n(409216),
+  _ = n(934415),
+  f = n(968847),
+  m = n(689938),
+  g = n(369343);
+let C = {
   friction: 30,
   tension: 300
 };
 
-function E(e) {
+function I(e) {
   var t;
   let {
 guildChannels: n,
 jumpToVoiceChannels: r
-  } = e, s = n.getCategoryFromSection(n.voiceChannelsSectionNumber), o = (0, h.Z)(n.id), d = l.useCallback(e => {
+  } = e, s = n.getCategoryFromSection(n.voiceChannelsSectionNumber), o = (0, d.Z)(n.id), h = l.useCallback(e => {
 e.preventDefault(), e.stopPropagation(), r();
-  }, [r]), p = null !== (t = null == s ? void 0 : s.getChannelRecords()) && void 0 !== t ? t : [], m = (0, f.c4)({
-channels: p,
+  }, [r]), f = null !== (t = null == s ? void 0 : s.getChannelRecords()) && void 0 !== t ? t : [], C = (0, _.c4)({
+channels: f,
 selectedChannelId: null,
 selectedVoiceChannelId: null,
 voiceStates: o
   });
   return (0, i.jsxs)(u.Clickable, {
-className: a()(C.bar),
-onClick: d,
+className: a()(g.bar),
+onClick: h,
 children: [
   (0, i.jsx)(u.VoiceNormalIcon, {
     size: 'custom',
-    className: C.voiceChannelsIcon,
+    className: g.voiceChannelsIcon,
     width: 14,
     height: 14,
     color: c.Z.unsafe_rawColors.GREEN_330.css
@@ -51,15 +50,15 @@ children: [
   (0, i.jsx)(u.Text, {
     variant: 'text-xs/semibold',
     color: 'text-positive',
-    className: C.barText,
-    children: g.Z.Messages.VOICE_CHANNEL_BAR_ACTIVE.format({
-      count: m.length
+    className: g.barText,
+    children: m.Z.Messages.VOICE_CHANNEL_BAR_ACTIVE.format({
+      count: C.length
     })
   }),
-  (0, i.jsx)(_.Z, {
+  (0, i.jsx)(p.Z, {
     guildId: n.id,
-    className: C.voiceChannelsUsers,
-    users: m.slice(0, 4),
+    className: g.voiceChannelsUsers,
+    users: C.slice(0, 4),
     renderMoreUsers: () => null,
     max: 4,
     size: u.AvatarSizes.SIZE_16
@@ -68,79 +67,78 @@ children: [
   });
 }
 
-function N(e) {
+function E(e) {
   let {
 position: t,
 guildChannels: n,
 guildChannelsVersion: r,
 jumpToVoiceChannels: c,
-jumpToChannel: h
+jumpToChannel: d
   } = e, {
-bottomBar: _,
-topBar: f
-  } = (0, o.cj)([m.Z], () => m.Z.getUnreadStateForGuildId(n.id)), N = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), x = (0, o.e7)([p.Z], () => p.Z.isFocused()), {
-mode: S,
-mentionCount: v,
-targetChannelId: Z
-  } = 'bottom' === t ? _ : f, T = S === m.x.HIDDEN, L = (0, s.useSpring)({
+bottomBar: p,
+topBar: _
+  } = (0, o.cj)([f.Z], () => f.Z.getUnreadStateForGuildId(n.id)), E = (0, o.e7)([h.Z], () => h.Z.isFocused()), {
+mode: N,
+mentionCount: x,
+targetChannelId: S
+  } = 'bottom' === t ? p : _, v = N === f.x.HIDDEN, Z = (0, u.useSpring)({
 to: {
-  transform: T ? 'bottom' === t ? 'translateY(180%)' : 'translateY(-180%)' : 'translateY(0%)'
+  transform: v ? 'bottom' === t ? 'translateY(180%)' : 'translateY(-180%)' : 'translateY(0%)'
 },
-config: I,
-immediate: N || !x
-  }), A = l.useCallback(e => {
-e.preventDefault(), e.stopPropagation(), null != Z && h(Z);
+config: C
+  }, E ? 'respect-motion-settings' : 'animate-never'), T = l.useCallback(e => {
+e.preventDefault(), e.stopPropagation(), null != S && d(S);
   }, [
-h,
-Z
+d,
+S
   ]);
   return (0, i.jsx)('div', {
-className: a()(C.container, {
-  [C.top]: 'top' === t,
-  [C.bottom]: 'bottom' === t
+className: a()(g.container, {
+  [g.top]: 'top' === t,
+  [g.bottom]: 'bottom' === t
 }),
 children: (0, i.jsx)(s.animated.div, {
-  className: C.containerPadding,
-  style: L,
-  'aria-hidden': T,
-  children: S === m.x.HIDDEN ? (0, i.jsx)('div', {
-    className: a()(C.bar, C.emptyBar)
-  }) : S === m.x.UNREAD ? (0, i.jsxs)(u.Clickable, {
-    className: C.bar,
-    onClick: A,
+  className: g.containerPadding,
+  style: Z,
+  'aria-hidden': v,
+  children: N === f.x.HIDDEN ? (0, i.jsx)('div', {
+    className: a()(g.bar, g.emptyBar)
+  }) : N === f.x.UNREAD ? (0, i.jsxs)(u.Clickable, {
+    className: g.bar,
+    onClick: T,
     children: [
       'bottom' === t ? (0, i.jsx)(u.ChevronSmallDownIcon, {
         size: 'custom',
         color: 'currentColor',
-        className: C.unreadIcon,
+        className: g.unreadIcon,
         height: 14,
         width: 14
       }) : (0, i.jsx)(u.ChevronSmallUpIcon, {
         size: 'custom',
         color: 'currentColor',
-        className: C.unreadIcon,
+        className: g.unreadIcon,
         height: 14,
         width: 14
       }),
       (0, i.jsx)(u.Text, {
         variant: 'text-xs/semibold',
         color: 'interactive-normal',
-        className: C.barText,
-        children: g.Z.Messages.NEW_UNREADS
+        className: g.barText,
+        children: m.Z.Messages.NEW_UNREADS
       })
     ]
-  }) : S === m.x.MENTIONS ? (0, i.jsx)(u.Clickable, {
-    className: a()(C.bar, C.mentionsBar),
-    onClick: A,
+  }) : N === f.x.MENTIONS ? (0, i.jsx)(u.Clickable, {
+    className: a()(g.bar, g.mentionsBar),
+    onClick: T,
     children: (0, i.jsx)(u.Text, {
       variant: 'text-xs/semibold',
       color: 'status-danger-text',
-      className: C.barText,
-      children: g.Z.Messages.NEW_MENTIONS_COUNT.format({
-        count: v
+      className: g.barText,
+      children: m.Z.Messages.NEW_MENTIONS_COUNT.format({
+        count: x
       })
     })
-  }) : S === m.x.VOICE_CHANNELS ? (0, i.jsx)(E, {
+  }) : N === f.x.VOICE_CHANNELS ? (0, i.jsx)(I, {
     jumpToVoiceChannels: c,
     guildChannels: n,
     guildChannelsVersion: r

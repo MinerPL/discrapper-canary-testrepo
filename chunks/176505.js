@@ -1,4 +1,4 @@
-var r, i, a, o;
+var r, i, a, s;
 n.d(t, {
   $x: function() {
 return _;
@@ -22,7 +22,7 @@ return u;
 return h;
   },
   Vg: function() {
-return s;
+return o;
   },
   Z7: function() {
 return E;
@@ -34,10 +34,10 @@ return r;
 return d;
   }
 }), n(47120), (a = r || (r = {})).ROLE_SUBSCRIPTIONS = 'role-subscriptions', a.GUILD_SHOP = 'shop', a.MEMBER_APPLICATIONS = 'member-applications', a.GUILD_HOME = '@home', a.CHANNEL_BROWSER = 'channel-browser', a.GUILD_ONBOARDING = 'onboarding', a.CUSTOMIZE_COMMUNITY = 'customize-community', a.MEMBER_SAFETY = 'member-safety';
-let s = new Set(Object.values(r));
+let o = new Set(Object.values(r));
 
 function l(e) {
-  return s.has(e);
+  return o.has(e);
 }
 
 function u(e, t) {
@@ -65,6 +65,6 @@ IS_JOIN_REQUEST_INTERVIEW_CHANNEL: 65536
   }),
   _ = 1024,
   E = 4096;
-(o = i || (i = {})).GUILD_HOME = 'home', o.SERVER_GUIDE = 'guide', o.CHANNEL_BROWSER = 'browse', o.CUSTOMIZE_COMMUNITY = 'customize';
+(s = i || (i = {})).GUILD_HOME = 'home', s.SERVER_GUIDE = 'guide', s.CHANNEL_BROWSER = 'browse', s.CUSTOMIZE_COMMUNITY = 'customize';
 let f = new Set(Object.values(i)),
   h = '131';

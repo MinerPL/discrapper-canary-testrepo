@@ -27,11 +27,11 @@ var s = n(735250),
   S = n(191471),
   h = n(467319),
   g = n(241559),
-  C = n(592125),
-  x = n(496675),
-  p = n(246946),
-  R = n(594174),
-  f = n(474333),
+  C = n(777036),
+  x = n(592125),
+  p = n(496675),
+  R = n(246946),
+  f = n(594174),
   L = n(626135),
   O = n(63063),
   A = n(78451),
@@ -48,19 +48,19 @@ var s = n(735250),
 function B(e) {
   let {
 guild: t
-  } = e, n = t.canHaveRaidActivityAlerts(), i = (0, o.e7)([x.Z], () => null != t && x.Z.can(U.Plq.MANAGE_GUILD, t), [t]), {
+  } = e, n = t.canHaveRaidActivityAlerts(), i = (0, o.e7)([p.Z], () => null != t && p.Z.can(U.Plq.MANAGE_GUILD, t), [t]), {
 enableRaidAlerts: r
   } = N.l.useExperiment({
 guildId: t.id,
 location: '1a2662_1'
   }, {
 autoTrackExposure: i
-  }), l = (0, h.a)(t.id), d = (0, o.e7)([C.Z], () => C.Z.getChannel(t.safetyAlertsChannelId), [t.safetyAlertsChannelId]), u = (0, I.ZP)(d), m = null != d, g = a.useMemo(() => {
+  }), l = (0, h.a)(t.id), d = (0, o.e7)([x.Z], () => x.Z.getChannel(t.safetyAlertsChannelId), [t.safetyAlertsChannelId]), u = (0, I.ZP)(d), m = null != d, g = a.useMemo(() => {
 let e = (null == d ? void 0 : d.type) != null ? (0, E.Th)(d.type) : null;
 return null != e ? e : c.TextIcon;
   }, [d]);
 
-  function p() {
+  function R() {
 if (!!r)
   (0, S.K)(t.id);
   }
@@ -121,7 +121,7 @@ children: [
           variant: 'text-sm/medium',
           children: G.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION
         }),
-        onClick: r ? p : void 0,
+        onClick: r ? R : void 0,
         subsection: r ? (0, s.jsxs)('div', {
           className: P.settingsRowSubsection,
           children: [
@@ -182,11 +182,11 @@ children: [
           ]
         }) : null
       }),
-      !m && r ? (0, s.jsx)(f.Z, {
-        messageType: f.Q.INFO,
+      !m && r ? (0, s.jsx)(C.Z, {
+        messageType: C.Q.INFO,
         textVariant: 'text-xs/normal',
         children: G.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ENABLE_TIP.format({
-          onClick: p
+          onClick: R
         })
       }) : null,
       l ? (0, s.jsx)(b.Z, {
@@ -238,7 +238,7 @@ children: [
 function y(e) {
   let {
 guild: t
-  } = e, n = (0, o.e7)([x.Z], () => null != t && x.Z.can(U.Plq.MANAGE_GUILD, t), [t]), i = a.useCallback(async e => {
+  } = e, n = (0, o.e7)([p.Z], () => null != t && p.Z.can(U.Plq.MANAGE_GUILD, t), [t]), i = a.useCallback(async e => {
 let {
   value: n
 } = e;
@@ -295,7 +295,7 @@ function F(e) {
 guild: t,
 className: n,
 withDivider: i = !0
-  } = e, l = (0, o.e7)([x.Z], () => null != t && x.Z.can(U.Plq.MANAGE_GUILD, t), [t]), d = a.useCallback(async e => {
+  } = e, l = (0, o.e7)([p.Z], () => null != t && p.Z.can(U.Plq.MANAGE_GUILD, t), [t]), d = a.useCallback(async e => {
 let {
   value: n
 } = e;
@@ -367,7 +367,7 @@ features: n
 function k(e) {
   let {
 guild: t
-  } = e, n = (0, o.e7)([x.Z], () => null != t && x.Z.can(U.Plq.MANAGE_GUILD, t), [t]), i = t.hasFeature(U.oNc.COMMUNITY), r = (0, g.n2)(t.id), [l, d] = a.useState(t.hasFeature(U.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)), u = a.useCallback(async e => {
+  } = e, n = (0, o.e7)([p.Z], () => null != t && p.Z.can(U.Plq.MANAGE_GUILD, t), [t]), i = t.hasFeature(U.oNc.COMMUNITY), r = (0, g.n2)(t.id), [l, d] = a.useState(t.hasFeature(U.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)), u = a.useCallback(async e => {
 d(e), await w(t, e);
   }, [t]);
   return i || !r ? null : (0, s.jsxs)(s.Fragment, {
@@ -402,8 +402,8 @@ children: [
           ]
         })
       }),
-      (0, s.jsx)(f.Z, {
-        messageType: f.Q.INFO,
+      (0, s.jsx)(C.Z, {
+        messageType: C.Q.INFO,
         textVariant: 'text-xs/normal',
         children: G.Z.Messages.GUILD_SETTINGS_SAFETY_MODERATION_EXPERIENCE_IN_COMMUNITY
       })
@@ -420,7 +420,7 @@ function H(e) {
   let {
 guild: t,
 mfaLevel: n
-  } = e, i = (0, o.e7)([x.Z], () => null != t && x.Z.can(U.Plq.MANAGE_GUILD, t), [t]), r = (0, o.e7)([R.default], () => R.default.getCurrentUser()), {
+  } = e, i = (0, o.e7)([p.Z], () => null != t && p.Z.can(U.Plq.MANAGE_GUILD, t), [t]), r = (0, o.e7)([f.default], () => f.default.getCurrentUser()), {
 isGuildOwnerWithMFA: u,
 showMFAUserTooltip: _
   } = a.useMemo(() => null == r ? {
@@ -470,8 +470,8 @@ children: [
           ]
         })
       }),
-      _ && (0, s.jsx)(f.Z, {
-        messageType: f.Q.INFO,
+      _ && (0, s.jsx)(C.Z, {
+        messageType: C.Q.INFO,
         textVariant: 'text-xs/normal',
         children: G.Z.Messages.GUILD_SETTINGS_REQ_MFA_TOOLTIP.format({
           onClick: function() {
@@ -490,7 +490,7 @@ function V() {
   let {
 guild: t,
 mfaLevel: n
-  } = (0, o.cj)([D.Z], () => D.Z.getProps(), []), a = (0, o.e7)([p.Z], () => p.Z.enabled, []), {
+  } = (0, o.cj)([D.Z], () => D.Z.getProps(), []), a = (0, o.e7)([R.Z], () => R.Z.enabled, []), {
 showAlertMode: i
   } = (0, m.sw)(null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : U.lds);
   return null == t ? null : a ? (0, s.jsx)(u.Z, {}) : (0, s.jsxs)(c.FormSection, {

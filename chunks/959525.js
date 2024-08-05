@@ -6,7 +6,7 @@ return r;
 return i;
   },
   hN: function() {
-return o;
+return s;
   },
   yF: function() {
 return a;
@@ -15,4 +15,4 @@ return a;
 let r = /\{.+?\}/,
   i = /[~*_]{2}.+?[~*_]{2}|\[.*?\]\(.+?\)|\n\n/,
   a = /!!/,
-  o = /!!/g;
+  s = /!!/g;

@@ -6,21 +6,21 @@ return i;
 var E = a(735250);
 a(470079);
 var _ = a(388905),
-  n = a(837748),
-  r = a(306453),
-  t = a(58346),
+  t = a(837748),
+  n = a(306453),
+  r = a(58346),
   L = a(804498);
 let l = {
-  [t.HQ.CLASSROOM]: a(320440),
-  [t.HQ.LOCAL_COMMUNITIES]: a(526916),
-  [t.HQ.CREATORS_HOBBIES]: a(419185),
-  [t.HQ.GLOBAL_COMMUNITIES]: a(540909),
-  [t.HQ.FRIENDS_FAMILY]: a(826806),
-  [t.HQ.STUDY_GROUPS]: a(29654),
-  [t.HQ.CREATE_FROM_SCRATCH]: a(561030),
-  [t.HQ.CAMPUS_CLUBS]: a(494207),
-  [t.HQ.LEAGUE_CLUBS]: a(232454),
-  [t.HQ.GITHUB_HACKATHON]: a(123013)
+  [r.HQ.CLASSROOM]: a(320440),
+  [r.HQ.LOCAL_COMMUNITIES]: a(526916),
+  [r.HQ.CREATORS_HOBBIES]: a(419185),
+  [r.HQ.GLOBAL_COMMUNITIES]: a(540909),
+  [r.HQ.FRIENDS_FAMILY]: a(826806),
+  [r.HQ.STUDY_GROUPS]: a(29654),
+  [r.HQ.CREATE_FROM_SCRATCH]: a(561030),
+  [r.HQ.CAMPUS_CLUBS]: a(494207),
+  [r.HQ.LEAGUE_CLUBS]: a(232454),
+  [r.HQ.GITHUB_HACKATHON]: a(123013)
 };
 
 function i(e) {
@@ -34,7 +34,7 @@ let {
   header: e,
   description: l,
   author: T
-} = (0, n.Z)(i);
+} = (0, t.Z)(i);
 return (0, E.jsxs)('div', {
   children: [
     (0, E.jsx)('img', {
@@ -50,7 +50,7 @@ return (0, E.jsxs)('div', {
     (0, E.jsx)(_.DK, {
       children: l
     }),
-    a.state === t.Rj.RESOLVED ? (0, E.jsx)(r.D, {
+    a.state === r.Rj.RESOLVED ? (0, E.jsx)(n.D, {
       className: L.usagePill,
       count: null !== (c = a.usageCount) && void 0 !== c ? c : 0,
       verifiedName: T
@@ -58,7 +58,7 @@ return (0, E.jsxs)('div', {
   ]
 });
   }
-  return (0, E.jsx)(r.Z, {
+  return (0, E.jsx)(n.Z, {
 pillClassName: L.usagePill,
 guildTemplate: a,
 tall: !0

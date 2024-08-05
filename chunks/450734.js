@@ -5,8 +5,8 @@ return h;
 });
 var r = n(735250);
 n(470079);
-var i = n(120356),
-  s = n.n(i),
+var s = n(120356),
+  i = n.n(s),
   l = n(442837),
   o = n(481060),
   a = n(906732),
@@ -23,7 +23,7 @@ function h(e) {
   let {
 user: t,
 guild: n,
-displayProfile: i,
+displayProfile: s,
 canUsePremiumCustomization: u,
 previewAvatar: h,
 previewAvatarDecoration: I,
@@ -35,10 +35,10 @@ isTryItOutFlow: P,
 onUpsellClick: Z
   } = e, {
 analyticsLocations: A
-  } = (0, a.ZP)(), T = (0, l.e7)([d.Z], () => d.Z.getStatus(t.id)), N = null == n || (null == i ? void 0 : i.canUsePremiumProfileCustomization) || u, S = (0, r.jsx)(_, {
+  } = (0, a.ZP)(), T = (0, l.e7)([d.Z], () => d.Z.getStatus(t.id)), N = null == n || (null == s ? void 0 : s.canUsePremiumProfileCustomization) || u, S = (0, r.jsx)(_, {
 src: h,
 avatarDecoration: I,
-imageClassName: s()(C, {
+imageClassName: i()(C, {
   [p.overlay]: !x
 }),
 size: o.AvatarSizes.SIZE_80,
@@ -70,7 +70,7 @@ renderPopout: e => {
 },
 children: e => (0, r.jsxs)(o.Clickable, {
   ...e,
-  className: s()(p.avatar, p.clickable),
+  className: i()(p.avatar, p.clickable),
   children: [
     S,
     (0, r.jsx)(o.PencilIcon, {
@@ -84,7 +84,7 @@ children: e => (0, r.jsxs)(o.Clickable, {
 })
   }) : (0, r.jsxs)(o.Clickable, {
 onClick: Z,
-className: s()(p.avatar, p.clickable),
+className: i()(p.avatar, p.clickable),
 children: [
   S,
   (0, r.jsx)(o.NitroWheelIcon, {

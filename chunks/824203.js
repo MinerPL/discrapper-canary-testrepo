@@ -9,17 +9,17 @@ return d;
 var r = n(39621),
   i = n(911969),
   a = n(213459),
-  o = n(581364),
-  s = n(807169),
+  s = n(581364),
+  o = n(807169),
   l = n(104793),
   u = n(689938);
 
 function c(e, t, n) {
   var r, u, c, d;
-  let _ = (0, s.Hs)(t, i.yU.CHAT),
+  let _ = (0, o.Hs)(t, i.yU.CHAT),
 E = (0, a.PL)(!0, !1),
 f = (0, a.LD)(null == t ? void 0 : t.guild_id, !1),
-h = (0, o.vC)(null == t ? void 0 : t.guild_id, n);
+h = (0, s.vC)(null == t ? void 0 : t.guild_id, n);
   if (null == e || h)
 return !1;
   let {

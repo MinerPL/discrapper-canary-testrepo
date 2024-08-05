@@ -1,15 +1,15 @@
 n.d(t, {
   n: function() {
-return o;
+return s;
   },
   x: function() {
-return s;
+return o;
   }
 }), n(47120);
 var r = n(544891),
   i = n(570140),
   a = n(981631);
-async function o() {
+async function s() {
   i.Z.dispatch({
 type: 'EMOJI_CAPTIONS_FETCH'
   });
@@ -34,7 +34,7 @@ i.Z.dispatch({
   }
 }
 
-function s(e) {
+function o(e) {
   i.Z.dispatch({
 type: 'EMOJI_INTERACTION_INITIATED',
 interaction: e

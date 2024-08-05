@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(570140),
+var a = n(481060),
+  s = n(570140),
   r = n(988298),
   l = n(447543),
   o = n(13245),
@@ -52,20 +52,20 @@ handler(e) {
       type: n,
       pid: i
     }
-  } = e, s = t.application.id;
-  if (null == s)
+  } = e, a = t.application.id;
+  if (null == a)
     throw new _.Z({
       errorCode: g.lTL.INVALID_COMMAND
     }, 'No application.');
-  let a = d.Z.getApplicationActivity(s);
-  if (null == a || null == a.secrets || !(0, h.t9)(n, a.party, a.secrets))
+  let s = d.Z.getApplicationActivity(a);
+  if (null == s || null == s.secrets || !(0, h.t9)(n, s.party, s.secrets))
     throw new _.Z({
       errorCode: g.lTL.NO_ELIGIBLE_ACTIVITY
     }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
   let {
     lock: l
-  } = (0, I.s0)(i), o = (0, c.Z)(a, u.Z);
-  return (0, r.h7)(a, o).then(() => {
+  } = (0, I.s0)(i), o = (0, c.Z)(s, u.Z);
+  return (0, r.h7)(s, o).then(() => {
     if (l(), o)
       throw new _.Z({
         errorCode: g.lTL.NO_ELIGIBLE_ACTIVITY
@@ -101,15 +101,15 @@ handler(e) {
         errorCode: g.lTL.INVALID_INVITE
       }, 'Invalid invite id: '.concat(i));
     let {
-      context: s,
+      context: a,
       lock: r
     } = (0, I.s0)(n);
     return new Promise(e => {
-      a.Z.dispatch({
+      s.Z.dispatch({
         type: 'INVITE_MODAL_OPEN',
         invite: t,
         code: i,
-        context: s,
+        context: a,
         resolve: e
       });
     }).then(r);
@@ -126,8 +126,8 @@ handler(e) {
     args: {
       pid: t
     },
-    socket: a
-  } = e, r = a.application.id;
+    socket: s
+  } = e, r = s.application.id;
   if (null == r)
     throw new _.Z({
       errorCode: g.lTL.INVALID_COMMAND
@@ -136,14 +136,14 @@ handler(e) {
     lock: l
   } = (0, I.s0)(t);
   return new Promise(e => {
-    (0, s.openModalLazy)(async () => {
+    (0, a.openModalLazy)(async () => {
       let {
         default: t
       } = await n.e('66063').then(n.bind(n, 344516));
       return n => (0, i.jsx)(t, {
         ...n,
         mediaEngineContext: r,
-        title: a.application.name,
+        title: s.application.name,
         onClose: () => {
           n.onClose(), l(), e();
         }

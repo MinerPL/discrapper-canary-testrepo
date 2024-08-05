@@ -1,6 +1,6 @@
 n.d(t, {
   Q: function() {
-return s;
+return o;
   }
 });
 var r = n(818083),
@@ -20,7 +20,7 @@ treatments: [{
   }
 }]
   }),
-  o = (0, r.B)({
+  s = (0, r.B)({
 kind: 'user',
 id: '2022-03_block_russian_purchases_desktop',
 label: 'Block purchases based on country (desktop specific flags)',
@@ -36,7 +36,7 @@ treatments: [{
 }]
   });
 
-function s() {
+function o() {
   let {
 paymentsBlocked: e
   } = a.useExperiment({
@@ -45,7 +45,7 @@ location: 'c519a9_1'
 autoTrackExposure: !1
   }), {
 checkPaymentSource: t
-  } = o.useExperiment({
+  } = s.useExperiment({
 location: 'c519a9_2'
   }, {
 autoTrackExposure: !1

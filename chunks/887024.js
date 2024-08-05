@@ -15,9 +15,9 @@ return D;
 var r = n(470079),
   i = n(772848),
   a = n(120356),
-  o = n.n(a);
+  s = n.n(a);
 
-function s(e, t) {
+function o(e, t) {
   var n = e.x,
 r = e.y;
   return n > t.x && n < t.x + t.width && r > t.y && r < t.y + t.height;
@@ -31,11 +31,11 @@ function e(e) {
   this.id = e.id, this.position = e.position, this.velocity = e.velocity, this.rotation = e.rotation, this.dragCoefficient = e.dragCoefficient, this.size = e.size, this.opacity = e.opacity, this.spriteX = e.spriteX, this.spriteY = e.spriteY, this.spriteWidth = e.spriteWidth, this.spriteHeight = e.spriteHeight, this._lastUpdatedAt = Date.now();
 }
 return e.prototype.getNewForces = function(e, t) {
-  var n, r, i, a, o = e.wind * t,
-    s = -e.gravity * t;
+  var n, r, i, a, s = e.wind * t,
+    o = -e.gravity * t;
   return {
-    x: o + (n = this.dragCoefficient.x, n * (r = this.velocity.x) * r * (r > 0 ? -1 : 1)),
-    y: s + (i = this.dragCoefficient.y, i * (a = this.velocity.y) * a * (a > 0 ? -1 : 1))
+    x: s + (n = this.dragCoefficient.x, n * (r = this.velocity.x) * r * (r > 0 ? -1 : 1)),
+    y: o + (i = this.dragCoefficient.y, i * (a = this.velocity.y) * a * (a > 0 ? -1 : 1))
   };
 }, e.prototype.update = function(e) {
   var t = Date.now(),
@@ -50,10 +50,10 @@ return e.prototype.getNewForces = function(e, t) {
     r = this.velocity.previewUpdate(n),
     i = this.getNewForces(e, n),
     a = i.x,
-    o = i.y;
-  r.x += a, r.y += o;
-  var s = this.position.previewUpdate(n);
-  return s.x += r.x * n, s.y += r.y * n, s;
+    s = i.y;
+  r.x += a, r.y += s;
+  var o = this.position.previewUpdate(n);
+  return o.x += r.x * n, o.y += r.y * n, o;
 }, e.prototype.draw = function(e, t) {
   t.save(), t.globalAlpha = this.opacity.value, t.setTransform(new DOMMatrix().translateSelf(this.position.x * n.g.devicePixelRatio, this.position.y * n.g.devicePixelRatio).rotateSelf(this.rotation.x, this.rotation.y, this.rotation.z)), t.drawImage(e, this.spriteX, this.spriteY, this.spriteWidth, this.spriteHeight, -this.width / 2 * n.g.devicePixelRatio, -this.height / 2 * n.g.devicePixelRatio, this.width * n.g.devicePixelRatio, this.height * n.g.devicePixelRatio), t.restore();
 }, e.prototype.shouldDestroy = function(e, t) {
@@ -204,12 +204,12 @@ return E(t, e), t.prototype.update = function(e) {
 }, t;
   }(h),
   g = function(e) {
-function t(t, n, r, i, a, o) {
-  var s = e.call(this, t) || this;
-  s.min = n, s.max = r, s.duration = i;
-  var l = s.value / (s.max - s.min) * s.duration,
+function t(t, n, r, i, a, s) {
+  var o = e.call(this, t) || this;
+  o.min = n, o.max = r, o.duration = i;
+  var l = o.value / (o.max - o.min) * o.duration,
     u = isNaN(l) ? 0 : l;
-  return s.timePassed = u < 0 ? s.duration - u : u, s.directionMultiplier = a, s.easingFunction = o, s;
+  return o.timePassed = u < 0 ? o.duration - u : u, o.directionMultiplier = a, o.easingFunction = s, o;
 }
 return E(t, e), t.prototype.update = function(e) {
   var t = this.doUpdate(e),
@@ -284,15 +284,15 @@ switch (e.type) {
   case 'linear-random':
     n = v(e.minValue), r = v(e.maxValue);
     var a = v(e.minAddValue),
-      o = v(e.maxAddValue);
-    return new p(new T(S(n.x, r.x), S(a.x, o.x)), new T(S(n.y, r.y), S(a.x, o.x)));
+      s = v(e.maxAddValue);
+    return new p(new T(S(n.x, r.x), S(a.x, s.x)), new T(S(n.y, r.y), S(a.x, s.x)));
   case 'oscillating':
     t = v(e.value);
-    var s = v(e.start),
+    var o = v(e.start),
       l = v(e.final),
       u = v(e.duration),
       c = v(e.direction);
-    return new p(new g(t.x, s.x, l.x, u.x, c.x, e.easingFunction), new g(t.y, s.y, l.y, u.x, c.y, e.easingFunction));
+    return new p(new g(t.x, o.x, l.x, u.x, c.x, e.easingFunction), new g(t.y, o.y, l.y, u.x, c.y, e.easingFunction));
   case 'oscillating-random':
     n = v(e.minValue), r = v(e.maxValue);
     var d = v(e.minStart),
@@ -311,7 +311,7 @@ valueType: 'Vector2'
 }
 var C = r.forwardRef(function(e, t) {
   var a = e.className,
-o = e.environment,
+s = e.environment,
 l = e.onClick,
 d = e.onMouseDown,
 _ = e.onMouseMove,
@@ -351,14 +351,14 @@ M = r.useCallback(function() {
       t.clearRect(0, 0, e.width, e.height), null == h || h(t), y.current.forEach(function(n, r) {
         var i = n.confetti,
           a = n.spriteCanvas;
-        i.update(o), i.draw(a, t), i.shouldDestroy(e, o) && y.current.delete(r);
+        i.update(s), i.draw(a, t), i.shouldDestroy(e, s) && y.current.delete(r);
       }), null == p || p(t), y.current.size > 0 ? D.current = window.requestAnimationFrame(M) : (t.clearRect(0, 0, e.width, e.height), D.current = null);
       var n = Date.now();
       0 !== L.current && (b.current = 1000 / (n - L.current)), L.current = n;
     }
   }
 }, [
-  o,
+  s,
   p,
   h
 ]);
@@ -372,8 +372,8 @@ null != D.current && (window.cancelAnimationFrame(D.current), D.current = window
   }), null == D.current && M();
 }, [M]),
 U = r.useCallback(function(e, t, n, r, a) {
-  var o, s, l, d, _, E, h, p, v, C, y, D, L, b, M, U = (o = null !== (M = e.id) && void 0 !== M ? M : (0, i.Z)(), s = e, l = n, d = r, _ = a, p = R((h = (E = s, f(f({
-    id: o
+  var s, o, l, d, _, E, h, p, v, C, y, D, L, b, M, U = (s = null !== (M = e.id) && void 0 !== M ? M : (0, i.Z)(), o = e, l = n, d = r, _ = a, p = R((h = (E = o, f(f({
+    id: s
   }, c), E))).size), C = (v = function(e, t) {
     if (null != e) {
       var n = t.sprites.findIndex(function(t) {
@@ -394,7 +394,7 @@ U = r.useCallback(function(e, t, n, r, a) {
     }) : -1;
     return -1 !== i ? i : Math.floor(S(0, n.colors.length - 1));
   }(null != d ? d : C, _, l), new u({
-    id: o,
+    id: s,
     position: R(h.position),
     velocity: R(h.velocity),
     rotation: (L = h.rotation, function(e) {
@@ -413,15 +413,15 @@ U = r.useCallback(function(e, t, n, r, a) {
         case 'linear-random':
           n = O(e.minValue), r = O(e.maxValue);
           var a = O(e.minAddValue),
-            o = O(e.maxAddValue);
-          return new m(new T(S(n.x, r.x), S(a.x, o.x)), new T(S(n.y, r.y), S(a.y, o.y)), new T(S(n.z, r.z), S(a.z, o.z)));
+            s = O(e.maxAddValue);
+          return new m(new T(S(n.x, r.x), S(a.x, s.x)), new T(S(n.y, r.y), S(a.y, s.y)), new T(S(n.z, r.z), S(a.z, s.z)));
         case 'oscillating':
           t = O(e.value);
-          var s = O(e.start),
+          var o = O(e.start),
             l = O(e.final),
             u = O(e.duration),
             c = O(e.direction);
-          return new m(new g(t.x, s.x, l.x, u.x, c.x, e.easingFunction), new g(t.y, s.y, l.y, u.z, c.y, e.easingFunction), new g(t.z, s.z, l.z, u.z, c.z, e.easingFunction));
+          return new m(new g(t.x, o.x, l.x, u.x, c.x, e.easingFunction), new g(t.y, o.y, l.y, u.z, c.y, e.easingFunction), new g(t.z, o.z, l.z, u.z, c.z, e.easingFunction));
         case 'oscillating-random':
           n = O(e.minValue), r = O(e.maxValue);
           var d = O(e.minStart),
@@ -503,7 +503,7 @@ G
           y: e.clientY - n.top
         };
       }(e, C.current);
-      if (s(u, {
+      if (o(u, {
           x: l.left,
           y: l.top,
           width: l.width,
@@ -522,8 +522,8 @@ G
               return null;
             }(y.current, function(e) {
               var t = e.confetti,
-                n = t.previewPositionUpdate(o, c);
-              return s(u, {
+                n = t.previewPositionUpdate(s, c);
+              return o(u, {
                 x: n.x - t.width / 2,
                 y: n.y - t.height / 2,
                 width: t.width,
@@ -535,7 +535,7 @@ G
       }
     }
   }
-}, [o]),
+}, [s]),
 B = r.useCallback(function(e) {
   return k(e, {
     clickHandler: l
@@ -617,7 +617,7 @@ i.type = 'text/css', 'top' === n && r.firstChild ? r.insertBefore(i, r.firstChil
 }('.SpriteCanvas-module_spriteCanvasHidden__ndzQV {\n  display: none;\n  position: absolute;\n  width: 0;\n  height: 0;\n  left: -100%;\n}\n');
 var y = r.forwardRef(function(e, t) {
   var n, a = e.className,
-s = e.visible,
+o = e.visible,
 l = e.sprites,
 u = e.colors,
 c = e.spriteWidth,
@@ -661,15 +661,15 @@ c
   null != t && null != e && (t.clearRect(0, 0, e.width, e.height), E.current.forEach(function(e, n) {
     var r = function(r, i) {
       var a = c * i + 2 * i,
-        o = d * n + 2 * n;
-      if (t.drawImage(e.image, a, o, c, d), null != r) {
-        for (var s, l, u = t.getImageData(a, o, c, d), _ = ('#' === (s = r)[0] && (s = s.slice(1)), {
-            r: (l = parseInt(s, 16)) >> 16 & 255,
+        s = d * n + 2 * n;
+      if (t.drawImage(e.image, a, s, c, d), null != r) {
+        for (var o, l, u = t.getImageData(a, s, c, d), _ = ('#' === (o = r)[0] && (o = o.slice(1)), {
+            r: (l = parseInt(o, 16)) >> 16 & 255,
             g: l >> 8 & 255,
             b: 255 & l
           }), E = 0; E < u.data.length; E += 4)
           u.data[E] = _.r, u.data[E + 1] = _.g, u.data[E + 2] = _.b;
-        t.putImageData(u, a, o);
+        t.putImageData(u, a, s);
       }
     };
     e.colorize ? u.forEach(function(e, t) {
@@ -717,7 +717,7 @@ T = r.useCallback(function() {
   var e, t, n, r;
   return e = void 0, t = void 0, n = void 0, r = function() {
     return function(e, t) {
-      var n, r, i, a, o = {
+      var n, r, i, a, s = {
         label: 0,
         sent: function() {
           if (1 & i[0])
@@ -728,78 +728,78 @@ T = r.useCallback(function() {
         ops: []
       };
       return a = {
-        next: s(0),
-        throw: s(1),
-        return: s(2)
+        next: o(0),
+        throw: o(1),
+        return: o(2)
       }, 'function' == typeof Symbol && (a[Symbol.iterator] = function() {
         return this;
       }), a;
 
-      function s(s) {
+      function o(o) {
         return function(l) {
-          return function(s) {
+          return function(o) {
             if (n)
               throw TypeError('Generator is already executing.');
-            for (; a && (a = 0, s[0] && (o = 0)), o;)
+            for (; a && (a = 0, o[0] && (s = 0)), s;)
               try {
-                if (n = 1, r && (i = 2 & s[0] ? r.return : s[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, s[1])).done)
+                if (n = 1, r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done)
                   return i;
-                switch (r = 0, i && (s = [
-                    2 & s[0],
+                switch (r = 0, i && (o = [
+                    2 & o[0],
                     i.value
-                  ]), s[0]) {
+                  ]), o[0]) {
                   case 0:
                   case 1:
-                    i = s;
+                    i = o;
                     break;
                   case 4:
-                    return o.label++, {
-                      value: s[1],
+                    return s.label++, {
+                      value: o[1],
                       done: !1
                     };
                   case 5:
-                    o.label++, r = s[1], s = [0];
+                    s.label++, r = o[1], o = [0];
                     continue;
                   case 7:
-                    s = o.ops.pop(), o.trys.pop();
+                    o = s.ops.pop(), s.trys.pop();
                     continue;
                   default:
-                    if (!(i = (i = o.trys).length > 0 && i[i.length - 1]) && (6 === s[0] || 2 === s[0])) {
-                      o = 0;
+                    if (!(i = (i = s.trys).length > 0 && i[i.length - 1]) && (6 === o[0] || 2 === o[0])) {
+                      s = 0;
                       continue;
                     }
-                    if (3 === s[0] && (!i || s[1] > i[0] && s[1] < i[3])) {
-                      o.label = s[1];
+                    if (3 === o[0] && (!i || o[1] > i[0] && o[1] < i[3])) {
+                      s.label = o[1];
                       break;
                     }
-                    if (6 === s[0] && o.label < i[1]) {
-                      o.label = i[1], i = s;
+                    if (6 === o[0] && s.label < i[1]) {
+                      s.label = i[1], i = o;
                       break;
                     }
-                    if (i && o.label < i[2]) {
-                      o.label = i[2], o.ops.push(s);
+                    if (i && s.label < i[2]) {
+                      s.label = i[2], s.ops.push(o);
                       break;
                     }
-                    i[2] && o.ops.pop(), o.trys.pop();
+                    i[2] && s.ops.pop(), s.trys.pop();
                     continue;
                 }
-                s = t.call(e, o);
+                o = t.call(e, s);
               } catch (e) {
-                s = [
+                o = [
                   6,
                   e
                 ], r = 0;
               } finally {
                 n = i = 0;
               }
-            if (5 & s[0])
-              throw s[1];
+            if (5 & o[0])
+              throw o[1];
             return {
-              value: s[0] ? s[1] : void 0,
+              value: o[0] ? o[1] : void 0,
               done: !0
             };
           }([
-            s,
+            o,
             l
           ]);
         };
@@ -816,7 +816,7 @@ T = r.useCallback(function() {
       }
     });
   }, new(n || (n = Promise))(function(i, a) {
-    function o(e) {
+    function s(e) {
       try {
         l(r.next(e));
       } catch (e) {
@@ -824,7 +824,7 @@ T = r.useCallback(function() {
       }
     }
 
-    function s(e) {
+    function o(e) {
       try {
         l(r.throw(e));
       } catch (e) {
@@ -836,7 +836,7 @@ T = r.useCallback(function() {
       var t;
       e.done ? i(e.value) : ((t = e.value) instanceof n ? t : new n(function(e) {
         e(t);
-      })).then(o, s);
+      })).then(s, o);
     }
     l((r = r.apply(e, t || [])).next());
   });
@@ -860,39 +860,39 @@ c,
 l.length
   ]), r.createElement('canvas', {
 ref: _,
-className: o()(a, ((n = {})['SpriteCanvas-module_spriteCanvasHidden__ndzQV'] = !(void 0 !== s && s), n))
+className: s()(a, ((n = {})['SpriteCanvas-module_spriteCanvasHidden__ndzQV'] = !(void 0 !== o && o), n))
   });
 });
 
 function D(e, t) {
   var n, i = r.useState(null !== (n = null == t ? void 0 : t.isReady) && void 0 !== n && n),
 a = i[0],
-o = i[1];
+s = i[1];
   r.useEffect(function() {
-var e = null == t ? void 0 : t.addReadyListener(o);
+var e = null == t ? void 0 : t.addReadyListener(s);
 return function() {
   null != e && (null == t || t.removeReadyListener(e));
 };
   }, [t]);
-  var s = r.useCallback(function(n, r) {
+  var o = r.useCallback(function(n, r) {
   var i = void 0 === r ? {} : r,
     a = i.sprite,
-    o = i.color,
-    s = null == t ? void 0 : t.getCreateData(),
+    s = i.color,
+    o = null == t ? void 0 : t.getCreateData(),
     l = null == t ? void 0 : t.getCanvas();
-  if (null != l && null != s && 0 !== s.sprites.length)
-    return null == e ? void 0 : e.createConfetti(n, l, s, a, o);
+  if (null != l && null != o && 0 !== o.sprites.length)
+    return null == e ? void 0 : e.createConfetti(n, l, o, a, s);
 }, [
   e,
   t
 ]),
 l = r.useCallback(function(e, t, n) {
   for (var r = [], i = 0; i < t; i++) {
-    var a = s(e, n);
+    var a = o(e, n);
     a && r.push(a);
   }
   return r;
-}, [s]),
+}, [o]),
 u = r.useCallback(function(n) {
   var r = null == t ? void 0 : t.getCanvas();
   null != r && (null == e || e.addConfetti(n, r));
@@ -908,7 +908,7 @@ d = r.useCallback(function() {
 }, [e]);
   return r.useMemo(function() {
 return {
-  createConfetti: s,
+  createConfetti: o,
   createMultipleConfetti: l,
   addConfetti: u,
   clearConfetti: d,
@@ -919,7 +919,7 @@ return {
 u,
 d,
 e,
-s,
+o,
 l,
 c,
 a,

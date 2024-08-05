@@ -4,8 +4,8 @@ var r = n(470079),
 t.Z = (0, i.handleHover)(function(e) {
   var t = e.hover,
 n = e.color,
-o = e.onClick,
-s = e.onSwatchHover,
+s = e.onClick,
+o = e.onSwatchHover,
 l = {
   position: 'relative',
   zIndex: '2',
@@ -30,8 +30,8 @@ u = (0, i.default)({
 style: u.swatch
   }, r.createElement(a.m4, {
 color: n,
-onClick: o,
-onHover: s,
+onClick: s,
+onHover: o,
 focusStyle: l
   }));
 });

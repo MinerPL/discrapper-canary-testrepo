@@ -7,9 +7,9 @@ var r = n(735250);
 n(470079);
 var i = n(913527),
   a = n.n(i),
-  o = n(481060),
-  s = n(835473),
-  l = n(366695),
+  s = n(481060),
+  o = n(835473),
+  l = n(925329),
   u = n(630388),
   c = n(981631),
   d = n(689938),
@@ -29,13 +29,13 @@ children: [
   (0, r.jsxs)('div', {
     className: _.textContainer,
     children: [
-      (0, r.jsx)(o.Text, {
+      (0, r.jsx)(s.Text, {
         className: _.timestamp,
         variant: 'text-xs/medium',
         color: 'text-muted',
         children: a()(n).format('LLLL')
       }),
-      (0, r.jsx)(o.Text, {
+      (0, r.jsx)(s.Text, {
         variant: 'text-md/normal',
         color: 'interactive-active',
         children: d.Z.Messages.MESSAGE_GAME_ICON_TOOLTIP_CONTENT.format({
@@ -51,8 +51,8 @@ children: [
 function f(e) {
   let {
 message: t
-  } = e, n = (0, s.q)(t.applicationId);
-  return null != n && (0, u.yE)(n.flags, c.udG.SOCIAL_LAYER_INTEGRATION) ? (0, r.jsx)(o.Tooltip, {
+  } = e, n = (0, o.q)(t.applicationId);
+  return null != n && (0, u.yE)(n.flags, c.udG.SOCIAL_LAYER_INTEGRATION) ? (0, r.jsx)(s.Tooltip, {
 hideOnClick: !0,
 position: 'top',
 'aria-label': d.Z.Messages.MESSAGE_GAME_ICON_TOOLTIP,
@@ -62,7 +62,7 @@ text: (0, r.jsx)(E, {
   application: n,
   messageTimestamp: t.timestamp
 }),
-children: e => (0, r.jsx)(o.Clickable, {
+children: e => (0, r.jsx)(s.Clickable, {
   tag: 'span',
   ...e,
   children: (0, r.jsx)(l.Z, {

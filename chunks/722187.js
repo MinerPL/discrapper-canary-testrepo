@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(766646),
-  s = n(154921),
+  s = n(766646),
+  o = n(154921),
   l = n(689938),
   u = n(692877);
 
@@ -20,9 +20,9 @@ disabled: i,
 required: c = !1,
 ...d
   } = e;
-  return (0, r.jsxs)(s.Z, {
+  return (0, r.jsxs)(o.Z, {
 tag: 'label',
-color: s.Z.Colors.HEADER_SECONDARY,
+color: o.Z.Colors.HEADER_SECONDARY,
 className: a()(u.label, n, {
   [u.defaultMargin]: null == n,
   [u.disabled]: i
@@ -37,7 +37,7 @@ children: [
         'aria-hidden': !0,
         children: '*'
       }),
-      (0, r.jsx)(o.n, {
+      (0, r.jsx)(s.n, {
         children: l.Z.Messages.REQUIRED
       })
     ]

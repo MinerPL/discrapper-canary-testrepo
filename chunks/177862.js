@@ -1,22 +1,22 @@
-var l, a, i, r, u, o, s, d;
+var r, i, a, s, o, l, u, c;
 
-function c(e) {
+function d(e) {
   return e.includes('LEGITIMATE_ACTIVITY') ? 'LEGITIMATE_ACTIVITY' : e.includes('DM_SPAM') ? 'DM_SPAM' : e.includes('JOIN_RAID') ? 'JOIN_RAID' : 'OTHER';
 }
-t.d(n, {
+n.d(t, {
   $l: function() {
-return i;
-  },
-  C2: function() {
-return r;
-  },
-  J$: function() {
-return c;
-  },
-  wR: function() {
 return a;
   },
+  C2: function() {
+return s;
+  },
+  J$: function() {
+return d;
+  },
+  wR: function() {
+return i;
+  },
   x2: function() {
-return l;
+return r;
   }
-}), t(689938), (u = l || (l = {})).BUG = 'BUG', u.ALLOWED = 'ALLOWED', u.MENTION_RAID_REMOVE_RESTRICTION = 'MENTION_RAID_REMOVE_RESTRICTION', (o = a || (a = {})).JOIN_RAID = 'JOIN_RAID', o.MENTION_RAID = 'MENTION_RAID', (s = i || (i = {})).LEGITIMATE_ACTIVITY = 'LEGITIMATE_ACTIVITY', s.LEGITIMATE_ACCOUNTS = 'LEGITIMATE_ACCOUNTS', s.LEGITIMATE_DMS = 'LEGITIMATE_DMS', s.DM_SPAM = 'DM_SPAM', s.JOIN_RAID = 'JOIN_RAID', s.OTHER = 'OTHER', (d = r || (r = {})).DM_SPAM = 'DM_SPAM', d.MENTION_SPAM = 'MENTION_SPAM', d.CHANNEL_SPAM = 'CHANNEL_SPAM', d.SUS_NEW_MEMBERS = 'SUS_NEW_MEMBERS', d.CHANGING_SETTINGS = 'CHANGING_SETTINGS', d.OTHER = 'OTHER';
+}), n(689938), (o = r || (r = {})).BUG = 'BUG', o.ALLOWED = 'ALLOWED', o.MENTION_RAID_REMOVE_RESTRICTION = 'MENTION_RAID_REMOVE_RESTRICTION', (l = i || (i = {})).JOIN_RAID = 'JOIN_RAID', l.MENTION_RAID = 'MENTION_RAID', (u = a || (a = {})).LEGITIMATE_ACTIVITY = 'LEGITIMATE_ACTIVITY', u.LEGITIMATE_ACCOUNTS = 'LEGITIMATE_ACCOUNTS', u.LEGITIMATE_DMS = 'LEGITIMATE_DMS', u.DM_SPAM = 'DM_SPAM', u.JOIN_RAID = 'JOIN_RAID', u.OTHER = 'OTHER', (c = s || (s = {})).DM_SPAM = 'DM_SPAM', c.MENTION_SPAM = 'MENTION_SPAM', c.CHANNEL_SPAM = 'CHANNEL_SPAM', c.SUS_NEW_MEMBERS = 'SUS_NEW_MEMBERS', c.CHANGING_SETTINGS = 'CHANGING_SETTINGS', c.OTHER = 'OTHER';

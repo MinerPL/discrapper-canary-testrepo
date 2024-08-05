@@ -5,11 +5,11 @@ var n = String(e).split('.'),
   r = n[0],
   i = n[1] || '',
   a = !n[1],
-  o = r.slice(-1),
-  s = r.slice(-2),
+  s = r.slice(-1),
+  o = r.slice(-2),
   l = i.slice(-1),
   u = i.slice(-2);
-return t ? 'other' : a && 1 == o && 11 != s || 1 == l && 11 != u ? 'one' : a && o >= 2 && o <= 4 && (s < 12 || s > 14) || l >= 2 && l <= 4 && (u < 12 || u > 14) ? 'few' : 'other';
+return t ? 'other' : a && 1 == s && 11 != o || 1 == l && 11 != u ? 'one' : a && s >= 2 && s <= 4 && (o < 12 || o > 14) || l >= 2 && l <= 4 && (u < 12 || u > 14) ? 'few' : 'other';
   }
 }), IntlMessageFormat.__addLocaleData({
   locale: 'hr-BA',

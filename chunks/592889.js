@@ -21,8 +21,8 @@ var n = s(735250),
   C = s(285952),
   m = s(74538),
   A = s(937615),
-  h = s(689938),
-  g = s(288911);
+  g = s(689938),
+  h = s(288911);
 
 function O(e) {
   let {
@@ -46,7 +46,7 @@ await (0, E.dP)(t, t.planId, O, r), i();
 M = (0, A.og)((0, A.T4)(x.amount, x.currency), R.interval, R.intervalCount);
   return (0, n.jsxs)(_.ModalRoot, {
 transitionState: a,
-'aria-label': h.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER,
+'aria-label': g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER,
 children: [
   (0, n.jsxs)(_.ModalHeader, {
     justify: C.Z.Justify.BETWEEN,
@@ -54,7 +54,7 @@ children: [
     children: [
       (0, n.jsx)(_.FormTitle, {
         tag: _.FormTitleTags.H4,
-        children: h.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER
+        children: g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER
       }),
       (0, n.jsx)(_.ModalCloseButton, {
         onClick: i
@@ -62,11 +62,11 @@ children: [
     ]
   }),
   (0, n.jsx)(_.ModalContent, {
-    className: g.modalBody,
-    children: (0, S.Q0)(t.planId) ? h.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY_NO_EXISTING_PLAN.format({
+    className: h.modalBody,
+    children: (0, S.Q0)(t.planId) ? g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY_NO_EXISTING_PLAN.format({
       downgradedPlan: m.ZP.getDisplayName(s.planId),
       existingRate: M
-    }) : h.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY.format({
+    }) : g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY.format({
       existingPlan: m.ZP.getDisplayName(t.planId),
       downgradedPlan: m.ZP.getDisplayName(s.planId),
       existingRate: M
@@ -76,13 +76,13 @@ children: [
     children: [
       (0, n.jsx)(_.Button, {
         onClick: p,
-        children: h.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BUTTON
+        children: g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BUTTON
       }),
       (0, n.jsx)(_.Button, {
         look: _.Button.Looks.LINK,
         color: (0, d.ap)(o) ? _.Button.Colors.PRIMARY : _.Button.Colors.WHITE,
         onClick: i,
-        children: h.Z.Messages.NEVERMIND
+        children: g.Z.Messages.NEVERMIND
       })
     ]
   })
@@ -98,18 +98,18 @@ className: i,
 analyticsLocation: o
   } = e, [l, c] = a.useState(!1);
   return (0, n.jsxs)('div', {
-className: r()(g.root, i),
+className: r()(h.root, i),
 children: [
   (0, n.jsx)(_.CircleExclamationPointIcon, {
     size: 'custom',
     width: 20,
     height: 20,
     color: 'currentColor',
-    className: g.infoIcon
+    className: h.infoIcon
   }),
   (0, n.jsx)('div', {
-    className: g.text,
-    children: h.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_NOTICE.format({
+    className: h.text,
+    children: g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_NOTICE.format({
       planName: t.hasExternalPlanChange ? (0, m.zL)(s) : m.ZP.getDisplayName(s.planId),
       date: t.currentPeriodEnd
     })
@@ -118,8 +118,8 @@ children: [
     onClick: e => {
       c(!0), e.preventDefault();
     },
-    className: g.cancelLink,
-    children: h.Z.Messages.CANCEL
+    className: h.cancelLink,
+    children: g.Z.Messages.CANCEL
   }),
   l ? (0, n.jsx)(_.Modal, {
     renderModal: e => {

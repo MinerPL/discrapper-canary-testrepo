@@ -6,8 +6,8 @@ return h;
 var r = n(470079),
   i = n(120356),
   a = n.n(i),
-  o = n(866442),
-  s = n(442837),
+  s = n(866442),
+  o = n(442837),
   l = n(780384),
   u = n(607070),
   c = n(629935),
@@ -35,7 +35,7 @@ function h(e) {
 theme: t,
 primaryColor: n,
 secondaryColor: i
-  } = e, [h, p] = (0, s.Wu)([u.Z], () => [
+  } = e, [h, p] = (0, o.Wu)([u.Z], () => [
 u.Z.desaturateUserColors,
 u.Z.syncProfileThemeWithUserTheme
   ]), m = (0, E.fq)(t), I = (0, E.wu)(t, n, p), T = (0, E.lM)(t, n), g = (0, E.e4)(t, i), S = p ? null == m ? void 0 : m.overlaySyncedWithUserTheme : null == m ? void 0 : m.overlay;
@@ -43,7 +43,7 @@ u.Z.syncProfileThemeWithUserTheme
 profileThemeStyle: (0, r.useMemo)(() => {
   if (null == n || null == i || null == m || null == I || null == T || null == g || null == S)
     return f;
-  let e = (e, t) => (0, o.ho)(e, h, null, t);
+  let e = (e, t) => (0, s.ho)(e, h, null, t);
   return {
     '--profile-gradient-primary-color': e(n),
     '--profile-gradient-secondary-color': e(i),

@@ -1,8 +1,8 @@
 var r = n(470079),
   i = n(844303),
   a = n(464854),
-  o = n(751392),
-  s = Object.assign || function(e) {
+  s = n(751392),
+  o = Object.assign || function(e) {
 for (var t = 1; t < arguments.length; t++) {
   var n = arguments[t];
   for (var r in n)
@@ -13,7 +13,7 @@ return e;
   l = function(e) {
 var t = e.rgb,
   n = e.hsl,
-  o = e.width,
+  s = e.width,
   l = e.height,
   u = e.onChange,
   c = e.direction,
@@ -25,7 +25,7 @@ var t = e.rgb,
     default: {
       picker: {
         position: 'relative',
-        width: o,
+        width: s,
         height: l
       },
       alpha: {
@@ -37,7 +37,7 @@ var t = e.rgb,
 return r.createElement('div', {
   style: h.picker,
   className: 'alpha-picker ' + (void 0 === f ? '' : f)
-}, r.createElement(a.xV, s({}, h.alpha, {
+}, r.createElement(a.xV, o({}, h.alpha, {
   rgb: t,
   hsl: n,
   pointer: E,
@@ -50,5 +50,5 @@ l.defaultProps = {
   width: '316px',
   height: '16px',
   direction: 'horizontal',
-  pointer: o.Z
+  pointer: s.Z
 }, (0, a.t1)(l);

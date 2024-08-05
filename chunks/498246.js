@@ -18,20 +18,20 @@ for (var n = '', r = 0; r < e.length; r += 1)
 return n;
   };
 e.exports = function(e) {
-  var o, s = this;
-  if ('function' != typeof s || '[object Function]' !== t.apply(s))
-throw TypeError('Function.prototype.bind called on incompatible ' + s);
-  for (var l = i(arguments, 1), u = n(0, s.length - l.length), c = [], d = 0; d < u; d++)
+  var s, o = this;
+  if ('function' != typeof o || '[object Function]' !== t.apply(o))
+throw TypeError('Function.prototype.bind called on incompatible ' + o);
+  for (var l = i(arguments, 1), u = n(0, o.length - l.length), c = [], d = 0; d < u; d++)
 c[d] = '$' + d;
-  if (o = Function('binder', 'return function (' + a(c, ',') + '){ return binder.apply(this,arguments); }')(function() {
-  if (this instanceof o) {
-    var t = s.apply(this, r(l, arguments));
+  if (s = Function('binder', 'return function (' + a(c, ',') + '){ return binder.apply(this,arguments); }')(function() {
+  if (this instanceof s) {
+    var t = o.apply(this, r(l, arguments));
     return Object(t) === t ? t : this;
   }
-  return s.apply(e, r(l, arguments));
-}), s.prototype) {
+  return o.apply(e, r(l, arguments));
+}), o.prototype) {
 var _ = function() {};
-_.prototype = s.prototype, o.prototype = new _(), _.prototype = null;
+_.prototype = o.prototype, s.prototype = new _(), _.prototype = null;
   }
-  return o;
+  return s;
 };

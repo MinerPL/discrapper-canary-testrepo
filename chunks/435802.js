@@ -2,13 +2,13 @@ var r = n(599295),
   i = n(781212),
   a = n(919499);
 n(476400);
-var o = n(898061),
-  s = n(862127),
+var s = n(898061),
+  o = n(862127),
   l = n(470079),
   u = n(73793),
   c = function(e, t) {
 return e && t && t.split(' ').forEach(function(t) {
-  return (0, s.Z)(e, t);
+  return (0, o.Z)(e, t);
 });
   },
   d = function(e) {
@@ -37,12 +37,12 @@ function t() {
       r = 'string' == typeof n,
       i = r && n ? n + '-' : '',
       a = r ? '' + i + e : n[e],
-      o = r ? a + '-active' : n[e + 'Active'],
-      s = r ? a + '-done' : n[e + 'Done'];
+      s = r ? a + '-active' : n[e + 'Active'],
+      o = r ? a + '-done' : n[e + 'Done'];
     return {
       baseClassName: a,
-      activeClassName: o,
-      doneClassName: s
+      activeClassName: s,
+      doneClassName: o
     };
   }, t;
 }
@@ -51,7 +51,7 @@ var n = t.prototype;
 return n.addClass = function(e, t, n) {
   var r, i, a = this.getClassNames(t)[n + 'ClassName'];
   'appear' === t && 'done' === n && (a += ' ' + this.getClassNames('enter').doneClassName), 'active' === n && e && e.scrollTop, this.appliedClasses[t][n] = a, r = e, i = a, r && i && i.split(' ').forEach(function(e) {
-    return (0, o.Z)(r, e);
+    return (0, s.Z)(r, e);
   });
 }, n.removeClasses = function(e, t) {
   var n = this.appliedClasses[t],

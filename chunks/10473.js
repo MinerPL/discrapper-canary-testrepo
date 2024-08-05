@@ -1,10 +1,11 @@
-var i, s = n(108131),
-  a = n.n(s),
+var i, a = n(108131),
+  s = n.n(a),
   r = n(442837),
   l = n(570140),
-  o = n(70956);
+  o = n(70956),
+  c = n(823379);
 
-function c(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -12,39 +13,42 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let d = [],
-  u = !1,
+let u = [],
   _ = !1,
-  h = {
+  h = !1,
+  E = {
 status: 'unloaded'
   },
-  E = {};
-class I extends(i = r.ZP.Store) {
+  I = {};
+class m extends(i = r.ZP.Store) {
   getSearchResult(e) {
-let t = E[a().v3(JSON.stringify(e))];
-return null == t || t.loadedAt < Date.now() - o.Z.Millis.HOUR ? h : t;
+let t = I[s().v3(JSON.stringify(e))];
+return null == t || t.loadedAt < Date.now() - o.Z.Millis.HOUR ? E : t;
+  }
+  getSavedGuildsResult(e) {
+return e.map(e => u.find(t => t.id === e)).filter(c.lm);
   }
   hasLoadedStaticClanDiscovery() {
-return u;
-  }
-  getStaticClans() {
-return d;
-  }
-  isLoading() {
 return _;
   }
+  getStaticClans() {
+return u;
+  }
+  isLoading() {
+return h;
+  }
 }
-c(I, 'displayName', 'ClanDiscoveryStore'), c(I, 'persistKey', 'ClanDiscoveryStore'), t.Z = new I(l.Z, {
+d(m, 'displayName', 'ClanDiscoveryStore'), d(m, 'persistKey', 'ClanDiscoveryStore'), t.Z = new m(l.Z, {
   FETCH_STATIC_CLAN_LIST_START: function() {
-_ = !0;
+h = !0;
   },
   FETCH_STATIC_CLAN_LIST_SUCCESS: function(e) {
-d = e.clans, u = !0, _ = !1;
+u = e.clans, _ = !0, h = !1;
   },
   FETCH_STATIC_CLAN_LIST_FAILURE: function() {
-_ = !1;
+h = !1;
   },
   FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS: function(e) {
-E[e.criteriaHash] = e.searchResult;
+I[e.criteriaHash] = e.searchResult;
   }
 });

@@ -43,10 +43,10 @@ animationClassName: c,
 initialPercentage: E = 0,
 progressCircleStrokeSize: T = 2,
 progressCircleVariation: I
-  } = e, R = 43 + T / 2, C = 2 * Math.PI * R, [p, g] = a.useState(E);
+  } = e, R = 43 + T / 2, C = 2 * Math.PI * R, [g, p] = a.useState(E);
   a.useEffect(() => {
 let e = setTimeout(() => {
-  g(t);
+  p(t);
 }, 200);
 return () => clearTimeout(e);
   }, [t]);
@@ -54,7 +54,7 @@ return () => clearTimeout(e);
 m = (0, r.ap)(A),
 N = _(I),
 f = d(I, m),
-S = u(m, I);
+h = u(m, I);
   return (0, s.jsxs)('div', {
 className: o.circleContainer,
 children: [
@@ -73,13 +73,13 @@ children: [
         strokeOpacity: f
       }),
       (0, s.jsx)('circle', {
-        stroke: S,
+        stroke: h,
         strokeWidth: T,
         strokeLinecap: 'round',
         strokeDasharray: ''.concat(C, ' ').concat(C),
         className: c,
         style: {
-          strokeDashoffset: (1 - p / 100) * C
+          strokeDashoffset: (1 - g / 100) * C
         },
         r: ''.concat(R),
         cx: '50%',

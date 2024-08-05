@@ -1,11 +1,11 @@
 var r = n(470079),
   i = n(844303),
   a = n(329022),
-  o = n(336146);
+  s = n(336146);
 t.Z = function(e) {
   var t = e.onClick,
 n = e.onSwatchHover,
-s = e.group,
+o = e.group,
 l = e.active,
 u = (0, i.default)({
   default: {
@@ -19,13 +19,13 @@ u = (0, i.default)({
 });
   return r.createElement('div', {
 style: u.group
-  }, (0, a.Z)(s, function(e, i) {
-return r.createElement(o.Z, {
+  }, (0, a.Z)(o, function(e, i) {
+return r.createElement(s.Z, {
   key: e,
   color: e,
   active: e.toLowerCase() === l,
   first: 0 === i,
-  last: i === s.length - 1,
+  last: i === o.length - 1,
   onClick: t,
   onSwatchHover: n
 });

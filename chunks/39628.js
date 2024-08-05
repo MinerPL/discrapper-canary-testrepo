@@ -1,8 +1,8 @@
 n(47120);
 var r, i = n(735250),
   a = n(470079),
-  o = n(120356),
-  s = n.n(o),
+  s = n(120356),
+  o = n.n(s),
   l = n(846519),
   u = n(285952),
   c = n(278456);
@@ -22,7 +22,7 @@ percentage: t,
 isSingleLine: n
   } = e;
   return (0, i.jsx)('div', {
-className: s()({
+className: o()({
   [c.bar]: n,
   [c.barInMultiLine]: !n
 }),
@@ -65,10 +65,10 @@ let {
   themed: r,
   singleLine: a = !1
 } = this.props, {
-  now: o
-} = this.state, l = (t - e) / 1000, d = Math.max(Math.min((o - e) / 1000, l), 0);
+  now: s
+} = this.state, l = (t - e) / 1000, d = Math.max(Math.min((s - e) / 1000, l), 0);
 return a ? (0, i.jsxs)('div', {
-  className: s()(n, {
+  className: o()(n, {
     [c.themed]: r
   }, c.singleLineContainer),
   children: [
@@ -95,7 +95,7 @@ return a ? (0, i.jsxs)('div', {
     })
   ]
 }) : (0, i.jsxs)('div', {
-  className: s()(n, {
+  className: o()(n, {
     [c.themed]: r
   }),
   children: [

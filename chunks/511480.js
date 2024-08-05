@@ -20,7 +20,7 @@ var s = n(735250),
   N = n(150192),
   S = n(816817),
   h = n(339085),
-  g = n(400106),
+  g = n(231053),
   C = n(134432),
   x = n(813197),
   p = n(208567),
@@ -239,7 +239,7 @@ if (null == c && null != a) {
     memberCount: 1234
   };
 }
-let d = null != c ? g.Z.createFromDiscoverableGuild(c) : null,
+let d = null != c ? g.JO.createFromDiscoverableGuild(c) : null,
   u = null == c ? void 0 : null === (e = c.emojis) || void 0 === e ? void 0 : e[0],
   _ = null != u ? {
     name: u.require_colons ? ':'.concat(u.name, ':') : u.name,
@@ -272,6 +272,8 @@ return (0, s.jsxs)(l.FormSection, {
       ]
     }),
     null != d && d.isDiscoverable() && (0, s.jsx)(R.UA, {
+      sourceType: g.w6.GUILD,
+      expressionSourceApplication: null,
       expressionSourceGuild: d,
       node: _,
       closePopout: B.dG4,

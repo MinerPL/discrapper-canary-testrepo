@@ -3,11 +3,11 @@ var r = n(854441),
 t.Z = function(e) {
   for (var t = (0, i.Z)(e), n = t.length; n--;) {
 var a = t[n],
-  o = e[a];
+  s = e[a];
 t[n] = [
   a,
-  o,
-  (0, r.Z)(o)
+  s,
+  (0, r.Z)(s)
 ];
   }
   return t;

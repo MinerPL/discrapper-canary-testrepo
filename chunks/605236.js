@@ -15,8 +15,8 @@ return T;
 var r = n(442837),
   i = n(704215),
   a = n(561746),
-  o = n(675478),
-  s = n(581883),
+  s = n(675478),
+  o = n(581883),
   l = n(626135),
   u = n(915486),
   c = n(261376),
@@ -32,12 +32,12 @@ function I(e) {
   var t;
   if ((0, h.B)(e))
 return !0;
-  let n = null === (t = s.Z.settings.userContent) || void 0 === t ? void 0 : t.dismissedContents;
+  let n = null === (t = o.Z.settings.userContent) || void 0 === t ? void 0 : t.dismissedContents;
   return null != n && (0, u.jl)(n, e);
 }
 
 function T(e) {
-  return (0, r.e7)([s.Z], () => I(e));
+  return (0, r.e7)([o.Z], () => I(e));
 }
 
 function g(e, t, n) {
@@ -73,7 +73,7 @@ async function S(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   ((0, f.cI)(e) || t.forceTrack) && function(e, t) {
 var n;
-let [r] = (0, f.Aq)(), a = _.Z.getRenderedAtTimestamp(e), o = new Date(), s = null == a ? null : o.getTime() - a;
+let [r] = (0, f.Aq)(), a = _.Z.getRenderedAtTimestamp(e), s = new Date(), o = null == a ? null : s.getTime() - a;
 l.default.track(m.rMx.DISMISSIBLE_CONTENT_DISMISSED, {
   type: i.z[e],
   action: null !== (n = null == t ? void 0 : t.dismissAction) && void 0 !== n ? n : p.L.UNKNOWN,
@@ -81,9 +81,9 @@ l.default.track(m.rMx.DISMISSIBLE_CONTENT_DISMISSED, {
   group_name: null == t ? void 0 : t.groupName,
   bypass_fatigue: c.O.has(e),
   guild_id: null == t ? void 0 : t.guildId,
-  shown_duration: s
+  shown_duration: o
 });
-  }(e, t), (0, d.Vr)(e), await (0, o.nm)(e);
+  }(e, t), (0, d.Vr)(e), await (0, s.nm)(e);
   let n = !_.Z.hasUserHitDCCap();
   (0, f.gE)({
 content: e,

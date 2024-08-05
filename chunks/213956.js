@@ -10,8 +10,8 @@ var s = n(735250),
   l = n(481060),
   o = n(605236),
   c = n(874993),
-  d = n(430824),
-  u = n(996753),
+  d = n(768762),
+  u = n(430824),
   _ = n(999382),
   I = n(84613),
   E = n(392885),
@@ -28,7 +28,7 @@ function x(e) {
   hideChangelog: n
 } = e,
 x = (0, i.e7)([_.Z], () => _.Z.getGuildId()),
-p = (0, i.e7)([d.Z], () => d.Z.getGuild(x)),
+p = (0, i.e7)([u.Z], () => u.Z.getGuild(x)),
 R = (0, i.e7)([E.Z], () => E.Z.getCurrentPage());
   if (a.useEffect(() => {
   (0, o.EW)(r.z.COMMUNITY_GUILD_SETTINGS_SAFETY, {
@@ -78,9 +78,9 @@ children: [
       (0, I.K)(T.u.OVERVIEW);
     },
     children: [
-      (0, s.jsx)(u.Z, {
+      (0, s.jsx)(d.Z, {
         className: C.__invalid_arrow,
-        direction: u.Z.Directions.LEFT
+        direction: d.Z.Directions.LEFT
       }),
       (0, s.jsx)(l.Text, {
         variant: 'text-sm/semibold',

@@ -9,8 +9,8 @@ return I;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(466377),
+  s = n.n(a),
+  o = n(466377),
   l = n(481060),
   u = n(568154),
   c = n(252618),
@@ -26,7 +26,7 @@ function m(e) {
 children: t,
 wrapperClassName: n,
 embedded: a
-  } = e, [s, m] = i.useState(f.hO.INITIAL), I = i.useCallback(e => {
+  } = e, [o, m] = i.useState(f.hO.INITIAL), I = i.useCallback(e => {
 m(t => Math.max(t, e));
   }, []);
   return (0, c.Tt)({
@@ -35,13 +35,13 @@ location: h.Z.Messages.OAUTH2_TITLE
 theme: E.BRd.DARK,
 children: (0, r.jsx)(u.Z, {
   embedded: a,
-  className: o()((0, _.Q)(E.BRd.DARK), p.wave),
+  className: s()((0, _.Q)(E.BRd.DARK), p.wave),
   splash: (0, d.gK)(),
-  waveState: s,
+  waveState: o,
   showLogo: !0,
   updateWaveState: I,
   children: (0, r.jsx)('div', {
-    className: o()(p.oauth2Wrapper, n),
+    className: s()(p.oauth2Wrapper, n),
     children: t
   })
 })
@@ -53,18 +53,20 @@ function I(e) {
 children: t,
 footer: n,
 transitionState: i,
-...a
+overlay: a,
+...s
   } = e;
-  return (0, r.jsxs)(s.Y0, {
-size: s.Cg.DYNAMIC,
+  return (0, r.jsxs)(o.Y0, {
+size: o.Cg.DYNAMIC,
 transitionState: i,
 className: p.oauth2Wrapper,
-...a,
+...s,
 children: [
-  (0, r.jsx)(s.hz, {
+  (0, r.jsx)(o.hz, {
     children: t
   }),
-  null != n && (0, r.jsx)(s.mz, {
+  a,
+  null != n && (0, r.jsx)(o.mz, {
     className: p.footer,
     children: n
   })

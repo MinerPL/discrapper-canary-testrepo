@@ -1,9 +1,9 @@
 n.d(t, {
   W9: function() {
-return o;
+return s;
   },
   Xz: function() {
-return s;
+return o;
   },
   gK: function() {
 return l;
@@ -16,7 +16,7 @@ var r = n(570140),
   i = n(353926),
   a = n(987338);
 
-function o(e, t, n) {
+function s(e, t, n) {
   var r, a;
   i.Z.trackExposure({
 experimentId: e,
@@ -29,21 +29,21 @@ exposureType: null == n ? void 0 : n.exposureType
   });
 }
 
-function s(e) {
+function o(e) {
   let {
 id: t,
 title: n,
 description: r,
-buckets: o,
-commonTriggerPoint: s
+buckets: s,
+commonTriggerPoint: o
   } = e;
   return (0, i.V)({
 experimentId: t,
 experimentType: a.xY.USER,
 title: n,
 description: r,
-buckets: o,
-commonTriggerPoint: s
+buckets: s,
+commonTriggerPoint: o
   }), {
 id: t
   };
@@ -54,16 +54,16 @@ function l(e) {
 id: t,
 title: n,
 description: r,
-buckets: o,
-commonTriggerPoint: s
+buckets: s,
+commonTriggerPoint: o
   } = e;
   return (0, i.V)({
 experimentId: t,
 experimentType: a.xY.GUILD,
 title: n,
 description: r,
-buckets: o,
-commonTriggerPoint: s
+buckets: s,
+commonTriggerPoint: o
   }), {
 id: t
   };

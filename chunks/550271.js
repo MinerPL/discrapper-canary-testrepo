@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(496532),
   a = n(514904),
-  o = n(72977),
-  s = n(746479),
+  s = n(72977),
+  o = n(746479),
   l = n(419643),
   u = n(561015),
   c = n(775259),
@@ -78,7 +78,7 @@ case O.ZD.HEART:
     ...C
   });
 case O.ZD.FIRE:
-  return (0, r.jsx)(o.e, {
+  return (0, r.jsx)(s.e, {
     primaryTintColor: n,
     ...C
   });
@@ -95,7 +95,7 @@ case O.ZD.CROSSHAIRS:
     ...C
   });
 case O.ZD.FLOWER:
-  return (0, r.jsx)(s.P, {
+  return (0, r.jsx)(o.P, {
     primaryTintColor: n,
     secondaryTintColor: R,
     ...C

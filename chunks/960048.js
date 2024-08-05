@@ -2,12 +2,12 @@ n(47120), n(411104);
 var r = n(464847),
   i = n(289182),
   a = n(358085),
-  o = n(998502);
+  s = n(998502);
 
-function s() {
-  var e, t, n, r, i, s;
+function o() {
+  var e, t, n, r, i, o;
   let l = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-  a.isPlatformEmbedded && o.ZP.updateCrashReporter({
+  a.isPlatformEmbedded && s.ZP.updateCrashReporter({
 user_id: null !== (e = l.id) && void 0 !== e ? e : '',
 username: null !== (t = l.username) && void 0 !== t ? t : '',
 email: null !== (n = l.email) && void 0 !== n ? n : '',
@@ -15,7 +15,7 @@ sentry: {
   user: {
     id: null !== (r = l.id) && void 0 !== r ? r : '',
     username: null !== (i = l.username) && void 0 !== i ? i : '',
-    email: null !== (s = l.email) && void 0 !== s ? s : ''
+    email: null !== (o = l.email) && void 0 !== o ? o : ''
   }
 }
   });
@@ -30,12 +30,12 @@ let i = {
 };
 null != window.DiscordSentry && window.DiscordSentry.configureScope(e => {
   e.setUser(i);
-}), s(i);
+}), o(i);
   },
   clearUser() {
 null != window.DiscordSentry && window.DiscordSentry.configureScope(e => {
   e.setUser(null);
-}), s();
+}), o();
   },
   setTags(e) {
 null != window.DiscordSentry && window.DiscordSentry.configureScope(t => {

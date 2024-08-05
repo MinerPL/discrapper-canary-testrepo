@@ -1,10 +1,10 @@
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140);
 let u = !1,
   c = !1,
   d = {},
   _ = null;
-class E extends(o = s.ZP.Store) {
+class E extends(s = o.ZP.Store) {
   hasConsented(e) {
 return null != d[e] && d[e].consented;
   }

@@ -4,8 +4,8 @@ return _;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(481060),
   l = n(239091),
   o = n(585237),
@@ -26,14 +26,14 @@ let _ = {
   Colors: o.Z.Colors,
   Looks: o.Z.Looks
 };
-class h extends s.PureComponent {
+class h extends a.PureComponent {
   render() {
 let {
   storeListings: e,
   primaryStoreListing: t,
   skuId: n,
-  onStoreListingSelect: s,
-  currentStoreListingId: a,
+  onStoreListingSelect: a,
+  currentStoreListingId: s,
   ...r
 } = this.props, l = null != t ? 1 : 0;
 return (l += e.length) < 2 ? null : (0, i.jsx)(o.Z, {
@@ -50,8 +50,8 @@ super(...e), u(this, 'renderContextMenu', () => {
     storeListings: e,
     onStoreListingSelect: t,
     currentStoreListingId: n,
-    onMenuSelect: s
-  } = this.props, a = e.map(e => e.id !== n ? (0, i.jsx)(r.MenuItem, {
+    onMenuSelect: a
+  } = this.props, s = e.map(e => e.id !== n ? (0, i.jsx)(r.MenuItem, {
     id: ''.concat(e.id),
     label: e.id,
     action: () => {
@@ -59,18 +59,18 @@ super(...e), u(this, 'renderContextMenu', () => {
     }
   }) : null);
   return (0, i.jsx)(r.Menu, {
-    onSelect: s,
+    onSelect: a,
     navId: 'test-store-listing',
     'aria-label': d.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
     onClose: l.Zy,
-    children: a
+    children: s
   });
 }), u(this, 'handleContextMenu', e => {
   e.stopPropagation(), l.vq(e, this.renderContextMenu);
 });
   }
 }
-t.Z = a.ZP.connectStores([c.Z], e => {
+t.Z = s.ZP.connectStores([c.Z], e => {
   let {
 skuId: t
   } = e;

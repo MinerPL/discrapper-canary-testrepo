@@ -4,23 +4,23 @@ return c;
   }
 });
 var i = n(470079),
-  s = n(442837),
-  a = n(592125),
+  a = n(442837),
+  s = n(592125),
   r = n(594174),
   l = n(900255),
   o = n(333984);
 
 function c() {
-  let e = (0, s.e7)([a.Z], () => a.Z.getPrivateChannelsVersion()),
-t = (0, s.Wu)([
-  a.Z,
+  let e = (0, a.e7)([s.Z], () => s.Z.getPrivateChannelsVersion()),
+t = (0, a.Wu)([
+  s.Z,
   o.Z
 ], () => {
-  let e = a.Z.getMutablePrivateChannels(),
+  let e = s.Z.getMutablePrivateChannels(),
     t = Array.from(o.Z.getSpamChannelIds()).map(t => e[t]).filter(e => null != e);
   return (0, l.x)(t);
 }, [e]),
-n = (0, s.cj)([r.default], () => {
+n = (0, a.cj)([r.default], () => {
   let e = {};
   return t.forEach(t => {
     let n = r.default.getUser(t.recipients[0]);

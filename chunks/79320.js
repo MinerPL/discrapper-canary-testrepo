@@ -1,31 +1,33 @@
 n.d(t, {
   Vb: function() {
-return o;
+return l;
   },
   Yk: function() {
-return i;
+return s;
   },
   oU: function() {
-return r;
+return a;
   },
   zP: function() {
-return a;
+return o;
   }
 });
-let r = (0, n(652874).Z)(e => ({
+var r = n(652874),
+  i = n(731965);
+let a = (0, r.Z)(e => ({
   inDndMode: !1
 }));
 
-function i(e) {
-  r.setState({
+function s(e) {
+  (0, i.j)(() => a.setState({
 inDndMode: e
-  });
-}
-
-function a() {
-  return r(e => e.inDndMode);
+  }));
 }
 
 function o() {
-  return r.getState().inDndMode;
+  return a(e => e.inDndMode);
+}
+
+function l() {
+  return a.getState().inDndMode;
 }

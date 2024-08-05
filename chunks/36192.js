@@ -21,8 +21,8 @@ var n = s(735250),
   C = s(460562),
   m = s(823379),
   A = s(981631),
-  h = s(921944),
-  g = s(689938),
+  g = s(921944),
+  h = s(689938),
   O = s(653829);
 
 function p() {
@@ -33,7 +33,7 @@ otherSessions: s
   } = (0, T.h)(), i = (0, o.e7)([S.Z], () => S.Z.hidePersonalInformation), r = (0, o.e7)([N.default], () => N.default.getCurrentUser()), [_, C] = a.useState(!1);
   a.useEffect(() => {
 (0, I.EW)(c.z.AUTH_SESSIONS_NEW, {
-  dismissAction: h.L.AUTO
+  dismissAction: g.L.AUTO
 }), (0, u.fw)();
 let e = setTimeout(() => C(!0), 500);
 return () => {
@@ -56,7 +56,7 @@ children: [
     children: [
       (0, n.jsx)(d.FormSection, {
         tag: d.FormTitleTags.H5,
-        title: g.Z.Messages.AUTH_SESSIONS_CURRENT,
+        title: h.Z.Messages.AUTH_SESSIONS_CURRENT,
         titleClassName: O.groupTitle,
         children: null != t ? (0, n.jsx)(R, {
           session: t,
@@ -65,7 +65,7 @@ children: [
       }),
       !(s.length > 0) && (null == r ? void 0 : r.mfaEnabled) ? null : (0, n.jsxs)(d.FormSection, {
         tag: d.FormTitleTags.H5,
-        title: g.Z.Messages.AUTH_SESSIONS_OTHERS,
+        title: h.Z.Messages.AUTH_SESSIONS_OTHERS,
         titleClassName: O.groupTitle,
         className: O.otherSessions,
         children: [
@@ -85,11 +85,11 @@ children: [
   }),
   s.length > 0 ? (0, n.jsxs)(d.FormSection, {
     tag: d.FormTitleTags.H5,
-    title: p.size > 0 ? g.Z.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_TITLE : g.Z.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_TITLE,
+    title: p.size > 0 ? h.Z.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_TITLE : h.Z.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_TITLE,
     children: [
       (0, n.jsx)(d.FormText, {
         type: d.FormTextTypes.DESCRIPTION,
-        children: g.Z.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_DESCRIPTION
+        children: h.Z.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_DESCRIPTION
       }),
       (0, n.jsx)(d.Button, {
         look: d.Button.Looks.OUTLINED,
@@ -99,21 +99,21 @@ children: [
         onClick: () => {
           p.size > 0 ? (0, u.L$)(Array.from(p)) : (0, u.L$)(s.map(e => e.id_hash));
         },
-        children: p.size > 0 ? g.Z.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_ACTION.format({
+        children: p.size > 0 ? h.Z.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_ACTION.format({
           count: p.size
-        }) : g.Z.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_ACTION
+        }) : h.Z.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_ACTION
       })
     ]
   }) : null
 ]
   }), (0, n.jsxs)(d.FormSection, {
 tag: d.FormTitleTags.H1,
-title: g.Z.Messages.AUTH_SESSIONS,
+title: h.Z.Messages.AUTH_SESSIONS,
 children: [
   (0, n.jsx)(d.FormText, {
     type: d.FormTextTypes.DESCRIPTION,
     className: O.description,
-    children: g.Z.Messages.AUTH_SESSIONS_DESCRIPTION
+    children: h.Z.Messages.AUTH_SESSIONS_DESCRIPTION
   }),
   (null == r ? void 0 : r.isStaff()) ? (0, n.jsxs)('div', {
     className: O.tools,
@@ -170,7 +170,7 @@ switch (null == e ? void 0 : e.toLowerCase().trim()) {
   case void 0:
   case '':
     return {
-      text: g.Z.Messages.AUTH_SESSIONS_OS_UNKNOWN,
+      text: h.Z.Messages.AUTH_SESSIONS_OS_UNKNOWN,
         icon: d.ScreenIcon
     };
   case 'ios':
@@ -185,12 +185,12 @@ switch (null == e ? void 0 : e.toLowerCase().trim()) {
         icon: d.ScreenIcon
     };
 }
-  }(null === (i = l.client_info) || void 0 === i ? void 0 : i.os), h = c ? null : (0, T.p)(l.approx_last_used_time), p = [
+  }(null === (i = l.client_info) || void 0 === i ? void 0 : i.os), g = c ? null : (0, T.p)(l.approx_last_used_time), p = [
 C,
 N
   ].filter(m.lm), R = [
 S,
-h
+g
   ].filter(m.lm);
   return (0, n.jsxs)('div', {
 className: r()(O.session, c ? O.currentSession : null),
@@ -258,7 +258,7 @@ children: [
     onClick: e => {
       e.shiftKey ? null == _ || _(!0) : (0, u.L$)(l.id_hash);
     },
-    'aria-label': g.Z.Messages.AUTH_SESSIONS_SESSION_LOG_OUT,
+    'aria-label': h.Z.Messages.AUTH_SESSIONS_SESSION_LOG_OUT,
     children: (0, n.jsx)(d.CloseSmallIcon, {
       size: 'md',
       color: 'currentColor'
@@ -287,7 +287,7 @@ children: [
         className: O.sessionInfoRow,
         color: 'text-muted',
         children: (0, n.jsx)('span', {
-          children: g.Z.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY
+          children: h.Z.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY
         })
       }),
       (0, n.jsx)(d.Text, {
@@ -295,7 +295,7 @@ children: [
         className: O.sessionInfoRow,
         color: 'text-muted',
         children: (0, n.jsx)('span', {
-          children: g.Z.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY_LOG_OUT.format({
+          children: h.Z.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY_LOG_OUT.format({
             onClick: () => _.Z.setSection(A.oAB.ACCOUNT)
           })
         })

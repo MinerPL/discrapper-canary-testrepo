@@ -1,24 +1,24 @@
-n.d(l, {
+t.d(n, {
   Z: function() {
-return u;
+return s;
   }
 });
-var t = n(735250);
-n(470079);
-var i = n(120356),
-  r = n.n(i),
-  a = n(911969),
-  s = n(447179);
+var l = t(735250);
+t(470079);
+var r = t(120356),
+  i = t.n(r),
+  a = t(911969),
+  o = t(447179);
 
-function u(e) {
+function s(e) {
   let {
-divider: l,
-spacing: n
+divider: n,
+spacing: t
   } = e;
-  return (0, t.jsx)('div', {
-className: r()({
-  [s.spacingLarge]: n === a.US.LARGE,
-  [s.divider]: l
+  return (0, l.jsx)('div', {
+className: i()({
+  [o.spacingLarge]: t === a.US.LARGE,
+  [o.divider]: n
 })
   });
 }

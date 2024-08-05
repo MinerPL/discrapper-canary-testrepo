@@ -3,35 +3,35 @@ t.d(e, {
 return M;
   }
 });
-var l = t(735250);
+var r = t(735250);
 t(470079);
 var u = t(442837),
-  r = t(481060),
-  i = t(313889),
-  a = t(825829),
-  o = t(36459),
+  i = t(481060),
+  a = t(313889),
+  o = t(825829),
+  l = t(36459),
   c = t(592125),
-  s = t(375954),
-  d = t(496675),
-  _ = t(981631),
+  d = t(375954),
+  _ = t(496675),
+  s = t(981631),
   E = t(689938);
 
 function M(n, e) {
-  let t = (0, u.e7)([d.Z], () => null != n && d.Z.canWithPartialContext(_.Plq.MANAGE_MESSAGES, {
+  let t = (0, u.e7)([_.Z], () => null != n && _.Z.canWithPartialContext(s.Plq.MANAGE_MESSAGES, {
   channelId: n
 }), [n]),
 M = (0, u.e7)([c.Z], () => c.Z.getChannel(n), [n]),
-f = (0, u.e7)([s.Z], () => null != n && null != e ? s.Z.getMessage(n, e) : null),
-T = (0, a.NK)(null != f ? f : null);
+f = (0, u.e7)([d.Z], () => null != n && null != e ? d.Z.getMessage(n, e) : null),
+A = (0, o.NK)(null != f ? f : null);
   if (null == M || null == f)
 return null;
-  let Z = null != T && T.actions.hasOwnProperty(i.d.SET_COMPLETED) ? i.d.UNSET_COMPLETED : i.d.SET_COMPLETED,
-A = Z === i.d.SET_COMPLETED ? E.Z.Messages.GUILD_AUTOMOD_ALERT_SET_COMPLETED : E.Z.Messages.GUILD_AUTOMOD_ALERT_UNSET_COMPLETED;
-  return t && null != e ? (0, l.jsx)(r.MenuItem, {
+  let O = null != A && A.actions.hasOwnProperty(a.d.SET_COMPLETED) ? a.d.UNSET_COMPLETED : a.d.SET_COMPLETED,
+I = O === a.d.SET_COMPLETED ? E.Z.Messages.GUILD_AUTOMOD_ALERT_SET_COMPLETED : E.Z.Messages.GUILD_AUTOMOD_ALERT_UNSET_COMPLETED;
+  return t && null != e ? (0, r.jsx)(i.MenuItem, {
 id: 'mark-automod-alert-completed',
-label: A,
+label: I,
 action: () => {
-  (0, o.Xx)(e, M, Z);
+  (0, l.Xx)(e, M, O);
 }
   }, 'mark-automod-alert-completed') : null;
 }

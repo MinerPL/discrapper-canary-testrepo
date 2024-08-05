@@ -1,6 +1,6 @@
-var i, a;
+var i, s;
 n.d(t, {
   y: function() {
 return i;
   }
-}), (a = i || (i = {})).GUILD_PRODUCTS = 'guild_products', a.GUILD_ROLE_SUBSCRIPTIONS = 'guild_role_subscriptions', a.GUILD_PRODUCTS_PREVIEW = 'guild_products_preview', a.GUILD_SHOP_FULL_PREVIEW = 'guild_shop_full_preview';
+}), (s = i || (i = {})).GUILD_PRODUCTS = 'guild_products', s.GUILD_ROLE_SUBSCRIPTIONS = 'guild_role_subscriptions', s.GUILD_PRODUCTS_PREVIEW = 'guild_products_preview', s.GUILD_SHOP_FULL_PREVIEW = 'guild_shop_full_preview';

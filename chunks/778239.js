@@ -17,5 +17,6 @@ e.exports = {
   stepIconWrapper: 'stepIconWrapper_f21e08',
   stepWrapperComplete: 'stepWrapperComplete_f21e08',
   stepConnector: 'stepConnector_f21e08',
-  stepIcon: 'stepIcon_f21e08'
+  stepIcon: 'stepIcon_f21e08',
+  opacity_50: 'opacity_50_f21e08'
 };

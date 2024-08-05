@@ -21,8 +21,8 @@ return g;
 var r = n(913527),
   i = n.n(r),
   a = n(442837),
-  o = n(367907),
-  s = n(731429),
+  s = n(367907),
+  o = n(731429),
   l = n(306680),
   u = n(9156),
   c = n(626135),
@@ -35,12 +35,12 @@ var r = n(913527),
   m = n(981631);
 
 function I() {
-  (0, o.yw)(m.rMx.THREAD_BROWSER_TAB_CHANGED);
+  (0, s.yw)(m.rMx.THREAD_BROWSER_TAB_CHANGED);
 }
 
 function T() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'Modal';
-  (0, o.yw)(m.rMx.OPEN_MODAL, {
+  (0, s.yw)(m.rMx.OPEN_MODAL, {
 type: 'Thread Browser',
 location_section: e
   });
@@ -54,12 +54,12 @@ type: 'Active Threads Popout'
 
 function S(e, t) {
   var n, r;
-  let i = (0, s.K)(e);
+  let i = (0, o.K)(e);
   if (null == i)
 return;
   let a = e.getGuildId(),
-o = e.parent_id,
-l = (0, _.I)(a, o),
+s = e.parent_id,
+l = (0, _.I)(a, s),
 E = e => {
   if ((0, d.yE)(e, p.iN.ALL_MESSAGES))
     return _.$R[m.bL.ALL_MESSAGES];
@@ -81,10 +81,10 @@ N = {
   ...A,
   channel_id: e.id,
   guild_id: a,
-  parent_id: o,
+  parent_id: s,
   channel_type: e.type,
   has_interacted_with_thread: (h & p.iN.HAS_INTERACTED) != 0,
-  parent_is_muted: u.ZP.isGuildOrCategoryOrChannelMuted(a, o),
+  parent_is_muted: u.ZP.isGuildOrCategoryOrChannelMuted(a, s),
   old_thread_notification_setting: I,
   new_thread_notification_setting: null != t.flags ? E(t.flags) : I,
   parent_notification_setting: l.channel_message_notification_settings,
@@ -99,8 +99,8 @@ n(689938);
 let A = e => {
   var t, n;
   let r = (0, a.e7)([l.ZP], () => l.ZP.lastMessageId(e.id)),
-o = null != r ? E.default.extractTimestamp(r) : null,
-s = null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.createTimestamp,
-u = null != s ? i()(s).valueOf() : null;
-  return null !== (n = null != o ? o : u) && void 0 !== n ? n : E.default.extractTimestamp(e.id);
+s = null != r ? E.default.extractTimestamp(r) : null,
+o = null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.createTimestamp,
+u = null != o ? i()(o).valueOf() : null;
+  return null !== (n = null != s ? s : u) && void 0 !== n ? n : E.default.extractTimestamp(e.id);
 };

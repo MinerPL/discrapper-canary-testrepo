@@ -11,8 +11,8 @@ return function(t, n, r) {
   }(),
   i = n(464942),
   a = n(1108),
-  o = n(144613),
-  s = function(e) {
+  s = n(144613),
+  o = function(e) {
 function t(e) {
   ! function(e, t) {
     if (!(e instanceof t))
@@ -59,11 +59,11 @@ return ! function(e, t) {
   {
     key: 'stop',
     value: function() {
-      this.__active = !1, o.current(this._animationFrame), this.__debouncedOnEnd({
+      this.__active = !1, s.current(this._animationFrame), this.__debouncedOnEnd({
         finished: !1
       });
     }
   }
 ]), t;
   }(i);
-e.exports = s;
+e.exports = o;

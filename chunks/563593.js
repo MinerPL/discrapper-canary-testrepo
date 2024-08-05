@@ -5,8 +5,8 @@ return l;
 });
 var i = n(735250);
 n(470079);
-var s = n(886364),
-  a = n(325767);
+var a = n(886364),
+  s = n(325767);
 
 function r(e) {
   return 'CloudDone-'.concat(e);
@@ -21,12 +21,12 @@ foreground: o,
 gradientConfig: c,
 ...d
   } = e, u = null;
-  return null != c && (u = (0, i.jsx)(s.Z, {
+  return null != c && (u = (0, i.jsx)(a.Z, {
 ...c,
 color: l,
 id: r(c.id)
   })), (0, i.jsxs)('svg', {
-...(0, a.Z)(d),
+...(0, s.Z)(d),
 width: t,
 height: n,
 viewBox: '0 0 24 24',

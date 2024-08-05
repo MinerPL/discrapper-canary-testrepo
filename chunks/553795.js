@@ -1,5 +1,5 @@
 n(47120);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(457330),
   c = n(726542),
@@ -16,7 +16,7 @@ let f = new Set([E.ABu.CONTACTS]),
   S = e => {
 p = e.filter(e => !f.has(e.type) && c.Z.isSupported(e.type)), m = e.filter(e => f.has(e.type)), h = !1;
   };
-class A extends(r = s.ZP.Store) {
+class A extends(r = o.ZP.Store) {
   isJoining(e) {
 return I[e] || !1;
   }
@@ -42,12 +42,12 @@ return m.find(t => t.type === e);
 return T[e] || !1;
   }
 }
-o = 'ConnectedAccountsStore', (a = 'displayName') in(i = A) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'ConnectedAccountsStore', (a = 'displayName') in(i = A) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new A(l.Z, {
+}) : i[a] = s, t.Z = new A(l.Z, {
   CONNECTION_OPEN: function(e) {
 S(e.connectedAccounts.map(e => new d.Z(e)));
   },

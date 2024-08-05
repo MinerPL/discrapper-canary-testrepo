@@ -1,24 +1,25 @@
 n.d(t, {
   k: function() {
-return s;
+return l;
   },
   m: function() {
 return i;
   }
 });
-var r, i, a = n(652874);
+var r, i, a = n(652874),
+  s = n(731965);
 (r = i || (i = {})).PROFILE_PANEL = 'profile panel', r.USER_POPOUT = 'user popout';
 let o = {
 upsellSource: null
   },
-  s = (0, a.Z)(e => ({
+  l = (0, a.Z)(e => ({
 ...o,
-setUpsellSource: t => e({
+setUpsellSource: t => (0, s.j)(() => e({
   upsellSource: t
-}),
+})),
 reset: () => {
-  e({
+  (0, s.j)(() => e({
     ...o
-  });
+  }));
 }
   }));

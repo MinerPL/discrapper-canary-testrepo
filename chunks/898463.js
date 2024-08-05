@@ -9,8 +9,8 @@ return C;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  o = n(442837),
   l = n(481060),
   u = n(166459),
   c = n(95152),
@@ -40,12 +40,12 @@ function v(e) {
 alt: t,
 spoiler: n,
 renderContent: a,
-size: o
-  } = e, [s, l] = i.useState(!1);
+size: s
+  } = e, [o, l] = i.useState(!1);
   return (0, r.jsx)(h.a.Provider, {
 value: !n,
 children: (0, r.jsx)(h.Z, {
-  containerStyles: o === g.q.CLIP ? {
+  containerStyles: s === g.q.CLIP ? {
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 0,
     boxShadow: 'none'
@@ -64,7 +64,7 @@ children: (0, r.jsx)(h.Z, {
             className: A.altTag,
             children: S.Z.Messages.IMAGE_ALT
           }) : null,
-          s && n ? (0, r.jsx)('span', {
+          o && n ? (0, r.jsx)('span', {
             className: A.altTag,
             children: S.Z.Messages.SPOILER
           }) : null
@@ -81,12 +81,12 @@ function O(e) {
 file: t,
 alt: n,
 spoiler: a,
-size: s = g.q.MEDIUM,
+size: o = g.q.MEDIUM,
 onMouseEnter: u
   } = e, [c, d] = i.useState(), [_, E] = i.useState({
 width: 0,
 height: 0
-  }), f = s === g.q.SMALL;
+  }), f = o === g.q.SMALL;
   i.useEffect(() => {
 if (null == t || !1 === N.includes(t.type))
   return;
@@ -113,7 +113,7 @@ return n.onload = () => {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   return null == c ? (0, r.jsx)(r.Fragment, {}) : (0, r.jsx)('img', {
     src: c,
-    className: o()(A.media, {
+    className: s()(A.media, {
       [A.spoiler]: e,
       [A.imageSmall]: f
     }),
@@ -142,14 +142,14 @@ p = i.useCallback(() => {
 ]);
   return (0, r.jsx)('div', {
 onMouseEnter: u,
-className: o()(A.mediaContainer, {
+className: s()(A.mediaContainer, {
   [A.imageSmall]: f
 }),
 children: (0, r.jsx)(l.Clickable, {
   onClick: p,
   className: A.clickableMedia,
   children: (0, r.jsx)(v, {
-    size: s,
+    size: o,
     alt: n,
     spoiler: a,
     renderContent: h
@@ -163,7 +163,7 @@ function R(e) {
 file: t,
 alt: n,
 spoiler: a,
-size: s = g.q.MEDIUM,
+size: o = g.q.MEDIUM,
 onMouseEnter: l,
 onVideoLoadError: u
   } = e, [c, d] = i.useState(), _ = i.useRef(null);
@@ -178,15 +178,15 @@ return d(e), () => {
 onMouseEnter: l,
 className: A.mediaContainer,
 children: (0, r.jsx)(v, {
-  size: s,
+  size: o,
   alt: n,
   spoiler: a,
   renderContent: e => (0, r.jsx)(p.Z, {
     ref: _,
     src: c,
-    className: o()(A.media, {
+    className: s()(A.media, {
       [A.spoiler]: e,
-      [A.sizeClip]: s === g.q.CLIP
+      [A.sizeClip]: o === g.q.CLIP
     }),
     onError: u,
     preload: 'none',
@@ -201,24 +201,24 @@ function C(e) {
   let {
 upload: n,
 size: a = g.q.MEDIUM,
-onMouseEnter: s
+onMouseEnter: o
   } = e, [l, u] = i.useState(!1), c = a === g.q.SMALL;
   return n.isImage && n.item.platform === d.ow.WEB ? (0, r.jsx)(O, {
 file: n.item.file,
 alt: n.description,
 spoiler: n.spoiler,
 size: a,
-onMouseEnter: s
+onMouseEnter: o
   }) : !l && n.isVideo && n.item.platform === d.ow.WEB ? (0, r.jsx)(R, {
 file: n.item.file,
 size: a,
 alt: n.description,
 spoiler: n.spoiler,
-onMouseEnter: s,
+onMouseEnter: o,
 onVideoLoadError: () => u(!0)
   }) : (0, r.jsx)('div', {
-onMouseEnter: s,
-className: o()(A.icon, A.__invalid_imageContainer, {
+onMouseEnter: o,
+className: s()(A.icon, A.__invalid_imageContainer, {
   [A[null !== (t = n.classification) && void 0 !== t ? t : '']]: !0,
   [A.imageSmall]: c
 }),
@@ -243,7 +243,7 @@ size: p = g.q.MEDIUM,
 canEdit: m = !0,
 hideFileName: N = !1,
 clip: v
-  } = e, O = null != v, R = (p = O ? g.q.CLIP : p) === g.q.SMALL, y = (0, s.e7)([f.Z], () => {
+  } = e, O = null != v, R = (p = O ? g.q.CLIP : p) === g.q.SMALL, y = (0, o.e7)([f.Z], () => {
 var e;
 return null === (e = f.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id;
   }), D = e => {
@@ -256,12 +256,12 @@ e.stopPropagation(), (0, l.openModal)(e => (0, r.jsx)(c.default, {
     let {
       name: r,
       description: i,
-      spoiler: o
+      spoiler: s
     } = e;
     u.Z.update(t, a.id, n, {
       filename: r,
       description: i,
-      spoiler: o
+      spoiler: s
     });
   }
 }));
@@ -270,7 +270,7 @@ e.stopPropagation(), (0, l.openModal)(e => (0, r.jsx)(c.default, {
 actions: (0, r.jsxs)(i.Fragment, {
   children: [
     m ? (0, r.jsx)(T.Z, {
-      className: o()({
+      className: s()({
         [A.action]: R
       }),
       tooltip: O ? S.Z.Messages.CLIPS_ATTACHMENT_UTILITIES_SPOILER : S.Z.Messages.ATTACHMENT_UTILITIES_SPOILER,
@@ -280,19 +280,19 @@ actions: (0, r.jsxs)(i.Fragment, {
       children: a.spoiler ? (0, r.jsx)(l.EyeSlashIcon, {
         size: 'md',
         color: 'currentColor',
-        className: o()({
+        className: s()({
           [A.actionBarIcon]: R
         })
       }) : (0, r.jsx)(l.EyeIcon, {
         size: 'xs',
         color: 'currentColor',
-        className: o()({
+        className: s()({
           [A.actionBarIcon]: R
         })
       })
     }) : null,
     m && !O ? (0, r.jsx)(T.Z, {
-      className: o()({
+      className: s()({
         [A.action]: R
       }),
       tooltip: S.Z.Messages.ATTACHMENT_UTILITIES_MODIFY,
@@ -300,13 +300,13 @@ actions: (0, r.jsxs)(i.Fragment, {
       children: (0, r.jsx)(l.PencilIcon, {
         size: 'xs',
         color: 'currentColor',
-        className: o()({
+        className: s()({
           [A.actionBarIcon]: R
         })
       })
     }) : null,
     (0, r.jsx)(T.Z, {
-      className: o()({
+      className: s()({
         [A.action]: R
       }),
       tooltip: O ? S.Z.Messages.CLIPS_ATTACHMENT_UTILITIES_REMOVE : S.Z.Messages.ATTACHMENT_UTILITIES_REMOVE,
@@ -315,7 +315,7 @@ actions: (0, r.jsxs)(i.Fragment, {
       children: (0, r.jsx)(l.TrashIcon, {
         size: 'md',
         color: 'currentColor',
-        className: o()({
+        className: s()({
           [A.actionBarIcon]: R
         })
       })
@@ -328,7 +328,7 @@ channelId: t,
 handleEditModal: D,
 keyboardModeEnabled: d,
 size: p,
-className: o()({
+className: s()({
   [A.attachmentItemSmall]: R
 }),
 children: [

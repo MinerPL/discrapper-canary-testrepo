@@ -12,8 +12,8 @@ return function(t, n, r) {
   i = n(464942);
 n(592093);
 var a = n(1108),
-  o = n(144613),
-  s = n(512722),
+  s = n(144613),
+  o = n(512722),
   l = n(510610);
 
 function u(e, t) {
@@ -30,7 +30,7 @@ var n, r = function(e, t) {
     throw ReferenceError('this hasn\'t been initialised - super() hasn\'t been called');
   return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-return r._overshootClamping = u(e.overshootClamping, !1), r._restDisplacementThreshold = u(e.restDisplacementThreshold, 0.001), r._restSpeedThreshold = u(e.restSpeedThreshold, 0.001), r._initialVelocity = e.velocity, r._lastVelocity = u(e.velocity, 0), r._toValue = e.toValue, r.__isInteraction = void 0 === e.isInteraction || e.isInteraction, void 0 !== e.bounciness || void 0 !== e.speed ? (s(void 0 === e.tension && void 0 === e.friction, 'You can only define bounciness/speed or tension/friction but not both'), n = l.fromBouncinessAndSpeed(u(e.bounciness, 8), u(e.speed, 12))) : n = l.fromOrigamiTensionAndFriction(u(e.tension, 40), u(e.friction, 7)), r._tension = n.tension, r._friction = n.friction, r;
+return r._overshootClamping = u(e.overshootClamping, !1), r._restDisplacementThreshold = u(e.restDisplacementThreshold, 0.001), r._restSpeedThreshold = u(e.restSpeedThreshold, 0.001), r._initialVelocity = e.velocity, r._lastVelocity = u(e.velocity, 0), r._toValue = e.toValue, r.__isInteraction = void 0 === e.isInteraction || e.isInteraction, void 0 !== e.bounciness || void 0 !== e.speed ? (o(void 0 === e.tension && void 0 === e.friction, 'You can only define bounciness/speed or tension/friction but not both'), n = l.fromBouncinessAndSpeed(u(e.bounciness, 8), u(e.speed, 12))) : n = l.fromOrigamiTensionAndFriction(u(e.tension, 40), u(e.friction, 7)), r._tension = n.tension, r._friction = n.friction, r;
   }
   return ! function(e, t) {
 if ('function' != typeof t && null !== t)
@@ -72,7 +72,7 @@ e.prototype = Object.create(t && t.prototype, {
       r = this._lastVelocity,
       i = Date.now();
     i > this._lastTime + 64 && (i = this._lastTime + 64);
-    for (var o = Math.floor((i - this._lastTime) / 1), s = 0; s < o; ++s) {
+    for (var s = Math.floor((i - this._lastTime) / 1), o = 0; o < s; ++o) {
       var l = 0.001,
         u = t,
         c = this._tension * (this._toValue - n) - this._friction * r,
@@ -108,7 +108,7 @@ e.prototype = Object.create(t && t.prototype, {
 {
   key: 'stop',
   value: function() {
-    this.__active = !1, o.current(this._animationFrame), this.__debouncedOnEnd({
+    this.__active = !1, s.current(this._animationFrame), this.__debouncedOnEnd({
       finished: !1
     });
   }

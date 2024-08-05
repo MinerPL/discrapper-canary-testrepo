@@ -1,20 +1,20 @@
 n.d(t, {
   A: function() {
-return s;
+return o;
   }
 });
 var r = n(735250),
   i = n(470079),
   a = n(338545),
-  o = n(481060);
+  s = n(481060);
 
-function s(e) {
+function o(e) {
   let {
 shouldAnimate: t = 'respect-motion-settings',
 ...n
-  } = e, s = i.useContext(o.AccessibilityPreferencesContext).reducedMotion.enabled;
+  } = e, o = i.useContext(s.AccessibilityPreferencesContext).reducedMotion.enabled;
   return (0, r.jsx)(a.Spring, {
 ...n,
-immediate: !('animate-always' === t || 'respect-motion-settings' === t && !s)
+immediate: !('animate-always' === t || 'respect-motion-settings' === t && !o)
   });
 }

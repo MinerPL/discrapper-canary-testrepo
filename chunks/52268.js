@@ -1,8 +1,8 @@
 n(627341);
 var r = n(735250),
-  i = n(470079),
-  s = n(120356),
-  l = n.n(s),
+  s = n(470079),
+  i = n(120356),
+  l = n.n(i),
   o = n(278074),
   a = n(831209),
   c = n(399606),
@@ -22,15 +22,15 @@ let C = () => 80,
 let {
   children: t,
   className: n,
-  isSelected: i = !1,
-  ...s
+  isSelected: s = !1,
+  ...i
 } = e;
 return (0, r.jsx)(d.Clickable, {
   className: l()(g.effectGridItem, n, {
-    [g.selected]: i
+    [g.selected]: s
   }),
-  ...s,
-  onClick: s.onSelect,
+  ...i,
+  onClick: i.onSelect,
   children: t
 });
   },
@@ -38,15 +38,15 @@ return (0, r.jsx)(d.Clickable, {
 var t;
 let {
   user: n,
-  profileEffect: s,
+  profileEffect: i,
   innerRef: l,
   section: o,
   isSelected: u,
   ...h
-} = e, C = (0, p.V)(s.id), P = (0, c.e7)([f.Z], () => {
-  let e = f.Z.getProduct(s.skuId);
+} = e, C = (0, p.V)(i.id), P = (0, c.e7)([f.Z], () => {
+  let e = f.Z.getProduct(i.skuId);
   return (0, m.G1)(e);
-}), Z = (0, m.Yq)(s.skuId), A = i.useRef(null), {
+}), Z = (0, m.Yq)(i.skuId), A = s.useRef(null), {
   accessibilityLabel: T,
   thumbnailPreviewSrc: N,
   title: S
@@ -99,13 +99,13 @@ t.Z = e => {
   let {
 user: t,
 guild: n,
-pendingProfileEffect: i,
-selectedProfileEffectRef: s,
+pendingProfileEffect: s,
+selectedProfileEffectRef: i,
 onSelect: l,
 onClose: a
   } = e, c = () => {
 a(), (0, u.jN)(h.S9g.COLLECTIBLES_SHOP);
-  }, f = (0, _.ZP)(), m = null != i;
+  }, f = (0, _.ZP)(), m = null != s;
   return (0, r.jsx)('section', {
 className: g.section,
 children: (0, r.jsx)(d.MasonryList, {
@@ -163,7 +163,7 @@ children: (0, r.jsx)(d.MasonryList, {
         })
       ]
     }, E)).otherwise(e => {
-      let n = i === e.id;
+      let n = s === e.id;
       return (0, r.jsx)(P, {
         user: t,
         style: {
@@ -171,7 +171,7 @@ children: (0, r.jsx)(d.MasonryList, {
         },
         section: p,
         profileEffect: e,
-        innerRef: n ? s : void 0,
+        innerRef: n ? i : void 0,
         isSelected: n,
         onSelect: () => l(e.id)
       }, E);

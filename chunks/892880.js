@@ -2,15 +2,15 @@ let r;
 n(653041);
 var i = n(392711),
   a = n.n(i),
-  o = n(31775),
-  s = n.n(o),
+  s = n(31775),
+  o = n.n(s),
   l = n(749210),
   u = n(430824),
   c = n(594174),
   d = n(70956),
   _ = n(51144),
   E = n(689938);
-let f = new(s())({
+let f = new(o())({
   maxAge: 1 * d.Z.Millis.MINUTE
 });
 

@@ -1,6 +1,6 @@
 n.d(t, {
   o: function() {
-return o;
+return s;
   }
 }), n(315314), n(610138), n(216116), n(78328), n(815648), n(47120);
 var r = n(593473),
@@ -15,7 +15,7 @@ try {
   return null;
 }
   },
-  o = e => {
+  s = e => {
 let t = (0, r.parse)(e);
 return {
   desktop: a(t.desktop_link),

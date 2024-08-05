@@ -6,8 +6,8 @@ return h;
 var C = a(735250),
   t = a(470079),
   i = a(120356),
-  r = a.n(i),
-  s = a(442837),
+  s = a.n(i),
+  r = a(442837),
   n = a(481060),
   l = a(607070),
   o = a(100527),
@@ -23,18 +23,17 @@ var C = a(735250),
 
 function h() {
   var e;
-  let L = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
+  let L = (0, r.e7)([l.Z], () => l.Z.useReducedMotion),
 [a] = t.useState(Math.random()),
 i = (0, d.Z)({
-  guildId: null,
-  channel: void 0
+  guildId: null
 }),
 {
   analyticsLocations: h
 } = (0, H.ZP)(o.Z.ACTIVITIES_IM_FEELING_LUCKY),
-p = Math.floor(a * i.length),
-u = null === (e = i[p]) || void 0 === e ? void 0 : e.application.id,
-f = null != u && '' !== u ? M.Z5c.ACTIVITY_DETAILS(u) : void 0;
+u = Math.floor(a * i.length),
+p = null === (e = i[u]) || void 0 === e ? void 0 : e.application.id,
+f = null != p && '' !== p ? M.Z5c.ACTIVITY_DETAILS(p) : void 0;
   return (0, C.jsxs)(C.Fragment, {
 children: [
   (0, C.jsx)('img', {
@@ -53,7 +52,7 @@ children: [
           }
         },
         onClick: () => c.default.track(M.rMx.ACTIVITIES_PAGE_FEELING_LUCKY_CLICKED, {
-          application_id: u
+          application_id: p
         }),
         children: [
           (0, C.jsx)(n.Heading, {
@@ -68,7 +67,7 @@ children: [
       }),
       (0, C.jsx)('img', {
         src: I,
-        className: r()(_.wumpus, {
+        className: s()(_.wumpus, {
           [_.wumpusReducedMotion]: L
         }),
         alt: Z.Z.Messages.EMBEDDED_ACTIVITIES_WUMPUS_PEEKING_ALT

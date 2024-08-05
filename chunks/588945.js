@@ -1,8 +1,8 @@
 var r = n(470079),
   i = n(844303),
   a = n(13942),
-  o = n(176213),
-  s = n(464854),
+  s = n(176213),
+  o = n(464854),
   l = n(893580),
   u = function() {
 function e(e, t) {
@@ -53,8 +53,8 @@ function t(e) {
       source: 'rgb'
     }, t)) : (e.h || e.s || e.l) && ('string' == typeof e.s && e.s.includes('%') && (e.s = e.s.replace('%', '')), 'string' == typeof e.l && e.l.includes('%') && (e.l = e.l.replace('%', '')), 1 == e.s ? e.s = 0.01 : 1 == e.l && (e.l = 0.01), n.props.onChange({
       h: e.h || n.props.hsl.h,
-      s: Number((0, o.Z)(e.s) ? n.props.hsl.s : e.s),
-      l: Number((0, o.Z)(e.l) ? n.props.hsl.l : e.l),
+      s: Number((0, s.Z)(e.s) ? n.props.hsl.s : e.s),
+      l: Number((0, s.Z)(e.l) ? n.props.hsl.l : e.l),
       source: 'hsl'
     }, t));
   }, n.showHighlight = function(e) {
@@ -161,7 +161,7 @@ return ! function(e, t) {
       className: 'flexbox-fix'
     }, r.createElement('div', {
       style: t.field
-    }, r.createElement(s.Vm, {
+    }, r.createElement(o.Vm, {
       style: {
         input: t.input,
         label: t.label
@@ -174,7 +174,7 @@ return ! function(e, t) {
       className: 'flexbox-fix'
     }, r.createElement('div', {
       style: t.field
-    }, r.createElement(s.Vm, {
+    }, r.createElement(o.Vm, {
       style: {
         input: t.input,
         label: t.label
@@ -184,7 +184,7 @@ return ! function(e, t) {
       onChange: this.handleChange
     })), r.createElement('div', {
       style: t.field
-    }, r.createElement(s.Vm, {
+    }, r.createElement(o.Vm, {
       style: {
         input: t.input,
         label: t.label
@@ -194,7 +194,7 @@ return ! function(e, t) {
       onChange: this.handleChange
     })), r.createElement('div', {
       style: t.field
-    }, r.createElement(s.Vm, {
+    }, r.createElement(o.Vm, {
       style: {
         input: t.input,
         label: t.label
@@ -204,7 +204,7 @@ return ! function(e, t) {
       onChange: this.handleChange
     })), r.createElement('div', {
       style: t.alpha
-    }, r.createElement(s.Vm, {
+    }, r.createElement(o.Vm, {
       style: {
         input: t.input,
         label: t.label
@@ -218,7 +218,7 @@ return ! function(e, t) {
       className: 'flexbox-fix'
     }, r.createElement('div', {
       style: t.field
-    }, r.createElement(s.Vm, {
+    }, r.createElement(o.Vm, {
       style: {
         input: t.input,
         label: t.label
@@ -228,7 +228,7 @@ return ! function(e, t) {
       onChange: this.handleChange
     })), r.createElement('div', {
       style: t.field
-    }, r.createElement(s.Vm, {
+    }, r.createElement(o.Vm, {
       style: {
         input: t.input,
         label: t.label
@@ -238,7 +238,7 @@ return ! function(e, t) {
       onChange: this.handleChange
     })), r.createElement('div', {
       style: t.field
-    }, r.createElement(s.Vm, {
+    }, r.createElement(o.Vm, {
       style: {
         input: t.input,
         label: t.label
@@ -248,7 +248,7 @@ return ! function(e, t) {
       onChange: this.handleChange
     })), r.createElement('div', {
       style: t.alpha
-    }, r.createElement(s.Vm, {
+    }, r.createElement(o.Vm, {
       style: {
         input: t.input,
         label: t.label

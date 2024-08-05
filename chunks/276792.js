@@ -5,8 +5,8 @@ return g;
 });
 var i = n(735250);
 n(470079);
-var s = n(704215),
-  a = n(740111),
+var a = n(704215),
+  s = n(740111),
   r = n(481060),
   l = n(963249),
   o = n(703656),
@@ -26,10 +26,10 @@ content: g,
 renderModalProps: p,
 analyticsLocations: T,
 analyticsLocation: S,
-isLightTheme: C
-  } = e, f = 'AnnouncementModalVariant1_'.concat(s.z[Number(g.dismissKey)]), {
+isLightTheme: f
+  } = e, C = 'AnnouncementModalVariant1_'.concat(a.z[Number(g.dismissKey)]), {
 onClose: N
-  } = p, A = null != g.button && '' !== g.button.copy ? g.button.copy : E.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN, Z = (null === (t = g.button) || void 0 === t ? void 0 : t.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button', L = (null === (n = g.button) || void 0 === n ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? () => {
+  } = p, A = null != g.button && '' !== g.button.copy ? g.button.copy : E.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN, v = (null === (t = g.button) || void 0 === t ? void 0 : t.buttonAction) === s.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button', Z = (null === (n = g.button) || void 0 === n ? void 0 : n.buttonAction) === s.Wc.OPEN_MARKETING_PAGE ? () => {
 (0, o.uL)(h.Z5c.APPLICATION_STORE), N();
   } : () => (0, l.Z)({
 subscriptionTier: _.Si.TIER_2,
@@ -42,26 +42,23 @@ analyticsObject: {
 onClose: e => {
   e && N();
 }
-  }), v = '' !== g.helpArticleId ? () => (0, i.jsx)(r.Anchor, {
+  }), L = '' !== g.helpArticleId ? () => (0, i.jsx)(r.Anchor, {
 className: I.termsApplyAnchor,
 href: d.Z.getArticleURL(g.helpArticleId),
 children: E.Z.Messages.BOGO_TERMS_APPLY
   }) : void 0, O = {
 type: 'video',
-src: C ? g.heroArtVideoLinkLightTheme : g.videoLink
+src: f ? g.heroArtVideoLinkLightTheme : g.videoLink
   };
-  null != g.heroArtVideoSubtitles && (O.subtitles = g.heroArtVideoSubtitles.map(e => {
-var t;
-return {
-  locale: e.locale,
-  src: e.link,
-  isDefault: null !== (t = e.isDefault) && void 0 !== t && t
-};
-  })), ('' !== g.heroArtImageLinkDarkTheme || '' !== g.heroArtImageLinkLightTheme) && (O = {
+  null != g.heroArtVideoSubtitles && (O.subtitles = g.heroArtVideoSubtitles.map(e => ({
+locale: e.locale,
+src: e.link,
+isDefault: !1
+  }))), ('' !== g.heroArtImageLinkDarkTheme || '' !== g.heroArtImageLinkLightTheme) && (O = {
 type: 'image',
-src: C ? g.heroArtImageLinkLightTheme : g.heroArtImageLinkDarkTheme
+src: f ? g.heroArtImageLinkLightTheme : g.heroArtImageLinkDarkTheme
   });
-  let R = C ? u.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
+  let R = f ? u.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
 x = '' !== g.modalTopPill ? () => (0, i.jsx)(u.Cy, {
   text: g.modalTopPill,
   className: I.modalTopPill,
@@ -72,16 +69,16 @@ renderModalProps: p,
 header: g.header,
 modalTopExtra: x,
 subHeader: g.subheader,
-subHeaderExtra: v,
+subHeaderExtra: L,
 body: g.body,
 heroArt: O,
 featureCards: g.featureCards.map(e => ({
   header: e.header,
   subHeader: e.body,
-  imageSrc: C ? e.imageLinkLightTheme : e.imageLink,
+  imageSrc: f ? e.imageLinkLightTheme : e.imageLink,
   tagText: '' !== e.pill ? e.pill : void 0
 })),
-changeLogId: f,
+changeLogId: C,
 button: () => {
   let e = Date.now();
   return (0, i.jsxs)(r.ShinyButton, {
@@ -91,11 +88,11 @@ button: () => {
     size: r.Button.Sizes.SMALL,
     onClick: () => {
       c.default.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {
-        change_log_id: f,
-        cta_type: Z,
+        change_log_id: C,
+        cta_type: v,
         seconds_open: Math.round((Date.now() - e) / 1000),
-        target: f
-      }), L();
+        target: C
+      }), Z();
     },
     children: [
       (0, i.jsx)('img', {

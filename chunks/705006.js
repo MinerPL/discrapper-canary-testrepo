@@ -2,15 +2,15 @@ n(47120);
 var r = n(443296),
   i = n(873741),
   a = n(866960),
-  o = n(626135),
-  s = n(981631);
+  s = n(626135),
+  o = n(981631);
 
 function l(e) {
   if (Math.random() > 0.1)
 return;
   let t = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
 n = (0, i.d)();
-  o.default.track(s.rMx.QUEST_DECISION_ROUNDTRIP, {
+  s.default.track(o.rMx.QUEST_DECISION_ROUNDTRIP, {
 ...(0, r.Z)(),
 endpoint: e.endpoint,
 was_successful: e.wasSuccessful,

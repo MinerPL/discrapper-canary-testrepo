@@ -11,8 +11,8 @@ e.exports = {
   videoBottom: 'videoBottom_c8484a',
   videoWrapper: 'videoWrapper_c8484a',
   focused: 'focused_c8484a',
+  videoBackgroundTransition: 'videoBackgroundTransition_c8484a',
   videoInner: 'videoInner_c8484a',
   videoTop: 'videoTop_c8484a',
-  videoBackground: 'videoBackground_c8484a',
-  videoBackgroundTransition: 'videoBackgroundTransition_c8484a'
+  videoBackground: 'videoBackground_c8484a'
 };

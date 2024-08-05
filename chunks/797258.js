@@ -1,5 +1,5 @@
-var r, i, a, o, s = n(392711),
-  l = n.n(s),
+var r, i, a, s, o = n(392711),
+  l = n.n(o),
   u = n(442837),
   c = n(570140),
   d = n(314897);
@@ -11,7 +11,7 @@ function f(e) {
 E[e.sessionId] = e;
   });
 }
-class h extends(o = u.ZP.Store) {
+class h extends(s = u.ZP.Store) {
   initialize() {
 this.waitFor(d.default);
   }

@@ -1,10 +1,11 @@
 s.d(t, {
-  W: function() {
-return a;
+  s: function() {
+return i;
   }
 });
-let n = {};
+var n = s(442837),
+  a = s(651941);
 
-function a() {
-  return n;
+function i() {
+  return (0, n.Wu)([a.Z], () => a.Z.getUserIds());
 }

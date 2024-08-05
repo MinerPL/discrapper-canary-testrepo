@@ -1,17 +1,17 @@
 var r = n(458340),
   i = n(957578).Buffer,
   a = n(764900),
-  o = n(689118),
-  s = n(285844),
+  s = n(689118),
+  o = n(285844),
   l = n(257693),
   u = n(875115);
 
-function c(e, t, n, o) {
+function c(e, t, n, s) {
   a.call(this);
   var l = i.alloc(4, 0);
   this._cipher = new r.AES(t);
   var c = this._cipher.encryptBlock(l);
-  this._ghash = new s(c), n = function(e, t, n) {
+  this._ghash = new o(c), n = function(e, t, n) {
 if (12 === t.length)
   return e._finID = i.concat([
     t,
@@ -30,17 +30,17 @@ if (12 === t.length)
       2
     ])
   ]);
-var r = new s(n),
+var r = new o(n),
   a = t.length,
-  o = a % 16;
-r.update(t), o && (o = 16 - o, r.update(i.alloc(o, 0))), r.update(i.alloc(8, 0));
+  s = a % 16;
+r.update(t), s && (s = 16 - s, r.update(i.alloc(s, 0))), r.update(i.alloc(8, 0));
 var l = i.alloc(8);
 l.writeUIntBE(8 * a, 0, 8), r.update(l), e._finID = r.state;
 var c = i.from(e._finID);
 return u(c), c;
-  }(this, n, c), this._prev = i.from(n), this._cache = i.allocUnsafe(0), this._secCache = i.allocUnsafe(0), this._decrypt = o, this._alen = 0, this._len = 0, this._mode = e, this._authTag = null, this._called = !1;
+  }(this, n, c), this._prev = i.from(n), this._cache = i.allocUnsafe(0), this._secCache = i.allocUnsafe(0), this._decrypt = s, this._alen = 0, this._len = 0, this._mode = e, this._authTag = null, this._called = !1;
 }
-o(c, a), c.prototype._update = function(e) {
+s(c, a), c.prototype._update = function(e) {
   if (!this._called && this._alen) {
 var t = 16 - this._alen % 16;
 t < 16 && (t = i.alloc(t, 0), this._ghash.update(t));

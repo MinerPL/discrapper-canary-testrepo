@@ -8,10 +8,10 @@ writable: !0
 }
 n.d(t, {
   Z: function() {
-return s;
+return a;
   }
 }), n(653041);
-class s {
+class a {
   _processQueue() {
 setTimeout(() => {
   if (this._queue.length > 0 && this._tokenCount > 0) {

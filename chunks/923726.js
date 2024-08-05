@@ -12,10 +12,10 @@ return f;
 return c;
   },
   kT: function() {
-return o;
+return s;
   },
   s1: function() {
-return s;
+return o;
   },
   ss: function() {
 return d;
@@ -48,7 +48,7 @@ autoTrackExposure: !1
   return null != e && t && n;
 }
 
-function o(e) {
+function s(e) {
   let {
 enableRoleSubscriptionsForGuild: t
   } = r.Xv.getCurrentConfig({
@@ -64,7 +64,7 @@ autoTrackExposure: !1
   return null != e && t && n;
 }
 
-function s(e) {
+function o(e) {
   return r.ai.useExperiment({
 guildId: null != e ? e : i.lds,
 location: '504714_7'

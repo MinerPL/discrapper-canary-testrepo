@@ -12,8 +12,8 @@ return g;
 var r = n(470079),
   i = n(392711),
   a = n.n(i),
-  o = n(442837),
-  s = n(726542),
+  s = n(442837),
+  o = n(726542),
   l = n(487576),
   u = n(553795),
   c = n(594174),
@@ -35,7 +35,7 @@ let h = {
 function I(e) {
   let {
 forUserProfile: t
-  } = e, n = (0, o.e7)([c.default], () => c.default.getCurrentUser()), r = l.c.useExperiment({
+  } = e, n = (0, s.e7)([c.default], () => c.default.getCurrentUser()), r = l.c.useExperiment({
 location: 'f2f7ef_1'
   }, {
 autoTrackExposure: !1
@@ -51,7 +51,7 @@ return e.type === E.ABu.PLAYSTATION_STAGING ? r : e.type === E.ABu.AMAZON_MUSIC 
 }
 
 function T() {
-  let e = (0, o.e7)([u.Z], () => u.Z.getAccounts()),
+  let e = (0, s.e7)([u.Z], () => u.Z.getAccounts()),
 t = I({
   forUserProfile: !1
 }),
@@ -59,7 +59,7 @@ n = r.useMemo(() => {
   let t = new Set();
   return e.forEach(e => t.add(e.type)), t;
 }, [e]);
-  return a().sortBy(s.Z.filter(t), [
+  return a().sortBy(o.Z.filter(t), [
 e => {
   var t;
   return !(p.has(e.type) && Date.now() < (null !== (t = p.get(e.type)) && void 0 !== t ? t : 0) + m);

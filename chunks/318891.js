@@ -9,8 +9,8 @@ return g;
 });
 var i = n(570140),
   a = n(519938),
-  o = n(317770),
-  s = n(928518),
+  s = n(317770),
+  o = n(928518),
   l = n(592125),
   u = n(819640),
   c = n(366050),
@@ -52,15 +52,15 @@ i.Z.wait(() => a.bA(t, I.NYg.EMBED_IFRAME, {
 function A() {
   return (0, m.Z)({
 LayerStore: u.Z,
-PopoutWindowStore: s.Z
+PopoutWindowStore: o.Z
   }) ? T() : g();
 }
-class N extends o.Z {
+class N extends s.Z {
   _initialize() {
-_.Z.addChangeListener(S), E.Z.addChangeListener(S), d.Z.addChangeListener(S), f.Z.addChangeListener(S), s.Z.addChangeListener(S), h.ZP.addChangeListener(S), u.Z.addChangeListener(A);
+_.Z.addChangeListener(S), E.Z.addChangeListener(S), d.Z.addChangeListener(S), f.Z.addChangeListener(S), o.Z.addChangeListener(S), h.ZP.addChangeListener(S), u.Z.addChangeListener(A);
   }
   _terminate() {
-_.Z.removeChangeListener(S), E.Z.removeChangeListener(S), d.Z.removeChangeListener(S), f.Z.removeChangeListener(S), s.Z.removeChangeListener(S), h.ZP.removeChangeListener(S), u.Z.removeChangeListener(A);
+_.Z.removeChangeListener(S), E.Z.removeChangeListener(S), d.Z.removeChangeListener(S), f.Z.removeChangeListener(S), o.Z.removeChangeListener(S), h.ZP.removeChangeListener(S), u.Z.removeChangeListener(A);
   }
 }
 t.ZP = new N();

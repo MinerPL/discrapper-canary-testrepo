@@ -3,8 +3,8 @@ n.d(t, {
 return A;
   }
 });
-var i, s = n(392711),
-  a = n.n(s),
+var i, a = n(392711),
+  s = n.n(a),
   r = n(442837),
   l = n(570140),
   o = n(846027),
@@ -28,11 +28,11 @@ let I = {},
   p = {},
   T = {},
   S = {},
-  C = {
+  f = {
 id: null,
 justChanged: !1
   },
-  f = {
+  C = {
 id: null,
 justChanged: !1
   },
@@ -47,7 +47,7 @@ if (null != t)
   return e.name;
 }
 
-function Z(e, t, n) {
+function v(e, t, n) {
   return null == e || e.displayName !== t ? {
 displayName: t,
 type: n
@@ -56,7 +56,7 @@ displayName: t,
 type: _.QyF.INPUT_AND_OUTPUT
   } : e;
 }
-class L extends(i = r.ZP.DeviceSettingsStore) {
+class Z extends(i = r.ZP.DeviceSettingsStore) {
   initialize(e) {
 this.waitFor(u.Z, c.Z), m = null != e ? e : I;
   }
@@ -73,50 +73,50 @@ return S;
 return p;
   }
   get lastInputSystemDevice() {
-return C;
+return f;
   }
   get outputDevices() {
 return T;
   }
   get lastOutputSystemDevice() {
-return f;
+return C;
   }
 }
-E(L, 'displayName', 'ConnectedDeviceStore'), E(L, 'persistKey', 'ConnectedDeviceStore'), t.Z = new L(l.Z, {
+E(Z, 'displayName', 'ConnectedDeviceStore'), E(Z, 'persistKey', 'ConnectedDeviceStore'), t.Z = new Z(l.Z, {
   MEDIA_ENGINE_DEVICES: function(e) {
 let {
   inputDevices: t,
   outputDevices: n
 } = e, i = {};
-C.justChanged = !1, t.forEach(e => {
+f.justChanged = !1, t.forEach(e => {
   if (i[A(e)] = e.id, e.id === h.w5) {
     var t;
     let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-    n !== C.id && (C.justChanged = !0), C.id = n;
+    n !== f.id && (f.justChanged = !0), f.id = n;
   }
 });
-let s = {};
-if (f.justChanged = !1, n.forEach(e => {
-    if (s[A(e)] = e.id, e.id === h.w5) {
+let a = {};
+if (C.justChanged = !1, n.forEach(e => {
+    if (a[A(e)] = e.id, e.id === h.w5) {
       var t;
       let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-      n !== f.id && (f.justChanged = !0), f.id = n;
+      n !== C.id && (C.justChanged = !0), C.id = n;
     }
   }), !g) {
-  p = i, T = s, g = !0;
+  p = i, T = a, g = !0;
   return;
 }
 let r = Object.keys(p),
   l = Object.keys(i),
   o = Object.keys(T),
-  c = Object.keys(s),
-  d = a().difference(r, l),
-  u = a().difference(o, c);
-return d.length > 0 || u.length > 0 ? S = {} : (a().difference(l, r).forEach(e => {
-  S[e] = Z(S[e], e, _.QyF.INPUT);
-}), a().difference(c, o).forEach(e => {
-  S[e] = Z(S[e], e, _.QyF.OUTPUT);
-})), !(a().isEqual(r, l) && a().isEqual(o, c)) && (p = i, T = s, !0);
+  c = Object.keys(a),
+  d = s().difference(r, l),
+  u = s().difference(o, c);
+return d.length > 0 || u.length > 0 ? S = {} : (s().difference(l, r).forEach(e => {
+  S[e] = v(S[e], e, _.QyF.INPUT);
+}), s().difference(c, o).forEach(e => {
+  S[e] = v(S[e], e, _.QyF.OUTPUT);
+})), !(s().isEqual(r, l) && s().isEqual(o, c)) && (p = i, T = a, !0);
   },
   CONNECTED_DEVICE_SET: function(e) {
 let {

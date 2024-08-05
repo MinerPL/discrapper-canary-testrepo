@@ -1,6 +1,6 @@
 n.d(t, {
   Qg: function() {
-return s;
+return o;
   },
   S3: function() {
 return a;
@@ -17,17 +17,17 @@ let a = {
   HighContrastText: 7
 };
 
-function o(e) {
+function s(e) {
   let [t, n, r, i] = e.rgba();
   return 'rgba('.concat(t, ', ').concat(n, ', ').concat(r, ', ').concat(i, ')');
 }
 
-function s(e) {
+function o(e) {
   var t, n, r;
-  let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-l = null !== (t = s.contrastRatio) && void 0 !== t ? t : a.NonText,
-u = null !== (n = s.tolerance) && void 0 !== n ? n : 3,
-c = i()(null !== (r = s.base) && void 0 !== r ? r : e),
+  let o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+l = null !== (t = o.contrastRatio) && void 0 !== t ? t : a.NonText,
+u = null !== (n = o.tolerance) && void 0 !== n ? n : 3,
+c = i()(null !== (r = o.base) && void 0 !== r ? r : e),
 d = i()(e),
 _ = c.luminance(),
 E = d,
@@ -42,9 +42,9 @@ if (!e && !t)
 let n = E.luminance() > _;
 E = t && n || e && !n ? E.darken() : E.brighten(), h = i().contrast(c, E);
   }
-  return o(E);
+  return s(E);
 }
 
 function l(e, t) {
-  return o(i()(e).darken(t));
+  return s(i()(e).darken(t));
 }

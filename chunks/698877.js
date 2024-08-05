@@ -5,8 +5,8 @@ return o;
 });
 var i = n(735250),
   a = n(470079),
-  l = n(864094),
-  s = n(871499),
+  s = n(864094),
+  l = n(871499),
   r = n(689938);
 
 function o(e) {
@@ -14,23 +14,23 @@ function o(e) {
   hasPermission: n,
   streamActive: o,
   isSelfStream: c,
-  centerButton: d,
-  onMouseEnter: u,
+  centerButton: u,
+  onMouseEnter: d,
   onMouseLeave: h,
   premiumGlow: p,
   buttonRef: m,
   ..._
 } = e,
-f = d ? s.d : s.Z;
+f = u ? l.d : l.Z;
   t = o ? c ? r.Z.Messages.STOP_STREAMING : r.Z.Messages.STOP_WATCHING : n ? r.Z.Messages.SHARE_YOUR_SCREEN : r.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE;
   let {
 Component: E,
-events: C,
-play: g
-  } = (0, l.P)(o ? 'disable' : 'enable');
-  return a.useEffect(() => () => g(), [
+events: g,
+play: C
+  } = (0, s.P)(o ? 'disable' : 'enable');
+  return a.useEffect(() => () => C(), [
 o,
-g
+C
   ]), (0, i.jsx)(f, {
 buttonRef: m,
 label: t,
@@ -38,10 +38,10 @@ disabled: !n,
 iconComponent: E,
 isActive: o,
 onMouseEnter: e => {
-  null == u || u(e), C.onMouseEnter();
+  null == d || d(e), g.onMouseEnter();
 },
 onMouseLeave: e => {
-  null == h || h(e), C.onMouseLeave();
+  null == h || h(e), g.onMouseLeave();
 },
 premiumGlow: p,
 ..._

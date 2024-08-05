@@ -1,6 +1,6 @@
 let r, i;
 n(411104), n(724458);
-var a, o, s, l, u = n(442837),
+var a, s, o, l, u = n(442837),
   c = n(570140),
   d = n(437263),
   _ = n(764976),
@@ -206,16 +206,17 @@ return null == r ? void 0 : r.getSecureFramesState();
 let t = null == r ? void 0 : r.getUserIds();
 return null != t && t.has(e);
   }
-  getSecureFramesRosterMap() {
-return null == r ? void 0 : r.getSecureFramesRosterMap();
+  getSecureFramesRosterMapEntry(e) {
+let t = null == r ? void 0 : r.getSecureFramesRosterMap();
+return null == t ? void 0 : t.get(e);
   }
 }
-l = 'RTCConnectionStore', (s = 'displayName') in(o = M) ? Object.defineProperty(o, s, {
+l = 'RTCConnectionStore', (o = 'displayName') in(s = M) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[s] = l;
+}) : s[o] = l;
 let P = new M(c.Z, __OVERLAY__ ? {} : {
   CONNECTION_OPEN: function(e) {
 return i = e.sessionId, S = null, A = null, y(), !1;
@@ -239,7 +240,7 @@ let {
   voiceStates: t
 } = e;
 return t.reduce((e, t) => {
-  var n, a, o;
+  var n, a, s;
   if (null == N || N.updateVoiceStates(t.userId, t.channelId), O = O || (null !== (n = null == N ? void 0 : N.getStats().max_voice_state_count) && void 0 !== n ? n : 0) > 1, p.default.getId() !== t.userId)
     return !1;
   if (null != r)
@@ -247,7 +248,7 @@ return t.reduce((e, t) => {
   else {
     if (t.sessionId !== i || null == t.channelId)
       return e;
-    S = null, A = null, r = C(t.guildId, t.channelId), O = (null !== (o = null == N ? void 0 : N.getStats().max_voice_state_count) && void 0 !== o ? o : 0) > 1;
+    S = null, A = null, r = C(t.guildId, t.channelId), O = (null !== (s = null == N ? void 0 : N.getStats().max_voice_state_count) && void 0 !== s ? s : 0) > 1;
   }
   return !0;
 }, !1);

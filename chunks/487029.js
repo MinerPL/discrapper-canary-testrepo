@@ -106,7 +106,7 @@ U = l.useCallback(e => {
   D,
   A
 ]),
-w = l.useCallback(e => {
+G = l.useCallback(e => {
   if (null == e)
     return;
   let t = A[e];
@@ -116,7 +116,7 @@ w = l.useCallback(e => {
   A,
   j
 ]),
-G = l.useMemo(() => A.map(e => (0, i.jsx)(I.ZP, {
+w = l.useMemo(() => A.map(e => (0, i.jsx)(I.ZP, {
   interactive: Z,
   className: N.soundButton,
   sound: e,
@@ -138,9 +138,9 @@ children: (0, i.jsx)(C.Z, {
   showDeadZoneIndicator: !v,
   activeItem: R,
   onItemSelect: U,
-  onItemAction: w,
+  onItemAction: G,
   interactive: Z,
-  children: G
+  children: w
 })
   });
 }

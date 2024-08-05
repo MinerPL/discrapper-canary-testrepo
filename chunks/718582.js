@@ -12,7 +12,7 @@ return ef;
 return el;
   },
   FP: function() {
-return eo;
+return es;
   },
   K6: function() {
 return eu;
@@ -30,7 +30,7 @@ return ei;
 return en;
   },
   fd: function() {
-return es;
+return eo;
   },
   ni: function() {
 return ep;
@@ -43,8 +43,8 @@ return r;
   }
 }), n(47120), n(390547), n(653041), n(627341), n(757143);
 var r, i, a = n(470079),
-  o = n(392711),
-  s = n(278074),
+  s = n(392711),
+  o = n(278074),
   l = n(442837),
   u = n(481060),
   c = n(925549),
@@ -103,7 +103,7 @@ function en(e, t) {
 }),
 r = b.Z.hasConsented(W.pjP.PERSONALIZATION),
 i = y.Z.getUserAffinities();
-  return (r && i.length > 0 ? (0, o.orderBy)(n, [e => {
+  return (r && i.length > 0 ? (0, s.orderBy)(n, [e => {
 var t, n;
 return null !== (n = null === (t = y.Z.getUserAffinity(e)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0;
   }], ['desc']) : n).map(e => G.default.getUser(e)).filter(V.lm);
@@ -112,10 +112,10 @@ return null !== (n = null === (t = y.Z.getUserAffinity(e)) || void 0 === t ? voi
 function er(e, t) {
   return function(e, t, n, r) {
 let i;
-let o = eo(e),
-  s = a.useMemo(() => o.map(e => G.default.getUser(e)).filter(V.lm), [o]),
-  l = s.slice(0, 6),
-  u = Math.max(0, s.length - l.length);
+let s = es(e),
+  o = a.useMemo(() => s.map(e => G.default.getUser(e)).filter(V.lm), [s]),
+  l = o.slice(0, 6),
+  u = Math.max(0, o.length - l.length);
 if (null != r && r.length > 0) {
   let e = H.ZP.getName(t, n, G.default.getUser(r[0]));
   i = 1 === r.length ? z.Z.Messages.GUILD_POPOUT_ACTIVITY_STREAMER.format({
@@ -134,7 +134,7 @@ if (null != r && r.length > 0) {
   });
 }
 return {
-  totalUsers: s.length,
+  totalUsers: o.length,
   usersToShow: l,
   othersCount: u,
   usersText: i
@@ -180,7 +180,7 @@ E = (0, l.e7)([
     event: e,
     isStage: !!(null === (t = L.Z.getChannel(e.channel_id)) || void 0 === t ? void 0 : t.isGuildStageVoice())
   };
-}), [t], o.isEqual),
+}), [t], s.isEqual),
 f = E.map(e => {
   let {
     event: t
@@ -220,8 +220,8 @@ T = (0, l.e7)([
     r = m[e].filter(V.lm),
     i = d.ZP.getEmbeddedActivitiesForChannel(e),
     a = j.L.HANGOUT,
-    o = [],
-    s = r.map(e => {
+    s = [],
+    o = r.map(e => {
       let {
         user: t
       } = e;
@@ -232,7 +232,7 @@ T = (0, l.e7)([
     c = [];
   for (let e of (i.length > 0 && (a = j.L.EMBEDDED_ACTIVITY), r)) {
     let t = w.Z.findActivity(e.user.id, ea(e));
-    null != t && !(0, _.Z)(t) && (a = j.L.GAMING, o.push(t), u.push(e.user.id)), e.voiceState.selfVideo && c.push(e.user.id);
+    null != t && !(0, _.Z)(t) && (a = j.L.GAMING, s.push(t), u.push(e.user.id)), e.voiceState.selfVideo && c.push(e.user.id);
   }
   if (a === j.L.EMBEDDED_ACTIVITY)
     return {
@@ -245,7 +245,7 @@ T = (0, l.e7)([
     return {
       category: a,
       channelId: e,
-      games: o,
+      games: s,
       voiceStates: r,
       streamersCount: n.length,
       gameUserIds: u
@@ -253,7 +253,7 @@ T = (0, l.e7)([
   return {
     category: a,
     channelId: e,
-    userIds: s,
+    userIds: o,
     streamUserIds: n,
     channelHasVideo: l,
     videoUserIds: c,
@@ -262,7 +262,7 @@ T = (0, l.e7)([
 }), [
   m,
   I
-], o.isEqual),
+], s.isEqual),
 S = (0, l.e7)([b.Z], () => b.Z.hasConsented(W.pjP.PERSONALIZATION)),
 A = (0, l.e7)([y.Z], () => y.Z.getUserAffinities()),
 N = S && A.length > 0,
@@ -276,10 +276,10 @@ let t = [...e],
   r = t.findIndex(e => e.category === j.L.EVENT),
   i = t.findIndex(e => e.category === j.L.HANGOUT && e.isStage),
   a = t.findIndex(e => e.category === j.L.EMBEDDED_ACTIVITY),
-  o = t.findIndex(e => e.category === j.L.HANGOUT && e.streamUserIds.length > 0),
-  s = t.findIndex(e => e.category === j.L.HANGOUT && e.videoUserIds.length > 0),
+  s = t.findIndex(e => e.category === j.L.HANGOUT && e.streamUserIds.length > 0),
+  o = t.findIndex(e => e.category === j.L.HANGOUT && e.videoUserIds.length > 0),
   l = t.findIndex(e => e.category === j.L.GAMING);
-if (n === j.L.EVENT && 0 === r || n === j.L.HANGOUT && 0 === i || n === j.L.EMBEDDED_ACTIVITY && 0 === a || n === j.L.HANGOUT && 0 === o && -1 === i || n === j.L.HANGOUT && 0 === s && -1 === i && -1 === o || n === j.L.GAMING && 0 === l || -1 === r && -1 === i && -1 === a && -1 === o && -1 === s && -1 === l)
+if (n === j.L.EVENT && 0 === r || n === j.L.HANGOUT && 0 === i || n === j.L.EMBEDDED_ACTIVITY && 0 === a || n === j.L.HANGOUT && 0 === s && -1 === i || n === j.L.HANGOUT && 0 === o && -1 === i && -1 === s || n === j.L.GAMING && 0 === l || -1 === r && -1 === i && -1 === a && -1 === s && -1 === o && -1 === l)
   return e;
 if (-1 !== r) {
   let e = t.splice(r, 1);
@@ -293,12 +293,12 @@ if (-1 !== a) {
   let e = t.splice(a, 1);
   return t.splice(0, 0, e[0]), t;
 }
-if (-1 !== o) {
-  let e = t.splice(o, 1);
-  return t.splice(0, 0, e[0]), t;
-}
 if (-1 !== s) {
   let e = t.splice(s, 1);
+  return t.splice(0, 0, e[0]), t;
+}
+if (-1 !== o) {
+  let e = t.splice(o, 1);
   return t.splice(0, 0, e[0]), t;
 }
 if (-1 !== l) {
@@ -307,20 +307,20 @@ if (-1 !== l) {
 }
 return e;
   }(function(e, t) {
-return (0, o.orderBy)(e, [e => function(e, t) {
+return (0, s.orderBy)(e, [e => function(e, t) {
   let n = e => e > 0 ? Math.log(e + 1) : 0,
     r = e => e.map(e => {
       var t, n;
       return null !== (n = null === (t = y.Z.getUserAffinity(e)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0;
     }).map(n),
-    i = (0, s.EQ)(e).with({
+    i = (0, o.EQ)(e).with({
       category: j.L.EVENT
     }, () => q).with({
       category: j.L.GAMING
     }, () => Q).with({
       category: j.L.EMBEDDED_ACTIVITY
     }, () => X).with({
-      streamUserIds: s.P.when(e => e.length > 0)
+      streamUserIds: o.P.when(e => e.length > 0)
     }, () => $).with({
       channelHasVideo: !0
     }, () => J).with({
@@ -369,20 +369,6 @@ let ea = e => e => [
   W.IIU.WATCHING
 ].includes(e.type) && (null != e.assets || null != e.state || null != e.details || null != e.party) && !1;
 
-function eo(e) {
-  return (0, l.Wu)([
-b.Z,
-y.Z
-  ], () => {
-let t = b.Z.hasConsented(W.pjP.PERSONALIZATION),
-  n = y.Z.getUserAffinities();
-return t && n.length > 0 ? (0, o.orderBy)(e, [e => {
-  var t, n;
-  return null !== (n = null === (t = y.Z.getUserAffinity(e)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0;
-}], ['desc']) : e;
-  }, [e]);
-}
-
 function es(e) {
   return (0, l.Wu)([
 b.Z,
@@ -390,7 +376,21 @@ y.Z
   ], () => {
 let t = b.Z.hasConsented(W.pjP.PERSONALIZATION),
   n = y.Z.getUserAffinities();
-return t && n.length > 0 ? (0, o.orderBy)(e, [e => {
+return t && n.length > 0 ? (0, s.orderBy)(e, [e => {
+  var t, n;
+  return null !== (n = null === (t = y.Z.getUserAffinity(e)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0;
+}], ['desc']) : e;
+  }, [e]);
+}
+
+function eo(e) {
+  return (0, l.Wu)([
+b.Z,
+y.Z
+  ], () => {
+let t = b.Z.hasConsented(W.pjP.PERSONALIZATION),
+  n = y.Z.getUserAffinities();
+return t && n.length > 0 ? (0, s.orderBy)(e, [e => {
   var t, n;
   return null !== (n = null === (t = y.Z.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0;
 }], ['desc']) : e;
@@ -447,29 +447,29 @@ function eu(e, t) {
   let i = P.ZP.getNick(r, n.id);
   return null !== (t = null != i ? i : Z.ZP.getGlobalName(n)) && void 0 !== t ? t : Z.ZP.getUserTag(n);
 }).filter(e => null != e)),
-o = a.length;
-  if (o > 0)
-return 1 === o || i ? z.Z.Messages.USER_SUMMARY_ONE.format({
+s = a.length;
+  if (s > 0)
+return 1 === s || i ? z.Z.Messages.USER_SUMMARY_ONE.format({
   first: a[0]
-}) : (2 === o ? z.Z.Messages.USER_SUMMARY_TWO : 3 === o ? z.Z.Messages.USER_SUMMARY_THREE : z.Z.Messages.USER_SUMMARY_THREE_AND_OTHERS).format({
+}) : (2 === s ? z.Z.Messages.USER_SUMMARY_TWO : 3 === s ? z.Z.Messages.USER_SUMMARY_THREE : z.Z.Messages.USER_SUMMARY_THREE_AND_OTHERS).format({
   first: a[0],
   second: null == a ? void 0 : a[1],
   third: null == a ? void 0 : a[2],
-  count: o - 3
+  count: s - 3
 });
 }
 
 function ec(e, t, n, r) {
   var i, a;
-  let o = {},
-s = null !== (a = (0, Y.i)(e)) && void 0 !== a ? a : '';
-  o.source = r, o.card_type = e.category, o.card_position = n, o.channel_id = s, o.channel_type = null === (i = L.Z.getChannel(s)) || void 0 === i ? void 0 : i.type;
-  let l = en(s, t);
-  o.card_affinity_users_count = Math.min(l.length, 6), o.card_total_users_count = l.length, o.card_affinity_user_ids = l.slice(0, 6).map(e => e.id), o.card_max_affinity_user_id = l.length > 0 ? l[0].id : '0', o.card_user_affinity_scores = l.slice(0, 6).map(e => {
+  let s = {},
+o = null !== (a = (0, Y.i)(e)) && void 0 !== a ? a : '';
+  s.source = r, s.card_type = e.category, s.card_position = n, s.channel_id = o, s.channel_type = null === (i = L.Z.getChannel(o)) || void 0 === i ? void 0 : i.type;
+  let l = en(o, t);
+  s.card_affinity_users_count = Math.min(l.length, 6), s.card_total_users_count = l.length, s.card_affinity_user_ids = l.slice(0, 6).map(e => e.id), s.card_max_affinity_user_id = l.length > 0 ? l[0].id : '0', s.card_user_affinity_scores = l.slice(0, 6).map(e => {
 var t, n;
 return null !== (n = null === (t = y.Z.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0;
   }), F.default.track(W.rMx.GUILD_TOOLTIP_CARD_CLICKED, {
-...o,
+...s,
 ...(0, E.hH)(t)
   });
 }
@@ -565,8 +565,8 @@ function eh(e) {
   let r = (0, S.cS)(e),
 i = null == r ? void 0 : r.replace(/[<#>]/g, ''),
 a = null != i ? L.Z.getChannel(i) : L.Z.getChannel(e.channel_id),
-o = U.Z.can(W.Plq.VIEW_CHANNEL, a);
-  if (null != a && o)
+s = U.Z.can(W.Plq.VIEW_CHANNEL, a);
+  if (null != a && s)
 t = (0, m.Th)(a.type), n = a.name;
   else {
 if (null == r)

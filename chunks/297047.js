@@ -10,8 +10,8 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
   a = n(481060),
-  o = n(144144),
-  s = n(592125),
+  s = n(144144),
+  o = n(592125),
   l = n(496675),
   u = n(944486),
   c = n(585483),
@@ -28,17 +28,17 @@ decoration: 'never'
   c.S.dispatchToLastSubscribed(_.CkL.INSERT_TEXT, {
 plainText: r,
 rawText: '<@'.concat(n, '>')
-  }), null != t && o.Z.startTyping(t);
+  }), null != t && s.Z.startTyping(t);
 }
 
 function h(e, t, n) {
-  let [o, c] = (0, i.Wu)([
+  let [s, c] = (0, i.Wu)([
 u.Z,
-s.Z,
+o.Z,
 l.Z
   ], () => {
 let e = u.Z.getChannelId(t),
-  n = s.Z.getChannel(e);
+  n = o.Z.getChannel(e);
 return [
   e,
   null != n && (n.isMultiUserDM() || l.Z.can(_.Plq.SEND_MESSAGES, n))
@@ -48,7 +48,7 @@ return [
 id: 'mention',
 label: E.Z.Messages.MENTION,
 action: function() {
-  f(e, o);
+  f(e, s);
 }
   });
 }

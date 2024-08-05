@@ -5,10 +5,10 @@ return m;
 }), a(47120);
 var E = a(735250),
   _ = a(470079),
-  n = a(120356),
-  r = a.n(n),
-  t = a(392711),
-  L = a.n(t),
+  t = a(120356),
+  n = a.n(t),
+  r = a(392711),
+  L = a.n(r),
   l = a(866442),
   i = a(692547),
   M = a(481060),
@@ -28,8 +28,8 @@ var E = a(735250),
 
 function m(e) {
   let s = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-[a, n] = _.useState(''),
-[r, t] = _.useState(null),
+[a, t] = _.useState(''),
+[n, r] = _.useState(null),
 [L, l] = _.useState(null),
 i = (0, R.Z)(e.code);
   _.useEffect(() => {
@@ -41,7 +41,7 @@ i = (0, R.Z)(e.code);
     } catch (e) {
       c.Z.verifySSOToken(null);
     }
-  null != e && n(i.defaultName.format({
+  null != e && t(i.defaultName.format({
     username: e.username
   }));
 }());
@@ -55,8 +55,8 @@ i = (0, R.Z)(e.code);
     (0, E.jsx)('div', {
       className: O.icon,
       children: (0, E.jsx)(A.Z, {
-        icon: r,
-        onChange: t
+        icon: n,
+        onChange: r
       })
     }),
     (0, E.jsx)(M.FormItem, {
@@ -65,7 +65,7 @@ i = (0, R.Z)(e.code);
         type: 'text',
         value: a,
         maxLength: 100,
-        onChange: n,
+        onChange: t,
         error: null == L ? void 0 : L.name
       })
     }),
@@ -124,7 +124,7 @@ preview: (0, E.jsxs)(E.Fragment, {
   ]
 }),
 handleSubmit: () => {
-  u.Z.acceptGuildTemplate(e.code, a, r).then(() => {
+  u.Z.acceptGuildTemplate(e.code, a, n).then(() => {
     (0, M.closeAllModals)(), (0, T.Ou)();
   }).catch(e => l(e));
 }
@@ -142,7 +142,7 @@ let s = function(e) {
   return s === D.d4z.GUILD_VOICE ? M.VoiceNormalIcon : s === D.d4z.GUILD_CATEGORY ? d.Z : M.TextIcon;
 }(e);
 return (0, E.jsxs)('div', {
-  className: r()(O.channel, {
+  className: n()(O.channel, {
     [O.category]: e.type === D.d4z.GUILD_CATEGORY
   }),
   children: [

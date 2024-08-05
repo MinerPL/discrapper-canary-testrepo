@@ -5,8 +5,8 @@ return _;
 });
 var i = n(735250);
 n(470079);
-var s = n(120356),
-  a = n.n(s),
+var a = n(120356),
+  s = n.n(a),
   r = n(481060),
   l = n(788307),
   o = n(2052),
@@ -17,7 +17,7 @@ var s = n(120356),
 function _(e) {
   let {
 customStatus: t,
-focusedClassName: s,
+focusedClassName: a,
 analyticsLocations: _,
 trackUserProfileAction: h
   } = e, E = (0, o.O)(), I = () => {
@@ -35,7 +35,7 @@ trackUserProfileAction: h
   return null != t ? (0, i.jsx)(r.MenuItem, {
 id: 'edit-custom-status',
 label: d.Z.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
-focusedClassName: s,
+focusedClassName: a,
 icon: null != t.emoji ? e => {
   let {
     className: n
@@ -70,10 +70,10 @@ action: () => {
 }
   }) : (0, i.jsx)(r.MenuItem, {
 id: 'add-custom-status',
-focusedClassName: s,
+focusedClassName: a,
 label: d.Z.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS_CTA,
 icon: e => (0, i.jsx)('div', {
-  className: a()(u.customEmojiPlaceholder, e)
+  className: s()(u.customEmojiPlaceholder, e)
 }),
 showIconFirst: !0,
 action: () => {

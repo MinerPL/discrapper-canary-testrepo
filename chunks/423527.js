@@ -11,24 +11,24 @@ var s, r = n(735250),
   c = n(278074),
   u = n(990547),
   d = n(442837),
-  h = n(846519),
-  _ = n(481060),
+  _ = n(846519),
+  h = n(481060),
   E = n(893776),
   g = n(899370),
   p = n(224841),
-  f = n(13430),
-  I = n(213609),
-  m = n(882037),
+  I = n(13430),
+  m = n(213609),
+  f = n(882037),
   N = n(201207),
   T = n(481230),
   x = n(388905),
   A = n(853268),
   C = n(639946),
-  S = n(616952),
-  O = n(792766),
-  v = n(692483),
-  Z = n(100159),
-  R = n(473855),
+  v = n(616952),
+  Z = n(792766),
+  S = n(692483),
+  R = n(100159),
+  O = n(473855),
   b = n(726745),
   D = n(929809),
   L = n(541692),
@@ -39,8 +39,8 @@ var s, r = n(735250),
   G = n(807369),
   B = n(180529),
   U = n(108427),
-  k = n(314897),
-  F = n(480294),
+  F = n(314897),
+  k = n(480294),
   w = n(896797),
   H = n(626135),
   V = n(585483),
@@ -109,7 +109,7 @@ let {
 H.default.track(J.rMx.REGISTER_VIEWED, {
   location: null != t ? 'Invite Register Page' : 'Non-Invite Register Page',
   registration_source: this.registrationSource,
-  ...null != e ? (0, Z.Z)(e, !1, !1) : {}
+  ...null != e ? (0, R.Z)(e, !1, !1) : {}
 }, {
   flush: !0
 }), null == this.props.consentRequired && E.Z.getLocationMetadata(), (0, U.e)('register');
@@ -174,27 +174,27 @@ let {
   onRegister: c,
   usernameSuggestion: u,
   isMobileWebInviteRegistration: d
-} = this.props, h = null != a ? a.code : null, _ = null != o ? o.skuId : null, E = m.MD.getState(), g = (0, K.Ew)(u) ? null : t === u, p = Q.a ? await (0, v.K)(t) : t, f = Q.a ? await (0, v.K)(n) : n;
+} = this.props, _ = null != a ? a.code : null, h = null != o ? o.skuId : null, E = f.MD.getState(), g = (0, K.Ew)(u) ? null : t === u, p = Q.a ? await (0, S.K)(t) : t, I = Q.a ? await (0, S.K)(n) : n;
 V.S.dispatch(J.CkL.WAVE_EMPHASIZE);
 try {
   d || null == a ? await (0, T.R$)({
     email: e,
     username: p,
-    globalName: f,
+    globalName: I,
     consent: r,
     password: s,
-    invite: h,
+    invite: _,
     usedUsernameSuggestion: g,
     guildTemplateCode: null == l ? void 0 : l.code,
-    giftCodeSKUId: _,
+    giftCodeSKUId: h,
     birthday: i,
     promoEmailConsent: E.required ? E : null
   }) : await (0, T.ZP)({
     consent: r,
-    invite: h,
-    giftCodeSKUId: _,
+    invite: _,
+    giftCodeSKUId: h,
     usedUsernameSuggestion: g,
-    globalName: f
+    globalName: I
   }), null == c || c();
 } catch (e) {}
   }
@@ -251,13 +251,13 @@ return (0, r.jsxs)(x.ZP, {
     (0, r.jsxs)(x.gO, {
       className: es.marginTop40,
       children: [
-        (0, r.jsx)(_.FormTitle, {
+        (0, r.jsx)(h.FormTitle, {
           children: et.Z.Messages.FORM_LABEL_USERNAME
         }),
-        (0, r.jsx)(_.Tooltip, {
+        (0, r.jsx)(h.Tooltip, {
           text: et.Z.Messages.AUTH_USERNAME_TOOLTIP,
           position: 'right',
-          color: _.Tooltip.Colors.BRAND,
+          color: h.Tooltip.Colors.BRAND,
           children: e => {
             let {
               onMouseEnter: s,
@@ -304,7 +304,7 @@ return (0, r.jsxs)(x.ZP, {
 let {
   invite: e
 } = this.props;
-return (null == e ? void 0 : e.stage_instance) != null && null != e.guild ? (0, r.jsx)(O.Z, {
+return (null == e ? void 0 : e.stage_instance) != null && null != e.guild ? (0, r.jsx)(Z.Z, {
   stageInstance: e.stage_instance,
   guild: e.guild
 }) : (null == e ? void 0 : e.guild_scheduled_event) != null ? (0, r.jsx)(C.r, {
@@ -322,7 +322,7 @@ let {
 } = this.props, {
   consent: s
 } = this.state, i = x.zx.Colors.BRAND, a = et.Z.Messages.CONTINUE;
-return (null == e ? void 0 : e.stage_instance) != null && (i = x.zx.Colors.GREEN, a = et.Z.Messages.INSTANT_INVITE_ACCEPT_STAGE), (0, r.jsx)(_.Tooltip, {
+return (null == e ? void 0 : e.stage_instance) != null && (i = x.zx.Colors.GREEN, a = et.Z.Messages.INSTANT_INVITE_ACCEPT_STAGE), (0, r.jsx)(h.Tooltip, {
   text: !s && n ? et.Z.Messages.TERMS_PRIVACY_OPT_IN_TOOLTIP : null,
   children: e => (0, r.jsx)('div', {
     className: es.marginTop20,
@@ -367,14 +367,14 @@ return (0, r.jsxs)('div', {
         (0, r.jsxs)(x.gO, {
           className: l ? void 0 : es.marginTop40,
           children: [
-            (0, r.jsx)(_.FormTitle, {
+            (0, r.jsx)(h.FormTitle, {
               error: ea(null != s ? s : n),
               children: et.Z.Messages.DISPLAY_NAME
             }),
-            (0, r.jsx)(_.Tooltip, {
+            (0, r.jsx)(h.Tooltip, {
               text: et.Z.Messages.AUTH_USERNAME_TOOLTIP,
               position: 'right',
-              color: _.Tooltip.Colors.BRAND,
+              color: h.Tooltip.Colors.BRAND,
               children: e => {
                 let {
                   onMouseEnter: t,
@@ -393,7 +393,7 @@ return (0, r.jsxs)('div', {
                 });
               }
             }),
-            (0, r.jsx)(_.Text, {
+            (0, r.jsx)(h.Text, {
               variant: 'text-sm/normal',
               color: 'header-secondary',
               children: et.Z.Messages.UU_REGISTER_DISPLAY_NAME_HINT_2
@@ -414,7 +414,7 @@ return (0, r.jsxs)('div', {
     }),
     null != e && l ? (0, r.jsx)(x.ZP, {
       className: es.marginTop20,
-      children: (0, r.jsx)(O.y, {
+      children: (0, r.jsx)(Z.y, {
         guild: e.guild,
         onlineCount: e.approximate_presence_count
       })
@@ -442,13 +442,13 @@ let {
   consent: c,
   parsedDateOfBirth: u,
   globalNameFocused: d,
-  emailClientError: h,
+  emailClientError: _,
   usernameClientError: E,
   passwordClientError: g,
   dateOfBirthClientError: p
 } = this.state, {
-  registering: I,
-  consentRequired: m,
+  registering: m,
+  consentRequired: f,
   isMobileWebInviteRegistration: N,
   uniqueUsernameRegistrationConfig: {
     suggestions: T
@@ -456,10 +456,10 @@ let {
   authBoxClassName: A,
   apiErrors: {
     email: C,
-    username: O,
-    global_name: v,
-    password: Z,
-    date_of_birth: R
+    username: Z,
+    global_name: S,
+    password: R,
+    date_of_birth: O
   } = {},
   hasLoggedInAccounts: b,
   registrationCopyExperimentConfig: {
@@ -468,14 +468,14 @@ let {
 } = this.props, {
   subText: L,
   consentText: j
-} = this.renderConsentComponents(), y = this.renderErrorMessage(), G = (0, r.jsx)(_.Tooltip, {
-  text: !c && m ? et.Z.Messages.TERMS_PRIVACY_OPT_IN_TOOLTIP : null,
+} = this.renderConsentComponents(), y = this.renderErrorMessage(), G = (0, r.jsx)(h.Tooltip, {
+  text: !c && f ? et.Z.Messages.TERMS_PRIVACY_OPT_IN_TOOLTIP : null,
   children: e => (0, r.jsx)('div', {
     className: es.marginTop20,
     ...e,
     children: (0, r.jsx)(x.zx, {
       type: 'submit',
-      submitting: I,
+      submitting: m,
       disabled: !this.hasConsent() || this.state.isRateLimited,
       children: et.Z.Messages.CONTINUE
     })
@@ -484,11 +484,11 @@ let {
   this.setState({
     usernameFocused: !0
   }), T && a.length > 0 && !P.Z.wasRegistrationSuggestionFetched(a) && await M.Z.fetchSuggestionsRegistration(a);
-}, k = null != e ? (0, r.jsx)(i.Fragment, {
+}, F = null != e ? (0, r.jsx)(i.Fragment, {
   children: e()
 }, 'custom-header') : (0, r.jsx)(x.Dx, {
   children: et.Z.Messages.REGISTER_TITLE
-}, 'title'), F = (0, r.jsxs)(x.gO, {
+}, 'title'), k = (0, r.jsxs)(x.gO, {
   className: es.marginTop20,
   children: [
     (0, r.jsx)(x.II, {
@@ -501,7 +501,7 @@ let {
         email: e,
         emailClientError: 0 === e.length ? et.Z.Messages.REQUIRED : null
       }),
-      error: null != h ? h : ea(C),
+      error: null != _ ? _ : ea(C),
       type: 'email',
       setRef: e => {
         this.emailRef = e;
@@ -516,7 +516,7 @@ let {
       onChange: e => this.setState({
         globalName: e
       }),
-      error: ea(v),
+      error: ea(S),
       maxLength: ee.hy,
       setRef: e => {
         this.globalNameRef = e;
@@ -532,7 +532,7 @@ let {
       show: d,
       top: -12,
       bottom: 20,
-      children: (0, r.jsx)(_.Text, {
+      children: (0, r.jsx)(h.Text, {
         variant: 'text-sm/normal',
         color: 'text-normal',
         children: et.Z.Messages.UU_REGISTER_DISPLAY_NAME_HINT_2
@@ -556,7 +556,7 @@ let {
               usernameClientError: 0 === e.length ? et.Z.Messages.REQUIRED : null
             });
           },
-          error: null != E ? E : ea(O),
+          error: null != E ? E : ea(Z),
           setRef: e => {
             this.usernameRef = e;
           },
@@ -573,25 +573,25 @@ let {
         password: e,
         passwordClientError: 0 === e.length ? et.Z.Messages.REQUIRED : null
       }),
-      error: null != g ? g : ea(Z),
+      error: null != g ? g : ea(R),
       type: 'password',
       setRef: e => {
         this.passwordRef = e;
       },
       required: !0
     }),
-    (0, r.jsx)(f.Z, {
+    (0, r.jsx)(I.Z, {
       label: et.Z.Messages.AGE_GATE_YOUR_BIRTHDAY,
       wrapperClassName: es.marginTop20,
       name: 'date_of_birth',
       onChange: this.handleBirthdayChange,
       ref: this.dateOfBirthRef,
-      error: null != p ? p : ea(R),
+      error: null != p ? p : ea(O),
       value: u,
       required: !0
     }),
     D && L,
-    (0, r.jsx)(S.Z, {}),
+    (0, r.jsx)(v.Z, {}),
     G,
     y,
     j,
@@ -610,7 +610,7 @@ return t ? (0, r.jsx)(q.Z, {
   tag: 'form',
   className: l()(A, en.horizontalAuthBox),
   children: () => [
-    k,
+    F,
     (0, r.jsxs)('div', {
       className: en.flex,
       children: [
@@ -618,7 +618,7 @@ return t ? (0, r.jsx)(q.Z, {
           className: en.createAccountTemplateHeader,
           children: et.Z.Messages.REGISTER_TITLE
         }),
-        F
+        k
       ]
     }, 'register-title')
   ]
@@ -635,20 +635,20 @@ return t ? (0, r.jsx)(q.Z, {
       children: (0, r.jsxs)('div', {
         className: en.content,
         children: [
-          (0, r.jsx)(_.ChevronSmallLeftIcon, {
+          (0, r.jsx)(h.ChevronSmallLeftIcon, {
             size: 'xs',
             color: 'currentColor',
             className: en.caret
           }),
-          (0, r.jsx)(_.Text, {
+          (0, r.jsx)(h.Text, {
             variant: 'text-md/normal',
             children: et.Z.Messages.AGE_GATE_GO_BACK
           })
         ]
       })
     }) : null,
-    k,
-    F
+    F,
+    k
   ]
 });
   }
@@ -664,7 +664,7 @@ let {
   giftCode: s,
   guildTemplate: i
 } = this.props, a = null != n && null == n.guild && null == n.channel && null != n.inviter;
-return null == n || a || t ? null != i ? this.renderFull(() => (0, r.jsx)(R.Z, {
+return null == n || a || t ? null != i ? this.renderFull(() => (0, r.jsx)(O.Z, {
   guildTemplate: i
 }), !0) : null != s ? this.renderFull(() => (0, r.jsx)(W.Z, {
   giftCode: s
@@ -675,7 +675,7 @@ return null == n || a || t ? null != i ? this.renderFull(() => (0, r.jsx)(R.Z, {
   }
   constructor(e) {
 var t;
-super(e), er(this, 'emailRef', void 0), er(this, 'usernameRef', void 0), er(this, 'globalNameRef', void 0), er(this, 'passwordRef', void 0), er(this, 'dateOfBirthRef', i.createRef()), er(this, '_retryTimer', new h.V7()), er(this, 'handleGotoLogin', e => {
+super(e), er(this, 'emailRef', void 0), er(this, 'usernameRef', void 0), er(this, 'globalNameRef', void 0), er(this, 'passwordRef', void 0), er(this, 'dateOfBirthRef', i.createRef()), er(this, '_retryTimer', new _.V7()), er(this, 'handleGotoLogin', e => {
   let t;
   let {
     email: n
@@ -693,11 +693,11 @@ super(e), er(this, 'emailRef', void 0), er(this, 'usernameRef', void 0), er(this
     null == l || l(e);
     return;
   }
-  let h = null != a ? (0, o.parse)(a.search) : {};
-  null != i ? t = J.Z5c.INVITE_LOGIN(i.code) : null != s ? t = J.Z5c.GIFT_CODE_LOGIN(s.code) : null != r ? t = J.Z5c.GUILD_TEMPLATE_LOGIN(r.code) : null != c ? (t = J.Z5c.LOGIN, h.redirect_to = c) : (t = J.Z5c.LOGIN, '' !== n && (h = {
+  let _ = null != a ? (0, o.parse)(a.search) : {};
+  null != i ? t = J.Z5c.INVITE_LOGIN(i.code) : null != s ? t = J.Z5c.GIFT_CODE_LOGIN(s.code) : null != r ? t = J.Z5c.GUILD_TEMPLATE_LOGIN(r.code) : null != c ? (t = J.Z5c.LOGIN, _.redirect_to = c) : (t = J.Z5c.LOGIN, '' !== n && (_ = {
     email: n
   })), E.Z.loginReset(), u(t, {
-    search: (0, o.stringify)(h)
+    search: (0, o.stringify)(_)
   }), null == l || l(e), V.S.dispatch(J.CkL.WAVE_EMPHASIZE);
 }), er(this, 'handleSubmit', e => {
   null == e || e.preventDefault();
@@ -778,16 +778,16 @@ this.state = {
 
 function eo(e) {
   let t = (0, d.cj)([
-  F.Z,
-  k.default,
+  k.Z,
+  F.default,
   g.Z,
   L.Z,
   b.Z
 ], () => ({
-  consentRequired: F.Z.getAuthenticationConsentRequired(),
-  registering: k.default.getRegisterStatus() === J.$ib.REGISTERING,
-  apiErrors: k.default.getErrors(),
-  authenticated: k.default.isAuthenticated(),
+  consentRequired: k.Z.getAuthenticationConsentRequired(),
+  registering: F.default.getRegisterStatus() === J.$ib.REGISTERING,
+  apiErrors: F.default.getErrors(),
+  authenticated: F.default.isAuthenticated(),
   isUnderage: g.Z.isUnderageAnonymous(),
   country: L.Z.getCountryCode(),
   hasLoggedInAccounts: b.Z.getHasLoggedInAccounts()
@@ -795,7 +795,7 @@ function eo(e) {
 n = (0, y.F4)(),
 s = (0, d.e7)([P.Z], () => P.Z.registrationUsernameSuggestion()),
 [a, l] = i.useState(X.E.FULL);
-  return (0, I.Z)({
+  return (0, m.Z)({
 type: u.ImpressionTypes.VIEW,
 name: u.ImpressionNames.USER_REGISTRATION,
 properties: {
@@ -830,29 +830,29 @@ d = a && n.length > 0;
   return t = d ? (0, c.EQ)(u).with({
 type: j.K.ERROR,
 message: c.P.select()
-  }, e => (0, r.jsx)(_.Text, {
+  }, e => (0, r.jsx)(h.Text, {
 className: en.messageNegative,
 variant: 'text-sm/normal',
 children: e
   })).with({
 type: j.K.AVAILABLE,
 message: c.P.select()
-  }, e => (0, r.jsx)(_.Text, {
+  }, e => (0, r.jsx)(h.Text, {
 className: en.messagePositive,
 variant: 'text-sm/normal',
 children: e
-  })).otherwise(() => (0, r.jsx)(_.Text, {
+  })).otherwise(() => (0, r.jsx)(h.Text, {
 variant: 'text-sm/normal',
 color: 'text-normal',
 children: et.Z.Messages.POMELO_EXISTING_FLOW_ERROR_INVALID
-  })) : null != s && s.length > 0 && i.length > 0 ? (0, r.jsx)(_.Text, {
+  })) : null != s && s.length > 0 && i.length > 0 ? (0, r.jsx)(h.Text, {
 variant: 'text-sm/normal',
 color: 'text-normal',
 children: et.Z.Messages.UU_REGISTER_SUGGESTION.format({
   suggestion: s,
   nameOnClick: o
 })
-  }) : (0, r.jsx)(_.Text, {
+  }) : (0, r.jsx)(h.Text, {
 variant: 'text-sm/normal',
 color: 'text-normal',
 children: et.Z.Messages.POMELO_EXISTING_FLOW_ERROR_INVALID

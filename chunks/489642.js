@@ -6,8 +6,8 @@ return N;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(873546),
+  s = n.n(a),
+  o = n(873546),
   l = n(481060),
   u = n(648996),
   c = n(51144),
@@ -40,7 +40,7 @@ userId: t
   }, [n]), (0, r.jsx)('div', {
 className: f.wumpusWrapper,
 children: (0, r.jsxs)('div', {
-  className: o()(f.wumpus, {
+  className: s()(f.wumpus, {
     [f.wumpusShown]: n
   }),
   children: [
@@ -70,7 +70,7 @@ setNote: n,
 canDM: i,
 onClose: a
   } = e, {
-trackUserProfileAction: o
+trackUserProfileAction: s
   } = (0, d.KZ)(), l = i && (0, c.EO)(t) && !t.bot;
   return (0, r.jsxs)(_.Z, {
 className: f.section,
@@ -83,9 +83,9 @@ children: [
     className: f.messageInputContainer,
     inputClassName: f.messageInput,
     user: t,
-    autoFocus: !s.tq && !n,
+    autoFocus: !o.tq && !n,
     onSend: () => {
-      o({
+      s({
         action: 'SEND_DIRECT_MESSAGE'
       }), null == a || a();
     }

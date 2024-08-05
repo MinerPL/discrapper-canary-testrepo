@@ -11,9 +11,9 @@ return E;
   }
 }), n(47120), n(757143);
 var a = n(400053),
-  o = n.n(a),
-  s = n(302454),
-  l = n.n(s),
+  s = n.n(a),
+  o = n(302454),
+  l = n.n(o),
   u = n(20970),
   c = n(959525);
 
@@ -53,7 +53,7 @@ return [
 ];
   }
   constructor(e, t, n) {
-d(this, 'message', void 0), d(this, 'hasMarkdown', void 0), d(this, 'intlMessage', void 0), this.message = n ? e : e.replace(c.hN, ''), this.hasMarkdown = n, this.intlMessage = new(o())(this.message, t);
+d(this, 'message', void 0), d(this, 'hasMarkdown', void 0), d(this, 'intlMessage', void 0), this.message = n ? e : e.replace(c.hN, ''), this.hasMarkdown = n, this.intlMessage = new(s())(this.message, t);
   }
 }
 

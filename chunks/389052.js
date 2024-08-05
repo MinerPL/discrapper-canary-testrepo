@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
   a = n(481060),
-  o = n(194359),
-  s = n(699516),
+  s = n(194359),
+  o = n(699516),
   l = n(594174),
   u = n(981631),
   c = n(689938);
@@ -25,13 +25,13 @@ id: f
   } = t, h = (0, i.e7)([l.default], () => {
 var e;
 return (null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === f;
-  }, [f]), p = (0, i.e7)([s.Z], () => s.Z.isBlocked(f), [f]);
+  }, [f]), p = (0, i.e7)([o.Z], () => o.Z.isBlocked(f), [f]);
   return h ? null : (0, r.jsx)(a.MenuItem, {
 id: 'block',
 color: n,
 label: p ? c.Z.Messages.UNBLOCK : c.Z.Messages.BLOCK,
 action: p ? () => {
-  null == _ || _(), o.Z.unblockUser(f, {
+  null == _ || _(), s.Z.unblockUser(f, {
     location: E
   });
 } : () => {
@@ -42,7 +42,7 @@ action: p ? () => {
     confirmText: c.Z.Messages.BLOCK,
     cancelText: c.Z.Messages.CANCEL,
     onConfirm: () => {
-      null == d || d(), o.Z.addRelationship({
+      null == d || d(), s.Z.addRelationship({
         userId: f,
         context: {
           location: E

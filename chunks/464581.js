@@ -18,7 +18,7 @@ function a(e, t, n) {
   t,
   n
 ]),
-o = r.useCallback(t => {
+s = r.useCallback(t => {
   let {
     event: n
   } = t;
@@ -29,6 +29,6 @@ o = r.useCallback(t => {
 ]);
   return {
 handlePaste: a,
-handleGlobalPaste: o
+handleGlobalPaste: s
   };
 }

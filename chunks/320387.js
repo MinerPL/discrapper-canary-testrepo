@@ -15,7 +15,7 @@ e !== n && (i = null);
 else
   i = null;
 var a = /^\s*class\b/,
-  o = function(e) {
+  s = function(e) {
 try {
   var t = r.call(e);
   return a.test(t);
@@ -23,9 +23,9 @@ try {
   return !1;
 }
   },
-  s = function(e) {
+  o = function(e) {
 try {
-  if (o(e))
+  if (s(e))
     return !1;
   return r.call(e), !0;
 } catch (e) {
@@ -60,16 +60,16 @@ i(e, null, t);
 if (e !== n)
   return !1;
   }
-  return !o(e) && s(e);
+  return !s(e) && o(e);
 } : function(e) {
   if (d(e))
 return !0;
   if (!e || 'function' != typeof e && 'object' != typeof e)
 return !1;
   if (u)
-return s(e);
-  if (o(e))
+return o(e);
+  if (s(e))
 return !1;
   var t = l.call(e);
-  return !!('[object Function]' === t || '[object GeneratorFunction]' === t || /^\[object HTML/.test(t)) && s(e);
+  return !!('[object Function]' === t || '[object GeneratorFunction]' === t || /^\[object HTML/.test(t)) && o(e);
 };

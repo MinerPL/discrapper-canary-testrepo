@@ -3,10 +3,10 @@ n.d(t, {
 return a;
   },
   CA: function() {
-return o;
+return s;
   },
   Ko: function() {
-return s;
+return o;
   },
   We: function() {
 return l;
@@ -30,7 +30,7 @@ let i = n(177351),
 '#AEC7FF',
 '#3E70DD'
   ],
-  o = [
+  s = [
 n(294521),
 i,
 n(817812),
@@ -43,7 +43,7 @@ n(678282),
   colorize: !1
 }
   ],
-  s = 28,
+  o = 28,
   l = {
 velocity: {
   type: 'static-random',

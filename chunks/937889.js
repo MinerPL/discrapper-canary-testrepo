@@ -17,10 +17,12 @@ return d;
 }), n(47120), n(757143), n(865427);
 var r = n(830121),
   i = n(202131),
-  a = n(454585),
-  o = n(55406),
-  s = n(408433),
+  a = n(454585);
+n(665430);
+var s = n(55406),
+  o = n(408433),
   l = n(981631);
+n(46140);
 let u = new Set([
 l.hBH.IMAGE,
 l.hBH.GIFV
@@ -81,7 +83,7 @@ forceWhite: !!r.forceWhite
 function E(e, t, n) {
   return {
 hasSpoilerEmbeds: !1,
-content: a.Z.reactParserFor(o.Z.getDefaultRules(t))(e.content, !1, null != n ? {
+content: a.Z.reactParserFor(s.Z.getDefaultRules(t))(e.content, !1, null != n ? {
   changeLog: n
 } : {})
   };
@@ -92,7 +94,7 @@ function f(e) {
   return function(e, t, n) {
 var a;
 let {
-  toAST: o = !1,
+  toAST: s = !1,
   hideSimpleEmbedContent: l = !0,
   formatInline: _ = !1,
   postProcessor: E,
@@ -108,7 +110,7 @@ let {
     return e;
   let n = e[0],
     r = t[0];
-  return ('link' === n.type || 'attachmentLink' === n.type) && u.has(r.type) && (0, s.dY)(r) ? [] : e;
+  return ('link' === n.type || 'attachmentLink' === n.type) && u.has(r.type) && (0, o.dY)(r) ? [] : e;
 }(e, (null != h ? h : t).embeds)), !_ && (e = function(e, t) {
   return t ? p(e) : ('paragraph' === e[0].type && e[0].content instanceof Array && (e[0].content = p(e[0].content)), e);
 }(e, n)), I = function(e, t) {

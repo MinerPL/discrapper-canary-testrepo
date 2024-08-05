@@ -1,98 +1,98 @@
-s.d(n, {
+t.d(n, {
   J: function() {
-return p;
+return f;
   }
 });
-var l = s(512722),
-  t = s.n(l),
-  i = s(792986),
-  r = s(639119),
-  a = s(3409),
-  c = s(626135),
-  o = s(987209),
-  u = s(598),
-  d = s(409813),
-  _ = s(45572),
-  m = s(189877),
-  E = s(981631),
-  I = s(474936);
+var i = t(512722),
+  a = t.n(i),
+  r = t(792986),
+  s = t(639119),
+  l = t(3409),
+  o = t(626135),
+  c = t(987209),
+  u = t(598),
+  d = t(409813),
+  _ = t(45572),
+  p = t(189877),
+  m = t(981631),
+  I = t(474936);
 
-function p(e) {
+function f(e) {
   let {
 analyticsData: n,
-initialPlanId: s,
-breadcrumbSteps: l,
-handleStepChange: p,
-referralTrialOfferId: N,
-onReturn: T,
-continueSession: x = !1
+initialPlanId: t,
+breadcrumbSteps: i,
+handleStepChange: f,
+referralTrialOfferId: E,
+onReturn: x,
+continueSession: N = !1
   } = e, {
 contextMetadata: S,
-step: h,
-paymentSources: P,
-paymentSourceId: f,
-setPaymentSourceId: A,
-purchaseError: v,
-setPurchaseError: M,
-purchaseErrorBlockRef: g,
+step: T,
+paymentSources: h,
+paymentSourceId: b,
+setPaymentSourceId: g,
+purchaseError: P,
+setPurchaseError: v,
+purchaseErrorBlockRef: A,
 paymentAuthenticationState: C,
-selectedSkuId: O,
-activeSubscription: R,
-previousStepRef: j,
-setPurchaseState: L
+selectedSkuId: M,
+activeSubscription: y,
+previousStepRef: O,
+setPurchaseState: R
   } = (0, u.usePaymentContext)(), {
-isGift: y
-  } = (0, o.wD)(), Z = {
-...(0, a.fL)(),
-paymentSources: P,
-paymentSourceId: f,
-setPaymentSourceId: A,
-purchaseError: v,
-setPurchaseError: M,
-purchaseErrorBlockRef: g,
+isGift: L
+  } = (0, c.wD)(), j = {
+...(0, l.fL)(),
+paymentSources: h,
+paymentSourceId: b,
+setPaymentSourceId: g,
+purchaseError: P,
+setPurchaseError: v,
+purchaseErrorBlockRef: A,
 paymentAuthenticationState: C,
-selectedSkuId: O,
-isGift: y
-  }, b = (0, r.N)(N), D = !y && null != b && null != O && I.nG[b.trial_id].skus.includes(O), G = null != T ? T : () => {
-p(Object.values(P).length < 1 && null == s ? d.h8.PLAN_SELECT : d.h8.REVIEW, {
+selectedSkuId: M,
+isGift: L
+  }, Z = (0, s.N)(E), D = !L && null != Z && null != M && I.nG[Z.trial_id].skus.includes(M), w = null != x ? x : () => {
+f(Object.values(h).length < 1 && null == t ? d.h8.PLAN_SELECT : d.h8.REVIEW, {
   trackedFromStep: d.h8.PAYMENT_TYPE
 });
   };
-  t()(h, 'Step should be set here');
-  let U = (0, i.Z)(() => Date.now(), [h]);
-  return (0, a.vP)({
-paymentModalArgs: Z,
-initialStep: x && null == j.current ? d.h8.CREDIT_CARD_INFORMATION : d.h8.PAYMENT_TYPE,
+  a()(T, 'Step should be set here');
+  let G = (0, r.Z)(() => Date.now(), [T]);
+  return (0, l.vP)({
+paymentModalArgs: j,
+initialStep: N && null == O.current ? d.h8.CREDIT_CARD_INFORMATION : d.h8.PAYMENT_TYPE,
 prependSteps: [d.h8.PROMOTION_INFO],
 appendSteps: [
   d.h8.REVIEW,
   d.h8.CONFIRM
 ],
-breadcrumpSteps: l,
-currentBreadcrumpStep: h,
+breadcrumpSteps: i,
+currentBreadcrumpStep: T,
 usePaymentModalStep: !0,
-onReturn: G,
+onReturn: w,
 onComplete: e => {
-  e === d.h8.AWAITING_BROWSER_CHECKOUT ? (L(_.A.COMPLETED), p(d.h8.CONFIRM, {
+  e === d.h8.AWAITING_BROWSER_CHECKOUT ? (R(_.A.COMPLETED), f(d.h8.CONFIRM, {
     trackedFromStep: e
-  })) : p(d.h8.REVIEW, {
+  })) : f(d.h8.REVIEW, {
     trackedFromStep: e
   });
 },
 onStepChange: e => {
   let {
-    currentStep: s,
-    toStep: l
-  } = e, t = Date.now();
-  c.default.track(E.rMx.PAYMENT_FLOW_STEP, {
+    currentStep: t,
+    toStep: i
+  } = e, a = Date.now();
+  o.default.track(m.rMx.PAYMENT_FLOW_STEP, {
     ...n,
-    from_step: s,
-    to_step: l,
-    step_duration_ms: t - U,
-    flow_duration_ms: t - S.startTime
+    from_step: t,
+    to_step: i,
+    step_duration_ms: a - G,
+    flow_duration_ms: a - S.startTime
   });
 },
 isEligibleForTrial: D,
-allowDesktopRedirectPurchase: (0, m.tr)(O, y, R)
+allowDesktopRedirectPurchase: (0, p.tr)(M, L, y)
   });
 }

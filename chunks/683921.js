@@ -1,12 +1,12 @@
 n.d(t, {
   Z: function() {
-return l;
+return s;
   }
 });
 var i = n(442837),
   a = n(317381);
 
-function l(e) {
+function s(e) {
   let {
 channelId: t
   } = e;

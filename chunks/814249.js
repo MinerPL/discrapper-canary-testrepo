@@ -1,9 +1,9 @@
 n.d(t, {
   DZ: function() {
-return s;
+return o;
   },
   Dc: function() {
-return o;
+return s;
   },
   R7: function() {
 return l;
@@ -15,7 +15,7 @@ return d;
 return _;
   }
 });
-var r, i, a, o, s, l, u = n(70956),
+var r, i, a, s, o, l, u = n(70956),
   c = n(689938);
 let d = 5 * u.Z.Millis.SECOND;
 
@@ -46,4 +46,4 @@ function _() {
 }
   ];
 }
-(r = o || (o = {})).TOOLBAR_BUTTON = 'toolbar button', r.PILL = 'pill', (i = s || (s = {})).SIDEBAR = 'sidebar', i.PILL_DROPDOWN = 'pill dropdown', i.PILL_NEXT_ARROW = 'pill next arrow', i.PILL_PREVIOUS_ARROW = 'pill previous arrow', (a = l || (l = {})).DUPLICATED = 'DUPLICATED', a.TOO_GENERIC = 'TOO_GENERIC', a.TOO_MANY = 'TOO_MANY', a.INACCURATE = 'INACCURATE', a.NOT_USEFUL = 'NOT_USEFUL', a.OTHER = 'OTHER';
+(r = s || (s = {})).TOOLBAR_BUTTON = 'toolbar button', r.PILL = 'pill', (i = o || (o = {})).SIDEBAR = 'sidebar', i.PILL_DROPDOWN = 'pill dropdown', i.PILL_NEXT_ARROW = 'pill next arrow', i.PILL_PREVIOUS_ARROW = 'pill previous arrow', (a = l || (l = {})).DUPLICATED = 'DUPLICATED', a.TOO_GENERIC = 'TOO_GENERIC', a.TOO_MANY = 'TOO_MANY', a.INACCURATE = 'INACCURATE', a.NOT_USEFUL = 'NOT_USEFUL', a.OTHER = 'OTHER';

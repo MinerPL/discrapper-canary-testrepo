@@ -9,37 +9,37 @@ return u;
 var r = n(182823),
   i = n(148836),
   a = n(470079),
-  o = n(616073);
-let s = new WeakMap();
+  s = n(616073);
+let o = new WeakMap();
 
 function l(e, t, n) {
   'string' == typeof t && (t = t.replace(/\s+/g, ''));
-  let r = s.get(e);
+  let r = o.get(e);
   return `${ r }-${ n }-${ t }`;
 }
 
 function u(e, t, n) {
   var a;
   let {
-key: o,
-isDisabled: s,
+key: s,
+isDisabled: o,
 shouldSelectOnPressUp: u
   } = e, {
 selectionManager: c,
 selectedKey: d
-  } = t, _ = o === d, E = s || t.isDisabled || t.disabledKeys.has(o), {
+  } = t, _ = s === d, E = o || t.isDisabled || t.disabledKeys.has(s), {
 itemProps: f,
 isPressed: h
   } = (0, i.Cs)({
 selectionManager: c,
-key: o,
+key: s,
 ref: n,
 isDisabled: E,
 shouldSelectOnPressUp: u,
 linkBehavior: 'selection'
-  }), p = l(t, o, 'tab'), m = l(t, o, 'tabpanel'), {
+  }), p = l(t, s, 'tab'), m = l(t, s, 'tabpanel'), {
 tabIndex: I
-  } = f, T = t.collection.getItem(o), g = (0, r.zL)(null == T ? void 0 : T.props, {
+  } = f, T = t.collection.getItem(s), g = (0, r.zL)(null == T ? void 0 : T.props, {
 isLink: !!(null == T ? void 0 : null === (a = T.props) || void 0 === a ? void 0 : a.href),
 labelable: !0
   });
@@ -105,7 +105,7 @@ selectionManager: _,
 disabledKeys: E
   } = t, {
 direction: f
-  } = (0, o.bU)(), h = (0, a.useMemo)(() => new c(d, f, l, E), [
+  } = (0, s.bU)(), h = (0, a.useMemo)(() => new c(d, f, l, E), [
 d,
 E,
 l,
@@ -121,7 +121,7 @@ disallowEmptySelection: !0,
 scrollRef: n,
 linkBehavior: 'selection'
   }), m = (0, r.Me)();
-  s.set(t, m);
+  o.set(t, m);
   let I = (0, r.bE)({
 ...e,
 id: m

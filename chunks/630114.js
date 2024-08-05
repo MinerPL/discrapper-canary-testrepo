@@ -6,8 +6,8 @@ return I;
 var r = n(392711),
   i = n.n(r),
   a = n(131704),
-  o = n(680089),
-  s = n(592125),
+  s = n(680089),
+  o = n(592125),
   l = n(480294),
   u = n(580005),
   c = n(496675),
@@ -28,7 +28,7 @@ return [{
   }
 }];
   let m = [],
-I = Object.values(s.Z.getMutableGuildChannelsForGuild(e.id)).filter(e => c.Z.can(p.Plq.VIEW_CHANNEL, e));
+I = Object.values(o.Z.getMutableGuildChannelsForGuild(e.id)).filter(e => c.Z.can(p.Plq.VIEW_CHANNEL, e));
   return m.push(... function(e, t) {
 if (!(d.ZP.isMuted(e.id) && !d.ZP.isTemporarilyMuted(e.id)))
   return [];
@@ -83,7 +83,7 @@ return n.length > 0 && t.push({
 let t = [],
   n = [];
 for (let t of e)
-  d.ZP.isChannelMuted(t.guild_id, t.id) && t.isCategory() && !o.Z.isCollapsed(t.id) && n.push(t);
+  d.ZP.isChannelMuted(t.guild_id, t.id) && t.isCategory() && !s.Z.isCollapsed(t.id) && n.push(t);
 return n.length > 0 && t.push({
   label: 'Unmuting '.concat(n.length, ' categories and setting to grey-dot'),
   debug: n.map(e => '\n    - #'.concat(e.name)).join(''),
@@ -121,14 +121,14 @@ return e.forEach(e => {
   }(I)), l.Z.hasConsented(p.pjP.PERSONALIZATION) ? m.push(... function(e, t, n, r, a) {
 if (d.ZP.isMuted(e.id) && !d.ZP.isTemporarilyMuted(e.id))
   return [];
-let o = new Set(t.map(e => e.id)),
-  s = r.filter(e => o.has(e.channel_id)),
-  l = i().keyBy(s, 'channel_id'),
-  u = Math.max(n.messages === h.XR.High ? a.frecency.yearMinOpensLargeServer : a.frecency.yearMinOpensSmallServer, s.reduce((e, t) => {
+let s = new Set(t.map(e => e.id)),
+  o = r.filter(e => s.has(e.channel_id)),
+  l = i().keyBy(o, 'channel_id'),
+  u = Math.max(n.messages === h.XR.High ? a.frecency.yearMinOpensLargeServer : a.frecency.yearMinOpensSmallServer, o.reduce((e, t) => {
     var n;
     return e + Number(null !== (n = t.num_year_opens) && void 0 !== n ? n : 0);
   }, 0) * a.frecency.totalOpensPercent),
-  c = Math.max(a.frecency.monthMinOpens, s.reduce((e, t) => {
+  c = Math.max(a.frecency.monthMinOpens, o.reduce((e, t) => {
     var n;
     return e + Number(null !== (n = t.num_three_month_opens) && void 0 !== n ? n : 0);
   }, 0) * a.frecency.totalOpensPercent),
@@ -157,16 +157,16 @@ if (d.ZP.isMuted(e.id) && !d.ZP.isTemporarilyMuted(e.id))
 let n = [],
   r = new Set(t.map(e => e.id)),
   i = Date.now() - _.Z.Millis.DAYS_30,
-  o = u.Z.getFrequentlyWithoutFetchingLatest().filter(e => e instanceof a.Sf && r.has(e.id)).filter(e => {
+  s = u.Z.getFrequentlyWithoutFetchingLatest().filter(e => e instanceof a.Sf && r.has(e.id)).filter(e => {
     var t, n;
     let r = null !== (n = null === (t = u.Z.frecencyWithoutFetchingLatest.usageHistory[e.id]) || void 0 === t ? void 0 : t.recentUses) && void 0 !== n ? n : [];
     return 0 !== r.length && r[r.length - 1] >= i;
   });
-return o.length > 0 && n.push({
-  label: 'Setting '.concat(o.length, ' channels to white-dot since they are recent and frequently viewed'),
-  debug: o.map(e => '\n    - #'.concat(e.name)).join(''),
+return s.length > 0 && n.push({
+  label: 'Setting '.concat(s.length, ' channels to white-dot since they are recent and frequently viewed'),
+  debug: s.map(e => '\n    - #'.concat(e.name)).join(''),
   apply: (e, t) => {
-    for (let n of o)
+    for (let n of s)
       S(e, t, n.id, !0);
   }
 }), n;
@@ -179,9 +179,9 @@ function T(e, t, n) {
 }
 
 function g(e, t, n, r) {
-  var a, o, s, l;
-  let u = null !== (s = null === (a = e.channel_overrides) || void 0 === a ? void 0 : a[n]) && void 0 !== s ? s : {};
-  r(u, null !== (l = null === (o = t.channel_overrides) || void 0 === o ? void 0 : o[n]) && void 0 !== l ? l : {}), !i().isEmpty(u) && (null == e.channel_overrides && (e.channel_overrides = {}), e.channel_overrides[n] = u);
+  var a, s, o, l;
+  let u = null !== (o = null === (a = e.channel_overrides) || void 0 === a ? void 0 : a[n]) && void 0 !== o ? o : {};
+  r(u, null !== (l = null === (s = t.channel_overrides) || void 0 === s ? void 0 : s[n]) && void 0 !== l ? l : {}), !i().isEmpty(u) && (null == e.channel_overrides && (e.channel_overrides = {}), e.channel_overrides[n] = u);
 }
 
 function S(e, t, n, r) {

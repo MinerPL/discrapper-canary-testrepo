@@ -6,8 +6,8 @@ return d;
 var r = n(392711),
   i = n.n(r),
   a = n(846519),
-  o = n(710845),
-  s = n(70956),
+  s = n(710845),
+  o = n(70956),
   l = n(709054);
 
 function u(e, t, n) {
@@ -18,7 +18,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let c = 1 * s.Z.Millis.MINUTE;
+let c = 1 * o.Z.Millis.MINUTE;
 class d {
   reset() {
 this._subscriptions = {}, this._unsubscriptions = {}, this._unsubscribe.cancel();
@@ -51,9 +51,9 @@ i[t] = (null !== (r = i[t]) && void 0 !== r ? r : 0) + 1, this._unsubscriptions[
   }
   checkForLeaks(e, t) {
 var n, r, i, a;
-let s = null !== (i = null === (n = this._subscriptions[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== i ? i : 0,
-  l = s - (null !== (a = null === (r = this._unsubscriptions[e]) || void 0 === r ? void 0 : r[t]) && void 0 !== a ? a : 0);
-l > 5 && new o.Z('GuildMemberSubscriptions').warn('GuildMemberSubscriptions.subscribe(...): Potential reference leak! ('.concat(l, ' subscriptions)'));
+let o = null !== (i = null === (n = this._subscriptions[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== i ? i : 0,
+  l = o - (null !== (a = null === (r = this._unsubscriptions[e]) || void 0 === r ? void 0 : r[t]) && void 0 !== a ? a : 0);
+l > 5 && new s.Z('GuildMemberSubscriptions').warn('GuildMemberSubscriptions.subscribe(...): Potential reference leak! ('.concat(l, ' subscriptions)'));
   }
   flushUnsubscriptions() {
 if (!i().isEmpty(this._unsubscriptions))

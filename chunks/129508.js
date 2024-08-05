@@ -2,9 +2,9 @@ n(47120);
 var r = n(512722),
   i = n.n(r),
   a = n(921608),
-  o = n(693824);
+  s = n(693824);
 
-function s(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -35,18 +35,18 @@ return t;
   drawRoundedImageWithFallbacks(e, t, n, r, i) {
 for (let a of e) {
   let e = this.drawRoundedImage(a, t, n, r, i);
-  if (e !== o.vP.Failure)
+  if (e !== s.vP.Failure)
     return e;
 }
-return o.vP.Failure;
+return s.vP.Failure;
   }
   constructor(e, t) {
-s(this, 'color', 'black'), s(this, 'font', {
+o(this, 'color', 'black'), o(this, 'font', {
   style: 'normal',
   weight: 300,
   size: a.n,
   family: ['serif'],
-  truncate: o.GX.None
-}), s(this, 'assetMap', void 0), s(this, 'canvas', void 0), this.canvas = e, this.assetMap = t;
+  truncate: s.GX.None
+}), o(this, 'assetMap', void 0), o(this, 'canvas', void 0), this.canvas = e, this.assetMap = t;
   }
 };

@@ -7,6 +7,8 @@ e.exports = {
   checkmarkCircle: 'checkmarkCircle_cb7c27',
   checkmark: 'checkmark_cb7c27',
   redCircle: 'redCircle_cb7c27',
+  lockedBadgeContainer: 'lockedBadgeContainer_cb7c27',
+  lockedBadge: 'lockedBadge_cb7c27',
   disabled: 'disabled_cb7c27',
   iconWrapper: 'iconWrapper_cb7c27',
   darkOverlay: 'darkOverlay_cb7c27',

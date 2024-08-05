@@ -3,8 +3,8 @@ var r = n(735250);
 n(470079);
 var i = n(704215),
   a = n(481060),
-  o = n(147913),
-  s = n(605236),
+  s = n(147913),
+  o = n(605236),
   l = n(944486),
   u = n(914010),
   c = n(626135),
@@ -15,13 +15,13 @@ let f = 'GUILD_ONBOARDING_UPSELL_MODAL',
   h = (e, t) => {
 if (__OVERLAY__ || null == e || null == t || !(0, d.S)(e, i.z.GUILD_ONBOARDING_UPSELL_MODAL_V2))
   return;
-(0, s.kk)(i.z.GUILD_ONBOARDING_UPSELL_MODAL_V2);
-let o = function() {
+(0, o.kk)(i.z.GUILD_ONBOARDING_UPSELL_MODAL_V2);
+let s = function() {
   let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : E.L.DISMISS;
   c.default.track(_.rMx.UPSELL_CLICKED, {
     type: i.z[i.z.GUILD_ONBOARDING_UPSELL_MODAL_V2],
     action: 'dismiss'
-  }), (0, d.G)(e, i.z.GUILD_ONBOARDING_UPSELL_MODAL_V2), (0, s.EW)(i.z.GUILD_ONBOARDING_UPSELL_MODAL_V2, {
+  }), (0, d.G)(e, i.z.GUILD_ONBOARDING_UPSELL_MODAL_V2), (0, o.EW)(i.z.GUILD_ONBOARDING_UPSELL_MODAL_V2, {
     dismissAction: t
   });
 };
@@ -33,17 +33,17 @@ let o = function() {
     ...n,
     guildId: e,
     onClose: e => {
-      o(e), n.onClose();
+      s(e), n.onClose();
     }
   });
 }, {
   modalKey: f,
   onCloseRequest: () => {
-    o(), (0, a.closeModal)(f);
+    s(), (0, a.closeModal)(f);
   }
 });
   };
-class p extends o.Z {
+class p extends s.Z {
   handleChannelSelect(e) {
 let {
   guildId: t,

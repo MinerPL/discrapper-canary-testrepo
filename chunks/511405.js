@@ -1,6 +1,6 @@
 n.d(t, {
   G: function() {
-return s;
+return o;
   },
   H: function() {
 return l;
@@ -9,18 +9,18 @@ return l;
 var r = n(392711),
   i = n.n(r),
   a = n(149765),
-  o = n(915486);
+  s = n(915486);
 
-function s(e) {
+function o(e) {
   return i().cloneDeepWith(e, e => (0, a.Bw)(e) ? {
 __tag__: 'bigflag',
 data: e.toJSON()
-  } : (0, o.lq)(e) ? {
+  } : (0, s.lq)(e) ? {
 __tag__: 'uint8array',
 data: Array.from(e)
   } : void 0);
 }
 
 function l(e) {
-  return i().cloneDeepWith(e, e => null != e && 'object' == typeof e && '__tag__' in e && 'bigflag' === e.__tag__ ? a.vB(e.data) : (0, o.Bx)(e) ? new Uint8Array(e.data) : void 0);
+  return i().cloneDeepWith(e, e => null != e && 'object' == typeof e && '__tag__' in e && 'bigflag' === e.__tag__ ? a.vB(e.data) : (0, s.Bx)(e) ? new Uint8Array(e.data) : void 0);
 }

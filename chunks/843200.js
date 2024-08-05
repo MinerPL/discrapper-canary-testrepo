@@ -69,7 +69,7 @@ return this.props.isClaimed && this.props.hasEmail ? (0, n.jsx)(E.Z.Child, {
     default: e
   } = await Promise.all([
     s.e('9343'),
-    s.e('22303')
+    s.e('45863')
   ]).then(s.bind(s, 642298));
   return t => (0, n.jsx)(e, {
     ...t

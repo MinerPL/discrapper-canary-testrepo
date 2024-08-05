@@ -72,20 +72,20 @@ a = {
     'nil'
   ]
 },
-o = {
+s = {
   className: 'doctag',
   begin: '@[A-Za-z]+'
 },
-s = {
+o = {
   begin: '#<',
   end: '>'
 },
 l = [
   e.COMMENT('#', '$', {
-    contains: [o]
+    contains: [s]
   }),
   e.COMMENT('^=begin', '^=end', {
-    contains: [o],
+    contains: [s],
     relevance: 10
   }),
   e.COMMENT('^__END__', e.MATCH_NOTHING_RE)
@@ -345,10 +345,10 @@ f = [
           end: '\\][a-z]*'
         }
       ]
-    }].concat(s, l),
+    }].concat(o, l),
     relevance: 0
   }
-].concat(s, l);
+].concat(o, l);
   u.contains = f, E.contains = f;
   let h = [{
   begin: /^\s*=>/,
@@ -367,7 +367,7 @@ f = [
   }
 }
   ];
-  return l.unshift(s), {
+  return l.unshift(o), {
 name: 'Ruby',
 aliases: [
   'rb',

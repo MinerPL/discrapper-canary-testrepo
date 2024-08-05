@@ -12,7 +12,7 @@ t.Z = e => {
 cards: t,
 className: n,
 cardType: r
-  } = e, _ = () => window.innerWidth < 890 ? 1 : window.innerWidth < 1080 ? 2 : 3, [u, E] = a.useState(0), [T, I] = a.useState(_()), [R, C] = a.useState(!1), p = t.length;
+  } = e, _ = () => window.innerWidth < 890 ? 1 : window.innerWidth < 1080 ? 2 : 3, [u, E] = a.useState(0), [T, I] = a.useState(_()), [R, C] = a.useState(!1), g = t.length;
   a.useEffect(() => {
 let e = () => {
   I(_());
@@ -21,28 +21,28 @@ return window.addEventListener('resize', e), () => {
   window.removeEventListener('resize', e);
 };
   }, []), a.useEffect(() => {
-p > T && u > p - T ? E(p - T) : p <= T && E(0);
+g > T && u > g - T ? E(g - T) : g <= T && E(0);
   }, [
-p,
+g,
 T
   ]);
-  let g = a.useCallback(e => ({
+  let p = a.useCallback(e => ({
   x: (e - u) * 100
 }), [u]),
-[A, m] = (0, l.useSprings)(t.length, g);
+[A, m] = (0, o.useSprings)(t.length, p);
   return a.useEffect(() => {
-m(g);
+m(p);
   }, [
 m,
-g
+p
   ]), (0, s.jsx)('div', {
 className: n,
 children: (0, s.jsxs)('div', {
   className: d.cardContainer,
   children: [
-    p > T && (0, s.jsx)(o.Clickable, {
+    g > T && (0, s.jsx)(o.Clickable, {
       onClick: R ? () => {
-        E(e => 0 === e ? p - T : e - 1);
+        E(e => 0 === e ? g - T : e - 1);
       } : void 0,
       className: i()({
         [d.leftArrow]: R,
@@ -71,9 +71,9 @@ children: (0, s.jsxs)('div', {
         }, ''.concat(t[n].name, '_').concat(n, '_animated_div'));
       })
     }),
-    p > T && (0, s.jsx)(o.Clickable, {
+    g > T && (0, s.jsx)(o.Clickable, {
       onClick: () => {
-        E(e => e >= p - T ? (C(!0), 0) : e + 1);
+        E(e => e >= g - T ? (C(!0), 0) : e + 1);
       },
       className: d.rightArrow,
       children: (0, s.jsx)(o.ArrowSmallRightIcon, {
@@ -81,10 +81,10 @@ children: (0, s.jsxs)('div', {
         colorClass: d.arrowIcon
       })
     }),
-    p > T && (0, s.jsx)('div', {
+    g > T && (0, s.jsx)('div', {
       className: d.cardProgressBar,
       children: t.map((e, t) => {
-        if (!(t > p - T))
+        if (!(t > g - T))
           return (0, s.jsx)('div', {
             className: t === u ? d.selectedDot : d.dot
           }, 'progress_bar_dot_'.concat(t));

@@ -200,6 +200,12 @@ return tv.mY4;
   BookCheckIcon: function() {
 return tv.snC;
   },
+  BookmarkIcon: function() {
+return tv.plf;
+  },
+  BookmarkOutlineIcon: function() {
+return tv.gt9;
+  },
   BoostTier1Icon: function() {
 return tv.XGX;
   },
@@ -525,10 +531,10 @@ return tv.xCu;
 return tv.TIy;
   },
   CopyInput: function() {
-return to.k;
+return ts.k;
   },
   CopyInputModes: function() {
-return to.u;
+return ts.u;
   },
   CreditCardIcon: function() {
 return tv.ciH;
@@ -600,13 +606,13 @@ return tv.O0z;
 return tv.FLu;
   },
   EmptyState: function() {
-return ts.ub;
+return to.ub;
   },
   EmptyStateImage: function() {
-return ts.ox;
+return to.ox;
   },
   EmptyStateText: function() {
-return ts.OZ;
+return to.OZ;
   },
   EnvelopeIcon: function() {
 return tv._XJ;
@@ -616,6 +622,9 @@ return tv.alO;
   },
   ExperimentalLootboxIcon: function() {
 return tv.Q4k;
+  },
+  ExperimentalPineappleSpongebobIcon: function() {
+return tv.aW3;
   },
   EyeDropperIcon: function() {
 return tv.ilE;
@@ -1068,10 +1077,10 @@ return ei.kS;
 return tv.Oqj;
   },
   MenuImageUploadControl: function() {
-return eo.T;
+return es.T;
   },
   MenuInteractiveCompositeControl: function() {
-return es.V;
+return eo.V;
   },
   MenuItem: function() {
 return ei.sN;
@@ -1557,7 +1566,7 @@ return tv.Ycl;
 return tv.QJP;
   },
   ShouldAnimate: function() {
-return o.L;
+return s.L;
   },
   SignPostIcon: function() {
 return tv.Vy8;
@@ -1620,7 +1629,7 @@ return c.A;
 return c.SpringComponentProps;
   },
   SpringConfig: function() {
-return s.SpringConfig;
+return o.SpringConfig;
   },
   StackedProgress: function() {
 return eT.y;
@@ -1878,7 +1887,7 @@ return tv.MTm;
 return tv.rG2;
   },
   UseSpringProps: function() {
-return s.UseSpringProps;
+return o.UseSpringProps;
   },
   UseSpringsProps: function() {
 return l.UseSpringsProps;
@@ -2175,7 +2184,7 @@ return N.yn;
 return ex.nV;
   },
   useSpring: function() {
-return s.q;
+return o.q;
   },
   useSprings: function() {
 return l.b;
@@ -2202,8 +2211,8 @@ return ex.cY;
 var r = n(680732),
   i = n(186325),
   a = n(885518),
-  o = n(431563),
-  s = n(143450),
+  s = n(431563),
+  o = n(143450),
   l = n(519554),
   u = n(558452),
   c = n(857749),
@@ -2256,8 +2265,8 @@ var r = n(680732),
   er = n(830447),
   ei = n(828214),
   ea = n(756710),
-  eo = n(639627),
-  es = n(54281),
+  es = n(639627),
+  eo = n(54281),
   el = n(695407),
   eu = n(739007),
   ec = n(878678),
@@ -2320,8 +2329,8 @@ var r = n(680732),
   tr = n(181958),
   ti = n(547800),
   ta = n(854541),
-  to = n(649724),
-  ts = n(185372),
+  ts = n(649724),
+  to = n(185372),
   tl = n(916616),
   tu = n(218061),
   tc = n(79027),

@@ -10,8 +10,8 @@ var a = t(780384),
   l = t(410030),
   o = t(285952),
   r = t(63063),
-  c = t(725875),
-  d = t(981631),
+  d = t(725875),
+  c = t(981631),
   u = t(689938),
   I = t(843144),
   m = t(893916),
@@ -30,13 +30,13 @@ children: [
   (0, i.jsx)(s.FormText, {
     type: s.FormTextTypes.DESCRIPTION,
     children: u.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_DESCRIPTION.format({
-      helpdeskArticle: r.Z.getArticleURL(d.BhN.CHANNEL_FOLLOWING)
+      helpdeskArticle: r.Z.getArticleURL(c.BhN.CHANNEL_FOLLOWING)
     })
   }),
   (0, i.jsx)(s.FormDivider, {
     className: I.headerDivider
   }),
-  n.length > 0 ? (0, i.jsx)(c.Z, {
+  n.length > 0 ? (0, i.jsx)(d.Z, {
     webhooks: n,
     editedWebhook: t,
     selectableWebhookChannels: N,
@@ -64,7 +64,7 @@ children: [
         })
       ]
     });
-  }(h, () => open(r.Z.getArticleURL(d.BhN.CHANNEL_FOLLOWING)))
+  }(h, () => open(r.Z.getArticleURL(c.BhN.CHANNEL_FOLLOWING)))
 ]
   });
 }

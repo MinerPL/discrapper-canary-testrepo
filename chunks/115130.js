@@ -1,8 +1,8 @@
 n(789020);
 var r, i = n(442837),
   a = n(570140),
-  o = n(695346),
-  s = n(630388),
+  s = n(695346),
+  o = n(630388),
   l = n(981631);
 
 function u(e, t, n) {
@@ -36,7 +36,7 @@ d = {
 return d;
   }
   getIsEnabled() {
-return o.Sb.getSetting() && E.length > 0;
+return s.Sb.getSetting() && E.length > 0;
   }
   getLastUsedObject() {
 return d.lastUsedObject;
@@ -91,7 +91,7 @@ _ = 'loading';
 let {
   applications: t
 } = e;
-_ = 'loaded', E = t.filter(e => null != e.flags && (0, s.yE)(e.flags, l.udG.EMBEDDED));
+_ = 'loaded', E = t.filter(e => null != e.flags && (0, o.yE)(e.flags, l.udG.EMBEDDED));
   },
   DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL: function(e) {
 let {

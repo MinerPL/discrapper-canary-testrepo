@@ -20,21 +20,21 @@ n(470079);
 var i = n(866442),
   a = n(481060);
 n(531643);
-var o = n(768581);
+var s = n(768581);
 n(403182);
-var s = n(51144),
+var o = n(51144),
   l = n(661543),
   u = n(200299),
   c = n(486324),
   d = n(689938);
 
-function _(e, t, i, o) {
+function _(e, t, i, s) {
   (0, a.openModalLazy)(async () => {
 let {
   default: a
 } = await n.e('82634').then(n.bind(n, 28130));
 return n => (0, r.jsx)(a, {
-  filters: o,
+  filters: s,
   maxFileSizeBytes: u.B,
   imageSpecifications: e === c.pC.BANNER && d.Z.Messages.USER_SETTINGS_PROFILE_THEMES_BANNER_MODAL_SPECS,
   onComplete: (n, r) => (0, l.j)({
@@ -58,8 +58,8 @@ return e;
   let {
 size: i = 80,
 canAnimate: a = !0
-  } = r, s = null === e;
-  return s && null == t ? o.ZP.getDefaultAvatarURL(n.id, n.discriminator) : s || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, i, a) : n.getAvatarURL(null == t ? void 0 : t.guildId, i, a);
+  } = r, o = null === e;
+  return o && null == t ? s.ZP.getDefaultAvatarURL(n.id, n.discriminator) : o || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, i, a) : n.getAvatarURL(null == t ? void 0 : t.guildId, i, a);
 }
 
 function f(e) {
@@ -69,8 +69,8 @@ pendingNickname: n,
 pendingGlobalName: r,
 user: i,
 guildMember: a
-  } = e, o = '' === n ? null : null != n ? n : null == a ? void 0 : a.nick, l = '' === r ? i.username : r;
-  return null !== (t = null != o ? o : l) && void 0 !== t ? t : s.ZP.getName(i);
+  } = e, s = '' === n ? null : null != n ? n : null == a ? void 0 : a.nick, l = '' === r ? i.username : r;
+  return null !== (t = null != s ? s : l) && void 0 !== t ? t : o.ZP.getName(i);
 }
 
 function h(e) {
@@ -78,8 +78,8 @@ function h(e) {
   let {
 pendingProfileEffectId: r,
 displayProfile: i
-  } = e, a = null == i ? void 0 : null === (t = i._userProfile) || void 0 === t ? void 0 : t.profileEffectId, o = null == i ? void 0 : null === (n = i._guildMemberProfile) || void 0 === n ? void 0 : n.profileEffectId, s = null === r;
-  return s && null != o ? a : s ? null : null != r ? r : null == i ? void 0 : i.profileEffectId;
+  } = e, a = null == i ? void 0 : null === (t = i._userProfile) || void 0 === t ? void 0 : t.profileEffectId, s = null == i ? void 0 : null === (n = i._guildMemberProfile) || void 0 === n ? void 0 : n.profileEffectId, o = null === r;
+  return o && null != s ? a : o ? null : null != r ? r : null == i ? void 0 : i.profileEffectId;
 }
 
 function p(e) {

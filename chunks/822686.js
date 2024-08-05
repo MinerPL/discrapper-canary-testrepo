@@ -2,8 +2,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(481060),
-  o = n(904245),
-  s = n(367907),
+  s = n(904245),
+  o = n(367907),
   l = n(592125),
   u = n(496675),
   c = n(981631),
@@ -14,9 +14,9 @@ t.Z = e => {
 message: t,
 reportId: n
   } = e, [E, f] = i.useState(!1), h = i.useCallback(() => {
-f(!0), s.ZP.trackWithMetadata(c.rMx.IAR_DELETE_MESSAGE_BUTTON_CLICKED, {
+f(!0), o.ZP.trackWithMetadata(c.rMx.IAR_DELETE_MESSAGE_BUTTON_CLICKED, {
   report_id: n
-}), o.Z.deleteMessage(t.getChannelId(), t.id);
+}), s.Z.deleteMessage(t.getChannelId(), t.id);
   }, [
 t,
 n

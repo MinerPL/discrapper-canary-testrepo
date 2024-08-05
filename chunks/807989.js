@@ -7,8 +7,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(243814),
-  s = n(993365),
+  s = n(243814),
+  o = n(993365),
   l = n(481060),
   u = n(979200),
   c = n(630388),
@@ -34,7 +34,7 @@ function I(e) {
   let n, {
   application: i,
   scopes: a,
-  redirectUri: s,
+  redirectUri: o,
   approximateGuildCount: I,
   isEmbeddedFlow: g,
   disclosures: S
@@ -42,9 +42,9 @@ function I(e) {
 A = new Date(d.default.extractTimestamp(i.id)),
 N = (0, E.W3)(a),
 v = (0, c.yE)(null !== (t = i.flags) && void 0 !== t ? t : 0, f.udG.EMBEDDED);
-  if (null != s && !v && !g)
+  if (null != o && !v && !g)
 try {
-  let e = new URL(s);
+  let e = new URL(o);
   n = null != e.host && e.host.length > 0 ? e.origin : e.href;
 } catch (e) {
   n = null;
@@ -69,7 +69,7 @@ children: [
       date: A
     })
   }),
-  a.includes(o.x.BOT) && null != I ? (0, r.jsx)(T, {
+  a.includes(s.x.BOT) && null != I ? (0, r.jsx)(T, {
     icon: l.RobotIcon,
     text: h.Z.Messages.OAUTH2_DETAILS_GUILDS.format({
       guildCount: I
@@ -104,7 +104,7 @@ children: [
     className: p.entryIcon,
     color: 'currentColor'
   }),
-  (0, r.jsx)(s.x, {
+  (0, r.jsx)(o.x, {
     variant: 'text-xs/medium',
     color: 'text-muted',
     className: p.entryInner,

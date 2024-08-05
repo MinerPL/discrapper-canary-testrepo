@@ -7,15 +7,15 @@ var s, r = n(735250),
   c = n(481060),
   u = n(129293),
   d = n(388905),
-  h = n(108427),
-  _ = n(598077),
+  _ = n(108427),
+  h = n(598077),
   E = n(896797),
   g = n(981631),
   p = n(930441),
-  f = n(689938),
-  I = n(549856);
+  I = n(689938),
+  m = n(549856);
 
-function m(e, t, n) {
+function f(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -42,7 +42,7 @@ o.tn.post({
     body: {
       user: n
     }
-  } = e, s = new _.Z(n);
+  } = e, s = new h.Z(n);
   this.setState({
     success: !0,
     busy: !1,
@@ -52,7 +52,7 @@ o.tn.post({
 }, () => this.setState({
   success: !1,
   busy: !1
-})), (0, h.e)('disable_email_notifications');
+})), (0, _.e)('disable_email_notifications');
   }
   renderBusy() {
 return (0, r.jsx)(d.ZP, {
@@ -63,29 +63,29 @@ return (0, r.jsx)(d.ZP, {
 let {
   defaultRoute: n,
   transitionTo: s
-} = this.props, i = f.Z.Messages.EMAIL_CATEGORY_UNSUBSCRIBE_EMAIL_BODY.format({
+} = this.props, i = I.Z.Messages.EMAIL_CATEGORY_UNSUBSCRIBE_EMAIL_BODY.format({
   category: t
 });
 return (0, r.jsxs)(d.ZP, {
   children: [
     (0, r.jsx)(d.Dx, {
-      className: I.marginBottom8,
-      children: f.Z.Messages.EMAIL_CATEGORY_UNSUBSCRIBE_HEADER
+      className: m.marginBottom8,
+      children: I.Z.Messages.EMAIL_CATEGORY_UNSUBSCRIBE_HEADER
     }),
     (0, r.jsx)(d.DK, {
       children: i
     }),
     (0, r.jsx)(d.zx, {
-      className: I.marginTop20,
+      className: m.marginTop20,
       onClick: () => s(n),
-      children: f.Z.Messages.CONTINUE_TO_WEBAPP
+      children: I.Z.Messages.CONTINUE_TO_WEBAPP
     }),
     (0, r.jsx)(d.zx, {
-      className: I.marginTop8,
+      className: m.marginTop8,
       color: d.zx.Colors.LINK,
       look: d.zx.Looks.LINK,
       onClick: () => s(g.Z5c.SETTINGS('notifications', p.vG)),
-      children: f.Z.Messages.EMAIL_CATEGORY_MANAGE_SETTING_LABEL
+      children: I.Z.Messages.EMAIL_CATEGORY_MANAGE_SETTING_LABEL
     })
   ]
 });
@@ -108,19 +108,19 @@ return (0, r.jsxs)(d.ZP, {
     (0, r.jsx)(d.qE, {
       src: null == n ? void 0 : n.getAvatarURL(void 0, 100),
       size: c.AvatarSizes.DEPRECATED_SIZE_100,
-      className: I.marginBottom20
+      className: m.marginBottom20
     }),
     (0, r.jsx)(d.Dx, {
-      className: I.marginBottom8,
-      children: f.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_HEADER
+      className: m.marginBottom8,
+      children: I.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_HEADER
     }),
     (0, r.jsx)(d.DK, {
-      children: f.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_BODY
+      children: I.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_BODY
     }),
     (0, r.jsx)(d.zx, {
-      className: I.marginTop40,
+      className: m.marginTop40,
       onClick: () => t(e),
-      children: f.Z.Messages.CONTINUE_TO_WEBAPP
+      children: I.Z.Messages.CONTINUE_TO_WEBAPP
     })
   ]
 });
@@ -134,19 +134,19 @@ return (0, r.jsxs)(d.ZP, {
   children: [
     (0, r.jsx)(d.Ee, {
       src: n(105020),
-      className: I.marginBottom20
+      className: m.marginBottom20
     }),
     (0, r.jsx)(d.Dx, {
-      className: I.marginBottom8,
-      children: f.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
+      className: m.marginBottom8,
+      children: I.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
     }),
     (0, r.jsx)(d.DK, {
-      children: f.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY
+      children: I.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY
     }),
     (0, r.jsx)(d.zx, {
-      className: I.marginTop40,
+      className: m.marginTop40,
       onClick: () => t(e),
-      children: f.Z.Messages.CONTINUE_TO_WEBAPP
+      children: I.Z.Messages.CONTINUE_TO_WEBAPP
     })
   ]
 });
@@ -159,7 +159,7 @@ let {
 return e ? this.renderBusy() : t ? this.renderSuccess() : this.renderError();
   }
   constructor(...e) {
-super(...e), m(this, 'state', {
+super(...e), f(this, 'state', {
   busy: !0,
   success: !1,
   user: null,
@@ -167,7 +167,7 @@ super(...e), m(this, 'state', {
 });
   }
 }
-m(N, 'defaultProps', {
+f(N, 'defaultProps', {
   transitionTo: e => n.g.location.assign(e)
 }), t.Z = l.ZP.connectStores([E.Z], () => ({
   defaultRoute: E.Z.defaultRoute

@@ -6,7 +6,7 @@ return i;
 var r = n(740078);
 
 function i(e) {
-  var t, n, i, a, o = (t = e, n = new Map(), i = new Set(), a = [], t.forEach(function(e) {
+  var t, n, i, a, s = (t = e, n = new Map(), i = new Set(), a = [], t.forEach(function(e) {
 n.set(e.name, e);
   }), t.forEach(function(e) {
 !i.has(e.name) && ! function e(t) {
@@ -19,7 +19,7 @@ n.set(e.name, e);
 }(e);
   }), a);
   return r.xs.reduce(function(e, t) {
-return e.concat(o.filter(function(e) {
+return e.concat(s.filter(function(e) {
   return e.phase === t;
 }));
   }, []);

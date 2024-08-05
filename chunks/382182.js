@@ -16,8 +16,8 @@ return T;
   }
 }), n(653041), n(47120);
 var r, i, a = n(442837),
-  o = n(258609),
-  s = n(131704),
+  s = n(258609),
+  o = n(131704),
   l = n(984933),
   u = n(430824),
   c = n(496675),
@@ -25,7 +25,7 @@ var r, i, a = n(442837),
   _ = n(934415),
   E = n(981631),
   f = n(689938);
-let h = (e, t) => (0, s.hv)(e.type) || t.canBasicChannel(E.S7T.CONNECT | E.S7T.VIEW_CHANNEL, e);
+let h = (e, t) => (0, o.hv)(e.type) || t.canBasicChannel(E.S7T.CONNECT | E.S7T.VIEW_CHANNEL, e);
 
 function p(e, t, n) {
   var r;
@@ -33,8 +33,8 @@ function p(e, t, n) {
   if (e.isPrivate())
 return !0;
   let a = t.getGuild(e.getGuildId()),
-o = null !== (r = null == a ? void 0 : a.maxStageVideoChannelUsers) && void 0 !== r ? r : 0;
-  return (!e.isGuildStageVoice() || !(o <= 0)) && (!i || !!h(e, n)) && !!n.can(E.Plq.STREAM, e) && null != a && a.afkChannelId !== e.id && !0;
+s = null !== (r = null == a ? void 0 : a.maxStageVideoChannelUsers) && void 0 !== r ? r : 0;
+  return (!e.isGuildStageVoice() || !(s <= 0)) && (!i || !!h(e, n)) && !!n.can(E.Plq.STREAM, e) && null != a && a.afkChannelId !== e.id && !0;
 }
 
 function m(e) {
@@ -57,12 +57,12 @@ return [
   !1,
   2
 ];
-  let o = t.isInChannel(e.id),
-l = e instanceof s.Sf && (0, _.rY)(e, t, n),
+  let s = t.isInChannel(e.id),
+l = e instanceof o.Sf && (0, _.rY)(e, t, n),
 u = h(e, r),
 c = null != i.getAwaitingRemoteSessionInfo() || null != i.getRemoteSessionId();
-  return c ? a = 0 : u || o ? l && !o && (a = 1) : a = 2, [
-!__OVERLAY__ && !c && (o || u && !l),
+  return c ? a = 0 : u || s ? l && !s && (a = 1) : a = 2, [
+!__OVERLAY__ && !c && (s || u && !l),
 a
   ];
 }
@@ -72,8 +72,8 @@ function T(e) {
 d.Z,
 u.Z,
 c.Z,
-o.Z
-  ], () => I(e, d.Z, u.Z, c.Z, o.Z));
+s.Z
+  ], () => I(e, d.Z, u.Z, c.Z, s.Z));
 }
 
 function g(e, t, n) {

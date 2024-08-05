@@ -17,15 +17,15 @@ e.eachConnection(e => a.push({
   connection: e,
   stats: e.emitStats()
 }));
-let o = [];
+let s = [];
 for (let e of a) {
   let t = await e.stats;
-  null != t && o.push({
+  null != t && s.push({
     connection: e.connection,
     stats: t
   });
 }
-e.emit(r.aB.ConnectionStats, o), setTimeout(n, i.T);
+e.emit(r.aB.ConnectionStats, s), setTimeout(n, i.T);
   };
   setTimeout(n, i.T);
 }

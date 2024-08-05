@@ -13,8 +13,8 @@ return i;
   }
 });
 var r, i, a = n(392711),
-  o = n(544891),
-  s = n(570140),
+  s = n(544891),
+  o = n(570140),
   l = n(100527),
   u = n(367907),
   c = n(339085),
@@ -46,11 +46,11 @@ function N(e, t, n) {
   let {
 abortController: i,
 onRequestProgress: a
-  } = A(e), s = null !== (r = p.Z.getState().animationType) && void 0 !== r ? r : T.q.BASIC, u = {
-animation_type: s,
-animation_id: (0, I.Iu)(s, I.v)
+  } = A(e), o = null !== (r = p.Z.getState().animationType) && void 0 !== r ? r : T.q.BASIC, u = {
+animation_type: o,
+animation_id: (0, I.Iu)(o, I.v)
   };
-  o.tn.post({
+  s.tn.post({
 url: g.ANM.CUSTOM_CALL_SOUNDS(e),
 body: u,
 signal: i.signal,
@@ -63,7 +63,7 @@ if (i.signal.aborted)
 
 function v(e, t, n, r) {
   var i, a;
-  let s = c.Z.getCustomEmojiById(null !== (i = t.emojiId) && void 0 !== i ? i : ''),
+  let o = c.Z.getCustomEmojiById(null !== (i = t.emojiId) && void 0 !== i ? i : ''),
 {
   abortController: l,
   onRequestProgress: u
@@ -71,9 +71,9 @@ function v(e, t, n, r) {
 E = {
   sound_id: t.soundId,
   emoji_id: t.emojiId,
-  emoji_name: null !== (a = t.emojiName) && void 0 !== a ? a : null == s ? void 0 : s.name
+  emoji_name: null !== (a = t.emojiName) && void 0 !== a ? a : null == o ? void 0 : o.name
 };
-  t.guildId !== S.X8 && (E.source_guild_id = t.guildId), o.tn.post({
+  t.guildId !== S.X8 && (E.source_guild_id = t.guildId), s.tn.post({
 url: g.ANM.SEND_SOUNDBOARD_SOUND(e),
 body: E,
 signal: l.signal,
@@ -108,16 +108,16 @@ let e = null != n.id ? {
   animation_type: u,
   animation_id: a
 };
-await o.tn.post({
+await s.tn.post({
   url: g.ANM.VOICE_CHANNEL_EFFECTS(t.id),
   body: e
-}), C(t, n, r, u), s.Z.dispatch({
+}), C(t, n, r, u), o.Z.dispatch({
   type: 'VOICE_CHANNEL_EFFECT_SENT_LOCAL'
 });
   } catch (e) {
 if (429 === e.status && null != e.body.retry_after) {
   let t = e.body.retry_after * f.Z.Millis.SECOND;
-  s.Z.dispatch({
+  o.Z.dispatch({
     type: 'VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP',
     cooldownEndsAtMs: t
   });
@@ -130,8 +130,8 @@ if (429 === e.status && null != e.body.retry_after) {
   let {
 unicode: i,
 custom: a,
-customExternal: o,
-managed: s,
+customExternal: s,
+managed: o,
 managedExternal: l,
 animated: c
   } = (0, h.sp)([t], e.getGuildId()), d = R[r];
@@ -141,8 +141,8 @@ guild_id: e.getGuildId(),
 location: n,
 emoji_unicode: i,
 emoji_custom: a,
-emoji_custom_external: o,
-emoji_managed: s,
+emoji_custom_external: s,
+emoji_managed: o,
 emoji_managed_external: l,
 emoji_animated: c,
 animation_type: d,

@@ -13,5 +13,6 @@ e.exports = {
   customConfetti: 'customConfetti_a0e502',
   bundlePreview: 'bundlePreview_a0e502',
   bundleProfileEffectCard: 'bundleProfileEffectCard_a0e502',
-  buttons: 'buttons_a0e502'
+  buttons: 'buttons_a0e502',
+  easterEggContainer: 'easterEggContainer_a0e502'
 };

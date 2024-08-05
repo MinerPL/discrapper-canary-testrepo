@@ -1,9 +1,9 @@
 n(47120);
 var r, i = n(442837),
   a = n(570140),
-  o = n(699516);
+  s = n(699516);
 
-function s(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -33,7 +33,7 @@ function E() {
   let {
     user_id: t
   } = e;
-  return !o.Z.isBlocked(t);
+  return !s.Z.isBlocked(t);
 }).map(e => [
   e.user_id,
   e
@@ -46,7 +46,7 @@ affinityUserIds: t
 }
 class f extends(r = i.ZP.PersistedStore) {
   initialize(e) {
-this.waitFor(o.Z), null != e && (d.userAffinities = e.userAffinities, d.lastFetched = e.lastFetched, E()), this.syncWith([o.Z], E);
+this.waitFor(s.Z), null != e && (d.userAffinities = e.userAffinities, d.lastFetched = e.lastFetched, E()), this.syncWith([s.Z], E);
   }
   needsRefresh() {
 return !l && Date.now() - d.lastFetched > 86400000;
@@ -70,7 +70,7 @@ return _.userAffinitiesMap.get(e);
 return _.affinityUserIds;
   }
 }
-s(f, 'displayName', 'UserAffinitiesStore'), s(f, 'persistKey', 'UserAffinitiesStore'), s(f, 'migrations', [e => null]), t.Z = new f(a.Z, {
+o(f, 'displayName', 'UserAffinitiesStore'), o(f, 'persistKey', 'UserAffinitiesStore'), o(f, 'migrations', [e => null]), t.Z = new f(a.Z, {
   LOAD_USER_AFFINITIES_SUCCESS: function(e) {
 var t;
 let {

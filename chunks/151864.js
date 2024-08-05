@@ -1,6 +1,6 @@
 n(653041);
-var i, s = n(442837),
-  a = n(570140),
+var i, a = n(442837),
+  s = n(570140),
   r = n(765305);
 
 function l(e, t, n) {
@@ -14,7 +14,7 @@ writable: !0
 let o = {
   hiddenEventsAndStages: []
 };
-class c extends(i = s.ZP.PersistedStore) {
+class c extends(i = a.ZP.PersistedStore) {
   initialize(e) {
 null != e && null != e.hiddenEventsAndStages && (o = e);
   }
@@ -29,7 +29,7 @@ return !!(null != n && o.hiddenEventsAndStages.includes('stage-'.concat(n))) || 
 return o;
   }
 }
-l(c, 'displayName', 'LiveChannelNoticesStore'), l(c, 'persistKey', 'liveChannelNotices_v2'), t.Z = new c(a.Z, {
+l(c, 'displayName', 'LiveChannelNoticesStore'), l(c, 'persistKey', 'liveChannelNotices_v2'), t.Z = new c(s.Z, {
   LIVE_CHANNEL_NOTICE_HIDE: function(e) {
 let {
   eventId: t,

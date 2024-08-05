@@ -9,8 +9,8 @@ return E;
 var r = n(653603),
   i = n.n(r),
   a = n(512722),
-  o = n.n(a),
-  s = n(53529),
+  s = n.n(a),
+  o = n(53529),
   l = n(50659),
   u = n(436660),
   c = n(887490),
@@ -64,35 +64,35 @@ switch (t.which) {
     if (null != e.selection && _(t, {
         shift: null
       })) {
-      let [r, i] = c.M8.edges(e.selection), a = c.bN.blocks(e).slice(r.path[0], i.path[0] + 1), o = !0;
+      let [r, i] = c.M8.edges(e.selection), a = c.bN.blocks(e).slice(r.path[0], i.path[0] + 1), s = !0;
       for (let [e] of a)
         if ('line' !== e.type || !(null === (n = e.codeBlockState) || void 0 === n ? void 0 : n.isInCodeBlock)) {
-          o = !1;
+          s = !1;
           break;
         }
-      if (o) {
+      if (s) {
         if (!t.shiftKey && c.M8.isCollapsed(e.selection))
           return u.Q.insertText(e, '  '), !0;
         let n = !t.shiftKey;
-        return s.T.withSingleEntry(e, () => {
-          var t, r, i, o;
-          let s = null !== (i = null === (t = e.selection) || void 0 === t ? void 0 : t.anchor) && void 0 !== i ? i : c.bN.start(e, []),
-            l = null !== (o = null === (r = e.selection) || void 0 === r ? void 0 : r.focus) && void 0 !== o ? o : c.bN.end(e, []);
+        return o.T.withSingleEntry(e, () => {
+          var t, r, i, s;
+          let o = null !== (i = null === (t = e.selection) || void 0 === t ? void 0 : t.anchor) && void 0 !== i ? i : c.bN.start(e, []),
+            l = null !== (s = null === (r = e.selection) || void 0 === r ? void 0 : r.focus) && void 0 !== s ? s : c.bN.end(e, []);
           for (let [t, r] of a) {
             let i = t.children[0];
             if (!c.LC.isText(t.children[0]))
               continue;
             let a = c.C0.child(r, 0),
-              o = {
+              s = {
                 path: a,
                 offset: 0
               };
             if (n)
               u.Q.insertText(e, '  ', {
-                at: o
-              }), c.C0.equals(s.path, a) && 0 !== s.offset && (s = {
+                at: s
+              }), c.C0.equals(o.path, a) && 0 !== o.offset && (o = {
                 path: a,
-                offset: s.offset + 2
+                offset: o.offset + 2
               }), c.C0.equals(l.path, a) && 0 !== l.offset && (l = {
                 path: a,
                 offset: l.offset + 2
@@ -104,12 +104,12 @@ switch (t.which) {
               };
               u.Q.delete(e, {
                 at: {
-                  anchor: o,
+                  anchor: s,
                   focus: t
                 }
-              }), c.C0.equals(s.path, a) && (s = {
+              }), c.C0.equals(o.path, a) && (o = {
                 path: a,
-                offset: Math.max(0, s.offset - 2)
+                offset: Math.max(0, o.offset - 2)
               }), c.C0.equals(l.path, a) && (l = {
                 path: a,
                 offset: Math.max(0, l.offset - 2)
@@ -117,7 +117,7 @@ switch (t.which) {
             }
           }
           u.Q.select(e, {
-            anchor: s,
+            anchor: o,
             focus: l
           });
         }), !0;
@@ -126,7 +126,7 @@ switch (t.which) {
     break;
   case d.yXg.ARROW_LEFT:
   case d.yXg.ARROW_RIGHT: {
-    let n, o;
+    let n, s;
     if (_(t, {
         shift: null
       }))
@@ -144,14 +144,14 @@ switch (t.which) {
       return !1;
     else
       return !1;
-    t.shiftKey && (o = 'focus');
-    let s = e.children[null !== (E = null === (a = e.selection) || void 0 === a ? void 0 : null === (r = a.focus) || void 0 === r ? void 0 : r.path[0]) && void 0 !== E ? E : 0],
-      l = 'rtl' === i()(c.aj.string(s)),
+    t.shiftKey && (s = 'focus');
+    let o = e.children[null !== (E = null === (a = e.selection) || void 0 === a ? void 0 : null === (r = a.focus) || void 0 === r ? void 0 : r.path[0]) && void 0 !== E ? E : 0],
+      l = 'rtl' === i()(c.aj.string(o)),
       h = t.which === d.yXg.ARROW_LEFT == !l;
     return u.Q.keyboardMove(e, {
       reverse: h,
       unit: n,
-      edge: o
+      edge: s
     }), !0;
   }
   case d.yXg.A:
@@ -177,13 +177,13 @@ switch (t.which) {
       })) {
       let t = c.bN.getCurrentBlock(e);
       if (null != t) {
-        let [n, r] = t, i = c.C0.child(r, n.children.length - 1), [a] = c.bN.node(e, i), o = {
+        let [n, r] = t, i = c.C0.child(r, n.children.length - 1), [a] = c.bN.node(e, i), s = {
           path: i,
           offset: a.text.length
         };
         return u.Q.select(e, {
-          anchor: o,
-          focus: o
+          anchor: s,
+          focus: s
         }), !0;
       }
     }
@@ -201,7 +201,7 @@ switch (t.which) {
         ctrl: !0
       })) && null != e.selection) {
       let [t, n] = c.M8.edges(e.selection), [r, i] = c.bN.node(e, [h ? t.path[0] : n.path[0]]);
-      if (o()(c.q.isElement(r) && c.bN.isBlock(e, r), 'Top-most node of selection is not a block'), h && !c.Jz.isAtStart(t, [
+      if (s()(c.q.isElement(r) && c.bN.isBlock(e, r), 'Top-most node of selection is not a block'), h && !c.Jz.isAtStart(t, [
           r,
           i
         ]) || !h && !c.Jz.isAtEnd(n, [

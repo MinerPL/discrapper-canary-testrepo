@@ -3,8 +3,8 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
   a = n(812206),
-  o = n(569545),
-  s = n(687516),
+  s = n(569545),
+  o = n(687516),
   l = n(981283),
   u = n(928518),
   c = n(314897),
@@ -55,7 +55,7 @@ super(...e), I(this, 'actions', {
   let {
     streamKey: a,
     canShowFeedback: l
-  } = e, u = (0, o.my)(a), d = (0, s.L2)(u, _.Z), E = null !== (t = f.Z.getVideoStats(a)) && void 0 !== t ? t : {}, h = {
+  } = e, u = (0, s.my)(a), d = (0, o.L2)(u, _.Z), E = null !== (t = f.Z.getVideoStats(a)) && void 0 !== t ? t : {}, h = {
     media_session_id: f.Z.getMediaSessionId(a),
     rtc_connection_id: f.Z.getRtcConnectionId(a),
     stream_region: f.Z.getRegion(a),
@@ -94,13 +94,13 @@ super(...e), I(this, 'actions', {
 }), I(this, 'handleActivityClose', e => {
   let {
     applicationId: t,
-    channelId: o,
-    showFeedback: s
-  } = e, l = a.Z.getApplication(t), c = d.Z.getChannel(o), _ = {
+    channelId: s,
+    showFeedback: o
+  } = e, l = a.Z.getApplication(t), c = d.Z.getChannel(s), _ = {
     rtc_connection_id: E.Z.getRTCConnectionId(),
     media_session_id: E.Z.getMediaSessionId()
   }, f = u.Z.getWindowOpen(m.KJ3.CHANNEL_CALL_POPOUT) ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
-  null != l && null != c && s && this.possiblyShowFeedbackModal(p.nw.ACTIVITY, () => {
+  null != l && null != c && o && this.possiblyShowFeedbackModal(p.nw.ACTIVITY, () => {
     (0, i.openModalLazy)(async () => {
       let {
         default: e

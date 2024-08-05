@@ -1,5 +1,5 @@
 n(47120);
-var r, i, a, o, s = n(442837),
+var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(353926),
   c = n(581883),
@@ -32,7 +32,7 @@ dmsDisabledUntil: e.dms_disabled_until,
 invitesDisabledUntil: e.invites_disabled_until
   } : null;
 }
-class g extends(r = s.ZP.Store) {
+class g extends(r = o.ZP.Store) {
   initialize() {
 this.waitFor(c.Z, d.Z, _.Z, u.Z), this.syncWith([
   c.Z,
@@ -51,12 +51,12 @@ return p;
 return m;
   }
 }
-o = 'GuildIncidentsStore', (a = 'displayName') in(i = g) ? Object.defineProperty(i, a, {
-  value: o,
+s = 'GuildIncidentsStore', (a = 'displayName') in(i = g) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = o, t.Z = new g(l.Z, {
+}) : i[a] = s, t.Z = new g(l.Z, {
   CONNECTION_OPEN: function(e) {
 for (let n of (p = {}, e.guilds)) {
   var t;

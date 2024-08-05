@@ -1,6 +1,6 @@
 n.d(t, {
   Y: function() {
-return o;
+return s;
   }
 });
 var r = n(912860),
@@ -14,10 +14,10 @@ url: ''.concat(location.protocol).concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '
   })), 'font-size: 16px;')) : setTimeout(() => a(e, t + 1), 1000));
 }
 
-function o(e, t, n) {
+function s(e, t, n) {
   if (null != n && '0.0.0' === n.remoteApp.getVersion())
 return;
-  let o = new r.b();
+  let s = new r.b();
   if (null != n) {
 if (null != n.window.setDevtoolsCallbacks)
   n.window.setDevtoolsCallbacks(() => {
@@ -32,7 +32,7 @@ else {
   }), r.on('devtools-closed', t.showToken);
 }
   } else
-!i.tq && !i.Em && o.on('changed', n => {
+!i.tq && !i.Em && s.on('changed', n => {
   let {
     open: r
   } = n;

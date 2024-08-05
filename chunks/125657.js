@@ -9,27 +9,27 @@ var i = t(735250),
   l = t(442837),
   o = t(481060),
   r = t(749210),
-  c = t(412899),
-  d = t(995648),
-  u = t(422559),
-  I = t(598077),
-  m = t(271383),
-  _ = t(430824),
-  N = t(467679),
+  d = t(412899),
+  c = t(995648),
+  u = t(385499),
+  I = t(422559),
+  m = t(598077),
+  _ = t(271383),
+  N = t(430824),
   E = t(285952),
   T = t(823379),
   h = t(700785),
-  p = t(689938),
-  g = t(988837);
+  g = t(689938),
+  p = t(988837);
 
 function C(e) {
   var n;
   let {
 guild: t,
 applicationIntegration: C
-  } = e, f = (0, l.e7)([_.Z], () => _.Z.getRoles(t.id)), {
+  } = e, f = (0, l.e7)([N.Z], () => N.Z.getRoles(t.id)), {
 application: x
-  } = C, O = null != x.bot ? new I.Z(x.bot) : null, S = (0, l.e7)([m.ZP], () => null != O ? m.ZP.getMember(t.id, O.id) : null, [
+  } = C, O = null != x.bot ? new m.Z(x.bot) : null, S = (0, l.e7)([_.ZP], () => null != O ? _.ZP.getMember(t.id, O.id) : null, [
 O,
 t
   ]), A = null == O ? void 0 : O.id;
@@ -55,7 +55,7 @@ S
   ]);
   return null == O ? null : (0, i.jsx)(o.Card, {
 editable: !0,
-className: g.card,
+className: p.card,
 children: (0, i.jsxs)(E.Z, {
   direction: E.Z.Direction.VERTICAL,
   children: [
@@ -65,17 +65,17 @@ children: (0, i.jsxs)(E.Z, {
         (0, i.jsx)('img', {
           alt: '',
           src: O.getAvatarURL(t.id, 32),
-          className: g.iconWrapper
+          className: p.iconWrapper
         }),
         (0, i.jsx)(o.Text, {
           color: 'header-primary',
           variant: 'text-sm/normal',
-          children: p.Z.Messages.INTEGRATIONS_APPLICATION_BOT_NAME.format({
+          children: g.Z.Messages.INTEGRATIONS_APPLICATION_BOT_NAME.format({
             user: O
           })
         }),
-        (0, i.jsx)(N.Z, {
-          className: g.tag,
+        (0, i.jsx)(u.Z, {
+          className: p.tag,
           verified: O.isVerifiedBot()
         })
       ]
@@ -83,23 +83,23 @@ children: (0, i.jsxs)(E.Z, {
     function(e, n, t, a) {
       let l = [],
         r = [];
-      for (let e of u.VY)
+      for (let e of I.VY)
         s.e$(a, e) ? l.push(e) : r.push(e);
       return (0, i.jsxs)(i.Fragment, {
         children: [
           (0, i.jsx)(o.FormDivider, {
-            className: g.divider
+            className: p.divider
           }),
           t.length > 0 ? (0, i.jsxs)(i.Fragment, {
             children: [
               (0, i.jsx)(o.FormTitle, {
-                className: g.permissionHeader,
-                children: p.Z.Messages.ROLES_LIST.format({
+                className: p.permissionHeader,
+                children: g.Z.Messages.ROLES_LIST.format({
                   numRoles: t.length
                 })
               }),
-              (0, i.jsx)(c.ZP, {
-                className: g.rolePills,
+              (0, i.jsx)(d.ZP, {
+                className: p.rolePills,
                 user: e,
                 guild: n,
                 userRoles: t,
@@ -108,12 +108,12 @@ children: (0, i.jsxs)(E.Z, {
               })
             ]
           }) : null,
-          l.length > 0 || r.length > 0 ? (0, i.jsx)(d.Z, {
-            className: g.permissionList,
+          l.length > 0 || r.length > 0 ? (0, i.jsx)(c.Z, {
+            className: p.permissionList,
             grantedPermissions: l,
-            grantedPermissionsHeader: p.Z.Messages.INTEGRATIONS_APPLICATION_GRANTED_PERMISSIONS,
+            grantedPermissionsHeader: g.Z.Messages.INTEGRATIONS_APPLICATION_GRANTED_PERMISSIONS,
             disabledPermissions: r,
-            disabledPermissionsHeader: p.Z.Messages.INTEGRATIONS_APPLICATION_DENIED_PERMISSIONS
+            disabledPermissionsHeader: g.Z.Messages.INTEGRATIONS_APPLICATION_DENIED_PERMISSIONS
           }) : null
         ]
       });

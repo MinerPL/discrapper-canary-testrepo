@@ -2,14 +2,14 @@ Object.defineProperty(t, '__esModule', {
   value: !0
 }), t.calculateChange = function(e, t, n, r, i) {
   var a = i.clientWidth,
-o = i.clientHeight,
-s = 'number' == typeof e.pageX ? e.pageX : e.touches[0].pageX,
+s = i.clientHeight,
+o = 'number' == typeof e.pageX ? e.pageX : e.touches[0].pageX,
 l = 'number' == typeof e.pageY ? e.pageY : e.touches[0].pageY,
-u = s - (i.getBoundingClientRect().left + window.pageXOffset),
+u = o - (i.getBoundingClientRect().left + window.pageXOffset),
 c = l - (i.getBoundingClientRect().top + window.pageYOffset);
   if ('vertical' === n) {
 var d = void 0;
-if (d = c < 0 ? 0 : c > o ? 1 : Math.round(100 * c / o) / 100, t.a !== d)
+if (d = c < 0 ? 0 : c > s ? 1 : Math.round(100 * c / s) / 100, t.a !== d)
   return {
     h: t.h,
     s: t.s,

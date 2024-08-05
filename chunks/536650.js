@@ -1,14 +1,14 @@
 t.d(n, {
   Z: function() {
-return A;
+return f;
   }
 }), t(47120);
 var i = t(735250),
-  l = t(470079),
-  a = t(392711),
-  r = t(780384),
-  s = t(481060),
-  o = t(410030),
+  a = t(470079),
+  l = t(392711),
+  o = t(780384),
+  r = t(481060),
+  s = t(410030),
   c = t(220082),
   u = t(564334),
   d = t(302221),
@@ -19,23 +19,23 @@ function _(e, n, t) {
   return e + (n - e) * t;
 }
 
-function E(e) {
-  let [n, t] = l.useState(void 0);
-  return l.useEffect(() => {
+function C(e) {
+  let [n, t] = a.useState(void 0);
+  return a.useEffect(() => {
 null != e.current && t(getComputedStyle(e.current));
   }, [e]), n;
 }
 
-function A(e) {
+function f(e) {
   let {
 name: n,
 iconURL: t,
 scrollerRef: _
-  } = e, A = (0, r.ap)((0, o.ZP)()), f = l.useRef(null), h = l.useRef(null), N = l.useRef(null), C = (0, s.useToken)(s.tokens.colors.BG_BASE_PRIMARY).hex(), v = (0, c.ZP)('number' == typeof t ? '' : t, null != C ? C : ''), I = l.useMemo(() => {
+  } = e, f = (0, o.ap)((0, s.ZP)()), h = a.useRef(null), A = a.useRef(null), E = a.useRef(null), N = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(), v = (0, c.ZP)('number' == typeof t ? '' : t, null != N ? N : ''), x = a.useMemo(() => {
 var e, n;
-let t = (0, a.compact)([
+let t = (0, l.compact)([
   u.Z.parseHexString(v),
-  u.Z.parseHexString(A ? '#000000' : '#ffffff')
+  u.Z.parseHexString(f ? '#000000' : '#ffffff')
 ]);
 return null !== (n = null === (e = (0, d.k8)({
   colors: t,
@@ -44,48 +44,48 @@ return null !== (n = null === (e = (0, d.k8)({
 })) || void 0 === e ? void 0 : e.toHexString()) && void 0 !== n ? n : v;
   }, [
 v,
-A
-  ]), P = E(f), x = E(h), T = l.useCallback(() => {
-var e, n, t, i, l, r, s, o, c;
+f
+  ]), I = C(h), g = C(A), P = a.useCallback(() => {
+var e, n, t, i, a, o, r, s, c;
 let u = _.current,
-  d = f.current,
-  m = N.current,
-  p = parseInt(null !== (e = null == P ? void 0 : P.height) && void 0 !== e ? e : ''),
-  E = parseInt(null !== (n = null == x ? void 0 : x.height) && void 0 !== n ? n : '');
-if (null != u && null != d && null != m && !isNaN(p) && !isNaN(E)) {
+  d = h.current,
+  m = E.current,
+  p = parseInt(null !== (e = null == I ? void 0 : I.height) && void 0 !== e ? e : ''),
+  C = parseInt(null !== (n = null == g ? void 0 : g.height) && void 0 !== n ? n : '');
+if (null != u && null != d && null != m && !isNaN(p) && !isNaN(C)) {
   ;
   let e = null !== (t = u.scrollTop) && void 0 !== t ? t : 0,
-    n = 0 !== u.scrollHeight ? u.scrollHeight : E + 20,
-    _ = 0 !== u.clientHeight ? u.clientHeight : E + 20,
-    f = E - p,
-    h = (0, a.clamp)(n - _, f + 1, E + 20);
-  let N = (i = e, (l = f) === (r = h) ? 1 : (0, a.clamp)((i - l) / (r - l), 0, 1));
-  d.style.filter = 'brightness('.concat(1 + ((A ? 1.4 : 0.6) - (s = 1)) * N, ')'), d.style.backgroundColor = 'color-mix(in oklab,'.concat(v, ' ').concat((1 - N) * 100, '%, ').concat(I, ')'), m.style.opacity = ''.concat(0 + (1 - (o = 0)) * N), m.style.transform = 'translateY('.concat((c = p / 4) + (0 - c) * N, 'px)');
+    n = 0 !== u.scrollHeight ? u.scrollHeight : C + 20,
+    _ = 0 !== u.clientHeight ? u.clientHeight : C + 20,
+    h = C - p,
+    A = (0, l.clamp)(n - _, h + 1, C + 20);
+  let E = (i = e, (a = h) === (o = A) ? 1 : (0, l.clamp)((i - a) / (o - a), 0, 1));
+  d.style.filter = 'brightness('.concat(1 + ((f ? 1.4 : 0.6) - (r = 1)) * E, ')'), d.style.backgroundColor = 'color-mix(in oklab,'.concat(v, ' ').concat((1 - E) * 100, '%, ').concat(x, ')'), m.style.opacity = ''.concat(0 + (1 - (s = 0)) * E), m.style.transform = 'translateY('.concat((c = p / 4) + (0 - c) * E, 'px)');
 }
   }, [
-I,
+x,
 v,
-null == x ? void 0 : x.height,
-A,
+null == g ? void 0 : g.height,
+f,
 _,
-null == P ? void 0 : P.height
+null == I ? void 0 : I.height
   ]);
-  return l.useEffect(() => {
-T();
+  return a.useEffect(() => {
+P();
   }, [
-T,
-A
-  ]), l.useEffect(() => {
+P,
+f
+  ]), a.useEffect(() => {
 let e = _.current,
   n = () => {
-    T();
+    P();
   };
 return null == e || e.addEventListener('scroll', n), () => {
   null == e || e.removeEventListener('scroll', n);
 };
   }, [
 _,
-T
+P
   ]), (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsxs)('div', {
@@ -95,7 +95,7 @@ children: [
         className: p.stickyBannerContainer,
         children: (0, i.jsx)('div', {
           className: p.stickyBanner,
-          ref: f
+          ref: h
         })
       }),
       (0, i.jsx)('div', {
@@ -104,8 +104,8 @@ children: [
       }),
       (0, i.jsx)('div', {
         className: p.nameContainer,
-        children: (0, i.jsx)(s.Heading, {
-          ref: N,
+        children: (0, i.jsx)(r.Heading, {
+          ref: E,
           className: p.textApplicationName,
           variant: 'heading-md/extrabold',
           children: n
@@ -114,7 +114,7 @@ children: [
     ]
   }),
   (0, i.jsx)('div', {
-    ref: h,
+    ref: A,
     className: p.bannerBackground,
     style: {
       backgroundColor: v

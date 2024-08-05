@@ -18,8 +18,8 @@ return c;
 var r = n(536285),
   i = n(996106),
   a = n(812967),
-  o = n(511405),
-  s = n(981631),
+  s = n(511405),
+  o = n(981631),
   l = n(186901);
 
 function u() {
@@ -33,19 +33,19 @@ function c() {
 function d(e, t) {
   if (!__OVERLAY__)
 throw new i.Z({
-  errorCode: s.lTL.UNKNOWN_ERROR
+  errorCode: o.lTL.UNKNOWN_ERROR
 }, 'called from wrong app context');
-  r.default.subscribe(s.zMe.OVERLAY, {
+  r.default.subscribe(o.zMe.OVERLAY, {
 token: t
-  }, t => e((0, o.H)(t)));
+  }, t => e((0, s.H)(t)));
 }
 
 function _(e, t) {
   if (__OVERLAY__)
 throw new i.Z({
-  errorCode: s.lTL.UNKNOWN_ERROR
+  errorCode: o.lTL.UNKNOWN_ERROR
 }, 'called from wrong app context');
-  a.Z.setCommandHandler(s.Etm.OVERLAY, {
+  a.Z.setCommandHandler(o.Etm.OVERLAY, {
 scope: l.cE,
 handler(n) {
   let {
@@ -53,11 +53,11 @@ handler(n) {
   } = n;
   if (!t(r.token))
     throw new i.Z({
-      errorCode: s.lTL.INVALID_TOKEN
+      errorCode: o.lTL.INVALID_TOKEN
     }, 'Invalid RPC auth token provided');
-  e((0, o.H)(r));
+  e((0, s.H)(r));
 }
-  }), a.Z.setEventHandler(s.zMe.OVERLAY, {
+  }), a.Z.setEventHandler(o.zMe.OVERLAY, {
 scope: l.cE,
 handler(e) {
   let {
@@ -65,12 +65,12 @@ handler(e) {
   } = e;
   if (!t(n.token))
     throw new i.Z({
-      errorCode: s.lTL.INVALID_TOKEN
+      errorCode: o.lTL.INVALID_TOKEN
     }, 'Invalid RPC auth token provided');
 }
   });
 }
 
 function E(e) {
-  __OVERLAY__ ? r.default.request(s.Etm.OVERLAY, (0, o.G)(e)) : a.Z.dispatchToSubscriptions(s.zMe.OVERLAY, {}, (0, o.G)(e));
+  __OVERLAY__ ? r.default.request(o.Etm.OVERLAY, (0, s.G)(e)) : a.Z.dispatchToSubscriptions(o.zMe.OVERLAY, {}, (0, s.G)(e));
 }

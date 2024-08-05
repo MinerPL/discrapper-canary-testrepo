@@ -14,17 +14,17 @@ integrationTypesConfig: a
   } = e;
   if (null != n)
 return n;
-  let o = {};
-  o.client_id = t;
-  let s = null != a && Object.values(a).some(e => (null == e ? void 0 : e.oauth2_install_params) != null);
-  if (null != i && !s) {
+  let s = {};
+  s.client_id = t;
+  let o = null != a && Object.values(a).some(e => (null == e ? void 0 : e.oauth2_install_params) != null);
+  if (null != i && !o) {
 let {
   permissions: e,
   scopes: t
 } = i;
-null != e && (o.permissions = e), null != t && (o.scope = t.join(' '));
+null != e && (s.permissions = e), null != t && (s.scope = t.join(' '));
   }
-  let l = Object.entries(o).map(e => {
+  let l = Object.entries(s).map(e => {
 let [t, n] = e;
 return ''.concat(t, '=').concat(encodeURIComponent(n));
   }).join('&');

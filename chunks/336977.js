@@ -1,6 +1,6 @@
 e.r(n), e.d(n, {
   VibingWumpus: function() {
-return P;
+return p;
   }
 }), e(47120);
 var o = e(735250),
@@ -17,13 +17,13 @@ var o = e(735250),
   N = e(689938),
   A = e(781141),
   C = e(927838),
-  p = e(617921);
+  P = e(617921);
 
-function P(t) {
+function p(t) {
   let {
 onClose: n,
 source: r = I.I.INAPPROPRIATE_CONVERSATION
-  } = t, P = (0, s.e7)([u.Z], () => u.Z.useReducedMotion), [b, f] = i.useState(!1);
+  } = t, p = (0, s.e7)([u.Z], () => u.Z.useReducedMotion), [b, f] = i.useState(!1);
   i.useEffect(() => {
 let t = new Date();
 return _.default.track(d.rMx.VIBING_WUMPUS_VIEWED, {
@@ -53,16 +53,16 @@ children: [
   (0, o.jsx)('div', {
     className: A.ringContainer,
     children: (0, o.jsx)('img', {
-      src: p,
+      src: P,
       alt: '',
       className: A.__invalid_ringArt
     })
   }),
   (0, o.jsx)(c.LottieAnimation, {
     importData: S,
-    shouldAnimate: !b && !P,
+    shouldAnimate: !b && !p,
     className: A.wumpus,
-    pauseAtFrame: P ? 200 : void 0
+    pauseAtFrame: p ? 200 : void 0
   }),
   (0, o.jsx)(c.Tooltip, {
     text: b ? N.Z.Messages.PLAY : N.Z.Messages.PAUSE,
@@ -127,7 +127,7 @@ transitionState: e
   } = t;
   return (0, o.jsx)(c.ModalRoot, {
 transitionState: e,
-children: (0, o.jsx)(P, {
+children: (0, o.jsx)(p, {
   onClose: n
 })
   });

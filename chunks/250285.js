@@ -18,7 +18,7 @@ isLast: r,
 className: T
   } = e, [I, R] = a.useState(!1), {
 analyticsLocations: C
-  } = (0, d.ZP)(), p = a.useCallback(() => {
+  } = (0, d.ZP)(), g = a.useCallback(() => {
 (0, _.openUserProfileModal)({
   userId: t,
   sourceAnalyticsLocations: C,
@@ -29,7 +29,7 @@ analyticsLocations: C
   }, [
 t,
 C
-  ]), g = () => {
+  ]), p = () => {
 R(!0);
   }, A = () => {
 R(!1);
@@ -49,9 +49,9 @@ children: e => (0, s.jsx)(l.tE, {
       [E.last]: r,
       [E.active]: I
     }),
-    onMouseEnter: g,
+    onMouseEnter: p,
     onMouseLeave: A,
-    onClick: p,
+    onClick: g,
     ...e,
     children: n(I)
   })

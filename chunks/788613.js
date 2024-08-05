@@ -1,21 +1,21 @@
 n.r(t), n.d(t, {
   default: function() {
-return o;
+return s;
   }
 });
 var r = n(217224),
   i = n(528734),
   a = n(951516);
 
-function o(e, t) {
+function s(e, t) {
   (0, a.Z)(2, arguments);
   var n = (0, i.default)(e),
-o = (0, r.Z)(t);
-  if (isNaN(o))
+s = (0, r.Z)(t);
+  if (isNaN(s))
 return new Date(NaN);
-  if (!o)
+  if (!s)
 return n;
-  var s = n.getDate(),
+  var o = n.getDate(),
 l = new Date(n.getTime());
-  return (l.setMonth(n.getMonth() + o + 1, 0), s >= l.getDate()) ? l : (n.setFullYear(l.getFullYear(), l.getMonth(), s), n);
+  return (l.setMonth(n.getMonth() + s + 1, 0), o >= l.getDate()) ? l : (n.setFullYear(l.getFullYear(), l.getMonth(), o), n);
 }

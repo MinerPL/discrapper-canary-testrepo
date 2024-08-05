@@ -3,8 +3,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
   a = n.n(i),
-  o = n(278074),
-  s = n(442837),
+  s = n(278074),
+  o = n(442837),
   l = n(481060),
   u = n(884697),
   c = n(449217),
@@ -34,7 +34,7 @@ let m = [{
   I = e => {
 let {
   purchase: t
-} = e, n = (0, s.e7)([d.default], () => d.default.locale), i = (0, u.qS)(t);
+} = e, n = (0, o.e7)([d.default], () => d.default.locale), i = (0, u.qS)(t);
 return (0, r.jsxs)('div', {
   className: p.purchaseInfo,
   children: [
@@ -74,7 +74,7 @@ user: t,
 guildId: n,
 avatarDecorationOverride: i,
 className: d
-  } = e, T = (0, s.e7)([_.Z], () => _.Z.getStatus(t.id)), {
+  } = e, T = (0, o.e7)([_.Z], () => _.Z.getStatus(t.id)), {
 product: g,
 purchase: S
   } = (0, c.Z)(null == i ? void 0 : i.skuId), A = E.ZP.canUseCollectibles(t), N = (0, u.qS)(S), v = (0, u.G1)(g), O = !A && N;
@@ -98,7 +98,7 @@ children: [
       }),
       (0, r.jsx)(l.Text, {
         variant: 'text-sm/normal',
-        children: O ? h.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, o.EQ)([
+        children: O ? h.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, s.EQ)([
           v,
           A
         ]).with([
@@ -131,7 +131,7 @@ children: [
         children: m.map(e => {
           let {
             avatarSize: a,
-            showStatus: o
+            showStatus: s
           } = e;
           return (0, r.jsx)('div', {
             className: p.smallDecorationPreview,
@@ -140,10 +140,10 @@ children: [
               guildId: n,
               avatarSize: a,
               avatarDecorationOverride: i,
-              status: o ? T : void 0,
+              status: s ? T : void 0,
               'aria-hidden': !0
             })
-          }, ''.concat(a).concat(o));
+          }, ''.concat(a).concat(s));
         })
       })
     ]

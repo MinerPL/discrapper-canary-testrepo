@@ -3,8 +3,8 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
   a = n(692547),
-  o = n(481060),
-  s = n(475179),
+  s = n(481060),
+  o = n(475179),
   l = n(519938),
   u = n(317381),
   c = n(812206),
@@ -30,7 +30,7 @@ onSelect: I
 g = (0, i.e7)([E.Z], () => E.Z.pipWindow),
 S = (0, i.e7)([d.Z], () => d.Z.getSelectedParticipant(f)),
 A = (0, i.e7)([d.Z], () => d.Z.getStreamParticipants(f));
-  return (0, r.jsx)(o.Menu, {
+  return (0, r.jsx)(s.Menu, {
 navId: 'pip-menu',
 'aria-label': 'switch PIP',
 onClose: t,
@@ -67,13 +67,13 @@ children: function() {
       });
     }(e),
     u = ''.concat(n).concat(null != i ? i : '');
-  return (0, r.jsx)(o.MenuItem, {
+  return (0, r.jsx)(s.MenuItem, {
     id: u,
     label: a,
     action: () => function(e) {
       (null == g ? void 0 : g.id) !== e.pipWindow.id && (0, l.k3)(e.pipWindow.id);
       let t = e.participant;
-      null != t && t.type !== p.fO.ACTIVITY && s.Z.selectParticipant(f, t.id);
+      null != t && t.type !== p.fO.ACTIVITY && o.Z.selectParticipant(f, t.id);
     }(e)
   }, u);
 })
@@ -83,22 +83,22 @@ t.Z = function(e) {
   let {
 voiceChannelId: t,
 idle: n
-  } = e, s = Array.from((0, i.e7)([E.Z], () => E.Z.pipWindows).values()), l = (0, i.Wu)([_.Z], () => _.Z.getAllActiveStreamsForChannel(t)).filter(e => {
+  } = e, o = Array.from((0, i.e7)([E.Z], () => E.Z.pipWindows).values()), l = (0, i.Wu)([_.Z], () => _.Z.getAllActiveStreamsForChannel(t)).filter(e => {
 var n;
 return e.ownerId !== (null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && e.channelId === t;
-  }), u = 1 === s.length && s[0].component === h.NYg.EMBED_IFRAME || 0 === l.length, c = 1 === s.length && l.length <= 1;
-  return u || c ? null : (0, r.jsx)(o.Popout, {
+  }), u = 1 === o.length && o[0].component === h.NYg.EMBED_IFRAME || 0 === l.length, c = 1 === o.length && l.length <= 1;
+  return u || c ? null : (0, r.jsx)(s.Popout, {
 position: 'bottom',
 renderPopout: e => (0, r.jsx)(T, {
   voiceChannelId: t,
-  pipWindows: s,
+  pipWindows: o,
   idle: n,
   ...e
 }),
-children: e => (0, r.jsx)(o.Clickable, {
+children: e => (0, r.jsx)(s.Clickable, {
   className: I.menuIcon,
   ...e,
-  children: (0, r.jsx)(o.MoreVerticalIcon, {
+  children: (0, r.jsx)(s.MoreVerticalIcon, {
     size: 'md',
     color: a.Z.unsafe_rawColors.WHITE_500.css
   })

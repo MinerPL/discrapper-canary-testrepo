@@ -3,13 +3,13 @@ n.d(t, {
 return i;
   },
   a8: function() {
-return s;
+return o;
   },
   jS: function() {
 return a;
   },
   tZ: function() {
-return o;
+return s;
   }
 });
 var r = n(570140);
@@ -27,7 +27,7 @@ activityUrlOverride: e
   });
 }
 
-function o(e) {
+function s(e) {
   r.Z.dispatch({
 type: 'DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED',
 applicationId: e,
@@ -35,7 +35,7 @@ timestamp: new Date().getTime()
   });
 }
 
-function s(e) {
+function o(e) {
   r.Z.dispatch({
 type: 'DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER',
 filter: e

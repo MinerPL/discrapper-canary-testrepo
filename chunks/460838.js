@@ -14,9 +14,9 @@ var t, c, i = a(735250),
   s = a(481060),
   u = a(447003),
   _ = a(471445),
-  f = a(889161),
-  p = a(496675),
-  h = a(346656),
+  f = a(565138),
+  p = a(889161),
+  h = a(496675),
   b = a(725436),
   m = a(274311),
   v = a(854698),
@@ -37,7 +37,7 @@ channel: n,
 onClick: a
   } = e, {
 canManageAllEvents: t
-  } = (0, f.XJ)(n), c = (0, d.e7)([p.Z], () => !n.isGuildVocal() || p.Z.can(T.Plq.CONNECT, n), [n]), r = o.useMemo(() => (0, u.Z)(n), [n]), h = (0, _.KS)(n);
+  } = (0, p.XJ)(n), c = (0, d.e7)([h.Z], () => !n.isGuildVocal() || h.Z.can(T.Plq.CONNECT, n), [n]), r = o.useMemo(() => (0, u.Z)(n), [n]), f = (0, _.KS)(n);
   return (0, i.jsx)(s.Tooltip, {
 text: Z.Z.Messages.GUILD_EVENT_CANNOT_CONNECT,
 shouldShow: !c && null != a,
@@ -52,7 +52,7 @@ children: e => (0, i.jsxs)(s.Clickable, {
     (0, i.jsx)(s.Tooltip, {
       text: Z.Z.Messages.GUILD_EVENT_PRIVATE_CHANNEL_TOOLTIP,
       shouldShow: t && r && c && null != a,
-      children: e => null != h ? (0, i.jsx)(h, {
+      children: e => null != f ? (0, i.jsx)(f, {
         ...e,
         color: 'currentColor',
         size: 'custom',
@@ -86,9 +86,9 @@ isHub: d
 return null == n ? (0, i.jsx)('div', {}) : (0, i.jsxs)('div', {
   className: S.inline,
   children: [
-    (0, i.jsx)(h.Z, {
+    (0, i.jsx)(f.Z, {
       className: S.guildIcon,
-      size: h.Z.Sizes.MINI,
+      size: f.Z.Sizes.MINI,
       active: !0,
       guild: n
     }),

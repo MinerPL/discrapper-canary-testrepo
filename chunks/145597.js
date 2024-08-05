@@ -4,7 +4,7 @@ n.d(t, {
 return l;
   },
   Gr: function() {
-return s;
+return o;
   },
   Ht: function() {
 return f;
@@ -19,7 +19,7 @@ return _;
 return h;
   },
   Tq: function() {
-return o;
+return s;
   },
   VS: function() {
 return m;
@@ -39,8 +39,8 @@ return p;
 }), n(610138), n(216116), n(78328), n(815648), n(47120), n(490029);
 var a = n(358085);
 n(981631);
-let o = 2,
-  s = {
+let s = 2,
+  o = {
 width: 3840,
 height: 2160
   },

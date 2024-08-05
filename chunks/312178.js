@@ -5,10 +5,10 @@ var i = n(735250),
   o = n(765250),
   r = n(13245),
   l = n(26229),
-  c = n(355863),
-  d = n(237997),
-  u = n(451478),
-  h = n(583883),
+  c = n(552062),
+  d = n(355863),
+  u = n(237997),
+  h = n(451478),
   p = n(434529),
   f = n(145597),
   _ = n(382790),
@@ -125,10 +125,10 @@ if (null == e || null == t)
 let {
   id: r,
   pinned: l,
-  zIndex: c,
-  size: d,
-  anchor: u
-} = e, f = (0, p.w_)(d, n), _ = (0, p.KR)(u, n), {
+  zIndex: d,
+  size: u,
+  anchor: h
+} = e, f = (0, p.w_)(u, n), _ = (0, p.KR)(h, n), {
   minSize: g,
   resizeX: E,
   resizeY: Z,
@@ -143,7 +143,7 @@ let {
   maxX: n.width,
   maxY: n.height
 };
-return (0, i.jsx)(h.Z, {
+return (0, i.jsx)(c.Z, {
   id: r,
   size: f,
   anchor: _,
@@ -153,7 +153,7 @@ return (0, i.jsx)(h.Z, {
   resizeX: E,
   resizeY: Z,
   style: {
-    zIndex: c
+    zIndex: d
   },
   dragAnywhere: I,
   active: !s || o,
@@ -180,15 +180,15 @@ super(...e), S(this, 'state', {
   if (!(0, f.Te)(a))
     return;
   let l = (0, p.jL)(n, a),
-    d = (0, p.Ox)(i, a);
-  (0, o.Os)(t), (0, o.nv)(t, l, d);
-  let u = e === h.B.MOVE,
+    u = (0, p.Ox)(i, a);
+  (0, o.Os)(t), (0, o.nv)(t, l, u);
+  let h = e === c.B.MOVE,
     _ = (0, p.PY)(n, a.width, a.height, s.width, s.height);
   this.setState({
     lastLayoutUpdate: {
-      was_resized: null != r && r.was_resized || !u,
-      was_dragged: null != r && r.was_dragged || u,
-      widget_type: c.Z.getWidgetType(t),
+      was_resized: null != r && r.was_resized || !h,
+      was_dragged: null != r && r.was_dragged || h,
+      widget_type: d.Z.getWidgetType(t),
       window_width: a.width,
       window_height: a.height,
       widget_width: s.width,
@@ -220,17 +220,17 @@ super(...e), S(this, 'state', {
   }
 }
 let x = a.ZP.connectStores([
-  c.Z,
-  d.Z
+  d.Z,
+  u.Z
 ], e => {
   let {
 widgetId: t
-  } = e, n = c.Z.getWidget(t), i = d.Z.getActiveRegions();
+  } = e, n = d.Z.getWidget(t), i = u.Z.getActiveRegions();
   return {
 widget: n,
-widgetConfig: null != n ? c.Z.getWidgetConfig(n.type) : null,
-locked: d.Z.isInstanceUILocked(),
-isPreviewingInGame: d.Z.isPreviewingInGame(),
+widgetConfig: null != n ? d.Z.getWidgetConfig(n.type) : null,
+locked: u.Z.isInstanceUILocked(),
+isPreviewingInGame: u.Z.isPreviewingInGame(),
 isActiveRegion: null != n && n.type === I.Odu.TEXT && i.has(I.O0n.TEXT_WIDGET)
   };
 })(v);
@@ -242,10 +242,10 @@ layoutSize: t
   }, e);
 }
 t.Z = a.ZP.connectStores([
-  c.Z,
-  u.Z
+  d.Z,
+  h.Z
 ], () => ({
-  layout: c.Z.getLayout(f.qU),
-  layoutSize: u.Z.windowSize(),
+  layout: d.Z.getLayout(f.qU),
+  layoutSize: h.Z.windowSize(),
   renderWidget: T
 }))(l.Z);

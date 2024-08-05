@@ -2,8 +2,8 @@ n(653041);
 var r = n(269054),
   i = n(217209),
   a = n.n(i),
-  o = n(78650),
-  s = n.n(o),
+  s = n(78650),
+  o = n.n(s),
   l = n(505444),
   u = n.n(l);
 
@@ -29,7 +29,7 @@ u().setValueForStyles(e, ((r = t.style) && (r.transform && (r.transform = r.Webk
 }, e => e);
 
 function E(e, t, n) {
-  return void 0 !== t && void 0 != n ? s()(t, n) : e;
+  return void 0 !== t && void 0 != n ? o()(t, n) : e;
 }
 t.Z = {
   ...r,
@@ -43,8 +43,8 @@ return e.transform = e.transform || [], e.transform.push({
 let i;
 let {
   toValueMin: a,
-  toValueMax: o,
-  tension: s = 0,
+  toValueMax: s,
+  tension: o = 0,
   friction: l = 0,
   loop: u,
   reverse: c,
@@ -55,10 +55,10 @@ let {
   durationMin: p,
   durationMax: m,
   ...I
-} = n, T = t._value, g = E(n.duration, p, m), S = E(n.toValue, a, o), A = r[f](t, {
+} = n, T = t._value, g = E(n.duration, p, m), S = E(n.toValue, a, s), A = r[f](t, {
   ...I,
   toValue: S,
-  tension: s,
+  tension: o,
   friction: l,
   duration: g
 }), N = A;
@@ -67,7 +67,7 @@ if (c || d) {
   i = r[f](t, {
     ...I,
     toValue: c ? T : -S,
-    tension: s,
+    tension: o,
     friction: l,
     duration: e
   }), N = r.sequence([

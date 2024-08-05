@@ -6,8 +6,8 @@ return g;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(442837),
+  s = n.n(a),
+  o = n(442837),
   l = n(481060),
   u = n(367907),
   c = n(739566),
@@ -79,7 +79,7 @@ colorRoleName: A
   } = (0, c.ZP)(a), N = function(e, t) {
 let n = e.id,
   r = t.id;
-return (0, s.e7)([h.Z], () => {
+return (0, o.e7)([h.Z], () => {
   let e = r;
   for (let t = 0; t < 10; t++) {
     let r = h.Z.getMessage(n, e);
@@ -117,7 +117,7 @@ children: (0, r.jsxs)('div', {
           },
           children: (0, r.jsx)(l.Text, {
             color: 'header-secondary',
-            className: o()(I.text, I.replyLabel),
+            className: s()(I.text, I.replyLabel),
             variant: 'text-sm/normal',
             children: m.Z.Messages.REPLYING_TO.format({
               userHook: (e, t) => (0, r.jsx)(l.NameWithRole, {

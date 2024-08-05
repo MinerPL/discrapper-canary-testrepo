@@ -9,8 +9,8 @@ let a = {},
   r = {},
   N = {},
   L = !1,
-  D = !1,
-  S = !1;
+  S = !1,
+  D = !1;
 
 function l(e) {
   let {
@@ -32,10 +32,10 @@ if (null != e)
   return r[e];
   }
   isFetching() {
-return D;
+return S;
   }
   hasError() {
-return S;
+return D;
   }
   hasSeen(e) {
 let _ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -77,10 +77,10 @@ let {
 N[_] = !1;
   },
   WELCOME_SCREEN_FETCH_START: function() {
-D = !0, S = !1;
+S = !0, D = !1;
   },
   WELCOME_SCREEN_FETCH_SUCCESS: function(e) {
-D = !1, S = !1;
+S = !1, D = !1;
 let {
   welcomeScreen: _,
   guildId: E
@@ -88,6 +88,6 @@ let {
 r[E] = null != _ ? _ : a;
   },
   WELCOME_SCREEN_FETCH_FAIL: function() {
-D = !1, S = !0;
+S = !1, D = !0;
   }
 });

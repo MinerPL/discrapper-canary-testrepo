@@ -13,14 +13,14 @@ n.d(t, {
 return u;
   },
   f$: function() {
-return o;
+return s;
   },
   hP: function() {
 return r;
   }
 }), n(47120);
-let o = 50035,
-  s = '__root_errors';
+let s = 50035,
+  o = '__root_errors';
 
 function l(e) {
   return e.map(e => ({
@@ -46,12 +46,12 @@ return this.getAllFieldErrorsUnder(this.errors);
   getAllFieldErrorsUnder(e) {
 let t = {},
   n = null == e ? void 0 : e._errors;
-return null != n && n.length > 0 && (t[s] = n), void 0 !== e && Object.entries(e).forEach(e => {
+return null != n && n.length > 0 && (t[o] = n), void 0 !== e && Object.entries(e).forEach(e => {
   let [n, r] = e;
   if ('_errors' !== n)
     Object.entries(this.getAllFieldErrorsUnder(r)).forEach(e => {
       let [r, i] = e;
-      r === s ? t[n] = i : t[''.concat(n, '.').concat(r)] = i;
+      r === o ? t[n] = i : t[''.concat(n, '.').concat(r)] = i;
     });
 }), t;
   }
@@ -81,7 +81,7 @@ a(this, 'message', void 0), a(this, 'code', void 0), a(this, 'retryAfter', void 
 let {
   message: r,
   code: i,
-  retryAfter: s,
+  retryAfter: o,
   errors: u,
   status: c,
   captchaFields: d
@@ -103,7 +103,7 @@ let {
     message: n.captcha_key.length > 0 ? n.captcha_key[0] : void 0
   } : {
     status: e.status,
-    code: o,
+    code: s,
     errors: function(e) {
       let t = {};
       for (let [n, r] of Object.entries(e)) {
@@ -124,6 +124,6 @@ let {
     status: e.status
   };
 }(e, t);
-this.message = null != r ? r : n, this.code = null != i ? i : -1, this.retryAfter = s, this.errors = u, this.status = c, this.captchaFields = null != d ? d : {};
+this.message = null != r ? r : n, this.code = null != i ? i : -1, this.retryAfter = o, this.errors = u, this.status = c, this.captchaFields = null != d ? d : {};
   }
 }

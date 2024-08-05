@@ -1,8 +1,8 @@
-n(47120), n(411104);
+n(47120), n(315314), n(610138), n(216116), n(78328), n(815648), n(519149), n(411104);
 var r, i = n(512722),
   a = n.n(i),
-  o = n(392711),
-  s = n.n(o),
+  s = n(392711),
+  o = n.n(s),
   l = n(202226),
   u = n(442837),
   c = n(570140),
@@ -27,7 +27,7 @@ let m = {},
   S = {},
   A = new Set(),
   N = () => b.emitChange(),
-  v = s().debounce(N, 150);
+  v = o().debounce(N, 150);
 
 function O(e) {
   let t = T[e];
@@ -40,13 +40,17 @@ alwaysOnTop: !!_.isPlatformEmbedded && I[e]
   });
 }
 
-function R(e, t, n) {
-  let r = e.document,
-i = ''.concat(window.location.protocol, '//').concat(window.location.host);
-  if (!t.startsWith(i))
+function R(e, t, r) {
+  let i = e.document,
+s = new URL(t).origin,
+o = new URL(''.concat(window.location.protocol, '//').concat(window.location.host)).origin,
+l = URL.canParse(n.p) ? new URL(n.p).origin : '';
+  if (s !== o && s !== l) {
+new d.Z('PopoutWindowStore').warn('Not injecting stylesheet, unrecognized origin', s);
 return;
-  let o = r.createElement('link');
-  o.href = t, o.rel = 'stylesheet', o.integrity = n, a()(null != r.head, 'Document head was null'), r.head.appendChild(o);
+  }
+  let u = i.createElement('link');
+  u.href = t, u.rel = 'stylesheet', u.integrity = r, a()(null != i.head, 'Document head was null'), i.head.appendChild(u);
 }
 
 function C(e) {
@@ -148,10 +152,10 @@ if (null != i && !i.closed)
   return _.isPlatformEmbedded ? E.ZP.focus(t) : i.focus(), !1;
 let {
   defaultWidth: a,
-  defaultHeight: o,
-  defaultAlwaysOnTop: s = !1,
+  defaultHeight: s,
+  defaultAlwaysOnTop: o = !1,
   ...l
-} = n, u = l, c = s, d = m[t];
+} = n, u = l, c = o, d = m[t];
 if (null != d) {
   let {
     width: e,
@@ -160,9 +164,9 @@ if (null != d) {
     y: r,
     alwaysOnTop: i
   } = d;
-  c = null != i ? i : s, u = {
+  c = null != i ? i : o, u = {
     width: null != e && 0 !== e ? e : a,
-    height: null != t && 0 !== t ? t : o,
+    height: null != t && 0 !== t ? t : s,
     left: n,
     top: r,
     ...u

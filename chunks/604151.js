@@ -6,8 +6,8 @@ return p;
 var r = n(952265),
   i = n(570140),
   a = n(281956),
-  o = n(200498),
-  s = n(71275),
+  s = n(200498),
+  o = n(71275),
   l = n(672339),
   u = n(653175),
   c = n(592125),
@@ -22,10 +22,10 @@ m = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
 I = c.Z.getChannel(e),
 T = f.Z.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
 g = null != I ? _.Z.getCheck(I.guild_id) : null;
-  if (!(null != t && (0, a.n)(t)) && (null == g || !!g.canChat || !!(0, o.jU)(I))) {
+  if (!(null != t && (0, a.n)(t)) && (null == g || !!g.canChat || !!(0, s.jU)(I))) {
 if (null != I && !T) {
   let e = (0, h.rY)(I, f.Z, d.Z);
-  if (e && I.isGuildStageVoice() && (0, s.xJ)(I.id)) {
+  if (e && I.isGuildStageVoice() && (0, o.xJ)(I.id)) {
     (0, r.ZD)(async () => {
       let {
         default: e

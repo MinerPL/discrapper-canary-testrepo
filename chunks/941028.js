@@ -6,13 +6,13 @@ return c;
 return u;
   },
   k$: function() {
-return s;
+return o;
   },
   kr: function() {
 return l;
   },
   w5: function() {
-return o;
+return s;
   },
   ym: function() {
 return a;
@@ -29,7 +29,7 @@ userIds: t
   });
 }
 
-function o(e, t) {
+function s(e, t) {
   r.Z.dispatch({
 type: 'GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE',
 guildId: e,
@@ -37,7 +37,7 @@ userIds: t
   });
 }
 
-function s(e) {
+function o(e) {
   r.Z.dispatch({
 type: 'GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES',
 guildId: e
@@ -66,12 +66,12 @@ guildId: t,
 channelId: n,
 y: r,
 height: a,
-rowHeight: o
+rowHeight: s
   } = e;
 
-  function s(e) {
+  function o(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-return Math.max(0, Math.ceil(Math.ceil(e / o)) + t);
+return Math.max(0, Math.ceil(Math.ceil(e / s)) + t);
   }
   let l = [];
 
@@ -82,9 +82,9 @@ return l.push([
   t
 ]), t + 1;
   }
-  let d = s(0.5 * a),
-_ = s(r, -d),
-E = s(r + a, d);
+  let d = o(0.5 * a),
+_ = o(r, -d),
+E = o(r + a, d);
   for (_ > 0 && (_ = Math.max(c(0), _)), _ = Math.floor(_ / i.dj) * i.dj; _ <= E;)
 _ = c(_);
   u(t, n, l);

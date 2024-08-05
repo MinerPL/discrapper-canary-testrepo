@@ -6,8 +6,8 @@ return Y;
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(338545),
+  s = n.n(a),
+  o = n(338545),
   l = n(442837),
   u = n(481060),
   c = n(26151),
@@ -20,7 +20,7 @@ var r = n(735250),
   m = n(932724),
   I = n(672339),
   T = n(898531),
-  g = n(923973),
+  g = n(738436),
   S = n(189771),
   A = n(560688),
   N = n(871499),
@@ -52,17 +52,17 @@ height: 267
 function H(e) {
   let {
 header: t
-  } = e, n = R.Z.getCameraComponent(), a = (0, l.e7)([R.Z], () => R.Z.getVideoDeviceId()), o = (0, T.Z)();
+  } = e, n = R.Z.getCameraComponent(), a = (0, l.e7)([R.Z], () => R.Z.getVideoDeviceId()), s = (0, T.Z)();
   return i.useEffect(() => {
 let e = C.default.getCurrentUser();
-if (o && null != e) {
+if (s && null != e) {
   let t = (0, m.P)(e);
   (0, I.FU)(t, a, {
     track: !1
   }).catch(P.dG4);
 }
   }, [
-o,
+s,
 a
   ]), (0, r.jsxs)('div', {
 className: x.previewRoot,
@@ -92,7 +92,7 @@ channel: n,
 numVideoDevices: i
   } = e, {
 cameraUnavailable: a,
-enabled: s
+enabled: o
   } = (0, g.Z)(), l = (0, S.Z)(n);
   return (0, r.jsxs)('div', {
 className: x.actions,
@@ -118,19 +118,19 @@ children: [
     animation: u.Popout.Animation.FADE,
     children: (e, t) => {
       let {
-        onClick: o
+        onClick: s
       } = e, {
         isShown: u
       } = t;
       return (0, r.jsx)(O.C, {
         join: !0,
-        enabled: s,
+        enabled: o,
         color: 'green',
         centerButton: !0,
         hasPermission: l,
         cameraUnavailable: a,
         channel: n,
-        onPopoutClick: i > 1 ? o : null,
+        onPopoutClick: i > 1 ? s : null,
         className: x.actionButton,
         popoutOpen: u,
         onCameraUnavailable: A.Z,
@@ -144,7 +144,7 @@ children: [
     channel: n,
     color: 'green',
     centerButton: !0,
-    className: o()(x.actionButton, x.last)
+    className: s()(x.actionButton, x.last)
   })
 ]
   });
@@ -161,13 +161,13 @@ R.Z.supports(U.AN.VIDEO),
 Object.keys(R.Z.getVideoDevices()).length
   ]), A = (0, l.e7)([y.Z], () => y.Z.isFocused()), N = (0, l.e7)([L.Z], () => L.Z.getMode(_.id)), v = i.useCallback(e => {
 null != e.top && null != e.left && d.Z.move(e.left, e.top);
-  }, []), O = (0, s.useSpring)({
+  }, []), O = (0, u.useSpring)({
 value: p ? 1 : 0,
 config: {
-  ...s.config.stiff,
+  ...o.config.stiff,
   clamp: !0
 }
-  });
+  }, 'animate-always');
   i.useEffect(() => {
 let e = e => {
   e.keyCode === P.yXg.ESCAPE && c.Z.stopRinging(_.id);
@@ -216,8 +216,8 @@ maxY: window.innerHeight,
 onDragEnd: v,
 dragAnywhere: !0,
 children: (0, r.jsx)(r.Fragment, {
-  children: (0, r.jsxs)(s.animated.div, {
-    className: o()(x.root, G.elevationHigh, {
+  children: (0, r.jsxs)(o.animated.div, {
+    className: s()(x.root, G.elevationHigh, {
       [x.previewCamera]: p
     }, p ? (0, D.Q)('dark') : null),
     style: {

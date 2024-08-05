@@ -1,15 +1,15 @@
-i.d(n, {
+i.d(s, {
   Z: function() {
-return E;
+return m;
   }
 });
-var s = i(735250);
+var n = i(735250);
 i(470079);
 var l = i(120356),
-  o = i.n(l),
-  t = i(442837),
-  r = i(481060),
-  a = i(129861),
+  t = i.n(l),
+  o = i(442837),
+  a = i(481060),
+  r = i(129861),
   d = i(427217),
   c = i(158776),
   u = i(51144),
@@ -17,54 +17,54 @@ var l = i(120356),
   _ = i(689938),
   f = i(988546);
 
-function E(e) {
+function m(e) {
   let {
-user: n,
+user: s,
 displayProfile: i
-  } = e, l = (0, t.e7)([c.Z], () => c.Z.findActivity(n.id, e => e.type === I.IIU.CUSTOM_STATUS)), E = u.ZP.getName(n);
-  return (0, s.jsxs)('div', {
+  } = e, l = (0, o.e7)([c.Z], () => c.Z.findActivity(s.id, e => e.type === I.IIU.CUSTOM_STATUS)), m = u.ZP.getName(s);
+  return (0, n.jsxs)('div', {
 className: f.container,
 children: [
-  null == E && (0, s.jsx)(a.Z, {
-    user: n,
+  null == m && (0, n.jsx)(r.Z, {
+    user: s,
     className: f.nameTag,
     usernameClass: f.username,
     discriminatorClass: f.discriminator
   }),
-  null != E && (0, s.jsxs)('div', {
+  null != m && (0, n.jsxs)('div', {
     children: [
-      (0, s.jsx)(r.Text, {
+      (0, n.jsx)(a.Text, {
         variant: 'text-lg/semibold',
         style: {
           marginRight: '12px'
         },
-        children: E
+        children: m
       }),
-      (0, s.jsx)(a.Z, {
-        user: n,
+      (0, n.jsx)(r.Z, {
+        user: s,
         forceUsername: !0,
         usernameClass: f.discriminator,
         discriminatorClass: f.discriminator,
-        className: o()(f.nameTag, f.nameTagSmall)
+        className: t()(f.nameTag, f.nameTagSmall)
       })
     ]
   }),
-  (null == i ? void 0 : i.pronouns) != null && (null == i ? void 0 : i.pronouns) !== '' && (0, s.jsx)(r.Tooltip, {
+  (null == i ? void 0 : i.pronouns) != null && (null == i ? void 0 : i.pronouns) !== '' && (0, n.jsx)(a.Tooltip, {
     text: _.Z.Messages.USER_PROFILE_PRONOUNS,
-    children: e => (0, s.jsx)(r.Text, {
+    children: e => (0, n.jsx)(a.Text, {
       ...e,
       variant: 'text-sm/normal',
-      className: o()(f.pronouns, f.nameTagSmall),
+      className: t()(f.pronouns, f.nameTagSmall),
       children: i.pronouns
     })
   }),
-  null != l ? (0, s.jsx)('div', {
+  null != l ? (0, n.jsx)('div', {
     className: f.__invalid_customStatusActivity,
-    children: (0, s.jsx)(r.Text, {
+    children: (0, n.jsx)(a.Text, {
       variant: 'text-sm/normal',
       color: 'header-secondary',
       className: f.customStatusText,
-      children: (0, s.jsx)(d.Z, {
+      children: (0, n.jsx)(d.Z, {
         activity: l,
         className: f.customStatus,
         emojiClassName: f.customStatusEmoji,

@@ -6,13 +6,13 @@ return a;
 return l;
   },
   ZI: function() {
-return o;
+return s;
   },
   m1: function() {
 return u;
   },
   uc: function() {
-return s;
+return o;
   }
 });
 var r = n(987170),
@@ -33,7 +33,7 @@ treatments: [{
   }
 }]
   }),
-  o = (0, r.Z)({
+  s = (0, r.Z)({
 kind: 'user',
 id: '2024-07_ctp_open_user_settings_filters',
 label: 'CTP open user settings - A/A test - Filters',
@@ -49,7 +49,7 @@ treatments: [{
   }
 }]
   }),
-  s = (0, r.Z)({
+  o = (0, r.Z)({
 kind: 'user',
 id: '2024-07_ctp_open_user_settings_multiple_buckets',
 label: 'CTP open user settings - A/A test - Multiple buckets',

@@ -1,8 +1,8 @@
 var r, i = n(442837),
   a = n(570140),
-  o = n(937111);
+  s = n(937111);
 n(57132);
-var s = n(703656),
+var o = n(703656),
   l = n(314897),
   u = n(430824),
   c = n(981631);
@@ -20,7 +20,7 @@ let _ = null,
   f = {};
 
 function h() {
-  null != _ && null == u.Z.getGuild(_) && null == o.Z.getRequest(_) && (_ = null), null != E && null == u.Z.getGuild(E) && null == o.Z.getRequest(E) && (E = null), p(_);
+  null != _ && null == u.Z.getGuild(_) && null == s.Z.getRequest(_) && (_ = null), null != E && null == u.Z.getGuild(E) && null == s.Z.getRequest(E) && (E = null), p(_);
 }
 
 function p(e) {
@@ -32,7 +32,7 @@ function m(e) {
   let t = !1;
   if (delete f[e], E === e && (E = null, t = !0), _ === e) {
 Object.values(u.Z.getGuilds()).find(t => t.id !== e);
-_ = null, (0, s.dL)(c.Z5c.ME), t = !0;
+_ = null, (0, o.dL)(c.Z5c.ME), t = !0;
   }
   return t;
 }

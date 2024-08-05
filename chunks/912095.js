@@ -7,9 +7,9 @@ return r;
   }
 }), n(47120), n(411104), n(177593);
 var r, i, a = n(874141),
-  o = n.n(a),
-  s = n(565925),
-  l = n.n(s),
+  s = n.n(a),
+  o = n(565925),
+  l = n.n(o),
   u = n(839548),
   c = n(46973),
   d = n(886848),
@@ -98,10 +98,10 @@ this.logger.info('BaseWebRTCConnection.updateVideoQuality: resolutionScaleFactor
 let i = e.encodingVideoWidth,
   a = e.encodingVideoHeight;
 for (let e of r.getTracks()) {
-  var o, s;
+  var s, o;
   let t = e.getConstraints(),
-    n = null === (o = t.width) || void 0 === o ? void 0 : o.max,
-    r = null === (s = t.height) || void 0 === s ? void 0 : s.max;
+    n = null === (s = t.width) || void 0 === s ? void 0 : s.max,
+    r = null === (o = t.height) || void 0 === o ? void 0 : o.max;
   (n !== i || r !== a) && (this.logger.info('BaseWebRTCConnection.updateVideoQuality: old: '.concat(n, ' x ').concat(r, ', new: ').concat(i, ' x ').concat(a)), t.width = {
     max: i
   }, t.height = {
@@ -148,7 +148,7 @@ return new Promise((t, n) => {
 });
   }
   recalculatePrioritySpeakers() {
-this.prioritySpeakers = new Set(Array.from(this.wantsPriority).filter(e => this.canHavePriority.has(e))), o()(this.outputs, (e, t) => {
+this.prioritySpeakers = new Set(Array.from(this.wantsPriority).filter(e => this.canHavePriority.has(e))), s()(this.outputs, (e, t) => {
   e.volume = this.computeLocalVolume(t);
 });
   }

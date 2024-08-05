@@ -1,21 +1,21 @@
-r.d(t, {
+t.d(r, {
   Z: function() {
 return k;
   }
-}), r(47120), r(411104);
-var a = r(735250),
-  n = r(470079),
-  i = r(120356),
-  o = r.n(i),
-  l = r(399606),
-  c = r(544891),
-  s = r(481060),
-  d = r(355467),
-  u = r(78839),
-  h = r(246992),
-  m = r(981631),
-  g = r(979756),
-  p = r(751544);
+}), t(47120), t(411104);
+var a = t(735250),
+  n = t(470079),
+  i = t(120356),
+  o = t.n(i),
+  l = t(399606),
+  c = t(544891),
+  s = t(481060),
+  d = t(355467),
+  u = t(78839),
+  h = t(246992),
+  m = t(981631),
+  g = t(979756),
+  p = t(751544);
 let b = [{
   label: 'Nitro Monthly',
   value: '511651880837840896'
@@ -99,7 +99,7 @@ let b = [{
   };
 
 function k() {
-  let [e, t] = n.useState('511651880837840896'), r = (0, l.e7)([u.ZP], () => u.ZP.getPremiumSubscription()), i = async () => {
+  let [e, r] = n.useState('511651880837840896'), t = (0, l.e7)([u.ZP], () => u.ZP.getPremiumSubscription()), i = async () => {
 await c.tn.post({
   url: '/debug/subscription',
   body: {
@@ -124,7 +124,7 @@ children: (0, a.jsxs)('div', {
     (0, a.jsxs)('section', {
       className: p.buttons,
       children: [
-        null == r && (0, a.jsxs)(a.Fragment, {
+        null == t && (0, a.jsxs)(a.Fragment, {
           children: [
             (0, a.jsx)(s.Text, {
               variant: 'text-md/normal',
@@ -132,9 +132,9 @@ children: (0, a.jsxs)('div', {
             }),
             (0, a.jsx)(s.Select, {
               serialize: e => e,
-              isSelected: t => t === e,
+              isSelected: r => r === e,
               options: b,
-              select: t,
+              select: r,
               popoutLayerContext: h.O$
             }),
             (0, a.jsx)(s.Button, {
@@ -151,8 +151,8 @@ children: (0, a.jsxs)('div', {
         })
       ]
     }),
-    null != r && (0, a.jsx)(v, {
-      subscription: r
+    null != t && (0, a.jsx)(v, {
+      subscription: t
     })
   ]
 })
@@ -161,9 +161,9 @@ children: (0, a.jsxs)('div', {
 
 function v(e) {
   let {
-subscription: t
-  } = e, r = e => {
-if (null == e && (e = t.status), e in f)
+subscription: r
+  } = e, t = e => {
+if (null == e && (e = r.status), e in f)
   return f[e];
 throw Error('Unknown status');
   }, n = async e => {
@@ -173,7 +173,7 @@ await c.tn.patch({
     subscription_status: e
   }
 });
-  }, i = t.planIdFromItems in {
+  }, i = r.planIdFromItems in {
 '978380692553465866': !0,
 '1024422698568122368': !0
   };
@@ -194,7 +194,7 @@ children: [
         children: [
           ' Subscription Type: ',
           (() => {
-            let e = t.planIdFromItems;
+            let e = r.planIdFromItems;
             if (null == e)
               throw Error('No plan id');
             if (e in x)
@@ -208,7 +208,7 @@ children: [
         variant: 'text-md/normal',
         children: [
           ' Subscription ID ',
-          t.id,
+          r.id,
           ' '
         ]
       }),
@@ -219,12 +219,12 @@ children: [
         variant: 'text-md/normal',
         children: [
           'Subscription Status: ',
-          r()
+          t()
         ]
       }),
       (0, a.jsx)(s.Select, {
-        serialize: e => r(e),
-        isSelected: e => e === t.status,
+        serialize: e => t(e),
+        isSelected: e => e === r.status,
         options: y,
         select: n,
         popoutLayerContext: h.O$

@@ -2,8 +2,8 @@ n(47120);
 var r = n(147913),
   i = n(367907),
   a = n(728345),
-  o = n(812206),
-  s = n(574176),
+  s = n(812206),
+  o = n(574176),
   l = n(314897),
   u = n(592125),
   c = n(944486),
@@ -19,7 +19,7 @@ return;
   let t = u.Z.getChannel(e),
 {
   enableHangStatus: n
-} = s.n.getCurrentConfig({
+} = o.n.getCurrentConfig({
   location: 'GameActivityManager'
 }, {
   autoTrackExposure: !1
@@ -31,7 +31,7 @@ return;
 return;
   let a = [...r].filter(e => e.type === E.IIU.PLAYING && e.application_id).map(e => e.application_id);
   await f([...a]);
-  let c = o.Z.getApplication(a[0]);
+  let c = s.Z.getApplication(a[0]);
   null != c && i.ZP.trackWithMetadata(E.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET, {
 channel_id: e,
 guild_id: t.guild_id,

@@ -22,8 +22,8 @@ return E;
   }
 }), n(789020), n(411104);
 var r, i, a = n(735250),
-  o = n(470079),
-  s = n(231338);
+  s = n(470079),
+  o = n(231338);
 
 function l(e, t) {
   return e | t;
@@ -47,19 +47,19 @@ flags: 0,
 contrast: 1,
 saturation: 1
   },
-  d = o.createContext(c);
+  d = s.createContext(c);
 
 function _(e) {
   let {
 children: t,
-theme: n = s.BR.DARK,
+theme: n = o.BR.DARK,
 primaryColor: r = null,
 secondaryColor: i = null,
 gradient: l = null,
 flags: c = 0,
 contrast: _ = 1,
 saturation: E = 1
-  } = e, f = o.useMemo(() => u({
+  } = e, f = s.useMemo(() => u({
 theme: n,
 primaryColor: r,
 secondaryColor: i,
@@ -88,15 +88,15 @@ children: t,
 theme: n,
 primaryColor: r,
 secondaryColor: i,
-gradient: s,
+gradient: o,
 flags: l,
 contrast: c,
 saturation: _
-  } = e, E = o.useContext(d), f = o.useMemo(() => u({
+  } = e, E = s.useContext(d), f = s.useMemo(() => u({
 theme: null != n ? n : E.theme,
 primaryColor: null != r ? r : E.primaryColor,
 secondaryColor: null != i ? i : E.secondaryColor,
-gradient: null != s ? s : E.gradient,
+gradient: null != o ? o : E.gradient,
 flags: null != l ? l : E.flags,
 contrast: null != c ? c : E.contrast,
 saturation: null != _ ? _ : E.saturation
@@ -111,7 +111,7 @@ E.contrast,
 E.saturation,
 r,
 i,
-s,
+o,
 l,
 c,
 _
@@ -124,7 +124,7 @@ children: t
 
 function f(e) {
   let t = h(),
-n = o.useMemo(() => u({
+n = s.useMemo(() => u({
   ...t,
   primaryColor: null,
   secondaryColor: null
@@ -136,7 +136,7 @@ children: e.children
 }
 
 function h() {
-  let e = o.useContext(d);
+  let e = s.useContext(d);
   if (null == e)
 throw Error('useThemeContext must be used within a ThemeContext.Provider');
   return e;

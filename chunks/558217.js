@@ -1,14 +1,14 @@
 n.d(t, {
   O: function() {
-return s;
+return o;
   }
 });
 var r = n(594174),
   i = n(339085),
   a = n(396352),
-  o = n(664437);
+  s = n(664437);
 
-function s(e) {
+function o(e) {
   if (null == e || null == r.default.getCurrentUser())
 return;
   let t = i.Z.getTopEmojisMetadata(e);
@@ -20,5 +20,5 @@ if (null == e || Date.now() < e)
   return;
   }
   if (!a.Z.getIsFetching(e))
-(0, o.pj)(e);
+(0, s.pj)(e);
 }

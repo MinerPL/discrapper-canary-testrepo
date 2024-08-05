@@ -2,8 +2,8 @@ n(47120), n(757143);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  o = n.n(a),
-  s = n(481060),
+  s = n.n(a),
+  o = n(481060),
   l = n(239091),
   u = n(555573),
   c = n(998698),
@@ -108,9 +108,9 @@ let i = t + e + n,
     onChange: a
   } = this.props;
 null == a || a(null, i, (0, f.JM)(i));
-let o = t.length + e.length;
+let s = t.length + e.length;
 this.setState({
-  nextSelection: o
+  nextSelection: s
 }, () => {
   this.props.maybeShowAutocomplete();
 });
@@ -144,9 +144,9 @@ return (0, r.jsxs)(r.Fragment, {
       event: h.CkL.GLOBAL_CLIPBOARD_PASTE,
       handler: this.handleGlobalPaste
     }),
-    (0, r.jsx)(s.TextAreaAutosize, {
+    (0, r.jsx)(o.TextAreaAutosize, {
       ref: this.handleSetRef,
-      className: o()(l, _),
+      className: s()(l, _),
       id: u,
       rows: 1,
       fontWidthEstimate: 6,

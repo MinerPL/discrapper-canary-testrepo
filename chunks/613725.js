@@ -6,14 +6,14 @@ return _;
 var i = n(735250);
 n(470079);
 var a = n(143927),
-  l = n(442837),
-  s = n(481060),
+  s = n(442837),
+  l = n(481060),
   r = n(43267),
-  o = n(905423),
-  c = n(592125),
+  o = n(565138),
+  c = n(905423),
+  u = n(592125),
   d = n(430824),
-  u = n(594174),
-  h = n(346656),
+  h = n(594174),
   p = n(768581),
   m = n(924253);
 
@@ -21,7 +21,7 @@ function _() {
   let {
 guildId: e,
 channelId: t
-  } = (0, o.Z)(e => {
+  } = (0, c.Z)(e => {
 let {
   guildId: t,
   channelId: n
@@ -30,25 +30,25 @@ return {
   guildId: t,
   channelId: n
 };
-  }, a.Z), n = (0, l.e7)([d.Z], () => d.Z.getGuild(e)), _ = (0, l.e7)([c.Z], () => null == n ? c.Z.getChannel(t) : null), f = (0, l.e7)([u.default], () => u.default.getCurrentUser()), E = null != _ ? (0, r.x)(_) : null, C = null != f ? f.getAvatarURL(e, 80) : p.pK['0'], g = (0, i.jsx)(s.Avatar, {
-src: C,
+  }, a.Z), n = (0, s.e7)([d.Z], () => d.Z.getGuild(e)), _ = (0, s.e7)([u.Z], () => null == n ? u.Z.getChannel(t) : null), f = (0, s.e7)([h.default], () => h.default.getCurrentUser()), E = null != _ ? (0, r.x)(_) : null, g = null != f ? f.getAvatarURL(e, 80) : p.pK['0'], C = (0, i.jsx)(l.Avatar, {
+src: g,
 'aria-hidden': !0,
-size: s.AvatarSizes.SIZE_80,
+size: l.AvatarSizes.SIZE_80,
 className: m.avatarSizeOverride
   }), I = null;
-  return I = null != n ? (0, i.jsx)(h.Z, {
+  return I = null != n ? (0, i.jsx)(o.Z, {
 guild: n
-  }) : null != E ? (0, i.jsx)(s.Avatar, {
+  }) : null != E ? (0, i.jsx)(l.Avatar, {
 'aria-hidden': !0,
 src: E,
-size: s.AvatarSizes.SIZE_80,
+size: l.AvatarSizes.SIZE_80,
 className: m.avatarSizeOverride
-  }) : g, (0, i.jsxs)('div', {
+  }) : C, (0, i.jsxs)('div', {
 className: m.container,
 children: [
   (0, i.jsx)('div', {
     className: m.personAvatar,
-    children: g
+    children: C
   }),
   (0, i.jsx)('div', {
     className: m.guildAvatar,
