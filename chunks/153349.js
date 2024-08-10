@@ -34,7 +34,7 @@ let {
   toggleRequestToSpeakSidebar: t,
   chatOpen: n
 } = e, i = (0, s.jsx)(f.ZP.Icon, {
-  icon: h.CloseSmallIcon,
+  icon: h.XSmallIcon,
   tooltip: b.Z.Messages.CLOSE,
   onClick: t
 });
@@ -183,7 +183,7 @@ return (0, s.jsxs)('div', {
         look: h.Button.Looks.BLANK,
         size: h.Button.Sizes.NONE,
         onClick: L,
-        children: (0, s.jsx)(h.CloseSmallIcon, {
+        children: (0, s.jsx)(h.XSmallIcon, {
           size: 'xs',
           color: 'currentColor'
         })

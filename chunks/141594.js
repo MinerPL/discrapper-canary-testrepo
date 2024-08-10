@@ -11,28 +11,30 @@ var i = n(470079),
   _ = n(599960),
   h = n(683167),
   E = n(302800),
-  I = n(921944);
-let m = 'useCollectiblesShopTabNewBadge';
+  m = n(921944);
+let I = 'useCollectiblesShopTabNewBadge';
 t.Z = () => {
   let e = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
-t = (0, h.I)(m),
+t = (0, h.I)(I),
 n = (0, s.e7)([d.Z], () => d.Z.getMarketingBySurface(a.K.DESKTOP_SHOP_BUTTON)),
-g = (0, u.J)(m),
+g = (0, u.J)(I),
 p = i.useMemo(() => {
-  if ((0, c.Fc)(e)) {
-    if (g) {
-      if (g && null != n)
-        return [n.dismissibleContent];
-    } else {
-      if (t === E.LM.ROBERT)
-        return [r.z.COLLECTIBLES_SHOP_ROBERT_MARKETING];
-      if (t === E.LM.DARK_FANTASY)
-        return [r.z.COLLECTIBLES_SHOP_DARK_FANTASY_MARKETING];
-      else if (t === E.LM.TIDE)
-        return [r.z.COLLECTIBLES_SHOP_TIDE_COACHTIP];
-    }
+  if (!(0, c.Fc)(e))
+    return [];
+  if (g)
+    return null != n ? [n.dismissibleContent] : [];
+  switch (t) {
+    case E.LM.TIDE:
+      return [r.z.COLLECTIBLES_SHOP_TIDE_COACHTIP];
+    case E.LM.DARK_FANTASY:
+      return [r.z.COLLECTIBLES_SHOP_DARK_FANTASY_MARKETING];
+    case E.LM.ROBERT:
+      return [r.z.COLLECTIBLES_SHOP_ROBERT_MARKETING];
+    case E.LM.STORM:
+      return [r.z.COLLECTIBLES_SHOP_STORM_MARKETING];
+    default:
+      return [];
   }
-  return [];
 }, [
   e,
   g,
@@ -40,7 +42,7 @@ p = i.useMemo(() => {
   t
 ]),
 [T, S] = (0, l.U)(p, void 0, !0),
-f = (0, _.E)(m),
+f = (0, _.E)(I),
 C = null;
   if (null != T) {
 if (g) {
@@ -70,7 +72,7 @@ if (g) {
   return {
 collectiblesShopTabNewBadgeDisplayOptions: C,
 dismissCollectiblesShopTabNewBadge: () => {
-  null != C && S(I.L.AUTO);
+  null != C && S(m.L.AUTO);
 }
   };
 };

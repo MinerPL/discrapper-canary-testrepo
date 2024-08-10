@@ -141,9 +141,6 @@ return Promise.resolve();
 return Promise.reject(Error('startLocalAudioRecording is not supported.'));
   }
   stopLocalAudioRecording(e) {}
-  speedTester(e, t) {
-throw Error('NOT_IMPLEMENTED');
-  }
   setHasFullbandPerformance(e) {}
   getSupportedSecureFramesProtocolVersion() {
 return 0;

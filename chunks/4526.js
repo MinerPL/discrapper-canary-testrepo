@@ -3,8 +3,8 @@ var r = o(735250),
   t = o(470079),
   n = o(512722),
   a = o.n(n),
-  l = o(481060),
-  c = o(985002),
+  c = o(481060),
+  l = o(985002),
   d = o(880257),
   i = o(198952),
   _ = o(329242),
@@ -25,36 +25,36 @@ f();
   }, [f]), I = (0, d.Z)(), {
 declineLinkRequest: M,
 isDeclineLoading: m
-  } = (0, c.G)({
+  } = (0, l.G)({
 onError: N,
 onSuccess: x
   });
-  return a()(!I, 'FamilyCenterDeclineLinkModal should only be rendered for teens.'), (0, r.jsx)(l.ModalRoot, {
+  return a()(!I, 'FamilyCenterDeclineLinkModal should only be rendered for teens.'), (0, r.jsx)(c.ModalRoot, {
 transitionState: n,
 children: (0, r.jsxs)('form', {
   onSubmit: e => {
     e.preventDefault(), M(o);
   },
   children: [
-    L ? (0, r.jsx)(l.FormErrorBlock, {
+    L ? (0, r.jsx)(c.FormErrorBlock, {
       className: E.error,
       onDismiss: C,
       children: u.Z.Messages.FAMILY_CENTER_DECLINE_LINK_MODAL_ERROR
     }) : null,
-    (0, r.jsx)(l.ModalContent, {
+    (0, r.jsx)(c.ModalContent, {
       children: (0, r.jsxs)('div', {
         className: E.header,
         children: [
           (0, r.jsx)(i.Z, {
             currentUser: s,
             otherUser: o,
-            children: (0, r.jsx)(l.CloseSmallIcon, {
+            children: (0, r.jsx)(c.XSmallIcon, {
               size: 'md',
               color: 'currentColor',
               className: E.closeIcon
             })
           }),
-          (0, r.jsx)(l.Heading, {
+          (0, r.jsx)(c.Heading, {
             className: E.headerText,
             variant: 'text-lg/bold',
             children: u.Z.Messages.FAMILY_CENTER_DECLINE_LINK_MODAL_TITLE
@@ -65,13 +65,13 @@ children: (0, r.jsxs)('form', {
           (0, r.jsxs)('div', {
             className: E.content,
             children: [
-              (0, r.jsx)(l.Text, {
+              (0, r.jsx)(c.Text, {
                 className: E.__invalid_noticeHeader,
                 variant: 'eyebrow',
                 color: 'header-primary',
                 children: u.Z.Messages.FAMILY_CENTER_DECLINE_LINK_MODAL_NOTICE_HEADER
               }),
-              (0, r.jsx)(l.Text, {
+              (0, r.jsx)(c.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
                 children: u.Z.Messages.FAMILY_CENTER_DECLINE_LINK_MODAL_DISCLAIMER_TEEN
@@ -81,27 +81,27 @@ children: (0, r.jsxs)('form', {
         ]
       })
     }),
-    (0, r.jsx)(l.ModalFooter, {
+    (0, r.jsx)(c.ModalFooter, {
       children: (0, r.jsxs)('div', {
         className: E.footer,
         children: [
-          (0, r.jsx)(l.Button, {
+          (0, r.jsx)(c.Button, {
             className: E.button,
             type: 'button',
             disabled: m,
-            look: l.Button.Looks.LINK,
-            color: l.Button.Colors.PRIMARY,
+            look: c.Button.Looks.LINK,
+            color: c.Button.Colors.PRIMARY,
             onClick: f,
-            size: l.Button.Sizes.SMALL,
+            size: c.Button.Sizes.SMALL,
             children: u.Z.Messages.CANCEL
           }),
-          (0, r.jsx)(l.Button, {
+          (0, r.jsx)(c.Button, {
             className: E.button,
             type: 'submit',
             disabled: m,
             submitting: m,
-            color: l.ButtonColors.RED,
-            size: l.Button.Sizes.SMALL,
+            color: c.ButtonColors.RED,
+            size: c.Button.Sizes.SMALL,
             children: u.Z.Messages.FAMILY_CENTER_DECLINE_REQUEST
           })
         ]

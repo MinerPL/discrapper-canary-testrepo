@@ -8,8 +8,8 @@ n(470079);
 var i = n(120356),
   a = n.n(i),
   s = n(481060),
-  o = n(436088),
-  l = n(806519),
+  o = n(686546),
+  l = n(436088),
   u = n(446066);
 
 function c(e) {
@@ -21,16 +21,16 @@ className: i
   return (0, r.jsxs)('div', {
 className: a()(u.icon, i),
 children: [
-  (0, r.jsx)(l.ZP, {
-    mask: l.ZP.Masks.STATUS_SCREENSHARE,
+  (0, r.jsx)(o.ZP, {
+    mask: o.ZP.Masks.STATUS_SCREENSHARE,
     width: t,
     height: n,
-    children: (0, r.jsx)(o.Z, {
+    children: (0, r.jsx)(l.Z, {
       width: t,
       height: n
     })
   }),
-  (0, r.jsx)(s.CloseSmallIcon, {
+  (0, r.jsx)(s.XSmallIcon, {
     size: 'md',
     color: 'currentColor',
     className: u.badge

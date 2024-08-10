@@ -32,7 +32,7 @@ children: [
     variant: 'text-md/medium',
     color: 'text-normal',
     children: [
-      (0, t.jsx)(l.CircleExclamationPointIcon, {
+      (0, t.jsx)(l.CircleWarningIcon, {
         size: 'sm',
         color: 'currentColor'
       }),

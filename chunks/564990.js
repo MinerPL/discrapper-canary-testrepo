@@ -1,23 +1,24 @@
 n.d(t, {
   CV: function() {
-return c;
+return d;
   },
   JX: function() {
-return u;
+return c;
   },
   mt: function() {
-return l;
+return u;
   },
   yK: function() {
-return d;
+return _;
   }
 });
 var r = n(544891),
   i = n(570140),
   a = n(881052),
   s = n(206583),
-  o = n(981631);
-let l = async e => {
+  o = n(981631),
+  l = n(689938);
+let u = async e => {
   let {
 token: t,
 feedId: n
@@ -40,31 +41,48 @@ return e;
   } catch (e) {
 throw new a.Hx(e);
   }
-}, u = async e => {
+}, c = async (e, t) => {
   try {
-let t = (await r.tn.get({
-  url: o.ANM.CONTENT_INVENTORY_OUTBOX(e)
+i.Z.dispatch({
+  type: 'CONTENT_INVENTORY_FETCH_OUTBOX_START',
+  userId: e
+});
+let n = (await r.tn.get({
+  url: o.ANM.CONTENT_INVENTORY_OUTBOX(e),
+  signal: t
 })).body;
 return i.Z.dispatch({
   type: 'CONTENT_INVENTORY_FETCH_OUTBOX_SUCCESS',
-  outbox: t,
+  outbox: n,
   userId: e
-}), t;
-  } catch (e) {
-throw new a.Hx(e);
+}), n;
+  } catch (t) {
+throw i.Z.dispatch({
+  type: 'CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE',
+  userId: e
+}), new a.Hx(t);
   }
-}, c = async (e, t) => {
+}, d = async (e, t, n) => {
   try {
-await new Promise(e => setTimeout(e, 1000)), i.Z.dispatch({
-  type: 'CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY',
+i.Z.dispatch({
+  type: 'CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START'
+}), await r.tn.del({
+  url: o.ANM.DELETE_MY_CONTENT_INVENTORY_OUTBOX_ENTRY_HISTORY(e.id)
+}), i.Z.dispatch({
+  type: 'CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_SUCCESS',
   userId: t,
   entry: e
+}), null == n || n();
+  } catch (t) {
+var a, s;
+let e = null !== (s = null == t ? void 0 : null === (a = t.body) || void 0 === a ? void 0 : a.message) && void 0 !== s ? s : l.Z.Messages.USER_ACTIVITY_DELETE_HISTORY_ERROR;
+i.Z.dispatch({
+  type: 'CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE',
+  error: e
 });
-  } catch (e) {
-throw new a.Hx(e);
   }
 };
-async function d(e, t) {
+async function _(e, t) {
   try {
 await r.tn.post({
   url: o.ANM.MY_SPOTIFY_CONTENT_INVENTORY,

@@ -23,7 +23,7 @@ return g;
   wi: function() {
 return I;
   }
-}), n(47120), n(653041), n(724458);
+}), n(47120), n(724458), n(653041);
 var r = n(470079),
   i = n(442837),
   a = n(430824),
@@ -70,7 +70,7 @@ h = null !== (d = null !== (c = null === (i = _.result) || void 0 === i ? void 0
 
 function p(e, t, n) {
   let r = l.ZP.query(e, {
-commandType: t,
+commandTypes: [t],
 text: n
   }, {
 scoreMethod: u.p.COMMAND_OR_APPLICATION,
@@ -106,13 +106,10 @@ function I(e, t, n) {
 m = r.useRef(!1);
   m.current = f;
   let I = r.useMemo(() => {
-let e = [];
-if (null != n.placeholderCount)
-  for (let r = 0; r < n.placeholderCount; r++)
-    e.push(N(r, t.commandType));
-return e;
+var e;
+return N(null !== (e = n.placeholderCount) && void 0 !== e ? e : 0, t.commandTypes[0]);
   }, [
-t.commandType,
+t.commandTypes,
 n.placeholderCount
   ]);
   return r.useMemo(() => {
@@ -170,20 +167,18 @@ I
 }
 
 function T(e, t, n) {
+  var r;
   let {
-descriptors: r,
-commands: i,
-loading: a
-  } = l.ZP.query(e, t, n), s = [];
-  if (null != n.placeholderCount && a)
-for (let e = 0; e < n.placeholderCount; e++)
-  s.push(N(e, t.commandType));
+descriptors: i,
+commands: a,
+loading: s
+  } = l.ZP.query(e, t, n), u = N(s && null !== (r = n.placeholderCount) && void 0 !== r ? r : 0, t.commandTypes[0]);
   return {
-commands: a ? [
-  ...i,
-  ...s
-] : i,
-sections: a && 0 === r.length ? [o.Tm[_.bi.BUILT_IN]] : r
+commands: s ? [
+  ...a,
+  ...u
+] : a,
+sections: s && 0 === i.length ? [o.Tm[_.bi.BUILT_IN]] : i
   };
 }
 
@@ -242,15 +237,20 @@ let A = {
 };
 
 function N(e, t) {
+  let n = [];
+  for (let r = 0; r < e; r++)
+n.push(function(e, t) {
   return {
-type: t,
-inputType: c.iw.PLACEHOLDER,
-id: 'placeholder-'.concat(e),
-name: '',
-displayName: '',
-description: '',
-displayDescription: '',
-applicationId: '',
-section: A
+    type: t,
+    inputType: c.iw.PLACEHOLDER,
+    id: 'placeholder-'.concat(e),
+    name: '',
+    displayName: '',
+    description: '',
+    displayDescription: '',
+    applicationId: '',
+    section: A
   };
+}(r, t));
+  return n;
 }

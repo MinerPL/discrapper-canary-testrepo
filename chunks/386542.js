@@ -15,7 +15,7 @@ activated: o
   } = (0, r.cj)([i.Z], () => ({
 demos: i.Z.getPerksDemos(),
 activated: i.Z.getActivated()
-  })), l = (0, a.j$)();
+  })), l = (0, r.cj)([a.Z], () => a.Z.getState());
   return {
 available: null !== (t = null == s ? void 0 : s[e]) && void 0 !== t && t,
 activated: null !== (n = o[e]) && void 0 !== n && n,

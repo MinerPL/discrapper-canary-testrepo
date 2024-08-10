@@ -17,13 +17,13 @@ var i = n(735250),
   m = n(258609),
   _ = n(569545),
   f = n(382182),
-  E = n(484459),
-  g = n(103575),
-  C = n(199902),
-  I = n(430824),
-  x = n(496675),
-  T = n(979651),
-  N = n(40300),
+  E = n(352978),
+  g = n(184301),
+  C = n(103575),
+  I = n(199902),
+  x = n(430824),
+  T = n(496675),
+  N = n(979651),
   v = n(88751),
   S = n(252132),
   Z = n(248400),
@@ -49,11 +49,11 @@ let {
   id: _
 } = t;
 return (0, i.jsx)(o.Popout, {
-  preload: null == n ? void 0 : () => (0, E.W)(n.user, {
+  preload: null == n ? void 0 : () => (0, g.Z)(n.user, {
     guildId: s.guild_id,
     channelId: s.id
   }),
-  renderPopout: e => (0, i.jsx)(g.Z, {
+  renderPopout: e => (0, i.jsx)(C.Z, {
     ...e,
     location: 'StageTile',
     guildId: l,
@@ -89,13 +89,13 @@ let {
   width: l,
   isModerator: u,
   onContextMenu: h,
-  inPopout: E
+  inPopout: g
 } = e, {
-  reducedMotion: g
+  reducedMotion: C
 } = a.useContext(o.AccessibilityPreferencesContext), {
   id: v,
   blocked: j
-} = t, L = (0, r.Wu)([C.Z], () => C.Z.getAllActiveStreams(), []), {
+} = t, L = (0, r.Wu)([I.Z], () => I.Z.getAllActiveStreams(), []), {
   selectedParticipant: P,
   largeStream: O
 } = (0, r.cj)([p.Z], () => ({
@@ -103,7 +103,7 @@ let {
   largeStream: null != s && p.Z.getStageStreamSize(s.id)
 })), y = a.useCallback((e, t) => {
   if (e.type === M.fO.STREAM && 0 === L.filter(t => (0, _.V9)(t) === e.id && t.state !== A.jm8.ENDED).length) {
-    if (!(0, f.p9)(s, T.Z, I.Z, x.Z, m.Z)[0])
+    if (!(0, f.p9)(s, N.Z, x.Z, T.Z, m.Z)[0])
       return;
     (0, d.rn)((0, _.my)(e.id), {
       forceMultiple: t.shiftKey
@@ -119,16 +119,16 @@ let {
 return (0, i.jsx)(S.Z, {
   participant: n,
   aspectRatio: R,
-  fit: n.type === M.fO.USER ? N.L.COVER : void 0,
+  fit: n.type === M.fO.USER ? E.L.COVER : void 0,
   blocked: j,
   channel: s,
   className: b.tile,
   inCall: !0,
-  inPopout: E,
+  inPopout: g,
   onClick: y,
   onContextMenu: h,
   paused: !1,
-  pulseSpeakingIndicator: !g.enabled,
+  pulseSpeakingIndicator: !C.enabled,
   width: l,
   children: u && n.type === M.fO.USER && (0, i.jsx)(Z.Z, {})
 }, v);

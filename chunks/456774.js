@@ -112,7 +112,6 @@ children: (0, r.jsxs)('div', {
       children: [
         N ? (0, r.jsx)(d.Z, {
           guild: n,
-          size: 16,
           className: L.rowIconV2,
           tooltipColor: s.Tooltip.Colors.PRIMARY
         }) : (0, r.jsx)(c.Z, {

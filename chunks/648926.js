@@ -23,7 +23,7 @@ function p(e) {
 stream: t,
 canWatch: n,
 unavailableReason: p,
-onClick: m,
+onAction: m,
 onClose: I
   } = e, {
 profileType: T
@@ -49,8 +49,10 @@ children: [
       themeColor: T === _.y0.FULL_SIZE ? 'secondary' : 'primary',
       wrapperClassName: h.primaryButton,
       fullWidth: !0,
-      onClick: e => {
-        null == m || m(e), s.default.selectVoiceChannel(t.channelId), (0, o.iV)(t), null == I || I();
+      onClick: () => {
+        null == m || m({
+          action: 'PRESS_WATCH_STREAM_BUTTON'
+        }), s.default.selectVoiceChannel(t.channelId), (0, o.iV)(t), null == I || I();
       }
     })
   }),
@@ -59,8 +61,10 @@ children: [
     icon: a.EyePlusIcon,
     disabled: !n,
     themeColor: T === _.y0.FULL_SIZE ? 'secondary' : 'primary',
-    onClick: e => {
-      null == m || m(e), s.default.selectVoiceChannel(t.channelId), (0, o.iV)(t, {
+    onClick: () => {
+      null == m || m({
+        action: 'PRESS_WATCH_MULTIPLE_STREAMS_BUTTON'
+      }), s.default.selectVoiceChannel(t.channelId), (0, o.iV)(t, {
         forceMultiple: !0
       }), null == I || I();
     }

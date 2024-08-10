@@ -28,11 +28,11 @@ var r, i, a, s, o, l, u = n(652874),
   c = n(868888),
   d = n(731965),
   _ = n(433517);
-(s = r || (r = {})).ADMIN_UPSELL = 'admin_upsell', s.GET_STARTED = 'get_started', s.DISCOVERY = 'discovery', s.PLAYSTYLE = 'playstyle', s.TRAITS = 'traits', s.GAMES = 'games', s.SAVED_GUILDS = 'saved_guilds', (o = i || (i = {})).VALORANT = 'valorant', o.GENSHIN = 'genshin', (l = a || (a = {})).USER_UPSELL = 'user_upsell', l.USER_ONBOARDING = 'user_onboarding';
+(s = r || (r = {})).ADMIN_UPSELL = 'admin_upsell', s.GET_STARTED = 'get_started', s.DISCOVERY = 'discovery', s.PLAYSTYLE = 'playstyle', s.TRAITS = 'traits', s.GAMES = 'games', s.SAVED_GUILDS = 'saved_guilds', s.PREFERENCES = 'preferences', (o = i || (i = {})).NONE = 'none', o.VALORANT = 'valorant', o.GENSHIN = 'genshin', (l = a || (a = {})).USER_UPSELL = 'user_upsell', l.USER_ONBOARDING = 'user_onboarding';
 let E = (0, u.Z)((0, c.tJ)(e => ({
   mode: 'admin_upsell',
   previousMode: 'admin_upsell',
-  game: 'valorant',
+  game: 'none',
   started: !1,
   userUpsellScreen: 'user_upsell',
   savedGuildIds: [],
@@ -108,7 +108,7 @@ E.setState({
   started: !1,
   mode: 'admin_upsell',
   previousMode: 'admin_upsell',
-  game: 'valorant',
+  game: 'none',
   userUpsellScreen: 'user_upsell',
   savedGuildIds: [],
   selectedGames: [],

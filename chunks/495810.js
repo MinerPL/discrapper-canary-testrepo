@@ -23,16 +23,16 @@ var C, t, i, s, r = a(735250),
   T = a(213609),
   m = a(216547),
   g = a(812206),
-  x = a(665149),
-  N = a(706454),
-  D = a(210887),
-  v = a(592125),
-  A = a(430824),
-  S = a(771845),
-  b = a(594174),
-  w = a(517802),
-  j = a(471731),
-  R = a(810090),
+  x = a(70097),
+  N = a(665149),
+  D = a(706454),
+  v = a(210887),
+  A = a(592125),
+  S = a(430824),
+  b = a(771845),
+  w = a(594174),
+  j = a(517802),
+  R = a(471731),
   B = a(626135),
   O = a(823379),
   k = a(5192),
@@ -91,12 +91,12 @@ function ej() {
   let {
 width: a,
 ref: C
-  } = (0, E.Z)(), t = (0, V.e7)([u.Z], () => u.Z.useReducedMotion), i = (0, V.e7)([W.Z], () => W.Z.isAcknowledged(en.ES.FREE)), [s, l] = n.useState(!1), [d, M] = n.useState(!1), [I, h] = n.useState(!1), T = (0, c.k6)(), m = (0, c.TH)(), g = (0, V.e7)([D.Z], () => D.Z.getState().theme), [N] = n.useState((0, Q.c)(W.Z) > 0), {
-analyticsLocations: v
+  } = (0, E.Z)(), t = (0, V.e7)([u.Z], () => u.Z.useReducedMotion), i = (0, V.e7)([W.Z], () => W.Z.isAcknowledged(en.ES.FREE)), [s, l] = n.useState(!1), [d, M] = n.useState(!1), [I, h] = n.useState(!1), T = (0, c.k6)(), m = (0, c.TH)(), g = (0, V.e7)([v.Z], () => v.Z.getState().theme), [D] = n.useState((0, Q.c)(W.Z) > 0), {
+analyticsLocations: A
   } = (0, f.ZP)([
 ...null !== (L = null == m ? void 0 : null === (e = m.state) || void 0 === e ? void 0 : e.analyticsLocations) && void 0 !== L ? L : [],
 p.Z.ACTIVITIES_PAGE
-  ]), A = n.useRef(new Date());
+  ]), S = n.useRef(new Date());
   return n.useEffect(() => {
 setTimeout(() => {
   !i && F.Z(en.ES.FREE);
@@ -109,30 +109,30 @@ setTimeout(() => {
 }, 1500), setTimeout(() => {
   h(!0);
 }, 1700));
-  }, [i]), n.useEffect(() => ((0, _.Y)(el.Z5c.ACTIVITIES), N && !v.includes(p.Z.ACTIVITIES_PAGE_NOTIFICATION_DOT) && T.replace(el.Z5c.ACTIVITIES, {
+  }, [i]), n.useEffect(() => ((0, _.Y)(el.Z5c.ACTIVITIES), D && !A.includes(p.Z.ACTIVITIES_PAGE_NOTIFICATION_DOT) && T.replace(el.Z5c.ACTIVITIES, {
 analyticsLocations: [
-  ...v,
+  ...A,
   p.Z.ACTIVITIES_PAGE_NOTIFICATION_DOT
 ]
   }), () => {
-let e = A.current,
+let e = S.current,
   L = Math.ceil((new Date().getTime() - e.getTime()) / 1000);
 B.default.track(el.rMx.ROUTE_UNMOUNT, {
   route: '/activities',
   page_view_duration_s: L
 });
   }), [
-v,
+A,
 T,
-N
+D
   ]), (0, r.jsx)(f.Gt, {
-value: v,
+value: A,
 children: (0, r.jsxs)('div', {
   className: eH.outerContainer,
   children: [
-    (0, r.jsxs)(x.ZP, {
+    (0, r.jsxs)(N.ZP, {
       children: [
-        (0, r.jsx)(w.Z, {
+        (0, r.jsx)(j.Z, {
           className: o()(eH.activitiesBirthdayIcon, {
             [eH.activitiesBirthdayIconLight]: 'light' === g
           })
@@ -192,7 +192,7 @@ children: (0, r.jsxs)('div', {
               }) : null
             ]
           }),
-          null != a && a < 660 ? (0, r.jsx)(R.Z, {
+          null != a && a < 660 ? (0, r.jsx)(x.Z, {
             autoPlay: !0,
             muted: !0,
             src: eV,
@@ -228,7 +228,7 @@ children: [
     children: (0, r.jsxs)('div', {
       className: eH.freeForeverText,
       children: [
-        (0, r.jsx)(j.Z, {
+        (0, r.jsx)(R.Z, {
           className: o()(eH.freeForeverLogo, {
             [eH.freeForeverLogoMedium]: null != L && L < 1000,
             [eH.freeForeverLogoSmall]: null != L && L < 480
@@ -247,7 +247,7 @@ children: [
   }),
   null != L && L > 660 ? (0, r.jsx)('div', {
     className: eH.freeForeverRight,
-    children: (0, r.jsx)(R.Z, {
+    children: (0, r.jsx)(x.Z, {
       autoPlay: !0,
       muted: !0,
       loop: !0,
@@ -443,7 +443,7 @@ id: l,
 cardImgUrl: c,
 revealDate: d,
 enabled: M
-  } = e, _ = (0, V.e7)([u.Z], () => u.Z.useReducedMotion), E = (0, V.e7)([N.default], () => N.default.locale), {
+  } = e, _ = (0, V.e7)([u.Z], () => u.Z.useReducedMotion), E = (0, V.e7)([D.default], () => D.default.locale), {
 analyticsLocations: h
   } = (0, f.ZP)(p.Z.ACTIVITIES_PAGE_WHATS_NEW_TILE), [T, m] = n.useState(!1), g = (0, I.Z)(T), x = (0, V.e7)([W.Z], () => {
 if (!M)
@@ -460,7 +460,7 @@ M && F.Z(l);
 M,
 l
   ]);
-  let D = (0, r.jsxs)(r.Fragment, {
+  let N = (0, r.jsxs)(r.Fragment, {
 children: [
   (0, r.jsx)(Z.Text, {
     variant: 'text-sm/semibold',
@@ -545,7 +545,7 @@ children: (0, r.jsxs)('div', {
               case 2:
                 return (0, r.jsx)('div', {
                   className: eH.whatsNewItemContainer,
-                  children: D
+                  children: N
                 });
               default:
                 return null;
@@ -669,19 +669,19 @@ analyticsLocations: e
   } = (0, f.ZP)(p.Z.ACTIVITIES_HAPPENING_NOW), L = (0, V.e7)([
 U.ZP,
 g.Z,
-v.Z,
-b.default,
-S.ZP
+A.Z,
+w.default,
+b.ZP
   ], () => {
 let e = [],
-  L = b.default.getCurrentUser();
+  L = w.default.getCurrentUser();
 if (null == L)
   return e;
 let a = U.ZP.getShelfActivities(null),
   C = a.map(e => g.Z.getApplication(e.application_id)).filter(O.lm);
-return S.ZP.getFlattenedGuildIds().forEach(t => {
+return b.ZP.getFlattenedGuildIds().forEach(t => {
   U.ZP.getEmbeddedActivitiesForGuild(t).forEach(t => {
-    let i = v.Z.getChannel(t.channelId);
+    let i = A.Z.getChannel(t.channelId);
     if (null == i || t.userIds.has(L.id))
       return;
     let s = (0, z.Z)({
@@ -689,7 +689,7 @@ return S.ZP.getFlattenedGuildIds().forEach(t => {
         applicationId: t.applicationId,
         applications: C
       }),
-      r = Array.from(t.userIds).map(e => b.default.getUser(e)).filter(O.lm);
+      r = Array.from(t.userIds).map(e => w.default.getUser(e)).filter(O.lm);
     null != s && e.push({
       activityItem: s,
       channel: i,
@@ -756,9 +756,9 @@ embeddedActivitiesManager: es.Z,
 backgroundResolution: 512
   }), n = k.ZP.getName(a.guild_id, a.id, null == C ? void 0 : C[0]);
   n = (0, P.aF)(n, 25);
-  let l = (0, V.e7)([A.Z], () => {
+  let l = (0, V.e7)([S.Z], () => {
 var e;
-return null === (e = A.Z.getGuild(a.guild_id)) || void 0 === e ? void 0 : e.name;
+return null === (e = S.Z.getGuild(a.guild_id)) || void 0 === e ? void 0 : e.name;
   });
   return (0, r.jsxs)(Z.Clickable, {
 onClick: s,
@@ -897,7 +897,7 @@ children: [
           [eH.videoFadeOut]: !l
         }),
         onAnimationEnd: () => l ? null : d(!1),
-        children: (0, r.jsx)(R.Z, {
+        children: (0, r.jsx)(x.Z, {
           className: eH.video,
           src: s,
           loop: !0,

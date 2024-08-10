@@ -7,8 +7,8 @@ var a = n(735250),
   r = n(470079),
   s = n(887024),
   o = n(512722),
-  i = n.n(o),
-  l = n(338545),
+  l = n.n(o),
+  i = n(338545),
   c = n(278074),
   d = n(979554),
   u = n(399606),
@@ -16,8 +16,8 @@ var a = n(735250),
   g = n(37234),
   p = n(607070),
   C = n(100527),
-  m = n(906732),
-  v = n(1585),
+  v = n(906732),
+  m = n(1585),
   E = n(125988),
   h = n(300284),
   b = n(876917),
@@ -44,13 +44,13 @@ let {
   item: n
 } = e, r = (0, u.e7)([T.default], () => {
   let e = T.default.getCurrentUser();
-  return i()(null != e, 'User cannot be undefined'), e;
+  return l()(null != e, 'User cannot be undefined'), e;
 }), {
   avatarDecorationSrc: s
 } = (0, E.Z)({
   user: r,
   avatarDecorationOverride: (null == n ? void 0 : n.type) === d.Z.AVATAR_DECORATION ? n : null,
-  size: (0, v.y9)(f.AvatarSizes.SIZE_120)
+  size: (0, m.y9)(f.AvatarSizes.SIZE_120)
 });
 return (0, c.EQ)(t.type).with(d.Z.PROFILE_EFFECT, () => (0, a.jsx)('div', {
   className: w.profileEffectShopPreview,
@@ -58,7 +58,7 @@ return (0, c.EQ)(t.type).with(d.Z.PROFILE_EFFECT, () => (0, a.jsx)('div', {
     forCollectedModal: !0,
     profileEffectId: n.id
   })
-})).with(d.Z.AVATAR_DECORATION, () => (i()(n.type === d.Z.AVATAR_DECORATION, 'ts-match already checked the type'), (0, a.jsx)(f.Avatar, {
+})).with(d.Z.AVATAR_DECORATION, () => (l()(n.type === d.Z.AVATAR_DECORATION, 'ts-match already checked the type'), (0, a.jsx)(f.Avatar, {
   size: f.AvatarSizes.SIZE_120,
   src: B,
   avatarDecoration: s,
@@ -81,7 +81,7 @@ let {
   item: n,
   reducedMotion: s,
   displayOptions: o
-} = e, [i, c] = r.useState(!1), d = (0, l.useSpring)({
+} = e, [l, c] = r.useState(!1), d = (0, f.useSpring)({
   from: {
     transform: 'translateX(100%)',
     right: '-100%'
@@ -93,9 +93,8 @@ let {
   config: {
     duration: 1550
   },
-  immediate: s,
   onRest: () => setTimeout(() => c(!0), 100)
-}), u = (0, l.useSpring)({
+}), u = (0, f.useSpring)({
   from: {
     transform: 'translateX(100%)',
     right: '-100%'
@@ -104,12 +103,11 @@ let {
     transform: 'translateX(50%)',
     right: '50%'
   },
-  immediate: s,
   config: {
     duration: 1550
   },
-  reverse: i
-}), f = (0, l.useSpring)({
+  reverse: l
+}), g = (0, f.useSpring)({
   from: {
     transform: 'translateX(50%)',
     right: '50%',
@@ -124,10 +122,10 @@ let {
     duration: 300
   },
   delay: 600
-});
+}, 'animate-always');
 return (0, a.jsxs)(a.Fragment, {
   children: [
-    (0, a.jsx)(l.animated.div, {
+    (0, a.jsx)(i.animated.div, {
       className: w.easterEggContainer,
       style: d,
       children: (0, a.jsx)(P, {
@@ -135,9 +133,9 @@ return (0, a.jsxs)(a.Fragment, {
         item: n
       })
     }),
-    (0, a.jsx)(l.animated.div, {
+    (0, a.jsx)(i.animated.div, {
       className: w.easterEggContainer,
-      style: s ? f : u,
+      style: s ? g : u,
       children: (0, a.jsx)('img', {
         src: o.imageSrc,
         style: o.style,
@@ -165,76 +163,75 @@ return null != s ? (0, a.jsx)(D, {
 });
   },
   U = e => {
-var t, n;
+var t;
 let {
-  product: s,
-  onClose: o,
-  confettiTarget: l,
-  confettiCanvas: E,
-  hideConfetti: b = !1,
-  analyticsLocations: T
+  product: n,
+  onClose: s,
+  confettiTarget: o,
+  confettiCanvas: i,
+  hideConfetti: E = !1,
+  analyticsLocations: b
 } = e, {
-  confettiColors: R
-} = (0, N.Z)(s.styles), j = (0, u.e7)([p.Z], () => p.Z.useReducedMotion), B = (0, x.m)('CollectiblesCollectedModal'), [P] = s.items, D = r.useRef(null), {
-  analyticsLocations: U
-} = (0, m.ZP)([
-  ...T,
+  confettiColors: T
+} = (0, N.Z)(n.styles), R = (0, u.e7)([p.Z], () => p.Z.useReducedMotion), j = (0, x.m)('CollectiblesCollectedModal'), [B] = n.items, P = r.useRef(null), {
+  analyticsLocations: D
+} = (0, v.ZP)([
+  ...b,
   C.Z.COLLECTIBLES_COLLECTED_MODAL
-]), H = (0, h.Z)({
-  analyticsLocations: U
-}), z = r.useCallback(() => {
-  if (o(), (0, g.xf)(), H(), s.type === d.Z.AVATAR_DECORATION) {
-    i()(P.type === d.Z.AVATAR_DECORATION, 'product type and item type are the same'), (0, v.ps)({
-      initialSelectedDecoration: P,
-      analyticsLocations: U
+]), U = (0, h.Z)({
+  analyticsLocations: D
+}), H = r.useCallback(() => {
+  if (s(), (0, g.xf)(), U(), n.type === d.Z.AVATAR_DECORATION) {
+    l()(B.type === d.Z.AVATAR_DECORATION, 'product type and item type are the same'), (0, m.ps)({
+      initialSelectedDecoration: B,
+      analyticsLocations: D
     });
     return;
   }
-  s.type === d.Z.PROFILE_EFFECT && (0, y.H)({
-    initialSelectedEffectId: P.id,
-    analyticsLocations: U
+  n.type === d.Z.PROFILE_EFFECT && (0, y.H)({
+    initialSelectedEffectId: B.id,
+    analyticsLocations: D
   });
 }, [
-  o,
-  H,
-  s.type,
-  P,
-  U
+  s,
+  U,
+  n.type,
+  B,
+  D
 ]), {
-  handleUseNow: V,
-  isApplying: W
+  handleUseNow: z,
+  isApplying: V
 } = (0, L.W)({
-  product: s,
-  onSuccess: o,
-  onError: o
+  product: n,
+  onSuccess: s,
+  onError: s
 }), {
-  firstAvatarDecoration: X,
-  firstProfileEffect: G
-} = (0, _.R)(s), K = (0, A.x6)(s) ? null != X && null != G : null != X || null != G, Y = (0, A.x6)(s) || B, {
-  category: Q,
-  isFetching: q
-} = (0, I.l)(s.skuId), J = null !== (n = null == Q ? void 0 : Q.successModalBg) && void 0 !== n ? n : s.banner;
-return (0, a.jsxs)(m.Gt, {
-  value: U,
+  firstAvatarDecoration: W,
+  firstProfileEffect: X
+} = (0, _.R)(n), G = (0, A.x6)(n) ? null != W && null != X : null != W || null != X, K = (0, A.x6)(n) || j, {
+  category: Y,
+  isFetching: Q
+} = (0, I.l)(n.skuId), q = null !== (t = null == Y ? void 0 : Y.successModalBg) && void 0 !== t ? t : n.banner;
+return (0, a.jsxs)(v.Gt, {
+  value: D,
   children: [
     (0, a.jsxs)('div', {
       className: w.modalInner,
-      ref: D,
+      ref: P,
       children: [
         (0, a.jsxs)('div', {
           className: w.bannerContainer,
           children: [
             (0, a.jsx)(O.Z, {
-              asset: q ? void 0 : J,
-              addGradient: null === (t = M.Ve[s.categorySkuId]) || void 0 === t ? void 0 : t.addGradient,
+              asset: Q ? void 0 : q,
               size: (0, Z.ML)(880),
               className: w.decorationBanner,
-              blur: !0
+              categoryBannerOverride: (0, M.ZS)(n.categorySkuId)
             }),
             (0, a.jsx)(F, {
-              product: s,
-              item: P,
-              reducedMotion: j
+              product: n,
+              item: B,
+              reducedMotion: R
             })
           ]
         }),
@@ -247,47 +244,47 @@ return (0, a.jsxs)(m.Gt, {
                 (0, a.jsx)(f.Heading, {
                   variant: 'heading-lg/bold',
                   children: k.Z.Messages.COLLECTIBLES_YOU_COLLECTED.format({
-                    itemName: s.name
+                    itemName: n.name
                   })
                 }),
                 (0, a.jsx)(f.Text, {
                   variant: 'text-sm/normal',
-                  children: (0, c.EQ)(null == s ? void 0 : s.type).with(d.Z.BUNDLE, () => k.Z.Messages.COLLECTIBLES_PERMANENT_COLLECTION_BUNDLE).with(d.Z.PROFILE_EFFECT, () => k.Z.Messages.COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION).otherwise(() => k.Z.Messages.COLLECTIBLES_PERMANENT_COLLECTION)
+                  children: (0, c.EQ)(null == n ? void 0 : n.type).with(d.Z.BUNDLE, () => k.Z.Messages.COLLECTIBLES_PERMANENT_COLLECTION_BUNDLE).with(d.Z.PROFILE_EFFECT, () => k.Z.Messages.COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION).otherwise(() => k.Z.Messages.COLLECTIBLES_PERMANENT_COLLECTION)
                 })
               ]
             }),
-            Y ? (0, a.jsxs)('div', {
+            K ? (0, a.jsxs)('div', {
               className: w.buttons,
               children: [
                 (0, a.jsx)(f.Button, {
-                  color: K ? f.ButtonColors.PRIMARY : f.ButtonColors.BRAND,
-                  onClick: z,
+                  color: G ? f.ButtonColors.PRIMARY : f.ButtonColors.BRAND,
+                  onClick: H,
                   children: k.Z.Messages.USER_SETTINGS_EDIT_USER_PROFILE
                 }),
-                K ? (0, a.jsx)(f.Button, {
-                  onClick: V,
-                  submitting: W,
+                G ? (0, a.jsx)(f.Button, {
+                  onClick: z,
+                  submitting: V,
                   children: k.Z.Messages.COLLECTIBLES_USE_NOW
                 }) : null
               ]
             }) : (0, a.jsx)(f.Button, {
-              onClick: z,
+              onClick: H,
               children: k.Z.Messages.COLLECTIBLES_USE_NOW
             })
           ]
         }),
         (0, a.jsx)(f.ModalCloseButton, {
-          onClick: o,
+          onClick: s,
           className: w.modalCloseButton,
           withCircleBackground: !0
         })
       ]
     }),
-    !b && !j && (0, a.jsx)(S.Z, {
-      confettiTarget: null != l ? l : D.current,
-      confettiCanvas: E,
-      sprites: (0, Z.vK)(s.categorySkuId),
-      colors: null == R ? void 0 : R.map(e => e.toHexString())
+    !E && !R && (0, a.jsx)(S.Z, {
+      confettiTarget: null != o ? o : P.current,
+      confettiCanvas: i,
+      sprites: (0, Z.vK)(n.categorySkuId),
+      colors: null == T ? void 0 : T.map(e => e.toHexString())
     })
   ]
 });
@@ -297,14 +294,14 @@ t.default = e => {
 transitionState: t,
 product: n,
 onClose: o,
-analyticsLocations: i
-  } = e, l = r.useRef(new s.qA()), [c, d] = r.useState(null), u = (0, j.UY)(n.skuId);
+analyticsLocations: l
+  } = e, i = r.useRef(new s.qA()), [c, d] = r.useState(null), u = (0, j.UY)(n.skuId);
   return (0, a.jsxs)(a.Fragment, {
 children: [
   (0, a.jsx)(s.O_, {
     ref: d,
     className: w.confettiCanvas,
-    environment: l.current
+    environment: i.current
   }),
   (0, a.jsxs)(f.ModalRoot, {
     hideShadow: !0,
@@ -326,7 +323,7 @@ children: [
           onClose: o,
           confettiCanvas: c,
           hideConfetti: null != u,
-          analyticsLocations: i
+          analyticsLocations: l
         })
       })
     ]

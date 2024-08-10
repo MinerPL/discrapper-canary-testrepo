@@ -1,6 +1,6 @@
 n.d(t, {
   LE: function() {
-return m;
+return I;
   },
   Qc: function() {
 return g;
@@ -19,22 +19,22 @@ var i = n(470079),
   h = n(976757),
   E = n(308083);
 
-function I() {
+function m() {
   return (0, _.GN)(_.t1, s());
 }
 
-function m() {
+function I() {
   let e = (0, _.GN)(e => e.setGame, r.Z),
 t = (0, _.GN)(e => e.setSelectedGames, r.Z),
 n = (0, _.GN)(e => e.selectedGames, r.Z),
-a = I(),
+a = m(),
 s = (0, c.An)({
   location: 'clan_discovery'
 }),
 {
   defaultGameId: h
 } = (0, c.nk)('clan_discovery'),
-m = null != s ? s : h,
+I = null != s ? s : h,
 g = function() {
   let e = (0, l.e7)([u.Z], () => u.Z.hasLoadedStaticClanDiscovery());
   return i.useEffect(() => {
@@ -43,11 +43,11 @@ g = function() {
 }(),
 p = (0, l.e7)([u.Z], () => u.Z.isLoading());
   return i.useEffect(() => {
-!(n.length > 0) && (m === E.nJ ? (e(_.hz.VALORANT), t([m])) : m === E.xn && (e(_.hz.GENSHIN), t([m])));
+!(n.length > 0) && (I === E.nJ ? (e(_.hz.VALORANT), t([I])) : I === E.xn ? (e(_.hz.GENSHIN), t([I])) : null == I && (e(_.hz.NONE), t([])));
   }, [
 e,
 t,
-m,
+I,
 n
   ]), i.useEffect(() => {
 g && (0, d.j)(a);
@@ -65,7 +65,7 @@ function g() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
 t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
 n = (0, _.GN)(e => e.savedGuildIds, r.Z),
-a = I(),
+a = m(),
 s = (0, l.e7)([u.Z], () => u.Z.hasLoadedStaticClanDiscovery()),
 o = (0, l.e7)([u.Z], () => u.Z.getSearchResult(a), [a]),
 c = (0, l.e7)([u.Z], () => t && null != n ? u.Z.getSavedGuildsResult(n) : [], [

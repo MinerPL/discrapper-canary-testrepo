@@ -45,8 +45,6 @@ var r, i, a, s, o, l, u = n(981631),
 
 function _(e) {
   switch (e) {
-case 480:
-  return 480;
 case 720:
   return 720;
 case 1080:
@@ -74,7 +72,7 @@ default:
   throw Error('Unknown frame rate: '.concat(e));
   }
 }
-(s = r || (r = {}))[s.RESOLUTION_480 = 480] = 'RESOLUTION_480', s[s.RESOLUTION_720 = 720] = 'RESOLUTION_720', s[s.RESOLUTION_1080 = 1080] = 'RESOLUTION_1080', s[s.RESOLUTION_1440 = 1440] = 'RESOLUTION_1440', s[s.RESOLUTION_SOURCE = 0] = 'RESOLUTION_SOURCE', (o = i || (i = {}))[o.FPS_5 = 5] = 'FPS_5', o[o.FPS_15 = 15] = 'FPS_15', o[o.FPS_30 = 30] = 'FPS_30', o[o.FPS_60 = 60] = 'FPS_60', (l = a || (a = {}))[l.PRESET_VIDEO = 1] = 'PRESET_VIDEO', l[l.PRESET_DOCUMENTS = 2] = 'PRESET_DOCUMENTS', l[l.PRESET_CUSTOM = 3] = 'PRESET_CUSTOM';
+(s = r || (r = {}))[s.RESOLUTION_720 = 720] = 'RESOLUTION_720', s[s.RESOLUTION_1080 = 1080] = 'RESOLUTION_1080', s[s.RESOLUTION_1440 = 1440] = 'RESOLUTION_1440', s[s.RESOLUTION_SOURCE = 0] = 'RESOLUTION_SOURCE', (o = i || (i = {}))[o.FPS_5 = 5] = 'FPS_5', o[o.FPS_15 = 15] = 'FPS_15', o[o.FPS_30 = 30] = 'FPS_30', o[o.FPS_60 = 60] = 'FPS_60', (l = a || (a = {}))[l.PRESET_VIDEO = 1] = 'PRESET_VIDEO', l[l.PRESET_DOCUMENTS = 2] = 'PRESET_DOCUMENTS', l[l.PRESET_CUSTOM = 3] = 'PRESET_CUSTOM';
 let f = {
 2: [{
     resolution: 0,
@@ -177,24 +175,6 @@ let f = {
 {
   resolution: 720,
   fps: 5
-},
-{
-  resolution: 480,
-  fps: 60,
-  guildPremiumTier: u.Eu4.TIER_1,
-  quality: c.ys.MID_STREAMING_QUALITY
-},
-{
-  resolution: 480,
-  fps: 30
-},
-{
-  resolution: 480,
-  fps: 15
-},
-{
-  resolution: 480,
-  fps: 5
 }
   ];
 
@@ -221,7 +201,6 @@ p(1440)
 resolution: e
   }),
   g = [
-p(480, () => T(480)),
 p(720, () => T(720)),
 p(1080, () => T(1080)),
 p(1440, () => T(1440)),

@@ -216,7 +216,7 @@ children: (0, s.jsxs)('div', {
     !x && (0, s.jsx)(o.Clickable, {
       className: _.closeIconContainer,
       onClick: P,
-      children: (0, s.jsx)(o.CloseSmallIcon, {
+      children: (0, s.jsx)(o.XSmallIcon, {
         size: 'xxs',
         color: 'currentColor',
         className: _.closeIcon

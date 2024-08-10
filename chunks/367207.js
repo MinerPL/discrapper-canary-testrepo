@@ -13,8 +13,8 @@ var l = n(392711),
   p = n(592125),
   _ = n(430824),
   f = n(594174),
-  m = n(295226),
-  g = n(626135),
+  g = n(295226),
+  m = n(626135),
   C = n(74538),
   I = n(557457),
   E = n(970645),
@@ -29,9 +29,9 @@ var l = n(392711),
   b = n(841174),
   M = n(11352),
   R = n(474936),
-  O = n(981631),
-  y = n(354459),
-  P = n(37113),
+  P = n(981631),
+  O = n(354459),
+  y = n(37113),
   j = n(689938);
 
 function D(e, t, n) {
@@ -42,7 +42,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class U extends c.Z {
+class w extends c.Z {
   _initialize() {
 __OVERLAY__ ? s.Z.subscribe('PREMIUM_PAYMENT_MODAL_OPEN', this._handlePremiumPaymentModalOpen) : (s.Z.subscribe('PREMIUM_PAYMENT_MODAL_CLOSE', this._handlePremiumPaymentModalClose), s.Z.subscribe('MESSAGE_LENGTH_UPSELL', this.handleMessageLengthUpsell), s.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchPremiumOffer), s.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchCheckoutRecovery), s.Z.subscribe('POST_CONNECTION_OPEN', this._trackCustomNotificationSoundsExposure), s.Z.subscribe('POST_CONNECTION_OPEN', this._trackSkyLoadExposure), s.Z.subscribe('RTC_CONNECTION_STATE', this.maybeShowHDStreamingPerksDemoPostUpsellModal), s.Z.subscribe('MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED', this.maybeShowHDStreamingViewerUpsellMessage), s.Z.subscribe('VOICE_CHANNEL_SELECT', this.cleanupShowHDStreamingViewerUpsellMessage));
   }
@@ -105,7 +105,7 @@ let {
 }, {
   autoTrackExposure: !1
 });
-if (!n || e.state !== O.hes.DISCONNECTED || e.willReconnect)
+if (!n || e.state !== P.hes.DISCONNECTED || e.willReconnect)
   return;
 let i = p.Z.getChannel(e.channelId);
 if (null == i || !(null === (t = v.Z.getPerksDemos()) || void 0 === t ? void 0 : t[r.q.STREAM_HIGH_QUALITY]))
@@ -114,14 +114,14 @@ let l = v.Z.getActivated()[r.q.STREAM_HIGH_QUALITY];
 if (l && s.Z.dispatch({
     type: 'PREMIUM_PERKS_DEMO_COMPLETE',
     perkType: r.q.STREAM_HIGH_QUALITY
-  }), !!l && !!L.j$.getState().hqStreamingDidEnable)
+  }), !!l && !!L.Z.getState().hqStreamingDidEnable)
   (0, b.Z)(i.guild_id);
   }
   constructor(...e) {
 super(...e), D(this, '_premiumPaymentModalCloseResolve', null), D(this, '_premiumPaymentModalCloseReject', null), D(this, '_lastStreamingChannelId', null), D(this, '_maybeFetchPremiumOffer', async () => {
   let e = f.default.getCurrentUser();
   if (null != e && e.verified) {
-    let t = !(0, C.I5)(e) && m.Z.shouldFetchOffer();
+    let t = !(0, C.I5)(e) && g.Z.shouldFetchOffer();
     await (0, T.T)('PremiumManager', t);
   }
   s.Z.dispatch({
@@ -164,19 +164,19 @@ super(...e), D(this, '_premiumPaymentModalCloseResolve', null), D(this, '_premiu
     {
       sendNitroMessage: s
     } = (0, x.TD)(a),
-    c = null !== (l = null === (i = _.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : O.Eu4.NONE;
-  if (!!s && !(c >= O.Eu4.TIER_2) && (null == r ? void 0 : r.type) === y.fO.STREAM && (null == r ? void 0 : r.id) !== (null == n ? void 0 : n.id) && null != r.maxResolution && null != r.maxFrameRate) {
+    c = null !== (l = null === (i = _.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : P.Eu4.NONE;
+  if (!!s && !(c >= P.Eu4.TIER_2) && (null == r ? void 0 : r.type) === O.fO.STREAM && (null == r ? void 0 : r.id) !== (null == n ? void 0 : n.id) && null != r.maxResolution && null != r.maxFrameRate) {
     if (e !== this._lastStreamingChannelId) {
       this._lastStreamingChannelId = e;
       let n = j.Z.Messages.STREAM_PREMIUM_VIEWER_UPSELL_MESSAGE.format({
         nickname: r.userNick,
-        resolution: (0, P.o6)(r.maxResolution.height),
+        resolution: (0, y.o6)(r.maxResolution.height),
         fps: (0, I.bp)(r.maxFrameRate)
       });
-      o.Z.sendNitroSystemMessage(e, n), g.default.track(O.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
+      o.Z.sendNitroSystemMessage(e, n), m.default.track(P.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
         type: R.cd.HD_STREAMING_VIEWER_UPSELL,
-        location_section: null != t ? O.jXE.TEXT_IN_VOICE : O.jXE.CHANNEL_TEXT_AREA,
-        location_object: O.qAy.MESSAGE,
+        location_section: null != t ? P.jXE.TEXT_IN_VOICE : P.jXE.CHANNEL_TEXT_AREA,
+        location_object: P.qAy.MESSAGE,
         guild_id: t
       });
     }
@@ -186,4 +186,4 @@ super(...e), D(this, '_premiumPaymentModalCloseResolve', null), D(this, '_premiu
 });
   }
 }
-t.Z = new U();
+t.Z = new w();

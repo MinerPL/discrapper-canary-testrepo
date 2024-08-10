@@ -31,8 +31,8 @@ onClose: g
   } = e, {
 analyticsLocations: S
   } = (0, u.ZP)(l.Z.BADGE), {
-trackUserProfileAction: A,
-...N
+context: A,
+trackUserProfileAction: N
   } = (0, E.KZ)();
   return (0, r.jsx)('div', {
 className: a()(T.container, n),
@@ -43,12 +43,12 @@ children: t.map(e => (0, r.jsx)(s.TooltipContainer, {
   delay: p.vB,
   children: (0, r.jsx)(s.Anchor, {
     onClick: t => {
-      A({
+      N({
         action: 'PRESS_BADGE'
       }), (0, f.NE)({
         badge: e.id,
         analyticsLocations: S,
-        ...N
+        ...A
       });
       let n = null != e.link ? (0, o.default)(e.link, {
         analyticsLocations: S
@@ -59,12 +59,12 @@ children: t.map(e => (0, r.jsx)(s.TooltipContainer, {
     onMouseEnter: () => {
       e.id === h.i && _.default.track(m.rMx.QUEST_CONTENT_VIEWED, {
         ...(0, c.mH)(d.jn.QUEST_BADGE)
-      }), A({
+      }), N({
         action: 'HOVER_BADGE'
       }), (0, f.Qf)({
         badge: e.id,
         analyticsLocations: S,
-        ...N
+        ...A
       });
     },
     href: e.link,

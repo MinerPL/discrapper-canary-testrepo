@@ -75,7 +75,7 @@ children: [
       (0, h.fn)(t);
     },
     'aria-label': _.Z.Messages.REMOVE_MESSAGE_ATTACHMENT,
-    children: (0, i.jsx)(r.CloseSmallIcon, {
+    children: (0, i.jsx)(r.XSmallIcon, {
       color: 'currentColor',
       size: 'xs'
     })

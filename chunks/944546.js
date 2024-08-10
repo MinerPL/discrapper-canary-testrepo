@@ -73,17 +73,11 @@ mutualFriends: a
   } = (0, d.Z)(t.id), {
 analyticsLocations: l
   } = (0, o.ZP)(), {
-guildId: r,
-channelId: c,
-messageId: f,
-roleId: g
-  } = (0, u.KZ)(), C = e => {
+context: r
+  } = (0, u.KZ)(), c = e => {
 n(), (0, h.openUserProfileModal)({
+  ...r,
   userId: e,
-  guildId: r,
-  channelId: c,
-  messageId: f,
-  roleId: g,
   sourceAnalyticsLocations: l,
   analyticsLocation: {
     section: p.jXE.USER_PROFILE_MUTUAL_FRIENDS
@@ -116,7 +110,7 @@ children: null == a ? (0, i.jsx)('div', {
   return (0, i.jsx)(E, {
     user: n,
     status: a,
-    onSelect: () => C(n.id)
+    onSelect: () => c(n.id)
   }, t);
 })
   });

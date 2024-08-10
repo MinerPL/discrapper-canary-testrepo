@@ -30,7 +30,7 @@ function I(e, t, n) {
   var r;
   let {
 context: i,
-commandType: a,
+commandTypes: a,
 allowNsfw: c,
 computedPermissions: I,
 userId: T,
@@ -44,7 +44,7 @@ isGuildInstalled: C,
 isUserInstalled: y,
 commandBotId: D
   } = n;
-  if (e.type !== a)
+  if (!a.includes(e.type))
 return 2;
   if (e.nsfw && !c)
 return 1;

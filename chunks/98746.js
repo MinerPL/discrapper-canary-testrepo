@@ -7,8 +7,8 @@ var o, t, l = a(735250),
   n = a(470079),
   r = a(481060),
   c = a(749210),
-  i = a(910693),
-  u = a(810090),
+  i = a(70097),
+  u = a(910693),
   _ = a(70956),
   E = a(5192),
   d = a(981631),
@@ -59,7 +59,7 @@ onBanMultiple: R,
 transitionState: M,
 onClose: C,
 canBulkBan: I = !1
-  } = e, [m, T] = n.useState(A), [b, g] = n.useState(''), [p, h] = n.useState(0), [x, Z] = n.useState(!1), B = (0, i.sE)(s, {
+  } = e, [m, T] = n.useState(A), [b, g] = n.useState(''), [p, h] = n.useState(0), [x, Z] = n.useState(!1), B = (0, u.sE)(s, {
 location: t,
 targetUserId: null == o ? void 0 : o.id,
 targets: _
@@ -77,7 +77,7 @@ if (null != R) {
     return;
   c.Z.banUser(s, null == o ? void 0 : o.id, m, b);
 }
-B(i.jQ.BAN), C();
+B(u.jQ.BAN), C();
   }, [
 R,
 B,
@@ -132,7 +132,7 @@ children: [
   (0, l.jsxs)(r.ModalContent, {
     className: N.modalContent,
     children: [
-      (0, l.jsxs)(u.Z, {
+      (0, l.jsxs)(i.Z, {
         autoPlay: !0,
         loop: !0,
         className: N.spacing,

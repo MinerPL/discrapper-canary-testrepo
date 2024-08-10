@@ -1,9 +1,6 @@
 n.d(t, {
   Z: function() {
 return f;
-  },
-  s: function() {
-return E;
   }
 });
 var r = n(735250);
@@ -44,23 +41,28 @@ function f(e) {
   let {
 user: t,
 activity: n,
-onClick: i
+onAction: i
   } = e, {
 profileType: s
   } = (0, l.z)();
-  return (null == n ? void 0 : n.buttons) == null || n.buttons.length < 1 ? null : (0, r.jsx)(r.Fragment, {
-children: n.buttons.map((e, o) => (0, r.jsx)(u.tG, {
-  text: (0, a.Z)(n) ? d.Z.Messages.WATCH : e,
+  if ((null == n ? void 0 : n.buttons) == null || n.buttons.length < 1)
+return null;
+  let o = (0, a.Z)(n);
+  return (0, r.jsx)(r.Fragment, {
+children: n.buttons.map((e, a) => (0, r.jsx)(u.tG, {
+  text: o ? d.Z.Messages.WATCH : e,
   className: _.customButton,
   fullWidth: !0,
   themeColor: s === c.y0.FULL_SIZE ? 'secondary' : 'primary',
-  onClick: e => {
-    null == i || i(e), E({
+  onClick: () => {
+    null == i || i({
+      action: o ? 'PRESS_WATCH_ON_CRUNCHYROLL_BUTTON' : 'PRESS_CUSTOM_BUTTON'
+    }), E({
       user: t,
       activity: n,
-      index: o
+      index: a
     });
   }
-}, o))
+}, a))
   });
 }

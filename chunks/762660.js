@@ -1,6 +1,6 @@
 n.d(s, {
   C: function() {
-return R;
+return C;
   },
   h: function() {
 return M;
@@ -21,7 +21,7 @@ var a = n(735250),
   T = n(689938),
   N = n(327961);
 
-function C(e) {
+function R(e) {
   let {
 icon: s,
 onClick: n,
@@ -45,12 +45,12 @@ children: t ? (0, a.jsx)(c.Dots, {
   });
 }
 
-function R(e) {
+function C(e) {
   let {
 applicationStatus: s,
 guild: r,
 guildJoinRequest: i,
-className: R,
+className: C,
 onClick: M,
 atMaxMemberCapacity: m
   } = e, [A, x] = t.useState(null), {
@@ -82,7 +82,7 @@ v = async () => {
   await j(i, _.wB.REJECTED);
 };
   return (0, a.jsxs)(c.Clickable, {
-className: l()(N.container, R),
+className: l()(N.container, C),
 onClick: M,
 children: [
   (0, a.jsx)(c.Avatar, {
@@ -107,14 +107,14 @@ children: [
       })
     ]
   }),
-  b && !m && (0, a.jsx)(C, {
+  b && !m && (0, a.jsx)(R, {
     icon: c.CheckmarkLargeIcon,
     onClick: v,
     submitting: A === _.wB.APPROVED,
     disabled: null != A && A !== _.wB.APPROVED
   }),
-  b && (0, a.jsx)(C, {
-    icon: c.CloseSmallIcon,
+  b && (0, a.jsx)(R, {
+    icon: c.XSmallIcon,
     onClick: p,
     submitting: A === _.wB.REJECTED,
     disabled: null != A && A !== _.wB.REJECTED

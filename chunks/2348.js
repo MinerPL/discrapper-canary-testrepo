@@ -10,11 +10,11 @@ var s = n(735250),
   l = n(692547),
   o = n(481060),
   c = n(239091),
-  d = n(977258),
-  u = n(637853),
-  _ = n(473403),
-  I = n(216306),
-  E = n(514342),
+  d = n(111028),
+  u = n(977258),
+  _ = n(637853),
+  I = n(473403),
+  E = n(216306),
   T = n(743475),
   m = n(827907),
   N = n(868814),
@@ -57,7 +57,7 @@ onContextMenu: e => {
     });
   });
 },
-onClick: e => (e.stopPropagation(), (0, d.s)(t.id, a.id) ? (0, T.pt)(a.id) : (0, o.openModalLazy)(async () => {
+onClick: e => (e.stopPropagation(), (0, u.s)(t.id, a.id) ? (0, T.pt)(a.id) : (0, o.openModalLazy)(async () => {
   let {
     default: e
   } = await n.e('35641').then(n.bind(n, 89216));
@@ -105,12 +105,12 @@ let {
   channel: t,
   category: a,
   guild: i,
-  isFirstChannel: I,
+  isFirstChannel: E,
   isLastChannel: C,
   tooltipDirection: R = 'right'
-} = e, f = (0, m.Mf)(t.id, a.id), L = (0, m.t4)(t.id, a.id), O = (0, m.EH)(t.id, a.id), A = (0, m.lL)(i.id, a.id), M = null != (0, N.Z)(i).find(e => e.id === t.id), D = (0, u.mn)(t.id), v = e => {
+} = e, f = (0, m.Mf)(t.id, a.id), L = (0, m.t4)(t.id, a.id), O = (0, m.EH)(t.id, a.id), A = (0, m.lL)(i.id, a.id), M = null != (0, N.Z)(i).find(e => e.id === t.id), D = (0, _.mn)(t.id), v = e => {
   if (!L)
-    return e.stopPropagation(), (0, d.s)(i.id, t.id) ? (0, T.pt)(t.id) : (0, o.openModalLazy)(async () => {
+    return e.stopPropagation(), (0, u.s)(i.id, t.id) ? (0, T.pt)(t.id) : (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await n.e('35641').then(n.bind(n, 89216));
@@ -149,23 +149,24 @@ let {
       n.e('79695'),
       n.e('6380'),
       n.e('18543'),
+      n.e('72181'),
       n.e('30671'),
       n.e('77172'),
       n.e('95393'),
       n.e('53115'),
-      n.e('53937'),
-      n.e('46097'),
+      n.e('7701'),
       n.e('86975'),
+      n.e('46097'),
       n.e('8739'),
       n.e('58059'),
       n.e('22173'),
-      n.e('71150'),
+      n.e('30243'),
       n.e('99008'),
       n.e('7590'),
       n.e('39285'),
       n.e('59743'),
       n.e('26138'),
-      n.e('64549'),
+      n.e('62867'),
       n.e('29975'),
       n.e('64714'),
       n.e('48800'),
@@ -194,7 +195,7 @@ return (0, s.jsxs)(s.Fragment, {
       position: R,
       children: e => (0, s.jsxs)(o.Clickable, {
         className: r()(g.channelRow, {
-          [g.firstChannel]: I,
+          [g.firstChannel]: E,
           [g.lastChannel]: C,
           [g.disabled]: L
         }),
@@ -207,11 +208,11 @@ return (0, s.jsxs)(s.Fragment, {
             children: (0, s.jsxs)('div', {
               className: g.channelName,
               children: [
-                (0, s.jsx)(_._, {
+                (0, s.jsx)(I._, {
                   channel: t,
                   guild: i
                 }),
-                (0, s.jsx)(E.Z, {
+                (0, s.jsx)(d.Z, {
                   className: g.__invalid_name,
                   children: (0, s.jsx)(o.Text, {
                     className: g.channelText,
@@ -239,7 +240,7 @@ return (0, s.jsxs)(s.Fragment, {
           }),
           (0, s.jsx)('div', {
             className: g.channelActions,
-            children: (0, d.s)(t.guild_id, t.id) ? (0, s.jsx)(o.Checkbox, {
+            children: (0, u.s)(t.guild_id, t.id) ? (0, s.jsx)(o.Checkbox, {
               'aria-checked': f,
               value: f,
               type: o.Checkbox.Types.INVERTED,
@@ -304,7 +305,7 @@ return null == l ? null : (0, s.jsx)(R, {
 t,
 n,
 r
-  ]), c = (0, I.tn)(n.id, t, 64);
+  ]), c = (0, E.tn)(n.id, t, 64);
   return (0, s.jsx)('div', {
 className: i,
 children: c.map((e, t) => {

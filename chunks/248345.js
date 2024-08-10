@@ -26,8 +26,8 @@ analyticsParams: p
   } = e, {
 analyticsLocations: m
   } = (0, s.ZP)(), {
-trackUserProfileAction: I,
-...T
+context: I,
+trackUserProfileAction: T
   } = (0, l.KZ)(), g = (0, i.e7)([o.Z], () => null != o.Z.getAnyStreamForUser(n.id));
   return (0, r.jsx)(c.Z, {
 children: (0, r.jsx)(a.Z, {
@@ -40,7 +40,7 @@ children: (0, r.jsx)(a.Z, {
   source: d.Sbl.PROFILE_POPOUT,
   onClose: h,
   onAction: () => {
-    I({
+    T({
       action: 'JOIN_ACTIVITY'
     }), (0, u.Ac)({
       activityType: g ? d.IIU.STREAMING : null == t ? void 0 : t.type,
@@ -49,7 +49,7 @@ children: (0, r.jsx)(a.Z, {
       activitySessionId: null == t ? void 0 : t.session_id,
       applicationId: null == t ? void 0 : t.application_id,
       analyticsLocations: m,
-      ...T
+      ...I
     }), null == h || h();
   },
   actionColor: _.buttonColor,

@@ -11,7 +11,7 @@ onClose: n
   return null == t || '' === t ? null : (0, r.jsxs)('div', {
 className: s.errorContainer,
 children: [
-  (0, r.jsx)(i.CircleExclamationPointIcon, {
+  (0, r.jsx)(i.CircleWarningIcon, {
     size: 'custom',
     color: 'currentColor',
     width: 20,

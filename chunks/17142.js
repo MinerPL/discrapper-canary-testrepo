@@ -1,1 +1,4 @@
-e.exports = '/assets/3a32322f534c87b2338d.png';
+e.exports = {
+  tag: 'tag_df691d',
+  text: 'text_df691d'
+};

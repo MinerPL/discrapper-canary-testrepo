@@ -1,87 +1,87 @@
-s.d(t, {
+t.d(s, {
   MM: function() {
 return V;
   },
   Yn: function() {
-return k;
+return H;
   },
   ZP: function() {
-return H;
+return k;
   },
   eS: function() {
 return w;
   }
-}), s(47120);
-var n = s(735250),
-  a = s(470079),
-  i = s(120356),
-  r = s.n(i),
-  o = s(512722),
-  l = s.n(o),
-  c = s(913527),
-  d = s.n(c),
-  _ = s(442837),
-  E = s(692547),
-  u = s(481060),
-  T = s(230711),
-  I = s(100527),
-  S = s(906732),
-  N = s(17894),
-  C = s(925329),
-  m = s(963249),
-  A = s(301766),
-  g = s(594174),
-  h = s(285952),
-  O = s(626135),
-  p = s(63063),
-  R = s(74538),
-  x = s(212895),
-  M = s(374649),
-  f = s(160913),
-  D = s(987997),
-  P = s(393411),
-  L = s(908951),
-  b = s(592889),
-  Z = s(981631),
-  v = s(689938),
-  j = s(727880);
+}), t(47120);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(512722),
+  l = t.n(o),
+  c = t(913527),
+  d = t.n(c),
+  _ = t(442837),
+  E = t(692547),
+  u = t(481060),
+  I = t(230711),
+  T = t(100527),
+  S = t(906732),
+  N = t(17894),
+  C = t(600164),
+  m = t(925329),
+  A = t(963249),
+  g = t(301766),
+  O = t(594174),
+  h = t(626135),
+  p = t(63063),
+  R = t(74538),
+  x = t(212895),
+  M = t(374649),
+  f = t(160913),
+  D = t(987997),
+  P = t(393411),
+  L = t(908951),
+  b = t(592889),
+  Z = t(981631),
+  v = t(689938),
+  j = t(727880);
 
 function B(e) {
-  let t, {
-  subscription: s,
+  let s, {
+  subscription: t,
   renewalInvoicePreview: a,
   fromStandaloneBillingPage: i = !0,
   className: o
 } = e,
-c = (0, _.e7)([g.default], () => {
-  let e = g.default.getCurrentUser();
+c = (0, _.e7)([O.default], () => {
+  let e = O.default.getCurrentUser();
   return l()(null != e, 'GuildBoostingHeader: currentUser cannot be undefined'), e;
 });
-  if (0 === (0, R.uV)(s.additionalPlans))
+  if (0 === (0, R.uV)(t.additionalPlans))
 return null;
   let {
 status: d
-  } = s, E = (0, R.v6)(s);
+  } = t, E = (0, R.v6)(t);
   if (E)
-t = j.guildBoostingSubscriptionRowCanceled;
+s = j.guildBoostingSubscriptionRowCanceled;
   else
 switch (d) {
   case Z.O0b.PAST_DUE:
   case Z.O0b.ACCOUNT_HOLD:
   case Z.O0b.BILLING_RETRY:
-    t = j.guildBoostingSubscriptionRowFailedPayment;
+    s = j.guildBoostingSubscriptionRowFailedPayment;
     break;
   case Z.O0b.PAUSE_PENDING:
   case Z.O0b.PAUSED:
-    t = j.guildBoostingSubscriptionRowPaused;
+    s = j.guildBoostingSubscriptionRowPaused;
     break;
   default:
-    t = j.guildBoostingSubscriptionRowActive;
+    s = j.guildBoostingSubscriptionRowActive;
 }
   return (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsxs)('div', {
-    className: r()(t, o),
+    className: r()(s, o),
     children: [
       (0, n.jsx)('div', {
         className: j.guildBoostingSubscriptionRowBackground
@@ -99,7 +99,7 @@ children: [
           }),
           (0, n.jsx)('div', {
             children: (0, R.bt)({
-              subscription: s,
+              subscription: t,
               renewalInvoicePreview: a,
               user: c
             })
@@ -108,7 +108,7 @@ children: [
       }),
       i && (0, n.jsx)(D.Z, {
         color: u.Button.Colors.BRAND,
-        onClick: () => T.Z.open(Z.oAB.GUILD_BOOSTING),
+        onClick: () => I.Z.open(Z.oAB.GUILD_BOOSTING),
         children: v.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_MANAGE_YOUR_SUBSCRIPTIONS
       })
     ]
@@ -126,13 +126,13 @@ children: [
 
 function U() {
   return a.useEffect(() => {
-O.default.track(Z.rMx.TOOLTIP_VIEWED, {
+h.default.track(Z.rMx.TOOLTIP_VIEWED, {
   type: 'subscription_settings_missing_payment_method'
 });
   }, []), (0, n.jsxs)('div', {
 className: j.paymentBanner,
 children: [
-  (0, n.jsx)(u.CircleExclamationPointIcon, {
+  (0, n.jsx)(u.CircleWarningIcon, {
     size: 'custom',
     width: 20,
     height: 20,
@@ -150,13 +150,13 @@ children: [
 
 function G() {
   return a.useEffect(() => {
-O.default.track(Z.rMx.TOOLTIP_VIEWED, {
+h.default.track(Z.rMx.TOOLTIP_VIEWED, {
   type: 'subscription_settings_invalid_payment_method'
 });
   }, []), (0, n.jsxs)('div', {
 className: j.paymentBanner,
 children: [
-  (0, n.jsx)(u.CircleExclamationPointIcon, {
+  (0, n.jsx)(u.CircleWarningIcon, {
     size: 'custom',
     width: 20,
     height: 20,
@@ -174,20 +174,20 @@ children: [
 
 function F(e) {
   let {
-daysPastDue: t,
-subscription: s,
+daysPastDue: s,
+subscription: t,
 openInvoiceId: i
   } = e, {
 analyticsLocations: r
-  } = (0, S.ZP)(I.Z.PAST_DUE_ONE_TIME_PAYMENT_METHOD_BANNER);
+  } = (0, S.ZP)(T.Z.PAST_DUE_ONE_TIME_PAYMENT_METHOD_BANNER);
   return a.useEffect(() => {
-O.default.track(Z.rMx.TOOLTIP_VIEWED, {
+h.default.track(Z.rMx.TOOLTIP_VIEWED, {
   type: 'subscription_settings_invalid_payment_method'
 });
   }, []), (0, n.jsxs)('div', {
 className: j.paymentBanner,
 children: [
-  (0, n.jsx)(u.CircleExclamationPointIcon, {
+  (0, n.jsx)(u.CircleWarningIcon, {
     size: 'custom',
     width: 20,
     height: 20,
@@ -198,10 +198,10 @@ children: [
     className: j.paymentBannerText,
     variant: 'text-sm/normal',
     children: v.Z.Messages.PREMIUM_SUBSCRIPTION_ONE_TIME_PAYMENT_PAST_DUE_SUBSCRIPTION_TEXT.format({
-      daysPastDue: t,
+      daysPastDue: s,
       paymentModalRedirect: () => {
-        (0, m.Z)({
-          initialPlanId: s.planIdFromItems,
+        (0, A.Z)({
+          initialPlanId: t.planIdFromItems,
           openInvoiceId: i,
           analyticsLocations: r
         });
@@ -214,8 +214,8 @@ children: [
 
 function y(e) {
   let {
-subscription: t,
-renewalInvoicePreview: s,
+subscription: s,
+renewalInvoicePreview: t,
 className: a
   } = e;
   return (0, n.jsxs)('div', {
@@ -227,7 +227,7 @@ children: [
     children: v.Z.Messages.PREMIUM_SETTINGS_BILLING_INFO
   }),
   (0, n.jsx)('div', {
-    children: R.ZP.getBillingInformationString(t, s)
+    children: R.ZP.getBillingInformationString(s, t)
   })
 ]
   });
@@ -235,10 +235,10 @@ children: [
 
 function V(e) {
   let {
-className: t
+className: s
   } = e;
   return (0, n.jsxs)('div', {
-className: t,
+className: s,
 children: [
   (0, n.jsx)(u.FormTitle, {
     className: j.sectionTitle,
@@ -252,12 +252,12 @@ children: [
   (0, n.jsx)(u.Card, {
     className: j.noItemsCard,
     type: u.Card.Types.CUSTOM,
-    children: (0, n.jsxs)(h.Z, {
-      align: h.Z.Align.CENTER,
+    children: (0, n.jsxs)(C.Z, {
+      align: C.Z.Align.CENTER,
       children: [
-        (0, n.jsx)(C.Z, {
+        (0, n.jsx)(m.Z, {
           game: null,
-          size: C.Z.Sizes.SMALL,
+          size: m.Z.Sizes.SMALL,
           className: j.noItemsIcon
         }),
         (0, n.jsx)('span', {
@@ -273,8 +273,8 @@ children: [
 
 function Y(e) {
   let {
-subscription: t,
-analyticsLocation: s,
+subscription: s,
+analyticsLocation: t,
 paymentSource: a,
 busy: i,
 fromStandaloneBillingPage: o,
@@ -284,19 +284,19 @@ fetchedCurrentInvoicePreview: d,
 fetchedRenewalInvoicePreview: _
   } = e, {
 analyticsLocations: E
-  } = (0, S.ZP)(I.Z.SUBSCRIPTION_DETAILS), T = null != d ? {} : {
-subscriptionId: t.id,
+  } = (0, S.ZP)(T.Z.SUBSCRIPTION_DETAILS), I = null != d ? {} : {
+subscriptionId: s.id,
 renewal: !0,
 analyticsLocations: E,
-analyticsLocation: s
-  }, [N] = (0, M.ED)(T);
+analyticsLocation: t
+  }, [N] = (0, M.ED)(I);
   N = null != d ? d : N;
   let C = null != _ ? {} : {
-  subscriptionId: t.id,
+  subscriptionId: s.id,
   renewal: !0,
   applyEntitlements: !0,
   analyticsLocations: E,
-  analyticsLocation: s
+  analyticsLocation: t
 },
 [m] = (0, M.ED)(C);
   return (m = null != _ ? _ : m, null == N || null == m) ? (0, n.jsx)(u.Spinner, {}) : (0, n.jsxs)(n.Fragment, {
@@ -305,14 +305,14 @@ children: [
     className: j.subscriptionRows,
     children: [
       (0, n.jsx)(P.Z, {
-        subscription: t,
+        subscription: s,
         renewalInvoicePreview: N,
         paymentSource: a,
         busy: i,
-        analyticsLocation: s
+        analyticsLocation: t
       }),
       (0, n.jsx)(B, {
-        subscription: t,
+        subscription: s,
         renewalInvoicePreview: N,
         fromStandaloneBillingPage: o,
         className: j.guildSubscriptionRow
@@ -329,11 +329,11 @@ children: [
         className: j.details,
         children: [
           (0, n.jsx)(y, {
-            subscription: t,
+            subscription: s,
             renewalInvoicePreview: m,
             className: j.detailsBlock
           }),
-          t.isPurchasedExternally || (null == a ? void 0 : a.id) === t.paymentSourceId ? (0, n.jsxs)('div', {
+          (0, n.jsxs)('div', {
             className: r()(j.detailsBlock, {
               [j.redBorder]: l
             }),
@@ -341,20 +341,20 @@ children: [
               (0, n.jsx)(u.FormTitle, {
                 tag: 'h3',
                 className: j.detailBlockHeader,
-                children: t.isPurchasedExternally && null != t.paymentGateway ? v.Z.Messages.BILLING_MANAGED_BY_PAYMENT_GATEWAY.format({
-                  paymentGatewayName: Z.Vzj[t.paymentGateway]
+                children: s.isPurchasedExternally && null != s.paymentGateway ? v.Z.Messages.BILLING_MANAGED_BY_PAYMENT_GATEWAY.format({
+                  paymentGatewayName: Z.Vzj[s.paymentGateway]
                 }) : v.Z.Messages.BILLING_PAY_FOR_IT_WITH
               }),
               (0, n.jsx)(L.Z, {
-                subscription: t,
+                subscription: s,
                 onPaymentSourceAdded: x.i1,
                 highlightAddPaymentMethodButton: c || l,
-                analyticsLocation: s,
+                analyticsLocation: t,
                 currentInvoicePreview: N,
                 dropdownClassName: j.paymentDropdown
               })
             ]
-          }) : null
+          })
         ]
       })
     })
@@ -370,15 +370,15 @@ let w = new Set([
   Z.O0b.PAUSED
 ]);
 
-function k() {
+function H() {
   return a.useEffect(() => {
-O.default.track(Z.rMx.TOOLTIP_VIEWED, {
+h.default.track(Z.rMx.TOOLTIP_VIEWED, {
   type: 'subscription_settings_duplicate_subscriptions'
 });
   }, []), (0, n.jsxs)('div', {
 className: j.duplicateSubscriptionsBanner,
 children: [
-  (0, n.jsx)(u.CircleExclamationPointIcon, {
+  (0, n.jsx)(u.CircleWarningIcon, {
     size: 'custom',
     width: 20,
     height: 20,
@@ -395,9 +395,9 @@ children: [
   });
 }
 
-function H(e) {
-  var t;
-  let s, {
+function k(e) {
+  var s;
+  let t, {
 subscription: a,
 subscriptions: i,
 paymentSource: r,
@@ -408,26 +408,26 @@ analyticsLocation: E
   } = e;
   null != i && null != i[0] && (a = i[0]);
   let {
-analyticsLocations: T
-  } = (0, S.ZP)(I.Z.SUBSCRIPTION_DETAILS), N = null != i ? i.slice(1) : [], [C] = (0, M.ED)({
+analyticsLocations: I
+  } = (0, S.ZP)(T.Z.SUBSCRIPTION_DETAILS), N = null != i ? i.slice(1) : [], [C] = (0, M.ED)({
 subscriptionId: a.id,
 renewal: !0,
-analyticsLocations: T,
+analyticsLocations: I,
 analyticsLocation: E
   }), [m] = (0, M.ED)({
 subscriptionId: a.id,
 renewal: !0,
 applyEntitlements: !0,
-analyticsLocations: T,
+analyticsLocations: I,
 analyticsLocation: E
-  }), h = (0, _.e7)([g.default], () => {
+  }), A = (0, _.e7)([O.default], () => {
 var e;
-return null === (e = g.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasFreePremium();
-  }), O = d()(a.currentPeriodEnd), p = null != a.paymentSourceId, R = null !== (t = null == m ? void 0 : m.total) && void 0 !== t ? t : 0, x = null == r ? void 0 : r.invalid, D = !p && R > 0 && (7 >= O.diff(d()(), 'days') || a.status === Z.O0b.PAST_DUE) && !h && !a.isPurchasedExternally, P = x && a.status === Z.O0b.PAST_DUE && !h && !a.isPurchasedExternally, L = (0, f.U)(), B = !h && L, y = (null == a ? void 0 : a.status) === Z.O0b.PAST_DUE ? d()().diff(d()(a.currentPeriodStart), 'days') : 0, [V] = (0, M.Ox)({
+return null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasFreePremium();
+  }), h = d()(a.currentPeriodEnd), p = null != a.paymentSourceId, R = null !== (s = null == m ? void 0 : m.total) && void 0 !== s ? s : 0, x = null == r ? void 0 : r.invalid, D = !p && R > 0 && (7 >= h.diff(d()(), 'days') || a.status === Z.O0b.PAST_DUE) && !A && !a.isPurchasedExternally, P = x && a.status === Z.O0b.PAST_DUE && !A && !a.isPurchasedExternally, L = (0, f.U)(), B = !A && L, y = (null == a ? void 0 : a.status) === Z.O0b.PAST_DUE ? d()().diff(d()(a.currentPeriodStart), 'days') : 0, [V] = (0, M.Ox)({
 subscriptionId: a.id,
 preventFetch: !B
   });
-  return null == C || null == m ? (0, n.jsx)(u.Spinner, {}) : (null != a.renewalMutations && (a.renewalMutations.planId !== a.planId && !(0, A.Q0)(a.renewalMutations.planId) || a.hasExternalPlanChange) && (s = (0, n.jsx)(b.Z, {
+  return null == C || null == m ? (0, n.jsx)(u.Spinner, {}) : (null != a.renewalMutations && (a.renewalMutations.planId !== a.planId && !(0, g.Q0)(a.renewalMutations.planId) || a.hasExternalPlanChange) && (t = (0, n.jsx)(b.Z, {
 subscription: a,
 renewalMutations: a.renewalMutations,
 className: j.renewalMutationNotice,
@@ -448,7 +448,7 @@ children: (0, n.jsxs)(u.HeadingLevel, {
       subscription: a,
       openInvoiceId: V.id
     }) : null,
-    s,
+    t,
     (0, n.jsx)('div', {
       children: (0, n.jsx)('p', {
         className: j.sectionDescription,
@@ -471,7 +471,7 @@ children: (0, n.jsxs)(u.HeadingLevel, {
             fetchedRenewalInvoicePreview: m
           })
         }),
-        N.map((e, t) => (0, n.jsxs)('div', {
+        N.map((e, s) => (0, n.jsxs)('div', {
           className: j.dupSubscriptionRow,
           children: [
             (0, n.jsx)(u.FormTitle, {
@@ -491,7 +491,7 @@ children: (0, n.jsxs)(u.HeadingLevel, {
               fetchedRenewalInvoicePreview: null
             })
           ]
-        }, t))
+        }, s))
       ]
     })
   ]

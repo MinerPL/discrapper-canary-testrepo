@@ -6,7 +6,7 @@ return E;
 var r = n(735250);
 n(470079);
 var i = n(278074),
-  a = n(876215),
+  a = n(26033),
   s = n(180335),
   o = n(297781),
   l = n(16779),
@@ -19,7 +19,7 @@ entry: t
   return (0, r.jsx)(r.Fragment, {
 children: [
   o.U9,
-  o.gj,
+  o.wO,
   o.f,
   o.n8,
   o.v1,
@@ -78,17 +78,11 @@ children: [
   h.map((e, t) => (0, r.jsx)(e, {
     activity: n
   }, 'activity-'.concat(t))),
-  (0, i.EQ)(f).with({
-    content_type: a.s.PLAYED_GAME
-  }, e => (0, r.jsx)(c, {
+  (0, i.EQ)(f).when(a.Cb, e => (0, r.jsx)(c, {
     entry: e
-  })).with({
-    content_type: a.s.TOP_GAME
-  }, e => (0, r.jsx)(d, {
+  })).when(a.Q0, e => (0, r.jsx)(d, {
     entry: e
-  })).with({
-    content_type: a.s.TOP_ARTIST
-  }, e => (0, r.jsx)(_, {
+  })).when(a.KF, e => (0, r.jsx)(_, {
     entry: e
   })).otherwise(() => null)
 ]

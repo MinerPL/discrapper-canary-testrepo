@@ -25,7 +25,7 @@ children: [
   (0, s.jsxs)('div', {
     className: l.textContainer,
     children: [
-      (0, s.jsx)(i.CircleExclamationPointIcon, {
+      (0, s.jsx)(i.CircleWarningIcon, {
         size: 'custom',
         width: 20,
         height: 20,

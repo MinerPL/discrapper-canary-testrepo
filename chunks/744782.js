@@ -17,15 +17,15 @@ var a = l(442837),
   _ = l(341165),
   I = l(626135),
   x = l(572004),
-  N = l(971130),
-  m = l(230900),
+  m = l(971130),
+  N = l(230900),
   T = l(981631),
   h = l(689938),
   g = l(732907);
 let {
   INVITE_OPTIONS_7_DAYS: v,
   INVITE_OPTIONS_UNLIMITED: S
-} = N.ZP;
+} = m.ZP;
 
 function C(e) {
   var n, l, C;
@@ -70,7 +70,7 @@ children: [
     onClick: L,
     className: g.close,
     'aria-label': h.Z.Messages.CLOSE,
-    children: (0, s.jsx)(t.CloseSmallIcon, {
+    children: (0, s.jsx)(t.XSmallIcon, {
       size: 'md',
       color: 'currentColor'
     })
@@ -108,7 +108,7 @@ children: [
           if (U)
             return;
           (0, x.JG)(e);
-          let n = (0, m.xC)(A.entity_type);
+          let n = (0, N.xC)(A.entity_type);
           I.default.track(T.rMx.COPY_INSTANT_INVITE, {
             server: A.guild_id,
             channel: R,
@@ -123,7 +123,7 @@ children: [
         variant: 'text-xs/normal',
         color: 'header-secondary',
         className: g.inviteDetail,
-        children: (0, N.Vg)(b, B)
+        children: (0, m.Vg)(b, B)
       })
     ]
   })

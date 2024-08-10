@@ -57,7 +57,7 @@ case c.nc.GO_LIVE_VOICE: {
           default: e
         } = await Promise.all([
           n.e('79477'),
-          n.e('8730')
+          n.e('25248')
         ]).then(n.bind(n, 60594));
         return t => (0, i.jsx)(e, {
           ...t,
@@ -99,7 +99,7 @@ case c.nc.GO_LIVE_NON_VOICE: {
           default: e
         } = await Promise.all([
           n.e('79477'),
-          n.e('8730')
+          n.e('25248')
         ]).then(n.bind(n, 60594));
         return t => (0, i.jsx)(e, {
           ...t,

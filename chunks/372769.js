@@ -67,6 +67,7 @@ return (0, a.jsx)(u.Tooltip, {
     stroke: i,
     size: E,
     children: (0, a.jsx)(t, {
+      size: 'xxs',
       className: l()(h.icon, m),
       color: 'currentColor'
     })

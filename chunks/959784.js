@@ -35,7 +35,7 @@ treatments: [{
   }),
   o = (0, l.Z)({
 kind: 'user',
-id: '2024-07_ctp_payment_flow_started_filters',
+id: '2024-07_ctp_payment_flow_started_filters_',
 label: 'CTP payment flow started - A/A test - Filters',
 defaultConfig: {
   doSomething: !1
@@ -91,7 +91,7 @@ treatments: [{
   }),
   s = (0, l.Z)({
 kind: 'user',
-id: '2024-07_ctp_payment_flow_started_uneven_buckets',
+id: '2024-07_ctp_payment_flow_started_uneven_buckets_',
 label: 'CTP payment flow started - A/A test - Uneven buckets',
 defaultConfig: {
   doSomething: !1

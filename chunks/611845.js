@@ -41,7 +41,7 @@ children: [
         size: l.Button.Sizes.NONE,
         onClick: () => n(),
         className: u.closeButton,
-        children: (0, i.jsx)(l.CloseSmallIcon, {
+        children: (0, i.jsx)(l.XSmallIcon, {
           size: 'md',
           className: u.closeIcon,
           color: 'white'

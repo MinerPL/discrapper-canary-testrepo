@@ -1,98 +1,80 @@
-i.d(s, {
+n.d(s, {
   Z: function() {
-return Z;
+return m;
   }
 });
-var n = i(735250),
-  l = i(470079),
-  t = i(704215),
-  o = i(481060),
-  a = i(906732),
-  r = i(605236),
-  d = i(785717),
-  c = i(221292),
-  u = i(929498),
-  I = i(678738),
-  _ = i(151545),
-  f = i(527790),
-  m = i(304042),
-  E = i(981631),
-  v = i(921944),
-  S = i(689938),
-  x = i(122606);
+var i = n(735250),
+  l = n(470079),
+  t = n(704215),
+  o = n(481060),
+  a = n(605236),
+  r = n(929498),
+  d = n(678738),
+  c = n(151545),
+  u = n(527790),
+  _ = n(304042),
+  I = n(921944),
+  f = n(689938),
+  E = n(122606);
 
-function Z(e) {
+function m(e) {
   let {
 user: s,
-currentUser: i,
-onClose: Z
+currentUser: n,
+onClose: m
   } = e, {
-analyticsLocations: h
-  } = (0, a.ZP)(), {
-trackUserProfileAction: p,
-...T
-  } = (0, d.KZ)(), {
-live: g,
-recent: N,
-stream: j
-  } = (0, u.Z)(s.id), C = s.id === i.id, A = (0, r.wE)(t.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
+live: x,
+recent: S,
+stream: v
+  } = (0, r.Z)(s.id), Z = s.id === n.id, h = (0, a.wE)(t.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
   return l.useEffect(() => {
-if (!!C && !A)
-  (0, r.EW)(t.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
-    dismissAction: v.L.AUTO_DISMISS,
+if (!!Z && !h)
+  (0, a.EW)(t.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
+    dismissAction: I.L.AUTO_DISMISS,
     forceTrack: !0
   });
   }, [
-C,
-A
-  ]), (0, n.jsxs)(o.ScrollerThin, {
-className: x.scroller,
+Z,
+h
+  ]), (0, i.jsxs)(o.ScrollerThin, {
+className: E.scroller,
 fade: !0,
 children: [
-  (0, n.jsxs)(I.Z, {
+  (0, i.jsxs)(d.Z, {
     children: [
-      null != j && (0, n.jsx)(m.Z, {
+      null != v && (0, i.jsx)(_.Z, {
         user: s,
-        currentUser: i,
-        stream: j,
-        onClose: Z,
-        onAction: () => {
-          p({
-            action: 'JOIN_ACTIVITY'
-          }), (0, c.Ac)({
-            activityType: E.IIU.STREAMING,
-            analyticsLocations: h,
-            ...T
-          });
-        }
+        currentUser: n,
+        stream: v,
+        onClose: m
       }),
-      g.map((e, l) => (0, n.jsx)(_.Z, {
+      x.map((e, l) => (0, i.jsx)(c.Z, {
         user: s,
-        currentUser: i,
+        currentUser: n,
         activity: e,
-        onClose: Z,
-        onAction: () => {
-          p({
-            action: 'JOIN_ACTIVITY'
-          }), (0, c.Ac)({
-            activityType: e.type,
-            activityName: e.name,
-            activityPlatform: e.platform,
-            activitySessionId: e.session_id,
-            applicationId: e.application_id,
-            analyticsLocations: h,
-            ...T
-          });
-        }
+        onClose: m
       }, 'live-'.concat(l)))
     ]
   }),
-  (0, n.jsx)(I.Z, {
-    heading: S.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
-    children: N.map(e => (0, n.jsx)(f.Z, {
+  (0, i.jsx)(d.Z, {
+    heading: (0, i.jsxs)('div', {
+      className: E.heading,
+      children: [
+        f.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
+        (0, i.jsx)(o.Tooltip, {
+          text: f.Z.Messages.USER_PROFILE_RECENT_ACTIVITY_INFORMATION_TOOLTIP,
+          children: e => (0, i.jsx)(o.CircleInformationIcon, {
+            ...e,
+            size: 'xxs',
+            color: 'currentColor'
+          })
+        })
+      ]
+    }),
+    children: S.map(e => (0, i.jsx)(u.Z, {
       user: s,
       entry: e,
-      onClose: Z
+      onClose: m
     }, e.id))
   })
 ]

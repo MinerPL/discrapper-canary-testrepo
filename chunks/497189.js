@@ -11,12 +11,12 @@ var i = n(735250),
   _ = n(607070),
   h = n(100527),
   E = n(931240),
-  I = n(970606),
-  m = n(650461),
+  m = n(970606),
+  I = n(650461),
   g = n(353093),
   p = n(603839),
-  T = n(430824),
-  S = n(725568),
+  T = n(84615),
+  S = n(430824),
   f = n(231467),
   C = n(207796),
   N = n(273254),
@@ -93,7 +93,7 @@ value: e.id,
 label: e.name
   })), [s]), E = a.useCallback(() => {
 (0, C.fH)(C.v0.DISCOVERY);
-  }, []), I = s.length > 1;
+  }, []), m = s.length > 1;
   return (0, i.jsxs)(i.Fragment, {
 children: [
   u ? (0, i.jsxs)(i.Fragment, {
@@ -143,7 +143,7 @@ children: [
   (0, i.jsxs)('div', {
     className: L.upsellButton,
     children: [
-      I && (0, i.jsx)(d.SearchableSelect, {
+      m && (0, i.jsx)(d.SearchableSelect, {
         className: L.upsellSelect,
         value: t,
         options: h,
@@ -154,7 +154,7 @@ children: [
         size: d.ButtonSizes.LARGE,
         color: d.ButtonColors.BRAND,
         className: r()(L.reserveButton, {
-          [L.buttonWithSelect]: I
+          [L.buttonWithSelect]: m
         }),
         onClick: l,
         children: (0, i.jsx)(d.Text, {
@@ -185,14 +185,14 @@ eligibleGuilds: t,
 eligibleGuildsIncludingConverted: n
   } = e, s = 0 === t.length, [r, o] = a.useState(() => {
 var e, i;
-let a = new Set(m.ZP.getGuildIds());
+let a = new Set(I.ZP.getGuildIds());
 for (let e of t)
   if (a.has(e.id))
     return e.id;
 return s ? null === (e = n[0]) || void 0 === e ? void 0 : e.id : null === (i = t[0]) || void 0 === i ? void 0 : i.id;
   });
   a.useEffect(() => {
-!s && (0, I.TE)({
+!s && (0, m.TE)({
   guildId: r,
   location: h.Z.CLAN_DISCOVERY
 });
@@ -200,13 +200,13 @@ return s ? null === (e = n[0]) || void 0 === e ? void 0 : e.id : null === (i = t
 s,
 r
   ]);
-  let C = (0, c.e7)([T.Z], () => T.Z.getGuild(r)),
-O = (0, c.e7)([m.ZP], () => null != r ? m.ZP.getStateForGuild(r).progress : null),
+  let C = (0, c.e7)([S.Z], () => S.Z.getGuild(r)),
+O = (0, c.e7)([I.ZP], () => null != r ? I.ZP.getStateForGuild(r).progress : null),
 R = a.useCallback(() => {
-  !s && ((0, I._9)({
+  !s && ((0, m._9)({
     guildId: r,
     location: h.Z.CLAN_DISCOVERY
-  }), (0, S.q4)(e => {
+  }), (0, T.q4)(e => {
     let {
       closeLayer: t
     } = e;

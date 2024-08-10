@@ -140,7 +140,7 @@ children: [
                   lineClamp: 1,
                   children: null != a ? a : 'Keyboard Nerds'
                 }),
-                i >= 1 ? (0, t.jsx)(c.CloseSmallIcon, {
+                i >= 1 ? (0, t.jsx)(c.XSmallIcon, {
                   size: 'md',
                   color: 'currentColor',
                   className: T.icon

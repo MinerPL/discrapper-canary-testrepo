@@ -150,7 +150,8 @@ actions: [
   'CONNECTION_CLOSED',
   'APP_STATE_UPDATE'
 ],
-inlineRequire: () => n(888875).Z
+inlineRequire: () => n(888875).Z,
+neverLoadBeforeConnectionOpen: !0
   },
   GuildOnboardingHomeManager: {
 actions: [

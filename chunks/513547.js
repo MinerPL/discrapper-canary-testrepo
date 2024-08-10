@@ -1,6 +1,6 @@
 n.d(t, {
   al: function() {
-return R;
+return S;
   },
   ck: function() {
 return b;
@@ -166,7 +166,7 @@ last: t
   } = e;
   return ''.concat(t, ' ms');
 }
-let R = {
+let S = {
 audioJitterBuffer: !0,
 audioJitterDelay: !0,
 audioJitterTarget: !0,
@@ -188,9 +188,10 @@ decryptAttempts: !0,
 decryptDuration: !0,
 encryptAttempts: !0,
 encryptDuration: !0,
-encryptMaxAttempts: !0
+encryptMaxAttempts: !0,
+lqSimulcastStreamEncoded: !0
   },
-  S = {
+  R = {
 accelerateRate: g,
 audioDetected: f,
 audioLevel: C,
@@ -279,7 +280,7 @@ function b(e) {
 label: o,
 value: u,
 section: m
-  } = e, p = null !== (n = S[o]) && void 0 !== n ? n : D;
+  } = e, p = null !== (n = R[o]) && void 0 !== n ? n : D;
   let h = s.Pz[o] && (Array.isArray(i = u) && i.length > 0 && 'number' == typeof i[0].value ? (0, r.jsx)(l.Z, {
   dataPoints: i,
   width: 300,

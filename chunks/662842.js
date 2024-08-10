@@ -13,8 +13,8 @@ var i, a, s = n(735250),
   _ = n(232567),
   h = n(100527),
   E = n(471445),
-  I = n(15274),
-  m = n(924301),
+  m = n(15274),
+  I = n(924301),
   g = n(504160),
   p = n(151864),
   T = n(725436),
@@ -28,7 +28,7 @@ var i, a, s = n(735250),
   L = n(501655),
   O = n(427679),
   R = n(448206),
-  x = n(484459),
+  x = n(184301),
   b = n(103575),
   P = n(496675),
   M = n(594174),
@@ -83,7 +83,7 @@ let {
   isEventNoticeHidden: d,
   isStageNoticeHidden: _,
   isStudyRoomNotice: h
-} = e, I = null != n && null != i && !_, p = null != t ? (0, N.DK)(t) : null;
+} = e, m = null != n && null != i && !_, p = null != t ? (0, N.DK)(t) : null;
 if (h && null != i) {
   let e = (0, E.KS)(i);
   return {
@@ -102,7 +102,7 @@ if (h && null != i) {
   };
 }
 if (null == t || d) {
-  if (I) {
+  if (m) {
     let e = U.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON;
     return (null == r ? void 0 : r.speaker) ? e = U.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != r && (e = U.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
       noticeType: 0,
@@ -142,7 +142,7 @@ if (null == t || d) {
     };
   }
 } else {
-  if (t.entity_type === j.WX.STAGE_INSTANCE && I) {
+  if (t.entity_type === j.WX.STAGE_INSTANCE && m) {
     let e = U.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON;
     return (null == r ? void 0 : r.speaker) ? e = U.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != r && (e = U.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
       noticeType: 0,
@@ -187,7 +187,7 @@ if (null == t || d) {
       return {
         noticeType: null
       };
-    let n = m.ZP.getUserCount(t.id, p);
+    let n = I.ZP.getUserCount(t.id, p);
     return {
       noticeType: 1,
       title: t.name,
@@ -226,7 +226,7 @@ if (null == t || d) {
     };
   } else if (t.entity_type === j.WX.VOICE && null != i) {
     let e = (0, E.KS)(i),
-      n = m.ZP.getUserCount(t.id, p);
+      n = I.ZP.getUserCount(t.id, p);
     return {
       noticeType: 2,
       title: t.name,
@@ -298,7 +298,7 @@ children: [
     onClick: en,
     className: G.close,
     'aria-label': U.Z.Messages.DISMISS,
-    children: (0, s.jsx)(u.CloseSmallIcon, {
+    children: (0, s.jsx)(u.XSmallIcon, {
       size: 'md',
       color: 'currentColor',
       className: G.closeIcon
@@ -323,7 +323,7 @@ children: [
     className: G.participants,
     children: [
       ee.map(e => (0, s.jsx)(u.Popout, {
-        preload: () => (0, x.W)(e, {
+        preload: () => (0, x.Z)(e, {
           guildId: t.id
         }),
         renderPopout: n => (0, s.jsx)(b.Z, {
@@ -372,7 +372,7 @@ children: [
       else {
         if (null == a)
           return;
-        (0, I.bO)({
+        (0, m.bO)({
           eventId: a.id
         });
       }

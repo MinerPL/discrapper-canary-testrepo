@@ -24,6 +24,9 @@ return I;
   US: function() {
 return h;
   },
+  VC: function() {
+return l;
+  },
   ZJ: function() {
 return E;
   },

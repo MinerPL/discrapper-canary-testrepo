@@ -31,32 +31,32 @@ onClose: g
   return (0, o.Z)(I) ? (0, r.jsx)(h.Z, {
 platformType: m.ABu.XBOX,
 icon: () => (0, r.jsx)(c.Z, {}),
-onClick: T
+onAction: T
   }) : (0, s.Z)(I) ? (0, r.jsx)(h.Z, {
 platformType: m.ABu.PLAYSTATION,
 icon: () => (0, r.jsx)(u.Z, {}),
-onClick: T
+onAction: T
   }) : (0, l.Z)(I) ? (0, r.jsx)(p.Z, {
 activity: I,
-onClick: T
+onAction: T
   }) : (0, i.Z)(I, m.xjy.JOIN) || (0, a.Z)(I) ? (0, r.jsx)(E.Z, {
 user: t,
 currentUser: n,
 activity: I,
-onClick: T,
+onAction: T,
 onClose: g
   }) : (null == I ? void 0 : I.type) === m.IIU.HANG_STATUS ? (0, r.jsx)(_.Z, {
 user: t,
 activity: I,
-onClick: T,
+onAction: T,
 onClose: g
   }) : (null == I ? void 0 : I.buttons) != null && (null == I ? void 0 : I.buttons.length) >= 1 ? (0, r.jsx)(d.Z, {
 user: t,
 activity: I,
-onClick: T
+onAction: T
   }) : (0, i.Z)(I, m.xjy.INSTANCE) ? (0, r.jsx)(f.Z, {
 user: t,
 activity: I,
-onClick: T
+onAction: T
   }) : null;
 }

@@ -44,7 +44,7 @@ children: (0, o.jsxs)('form', {
             (0, o.jsx)(l.Z, {
               currentUser: s,
               otherUser: a,
-              children: (0, o.jsx)(r.CloseSmallIcon, {
+              children: (0, o.jsx)(r.XSmallIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: N.closeIcon

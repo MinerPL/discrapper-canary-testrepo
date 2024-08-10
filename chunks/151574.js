@@ -12,16 +12,16 @@ var r, i, a = n(735250),
   h = n(100527),
   p = n(906732),
   m = n(570220),
-  I = n(28546),
-  T = n(285651),
-  g = n(926491),
-  S = n(373228),
-  A = n(378233),
-  N = n(419922),
-  v = n(490095),
-  O = n(652136),
-  R = n(695346),
-  C = n(806519),
+  I = n(686546),
+  T = n(28546),
+  g = n(285651),
+  S = n(926491),
+  A = n(373228),
+  N = n(378233),
+  v = n(419922),
+  O = n(490095),
+  R = n(652136),
+  C = n(695346),
   y = n(626135),
   D = n(280930),
   L = n(606301),
@@ -58,8 +58,8 @@ focusProps: {
 onClick: () => c(s, r),
 onMouseOver: o,
 children: [
-  (0, a.jsx)(C.ZP, {
-    mask: C.ZP.Masks.STICKER_ROUNDED_RECT,
+  (0, a.jsx)(I.ZP, {
+    mask: I.ZP.Masks.STICKER_ROUNDED_RECT,
     width: w + 4,
     height: w + 4,
     className: P.mask,
@@ -67,13 +67,13 @@ children: [
       className: P.maskBackground
     })
   }),
-  (0, a.jsx)(N.ZP, {
+  (0, a.jsx)(v.ZP, {
     maskAsset: !0,
     size: w,
     sticker: s,
     className: P.__invalid_sticker
   }),
-  r !== T.eb.SENDABLE && (0, a.jsx)(v.Z, {
+  r !== g.eb.SENDABLE && (0, a.jsx)(O.Z, {
     size: 14
   })
 ]
@@ -89,7 +89,7 @@ isEditorFocused: i,
 onSelectSticker: o,
 stickerIconVisible: _ = !1,
 submitButtonVisible: E = !1
-  } = e, N = s.useContext(m.ZP), [v, C] = s.useState(null), [U, w] = s.useState(!1), [B, F] = s.useState(null), V = (0, I.Iu)(e => null != e.activeView), H = s.useRef(null), [Z, Y] = s.useState(''), [j, W] = s.useState(''), [K, z] = s.useState(!1), [q, Q] = s.useState(!1), X = (0, D.Z)(Z, U, r), {
+  } = e, I = s.useContext(m.ZP), [v, O] = s.useState(null), [U, w] = s.useState(!1), [B, F] = s.useState(null), V = (0, T.Iu)(e => null != e.activeView), H = s.useRef(null), [Z, Y] = s.useState(''), [j, W] = s.useState(''), [K, z] = s.useState(!1), [q, Q] = s.useState(!1), X = (0, D.Z)(Z, U, r), {
 analyticsLocations: $
   } = (0, p.ZP)(h.Z.EXPRESSION_SUGGESTIONS), {
 handleTextChange: J,
@@ -98,7 +98,7 @@ debouncedSetTextInputValue: ee
 setTextInputValue: Y,
 setHasDismissed: w,
 setHasSelection: Q,
-setFocusedSuggestionType: C
+setFocusedSuggestionType: O
   });
   s.useEffect(() => {
 let e = e => {
@@ -108,16 +108,16 @@ let e = e => {
     let t = '' !== e && null != e;
     if (Q(t), t) {
       var r;
-      C(null), null === (r = n.current) || void 0 === r || r.focus();
+      O(null), null === (r = n.current) || void 0 === r || r.focus();
     }
   };
-return N.addListener('text-changed', J), N.addListener('autocomplete-visibility-change', e), N.addListener('selection-changed', t), () => {
-  N.removeListener('text-changed', J), N.removeListener('autocomplete-visibility-change', e), N.removeListener('selection-changed', t);
+return I.addListener('text-changed', J), I.addListener('autocomplete-visibility-change', e), I.addListener('selection-changed', t), () => {
+  I.removeListener('text-changed', J), I.removeListener('autocomplete-visibility-change', e), I.removeListener('selection-changed', t);
 };
   }, [
 J,
 n,
-N
+I
   ]), s.useLayoutEffect(() => {
 null == v && F(null);
   }, [v]);
@@ -193,7 +193,7 @@ ei = et && !V && !K && !U && !q && er,
   hasStickerResults: er,
   shouldRenderSuggestions: ei,
   focusedSuggestionType: v,
-  setFocusedSuggestionType: C,
+  setFocusedSuggestionType: O,
   setHasDismissed: w,
   setFocusedStickerListItem: F,
   setTextInputValue: Y
@@ -203,24 +203,24 @@ es = (e, t) => {
     if (y.default.track(b.rMx.AUTO_SUGGEST_EXPRESSION_SELECTED, {
         sticker_id: e.id,
         suggestion_trigger: j
-      }), t === T.eb.SENDABLE)
-      w(!0), o(e, S.V0.EXPRESSION_SUGGESTIONS), ee.cancel(), Y('');
-    else if ((0, A.jl)(e)) {
-      let t = g.Z.getStickerPack(e.pack_id);
-      null != t && (0, O.Z)({
+      }), t === g.eb.SENDABLE)
+      w(!0), o(e, A.V0.EXPRESSION_SUGGESTIONS), ee.cancel(), Y('');
+    else if ((0, N.jl)(e)) {
+      let t = S.Z.getStickerPack(e.pack_id);
+      null != t && (0, R.Z)({
         stickerPack: t,
         analyticsLocations: $
       });
     }
-    N.emit('sticker-suggestions-hidden');
+    I.emit('sticker-suggestions-hidden');
   }
 },
 eo = s.useRef([]),
 el = s.useRef(!1);
   s.useEffect(() => {
-ei && (eo.current = X), ei !== el.current && (N.emit(ei ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), ei && ((0, L.Tk)(Z), W(Z))), el.current = ei;
+ei && (eo.current = X), ei !== el.current && (I.emit(ei ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), ei && ((0, L.Tk)(Z), W(Z))), el.current = ei;
   }, [
-N,
+I,
 ei,
 X,
 Z
@@ -319,11 +319,11 @@ children: (0, a.jsxs)(f.Clickable, {
                       location: {
                         section: b.jXE.EXPRESSION_PICKER
                       }
-                    }), R.up.updateSetting(!1);
+                    }), C.up.updateSetting(!1);
                   },
                   children: (0, a.jsx)(f.Tooltip, {
                     text: M.Z.Messages.EXPRESSION_SUGGESTIONS_STICKER_DISABLE,
-                    children: e => (0, a.jsx)(f.CloseSmallIcon, {
+                    children: e => (0, a.jsx)(f.XSmallIcon, {
                       size: 'md',
                       color: 'currentColor',
                       ...e,

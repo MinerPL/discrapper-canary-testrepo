@@ -3,18 +3,21 @@ n.d(t, {
 return A;
   },
   NE: function() {
-return N;
+return v;
   },
   QN: function() {
 return g;
   },
   Qf: function() {
-return v;
+return O;
   },
   pQ: function() {
 return S;
+  },
+  z7: function() {
+return N;
   }
-}), n(653041);
+}), n(653041), n(47120);
 var r = n(367907),
   i = n(814443),
   a = n(271383),
@@ -57,161 +60,177 @@ let {
   layout: r,
   userId: i,
   guildId: o,
-  showGuildProfile: u = !0
-} = e, c = l.default.getUser(i);
-if (null == c)
+  sessionId: u,
+  sourceSessionId: c,
+  showGuildProfile: d = !0
+} = e, E = l.default.getUser(i);
+if (null == E)
   return {};
-let d = (0, _.Of)(null == c ? void 0 : c.id, u ? o : void 0),
-  E = u && null != o ? a.ZP.getMember(o, null == c ? void 0 : c.id) : null;
+let f = (0, _.Of)(null == E ? void 0 : E.id, d ? o : void 0),
+  h = d && null != o ? a.ZP.getMember(o, null == E ? void 0 : E.id) : null;
 return {
   profile_layout: r,
+  profile_session_id: u,
+  source_profile_session_id: c,
   profile_properties: p({
-    user: c,
-    userProfile: null == d ? void 0 : d._userProfile
+    user: E,
+    userProfile: null == f ? void 0 : f._userProfile
   }),
   guild_profile_properties: p({
-    guildMember: E,
-    guildMemberProfile: null == d ? void 0 : d._guildMemberProfile
+    guildMember: h,
+    guildMemberProfile: null == f ? void 0 : f._guildMemberProfile
   }),
-  profile_activity_types: s.Z.getActivities(c.id).map(e => {
+  profile_activity_types: s.Z.getActivities(E.id).map(e => {
     let {
       type: t
     } = e;
     return t;
   }).filter(e => void 0 !== e),
-  profile_badges: null == d ? void 0 : null === (t = d.getBadges()) || void 0 === t ? void 0 : t.map(e => {
+  profile_badges: null == f ? void 0 : null === (t = f.getBadges()) || void 0 === t ? void 0 : t.map(e => {
     let {
       id: t
     } = e;
     return t;
   }),
-  avatar_decoration_sku_id: null === (n = c.avatarDecoration) || void 0 === n ? void 0 : n.skuId,
-  profile_effect_sku_id: null == d ? void 0 : d.profileEffectId,
-  user_status: m(c.id),
-  is_guild_profile: (null == d ? void 0 : d.guildId) != null,
-  is_bot_profile: c.bot
+  avatar_decoration_sku_id: null === (n = E.avatarDecoration) || void 0 === n ? void 0 : n.skuId,
+  profile_effect_sku_id: null == f ? void 0 : f.profileEffectId,
+  user_status: m(E.id),
+  is_guild_profile: (null == f ? void 0 : f.guildId) != null,
+  is_bot_profile: E.bot
 };
   },
   g = e => {
 var t, n;
-return null == e ? {} : {
-  related_user_id: e,
-  relationship_type: o.Z.getRelationshipType(e),
-  related_since: o.Z.getSince(e),
-  num_mutual_friends: d.Z.getMutualFriendsCount(e),
-  num_mutual_guilds: null === (t = d.Z.getMutualGuilds(e)) || void 0 === t ? void 0 : t.length,
-  affinity: null === (n = i.Z.getUserAffinity(e)) || void 0 === n ? void 0 : n.affinity
+let {
+  userId: r
+} = e;
+return null == r ? {} : {
+  related_user_id: r,
+  relationship_type: o.Z.getRelationshipType(r),
+  related_since: o.Z.getSince(r),
+  num_mutual_friends: d.Z.getMutualFriendsCount(r),
+  num_mutual_guilds: null === (t = d.Z.getMutualGuilds(r)) || void 0 === t ? void 0 : t.length,
+  affinity: null === (n = i.Z.getUserAffinity(r)) || void 0 === n ? void 0 : n.affinity
 };
   },
   S = e => {
 let {
-  userId: t,
-  guildId: n,
-  channelId: i,
-  messageId: a,
-  roleId: s,
-  showGuildProfile: o,
-  analyticsLocations: l,
-  layout: c,
-  action: d,
-  section: _
+  guildId: t,
+  channelId: n,
+  messageId: i,
+  roleId: a,
+  analyticsLocations: s,
+  action: o,
+  section: l
 } = e;
 u.default.track(f.rMx.USER_PROFILE_ACTION, {
-  ...(0, r.hH)(n),
-  ...(0, r.JS)(i),
-  ...T({
-    layout: c,
-    userId: t,
-    guildId: n,
-    showGuildProfile: o
-  }),
-  ...g(t),
-  location_stack: l,
-  profile_action: d,
-  profile_section: _,
-  source_message_id: a,
-  source_role_id: s
+  ...(0, r.hH)(t),
+  ...(0, r.JS)(n),
+  ...T(e),
+  ...g(e),
+  location_stack: s,
+  profile_action: o,
+  profile_section: l,
+  source_message_id: i,
+  source_role_id: a
 });
   },
   A = e => {
 let {
-  userId: t,
-  guildId: n,
-  channelId: i,
-  showGuildProfile: a,
-  analyticsLocations: s,
-  layout: o,
-  activityType: l,
-  activityName: c,
-  activityPlatform: d,
-  activitySessionId: _,
-  applicationId: E,
-  voiceChannelId: h
+  guildId: t,
+  channelId: n,
+  analyticsLocations: i,
+  activityType: a,
+  activityName: s,
+  activityPlatform: o,
+  activitySessionId: l,
+  applicationId: c,
+  voiceChannelId: d
 } = e;
 u.default.track(f.rMx.USER_PROFILE_ACTIVITY_JOINED, {
-  ...(0, r.hH)(n),
-  ...(0, r.JS)(i),
-  ...T({
-    layout: o,
-    userId: t,
-    guildId: n,
-    showGuildProfile: a
-  }),
-  ...g(t),
-  location_stack: s,
-  activity_type: null != h ? 'VOICE' : I(l),
-  activity_name: c,
-  activity_platform: d,
-  activity_session_id: _,
-  application_id: E,
-  voice_channel_id: h
+  ...(0, r.hH)(t),
+  ...(0, r.JS)(n),
+  ...T(e),
+  ...g(e),
+  location_stack: i,
+  activity_type: null != d ? 'VOICE' : I(a),
+  activity_name: s,
+  activity_platform: o,
+  activity_session_id: l,
+  application_id: c,
+  voice_channel_id: d
 });
   },
   N = e => {
 let {
-  userId: t,
-  guildId: n,
-  channelId: i,
-  showGuildProfile: a,
-  analyticsLocations: s,
-  layout: o,
-  badge: l
+  guildId: t,
+  channelId: n,
+  analyticsLocations: i,
+  action: a,
+  display: s,
+  activity: o,
+  stream: l,
+  entry: c,
+  outbox: d
 } = e;
-u.default.track(f.rMx.USER_PROFILE_BADGE_PRESSED, {
-  ...(0, r.hH)(n),
-  ...(0, r.JS)(i),
-  ...T({
-    layout: o,
-    userId: t,
-    guildId: n,
-    showGuildProfile: a
+u.default.track(f.rMx.USER_PROFILE_ACTIVITY_ACTION, {
+  ...(0, r.hH)(t),
+  ...(0, r.JS)(n),
+  ...T(e),
+  ...g(e),
+  location_stack: i,
+  activity_action: a,
+  activity_display: s,
+  activity_type: I(null != l ? f.IIU.STREAMING : null == o ? void 0 : o.type),
+  activity_name: null == o ? void 0 : o.name,
+  activity_platform: null == o ? void 0 : o.platform,
+  activity_session_id: null == o ? void 0 : o.session_id,
+  activity_application_id: null == o ? void 0 : o.application_id,
+  item_id: null == c ? void 0 : c.id,
+  author_id: null == c ? void 0 : c.author_id,
+  item_ids: null == d ? void 0 : d.entries.map(e => {
+    let {
+      id: t
+    } = e;
+    return t;
   }),
-  ...g(t),
-  location_stack: s,
-  badge: l
+  author_ids: null == d ? void 0 : d.entries.map(e => {
+    let {
+      author_id: t
+    } = e;
+    return t;
+  })
 });
   },
   v = e => {
 let {
-  userId: t,
-  guildId: n,
-  channelId: i,
-  showGuildProfile: a,
-  analyticsLocations: s,
-  layout: o,
-  badge: l
+  guildId: t,
+  channelId: n,
+  analyticsLocations: i,
+  badge: a
+} = e;
+u.default.track(f.rMx.USER_PROFILE_BADGE_PRESSED, {
+  ...(0, r.hH)(t),
+  ...(0, r.JS)(n),
+  ...T(e),
+  ...g(e),
+  location_stack: i,
+  badge: a
+});
+  },
+  O = e => {
+let {
+  guildId: t,
+  channelId: n,
+  analyticsLocations: i,
+  badge: a
 } = e;
 u.default.track(f.rMx.USER_PROFILE_BADGE_HOVERED, {
-  ...(0, r.hH)(n),
-  ...(0, r.JS)(i),
-  ...T({
-    layout: o,
-    userId: t,
-    guildId: n,
-    showGuildProfile: a
-  }),
-  ...g(t),
-  location_stack: s,
-  badge: l
+  ...(0, r.hH)(t),
+  ...(0, r.JS)(n),
+  ...T(e),
+  ...g(e),
+  location_stack: i,
+  badge: a
 });
   };

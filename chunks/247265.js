@@ -1,8 +1,8 @@
 o.r(s), o(47120);
 var r = o(735250),
   t = o(470079),
-  l = o(512722),
-  n = o.n(l),
+  n = o(512722),
+  l = o.n(n),
   a = o(481060),
   c = o(985002),
   d = o(880257),
@@ -14,7 +14,7 @@ s.default = e => {
   let {
 currentUser: s,
 otherUser: o,
-transitionState: l,
+transitionState: n,
 onClose: h
   } = e, [E, L] = t.useState(!1), x = t.useCallback(() => {
 L(!0);
@@ -29,8 +29,8 @@ isCancelLoading: m
 onError: x,
 onSuccess: b
   });
-  return n()(M, 'FamilyCenterDeclineLinkModal should only be rendered for parents.'), (0, r.jsx)(a.ModalRoot, {
-transitionState: l,
+  return l()(M, 'FamilyCenterDeclineLinkModal should only be rendered for parents.'), (0, r.jsx)(a.ModalRoot, {
+transitionState: n,
 children: (0, r.jsxs)('form', {
   onSubmit: e => {
     e.preventDefault(), f(o);
@@ -48,7 +48,7 @@ children: (0, r.jsxs)('form', {
           (0, r.jsx)(i.Z, {
             currentUser: s,
             otherUser: o,
-            children: (0, r.jsx)(a.CloseSmallIcon, {
+            children: (0, r.jsx)(a.XSmallIcon, {
               size: 'md',
               color: 'currentColor',
               className: _.closeIcon

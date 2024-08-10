@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(515753),
   h = n(410030),
   E = n(607070),
-  I = n(100527),
-  m = n(906732),
+  m = n(100527),
+  I = n(906732),
   g = n(821982),
   p = n(377171),
   T = n(633302),
@@ -45,35 +45,29 @@ let {
   onMouseEnter: r,
   onMouseLeave: o,
   children: c,
-  backgroundStyle: u,
-  ...h
-} = e, E = (0, l.JA)('shop'), g = I.Z.HOME_PAGE_SHOP_TAB, {
-  analyticsLocations: p
-} = (0, m.ZP)(g), T = a.useCallback(() => (0, f.mK)({
+  ...u
+} = e, h = (0, l.JA)('shop'), E = m.Z.HOME_PAGE_SHOP_TAB, {
+  analyticsLocations: g
+} = (0, I.ZP)(E), p = a.useCallback(() => (0, f.mK)({
   openInLayer: !1,
-  analyticsSource: g,
-  analyticsLocations: p
+  analyticsSource: E,
+  analyticsLocations: g
 }), [
-  g,
-  p
-]), S = a.useMemo(() => ({
-  background: u
-}), [u]);
-return (0, i.jsx)('div', {
-  style: S,
-  children: (0, i.jsx)(_.Qj, {
-    selected: t,
-    route: A.Z5c.COLLECTIBLES_SHOP,
-    icon: null != s ? s : d.ShopIcon,
-    text: v.Z.Messages.COLLECTIBLES_SHOP,
-    locationState: n,
-    ...E,
-    ...h,
-    onMouseEnter: r,
-    onMouseLeave: o,
-    onClick: T,
-    children: c
-  })
+  E,
+  g
+]);
+return (0, i.jsx)(_.Qj, {
+  selected: t,
+  route: A.Z5c.COLLECTIBLES_SHOP,
+  icon: null != s ? s : d.ShopIcon,
+  text: v.Z.Messages.COLLECTIBLES_SHOP,
+  locationState: n,
+  ...h,
+  ...u,
+  onMouseEnter: r,
+  onMouseLeave: o,
+  onClick: p,
+  children: c
 });
   },
   R = e => {
@@ -124,14 +118,14 @@ return (0, i.jsxs)('div', {
 });
   }),
   b = e => {
-var t, n, s, l, u, _, I, m, g, p, T, f;
+var t, n, s, l, u, _, m, I, g, p, T, f;
 let C, N;
 let {
   selected: A,
   locationState: R,
   displayOptions: b
 } = e, P = (0, o.e7)([E.Z], () => E.Z.useReducedMotion), [M, D] = a.useState(0), [y, j] = a.useState(!1), U = (0, h.ZP)(), G = b.entrypointDecorationAssets, k = (0, c.wj)(U);
-y ? k ? (C = null === (t = b.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered, N = null === (s = b.entrypointBackgroundStyle) || void 0 === s ? void 0 : null === (n = s.hovered) || void 0 === n ? void 0 : n.dark) : (C = null === (l = b.entryPointBackgroundAssets) || void 0 === l ? void 0 : l.srcLightHovered, N = null === (_ = b.entrypointBackgroundStyle) || void 0 === _ ? void 0 : null === (u = _.hovered) || void 0 === u ? void 0 : u.light) : k ? (C = null === (I = b.entryPointBackgroundAssets) || void 0 === I ? void 0 : I.srcDark, N = null === (g = b.entrypointBackgroundStyle) || void 0 === g ? void 0 : null === (m = g.resting) || void 0 === m ? void 0 : m.dark) : (C = null === (p = b.entryPointBackgroundAssets) || void 0 === p ? void 0 : p.srcLight, N = null === (f = b.entrypointBackgroundStyle) || void 0 === f ? void 0 : null === (T = f.resting) || void 0 === T ? void 0 : T.light);
+y ? k ? (C = null === (t = b.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered, N = null === (s = b.entrypointBackgroundStyle) || void 0 === s ? void 0 : null === (n = s.hovered) || void 0 === n ? void 0 : n.dark) : (C = null === (l = b.entryPointBackgroundAssets) || void 0 === l ? void 0 : l.srcLightHovered, N = null === (_ = b.entrypointBackgroundStyle) || void 0 === _ ? void 0 : null === (u = _.hovered) || void 0 === u ? void 0 : u.light) : k ? (C = null === (m = b.entryPointBackgroundAssets) || void 0 === m ? void 0 : m.srcDark, N = null === (g = b.entrypointBackgroundStyle) || void 0 === g ? void 0 : null === (I = g.resting) || void 0 === I ? void 0 : I.dark) : (C = null === (p = b.entryPointBackgroundAssets) || void 0 === p ? void 0 : p.srcLight, N = null === (f = b.entrypointBackgroundStyle) || void 0 === f ? void 0 : null === (T = f.resting) || void 0 === T ? void 0 : T.light);
 let w = a.useCallback(e => {
     D(e => (e + 1) % b.assetIds.length), j(!0), null == e || e();
   }, [b.assetIds.length]),
@@ -153,7 +147,6 @@ return (0, i.jsx)(d.Tooltip, {
   'aria-label': 'string' == typeof H ? H : v.Z.Messages.COLLECTIBLES_SEE_WHATS_NEW,
   children: e => (0, i.jsxs)(O, {
     className: null != b.entryPointClassName ? (0, S.l)(Z, b.entryPointClassName) : void 0,
-    backgroundStyle: N,
     selected: A,
     locationState: R,
     icon: b.entryPointIcon,
@@ -161,11 +154,17 @@ return (0, i.jsx)(d.Tooltip, {
     onMouseEnter: () => w(e.onMouseEnter),
     onMouseLeave: () => B(e.onMouseLeave),
     children: [
-      null != C && (0, i.jsx)('img', {
-        src: C,
-        className: Z.marketingButtonBackgroundImage,
-        alt: '',
-        'aria-hidden': !0
+      (0, i.jsx)('div', {
+        className: Z.marketingButtonBackground,
+        style: {
+          background: N
+        },
+        children: null != C && (0, i.jsx)('img', {
+          src: C,
+          className: Z.marketingButtonBackgroundImage,
+          alt: '',
+          'aria-hidden': !0
+        })
       }),
       null != G && !P && (0, i.jsx)('img', {
         src: (0, c.wj)(U) ? G.srcDark : G.srcLight,

@@ -93,7 +93,7 @@ validate: r
 function h(e, t, n) {
   var l;
   let i = (0, a.e7)([m.Z], () => m.Z.getInteractionComponentState(e.id, t.id)),
-r = (0, a.e7)([c.Z], () => c.Z.getInteraction(e), [e]),
+r = (0, a.e7)([c.ZP], () => c.ZP.getInteraction(e), [e]),
 o = A(e.channel_id),
 {
   error: d,

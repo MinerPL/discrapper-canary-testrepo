@@ -131,8 +131,7 @@ guild_scheduled_event_exceptions: i
 }
 
 function P(e) {
-  var t;
-  return null != e && (t = (null == e ? void 0 : e.status) === h.p1.ACTIVE, t);
+  return null != e && (null == e ? void 0 : e.status) === h.p1.ACTIVE;
 }
 
 function U(e) {

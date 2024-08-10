@@ -16,13 +16,13 @@ var i = t(735250),
   m = t(895924),
   _ = t(581364),
   N = t(471445),
-  E = t(518738),
-  T = t(592125),
-  h = t(271383),
-  g = t(430824),
-  p = t(246946),
+  E = t(91218),
+  T = t(518738),
+  h = t(592125),
+  g = t(271383),
+  p = t(430824),
+  f = t(246946),
   C = t(594174),
-  f = t(176278),
   x = t(51144),
   O = t(981631),
   S = t(689938),
@@ -88,14 +88,14 @@ openEntryContextMenu: r
 icon: I,
 name: m,
 categoryName: E
-  } = (0, c.cj)([T.Z], () => {
+  } = (0, c.cj)([h.Z], () => {
 if (d === t)
   return {
     name: S.Z.Messages.INTEGRATIONS_APPLICATION_ALL_CHANNELS,
     icon: u.TextIcon
   };
-let e = T.Z.getChannel(t),
-  i = (null == e ? void 0 : e.parent_id) != null ? T.Z.getChannel(e.parent_id) : null;
+let e = h.Z.getChannel(t),
+  i = (null == e ? void 0 : e.parent_id) != null ? h.Z.getChannel(e.parent_id) : null;
 return {
   icon: null != e ? (0, N.KS)(e, n) : null,
   name: null == e ? void 0 : e.name,
@@ -105,7 +105,7 @@ return {
 d,
 n,
 t
-  ]), h = a.useCallback(e => {
+  ]), T = a.useCallback(e => {
 t !== d && r(e);
   }, [
 d,
@@ -113,7 +113,7 @@ t,
 r
   ]);
   return null == I || null == m ? null : (0, i.jsxs)('div', {
-onContextMenu: h,
+onContextMenu: T,
 className: A.identifier,
 children: [
   (0, i.jsx)(I, {
@@ -152,11 +152,11 @@ guild: s,
 id: o,
 isLocked: r,
 lockTooltipText: m
-  } = e, _ = (0, c.e7)([g.Z], () => g.Z.getRole(s.id, o)), N = (0, E.p9)({
+  } = e, _ = (0, c.e7)([p.Z], () => p.Z.getRole(s.id, o)), N = (0, T.p9)({
 guildId: s.id,
 roleId: o,
 size: 24
-  }), T = a.useCallback(e => {
+  }), h = a.useCallback(e => {
 if (null != s && null != _)
   (0, I.jW)(e, async () => {
     let {
@@ -173,10 +173,10 @@ s,
 _
   ]);
   return (null == _ ? void 0 : _.name) == null ? null : (0, i.jsxs)('div', {
-onContextMenu: T,
+onContextMenu: h,
 className: A.identifier,
 children: [
-  null != N ? (0, i.jsx)(f.Z, {
+  null != N ? (0, i.jsx)(E.Z, {
     className: l()(A.__invalid_icon, A.image),
     ...N
   }) : (0, i.jsx)(u.ShieldUserIcon, {
@@ -206,13 +206,13 @@ id: t,
 isLocked: a,
 lockTooltipText: s,
 openEntryContextMenu: l
-  } = e, o = (0, c.e7)([C.default], () => C.default.getUser(t)), r = (0, c.e7)([h.ZP], () => {
+  } = e, o = (0, c.e7)([C.default], () => C.default.getUser(t)), r = (0, c.e7)([g.ZP], () => {
 var e;
-return null === (e = h.ZP.getMember(n.id, t)) || void 0 === e ? void 0 : e.nick;
+return null === (e = g.ZP.getMember(n.id, t)) || void 0 === e ? void 0 : e.nick;
   }, [
 n.id,
 t
-  ]), d = (0, c.e7)([p.Z], () => p.Z.hidePersonalInformation);
+  ]), d = (0, c.e7)([f.Z], () => f.Z.hidePersonalInformation);
   return null == o ? null : (0, i.jsxs)('div', {
 onContextMenu: l,
 className: A.identifier,

@@ -25,13 +25,9 @@ var r = n(470079),
 
 function E(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [..._.YQ];
-  return null == e || u.Z.hasPaymentSourceForSKUIds(e, t) ? Promise.resolve() : new Promise((e, n) => {
+  return null == e || u.Z.hasPaymentSourceForSKUIds(e, t) ? Promise.resolve() : new Promise(e => {
 s.Z.wait(async () => {
-  try {
-    await (0, o.Gn)(t), e();
-  } catch (e) {
-    n(e);
-  }
+  await (0, o.Gn)(t), e();
 });
   });
 }
@@ -64,12 +60,7 @@ loaded: !1
   }), c = (0, l.V)(a);
   r.useEffect(() => {
 (async () => {
-  try {
-    await E(n, a);
-  } catch (e) {
-    if (10027 !== e.code)
-      throw e;
-  }
+  await E(n, a);
   let e = [];
   null != t && null != u.Z.get(t) && (e = f(t, n, i)), e.length > 0 ? o({
     paymentSourceId: n,

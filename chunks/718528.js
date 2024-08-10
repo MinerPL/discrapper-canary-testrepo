@@ -22,7 +22,7 @@ function c(e) {
 withVoiceChannels: n = !1,
 withCurrentVoiceChannel: t = !1
   } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, i = arguments.length > 2 ? arguments[2] : void 0;
-  return I(e === _._ || e === d.I_8 ? (0, r.t)() : o.Z.getGuildWithoutChangingCommunityRows(e).guildChannels, {
+  return I(e === _._ || e === d.I_8 ? (0, r.t)() : o.Z.getGuildWithoutChangingGuildActionRows(e).guildChannels, {
 currentVoiceChannelId: s.Z.getVoiceChannelId(),
 selectedChannelId: s.Z.getChannelId()
   }, {

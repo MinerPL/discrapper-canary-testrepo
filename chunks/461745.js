@@ -66,7 +66,7 @@ children: (0, s.jsxs)('div', {
         [h.visible]: !t
       })
     }),
-    (0, s.jsx)(c.CloseSmallIcon, {
+    (0, s.jsx)(c.XSmallIcon, {
       size: 'md',
       color: 'currentColor',
       className: u()({
@@ -187,7 +187,7 @@ return null != E && E.length > 0 && ('string' == typeof E[0] ? E.forEach((e, t) 
   onClick: this.handleRemoveTag.bind(this, t),
   children: [
     e,
-    (0, s.jsx)(c.CloseSmallIcon, {
+    (0, s.jsx)(c.XSmallIcon, {
       size: 'md',
       color: 'currentColor',
       className: h.close,
@@ -218,7 +218,7 @@ return null != E && E.length > 0 && ('string' == typeof E[0] ? E.forEach((e, t) 
       className: h.tagLabel,
       children: e.label
     }),
-    (0, s.jsx)(c.CloseSmallIcon, {
+    (0, s.jsx)(c.XSmallIcon, {
       size: 'md',
       color: 'currentColor',
       className: h.close,

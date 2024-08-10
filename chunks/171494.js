@@ -10,8 +10,8 @@ var s = a(735250),
   i = a(91176),
   r = a(906732),
   c = a(346486),
-  u = a(594174),
-  d = a(153124),
+  u = a(313201),
+  d = a(594174),
   _ = a(626135),
   h = a(71619),
   N = a(590433),
@@ -27,9 +27,9 @@ userId: E,
 anaylticsLocations: f,
 transitionState: p,
 onClose: T
-  } = e, O = (0, d.Dt)(), {
+  } = e, O = (0, u.Dt)(), {
 analyticsLocations: U
-  } = (0, r.ZP)(), S = null !== (a = null !== (t = null == f ? void 0 : f[0]) && void 0 !== t ? t : null == U ? void 0 : U[0]) && void 0 !== a ? a : null, v = (0, l.e7)([u.default], () => u.default.getUser(E), [E]), [D, x] = (0, h.ZP)(E, m), [A, g] = n.useState(!1), b = n.useCallback(async () => {
+  } = (0, r.ZP)(), S = null !== (a = null !== (t = null == f ? void 0 : f[0]) && void 0 !== t ? t : null == U ? void 0 : U[0]) && void 0 !== a ? a : null, v = (0, l.e7)([d.default], () => d.default.getUser(E), [E]), [D, x] = (0, h.ZP)(E, m), [A, g] = n.useState(!1), b = n.useCallback(async () => {
 if (null != v) {
   g(!0);
   try {
@@ -77,7 +77,7 @@ children: [
         onClick: T,
         className: M.closeButton,
         'aria-label': I.Z.Messages.CLOSE,
-        children: (0, s.jsx)(o.CloseSmallIcon, {
+        children: (0, s.jsx)(o.XSmallIcon, {
           size: 'xs',
           color: 'currentColor',
           className: M.closeIcon

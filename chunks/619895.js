@@ -1,6 +1,6 @@
 n.d(t, {
   Id: function() {
-return d;
+return s;
   },
   Qm: function() {
 return m;
@@ -14,14 +14,13 @@ var i = n(470079),
   a = n(442837),
   l = n(581364),
   r = n(823379),
-  s = n(399654),
-  u = n(844439);
-let d = {
+  c = n(399654),
+  d = n(844439);
+let s = {
 '1238332854602043454': {
   imageOption: 'image'
 },
 '1181475143340539995': {
-  overrideCommandName: 'dance',
   imageOption: 'image',
   additionalOptions: [{
       motion_prompt: [{
@@ -142,7 +141,7 @@ let d = {
   imageOption: 'image'
 }
   },
-  c = new Set(Object.keys(d));
+  u = new Set(Object.keys(s));
 
 function m(e) {
   let {
@@ -167,7 +166,7 @@ function p(e) {
 channelId: t
   } = e, {
 fetchState: n,
-recommendationsSections: d
+recommendationsSections: s
   } = function(e) {
 let {
   channelId: t
@@ -180,18 +179,18 @@ let {
   n
 ]);
 i.useEffect(() => {
-  (0, s.a)(l);
+  (0, c.a)(l);
 }, [l]);
 let {
   fetchState: r,
-  recommendationsSections: d
-} = (0, a.cj)([u.ZP], () => ({
-  fetchState: u.ZP.getFetchState(l),
-  recommendationsSections: u.ZP.getRecommendations(l)
+  recommendationsSections: s
+} = (0, a.cj)([d.ZP], () => ({
+  fetchState: d.ZP.getFetchState(l),
+  recommendationsSections: d.ZP.getRecommendations(l)
 }));
 return {
   fetchState: r,
-  recommendationsSections: d
+  recommendationsSections: s
 };
   }({
 channelId: t
@@ -199,12 +198,12 @@ channelId: t
   return {
 fetchState: n,
 imageRecCommandContexts: i.useMemo(() => {
-  let e = d.length > 0 ? d[0].items : void 0;
+  let e = s.length > 0 ? s[0].items : void 0;
   return void 0 === e ? [] : e.map(e => {
     let {
       application: t,
       commands: n
-    } = e, i = null == n ? void 0 : n.find(e => c.has(e.id));
+    } = e, i = null == n ? void 0 : n.find(e => u.has(e.id));
     return null != i ? {
       command: (0, l.Z8)({
         rootCommand: i,
@@ -214,6 +213,6 @@ imageRecCommandContexts: i.useMemo(() => {
       application: t
     } : null;
   }).filter(r.lm);
-}, [d])
+}, [s])
   };
 }

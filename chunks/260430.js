@@ -28,7 +28,7 @@ className: f.scope,
 children: [
   (0, r.jsx)('div', {
     className: a()(f.iconWrapper, i ? f.fakeScopeIcon : f.scopeIcon),
-    children: i ? (0, r.jsx)(d.CloseSmallIcon, {
+    children: i ? (0, r.jsx)(d.XSmallIcon, {
       size: 'md',
       color: 'currentColor',
       className: f.icon

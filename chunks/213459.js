@@ -189,7 +189,7 @@ let r = this.getContextState(e),
   i = this.getUserState(),
   a = this.getApplicationState(n.applicationId),
   s = this.getApplicationStates(),
-  o = (0, D.k)(e, t.commandType),
+  o = (0, D.k)(e, t.commandTypes),
   l = !1 !== t.applicationCommands && o.hasBaseAccessPermissions,
   u = !1;
 n.allowFetch && (l && ei(e) && (S.default.track(M.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
@@ -227,7 +227,7 @@ return c.loading = c.loading || u, c;
 let n = I.Z.getChannel(t),
   r = P.Yq.includes(e) ? e : void 0;
 null != n && null != r && this.query(n, {
-  commandType: E.yU.CHAT
+  commandTypes: [E.yU.CHAT]
 }, {
   placeholderCount: 5,
   scoreMethod: R.p.COMMAND_ONLY,
@@ -238,7 +238,7 @@ null != n && null != r && this.query(n, {
   queryInstallOnDemandApp(e, t) {
 let n = I.Z.getChannel(t);
 null != n && this.query(n, {
-  commandType: E.yU.CHAT
+  commandTypes: [E.yU.CHAT]
 }, {
   placeholderCount: 5,
   scoreMethod: R.p.COMMAND_ONLY,
@@ -586,7 +586,7 @@ useScore: !0
 });
 
 function et(e, t, n) {
-  let r = (0, D.Hs)(e, t.commandType),
+  let r = (0, D.Hs)(e, t.commandTypes),
 i = !1 !== t.applicationCommands,
 a = Q(e, i, n.allowFetch),
 o = $(i, n.allowFetch),
@@ -652,7 +652,7 @@ scoreMethod: g = R.p.NONE,
 sortOptions: S = ee,
 installOnDemand: N = !1
   } = e, {
-commandType: O
+commandTypes: O
   } = o, C = null == _ ? void 0 : _.toLowerCase(), y = null == C ? void 0 : C.split(' '), D = E === R.D.ONLY_TEXT, L = E !== R.D.DENY ? (0, A.Kh)(O, !0, D) : [], M = [], P = {
 permissionContext: o,
 query: C,
@@ -909,7 +909,7 @@ function ed(e, t) {
   if (t === b.bi.BUILT_IN)
 return {
   descriptor: A.Tm[b.bi.BUILT_IN],
-  sectionCommands: (0, A.Kh)(E.yU.CHAT, !0, !1),
+  sectionCommands: (0, A.Kh)([E.yU.CHAT], !0, !1),
   isGuildInstalled: !0,
   isUserInstalled: !0
 };

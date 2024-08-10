@@ -1,42 +1,42 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return L;
   }
 });
-var n = s(735250),
-  a = s(470079),
-  i = s(512722),
-  r = s.n(i),
-  o = s(442837),
-  l = s(481060),
-  c = s(660216),
-  d = s(230711),
-  _ = s(825209),
-  E = s(836157),
-  u = s(706454),
-  T = s(494620),
-  I = s(131951),
-  S = s(556296),
-  N = s(924557),
-  C = s(435064),
-  m = s(894694),
-  A = s(779618),
-  g = s(39604),
-  h = s(442334),
-  O = s(356659),
-  p = s(981631),
-  R = s(37113),
-  x = s(526761),
-  M = s(689938),
-  f = s(96118),
-  D = s(885582),
-  P = s(549856);
+var n = t(735250),
+  a = t(470079),
+  i = t(512722),
+  r = t.n(i),
+  o = t(442837),
+  l = t(481060),
+  c = t(660216),
+  d = t(230711),
+  _ = t(825209),
+  E = t(836157),
+  u = t(706454),
+  I = t(494620),
+  T = t(131951),
+  S = t(556296),
+  N = t(924557),
+  C = t(435064),
+  m = t(894694),
+  A = t(779618),
+  g = t(39604),
+  O = t(442334),
+  h = t(356659),
+  p = t(981631),
+  R = t(37113),
+  x = t(526761),
+  M = t(689938),
+  f = t(96118),
+  D = t(885582),
+  P = t(549856);
 
 function L() {
-  let e = (0, o.e7)([I.Z], () => I.Z.getHardwareEncoding()),
+  let e = (0, o.e7)([T.Z], () => T.Z.getHardwareEncoding()),
 {
-  clipsEnabled: t,
-  remindersEnabled: s,
+  clipsEnabled: s,
+  remindersEnabled: t,
   decoupledClipsEnabled: i,
   clipsLength: L,
   clipsQuality: b
@@ -50,7 +50,7 @@ v = (0, o.e7)([S.Z], () => S.Z.getKeybindForAction(p.kg4.SAVE_CLIP, !0)),
 }, {
   autoTrackExposure: !1
 }),
-B = (0, A.Z)(I.Z),
+B = (0, A.Z)(T.Z),
 {
   showClipsHeaderEntrypoint: U
 } = N.NV.useExperiment({
@@ -61,31 +61,25 @@ B = (0, A.Z)(I.Z),
   r()(null != v, 'Save clip keybind unset');
   let G = (0, o.e7)([u.default], () => u.default.locale),
 F = a.useMemo(() => [{
-    value: O.OT.SECONDS_30,
+    value: h.OT.SECONDS_30,
     label: M.Z.Messages.CLIPS_LENGTH_SECONDS.format({
       count: 30
     })
   },
   {
-    value: O.OT.MINUTES_1,
+    value: h.OT.MINUTES_1,
     label: M.Z.Messages.CLIPS_LENGTH_MINUTES.format({
       count: 1
     })
   },
   {
-    value: O.OT.MINUTES_2,
+    value: h.OT.MINUTES_2,
     label: M.Z.Messages.CLIPS_LENGTH_MINUTES.format({
       count: 2
     })
   }
 ], [G]),
 y = a.useMemo(() => [{
-    value: R.LY.RESOLUTION_480,
-    label: M.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
-      resolution: R.LY.RESOLUTION_480
-    })
-  },
-  {
     value: R.LY.RESOLUTION_720,
     label: M.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
       resolution: R.LY.RESOLUTION_720
@@ -138,8 +132,8 @@ children: [
   (0, n.jsxs)(l.FormSection, {
     disabled: !e,
     children: [
-      !e && (0, n.jsx)(T.Z, {
-        look: T.z.WARNING,
+      !e && (0, n.jsx)(I.Z, {
+        look: I.z.WARNING,
         className: D.formItem,
         children: M.Z.Messages.CLIPS_SETTINGS_HW_ENCODING_MUST_BE_ENABLED_INFOBOX.format({
           onClick: () => d.Z.open(p.oAB.VOICE, null, {
@@ -147,8 +141,8 @@ children: [
           })
         })
       }),
-      Z === m.x.BELOW_MINIMUM ? (0, n.jsx)(T.Z, {
-        look: T.z.WARNING,
+      Z === m.x.BELOW_MINIMUM ? (0, n.jsx)(I.Z, {
+        look: I.z.WARNING,
         className: D.formItem,
         children: M.Z.Messages.CLIPS_SETTINGS_UNDER_MIN_SPECS
       }) : null,
@@ -156,7 +150,7 @@ children: [
         hideBorder: !0,
         disabled: !e,
         className: D.formItem,
-        value: t,
+        value: s,
         note: M.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS_HELP,
         onChange: e => g.em({
           clipsEnabled: e,
@@ -164,7 +158,7 @@ children: [
         }),
         children: M.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
       }),
-      e && (0, n.jsx)(T.Z, {
+      e && (0, n.jsx)(I.Z, {
         className: D.formItem,
         children: M.Z.Messages.CLIPS_SETTINGS_QUALITY_INFOBOX
       })
@@ -199,7 +193,7 @@ children: [
         children: (0, n.jsx)(l.FormSwitch, {
           hideBorder: !0,
           className: D.formItem,
-          value: s,
+          value: t,
           note: M.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS_HELP,
           onChange: e => g.N0(e),
           children: M.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS
@@ -211,7 +205,7 @@ children: [
   (0, n.jsxs)(l.FormSection, {
     className: P.marginTop20,
     children: [
-      (0, n.jsx)(h.Q, {
+      (0, n.jsx)(O.Q, {
         className: D.formItem,
         select: g.eU,
         title: M.Z.Messages.CLIPS_SETTINGS_LENGTH,
@@ -219,7 +213,7 @@ children: [
         value: L,
         options: F
       }),
-      (0, n.jsx)(h.Q, {
+      (0, n.jsx)(O.Q, {
         className: D.formItem,
         select: e => g.yi({
           resolution: e,
@@ -230,7 +224,7 @@ children: [
         value: b.resolution,
         options: y
       }),
-      (0, n.jsx)(h.Q, {
+      (0, n.jsx)(O.Q, {
         className: D.formItem,
         select: e => g.yi({
           resolution: b.resolution,
@@ -241,7 +235,7 @@ children: [
         value: b.frameRate,
         options: V
       }),
-      (0, n.jsx)(h.O, {
+      (0, n.jsx)(O.O, {
         className: D.formItem,
         title: M.Z.Messages.CLIPS_SETTINGS_KEYBIND,
         note: M.Z.Messages.CLIPS_SETTINGS_KEYBIND_HELP,

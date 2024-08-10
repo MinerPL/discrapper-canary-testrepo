@@ -281,7 +281,7 @@ children: (e, t) => {
             'aria-disabled': o,
             onClick: q,
             'aria-label': I.Z.Messages.CLEAR,
-            children: (0, r.jsx)(E.CloseSmallIcon, {
+            children: (0, r.jsx)(E.XSmallIcon, {
               size: 'xs',
               color: 'currentColor',
               className: T.clear

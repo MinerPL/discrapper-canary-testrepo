@@ -1,35 +1,35 @@
-s(47120), s(627341);
-var n = s(735250),
-  a = s(470079),
-  i = s(278074),
-  r = s(754700),
-  o = s(887003),
-  l = s(742635),
-  c = s(458708),
-  d = s(481060),
-  _ = s(70956),
-  E = s(497505),
-  u = s(210724),
-  T = s(130653),
-  I = s(78826),
-  S = s(37303),
-  N = s(134483),
-  C = s(478977),
-  m = s(456799),
-  A = s(210851),
-  g = s(602683),
-  h = s(916028),
-  O = s(15033),
-  p = s(899457),
-  R = s(452693);
+t(47120), t(627341);
+var n = t(735250),
+  a = t(470079),
+  i = t(278074),
+  r = t(754700),
+  o = t(887003),
+  l = t(742635),
+  c = t(458708),
+  d = t(481060),
+  _ = t(70956),
+  E = t(497505),
+  u = t(210724),
+  I = t(130653),
+  T = t(78826),
+  S = t(37303),
+  N = t(134483),
+  C = t(478977),
+  m = t(456799),
+  A = t(210851),
+  g = t(602683),
+  O = t(916028),
+  h = t(15033),
+  p = t(899457),
+  R = t(452693);
 
-function x(e, t, s) {
-  return t in e ? Object.defineProperty(e, t, {
-value: s,
+function x(e, s, t) {
+  return s in e ? Object.defineProperty(e, s, {
+value: t,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : e[t] = s, e;
+  }) : e[s] = t, e;
 }
 let M = [
 'svg',
@@ -52,8 +52,8 @@ let M = [
 function P() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
 {
-  streamProgressSeconds: t = 0,
-  completedAt: s = null,
+  streamProgressSeconds: s = 0,
+  completedAt: t = null,
   enrolledAt: n = null,
   claimedAt: a = null
 } = e;
@@ -61,11 +61,11 @@ function P() {
 userId: '123',
 questId: '1193992107035983872',
 enrolledAt: n,
-completedAt: s,
+completedAt: t,
 claimedAt: a,
 claimedTier: null,
 lastStreamHeartbeatAt: null,
-streamProgressSeconds: t,
+streamProgressSeconds: s,
 dismissedQuestContent: 0,
 progress: {}
   };
@@ -144,15 +144,15 @@ targetedContent: []
   };
 
 function Z() {
-  var e, t, s;
+  var e, s, t;
   let [r, o] = a.useState(b), [l, c] = a.useState(p.a.UNENROLLED), [x, L] = a.useState([]), [Z, v] = a.useState(!1), [j, B] = a.useState(null);
-  let U = (s = r.config, (0, i.EQ)(s).with({
+  let U = (t = r.config, (0, i.EQ)(t).with({
 configVersion: 2
   }, e => {
-let t = e.rewardsConfig.rewards[0];
+let s = e.rewardsConfig.rewards[0];
 return {
-  ...t.messages,
-  rewardTile: t.asset
+  ...s.messages,
+  rewardTile: s.asset
 };
   }).exhaustive());
   a.useEffect(() => {
@@ -162,14 +162,14 @@ L((e = r.config, (0, i.EQ)(e).with({
 }, e => e.features).exhaustive()));
   }, [r]);
 
-  function G(e, t) {
-var s, n;
+  function G(e, s) {
+var t, n;
 if ('hero' === e || 'questBarHero' === e || 'gameTile' === e || 'logotype' === e)
   o({
     ...r,
-    config: (s = r.config, n = {
-      [e]: t
-    }, (0, i.EQ)(s).with({
+    config: (t = r.config, n = {
+      [e]: s
+    }, (0, i.EQ)(t).with({
       configVersion: 2
     }, e => ({
       ...e,
@@ -181,14 +181,14 @@ if ('hero' === e || 'questBarHero' === e || 'gameTile' === e || 'logotype' === e
   });
   }
 
-  function F(e, t) {
-var s, n;
+  function F(e, s) {
+var t, n;
 if ('questName' === e || 'gameTitle' === e || 'gamePublisher' === e)
   o({
     ...r,
-    config: (s = r.config, n = {
-      [e]: t
-    }, (0, i.EQ)(s).with({
+    config: (t = r.config, n = {
+      [e]: s
+    }, (0, i.EQ)(t).with({
       configVersion: 2
     }, e => ({
       ...e,
@@ -200,20 +200,20 @@ if ('questName' === e || 'gameTitle' === e || 'gamePublisher' === e)
   });
   }
 
-  function y(e, t) {
-var s, n;
+  function y(e, s) {
+var t, n;
 if ('rewardName' === e || 'rewardNameWithArticle' === e)
   o({
     ...r,
-    config: (s = r.config, n = {
-      [e]: t
-    }, (0, i.EQ)(s).with({
+    config: (t = r.config, n = {
+      [e]: s
+    }, (0, i.EQ)(t).with({
       configVersion: 2
     }, e => ({
       ...e,
       rewardsConfig: {
         ...e.rewardsConfig,
-        rewards: e.rewardsConfig.rewards.map((e, t) => 0 === t ? {
+        rewards: e.rewardsConfig.rewards.map((e, s) => 0 === s ? {
           ...e,
           messages: {
             ...e.messages,
@@ -225,14 +225,14 @@ if ('rewardName' === e || 'rewardNameWithArticle' === e)
   });
   }
 
-  function V(e, t) {
+  function V(e, s) {
 o({
   ...r,
   config: {
     ...r.config,
     colors: {
       ...r.config.colors,
-      [e]: t
+      [e]: s
     }
   }
 });
@@ -246,7 +246,7 @@ children: [
   }),
   (0, n.jsx)('div', {
     className: R.fields,
-    children: (0, n.jsx)(h.Z, {
+    children: (0, n.jsx)(O.Z, {
       onSelect: function(e) {
         if (B(e), null != e)
           o(e);
@@ -320,14 +320,14 @@ children: [
       (0, n.jsx)(A.Z, {
         title: 'Reward Tile Asset',
         assetKey: 'rewardTile',
-        onFileChange: function(e, t) {
-          var s, n;
+        onFileChange: function(e, s) {
+          var t, n;
           if ('rewardTile' === e)
             o({
               ...r,
-              config: (s = r.config, n = {
-                [e]: t
-              }, (0, i.EQ)(s).with({
+              config: (t = r.config, n = {
+                [e]: s
+              }, (0, i.EQ)(t).with({
                 configVersion: 2
               }, e => ({
                 ...e,
@@ -337,7 +337,7 @@ children: [
                 },
                 rewardsConfig: {
                   ...e.rewardsConfig,
-                  rewards: e.rewardsConfig.rewards.map((e, t) => 0 === t ? {
+                  rewards: e.rewardsConfig.rewards.map((e, s) => 0 === s ? {
                     ...e,
                     asset: n.rewardTile
                   } : e)
@@ -361,16 +361,16 @@ children: [
     className: R.fields,
     children: (0, n.jsx)('div', {
       className: R.fullWidthField,
-      children: (0, n.jsx)(O.Z, {
+      children: (0, n.jsx)(h.Z, {
         onChange: function(e) {
-          var t, s;
+          var s, t;
           o({
             ...r,
-            config: (t = r.config, s = e, (0, i.EQ)(t).with({
+            config: (s = r.config, t = e, (0, i.EQ)(s).with({
               configVersion: 2
             }, e => ({
               ...e,
-              features: s
+              features: t
             })).exhaustive())
           }), L(e);
         },
@@ -500,11 +500,11 @@ children: [
               }),
               (0, n.jsx)('div', {
                 className: R.questBarPreview,
-                children: (0, n.jsx)(I.p, {
+                children: (0, n.jsx)(T.p, {
                   isPreview: !0,
                   source: 'preview',
                   questId: '0',
-                  children: (0, n.jsx)(T.Z, {
+                  children: (0, n.jsx)(I.Z, {
                     children: (0, n.jsx)(u.P, {
                       quest: r
                     })
@@ -520,7 +520,7 @@ children: [
           (0, n.jsx)(d.FormTitle, {
             children: 'Gift Inventory'
           }),
-          (0, n.jsx)(I.p, {
+          (0, n.jsx)(T.p, {
             isPreview: !0,
             source: 'preview',
             questId: '0',
@@ -537,14 +537,14 @@ children: [
           (0, n.jsx)(d.FormTitle, {
             children: 'Channel Call Header'
           }),
-          (null === (t = r.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null && (0, n.jsx)(d.Text, {
+          (null === (s = r.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null && (0, n.jsx)(d.Text, {
             color: 'text-secondary',
             variant: 'text-sm/normal',
             children: 'The Quest Channel Call Header is hidden when the user has claimed the reward.'
           }),
           (0, n.jsx)('div', {
             className: R.questBarPreviewWrapper,
-            children: (0, n.jsx)(I.p, {
+            children: (0, n.jsx)(T.p, {
               isPreview: !0,
               source: 'preview',
               questId: '0',
@@ -587,12 +587,12 @@ this.setState({
   render() {
 let {
   error: e,
-  renderKey: t
+  renderKey: s
 } = this.state;
 return null != e ? (0, n.jsxs)('div', {
   className: R.errorBoundary,
   children: [
-    (0, n.jsx)(d.CircleExclamationPointIcon, {
+    (0, n.jsx)(d.CircleWarningIcon, {
       className: R.errorBoundaryIcon
     }),
     (0, n.jsx)(d.Heading, {
@@ -612,7 +612,7 @@ return null != e ? (0, n.jsxs)('div', {
       })
     })
   ]
-}) : (0, n.jsx)(Z, {}, t);
+}) : (0, n.jsx)(Z, {}, s);
   }
   constructor(...e) {
 super(...e), x(this, 'state', {
@@ -626,4 +626,4 @@ super(...e), x(this, 'state', {
 });
   }
 }
-t.Z = v;
+s.Z = v;

@@ -709,8 +709,9 @@ _sendMessage(e, t, n) {
     }
   };
   if (null != T) {
-    let e = T.type === eo.mFx.JOIN_REQUEST ? null == T ? void 0 : T.activity.session_id : j.default.getSessionId();
-    if (null != e) {
+    let e;
+    let t = null == T ? void 0 : T.activity.session_id;
+    if (null != (e = T.type === eo.mFx.JOIN_REQUEST || null != t ? t : j.default.getSessionId())) {
       let t = {
           type: T.type,
           session_id: e

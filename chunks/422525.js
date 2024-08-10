@@ -13,8 +13,8 @@ var i = t(442837),
   r = t(434404),
   d = t(956324),
   c = t(994763),
-  E = t(984933),
-  _ = t(725568),
+  E = t(84615),
+  _ = t(984933),
   M = t(981631),
   N = t(308083),
   I = t(689938);
@@ -23,7 +23,7 @@ function S(e) {
   function n(n) {
 r.Z.open(e.id, n);
   }
-  let t = (0, i.Wu)([E.ZP], () => E.ZP.getChannels(e.id).SELECTABLE, [e]),
+  let t = (0, i.Wu)([_.ZP], () => _.ZP.getChannels(e.id).SELECTABLE, [e]),
 S = (0, d.Z)(e);
   return __OVERLAY__ || !S ? null : (0, s.jsx)(a.MenuItem, {
 id: 'guild-settings',
@@ -62,7 +62,7 @@ children: (0, c.getGuildSettingsSections)(e, t).map(t => {
       return (0, s.jsx)(a.MenuItem, {
         id: 'guild-settings',
         label: I.Z.Messages.CLAN_SETTINGS,
-        action: () => (0, _.q4)(n => {
+        action: () => (0, E.q4)(n => {
           let {
             closeLayer: t
           } = n;

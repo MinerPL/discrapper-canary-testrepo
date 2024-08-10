@@ -73,45 +73,46 @@ T,
 i,
 x
   ]);
-  let v = (0, s.jsxs)(s.Fragment, {
+  let v = null != r ? r : l.Fragment;
+  return (0, s.jsxs)(s.Fragment, {
 children: [
-  (0, s.jsx)('div', {
-    className: o()(_.chatTarget, {
-      [_.floating]: x,
-      [_.notFloating]: !x
-    }),
+  !x && (0, s.jsx)('div', {
     style: {
-      width: N
+      minWidth: T
     }
   }),
-  !x && (0, s.jsx)(f, {
-    maxWidth: n,
-    resizableNode: h,
-    onResize: C,
-    onResizeEnd: I
-  }),
-  (0, s.jsx)('div', {
-    ref: h,
-    className: o()(_.container, {
-      [_.floating]: x
-    }),
-    style: {
-      width: T
-    },
-    children: a
+  (0, s.jsx)(v, {
+    children: (0, s.jsxs)('div', {
+      className: _.chatLayerWrapper,
+      children: [
+        (0, s.jsx)('div', {
+          className: o()(_.chatTarget, {
+            [_.floating]: x,
+            [_.notFloating]: !x
+          }),
+          style: {
+            width: N
+          }
+        }),
+        !x && (0, s.jsx)(f, {
+          maxWidth: n,
+          resizableNode: h,
+          onResize: C,
+          onResizeEnd: I
+        }),
+        (0, s.jsx)('div', {
+          ref: h,
+          className: o()(_.container, {
+            [_.floating]: x
+          }),
+          style: {
+            width: T
+          },
+          children: a
+        })
+      ]
+    })
   })
 ]
-  });
-  if (x) {
-let e = null != r ? r : l.Fragment;
-return (0, s.jsx)(e, {
-  children: (0, s.jsx)('div', {
-    className: _.chatLayerWrapper,
-    children: v
-  })
-});
-  }
-  return (0, s.jsx)(s.Fragment, {
-children: v
   });
 }

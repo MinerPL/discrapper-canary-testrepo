@@ -23,7 +23,7 @@ role: 'group',
 className: i,
 children: [
   null != n ? (0, r.jsx)('div', {
-    className: a()(o.groupLabel, s._[l]),
+    className: a()(o.groupLabel, o.hideInteraction, s._[l]),
     children: n
   }) : null,
   t

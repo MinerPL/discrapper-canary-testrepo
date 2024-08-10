@@ -3,7 +3,7 @@ n.d(t, {
 return W;
   },
   K: function() {
-return w;
+return k;
   }
 }), n(47120), n(390547);
 var s, a, i = n(735250),
@@ -20,14 +20,14 @@ var s, a, i = n(735250),
   m = n(596454),
   N = n(471445),
   S = n(605436),
-  h = n(339085),
-  g = n(518738),
-  C = n(131704),
-  x = n(324067),
-  p = n(430824),
-  R = n(153124),
-  f = n(259580),
-  L = n(176278),
+  h = n(91218),
+  g = n(313201),
+  C = n(339085),
+  x = n(518738),
+  p = n(131704),
+  R = n(324067),
+  f = n(430824),
+  L = n(259580),
   O = n(624138),
   A = n(817460),
   M = n(166803),
@@ -36,8 +36,8 @@ var s, a, i = n(735250),
   j = n(981631),
   Z = n(689938),
   b = n(934178);
-let U = (0, R.hQ)(),
-  G = (0, R.hQ)(),
+let U = (0, g.hQ)(),
+  G = (0, g.hQ)(),
   P = (0, O.Mg)(E.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
 
 function B(e) {
@@ -46,7 +46,7 @@ function B(e) {
 emojiId: n,
 emojiName: s,
 className: a
-  } = e, r = (0, _.e7)([h.Z], () => null != n ? h.Z.getCustomEmojiById(n) : void 0);
+  } = e, r = (0, _.e7)([C.Z], () => null != n ? C.Z.getCustomEmojiById(n) : void 0);
   return (0, i.jsx)(m.Z, {
 emojiId: n,
 emojiName: s,
@@ -168,7 +168,7 @@ children: [
   }) : null;
 }
 
-function w(e) {
+function k(e) {
   let {
 transitionState: t,
 fromSubscriptionListing: n,
@@ -182,9 +182,9 @@ s
   ]), S = r.useMemo(() => new Set(m.filter(e => a.some(t => (0, I.Z)(e, t)))), [
 a,
 m
-  ]), h = (0, R.Dt)();
+  ]), h = (0, g.Dt)();
 
-  function g(e, t) {
+  function C(e, t) {
 u(n => {
   let s = new Set(n);
   return t ? s.add(e) : s.delete(e), s;
@@ -225,7 +225,7 @@ children: (0, i.jsxs)(T.ModalRoot, {
           benefits: E,
           dupeBenefits: N,
           selectedBenefits: d,
-          onToggleBenefit: g
+          onToggleBenefit: C
         }),
         (0, i.jsx)(F, {
           title: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INTANGIBLE_BENEFITS_TITLE,
@@ -233,7 +233,7 @@ children: (0, i.jsxs)(T.ModalRoot, {
           benefits: m,
           dupeBenefits: S,
           selectedBenefits: d,
-          onToggleBenefit: g
+          onToggleBenefit: C
         })
       ]
     }),
@@ -256,14 +256,14 @@ children: (0, i.jsxs)(T.ModalRoot, {
   });
 }
 
-function k(e) {
+function w(e) {
   var t;
   let {
 guildId: n,
 role: s,
 channelCount: a,
 onSelect: r
-  } = e, l = (0, g.p9)({
+  } = e, l = (0, x.p9)({
 guildId: n,
 roleId: s.id,
 size: P
@@ -274,7 +274,7 @@ onClick: r,
 children: [
   (0, i.jsx)('div', {
     className: b.rowIconWrapper,
-    children: null != l ? (0, i.jsx)(L.Z, {
+    children: null != l ? (0, i.jsx)(h.Z, {
       ...l
     }) : (0, i.jsx)(T.ShieldUserIcon, {
       size: 'custom',
@@ -304,8 +304,8 @@ children: [
   }),
   (0, i.jsx)('div', {
     className: b.rowCheckbox,
-    children: (0, i.jsx)(f.Z, {
-      direction: f.Z.Directions.RIGHT
+    children: (0, i.jsx)(L.Z, {
+      direction: L.Z.Directions.RIGHT
     })
   })
 ]
@@ -316,11 +316,11 @@ function H(e) {
   let {
 guild: t,
 onSelect: n
-  } = e, s = (0, _.e7)([p.Z], () => p.Z.getRoles(t.id)), a = (0, _.e7)([x.Z], () => x.Z.getCategories(t.id)), l = r.useMemo(() => a._categories.flatMap(e => a[e.channel.id].filter(e => {
+  } = e, s = (0, _.e7)([f.Z], () => f.Z.getRoles(t.id)), a = (0, _.e7)([R.Z], () => R.Z.getCategories(t.id)), l = r.useMemo(() => a._categories.flatMap(e => a[e.channel.id].filter(e => {
 let {
   channel: t
 } = e;
-return C.zS.has(t.type);
+return p.zS.has(t.type);
   }).map(e => {
 let {
   channel: t
@@ -342,7 +342,7 @@ l
   ]);
   return o.length > 0 ? (0, i.jsx)('div', {
 className: b.list,
-children: o.map(e => (0, i.jsx)(k, {
+children: o.map(e => (0, i.jsx)(w, {
   guildId: t.id,
   role: e.role,
   channelCount: e.channelCount,
@@ -359,7 +359,7 @@ function V(e) {
 onClose: t,
 guildId: n,
 onSelect: s
-  } = e, a = (0, _.e7)([p.Z], () => p.Z.getGuild(n));
+  } = e, a = (0, _.e7)([f.Z], () => f.Z.getGuild(n));
   return null == a ? null : (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsxs)(T.ModalHeader, {
@@ -397,12 +397,12 @@ onImport: l
   null != s && (o.current = s);
   let d = null != s ? s : o.current,
 u = (0, c.Z)(() => {
-  let e = x.Z.getCategories(n);
+  let e = R.Z.getCategories(n);
   return e._categories.flatMap(t => e[t.channel.id].filter(e => {
     let {
       channel: t
     } = e;
-    return C.zS.has(t.type);
+    return p.zS.has(t.type);
   }).map(e => {
     let {
       channel: t

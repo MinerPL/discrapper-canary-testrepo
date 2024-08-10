@@ -24,8 +24,8 @@ var n = l(735250),
   H = l(203893),
   f = l(777288),
   N = l(5192),
-  A = l(709054),
-  R = l(51144),
+  R = l(709054),
+  A = l(51144),
   S = l(815790),
   Z = l(588215),
   j = l(241559),
@@ -52,7 +52,7 @@ children: [
         onMouseEnter: t,
         onMouseLeave: l
       } = e;
-      return (0, n.jsx)(u.ChatAlertIcon, {
+      return (0, n.jsx)(u.ChatWarningIcon, {
         size: 'custom',
         width: 20,
         height: 20,
@@ -269,7 +269,7 @@ return null == o || null == l ? null : (0, n.jsxs)('div', {
         children: (0, n.jsx)(u.Clickable, {
           onClick: r,
           tag: 'span',
-          children: R.ZP.getUserTag(o)
+          children: A.ZP.getUserTag(o)
         })
       })
     })
@@ -327,7 +327,7 @@ let {
   accountCreationDateShort: s,
   accountCreationDateLong: i
 } = a.useMemo(() => {
-  let e = A.default.extractTimestamp(t.userId),
+  let e = R.default.extractTimestamp(t.userId),
     l = (0, S.fv)(e, S.jq.ACCOUNT_AGE);
   return {
     accountCreationDateShort: l,
@@ -377,7 +377,7 @@ let {
   t,
   M,
   E
-]), N = p === Z.d$.ORDER_BY_GUILD_JOINED_AT_ASC, A = p === Z.d$.ORDER_BY_USER_ID_ASC || p === Z.d$.ORDER_BY_USER_ID_DESC;
+]), N = p === Z.d$.ORDER_BY_GUILD_JOINED_AT_ASC, R = p === Z.d$.ORDER_BY_USER_ID_ASC || p === Z.d$.ORDER_BY_USER_ID_DESC;
 return (0, n.jsxs)(n.Fragment, {
   children: [
     x && (0, n.jsx)(u.Tooltip, {
@@ -425,7 +425,7 @@ return (0, n.jsxs)(n.Fragment, {
       children: (0, n.jsx)(W, {
         showLongDate: i,
         member: t,
-        isSortedBy: A
+        isSortedBy: R
       })
     }),
     _ && (0, n.jsx)('td', {

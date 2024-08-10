@@ -37,6 +37,7 @@ style: {
 children: (0, s.jsx)('div', {
   className: c.contentCollapsedWrapper,
   children: f ? (0, s.jsx)(i.Z, {
+    contentLocation: 'collapsed',
     quest: m,
     progressBarRef: g,
     isExpanded: !1,

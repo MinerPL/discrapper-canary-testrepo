@@ -33,8 +33,8 @@ partnerGame: n
   if (null == E)
 return null;
   let {
-header: I,
-body: m,
+header: m,
+body: I,
 imgSrc: g,
 imgStyle: p
   } = h(E.drop, E.config.streamLengthRequirement), T = () => {
@@ -52,7 +52,7 @@ children: [
     className: _.__invalid_buttonClose,
     'aria-label': u.Z.Messages.CLOSE,
     onClick: T,
-    children: (0, i.jsx)(s.CloseSmallIcon, {
+    children: (0, i.jsx)(s.XSmallIcon, {
       size: 'xs',
       color: 'currentColor',
       className: _.closeIcon
@@ -61,12 +61,12 @@ children: [
   (0, i.jsx)(s.Heading, {
     className: _.title,
     variant: 'heading-md/extrabold',
-    children: I
+    children: m
   }),
   (0, i.jsx)(s.Text, {
     variant: 'text-sm/medium',
     className: _.subTitle,
-    children: m
+    children: I
   }),
   E.config.autoEnrollment ? (0, i.jsx)(s.Button, {
     color: s.Button.Colors.BRAND_INVERTED,

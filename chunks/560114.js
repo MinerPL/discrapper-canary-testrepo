@@ -21,23 +21,23 @@ var l, s = t(735250),
   x = t(447003),
   M = t(471445),
   C = t(259473),
-  f = t(687516),
-  Z = t(111810),
-  A = t(301935),
-  R = t(397195),
-  V = t(427679),
-  j = t(199902),
-  y = t(439170),
-  L = t(592125),
-  O = t(984933),
-  D = t(341165),
-  G = t(751771),
-  U = t(496675),
-  b = t(158776),
-  B = t(944486),
-  P = t(594174),
-  w = t(938475),
-  F = t(285952),
+  f = t(600164),
+  Z = t(687516),
+  A = t(111810),
+  R = t(301935),
+  V = t(397195),
+  j = t(427679),
+  y = t(199902),
+  L = t(439170),
+  O = t(592125),
+  D = t(984933),
+  G = t(341165),
+  U = t(751771),
+  b = t(496675),
+  B = t(158776),
+  P = t(944486),
+  w = t(594174),
+  F = t(938475),
   k = t(626135),
   H = t(630388),
   K = t(971130),
@@ -123,8 +123,8 @@ if (h && k.default.track(en.rMx.INVITE_SUGGESTION_OPENED, {
     guildId: null == t ? void 0 : t.id,
     location: 'acc417_1'
   }), null != i) {
-  let e = j.Z.getStreamForUser(i, t.id),
-    n = (0, f.L2)(e, b.Z);
+  let e = y.Z.getStreamForUser(i, t.id),
+    n = (0, Z.L2)(e, B.Z);
   k.default.track(en.rMx.OPEN_MODAL, {
     type: 'Send Stream Invite',
     source: l,
@@ -170,7 +170,7 @@ let {
 return (0, x.Z)(e) ? (0, s.jsxs)('div', {
   className: es.warningContainer,
   children: [
-    (0, s.jsx)(_.CircleExclamationPointIcon, {
+    (0, s.jsx)(_.CircleWarningIcon, {
       size: 'custom',
       className: es.warningIcon,
       color: E.Z.unsafe_rawColors.YELLOW_300.css,
@@ -311,7 +311,7 @@ return I = n.hasFeature(en.oNc.HUB) ? (0, s.jsxs)('div', {
             })
           ]
         }),
-        null != a ? (0, s.jsx)(Z.Z, {}) : null,
+        null != a ? (0, s.jsx)(A.Z, {}) : null,
         I
       ]
     })
@@ -356,13 +356,13 @@ let {
 if (t)
   return this.renderFriendsBody();
 let i = (0, q.Z)(null !== (e = this.getInviteKey()) && void 0 !== e ? e : ''),
-  r = P.default.getCurrentUser();
+  r = w.default.getCurrentUser();
 d()(null != r, 'InstantInviteModal: user cannot be undefined');
 let o = n.isOwner(r) ? el.Z.Messages.INVITE_SHARE_LINK_OWN_SERVER : el.Z.Messages.SHARE_INVITE_LINK_FOR_ACCESS;
 return null != l ? o = el.Z.Messages.INVITE_SHARE_LINK_TO_STREAM : null != a && (o = el.Z.Messages.EMBEDDED_ACTIVITIES_SHARE_LINK_TO_ACTIVITY), (0, s.jsx)(_.ModalContent, {
   className: es.noScroll,
-  children: (0, s.jsxs)(F.Z, {
-    direction: F.Z.Direction.VERTICAL,
+  children: (0, s.jsxs)(f.Z, {
+    direction: f.Z.Direction.VERTICAL,
     className: ea.marginBottom20,
     children: [
       (0, s.jsx)(_.Text, {
@@ -393,8 +393,8 @@ let {
 } = d, c = null, h = (0, q.Z)(null !== (e = this.getInviteKey()) && void 0 !== e ? e : '');
 if (t) {
   let e = el.Z.Messages.INVITE_FOOTER_LINK_HEADER;
-  null != a ? e = el.Z.Messages.INVITE_STREAM_FOOTER_LINK_HEADER : null != i ? e = el.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_ACTIVITY_FOOTER_LINK_HEADER : null != l ? e = el.Z.Messages.GUILD_EVENT_INVITE_MODAL_FOOTER : (null == o ? void 0 : o.isGuildStageVoice()) && (e = el.Z.Messages.STAGE_CHANNEL_INVITE_TO_STAGE_MODAL_FOOTER), c = (0, s.jsxs)(F.Z, {
-    direction: F.Z.Direction.VERTICAL,
+  null != a ? e = el.Z.Messages.INVITE_STREAM_FOOTER_LINK_HEADER : null != i ? e = el.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_ACTIVITY_FOOTER_LINK_HEADER : null != l ? e = el.Z.Messages.GUILD_EVENT_INVITE_MODAL_FOOTER : (null == o ? void 0 : o.isGuildStageVoice()) && (e = el.Z.Messages.STAGE_CHANNEL_INVITE_TO_STAGE_MODAL_FOOTER), c = (0, s.jsxs)(f.Z, {
+    direction: f.Z.Direction.VERTICAL,
     className: es.content,
     children: [
       (0, s.jsx)(_.FormTitle, {
@@ -409,8 +409,8 @@ if (t) {
     ]
   });
 } else
-  !n && (c = (0, s.jsxs)(F.Z, {
-    justify: F.Z.Justify.BETWEEN,
+  !n && (c = (0, s.jsxs)(f.Z, {
+    justify: f.Z.Justify.BETWEEN,
     className: ea.marginTop20,
     children: [
       (0, s.jsx)(_.Checkbox, {
@@ -633,38 +633,38 @@ transitionState: _,
 onClose: M,
 welcomeToServer: f,
 page: Z,
-analyticsLocation: j
-  } = e, [b, P] = a.useState(Z === ee.RV.GUEST ? I.$.IS_GUEST_INVITE : 0), {
-analyticsLocations: F
+analyticsLocation: A
+  } = e, [y, B] = a.useState(Z === ee.RV.GUEST ? I.$.IS_GUEST_INVITE : 0), {
+analyticsLocations: w
   } = (0, S.ZP)(v.Z.INSTANT_INVITE_MODAL), k = (0, g.e7)([
-L.Z,
-B.Z
+O.Z,
+P.Z
   ], () => {
-let e = B.Z.getVoiceChannelId();
+let e = P.Z.getVoiceChannelId();
 if (null == e)
   return null;
-let n = L.Z.getChannel(e);
+let n = O.Z.getChannel(e);
 return (null == n ? void 0 : n.guild_id) === d.id ? n : null;
   }), K = null != k && !(0, x.Z)(k) && [
 en.t4x.GUILD_CONTEXT_MENU,
 en.t4x.GUILD_HEADER
-  ].includes(u), W = (0, R.Z)(d.id), z = (0, g.e7)([
-B.Z,
-L.Z,
-O.ZP
+  ].includes(u), W = (0, V.Z)(d.id), z = (0, g.e7)([
+P.Z,
+O.Z,
+D.ZP
   ], () => {
-if (K && ((0, H.yE)(b, I.$.IS_GUEST_INVITE) || Z === ee.RV.GUEST))
+if (K && ((0, H.yE)(y, I.$.IS_GUEST_INVITE) || Z === ee.RV.GUEST))
   return k;
 if (Z === ee.RV.GUEST)
   return 1 === W.length ? W[0] : void 0;
 if (null != o)
   return o;
-let e = B.Z.getChannelId(),
-  n = null == e || (0, et.AB)(e) ? void 0 : L.Z.getChannel(e);
-return (null == n ? void 0 : n.isThread()) && (n = L.Z.getChannel(n.parent_id)), null != n ? n : O.ZP.getDefaultChannel(d.id, !0, en.Plq.CREATE_INSTANT_INVITE);
+let e = P.Z.getChannelId(),
+  n = null == e || (0, et.AB)(e) ? void 0 : O.Z.getChannel(e);
+return (null == n ? void 0 : n.isThread()) && (n = O.Z.getChannel(n.parent_id)), null != n ? n : D.ZP.getDefaultChannel(d.id, !0, en.Plq.CREATE_INSTANT_INVITE);
   }, [
 K,
-b,
+y,
 Z,
 o,
 d.id,
@@ -673,9 +673,9 @@ W
   ]), [q, X] = a.useState(null), $ = null != q ? q : z, Q = null;
   null != h ? Q = ee.Iq.STREAM : null != E && (Q = ee.Iq.EMBEDDED_APPLICATION);
   let J = null != o ? o.getGuildId() : null != d ? d.id : null,
-el = (0, g.e7)([D.Z], () => {
+el = (0, g.e7)([G.Z], () => {
   let e = null != $ ? $.id : null;
-  return null == e ? null : D.Z.getInvite(e, {
+  return null == e ? null : G.Z.getInvite(e, {
     targetType: Q,
     targetUserId: h,
     targetApplicationId: E
@@ -687,24 +687,24 @@ el = (0, g.e7)([D.Z], () => {
   E
 ]),
 [es, ea, ei, er, eo] = (0, g.Wu)([
-  G.Z,
-  w.ZP,
-  y.ZP
+  U.Z,
+  F.ZP,
+  L.ZP
 ], () => {
   let e = null != $ ? $.id : null;
   return [
-    G.Z.getInviteSuggestionRows(),
-    G.Z.getTotalSuggestionsCount() >= 1,
-    G.Z.getInitialCounts(),
-    null != o && null != $ ? w.ZP.getVoiceStatesForChannel($) : null,
-    null != J ? y.ZP.getProps(J, e) : null
+    U.Z.getInviteSuggestionRows(),
+    U.Z.getTotalSuggestionsCount() >= 1,
+    U.Z.getInitialCounts(),
+    null != o && null != $ ? F.ZP.getVoiceStatesForChannel($) : null,
+    null != J ? L.ZP.getProps(J, e) : null
   ];
 }, [
   $,
   o,
   J
 ]),
-eI = (0, g.e7)([U.Z], () => null != $ && U.Z.can(en.Plq.CREATE_INSTANT_INVITE, $), [$]),
+eI = (0, g.e7)([b.Z], () => null != $ && b.Z.can(en.Plq.CREATE_INSTANT_INVITE, $), [$]),
 eg = null === el || !eI,
 [eE] = a.useState(() => {
   let e = new Set();
@@ -714,11 +714,11 @@ eg = null === el || !eI,
     } = n;
     e.add(t.id);
   }) : null != J && null != eo && Q !== ee.Iq.EMBEDDED_APPLICATION && eo.rows.forEach(n => {
-    n.type === y.so.MEMBER && e.add(n.userId);
+    n.type === L.so.MEMBER && e.add(n.userId);
   }), e;
 }),
 e_ = null == o ? void 0 : o.id,
-em = (0, g.e7)([V.Z], () => V.Z.getStageInstanceByChannel(e_), [e_]);
+em = (0, g.e7)([j.Z], () => j.Z.getStageInstanceByChannel(e_), [e_]);
   a.useEffect(() => {
 (0, T.x)({
   omitUserIds: eE,
@@ -770,7 +770,7 @@ eV.currentPage,
 ey
   ]), eO = (eA || K) && Z !== ee.RV.GUEST && !eZ && !eg && !eR, {
 enabled: eD
-  } = A.o.useExperiment({
+  } = R.o.useExperiment({
 guildId: null == d ? void 0 : d.id,
 location: 'acc417_3'
   }, {
@@ -805,7 +805,7 @@ let e = null == $ ? void 0 : $.id;
   target_user_id: h,
   target_application_id: null == eT ? void 0 : eT.id,
   temporary: eb,
-  flags: b
+  flags: y
 }, u).catch(e => ey({
   networkError: e,
   showVanityURL: eZ
@@ -822,10 +822,10 @@ h,
 eG,
 eU,
 eb,
-b,
+y,
 ey,
 eB
-  ]), eF = (0, N.Z)($), ek = (0, N.Z)(b), eH = eF !== $, eK = ek !== b;
+  ]), eF = (0, N.Z)($), ek = (0, N.Z)(y), eH = eF !== $, eK = ek !== y;
   return a.useEffect(() => {
 (eH || eK) && ew();
   }, [
@@ -833,7 +833,7 @@ ew,
 eH,
 eK
   ]), (0, s.jsx)(S.Gt, {
-value: F,
+value: w,
 children: (0, s.jsx)(eh, {
   ref: n,
   canCreateInvites: eI,
@@ -852,8 +852,8 @@ children: (0, s.jsx)(eh, {
   code: ev,
   source: u,
   welcomeToServer: f,
-  analyticsLocations: F,
-  analyticsLocation: j,
+  analyticsLocations: w,
+  analyticsLocation: A,
   transitionState: _,
   onClose: M,
   canShowVanityURL: eZ,
@@ -863,8 +863,8 @@ children: (0, s.jsx)(eh, {
   setModalState: ey,
   changePage: eL,
   onGenerateNewLink: ew,
-  inviteFlags: b,
-  setInviteFlags: P,
+  inviteFlags: y,
+  setInviteFlags: B,
   showGuestInviteToggleForCurrentVoiceChannel: K,
   setInviteChannel: X,
   handleDone: eP

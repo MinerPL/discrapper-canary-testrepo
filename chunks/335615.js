@@ -28,18 +28,18 @@ var i = n(735250),
   S = n(677432),
   Z = n(178762),
   A = n(868671),
-  M = n(623624),
-  b = n(518738),
-  R = n(557494),
-  j = n(484459),
-  L = n(103575),
-  P = n(439170),
-  O = n(430824),
-  y = n(111583),
-  D = n(594174),
-  k = n(153124),
-  U = n(151827),
-  w = n(176278),
+  M = n(82295),
+  b = n(91218),
+  R = n(313201),
+  j = n(623624),
+  L = n(518738),
+  P = n(557494),
+  O = n(184301),
+  y = n(103575),
+  D = n(439170),
+  k = n(430824),
+  U = n(111583),
+  w = n(594174),
   B = n(585483),
   H = n(823379),
   G = n(51144),
@@ -93,7 +93,7 @@ let {
   ...E
 } = this.props, C = null != f ? new Date(f) : null;
 return (0, i.jsx)(m.Popout, {
-  preload: () => (0, j.W)(s, {
+  preload: () => (0, O.Z)(s, {
     channelId: u.id,
     guildId: h
   }),
@@ -166,14 +166,14 @@ super(...e), Y(this, 'renderUserContextMenu', e => {
     guildId: t
   } = this.props;
   if (null != t)
-    e.stopPropagation(), (0, M.f)({
+    e.stopPropagation(), (0, j.f)({
       guildId: t,
       location: {
         section: F.jXE.MEMBER_LIST,
         object: F.qAy.BOOST_GEM_ICON
       }
     });
-}), Y(this, 'renderUserPopout', e => (0, i.jsx)(L.Z, {
+}), Y(this, 'renderUserPopout', e => (0, i.jsx)(y.Z, {
   ...e,
   location: 'ChannelMembers',
   userId: this.props.user.id,
@@ -197,9 +197,9 @@ let {
   channel: a,
   user: s,
   index: l
-} = e, r = (0, c.JA)(''.concat(l)), o = (0, h.e7)([y.Z], () => y.Z.isTyping(a.id, s.id)), u = (0, h.e7)([D.default], () => D.default.getCurrentUser()), d = (0, h.e7)([O.Z], () => {
+} = e, r = (0, c.JA)(''.concat(l)), o = (0, h.e7)([U.Z], () => U.Z.isTyping(a.id, s.id)), u = (0, h.e7)([w.default], () => w.default.getCurrentUser()), d = (0, h.e7)([k.Z], () => {
   var e;
-  return null != t ? null === (e = O.Z.getRole(a.guild_id, t)) || void 0 === e ? void 0 : e.name : void 0;
+  return null != t ? null === (e = k.Z.getRole(a.guild_id, t)) || void 0 === e ? void 0 : e.name : void 0;
 }, [
   a,
   t
@@ -218,7 +218,7 @@ let {
   title: n,
   count: a,
   guildId: s
-} = e, l = (0, b.p9)({
+} = e, l = (0, L.p9)({
   roleId: t,
   guildId: s,
   size: 16
@@ -228,7 +228,7 @@ return t === F.Skl.UNKNOWN ? (0, i.jsx)('div', {
   children: (0, i.jsx)('div', {
     className: z.memberGroupsPlaceholder
   })
-}) : (0, i.jsxs)(U.Z, {
+}) : (0, i.jsxs)(M.Z, {
   className: z.membersGroup,
   children: [
     (0, i.jsx)(m.HiddenVisually, {
@@ -240,7 +240,7 @@ return t === F.Skl.UNKNOWN ? (0, i.jsx)('div', {
     (0, i.jsxs)('span', {
       'aria-hidden': !0,
       children: [
-        null != l ? (0, i.jsx)(w.Z, {
+        null != l ? (0, i.jsx)(b.Z, {
           className: z.roleIcon,
           ...l
         }) : null,
@@ -310,7 +310,7 @@ let {
   channel: n
 } = this.props;
 return (0, i.jsx)(m.FocusJumpSection, {
-  children: a => (0, i.jsx)(k.FG, {
+  children: a => (0, i.jsx)(R.FG, {
     children: s => (0, i.jsx)('aside', {
       className: l()(z.membersWrap, z.hiddenMembers),
       'aria-labelledby': s,
@@ -372,7 +372,7 @@ super(...e), Y(this, '_list', null), Y(this, '_areActivitiesExperimentallyHidden
   return (0, v.R)(l) ? (0, a.createElement)(v.Z, {
     ...l,
     key: 'section-'.concat(t)
-  }) : 0 === t ? (0, i.jsx)(R.Z, {
+  }) : 0 === t ? (0, i.jsx)(P.Z, {
     tutorialId: 'whos-online',
     position: 'left',
     inlineSpecs: X,
@@ -405,7 +405,7 @@ super(...e), Y(this, '_list', null), Y(this, '_areActivitiesExperimentallyHidden
     channel: s
   } = this.props, l = this.getRowProps(e);
   if (null != l) {
-    if (l.type === P.so.MEMBER && 'user' in l) {
+    if (l.type === D.so.MEMBER && 'user' in l) {
       let {
         colorString: e,
         colorRoleId: t,
@@ -434,7 +434,7 @@ super(...e), Y(this, '_list', null), Y(this, '_areActivitiesExperimentallyHidden
         index: a
       }, 'member-'.concat(l.user.id));
     }
-    if (l.type === P.so.CONTENT_INVENTORY) {
+    if (l.type === D.so.CONTENT_INVENTORY) {
       let e = 'content-inventory-'.concat(l.entry.id);
       return null != l.entry.original_id && (e += '-'.concat(l.entry.original_id)), (0, i.jsx)(Z.ZP, {
         ...l,
@@ -442,7 +442,7 @@ super(...e), Y(this, '_list', null), Y(this, '_areActivitiesExperimentallyHidden
         index: a
       }, e);
     }
-    if (l.type === P.so.HIDDEN_CONTENT_INVENTORY)
+    if (l.type === D.so.HIDDEN_CONTENT_INVENTORY)
       return (0, i.jsx)(S.Z, {}, 'content-inventory-hidden-entry');
   }
   return (0, i.jsx)(ee, {
@@ -512,7 +512,7 @@ super(...e), Y(this, '_list', null), Y(this, '_areActivitiesExperimentallyHidden
   let i = t.map(e => this.getRowProps(e)).slice(0, n + 1).filter(H.lm);
   if (0 === i.length)
     return;
-  let a = i.reduce((e, t) => t.type !== P.so.MEMBER ? e : (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some(e => e.type === F.IIU.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, e), {
+  let a = i.reduce((e, t) => t.type !== D.so.MEMBER ? e : (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some(e => e.type === F.IIU.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, e), {
     num_users_visible: 0,
     num_users_visible_with_mobile_indicator: 0,
     num_users_visible_with_game_activity: 0,
@@ -532,7 +532,7 @@ channel: t,
 className: n
   } = e, {
 analyticsLocations: s
-  } = (0, T.ZP)(I.Z.MEMBER_LIST), r = (0, h.e7)([C.Z], () => C.Z.keyboardModeEnabled), o = (0, h.cj)([P.ZP], () => P.ZP.getProps(t.guild_id, t.id)), {
+  } = (0, T.ZP)(I.Z.MEMBER_LIST), r = (0, h.e7)([C.Z], () => C.Z.keyboardModeEnabled), o = (0, h.cj)([D.ZP], () => D.ZP.getProps(t.guild_id, t.id)), {
 rows: d,
 groups: p,
 version: m,

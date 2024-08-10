@@ -1,18 +1,25 @@
-e.exports = {
-  videoHeight: 'videoHeight_c8484a',
-  animated: 'animated_c8484a',
-  normal: 'normal_c8484a',
-  minimum: 'minimum_c8484a',
-  noChat: 'noChat_c8484a',
-  fullScreen: 'fullScreen_c8484a',
-  video: 'video_c8484a',
-  idle: 'idle_c8484a',
-  videoCenter: 'videoCenter_c8484a',
-  videoBottom: 'videoBottom_c8484a',
-  videoWrapper: 'videoWrapper_c8484a',
-  focused: 'focused_c8484a',
-  videoBackgroundTransition: 'videoBackgroundTransition_c8484a',
-  videoInner: 'videoInner_c8484a',
-  videoTop: 'videoTop_c8484a',
-  videoBackground: 'videoBackground_c8484a'
+var i = n(570140),
+  l = n(447543),
+  r = n(782605);
+t.Z = {
+  acceptInvite(e) {
+let t = l.Z.getInviteContext('Desktop Invite Modal', e);
+l.Z.acceptInvite({
+  inviteKey: e.code,
+  context: t,
+  callback: e => {
+    null != e && null != e.guild && null != e.channel && !__OVERLAY__ && l.Z.transitionToInvite(e);
+  }
+}).then(() => this.close(), e => {
+  i.Z.dispatch({
+    type: 'INVITE_MODAL_ERROR',
+    message: (0, r.O)(e.code)
+  });
+});
+  },
+  close() {
+i.Z.dispatch({
+  type: 'INVITE_MODAL_CLOSE'
+});
+  }
 };

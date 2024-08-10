@@ -9,9 +9,9 @@ var s = n(735250),
   r = n.n(i),
   l = n(477690),
   o = n(481060),
-  c = n(518738),
-  d = n(208567),
-  u = n(176278),
+  c = n(91218),
+  d = n(518738),
+  u = n(208567),
   _ = n(624138),
   I = n(689938),
   E = n(16501);
@@ -24,7 +24,7 @@ role: t,
 className: i,
 onClick: l,
 disabled: _ = !1
-  } = e, m = a.useRef(null), N = a.useMemo(() => null != t ? (0, c.Kz)(t, T) : null, [t]), S = null != N ? (0, s.jsx)(u.Z, {
+  } = e, m = a.useRef(null), N = a.useMemo(() => null != t ? (0, d.Kz)(t, T) : null, [t]), S = null != N ? (0, s.jsx)(c.Z, {
 enableTooltip: !1,
 className: E.icon,
 ...N
@@ -48,7 +48,7 @@ children: (0, s.jsxs)(o.Clickable, {
       className: E.preview,
       children: S
     }),
-    null != N ? (0, s.jsx)(d.S, {
+    null != N ? (0, s.jsx)(u.S, {
       className: E.uploaderIcon
     }) : null
   ]

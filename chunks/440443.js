@@ -11,5 +11,6 @@ e.exports = {
   footerButtonContainer: 'footerButtonContainer_ca37d0',
   footerNitro: 'footerNitro_ca37d0',
   footerText: 'footerText_ca37d0',
+  footerButtonBack: 'footerButtonBack_ca37d0',
   footerButton: 'footerButton_ca37d0'
 };

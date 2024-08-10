@@ -334,12 +334,12 @@ f(this, 'decoderBuckets', {
   }
 }
 class O extends v {
-  appendTargetRates(e, t, n) {
+  appendTargetRates(e, t, n, r) {
 if (this.statsWindow.length < 2)
   return;
-e = null != e ? e : 0, t = null != t ? t : 0, n = null != n ? n : 0;
-let r = (this.statsWindow[this.statsWindow.length - 1].timestamp - this.statsWindow[this.statsWindow.length - 2].timestamp) / 1000;
-this.targetFrames = this.targetFrames + e * r, this.targetBytesNetwork = this.targetBytesNetwork + t / 8 * r, this.targetBytesMax = this.targetBytesMax + n / 8 * r, this.targetBitrateHistogram.addSample(t);
+e = null != e ? e : 0, t = null != t ? t : 0, n = null != n ? n : 0, r = null != r ? r : 0;
+let i = (this.statsWindow[this.statsWindow.length - 1].timestamp - this.statsWindow[this.statsWindow.length - 2].timestamp) / 1000;
+this.targetFrames = this.targetFrames + e * i, this.targetBytesNetwork = this.targetBytesNetwork + t / 8 * i, this.targetBytesMax = this.targetBytesMax + n / 8 * i, this.outboundBytesAvailable = this.outboundBytesAvailable + r / 8 * i, this.targetBitrateHistogram.addSample(t), this.outboundBandwidthSurplus.addSample(r - t);
   }
   constructor(...e) {
 super(...e), f(this, 'encoderBuckets', {
@@ -353,6 +353,6 @@ super(...e), f(this, 'encoderBuckets', {
   vp8_libvpx: 0,
   uncategorized: 0,
   unknown: 0
-}), f(this, 'encoderCodec', 'UNKNOWN'), f(this, 'targetFrames', 0), f(this, 'targetBytesMax', 0), f(this, 'targetBytesNetwork', 0), f(this, 'targetBitrateHistogram', new _.b()), f(this, 'averageEncodeTime', 0), f(this, 'vmafScoreSum', 0), f(this, 'vmafScoreNum', 0), f(this, 'vmafHistogram', new _.b()), f(this, 'psnrDbSum', 0), f(this, 'psnrDbNum', 0), f(this, 'psnrHistogram', new _.b()), f(this, 'qualityDecodeErrors', 0), f(this, 'qualityDecoderReboots', 0), f(this, 'qualityScoreErrors', 0), f(this, 'qualityFrameDrops', 0), f(this, 'qualitySizeMismatches', 0), f(this, 'outboundSinkWantSum', 0), f(this, 'outboundSinkWantNum', 0), f(this, 'framesDroppedRateLimiter', null), f(this, 'framesDroppedEncoderQueue', null), f(this, 'framesDroppedCongestionWindow', null);
+}), f(this, 'encoderCodec', 'UNKNOWN'), f(this, 'targetFrames', 0), f(this, 'targetBytesMax', 0), f(this, 'targetBytesNetwork', 0), f(this, 'targetBitrateHistogram', new _.b()), f(this, 'outboundBytesAvailable', 0), f(this, 'outboundBandwidthSurplus', new _.b()), f(this, 'averageEncodeTime', 0), f(this, 'vmafScoreSum', 0), f(this, 'vmafScoreNum', 0), f(this, 'vmafHistogram', new _.b()), f(this, 'psnrDbSum', 0), f(this, 'psnrDbNum', 0), f(this, 'psnrHistogram', new _.b()), f(this, 'qualityDecodeErrors', 0), f(this, 'qualityDecoderReboots', 0), f(this, 'qualityScoreErrors', 0), f(this, 'qualityFrameDrops', 0), f(this, 'qualitySizeMismatches', 0), f(this, 'outboundSinkWantSum', 0), f(this, 'outboundSinkWantNum', 0), f(this, 'framesDroppedRateLimiter', null), f(this, 'framesDroppedEncoderQueue', null), f(this, 'framesDroppedCongestionWindow', null);
   }
 }

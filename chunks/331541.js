@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(393238),
   h = n(727637),
   E = n(100527),
-  I = n(906732),
-  m = n(676035),
+  m = n(906732),
+  I = n(676035),
   g = n(521868),
   p = n(299206),
   T = n(440051),
@@ -25,8 +25,8 @@ var i = n(735250),
   C = n(300284),
   N = n(680295),
   A = n(785717),
-  v = n(481046),
-  Z = n(304704),
+  v = n(221292),
+  Z = n(481046),
   L = n(27144),
   O = n(318661),
   R = n(78675),
@@ -173,10 +173,10 @@ onClose: n,
 setPopoutRef: s
   } = e, W = __OVERLAY__, q = (0, O.ZP)(t.id), er = (0, u.O)(), {
 analyticsLocations: el
-  } = (0, I.ZP)(E.Z.ACCOUNT_PROFILE_POPOUT), eo = (0, A.Q1)({
+  } = (0, m.ZP)(E.Z.ACCOUNT_PROFILE_POPOUT), eo = (0, A.ZB)({
 layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
 userId: t.id
-  }), ec = (0, m.a)(), ed = (0, c.e7)([F.Z], () => F.Z.getStatus(t.id)), eu = function(e, t) {
+  }), ec = (0, I.a)(), ed = (0, c.e7)([F.Z], () => F.Z.getStatus(t.id)), eu = function(e, t) {
 let n = T.Y.useExperiment({
     location: 'account popout'
   }).expiringStatus,
@@ -288,49 +288,43 @@ s
   let eE = e => {
   null == n || n(), (0, w.openUserProfileModal)({
     sourceAnalyticsLocations: el,
-    userId: t.id,
+    ...eo,
     ...e
   });
 },
 {
-  newActivityCardsEnabled: eI
-} = (0, Z.Z)({
-  location: 'AccountProfilePopout'
-}),
-{
-  pastActivityEnabled: em
+  newActivityCardsEnabled: em
 } = (0, L.z)({
   location: 'AccountProfilePopout'
 }),
 {
-  accountPopoutStatusEditEnabled: eg
-} = (0, v.K)({
+  accountPopoutStatusEditEnabled: eI
+} = (0, Z.K)({
   location: 'AccountProfilePopout'
 }),
-ep = (0, C.Z)({
+eg = (0, C.Z)({
   analyticsLocations: el
 }),
-eT = (0, S.p)(),
-eS = ed === J.Skl.DND,
-ef = (0, Q.g)(),
-eC = (0, g.o)({
+ep = (0, S.p)(),
+eT = ed === J.Skl.DND,
+eS = (0, Q.g)(),
+ef = (0, g.o)({
   focusedClassName: et.menuItemFocused,
   customStatus: ec,
   analyticsLocations: el,
-  trackUserProfileAction: eo
+  trackUserProfileAction: v.pQ
 }),
-eN = (0, p.Z)({
+eC = (0, p.Z)({
   id: t.id,
   label: ee.Z.Messages.COPY_ID_USER,
   showIconFirst: !0,
   focusedClassName: et.menuItemFocused
 }),
-eA = (0, c.e7)([Y.Z], () => Y.Z.hidePersonalInformation);
-  return (0, i.jsx)(I.Gt, {
+eN = (0, c.e7)([Y.Z], () => Y.Z.hidePersonalInformation);
+  return (0, i.jsx)(m.Gt, {
 value: el,
 children: (0, i.jsx)(A.Mt, {
-  layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
-  userId: t.id,
+  value: eo,
   children: (0, i.jsx)(d.Dialog, {
     ref: e_,
     'aria-label': t.username,
@@ -340,7 +334,7 @@ children: (0, i.jsx)(A.Mt, {
       displayProfile: q,
       profileType: $.y0.BITE_SIZE,
       children: [
-        !eg && (0, i.jsx)(G.Z, {
+        !eI && (0, i.jsx)(G.Z, {
           profileType: $.y0.BITE_SIZE,
           children: (0, i.jsx)(k.Z, {
             userId: t.id,
@@ -365,7 +359,7 @@ children: (0, i.jsx)(A.Mt, {
             (0, i.jsx)(M.Z, {
               user: t,
               profileType: $.y0.BITE_SIZE,
-              editEnabled: eg,
+              editEnabled: eI,
               onClose: n
             })
           ]
@@ -404,10 +398,10 @@ children: (0, i.jsx)(A.Mt, {
             (0, i.jsx)(H.Z, {
               user: t,
               bio: null == q ? void 0 : q.bio,
-              hidePersonalInformation: eA,
+              hidePersonalInformation: eN,
               onClose: n
             }),
-            eI || em ? (0, i.jsx)(D.Z, {
+            em ? (0, i.jsx)(D.Z, {
               user: t,
               currentUser: t,
               onClose: n
@@ -428,16 +422,16 @@ children: (0, i.jsx)(A.Mt, {
                     onClose: n,
                     onSelect: void 0,
                     children: [
-                      eg && (0, i.jsx)(d.MenuGroup, {
+                      eI && (0, i.jsx)(d.MenuGroup, {
                         children: (0, i.jsx)(d.MenuItem, {
                           id: 'edit-profile',
                           icon: d.PencilIcon,
                           label: ee.Z.Messages.EDIT_PROFILE,
                           action: () => {
-                            eo({
+                            (0, v.pQ)({
                               action: 'EDIT_PROFILE',
                               analyticsLocations: el
-                            }), ep();
+                            }), eg();
                           },
                           showIconFirst: !0,
                           focusedClassName: et.menuItemFocused,
@@ -455,7 +449,7 @@ children: (0, i.jsx)(A.Mt, {
                             },
                             children: [
                               (0, K.u5)(ed),
-                              eT || eS ? (0, i.jsx)(d.BellSlashIcon, {
+                              ep || eT ? (0, i.jsx)(d.BellSlashIcon, {
                                 size: 'xxs'
                               }) : null
                             ]
@@ -463,9 +457,10 @@ children: (0, i.jsx)(A.Mt, {
                           focusedClassName: et.menuItemFocused,
                           subMenuIconClassName: et.subMenuIcon,
                           action: o.tq ? function() {
-                            eo({
+                            (0, v.pQ)({
                               action: 'PRESS_SET_STATUS',
-                              analyticsLocations: el
+                              analyticsLocations: el,
+                              ...eo
                             }), (0, d.openModalLazy)(() => new Promise(e => {
                               e(e => (0, i.jsx)(d.ModalRoot, {
                                 ...e,
@@ -501,8 +496,8 @@ children: (0, i.jsx)(A.Mt, {
                           children: o.tq ? void 0 : eu
                         }, 'status-picker')
                       }),
-                      !eg && (0, i.jsx)(d.MenuGroup, {
-                        children: eC
+                      !eI && (0, i.jsx)(d.MenuGroup, {
+                        children: ef
                       })
                     ]
                   })
@@ -526,16 +521,16 @@ children: (0, i.jsx)(A.Mt, {
                           icon: d.UserCircleIcon,
                           showIconFirst: !0,
                           action: () => {
-                            eo({
+                            (0, v.pQ)({
                               action: 'PRESS_SWITCH_ACCOUNTS',
                               analyticsLocations: el
                             }), (0, X.Z)();
                           },
-                          children: ef
+                          children: eS
                         })
                       }),
                       (0, i.jsx)(d.MenuGroup, {
-                        children: eN
+                        children: eC
                       })
                     ]
                   })

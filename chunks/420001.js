@@ -48,7 +48,7 @@ let d = (0, o.hV)(e, c.cleanedQuery),
     commands: _,
     sections: E
   } = i.JT(e, {
-    commandType: r.yU.CHAT,
+    commandTypes: [r.yU.CHAT],
     text: d.text
   }, {
     limit: f.AQ,

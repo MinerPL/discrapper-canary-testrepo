@@ -12,11 +12,11 @@ var i = n(735250),
   c = n(481060),
   d = n(183126),
   u = n(209613),
-  _ = n(797614),
-  h = n(151827),
+  _ = n(82295),
+  h = n(797614),
   E = n(626135),
-  I = n(26373),
-  m = n(486622),
+  m = n(26373),
+  I = n(486622),
   g = n(922409),
   p = n(727813),
   T = n(355350),
@@ -31,7 +31,7 @@ function Z() {
   let e = a.useRef(null),
 t = (0, p.Z)(),
 n = (0, T.w)(),
-s = (0, I.V)(),
+s = (0, m.V)(),
 Z = (0, d.N)(),
 L = (0, u.Z)('message-requests-spam-list'),
 {
@@ -42,7 +42,7 @@ R = a.useCallback(() => {
 }, []),
 {
   rejectAll: x
-} = (0, m.m)({
+} = (0, I.m)({
   onError: R
 }),
 b = a.useCallback(() => {
@@ -54,7 +54,7 @@ b = a.useCallback(() => {
   a.useEffect(() => {
 E.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, {
   num_spam_message_requests: n
-}), _.Z.increment({
+}), h.Z.increment({
   name: o.V.SPAM_MESSAGE_REQUEST_VIEW
 });
   }, []);
@@ -78,7 +78,7 @@ E.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, {
   s,
   O
 ]),
-M = a.useCallback(() => (0, i.jsxs)(h.Z, {
+M = a.useCallback(() => (0, i.jsxs)(_.Z, {
   className: v.sectionTitle,
   children: [
     A.Z.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({

@@ -47,7 +47,7 @@ children: [
   (0, s.jsx)('div', {
     className: T.actions,
     children: (0, s.jsx)(d.Z, {
-      icon: o.CloseSmallIcon,
+      icon: o.XSmallIcon,
       className: T.__invalid_actionDeny,
       tooltip: E.Z.Messages.FAMILY_CENTER_LINK_ACTION_DISCONNECT,
       onClick: I

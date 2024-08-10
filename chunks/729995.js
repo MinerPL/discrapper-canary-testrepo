@@ -321,7 +321,7 @@ guildId: t
   return null == n || n.verificationLevel < C.sFg.VERY_HIGH ? null : (0, s.jsxs)('div', {
 className: p.rolesWarning,
 children: [
-  (0, s.jsx)(i.CircleExclamationPointIcon, {
+  (0, s.jsx)(i.CircleWarningIcon, {
     size: 'xs',
     color: 'currentColor',
     className: p.warningIcon

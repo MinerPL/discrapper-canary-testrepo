@@ -4,21 +4,21 @@ var n = a(735250),
   r = a(120356),
   t = a.n(r),
   i = a(643872),
-  E = a(481060),
-  o = a(570140),
+  o = a(481060),
+  E = a(570140),
   c = a(652898),
   _ = a(93093),
   I = a(768581),
   u = a(810568),
-  A = a(981631),
-  d = a(689938),
-  O = a(421377);
+  d = a(981631),
+  A = a(689938),
+  R = a(421377);
 let N = [
 i.p.OFFICIAL,
 i.p.TWITTER,
 i.p.YOUTUBE
   ],
-  R = e => {
+  O = e => {
 let {
   invite: s,
   trackClick: a
@@ -37,32 +37,33 @@ let c = I.ZP.getGuildIconURL({
   size: 32
 });
 return (0, n.jsxs)('div', {
-  className: t()(O.column),
+  className: t()(R.column),
   children: [
-    (0, n.jsx)(E.Text, {
+    (0, n.jsx)(o.Heading, {
       variant: 'text-xs/semibold',
-      children: d.Z.Messages.GAME_PROFILE_OFFICIAL_GUILD
+      color: 'header-secondary',
+      children: A.Z.Messages.GAME_PROFILE_OFFICIAL_GUILD
     }),
     (0, n.jsxs)('div', {
-      className: t()(O.row, O.gapMd),
+      className: t()(R.row, R.gapMd),
       children: [
         (0, n.jsx)('img', {
-          className: O.icon,
+          className: R.icon,
           src: c,
-          alt: d.Z.Messages.GAME_PROFILE_GUILD_ICON_ALT.format({
+          alt: A.Z.Messages.GAME_PROFILE_GUILD_ICON_ALT.format({
             guildName: r.name
           })
         }),
         (0, n.jsxs)('div', {
-          className: t()(O.gapNone),
+          className: t()(R.gapNone),
           children: [
-            (0, n.jsx)(E.Text, {
+            (0, n.jsx)(o.Text, {
               variant: 'text-sm/normal',
               children: r.name
             }),
-            null != l && (0, n.jsx)(E.Text, {
+            null != l && (0, n.jsx)(o.Text, {
               variant: 'text-xxs/normal',
-              children: d.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+              children: A.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                 count: l
               })
             })
@@ -70,17 +71,17 @@ return (0, n.jsxs)('div', {
         })
       ]
     }),
-    (0, n.jsx)(E.Button, {
-      color: E.ButtonColors.PRIMARY,
+    (0, n.jsx)(o.Button, {
+      color: o.ButtonColors.PRIMARY,
       onClick: () => {
-        a(u.as.JoinOfficialServer), o.Z.dispatch({
+        a(u.as.JoinOfficialServer), E.Z.dispatch({
           type: 'INVITE_MODAL_OPEN',
           invite: s,
           code: s.code,
-          context: A.IlC.APP
+          context: d.IlC.APP
         });
       },
-      children: i ? d.Z.Messages.JOINED_GUILD : d.Z.Messages.JOIN_GUILD
+      children: i ? A.Z.Messages.JOINED_GUILD : A.Z.Messages.JOIN_GUILD
     })
   ]
 });
@@ -94,7 +95,7 @@ let {
   category: s
 } = e;
 return s === i.p.DISCORD;
-  }), [o, _] = l.useState();
+  }), [E, _] = l.useState();
   if (l.useEffect(() => {
   let e = async e => {
     let s = e.split('/').pop();
@@ -113,52 +114,53 @@ let {
 return N.includes(s);
   }).sort((e, s) => e.category - s.category);
   return (0, n.jsxs)('div', {
-className: t()(O.column),
+className: t()(R.column),
 children: [
-  null != o && (0, n.jsx)(R, {
-    invite: o,
+  null != E && (0, n.jsx)(O, {
+    invite: E,
     trackClick: a
   }),
   (0, n.jsxs)('div', {
-    className: t()(O.column, O.gapSm),
+    className: t()(R.column, R.gapSm),
     children: [
-      (0, n.jsx)(E.Text, {
+      (0, n.jsx)(o.Heading, {
         variant: 'text-xs/semibold',
-        children: d.Z.Messages.GAME_PROFILE_LINKS
+        color: 'header-secondary',
+        children: A.Z.Messages.GAME_PROFILE_LINKS
       }),
       (0, n.jsx)('div', {
-        className: O.row,
+        className: R.row,
         children: I.map(e => {
           let s, l, {
               category: r,
               url: t
             } = e,
-            o = null;
+            E = null;
           switch (r) {
             case i.p.OFFICIAL:
-              o = (0, n.jsx)(E.GlobeEarthIcon, {
-                colorClass: O.linkIcon
-              }), l = u.as.WebsiteLink, s = d.Z.Messages.GAME_PROFILE_LINK_OFFICIAL;
+              E = (0, n.jsx)(o.GlobeEarthIcon, {
+                colorClass: R.linkIcon
+              }), l = u.as.WebsiteLink, s = A.Z.Messages.GAME_PROFILE_LINK_OFFICIAL;
               break;
             case i.p.TWITTER:
-              o = (0, n.jsx)(E.XNeutralIcon, {
-                colorClass: O.linkIcon
-              }), l = u.as.XLink, s = d.Z.Messages.GAME_PROFILE_LINK_TWITTER;
+              E = (0, n.jsx)(o.XNeutralIcon, {
+                colorClass: R.linkIcon
+              }), l = u.as.XLink, s = A.Z.Messages.GAME_PROFILE_LINK_TWITTER;
               break;
             case i.p.YOUTUBE:
-              l = u.as.YouTubeLink, o = (0, n.jsx)(E.YouTubeIcon, {
-                colorClass: O.linkIcon
-              }), s = d.Z.Messages.GAME_PROFILE_LINK_YOUTUBE;
+              l = u.as.YouTubeLink, E = (0, n.jsx)(o.YoutubeNeutralIcon, {
+                colorClass: R.linkIcon
+              }), s = A.Z.Messages.GAME_PROFILE_LINK_YOUTUBE;
           }
-          return null != o ? (0, n.jsx)(E.Anchor, {
-            className: O.linkAnchor,
+          return null != E ? (0, n.jsx)(o.Anchor, {
+            className: R.linkAnchor,
             title: s,
             href: t,
             onClick: () => {
               a(l);
             },
             target: '_blank',
-            children: o
+            children: E
           }, t) : null;
         })
       })

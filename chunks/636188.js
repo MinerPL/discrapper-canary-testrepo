@@ -13,9 +13,9 @@ var t = s(735250),
   d = s(2052),
   u = s(100527),
   _ = s(906732),
-  E = s(142497),
-  O = s(810788),
-  g = s(810090),
+  E = s(70097),
+  O = s(142497),
+  g = s(810788),
   m = s(626135),
   I = s(768581),
   p = s(709054),
@@ -124,7 +124,7 @@ hotspotLocation: C,
 ...M
   } = e, R = (0, d.O)(), {
 analyticsLocations: T
-  } = (0, _.ZP)(u.Z.VIDEO_BACKGROUND_IMAGE_OPTION), f = (0, i.e7)([O.Z], () => null != C && O.Z.hasHotspot(C)), U = A ? (0, t.jsx)(g.Z, {
+  } = (0, _.ZP)(u.Z.VIDEO_BACKGROUND_IMAGE_OPTION), f = (0, i.e7)([g.Z], () => null != C && g.Z.hasHotspot(C)), U = A ? (0, t.jsx)(E.Z, {
 className: j.backgroundImageOption,
 src: a,
 loop: !0,
@@ -137,7 +137,7 @@ source: a
   });
 
   function B() {
-null != C && f && (E.Kw(C), m.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
+null != C && f && (O.Kw(C), m.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
   type: k.cd.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET,
   location: R.location,
   location_stack: T
@@ -206,10 +206,10 @@ function B(e) {
 onClick: n,
 tooltipText: s,
 disabled: a = !1
-  } = e, o = (0, i.e7)([O.Z], () => O.Z.hasHotspot(M.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
+  } = e, o = (0, i.e7)([g.Z], () => g.Z.hasHotspot(M.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
 
   function l() {
-E.Kw(M.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW);
+O.Kw(M.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW);
   }
   let r = o ? D.Z.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_NEW_ANIMATED_TOOLTIP : s;
   return (0, t.jsxs)(c.TooltipContainer, {

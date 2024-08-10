@@ -167,7 +167,7 @@ children: [
   (0, n.jsx)(d.Clickable, {
     onClick: U,
     className: j.closeButton,
-    children: (0, n.jsx)(d.CloseSmallIcon, {
+    children: (0, n.jsx)(d.XSmallIcon, {
       size: 'xxs',
       color: 'currentColor'
     })

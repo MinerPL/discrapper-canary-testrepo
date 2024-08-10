@@ -30,8 +30,8 @@ partnerGame: n
 return null;
   let {
 body: E,
-imgSrc: I,
-imgStyle: m
+imgSrc: m,
+imgStyle: I
   } = _(h.drop, h.config.streamLengthRequirement), g = () => {
 t(c.L.DISMISS);
   };
@@ -39,15 +39,15 @@ t(c.L.DISMISS);
 className: u.container,
 children: [
   (0, i.jsx)('img', {
-    src: I,
+    src: m,
     alt: '',
-    className: m
+    className: I
   }),
   (0, i.jsx)(s.Clickable, {
     className: u.__invalid_buttonClose,
     'aria-label': d.Z.Messages.CLOSE,
     onClick: g,
-    children: (0, i.jsx)(s.CloseSmallIcon, {
+    children: (0, i.jsx)(s.XSmallIcon, {
       size: 'xs',
       color: 'currentColor',
       className: u.closeIcon

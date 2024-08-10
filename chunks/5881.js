@@ -35,17 +35,17 @@ location: 'quests_logging'
 autoTrackExposure: !1
   }).enabled;
 
-function l(e) {
+function l() {
   let {
-quest: t,
-location: n
-  } = e, i = o(), s = null == t ? void 0 : t.config.messages.questName, l = 'QuestLogger '.concat(n).concat(null != s ? ' ('.concat(s, ')') : ''), u = new r.Y(l);
+quest: e,
+location: t
+  } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, n = o(), i = null == e ? void 0 : e.config.messages.questName, s = 'QuestLogger'.concat(null != t ? '-'.concat(t) : '').concat(null != i ? '-'.concat(i, ')') : ''), l = new r.Y(s);
   return {
-log: i ? u.log : a.dG,
-warn: i ? u.warn : a.dG,
-error: i ? u.error : a.dG,
-info: i ? u.info : a.dG,
-verbose: i ? u.verbose : a.dG,
-trace: i ? u.trace : a.dG
+log: n ? l.log : a.dG,
+warn: n ? l.warn : a.dG,
+error: n ? l.error : a.dG,
+info: n ? l.info : a.dG,
+verbose: n ? l.verbose : a.dG,
+trace: n ? l.trace : a.dG
   };
 }

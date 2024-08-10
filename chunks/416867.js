@@ -6,8 +6,8 @@ return u;
 var s = t(735250);
 t(470079);
 var o = t(481060),
-  r = t(22238),
-  a = t(153124),
+  r = t(313201),
+  a = t(192635),
   l = t(689938),
   i = t(411094);
 
@@ -18,7 +18,7 @@ Icon: t,
 title: c,
 body: u,
 onClose: d
-  } = e, E = (0, a.Dt)();
+  } = e, E = (0, r.Dt)();
   return (0, s.jsxs)(o.ModalRoot, {
 className: i.container,
 transitionState: n,
@@ -26,7 +26,7 @@ transitionState: n,
 children: [
   (0, s.jsxs)(o.ModalContent, {
     children: [
-      (0, s.jsx)(r.Z, {
+      (0, s.jsx)(a.Z, {
         Icon: t
       }),
       (0, s.jsx)(o.Spacer, {

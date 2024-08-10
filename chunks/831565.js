@@ -1,8 +1,8 @@
 n.d(t, {
-  Sv: function() {
+  a: function() {
 return i;
   },
-  Y$: function() {
+  v: function() {
 return o;
   }
 });
@@ -11,50 +11,41 @@ let s = (0, n(818083).B)({
   id: '2024-07_global_discovery',
   label: 'Global Discovery',
   defaultConfig: {
-mobileTabEnabled: !1,
-discoverButtonTakeoverEnabled: !1
+enabled: !1
   },
   treatments: [{
-  id: 1,
-  label: 'Enable mobile tab',
-  config: {
-    mobileTabEnabled: !0,
-    discoverButtonTakeoverEnabled: !1
-  }
-},
-{
-  id: 2,
-  label: 'Enable discover button takeover',
-  config: {
-    mobileTabEnabled: !1,
-    discoverButtonTakeoverEnabled: !0
-  }
-},
-{
-  id: 3,
-  label: 'Enable mobile tab and discover button takeover',
-  config: {
-    mobileTabEnabled: !0,
-    discoverButtonTakeoverEnabled: !0
-  }
+id: 1,
+label: 'Enabled',
+config: {
+  enabled: !0
 }
-  ]
+  }]
 });
 
 function o(e) {
-  let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  return s.useExperiment({
-location: e
+  let {
+location: t,
+autoTrackExposure: n = !0
+  } = e, {
+enabled: o
+  } = s.useExperiment({
+location: t
   }, {
-autoTrackExposure: t
-  }).discoverButtonTakeoverEnabled;
+autoTrackExposure: n
+  });
+  return o;
 }
 
 function i(e) {
-  let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  return s.getCurrentConfig({
-location: e
+  let {
+location: t,
+autoTrackExposure: n = !0
+  } = e, {
+enabled: o
+  } = s.getCurrentConfig({
+location: t
   }, {
-autoTrackExposure: t
-  }).discoverButtonTakeoverEnabled;
+autoTrackExposure: n
+  });
+  return o;
 }

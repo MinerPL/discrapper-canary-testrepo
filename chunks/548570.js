@@ -369,7 +369,7 @@ let {
 this.token = o, k.verbose('[IDENTIFY]');
 let c = {
     token: o,
-    capabilities: C.Z,
+    capabilities: (0, C.t)(),
     properties: l,
     presence: u,
     compress: this.compressionHandler.usesLegacyCompression(),

@@ -38,12 +38,12 @@ children: (0, i.jsxs)(h.WM, {
         color: 'text-normal',
         children: m.Z.Messages.MEMBER_VERIFICATION_ACCOUNT_VERIFIED
       }),
-      description: f ? (0, i.jsx)(s.CheckmarkBoldIcon, {
+      description: f ? (0, i.jsx)(s.CheckmarkLargeBoldIcon, {
         size: 'custom',
         width: h.Mn,
         height: h.Mn,
         color: s.tokens.colors.INFO_POSITIVE_FOREGROUND
-      }) : (0, i.jsx)(s.CloseLargeBoldIcon, {
+      }) : (0, i.jsx)(s.XLargeBoldIcon, {
         size: 'custom',
         width: h.Mn,
         height: h.Mn,
@@ -61,12 +61,12 @@ children: (0, i.jsxs)(h.WM, {
         color: 'text-normal',
         children: m.Z.Messages.GUILD_MEMBER_MOD_VIEW_AGREE_TO_RULES
       }),
-      description: E === r.qc.AGREED ? (0, i.jsx)(s.CheckmarkBoldIcon, {
+      description: E === r.qc.AGREED ? (0, i.jsx)(s.CheckmarkLargeBoldIcon, {
         size: 'custom',
         width: h.Mn,
         height: h.Mn,
         color: s.tokens.colors.INFO_POSITIVE_FOREGROUND
-      }) : (0, i.jsx)(s.CloseLargeBoldIcon, {
+      }) : (0, i.jsx)(s.XLargeBoldIcon, {
         size: 'custom',
         width: h.Mn,
         height: h.Mn,

@@ -54,7 +54,7 @@ m.Z
 if (0 === n.length && r.commands !== g.L8.OLD_BUILT_INS)
   return O;
 if (r.commands === g.L8.OLD_BUILT_INS) {
-  let r = (0, l.Kh)(s.yU.CHAT, !1, !1),
+  let r = (0, l.Kh)([s.yU.CHAT], !1, !1),
     i = RegExp('^'.concat(I.Z.escape(n)), 'i'),
     a = (0, f.Dd)(r, i, {
       channel: e,
@@ -75,7 +75,7 @@ let a = (0, h.hV)(e, n),
     commands: o,
     sections: u
   } = c.JT(e, {
-    commandType: s.yU.CHAT,
+    commandTypes: [s.yU.CHAT],
     text: a.text
   }, {
     limit: g.AQ,

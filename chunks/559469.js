@@ -37,6 +37,7 @@ branding: {
   secondaryColor: s.LD[n].secondary
 },
 wildcardDescriptors: s.LK,
+gameActivity: {},
 ...l
   };
 }

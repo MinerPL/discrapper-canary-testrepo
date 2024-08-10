@@ -14,21 +14,21 @@ return c;
 });
 var i = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(702346),
+var a = n(481060),
+  s = n(834129),
   r = n(689938),
   l = n(721699);
 
 function o(e) {
   let {
 message: t,
-compact: s,
+compact: a,
 onClick: o
   } = e;
-  return (0, i.jsx)(a.Z, {
+  return (0, i.jsx)(s.Z, {
 icon: n(508933),
 timestamp: t.timestamp,
-compact: s,
+compact: a,
 contentClassName: l.messageContent,
 children: r.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_DISQUALIFIED.format({
   onClick: o
@@ -39,12 +39,12 @@ children: r.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_DISQUALIFIED.format({
 function c(e) {
   let {
 message: t,
-compact: s
+compact: a
   } = e;
-  return (0, i.jsx)(a.Z, {
+  return (0, i.jsx)(s.Z, {
 icon: n(324606),
 timestamp: t.timestamp,
-compact: s,
+compact: a,
 contentClassName: l.messageContent,
 children: r.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_REQUALIFIED
   });
@@ -55,8 +55,8 @@ function u(e) {
 message: t,
 compact: n
   } = e;
-  return (0, i.jsx)(a.Z, {
-iconNode: (0, i.jsx)(s.CircleExclamationPointIcon, {
+  return (0, i.jsx)(s.Z, {
+iconNode: (0, i.jsx)(a.CircleWarningIcon, {
   size: 'custom',
   width: 20,
   height: 20,
@@ -75,8 +75,8 @@ function d(e) {
 message: t,
 compact: n
   } = e;
-  return (0, i.jsx)(a.Z, {
-iconNode: (0, i.jsx)(s.CircleExclamationPointIcon, {
+  return (0, i.jsx)(s.Z, {
+iconNode: (0, i.jsx)(a.CircleWarningIcon, {
   size: 'custom',
   width: 20,
   height: 20,

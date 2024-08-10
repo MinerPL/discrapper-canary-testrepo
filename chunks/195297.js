@@ -10,8 +10,8 @@ var o = n(735250),
   l = n(481060),
   s = n(100527),
   c = n(906732),
-  d = n(455708),
-  u = n(153124),
+  d = n(313201),
+  u = n(455708),
   _ = n(626135),
   g = n(488499),
   E = n(58384),
@@ -27,7 +27,7 @@ onComplete: I,
 uploadType: h,
 showUpsellHeader: p,
 analyticsPage: R
-  } = e, [m, x] = t.useState(!1), B = (0, l.useModalContext)(), b = (0, u.Dt)(), {
+  } = e, [m, x] = t.useState(!1), B = (0, l.useModalContext)(), b = (0, d.Dt)(), {
 analyticsLocations: A
   } = (0, c.ZP)(s.Z.GIF_PICKER);
   async function C(e) {
@@ -43,7 +43,10 @@ let t = (0, E.Q)(i),
 r(), (0, l.openModalLazy)(async () => {
   let {
     default: e
-  } = await n.e('75409').then(n.bind(n, 850085));
+  } = await Promise.all([
+    n.e('48017'),
+    n.e('81085')
+  ]).then(n.bind(n, 850085));
   return i => (0, o.jsx)(e, {
     imgURI: t,
     file: new File([s], 'tenor.gif', {
@@ -96,7 +99,7 @@ children: (0, o.jsxs)(l.ModalRoot, {
     }),
     (0, o.jsxs)('div', {
       children: [
-        (0, o.jsx)(d.Z, {
+        (0, o.jsx)(u.Z, {
           className: a()(N.gifPicker, {
             [N.loadingOverlay]: m
           }),

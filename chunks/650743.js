@@ -69,7 +69,7 @@ b = null != y && (0, p.isWindows)() && !L ? g.Z.Messages.SOUNDBOARD_KEYBIND_HINT
   return null == b ? null : (0, r.jsxs)('div', {
 className: S.keybindHint,
 children: [
-  (0, r.jsx)(s.CircleExclamationPointIcon, {
+  (0, r.jsx)(s.CircleWarningIcon, {
     size: 'custom',
     width: 20,
     height: 20,
@@ -85,7 +85,7 @@ children: [
   (0, r.jsx)(s.Clickable, {
     className: S.closeButton,
     onClick: () => (0, u.EW)(a.z.SOUNDBOARD_KEYBIND_TIP),
-    children: (0, r.jsx)(s.CloseSmallIcon, {
+    children: (0, r.jsx)(s.XSmallIcon, {
       size: 'xs',
       color: 'currentColor'
     })

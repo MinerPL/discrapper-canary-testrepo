@@ -87,7 +87,7 @@ return (0, r.jsxs)('div', {
     (0, r.jsx)(o.Clickable, {
       className: g.upsellClose,
       onClick: A,
-      children: (0, r.jsx)(o.CloseSmallIcon, {
+      children: (0, r.jsx)(o.XSmallIcon, {
         size: 'md',
         color: 'currentColor'
       })

@@ -17,8 +17,8 @@ var a = n(735250),
   _ = n(442837),
   g = n(704215),
   x = n(481060),
-  C = n(561472),
-  f = n(393238),
+  f = n(561472),
+  C = n(393238),
   p = n(607070),
   T = n(933557),
   I = n(243778),
@@ -73,7 +73,7 @@ sidebarState: s
   } = e;
   return (0, a.jsx)(X.oL, {
 createStore: () => (0, X.NU)(t),
-children: (0, a.jsx)(ef, {
+children: (0, a.jsx)(eC, {
   channel: t,
   guild: n,
   sidebarState: s
@@ -135,7 +135,7 @@ function ex(e, t) {
   return 'card-'.concat(e, '-').concat(t);
 }
 
-function eC(e) {
+function ef(e) {
   if ('string' == typeof e) {
 let t = e.match(/card-{\d+}-({\d+})$/);
 return null == t ? null : t[1];
@@ -143,7 +143,7 @@ return null == t ? null : t[1];
   return null;
 }
 
-function ef(e) {
+function eC(e) {
   let {
 channel: t,
 sidebarState: n
@@ -170,7 +170,7 @@ return {
   }, c.Z), {
 activeThreadIds: m,
 archivedThreadIds: g,
-searchResults: f,
+searchResults: C,
 canLoadMore: T,
 loadMore: I,
 activeThreadsLoading: E,
@@ -272,10 +272,10 @@ $ = s.useRef(null),
   guildId: t.guild_id
 }),
 en = w === h.X.GRID,
-ed = null != f,
+ed = null != C,
 e_ = s.useRef(null),
 {
-  containerRef: ef,
+  containerRef: eC,
   containerWidth: eE
 } = (0, ea.Z)();
   s.useEffect(() => () => {
@@ -324,7 +324,7 @@ if (en) {
   else if (ed)
     return [
       1,
-      f.length + eA,
+      C.length + eA,
       0
     ];
   else
@@ -348,7 +348,7 @@ if (!J)
 else if (ed)
   return [
     1,
-    f.length,
+    C.length,
     0,
     ev
   ];
@@ -367,7 +367,7 @@ g.length,
 K,
 J,
 ev,
-f,
+C,
 eS,
 eM,
 eA
@@ -386,7 +386,7 @@ if (!J)
 if (ed)
   return [
     [],
-    f,
+    C,
     [],
     []
   ];
@@ -401,7 +401,7 @@ else
 ed,
 K,
 J,
-f,
+C,
 m,
 g
   ]), eO = s.useCallback((e, n) => {
@@ -424,7 +424,7 @@ e_
 channel: t,
 isEmpty: !y,
 isSearchLoading: P,
-numResults: null == f ? void 0 : f.length,
+numResults: null == C ? void 0 : C.length,
 coords: n,
 onHeightChange: eL,
 children: !j && (0, a.jsx)(W.Z, {
@@ -440,7 +440,7 @@ coords: n
   }, 'archived-missing-reading-history-perm'), [
 ed,
 J,
-f,
+C,
 K,
 t,
 y,
@@ -484,7 +484,7 @@ let {
 })(), [
   n,
   h
-]), C = s.useCallback(e => d(e.section, void 0, () => {
+]), f = s.useCallback(e => d(e.section, void 0, () => {
   if (3 === e.section)
     return __OVERLAY__ ? null : (0, a.jsx)('div', {
       'data-item-role': 'item',
@@ -508,7 +508,7 @@ let {
   r,
   u,
   m
-]), f = s.useCallback((e, t) => {
+]), C = s.useCallback((e, t) => {
   if (0 === e)
     return o + c;
   let n = i[r[e][t]];
@@ -522,9 +522,9 @@ let {
 return {
   updateListScrollerRef: _,
   renderListSection: g,
-  renderListItem: C,
+  renderListItem: f,
   getListSectionHeight: s.useCallback(e => 2 === e && n ? 40 : 0, [n]),
-  getListItemHeight: f
+  getListItemHeight: C
 };
   }({
 listRef: $,
@@ -560,7 +560,7 @@ let {
   headerHeight: _
 } = e, g = s.useRef(null), x = s.useCallback(e => {
   t.current = e, g.current = null == e ? void 0 : e.getScrollerNode();
-}, [t]), C = s.useCallback((e, n) => {
+}, [t]), f = s.useCallback((e, n) => {
   let {
     current: a
   } = t;
@@ -582,12 +582,12 @@ let {
         });
       });
     }
-  }), h.current = eC(n);
+  }), h.current = ef(n);
 }, [
   t,
   h
-]), f = s.useCallback(e => {
-  let t = eC(e);
+]), C = s.useCallback(e => {
+  let t = ef(e);
   if (null == t)
     return;
   let n = Z.Z.getChannel(t);
@@ -642,8 +642,8 @@ return {
   updateMasonryListScrollerRef: x,
   masonryListContainerRef: g,
   focusedThreadId: h,
-  handleGridFocus: C,
-  handleGridSelect: f,
+  handleGridFocus: f,
+  handleGridSelect: C,
   getItemKey: p,
   renderGridSection: T,
   renderGridItem: E,
@@ -759,11 +759,11 @@ e1 = O.ZP.getSidebarState(t.id),
 e6 = null != e1 && (0, O.D5)(e1);
   return (0, a.jsx)('div', {
 className: ec.container,
-ref: ef,
+ref: eC,
 children: (0, a.jsx)(x.FocusJumpSection, {
   children: e => (0, a.jsxs)(a.Fragment, {
     children: [
-      u && (0, a.jsx)(C.Z, {
+      u && (0, a.jsx)(f.Z, {
         channel: t,
         draftType: L.d.FirstThreadMessage,
         className: ec.uploadArea,
@@ -903,7 +903,7 @@ function eN(e) {
   var t, n, r;
   let {
 channel: i,
-isEmpty: C,
+isEmpty: f,
 isSearchLoading: T,
 numResults: b,
 children: v,
@@ -946,7 +946,7 @@ ea && er(!0);
   let {
 ref: em,
 height: eh
-  } = (0, f.Z)();
+  } = (0, C.Z)();
   s.useEffect(() => {
 null != eh && M(eh);
   }, [
@@ -963,7 +963,7 @@ Y
   ]);
   s.useLayoutEffect(e_, [
 e_,
-C,
+f,
 ed,
 k
   ]), (0, D.yp)({
@@ -972,23 +972,23 @@ handler: e_
   });
   let eg = (0, _.e7)([w.Z], () => w.Z.getUploads(i.id, L.d.FirstThreadMessage)),
 ex = (0, B.ql)(i),
-eC = s.useRef(null),
 ef = s.useRef(null),
+eC = s.useRef(null),
 [ep, eT] = s.useState(0),
 {
   width: eI
 } = (0, _.e7)([y.Z], () => y.Z.windowSize()),
-eN = null === (n = eC.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.width,
+eN = null === (n = ef.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.width,
 ev = s.useRef(null);
   s.useLayoutEffect(() => {
 var e;
-let t = ef.current,
+let t = eC.current,
   n = null == t ? void 0 : null === (e = t.children) || void 0 === e ? void 0 : e[0];
-if (null != eC.current && null != n && null != n.children) {
+if (null != ef.current && null != n && null != n.children) {
   let {
     left: e,
     top: t
-  } = eC.current.getBoundingClientRect(), a = 0;
+  } = ef.current.getBoundingClientRect(), a = 0;
   for (let s of n.children) {
     let {
       right: n,
@@ -1159,7 +1159,7 @@ children: (0, a.jsxs)(D.I3, {
         }) : (0, a.jsxs)('div', {
           className: ec.startPostHelp,
           children: [
-            (0, a.jsx)(x.CircleExclamationPointIcon, {
+            (0, a.jsx)(x.CircleWarningIcon, {
               size: 'custom',
               color: 'currentColor',
               height: 14,
@@ -1181,7 +1181,7 @@ children: (0, a.jsxs)(D.I3, {
     }),
     (0, a.jsxs)('div', {
       className: ec.tagsContainer,
-      ref: eC,
+      ref: ef,
       children: [
         (0, a.jsx)(eb, {
           channel: i
@@ -1193,7 +1193,7 @@ children: (0, a.jsxs)(D.I3, {
             }),
             (0, a.jsx)('div', {
               className: ec.tagList,
-              ref: ef,
+              ref: eC,
               children: (0, a.jsx)(d.bG, {
                 navigator: ej,
                 children: (0, a.jsx)(d.SJ, {

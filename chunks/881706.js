@@ -6,9 +6,9 @@ return s;
 var r = n(729594);
 let i = new Set(n(821445)),
   a = {
-'github.com': RegExp('\\/releases\\S*\\/download'),
-'bitbucket.org': RegExp('\\/downloads\\S*\\/[^\\/]*'),
-'gitlab.com': RegExp('\\/downloads\\S*\\/[^\\/]*')
+'github.com': RegExp('/releases\\S*/download|archive/refs/\\S*|/i/raw/i/\\S*|/user-attachments\\S*'),
+'bitbucket.org': RegExp('/downloads\\S*/[^/]*'),
+'gitlab.com': RegExp('/downloads\\S*/[^/]*')
   };
 
 function s(e) {

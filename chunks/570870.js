@@ -36,7 +36,7 @@ m = (0, E.Z)({
   sectionDescriptors: R,
   loading: v
 } = u.wi(f, {
-  commandType: t
+  commandTypes: [t]
 }, {
   limit: N.lr
 }),

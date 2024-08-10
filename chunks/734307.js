@@ -2,8 +2,8 @@ t(47120);
 var i, l, E, a, r = t(392711),
   o = t.n(r),
   _ = t(442837),
-  u = t(570140),
-  d = t(317381),
+  d = t(570140),
+  u = t(317381),
   s = t(430198),
   c = t(924301),
   C = t(601070),
@@ -82,7 +82,7 @@ id: n
   return Z.nonPositionalChannelIdUpdate(n);
 }
 
-function y() {
+function F() {
   let e = P.Z.getChannelId(),
 n = P.Z.getVoiceChannelId(),
 t = m !== e || H !== n;
@@ -96,7 +96,7 @@ null != e && Z.nonPositionalChannelIdUpdate(e) && (t = !0);
   }), m = e, H = n, !0);
 }
 
-function F(e) {
+function y(e) {
   let {
 id: n
   } = e, t = L.Z.getChannel(n);
@@ -122,7 +122,7 @@ guildScheduledEvent: n
 }
 class K extends(i = _.ZP.Store) {
   initialize() {
-this.waitFor(C.Z, T.default, I.Z, L.Z, D.Z, d.ZP, N.Z, s.Z, c.ZP, S.Z, U.Z, h.ZP, P.Z, R.ZP, A.Z);
+this.waitFor(C.Z, T.default, I.Z, L.Z, D.Z, u.ZP, N.Z, s.Z, c.ZP, S.Z, U.Z, h.ZP, P.Z, R.ZP, A.Z);
   }
   getGuild(e, n) {
 let t = Z.getGuild(e, n);
@@ -131,8 +131,8 @@ return {
   guildChannels: t
 };
   }
-  getGuildWithoutChangingCommunityRows(e) {
-let n = Z.getGuildWithoutCommunityRows(e);
+  getGuildWithoutChangingGuildActionRows(e) {
+let n = Z.getGuildChannelRowsOnly(e);
 return {
   guildChannelsVersion: n.version,
   guildChannels: n
@@ -141,7 +141,7 @@ return {
   recentsChannelCount(e) {
 if (null == e)
   return 0;
-let n = Z.getGuildWithoutCommunityRows(e);
+let n = Z.getGuildChannelRowsOnly(e);
 return n.getCategoryFromSection(n.recentsSectionNumber).getShownChannelIds().length;
   }
 }
@@ -150,7 +150,7 @@ a = 'ChannelListStore', (E = 'displayName') in(l = K) ? Object.defineProperty(l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[E] = a, n.Z = new K(u.Z, {
+}) : l[E] = a, n.Z = new K(d.Z, {
   APPLICATION_FETCH_FAIL: Y,
   APPLICATION_FETCH_SUCCESS: Y,
   APPLICATION_FETCH: Y,
@@ -172,9 +172,9 @@ return o()(n).map(e => {
   BULK_CLEAR_RECENTS: x,
   CACHE_LOADED_LAZY: p,
   CATEGORY_COLLAPSE_ALL: x,
-  CATEGORY_COLLAPSE: F,
+  CATEGORY_COLLAPSE: y,
   CATEGORY_EXPAND_ALL: x,
-  CATEGORY_EXPAND: F,
+  CATEGORY_EXPAND: y,
   CHANNEL_ACK: b,
   CHANNEL_COLLAPSE: function(e) {
 var n;
@@ -188,7 +188,7 @@ return Z.clearGuildId(null === (n = L.Z.getChannel(t)) || void 0 === n ? void 0 
   CHANNEL_LOCAL_ACK: b,
   CHANNEL_MUTE_EXPIRED: x,
   CHANNEL_RTC_UPDATE_CHAT_OPEN: b,
-  CHANNEL_SELECT: y,
+  CHANNEL_SELECT: F,
   CHANNEL_STATUSES: function(e) {
 return Z.clearGuildId(e.guildId);
   },
@@ -339,14 +339,14 @@ return null != i && g.default.keys(i).forEach(e => {
   },
   VOICE_CATEGORY_COLLAPSE: V,
   VOICE_CATEGORY_EXPAND: V,
-  VOICE_CHANNEL_SELECT: y,
+  VOICE_CHANNEL_SELECT: F,
   VOICE_CHANNEL_STATUS_UPDATE: function(e) {
 return Z.nonPositionalChannelIdUpdate(e.id);
   },
   VOICE_STATE_UPDATES: function(e) {
 let {
   voiceStates: n
-} = e, t = y(), i = new Set();
+} = e, t = F(), i = new Set();
 for (let {
     channelId: e,
     oldChannelId: l

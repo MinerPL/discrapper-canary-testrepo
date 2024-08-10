@@ -113,7 +113,7 @@ onClick: () => {
   });
 },
 'aria-label': c.Z.Messages.DISMISS,
-children: (0, r.jsx)(o.CloseSmallIcon, {
+children: (0, r.jsx)(o.XSmallIcon, {
   size: 'sm',
   color: 'currentColor',
   className: d.closeIcon

@@ -8,5 +8,7 @@ e.exports = {
   buttonContainer: 'buttonContainer_e81a2a',
   button: 'button_e81a2a',
   headerArt: 'headerArt_e81a2a',
-  headerArtV2: 'headerArtV2_e81a2a'
+  headerArtV2: 'headerArtV2_e81a2a',
+  reverseContainer: 'reverseContainer_e81a2a',
+  reverseTrialHomeHeader: 'reverseTrialHomeHeader_e81a2a'
 };

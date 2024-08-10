@@ -11,5 +11,6 @@ let r = (0, i.Z)(() => ({
   selectedTab: a.vf.GAMING,
   searchQuery: '',
   searchResultsQuery: '',
-  searchCategoryId: s.Hk
+  searchCategoryId: s.Hk,
+  searchLanguageCode: null
 }));

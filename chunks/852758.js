@@ -21,12 +21,12 @@ var i = n(735250),
   _ = n(110924),
   h = n(714338),
   E = n(213609),
+  m = n(429142),
   I = n(144114),
-  m = n(210887),
-  g = n(23434),
-  p = n(610001),
-  T = n(78415),
-  S = n(1964),
+  g = n(210887),
+  p = n(23434),
+  T = n(1964),
+  S = n(762756),
   f = n(981631),
   C = n(815660),
   N = n(689938);
@@ -38,12 +38,12 @@ function Z() {
 action: e,
 theme: t
   } = (0, r.cj)([
-g.Z,
-m.Z
+p.Z,
+g.Z
   ], () => ({
-action: g.Z.getAction(),
-theme: m.Z.theme
-  })), Z = S.Z.getVerificationTypes(e), [L, O] = a.useState(0), R = (0, _.Z)(Z);
+action: p.Z.getAction(),
+theme: g.Z.theme
+  })), Z = T.Z.getVerificationTypes(e), [L, O] = a.useState(0), R = (0, _.Z)(Z);
   (0, E.Z)({
 type: s.ImpressionTypes.MODAL,
 name: s.ImpressionNames.USER_ACTION_REQUIRED,
@@ -62,7 +62,7 @@ properties: {
     });
   }, {
     modalKey: A,
-    Layer: T.ZP
+    Layer: m.ZP
   });
 },
 b = () => {
@@ -79,7 +79,7 @@ b = () => {
     });
   }, {
     modalKey: C.M,
-    Layer: T.ZP
+    Layer: m.ZP
   });
 };
   return a.useEffect(() => (h.Z.disable(), () => {
@@ -97,13 +97,13 @@ h.Z.enable();
   });
 }, {
   modalKey: v,
-  Layer: T.ZP,
+  Layer: m.ZP,
   onCloseCallback: x
 });
   }, [
 Z,
 R
-  ]), (0, i.jsx)(p.Z, {
+  ]), (0, i.jsx)(S.Z, {
 types: Z,
 captchaKey: L,
 onCaptchaVerify: e => {
@@ -139,7 +139,7 @@ onLogout: () => {
       })
     });
   }, {
-    Layer: T.ZP
+    Layer: m.ZP
   });
 }
   });

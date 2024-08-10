@@ -30,8 +30,8 @@ onClose: I
 analyticsLocations: T,
 newestAnalyticsLocation: g
   } = (0, l.ZP)(), {
-trackUserProfileAction: S,
-...A
+context: S,
+trackUserProfileAction: A
   } = (0, _.KZ)(), N = (0, s.e7)([d.default], () => d.default.getCurrentUser()), {
 messageCtaEnabled: v
   } = (0, f.l)({
@@ -69,7 +69,7 @@ guildId: null == n ? void 0 : n.id,
 channelId: i,
 onClose: I,
 onAction: () => {
-  S({
+  A({
     action: 'JOIN_ACTIVITY'
   }), (0, E.Ac)({
     activityType: O ? h.IIU.STREAMING : null == R ? void 0 : R.type,
@@ -78,7 +78,7 @@ onAction: () => {
     activitySessionId: null == R ? void 0 : R.session_id,
     applicationId: null == R ? void 0 : R.application_id,
     analyticsLocations: T,
-    ...A
+    ...S
   }), null == I || I();
 },
 showActions: t.id !== (null == N ? void 0 : N.id),

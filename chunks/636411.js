@@ -10,11 +10,11 @@ var i = n(120356),
   s = n(442837),
   o = n(481060),
   l = n(607070),
-  u = n(104494),
-  c = n(639119),
-  d = n(165583),
-  _ = n(197115),
-  E = n(810090),
+  u = n(70097),
+  c = n(104494),
+  d = n(639119),
+  _ = n(165583),
+  E = n(197115),
   f = n(981631),
   h = n(474936),
   p = n(689938),
@@ -24,7 +24,7 @@ function I(e) {
   var t, n;
   let {
 onDismiss: i
-  } = e, I = (0, s.e7)([l.Z], () => l.Z.useReducedMotion), T = p.Z.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, g = (0, c.N)(), S = (0, u.Ng)(), A = (null == g ? void 0 : g.subscription_trial) != null || null != S, N = {
+  } = e, I = (0, s.e7)([l.Z], () => l.Z.useReducedMotion), T = p.Z.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, g = (0, d.N)(), S = (0, c.Ng)(), A = (null == g ? void 0 : g.subscription_trial) != null || null != S, N = {
 object: f.qAy.BUTTON_CTA,
 section: f.jXE.SUPER_REACTION_PICKER
   };
@@ -35,7 +35,7 @@ children: [
     onClick: i,
     className: m.closeButton,
     'aria-label': p.Z.Messages.DISMISS,
-    children: (0, r.jsx)(o.CloseSmallIcon, {
+    children: (0, r.jsx)(o.XSmallIcon, {
       size: 'md',
       color: 'currentColor'
     })
@@ -45,7 +45,7 @@ children: [
     children: [
       (0, r.jsx)('div', {
         className: m.contentFill,
-        children: (0, r.jsx)(E.Z, {
+        children: (0, r.jsx)(u.Z, {
           className: a()(m.banner, {
             [m.hasTrialOffer]: A
           }),
@@ -56,7 +56,7 @@ children: [
           controls: !0
         })
       }),
-      A ? (0, r.jsx)(d.ZP, {
+      A ? (0, r.jsx)(_.ZP, {
         type: h.cd.BURST_REACTION_QUICK_ACTION_UPSELL,
         subscriptionTier: null !== (n = null == g ? void 0 : null === (t = g.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : h.Si.TIER_2,
         headingText: p.Z.Messages.SUPER_REACTIONS_UPSELL_TITLE_MOBILE,
@@ -90,7 +90,7 @@ children: [
           }),
           (0, r.jsx)('div', {
             className: m.ctaActionWrapper,
-            children: (0, r.jsx)(_.Z, {
+            children: (0, r.jsx)(E.Z, {
               subscriptionTier: h.Si.TIER_2,
               buttonText: p.Z.Messages.UNLOCK_WITH_NITRO
             })

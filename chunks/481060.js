@@ -320,9 +320,6 @@ return tv.jk3;
   ChannelsFollowedIcon: function() {
 return tv.AsW;
   },
-  ChatAlertIcon: function() {
-return tv.X9l;
-  },
   ChatArrowRightIcon: function() {
 return tv.acy;
   },
@@ -359,14 +356,17 @@ return tv.mrm;
   ChatSpeakIcon: function() {
 return tv.J2R;
   },
+  ChatWarningIcon: function() {
+return tv.b6m;
+  },
   ChatXIcon: function() {
 return tv.ics;
   },
   Checkbox: function() {
 return T.X;
   },
-  CheckmarkBoldIcon: function() {
-return tv.RF_;
+  CheckmarkLargeBoldIcon: function() {
+return tv.sV5;
   },
   CheckmarkLargeIcon: function() {
 return tv.dz2;
@@ -407,9 +407,6 @@ return tp.fW;
   CircleCheckIcon: function() {
 return tv.owK;
   },
-  CircleExclamationPointIcon: function() {
-return tv.CeW;
-  },
   CircleIconButton: function() {
 return m.M0;
   },
@@ -433,6 +430,9 @@ return tv.oFk;
   },
   CircleQuestionIcon: function() {
 return tv.idN;
+  },
+  CircleWarningIcon: function() {
+return tv.P4T;
   },
   CircleXIcon: function() {
 return tv.k$p;
@@ -463,18 +463,6 @@ return tv.YlB;
   },
   ClockXIcon: function() {
 return tv.e0C;
-  },
-  CloseLargeBoldIcon: function() {
-return tv.Aen;
-  },
-  CloseLargeIcon: function() {
-return tv.yM8;
-  },
-  CloseSmallBoldIcon: function() {
-return tv.sXB;
-  },
-  CloseSmallIcon: function() {
-return tv.FmG;
   },
   CloudDownloadIcon: function() {
 return tv.nMW;
@@ -587,8 +575,8 @@ return tv.PBZ;
   Dots: function() {
 return C.b;
   },
-  DoubleCheckmarkLargeIcon: function() {
-return tv.x0;
+  DoubleCheckmarkIcon: function() {
+return tv.W6s;
   },
   DownloadIcon: function() {
 return tv._8t;
@@ -638,8 +626,8 @@ return tv.OgY;
   EyeSlashIcon: function() {
 return tv.kZF;
   },
-  FacebookIcon: function() {
-return tv.VqK;
+  FacebookNeutralIcon: function() {
+return tv.tdR;
   },
   FileDenyIcon: function() {
 return tv.LB9;
@@ -923,8 +911,8 @@ return tv.xx7;
   InputError: function() {
 return e$.p;
   },
-  InstagramIcon: function() {
-return tv.yuF;
+  InstagramNeutralIcon: function() {
+return tv.gST;
   },
   Interactive: function() {
 return W.v;
@@ -1202,11 +1190,11 @@ return tf.L;
   NearbyScanIcon: function() {
 return tv.PBD;
   },
-  NewUserLargeIcon: function() {
-return tv.OhJ;
+  NewUserIcon: function() {
+return tv.hg2;
   },
-  NewUserSmallIcon: function() {
-return tv.tQb;
+  NewUserSimpleIcon: function() {
+return tv._IE;
   },
   NintendoSwitchNeutralIcon: function() {
 return tv.aPH;
@@ -1237,9 +1225,6 @@ return tN.F;
   },
   ObjectIcon: function() {
 return tv.Xbz;
-  },
-  OdometerIcon: function() {
-return tv._S7;
   },
   POPOUT_MODAL_CONTEXT: function() {
 return ef.u1;
@@ -1319,8 +1304,8 @@ return tv.QVc;
   PlayIcon: function() {
 return tv.o1U;
   },
-  PlaystationIcon: function() {
-return tv.KFq;
+  PlaystationNeutralIcon: function() {
+return tv.Tsp;
   },
   PlusLargeIcon: function() {
 return tv.svS;
@@ -1370,8 +1355,8 @@ return tv.jTh;
   PuzzlePieceRetryIcon: function() {
 return tv.$SN;
   },
-  QrCodeCameraIcon: function() {
-return tv.d48;
+  QrCodeIcon: function() {
+return tv.IkH;
   },
   QuestsIcon: function() {
 return tv.qDn;
@@ -1613,6 +1598,9 @@ return tu.L;
   SparklesIcon: function() {
 return tv.T$Z;
   },
+  SpeedometerIcon: function() {
+return tv.EmW;
+  },
   Spinner: function() {
 return ej.$;
   },
@@ -1700,11 +1688,11 @@ return tv.r8p;
   StickerSmallIcon: function() {
 return tv.B7q;
   },
-  StickerWinkAltIcon: function() {
-return tv.pz7;
+  StickerWink1Icon: function() {
+return tv.onJ;
   },
-  StickerWinkIcon: function() {
-return tv.X4h;
+  StickerWink2Icon: function() {
+return tv._t2;
   },
   StopIcon: function() {
 return tv.wNq;
@@ -1811,8 +1799,8 @@ return tv.lbB;
   TicketIcon: function() {
 return tv.Prq;
   },
-  TikTokIcon: function() {
-return tv.HT6;
+  TiktokNeutralIcon: function() {
+return tv.suz;
   },
   TimeInput: function() {
 return eJ.M;
@@ -1868,8 +1856,8 @@ return tv.rm8;
   TvIcon: function() {
 return tv.ARS;
   },
-  TwitterIcon: function() {
-return tv.Zmm;
+  TwitterNeutralIcon: function() {
+return tv.Qjj;
   },
   UnderlineIcon: function() {
 return tv.Adg;
@@ -2006,14 +1994,26 @@ return tv.epB;
   WrenchIcon: function() {
 return tv.R0;
   },
+  XLargeBoldIcon: function() {
+return tv.CTb;
+  },
+  XLargeIcon: function() {
+return tv.Uz9;
+  },
   XNeutralIcon: function() {
 return tv.TAi;
   },
-  XboxIcon: function() {
-return tv.aQY;
+  XSmallBoldIcon: function() {
+return tv.P$X;
   },
-  YouTubeIcon: function() {
-return tv.Fc4;
+  XSmallIcon: function() {
+return tv.Dio;
+  },
+  XboxNeutralIcon: function() {
+return tv.Mko;
+  },
+  YoutubeNeutralIcon: function() {
+return tv.$5w;
   },
   closeAllModals: function() {
 return e_.pT;

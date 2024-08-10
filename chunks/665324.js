@@ -255,7 +255,7 @@ children: [
               })
             ]
           }),
-          i.map(e => (0, s.jsx)(w, {
+          i.map(e => (0, s.jsx)(k, {
             sound: e,
             isPlaying: !1,
             guild: t,
@@ -269,7 +269,7 @@ children: [
   });
 }
 
-function w(e) {
+function k(e) {
   let {
 sound: t,
 isPlaying: i,
@@ -419,7 +419,7 @@ children: [
           }));
         },
         'aria-label': j.Z.Messages.REMOVE,
-        children: (0, s.jsx)(u.CloseSmallIcon, {
+        children: (0, s.jsx)(u.XSmallIcon, {
           size: 'md',
           color: 'currentColor',
           className: Z.soundEditIcon

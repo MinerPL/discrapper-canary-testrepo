@@ -12,8 +12,8 @@ var i = n(735250),
   c = n(594174),
   _ = n(531441),
   u = n(451284),
-  E = n(959562),
-  d = n(800530),
+  d = n(959562),
+  E = n(800530),
   T = n(689938),
   S = n(645275);
 
@@ -43,8 +43,8 @@ window.addEventListener('resize', e);
   [_.Sn.ALL_GOOD]: {
     title: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_TITLE_V2,
     description: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_DESCRIPTION_V2.format({
-      termsOfService: d.sQ.TOS_LINK,
-      communityGuidelines: d.sQ.COMMUNITY_GUIDELINES
+      termsOfService: E.sQ.TOS_LINK,
+      communityGuidelines: E.sQ.COMMUNITY_GUIDELINES
     }),
     status: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_SHORT,
     Icon: o.CircleCheckIcon,
@@ -54,21 +54,21 @@ window.addEventListener('resize', e);
     title: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_TITLE_V2,
     description: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_DESCRIPTION_V2,
     status: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_SHORT,
-    Icon: o.CircleExclamationPointIcon,
+    Icon: o.CircleWarningIcon,
     color: r.Z.colors.STATUS_WARNING
   },
   [_.Sn.VERY_LIMITED]: {
     title: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_TITLE_V2,
     description: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_DESCRIPTION_V2,
     status: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_SHORT,
-    Icon: o.CircleExclamationPointIcon,
+    Icon: o.CircleWarningIcon,
     color: r.Z.unsafe_rawColors.ORANGE_345
   },
   [_.Sn.AT_RISK]: {
     title: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_TITLE_V2,
     description: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_DESCRIPTION,
     status: T.Z.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_SHORT,
-    Icon: o.CircleExclamationPointIcon,
+    Icon: o.CircleWarningIcon,
     color: r.Z.colors.STATUS_DANGER
   },
   [_.Sn.SUSPENDED]: {
@@ -82,8 +82,8 @@ window.addEventListener('resize', e);
 {
   title: f,
   description: C,
-  color: m,
-  Icon: U
+  color: U,
+  Icon: m
 } = g[e.state],
 h = Object.keys(g).length;
   return (0, i.jsxs)(o.Card, {
@@ -92,7 +92,7 @@ outline: !1,
 children: [
   (0, i.jsx)('div', {
     className: S.profile,
-    children: (0, i.jsx)(E.Z, {
+    children: (0, i.jsx)(d.Z, {
       user: t,
       size: o.AvatarSizes.SIZE_80
     })
@@ -109,7 +109,7 @@ children: [
             children: f.format({
               hook: e => (0, i.jsx)(o.Text, {
                 style: {
-                  color: m.css
+                  color: U.css
                 },
                 variant: 'heading-lg/bold',
                 tag: 'span',
@@ -139,7 +139,7 @@ children: [
               className: S.statusOption,
               ref: e => I.current[parseInt(a)] = e,
               children: [
-                l ? (0, i.jsx)(U, {
+                l ? (0, i.jsx)(m, {
                   className: S.marker,
                   color: s.color
                 }) : (0, i.jsx)('div', {

@@ -8,17 +8,17 @@ var t = s(735250),
   i = s(120356),
   a = s.n(i),
   o = s(772848),
-  r = s(442837),
-  u = s(780384),
-  d = s(481060),
-  c = s(339085),
-  I = s(349709),
-  m = s(763610),
-  _ = s(197712),
-  E = s(210887),
-  f = s(430824),
-  g = s(594174),
-  L = s(285952),
+  r = s(36793),
+  u = s(442837),
+  d = s(780384),
+  c = s(481060),
+  I = s(600164),
+  m = s(339085),
+  _ = s(349709),
+  E = s(763610),
+  f = s(210887),
+  g = s(430824),
+  L = s(594174),
   T = s(626135),
   v = s(424218),
   D = s(63063),
@@ -115,21 +115,21 @@ async function b(e) {
   let l = await (0, x.fD)(e),
 s = new Image();
   s.src = l, await s.decode();
-  let t = (0, _.Ae)(s, 320, 320);
+  let t = (0, r.Ae)(s, 320, 320);
   return (0, x.Bo)(t, e.name, e.type);
 }
 
 function B(e) {
-  var l, s, i, _, S, Z, P, B;
+  var l, s, i, r, S, Z, P, B;
   let {
 transitionState: G,
 onClose: y,
 guildId: w,
 sticker: F
-  } = e, z = (0, r.e7)([E.Z], () => E.Z.theme), H = (0, r.e7)([c.Z], () => (null == F ? void 0 : F.tags) != null ? c.Z.getCustomEmojiById(F.tags) : null), V = null !== (s = null === (l = g.default.getCurrentUser()) || void 0 === l ? void 0 : l.isStaff()) && void 0 !== s && s ? j.OC : j.Ht, [W, q] = n.useState(null), [Y, J] = n.useState(null !== (i = null == F ? void 0 : F.name) && void 0 !== i ? i : ''), [X, Q] = n.useState({
+  } = e, z = (0, u.e7)([f.Z], () => f.Z.theme), H = (0, u.e7)([m.Z], () => (null == F ? void 0 : F.tags) != null ? m.Z.getCustomEmojiById(F.tags) : null), V = null !== (s = null === (l = L.default.getCurrentUser()) || void 0 === l ? void 0 : l.isStaff()) && void 0 !== s && s ? j.OC : j.Ht, [W, q] = n.useState(null), [Y, J] = n.useState(null !== (i = null == F ? void 0 : F.name) && void 0 !== i ? i : ''), [X, Q] = n.useState({
 file: null,
-filename: null !== (_ = (0, R._V)(F)) && void 0 !== _ ? _ : ''
-  }), [$, ee] = n.useState(null == H ? void 0 : H.id), [el, es] = n.useState(null !== (S = null == H ? void 0 : H.name) && void 0 !== S ? S : null == F ? void 0 : F.tags), [et, en] = n.useState(null !== (Z = null == F ? void 0 : F.description) && void 0 !== Z ? Z : ''), [ei, ea] = n.useState(!1), [eo, er] = n.useState(null), eu = (0, r.e7)([f.Z], () => f.Z.getGuild(w)), ed = (null == eu ? void 0 : eu.hasFeature(h.oNc.PARTNERED)) || (null == eu ? void 0 : eu.hasFeature(h.oNc.VERIFIED)), ec = null != F, eI = ec || (null == X ? void 0 : X.file) != null, em = 0 === et.length || et.length >= 2 && et.length <= 100, e_ = !ei && (null == eo ? void 0 : eo.isBlocking) !== !0 && Y.length >= 2 && (null != $ || null != el || (null == F ? void 0 : F.tags) != null && (null == F ? void 0 : F.tags) !== '') && eI && em, eE = async e => {
+filename: null !== (r = (0, R._V)(F)) && void 0 !== r ? r : ''
+  }), [$, ee] = n.useState(null == H ? void 0 : H.id), [el, es] = n.useState(null !== (S = null == H ? void 0 : H.name) && void 0 !== S ? S : null == F ? void 0 : F.tags), [et, en] = n.useState(null !== (Z = null == F ? void 0 : F.description) && void 0 !== Z ? Z : ''), [ei, ea] = n.useState(!1), [eo, er] = n.useState(null), eu = (0, u.e7)([g.Z], () => g.Z.getGuild(w)), ed = (null == eu ? void 0 : eu.hasFeature(h.oNc.PARTNERED)) || (null == eu ? void 0 : eu.hasFeature(h.oNc.VERIFIED)), ec = null != F, eI = ec || (null == X ? void 0 : X.file) != null, em = 0 === et.length || et.length >= 2 && et.length <= 100, e_ = !ei && (null == eo ? void 0 : eo.isBlocking) !== !0 && Y.length >= 2 && (null != $ || null != el || (null == F ? void 0 : F.tags) != null && (null == F ? void 0 : F.tags) !== '') && eI && em, eE = async e => {
 var l;
 if (null == e)
   return;
@@ -232,12 +232,12 @@ onStickerError: n.useCallback(() => {
   });
 }, [])
   }), eL = ed ? N.Z.Messages.GUILD_STICKER_UPLOAD_DESCRIPTION : N.Z.Messages.GUILD_STICKER_UPLOAD_DESCRIPTION_NO_LOTTIE;
-  return (0, t.jsxs)(d.ModalRoot, {
+  return (0, t.jsxs)(c.ModalRoot, {
 transitionState: G,
 'aria-labelledby': 'STICKER_UPLOAD_MODAL',
 className: U.modal,
 children: [
-  (0, t.jsx)(d.ModalCloseButton, {
+  (0, t.jsx)(c.ModalCloseButton, {
     onClick: y,
     className: U.modalClose
   }),
@@ -245,20 +245,20 @@ children: [
     onSubmit: ef,
     className: U.form,
     children: [
-      (0, t.jsxs)(d.ModalContent, {
+      (0, t.jsxs)(c.ModalContent, {
         className: U.modalContent,
         children: [
-          (0, t.jsxs)(d.ModalHeader, {
-            direction: L.Z.Direction.VERTICAL,
+          (0, t.jsxs)(c.ModalHeader, {
+            direction: I.Z.Direction.VERTICAL,
             separator: !1,
             className: U.modalHeader,
             children: [
-              (0, t.jsx)(d.Heading, {
+              (0, t.jsx)(c.Heading, {
                 variant: 'heading-xl/semibold',
                 className: U.modalHeaderTitle,
                 children: N.Z.Messages.GUILD_STICKER_UPLOAD_TITLE
               }),
-              (0, t.jsx)(d.Text, {
+              (0, t.jsx)(c.Text, {
                 variant: 'text-md/normal',
                 children: eL.format({
                   fileSize: (0, v.IC)(j.Ht, {
@@ -268,24 +268,24 @@ children: [
               })
             ]
           }),
-          (0, t.jsx)(d.FormSection, {
+          (0, t.jsx)(c.FormSection, {
             title: N.Z.Messages.GUILD_STICKER_UPLOAD_PREVIEW_TITLE,
             className: U.formItem,
             children: (0, t.jsx)(K, {
               stickerPreview: eg
             })
           }),
-          (0, t.jsxs)(d.FormSection, {
+          (0, t.jsxs)(c.FormSection, {
             className: a()(U.formItem, U.formItemRow),
             children: [
-              (0, t.jsx)(d.FormItem, {
+              (0, t.jsx)(c.FormItem, {
                 title: ec ? N.Z.Messages.GUILD_STICKER_UPLOAD_FILE_TITLE_BLOCKED : N.Z.Messages.GUILD_STICKER_UPLOAD_FILE_TITLE,
                 required: !0,
                 className: U.formItemRowChild,
-                children: ec ? (0, t.jsx)(d.TextInput, {
+                children: ec ? (0, t.jsx)(c.TextInput, {
                   disabled: !0,
                   value: null !== (P = null == X ? void 0 : X.filename) && void 0 !== P ? P : ''
-                }) : (0, t.jsx)(m.Z, {
+                }) : (0, t.jsx)(E.Z, {
                   buttonText: N.Z.Messages.GUILD_STICKER_UPLOAD_FILE_BUTTON,
                   filters: M,
                   filename: null !== (B = null == X ? void 0 : X.filename) && void 0 !== B ? B : '',
@@ -293,7 +293,7 @@ children: [
                   onFileSelect: eE
                 })
               }),
-              (0, t.jsx)(I.Z, {
+              (0, t.jsx)(_.Z, {
                 className: U.formItemRowChild,
                 guildId: w,
                 emojiId: $,
@@ -304,11 +304,11 @@ children: [
               })
             ]
           }),
-          (0, t.jsx)(d.FormItem, {
+          (0, t.jsx)(c.FormItem, {
             title: N.Z.Messages.GUILD_STICKER_UPLOAD_NAME_TITLE,
             required: !0,
             className: U.formItem,
-            children: (0, t.jsx)(d.TextInput, {
+            children: (0, t.jsx)(c.TextInput, {
               value: Y,
               onChange: J,
               placeholder: N.Z.Messages.GUILD_STICKER_UPLOAD_NAME_PLACEHOLDER,
@@ -318,12 +318,12 @@ children: [
           (0, t.jsxs)('div', {
             className: U.formItem,
             children: [
-              (0, t.jsxs)(d.FormTitle, {
+              (0, t.jsxs)(c.FormTitle, {
                 children: [
                   N.Z.Messages.GUILD_STICKER_UPLOAD_DESCRIPTION_TITLE,
-                  (0, t.jsx)(d.Tooltip, {
+                  (0, t.jsx)(c.Tooltip, {
                     text: N.Z.Messages.GUILD_STICKER_UPLOAD_DESCRIPTION_TOOLTIP,
-                    children: e => (0, t.jsx)(d.CircleInformationIcon, {
+                    children: e => (0, t.jsx)(c.CircleInformationIcon, {
                       size: 'xs',
                       color: 'currentColor',
                       className: U.infoIcon,
@@ -332,7 +332,7 @@ children: [
                   })
                 ]
               }),
-              (0, t.jsx)(d.TextArea, {
+              (0, t.jsx)(c.TextArea, {
                 value: et,
                 onChange: en,
                 placeholder: N.Z.Messages.GUILD_STICKER_UPLOAD_DESCRIPTION_PLACEHOLDER,
@@ -340,7 +340,7 @@ children: [
               })
             ]
           }),
-          null != eo && (0, t.jsx)(d.Text, {
+          null != eo && (0, t.jsx)(c.Text, {
             className: U.formItem,
             variant: 'text-sm/normal',
             color: 'text-danger',
@@ -348,17 +348,17 @@ children: [
           })
         ]
       }),
-      (0, t.jsxs)(d.ModalFooter, {
+      (0, t.jsxs)(c.ModalFooter, {
         className: U.modalFooter,
         children: [
-          (0, t.jsx)(d.Button, {
+          (0, t.jsx)(c.Button, {
             type: 'submit',
             disabled: !e_,
             children: ec ? N.Z.Messages.GUILD_STICKERS_UPDATE : N.Z.Messages.UPLOAD
           }),
-          (0, t.jsx)(d.Button, {
-            look: d.Button.Looks.LINK,
-            color: (0, u.ap)(z) ? d.Button.Colors.PRIMARY : d.Button.Colors.WHITE,
+          (0, t.jsx)(c.Button, {
+            look: c.Button.Looks.LINK,
+            color: (0, d.ap)(z) ? c.Button.Colors.PRIMARY : c.Button.Colors.WHITE,
             onClick: y,
             children: N.Z.Messages.NEVERMIND
           })

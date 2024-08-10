@@ -10,9 +10,9 @@ var t = a(735250),
   r = a(481060),
   o = a(100527),
   c = a(906732),
-  u = a(665149),
-  d = a(703656),
-  g = a(810090),
+  u = a(70097),
+  d = a(665149),
+  g = a(703656),
   m = a(630388),
   p = a(566620),
   x = a(146936),
@@ -35,7 +35,7 @@ function T(e) {
   var n, a;
   let {
 match: x
-  } = e, b = null !== (n = (0, d.DR)()) && void 0 !== n ? n : [], {
+  } = e, b = null !== (n = (0, g.DR)()) && void 0 !== n ? n : [], {
 analyticsLocations: I
   } = (0, c.ZP)([
 ...b,
@@ -68,7 +68,7 @@ value: I,
 children: (0, t.jsxs)('div', {
   className: E.outerContainer,
   children: [
-    (0, t.jsxs)(u.ZP, {
+    (0, t.jsxs)(d.ZP, {
       children: [
         (0, t.jsxs)('div', {
           className: E.titleContainer,
@@ -107,7 +107,7 @@ children: (0, t.jsxs)('div', {
               }),
               (0, t.jsxs)(r.Clickable, {
                 onClick: () => {
-                  (0, d.op)();
+                  (0, g.op)();
                 },
                 className: E.backButtonContainer,
                 children: [
@@ -215,7 +215,7 @@ children: (0, t.jsxs)('div', {
                             }),
                             className: E.activityImage
                           }, e)),
-                          (0, t.jsx)(g.Z, {
+                          (0, t.jsx)(u.Z, {
                             loop: !0,
                             autoPlay: !0,
                             muted: !0,

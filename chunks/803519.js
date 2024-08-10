@@ -5,6 +5,8 @@ e.exports = {
   title: 'title_d0585c',
   closeButton: 'closeButton_d0585c',
   footer: 'footer_d0585c',
+  footerWithMessage: 'footerWithMessage_d0585c',
+  footerButtons: 'footerButtons_d0585c',
   destinationRow: 'destinationRow_d0585c',
   disabled: 'disabled_d0585c',
   identity: 'identity_d0585c',
@@ -21,5 +23,7 @@ e.exports = {
   noResultsImg: 'noResultsImg_d0585c',
   actions: 'actions_d0585c',
   sendWithMessage: 'sendWithMessage_d0585c',
-  messageInput: 'messageInput_d0585c'
+  messageInput: 'messageInput_d0585c',
+  forwardPreviewWrapper: 'forwardPreviewWrapper_d0585c',
+  forwardPreviewWrapperInset: 'forwardPreviewWrapperInset_d0585c'
 };

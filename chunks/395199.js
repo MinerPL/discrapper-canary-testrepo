@@ -6,9 +6,9 @@ var n, t = l(735250),
   o = l(442837),
   d = l(215569),
   u = l(481060),
-  c = l(777789),
-  C = l(78839),
-  m = l(285952),
+  c = l(600164),
+  C = l(777789),
+  m = l(78839),
   S = l(709054),
   I = l(689938),
   M = l(922145);
@@ -28,7 +28,7 @@ let {
 } = this.props;
 return (0, t.jsxs)(u.ModalHeader, {
   separator: !1,
-  justify: m.Z.Justify.BETWEEN,
+  justify: c.Z.Justify.BETWEEN,
   children: [
     (0, t.jsx)(u.Heading, {
       variant: 'heading-md/semibold',
@@ -71,11 +71,11 @@ children: [
 let U = e => {
   let {
 canceledCount: s
-  } = e, l = (0, o.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription());
+  } = e, l = (0, o.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription());
   return null == l ? null : (0, t.jsxs)('div', {
 className: M.pendingCancellation,
 children: [
-  (0, t.jsx)(u.CircleExclamationPointIcon, {
+  (0, t.jsx)(u.CircleWarningIcon, {
     size: 'custom',
     width: 20,
     height: 20,
@@ -114,7 +114,7 @@ children: [
     variant: 'text-md/normal',
     children: l
   }),
-  (0, t.jsx)(c.Z, {
+  (0, t.jsx)(C.Z, {
     className: M.guildCard,
     guild: n,
     subscriptionChange: o
@@ -209,14 +209,14 @@ blurb: a,
 fromGuilds: i,
 toGuild: o,
 error: d,
-onDismissError: C,
+onDismissError: c,
 slotCount: m = 1,
 canceledCount: _ = 0
   } = e, x = r.useRef(i), R = null === (s = x.current) || void 0 === s ? void 0 : s.length, h = null === (l = x.current) || void 0 === l ? void 0 : l.reduce((e, s) => (!e.hasOwnProperty(s.id) && (e[s.id] = []), e[s.id].push(s), e), {});
   return (0, t.jsxs)(E, {
 imageClass: n,
 error: d,
-onDismissError: C,
+onDismissError: c,
 children: [
   (0, t.jsx)(u.Text, {
     variant: 'text-md/normal',
@@ -229,7 +229,7 @@ children: [
       guildCount: R
     })
   }),
-  null != h ? S.default.keys(h).map(e => (0, t.jsx)(c.Z, {
+  null != h ? S.default.keys(h).map(e => (0, t.jsx)(C.Z, {
     className: M.transferFromGuildCard,
     guild: h[e][0],
     subscriptionChange: -1 * h[e].length
@@ -243,7 +243,7 @@ children: [
   }),
   (0, t.jsx)('div', {
     className: M.activeTransferGuildCardBorder,
-    children: (0, t.jsx)(c.Z, {
+    children: (0, t.jsx)(C.Z, {
       className: M.transferToGuildCard,
       guild: o,
       subscriptionChange: null != i ? i.length : 1

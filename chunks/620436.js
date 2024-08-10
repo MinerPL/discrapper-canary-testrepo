@@ -26,7 +26,7 @@ children: (0, i.jsx)('div', {
           className: l.dividierIcon
         });
       case 'cross':
-        return (0, i.jsx)(r.CloseSmallIcon, {
+        return (0, i.jsx)(r.XSmallIcon, {
           size: 'md',
           color: 'currentColor',
           className: l.dividierIcon

@@ -11,21 +11,21 @@ var i = n(735250),
   _ = n(481060),
   h = n(570140),
   E = n(239091),
-  I = n(51025),
-  m = n(785547),
+  m = n(51025),
+  I = n(785547),
   g = n(730749),
   p = n(112724),
   T = n(812206),
   S = n(44315),
-  f = n(925329),
-  C = n(707409),
-  N = n(210887),
-  A = n(283595),
-  v = n(417363),
-  Z = n(941128),
-  L = n(451478),
-  O = n(285952),
-  R = n(151011),
+  f = n(600164),
+  C = n(167533),
+  N = n(925329),
+  A = n(707409),
+  v = n(210887),
+  Z = n(283595),
+  L = n(417363),
+  O = n(941128),
+  R = n(451478),
   x = n(424218),
   b = n(780570),
   P = n(353042),
@@ -104,24 +104,24 @@ default:
 }
 let H = {
   [D.vxO.INSTALLING]: {
-[C.J6.NONE]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
+[A.J6.NONE]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
   percent: e,
   progress: t,
   total: n
 }),
-[C.J6.SECONDS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
+[A.J6.SECONDS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
   percent: e,
   progress: t,
   total: n,
   timeRemaining: i
 }),
-[C.J6.MINUTES]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
+[A.J6.MINUTES]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
   percent: e,
   progress: t,
   total: n,
   timeRemaining: i
 }),
-[C.J6.HOURS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
+[A.J6.HOURS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
   percent: e,
   progress: t,
   total: n,
@@ -129,24 +129,24 @@ let H = {
 })
   },
   [D.vxO.UPDATING]: {
-[C.J6.NONE]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_UPDATING.format({
+[A.J6.NONE]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_UPDATING.format({
   percent: e,
   progress: t,
   total: n
 }),
-[C.J6.SECONDS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_SECONDS.format({
+[A.J6.SECONDS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_SECONDS.format({
   percent: e,
   progress: t,
   total: n,
   timeRemaining: i
 }),
-[C.J6.MINUTES]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_MINUTES.format({
+[A.J6.MINUTES]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_MINUTES.format({
   percent: e,
   progress: t,
   total: n,
   timeRemaining: i
 }),
-[C.J6.HOURS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_HOURS.format({
+[A.J6.HOURS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_HOURS.format({
   percent: e,
   progress: t,
   total: n,
@@ -154,24 +154,24 @@ let H = {
 })
   },
   [D.vxO.REPAIRING]: {
-[C.J6.NONE]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
+[A.J6.NONE]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
   percent: e,
   progress: t,
   total: n
 }),
-[C.J6.SECONDS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
+[A.J6.SECONDS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
   percent: e,
   progress: t,
   total: n,
   timeRemaining: i
 }),
-[C.J6.MINUTES]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
+[A.J6.MINUTES]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
   percent: e,
   progress: t,
   total: n,
   timeRemaining: i
 }),
-[C.J6.HOURS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
+[A.J6.HOURS]: (e, t, n, i) => y.Z.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
   percent: e,
   progress: t,
   total: n,
@@ -186,7 +186,7 @@ r = null != s ? Object.keys(s) : [],
 {
   unit: l,
   time: o
-} = (0, C.CI)(null != e ? e / 60 : null, r);
+} = (0, A.CI)(null != e ? e / 60 : null, r);
   if (null != s && null != l) {
 let e = s[l];
 return null != e ? e(n, i, a, o) : null;
@@ -272,8 +272,8 @@ let {
   foregroundGradientColor: a,
   message: s
 } = e;
-return (0, i.jsxs)(O.Z, {
-  direction: O.Z.Direction.VERTICAL,
+return (0, i.jsxs)(f.Z, {
+  direction: f.Z.Direction.VERTICAL,
   children: [
     (0, i.jsx)(_.Progress, {
       percent: t,
@@ -297,8 +297,8 @@ let {
   percents: t,
   message: n
 } = e;
-return (0, i.jsxs)(O.Z, {
-  direction: O.Z.Direction.VERTICAL,
+return (0, i.jsxs)(f.Z, {
+  direction: f.Z.Direction.VERTICAL,
   children: [
     (0, i.jsx)(_.StackedProgress, {
       percents: t,
@@ -319,7 +319,7 @@ let {
 } = this.props;
 return this.renderBody({
   message: y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_FINISHED.format({
-    remove: () => I.wi(e.applicationId, e.branchId)
+    remove: () => m.wi(e.applicationId, e.branchId)
   }),
   foregroundColor: (0, u.ap)(e.theme) ? D.Ilk.PRIMARY_300 : D.Ilk.PRIMARY_500,
   percent: 100
@@ -390,7 +390,7 @@ return this.renderBody({
   }
   renderProgressPatching() {
 return (0, i.jsx)(P.Z, {
-  getHistoricalTotalBytes: v.Z.getHistoricalTotalBytesWritten,
+  getHistoricalTotalBytes: L.Z.getHistoricalTotalBytesWritten,
   updateInterval: 5000,
   children: this.renderProgressPatchingBody
 });
@@ -491,12 +491,12 @@ super(...e), U(this, 'renderProgressPatchingBody', (e, t) => {
 let q = () => (0, i.jsx)(w, {
 icon: _.PlayIcon,
 tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_RESUME,
-onClick: () => I.v4()
+onClick: () => m.v4()
   }),
   Q = () => (0, i.jsx)(w, {
 icon: _.PauseIcon,
 tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_PAUSE,
-onClick: () => I.wO()
+onClick: () => m.wO()
   }),
   X = e => {
 let {
@@ -505,7 +505,7 @@ let {
 return (0, i.jsx)(w, {
   icon: _.ArrowSmallUpIcon,
   tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_MOVE_UP,
-  onClick: () => I.A1(t.applicationId, t.branchId)
+  onClick: () => m.A1(t.applicationId, t.branchId)
 });
   },
   J = e => {
@@ -513,21 +513,21 @@ let {
   item: t
 } = e;
 return (0, i.jsx)(w, {
-  icon: _.CloseSmallIcon,
+  icon: _.XSmallIcon,
   tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_REMOVE,
-  onClick: () => I.al(t.applicationId, t.branchId)
+  onClick: () => m.al(t.applicationId, t.branchId)
 });
   },
   $ = [{
   key: Y,
   cellClassName: j.nameCell,
-  render: e => (0, i.jsxs)(O.Z, {
-    align: O.Z.Align.CENTER,
+  render: e => (0, i.jsxs)(f.Z, {
+    align: f.Z.Align.CENTER,
     children: [
-      (0, i.jsx)(f.Z, {
+      (0, i.jsx)(N.Z, {
         game: e.application,
         className: j.__invalid_gameIcon,
-        size: f.Z.Sizes.SMALL
+        size: N.Z.Sizes.SMALL
       }),
       (0, i.jsx)('div', {
         className: j.nameCellText,
@@ -551,7 +551,7 @@ return (0, i.jsx)(w, {
   cellClassName: j.actionsCell,
   render(e, t) {
     let n, a;
-    return e.finished ? n = null != e.libraryApplication ? (0, i.jsx)(m.Z, {
+    return e.finished ? n = null != e.libraryApplication ? (0, i.jsx)(I.Z, {
       libraryApplication: e.libraryApplication,
       size: _.Button.Sizes.SMALL,
       className: j.gameActionButton,
@@ -564,8 +564,8 @@ return (0, i.jsx)(w, {
       item: e
     })) : a = (0, i.jsx)(J, {
       item: e
-    }), (0, i.jsxs)(O.Z, {
-      justify: O.Z.Justify.END,
+    }), (0, i.jsxs)(f.Z, {
+      justify: f.Z.Justify.END,
       children: [
         n,
         a
@@ -587,7 +587,7 @@ let {
 } = this.props;
 e.forEach(e => {
   e.finished && h.Z.wait(() => {
-    I.wi(e.applicationId, e.branchId);
+    m.wi(e.applicationId, e.branchId);
   });
 }), window.removeEventListener('resize', this.throttledUpdateHeight), this.isUnmounted = !0;
   }
@@ -608,20 +608,20 @@ return 0 === e.length ? null : (0, i.jsxs)('div', {
         (0, i.jsx)(M.Z, {
           className: r()(j.headerCell, j.networkProgress),
           title: y.Z.Messages.GAME_LIBRARY_UPDATES_HEADER_NETWORK,
-          getHistoricalTotalBytes: v.Z.getHistoricalTotalBytesDownloaded,
+          getHistoricalTotalBytes: L.Z.getHistoricalTotalBytesDownloaded,
           color: D.Ilk.GREEN_360,
           animate: a
         }),
         (0, i.jsx)(M.Z, {
           className: r()(j.headerCell, j.diskProgress),
           title: y.Z.Messages.GAME_LIBRARY_UPDATES_HEADER_DISK,
-          getHistoricalTotalBytes: v.Z.getHistoricalTotalBytesWritten,
+          getHistoricalTotalBytes: L.Z.getHistoricalTotalBytesWritten,
           color: D.Ilk.BLUE_345,
           animate: a
         })
       ]
     }),
-    (0, i.jsx)(R.Z, {
+    (0, i.jsx)(C.Z, {
       hasHeader: !1,
       columns: $,
       data: e,
@@ -679,7 +679,7 @@ return null != o && e.push({
   branchId: l,
   state: c,
   application: o,
-  libraryApplication: A.Z.getLibraryApplication(r, l),
+  libraryApplication: Z.Z.getLibraryApplication(r, l),
   finished: t,
   index: s
 }), e;
@@ -687,19 +687,19 @@ return null != o && e.push({
 }
 t.Z = (0, p.Z)(c.ZP.connectStores([
   T.Z,
+  L.Z,
+  O.Z,
   v.Z,
-  Z.Z,
-  N.Z,
-  L.Z
+  R.Z
 ], () => {
-  let e = et(Z.Z.activeItems, !1, T.Z, v.Z);
+  let e = et(O.Z.activeItems, !1, T.Z, L.Z);
   return {
 applications: [
   ...e,
-  ...et(Z.Z.finishedItems, !0, T.Z, v.Z)
+  ...et(O.Z.finishedItems, !0, T.Z, L.Z)
 ],
-paused: Z.Z.paused,
-isFocused: L.Z.isFocused(),
-theme: N.Z.theme
+paused: O.Z.paused,
+isFocused: R.Z.isFocused(),
+theme: v.Z.theme
   };
 })((0, g.Z)(ee)));

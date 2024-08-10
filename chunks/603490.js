@@ -30,7 +30,7 @@ shouldShow: u,
 onRequestClose: o,
 position: a.tq ? 'top' : 'left',
 align: a.tq ? 'center' : 'top',
-children: () => (0, i.jsx)(l.s, {
+children: () => (0, i.jsx)(l.sF, {
   label: r.Z.Messages.ADD_REACTION,
   icon: s.ReactionIcon,
   onClick: o

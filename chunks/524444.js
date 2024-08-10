@@ -67,19 +67,19 @@ var r, i, a = n(735250),
   I = n(593472),
   T = n(110924),
   g = n(858644),
-  S = n(688465),
-  A = n(425886),
-  N = n(80966),
-  v = n(593545),
-  O = n(479313),
-  R = n(765104),
-  C = n(505953),
-  y = n(695346),
-  D = n(201542),
-  L = n(306680),
-  b = n(594174),
-  M = n(153124),
-  P = n(278297),
+  S = n(249458),
+  A = n(313201),
+  N = n(688465),
+  v = n(425886),
+  O = n(80966),
+  R = n(593545),
+  C = n(479313),
+  y = n(765104),
+  D = n(505953),
+  L = n(695346),
+  b = n(201542),
+  M = n(306680),
+  P = n(594174),
   U = n(259580),
   w = n(626135),
   x = n(823379),
@@ -115,7 +115,7 @@ renderOverlayContent: u,
   } = e, d = W(t), _ = K(n);
   return r = null == r ? G.FC : r, i = null == i ? G.rs : i, (0, a.jsxs)(s.Fragment, {
 children: [
-  (0, a.jsx)(N.Z, {
+  (0, a.jsx)(O.Z, {
     ...c,
     alt: o,
     volume: r,
@@ -142,7 +142,7 @@ renderAdjacentContent: l,
   } = e, c = W(t), d = K(r);
   return n = null == n ? G.FC : n, (0, a.jsxs)(s.Fragment, {
 children: [
-  (0, a.jsx)(A.Z, {
+  (0, a.jsx)(v.Z, {
     ...u,
     onVolumeChange: c,
     onMute: d,
@@ -164,7 +164,7 @@ volume: n,
 onMute: r,
 ...i
   } = e, s = W(t), o = K(r);
-  return n = null == n ? G.FC : n, (0, a.jsx)(D.Z, {
+  return n = null == n ? G.FC : n, (0, a.jsx)(b.Z, {
 ...i,
 onVolumeChange: s,
 onMute: o,
@@ -183,7 +183,7 @@ disableAltTextDisplay: u = !1,
 mediaLayoutType: c,
 imageContainerStyle: d,
 renderForwardComponent: _
-  } = e, f = c === B.hV.MOSAIC, h = !u && y.H1.getSetting() && null != t && '' !== t && !0 !== n, m = e => {
+  } = e, f = c === B.hV.MOSAIC, h = !u && L.H1.getSetting() && null != t && '' !== t && !0 !== n, m = e => {
 let {
   altText: t
 } = e;
@@ -264,7 +264,7 @@ renderAdjacentContent: t,
   } = e;
   return (0, a.jsxs)(s.Fragment, {
 children: [
-  (0, a.jsx)(v.Z, {
+  (0, a.jsx)(R.Z, {
     ...n
   }),
   null != t && t()
@@ -283,7 +283,7 @@ let {
   type: t = 0,
   onClick: n
 } = e;
-return (0, a.jsx)(P.G.Consumer, {
+return (0, a.jsx)(S.G.Consumer, {
   children: e => e.disableInteractions ? null : (0, a.jsxs)('div', {
     className: Y.jumpToPresentBar,
     children: [
@@ -341,7 +341,7 @@ let {
   onClick: t,
   loading: n
 } = e;
-return (0, a.jsx)(P.G.Consumer, {
+return (0, a.jsx)(S.G.Consumer, {
   children: e => e.disableInteractions ? null : (0, a.jsxs)(E.Clickable, {
     className: Y.messagesErrorBar,
     onClick: t,
@@ -375,8 +375,8 @@ function er(e) {
   let {
 content: t,
 channelId: n
-  } = e, [r] = s.useState(() => (0, M.hQ)('NewMessagesBarJumpToNewMessages_')), i = s.useCallback(() => {
-let e = L.ZP.ackMessageId(n);
+  } = e, [r] = s.useState(() => (0, A.hQ)('NewMessagesBarJumpToNewMessages_')), i = s.useCallback(() => {
+let e = M.ZP.ackMessageId(n);
 null != e ? f.Z.jumpToMessage({
   channelId: n,
   messageId: e,
@@ -392,7 +392,7 @@ null != e ? f.Z.jumpToMessage({
 (0, h.In)(n);
   }, [n]), {
 disableInteractions: u
-  } = s.useContext(P.G);
+  } = s.useContext(S.G);
   return u ? null : (0, a.jsxs)('div', {
 className: l()(Y.newMessagesBar, {
   [Y.disableInteractions]: u
@@ -441,47 +441,47 @@ content: o,
 scrollManager: u
   } = e, {
 disableInteractions: p
-  } = s.useContext(P.G), [m, g] = s.useState(null), A = s.useRef(null), [N, v] = s.useState(null), y = s.useRef(null), D = (0, _.Wu)([R.Z], () => {
+  } = s.useContext(S.G), [m, g] = s.useState(null), A = s.useRef(null), [v, O] = s.useState(null), R = s.useRef(null), L = (0, _.Wu)([y.Z], () => {
 var e;
-return null !== (e = R.Z.summaries(i.id)) && void 0 !== e ? e : [];
-  }, [i]), M = (0, T.Z)(D);
+return null !== (e = y.Z.summaries(i.id)) && void 0 !== e ? e : [];
+  }, [i]), b = (0, T.Z)(L);
   s.useEffect(() => {
-!c().isEqual(M, D) && w.default.track(F.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
-  num_summaries: D.length,
-  message_counts: D.map(e => e.count),
-  start_message_ids: D.map(e => e.startId),
-  end_message_ids: D.map(e => e.endId),
-  num_participants: D.map(e => e.people.length),
+!c().isEqual(b, L) && w.default.track(F.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
+  num_summaries: L.length,
+  message_counts: L.map(e => e.count),
+  start_message_ids: L.map(e => e.startId),
+  end_message_ids: L.map(e => e.endId),
+  num_participants: L.map(e => e.people.length),
   guild_id: i.guild_id,
   channel_id: i.id,
   channel_type: i.type
 });
   }, [
-D,
-M,
+L,
+b,
 i.guild_id,
 i.id,
 i.type
   ]);
-  let G = (0, _.e7)([b.default], () => {
+  let G = (0, _.e7)([P.default], () => {
   var e;
-  return null !== (e = null == D ? void 0 : D.map(e => {
+  return null !== (e = null == L ? void 0 : L.map(e => {
     var t;
     return null === (t = e.people) || void 0 === t ? void 0 : t.map(e => {
       var t;
-      return null !== (t = b.default.getUser(e)) && void 0 !== t ? t : null;
+      return null !== (t = P.default.getUser(e)) && void 0 !== t ? t : null;
     }).filter(x.lm);
   })) && void 0 !== e ? e : [];
-}, [D], ea),
-B = null !== (n = (0, _.e7)([R.Z], () => R.Z.visibleSummaryIndex())) && void 0 !== n ? n : -1,
-V = null == D ? void 0 : null === (t = D[B]) || void 0 === t ? void 0 : t.topic;
-  null == V && null == m && (null == D ? void 0 : D.length) >= 1 && (V = null === (r = D[0]) || void 0 === r ? void 0 : r.topic);
+}, [L], ea),
+B = null !== (n = (0, _.e7)([y.Z], () => y.Z.visibleSummaryIndex())) && void 0 !== n ? n : -1,
+V = null == L ? void 0 : null === (t = L[B]) || void 0 === t ? void 0 : t.topic;
+  null == V && null == m && (null == L ? void 0 : L.length) >= 1 && (V = null === (r = L[0]) || void 0 === r ? void 0 : r.topic);
   let j = s.useMemo(() => c().debounce(e => {
   var t;
   g(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null);
 }, 64), [g]),
 W = s.useMemo(() => c().throttle(() => {
-  (0, O.yK)(null);
+  (0, C.yK)(null);
 }, 1200, {
   trailing: !1
 }), []),
@@ -495,27 +495,27 @@ K = s.useCallback(e => {
 Q = s.useCallback(() => {
   w.default.track(F.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
     topics_dropdown_open: !z,
-    num_summaries: D.length,
-    message_counts: D.map(e => e.count),
-    start_message_ids: D.map(e => e.startId),
-    end_message_ids: D.map(e => e.endId),
-    num_participants: D.map(e => e.people.length),
+    num_summaries: L.length,
+    message_counts: L.map(e => e.count),
+    start_message_ids: L.map(e => e.startId),
+    end_message_ids: L.map(e => e.endId),
+    num_participants: L.map(e => e.people.length),
     guild_id: i.guild_id,
     channel_id: i.id,
     channel_type: i.type
   }), q(!z);
 }, [
   z,
-  D,
+  L,
   q,
   i
 ]),
 X = s.useCallback(function(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : H.DZ.PILL_DROPDOWN,
-    n = D[e];
+    n = L[e];
   if (null == n)
     return;
-  (0, O.wv)(i.id, n.id), (0, O.yK)(i.id, n.id);
+  (0, C.wv)(i.id, n.id), (0, C.yK)(i.id, n.id);
   let r = () => {
     u.removeScrollCompleteCallback(r), setTimeout(() => {
       u.addAutomaticAnchorCallback(K, !1);
@@ -536,7 +536,7 @@ X = s.useCallback(function(e) {
     context: 'Summary Jump'
   });
 }, [
-  D,
+  L,
   i,
   K,
   u
@@ -544,18 +544,18 @@ X = s.useCallback(function(e) {
 $ = s.useCallback(e => {
   var t;
   q(e);
-  let n = null === (t = y.current) || void 0 === t ? void 0 : t.scrollTop;
-  null != n && v(n);
+  let n = null === (t = R.current) || void 0 === t ? void 0 : t.scrollTop;
+  null != n && O(n);
 }, []);
   s.useEffect(() => {
-if (null != N && z) {
+if (null != v && z) {
   var e;
-  null === (e = y.current) || void 0 === e || e.scrollTo({
-    top: N
+  null === (e = R.current) || void 0 === e || e.scrollTo({
+    top: v
   });
 }
   }, [
-N,
+v,
 z
   ]);
   let J = s.useCallback(e => {
@@ -563,18 +563,18 @@ var t;
 if (!((0, d.k)(e.target) && (null === (t = A.current) || void 0 === t ? void 0 : t.contains(e.target))))
   z && w.default.track(F.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
     topics_dropdown_open: !1,
-    num_summaries: D.length,
-    message_counts: D.map(e => e.count),
-    start_message_ids: D.map(e => e.startId),
-    end_message_ids: D.map(e => e.endId),
-    num_participants: D.map(e => e.people.length),
+    num_summaries: L.length,
+    message_counts: L.map(e => e.count),
+    start_message_ids: L.map(e => e.startId),
+    end_message_ids: L.map(e => e.endId),
+    num_participants: L.map(e => e.people.length),
     guild_id: i.guild_id,
     channel_id: i.id,
     channel_type: i.type
   }), $(!1);
   }, [
 z,
-D,
+L,
 i,
 $
   ]);
@@ -584,25 +584,25 @@ u.removeAutomaticAnchorCallback(K);
 u,
 K
   ]), s.useEffect(() => {
-(0, O.G1)(i.id);
+(0, C.G1)(i.id);
   }, [i.id]), s.useEffect(() => (document.addEventListener('mousedown', J), () => {
 document.removeEventListener('mousedown', J);
   }), [J]);
-  let ee = s.useMemo(() => (0, a.jsx)(C.Z, {
+  let ee = s.useMemo(() => (0, a.jsx)(D.Z, {
   channel: i,
-  summaries: D,
+  summaries: L,
   summariesMembers: G,
   selectTopic: X,
   setOpen: $
 }), [
-  D,
+  L,
   G,
   X,
   $,
   i
 ]),
 et = s.useCallback(() => {
-  let e = L.ZP.ackMessageId(i.id);
+  let e = M.ZP.ackMessageId(i.id);
   null != e ? f.Z.jumpToMessage({
     channelId: i.id,
     messageId: e,
@@ -619,7 +619,7 @@ en = s.useCallback(() => {
   (0, h.In)(i.id);
 }, [i.id]),
 er = Z.Z.Messages.SUMMARIES_NO_SUMMARIES;
-  return D.length > 0 && (er = '' === V || null == V ? Z.Z.Messages.SUMMARIES_VIEW_ALL : V), p ? null : (0, a.jsxs)('div', {
+  return L.length > 0 && (er = '' === V || null == V ? Z.Z.Messages.SUMMARIES_VIEW_ALL : V), p ? null : (0, a.jsxs)('div', {
 ref: A,
 className: l()(Y.newTopicsBarContainer, Y.containerMarginTop),
 children: [
@@ -697,7 +697,7 @@ children: [
                 lineClamp: 1,
                 children: Z.Z.Messages.SUMMARIES
               }),
-              (0, a.jsx)(S.Z, {
+              (0, a.jsx)(N.Z, {
                 className: Y.summariesBetaTag
               })
             ]
@@ -706,7 +706,7 @@ children: [
             'aria-label': Z.Z.Messages.CLOSE,
             onClick: Q,
             className: Y.topicsDropdownClose,
-            children: (0, a.jsx)(E.CloseSmallIcon, {
+            children: (0, a.jsx)(E.XSmallIcon, {
               size: 'md',
               color: 'currentColor'
             })
@@ -714,7 +714,7 @@ children: [
         ]
       }),
       (0, a.jsx)(E.Scroller, {
-        ref: y,
+        ref: R,
         className: Y.topicsScroller,
         fade: !0,
         children: ee
@@ -739,55 +739,55 @@ channel: i,
 scrollManager: o
   } = e, {
 disableInteractions: u
-  } = s.useContext(P.G), [h, p] = s.useState(null), m = s.useRef(null), [g, A] = s.useState(null), N = s.useRef(null), v = (0, _.Wu)([R.Z], () => {
+  } = s.useContext(S.G), [h, p] = s.useState(null), m = s.useRef(null), [g, A] = s.useState(null), v = s.useRef(null), O = (0, _.Wu)([y.Z], () => {
 var e;
-return null !== (e = R.Z.summaries(i.id)) && void 0 !== e ? e : [];
-  }, [i]), y = (0, T.Z)(v);
+return null !== (e = y.Z.summaries(i.id)) && void 0 !== e ? e : [];
+  }, [i]), R = (0, T.Z)(O);
   s.useEffect(() => {
-!c().isEqual(y, v) && w.default.track(F.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
-  num_summaries: v.length,
-  message_counts: v.map(e => e.count),
-  start_message_ids: v.map(e => e.startId),
-  end_message_ids: v.map(e => e.endId),
-  num_participants: v.map(e => e.people.length),
+!c().isEqual(R, O) && w.default.track(F.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
+  num_summaries: O.length,
+  message_counts: O.map(e => e.count),
+  start_message_ids: O.map(e => e.startId),
+  end_message_ids: O.map(e => e.endId),
+  num_participants: O.map(e => e.people.length),
   guild_id: i.guild_id,
   channel_id: i.id,
   channel_type: i.type
 });
   }, [
-v,
-y,
+O,
+R,
 i.guild_id,
 i.id,
 i.type
   ]);
-  let D = (0, _.e7)([b.default], () => {
+  let L = (0, _.e7)([P.default], () => {
   var e;
-  return null !== (e = null == v ? void 0 : v.map(e => {
+  return null !== (e = null == O ? void 0 : O.map(e => {
     var t;
     return null === (t = e.people) || void 0 === t ? void 0 : t.map(e => {
       var t;
-      return null !== (t = b.default.getUser(e)) && void 0 !== t ? t : null;
+      return null !== (t = P.default.getUser(e)) && void 0 !== t ? t : null;
     }).filter(x.lm);
   })) && void 0 !== e ? e : [];
-}, [v], ea),
-L = null !== (n = (0, _.e7)([R.Z], () => R.Z.visibleSummaryIndex())) && void 0 !== n ? n : -1,
-M = null == v ? void 0 : null === (t = v[L]) || void 0 === t ? void 0 : t.topic;
-  null == M && null == h && (null == v ? void 0 : v.length) >= 1 && (M = null === (r = v[0]) || void 0 === r ? void 0 : r.topic);
-  let G = s.useMemo(() => c().get(v, L - 1), [
-  L,
-  v
+}, [O], ea),
+b = null !== (n = (0, _.e7)([y.Z], () => y.Z.visibleSummaryIndex())) && void 0 !== n ? n : -1,
+M = null == O ? void 0 : null === (t = O[b]) || void 0 === t ? void 0 : t.topic;
+  null == M && null == h && (null == O ? void 0 : O.length) >= 1 && (M = null === (r = O[0]) || void 0 === r ? void 0 : r.topic);
+  let G = s.useMemo(() => c().get(O, b - 1), [
+  b,
+  O
 ]),
-k = s.useMemo(() => c().get(v, L + 1), [
-  L,
-  v
+k = s.useMemo(() => c().get(O, b + 1), [
+  b,
+  O
 ]),
 B = s.useMemo(() => c().debounce(e => {
   var t;
   p(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null);
 }, 64), [p]),
 V = s.useMemo(() => c().throttle(() => {
-  (0, O.yK)(null);
+  (0, C.yK)(null);
 }, 1200, {
   trailing: !1
 }), []),
@@ -801,27 +801,27 @@ j = s.useCallback(e => {
 z = s.useCallback(() => {
   w.default.track(F.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
     topics_dropdown_open: !W,
-    num_summaries: v.length,
-    message_counts: v.map(e => e.count),
-    start_message_ids: v.map(e => e.startId),
-    end_message_ids: v.map(e => e.endId),
-    num_participants: v.map(e => e.people.length),
+    num_summaries: O.length,
+    message_counts: O.map(e => e.count),
+    start_message_ids: O.map(e => e.startId),
+    end_message_ids: O.map(e => e.endId),
+    num_participants: O.map(e => e.people.length),
     guild_id: i.guild_id,
     channel_id: i.id,
     channel_type: i.type
   }), K(!W);
 }, [
   W,
-  v,
+  O,
   K,
   i
 ]),
 q = s.useCallback(function(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : H.DZ.PILL_DROPDOWN,
-    n = v[e];
+    n = O[e];
   if (null == n)
     return;
-  (0, O.wv)(i.id, n.id), (0, O.yK)(i.id, n.id);
+  (0, C.wv)(i.id, n.id), (0, C.yK)(i.id, n.id);
   let r = () => {
     o.removeScrollCompleteCallback(r), setTimeout(() => {
       o.addAutomaticAnchorCallback(j, !1);
@@ -842,33 +842,33 @@ q = s.useCallback(function(e) {
     context: 'Summary Jump'
   });
 }, [
-  v,
+  O,
   i,
   j,
   o
 ]),
 Q = s.useCallback(() => {
-  q(L - 1, H.DZ.PILL_NEXT_ARROW);
+  q(b - 1, H.DZ.PILL_NEXT_ARROW);
 }, [
   q,
-  L
+  b
 ]),
 X = s.useCallback(() => {
-  q(L + 1, H.DZ.PILL_PREVIOUS_ARROW);
+  q(b + 1, H.DZ.PILL_PREVIOUS_ARROW);
 }, [
-  L,
+  b,
   q
 ]),
 $ = s.useCallback(e => {
   var t;
   K(e);
-  let n = null === (t = N.current) || void 0 === t ? void 0 : t.scrollTop;
+  let n = null === (t = v.current) || void 0 === t ? void 0 : t.scrollTop;
   null != n && A(n);
 }, []);
   s.useEffect(() => {
 if (null != g && W) {
   var e;
-  null === (e = N.current) || void 0 === e || e.scrollTo({
+  null === (e = v.current) || void 0 === e || e.scrollTo({
     top: g
   });
 }
@@ -881,18 +881,18 @@ var t;
 if (!((0, d.k)(e.target) && (null === (t = m.current) || void 0 === t ? void 0 : t.contains(e.target))))
   W && w.default.track(F.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
     topics_dropdown_open: !1,
-    num_summaries: v.length,
-    message_counts: v.map(e => e.count),
-    start_message_ids: v.map(e => e.startId),
-    end_message_ids: v.map(e => e.endId),
-    num_participants: v.map(e => e.people.length),
+    num_summaries: O.length,
+    message_counts: O.map(e => e.count),
+    start_message_ids: O.map(e => e.startId),
+    end_message_ids: O.map(e => e.endId),
+    num_participants: O.map(e => e.people.length),
     guild_id: i.guild_id,
     channel_id: i.id,
     channel_type: i.type
   }), $(!1);
   }, [
 W,
-v,
+O,
 i,
 $
   ]);
@@ -902,27 +902,27 @@ o.removeAutomaticAnchorCallback(j);
 o,
 j
   ]), s.useEffect(() => {
-(0, O.G1)(i.id);
+(0, C.G1)(i.id);
   }, [i.id]), s.useEffect(() => (document.addEventListener('mousedown', J), () => {
 document.removeEventListener('mousedown', J);
   }), [J]);
-  let ee = s.useMemo(() => (0, a.jsx)(C.Z, {
+  let ee = s.useMemo(() => (0, a.jsx)(D.Z, {
 channel: i,
-summaries: v,
-summariesMembers: D,
+summaries: O,
+summariesMembers: L,
 selectTopic: q,
 setOpen: $
   }), [
-v,
-D,
+O,
+L,
 q,
 $,
 i
   ]);
-  if (!(0, _.e7)([R.Z], () => R.Z.shouldShowTopicsBar()))
+  if (!(0, _.e7)([y.Z], () => y.Z.shouldShowTopicsBar()))
 return null;
   let et = Z.Z.Messages.SUMMARIES_NO_SUMMARIES;
-  return v.length > 0 && (et = '' === M || null == M ? Z.Z.Messages.SUMMARIES_VIEW_ALL : M), u ? null : (0, a.jsxs)('div', {
+  return O.length > 0 && (et = '' === M || null == M ? Z.Z.Messages.SUMMARIES_VIEW_ALL : M), u ? null : (0, a.jsxs)('div', {
 ref: m,
 className: l()(Y.topicsPillContainer, Y.containerMarginTop),
 children: [
@@ -1011,7 +1011,7 @@ children: [
                 lineClamp: 1,
                 children: Z.Z.Messages.SUMMARIES
               }),
-              (0, a.jsx)(S.Z, {
+              (0, a.jsx)(N.Z, {
                 className: Y.summariesBetaTag
               })
             ]
@@ -1020,7 +1020,7 @@ children: [
             'aria-label': Z.Z.Messages.CLOSE,
             onClick: z,
             className: Y.topicsDropdownClose,
-            children: (0, a.jsx)(E.CloseSmallIcon, {
+            children: (0, a.jsx)(E.XSmallIcon, {
               size: 'md',
               color: 'currentColor'
             })
@@ -1028,7 +1028,7 @@ children: [
         ]
       }),
       (0, a.jsx)(E.Scroller, {
-        ref: N,
+        ref: v,
         className: Y.topicsScroller,
         fade: !0,
         children: ee

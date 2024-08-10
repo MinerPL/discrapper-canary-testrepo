@@ -10,8 +10,8 @@ var r = n(735250),
   _ = n(239091),
   E = n(607070),
   f = n(134433),
-  h = n(518738),
-  p = n(176278),
+  h = n(91218),
+  p = n(518738),
   m = n(689938),
   I = n(941103);
 t.Z = i.forwardRef(function(e, t) {
@@ -28,7 +28,7 @@ onMouseDown: y
   } = e, {
 tabIndex: D,
 ...L
-  } = (0, o.JA)(v.id), b = (0, h.p9)({
+  } = (0, o.JA)(v.id), b = (0, p.p9)({
 roleId: v.id,
 size: 16,
 guildId: R
@@ -95,7 +95,7 @@ children: (0, r.jsxs)('div', {
         }),
         children: [
           S,
-          (0, r.jsx)(d.CloseSmallIcon, {
+          (0, r.jsx)(d.XSmallIcon, {
             size: 'md',
             color: k,
             className: I.roleRemoveIcon,
@@ -115,7 +115,7 @@ children: (0, r.jsxs)('div', {
       }),
       children: S
     }),
-    null != b ? (0, r.jsx)(p.Z, {
+    null != b ? (0, r.jsx)(h.Z, {
       className: I.roleIcon,
       ...b,
       enableTooltip: !1

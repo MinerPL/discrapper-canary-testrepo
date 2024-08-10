@@ -16,8 +16,8 @@ var i = n(735250),
   p = n(650774),
   _ = n(443063),
   f = n(981631),
-  m = n(176505),
-  g = n(689938),
+  g = n(176505),
+  m = n(689938),
   C = n(619588);
 
 function I(e) {
@@ -25,7 +25,7 @@ function I(e) {
 guild: t,
 guildChannels: l,
 hasBanner: I
-  } = e, N = l.getCommunitySection(), x = (0, d.Z)(t), S = (0, r.e7)([p.Z], () => p.Z.getMemberCount(t.id)), v = async () => {
+  } = e, N = l.getGuildActionSection(), x = (0, d.Z)(t), S = (0, r.e7)([p.Z], () => p.Z.getMemberCount(t.id)), v = async () => {
 let {
   default: e
 } = await n.e('46826').then(n.bind(n, 859432));
@@ -60,7 +60,7 @@ children: [
     children: (0, i.jsx)(s.Text, {
       variant: 'text-xs/normal',
       color: 'text-low-contrast',
-      children: g.Z.Messages.MEMBERS_HEADER.format({
+      children: m.Z.Messages.MEMBERS_HEADER.format({
         members: S
       })
     })
@@ -70,17 +70,17 @@ children: [
     children: [
       N.getRows().map((e, l) => {
         switch (N.getRow(l)) {
-          case _.f.CHANNELS_AND_ROLES:
+          case _.z.CHANNELS_AND_ROLES:
             return (0, i.jsx)(E, {
-              tooltip: g.Z.Messages.CHANNELS_AND_ROLES,
+              tooltip: m.Z.Messages.CHANNELS_AND_ROLES,
               onPress: () => {
-                (0, h.uL)(f.Z5c.CHANNEL(t.id, x ? m.oC.CUSTOMIZE_COMMUNITY : m.oC.CHANNEL_BROWSER));
+                (0, h.uL)(f.Z5c.CHANNEL(t.id, x ? g.oC.CUSTOMIZE_COMMUNITY : g.oC.CHANNEL_BROWSER));
               },
               children: (0, i.jsx)(s.ChannelListMagnifyingGlassIcon, {
                 size: 'sm'
               })
             });
-          case _.f.GUILD_SCHEDULED_EVENTS:
+          case _.z.GUILD_SCHEDULED_EVENTS:
             return (0, i.jsx)(E, {
               tooltip: 'Events',
               onPress: async () => {
@@ -102,9 +102,9 @@ children: [
                 size: 'sm'
               })
             });
-          case _.f.GUILD_MOD_DASH_MEMBER_SAFETY:
+          case _.z.GUILD_MOD_DASH_MEMBER_SAFETY:
             return (0, i.jsx)(E, {
-              tooltip: g.Z.Messages.MEMBERS,
+              tooltip: m.Z.Messages.MEMBERS,
               onPress: () => {
                 (0, u._X)(t.id);
               },

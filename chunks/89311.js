@@ -1,5 +1,4 @@
 e.exports = {
-  flexRow: 'flexRow_d9a510',
   title: 'title_d9a510',
   appIcon: 'appIcon_d9a510',
   icon: 'icon_d9a510',

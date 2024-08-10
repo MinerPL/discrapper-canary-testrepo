@@ -31,7 +31,7 @@ children: (0, r.jsxs)('div', {
       children: [
         (0, r.jsx)('div', {
           className: f.iconContainer,
-          children: (0, r.jsx)(a.NewUserLargeIcon, {
+          children: (0, r.jsx)(a.NewUserIcon, {
             size: 'custom',
             color: 'currentColor',
             width: 40,

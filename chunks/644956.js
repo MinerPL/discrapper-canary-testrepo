@@ -17,21 +17,21 @@ var i = n(120356),
   E = n(607070),
   f = n(100527),
   h = n(906732),
-  p = n(818083),
-  m = n(480608),
-  I = n(124072),
-  T = n(484459),
-  g = n(103575),
-  S = n(592125),
-  A = n(271383),
-  N = n(430824),
-  v = n(594174),
-  O = n(285952),
-  R = n(151827),
+  p = n(600164),
+  m = n(82295),
+  I = n(818083),
+  T = n(480608),
+  g = n(124072),
+  S = n(184301),
+  A = n(103575),
+  N = n(592125),
+  v = n(271383),
+  O = n(430824),
+  R = n(594174),
   C = n(689938),
   y = n(153521),
   D = n(549805);
-let L = (0, p.B)({
+let L = (0, I.B)({
   kind: 'user',
   id: '2021-07_role_popout',
   label: 'Role Popout',
@@ -52,13 +52,13 @@ function b(e) {
 roleColor: t,
 roleId: i,
 channelId: s,
-roleName: p,
+roleName: I,
 guildId: b,
 children: M,
 inlinePreview: P = !1
   } = e, {
 analyticsLocations: U
-  } = (0, h.ZP)(f.Z.ROLE_MENTION), w = (0, u.e7)([E.Z], () => E.Z.roleStyle), x = null != t && 0 !== t && !P, G = x && 'dot' === w, k = e => (0, r.jsxs)(I.Z, {
+  } = (0, h.ZP)(f.Z.ROLE_MENTION), w = (0, u.e7)([E.Z], () => E.Z.roleStyle), x = null != t && 0 !== t && !P, G = x && 'dot' === w, k = e => (0, r.jsxs)(g.Z, {
 className: a()(y.roleMention),
 color: 'username' === w && x ? t : null,
 ...e,
@@ -78,32 +78,32 @@ location: '2ec235_1'
   }, {
 autoTrackExposure: !1
   });
-  return !B || P || null == s || null == b || null == i && '@everyone' !== p ? (0, r.jsx)(h.Gt, {
+  return !B || P || null == s || null == b || null == i && '@everyone' !== I ? (0, r.jsx)(h.Gt, {
 value: U,
 children: k()
   }) : (0, r.jsx)(h.Gt, {
 value: U,
 children: (0, r.jsx)(c.Popout, {
   preload: async () => {
-    null != i && await (0, m.H)(b, i);
+    null != i && await (0, T.H)(b, i);
   },
   renderPopout: e => {
-    let t = S.Z.getChannel(s),
-      a = N.Z.getGuild(b),
-      l = A.ZP.getMembers(a.id),
-      u = N.Z.getRole(b, null != i ? i : a.getEveryoneRoleId()),
-      E = o()(l).filter(e => !!('@everyone' === p || e.roles.includes(i)) && null != v.default.getUser(e.userId)).sortBy(e => {
+    let t = N.Z.getChannel(s),
+      a = O.Z.getGuild(b),
+      l = v.ZP.getMembers(a.id),
+      u = O.Z.getRole(b, null != i ? i : a.getEveryoneRoleId()),
+      E = o()(l).filter(e => !!('@everyone' === I || e.roles.includes(i)) && null != R.default.getUser(e.userId)).sortBy(e => {
         var t;
-        let n = v.default.getUser(e.userId);
+        let n = R.default.getUser(e.userId);
         return (null != n ? null !== (t = e.nick) && void 0 !== t ? t : n.username : '').toLocaleLowerCase();
       }).map(e => {
-        let i = v.default.getUser(e.userId);
+        let i = R.default.getUser(e.userId);
         return (0, r.jsx)(c.Popout, {
-          preload: () => (0, T.W)(i.id, i.getAvatarURL(t.guild_id, 80), {
+          preload: () => (0, S.Z)(i.id, i.getAvatarURL(t.guild_id, 80), {
             guildId: t.guild_id,
             channelId: t.id
           }),
-          renderPopout: n => (0, r.jsx)(g.Z, {
+          renderPopout: n => (0, r.jsx)(A.Z, {
             ...n,
             location: 'RoleMention',
             userId: e.userId,
@@ -150,13 +150,13 @@ children: (0, r.jsx)(c.Popout, {
           }
         }, i.id);
       }).value();
-    return (0, r.jsx)(O.Z, {
+    return (0, r.jsx)(p.Z, {
       className: y.rolePopout,
       ...e,
       children: (0, r.jsxs)(c.Scroller, {
         className: y.roleScroller,
         children: [
-          (0, r.jsx)(R.Z, {
+          (0, r.jsx)(m.Z, {
             className: y.roleHeader,
             'aria-label': C.Z.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
               title: u.name,

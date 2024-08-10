@@ -13,13 +13,13 @@ var l = i(735250),
   s = i(442837),
   o = i(481060),
   c = i(45114),
-  u = i(597),
-  d = i(147754),
-  E = i(984933),
-  g = i(720202),
-  h = i(430824),
-  v = i(306680),
-  Z = i(153124),
+  u = i(313201),
+  d = i(597),
+  E = i(147754),
+  g = i(984933),
+  h = i(720202),
+  v = i(430824),
+  Z = i(306680),
   C = i(626135),
   m = i(823379),
   N = i(981888),
@@ -42,26 +42,26 @@ function S(e) {
 transitionState: n,
 onClose: a,
 guildId: N
-  } = e, D = (0, Z.Dt)(), S = (0, s.e7)([h.Z], () => h.Z.getGuild(N)), y = (0, _.Z)(null == S ? void 0 : S.id), A = (0, I.ZP)(N), R = t.useRef(v.ZP.ackMessageId(N, k.W.GUILD_EVENT)), U = (0, j.Z)();
+  } = e, D = (0, u.Dt)(), S = (0, s.e7)([v.Z], () => v.Z.getGuild(N)), y = (0, _.Z)(null == S ? void 0 : S.id), A = (0, I.ZP)(N), R = t.useRef(Z.ZP.ackMessageId(N, k.W.GUILD_EVENT)), U = (0, j.Z)();
   return t.useEffect(() => {
 A.forEach(e => f.Z.getGuildEventUserCounts(N, e.id, [])), f.Z.getGuildEventsForCurrentUser(N);
   }, [
 A,
 N
   ]), t.useEffect(() => {
-let e = h.Z.getGuild(N);
+let e = v.Z.getGuild(N);
 if (!(null == e ? void 0 : e.hasFeature(M.oNc.HUB)))
   return;
 let {
   showHubEventsList: n
-} = d.Z.getCurrentConfig({
+} = E.Z.getCurrentConfig({
   guildId: N,
   location: 'd3755f_1'
 });
 if (!n)
   return;
-let i = E.ZP.getDefaultChannel(N);
-null != i && u.c(i.id);
+let i = g.ZP.getDefaultChannel(N);
+null != i && d.c(i.id);
   }, [N]), t.useEffect(() => {
 C.default.track(M.rMx.OPEN_MODAL, {
   type: L.zw,
@@ -70,7 +70,7 @@ C.default.track(M.rMx.OPEN_MODAL, {
 });
   }, []), t.useEffect(() => {
 r()(A).map(e => e.creator_id).filter(m.lm).uniq().forEach(e => {
-  g.Z.requestMember(N, e);
+  h.Z.requestMember(N, e);
 });
   }, [
 N,
@@ -111,7 +111,7 @@ children: [
                   default: e
                 } = await Promise.all([
                   i.e('58023'),
-                  i.e('92173')
+                  i.e('42098')
                 ]).then(i.bind(i, 779250));
                 return n => (0, l.jsx)(e, {
                   ...n,
@@ -128,7 +128,7 @@ children: [
         onClick: a,
         className: G.iconButton,
         'aria-label': P.Z.Messages.CLOSE,
-        children: (0, l.jsx)(o.CloseSmallIcon, {
+        children: (0, l.jsx)(o.XSmallIcon, {
           size: 'md',
           color: 'currentColor',
           className: G.icon

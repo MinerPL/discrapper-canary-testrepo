@@ -5,7 +5,7 @@ var r = n(735250),
   o = n(442837),
   l = n(481060),
   u = n(607070),
-  c = n(810090),
+  c = n(70097),
   d = n(617136),
   _ = n(918701),
   E = n(566078),
@@ -32,7 +32,13 @@ n.id,
 e
   ]), N = i.useRef(null), v = i.useRef(a);
   i.useEffect(() => {
-S && !T && null != N.current && (a && !v.current ? N.current.play() : !a && v.current && (N.current.currentTime = 0, N.current.pause()), v.current = a);
+if (null != N.current) {
+  if (!S || T) {
+    N.current.currentTime = 0, N.current.pause();
+    return;
+  }
+  a && !v.current ? N.current.play() : !a && v.current && (N.current.currentTime = 0, N.current.pause()), v.current = a;
+}
   }, [
 a,
 S,

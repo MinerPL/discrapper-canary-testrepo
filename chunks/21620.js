@@ -1,5 +1,6 @@
 e.exports = {
   container: 'container_d1c246',
+  separator: 'separator_d1c246',
   reactionSuggestion: 'reactionSuggestion_d1c246',
   floating: 'floating_d1c246',
   notFloating: 'notFloating_d1c246',

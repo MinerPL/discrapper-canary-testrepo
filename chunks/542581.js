@@ -17,8 +17,8 @@ t.Z = s.memo(function(e) {
   let {
 channel: t,
 onChange: r
-  } = e, C = (0, m.AF)(), {
-guidelinesOpen: f
+  } = e, f = (0, m.AF)(), {
+guidelinesOpen: C
   } = (0, m.xH)(e => {
 let {
   guidelinesOpen: t
@@ -35,16 +35,16 @@ t !== T && I(t);
   s.useLayoutEffect(() => {
 setTimeout(r, 350);
   }, [
-f,
+C,
 r
   ]);
-  let [N, b] = s.useState(!f), v = (0, o.useSpring)({
-opacity: f ? 1 : 0,
-maxHeight: f ? 500 : 0,
+  let [N, b] = s.useState(!C), v = (0, o.useSpring)({
+opacity: C ? 1 : 0,
+maxHeight: C ? 500 : 0,
 config: {
   duration: 300
 },
-onRest: () => b(!f)
+onRest: () => b(!C)
   });
   return null != t.topic && t.topic.length > 0 ? (0, a.jsx)(i.animated.div, {
 style: v,
@@ -83,9 +83,9 @@ children: (0, a.jsxs)('div', {
           'aria-label': _.Z.Messages.CLOSE,
           className: g.clickable,
           onClick: () => {
-            C.getState().setGuidelinesOpen(!1);
+            f.getState().setGuidelinesOpen(!1);
           },
-          children: (0, a.jsx)(o.CloseSmallIcon, {
+          children: (0, a.jsx)(o.XSmallIcon, {
             size: 'xs',
             color: 'currentColor'
           })

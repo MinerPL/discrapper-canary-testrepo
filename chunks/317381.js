@@ -96,7 +96,8 @@ L = {
 channelId: a,
 applicationId: o,
 launchId: u,
-compositeInstanceId: c
+compositeInstanceId: c,
+location: null != s ? s : void 0
   }), _.S.dispatch(g.CkL.OPEN_EMBEDDED_ACTIVITY, {
 channelId: a
   }));
@@ -155,24 +156,26 @@ function V(e) {
 channelId: i,
 applicationId: a,
 launchId: s,
-compositeInstanceId: o
-  } = e, _ = (0, h.Z)(a), E = l.default.getSessionId();
-  if (null == _ || null == E || (null === (t = v.get(a)) || void 0 === t ? void 0 : t.channelId) === i)
+compositeInstanceId: o,
+location: _
+  } = e, E = (0, h.Z)(a), f = l.default.getSessionId();
+  if (null == E || null == f || (null === (t = v.get(a)) || void 0 === t ? void 0 : t.channelId) === i)
 return !1;
-  let f = u.Z.getChannel(i),
-p = null == f ? void 0 : f.getGuildId(),
-m = d.default.getCurrentUser();
-  if (null == p && !(null !== (n = null == f ? void 0 : f.isPrivate()) && void 0 !== n && n) || null == m)
+  let p = u.Z.getChannel(i),
+m = null == p ? void 0 : p.getGuildId(),
+g = d.default.getCurrentUser();
+  if (null == m && !(null !== (n = null == p ? void 0 : p.isPrivate()) && void 0 !== n && n) || null == g)
 return !1;
   r = i, v.set(a, {
-guildId: p,
+guildId: m,
 channelId: i,
 applicationId: a,
-url: _,
-userIds: new Set([m.id]),
+url: E,
+userIds: new Set([g.id]),
 connectedSince: Date.now(),
 launchId: s,
-compositeInstanceId: o
+compositeInstanceId: o,
+location: _
   }), x = r !== c.Z.getChannelId() || (0, I.Z)(i) ? T.Ez.PIP : T.Ez.PANEL, w.set(Z(i, a), Date.now());
 }
 
@@ -569,9 +572,6 @@ let {
   isRejoiningFromCurrentSession: r
 } = e;
 r && C.set(t, n);
-  },
-  CONNECTION_INTERRUPTED: function(e) {
-e.code === g.$VG.CLOSE_ABNORMAL && (r = void 0, v.clear(), y = !1, x = T.Ez.DISCONNECTED);
   },
   CHANNEL_CALL_POPOUT_WINDOW_OPEN: function(e) {
 let {

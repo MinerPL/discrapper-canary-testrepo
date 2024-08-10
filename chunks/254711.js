@@ -710,5 +710,5 @@ return null === (n = e.find(e => e.name === t)) || void 0 === n ? void 0 : n.val
   ].includes(e.name)),
   w = (e, t, n) => {
 let r = t ? M : U;
-return r = r.filter(t => t.type === e && (!n || t.inputType === v.iw.BUILT_IN_TEXT || t.inputType === v.iw.BUILT_IN_INTEGRATION));
+return r = r.filter(t => e.includes(t.type) && (!n || t.inputType === v.iw.BUILT_IN_TEXT || t.inputType === v.iw.BUILT_IN_INTEGRATION));
   };

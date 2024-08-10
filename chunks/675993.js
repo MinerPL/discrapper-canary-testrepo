@@ -15,8 +15,8 @@ var i = t(735250),
   m = t(115130),
   p = t(147865),
   _ = t(427996),
-  C = t(240991),
-  f = t(810090),
+  C = t(70097),
+  f = t(240991),
   h = t(88410),
   A = t(783097),
   E = t(695676),
@@ -37,11 +37,11 @@ sectionName: s
 var e;
 return null !== (e = (0, A.jD)(t)) && void 0 !== e ? e : '';
   }, [t]), d = (0, c.e7)([m.Z], () => m.Z.getIsEnabled()), p = null != l || null != r, {
-isSlideReady: C
+isSlideReady: f
   } = (0, E.hH)(), [h, N] = a.useState(!1);
   return a.useEffect(() => {
-C && N(!0);
-  }, [C]), (0, i.jsx)('div', {
+f && N(!0);
+  }, [f]), (0, i.jsx)('div', {
 className: I.container,
 children: (0, i.jsxs)('div', {
   className: I.profileAndVideoContainer,
@@ -49,7 +49,7 @@ children: (0, i.jsxs)('div', {
     p ? (0, i.jsxs)('div', {
       className: I.videoContainer,
       children: [
-        h ? (0, i.jsx)(f.Z, {
+        h ? (0, i.jsx)(C.Z, {
           className: o()(I.videoCover, I.video),
           loop: !0,
           muted: !0,
@@ -67,10 +67,10 @@ children: (0, i.jsxs)('div', {
     (0, i.jsxs)('div', {
       className: p ? I.overviewContainerWithVideo : I.overviewContainerNoVideo,
       children: [
-        (0, i.jsx)(S, {
+        (0, i.jsx)(L, {
           application: t
         }),
-        (0, i.jsx)(L, {
+        (0, i.jsx)(R, {
           application: t
         }),
         u.length > 0 ? (0, i.jsx)(b, {
@@ -95,7 +95,7 @@ children: (0, i.jsxs)('div', {
   });
 }
 
-function S(e) {
+function L(e) {
   var n;
   let {
 application: t
@@ -112,7 +112,7 @@ children: (0, i.jsx)('div', {
   });
 }
 
-function L(e) {
+function R(e) {
   let {
 application: n
   } = e, t = a.useMemo(() => {
@@ -124,7 +124,7 @@ application: n
   }) ? (0, i.jsxs)('div', {
 className: I.tagsContainer,
 children: [
-  (0, i.jsx)(R, {
+  (0, i.jsx)(S, {
     application: n
   }),
   t.map((e, n) => (0, i.jsx)('div', {
@@ -139,7 +139,7 @@ children: [
   }) : null;
 }
 
-function R(e) {
+function S(e) {
   var n;
   let {
 application: t
@@ -193,7 +193,7 @@ function b(e) {
 description: n
   } = e, [t, l] = a.useState(!0);
   a.useLayoutEffect(() => l(!1), []);
-  let o = a.useMemo(() => (0, C.YP)(n), [n]),
+  let o = a.useMemo(() => (0, f.YP)(n), [n]),
 {
   ref: c,
   lineHeight: m,
@@ -231,7 +231,7 @@ _ = a.useMemo(() => {
   m
 ]),
 {
-  ref: f,
+  ref: C,
   isTransitioning: h,
   onTransitionEnd: A
 } = (0, N.Z)({
@@ -243,7 +243,7 @@ E = t || h;
 className: I.descriptionContainer,
 children: [
   (0, i.jsx)('div', {
-    ref: f,
+    ref: C,
     className: I.overflowHidden,
     onTransitionEnd: A,
     children: (0, i.jsx)(u.x, {

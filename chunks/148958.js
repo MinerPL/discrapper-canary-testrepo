@@ -48,25 +48,21 @@ d = i.useMemo(() => {
   u
 ]);
   return i.useMemo(() => {
-let e, i;
-null == n || n.forEach(n => {
-  let t = r.default.extractTimestamp(n.id);
-  (null == i || t > i) && (e = n, i = t);
-}), c.forEach(n => {
-  var a, l;
-  let o = Math.max(...null !== (l = null === (a = t.getEntry(n.id)) || void 0 === a ? void 0 : a.recentUses) && void 0 !== l ? l : []);
-  (null == i || o > i) && (e = n, i = o);
+var e, i;
+let a, l;
+null == n || n.forEach(e => {
+  let n = r.default.extractTimestamp(e.id);
+  (null == l || n > l) && (a = e, l = n);
+}), c.forEach(e => {
+  var n, i;
+  let o = Math.max(...null !== (i = null === (n = t.getEntry(e.id)) || void 0 === n ? void 0 : n.recentUses) && void 0 !== i ? i : []);
+  (null == l || o > l) && (a = e, l = o);
 });
-let a = d.filter(n => {
-  var t, i;
-  return i = n.id === (null == e ? void 0 : null === (t = e.application) || void 0 === t ? void 0 : t.id), i;
-});
+let o = null !== (i = null == a ? void 0 : null === (e = a.application) || void 0 === e ? void 0 : e.id) && void 0 !== i ? i : '',
+  s = d.filter(e => e.id === o);
 return [
-  ...a,
-  ...d.filter(n => {
-    var t, i;
-    return i = n.id !== (null == e ? void 0 : null === (t = e.application) || void 0 === t ? void 0 : t.id), i;
-  })
+  ...s,
+  ...d.filter(e => e.id !== o)
 ];
   }, [
 d,

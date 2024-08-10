@@ -1,130 +1,130 @@
-t.d(n, {
+t.d(s, {
   Z: function() {
-return _;
+return E;
   }
 }), t(47120);
-var i = t(735250),
-  a = t(470079),
-  s = t(120356),
-  l = t.n(s),
-  o = t(831209),
-  r = t(481060),
+var n = t(735250),
+  o = t(470079),
+  a = t(120356),
+  i = t.n(a),
+  r = t(831209),
+  l = t(481060),
   d = t(367907),
   c = t(177862),
-  u = t(981631),
-  I = t(689938),
-  m = t(648005);
+  _ = t(981631),
+  x = t(689938),
+  C = t(648005);
 
-function _(e) {
+function E(e) {
   let {
-guildId: n,
+guildId: s,
 transitionState: t,
-onClose: s
-  } = e, [_, N] = a.useState([]), [E, T] = a.useState(), h = [{
-  text: I.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_DM_SPAM,
+onClose: a
+  } = e, [E, I] = o.useState([]), [u, N] = o.useState(), D = [{
+  text: x.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_DM_SPAM,
   value: c.C2.DM_SPAM
 },
 {
-  text: I.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_MENTION_SPAM,
+  text: x.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_MENTION_SPAM,
   value: c.C2.MENTION_SPAM
 },
 {
-  text: I.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_CHANNEL_SPAM,
+  text: x.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_CHANNEL_SPAM,
   value: c.C2.CHANNEL_SPAM
 },
 {
-  text: I.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_SUS_NEW_MEMBERS,
+  text: x.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_SUS_NEW_MEMBERS,
   value: c.C2.SUS_NEW_MEMBERS
 },
 {
-  text: I.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_CHANGING_SETTINGS,
+  text: x.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_CHANGING_SETTINGS,
   value: c.C2.CHANGING_SETTINGS
 },
 {
-  text: I.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_OTHER,
+  text: x.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_OTHER,
   value: c.C2.OTHER
 }
   ];
 
-  function g(e) {
-_.includes(e) ? N(n => n.filter(n => n !== e)) : N(n => [
-  ...n,
+  function h(e) {
+E.includes(e) ? I(s => s.filter(s => s !== e)) : I(s => [
+  ...s,
   e
 ]);
   }
-  return null == n ? (s(), null) : (0, i.jsxs)(r.ModalRoot, {
+  return null == s ? (a(), null) : (0, n.jsxs)(l.ModalRoot, {
 transitionState: t,
-size: r.ModalSize.MEDIUM,
+size: l.ModalSize.MEDIUM,
 children: [
-  (0, i.jsx)(r.ModalHeader, {
+  (0, n.jsx)(l.ModalHeader, {
     separator: !0,
-    children: (0, i.jsxs)('div', {
-      className: m.headerContainer,
+    children: (0, n.jsxs)('div', {
+      className: C.headerContainer,
       children: [
-        (0, i.jsxs)('div', {
-          className: m.headerText,
+        (0, n.jsxs)('div', {
+          className: C.headerText,
           children: [
-            (0, i.jsx)(r.LockIcon, {
+            (0, n.jsx)(l.LockIcon, {
               size: 'xs',
-              color: o.Z.INTERACTIVE_NORMAL
+              color: r.Z.INTERACTIVE_NORMAL
             }),
-            (0, i.jsx)(r.Heading, {
+            (0, n.jsx)(l.Heading, {
               color: 'header-primary',
               variant: 'heading-md/semibold',
-              children: I.Z.Messages.GUILD_SERVER_LOCKDOWN_FEEDBACK_DESCRIPTION
+              children: x.Z.Messages.GUILD_SERVER_LOCKDOWN_FEEDBACK_DESCRIPTION
             })
           ]
         }),
-        (0, i.jsx)(r.Clickable, {
-          onClick: s,
-          children: (0, i.jsx)(r.CloseSmallIcon, {
+        (0, n.jsx)(l.Clickable, {
+          onClick: a,
+          children: (0, n.jsx)(l.XSmallIcon, {
             size: 'xs',
             color: 'currentColor',
-            className: m.closeIcon
+            className: C.closeIcon
           })
         })
       ]
     })
   }),
-  (0, i.jsx)(r.ModalContent, {
-    children: (0, i.jsx)('div', {
-      className: m.options,
-      children: h.map(e => {
+  (0, n.jsx)(l.ModalContent, {
+    children: (0, n.jsx)('div', {
+      className: C.options,
+      children: D.map(e => {
         let {
-          text: n,
+          text: s,
           value: t
         } = e;
-        return (0, i.jsxs)('div', {
-          className: l()(m.optionContainer, {
-            [m.optionContainerOther]: t === c.C2.OTHER
+        return (0, n.jsxs)('div', {
+          className: i()(C.optionContainer, {
+            [C.optionContainerOther]: t === c.C2.OTHER
           }),
           children: [
-            (0, i.jsxs)(r.Clickable, {
-              className: m.optionText,
-              onClick: () => g(t),
+            (0, n.jsxs)(l.Clickable, {
+              className: C.optionText,
+              onClick: () => h(t),
               children: [
-                (0, i.jsx)('div', {
-                  children: (0, i.jsx)(r.Checkbox, {
-                    type: r.Checkbox.Types.INVERTED,
+                (0, n.jsx)('div', {
+                  children: (0, n.jsx)(l.Checkbox, {
+                    type: l.Checkbox.Types.INVERTED,
                     size: 20,
-                    value: _.includes(t),
-                    onChange: () => g(t)
+                    value: E.includes(t),
+                    onChange: () => h(t)
                   })
                 }),
-                (0, i.jsx)(r.Text, {
+                (0, n.jsx)(l.Text, {
                   variant: 'text-md/medium',
-                  color: _.includes(t) ? 'interactive-active' : 'interactive-normal',
-                  children: n
+                  color: E.includes(t) ? 'interactive-active' : 'interactive-normal',
+                  children: s
                 })
               ]
             }),
-            t === c.C2.OTHER && _.includes(c.C2.OTHER) && (0, i.jsx)('div', {
-              className: m.textboxContainer,
-              children: (0, i.jsx)(r.TextArea, {
-                className: m.serverLockdownReasonText,
-                placeholder: I.Z.Messages.GUILD_AUTOMOD_REPORT_RAID_FEEDBACK_MODAL_OTHER_REASON_PLACEHOLDER,
-                onChange: e => T(e),
-                value: E,
+            t === c.C2.OTHER && E.includes(c.C2.OTHER) && (0, n.jsx)('div', {
+              className: C.textboxContainer,
+              children: (0, n.jsx)(l.TextArea, {
+                className: C.serverLockdownReasonText,
+                placeholder: x.Z.Messages.GUILD_AUTOMOD_REPORT_RAID_FEEDBACK_MODAL_OTHER_REASON_PLACEHOLDER,
+                onChange: e => N(e),
+                value: u,
                 rows: 2,
                 autoFocus: !0,
                 flex: !0
@@ -135,19 +135,19 @@ children: [
       })
     })
   }),
-  (0, i.jsx)(r.ModalFooter, {
-    children: (0, i.jsx)(r.Button, {
+  (0, n.jsx)(l.ModalFooter, {
+    children: (0, n.jsx)(l.Button, {
       onClick: function() {
-        (0, d.yw)(u.rMx.GUILD_RAID_LOCKDOWN_FEEDBACK, {
-          raid_lockdown_feedback_type: _,
-          raid_lockdown_feedback_other_reason: E,
-          guild_id: n
-        }), s();
+        (0, d.yw)(_.rMx.GUILD_RAID_LOCKDOWN_FEEDBACK, {
+          raid_lockdown_feedback_type: E,
+          raid_lockdown_feedback_other_reason: u,
+          guild_id: s
+        }), a();
       },
-      color: r.Button.Colors.BRAND,
-      look: r.Button.Looks.FILLED,
+      color: l.Button.Colors.BRAND,
+      look: l.Button.Looks.FILLED,
       submitting: !1,
-      children: I.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_SUBMIT
+      children: x.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_SUBMIT
     })
   })
 ]

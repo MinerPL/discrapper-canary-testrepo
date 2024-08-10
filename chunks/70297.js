@@ -111,7 +111,7 @@ children: [
         dismissAction: m.L.DISMISS
       });
     },
-    children: (0, l.jsx)(s.CloseSmallIcon, {
+    children: (0, l.jsx)(s.XSmallIcon, {
       size: 'md',
       color: 'currentColor'
     })

@@ -41,7 +41,7 @@ questContentPosition: r,
 questContentRowIndex: a
   } = e, o = (0, s.e7)([u.default], () => {
 var e;
-return null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.verified;
+return null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasVerifiedEmailOrPhone();
   });
   return i.useCallback(() => {
 null != t && ((0, c._3)({

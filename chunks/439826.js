@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return C;
+return N;
   }
 });
 var i = n(735250),
@@ -13,65 +13,63 @@ var i = n(735250),
   d = n(481060),
   u = n(393238),
   _ = n(410030),
-  h = n(810090),
+  h = n(70097),
   E = n(113434),
-  I = n(497505),
-  m = n(918701),
+  m = n(497505),
+  I = n(918701),
   g = n(78826),
   p = n(670638),
-  T = n(981631),
-  S = n(689938),
-  f = n(985164);
+  T = n(642145),
+  S = n(981631),
+  f = n(689938),
+  C = n(985164);
 
-function C(e) {
+function N(e) {
   var t, n;
   let {
 quest: s,
-isHovering: C,
-errorHints: N,
-onCtxMenuClose: A,
-onCtxMenuOpen: v,
-onCtxMenuSelect: Z
-  } = e, L = (0, m.j8)(s), O = (0, _.ZP)(), R = (0, c.wj)(O) ? T.BRd.DARK : T.BRd.LIGHT, x = R === T.BRd.DARK, b = a.useMemo(() => (0, m.nP)(s.config.assets.hero), [s]), P = a.useContext(o.S).reducedMotion.enabled, M = (0, m.Mi)(s, I.jn.GIFT_INVENTORY_FOR_YOU), D = (0, E.tP)(s), y = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, j = (null === (n = s.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, U = a.useRef(C), G = a.useRef(null), k = (0, E.B6)(s.config.expiresAt, {
+isHovering: N,
+errorHints: A,
+onCtxMenuClose: v,
+onCtxMenuOpen: Z,
+onCtxMenuSelect: L
+  } = e, O = (0, I.j8)(s), R = (0, _.ZP)(), x = (0, c.wj)(R) ? S.BRd.DARK : S.BRd.LIGHT, b = x === S.BRd.DARK, P = a.useMemo(() => (0, I.nP)(s.config.assets.hero), [s]), M = a.useContext(o.S).reducedMotion.enabled, D = (0, I.Mi)(s, m.jn.GIFT_INVENTORY_FOR_YOU), y = (0, E.tP)(s), j = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, U = (null === (n = s.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, G = a.useRef(N), k = a.useRef(null), w = (0, E.B6)(s.config.expiresAt, {
 month: 'numeric',
 day: 'numeric'
-  }), w = (0, E.z)(s), {
-ref: B,
-height: H = 0
-  } = (0, u.Z)([N]), V = !j && !w && N.length > 0, F = (0, l.useSpring)({
-opacity: V ? 1 : 0,
-height: V ? H : 0,
-config: {
-  tension: 275,
-  friction: 25
-}
+  }), B = (0, E.z)(s), {
+ref: H,
+height: V = 0
+  } = (0, u.Z)([A]), F = !U && !B && A.length > 0, Y = (0, d.useSpring)({
+opacity: F ? 1 : 0,
+height: F ? V : 0,
+config: T.Y
   });
   return a.useEffect(() => {
-if (b && null != G.current)
-  return U.current !== C && (C ? G.current.play() : (G.current.pause(), G.current.currentTime = 0)), U.current = C, () => {
+if (P && null != k.current)
+  return G.current !== N && (N ? k.current.play() : (k.current.pause(), k.current.currentTime = 0)), G.current = N, () => {
     var e;
-    null === (e = G.current) || void 0 === e || e.pause();
+    null === (e = k.current) || void 0 === e || e.pause();
   };
   }, [
-C,
-b
+N,
+P
   ]), (0, i.jsxs)('div', {
-className: f.container,
+className: C.container,
 children: [
   (0, i.jsx)('div', {
-    className: f.heroAssetWrapper,
-    children: b ? (0, i.jsx)(g.Fl, {
+    className: C.heroAssetWrapper,
+    children: P && !M ? (0, i.jsx)(g.Fl, {
       id: 'QuestTileBanner_heroAnimated',
-      children: e => (null != e.current && (G.current = e.current), (0, i.jsx)(h.Z, {
+      children: e => (null != e.current && (k.current = e.current), (0, i.jsx)(h.Z, {
         ref: e,
-        autoPlay: !P && C,
+        autoPlay: !M && N,
         loop: !0,
         playsInline: !0,
-        className: f.heroAsset,
+        className: C.heroAsset,
         controls: !1,
         children: (0, i.jsx)('source', {
-          src: L,
-          type: (0, m.mN)(L)
+          src: O,
+          type: (0, I.mN)(O)
         })
       }))
     }) : (0, i.jsx)(g.Fl, {
@@ -79,52 +77,52 @@ children: [
       children: e => (0, i.jsx)('img', {
         ref: e,
         alt: ''.concat(s.config.messages.questName),
-        className: f.heroAsset,
-        src: L
+        className: C.heroAsset,
+        src: O
       })
     })
   }),
   (0, i.jsx)('div', {
-    className: r()(f.overlay, {
-      [f.darkThemeGradient]: x,
-      [f.lightThemeGradient]: !x
+    className: r()(C.overlay, {
+      [C.darkThemeGradient]: b,
+      [C.lightThemeGradient]: !b
     })
   }),
   (0, i.jsxs)('div', {
-    className: f.positionContentOverBackground,
+    className: C.positionContentOverBackground,
     children: [
       (0, i.jsxs)('div', {
-        className: f.contents,
+        className: C.contents,
         children: [
           (0, i.jsxs)('div', {
-            className: f.topRow,
+            className: C.topRow,
             children: [
-              M && !D && !y && (0, i.jsx)('div', {
-                className: f.pill,
+              D && !y && !j && (0, i.jsx)('div', {
+                className: C.pill,
                 children: (0, i.jsx)(d.Text, {
                   variant: 'eyebrow',
                   color: 'always-white',
-                  className: f.eyebrowText,
-                  children: S.Z.Messages.RECOMMENDED
+                  className: C.eyebrowText,
+                  children: f.Z.Messages.RECOMMENDED
                 })
               }),
               (0, i.jsx)(p.r, {
-                onOpen: v,
-                onClose: A,
-                onSelect: Z,
-                questContent: I.jn.QUEST_HOME_DESKTOP,
+                onOpen: Z,
+                onClose: v,
+                onSelect: L,
+                questContent: m.jn.QUEST_HOME_DESKTOP,
                 quest: s,
                 hideLearnMore: !0,
                 shouldShowDisclosure: !0,
                 showShareLink: !0,
                 children: e => (0, i.jsx)(d.Clickable, {
                   ...e,
-                  className: f.submenuWrapper,
-                  'aria-label': S.Z.Messages.ACTIONS,
+                  className: C.submenuWrapper,
+                  'aria-label': f.Z.Messages.ACTIONS,
                   children: (0, i.jsx)(d.MoreHorizontalIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: r()(f.submenuIcon)
+                    className: r()(C.submenuIcon)
                   })
                 })
               })
@@ -134,26 +132,26 @@ children: [
             id: 'QuestPartnerBranding_gameLogotype',
             children: e => (0, i.jsx)('img', {
               ref: e,
-              className: f.partnerBranding,
+              className: C.partnerBranding,
               alt: s.config.messages.gameTitle,
-              src: (0, m.Gs)(s, R)
+              src: (0, I.Gs)(s, x)
             })
           }),
           (0, i.jsxs)('div', {
-            className: f.bottomRow,
+            className: C.bottomRow,
             children: [
               (0, i.jsx)(d.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-muted',
-                children: S.Z.Messages.QUESTS_PROMOTED_BY_BRAND.format({
+                children: f.Z.Messages.QUESTS_PROMOTED_BY_BRAND.format({
                   brandName: s.config.messages.gamePublisher
                 })
               }),
-              D || y ? null : (0, i.jsx)(d.Text, {
+              y || j ? null : (0, i.jsx)(d.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-muted',
-                children: S.Z.Messages.QUESTS_TILE_BANNER_ENDS_DATE.format({
-                  expiryDate: k
+                children: f.Z.Messages.QUESTS_TILE_BANNER_ENDS_DATE.format({
+                  expiryDate: w
                 })
               })
             ]
@@ -161,21 +159,21 @@ children: [
         ]
       }),
       (0, i.jsx)(l.animated.div, {
-        style: F,
+        style: Y,
         children: (0, i.jsxs)('div', {
-          ref: B,
-          className: f.defibrillatorHints,
+          ref: H,
+          className: C.defibrillatorHints,
           children: [
-            (0, i.jsx)(d.CircleExclamationPointIcon, {
+            (0, i.jsx)(d.CircleWarningIcon, {
               size: 'xs',
               color: d.tokens.colors.TEXT_DANGER
             }),
             (0, i.jsx)('div', {
-              className: f.hintsContainer,
+              className: C.hintsContainer,
               children: (0, i.jsx)(d.Text, {
                 variant: 'text-xs/medium',
                 color: 'text-muted',
-                children: N.map(e => e.message).join(' ')
+                children: A.map(e => e.message).join(' ')
               })
             })
           ]

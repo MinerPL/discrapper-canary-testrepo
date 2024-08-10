@@ -25,7 +25,7 @@ return null !== (n = null === (e = l.Z.getUserProfile(t)) || void 0 === e ? void
 className: d.container,
 text: c.Z.Messages.USER_PROFILE_LOAD_ERROR,
 delay: u.vB,
-children: (0, r.jsx)(o.CircleExclamationPointIcon, {
+children: (0, r.jsx)(o.CircleWarningIcon, {
   size: 'xs',
   color: a.Z.colors.STATUS_WARNING.css
 })

@@ -58,7 +58,7 @@ children: [
         children: i.map(e => (0, t.jsxs)('div', {
           className: s.permission,
           children: [
-            (0, t.jsx)(o.CloseSmallIcon, {
+            (0, t.jsx)(o.XSmallIcon, {
               size: 'xs',
               color: 'currentColor',
               className: s.cross

@@ -41,7 +41,7 @@ let t = async () => {
   await (0, E.yL)(r, e);
 }, a = async t => await (0, E.RV)(r, e, t), o = e => {
   let t = null == e ? void 0 : e.token;
-  r === _.B.MESSAGE ? (0, h.eE)(t) : r === _.B.USER && (0, h.JM)(t);
+  r === _.BM.MESSAGE ? (0, h.eE)(t) : r === _.BM.USER && (0, h.JM)(t);
 };
 t(), (0, l.openModalLazy)(async () => {
   let {
@@ -105,11 +105,11 @@ children: [
     children: [
       (0, s.jsx)(T, {
         title: m.Z.Messages.URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON,
-        menuType: _.B.MESSAGE
+        menuType: _.BM.MESSAGE
       }),
       (0, s.jsx)(T, {
         title: m.Z.Messages.URF_LANDING_PAGE_REPORT_USER_PROFILE_BUTTON,
-        menuType: _.B.USER
+        menuType: _.BM.USER
       })
     ]
   })

@@ -71,7 +71,7 @@ return (0, r.jsxs)('div', {
     }),
     h ? null : (0, r.jsx)(u.Clickable, {
       onClick: o,
-      children: (0, r.jsx)(u.CloseSmallIcon, {
+      children: (0, r.jsx)(u.XSmallIcon, {
         size: 'md',
         color: 'currentColor',
         className: _.cancelButton

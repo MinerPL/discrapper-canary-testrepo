@@ -70,7 +70,7 @@ children: (0, n.jsxs)(r.MenuGroup, {
       label: (0, n.jsxs)('div', {
         className: E.checkboxLabel,
         children: [
-          (0, n.jsx)(r.ChatAlertIcon, {
+          (0, n.jsx)(r.ChatWarningIcon, {
             size: 'custom',
             color: 'currentColor',
             width: 16,

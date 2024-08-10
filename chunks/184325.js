@@ -41,8 +41,8 @@ size: C = 0
   } = e, y = (0, T.ZP)(t.id, n), {
 analyticsLocations: D
   } = (0, d.ZP)(c.Z.BADGE), {
-trackUserProfileAction: L,
-...b
+context: L,
+trackUserProfileAction: b
   } = (0, p.KZ)(), M = (0, I.Z)(y).map(e => ({
 ...e,
 src: (0, g.jC)(e.icon)
@@ -76,12 +76,12 @@ children: (0, a.jsx)('div', {
       ...t,
       onClick: n => {
         var r;
-        L({
+        b({
           action: 'PRESS_BADGE'
         }), (0, m.NE)({
           badge: e.id,
           analyticsLocations: D,
-          ...b
+          ...L
         }), null === (r = t.onClick) || void 0 === r || r.call(t);
         let i = null != e.link ? (0, u.default)(e.link, {
           analyticsLocations: D
@@ -96,7 +96,7 @@ children: (0, a.jsx)('div', {
         }), (0, m.Qf)({
           badge: e.id,
           analyticsLocations: D,
-          ...b
+          ...L
         })), null === (n = t.onMouseEnter) || void 0 === n || n.call(t);
       },
       href: e.link,

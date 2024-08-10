@@ -1,6 +1,6 @@
 n.r(t), n.d(t, {
   default: function() {
-return h;
+return C;
   }
 }), n(47120);
 var o = n(735250),
@@ -20,9 +20,9 @@ var o = n(735250),
   T = n(505905),
   p = n(185923),
   v = n(689938),
-  C = n(201885);
+  I = n(201885);
 
-function I(e) {
+function h(e) {
   let {
 customStatusEmoji: t,
 setCustomStatusEmoji: n,
@@ -73,10 +73,10 @@ children: (e, n) => {
   return (0, o.jsx)(d.Z, {
     ...e,
     active: l,
-    className: C.emojiButton,
+    className: I.emojiButton,
     tabIndex: 0,
     renderButtonContents: null == t ? null : () => (0, o.jsx)(i.Z, {
-      className: C.emoji,
+      className: I.emoji,
       emojiId: t.id,
       emojiName: t.name,
       animated: !!t.animated
@@ -86,7 +86,7 @@ children: (e, n) => {
   });
 }
 
-function h(e) {
+function C(e) {
   var t, n;
   let {
 transitionState: s,
@@ -95,44 +95,44 @@ startingText: d,
 startingEmoji: u
   } = e, m = _.Z.getCustomHangStatus(), c = null != d ? d : null !== (t = null == m ? void 0 : m.status) && void 0 !== t ? t : '', p = null !== (n = null == m ? void 0 : m.emoji) && void 0 !== n ? n : null;
   (null == u ? void 0 : u.id) != null ? p = x.ZP.canUseEmojisEverywhere(j.default.getCurrentUser()) && null != r.Z.getUsableCustomEmojiById(u.id) ? u : null : (null == u ? void 0 : u.name) != null && (p = u);
-  let [h, g] = l.useState(c), [N, A] = l.useState(p);
+  let [C, g] = l.useState(c), [N, A] = l.useState(p);
   return (0, o.jsxs)(a.ModalRoot, {
-className: C.modal,
+className: I.modal,
 transitionState: s,
 size: a.ModalSize.DYNAMIC,
 children: [
   (0, o.jsxs)(a.ModalContent, {
-    className: C.modalContent,
+    className: I.modalContent,
     children: [
       (0, o.jsx)(a.Button, {
         'aria-label': v.Z.Messages.CLOSE,
         look: a.Button.Looks.BLANK,
         size: a.Button.Sizes.NONE,
         onClick: i,
-        className: C.closeButton,
-        children: (0, o.jsx)(a.CloseSmallIcon, {
+        className: I.closeButton,
+        children: (0, o.jsx)(a.XSmallIcon, {
           size: 'xs',
           color: 'currentColor',
-          className: C.closeIcon
+          className: I.closeIcon
         })
       }),
-      (0, o.jsx)(I, {
+      (0, o.jsx)(h, {
         customStatusEmoji: N,
         setCustomStatusEmoji: A,
         onClose: i
       }),
       (0, o.jsxs)('div', {
-        className: C.customInputGroup,
+        className: I.customInputGroup,
         children: [
           (0, o.jsx)(a.Text, {
-            className: C.leadInText,
+            className: I.leadInText,
             variant: 'text-xs/semibold',
             color: 'text-muted',
             children: v.Z.Messages.STATUS_LEAD_IN_JUST
           }),
           (0, o.jsx)(a.TextInput, {
-            className: C.customInput,
-            value: h,
+            className: I.customInput,
+            value: C,
             onChange: e => g(e.substring(0, T.s)),
             placeholder: v.Z.Messages.CUSTOM_HANG_STATUS_PLACEHOLDER
           })
@@ -141,7 +141,7 @@ children: [
     ]
   }),
   (0, o.jsxs)(a.ModalFooter, {
-    className: C.modalFooter,
+    className: I.modalFooter,
     children: [
       (0, o.jsxs)('div', {
         children: [
@@ -158,10 +158,10 @@ children: [
       }),
       (0, o.jsx)(a.Button, {
         onClick: () => {
-          let e = h.trim();
+          let e = C.trim();
           '' !== e && null != N && ((0, S._s)(e, N, !0), i());
         },
-        disabled: '' === h.trim() || null == N,
+        disabled: '' === C.trim() || null == N,
         children: v.Z.Messages.SET_STATUS_MODAL_CTA
       })
     ]

@@ -288,12 +288,6 @@ return R.Wb.isSessionEstablished() && R.Wb.remoteCommand(t, n), !1;
 if (R.Wb.connectionState !== O.Z.WILL_RECONNECT)
   R.Wb.resetSocketOnError(e.args);
   },
-  RTC_SPEED_TEST_START_TEST: function() {
-return R.Wb.isSessionEstablished() && R.Wb.speedTestCreate(g.Z.getPreferredRegion()), !1;
-  },
-  RTC_SPEED_TEST_STOP_TEST: function() {
-return R.Wb.isSessionEstablished() && R.Wb.speedTestDelete(), !1;
-  },
   CLIPS_SETTINGS_UPDATE: k,
   RUNNING_GAMES_CHANGE: k,
   USER_SETTINGS_PROTO_UPDATE: function(e) {

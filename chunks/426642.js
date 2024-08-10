@@ -42,7 +42,7 @@ tooltip: I
   tooltip: c.Z.Messages.UPLOAD_ERROR_TITLE
 },
 1: {
-  icon: l.OdometerIcon,
+  icon: l.SpeedometerIcon,
   description: c.Z.Messages.UPLOAD_ERROR_RATE_LIMIT,
   color: r.Z.unsafe_rawColors.ORANGE_345.css,
   tooltip: c.Z.Messages.UPLOAD_ERROR_RETRY
@@ -83,7 +83,7 @@ children: [
   (0, i.jsx)(l.TooltipContainer, {
     position: 'right',
     text: I,
-    children: (0, i.jsx)(l.CircleExclamationPointIcon, {
+    children: (0, i.jsx)(l.CircleWarningIcon, {
       size: 'custom',
       width: 20,
       height: 20,

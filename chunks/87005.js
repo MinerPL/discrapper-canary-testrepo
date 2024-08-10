@@ -11,10 +11,13 @@ var i = t(470079),
   s = t(10718),
   c = t(148958),
   u = t(881998);
-t(445392);
+t(445392), t(783097);
 var d = t(689079);
 let m = {
-commandType: r.yU.CHAT
+commandTypes: [
+  r.yU.CHAT,
+  r.yU.PRIMARY_ENTRY_POINT
+]
   },
   p = {
 placeholderCount: 0,
@@ -22,23 +25,23 @@ limit: d.tn,
 includeFrecency: !0
   };
 
-function _(e, n) {
+function _(e) {
   let {
-sectionDescriptors: t,
-loading: r
+sectionDescriptors: n,
+loading: t
   } = s.wi(e, m, p);
   return {
-loading: r,
-frecentApps: function(e, n) {
+loading: t,
+frecentApps: function(e) {
   i.useEffect(() => {
-    e && o.Z.fetch();
-  }, [e]);
-  let t = (0, l.Wu)([u.Z], () => {
-      var n, t;
-      return e && null !== (t = null === (n = u.Z.getApps()) || void 0 === n ? void 0 : n.filter(e => e.scopes.includes(a.x.APPLICATIONS_COMMANDS))) && void 0 !== t ? t : [];
-    }, [e]),
-    r = n.filter(e => e.id !== d.bi.FRECENCY && e.id !== d.bi.BUILT_IN);
-  return (0, c.h)(r, e ? t : []);
-}(n, t)
+    o.Z.fetch();
+  }, []);
+  let n = (0, l.Wu)([u.Z], () => {
+      var e, n;
+      return null !== (n = null === (e = u.Z.getApps()) || void 0 === e ? void 0 : e.filter(e => e.scopes.includes(a.x.APPLICATIONS_COMMANDS))) && void 0 !== n ? n : [];
+    }),
+    t = e.filter(e => e.id !== d.bi.FRECENCY && e.id !== d.bi.BUILT_IN);
+  return (0, c.h)(t, n);
+}(n)
   };
 }

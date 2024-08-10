@@ -279,7 +279,7 @@ case L.cd.EMPTY_STICKER_PICKER_UPSELL:
       (0, r.jsx)(f.Clickable, {
         className: P.upsellClose,
         onClick: o,
-        children: (0, r.jsx)(f.CloseSmallIcon, {
+        children: (0, r.jsx)(f.XSmallIcon, {
           size: 'md',
           color: 'currentColor'
         })

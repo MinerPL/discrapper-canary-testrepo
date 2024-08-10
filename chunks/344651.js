@@ -1444,37 +1444,6 @@ type: 'BILLING_REFERRAL_TRIAL_OFFER_UPDATE',
 userTrialOfferId: e.user_trial_offer_id,
 recipientId: e.recipient_id
   });
-}), G(['SPEED_TEST_CREATE'], e => {
-  F({
-type: 'SPEED_TEST_CREATE',
-streamKey: e.stream_key,
-region: e.region,
-viewerIds: e.viewer_ids,
-rtcServerId: e.rtc_server_id,
-paused: e.paused
-  });
-}), G(['SPEED_TEST_SERVER_UPDATE'], e => {
-  F({
-type: 'SPEED_TEST_SERVER_UPDATE',
-streamKey: e.stream_key,
-endpoint: e.endpoint,
-token: e.token
-  });
-}), G(['SPEED_TEST_UPDATE'], e => {
-  F({
-type: 'SPEED_TEST_UPDATE',
-streamKey: e.stream_key,
-region: e.region,
-viewerIds: e.viewer_ids,
-paused: e.paused
-  });
-}), G(['SPEED_TEST_DELETE'], e => {
-  F({
-type: 'SPEED_TEST_DELETE',
-streamKey: e.stream_key,
-unavailable: e.unavailable,
-reason: e.reason
-  });
 }), G(['LAST_MESSAGES'], e => {
   F({
 type: 'MESSAGE_PREVIEWS_LOADED',

@@ -98,7 +98,7 @@ enabled: o
 className: x.actions,
 children: [
   (0, r.jsx)(N.d, {
-    iconComponent: u.CloseSmallIcon,
+    iconComponent: u.XSmallIcon,
     color: 'red',
     className: x.actionButton,
     label: w.Z.Messages.DISMISS,

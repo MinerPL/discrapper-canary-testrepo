@@ -55,7 +55,9 @@ userId: n
   r.ZP.trackWithMetadata(o.rMx.E2EE_USER_VERIFICATION_VIEWED, {
 channel_id: t,
 guild_id: E(t),
-...(0, i.QN)(n)
+...(0, i.QN)({
+  userId: n
+})
   });
 }
 
@@ -69,7 +71,9 @@ analyticsLocation: a
 channel_id: t,
 guild_id: E(t),
 location: a,
-...(0, i.QN)(n)
+...(0, i.QN)({
+  userId: n
+})
   });
 }
 
@@ -81,7 +85,9 @@ userId: n
   r.ZP.trackWithMetadata(o.rMx.E2EE_USER_VERIFICATION_CODE_COPIED, {
 channel_id: t,
 guild_id: E(t),
-...(0, i.QN)(n)
+...(0, i.QN)({
+  userId: n
+})
   });
 }
 

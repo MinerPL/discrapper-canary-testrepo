@@ -45,7 +45,7 @@ children: [
     onClick: n,
     className: d.closeButton,
     'aria-label': s.Z.Messages.CLOSE,
-    children: (0, i.jsx)(o.CloseSmallIcon, {
+    children: (0, i.jsx)(o.XSmallIcon, {
       size: 'md',
       color: 'currentColor',
       className: r()(d.closeIcon, _ && d.closeIconBanner)

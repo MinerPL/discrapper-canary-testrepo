@@ -33,7 +33,7 @@ dueAt: l()().add(n, 'millisecond').toDate()
   }));
   return n ? (0, i.jsx)(o.MenuItem, {
 id: 'mark-todo',
-label: t ? M.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : M.Z.Messages.MESSAGE_REMINDERS_MARK_AS_TODO,
+label: t ? M.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : M.Z.Messages.MESSAGE_REMINDERS_REMIND_ME,
 icon: t ? (0, o.makeIconCompat)(E.Z) : void 0,
 action: () => t ? (0, u.bn)({
   channelId: e.channel_id,

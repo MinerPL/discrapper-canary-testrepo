@@ -12,8 +12,8 @@ var a = n(873546),
   _ = n(913976),
   h = n(104494),
   E = n(29920),
-  I = n(786397),
-  m = n(248042),
+  m = n(786397),
+  I = n(248042),
   g = n(318199),
   p = n(474936);
 
@@ -40,7 +40,7 @@ super(...e), T(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
     isPreview: t
   });
   if (null != a)
-    return !!(!1 !== t || (null == a ? void 0 : a.contentIdentifier) !== 'summer_bogo_content' || await (0, m.k)()) && ((0, s.closeModal)(S), (0, s.openModalLazy)(async () => {
+    return !!(!1 !== t || (null == a ? void 0 : a.contentIdentifier) !== 'summer_bogo_content' || await (0, I.k)()) && ((0, s.closeModal)(S), (0, s.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.resolve().then(n.bind(n, 318199));
@@ -79,13 +79,14 @@ super(...e), T(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
     p.TL,
     p.ET,
     p.C2,
-    p.Hk
-  ].map(e => c.Z.getUserTrialOffer(e)).filter(e => null != e && !(0, I.B)(e)).shift();
+    p.Hk,
+    p.Rt
+  ].map(e => c.Z.getUserTrialOffer(e)).filter(e => null != e && !(0, m.B)(e)).shift();
   return null != n ? {
     userTrialOffer: n
   } : {};
 }), T(this, 'mayShowAnnouncementModal', async () => {
-  if (await (0, m.l2)(), !u.s.isDisallowPopupsSet()) {
+  if (await (0, I.l2)(), !u.s.isDisallowPopupsSet()) {
     if (!(0, s.hasAnyModalOpen)() && _.Z.getCurrentConfig({
         location: 'OfferAnnouncementManager'
       }).enabled && !a.tq) {

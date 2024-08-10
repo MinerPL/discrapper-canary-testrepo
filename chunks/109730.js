@@ -9,9 +9,9 @@ var l = a(735250),
   n = a(481060),
   r = a(91176),
   c = a(906732),
-  i = a(910693),
-  u = a(594174),
-  d = a(153124),
+  i = a(313201),
+  u = a(910693),
+  d = a(594174),
   _ = a(626135),
   I = a(5192),
   C = a(590433),
@@ -45,16 +45,16 @@ userId: D,
 anaylticsLocations: A,
 transitionState: O,
 onClose: S
-  } = e, M = (0, d.Dt)(), {
+  } = e, M = (0, i.Dt)(), {
 analyticsLocations: E
-  } = (0, c.ZP)(), m = null !== (a = null !== (t = null == A ? void 0 : A[0]) && void 0 !== t ? t : null == E ? void 0 : E[0]) && void 0 !== a ? a : null, h = (0, o.e7)([u.default], () => u.default.getUser(D), [D]), [L, R] = s.useState(C.UK.DURATION_60_SEC), B = (0, i.sE)(U, {
+  } = (0, c.ZP)(), m = null !== (a = null !== (t = null == A ? void 0 : A[0]) && void 0 !== t ? t : null == E ? void 0 : E[0]) && void 0 !== a ? a : null, h = (0, o.e7)([d.default], () => d.default.getUser(D), [D]), [L, R] = s.useState(C.UK.DURATION_60_SEC), B = (0, u.sE)(U, {
 location: m,
 targetUserId: D
   }), [g, v] = s.useState(''), [p, b] = s.useState(!1), j = s.useCallback(async () => {
 if (null != h) {
   b(!0);
   try {
-    await r.Z.setCommunicationDisabledDuration(U, D, L, g, m), B(i.jQ.TIMEOUT), (0, n.showToast)((0, n.createToast)(f.Z.Messages.GUILD_COMMUNICATION_DISABLED_SUCCESS.format({
+    await r.Z.setCommunicationDisabledDuration(U, D, L, g, m), B(u.jQ.TIMEOUT), (0, n.showToast)((0, n.createToast)(f.Z.Messages.GUILD_COMMUNICATION_DISABLED_SUCCESS.format({
       user: I.ZP.getName(U, null, h)
     }), n.ToastType.SUCCESS)), S();
   } catch (e) {
@@ -105,7 +105,7 @@ children: [
         onClick: S,
         className: T.closeButton,
         'aria-label': f.Z.Messages.CLOSE,
-        children: (0, l.jsx)(n.CloseSmallIcon, {
+        children: (0, l.jsx)(n.XSmallIcon, {
           size: 'xs',
           color: 'currentColor',
           className: T.closeIcon

@@ -26,10 +26,11 @@ function p(e) {
 user: t,
 guild: n,
 channel: p,
-onClose: m
+onAction: m,
+onClose: I
   } = e, {
-profileType: I
-  } = (0, d.z)(), T = (0, i.e7)([u.Z], () => u.Z.getGuildId()), g = (0, i.Wu)([c.ZP], () => c.ZP.getVoiceStatesForChannel(p).map(e => {
+profileType: T
+  } = (0, d.z)(), g = (0, i.e7)([u.Z], () => u.Z.getGuildId()), S = (0, i.Wu)([c.ZP], () => c.ZP.getVoiceStatesForChannel(p).map(e => {
 let {
   user: t
 } = e;
@@ -61,8 +62,10 @@ children: [
             variant: 'text-xs/normal',
             color: 'interactive-normal',
             text: p.name,
-            onClick: n.id === T ? void 0 : () => {
-              (0, l.X)(n.id), null == m || m();
+            onClick: n.id === g ? void 0 : () => {
+              (0, l.X)(n.id), null == m || m({
+                action: 'OPEN_VOICE_CHANNEL'
+              }), null == I || I();
             }
           })
         ]
@@ -70,13 +73,13 @@ children: [
     ]
   }),
   (0, r.jsx)(s.Z, {
-    users: g,
+    users: S,
     guildId: n.id,
     channelId: p.id,
     maxUsers: h,
     size: a.AvatarSizes.SIZE_16,
     disableUsernameTooltip: !0,
-    disableUserPopout: I !== E.y0.FULL_SIZE || (e => e === t.id),
+    disableUserPopout: T !== E.y0.FULL_SIZE || (e => e === t.id),
     overflowCountVariant: 'text-xs/normal'
   })
 ]

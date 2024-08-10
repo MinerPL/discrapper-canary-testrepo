@@ -287,7 +287,7 @@ children: (0, i.jsxs)(I.Z, {
           n_participants: u
         }), s();
       },
-      children: (0, i.jsx)(c.CloseSmallIcon, {
+      children: (0, i.jsx)(c.XSmallIcon, {
         size: 'md',
         color: 'currentColor',
         className: N.closeButton

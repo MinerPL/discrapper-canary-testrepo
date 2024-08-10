@@ -198,7 +198,7 @@ children: (0, n.jsx)(m.ModalContent, {
             }),
             (0, n.jsx)(m.Clickable, {
               onClick: t,
-              children: (0, n.jsx)(m.CloseSmallIcon, {
+              children: (0, n.jsx)(m.XSmallIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: v.close

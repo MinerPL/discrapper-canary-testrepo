@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return D;
+return b;
   }
 });
 var r = n(735250),
@@ -12,58 +12,75 @@ var r = n(735250),
   u = n(503438),
   c = n(100527),
   d = n(906732),
-  _ = n(952164),
-  E = n(502762),
-  f = n(652853),
-  h = n(448980),
-  p = n(194811),
-  m = n(60241),
-  I = n(373826),
-  T = n(315324),
-  g = n(582123),
-  S = n(262210),
-  A = n(666984),
-  N = n(290274),
-  v = n(228168),
-  O = n(981631),
-  R = n(689938),
-  C = n(692184);
+  _ = n(180335),
+  E = n(952164),
+  f = n(502762),
+  h = n(652853),
+  p = n(448980),
+  m = n(194811),
+  I = n(60241),
+  T = n(373826),
+  g = n(315324),
+  S = n(582123),
+  A = n(262210),
+  N = n(666984),
+  v = n(290274),
+  O = n(318134),
+  R = n(228168),
+  C = n(981631),
+  y = n(689938),
+  D = n(692184);
 let {
-  getAssetImage: y
+  getAssetImage: L
 } = n(81063);
 
-function D(e) {
+function b(e) {
   let {
 user: t,
 currentUser: n,
 activity: a,
-guild: D,
-channel: L,
-className: b,
-onAction: M,
-onClose: P
+guild: b,
+channel: M,
+className: P,
+onClose: U
   } = e, {
-analyticsLocations: U
-  } = (0, d.ZP)(c.Z.USER_PROFILE_LIVE_ACTIVITY_CARD), {
 profileType: w
-  } = (0, f.z)(), x = {
-[C.fullSize]: w === v.y0.FULL_SIZE
-  };
+  } = (0, h.z)(), x = {
+[D.fullSize]: w === R.y0.FULL_SIZE
+  }, G = (0, _.Bq)({
+activity: a,
+user: t
+  }), {
+analyticsLocations: k
+  } = (0, d.ZP)(c.Z.USER_PROFILE_LIVE_ACTIVITY_CARD), {
+onAction: B,
+trackViewRef: F
+  } = (0, O.Z)({
+display: 'live',
+user: t,
+activity: a,
+entry: G,
+analyticsLocations: k
+  });
   if (!(0, u.Z)(a))
 return null;
-  let G = () => {
+  let V = () => {
   var e, n;
   let l = null !== (n = null === (e = a.state) || void 0 === e ? void 0 : e.split(';')) && void 0 !== n ? n : [];
-  return 0 === l.length ? null : null == a.sync_id ? (0, r.jsx)(I.Z, {
+  return 0 === l.length ? null : null == a.sync_id ? (0, r.jsx)(T.Z, {
     variant: 'text-xs/normal',
     text: l.join(', ')
-  }) : (0, r.jsx)(I.Z, {
+  }) : (0, r.jsx)(T.Z, {
     variant: 'text-xs/normal',
     text: l.map((e, n) => (0, r.jsxs)(i.Fragment, {
       children: [
         (0, r.jsx)(o.Clickable, {
-          className: s()(C.clickable, C.inline),
-          onClick: () => (0, _.d$)(a, t.id, n),
+          className: s()(D.clickable, D.inline),
+          onClick: () => {
+            B({
+              action: 'OPEN_SPOTIFY_ARTIST'
+            }), (0, E.d$)(a, t.id, n);
+          },
           children: e
         }),
         n < l.length - 1 ? ', ' : ''
@@ -71,7 +88,7 @@ return null;
     }, n))
   });
 },
-k = () => {
+H = () => {
   let {
     timestamps: e
   } = a;
@@ -81,98 +98,108 @@ k = () => {
     start: t,
     end: n
   } = e;
-  return null == t || null == n ? null : (0, r.jsx)(S.Z, {
+  return null == t || null == n ? null : (0, r.jsx)(A.Z, {
     start: t,
     end: n
   });
 },
-B = () => null == D || null == L ? null : (0, r.jsxs)(r.Fragment, {
+Z = () => null == b || null == M ? null : (0, r.jsxs)(r.Fragment, {
   children: [
     (0, r.jsx)('div', {
-      className: C.voiceChannelDivider
+      className: D.voiceChannelDivider
     }),
-    (0, r.jsx)(T.Z, {
+    (0, r.jsx)(g.Z, {
       user: t,
-      guild: D,
-      channel: L,
-      onClose: P
+      guild: b,
+      channel: M,
+      onAction: B,
+      onClose: U
     })
   ]
 }),
-F = () => t.id === n.id ? null : (0, r.jsx)('div', {
-  className: s()(C.actions, x),
-  children: (0, r.jsx)(A.Z, {
+Y = () => t.id === n.id ? null : (0, r.jsx)('div', {
+  className: s()(D.actions, x),
+  children: (0, r.jsx)(N.Z, {
     user: t,
     activity: a,
-    onClick: M
+    onAction: B
   })
 });
   return (0, r.jsx)(d.Gt, {
-value: U,
-children: (0, r.jsx)(g.Z, {
+value: k,
+children: (0, r.jsx)(S.Z, {
   user: t,
-  onClose: P,
+  onClose: U,
   children: e => {
     var n, i;
     let {
       onAutoDismiss: o
     } = e;
-    return (0, r.jsxs)(E.Z.Overlay, {
-      className: s()(C.card, b),
+    return (0, r.jsxs)(f.Z.Overlay, {
+      className: s()(D.card, P),
+      ref: F,
       children: [
-        (0, r.jsx)(p.Z, {
-          text: R.Z.Messages.USER_ACTIVITY_LISTENING_TO,
-          platform: l.Z.get(O.ABu.SPOTIFY),
-          tags: (0, r.jsx)(N.Z, {
+        (0, r.jsx)(m.Z, {
+          text: y.Z.Messages.USER_ACTIVITY_LISTENING_TO,
+          platform: l.Z.get(C.ABu.SPOTIFY),
+          tags: (0, r.jsx)(v.Z, {
             display: 'live',
             user: t,
             activity: a,
+            entry: G,
+            onClose: U,
             onRequestOpen: o
           })
         }),
         (0, r.jsxs)('div', {
-          className: C.body,
+          className: D.body,
           children: [
             (0, r.jsxs)('div', {
-              className: s()(C.content, x),
+              className: s()(D.content, x),
               children: [
-                (0, r.jsx)(m.Z, {
-                  src: e => {
-                    var t;
-                    return y(a.application_id, null === (t = a.assets) || void 0 === t ? void 0 : t.large_image, e);
+                (0, r.jsx)(I.ZP, {
+                  image: {
+                    src: L(a.application_id, null === (n = a.assets) || void 0 === n ? void 0 : n.large_image, I.WQ),
+                    text: null === (i = a.assets) || void 0 === i ? void 0 : i.large_text
                   },
-                  alt: null === (n = a.assets) || void 0 === n ? void 0 : n.large_text,
-                  tooltipText: null === (i = a.assets) || void 0 === i ? void 0 : i.large_text,
-                  onClick: () => (0, _.Z5)(a, t.id)
+                  onClick: () => {
+                    B({
+                      action: 'OPEN_SPOTIFY_ALBUM'
+                    }), (0, E.Z5)(a, t.id);
+                  }
                 }),
                 (0, r.jsxs)('div', {
-                  className: C.details,
+                  className: D.details,
                   children: [
                     (0, r.jsxs)('div', {
                       children: [
-                        (0, r.jsx)(I.Z, {
+                        (0, r.jsx)(T.Z, {
                           variant: 'heading-sm/semibold',
                           text: a.details,
-                          onClick: () => (0, _.aG)(a)
+                          onClick: () => {
+                            B({
+                              action: 'OPEN_SPOTIFY_TRACK'
+                            }), (0, E.aG)(a);
+                          }
                         }),
-                        G()
+                        V()
                       ]
                     }),
-                    (0, r.jsx)(h.Z, {
+                    (0, r.jsx)(p.Z, {
                       user: t,
                       activity: a,
-                      className: C.badges
+                      className: D.badges
                     }),
-                    k()
+                    H()
                   ]
                 }),
-                w === v.y0.FULL_SIZE && F()
+                w === R.y0.FULL_SIZE && Y()
               ]
             }),
-            B()
+            Z()
           ]
         }),
-        w !== v.y0.FULL_SIZE && F()
+        w !== R.y0.FULL_SIZE && Y()
       ]
     });
   }

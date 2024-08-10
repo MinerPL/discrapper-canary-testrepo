@@ -4,6 +4,9 @@ return i;
   },
   m1: function() {
 return a;
+  },
+  nS: function() {
+return s;
   }
 });
 var r = n(818083);
@@ -73,7 +76,8 @@ clickOnHomeActivityOpensAppDetail: !1
   }
 }
   ]
-}), (0, r.B)({
+});
+let s = (0, r.B)({
   kind: 'user',
   id: '2024-07_open_platform_app_launcher',
   label: 'Open Platform App Launcher',

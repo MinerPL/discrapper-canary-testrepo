@@ -1,9 +1,9 @@
 n.d(t, {
   YN: function() {
-return b;
+return j;
   },
   iZ: function() {
-return R;
+return L;
   }
 }), n(47120);
 var i = n(735250),
@@ -20,57 +20,64 @@ var i = n(735250),
   m = n(594174),
   _ = n(687694),
   f = n(69259),
-  E = n(91140),
-  g = n(227172),
-  C = n(551228),
-  I = n(678869),
-  x = n(278399),
-  T = n(886217),
-  N = n(555672),
-  v = n(644548),
-  S = n(335326),
-  Z = n(268010),
-  A = n(797342),
-  M = n(206583);
-let b = 72;
+  E = n(370370),
+  g = n(107062),
+  C = n(91140),
+  I = n(227172),
+  x = n(551228),
+  T = n(678869),
+  N = n(278399),
+  v = n(886217),
+  S = n(555672),
+  Z = n(644548),
+  A = n(335326),
+  M = n(268010),
+  b = n(797342),
+  R = n(206583);
+let j = 72;
 
-function R(e) {
-  return (null == e ? void 0 : e.type) === p.so.CONTENT_INVENTORY ? b : 0;
+function L(e) {
+  return (null == e ? void 0 : e.type) === p.so.CONTENT_INVENTORY ? j : 0;
 }
-let j = l().throttle(e => {
-(0, f.L)(M.xP.CARD_HOVER, e);
+let P = l().throttle(e => {
+(0, f.L)(R.xP.CARD_HOVER, e);
   }, 5000, {
 leading: !0,
 trailing: !1
   }),
-  L = e => {
+  O = e => {
 let {
   entry: t,
   ...n
 } = e;
 switch (t.content_type) {
   case o.s.PLAYED_GAME:
-    return (0, i.jsx)(E.Z, {
+    return (0, i.jsx)(C.Z, {
       ...n,
       entry: t
     });
   case o.s.WATCHED_MEDIA:
-    return (0, i.jsx)(S.ZP, {
+    return (0, i.jsx)(A.ZP, {
       ...n,
       entry: t
     });
   case o.s.TOP_GAME:
-    return (0, i.jsx)(N.ZP, {
+    return (0, i.jsx)(S.ZP, {
       ...n,
       entry: t
     });
   case o.s.TOP_ARTIST:
-    return (0, i.jsx)(x.ZP, {
+    return (0, i.jsx)(N.ZP, {
       ...n,
       entry: t
     });
   case o.s.LISTENED_SESSION:
-    return (0, i.jsx)(C.ZP, {
+    return (0, i.jsx)(x.ZP, {
+      ...n,
+      entry: t
+    });
+  case o.s.LAUNCHED_ACTIVITY:
+    return (0, i.jsx)(E.Z, {
       ...n,
       entry: t
     });
@@ -78,34 +85,39 @@ switch (t.content_type) {
     return null;
 }
   },
-  P = e => {
+  y = e => {
 let {
   entry: t,
   ...n
 } = e;
 switch (t.content_type) {
   case o.s.PLAYED_GAME:
-    return (0, i.jsx)(g.Z, {
+    return (0, i.jsx)(I.Z, {
       ...n,
       entry: t
     });
   case o.s.WATCHED_MEDIA:
-    return (0, i.jsx)(Z.Z, {
+    return (0, i.jsx)(M.Z, {
       ...n,
       entry: t
     });
   case o.s.TOP_GAME:
-    return (0, i.jsx)(v.Z, {
+    return (0, i.jsx)(Z.Z, {
       ...n,
       entry: t
     });
   case o.s.TOP_ARTIST:
-    return (0, i.jsx)(T.Z, {
+    return (0, i.jsx)(v.Z, {
       ...n,
       entry: t
     });
   case o.s.LISTENED_SESSION:
-    return (0, i.jsx)(I.Z, {
+    return (0, i.jsx)(T.Z, {
+      ...n,
+      entry: t
+    });
+  case o.s.LAUNCHED_ACTIVITY:
+    return (0, i.jsx)(g.ZP, {
       ...n,
       entry: t
     });
@@ -121,7 +133,7 @@ index: s,
   } = e, [o, p] = a.useState('default'), E = (0, r.JA)(''.concat(s)), g = null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(), {
 isRich: C,
 appName: I
-  } = (0, A.n)(l.entry), x = {
+  } = (0, b.n)(l.entry), x = {
 entry: l.entry,
 channelId: l.channel.id,
 guildId: l.channel.guild_id,
@@ -131,12 +143,12 @@ richPresenceName: C ? I : void 0
 openOnHover: T
   } = (0, _.C)({
 location: 'MemberListContentRow'
-  }), N = a.useRef(!1), [v, S] = a.useState(!1), [Z, b] = a.useState(!1), [R, O] = a.useState(!1), y = (0, c.e7)([h.Z], () => h.Z.keyboardModeEnabled);
+  }), N = a.useRef(!1), [v, S] = a.useState(!1), [Z, A] = a.useState(!1), [M, j] = a.useState(!1), L = (0, c.e7)([h.Z], () => h.Z.keyboardModeEnabled);
   a.useEffect(() => {
-v && y && O(!0);
+v && L && j(!0);
   }, [
 v,
-y
+L
   ]);
   let D = a.useCallback(e => {
   if (!!g)
@@ -158,13 +170,13 @@ k = a.useCallback(() => {
 }, []),
 U = () => {
   N.current = !1, setTimeout(() => {
-    !N.current && (S(!1), O(y));
+    !N.current && (S(!1), j(L));
   }, 100);
 };
   return (0, i.jsx)('div', {
 onMouseEnter: () => {
   N.current = !0, setTimeout(() => {
-    N.current && S(!0), T && (0, f.L)(M.xP.CARD_CLICK, x);
+    N.current && S(!0), T && (0, f.L)(R.xP.CARD_CLICK, x);
   }, 100);
 },
 onMouseLeave: U,
@@ -173,7 +185,7 @@ children: (0, i.jsx)(u.Popout, {
     let {
       closePopout: t
     } = e;
-    return (0, i.jsx)(P, {
+    return (0, i.jsx)(y, {
       closePopout: t,
       updatePopoutPosition: k,
       ...l
@@ -182,9 +194,9 @@ children: (0, i.jsx)(u.Popout, {
   position: 'left',
   shouldShow: T ? v : Z,
   positionKey: o,
-  onRequestOpen: () => (0, f.L)(M.xP.CARD_CLICK, x),
+  onRequestOpen: () => (0, f.L)(R.xP.CARD_CLICK, x),
   onRequestClose: () => {
-    R && U(), !T && (S(!1), b(!1));
+    M && U(), !T && (S(!1), A(!1));
   },
   spacing: 8,
   children: (e, t) => {
@@ -193,7 +205,7 @@ children: (0, i.jsx)(u.Popout, {
     } = t;
     return (0, i.jsx)(u.Clickable, {
       onClick: () => {
-        T && !v && S(!0), !T && b(e => !e);
+        T && !v && S(!0), !T && A(e => !e);
       },
       children: (0, i.jsx)(u.FocusRing, {
         offset: {
@@ -206,10 +218,10 @@ children: (0, i.jsx)(u.Popout, {
           ...e,
           ...E,
           onMouseEnter: () => {
-            j(x);
+            P(x);
           },
           onContextMenu: D,
-          children: (0, i.jsx)(L, {
+          children: (0, i.jsx)(O, {
             ...l,
             selected: n,
             hovered: N.current

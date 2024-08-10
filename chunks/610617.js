@@ -16,8 +16,8 @@ var n = t(735250),
   N = t(481060),
   S = t(243778),
   E = t(430824),
-  m = t(9156),
-  g = t(594174),
+  g = t(9156),
+  m = t(594174),
   _ = t(74538),
   T = t(671105),
   x = t(552958),
@@ -34,7 +34,7 @@ function j(e) {
 guildId: s,
 onClose: t,
 isRedesign: l = !1
-  } = e, r = (0, c.e7)([E.Z], () => E.Z.getGuild(s)), j = (0, c.e7)([g.default], () => g.default.getCurrentUser()), {
+  } = e, r = (0, c.e7)([E.Z], () => E.Z.getGuild(s)), j = (0, c.e7)([m.default], () => m.default.getCurrentUser()), {
 playSound: Z,
 isPlaying: A,
 soundpackPlaying: R
@@ -58,7 +58,7 @@ return {
 V(M.L.AUTO_DISMISS);
   }, [V]);
   let W = _.ZP.canUseCustomNotificationSounds(j),
-q = (0, c.e7)([m.ZP], () => m.ZP.isMuted(s), [s]);
+q = (0, c.e7)([g.ZP], () => g.ZP.isMuted(s), [s]);
   return null == j ? null : (0, n.jsxs)('div', {
 children: [
   (0, n.jsxs)('div', {
@@ -97,7 +97,7 @@ children: [
   q && (0, n.jsxs)('div', {
     className: L.warningContainer,
     children: [
-      (0, n.jsx)(N.CircleExclamationPointIcon, {
+      (0, n.jsx)(N.CircleWarningIcon, {
         size: 'custom',
         width: 20,
         height: 20,

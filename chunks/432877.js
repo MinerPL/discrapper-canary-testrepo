@@ -14,7 +14,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-(a = r || (r = {}))[a.MESSAGING = 0] = 'MESSAGING', a[a.OVERLAYS = 1] = 'OVERLAYS', a[a.PREMIUM = 2] = 'PREMIUM';
+(a = r || (r = {}))[a.MESSAGING = 0] = 'MESSAGING', a[a.OVERLAYS = 1] = 'OVERLAYS', a[a.PREMIUM = 2] = 'PREMIUM', a[a.REPORTING = 3] = 'REPORTING';
 let u = {
 visual_effect_view_overrides: {
   label: 'Blur view overrides for designers to test with',
@@ -39,6 +39,14 @@ send_fail_100: {
 premium_roadblocks: {
   label: 'Enable all new premium roadblocks',
   category: 2
+},
+iar_testing: {
+  label: 'Enable staff only test iar menu options',
+  category: 3
+},
+iar_skip_api_report_submit: {
+  label: 'Enable to skip calling the API to skip submitting actual IAR reports',
+  category: 3
 }
   },
   c = {};

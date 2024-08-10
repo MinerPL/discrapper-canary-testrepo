@@ -21,5 +21,11 @@ e.exports = {
   forumPostTitle: 'forumPostTitle_a7d72e',
   subtitleContainer: 'subtitleContainer_a7d72e',
   secureFramesIcon: 'secureFramesIcon_a7d72e',
-  shaker: 'shaker_a7d72e'
+  shaker: 'shaker_a7d72e',
+  linkedLobby: 'linkedLobby_a7d72e',
+  linkedLobbyApplicationIcon: 'linkedLobbyApplicationIcon_a7d72e',
+  linkedLobbyEducationTooltipWrapper: 'linkedLobbyEducationTooltipWrapper_a7d72e',
+  linkedLobbyEducationTooltip: 'linkedLobbyEducationTooltip_a7d72e',
+  linkedLobbyEducationTooltipCloseClickContainer: 'linkedLobbyEducationTooltipCloseClickContainer_a7d72e',
+  linkedLobbyEducationTooltipCloseIcon: 'linkedLobbyEducationTooltipCloseIcon_a7d72e'
 };

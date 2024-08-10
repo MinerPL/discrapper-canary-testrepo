@@ -6,7 +6,7 @@ return d;
 return Z;
   },
   Uo: function() {
-return P;
+return f;
   },
   fU: function() {
 return H;
@@ -15,7 +15,7 @@ return H;
 return h;
   },
   tn: function() {
-return f;
+return P;
   }
 }), E(733860);
 var s = E(470079),
@@ -70,14 +70,14 @@ T
 }
 
 function Z(e) {
-  let _ = e.getSections();
-  if (_[D.zm] > 0)
-switch (e.getCommunitySection().getRow(0)) {
-  case o.f.GUILD_HOME:
+  let _ = e.getSections(!1);
+  if (_[D.wZ] > 0)
+switch (e.getGuildActionSection().getRow(0)) {
+  case o.z.GUILD_HOME:
     return u.oC.GUILD_HOME;
-  case o.f.GUILD_ROLE_SUBSCRIPTIONS:
+  case o.z.GUILD_ROLE_SUBSCRIPTIONS:
     return u.oC.ROLE_SUBSCRIPTIONS;
-  case o.f.GUILD_MEMBER_APPLICATIONS:
+  case o.z.GUILD_MEMBER_APPLICATIONS:
     return u.oC.MEMBER_APPLICATIONS;
 }
   for (let s = D.wd; s < e.voiceChannelsSectionNumber; s++)
@@ -90,7 +90,7 @@ if (_[s] > 0) {
   return null;
 }
 
-function P(e, _) {
+function f(e, _) {
   let E = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
   (0, l.n)(e, _), (0, r.y5)(_.map(e => ({
 channelId: e,
@@ -99,7 +99,7 @@ messageId: M.ZP.lastMessageId(e)
   }))), null != E && (0, U.uL)(R.Z5c.CHANNEL(e, E));
 }
 
-function f(e, _, E, s) {
+function P(e, _, E, s) {
   let T = (0, L.wE)(a.z.CHANNEL_BROWSER_NUX),
 I = (0, t.cj)([G.Z], () => {
   let _ = {},

@@ -1,6 +1,6 @@
 t.d(n, {
   Q2: function() {
-return S;
+return L;
   },
   pe: function() {
 return P;
@@ -98,14 +98,14 @@ return i.useMemo(() => {
 channel: n,
 includeBuiltIn: !0
   }), {
-apps: S
+apps: L
   } = function(e) {
 let {
   channel: n,
   onlyWithCommands: t,
   includeBuiltIn: i,
   allowFetch: a = !0
-} = e, l = (0, p.Hs)(n, c.yU.CHAT).hasBaseAccessPermissions, o = (0, m.em)(n, l, a), r = (0, m.PL)(l, a), s = [], u = new Set();
+} = e, l = (0, p.Hs)(n, [c.yU.CHAT]).hasBaseAccessPermissions, o = (0, m.em)(n, l, a), r = (0, m.PL)(l, a), s = [], u = new Set();
 if (null != o.result)
   for (let e of Object.values(o.result.sections)) {
     let n = e.descriptor.application;
@@ -124,16 +124,16 @@ return i && s.push(E.Wx), {
 channel: n,
 onlyWithCommands: !0,
 includeBuiltIn: !0
-  }), L = (0, u.Z)({
+  }), R = (0, u.Z)({
 guildId: n.getGuildId()
-  }), R = i.useMemo(() => {
+  }), S = i.useMemo(() => {
 var e;
 if (!r)
   return [];
 return (0, A.N)(f, {
   limit: a,
   filterPredicates: [function(e) {
-    let n = (0, p.k)(e, c.yU.CHAT),
+    let n = (0, p.k)(e, [c.yU.CHAT]),
       t = {};
     return i => {
       let {
@@ -243,13 +243,13 @@ a,
 n,
 t
   ]), T = i.useMemo(() => {
-if (0 === R.length)
+if (0 === S.length)
   return [];
-let e = new Map(S.map(e => [
+let e = new Map(L.map(e => [
   e.id,
   e
 ]));
-return l().compact(R.map(n => {
+return l().compact(S.map(n => {
   var t;
   let i = e.get(n.applicationId);
   if (null == i)
@@ -262,8 +262,8 @@ return l().compact(R.map(n => {
   };
 }));
   }, [
+L,
 S,
-R,
 h
   ]), b = i.useMemo(() => {
 var e;
@@ -271,13 +271,13 @@ if (!s && !C)
   return [];
 let i = [];
 if (s && C) {
-  let e = new Set(S.map(e => {
+  let e = new Set(L.map(e => {
     let {
       id: n
     } = e;
     return n;
   }));
-  i.push(...S), i.push(...L.filter(n => {
+  i.push(...L), i.push(...R.filter(n => {
     let {
       application: {
         id: t
@@ -291,7 +291,7 @@ if (s && C) {
     return n;
   }));
 } else
-  i = s ? S : L.map(e => {
+  i = s ? L : R.map(e => {
     let {
       application: n
     } = e;
@@ -300,11 +300,11 @@ if (s && C) {
 return (0, A.N)(i, {
   limit: o,
   filterPredicates: [function(e) {
-    let n = [
-      (0, p.k)(e, c.yU.CHAT),
-      (0, p.k)(e, c.yU.PRIMARY_ENTRY_POINT)
-    ];
-    return t => n.some(n => {
+    let n = (0, p.k)(e, [
+      c.yU.CHAT,
+      c.yU.PRIMARY_ENTRY_POINT
+    ]);
+    return t => {
       let {
         context: i,
         userId: a,
@@ -323,7 +323,7 @@ return (0, A.N)(i, {
         isGuildInstalled: c,
         isUserInstalled: u
       }) === _.mF.ALLOWED);
-    });
+    };
   }(n)],
   bucketPredicates: [
     function(e) {
@@ -358,20 +358,20 @@ C,
 o,
 n,
 t,
-S,
-L
-  ]), M = T.length > 0, y = b.length > 0;
+L,
+R
+  ]), M = T.length > 0, j = b.length > 0;
   return {
 commandResults: T,
 hasCommandResults: M,
 applicationResults: b,
-hasApplicationResults: y,
-isEmptyState: !M && !y,
+hasApplicationResults: j,
+isEmptyState: !M && !j,
 loading: P && r
   };
 }
 
-function S(e) {
+function L(e) {
   let {
 channel: n,
 query: t,

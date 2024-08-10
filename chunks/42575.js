@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(417183),
   h = n(170245),
   E = n(981631),
-  I = n(689938),
-  m = n(12505);
+  m = n(689938),
+  I = n(12505);
 
 function g(e) {
   let {
@@ -53,31 +53,31 @@ children: e => {
       (0, i.jsx)(u.Z, {
         icon: s.CheckmarkLargeIcon,
         actionType: u.Z.ActionTypes.ACCEPT,
-        tooltip: I.Z.Messages.FRIEND_REQUEST_ACCEPT,
+        tooltip: m.Z.Messages.FRIEND_REQUEST_ACCEPT,
         onClick: f,
         shouldHighlight: e
       }),
       (0, i.jsx)(u.Z, {
-        icon: s.CloseSmallIcon,
+        icon: s.XSmallIcon,
         actionType: u.Z.ActionTypes.DENY,
-        tooltip: I.Z.Messages.FRIEND_REQUEST_IGNORE,
+        tooltip: m.Z.Messages.FRIEND_REQUEST_IGNORE,
         onClick: C,
         shouldHighlight: e
       })
     ]
   });
   return (0, i.jsxs)('div', {
-    className: m.listItemContents,
+    className: I.listItemContents,
     children: [
       (0, i.jsx)(h.Z, {
         user: t,
         hovered: e,
         status: N,
         subText: n,
-        className: m.__invalid_userInfo
+        className: I.__invalid_userInfo
       }),
       (0, i.jsx)('div', {
-        className: m.actions,
+        className: I.actions,
         children: a
       })
     ]

@@ -8,6 +8,9 @@ return p;
   EW: function() {
 return y;
   },
+  OR: function() {
+return D;
+  },
   QB: function() {
 return S;
   },
@@ -351,5 +354,13 @@ function y(e) {
   a.Z.dispatch({
 type: 'QUESTS_DELIVERY_OVERRIDE',
 questId: e
+  });
+}
+
+function D(e, t) {
+  a.Z.dispatch({
+type: 'QUESTS_SELECT_TASK_PLATFORM',
+questId: e,
+platform: t
   });
 }

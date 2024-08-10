@@ -9,8 +9,8 @@ var n = a(735250),
   d = a(481060),
   c = a(393238),
   m = a(98650),
-  p = a(451478),
-  v = a(810090),
+  p = a(70097),
+  v = a(451478),
   f = a(917042),
   b = a(20437),
   h = a(356659),
@@ -72,7 +72,7 @@ return t.addEventListener('play', i), t.addEventListener('pause', r), () => {
 ref: V,
 width: G = 0,
 height: K = 0
-  } = (0, c.Z)(), Y = (0, s.e7)([p.Z], () => p.Z.windowSize());
+  } = (0, c.Z)(), Y = (0, s.e7)([v.Z], () => v.Z.windowSize());
   l.useMemo(() => {
 let e = V.current;
 null != e && z(e.getBoundingClientRect());
@@ -295,7 +295,7 @@ children: (0, n.jsxs)('div', {
             }
           })
         }),
-        (0, n.jsx)(v.Z, {
+        (0, n.jsx)(p.Z, {
           preload: 'auto',
           onLoadedMetadata: function() {
             let e = k.current;

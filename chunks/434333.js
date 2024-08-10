@@ -25,7 +25,7 @@ let {
   className: a,
   onDismiss: d,
   backgroundColor: _ = c.RED,
-  icon: E = l.CircleExclamationPointIcon,
+  icon: E = l.CircleWarningIcon,
   iconClassName: f
 } = e;
 return (0, r.jsxs)('div', {
@@ -44,7 +44,7 @@ return (0, r.jsxs)('div', {
     null != d ? (0, r.jsx)(o.P, {
       onClick: d,
       className: u.errorClose,
-      children: (0, r.jsx)(l.CloseSmallIcon, {
+      children: (0, r.jsx)(l.XSmallIcon, {
         size: 'md',
         color: 'currentColor',
         className: u.errorCloseIcon

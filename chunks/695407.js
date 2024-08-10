@@ -57,7 +57,7 @@ focusProps: {
     left: -3
   }
 },
-children: (0, r.jsx)(c.CloseSmallIcon, {
+children: (0, r.jsx)(c.XSmallIcon, {
   size: 'custom',
   color: 'currentColor',
   width: 18,

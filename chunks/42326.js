@@ -22,7 +22,7 @@ text: t,
 position: 'bottom',
 color: l.TooltipColors.GREY,
 children: (0, i.jsx)(r.Z, {
-  children: (0, i.jsx)(l.CircleExclamationPointIcon, {
+  children: (0, i.jsx)(l.CircleWarningIcon, {
     size: 'custom',
     width: 20,
     height: 20,

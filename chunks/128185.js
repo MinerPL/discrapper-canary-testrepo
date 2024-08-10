@@ -1,17 +1,17 @@
 n.d(t, {
   h: function() {
-return h;
+return b;
   }
 }), n(47120);
 var s = n(735250),
   r = n(470079),
   a = n(442837),
-  o = n(481060),
-  i = n(607070),
+  i = n(481060),
+  o = n(607070),
   c = n(100527),
   l = n(906732),
   d = n(44315),
-  u = n(810090),
+  u = n(70097),
   f = n(626135),
   p = n(328347),
   g = n(530915),
@@ -19,11 +19,11 @@ var s = n(735250),
   _ = n(981631),
   m = n(395114);
 
-function b(e) {
+function h(e) {
   var t, n;
   let {
 config: a,
-index: i,
+index: o,
 handleCTAClick: c,
 text: l,
 reducedMotion: f = !1
@@ -64,7 +64,7 @@ children: [
             style: {
               visibility: null != a.badge ? 'visible' : 'hidden'
             },
-            children: null != a.badge && (0, s.jsx)(o.Text, {
+            children: null != a.badge && (0, s.jsx)(i.Text, {
               variant: 'text-xs/semibold',
               className: m.badge,
               children: a.badge.label()
@@ -78,7 +78,7 @@ children: [
                 alt: '',
                 className: m.logo
               }),
-              (null != a.description || null != l) && (0, s.jsx)(o.Text, {
+              (null != a.description || null != l) && (0, s.jsx)(i.Text, {
                 variant: 'text-md/normal',
                 color: 'currentColor',
                 children: null !== (n = a.description) && void 0 !== n ? n : l
@@ -86,8 +86,8 @@ children: [
             ]
           }),
           (0, s.jsx)('div', {
-            children: null != a.cta && (0, s.jsx)(o.Button, {
-              onClick: () => c(a, i),
+            children: null != a.cta && (0, s.jsx)(i.Button, {
+              onClick: () => c(a, o),
               children: a.cta.label()
             })
           })
@@ -104,46 +104,46 @@ children: [
   });
 }
 
-function h(e) {
+function b(e) {
   let {
 categories: t,
 handleScrollToCategory: n
-  } = e, o = r.useMemo(() => {
+  } = e, i = r.useMemo(() => {
 let e = {};
 for (let n of t)
   e[n.skuId] = n;
 return e;
-  }, [t]), d = r.useMemo(() => (0, C.yc)(o), [o]), {
+  }, [t]), d = r.useMemo(() => (0, C.yc)(i), [i]), {
 analyticsLocations: u
   } = (0, a.cj)([p.Z], () => p.Z.getAnalytics()), {
-analyticsLocations: h
+analyticsLocations: b
   } = (0, l.ZP)([
 ...u,
 c.Z.COLLECTIBLES_SHOP_HEADER_CAROUSEL
   ]), x = r.useCallback((e, t) => {
 let s = e.cta;
 f.default.track(_.rMx.SHOP_HEADER_CAROUSEL_CTA_CLICKED, {
-  location_stack: h,
+  location_stack: b,
   slide_id: e.id,
   slide_index: t,
   sku_id: null == s ? void 0 : s.categorySkuId
 }), (null == s ? void 0 : s.categorySkuId) != null && n(s.categorySkuId);
   }, [
-h,
+b,
 n
-  ]), E = (0, a.e7)([i.Z], () => i.Z.useReducedMotion), I = r.useCallback((e, t) => {
+  ]), E = (0, a.e7)([o.Z], () => o.Z.useReducedMotion), I = r.useCallback((e, t) => {
 var n, r;
 let a = null === (n = e.cta) || void 0 === n ? void 0 : n.categorySkuId,
-  i = null != a ? null === (r = o[a]) || void 0 === r ? void 0 : r.summary : void 0;
-return (0, s.jsx)(b, {
+  o = null != a ? null === (r = i[a]) || void 0 === r ? void 0 : r.summary : void 0;
+return (0, s.jsx)(h, {
   config: e,
-  text: i,
+  text: o,
   handleCTAClick: x,
   reducedMotion: E,
   index: t
 });
   }, [
-o,
+i,
 x,
 E
   ]), v = r.useCallback(e => {
@@ -161,7 +161,7 @@ children: (0, s.jsx)(g.U, {
   controlsClassName: m.paginationControls,
   paginationButtonClassName: m.paginationButton,
   delay: 6000,
-  analyticsLocations: h,
+  analyticsLocations: b,
   unidirectional: !0
 })
   });

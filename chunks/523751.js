@@ -13,12 +13,12 @@ var r = n(735250),
   c = n(481060),
   d = n(353093),
   _ = n(979264),
-  E = n(623624),
-  f = n(297700),
-  h = n(210887),
-  p = n(271383),
-  m = n(594174),
-  I = n(672752),
+  E = n(436774),
+  f = n(623624),
+  h = n(297700),
+  p = n(210887),
+  m = n(271383),
+  I = n(594174),
   T = n(665786),
   g = n(697725),
   S = n(267642),
@@ -62,8 +62,9 @@ foregroundDarkColor: l.Z.unsafe_rawColors.PRIMARY_500.css,
 foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
 backgroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
 backgroundLightColor: l.Z.unsafe_rawColors.PRIMARY_500.css,
-premiumBackgroundColor: I.JX.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
-premiumForegroundColor: l.Z.unsafe_rawColors.WHITE_400.css
+premiumBackgroundColor: E.JX.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
+premiumForegroundColor: l.Z.unsafe_rawColors.WHITE_400.css,
+sizeAdjustment: 2
   },
   [A.Q.DISCOVERABLE]: {
 IconComponent: c.GlobeEarthIcon,
@@ -71,8 +72,9 @@ foregroundDarkColor: l.Z.unsafe_rawColors.PRIMARY_500.css,
 foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
 backgroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
 backgroundLightColor: l.Z.unsafe_rawColors.PRIMARY_500.css,
-premiumBackgroundColor: I.JX.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
-premiumForegroundColor: l.Z.unsafe_rawColors.WHITE_400.css
+premiumBackgroundColor: E.JX.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
+premiumForegroundColor: l.Z.unsafe_rawColors.WHITE_400.css,
+sizeAdjustment: 2
   },
   [A.Q.CLAN]: {},
   [A.Q.NONE]: {}
@@ -203,7 +205,7 @@ function L(e) {
   let t, n, {
   guild: a,
   tooltipColor: l = c.Tooltip.Colors.BRAND,
-  tooltipPosition: I,
+  tooltipPosition: E,
   className: T,
   flowerStarClassName: g,
   iconClassName: S,
@@ -214,17 +216,17 @@ function L(e) {
   'aria-label': M = !1
 } = e,
 P = (0, o.e7)([
-  m.default,
-  p.ZP
+  I.default,
+  m.ZP
 ], () => {
-  let e = m.default.getCurrentUser();
-  return p.ZP.isMember(null == a ? void 0 : a.id, null == e ? void 0 : e.id);
+  let e = I.default.getCurrentUser();
+  return m.ZP.isMember(null == a ? void 0 : a.id, null == e ? void 0 : e.id);
 }),
-U = (0, o.e7)([h.Z], () => h.Z.theme),
+U = (0, o.e7)([p.Z], () => p.Z.theme),
 w = (0, N.XX)(a),
 x = (0, A.i)(w),
 G = i.useCallback(e => {
-  w.premium && P && !b && (e.stopPropagation(), e.preventDefault(), (0, E.f)({
+  w.premium && P && !b && (e.stopPropagation(), e.preventDefault(), (0, f.f)({
     guildId: a.id,
     location: {
       section: v.jXE.GUILD_HEADER,
@@ -244,7 +246,7 @@ var k;
 let e = (0, d.ky)(a.id, null === (k = a.clan) || void 0 === k ? void 0 : k.badge, L);
 return (0, r.jsx)(c.Tooltip, {
   color: l,
-  position: I,
+  position: E,
   'aria-label': M,
   text: (0, r.jsx)(D, {
     badgeType: x,
@@ -269,16 +271,19 @@ backgroundLightColor: V,
 foregroundDarkColor: H,
 foregroundLightColor: Z,
 premiumBackgroundColor: Y,
-premiumForegroundColor: j
+premiumForegroundColor: j,
+sizeAdjustment: W
   } = C[x];
   if (null == B)
 return null;
   w.premium && (t = j, n = Y);
-  let W = (0, u.wj)(U) ? H : Z,
-K = (0, u.wj)(U) ? F : V;
-  return t = null != t ? t : W, n = null != n ? n : K, (0, r.jsx)(c.Tooltip, {
+  let K = (0, u.wj)(U) ? H : Z,
+z = (0, u.wj)(U) ? F : V;
+  t = null != t ? t : K, n = null != n ? n : z;
+  let q = Math.floor(0.75 * L) - (null != W ? W : 0);
+  return (0, r.jsx)(c.Tooltip, {
 color: l,
-position: I,
+position: E,
 'aria-label': M,
 text: (0, r.jsx)(D, {
   badgeType: x,
@@ -287,14 +292,18 @@ text: (0, r.jsx)(D, {
 tooltipContentClassName: R.tooltipRemovePadding,
 children: e => (0, r.jsx)(c.Clickable, {
   onClick: G,
-  children: (0, r.jsx)(f.Z, {
+  children: (0, r.jsx)(h.Z, {
     ...e,
     className: T,
     flowerStarClassName: g,
+    allowFullSizedIcon: !0,
     color: null != n ? n : y,
     stroke: O,
     size: L,
     children: (0, r.jsx)(B, {
+      size: 'custom',
+      width: q,
+      height: q,
       className: S,
       color: null != t ? t : 'currentColor'
     })

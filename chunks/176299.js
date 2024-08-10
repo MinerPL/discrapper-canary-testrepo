@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(481060),
   h = n(711237),
   E = n(532835),
-  I = n(290297),
-  m = n(918854),
+  m = n(290297),
+  I = n(918854),
   g = n(279240),
   p = n(765717),
   T = n(358221),
@@ -72,13 +72,13 @@ let eE = () => (0, i.jsx)('div', {
 className: eh.loader,
 children: (0, i.jsx)(_.Spinner, {})
   }),
-  eI = (0, c.Un)({
+  em = (0, c.Un)({
 createPromise: () => n.e('68614').then(n.bind(n, 650788)),
 webpackId: 650788,
 name: 'GuildShopPage',
 renderLoader: eE
   }),
-  em = (0, c.Un)({
+  eI = (0, c.Un)({
 createPromise: () => n.e('44798').then(n.bind(n, 998420)),
 webpackId: 998420,
 name: 'GuildMemberApplicationReview',
@@ -105,7 +105,7 @@ createPromise: () => Promise.all([
   n.e('44156'),
   n.e('58227'),
   n.e('38359'),
-  n.e('21013')
+  n.e('52534')
 ]).then(n.bind(n, 603072)),
 webpackId: 603072,
 name: 'ChannelsAndRolesPage',
@@ -117,7 +117,7 @@ createPromise: () => Promise.all([
   n.e('44156'),
   n.e('19878'),
   n.e('38359'),
-  n.e('52190')
+  n.e('29091')
 ]).then(n.bind(n, 599263)),
 webpackId: 599263,
 name: 'GuildOnboardingPage',
@@ -153,20 +153,20 @@ let {
 if (null != a && null != s && (0, eu.AB)(s))
   switch (s) {
     case eu.oC.ROLE_SUBSCRIPTIONS:
-      return d ? (0, i.jsx)(eI, {
+      return d ? (0, i.jsx)(em, {
         guildId: a,
         initialTab: A.y.GUILD_ROLE_SUBSCRIPTIONS
       }) : (0, i.jsx)(D.Z, {
         guildId: a
       });
     case eu.oC.GUILD_SHOP:
-      return (0, i.jsx)(eI, {
+      return (0, i.jsx)(em, {
         guildId: a,
         productId: r,
         initialTab: c
       });
     case eu.oC.MEMBER_APPLICATIONS:
-      return (0, i.jsx)(em, {
+      return (0, i.jsx)(eI, {
         guildId: a
       });
     case eu.oC.GUILD_HOME:
@@ -212,7 +212,9 @@ return (0, i.jsx)(S.Z, {});
 let {
   guildId: e,
   channelId: t
-} = (0, W.Z)(), n = (0, u.e7)([J.Z], () => null != t ? t : J.Z.getChannelId(e)), a = (0, L.Y$)('sidebar');
+} = (0, W.Z)(), n = (0, u.e7)([J.Z], () => null != t ? t : J.Z.getChannelId(e)), a = (0, L.v)({
+  location: 'sidebar'
+});
 if (function() {
     return window.location.pathname.startsWith(ed.Z5c.GLOBAL_DISCOVERY);
   }() || function() {
@@ -229,7 +231,9 @@ return null != e ? (0, i.jsx)(y.Z, {
   }),
   eA = e => {
 let t = null != e && e.length > 0 && e.startsWith('?') ? e.split('?')[1] : null;
-return (0, L.Sv)('sidebar') ? (0, i.jsx)(O.A, {}) : (0, i.jsx)(v.Z, {
+return (0, L.a)({
+  location: 'sidebar'
+}) ? (0, i.jsx)(O.A, {}) : (0, i.jsx)(v.Z, {
   searchRoute: t
 });
   },
@@ -265,7 +269,7 @@ return function(t) {
   ex = e => (0, i.jsx)(g.Z, {
 ...e
   }),
-  eb = () => (0, i.jsx)(m.Z, {}),
+  eb = () => (0, i.jsx)(I.Z, {}),
   eP = () => (0, i.jsx)(F.Z, {}),
   eM = () => (0, i.jsx)(w.Z, {}),
   eD = () => (0, i.jsx)(V.Z, {}),
@@ -377,7 +381,7 @@ E = (0, l.$B)([
   ed.Z5c.CHANNEL(ed.ME, ':channelId'),
   ed.Z5c.CHANNEL(':guildId', ':channelId?', ':messageId?')
 ]),
-m = (null == E ? void 0 : null === (e = E.params) || void 0 === e ? void 0 : e.channelId) === eu.oC.GUILD_ONBOARDING,
+I = (null == E ? void 0 : null === (e = E.params) || void 0 === e ? void 0 : e.channelId) === eu.oC.GUILD_ONBOARDING,
 g = a.useCallback(() => B.Z.openSidebar(), []);
   return (0, i.jsx)(i.Fragment, {
 children: (0, i.jsxs)('div', {
@@ -400,9 +404,9 @@ children: (0, i.jsxs)('div', {
               (0, i.jsx)(ej, {
                 hasNotice: t,
                 sidebarTheme: n,
-                hideSidebar: s || r || c || _ || m || !h
+                hideSidebar: s || r || c || _ || I || !h
               }),
-              (0, i.jsx)(I.Z.Provider, {
+              (0, i.jsx)(m.Z.Provider, {
                 value: g,
                 children: (0, i.jsxs)(l.rs, {
                   children: [

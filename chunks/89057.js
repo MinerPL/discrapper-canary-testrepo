@@ -1,12 +1,12 @@
 n.d(a, {
   Vq: function() {
-return x;
-  },
-  c8: function() {
 return B;
   },
+  c8: function() {
+return k;
+  },
   oQ: function() {
-return N;
+return x;
   }
 });
 var r = n(735250);
@@ -17,19 +17,19 @@ var t = n(120356),
   s = n(780384),
   c = n(481060),
   d = n(410030),
-  f = n(285952),
+  f = n(600164),
   l = n(63063),
   _ = n(211242),
   u = n(981631),
   m = n(689938),
   g = n(736802),
-  h = n(51125),
-  p = n(47268);
+  b = n(51125),
+  h = n(47268);
 
-function k(e) {
+function p(e) {
   let {
 className: a
-  } = e, n = (0, d.ZP)(), t = (0, s.wj)(n) ? h : p;
+  } = e, n = (0, d.ZP)(), t = (0, s.wj)(n) ? b : h;
   return (0, r.jsxs)('div', {
 className: o()(g.container, a),
 children: [
@@ -62,13 +62,13 @@ children: [
   });
 }
 
-function B() {
-  return (0, r.jsx)(k, {
+function k() {
+  return (0, r.jsx)(p, {
 className: g.settings
   });
 }
 
-function x(e) {
+function B(e) {
   let {
 onClose: a
   } = e;
@@ -83,7 +83,7 @@ children: [
   }),
   (0, r.jsx)(c.ModalContent, {
     className: g.blockedPaymentsModalContent,
-    children: (0, r.jsx)(k, {
+    children: (0, r.jsx)(p, {
       className: g.modal
     })
   })
@@ -91,7 +91,7 @@ children: [
   });
 }
 
-function N(e) {
+function x(e) {
   let {
 className: a
   } = e;
@@ -99,7 +99,7 @@ className: a
 className: o()(g.blockedPaymentsWarning, a),
 type: c.Card.Types.CUSTOM,
 children: [
-  (0, r.jsx)(c.CircleExclamationPointIcon, {
+  (0, r.jsx)(c.CircleWarningIcon, {
     size: 'custom',
     width: 20,
     height: 20,

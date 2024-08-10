@@ -1,98 +1,193 @@
 n(47120);
 var i = n(735250),
   a = n(470079),
-  s = n(338545),
-  r = n(481060),
-  l = n(950279),
-  o = n(741595),
-  c = n(359380),
-  d = n(480222),
-  u = n(207796),
-  _ = n(689938);
-let h = {
+  s = n(348327),
+  r = n.n(s),
+  l = n(338545),
+  o = n(143927),
+  c = n(481060),
+  d = n(950279),
+  u = n(741595),
+  _ = n(359380),
+  h = n(480222),
+  E = n(207796),
+  m = n(558831),
+  I = n(689938);
+let g = {
 mass: 1,
 tension: 280,
 friction: 20,
 clamp: !0
   },
-  E = {
-[u.v0.PLAYSTYLE]: function() {
-  let [e, t] = a.useState(u.GN.getState().selectedPlaystyle), n = a.useCallback(() => {
-    null != e && u.GN.getState().setSelectedPlaystyle(e);
-  }, [e]);
-  return (0, i.jsx)(d.Z, {
-    onClose: n,
-    children: (0, i.jsx)(o.Z, {
-      title: _.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
-      description: _.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
-      handleUpdate: t,
-      playstyle: e
+  p = {
+[E.v0.PLAYSTYLE]: function() {
+  let e = (0, E.GN)(e => e.selectedPlaystyle, o.Z),
+    [t, n] = a.useState(E.GN.getState().selectedPlaystyle),
+    s = a.useCallback(() => {
+      E.GN.getState().setSelectedPlaystyle(t);
+    }, [t]),
+    l = a.useCallback(() => {
+      n(e);
+    }, [e]),
+    c = a.useMemo(() => !r()(t, e), [
+      t,
+      e
+    ]);
+  return (0, i.jsx)(h.Z, {
+    hasChanges: c,
+    onSave: s,
+    onReset: l,
+    children: (0, i.jsx)(u.Z, {
+      title: I.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
+      description: I.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
+      onUpdatePlaystyle: n,
+      playstyle: t
     })
   });
 },
-[u.v0.TRAITS]: function() {
-  let [e, t] = a.useState(new Set(u.GN.getState().selectedTraits)), n = a.useCallback(() => {
-    u.GN.getState().setSelectedTraits(Array.from(e));
-  }, [e]);
-  return (0, i.jsx)(d.Z, {
-    onClose: n,
-    children: (0, i.jsx)(c.Z, {
-      title: _.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
-      description: _.Z.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
-      handleUpdate: t,
-      interests: e,
+[E.v0.TRAITS]: function() {
+  let e = (0, E.GN)(e => e.selectedTraits, o.Z),
+    [t, n] = a.useState(new Set(e)),
+    s = a.useCallback(() => {
+      E.GN.getState().setSelectedTraits(Array.from(t));
+    }, [t]),
+    l = a.useCallback(() => {
+      n(new Set(e));
+    }, [e]),
+    c = a.useMemo(() => !r()(t, e), [
+      t,
+      e
+    ]);
+  return (0, i.jsx)(h.Z, {
+    hasChanges: c,
+    onSave: s,
+    onReset: l,
+    children: (0, i.jsx)(_.Z, {
+      title: I.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
+      description: I.Z.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
+      onUpdateTraits: n,
+      traits: t,
       hidePreview: !0
     })
   });
 },
-[u.v0.GAMES]: function() {
-  let [e, t] = a.useState(new Set(u.GN.getState().selectedGames)), n = a.useCallback(() => {
-    u.GN.getState().setSelectedGames(Array.from(e));
-  }, [e]);
-  return (0, i.jsx)(d.Z, {
-    onClose: n,
-    children: (0, i.jsx)(l.Z, {
-      title: _.Z.Messages.CLAN_DISCOVERY_GAME_TITLE,
-      description: _.Z.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
-      handleUpdate: t,
-      gameApplicationIds: e
+[E.v0.GAMES]: function() {
+  let e = (0, E.GN)(e => e.selectedGames, o.Z),
+    [t, n] = a.useState(new Set(e)),
+    s = a.useCallback(() => {
+      E.GN.getState().setSelectedGames(Array.from(t));
+    }, [t]),
+    l = a.useCallback(() => {
+      n(new Set(e));
+    }, [e]),
+    c = a.useMemo(() => !r()(t, e), [
+      t,
+      e
+    ]);
+  return (0, i.jsx)(h.Z, {
+    hasChanges: c,
+    onSave: s,
+    onReset: l,
+    children: (0, i.jsx)(d.Z, {
+      title: I.Z.Messages.CLAN_DISCOVERY_GAME_TITLE,
+      description: I.Z.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
+      onUpdateGames: n,
+      gameApplicationIds: t
+    })
+  });
+},
+[E.v0.PREFERENCES]: function() {
+  let e = (0, E.GN)(e => e.selectedGames, o.Z),
+    t = (0, E.GN)(e => e.selectedPlaystyle, o.Z),
+    n = (0, E.GN)(e => e.selectedTraits, o.Z),
+    [s, l] = a.useState(new Set(e)),
+    [c, d] = a.useState(t),
+    [u, _] = a.useState(new Set(n)),
+    I = a.useMemo(() => ({
+      games: Array.from(s),
+      playstyle: c,
+      traits: Array.from(u)
+    }), [
+      s,
+      c,
+      u
+    ]),
+    g = a.useMemo(() => ({
+      games: e,
+      playstyle: t,
+      traits: n
+    }), [
+      e,
+      t,
+      n
+    ]),
+    p = a.useMemo(() => !r()(I, g), [
+      g,
+      I
+    ]),
+    T = a.useCallback(() => {
+      var e;
+      E.GN.getState().setSelectedGames(I.games), E.GN.getState().setSelectedPlaystyle(null !== (e = I.playstyle) && void 0 !== e ? e : null), E.GN.getState().setSelectedTraits(I.traits);
+    }, [
+      I.games,
+      I.playstyle,
+      I.traits
+    ]),
+    S = a.useCallback(() => {
+      l(new Set(g.games)), d(g.playstyle), _(new Set(g.traits));
+    }, [
+      g.games,
+      g.playstyle,
+      g.traits
+    ]);
+  return (0, i.jsx)(h.Z, {
+    hasChanges: p,
+    onSave: T,
+    onReset: S,
+    children: (0, i.jsx)(m.Z, {
+      traits: u,
+      gameApplicationIds: s,
+      playstyle: c,
+      onUpdateGames: l,
+      onUpdateTraits: _,
+      onUpdatePlaystyle: d
     })
   });
 }
   };
 
-function I(e) {
+function T(e) {
   let {
 item: t,
 state: n,
-cleanUp: l
-  } = e, o = a.useMemo(() => {
-let e = E[t];
+cleanUp: s
+  } = e, r = a.useMemo(() => {
+let e = p[t];
 return null == e ? null : (0, i.jsx)(e, {});
-  }, [t]), c = (0, r.useSpring)({
+  }, [t]), o = (0, c.useSpring)({
 from: {
   opacity: 0
 },
 to: {
-  opacity: n === r.TransitionStates.YEETED ? 0 : 1
+  opacity: n === c.TransitionStates.YEETED ? 0 : 1
 },
-config: h,
+config: g,
 onRest: () => {
-  n === r.TransitionStates.YEETED && l();
+  n === c.TransitionStates.YEETED && s();
 }
   });
-  return (0, i.jsx)(s.animated.div, {
-style: c,
-children: o
+  return (0, i.jsx)(l.animated.div, {
+style: o,
+children: r
   });
 }
 
-function m(e) {
+function S(e) {
   return e;
 }
 
-function g(e, t, n, a) {
-  return (0, i.jsx)(I, {
+function f(e, t, n, a) {
+  return (0, i.jsx)(T, {
 item: t,
 state: n,
 cleanUp: a
@@ -101,10 +196,10 @@ cleanUp: a
 t.Z = a.memo(function(e) {
   let {
 mode: t
-  } = e, n = a.useMemo(() => null != E[t] ? [t] : [], [t]);
-  return (0, i.jsx)(r.TransitionGroup, {
+  } = e, n = a.useMemo(() => null != p[t] ? [t] : [], [t]);
+  return (0, i.jsx)(c.TransitionGroup, {
 items: n,
-renderItem: g,
-getItemKey: m
+renderItem: f,
+getItemKey: S
   });
 });

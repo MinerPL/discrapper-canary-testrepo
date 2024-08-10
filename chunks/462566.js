@@ -114,6 +114,9 @@ children: [
       }),
       (0, l.jsx)('div', {
         className: i()(u.Uy.SMALL, m.dinersclub, m.cardFormHeader)
+      }),
+      (0, l.jsx)('div', {
+        className: i()(u.Uy.SMALL, m.unionpay, m.cardFormHeader)
       })
     ]
   }) : (0, l.jsxs)('div', {
@@ -136,6 +139,9 @@ children: [
       }),
       (0, l.jsx)('div', {
         className: i()(u.Uy.SMALL, m.dinersclub_monochrome, m.cardFormHeader)
+      }),
+      (0, l.jsx)('div', {
+        className: i()(u.Uy.SMALL, m.unionpay_monochrome, m.cardFormHeader)
       })
     ]
   }),

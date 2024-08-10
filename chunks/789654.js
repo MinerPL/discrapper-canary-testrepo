@@ -489,7 +489,7 @@ children: [
                 var t;
                 c && I(r, e, o.color, null !== (t = o.opacity) && void 0 !== t ? t : 1);
               },
-              children: (0, a.jsx)(f.CloseSmallIcon, {
+              children: (0, a.jsx)(f.XSmallIcon, {
                 size: 'xs',
                 color: 'currentColor'
               })

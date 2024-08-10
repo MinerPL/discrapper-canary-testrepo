@@ -42,8 +42,8 @@ var t = i(735250),
   w = i(451478),
   G = i(626135),
   H = i(768581),
-  U = i(572004),
-  F = i(823379),
+  F = i(572004),
+  U = i(823379),
   Y = i(900849),
   W = i(674588),
   V = i(264043),
@@ -59,7 +59,7 @@ var t = i(735250),
   ei = i(132871),
   et = i(147890),
   ea = i(491576),
-  er = i(95650),
+  er = i(527564),
   eo = i(326135),
   el = i(940064),
   es = i(626004),
@@ -209,12 +209,12 @@ if ((null == eM ? void 0 : eM.directory_entry) != null) {
   }))) : eO(void 0);
 }
   }, [eM]);
-  let eU = H.ZP.getApplicationIconURL({
+  let eF = H.ZP.getApplicationIconURL({
   id: null !== (l = null == eM ? void 0 : eM.id) && void 0 !== l ? l : '-1',
   icon: null == eM ? void 0 : eM.icon,
   size: ev
 }),
-eF = (0, L.Z)({
+eU = (0, L.Z)({
   id: null !== (c = null == eM ? void 0 : eM.id) && void 0 !== c ? c : '',
   label: eI.Z.Messages.COPY_ID_APPLICATION
 }),
@@ -257,7 +257,7 @@ eK = a.useCallback(e => {
 ]),
 eq = a.useMemo(() => {
   var e, n, i;
-  return null !== (i = (null !== (n = null == eM ? void 0 : null === (e = eM.directory_entry) || void 0 === e ? void 0 : e.carousel_items) && void 0 !== n ? n : []).map(eT).filter(F.lm)) && void 0 !== i ? i : [];
+  return null !== (i = (null !== (n = null == eM ? void 0 : null === (e = eM.directory_entry) || void 0 === e ? void 0 : e.carousel_items) && void 0 !== n ? n : []).map(eT).filter(U.lm)) && void 0 !== i ? i : [];
 }, [eM]),
 eJ = a.useCallback((e, n) => {
   if (e.type === ep.s9s.IMG) {
@@ -356,22 +356,22 @@ e0 = a.useCallback(e => (0, t.jsxs)(g.Menu, {
         action: e$
       })
     }),
-    null != eF ? (0, t.jsx)(g.MenuGroup, {
-      children: eF
+    null != eU ? (0, t.jsx)(g.MenuGroup, {
+      children: eU
     }) : null
   ]
 }), [
-  eF,
+  eU,
   e$
 ]),
 [e1, e6] = (0, x.Z)(!1, 1000),
-e8 = a.useCallback(() => {
+e5 = a.useCallback(() => {
   if (null != eM)
     G.default.track(ep.rMx.APP_SHARE_BUTTON_CLICKED, {
       source: 'product_page',
       application_id: eM.id,
       guild_id: f
-    }), (0, U.JG)(eb(eM.id)), e6(!0);
+    }), (0, F.JG)(eb(eM.id)), e6(!0);
 }, [
   eM,
   e6,
@@ -388,7 +388,7 @@ if (E && 'true' === e.searchParams.get(ex)) {
 E,
 eW
   ]);
-  let e5 = a.useCallback(() => {
+  let e8 = a.useCallback(() => {
   null != eM && (E ? eW('product_page') : (G.default.track(ep.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
     application_id: p,
     guild_id: f,
@@ -412,8 +412,8 @@ eW
   groupListingId: null == eM ? void 0 : eM.primary_sku_id,
   guildId: f
 }),
-e9 = (null == eM ? void 0 : eM.id) === em.g,
-[e4, e2] = a.useState(!1),
+e4 = (null == eM ? void 0 : eM.id) === em.g,
+[e9, e2] = a.useState(!1),
 [e7, ne] = a.useState(!1),
 [nn, ni] = a.useState(!0),
 nt = e => {
@@ -458,7 +458,7 @@ p
               children: r
             })
           }),
-          (e4 || e7) && (0, t.jsx)(eR, {
+          (e9 || e7) && (0, t.jsx)(eR, {
             isViewAll: e7,
             onToggle: () => {
               ne(e => !e);
@@ -541,7 +541,7 @@ p
       break;
     }
     case e_.ApplicationDirectoryProfileSections.STORE:
-      no && null != p && e.push((0, t.jsx)(er.U, {
+      no && null != p && e.push((0, t.jsx)(er.M, {
         appId: p,
         guildId: null != f ? f : void 0
       }));
@@ -591,7 +591,7 @@ p
   eM,
   eL,
   e7,
-  e4,
+  e9,
   eq,
   ey,
   eJ,
@@ -656,7 +656,7 @@ loading: eN === V.M.FETCHING,
 children: [
   (0, t.jsx)(eS, {
     app: eM,
-    iconSrc: eU
+    iconSrc: eF
   }),
   (0, t.jsxs)('div', {
     className: ef.__invalid_page,
@@ -671,7 +671,7 @@ children: [
                 className: ef.headerIcon,
                 alt: '',
                 'aria-hidden': !0,
-                src: eU,
+                src: eF,
                 width: ev,
                 height: ev
               }),
@@ -707,7 +707,7 @@ children: [
                           src: i(744050)
                         })
                       }),
-                      e9 && (0, t.jsx)(en.Z, {
+                      e4 && (0, t.jsx)(en.Z, {
                         className: ef.partnerBadge
                       })
                     ]
@@ -716,13 +716,13 @@ children: [
                     className: ef.buttons,
                     children: [
                       (0, t.jsx)(g.Button, {
-                        onClick: e8,
+                        onClick: e5,
                         color: g.Button.Colors.PRIMARY,
                         children: e1 ? eI.Z.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL : eI.Z.Messages.APP_DIRECTORY_PROFILE_SHARE_BUTTON
                       }),
                       (0, t.jsx)(g.Button, {
                         color: g.Button.Colors.BRAND,
-                        onClick: e5,
+                        onClick: e8,
                         disabled: !eY,
                         children: eI.Z.Messages.APPLICATION_ADD_BUTTON
                       }),

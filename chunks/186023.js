@@ -3,7 +3,7 @@ var r = n(735250),
   i = n(470079),
   a = n(481060),
   s = n(367907),
-  o = n(153124),
+  o = n(313201),
   l = n(82554),
   u = n(185625),
   c = n(255514),
@@ -23,13 +23,13 @@ nodes: T,
 root_node_id: g,
 success_node_id: S,
 fail_node_id: A
-  } = n, [N, v] = i.useState(g), [O, R] = i.useState(void 0), [C, y] = i.useState(void 0), [D, L] = i.useState([]), [b, M] = i.useState(void 0), P = e => {
+  } = n, [N, v] = i.useState(g), [O, R] = i.useState(void 0), [C, y] = i.useState(void 0), [D, L] = i.useState([]), [b, M] = i.useState(void 0), [P, U] = i.useState(void 0), w = e => {
 var n;
 let {
   destination: r
 } = e, [, i] = r, a = T[i];
 if (a.elements.some(e => 'skip' === e.type) && (null === (n = a.button) || void 0 === n ? void 0 : n.type) === 'next')
-  return P({
+  return w({
     ...e,
     destination: [
       '',
@@ -50,7 +50,7 @@ if (L([
   });
 }
 v(i);
-  }, U = async e => {
+  }, x = async e => {
 var r;
 let i = m ? await (0, u.ZD)(n, t, [
     ...D,
@@ -60,8 +60,8 @@ let i = m ? await (0, u.ZD)(n, t, [
     e
   ], p),
   a = null == i ? void 0 : null === (r = i.body) || void 0 === r ? void 0 : r.report_id;
-null != a && M(a), null == f || f(a);
-  }, w = () => {
+null != a && M(a), U(T[e.nodeRef].report_type), null == f || f(a);
+  }, G = () => {
 var e, n;
 if (D.length < 1)
   return;
@@ -79,7 +79,7 @@ if (t.name === l.b.MESSAGE || t.name === l.b.FIRST_DM) {
   });
 }
 R(null == i ? void 0 : null === (e = i.multiSelect) || void 0 === e ? void 0 : e.state), y(null == i ? void 0 : i.textInput), v(a), L(r), null == h || h('..');
-  }, x = i.useMemo(() => {
+  }, k = i.useMemo(() => {
 let e = [],
   t = [];
 for (let a in T) {
@@ -117,22 +117,23 @@ children: (0, r.jsx)(a.Slides, {
   width: 440,
   activeSlide: N,
   centered: !1,
-  children: x.map(e => (0, r.jsx)(a.Slide, {
+  children: k.map(e => (0, r.jsx)(a.Slide, {
     id: e.id,
     children: (0, r.jsx)('div', {
       className: _.slideContainer,
       children: (0, r.jsx)(c.Z, {
         node: e,
         reportType: t,
+        reportSubType: P,
         history: D,
         onModalClose: E.onClose,
-        onSelectChild: P,
-        onNavigateBack: w,
+        onSelectChild: w,
+        onNavigateBack: G,
         multiSelect: O,
         textInput: C,
         successNodeId: S,
         failNodeId: A,
-        onSubmit: U,
+        onSubmit: x,
         reportId: b
       })
     })

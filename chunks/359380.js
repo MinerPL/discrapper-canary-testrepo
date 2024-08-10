@@ -1,4 +1,8 @@
-t(47120), t(653041);
+t.d(n, {
+  d: function() {
+return m;
+  }
+}), t(47120), t(653041);
 var a = t(735250),
   r = t(470079),
   i = t(481060),
@@ -11,16 +15,16 @@ let u = e => {
   let {
 title: n,
 icon: t,
-traits: o,
-interests: c,
-handleUpdate: u
+availableTraits: o,
+selectedTraits: c,
+onUpdateTraits: u
   } = e, m = r.useCallback(e => {
 let n = new Set(c);
 n.delete(e), u(n);
   }, [
 u,
 c
-  ]), _ = r.useCallback(e => {
+  ]), f = r.useCallback(e => {
 if (c.size === l.c4)
   return;
 let n = new Set(c);
@@ -47,54 +51,115 @@ children: [
         icon: t,
         text: e,
         selected: n,
-        onClick: n ? m : _
+        onClick: n ? m : f
       }, e);
     })
   })
 ]
   });
 };
-n.Z = e => {
+
+function m(e) {
   let {
 guildId: n,
-title: t,
-description: s,
-handleUpdate: m,
-progress: _,
-interests: C,
-optional: f = !1,
-hidePreview: h = !1
-  } = e, x = r.useMemo(() => {
+onUpdateTraits: t,
+progress: s,
+availableTraits: m,
+hidePreview: f = !1
+  } = e, _ = r.useMemo(() => {
 let e = [];
 return l.gh.forEach(n => e.push({
   value: n,
   label: n
 })), e;
-  }, []), g = r.useMemo(() => {
+  }, []), C = r.useMemo(() => {
 var e;
-return null !== (e = null != C ? C : null == _ ? void 0 : _.interests) && void 0 !== e ? e : new Set();
+return null !== (e = null != m ? m : null == s ? void 0 : s.interests) && void 0 !== e ? e : new Set();
   }, [
-C,
-null == _ ? void 0 : _.interests
-  ]), p = r.useMemo(() => Array.from(g), [g]), T = r.useMemo(() => p.filter(e => l.gh.has(e)), [p]), E = r.useCallback(e => {
-m(new Set([
-  ...p.filter(e => !l.gh.has(e)),
+m,
+null == s ? void 0 : s.interests
+  ]), h = r.useMemo(() => Array.from(C), [C]), x = r.useMemo(() => h.filter(e => l.gh.has(e)), [h]), g = r.useCallback(e => {
+t(new Set([
+  ...h.filter(e => !l.gh.has(e)),
   ...e
 ]));
   }, [
-m,
-p
-  ]), I = r.useMemo(() => p.filter(e => l.WZ.has(e) || l.gh.has(e)), [p]), b = r.useCallback(e => {
-let n = new Set(g);
-n.delete(e), m(n);
+t,
+h
+  ]), p = r.useMemo(() => h.filter(e => l.WZ.has(e) || l.gh.has(e)), [h]), T = r.useCallback(e => {
+let n = new Set(C);
+n.delete(e), t(n);
   }, [
-m,
-g
+t,
+C
   ]);
+  return (0, a.jsxs)('div', {
+className: d.content,
+children: [
+  (0, a.jsxs)('div', {
+    className: d.mainPanelContainer,
+    children: [
+      (0, a.jsx)(u, {
+        title: c.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_AGE,
+        icon: i.UserIcon,
+        availableTraits: l.jK,
+        selectedTraits: C,
+        onUpdateTraits: t
+      }),
+      (0, a.jsx)(u, {
+        title: c.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_IDENTITY,
+        icon: i.UserIcon,
+        availableTraits: l.CT,
+        selectedTraits: C,
+        onUpdateTraits: t
+      }),
+      (0, a.jsx)(i.Text, {
+        className: d.interestsCategoryTitle,
+        variant: 'text-xs/semibold',
+        color: 'text-muted',
+        children: c.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_LANGUAGE
+      }),
+      (0, a.jsx)('div', {
+        className: d.languageSelect,
+        children: (0, a.jsx)(i.SearchableSelect, {
+          wrapperClassName: d.input,
+          options: _,
+          value: x,
+          onChange: g,
+          placeholder: c.Z.Messages.CLAN_SETUP_LANGUAGE_PLACEHOLDER,
+          multi: !0
+        })
+      })
+    ]
+  }),
+  (0, a.jsx)('div', {
+    className: d.fixedWidthSidebar,
+    children: null != s && h.length > 0 && !f && (0, a.jsx)(o.Z, {
+      guildId: n,
+      progress: s,
+      traitsToHighlight: p,
+      maskDescription: !0,
+      onTraitClick: T
+    })
+  })
+]
+  });
+}
+n.Z = e => {
+  let {
+guildId: n,
+title: t,
+description: r,
+onUpdateTraits: s,
+progress: o,
+traits: l,
+optional: u = !1,
+hidePreview: f = !1
+  } = e;
   return (0, a.jsxs)('div', {
 className: d.slideContent,
 children: [
-  f && (0, a.jsx)(i.Text, {
+  u && (0, a.jsx)(i.Text, {
     variant: 'text-sm/medium',
     color: 'header-secondary',
     className: d.optionalTag,
@@ -109,58 +174,14 @@ children: [
     variant: 'text-md/normal',
     color: 'header-secondary',
     className: d.subtitle,
-    children: s
+    children: r
   }),
-  (0, a.jsxs)('div', {
-    className: d.content,
-    children: [
-      (0, a.jsxs)('div', {
-        className: d.mainPanelContainer,
-        children: [
-          (0, a.jsx)(u, {
-            title: c.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_AGE,
-            icon: i.HourglassIcon,
-            traits: l.jK,
-            interests: g,
-            handleUpdate: m
-          }),
-          (0, a.jsx)(u, {
-            title: c.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_IDENTITY,
-            icon: i.UserIcon,
-            traits: l.CT,
-            interests: g,
-            handleUpdate: m
-          }),
-          (0, a.jsx)(i.Text, {
-            className: d.interestsCategoryTitle,
-            variant: 'text-xs/semibold',
-            color: 'text-muted',
-            children: c.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_LANGUAGE
-          }),
-          (0, a.jsx)('div', {
-            className: d.languageSelect,
-            children: (0, a.jsx)(i.SearchableSelect, {
-              wrapperClassName: d.input,
-              options: x,
-              value: T,
-              onChange: E,
-              placeholder: c.Z.Messages.CLAN_SETUP_LANGUAGE_PLACEHOLDER,
-              multi: !0
-            })
-          })
-        ]
-      }),
-      (0, a.jsx)('div', {
-        className: d.fixedWidthSidebar,
-        children: null != _ && p.length > 0 && !h && (0, a.jsx)(o.Z, {
-          guildId: n,
-          progress: _,
-          traitsToHighlight: I,
-          maskDescription: !0,
-          onTraitClick: b
-        })
-      })
-    ]
+  (0, a.jsx)(m, {
+    guildId: n,
+    onUpdateTraits: s,
+    progress: o,
+    availableTraits: l,
+    hidePreview: f
   })
 ]
   });

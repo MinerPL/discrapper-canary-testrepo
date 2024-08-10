@@ -80,7 +80,7 @@ children: [
     children: (0, i.jsx)(r.Clickable, {
       className: Z.closeAction,
       onClick: a,
-      children: (0, i.jsx)(r.CloseSmallIcon, {
+      children: (0, i.jsx)(r.XSmallIcon, {
         size: 'md',
         color: 'currentColor'
       })

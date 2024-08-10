@@ -14,7 +14,7 @@ role: t
   return (0, i.yE)(t.flags, l.aO5.IN_PROMPT) ? (0, r.F)(t) ? (0, s.jsxs)('div', {
 className: c.notice,
 children: [
-  (0, s.jsx)(a.CircleExclamationPointIcon, {
+  (0, s.jsx)(a.CircleWarningIcon, {
     size: 'custom',
     width: 20,
     height: 20,
@@ -29,7 +29,7 @@ children: [
   }) : (0, s.jsxs)('div', {
 className: c.notice,
 children: [
-  (0, s.jsx)(a.CircleExclamationPointIcon, {
+  (0, s.jsx)(a.CircleWarningIcon, {
     size: 'custom',
     width: 20,
     height: 20,

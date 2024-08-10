@@ -60,7 +60,7 @@ return null;
   return (!G && V.push((0, a.jsx)(f.Z, {
 channel: k
   }, 'notifications')), V.push((0, a.jsx)(x.ZP.Icon, {
-icon: t.CloseSmallIcon,
+icon: t.XSmallIcon,
 tooltip: R.Z.Messages.CLOSE,
 onClick: () => v.Z.closeChannelSidebar(B)
   }, 'close')), !k.isNSFW() || O && D) ? (0, a.jsxs)(a.Fragment, {

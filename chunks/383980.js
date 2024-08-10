@@ -71,6 +71,7 @@ n.r(e.exports = {
   avatarContainer: 'avatarContainer_a25714',
   avatar: 'avatar_a25714',
   newBadge: 'newBadge_a25714 eyebrow_a25714',
+  marketingButtonBackground: 'marketingButtonBackground_a25714',
   marketingButtonBackgroundImage: 'marketingButtonBackgroundImage_a25714',
   marketingButtonImage: 'marketingButtonImage_a25714',
   marketingButtonImageHovered: 'marketingButtonImageHovered_a25714',

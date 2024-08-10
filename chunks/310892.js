@@ -9,10 +9,10 @@ return _;
 var i = n(735250);
 n(470079);
 var a = n(481060),
-  s = n(174609),
-  l = n(98278),
-  r = n(790527),
-  o = n(810090),
+  s = n(70097),
+  l = n(174609),
+  r = n(98278),
+  o = n(790527),
   c = n(626135),
   u = n(981631),
   d = n(689938),
@@ -26,13 +26,13 @@ analytics: n,
 ...a
   } = e, m = d.Z.Messages.VOICE_CHANNEL_EFFECTS_UPSELL_BODY_2.format({
 onPressMore: function() {
-  (0, s.Z)(), t(), c.default.track(u.rMx.PREMIUM_PROMOTION_OPENED, {
+  (0, l.Z)(), t(), c.default.track(u.rMx.PREMIUM_PROMOTION_OPENED, {
     location_section: u.jXE.VOICE_CHANNEL_EFFECTS_UPSELL_MODAL,
     location_object: u.qAy.NAVIGATION_LINK
-  }), (0, l.z)();
+  }), (0, r.z)();
 }
   });
-  return (0, i.jsx)(r.Z, {
+  return (0, i.jsx)(o.Z, {
 title: d.Z.Messages.VOICE_CHANNEL_EFFECTS_UPSELL_HEADER_2,
 glowUp: m,
 body: m,
@@ -48,8 +48,8 @@ analyticsSource: {
   section: n.section
 },
 onClose: t,
-onSubscribeClick: s.Z,
-artElement: (0, i.jsx)(o.Z, {
+onSubscribeClick: l.Z,
+artElement: (0, i.jsx)(s.Z, {
   className: h.video,
   src: p,
   loop: !0,

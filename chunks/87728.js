@@ -6,12 +6,11 @@ return a;
 var i = n(470079);
 
 function a() {
-  var e;
-  let [t, n] = i.useState((e = window.innerWidth < 1132, e));
+  let [e, t] = i.useState(window.innerWidth < 1132);
   return i.useEffect(() => {
 function e() {
-  n(window.innerWidth < 1132);
+  t(window.innerWidth < 1132);
 }
 return e(), window.addEventListener('resize', e), () => window.removeEventListener('resize', e);
-  }, [n]), t;
+  }, [t]), e;
 }

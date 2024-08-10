@@ -9,8 +9,8 @@ var i, a, s = n(735250),
   _ = n(963202),
   h = n(353093),
   E = n(605236),
-  I = n(931515),
-  m = n(807933),
+  m = n(931515),
+  I = n(807933),
   g = n(702646),
   p = n(207796),
   T = n(543550),
@@ -36,7 +36,7 @@ let {
   config: N,
   delay: 500,
   onRest: () => a(!1)
-}), I = (0, p.GN)(e => e.userUpsellScreen, o.Z), A = (0, p.GN)(e => e.started, o.Z), {
+}), m = (0, p.GN)(e => e.userUpsellScreen, o.Z), A = (0, p.GN)(e => e.started, o.Z), {
   guilds: v
 } = (0, _.C3)({
   location: 'ClanDiscoveryAdminContainer',
@@ -51,7 +51,7 @@ switch (r.useEffect(() => {
     });
   }, [O]), r.useEffect(() => {
     let e = v.length > 0;
-    if (e && !L && I === p.o2.USER_UPSELL) {
+    if (e && !L && m === p.o2.USER_UPSELL) {
       (0, p.fH)(p.v0.ADMIN_UPSELL);
       return;
     }
@@ -69,7 +69,7 @@ switch (r.useEffect(() => {
     A,
     L,
     n,
-    I
+    m
   ]), n) {
   case p.v0.ADMIN_UPSELL:
     return (0, s.jsx)(T.$, {});
@@ -79,6 +79,7 @@ switch (r.useEffect(() => {
   case p.v0.GAMES:
   case p.v0.PLAYSTYLE:
   case p.v0.TRAITS:
+  case p.v0.PREFERENCES:
   case p.v0.SAVED_GUILDS:
     return (0, s.jsxs)('div', {
       className: C.discoveryContainer,
@@ -118,7 +119,7 @@ switch (r.useEffect(() => {
         }),
         (0, s.jsx)('div', {
           className: C.selectors,
-          children: (0, s.jsx)(m.Z, {
+          children: (0, s.jsx)(I.Z, {
             mode: n
           })
         })
@@ -129,7 +130,7 @@ switch (r.useEffect(() => {
 t.Z = r.memo(function() {
   let {
 loading: e
-  } = (0, I.LE)(), {
+  } = (0, m.LE)(), {
 ref: t,
 width: n
   } = (0, u.Z)();

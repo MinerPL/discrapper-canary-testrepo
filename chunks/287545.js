@@ -239,10 +239,10 @@ function Q(e) {
 }
 class X extends c.Z {
   _initialize() {
-g.Z.addChangeListener(this.handleSelectedChannelUpdate), N.S.subscribe(k.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease), l.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_FAIL', this.handleActivityLaunchFail), l.Z.subscribe('EMBEDDED_ACTIVITY_OPEN', Y), l.Z.subscribe('EMBEDDED_ACTIVITY_CLOSE', j), l.Z.subscribe('EMBEDDED_ACTIVITY_UPDATE', W), l.Z.subscribe('EMBEDDED_ACTIVITY_UPDATE_V2', K), l.Z.subscribe('EMBEDDED_ACTIVITY_DEFERRED_OPEN', this.handleDeferredOpen), l.Z.subscribe('RPC_APP_DISCONNECTED', this.handleRPCDisconnect), l.Z.subscribe('MEDIA_SESSION_JOINED', q), l.Z.subscribe('CALL_DELETE', this.handleCallDelete), l.Z.subscribe('RTC_CONNECTION_STATE', this.handleRTCConnectionState), l.Z.subscribe('GUILD_DELETE', this.handleGuildDelete), l.Z.subscribe('CHANNEL_DELETE', this.handleChannelDelete);
+g.Z.addChangeListener(this.handleSelectedChannelUpdate), N.S.subscribe(k.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease), l.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_FAIL', this.handleActivityLaunchFail), l.Z.subscribe('EMBEDDED_ACTIVITY_OPEN', Y), l.Z.subscribe('EMBEDDED_ACTIVITY_CLOSE', j), l.Z.subscribe('EMBEDDED_ACTIVITY_UPDATE', W), l.Z.subscribe('EMBEDDED_ACTIVITY_UPDATE_V2', K), l.Z.subscribe('EMBEDDED_ACTIVITY_DEFERRED_OPEN', this.handleDeferredOpen), l.Z.subscribe('RPC_APP_DISCONNECTED', this.handleRPCDisconnect), l.Z.subscribe('MEDIA_SESSION_JOINED', q), l.Z.subscribe('CALL_DELETE', this.handleCallDelete), l.Z.subscribe('RTC_CONNECTION_STATE', this.handleRTCConnectionState), l.Z.subscribe('GUILD_DELETE', this.handleGuildDelete), l.Z.subscribe('CHANNEL_DELETE', this.handleChannelDelete), l.Z.subscribe('CONNECTION_INTERRUPTED', this.handleConnectionInterrupted);
   }
   _terminate() {
-g.Z.removeChangeListener(this.handleSelectedChannelUpdate), N.S.unsubscribe(k.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease), l.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_FAIL', this.handleActivityLaunchFail), l.Z.unsubscribe('EMBEDDED_ACTIVITY_OPEN', Y), l.Z.unsubscribe('EMBEDDED_ACTIVITY_CLOSE', j), l.Z.unsubscribe('EMBEDDED_ACTIVITY_UPDATE', W), l.Z.unsubscribe('EMBEDDED_ACTIVITY_UPDATE_V2', K), l.Z.unsubscribe('EMBEDDED_ACTIVITY_DEFERRED_OPEN', this.handleDeferredOpen), l.Z.unsubscribe('RPC_APP_DISCONNECTED', this.handleRPCDisconnect), l.Z.unsubscribe('MEDIA_SESSION_JOINED', q), l.Z.unsubscribe('CALL_DELETE', this.handleCallDelete), l.Z.unsubscribe('RTC_CONNECTION_STATE', this.handleRTCConnectionState), l.Z.unsubscribe('GUILD_DELETE', this.handleGuildDelete), l.Z.unsubscribe('CHANNEL_DELETE', this.handleChannelDelete);
+g.Z.removeChangeListener(this.handleSelectedChannelUpdate), N.S.unsubscribe(k.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease), l.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_FAIL', this.handleActivityLaunchFail), l.Z.unsubscribe('EMBEDDED_ACTIVITY_OPEN', Y), l.Z.unsubscribe('EMBEDDED_ACTIVITY_CLOSE', j), l.Z.unsubscribe('EMBEDDED_ACTIVITY_UPDATE', W), l.Z.unsubscribe('EMBEDDED_ACTIVITY_UPDATE_V2', K), l.Z.unsubscribe('EMBEDDED_ACTIVITY_DEFERRED_OPEN', this.handleDeferredOpen), l.Z.unsubscribe('RPC_APP_DISCONNECTED', this.handleRPCDisconnect), l.Z.unsubscribe('MEDIA_SESSION_JOINED', q), l.Z.unsubscribe('CALL_DELETE', this.handleCallDelete), l.Z.unsubscribe('RTC_CONNECTION_STATE', this.handleRTCConnectionState), l.Z.unsubscribe('GUILD_DELETE', this.handleGuildDelete), l.Z.unsubscribe('CHANNEL_DELETE', this.handleChannelDelete), l.Z.unsubscribe('CONNECTION_INTERRUPTED', this.handleConnectionInterrupted);
   }
   constructor(...e) {
 super(...e), F(this, 'handleSelectedChannelUpdate', () => {
@@ -424,6 +424,17 @@ super(...e), F(this, 'handleSelectedChannelUpdate', () => {
   null != n && this.leaveActivity({
     channelId: t.id,
     applicationId: n.applicationId
+  });
+}), F(this, 'handleConnectionInterrupted', e => {
+  e.code === k.$VG.CLOSE_ABNORMAL && y.ZP.getSelfEmbeddedActivities().forEach(e => {
+    let {
+      channelId: t,
+      applicationId: n
+    } = e;
+    this.leaveActivity({
+      channelId: t,
+      applicationId: n
+    });
   });
 });
   }

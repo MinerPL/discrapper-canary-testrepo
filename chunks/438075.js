@@ -8,8 +8,8 @@ return r;
 });
 var i = n(735250);
 n(470079);
-var s = n(275344),
-  a = n(938353);
+var a = n(275344),
+  s = n(938353);
 
 function r(e) {
   let {
@@ -29,9 +29,9 @@ renderSuppressEmbeds: I,
 forceAddReactions: m,
 className: T
   } = e;
-  return u ? null : (0, i.jsx)(s.Z, {
+  return u ? null : (0, i.jsx)(a.Z, {
 message: t,
-children: (0, i.jsx)(a.ZP, {
+children: (0, i.jsx)(s.ZP, {
   className: T,
   isInteracting: c,
   message: t,
@@ -51,19 +51,21 @@ children: (0, i.jsx)(a.ZP, {
 function l(e, t) {
   let {
 message: n,
-channel: s,
+channel: a,
 compact: r = !1,
 renderThreadAccessory: l,
 disableReactionCreates: o,
-disableReactionUpdates: c
+disableReactionUpdates: c,
+isSearchResult: u
   } = e;
-  return (0, i.jsx)(a.$p, {
+  return (0, i.jsx)(s.$p, {
 message: n,
-channel: s,
+channel: a,
 compact: r,
 hasSpoilerEmbeds: t,
 renderThreadAccessory: l,
 disableReactionCreates: o,
-disableReactionUpdates: c
+disableReactionUpdates: c,
+isSearchResult: u
   });
 }

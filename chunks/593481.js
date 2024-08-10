@@ -82,7 +82,7 @@ return (0, o.jsx)(d.Button, {
   onClick: this.handleDismiss,
   className: p.dismissButton,
   'aria-label': h.Z.Messages.NOTIFICATION_DISMISS,
-  children: (0, o.jsx)(d.CloseSmallIcon, {
+  children: (0, o.jsx)(d.XSmallIcon, {
     size: 'xs',
     color: 'currentColor',
     className: p.dismissIcon

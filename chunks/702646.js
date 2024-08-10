@@ -11,8 +11,8 @@ var i = n(735250),
   _ = n(377171),
   h = n(207796),
   E = n(308083),
-  I = n(689938),
-  m = n(543802);
+  m = n(689938),
+  I = n(543802);
 
 function g(e) {
   let {
@@ -23,13 +23,13 @@ tooltip: l,
 onClick: c,
 isActive: d,
 autoWidth: u = !1
-  } = e, [_, E] = a.useState(!1), [I, g] = a.useState(!1), p = h.GN.getState().mode, T = p === h.v0.GAMES || p === h.v0.PLAYSTYLE || p === h.v0.TRAITS;
+  } = e, [_, E] = a.useState(!1), [m, g] = a.useState(!1), p = h.GN.getState().mode, T = p === h.v0.GAMES || p === h.v0.PLAYSTYLE || p === h.v0.TRAITS;
   a.useEffect(() => {
 T && (E(!1), g(!1));
   }, [T]);
-  let S = d && (I || _),
+  let S = d && (m || _),
 f = a.useMemo(() => null != l ? (0, i.jsxs)(o.Clickable, {
-  className: m.tooltipContentWrapper,
+  className: I.tooltipContentWrapper,
   onClick: c,
   onMouseEnter: () => {
     !T && E(!0);
@@ -39,7 +39,7 @@ f = a.useMemo(() => null != l ? (0, i.jsxs)(o.Clickable, {
   },
   children: [
     (0, i.jsx)('div', {
-      className: m.tooltipHoverBridge
+      className: I.tooltipHoverBridge
     }),
     l
   ]
@@ -50,10 +50,10 @@ f = a.useMemo(() => null != l ? (0, i.jsxs)(o.Clickable, {
 ]),
 C = a.useCallback(e => (0, i.jsxs)(o.Button, {
   ...e,
-  className: r()(m.filterPill, {
-    [m.filterPillActive]: d
+  className: r()(I.filterPill, {
+    [I.filterPillActive]: d
   }),
-  innerClassName: m.filterPillContents,
+  innerClassName: I.filterPillContents,
   look: o.ButtonLooks.OUTLINED,
   color: o.ButtonColors.CUSTOM,
   onClick: c,
@@ -66,7 +66,7 @@ C = a.useCallback(e => (0, i.jsxs)(o.Button, {
   children: [
     t,
     (0, i.jsxs)('div', {
-      className: m.filterPillText,
+      className: I.filterPillText,
       children: [
         (0, i.jsx)(o.Text, {
           variant: 'text-xs/medium',
@@ -74,7 +74,7 @@ C = a.useCallback(e => (0, i.jsxs)(o.Button, {
           children: n
         }),
         null != f && (0, i.jsx)(o.ChevronSmallDownIcon, {
-          className: m.chevron,
+          className: I.chevron,
           color: 'currentColor'
         })
       ]
@@ -95,10 +95,10 @@ shouldShow: S,
 forceOpen: S,
 allowOverflow: !0,
 disableTooltipPointerEvents: !1,
-tooltipClassName: r()(m.filterTooltip, {
-  [m.filterTooltipAutoWidth]: u
+tooltipClassName: r()(I.filterTooltip, {
+  [I.filterTooltipAutoWidth]: u
 }),
-tooltipContentClassName: m.filterTooltipContent,
+tooltipContentClassName: I.filterTooltipContent,
 children: C
   });
 }
@@ -113,19 +113,19 @@ s = null !== (e = (0, d.i)(t)) && void 0 !== e ? e : '',
 r = t.slice(0, 3),
 c = t.length - 3,
 _ = (0, i.jsx)('div', {
-  className: m.gamesTooltip,
+  className: I.gamesTooltip,
   children: r.map((e, t) => (0, i.jsx)(u.Z, {
     applicationId: e,
     otherGamesCount: 2 === t && c > 0 ? c + 1 : void 0
   }, e))
 }),
 E = (0, i.jsx)(o.GameControllerIcon, {
-  className: m.filterPillIcon,
+  className: I.filterPillIcon,
   color: 'currentColor'
 });
   return (0, i.jsx)(g, {
 icon: E,
-text: I.Z.Messages.CLAN_DISCOVERY_GAME_FILTER.format({
+text: m.Z.Messages.CLAN_DISCOVERY_GAME_FILTER.format({
   count: t.length
 }),
 tooltip: _,
@@ -165,16 +165,16 @@ c = null != n ? (0, i.jsxs)(i.Fragment, {
   ]
 }) : null,
 d = (0, i.jsx)(o.DpadIcon, {
-  className: m.filterPillIcon,
+  className: I.filterPillIcon,
   color: 'currentColor'
 });
   return (0, i.jsx)(g, {
 icon: d,
-text: null != s ? s : I.Z.Messages.CLAN_DISCOVERY_ANY_PLAYSTYLE,
+text: null != s ? s : m.Z.Messages.CLAN_DISCOVERY_ANY_PLAYSTYLE,
 tooltip: c,
 onClick: r,
 isActive: null != n,
-ariaLabel: null != s ? s : I.Z.Messages.CLAN_DISCOVERY_ANY_PLAYSTYLE
+ariaLabel: null != s ? s : m.Z.Messages.CLAN_DISCOVERY_ANY_PLAYSTYLE
   });
 }
 
@@ -186,9 +186,9 @@ t = a.useCallback(() => {
   if (null == e)
 return null;
   let n = (0, i.jsx)('div', {
-  className: m.traitsTooltip,
+  className: I.traitsTooltip,
   children: e.map(e => (0, i.jsx)('div', {
-    className: m.trait,
+    className: I.trait,
     children: (0, i.jsx)(o.Text, {
       variant: 'text-xs/medium',
       color: 'none',
@@ -197,12 +197,12 @@ return null;
   }, e))
 }),
 s = (0, i.jsx)(o.TagIcon, {
-  className: m.filterPillIcon,
+  className: I.filterPillIcon,
   color: 'currentColor'
 });
   return (0, i.jsx)(g, {
 icon: s,
-text: I.Z.Messages.CLAN_DISCOVERY_PREFERENCES_FILTER,
+text: m.Z.Messages.CLAN_DISCOVERY_PREFERENCES_FILTER,
 tooltip: n,
 onClick: t,
 isActive: e.length > 0,
@@ -219,19 +219,19 @@ location: 'clan_discovery_add_clan',
 includeConverted: !1
   });
   return e ? (0, i.jsxs)(o.Clickable, {
-className: r()(m.buttonPill),
+className: r()(I.buttonPill),
 onClick: () => (0, h.fH)(h.v0.ADMIN_UPSELL),
 children: [
   (0, i.jsx)(o.PlusSmallIcon, {
-    className: m.filterPillIcon,
+    className: I.filterPillIcon,
     color: 'currentColor'
   }),
   (0, i.jsx)('div', {
-    className: m.filterPillText,
+    className: I.filterPillText,
     children: (0, i.jsx)(o.Text, {
       variant: 'text-xs/medium',
       color: 'none',
-      children: I.Z.Messages.CLAN_DISCOVERY_ADD_CLAN
+      children: m.Z.Messages.CLAN_DISCOVERY_ADD_CLAN
     })
   })
 ]
@@ -249,16 +249,16 @@ n = a.useCallback(() => {
   (0, h.fH)(h.v0.SAVED_GUILDS, !0);
 }, [e]),
 s = (0, i.jsx)(o.HeartIcon, {
-  className: m.filterPillIcon,
+  className: I.filterPillIcon,
   color: 'currentColor'
 }),
 r = (0, i.jsxs)('div', {
-  className: m.savedInnerContainer,
+  className: I.savedInnerContainer,
   children: [
-    I.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS,
+    m.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS,
     t.length > 0 ? (0, i.jsx)(o.NumberBadge, {
       count: t.length,
-      color: _.Z.ICON_MUTED
+      color: _.Z.BG_MOD_SUBTLE
     }) : null
   ]
 });
@@ -267,20 +267,62 @@ icon: s,
 text: r,
 onClick: n,
 isActive: e === h.v0.SAVED_GUILDS,
-ariaLabel: I.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS,
+ariaLabel: m.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS,
 autoWidth: !0
   });
 }
 
-function N(e) {
+function N() {
+  let e = (0, h.GN)(e => e.mode, l.Z),
+{
+  selectedGames: t,
+  selectedPlaystyle: n,
+  selectedTraits: s
+} = (0, h.GN)(e => ({
+  selectedGames: e.selectedGames,
+  selectedPlaystyle: e.selectedPlaystyle,
+  selectedTraits: e.selectedTraits
+})),
+r = t.length + (null != n ? 1 : 0) + s.length,
+c = a.useCallback(() => {
+  if (e === h.v0.PREFERENCES) {
+    (0, h.fH)(h.v0.DISCOVERY);
+    return;
+  }
+  (0, h.fH)(h.v0.PREFERENCES);
+}, [e]),
+d = (0, i.jsxs)('div', {
+  className: I.savedInnerContainer,
+  children: [
+    m.Z.Messages.CLAN_DISCOVERY_PREFERENCES,
+    r > 0 ? (0, i.jsx)(o.NumberBadge, {
+      count: r,
+      color: _.Z.BG_MOD_SUBTLE
+    }) : null
+  ]
+});
+  return (0, i.jsx)(g, {
+icon: (0, i.jsx)(o.FiltersHorizontalIcon, {
+  className: I.filterPillIcon,
+  color: 'currentColor'
+}),
+text: d,
+onClick: c,
+isActive: r > 0,
+ariaLabel: m.Z.Messages.CLAN_DISCOVERY_PREFERENCES,
+autoWidth: !0
+  });
+}
+
+function A(e) {
   let {
 title: t
   } = e;
   return null == t ? null : (0, i.jsxs)('div', {
-className: m.backToDiscovery,
+className: I.backToDiscovery,
 children: [
   (0, i.jsx)(o.Clickable, {
-    className: m.backArrow,
+    className: I.backArrow,
     onClick: () => (0, h.fH)(h.v0.DISCOVERY),
     children: (0, i.jsx)(o.ArrowLargeLeftIcon, {
       color: 'currentColor'
@@ -295,21 +337,48 @@ children: [
   });
 }
 
-function A(e) {
+function v(e) {
   let {
 className: t
   } = e;
   return (0, i.jsxs)('div', {
-className: r()(m.toolbar, t),
+className: r()(I.toolbar, t),
 children: [
   (0, i.jsx)('div', {
-    className: m.addClan,
-    children: (0, i.jsx)(N, {
-      title: I.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS
+    className: I.addClan,
+    children: (0, i.jsx)(A, {
+      title: m.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS
     })
   }),
   (0, i.jsx)('div', {
-    className: m.actions
+    className: I.actions
+  })
+]
+  });
+}
+
+function Z(e) {
+  let {
+className: t
+  } = e;
+  return (0, h.GN)(e => e.mode, l.Z) === h.v0.SAVED_GUILDS ? (0, i.jsx)(v, {
+className: t
+  }) : (0, i.jsxs)('div', {
+className: r()(I.toolbar, t),
+children: [
+  (0, i.jsx)('div', {
+    className: I.addClan,
+    children: (0, i.jsx)(f, {})
+  }),
+  (0, i.jsx)('div', {
+    className: I.preferences
+  }),
+  (0, i.jsxs)('div', {
+    className: I.actions,
+    children: [
+      (0, i.jsx)(N, {}),
+      (0, i.jsx)(C, {})
+    ]
   })
 ]
   });
@@ -317,18 +386,20 @@ children: [
 t.Z = function(e) {
   let {
 className: t
-  } = e, n = (0, h.GN)(e => e.mode, l.Z), a = (0, c.iN)('discovery_toolbar');
-  return n === h.v0.SAVED_GUILDS ? (0, i.jsx)(A, {
+  } = e, n = (0, h.GN)(e => e.mode, l.Z);
+  return (0, c.iN)('discovery_toolbar') ? (0, i.jsx)(Z, {
+className: t
+  }) : n === h.v0.SAVED_GUILDS ? (0, i.jsx)(v, {
 className: t
   }) : (0, i.jsxs)('div', {
-className: r()(m.toolbar, t),
+className: r()(I.toolbar, t),
 children: [
   (0, i.jsx)('div', {
-    className: m.addClan,
+    className: I.addClan,
     children: (0, i.jsx)(f, {})
   }),
   (0, i.jsxs)('div', {
-    className: m.preferences,
+    className: I.preferences,
     children: [
       (0, i.jsx)(p, {}),
       (0, i.jsx)(T, {}),
@@ -336,8 +407,7 @@ children: [
     ]
   }),
   (0, i.jsx)('div', {
-    className: m.actions,
-    children: a && (0, i.jsx)(C, {})
+    className: I.actions
   })
 ]
   });

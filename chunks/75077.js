@@ -1,12 +1,12 @@
 n.d(t, {
   BS: function() {
-return A;
+return N;
   },
   Op: function() {
 return M;
   },
   gx: function() {
-return N;
+return m;
   },
   k3: function() {
 return g;
@@ -15,10 +15,10 @@ return g;
 return x;
   },
   sP: function() {
-return S;
+return h;
   },
   t2: function() {
-return m;
+return A;
   },
   vZ: function() {
 return p;
@@ -63,7 +63,7 @@ switch (e) {
     return;
 }
   },
-  A = e => {
+  N = e => {
 switch (e) {
   case R.EB.PENDING:
     return C.Z.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION;
@@ -76,7 +76,7 @@ switch (e) {
 }
   };
 
-function m(e, t) {
+function A(e, t) {
   switch (e) {
 case R.EB.PENDING:
   return null != t ? C.Z.Messages.NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE.format({
@@ -90,9 +90,9 @@ default:
   return '';
   }
 }
-let N = (e, t, n) => (0, r.wj)(e) ? t : n,
+let m = (e, t, n) => (0, r.wj)(e) ? t : n,
   f = 'getWhatsNewRow',
-  h = e => {
+  S = e => {
 let {
   cards: t,
   perksCards: n,
@@ -128,16 +128,18 @@ let {
   location: f
 }, {
   autoTrackExposure: !1
-}), R = b();
+}), R = u && !T && !I, C = b();
 return null != n.freeBoost && !0 === a && o({
   card: n.freeBoost
-}), s && R ? (0 === t.length && c(), o({
+}), null != n.shyProject && o({
+  card: n.shyProject
+}), s && C ? (0 === t.length && c(), o({
   card: n.newAppStylesUpdateJune2024
 }), o({
   card: n.serverProfiles
-})) : s && !R && (!u || T || I ? c() : o({
+})) : s && !C && (R || null != n.shyProject ? R && o({
   card: n.referralProgram
-}), o({
+}) : c(), o({
   card: n.newAppStylesUpdateJune2024
 }), o({
   card: n.serverProfiles
@@ -147,7 +149,7 @@ return null != n.freeBoost && !0 === a && o({
   card: n.unlimitedSuperReactions
 }), t;
   },
-  S = e => {
+  h = e => {
 let {
   perksCards: t,
   variant: n,
@@ -186,7 +188,7 @@ switch (n) {
     ]);
     break;
   case T.R0.WHATS_NEW:
-    c = h({
+    c = S({
       cards: c,
       perksCards: t,
       isFullScreen: r,

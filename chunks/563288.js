@@ -9,10 +9,10 @@ var a = n(735250),
   o = n(704215),
   r = n(481060),
   l = n(607070),
-  c = n(434404),
-  d = n(430824),
-  m = n(153124),
-  u = n(810090),
+  c = n(313201),
+  d = n(70097),
+  m = n(434404),
+  u = n(430824),
   _ = n(626135),
   h = n(150340),
   N = n(721012),
@@ -27,7 +27,7 @@ function L(e) {
 guildId: t,
 transitionState: n,
 onClose: L
-  } = e, j = (0, m.Dt)(), v = (0, i.e7)([l.Z], () => l.Z.useReducedMotion), D = (0, i.e7)([d.Z], () => d.Z.getGuild(t));
+  } = e, j = (0, c.Dt)(), v = (0, i.e7)([l.Z], () => l.Z.useReducedMotion), D = (0, i.e7)([u.Z], () => u.Z.getGuild(t));
   return (s.useEffect(() => {
 _.default.track(I.rMx.DISMISSIBLE_CONTENT_SHOWN, {
   type: o.z[o.z.GUILD_ONBOARDING_UPSELL_MODAL_V2],
@@ -94,7 +94,7 @@ children: [
               _.default.track(I.rMx.UPSELL_CLICKED, {
                 type: o.z[o.z.GUILD_ONBOARDING_UPSELL_MODAL_V2],
                 action: 'primary'
-              }), c.Z.open(t, I.pNK.ONBOARDING), L(C.L.PRIMARY), (0, h.G)(D.id, o.z.GUILD_ONBOARDING_UPSELL_MODAL_V2);
+              }), m.Z.open(t, I.pNK.ONBOARDING), L(C.L.PRIMARY), (0, h.G)(D.id, o.z.GUILD_ONBOARDING_UPSELL_MODAL_V2);
             },
             children: f.Z.Messages.CHECK_IT_OUT
           })
@@ -104,7 +104,7 @@ children: [
   }),
   (0, a.jsx)('div', {
     className: g.videoContainer,
-    children: (0, a.jsx)(u.Z, {
+    children: (0, a.jsx)(d.Z, {
       className: g.video,
       loop: !v,
       autoPlay: !v,

@@ -28,7 +28,7 @@ children: [
       size: 'md',
       color: 'currentColor',
       'aria-hidden': !0
-    }) : (0, a.jsx)(u.CloseSmallIcon, {
+    }) : (0, a.jsx)(u.XSmallIcon, {
       size: 'sm',
       color: 'currentColor',
       'aria-hidden': !0

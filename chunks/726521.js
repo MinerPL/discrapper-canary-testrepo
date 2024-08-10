@@ -1,9 +1,12 @@
 n.d(t, {
+  I6: function() {
+return g;
+  },
   J7: function() {
-return A;
+return N;
   },
   JM: function() {
-return g;
+return S;
   },
   WL: function() {
 return m;
@@ -15,7 +18,7 @@ return f;
 return p;
   },
   eE: function() {
-return S;
+return A;
   },
   ic: function() {
 return h;
@@ -30,7 +33,7 @@ return T;
 return E;
   },
   wk: function() {
-return N;
+return v;
   },
   zd: function() {
 return I;
@@ -47,7 +50,7 @@ var r = n(367907),
   d = n(981631);
 
 function _(e, t) {
-  v(l.b.GUILD_DISCOVERY, {
+  O(l.b.GUILD_DISCOVERY, {
 guild_id: e.id
   }), (0, c.m)({
 name: l.b.GUILD_DISCOVERY,
@@ -56,7 +59,7 @@ record: e
 }
 
 function E(e, t) {
-  v(l.b.GUILD_DIRECTORY_ENTRY, {
+  O(l.b.GUILD_DIRECTORY_ENTRY, {
 channel_id: e.channelId,
 guild_id: e.guildId
   }), (0, c.m)({
@@ -66,7 +69,7 @@ record: e
 }
 
 function f(e, t, n) {
-  v(l.b.MESSAGE, {
+  O(l.b.MESSAGE, {
 message_id: e.id,
 channel_id: e.channel_id
   });
@@ -82,7 +85,7 @@ variant: r ? '5_dislike_experiment' : void 0
 function h(e, t) {
   let n = i.Z.getStageInstanceByChannel(e.id);
   if (null != n)
-v(l.b.STAGE_CHANNEL, {
+O(l.b.STAGE_CHANNEL, {
   stage_instance_id: n.id,
   channel_id: n.channel_id,
   guild_id: n.guild_id
@@ -94,7 +97,7 @@ v(l.b.STAGE_CHANNEL, {
 
 function p(e, t) {
   var n;
-  v(l.b.GUILD_SCHEDULED_EVENT, {
+  O(l.b.GUILD_SCHEDULED_EVENT, {
 guild_scheduled_event_id: e.id,
 guild_id: e.guild_id,
 channel_id: null !== (n = e.channel_id) && void 0 !== n ? n : void 0
@@ -105,7 +108,7 @@ record: e
 }
 
 function m(e, t) {
-  v(l.b.FIRST_DM, {
+  O(l.b.FIRST_DM, {
 message_id: e.id,
 channel_id: e.channel_id
   }), (0, c.m)({
@@ -125,7 +128,7 @@ await (0, u.ox)({
 }
 
 function T(e, t, n) {
-  v(l.b.USER, {
+  O(l.b.USER, {
 reported_user_id: e.id
   }), (0, c.m)({
 name: l.b.USER,
@@ -134,27 +137,39 @@ contextualGuildId: t
   }, {}, n, void 0, !1);
 }
 
-function g(e, t) {
+function g(e, t, n) {
+  O(l.b.USER, {
+reported_user_id: e.id
+  }), (0, c.m)({
+name: l.b.USER,
+record: e,
+contextualGuildId: t
+  }, {
+variant: 'staff'
+  }, n, void 0, !1);
+}
+
+function S(e, t) {
   let n = new s.Z({});
-  v(l.B.USER, {
+  O(l.BM.USER, {
 reported_user_id: n.id
   }), (0, c.m)({
-name: l.B.USER,
+name: l.BM.USER,
 record: n
   }, {}, t, void 0, !1, !1, e);
 }
 
-function S(e, t) {
+function A(e, t) {
   let n = new a.ZP({});
-  v(l.B.MESSAGE, {
+  O(l.BM.MESSAGE, {
 message_id: void 0,
 channel_id: void 0
   }), (0, c.m)({
-name: l.B.MESSAGE,
+name: l.BM.MESSAGE,
 record: n
   }, {}, t, void 0, !1, !1, e);
 }
-async function A(e, t, n) {
+async function N(e, t, n) {
   try {
 await (0, u.ox)({
   name: l.b.MESSAGE,
@@ -167,8 +182,8 @@ null == n || n();
   }
 }
 
-function N(e, t) {
-  v(l.b.MESSAGE, {
+function v(e, t) {
+  O(l.b.MESSAGE, {
 message_id: e.id,
 channel_id: e.channel_id
   }), (0, c.m)({
@@ -179,7 +194,7 @@ variant: 'safety_alerts_v1'
   }, t);
 }
 
-function v(e, t) {
+function O(e, t) {
   r.ZP.trackWithMetadata(d.rMx.IAR_MODAL_OPEN, {
 report_type: e,
 ...t

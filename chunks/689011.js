@@ -43,7 +43,7 @@ return n === s.h8.CONFIRM || n === s.h8.BENEFITS ? (0, r.jsx)('div', {}) : (0, r
       className: m.closeContainer,
       onClick: () => t(),
       'aria-label': d.Z.Messages.CLOSE,
-      children: (0, r.jsx)(l.CloseSmallIcon, {
+      children: (0, r.jsx)(l.XSmallIcon, {
         size: 'md',
         color: 'currentColor',
         className: m.closeIcon

@@ -19,7 +19,7 @@ onClose: t
   return (0, r.jsx)(i.Clickable, {
 className: o()(l.closeButtonContainer, n),
 onClick: t,
-children: (0, r.jsx)(i.CloseSmallIcon, {
+children: (0, r.jsx)(i.XSmallIcon, {
   size: 'xs',
   color: 'currentColor',
   className: l.closeButtonIcon

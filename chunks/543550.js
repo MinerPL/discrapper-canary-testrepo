@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(410030),
   h = n(963202),
   E = n(353093),
-  I = n(702646),
-  m = n(207796),
+  m = n(702646),
+  I = n(207796),
   g = n(497189),
   p = n(304231),
   T = n(895068),
@@ -29,18 +29,20 @@ var i = n(735250),
   N = n(813580);
 let A = (e, t) => {
   switch (e) {
-case m.hz.GENSHIN:
+case I.hz.NONE:
+  return t === f.BRd.DARK ? N.genericUpsellBackgroundImageDark : N.genericUpsellBackgroundImageLight;
+case I.hz.GENSHIN:
   return t === f.BRd.DARK ? N.genshinUpsellBackgroundImageDark : N.genshinUpsellBackgroundImageLight;
-case m.hz.VALORANT:
+case I.hz.VALORANT:
   return t === f.BRd.DARK ? N.valorantUpsellBackgroundImageDark : N.valorantUpsellBackgroundImageLight;
   }
 };
 
 function v() {
-  let e = (0, m.GN)(e => e.game, o.Z),
-t = (0, m.GN)(e => e.mode, o.Z),
-n = (0, m.GN)(e => e.userUpsellScreen, o.Z),
-s = (0, m.GN)(e => e.setUserUpsellScreen, o.Z),
+  let e = (0, I.GN)(e => e.game, o.Z),
+t = (0, I.GN)(e => e.mode, o.Z),
+n = (0, I.GN)(e => e.userUpsellScreen, o.Z),
+s = (0, I.GN)(e => e.setUserUpsellScreen, o.Z),
 {
   ref: c,
   width: h
@@ -64,9 +66,11 @@ Z = a.useCallback(e => {
 }, [g]),
 L = a.useMemo(() => {
   switch (e) {
-    case m.hz.GENSHIN:
+    case I.hz.NONE:
+      return C === f.BRd.DARK ? N.genericOnboardingBackgroundImageDark : N.genericOnboardingBackgroundImageLight;
+    case I.hz.GENSHIN:
       return C === f.BRd.DARK ? N.genshinOnboardingBackgroundImageDark : N.genshinOnboardingBackgroundImageLight;
-    case m.hz.VALORANT:
+    case I.hz.VALORANT:
       return C === f.BRd.DARK ? N.valorantOnboardingBackgroundImageDark : N.valorantOnboardingBackgroundImageLight;
   }
 }, [
@@ -74,7 +78,7 @@ L = a.useMemo(() => {
   C
 ]);
   switch (n) {
-case m.o2.USER_UPSELL:
+case I.o2.USER_UPSELL:
   return (0, i.jsxs)('div', {
     ref: c,
     className: N.container,
@@ -84,7 +88,7 @@ case m.o2.USER_UPSELL:
         style: {
           width: h
         },
-        children: (0, i.jsx)(I.Z, {})
+        children: (0, i.jsx)(m.Z, {})
       }),
       (0, i.jsxs)('div', {
         className: N.upsellContainer,
@@ -122,7 +126,7 @@ case m.o2.USER_UPSELL:
       })
     ]
   });
-case m.o2.USER_ONBOARDING:
+case I.o2.USER_ONBOARDING:
   return (0, i.jsx)('div', {
     className: N.container,
     children: (0, i.jsxs)('div', {
@@ -144,7 +148,7 @@ case m.o2.USER_ONBOARDING:
 }
 
 function Z() {
-  let e = (0, m.GN)(e => e.game, o.Z),
+  let e = (0, I.GN)(e => e.game, o.Z),
 {
   guilds: t
 } = (0, h.C3)({
@@ -166,7 +170,7 @@ children: (0, i.jsxs)(c.u2, {
     (0, i.jsxs)('div', {
       className: r()(l, N.adminUpsell),
       children: [
-        (0, i.jsx)('div', {
+        e !== I.hz.NONE && (0, i.jsx)('div', {
           className: N.backgroundImageBlur
         }),
         (0, i.jsx)('div', {
@@ -179,7 +183,8 @@ children: (0, i.jsxs)(c.u2, {
       ]
     }),
     (0, i.jsx)(S.Z, {
-      title: C.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE
+      title: C.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE,
+      className: e === I.hz.NONE ? N.genericPreviewList : void 0
     })
   ]
 })

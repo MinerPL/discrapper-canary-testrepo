@@ -4,10 +4,10 @@ var i = n(735250),
   s = n(120356),
   l = n.n(s),
   r = n(481060),
-  o = n(702346),
-  c = n(492593),
-  u = n(534469),
-  d = n(511010),
+  o = n(492593),
+  c = n(534469),
+  u = n(511010),
+  d = n(834129),
   h = n(981631),
   p = n(689938),
   m = n(985359),
@@ -21,13 +21,13 @@ count: a,
 compact: s,
 collapsedReason: l
   } = e;
-  return (0, i.jsx)(c.Z, {
+  return (0, i.jsx)(o.Z, {
 compact: s,
 role: 'group',
-childrenMessageContent: (0, i.jsx)(o.Z, {
+childrenMessageContent: (0, i.jsx)(d.Z, {
   compact: s,
   className: m.blockedSystemMessage,
-  iconNode: (0, i.jsx)(r.CloseSmallIcon, {
+  iconNode: (0, i.jsx)(r.XSmallIcon, {
     size: 'md',
     color: 'currentColor',
     className: m.blockedIcon
@@ -62,7 +62,7 @@ messages: n,
 channel: s,
 compact: r = !1,
 unreadId: o,
-collapsedReason: c
+collapsedReason: d
   } = e, {
 hasJumpTarget: p = !1
   } = n, [E, g] = a.useState(p), C = a.useCallback(() => g(e => !e), []), I = n.hasUnread ? n.content.length - 1 : n.content.length;
@@ -72,7 +72,7 @@ className: l()({
   [m.expanded]: E
 }),
 children: [
-  n.hasUnread && (!E || (null === (t = n.content[0]) || void 0 === t ? void 0 : t.type) === h.ys_.DIVIDER) ? (0, i.jsx)(d.Z, {
+  n.hasUnread && (!E || (null === (t = n.content[0]) || void 0 === t ? void 0 : t.type) === h.ys_.DIVIDER) ? (0, i.jsx)(u.Z, {
     isUnread: !0,
     id: o
   }, 'divider') : null,
@@ -81,20 +81,20 @@ children: [
     compact: r,
     expanded: E,
     onClick: C,
-    collapsedReason: c
+    collapsedReason: d
   }, 'collapsed-message-item'),
   E ? n.content.map((e, t) => {
     if (e.type === h.ys_.DIVIDER && t > 0) {
       var a, l;
       let e = null !== (l = null === (a = n.content[t + 1]) || void 0 === a ? void 0 : a.isGroupStart) && void 0 !== l && l;
-      return (0, i.jsx)(d.Z, {
+      return (0, i.jsx)(u.Z, {
         isUnread: !0,
         isBeforeGroup: e,
         id: o
       }, 'divider');
     }
     if (e.type === h.ys_.MESSAGE || e.type === h.ys_.THREAD_STARTER_MESSAGE) {
-      let t = e.type === h.ys_.THREAD_STARTER_MESSAGE ? u.Ru : u.ZP;
+      let t = e.type === h.ys_.THREAD_STARTER_MESSAGE ? c.Ru : c.ZP;
       return (0, i.jsx)(t, {
         className: m.__invalid_blocked,
         compact: r,

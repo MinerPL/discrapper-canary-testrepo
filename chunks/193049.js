@@ -255,7 +255,7 @@ children: [
     look: u.Button.Looks.BLANK,
     className: P.closeContainer,
     'aria-label': A.Z.Messages.CLOSE,
-    children: (0, n.jsx)(u.CloseSmallIcon, {
+    children: (0, n.jsx)(u.XSmallIcon, {
       size: 'custom',
       color: 'currentColor',
       width: 15,

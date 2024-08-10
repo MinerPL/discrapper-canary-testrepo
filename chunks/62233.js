@@ -15,11 +15,6 @@ e.exports = {
   hasFooter: 'hasFooter_e5c1dc',
   mosaicItemWithFooter: 'mosaicItemWithFooter_e5c1dc',
   hideOverflow: 'hideOverflow_e5c1dc',
-  hoverButtonGroup: 'hoverButtonGroup_e5c1dc',
-  forceShowHover: 'forceShowHover_e5c1dc',
-  nonMediaMosaicItem: 'nonMediaMosaicItem_e5c1dc',
-  hoverButton: 'hoverButton_e5c1dc',
-  selected: 'selected_e5c1dc',
   removeMosaicItemHoverButton: 'removeMosaicItemHoverButton_e5c1dc',
   downloadHoverButtonIcon: 'downloadHoverButtonIcon_e5c1dc'
 };

@@ -5,7 +5,7 @@ return s;
   Pw: function() {
 return o;
   }
-}), n(945124);
+}), n(724458), n(945124);
 var r = n(116175),
   i = n(308083);
 
@@ -15,8 +15,16 @@ function a(e, t) {
 
 function s(e) {
   let t = (0, r.yf)(),
-n = (0, i.dt)();
-  return {
+n = (0, i.dt)(),
+s = {};
+  return null != e.game_activity && (s = Object.keys(e.game_activity).reduce((t, n) => {
+var r;
+let i = null === (r = e.game_activity) || void 0 === r ? void 0 : r[n];
+return null == i ? t : (t[n] = {
+  level: i.activity_level,
+  score: i.activity_score
+}, t);
+  }, {})), {
 id: e.id,
 name: e.name,
 icon: e.icon_hash,
@@ -38,7 +46,8 @@ branding: {
   primaryColor: a(e.brand_color_primary, n.primary),
   secondaryColor: a(e.brand_color_secondary, n.secondary)
 },
-wildcardDescriptors: e.wildcard_descriptors
+wildcardDescriptors: e.wildcard_descriptors,
+gameActivity: s
   };
 }
 

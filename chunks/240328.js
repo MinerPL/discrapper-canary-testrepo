@@ -35,7 +35,7 @@ onClick: t
 className: v.closeButton,
 onClick: t,
 'aria-label': N.Z.Messages.DISMISS,
-children: (0, r.jsx)(u.CloseSmallIcon, {
+children: (0, r.jsx)(u.XSmallIcon, {
   size: 'sm',
   color: 'currentColor',
   className: v.closeIcon

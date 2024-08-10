@@ -232,7 +232,7 @@ if (null == t ? B.delete(e) : B.set(e, t), null == t || 'CRASHED' === t) {
       }
   });
 }
-z.delete(e), $.info('pid='.concat(e, ' status transition ').concat(null != r ? r : 'DISCONNECTED', ' -> ').concat(null != t ? t : 'DISCONNECTED'), B), F !== (F = Array.from(B.values()).some(e => 'READY' === e)) && U.ZP.setBackgroundThrottling(!F);
+z.delete(e), $.info('pid='.concat(e, ' status transition ').concat(null != r ? r : 'DISCONNECTED', ' -> ').concat(null != t ? t : 'DISCONNECTED'), B), F = Array.from(B.values()).some(e => 'READY' === e);
   }
 }
 async function er(e) {
@@ -679,7 +679,7 @@ let {
 } = e;
 K = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
 let n = new URLSearchParams();
-n.append('build_id', '67a37e2dc8a5774c99c996a4ad49e39b072266d6'), n.append('rpc', String(t)), n.append('rpc_auth_token', K), r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString());
+n.append('build_id', 'e1b3cf48bd2e6d889db081e8fda402a00fd1ca75'), n.append('rpc', String(t)), n.append('rpc_auth_token', K), r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString());
   },
   OVERLAY_CALL_PRIVATE_CHANNEL: function(e) {
 let {

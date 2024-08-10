@@ -10,8 +10,8 @@ var i = n(735250),
   _ = n(981631),
   h = n(689938),
   E = n(247397);
-let I = r().debounce(o.ZP.trackWithMetadata, 500),
-  m = e => {
+let m = r().debounce(o.ZP.trackWithMetadata, 500),
+  I = e => {
 let {
   guild: t,
   title: n,
@@ -19,7 +19,7 @@ let {
   image: r,
   type: d,
   imageMarginX: u,
-  imageMarginTop: m,
+  imageMarginTop: I,
   trackingSource: g,
   undismissable: p,
   onDismissed: T,
@@ -28,7 +28,7 @@ let {
   ctaColor: C
 } = e;
 a.useEffect(() => {
-  I(_.rMx.CHANNEL_NOTICE_VIEWED, {
+  m(_.rMx.CHANNEL_NOTICE_VIEWED, {
     notice_type: d,
     guild_id: t.id
   });
@@ -63,7 +63,7 @@ return (0, i.jsxs)('div', {
       },
       className: E.close,
       'aria-label': h.Z.Messages.DISMISS,
-      children: (0, i.jsx)(l.CloseSmallIcon, {
+      children: (0, i.jsx)(l.XSmallIcon, {
         size: 'md',
         color: 'currentColor',
         className: E.closeIcon
@@ -72,7 +72,7 @@ return (0, i.jsxs)('div', {
     (0, i.jsx)('div', {
       className: E.imageContainer,
       style: {
-        marginTop: ''.concat(m, 'px'),
+        marginTop: ''.concat(I, 'px'),
         marginLeft: A,
         marginRight: A
       },
@@ -106,7 +106,7 @@ showRedesignedChannelNotice: t
   } = (0, d.o)(!0);
   return t ? (0, i.jsx)(u.Z, {
 ...e
-  }) : (0, i.jsx)(m, {
+  }) : (0, i.jsx)(I, {
 ...e
   });
 };

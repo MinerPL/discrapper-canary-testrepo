@@ -59,7 +59,7 @@ onClick: () => {
     ]).then(n.bind(n, 7225));
     return t => (0, r.jsx)(e, {
       appId: _.id,
-      guildId: u,
+      onlySubscribeServerSubForGuildId: u,
       ...t
     });
   });

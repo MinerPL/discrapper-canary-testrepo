@@ -1,15 +1,15 @@
 n.d(t, {
   Z: function() {
-return ef;
+return eC;
   },
   c: function() {
 return eN;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(913527),
-  r = n.n(a),
+  a = n(470079),
+  s = n(913527),
+  r = n.n(s),
   l = n(613828),
   o = n(442837),
   c = n(481060),
@@ -22,47 +22,47 @@ var i = n(735250),
   T = n(287734),
   h = n(205355),
   N = n(558381),
-  C = n(223245),
-  f = n(491428),
+  f = n(223245),
+  C = n(491428),
   p = n(401430),
   g = n(230711),
   S = n(726542),
   A = n(100527),
   R = n(906732),
-  O = n(812206),
-  x = n(391650),
-  M = n(605236),
-  v = n(749277),
-  L = n(492435),
-  Z = n(353926),
-  P = n(506357),
+  x = n(812206),
+  O = n(391650),
+  M = n(600164),
+  v = n(605236),
+  L = n(749277),
+  Z = n(492435),
+  P = n(353926),
+  b = n(506357),
   D = n(36459),
-  b = n(236069),
-  j = n(305325),
-  U = n(281956),
-  y = n(574650),
-  B = n(665302),
-  k = n(434404),
-  G = n(918658),
-  F = n(859428),
-  w = n(963249),
-  V = n(774276),
-  H = n(14335),
-  Y = n(246965),
-  W = n(272008),
-  K = n(523255),
-  z = n(852923),
-  Q = n(592125),
-  q = n(430824),
-  X = n(131951),
-  J = n(19780),
-  $ = n(914010),
-  ee = n(594174),
-  et = n(55563),
-  en = n(695103),
-  ei = n(933429),
-  es = n(285952),
-  ea = n(626135),
+  j = n(236069),
+  U = n(305325),
+  y = n(281956),
+  B = n(574650),
+  k = n(665302),
+  G = n(434404),
+  F = n(918658),
+  w = n(859428),
+  V = n(963249),
+  H = n(774276),
+  Y = n(14335),
+  W = n(246965),
+  K = n(272008),
+  z = n(523255),
+  Q = n(852923),
+  q = n(592125),
+  X = n(430824),
+  J = n(131951),
+  $ = n(19780),
+  ee = n(914010),
+  et = n(594174),
+  en = n(55563),
+  ei = n(695103),
+  ea = n(933429),
+  es = n(626135),
   er = n(63063),
   el = n(72924),
   eo = n(69499),
@@ -111,75 +111,75 @@ function eN(e) {
 untilAtLeast: r()(e)
   } : void 0);
 }
-let eC = 12633 == n.j ? s.memo(function() {
-  var e, t, a;
-  let I = (0, o.e7)([ee.default], () => ee.default.getCurrentUser()),
-A = (0, o.e7)([$.Z], () => $.Z.getGuildId()),
-ec = (0, o.e7)([ei.Z], () => ei.Z.getNotice()),
-eC = (0, o.e7)([q.Z], () => q.Z.getGuild(A)),
+let ef = 12633 == n.j ? a.memo(function() {
+  var e, t, s;
+  let I = (0, o.e7)([et.default], () => et.default.getCurrentUser()),
+A = (0, o.e7)([ee.Z], () => ee.Z.getGuildId()),
+ec = (0, o.e7)([ea.Z], () => ea.Z.getNotice()),
+ef = (0, o.e7)([X.Z], () => X.Z.getGuild(A)),
 {
-  analyticsLocations: ef
+  analyticsLocations: eC
 } = (0, R.ZP)(),
 ep = null == ec ? void 0 : ec.type,
-eg = (0, U.J)(A);
-  s.useEffect(() => {
+eg = (0, y.J)(A);
+  a.useEffect(() => {
 null != ep && ! function(e, t) {
   let n = {
     notice_type: e
   };
-  null != t && (n.guild_id = t), ea.default.track(eu.rMx.APP_NOTICE_VIEWED, n);
+  null != t && (n.guild_id = t), es.default.track(eu.rMx.APP_NOTICE_VIEWED, n);
 }(ep, A);
   }, [
 ep,
 A
-  ]), s.useEffect(() => {
+  ]), a.useEffect(() => {
 if (null != ec && ec.type === eu.kVF.SURVEY && null != ec.metadata) {
   let {
     metadata: e
-  } = ec, t = Z.Z.getUserExperimentDescriptor(e.id);
-  null != t && (0, L.W9)(e.id, t), (async () => {
+  } = ec, t = P.Z.getUserExperimentDescriptor(e.id);
+  null != t && (0, Z.W9)(e.id, t), (async () => {
     var e, t;
-    (null === (e = ec.metadata) || void 0 === e ? void 0 : e.id) != null && await (0, f.g8)(null === (t = ec.metadata) || void 0 === t ? void 0 : t.id);
+    (null === (e = ec.metadata) || void 0 === e ? void 0 : e.id) != null && await (0, C.g8)(null === (t = ec.metadata) || void 0 === t ? void 0 : t.id);
   })();
 }
   }, [ec]);
   let eS = function(e) {
 let {
   enabled: t
-} = (0, V.ZP)(!0, e !== eu.kVF.PREMIUM_TIER_2_TRIAL_ENDING);
-return t || null == e ? null : ei.m[e];
+} = (0, H.ZP)(!0, e !== eu.kVF.PREMIUM_TIER_2_TRIAL_ENDING);
+return t || null == e ? null : ea.m[e];
   }(ep);
   if (null == ec)
 return null;
   if (null != eS)
-return (0, i.jsx)(v.A, {
+return (0, i.jsx)(L.A, {
   dismissibleContent: eS,
   noticeType: ec.type
 });
   let eA = null === (e = ec.metadata) || void 0 === e ? void 0 : e.premiumType;
   switch (ec.type) {
 case eu.kVF.LURKING_GUILD:
-  return (0, i.jsx)(F.Z, {});
+  return (0, i.jsx)(w.Z, {});
 case eu.kVF.PENDING_MEMBER:
-  return (0, i.jsx)(y.Z, {});
+  return (0, i.jsx)(B.Z, {});
 case eu.kVF.INVITED_TO_SPEAK:
-  return (0, i.jsx)(z.Z, {});
+  return (0, i.jsx)(Q.Z, {});
 case eu.kVF.GUILD_RAID_NOTIFICATION:
   let {
     dismissUntil: eR
   } = ec.metadata;
-  return (0, i.jsx)(P.Z, {
+  return (0, i.jsx)(b.Z, {
     onDismiss: () => eN(eR)
   });
 case eu.kVF.WIN32_DEPRECATED_MESSAGE:
   let {
-    dismissUntil: eO
+    dismissUntil: ex
   } = ec.metadata;
   return (0, i.jsxs)(c.Notice, {
     color: c.NoticeColors.WARNING,
     children: [
       (0, i.jsx)(c.NoticeCloseButton, {
-        onClick: () => eN(eO),
+        onClick: () => eN(ex),
         noticeType: eu.kVF.WIN32_DEPRECATED_MESSAGE
       }),
       eI.Z.Messages.WINDOWS_32_BIT_DEPRECATED_WARNING.format({
@@ -189,13 +189,13 @@ case eu.kVF.WIN32_DEPRECATED_MESSAGE:
   });
 case eu.kVF.WIN7_8_DEPRECATED_MESSAGE:
   let {
-    dismissUntil: ex
+    dismissUntil: eO
   } = ec.metadata;
   return (0, i.jsxs)(c.Notice, {
     color: c.NoticeColors.WARNING,
     children: [
       (0, i.jsx)(c.NoticeCloseButton, {
-        onClick: () => eN(ex),
+        onClick: () => eN(eO),
         noticeType: eu.kVF.WIN7_8_DEPRECATED_MESSAGE
       }),
       eI.Z.Messages.WINDOWS_7_8_DEPRECATED_WARNING.format({
@@ -264,8 +264,8 @@ case eu.kVF.VOICE_DISABLED:
       eI.Z.Messages.NOTICE_CONNECTION_CONFLICT,
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         onClick: () => {
-          let e = J.Z.getRemoteDisconnectVoiceChannelId();
-          null != e && null != Q.Z.getChannel(e) && T.default.selectVoiceChannel(e);
+          let e = $.Z.getRemoteDisconnectVoiceChannelId();
+          null != e && null != q.Z.getChannel(e) && T.default.selectVoiceChannel(e);
         },
         noticeType: eu.kVF.VOICE_DISABLED,
         children: eI.Z.Messages.RECONNECT
@@ -285,8 +285,8 @@ case eu.kVF.VOICE_CONNECTED_LAST_SESSION:
       eI.Z.Messages.NOTICE_VOICE_CONNECTED_LAST_SESSION,
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         onClick: () => {
-          let e = J.Z.getLastSessionVoiceChannelId();
-          null != e && null != Q.Z.getChannel(e) && T.default.selectVoiceChannel(e);
+          let e = $.Z.getLastSessionVoiceChannelId();
+          null != e && null != q.Z.getChannel(e) && T.default.selectVoiceChannel(e);
         },
         noticeType: eu.kVF.VOICE_CONNECTED_LAST_SESSION,
         children: eI.Z.Messages.RECONNECT
@@ -328,7 +328,7 @@ case eu.kVF.UNCLAIMED_ACCOUNT:
       eI.Z.Messages.NOTICE_UNCLAIMED_ACCOUNT,
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         noticeType: eu.kVF.UNCLAIMED_ACCOUNT,
-        onClick: () => eg && null != A ? (0, j.hk)(A) : x.j(),
+        onClick: () => eg && null != A ? (0, U.hk)(A) : O.j(),
         children: eI.Z.Messages.CLAIM_ACCOUNT
       })
     ]
@@ -347,7 +347,7 @@ case eu.kVF.UNVERIFIED_ACCOUNT:
               email: null == I ? void 0 : I.email
             }),
             secondaryConfirmText: eI.Z.Messages.CHANGE_EMAIL,
-            onConfirmSecondary: x.j
+            onConfirmSecondary: O.j
           });
         },
         children: eI.Z.Messages.RESEND_EMAIL_SHORT
@@ -372,7 +372,7 @@ case eu.kVF.SCHEDULED_MAINTENANCE:
     ]
   });
 case eu.kVF.NO_INPUT_DETECTED:
-  if (!X.Z.supports(eE.AN.LOOPBACK))
+  if (!J.Z.supports(eE.AN.LOOPBACK))
     return (0, i.jsx)(eT, {});
   return (0, i.jsx)(eh, {});
 case eu.kVF.HARDWARE_MUTE:
@@ -407,7 +407,7 @@ case eu.kVF.STREAMER_MODE:
       }),
       eI.Z.Messages.NOTICE_STREAMER_MODE_TEXT,
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
-        onClick: () => C.Z.setEnabled(!1),
+        onClick: () => f.Z.setEnabled(!1),
         noticeType: eu.kVF.STREAMER_MODE,
         children: eI.Z.Messages.DISABLE
       })
@@ -436,9 +436,9 @@ case eu.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
     return null;
   let {
     skuId: eP,
-      applicationId: eD
-  } = ec.metadata, eb = et.Z.get(eP), ej = O.Z.getApplication(eD);
-  if (null == eb || null == ej)
+      applicationId: eb
+  } = ec.metadata, eD = en.Z.get(eP), ej = x.Z.getApplication(eb);
+  if (null == eD || null == ej)
     return null;
   let eU = {
     page: eu.ZY5.IN_APP
@@ -447,7 +447,7 @@ case eu.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
     color: c.NoticeColors.PREMIUM_TIER_1,
     children: [
       (0, i.jsx)(c.NoticeCloseButton, {
-        onClick: () => _.Z(eb.id),
+        onClick: () => _.Z(eD.id),
         noticeType: eu.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK
       }),
       (0, i.jsx)(c.NitroWheelIcon, {
@@ -457,25 +457,25 @@ case eu.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
       }),
       eI.Z.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_MESSAGE.format({
         applicationName: ej.name,
-        skuName: eb.name
+        skuName: eD.name
       }),
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         noticeType: eu.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK,
         onClick: () => (0, el.S)({
           applicationId: ej.id,
-          skuId: eb.id,
+          skuId: eD.id,
           openPremiumPaymentModal: () => {
-            (0, w.Z)({
+            (0, V.Z)({
               initialPlanId: null,
               subscriptionTier: ed.Si.TIER_2,
-              analyticsLocations: ef,
+              analyticsLocations: eC,
               analyticsObject: eU
             });
           },
-          analyticsLocations: ef,
+          analyticsLocations: eC,
           analyticsLocationObject: eU,
           context: __OVERLAY__ ? eu.IlC.OVERLAY : eu.IlC.APP
-        }).then(() => _.Z(eb.id)),
+        }).then(() => _.Z(eD.id)),
         children: eI.Z.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_BUTTON
       })
     ]
@@ -486,8 +486,8 @@ case eu.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL: {
   let {
     skuId: e,
     applicationId: t
-  } = ec.metadata, n = et.Z.get(e), s = O.Z.getApplication(t);
-  if (null == n || null == s)
+  } = ec.metadata, n = en.Z.get(e), a = x.Z.getApplication(t);
+  if (null == n || null == a)
     return null;
   return (0, i.jsxs)(c.Notice, {
     color: c.NoticeColors.PREMIUM_TIER_1,
@@ -502,7 +502,7 @@ case eu.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL: {
         className: em.premiumIcon
       }),
       eI.Z.Messages.NOTICE_DETECTED_OFF_PLATFORM_NO_PREMIUM_PERK_MESSAGE.format({
-        applicationName: s.name,
+        applicationName: a.name,
         skuName: n.name
       }),
       (0, i.jsx)(c.NoticeButton, {
@@ -527,8 +527,8 @@ case eu.kVF.SURVEY: {
   let {
     key: t,
     prompt: n,
-    cta: s,
-    url: a
+    cta: a,
+    url: s
   } = e;
   return (0, i.jsxs)(c.Notice, {
     color: c.NoticeColors.CUSTOM,
@@ -536,16 +536,16 @@ case eu.kVF.SURVEY: {
       (0, i.jsx)(c.NoticeCloseButton, {
         noticeType: eu.kVF.SURVEY,
         onClick: () => {
-          (0, f.hZ)(t, !0);
+          (0, C.hZ)(t, !0);
         }
       }),
       n,
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         noticeType: eu.kVF.SURVEY,
         onClick: () => {
-          window.open(a, '_blank'), (0, f.hZ)(t, !1);
+          window.open(s, '_blank'), (0, C.hZ)(t, !1);
         },
-        children: s
+        children: a
       })
     ]
   });
@@ -561,15 +561,15 @@ case eu.kVF.SERVER_USAGE_SURVEY:
         }
       }),
       eI.Z.Messages.SERVER_USAGE_SURVEY_BODY.format({
-        guildName: null !== (t = null == eC ? void 0 : eC.name) && void 0 !== t ? t : 'this server'
+        guildName: null !== (t = null == ef ? void 0 : ef.name) && void 0 !== t ? t : 'this server'
       }),
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         noticeType: eu.kVF.SERVER_USAGE_SURVEY,
         onClick: () => {
-          window.open('https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id='.concat(null == I ? void 0 : I.id, '&guild_id=').concat(null == eC ? void 0 : eC.id), '_blank'), eN();
+          window.open('https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id='.concat(null == I ? void 0 : I.id, '&guild_id=').concat(null == ef ? void 0 : ef.id), '_blank'), eN();
         },
         additionalTrackingProps: {
-          guild_id: null == eC ? void 0 : eC.id
+          guild_id: null == ef ? void 0 : ef.id
         },
         children: eI.Z.Messages.SERVER_USAGE_SURVEY_CTA
       })
@@ -656,8 +656,8 @@ case eu.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS:
         onClick: () => eN(),
         noticeType: eu.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS
       }),
-      (0, i.jsxs)(es.Z, {
-        justify: es.Z.Justify.CENTER,
+      (0, i.jsxs)(M.Z, {
+        justify: M.Z.Justify.CENTER,
         children: [
           null != eG ? eI.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS_WITH_NAME.format({
             name: ''.concat(eG),
@@ -678,12 +678,12 @@ case eu.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS:
 case eu.kVF.APPLICATION_TEST_MODE:
   if (null == ec.metadata)
     return null;
-  if (null != en.Z.testModeEmbeddedApplicationId)
+  if (null != ei.Z.testModeEmbeddedApplicationId)
     return (0, i.jsx)(c.Notice, {
       color: c.NoticeColors.WARNING,
-      children: (0, i.jsxs)(es.Z, {
-        justify: es.Z.Justify.CENTER,
-        align: es.Z.Align.CENTER,
+      children: (0, i.jsxs)(M.Z, {
+        justify: M.Z.Justify.CENTER,
+        align: M.Z.Align.CENTER,
         children: [
           (0, i.jsx)('div', {
             children: eI.Z.Messages.NOTICE_EMBEDDED_APPLICATION_TEST_MODE.format({
@@ -699,9 +699,9 @@ case eu.kVF.APPLICATION_TEST_MODE:
     });
   return (0, i.jsx)(c.Notice, {
     color: c.NoticeColors.WARNING,
-    children: (0, i.jsxs)(es.Z, {
-      justify: es.Z.Justify.CENTER,
-      align: es.Z.Align.CENTER,
+    children: (0, i.jsxs)(M.Z, {
+      justify: M.Z.Justify.CENTER,
+      align: M.Z.Align.CENTER,
       children: [
         (0, i.jsx)('div', {
           children: eI.Z.Messages.NOTICE_APPLICATION_TEST_MODE.format({
@@ -732,9 +732,9 @@ case eu.kVF.APPLICATION_TEST_MODE:
     })
   });
 case eu.kVF.OUTBOUND_PROMOTION:
-  return (0, i.jsx)(H.Z, {});
+  return (0, i.jsx)(Y.Z, {});
 case eu.kVF.VIEWING_ROLES:
-  return (0, i.jsx)(G.Z, {});
+  return (0, i.jsx)(F.Z, {});
 case eu.kVF.PREMIUM_UNCANCEL:
   return (0, i.jsxs)(c.Notice, {
     color: eA === ed.p9.TIER_1 ? c.NoticeColors.PREMIUM_TIER_1 : eA === ed.p9.TIER_0 ? c.NoticeColors.PREMIUM_TIER_0 : c.NoticeColors.PREMIUM_TIER_2,
@@ -766,11 +766,11 @@ case eu.kVF.PREMIUM_UNCANCEL:
             let {
               default: e
             } = await Promise.all([
-              n.e('15972'),
+              n.e('52249'),
               n.e('47006'),
               n.e('8016'),
               n.e('68136'),
-              n.e('45423')
+              n.e('14961')
             ]).then(n.bind(n, 561623));
             return t => (0, i.jsx)(e, {
               ...t,
@@ -884,8 +884,8 @@ case eu.kVF.PREMIUM_MISSING_PAYMENT:
     ]
   });
 case eu.kVF.BACK_TO_PREVIOUS_SCREEN:
-  return (0, i.jsx)(B.h, {
-    buttonText: null !== (a = ec.buttonText) && void 0 !== a ? a : eI.Z.Messages.GO_BACK,
+  return (0, i.jsx)(k.h, {
+    buttonText: null !== (s = ec.buttonText) && void 0 !== s ? s : eI.Z.Messages.GO_BACK,
     onGoBack: ec.callback,
     onDismiss: () => eN(),
     showCloseButton: !0
@@ -894,9 +894,9 @@ case eu.kVF.AUTOMOD_QUARANTINED_USER_PROFILE: {
   let e = {
     page: eu.ZY5.IN_APP
   };
-  return (0, i.jsx)(b.Z, {
+  return (0, i.jsx)(j.Z, {
     guildId: A,
-    analyticsLocations: ef,
+    analyticsLocations: eC,
     analyticsLocation: e
   });
 }
@@ -971,7 +971,7 @@ case eu.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION:
         children: eI.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_REMOVE_RESTRICTION
       }),
       null != A ? (0, i.jsx)(c.NoticeButton, {
-        onClick: () => k.Z.open(A, eu.pNK.GUILD_AUTOMOD, void 0, eu.KsC.AUTOMOD_MENTION_SPAM),
+        onClick: () => G.Z.open(A, eu.pNK.GUILD_AUTOMOD, void 0, eu.KsC.AUTOMOD_MENTION_SPAM),
         children: eI.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_CONFIGURE_SETTINGS
       }) : null
     ]
@@ -983,7 +983,7 @@ case eu.kVF.SAFETY_USER_SENTIMENT_NAGBAR:
       (0, i.jsx)(c.NoticeCloseButton, {
         noticeType: eu.kVF.SAFETY_USER_SENTIMENT_NAGBAR,
         onClick: () => {
-          K.hZ(), eN();
+          z.hZ(), eN();
         }
       }),
       eI.Z.Messages.SAFETY_USER_SENTIMENT_NOTICE,
@@ -997,7 +997,7 @@ case eu.kVF.SAFETY_USER_SENTIMENT_NAGBAR:
             return t => (0, i.jsx)(e, {
               ...t
             });
-          }), K.hZ(), eN();
+          }), z.hZ(), eN();
         },
         children: eI.Z.Messages.SAFETY_USER_SENTIMENT_NOTICE_CTA
       })
@@ -1005,9 +1005,9 @@ case eu.kVF.SAFETY_USER_SENTIMENT_NAGBAR:
   });
 case eu.kVF.PREMIUM_TIER_2_TRIAL_ENDING:
   let eY = r()().add(5, 'days').toDate();
-  return (0, i.jsx)(Y.Z, {
+  return (0, i.jsx)(W.Z, {
     dismissCurrentNotice: () => {
-      (0, M.EW)(ei.m[eu.kVF.PREMIUM_TIER_2_TRIAL_ENDING]), eN(eY);
+      (0, v.EW)(ea.m[eu.kVF.PREMIUM_TIER_2_TRIAL_ENDING]), eN(eY);
     },
     subscriptionTier: ed.Si.TIER_2
   });
@@ -1019,7 +1019,7 @@ case eu.kVF.QUESTS_PROGRESS_INTERRUPTION:
         noticeType: eu.kVF.QUESTS_PROGRESS_INTERRUPTION,
         onClick: () => {
           var e;
-          (null === (e = ec.metadata) || void 0 === e ? void 0 : e.streamKey) != null && (0, W.nE)(ec.metadata.streamKey);
+          (null === (e = ec.metadata) || void 0 === e ? void 0 : e.streamKey) != null && (0, K.nE)(ec.metadata.streamKey);
         }
       }),
       eI.Z.Messages.QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE
@@ -1030,12 +1030,12 @@ default:
   }
 }) : null;
 
-function ef() {
+function eC() {
   let {
 analyticsLocations: e
   } = (0, R.ZP)(A.Z.NOTICE);
   return (0, i.jsx)(R.Gt, {
 value: e,
-children: (0, i.jsx)(eC, {})
+children: (0, i.jsx)(ef, {})
   });
 }

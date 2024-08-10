@@ -5,10 +5,10 @@ var a = n(780384),
   r = n(410030),
   l = n(367907),
   o = n(906732),
-  c = n(807582),
-  d = n(518738),
-  u = n(26323),
-  _ = n(176278),
+  c = n(91218),
+  d = n(807582),
+  u = n(518738),
+  _ = n(26323),
   I = n(764260),
   E = n(981631),
   T = n(30513),
@@ -19,7 +19,7 @@ t.Z = function(e) {
 guild: t,
 disabled: S,
 role: h
-  } = e, g = (0, r.ZP)(), C = (0, d.oC)(t.id, h), {
+  } = e, g = (0, r.ZP)(), C = (0, u.oC)(t.id, h), {
 analyticsLocations: x
   } = (0, o.ZP)(), p = () => {
 (0, i.openModalLazy)(async () => {
@@ -41,7 +41,7 @@ analyticsLocations: x
   },
   guild_id: null == t ? void 0 : t.id,
   location_stack: x
-}), (0, u.Z)({
+}), (0, _.Z)({
   analyticsLocations: x,
   analyticsSourceLocation: {
     page: E.ZY5.GUILD_SETTINGS,
@@ -51,7 +51,7 @@ analyticsLocations: x
   guild: t,
   perks: (0, T.Yp)()
 }));
-  }, L = (0, s.jsx)(c.Z, {
+  }, L = (0, s.jsx)(d.Z, {
 className: N.availabilityIndicator,
 guild: t,
 guildFeature: E.oNc.ROLE_ICONS,
@@ -83,7 +83,7 @@ children: [
     children: [
       (0, s.jsx)('div', {
         className: N.previewContainer,
-        children: null != C ? (0, s.jsx)(_.Z, {
+        children: null != C ? (0, s.jsx)(c.Z, {
           ...C,
           className: N.roleIconPreview,
           enableTooltip: !1

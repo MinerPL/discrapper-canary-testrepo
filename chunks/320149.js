@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(26373),
   h = n(486622),
   E = n(718538),
-  I = n(359110),
-  m = n(6025),
+  m = n(359110),
+  I = n(6025),
   g = n(433355),
   p = n(933557),
   T = n(287746),
@@ -29,7 +29,7 @@ function N(e) {
 channel: t,
 baseChannelId: n
   } = e, N = (0, p.ZP)(t), A = (0, _.K)(), v = (0, _.V)(), Z = (0, s.e7)([d.Z], () => d.Z.isMessageRequest(t.id)), L = (0, s.e7)([u.Z], () => u.Z.isSpam(t.id)), O = (0, E.V)(t.id, t.getRecipientId()), R = a.useCallback(() => {
-m.Z.closeChannelSidebar(g.uZ), Z && A && (0, I.Kh)(t.id), L && v && (0, I.Kh)(t.id);
+I.Z.closeChannelSidebar(g.uZ), Z && A && (0, m.Kh)(t.id), L && v && (0, m.Kh)(t.id);
   }, [
 t.id,
 L,
@@ -47,9 +47,9 @@ onError: x
   if (null == t || !t.isDM())
 return null;
   let P = [(0, i.jsx)(o.ZP.Icon, {
-icon: r.CloseSmallIcon,
+icon: r.XSmallIcon,
 tooltip: S.Z.Messages.CLOSE,
-onClick: () => m.Z.closeChannelSidebar(n)
+onClick: () => I.Z.closeChannelSidebar(n)
   }, 'close')];
   return (0, i.jsxs)(i.Fragment, {
 children: [

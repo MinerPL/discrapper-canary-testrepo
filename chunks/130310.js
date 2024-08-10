@@ -95,7 +95,7 @@ children: [
   (0, s.jsx)(u, {
     header: r,
     description: _,
-    icon: (0, s.jsx)(i.CloseSmallIcon, {
+    icon: (0, s.jsx)(i.XSmallIcon, {
       size: 'custom',
       width: 20,
       height: 20,

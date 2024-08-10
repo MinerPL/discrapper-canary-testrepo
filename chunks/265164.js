@@ -10,8 +10,8 @@ var i, a = n(876215),
   _ = n(592125),
   h = n(375954),
   E = n(306680),
-  I = n(699516),
-  m = n(9156),
+  m = n(699516),
+  I = n(9156),
   g = n(626135),
   p = n(70956),
   T = n(709054),
@@ -160,7 +160,7 @@ a > K && (e.type === S.Rr.MESSAGE || e.type === S.Rr.SUMMARY) && e.data.channel_
   });
   let a = B,
 [s, r] = X(O);
-  if (B = (R = J(s, t)).length >= S.Lb, 0 === n.length && a === B)
+  if (R = J(s, t), B = H ? R.length >= S.Lb : i.length > 0, 0 === n.length && a === B)
 return !1;
   if (0 !== n.length)
 W = i, z = [
@@ -170,7 +170,7 @@ W = i, z = [
 }
 class ei extends(i = s.ZP.PersistedStore) {
   initialize(e) {
-if (this.waitFor(h.Z, _.Z, E.ZP, c.Z, m.ZP, u.default, f.Z, l.Z), null != e) {
+if (this.waitFor(h.Z, _.Z, E.ZP, c.Z, I.ZP, u.default, f.Z, l.Z), null != e) {
   var t, n, i, a, s;
   Z = null !== (t = e.dehydratedItems) && void 0 !== t ? t : [], b = null !== (n = e.locallyAddedItems) && void 0 !== n ? n : {}, e.dehydratedItems.forEach(e => {
     P[e.id] = e;
@@ -247,9 +247,6 @@ return 5 === Y;
   hasOpened() {
 return H;
   }
-  hasEverOpened() {
-return Y > 0;
-  }
   getState() {
 return {
   dehydratedItems: Z,
@@ -280,10 +277,10 @@ let {
   guildId: a,
   channelId: s
 } = e;
-if (!(0, C.rK)('GravityStore-handleMessageCreate') || null == a || (null === (t = i.author) || void 0 === t ? void 0 : t.id) === u.default.getId() || I.Z.isBlocked(null === (n = i.author) || void 0 === n ? void 0 : n.id) || a in y && y[a] < 0 || null != j[a] && s in j[a] && null != j[a][s] && j[a][s] < 0)
+if (!(0, C.rK)('GravityStore-handleMessageCreate') || null == a || (null === (t = i.author) || void 0 === t ? void 0 : t.id) === u.default.getId() || m.Z.isBlocked(null === (n = i.author) || void 0 === n ? void 0 : n.id) || a in y && y[a] < 0 || null != j[a] && s in j[a] && null != j[a][s] && j[a][s] < 0)
   return !1;
 let r = _.Z.getChannel(s);
-if (null == r || r.type !== N.d4z.GUILD_ANNOUNCEMENT || m.ZP.isChannelMuted(a, s))
+if (null == r || r.type !== N.d4z.GUILD_ANNOUNCEMENT || I.ZP.isChannelMuted(a, s))
   return !1;
 let l = h.Z.getMessage(i.channel_id, i.id);
 null == l && (l = (0, d.e5)(i));
@@ -324,9 +321,9 @@ O = t.filter(e => S.zd.has(e.type)), ! function() {
   O.forEach(t => {
     e.add(t.id);
   }), Object.values(b).forEach(t => {
-    S.zd.has(t.type) && (e.has(t.id) || T.default.age(t.id) > p.Z.Millis.DAY || t.type === S.Rr.MESSAGE && m.ZP.isChannelMuted(t.data.guild_id, t.data.channel_id) ? delete b[t.id] : !e.has(t.id) && (O.unshift(t), e.add(t.id)));
+    S.zd.has(t.type) && (e.has(t.id) || T.default.age(t.id) > p.Z.Millis.DAY || t.type === S.Rr.MESSAGE && I.ZP.isChannelMuted(t.data.guild_id, t.data.channel_id) ? delete b[t.id] : !e.has(t.id) && (O.unshift(t), e.add(t.id)));
   }), O.forEach(e => {
-    P[e.id] = e, e.type === S.Rr.CUSTOM_STATUS && (I.Z.isBlocked(e.data.user_id) ? D[e.id] = !0 : M[e.id] = (0, C.mV)(e));
+    P[e.id] = e, e.type === S.Rr.CUSTOM_STATUS && (m.Z.isBlocked(e.data.user_id) ? D[e.id] = !0 : M[e.id] = (0, C.mV)(e));
   });
 }(), O = q(O), x = {
   load_id: n,
@@ -334,18 +331,17 @@ O = t.filter(e => S.zd.has(e.type)), ! function() {
   feed_item_ids: O.map(e => e.id)
 };
 let [a, s] = X(O);
-if (R = J(a), 0 === k)
-  a.length > 0 && !H && (B = !0, w = !0), Q({
-    newUnread: a,
-    newRead: s
-  });
-else {
+if (R = J(a), H && 0 !== k) {
   let e = R.length > S.Lb;
   B = e, e && (0, C.em)([
     ...a,
     ...s
   ], 0, S.xy);
-}
+} else
+  k = 0, a.length > 0 && !H && (B = !0, w = !0), Q({
+    newUnread: a,
+    newRead: s
+  });
   },
   LOAD_GRAVITY_HYDRATED: function(e) {
 let {

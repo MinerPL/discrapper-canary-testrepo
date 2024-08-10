@@ -16,8 +16,8 @@ var s = l(735250),
   _ = l(236373),
   I = l(854698),
   x = l(405613),
-  N = l(440371),
-  m = l(765305),
+  m = l(440371),
+  N = l(765305),
   T = l(486324),
   h = l(689938),
   g = l(203217);
@@ -115,7 +115,10 @@ H = (e, n) => {
   (0, r.openModalLazy)(async () => {
     let {
       default: a
-    } = await l.e('48017').then(l.bind(l, 850085));
+    } = await Promise.all([
+      l.e('48017'),
+      l.e('54144')
+    ]).then(l.bind(l, 850085));
     return l => (0, s.jsx)(a, {
       imgURI: e,
       file: n,
@@ -150,7 +153,7 @@ children: [
               });
             },
             placeholder: h.Z.Messages.GUILD_EVENT_CREATE_TOPIC_PLACEHOLDER,
-            maxLength: m.p,
+            maxLength: N.p,
             value: R,
             autoComplete: 'off',
             inputRef: k
@@ -163,7 +166,7 @@ children: [
           }) : null
         ]
       }),
-      (0, s.jsx)(N.Z, {
+      (0, s.jsx)(m.Z, {
         className: g.formItem,
         onScheduleChange: e => {
           let {
@@ -184,8 +187,8 @@ children: [
         },
         schedule: b,
         recurrenceRule: O,
-        showEndDate: j === m.WX.EXTERNAL,
-        requireEndDate: j === m.WX.EXTERNAL,
+        showEndDate: j === N.WX.EXTERNAL,
+        requireEndDate: j === N.WX.EXTERNAL,
         disableStartDateTime: y,
         guildId: S
       }),
@@ -207,7 +210,7 @@ children: [
               description: e
             });
           },
-          maxLength: m.wm,
+          maxLength: N.wm,
           autosize: !0
         })
       }),

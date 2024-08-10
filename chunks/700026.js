@@ -16,13 +16,13 @@ function o(e, t, n) {
   var i, l, s, o, c;
   return {
 hasDivider: (i = e, l = t, ! function(e, t) {
-  if (t === r.zm) {
-    let t = e.getCommunitySection().getRows();
-    return 1 === t.length && t[0] === a.f.GUILD_PREMIUM_PROGRESS_BAR || e.getCommunitySection().isEmpty();
+  if (t === r.wZ) {
+    let t = e.getGuildActionSection().getRows();
+    return 1 === t.length && t[0] === a.z.GUILD_PREMIUM_PROGRESS_BAR || e.getGuildActionSection().isEmpty();
   }
-  return 0 === e.getSections()[t];
-}(i, s = n) && (s === r.zm || !!l && (s === r.p2 || s !== r.wd && (s === i.recentsSectionNumber || (i.voiceChannelsSectionNumber, !1))))),
-canHaveVoiceSummary: (o = e, !((c = n) === r.zm || c === r.p2 || c === r.wd || c === o.recentsSectionNumber || c === o.voiceChannelsSectionNumber))
+  return 0 === e.getSections(!1)[t];
+}(i, s = n) && (s === r.wZ || !!l && (s === r.p2 || s !== r.wd && (s === i.recentsSectionNumber || (i.voiceChannelsSectionNumber, !1))))),
+canHaveVoiceSummary: (o = e, !((c = n) === r.wZ || c === r.p2 || c === r.wd || c === o.recentsSectionNumber || c === o.voiceChannelsSectionNumber))
   };
 }
 

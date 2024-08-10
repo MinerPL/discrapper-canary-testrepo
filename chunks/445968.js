@@ -1,7 +1,12 @@
 e.exports = {
   shopCard: 'shopCard_c23530',
+  shopCardDark: 'shopCardDark_c23530 shopCard_c23530',
+  shopCardHighlighted: 'shopCardHighlighted_c23530',
+  shopCardDarkHighlighted: 'shopCardDarkHighlighted_c23530',
+  mysteryShopCard: 'mysteryShopCard_c23530',
   shopCardAnimation: 'shopCardAnimation_c23530',
   avatarContainer: 'avatarContainer_c23530',
+  mysteryAvatarContainer: 'mysteryAvatarContainer_c23530',
   cardText: 'cardText_c23530',
   cardTextBlur: 'cardTextBlur_c23530',
   cardBackground: 'cardBackground_c23530',

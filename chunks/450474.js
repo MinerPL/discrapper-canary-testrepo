@@ -3,7 +3,7 @@ n(470079);
 var a = n(481060),
   i = n(296386),
   r = n(150192),
-  l = n(987134),
+  l = n(285888),
   o = n(203377),
   c = n(817227);
 t.Z = e => {
@@ -56,7 +56,7 @@ multiValueRenderer: e => {
       (0, s.jsx)(a.Clickable, {
         className: c.closeWrapper,
         onClick: () => I(n),
-        children: (0, s.jsx)(a.CloseSmallIcon, {
+        children: (0, s.jsx)(a.XSmallIcon, {
           size: 'xs',
           color: 'currentColor',
           className: c.close

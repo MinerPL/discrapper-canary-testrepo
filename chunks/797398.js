@@ -14,7 +14,9 @@ inActivity: a,
 embeddedActivitiesManager: s
   } = e;
   r.useEffect(() => {
-!a && (0, i.oy)(t.id);
+!a && (0, i.oy)({
+  channelId: t.id
+});
   }, [
 null == n ? void 0 : n.applicationId,
 t.id,

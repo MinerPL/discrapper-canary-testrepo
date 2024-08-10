@@ -1,29 +1,29 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return c;
   }
-}), s(47120);
-var n = s(735250);
-s(470079);
-var a = s(442837),
-  i = s(481060),
-  r = s(536442),
-  o = s(242395);
+}), t(47120);
+var n = t(735250);
+t(470079);
+var a = t(442837),
+  i = t(481060),
+  r = t(536442),
+  o = t(242395);
 
 function l(e) {
   let {
-hotspotLocation: t
-  } = e, [s, l] = (0, a.Wu)([r.qc], () => [
-r.qc.hasHotspot(t, !0),
-r.qc.getHotspotOverride(t)
+hotspotLocation: s
+  } = e, [t, l] = (0, a.Wu)([r.qc], () => [
+r.qc.hasHotspot(s, !0),
+r.qc.getHotspotOverride(s)
   ]);
   return (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsxs)(i.FormItem, {
-    title: t,
+    title: s,
     className: o.hotspotSwitch,
     children: [
-      s ? (0, n.jsx)(i.TooltipContainer, {
+      t ? (0, n.jsx)(i.TooltipContainer, {
         className: o.iconContainer,
         element: 'span',
         text: 'Active',
@@ -36,7 +36,7 @@ children: [
         className: o.iconContainer,
         element: 'span',
         text: 'Inactive',
-        children: (0, n.jsx)(i.CloseSmallIcon, {
+        children: (0, n.jsx)(i.XSmallIcon, {
           size: 'md',
           color: 'currentColor',
           className: o.xmark
@@ -58,7 +58,7 @@ children: [
             label: 'Force Inactive'
           }
         ],
-        onChange: e => null != e ? (0, r.hv)(t, e) : (0, r.Po)(t)
+        onChange: e => null != e ? (0, r.hv)(s, e) : (0, r.Po)(s)
       })
     ]
   }),
@@ -69,12 +69,12 @@ children: [
 
 function c(e) {
   let {
-className: t
+className: s
   } = e;
   return (0, n.jsxs)(i.FormSection, {
 title: 'Hotspots',
 tag: i.FormTitleTags.H1,
-className: t,
+className: s,
 children: [
   (0, n.jsx)(i.Text, {
     className: o.helpText,
@@ -82,7 +82,7 @@ children: [
     variant: 'text-sm/normal',
     children: 'All the "hotspots" in app, and their current status. Use the select menu to override them on or off.'
   }),
-  Object.keys(r.v6).sort((e, t) => e.localeCompare(t)).map(e => (0, n.jsx)(l, {
+  Object.keys(r.v6).sort((e, s) => e.localeCompare(s)).map(e => (0, n.jsx)(l, {
     hotspotLocation: e
   }, e))
 ]

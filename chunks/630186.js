@@ -1,20 +1,45 @@
 n.d(t, {
   Z: function() {
-return s;
-  },
-  _: function() {
-return a;
+return o;
   }
 });
-var i = n(726542),
-  l = n(973616),
-  r = n(689938);
-let a = 'twitch:';
-class s extends l.Z {
-  getIconURL() {
-return i.Z.get('twitch').icon.lightPNG;
-  }
-  constructor(e) {
-super(e), this.id = ''.concat(a).concat(e.url), this.name = r.Z.Messages.GAME_FEED_ACTIVITY_STREAMING_TWITCH;
-  }
+var i = n(735250);
+n(470079);
+var a = n(120356),
+  s = n.n(a),
+  r = n(481060),
+  l = n(397461);
+
+function o(e) {
+  let {
+padded: t = !0,
+inset: n = !1,
+active: a = !1,
+className: o,
+children: c,
+onClick: d,
+...u
+  } = e;
+  return null != d ? (0, i.jsx)(r.Clickable, {
+onClick: d,
+tabIndex: null != d ? 0 : -1,
+className: s()(o, {
+  [l.outer]: !n,
+  [l.inset]: n,
+  [l.padded]: t,
+  [l.active]: a,
+  [l.interactive]: null != d
+}),
+...u,
+children: c
+  }) : (0, i.jsx)('div', {
+className: s()(o, {
+  [l.outer]: !n,
+  [l.inset]: n,
+  [l.padded]: t,
+  [l.active]: a
+}),
+...u,
+children: c
+  });
 }

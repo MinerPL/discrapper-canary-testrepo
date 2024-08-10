@@ -15,9 +15,9 @@ var i, a, s = n(735250),
   u = n(403404),
   _ = n(100527),
   h = n(906732),
-  E = n(592125),
-  I = n(810090),
-  m = n(626135),
+  E = n(70097),
+  m = n(592125),
+  I = n(626135),
   g = n(981631),
   p = n(921944),
   T = n(689938),
@@ -108,12 +108,12 @@ let {
   analyticsLocations: P
 } = (0, h.ZP)(a);
 r.useEffect(() => {
-  m.default.track(g.rMx.TOOLTIP_VIEWED, {
+  I.default.track(g.rMx.TOOLTIP_VIEWED, {
     type: N
   });
 }, [N]);
 let M = (0, c.bp)() === g.IlC.POPOUT,
-  D = (0, l.e7)([E.Z], () => E.Z.getChannel(t), [t]);
+  D = (0, l.e7)([m.Z], () => m.Z.getChannel(t), [t]);
 return (0, s.jsx)(h.Gt, {
   value: P,
   children: (0, s.jsx)('div', {
@@ -123,7 +123,7 @@ return (0, s.jsx)(h.Gt, {
       children: (0, s.jsxs)('div', {
         className: S.content,
         children: [
-          (0, s.jsx)(I.Z, {
+          (0, s.jsx)(E.Z, {
             className: S.video,
             src: x,
             poster: R,

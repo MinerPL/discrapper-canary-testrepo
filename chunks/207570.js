@@ -67,7 +67,7 @@ onClick: () => function(e, t) {
       transitionState: n.transitionState,
       onClose: n.onClose,
       appId: e.id,
-      guildId: t
+      onlySubscribeServerSubForGuildId: t
     });
   });
 }(t, s),

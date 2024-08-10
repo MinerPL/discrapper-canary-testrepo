@@ -10,9 +10,9 @@ var n = s(735250),
   t = s(481060),
   E = s(935369),
   o = s(728345),
-  T = s(577275),
-  c = s(153124),
-  r = s(829857),
+  T = s(313201),
+  r = s(577275),
+  c = s(829857),
   I = s(689938),
   d = s(367476);
 
@@ -22,9 +22,9 @@ function S(e) {
 transitionState: l,
 application: S,
 onClose: N
-  } = e, M = (0, c.Dt)(), [A, L] = _.useState(null == S ? void 0 : null === (a = S.team) || void 0 === a ? void 0 : a.id), {
+  } = e, M = (0, T.Dt)(), [A, L] = _.useState(null == S ? void 0 : null === (a = S.team) || void 0 === a ? void 0 : a.id), {
 teams: C
-  } = (0, T.Z)(), O = _.useMemo(() => C.filter(e => e.payout_account_status === r.C.ACTIVE).map(e => ({
+  } = (0, r.Z)(), O = _.useMemo(() => C.filter(e => e.payout_account_status === c.C.ACTIVE).map(e => ({
 label: e.name,
 value: e.id
   })), [C]), u = (null == S ? void 0 : null === (s = S.team) || void 0 === s ? void 0 : s.id) !== A, [g, {
@@ -69,7 +69,7 @@ children: [
             variant: 'text-sm/semibold',
             color: 'text-danger',
             children: [
-              (0, n.jsx)(t.CircleExclamationPointIcon, {
+              (0, n.jsx)(t.CircleWarningIcon, {
                 size: 'xs',
                 color: 'currentColor',
                 className: d.warningIcon

@@ -66,7 +66,7 @@ children: [
         'aria-label': u.Z.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ATTACHED_ROLE_ARIA,
         onClick: t,
         className: C.attachedRoleClose,
-        children: (0, a.jsx)(l.CloseSmallIcon, {
+        children: (0, a.jsx)(l.XSmallIcon, {
           size: 'xs',
           color: 'currentColor',
           className: C.attachedRoleCloseIcon
@@ -84,7 +84,7 @@ children: A
 }
 
 function p() {
-  return (0, a.jsx)(l.CircleExclamationPointIcon, {
+  return (0, a.jsx)(l.CircleWarningIcon, {
 size: 'xs',
 color: 'currentColor',
 className: C.warningIcon

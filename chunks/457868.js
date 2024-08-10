@@ -19,22 +19,22 @@ var i = n(735250),
   f = n(607070),
   E = n(100527),
   g = n(906732),
-  C = n(623624),
-  I = n(518738),
-  x = n(965376),
-  T = n(159299),
-  N = n(484459),
-  v = n(103575),
-  S = n(199902),
-  Z = n(271383),
-  A = n(430824),
-  M = n(158776),
-  b = n(885110),
-  R = n(111583),
-  j = n(594174),
-  L = n(499033),
-  P = n(151827),
-  O = n(176278),
+  C = n(82295),
+  I = n(91218),
+  x = n(623624),
+  T = n(518738),
+  N = n(965376),
+  v = n(159299),
+  S = n(184301),
+  Z = n(103575),
+  A = n(199902),
+  M = n(271383),
+  b = n(430824),
+  R = n(158776),
+  j = n(885110),
+  L = n(111583),
+  P = n(594174),
+  O = n(499033),
   y = n(626135),
   D = n(585483),
   k = n(700785),
@@ -53,19 +53,19 @@ let {
   sectionId: s,
   userId: l,
   guildOwnerId: r
-} = e, o = (0, h.e7)([R.Z], () => R.Z.isTyping(t.id, l)), u = (0, h.e7)([Z.ZP], () => Z.ZP.getMember(t.guild_id, l)), f = (0, h.e7)([A.Z], () => {
+} = e, o = (0, h.e7)([L.Z], () => L.Z.isTyping(t.id, l)), u = (0, h.e7)([M.ZP], () => M.ZP.getMember(t.guild_id, l)), f = (0, h.e7)([b.Z], () => {
   var e;
-  return (null == u ? void 0 : u.colorRoleId) != null ? null === (e = A.Z.getRole(t.guild_id, u.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0;
+  return (null == u ? void 0 : u.colorRoleId) != null ? null === (e = b.Z.getRole(t.guild_id, u.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0;
 }, [
   t.guild_id,
   u
-]), E = (0, h.e7)([j.default], () => j.default.getUser(l)), g = (0, h.e7)([j.default], () => j.default.getCurrentUser()), I = (null == E ? void 0 : E.id) === (null == g ? void 0 : g.id), x = (0, h.e7)([
-  M.Z,
-  b.Z
-], () => I ? b.Z.getStatus() : M.Z.getStatus(l, t.guild_id)), L = (0, h.e7)([M.Z], () => M.Z.isMobileOnline(l)), P = (0, h.e7)([
-  M.Z,
-  b.Z
-], () => I ? b.Z.getActivities() : M.Z.getActivities(l, t.guild_id)), O = (0, h.e7)([S.Z], () => S.Z.getAnyStreamForUser(l)), y = (0, c.JA)(l), k = (0, h.e7)([T.Z], () => T.Z.canUserViewChannel(t.id, s, l)), w = (null == E ? void 0 : E.id) != null && E.id === r, V = a.useCallback(e => {
+]), E = (0, h.e7)([P.default], () => P.default.getUser(l)), g = (0, h.e7)([P.default], () => P.default.getCurrentUser()), C = (null == E ? void 0 : E.id) === (null == g ? void 0 : g.id), I = (0, h.e7)([
+  R.Z,
+  j.Z
+], () => C ? j.Z.getStatus() : R.Z.getStatus(l, t.guild_id)), T = (0, h.e7)([R.Z], () => R.Z.isMobileOnline(l)), N = (0, h.e7)([
+  R.Z,
+  j.Z
+], () => C ? j.Z.getActivities() : R.Z.getActivities(l, t.guild_id)), O = (0, h.e7)([A.Z], () => A.Z.getAnyStreamForUser(l)), y = (0, c.JA)(l), k = (0, h.e7)([v.Z], () => v.Z.canUserViewChannel(t.id, s, l)), w = (null == E ? void 0 : E.id) != null && E.id === r, V = a.useCallback(e => {
   null != E && (0, m.jW)(e, async () => {
     let {
       default: e
@@ -98,7 +98,7 @@ let {
   E,
   t
 ]), z = a.useCallback(e => {
-  e.stopPropagation(), (0, C.f)({
+  e.stopPropagation(), (0, x.f)({
     guildId: t.guild_id,
     location: {
       section: H.jXE.THREAD_MEMBER_LIST,
@@ -110,11 +110,11 @@ if (null == E)
   return null;
 let Y = null == u ? void 0 : u.premiumSince;
 return (0, i.jsx)(p.Popout, {
-  preload: () => (0, N.W)(E, {
+  preload: () => (0, S.Z)(E, {
     guildId: t.guild_id,
     channelId: t.id
   }),
-  renderPopout: e => (0, i.jsx)(v.Z, {
+  renderPopout: e => (0, i.jsx)(Z.Z, {
     ...e,
     location: 'ThreadMembers',
     userId: E.id,
@@ -140,14 +140,14 @@ return (0, i.jsx)(p.Popout, {
       user: E,
       currentUser: g,
       nick: null == u ? void 0 : u.nick,
-      status: x,
-      activities: P,
+      status: I,
+      activities: N,
       colorString: null == u ? void 0 : u.colorString,
       colorRoleName: f,
       isTyping: o,
       channel: t,
       guildId: t.guild_id,
-      isMobile: L,
+      isMobile: T,
       selected: a,
       applicationStream: O,
       premiumSince: null == Y ? null : new Date(Y),
@@ -166,7 +166,7 @@ let {
   label: n,
   count: a,
   guildId: s
-} = e, l = (0, I.p9)({
+} = e, l = (0, T.p9)({
   roleId: t,
   guildId: s,
   size: 16
@@ -176,14 +176,14 @@ return t === H.Skl.UNKNOWN ? (0, i.jsx)('div', {
   children: (0, i.jsx)('div', {
     className: F.memberGroupsPlaceholder
   })
-}) : (0, i.jsxs)(P.Z, {
+}) : (0, i.jsxs)(C.Z, {
   className: F.membersGroup,
   'aria-label': G.Z.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
     title: n,
     count: a
   }),
   children: [
-    null != l ? (0, i.jsx)(O.Z, {
+    null != l ? (0, i.jsx)(I.Z, {
       className: F.roleIcon,
       ...l
     }) : null,
@@ -236,7 +236,7 @@ channel: t,
 guild: n
   } = e, s = 'members-'.concat(t.id), {
 analyticsLocations: r
-  } = (0, g.ZP)(E.Z.MEMBER_LIST), d = (0, x.D)(t.id, n), m = d.filter(e => e.userIds.length > 0).reverse()[0], {
+  } = (0, g.ZP)(E.Z.MEMBER_LIST), d = (0, N.D)(t.id, n), m = d.filter(e => e.userIds.length > 0).reverse()[0], {
 navigator: _,
 listRef: C
   } = function(e, t) {
@@ -306,8 +306,8 @@ return {
 return (0, i.jsx)(Q, {
   channel: t
 });
-  let T = o().omit(_.containerProps, ['ref']),
-N = k.iJ(n);
+  let x = o().omit(_.containerProps, ['ref']),
+T = k.iJ(n);
   return (0, i.jsx)(g.Gt, {
 value: r,
 children: (0, i.jsx)(c.bG, {
@@ -344,7 +344,7 @@ children: (0, i.jsx)(c.bG, {
             channel: t,
             sectionId: l,
             userId: s[a],
-            guildOwnerId: N
+            guildOwnerId: T
           }, s[a]);
         },
         footerHeight: e => d[e] === m && t.type === H.d4z.PRIVATE_THREAD ? 80 : 0,
@@ -355,7 +355,7 @@ children: (0, i.jsx)(c.bG, {
         innerTag: 'ul',
         sections: d.map(e => e.userIds.length),
         fade: !0,
-        ...T,
+        ...x,
         ...e
       }, s)
     })
@@ -387,7 +387,7 @@ children: [
           color: 'currentColor'
         })
       }),
-      (0, i.jsx)(L.Z, {
+      (0, i.jsx)(O.Z, {
         className: V.emptyStateStars
       })
     ]

@@ -20,7 +20,7 @@ textVariant: s = 'text-sm/medium'
   } = e, c = function(e) {
 switch (e) {
   case 0:
-    return l.CircleExclamationPointIcon;
+    return l.CircleWarningIcon;
   case 1:
     return l.CircleInformationIcon;
   case 2:

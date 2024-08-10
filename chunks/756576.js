@@ -1,6 +1,7 @@
 e.exports = {
   authedApp: 'authedApp_f0135d',
-  headerInfo: 'headerInfo_f0135d',
+  header: 'header_f0135d',
+  headerText: 'headerText_f0135d',
   appAvatar: 'appAvatar_f0135d',
   permission: 'permission_f0135d',
   permissionCheckmark: 'permissionCheckmark_f0135d',

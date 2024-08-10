@@ -3,9 +3,9 @@ n.d(t, {
 return m;
   }
 });
-var s = n(668781),
-  a = n(80932),
-  i = n(197712),
+var s = n(36793),
+  a = n(668781),
+  i = n(80932),
   r = n(426642),
   l = n(626135),
   o = n(176354),
@@ -43,7 +43,7 @@ if (o.ZP.isFileTooBig(n)) {
     return E(n.name, n.size, c, m);
   if (null != S) {
     let e;
-    t = (0, i.Ae)(S, 128, 128);
+    t = (0, s.Ae)(S, 128, 128);
     try {
       e = o.ZP.isDataTooBig(t);
     } catch (e) {
@@ -54,7 +54,7 @@ if (o.ZP.isFileTooBig(n)) {
   }
 }
 try {
-  await (0, a.rS)({
+  await (0, i.rS)({
     guildId: c,
     image: t,
     name: g,
@@ -66,16 +66,16 @@ try {
 } catch (o) {
   let e, n;
   let {
-    body: a,
+    body: s,
     status: i
   } = o;
-  return null != a && (a.code === u.evJ.TOO_MANY_EMOJI ? (e = _.Z.Messages.TOO_MANY_EMOJI, n = r.d.TOO_MANY_EMOJI) : a.code === u.evJ.TOO_MANY_ANIMATED_EMOJI ? (e = _.Z.Messages.TOO_MANY_ANIMATED_EMOJI, n = r.d.TOO_MANY_ANIMATED_EMOJI) : null != a.image || a.code === u.evJ.INVALID_FILE_ASSET_SIZE ? (l.default.track(u.rMx.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
+  return null != s && (s.code === u.evJ.TOO_MANY_EMOJI ? (e = _.Z.Messages.TOO_MANY_EMOJI, n = r.d.TOO_MANY_EMOJI) : s.code === u.evJ.TOO_MANY_ANIMATED_EMOJI ? (e = _.Z.Messages.TOO_MANY_ANIMATED_EMOJI, n = r.d.TOO_MANY_ANIMATED_EMOJI) : null != s.image || s.code === u.evJ.INVALID_FILE_ASSET_SIZE ? (l.default.track(u.rMx.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
     guild_id: c,
     file_size: I.byteLength(t),
     upload_id: m
   }), e = _.Z.Messages.EMOJI_TOO_BIG.format({
     maxSize: d.xG
-  }), n = r.d.TOO_BIG) : (null != a.image || a.code === u.evJ.INVALID_FILE_ASSET_SIZE_RESIZE_GIF) && (n = r.d.RESIZE_GIF)), 429 === i && (e = _.Z.Messages.RATE_LIMITED, n = r.d.RATE_LIMIT), null != e && !h && s.Z.show({
+  }), n = r.d.TOO_BIG) : (null != s.image || s.code === u.evJ.INVALID_FILE_ASSET_SIZE_RESIZE_GIF) && (n = r.d.RESIZE_GIF)), 429 === i && (e = _.Z.Messages.RATE_LIMITED, n = r.d.RATE_LIMIT), null != e && !h && a.Z.show({
     title: _.Z.Messages.GENERIC_ERROR_TITLE,
     body: e
   }), n;

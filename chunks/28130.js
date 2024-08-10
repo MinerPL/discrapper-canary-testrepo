@@ -1,51 +1,51 @@
-i.r(n), i.d(n, {
+n.r(i), n.d(i, {
   default: function() {
 return L;
   }
-}), i(47120);
-var t = i(735250),
-  o = i(470079),
-  a = i(442837),
-  s = i(481060),
-  l = i(100527),
-  r = i(906732),
-  c = i(807582),
-  d = i(813197),
-  f = i(430824),
-  u = i(914010),
-  p = i(594174),
-  x = i(451478),
-  g = i(626135),
-  m = i(74538),
-  C = i(621961),
-  _ = i(884858),
-  h = i(981631),
-  j = i(486324),
-  I = i(869783),
-  N = i(689938),
-  M = i(232580);
+}), n(47120);
+var t = n(735250),
+  o = n(470079),
+  a = n(442837),
+  s = n(481060),
+  l = n(100527),
+  r = n(906732),
+  c = n(807582),
+  d = n(813197),
+  f = n(430824),
+  u = n(914010),
+  p = n(594174),
+  x = n(451478),
+  g = n(626135),
+  m = n(74538),
+  C = n(621961),
+  _ = n(884858),
+  h = n(981631),
+  j = n(486324),
+  I = n(869783),
+  N = n(689938),
+  M = n(232580);
 let T = [{
-gif: i(495682),
-png: i(458060)
+gif: n(495682),
+png: n(458060)
   },
   {
-gif: i(842786),
-png: i(460790)
+gif: n(842786),
+png: n(460790)
   },
   {
-gif: i(578831),
-png: i(642193)
+gif: n(578831),
+png: n(642193)
   },
   {
-gif: i(145908),
-png: i(690695)
+gif: n(145908),
+png: n(690695)
   }
 ];
 
 function b(e) {
   let {
-shouldAnimate: n = !0
-  } = e, [i, a] = o.useState(!1);
+shouldAnimate: i = !0
+  } = e, [n, a] = o.useState(!1);
   return (0, t.jsx)('div', {
 className: M.gifGrid,
 onMouseMove: () => a(!0),
@@ -53,7 +53,7 @@ onMouseLeave: () => a(!1),
 children: T.map(e => (0, t.jsx)('div', {
   className: M.gif,
   style: {
-    backgroundImage: 'url('.concat(n || i ? e.gif : e.png, ')')
+    backgroundImage: 'url('.concat(i || n ? e.gif : e.png, ')')
   }
 }, e.gif))
   });
@@ -61,14 +61,14 @@ children: T.map(e => (0, t.jsx)('div', {
 
 function A(e) {
   let {
-guildFeature: n,
-guild: i
+guildFeature: i,
+guild: n
   } = e;
-  return null == n || null == i ? null : (0, t.jsx)('div', {
+  return null == i || null == n ? null : (0, t.jsx)('div', {
 className: M.pillWrapper,
 children: (0, t.jsx)(c.Z, {
-  guildFeature: n,
-  guild: i,
+  guildFeature: i,
+  guild: n,
   hideTooltip: !0
 })
   });
@@ -76,22 +76,22 @@ children: (0, t.jsx)(c.Z, {
 
 function E(e) {
   let {
-uploadType: n,
-guild: i
+uploadType: i,
+guild: n
   } = e;
   return (0, t.jsxs)('div', {
 className: M.optionBoxText,
 children: [
   (0, t.jsx)(A, {
-    guild: i,
-    guildFeature: (0, C.C)(n, {
+    guild: n,
+    guildFeature: (0, C.C)(i, {
       isGIF: !0
     })
   }),
   (0, t.jsxs)('div', {
     className: M.optionBoxDescription,
     children: [
-      (0, C.K)(n) && (0, t.jsx)(s.TooltipContainer, {
+      (0, C.K)(i) && (0, t.jsx)(s.TooltipContainer, {
         className: M.nitroWheelFlairContainer,
         text: N.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
         children: (0, t.jsx)(s.NitroWheelIcon, {
@@ -109,22 +109,22 @@ children: [
 
 function v(e) {
   let {
-title: n,
-uploadType: i,
+title: i,
+uploadType: n,
 guild: o
   } = e;
   return (0, t.jsxs)('div', {
 className: M.optionBoxText,
 children: [
   (0, t.jsx)(A, {
-    guildFeature: (0, C.C)(i, {
+    guildFeature: (0, C.C)(n, {
       isGIF: !1
     }),
     guild: o
   }),
   (0, t.jsx)('div', {
     className: M.optionBoxDescription,
-    children: n
+    children: i
   })
 ]
   });
@@ -132,7 +132,7 @@ children: [
 
 function L(e) {
   let {
-transitionState: n,
+transitionState: i,
 onClose: c,
 onComplete: C,
 uploadType: T,
@@ -151,9 +151,9 @@ reducedMotion: U
 analyticsLocations: z
   } = (0, r.ZP)(B, l.Z.SELECT_IMAGE_MODAL);
 
-  function w(e, n) {
-let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-c(), C(e, n, i);
+  function w(e, i) {
+let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+c(), C(e, i, n);
   }
   return o.useEffect(() => {
 H && g.default.track(h.rMx.PREMIUM_UPSELL_VIEWED, {
@@ -168,7 +168,7 @@ H,
 F,
 z
   ]), (0, t.jsxs)(s.ModalRoot, {
-transitionState: n,
+transitionState: i,
 size: s.ModalSize.SMALL,
 children: [
   (0, t.jsxs)(s.ModalHeader, {
@@ -221,22 +221,25 @@ children: [
                 })
               }),
               (0, t.jsx)(d.ZP, {
-                onChange: function(e, n) {
-                  if (n.type === I.m.MP4)
-                    return w(e, n);
+                onChange: function(e, i) {
+                  if (i.type === I.m.MP4)
+                    return w(e, i);
                   (0, s.openModalLazy)(async () => {
                     let {
                       default: o
-                    } = await i.e('48017').then(i.bind(i, 850085));
-                    return i => (0, t.jsx)(o, {
+                    } = await Promise.all([
+                      n.e('48017'),
+                      n.e('54144')
+                    ]).then(n.bind(n, 850085));
+                    return n => (0, t.jsx)(o, {
                       imgURI: e,
-                      file: n,
+                      file: i,
                       onCrop: w,
                       uploadType: T,
                       showUpsellHeader: L,
                       allowSkip: !0,
                       analyticsPage: null == F ? void 0 : F.page,
-                      ...i
+                      ...n
                     });
                   }, {
                     contextKey: W
@@ -256,13 +259,13 @@ children: [
               (0, s.openModalLazy)(async () => {
                 let {
                   default: e
-                } = await i.e('72891').then(i.bind(i, 195297));
-                return n => (0, t.jsx)(e, {
+                } = await n.e('72891').then(n.bind(n, 195297));
+                return i => (0, t.jsx)(e, {
                   uploadType: T,
-                  onComplete: (e, n) => w(e, n, !0),
+                  onComplete: (e, i) => w(e, i, !0),
                   showUpsellHeader: L,
                   analyticsPage: null == F ? void 0 : F.page,
-                  ...n
+                  ...i
                 });
               }, {
                 contextKey: W

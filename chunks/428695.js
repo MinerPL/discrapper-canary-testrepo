@@ -17,8 +17,8 @@ title: n,
 message: r,
 image: s,
 type: f,
-imageStyles: m,
-imageMarginX: g,
+imageStyles: g,
+imageMarginX: m,
 imageMarginTop: C,
 trackingSource: I,
 undismissable: E,
@@ -73,7 +73,7 @@ variant: 'text-sm/normal',
 color: 'text-muted',
 children: r
   }));
-  let M = null != g ? ''.concat(g, 'px') : '16px';
+  let M = null != m ? ''.concat(m, 'px') : '16px';
   return (0, i.jsxs)('div', {
 className: a()(p.container, T),
 children: [
@@ -85,7 +85,7 @@ children: [
     },
     className: p.close,
     'aria-label': h.Z.Messages.DISMISS,
-    children: (0, i.jsx)(o.CloseSmallIcon, {
+    children: (0, i.jsx)(o.XSmallIcon, {
       size: 'md',
       color: 'currentColor',
       className: p.closeIcon
@@ -100,7 +100,7 @@ children: [
     },
     children: (0, i.jsx)('img', {
       className: p.image,
-      style: m,
+      style: g,
       src: s,
       alt: ''
     })

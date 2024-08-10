@@ -17,7 +17,7 @@ channel: t,
   } = e;
   return (0, i.jsx)(l.d, {
 ...n,
-iconComponent: a.CloseSmallIcon,
+iconComponent: a.XSmallIcon,
 label: r.Z.Messages.DISMISS,
 onClick: () => s.Z.stopRinging(t.id)
   });

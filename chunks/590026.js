@@ -16,7 +16,8 @@ let d = new Set([
   a.s.WATCHED_MEDIA,
   a.s.TOP_GAME,
   a.s.TOP_ARTIST,
-  a.s.LISTENED_SESSION
+  a.s.LISTENED_SESSION,
+  a.s.LAUNCHED_ACTIVITY
 ]);
 
 function h(e) {

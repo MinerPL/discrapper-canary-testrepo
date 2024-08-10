@@ -21,15 +21,15 @@ var i = t(735250),
   h = t(700582),
   g = t(410030),
   p = t(933557),
-  C = t(346486),
-  f = t(154285),
-  x = t(666657),
-  O = t(487419),
-  S = t(664452),
-  A = t(560114),
-  R = t(699516),
-  b = t(594174),
-  Z = t(285952),
+  f = t(346486),
+  C = t(600164),
+  x = t(154285),
+  O = t(666657),
+  S = t(487419),
+  A = t(664452),
+  R = t(560114),
+  b = t(699516),
+  Z = t(594174),
   v = t(965638),
   M = t(302434),
   L = t(981631),
@@ -52,17 +52,17 @@ showChannel: s = !1,
 inviteDisabled: o = !1,
 hide: r = !1
   } = e, d = a.uses;
-  return a.maxUses > 0 && (d = ''.concat(a.uses, '/').concat(a.maxUses)), (0, i.jsxs)(Z.Z, {
+  return a.maxUses > 0 && (d = ''.concat(a.uses, '/').concat(a.maxUses)), (0, i.jsxs)(C.Z, {
 className: l()(D.inviteSettingsInviteRow, P.card, {
   [D.inviteDisabledRow]: o
 }),
 children: [
-  (0, i.jsx)(Z.Z, {
+  (0, i.jsx)(C.Z, {
     grow: y.INVITER,
     basis: 0,
-    align: Z.Z.Align.CENTER,
+    align: C.Z.Align.CENTER,
     className: l()(D.text),
-    children: (0, i.jsxs)(Z.Z.Child, {
+    children: (0, i.jsxs)(C.Z.Child, {
       children: [
         null == (n = a.inviter) ? null : (0, i.jsxs)('div', {
           className: D.user,
@@ -82,16 +82,16 @@ children: [
         (t = a.channel, s ? (0, i.jsx)(m.Text, {
           variant: 'text-xs/normal',
           color: 'header-secondary',
-          children: (0, p.F6)(t, b.default, R.Z, !0)
+          children: (0, p.F6)(t, Z.default, b.Z, !0)
         }) : null)
       ]
     })
   }),
-  (0, i.jsx)(Z.Z, {
+  (0, i.jsx)(C.Z, {
     grow: y.INVITE_CODE,
     shrink: 1,
     basis: 0,
-    align: Z.Z.Align.CENTER,
+    align: C.Z.Align.CENTER,
     className: D.text,
     children: (0, i.jsx)(m.Text, {
       className: D.inviteCode,
@@ -99,11 +99,11 @@ children: [
       children: r ? '...' : a.code
     })
   }),
-  (0, i.jsx)(Z.Z, {
+  (0, i.jsx)(C.Z, {
     grow: y.USES,
     basis: 0,
-    justify: Z.Z.Justify.END,
-    align: Z.Z.Align.CENTER,
+    justify: C.Z.Justify.END,
+    align: C.Z.Align.CENTER,
     className: l()(D.text),
     children: (0, i.jsx)(m.Text, {
       className: D.uses,
@@ -111,16 +111,16 @@ children: [
       children: d
     })
   }),
-  (0, i.jsx)(Z.Z, {
+  (0, i.jsx)(C.Z, {
     grow: y.EXPIRES,
     basis: 0,
-    align: Z.Z.Align.CENTER,
-    justify: Z.Z.Justify.END,
+    align: C.Z.Align.CENTER,
+    justify: C.Z.Justify.END,
     className: l()(D.text, D.countdownColumn),
     children: (0, i.jsx)(m.Text, {
       className: D.countdown,
       variant: 'text-sm/normal',
-      children: (0, i.jsx)(C.Z, {
+      children: (0, i.jsx)(f.Z, {
         deadline: a.getExpiresAt()
       })
     })
@@ -152,10 +152,10 @@ canCreateInvites: N = !1
 } = (0, v.FR)(s),
 {
   showAlertMode: p
-} = (0, f.sw)(s.id),
-C = (0, u.e7)([O.Z], () => O.Z.getGuildIncident(s.id)),
-R = s.hasFeature(L.oNc.INVITES_DISABLED) || p && (null == C ? void 0 : C.invitesDisabledUntil) != null && new Date(C.invitesDisabledUntil) > new Date(),
-[b, P] = a.useState(!1);
+} = (0, x.sw)(s.id),
+f = (0, u.e7)([S.Z], () => S.Z.getGuildIncident(s.id)),
+b = s.hasFeature(L.oNc.INVITES_DISABLED) || p && (null == f ? void 0 : f.invitesDisabledUntil) != null && new Date(f.invitesDisabledUntil) > new Date(),
+[Z, P] = a.useState(!1);
   a.useEffect(() => {
 E && v.WC.trackExposure({
   guildId: s.id,
@@ -175,7 +175,7 @@ U = a.useMemo(() => null == n || _ ? [] : c()(n).sortBy(e => {
   _
 ]),
 H = () => {
-  (0, m.openModalLazy)(async () => e => (0, i.jsx)(A.default, {
+  (0, m.openModalLazy)(async () => e => (0, i.jsx)(R.default, {
     ...e,
     channel: o,
     guild: s,
@@ -183,7 +183,7 @@ H = () => {
   }));
 },
 w = async e => {
-  if (!b) {
+  if (!Z) {
     P(!0);
     try {
       await (0, v.AG)(s, e);
@@ -194,15 +194,15 @@ w = async e => {
 }, W = () => {
   if (p) {
     let e = {
-      source: x.Zu.GUILD_SETTINGS
+      source: O.Zu.GUILD_SETTINGS
     };
-    (0, m.openModalLazy)(async () => n => (0, i.jsx)(S.default, {
+    (0, m.openModalLazy)(async () => n => (0, i.jsx)(A.default, {
       ...n,
       guildId: s.id,
       analyticsData: e
     }));
   } else
-    R ? w(!1) : (0, m.openModalLazy)(async () => function(e) {
+    b ? w(!1) : (0, m.openModalLazy)(async () => function(e) {
       return (0, i.jsx)(M.Z, {
         ...e,
         onConfirm: () => w(!0)
@@ -213,9 +213,9 @@ w = async e => {
 sections: [Math.max(1, U.length)],
 renderSection: () => {
   let e;
-  return e = 0 !== U.length || _ ? (0, i.jsxs)(Z.Z, {
+  return e = 0 !== U.length || _ ? (0, i.jsxs)(C.Z, {
     children: [
-      (0, i.jsx)(Z.Z.Child, {
+      (0, i.jsx)(C.Z.Child, {
         grow: y.INVITER,
         basis: 0,
         className: B.marginReset,
@@ -223,7 +223,7 @@ renderSection: () => {
           children: j.Z.Messages.INSTANT_INVITE_INVITER
         })
       }),
-      (0, i.jsx)(Z.Z.Child, {
+      (0, i.jsx)(C.Z.Child, {
         basis: 0,
         grow: y.INVITE_CODE,
         className: B.marginReset,
@@ -231,7 +231,7 @@ renderSection: () => {
           children: j.Z.Messages.INSTANT_INVITE_INVITE_CODE
         })
       }),
-      (0, i.jsx)(Z.Z.Child, {
+      (0, i.jsx)(C.Z.Child, {
         grow: y.USES,
         basis: 0,
         className: D.textAlignRight,
@@ -239,7 +239,7 @@ renderSection: () => {
           children: j.Z.Messages.INSTANT_INVITE_USES
         })
       }),
-      (0, i.jsx)(Z.Z.Child, {
+      (0, i.jsx)(C.Z.Child, {
         grow: y.EXPIRES,
         basis: 0,
         className: D.textAlignRight,
@@ -277,21 +277,21 @@ renderSection: () => {
             onCreateInvite: H
           }) : j.Z.Messages.SETTINGS_INVITE_TIP_WITHOUT_CREATE
         }),
-        (h || p || R) && (0, i.jsxs)('div', {
+        (h || p || b) && (0, i.jsxs)('div', {
           className: D.inviteDisabledContainer,
           children: [
             (0, i.jsx)(m.Button, {
               size: m.Button.Sizes.SMALL,
-              color: R ? m.Button.Colors.BRAND : m.Button.Colors.RED,
+              color: b ? m.Button.Colors.BRAND : m.Button.Colors.RED,
               disabled: !E,
-              submitting: b,
+              submitting: Z,
               onClick: W,
-              children: R ? j.Z.Messages.ENABLE_INVITES : j.Z.Messages.DISABLE_INVITES
+              children: b ? j.Z.Messages.ENABLE_INVITES : j.Z.Messages.DISABLE_INVITES
             }),
-            R && (0, i.jsxs)('div', {
+            b && (0, i.jsxs)('div', {
               className: D.inviteDisabledTip,
               children: [
-                (0, i.jsx)(m.CircleExclamationPointIcon, {
+                (0, i.jsx)(m.CircleWarningIcon, {
                   size: 'custom',
                   width: 20,
                   height: 20,
@@ -330,7 +330,7 @@ renderRow: e => {
     hide: l,
     invite: a,
     showChannel: d,
-    inviteDisabled: R
+    inviteDisabled: b
   }, a.code);
 },
 rowHeight: (e, n) => e > 0 ? 0 : 0 === U.length && 0 === n && _ ? 62 : null != U[n] ? 62 : 0,

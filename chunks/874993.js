@@ -121,7 +121,7 @@ children: [
             text: (0, s.jsxs)('div', {
               className: p.automodBadgeText,
               children: [
-                (0, s.jsx)(l.CheckmarkBoldIcon, {
+                (0, s.jsx)(l.CheckmarkLargeBoldIcon, {
                   size: 'xxs',
                   color: 'currentColor',
                   className: p.checkmarkIcon

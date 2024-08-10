@@ -15,7 +15,7 @@ var i = n(655922),
 function c(e) {
   let {
 activity: t,
-onClick: n
+onAction: n
   } = e, {
 profileType: c
   } = (0, s.z)(), d = (0, i.Z)(t);
@@ -23,6 +23,8 @@ profileType: c
 text: u.Z.Messages.WATCH,
 themeColor: c === l.y0.FULL_SIZE ? 'secondary' : 'primary',
 fullWidth: !0,
-onClick: e => (null == n || n(e), window.open(d))
+onClick: () => (null == n || n({
+  action: 'PRESS_WATCH_BUTTON'
+}), window.open(d))
   }) : null;
 }

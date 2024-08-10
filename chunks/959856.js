@@ -250,9 +250,6 @@ return Promise.resolve();
 return Promise.reject(Error('startLocalAudioRecording is not supported.'));
   }
   stopLocalAudioRecording(e) {}
-  speedTester(e, t) {
-throw Error('speedTester is not supported.');
-  }
   setHasFullbandPerformance(e) {}
   getSupportedSecureFramesProtocolVersion() {
 return 0;

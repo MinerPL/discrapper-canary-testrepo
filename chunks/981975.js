@@ -13,7 +13,7 @@ var s = n(735250),
   d = n(481060),
   u = n(570140),
   _ = n(275759),
-  I = n(153124),
+  I = n(313201),
   E = n(63063),
   T = n(243730),
   m = n(764260),
@@ -123,7 +123,7 @@ F = (0, s.jsx)(M, {
   locked: i
 });
   else if (G.length > 0) {
-var w, k;
+var k, w;
 let e = null;
 G.length < 10 && (e = (0, s.jsx)(d.Button, {
   className: r()(f.addVerificationButton, f.addVerificationButtonAppend),
@@ -144,7 +144,7 @@ G.length < 10 && (e = (0, s.jsx)(d.Button, {
   })
 })), F = (0, s.jsxs)(s.Fragment, {
   children: [
-    (w = () => (0, m.d_)(n.id, []), k = i, (0, s.jsxs)(s.Fragment, {
+    (k = () => (0, m.d_)(n.id, []), w = i, (0, s.jsxs)(s.Fragment, {
       children: [
         (0, s.jsxs)('div', {
           className: f.headerTitleContainer,
@@ -161,8 +161,8 @@ G.length < 10 && (e = (0, s.jsx)(d.Button, {
               size: d.Button.Sizes.TINY,
               look: d.Button.Looks.LINK,
               color: d.Button.Colors.LINK,
-              onClick: w,
-              disabled: k,
+              onClick: k,
+              disabled: w,
               children: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_CLEAR_ALL
             })
           ]
@@ -284,7 +284,7 @@ children: (0, s.jsxs)('div', {
     (null != Z ? Z : 0) > 0 ? (0, s.jsxs)('div', {
       className: f.warningContainer,
       children: [
-        (0, s.jsx)(d.CircleExclamationPointIcon, {
+        (0, s.jsx)(d.CircleWarningIcon, {
           size: 'custom',
           width: 20,
           height: 20,

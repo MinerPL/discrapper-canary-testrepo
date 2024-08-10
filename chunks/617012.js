@@ -48,7 +48,7 @@ function I(e) {
 isSelected: n,
 itemValue: t,
 onClick: a
-  } = e, s = t ? d.allow : d.deny, c = t ? o.CheckmarkLargeIcon : o.CloseSmallIcon, u = t ? r.Z.Messages.PERMISSION_OVERRIDE_ALLOW : r.Z.Messages.PERMISSION_OVERRIDE_DENY, I = (0, o.useRadioItem)({
+  } = e, s = t ? d.allow : d.deny, c = t ? o.CheckmarkLargeIcon : o.XSmallIcon, u = t ? r.Z.Messages.PERMISSION_OVERRIDE_ALLOW : r.Z.Messages.PERMISSION_OVERRIDE_DENY, I = (0, o.useRadioItem)({
 isSelected: n,
 label: u
   });

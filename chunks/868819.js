@@ -35,7 +35,7 @@ function m(e) {
   return {
 text: null != e ? e : f.Z.Messages.APPLICATION_COMMAND_FAILED,
 color: 'text-danger',
-icon: (0, r.jsx)(u.CircleExclamationPointIcon, {
+icon: (0, r.jsx)(u.CircleWarningIcon, {
   size: 'xs',
   color: 'currentColor',
   className: s()(h.icon, h.errorIcon)
@@ -68,7 +68,7 @@ t.ZP = i.memo(function(e) {
 message: t,
 className: n,
 component: a
-  } = e, s = (0, o.Z)(), u = (0, l.e7)([d.Z], () => d.Z.getInteraction(t), [t]);
+  } = e, s = (0, o.Z)(), u = (0, l.e7)([d.ZP], () => d.ZP.getInteraction(t), [t]);
   i.useEffect(() => {
 let e = null;
 if (t.hasFlag(E.iLy.LOADING) && null != u) {

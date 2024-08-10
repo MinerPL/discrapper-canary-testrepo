@@ -29,9 +29,9 @@ handleBlock: M,
 channelId: S,
 warningId: h,
 senderId: g
-  } = e, C = () => {
+  } = e, b = () => {
 t();
-  }, b = (0, T.C2)();
+  }, C = (0, T.C2)();
   n.useEffect(() => {
 (0, R.MC)(A.rMx.SAFETY_WARNING_MODAL_VIEWED, {
   channelId: S,
@@ -79,7 +79,7 @@ children: (0, a.jsxs)(d.Scroller, {
           onClick: t,
           innerClassName: x.closeButtonInner,
           className: x.closeButton,
-          children: (0, a.jsx)(d.CloseSmallIcon, {
+          children: (0, a.jsx)(d.XSmallIcon, {
             size: 'sm',
             color: 'currentColor',
             className: x.closeIcon
@@ -92,7 +92,7 @@ children: (0, a.jsxs)(d.Scroller, {
       children: [
         (0, a.jsx)('div', {
           className: x.tipsSection,
-          children: b.map((e, s) => (0, a.jsxs)('div', {
+          children: C.map((e, s) => (0, a.jsxs)('div', {
             className: x.tipRow,
             children: [
               (0, a.jsx)(d.Heading, {
@@ -191,7 +191,7 @@ children: (0, a.jsxs)(d.Scroller, {
                       color: d.Button.Colors.RED,
                       'aria-label': m.Z.Messages.STRANGER_DANGER_BANNER_BLOCK,
                       onClick: () => {
-                        C(), M();
+                        b(), M();
                       },
                       children: m.Z.Messages.STRANGER_DANGER_BANNER_BLOCK
                     })

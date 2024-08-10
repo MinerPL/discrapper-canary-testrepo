@@ -1,70 +1,96 @@
 n.d(t, {
   Z: function() {
-return E;
+return I;
   }
 });
 var i = n(735250),
   a = n(470079),
   s = n(597312),
-  l = n(410030),
-  r = n(100527),
-  o = n(906732),
-  c = n(785717),
-  u = n(318661),
-  d = n(502762),
-  h = n(475413),
-  p = n(228168),
-  m = n(689938),
-  _ = n(833802),
-  f = n(321975);
+  l = n(481060),
+  r = n(410030),
+  o = n(100527),
+  c = n(906732),
+  u = n(785717),
+  d = n(221292),
+  h = n(318661),
+  p = n(299261),
+  m = n(502762),
+  _ = n(475413),
+  f = n(228168),
+  E = n(689938),
+  g = n(833802),
+  C = n(321975);
 
-function E(e) {
+function I(e) {
   let {
 user: t,
 channel: n,
-onViewBlockedProfileClick: E
-  } = e, g = n.id, C = (0, c.Q1)({
+onViewBlockedProfileClick: I
+  } = e, x = (0, h.ZP)(t.id), T = (0, r.ZP)(), {
+analyticsLocations: N
+  } = (0, c.ZP)(o.Z.BLOCKED_PROFILE_PANEL), v = (0, u.ZB)({
 layout: 'BLOCKED_PROFILE_PANEL',
 userId: t.id,
-channelId: g
-  }), {
-analyticsLocations: I
-  } = (0, o.ZP)(r.Z.BLOCKED_PROFILE_PANEL), x = (0, u.ZP)(t.id), T = (0, l.ZP)(), N = a.useRef(null);
-  return (0, i.jsx)(o.Gt, {
-value: I,
-children: (0, i.jsx)(c.Mt, {
-  layout: 'BLOCKED_PROFILE_PANEL',
-  userId: t.id,
-  channelId: n.id,
-  children: (0, i.jsx)(d.Z, {
-    ref: N,
+channelId: n.id
+  }), S = a.useRef(null);
+  return (0, i.jsx)(c.Gt, {
+value: N,
+children: (0, i.jsx)(u.Mt, {
+  value: v,
+  children: (0, i.jsx)(m.Z, {
+    ref: S,
     user: t,
     displayProfile: x,
-    profileType: p.y0.PANEL,
+    profileType: f.y0.PANEL,
     themeOverride: T,
-    className: _.container,
+    className: g.container,
     children: (0, i.jsx)(s.u2, {
       children: (0, i.jsxs)('div', {
-        className: _.container,
+        className: g.container,
         children: [
           (0, i.jsx)('img', {
             alt: '',
-            src: f,
-            className: _.previewForCollected,
+            src: C,
+            className: g.previewForCollected,
             'aria-hidden': !0
           }),
-          (0, i.jsx)(h.tG, {
-            className: _.centeredButton,
-            action: 'VIEW_BLOCKED_PROFILE',
-            text: m.Z.Messages.VIEW_PROFILE,
-            autoFocus: !0,
-            fullWidth: !1,
-            onClick: () => {
-              null == E || E(), C({
+          (0, i.jsxs)('div', {
+            className: g.body,
+            children: [
+              (0, i.jsx)(p.Z, {
+                user: t,
+                guildId: null
+              }),
+              (0, i.jsx)(l.Heading, {
+                variant: 'heading-lg/bold',
+                className: g.header,
+                children: E.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_TITLE
+              }),
+              (0, i.jsx)(l.Text, {
+                variant: 'text-sm/medium',
+                children: E.Z.Messages.USER_PROFILE_BLOCKED_PANEL_BODY_USERNAME.format({
+                  username: t.username
+                })
+              }),
+              (0, i.jsx)(l.Text, {
+                variant: 'text-sm/medium',
+                children: E.Z.Messages.USER_PROFILE_BLOCKED_PANEL_BODY_CONFIRMATION
+              }),
+              (0, i.jsx)(_.tG, {
+                className: g.centeredButton,
                 action: 'VIEW_BLOCKED_PROFILE',
-                analyticsLocations: I
-              });
-            }
+                text: E.Z.Messages.VIEW_PROFILE,
+                autoFocus: !0,
+                fullWidth: !1,
+                onClick: () => {
+                  null == I || I(), (0, d.pQ)({
+                    action: 'VIEW_BLOCKED_PROFILE',
+                    analyticsLocations: N,
+                    ...v
+                  });
+                }
+              })
+            ]
           })
         ]
       })

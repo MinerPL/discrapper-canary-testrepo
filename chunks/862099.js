@@ -19,8 +19,8 @@ var i, a, s = n(735250),
   _ = n(471445),
   h = n(986332),
   E = n(662842),
-  I = n(703656),
-  m = n(922482),
+  m = n(703656),
+  I = n(922482),
   g = n(565799),
   p = n(501655),
   T = n(192079),
@@ -82,7 +82,7 @@ children: [
         onClick: c,
         className: B.closeIcon,
         'aria-label': w.Z.Messages.CLOSE,
-        children: (0, s.jsx)(d.CloseSmallIcon, {
+        children: (0, s.jsx)(d.XSmallIcon, {
           size: 'xs',
           color: 'currentColor'
         })
@@ -208,13 +208,13 @@ noticeType: i
 startTime: h,
 endTime: E
   } = (0, M.ZP)(n), {
-startDateTimeString: I,
-upcomingEvent: m,
+startDateTimeString: m,
+upcomingEvent: I,
 diffMinutes: g
-  } = (0, j.ub)(h.toISOString(), null == E ? void 0 : E.toISOString()), p = m ? g > 0 ? w.Z.Messages.STARTING_IN_MINUTES.format({
+  } = (0, j.ub)(h.toISOString(), null == E ? void 0 : E.toISOString()), p = I ? g > 0 ? w.Z.Messages.STARTING_IN_MINUTES.format({
 minutes: g
   }) : w.Z.Messages.STARTING_SOON : w.Z.Messages.STARTING_ON_DATE.format({
-date: I
+date: m
   });
   return r.useEffect(() => {
 A.default.track(k.rMx.CHANNEL_NOTICE_VIEWED, {
@@ -251,7 +251,7 @@ children: [
         },
         className: B.closeIcon,
         'aria-label': w.Z.Messages.CLOSE,
-        children: (0, s.jsx)(d.CloseSmallIcon, {
+        children: (0, s.jsx)(d.XSmallIcon, {
           size: 'xs',
           color: 'currentColor'
         })
@@ -357,7 +357,7 @@ label: n
 fullWidth: !0,
 className: B.joinButton,
 onClick: () => {
-  null != t && null != t.getGuildId() && ((0, m.Cq)(t), (0, I.XU)(t.getGuildId(), t.id));
+  null != t && null != t.getGuildId() && ((0, I.Cq)(t), (0, m.XU)(t.getGuildId(), t.id));
 },
 color: d.Button.Colors.GREEN,
 size: d.Button.Sizes.SMALL,
@@ -482,8 +482,8 @@ guildEvent: a
 guildEvent: a,
 channel: i
   }));
-  let I = t.hasFeature(k.oNc.COMMUNITY) || t.hasFeature(k.oNc.HUB);
-  if (null == u && null != r && !I) {
+  let m = t.hasFeature(k.oNc.COMMUNITY) || t.hasFeature(k.oNc.HUB);
+  if (null == u && null != r && !m) {
 let {
   upcomingEvent: e,
   noticeType: t

@@ -97,7 +97,7 @@ return L(f.NYc.PREMIUM, void 0, e);
   }
   inReverseTrial() {
 let e = L(f.NYc.PREMIUM, void 0, !0);
-return null != e && null != e.trialId && h.h8.includes(e.trialId);
+return !!(null != e && null != e.trialId && h.h8.includes(e.trialId)) && null == e.paymentSourceId;
   }
   getSubscriptions() {
 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];

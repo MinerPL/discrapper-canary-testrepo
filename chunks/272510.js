@@ -54,14 +54,24 @@ onAction: () => h({
   action: 'REPORT',
   analyticsLocations: p
 })
-  }), S = [
+  }), S = (0, c.T)({
+user: t,
+guildId: n,
+location: m,
+color: 'danger',
+onAction: () => h({
+  action: 'REPORT',
+  analyticsLocations: p
+})
+  }), A = [
 [
   f,
   I
 ],
 [
   T,
-  g
+  g,
+  S
 ],
 [(0, o.Z)({
   id: t.id,
@@ -72,7 +82,7 @@ onAction: () => h({
   })
 })]
   ];
-  return S.every(e => e.every(e => null == e)) ? null : (0, r.jsx)(s.Gt, {
+  return A.every(e => e.every(e => null == e)) ? null : (0, r.jsx)(s.Gt, {
 value: p,
 children: (0, r.jsx)(i.Popout, {
   renderPopout: e => {
@@ -84,7 +94,7 @@ children: (0, r.jsx)(i.Popout, {
       onSelect: void 0,
       onClose: t,
       'aria-label': E.Z.Messages.PROFILE_ACTIONS_MENU_LABEL,
-      children: S.map((e, t) => (0, r.jsx)(i.MenuGroup, {
+      children: A.map((e, t) => (0, r.jsx)(i.MenuGroup, {
         children: e.map(e => e)
       }, t))
     });

@@ -1,4 +1,4 @@
-n(653041), n(724458), n(47120);
+n(47120), n(653041), n(724458);
 var r, i, a, s, o = n(512722),
   l = n.n(o),
   u = n(392711),
@@ -292,7 +292,11 @@ s = 'ChannelRTCStore', (a = 'displayName') in(i = ea) ? Object.defineProperty(i,
   configurable: !0,
   writable: !0
 }) : i[a] = s, t.Z = new ea(_.Z, {
-  CONNECTION_OPEN: X,
+  CONNECTION_OPEN: function() {
+for (let e of b)
+  Q(e);
+X();
+  },
   CONNECTION_OPEN_SUPPLEMENTAL: X,
   THREAD_LIST_SYNC: X,
   OVERLAY_INITIALIZE: X,

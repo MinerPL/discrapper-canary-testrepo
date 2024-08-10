@@ -20,26 +20,28 @@ function _(e) {
   let {
 user: n,
 guildId: l,
-context: _
+channelId: _,
+context: f
   } = e, {
-id: f
+id: g
   } = n, {
-loading: g,
+loading: I,
 note: m
-  } = (0, s.Z)(f), I = !g && null != m && m.length > 0, R = _ === Z.IlC.POPOUT, N = r.useContext(c.AnalyticsContext), {
-analyticsLocations: A
+  } = (0, s.Z)(g), R = !I && null != m && m.length > 0, N = f === Z.IlC.POPOUT, A = r.useContext(c.AnalyticsContext), {
+analyticsLocations: C
   } = (0, a.ZP)();
-  return f === d.default.getId() || o.Z.hidePersonalInformation || R ? null : (0, t.jsx)(i.MenuItem, {
+  return g === d.default.getId() || o.Z.hidePersonalInformation || N ? null : (0, t.jsx)(i.MenuItem, {
 id: 'note',
-label: g ? M.Z.Messages.LOADING_NOTE : I ? M.Z.Messages.EDIT_NOTE : M.Z.Messages.ADD_NOTE,
+label: I ? M.Z.Messages.LOADING_NOTE : R ? M.Z.Messages.EDIT_NOTE : M.Z.Messages.ADD_NOTE,
 action: () => {
   (0, u.openUserProfileModal)({
     userId: n.id,
     section: E.oh.USER_INFO,
     subsection: E.Tb.NOTE,
     guildId: l,
-    sourceAnalyticsLocations: A,
-    analyticsLocation: N.location
+    channelId: _,
+    sourceAnalyticsLocations: C,
+    analyticsLocation: A.location
   });
 }
   });

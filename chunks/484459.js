@@ -1,42 +1,19 @@
 n.d(t, {
-  W: function() {
-return E;
-  },
   Z: function() {
-return f;
+return _;
   }
-}), n(411104);
+});
 var r = n(570140),
   i = n(232567),
   a = n(220082),
   s = n(275759),
   o = n(365943),
-  l = n(598077),
-  u = n(592125),
-  c = n(271383),
-  d = n(621853),
-  _ = n(120569);
-
-function E() {
-  let e, t, n;
-  for (var r, i, a = arguments.length, s = Array(a), o = 0; o < a; o++)
-s[o] = arguments[o];
-  let u = s[0],
-c = s[1];
-  if ('string' == typeof u && ('string' == typeof c || null == c))
-e = u, t = c, n = s[2];
-  else if (u instanceof l.Z && ('object' == typeof c || null == c))
-e = u.id, t = u.getAvatarURL(void 0, 80), n = c;
-  else
-throw Error('Invalid arguments');
-  return null == e ? Promise.resolve() : f(e, t, {
-withMutualFriends: null === (r = null == n ? void 0 : n.withMutualFriends) || void 0 === r || r,
-withMutualGuilds: null === (i = null == n ? void 0 : n.withMutualGuilds) || void 0 === i || i,
-...n
-  });
-}
-async function f(e, t) {
-  var n, l, E;
+  l = n(592125),
+  u = n(271383),
+  c = n(621853),
+  d = n(120569);
+async function _(e, t) {
+  var n, _, E;
   let f, {
 withMutualGuilds: h = !1,
 withMutualFriendsCount: p = !1,
@@ -50,17 +27,17 @@ abortSignal: N
   } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
   if ('' === e)
 return;
-  (0, o.z)(), null != t && (0, a.vM)(t), null != S && !h && (h = !0), null != S && (f = null !== (l = null === (n = (0, s.Ur)({
-guildMember: c.ZP.getMember(S, e),
-channel: u.Z.getChannel(A)
-  })) || void 0 === n ? void 0 : n.id) && void 0 !== l ? l : void 0);
-  let v = d.Z.getUserProfile(e),
-O = d.Z.getGuildMemberProfile(e, S),
-R = d.Z.getMutualGuilds(e),
-C = d.Z.getMutualFriends(e),
-y = d.Z.getMutualFriendsCount(e),
-D = d.Z.isFetchingProfile(e),
-L = T ? _.Z : void 0,
+  (0, o.z)(), null != t && (0, a.vM)(t), null != S && !h && (h = !0), null != S && (f = null !== (_ = null === (n = (0, s.Ur)({
+guildMember: u.ZP.getMember(S, e),
+channel: l.Z.getChannel(A)
+  })) || void 0 === n ? void 0 : n.id) && void 0 !== _ ? _ : void 0);
+  let v = c.Z.getUserProfile(e),
+O = c.Z.getGuildMemberProfile(e, S),
+R = c.Z.getMutualGuilds(e),
+C = c.Z.getMutualFriends(e),
+y = c.Z.getMutualFriendsCount(e),
+D = c.Z.isFetchingProfile(e),
+L = T ? d.Z : void 0,
 b = null == R && h,
 M = null == C && m,
 P = null == y && p,

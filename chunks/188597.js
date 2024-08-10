@@ -55,7 +55,7 @@ channelId: u,
 guildId: _,
 localState: E
   } = e, m = f.default.fromTimestamp(Date.now());
-  if (!p.Z.canQueueInteraction(n, m))
+  if (!p.ZP.canQueueInteraction(n, m))
 return;
   await c.Z.unarchiveThreadIfNecessary(u), (0, h.kz)(m, {
 messageId: n,

@@ -20,8 +20,8 @@ setSigned: u,
 sidebarWidth: _,
 windowWidth: h,
 transition: E,
-brandPrimaryColor: I
-  } = e, m = a.useMemo(() => (h - _) / 2, [
+brandPrimaryColor: m
+  } = e, I = a.useMemo(() => (h - _) / 2, [
 _,
 h
   ]);
@@ -39,16 +39,17 @@ children: [
         40,
         0
       ]).to(e => 'translateY('.concat(e, 'px)')),
-      width: m
+      width: I
     },
     children: (0, i.jsxs)('div', {
       className: d.sidebarLeftDecoration,
       style: {
-        width: m
+        width: I
       },
       children: [
         (0, i.jsx)(r.Heading, {
           variant: 'heading-xxl/medium',
+          className: d.header,
           children: c.Z.Messages.CLAN_SETUP_SIGN_TITLE
         }),
         (0, i.jsx)(r.Text, {
@@ -64,11 +65,13 @@ children: [
     children: (0, i.jsx)(o.Z, {
       guildId: t,
       canSignCharter: null != u,
-      onSignCharter: () => null == u ? void 0 : u(!n),
+      signed: n,
+      onSignCharter: e => null == u ? void 0 : u(e),
       signHintPosition: l.p.RIGHT,
-      primaryColor: I,
+      primaryColor: m,
       className: d.charterScroll,
-      fullHeight: !0
+      fullHeight: !0,
+      showDisclaimer: !0
     })
   })
 ]

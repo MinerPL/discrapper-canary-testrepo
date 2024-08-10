@@ -127,7 +127,7 @@ return r && !h ? null : (0, s.jsxs)('div', {
       onClick: () => {
         c.K.set(M, !0), u(!0);
       },
-      children: (0, s.jsx)(d.CloseSmallIcon, {
+      children: (0, s.jsx)(d.XSmallIcon, {
         size: 'md',
         color: 'currentColor'
       })
@@ -350,7 +350,7 @@ return (0, s.jsxs)(d.FormSection, {
             value: t.publicUpdatesChannelId,
             options: N,
             onChange: Z,
-            isDisabled: !n
+            isDisabled: !i
           })
         })
       ]

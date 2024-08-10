@@ -44,7 +44,7 @@ children: e => {
       children: e => (0, r.jsx)('div', {
         className: l.newMemberBadge,
         ...e,
-        children: (0, r.jsx)(i.NewUserLargeIcon, {
+        children: (0, r.jsx)(i.NewUserIcon, {
           size: 'custom',
           color: 'currentColor',
           width: 20,

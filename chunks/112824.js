@@ -52,7 +52,7 @@ children: [
       })
     ]
   }),
-  _ ? (0, s.jsx)(o.CircleExclamationPointIcon, {
+  _ ? (0, s.jsx)(o.CircleWarningIcon, {
     size: 'custom',
     color: 'currentColor',
     height: 24,

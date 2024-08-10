@@ -15,15 +15,16 @@ var r = n(392711),
   p = n(48481),
   m = n(526761),
   I = n(674563);
-let T = Math.random() * (5 * E.Z.Millis.SECOND),
+let T = 10 + Math.random() * (10 * E.Z.Millis.SECOND),
   g = 2 * E.Z.Millis.HOUR + Math.floor(Math.random() * (10 * E.Z.Millis.MINUTE)),
-  S = null;
-class A extends s.Z {
+  S = null,
+  A = !1;
+class N extends s.Z {
   _initialize() {
 f.DZ.beforeSendCallbacks.push({
   hasChanges: () => !1,
   processProto: () => {
-    C(g);
+    y(g);
   }
 }), f.DZ.beforeSendCallbacks.push({
   hasChanges: () => d.Z.hasPendingUsage() && h.Z.hasLoaded(m.yP.FRECENCY_AND_FAVORITES_SETTINGS),
@@ -66,10 +67,10 @@ f.DZ.beforeSendCallbacks.push({
   constructor(...e) {
 var t, n, r;
 super(...e), t = this, n = 'actions', r = {
-  POST_CONNECTION_OPEN: N,
-  CONNECTION_RESUMED: N,
-  CONNECTION_CLOSED: O,
-  APP_STATE_UPDATE: v
+  POST_CONNECTION_OPEN: v,
+  CONNECTION_RESUMED: v,
+  CONNECTION_CLOSED: R,
+  APP_STATE_UPDATE: O
 }, n in t ? Object.defineProperty(t, n, {
   value: r,
   enumerable: !0,
@@ -79,24 +80,24 @@ super(...e), t = this, n = 'actions', r = {
   }
 }
 
-function N() {
-  C(T);
+function v() {
+  A = !0, y(T);
 }
 
-function v(e) {
-  'active' !== e.state && (clearTimeout(S), S = null, R());
+function O(e) {
+  A && 'active' !== e.state && (clearTimeout(S), S = null, C());
 }
 
-function O() {
-  clearTimeout(S), S = null, R();
+function R() {
+  A && (clearTimeout(S), S = null, C());
 }
-async function R() {
-  C(g), !h.Z.hasLoaded(m.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (d.Z.hasPendingUsage() || u.Z.hasPendingUsage() || o.ZP.hasPendingUsage() || l.Z.hasPendingUsage() || _.Z.hasPendingUsage()) && await f.DZ.loadIfNecessary(), i().forEach(f.aj, e => {
+async function C() {
+  y(g), !h.Z.hasLoaded(m.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (d.Z.hasPendingUsage() || u.Z.hasPendingUsage() || o.ZP.hasPendingUsage() || l.Z.hasPendingUsage() || _.Z.hasPendingUsage()) && await f.DZ.loadIfNecessary(), i().forEach(f.aj, e => {
 e.markDirtyIfHasPendingChange();
   });
 }
 
-function C(e) {
-  null != S && clearTimeout(S), S = setTimeout(R, e);
+function y(e) {
+  null != S && clearTimeout(S), S = setTimeout(C, e);
 }
-t.Z = new A();
+t.Z = new N();

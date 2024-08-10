@@ -48,7 +48,7 @@ function H(e) {
 user: t,
 currentUser: n,
 activity: H,
-onClick: Z,
+onAction: Z,
 onClose: Y
   } = e, {
 analyticsLocations: j,
@@ -101,8 +101,8 @@ PermissionStore: y.Z
   })), [ei, ea] = i.useState(!1), es = !er || ei || et || U.isPlatformEmbedded && !ee;
   if (null == X || !(0, h.Z)(H, B.xjy.JOIN) && !Q)
 return null;
-  let eo = async e => {
-if (null == Z || Z(e), Q && er && null != J && null != X && await (0, _.Z)({
+  let eo = async () => {
+if (Q && er && null != J && null != X && await (0, _.Z)({
     applicationId: X,
     activityChannelId: J,
     currentEmbeddedApplication: q,
@@ -116,7 +116,7 @@ if (null == Z || Z(e), Q && er && null != J && null != X && await (0, _.Z)({
   return;
 }
 if (er && null != X && null != $) {
-  var n;
+  var e;
   await l.Z.join({
     userId: t.id,
     sessionId: $,
@@ -128,7 +128,7 @@ if (er && null != X && null != $) {
   }), (0, m.Z)({
     type: B.q5t.JOIN,
     userId: t.id,
-    partyId: null == H ? void 0 : null === (n = H.party) || void 0 === n ? void 0 : n.id,
+    partyId: null == H ? void 0 : null === (e = H.party) || void 0 === e ? void 0 : e.id,
     applicationId: X,
     analyticsLocations: j
   });
@@ -162,7 +162,11 @@ children: e => (0, r.jsx)(G.tG, {
   submitting: en,
   themeColor: K === k.y0.FULL_SIZE ? 'secondary' : 'primary',
   fullWidth: !0,
-  onClick: eo
+  onClick: () => {
+    null == Z || Z({
+      action: 'PRESS_JOIN_BUTTON'
+    }), eo();
+  }
 })
   }) : (0, r.jsx)(s.Tooltip, {
 text: el(),
@@ -174,7 +178,11 @@ children: e => (0, r.jsx)(G.tG, {
   submitting: en,
   themeColor: K === k.y0.FULL_SIZE ? 'secondary' : 'primary',
   fullWidth: !0,
-  onClick: eo
+  onClick: () => {
+    null == Z || Z({
+      action: 'PRESS_ASK_TO_JOIN_BUTTON'
+    }), eo();
+  }
 })
   });
 }

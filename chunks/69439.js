@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return I;
+return m;
   }
 });
 var i = n(735250);
@@ -17,8 +17,8 @@ var a = n(442837),
   h = n(689938),
   E = n(207637);
 
-function I(e) {
-  var t, n, I, m;
+function m(e) {
+  var t, n, m, I;
   let {
 quest: g,
 location: p,
@@ -38,7 +38,7 @@ isEnrolling: O
   } = (0, a.cj)([c.Z], () => ({
 isClaiming: c.Z.isClaimingReward(g.id) || c.Z.isFetchingRewardCode(g.id),
 isEnrolling: c.Z.isEnrolling(g.id)
-  })), R = (null === (t = g.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, x = (null === (n = g.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, b = x && (null === (I = g.userStatus) || void 0 === I ? void 0 : I.claimedAt) == null, P = (0, d.iQ)(g), M = !(0, d.zi)(g), D = (0, o._Q)(g), y = (0, d.zK)(g, _.S7.IN_HOUSE_CONSOLE_QUEST), j = (0, d.zK)(g, _.S7.MOBILE_CONSOLE_QUEST), U = (0, d.Xv)(g.config), {
+  })), R = (null === (t = g.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, x = (null === (n = g.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, b = x && (null === (m = g.userStatus) || void 0 === m ? void 0 : m.claimedAt) == null, P = (0, d.iQ)(g), M = !(0, d.zi)(g), D = (0, o._Q)(g), y = (0, d.zK)(g, _.S7.IN_HOUSE_CONSOLE_QUEST), j = (0, d.zK)(g, _.S7.MOBILE_CONSOLE_QUEST), U = (0, d.Xv)(g.config), {
 text: G,
 onClick: k
   } = (0, u.Ks)({
@@ -67,7 +67,7 @@ beforeRequest: () => {
 afterRequest: e => {
   N.stopAnimation(), T(e);
 }
-  }), H = (null === (m = g.userStatus) || void 0 === m ? void 0 : m.claimedAt) != null, V = null;
+  }), H = (null === (I = g.userStatus) || void 0 === I ? void 0 : I.claimedAt) != null, V = null;
   return (P && b ? V = (0, i.jsx)(s.Button, {
 color: s.ButtonColors.BRAND,
 submitting: L,
@@ -75,7 +75,7 @@ onClick: null != k ? k : void 0,
 className: E.button,
 children: G
   }) : x ? V = (0, i.jsx)(s.Button, {
-color: s.ButtonColors.PRIMARY,
+color: s.ButtonColors.BRAND,
 className: E.button,
 onClick: null != k ? k : void 0,
 children: G

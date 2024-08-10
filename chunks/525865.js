@@ -7,6 +7,8 @@ e.exports = {
   footer: 'footer_aa1bff',
   gradient: 'gradient_aa1bff',
   gradientHidden: 'gradientHidden_aa1bff',
+  genericBackgroundImageDark: 'genericBackgroundImageDark_aa1bff backgroundImage_aa1bff',
+  genericBackgroundImageLight: 'genericBackgroundImageLight_aa1bff backgroundImage_aa1bff',
   genshinBackgroundImage: 'genshinBackgroundImage_aa1bff backgroundImage_aa1bff',
   valorantBackgroundImage: 'valorantBackgroundImage_aa1bff backgroundImage_aa1bff',
   popoutContent: 'popoutContent_aa1bff',

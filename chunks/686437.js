@@ -12,5 +12,7 @@ e.exports = {
   discover: 'discover_c7dd62',
   discover_monochrome: 'discover_monochrome_c7dd62',
   dinersclub: 'dinersclub_c7dd62',
-  dinersclub_monochrome: 'dinersclub_monochrome_c7dd62'
+  dinersclub_monochrome: 'dinersclub_monochrome_c7dd62',
+  unionpay: 'unionpay_c7dd62',
+  unionpay_monochrome: 'unionpay_monochrome_c7dd62'
 };

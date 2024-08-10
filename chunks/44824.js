@@ -5,8 +5,8 @@ return u;
 });
 var l = n(735250),
   r = n(470079),
-  i = n(941797),
-  a = n(810090),
+  i = n(70097),
+  a = n(947849),
   o = n(981631),
   s = n(689938);
 
@@ -14,7 +14,7 @@ function d(e) {
   let {
 poster: t,
 src: n,
-width: i,
+width: a,
 height: s,
 naturalWidth: d,
 naturalHeight: u,
@@ -29,12 +29,12 @@ let {
 } = b;
 if (null != e)
   m ? e.play() : e.pause();
-  }, [m]), d <= o.N_j && u <= o.XKF || d <= o.XKF && u <= o.N_j) ? (0, l.jsx)(a.Z, {
+  }, [m]), d <= o.N_j && u <= o.XKF || d <= o.XKF && u <= o.N_j) ? (0, l.jsx)(i.Z, {
 ref: b,
 className: h,
 poster: t,
 src: n,
-width: i,
+width: a,
 height: s,
 responsive: p,
 muted: !0,
@@ -45,7 +45,7 @@ preload: 'none',
   }) : (0, l.jsx)('img', {
 alt: '',
 src: t,
-width: i,
+width: a,
 height: s
   });
 }
@@ -55,7 +55,7 @@ function u(e) {
 src: t,
 poster: n,
 naturalWidth: r,
-naturalHeight: a,
+naturalHeight: i,
 responsive: o,
 autoPlay: u,
 className: m,
@@ -65,7 +65,7 @@ renderForwardComponent: p,
 alt: b = s.Z.Messages.GIF,
 ...g
   } = e;
-  return (0, l.jsx)(i.h.Consumer, {
+  return (0, l.jsx)(a.h.Consumer, {
 children: e => c({
   ...g,
   alt: b,
@@ -81,7 +81,7 @@ children: e => c({
   children(e) {
     let {
       src: n,
-      size: i,
+      size: a,
       animating: s,
       alt: u
     } = e;
@@ -90,10 +90,10 @@ children: e => c({
       className: m,
       poster: n,
       src: t,
-      width: i.width,
-      height: i.height,
+      width: a.width,
+      height: a.height,
       naturalWidth: r,
-      naturalHeight: a,
+      naturalHeight: i,
       responsive: o,
       play: h && s
     });

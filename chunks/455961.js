@@ -20,7 +20,7 @@ var i = n(735250),
   E = n(120522),
   g = n(386542),
   C = n(933843),
-  I = n(485731),
+  I = n(746599),
   x = n(1163),
   T = n(738672),
   N = n(981631),
@@ -39,7 +39,7 @@ className: t,
 look: d.Button.Looks.BLANK,
 size: d.Button.Sizes.NONE,
 onClick: n,
-children: (0, i.jsx)(d.CloseSmallIcon, {
+children: (0, i.jsx)(d.XSmallIcon, {
   size: 'xs',
   className: Z.closeIcon,
   color: 'white'
@@ -97,7 +97,7 @@ size: d.Button.Sizes.SMALL,
 className: Z.optInButton,
 onClick: x,
 submitting: s,
-children: S.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_POPOUT_CTA
+children: S.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_POPOUT_CTA_V2
   });
 }
 

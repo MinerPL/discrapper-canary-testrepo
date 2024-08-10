@@ -41,9 +41,6 @@ return b;
   f: function() {
 return B;
   },
-  gj: function() {
-return x;
-  },
   m7: function() {
 return L;
   },
@@ -55,6 +52,9 @@ return G;
   },
   v1: function() {
 return k;
+  },
+  wO: function() {
+return x;
   }
 });
 var r, i, a = n(735250),
@@ -96,6 +96,11 @@ G
   [d.s.WATCHED_MEDIA]: [
 Y,
 j
+  ],
+  [d.s.LAUNCHED_ACTIVITY]: [
+P,
+M,
+G
   ]
 };
 (r = i || (i = {}))[r.CARD = 0] = 'CARD', r[r.POPOUT = 1] = 'POPOUT', r[r.GAME_PROFILE = 2] = 'GAME_PROFILE', r[r.USER_PROFILE = 3] = 'USER_PROFILE', r[r.EMBED = 4] = 'EMBED';
@@ -183,7 +188,7 @@ streamPreviewUrl: u
   } = (0, g.Z)(t);
   return (0, a.jsxs)(L, {
 children: [
-  null == u ? (0, a.jsx)(h.GameControllerIcon, {
+  2 === s ? null : null == u ? (0, a.jsx)(h.GameControllerIcon, {
     size: 'xxs',
     color: l
   }) : (0, a.jsx)(h.ScreenArrowIcon, {
@@ -272,9 +277,12 @@ function x(e) {
 entry: t
   } = e, {
 location: n
-  } = D(), r = 0 === n ? h.tokens.colors.STATUS_POSITIVE : void 0;
+  } = D(), r = (0, m.Hi)(n, [
+0,
+2
+  ]) ? h.tokens.colors.STATUS_POSITIVE : void 0;
   return (0, S.Ol)(t) ? (0, a.jsx)(b, {
-Icon: h.NewUserSmallIcon,
+Icon: h.NewUserSimpleIcon,
 text: O.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER,
 iconColor: r
   }) : null;
@@ -460,6 +468,8 @@ className: i
   ]) ? {
 defaultTextColor: 'content-inventory-overlay-text-secondary',
 defaultIconColor: h.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY
+  } : 2 === n ? {
+defaultTextColor: 'text-muted'
   } : {
 defaultTextColor: 'text-secondary'
   }, (0, a.jsx)(y.Provider, {
@@ -498,6 +508,10 @@ switch (e.content_type) {
       entry: e
     }, n));
   case d.s.WATCHED_MEDIA:
+    return C[e.content_type].map((t, n) => (0, a.jsx)(t, {
+      entry: e
+    }, n));
+  case d.s.LAUNCHED_ACTIVITY:
     return C[e.content_type].map((t, n) => (0, a.jsx)(t, {
       entry: e
     }, n));

@@ -99,7 +99,7 @@ children: () => (0, s.jsxs)('div', {
               className: r()(I.action, I.actionRemove),
               onClick: C,
               'aria-label': _.Z.Messages.REMOVE,
-              children: (0, s.jsx)(l.CloseSmallIcon, {
+              children: (0, s.jsx)(l.XSmallIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: I.icon

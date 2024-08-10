@@ -1,132 +1,133 @@
-n.d(i, {
+t.d(n, {
   Z: function() {
-return R;
+return m;
   }
 });
-var o = n(735250);
-n(470079);
-var t = n(120356),
-  r = n.n(t),
-  a = n(442837),
-  l = n(481060),
-  s = n(666188),
-  c = n(372769),
-  d = n(523751),
-  u = n(623624),
-  _ = n(290034),
-  g = n(271383),
-  E = n(594174),
-  f = n(267642),
-  T = n(981631),
-  N = n(689938),
-  I = n(621908);
+var r = t(735250);
+t(470079);
+var i = t(120356),
+  o = t.n(i),
+  l = t(442837),
+  u = t(481060),
+  a = t(666188),
+  s = t(372769),
+  c = t(523751),
+  d = t(623624),
+  _ = t(290034),
+  f = t(271383),
+  E = t(594174),
+  I = t(267642),
+  g = t(981631),
+  p = t(689938),
+  S = t(621908);
 
-function h(e) {
+function C(e) {
   let {
-guild: i,
-isBannerVisible: n,
-disableBoostClick: t
-  } = e, r = (0, a.e7)([
+guild: n,
+isBannerVisible: t,
+disableBoostClick: i
+  } = e, o = (0, l.e7)([
 E.default,
-g.ZP
+f.ZP
   ], () => {
 let e = E.default.getCurrentUser();
-return g.ZP.isMember(i.id, null == e ? void 0 : e.id);
+return f.ZP.isMember(n.id, null == e ? void 0 : e.id);
   }), {
-premiumTier: s,
-premiumSubscriberCount: c
-  } = i;
-  if (0 === c && s === T.Eu4.NONE)
+premiumTier: a,
+premiumSubscriberCount: s
+  } = n;
+  if (0 === s && a === g.Eu4.NONE)
 return null;
-  let d = e => {
-  e.stopPropagation(), e.preventDefault(), r && !t && (0, u.f)({
-    guildId: i.id,
+  let c = e => {
+  e.stopPropagation(), e.preventDefault(), o && !i && (0, d.f)({
+    guildId: n.id,
     location: {
-      section: T.jXE.GUILD_HEADER,
-      object: T.qAy.BOOST_GEM_ICON
+      section: g.jXE.GUILD_HEADER,
+      object: g.qAy.BOOST_GEM_ICON
     }
   });
 },
-h = s === T.Eu4.NONE ? N.Z.Messages.PREMIUM_GUILD_HEADER_BADGE_NO_TIER : f.nW(s),
-p = (0, o.jsxs)(o.Fragment, {
+C = a === g.Eu4.NONE ? p.Z.Messages.PREMIUM_GUILD_HEADER_BADGE_NO_TIER : I.nW(a),
+T = (0, r.jsxs)(r.Fragment, {
   children: [
-    (0, o.jsx)('div', {
-      className: I.tierTooltipTitle,
-      children: h
+    (0, r.jsx)('div', {
+      className: S.tierTooltipTitle,
+      children: C
     }),
-    (0, o.jsx)('div', {
-      children: N.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SUBSCRIBER_COUNT_TOOLTIP.format({
-        subscriberCount: c
+    (0, r.jsx)('div', {
+      children: p.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SUBSCRIBER_COUNT_TOOLTIP.format({
+        subscriberCount: s
       })
     })
   ]
 });
-  return (0, o.jsx)('div', {
-className: I.guildIconContainer,
-children: (0, o.jsx)(l.Tooltip, {
-  text: p,
+  return (0, r.jsx)('div', {
+className: S.guildIconContainer,
+children: (0, r.jsx)(u.Tooltip, {
+  text: T,
   position: 'bottom',
-  'aria-label': null != h ? h : '',
-  children: e => (0, o.jsx)(l.Clickable, {
+  'aria-label': null != C ? C : '',
+  children: e => (0, r.jsx)(u.Clickable, {
     ...e,
-    className: I.__invalid_premiumGuildIcon,
-    onClick: d,
-    children: (0, o.jsx)(_.Z, {
-      premiumTier: s,
-      iconBackgroundClassName: n ? I.boostedGuildTierIconBackgroundWithVisibleBanner : null,
-      iconClassName: n && s !== T.Eu4.TIER_3 ? I.boostedGuildTierMutedIconWithVisibleBanner : null
+    className: S.__invalid_premiumGuildIcon,
+    onClick: c,
+    children: (0, r.jsx)(_.Z, {
+      premiumTier: a,
+      iconBackgroundClassName: t ? S.boostedGuildTierIconBackgroundWithVisibleBanner : null,
+      iconClassName: t && a !== g.Eu4.TIER_3 ? S.boostedGuildTierMutedIconWithVisibleBanner : null
     })
   })
 })
   });
 }
 
-function p(e) {
+function T(e) {
   let {
-guild: i,
-disableColor: n,
-disableBoostClick: t
+guild: n,
+disableColor: t,
+disableBoostClick: i
   } = e;
-  return (0, s.Z)(i) ? (0, o.jsx)('div', {
-className: I.guildIconV2Container,
-children: (0, o.jsx)(d.Z, {
-  guild: i,
+  return (0, a.Z)(n) ? (0, r.jsx)('div', {
+className: S.guildIconV2Container,
+children: (0, r.jsx)(c.Z, {
+  guild: n,
   tooltipPosition: 'bottom',
-  tooltipColor: l.Tooltip.Colors.PRIMARY,
-  className: r()(I.guildBadge, {
-    [I.disableColor]: n
+  tooltipColor: u.Tooltip.Colors.PRIMARY,
+  className: o()(S.guildBadge, {
+    [S.disableColor]: t
   }),
-  disableBoostClick: t
+  disableBoostClick: i
 })
-  }) : (0, o.jsx)('div', {
-className: I.guildIconContainer,
-children: (0, o.jsx)(c.Z, {
-  guild: i,
+  }) : (0, r.jsx)('div', {
+className: S.guildIconContainer,
+children: (0, r.jsx)(s.Z, {
+  guild: n,
+  size: 20,
   tooltipPosition: 'bottom',
-  tooltipColor: l.Tooltip.Colors.PRIMARY,
-  className: r()(I.guildBadge, {
-    [I.disableColor]: n
+  tooltipColor: u.Tooltip.Colors.PRIMARY,
+  className: o()(S.guildBadge, {
+    [S.disableColor]: t
   })
 })
   });
 }
 
-function R(e) {
+function m(e) {
   let {
-guild: i,
-isBannerVisible: n,
-disableBoostClick: t
+guild: n,
+isBannerVisible: t,
+disableBoostClick: i
   } = e;
-  return (0, s.Z)(i) ? (0, o.jsx)(p, {
-guild: i,
+  return (0, a.Z)(n) ? (0, r.jsx)(T, {
+guild: n,
 disableColor: !1,
-disableBoostClick: t
-  }) : i.hasFeature(T.oNc.VERIFIED) || i.hasFeature(T.oNc.PARTNERED) ? (0, o.jsx)(p, {
-guild: i,
-disableColor: !n
-  }) : (0, o.jsx)(h, {
-guild: i,
-isBannerVisible: n,
-disableBoostClick: t
+disableBoostClick: i
+  }) : n.hasFeature(g.oNc.VERIFIED) || n.hasFeature(g.oNc.PARTNERED) ? (0, r.jsx)(T, {
+guild: n,
+disableColor: !t
+  }) : (0, r.jsx)(C, {
+guild: n,
+isBannerVisible: t,
+disableBoostClick: i
   });
 }

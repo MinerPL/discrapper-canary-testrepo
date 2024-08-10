@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return M;
+return w;
   },
   _: function() {
 return r;
@@ -8,76 +8,79 @@ return r;
 }), n(627341), n(47120);
 var r, i, a = n(735250),
   s = n(470079),
-  o = n(278074),
-  l = n(442837),
-  u = n(481060),
-  c = n(230711),
-  d = n(351773),
-  _ = n(100527),
-  E = n(94795),
-  f = n(327943),
-  h = n(539873),
-  p = n(207164),
-  m = n(238302),
-  I = n(514361),
-  T = n(572397),
-  g = n(705262),
-  S = n(197115),
-  A = n(672752),
-  N = n(727939),
-  v = n(981631),
-  O = n(921944),
-  R = n(474936),
-  C = n(689938),
-  y = n(440443);
+  o = n(120356),
+  l = n.n(o),
+  u = n(278074),
+  c = n(442837),
+  d = n(481060),
+  _ = n(230711),
+  E = n(351773),
+  f = n(100527),
+  h = n(94795),
+  p = n(327943),
+  m = n(539873),
+  I = n(207164),
+  T = n(238302),
+  g = n(514361),
+  S = n(572397),
+  A = n(705262),
+  N = n(436774),
+  v = n(768762),
+  O = n(197115),
+  R = n(727939),
+  C = n(981631),
+  y = n(921944),
+  D = n(474936),
+  L = n(689938),
+  b = n(440443);
 
-function D() {
-  let e = (0, T.q)();
-  return s.useEffect(() => ((0, m.Kq)(), e(v.rMx.CLIENT_THEME_PREVIEW_VIEWED), () => e(v.rMx.CLIENT_THEME_PREVIEW_CLOSED)), [e]), (0, a.jsx)(g.ZP, {
-type: g.yH.EDITOR,
-children: (0, a.jsx)(g.ZP.BasicAndGradient, {
+function M() {
+  let e = (0, S.q)();
+  return s.useEffect(() => ((0, T.Kq)(), e(C.rMx.CLIENT_THEME_PREVIEW_VIEWED), () => e(C.rMx.CLIENT_THEME_PREVIEW_CLOSED)), [e]), (0, a.jsx)(A.ZP, {
+type: A.yH.EDITOR,
+children: (0, a.jsx)(A.ZP.BasicAndGradient, {
   isEditor: !0
 })
   });
 }
 
-function L() {
-  let e = (0, p.Z)();
+function P() {
+  let e = (0, I.Z)();
   return s.useEffect(() => {
-(0, E.nJ)(), e();
-  }, [e]), (0, a.jsx)(h.Z, {
+(0, h.nJ)(), e();
+  }, [e]), (0, a.jsx)(m.Z, {
 isEditor: !0
   });
 }
 
-function b(e) {
+function U(e) {
   let {
 tab: t,
 isPreview: r,
 isCoachmark: i,
-onClose: l
-  } = e, d = s.useCallback(() => {
-l(), !i && c.Z.open();
+onClose: o
+  } = e, c = s.useCallback(() => {
+o(), !i && _.Z.open();
   }, [
-l,
+o,
 i
-  ]), E = (0, o.EQ)({
+  ]), E = (0, u.EQ)({
 isPreview: r,
 isCoachmark: i
   }).with({
 isCoachmark: !0
-  }, () => C.Z.Messages.CLOSE).with({
+  }, () => L.Z.Messages.CLOSE).with({
 isPreview: !0
-  }, () => C.Z.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW).otherwise(() => C.Z.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS), f = s.useCallback(() => {
+  }, () => L.Z.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW).otherwise(() => L.Z.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS), h = s.useCallback(() => {
 if (1 === t) {
-  (0, u.openModalLazy)(async () => {
+  (0, d.openModalLazy)(async () => {
     let {
       default: e
     } = await n.e('69052').then(n.bind(n, 184250));
     return t => (0, a.jsx)(e, {
-      analyticsSource: _.Z.APP_ICON_EDITOR,
+      analyticsSource: f.Z.APP_ICON_EDITOR,
       analyticsLocation: {
-        section: v.jXE.SETTINGS_APP_ICONS
+        section: C.jXE.SETTINGS_APP_ICONS
       },
       ...t
     });
@@ -85,14 +88,14 @@ if (1 === t) {
   return;
 }
 if (0 === t) {
-  (0, u.openModalLazy)(async () => {
+  (0, d.openModalLazy)(async () => {
     let {
       default: e
     } = await n.e('68192').then(n.bind(n, 742234));
     return t => (0, a.jsx)(e, {
-      analyticsSource: _.Z.CLIENT_THEMES_EDITOR,
+      analyticsSource: f.Z.CLIENT_THEMES_EDITOR,
       analyticsLocation: {
-        section: v.jXE.SETTINGS_CLIENT_THEMES
+        section: C.jXE.SETTINGS_CLIENT_THEMES
       },
       ...t
     });
@@ -101,39 +104,46 @@ if (0 === t) {
 }
   }, [t]);
   return (0, a.jsxs)('div', {
-className: y.footerContainer,
+className: b.footerContainer,
 children: [
   r && (0, a.jsxs)('div', {
-    className: y.footerLabelContainer,
+    className: b.footerLabelContainer,
     children: [
-      (0, a.jsx)(u.NitroWheelIcon, {
-        className: y.footerNitro,
+      (0, a.jsx)(d.NitroWheelIcon, {
+        className: b.footerNitro,
         size: 'xs',
-        color: A.JX.PREMIUM_TIER_2
+        color: N.JX.PREMIUM_TIER_2
       }),
-      (0, a.jsx)(u.Text, {
-        className: y.footerText,
+      (0, a.jsx)(d.Text, {
+        className: b.footerText,
         variant: 'text-sm/medium',
-        children: C.Z.Messages.PREMIUM_UPSELL_MAKE_DISCORD_YOURS.format({
-          onClick: f
+        children: L.Z.Messages.PREMIUM_UPSELL_MAKE_DISCORD_YOURS.format({
+          onClick: h
         })
       })
     ]
   }),
   (0, a.jsxs)('div', {
-    className: y.footerButtonContainer,
+    className: b.footerButtonContainer,
     children: [
-      (0, a.jsx)(u.Button, {
-        className: y.footerButton,
-        color: u.ButtonColors.PRIMARY,
-        onClick: d,
-        children: E
+      (0, a.jsx)('div', {
+        children: (0, a.jsx)(d.Button, {
+          className: l()(b.footerButton, b.footerButtonBack),
+          color: d.ButtonColors.PRIMARY,
+          size: d.Button.Sizes.NONE,
+          onClick: c,
+          'aria-label': E,
+          children: (0, a.jsx)(v.Z, {
+            direction: v.Z.Directions.LEFT
+          })
+        })
       }),
-      r && (0, a.jsx)(S.Z, {
-        className: y.footerButton,
-        subscriptionTier: R.Si.TIER_2,
+      r && (0, a.jsx)(O.Z, {
+        className: b.footerButton,
+        subscriptionTier: D.Si.TIER_2,
         showGradient: !0,
-        buttonText: C.Z.Messages.PREMIUM_UPSELL_GET_NITRO
+        fullWidth: !0,
+        buttonText: L.Z.Messages.PREMIUM_UPSELL_GET_NITRO
       })
     ]
   })
@@ -141,55 +151,55 @@ children: [
   });
 }
 
-function M(e) {
+function w(e) {
   let {
 initialTab: t,
 markAsDismissed: n
   } = e, [r, i] = s.useState(t), o = s.useMemo(() => [{
-  name: C.Z.Messages.THEME,
+  name: L.Z.Messages.THEME,
   value: 0
 },
 {
-  name: C.Z.Messages.USER_SETTINGS_APPEARANCE_IN_APP_ICON_TITLE,
+  name: L.Z.Messages.USER_SETTINGS_APPEARANCE_IN_APP_ICON_TITLE,
   value: 1
 }
-  ], []), c = (0, l.e7)([I.Z], () => I.Z.isPreview), _ = (0, l.e7)([f.Z], () => f.Z.isUpsellPreview), h = c || _, p = (0, T.J)(), g = s.useCallback(() => {
-c && p(), _ && (0, E.O7)();
+  ], []), l = (0, c.e7)([g.Z], () => g.Z.isPreview), u = (0, c.e7)([p.Z], () => p.Z.isUpsellPreview), _ = l || u, f = (0, S.J)(), m = s.useCallback(() => {
+l && f(), u && (0, h.O7)();
   }, [
-c,
-_,
-p
-  ]), S = (0, d.Z)(null, h ? g : v.dG4), A = s.useCallback(() => {
-(0, E.G8)(), (0, m.Mo)(), g(), null == n || n(O.L.DISMISS);
+l,
+u,
+f
+  ]), I = (0, E.Z)(null, _ ? m : C.dG4), A = s.useCallback(() => {
+(0, h.G8)(), (0, T.Mo)(), m(), null == n || n(y.L.DISMISS);
   }, [
-g,
+m,
 n
   ]);
-  return (0, a.jsx)(N.Z, {
-className: y.draggableContainer,
+  return (0, a.jsx)(R.Z, {
+className: b.draggableContainer,
 children: (0, a.jsxs)('div', {
-  ref: S,
-  className: y.container,
+  ref: I,
+  className: b.container,
   children: [
     (0, a.jsxs)('div', {
-      className: y.headerParentContainer,
+      className: b.headerParentContainer,
       children: [
         (0, a.jsxs)('div', {
-          className: y.headerContainer,
+          className: b.headerContainer,
           children: [
-            (0, a.jsx)(u.Heading, {
+            (0, a.jsx)(d.Heading, {
               variant: 'heading-lg/extrabold',
-              children: C.Z.Messages.PREMIUM_UPSELL_FEATURE_CLIENT_THEMES_APP_ICONS_PREVIEW_TITLE
+              children: L.Z.Messages.PREMIUM_UPSELL_FEATURE_CLIENT_THEMES_APP_ICONS_PREVIEW_TITLE
             }),
-            (0, a.jsx)(u.ModalCloseButton, {
-              className: y.closeContainer,
-              innerClassName: y.closeInner,
+            (0, a.jsx)(d.ModalCloseButton, {
+              className: b.closeContainer,
+              innerClassName: b.closeInner,
               withCircleBackground: !0,
               onClick: A
             })
           ]
         }),
-        (0, a.jsx)(u.SegmentedControl, {
+        (0, a.jsx)(d.SegmentedControl, {
           options: o,
           value: r,
           onChange: e => {
@@ -202,16 +212,16 @@ children: (0, a.jsxs)('div', {
         })
       ]
     }),
-    (0, a.jsxs)(u.Scroller, {
-      className: y.scrollContainer,
+    (0, a.jsxs)(d.Scroller, {
+      className: b.scrollContainer,
       children: [
-        0 === r && (0, a.jsx)(D, {}),
-        1 === r && (0, a.jsx)(L, {})
+        0 === r && (0, a.jsx)(M, {}),
+        1 === r && (0, a.jsx)(P, {})
       ]
     }),
-    (0, a.jsx)(b, {
+    (0, a.jsx)(U, {
       tab: r,
-      isPreview: h,
+      isPreview: _,
       onClose: A,
       isCoachmark: !1
     })

@@ -209,7 +209,7 @@ children: [
   null != Z ? (0, t.jsxs)('div', {
     className: N.paymentSourceWarning,
     children: [
-      (0, t.jsx)(c.CircleExclamationPointIcon, {
+      (0, t.jsx)(c.CircleWarningIcon, {
         size: 'custom',
         width: 20,
         height: 20,

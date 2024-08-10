@@ -14,21 +14,22 @@ let u = async e => {
 userId: t,
 content: n,
 location: u,
-openChannel: c = !0
+openChannel: c = !0,
+whenReady: d
   } = e, {
-valid: d,
-failureReason: _
+valid: _,
+failureReason: E
   } = await (0, l.v)({
 type: a.I.NORMAL,
 content: n,
 channel: null
   });
-  if (!d)
-throw Error(_);
-  let E = c ? await r.Z.openPrivateChannel(t, !1, !1, u) : await r.Z.getOrEnsurePrivateChannel(t),
-f = o.Z.getChannel(E);
-  if (null == f)
+  if (!_)
+throw Error(E);
+  let f = c ? await r.Z.openPrivateChannel(t, !1, !1, u) : await r.Z.getOrEnsurePrivateChannel(t),
+h = o.Z.getChannel(f);
+  if (null == h)
 throw Error('Failed to open private channel');
-  let h = s.ZP.parse(f, n);
-  return i.Z.sendMessage(f.id, h);
+  let p = s.ZP.parse(h, n);
+  return i.Z.sendMessage(h.id, p, d);
 };

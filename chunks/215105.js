@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return v;
+return R;
   }
 }), n(47120);
 var r = n(735250),
@@ -18,15 +18,16 @@ var r = n(735250),
   h = n(5192),
   p = n(51144),
   m = n(785717),
-  I = n(485216),
-  T = n(228168),
-  g = n(689938),
-  S = n(628372);
-let A = (0, _.kt)({
+  I = n(448520),
+  T = n(485216),
+  g = n(228168),
+  S = n(689938),
+  A = n(628372);
+let N = (0, _.kt)({
 id: '1',
 type: o.d.DM
   }),
-  N = e => {
+  v = e => {
 let {
   input: t,
   username: n,
@@ -34,27 +35,39 @@ let {
   sourceDetails: i
 } = e;
 switch (r) {
-  case T.N9.ACTIVITY:
-    let a = g.Z.Messages.USER_PROFILE_REPLIED_TO_ACTIVITY.format({
+  case g.N9.ACTIVITY:
+    let a = S.Z.Messages.USER_PROFILE_REPLIED_TO_ACTIVITY.format({
       username: n
     });
     return '> -# *'.concat(a, '*\n').concat(t);
-  case T.N9.AVATAR:
-    let s = g.Z.Messages.USER_PROFILE_REPLIED_TO_AVATAR.format({
+  case g.N9.AVATAR:
+    let s = S.Z.Messages.USER_PROFILE_REPLIED_TO_AVATAR.format({
       username: n
     });
     return '> -# *'.concat(s, '*\n').concat(t);
-  case T.N9.STATUS:
-    let o = g.Z.Messages.USER_PROFILE_REPLIED_TO_STATUS.format({
+  case g.N9.STATUS:
+    let o = S.Z.Messages.USER_PROFILE_REPLIED_TO_STATUS.format({
       username: n
     });
     return null != i ? '> -# *'.concat(o, '*').concat('\n > '.concat(i), '\n').concat(t) : '> -# *'.concat(o, '*\n').concat(t);
   default:
     (0, f.vE)(r);
 }
+  },
+  O = e => {
+switch (e) {
+  case g.N9.ACTIVITY:
+    return S.Z.Messages.USER_PROFILE_REPLY_TO_ACTIVITY_PLACEHOLDER;
+  case g.N9.AVATAR:
+    return S.Z.Messages.USER_PROFILE_REPLY_TO_AVATAR_PLACEHOLDER;
+  case g.N9.STATUS:
+    return S.Z.Messages.USER_PROFILE_REPLY_TO_STATUS_PLACEHOLDER;
+  default:
+    (0, f.vE)(e);
+}
   };
 
-function v(e) {
+function R(e) {
   let {
 user: t,
 guildId: n,
@@ -62,79 +75,81 @@ channelId: a,
 profileType: o,
 sourceType: _,
 sourceDetails: f,
-onReply: v,
-setPopoutRef: O,
-modalKey: R
+onReply: S,
+setPopoutRef: R,
+modalKey: C
   } = e, {
-trackUserProfileAction: C
-  } = (0, m.KZ)(), [y, D] = i.useState(''), [L, b] = i.useState((0, c.JM)(y)), M = i.useRef(!1), P = i.useRef(null);
+trackUserProfileAction: y
+  } = (0, m.KZ)(), {
+sendReply: D
+  } = (0, I.D)(_), [L, b] = i.useState(''), [M, P] = i.useState((0, c.JM)(L)), U = i.useRef(!1), w = i.useRef(null);
   i.useEffect(() => {
-null == O || O(null == P ? void 0 : P.current);
+null == R || R(null == w ? void 0 : w.current);
   }, [
-P,
-O
+w,
+R
   ]);
-  let U = async e => {
+  let x = async e => {
 var n;
 if (null == e)
   return;
-C({
-  action: 'PRESS_REPLY'
+y({
+  action: D
 });
-let r = N({
+let r = v({
   input: e,
   username: null !== (n = E.Z.getNickname(t.id)) && void 0 !== n ? n : p.ZP.getName(t),
   sourceType: _,
   sourceDetails: f
 });
-await (0, I.Z)({
+await (0, T.Z)({
   userId: t.id,
   content: r,
-  location: 'UserProfileReplyPopout'
+  location: 'UserProfileReplyPopout',
+  openChannel: !1,
+  whenReady: !1
 });
   };
   return (0, r.jsx)(l.V, {
-ref: P,
+ref: w,
 children: (0, r.jsx)('div', {
-  className: s()(S.container, {
-    [S.panel]: o === T.y0.PANEL
+  className: s()(A.container, {
+    [A.panel]: o === g.y0.PANEL
   }),
   children: (0, r.jsx)(d.Z, {
-    parentModalKey: R,
+    parentModalKey: C,
     emojiPickerCloseOnModalOuterClick: !0,
-    innerClassName: S.inner,
-    editorClassName: S.editor,
+    innerClassName: A.inner,
+    editorClassName: A.editor,
     type: u.I.USER_PROFILE_REPLY,
-    placeholder: g.Z.Messages.QUICK_DM_USER.format({
-      name: h.ZP.getName(n, a, t)
+    placeholder: O(_).format({
+      username: h.ZP.getName(n, a, t)
     }),
-    channel: A,
-    textValue: y,
-    richValue: L,
+    channel: N,
+    textValue: L,
+    richValue: M,
     onChange: (e, t, n) => {
-      if (t !== y)
-        D(t), b(n);
+      if (t !== L)
+        b(t), P(n);
     },
-    focused: M.current,
+    focused: U.current,
     onFocus: () => {
-      M.current = !0;
+      U.current = !0;
     },
     onBlur: e => {
       var t;
-      if (null === (t = P.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) {
-        M.current = !1;
+      if (null === (t = w.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) {
+        U.current = !1;
         return;
       }
-      null !== P.current && (M.current = !1, null == v || v(null));
+      null !== w.current && (U.current = !1, null == S || S(null));
     },
     onSubmit: async e => {
       let {
         value: t
       } = e;
       try {
-        return C({
-          action: 'SEND_STATUS_REPLY'
-        }), await U(t.trim()), null == v || v(null), {
+        return await x(t.trim()), null == S || S(null), {
           shouldClear: !0,
           shouldRefocus: !1
         };

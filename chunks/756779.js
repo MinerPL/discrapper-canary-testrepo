@@ -13,12 +13,12 @@ var a = r(512722),
   l = r(782568),
   c = r(213609),
   p = r(357352),
-  u = r(434404),
-  m = r(690221),
-  f = r(695346),
-  _ = r(430824),
-  h = r(153124),
-  g = r(810090),
+  u = r(313201),
+  m = r(70097),
+  f = r(434404),
+  _ = r(690221),
+  h = r(695346),
+  g = r(430824),
   S = r(63063),
   N = r(981631),
   x = r(921944),
@@ -35,7 +35,7 @@ transitionState: s,
 onClose: r,
 guildId: a,
 markAsDismissed: C
-  } = e, I = (0, h.Dt)(), L = (0, i.e7)([_.Z], () => _.Z.getGuild(a));
+  } = e, I = (0, u.Dt)(), L = (0, i.e7)([g.Z], () => g.Z.getGuild(a));
   n()(null != L, 'Guild must be defined'), (0, c.Z)({
 type: R.n.MODAL,
 name: t.ImpressionNames.GUILD_SHOP_UPSELL,
@@ -43,7 +43,7 @@ properties: {
   passed_in_guild_id: a
 }
   });
-  let O = f.QK.useSetting();
+  let O = h.QK.useSetting();
   return (0, o.jsxs)(d.ModalRoot, {
 size: d.ModalSize.LARGE,
 className: v.__invalid_root,
@@ -76,7 +76,7 @@ children: [
       (0, o.jsx)(d.Spacer, {
         size: 8
       }),
-      (0, o.jsx)(m.Z, {
+      (0, o.jsx)(_.Z, {
         onClick: () => {
           C(x.L.SECONDARY);
           let e = ''.concat(S.Z.getCreatorSupportArticleURL(N.BhN.SERVER_SUBSCRIPTION_AND_PRODUCTS), '#docs-internal-guid-918e991a-7fff-03d5-8326-5d065e5edeb1');
@@ -96,7 +96,7 @@ children: [
         src: (0, p.b)('server_products/upsell/demo2.png'),
         alt: '',
         className: v.demo
-      }) : (0, o.jsx)(g.Z, {
+      }) : (0, o.jsx)(m.Z, {
         autoPlay: !0,
         loop: !0,
         className: v.demo,
@@ -115,7 +115,7 @@ children: [
     children: [
       (0, o.jsx)(d.Button, {
         onClick: () => {
-          j.some(e => L.hasFeature(e)) ? u.Z.open(a, N.pNK.GUILD_PRODUCTS) : u.Z.open(a, N.pNK.ROLE_SUBSCRIPTIONS), C(x.L.PRIMARY), r();
+          j.some(e => L.hasFeature(e)) ? f.Z.open(a, N.pNK.GUILD_PRODUCTS) : f.Z.open(a, N.pNK.ROLE_SUBSCRIPTIONS), C(x.L.PRIMARY), r();
         },
         children: 'Check it out'
       }),

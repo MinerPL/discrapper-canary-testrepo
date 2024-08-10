@@ -22,7 +22,7 @@ function p(e) {
   let {
 user: t,
 activity: n,
-onClick: p,
+onAction: p,
 onClose: m
   } = e, {
 profileType: I
@@ -40,8 +40,10 @@ text: h.Z.Messages.PROFILE_JOIN_VOICE_CHANNEL,
 disabled: S,
 fullWidth: !0,
 themeColor: I === E.y0.FULL_SIZE ? 'secondary' : 'primary',
-onClick: e => {
-  null == p || p(e), a.default.selectVoiceChannel(g.id), c.default.track(f.rMx.HANG_STATUS_CTA_CLICKED, {
+onClick: () => {
+  null == p || p({
+    action: 'PRESS_HANG_STATUS_BUTTON'
+  }), a.default.selectVoiceChannel(g.id), c.default.track(f.rMx.HANG_STATUS_CTA_CLICKED, {
     channel_id: g.id,
     guild_id: g.guild_id,
     source: T

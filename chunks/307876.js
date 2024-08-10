@@ -22,6 +22,8 @@ writable: !0
 let d = !1;
 
 function _(e) {
+  if (__OVERLAY__)
+return;
   let t = o.default.getCurrentUser();
   if (null == t)
 return;

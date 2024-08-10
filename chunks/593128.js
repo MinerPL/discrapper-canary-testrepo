@@ -205,7 +205,7 @@ return {
 };
   }), y = a.useCallback(e => {
 B ? I.S.dispatch(O.CkL.EMPHASIZE_NOTICE) : j(e);
-  }, [B]), F = (0, N.f)(), w = a.useCallback(e => {
+  }, [B]), F = (0, N.f)(), k = a.useCallback(e => {
 'Escape' === e.key && (e.stopPropagation(), n());
   }, [n]);
   a.useEffect(() => {
@@ -213,14 +213,14 @@ B ? I.S.dispatch(O.CkL.EMPHASIZE_NOTICE) : j(e);
   }, [
 t,
 A
-  ]), a.useEffect(() => (window.addEventListener('keydown', w), () => {
-window.removeEventListener('keydown', w);
-  }), [w]), a.useEffect(() => {
+  ]), a.useEffect(() => (window.addEventListener('keydown', k), () => {
+window.removeEventListener('keydown', k);
+  }), [k]), a.useEffect(() => {
 c.Z.getDetectableGames();
   }, []), a.useEffect(() => {
 (0, E.aH)(t);
   }, [t]);
-  let k = a.useCallback(e => (0, E.mf)(t, {
+  let w = a.useCallback(e => (0, E.mf)(t, {
   gameApplicationIds: e
 }), [t]),
 H = a.useCallback(e => (0, E.mf)(t, {
@@ -325,7 +325,7 @@ children: [
                   return (0, s.jsx)(g.Z, {
                     title: M.Z.Messages.CLAN_SETUP_GAMES_TITLE,
                     description: M.Z.Messages.CLAN_SETUP_GAMES_SUBTITLE,
-                    handleUpdate: k,
+                    onUpdateGames: w,
                     gameApplicationIds: null !== (e = U.gameApplicationIds) && void 0 !== e ? e : new Set(),
                     error: G.gameApplicationIds
                   });
@@ -333,7 +333,7 @@ children: [
                   return (0, s.jsx)(p.Z, {
                     title: M.Z.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
                     description: M.Z.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
-                    handleUpdate: H,
+                    onUpdatePlaystyle: H,
                     playstyle: U.playstyle,
                     error: G.playstyle
                   });
@@ -342,7 +342,7 @@ children: [
                     guildId: t,
                     title: M.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
                     description: M.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
-                    handleUpdate: V,
+                    onUpdateTraits: V,
                     progress: U
                   });
                 case L.Wy.INTERESTS:

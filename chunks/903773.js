@@ -17,7 +17,7 @@ color: a = r.W.YELLOW
   return (0, s.jsx)(r.Z, {
 className: t,
 color: a,
-icon: o.CircleExclamationPointIcon,
+icon: o.CircleWarningIcon,
 children: n
   });
 }

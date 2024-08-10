@@ -3,6 +3,7 @@ e.exports = {
   overviewSidebarWrapper: 'overviewSidebarWrapper_db0691',
   fullHeight: 'fullHeight_db0691',
   signatureBlock: 'signatureBlock_db0691',
+  signatureContainer: 'signatureContainer_db0691',
   signatureText: 'signatureText_db0691',
   overviewSidebarContent: 'overviewSidebarContent_db0691',
   scrollContentContainer: 'scrollContentContainer_db0691',

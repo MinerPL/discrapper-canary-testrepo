@@ -13,15 +13,15 @@ var i = n(735250),
   u = n(100527),
   d = n(906732),
   h = n(385499),
-  p = n(556084),
-  m = n(484459),
-  _ = n(103575),
-  f = n(158776),
-  E = n(699516),
-  g = n(111583),
-  C = n(594174),
-  I = n(360048),
-  x = n(151827),
+  p = n(82295),
+  m = n(554300),
+  _ = n(556084),
+  f = n(184301),
+  E = n(103575),
+  g = n(158776),
+  C = n(699516),
+  I = n(111583),
+  x = n(594174),
   T = n(626135),
   N = n(768581),
   v = n(585483),
@@ -42,7 +42,7 @@ user: t,
 channel: a,
 status: u,
 activities: d
-  } = e, h = (0, l.e7)([g.Z], () => null != g.Z.getTypingUsers(a.id)[t.id]), p = (0, l.e7)([C.default], () => C.default.getCurrentUser()), I = (0, l.e7)([f.Z], () => f.Z.isMobileOnline(t.id)), x = (0, l.e7)([E.Z], () => E.Z.getNickname(t.id)), T = e => {
+  } = e, h = (0, l.e7)([I.Z], () => null != I.Z.getTypingUsers(a.id)[t.id]), p = (0, l.e7)([x.default], () => x.default.getCurrentUser()), m = (0, l.e7)([g.Z], () => g.Z.isMobileOnline(t.id)), _ = (0, l.e7)([C.Z], () => C.Z.getNickname(t.id)), T = e => {
 (0, o.jW)(e, async () => {
   let {
     default: e
@@ -59,10 +59,10 @@ activities: d
 });
   };
   return (0, i.jsx)(r.Popout, {
-preload: () => (0, m.W)(t, {
+preload: () => (0, f.Z)(t, {
   channelId: a.id
 }),
-renderPopout: e => (0, i.jsx)(_.Z, {
+renderPopout: e => (0, i.jsx)(E.Z, {
   ...e,
   location: 'PrivateChannelRecipients',
   userId: t.id,
@@ -91,8 +91,8 @@ children: e => (0, i.jsx)(M.Z, {
   activities: d,
   channel: a,
   onContextMenu: T,
-  isMobile: I,
-  nick: x,
+  isMobile: m,
+  nick: _,
   ...e
 }, t.id)
   });
@@ -124,10 +124,10 @@ bot: null === (t = l.application) || void 0 === t ? void 0 : t.bot,
 botIconFirst: !0
   });
   return null != d ? (0, i.jsx)(r.Popout, {
-preload: () => (0, m.W)(d.id, p, {
+preload: () => (0, f.Z)(d.id, p, {
   channelId: c.id
 }),
-renderPopout: e => (0, i.jsx)(_.Z, {
+renderPopout: e => (0, i.jsx)(E.Z, {
   ...e,
   location: 'PrivateChannelRecipients',
   userId: d.id,
@@ -135,7 +135,7 @@ renderPopout: e => (0, i.jsx)(_.Z, {
 }),
 position: s.tq ? 'window_center' : 'left',
 spacing: 16,
-children: e => (0, i.jsx)(I.Z, {
+children: e => (0, i.jsx)(m.Z, {
   onContextMenu: u,
   className: j.member,
   name: (0, i.jsx)('span', {
@@ -182,23 +182,23 @@ function U(e) {
   var t;
   let {
 channel: s
-  } = e, o = C.default.getCurrentUser(), c = null == o ? void 0 : o.isStaff(), {
-analyticsLocations: _
+  } = e, o = x.default.getCurrentUser(), c = null == o ? void 0 : o.isStaff(), {
+analyticsLocations: E
   } = (0, d.ZP)(u.Z.MEMBER_LIST);
   let {
-listItems: g
+listItems: I
   } = (t = s, (0, l.e7)([
-E.Z,
-C.default,
-f.Z
+C.Z,
+x.default,
+g.Z
   ], () => {
-let e = (0, S.T)(t.recipients, C.default),
+let e = (0, S.T)(t.recipients, x.default),
   n = {};
 for (let t of e) {
   var i, a, s;
-  E.Z.isFriend(t.id) || t.id === (null === (i = C.default.getCurrentUser()) || void 0 === i ? void 0 : i.id) ? n[t.id] = {
-    status: null !== (a = f.Z.getStatus(t.id)) && void 0 !== a ? a : b.Skl.OFFLINE,
-    activities: null !== (s = f.Z.getActivities(t.id)) && void 0 !== s ? s : P
+  C.Z.isFriend(t.id) || t.id === (null === (i = x.default.getCurrentUser()) || void 0 === i ? void 0 : i.id) ? n[t.id] = {
+    status: null !== (a = g.Z.getStatus(t.id)) && void 0 !== a ? a : b.Skl.OFFLINE,
+    activities: null !== (s = g.Z.getActivities(t.id)) && void 0 !== s ? s : P
   } : n[t.id] = {
     status: b.Skl.OFFLINE,
     activities: P
@@ -222,19 +222,19 @@ applicationsShelf: v,
 fetched: Z,
 appsInGDMEnabled: A,
 availableApplications: M
-  } = (0, p.j)({
+  } = (0, _.j)({
 channelId: s.id
   });
   a.useEffect(() => {
 if (c)
-  for (let e of g)
-    (0, m.W)(e.user, {
+  for (let e of I)
+    (0, f.Z)(e.user, {
       dispatchWait: !0,
       channelId: s.id
     });
   }, [
 c,
-g,
+I,
 s.id
   ]), a.useEffect(() => {
 T.default.track(b.rMx.MEMBER_LIST_VIEWED, {
@@ -247,26 +247,26 @@ s.guild_id,
 s.id,
 s.type
   ]);
-  let O = c && g.every(e => e.user.isStaff());
+  let O = c && I.every(e => e.user.isStaff());
   return (0, i.jsx)(d.Gt, {
-value: _,
+value: E,
 children: (0, i.jsx)('div', {
   className: L.membersWrap,
   children: (0, i.jsxs)(r.Scroller, {
     className: L.members,
     fade: !0,
     children: [
-      (0, i.jsxs)(x.Z, {
+      (0, i.jsxs)(p.Z, {
         className: L.membersGroup,
         children: [
-          ''.concat(R.Z.Messages.MEMBERS, '\u2014').concat(g.length, ' '),
+          ''.concat(R.Z.Messages.MEMBERS, '\u2014').concat(I.length, ' '),
           O ? (0, i.jsx)(h.Z, {
             className: L.__invalid_decorator,
             type: h.Z.Types.STAFF_ONLY_DM
           }) : null
         ]
       }),
-      g.map(e => (0, i.jsx)(y, {
+      I.map(e => (0, i.jsx)(y, {
         user: e.user,
         status: e.status,
         activities: e.activities,
@@ -274,7 +274,7 @@ children: (0, i.jsx)('div', {
       }, e.user.id)),
       A && (N.length > 0 || Z && v.length > 0) && (0, i.jsxs)(i.Fragment, {
         children: [
-          (0, i.jsx)(x.Z, {
+          (0, i.jsx)(p.Z, {
             className: L.membersGroup,
             children: ''.concat(R.Z.Messages.APPS, '\u2014').concat(N.length)
           }),
@@ -282,7 +282,7 @@ children: (0, i.jsx)('div', {
             integration: e,
             channel: s
           }, e.application.id)),
-          M.length > 0 && (0, i.jsx)(I.Z, {
+          M.length > 0 && (0, i.jsx)(m.Z, {
             className: j.member,
             onClick: () => {
               (0, r.openModalLazy)(async () => {

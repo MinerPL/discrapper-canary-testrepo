@@ -1,6 +1,6 @@
 n.d(t, {
   To: function() {
-return g;
+return m;
   },
   Xu: function() {
 return C;
@@ -12,7 +12,7 @@ return f;
 return I;
   },
   aF: function() {
-return m;
+return g;
   }
 });
 var i = n(735250),
@@ -46,7 +46,7 @@ children: [
   });
 }
 
-function m(e) {
+function g(e) {
   let {
 title: t
   } = e;
@@ -60,7 +60,7 @@ children: (0, i.jsx)(r.Heading, {
   });
 }
 
-function g(e) {
+function m(e) {
   let {
 message: t
   } = e;
@@ -103,11 +103,11 @@ defaultGameId: r
   location: a.Z.GUILD_CHANNEL_LIST
 });
   }, [t.id]);
-  let f = r === u.xn ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : r === u.nJ ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
-I = l.useCallback(() => (0, i.jsx)(g, {
+  let f = r === u.xn ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : r === u.nJ ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : p.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
+I = l.useCallback(() => (0, i.jsx)(m, {
   message: p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE
 }), []),
-E = l.useCallback(() => (0, i.jsx)(m, {
+E = l.useCallback(() => (0, i.jsx)(g, {
   title: f
 }), [f]),
 N = l.useCallback(() => {

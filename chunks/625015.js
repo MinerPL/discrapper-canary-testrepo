@@ -54,7 +54,7 @@ children: [
         onClick: () => c(g.L.USER_DISMISS),
         'aria-label': I.Z.Messages.DISMISS,
         className: x.closeIconWrapper,
-        children: (0, i.jsx)(r.CloseSmallIcon, {
+        children: (0, i.jsx)(r.XSmallIcon, {
           size: 'md',
           color: 'currentColor',
           className: x.closeIcon
@@ -112,7 +112,7 @@ children: (0, i.jsxs)('div', {
       onClick: () => c(g.L.USER_DISMISS),
       'aria-label': I.Z.Messages.DISMISS,
       className: x.closeIconWrapper,
-      children: (0, i.jsx)(r.CloseSmallIcon, {
+      children: (0, i.jsx)(r.XSmallIcon, {
         size: 'md',
         color: 'currentColor',
         className: x.closeIcon

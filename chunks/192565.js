@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(796918),
   h = n(513532),
   E = n(741595),
-  I = n(974842),
-  m = n(363915),
+  m = n(974842),
+  I = n(363915),
   g = n(359380),
   p = n(308083),
   T = n(689938);
@@ -56,7 +56,7 @@ let {
 return (0, i.jsx)(u.Z, {
   title: T.Z.Messages.CLAN_SETUP_GAMES_TITLE,
   description: T.Z.Messages.CLAN_SETUP_GAMES_SUBTITLE,
-  handleUpdate: e => l({
+  onUpdateGames: e => l({
     gameApplicationIds: e
   }),
   gameApplicationIds: n.gameApplicationIds,
@@ -74,7 +74,7 @@ let {
 return (0, i.jsx)(E.Z, {
   title: T.Z.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
   description: T.Z.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
-  handleUpdate: e => s({
+  onUpdatePlaystyle: e => s({
     playstyle: e
   }),
   playstyle: n.playstyle,
@@ -92,7 +92,7 @@ return (0, i.jsx)(g.Z, {
   guildId: t,
   title: T.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
   description: T.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
-  handleUpdate: e => a({
+  onUpdateTraits: e => a({
     interests: e
   }),
   progress: n
@@ -136,7 +136,7 @@ let {
   errors: a,
   handleClanUpdate: s
 } = S(t);
-return (0, i.jsx)(I.Z, {
+return (0, i.jsx)(m.Z, {
   handleUpdate: s,
   tag: n.tag,
   error: null == a ? void 0 : a.tag,
@@ -196,7 +196,7 @@ guildId: t
 r,
 t
   ]);
-  return (0, i.jsx)(m.Z, {
+  return (0, i.jsx)(I.Z, {
 currentStep: r,
 items: l,
 renderItem: N,

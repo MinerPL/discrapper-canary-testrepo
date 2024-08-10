@@ -65,24 +65,25 @@ t ? this.experimentFlags.add(e) : this.experimentFlags.delete(e);
 this.logger.info('Connection state change: '.concat(this.connectionState, ' => ').concat(e)), this.connectionState = e, this.emit(s.S.ConnectionStateChange, this.connectionState);
   }
   updateVideoQuality(e) {
+var t, n;
 let {
-  quality: t,
-  constraints: n
-} = this.applyQualityConstraints({}, this.videoStreamParameters[0].ssrc), r = i()(this.videoStreamParameters);
-null != t && (r[0].maxBitrate = t.bitrateMax, r[0].minBitrate = t.bitrateMin, null != t.encode && (r[0].maxPixelCount = t.encode.pixelCount, r[0].maxFrameRate = t.encode.framerate)), this.videoStreamParameters = r;
+  quality: r,
+  constraints: a
+} = this.applyQualityConstraints({}, this.videoStreamParameters[0].ssrc), s = i()(this.videoStreamParameters);
+null != r && (s[0].maxBitrate = r.bitrateMax, s[0].minBitrate = r.bitrateMin, s[0].targetBitrate = null !== (t = r.bitrateTarget) && void 0 !== t ? t : 0, null != r.encode && (s[0].maxPixelCount = r.encode.pixelCount, s[0].maxFrameRate = r.encode.framerate)), this.videoStreamParameters = s;
 for (let e = 1; e < this.videoStreamParameters.length; e++) {
   let {
-    quality: r,
+    quality: t,
     constraints: i
   } = this.applyQualityConstraints({}, this.videoStreamParameters[e].ssrc);
-  null != r && (this.videoStreamParameters[e].maxBitrate = r.bitrateMax, this.videoStreamParameters[e].minBitrate = r.bitrateMin, null != r.encode && (this.videoStreamParameters[e].maxPixelCount = r.encode.pixelCount, this.videoStreamParameters[e].maxFrameRate = r.encode.framerate)), 100 === this.videoStreamParameters[e].quality && (n = i, t = r);
+  null != t && (this.videoStreamParameters[e].maxBitrate = t.bitrateMax, this.videoStreamParameters[e].minBitrate = t.bitrateMin, this.videoStreamParameters[e].targetBitrate = null !== (n = t.bitrateTarget) && void 0 !== n ? n : 0, null != t.encode && (this.videoStreamParameters[e].maxPixelCount = t.encode.pixelCount, this.videoStreamParameters[e].maxFrameRate = t.encode.framerate)), 100 === this.videoStreamParameters[e].quality && (a = i, r = t);
 }
-n.streamParameters = i()(this.videoStreamParameters), n.remoteSinkWantsPixelCount = Math.max(...this.videoStreamParameters.map(e => {
+a.streamParameters = i()(this.videoStreamParameters), a.remoteSinkWantsPixelCount = Math.max(...this.videoStreamParameters.map(e => {
   var t;
   return null !== (t = e.maxPixelCount) && void 0 !== t ? t : 0;
 }));
-let a = this.pickProperties(n, e);
-this.logger.info('updateVideoQuality: '.concat(JSON.stringify(a, void 0, 4))), this.updateVideoQualityCore(a, t);
+let o = this.pickProperties(a, e);
+this.logger.info('updateVideoQuality: '.concat(JSON.stringify(o, void 0, 4))), this.updateVideoQualityCore(o, r);
   }
   applyVideoQualityMode(e) {
 if (this.context !== l.Yn.DEFAULT)

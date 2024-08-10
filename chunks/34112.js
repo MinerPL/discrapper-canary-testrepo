@@ -15,12 +15,12 @@ var s = n(735250),
   _ = n(239091),
   I = n(493544),
   E = n(134433),
-  T = n(646892),
-  m = n(741247),
-  N = n(518738),
-  S = n(549631),
-  h = n(496675),
-  g = n(176278),
+  T = n(91218),
+  m = n(646892),
+  N = n(741247),
+  S = n(518738),
+  h = n(549631),
+  g = n(496675),
   C = n(626135),
   x = n(480608),
   p = n(243730),
@@ -44,7 +44,7 @@ setSelectedSection: l,
 renderHeader: o,
 headerHeight: c,
 query: u
-  } = e, _ = (0, d.e7)([p.Z], () => p.Z.getRoleMemberCount(n.id), [n.id]), E = (0, d.e7)([h.Z], () => h.Z.getHighestRole(n), [n]), T = u.trim();
+  } = e, _ = (0, d.e7)([p.Z], () => p.Z.getRoleMemberCount(n.id), [n.id]), E = (0, d.e7)([g.Z], () => g.Z.getHighestRole(n), [n]), T = u.trim();
   a.useEffect(() => {
 (0, x.E)(n.id);
   }, [n.id]);
@@ -67,7 +67,7 @@ S = a.useMemo(() => [
   i
 ]),
 {
-  draggingId: g,
+  draggingId: h,
   handleDragStart: f,
   handleDragReset: O,
   handleDragComplete: M
@@ -89,7 +89,7 @@ D = a.useCallback(e => {
     onDragStart: f,
     onDragReset: O,
     onDragComplete: M,
-    disableHover: null != g,
+    disableHover: null != h,
     disableDrag: r.length !== N.length,
     setEditRoleId: t,
     setSelectedSection: l
@@ -102,7 +102,7 @@ D = a.useCallback(e => {
   f,
   O,
   M,
-  g,
+  h,
   r,
   t,
   l
@@ -142,8 +142,8 @@ function U(e) {
   let {
 role: d,
 guild: I,
-highestRole: N,
-currentPosition: h,
+highestRole: T,
+currentPosition: S,
 memberCount: g,
 onDragStart: C,
 onDragReset: x,
@@ -152,11 +152,11 @@ disableHover: R,
 disableDrag: L,
 setEditRoleId: A,
 setSelectedSection: Z
-  } = e, b = (0, f.T)(I, N, d), U = null != b, [P, B] = a.useState(!1), y = a.useMemo(() => ({
+  } = e, b = (0, f.T)(I, T, d), U = null != b, [P, B] = a.useState(!1), y = a.useMemo(() => ({
 type: j,
 item: () => (C(d.id), {
   id: d.id,
-  position: h
+  position: S
 }),
 canDrag: () => P && !U,
 collect: e => ({
@@ -179,7 +179,7 @@ U,
 P
   ]), [{
 isDragging: F
-  }, w] = (0, l.c)(y), k = a.useMemo(() => ({
+  }, k] = (0, l.c)(y), w = a.useMemo(() => ({
 accept: j,
 canDrop: () => !U,
 collect: e => {
@@ -198,7 +198,7 @@ U,
 d
   ]), [{
 dragSourcePosition: H
-  }, V] = (0, o.L)(k), Y = a.useCallback(e => {
+  }, V] = (0, o.L)(w), Y = a.useCallback(e => {
 (0, _.jW)(e, async () => {
   let {
     default: e
@@ -212,10 +212,10 @@ dragSourcePosition: H
   }, [
 I,
 d
-  ]), W = (0, m.useHasGuildRoleItems)(I, d);
+  ]), W = (0, N.useHasGuildRoleItems)(I, d);
   if (F)
 return (0, s.jsx)('div', {
-  ref: w,
+  ref: k,
   className: r()(D.roleRow, D.roleRowDragging)
 });
 
@@ -229,12 +229,12 @@ z(), Z(O.ZI.MEMBERS);
   return (0, s.jsxs)(u.Clickable, {
 className: r()(D.roleRow, {
   [D.roleRowDisableHover]: R,
-  [D.containerDragBefore]: null != H && h < H,
-  [D.containerDragAfter]: null != H && h > H
+  [D.containerDragBefore]: null != H && S < H,
+  [D.containerDragAfter]: null != H && S > H
 }),
 onClick: z,
 onContextMenu: Y,
-innerRef: e => w(V(e)),
+innerRef: e => k(V(e)),
 'data-dnd-name': d.name,
 'aria-label': M.Z.Messages.ROLE_ROW_DESCRIPTION.format({
   name: d.name,
@@ -276,11 +276,11 @@ children: [
         variant: 'text-md/medium',
         children: d.name
       }),
-      (null === (i = d.tags) || void 0 === i ? void 0 : i.subscription_listing_id) != null && (0, s.jsx)(S.Z, {
+      (null === (i = d.tags) || void 0 === i ? void 0 : i.subscription_listing_id) != null && (0, s.jsx)(h.Z, {
         className: D.subscriptionRoleIcon,
         'aria-label': M.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PREMIUM_ROLE_ICON_LABEL
       }),
-      (null === (c = d.tags) || void 0 === c ? void 0 : c.is_guild_product_role) === !0 && (0, s.jsx)(T.Z, {})
+      (null === (c = d.tags) || void 0 === c ? void 0 : c.is_guild_product_role) === !0 && (0, s.jsx)(m.Z, {})
     ]
   }),
   (0, s.jsx)(u.Tooltip, {
@@ -359,12 +359,12 @@ size: i,
 enableTooltip: l,
 className: o,
 defaultIconClassName: d
-  } = e, _ = (0, N.p9)({
+  } = e, _ = (0, S.p9)({
 guildId: n,
 roleId: a.id,
 size: i
   });
-  return null != _ ? (0, s.jsx)(g.Z, {
+  return null != _ ? (0, s.jsx)(T.Z, {
 ..._,
 className: o,
 enableTooltip: l

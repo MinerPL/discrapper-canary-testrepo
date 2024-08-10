@@ -47,7 +47,7 @@ isSelected: u
   } = e;
   switch (a) {
 case 'DENY':
-  i = d.Z.Messages.PERMISSION_OVERRIDE_DENY, n = r.CloseSmallIcon, t = c.deny;
+  i = d.Z.Messages.PERMISSION_OVERRIDE_DENY, n = r.XSmallIcon, t = c.deny;
   break;
 case 'ALLOW':
   i = d.Z.Messages.PERMISSION_OVERRIDE_ALLOW, n = r.CheckmarkLargeIcon, t = c.allow;

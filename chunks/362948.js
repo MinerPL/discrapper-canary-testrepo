@@ -195,7 +195,7 @@ t = a ? (0, r.jsx)(l.CheckmarkLargeIcon, {
   size: 'md',
   color: 'currentColor',
   className: e
-}) : (0, r.jsx)(l.CloseSmallIcon, {
+}) : (0, r.jsx)(l.XSmallIcon, {
   size: 'md',
   color: 'currentColor',
   className: e

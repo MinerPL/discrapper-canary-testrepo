@@ -8,8 +8,8 @@ var r = n(735250),
   u = n(481060),
   c = n(355467),
   d = n(230711),
-  _ = n(78839),
-  E = n(672752),
+  _ = n(436774),
+  E = n(78839),
   f = n(74538),
   h = n(543241),
   p = n(981631),
@@ -25,9 +25,9 @@ channel: n
   } = e, [a, A] = i.useState(!1), {
 subscription: N,
 hasFetchedSubscriptions: v
-  } = (0, o.cj)([_.ZP], () => ({
-subscription: _.ZP.getPremiumSubscription(),
-hasFetchedSubscriptions: _.ZP.hasFetchedSubscriptions()
+  } = (0, o.cj)([E.ZP], () => ({
+subscription: E.ZP.getPremiumSubscription(),
+hasFetchedSubscriptions: E.ZP.hasFetchedSubscriptions()
   }));
   if (i.useEffect(() => {
   !v && (0, c.jg)();
@@ -37,7 +37,7 @@ return null;
 R = ''.concat(N.id, ':').concat(O.toISOString());
   if (S === R)
 return null;
-  let C = f.ZP.getPremiumType(N.planId) === m.p9.TIER_0 ? E.JX.PREMIUM_TIER_0 : f.ZP.getPremiumType(N.planId) === m.p9.TIER_1 ? E.JX.PREMIUM_TIER_1 : E.JX.PREMIUM_TIER_2;
+  let C = f.ZP.getPremiumType(N.planId) === m.p9.TIER_0 ? _.JX.PREMIUM_TIER_0 : f.ZP.getPremiumType(N.planId) === m.p9.TIER_1 ? _.JX.PREMIUM_TIER_1 : _.JX.PREMIUM_TIER_2;
   return (0, r.jsxs)('div', {
 className: T.premiumRetentionNotice,
 children: [
@@ -70,7 +70,7 @@ children: [
     onClick: () => {
       l.K.set(g, R), S = R, A(!0);
     },
-    children: (0, r.jsx)(u.CloseSmallIcon, {
+    children: (0, r.jsx)(u.XSmallIcon, {
       size: 'md',
       color: 'currentColor',
       className: T.premiumRetentionNoticeClose

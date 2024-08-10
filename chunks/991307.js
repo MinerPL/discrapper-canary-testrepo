@@ -65,7 +65,7 @@ T = u.Z.supports(f.AN.DISABLE_VIDEO) && !t ? (0, a.jsx)(s.MenuCheckboxItem, {
   subtext: C ? (0, a.jsxs)('div', {
     className: I.videoPaused,
     children: [
-      (0, a.jsx)(s.CircleExclamationPointIcon, {
+      (0, a.jsx)(s.CircleWarningIcon, {
         size: 'custom',
         color: 'currentColor',
         width: 12,

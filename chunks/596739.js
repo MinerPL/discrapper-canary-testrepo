@@ -66,7 +66,7 @@ children: [
     onClick: h,
     role: 'button',
     'aria-label': l.Z.Messages.DISMISS,
-    children: (0, i.jsx)(s.CloseSmallIcon, {
+    children: (0, i.jsx)(s.XSmallIcon, {
       size: 'md',
       color: 'currentColor',
       className: r.closeButton

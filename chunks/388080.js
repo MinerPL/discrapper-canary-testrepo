@@ -8,18 +8,18 @@ var l = n(735250),
   c = n(481060),
   d = n(446411),
   h = n(468846),
-  u = n(299379),
-  g = n(454585),
-  m = n(524444),
-  p = n(285952),
-  x = n(810090),
+  u = n(600164),
+  g = n(70097),
+  m = n(299379),
+  p = n(454585),
+  x = n(524444),
   f = n(55406),
   _ = n(981631),
   E = n(689938),
   C = n(751786),
-  L = n(976388);
+  N = n(976388);
 
-function S(e, t, n) {
+function L(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -27,7 +27,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let N = g.Z.reactParserFor(f.Z.getDefaultRules(C)),
+let S = p.Z.reactParserFor(f.Z.getDefaultRules(C)),
   j = {};
 class O extends r.PureComponent {
   track(e, t, n) {
@@ -40,7 +40,7 @@ return (0, l.jsxs)('div', {
     (0, l.jsx)(c.Anchor, {
       'aria-label': E.Z.Messages.TWITTER,
       className: C.socialLink,
-      href: (0, u.Z)(_.RK.TWITTER),
+      href: (0, m.Z)(_.RK.TWITTER),
       target: 'blank',
       children: (0, l.jsx)(c.XNeutralIcon, {
         size: 'xs',
@@ -52,7 +52,7 @@ return (0, l.jsxs)('div', {
       className: C.socialLink,
       href: _.fK7.FACEBOOK_URL,
       target: 'blank',
-      children: (0, l.jsx)(c.FacebookIcon, {
+      children: (0, l.jsx)(c.FacebookNeutralIcon, {
         size: 'xs',
         color: 'currentColor'
       })
@@ -62,7 +62,7 @@ return (0, l.jsxs)('div', {
       className: C.socialLink,
       href: _.fK7.INSTAGRAM_URL,
       target: 'blank',
-      children: (0, l.jsx)(c.InstagramIcon, {
+      children: (0, l.jsx)(c.InstagramNeutralIcon, {
         size: 'xs',
         color: 'currentColor'
       })
@@ -96,16 +96,16 @@ if (null != t && '' !== t)
     provider: h.pn.YOUTUBE,
     maxWidth: 451,
     maxHeight: 254,
-    renderVideoComponent: m.lV,
-    renderImageComponent: m.Yi,
-    renderLinkComponent: m.iT,
+    renderVideoComponent: x.lV,
+    renderImageComponent: x.Yi,
+    renderLinkComponent: x.iT,
     onPlay: () => {
       this.track(_.rMx.CHANGE_LOG_VIDEO_INTERACTED, {}, !0);
     }
   });
 if (null != r && '' !== r) {
   let e = r.startsWith('https://') ? r : n(595173)('./'.concat(r));
-  return (0, l.jsx)(x.Z, {
+  return (0, l.jsx)(g.Z, {
     src: e,
     poster: a,
     width: 451,
@@ -138,14 +138,14 @@ let {
 } = this.props;
 return (0, l.jsxs)(c.ModalRoot, {
   transitionState: c.ModalTransitionState.ENTERED,
-  className: L.modal,
+  className: N.modal,
   children: [
     (0, l.jsxs)(c.ModalHeader, {
-      align: p.Z.Justify.BETWEEN,
+      align: u.Z.Justify.BETWEEN,
       separator: !1,
       children: [
         this.renderHeader(),
-        (0, l.jsx)(p.Z.Child, {
+        (0, l.jsx)(u.Z.Child, {
           grow: 0,
           children: (0, l.jsx)(c.ModalCloseButton, {
             onClick: this.props.onClose
@@ -154,7 +154,7 @@ return (0, l.jsxs)(c.ModalRoot, {
       ]
     }),
     (0, l.jsx)(c.ModalContent, {
-      className: o()(L.content, C.container, {}),
+      className: o()(N.content, C.container, {}),
       scrollerRef: this.scrollerRef,
       onScroll: this.handleScroll,
       children: (0, l.jsxs)('div', {
@@ -163,7 +163,7 @@ return (0, l.jsxs)(c.ModalRoot, {
         'aria-label': E.Z.Messages.CHANGELOG_CONTENT_LABEL,
         children: [
           this.renderVideo(),
-          N(e.body, !1, {
+          S(e.body, !1, {
             changeLog: this,
             interpolations: j,
             onLinkClick: this.trackLinkClick
@@ -172,14 +172,14 @@ return (0, l.jsxs)(c.ModalRoot, {
       })
     }),
     (0, l.jsx)(c.ModalFooter, {
-      direction: p.Z.Direction.HORIZONTAL,
+      direction: u.Z.Direction.HORIZONTAL,
       children: this.renderFooter()
     })
   ]
 });
   }
   constructor(...e) {
-super(...e), S(this, 'scrollerRef', r.createRef()), S(this, 'handleScroll', () => {
+super(...e), L(this, 'scrollerRef', r.createRef()), L(this, 'handleScroll', () => {
   let {
     current: e
   } = this.scrollerRef;
@@ -187,16 +187,16 @@ super(...e), S(this, 'scrollerRef', r.createRef()), S(this, 'handleScroll', () =
     var t, n;
     null === (t = (n = this.props).onScroll) || void 0 === t || t.call(n, e);
   }
-}), S(this, 'trackLinkClick', e => {
+}), L(this, 'trackLinkClick', e => {
   this.props.track(_.rMx.CHANGE_LOG_CTA_CLICKED, {
     cta_type: 'inline_link',
     target: e
   }, !1);
-}), S(this, 'renderHeader', () => {
+}), L(this, 'renderHeader', () => {
   let {
     changeLog: e
   } = this.props;
-  return (0, l.jsxs)(p.Z.Child, {
+  return (0, l.jsxs)(u.Z.Child, {
     grow: 1,
     shrink: 1,
     children: [

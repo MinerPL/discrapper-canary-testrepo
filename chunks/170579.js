@@ -5,16 +5,16 @@ var r = t(120356),
   i = t(442837),
   c = t(481060),
   l = t(607070),
-  L = t(285952),
+  L = t(600164),
   C = t(483444),
   o = t(599250),
   u = t(926153),
   d = t(27693),
-  S = t(70613),
-  f = t(74538),
-  h = t(937615),
-  p = t(104494),
-  T = t(639119),
+  S = t(74538),
+  f = t(937615),
+  h = t(104494),
+  p = t(639119),
+  T = t(108989),
   N = t(474936),
   R = t(689938),
   I = t(620983);
@@ -22,7 +22,7 @@ let E = e => {
   let {
 isTier0: n,
 discountAmount: t
-  } = e, r = (0, T.N)(), i = null != r && r.trial_id === N.a7, l = R.Z.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT;
+  } = e, r = (0, p.N)(), i = null != r && r.trial_id === N.a7, l = R.Z.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT;
   return void 0 !== t ? l = R.Z.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
 percent: t
   }) : i && (l = R.Z.Messages.REFERRAL_PROGRAM_TWO_WEEK_TRIAL), (0, s.jsx)('div', {
@@ -41,7 +41,7 @@ n.Z = function(e) {
   let t;
   let {
 hideCloseButton: r = !1,
-hideCloseOnFullScreen: T,
+hideCloseOnFullScreen: p,
 shouldShowPrice: m,
 plan: M,
 renderAnimation: _,
@@ -55,7 +55,7 @@ showDiscountBadge: O = !1
   } = e, F = v === N.p9.TIER_2;
   t = v === N.p9.TIER_0 ? o.Z : v === N.p9.TIER_1 ? u.Z : C.Z;
   let H = (0, i.e7)([l.Z], () => l.Z.useReducedMotion),
-P = (0, p.Ng)(),
+P = (0, h.Ng)(),
 B = null == P ? void 0 : null === (n = P.discount) || void 0 === n ? void 0 : n.amount;
   return (0, s.jsxs)('div', {
 'aria-hidden': !0,
@@ -64,7 +64,7 @@ className: a()({
   [A === N.nL.WINTER ? I.tier2HeaderBackgroundWinterTheme : I.tier2HeaderBackground]: F
 }, Z),
 children: [
-  H || A !== N.nL.WINTER ? null : (0, s.jsx)(S.Z, {
+  H || A !== N.nL.WINTER ? null : (0, s.jsx)(T.Z, {
     className: I.snow,
     wind: 5
   }),
@@ -91,7 +91,7 @@ children: [
         ]
       }),
       !r && (0, s.jsx)(c.ModalCloseButton, {
-        hideOnFullscreen: T,
+        hideOnFullscreen: p,
         onClick: g,
         className: I.closeButton
       })
@@ -100,11 +100,11 @@ children: [
   m && null != M ? (0, s.jsx)('div', {
     className: I.price,
     children: function(e, n) {
-      let t = f.ZP.getDefaultPrice(e),
+      let t = S.ZP.getDefaultPrice(e),
         {
           intervalType: s
-        } = f.ZP.getInterval(e),
-        r = (0, h.T4)(t.amount, t.currency);
+        } = S.ZP.getInterval(e),
+        r = (0, f.T4)(t.amount, t.currency);
       if (n)
         return r;
       switch (s) {

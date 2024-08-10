@@ -10,11 +10,11 @@ var r = n(735250),
   d = n(367907),
   _ = n(588468),
   E = n(30465),
-  f = n(806966),
-  h = n(98528),
-  p = n(551058),
-  m = n(695464),
-  I = n(153124),
+  f = n(218867),
+  h = n(313201),
+  p = n(806966),
+  m = n(98528),
+  I = n(551058),
   T = n(555573),
   g = n(10718),
   S = n(367790),
@@ -45,7 +45,7 @@ t.Z = i.forwardRef(function(e, t) {
   let {
 channel: n,
 canOnlyUseTextCommands: a
-  } = e, o = i.useRef(!1), l = i.useRef(0), [w, x] = i.useState(0), G = i.useRef(null), [k, B] = i.useState(!1), F = f.Xn.useStore(e => e.activeCategoryIndex);
+  } = e, o = i.useRef(!1), l = i.useRef(0), [w, x] = i.useState(0), G = i.useRef(null), [k, B] = i.useState(!1), F = p.Xn.useStore(e => e.activeCategoryIndex);
   i.useEffect(() => {
 (0, d.yw)(y.rMx.APPLICATION_COMMAND_BROWSER_OPENED);
   }, []);
@@ -59,14 +59,14 @@ filteredSectionId: W,
 scrollDown: K,
 filterSection: z
   } = g.wi(n, {
-commandType: c.yU.CHAT,
+commandTypes: [c.yU.CHAT],
 builtIns: a ? S.D.ONLY_TEXT : S.D.ALLOW,
 applicationCommands: !a
   }, {
 placeholderCount: 7,
 limit: C.tn,
 includeFrecency: !0
-  }), q = (0, h.Qs)({
+  }), q = (0, m.Qs)({
 activeCategoryIndex: F,
 isScrolling: o,
 listRef: G,
@@ -74,7 +74,7 @@ onActiveCategoryIndexChange: e => {
   let t = H[e];
   if (null != t) {
     let e = V.findIndex(e => e.id === t.id);
-    f.Xn.setActiveCategoryIndex(e);
+    p.Xn.setActiveCategoryIndex(e);
   }
 },
 scrollOffset: 20,
@@ -170,7 +170,7 @@ w
       height: 16,
       padding: 0
     });
-  return (0, r.jsx)(p.Z, {
+  return (0, r.jsx)(I.Z, {
     className: L.categoryHeader,
     icon: a,
     children: t.name
@@ -234,7 +234,7 @@ er = i.useCallback((e, t) => {
   V,
   w
 ]),
-ei = (0, I.Dt)();
+ei = (0, h.Dt)();
   return (0, E.KR)(ei, !0, (0, _.DJ)(w)), i.useEffect(() => () => {
 (0, E.sJ)();
   }, []), (0, r.jsxs)(_.ZP, {
@@ -252,7 +252,7 @@ children: [
     onSectionClick: J,
     applicationCommandListRef: G
   }),
-  (0, r.jsx)(m.Z, {
+  (0, r.jsx)(f.Z, {
     role: 'listbox',
     className: L.list,
     listPadding: M,

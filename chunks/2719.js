@@ -1,60 +1,60 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return Q;
   }
-}), s(47120);
-var n = s(735250),
-  a = s(470079),
-  i = s(120356),
-  r = s.n(i),
-  o = s(512722),
-  l = s.n(o),
-  c = s(442837),
-  d = s(692547),
-  _ = s(481060),
-  E = s(230711),
-  u = s(129861),
-  T = s(279837),
-  I = s(952306),
-  S = s(299206),
-  N = s(295474),
-  C = s(144114),
-  m = s(918505),
-  A = s(332473),
-  g = s(921801),
-  h = s(290421),
-  O = s(318661),
-  p = s(80132),
-  R = s(735336),
-  x = s(204197),
-  M = s(25990),
-  f = s(594174),
-  D = s(572004),
-  P = s(51144),
-  L = s(998502),
-  b = s(695346),
-  Z = s(461877),
-  v = s(726985),
-  j = s(981631),
-  B = s(815660),
-  U = s(801461),
-  G = s(228168),
-  F = s(689938),
-  y = s(900168);
+}), t(47120);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(512722),
+  l = t.n(o),
+  c = t(442837),
+  d = t(692547),
+  _ = t(481060),
+  E = t(230711),
+  u = t(129861),
+  I = t(279837),
+  T = t(952306),
+  S = t(299206),
+  N = t(295474),
+  C = t(144114),
+  m = t(918505),
+  A = t(332473),
+  g = t(921801),
+  O = t(290421),
+  h = t(318661),
+  p = t(80132),
+  R = t(735336),
+  x = t(204197),
+  M = t(25990),
+  f = t(594174),
+  D = t(572004),
+  P = t(51144),
+  L = t(998502),
+  b = t(695346),
+  Z = t(461877),
+  v = t(726985),
+  j = t(981631),
+  B = t(815660),
+  U = t(801461),
+  G = t(228168),
+  F = t(689938),
+  y = t(900168);
 let V = L.ZP.getEnableHardwareAcceleration() ? _.AnimatedAvatar : _.Avatar;
 
 function Y(e) {
-  var t, i;
+  var s, i;
   let {
 className: o,
 user: l
-  } = e, c = a.useRef(null), E = (0, m.o9)(), u = (0, A.b)(), T = (0, N.gS)(), I = null !== (i = null == T ? void 0 : null === (t = T.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== i ? i : null, [S, C] = a.useState(!1);
+  } = e, c = a.useRef(null), E = (0, m.o9)(), u = (0, A.b)(), I = (0, N.gS)(), T = null !== (i = null == I ? void 0 : null === (s = I.nick) || void 0 === s ? void 0 : s[0]) && void 0 !== i ? i : null, [S, C] = a.useState(!1);
   a.useEffect(() => {
 C(null != c.current && c.current.scrollWidth > c.current.clientWidth);
   }, [l.username]);
   let g = !l.isClaimed(),
-h = E && !l.isPomelo() && !l.hasVerifiedEmailOrPhone() || g,
-O = h ? F.Z.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
+O = E && !l.isPomelo() && !l.hasVerifiedEmailOrPhone() || g,
+h = O ? F.Z.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
   return (0, n.jsxs)('div', {
 className: r()(y.field, o),
 children: [
@@ -95,7 +95,7 @@ children: [
     className: y.pomeloWarning,
     children: (0, n.jsx)(_.Tooltip, {
       text: F.Z.Messages.ACTION_NEEDED,
-      children: e => (0, n.jsx)(_.CircleExclamationPointIcon, {
+      children: e => (0, n.jsx)(_.CircleWarningIcon, {
         size: 'custom',
         width: 20,
         height: 20,
@@ -104,12 +104,12 @@ children: [
       })
     })
   }),
-  null != I && (0, n.jsx)('div', {
+  null != T && (0, n.jsx)('div', {
     className: y.pomeloWarning,
     children: (0, n.jsx)(_.Tooltip, {
-      text: I,
+      text: T,
       'aria-label': !1,
-      children: e => (0, n.jsx)(_.CircleExclamationPointIcon, {
+      children: e => (0, n.jsx)(_.CircleWarningIcon, {
         size: 'custom',
         width: 20,
         height: 20,
@@ -119,10 +119,10 @@ children: [
     })
   }),
   (0, n.jsx)(_.Tooltip, {
-    text: O,
+    text: h,
     children: e => (0, n.jsx)(_.Button, {
       ...e,
-      disabled: h,
+      disabled: O,
       size: _.Button.Sizes.SMALL,
       className: y.fieldButton,
       color: _.Button.Colors.PRIMARY,
@@ -132,23 +132,23 @@ children: [
           let {
             default: e
           } = await Promise.all([
-            s.e('85342'),
-            s.e('51695')
-          ]).then(s.bind(s, 193049));
-          return t => (0, n.jsx)(e, {
+            t.e('85342'),
+            t.e('51695')
+          ]).then(t.bind(t, 193049));
+          return s => (0, n.jsx)(e, {
             source: U.Kq.USER_SETTINGS_EDIT,
-            ...t
+            ...s
           });
         } {
           let {
             default: e
           } = await Promise.all([
-            s.e('75492'),
-            s.e('84956'),
-            s.e('42758')
-          ]).then(s.bind(s, 2702));
-          return t => (0, n.jsx)(e, {
-            ...t
+            t.e('75492'),
+            t.e('84956'),
+            t.e('42758')
+          ]).then(t.bind(t, 2702));
+          return s => (0, n.jsx)(e, {
+            ...s
           });
         }
       }),
@@ -160,13 +160,13 @@ children: [
 }
 
 function w(e) {
-  var t, s;
+  var s, t;
   let {
 user: i,
 className: o
-  } = e, l = (0, N.gS)(), c = null !== (s = null == l ? void 0 : null === (t = l.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null, E = P.ZP.getGlobalName(i), u = a.useRef(null), [T, I] = a.useState(!1);
+  } = e, l = (0, N.gS)(), c = null !== (t = null == l ? void 0 : null === (s = l.nick) || void 0 === s ? void 0 : s[0]) && void 0 !== t ? t : null, E = P.ZP.getGlobalName(i), u = a.useRef(null), [I, T] = a.useState(!1);
   return a.useEffect(() => {
-I(null != u.current && u.current.scrollWidth > u.current.clientWidth);
+T(null != u.current && u.current.scrollWidth > u.current.clientWidth);
   }, [E]), (0, n.jsxs)('div', {
 className: r()(y.field, o),
 children: [
@@ -197,7 +197,7 @@ children: [
     children: (0, n.jsx)(_.Tooltip, {
       text: c,
       'aria-label': !1,
-      children: e => (0, n.jsx)(_.CircleExclamationPointIcon, {
+      children: e => (0, n.jsx)(_.CircleWarningIcon, {
         size: 'custom',
         width: 20,
         height: 20,
@@ -212,19 +212,19 @@ children: [
     color: _.Button.Colors.PRIMARY,
     'aria-label': F.Z.Messages.USER_SETTINGS_ACCOUNT_EDIT_DISPLAYNAME_A11Y_LABEL,
     onClick: z,
-    children: T ? F.Z.Messages.DISAPPROVAL : F.Z.Messages.EDIT
+    children: I ? F.Z.Messages.DISAPPROVAL : F.Z.Messages.EDIT
   })
 ]
   });
 }
 
-function k(e) {
+function H(e) {
   let {
-text: t,
-censor: s,
+text: s,
+censor: t,
 revealLabel: i,
 hideLabel: r
-  } = e, [o, l] = a.useState(!1), c = o ? t : s(t);
+  } = e, [o, l] = a.useState(!1), c = o ? s : t(s);
   return (0, n.jsxs)(n.Fragment, {
 children: [
   c,
@@ -240,14 +240,14 @@ children: [
   });
 }
 
-function H(e) {
-  let t, {
+function k(e) {
+  let s, {
 className: a,
 user: i
   } = e;
   if (i.isClaimed()) {
 if (null == i.email)
-  t = {
+  s = {
     buttonText: F.Z.Messages.ADD,
     buttonAriaLabel: F.Z.Messages.USER_SETTINGS_ACCOUNT_ADD_EMAIL_A11Y_LABEL,
     buttonColor: _.Button.Colors.PRIMARY,
@@ -256,11 +256,11 @@ if (null == i.email)
       let {
         default: e
       } = await Promise.all([
-        s.e('9343'),
-        s.e('45863')
-      ]).then(s.bind(s, 642298));
-      return t => (0, n.jsx)(e, {
-        ...t
+        t.e('9343'),
+        t.e('45863')
+      ]).then(t.bind(t, 642298));
+      return s => (0, n.jsx)(e, {
+        ...s
       });
     })
   };
@@ -268,11 +268,11 @@ else {
   let {
     email: e
   } = i;
-  t = {
+  s = {
     buttonText: F.Z.Messages.EDIT,
     buttonAriaLabel: F.Z.Messages.USER_SETTINGS_ACCOUNT_EDIT_EMAIL_A11Y_LABEL,
     buttonColor: _.Button.Colors.PRIMARY,
-    valueMessage: (0, n.jsx)(k, {
+    valueMessage: (0, n.jsx)(H, {
       text: e,
       censor: Z.E,
       revealLabel: F.Z.Messages.USER_SETTINGS_ACCOUNT_REVEAL_EMAIL_A11Y_LABEL,
@@ -282,22 +282,22 @@ else {
       let {
         default: e
       } = await Promise.all([
-        s.e('9343'),
-        s.e('45863')
-      ]).then(s.bind(s, 642298));
-      return t => (0, n.jsx)(e, {
-        ...t
+        t.e('9343'),
+        t.e('45863')
+      ]).then(t.bind(t, 642298));
+      return s => (0, n.jsx)(e, {
+        ...s
       });
     })
   };
 }
   } else
-t = {
+s = {
   buttonText: F.Z.Messages.CLAIM_ACCOUNT_SHORT,
   buttonAriaLabel: F.Z.Messages.CLAIM_ACCOUNT_SHORT,
   buttonColor: _.Button.Colors.BRAND,
   valueMessage: F.Z.Messages.USER_SETTINGS_ADD_EMAIL_CLAIM,
-  handleClick: () => I.Z.openClaimAccountModal()
+  handleClick: () => T.Z.openClaimAccountModal()
 };
   return (0, n.jsxs)('div', {
 className: r()(y.field, a),
@@ -315,7 +315,7 @@ children: [
             tag: 'span',
             color: 'header-primary',
             variant: 'text-md/normal',
-            children: t.valueMessage
+            children: s.valueMessage
           })
         })
       ]
@@ -325,16 +325,16 @@ children: [
     className: y.fieldButton,
     size: _.Button.Sizes.SMALL,
     color: _.Button.Colors.PRIMARY,
-    'aria-label': t.buttonAriaLabel,
-    onClick: t.handleClick,
-    children: t.buttonText
+    'aria-label': s.buttonAriaLabel,
+    onClick: s.handleClick,
+    children: s.buttonText
   })
 ]
   });
 }
 
 function W(e) {
-  let t, {
+  let s, {
 className: a,
 user: i
   } = e;
@@ -344,7 +344,7 @@ return null;
 phone: o,
 email: l
   } = i, c = null != o;
-  return t = c ? (0, n.jsx)(k, {
+  return s = c ? (0, n.jsx)(H, {
 text: o,
 censor: Z.n,
 revealLabel: F.Z.Messages.USER_SETTINGS_ACCOUNT_REVEAL_PHONE_A11Y_LABEL,
@@ -365,7 +365,7 @@ children: [
             tag: 'span',
             color: 'header-primary',
             variant: 'text-md/normal',
-            children: t
+            children: s
           })
         })
       ]
@@ -381,7 +381,7 @@ children: [
         color: _.Button.Colors.PRIMARY,
         'aria-label': F.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_A11Y_LABEL,
         onClick: function() {
-          (0, _.openModal)(e => (0, n.jsx)(T.default, {
+          (0, _.openModal)(e => (0, n.jsx)(I.default, {
             ...e,
             title: F.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_NUMBER_TITLE,
             children: i.hasFlag(j.xW$.MFA_SMS) ? F.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_SMS_BACKUP_WARNING : void 0,
@@ -400,10 +400,10 @@ children: [
           (0, _.openModalLazy)(async () => {
             let {
               default: e
-            } = await Promise.resolve().then(s.bind(s, 607018));
-            return t => (0, n.jsx)(e, {
+            } = await Promise.resolve().then(t.bind(t, 607018));
+            return s => (0, n.jsx)(e, {
               reason: C.L.USER_SETTINGS_UPDATE,
-              ...t
+              ...s
             });
           }, {
             modalKey: B.M
@@ -419,22 +419,22 @@ children: [
 
 function K(e) {
   let {
-user: t
-  } = e, s = (0, S.Z)({
-id: t.id,
+user: s
+  } = e, t = (0, S.Z)({
+id: s.id,
 label: F.Z.Messages.COPY_ID_USER
   });
   return b.Sb.useSetting() && D.wS ? (0, n.jsx)(_.Popout, {
 renderPopout: e => {
   let {
-    closePopout: t
+    closePopout: s
   } = e;
   return (0, n.jsx)(_.Menu, {
-    onClose: t,
+    onClose: s,
     onSelect: void 0,
     navId: 'copy-id',
     'aria-label': F.Z.Messages.USER_MORE_ACTIONS_MENU_LABEL,
-    children: s
+    children: t
   });
 },
 children: e => (0, n.jsx)(_.Clickable, {
@@ -456,12 +456,12 @@ function z() {
 
 function Q() {
   var e;
-  let t = (0, c.e7)([f.default], () => {
+  let s = (0, c.e7)([f.default], () => {
   let e = f.default.getCurrentUser();
   return l()(null != e, 'UserSettingsAccountProfileCard: currentUser cannot be undefined'), e;
 }),
-s = (0, O.ZP)(t.id),
-a = (0, h.Z)(s),
+t = (0, h.ZP)(s.id),
+a = (0, O.Z)(t),
 i = b.co.useSetting(),
 r = (0, c.e7)([M.Z], () => M.Z.getErrors()),
 o = null == r ? void 0 : null === (e = r.avatar) || void 0 === e ? void 0 : e[0],
@@ -469,15 +469,15 @@ o = null == r ? void 0 : null === (e = r.avatar) || void 0 === e ? void 0 : e[0]
   avatarSrc: d,
   avatarDecorationSrc: E
 } = (0, x.Z)({
-  user: t,
+  user: s,
   size: _.AvatarSizes.SIZE_80
 });
   return (0, n.jsxs)('div', {
 className: y.accountProfileCard,
 children: [
   (0, n.jsx)(R.Z, {
-    displayProfile: s,
-    user: t,
+    displayProfile: t,
+    user: s,
     allowEdit: !1,
     guildId: void 0,
     profileType: G.y0.SETTINGS
@@ -491,7 +491,7 @@ children: [
         avatarDecoration: E,
         status: i,
         size: _.AvatarSizes.SIZE_80,
-        'aria-label': t.username
+        'aria-label': s.username
       }),
       (0, n.jsxs)('div', {
         children: [
@@ -499,12 +499,12 @@ children: [
             className: y.profileCardUsernameRow,
             children: [
               (0, n.jsx)(u.Z, {
-                user: t,
+                user: s,
                 className: y.userTag,
                 discriminatorClass: y.discriminator
               }),
               (0, n.jsx)(K, {
-                user: t
+                user: s
               })
             ]
           }),
@@ -538,27 +538,27 @@ children: [
             setting: v.s6.ACCOUNT_DISPLAY_NAME,
             children: (0, n.jsx)(w, {
               className: y.fieldSpacerBottom,
-              user: t
+              user: s
             })
           }),
           (0, n.jsx)(g.F, {
             setting: v.s6.ACCOUNT_USERNAME,
             children: (0, n.jsx)(Y, {
-              user: t
+              user: s
             })
           }),
           (0, n.jsx)(g.F, {
             setting: v.s6.ACCOUNT_EMAIL,
-            children: (0, n.jsx)(H, {
+            children: (0, n.jsx)(k, {
               className: y.fieldSpacer,
-              user: t
+              user: s
             })
           }),
           (0, n.jsx)(g.F, {
             setting: v.s6.ACCOUNT_PHONE_NUMBER,
             children: (0, n.jsx)(W, {
               className: y.fieldSpacer,
-              user: t
+              user: s
             })
           })
         ]

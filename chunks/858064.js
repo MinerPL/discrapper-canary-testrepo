@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return g;
+return m;
   }
 });
 var i = n(735250);
@@ -54,7 +54,7 @@ case d._e.LOADING_INITIAL_PROGRESS:
   }
 };
 
-function m(e) {
+function g(e) {
   let {
 streamLengthRequirement: t,
 viewerCountRequirement: n
@@ -96,20 +96,20 @@ children: [
   });
 }
 
-function g(e) {
+function m(e) {
   let {
 onClose: t,
 tooltipAction: n,
 partnerGame: u
-  } = e, g = (0, c.au)(u);
+  } = e, m = (0, c.au)(u);
   (0, c.op)(u);
   let C = (0, l.e7)([s.default], () => s.default.getId());
-  if (null == g)
+  if (null == m)
 return null;
   let {
 streamLengthRequirement: I,
 viewerCountRequirement: E
-  } = g.config, N = g.drop, {
+  } = m.config, N = m.drop, {
 header: x,
 body: S,
 imgSrc: v,
@@ -137,7 +137,7 @@ children: [
     className: _.__invalid_buttonClose,
     'aria-label': p.Z.Messages.CLOSE,
     onClick: L,
-    children: (0, i.jsx)(r.CloseSmallIcon, {
+    children: (0, i.jsx)(r.XSmallIcon, {
       size: 'xs',
       color: 'currentColor',
       className: _.closeIcon
@@ -150,7 +150,7 @@ children: [
     variant: 'heading-md/extrabold',
     children: x
   }),
-  n === d._e.TRACK_PROGRESS ? (0, i.jsx)(m, {
+  n === d._e.TRACK_PROGRESS ? (0, i.jsx)(g, {
     streamLengthRequirement: I,
     viewerCountRequirement: E
   }) : (0, i.jsx)(r.Text, {

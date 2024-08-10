@@ -11,8 +11,8 @@ var i = n(735250),
   _ = n(754961),
   h = n(363915),
   E = n(359380),
-  I = n(207796),
-  m = n(689938),
+  m = n(207796),
+  I = n(689938),
   g = n(270590);
 let p = {
   mass: 1,
@@ -21,37 +21,37 @@ let p = {
 };
 
 function T() {
-  let e = (0, I.GN)(e => e.selectedGames, r.Z),
+  let e = (0, m.GN)(e => e.selectedGames, r.Z),
 t = a.useMemo(() => new Set(e), [e]),
-n = a.useCallback(e => I.GN.getState().setSelectedGames(Array.from(e)), []);
+n = a.useCallback(e => m.GN.getState().setSelectedGames(Array.from(e)), []);
   return (0, i.jsx)(d.Z, {
-title: m.Z.Messages.CLAN_DISCOVERY_GAME_TITLE,
-description: m.Z.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
-handleUpdate: n,
+title: I.Z.Messages.CLAN_DISCOVERY_GAME_TITLE,
+description: I.Z.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
+onUpdateGames: n,
 gameApplicationIds: t
   });
 }
 
 function S() {
-  let e = (0, I.GN)(e => e.selectedPlaystyle, r.Z),
-t = a.useCallback(e => I.GN.getState().setSelectedPlaystyle(e), []);
+  let e = (0, m.GN)(e => e.selectedPlaystyle, r.Z),
+t = a.useCallback(e => m.GN.getState().setSelectedPlaystyle(e), []);
   return (0, i.jsx)(u.Z, {
-title: m.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
-description: m.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
-handleUpdate: t,
+title: I.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
+description: I.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
+onUpdatePlaystyle: t,
 playstyle: e
   });
 }
 
 function f() {
-  let e = (0, I.GN)(e => e.selectedTraits, r.Z),
+  let e = (0, m.GN)(e => e.selectedTraits, r.Z),
 t = a.useMemo(() => new Set(e), [e]),
-n = a.useCallback(e => I.GN.getState().setSelectedTraits([...e]), []);
+n = a.useCallback(e => m.GN.getState().setSelectedTraits([...e]), []);
   return (0, i.jsx)(E.Z, {
-title: m.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
-description: m.Z.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
-handleUpdate: n,
-interests: t,
+title: I.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
+description: I.Z.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
+onUpdateTraits: n,
+traits: t,
 hidePreview: !0
   });
 }
@@ -62,17 +62,17 @@ function C(e) {
 t.Z = a.memo(function(e) {
   let {
 setScreen: t
-  } = e, n = a.useRef(null), d = a.useRef(null), u = a.useRef(null), E = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), [N, A] = a.useState(0), [v, Z] = a.useState(0), L = (0, I.GN)(e => e.selectedPlaystyle, r.Z), O = (0, I.GN)(e => e.previousMode, r.Z), R = a.useCallback(e => {
+  } = e, n = a.useRef(null), d = a.useRef(null), u = a.useRef(null), E = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), [N, A] = a.useState(0), [v, Z] = a.useState(0), L = (0, m.GN)(e => e.selectedPlaystyle, r.Z), O = (0, m.GN)(e => e.previousMode, r.Z), R = a.useCallback(e => {
 A(e), v < e && Z(e);
   }, [v]), x = a.useCallback(() => {
-0 === N ? (t(I.o2.USER_UPSELL), (0, I.fH)(O)) : R(N - 1);
+0 === N ? (t(m.o2.USER_UPSELL), (0, m.fH)(O)) : R(N - 1);
   }, [
 N,
 O,
 t,
 R
   ]), b = a.useCallback(() => {
-2 === N ? (0, I.fH)(I.v0.DISCOVERY) : R(N + 1);
+2 === N ? (0, m.fH)(m.v0.DISCOVERY) : R(N + 1);
   }, [
 N,
 R
@@ -81,15 +81,15 @@ L,
 N
   ]), M = a.useMemo(() => [{
   index: 0,
-  name: m.Z.Messages.CLAN_SETUP_GAMES_STEP
+  name: I.Z.Messages.CLAN_SETUP_GAMES_STEP
 },
 {
   index: 1,
-  name: m.Z.Messages.CLAN_SETUP_PLAYSTYLE_STEP
+  name: I.Z.Messages.CLAN_SETUP_PLAYSTYLE_STEP
 },
 {
   index: 2,
-  name: m.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_STEP
+  name: I.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_STEP
 }
   ], []), D = (0, o.useSpring)({
 ref: n,

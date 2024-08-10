@@ -49,7 +49,7 @@ onClick: function() {
 },
 size: i.Button.Sizes.LARGE,
 children: [
-  (0, s.jsx)(i.CircleExclamationPointIcon, {
+  (0, s.jsx)(i.CircleWarningIcon, {
     size: 'xs',
     color: 'currentColor'
   }),

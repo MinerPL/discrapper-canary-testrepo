@@ -6,5 +6,6 @@ e.exports = {
   artContainer: 'artContainer_da1432',
   art: 'art_da1432',
   tideArt: 'tideArt_da1432',
-  robertContainer: 'robertContainer_da1432'
+  robertContainer: 'robertContainer_da1432',
+  stormContainer: 'stormContainer_da1432'
 };

@@ -24,146 +24,151 @@ d = new n(e => {
   });
 });
   return (0, i.forwardRef)(function(n, _) {
+var E;
 let {
-  onScroll: E,
-  dir: f = 'ltr',
-  sections: h,
-  columns: p,
-  getItemKey: m,
-  getItemHeight: I,
-  getSectionHeight: T,
-  chunkSize: g,
-  renderSection: S,
-  renderItem: A,
-  getSectionProps: N,
-  itemGutter: v,
-  removeEdgeItemGutters: O,
-  sectionGutter: R,
-  padding: C,
-  paddingVertical: y,
-  paddingHorizontal: D,
-  fade: L = !1,
-  className: b,
-  style: M,
-  maxContentWidth: P,
-  ...U
-} = n, w = i.useRef(null), x = i.useRef(null), [G, k] = i.useState(!1), {
-  scrollerRef: B,
-  scrollerState: F,
-  getScrollerState: V
+  onScroll: f,
+  dir: h = 'ltr',
+  sections: p,
+  columns: m,
+  getItemKey: I,
+  getItemHeight: T,
+  getSectionHeight: g,
+  chunkSize: S,
+  renderSection: A,
+  renderItem: N,
+  getSectionProps: v,
+  itemGutter: O,
+  removeEdgeItemGutters: R,
+  sectionGutter: C,
+  padding: y,
+  paddingVertical: D,
+  paddingHorizontal: L,
+  fade: b = !1,
+  className: M,
+  style: P,
+  maxContentWidth: U,
+  renderAccessory: w,
+  ...x
+} = n, G = i.useRef(null), k = i.useRef(null), [B, F] = i.useState(!1), {
+  scrollerRef: V,
+  scrollerState: H,
+  getScrollerState: Z
 } = (0, l.T4)();
 (0, l.tT)({
-  scrollerRef: B,
-  className: b,
+  scrollerRef: V,
+  className: M,
   specs: a,
   orientation: 'vertical',
-  dir: f
+  dir: h
 });
 let {
-  forceUpdateOnChunkChange: H,
-  coordsMap: Z,
-  gridData: Y,
-  visibleSections: j,
-  totalHeight: W,
-  forceUpdate: K,
-  masonryComputer: z
+  forceUpdateOnChunkChange: Y,
+  coordsMap: j,
+  gridData: W,
+  visibleSections: K,
+  totalHeight: z,
+  forceUpdate: q,
+  masonryComputer: Q
 } = (0, l.QB)({
-  sections: h,
-  columns: p,
-  getItemKey: m,
-  getItemHeight: I,
-  getSectionHeight: T,
-  chunkSize: g,
-  itemGutter: v,
-  removeEdgeItemGutters: O,
-  sectionGutter: R,
-  padding: C,
-  paddingVertical: y,
-  paddingHorizontal: D,
-  getScrollerState: V,
-  dir: f,
-  maxBufferWidth: P
-}), q = (0, i.useCallback)(function() {
+  sections: p,
+  columns: m,
+  getItemKey: I,
+  getItemHeight: T,
+  getSectionHeight: g,
+  chunkSize: S,
+  itemGutter: O,
+  removeEdgeItemGutters: R,
+  sectionGutter: C,
+  padding: y,
+  paddingVertical: D,
+  paddingHorizontal: L,
+  getScrollerState: Z,
+  dir: h,
+  maxBufferWidth: U
+}), X = (0, i.useCallback)(function() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
-  e > F.current.dirty && (F.current.dirty = e, 2 === e ? K() : H(1));
+  e > H.current.dirty && (H.current.dirty = e, 2 === e ? q() : Y(1));
 }, [
+  Y,
   H,
-  F,
-  K
-]), Q = (0, l.t2)(B), X = (0, i.useCallback)(() => z.itemGrid, [z]), $ = (0, i.useCallback)(() => z.coordsMap, [z]), J = i.useCallback(() => q(), [q]);
+  q
+]), $ = (0, l.t2)(V), J = (0, i.useCallback)(() => Q.itemGrid, [Q]), ee = (0, i.useCallback)(() => Q.coordsMap, [Q]), et = i.useCallback(() => X(), [X]);
 (0, l.zn)({
-  ref: B,
+  ref: V,
   key: 'container',
-  onUpdate: J,
+  onUpdate: et,
   resizeObserver: d,
   listenerMap: c
 }), (0, i.useImperativeHandle)(_, () => ({
-  getScrollerNode: () => B.current,
-  getItemGrid: X,
-  getCoordsMap: $,
-  getScrollerState: V,
-  ...(0, l.Ue)(B, V, Q)
+  getScrollerNode: () => V.current,
+  getItemGrid: J,
+  getCoordsMap: ee,
+  getScrollerState: Z,
+  ...(0, l.Ue)(V, Z, $)
 }), [
-  B,
   V,
-  X,
-  Q,
-  $
+  Z,
+  J,
+  $,
+  ee
 ]);
-let ee = (0, i.useCallback)(e => {
-  q(1), null == w.current ? k(!0) : clearTimeout(w.current), w.current = setTimeout(() => {
-    w.current = null, k(!1);
-  }, 200), null != E && E(e);
+let en = (0, i.useCallback)(e => {
+  X(1), null == G.current ? F(!0) : clearTimeout(G.current), G.current = setTimeout(() => {
+    G.current = null, F(!1);
+  }, 200), null != f && f(e);
 }, [
-  E,
-  q
+  f,
+  X
 ]);
-return (0, r.jsx)('div', {
-  ref: B,
-  onScroll: ee,
-  className: s()(b, {
+return (0, r.jsxs)('div', {
+  ref: V,
+  onScroll: en,
+  className: s()(M, {
     [e]: !0,
-    [t]: L,
-    [u.scrolling]: G
+    [t]: b,
+    [u.scrolling]: B
   }),
-  style: (0, l.uT)(M),
-  ...U,
-  children: (0, i.useMemo)(() => (0, r.jsx)(o.J, {
-    containerRef: x,
-    children: (0, r.jsx)('div', {
-      style: {
-        height: W
-      },
-      className: u.content,
-      ref: x,
-      children: Object.keys(j).map(e => {
-        let t = (0, l.t$)(e),
-          n = Z[e],
-          i = j[e],
-          a = Z[(0, l.DP)(t)],
-          s = null == N ? void 0 : N(t);
-        return null != n && null != i ? (0, r.jsxs)('div', {
-          style: n,
-          ...s,
-          children: [
-            null != S && null != a && S(t, a, e),
-            i.map(e => {
-              let [t, n, r] = e, i = Z[t];
-              return null != i ? A(n, r, i, t, Y) : null;
-            })
-          ]
-        }, e) : null;
+  style: (0, l.uT)(P),
+  ...x,
+  children: [
+    null !== (E = null == w ? void 0 : w(z)) && void 0 !== E ? E : null,
+    (0, i.useMemo)(() => (0, r.jsx)(o.J, {
+      containerRef: k,
+      children: (0, r.jsx)('div', {
+        style: {
+          height: z
+        },
+        className: u.content,
+        ref: k,
+        children: Object.keys(K).map(e => {
+          let t = (0, l.t$)(e),
+            n = j[e],
+            i = K[e],
+            a = j[(0, l.DP)(t)],
+            s = null == v ? void 0 : v(t);
+          return null != n && null != i ? (0, r.jsxs)('div', {
+            style: n,
+            ...s,
+            children: [
+              null != A && null != a && A(t, a, e),
+              i.map(e => {
+                let [t, n, r] = e, i = j[t];
+                return null != i ? N(n, r, i, t, W) : null;
+              })
+            ]
+          }, e) : null;
+        })
       })
-    })
-  }), [
-    j,
-    A,
-    S,
-    Z,
-    W,
-    N,
-    Y
-  ])
+    }), [
+      K,
+      N,
+      A,
+      j,
+      z,
+      v,
+      W
+    ])
+  ]
 });
   });
 }

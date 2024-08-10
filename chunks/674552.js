@@ -9,7 +9,7 @@ return _;
 return f;
   },
   jt: function() {
-return m;
+return g;
   }
 }), n(47120);
 var i = n(735250);
@@ -70,13 +70,13 @@ if (!n)
   return null;
 t = a.VoiceNormalIcon;
   }
-  return g({
+  return m({
 icon: t,
 isCurrentUserConnected: r
   });
 }
 
-function m(e) {
+function g(e) {
   let {
 guildJoinRequestStatus: t
   } = e, [n, i] = function(e) {
@@ -89,7 +89,7 @@ switch (e) {
   case o.wB.REJECTED:
     return [
       d.Ilk.RED_400,
-      a.CloseSmallIcon
+      a.XSmallIcon
     ];
   case o.wB.APPROVED:
     return [
@@ -103,13 +103,13 @@ switch (e) {
     ];
 }
   }(t);
-  return g({
+  return m({
 icon: i,
 color: n
   });
 }
 
-function g(e) {
+function m(e) {
   let {
 icon: t,
 color: n,

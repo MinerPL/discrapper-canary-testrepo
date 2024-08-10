@@ -11,8 +11,8 @@ var a = t(735250),
   l = t(205822),
   i = t(476326),
   d = t(377171),
-  c = t(153124),
-  u = t(350722),
+  c = t(313201),
+  u = t(25057),
   C = t(587123),
   g = t(863663),
   T = t(731994),
@@ -66,7 +66,7 @@ children: (0, a.jsxs)('div', {
       look: o.Button.Looks.BLANK,
       size: o.Button.Sizes.NONE,
       onClick: i,
-      children: (0, a.jsx)(o.CloseSmallIcon, {
+      children: (0, a.jsx)(o.XSmallIcon, {
         size: 'xxs',
         color: 'currentColor',
         className: m.__invalid_deleteIcon

@@ -1,16 +1,16 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return _;
   }
 });
-var n = s(735250);
-s(470079);
-var a = s(481060),
-  i = s(299379),
-  r = s(447293),
-  o = s(58839),
-  l = s(981631),
-  c = s(765805);
+var n = t(735250);
+t(470079);
+var a = t(481060),
+  i = t(299379),
+  r = t(447293),
+  o = t(58839),
+  l = t(981631),
+  c = t(765805);
 let d = {
   offset: {
 top: -8
@@ -44,7 +44,7 @@ children: [
     href: l.fK7.INSTAGRAM_URL,
     className: c.link,
     focusProps: d,
-    children: (0, n.jsx)(a.InstagramIcon, {
+    children: (0, n.jsx)(a.InstagramNeutralIcon, {
       size: 'xs',
       color: 'currentColor',
       colorClass: c.foreground,
@@ -59,7 +59,7 @@ children: [
     href: l.fK7.FACEBOOK_URL,
     className: c.link,
     focusProps: d,
-    children: (0, n.jsx)(a.FacebookIcon, {
+    children: (0, n.jsx)(a.FacebookNeutralIcon, {
       size: 'xs',
       color: 'currentColor',
       colorClass: c.foreground,

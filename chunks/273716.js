@@ -16,7 +16,7 @@ label: t,
   } = e;
   return (0, r.jsx)(a.Z, {
 label: null != t ? t : s.Z.Messages.CLOSE,
-iconComponent: i.CloseSmallBoldIcon,
+iconComponent: i.XSmallBoldIcon,
 ...n
   });
 }

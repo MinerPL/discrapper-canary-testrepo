@@ -76,18 +76,20 @@ return (0, r.jsx)('div', {
   })
 });
   }),
-  I = e => (0, o.EQ)(e).with(E.y0.POPOUT, E.y0.SETTINGS, () => f.userPopoutOverlayBackground).with(E.y0.MODAL, () => f.userProfileModalOverlayBackground).with(E.y0.BITE_SIZE, () => f.biteSizeOverlayBackground).with(E.y0.FULL_SIZE, () => f.fullSizeOverlayBackground).otherwise(() => f.overlayBackground);
-t.Z = Object.assign(m, {
-  Overlay: function(e) {
+  I = e => (0, o.EQ)(e).with(E.y0.POPOUT, E.y0.SETTINGS, () => f.userPopoutOverlayBackground).with(E.y0.MODAL, () => f.userProfileModalOverlayBackground).with(E.y0.BITE_SIZE, () => f.biteSizeOverlayBackground).with(E.y0.FULL_SIZE, () => f.fullSizeOverlayBackground).otherwise(() => f.overlayBackground),
+  T = i.forwardRef(function(e, t) {
 let {
-  children: t,
-  className: n
+  children: n,
+  className: i
 } = e, {
-  profileType: i
+  profileType: a
 } = (0, _.z)();
 return (0, r.jsx)('div', {
-  className: s()(I(i), n),
-  children: t
+  ref: t,
+  className: s()(I(a), i),
+  children: n
 });
-  }
+  });
+t.Z = Object.assign(m, {
+  Overlay: T
 });

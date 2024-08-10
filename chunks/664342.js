@@ -159,7 +159,7 @@ children: [
     channel: t
   }),
   (0, i.jsx)(g.ZP.Icon, {
-    icon: s.CloseSmallIcon,
+    icon: s.XSmallIcon,
     tooltip: v.Z.Messages.CLOSE,
     onClick: () => (0, T.vN)((0, E.e)(t), null != n ? n : t.parent_id)
   })

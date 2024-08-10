@@ -19,42 +19,36 @@ onClose: n,
 bio: a,
 hidePersonalInformation: p
   } = e, {
-guildId: m,
-channelId: I,
-messageId: T,
-roleId: g
+context: m
   } = (0, u.KZ)(), {
-analyticsLocations: S
-  } = (0, l.ZP)(), [A, N] = i.useState(!1), [v, O] = i.useState(!1);
+analyticsLocations: I
+  } = (0, l.ZP)(), [T, g] = i.useState(!1), [S, A] = i.useState(!1);
   return p || null == a || '' === a ? null : (0, r.jsxs)('div', {
 children: [
   (0, r.jsx)('div', {
     ref: e => {
-      null != e && (N(!v && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > h && O(!0));
+      null != e && (g(!S && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > h && A(!0));
     },
-    className: s()(f.descriptionClamp, v && f.maxBioHeight),
+    className: s()(f.descriptionClamp, S && f.maxBioHeight),
     children: (0, r.jsx)(c.Z, {
       userBio: a,
       setLineClamp: !1,
       textColor: 'header-primary'
     })
   }),
-  (A || v) && (0, r.jsx)(o.Button, {
+  (T || S) && (0, r.jsx)(o.Button, {
     look: o.Button.Looks.BLANK,
     size: o.Button.Sizes.NONE,
     className: f.viewFullBio,
     color: f.viewFullBioColor,
     onClick: () => {
       null == n || n(), (0, d.openUserProfileModal)({
+        ...m,
         userId: t.id,
-        guildId: null != m ? m : void 0,
-        channelId: null != I ? I : void 0,
-        messageId: null != T ? T : void 0,
-        roleId: null != g ? g : void 0,
+        sourceAnalyticsLocations: I,
         analyticsLocation: {
           section: _.jXE.BITE_SIZE_PROFILE_POPOUT
-        },
-        sourceAnalyticsLocations: S
+        }
       });
     },
     children: (0, r.jsx)(o.Text, {

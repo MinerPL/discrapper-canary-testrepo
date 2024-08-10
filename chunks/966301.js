@@ -41,7 +41,7 @@ children: [
       (0, s.jsxs)('div', {
         className: C.warningTextContainer,
         children: [
-          T <= 85 && (0, s.jsx)(r.CircleExclamationPointIcon, {
+          T <= 85 && (0, s.jsx)(r.CircleWarningIcon, {
             size: 'xs',
             color: 'currentColor',
             className: C.warning
@@ -107,7 +107,7 @@ children: [
         className: C.channelCoverageHint,
         children: m > 0 ? (0, s.jsxs)(s.Fragment, {
           children: [
-            (0, s.jsx)(r.CircleExclamationPointIcon, {
+            (0, s.jsx)(r.CircleWarningIcon, {
               size: 'xs',
               color: 'currentColor'
             }),

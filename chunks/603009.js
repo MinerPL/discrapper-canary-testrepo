@@ -156,7 +156,7 @@ return t && (0, i.jsx)(r.animated.div, {
           children: (0, i.jsx)(c.Clickable, {
             className: M.toastButton,
             onClick: L,
-            children: (0, i.jsx)(c.CloseSmallBoldIcon, {
+            children: (0, i.jsx)(c.XSmallBoldIcon, {
               size: 'custom',
               width: 20,
               height: 20

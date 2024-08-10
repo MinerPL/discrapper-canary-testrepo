@@ -94,6 +94,6 @@ return null === (e = _.current) || void 0 === e ? void 0 : e.clear();
   for (let [, e] of E)
 f.push(e.children);
   return (0, a.jsx)(a.Fragment, {
-children: f.length > 0 ? i(f) : null
+children: f.length > 0 ? i(f, t) : null
   });
 }

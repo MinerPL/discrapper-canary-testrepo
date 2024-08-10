@@ -7,9 +7,9 @@ return v;
   }
 });
 var n = t(735250),
-  r = t(470079),
-  a = t(120356),
-  o = t.n(a),
+  a = t(470079),
+  o = t(120356),
+  r = t.n(o),
   i = t(481060),
   c = t(774078),
   l = t(55935),
@@ -23,8 +23,8 @@ function x(e) {
   let {
 isTabSelected: s,
 expiresAt: t,
-trialDuration: a
-  } = e, u = r.useMemo(() => Date.parse(t), [t]), d = (0, c.Z)(u, 60000);
+trialDuration: o
+  } = e, u = a.useMemo(() => Date.parse(t), [t]), d = (0, c.Z)(u, 60000);
   return Object.values(d).every(e => 0 === e) ? null : (0, n.jsx)(i.Tooltip, {
 text: (0, l.QX)(d, {
   days: p.Z.Messages.PREMIUM_TRIAL_REMAINING_AVAILABILITY_DAYS,
@@ -33,7 +33,7 @@ text: (0, l.QX)(d, {
 }),
 children: e => (0, n.jsxs)('div', {
   ...e,
-  className: o()(g.premiumTrialBadge, g.premiumTrialAcknowledgedBadge, {
+  className: r()(g.premiumTrialBadge, g.premiumTrialAcknowledgedBadge, {
     [g.premiumTrialBadgeSelected]: s
   }),
   children: [
@@ -48,7 +48,7 @@ children: e => (0, n.jsxs)('div', {
       variant: 'eyebrow',
       children: [
         ' ',
-        a,
+        o,
         ' '
       ]
     })
@@ -61,16 +61,16 @@ function b(e) {
   var s;
   let {
 isTabSelected: t,
-trialOffer: r
-  } = e, a = null === (s = (0, d.N)()) || void 0 === s ? void 0 : s.subscription_trial, o = (0, u.a5)({
-intervalType: null == a ? void 0 : a.interval,
-intervalCount: null == a ? void 0 : a.interval_count
+trialOffer: a
+  } = e, o = null === (s = (0, d.N)()) || void 0 === s ? void 0 : s.subscription_trial, r = (0, u.a5)({
+intervalType: null == o ? void 0 : o.interval,
+intervalCount: null == o ? void 0 : o.interval_count
   });
   return (0, n.jsx)(_, {
 isTabSelected: t,
-badgeCopy: o,
-offerExpiresAt: r.expires_at,
-className: (null == a ? void 0 : a.sku_id) === f.Si.TIER_2 ? g.premiumTrialTier2UnacknowledgedBadge : g.premiumTrialTier0UnacknowledgedBadge
+badgeCopy: r,
+offerExpiresAt: a.expires_at,
+className: (null == o ? void 0 : o.sku_id) === f.Si.TIER_2 ? g.premiumTrialTier2UnacknowledgedBadge : g.premiumTrialTier0UnacknowledgedBadge
   });
 }
 
@@ -78,13 +78,13 @@ function v(e) {
   let {
 isTabSelected: s,
 userDiscount: t,
-includesAmountOff: r
-  } = e, a = p.Z.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
+includesAmountOff: a
+  } = e, o = p.Z.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
 percent: t.discount.amount
   });
   return (0, n.jsx)(_, {
 isTabSelected: s,
-badgeCopy: r ? a : p.Z.Messages.PREMIUM_DISCOUNT_BADGE,
+badgeCopy: a ? o : p.Z.Messages.PREMIUM_DISCOUNT_BADGE,
 offerExpiresAt: t.expires_at,
 className: g.premiumDiscountUnacknowledgedBadge
   });
@@ -94,22 +94,19 @@ function _(e) {
   let {
 isTabSelected: s,
 badgeCopy: t,
-offerExpiresAt: r,
-className: a
+offerExpiresAt: a,
+className: o
   } = e;
-  return null != r ? (0, n.jsx)(x, {
-expiresAt: r,
+  return null != a ? (0, n.jsx)(x, {
+expiresAt: a,
 isTabSelected: s,
 trialDuration: t
   }) : (0, n.jsx)('div', {
-className: o()(g.premiumTrialBadge, a),
-children: (0, n.jsxs)(i.Text, {
+className: r()(g.premiumTrialBadge, o),
+children: (0, n.jsx)(i.Text, {
   variant: 'eyebrow',
-  children: [
-    ' ',
-    t,
-    ' '
-  ]
+  className: g.premiumOfferBadgeCopy,
+  children: t
 })
   });
 }

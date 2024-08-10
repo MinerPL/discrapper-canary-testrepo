@@ -12,8 +12,8 @@ var i = n(735250),
   c = n(259580),
   _ = n(499033),
   u = n(626135),
-  E = n(709054),
-  d = n(219230),
+  d = n(709054),
+  E = n(219230),
   T = n(531441),
   S = n(236289),
   A = n(788080),
@@ -22,8 +22,8 @@ var i = n(735250),
   g = n(613734),
   f = n(800530),
   C = n(981631),
-  m = n(689938),
-  U = n(332058);
+  U = n(689938),
+  m = n(332058);
 let h = e => {
 let {
   status: t,
@@ -32,37 +32,37 @@ let {
   count: s
 } = e;
 return (0, i.jsxs)(o.Clickable, {
-  className: U.header,
+  className: m.header,
   onClick: n,
   children: [
     (0, i.jsx)('div', {
-      className: U.headerIconWrapper,
+      className: m.headerIconWrapper,
       children: (0, i.jsx)(o.WarningIcon, {
         size: 'md',
         color: 'active' === t ? o.tokens.colors.INTERACTIVE_ACTIVE : o.tokens.colors.INTERACTIVE_MUTED
       })
     }),
     (0, i.jsxs)('div', {
-      className: U.title,
+      className: m.title,
       children: [
         (0, i.jsx)(o.Heading, {
           variant: 'heading-md/semibold',
           color: 'text-normal',
-          children: 'active' === t ? m.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE_V2.format({
+          children: 'active' === t ? U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE_V2.format({
             count: s.toString()
-          }) : m.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_EXPIRED_V2.format({
+          }) : U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_EXPIRED_V2.format({
             count: s.toString()
           })
         }),
         (0, i.jsx)(o.Heading, {
           variant: 'text-sm/normal',
           color: 'text-muted',
-          children: 'active' === t ? m.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_ACTIVE_V2 : m.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_EXPIRED_V2
+          children: 'active' === t ? U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_ACTIVE_V2 : U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_EXPIRED_V2
         })
       ]
     }),
     (0, i.jsx)('div', {
-      className: U.caret,
+      className: m.caret,
       children: (0, i.jsx)(c.Z, {
         width: 18,
         height: 18,
@@ -73,42 +73,42 @@ return (0, i.jsxs)(o.Clickable, {
 });
   },
   p = () => (0, i.jsxs)('div', {
-className: U.emptyState,
+className: m.emptyState,
 children: [
   (0, i.jsxs)('div', {
-    className: U.iconContainer,
+    className: m.iconContainer,
     children: [
       (0, i.jsx)('div', {
-        className: U.iconBackground,
+        className: m.iconBackground,
         children: (0, i.jsx)(o.TrophyIcon, {
           size: 'md',
           color: 'currentColor',
-          className: U.icon
+          className: m.icon
         })
       }),
       (0, i.jsx)(_.Z, {
-        className: U.stars
+        className: m.stars
       })
     ]
   }),
   (0, i.jsx)(o.Heading, {
     variant: 'heading-md/bold',
-    className: U.emptyStateText,
-    children: m.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_ACTIVE
+    className: m.emptyStateText,
+    children: U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_ACTIVE
   }),
   (0, i.jsx)(o.Text, {
     variant: 'text-xs/normal',
-    className: U.emptyStateSubtext,
-    children: m.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_SUBTEXT_ACTIVE
+    className: m.emptyStateSubtext,
+    children: U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_SUBTEXT_ACTIVE
   })
 ]
   }),
   O = () => (0, i.jsx)('div', {
-className: U.emptyState,
+className: m.emptyState,
 children: (0, i.jsx)(o.Text, {
   variant: 'text-xs/normal',
-  className: U.emptyStateSubtext,
-  children: m.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_EXPIRED
+  className: m.emptyStateSubtext,
+  children: U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_EXPIRED
 })
   }),
   x = e => {
@@ -117,14 +117,14 @@ let {
 } = e;
 return (0, i.jsx)(o.Text, {
   variant: 'text-xs/normal',
-  className: U.timestamp,
+  className: m.timestamp,
   children: (0, A.XX)(t)
 });
   },
   v = () => (0, i.jsx)(o.Text, {
 variant: 'text-xs/bold',
-className: U.newBadge,
-children: m.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_NEW
+className: m.newBadge,
+children: U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_NEW
   }),
   D = e => {
 let {
@@ -132,7 +132,7 @@ let {
 } = e, {
   id: s,
   description: r
-} = t, c = E.default.extractTimestamp(s), _ = (0, I.e)(t), u = (0, d.B)('violations_container'), S = a.useMemo(() => {
+} = t, c = d.default.extractTimestamp(s), _ = (0, I.e)(t), u = (0, E.B)('violations_container'), S = a.useMemo(() => {
   var e, n, a;
   let s = {
     description: r,
@@ -143,11 +143,11 @@ let {
     })
   };
   if (!(u && (0, A.FB)(t)))
-    return m.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION.format(s);
-  return (null == t ? void 0 : null === (e = t.guild_metadata) || void 0 === e ? void 0 : e.member_type) === T.wO.OWNER ? m.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION_GUILD.format({
+    return U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION.format(s);
+  return (null == t ? void 0 : null === (e = t.guild_metadata) || void 0 === e ? void 0 : e.member_type) === T.wO.OWNER ? U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION_GUILD.format({
     ...s,
     guildName: null == t ? void 0 : null === (n = t.guild_metadata) || void 0 === n ? void 0 : n.name
-  }) : m.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_GUILD_PRESENCE.format({
+  }) : U.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_GUILD_PRESENCE.format({
     guildName: null == t ? void 0 : null === (a = t.guild_metadata) || void 0 === a ? void 0 : a.name,
     classification_type: s.description,
     classificationHook: s.descriptionHook
@@ -163,9 +163,10 @@ return (0, i.jsx)(o.Clickable, {
       let {
         default: e
       } = await Promise.all([
+        n.e('72181'),
         n.e('46097'),
         n.e('18831'),
-        n.e('34723')
+        n.e('64455')
       ]).then(n.bind(n, 41164));
       return t => (0, i.jsx)(e, {
         classificationId: s,
@@ -174,11 +175,11 @@ return (0, i.jsx)(o.Clickable, {
       });
     });
   },
-  className: l()(U.itemDetail, {
-    [U.itemDetailNew]: _
+  className: l()(m.itemDetail, {
+    [m.itemDetailNew]: _
   }),
   children: (0, i.jsxs)('div', {
-    className: U.descriptionContainer,
+    className: m.descriptionContainer,
     children: [
       _ ? (0, i.jsx)(v, {}) : (0, i.jsx)(x, {
         timestamp: c
@@ -195,28 +196,28 @@ return (0, i.jsx)(o.Clickable, {
 let {
   status: t,
   classifications: n
-} = e, [s, l] = a.useState(!1), [c, _] = a.useState(3), E = (0, N.P)(), d = (0, r.e7)([S.Z], () => S.Z.getIsDsaEligible()), T = a.useMemo(() => n.slice(0, c), [
+} = e, [s, l] = a.useState(!1), [c, _] = a.useState(3), d = (0, N.P)(), E = (0, r.e7)([S.Z], () => S.Z.getIsDsaEligible()), T = a.useMemo(() => n.slice(0, c), [
   n,
   c
 ]);
 a.useEffect(() => {
   s && u.default.track(C.rMx.SAFETY_HUB_ACTION, {
     action: f.n0.ViewViolationsDropdown,
-    account_standing: E.state,
+    account_standing: d.state,
     classification_ids: T.map(e => Number(e.id)),
     source: f.s.StandingTab,
     is_violative_content_shown: !1,
-    is_dsa_eligible: d
+    is_dsa_eligible: E
   });
 }, [
   s,
-  E.state,
+  d.state,
   T,
-  d
+  E
 ]);
 let A = n.length - T.length > 3 ? 3 : n.length - T.length;
 return (0, i.jsxs)('div', {
-  className: U.dropdown,
+  className: m.dropdown,
   children: [
     (0, i.jsx)(h, {
       status: t,
@@ -225,7 +226,7 @@ return (0, i.jsxs)('div', {
       count: n.length
     }),
     s && (0, i.jsxs)('div', {
-      className: U.items,
+      className: m.items,
       children: [
         (0, i.jsx)(o.TabBar.Separator, {
           style: {
@@ -245,9 +246,9 @@ return (0, i.jsxs)('div', {
               }
             }),
             (0, i.jsx)('button', {
-              className: U.paginationButton,
+              className: m.paginationButton,
               onClick: () => _(e => e + A),
-              children: m.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_PAGINATION_BUTTON.format({
+              children: U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_PAGINATION_BUTTON.format({
                 nextPageSize: A
               })
             })

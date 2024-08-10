@@ -44,8 +44,8 @@ var s = n(735250),
   B = n(486324),
   y = n(200299),
   F = n(689938),
-  w = n(941868),
-  k = n(91716),
+  k = n(941868),
+  w = n(91716),
   H = n(470264),
   V = n(710043),
   Y = n(847950);
@@ -79,7 +79,7 @@ children: (0, s.jsx)(c.Text, {
   children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_SETUP_WELCOME
 })
   }) : (0, s.jsxs)(c.Clickable, {
-className: w.editWelcomeSection,
+className: k.editWelcomeSection,
 onClick: o,
 children: [
   (0, s.jsx)(g.Z, {
@@ -93,7 +93,7 @@ children: [
     text: F.Z.Messages.EDIT,
     children: e => (0, s.jsxs)('div', {
       ...e,
-      className: r()(w.actionItemEditButton, w.editWelcomeButton),
+      className: r()(k.actionItemEditButton, k.editWelcomeButton),
       children: [
         (0, s.jsx)(c.PencilIcon, {
           size: 'md',
@@ -163,49 +163,49 @@ C
   ]);
   if (null == L || null == A)
 return null;
-  let k = null !== (u = (0, _.KS)(L)) && void 0 !== u ? u : c.TextIcon;
+  let w = null !== (u = (0, _.KS)(L)) && void 0 !== u ? u : c.TextIcon;
   return (0, s.jsxs)('div', {
-className: r()(w.actionItemContainer),
+className: r()(k.actionItemContainer),
 children: [
   (0, s.jsxs)('div', {
-    className: r()(w.actionItem, {
-      [w.dropIndicatorBefore]: null != G && m < G,
-      [w.dropIndicatorAfter]: null != G && m > G,
-      [w.actionItemError]: null != b
+    className: r()(k.actionItem, {
+      [k.dropIndicatorBefore]: null != G && m < G,
+      [k.dropIndicatorAfter]: null != G && m > G,
+      [k.actionItemError]: null != b
     }),
     ref: e => U(P(e)),
     children: [
       (0, s.jsx)('div', {
-        className: w.dragContainer,
+        className: k.dragContainer,
         onMouseEnter: () => B(!0),
         onMouseLeave: () => B(!1),
         children: (0, s.jsx)(c.DragIcon, {
           size: 'xs',
           color: 'currentColor',
-          className: w.dragIcon
+          className: k.dragIcon
         })
       }),
       null != Z ? (0, s.jsx)('div', {
-        className: w.iconWrapper,
+        className: k.iconWrapper,
         children: (0, s.jsx)('img', {
           src: Z,
-          className: w.icon,
+          className: k.icon,
           width: 48,
           height: 48,
           alt: '',
           'aria-hidden': !0
         })
       }) : (0, s.jsx)('div', {
-        className: w.actionItemEmojiWrapper,
+        className: k.actionItemEmojiWrapper,
         children: (0, s.jsx)(h.Z, {
           emojiId: null === (o = T.emoji) || void 0 === o ? void 0 : o.id,
           emojiName: null === (d = T.emoji) || void 0 === d ? void 0 : d.name,
           size: h.R.MEDIUM,
-          defaultComponent: (0, s.jsx)(k, {})
+          defaultComponent: (0, s.jsx)(w, {})
         })
       }),
       (0, s.jsxs)('div', {
-        className: w.actionItemText,
+        className: k.actionItemText,
         children: [
           (0, s.jsx)(c.Text, {
             variant: 'text-md/semibold',
@@ -225,8 +225,8 @@ children: [
         text: F.Z.Messages.EDIT,
         children: e => (0, s.jsxs)(c.Button, {
           ...e,
-          className: w.actionItemEditButton,
-          innerClassName: w.actionItemEditButtonInner,
+          className: k.actionItemEditButton,
+          innerClassName: k.actionItemEditButtonInner,
           size: c.Button.Sizes.MIN,
           onClick: y,
           children: [
@@ -303,7 +303,7 @@ handleDragReset: _,
 handleDragComplete: I
   } = (0, E.Z)(c, d);
   return null == t ? null : (0, s.jsxs)('div', {
-className: w.section,
+className: k.section,
 children: [
   n.map((e, n) => (0, s.jsx)(z, {
     guildId: t,
@@ -326,12 +326,12 @@ children: [
 
 function q() {
   return (0, s.jsx)('div', {
-className: w.actionItemContainer,
+className: k.actionItemContainer,
 children: (0, s.jsxs)('div', {
-  className: w.actionItem,
+  className: k.actionItem,
   children: [
     (0, s.jsx)('div', {
-      className: w.actionItemEmojiWrapper,
+      className: k.actionItemEmojiWrapper,
       children: (0, s.jsx)(c.BookCheckIcon, {
         size: 'custom',
         color: 'currentColor',
@@ -340,7 +340,7 @@ children: (0, s.jsxs)('div', {
       })
     }),
     (0, s.jsx)('div', {
-      className: w.actionItemText,
+      className: k.actionItemText,
       children: (0, s.jsx)(c.Text, {
         variant: 'text-md/semibold',
         color: 'header-primary',
@@ -373,7 +373,7 @@ t,
 i
   ]);
   return (0, s.jsxs)(c.Clickable, {
-className: w.addActionItem,
+className: k.addActionItem,
 onClick: r,
 children: [
   (0, s.jsx)(c.CirclePlusIcon, {
@@ -391,7 +391,7 @@ children: [
 
 function Q() {
   return (0, s.jsxs)('div', {
-className: w.badExample,
+className: k.badExample,
 children: [
   (0, s.jsx)(c.Text, {
     variant: 'eyebrow',
@@ -399,11 +399,11 @@ children: [
     children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_TODOS_BAD_EXAMPLE_REASON
   }),
   (0, s.jsxs)('div', {
-    className: w.example,
+    className: k.example,
     children: [
       (0, s.jsx)('div', {
-        className: w.badExampleIcon,
-        children: (0, s.jsx)(c.CloseSmallIcon, {
+        className: k.badExampleIcon,
+        children: (0, s.jsx)(c.XSmallIcon, {
           size: 'md',
           color: 'currentColor'
         })
@@ -443,7 +443,10 @@ if (null != i) {
   (0, c.openModalLazy)(async () => {
     let {
       default: a
-    } = await n.e('22872').then(n.bind(n, 850085));
+    } = await Promise.all([
+      n.e('48017'),
+      n.e('47636')
+    ]).then(n.bind(n, 850085));
     return n => (0, s.jsx)(a, {
       imgURI: e,
       file: t,
@@ -491,15 +494,15 @@ maxFileSizeBytes: y.B
   return o ? (0, s.jsxs)(s.Fragment, {
 children: [
   (0, s.jsxs)('div', {
-    className: w.sectionHeader,
+    className: k.sectionHeader,
     children: [
       (0, s.jsx)(c.Heading, {
-        className: w.header,
+        className: k.header,
         variant: 'heading-lg/extrabold',
         children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_BANNER
       }),
       (0, s.jsx)(T.Z, {
-        className: w.boostIndicator,
+        className: k.boostIndicator,
         guild: r,
         guildFeature: G.oNc.BANNER,
         onClick: _
@@ -507,10 +510,10 @@ children: [
     ]
   }),
   (0, s.jsxs)('div', {
-    className: w.section,
+    className: k.section,
     children: [
       (0, s.jsxs)('div', {
-        className: w.homeBannerExplainer,
+        className: k.homeBannerExplainer,
         children: [
           (0, s.jsx)(c.Text, {
             variant: 'text-sm/normal',
@@ -519,7 +522,7 @@ children: [
           }),
           (0, s.jsxs)(c.Button, {
             color: c.ButtonColors.BRAND,
-            className: w.uploadButton,
+            className: k.uploadButton,
             children: [
               F.Z.Messages.UPLOAD_BACKGROUND,
               (0, s.jsx)(x.ZP, {
@@ -539,15 +542,15 @@ children: [
   }) : (0, s.jsxs)(s.Fragment, {
 children: [
   (0, s.jsxs)('div', {
-    className: w.sectionHeader,
+    className: k.sectionHeader,
     children: [
       (0, s.jsx)(c.Heading, {
-        className: w.header,
+        className: k.header,
         variant: 'heading-lg/extrabold',
         children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_BANNER
       }),
       (0, s.jsx)(T.Z, {
-        className: w.boostIndicator,
+        className: k.boostIndicator,
         guild: r,
         guildFeature: G.oNc.BANNER,
         onClick: _
@@ -555,10 +558,10 @@ children: [
     ]
   }),
   (0, s.jsxs)('div', {
-    className: w.section,
+    className: k.section,
     children: [
       (0, s.jsxs)('div', {
-        className: w.homeBannerExplainer,
+        className: k.homeBannerExplainer,
         children: [
           (0, s.jsx)(c.Text, {
             variant: 'text-sm/normal',
@@ -566,8 +569,8 @@ children: [
             children: F.Z.Messages.GUILD_SETTINGS_HOME_HEADER_RECOMMEND
           }),
           (0, s.jsxs)(c.ShinyButton, {
-            className: w.upsellButton,
-            innerClassName: w.upsellButtonInner,
+            className: k.upsellButton,
+            innerClassName: k.upsellButtonInner,
             color: c.Button.Colors.GREEN,
             onClick: _,
             children: [
@@ -666,31 +669,31 @@ j = a.useCallback(() => {
   v
 ]);
   return null == E || null == h ? null : (0, s.jsxs)('div', {
-className: r()(w.resourceChannelContainer),
+className: r()(k.resourceChannelContainer),
 children: [
   (0, s.jsxs)('div', {
-    className: r()(w.resourceChannel, {
-      [w.dropIndicatorBefore]: null != R && o < R,
-      [w.dropIndicatorAfter]: null != R && o > R,
-      [w.resourceChannelError]: null != g
+    className: r()(k.resourceChannel, {
+      [k.dropIndicatorBefore]: null != R && o < R,
+      [k.dropIndicatorAfter]: null != R && o > R,
+      [k.resourceChannelError]: null != g
     }),
     ref: e => p(L(e)),
     children: [
       (0, s.jsx)('div', {
-        className: w.dragContainer,
+        className: k.dragContainer,
         onMouseEnter: () => A(!0),
         onMouseLeave: () => A(!1),
         children: (0, s.jsx)(c.DragIcon, {
           size: 'xs',
           color: 'currentColor',
-          className: w.dragIcon
+          className: k.dragIcon
         })
       }),
       null != x && (0, s.jsx)('div', {
-        className: w.iconWrapper,
+        className: k.iconWrapper,
         children: (0, s.jsx)('img', {
           src: x,
-          className: w.icon,
+          className: k.icon,
           width: 32,
           height: 32,
           alt: '',
@@ -698,16 +701,16 @@ children: [
         })
       }),
       (0, s.jsxs)('div', {
-        className: w.resourceChannelContent,
+        className: k.resourceChannelContent,
         children: [
           (0, s.jsx)(c.Text, {
-            className: w.resourceChannelTitle,
+            className: k.resourceChannelTitle,
             variant: 'text-md/semibold',
             color: 'header-primary',
             children: T
           }),
           !C && (0, s.jsx)(c.Text, {
-            className: w.resourceChannelDescription,
+            className: k.resourceChannelDescription,
             variant: 'text-xs/medium',
             color: 'text-muted',
             lineClamp: 1,
@@ -719,8 +722,8 @@ children: [
         text: F.Z.Messages.EDIT,
         children: e => (0, s.jsxs)(c.Button, {
           ...e,
-          className: w.resourceChannelEditButton,
-          innerClassName: w.resourceChannelEditButtonInner,
+          className: k.resourceChannelEditButton,
+          innerClassName: k.resourceChannelEditButtonInner,
           size: c.Button.Sizes.MIN,
           onClick: j,
           children: [
@@ -762,18 +765,18 @@ isLast: i
   return (0, s.jsxs)(s.Fragment, {
 children: [
   (0, s.jsxs)('div', {
-    className: w.suggestedChannel,
+    className: k.suggestedChannel,
     children: [
       (0, s.jsx)(l, {
-        className: w.suggestedChannelIcon
+        className: k.suggestedChannelIcon
       }),
       (0, s.jsx)(c.Text, {
-        className: w.suggestedChannelText,
+        className: k.suggestedChannelText,
         variant: 'text-sm/normal',
         children: n.name
       }),
       (0, s.jsx)(c.Button, {
-        className: w.suggestedChannelButton,
+        className: k.suggestedChannelButton,
         size: c.Button.Sizes.MIN,
         onClick: r,
         children: (0, s.jsx)(c.Text, {
@@ -785,7 +788,7 @@ children: [
     ]
   }),
   i && (0, s.jsx)('div', {
-    className: w.suggestedSeparator
+    className: k.suggestedSeparator
   })
 ]
   });
@@ -807,14 +810,14 @@ o
   return o.length <= 0 || i.length >= S.x3 ? null : (0, s.jsxs)(s.Fragment, {
 children: [
   (0, s.jsxs)('div', {
-    className: w.suggestedChannelsSection,
+    className: k.suggestedChannelsSection,
     children: [
       (0, s.jsx)(c.Text, {
         variant: 'text-md/semibold',
         children: F.Z.Messages.RECOMMENDED
       }),
       (0, s.jsxs)('div', {
-        className: w.suggestedChannelsHeader,
+        className: k.suggestedChannelsHeader,
         children: [
           (0, s.jsx)(c.Text, {
             variant: 'text-xs/medium',
@@ -822,13 +825,13 @@ children: [
             children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_SUGGESTED_RESOURCES_EXPLAINER
           }),
           (0, s.jsxs)(c.Clickable, {
-            className: w.suggestedChannelsDismiss,
+            className: k.suggestedChannelsDismiss,
             onClick: d,
             children: [
               (0, s.jsx)(c.CheckmarkLargeIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: w.suggestedChannelsDismissCheck
+                className: k.suggestedChannelsDismissCheck
               }),
               (0, s.jsx)(c.Text, {
                 variant: 'text-xs/semibold',
@@ -840,7 +843,7 @@ children: [
         ]
       }),
       (0, s.jsx)('div', {
-        className: w.suggestedChannels,
+        className: k.suggestedChannels,
         children: o.map((e, t) => (0, s.jsx)(ee, {
           channel: e.channel,
           isLast: t < o.length - 1
@@ -849,7 +852,7 @@ children: [
     ]
   }),
   (0, s.jsx)('div', {
-    className: w.sectionSeparator
+    className: k.sectionSeparator
   })
 ]
   });
@@ -893,7 +896,7 @@ t,
 _
   ]);
   return (0, s.jsxs)('div', {
-className: w.editResources,
+className: k.editResources,
 children: [
   i.map((e, n) => (0, s.jsx)($, {
     guildId: t,
@@ -904,7 +907,7 @@ children: [
     onDragComplete: u
   }, e.channelId)),
   i.length < S.x3 && (0, s.jsxs)(c.Clickable, {
-    className: w.addActionItem,
+    className: k.addActionItem,
     onClick: I,
     children: [
       (0, s.jsx)(c.CirclePlusIcon, {
@@ -957,18 +960,18 @@ let e = b.Z.getSettings();
 t,
 n
   ]), (0, s.jsxs)('div', {
-className: w.page,
+className: k.page,
 children: [
   (0, s.jsxs)('div', {
-    className: w.leftColumn,
+    className: k.leftColumn,
     children: [
       (0, s.jsx)(c.Heading, {
-        className: w.header,
+        className: k.header,
         variant: 'heading-lg/extrabold',
         children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_WELCOME_TITLE
       }),
       (0, s.jsx)('div', {
-        className: w.descriptionSection,
+        className: k.descriptionSection,
         children: (0, s.jsx)(c.Text, {
           variant: 'text-sm/medium',
           color: 'header-secondary',
@@ -976,22 +979,22 @@ children: [
         })
       }),
       (0, s.jsx)('div', {
-        className: w.section,
+        className: k.section,
         children: (0, s.jsx)(W, {
           guildId: n,
           welcomeMessage: i
         })
       }),
       (0, s.jsx)('div', {
-        className: w.sectionSeparator
+        className: k.sectionSeparator
       }),
       (0, s.jsx)(c.Heading, {
-        className: w.header,
+        className: k.header,
         variant: 'heading-lg/extrabold',
         children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_TODOS_TITLE
       }),
       (0, s.jsx)('div', {
-        className: w.descriptionSection,
+        className: k.descriptionSection,
         children: (0, s.jsx)(c.Text, {
           variant: 'text-sm/medium',
           color: 'header-secondary',
@@ -999,22 +1002,22 @@ children: [
         })
       }),
       (0, s.jsx)('div', {
-        className: w.section,
+        className: k.section,
         children: (0, s.jsx)(Q, {})
       }),
       (0, s.jsx)(K, {
         guildId: n
       }),
       (0, s.jsx)('div', {
-        className: w.sectionSeparator
+        className: k.sectionSeparator
       }),
       (0, s.jsx)(c.Heading, {
-        className: w.header,
+        className: k.header,
         variant: 'heading-lg/extrabold',
         children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESOURCES_TITLE
       }),
       (0, s.jsxs)('div', {
-        className: w.descriptionSection,
+        className: k.descriptionSection,
         children: [
           (0, s.jsx)(c.Text, {
             variant: 'text-sm/medium',
@@ -1022,7 +1025,7 @@ children: [
             children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESOURCES_DESCRIPTION
           }),
           (0, s.jsxs)('ul', {
-            className: w.bulletList,
+            className: k.bulletList,
             children: [
               (0, s.jsx)('li', {
                 children: (0, s.jsx)(c.Text, {
@@ -1053,7 +1056,7 @@ children: [
         ]
       }),
       (0, s.jsxs)('div', {
-        className: w.section,
+        className: k.section,
         children: [
           (0, s.jsx)(et, {
             guildId: n
@@ -1064,7 +1067,7 @@ children: [
         ]
       }),
       (0, s.jsx)('div', {
-        className: w.sectionSeparator
+        className: k.sectionSeparator
       }),
       (0, s.jsx)(J, {
         guildId: n
@@ -1072,10 +1075,10 @@ children: [
     ]
   }),
   (0, s.jsxs)('div', {
-    className: w.rightColumn,
+    className: k.rightColumn,
     children: [
       (0, s.jsx)('div', {
-        className: w.centeredSection,
+        className: k.centeredSection,
         children: (0, s.jsx)(c.Text, {
           variant: 'text-sm/medium',
           color: 'header-secondary',
@@ -1083,8 +1086,8 @@ children: [
         })
       }),
       (0, s.jsx)('img', {
-        className: w.previewImage,
-        src: (0, o.ap)(_) ? 'existing' === r ? H : Y : 'existing' === r ? k : V,
+        className: k.previewImage,
+        src: (0, o.ap)(_) ? 'existing' === r ? H : Y : 'existing' === r ? w : V,
         alt: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_GUIDE_EXAMPLE_ALT
       }),
       (0, s.jsx)(c.SegmentedControl, {

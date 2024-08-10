@@ -7,8 +7,8 @@ var i = n(735250);
 n(470079);
 var a = n(481060),
   s = n(367907),
-  r = n(970731),
-  l = n(810090),
+  r = n(70097),
+  l = n(970731),
   o = n(626135),
   c = n(63063),
   d = n(981631),
@@ -36,10 +36,10 @@ children: [
   })
 ]
   });
-  return (0, i.jsx)(r.ZP, {
+  return (0, i.jsx)(l.ZP, {
 header: u.Z.Messages.MEDIA_CHANNEL_UPSELL_TITLE,
 content: E,
-asset: (0, i.jsx)(l.Z, {
+asset: (0, i.jsx)(r.Z, {
   className: _.video,
   src: 'https://cdn.discordapp.com/assets/media_channel/media_channel_upsell_demo.mp4',
   autoPlay: !0,

@@ -40,7 +40,7 @@ applicationId: n = '',
 autoTrackExposure: r = !0,
 source: i,
 trackEntryPointImpression: s = !0
-  } = e, l = (0, E.x)(t, r);
+  } = e, l = (0, E.xG)(t, r);
   a.useEffect(() => {
 l && null != n && '' !== n && c.Z.getDetectableGamesSupplemental([n]);
   }, [

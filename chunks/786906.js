@@ -20,8 +20,8 @@ var i = n(735250),
   m = n(430824),
   E = n(699516),
   Z = n(944486),
-  I = n(547881),
-  S = n(707878),
+  I = n(707878),
+  S = n(518084),
   C = n(689938),
   v = n(91601);
 
@@ -74,17 +74,17 @@ let {
 } = this.props, {
   showOpacitySlider: _
 } = this.state;
-return _ && !n ? (0, i.jsxs)(I.ZP.Bar, {
+return _ && !n ? (0, i.jsxs)(S.ZP.Bar, {
   className: v.opacityHeader,
   children: [
-    (0, i.jsx)(S.Z, {}),
+    (0, i.jsx)(I.Z, {}),
     (0, i.jsx)(h.Z.Icon, {
-      icon: l.CloseSmallIcon,
+      icon: l.XSmallIcon,
       onClick: this.handleCloseOpacitySettings,
       tooltip: C.Z.Messages.CLOSE
     })
   ]
-}) : (0, i.jsx)(I.ZP.Background, {
+}) : (0, i.jsx)(S.ZP.Background, {
   opacityOverride: n || u ? null : 1,
   children: (0, i.jsx)('div', {
     className: o()(e, t, v.headerContainer),

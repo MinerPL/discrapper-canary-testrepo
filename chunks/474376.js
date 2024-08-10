@@ -16,8 +16,8 @@ var a = n(442837),
   _ = n(480387),
   h = n(726745),
   E = n(251423),
-  I = n(383832),
-  m = n(981631),
+  m = n(383832),
+  I = n(981631),
   g = n(689938),
   p = n(552957);
 
@@ -29,9 +29,9 @@ t = (0, a.e7)([o.Z], () => o.Z.hidePersonalInformation),
 } = (0, E.L)(),
 T = t => {
   if (t !== (null == e ? void 0 : e.id))
-    d.default.track(m.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
+    d.default.track(I.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
       location: {
-        section: m.jXE.PROFILE_POPOUT
+        section: I.jXE.PROFILE_POPOUT
       }
     }), _.yD(t);
 },
@@ -75,13 +75,13 @@ S = n.map(n => {
           }),
           o && (0, i.jsx)(s.CircleCheckIcon, {
             size: 'sm',
-            color: (0, r.Lq)(l ? m.Ilk.WHITE_500 : m.Ilk.BRAND_500),
-            secondaryColor: (0, r.Lq)(l ? m.Ilk.BRAND_500 : m.Ilk.WHITE_500),
+            color: (0, r.Lq)(l ? I.Ilk.WHITE_500 : I.Ilk.BRAND_500),
+            secondaryColor: (0, r.Lq)(l ? I.Ilk.BRAND_500 : I.Ilk.WHITE_500),
             className: p.activeIcon
           }),
-          c && (0, i.jsx)(s.CircleExclamationPointIcon, {
-            color: (0, r.Lq)(m.Ilk.RED_400),
-            secondaryColor: (0, r.Lq)(m.Ilk.WHITE_500),
+          c && (0, i.jsx)(s.CircleWarningIcon, {
+            color: (0, r.Lq)(I.Ilk.RED_400),
+            secondaryColor: (0, r.Lq)(I.Ilk.WHITE_500),
             size: 'xs',
             className: p.activeIcon
           })
@@ -89,7 +89,7 @@ S = n.map(n => {
       });
     },
     action: () => {
-      c ? (0, I.Z)() : T(a.id);
+      c ? (0, m.Z)() : T(a.id);
     }
   }, a.id);
 });
@@ -99,7 +99,7 @@ children: [
   (0, i.jsx)(s.MenuItem, {
     id: 'manage-accounts',
     label: g.Z.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
-    action: I.Z
+    action: m.Z
   })
 ]
   })), S;

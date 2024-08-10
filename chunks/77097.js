@@ -40,19 +40,18 @@ function O(e) {
   analyticsLocations: M
 } = (0, c.ZP)(),
 {
-  messageId: P,
-  roleId: U
+  context: P
 } = (0, h.KZ)(),
-w = (0, d.Z)(y, R, C),
-[x, G] = i.useState(new Set()),
-k = (0, o.e7)([p.Z], () => p.Z.getUserProfile(R)),
-B = null !== (t = null == k ? void 0 : k.connectedAccounts) && void 0 !== t ? t : [],
-F = null !== (n = null == k ? void 0 : k.applicationRoleConnections) && void 0 !== n ? n : [],
-V = (0, o.e7)([E.Z], () => E.Z.hidePersonalInformation),
-H = (0, o.e7)([_.default], () => _.default.locale);
+U = (0, d.Z)(y, R, C),
+[w, x] = i.useState(new Set()),
+G = (0, o.e7)([p.Z], () => p.Z.getUserProfile(R)),
+k = null !== (t = null == G ? void 0 : G.connectedAccounts) && void 0 !== t ? t : [],
+B = null !== (n = null == G ? void 0 : G.applicationRoleConnections) && void 0 !== n ? n : [],
+F = (0, o.e7)([E.Z], () => E.Z.hidePersonalInformation),
+V = (0, o.e7)([_.default], () => _.default.locale);
   if (i.useEffect(() => {
-  if ((null == y ? void 0 : y.id) != null && (null == w ? void 0 : w.id) != null)
-    u.Z.fetchGuildRoleConnectionsEligibility(y.id, w.id).then(e => {
+  if ((null == y ? void 0 : y.id) != null && (null == U ? void 0 : U.id) != null)
+    u.Z.fetchGuildRoleConnectionsEligibility(y.id, U.id).then(e => {
       let t = new Set();
       for (let n of e)
         for (let {
@@ -60,23 +59,23 @@ H = (0, o.e7)([_.default], () => _.default.locale);
           }
           of n)
           t.add(e);
-      G(t);
+      x(t);
     });
 }, [
   null == y ? void 0 : y.id,
-  null == w ? void 0 : w.id
-]), V || null == w)
+  null == U ? void 0 : U.id
+]), F || null == U)
 return null;
-  let Z = Array.from(x).map(e => {
-let t = B.find(t => t.type === e);
+  let H = Array.from(w).map(e => {
+let t = k.find(t => t.type === e);
 return null == t ? null : (0, r.jsx)(m.E3, {
   connectedAccount: t,
   theme: D,
-  locale: H,
+  locale: V,
   userId: R
 }, ''.concat(t.type, ':').concat(t.id));
   }).filter(e => null != e);
-  return (Z.length > 0 && (a = (0, r.jsxs)(r.Fragment, {
+  return (H.length > 0 && (a = (0, r.jsxs)(r.Fragment, {
 children: [
   (0, r.jsx)(l.Heading, {
     variant: 'eyebrow',
@@ -86,15 +85,12 @@ children: [
   (0, r.jsxs)('div', {
     className: s()(N.connectionsContainer, b),
     children: [
-      Z,
+      H,
       (0, r.jsxs)(l.Clickable, {
         onClick: function() {
           (0, I.openUserProfileModal)({
+            ...P,
             userId: R,
-            channelId: C,
-            guildId: null == y ? void 0 : y.id,
-            messageId: P,
-            roleId: U,
             section: g.oh.USER_INFO_CONNECTIONS,
             sourceAnalyticsLocations: M,
             analyticsLocation: {
@@ -119,7 +115,7 @@ children: [
     ]
   })
 ]
-  })), F.length > 0 && (O = (0, r.jsxs)(r.Fragment, {
+  })), B.length > 0 && (O = (0, r.jsxs)(r.Fragment, {
 children: [
   (0, r.jsx)(l.Heading, {
     variant: 'eyebrow',
@@ -128,9 +124,9 @@ children: [
   }),
   (0, r.jsx)('div', {
     className: s()(N.connectionsContainer, b),
-    children: F.map(e => (0, r.jsx)(m.tH, {
+    children: B.map(e => (0, r.jsx)(m.tH, {
       applicationRoleConnection: e,
-      locale: H
+      locale: V
     }, e.application.id))
   })
 ]

@@ -20,12 +20,12 @@ var r = n(735250),
   f = n(204418),
   h = n(583434),
   p = n(530618),
-  m = n(454585),
-  I = n(164946),
-  T = n(166625),
-  g = n(25990),
-  S = n(594174),
-  A = n(810090),
+  m = n(70097),
+  I = n(454585),
+  T = n(164946),
+  g = n(166625),
+  S = n(25990),
+  A = n(594174),
   N = n(272008),
   v = n(497505),
   O = n(918701),
@@ -38,8 +38,8 @@ var r = n(735250),
   M = n(789002);
 
 function P() {
-  let e = g.Z.getAllPending(),
-t = (0, I.ED)(e);
+  let e = S.Z.getAllPending(),
+t = (0, T.ED)(e);
   return (0, d.Mn)(t).finally(d.si);
 }
 
@@ -53,7 +53,7 @@ location: d,
 reward: E,
 decoration: f,
 onUseNow: h
-  } = e, m = i.useRef(null), [I, T] = i.useState(null), g = i.useRef(new o.qA()), A = (0, u.e7)([_.Z], () => _.Z.useReducedMotion), R = (0, u.e7)([S.default], () => S.default.getCurrentUser()), y = (0, O.j8)(l), L = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, [M, P] = i.useState(L ? 'claimed' : 'loading');
+  } = e, m = i.useRef(null), [I, T] = i.useState(null), g = i.useRef(new o.qA()), S = (0, u.e7)([_.Z], () => _.Z.useReducedMotion), R = (0, u.e7)([A.default], () => A.default.getCurrentUser()), y = (0, O.j8)(l), L = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, [M, P] = i.useState(L ? 'claimed' : 'loading');
   i.useEffect(() => {
 !L && (0, N.QB)(l.id, v.y$.CROSS_PLATFORM, d).then(() => P('claimed')).catch(() => P('error'));
   }, [
@@ -98,7 +98,7 @@ children: [
       })
     })
   }),
-  !A && !L && 'claimed' === M && (0, r.jsx)(p.Z, {
+  !S && !L && 'claimed' === M && (0, r.jsx)(p.Z, {
     confettiTarget: m.current,
     confettiCanvas: I,
     sprites: D.CA,
@@ -120,7 +120,7 @@ backgroundUrl: l,
 isSaving: u,
 onClose: d,
 onConfirm: _
-  } = e, E = (0, O.zK)(t, y.S7.IN_HOUSE_CONSOLE_QUEST), h = R.r.build(t.config).defaultRewardRedemptionInstructionsByPlatform[v.y$.CROSS_PLATFORM], p = (0, O.Kr)(t.config), I = null == p ? L.Z.Messages.QUESTS_REWARD_AVATAR_DECORATION_BODY.format({
+  } = e, E = (0, O.zK)(t, y.S7.IN_HOUSE_CONSOLE_QUEST), h = R.r.build(t.config).defaultRewardRedemptionInstructionsByPlatform[v.y$.CROSS_PLATFORM], p = (0, O.Kr)(t.config), T = null == p ? L.Z.Messages.QUESTS_REWARD_AVATAR_DECORATION_BODY.format({
 decorationName: a
   }) : L.Z.Messages.QUESTS_REWARD_AVATAR_DECORATION_BODY_WITH_EXPIRATION.format({
 decorationName: a,
@@ -132,7 +132,7 @@ children: [
   (0, r.jsxs)('div', {
     className: b.headerContainer,
     children: [
-      (0, r.jsx)(A.Z, {
+      (0, r.jsx)(m.Z, {
         className: b.headerBackground,
         autoPlay: !1,
         loop: !1,
@@ -180,7 +180,7 @@ children: [
           variant: 'text-sm/normal',
           color: 'always-white',
           className: b.text,
-          children: I
+          children: T
         }),
         (0, r.jsx)(c.Button, {
           submitting: u,
@@ -205,7 +205,7 @@ children: [
             (0, r.jsx)(c.Text, {
               variant: 'text-sm/normal',
               color: 'always-white',
-              children: m.Z.parse(h, !1, {
+              children: I.Z.parse(h, !1, {
                 allowLinks: !0
               })
             })
@@ -229,7 +229,7 @@ transitionState: u
 let {
   product: t,
   isFetching: n
-} = (0, h.T)(e), {} = (0, T.Z)({}), r = i.useMemo(() => {
+} = (0, h.T)(e), {} = (0, g.Z)({}), r = i.useMemo(() => {
   if (null == t || n)
     return null;
   let e = t.items.find(e => e.type === l.Z.AVATAR_DECORATION);

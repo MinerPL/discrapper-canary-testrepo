@@ -1,67 +1,86 @@
 n.d(t, {
   Z: function() {
-return h;
-  },
-  a: function() {
-return i;
+return f;
   }
 });
-var r, i, a = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(120356),
-  o = n.n(s),
-  l = n(481060),
-  u = n(239091),
-  c = n(180335),
-  d = n(27144),
-  _ = n(848966),
-  E = n(689938),
-  f = n(692184);
+var i = n(120356),
+  a = n.n(i),
+  s = n(481060),
+  o = n(100527),
+  l = n(906732),
+  u = n(27144),
+  c = n(318134),
+  d = n(848966),
+  _ = n(689938),
+  E = n(692184);
 
-function h(e) {
+function f(e) {
   let {
 user: t,
 activity: n,
-entry: r,
-display: i,
-className: s,
-onSelect: h,
-onRequestOpen: p
-  } = e, m = (0, c.Bq)({
+entry: i,
+display: f,
+className: h,
+onSelect: p,
+onClose: m,
+onRequestOpen: I
+  } = e, {
+pastActivityEnabled: T
+  } = (0, u.z)({
+location: 'UserProfileActivityContextMenu'
+  }), {
+analyticsLocations: g
+  } = (0, l.ZP)(o.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU), {
+onAction: S
+  } = (0, c.Z)({
+display: f,
+user: t,
 activity: n,
-user: t
-  }), I = (0, _.Z)({
-entry: null != r ? r : m,
+entry: i,
+analyticsLocations: g
+  }), A = (0, d.Z)({
+entry: i,
 activity: n,
 user: t,
-display: i
-  }), {
-pastActivityEnabled: T
-  } = (0, d.z)({
-location: 'UserProfileActivityContextMenu'
+display: f,
+onClose: m,
+onAction: S
   });
-  return T && 0 !== I.length ? (0, a.jsx)(l.Popout, {
+  return !T || 0 === A.length || t.bot ? null : (0, r.jsx)(s.Popout, {
 align: 'top',
 position: 'right',
 disablePointerEvents: !1,
-onRequestOpen: p,
-renderPopout: () => (0, a.jsx)(l.Menu, {
-  navId: 'content-inventory-context',
-  onClose: u.Zy,
-  'aria-label': E.Z.Messages.USER_PROFILE_ACTIVITY_ACTION_MENU_A11Y_LABEL,
-  onSelect: h,
-  children: (0, a.jsx)(l.MenuGroup, {
-    children: I
-  })
-}),
-children: e => (0, a.jsx)(l.Clickable, {
+onRequestOpen: () => {
+  S({
+    action: 'OPEN_MENU'
+  }), null == I || I();
+},
+renderPopout: e => {
+  let {
+    closePopout: t
+  } = e;
+  return (0, r.jsx)(s.Menu, {
+    navId: 'content-inventory-context',
+    onClose: t,
+    'aria-label': _.Z.Messages.USER_PROFILE_ACTIVITY_ACTION_MENU_A11Y_LABEL,
+    onSelect: p,
+    children: (0, r.jsx)(s.MenuGroup, {
+      children: A
+    })
+  });
+},
+children: e => (0, r.jsx)(s.Clickable, {
   ...e,
-  className: o()(f.contextMenu, s),
-  children: (0, a.jsx)(l.MoreHorizontalIcon, {
-    color: l.tokens.colors.HEADER_PRIMARY,
+  onContextMenu: t => {
+    t.preventDefault(), e.onClick(t);
+  },
+  className: a()(E.contextMenu, h),
+  children: (0, r.jsx)(s.MoreHorizontalIcon, {
+    color: s.tokens.colors.INTERACTIVE_NORMAL,
     size: 'xs'
   })
 })
-  }) : null;
+  });
 }
-(r = i || (i = {})).LIVE = 'live', r.RECENT = 'recent';

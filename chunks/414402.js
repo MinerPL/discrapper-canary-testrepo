@@ -17,7 +17,7 @@ function d(e) {
   let {
 user: t,
 activity: n,
-onClick: d
+onAction: d
   } = e, {
 profileType: _
   } = (0, s.z)();
@@ -25,8 +25,10 @@ profileType: _
 text: c.Z.Messages.USER_ACTIVITY_ACTION_NOTIFY_ME,
 themeColor: _ === l.y0.FULL_SIZE ? 'secondary' : 'primary',
 fullWidth: !0,
-onClick: e => {
-  null == d || d(e), new a.Z('UserActivityActions').log('notify', t.id, n);
+onClick: () => {
+  null == d || d({
+    action: 'PRESS_NOTIFY_BUTTON'
+  }), new a.Z('UserActivityActions').log('notify', t.id, n);
 }
   }) : null;
 }

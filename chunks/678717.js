@@ -123,6 +123,12 @@ function F() {
       devSettingsCategory: y.zU.MESSAGING
     })
   }), e.push({
+    id: 'reporting',
+    name: 'Reporting',
+    render: () => (0, a.jsx)(N.Z, {
+      devSettingsCategory: y.zU.REPORTING
+    })
+  }), e.push({
     id: 'permissions',
     name: 'Permissions',
     render: () => (0, a.jsx)(R.Z, {})
@@ -180,7 +186,7 @@ children: [
   (0, a.jsxs)(m.ZP, {
     className: U.headerBar,
     toolbar: (0, a.jsx)(m.ZP.Icon, {
-      icon: s.CloseSmallIcon,
+      icon: s.XSmallIcon,
       tooltip: L.Z.Messages.CLOSE,
       onClick: b.SO
     }),

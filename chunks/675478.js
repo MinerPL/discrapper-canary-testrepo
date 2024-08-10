@@ -1,33 +1,36 @@
 n.d(t, {
   BU: function() {
-return C;
+return y;
   },
   DZ: function() {
-return v;
-  },
-  PS: function() {
-return R;
-  },
-  aj: function() {
 return O;
   },
+  PS: function() {
+return C;
+  },
+  T6: function() {
+return A;
+  },
+  aj: function() {
+return R;
+  },
   bE: function() {
-return b;
+return M;
   },
   fy: function() {
 return m.fy;
   },
   hW: function() {
-return N;
+return v;
   },
   nm: function() {
-return y;
+return D;
   },
   sr: function() {
-return L;
+return b;
   },
   w9: function() {
-return D;
+return L;
   }
 }), n(411104), n(47120), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817);
 var r = n(512722),
@@ -57,12 +60,14 @@ writable: !0
 }
 let g = 'UserSettingsProtoLastWriteTimes',
   S = Date.now();
+
+function A() {}
 d.Z.subscribe('CONNECTION_OPEN', () => {
   Date.now();
 }), d.Z.subscribe('CONNECTION_CLOSED', () => {
   Date.now();
 }), 'undefined' != typeof document && (document.addEventListener('mousedown', () => {}), document.addEventListener('keydown', () => {}));
-class A {
+class N {
   getEditInfo() {
 return h.Z.getFullState()[this.type];
   }
@@ -287,45 +292,45 @@ T(this, 'ProtoClass', void 0), T(this, 'type', void 0), T(this, 'logger', void 0
 }, this.logger = new a.Y(this.ProtoClass.typeName);
   }
 }
-let N = new A(u.o8, m.yP.PRELOADED_USER_SETTINGS),
-  v = new A(l.ji, m.yP.FRECENCY_AND_FAVORITES_SETTINGS),
-  O = {
-[m.yP.PRELOADED_USER_SETTINGS]: N,
-[m.yP.FRECENCY_AND_FAVORITES_SETTINGS]: v
+let v = new N(u.o8, m.yP.PRELOADED_USER_SETTINGS),
+  O = new N(l.ji, m.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+  R = {
+[m.yP.PRELOADED_USER_SETTINGS]: v,
+[m.yP.FRECENCY_AND_FAVORITES_SETTINGS]: O
   };
 
-function R(e, t, n) {
-  return N.updateAsync('guilds', n => (0, p.u0)(n, e, t), n);
+function C(e, t, n) {
+  return v.updateAsync('guilds', n => (0, p.u0)(n, e, t), n);
 }
 
-function C(e, t, n, r) {
-  return R(e, e => (0, p.uL)(e, t, n), r);
+function y(e, t, n, r) {
+  return C(e, e => (0, p.uL)(e, t, n), r);
 }
 
-function y(e) {
-  return N.updateAsync('userContent', t => {
+function D(e) {
+  return v.updateAsync('userContent', t => {
 if ((0, E.jl)(t.dismissedContents, e))
   return !1;
 t.dismissedContents = (0, E.GV)(t.dismissedContents, e);
   }, m.fy.INFREQUENT_USER_ACTION);
 }
 
-function D(e) {
-  return N.updateAsync('userContent', t => {
+function L(e) {
+  return v.updateAsync('userContent', t => {
 if (!(0, E.jl)(t.dismissedContents, e))
   return !1;
 t.dismissedContents = (0, E.jx)(t.dismissedContents, e);
   }, m.fy.INFREQUENT_USER_ACTION);
 }
 
-function L() {
-  return N.updateAsync('userContent', e => {
+function b() {
+  return v.updateAsync('userContent', e => {
 e.dismissedContents = new Uint8Array();
   }, m.fy.INFREQUENT_USER_ACTION);
 }
 
-function b() {
-  return N.updateAsync('userContent', e => {
+function M() {
+  return v.updateAsync('userContent', e => {
 let t = new Uint8Array();
 for (let e of Object.keys(o.z))
   t = (0, E.GV)(t, o.z[e]);

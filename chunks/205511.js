@@ -14,42 +14,42 @@ var s = n(735250),
   f = n(918701),
   C = n(566078),
   _ = n(667105),
-  h = n(585857),
-  E = n(46140),
+  E = n(585857),
+  h = n(46140),
   S = n(981631),
   T = n(689938),
-  v = n(778239);
+  N = n(778239);
 
-function N(e) {
+function v(e) {
   let {
 children: t,
 isComplete: n,
 hasNextStep: o
   } = e;
   return (0, s.jsxs)('li', {
-className: a()(v.stepWrapper, {
-  [v.stepWrapperComplete]: n
+className: a()(N.stepWrapper, {
+  [N.stepWrapperComplete]: n
 }, {
-  [v.stepWrapperWithNextStep]: o
+  [N.stepWrapperWithNextStep]: o
 }),
 children: [
   (0, s.jsxs)('div', {
-    className: v.stepIndicator,
+    className: N.stepIndicator,
     children: [
       (0, s.jsx)('div', {
-        className: v.stepIconWrapper,
-        children: n && (0, s.jsx)(c.CheckmarkBoldIcon, {
-          className: v.stepIcon,
+        className: N.stepIconWrapper,
+        children: n && (0, s.jsx)(c.CheckmarkLargeBoldIcon, {
+          className: N.stepIcon,
           color: c.tokens.colors.WHITE
         })
       }),
       o && (0, s.jsx)('div', {
-        className: v.stepConnector
+        className: N.stepConnector
       })
     ]
   }),
   (0, s.jsx)('div', {
-    className: v.stepContent,
+    className: N.stepContent,
     children: t
   })
 ]
@@ -58,7 +58,7 @@ children: [
 
 function j(e) {
   return (0, s.jsx)(c.Text, {
-className: v.microphoneUnitBodyText,
+className: N.microphoneUnitBodyText,
 color: 'text-muted',
 variant: 'text-xxs/normal',
 children: e.children
@@ -72,8 +72,8 @@ useReducedMotion: n
   } = e, r = (0, m.n)(), i = (0, _.k3)(t.id, g.jn.QUEST_BAR_V2), d = (0, _.g2)({
 useReducedMotion: n
   }), {
-errorHints: h,
-startingConsoleQuest: N,
+errorHints: E,
+startingConsoleQuest: v,
 startConsoleQuest: A
   } = (0, x.GI)({
 questId: t.id,
@@ -89,9 +89,9 @@ afterRequest: d.stopAnimation
 header: B,
 renderBody: b
   } = o.useMemo(() => {
-let e = h.length > 0,
+let e = E.length > 0,
   n = () => (0, s.jsx)(s.Fragment, {
-    children: h.map((e, n) => {
+    children: E.map((e, n) => {
       if (e.type === l.K.EXPIRED_CREDENTIAL && r) {
         let o = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
           r = (0, f.C9)(e),
@@ -118,11 +118,11 @@ let e = h.length > 0,
       }, n);
     })
   });
-if ((0, f.zK)(t, E.S7.IN_HOUSE_CONSOLE_QUEST))
+if ((0, f.zK)(t, h.S7.IN_HOUSE_CONSOLE_QUEST))
   return {
     header: e ? T.Z.Messages.QUESTS_ANY_GAME_NOT_DETECTED : T.Z.Messages.QUESTS_MICROPHONE_UNIT_HEADER,
     renderBody: e ? n : () => (0, s.jsx)(c.Text, {
-      className: v.microphoneUnitBodyText,
+      className: N.microphoneUnitBodyText,
       color: 'text-muted',
       variant: 'text-xxs/normal',
       children: T.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY_ANY_GAME
@@ -136,7 +136,7 @@ return {
     gameTitle: o
   }),
   renderBody: e ? n : () => (0, s.jsx)(c.Text, {
-    className: v.microphoneUnitBodyText,
+    className: N.microphoneUnitBodyText,
     color: 'text-muted',
     variant: 'text-xxs/normal',
     children: T.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY.format({
@@ -146,19 +146,19 @@ return {
 };
   }, [
 t,
-h,
+E,
 r
   ]);
   return (0, s.jsxs)('div', {
-className: v.microphoneUnit,
+className: N.microphoneUnit,
 children: [
   (0, s.jsxs)('div', {
-    className: v.microphoneUnitHeader,
+    className: N.microphoneUnitHeader,
     children: [
-      (0, s.jsx)(c.CircleExclamationPointIcon, {
+      (0, s.jsx)(c.CircleWarningIcon, {
         size: 'custom',
         color: 'currentColor',
-        className: 0 === h.length ? v.warningCircle : v.errorCircle,
+        className: 0 === E.length ? N.warningCircle : N.errorCircle,
         width: 16,
         height: 16
       }),
@@ -167,8 +167,8 @@ children: [
         children: B
       }),
       (0, s.jsx)(c.Clickable, {
-        className: a()(v.microphoneUnitRefreshIconWrapper, {
-          [v.disabled]: N
+        className: a()(N.microphoneUnitRefreshIconWrapper, {
+          [N.disabled]: v
         }),
         onClick: () => A(),
         children: d.render()
@@ -177,11 +177,11 @@ children: [
   }),
   (0, s.jsxs)('div', {
     className: a()({
-      [v.opacity_50]: N
+      [N.opacity_50]: v
     }),
     children: [
       b(),
-      0 === h.length ? null : (0, s.jsx)(j, {
+      0 === E.length ? null : (0, s.jsx)(j, {
         children: i
       })
     ]
@@ -213,12 +213,12 @@ isQuestComplete: m
 var e;
 let o = a.xboxAndPlaystationAccounts.length > 0,
   r = o && (0, f.Bz)(t),
-  l = (0, f.zK)(t, E.S7.IN_HOUSE_CONSOLE_QUEST),
+  l = (0, f.zK)(t, h.S7.IN_HOUSE_CONSOLE_QUEST),
   i = C.r.build(t.config).application.name,
   c = (null === (e = t.userStatus) || void 0 === e ? void 0 : e.completedAt) != null;
 return {
   steps: [{
-      renderContent: () => (0, s.jsx)(h.Q, {
+      renderContent: () => (0, s.jsx)(E.Q, {
         ...a,
         quest: t
       }),
@@ -251,21 +251,21 @@ t,
 n
   ]);
   return (0, s.jsxs)('div', {
-className: v.wrapper,
+className: N.wrapper,
 children: [
   (0, s.jsx)('div', {
-    className: v.headingWrapper,
+    className: N.headingWrapper,
     children: (0, s.jsx)(c.Heading, {
-      className: v.heading,
+      className: N.heading,
       variant: 'text-xs/medium',
       children: T.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_HEADING
     })
   }),
   (0, s.jsxs)('div', {
-    className: v.stepsWrapper,
+    className: N.stepsWrapper,
     children: [
       (0, s.jsx)('ul', {
-        children: l.map((e, t) => (0, s.jsx)(N, {
+        children: l.map((e, t) => (0, s.jsx)(v, {
           isComplete: e.isComplete,
           hasNextStep: t < l.length - 1,
           children: e.renderContent()

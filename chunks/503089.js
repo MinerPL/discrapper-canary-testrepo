@@ -270,7 +270,7 @@ super(...e), N(this, '_unmounted', !1), N(this, '_intensity', C), N(this, '_subs
     count: N,
     disableColor: !0,
     className: g.searchFilterCount
-  }) : s === v.oAB.ACCOUNT && this.props.isEligibleForPomelo ? j = (0, i.jsx)(o.CircleExclamationPointIcon, {
+  }) : s === v.oAB.ACCOUNT && this.props.isEligibleForPomelo ? j = (0, i.jsx)(o.CircleWarningIcon, {
     size: 'custom',
     width: 20,
     height: 20,

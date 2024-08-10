@@ -39,6 +39,14 @@ let b = [{
 {
   label: 'Basic Yearly',
   value: '1024422698568122368'
+},
+{
+  label: 'Reverse Trial 1-week',
+  value: '1267968635301789696'
+},
+{
+  label: 'Reverse Trial 2-week',
+  value: '1267969164312576000'
 }
   ],
   f = {

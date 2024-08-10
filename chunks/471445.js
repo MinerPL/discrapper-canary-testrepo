@@ -33,6 +33,8 @@ case d.d4z.GUILD_TEXT:
     return _.Z.Messages.CHANNEL_TOOLTIP_TEXT_NSFW;
   if ((0, u.Z)(e))
     return _.Z.Messages.CHANNEL_TOOLTIP_TEXT_LIMITED;
+  if (null != e.linkedLobby)
+    return _.Z.Messages.CHANNEL_TOOLTIP_TEXT_LINKED_LOBBY;
   return _.Z.Messages.CHANNEL_TOOLTIP_TEXT;
 case d.d4z.GUILD_FORUM:
   let i = e.isMediaChannel();
@@ -145,6 +147,8 @@ case d.d4z.GUILD_TEXT:
     return r.TextWarningIcon;
   if ((0, u.Z)(e))
     return r.TextLockIcon;
+  if (null != e.linkedLobby)
+    return r.RefreshIcon;
   return r.TextIcon;
 case d.d4z.GUILD_FORUM:
   let I = e.isMediaChannel();

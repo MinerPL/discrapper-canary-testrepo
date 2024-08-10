@@ -33,11 +33,8 @@ showTooltips: m = !0
   } = e, {
 analyticsLocations: I
   } = (0, d.ZP)(), {
-guildId: T,
-channelId: v,
-messageId: O,
-roleId: R
-  } = (0, p.KZ)(), C = s.useMemo(() => {
+context: T
+  } = (0, p.KZ)(), v = s.useMemo(() => {
 var e;
 return null !== (e = null == n ? void 0 : n.map(e => {
   let {
@@ -45,7 +42,7 @@ return null !== (e = null == n ? void 0 : n.map(e => {
   } = e;
   return t;
 })) && void 0 !== e ? e : [];
-  }, [n]), y = s.useMemo(() => {
+  }, [n]), O = s.useMemo(() => {
 var e;
 return null !== (e = null == r ? void 0 : r.map(e => {
   let {
@@ -53,23 +50,20 @@ return null !== (e = null == r ? void 0 : r.map(e => {
   } = e;
   return t;
 })) && void 0 !== e ? e : [];
-  }, [r]), D = s.useMemo(() => A.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_SHORT.format({
-count: C.length
-  }), [C]), L = s.useMemo(() => A.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_SHORT.format({
-count: y.length
-  }), [y]), b = s.useRef(null), [M, P] = s.useState(!1), [U, w] = s.useState(!1), x = s.useCallback(() => {
-if (null != b.current) {
+  }, [r]), R = s.useMemo(() => A.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_SHORT.format({
+count: v.length
+  }), [v]), C = s.useMemo(() => A.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_SHORT.format({
+count: O.length
+  }), [O]), y = s.useRef(null), [D, L] = s.useState(!1), [b, M] = s.useState(!1), P = s.useCallback(() => {
+if (null != y.current) {
   var e;
-  w((null === (e = b.current) || void 0 === e ? void 0 : e.clientHeight) > 19), P(!0);
+  M((null === (e = y.current) || void 0 === e ? void 0 : e.clientHeight) > 19), L(!0);
 }
-  }, []), G = s.useCallback(e => () => {
+  }, []), U = s.useCallback(e => () => {
 (0, g.openUserProfileModal)({
+  ...T,
   userId: t.id,
   sourceAnalyticsLocations: I,
-  guildId: T,
-  channelId: v,
-  messageId: O,
-  roleId: R,
   section: e,
   analyticsLocation: o
 }), null == i || i();
@@ -78,33 +72,30 @@ o,
 I,
 i,
 t.id,
-T,
-v,
-O,
-R
+T
   ]);
   s.useEffect(() => {
-x();
+P();
   }, [
-x,
-D
+P,
+R
   ]);
-  let k = C.length > 0,
-B = y.length > 0;
+  let w = v.length > 0,
+x = O.length > 0;
   return (0, a.jsxs)('div', {
-className: l()(N.compactItemContainer, !M && N.hideElement),
-ref: b,
+className: l()(N.compactItemContainer, !D && N.hideElement),
+ref: y,
 children: [
-  k && (() => {
+  w && (() => {
     let e = (0, a.jsxs)(c.Clickable, {
-      onClick: G(S.oh.MUTUAL_FRIENDS),
+      onClick: U(S.oh.MUTUAL_FRIENDS),
       className: l()(N.avatarAndTextContainer, N.__invalid_friendsContainer),
       children: [
         (0, a.jsx)('div', {
           className: N.__invalid_avatars,
           children: (0, a.jsx)(_.Z, {
             maxUsers: u,
-            users: C,
+            users: v,
             size: c.AvatarSizes.SIZE_16,
             hideOverflowCount: !0,
             disableUsernameTooltip: !0
@@ -114,7 +105,7 @@ children: [
           className: l()(N.itemizedListText, h && N.underlineOnHover),
           variant: 'text-sm/normal',
           color: 'interactive-normal',
-          children: D
+          children: R
         })
       ]
     });
@@ -123,20 +114,20 @@ children: [
       children: e
     }) : e;
   })(),
-  k && B && (0, a.jsx)('div', {
+  w && x && (0, a.jsx)('div', {
     'aria-hidden': 'true',
     className: N.dotSpacer
   }),
-  B && (() => {
+  x && (() => {
     let e = (0, a.jsxs)(c.Clickable, {
-      onClick: G(S.oh.MUTUAL_GUILDS),
+      onClick: U(S.oh.MUTUAL_GUILDS),
       className: l()(N.avatarAndTextContainer, N.serverContainer),
       children: [
-        !U && (0, a.jsx)('div', {
+        !b && (0, a.jsx)('div', {
           className: N.__invalid_avatars,
           children: (0, a.jsx)(E.Z, {
             maxGuilds: u,
-            guilds: y,
+            guilds: O,
             size: f.Z.Sizes.SMOL,
             hideOverflowCount: !0,
             disableGuildNameTooltip: !0
@@ -146,7 +137,7 @@ children: [
           className: l()(N.itemizedListText, h && N.underlineOnHover),
           variant: 'text-sm/normal',
           color: 'interactive-normal',
-          children: L
+          children: C
         })
       ]
     });

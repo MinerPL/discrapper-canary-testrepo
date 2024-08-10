@@ -12,7 +12,7 @@ alignItems: 'center'
   },
   variant: 'text-sm/normal',
   children: [
-(0, r.jsx)(i.CircleExclamationPointIcon, {
+(0, r.jsx)(i.CircleWarningIcon, {
   size: 'custom',
   color: 'currentColor',
   width: 14,

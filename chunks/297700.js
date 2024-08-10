@@ -18,7 +18,7 @@ size: n = 16,
 className: a,
 flowerStarClassName: c,
 ...d
-  } = e, _ = i.Children.only(t), E = (0, o.useRedesignIconContext)().enabled;
+  } = e, _ = i.Children.only(t), E = (0, o.useRedesignIconContext)().enabled && !e.allowFullSizedIcon;
   return (0, r.jsxs)('div', {
 className: s()(u.flowerStarContainer, a),
 style: {

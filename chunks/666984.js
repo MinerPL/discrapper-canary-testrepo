@@ -22,7 +22,7 @@ function h(e) {
   let {
 user: n,
 activity: h,
-onClick: p
+onAction: p
   } = e, {
 profileType: m
   } = (0, u.z)(), I = (0, o.Ih)(h, n), T = (0, o.Fe)(h, n);
@@ -35,8 +35,10 @@ children: [
     submitting: T.loading,
     themeColor: m === d.y0.FULL_SIZE ? 'secondary' : 'primary',
     fullWidth: !0,
-    onClick: e => {
-      null == p || p(e), T.onClick();
+    onClick: () => {
+      null == p || p({
+        action: 'PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON'
+      }), T.onClick();
     }
   }),
   (0, r.jsx)(i.Tooltip, {
@@ -52,8 +54,10 @@ children: [
         themeColor: m === d.y0.FULL_SIZE ? 'secondary' : 'primary',
         wrapperClassName: f.primaryButton,
         fullWidth: !0,
-        onClick: e => {
-          null == p || p(e), I.onClick();
+        onClick: () => {
+          null == p || p({
+            action: 'PRESS_PLAY_ON_SPOTIFY_BUTTON'
+          }), I.onClick();
         }
       });
     }

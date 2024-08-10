@@ -17,9 +17,9 @@ var r = n(735250),
   d = n(476326),
   _ = n(543651),
   E = n(377171),
-  f = n(592125),
-  h = n(68588),
-  p = n(810090),
+  f = n(95398),
+  h = n(70097),
+  p = n(592125),
   m = n(956664),
   I = n(709054),
   T = n(273031),
@@ -42,15 +42,15 @@ spoiler: n,
 renderContent: a,
 size: s
   } = e, [o, l] = i.useState(!1);
-  return (0, r.jsx)(h.a.Provider, {
+  return (0, r.jsx)(f.a.Provider, {
 value: !n,
-children: (0, r.jsx)(h.Z, {
+children: (0, r.jsx)(f.Z, {
   containerStyles: s === g.q.CLIP ? {
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 0,
     boxShadow: 'none'
   } : void 0,
-  type: h.Z.Types.ATTACHMENT,
+  type: f.Z.Types.ATTACHMENT,
   onReveal: () => l(!0),
   className: A.spoilerContainer,
   children: e => (0, r.jsxs)('div', {
@@ -181,7 +181,7 @@ children: (0, r.jsx)(v, {
   size: o,
   alt: n,
   spoiler: a,
-  renderContent: e => (0, r.jsx)(p.Z, {
+  renderContent: e => (0, r.jsx)(h.Z, {
     ref: _,
     src: c,
     className: s()(A.media, {
@@ -238,14 +238,14 @@ channelId: t,
 draftType: n,
 upload: a,
 keyboardModeEnabled: d,
-label: h,
-size: p = g.q.MEDIUM,
+label: f,
+size: h = g.q.MEDIUM,
 canEdit: m = !0,
 hideFileName: N = !1,
 clip: v
-  } = e, O = null != v, R = (p = O ? g.q.CLIP : p) === g.q.SMALL, y = (0, o.e7)([f.Z], () => {
+  } = e, O = null != v, R = (h = O ? g.q.CLIP : h) === g.q.SMALL, y = (0, o.e7)([p.Z], () => {
 var e;
-return null === (e = f.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id;
+return null === (e = p.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id;
   }), D = e => {
 e.stopPropagation(), (0, l.openModal)(e => (0, r.jsx)(c.default, {
   ...e,
@@ -327,21 +327,21 @@ id: a.id,
 channelId: t,
 handleEditModal: D,
 keyboardModeEnabled: d,
-size: p,
+size: h,
 className: s()({
   [A.attachmentItemSmall]: R
 }),
 children: [
   (0, r.jsx)(C, {
     upload: a,
-    size: p
+    size: h
   }),
   !N && !O && (0, r.jsx)('div', {
     className: A.filenameContainer,
     children: (0, r.jsx)(l.Text, {
       className: A.filename,
       variant: 'text-sm/normal',
-      children: null != h ? h : a.filename
+      children: null != f ? f : a.filename
     })
   }),
   O && (0, r.jsxs)(r.Fragment, {

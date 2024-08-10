@@ -14,19 +14,19 @@ var i = n(735250),
   d = n(607070),
   h = n(451576),
   p = n(358221),
-  m = n(605236),
-  _ = n(243778),
-  f = n(590293),
-  E = n(970731),
-  g = n(560688),
-  C = n(173507),
-  I = n(523746),
-  x = n(819640),
-  T = n(131951),
-  N = n(699516),
-  v = n(594174),
-  S = n(979651),
-  Z = n(810090),
+  m = n(70097),
+  _ = n(605236),
+  f = n(243778),
+  E = n(590293),
+  g = n(970731),
+  C = n(560688),
+  I = n(173507),
+  x = n(523746),
+  T = n(819640),
+  N = n(131951),
+  v = n(699516),
+  S = n(594174),
+  Z = n(979651),
   A = n(585483),
   M = n(63063),
   b = n(665149),
@@ -66,7 +66,7 @@ if (n || a && c === R.WtW.VOICE)
 let u = o.isManaged(),
   d = null,
   h = !1;
-return T.Z.supports(L.AN.VIDEO) ? l ? (d = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, h = !0) : a && c === R.WtW.VIDEO ? (t = this.handleJoinVideoCall, d = u ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VIDEO_CALL) : (t = this.handleStartVideoCall, d = u ? P.Z.Messages.CONNECT : P.Z.Messages.START_VIDEO_CALL) : (h = !0, t = this.handleBrowserNotSupported, d = P.Z.Messages.BROWSER_NOT_SUPPORTED), (0, i.jsx)(b.ZP.Icon, {
+return N.Z.supports(L.AN.VIDEO) ? l ? (d = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, h = !0) : a && c === R.WtW.VIDEO ? (t = this.handleJoinVideoCall, d = u ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VIDEO_CALL) : (t = this.handleStartVideoCall, d = u ? P.Z.Messages.CONNECT : P.Z.Messages.START_VIDEO_CALL) : (h = !0, t = this.handleBrowserNotSupported, d = P.Z.Messages.BROWSER_NOT_SUPPORTED), (0, i.jsx)(b.ZP.Icon, {
   icon: r.VideoIcon,
   onClick: t,
   disabled: h || s,
@@ -90,17 +90,17 @@ let {
 if (t)
   return null;
 let p = c.isManaged(),
-  m = '',
-  f = !1;
-s ? (m = p ? P.Z.Messages.VOICE_UNAVAILABLE : P.Z.Messages.CALL_UNAVAILABLE, e = r.Tooltip.Colors.RED, f = !0) : o ? (m = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, f = !0) : m = a ? p ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VOICE_CALL : p ? P.Z.Messages.CONNECT : P.Z.Messages.START_VOICE_CALL;
-let g = (0, i.jsx)(b.ZP.Icon, {
+  _ = '',
+  E = !1;
+s ? (_ = p ? P.Z.Messages.VOICE_UNAVAILABLE : P.Z.Messages.CALL_UNAVAILABLE, e = r.Tooltip.Colors.RED, E = !0) : o ? (_ = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, E = !0) : _ = a ? p ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VOICE_CALL : p ? P.Z.Messages.CONNECT : P.Z.Messages.START_VOICE_CALL;
+let C = (0, i.jsx)(b.ZP.Icon, {
   icon: r.PhoneCallIcon,
   onClick: this.handleVoiceClick,
-  disabled: f,
-  tooltip: m,
+  disabled: E,
+  tooltip: _,
   tooltipColor: e
 });
-return (0, i.jsx)(_.Z, {
+return (0, i.jsx)(f.Z, {
   contentTypes: d,
   children: e => {
     let {
@@ -117,10 +117,10 @@ return (0, i.jsx)(_.Z, {
           let {
             closePopout: t
           } = e;
-          return (0, i.jsx)(E.ZP, {
+          return (0, i.jsx)(g.ZP, {
             header: (0, i.jsxs)('div', {
               children: [
-                (0, i.jsx)(Z.Z, {
+                (0, i.jsx)(m.Z, {
                   className: O.tooltipImage,
                   autoPlay: !h,
                   src: 'https://cdn.discordapp.com/attachments/860252504826445825/1078051428028924006/mobile_coachmark.mp4',
@@ -156,9 +156,9 @@ return (0, i.jsx)(_.Z, {
             className: O.tooltip
           });
         },
-        children: () => g
+        children: () => C
       });
-    return g;
+    return C;
   }
 });
   }
@@ -177,7 +177,7 @@ super(...e), y(this, 'handleStartCall', (e, t) => {
     notFriend: i,
     appContext: a
   } = this.props, s = i ? n.getRecipientId() : null, l = () => o.Z.call(n.id, t, !i && !n.isManaged() && !(null == e ? void 0 : e.shiftKey), s);
-  t ? (0, C.Z)(l, a) : l();
+  t ? (0, I.Z)(l, a) : l();
 }), y(this, 'handleJoinCall', e => {
   c.default.selectVoiceChannel(this.props.channel.id, e);
 }), y(this, 'handleVoiceClick', e => {
@@ -186,7 +186,7 @@ super(...e), y(this, 'handleStartCall', (e, t) => {
     callActive: n,
     canShowActivityGdmTooltip: i
   } = this.props;
-  if (i && (0, m.EW)(l.z.ACTIVITY_GDM_CALL_TOOLTIP, {
+  if (i && (0, _.EW)(l.z.ACTIVITY_GDM_CALL_TOOLTIP, {
       dismissAction: j.L.AUTO
     }), t);
   else if (n)
@@ -199,9 +199,9 @@ super(...e), y(this, 'handleStartCall', (e, t) => {
   let {
     appContext: e
   } = this.props;
-  (0, C.Z)(() => this.handleJoinCall(!0), e);
+  (0, I.Z)(() => this.handleJoinCall(!0), e);
 }), y(this, 'handleBrowserNotSupported', () => {
-  (0, g.Z)();
+  (0, C.Z)();
 });
   }
 }
@@ -209,19 +209,19 @@ super(...e), y(this, 'handleStartCall', (e, t) => {
 function k(e) {
   let {
 channel: t
-  } = e, n = (0, f.Z)(), r = (0, s.e7)([p.Z], () => p.Z.getMode(t.id)), o = (0, s.e7)([S.Z], () => S.Z.isInChannel(t.id)), c = (0, s.e7)([d.Z], () => d.Z.useReducedMotion), {
+  } = e, n = (0, E.Z)(), r = (0, s.e7)([p.Z], () => p.Z.getMode(t.id)), o = (0, s.e7)([Z.Z], () => Z.Z.isInChannel(t.id)), c = (0, s.e7)([d.Z], () => d.Z.useReducedMotion), {
 callActive: m,
 callUnavailable: _
-  } = (0, s.cj)([I.Z], () => ({
-callActive: I.Z.isCallActive(t.id),
-callUnavailable: I.Z.isCallUnavailable(t.id)
-  })), E = t.getRecipientId(), {
+  } = (0, s.cj)([x.Z], () => ({
+callActive: x.Z.isCallActive(t.id),
+callUnavailable: x.Z.isCallUnavailable(t.id)
+  })), f = t.getRecipientId(), {
 notFriend: g,
 isBlocked: C
-  } = (0, s.cj)([N.Z], () => ({
-notFriend: t.type === R.d4z.DM && null != E && !N.Z.isFriend(E),
-isBlocked: t.type === R.d4z.DM && null != E && N.Z.isBlocked(E)
-  })), T = (0, s.e7)([v.default], () => v.default.getUser(E)), Z = (0, u.bp)(), A = [], M = (0, h.Z)(t.id), b = (0, s.e7)([x.Z], () => x.Z.hasLayers());
+  } = (0, s.cj)([v.Z], () => ({
+notFriend: t.type === R.d4z.DM && null != f && !v.Z.isFriend(f),
+isBlocked: t.type === R.d4z.DM && null != f && v.Z.isBlocked(f)
+  })), I = (0, s.e7)([S.default], () => S.default.getUser(f)), N = (0, u.bp)(), A = [], M = (0, h.Z)(t.id), b = (0, s.e7)([T.Z], () => T.Z.hasLayers());
   M && !b && A.push(l.z.ACTIVITY_GDM_CALL_TOOLTIP);
   let [j, L] = a.useState(!1);
   return (a.useEffect(() => {
@@ -229,7 +229,7 @@ let e = setTimeout(() => {
   L(!0);
 }, 250);
 return () => clearTimeout(e);
-  }, []), n || (null == T ? void 0 : T.bot)) ? null : (0, i.jsx)(D, {
+  }, []), n || (null == I ? void 0 : I.bot)) ? null : (0, i.jsx)(D, {
 channel: t,
 mode: r,
 inCall: o,
@@ -237,7 +237,7 @@ callActive: m,
 callUnavailable: _,
 notFriend: g,
 isBlocked: C,
-appContext: Z,
+appContext: N,
 canShowTooltip: j,
 canShowActivityGdmTooltip: M,
 dismissibleContentTypes: A,

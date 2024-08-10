@@ -32,7 +32,9 @@ children: n,
 onClose: v
   } = e, {
 analyticsLocations: O
-  } = (0, c.ZP)(u.Z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP), R = (0, f.KZ)(), {
+  } = (0, c.ZP)(u.Z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP), {
+context: R
+  } = (0, f.KZ)(), {
 profileType: C,
 primaryColor: y
   } = (0, p.z)(), {
@@ -48,10 +50,10 @@ return (null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.i
 [w, x] = (0, d.U)(U),
 G = () => {
   (0, m.openUserProfileModal)({
-    ...R,
     userId: t.id,
     section: I.oh.ACTIVITY,
-    sourceAnalyticsLocations: O
+    sourceAnalyticsLocations: O,
+    ...R
   }), null == v || v();
 };
   return (0, r.jsx)(o.Popout, {

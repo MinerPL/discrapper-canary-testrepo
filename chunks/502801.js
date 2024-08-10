@@ -10,8 +10,8 @@ var i = t(735250),
   r = t(442837),
   o = t(952265),
   _ = t(481060),
-  u = t(493683),
-  d = t(700582),
+  d = t(493683),
+  u = t(700582),
   s = t(100527),
   c = t(906732),
   C = t(933557),
@@ -71,17 +71,17 @@ guildId: n,
 selectedChannelId: t,
 onSelectChannelId: E
   } = e, o = (0, r.e7)([U.Z], () => U.Z.getChannelId()), {
-guildChannels: u
-  } = (0, r.cj)([A.Z], () => A.Z.getGuildWithoutChangingCommunityRows(n)), d = l.useMemo(() => {
+guildChannels: d
+  } = (0, r.cj)([A.Z], () => A.Z.getGuildWithoutChangingGuildActionRows(n)), u = l.useMemo(() => {
 let e = [];
-return u.forEachChannel(n => {
+return d.forEachChannel(n => {
   !1 !== (0, O.W)(n.id) && ((0, D.r8)(n.type) || (0, D.bw)(n.type)) && e.push(n);
 }), e.sort((e, n) => e.id === o ? -1 : n.id === o ? 1 : 0);
   }, [
-u,
+d,
 o
   ]);
-  return 0 === d.length ? null : (0, i.jsxs)(i.Fragment, {
+  return 0 === u.length ? null : (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)('div', {
     className: a()(H.divider, H.bottomDivider)
@@ -93,7 +93,7 @@ children: [
     children: m.Z.Messages.CLIP_SHARE_SELECT_CHANNEL
   }),
   (0, i.jsx)(_.List, {
-    sections: [d.length],
+    sections: [u.length],
     sectionHeight: 0,
     renderRow: e => {
       let {
@@ -102,7 +102,7 @@ children: [
       } = e;
       if (n > 0)
         return null;
-      let a = d[l],
+      let a = u[l],
         r = (0, S.KS)(a);
       return null == r ? null : (0, i.jsx)(M, {
         channel: a,
@@ -111,7 +111,7 @@ children: [
         onClick: E
       }, a.id);
     },
-    rowHeight: (e, n) => e > 0 ? 0 : null != d[n] ? 56 : 0,
+    rowHeight: (e, n) => e > 0 ? 0 : null != u[n] ? 56 : 0,
     renderSection: () => null,
     className: a()(H.channelList, H.contentPadding),
     fade: !0
@@ -126,11 +126,11 @@ friends: n,
 searchQuery: t,
 disabled: E,
 onShareClip: o
-  } = e, u = l.useMemo(() => 0 === t.length ? n : n.filter(e => e.username.toLowerCase().includes(t.toLowerCase())), [
+  } = e, d = l.useMemo(() => 0 === t.length ? n : n.filter(e => e.username.toLowerCase().includes(t.toLowerCase())), [
 n,
 t
   ]), s = (0, r.e7)([L.Z], () => L.Z.theme);
-  return 0 === u.length ? (0, i.jsxs)(_.EmptyState, {
+  return 0 === d.length ? (0, i.jsxs)(_.EmptyState, {
 theme: s,
 className: H.emptyStateContainer,
 children: [
@@ -145,7 +145,7 @@ children: [
   })
 ]
   }) : (0, i.jsx)(_.List, {
-sections: [u.length],
+sections: [d.length],
 sectionHeight: 0,
 renderRow: e => {
   let {
@@ -154,12 +154,12 @@ renderRow: e => {
   } = e;
   if (n > 0)
     return null;
-  let l = u[t],
-    a = u[t].username;
+  let l = d[t],
+    a = d[t].username;
   return (0, i.jsxs)('div', {
     className: H.userRow,
     children: [
-      (0, i.jsx)(d.Z, {
+      (0, i.jsx)(u.Z, {
         user: l
       }),
       (0, i.jsx)(_.Text, {
@@ -182,7 +182,7 @@ renderRow: e => {
     ]
   }, l.id);
 },
-rowHeight: (e, n) => e > 0 ? 0 : null != u[n] ? 52 : 0,
+rowHeight: (e, n) => e > 0 ? 0 : null != d[n] ? 52 : 0,
 renderSection: () => null,
 className: a()(H.friendsList, H.contentPadding),
 fade: !0
@@ -194,7 +194,7 @@ function b(e) {
 clip: n,
 editMetadata: t,
 transitionState: E,
-onClose: d
+onClose: u
   } = e, [C, S] = l.useState(''), [A, L] = l.useState(!1), [D, U] = l.useState(null), R = (0, r.Wu)([N.Z], () => N.Z.getFriendIDs()), f = (0, r.Wu)([
 I.Z,
 P.default
@@ -220,7 +220,7 @@ if (null != i) {
 }
   }
   async function M(e) {
-let n = await u.Z.openPrivateChannel(e);
+let n = await d.Z.openPrivateChannel(e);
 await p(n);
   }
   return (0, i.jsxs)(_.ModalRoot, {
@@ -275,7 +275,7 @@ children: [
       (0, i.jsx)(_.Button, {
         submitting: A,
         look: _.ButtonLooks.LINK,
-        onClick: d,
+        onClick: u,
         color: _.ButtonColors.PRIMARY,
         children: m.Z.Messages.BACK
       })

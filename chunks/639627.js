@@ -26,7 +26,10 @@ children: (0, r.jsx)(s.ZP, {
     (0, a.ZD)(async () => {
       let {
         default: a
-      } = await n.e('48017').then(n.bind(n, 850085));
+      } = await Promise.all([
+        n.e('48017'),
+        n.e('54144')
+      ]).then(n.bind(n, 850085));
       return n => (0, r.jsx)(a, {
         imgURI: t,
         file: i,

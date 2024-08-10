@@ -4,53 +4,53 @@ var n = a(735250),
   r = a(120356),
   t = a.n(r),
   i = a(512722),
-  E = a.n(i),
-  o = a(442837),
+  o = a.n(i),
+  E = a(442837),
   c = a(481060),
   _ = a(493683),
   I = a(220779),
   u = a(142550),
-  A = a(201133),
-  d = a(693824),
-  O = a(919394),
+  d = a(201133),
+  A = a(693824),
+  R = a(919394),
   N = a(91140),
-  R = a(297781),
+  O = a(297781),
   T = a(359110),
   m = a(592125),
   L = a(944486),
-  P = a(594174),
+  g = a(594174),
   M = a(5192),
-  g = a(810568),
+  P = a(810568),
   S = a(289538),
   G = a(689938),
-  C = a(340672),
-  f = a(421377);
+  f = a(340672),
+  C = a(421377);
 let v = e => {
   let {
 entry: s,
 setGeneratedImage: a,
 nickName: r
-  } = e, [i, o] = l.useState();
+  } = e, [i, E] = l.useState();
   return l.useEffect(() => {
 (async () => {
   let e = await _.Z.getOrEnsurePrivateChannel(s.author_id),
     n = m.Z.getChannel(e);
-  E()(null != n, 'DM channel cannot be null');
-  let l = await (0, O.QC)(s, n, d.kH.Base64),
-    r = await (0, O.QC)(s, n, d.kH.CloudUpload);
-  o(l), a(r);
+  o()(null != n, 'DM channel cannot be null');
+  let l = await (0, R.QC)(s, n, A.kH.Base64),
+    r = await (0, R.QC)(s, n, A.kH.CloudUpload);
+  E(l), a(r);
 })();
   }, [
 s,
 a
   ]), (0, n.jsxs)('div', {
-className: C.reactReplyPreviewWrapper,
+className: f.reactReplyPreviewWrapper,
 children: [
   (0, n.jsx)('div', {
-    className: t()(C.placeholderImage, null != i && C.in)
+    className: t()(f.placeholderImage, null != i && f.in)
   }),
   null != i && (0, n.jsx)('img', {
-    className: C.reactReplyPreview,
+    className: f.reactReplyPreview,
     src: i,
     alt: G.Z.Messages.GAME_PROFILE_GAME_REACT_REPLY_ALT.format({
       userName: r,
@@ -66,42 +66,38 @@ entry: s,
 viewId: a,
 style: r = {},
 onClose: i
-  } = e, d = (0, o.e7)([
+  } = e, A = (0, E.e7)([
 L.Z,
 m.Z
-  ], () => m.Z.getChannel(L.Z.getChannelId())), O = (0, o.e7)([P.default], () => P.default.getUser(s.author_id)), h = l.useMemo(() => M.ZP.getName(null == d ? void 0 : d.guild_id, null == d ? void 0 : d.id, O), [
-O,
-d
+  ], () => m.Z.getChannel(L.Z.getChannelId())), R = (0, E.e7)([g.default], () => g.default.getUser(s.author_id)), h = l.useMemo(() => M.ZP.getName(null == A ? void 0 : A.guild_id, null == A ? void 0 : A.id, R), [
+R,
+A
   ]), [x, p] = l.useState();
-  return null == O ? null : (0, n.jsxs)('div', {
-className: C.profileEntryCard,
+  return null == R ? null : (0, n.jsxs)('div', {
+className: f.profileEntryCard,
 style: r,
 children: [
   (0, n.jsxs)('div', {
-    className: t()(f.row, f.gapSm),
+    className: t()(C.row, C.gapSm),
     style: r,
     children: [
       (0, n.jsx)(S.D, {
-        user: O,
-        channel: d
+        user: R,
+        channel: A
       }),
       (0, n.jsx)('div', {
-        className: t()(C.playerInfo),
+        className: t()(f.playerInfo),
         children: (0, n.jsxs)('div', {
-          className: t()(f.column, f.gapNone),
+          className: t()(C.column, C.gapXs),
           children: [
-            (0, n.jsxs)(c.Text, {
-              variant: 'text-sm/bold',
-              color: 'text-normal',
+            (0, n.jsx)(c.Text, {
+              variant: 'text-md/medium',
+              color: 'text-primary',
               lineClamp: 1,
-              children: [
-                h.slice(0, 18),
-                ' ',
-                h.length > 18 ? '...' : ''
-              ]
+              children: h
             }),
-            (0, n.jsx)(R.Gk, {
-              location: R.Gt.GAME_PROFILE,
+            (0, n.jsx)(O.Gk, {
+              location: O.Gt.GAME_PROFILE,
               children: N.W.map((e, a) => (0, n.jsx)(e, {
                 entry: s
               }, a))
@@ -112,7 +108,7 @@ children: [
     ]
   }),
   (0, n.jsx)('div', {
-    className: C.reactions,
+    className: f.reactions,
     children: (0, n.jsx)(I.ZP, {
       showReply: !0,
       showReact: !1,
@@ -121,15 +117,15 @@ children: [
           interactionType: n,
           reply: l
         } = e;
-        if (n === u.L.ReplyBegin && (0, g.UE)({
-            action: g.as.ClickMessageUser,
+        if (n === u.L.ReplyBegin && (0, P.UE)({
+            action: P.as.ClickMessageUser,
             applicationId: s.extra.application_id,
             gameName: s.extra.game_name,
             recipientUserId: s.author_id,
             viewId: a
           }), n === u.L.ReplySubmit) {
-          (0, g.UE)({
-            action: g.as.SendMessageUser,
+          (0, P.UE)({
+            action: P.as.SendMessageUser,
             applicationId: s.extra.application_id,
             gameName: s.extra.game_name,
             recipientUserId: s.author_id,
@@ -137,7 +133,7 @@ children: [
           });
           let e = await _.Z.getOrEnsurePrivateChannel(s.author_id),
             n = m.Z.getChannel(e);
-          E()(null != n, 'GameProfile ReactReply - DM channel cannot be null'), E()(null != x, 'GameProfile ReactReply - Reaction Image cannot be null'), (0, A.B)({
+          o()(null != n, 'GameProfile ReactReply - DM channel cannot be null'), o()(null != x, 'GameProfile ReactReply - Reaction Image cannot be null'), (0, d.B)({
             file: x,
             channel: n,
             altText: '',

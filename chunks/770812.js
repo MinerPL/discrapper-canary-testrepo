@@ -63,7 +63,7 @@ children: [
         size: o.Button.Sizes.ICON,
         className: T.closeButton,
         onClick: t,
-        children: (0, r.jsx)(o.CloseSmallIcon, {
+        children: (0, r.jsx)(o.XSmallIcon, {
           size: 'xs',
           color: 'currentColor',
           'aria-label': I.Z.Messages.CLOSE,

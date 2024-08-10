@@ -1,15 +1,15 @@
 n.d(t, {
   KF: function() {
-return L;
-  },
-  LW: function() {
-return M;
-  },
-  OO: function() {
 return A;
   },
-  TH: function() {
+  LW: function() {
+return R;
+  },
+  OO: function() {
 return b;
+  },
+  TH: function() {
+return M;
   }
 }), n(47120);
 var i = n(735250),
@@ -22,21 +22,22 @@ var i = n(735250),
   u = n(481060),
   d = n(350810),
   h = n(110924),
-  p = n(100527),
-  _ = n(970606),
-  f = n(963202),
+  p = n(410030),
+  _ = n(100527),
+  f = n(970606),
+  g = n(963202),
   m = n(824991),
-  g = n(243778),
-  C = n(863249),
-  I = n(937111),
-  E = n(602147),
-  N = n(981631),
-  x = n(308083),
-  S = n(921944),
-  v = n(689938),
-  Z = n(525865);
+  C = n(243778),
+  I = n(863249),
+  E = n(937111),
+  N = n(602147),
+  x = n(981631),
+  S = n(308083),
+  v = n(921944),
+  Z = n(689938),
+  T = n(525865);
 
-function T(e) {
+function L(e) {
   let {
 title: t,
 message: n,
@@ -45,61 +46,65 @@ defaultGameId: a,
 onPopoutVisible: o,
 onClick: c,
 children: h,
-isEligibleForUpsell: p = !0,
-withInviteIcon: _ = !0
-  } = e, f = (0, s.TH)(), [C, I] = (0, g.U)([r], S.R.SIDEBAR), v = C !== r, T = (0, d.Z)(), L = p && !T && !v && f.pathname !== N.Z5c.GUILD_DISCOVERY;
+isEligibleForUpsell: _ = !0,
+withInviteIcon: f = !0
+  } = e, g = (0, s.TH)(), [I, E] = (0, C.U)([r], v.R.SIDEBAR), Z = I !== r, L = (0, d.Z)(), A = _ && !L && !Z && g.pathname !== x.Z5c.GUILD_DISCOVERY;
   l.useEffect(() => {
-L && o();
+A && o();
   }, [
-L,
+A,
 o
   ]);
-  let A = l.useMemo(() => {
+  let b = (0, p.ZP)(),
+M = l.useMemo(() => {
   switch (a) {
-    case x.nJ:
-      return Z.valorantBackgroundImage;
-    case x.xn:
-      return Z.genshinBackgroundImage;
+    case S.nJ:
+      return T.valorantBackgroundImage;
+    case S.xn:
+      return T.genshinBackgroundImage;
     default:
-      return Z.valorantBackgroundImage;
+      return b === x.BRd.DARK ? T.genericBackgroundImageDark : T.genericBackgroundImageLight;
   }
-}, [a]),
-b = l.useCallback(() => {
-  I(S.L.TAKE_ACTION), c(), (0, E.o)();
 }, [
-  I,
+  a,
+  b
+]),
+R = l.useCallback(() => {
+  E(v.L.TAKE_ACTION), c(), (0, N.o)();
+}, [
+  E,
   c
 ]),
-M = l.useCallback(e => {
-  e(), I(S.L.USER_DISMISS);
-}, [I]);
+P = l.useCallback(e => {
+  e(), E(v.L.USER_DISMISS);
+}, [E]);
   return (0, i.jsxs)('div', {
-className: Z.container,
+className: T.container,
 children: [
   (0, i.jsx)(u.Popout, {
-    shouldShow: L,
+    shouldShow: A,
     renderPopout: e => {
       let {
         closePopout: l
       } = e;
       return (0, i.jsxs)('div', {
-        className: Z.popoutContainer,
+        className: T.popoutContainer,
         children: [
           (0, i.jsx)('div', {
-            className: A
+            className: M
           }),
           (0, i.jsx)(u.Clickable, {
-            onClick: () => M(l),
-            className: Z.close,
-            children: (0, i.jsx)(u.CloseSmallIcon, {
+            onClick: () => P(l),
+            className: T.close,
+            children: (0, i.jsx)(u.XSmallIcon, {
               size: 'xs',
               color: u.tokens.colors.WHITE
             })
           }),
           (0, i.jsxs)('div', {
-            className: Z.popoutContent,
+            className: T.popoutContent,
             children: [
-              _ && (0, i.jsx)(m.YV, {}),
+              f && (0, i.jsx)(m.YV, {}),
               (0, i.jsx)(m.aF, {
                 title: t
               }),
@@ -107,12 +112,12 @@ children: [
                 message: n
               }),
               (0, i.jsx)(m.Xu, {
-                onClick: b
+                onClick: R
               })
             ]
           }),
           (0, i.jsx)('div', {
-            className: Z.popoutCaret
+            className: T.popoutCaret
           })
         ]
       });
@@ -123,39 +128,39 @@ children: [
     spacing: 16,
     children: e => (0, i.jsx)('div', {
       ...e,
-      className: Z.popoutAnchor
+      className: T.popoutAnchor
     })
   }),
   h({
-    onClick: b
+    onClick: R
   })
 ]
   });
 }
 
-function L(e) {
+function A(e) {
   let {
 defaultGameId: t,
 children: n
   } = e, r = l.useCallback(() => {
-(0, _.tv)({
-  location: p.Z.GUILDS_LIST
+(0, f.tv)({
+  location: _.Z.GUILDS_LIST
 });
   }, []), a = l.useCallback(() => {
-(0, _.GS)({
-  location: p.Z.GUILDS_LIST
+(0, f.GS)({
+  location: _.Z.GUILDS_LIST
 });
   }, []), [s, o] = l.useMemo(() => {
 switch (t) {
-  case x.xn:
+  case S.xn:
     return [
-      v.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_TITLE,
-      v.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_MESSAGE
+      Z.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_TITLE,
+      Z.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_MESSAGE
     ];
-  case x.nJ:
+  case S.nJ:
     return [
-      v.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_VALORANT_TITLE,
-      v.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_VALORANT_MESSAGE
+      Z.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_VALORANT_TITLE,
+      Z.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_VALORANT_MESSAGE
     ];
   default:
     return [
@@ -164,7 +169,7 @@ switch (t) {
     ];
 }
   }, [t]);
-  return (0, i.jsx)(T, {
+  return (0, i.jsx)(L, {
 title: s,
 message: o,
 dismissibleContent: c.z.GUILD_LIST_CLAN_USER_UPSELL,
@@ -176,24 +181,24 @@ children: n
   });
 }
 
-function A(e) {
+function b(e) {
   let {
 children: t
   } = e, {
 guilds: n
-  } = (0, f.C3)({
+  } = (0, g.C3)({
 location: 'GuildsBarClanAdminUpsellPopout',
 includeConverted: !1
   }), r = n.length > 0, a = l.useCallback(() => {
-(0, _.TE)({
-  location: p.Z.GUILDS_LIST
+(0, f.TE)({
+  location: _.Z.GUILDS_LIST
 });
   }, []), s = l.useCallback(() => {
-(0, _._9)({
-  location: p.Z.GUILDS_LIST
+(0, f._9)({
+  location: _.Z.GUILDS_LIST
 });
-  }, []), o = v.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_TITLE, u = v.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE;
-  return (0, i.jsx)(T, {
+  }, []), o = Z.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_TITLE, u = Z.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE;
+  return (0, i.jsx)(L, {
 title: o,
 message: u,
 dismissibleContent: c.z.GUILD_LIST_CLAN_ADMIN_UPSELL,
@@ -205,12 +210,12 @@ children: t
   });
 }
 
-function b(e) {
+function M(e) {
   let {
 onActivate: t,
 children: n
-  } = e, r = (0, o.e7)([I.Z], () => I.Z.hasJoinRequestCoackmark()), a = l.useCallback(() => {
-C.Z.clearCoachmark();
+  } = e, r = (0, o.e7)([E.Z], () => E.Z.hasJoinRequestCoackmark()), a = l.useCallback(() => {
+I.Z.clearCoachmark();
   }, []), s = (0, h.Z)(r), c = l.useRef(null);
   return l.useEffect(() => {
 if (r && r !== s) {
@@ -223,28 +228,28 @@ r,
 s,
 t
   ]), (0, i.jsxs)('div', {
-className: Z.container,
+className: T.container,
 children: [
   (0, i.jsx)(u.Popout, {
     ref: c,
     shouldShow: r,
     renderPopout: () => (0, i.jsxs)('div', {
-      className: Z.popoutContainer,
+      className: T.popoutContainer,
       children: [
         (0, i.jsxs)('div', {
-          className: Z.popoutContent,
+          className: T.popoutContent,
           children: [
             (0, i.jsxs)('div', {
-              className: Z.coachmarkTextContainer,
+              className: T.coachmarkTextContainer,
               children: [
                 (0, i.jsx)(u.Heading, {
                   variant: 'heading-md/medium',
-                  children: v.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_TITLE
+                  children: Z.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_TITLE
                 }),
                 (0, i.jsx)(u.Text, {
                   variant: 'text-xs/normal',
                   color: 'text-muted',
-                  children: v.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_BODY
+                  children: Z.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_BODY
                 })
               ]
             }),
@@ -253,12 +258,12 @@ children: [
               size: u.ButtonSizes.SMALL,
               color: u.ButtonColors.BRAND,
               onClick: a,
-              children: v.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_CTA
+              children: Z.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_CTA
             })
           ]
         }),
         (0, i.jsx)('div', {
-          className: Z.popoutCaretLeft
+          className: T.popoutCaretLeft
         })
       ]
     }),
@@ -268,7 +273,7 @@ children: [
     spacing: 16,
     children: e => (0, i.jsx)('div', {
       ...e,
-      className: Z.popoutAnchor
+      className: T.popoutAnchor
     })
   }),
   n
@@ -276,17 +281,17 @@ children: [
   });
 }
 
-function M(e) {
+function R(e) {
   let {
 hideGradient: t,
 children: n
   } = e;
   return (0, i.jsxs)('div', {
-className: Z.footer,
+className: T.footer,
 children: [
   (0, i.jsx)('div', {
-    className: a()(Z.gradient, {
-      [Z.gradientHidden]: t
+    className: a()(T.gradient, {
+      [T.gradientHidden]: t
     })
   }),
   n

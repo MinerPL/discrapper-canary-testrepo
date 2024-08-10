@@ -13,7 +13,7 @@ let o = new i.E([
   a.Ob,
   a.uc,
   a.m1,
-  r.J
+  r.J$
 ], s.$P.POST_CONNECTION_OPEN, {
   location: 'app open'
 });

@@ -25,7 +25,7 @@ function x(e) {
   let {
 title: r,
 can: t
-  } = e, n = t ? c.CheckmarkLargeIcon : c.CloseSmallIcon, o = (0, a.jsx)('div', {
+  } = e, n = t ? c.CheckmarkLargeIcon : c.XSmallIcon, o = (0, a.jsx)('div', {
 className: i()(f.iconOuter, t ? f.iconCheck : f.iconCross),
 children: (0, a.jsx)(n, {
   className: f.icon

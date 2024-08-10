@@ -59,7 +59,7 @@ return t ? (0, r.jsxs)(r.Fragment, {
   ]
 }) : (0, r.jsxs)(r.Fragment, {
   children: [
-    (0, r.jsx)(i.CloseSmallIcon, {
+    (0, r.jsx)(i.XSmallIcon, {
       size: 'md',
       color: 'currentColor',
       className: T.closeIcon,

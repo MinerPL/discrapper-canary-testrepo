@@ -84,12 +84,10 @@ let e = s.load();
 e.games = {}, e.save();
   }
   static isTestMode() {
-var e;
-return e = !!window.__GAME_DISPLAY_MODE_TEST_MODE__, e;
+return !!window.__GAME_DISPLAY_MODE_TEST_MODE__;
   }
   static isVerbose() {
-var e;
-return e = !!window.__GAME_DISPLAY_MODE_DEBUG__, e;
+return !!window.__GAME_DISPLAY_MODE_DEBUG__;
   }
   constructor(e) {
 a(this, 'games', void 0), this.games = e;

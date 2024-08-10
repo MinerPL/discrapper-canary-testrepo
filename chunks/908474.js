@@ -37,7 +37,7 @@ titleClassName: p.infoTitle,
 children: (0, i.jsxs)(d.WM, {
   children: [
     null != f && (0, i.jsx)(d._2, {
-      icon: (0, i.jsx)(l.ChatAlertIcon, {
+      icon: (0, i.jsx)(l.ChatWarningIcon, {
         size: 'custom',
         color: 'currentColor',
         width: d.Mn,

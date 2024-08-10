@@ -1,4 +1,7 @@
 n.d(e, {
+  Bt: function() {
+return E;
+  },
   Jn: function() {
 return s;
   },
@@ -28,5 +31,11 @@ hidden: i.Z.hidden
 function s() {
   a.Z.dispatch({
 type: 'GAME_PROFILE_OPEN'
+  });
+}
+
+function E() {
+  a.Z.dispatch({
+type: 'CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR'
   });
 }

@@ -1,6 +1,6 @@
 t.d(r, {
   Z: function() {
-return S;
+return E;
   }
 }), t(47120);
 var a = t(735250),
@@ -11,28 +11,31 @@ var a = t(735250),
   c = t.n(l),
   s = t(876215),
   d = t(442837),
-  u = t(481060),
-  h = t(570140),
-  m = t(812206),
-  g = t(681619),
-  p = t(810568),
-  b = t(168524),
-  f = t(77498),
-  y = t(71585),
-  x = t(146282),
-  k = t(650613),
-  v = t(789086),
-  _ = t(206583),
-  j = t(262737),
-  w = t(979756);
-let C = [{
+  u = t(433517),
+  h = t(481060),
+  m = t(570140),
+  g = t(812206),
+  p = t(835473),
+  b = t(681619),
+  f = t(810568),
+  y = t(168524),
+  x = t(77498),
+  k = t(823379),
+  v = t(71585),
+  _ = t(146282),
+  j = t(650613),
+  w = t(789086),
+  C = t(206583),
+  N = t(262737),
+  S = t(979756);
+let T = [{
 key: 'type',
-cellClassName: o()(j.cell, j.cellType),
+cellClassName: o()(N.cell, N.cellType),
 render(e) {
   let {
     type: r
   } = e;
-  return (0, a.jsx)(u.Text, {
+  return (0, a.jsx)(h.Text, {
     variant: 'text-md/semibold',
     children: s.s[r]
   });
@@ -40,13 +43,13 @@ render(e) {
   },
   {
 key: 'count',
-cellClassName: o()(j.cell, j.cellCount),
+cellClassName: o()(N.cell, N.cellCount),
 render(e) {
   let {
     entries: r
   } = e;
   return (0, a.jsx)('div', {
-    children: (0, a.jsx)(u.Text, {
+    children: (0, a.jsx)(h.Text, {
       variant: 'text-md/normal',
       children: r.length
     })
@@ -55,30 +58,30 @@ render(e) {
   },
   {
 key: 'only?',
-cellClassName: j.cell,
+cellClassName: N.cell,
 render(e) {
   let {
     type: r
   } = e;
-  return (0, a.jsx)(N, {
+  return (0, a.jsx)(Z, {
     type: r
   });
 }
   }
 ];
 
-function N(e) {
+function Z(e) {
   var r, t;
   let {
 type: n
-  } = e, i = (0, d.e7)([x.Z], () => x.Z.getFilters()), o = null !== (t = null == i ? void 0 : null === (r = i.types) || void 0 === r ? void 0 : r.has(n)) && void 0 !== t && t;
-  return (0, a.jsx)(u.Checkbox, {
+  } = e, i = (0, d.e7)([_.Z], () => _.Z.getFilters()), o = null !== (t = null == i ? void 0 : null === (r = i.types) || void 0 === r ? void 0 : r.has(n)) && void 0 !== t && t;
+  return (0, a.jsx)(h.Checkbox, {
 value: o,
 onClick: function() {
-  o ? h.Z.dispatch({
+  o ? m.Z.dispatch({
     type: 'CONTENT_INVENTORY_SET_FILTERS',
     filters: void 0
-  }) : h.Z.dispatch({
+  }) : m.Z.dispatch({
     type: 'CONTENT_INVENTORY_SET_FILTERS',
     filters: {
       types: new Set([n])
@@ -88,12 +91,12 @@ onClick: function() {
   });
 }
 
-function S() {
-  var e;
-  let r = (0, d.e7)([x.Z], () => x.Z.getFeed(_.YN.GLOBAL_FEED)),
-t = (0, d.e7)([x.Z], () => x.Z.getDebugImpressionCappingDisabled()),
-i = (0, d.e7)([y.Z], () => y.Z.getDebugFastImpressionCappingEnabled()),
-l = function(e) {
+function E() {
+  var e, r;
+  let t = (0, d.e7)([_.Z], () => _.Z.getFeed(C.YN.GLOBAL_FEED)),
+i = (0, d.e7)([_.Z], () => _.Z.getDebugImpressionCappingDisabled()),
+l = (0, d.e7)([v.Z], () => v.Z.getDebugFastImpressionCappingEnabled()),
+s = function(e) {
   let r = c().groupBy(e, e => e.content_type);
   return Object.keys(r).map(e => {
     let t = r[e];
@@ -103,124 +106,139 @@ l = function(e) {
       entries: t
     };
   });
-}(null == r ? void 0 : null === (e = r.entries) || void 0 === e ? void 0 : e.map(e => e.content)),
-s = (0, d.e7)([x.Z], () => {
+}(null == t ? void 0 : null === (e = t.entries) || void 0 === e ? void 0 : e.map(e => e.content)),
+Z = (0, d.e7)([_.Z], () => {
   var e;
-  return (null === (e = x.Z.getFeedState(_.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
+  return (null === (e = _.Z.getFeedState(C.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
 }),
-[N, S] = n.useState(''),
-T = (0, d.e7)([
-  f.Z,
-  m.Z
+[E, R] = n.useState(''),
+O = (0, d.e7)([
+  x.Z,
+  g.Z
 ], () => {
   var e, r, t;
-  return parseInt(N) > 0 ? N : null !== (t = null === (e = f.Z.getGameByName(N)) || void 0 === e ? void 0 : e.id) && void 0 !== t ? t : null === (r = m.Z.getApplicationByName(N)) || void 0 === r ? void 0 : r.id;
-}, [N]),
-Z = (0, b.Z)({
-  applicationId: T,
+  return parseInt(E) > 0 ? E : null !== (t = null === (e = x.Z.getGameByName(E)) || void 0 === e ? void 0 : e.id) && void 0 !== t ? t : null === (r = g.Z.getApplicationByName(E)) || void 0 === r ? void 0 : r.id;
+}, [E]),
+B = (0, y.Z)({
+  applicationId: O,
   location: 'DevToolsContentInventory',
-  source: p.m1.DevTools
-});
+  source: f.m1.DevTools
+}),
+A = Object.entries(null !== (r = u.K.get('GameProfileModal')) && void 0 !== r ? r : {}).filter(e => {
+  let [r, t] = e;
+  return t;
+}).map(e => {
+  let [r] = e;
+  return r;
+}),
+P = (0, p.Z)(A).filter(k.lm);
   return (0, a.jsx)('div', {
-className: o()(w.panel),
-children: (0, a.jsxs)(u.ScrollerThin, {
-  className: j.content,
+className: o()(S.panel),
+children: (0, a.jsxs)(h.ScrollerThin, {
+  className: N.content,
   children: [
-    (0, a.jsxs)(u.FormSection, {
+    (0, a.jsxs)(h.FormSection, {
       children: [
-        (0, a.jsx)(u.FormTitle, {
+        (0, a.jsx)(h.FormTitle, {
           children: 'Inventory'
         }),
-        l.length > 0 && (0, a.jsx)(g.Z, {
-          columns: C,
-          data: l
+        s.length > 0 && (0, a.jsx)(b.Z, {
+          columns: T,
+          data: s
         }),
-        (0, a.jsx)(u.Spacer, {
+        (0, a.jsx)(h.Spacer, {
           size: 8
         }),
-        (0, a.jsx)(v.Z, {}),
-        (0, a.jsx)(u.Button, {
+        (0, a.jsx)(w.Z, {}),
+        (0, a.jsx)(h.Button, {
           fullWidth: !0,
           onClick: function() {
-            h.Z.dispatch({
+            m.Z.dispatch({
               type: 'CONTENT_INVENTORY_MANUAL_REFRESH',
-              feedId: _.YN.GLOBAL_FEED
+              feedId: C.YN.GLOBAL_FEED
             });
           },
-          submitting: s,
+          submitting: Z,
           children: 'Refresh Now'
         })
       ]
     }),
-    (0, a.jsxs)(u.FormSection, {
+    (0, a.jsxs)(h.FormSection, {
       children: [
-        (0, a.jsx)(u.FormTitle, {
+        (0, a.jsx)(h.FormTitle, {
           children: 'Impression Capping'
         }),
-        (0, a.jsx)(u.Button, {
+        (0, a.jsx)(h.Button, {
           fullWidth: !0,
           onClick: function() {
-            h.Z.dispatch({
+            m.Z.dispatch({
               type: 'CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS'
             });
           },
           children: 'Clear Impressions'
         }),
-        (0, a.jsx)(u.Spacer, {
+        (0, a.jsx)(h.Spacer, {
           size: 8
         }),
-        (0, a.jsx)(u.Button, {
+        (0, a.jsx)(h.Button, {
           fullWidth: !0,
           onClick: function() {
-            h.Z.dispatch({
+            m.Z.dispatch({
               type: 'CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS'
             });
           },
           children: 'Log Impressions'
         }),
-        (0, a.jsx)(u.Spacer, {
+        (0, a.jsx)(h.Spacer, {
           size: 8
         }),
-        (0, a.jsx)(u.Button, {
+        (0, a.jsx)(h.Button, {
           fullWidth: !0,
           onClick: function() {
-            h.Z.dispatch({
+            m.Z.dispatch({
               type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING'
             });
           },
-          children: t ? 'Enable Impression Capping' : 'Disable Impression Capping'
+          children: i ? 'Enable Impression Capping' : 'Disable Impression Capping'
         }),
-        (0, a.jsx)(u.Spacer, {
+        (0, a.jsx)(h.Spacer, {
           size: 8
         }),
-        (0, a.jsx)(u.Button, {
+        (0, a.jsx)(h.Button, {
           fullWidth: !0,
           onClick: function() {
-            h.Z.dispatch({
+            m.Z.dispatch({
               type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING'
             });
           },
-          children: i ? 'Disable Fast Impression Capping' : 'Enable Fast Impression Capping'
+          children: l ? 'Disable Fast Impression Capping' : 'Enable Fast Impression Capping'
         })
       ]
     }),
     false,
-    (0, a.jsx)(k.Z, {}),
-    (0, a.jsxs)(u.FormSection, {
+    (0, a.jsx)(j.Z, {}),
+    (0, a.jsxs)(h.FormSection, {
       children: [
-        (0, a.jsx)(u.FormTitle, {
+        (0, a.jsx)(h.FormTitle, {
           children: 'Game Profile'
         }),
-        (0, a.jsx)(u.TextInput, {
+        (0, a.jsx)(h.TextInput, {
           placeholder: 'App ID or full name',
-          onChange: e => (0 === e.length || e.length >= 18) && S(e),
+          onChange: e => (0 === e.length || e.length >= 18) && R(e),
           onKeyDown: e => {
-            'Enter' === e.key && (N === e.currentTarget.value ? null == Z || Z() : S(e.currentTarget.value));
+            'Enter' === e.key && (E === e.currentTarget.value ? null == B || B() : R(e.currentTarget.value));
           },
-          error: N.length > 0 && null == Z ? 'No game profile for '.concat(null != T ? T : N + ' - try by id', '.') : void 0,
-          style: null != Z ? {
+          error: E.length > 0 && null == B ? 'No game profile for '.concat(null != O ? O : E + ' - try by id', '.') : void 0,
+          style: null != B ? {
             border: '1px solid green'
           } : {}
+        }),
+        (0, a.jsx)('ul', {
+          children: P.map(e => (0, a.jsx)('li', {
+            children: (0, a.jsx)(I, {
+              application: e
+            })
+          }, 'follow-game-'.concat(e.id)))
         })
       ]
     })
@@ -228,3 +246,24 @@ children: (0, a.jsxs)(u.ScrollerThin, {
 })
   });
 }
+let I = e => {
+  let {
+application: r
+  } = e, t = (0, y.Z)({
+applicationId: r.id,
+location: 'DevToolsContentInventory',
+source: f.m1.DevTools
+  });
+  return (0, a.jsx)(h.Clickable, {
+onClick: t,
+style: {
+  margin: '2px',
+  cursor: 'pointer'
+},
+children: (0, a.jsx)(h.Text, {
+  variant: 'text-xs/normal',
+  color: 'text-muted',
+  children: r.name
+})
+  });
+};

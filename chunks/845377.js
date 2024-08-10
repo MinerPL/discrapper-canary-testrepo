@@ -28,7 +28,7 @@ pending: r,
 pendingDescription: l,
 failingDescription: o
   } = e, c = t, d = null, u = null;
-  return r ? (d = (0, s.jsx)(I.CircleExclamationPointIcon, {
+  return r ? (d = (0, s.jsx)(I.CircleWarningIcon, {
 size: 'custom',
 color: _.Z.unsafe_rawColors.YELLOW_300.css,
 width: 20,

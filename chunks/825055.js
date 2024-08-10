@@ -20,7 +20,7 @@ children: (0, s.jsx)(a.Text, {
   className: i.text,
   children: (0, s.jsxs)(s.Fragment, {
     children: [
-      (0, s.jsx)(a.CircleExclamationPointIcon, {
+      (0, s.jsx)(a.CircleWarningIcon, {
         size: 'custom',
         width: 20,
         height: 20,

@@ -98,7 +98,7 @@ children: (0, a.jsx)(o.HeadingLevel, {
         className: T.closeIcon,
         onClick: l,
         'aria-label': x.Z.Messages.CLOSE,
-        children: (0, a.jsx)(o.CloseSmallIcon, {
+        children: (0, a.jsx)(o.XSmallIcon, {
           size: 'md',
           color: 'currentColor'
         })

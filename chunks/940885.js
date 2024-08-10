@@ -22,11 +22,11 @@ var a = n(410030),
 
 function g(e) {
   let {
-user: t,
-channelId: n
+user: t
   } = e, {
-analyticsLocations: g
+analyticsLocations: n
   } = (0, s.ZP)(), {
+context: g,
 trackUserProfileAction: C
   } = (0, r.KZ)(), I = (0, a.ZP)(), {
 mutualFriends: x,
@@ -90,9 +90,9 @@ children: [
         status: s,
         onSelect: () => {
           (0, h.openUserProfileModal)({
-            sourceAnalyticsLocations: g,
+            ...g,
             userId: a.id,
-            channelId: n
+            sourceAnalyticsLocations: n
           });
         }
       }, t);

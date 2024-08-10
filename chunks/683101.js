@@ -67,7 +67,8 @@ return (0, i.jsx)(o.FocusRing, {
             onContextMenu: e => this.handleContextMenu(e, r),
             animateAvatar: !1,
             subscribeToComponentDispatch: !1,
-            trackAnnouncementViews: !0
+            trackAnnouncementViews: !0,
+            isSearchResult: !0
           })
         }, r.id)
       }),

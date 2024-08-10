@@ -1,34 +1,55 @@
 n.d(t, {
   B: function() {
-return _;
+return d;
+  },
+  y: function() {
+return c;
   }
-}), n(47120);
-var r = n(735250),
-  i = n(470079),
-  a = n(278074),
-  s = n(442837),
-  o = n(481060),
-  l = n(564990),
-  u = n(26033),
-  c = n(594174),
-  d = n(689938);
+});
+var r = n(735250);
+n(470079);
+var i = n(278074),
+  a = n(442837),
+  s = n(481060),
+  o = n(26033),
+  l = n(594174),
+  u = n(689938);
 
-function _(e) {
+function c(e) {
+  return (0, i.EQ)(e).when(o.dX, () => u.Z.Messages.USER_ACTIVITY_CLEAR_GAME_HISTORY).when(o.y0, () => u.Z.Messages.USER_ACTIVITY_CLEAR_WATCH_HISTORY).when(o.dU, () => u.Z.Messages.USER_ACTIVITY_CLEAR_LISTENING_HISTORY).otherwise(() => null);
+}
+
+function d(e) {
   let {
-entry: t,
-user: n,
-isRecent: _ = !1
-  } = e, E = (0, s.e7)([c.default], () => c.default.getCurrentUser()), f = n.id === (null == E ? void 0 : E.id), [h, p] = i.useState(!1);
-  if (!f || !_ || null == t)
+user: t,
+entry: i,
+display: o,
+onAction: u,
+onClose: d
+  } = e, _ = (0, a.e7)([l.default], () => l.default.getCurrentUser());
+  if (t.id !== (null == _ ? void 0 : _.id) || 'live' === o || null == i)
 return null;
-  let m = async () => {
-p(!0), await (0, l.CV)(t, n.id), p(!1);
-  }, I = (0, a.EQ)(t).when(u.dX, () => d.Z.Messages.USER_ACTIVITY_CLEAR_GAME_HISTORY).when(u.r5, () => d.Z.Messages.USER_ACTIVITY_CLEAR_WATCH_HISTORY).when(u.kx, () => d.Z.Messages.USER_ACTIVITY_CLEAR_LISTENING_HISTORY).otherwise(() => null);
-  return (0, r.jsx)(o.MenuItem, {
-disabled: h,
+  let E = () => {
+(0, s.openModalLazy)(async () => {
+  let {
+    default: e
+  } = await n.e('26545').then(n.bind(n, 81596));
+  return n => (0, r.jsx)(e, {
+    entry: i,
+    user: t,
+    onAction: u,
+    ...n
+  });
+}), null == d || d();
+  };
+  return (0, r.jsx)(s.MenuItem, {
 id: 'delete-entry-history',
-label: I,
-action: m,
+label: c(i),
+action: () => {
+  null == u || u({
+    action: 'PRESS_DELETE_HISTORY_MENU_ITEM'
+  }), E();
+},
 color: 'danger'
   });
 }

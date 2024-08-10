@@ -62,7 +62,7 @@ return (0, i.jsx)(l.P, {
           }),
           'aria-label': _.Z.Messages.SEARCH
         }),
-        (0, i.jsx)(d.CloseSmallIcon, {
+        (0, i.jsx)(d.XSmallIcon, {
           size: 'md',
           color: 'currentColor',
           className: o()(E.clear, {

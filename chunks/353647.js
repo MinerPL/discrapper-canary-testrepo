@@ -2,12 +2,15 @@ n(47120);
 var r, i, a, s, o = n(442837),
   l = n(570140),
   u = n(180335);
-let c = new Map();
+let c = new Map(),
+  d = new Set(),
+  _ = null,
+  E = !1;
 
-function d() {
-  c = new Map();
+function f() {
+  c = new Map(), d = new Set(), _ = null, E = !1;
 }
-class _ extends(r = o.ZP.Store) {
+class h extends(r = o.ZP.Store) {
   getMatchingOutboxEntry(e) {
 let {
   activity: t,
@@ -19,18 +22,33 @@ if (null != r && null != t)
   getUserOutbox(e) {
 return c.get(e);
   }
+  isFetchingUserOutbox(e) {
+return d.has(e);
+  }
+  get deleteOutboxEntryError() {
+return _;
+  }
+  get isDeletingEntryHistory() {
+return E;
+  }
 }
-s = 'ContentInventoryOutboxStore', (a = 'displayName') in(i = _) ? Object.defineProperty(i, a, {
+s = 'ContentInventoryOutboxStore', (a = 'displayName') in(i = h) ? Object.defineProperty(i, a, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = s, t.Z = new _(l.Z, {
+}) : i[a] = s, t.Z = new h(l.Z, {
   CONNECTION_OPEN: function() {
-d();
+f();
   },
   LOGOUT: function() {
-d();
+f();
+  },
+  CONTENT_INVENTORY_FETCH_OUTBOX_START: function(e) {
+let {
+  userId: t
+} = e;
+d.add(t);
   },
   CONTENT_INVENTORY_FETCH_OUTBOX_SUCCESS: function(e) {
 let {
@@ -40,19 +58,39 @@ let {
 c.set(n, {
   ...t,
   lastFetched: Date.now()
-});
+}), d.delete(n);
   },
-  CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY: function(e) {
+  CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE: function(e) {
+let {
+  userId: t
+} = e;
+d.delete(t);
+  },
+  CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START: function() {
+_ = null, E = !0;
+  },
+  CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_SUCCESS: function(e) {
 let {
   entry: t,
   userId: n
-} = e, r = c.get(n);
+} = e;
+_ = null;
+let r = c.get(n);
 if (null == r)
   return !1;
 let i = r.entries.filter(e => e.id !== t.id);
 c.set(n, {
   ...r,
   entries: i
-});
+}), E = !1;
+  },
+  CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE: function(e) {
+let {
+  error: t
+} = e;
+_ = t, E = !1;
+  },
+  CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR: function() {
+_ = null, E = !1;
   }
 });

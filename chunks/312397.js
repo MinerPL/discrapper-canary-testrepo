@@ -30,24 +30,24 @@ var s = n(735250),
   R = n(890477),
   f = n(162461),
   L = n(34586),
-  O = n(688465),
-  A = n(807582),
-  M = n(48217),
-  D = n(26323),
-  v = n(35125),
-  j = n(536442),
-  Z = n(142497),
-  b = n(884858),
-  U = n(516129),
-  G = n(813197),
-  P = n(208567),
-  B = n(592125),
-  y = n(324067),
-  F = n(650774),
+  O = n(600164),
+  A = n(688465),
+  M = n(807582),
+  D = n(48217),
+  v = n(26323),
+  j = n(35125),
+  Z = n(536442),
+  b = n(142497),
+  U = n(884858),
+  G = n(516129),
+  P = n(813197),
+  B = n(208567),
+  y = n(592125),
+  F = n(324067),
+  k = n(650774),
   w = n(496675),
-  k = n(699516),
-  H = n(594174),
-  V = n(285952),
+  H = n(699516),
+  V = n(594174),
   Y = n(709586),
   W = n(768581),
   z = n(630388),
@@ -92,7 +92,7 @@ return;
 label: t,
 channel: n,
 category: a
-  } = e, i = (0, p.KS)(n), r = null != a ? (0, x.F6)(a, H.default, k.Z) : null;
+  } = e, i = (0, p.KS)(n), r = null != a ? (0, x.F6)(a, V.default, H.Z) : null;
   return (0, s.jsx)(E.IconSelectOption, {
 title: t,
 icon: i,
@@ -103,9 +103,9 @@ subtitle: r
 function eN(e) {
   return {
 value: e.id,
-label: (0, x.F6)(e, H.default, k.Z),
+label: (0, x.F6)(e, V.default, H.Z),
 channel: e,
-category: B.Z.getChannel(e.parent_id)
+category: y.Z.getChannel(e.parent_id)
   };
 }
 let eS = () => {
@@ -221,17 +221,17 @@ let {
   errors: t,
   canManageGuild: n
 } = this.props;
-return (0, s.jsxs)(V.Z, {
+return (0, s.jsxs)(O.Z, {
   className: r()(ea.__invalid_baseSection),
   children: [
-    (0, s.jsxs)(V.Z, {
+    (0, s.jsxs)(O.Z, {
       basis: '50%',
-      justify: V.Z.Justify.BETWEEN,
+      justify: O.Z.Justify.BETWEEN,
       children: [
-        (0, s.jsxs)(V.Z.Child, {
+        (0, s.jsxs)(O.Z.Child, {
           wrap: !0,
           children: [
-            (0, s.jsx)(P.Z, {
+            (0, s.jsx)(B.Z, {
               showIcon: !0,
               name: e.name,
               image: e.icon,
@@ -258,9 +258,9 @@ return (0, s.jsxs)(V.Z, {
             }) : null
           ]
         }),
-        (0, s.jsxs)(V.Z, {
-          direction: V.Z.Direction.VERTICAL,
-          align: V.Z.Align.START,
+        (0, s.jsxs)(O.Z, {
+          direction: O.Z.Direction.VERTICAL,
+          align: O.Z.Align.START,
           style: {
             maxWidth: 180
           },
@@ -278,7 +278,7 @@ return (0, s.jsxs)(V.Z, {
               onClick: this.handleUploadImage,
               children: [
                 es.Z.Messages.UPLOAD_IMAGE,
-                (0, s.jsx)(G.ZP, {
+                (0, s.jsx)(P.ZP, {
                   ref: this._imageInputRef,
                   onChange: this.handleOpenImageCroppingModal,
                   disabled: !n
@@ -289,7 +289,7 @@ return (0, s.jsxs)(V.Z, {
         })
       ]
     }),
-    (0, s.jsx)(V.Z.Child, {
+    (0, s.jsx)(O.Z.Child, {
       basis: '50%',
       children: (0, s.jsx)(E.FormItem, {
         title: es.Z.Messages.FORM_LABEL_SERVER_NAME,
@@ -360,9 +360,9 @@ return o.unshift({
 }), (0, s.jsxs)(E.FormSection, {
   className: ea.divider,
   children: [
-    (0, s.jsxs)(V.Z, {
+    (0, s.jsxs)(O.Z, {
       children: [
-        (0, s.jsx)(V.Z.Child, {
+        (0, s.jsx)(O.Z.Child, {
           basis: '50%',
           children: (0, s.jsx)(E.FormItem, {
             title: es.Z.Messages.FORM_LABEL_AFK_CHANNEL,
@@ -376,7 +376,7 @@ return o.unshift({
             })
           })
         }),
-        (0, s.jsx)(V.Z.Child, {
+        (0, s.jsx)(O.Z.Child, {
           basis: '50%',
           children: (0, s.jsx)(E.FormItem, {
             title: es.Z.Messages.FORM_LABEL_AFK_TIMEOUT,
@@ -420,7 +420,7 @@ o.unshift({
   value: ec,
   label: es.Z.Messages.NO_SYSTEM_CHANNEL
 });
-let c = (0, v.eI)(t),
+let c = (0, j.eI)(t),
   u = c || (0, z.yE)(t.systemChannelFlags, $.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
   _ = c || (0, z.yE)(t.systemChannelFlags, $.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES);
 return (0, s.jsxs)(E.FormSection, {
@@ -500,7 +500,7 @@ return (0, s.jsxs)(E.FormSection, {
         className: ea.flexRow,
         children: [
           es.Z.Messages.FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE,
-          (0, s.jsx)(O.Z, {})
+          (0, s.jsx)(A.Z, {})
         ]
       })
     })
@@ -612,7 +612,7 @@ return (0, m.Jc)(e, !1) ? (0, s.jsx)('div', {
 let {
   guild: e,
   canManageGuild: t
-} = this.props, n = e.hasFeature($.oNc.INVITE_SPLASH), a = t && n, i = (0, s.jsx)(U.Z, {
+} = this.props, n = e.hasFeature($.oNc.INVITE_SPLASH), a = t && n, i = (0, s.jsx)(G.Z, {
   image: e.splash,
   makeURL: t => null != t ? W.ZP.getGuildSplashURL({
     id: e.id,
@@ -623,18 +623,18 @@ let {
   hint: es.Z.Messages.CHANGE_SPLASH,
   enabled: a,
   maxFileSizeBytes: en.B,
-  onFileSizeError: () => (0, b.Z)(en.B)
+  onFileSizeError: () => (0, U.Z)(en.B)
 });
 return (0, s.jsx)('div', {
   ref: this._inviteSectionRef,
   children: (0, s.jsx)(E.FormSection, {
     className: ea.divider,
-    children: (0, s.jsxs)(V.Z, {
+    children: (0, s.jsxs)(O.Z, {
       basis: '50%',
-      direction: V.Z.Direction.HORIZONTAL,
-      align: V.Z.Justify.START,
+      direction: O.Z.Direction.HORIZONTAL,
+      align: O.Z.Justify.START,
       children: [
-        (0, s.jsxs)(V.Z.Child, {
+        (0, s.jsxs)(O.Z.Child, {
           wrap: !0,
           basis: '50%',
           children: [
@@ -644,7 +644,7 @@ return (0, s.jsx)('div', {
                 (0, s.jsx)('div', {
                   children: es.Z.Messages.GUILD_SETTINGS_SERVER_INVITE_BACKGROUND
                 }),
-                (0, s.jsx)(A.Z, {
+                (0, s.jsx)(M.Z, {
                   guild: e,
                   guildFeature: $.oNc.INVITE_SPLASH,
                   className: ea.guildFeatureAvailabilityIndicator,
@@ -669,17 +669,17 @@ return (0, s.jsx)('div', {
               className: ea.marginTop16,
               children: [
                 es.Z.Messages.UPLOAD_BACKGROUND,
-                (0, s.jsx)(G.ZP, {
+                (0, s.jsx)(P.ZP, {
                   disabled: !a,
                   onChange: this.handleSplashChange,
                   maxFileSizeBytes: en.B,
-                  onFileSizeError: () => (0, b.Z)(en.B)
+                  onFileSizeError: () => (0, U.Z)(en.B)
                 })
               ]
             }) : this.uploadBGUpsellButton(this.handleInviteSplashUpsellButton)
           ]
         }),
-        (0, s.jsx)(V.Z.Child, {
+        (0, s.jsx)(O.Z.Child, {
           wrap: !0,
           basis: '50%',
           children: n ? i : (0, s.jsx)(E.Clickable, {
@@ -700,7 +700,7 @@ let {
   guild: e,
   canManageGuild: t,
   analyticsLocations: n
-} = this.props, a = e.hasFeature($.oNc.BANNER), i = e.hasFeature($.oNc.ANIMATED_BANNER), r = a && t, l = (0, s.jsx)(U.Z, {
+} = this.props, a = e.hasFeature($.oNc.BANNER), i = e.hasFeature($.oNc.ANIMATED_BANNER), r = a && t, l = (0, s.jsx)(G.Z, {
   image: e.banner,
   makeURL: t => null != t ? W.ZP.getGuildBannerURL({
     id: e.id,
@@ -726,12 +726,12 @@ let {
 });
 return (0, s.jsx)(E.FormSection, {
   className: ea.divider,
-  children: (0, s.jsxs)(V.Z, {
+  children: (0, s.jsxs)(O.Z, {
     basis: '50%',
-    direction: V.Z.Direction.HORIZONTAL,
-    align: V.Z.Justify.START,
+    direction: O.Z.Direction.HORIZONTAL,
+    align: O.Z.Justify.START,
     children: [
-      (0, s.jsxs)(V.Z.Child, {
+      (0, s.jsxs)(O.Z.Child, {
         wrap: !0,
         basis: '50%',
         children: [
@@ -741,7 +741,7 @@ return (0, s.jsx)(E.FormSection, {
               (0, s.jsx)('div', {
                 children: es.Z.Messages.FORM_LABEL_SERVER_BANNER
               }),
-              (0, s.jsx)(A.Z, {
+              (0, s.jsx)(M.Z, {
                 guild: e,
                 guildFeature: $.oNc.BANNER,
                 className: ea.guildFeatureAvailabilityIndicator,
@@ -763,7 +763,7 @@ return (0, s.jsx)(E.FormSection, {
           a ? o : this.uploadBGUpsellButton(this.handleBannerUpsellButton)
         ]
       }),
-      (0, s.jsx)(V.Z.Child, {
+      (0, s.jsx)(O.Z.Child, {
         wrap: !0,
         basis: '50%',
         children: a ? l : (0, s.jsx)(E.Clickable, {
@@ -785,13 +785,13 @@ let {
   theme: n
 } = this.props;
 return (0, s.jsx)(E.FormSection, {
-  children: (0, s.jsxs)(V.Z, {
-    align: V.Z.Align.START,
+  children: (0, s.jsxs)(O.Z, {
+    align: O.Z.Align.START,
     children: [
-      (0, s.jsxs)(V.Z, {
+      (0, s.jsxs)(O.Z, {
         basis: '50%',
-        direction: V.Z.Direction.VERTICAL,
-        align: V.Z.Align.STRETCH,
+        direction: O.Z.Direction.VERTICAL,
+        align: O.Z.Align.STRETCH,
         children: [
           (0, s.jsx)(E.FormSwitch, {
             className: r()(ea.marginTop8, ea.marginBottom8),
@@ -808,7 +808,7 @@ return (0, s.jsx)(E.FormSection, {
           })
         ]
       }),
-      (0, s.jsx)(V.Z.Child, {
+      (0, s.jsx)(O.Z.Child, {
         wrap: !0,
         basis: '50%',
         children: (0, s.jsx)('img', {
@@ -860,7 +860,10 @@ super(...e), el(this, '_imageInputRef', a.createRef()), el(this, '_displaySectio
   (0, E.openModalLazy)(async () => {
     let {
       default: a
-    } = await n.e('22872').then(n.bind(n, 850085));
+    } = await Promise.all([
+      n.e('48017'),
+      n.e('47636')
+    ]).then(n.bind(n, 850085));
     return n => (0, s.jsx)(a, {
       onCrop: this.handleIconChange,
       imgURI: e,
@@ -889,7 +892,10 @@ super(...e), el(this, '_imageInputRef', a.createRef()), el(this, '_displaySectio
   (0, E.openModalLazy)(async () => {
     let {
       default: a
-    } = await n.e('22872').then(n.bind(n, 850085));
+    } = await Promise.all([
+      n.e('48017'),
+      n.e('47636')
+    ]).then(n.bind(n, 850085));
     return n => (0, s.jsx)(a, {
       imgURI: e,
       file: t,
@@ -912,7 +918,7 @@ super(...e), el(this, '_imageInputRef', a.createRef()), el(this, '_displaySectio
   if (null != a && null != e) {
     if ('image/gif' !== a || n.hasFeature($.oNc.ANIMATED_BANNER)) {
       if (!n.hasFeature($.oNc.BANNER)) {
-        i.object = $.qAy.IMAGE_CROPPING_MODAL, (0, M.c)({
+        i.object = $.qAy.IMAGE_CROPPING_MODAL, (0, D.c)({
           guild: n,
           analyticsLocations: s,
           analyticsLocation: i,
@@ -922,7 +928,7 @@ super(...e), el(this, '_imageInputRef', a.createRef()), el(this, '_displaySectio
         return;
       }
     } else {
-      i.object = $.qAy.GIF_CROPPING_MODAL, (0, M.c)({
+      i.object = $.qAy.GIF_CROPPING_MODAL, (0, D.c)({
         guild: n,
         analyticsLocations: s,
         analyticsLocation: i,
@@ -948,7 +954,7 @@ super(...e), el(this, '_imageInputRef', a.createRef()), el(this, '_displaySectio
     },
     guild_id: null == a ? void 0 : a.id,
     location_stack: i
-  }), (0, D.Z)({
+  }), (0, v.Z)({
     analyticsLocations: i,
     analyticsSourceLocation: {
       section: t,
@@ -1013,9 +1019,9 @@ subsection: r
 analyticsLocations: c
   } = (0, g.ZP)(S.Z.OVERVIEW);
   a.useEffect(() => {
-(0, Z.Kw)(j.v6.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL);
+(0, b.Kw)(Z.v6.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL);
   }, []);
-  let d = (0, u.e7)([y.Z], () => y.Z.getCategories(null == t ? void 0 : t.id)),
+  let d = (0, u.e7)([F.Z], () => F.Z.getCategories(null == t ? void 0 : t.id)),
 _ = a.useMemo(() => (0, C.Z)(d._categories, d), [d]),
 {
   canManageGuild: I,
@@ -1024,9 +1030,9 @@ _ = a.useMemo(() => (0, C.Z)(d._categories, d), [d]),
   canManageGuild: w.Z.can($.Plq.MANAGE_GUILD, t),
   isGuildAdmin: w.Z.can($.Plq.ADMINISTRATOR, t)
 })),
-T = (0, u.e7)([F.Z], () => F.Z.getMemberCount(null == t ? void 0 : t.id)),
+T = (0, u.e7)([k.Z], () => k.Z.getMemberCount(null == t ? void 0 : t.id)),
 m = (0, L.E)(t),
-h = (0, u.e7)([H.default], () => H.default.getCurrentUser());
+h = (0, u.e7)([V.default], () => V.default.getCurrentUser());
   o()(null != h, 'GuildSettingsOverview: currentUser cannot be undefined');
   let {
 enableDeadchat: x

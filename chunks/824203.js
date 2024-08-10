@@ -16,7 +16,7 @@ var r = n(39621),
 
 function c(e, t, n) {
   var r, u, c, d;
-  let _ = (0, o.Hs)(t, i.yU.CHAT),
+  let _ = (0, o.Hs)(t, [i.yU.CHAT]),
 E = (0, a.PL)(!0, !1),
 f = (0, a.LD)(null == t ? void 0 : t.guild_id, !1),
 h = (0, s.vC)(null == t ? void 0 : t.guild_id, n);

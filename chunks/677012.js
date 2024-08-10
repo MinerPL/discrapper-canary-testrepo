@@ -9,8 +9,8 @@ var a = t(735250),
   r = t(481060),
   s = t(208156),
   l = t(385499),
-  c = t(962250),
-  d = t(368874),
+  c = t(264165),
+  d = t(962250),
   u = t(624138),
   h = t(293979),
   _ = t(674563),
@@ -19,7 +19,7 @@ var a = t(735250),
 let I = (0, u.Mg)(o.Z.INTERACTION_IFRAME_MODAL_MODAL_MIN_WIDTH),
   v = (0, u.Mg)(o.Z.INTERACTION_IFRAME_MODAL_MODAL_MAX_WIDTH),
   N = (0, u.Mg)(o.Z.INTERACTION_IFRAME_MODAL_MODAL_MARGIN),
-  f = (0, u.Mg)(o.Z.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT);
+  b = (0, u.Mg)(o.Z.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT);
 
 function x(e) {
   var n;
@@ -30,12 +30,12 @@ onClose: o
 applicationIconURL: u,
 applicationName: x,
 queryParams: A,
-iframeUrl: b
+iframeUrl: f
   } = (0, h.b8)(e), {
 width: p,
 height: w
-  } = (0, c.b)(), T = i.useMemo(() => {
-let e = Math.min((w - f - 2 * N) * 16 / 9, v);
+  } = (0, d.b)(), T = i.useMemo(() => {
+let e = Math.min((w - b - 2 * N) * 16 / 9, v);
 return Math.max(I, Math.min(p - 2 * N, e));
   }, [
 p,
@@ -90,7 +90,7 @@ children: (0, a.jsxs)('div', {
           look: r.Button.Looks.BLANK,
           size: r.Button.Sizes.NONE,
           'aria-label': m.Z.Messages.DISMISS,
-          children: (0, a.jsx)(r.CloseSmallIcon, {
+          children: (0, a.jsx)(r.XSmallIcon, {
             size: 'md',
             color: 'currentColor',
             className: M.closeIcon
@@ -98,10 +98,10 @@ children: (0, a.jsxs)('div', {
         })
       ]
     }),
-    (0, a.jsx)(d.Z, {
+    (0, a.jsx)(c.Z, {
       aspectRatio: 16 / 9,
       children: (0, a.jsx)(s.J, {
-        url: b,
+        url: f,
         shouldRefocus: !0,
         className: M.iframe,
         queryParams: A

@@ -17,10 +17,10 @@ var r = n(735250),
   d = n(906732),
   _ = n(1585),
   E = n(797610),
-  f = n(233440),
-  h = n(680295),
-  p = n(430824),
-  m = n(806519),
+  f = n(686546),
+  h = n(233440),
+  p = n(680295),
+  m = n(430824),
   I = n(626135),
   T = n(74538),
   g = n(998502),
@@ -47,13 +47,13 @@ guildId: n,
 isTryItOutFlow: i,
 forProfileEffectModal: a,
 onClick: s
-  } = e, o = (0, l.e7)([A.Z], () => A.Z.getUserProfile(t.id), [t]), d = (0, l.e7)([p.Z], () => p.Z.getGuild(n), [n]), _ = (0, E.OR)(d);
+  } = e, o = (0, l.e7)([A.Z], () => A.Z.getUserProfile(t.id), [t]), d = (0, l.e7)([m.Z], () => m.Z.getGuild(n), [n]), _ = (0, E.OR)(d);
   return (0, r.jsxs)(r.Fragment, {
 children: [
   (null == o ? void 0 : o.profileFetchFailed) && (!t.isClyde() || _) && (0, r.jsx)(c.Tooltip, {
     text: M.Z.Messages.USER_PROFILE_LOAD_ERROR,
     spacing: 16,
-    children: e => (0, r.jsx)(c.CircleExclamationPointIcon, {
+    children: e => (0, r.jsx)(c.CircleWarningIcon, {
       size: 'custom',
       width: 20,
       height: 20,
@@ -84,8 +84,8 @@ hasBanner: l,
 status: u,
 isMobile: _,
 guildId: E,
-channelId: h,
-onClose: p,
+channelId: p,
+onClose: m,
 disableUserProfileLink: g,
 profileType: A,
 animateOnHover: v,
@@ -93,30 +93,29 @@ hasProfileEffect: R,
 statusTooltipDelay: x
   } = e, {
 theme: k
-  } = (0, C.z)(), B = i.useContext(I.AnalyticsContext), F = t.isNonUserBot() && !t.isClyde(), V = T.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, b.p9.TIER_2), H = i.useMemo(() => (0, f.W)(t, h), [
+  } = (0, C.z)(), B = i.useContext(I.AnalyticsContext), F = t.isNonUserBot() && !t.isClyde(), V = T.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, b.p9.TIER_2), H = i.useMemo(() => (0, h.W)(t, p), [
 t,
-h
+p
   ]), {
 analyticsLocations: Z
   } = (0, d.ZP)(), {
-trackUserProfileAction: Y,
-messageId: j,
-roleId: W
-  } = (0, S.KZ)(), K = g || t.isClyde(), {
-avatarDecorationSrc: z,
-avatarSrc: q,
-eventHandlers: Q
+context: Y,
+trackUserProfileAction: j
+  } = (0, S.KZ)(), W = g || t.isClyde(), {
+avatarDecorationSrc: K,
+avatarSrc: z,
+eventHandlers: q
   } = (0, N.Z)({
 user: t,
 guildId: E,
 size: U,
 animateOnHover: v
-  }), X = (0, r.jsx)('div', {
+  }), Q = (0, r.jsx)('div', {
 className: P.avatarHoverTarget,
-...Q,
+...q,
 children: (0, r.jsx)(G, {
-  src: null != a ? a : q,
-  avatarDecoration: z,
+  src: null != a ? a : z,
+  avatarDecoration: K,
   size: U,
   'aria-label': t.username,
   status: H ? L.Skl.UNKNOWN : u,
@@ -125,7 +124,7 @@ children: (0, r.jsx)(G, {
   statusTooltip: !0,
   statusTooltipDelay: x
 })
-  }), $ = (0, o.EQ)(A).with(D.y0.POPOUT, () => (0, O.zW)({
+  }), X = (0, o.EQ)(A).with(D.y0.POPOUT, () => (0, O.zW)({
 premiumUserWithBanner: P.avatarPositionPremiumBanner,
 premiumUserWithoutBanner: P.avatarPositionPremiumNoBanner,
 default: P.avatarPositionNormal
@@ -137,45 +136,42 @@ hasProfileEffect: R
   return (0, r.jsx)(r.Fragment, {
 children: (0, r.jsxs)(c.Clickable, {
   className: s()({
-    [P.clickable]: !K,
+    [P.clickable]: !W,
     [P.avatarWrapperNonUserBot]: F,
     [P.avatarWrapperNormal]: !F
-  }, $),
-  onClick: F || K ? void 0 : function() {
-    Y({
+  }, X),
+  onClick: F || W ? void 0 : function() {
+    j({
       action: 'PRESS_VIEW_PROFILE'
     }), (0, y.openUserProfileModal)({
+      ...Y,
       userId: t.id,
-      guildId: E,
-      channelId: h,
-      messageId: j,
-      roleId: W,
       sourceAnalyticsLocations: Z,
       analyticsLocation: B.location
-    }), null == p || p();
+    }), null == m || m();
   },
   children: [
-    X,
-    !K && function() {
-      let e = null != z,
+    Q,
+    !W && function() {
+      let e = null != K,
         t = e ? w : (0, c.getAvatarSize)(U);
-      return (0, r.jsx)(m.ZP, {
-        mask: null == u || u === L.Skl.UNKNOWN || H ? m.ZP.Masks.AVATAR_DEFAULT : (0, o.EQ)([
+      return (0, r.jsx)(f.ZP, {
+        mask: null == u || u === L.Skl.UNKNOWN || H ? f.ZP.Masks.AVATAR_DEFAULT : (0, o.EQ)([
           e,
           _
         ]).with([
           !0,
           !0
-        ], () => m.ZP.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([
+        ], () => f.ZP.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([
           !0,
           !1
-        ], () => m.ZP.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([
+        ], () => f.ZP.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([
           !1,
           !0
-        ], () => m.ZP.Masks.AVATAR_STATUS_MOBILE_80).with([
+        ], () => f.ZP.Masks.AVATAR_STATUS_MOBILE_80).with([
           !1,
           !1
-        ], () => m.ZP.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
+        ], () => f.ZP.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
         className: e ? P.avatarDecorationHint : P.avatarHint,
         style: e ? {
           borderRadius: 0.4 * t
@@ -221,7 +217,7 @@ children: [
     isHovering: d,
     hasProfileEffect: (null == n ? void 0 : n.profileEffectId) != null
   }),
-  (null == n ? void 0 : n.profileEffectId) != null && (0, r.jsx)(h.Z, {
+  (null == n ? void 0 : n.profileEffectId) != null && (0, r.jsx)(p.Z, {
     profileEffectId: null == n ? void 0 : n.profileEffectId,
     bannerAdjustment: 0,
     isHovering: d

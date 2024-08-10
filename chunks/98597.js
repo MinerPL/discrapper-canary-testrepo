@@ -3,7 +3,7 @@ n.d(t, {
 return A;
   },
   ZP: function() {
-return P;
+return y;
   },
   eP: function() {
 return R;
@@ -24,8 +24,8 @@ var i, l, r, a, s = n(735250),
   p = n(787014),
   _ = n(924301),
   f = n(159300),
-  m = n(152376),
-  g = n(427679),
+  g = n(152376),
+  m = n(427679),
   C = n(557494),
   I = n(131704),
   E = n(199902),
@@ -98,7 +98,7 @@ locked: l,
 tabIndex: r,
 forceShowButtons: a,
 hasChannelInfo: o = !1
-  } = e, c = (0, d.e7)([N.Z], () => N.Z.getGuild(t.getGuildId())), p = (0, d.e7)([g.Z], () => g.Z.getStageInstanceByChannel(t.id), [t.id]), m = (0, d.e7)([_.ZP], () => _.ZP.getActiveEventByChannel(t.id), [t.id]), I = (0, d.e7)([x.Z], () => (0, f.b)(x.Z, c, t, p)), S = (0, d.e7)([x.Z], () => x.Z.can(Z.Plq.CREATE_INSTANT_INVITE, t) ? T.Z.Messages.CREATE_INSTANT_INVITE : T.Z.Messages.INVITE_TO_SERVER);
+  } = e, c = (0, d.e7)([N.Z], () => N.Z.getGuild(t.getGuildId())), p = (0, d.e7)([m.Z], () => m.Z.getStageInstanceByChannel(t.id), [t.id]), g = (0, d.e7)([_.ZP], () => _.ZP.getActiveEventByChannel(t.id), [t.id]), I = (0, d.e7)([x.Z], () => (0, f.b)(x.Z, c, t, p)), S = (0, d.e7)([x.Z], () => x.Z.can(Z.Plq.CREATE_INSTANT_INVITE, t) ? T.Z.Messages.CREATE_INSTANT_INVITE : T.Z.Messages.INVITE_TO_SERVER);
   if (l || !I)
 return null;
 
@@ -118,7 +118,7 @@ if (null != c) {
       channel: t,
       streamUserId: 1 === e.length ? e[0].ownerId : null,
       source: Z.t4x.GUILD_CHANNELS,
-      guildScheduledEvent: m
+      guildScheduledEvent: g
     });
   });
 }
@@ -147,11 +147,11 @@ children: e => (0, s.jsx)(h.Clickable, {
   });
 }
 
-function O(e) {
+function P(e) {
   let {
 channel: t
   } = e, n = () => {
-(0, m._U)(t.guild_id, t.id);
+(0, g._U)(t.guild_id, t.id);
   };
   return (0, s.jsx)(h.Tooltip, {
 text: T.Z.Messages.REMOVE_FAVORITE_SUGGESTION,
@@ -160,7 +160,7 @@ children: e => (0, s.jsx)(h.Clickable, {
   ...e,
   onClick: n,
   'aria-label': T.Z.Messages.REMOVE_FAVORITE_SUGGESTION,
-  children: (0, s.jsx)(h.CloseSmallIcon, {
+  children: (0, s.jsx)(h.XSmallIcon, {
     size: 'xs',
     color: 'currentColor',
     className: L.actionIcon
@@ -169,11 +169,11 @@ children: e => (0, s.jsx)(h.Clickable, {
   });
 }
 
-function y(e) {
+function O(e) {
   let {
 channel: t
   } = e, n = () => {
-(0, m.dM)(t.guild_id, t.id, !0, {
+(0, g.dM)(t.guild_id, t.id, !0, {
   section: Z.jXE.CHANNEL_LIST
 });
   };
@@ -192,7 +192,7 @@ children: e => (0, s.jsx)(h.Clickable, {
 })
   });
 }
-class P extends(a = o.PureComponent) {
+class y extends(a = o.PureComponent) {
   renderEditButton() {
 return (0, s.jsx)(M, {
   ...this.props
@@ -204,12 +204,12 @@ return (0, s.jsx)(R, {
 });
   }
   renderRemoveSuggestionButton() {
-return (0, s.jsx)(O, {
+return (0, s.jsx)(P, {
   ...this.props
 });
   }
   renderAcceptSuggestionButton() {
-return (0, s.jsx)(y, {
+return (0, s.jsx)(O, {
   ...this.props
 });
   }
@@ -231,7 +231,7 @@ return A(e, t, n);
 }
 r = {
   isDefaultChannel: !1
-}, (l = 'defaultProps') in(i = P) ? Object.defineProperty(i, l, {
+}, (l = 'defaultProps') in(i = y) ? Object.defineProperty(i, l, {
   value: r,
   enumerable: !0,
   configurable: !0,

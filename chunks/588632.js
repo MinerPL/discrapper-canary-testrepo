@@ -10,7 +10,7 @@ var r = t(735250),
   i = t(692547),
   s = t(481060),
   c = t(596454),
-  u = t(987134),
+  u = t(285888),
   d = t(689938),
   m = t(415140);
 
@@ -115,7 +115,7 @@ return (0, r.jsxs)('div', {
       onClick: () => {
         a(n.filter(n => t.includes(n.id) && n.id !== e.id));
       },
-      children: (0, r.jsx)(s.CloseSmallIcon, {
+      children: (0, r.jsx)(s.XSmallIcon, {
         size: 'md',
         color: 'currentColor',
         className: m.selectValuePillCloseIcon

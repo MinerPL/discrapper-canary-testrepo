@@ -64,7 +64,7 @@ children: [
     className: N.closeButton,
     children: (0, s.jsx)(d.Tooltip, {
       text: m.Z.Messages.REMOVE,
-      children: e => (0, s.jsx)(d.CloseSmallIcon, {
+      children: e => (0, s.jsx)(d.XSmallIcon, {
         size: 'md',
         color: 'currentColor',
         className: N.closeIcon,

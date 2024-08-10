@@ -71,7 +71,7 @@ children: [
             readGuideCta: !1
           });
         },
-        children: (0, a.jsx)(l.CloseSmallIcon, {
+        children: (0, a.jsx)(l.XSmallIcon, {
           size: 'xs',
           color: 'currentColor',
           className: h.closeIcon

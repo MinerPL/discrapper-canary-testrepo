@@ -13,7 +13,7 @@ var s = n(735250),
   o = n(470079),
   r = n(699581),
   a = n(338545),
-  l = n(130653),
+  l = n(393238),
   i = n(743294);
 let c = o.createContext({
 registerComponent: () => {},
@@ -23,7 +23,8 @@ expandedContentRef: o.createRef(),
 collapsedContentRef: o.createRef(),
 recalculateAnimationPositions: () => {},
 animatedComponentProps: [],
-expansionSpring: null
+expansionSpring: null,
+mountPoints: new Map()
   }),
   d = o.forwardRef(function(e, t) {
 var n;
@@ -36,12 +37,13 @@ let {
   recalculateAnimationPositions: m,
   registerComponent: x,
   unregisterComponent: g,
-  expansionSpring: f
-} = o.useContext(c), C = o.useRef(null), _ = o.useRef(null), h = o.useContext(l.T);
+  expansionSpring: f,
+  mountPoints: C
+} = o.useContext(c), _ = o.useRef(null), E = o.useRef(null), h = o.useRef();
 o.useEffect(() => {
   m();
-}, [m]), o.useEffect(() => {
-  let e = C.current;
+}, [m]), o.useLayoutEffect(() => {
+  let e = _.current;
   return null != e && x(e, d, u), () => {
     null != e && g(d, u);
   };
@@ -51,17 +53,16 @@ o.useEffect(() => {
   x,
   g
 ]);
-let E = o.useRef(null),
-  S = null !== (n = E.current) && void 0 !== n ? n : document.getElementById(h ? 'quest-bar-v2-preview-' + d : 'quest-bar-v2-' + d);
-o.useEffect(() => {
-  E.current = S;
-}, [
-  S,
-  h,
-  d
-]);
-let T = null;
-return null == S ? T = null : p && null != f ? T = (0, s.jsxs)(s.Fragment, {
+let S = o.useCallback(e => {
+  let {
+    height: t
+  } = e;
+  h.current !== t && (m(), h.current = t);
+}, [m]);
+(0, l.P)(_, S);
+let T = null === (n = C.get(d)) || void 0 === n ? void 0 : n.current,
+  N = null;
+return null == T ? N = null : p && null != f ? N = (0, s.jsxs)(s.Fragment, {
   children: [
     'collapsed' === u && (0, r.createPortal)((0, s.jsx)(a.animated.div, {
       style: {
@@ -77,8 +78,8 @@ return null == S ? T = null : p && null != f ? T = (0, s.jsxs)(s.Fragment, {
           ]
         })
       },
-      children: i(_)
-    }), S),
+      children: i(E)
+    }), T),
     'expanded' === u && (0, r.createPortal)((0, s.jsx)(a.animated.div, {
       style: {
         position: 'absolute',
@@ -93,17 +94,17 @@ return null == S ? T = null : p && null != f ? T = (0, s.jsxs)(s.Fragment, {
           ]
         })
       },
-      children: i(_)
-    }), S)
+      children: i(E)
+    }), T)
   ]
-}) : 'collapsed' === u && (T = (0, r.createPortal)(i(_), S)), (0, s.jsxs)('div', {
+}) : 'collapsed' === u && (N = (0, r.createPortal)(i(E), T)), (0, s.jsxs)('div', {
   style: {
-    opacity: null == T && 'collapsed' === u ? 1 : 0
+    opacity: null == N && 'collapsed' === u || null == T ? 1 : 0
   },
   ref: t,
   children: [
-    i(C),
-    T
+    i(_),
+    N
   ]
 });
   }),
@@ -113,7 +114,7 @@ let {
   expandedContentRef: n,
   collapsedContentRef: r,
   expansionSpring: a
-} = e, [l, d] = o.useState({}), [u, p] = o.useState([]), m = o.useCallback((e, t, n) => {
+} = e, [l, d] = o.useState({}), [u, p] = o.useState([]), [m, x] = o.useState(() => new Map()), g = o.useCallback((e, t, n) => {
   d(s => {
     var o;
     let r = null !== (o = s[t]) && void 0 !== o ? o : {
@@ -127,20 +128,27 @@ let {
         [n]: e
       }
     };
+  }), x(e => {
+    let n = new Map(e);
+    return n.set(t, o.createRef()), n;
   });
-}, []), x = o.useCallback((e, t) => {
-  d(n => {
-    var s;
-    let o = null !== (s = n[e]) && void 0 !== s ? s : {
+}, []), f = o.useCallback((e, t) => {
+  let n = !1;
+  d(s => {
+    var o;
+    let r = null !== (o = s[e]) && void 0 !== o ? o : {
       expanded: null,
       collapsed: null
     };
-    return o[t] = null, {
-      ...n,
-      [e]: o
+    return r[t] = null, n = null == r.expanded && null == r.collapsed, {
+      ...s,
+      [e]: r
     };
+  }), n && x(t => {
+    let n = new Map(t);
+    return n.delete(e), n;
   });
-}, []), g = o.useCallback(() => {
+}, []), C = o.useCallback(() => {
   let e = [];
   for (let t in l) {
     if (null == l[t] || null == n.current || null == r.current)
@@ -179,14 +187,15 @@ let {
 ]);
 return (0, s.jsx)(c.Provider, {
   value: {
-    registerComponent: m,
-    unregisterComponent: x,
+    registerComponent: g,
+    unregisterComponent: f,
     animatedComponents: l,
     expandedContentRef: n,
     collapsedContentRef: r,
-    recalculateAnimationPositions: g,
+    recalculateAnimationPositions: C,
     animatedComponentProps: u,
-    expansionSpring: a
+    expansionSpring: a,
+    mountPoints: m
   },
   children: t
 });

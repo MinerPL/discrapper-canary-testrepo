@@ -49,7 +49,7 @@ className: r()(I.noticeRoot, s),
 children: [
   (0, i.jsx)('div', {
     className: I.iconContainer,
-    children: (0, i.jsx)(o.CircleExclamationPointIcon, {
+    children: (0, i.jsx)(o.CircleWarningIcon, {
       size: 'custom',
       width: 20,
       height: 20,

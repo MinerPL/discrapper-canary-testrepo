@@ -1,6 +1,6 @@
 n.d(t, {
   Mt: function() {
-return h;
+return f;
   },
   Sh: function() {
 return u.S;
@@ -12,47 +12,43 @@ return l;
 return s;
   },
   Yn: function() {
-return _.Yn;
+return d.Yn;
   },
   aB: function() {
-return d.a;
-  },
-  aj: function() {
 return c.a;
   },
   jj: function() {
-return f;
+return E;
   },
   zZ: function() {
 return o;
   }
 });
 var r, i, a, s, o, l, u = n(839548),
-  c = n(60541),
-  d = n(946695),
-  _ = n(65154);
+  c = n(946695),
+  d = n(65154);
 
-function E(e) {
+function _(e) {
   switch (e) {
-case _.AS.NATIVE:
+case d.AS.NATIVE:
   return n(743426).Z;
-case _.AS.WEBRTC:
+case d.AS.WEBRTC:
   return n(959856).Z;
-case _.AS.DUMMY:
+case d.AS.DUMMY:
 default:
   return n(135670).Z;
   }
 }
 
-function f() {
+function E() {
   var e;
   return null !== (e = [
-_.AS.NATIVE,
-_.AS.WEBRTC
-  ].find(e => E(e).supported())) && void 0 !== e ? e : _.AS.DUMMY;
+d.AS.NATIVE,
+d.AS.WEBRTC
+  ].find(e => _(e).supported())) && void 0 !== e ? e : d.AS.DUMMY;
 }
 
-function h(e) {
-  return new(E(e))();
+function f(e) {
+  return new(_(e))();
 }
 (r = s || (s = {})).INPUT_DEVICE = 'input_device', r.STREAM = 'stream', (i = o || (o = {})).NONE = '', i.BACKGROUND_BLUR = 'background_blur', i.BACKGROUND_REPLACEMENT = 'background_replacement', (a = l || (l = {})).CAMERA_BACKGROUND_PREVIEW = 'cameraBackgroundPreview', a.CAMERA_BACKGROUND_LIVE = 'cameraBackgroundLive';

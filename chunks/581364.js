@@ -142,7 +142,8 @@ displayDescription: null !== (r = s.description_localized) && void 0 !== r ? r :
 nsfw: a.nsfw,
 contexts: a.contexts,
 integration_types: a.integration_types,
-global_popularity_rank: a.global_popularity_rank
+global_popularity_rank: a.global_popularity_rank,
+handler: a.handler
   };
 }
 

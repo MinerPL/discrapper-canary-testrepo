@@ -67,6 +67,13 @@ treatments: [{
     config: {
       coachtipEdition: a.LM.ROBERT
     }
+  },
+  {
+    id: 9,
+    label: 'Storm',
+    config: {
+      coachtipEdition: a.LM.STORM
+    }
   }
 ]
   }),

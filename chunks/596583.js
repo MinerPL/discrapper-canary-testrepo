@@ -121,7 +121,7 @@ children: [
   (0, t.jsx)(d.Clickable, {
     onClick: a,
     className: S.closeButtonContainer,
-    children: (0, t.jsx)(d.CloseSmallIcon, {
+    children: (0, t.jsx)(d.XSmallIcon, {
       size: 'custom',
       width: 20,
       height: 20

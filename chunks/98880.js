@@ -25,7 +25,7 @@ var i, a, l = t(735250),
   C = t(182906),
   f = t(367907),
   h = t(220082),
-  A = t(810090),
+  A = t(70097),
   E = t(768581),
   N = t(792125),
   v = t(541099),
@@ -33,15 +33,15 @@ var i, a, l = t(735250),
   I = t(695676),
   g = t(176412),
   P = t(226026),
-  S = t(753972),
-  L = t(981631),
-  R = t(217702),
+  L = t(753972),
+  R = t(981631),
+  S = t(217702),
   T = t(231338),
   b = t(689938),
   M = t(126152),
-  y = t(413097);
+  j = t(413097);
 
-function j(e) {
+function y(e) {
   let {
 application: n,
 look: t = 'large_banner',
@@ -91,7 +91,7 @@ look: p
 name: _,
 description: C
   } = o.useMemo(() => (0, x.sl)(n, {
-fakeAppIconURL: y
+fakeAppIconURL: j
   }), [n]), {
 trackItemImpressionRef: f
   } = (0, P.Z)({
@@ -135,7 +135,7 @@ application: n
 name: t,
 iconURL: i
   } = o.useMemo(() => (0, x.sl)(n, {
-fakeAppIconURL: y
+fakeAppIconURL: j
   }), [n]);
   return (0, l.jsx)(u.Tooltip, {
 tooltipContentClassName: M.tooltipContent,
@@ -146,7 +146,7 @@ children: e => {
   } = e;
   return (0, l.jsx)('div', {
     ...n,
-    children: (0, l.jsx)(S.Z, {
+    children: (0, l.jsx)(L.Z, {
       src: i,
       className: M.iconCard,
       'aria-hidden': !0,
@@ -170,7 +170,7 @@ iconURL: d,
 name: m,
 description: p
   } = o.useMemo(() => (0, x.sl)(n, {
-fakeAppIconURL: y
+fakeAppIconURL: j
   }), [n]), _ = o.useMemo(() => null == p ? null : (0, g.ae)(p), [p]), C = (0, h.ZP)(d, ''), [f, A] = o.useState(!1), E = o.useCallback(() => {
 !0 === r && A(!0);
   }, [r]), v = o.useCallback(() => A(!1), []);
@@ -214,7 +214,7 @@ children: [
       [M.appDetailsRowContainer]: 'row' === t
     }),
     children: [
-      (0, l.jsx)(S.Z, {
+      (0, l.jsx)(L.Z, {
         src: d,
         className: s()(M.icon, {
           [M.rowIcon]: 'row' === t
@@ -258,22 +258,22 @@ showVideo: i
 if ((0, x.ye)({
     application: n
   }))
-  return (0, l.jsx)(D, {
+  return (0, l.jsx)(B, {
     application: n,
     showVideo: i
   });
 if (null != n.bot)
-  return (0, l.jsx)(B, {
+  return (0, l.jsx)(k, {
     bot: n.bot,
     fallbackColor: t
   });
   }
-  return (0, l.jsx)(k, {
+  return (0, l.jsx)(D, {
 fallbackColor: t
   });
 }
 
-function D(e) {
+function B(e) {
   let {
 application: n,
 showVideo: t
@@ -298,7 +298,7 @@ children: [
       onAnimationEnd: () => t ? null : c(!1),
       children: (0, l.jsx)(A.Z, {
         src: a,
-        mediaLayoutType: R.hV.MOSAIC,
+        mediaLayoutType: S.hV.MOSAIC,
         loop: !0,
         autoPlay: !0,
         muted: !0
@@ -315,7 +315,7 @@ children: [
   });
 }
 
-function B(e) {
+function k(e) {
   let {
 bot: n,
 fallbackColor: t
@@ -325,7 +325,7 @@ banner: n.banner,
 canAnimate: !i,
 size: 600
   });
-  return null == a ? (0, l.jsx)(k, {
+  return null == a ? (0, l.jsx)(D, {
 fallbackColor: t
   }) : (0, l.jsx)('img', {
 src: a,
@@ -334,7 +334,7 @@ className: M.bannerImage
   });
 }
 
-function k(e) {
+function D(e) {
   let {
 fallbackColor: n
   } = e;
@@ -358,7 +358,7 @@ location: r
 pushHistory: s
   } = (0, I.hH)();
   return o.useCallback(e => {
-e.stopPropagation(), (0, f.yw)(L.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
+e.stopPropagation(), (0, f.yw)(R.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
   application_id: n.id,
   section_name: t,
   search_results_position: i,
@@ -384,7 +384,7 @@ t
 
 function V(e) {
   let n = w(e);
-  return (0, l.jsx)(j, {
+  return (0, l.jsx)(y, {
 ...e,
 onClick: n
   });
@@ -413,7 +413,7 @@ location: i,
 sectionName: a
   });
   if (c === p.JS.START)
-return o ? (0, l.jsx)(j, {
+return o ? (0, l.jsx)(y, {
   ...r,
   sectionName: a,
   application: t,
@@ -425,7 +425,7 @@ return o ? (0, l.jsx)(j, {
   application: t,
   location: i
 });
-  return (0, l.jsx)(j, {
+  return (0, l.jsx)(y, {
 ...r,
 sectionName: a,
 application: t,

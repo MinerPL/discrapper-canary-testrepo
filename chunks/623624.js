@@ -10,18 +10,18 @@ var i = n(512722),
   s = n(442837),
   o = n(100527),
   l = n(906732),
-  u = n(430824),
-  c = n(594174),
-  d = n(725568),
+  u = n(84615),
+  c = n(430824),
+  d = n(594174),
   _ = n(443002);
 let E = e => {
   let {
 guildId: t,
 close: n,
 location: i
-  } = e, d = (0, s.e7)([c.default], () => c.default.getCurrentUser());
-  a()(null != d, 'PremiumGuildPerksModalConnected: currentUser cannot be undefined');
-  let E = (0, s.e7)([u.Z], () => u.Z.getGuild(t), [t]),
+  } = e, u = (0, s.e7)([d.default], () => d.default.getCurrentUser());
+  a()(null != u, 'PremiumGuildPerksModalConnected: currentUser cannot be undefined');
+  let E = (0, s.e7)([c.Z], () => c.Z.getGuild(t), [t]),
 {
   analyticsLocations: f
 } = (0, l.ZP)(o.Z.BOOSTED_GUILD_PERKS_MODAL);
@@ -40,7 +40,7 @@ function f(e) {
 guildId: t,
 location: n
   } = e;
-  (0, d.q4)(e => {
+  (0, u.q4)(e => {
 let {
   closeLayer: i
 } = e;

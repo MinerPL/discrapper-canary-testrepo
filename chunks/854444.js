@@ -169,7 +169,7 @@ getChannelFromSectionRow(e, n) {
     channel: t.channelList[n]
   };
 },
-getCommunitySection: () => P,
+getGuildActionSection: () => P,
 getFirstVoiceChannel: () => null,
 getSectionRowsFromChannel(e) {
   let n = [

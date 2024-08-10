@@ -25,7 +25,7 @@ children: [
   }),
   (0, r.jsx)(i.Clickable, {
     onClick: () => t(a.L.UNKNOWN),
-    children: (0, r.jsx)(i.CloseSmallIcon, {
+    children: (0, r.jsx)(i.XSmallIcon, {
       size: 'md',
       color: 'currentColor',
       className: o.close

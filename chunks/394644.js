@@ -1,4 +1,4 @@
-s.d(t, {
+t.d(s, {
   Gj: function() {
 return j;
   },
@@ -14,40 +14,40 @@ return y;
   q8: function() {
 return G;
   }
-}), s(639576), s(536091), s(47120), s(653041);
-var n = s(470079),
-  a = s(442837),
-  i = s(704215),
-  r = s(493544),
-  o = s(634894),
-  l = s(211242),
-  c = s(770471),
-  d = s(924557),
-  _ = s(706140),
-  E = s(592204),
-  u = s(610697),
-  T = s(631885),
-  I = s(223639),
-  S = s(160913),
-  N = s(725727),
-  C = s(977156),
-  m = s(237292),
-  A = s(314897),
-  g = s(283595),
-  h = s(663389),
-  O = s(594174),
-  p = s(202527),
-  R = s(695346),
-  x = s(620163),
-  M = s(295545),
-  f = s(168308),
-  D = s(839469),
-  P = s(726985),
-  L = s(46140),
-  b = s(689938);
+}), t(639576), t(536091), t(47120), t(653041);
+var n = t(470079),
+  a = t(442837),
+  i = t(704215),
+  r = t(493544),
+  o = t(634894),
+  l = t(211242),
+  c = t(770471),
+  d = t(924557),
+  _ = t(706140),
+  E = t(592204),
+  u = t(610697),
+  I = t(631885),
+  T = t(223639),
+  S = t(160913),
+  N = t(725727),
+  C = t(977156),
+  m = t(237292),
+  A = t(314897),
+  g = t(283595),
+  O = t(663389),
+  h = t(594174),
+  p = t(202527),
+  R = t(695346),
+  x = t(620163),
+  M = t(295545),
+  f = t(168308),
+  D = t(839469),
+  P = t(726985),
+  L = t(46140),
+  b = t(689938);
 
 function Z(e) {
-  let t = [{
+  let s = [{
     header: b.Z.Messages.USER_SETTINGS,
     settings: [
       P.s6.ACCOUNT,
@@ -88,7 +88,6 @@ function Z(e) {
       P.s6.WINDOW_SETTINGS,
       P.s6.LINUX_SETTINGS,
       P.s6.STREAMER_MODE,
-      P.s6.SPEED_TEST,
       P.s6.SETTINGS_ADVANCED
     ]
   },
@@ -123,7 +122,7 @@ function Z(e) {
     ]
   }
 ],
-s = {
+t = {
   header: b.Z.Messages.ACTIVITY_SETTINGS,
   divider: !0,
   settings: [
@@ -132,15 +131,15 @@ s = {
     P.s6.OVERLAY
   ]
 };
-  return e ? t : t.toSpliced(3, 0, s);
+  return e ? s : s.toSpliced(3, 0, t);
 }
 
 function v() {
-  var e, t;
-  let s = (0, N.YO)().length,
+  var e, s;
+  let t = (0, N.YO)().length,
 n = (0, S.U)(),
-r = (0, a.e7)([h.Z], () => h.Z.getProps().impressionSource),
-D = (0, T.gU)(),
+r = (0, a.e7)([O.Z], () => O.Z.getProps().impressionSource),
+D = (0, I.gU)(),
 P = (0, f.bC)(),
 b = (0, d.Go)(),
 [Z] = (0, _.c)(b ? [i.z.CLIPS_SETTINGS_BETA_TAG] : []),
@@ -160,25 +159,25 @@ location: 'settings'
 location: 'settings'
   }), U = (0, E.Xo)({
 location: 'settings'
-  }), G = null !== (t = null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t, F = (0, m.y0)({
+  }), G = null !== (s = null === (e = h.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== s && s, F = (0, m.y0)({
 location: 'settings'
   }), y = (0, l.Q)(), V = (0, C.Zy)({
 location: L.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY
   }), {
 enabled: Y
-  } = I.Z.useExperiment({
+  } = T.Z.useExperiment({
 location: 'UserSettingsInventory'
   }, {
 autoTrackExposure: !0
-  }), w = (0, a.e7)([g.Z], () => g.Z.hasLibraryApplication()), k = (0, a.e7)([A.default], () => A.default.hasTOTPEnabled()), {
-canBroadcast: H
+  }), w = (0, a.e7)([g.Z], () => g.Z.hasLibraryApplication()), H = (0, a.e7)([A.default], () => A.default.hasTOTPEnabled()), {
+canBroadcast: k
   } = c.Z.useExperiment({
 location: 'user_settings_activity_privacy'
   }, {
 autoTrackExposure: !0
   }), W = R.Sb.useSetting(), K = (0, u.Z)();
   return (0, x.i)({
-unseenGiftCount: s,
+unseenGiftCount: t,
 showPrepaidPaymentPastDueWarning: n,
 impressionSource: r,
 numOfPendingFamilyRequests: D,
@@ -194,60 +193,60 @@ isEligibleForQuests: V,
 showGiftNitro: Y,
 isStricterMessageRequestsEnabled: K,
 hasLibraryApplication: w,
-hasTOTPEnabled: k,
-canBroadcastActivity: H,
+hasTOTPEnabled: H,
+canBroadcastActivity: k,
 developerMode: W
   });
 }
 
 function j(e) {
   let {
-searchResults: t
-  } = (0, D.E)(), s = v();
+searchResults: s
+  } = (0, D.E)(), t = v();
   if (!(0, M.eA)({
   location: 'settings'
 }))
 return new Set();
-  let n = s[e],
-a = Object.fromEntries(Object.entries(s).filter(e => {
-  let [t, s] = e;
-  return s.section === n.section;
+  let n = t[e],
+a = Object.fromEntries(Object.entries(t).filter(e => {
+  let [s, t] = e;
+  return t.section === n.section;
 })),
 i = Object.fromEntries(Object.entries(a).filter(e => {
-  let [t, {
-    parent: s,
+  let [s, {
+    parent: t,
     section: a
   }] = e;
-  return null != s && a === n.section;
+  return null != t && a === n.section;
 }).map(e => {
-  let [t, {
-    parent: s
+  let [s, {
+    parent: t
   }] = e;
   return [
-    t,
-    s
+    s,
+    t
   ];
 })),
 r = new Set(),
 o = e => {
-  let t = a[e];
-  if (null == t)
+  let s = a[e];
+  if (null == s)
     return;
   r.add(e);
-  let s = t.parent;
-  null != s && o(s);
+  let t = s.parent;
+  null != t && o(t);
 },
 l = e => {
-  for (let t of (r.add(e), Object.entries(i).filter(t => {
-      let [s, n] = t;
+  for (let s of (r.add(e), Object.entries(i).filter(s => {
+      let [t, n] = s;
       return n === e;
     }).map(e => {
-      let [t] = e;
-      return t;
+      let [s] = e;
+      return s;
     })))
-    l(t);
+    l(s);
 };
-  for (let e of t.filter(e => e in a))
+  for (let e of s.filter(e => e in a))
 if (!r.has(e)) {
   if (null != a[e].element && null == a[e].parent) {
     r.clear();
@@ -258,24 +257,24 @@ if (!r.has(e)) {
   return r;
 }
 
-function B(e, t) {
-  let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+function B(e, s) {
+  let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
 n = arguments.length > 3 ? arguments[3] : void 0,
 a = [],
-i = F(t),
-o = function(e, t) {
-  let s = new Map();
-  return null != t && t.forEach(t => {
-    let n = e[t].parent;
+i = F(s),
+o = function(e, s) {
+  let t = new Map();
+  return null != s && s.forEach(s => {
+    let n = e[s].parent;
     for (; null != n && null != e[n].parent;)
       n = e[n].parent;
     if (null != n) {
       var a;
-      let e = null !== (a = s.get(n)) && void 0 !== a ? a : 0;
-      s.set(n, e + 1);
+      let e = null !== (a = t.get(n)) && void 0 !== a ? a : 0;
+      t.set(n, e + 1);
     }
-  }), s;
-}(t, new Set(Array.from(null != n ? n : []).filter(e => i.has(e))));
+  }), t;
+}(s, new Set(Array.from(null != n ? n : []).filter(e => i.has(e))));
   return e.forEach(e => {
 0 !== e.settings.length && (!0 === e.divider && a.push({
   section: r.ID.DIVIDER
@@ -284,12 +283,12 @@ o = function(e, t) {
   label: e.header
 }), e.settings.forEach(e => {
   a.push({
-    ...t[e],
+    ...s[e],
     tabPredicate: () => {
-      var t, s, a;
-      return null == n || (t = e, s = n, a = o, t === P.s6.SEARCH_NO_RESULTS && 0 === s.size || a.has(t) || s.has(t));
+      var s, t, a;
+      return null == n || (s = e, t = n, a = o, s === P.s6.SEARCH_NO_RESULTS && 0 === t.size || a.has(s) || t.has(s));
     },
-    searchFilterCount: !s || (null == n ? void 0 : n.has(e)) ? void 0 : o.get(e)
+    searchFilterCount: !t || (null == n ? void 0 : n.has(e)) ? void 0 : o.get(e)
   });
 }));
   }), a;
@@ -298,44 +297,44 @@ o = function(e, t) {
 function U() {
   let e = v(),
 {
-  shouldMergeGameSettings: t
+  shouldMergeGameSettings: s
 } = p.b.useExperiment({
   location: 'settings'
 }),
-s = n.useMemo(() => Z(t), [t]);
-  return n.useMemo(() => B(s, e), [
-s,
+t = n.useMemo(() => Z(s), [s]);
+  return n.useMemo(() => B(t, e), [
+t,
 e
   ]);
 }
 
 function G(e) {
-  let t = v(),
-s = function() {
+  let s = v(),
+t = function() {
   let {
     shouldMergeGameSettings: e
   } = p.b.useExperiment({
     location: 'settings'
-  }), t = Z(e);
+  }), s = Z(e);
   return n.useMemo(() => [{
     header: b.Z.Messages.SEARCH_RESULTS_SECTION_LABEL,
     settings: [
-      ...t.map(e => {
+      ...s.map(e => {
         let {
-          settings: t
+          settings: s
         } = e;
-        return t;
+        return s;
       }).flat(1),
       P.s6.SEARCH_NO_RESULTS
     ]
-  }], [t]);
+  }], [s]);
 }(),
 a = (0, M.c3)({
   location: 'settings'
 });
-  return n.useMemo(() => B(s, t, a, new Set(e)), [
-s,
+  return n.useMemo(() => B(t, s, a, new Set(e)), [
 t,
+s,
 a,
 e
   ]);
@@ -343,17 +342,17 @@ e
 
 function F(e) {
   return new Map(Object.entries(e).filter(e => {
-let [t, s] = e;
-return s.section !== r.ID.CUSTOM && null != s.searchableTitles && (null == s.predicate || s.predicate());
+let [s, t] = e;
+return t.section !== r.ID.CUSTOM && null != t.searchableTitles && (null == t.predicate || t.predicate());
   }));
 }
 
 function y(e) {
   return Array.from(F(e).entries()).map(e => {
-let [t, s] = e;
+let [s, t] = e;
 return [
-  t,
-  s.searchableTitles
+  s,
+  t.searchableTitles
 ];
   });
 }

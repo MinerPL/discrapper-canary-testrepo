@@ -374,6 +374,7 @@ if (this.state !== et.hes.DISCONNECTED) {
     automatic_audio_input_sensitivity_enabled: n.modeOptions.autoThreshold,
     audio_input_sensitivity: n.modeOptions.threshold,
     echo_cancellation_enabled: n.echoCancellation,
+    sidechain_compression_enabled: n.sidechainCompression,
     noise_suppression_enabled: n.noiseSuppression,
     noise_cancellation_enabled: n.noiseCancellation,
     noise_canceller_error: this._noiseCancellationError,

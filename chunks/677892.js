@@ -58,7 +58,7 @@ case 'good':
 case 'warning':
   t = (0, s.jsxs)(s.Fragment, {
     children: [
-      (0, s.jsx)(r.CircleExclamationPointIcon, {
+      (0, s.jsx)(r.CircleWarningIcon, {
         size: 'xs',
         color: 'currentColor',
         className: m.warning
@@ -75,7 +75,7 @@ case 'warning':
 case 'required':
   t = (0, s.jsxs)(s.Fragment, {
     children: [
-      (0, s.jsx)(r.CircleExclamationPointIcon, {
+      (0, s.jsx)(r.CircleWarningIcon, {
         size: 'xs',
         color: 'currentColor',
         className: m.danger

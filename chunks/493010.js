@@ -31,7 +31,7 @@ maxWidth: x
   r.Z.updateChatOpen(t.id, !1), _.S.safeDispatch(E.CkL.FOCUS_CHAT_BUTTON);
 }, [t.id]),
 N = (0, i.jsx)(p.ZP.Icon, {
-  icon: l.CloseSmallIcon,
+  icon: l.XSmallIcon,
   tooltip: C.Z.Messages.CLOSE,
   onClick: T
 });

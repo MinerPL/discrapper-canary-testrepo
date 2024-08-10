@@ -5,8 +5,8 @@ return A;
 });
 var i = n(735250);
 n(470079);
-var s = n(120356),
-  a = n.n(s),
+var a = n(120356),
+  s = n.n(a),
   r = n(442837),
   l = n(524437),
   o = n(481060),
@@ -20,8 +20,8 @@ var s = n(120356),
   T = n(324081),
   h = n(240126),
   N = n(791914),
-  C = n(981631),
-  f = n(689938),
+  f = n(981631),
+  C = n(689938),
   p = n(645962),
   g = n(699723);
 let S = {
@@ -35,7 +35,7 @@ function A(e) {
   let {
 setTab: t,
 closePopout: n
-  } = e, s = (0, r.e7)([d.Z], () => d.Z.getMessageBookmarks());
+  } = e, a = (0, r.e7)([d.Z], () => d.Z.getMessageBookmarks());
   return (0, i.jsxs)('div', {
 className: p.container,
 children: [
@@ -44,8 +44,8 @@ children: [
     setTab: t,
     closePopout: n
   }),
-  0 === s.length ? (0, i.jsx)(O, {}) : (0, i.jsx)(o.AdvancedScrollerThin, {
-    children: s.map(e => (0, i.jsx)(R, {
+  0 === a.length ? (0, i.jsx)(x, {}) : (0, i.jsx)(o.AdvancedScrollerThin, {
+    children: a.map(e => (0, i.jsx)(R, {
       savedMessage: e
     }, e.saveData.messageId))
   })
@@ -56,8 +56,8 @@ children: [
 function R(e) {
   let {
 savedMessage: t
-  } = e, n = (0, r.e7)([I.Z], () => I.Z.getChannel(t.saveData.channelId)), s = () => {
-(0, u.uL)(C.Z5c.CHANNEL(null == n ? void 0 : n.getGuildId(), t.saveData.channelId, t.saveData.messageId));
+  } = e, n = (0, r.e7)([I.Z], () => I.Z.getChannel(t.saveData.channelId)), a = () => {
+(0, u.uL)(f.Z5c.CHANNEL(null == n ? void 0 : n.getGuildId(), t.saveData.channelId, t.saveData.messageId));
   };
   return (0, i.jsx)('div', {
 className: g.container,
@@ -65,12 +65,12 @@ children: null != n && null != t.message ? (0, i.jsxs)(i.Fragment, {
   children: [
     (0, i.jsx)(T.Z, {
       channel: n,
-      gotoChannel: s,
+      gotoChannel: a,
       children: (0, i.jsx)(o.CircleIconButton, {
         className: g.closeButton,
-        tooltip: f.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK,
+        tooltip: C.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK,
         color: o.CircleIconButtonColors.TERTIARY,
-        icon: (0, i.jsx)(o.CloseSmallIcon, {
+        icon: (0, i.jsx)(o.XSmallIcon, {
           size: 'xs',
           color: 'currentColor'
         }),
@@ -78,11 +78,11 @@ children: null != n && null != t.message ? (0, i.jsxs)(i.Fragment, {
       })
     }),
     (0, i.jsxs)('div', {
-      className: a()(g.messageContainer, p.unloadedMessage),
+      className: s()(g.messageContainer, p.unloadedMessage),
       children: [
         (0, i.jsx)(m.Z, {
           className: g.jumpMessageButton,
-          onJump: s
+          onJump: a
         }),
         (0, i.jsx)(c.Z, {
           message: t.message,
@@ -102,10 +102,10 @@ children: null != n && null != t.message ? (0, i.jsxs)(i.Fragment, {
   });
 }
 
-function O() {
+function x() {
   return (0, i.jsx)(h.Z, {
-Icon: o.DoubleCheckmarkLargeIcon,
-header: f.Z.Messages.MESSAGE_BOOKMARKS_EMPTY,
-tip: f.Z.Messages.MESSAGE_BOOKMARKS_EMPTY_TIP
+Icon: o.DoubleCheckmarkIcon,
+header: C.Z.Messages.MESSAGE_BOOKMARKS_EMPTY,
+tip: C.Z.Messages.MESSAGE_BOOKMARKS_EMPTY_TIP
   });
 }

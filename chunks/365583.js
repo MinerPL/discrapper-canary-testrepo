@@ -1,86 +1,71 @@
 n.d(t, {
+  C: function() {
+return S;
+  },
   Z: function() {
-return p;
+return A;
   }
-}), n(627341);
+});
 var r = n(735250);
 n(470079);
 var i = n(278074),
   a = n(442837),
   s = n(481060),
   o = n(230711),
-  l = n(503438),
-  u = n(26033),
-  c = n(594174),
-  d = n(171368),
-  _ = n(981631),
-  E = n(728151),
-  f = n(332325),
-  h = n(689938);
+  l = n(394821),
+  u = n(833664),
+  c = n(503438),
+  d = n(579630),
+  _ = n(26033),
+  E = n(168308),
+  f = n(547972),
+  h = n(594174),
+  p = n(981631),
+  m = n(332325),
+  I = n(689938);
+let T = () => o.Z.open(p.oAB.CONNECTIONS, null),
+  g = () => (0, f.Z)((0, E.Jw)() ? m.Z.MY_GAMES : m.Z.ACTIVITY_PRIVACY);
 
-function p(e) {
+function S(e) {
+  return (0, i.EQ)(e).when(_.aA, () => T).when(_.dX, () => () => g).when(_.y0, () => T).when(_.dU, () => T).otherwise(() => g);
+}
+
+function A(e) {
   let {
-activity: t,
-entry: n,
-user: p
-  } = e, m = function(e) {
+user: t,
+activity: n,
+entry: o,
+onAction: _,
+onClose: E
+  } = e;
+  if (!(0, a.e7)([h.default], () => {
+  var e;
+  return (null === (e = h.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
+}))
+return null;
+  let f = function(e) {
 let {
   activity: t,
   entry: n
 } = e;
-return null != n ? function(e) {
-  let {
-    settingsSection: t,
-    settingsSubsection: n
-  } = (0, i.EQ)(e).when(u.dX, () => ({
-    settingsSection: _.oAB.GAMES,
-    settingsSubsection: f.Z.ACTIVITY_PRIVACY
-  })).when(u.r5, () => ({
-    settingsSection: _.oAB.CONNECTIONS,
-    settingsSubsection: null
-  })).when(u.kx, () => ({
-    settingsSection: _.oAB.CONNECTIONS,
-    settingsSubsection: null
-  })).otherwise(() => ({
-    settingsSection: null,
-    settingsSubsection: null
-  }));
-  return null == t ? null : () => {
-    (0, d.closeUserProfileModal)(), o.Z.open(t, n);
-  };
-}(n) : null != t ? function(e) {
-  let {
-    settingsSection: t,
-    settingsSubsection: n
-  } = (0, i.EQ)(e).with({
-    type: _.IIU.PLAYING
-  }, () => ({
-    settingsSection: _.oAB.GAMES,
-    settingsSubsection: f.Z.ACTIVITY_PRIVACY
-  })).with({
-    type: _.IIU.WATCHING,
-    application_id: E.sp
-  }, () => ({
-    settingsSection: _.oAB.CONNECTIONS,
-    settingsSubsection: null
-  })).when(l.Z, () => ({
-    settingsSection: _.oAB.CONNECTIONS,
-    settingsSubsection: null
-  })).otherwise(() => ({
-    settingsSection: null,
-    settingsSubsection: null
-  }));
-  return null == t ? null : () => {
-    (0, d.closeUserProfileModal)(), o.Z.open(t, n);
-  };
-}(t) : null;
+if (null != n)
+  return S(n);
+if (null != t) {
+  var r;
+  return r = t, (0, i.EQ)(r).when(d.Z, () => T).when(u.Z, () => g).when(c.Z, () => T).when(l.Z, () => T).otherwise(() => g);
+}
+return null;
   }({
-activity: t,
-entry: n
-  }), I = (0, a.e7)([c.default], () => c.default.getCurrentUser());
-  return p.id !== (null == I ? void 0 : I.id) || null == m ? null : (0, r.jsx)(s.MenuItem, {
+activity: n,
+entry: o
+  });
+  return null == f ? null : (0, r.jsx)(s.MenuItem, {
 id: 'manage-privacy',
-label: h.Z.Messages.USER_ACTIVITY_MANAGE_PRIVACY,
-action: m
+label: I.Z.Messages.USER_ACTIVITY_MANAGE_PRIVACY,
+action: () => {
+  null == _ || _({
+    action: 'PRESS_MANAGE_PRIVACY_MENU_ITEM'
+  }), f(), null == E || E();
+}
   });
 }

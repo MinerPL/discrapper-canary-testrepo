@@ -25,7 +25,7 @@ var r = n(735250),
   A = n(393238),
   N = n(434650),
   v = n(98650),
-  O = n(863840),
+  O = n(237617),
   R = n(748585),
   C = n(689938),
   y = n(299119);
@@ -475,7 +475,7 @@ children: [
                 'aria-label': C.Z.Messages.CLEAR,
                 'aria-controls': eU,
                 onClick: ej,
-                children: (0, r.jsx)(S.CloseSmallIcon, {
+                children: (0, r.jsx)(S.XSmallIcon, {
                   size: 'xs',
                   color: 'currentColor',
                   className: y.clear
@@ -1013,7 +1013,7 @@ children: (0, r.jsxs)(_.zx, {
     (0, r.jsx)(p.n, {
       children: C.Z.Messages.REMOVE
     }),
-    !u && (0, r.jsx)(S.CloseSmallIcon, {
+    !u && (0, r.jsx)(S.XSmallIcon, {
       size: 'custom',
       color: 'currentColor',
       className: y.deleteOptionIcon,

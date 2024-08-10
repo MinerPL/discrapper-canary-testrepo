@@ -159,7 +159,7 @@ children: [
       o && (0, r.jsx)(a.TooltipContainer, {
         className: M.previewWarning,
         text: R.Z.Messages.VIEW_AS_MEMBER_ROLES_WARNING,
-        children: (0, r.jsx)(a.CircleExclamationPointIcon, {
+        children: (0, r.jsx)(a.CircleWarningIcon, {
           size: 'xs',
           color: u.Z.unsafe_rawColors.YELLOW_300.css
         })
@@ -170,7 +170,7 @@ children: [
           maxTiers: L.fF,
           maxProducts: v.dD
         }),
-        children: (0, r.jsx)(a.CircleExclamationPointIcon, {
+        children: (0, r.jsx)(a.CircleWarningIcon, {
           size: 'xs',
           color: u.Z.unsafe_rawColors.YELLOW_300.css
         })

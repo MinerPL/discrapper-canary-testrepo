@@ -1,66 +1,37 @@
 n.d(t, {
   Z: function() {
-return f;
+return _;
   }
 });
-var r = n(470079),
-  i = n(725119),
-  a = n(652853),
-  s = n(290274),
-  o = n(347328),
-  l = n(540440),
-  u = n(553375),
-  c = n(365583),
-  d = n(582546),
-  _ = n(228168),
-  E = n(689938);
+var r = n(725119),
+  i = n(652853),
+  a = n(347328),
+  s = n(540440),
+  o = n(553375),
+  l = n(365583),
+  u = n(582546),
+  c = n(228168),
+  d = n(689938);
 
-function f(e) {
+function _(e) {
   let {
-entry: t,
-activity: n,
-user: f,
-display: h
+onAction: t
   } = e, {
-profileType: p
-  } = (0, a.z)(), m = (0, i.Z)({
-userId: f.id,
-section: _.oh.ACTIVITY,
-label: E.Z.Messages.USER_ACTIVITY_VIEW_ALL_ACTIVITY
-  }), I = p === _.y0.BITE_SIZE ? m : null, T = (0, d.ZP)({
-entry: t,
-activity: n,
-user: f
-  }), g = (0, u.Z)({
-entry: t,
-activity: n,
-user: f
-  }), S = (0, c.Z)({
-entry: t,
-activity: n,
-user: f
-  }), A = (0, o.ZP)({
-entry: t,
-activity: n,
-user: f
-  }), N = (0, l.B)({
-entry: t,
-user: f,
-isRecent: h === s.a.RECENT
+profileType: n
+  } = (0, i.z)(), _ = (0, r.Z)({
+userId: e.user.id,
+section: c.oh.ACTIVITY,
+label: d.Z.Messages.USER_ACTIVITY_VIEW_ALL_ACTIVITY,
+onAction: () => null == t ? void 0 : t({
+  action: 'PRESS_VIEW_ALL_ACTIVITY_MENU_ITEM'
+})
   });
-  return r.useMemo(() => [
-I,
-T,
-g,
-A,
-S,
-N
-  ].filter(e => null != e), [
-I,
-T,
-g,
-A,
-S,
-N
-  ]);
+  return [
+n === c.y0.BITE_SIZE ? _ : null,
+(0, u.Z)(e),
+(0, o.Z)(e),
+(0, l.Z)(e),
+(0, a.Z)(e),
+(0, s.B)(e)
+  ].filter(e => null != e);
 }

@@ -12,10 +12,10 @@ var i = n(735250),
   c = n(442837),
   u = n(481060),
   d = n(410030),
-  h = n(271383),
-  p = n(430824),
-  m = n(594174),
-  _ = n(153124),
+  h = n(313201),
+  p = n(271383),
+  m = n(430824),
+  _ = n(594174),
   f = n(709054),
   E = n(931240),
   g = n(645896),
@@ -35,16 +35,18 @@ function b(e) {
   let {
 guildId: n,
 clanInfo: s,
-onSignCharter: r
-  } = e, c = a.useMemo(() => {
+signed: r,
+onSignCharter: c
+  } = e, d = a.useMemo(() => {
 let e = f.default.extractTimestamp(n);
 return o()(new Date(e)).format('MMMM YYYY');
-  }, [n]), d = a.useMemo(() => new Set(s.games), [s.games]);
+  }, [n]), h = a.useMemo(() => new Set(s.games), [s.games]);
   return (0, i.jsx)(I.Z, {
 guildId: n,
 signHintPosition: I.p.LEFT,
 primaryColor: null === (t = s.branding) || void 0 === t ? void 0 : t.primaryColor,
-onSignCharter: r,
+signed: r,
+onSignCharter: c,
 children: (0, i.jsxs)('div', {
   className: M.scrollContentsContainer,
   children: [
@@ -75,13 +77,13 @@ children: (0, i.jsxs)('div', {
           color: 'text-muted',
           className: M.establishedDate,
           children: A.Z.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({
-            date: c
+            date: d
           })
         })
       ]
     }),
     (0, i.jsx)(N.p, {
-      applicationIds: d,
+      applicationIds: h,
       playstyle: s.playstyle,
       className: l()(M.charterBodyText, M.gameSection)
     }),
@@ -103,7 +105,7 @@ guildId: n,
 onClose: s,
 onAccept: r,
 ...o
-  } = e, f = (0, _.Dt)(), I = (0, g.Cc)(n), T = (0, g.E8)(n), [N, S] = a.useState(!0), [R, j] = a.useState(!1), L = a.useCallback(() => {
+  } = e, f = (0, h.Dt)(), I = (0, g.Cc)(n), T = (0, g.E8)(n), [N, S] = a.useState(!0), [R, j] = a.useState(!1), L = a.useCallback(() => {
 r(), s();
   }, [
 r,
@@ -123,23 +125,20 @@ T
   L,
   N
 ]),
-O = a.useCallback(() => {
-  j(!0);
-}, []),
-y = (0, c.e7)([p.Z], () => p.Z.getGuild(n)),
-D = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
-k = (0, c.e7)([h.ZP], () => null != D ? h.ZP.getMember(n, D.id) : null),
-U = (0, d.ZP)(),
-w = (0, C.nP)(null == I ? void 0 : null === (t = I.branding) || void 0 === t ? void 0 : t.primaryColor, [
+O = (0, c.e7)([m.Z], () => m.Z.getGuild(n)),
+y = (0, c.e7)([_.default], () => _.default.getCurrentUser()),
+D = (0, c.e7)([p.ZP], () => null != y ? p.ZP.getMember(n, y.id) : null),
+k = (0, d.ZP)(),
+U = (0, C.nP)(null == I ? void 0 : null === (t = I.branding) || void 0 === t ? void 0 : t.primaryColor, [
   u.tokens.colors.BG_BRAND,
   0.7
 ]),
-B = u.tokens.colors.BG_SURFACE_OVERLAY.resolve({
-  theme: U,
+w = u.tokens.colors.BG_SURFACE_OVERLAY.resolve({
+  theme: k,
   saturation: 1
 }).hex(),
-H = (0, C.nj)(w, B, 'top center');
-  return null == y || null == D || null == k || null == I ? null : (0, i.jsx)(u.ModalRoot, {
+B = (0, C.nj)(U, w, 'top center');
+  return null == O || null == y || null == D || null == I ? null : (0, i.jsx)(u.ModalRoot, {
 ...o,
 transitionState: o.transitionState,
 'aria-labelledby': f,
@@ -147,7 +146,7 @@ className: M.modal,
 size: u.ModalSize.DYNAMIC,
 children: (0, i.jsxs)(u.ModalContent, {
   className: M.content,
-  style: H,
+  style: B,
   children: [
     (0, i.jsxs)('div', {
       className: M.infoSide,
@@ -160,7 +159,7 @@ children: (0, i.jsxs)(u.ModalContent, {
               children: (0, i.jsx)(u.Heading, {
                 variant: 'heading-xxl/medium',
                 children: A.Z.Messages.CLAN_JOIN_SUCCESS_TITLE.format({
-                  name: y.name
+                  name: O.name
                 })
               })
             }),
@@ -183,13 +182,14 @@ children: (0, i.jsxs)(u.ModalContent, {
       children: (0, i.jsx)(b, {
         guildId: n,
         clanInfo: I,
-        onSignCharter: O
+        signed: R,
+        onSignCharter: j
       })
     }),
     (0, i.jsx)(v.Z, {
       onClick: P,
       color: u.Button.Colors.BRAND,
-      themeColor: w,
+      themeColor: U,
       fullWidth: !1,
       className: l()(M.ctaButton, R ? M.ctaButtonSigned : null),
       children: (0, i.jsxs)('div', {
@@ -204,7 +204,7 @@ children: (0, i.jsxs)(u.ModalContent, {
             size: 'custom',
             width: 20,
             height: 20,
-            color: null == w ? void 0 : (0, C.$0)(w).hex()
+            color: null == U ? void 0 : (0, C.$0)(U).hex()
           })
         ]
       })

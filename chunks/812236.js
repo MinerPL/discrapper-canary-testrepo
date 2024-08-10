@@ -36,7 +36,7 @@ return n;
 
 function c(e, t) {
   return s.ZP.query(e, {
-commandType: r.yU.PRIMARY_ENTRY_POINT
+commandTypes: [r.yU.PRIMARY_ENTRY_POINT]
   }, {
 placeholderCount: 1,
 scoreMethod: o.p.COMMAND_ONLY,
@@ -48,7 +48,7 @@ allowApplicationState: !0
 
 function d(e, t) {
   return (0, s.v1)(e, {
-commandType: r.yU.PRIMARY_ENTRY_POINT
+commandTypes: [r.yU.PRIMARY_ENTRY_POINT]
   }, {
 placeholderCount: 1,
 scoreMethod: o.p.COMMAND_ONLY,

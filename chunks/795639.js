@@ -16,11 +16,11 @@ var a = n(735250),
   h = n(541716),
   _ = n(273031),
   g = n(859235),
-  x = n(470623),
-  C = n(983200),
-  f = n(153124),
-  p = n(350722),
-  T = n(810090),
+  x = n(313201),
+  f = n(70097),
+  C = n(25057),
+  p = n(470623),
+  T = n(983200),
   I = n(127654),
   E = n(124252),
   N = n(689938),
@@ -35,14 +35,14 @@ extensions: [
   'webp'
 ]
   }],
-  S = (0, f.hQ)();
+  S = (0, x.hQ)();
 
 function M(e) {
   let {
 mediaAttachments: t,
 containerWidth: n,
 containerHeight: s
-  } = e, r = (0, C.tu)({
+  } = e, r = (0, T.tu)({
 numAttachments: t.length,
 containerWidth: n,
 containerHeight: s
@@ -52,7 +52,7 @@ children: t.map((e, t) => {
   var n;
   return (0, a.jsx)('div', {
     style: r[t],
-    children: !0 === e.isVideo ? (0, a.jsx)(T.Z, {
+    children: !0 === e.isVideo ? (0, a.jsx)(f.Z, {
       src: e.src,
       className: b.thumbnail,
       'aria-hidden': !0
@@ -72,14 +72,14 @@ let A = e => {
 parentChannel: r
   } = e, {
 textAreaState: i
-  } = (0, x.xH)(e => {
+  } = (0, p.xH)(e => {
 let {
   textAreaState: t
 } = e;
 return {
   textAreaState: t
 };
-  }), C = (0, c.e7)([m.Z], () => m.Z.keyboardModeEnabled), f = (0, E.Z)(r, null === (t = i.textValue) || void 0 === t ? void 0 : t.trim()), T = s.useMemo(() => f.find(e => e.isThumbnail), [f]), A = null != f && f.length > 0, j = s.useMemo(() => {
+  }), x = (0, c.e7)([m.Z], () => m.Z.keyboardModeEnabled), f = (0, E.Z)(r, null === (t = i.textValue) || void 0 === t ? void 0 : t.trim()), T = s.useMemo(() => f.find(e => e.isThumbnail), [f]), A = null != f && f.length > 0, j = s.useMemo(() => {
 let e = (null == f ? void 0 : f.length) > 1 ? 1.15 : 1;
 return {
   width: 153 * e,
@@ -121,7 +121,7 @@ if (e.stopPropagation(), (null == T ? void 0 : T.upload) != null)
       disableSpoiler: !0
     });
   });
-  }, Z = (0, a.jsx)(p.Z, {
+  }, Z = (0, a.jsx)(C.Z, {
 color: d.ButtonColors.CUSTOM,
 className: l()(b.uploadFileInputContainer),
 innerClassName: b.uploadThumbnailContainer,
@@ -204,7 +204,7 @@ children: null != T ? (0, a.jsx)(g.Z, {
   id: T.id,
   channelId: r.id,
   handleEditModal: O,
-  keyboardModeEnabled: C,
+  keyboardModeEnabled: x,
   size: g.q.SMALL,
   className: b.attachmentListItem,
   children: Z

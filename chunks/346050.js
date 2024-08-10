@@ -7,6 +7,7 @@ e.exports = {
   fullSize: 'fullSize_e6ac4a',
   panel: 'panel_e6ac4a',
   visibleContainer: 'visibleContainer_e6ac4a',
+  hoisted: 'hoisted_e6ac4a',
   statusBubble: 'statusBubble_e6ac4a',
   statusBubbleCopyStatusCursor: 'statusBubbleCopyStatusCursor_e6ac4a',
   statusBubbleOuterAddStatusCursor: 'statusBubbleOuterAddStatusCursor_e6ac4a',

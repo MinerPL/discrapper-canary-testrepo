@@ -52,7 +52,7 @@ I = p.filter(e => a.e$(h, e)).map(e => {
     children: [
       (0, r.jsx)('div', {
         className: d.disabledPermissionIcon,
-        children: (0, r.jsx)(l.CloseSmallIcon, {
+        children: (0, r.jsx)(l.XSmallIcon, {
           size: 'md',
           color: 'currentColor',
           className: d.icon

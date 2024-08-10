@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return E;
+return f;
   }
 });
 var r = n(735250);
@@ -13,34 +13,33 @@ var i = n(442837),
   u = n(652853),
   c = n(475413),
   d = n(228168),
-  _ = n(689938);
+  _ = n(981631),
+  E = n(689938);
 
-function E(e) {
+function f(e) {
   let {
 platformType: t,
 icon: n,
-onClick: E
+onAction: f
   } = e, {
-newestAnalyticsLocation: f
+newestAnalyticsLocation: h
   } = (0, s.ZP)(), {
-profileType: h
+profileType: p
   } = (0, u.z)();
-  return (0, i.e7)([l.Z], () => l.Z.getAccounts().some(e => {
-let {
-  type: n
-} = e;
-return n === t;
-  })) ? null : (0, r.jsx)(c.tG, {
+  return (0, i.e7)([l.Z], () => null != l.Z.getAccount(null, t)) ? null : (0, r.jsx)(c.tG, {
 icon: n,
-text: _.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
+text: E.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
   platform: a.Z.get(t).name
 }),
-themeColor: h === d.y0.FULL_SIZE ? 'secondary' : 'primary',
+themeColor: p === d.y0.FULL_SIZE ? 'secondary' : 'primary',
 fullWidth: !0,
-onClick: e => {
-  null == E || E(e), (0, o.Z)({
+onClick: () => {
+  let e = t === _.ABu.XBOX;
+  null == f || f({
+    action: e ? 'PRESS_CONNECT_XBOX_BUTTON' : 'PRESS_CONNECT_PLAYSTATION_BUTTON'
+  }), (0, o.Z)({
     platformType: t,
-    location: f
+    location: h
   });
 }
   });

@@ -419,7 +419,10 @@ let e = M.p.NONE;
   hasTabWrapper: p,
   diversitySurrogate: eK,
   isBurstReaction: ex,
-  onBurstReactionToggle: () => eG(!ex),
+  onBurstReactionToggle: () => {
+    var e;
+    eG(!ex), null === (e = eU.current) || void 0 === e || e.focus();
+  },
   renderHeader: eS
 }),
 ts = [];

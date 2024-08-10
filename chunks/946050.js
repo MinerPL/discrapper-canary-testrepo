@@ -59,7 +59,7 @@ children: [
         onClick: () => (0, r.Z)(e.channel.guild_id, e.channel.id, o.ic.UNREADS_ONLY_MENTIONS),
         children: (0, i.jsxs)(i.Fragment, {
           children: [
-            (0, i.jsx)(s.CloseSmallIcon, {
+            (0, i.jsx)(s.XSmallIcon, {
               size: 'xs',
               color: 'currentColor',
               style: {

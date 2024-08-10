@@ -27,7 +27,7 @@ children: [
   !E && (0, s.jsx)(l.Clickable, {
     className: c.closeWrapper,
     onClick: () => d(t),
-    children: (0, s.jsx)(l.CloseSmallIcon, {
+    children: (0, s.jsx)(l.XSmallIcon, {
       size: 'xs',
       color: 'currentColor',
       className: c.close

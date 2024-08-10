@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(321488),
   h = n(417183),
   E = n(170245),
-  I = n(981631),
-  m = n(689938),
+  m = n(981631),
+  I = n(689938),
   g = n(326059);
 
 function p(e) {
@@ -38,7 +38,7 @@ e.stopPropagation(), l.Z.addRelationship({
     location: 'Friends'
   }
 });
-  }, A = p === I.Skl.OFFLINE ? I.Skl.UNKNOWN : p, v = n === I.OGo.PENDING_INCOMING ? m.Z.Messages.INCOMING_FRIEND_REQUEST : m.Z.Messages.OUTGOING_FRIEND_REQUEST;
+  }, A = p === m.Skl.OFFLINE ? m.Skl.UNKNOWN : p, v = n === m.OGo.PENDING_INCOMING ? I.Z.Messages.INCOMING_FRIEND_REQUEST : I.Z.Messages.OUTGOING_FRIEND_REQUEST;
   return (0, i.jsx)(h.Z, {
 isFocused: T,
 user: t,
@@ -49,34 +49,34 @@ onClick: () => (0, c.openUserProfileModal)({
 }),
 children: e => {
   var a;
-  let l = n === I.OGo.PENDING_INCOMING ? (0, i.jsxs)(i.Fragment, {
+  let l = n === m.OGo.PENDING_INCOMING ? (0, i.jsxs)(i.Fragment, {
     children: [
       (null === (a = d.default.getCurrentUser()) || void 0 === a ? void 0 : a.isStaff()) && (null == t ? void 0 : t.isStaff()) && (0, i.jsx)('div', {
         className: g.staffIndicator,
         children: (0, i.jsx)(r.TextBadge, {
           color: s.Z.unsafe_rawColors.BRAND_500.css,
-          text: m.Z.Messages.STAFF_BADGE_TOOLTIP
+          text: I.Z.Messages.STAFF_BADGE_TOOLTIP
         })
       }),
       (0, i.jsx)(_.Z, {
         icon: r.CheckmarkLargeIcon,
         actionType: _.Z.ActionTypes.ACCEPT,
-        tooltip: m.Z.Messages.FRIEND_REQUEST_ACCEPT,
+        tooltip: I.Z.Messages.FRIEND_REQUEST_ACCEPT,
         onClick: N,
         shouldHighlight: e
       }),
       (0, i.jsx)(_.Z, {
-        icon: r.CloseSmallIcon,
+        icon: r.XSmallIcon,
         actionType: _.Z.ActionTypes.DENY,
-        tooltip: m.Z.Messages.FRIEND_REQUEST_IGNORE,
+        tooltip: I.Z.Messages.FRIEND_REQUEST_IGNORE,
         onClick: C,
         shouldHighlight: e
       })
     ]
   }) : (0, i.jsx)(_.Z, {
-    icon: r.CloseSmallIcon,
+    icon: r.XSmallIcon,
     actionType: _.Z.ActionTypes.DENY,
-    tooltip: m.Z.Messages.FRIEND_REQUEST_CANCEL,
+    tooltip: I.Z.Messages.FRIEND_REQUEST_CANCEL,
     onClick: C,
     shouldHighlight: e
   });

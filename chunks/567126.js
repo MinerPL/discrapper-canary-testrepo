@@ -17,15 +17,15 @@ var l = t(735250),
   d = t(846519),
   m = t(481060),
   E = t(224706),
-  _ = t(594190),
-  S = t(569984),
-  g = t(918701),
-  C = t(977156),
-  h = t(28798),
-  N = t(131951),
-  Z = t(449224),
-  I = t(285952),
-  x = t(643095),
+  _ = t(600164),
+  S = t(152708),
+  g = t(594190),
+  C = t(569984),
+  h = t(918701),
+  Z = t(977156),
+  N = t(28798),
+  I = t(131951),
+  x = t(449224),
   f = t(358085),
   R = t(463727),
   A = t(855403),
@@ -37,8 +37,8 @@ var l = t(735250),
   O = t(689938),
   j = t(511923);
 async function P() {
-  let e = N.Z.getVideoDevices(),
-n = (0, u.Z)(N.Z.getMediaEngine(), [
+  let e = I.Z.getVideoDevices(),
+n = (0, u.Z)(I.Z.getMediaEngine(), [
   o.vA.WINDOW,
   o.vA.SCREEN
 ], {
@@ -87,7 +87,7 @@ cameraSources: Object.entries(e).filter(e => {
   };
 }
 async function D() {
-  let e = _.ZP.getRunningGames();
+  let e = g.ZP.getRunningGames();
   return (await Promise.all(e.map(async e => {
 let n;
 if (null == e.name)
@@ -109,8 +109,8 @@ return null != t && null != l && null != s ? {
 }
 
 function G(e) {
-  let n = (0, f.isWindows)() ? (0, T.Z)(_.ZP, Z.Z) : null,
-t = _.ZP.getRunningGames();
+  let n = (0, f.isWindows)() ? (0, T.Z)(g.ZP, x.Z) : null,
+t = g.ZP.getRunningGames();
   return null != n && (0, A.Z)(e.id, n.windowHandle) ? 2 : null != t.find(n => (0, A.Z)(e.id, n.windowHandle)) ? 1 : 0;
 }
 
@@ -122,8 +122,8 @@ onChangeSelectedSource: t
 enableGoLiveCaptureCard: a
   } = R.Z.useExperiment({
 location: 'GoLive_Source_Select'
-  }), i = N.Z.supports(M.AN.GO_LIVE_HARDWARE), [u, E] = s.useState(null), [Z, f] = s.useState(null), [T, D] = s.useState(null), U = null != T && T.length > 0, [b, w] = s.useState(o.vA.WINDOW), [k, B] = s.useState(!1), V = s.useRef(null), y = s.useRef(new d.Xp()), W = (0, c.e7)([_.ZP], () => _.ZP.getRunningGames()), H = function(e, n, t) {
-let l = (0, C.Zy)({
+  }), i = I.Z.supports(M.AN.GO_LIVE_HARDWARE), [u, E] = s.useState(null), [x, f] = s.useState(null), [T, D] = s.useState(null), U = null != T && T.length > 0, [b, w] = s.useState(o.vA.WINDOW), [k, B] = s.useState(!1), V = s.useRef(null), y = s.useRef(new d.Xp()), W = (0, c.e7)([g.ZP], () => g.ZP.getRunningGames()), H = function(e, n, t) {
+let l = (0, Z.Zy)({
   location: p.dr.STREAM_SOURCE_SELECT
 });
 return s.useMemo(() => {
@@ -134,7 +134,7 @@ return s.useMemo(() => {
     let t = n.find(e => (0, A.Z)(l.id, e.windowHandle));
     if ((null == t ? void 0 : t.id) == null)
       continue;
-    let r = (0, g.lQ)(e, t.id);
+    let r = (0, h.lQ)(e, t.id);
     if (null != r && (null === (s = r.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null && (null === (a = r.userStatus) || void 0 === a ? void 0 : a.completedAt) == null)
       return {
         source: l,
@@ -148,9 +148,9 @@ return s.useMemo(() => {
   n,
   t
 ]);
-  }((0, c.e7)([S.Z], () => S.Z.quests), W, Z), F = s.useMemo(() => null == Z ? null : [...Z].sort((e, n) => (null == H ? void 0 : H.source.id) === e.id ? -1 : (null == H ? void 0 : H.source.id) === n.id ? 1 : G(n) - G(e)), [
+  }((0, c.e7)([C.Z], () => C.Z.quests), W, x), F = s.useMemo(() => null == x ? null : [...x].sort((e, n) => (null == H ? void 0 : H.source.id) === e.id ? -1 : (null == H ? void 0 : H.source.id) === n.id ? 1 : G(n) - G(e)), [
 H,
-Z
+x
   ]);
   s.useEffect(() => {
 let e = y.current;
@@ -173,10 +173,7 @@ return P().then(e => {
 };
   }, []);
   let z = s.useCallback(e => {
-  if (null !== e) {
-    var n;
-    V.current = e, B((n = !e.isScrolledToTop(), n));
-  }
+  null !== e && (V.current = e, B(!e.isScrolledToTop()));
 }, []),
 K = function(e) {
   switch (e) {
@@ -189,10 +186,10 @@ K = function(e) {
   }
 }(b);
   if (null == K)
-return (0, l.jsx)(I.Z, {
+return (0, l.jsx)(_.Z, {
   className: j.spinner,
-  justify: I.Z.Justify.CENTER,
-  align: I.Z.Align.CENTER,
+  justify: _.Z.Justify.CENTER,
+  align: _.Z.Align.CENTER,
   children: (0, l.jsx)(m.Spinner, {})
 });
   let Y = K.map(e => {
@@ -257,8 +254,8 @@ children: [
       ref: z,
       className: j.sourceScroller,
       onScroll: J,
-      children: (0, l.jsx)(x.Z, {
-        layout: x.Z.Layout.WRAP,
+      children: (0, l.jsx)(S.Z, {
+        layout: S.Z.Layout.WRAP,
         columns: 2,
         className: j.sourceContainer,
         children: Y
@@ -269,11 +266,11 @@ children: [
     className: j.sourceScroller,
     onScroll: J,
     children: [
-      b === o.vA.WINDOW && null != H && (0, l.jsx)(h.Z, {
+      b === o.vA.WINDOW && null != H && (0, l.jsx)(N.Z, {
         quest: H.quest
       }),
-      (0, l.jsx)(x.Z, {
-        layout: x.Z.Layout.WRAP,
+      (0, l.jsx)(S.Z, {
+        layout: S.Z.Layout.WRAP,
         columns: 2,
         className: j.sourceContainer,
         children: Y
@@ -294,7 +291,7 @@ onSourceSelect: n
   s.useEffect(() => {
 let e = c.current,
   n = () => {
-    let e = Object.entries(N.Z.getVideoDevices()).filter(e => {
+    let e = Object.entries(I.Z.getVideoDevices()).filter(e => {
       let [n, t] = e;
       return !t.disabled;
     });

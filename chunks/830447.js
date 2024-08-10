@@ -224,7 +224,8 @@ children: (0, r.jsx)('div', {
                 ...l.props,
                 isFocused: n.isFocused(e),
                 menuItemProps: n.getItemProps({
-                  path: e
+                  path: e,
+                  navigable: l.navigable
                 }),
                 onClose: a,
                 children: l.render

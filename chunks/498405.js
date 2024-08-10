@@ -147,18 +147,19 @@ I
 let {
   path: n,
   hasSubmenu: r = !1,
-  role: i = 'menuitem'
-} = e, a = n.join('--');
+  navigable: i = !0,
+  role: a = 'menuitem'
+} = e, o = n.join('--');
 return {
   ...r ? {
     'aria-expanded': R(n),
     'aria-haspopup': !0
   } : {},
-  role: i,
-  id: (0, s.qR)(t, a),
+  role: a,
+  id: (0, s.qR)(t, o),
   tabIndex: -1,
-  onFocus: g.get(a),
-  onMouseEnter: S.get(a)
+  onFocus: i ? g.get(o) : () => {},
+  onMouseEnter: i ? S.get(o) : () => {}
 };
   }, [
 t,

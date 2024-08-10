@@ -15,8 +15,8 @@ s.Z = function(e) {
   let {
 guild: s,
 guildJoinRequest: N,
-guildJoinRequestUser: C,
-onClose: R
+guildJoinRequestUser: R,
+onClose: C
   } = e, M = t.useMemo(() => {
 var e;
 return null !== (e = N.formResponses) && void 0 !== e ? e : [];
@@ -28,19 +28,19 @@ return n => (0, a.jsx)(e, {
   ...n,
   guild: s,
   guildJoinRequest: N,
-  user: C
+  user: R
 });
   }), [
 s,
 N,
-C
+R
   ]);
   return (0, a.jsxs)(a.Fragment, {
 children: [
   (0, a.jsxs)(l.ZP, {
     toolbar: (0, a.jsx)(l.ZP.Icon, {
-      icon: r.CloseSmallIcon,
-      onClick: R,
+      icon: r.XSmallIcon,
+      onClick: C,
       tooltip: _.Z.Messages.CLOSE
     }),
     children: [
@@ -51,13 +51,13 @@ children: [
       }),
       (0, a.jsx)(r.Heading, {
         variant: 'heading-md/semibold',
-        children: i.ZP.getName(C)
+        children: i.ZP.getName(R)
       })
     ]
   }),
   (0, a.jsx)(d.Z, {
     guildJoinRequest: N,
-    guildJoinRequestUser: C,
+    guildJoinRequestUser: R,
     guild: s
   }),
   (0, a.jsxs)(r.Scroller, {
@@ -66,7 +66,7 @@ children: [
         className: T.container,
         children: [
           (0, a.jsx)(I.Z, {
-            user: C,
+            user: R,
             guildId: s.id
           }),
           m && (0, a.jsxs)('div', {
@@ -89,7 +89,7 @@ children: [
         children: (0, a.jsx)(c.Z, {
           guildId: s.id,
           formFields: M,
-          user: C
+          user: R
         })
       })
     ]

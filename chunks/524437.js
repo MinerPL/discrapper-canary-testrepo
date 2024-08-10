@@ -157,6 +157,9 @@ for (; e.pos < a;) {
     case 21:
       i.safetySettings = eX.internalBinaryRead(e, e.uint32(), n, i.safetySettings);
       break;
+    case 22:
+      i.icymiSettings = e1.internalBinaryRead(e, e.uint32(), n, i.icymiSettings);
+      break;
     default:
       let a = n.readUnknownField;
       if ('throw' === a)
@@ -168,7 +171,7 @@ for (; e.pos < a;) {
 return i;
   }
   internalBinaryWrite(e, t, n) {
-e.versions && b.L.internalBinaryWrite(e.versions, t.tag(1, O.TD.LengthDelimited).fork(), n).join(), e.inbox && w.internalBinaryWrite(e.inbox, t.tag(2, O.TD.LengthDelimited).fork(), n).join(), e.guilds && G.internalBinaryWrite(e.guilds, t.tag(3, O.TD.LengthDelimited).fork(), n).join(), e.userContent && q.internalBinaryWrite(e.userContent, t.tag(4, O.TD.LengthDelimited).fork(), n).join(), e.voiceAndVideo && et.internalBinaryWrite(e.voiceAndVideo, t.tag(5, O.TD.LengthDelimited).fork(), n).join(), e.textAndImages && eo.internalBinaryWrite(e.textAndImages, t.tag(6, O.TD.LengthDelimited).fork(), n).join(), e.notifications && eu.internalBinaryWrite(e.notifications, t.tag(7, O.TD.LengthDelimited).fork(), n).join(), e.privacy && ed.internalBinaryWrite(e.privacy, t.tag(8, O.TD.LengthDelimited).fork(), n).join(), e.debug && eE.internalBinaryWrite(e.debug, t.tag(9, O.TD.LengthDelimited).fork(), n).join(), e.gameLibrary && eh.internalBinaryWrite(e.gameLibrary, t.tag(10, O.TD.LengthDelimited).fork(), n).join(), e.status && em.internalBinaryWrite(e.status, t.tag(11, O.TD.LengthDelimited).fork(), n).join(), e.localization && eS.internalBinaryWrite(e.localization, t.tag(12, O.TD.LengthDelimited).fork(), n).join(), e.appearance && eO.internalBinaryWrite(e.appearance, t.tag(13, O.TD.LengthDelimited).fork(), n).join(), e.guildFolders && eD.internalBinaryWrite(e.guildFolders, t.tag(14, O.TD.LengthDelimited).fork(), n).join(), e.favorites && eP.internalBinaryWrite(e.favorites, t.tag(15, O.TD.LengthDelimited).fork(), n).join(), e.audioContextSettings && eB.internalBinaryWrite(e.audioContextSettings, t.tag(16, O.TD.LengthDelimited).fork(), n).join(), e.communities && eV.internalBinaryWrite(e.communities, t.tag(17, O.TD.LengthDelimited).fork(), n).join(), e.broadcast && eK.internalBinaryWrite(e.broadcast, t.tag(18, O.TD.LengthDelimited).fork(), n).join(), e.clips && eq.internalBinaryWrite(e.clips, t.tag(19, O.TD.LengthDelimited).fork(), n).join(), e.forLater && eJ.internalBinaryWrite(e.forLater, t.tag(20, O.TD.LengthDelimited).fork(), n).join(), e.safetySettings && eX.internalBinaryWrite(e.safetySettings, t.tag(21, O.TD.LengthDelimited).fork(), n).join();
+e.versions && b.L.internalBinaryWrite(e.versions, t.tag(1, O.TD.LengthDelimited).fork(), n).join(), e.inbox && w.internalBinaryWrite(e.inbox, t.tag(2, O.TD.LengthDelimited).fork(), n).join(), e.guilds && G.internalBinaryWrite(e.guilds, t.tag(3, O.TD.LengthDelimited).fork(), n).join(), e.userContent && q.internalBinaryWrite(e.userContent, t.tag(4, O.TD.LengthDelimited).fork(), n).join(), e.voiceAndVideo && et.internalBinaryWrite(e.voiceAndVideo, t.tag(5, O.TD.LengthDelimited).fork(), n).join(), e.textAndImages && eo.internalBinaryWrite(e.textAndImages, t.tag(6, O.TD.LengthDelimited).fork(), n).join(), e.notifications && eu.internalBinaryWrite(e.notifications, t.tag(7, O.TD.LengthDelimited).fork(), n).join(), e.privacy && ed.internalBinaryWrite(e.privacy, t.tag(8, O.TD.LengthDelimited).fork(), n).join(), e.debug && eE.internalBinaryWrite(e.debug, t.tag(9, O.TD.LengthDelimited).fork(), n).join(), e.gameLibrary && eh.internalBinaryWrite(e.gameLibrary, t.tag(10, O.TD.LengthDelimited).fork(), n).join(), e.status && em.internalBinaryWrite(e.status, t.tag(11, O.TD.LengthDelimited).fork(), n).join(), e.localization && eS.internalBinaryWrite(e.localization, t.tag(12, O.TD.LengthDelimited).fork(), n).join(), e.appearance && eO.internalBinaryWrite(e.appearance, t.tag(13, O.TD.LengthDelimited).fork(), n).join(), e.guildFolders && eD.internalBinaryWrite(e.guildFolders, t.tag(14, O.TD.LengthDelimited).fork(), n).join(), e.favorites && eP.internalBinaryWrite(e.favorites, t.tag(15, O.TD.LengthDelimited).fork(), n).join(), e.audioContextSettings && eB.internalBinaryWrite(e.audioContextSettings, t.tag(16, O.TD.LengthDelimited).fork(), n).join(), e.communities && eV.internalBinaryWrite(e.communities, t.tag(17, O.TD.LengthDelimited).fork(), n).join(), e.broadcast && eK.internalBinaryWrite(e.broadcast, t.tag(18, O.TD.LengthDelimited).fork(), n).join(), e.clips && eq.internalBinaryWrite(e.clips, t.tag(19, O.TD.LengthDelimited).fork(), n).join(), e.forLater && eJ.internalBinaryWrite(e.forLater, t.tag(20, O.TD.LengthDelimited).fork(), n).join(), e.safetySettings && eX.internalBinaryWrite(e.safetySettings, t.tag(21, O.TD.LengthDelimited).fork(), n).join(), e.icymiSettings && e1.internalBinaryWrite(e.icymiSettings, t.tag(22, O.TD.LengthDelimited).fork(), n).join();
 let r = n.writeUnknownFields;
 return !1 !== r && (!0 == r ? O.z.onWrite : r)(this.typeName, e, t), t;
   }
@@ -298,6 +301,12 @@ super('discord_protos.discord_users.v1.PreloadedUserSettings', [{
     name: 'safety_settings',
     kind: 'message',
     T: () => eX
+  },
+  {
+    no: 22,
+    name: 'icymi_settings',
+    kind: 'message',
+    T: () => e1
   }
 ]);
   }
@@ -3318,3 +3327,45 @@ super('discord_protos.discord_users.v1.ForLaterSettings', [{
   }
 }
 let eJ = new e$();
+class e0 extends y.C {
+  create(e) {
+let t = {
+  feedGeneratedAt: '0'
+};
+return globalThis.Object.defineProperty(t, C.C, {
+  enumerable: !1,
+  value: this
+}), void 0 !== e && (0, R.l)(this, t, e), t;
+  }
+  internalBinaryRead(e, t, n, r) {
+let i = null != r ? r : this.create(),
+  a = e.pos + t;
+for (; e.pos < a;) {
+  let [t, r] = e.tag();
+  if (1 === t)
+    i.feedGeneratedAt = e.fixed64().toString();
+  else {
+    let a = n.readUnknownField;
+    if ('throw' === a)
+      throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
+    let s = e.skip(r);
+    !1 !== a && (!0 === a ? O.z.onRead : a)(this.typeName, i, t, r, s);
+  }
+}
+return i;
+  }
+  internalBinaryWrite(e, t, n) {
+'0' !== e.feedGeneratedAt && t.tag(1, O.TD.Bit64).fixed64(e.feedGeneratedAt);
+let r = n.writeUnknownFields;
+return !1 !== r && (!0 == r ? O.z.onWrite : r)(this.typeName, e, t), t;
+  }
+  constructor() {
+super('discord_protos.discord_users.v1.ICYMISettings', [{
+  no: 1,
+  name: 'feed_generated_at',
+  kind: 'scalar',
+  T: 6
+}]);
+  }
+}
+let e1 = new e0();
